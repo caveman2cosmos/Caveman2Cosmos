@@ -680,7 +680,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_ORBITAL_SPACECRAFT_FACTORY</BuildingType>
+				<BuildingType>BUILDING_DEEP_SPACE_SPACECRAFT_FACTORY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_INTERSTELLAR_TRAVEL</PrereqTech>
 			<iCost>4850</iCost>
@@ -900,7 +900,7 @@
 			</UnitAIs>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_INTERSTELLAR_WORMHOLE_TRADING_POST</BuildingType>
-				<BuildingType>BUILDING_INTERGALACTIC_WORMHOLE</BuildingType>
+				<BuildingType>BUILDING_INTERGALACTIC_MORRIS_THORNE_WORMHOLE</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_SPACE_CREASING</PrereqTech>
 			<iCost>4850</iCost>
@@ -994,7 +994,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_INTERGALACTIC_WORMHOLE</BuildingType>
+				<BuildingType>BUILDING_INTERGALACTIC_MORRIS_THORNE_WORMHOLE</BuildingType>
 				<BuildingType>BUILDING_DISTANT_HORIZON_PORT</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_HORIZON_BREAKING</PrereqTech>
@@ -1091,7 +1091,7 @@
 			</UnitAIs>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_INTERGALACTIC_TEMPORAL_RIFT</BuildingType>
-				<BuildingType>BUILDING_INTERGALACTIC_HYPERPORT</BuildingType>
+				<BuildingType>BUILDING_DISTANT_HYPERPORT</BuildingType>
 				<BuildingType>BUILDING_HYPERSPACE_EXPORTER</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_DUALFLUX_QUANTUM_TEMPORAL_RIFT</PrereqTech>
@@ -1179,7 +1179,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_ORBITAL_SPACECRAFT_FACTORY</BuildingType>
+				<BuildingType>BUILDING_DEEP_SPACE_SPACECRAFT_FACTORY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_FUSION_SPACECRAFT</PrereqTech>
 			<iCost>4850</iCost>
@@ -3544,7 +3544,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_MICROWORMHOLE_BUILDING</BuildingType>
+				<BuildingType>BUILDING_MICRO_WORMHOLE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_HYPERINTELLIGENCE</PrereqTech>
 			<iCost>18267</iCost>
@@ -5083,7 +5083,7 @@
 				</Action>
 			</Actions>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_SELF_REPLICATING_FACTORY</BuildingType>
+				<BuildingType>BUILDING_INTERSTELLAR_SELF_REPLICATING_FACTORY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ACNP_PROPULSION</PrereqTech>
 			<iCost>5000</iCost>
@@ -5667,7 +5667,7 @@
 				<BuildingType>BUILDING_CAPTURED_ASTEROID</BuildingType>
 				<BuildingType>BUILDING_MARTIAN_AMMONIA_BOMBARDMENT</BuildingType>
 				<BuildingType>BUILDING_VENUS_HYDROGEN_BOMBARDMENT</BuildingType>
-				<BuildingType>BUILDING_MERCURY_COMET_BOMBARDMENT</BuildingType>
+				<BuildingType>BUILDING_MERCURY_COMETARY_BOMBARDMENT</BuildingType>
 				<BuildingType>BUILDING_MARTIAN_ASTEROID_MINE</BuildingType>
 			</Buildings>
 			<iBaseHurry>1000</iBaseHurry>
@@ -5742,7 +5742,7 @@
 				<BuildingType>BUILDING_CAPTURED_ASTEROID</BuildingType>
 				<BuildingType>BUILDING_MARTIAN_AMMONIA_BOMBARDMENT</BuildingType>
 				<BuildingType>BUILDING_VENUS_HYDROGEN_BOMBARDMENT</BuildingType>
-				<BuildingType>BUILDING_MERCURY_COMET_BOMBARDMENT</BuildingType>
+				<BuildingType>BUILDING_MERCURY_COMETARY_BOMBARDMENT</BuildingType>
 				<BuildingType>BUILDING_MARTIAN_ASTEROID_MINE</BuildingType>
 			</Buildings>
 			<iBaseHurry>1500</iBaseHurry>
@@ -7411,7 +7411,7 @@
 			<PrereqTech>TECH_PLANETARY_EXPLORATION</PrereqTech>
 			<Buildings>
 				<BuildingType>BUILDING_VOYAGER_PROGRAM</BuildingType>
-				<BuildingType>BUILDING_URANUS_ATMOSPHERE_PROBE</BuildingType>
+				<BuildingType>BUILDING_URANUS_ATMOSPHERIC_PROBE</BuildingType>
 			</Buildings>
 			<Actions>
 				<Action>
@@ -7485,7 +7485,7 @@
 			<PrereqTech>TECH_PLANETARY_EXPLORATION</PrereqTech>
 			<Buildings>
 				<BuildingType>BUILDING_VOYAGER_PROGRAM</BuildingType>
-				<BuildingType>BUILDING_NEPTUNE_ATMOSPHERE_PROBE</BuildingType>
+				<BuildingType>BUILDING_NEPTUNE_ATMOSPHERIC_PROBE</BuildingType>
 			</Buildings>
 			<Actions>
 				<Action>

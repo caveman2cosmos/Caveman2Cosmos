@@ -100,7 +100,7 @@
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<PrereqOrBuildings>
@@ -201,7 +201,7 @@
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<PrereqOrBuildings>
@@ -302,7 +302,7 @@
 				<BuildingType>BUILDING_BONFIRE</BuildingType>
 				<BuildingType>BUILDING_FIRE_PIT</BuildingType>
 				<BuildingType>BUILDING_IMU</BuildingType>
-				<BuildingType>BUILDING_NATURAL_WONDER_KRAKATOA</BuildingType>
+				<BuildingType>BUILDING_WONDER_OF_NATURE_KRAKATOA</BuildingType>
 			</PrereqOrBuildings>
 			<bAutoBuild>1</bAutoBuild>
 			<ExtraFreeBonuses>
@@ -388,7 +388,7 @@
 				<BuildingType>BUILDING_PLANTATION_CANNABIS</BuildingType>
 				<BuildingType>BUILDING_CANNABIS_GROW_OPERATION</BuildingType>
 				<BuildingType>BUILDING_PLANTATION_KAVA</BuildingType>
-				<BuildingType>BUILDING_MARSHMALLOW_PLANTATION</BuildingType>
+				<BuildingType>BUILDING_PLANTATION_MARSH_MALLOW</BuildingType>
 				<BuildingType>BUILDING_PLANTATION_MYRRH</BuildingType>
 				<BuildingType>BUILDING_PLANTATION_PEYOTE</BuildingType>
 				<BuildingType>BUILDING_PLANTATION_POPPY</BuildingType>
@@ -415,7 +415,7 @@
 			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CHICKEN_COOP</BuildingType>
@@ -424,7 +424,7 @@
 				<BuildingType>BUILDING_NEST_THIEF</BuildingType>
 				<BuildingType>BUILDING_HERD_POULTRY</BuildingType>
 				<BuildingType>BUILDING_HERD_RATITE</BuildingType>
-				<BuildingType>BUILDING_SEATURTLE_EGG_GATHERER</BuildingType>
+				<BuildingType>BUILDING_SEA_TURTLE_EGG_GATHERER</BuildingType>
 				<BuildingType>BUILDING_FARM_ANIMAL_TURKEY</BuildingType>
 			</PrereqOrBuildings>
 			<bAutoBuild>1</bAutoBuild>
@@ -448,7 +448,7 @@
 			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CATCHER_BIRDS_OF_PARADISE</BuildingType>
@@ -537,7 +537,7 @@
 			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FLINT_GATHERER</BuildingType>
-				<BuildingType>BUILDING_NATURAL_WONDER_PAMUKKALE</BuildingType>
+				<BuildingType>BUILDING_WONDER_OF_NATURE_PAMUKKALE</BuildingType>
 			</PrereqOrBuildings>
 			<bAutoBuild>1</bAutoBuild>
 			<ExtraFreeBonuses>
@@ -707,7 +707,7 @@
 				<BuildingType>BUILDING_ORCHARD_PEACH</BuildingType>
 				<BuildingType>BUILDING_ORCHARD_PEAR</BuildingType>
 				<BuildingType>BUILDING_ORCHARD_PERSIMMON</BuildingType>
-				<BuildingType>BUILDING_PINEAPPLE_PLANTATION</BuildingType>
+				<BuildingType>BUILDING_PLANTATION_PINEAPPLE</BuildingType>
 				<BuildingType>BUILDING_ORCHARD_PITAYA</BuildingType>
 				<BuildingType>BUILDING_PLANTATION_PLANTAIN</BuildingType>
 				<BuildingType>BUILDING_ORCHARD_PLUM</BuildingType>
@@ -878,7 +878,7 @@
 			<ObsoletesToBuilding>BUILDING_AGROFOREST</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_GRASS_GATHERER</BuildingType>
-				<BuildingType>BUILDING_NATURAL_WONDER_BASALT_ORGAN</BuildingType>
+				<BuildingType>BUILDING_WONDER_OF_NATURE_BASALT_ORGAN</BuildingType>
 			</PrereqOrBuildings>
 			<bAutoBuild>1</bAutoBuild>
 			<ExtraFreeBonuses>
@@ -901,7 +901,7 @@
 			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_LL_KILGII_GWAAY</BuildingType>
@@ -917,11 +917,11 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_IRON_INGOTS_PROVIDER</Type>
-			<Description>TXT_KEY_BUILDING_IRON_INGOTS_PROVIDER</Description>
+			<Type>BUILDING_RESOURCES_IRON_INGOTS</Type>
+			<Description>TXT_KEY_BUILDING_RESOURCES_IRON_INGOTS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_IRON_INGOTS_PROVIDER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_RESOURCES_IRON_INGOTS</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -957,7 +957,7 @@
 			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
@@ -995,9 +995,9 @@
 			</MapCategoryTypes>
 			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BUTCHERY</BuildingType>
 				<BuildingType>BUILDING_MEAT_PACKING_PLANT</BuildingType>
@@ -1013,11 +1013,11 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_LEAD_INGOTS_PROVIDER</Type>
-			<Description>TXT_KEY_BUILDING_LEAD_INGOTS_PROVIDER</Description>
+			<Type>BUILDING_RESOURCES_LEAD_INGOTS</Type>
+			<Description>TXT_KEY_BUILDING_RESOURCES_LEAD_INGOTS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_LEAD_INGOTS_PROVIDER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_RESOURCES_LEAD_INGOTS</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1144,7 +1144,7 @@
 			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
@@ -1178,11 +1178,11 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PETROLEUM_PRODUCTS_PROVIDER</Type>
-			<Description>TXT_KEY_BUILDING_PETROLEUM_PRODUCTS_PROVIDER</Description>
+			<Type>BUILDING_RESOURCES_PETROLEUM_PRODUCTS</Type>
+			<Description>TXT_KEY_BUILDING_RESOURCES_PETROLEUM_PRODUCTS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PETROLEUM_PRODUCTS_PROVIDER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_RESOURCES_PETROLEUM_PRODUCTS</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1193,7 +1193,7 @@
 			<ObsoletesToBuilding>BUILDING_ULTRAFUEL_REFINERY</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HYDROCARBON_REFINERY</BuildingType>
-				<BuildingType>BUILDING_JAPANESE_SHALE_PLANT</BuildingType>
+				<BuildingType>BUILDING_SHALE_PLANT</BuildingType>
 				<BuildingType>BUILDING_OIL_REFINERY</BuildingType>
 			</PrereqOrBuildings>
 			<bAutoBuild>1</bAutoBuild>
@@ -1232,11 +1232,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_RESOURCES_PLASTIC</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PLATINUM_INGOTS_PROVIDER</Type>
-			<Description>TXT_KEY_BUILDING_PLATINUM_INGOTS_PROVIDER</Description>
+			<Type>BUILDING_RESOURCES_PLATINUM_INGOTS</Type>
+			<Description>TXT_KEY_BUILDING_RESOURCES_PLATINUM_INGOTS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PLATINUM_INGOTS_PROVIDER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_RESOURCES_PLATINUM_INGOTS</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1304,8 +1304,8 @@
 			<ObsoletesToBuilding>BUILDING_MATERIALS_CONGLOMERATE</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DESALINATION_PLANT</BuildingType>
-				<BuildingType>BUILDING_NATURAL_WONDER_DEAD_SEA</BuildingType>
-				<BuildingType>BUILDING_SALT_EVAPORATION_PONT</BuildingType>
+				<BuildingType>BUILDING_WONDER_OF_NATURE_DEAD_SEA</BuildingType>
+				<BuildingType>BUILDING_SALT_EVAPORATION_POND</BuildingType>
 				<BuildingType>BUILDING_SALT_EVAPORATION_WORKS</BuildingType>
 				<BuildingType>BUILDING_SALT_FLAT_QUARRY</BuildingType>
 			</PrereqOrBuildings>
@@ -1429,11 +1429,11 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SILVER_INGOTS_PROVIDER</Type>
-			<Description>TXT_KEY_BUILDING_SILVER_INGOTS_PROVIDER</Description>
+			<Type>BUILDING_RESOURCES_SILVER_INGOTS</Type>
+			<Description>TXT_KEY_BUILDING_RESOURCES_SILVER_INGOTS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SILVER_INGOTS_PROVIDER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_RESOURCES_SILVER_INGOTS</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1456,11 +1456,11 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SMART_MEDICINE_PROVIDER</Type>
+			<Type>BUILDING_RESOURCES_SMART_MEDICINE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SMART_MEDICINE_PROVIDER</Description>
+			<Description>TXT_KEY_BUILDING_RESOURCES_SMART_MEDICINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ObsoleteTech>TECH_POSTHUMANISM</ObsoleteTech>
@@ -1480,14 +1480,14 @@
 			</ExtraFreeBonuses>
 			<bAutoBuild>1</bAutoBuild>
 			<bPrereqPower>1</bPrereqPower>
-			<ArtDefineTag>ART_DEF_BUILDING_SMART_MEDICINE_PROVIDER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_RESOURCES_SMART_MEDICINE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_STEEL_INGOTS_PROVIDER</Type>
-			<Description>TXT_KEY_BUILDING_STEEL_INGOTS_PROVIDER</Description>
+			<Type>BUILDING_RESOURCES_STEEL_INGOTS</Type>
+			<Description>TXT_KEY_BUILDING_RESOURCES_STEEL_INGOTS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_STEEL_INGOTS_PROVIDER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_RESOURCES_STEEL_INGOTS</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1511,11 +1511,11 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SYNTHETIC_RUBBER_PROVIDER</Type>
+			<Type>BUILDING_RESOURCES_SYNTHETIC_RUBBER</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SYNTHETIC_RUBBER_PROVIDER</Description>
+			<Description>TXT_KEY_BUILDING_RESOURCES_SYNTHETIC_RUBBER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ObsoleteTech>TECH_SMART_DUST</ObsoleteTech>
@@ -1534,14 +1534,14 @@
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<bAutoBuild>1</bAutoBuild>
-			<ArtDefineTag>ART_DEF_BUILDING_SYNTHETIC_RUBBER_PROVIDER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_RESOURCES_SYNTHETIC_RUBBER</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TITANIUM_INGOTS_PROVIDER</Type>
-			<Description>TXT_KEY_BUILDING_TITANIUM_INGOTS_PROVIDER</Description>
+			<Type>BUILDING_RESOURCES_TITANIUM_INGOTS</Type>
+			<Description>TXT_KEY_BUILDING_RESOURCES_TITANIUM_INGOTS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TITANIUM_INGOTS_PROVIDER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_RESOURCES_TITANIUM_INGOTS</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>

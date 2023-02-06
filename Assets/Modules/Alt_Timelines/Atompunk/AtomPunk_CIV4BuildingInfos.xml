@@ -46,7 +46,7 @@
 				<BuildingType>BUILDING_HI_TECH_NUCLEAR_REACTOR</BuildingType>
 				<BuildingType>BUILDING_GENERATION_IV_REACTOR</BuildingType>
 				<BuildingType>BUILDING_D_T_FUSION_POWER_PLANT</BuildingType>
-				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_D_HE3_FUSION_PLANT</BuildingType>
 				<BuildingType>BUILDING_HE3_FUSION_POWER_PLANT</BuildingType>
 				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION_PLANT</BuildingType>
 				<BuildingType>BUILDING_QUANTUM_VACUUM_POWER_PLANT</BuildingType>
@@ -179,7 +179,7 @@
 				<BuildingType>BUILDING_HI_TECH_NUCLEAR_REACTOR</BuildingType>
 				<BuildingType>BUILDING_GENERATION_IV_REACTOR</BuildingType>
 				<BuildingType>BUILDING_D_T_FUSION_POWER_PLANT</BuildingType>
-				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_D_HE3_FUSION_PLANT</BuildingType>
 				<BuildingType>BUILDING_HE3_FUSION_POWER_PLANT</BuildingType>
 				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION_PLANT</BuildingType>
 				<BuildingType>BUILDING_QUANTUM_VACUUM_POWER_PLANT</BuildingType>
@@ -200,7 +200,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GENERATION_IV_REACTOR</BuildingType>
 				<BuildingType>BUILDING_D_T_FUSION_POWER_PLANT</BuildingType>
-				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_D_HE3_FUSION_PLANT</BuildingType>
 				<BuildingType>BUILDING_HE3_FUSION_POWER_PLANT</BuildingType>
 				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION_PLANT</BuildingType>
 				<BuildingType>BUILDING_QUANTUM_VACUUM_POWER_PLANT</BuildingType>
@@ -229,12 +229,12 @@
 			<iPrereqPopulation>7</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MID_CLASS_SKYPAD_APARTMENTS</Type>
+			<Type>BUILDING_HOUSING_MID_CLASS_SKYPAD_APARTMENTS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_ATOM</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_MID_CLASS_SKYPAD_APARTMENTS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MID_CLASS_SKYPAD_APARTMENTS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_MID_CLASS_SKYPAD_APARTMENTS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_MID_CLASS_SKYPAD_APARTMENTS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MID_CLASS_SKYPAD_APARTMENTS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_MID_CLASS_SKYPAD_APARTMENTS</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -316,7 +316,7 @@
 				<BuildingType>BUILDING_HI_TECH_NUCLEAR_REACTOR</BuildingType>
 				<BuildingType>BUILDING_GENERATION_IV_REACTOR</BuildingType>
 				<BuildingType>BUILDING_D_T_FUSION_POWER_PLANT</BuildingType>
-				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_D_HE3_FUSION_PLANT</BuildingType>
 				<BuildingType>BUILDING_HE3_FUSION_POWER_PLANT</BuildingType>
 				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION_PLANT</BuildingType>
 				<BuildingType>BUILDING_QUANTUM_VACUUM_POWER_PLANT</BuildingType>

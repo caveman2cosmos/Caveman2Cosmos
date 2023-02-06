@@ -3367,7 +3367,7 @@
 		<Russian>Êëåòêè ñ íî÷íûìè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_DOG_REMAINS</Tag>
+		<Tag>TXT_KEY_BUILDING_REMAINS_DIRE_WOLF</Tag>
 		<English>Remains - Dire Wolf</English>
 		<French>Restes de Loup sinistre</French>
 		<German>
@@ -3379,7 +3379,7 @@
 		<Russian>Ïàìÿòü î ëþòîâîëêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_GROUNDSLOTH_REMAINS</Tag>
+		<Tag>TXT_KEY_BUILDING_REMAINS_GROUND_SLOTH</Tag>
 		<English>Remains - Ground Sloth</English>
 		<French>Restes de Xénarthre</French>
 		<German>
@@ -3391,7 +3391,7 @@
 		<Russian>Ïàìÿòü î ãèã. ëåíèâöå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_MAMMOTH_REMAINS</Tag>
+		<Tag>TXT_KEY_BUILDING_REMAINS_MAMMOTH</Tag>
 		<English>Remains - Mammoth</English>
 		<French>Restes de Mammouths</French>
 		<Italian>Resti di mammut</Italian>
@@ -3599,7 +3599,7 @@
 		<Russian>Ñîþç îõîòíèêîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TRADITION_NAVAL_TOTEM</Tag>
+		<Tag>TXT_KEY_BUILDING_TRADITION_NAVAL_MASCOT</Tag>
 		<English>Tradition - Naval Mascot</English>
 		<French>Tradition - Mascotte Navale</French>
 		<Italian>Tradizione - Mascotte della marina</Italian>

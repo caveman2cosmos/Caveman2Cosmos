@@ -262,7 +262,7 @@
 			</TechCommerceModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MESOAMERICAN_MONASTERY</Type>
+			<Type>BUILDING_CALMACEC</Type>
 			<TechCommerceModifiers>
 				<TechCommerceModifier>
 					<PrereqTech>TECH_BIOLOGY</PrereqTech>

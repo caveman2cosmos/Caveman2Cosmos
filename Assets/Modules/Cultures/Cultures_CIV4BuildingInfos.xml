@@ -623,7 +623,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_TRANSAMERICA_PYRAMID</BuildingType>
+					<BuildingType>BUILDING_TRANSAMERICA_TOWER</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -3291,7 +3291,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_TAOIST_TEMPLE_OF_HEAVEN</BuildingType>
+					<BuildingType>BUILDING_TEMPLE_OF_HEAVEN</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -8685,7 +8685,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_MESOAMERICAN_MAGICIAN_PYRAMID</BuildingType>
+					<BuildingType>BUILDING_PYRAMID_OF_THE_MAGICIAN</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
@@ -11505,7 +11505,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_PONT_DU_GARD_AQUEDUCT</BuildingType>
+					<BuildingType>BUILDING_PONT_DU_GARD</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -11525,7 +11525,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_SAN_MARCOS_CATHEDRAL</BuildingType>
+					<BuildingType>BUILDING_SAINT_MARKS_BASILICA</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>

@@ -136,7 +136,7 @@
 				<iCommerce>1</iCommerce>
 			</CommerceModifiers>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_PLASTICSURGERY_CLINIC</BuildingType>
+				<BuildingType>BUILDING_PLASTIC_SURGERY_CLINIC</BuildingType>
 				<BuildingType>BUILDING_BIOPUNK_LAB</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>

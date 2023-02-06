@@ -494,7 +494,7 @@
 				<BuildingType>BUILDING_BREEDING_PROGRAM_BISON</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_COMBAT_SPORTS</ObsoleteTech>
 			<iCost>60</iCost>
@@ -2440,7 +2440,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BUTCHERY</BuildingType>
 				<BuildingType>BUILDING_MEAT_PACKING_PLANT</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<iCost>664</iCost>
@@ -2475,7 +2475,7 @@
 					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+					<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 					<CommerceChanges>
 						<iCommerce>5</iCommerce>
 					</CommerceChanges>
@@ -3501,7 +3501,7 @@
 			</PrereqBonuses>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FLETCHERS_HUT</BuildingType>
-				<BuildingType>BUILDING_TRADITION_ARCHERY_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_TRADITION_ARCHERY</BuildingType>
 				<BuildingType>BUILDING_HUNTING_INSTRUCTIONS</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER_TRADITION</BuildingType>
 			</PrereqOrBuildings>
@@ -4182,13 +4182,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_MANHATTAN_PROJECT</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MANTLE_VACTRAIN_NETWORK</Type>
+			<Type>BUILDING_GRAVITY_TRAIN_NETWORK</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_MANTLE_VACTRAIN_NETWORK</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MANTLE_VACTRAIN_NETWORK_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_GRAVITY_TRAIN_NETWORK</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GRAVITY_TRAIN_NETWORK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MANTLE_VACTRAIN_NETWORK</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GRAVITY_TRAIN_NETWORK</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MANTLE_VACTRAIN_NETWORK</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -4242,7 +4242,7 @@
 			</PropertyManipulators>
 			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
-			<FreeBuilding>BUILDING_NATIONAL_MEDICAL_DATABASE_GOOD</FreeBuilding>
+			<FreeBuilding>BUILDING_EFFECT_MEDICAL_DATABASE</FreeBuilding>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_MEDICAL_DATABASE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MEDICAL_DATABASE</MovieDefineTag>
@@ -4819,7 +4819,7 @@
 			<iCost>4010</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<FreeBuilding>BUILDING_SAFETY_NAT_LEGAL_DATABASE</FreeBuilding>
+			<FreeBuilding>BUILDING_SAFETY_NATIONAL_LEGAL_DATABASE</FreeBuilding>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_LEGAL_DATABASE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_LEGAL_DATABASE</MovieDefineTag>
@@ -5728,13 +5728,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_ZOO</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NEUROIMPLANT_EXPORTER</Type>
+			<Type>BUILDING_ADVANCED_NEUROIMPLANT_EXPORTER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_NEUROIMPLANT_EXPORTER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NEUROIMPLANT_EXPORTER_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ADVANCED_NEUROIMPLANT_EXPORTER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ADVANCED_NEUROIMPLANT_EXPORTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NEUROIMPLANT_EXPORTER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ADVANCED_NEUROIMPLANT_EXPORTER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NEUROIMPLANT_EXPORTER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -5745,7 +5745,7 @@
 			<CommerceChanges>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<FreeBuilding>BUILDING_NEUROIMPLANT_EXPORTER_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_EFFECT_NEUROIMPLANT_EXPORTER</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_STARPORT</BuildingType>
 			</PrereqInCityBuildings>
@@ -5809,13 +5809,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_NOBLEGARDEN</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NONPHOTOSYNTHETIC_PLANTS</Type>
+			<Type>BUILDING_LIFE_NONPHOTOSYNTHETIC_PLANTS</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_NONPHOTOSYNTHETIC_PLANTS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NONPHOTOSYNTHETIC_PLANTS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_LIFE_NONPHOTOSYNTHETIC_PLANTS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LIFE_NONPHOTOSYNTHETIC_PLANTS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NONPHOTOSYNTHETIC_PLANTS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_LIFE_NONPHOTOSYNTHETIC_PLANTS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -6494,13 +6494,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_RESEARCH_HOSPITAL</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_RUSSIAN_RESEARCH_INSTITUTE</Type>
+			<Type>BUILDING_RESEARCH_INSTITUTE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_RUSSIAN_RESEARCH_INSTITUTE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_RUSSIAN_RESEARCH_INSTITUTE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_RESEARCH_INSTITUTE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_RESEARCH_INSTITUTE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SUPERCONDUCTORS</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqInCityBuildings>
@@ -6561,7 +6561,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<ArtDefineTag>ART_DEF_BUILDING_RUSSIAN_RESEARCH_INSTITUTE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_RESEARCH_INSTITUTE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_RUSSIAN_RESEARCH_INSTITUTE</MovieDefineTag>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>

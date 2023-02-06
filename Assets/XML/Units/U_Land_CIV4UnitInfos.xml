@@ -4195,7 +4195,7 @@
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_NAGHUALISM</PrereqReligion>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_MESOAMERICAN_MONASTERY</BuildingType>
+				<BuildingType>BUILDING_CALMACEC</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iBaseUpkeep>2</iBaseUpkeep>
@@ -33776,7 +33776,7 @@
 				<BuildingType>BUILDING_ORDINANCE_SMOKING_PROHIBITION</BuildingType>
 				<BuildingType>BUILDING_NATIONAL_ALCOHOL_PROHIBITION</BuildingType>
 				<BuildingType>BUILDING_NATIONAL_DRUG_PROHIBITION</BuildingType>
-				<BuildingType>BUILDING_NATIONAL_SMOKING_PROHIBITION</BuildingType>
+				<BuildingType>BUILDING_ORDINANCE_NATIONAL_SMOKING_PROHIBITION</BuildingType>
 				<BuildingType>BUILDING_NATIONAL_PROSTITUTION_BAN</BuildingType>
 				<BuildingType>BUILDING_NATIONAL_GAMBLING_BAN</BuildingType>
 			</Buildings>
@@ -36635,7 +36635,7 @@
 				<BuildingType>BUILDING_HQ_CIVILIZED_JEWELERS_INC</BuildingType>
 				<BuildingType>BUILDING_HQ_EMPERORS_CLOTHING</BuildingType>
 				<BuildingType>BUILDING_HQ_RED_CURTAINS</BuildingType>
-				<BuildingType>BUILDING_TRADITION_ASTHETIC_APPRECIATION</BuildingType>
+				<BuildingType>BUILDING_TRADITION_AESTHETIC_APPRECIATION</BuildingType>
 			</Buildings>
 			<Flavors>
 				<Flavor>
@@ -37351,7 +37351,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_TRADITION_WORK_ETHIC</BuildingType>
 				<BuildingType>BUILDING_IRONWORKS</BuildingType>
-				<BuildingType>BUILDING_PONT_DU_GARD_AQUEDUCT</BuildingType>
+				<BuildingType>BUILDING_PONT_DU_GARD</BuildingType>
 				<BuildingType>BUILDING_HQ_CREATIVE_CONSTRUCTIONS</BuildingType>
 				<BuildingType>BUILDING_HQ_MINING_INC</BuildingType>
 				<BuildingType>BUILDING_HQ_BULLSEYE</BuildingType>
@@ -37724,7 +37724,7 @@
 				<BuildingType>BUILDING_TRADITION_HUNTER</BuildingType>
 				<BuildingType>BUILDING_TRADITION_SEA_HUNTING</BuildingType>
 				<BuildingType>BUILDING_TRADITION_MILITARY_STANDARD_MASCOT</BuildingType>
-				<BuildingType>BUILDING_TRADITION_NAVAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_TRADITION_NAVAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_TRADITION_ARCHERY</BuildingType>
 				<BuildingType>BUILDING_SECRET_ARMY_BASE</BuildingType>
 				<BuildingType>BUILDING_NATIONAL_COURIER_SYSTEM</BuildingType>
@@ -37915,7 +37915,7 @@
 			</GreatPeoples>
 			<Buildings>
 				<BuildingType>BUILDING_TRADITION_SEA_HUNTING</BuildingType>
-				<BuildingType>BUILDING_TRADITION_NAVAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_TRADITION_NAVAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_SECRET_ARMY_BASE</BuildingType>
 				<BuildingType>BUILDING_NATIONAL_COURIER_SYSTEM</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACADEMY</BuildingType>
@@ -38123,7 +38123,7 @@
 				<BuildingType>BUILDING_TRADITION_HUNTER</BuildingType>
 				<BuildingType>BUILDING_TRADITION_SEA_HUNTING</BuildingType>
 				<BuildingType>BUILDING_TRADITION_MILITARY_STANDARD_MASCOT</BuildingType>
-				<BuildingType>BUILDING_TRADITION_NAVAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_TRADITION_NAVAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_TRADITION_ARCHERY</BuildingType>
 				<BuildingType>BUILDING_GREAT_HOLMEGAARD_HUNT</BuildingType>
 			</Buildings>
@@ -39692,7 +39692,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_JET_AIRCRAFT_FACTORY</BuildingType>
+				<BuildingType>BUILDING_FACTORY_JET_ENGINES</BuildingType>
 				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_JET_PROPULSION</PrereqTech>
@@ -39994,7 +39994,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_JET_AIRCRAFT_FACTORY</BuildingType>
+				<BuildingType>BUILDING_FACTORY_JET_ENGINES</BuildingType>
 				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_ASTRONAUTICS</PrereqTech>

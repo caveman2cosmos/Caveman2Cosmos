@@ -1292,7 +1292,7 @@
 			<Button>Art/Interface/Buttons/Buildings/PaleolithicDogMyth.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PALEOLITHIC_DOG_REMAINS</Type>
+			<Type>ART_DEF_BUILDING_REMAINS_DIRE_WOLF</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1312,7 +1312,7 @@
 			<Button>Art/Interface/Buttons/Units/Groundsloth.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PALEOLITHIC_GROUNDSLOTH_REMAINS</Type>
+			<Type>ART_DEF_BUILDING_REMAINS_GROUND_SLOTH</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1332,7 +1332,7 @@
 			<Button>Art/Interface/Buttons/Buildings/PaleolithicMammothMyth.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PALEOLITHIC_MAMMOTH_REMAINS</Type>
+			<Type>ART_DEF_BUILDING_REMAINS_MAMMOTH</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>

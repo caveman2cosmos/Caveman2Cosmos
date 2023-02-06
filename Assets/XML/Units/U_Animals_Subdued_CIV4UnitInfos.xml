@@ -5133,7 +5133,7 @@
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_WOLF</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_DIRE_WOLF</BuildingType>
-				<BuildingType>BUILDING_PALEOLITHIC_DOG_REMAINS</BuildingType>
+				<BuildingType>BUILDING_REMAINS_DIRE_WOLF</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
@@ -8841,7 +8841,7 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_WORKERS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_EARTH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_GROUND_SLOTH</BuildingType>
-				<BuildingType>BUILDING_PALEOLITHIC_GROUNDSLOTH_REMAINS</BuildingType>
+				<BuildingType>BUILDING_REMAINS_GROUND_SLOTH</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
@@ -12597,7 +12597,7 @@
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MAMMOTH</BuildingType>
-				<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_REMAINS</BuildingType>
+				<BuildingType>BUILDING_REMAINS_MAMMOTH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_ELEPHANT</BuildingType>
 				<BuildingType>BUILDING_CAMP_MAMMOTH</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -19814,7 +19814,7 @@
 				<BuildingType>BUILDING_FOLKLORE_E_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEATURTLE</BuildingType>
 				<BuildingType>BUILDING_SHELL_WORKERS_HUT</BuildingType>
-				<BuildingType>BUILDING_SEATURTLE_EGG_GATHERER</BuildingType>
+				<BuildingType>BUILDING_SEA_TURTLE_EGG_GATHERER</BuildingType>
 				<BuildingType>BUILDING_AQUARIUM</BuildingType>
 				<BuildingType>BUILDING_MARINE_INSTITUTE</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>

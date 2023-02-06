@@ -866,7 +866,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FARM_ANIMAL_COW</BuildingType>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<BonusType>BONUS_COW</BonusType>
@@ -959,7 +959,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HERD_MUSKOX</BuildingType>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>140</iCost>
@@ -1131,7 +1131,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FARM_ANIMAL_PIG</BuildingType>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<BonusType>BONUS_PIG</BonusType>

@@ -203,12 +203,12 @@
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_STEPRECKONER_MANUFACTORY</Type>
+			<Type>BUILDING_STEP_RECKONER_MANUFACTURE</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_CLOCK</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_STEPRECKONER_MANUFACTORY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_STEPRECKONER_MANUFACTORY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_STEP_RECKONER_MANUFACTURE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_STEP_RECKONER_MANUFACTURE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_STEPRECKONER_MANUFACTORY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_STEP_RECKONER_MANUFACTURE</ArtDefineTag>
 			<ObsoleteTech>TECH_PERSONAL_COMPUTERS</ObsoleteTech>
 			<Bonus>BONUS_CLOCKPUNK</Bonus>
 			<PrereqBonuses>

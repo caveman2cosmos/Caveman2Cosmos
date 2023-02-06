@@ -883,7 +883,7 @@
 				<BuildingType>BUILDING_OBSERVATORY</BuildingType>
 			</PrereqOrBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_POLLUTION_BLACKENEDSKIES</BuildingType>
+				<BuildingType>BUILDING_POLLUTION_BLACKENED_SKIES</BuildingType>
 			</ReplacementBuildings>
 			<ObsoleteTech>TECH_ASTRONOMY</ObsoleteTech>
 			<iCost>1104</iCost>
@@ -1668,7 +1668,7 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqReligion>RELIGION_NAGHUALISM</PrereqReligion>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MESOAMERICAN_CATHEDRAL</BuildingType>
+				<BuildingType>BUILDING_TEMPLE_OF_TLALOC</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqAndCivics>
 				<PrereqCivic>
@@ -2589,8 +2589,8 @@
 				<BuildingType>BUILDING_BARRICADES</BuildingType>
 				<BuildingType>BUILDING_CEMENT_BARRIER</BuildingType>
 				<BuildingType>BUILDING_METAMATERIAL_WALLS</BuildingType>
-				<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALL</BuildingType>
-				<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
+				<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALLS</BuildingType>
+				<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALLS</BuildingType>
 			</PrereqOrBuildings>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<Help>TXT_KEY_BUILDING_BLARNEY_CASTLE_HELP</Help>
@@ -4152,9 +4152,9 @@
 				<iYield>0</iYield>
 				<iYield>5</iYield>
 			</YieldChanges>
-			<FreeBuilding>BUILDING_URBAN_HIGH_SPEED_RAIL</FreeBuilding>
+			<FreeBuilding>BUILDING_MAGLEV_RAILS</FreeBuilding>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_URBAN_HIGH_SPEED_RAIL</BuildingType>
+				<BuildingType>BUILDING_MAGLEV_RAILS</BuildingType>
 				<BuildingType>BUILDING_VACTRAIN_TERMINAL</BuildingType>
 				<BuildingType>BUILDING_GRAVITY_TRAIN</BuildingType>
 			</PrereqOrBuildings>
@@ -5616,7 +5616,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_ZOROASTRIAN_CATHEDRAL</BuildingType>
+					<BuildingType>BUILDING_ZOROASTRIAN_PANTHEON</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -5624,7 +5624,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_MESOAMERICAN_CATHEDRAL</BuildingType>
+					<BuildingType>BUILDING_TEMPLE_OF_TLALOC</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -7021,7 +7021,7 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_POLLUTION_BLACKENEDSKIES</BuildingType>
+				<BuildingType>BUILDING_POLLUTION_BLACKENED_SKIES</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -7056,7 +7056,7 @@
 				<BuildingType>BUILDING_OBSERVATORY</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_POLLUTION_BLACKENEDSKIES</BuildingType>
+				<BuildingType>BUILDING_POLLUTION_BLACKENED_SKIES</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -8158,7 +8158,7 @@
 				<BuildingType>BUILDING_TOWNCLOCK</BuildingType>
 			</PrereqOrBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_POLLUTION_BLACKENEDSKIES</BuildingType>
+				<BuildingType>BUILDING_POLLUTION_BLACKENED_SKIES</BuildingType>
 			</ReplacementBuildings>
 			<ObsoleteTech>TECH_CLOCKWORKS</ObsoleteTech>
 			<iCost>1056</iCost>
@@ -10861,13 +10861,13 @@
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_INTERCONTINENTAL_RAIL</Type>
+			<Type>BUILDING_GLOBAL_RAIL_NETWORK</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_INTERCONTINENTAL_RAIL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_INTERCONTINENTAL_RAIL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_GLOBAL_RAIL_NETWORK</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GLOBAL_RAIL_NETWORK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_INTERCONTINENTAL_RAIL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GLOBAL_RAIL_NETWORK</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_INTERCONTINENTAL_RAIL</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -10882,7 +10882,7 @@
 			</YieldChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_URBAN_HIGH_SPEED_RAIL</BuildingType>
+					<BuildingType>BUILDING_MAGLEV_RAILS</BuildingType>
 					<CommerceChanges>
 						<iCommerce>2</iCommerce>
 					</CommerceChanges>
@@ -10901,7 +10901,7 @@
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_URBAN_HIGH_SPEED_RAIL</BuildingType>
+				<BuildingType>BUILDING_MAGLEV_RAILS</BuildingType>
 				<BuildingType>BUILDING_VACTRAIN_TERMINAL</BuildingType>
 				<BuildingType>BUILDING_GRAVITY_TRAIN</BuildingType>
 			</PrereqOrBuildings>
@@ -10968,8 +10968,8 @@
 				<BuildingType>BUILDING_BARRICADES</BuildingType>
 				<BuildingType>BUILDING_CEMENT_BARRIER</BuildingType>
 				<BuildingType>BUILDING_METAMATERIAL_WALLS</BuildingType>
-				<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALL</BuildingType>
-				<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
+				<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALLS</BuildingType>
+				<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALLS</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqBonuses>
 				<Bonus>BONUS_GLASSWARE</Bonus>
@@ -11097,8 +11097,8 @@
 			<Bonus>BONUS_JADE</Bonus>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_JADE_CARVER</BuildingType>
-				<BuildingType>BUILDING_JADE_MERCHANT_IMPORTER</BuildingType>
-				<BuildingType>BUILDING_JADE_MERCHANT_VICINITY</BuildingType>
+				<BuildingType>BUILDING_JADE_IMPORTER</BuildingType>
+				<BuildingType>BUILDING_JADE_MERCHANT_LOCAL</BuildingType>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqInCityBuildings>
@@ -11745,8 +11745,8 @@
 				<BuildingType>BUILDING_BARRICADES</BuildingType>
 				<BuildingType>BUILDING_CEMENT_BARRIER</BuildingType>
 				<BuildingType>BUILDING_METAMATERIAL_WALLS</BuildingType>
-				<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALL</BuildingType>
-				<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
+				<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALLS</BuildingType>
+				<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALLS</BuildingType>
 			</PrereqOrBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PropertyManipulators>
@@ -11823,7 +11823,7 @@
 				<BuildingType>BUILDING_HERD_COW</BuildingType>
 				<BuildingType>BUILDING_CAMP_AUROCHS</BuildingType>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>876</iCost>
 			<BonusProductionModifiers>
@@ -11909,7 +11909,7 @@
 			</CommerceChangeDoubleTimes>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<FreeBuilding>BUILDING_LASCAUX_PAINTS_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_EFFECT_LASCAUX_CAVES</FreeBuilding>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -13574,13 +13574,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MESOAMERICAN_MAGICIAN_PYRAMID</Type>
+			<Type>BUILDING_PYRAMID_OF_THE_MAGICIAN</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_MESOAMERICAN_MAGICIAN_PYRAMID</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MESOAMERICAN_MAGICIAN_PYRAMID_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_PYRAMID_OF_THE_MAGICIAN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_PYRAMID_OF_THE_MAGICIAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_STEP_PYRAMID</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MAGICIAN</MovieDefineTag>
@@ -14587,7 +14587,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_MEGATOWER_HOLOGRAM_ADVERTISING</BuildingType>
+					<BuildingType>BUILDING_MEGATOWER_HOLOGRAM_ADVERTISING_CROWN_SECTION</BuildingType>
 					<CommerceChanges>
 						<iCommerce>5</iCommerce>
 					</CommerceChanges>
@@ -15083,13 +15083,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NUDING_SPACE_ARCOLOGY</Type>
+			<Type>BUILDING_NUDGING_SPACE_ARCOLOGY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_NUDING_SPACE_ARCOLOGY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NUDING_SPACE_ARCOLOGY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_NUDGING_SPACE_ARCOLOGY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NUDGING_SPACE_ARCOLOGY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NUDING_SPACE_ARCOLOGY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_NUDGING_SPACE_ARCOLOGY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NUDING_SPACE_ARCOLOGY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -15325,7 +15325,7 @@
 					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_STRATOSPHERIC_MAGLEV</BuildingType>
+					<BuildingType>BUILDING_STRATOSPHERIC_MAGLEV_TERMINAL</BuildingType>
 					<CommerceChanges>
 						<iCommerce>3</iCommerce>
 					</CommerceChanges>
@@ -16377,13 +16377,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PONT_DU_GARD_AQUEDUCT</Type>
+			<Type>BUILDING_PONT_DU_GARD</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_PONT_DU_GARD_AQUEDUCT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_PONT_DU_GARD_AQUEDUCT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_PONT_DU_GARD</Description>
+			<Civilopedia>TXT_KEY_BUILDING_PONT_DU_GARD_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PONT_DU_GARD</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_PONT_DU_GARD</MovieDefineTag>
@@ -17247,7 +17247,7 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_POLLUTION_BLACKENEDSKIES</BuildingType>
+				<BuildingType>BUILDING_POLLUTION_BLACKENED_SKIES</BuildingType>
 			</ReplacementBuildings>
 			<iTradeRoutes>2</iTradeRoutes>
 			<SpecialistCounts>
@@ -17378,10 +17378,10 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SAN_MARCOS_CATHEDRAL</Type>
+			<Type>BUILDING_SAINT_MARKS_BASILICA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_SAN_MARCOS_CATHEDRAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SAN_MARCOS_CATHEDRAL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_SAINT_MARKS_BASILICA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SAINT_MARKS_BASILICA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MARCOS_CATHEDRAL</ArtDefineTag>
 			<MapCategoryTypes>
@@ -17674,7 +17674,7 @@
 				<BuildingType>BUILDING_OBSERVATORY</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_POLLUTION_BLACKENEDSKIES</BuildingType>
+				<BuildingType>BUILDING_POLLUTION_BLACKENED_SKIES</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -17936,13 +17936,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SHIMIZU_MEGACITY_PYRAMID</Type>
+			<Type>BUILDING_SHIMIZU_MEGA_CITY_PYRAMID</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_SHIMIZU_MEGACITY_PYRAMID</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SHIMIZU_MEGACITY_PYRAMID_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_SHIMIZU_MEGA_CITY_PYRAMID</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SHIMIZU_MEGA_CITY_PYRAMID_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SHIMIZU_MEGACITY_PYRAMID</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_SHIMIZU_MEGA_CITY_PYRAMID</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SHIMIZU_MEGACITY_PYRAMID</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -18365,7 +18365,7 @@
 				<BuildingType>BUILDING_OBSERVATORY</BuildingType>
 			</PrereqOrBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_POLLUTION_BLACKENEDSKIES</BuildingType>
+				<BuildingType>BUILDING_POLLUTION_BLACKENED_SKIES</BuildingType>
 			</ReplacementBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_GRAND_FIRE_FESTIVAL</BuildingType>
@@ -18610,7 +18610,7 @@
 				<BuildingType>BUILDING_POWER_LINES</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_POLLUTION_BLACKENEDSKIES</BuildingType>
+				<BuildingType>BUILDING_POLLUTION_BLACKENED_SKIES</BuildingType>
 			</ReplacementBuildings>
 			<iCost>32730</iCost>
 			<iHealth>5</iHealth>
@@ -18852,7 +18852,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_JET_AIRCRAFT_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_JET_ENGINES</BuildingType>
 					<CommerceChanges>
 						<iCommerce>3</iCommerce>
 					</CommerceChanges>
@@ -19805,13 +19805,13 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TAOIST_TEMPLE_OF_HEAVEN</Type>
+			<Type>BUILDING_TEMPLE_OF_HEAVEN</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_TAOIST_TEMPLE_OF_HEAVEN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TAOIST_TEMPLE_OF_HEAVEN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_TEMPLE_OF_HEAVEN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_OF_HEAVEN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TEMPLE_OF_HEAVEN</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TEMPLE_OF_HEAVEN</MovieDefineTag>
@@ -20564,15 +20564,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TRANSAMERICA_PYRAMID</Type>
+			<Type>BUILDING_TRANSAMERICA_TOWER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_TRANSAMERICA_PYRAMID</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TRANSAMERICA_PYRAMID_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_TRANSAMERICA_TOWER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TRANSAMERICA_TOWER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TRANSAMERICA_PYRAMID</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_TRANSAMERICA_TOWER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TRANSAMERICA_PYRAMID</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_GLOBALIZATION</PrereqTech>
@@ -20644,7 +20644,7 @@
 			</YieldChanges>
 			<iTradeRoutes>1</iTradeRoutes>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_URBAN_HIGH_SPEED_RAIL</BuildingType>
+				<BuildingType>BUILDING_MAGLEV_RAILS</BuildingType>
 				<BuildingType>BUILDING_VACTRAIN_TERMINAL</BuildingType>
 				<BuildingType>BUILDING_GRAVITY_TRAIN</BuildingType>
 			</PrereqOrBuildings>

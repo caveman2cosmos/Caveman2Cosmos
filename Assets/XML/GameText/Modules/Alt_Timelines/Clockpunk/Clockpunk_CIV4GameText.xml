@@ -120,7 +120,7 @@
 		<Russian>Îðêåñòðèîí - íàçâàíèå ðÿäà ìóçûêàëüíûõ èíñòðóìåíòîâ, ïðèñïîñîáëåííûõ äëÿ èìèòàöèè çâó÷àíèÿ îðêåñòðà.[PARAGRAPH:1]Èíñòðóìåíò èìåë âèä øêàôà, âíóòðè êîòîðîãî áûë ïîìåùåí ïðóæèííûé èëè ïíåâìàòè÷åñêèé ìåõàíèçì, êîòîðûé ïðè âáðàñûâàíèè ìîíåòû ïðèâîäèëñÿ â äåéñòâèå. Ðàñïîëîæåíèå ñòðóí èëè òðóá èíñòðóìåíòà áûëî ïîäîáðàíî òàêèì îáðàçîì, ÷òîáû ïðè ðàáîòå ìåõàíèçìà çâó÷àëè îïðåäåë¸ííûå ìóçûêàëüíûå ïðîèçâåäåíèÿ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_STEPRECKONER_MANUFACTORY</Tag>
+		<Tag>TXT_KEY_BUILDING_STEP_RECKONER_MANUFACTURE</Tag>
 		<English>Step Reckoner Manufacture</English>
 		<French>
 			<Text>Usine de calculateurs mécaniques</Text>
@@ -140,7 +140,7 @@
 		<Russian>Ôàáðèêà ñ÷åò. ìàøèí</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_STEPRECKONER_MANUFACTORY_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_STEP_RECKONER_MANUFACTURE_PEDIA</Tag>
 		<English>A [COLOR_BUILDING_TEXT]Step Reckoner[COLOR_REVERT] is a portable cranked mechanical calculator that can perform all four basic arithmetic operations (addition, subtraction, multiplication, and division). They're a real step up from the abacus, when it comes to calculating arithmetic.</English>
 		<Italian>Un [COLOR_BUILDING_TEXT]calcolatore meccanico[COLOR_REVERT] è uno strumento portatile in grado di effettuare le quattro operazioni aritmetiche di base (addizione, sottrazione, moltiplicazione e divisione). È un grande passo avanti rispetto all'abaco, per quanto riguarda i calcoli aritmetici.</Italian>
 		<Russian>Ñ÷åòíûå ìàøèíû - ýòî ïåðåíîñíûå ìåõàíè÷åñêèå êàëüêóëÿòîðû, êîòîðûå óìåþò âûïîëíÿòü ïðîñòåéøèå àðèôìåòè÷åñêèå îïåðàöèè.[PARAGRAPH:1]Ýòè ìåõàíèçìû - ñåðüåçíûé øàã âïåðåä, ïî ñðàâíåíèþ ñî ñ÷åòàìè. Äðóãèå, ìåíåå èçîáðåòàòåëüíûå ñòðàíû óòâåðæäàþò, ÷òî îíè ñëîæíû è íåíàäåæíû, íî ìû ñïðàâëÿåìñÿ ñ íèìè ïðîñòî îòëè÷íî.</Russian>

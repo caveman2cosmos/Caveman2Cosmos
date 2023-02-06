@@ -10285,13 +10285,13 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_IGLOOS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_INDUSTRIAL_ACHIEVEMENT</Type>
+			<Type>BUILDING_ACHIEVEMENT_INDUSTRIAL</Type>
 			<SpecialBuildingType>SPECIALBUILDING_ACHIEVEMENT</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_INDUSTRIAL_ACHIEVEMENT</Description>
+			<Description>TXT_KEY_BUILDING_ACHIEVEMENT_INDUSTRIAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<CommerceChanges>
@@ -10307,7 +10307,7 @@
 			<iAsset>10</iAsset>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_INDUSTRIAL_ACHIEVEMENT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ACHIEVEMENT_INDUSTRIAL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_INDUSTRIAL_ACHIEVEMENT</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -10854,11 +10854,11 @@
 		</BuildingInfo>
 		-->
 		<BuildingInfo>
-			<Type>BUILDING_LASCAUX_PAINTS_EFFECT</Type>
+			<Type>BUILDING_EFFECT_LASCAUX_CAVES</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_LASCAUX_PAINTS_EFFECT</Description>
+			<Description>TXT_KEY_BUILDING_EFFECT_LASCAUX_CAVES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LASCAUX_PAINTS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_PETROGLYPHS</PrereqTech>
 			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
@@ -11002,7 +11002,7 @@
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
 			<iGlobalHealth>2</iGlobalHealth>
-			<FreeBuilding>BUILDING_ACHIEVEMENT_MEDICAL_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_EFFECT_ACHIEVEMENT_MEDICAL</FreeBuilding>
 			<iAsset>10</iAsset>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -11010,13 +11010,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_MEDICAL_A</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ACHIEVEMENT_MEDICAL_EFFECT</Type>
+			<Type>BUILDING_EFFECT_ACHIEVEMENT_MEDICAL</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ANCIENT_MEDICINE</PrereqTech>
-			<Description>TXT_KEY_BUILDING_ACHIEVEMENT_MEDICAL_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_MEDICAL_EFFECT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EFFECT_ACHIEVEMENT_MEDICAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EFFECT_ACHIEVEMENT_MEDICAL_PEDIA</Civilopedia>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -11026,15 +11026,15 @@
 			</PropertyManipulators>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_ACHIEVEMENT_MEDICAL_EFFECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EFFECT_ACHIEVEMENT_MEDICAL</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NATIONAL_MEDICAL_DATABASE_GOOD</Type>
+			<Type>BUILDING_EFFECT_MEDICAL_DATABASE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_NATIONAL_MEDICAL_DATABASE_GOOD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_MEDICAL_DATABASE_GOOD_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EFFECT_MEDICAL_DATABASE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EFFECT_MEDICAL_DATABASE_PEDIA</Civilopedia>
 			<iHealth>5</iHealth>
 			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
@@ -11048,7 +11048,7 @@
 			<PrereqTech>TECH_KNOWLEDGE_MANAGEMENT</PrereqTech>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_MEDICAL_DATABASE_GOOD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EFFECT_MEDICAL_DATABASE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MERCANTILISM_BONUS_GOLD</Type>
@@ -11221,13 +11221,13 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MILITARY_ACADEMY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MILITARY_ACHIEVEMENT</Type>
+			<Type>BUILDING_ACHIEVEMENT_MILITARY</Type>
 			<SpecialBuildingType>SPECIALBUILDING_ACHIEVEMENT</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_MILITARY_ACHIEVEMENT</Description>
+			<Description>TXT_KEY_BUILDING_ACHIEVEMENT_MILITARY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<CommerceChanges>
@@ -11240,7 +11240,7 @@
 			<iAsset>10</iAsset>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_MILITARY_ACHIEVEMENT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ACHIEVEMENT_MILITARY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MILITARY_ACHIEVEMENT</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -11508,12 +11508,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_PROSTITUTION_BAN</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NATIONAL_SMOKING_PROHIBITION</Type>
+			<Type>BUILDING_ORDINANCE_NATIONAL_SMOKING_PROHIBITION</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_NATIONAL_SMOKING_PROHIBITION</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_SMOKING_PROHIBITION_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ORDINANCE_NATIONAL_SMOKING_PROHIBITION</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ORDINANCE_NATIONAL_SMOKING_PROHIBITION_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<PrereqTech>TECH_URBAN_CULTURE</PrereqTech>
 			<PrereqInCityBuildings>
@@ -11524,7 +11524,7 @@
 			<FreeBuilding>BUILDING_ORDINANCE_SMOKING_PROHIBITION</FreeBuilding>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_SMOKING_PROHIBITION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ORDINANCE_NATIONAL_SMOKING_PROHIBITION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_THE_NATIONAL_STANDARD_OF_MEASUREMENT</Type>
@@ -12253,13 +12253,13 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PESTS_WASPS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_POLITICAL_ACHIEVEMENT</Type>
+			<Type>BUILDING_ACHIEVEMENT_POLITICAL</Type>
 			<SpecialBuildingType>SPECIALBUILDING_ACHIEVEMENT</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_POLITICAL_ACHIEVEMENT</Description>
+			<Description>TXT_KEY_BUILDING_ACHIEVEMENT_POLITICAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<CommerceChanges>
@@ -12277,7 +12277,7 @@
 			<iAsset>10</iAsset>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_POLITICAL_ACHIEVEMENT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ACHIEVEMENT_POLITICAL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_POLITICAL_ACHIEVEMENT</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -12312,11 +12312,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_POLLUTION_BLACKENEDSKIES</Type>
+			<Type>BUILDING_POLLUTION_BLACKENED_SKIES</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_POLLUTION_BLACKENEDSKIES</Description>
+			<Description>TXT_KEY_BUILDING_POLLUTION_BLACKENED_SKIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AIR_POLLUTION_PEDIA</Civilopedia>
 			<iHealth>-10</iHealth>
 			<iHappiness>-10</iHappiness>
@@ -12459,11 +12459,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYWATERPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_POLLUTION_GLOBALWARMING1</Type>
+			<Type>BUILDING_POLLUTION_MINOR_GLOBAL_WARMING</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_POLLUTION_GLOBALWARMING1</Description>
+			<Description>TXT_KEY_BUILDING_POLLUTION_MINOR_GLOBAL_WARMING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AIR_POLLUTION_PEDIA</Civilopedia>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CLIMATE_GEOENGINEERING</BuildingType>
@@ -12487,11 +12487,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_POLLUTION_GLOBALWARMING2</Type>
+			<Type>BUILDING_POLLUTION_MODERATE_GLOBAL_WARMING</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_POLLUTION_GLOBALWARMING2</Description>
+			<Description>TXT_KEY_BUILDING_POLLUTION_MODERATE_GLOBAL_WARMING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AIR_POLLUTION_PEDIA</Civilopedia>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CLIMATE_GEOENGINEERING</BuildingType>
@@ -12515,11 +12515,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_POLLUTION_GLOBALWARMING3</Type>
+			<Type>BUILDING_POLLUTION_MAJOR_GLOBAL_WARMING</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_POLLUTION_GLOBALWARMING3</Description>
+			<Description>TXT_KEY_BUILDING_POLLUTION_MAJOR_GLOBAL_WARMING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AIR_POLLUTION_PEDIA</Civilopedia>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CLIMATE_GEOENGINEERING</BuildingType>
@@ -12544,11 +12544,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_POLLUTION_GROUNDWATER1</Type>
+			<Type>BUILDING_POLLUTION_MINOR_GROUNDWATER_POLLUTION</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_POLLUTION_GROUNDWATER1</Description>
+			<Description>TXT_KEY_BUILDING_POLLUTION_MINOR_GROUNDWATER_POLLUTION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WATER_POLLUTION_PEDIA</Civilopedia>
 			<iHappiness>-1</iHappiness>
 			<iHealth>-1</iHealth>
@@ -12574,11 +12574,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYWATERPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_POLLUTION_GROUNDWATER2</Type>
+			<Type>BUILDING_POLLUTION_MODERATE_GROUNDWATER_POLLUTION</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_POLLUTION_GROUNDWATER2</Description>
+			<Description>TXT_KEY_BUILDING_POLLUTION_MODERATE_GROUNDWATER_POLLUTION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WATER_POLLUTION_PEDIA</Civilopedia>
 			<iHealth>-3</iHealth>
 			<iHappiness>-3</iHappiness>
@@ -12604,11 +12604,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYWATERPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_POLLUTION_GROUNDWATER3</Type>
+			<Type>BUILDING_POLLUTION_MAJOR_GROUNDWATER_POLLUTION</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_POLLUTION_GROUNDWATER3</Description>
+			<Description>TXT_KEY_BUILDING_POLLUTION_MAJOR_GROUNDWATER_POLLUTION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WATER_POLLUTION_PEDIA</Civilopedia>
 			<iHealth>-5</iHealth>
 			<iHappiness>-5</iHappiness>
@@ -12770,11 +12770,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYWATERPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_POLLUTION_REEFBLEACHING</Type>
+			<Type>BUILDING_POLLUTION_REEF_BLEACHING</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_POLLUTION_REEFBLEACHING</Description>
+			<Description>TXT_KEY_BUILDING_POLLUTION_REEF_BLEACHING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AIR_POLLUTION_PEDIA</Civilopedia>
 			<iHappiness>-2</iHappiness>
 			<iHealth>-2</iHealth>
@@ -12982,11 +12982,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_POLLUTION_TOXICATMOSPHERE</Type>
+			<Type>BUILDING_POLLUTION_TOXIC_ATMOSPHERE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_POLLUTION_TOXICATMOSPHERE</Description>
+			<Description>TXT_KEY_BUILDING_POLLUTION_TOXIC_ATMOSPHERE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AIR_POLLUTION_PEDIA</Civilopedia>
 			<iHealth>-10</iHealth>
 			<iHappiness>-10</iHappiness>
@@ -13021,11 +13021,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_POLLUTION_TOXICHYDROSPHERE</Type>
+			<Type>BUILDING_POLLUTION_TOXIC_HYDROSPHERE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_POLLUTION_TOXICHYDROSPHERE</Description>
+			<Description>TXT_KEY_BUILDING_POLLUTION_TOXIC_HYDROSPHERE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WATER_POLLUTION_PEDIA</Civilopedia>
 			<iHealth>-10</iHealth>
 			<iHappiness>-10</iHappiness>
@@ -13257,12 +13257,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_EFFECT_ACHIEVEMENT_SAFETY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SAFETY_NAT_LEGAL_DATABASE</Type>
+			<Type>BUILDING_SAFETY_NATIONAL_LEGAL_DATABASE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SAFETY_NAT_LEGAL_DATABASE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SAFETY_NAT_LEGAL_DATABASE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_SAFETY_NATIONAL_LEGAL_DATABASE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SAFETY_NATIONAL_LEGAL_DATABASE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CLOUD_COMPUTING</PrereqTech>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -13279,7 +13279,7 @@
 			</PropertyManipulators>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_SAFETY_NAT_LEGAL_DATABASE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_SAFETY_NATIONAL_LEGAL_DATABASE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SAFETY_ORBITAL_PRISON</Type>
@@ -13316,13 +13316,13 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SAFETY_ORBITAL_PRISON</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SCIENTIFIC_ACHIEVEMENT</Type>
+			<Type>BUILDING_ACHIEVEMENT_SCIENTIFIC</Type>
 			<SpecialBuildingType>SPECIALBUILDING_ACHIEVEMENT</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SCIENTIFIC_ACHIEVEMENT</Description>
+			<Description>TXT_KEY_BUILDING_ACHIEVEMENT_SCIENTIFIC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<CommerceChanges>
@@ -13338,7 +13338,7 @@
 			<iAsset>10</iAsset>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_SCIENTIFIC_ACHIEVEMENT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ACHIEVEMENT_SCIENTIFIC</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SCIENTIFIC_ACHIEVEMENT</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -13424,13 +13424,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_SCOTLAND_YARD</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SEAFARING_ACHIEVEMENT</Type>
+			<Type>BUILDING_ACHIEVEMENT_SEAFARING</Type>
 			<SpecialBuildingType>SPECIALBUILDING_ACHIEVEMENT</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SEAFARING_ACHIEVEMENT</Description>
+			<Description>TXT_KEY_BUILDING_ACHIEVEMENT_SEAFARING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bWater>1</bWater>
@@ -13453,7 +13453,7 @@
 			<iAsset>10</iAsset>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_SEAFARING_ACHIEVEMENT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ACHIEVEMENT_SEAFARING</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SEAFARING_ACHIEVEMENT</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -15098,7 +15098,7 @@
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FLETCHERS_HUT</BuildingType>
-				<BuildingType>BUILDING_TRADITION_ARCHERY_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_TRADITION_ARCHERY</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_MILITARY_TRADITION</ObsoleteTech>
 			<CommerceChanges>
@@ -15111,20 +15111,20 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<FreeBuilding>BUILDING_TRADITION_ARCHERY_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_EFFECT_TRADITION_ARCHERY</FreeBuilding>
 			<iAsset>4</iAsset>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_TRADITION_ARCHERY_EFFECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EFFECT_TRADITION_ARCHERY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TRADITION_ARCHERY</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TRADITION_ARCHERY_EFFECT</Type>
+			<Type>BUILDING_EFFECT_TRADITION_ARCHERY</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_TRADITION_ARCHERY_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TRADITION_ARCHERY_EFFECT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EFFECT_TRADITION_ARCHERY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EFFECT_TRADITION_ARCHERY_PEDIA</Civilopedia>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<ObsoleteTech>TECH_MILITARY_TRADITION</ObsoleteTech>
 			<bApplyFreePromotionOnMove>1</bApplyFreePromotionOnMove>
@@ -15142,16 +15142,16 @@
 			<iPower>1</iPower>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_TRADITION_ARCHERY_EFFECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EFFECT_TRADITION_ARCHERY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TRADITION_ASTHETIC_APPRECIATION</Type>
+			<Type>BUILDING_TRADITION_AESTHETIC_APPRECIATION</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_TRADITION_ASTHETIC_APPRECIATION</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TRADITION_ASTHETIC_APPRECIATION_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_TRADITION_AESTHETIC_APPRECIATION</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TRADITION_AESTHETIC_APPRECIATION_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			<ObsoleteTech>TECH_CIVIL_ENGINEERING</ObsoleteTech>
@@ -15160,20 +15160,20 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</GlobalCommerceModifiers>
-			<FreeBuilding>BUILDING_TRADITION_ASTHETIC_APPRECIATION_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_EFFECT_TRADITION_AESTHETIC_APPRECIATION</FreeBuilding>
 			<iAsset>6</iAsset>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_TRADITION_ASTHETIC_APPRECIATION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_TRADITION_AESTHETIC_APPRECIATION</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TRADITION_ASTHETIC_APPRECIATION</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TRADITION_ASTHETIC_APPRECIATION_EFFECT</Type>
+			<Type>BUILDING_EFFECT_TRADITION_AESTHETIC_APPRECIATION</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_TRADITION_ASTHETIC_APPRECIATION_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TRADITION_ASTHETIC_APPRECIATION_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EFFECT_TRADITION_AESTHETIC_APPRECIATION</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TRADITION_AESTHETIC_APPRECIATION_PEDIA</Civilopedia>
 			<bApplyFreePromotionOnMove>1</bApplyFreePromotionOnMove>
 			<FreePromoTypes>
 				<FreePromoType>
@@ -15196,7 +15196,7 @@
 			</PropertyManipulators>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_TRADITION_ASTHETIC_APPRECIATION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_TRADITION_AESTHETIC_APPRECIATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRADITION_WORK_ETHIC</Type>
@@ -15219,7 +15219,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<FreeBuilding>BUILDING_TRADITION_WORK_ETHIC_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_EFFECT_TRADITION_WORK_ETHIC</FreeBuilding>
 			<iAsset>6</iAsset>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -15227,11 +15227,11 @@
 			<MovieDefineTag>ART_DEF_MOVIE_TRADITION_WORK_ETHIC</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TRADITION_WORK_ETHIC_EFFECT</Type>
+			<Type>BUILDING_EFFECT_TRADITION_WORK_ETHIC</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_TRADITION_WORK_ETHIC_EFFECT</Description>
+			<Description>TXT_KEY_BUILDING_EFFECT_TRADITION_WORK_ETHIC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRADITION_WORK_ETHIC_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>

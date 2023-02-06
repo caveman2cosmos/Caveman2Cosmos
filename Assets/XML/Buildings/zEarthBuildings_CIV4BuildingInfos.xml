@@ -331,7 +331,7 @@
 				<BuildingType>BUILDING_ASTRONOMICAL_DATABASE</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_POLLUTION_BLACKENEDSKIES</BuildingType>
+				<BuildingType>BUILDING_POLLUTION_BLACKENED_SKIES</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1367,7 +1367,7 @@
 				<BuildingType>BUILDING_OBSERVATORY</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_POLLUTION_BLACKENEDSKIES</BuildingType>
+				<BuildingType>BUILDING_POLLUTION_BLACKENED_SKIES</BuildingType>
 			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
@@ -1647,11 +1647,11 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MICROSATELLITE_CONSTELLATION</Type>
-			<Description>TXT_KEY_BUILDING_MICROSATELLITE_CONSTELLATION</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MICROSATELLITE_CONSTELLATION_PEDIA</Civilopedia>
+			<Type>BUILDING_CISLUNAR_MICROSATELLITE_CONSTELLATION</Type>
+			<Description>TXT_KEY_BUILDING_CISLUNAR_MICROSATELLITE_CONSTELLATION</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_MICROSATELLITE_CONSTELLATION_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MICROSATELLITE_CONSTELLATION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_MICROSATELLITE_CONSTELLATION</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1853,11 +1853,11 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NANOSATELLITE_CONSTELLATION</Type>
-			<Description>TXT_KEY_BUILDING_NANOSATELLITE_CONSTELLATION</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NANOSATELLITE_CONSTELLATION_PEDIA</Civilopedia>
+			<Type>BUILDING_CISLUNAR_NANOSATELLITE_CONSTELLATION</Type>
+			<Description>TXT_KEY_BUILDING_CISLUNAR_NANOSATELLITE_CONSTELLATION</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_NANOSATELLITE_CONSTELLATION_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NANOSATELLITE_CONSTELLATION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_NANOSATELLITE_CONSTELLATION</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1869,7 +1869,7 @@
 				<Bonus>BONUS_ORGANIC_PHOTONIC_CELLS</Bonus>
 			</PrereqBonuses>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MICROSATELLITE_CONSTELLATION</BuildingType>
+				<BuildingType>BUILDING_CISLUNAR_MICROSATELLITE_CONSTELLATION</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>5655</iCost>
 			<CommerceChanges>
@@ -1930,13 +1930,13 @@
 			<Bonus>BONUS_STARPUNK</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NEPTUNE_ATMOSPHERE_PROBE</Type>
+			<Type>BUILDING_NEPTUNE_ATMOSPHERIC_PROBE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_NEPTUNE_ATMOSPHERE_PROBE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NEPTUNE_ATMOSPHERE_PROBE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_NEPTUNE_ATMOSPHERIC_PROBE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NEPTUNE_ATMOSPHERIC_PROBE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NEPTUNE_ATMOSPHERE_PROBE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_NEPTUNE_ATMOSPHERIC_PROBE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NEPTUNE_ATMOSPHERE_PROBE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -1956,11 +1956,11 @@
 			</FreeSpecialistCounts>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NEUROIMPLANT_EXPORTER_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_NEUROIMPLANT_EXPORTER_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NEUROIMPLANT_EXPORTER_EFFECT_PEDIA</Civilopedia>
+			<Type>BUILDING_EFFECT_NEUROIMPLANT_EXPORTER</Type>
+			<Description>TXT_KEY_BUILDING_EFFECT_NEUROIMPLANT_EXPORTER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EFFECT_NEUROIMPLANT_EXPORTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NEUROIMPLANT_EXPORTER_EFFECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EFFECT_NEUROIMPLANT_EXPORTER</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2534,11 +2534,11 @@
 			</PrereqAmountBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SOLAR_DYSON_SPHERE_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_SOLAR_DYSON_SPHERE_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SOLAR_DYSON_SPHERE_EFFECT_PEDIA</Civilopedia>
+			<Type>BUILDING_EFFECT_SOLAR_DYSON_SPHERE</Type>
+			<Description>TXT_KEY_BUILDING_EFFECT_SOLAR_DYSON_SPHERE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EFFECT_SOLAR_DYSON_SPHERE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SOLAR_DYSON_SPHERE_EFFECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EFFECT_SOLAR_DYSON_SPHERE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ASTROENGINEERING</PrereqTech>
 			<iCost>11755</iCost>
@@ -2839,13 +2839,13 @@
 			<PrereqTech>TECH_COSMIC_ENGINEERING</PrereqTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_URANUS_ATMOSPHERE_PROBE</Type>
+			<Type>BUILDING_URANUS_ATMOSPHERIC_PROBE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_URANUS_ATMOSPHERE_PROBE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_URANUS_ATMOSPHERE_PROBE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_URANUS_ATMOSPHERIC_PROBE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_URANUS_ATMOSPHERIC_PROBE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_URANUS_ATMOSPHERE_PROBE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_URANUS_ATMOSPHERIC_PROBE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_URANUS_ATMOSPHERE_PROBE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>

@@ -606,17 +606,17 @@
 			</PropertyManipulators>
 			<PropertyBuildings>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_GROUNDWATER1</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_MINOR_GROUNDWATER_POLLUTION</BuildingType>
 					<iMinValue>450</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_GROUNDWATER2</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_MODERATE_GROUNDWATER_POLLUTION</BuildingType>
 					<iMinValue>900</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_GROUNDWATER3</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_MAJOR_GROUNDWATER_POLLUTION</BuildingType>
 					<iMinValue>1400</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -656,12 +656,12 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_REEFBLEACHING</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_REEF_BLEACHING</BuildingType>
 					<iMinValue>1200</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_TOXICHYDROSPHERE</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_TOXIC_HYDROSPHERE</BuildingType>
 					<iMinValue>1800</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -775,17 +775,17 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_GLOBALWARMING1</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_MINOR_GLOBAL_WARMING</BuildingType>
 					<iMinValue>700</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_GLOBALWARMING2</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_MODERATE_GLOBAL_WARMING</BuildingType>
 					<iMinValue>1200</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_GLOBALWARMING3</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_MAJOR_GLOBAL_WARMING</BuildingType>
 					<iMinValue>1750</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -810,12 +810,12 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_TOXICATMOSPHERE</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_TOXIC_ATMOSPHERE</BuildingType>
 					<iMinValue>1450</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_BLACKENEDSKIES</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_BLACKENED_SKIES</BuildingType>
 					<iMinValue>1950</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>

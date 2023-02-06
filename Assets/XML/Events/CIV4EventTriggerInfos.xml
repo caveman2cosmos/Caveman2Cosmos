@@ -328,8 +328,8 @@
 				<Building>BUILDING_CONFUCIAN_ACADEMY</Building>
 				<Building>BUILDING_TAOIST_PAGODA</Building>
 				<Building>BUILDING_HELLENIC_PANTHEON</Building>
-				<Building>BUILDING_ZOROASTRIAN_CATHEDRAL</Building>
-				<Building>BUILDING_MESOAMERICAN_CATHEDRAL</Building>
+				<Building>BUILDING_ZOROASTRIAN_PANTHEON</Building>
+				<Building>BUILDING_TEMPLE_OF_TLALOC</Building>
 				<Building>BUILDING_LDS_TEMPLE</Building>
 				<Building>BUILDING_SCIENTOLOGY_CATHEDRAL</Building>
 				<Building>BUILDING_SHINTO_JINGU</Building>
@@ -3869,7 +3869,7 @@
 				<Building>BUILDING_CONFUCIAN_ACADEMY</Building>
 				<Building>BUILDING_TAOIST_PAGODA</Building>
 				<Building>BUILDING_HELLENIC_PANTHEON</Building>
-				<Building>BUILDING_ZOROASTRIAN_CATHEDRAL</Building>
+				<Building>BUILDING_ZOROASTRIAN_PANTHEON</Building>
 				<Building>BUILDING_LDS_TEMPLE</Building>
 				<Building>BUILDING_SCIENTOLOGY_CATHEDRAL</Building>
 				<Building>BUILDING_SHINTO_JINGU</Building>
@@ -10022,7 +10022,7 @@
 			<iWeight>-1</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<Building>BUILDING_INDUSTRIAL_ACHIEVEMENT</Building>
+				<Building>BUILDING_ACHIEVEMENT_INDUSTRIAL</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -10062,7 +10062,7 @@
 			<iWeight>-1</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<Building>BUILDING_MILITARY_ACHIEVEMENT</Building>
+				<Building>BUILDING_ACHIEVEMENT_MILITARY</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -10082,7 +10082,7 @@
 			<iWeight>-1</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<Building>BUILDING_POLITICAL_ACHIEVEMENT</Building>
+				<Building>BUILDING_ACHIEVEMENT_POLITICAL</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -10102,7 +10102,7 @@
 			<iWeight>-1</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<Building>BUILDING_SCIENTIFIC_ACHIEVEMENT</Building>
+				<Building>BUILDING_ACHIEVEMENT_SCIENTIFIC</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -10122,7 +10122,7 @@
 			<iWeight>-1</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<Building>BUILDING_SEAFARING_ACHIEVEMENT</Building>
+				<Building>BUILDING_ACHIEVEMENT_SEAFARING</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -10863,7 +10863,7 @@
 			<iWeight>50</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<Building>BUILDING_POLLUTION_GLOBALWARMING3</Building>
+				<Building>BUILDING_POLLUTION_MAJOR_GLOBAL_WARMING</Building>
 			</BuildingsRequired>
 			<iNumBuildingsGlobal>1</iNumBuildingsGlobal>
 			<Events>

@@ -1614,16 +1614,16 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_IMPERIAL_JAPANESE_NAVAL_ACADEMY</Type>
+			<Type>BUILDING_MA_IMPERIAL_NAVAL_ACADEMY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_IMPERIAL_JAPANESE_NAVAL_ACADEMY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_IMPERIAL_JAPANESE_NAVAL_ACADEMY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_MA_IMPERIAL_NAVAL_ACADEMY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MA_IMPERIAL_NAVAL_ACADEMY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_MILITARY_ACADEMIES</SpecialBuildingType>
-			<ArtDefineTag>ART_DEF_BUILDING_IMPERIAL_JAPANESE_NAVAL_ACADEMY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MA_IMPERIAL_NAVAL_ACADEMY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_IMPERIAL_JAPANESE_NAVAL_ACADEMY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_GRAND_WAR</PrereqTech>
@@ -1666,17 +1666,17 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_JAGIELLONIAN_UNIVERSITY</Type>
+			<Type>BUILDING_EU_JAGIELLONIAN_UNIVERSITY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_JAGIELLONIAN_UNIVERSITY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_JAGIELLONIAN_UNIVERSITY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EU_JAGIELLONIAN_UNIVERSITY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EU_JAGIELLONIAN_UNIVERSITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_UNIVERSITIES</SpecialBuildingType>
-			<ArtDefineTag>ART_DEF_BUILDING_JAGIELLONIAN_UNIVERSITY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EU_JAGIELLONIAN_UNIVERSITY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_JAGIELLONIAN_UNIVERSITY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_FREE_ARTISTRY</PrereqTech>
@@ -1934,17 +1934,17 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MONTPELLIER_UNIVERSITY</Type>
+			<Type>BUILDING_EU_MONTPELLIER_UNIVERSITY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_MONTPELLIER_UNIVERSITY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MONTPELLIER_UNIVERSITY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EU_MONTPELLIER_UNIVERSITY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EU_MONTPELLIER_UNIVERSITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_UNIVERSITIES</SpecialBuildingType>
-			<ArtDefineTag>ART_DEF_BUILDING_MONTPELLIER_UNIVERSITY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EU_MONTPELLIER_UNIVERSITY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ANATOMY</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
@@ -2207,16 +2207,16 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_REPUBLIC_OF_CHINA_NAVAL_ACADEMY</Type>
+			<Type>BUILDING_MA_REPUBLIC_NAVAL_ACADEMY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_REPUBLIC_OF_CHINA_NAVAL_ACADEMY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_REPUBLIC_OF_CHINA_NAVAL_ACADEMY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_MA_REPUBLIC_NAVAL_ACADEMY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MA_REPUBLIC_NAVAL_ACADEMY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_MILITARY_ACADEMIES</SpecialBuildingType>
-			<ArtDefineTag>ART_DEF_BUILDING_REPUBLIC_OF_CHINA_NAVAL_ACADEMY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MA_REPUBLIC_NAVAL_ACADEMY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_REPUBLIC_OF_CHINA_NAVAL_ACADEMY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_GRAND_WAR</PrereqTech>
@@ -2289,16 +2289,16 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ROYAL_AIR_FORCE_ACADEMY</Type>
+			<Type>BUILDING_MA_ROYAL_AIR_FORCE_ACADEMY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ROYAL_AIR_FORCE_ACADEMY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ROYAL_AIR_FORCE_ACADEMY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_MA_ROYAL_AIR_FORCE_ACADEMY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MA_ROYAL_AIR_FORCE_ACADEMY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_MILITARY_ACADEMIES</SpecialBuildingType>
-			<ArtDefineTag>ART_DEF_BUILDING_ROYAL_AIR_FORCE_ACADEMY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MA_ROYAL_AIR_FORCE_ACADEMY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ROYAL_AIR_FORCE_ACADEMY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_AVIATION</PrereqTech>
@@ -2444,17 +2444,17 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_UNIVERSITY_OF_BARCELONA</Type>
+			<Type>BUILDING_EU_UNIVERSITY_OF_BARCELONA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_UNIVERSITY_OF_BARCELONA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_UNIVERSITY_OF_BARCELONA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EU_UNIVERSITY_OF_BARCELONA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EU_UNIVERSITY_OF_BARCELONA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_UNIVERSITIES</SpecialBuildingType>
-			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSITY_OF_BARCELONA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EU_UNIVERSITY_OF_BARCELONA</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ANATOMY</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
@@ -2654,17 +2654,17 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_UNIVERSITY_OF_BOLOGNA</Type>
+			<Type>BUILDING_EU_UNIVERSITY_OF_BOLOGNA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_UNIVERSITY_OF_BOLOGNA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_UNIVERSITY_OF_BOLOGNA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EU_UNIVERSITY_OF_BOLOGNA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EU_UNIVERSITY_OF_BOLOGNA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_UNIVERSITIES</SpecialBuildingType>
-			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSITY_OF_BOLOGNA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EU_UNIVERSITY_OF_BOLOGNA</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
@@ -2759,17 +2759,17 @@
 			<MovieDefineTag>ART_DEF_MOVIE_UNIVERSITY_OF_BOLOGNA</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_UNIVERSITY_OF_CAMBRIDGE</Type>
+			<Type>BUILDING_EU_UNIVERSITY_OF_CAMBRIDGE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_UNIVERSITY_OF_CAMBRIDGE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_UNIVERSITY_OF_CAMBRIDGE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EU_UNIVERSITY_OF_CAMBRIDGE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EU_UNIVERSITY_OF_CAMBRIDGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_UNIVERSITIES</SpecialBuildingType>
-			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSITY_OF_CAMBRIDGE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EU_UNIVERSITY_OF_CAMBRIDGE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_UNIVERSITY_OF_CAMBRIDGE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<iPrereqPopulation>7</iPrereqPopulation>
@@ -2834,17 +2834,17 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_UNIVERSITY_OF_COIMBRA</Type>
+			<Type>BUILDING_EU_UNIVERSITY_OF_COIMBRA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_UNIVERSITY_OF_COIMBRA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_UNIVERSITY_OF_COIMBRA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EU_UNIVERSITY_OF_COIMBRA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EU_UNIVERSITY_OF_COIMBRA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_UNIVERSITIES</SpecialBuildingType>
-			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSITY_OF_COIMBRA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EU_UNIVERSITY_OF_COIMBRA</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ANATOMY</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
@@ -2941,17 +2941,17 @@
 			<MovieDefineTag>ART_DEF_MOVIE_UNIVERSITY_OF_COIMBRA</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_UNIVERSITY_OF_EDINBURGH</Type>
+			<Type>BUILDING_EU_UNIVERSITY_OF_EDINBURGH</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_UNIVERSITY_OF_EDINBURGH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_UNIVERSITY_OF_EDINBURGH_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EU_UNIVERSITY_OF_EDINBURGH</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EU_UNIVERSITY_OF_EDINBURGH_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_UNIVERSITIES</SpecialBuildingType>
-			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSITY_OF_EDINBURGH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EU_UNIVERSITY_OF_EDINBURGH</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_UNIVERSITY_OF_EDINBURGH</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_BANKING</PrereqTech>
@@ -3043,17 +3043,17 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_UNIVERSITY_OF_MURCIA</Type>
+			<Type>BUILDING_EU_UNIVERSITY_OF_MURCIA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_UNIVERSITY_OF_MURCIA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_UNIVERSITY_OF_MURCIA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EU_UNIVERSITY_OF_MURCIA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EU_UNIVERSITY_OF_MURCIA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_UNIVERSITIES</SpecialBuildingType>
-			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSITY_OF_MURCIA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EU_UNIVERSITY_OF_MURCIA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_UNIVERSITY_OF_MURCIA</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_BANKING</PrereqTech>
@@ -3220,17 +3220,17 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_UNIVERSITY_OF_SALAMANCA</Type>
+			<Type>BUILDING_EU_UNIVERSITY_OF_SALAMANCA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_UNIVERSITY_OF_SALAMANCA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_UNIVERSITY_OF_SALAMANCA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EU_UNIVERSITY_OF_SALAMANCA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EU_UNIVERSITY_OF_SALAMANCA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_UNIVERSITIES</SpecialBuildingType>
-			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSITY_OF_SALAMANCA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EU_UNIVERSITY_OF_SALAMANCA</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
@@ -3367,13 +3367,13 @@
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_VINTAGE_WHITE_WINERY</Type>
+			<Type>BUILDING_DW_VINTAGE_WHITE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_DELUXE_WINERIES</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_VINTAGE_WHITE_WINERY</Description>
+			<Description>TXT_KEY_BUILDING_DW_VINTAGE_WHITE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VINTAGE_WINERY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VINTAGE_WHITE_WINE</ArtDefineTag>

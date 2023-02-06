@@ -13,7 +13,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HIGH_TECH_COAL_POWER_PLANT</BuildingType>
 				<BuildingType>BUILDING_D_T_FUSION_POWER_PLANT</BuildingType>
-				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_D_HE3_FUSION_PLANT</BuildingType>
 				<BuildingType>BUILDING_HE3_FUSION_POWER_PLANT</BuildingType>
 				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION_PLANT</BuildingType>
 				<BuildingType>BUILDING_QUANTUM_VACUUM_POWER_PLANT</BuildingType>

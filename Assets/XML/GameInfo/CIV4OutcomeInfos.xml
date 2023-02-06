@@ -689,7 +689,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_TRADITION_ARCHERY_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_TRADITION_ARCHERY</BuildingType>
 			</PrereqBuildings>
 			<ReplaceOutcomes>
 				<OutcomeType>OUTCOME_UPGRADE_TO_ARCHER</OutcomeType>
@@ -832,7 +832,7 @@
 			<Description>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_CAVE</Description>
 			<Message>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_MESSAGE</Message>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_LASCAUX_PAINTS_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_LASCAUX_CAVES</BuildingType>
 			</PrereqBuildings>
 			<bNeutralTerritory>0</bNeutralTerritory>
 			<bHostileTerritory>0</bHostileTerritory>
@@ -1237,7 +1237,7 @@
 			<bCity>1</bCity>
 			<PrereqBuildings>
 				<BuildingType>BUILDING_WORLDVIEW_CANNIBALISM_ACTIVE</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</PrereqBuildings>
 			<ReplaceOutcomes>
 				<OutcomeType>OUTCOME_HUMAN_BUTCHERED_CITY</OutcomeType>
@@ -1362,7 +1362,7 @@
 			<bCity>1</bCity>
 			<PrereqBuildings>
 				<BuildingType>BUILDING_WORLDVIEW_HUMAN_SACRIFICE_ACTIVE</BuildingType>
-				<BuildingType>BUILDING_MESOAMERICAN_MONASTERY</BuildingType>
+				<BuildingType>BUILDING_CALMACEC</BuildingType>
 			</PrereqBuildings>
 			<ReplaceOutcomes>
 				<OutcomeType>OUTCOME_SACRIFICE_CAPTIVE</OutcomeType>
@@ -1379,7 +1379,7 @@
 			<PrereqBuildings>
 				<BuildingType>BUILDING_WORLDVIEW_HUMAN_SACRIFICE_ACTIVE</BuildingType>
 				<BuildingType>BUILDING_ALTAR_FOR_HUMAN_SACRIFICE</BuildingType>
-				<BuildingType>BUILDING_MESOAMERICAN_MONASTERY</BuildingType>
+				<BuildingType>BUILDING_CALMACEC</BuildingType>
 			</PrereqBuildings>
 			<ReplaceOutcomes>
 				<OutcomeType>OUTCOME_SACRIFICE_CAPTIVE_ALTER_I</OutcomeType>
@@ -1396,7 +1396,7 @@
 			<PrereqBuildings>
 				<BuildingType>BUILDING_WORLDVIEW_HUMAN_SACRIFICE_ACTIVE</BuildingType>
 				<BuildingType>BUILDING_SACRIFICIAL_ALTAR</BuildingType>
-				<BuildingType>BUILDING_MESOAMERICAN_MONASTERY</BuildingType>
+				<BuildingType>BUILDING_CALMACEC</BuildingType>
 			</PrereqBuildings>
 			<ReplaceOutcomes>
 				<OutcomeType>OUTCOME_SACRIFICE_CAPTIVE_ALTER_II</OutcomeType>
