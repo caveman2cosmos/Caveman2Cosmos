@@ -781,7 +781,7 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<ObsoleteTech>TECH_PERSONAL_COMPUTERS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ANGKOR_WAT_OBSOLETE</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_RELIC_ANGKOR_WAT</ObsoletesToBuilding>
 			<iCost>1512</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
@@ -836,10 +836,10 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANGKOR_WAT_OBSOLETE</Type>
+			<Type>BUILDING_RELIC_ANGKOR_WAT</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
-			<Description>TXT_KEY_BUILDING_ANGKOR_WAT_OBSOLETE</Description>
+			<Description>TXT_KEY_BUILDING_RELIC_ANGKOR_WAT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANGKOR_WAT_PEDIA</Civilopedia>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -5600,7 +5600,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_CONFUCIAN_CATHEDRAL</BuildingType>
+					<BuildingType>BUILDING_CONFUCIAN_ACADEMY</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -5680,7 +5680,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_CANAANISM_CATHEDRAL</BuildingType>
+					<BuildingType>BUILDING_CANAANITE_CATHEDRAL</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -6084,7 +6084,7 @@
 				<BuildingType>BUILDING_STONE_QUARRY</BuildingType>
 				<BuildingType>BUILDING_MINE_IRON</BuildingType>
 				<BuildingType>BUILDING_METALS_MEGACOMPLEX</BuildingType>
-				<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
+				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_GRAND_SKY_FESTIVAL</BuildingType>
@@ -7372,12 +7372,12 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FIELD_CLOTH_OF_GOLD</Type>
+			<Type>BUILDING_FIELD_OF_THE_CLOTH_OF_GOLD</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_FIELD_CLOTH_OF_GOLD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FIELD_CLOTH_OF_GOLD_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_FIELD_OF_THE_CLOTH_OF_GOLD</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FIELD_OF_THE_CLOTH_OF_GOLD_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_FIELD_CLOTH_OF_GOLD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_FIELD_OF_THE_CLOTH_OF_GOLD</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_FIELD_GOLD</MovieDefineTag>
 			<PrereqTech>TECH_TOURNAMENTS</PrereqTech>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
@@ -7408,7 +7408,7 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<Help>TXT_KEY_BUILDING_FIELD_CLOTH_OF_GOLD_HELP</Help>
+			<Help>TXT_KEY_BUILDING_FIELD_OF_THE_CLOTH_OF_GOLD_HELP</Help>
 			<PrereqOrCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_VASSAL_LEVIES</CivicOption>
@@ -8901,7 +8901,7 @@
 					<iSpecialistCount>5</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<FreeBuilding>BUILDING_GREAT_FIREWALL_GOOD</FreeBuilding>
+			<FreeBuilding>BUILDING_SAFETY_GREAT_FIREWALL</FreeBuilding>
 			<iPower>5</iPower>
 			<bNukeImmune>1</bNukeImmune>
 			<PropertyManipulators>
@@ -9495,13 +9495,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GREEN_WALL_OF_CHINA</Type>
+			<Type>BUILDING_GREAT_GREEN_WALL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_GREEN_WALL_OF_CHINA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GREEN_WALL_OF_CHINA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_GREAT_GREEN_WALL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GREAT_GREEN_WALL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GREEN_WALL_OF_CHINA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GREAT_GREEN_WALL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GREEN_WALL_OF_CHINA</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -13694,13 +13694,13 @@
 			</FreeSpecialistCounts>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MILLENNIUM_PROBLEMS</Type>
+			<Type>BUILDING_HILBERTS_PROBLEMS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_MILLENNIUM_PROBLEMS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MILLENNIUM_PROBLEMS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HILBERTS_PROBLEMS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HILBERTS_PROBLEMS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MILLENNIUM_PROBLEMS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HILBERTS_PROBLEMS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MILLENNIUM_PROBLEMS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -18793,7 +18793,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_ZERO_G_SPORTS_ARENA</BuildingType>
+					<BuildingType>BUILDING_CISLUNAR_SPORTS_ARENA</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -20840,7 +20840,7 @@
 				<iCommerce>12</iCommerce>
 			</CommerceModifiers>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
+				<BuildingType>BUILDING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<PropertyManipulators>
@@ -22188,7 +22188,7 @@
 			<bWater>1</bWater>
 			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_HARBORMASTER_OFFICE</BuildingType>
+				<BuildingType>BUILDING_HARBORMASTERS_OFFICE</BuildingType>
 			</PrereqInCityBuildings>
 			<ObsoleteTech>TECH_SCREW_PROPELLER</ObsoleteTech>
 			<iCost>2460</iCost>

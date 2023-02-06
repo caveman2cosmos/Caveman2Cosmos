@@ -23,7 +23,7 @@
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ANIMAL_TRAINER_BEAR</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TRAINER_BEAR_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_HERITAGE_BEARS</BuildingType>
 			</PrereqOrBuildings>
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
@@ -303,7 +303,7 @@
 				<BuildingType>BUILDING_FOLKLORE_BROWN_BEAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_CAVE_BEAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_GRIZZLY</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_PANDA_BEAR</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_GIANT_PANDA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_POLAR_BEAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_RED_PANDA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SLOTH_BEAR</BuildingType>
@@ -312,12 +312,12 @@
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANIMAL_TRAINER_BEAR_EFFECT</Type>
+			<Type>BUILDING_EFFECT_HERITAGE_BEARS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_ANIMAL_TRAINER_BEAR_EFFECT</Description>
+			<Description>TXT_KEY_BUILDING_EFFECT_HERITAGE_BEARS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TRAINER_BEAR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TRAINER_BEAR_EFFECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EFFECT_HERITAGE_BEARS</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -327,17 +327,17 @@
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANIMAL_TRAINER_BEAR_HERITAGE</Type>
+			<Type>BUILDING_HERITAGE_BEARS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ANIMAL_TRAINER_BEAR_HERITAGE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TRAINER_BEAR_HERITAGE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HERITAGE_BEARS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HERITAGE_BEARS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TRAINER_BEAR_EFFECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EFFECT_HERITAGE_BEARS</ArtDefineTag>
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
-			<FreeBuilding>BUILDING_ANIMAL_TRAINER_BEAR_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_EFFECT_HERITAGE_BEARS</FreeBuilding>
 			<iCost>139</iCost>
 			<iConquestProb>0</iConquestProb>
 			<iAsset>4</iAsset>
@@ -998,7 +998,7 @@
 				<BuildingType>BUILDING_FOLKLORE_RHINO_TAXONOMY</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BLACK_RHINO</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_INDIAN_RHINO</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_JAVA_RHINO</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_JAVA_RHINOCEROS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WHITE_RHINO</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ELASMOTHERIUM</BuildingType>
 				<BuildingType>BUILDING_BREEDING_PROGRAM_RHINO</BuildingType>

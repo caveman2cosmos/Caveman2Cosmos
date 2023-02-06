@@ -4,7 +4,7 @@
 		<UnitInfo>
 			<Type>UNIT_GREAT_HUNTER</Type>
 			<Buildings>
-				<BuildingType>BUILDING_ANIMAL_TRAINER_BEAR_HERITAGE</BuildingType>
+				<BuildingType>BUILDING_HERITAGE_BEARS</BuildingType>
 			</Buildings>
 		</UnitInfo>
 		<UnitInfo>

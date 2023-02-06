@@ -16,7 +16,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/bear_trainer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ANIMAL_TRAINER_BEAR_EFFECT</Type>
+			<Type>ART_DEF_BUILDING_EFFECT_HERITAGE_BEARS</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>

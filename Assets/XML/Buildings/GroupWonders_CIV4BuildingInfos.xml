@@ -1310,7 +1310,7 @@
 				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ALCOHOL_PROHIBITION</BuildingType>
+				<BuildingType>BUILDING_ORDINANCE_ALCOHOL_PROHIBITION</BuildingType>
 			</ReplacementBuildings>
 			<iCost>1280</iCost>
 			<ExtraFreeBonuses>
@@ -2341,17 +2341,17 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SORBONNE_UNIVERSITY</Type>
+			<Type>BUILDING_EU_SORBONNE_UNIVERSITY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SORBONNE_UNIVERSITY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SORBONNE_UNIVERSITY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EU_SORBONNE_UNIVERSITY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EU_SORBONNE_UNIVERSITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_UNIVERSITIES</SpecialBuildingType>
-			<ArtDefineTag>ART_DEF_BUILDING_SORBONNE_UNIVERSITY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EU_SORBONNE_UNIVERSITY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SORBONNE_UNIVERSITY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_FREE_ARTISTRY</PrereqTech>
@@ -2551,17 +2551,17 @@
 			<MovieDefineTag>ART_DEF_MOVIE_UNIVERSITY_OF_BARCELONA</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_UNIVERSITY_OF_BASEL</Type>
+			<Type>BUILDING_EU_UNIVERSITY_OF_BASEL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_UNIVERSITY_OF_BASEL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_UNIVERSITY_OF_BASEL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EU_UNIVERSITY_OF_BASEL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EU_UNIVERSITY_OF_BASEL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_UNIVERSITIES</SpecialBuildingType>
-			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSITY_OF_BASEL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EU_UNIVERSITY_OF_BASEL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_UNIVERSITY_OF_BASEL</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_FREE_ARTISTRY</PrereqTech>
@@ -3145,17 +3145,17 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_UNIVERSITY_OF_PADUA</Type>
+			<Type>BUILDING_EU_UNIVERSITY_OF_PADUA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_UNIVERSITY_OF_PADUA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_UNIVERSITY_OF_PADUA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EU_UNIVERSITY_OF_PADUA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EU_UNIVERSITY_OF_PADUA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_UNIVERSITIES</SpecialBuildingType>
-			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSITY_OF_PADUA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EU_UNIVERSITY_OF_PADUA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_UNIVERSITY_OF_PADUA</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<iPrereqPopulation>7</iPrereqPopulation>
@@ -3343,7 +3343,7 @@
 				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ALCOHOL_PROHIBITION</BuildingType>
+				<BuildingType>BUILDING_ORDINANCE_ALCOHOL_PROHIBITION</BuildingType>
 			</ReplacementBuildings>
 			<iCost>1280</iCost>
 			<ExtraFreeBonuses>
@@ -3385,7 +3385,7 @@
 				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ALCOHOL_PROHIBITION</BuildingType>
+				<BuildingType>BUILDING_ORDINANCE_ALCOHOL_PROHIBITION</BuildingType>
 			</ReplacementBuildings>
 			<iCost>1280</iCost>
 			<ExtraFreeBonuses>

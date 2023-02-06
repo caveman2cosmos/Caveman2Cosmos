@@ -386,7 +386,7 @@
 				<BuildingType>BUILDING_FLY_AGARIC_GATHERER</BuildingType>
 				<BuildingType>BUILDING_GROVE_GINKGO</BuildingType>
 				<BuildingType>BUILDING_PLANTATION_CANNABIS</BuildingType>
-				<BuildingType>BUILDING_HYDROPONIC_CANNABIS</BuildingType>
+				<BuildingType>BUILDING_CANNABIS_GROW_OPERATION</BuildingType>
 				<BuildingType>BUILDING_PLANTATION_KAVA</BuildingType>
 				<BuildingType>BUILDING_MARSHMALLOW_PLANTATION</BuildingType>
 				<BuildingType>BUILDING_PLANTATION_MYRRH</BuildingType>
@@ -532,9 +532,9 @@
 			</MapCategoryTypes>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
+				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_ADVANCED_EARTHWORKS</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FLINT_GATHERER</BuildingType>
 				<BuildingType>BUILDING_NATURAL_WONDER_PAMUKKALE</BuildingType>
@@ -632,9 +632,9 @@
 			</MapCategoryTypes>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
+				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_ADVANCED_EARTHWORKS</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DIG_SITE_AMMONITE_FOSSILS</BuildingType>
 				<BuildingType>BUILDING_FOSSIL_ARCHAEOPTERYX</BuildingType>
@@ -649,7 +649,7 @@
 				<BuildingType>BUILDING_DIG_SITE_SMILODON_FOSSILS</BuildingType>
 				<BuildingType>BUILDING_DIG_SITE_TRICERATOPS_FOSSILS</BuildingType>
 				<BuildingType>BUILDING_DIG_SITE_TRILOBITE_FOSSILS</BuildingType>
-				<BuildingType>BUILDING_FOSSIL_VELOCIRAPTOR</BuildingType>
+				<BuildingType>BUILDING_DIG_SITE_VELOCIRAPTOR_FOSSILS</BuildingType>
 			</PrereqOrBuildings>
 			<bAutoBuild>1</bAutoBuild>
 			<ExtraFreeBonuses>
@@ -686,7 +686,7 @@
 				<BuildingType>BUILDING_CARDONCACTUS_PLANTATION</BuildingType>
 				<BuildingType>BUILDING_ORCHARD_CHERIMOYA</BuildingType>
 				<BuildingType>BUILDING_ORCHARD_CHERRY</BuildingType>
-				<BuildingType>BUILDING_DATEPALM_PLANTATION</BuildingType>
+				<BuildingType>BUILDING_PLANTATION_DATE_PALM</BuildingType>
 				<BuildingType>BUILDING_ORCHARD_DURIAN</BuildingType>
 				<BuildingType>BUILDING_PLANTATION_FIGS</BuildingType>
 				<BuildingType>BUILDING_ORCHARD_GRAPEFRUIT</BuildingType>
@@ -709,9 +709,9 @@
 				<BuildingType>BUILDING_ORCHARD_PERSIMMON</BuildingType>
 				<BuildingType>BUILDING_PINEAPPLE_PLANTATION</BuildingType>
 				<BuildingType>BUILDING_ORCHARD_PITAYA</BuildingType>
-				<BuildingType>BUILDING_PLANTAIN_PLANTATION</BuildingType>
+				<BuildingType>BUILDING_PLANTATION_PLANTAIN</BuildingType>
 				<BuildingType>BUILDING_ORCHARD_PLUM</BuildingType>
-				<BuildingType>BUILDING_POMEGRANATE_ORCHARD</BuildingType>
+				<BuildingType>BUILDING_ORCHARD_POMEGRANATE</BuildingType>
 				<BuildingType>BUILDING_ORCHARD_SAPOTE</BuildingType>
 				<BuildingType>BUILDING_ORCHARD_STARFRUIT</BuildingType>
 				<BuildingType>BUILDING_ORCHARD_TANGERINE</BuildingType>
@@ -1329,9 +1329,9 @@
 			</MapCategoryTypes>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
+				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_ADVANCED_EARTHWORKS</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BEACH_SAND_GATHERER</BuildingType>
 				<BuildingType>BUILDING_DESERT_SAND_GATHERER</BuildingType>
@@ -1361,7 +1361,7 @@
 			<ObsoletesToBuilding>BUILDING_FOOD_MANUFACTURING_DISTRICT</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_GROVE_ACACIA</BuildingType>
-				<BuildingType>BUILDING_ALLSPICE_PLANTATION</BuildingType>
+				<BuildingType>BUILDING_PLANTATION_ALLSPICES</BuildingType>
 				<BuildingType>BUILDING_FARM_CROP_CHILI</BuildingType>
 				<BuildingType>BUILDING_FARM_CROP_CHIVES</BuildingType>
 				<BuildingType>BUILDING_GROVE_CINNAMOMUM</BuildingType>
@@ -1564,11 +1564,11 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TIN_INGOTS_PROVIDER</Type>
-			<Description>TXT_KEY_BUILDING_TIN_INGOTS_PROVIDER</Description>
+			<Type>BUILDING_RESOURCES_TIN_INGOTS</Type>
+			<Description>TXT_KEY_BUILDING_RESOURCES_TIN_INGOTS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TIN_INGOTS_PROVIDER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_RESOURCES_TIN_INGOTS</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>

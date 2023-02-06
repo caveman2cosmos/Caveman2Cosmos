@@ -56,8 +56,8 @@
 			<bValid>1</bValid>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
-			<Type>SPECIALBUILDING_DEEP_SPACE_RESEARCH</Type>
-			<Description>TXT_KEY_SPECIALBUILDING_DEEP_SPACE_RESEARCH</Description>
+			<Type>SPECIALBUILDING_DEEP_SPACE_RESEARCH_INSTITUTE</Type>
+			<Description>TXT_KEY_SPECIALBUILDING_DEEP_SPACE_RESEARCH_INSTITUTE</Description>
 			<bValid>0</bValid>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>

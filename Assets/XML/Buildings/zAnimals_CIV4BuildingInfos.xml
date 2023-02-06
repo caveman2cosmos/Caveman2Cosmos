@@ -1301,14 +1301,14 @@
 				<BuildingType>BUILDING_FOLKLORE_CROW</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_DUCK</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_EAGLE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_EAGLE_BALD</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_BALD_EAGLE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_EMU</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_FLAMINGO</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEAGULL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_HAAST_EAGLE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_HARPYEAGLE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_HARPY_EAGLE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_HAWK</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_HORNED_OWL</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_GREAT_HORNED_OWL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_KOOKABURRA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_LOON</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MACAW</BuildingType>
@@ -1572,11 +1572,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GOVERNORS_PETS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HAAST_EAGLE_REMAINS</Type>
+			<Type>BUILDING_REMAINS_HAASTS_EAGLE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HAAST_EAGLE_REMAINS</Description>
+			<Description>TXT_KEY_BUILDING_REMAINS_HAASTS_EAGLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqAmountBuildings>
@@ -1624,7 +1624,7 @@
 			<iAsset>1</iAsset>
 			<iConquestProb>90</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_HAAST_EAGLE_REMAINS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_REMAINS_HAASTS_EAGLE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HAWKING_HUT</Type>
@@ -2438,11 +2438,11 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PROCOPTODON_REMAINS</Type>
+			<Type>BUILDING_REMAINS_PROCOPTODON</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_PROCOPTODON_REMAINS</Description>
+			<Description>TXT_KEY_BUILDING_REMAINS_PROCOPTODON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqAmountBuildings>
@@ -2490,7 +2490,7 @@
 			<iAsset>1</iAsset>
 			<iConquestProb>90</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_PROCOPTODON_REMAINS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_REMAINS_PROCOPTODON</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HERD_RATITE</Type>
@@ -2794,7 +2794,7 @@
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_BALLPYTHON</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_BALL_PYTHON</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_COBRA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_PUFF_ADDER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_VIPER</BuildingType>

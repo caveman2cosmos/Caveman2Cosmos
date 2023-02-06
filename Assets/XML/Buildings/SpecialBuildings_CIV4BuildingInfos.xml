@@ -81,12 +81,12 @@
 			<MovieDefineTag>ART_DEF_MOVIE_AGRICULTURAL_ACHIEVEMENT</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ALCOHOL_PROHIBITION</Type>
+			<Type>BUILDING_ORDINANCE_ALCOHOL_PROHIBITION</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ALCOHOL_PROHIBITION</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ALCOHOL_PROHIBITION_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ORDINANCE_ALCOHOL_PROHIBITION</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ORDINANCE_ALCOHOL_PROHIBITION_PEDIA</Civilopedia>
 			<PrereqTech>TECH_WOMENS_SUFFRAGE</PrereqTech>
 			<iHealth>2</iHealth>
 			<CommerceChanges>
@@ -94,7 +94,7 @@
 			</CommerceChanges>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_ALCOHOL_PROHIBITION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ORDINANCE_ALCOHOL_PROHIBITION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CORICANCHA</Type>
@@ -655,7 +655,7 @@
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_DEPARTMENT_VEHICLES</BuildingType>
+				<BuildingType>BUILDING_DEPARTMENT_OF_MOTOR_VEHICLES</BuildingType>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
@@ -1440,13 +1440,13 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_2</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_STANDARD_ETHANOL_HQ</Type>
+			<Type>BUILDING_HQ_STANDARD_ETHANOL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_STANDARD_ETHANOL_HQ</Description>
+			<Description>TXT_KEY_BUILDING_HQ_STANDARD_ETHANOL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_3_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_BANK</ConstructSound>
@@ -3437,12 +3437,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CRIME_IDENTITYTHEFT</Type>
+			<Type>BUILDING_CRIME_IDENTITY_THEFT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CRIME_IDENTITYTHEFT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CRIME_IDENTITYTHEFT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CRIME_IDENTITY_THEFT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CRIME_IDENTITY_THEFT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_PERSONAL_COMPUTERS</PrereqTech>
 			<iHappiness>-1</iHappiness>
 			<CommerceChanges>
@@ -3584,12 +3584,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CRIME_INTERNETFRAUD</Type>
+			<Type>BUILDING_CRIME_INTERNET_FRAUD</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CRIME_INTERNETFRAUD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CRIME_INTERNETFRAUD_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CRIME_INTERNET_FRAUD</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CRIME_INTERNET_FRAUD_PEDIA</Civilopedia>
 			<PrereqTech>TECH_FIBER_OPTICS</PrereqTech>
 			<iHappiness>-1</iHappiness>
 			<CommerceChanges>
@@ -4171,12 +4171,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CRIME_RACKETEERTING</Type>
+			<Type>BUILDING_CRIME_RACKETEERING</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CRIME_RACKETEERTING</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CRIME_RACKETEERTING_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CRIME_RACKETEERING</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CRIME_RACKETEERING_PEDIA</Civilopedia>
 			<PrereqTech>TECH_LABOR_UNIONS</PrereqTech>
 			<iHappiness>-2</iHappiness>
 			<YieldModifiers>
@@ -5605,7 +5605,7 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_DEPARTMENT_VEHICLES</BuildingType>
+				<BuildingType>BUILDING_DEPARTMENT_OF_MOTOR_VEHICLES</BuildingType>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
@@ -8554,12 +8554,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SAFETY_ALCATRAZ</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GOOD_FEDERAL_PRISON</Type>
+			<Type>BUILDING_SAFETY_MAXIMUM_SECURITY_PRISON</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GOOD_FEDERAL_PRISON</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GOOD_FEDERAL_PRISON_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_SAFETY_MAXIMUM_SECURITY_PRISON</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SAFETY_MAXIMUM_SECURITY_PRISON_PEDIA</Civilopedia>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_SAFETY_ORBITAL_PRISON</BuildingType>
 			</ReplacementBuildings>
@@ -8574,7 +8574,7 @@
 			</PropertyManipulators>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_GOOD_FEDERAL_PRISON</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_SAFETY_MAXIMUM_SECURITY_PRISON</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POWER_GORGE</Type>
@@ -8621,12 +8621,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SAFETY_NEIGHBORHOOD_WATCH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GOOD_POLICE_ACADEMY</Type>
+			<Type>BUILDING_SAFETY_POLICE_ACADEMY</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GOOD_POLICE_ACADEMY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GOOD_POLICE_ACADEMY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_SAFETY_POLICE_ACADEMY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SAFETY_POLICE_ACADEMY_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
 			<PropertyManipulators>
 				<PropertySource>
@@ -8637,7 +8637,7 @@
 			</PropertyManipulators>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_GOOD_POLICE_ACADEMY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_SAFETY_POLICE_ACADEMY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SAFETY_YOUTH_CURFEW</Type>
@@ -8701,12 +8701,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_GRASS_HUTS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GREAT_FIREWALL_GOOD</Type>
+			<Type>BUILDING_SAFETY_GREAT_FIREWALL</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GREAT_FIREWALL_GOOD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GREAT_FIREWALL_GOOD_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_SAFETY_GREAT_FIREWALL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SAFETY_GREAT_FIREWALL_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CYBERWARFARE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
@@ -8761,7 +8761,7 @@
 			</PropertyManipulators>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_GREAT_FIREWALL_GOOD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_SAFETY_GREAT_FIREWALL</ArtDefineTag>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -10986,14 +10986,14 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_LONGHOUSE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MEDICAL_ACHIEVEMENT</Type>
+			<Type>BUILDING_ACHIEVEMENT_MEDICAL</Type>
 			<SpecialBuildingType>SPECIALBUILDING_ACHIEVEMENT</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_MEDICAL_ACHIEVEMENT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MEDICAL_ACHIEVEMENT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ACHIEVEMENT_MEDICAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_MEDICAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<PrereqTech>TECH_ANCIENT_MEDICINE</PrereqTech>
 			<CommerceChanges>
@@ -11002,7 +11002,7 @@
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
 			<iGlobalHealth>2</iGlobalHealth>
-			<FreeBuilding>BUILDING_MEDICAL_ACHIEVEMENT_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_ACHIEVEMENT_MEDICAL_EFFECT</FreeBuilding>
 			<iAsset>10</iAsset>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -11010,13 +11010,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_MEDICAL_A</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MEDICAL_ACHIEVEMENT_EFFECT</Type>
+			<Type>BUILDING_ACHIEVEMENT_MEDICAL_EFFECT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ANCIENT_MEDICINE</PrereqTech>
-			<Description>TXT_KEY_BUILDING_MEDICAL_ACHIEVEMENT_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MEDICAL_ACHIEVEMENT_EFFECT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ACHIEVEMENT_MEDICAL_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_MEDICAL_EFFECT_PEDIA</Civilopedia>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -11105,12 +11105,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MERCANTILISM_BONUS_SILVER</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MESOAMERICAN_SHRINE</Type>
+			<Type>BUILDING_TEOTIHUACAN</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_MESOAMERICAN_SHRINE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MESOAMERICAN_SHRINE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_TEOTIHUACAN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TEOTIHUACAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ConstructSound>AS2D_BUILD_ISLAMIC</ConstructSound>
 			<ReligionType>RELIGION_NAGHUALISM</ReligionType>
@@ -11153,7 +11153,7 @@
 			<iAsset>8</iAsset>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_MESOAMERICAN_SHRINE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_TEOTIHUACAN</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MESOAMERICAN_SHRINE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -11371,7 +11371,7 @@
 				<BuildingType>BUILDING_SUPREME_COURT</BuildingType>
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
-			<FreeBuilding>BUILDING_ALCOHOL_PROHIBITION</FreeBuilding>
+			<FreeBuilding>BUILDING_ORDINANCE_ALCOHOL_PROHIBITION</FreeBuilding>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_ALCOHOL_PROHIBITION</ArtDefineTag>
@@ -11521,7 +11521,7 @@
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<iCost>1685</iCost>
-			<FreeBuilding>BUILDING_SMOKING_PROHIBITION</FreeBuilding>
+			<FreeBuilding>BUILDING_ORDINANCE_SMOKING_PROHIBITION</FreeBuilding>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_SMOKING_PROHIBITION</ArtDefineTag>
@@ -13547,7 +13547,7 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_DEPARTMENT_VEHICLES</BuildingType>
+				<BuildingType>BUILDING_DEPARTMENT_OF_MOTOR_VEHICLES</BuildingType>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
@@ -14226,12 +14226,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ORDINANCE_SMOKE_DETECTOR</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SMOKING_PROHIBITION</Type>
+			<Type>BUILDING_ORDINANCE_SMOKING_PROHIBITION</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SMOKING_PROHIBITION</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SMOKING_PROHIBITION_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ORDINANCE_SMOKING_PROHIBITION</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ORDINANCE_SMOKING_PROHIBITION_PEDIA</Civilopedia>
 			<PrereqTech>TECH_URBAN_CULTURE</PrereqTech>
 			<iHealth>2</iHealth>
 			<CommerceChanges>
@@ -14246,7 +14246,7 @@
 			</PropertyManipulators>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_SMOKING_PROHIBITION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ORDINANCE_SMOKING_PROHIBITION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOUSING_SORORITY_HOUSE</Type>
@@ -14642,14 +14642,14 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ORDINANCE_TIRE_RECYCLING_PROGRAM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TOURISM_ACHIEVEMENT</Type>
+			<Type>BUILDING_ACHIEVEMENT_TOURISTIC</Type>
 			<SpecialBuildingType>SPECIALBUILDING_ACHIEVEMENT</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_TOURISM_ACHIEVEMENT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TOURISM_ACHIEVEMENT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ACHIEVEMENT_TOURISTIC</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_TOURISTIC_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<PrereqTech>TECH_TOURISM</PrereqTech>
 			<CommerceChanges>
@@ -14658,7 +14658,7 @@
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
 			<iGlobalTradeRoutes>1</iGlobalTradeRoutes>
-			<FreeBuilding>BUILDING_TOURISM_ACHIEVEMENT_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_EFFECT_ACHIEVEMENT_TOURISM</FreeBuilding>
 			<iAsset>10</iAsset>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -14666,12 +14666,12 @@
 			<MovieDefineTag>ART_DEF_MOVIE_TOURISM_A</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TOURISM_ACHIEVEMENT_EFFECT</Type>
+			<Type>BUILDING_EFFECT_ACHIEVEMENT_TOURISM</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_TOURISM_ACHIEVEMENT_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TOURISM_ACHIEVEMENT_EFFECT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EFFECT_ACHIEVEMENT_TOURISM</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EFFECT_ACHIEVEMENT_TOURISM_PEDIA</Civilopedia>
 			<PrereqTech>TECH_TOURISM</PrereqTech>
 			<PropertyManipulators>
 				<PropertySource>

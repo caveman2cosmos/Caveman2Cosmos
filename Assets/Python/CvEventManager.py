@@ -228,7 +228,7 @@ class CvEventManager:
 					"MARCO_POLO"			: GC.getInfoTypeForString('BUILDING_MARCO_POLOS_EMBASSY'),
 					"APPIAN_WAY"			: GC.getInfoTypeForString('BUILDING_VIA_APPIA'),
 					"GOLDEN_SPIKE"			: GC.getInfoTypeForString('BUILDING_GOLDEN_SPIKE'),
-					"FIELD_GOLD"			: GC.getInfoTypeForString('BUILDING_FIELD_CLOTH_OF_GOLD'),
+					"FIELD_GOLD"			: GC.getInfoTypeForString('BUILDING_FIELD_OF_THE_CLOTH_OF_GOLD'),
 					"MACHU_PICCHU"			: GC.getInfoTypeForString("BUILDING_MACHU_PICCHU"),
 					"MAGINOTLINE"			: GC.getInfoTypeForString('BUILDING_MAGINOT_LINE'),
 					"ROUTE_66"				: GC.getInfoTypeForString('BUILDING_ROUTE_66'),

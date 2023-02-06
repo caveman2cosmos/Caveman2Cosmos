@@ -2495,18 +2495,18 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FOLKLORE_BALLPYTHON</Type>
+			<Type>BUILDING_FOLKLORE_BALL_PYTHON</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FOLKLORE_BALLPYTHON</Description>
+			<Description>TXT_KEY_BUILDING_FOLKLORE_BALL_PYTHON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_FOLKLORE_BALLPYTHON</FreeBuilding>
-			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_BALLPYTHON</ArtDefineTag>
+			<FreeBuilding>BUILDING_FOLKLORE_BALL_PYTHON</FreeBuilding>
+			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_BALL_PYTHON</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -2557,18 +2557,18 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FOLKLORE_BARBARYAPE</Type>
+			<Type>BUILDING_FOLKLORE_BARBARY_MACAQUE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FOLKLORE_BARBARYAPE</Description>
+			<Description>TXT_KEY_BUILDING_FOLKLORE_BARBARY_MACAQUE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_FOLKLORE_BARBARYAPE</FreeBuilding>
-			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_BARBARYAPE</ArtDefineTag>
+			<FreeBuilding>BUILDING_FOLKLORE_BARBARY_MACAQUE</FreeBuilding>
+			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_BARBARY_MACAQUE</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -2760,7 +2760,7 @@
 				<BuildingType>BUILDING_FOLKLORE_BLACK_BEAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_CAVE_BEAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_GRIZZLY</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_PANDA_BEAR</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_GIANT_PANDA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_POLAR_BEAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_RED_PANDA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SLOTH_BEAR</BuildingType>
@@ -3055,16 +3055,16 @@
 				<BuildingType>BUILDING_FOLKLORE_CROW</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_DUCK</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_EAGLE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_EAGLE_BALD</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_BALD_EAGLE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_EMU</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_FLAMINGO</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_GALAPAGOS_PENGUIN</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEAGULL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_HAAST_EAGLE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_BIRD</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_HARPYEAGLE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_HARPY_EAGLE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_HAWK</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_HORNED_OWL</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_GREAT_HORNED_OWL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_KOOKABURRA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_LOON</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MACAW</BuildingType>
@@ -4768,8 +4768,8 @@
 				<BuildingType>BUILDING_FOLKLORE_CHINESE_ALLIGATOR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_GHARIAL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_NILE_CROCODILE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_RIVER_CROC_LARGE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_RIVER_CROC</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_CROCODILE_LARGE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_CROCODILE_SMALL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SALTWATER_CROC_LARGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SALTWATER_CROC</BuildingType>
 			</PrereqOrBuildings>
@@ -5594,18 +5594,18 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FOLKLORE_EAGLE_BALD</Type>
+			<Type>BUILDING_FOLKLORE_BALD_EAGLE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FOLKLORE_EAGLE_BALD</Description>
+			<Description>TXT_KEY_BUILDING_FOLKLORE_BALD_EAGLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_FOLKLORE_EAGLE_BALD</FreeBuilding>
-			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_EAGLE_BALD</ArtDefineTag>
+			<FreeBuilding>BUILDING_FOLKLORE_BALD_EAGLE</FreeBuilding>
+			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_BALD_EAGLE</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -6096,7 +6096,7 @@
 				<BuildingType>BUILDING_FOLKLORE_ROCKHOPPER_PENGUIN</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEATURTLE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_TUNA</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_WHALESHARK</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_WHALE_SHARK</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>250</iCost>
 			<bNukeImmune>1</bNukeImmune>
@@ -7513,18 +7513,18 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FOLKLORE_HARPYEAGLE</Type>
+			<Type>BUILDING_FOLKLORE_HARPY_EAGLE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FOLKLORE_HARPYEAGLE</Description>
+			<Description>TXT_KEY_BUILDING_FOLKLORE_HARPY_EAGLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_FOLKLORE_HARPYEAGLE</FreeBuilding>
-			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_HARPYEAGLE</ArtDefineTag>
+			<FreeBuilding>BUILDING_FOLKLORE_HARPY_EAGLE</FreeBuilding>
+			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_HARPY_EAGLE</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -7712,7 +7712,7 @@
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FOLKLORE_HIPPOPOTAMUS</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_PYGMYHIPPO</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_PYGMY_HIPPO</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>250</iCost>
 			<FreeBuilding>BUILDING_FOLKLORE_T_HIPPOS</FreeBuilding>
@@ -7791,18 +7791,18 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FOLKLORE_HORNED_OWL</Type>
+			<Type>BUILDING_FOLKLORE_GREAT_HORNED_OWL</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FOLKLORE_HORNED_OWL</Description>
+			<Description>TXT_KEY_BUILDING_FOLKLORE_GREAT_HORNED_OWL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_FOLKLORE_HORNED_OWL</FreeBuilding>
-			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_HORNED_OWL</ArtDefineTag>
+			<FreeBuilding>BUILDING_FOLKLORE_GREAT_HORNED_OWL</FreeBuilding>
+			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_GREAT_HORNED_OWL</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -8349,18 +8349,18 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FOLKLORE_JAVA_RHINO</Type>
+			<Type>BUILDING_FOLKLORE_JAVA_RHINOCEROS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FOLKLORE_JAVA_RHINO</Description>
+			<Description>TXT_KEY_BUILDING_FOLKLORE_JAVA_RHINOCEROS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_FOLKLORE_JAVA_RHINO</FreeBuilding>
-			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_JAVA_RHINO</ArtDefineTag>
+			<FreeBuilding>BUILDING_FOLKLORE_JAVA_RHINOCEROS</FreeBuilding>
+			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_JAVA_RHINOCEROS</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -8864,7 +8864,7 @@
 				<BuildingType>BUILDING_FOLKLORE_MINKIE_WHALE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_NARWHAL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ORCA</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_WHALESHARK</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_WHALE_SHARK</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>250</iCost>
 			<FreeBuilding>BUILDING_FOLKLORE_T_LEVIATHAN</FreeBuilding>
@@ -9129,12 +9129,12 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FOLKLORE_LOCAL_FISH</Type>
+			<Type>BUILDING_FOLKLORE_T_TALES_OF_FISH</Type>
 			<SpecialBuildingType>SPECIALBUILDING_FOLKLORE_TAXONOMY</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_FOLKLORE_LOCAL_FISH</Description>
+			<Description>TXT_KEY_BUILDING_FOLKLORE_T_TALES_OF_FISH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_LOCAL_FISH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_T_TALES_OF_FISH</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -9164,10 +9164,10 @@
 				<BuildingType>BUILDING_FOLKLORE_ROCKHOPPER_PENGUIN</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEATURTLE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_TUNA</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_WHALESHARK</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_WHALE_SHARK</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>250</iCost>
-			<FreeBuilding>BUILDING_FOLKLORE_LOCAL_FISH</FreeBuilding>
+			<FreeBuilding>BUILDING_FOLKLORE_T_TALES_OF_FISH</FreeBuilding>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -9968,12 +9968,12 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FOLKLORE_MONOTREMES</Type>
+			<Type>BUILDING_FOLKLORE_T_MONOTREMES</Type>
 			<SpecialBuildingType>SPECIALBUILDING_FOLKLORE_TAXONOMY</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FOLKLORE_MONOTREMES</Description>
+			<Description>TXT_KEY_BUILDING_FOLKLORE_T_MONOTREMES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
@@ -9983,8 +9983,8 @@
 				<BuildingType>BUILDING_FOLKLORE_PLATYPUS</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>250</iCost>
-			<FreeBuilding>BUILDING_FOLKLORE_MONOTREMES</FreeBuilding>
-			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_MONOTREMES</ArtDefineTag>
+			<FreeBuilding>BUILDING_FOLKLORE_T_MONOTREMES</FreeBuilding>
+			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_T_MONOTREMES</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -10659,7 +10659,7 @@
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_BARBARYAPE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_BARBARY_MACAQUE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_CAPUCHIN_MONKEY</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_CHIMPANZEE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_GELADA_MONKEY</BuildingType>
@@ -11101,7 +11101,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FOLKLORE_BARN_OWL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BARRED_OWL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_HORNED_OWL</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_GREAT_HORNED_OWL</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>250</iCost>
 			<bNukeImmune>1</bNukeImmune>
@@ -11612,18 +11612,18 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FOLKLORE_PANDA_BEAR</Type>
+			<Type>BUILDING_FOLKLORE_GIANT_PANDA</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FOLKLORE_PANDA_BEAR</Description>
+			<Description>TXT_KEY_BUILDING_FOLKLORE_GIANT_PANDA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_FOLKLORE_PANDA_BEAR</FreeBuilding>
-			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_PANDA_BEAR</ArtDefineTag>
+			<FreeBuilding>BUILDING_FOLKLORE_GIANT_PANDA</FreeBuilding>
+			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_GIANT_PANDA</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -12388,18 +12388,18 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FOLKLORE_PYGMYHIPPO</Type>
+			<Type>BUILDING_FOLKLORE_PYGMY_HIPPO</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FOLKLORE_PYGMYHIPPO</Description>
+			<Description>TXT_KEY_BUILDING_FOLKLORE_PYGMY_HIPPO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_FOLKLORE_PYGMYHIPPO</FreeBuilding>
-			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_PYGMYHIPPO</ArtDefineTag>
+			<FreeBuilding>BUILDING_FOLKLORE_PYGMY_HIPPO</FreeBuilding>
+			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_PYGMY_HIPPO</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -12589,10 +12589,10 @@
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FOLKLORE_EAGLE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_EAGLE_BALD</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_BALD_EAGLE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_HAAST_EAGLE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_BIRD</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_HARPYEAGLE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_HARPY_EAGLE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_HAWK</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEAEAGLE</BuildingType>
 			</PrereqOrBuildings>
@@ -13273,7 +13273,7 @@
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_BALLPYTHON</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_BALL_PYTHON</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BLACK_CAIMAN</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_COBRA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_DESERT_TORTOISE</BuildingType>
@@ -13287,8 +13287,8 @@
 				<BuildingType>BUILDING_FOLKLORE_NILE_MONITOR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_NILE_CROCODILE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_PUFF_ADDER</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_RIVER_CROC_LARGE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_RIVER_CROC</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_CROCODILE_LARGE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_CROCODILE_SMALL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SALTWATER_CROC_LARGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SALTWATER_CROC</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_VIPER</BuildingType>
@@ -13446,7 +13446,7 @@
 				<BuildingType>BUILDING_FOLKLORE_ELASMOTHERIUM</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BLACK_RHINO</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_INDIAN_RHINO</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_JAVA_RHINO</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_JAVA_RHINOCEROS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WHITE_RHINO</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>250</iCost>
@@ -13526,18 +13526,18 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FOLKLORE_RIVER_CROC</Type>
+			<Type>BUILDING_FOLKLORE_CROCODILE_SMALL</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FOLKLORE_RIVER_CROC</Description>
+			<Description>TXT_KEY_BUILDING_FOLKLORE_CROCODILE_SMALL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_FOLKLORE_RIVER_CROC</FreeBuilding>
-			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_RIVER_CROC</ArtDefineTag>
+			<FreeBuilding>BUILDING_FOLKLORE_CROCODILE_SMALL</FreeBuilding>
+			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_CROCODILE_SMALL</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -13588,18 +13588,18 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FOLKLORE_RIVER_CROC_LARGE</Type>
+			<Type>BUILDING_FOLKLORE_CROCODILE_LARGE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FOLKLORE_RIVER_CROC_LARGE</Description>
+			<Description>TXT_KEY_BUILDING_FOLKLORE_CROCODILE_LARGE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_FOLKLORE_RIVER_CROC_LARGE</FreeBuilding>
-			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_RIVER_CROC_LARGE</ArtDefineTag>
+			<FreeBuilding>BUILDING_FOLKLORE_CROCODILE_LARGE</FreeBuilding>
+			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_CROCODILE_LARGE</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -14569,7 +14569,7 @@
 				<BuildingType>BUILDING_FOLKLORE_GREATWHITE_SHARK</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_HAMMERHEAD_SHARK</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_REEF_SHARK</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_WHALESHARK</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_WHALE_SHARK</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>250</iCost>
 			<FreeBuilding>BUILDING_FOLKLORE_T_SHARKS</FreeBuilding>
@@ -14846,7 +14846,7 @@
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_BALLPYTHON</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_BALL_PYTHON</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_COBRA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_PUFF_ADDER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_VIPER</BuildingType>
@@ -16546,17 +16546,17 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FOLKLORE_WHALESHARK</Type>
+			<Type>BUILDING_FOLKLORE_WHALE_SHARK</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FOLKLORE_WHALESHARK</Description>
+			<Description>TXT_KEY_BUILDING_FOLKLORE_WHALE_SHARK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_FOLKLORE_WHALESHARK</FreeBuilding>
+			<FreeBuilding>BUILDING_FOLKLORE_WHALE_SHARK</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_T_SHARKS</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>

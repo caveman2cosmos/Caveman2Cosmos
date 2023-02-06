@@ -107,21 +107,21 @@
 		<Russian>Ïðèðó÷åíèå ìåäâåäåé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_BEAR_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_EFFECT_HERITAGE_BEARS</Tag>
 		<English>Effect - Heritage - Bears</English>
 		<French>Effet - Patrimoine (Ours)</French>
 		<Polish>Efekt - Dziedzictwo - Niedźwiedź</Polish>
 		<Russian>Ïèòîìíèê ìåäâåäåé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_BEAR_HERITAGE</Tag>
+		<Tag>TXT_KEY_BUILDING_HERITAGE_BEARS</Tag>
 		<English>Heritage - Bears</English>
 		<French>Patrimoine (Ours)</French>
 		<Polish>Dziedzictwo - Niedźwiedź</Polish>
 		<Russian>Ðàçâåäåíèå ìåäâåäåé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_BEAR_HERITAGE_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_HERITAGE_BEARS_PEDIA</Tag>
 		<English>Instead of only being able to train Bear units in the city you built the wonder in this building allows them to be built in any of your cities. It can only be built in the ciy with the Bear Trainer World Wonder.</English>
 	</TEXT>
 	<TEXT>

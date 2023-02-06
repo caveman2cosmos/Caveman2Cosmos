@@ -2423,7 +2423,7 @@
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_3</PrereqCorporation>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_STANDARD_ETHANOL_HQ</BuildingType>
+				<BuildingType>BUILDING_HQ_STANDARD_ETHANOL</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -4588,7 +4588,7 @@
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_RODNOVERA</PrereqReligion>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_RODNOVERY_MONASTERY</BuildingType>
+				<BuildingType>BUILDING_IDOL</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -5145,7 +5145,7 @@
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_CANAANISM</PrereqReligion>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CANAANISM_MONASTERY</BuildingType>
+				<BuildingType>BUILDING_CANAANITE_MONASTERY</BuildingType>
 			</PrereqAndBuildings>
 			<Flavors>
 				<Flavor>
@@ -17923,7 +17923,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CARPENTERS_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_CARPENTER</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
 			<iCost>125</iCost>
@@ -33771,9 +33771,9 @@
 				<BuildingType>BUILDING_ORDINANCE_COMMUTER_SHUTTLE_SERVICE</BuildingType>
 				<BuildingType>BUILDING_ORDINANCE_PROSTITUTION_BAN</BuildingType>
 				<BuildingType>BUILDING_ORDINANCE_GAMBLING_BAN</BuildingType>
-				<BuildingType>BUILDING_ALCOHOL_PROHIBITION</BuildingType>
+				<BuildingType>BUILDING_ORDINANCE_ALCOHOL_PROHIBITION</BuildingType>
 				<BuildingType>BUILDING_ORDINANCE_DRUG_PROHIBITION</BuildingType>
-				<BuildingType>BUILDING_SMOKING_PROHIBITION</BuildingType>
+				<BuildingType>BUILDING_ORDINANCE_SMOKING_PROHIBITION</BuildingType>
 				<BuildingType>BUILDING_NATIONAL_ALCOHOL_PROHIBITION</BuildingType>
 				<BuildingType>BUILDING_NATIONAL_DRUG_PROHIBITION</BuildingType>
 				<BuildingType>BUILDING_NATIONAL_SMOKING_PROHIBITION</BuildingType>
@@ -36289,7 +36289,7 @@
 				<BuildingType>BUILDING_THE_STATUE_OF_ZEUS</BuildingType>
 				<BuildingType>BUILDING_PIR_E_SABZ</BuildingType>
 				<BuildingType>BUILDING_THE_KARNAK_TEMPLE_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_MESOAMERICAN_SHRINE</BuildingType>
+				<BuildingType>BUILDING_TEOTIHUACAN</BuildingType>
 				<BuildingType>BUILDING_CORICANCHA</BuildingType>
 				<BuildingType>BUILDING_THE_ODINS_SANCTUARY</BuildingType>
 				<BuildingType>BUILDING_SHRINE_OF_BAB</BuildingType>
@@ -36897,7 +36897,7 @@
 				</GreatPeople>
 			</GreatPeoples>
 			<Buildings>
-				<BuildingType>BUILDING_STANDARD_ETHANOL_HQ</BuildingType>
+				<BuildingType>BUILDING_HQ_STANDARD_ETHANOL</BuildingType>
 				<BuildingType>BUILDING_HQ_ALUMINUM_CO</BuildingType>
 				<BuildingType>BUILDING_THE_NATIONAL_STANDARD_OF_MEASUREMENT</BuildingType>
 				<BuildingType>BUILDING_ACADEMY</BuildingType>
@@ -44566,7 +44566,7 @@
 			</NotUnitAIs>
 			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
+				<BuildingType>BUILDING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>

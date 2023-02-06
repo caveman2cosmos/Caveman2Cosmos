@@ -91,7 +91,7 @@
 			</TechCommerceModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CANAANISM_MONASTERY</Type>
+			<Type>BUILDING_CANAANITE_MONASTERY</Type>
 			<TechCommerceModifiers>
 				<TechCommerceModifier>
 					<PrereqTech>TECH_BIOLOGY</PrereqTech>

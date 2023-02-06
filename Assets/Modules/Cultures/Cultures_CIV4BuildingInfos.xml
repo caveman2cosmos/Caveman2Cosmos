@@ -4244,7 +4244,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_FIELD_CLOTH_OF_GOLD</BuildingType>
+					<BuildingType>BUILDING_FIELD_OF_THE_CLOTH_OF_GOLD</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -4673,7 +4673,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_FIELD_CLOTH_OF_GOLD</BuildingType>
+					<BuildingType>BUILDING_FIELD_OF_THE_CLOTH_OF_GOLD</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>

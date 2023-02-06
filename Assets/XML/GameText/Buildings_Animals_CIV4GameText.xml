@@ -699,7 +699,7 @@
 		<Russian>Ìèô î òàïèðå Áýðäà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_BALLPYTHON</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BALL_PYTHON</Tag>
 		<English>Folklore - Ball Python</English>
 		<French>Mythe du Python royal</French>
 		<German>
@@ -712,7 +712,7 @@
 		<Russian>Ìèô î êîð. ïèòîíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_BARBARYAPE</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BARBARY_MACAQUE</Tag>
 		<English>Folklore - Barbary Macaque</English>
 		<French>Mythe du Macaque berbère</French>
 		<German>
@@ -1170,7 +1170,7 @@
 		<Russian>Ìèô î äþãîíè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_EAGLE_BALD</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BALD_EAGLE</Tag>
 		<English>Folklore - Bald Eagle</English>
 		<French>Mythe du Pygargue à tête blanche</French>
 		<German>
@@ -1539,7 +1539,7 @@
 		<Russian>Ìèô î áåãåìîòå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_HORNED_OWL</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GREAT_HORNED_OWL</Tag>
 		<English>Folklore - Great Horned Owl</English>
 		<French>Mythe du Hibou grand duc</French>
 		<German>
@@ -1650,7 +1650,7 @@
 		<Russian>Ìèô îá ÿãóàðå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_JAVA_RHINO</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_JAVA_RHINOCEROS</Tag>
 		<English>Folklore - Java Rhinoceros</English>
 		<French>Mythe du Rhinocéros de Java</French>
 		<German>
@@ -1806,7 +1806,7 @@
 		<Russian>Ìèô î ëàìå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_LOCAL_FISH</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_TALES_OF_FISH</Tag>
 		<English>Folklore (T) - Tales of Fish</English>
 		<French>Mythe des Histoires de Poissons (T)</French>
 		<German>
@@ -1956,7 +1956,7 @@
 		<Russian>Ìèô î ïîëîñàòèêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_MONOTREMES</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_MONOTREMES</Tag>
 		<English>Folklore (T) - Monotremes</English>
 		<French>Mythe de l'Échidné (T)</French>
 		<German>
@@ -2361,7 +2361,7 @@
 		<Russian>Ìèô î øóì. ãàäþêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_PYGMYHIPPO</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PYGMY_HIPPO</Tag>
 		<English>Folklore - Pygmy Hippo</English>
 		<French>Mythe de l'Hippopotame nain</French>
 		<German>
@@ -2510,7 +2510,7 @@
 		<Russian>Ìèô î íîñîðîãå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_RIVER_CROC</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_CROCODILE_SMALL</Tag>
 		<English>Folklore - Crocodile (Small)</English>
 		<French>Mythe du Crocodile de rivière (petit)</French>
 		<German>
@@ -2521,7 +2521,7 @@
 		<Italian>Mito del coccodrillo di fiume (piccolo)</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_RIVER_CROC_LARGE</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_CROCODILE_LARGE</Tag>
 		<English>Folklore - Crocodile (Large)</English>
 		<French>Mythe du Crocodile de rivière (grand)</French>
 		<German>
@@ -3026,7 +3026,7 @@
 		<Russian>Ìèô î õîðüêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_WHALESHARK</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_WHALE_SHARK</Tag>
 		<English>Folklore - Whale Shark</English>
 		<French>Mythe - Requin-baleine</French>
 		<German>
@@ -3442,7 +3442,7 @@
 		<Russian>Êëåòêè ñ ïðèìàòàìè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PROCOPTODON_REMAINS</Tag>
+		<Tag>TXT_KEY_BUILDING_REMAINS_PROCOPTODON</Tag>
 		<English>Remains - Procoptodon</English>
 		<French>Remains - Procoptodon</French>
 		<Italian>Resti di procoptodonte</Italian>

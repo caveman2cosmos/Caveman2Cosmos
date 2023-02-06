@@ -67,12 +67,12 @@
 			</BuildingProductionModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MADSCIENTIST_CASTLE</Type>
+			<Type>BUILDING_MAD_SCIENTISTS_CASTLE</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_STEAM</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_MADSCIENTIST_CASTLE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MADSCIENTIST_CASTLE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_MAD_SCIENTISTS_CASTLE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MAD_SCIENTISTS_CASTLE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MADSCIENTIST_CASTLE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MAD_SCIENTISTS_CASTLE</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>

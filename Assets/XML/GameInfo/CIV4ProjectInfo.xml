@@ -407,7 +407,7 @@
 			<TechPrereq>TECH_ASTRONAUTICS</TechPrereq>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iCost>11800</iCost>
-			<EveryoneSpecialBuilding>SPECIALBUILDING_DEEP_SPACE_RESEARCH</EveryoneSpecialBuilding>
+			<EveryoneSpecialBuilding>SPECIALBUILDING_DEEP_SPACE_RESEARCH_INSTITUTE</EveryoneSpecialBuilding>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_ALUMINUM_INGOTS</BonusType>

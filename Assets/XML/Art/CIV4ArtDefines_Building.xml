@@ -12,7 +12,7 @@
 			<Button>Art/interface/buttons/buildings/10000_year_clock.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_11_DIMENSIONAL_CITY</Type>
+			<Type>ART_DEF_BUILDING_HYPERSPACE_11_DIMENSIONAL_CITY</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -372,7 +372,7 @@
 			<Button>Art/interface/buttons/buildings/advanced_copperworks.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ADVANCED_EARTHWORKS</Type>
+			<Type>ART_DEF_BUILDING_MODERN_EARTHWORKS</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -492,7 +492,7 @@
 			<Button>Art/interface/buttons/buildings/aeropolis_2001.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_AEROPONICS_ARCOLOGY</Type>
+			<Type>ART_DEF_BUILDING_INTERSTELLAR_AEROPONICS_ARCOLOGY</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -892,7 +892,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/alcatraz.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ALCOHOL_PROHIBITION</Type>
+			<Type>ART_DEF_BUILDING_ORDINANCE_ALCOHOL_PROHIBITION</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1022,7 +1022,7 @@
 			<Button>Art/interface/buttons/buildings/alien_signal_decoder.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ALLSPICE_PLANTATION</Type>
+			<Type>ART_DEF_BUILDING_PLANTATION_ALLSPICES</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1132,7 +1132,7 @@
 			<Button>art/Craft/Art/aluminumsmith.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ALUMINUM_CO_R_AND_D</Type>
+			<Type>ART_DEF_BUILDING_ALUMINUM_CO_RESEARCH_AND_DEVELOPMENT</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1692,7 +1692,7 @@
 			<Button>Art/interface/buttons/buildings/animamaterial_factory.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ANIMATED_PREON_STAR</Type>
+			<Type>ART_DEF_BUILDING_INTERSTELLAR_ANIMATED_PREON_STAR</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -4693,7 +4693,7 @@
 			<Button>Art/Interface/Buttons/Buildings/DanceBird.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BISHOP_RING_REGULAR</Type>
+			<Type>ART_DEF_BUILDING_DEEP_SPACE_BISHOP_RING</Type>
 			<LSystem>LSYSTEM_ARCOLOGY</LSystem>
 			<bAnimated>1</bAnimated>
 			<fScale>7</fScale>
@@ -4813,7 +4813,7 @@
 			<Button>art/buttons/buildings/BlackHatHideoutBuilding.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BLACK_HOLE_COMPUTER</Type>
+			<Type>ART_DEF_BUILDING_INTERSTELLAR_BLACK_HOLE_COMPUTER</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -6183,7 +6183,7 @@
 			<Button>Art/interface/buttons/buildings/business_school.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BUSSARD_RAMJET_PORT</Type>
+			<Type>ART_DEF_BUILDING_TRANSTELLAR_BUSSARD_RAMJET_PORT</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -6523,7 +6523,7 @@
 			<Button>art/Vacation/Art/campgrounds.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CANAANISM_CATHEDRAL</Type>
+			<Type>ART_DEF_BUILDING_CANAANITE_CATHEDRAL</Type>
 			<LSystem>LSYSTEM_3x3</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>2.25</fScale>
@@ -6533,7 +6533,7 @@
 			<Button>Art/Interface/buttons/Buildings/Religions/Canaanism/cathedral.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CANAANISM_MONASTERY</Type>
+			<Type>ART_DEF_BUILDING_CANAANITE_MONASTERY</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>1</bAnimated>
 			<fScale>1</fScale>
@@ -6983,7 +6983,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Carnival.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CARPENTERS_WORKSHOP</Type>
+			<Type>ART_DEF_BUILDING_CARPENTER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -8283,7 +8283,7 @@
 			<Button>Art/interface/buttons/buildings/cislunar_agricultural_lab.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CISLUNAR_ANTIMATTER</Type>
+			<Type>ART_DEF_BUILDING_CISLUNAR_ANTIMATTER_HARVESTER</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -8333,7 +8333,7 @@
 			<Button>Art/interface/buttons/buildings/cislunar_black_hole.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CISLUNAR_CLAYTRONIC</Type>
+			<Type>ART_DEF_BUILDING_CISLUNAR_CLAYTRONIC_STATION</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -9393,7 +9393,7 @@
 			<Button>Art/interface/buttons/buildings/colony_ecosystem.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_INTERSTELLAR_COLONY_EUGENICS</Type>
+			<Type>ART_DEF_BUILDING_SPACE_COLONY_INTERSTELLAR_MOTHERSHIP_EUGENICS</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -9673,7 +9673,7 @@
 			<Button>Art/interface/buttons/buildings/computronium_maker.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_COMPUTRONIUM_PLANET</Type>
+			<Type>ART_DEF_BUILDING_INTERSTELLAR_COMPUTRONIUM_PLANET</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -9733,7 +9733,7 @@
 			<Button>Art/Interface/Buttons/Buildings/confectionerworkshop.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CONFECTIONS_FACTORY</Type>
+			<Type>ART_DEF_BUILDING_FACTORY_MARZIPAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -9753,7 +9753,7 @@
 			<Button>art/Embassy/art/confederateembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CONFUCIAN_CATHEDRAL</Type>
+			<Type>ART_DEF_BUILDING_CONFUCIAN_ACADEMY</Type>
 			<LSystem>LSYSTEM_2x3</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1.8</fScale>
@@ -9903,7 +9903,7 @@
 			<Button>Art/interface/buttons/buildings/contact_protocols.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CONTROLLED_BREEDING</Type>
+			<Type>ART_DEF_BUILDING_INTERSTELLAR_CONTROLLED_BREEDING</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -10023,7 +10023,7 @@
 			<Button>art/Craft/Art/copystore.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CORALTOOTH_MUSHROOM</Type>
+			<Type>ART_DEF_BUILDING_CORAL_TOOTH_MUSHROOM_GATHERER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -11073,7 +11073,7 @@
 			<Button>art/Embassy/art/cultureeuropean.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CULTURE_EXPLORATORY</Type>
+			<Type>ART_DEF_BUILDING_INTERSTELLAR_CULTURE_EXPLORATORY</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -11083,7 +11083,7 @@
 			<Button>Art/interface/buttons/buildings/culture_exploratory.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CULTURE_INDUSTRIOUS</Type>
+			<Type>ART_DEF_BUILDING_INTERSTELLAR_CULTURE_INDUSTRIOUS</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -11463,7 +11463,7 @@
 			<Button>Art/interface/buttons/buildings/dark_era_survival_plan.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DARK_FLOW_GENERATOR</Type>
+			<Type>ART_DEF_BUILDING_DISTANT_DARK_FLOW_GENERATOR</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -11513,7 +11513,7 @@
 			<Button>Art/interface/buttons/buildings/dark_matter_fuel_supply.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DARK_MATTER_HEATING</Type>
+			<Type>ART_DEF_BUILDING_TRANSTELLAR_DARK_MATTER_HEAT_SOURCE</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -11523,7 +11523,7 @@
 			<Button>Art/interface/buttons/buildings/dark_matter_heating.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DARK_MATTER_HIGHWAY</Type>
+			<Type>ART_DEF_BUILDING_INTERGALACTIC_DARK_MATTER_HIGHWAY</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -11533,7 +11533,7 @@
 			<Button>Art/interface/buttons/buildings/dark_matter_highway.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DARK_MATTER_REACTOR</Type>
+			<Type>ART_DEF_BUILDING_INTERSTELLAR_DARK_MATTER_REACTOR</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -11573,7 +11573,7 @@
 			<Button>Art/interface/buttons/buildings/darpa.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DATEPALM_PLANTATION</Type>
+			<Type>ART_DEF_BUILDING_PLANTATION_DATE_PALM</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -11713,7 +11713,7 @@
 			<Button>Art/interface/buttons/buildings/deep_space_cloaking.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DEEP_SPACE_DEFENSES</Type>
+			<Type>ART_DEF_BUILDING_DEEP_SPACE_SHIELDING</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -11833,7 +11833,7 @@
 			<Button>Art/interface/buttons/buildings/deep_space_reconaissance.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DEEP_SPACE_RESEARCH</Type>
+			<Type>ART_DEF_BUILDING_DEEP_SPACE_RESEARCH_INSTITUTE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -11843,7 +11843,7 @@
 			<Button>Art/Interface/Buttons/National_Wonders/deep_space_research_institute.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DEEP_SPACE_SECURITY</Type>
+			<Type>ART_DEF_BUILDING_DEEP_SPACE_SECURITY_SYSTEM</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -12043,7 +12043,7 @@
 			<Button>art/Craft/Art/departmentstore.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DEPARTMENT_VEHICLES</Type>
+			<Type>ART_DEF_BUILDING_DEPARTMENT_OF_MOTOR_VEHICLES</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -12914,7 +12914,7 @@
 			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_circle_date.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DRUID_MONASTERY_FIG</Type>
+			<Type>ART_DEF_BUILDING_NATURE_CIRCLE_FIGS</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0.00</fScale>
@@ -13114,7 +13114,7 @@
 			<Button>Art/Interface/buttons/Buildings/Religions/Druid/DruidTemple_Button.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DRUID_TEMPLE_ALMOND</Type>
+			<Type>ART_DEF_BUILDING_NATURE_ALTAR_ALMOND</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0.00</fScale>
@@ -13134,7 +13134,7 @@
 			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_altar_apple.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DRUID_TEMPLE_BANANA</Type>
+			<Type>ART_DEF_BUILDING_NATURE_ALTAR_BANANA</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0.00</fScale>
@@ -13144,7 +13144,7 @@
 			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_altar_banana.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DRUID_TEMPLE_BARLEY</Type>
+			<Type>ART_DEF_BUILDING_NATURE_ALTAR_BARLEY</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0.00</fScale>
@@ -13194,7 +13194,7 @@
 			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_altar_fig.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DRUID_TEMPLE_GRAPES</Type>
+			<Type>ART_DEF_BUILDING_NATURE_ALTAR_GRAPES</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0.00</fScale>
@@ -13264,7 +13264,7 @@
 			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_altar_mushroom.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DRUID_TEMPLE_OLIVES</Type>
+			<Type>ART_DEF_BUILDING_NATURE_ALTAR_OLIVES</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0.00</fScale>
@@ -13274,7 +13274,7 @@
 			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_altar_olive.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DRUID_TEMPLE_PAPAYA</Type>
+			<Type>ART_DEF_BUILDING_NATURE_ALTAR_PAPAYAS</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0.00</fScale>
@@ -13304,7 +13304,7 @@
 			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_altar_pomegranate.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DRUID_TEMPLE_POTATO</Type>
+			<Type>ART_DEF_BUILDING_NATURE_ALTAR_POTATO_GOD</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0.00</fScale>
@@ -13344,7 +13344,7 @@
 			<Button>Art/Interface/buttons/Buildings/Religions/Druid/nature_altar_rice.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DRUID_TEMPLE_SQUASH</Type>
+			<Type>ART_DEF_BUILDING_NATURE_ALTAR_SQUASH</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0.00</fScale>
@@ -14764,7 +14764,7 @@
 			<Button>Art/interface/buttons/buildings/event_horizon_city.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_EVENT_HORIZON_PROBE</Type>
+			<Type>ART_DEF_BUILDING_INTERSTELLAR_EVENT_HORIZON_PROBE</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -15364,7 +15364,7 @@
 			<Button>art/Craft/Art/fiberglassfactory.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FIBEROPTICS_FACTORY</Type>
+			<Type>ART_DEF_BUILDING_FACTORY_FIBER_OPTIC_CABLES</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -15394,7 +15394,7 @@
 			<Button>Art/interface/buttons/buildings/field_generator.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FIELD_CLOTH_OF_GOLD</Type>
+			<Type>ART_DEF_BUILDING_FIELD_OF_THE_CLOTH_OF_GOLD</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -16154,7 +16154,7 @@
 			<Button>art/Fossils/art/fossiltrilobite.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOSSIL_VELOCIRAPTOR</Type>
+			<Type>ART_DEF_BUILDING_DIG_SITE_VELOCIRAPTOR_FOSSILS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -17954,7 +17954,7 @@
 			<Button>Art/Interface/Buttons/Buildings/safety.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GOOD_FEDERAL_PRISON</Type>
+			<Type>ART_DEF_BUILDING_SAFETY_MAXIMUM_SECURITY_PRISON</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -17984,7 +17984,7 @@
 			<Button>Art/Interface/Buttons/Buildings/safety.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GOOD_POLICE_ACADEMY</Type>
+			<Type>ART_DEF_BUILDING_SAFETY_POLICE_ACADEMY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -18194,7 +18194,7 @@
 			<Button>Art/Interface/Buttons/Buildings/graveyard.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GRAVITATIONAL_CRANE</Type>
+			<Type>ART_DEF_BUILDING_INTERGALACTIC_GRAVITATIONAL_CRANE</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -18324,7 +18324,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/great_firewall.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GREAT_FIREWALL_GOOD</Type>
+			<Type>ART_DEF_BUILDING_SAFETY_GREAT_FIREWALL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -18494,7 +18494,7 @@
 			<Button>Art/interface/buttons/buildings/green_float.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GREEN_WALL_OF_CHINA</Type>
+			<Type>ART_DEF_BUILDING_GREAT_GREEN_WALL</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -19034,7 +19034,7 @@
 			<Button>,Art/Interface/Buttons/Buildings/Harbor.dds,Art/Interface/Buttons/Buildings_Atlas.dds,3,11</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HARBORMASTER_OFFICE</Type>
+			<Type>ART_DEF_BUILDING_HARBORMASTERS_OFFICE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -20674,7 +20674,7 @@
 			<Button>art/Pets/Art/huntingdogs.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HUNTING_INSTRUCTION</Type>
+			<Type>ART_DEF_BUILDING_HUNTING_INSTRUCTIONS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -20714,7 +20714,7 @@
 			<Button>Art/Embassy/hurriansembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HYADES_STAR_CLUSTER</Type>
+			<Type>ART_DEF_BUILDING_HYADES_STAR_CLUSTER_COLONY</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -20814,7 +20814,7 @@
 			<Button>art/Farming/Art/hydroponics.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HYDROPONIC_CANNABIS</Type>
+			<Type>ART_DEF_BUILDING_CANNABIS_GROW_OPERATION</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -21314,7 +21314,7 @@
 			<Button>Art/Interface/Buttons/Buildings/incubation_center.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_INDEFINITE_LIFESPAN</Type>
+			<Type>ART_DEF_BUILDING_HUMAN_MOD_INDEFINITE_LIFESPAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -22094,7 +22094,7 @@
 			<Button>Art/interface/buttons/buildings/interstellar_broadcast_node.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_INTERSTELLAR_COLONY</Type>
+			<Type>ART_DEF_BUILDING_SPACE_COLONY_INTERSTELLAR_MOTHERSHIP</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -22294,7 +22294,7 @@
 			<Button>Art/interface/buttons/buildings/intertial_confinement_fusion_plant.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_INTER_ASTEROID_CITY</Type>
+			<Type>ART_DEF_BUILDING_ASTEROID_CLUSTER_CITY</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -22734,7 +22734,7 @@
 			<Button>art/Embassy/art/jamaicanembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_JAMESWEBB_TELESCOPE</Type>
+			<Type>ART_DEF_BUILDING_JAMES_WEBB_SPACE_TELESCOPE</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -23784,7 +23784,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/labyrinth_of_knossos.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_LACQUERWARE_FACTORY</Type>
+			<Type>ART_DEF_BUILDING_FACTORY_LACQUERWARE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -23924,7 +23924,7 @@
 			<Button>Art/interface/buttons/buildings/laser_drilling.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_LASER_HIGHWAY_RELAY</Type>
+			<Type>ART_DEF_BUILDING_TRANSTELLAR_LASER_HIGHWAY_RELAY</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -26024,7 +26024,7 @@
 			<Button>Art/interface/buttons/buildings/mars_hitech.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MARTIAN_HYDROPONICS_COMPLEX</Type>
+			<Type>ART_DEF_BUILDING_MARTIAN_HYDROPONICS_ARRAY_COMPLEX</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -26184,7 +26184,7 @@
 			<Button>Art/interface/buttons/buildings/martian_ammonia_bombardment.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MARTIAN_AREOTHERMAL</Type>
+			<Type>ART_DEF_BUILDING_MARTIAN_GEOTHERMAL_PLANT</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -26404,7 +26404,7 @@
 			<Button>Art/interface/buttons/buildings/martian_hotel.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MARTIAN_HYDROPONICS</Type>
+			<Type>ART_DEF_BUILDING_MARTIAN_HYDROPONICS_ARRAY</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27134,7 +27134,7 @@
 			<Button>Art/Interface/Buttons/Buildings/megatowerbiodome.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MEGATOWER_EDUCATION</Type>
+			<Type>ART_DEF_BUILDING_MEGATOWER_EDUCATION_LEVEL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27484,7 +27484,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Religions/Nagualism/Meso1_monastery.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MESOAMERICAN_SHRINE</Type>
+			<Type>ART_DEF_BUILDING_TEOTIHUACAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27494,7 +27494,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Religions/Nagualism/Meso3_shrine.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MESOAMERICAN_TEMPLE</Type>
+			<Type>ART_DEF_BUILDING_TEMPLE_OF_QUETZALCOATL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27594,7 +27594,7 @@
 			<Button>Art/interface/buttons/buildings/metaphysical.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_METAVERSE_EDUCATION</Type>
+			<Type>ART_DEF_BUILDING_METAVERSE_EDUCATION_CENTER</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27904,7 +27904,7 @@
 			<Button>Art/interface/buttons/buildings/milky_way_colony.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MILLENNIUM_PROBLEMS</Type>
+			<Type>ART_DEF_BUILDING_HILBERTS_PROBLEMS</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27954,7 +27954,7 @@
 			<Button>Art/Interface/Buttons/National_Wonders/mind_storage.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MIND_STORAGE_SERVER</Type>
+			<Type>ART_DEF_BUILDING_INTERSTELLAR_MIND_STORAGE_SERVER</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -30234,7 +30234,7 @@
 			<Button>Art/interface/buttons/buildings/neutronium.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_NEUTRON_STAR_COLONY</Type>
+			<Type>ART_DEF_BUILDING_INTERSTELLAR_NEUTRON_STAR_COLONY</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -30594,7 +30594,7 @@
 			<Button>Art/Embassy/normanembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_NORMA_AND_OUTER_ARM</Type>
+			<Type>ART_DEF_BUILDING_NORMA_AND_OUTER_ARM_COLONY</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -31324,7 +31324,7 @@
 			<Button>Art/Embassy/orang_asliembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ORBITAL_ACCELERATOR</Type>
+			<Type>ART_DEF_BUILDING_CISLUNAR_PARTICLE_ACCELERATOR</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -31784,7 +31784,7 @@
 			<Button>art/Entertainment/Art/pachinkoarcade.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PADDYSTRAW_MUSHROOM</Type>
+			<Type>ART_DEF_BUILDING_FARM_CROP_STRAW_MUSHROOM</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -33344,7 +33344,7 @@
 			<Button>art/Science/Art/planetarium.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PLANETARY_AWARENESS</Type>
+			<Type>ART_DEF_BUILDING_INTERSTELLAR_PLANETARY_AWARENESS</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -33434,7 +33434,7 @@
 			<Button>Art/Interface/Buttons/Buildings/planning_office.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PLANTAIN_PLANTATION</Type>
+			<Type>ART_DEF_BUILDING_PLANTATION_PLANTAIN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -33804,7 +33804,7 @@
 			<Button>art/Embassy/art/polynesianembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_POMEGRANATE_ORCHARD</Type>
+			<Type>ART_DEF_BUILDING_ORCHARD_POMEGRANATE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -33905,7 +33905,7 @@
 			<Button>Art/interface/buttons/buildings/portland_building.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PORTOBELLO_MUSHROOM</Type>
+			<Type>ART_DEF_BUILDING_FARM_CROP_PORTOBELLO_MUSHROOM</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -35015,7 +35015,7 @@
 			<Button>Art/Interface/Buttons/Buildings/radar_station.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_RADIATION_TOLERANCE</Type>
+			<Type>ART_DEF_BUILDING_HUMAN_MOD_RADIATION_TOLERANCE</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -35325,7 +35325,7 @@
 			<Button>art/Craft/Art/recordstore.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_RECREATED_ECOSYSTEM</Type>
+			<Type>ART_DEF_BUILDING_DEEP_SPACE_RECREATED_ECOSYSTEM</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -35395,7 +35395,7 @@
 			<Button>Art/Interface/Buttons/National_Wonders/red_cross.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_RED_GLOBULAR_GALAXY</Type>
+			<Type>ART_DEF_BUILDING_INTERGALACTIC_RED_GLOBULAR_GALAXY</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -35435,7 +35435,7 @@
 			<Button>Art/Interface/Buttons/baseterrain/reef.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_REFIGERATOR_FACTORY</Type>
+			<Type>ART_DEF_BUILDING_FACTORY_REFRIGERATORS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -36075,7 +36075,7 @@
 			<Button>art/Pets/Art/rodeo.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_RODNOVERY_CATHEDRAL</Type>
+			<Type>ART_DEF_BUILDING_CHRAM</Type>
 			<LSystem>LSYSTEM_3x2</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>.90</fScale>
@@ -36085,7 +36085,7 @@
 			<Button>Art/Interface/Buttons/Buildings/rodnovery_cathedral.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_RODNOVERY_MONASTERY</Type>
+			<Type>ART_DEF_BUILDING_IDOL</Type>
 			<LSystem>LSYSTEM_3x2</LSystem>
 			<bAnimated>1</bAnimated>
 			<fScale>.85</fScale>
@@ -37485,7 +37485,7 @@
 			<Button>art/Palace/Art/servantsquarters.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SERVICE_BOT_FACTORY</Type>
+			<Type>ART_DEF_BUILDING_FACTORY_SERVICE_BOTS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -37695,7 +37695,7 @@
 			<Button>Art/Interface/buttons/Buildings/Religions/Shaman/ShamanTemple_Button.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SHAMAN_TEMPLE_BISON</Type>
+			<Type>ART_DEF_BUILDING_SHAMANISTIC_TEMPLE_BISON</Type>
 			<LSystem>LSYSTEM_2x3</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1.65</fScale>
@@ -37755,7 +37755,7 @@
 			<Button>Art/Interface/buttons/Buildings/Religions/Shaman/shaman_temple_seal.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SHAMAN_TEMPLE_SHEEP</Type>
+			<Type>ART_DEF_BUILDING_SHAMANISTIC_TEMPLE_SHEEP</Type>
 			<LSystem>LSYSTEM_2x3</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1.65</fScale>
@@ -37885,7 +37885,7 @@
 			<Button>Art/interface/buttons/buildings/shellworld.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SHELL_WORLD_FACTORY</Type>
+			<Type>ART_DEF_BUILDING_ASTEROID_SHELL_FACTORY</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -38975,7 +38975,7 @@
 			<Button>art/Craft/Art/smokesignals.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SMOKING_PROHIBITION</Type>
+			<Type>ART_DEF_BUILDING_ORDINANCE_SMOKING_PROHIBITION</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -39435,7 +39435,7 @@
 			<Button>art/Embassy/art/songhaiembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SORBONNE_UNIVERSITY</Type>
+			<Type>ART_DEF_BUILDING_EU_SORBONNE_UNIVERSITY</Type>
 			<LSystem>LSYSTEM_3x3</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1.83</fScale>
@@ -40125,7 +40125,7 @@
 			<Button>Art/interface/buttons/buildings/star_cannon.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_STAR_CLUSTER_COLONY</Type>
+			<Type>ART_DEF_BUILDING_INTERSTELLAR_STAR_CLUSTER_COLONY</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -40575,7 +40575,7 @@
 			<Button>Art/interface/buttons/buildings/stringworks.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_STRUCTURAL_BACTERIA</Type>
+			<Type>ART_DEF_BUILDING_LIFE_STRUCTURAL_BACTERIA</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -42045,7 +42045,7 @@
 			<Button>art/Crime/art/terroristscompound.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TESSERACT_ASSEMBLER</Type>
+			<Type>ART_DEF_BUILDING_HYPERSPACE_TESSERACT_ASSEMBLER</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -42535,7 +42535,7 @@
 			<Button>Art/Interface/Buttons/Buildings/titaniumreclamationplant.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TITAN_AIR_TRANSPORT</Type>
+			<Type>ART_DEF_BUILDING_TITAN_AIRPORT</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -44155,7 +44155,7 @@
 			<Button>Art/Interface/buttons/Group_Wonders/UniversityofBarcelona.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_UNIVERSITY_OF_BASEL</Type>
+			<Type>ART_DEF_BUILDING_EU_UNIVERSITY_OF_BASEL</Type>
 			<LSystem>LSYSTEM_3x3</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1.83</fScale>
@@ -44215,7 +44215,7 @@
 			<Button>Art/Interface/buttons/Group_Wonders/UniversityofMurcia.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_UNIVERSITY_OF_PADUA</Type>
+			<Type>ART_DEF_BUILDING_EU_UNIVERSITY_OF_PADUA</Type>
 			<LSystem>LSYSTEM_3x3</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1.83</fScale>
@@ -45025,7 +45025,7 @@
 			<Button>Art/Interface/TeamColor/norsebutton.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_VIKING_TRADING_POST</Type>
+			<Type>ART_DEF_BUILDING_TRADING_POST</Type>
 			<LSystem>LSYSTEM_COAST</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>2.38</fScale>
@@ -45565,7 +45565,7 @@
 			<Button>art/Craft/Art/watchmakersshop.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_WATERBOTTLE_FACTORY</Type>
+			<Type>ART_DEF_BUILDING_FACTORY_WATER_BOTTLES</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -46635,7 +46635,7 @@
 			<Button>Art/interface/buttons/buildings/zero_g.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ZERO_G_SPORTS_ARENA</Type>
+			<Type>ART_DEF_BUILDING_CISLUNAR_SPORTS_ARENA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -47275,7 +47275,7 @@
 			<Button>art/Craft/Art/smeltertitanium.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TIN_INGOTS_PROVIDER</Type>
+			<Type>ART_DEF_BUILDING_RESOURCES_TIN_INGOTS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>

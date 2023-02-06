@@ -309,7 +309,7 @@
 			<PrereqTech>TECH_CHEMISTRY</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
+				<BuildingType>BUILDING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 			</PrereqOrBuildings>
@@ -1226,14 +1226,14 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DEEP_SPACE_RESEARCH</Type>
+			<Type>BUILDING_DEEP_SPACE_RESEARCH_INSTITUTE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
-			<SpecialBuildingType>SPECIALBUILDING_DEEP_SPACE_RESEARCH</SpecialBuildingType>
+			<SpecialBuildingType>SPECIALBUILDING_DEEP_SPACE_RESEARCH_INSTITUTE</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DEEP_SPACE_RESEARCH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DEEP_SPACE_RESEARCH_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_DEEP_SPACE_RESEARCH_INSTITUTE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DEEP_SPACE_RESEARCH_INSTITUTE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_ASTRONAUTICS</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqInCityBuildings>
@@ -1272,7 +1272,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<ArtDefineTag>ART_DEF_BUILDING_DEEP_SPACE_RESEARCH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_DEEP_SPACE_RESEARCH_INSTITUTE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DEEP_SPACE_RESEARCH</MovieDefineTag>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
@@ -1338,7 +1338,7 @@
 				<BuildingType>BUILDING_POWER_LINES</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
+				<BuildingType>BUILDING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 			</PrereqOrBuildings>
@@ -1402,13 +1402,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_DEPARTMENT_FOREIGN_WONDER</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DEPARTMENT_VEHICLES</Type>
+			<Type>BUILDING_DEPARTMENT_OF_MOTOR_VEHICLES</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DEPARTMENT_VEHICLES</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DEPARTMENT_VEHICLES_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_DEPARTMENT_OF_MOTOR_VEHICLES</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DEPARTMENT_OF_MOTOR_VEHICLES_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<Bonus>BONUS_AUTOMOBILES</Bonus>
@@ -1454,7 +1454,7 @@
 				</UnitProductionModifier>
 			</UnitProductionModifiers>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_DEPARTMENT_VEHICLES</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_DEPARTMENT_OF_MOTOR_VEHICLES</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DEPARTMENT_VEHICLES</MovieDefineTag>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
@@ -1469,7 +1469,7 @@
 			<PrereqTech>TECH_PLUMBING</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
+				<BuildingType>BUILDING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 			</PrereqOrBuildings>
@@ -1801,7 +1801,7 @@
 					<iAmountPerTurn>-50</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<FreeBuilding>BUILDING_GOOD_FEDERAL_PRISON</FreeBuilding>
+			<FreeBuilding>BUILDING_SAFETY_MAXIMUM_SECURITY_PRISON</FreeBuilding>
 			<iAsset>4</iAsset>
 			<iPower>6</iPower>
 			<Flavors>
@@ -2498,12 +2498,12 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_CARPENTERS_WORKSHOP</BuildingType>
+					<BuildingType>BUILDING_CARPENTER</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_CARPENTERS_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_CARPENTER</BuildingType>
 			</PrereqInCityBuildings>
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<iCost>664</iCost>
@@ -2524,7 +2524,7 @@
 			</PropertyManipulators>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_CARPENTERS_WORKSHOP</BuildingType>
+					<BuildingType>BUILDING_CARPENTER</BuildingType>
 					<CommerceChanges>
 						<iCommerce>5</iCommerce>
 					</CommerceChanges>
@@ -3061,7 +3061,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BRICK_MASON</BuildingType>
 				<BuildingType>BUILDING_FACTORY_BRICKS</BuildingType>
-				<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
+				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<iCost>664</iCost>
@@ -3094,7 +3094,7 @@
 					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
+					<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 					<CommerceChanges>
 						<iCommerce>5</iCommerce>
 					</CommerceChanges>
@@ -3345,7 +3345,7 @@
 				<BuildingType>BUILDING_GALACTIC_CANTINA</BuildingType>
 			</PrereqOrBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ALCOHOL_PROHIBITION</BuildingType>
+				<BuildingType>BUILDING_ORDINANCE_ALCOHOL_PROHIBITION</BuildingType>
 			</ReplacementBuildings>
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<iCost>664</iCost>
@@ -3502,7 +3502,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FLETCHERS_HUT</BuildingType>
 				<BuildingType>BUILDING_TRADITION_ARCHERY_EFFECT</BuildingType>
-				<BuildingType>BUILDING_HUNTING_INSTRUCTION</BuildingType>
+				<BuildingType>BUILDING_HUNTING_INSTRUCTIONS</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER_TRADITION</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
@@ -3820,7 +3820,7 @@
 			<PrereqTech>TECH_STEEL</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
+				<BuildingType>BUILDING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqOrBuildings>
@@ -4850,7 +4850,7 @@
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
+				<BuildingType>BUILDING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 			</PrereqOrBuildings>
@@ -6071,7 +6071,7 @@
 				</UnitProductionModifier>
 			</UnitProductionModifiers>
 			<iEspionageDefense>25</iEspionageDefense>
-			<FreeBuilding>BUILDING_GOOD_POLICE_ACADEMY</FreeBuilding>
+			<FreeBuilding>BUILDING_SAFETY_POLICE_ACADEMY</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -6100,7 +6100,7 @@
 			<PrereqTech>TECH_PROPAGANDA</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
-				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
+				<BuildingType>BUILDING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqAndCivics>
@@ -6920,13 +6920,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_STRATEGIC_GRAIN_RESERVE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_STRUCTURAL_BACTERIA</Type>
+			<Type>BUILDING_LIFE_STRUCTURAL_BACTERIA</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_STRUCTURAL_BACTERIA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_STRUCTURAL_BACTERIA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_LIFE_STRUCTURAL_BACTERIA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LIFE_STRUCTURAL_BACTERIA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_STRUCTURAL_BACTERIA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_LIFE_STRUCTURAL_BACTERIA</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

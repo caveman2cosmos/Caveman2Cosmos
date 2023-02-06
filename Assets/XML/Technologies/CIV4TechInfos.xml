@@ -9012,7 +9012,7 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
+					<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>

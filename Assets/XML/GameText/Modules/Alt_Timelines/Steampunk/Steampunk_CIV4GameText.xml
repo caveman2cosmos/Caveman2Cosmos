@@ -20,7 +20,7 @@
 		<Russian>Ïðèìèòèâíàÿ ýëåêòðîñòàíöèÿ ñòèìïàíêà.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MADSCIENTIST_CASTLE</Tag>
+		<Tag>TXT_KEY_BUILDING_MAD_SCIENTISTS_CASTLE</Tag>
 		<English>Mad Scientist's Castle</English>
 		<French>
 			<Text>Château de Savant Fou</Text>
@@ -32,7 +32,7 @@
 		<Russian>Çàìîê áåçóì. ó÷åíîãî</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MADSCIENTIST_CASTLE_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_MAD_SCIENTISTS_CASTLE_PEDIA</Tag>
 		<English>The local domicile for the resident mad scientist who controls the surrounding countryside with an iron fist and an army of weird science. Technological progress increases from his experiments and maintenance decreases because he and his capable minions handle some of the local government work. Random experiments on the population tends to upset people though.</English>
 		<Italian>La residenza locale dello scienziato pazzo che controlla la campagna circostante, con il pugno di ferro e la sua conoscenza tecnologica. Dai suoi esperimenti derivano un avanzamento tecnologico e una diminuzione del mantenimento, dato che lui e i suoi abili aiutanti controllano il governo locale. Tuttavia, alcuni esperimenti sulla popolazione tendono a innervosire le persone.</Italian>
 		<Polish>Szalony naukowiec jest bardzo często przedstawiany jako złoczyńca. Jest to postać, której pogląd na otaczający ją świat jest zniszczony przez maniakalne podejście do nauki i która pracuje nad stworzeniem wynalazku albo odkryciem sposobu na uzyskanie władzy lub pokonanie bohatera. Typowym zakończeniem fabuły jest obrócenie się wynalazku wobec samego naukowca albo poprzez błąd w jego zamyśle lub przez wykorzystanie wynalazku przez bohatera. Przykładami szalonych naukowców są Dr Evil, Dr Frankenstein, Dr Eggman czy Dr Doom.</Polish>

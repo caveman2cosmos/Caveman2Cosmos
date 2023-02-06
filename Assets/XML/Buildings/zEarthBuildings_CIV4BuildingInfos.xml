@@ -1186,13 +1186,13 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_INDEFINITE_LIFESPAN</Type>
+			<Type>BUILDING_HUMAN_MOD_INDEFINITE_LIFESPAN</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_INDEFINITE_LIFESPAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_INDEFINITE_LIFESPAN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_INDEFINITE_LIFESPAN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_INDEFINITE_LIFESPAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_INDEFINITE_LIFESPAN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_INDEFINITE_LIFESPAN</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1338,13 +1338,13 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_JAMESWEBB_TELESCOPE</Type>
+			<Type>BUILDING_JAMES_WEBB_SPACE_TELESCOPE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_JAMESWEBB_TELESCOPE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_JAMESWEBB_TELESCOPE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_JAMES_WEBB_SPACE_TELESCOPE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_JAMES_WEBB_SPACE_TELESCOPE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_JAMESWEBB_TELESCOPE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_JAMES_WEBB_SPACE_TELESCOPE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_JAMESWEBB_TELESCOPE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -2339,13 +2339,13 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_RADIATION_TOLERANCE</Type>
+			<Type>BUILDING_HUMAN_MOD_RADIATION_TOLERANCE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_RADIATION_TOLERANCE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_RADIATION_TOLERANCE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_RADIATION_TOLERANCE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_RADIATION_TOLERANCE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_RADIATION_TOLERANCE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_RADIATION_TOLERANCE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -3052,11 +3052,11 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ZERO_G_SPORTS_ARENA</Type>
-			<Description>TXT_KEY_BUILDING_ZERO_G_SPORTS_ARENA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ZERO_G_SPORTS_ARENA_PEDIA</Civilopedia>
+			<Type>BUILDING_CISLUNAR_SPORTS_ARENA</Type>
+			<Description>TXT_KEY_BUILDING_CISLUNAR_SPORTS_ARENA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_SPORTS_ARENA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ZERO_G_SPORTS_ARENA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_SPORTS_ARENA</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_ARENA</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>

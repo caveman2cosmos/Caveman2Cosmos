@@ -936,7 +936,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_MESOAMERICAN_SHRINE</BuildingType>
+					<BuildingType>BUILDING_TEOTIHUACAN</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>10</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -7770,7 +7770,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_MESOAMERICAN_SHRINE</BuildingType>
+					<BuildingType>BUILDING_TEOTIHUACAN</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -13004,7 +13004,7 @@
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_RODNOVERY_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_IDOL</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -13032,7 +13032,7 @@
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_CANAANISM_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_CANAANITE_MONASTERY</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -15991,7 +15991,7 @@
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_ALUMINUM_CO_R_AND_D</BuildingType>
+					<BuildingType>BUILDING_ALUMINUM_CO_RESEARCH_AND_DEVELOPMENT</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -17498,7 +17498,7 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_CANAANISM_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_CANAANITE_MONASTERY</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>

@@ -1285,7 +1285,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_INTERSTELLAR_COLONY</BuildingType>
+				<BuildingType>BUILDING_SPACE_COLONY_INTERSTELLAR_MOTHERSHIP</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_WEAPONIZED_ANTIMATTER</PrereqTech>
 			<iCost>4850</iCost>
@@ -1653,7 +1653,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_INTERSTELLAR_COLONY</BuildingType>
+				<BuildingType>BUILDING_SPACE_COLONY_INTERSTELLAR_MOTHERSHIP</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_COLONY_GOVERNANCE</PrereqTech>
 			<iCost>4850</iCost>
@@ -6360,7 +6360,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_IKAROS</BuildingType>
 				<BuildingType>BUILDING_KEPLER_SPACE_TELESCOPE</BuildingType>
-				<BuildingType>BUILDING_JAMESWEBB_TELESCOPE</BuildingType>
+				<BuildingType>BUILDING_JAMES_WEBB_SPACE_TELESCOPE</BuildingType>
 				<BuildingType>BUILDING_ATLAST_SPACE_TELESCOPE</BuildingType>
 				<BuildingType>BUILDING_ASTEROID_DEFLECTION_SYSTEM</BuildingType>
 				<BuildingType>BUILDING_SENTINEL</BuildingType>
