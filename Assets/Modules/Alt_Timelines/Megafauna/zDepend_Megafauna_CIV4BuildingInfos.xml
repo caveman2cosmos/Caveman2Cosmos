@@ -7,13 +7,13 @@
 				<BuildingType>BUILDING_ANIMAL_TRAINER_DEER</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TRAINER_GIRAFFE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TRAINER_MAMMOTH</BuildingType>
-				<BuildingType>BUILDING_ZEBRA_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_ZEBRA</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHARIOT_WORKSHOP</Type>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_ZEBRA_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_ZEBRA</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -22,7 +22,7 @@
 				<BuildingType>BUILDING_ANIMAL_TRAINER_DEER</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TRAINER_GIRAFFE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TRAINER_MAMMOTH</BuildingType>
-				<BuildingType>BUILDING_ZEBRA_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_ZEBRA</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -36,7 +36,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ANIMAL_TRAINER_MAMMOTH</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TRAINER_RHINOCEROS</BuildingType>
-				<BuildingType>BUILDING_ZEBRA_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_ZEBRA</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TRAINER_BISON</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TRAINER_DEER</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TRAINER_GIRAFFE</BuildingType>

@@ -1833,7 +1833,7 @@
 				<Bonus>BONUS_BASKETS</Bonus>
 			</PrereqBonuses>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FERTILTY_DANCE</BuildingType>
+				<BuildingType>BUILDING_FERTILITY_DANCE</BuildingType>
 				<BuildingType>BUILDING_EFFECT_FERTILITY_FESTIVAL</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_WOMENS_SUFFRAGE</ObsoleteTech>
@@ -3557,7 +3557,7 @@
 				<BuildingType>BUILDING_PEGASUS_BREEDER</BuildingType>
 				<BuildingType>BUILDING_PHOENIX_BREEDER</BuildingType>
 				<BuildingType>BUILDING_QILIN_BREEDER</BuildingType>
-				<BuildingType>BUILDING_CATCHER_QUETZALCOATL_BREEDER</BuildingType>
+				<BuildingType>BUILDING_QUETZALCOATL_BREEDER</BuildingType>
 				<BuildingType>BUILDING_RAINBOW_SERPENT_BREEDER</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iCost>12310</iCost>
@@ -3898,7 +3898,7 @@
 				<BuildingType>BUILDING_PEGASUS_BREEDER</BuildingType>
 				<BuildingType>BUILDING_PHOENIX_BREEDER</BuildingType>
 				<BuildingType>BUILDING_QILIN_BREEDER</BuildingType>
-				<BuildingType>BUILDING_CATCHER_QUETZALCOATL_BREEDER</BuildingType>
+				<BuildingType>BUILDING_QUETZALCOATL_BREEDER</BuildingType>
 				<BuildingType>BUILDING_RAINBOW_SERPENT_BREEDER</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iCost>12310</iCost>
@@ -5950,7 +5950,7 @@
 				<BuildingType>BUILDING_JACKALOPE_BREEDER</BuildingType>
 				<BuildingType>BUILDING_PHOENIX_BREEDER</BuildingType>
 				<BuildingType>BUILDING_QILIN_BREEDER</BuildingType>
-				<BuildingType>BUILDING_CATCHER_QUETZALCOATL_BREEDER</BuildingType>
+				<BuildingType>BUILDING_QUETZALCOATL_BREEDER</BuildingType>
 				<BuildingType>BUILDING_RAINBOW_SERPENT_BREEDER</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iCost>12310</iCost>
@@ -5991,7 +5991,7 @@
 				<BuildingType>BUILDING_JACKALOPE_BREEDER</BuildingType>
 				<BuildingType>BUILDING_PEGASUS_BREEDER</BuildingType>
 				<BuildingType>BUILDING_QILIN_BREEDER</BuildingType>
-				<BuildingType>BUILDING_CATCHER_QUETZALCOATL_BREEDER</BuildingType>
+				<BuildingType>BUILDING_QUETZALCOATL_BREEDER</BuildingType>
 				<BuildingType>BUILDING_RAINBOW_SERPENT_BREEDER</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iCost>12310</iCost>
@@ -6164,7 +6164,7 @@
 				<BuildingType>BUILDING_JACKALOPE_BREEDER</BuildingType>
 				<BuildingType>BUILDING_PEGASUS_BREEDER</BuildingType>
 				<BuildingType>BUILDING_PHOENIX_BREEDER</BuildingType>
-				<BuildingType>BUILDING_CATCHER_QUETZALCOATL_BREEDER</BuildingType>
+				<BuildingType>BUILDING_QUETZALCOATL_BREEDER</BuildingType>
 				<BuildingType>BUILDING_RAINBOW_SERPENT_BREEDER</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iCost>12310</iCost>
@@ -6187,12 +6187,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_QILIN_BREEDER</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CATCHER_QUETZALCOATL_BREEDER</Type>
+			<Type>BUILDING_QUETZALCOATL_BREEDER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CATCHER_QUETZALCOATL_BREEDER</Description>
+			<Description>TXT_KEY_BUILDING_QUETZALCOATL_BREEDER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MYTHICAL_BREEDER_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MYTHOLOCIAL_BEASTIARY</PrereqTech>
 			<iPrereqPopulation>12</iPrereqPopulation>
@@ -6225,7 +6225,7 @@
 			</ExtraFreeBonuses>
 			<iAsset>10</iAsset>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_CATCHER_QUETZALCOATL_BREEDER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_QUETZALCOATL_BREEDER</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RADIO_TELESCOPE</Type>
@@ -6364,7 +6364,7 @@
 				<BuildingType>BUILDING_PEGASUS_BREEDER</BuildingType>
 				<BuildingType>BUILDING_PHOENIX_BREEDER</BuildingType>
 				<BuildingType>BUILDING_QILIN_BREEDER</BuildingType>
-				<BuildingType>BUILDING_CATCHER_QUETZALCOATL_BREEDER</BuildingType>
+				<BuildingType>BUILDING_QUETZALCOATL_BREEDER</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iCost>12310</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>

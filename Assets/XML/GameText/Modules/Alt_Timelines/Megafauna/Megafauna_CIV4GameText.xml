@@ -401,7 +401,7 @@
 		<Russian>Ñòàäî çåáð</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ZEBRA_TRAINER</Tag>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_ZEBRA</Tag>
 		<English>Animal Trainer (Zebra)</English>
 		<French>
 			<Text>Dresseur de Zèbres</Text>
@@ -420,7 +420,7 @@
 		<Russian>Ïèòîìíèê çåáð</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ZEBRA_TRAINER_HELP</Tag>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_ZEBRA_HELP</Tag>
 		<English>[ICON_BULLET]Allows the training of Zebra units.</English>
 		<French>Permet l'entraînement d'unités avec des zèbres.</French>
 	</TEXT>
@@ -436,7 +436,7 @@
 		<English>Instead of only being able to train Zebra units in the city you built the wonder in this building allows them to be built in any of your cities. It can only be built in the ciy with the Zebra Trainer World Wonder.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ZEBRA_TRAINER_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_ZEBRA_PEDIA</Tag>
 		<English>There is no evidence Zebra were ever trained for warfare. The [COLOR_BUILDING_TEXT]Zebra Trainer[COLOR_REVERT] building is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<Italian>Non ci sono prove che le zebre siano mai state usate in guerra. L'[COLOR_BUILDING_TEXT]Allevatore di zebre[COLOR_REVERT] è un edificio parte delle [COLOR_HIGHLIGHT_TEXT]Tecnologie alternative[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
 	</TEXT>

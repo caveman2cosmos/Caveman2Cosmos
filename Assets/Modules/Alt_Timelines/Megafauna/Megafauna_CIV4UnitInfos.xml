@@ -1767,7 +1767,7 @@
 			</UnitAIs>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_EFFECT_HERITAGE_ZEBRAS</BuildingType>
-				<BuildingType>BUILDING_ZEBRA_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_ZEBRA</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
 			<TechTypes>
@@ -1923,7 +1923,7 @@
 			</UnitAIs>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_EFFECT_HERITAGE_ZEBRAS</BuildingType>
-				<BuildingType>BUILDING_ZEBRA_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_ZEBRA</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_STEAM_POWER</PrereqTech>
 			<TechTypes>
@@ -2100,7 +2100,7 @@
 			</UnitAIs>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_EFFECT_HERITAGE_ZEBRAS</BuildingType>
-				<BuildingType>BUILDING_ZEBRA_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_ZEBRA</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_CHARIOTRY</PrereqTech>
 			<TechTypes>
@@ -2227,7 +2227,7 @@
 			</UnitAIs>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_EFFECT_HERITAGE_ZEBRAS</BuildingType>
-				<BuildingType>BUILDING_ZEBRA_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_ZEBRA</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_CAVALRY_TACTICS</PrereqTech>
 			<TechTypes>
@@ -2401,7 +2401,7 @@
 			</UnitAIs>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_EFFECT_HERITAGE_ZEBRAS</BuildingType>
-				<BuildingType>BUILDING_ZEBRA_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_ZEBRA</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<TechTypes>

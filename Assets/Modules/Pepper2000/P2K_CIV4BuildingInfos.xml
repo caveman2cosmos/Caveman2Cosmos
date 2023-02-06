@@ -1184,7 +1184,7 @@
 					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_MARTIAN_HYDROPONICS_ARRAY_COMPLEX</BuildingType>
+					<BuildingType>BUILDING_MARTIAN_HYDROPONICS_COMPLEX</BuildingType>
 					<CommerceChanges>
 						<iCommerce>3</iCommerce>
 					</CommerceChanges>
@@ -1870,7 +1870,7 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_INTERSTELLAR_ECUMENOPOLIS_EARTH</BuildingType>
+					<BuildingType>BUILDING_ECUMENOPOLIS_EARTH</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -4188,7 +4188,7 @@
 			<iHealth>1</iHealth>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CISLUNAR_DOCKING_BAY</BuildingType>
-				<BuildingType>BUILDING_CISLUNAR_SUPPLY_BASE</BuildingType>
+				<BuildingType>BUILDING_CISLUNAR_RESUPPLY</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -5236,11 +5236,11 @@
 			</Properties>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CISLUNAR_SUPPLY_BASE</Type>
-			<Description>TXT_KEY_BUILDING_CISLUNAR_SUPPLY_BASE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_SUPPLY_BASE_PEDIA</Civilopedia>
+			<Type>BUILDING_CISLUNAR_RESUPPLY</Type>
+			<Description>TXT_KEY_BUILDING_CISLUNAR_RESUPPLY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_RESUPPLY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_SUPPLY_BASE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_RESUPPLY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<iCost>612</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -5931,7 +5931,7 @@
 			</GlobalBuildingExtraCommerces>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_INTERSTELLAR_ECUMENOPOLIS_EARTH</BuildingType>
+					<BuildingType>BUILDING_ECUMENOPOLIS_EARTH</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 				<PrereqBuilding>
@@ -8570,11 +8570,11 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MARTIAN_HYDROPONICS_ARRAY_COMPLEX</Type>
-			<Description>TXT_KEY_BUILDING_MARTIAN_HYDROPONICS_ARRAY_COMPLEX</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_HYDROPONICS_ARRAY_COMPLEX_PEDIA</Civilopedia>
+			<Type>BUILDING_MARTIAN_HYDROPONICS_COMPLEX</Type>
+			<Description>TXT_KEY_BUILDING_MARTIAN_HYDROPONICS_COMPLEX</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_HYDROPONICS_COMPLEX_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_HYDROPONICS_ARRAY_COMPLEX</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_HYDROPONICS_COMPLEX</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ELECTROMAGNETIC_FIELD_SHIELDING</PrereqTech>
 			<TechTypes>
@@ -9682,7 +9682,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_HYDROPONICS_ARRAY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PLANETARY_COLONIZATION</PrereqTech>
-			<ObsoletesToBuilding>BUILDING_MARTIAN_HYDROPONICS_ARRAY_COMPLEX</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_MARTIAN_HYDROPONICS_COMPLEX</ObsoletesToBuilding>
 			<ObsoleteTech>TECH_BOTANICAL_ALCHEMY</ObsoleteTech>
 			<iCost>702</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
@@ -9694,7 +9694,7 @@
 			</YieldChanges>
 			<iHealth>1</iHealth>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MARTIAN_HYDROPONICS_ARRAY_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_MARTIAN_HYDROPONICS_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_MARTIAN_VERTICAL_FARM</BuildingType>
 			</ReplacementBuildings>
 			<PrereqInCityBuildings>
@@ -10668,7 +10668,7 @@
 			</YieldChanges>
 			<iHappiness>1</iHappiness>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_VENUS_SURFACE_CITY_FACTORY</BuildingType>
+				<BuildingType>BUILDING_VENUS_SURFACE_FACTORY</BuildingType>
 				<BuildingType>BUILDING_VENUS_FUSION_PLANT</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
@@ -11135,11 +11135,11 @@
 			<iRevIdxLocal>-10</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_VENUS_SURFACE_CITY_FACTORY</Type>
-			<Description>TXT_KEY_BUILDING_VENUS_SURFACE_CITY_FACTORY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_VENUS_SURFACE_CITY_FACTORY_PEDIA</Civilopedia>
+			<Type>BUILDING_VENUS_SURFACE_FACTORY</Type>
+			<Description>TXT_KEY_BUILDING_VENUS_SURFACE_FACTORY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_VENUS_SURFACE_FACTORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VENUS_SURFACE_CITY_FACTORY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_VENUS_SURFACE_FACTORY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ABYSS_COLONIZATION</PrereqTech>
 			<iCost>2793</iCost>
@@ -11165,11 +11165,11 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_VENUS_SURFACE_CITY_PROBE</Type>
-			<Description>TXT_KEY_BUILDING_VENUS_SURFACE_CITY_PROBE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_VENUS_SURFACE_CITY_PROBE_PEDIA</Civilopedia>
+			<Type>BUILDING_VENUS_SURFACE_PROBE</Type>
+			<Description>TXT_KEY_BUILDING_VENUS_SURFACE_PROBE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_VENUS_SURFACE_PROBE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VENUS_SURFACE_CITY_PROBE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_VENUS_SURFACE_PROBE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_SUPERSTRONG_ALLOYS</PrereqTech>
 			<iCost>1144</iCost>
@@ -11190,11 +11190,11 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_VENUS_SURFACE_CITY_SCOOP</Type>
-			<Description>TXT_KEY_BUILDING_VENUS_SURFACE_CITY_SCOOP</Description>
-			<Civilopedia>TXT_KEY_BUILDING_VENUS_SURFACE_CITY_SCOOP_PEDIA</Civilopedia>
+			<Type>BUILDING_VENUS_SURFACE_SCOOP</Type>
+			<Description>TXT_KEY_BUILDING_VENUS_SURFACE_SCOOP</Description>
+			<Civilopedia>TXT_KEY_BUILDING_VENUS_SURFACE_SCOOP_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VENUS_SURFACE_CITY_SCOOP</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_VENUS_SURFACE_SCOOP</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_NANOMINING</PrereqTech>
 			<iCost>2793</iCost>
@@ -11253,7 +11253,7 @@
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_VENUS_CALCIUM_CARBONATE_STRUCTURES</BuildingType>
-				<BuildingType>BUILDING_VENUS_SURFACE_CITY_FACTORY</BuildingType>
+				<BuildingType>BUILDING_VENUS_SURFACE_FACTORY</BuildingType>
 				<BuildingType>BUILDING_VENUS_ARCOLOGY</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
@@ -16699,11 +16699,11 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TRANSTELLAR_ALDERSON_DISK_TERACITY</Type>
-			<Description>TXT_KEY_BUILDING_TRANSTELLAR_ALDERSON_DISK_TERACITY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TRANSTELLAR_ALDERSON_DISK_TERACITY_PEDIA</Civilopedia>
+			<Type>BUILDING_TRANSTELLAR_TERRACITY</Type>
+			<Description>TXT_KEY_BUILDING_TRANSTELLAR_TERRACITY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TRANSTELLAR_TERRACITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TRANSTELLAR_ALDERSON_DISK_TERACITY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_TRANSTELLAR_TERRACITY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ULTIMA_ARCHITECTURE</PrereqTech>
 			<iCost>5515</iCost>
@@ -16745,7 +16745,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_VOYAGE_TO_ANDROMEDA_COLONY</BuildingType>
+					<BuildingType>BUILDING_ANDROMEDA_COLONY</BuildingType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>50</iCommerce>
@@ -17646,11 +17646,11 @@
 			<iMaintenanceModifier>-2</iMaintenanceModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SPACE_COLONY_INTERSTELLAR_MOTHERSHIP_EUGENICS</Type>
-			<Description>TXT_KEY_BUILDING_SPACE_COLONY_INTERSTELLAR_MOTHERSHIP_EUGENICS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SPACE_COLONY_INTERSTELLAR_MOTHERSHIP_EUGENICS_PEDIA</Civilopedia>
+			<Type>BUILDING_INTERSTELLAR_COLONY_EUGENICS</Type>
+			<Description>TXT_KEY_BUILDING_INTERSTELLAR_COLONY_EUGENICS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_INTERSTELLAR_COLONY_EUGENICS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SPACE_COLONY_INTERSTELLAR_MOTHERSHIP_EUGENICS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_INTERSTELLAR_COLONY_EUGENICS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PRECISION_SOCIAL_ENGINEERING</PrereqTech>
 			<TechTypes>
@@ -18622,13 +18622,13 @@
 			<bPower>1</bPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EARTH_2</Type>
+			<Type>BUILDING_EARTH_2_0</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_EARTH_2</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EARTH_2_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EARTH_2_0</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EARTH_2_0_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_EARTH_2</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EARTH_2_0</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_EARTH_20</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_HYPERSTRUCTURE_ENGINEERING</PrereqTech>
@@ -19732,7 +19732,7 @@
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_NGC_6811</BuildingType>
+				<BuildingType>BUILDING_NGC_6811_COLONY</BuildingType>
 			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -21133,13 +21133,13 @@
 			</YieldChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NGC_6811</Type>
+			<Type>BUILDING_NGC_6811_COLONY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_NGC_6811</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NGC_6811_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_NGC_6811_COLONY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NGC_6811_COLONY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NGC_6811</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_NGC_6811_COLONY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NGC_6811</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_STELLAR_ENGINE</PrereqTech>
@@ -23961,13 +23961,13 @@
 			<iRevIdxLocal>-10</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_VOYAGE_TO_ANDROMEDA_COLONY</Type>
+			<Type>BUILDING_ANDROMEDA_COLONY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_VOYAGE_TO_ANDROMEDA_COLONY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_VOYAGE_TO_ANDROMEDA_COLONY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ANDROMEDA_COLONY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ANDROMEDA_COLONY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VOYAGE_TO_ANDROMEDA_COLONY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ANDROMEDA_COLONY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ANDROMEDA_COLONY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INTERGALACTIC_COLONIZATION</PrereqTech>
@@ -26062,7 +26062,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_SMALL_MAGELLANIC_CLOUD_COLONY</BuildingType>
 				<BuildingType>BUILDING_SAGITTARIUS_DWARF_ELLIPTICAL_GALAXY_COLONY</BuildingType>
-				<BuildingType>BUILDING_VOYAGE_TO_ANDROMEDA_COLONY</BuildingType>
+				<BuildingType>BUILDING_ANDROMEDA_COLONY</BuildingType>
 				<BuildingType>BUILDING_TRIANGULUM_COLONY</BuildingType>
 			</PrereqNotInCityBuildings>
 		</BuildingInfo>
@@ -26549,7 +26549,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_SMALL_MAGELLANIC_CLOUD_COLONY</BuildingType>
 				<BuildingType>BUILDING_LARGE_MAGELLANIC_CLOUD_COLONY</BuildingType>
-				<BuildingType>BUILDING_VOYAGE_TO_ANDROMEDA_COLONY</BuildingType>
+				<BuildingType>BUILDING_ANDROMEDA_COLONY</BuildingType>
 				<BuildingType>BUILDING_TRIANGULUM_COLONY</BuildingType>
 			</PrereqNotInCityBuildings>
 		</BuildingInfo>
@@ -26679,7 +26679,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_LARGE_MAGELLANIC_CLOUD_COLONY</BuildingType>
 				<BuildingType>BUILDING_SAGITTARIUS_DWARF_ELLIPTICAL_GALAXY_COLONY</BuildingType>
-				<BuildingType>BUILDING_VOYAGE_TO_ANDROMEDA_COLONY</BuildingType>
+				<BuildingType>BUILDING_ANDROMEDA_COLONY</BuildingType>
 				<BuildingType>BUILDING_TRIANGULUM_COLONY</BuildingType>
 			</PrereqNotInCityBuildings>
 		</BuildingInfo>
@@ -26946,7 +26946,7 @@
 				<BuildingType>BUILDING_SMALL_MAGELLANIC_CLOUD_COLONY</BuildingType>
 				<BuildingType>BUILDING_LARGE_MAGELLANIC_CLOUD_COLONY</BuildingType>
 				<BuildingType>BUILDING_SAGITTARIUS_DWARF_ELLIPTICAL_GALAXY_COLONY</BuildingType>
-				<BuildingType>BUILDING_VOYAGE_TO_ANDROMEDA_COLONY</BuildingType>
+				<BuildingType>BUILDING_ANDROMEDA_COLONY</BuildingType>
 			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>

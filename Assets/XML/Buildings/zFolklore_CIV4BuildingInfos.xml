@@ -18,7 +18,7 @@
 			</PrereqInCityBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_FOLKLORE_PRESENCE_OF_CORAL</BuildingType>
+					<BuildingType>BUILDING_PRESENCE_OF_CORAL</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -115,7 +115,7 @@
 			</PrereqInCityBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_FOLKLORE_PRESENCE_OF_CRATER</BuildingType>
+					<BuildingType>BUILDING_PRESENCE_OF_CRATER</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -209,7 +209,7 @@
 			</PrereqInCityBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_FOLKLORE_PRESENCE_OF_FIRE</BuildingType>
+					<BuildingType>BUILDING_PRESENCE_OF_FIRE</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -310,7 +310,7 @@
 			</PrereqInCityBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_FOLKLORE_PRESENCE_OF_METAL</BuildingType>
+					<BuildingType>BUILDING_PRESENCE_OF_METAL</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -405,7 +405,7 @@
 			</PrereqInCityBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_FOLKLORE_PRESENCE_OF_OASIS</BuildingType>
+					<BuildingType>BUILDING_PRESENCE_OF_OASIS</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -502,7 +502,7 @@
 			</PrereqInCityBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_FOLKLORE_PRESENCE_OF_LANDFORM</BuildingType>
+					<BuildingType>BUILDING_PRESENCE_OF_LANDFORM</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -599,7 +599,7 @@
 			</PrereqInCityBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_FOLKLORE_PRESENCE_OF_REEF</BuildingType>
+					<BuildingType>BUILDING_PRESENCE_OF_REEF</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -784,7 +784,7 @@
 			</PrereqInCityBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_FOLKLORE_PRESENCE_OF_VOLCANO</BuildingType>
+					<BuildingType>BUILDING_PRESENCE_OF_VOLCANO</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -969,7 +969,7 @@
 			</PrereqInCityBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_FOLKLORE_PRESENCE_OF_EARTH</BuildingType>
+					<BuildingType>BUILDING_PRESENCE_OF_EARTH</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -1243,7 +1243,7 @@
 			</PrereqInCityBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_FOLKLORE_PRESENCE_OF_SEA</BuildingType>
+					<BuildingType>BUILDING_PRESENCE_OF_SEA</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -3082,7 +3082,7 @@
 				<BuildingType>BUILDING_FOLKLORE_RAZORBILL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_RHEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ROCKHOPPER_PENGUIN</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_E_SEAEAGLE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_STELLERS_SEA_EAGLE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SECRETARY_BIRD</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ARCTIC_TERN</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_TOUCAN</BuildingType>
@@ -4770,7 +4770,7 @@
 				<BuildingType>BUILDING_FOLKLORE_NILE_CROCODILE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_CROCODILE_LARGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_CROCODILE_SMALL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SALTWATER_CROCODILE_SMALLODILE_LARGE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SALTWATER_CROCODILE_LARGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SALTWATER_CROCODILE_SMALL</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>250</iCost>
@@ -6092,9 +6092,9 @@
 				<BuildingType>BUILDING_FOLKLORE_ORCA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_EMPEROR_PENGUIN</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_EAGLE_RAY</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_E_REEF_SHARK</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REEF_SHARK</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ROCKHOPPER_PENGUIN</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_E_SEATURTLE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SEA_TURTLE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_TUNA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WHALE_SHARK</BuildingType>
 			</PrereqOrBuildings>
@@ -9160,9 +9160,9 @@
 				<BuildingType>BUILDING_FOLKLORE_ORCA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_EMPEROR_PENGUIN</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_EAGLE_RAY</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_E_REEF_SHARK</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REEF_SHARK</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ROCKHOPPER_PENGUIN</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_E_SEATURTLE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SEA_TURTLE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_TUNA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WHALE_SHARK</BuildingType>
 			</PrereqOrBuildings>
@@ -12594,7 +12594,7 @@
 				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_BIRDS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_HARPY_EAGLE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_HAWK</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_E_SEAEAGLE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_STELLERS_SEA_EAGLE</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>250</iCost>
 			<bNukeImmune>1</bNukeImmune>
@@ -13197,17 +13197,17 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FOLKLORE_E_REEF_SHARK</Type>
+			<Type>BUILDING_FOLKLORE_REEF_SHARK</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FOLKLORE_E_REEF_SHARK</Description>
+			<Description>TXT_KEY_BUILDING_FOLKLORE_REEF_SHARK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_FOLKLORE_E_REEF_SHARK</FreeBuilding>
+			<FreeBuilding>BUILDING_FOLKLORE_REEF_SHARK</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_T_SHARKS</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -13289,7 +13289,7 @@
 				<BuildingType>BUILDING_FOLKLORE_PUFF_ADDER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_CROCODILE_LARGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_CROCODILE_SMALL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SALTWATER_CROCODILE_SMALLODILE_LARGE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SALTWATER_CROCODILE_LARGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SALTWATER_CROCODILE_SMALL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_VIPER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_CHAIN_VIPER</BuildingType>
@@ -13990,18 +13990,18 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FOLKLORE_SALTWATER_CROCODILE_SMALLODILE_LARGE</Type>
+			<Type>BUILDING_FOLKLORE_SALTWATER_CROCODILE_LARGE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FOLKLORE_SALTWATER_CROCODILE_SMALLODILE_LARGE</Description>
+			<Description>TXT_KEY_BUILDING_FOLKLORE_SALTWATER_CROCODILE_LARGE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_FOLKLORE_SALTWATER_CROCODILE_SMALLODILE_LARGE</FreeBuilding>
-			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_SALTWATER_CROCODILE_SMALLODILE_LARGE</ArtDefineTag>
+			<FreeBuilding>BUILDING_FOLKLORE_SALTWATER_CROCODILE_LARGE</FreeBuilding>
+			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_SALTWATER_CROCODILE_LARGE</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -14146,18 +14146,18 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FOLKLORE_E_SEAEAGLE</Type>
+			<Type>BUILDING_FOLKLORE_STELLERS_SEA_EAGLE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FOLKLORE_E_SEAEAGLE</Description>
+			<Description>TXT_KEY_BUILDING_FOLKLORE_STELLERS_SEA_EAGLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_FOLKLORE_E_SEAEAGLE</FreeBuilding>
-			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_E_SEAEAGLE</ArtDefineTag>
+			<FreeBuilding>BUILDING_FOLKLORE_STELLERS_SEA_EAGLE</FreeBuilding>
+			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_STELLERS_SEA_EAGLE</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -14270,18 +14270,18 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FOLKLORE_E_SEATURTLE</Type>
+			<Type>BUILDING_FOLKLORE_SEA_TURTLE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FOLKLORE_E_SEATURTLE</Description>
+			<Description>TXT_KEY_BUILDING_FOLKLORE_SEA_TURTLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_FOLKLORE_E_SEATURTLE</FreeBuilding>
-			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_E_SEATURTLE</ArtDefineTag>
+			<FreeBuilding>BUILDING_FOLKLORE_SEA_TURTLE</FreeBuilding>
+			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_SEA_TURTLE</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -14350,7 +14350,7 @@
 				<BuildingType>BUILDING_FOLKLORE_BLUE_FOOTED_BOOBY</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_GALAPAGOS_PENGUIN</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_RAZORBILL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_E_SEAEAGLE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_STELLERS_SEA_EAGLE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ARCTIC_TERN</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>250</iCost>
@@ -14428,18 +14428,18 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FOLKLORE_E_SEA_OTTER</Type>
+			<Type>BUILDING_FOLKLORE_SEA_OTTER</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FOLKLORE_E_SEA_OTTER</Description>
+			<Description>TXT_KEY_BUILDING_FOLKLORE_SEA_OTTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_FOLKLORE_E_SEA_OTTER</FreeBuilding>
-			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_E_SEA_OTTER</ArtDefineTag>
+			<FreeBuilding>BUILDING_FOLKLORE_SEA_OTTER</FreeBuilding>
+			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_SEA_OTTER</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -14568,7 +14568,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FOLKLORE_GREAT_WHITE_SHARK</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_HAMMERHEAD_SHARK</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_E_REEF_SHARK</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REEF_SHARK</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WHALE_SHARK</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>250</iCost>
@@ -16467,7 +16467,7 @@
 				<BuildingType>BUILDING_FOLKLORE_BADGER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_RACCOON</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_RATEL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_E_SEA_OTTER</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SEA_OTTER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SKUNK</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WOLVERINE</BuildingType>
 			</PrereqOrBuildings>

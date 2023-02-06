@@ -7375,7 +7375,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_CATCHER_QUETZALCOATL_BREEDER</BuildingType>
+					<BuildingType>BUILDING_QUETZALCOATL_BREEDER</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>

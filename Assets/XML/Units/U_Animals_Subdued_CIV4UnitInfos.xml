@@ -17561,7 +17561,7 @@
 				<BuildingType>BUILDING_WONDERS_OF_THE_DEEP</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEA</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_E_REEF_SHARK</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REEF_SHARK</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_SHARKS</BuildingType>
 				<BuildingType>BUILDING_AQUARIUM</BuildingType>
 				<BuildingType>BUILDING_MARINE_INSTITUTE</BuildingType>
@@ -18948,7 +18948,7 @@
 				<BuildingType>BUILDING_MASTER_SEA_HUNTER</BuildingType>
 				<BuildingType>BUILDING_WONDERS_OF_THE_DEEP</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_CROCODILE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SALTWATER_CROCODILE_SMALLODILE_LARGE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SALTWATER_CROCODILE_LARGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_REPTILE</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_REPTILE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_DRAGON</BuildingType>
@@ -19366,7 +19366,7 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BIRD</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_BIRDS</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_E_SEAEAGLE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_STELLERS_SEA_EAGLE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_SEA_BIRDS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_RAPTORS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SKY</BuildingType>
@@ -19685,7 +19685,7 @@
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEA</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_E_SEA_OTTER</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SEA_OTTER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_WEASEL</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BAD_BOYS</BuildingType>
 				<BuildingType>BUILDING_TRAP_SEA_OTTER</BuildingType>
@@ -19812,7 +19812,7 @@
 				<BuildingType>BUILDING_NAVAL_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEA</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_E_SEATURTLE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SEA_TURTLE</BuildingType>
 				<BuildingType>BUILDING_SHELL_WORKERS_HUT</BuildingType>
 				<BuildingType>BUILDING_SEA_TURTLE_EGG_GATHERER</BuildingType>
 				<BuildingType>BUILDING_AQUARIUM</BuildingType>
@@ -24633,7 +24633,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_FOLKLORE_T_TALES_OF_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEA</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_E_REEF_SHARK</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REEF_SHARK</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_SHARKS</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
@@ -24741,7 +24741,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_FOLKLORE_T_CROCODILE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEA</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SALTWATER_CROCODILE_SMALLODILE_LARGE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SALTWATER_CROCODILE_LARGE</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
 			<iMoves>2</iMoves>
@@ -24955,7 +24955,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_FOLKLORE_T_TALES_OF_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEA</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_E_SEATURTLE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SEA_TURTLE</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
 			<iMoves>2</iMoves>

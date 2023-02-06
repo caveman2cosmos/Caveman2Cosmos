@@ -198,7 +198,7 @@
 			<Button>Art/Interface/Buttons/Buildings/herd_zebra.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ZEBRA_TRAINER</Type>
+			<Type>ART_DEF_BUILDING_ANIMAL_TRAINER_ZEBRA</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>

@@ -1582,7 +1582,7 @@
 			<Button>Art/Interface/Buttons/Units/Redpanda.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_E_REEF_SHARK</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_REEF_SHARK</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1692,7 +1692,7 @@
 			<Button>Art/Interface/Buttons/Units/salt_crocodile_small.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_SALTWATER_CROCODILE_SMALLODILE_LARGE</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_SALTWATER_CROCODILE_LARGE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1702,7 +1702,7 @@
 			<Button>Art/Interface/Buttons/Units/Saltcroc.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_E_SEAEAGLE</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_STELLERS_SEA_EAGLE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1732,7 +1732,7 @@
 			<Button>Art/Interface/Buttons/buildings/totem_cassowary.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_E_SEA_OTTER</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_SEA_OTTER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>

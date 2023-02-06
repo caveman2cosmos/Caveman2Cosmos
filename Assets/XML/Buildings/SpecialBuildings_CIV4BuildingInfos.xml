@@ -8306,12 +8306,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_FERTILITY_FESTIVAL</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FERTILTY_DANCE</Type>
+			<Type>BUILDING_FERTILITY_DANCE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FERTILTY_DANCE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FERTILTY_DANCE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_FERTILITY_DANCE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FERTILITY_DANCE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<PrereqTech>TECH_PREHISTORIC_DANCE</PrereqTech>
 			<PrereqOrBuildings>
@@ -8334,7 +8334,7 @@
 			</CommerceChanges>
 			<iAsset>1</iAsset>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_FERTILTY_DANCE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_FERTILITY_DANCE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORDINANCE_FIRE_CODE</Type>
@@ -10442,12 +10442,12 @@
 			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_JEWISH</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_KNOWLEDGE_BASE_ANCIENT</Type>
+			<Type>BUILDING_EDUCATION_KNOWLEDGE_BASE_ANCIENT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_ANCIENT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_ANCIENT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EDUCATION_KNOWLEDGE_BASE_ANCIENT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EDUCATION_KNOWLEDGE_BASE_ANCIENT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<PropertyManipulators>
 				<PropertySource>
@@ -10467,10 +10467,10 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_CLASSICAL</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_MEDIEVAL</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_RENAISSANCE</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_INDUSTRIAL</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_CLASSICAL</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_MEDIEVAL</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_RENAISSANCE</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_INDUSTRIAL</BuildingType>
 				<!--
 				<BuildingType>BUILDING_KNOWLEDGE_BASE_MODERN</BuildingType>
 				<BuildingType>BUILDING_KNOWLEDGE_BASE_INFORMATION</BuildingType>
@@ -10483,12 +10483,12 @@
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_KNOWLEDGE_BASE_CLASSICAL</Type>
+			<Type>BUILDING_EDUCATION_KNOWLEDGE_BASE_CLASSICAL</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_CLASSICAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_CLASSICAL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EDUCATION_KNOWLEDGE_BASE_CLASSICAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EDUCATION_KNOWLEDGE_BASE_CLASSICAL_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CLASSICAL_LIFESTYLE</PrereqTech>
 			<PropertyManipulators>
 				<PropertySource>
@@ -10508,9 +10508,9 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_MEDIEVAL</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_RENAISSANCE</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_INDUSTRIAL</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_MEDIEVAL</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_RENAISSANCE</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_INDUSTRIAL</BuildingType>
 				<!--
 				<BuildingType>BUILDING_KNOWLEDGE_BASE_MODERN</BuildingType>
 				<BuildingType>BUILDING_KNOWLEDGE_BASE_INFORMATION</BuildingType>
@@ -10523,12 +10523,12 @@
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_KNOWLEDGE_BASE_MEDIEVAL</Type>
+			<Type>BUILDING_EDUCATION_KNOWLEDGE_BASE_MEDIEVAL</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_MEDIEVAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_MEDIEVAL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EDUCATION_KNOWLEDGE_BASE_MEDIEVAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EDUCATION_KNOWLEDGE_BASE_MEDIEVAL_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MEDIEVAL_LIFESTYLE</PrereqTech>
 			<PropertyManipulators>
 				<PropertySource>
@@ -10548,8 +10548,8 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_RENAISSANCE</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_INDUSTRIAL</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_RENAISSANCE</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_INDUSTRIAL</BuildingType>
 				<!--
 				<BuildingType>BUILDING_KNOWLEDGE_BASE_MODERN</BuildingType>
 				<BuildingType>BUILDING_KNOWLEDGE_BASE_INFORMATION</BuildingType>
@@ -10562,12 +10562,12 @@
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_KNOWLEDGE_BASE_RENAISSANCE</Type>
+			<Type>BUILDING_EDUCATION_KNOWLEDGE_BASE_RENAISSANCE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_RENAISSANCE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_RENAISSANCE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EDUCATION_KNOWLEDGE_BASE_RENAISSANCE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EDUCATION_KNOWLEDGE_BASE_RENAISSANCE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<PropertyManipulators>
 				<PropertySource>
@@ -10587,7 +10587,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_INDUSTRIAL</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_INDUSTRIAL</BuildingType>
 				<!--
 				<BuildingType>BUILDING_KNOWLEDGE_BASE_MODERN</BuildingType>
 				<BuildingType>BUILDING_KNOWLEDGE_BASE_INFORMATION</BuildingType>
@@ -10600,12 +10600,12 @@
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_KNOWLEDGE_BASE_INDUSTRIAL</Type>
+			<Type>BUILDING_EDUCATION_KNOWLEDGE_BASE_INDUSTRIAL</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_INDUSTRIAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_INDUSTRIAL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EDUCATION_KNOWLEDGE_BASE_INDUSTRIAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EDUCATION_KNOWLEDGE_BASE_INDUSTRIAL_PEDIA</Civilopedia>
 			<PrereqTech>TECH_INDUSTRIAL_LIFESTYLE</PrereqTech>
 			<PropertyManipulators>
 				<PropertySource>

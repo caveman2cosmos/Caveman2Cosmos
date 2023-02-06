@@ -43560,7 +43560,7 @@
 				<BuildingType>BUILDING_FIRE_DANCE</BuildingType>
 				<BuildingType>BUILDING_NATURE_DANCE</BuildingType>
 				<BuildingType>BUILDING_MOON_DANCE</BuildingType>
-				<BuildingType>BUILDING_FERTILTY_DANCE</BuildingType>
+				<BuildingType>BUILDING_FERTILITY_DANCE</BuildingType>
 				<BuildingType>BUILDING_BLOOD_DANCE</BuildingType>
 			</Buildings>
 			<Actions>
@@ -43659,7 +43659,7 @@
 				<BuildingType>BUILDING_FIRE_DANCE</BuildingType>
 				<BuildingType>BUILDING_NATURE_DANCE</BuildingType>
 				<BuildingType>BUILDING_MOON_DANCE</BuildingType>
-				<BuildingType>BUILDING_FERTILTY_DANCE</BuildingType>
+				<BuildingType>BUILDING_FERTILITY_DANCE</BuildingType>
 				<BuildingType>BUILDING_BLOOD_DANCE</BuildingType>
 			</Buildings>
 			<UnitAIs>
@@ -43775,7 +43775,7 @@
 				<BuildingType>BUILDING_FIRE_DANCE</BuildingType>
 				<BuildingType>BUILDING_NATURE_DANCE</BuildingType>
 				<BuildingType>BUILDING_MOON_DANCE</BuildingType>
-				<BuildingType>BUILDING_FERTILTY_DANCE</BuildingType>
+				<BuildingType>BUILDING_FERTILITY_DANCE</BuildingType>
 				<BuildingType>BUILDING_BLOOD_DANCE</BuildingType>
 			</Buildings>
 			<iCost>250</iCost>
@@ -43882,7 +43882,7 @@
 				<BuildingType>BUILDING_FIRE_DANCE</BuildingType>
 				<BuildingType>BUILDING_NATURE_DANCE</BuildingType>
 				<BuildingType>BUILDING_MOON_DANCE</BuildingType>
-				<BuildingType>BUILDING_FERTILTY_DANCE</BuildingType>
+				<BuildingType>BUILDING_FERTILITY_DANCE</BuildingType>
 				<BuildingType>BUILDING_BLOOD_DANCE</BuildingType>
 			</Buildings>
 			<iCost>886</iCost>

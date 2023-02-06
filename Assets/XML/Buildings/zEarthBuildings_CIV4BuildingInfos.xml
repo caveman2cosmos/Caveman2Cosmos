@@ -2675,7 +2675,7 @@
 			<FreeBuilding>BUILDING_SPACESCRAPER</FreeBuilding>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_INTERSTELLAR_ECUMENOPOLIS_EARTH</BuildingType>
+					<BuildingType>BUILDING_ECUMENOPOLIS_EARTH</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>

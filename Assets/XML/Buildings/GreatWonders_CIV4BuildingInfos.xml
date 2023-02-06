@@ -3610,12 +3610,12 @@
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CATACOMBS_OF_KOMELSHOQAFA</Type>
+			<Type>BUILDING_CATACOMBS_OF_KOM_EL_SHOQAFA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_CATACOMBS_OF_KOMELSHOQAFA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CATACOMBS_OF_KOMELSHOQAFA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CATACOMBS_OF_KOM_EL_SHOQAFA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CATACOMBS_OF_KOM_EL_SHOQAFA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CATACOMBS_OF_KOMELSHOQAFA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CATACOMBS_OF_KOM_EL_SHOQAFA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CATACOMBS_OF_KOM</MovieDefineTag>
 			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
@@ -6239,13 +6239,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_INTERSTELLAR_ECUMENOPOLIS_EARTH</Type>
+			<Type>BUILDING_ECUMENOPOLIS_EARTH</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_INTERSTELLAR_ECUMENOPOLIS_EARTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_INTERSTELLAR_ECUMENOPOLIS_EARTH_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ECUMENOPOLIS_EARTH</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ECUMENOPOLIS_EARTH_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_INTERSTELLAR_ECUMENOPOLIS_EARTH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ECUMENOPOLIS_EARTH</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ECUMENOPOLIS_EARTH</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
