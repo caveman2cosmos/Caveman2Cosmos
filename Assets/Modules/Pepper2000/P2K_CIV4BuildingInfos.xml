@@ -331,7 +331,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_ENCELADUS_BASE</BuildingType>
+					<BuildingType>BUILDING_ENCELADUS_RESUPPLY_BASE</BuildingType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>10</iCommerce>
@@ -2228,14 +2228,14 @@
 			<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_COSMIC_ECONOMY</Type>
+			<Type>BUILDING_MULTIVERSAL_ECONOMY</Type>
 			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_COSMIC_ECONOMY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_COSMIC_ECONOMY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_MULTIVERSAL_ECONOMY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MULTIVERSAL_ECONOMY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_COSMIC_ECONOMY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MULTIVERSAL_ECONOMY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_COSMIC_ECONOMY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -2243,7 +2243,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_REALITY_REPROGRAMMING</PrereqTech>
 			<iCost>57510</iCost>
-			<FreeBuilding>BUILDING_COSMIC_ECONOMY_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_EFFECT_MULTIVERSAL_ECONOMY</FreeBuilding>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_COSMIC_EXPLORER_BASE</BuildingType>
@@ -2277,12 +2277,12 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_COSMIC_ECONOMY_EFFECT</Type>
+			<Type>BUILDING_EFFECT_MULTIVERSAL_ECONOMY</Type>
 			<bForceOverwrite>1</bForceOverwrite>
-			<Description>TXT_KEY_BUILDING_COSMIC_ECONOMY_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_COSMIC_ECONOMY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EFFECT_MULTIVERSAL_ECONOMY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MULTIVERSAL_ECONOMY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_COSMIC_ECONOMY_EFFECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EFFECT_MULTIVERSAL_ECONOMY</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
@@ -2354,7 +2354,7 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_WORMHOLE_TRADE</BuildingType>
+					<BuildingType>BUILDING_INTERSTELLAR_WORMHOLE_TRADING_POST</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
 				</PrereqBuilding>
 				<PrereqBuilding>
@@ -2418,7 +2418,7 @@
 					<iNumBuildingNeeded>5</iNumBuildingNeeded>
 				</PrereqBuilding>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_ORBITAL_COLONY</BuildingType>
+					<BuildingType>BUILDING_DEEP_SPACE_ONEILL_CYLINDER</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 				<PrereqBuilding>
@@ -2522,7 +2522,7 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
+					<BuildingType>BUILDING_QUANTUM_VACUUM_POWER_PLANT</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 				<PrereqBuilding>
@@ -2775,14 +2775,14 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_COLD_TOLERANCE</Type>
+			<Type>BUILDING_HUMAN_MOD_COLD_TOLERANCE</Type>
 			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_COLD_TOLERANCE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_COLD_TOLERANCE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_COLD_TOLERANCE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_COLD_TOLERANCE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_COLD_TOLERANCE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_COLD_TOLERANCE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -3058,14 +3058,14 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HEAT_TOLERANCE</Type>
+			<Type>BUILDING_HUMAN_MOD_HEAT_TOLERANCE</Type>
 			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_HEAT_TOLERANCE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HEAT_TOLERANCE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_HEAT_TOLERANCE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_HEAT_TOLERANCE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_HEAT_TOLERANCE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_HEAT_TOLERANCE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -5737,11 +5737,11 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NUCLEAR_DAMPER</Type>
-			<Description>TXT_KEY_BUILDING_NUCLEAR_DAMPER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NUCLEAR_DAMPER_PEDIA</Civilopedia>
+			<Type>BUILDING_CISLUNAR_NUCLEAR_DAMPER</Type>
+			<Description>TXT_KEY_BUILDING_CISLUNAR_NUCLEAR_DAMPER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_NUCLEAR_DAMPER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NUCLEAR_DAMPER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_NUCLEAR_DAMPER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_NANOSHIELDING</PrereqTech>
 			<iCost>4032</iCost>
@@ -5983,11 +5983,11 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TRASH_ATOMIZER</Type>
-			<Description>TXT_KEY_BUILDING_TRASH_ATOMIZER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TRASH_ATOMIZER_PEDIA</Civilopedia>
+			<Type>BUILDING_CISLUNAR_GARBAGE_ATOMIZER</Type>
+			<Description>TXT_KEY_BUILDING_CISLUNAR_GARBAGE_ATOMIZER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_GARBAGE_ATOMIZER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TRASH_ATOMIZER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_GARBAGE_ATOMIZER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ATOMIZATION_FIELD</PrereqTech>
 			<iCost>9246</iCost>
@@ -6583,11 +6583,11 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_LUNAR_DEFENSES</Type>
-			<Description>TXT_KEY_BUILDING_LUNAR_DEFENSES</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LUNAR_DEFENSES_PEDIA</Civilopedia>
+			<Type>BUILDING_LUNAR_DEATH_RAY</Type>
+			<Description>TXT_KEY_BUILDING_LUNAR_DEATH_RAY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LUNAR_DEATH_RAY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_LUNAR_DEFENSES</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_LUNAR_DEATH_RAY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_WEAPONIZED_DISINTEGRATION</PrereqTech>
 			<iCost>4144</iCost>
@@ -8312,7 +8312,7 @@
 			</TechYieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARTIAN_FACTORY</BuildingType>
-				<BuildingType>BUILDING_MARS_RADIATION</BuildingType>
+				<BuildingType>BUILDING_MARTIAN_RADIATION_SHIELD</BuildingType>
 			</PrereqInCityBuildings>
 			<Bonus>BONUS_CARBON_DIOXIDE_ICE</Bonus>
 			<PrereqBonuses>
@@ -8600,7 +8600,7 @@
 				<BuildingType>BUILDING_MARTIAN_VERTICAL_FARM</BuildingType>
 			</ReplacementBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MARS_RADIATION</BuildingType>
+				<BuildingType>BUILDING_MARTIAN_RADIATION_SHIELD</BuildingType>
 				<BuildingType>BUILDING_SPACE_COLONY_MARTIAN</BuildingType>
 			</PrereqInCityBuildings>
 			<ExtraFreeBonuses>
@@ -8783,11 +8783,11 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MARS_RADIATION</Type>
-			<Description>TXT_KEY_BUILDING_MARS_RADIATION</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MARS_RADIATION_PEDIA</Civilopedia>
+			<Type>BUILDING_MARTIAN_RADIATION_SHIELD</Type>
+			<Description>TXT_KEY_BUILDING_MARTIAN_RADIATION_SHIELD</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_RADIATION_SHIELD_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MARS_RADIATION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_RADIATION_SHIELD</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ELECTROMAGNETIC_FIELD_SHIELDING</PrereqTech>
 			<iCost>905</iCost>
@@ -10076,7 +10076,7 @@
 			</YieldChanges>
 			<iHealth>1</iHealth>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MARS_RADIATION</BuildingType>
+				<BuildingType>BUILDING_MARTIAN_RADIATION_SHIELD</BuildingType>
 				<BuildingType>BUILDING_MARTIAN_METROPOLIS</BuildingType>
 			</PrereqInCityBuildings>
 			<ExtraFreeBonuses>
@@ -11736,7 +11736,7 @@
 			<iHappiness>20</iHappiness>
 			<iHealth>20</iHealth>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_COSMIC_ECONOMY_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_MULTIVERSAL_ECONOMY</BuildingType>
 			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
@@ -12012,7 +12012,7 @@
 			<iHappiness>3</iHappiness>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DEEP_SPACE_ORBITAL_BASE</BuildingType>
-				<BuildingType>BUILDING_ORBITAL_COLONY</BuildingType>
+				<BuildingType>BUILDING_DEEP_SPACE_ONEILL_CYLINDER</BuildingType>
 				<BuildingType>BUILDING_DEEP_SPACE_SOCIAL_ENGINEERING</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
@@ -12036,7 +12036,7 @@
 			</YieldChanges>
 			<iWorkableRadius>3</iWorkableRadius>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ORBITAL_COLONY</BuildingType>
+				<BuildingType>BUILDING_DEEP_SPACE_ONEILL_CYLINDER</BuildingType>
 			</PrereqInCityBuildings>
 			<Bonus>BONUS_NANOTUBES</Bonus>
 			<ConstructCondition>
@@ -12324,7 +12324,7 @@
 				</BonusYieldChange>
 			</BonusYieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ORBITAL_COLONY</BuildingType>
+				<BuildingType>BUILDING_DEEP_SPACE_ONEILL_CYLINDER</BuildingType>
 				<BuildingType>BUILDING_DEEP_SPACE_HYDROPONICS</BuildingType>
 			</PrereqInCityBuildings>
 			<ExtraFreeBonuses>
@@ -12489,7 +12489,7 @@
 			</TechCommerceChanges>
 			<iDefense>10</iDefense>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ORBITAL_COLONY</BuildingType>
+				<BuildingType>BUILDING_DEEP_SPACE_ONEILL_CYLINDER</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -12507,7 +12507,7 @@
 			</MapCategoryTypes>
 			<iDefense>50</iDefense>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ORBITAL_COLONY</BuildingType>
+				<BuildingType>BUILDING_DEEP_SPACE_ONEILL_CYLINDER</BuildingType>
 			</PrereqInCityBuildings>
 			<Properties>
 				<Property>
@@ -12536,7 +12536,7 @@
 				<iYield>5</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_PLANETARY_BASE</BuildingType>
+				<BuildingType>BUILDING_SPACE_COLONY_DEEP_SPACE</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -12560,7 +12560,7 @@
 				<iYield>100</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ORBITAL_COLONY</BuildingType>
+				<BuildingType>BUILDING_DEEP_SPACE_ONEILL_CYLINDER</BuildingType>
 				<BuildingType>BUILDING_DEEP_SPACE_ASSEMBLER</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
@@ -12650,7 +12650,7 @@
 				<iYield>5</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_PLANETARY_BASE</BuildingType>
+				<BuildingType>BUILDING_SPACE_COLONY_DEEP_SPACE</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -12672,7 +12672,7 @@
 				<iYield>5</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ORBITAL_COLONY</BuildingType>
+				<BuildingType>BUILDING_DEEP_SPACE_ONEILL_CYLINDER</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -12755,7 +12755,7 @@
 			</MapCategoryTypes>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HOUSING_MANAGEMENT</BuildingType>
-				<BuildingType>BUILDING_ORBITAL_COLONY</BuildingType>
+				<BuildingType>BUILDING_DEEP_SPACE_ONEILL_CYLINDER</BuildingType>
 			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
@@ -12812,7 +12812,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HOUSING_MANAGEMENT</BuildingType>
 				<BuildingType>BUILDING_DEEP_SPACE_SIMULATED_WORLD</BuildingType>
-				<BuildingType>BUILDING_ORBITAL_COLONY</BuildingType>
+				<BuildingType>BUILDING_DEEP_SPACE_ONEILL_CYLINDER</BuildingType>
 			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
@@ -12948,11 +12948,11 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ENCELADUS_BASE</Type>
-			<Description>TXT_KEY_BUILDING_ENCELADUS_BASE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ENCELADUS_BASE_PEDIA</Civilopedia>
+			<Type>BUILDING_ENCELADUS_RESUPPLY_BASE</Type>
+			<Description>TXT_KEY_BUILDING_ENCELADUS_RESUPPLY_BASE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ENCELADUS_RESUPPLY_BASE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ENCELADUS_BASE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ENCELADUS_RESUPPLY_BASE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_KUIPER_BELT_EXPLORATION</PrereqTech>
 			<iCost>959</iCost>
@@ -13412,7 +13412,7 @@
 				<iYield>10</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_PLANETARY_BASE</BuildingType>
+				<BuildingType>BUILDING_SPACE_COLONY_DEEP_SPACE</BuildingType>
 			</PrereqInCityBuildings>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
@@ -13440,7 +13440,7 @@
 				<iYield>3</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_PLANETARY_BASE</BuildingType>
+				<BuildingType>BUILDING_SPACE_COLONY_DEEP_SPACE</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -13467,7 +13467,7 @@
 			</YieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DEEP_SPACE_DOCKING_BAY</BuildingType>
-				<BuildingType>BUILDING_ORBITAL_COLONY</BuildingType>
+				<BuildingType>BUILDING_DEEP_SPACE_ONEILL_CYLINDER</BuildingType>
 				<BuildingType>BUILDING_DEEP_SPACE_ASSEMBLER</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
@@ -13917,7 +13917,7 @@
 			</GlobalBuildingExtraCommerces>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_EFFECT_SOLAR_ECONOMY</BuildingType>
-				<BuildingType>BUILDING_ORBITAL_COLONY</BuildingType>
+				<BuildingType>BUILDING_DEEP_SPACE_ONEILL_CYLINDER</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -13990,13 +13990,13 @@
 			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MARTIAN_SUPPLY</Type>
+			<Type>BUILDING_MARTIAN_MATERIAL_SUPPLY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_MARTIAN_SUPPLY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_SUPPLY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_MARTIAN_MATERIAL_SUPPLY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_MATERIAL_SUPPLY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_SUPPLY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_MATERIAL_SUPPLY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MARTIAN_SUPPLY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ASTEROID_EXTRACTION</PrereqTech>
@@ -14422,11 +14422,11 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_OBERON_HEATING</Type>
-			<Description>TXT_KEY_BUILDING_OBERON_HEATING</Description>
-			<Civilopedia>TXT_KEY_BUILDING_OBERON_HEATING_PEDIA</Civilopedia>
+			<Type>BUILDING_URANIAN_LUNAR_HEATING</Type>
+			<Description>TXT_KEY_BUILDING_URANIAN_LUNAR_HEATING</Description>
+			<Civilopedia>TXT_KEY_BUILDING_URANIAN_LUNAR_HEATING_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_OBERON_HEATING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_URANIAN_LUNAR_HEATING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_SHIELDING</PrereqTech>
 			<iCost>1452</iCost>
@@ -14474,7 +14474,7 @@
 				<iYield>20</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_OBERON_HEATING</BuildingType>
+				<BuildingType>BUILDING_URANIAN_LUNAR_HEATING</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -14543,11 +14543,11 @@
 			</YieldChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ORBITAL_COLONY</Type>
-			<Description>TXT_KEY_BUILDING_ORBITAL_COLONY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ORBITAL_COLONY_PEDIA</Civilopedia>
+			<Type>BUILDING_DEEP_SPACE_ONEILL_CYLINDER</Type>
+			<Description>TXT_KEY_BUILDING_DEEP_SPACE_ONEILL_CYLINDER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DEEP_SPACE_ONEILL_CYLINDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ORBITAL_COLONY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_DEEP_SPACE_ONEILL_CYLINDER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ORBITAL_MEGASTRUCTURES</PrereqTech>
 			<iCost>1452</iCost>
@@ -14561,7 +14561,7 @@
 			</YieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CISLUNAR_EFFECT</BuildingType>
-				<BuildingType>BUILDING_PLANETARY_BASE</BuildingType>
+				<BuildingType>BUILDING_SPACE_COLONY_DEEP_SPACE</BuildingType>
 			</PrereqInCityBuildings>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
@@ -14647,7 +14647,7 @@
 			<iHealth>1</iHealth>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_NEUROIMPLANT_EXPORTER_EFFECT</BuildingType>
-				<BuildingType>BUILDING_PLANETARY_BASE</BuildingType>
+				<BuildingType>BUILDING_SPACE_COLONY_DEEP_SPACE</BuildingType>
 			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
@@ -14677,7 +14677,7 @@
 			</YieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DEEP_SPACE_DOCKING_BAY</BuildingType>
-				<BuildingType>BUILDING_ORBITAL_COLONY</BuildingType>
+				<BuildingType>BUILDING_DEEP_SPACE_ONEILL_CYLINDER</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -14711,11 +14711,11 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PLANETARY_BASE</Type>
-			<Description>TXT_KEY_BUILDING_PLANETARY_BASE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_PLANETARY_BASE_PEDIA</Civilopedia>
+			<Type>BUILDING_SPACE_COLONY_DEEP_SPACE</Type>
+			<Description>TXT_KEY_BUILDING_SPACE_COLONY_DEEP_SPACE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SPACE_COLONY_DEEP_SPACE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PLANETARY_BASE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_SPACE_COLONY_DEEP_SPACE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_DEEP_SPACE_COLONIES</PrereqTech>
 			<MapCategoryTypes>
@@ -14972,7 +14972,7 @@
 				<iYield>5</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ORBITAL_COLONY</BuildingType>
+				<BuildingType>BUILDING_DEEP_SPACE_ONEILL_CYLINDER</BuildingType>
 			</PrereqInCityBuildings>
 			<iRevIdxLocal>-10</iRevIdxLocal>
 		</BuildingInfo>
@@ -15271,7 +15271,7 @@
 			</MapCategoryTypes>
 			<iHealth>5</iHealth>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_PLANETARY_BASE</BuildingType>
+				<BuildingType>BUILDING_SPACE_COLONY_DEEP_SPACE</BuildingType>
 			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
@@ -15346,7 +15346,7 @@
 				<iYield>20</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_PLANETARY_BASE</BuildingType>
+				<BuildingType>BUILDING_SPACE_COLONY_DEEP_SPACE</BuildingType>
 			</PrereqInCityBuildings>
 			<bPower>1</bPower>
 		</BuildingInfo>
@@ -15406,7 +15406,7 @@
 				<iYield>20</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_PLANETARY_BASE</BuildingType>
+				<BuildingType>BUILDING_SPACE_COLONY_DEEP_SPACE</BuildingType>
 			</PrereqInCityBuildings>
 			<bPower>1</bPower>
 		</BuildingInfo>
@@ -15474,7 +15474,7 @@
 				<iYield>20</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_PLANETARY_BASE</BuildingType>
+				<BuildingType>BUILDING_SPACE_COLONY_DEEP_SPACE</BuildingType>
 			</PrereqInCityBuildings>
 			<bPower>1</bPower>
 		</BuildingInfo>
@@ -16399,7 +16399,7 @@
 				<iYield>5</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_OBERON_HEATING</BuildingType>
+				<BuildingType>BUILDING_URANIAN_LUNAR_HEATING</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -16975,7 +16975,7 @@
 			<iHealth>20</iHealth>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_INTERSTELLAR_SPHEREWORLD</BuildingType>
-				<BuildingType>BUILDING_COSMIC_ECONOMY_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_MULTIVERSAL_ECONOMY</BuildingType>
 			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
@@ -16992,11 +16992,11 @@
 			<iRevIdxLocal>-25</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BIOGEOCOMPUTER</Type>
-			<Description>TXT_KEY_BUILDING_BIOGEOCOMPUTER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BIOGEOCOMPUTER_PEDIA</Civilopedia>
+			<Type>BUILDING_INTERSTELLAR_BIOGEOCOMPUTER</Type>
+			<Description>TXT_KEY_BUILDING_INTERSTELLAR_BIOGEOCOMPUTER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_INTERSTELLAR_BIOGEOCOMPUTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BIOGEOCOMPUTER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_INTERSTELLAR_BIOGEOCOMPUTER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_DIRECTED_PANSPERMIA</PrereqTech>
 			<iCost>5269</iCost>
@@ -17551,11 +17551,11 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CEPHEID_BEACON</Type>
-			<Description>TXT_KEY_BUILDING_CEPHEID_BEACON</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CEPHEID_BEACON_PEDIA</Civilopedia>
+			<Type>BUILDING_INTERSTELLAR_CEPHEID_BEACON</Type>
+			<Description>TXT_KEY_BUILDING_INTERSTELLAR_CEPHEID_BEACON</Description>
+			<Civilopedia>TXT_KEY_BUILDING_INTERSTELLAR_CEPHEID_BEACON_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CEPHEID_BEACON</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_INTERSTELLAR_CEPHEID_BEACON</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_STELLAR_COMPUTING</PrereqTech>
 			<iCost>4056</iCost>
@@ -17788,11 +17788,11 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CONSCIOUS_STAR</Type>
-			<Description>TXT_KEY_BUILDING_CONSCIOUS_STAR</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CONSCIOUS_STAR_PEDIA</Civilopedia>
+			<Type>BUILDING_INTERSTELLAR_CONSCIOUS_STAR</Type>
+			<Description>TXT_KEY_BUILDING_INTERSTELLAR_CONSCIOUS_STAR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_INTERSTELLAR_CONSCIOUS_STAR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CONSCIOUS_STAR</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_INTERSTELLAR_CONSCIOUS_STAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_NOOGENESIS</PrereqTech>
 			<iCost>7077</iCost>
@@ -17918,7 +17918,7 @@
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PHILOTE_PRODUCER</BuildingType>
-				<BuildingType>BUILDING_WORMHOLE_TRADE</BuildingType>
+				<BuildingType>BUILDING_INTERSTELLAR_WORMHOLE_TRADING_POST</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -18684,12 +18684,12 @@
 			</GlobalBuildingExtraCommerces>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_MEMORY_CRYSTAL</BuildingType>
+					<BuildingType>BUILDING_INTERSTELLAR_CARBON_12_13_CRYSTAL</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MEMORY_CRYSTAL</BuildingType>
+				<BuildingType>BUILDING_INTERSTELLAR_CARBON_12_13_CRYSTAL</BuildingType>
 			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
@@ -19118,7 +19118,7 @@
 			</YieldChanges>
 			<iMilitaryProductionModifier>50</iMilitaryProductionModifier>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_WORMHOLE_TRADE</BuildingType>
+				<BuildingType>BUILDING_INTERSTELLAR_WORMHOLE_TRADING_POST</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -19462,7 +19462,7 @@
 			</YieldChanges>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_TIDALLY_LOCKED</BuildingType>
+					<BuildingType>BUILDING_INTERSTELLAR_BASE_TIDALLY_LOCKED_PLANET</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
@@ -20302,7 +20302,7 @@
 				<BuildingType>BUILDING_INTERSTELLAR_COSMIC_NODE</BuildingType>
 			</ReplacementBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_WORMHOLE_TRADE</BuildingType>
+				<BuildingType>BUILDING_INTERSTELLAR_WORMHOLE_TRADING_POST</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -20506,7 +20506,7 @@
 			</YieldChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_RINGWORLD_CITY</BuildingType>
+					<BuildingType>BUILDING_INTERSTELLAR_BANKS_ORBITAL_CITY</BuildingType>
 					<CommerceChanges>
 						<iCommerce>15</iCommerce>
 					</CommerceChanges>
@@ -20774,11 +20774,11 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MEMORY_CRYSTAL</Type>
-			<Description>TXT_KEY_BUILDING_MEMORY_CRYSTAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MEMORY_CRYSTAL_PEDIA</Civilopedia>
+			<Type>BUILDING_INTERSTELLAR_CARBON_12_13_CRYSTAL</Type>
+			<Description>TXT_KEY_BUILDING_INTERSTELLAR_CARBON_12_13_CRYSTAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_INTERSTELLAR_CARBON_12_13_CRYSTAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MEMORY_CRYSTAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_INTERSTELLAR_CARBON_12_13_CRYSTAL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_DATA_ARCHIVAL</PrereqTech>
 			<iCost>2249</iCost>
@@ -21558,7 +21558,7 @@
 			</YieldChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_WORMHOLE_TRADE</BuildingType>
+					<BuildingType>BUILDING_INTERSTELLAR_WORMHOLE_TRADING_POST</BuildingType>
 					<CommerceChanges>
 						<iCommerce>20</iCommerce>
 					</CommerceChanges>
@@ -21953,13 +21953,13 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PROTOS_MANDATE</Type>
+			<Type>BUILDING_MANDATE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_PROTOS_MANDATE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_PROTOS_MANDATE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_MANDATE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MANDATE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PROTOS_MANDATE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MANDATE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_PROTOS_MANDATE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_XENODIPLOMACY</PrereqTech>
@@ -22172,11 +22172,11 @@
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_RINGWORLD_CITY</Type>
-			<Description>TXT_KEY_BUILDING_RINGWORLD_CITY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_RINGWORLD_CITY_PEDIA</Civilopedia>
+			<Type>BUILDING_INTERSTELLAR_BANKS_ORBITAL_CITY</Type>
+			<Description>TXT_KEY_BUILDING_INTERSTELLAR_BANKS_ORBITAL_CITY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_INTERSTELLAR_BANKS_ORBITAL_CITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_RINGWORLD_CITY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_INTERSTELLAR_BANKS_ORBITAL_CITY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_MEGASTRONG_ALLOYS</PrereqTech>
 			<iCost>4056</iCost>
@@ -22328,11 +22328,11 @@
 			<iRevIdxLocal>25</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ROGUE_RESUPPLY</Type>
-			<Description>TXT_KEY_BUILDING_ROGUE_RESUPPLY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ROGUE_RESUPPLY_PEDIA</Civilopedia>
+			<Type>BUILDING_ROGUE_PLANET_SUPPLY_DEPOT</Type>
+			<Description>TXT_KEY_BUILDING_ROGUE_PLANET_SUPPLY_DEPOT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ROGUE_PLANET_SUPPLY_DEPOT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ROGUE_RESUPPLY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ROGUE_PLANET_SUPPLY_DEPOT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INTERSTELLAR_TRADE</PrereqTech>
 			<iCost>2536</iCost>
@@ -22747,15 +22747,15 @@
 			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SHKADOV_THRUSTER</BuildingType>
-				<BuildingType>BUILDING_WORMHOLE_TRADE</BuildingType>
+				<BuildingType>BUILDING_INTERSTELLAR_WORMHOLE_TRADING_POST</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SUPERNOVA_MINE</Type>
-			<Description>TXT_KEY_BUILDING_SUPERNOVA_MINE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SUPERNOVA_MINE_PEDIA</Civilopedia>
+			<Type>BUILDING_INTERSTELLAR_SUPERNOVA_MINE</Type>
+			<Description>TXT_KEY_BUILDING_INTERSTELLAR_SUPERNOVA_MINE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_INTERSTELLAR_SUPERNOVA_MINE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SUPERNOVA_MINE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_INTERSTELLAR_SUPERNOVA_MINE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INDUCED_SUPERNOVA</PrereqTech>
 			<iCost>6540</iCost>
@@ -22972,11 +22972,11 @@
 			</YieldChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TIDALLY_LOCKED</Type>
-			<Description>TXT_KEY_BUILDING_TIDALLY_LOCKED</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TIDALLY_LOCKED_PEDIA</Civilopedia>
+			<Type>BUILDING_INTERSTELLAR_BASE_TIDALLY_LOCKED_PLANET</Type>
+			<Description>TXT_KEY_BUILDING_INTERSTELLAR_BASE_TIDALLY_LOCKED_PLANET</Description>
+			<Civilopedia>TXT_KEY_BUILDING_INTERSTELLAR_BASE_TIDALLY_LOCKED_PLANET_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TIDALLY_LOCKED</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_INTERSTELLAR_BASE_TIDALLY_LOCKED_PLANET</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PLANET_SCOUTING</PrereqTech>
 			<iCost>2536</iCost>
@@ -23011,11 +23011,11 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TIDALLY_LOCKED_WIND</Type>
-			<Description>TXT_KEY_BUILDING_TIDALLY_LOCKED_WIND</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TIDALLY_LOCKED_WIND_PEDIA</Civilopedia>
+			<Type>BUILDING_INTERSTELLAR_TERMINATOR_WIND_TURBINES</Type>
+			<Description>TXT_KEY_BUILDING_INTERSTELLAR_TERMINATOR_WIND_TURBINES</Description>
+			<Civilopedia>TXT_KEY_BUILDING_INTERSTELLAR_TERMINATOR_WIND_TURBINES_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TIDALLY_LOCKED_WIND</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_INTERSTELLAR_TERMINATOR_WIND_TURBINES</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_FORGE_WORLDS</PrereqTech>
 			<iCost>2856</iCost>
@@ -23028,7 +23028,7 @@
 				<iYield>100</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_TIDALLY_LOCKED</BuildingType>
+				<BuildingType>BUILDING_INTERSTELLAR_BASE_TIDALLY_LOCKED_PLANET</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -23058,7 +23058,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_WORMHOLE_TRADE</BuildingType>
+				<BuildingType>BUILDING_INTERSTELLAR_WORMHOLE_TRADING_POST</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -23632,7 +23632,7 @@
 				<iYield>15</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MEMORY_CRYSTAL</BuildingType>
+				<BuildingType>BUILDING_INTERSTELLAR_CARBON_12_13_CRYSTAL</BuildingType>
 				<BuildingType>BUILDING_ARTIFICIAL_PLANET</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
@@ -23800,17 +23800,17 @@
 			<CommerceChanges>
 				<iCommerce>150</iCommerce>
 			</CommerceChanges>
-			<FreeBuilding>BUILDING_WORMHOLE_TRADE</FreeBuilding>
+			<FreeBuilding>BUILDING_INTERSTELLAR_WORMHOLE_TRADING_POST</FreeBuilding>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_WORMHOLE_TRADE</BuildingType>
+				<BuildingType>BUILDING_INTERSTELLAR_WORMHOLE_TRADING_POST</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_WORMHOLE_TRADE</Type>
-			<Description>TXT_KEY_BUILDING_WORMHOLE_TRADE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WORMHOLE_TRADE_PEDIA</Civilopedia>
+			<Type>BUILDING_INTERSTELLAR_WORMHOLE_TRADING_POST</Type>
+			<Description>TXT_KEY_BUILDING_INTERSTELLAR_WORMHOLE_TRADING_POST</Description>
+			<Civilopedia>TXT_KEY_BUILDING_INTERSTELLAR_WORMHOLE_TRADING_POST_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_WORMHOLE_TRADE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_INTERSTELLAR_WORMHOLE_TRADING_POST</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_WORMHOLE_TRAVERSAL</PrereqTech>
 			<iCost>4555</iCost>
@@ -24030,7 +24030,7 @@
 			<iHappiness>20</iHappiness>
 			<iHealth>20</iHealth>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_COSMIC_ECONOMY_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_MULTIVERSAL_ECONOMY</BuildingType>
 			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
@@ -24643,9 +24643,9 @@
 				<BuildingType>BUILDING_GALACTIC_GROUP_COLONY</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_SCULPTOR_GROUP</BuildingType>
+				<BuildingType>BUILDING_SCULPTOR_GROUP_COLONY</BuildingType>
 				<BuildingType>BUILDING_MAFFEI_GROUP_COLONY</BuildingType>
-				<BuildingType>BUILDING_FORNAX_CLUSTER</BuildingType>
+				<BuildingType>BUILDING_FORNAX_CLUSTER_COLONY</BuildingType>
 				<BuildingType>BUILDING_VIRGO_CLUSTER_COLONY</BuildingType>
 			</PrereqNotInCityBuildings>
 		</BuildingInfo>
@@ -24739,13 +24739,13 @@
 			<Bonus>BONUS_ALICE_MATTER</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FORNAX_CLUSTER</Type>
+			<Type>BUILDING_FORNAX_CLUSTER_COLONY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_FORNAX_CLUSTER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FORNAX_CLUSTER_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_FORNAX_CLUSTER_COLONY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FORNAX_CLUSTER_COLONY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_FORNAX_CLUSTER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_FORNAX_CLUSTER_COLONY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_FORNAX_CLUSTER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INTERGROUP_TRAVEL</PrereqTech>
@@ -24775,7 +24775,7 @@
 				<BuildingType>BUILDING_GALACTIC_GROUP_COLONY</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_SCULPTOR_GROUP</BuildingType>
+				<BuildingType>BUILDING_SCULPTOR_GROUP_COLONY</BuildingType>
 				<BuildingType>BUILDING_MAFFEI_GROUP_COLONY</BuildingType>
 				<BuildingType>BUILDING_VIRGO_CLUSTER_COLONY</BuildingType>
 				<BuildingType>BUILDING_ERIDANUS_CLUSTER</BuildingType>
@@ -26103,8 +26103,8 @@
 				<BuildingType>BUILDING_GALACTIC_GROUP_COLONY</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_SCULPTOR_GROUP</BuildingType>
-				<BuildingType>BUILDING_FORNAX_CLUSTER</BuildingType>
+				<BuildingType>BUILDING_SCULPTOR_GROUP_COLONY</BuildingType>
+				<BuildingType>BUILDING_FORNAX_CLUSTER_COLONY</BuildingType>
 				<BuildingType>BUILDING_VIRGO_CLUSTER_COLONY</BuildingType>
 				<BuildingType>BUILDING_ERIDANUS_CLUSTER</BuildingType>
 			</PrereqNotInCityBuildings>
@@ -26554,13 +26554,13 @@
 			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SCULPTOR_GROUP</Type>
+			<Type>BUILDING_SCULPTOR_GROUP_COLONY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_SCULPTOR_GROUP</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SCULPTOR_GROUP_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_SCULPTOR_GROUP_COLONY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SCULPTOR_GROUP_COLONY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SCULPTOR_GROUP</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_SCULPTOR_GROUP_COLONY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SCULPTOR_GROUP</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INTERGROUP_TRAVEL</PrereqTech>
@@ -26590,7 +26590,7 @@
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_MAFFEI_GROUP_COLONY</BuildingType>
-				<BuildingType>BUILDING_FORNAX_CLUSTER</BuildingType>
+				<BuildingType>BUILDING_FORNAX_CLUSTER_COLONY</BuildingType>
 				<BuildingType>BUILDING_VIRGO_CLUSTER_COLONY</BuildingType>
 				<BuildingType>BUILDING_ERIDANUS_CLUSTER</BuildingType>
 			</PrereqNotInCityBuildings>
@@ -27045,9 +27045,9 @@
 				<BuildingType>BUILDING_GALACTIC_GROUP_COLONY</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_SCULPTOR_GROUP</BuildingType>
+				<BuildingType>BUILDING_SCULPTOR_GROUP_COLONY</BuildingType>
 				<BuildingType>BUILDING_MAFFEI_GROUP_COLONY</BuildingType>
-				<BuildingType>BUILDING_FORNAX_CLUSTER</BuildingType>
+				<BuildingType>BUILDING_FORNAX_CLUSTER_COLONY</BuildingType>
 				<BuildingType>BUILDING_ERIDANUS_CLUSTER</BuildingType>
 			</PrereqNotInCityBuildings>
 		</BuildingInfo>
@@ -27226,7 +27226,7 @@
 				<iCommerce>100</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_QUASAR_FACTORY</BuildingType>
+				<BuildingType>BUILDING_DISTANT_BLAZAR_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -27248,7 +27248,7 @@
 				<iCommerce>30</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_QUASAR_FACTORY</BuildingType>
+				<BuildingType>BUILDING_DISTANT_BLAZAR_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
@@ -27313,16 +27313,16 @@
 				<iYield>200</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_BIG_BANG_PROBE</BuildingType>
+				<BuildingType>BUILDING_DISTANT_BIG_BANG_PROBE</BuildingType>
 			</PrereqInCityBuildings>
 			<bPower>1</bPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BIG_BANG_PROBE</Type>
-			<Description>TXT_KEY_BUILDING_BIG_BANG_PROBE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BIG_BANG_PROBE_PEDIA</Civilopedia>
+			<Type>BUILDING_DISTANT_BIG_BANG_PROBE</Type>
+			<Description>TXT_KEY_BUILDING_DISTANT_BIG_BANG_PROBE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DISTANT_BIG_BANG_PROBE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BIG_BANG_PROBE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_DISTANT_BIG_BANG_PROBE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_EXPERIMENTAL_COSMOLOGY</PrereqTech>
 			<iCost>1945</iCost>
@@ -27397,7 +27397,7 @@
 				<iYield>5</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_QUASAR_FACTORY</BuildingType>
+				<BuildingType>BUILDING_DISTANT_BLAZAR_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -27420,7 +27420,7 @@
 				<iYield>15</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_QUASAR_FACTORY</BuildingType>
+				<BuildingType>BUILDING_DISTANT_BLAZAR_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -27445,7 +27445,7 @@
 				<iYield>100</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_QUASAR_FACTORY</BuildingType>
+				<BuildingType>BUILDING_DISTANT_BLAZAR_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -27467,7 +27467,7 @@
 			</YieldChanges>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_BRANE_THRUSTER</BuildingType>
+					<BuildingType>BUILDING_DISTANT_BRANE_THRUSTER</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -27476,11 +27476,11 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BRANE_THRUSTER</Type>
-			<Description>TXT_KEY_BUILDING_BRANE_THRUSTER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BRANE_THRUSTER_PEDIA</Civilopedia>
+			<Type>BUILDING_DISTANT_BRANE_THRUSTER</Type>
+			<Description>TXT_KEY_BUILDING_DISTANT_BRANE_THRUSTER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DISTANT_BRANE_THRUSTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BRANE_THRUSTER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_DISTANT_BRANE_THRUSTER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_BRANE_CROSSOVER</PrereqTech>
 			<iCost>2666</iCost>
@@ -27655,7 +27655,7 @@
 				<iYield>50</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_QUASAR_FACTORY</BuildingType>
+				<BuildingType>BUILDING_DISTANT_BLAZAR_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -27865,7 +27865,7 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_COSMIC_ECONOMY_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_MULTIVERSAL_ECONOMY</BuildingType>
 				<BuildingType>BUILDING_INFINITE_SPEED_TACHYON_GENERATOR</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
@@ -27892,11 +27892,11 @@
 			</YieldChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HOTEL_INFINITE</Type>
-			<Description>TXT_KEY_BUILDING_HOTEL_INFINITE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HOTEL_INFINITE_PEDIA</Civilopedia>
+			<Type>BUILDING_DISTANT_HOTEL_INFINITE</Type>
+			<Description>TXT_KEY_BUILDING_DISTANT_HOTEL_INFINITE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DISTANT_HOTEL_INFINITE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_HOTEL_INFINITE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_DISTANT_HOTEL_INFINITE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_TRANSFINITE_STRUCTURES</PrereqTech>
 			<iCost>3166</iCost>
@@ -27960,7 +27960,7 @@
 			</MapCategoryTypes>
 			<iDefense>20</iDefense>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_QUASAR_FACTORY</BuildingType>
+				<BuildingType>BUILDING_DISTANT_BLAZAR_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -28126,7 +28126,7 @@
 				<iYield>50</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_BIG_BANG_PROBE</BuildingType>
+				<BuildingType>BUILDING_DISTANT_BIG_BANG_PROBE</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -28217,7 +28217,7 @@
 				<iYield>50</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_QUASAR_FACTORY</BuildingType>
+				<BuildingType>BUILDING_DISTANT_BLAZAR_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -28337,11 +28337,11 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_QUASAR_FACTORY</Type>
-			<Description>TXT_KEY_BUILDING_QUASAR_FACTORY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_QUASAR_FACTORY_PEDIA</Civilopedia>
+			<Type>BUILDING_DISTANT_BLAZAR_FACTORY</Type>
+			<Description>TXT_KEY_BUILDING_DISTANT_BLAZAR_FACTORY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DISTANT_BLAZAR_FACTORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_QUASAR_FACTORY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_DISTANT_BLAZAR_FACTORY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_HORIZON_BREAKING</PrereqTech>
 			<iCost>1261</iCost>
@@ -28409,7 +28409,7 @@
 				<iYield>10</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_QUASAR_FACTORY</BuildingType>
+				<BuildingType>BUILDING_DISTANT_BLAZAR_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -28901,7 +28901,7 @@
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_INFLATON_FIELD</BuildingType>
+				<BuildingType>BUILDING_HYPERSPACE_INFLATON_FIELD</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -28954,11 +28954,11 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GENESIS_COLONY</Type>
-			<Description>TXT_KEY_BUILDING_GENESIS_COLONY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GENESIS_COLONY_PEDIA</Civilopedia>
+			<Type>BUILDING_HYPERSPACE_GENESIS_COLONY</Type>
+			<Description>TXT_KEY_BUILDING_HYPERSPACE_GENESIS_COLONY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HYPERSPACE_GENESIS_COLONY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GENESIS_COLONY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HYPERSPACE_GENESIS_COLONY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_TRANSVERSE_EUCLIDEAN_GEOMETRY</PrereqTech>
 			<iCost>1485</iCost>
@@ -29377,11 +29377,11 @@
 			<bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_INFLATON_FIELD</Type>
-			<Description>TXT_KEY_BUILDING_INFLATON_FIELD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_INFLATON_FIELD_PEDIA</Civilopedia>
+			<Type>BUILDING_HYPERSPACE_INFLATON_FIELD</Type>
+			<Description>TXT_KEY_BUILDING_HYPERSPACE_INFLATON_FIELD</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HYPERSPACE_INFLATON_FIELD_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_INFLATON_FIELD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HYPERSPACE_INFLATON_FIELD</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_CONTROLLED_INFLATION</PrereqTech>
 			<iCost>1485</iCost>
@@ -29615,7 +29615,7 @@
 				</TechYieldChange>
 			</TechYieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_INFLATON_FIELD</BuildingType>
+				<BuildingType>BUILDING_HYPERSPACE_INFLATON_FIELD</BuildingType>
 				<BuildingType>BUILDING_UNIVERSAL_EFFECT</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
@@ -29915,7 +29915,7 @@
 			<iWorkableRadius>3</iWorkableRadius>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_5D_ARTIFICIAL_GRAVITY</BuildingType>
-				<BuildingType>BUILDING_INFLATON_FIELD</BuildingType>
+				<BuildingType>BUILDING_HYPERSPACE_INFLATON_FIELD</BuildingType>
 				<BuildingType>BUILDING_UNIVERSAL_EFFECT</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
@@ -30103,8 +30103,8 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_COSMIC_ECONOMY_EFFECT</BuildingType>
-				<BuildingType>BUILDING_INFLATON_FIELD</BuildingType>
+				<BuildingType>BUILDING_EFFECT_MULTIVERSAL_ECONOMY</BuildingType>
+				<BuildingType>BUILDING_HYPERSPACE_INFLATON_FIELD</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>

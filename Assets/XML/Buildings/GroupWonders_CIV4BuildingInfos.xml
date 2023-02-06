@@ -1205,16 +1205,16 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BLUEFISH_CAVES</Type>
+			<Type>BUILDING_PC_BLUEFISH_CAVES</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_BLUEFISH_CAVES</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BLUEFISH_CAVES_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_PC_BLUEFISH_CAVES</Description>
+			<Civilopedia>TXT_KEY_BUILDING_PC_BLUEFISH_CAVES_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_PREHISTORIC_CAVES</SpecialBuildingType>
-			<ArtDefineTag>ART_DEF_BUILDING_BLUEFISH_CAVES</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PC_BLUEFISH_CAVES</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BLUEFISH_CAVES</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>

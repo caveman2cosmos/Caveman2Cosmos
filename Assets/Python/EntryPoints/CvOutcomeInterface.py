@@ -135,7 +135,7 @@ def doRemoveWVCannibalism(argsList):
 		print "[INFO] doRemoveWVCannibalism(CyUnit) where CyUnit is None"
 		return # False call
 
-	iType = GC.getInfoTypeForString("BUILDING_WV_CANNIBALISM")
+	iType = GC.getInfoTypeForString("BUILDING_WORLDVIEW_CANNIBALISM")
 	if iType > -1:
 		iPlayer = CyUnit.getOwner()
 		CyPlayer = GC.getPlayer(iPlayer)

@@ -582,11 +582,11 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_WORLDVIEW_CANNIBALISM_ACTIVE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WV_CANNIBALISM_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_WORLDVIEW_CANNIBALISM_PEDIA</Civilopedia>
 			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_WV_CANNIBALISM</BuildingType>
+					<BuildingType>BUILDING_WORLDVIEW_CANNIBALISM</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -806,12 +806,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CIVIC_BANDITRY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CIVICBURNTRASH</Type>
+			<Type>BUILDING_CIVIC_BURN_TRASH</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CIVICBURNTRASH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CIVICBURNTRASH_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CIVIC_BURN_TRASH</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CIVIC_BURN_TRASH_PEDIA</Civilopedia>
 			<PrereqAndCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_BURN_GARBAGE</CivicOption>
@@ -828,7 +828,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_CIVICBURNTRASH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CIVIC_BURN_TRASH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CIVIC_CASTE</Type>
@@ -863,12 +863,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CIVIC_CASTE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CIVICDEMOCRACY</Type>
+			<Type>BUILDING_CIVIC_DEMOCRACY</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CIVICDEMOCRACY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CIVICDEMOCRACY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CIVIC_DEMOCRACY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CIVIC_DEMOCRACY_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -892,7 +892,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_CIVICDEMOCRACY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CIVIC_DEMOCRACY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CIVICEGALITARIAN</Type>
@@ -1205,12 +1205,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ORDINANCE_CLEAN_AIR_ACT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CLEANWATER_ACT</Type>
+			<Type>BUILDING_ORDINANCE_CLEAN_WATER_ACT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CLEANWATER_ACT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CLEANWATER_ACT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ORDINANCE_CLEAN_WATER_ACT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ORDINANCE_CLEAN_WATER_ACT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<PrereqInCityBuildings>
@@ -1219,18 +1219,18 @@
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<iCost>1345</iCost>
-			<FreeBuilding>BUILDING_CLEANWATER_ACT_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_ORDINANCE_EFFECT_CLEAN_WATER_ACT</FreeBuilding>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_CLEANWATER_ACT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ORDINANCE_CLEAN_WATER_ACT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CLEANWATER_ACT_EFFECT</Type>
+			<Type>BUILDING_ORDINANCE_EFFECT_CLEAN_WATER_ACT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CLEANWATER_ACT_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CLEANWATER_ACT_EFFECT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ORDINANCE_EFFECT_CLEAN_WATER_ACT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ORDINANCE_EFFECT_CLEAN_WATER_ACT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iHealth>2</iHealth>
 			<CommerceChanges>
@@ -1245,15 +1245,15 @@
 			</PropertyManipulators>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_CLEANWATER_ACT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ORDINANCE_CLEAN_WATER_ACT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CLIFF_DWELLING</Type>
+			<Type>BUILDING_HOUSING_CLIFF_DWELLING</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CLIFF_DWELLING</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CLIFF_DWELLING_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_CLIFF_DWELLING</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_CLIFF_DWELLING_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<Bonus>BONUS_BRICKS</Bonus>
@@ -1283,7 +1283,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_CLIFF_DWELLING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_CLIFF_DWELLING</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COMMERCIAL_ACHIEVEMENT</Type>
@@ -3620,7 +3620,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_JAIL</BuildingType>
 				<BuildingType>BUILDING_SAFETY_ORBITAL_PRISON</BuildingType>
-				<BuildingType>BUILDING_FEDERAL_PRISON</BuildingType>
+				<BuildingType>BUILDING_MAXIMUM_SECURITY_PRISON</BuildingType>
 				<BuildingType>BUILDING_ALCATRAZ</BuildingType>
 			</PrereqOrBuildings>
 			<iHappiness>-3</iHappiness>
@@ -3677,12 +3677,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CRIME_LITERING</Type>
+			<Type>BUILDING_CRIME_LITTERING</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CRIME_LITERING</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CRIME_LITERING_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CRIME_LITTERING</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CRIME_LITTERING_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MODERN_SANITATION</PrereqTech>
 			<iHealth>-1</iHealth>
 			<iHappiness>-1</iHappiness>
@@ -5080,7 +5080,7 @@
 			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_WV_CANNIBALISM</BuildingType>
+					<BuildingType>BUILDING_WORLDVIEW_CANNIBALISM</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -5180,11 +5180,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYDISEASE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DISEASE_PLAGUE</Type>
+			<Type>BUILDING_DISEASE_BUBONIC_PLAGUE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DISEASE_PLAGUE</Description>
+			<Description>TXT_KEY_BUILDING_DISEASE_BUBONIC_PLAGUE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DISEASE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<PrereqInCityBuildings>
@@ -10311,12 +10311,12 @@
 			<MovieDefineTag>ART_DEF_MOVIE_INDUSTRIAL_ACHIEVEMENT</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ISLAMIC_SHRINE</Type>
+			<Type>BUILDING_THE_MASJID_AL_HARAM</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ISLAMIC_SHRINE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ISLAMIC_SHRINE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_THE_MASJID_AL_HARAM</Description>
+			<Civilopedia>TXT_KEY_BUILDING_THE_MASJID_AL_HARAM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ConstructSound>AS2D_BUILD_ISLAMIC</ConstructSound>
 			<ReligionType>RELIGION_ISLAM</ReligionType>
@@ -10350,15 +10350,15 @@
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<ArtDefineTag>ART_DEF_BUILDING_ISLAMIC_SHRINE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_THE_MASJID_AL_HARAM</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_ISLAMIC</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_JAINISM_SHRINE</Type>
-			<Description>TXT_KEY_BUILDING_JAINISM_SHRINE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_JAINISM_SHRINE_PEDIA</Civilopedia>
+			<Type>BUILDING_STATUE_OF_GOMATESHWARA</Type>
+			<Description>TXT_KEY_BUILDING_STATUE_OF_GOMATESHWARA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_STATUE_OF_GOMATESHWARA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_JAINISM_SHRINE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_STATUE_OF_GOMATESHWARA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_JAINISM_SHRINE</MovieDefineTag>
 			<HolyCity>RELIGION_JAINISM</HolyCity>
 			<ReligionType>RELIGION_JAINISM</ReligionType>
@@ -14193,12 +14193,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_COMPOUND_SANITATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SMOKE_DETECTOR</Type>
+			<Type>BUILDING_ORDINANCE_SMOKE_DETECTOR</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SMOKE_DETECTOR</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SMOKE_DETECTOR_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ORDINANCE_SMOKE_DETECTOR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ORDINANCE_SMOKE_DETECTOR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>AS2D_BUILD_FIRE_BRIGADES</ConstructSound>
 			<PrereqTech>TECH_ELECTRONICS</PrereqTech>
@@ -14223,7 +14223,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_SMOKE_DETECTOR</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ORDINANCE_SMOKE_DETECTOR</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SMOKING_PROHIBITION</Type>
@@ -14249,12 +14249,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SMOKING_PROHIBITION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SORORITY_HOUSE</Type>
+			<Type>BUILDING_HOUSING_SORORITY_HOUSE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SORORITY_HOUSE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SORORITY_HOUSE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_SORORITY_HOUSE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_SORORITY_HOUSE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_WOMENS_SUFFRAGE</PrereqTech>
 			<ObsoleteTech>TECH_COLONY_ARCOLOGY</ObsoleteTech>
 			<ReplacementBuildings>
@@ -14276,7 +14276,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_SORORITY_HOUSE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_SORORITY_HOUSE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SPY_NETWORK</Type>
@@ -14364,12 +14364,12 @@
 			<MovieDefineTag>ART_DEF_MOVIE_SPY_NETWORK</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_STATUE_OF_ZEUS</Type>
+			<Type>BUILDING_THE_STATUE_OF_ZEUS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_STATUE_OF_ZEUS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_STATUE_OF_ZEUS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_THE_STATUE_OF_ZEUS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_THE_STATUE_OF_ZEUS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionType>RELIGION_HELLENISM</ReligionType>
 			<HolyCity>RELIGION_HELLENISM</HolyCity>
@@ -14405,7 +14405,7 @@
 			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<ArtDefineTag>ART_DEF_BUILDING_STATUE_OF_ZEUS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_THE_STATUE_OF_ZEUS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_STATUE_OF_ZEUS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -15831,13 +15831,13 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_BARK_HUTS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_WV_CANNIBALISM</Type>
+			<Type>BUILDING_WORLDVIEW_CANNIBALISM</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_WV_CANNIBALISM</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WV_CANNIBALISM_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_WV_CANNIBALISM_HELP</Help>
+			<Description>TXT_KEY_BUILDING_WORLDVIEW_CANNIBALISM</Description>
+			<Civilopedia>TXT_KEY_BUILDING_WORLDVIEW_CANNIBALISM_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_WORLDVIEW_CANNIBALISM_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
@@ -15849,7 +15849,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
-			<ArtDefineTag>ART_DEF_BUILDING_WV_CANNIBALISM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_WORLDVIEW_CANNIBALISM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WV_HUMAN_SACRIFICE</Type>
@@ -15920,7 +15920,7 @@
 					<iProductionModifier>-50</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_HIGHTECH_CRANE</BuildingType>
+					<BuildingType>BUILDING_HIGH_TECH_CRANE</BuildingType>
 					<iProductionModifier>-50</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>

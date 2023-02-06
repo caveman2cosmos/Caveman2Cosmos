@@ -106,12 +106,12 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FARNSWORTH_LAB</Type>
+			<Type>BUILDING_FARNSWORTH_ELECTRONICS_LAB</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_DIESEL</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_FARNSWORTH_LAB</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FARNSWORTH_LAB_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_FARNSWORTH_ELECTRONICS_LAB</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FARNSWORTH_ELECTRONICS_LAB_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_FARNSWORTH_LAB</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_FARNSWORTH_ELECTRONICS_LAB</ArtDefineTag>
 			<PrereqTech>TECH_ELECTRONICS</PrereqTech>
 			<ObsoleteTech>TECH_CLOUD_COMPUTING</ObsoleteTech>
 			<MapCategoryTypes>

@@ -74,7 +74,7 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_ELECTRICITY</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GATHERER_AMBER</Type>
+			<Type>BUILDING_AMBER_GATHERER</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_ADVANCED_METALLURGY</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -90,11 +90,11 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_TRIBALISM</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GATHERER_GRASS</Type>
+			<Type>BUILDING_GRASS_GATHERER</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_TRIBALISM</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GATHERER_HENNA</Type>
+			<Type>BUILDING_HENNA_GATHERER</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_TRIBALISM</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -110,11 +110,11 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_TRIBALISM</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GATHERER_STRAW</Type>
+			<Type>BUILDING_STRAW_GATHERER</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_TRIBALISM</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GATHERER_WHEAT</Type>
+			<Type>BUILDING_WHEAT_GATHERER</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_TRIBALISM</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -202,7 +202,7 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_ASSEMBLY_LINE</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SEAMSTRESS_HUT</Type>
+			<Type>BUILDING_SEAMSTRESS</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_REPLACEABLE_PARTS</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>

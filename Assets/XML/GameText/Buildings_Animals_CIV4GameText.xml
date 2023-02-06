@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_AMPHIBIAN_POND</Tag>
+		<Tag>TXT_KEY_BUILDING_ENCLOSURE_AMPHIBIAN_POND</Tag>
 		<English>Enclosure - Amphibian Pond</English>
 		<French>Enclos - Mare à amphibiens</French>
 		<Italian>Stagno per anfibi</Italian>
@@ -1083,7 +1083,7 @@
 		<Russian>Ìèô î ãîôåðå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_DHOLE</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_USSURI_DHOLE</Tag>
 		<English>Folklore - Ussuri Dhole</English>
 		<French>Mythe du Cuon d'Asie</French>
 		<German>
@@ -1182,7 +1182,7 @@
 		<Russian>Ìèô î áåëîã. îðëàíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_EARTH</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_E_EARTH</Tag>
 		<English>Folklore (E) - Earth</English>
 		<French>Mythe de la Terre (E)</French>
 		<German>
@@ -1242,7 +1242,7 @@
 		<Russian>Ìèô îá èìï. ïèíãâèíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_EWOLF</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_ETHIOPIAN_WOLF</Tag>
 		<English>Folklore - Ethiopian Wolf</English>
 		<French>Mythe du loup d'Éthiopie</French>
 		<German>
@@ -1329,7 +1329,7 @@
 		<Russian>Ìèô î ñëîíîâîé ÷åðåïàõå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_GATOR</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_AMERICAN_ALLIGATOR</Tag>
 		<English>Folklore - American Alligator</English>
 		<French>Mythe de l'Alligator d'Amérique</French>
 		<German>
@@ -1342,7 +1342,7 @@
 		<Russian>Ìèô îá àëëèãàòîðå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_GATOR_ASIAN</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_CHINESE_ALLIGATOR</Tag>
 		<English>Folklore - Chinese Alligator</English>
 		<French>Mythe de l'Alligator de Chine</French>
 		<German>
@@ -1577,7 +1577,7 @@
 		<Russian>Ìèô î ãîðáàòîì êèòå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_HYENA</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_STRIPED_HYENA</Tag>
 		<English>Folklore - Striped Hyena</English>
 		<French>Mythe de la Hyène rayée</French>
 		<German>
@@ -1744,7 +1744,7 @@
 		<Polish>Mity związane z formacjami terenu.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_LEMUR</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_RING_TAILED_LEMUR</Tag>
 		<English>Folklore - Ring-tailed Lemur</English>
 		<German>
 			<Text>Mythos des Kattas:Mythos des Kattas:Mythos des Kattas:Mythos des Kattas</Text>
@@ -1793,7 +1793,7 @@
 		<Russian>Ìèô î ÿùåðèöå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_LLAMA</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GUANACO</Tag>
 		<English>Folklore - Guanaco</English>
 		<French>Mythe du Lama</French>
 		<German>
@@ -1930,7 +1930,7 @@
 		<Russian>Ìèô î ðóñàëêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_METAL</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_E_METAL</Tag>
 		<English>Folklore (E) - Metal</English>
 		<French>Mythe du Métal (E)</French>
 		<German>
@@ -2570,7 +2570,7 @@
 		<Russian>Ìèô î ñàáë. òèãðå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_SAIGA</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SAIGA_ANTELOPE</Tag>
 		<English>Folklore - Saiga Antelope</English>
 		<French>Mythe de l'Antilope Saiga</French>
 		<German>
@@ -2680,7 +2680,7 @@
 		<Russian>Ìèô î êàëàíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_SHARK</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_SHARKS</Tag>
 		<English>Folklore (T) - Sharks</English>
 		<French>Histoires de Requins (T)</French>
 		<German>
@@ -2767,7 +2767,7 @@
 		<Russian>Ìèô î ëåîïàðäå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_STONE</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_E_STONE</Tag>
 		<English>Folklore (E) - Stone</English>
 		<French>Mythe de la Pierre (E)</French>
 		<German>
@@ -2785,7 +2785,7 @@
 		<Italian>Mito del maiale</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_TAPIR</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_TAPIR</Tag>
 		<English>Folklore (T) - Tapir</English>
 		<French>Mythe du Tapir (T)</French>
 		<German>
@@ -2854,7 +2854,7 @@
 		<Russian>Ìèô î ñóì÷. âîëêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_TIGER</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_TIGER</Tag>
 		<English>Folklore (T) - Tiger</English>
 		<French>Mythe du Tigre (T)</French>
 		<German>
@@ -3150,7 +3150,7 @@
 		<Polish>Można spotkać się z poglądem, że hodowla norek i innych stworzeń na futro wiąże się z niehumanitarnym traktowaniem zwierząt. Szczególnie dobrze jest to udokumentowane w krajach Trzeciego Zwiata. Jednak raport dotyczący sytuacji wielkopolskich ferm futrzarskich autorstwa Najwyższej Izby Kontroli z 2011 roku, wskazuje że "w 87% tych ferm nie przestrzegano wymagań ochrony środowiska, w 48% działalność hodowlana prowadzona była w obiektach nielegalnie wybudowanych lub użytkowanych, a w 35% niezgodnie z przepisami weterynaryjnymi." Aktywiści pro-zwierzęcy twierdzą iż fermy hodowlane są przyczyną skażenia środowiska licznymi związkami takimi jak siarkowodór, amoniak, mocznik, fosfor czy azot, które nie są odpowiednio utylizowane.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GLYPTO_REMAINS</Tag>
+		<Tag>TXT_KEY_BUILDING_REMAINS_GLYPTODON</Tag>
 		<English>Remains - Glyptodon</English>
 		<French>Restes de Glyptodon</French>
 		<German>
@@ -3279,7 +3279,7 @@
 		<English>The Marine Institute (Foras na Mara) is a State agency in Ireland that provides government, public agencies and the maritime industry with a range of scientific, advisory and economic development services, aiming to inform policy-making, regulation and the sustainable management and growth of the country’s marine resources. Founded in 1991 on foot of a 1974 report, the Institute undertakes, coordinates and promotes marine research and development, which is essential to achieving a sustainable ocean economy, protecting ecosystems and inspiring a shared understanding of the ocean. The agency is governed by a ministerially-appointed board and has a professional staff, a headquarters near Galway, an office in Dublin, and two research vessels.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MARSUPIAL_CAGE</Tag>
+		<Tag>TXT_KEY_BUILDING_ENCLOSURE_MARSUPIAL</Tag>
 		<English>Enclosure - Marsupial</English>
 		<French>Enclos - Marsupiaux</French>
 		<Italian>Gabbia dei marsupiali</Italian>
@@ -3359,7 +3359,7 @@
 		<Polish>Maskotka statku.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NOCTURNAL_CAGE</Tag>
+		<Tag>TXT_KEY_BUILDING_ENCLOSURE_NOCTURNAL</Tag>
 		<English>Enclosure - Nocturnal</English>
 		<French>Enclos - Animaux Nocturnes</French>
 		<Italian>Gabbia degli animali notturni</Italian>
@@ -3398,13 +3398,13 @@
 		<Russian>Ïàìÿòü î ìàìîíòå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PEACOCK_FLOCKS</Tag>
+		<Tag>TXT_KEY_BUILDING_FLOCKS_OF_PEACOCK</Tag>
 		<English>Flocks of Peacock</English>
 		<Italian>Branco di fagiani</Italian>
 		<Russian>Ñòàÿ ïàâëèíîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PEACOCK_FLOCKS_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_FLOCKS_OF_PEACOCK_PEDIA</Tag>
 		<English>Your nation has flocks of Peacocks.</English>
 		<Russian>Ó âàøåé öèâèëèçàöèè åñòü ñòàÿ ïàâëèíîâ.</Russian>
 	</TEXT>

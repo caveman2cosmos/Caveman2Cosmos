@@ -262,7 +262,7 @@
 			<Button>Art/Interface/Buttons/Units/Bongo.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_BOOBY</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_BLUE_FOOTED_BOOBY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -482,7 +482,7 @@
 			<Button>Art/Interface/Buttons/Units/Tortoise.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_DHOLE</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_USSURI_DHOLE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -572,7 +572,7 @@
 			<Button>Art/Interface/Buttons/Units/Emu.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_EWOLF</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_ETHIOPIAN_WOLF</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -642,7 +642,7 @@
 			<Button>Art/Interface/Buttons/Units/Galapagos_Tortoise.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_GATOR_ASIAN</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_CHINESE_ALLIGATOR</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -652,7 +652,7 @@
 			<Button>Art/Interface/Buttons/Units/gator.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_GATOR</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_AMERICAN_ALLIGATOR</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -872,7 +872,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_whale.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_HYENA</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_STRIPED_HYENA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1672,7 +1672,7 @@
 			<Button>Art/Interface/Buttons/Units/SabretoothB.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_SAIGA</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_SAIGA_ANTELOPE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1842,7 +1842,7 @@
 			<Button>Art/Interface/Buttons/Units/Tdevil.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_TAPIR</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_T_TAPIR</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>

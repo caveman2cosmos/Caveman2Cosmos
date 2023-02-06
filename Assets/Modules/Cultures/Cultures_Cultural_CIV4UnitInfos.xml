@@ -19350,7 +19350,7 @@
 				<BuildingType>BUILDING_HEALERS_HUT</BuildingType>
 				<BuildingType>BUILDING_DOCTORS_OFFICE</BuildingType>
 				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
-				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+				<BuildingType>BUILDING_MEDICAL_CLINIC</BuildingType>
 				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
@@ -19660,7 +19660,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_SIEGE_WEAPONS_WORKSHOP</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ALCHEMY</PrereqTech>
 			<TrainCondition>
@@ -22912,7 +22912,7 @@
 				<BuildingType>BUILDING_HEALERS_HUT</BuildingType>
 				<BuildingType>BUILDING_DOCTORS_OFFICE</BuildingType>
 				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
-				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+				<BuildingType>BUILDING_MEDICAL_CLINIC</BuildingType>
 				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
@@ -24629,7 +24629,7 @@
 			</PrereqBonuses>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
-				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+				<BuildingType>BUILDING_MEDICAL_CLINIC</BuildingType>
 				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
@@ -34094,7 +34094,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_SIEGE_WEAPONS_WORKSHOP</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_INVENTION</PrereqTech>
 			<BonusType>BONUS_TANG</BonusType>
@@ -50259,7 +50259,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_SIEGE_WEAPONS_WORKSHOP</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<BonusType>BONUS_KHAZAR</BonusType>

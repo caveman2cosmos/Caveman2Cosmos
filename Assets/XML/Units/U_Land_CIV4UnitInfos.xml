@@ -9385,7 +9385,7 @@
 			</UnitAIs>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
-				<BuildingType>BUILDING_WEAPON_FACTORY</BuildingType>
+				<BuildingType>BUILDING_AMMUNITIONS_WORKSHOP</BuildingType>
 				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_ADVANCED_ROCKETRY</PrereqTech>
@@ -11858,7 +11858,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_SIEGE_WEAPONS_WORKSHOP</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
 			<BonusType>BONUS_HORSE</BonusType>
@@ -14569,7 +14569,7 @@
 			</NotUnitAIs>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ELEPHANT_TRAINER</BuildingType>
-				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_SIEGE_WEAPONS_WORKSHOP</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
 			<TechTypes>
@@ -18022,7 +18022,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_SIEGE_WEAPONS_WORKSHOP</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
 			<PrereqBonuses>
@@ -18130,7 +18130,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_SIEGE_WEAPONS_WORKSHOP</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
 			<BonusType>BONUS_PRIME_TIMBER</BonusType>
@@ -18231,7 +18231,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_SIEGE_WEAPONS_WORKSHOP</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ANCIENT_MACHINERY</PrereqTech>
 			<TechTypes>
@@ -18346,7 +18346,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_SIEGE_WEAPONS_WORKSHOP</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ANCIENT_BALLISTICS</PrereqTech>
 			<iCost>245</iCost>
@@ -18458,7 +18458,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_SIEGE_WEAPONS_WORKSHOP</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
 			<iCost>250</iCost>
@@ -18570,7 +18570,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_SIEGE_WEAPONS_WORKSHOP</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<iCost>300</iCost>
@@ -18792,7 +18792,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_SIEGE_WEAPONS_WORKSHOP</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ANCIENT_MACHINERY</PrereqTech>
 			<TechTypes>
@@ -18896,7 +18896,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_SIEGE_WEAPONS_WORKSHOP</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ANCIENT_BALLISTICS</PrereqTech>
 			<iCost>245</iCost>
@@ -18997,7 +18997,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_SIEGE_WEAPONS_WORKSHOP</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
 			<iCost>250</iCost>
@@ -19103,7 +19103,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_SIEGE_WEAPONS_WORKSHOP</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ANCIENT_BALLISTICS</PrereqTech>
 			<BonusType>BONUS_HORSE</BonusType>
@@ -19215,7 +19215,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_SIEGE_WEAPONS_WORKSHOP</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<iCost>300</iCost>
@@ -20289,7 +20289,7 @@
 			</UnitAIs>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
-				<BuildingType>BUILDING_WEAPON_FACTORY</BuildingType>
+				<BuildingType>BUILDING_AMMUNITIONS_WORKSHOP</BuildingType>
 				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_ARTILLERY</PrereqTech>
@@ -20405,7 +20405,7 @@
 			</UnitAIs>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
-				<BuildingType>BUILDING_WEAPON_FACTORY</BuildingType>
+				<BuildingType>BUILDING_AMMUNITIONS_WORKSHOP</BuildingType>
 				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_GUERRILLA_WARFARE</PrereqTech>
@@ -20515,7 +20515,7 @@
 			</UnitAIs>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
-				<BuildingType>BUILDING_WEAPON_FACTORY</BuildingType>
+				<BuildingType>BUILDING_AMMUNITIONS_WORKSHOP</BuildingType>
 				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_SEMICONDUCTORS</PrereqTech>
@@ -20623,7 +20623,7 @@
 			</UnitAIs>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
-				<BuildingType>BUILDING_WEAPON_FACTORY</BuildingType>
+				<BuildingType>BUILDING_AMMUNITIONS_WORKSHOP</BuildingType>
 				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_COMPOSITES</PrereqTech>
@@ -20729,7 +20729,7 @@
 			</UnitAIs>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
-				<BuildingType>BUILDING_WEAPON_FACTORY</BuildingType>
+				<BuildingType>BUILDING_AMMUNITIONS_WORKSHOP</BuildingType>
 				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_MICROMECHANICS</PrereqTech>
@@ -21162,7 +21162,7 @@
 			</UnitAIs>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
-				<BuildingType>BUILDING_WEAPON_FACTORY</BuildingType>
+				<BuildingType>BUILDING_AMMUNITIONS_WORKSHOP</BuildingType>
 				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_AUTOMATIC_WEAPONS</PrereqTech>
@@ -21254,7 +21254,7 @@
 			</UnitAIs>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
-				<BuildingType>BUILDING_WEAPON_FACTORY</BuildingType>
+				<BuildingType>BUILDING_AMMUNITIONS_WORKSHOP</BuildingType>
 				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_AVIATION</PrereqTech>
@@ -21485,7 +21485,7 @@
 			</UnitAIs>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
-				<BuildingType>BUILDING_WEAPON_FACTORY</BuildingType>
+				<BuildingType>BUILDING_AMMUNITIONS_WORKSHOP</BuildingType>
 				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_MILITARY_ROBOTICS</PrereqTech>
@@ -21601,7 +21601,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_SIEGE_WEAPONS_WORKSHOP</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ALCHEMY</PrereqTech>
 			<BonusType>BONUS_SULPHUR</BonusType>
@@ -21711,7 +21711,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_SIEGE_WEAPONS_WORKSHOP</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
 			<BonusType>BONUS_SULPHUR</BonusType>
@@ -22366,7 +22366,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_SIEGE_WEAPONS_WORKSHOP</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ALCHEMY</PrereqTech>
 			<BonusType>BONUS_TAR</BonusType>
@@ -33760,13 +33760,13 @@
 			</NotUnitAIs>
 			<Buildings>
 				<BuildingType>BUILDING_ORDINANCE_CARPOOL</BuildingType>
-				<BuildingType>BUILDING_SMOKE_DETECTOR</BuildingType>
+				<BuildingType>BUILDING_ORDINANCE_SMOKE_DETECTOR</BuildingType>
 				<BuildingType>BUILDING_ORDINANCE_FIRE_CODE</BuildingType>
 				<BuildingType>BUILDING_NEIGHBORHOOD_WATCH</BuildingType>
 				<BuildingType>BUILDING_ORDINANCE_YOUTH_CURFEW</BuildingType>
 				<BuildingType>BUILDING_ORDINANCE_AUTOMOBILE_EMISSION_REDUCTION_ACT</BuildingType>
 				<BuildingType>BUILDING_ORDINANCE_CLEAN_AIR_ACT</BuildingType>
-				<BuildingType>BUILDING_CLEANWATER_ACT</BuildingType>
+				<BuildingType>BUILDING_ORDINANCE_CLEAN_WATER_ACT</BuildingType>
 				<BuildingType>BUILDING_ORDINANCE_TIRE_RECYCLING_PROGRAM</BuildingType>
 				<BuildingType>BUILDING_SHUTTLE_SERVICE</BuildingType>
 				<BuildingType>BUILDING_PROSTITUTION_BAN</BuildingType>
@@ -36281,12 +36281,12 @@
 			<Buildings>
 				<BuildingType>BUILDING_THE_TEMPLE_OF_SOLOMON</BuildingType>
 				<BuildingType>BUILDING_CHRISTIAN_SHRINE</BuildingType>
-				<BuildingType>BUILDING_ISLAMIC_SHRINE</BuildingType>
+				<BuildingType>BUILDING_THE_MASJID_AL_HARAM</BuildingType>
 				<BuildingType>BUILDING_THE_KASHI_VISHWANATH</BuildingType>
 				<BuildingType>BUILDING_BUDDHIST_SHRINE</BuildingType>
 				<BuildingType>BUILDING_CONFUCIAN_SHRINE</BuildingType>
 				<BuildingType>BUILDING_THE_DAI_MIAO</BuildingType>
-				<BuildingType>BUILDING_STATUE_OF_ZEUS</BuildingType>
+				<BuildingType>BUILDING_THE_STATUE_OF_ZEUS</BuildingType>
 				<BuildingType>BUILDING_PIR_E_SABZ</BuildingType>
 				<BuildingType>BUILDING_EGYPT_MYTH_SHRINE</BuildingType>
 				<BuildingType>BUILDING_MESOAMERICAN_SHRINE</BuildingType>
@@ -36296,7 +36296,7 @@
 				<BuildingType>BUILDING_CANAANISM_SHRINE</BuildingType>
 				<BuildingType>BUILDING_GREAT_TEMPLE_TAY_NINH</BuildingType>
 				<BuildingType>BUILDING_NATURE_ANSWER</BuildingType>
-				<BuildingType>BUILDING_JAINISM_SHRINE</BuildingType>
+				<BuildingType>BUILDING_STATUE_OF_GOMATESHWARA</BuildingType>
 				<BuildingType>BUILDING_BABEL_TOWER</BuildingType>
 				<BuildingType>BUILDING_MORMAN_SHRINE</BuildingType>
 				<BuildingType>BUILDING_OLDOINYO_NGAI</BuildingType>
@@ -37727,7 +37727,7 @@
 				<BuildingType>BUILDING_TRADITION_NAVAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_TRADITION_ARCHERY</BuildingType>
 				<BuildingType>BUILDING_SECRET_ARMY_BASE</BuildingType>
-				<BuildingType>BUILDING_COURIER_SYSTEM</BuildingType>
+				<BuildingType>BUILDING_NATIONAL_COURIER_SYSTEM</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACADEMY</BuildingType>
 				<BuildingType>BUILDING_CORPORATION_SAFARI_HQ</BuildingType>
 				<BuildingType>BUILDING_CORPORATION_ULTSOLDIER_HQ</BuildingType>
@@ -37917,7 +37917,7 @@
 				<BuildingType>BUILDING_TRADITION_SEA_HUNTING</BuildingType>
 				<BuildingType>BUILDING_TRADITION_NAVAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_SECRET_ARMY_BASE</BuildingType>
-				<BuildingType>BUILDING_COURIER_SYSTEM</BuildingType>
+				<BuildingType>BUILDING_NATIONAL_COURIER_SYSTEM</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACADEMY</BuildingType>
 				<BuildingType>BUILDING_CORPORATION_SAFARI_HQ</BuildingType>
 				<BuildingType>BUILDING_CORPORATION_ULTSOLDIER_HQ</BuildingType>
@@ -38688,7 +38688,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_SIEGE_WEAPONS_WORKSHOP</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ANCIENT_MACHINERY</PrereqTech>
 			<BonusType>BONUS_TOOLS</BonusType>
@@ -40826,7 +40826,7 @@
 				<BuildingType>BUILDING_HEALERS_HUT</BuildingType>
 				<BuildingType>BUILDING_DOCTORS_OFFICE</BuildingType>
 				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
-				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+				<BuildingType>BUILDING_MEDICAL_CLINIC</BuildingType>
 				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
@@ -40937,7 +40937,7 @@
 				<BuildingType>BUILDING_HEALERS_HUT</BuildingType>
 				<BuildingType>BUILDING_DOCTORS_OFFICE</BuildingType>
 				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
-				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+				<BuildingType>BUILDING_MEDICAL_CLINIC</BuildingType>
 				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
@@ -41145,7 +41145,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DOCTORS_OFFICE</BuildingType>
 				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
-				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+				<BuildingType>BUILDING_MEDICAL_CLINIC</BuildingType>
 				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
@@ -41247,7 +41247,7 @@
 			<BonusType>BONUS_DRUGS</BonusType>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
-				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+				<BuildingType>BUILDING_MEDICAL_CLINIC</BuildingType>
 				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
@@ -41841,7 +41841,7 @@
 				<BonusType>BONUS_PHARMACEUTICALS</BonusType>
 			</PrereqBonuses>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+				<BuildingType>BUILDING_MEDICAL_CLINIC</BuildingType>
 				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<TrainCondition>
@@ -45470,7 +45470,7 @@
 				<BuildingType>BUILDING_SLAVE_COMPOUND_COMMERCE</BuildingType>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_SANITATION</BuildingType>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_CRIME_PREVENTION</BuildingType>
-				<BuildingType>BUILDING_WV_CANNIBALISM</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_CANNIBALISM</BuildingType>
 				<BuildingType>BUILDING_WV_HUMAN_SACRIFICE</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
@@ -46288,7 +46288,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_WORLDVIEW_SLAVERY</BuildingType>
 				<BuildingType>BUILDING_SLAVE_MARKET</BuildingType>
-				<BuildingType>BUILDING_WV_CANNIBALISM</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_CANNIBALISM</BuildingType>
 				<BuildingType>BUILDING_WV_HUMAN_SACRIFICE</BuildingType>
 			</Buildings>
 			<Actions>

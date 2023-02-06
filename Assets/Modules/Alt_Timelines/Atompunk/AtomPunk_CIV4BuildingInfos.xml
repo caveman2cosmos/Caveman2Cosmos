@@ -49,7 +49,7 @@
 				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
 				<BuildingType>BUILDING_HE3_FUSION_POWER_PLANT</BuildingType>
 				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
-				<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_VACUUM_POWER_PLANT</BuildingType>
 			</ReplacementBuildings>
 			<Bonus>BONUS_ATOMPUNK</Bonus>
 			<PrereqBonuses>
@@ -182,7 +182,7 @@
 				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
 				<BuildingType>BUILDING_HE3_FUSION_POWER_PLANT</BuildingType>
 				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
-				<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_VACUUM_POWER_PLANT</BuildingType>
 			</PrereqOrBuildings>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -203,7 +203,7 @@
 				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
 				<BuildingType>BUILDING_HE3_FUSION_POWER_PLANT</BuildingType>
 				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
-				<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_VACUUM_POWER_PLANT</BuildingType>
 			</ReplacementBuildings>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -319,7 +319,7 @@
 				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
 				<BuildingType>BUILDING_HE3_FUSION_POWER_PLANT</BuildingType>
 				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
-				<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_VACUUM_POWER_PLANT</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>

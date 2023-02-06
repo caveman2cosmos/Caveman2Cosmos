@@ -52,7 +52,7 @@
 		<Russian>Ïåðâîíà÷àëüíî øïèëü Ýìïàéð-ñòåéò-áèëäèíã ïðåäïîëàãàëîñü èñïîëüçîâàòü â êà÷åñòâå ïðè÷àëüíîé ìà÷òû äëÿ äèðèæàáëåé. 102-é ýòàæ áûë ñïðîåêòèðîâàí òàêèì îáðàçîì, ÷òî ïðåêðàñíî ñïðàâèëñÿ áû ñ ðîëüþ ïðè÷àëüíîé ïëàòôîðìû ñî ñõîäíÿìè äëÿ ïîäúåìà íà äèðèæàáëü.[PARAGRAPH:1]Îäíàêî ñåðüåçíûì ïðåïÿòñòâèåì äëÿ âîïëîùåíèÿ ýòîé èäåè ïîñëóæèëè íåáëàãîïðèÿòíûå ïîãîäíûå óñëîâèÿ - äèðèæàáëü íå ìîã ïðè÷àëèòü ê øïèëþ çäàíèÿ èç-çà ñèëüíûõ è íåñòàáèëüíûõ âîçäóøíûõ ïîòîêîâ íà òàêîé âûñîòå. Ýòî ñòàëî ïîíÿòíî ïîñëå ïåðâîé æå ïîïûòêè öåïïåëèíà ïðèøâàðòîâàòüñÿ, è â 1952-ì ãîäó âëàäåëüöû çäàíèÿ îêîí÷àòåëüíî îòêàçàëèñü îò ýòîé èäåè.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FARNSWORTH_LAB</Tag>
+		<Tag>TXT_KEY_BUILDING_FARNSWORTH_ELECTRONICS_LAB</Tag>
 		<English>Farnsworth Electronics Lab</English>
 		<French>
 			<Text>Laboratoire d'Electronique de Farnsworth</Text>
@@ -64,7 +64,7 @@
 		<Russian>Ëàá. ýëåêòðîíèêè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FARNSWORTH_LAB_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_FARNSWORTH_ELECTRONICS_LAB_PEDIA</Tag>
 		<English>Farnsworth called his device an image dissector because it converted individual elements of the image into electricity one at a time. He replaced the spinning disks with cesium, an element that emits electrons when exposed to light.</English>
 		<Italian>Farnsworth chiamò il suo strumento dissettore di immagini, dato che convertiva gli elementi dell'immagine in impulsi elettrici. Sostituì i dischi girevoli con cesio, un elemento che emette elettroni quando esposto alla luce.</Italian>
 		<Polish>Philo Taylor Farnsworth (19 sierpnia 1906 - 11 marca 1971), amerykański wynalazca i pionier telewizji. Twórca wielu wynalazków, które miały kluczowe znaczenie dla wczesnego rozwoju elektronicznej telewizji. Najbardziej znany za wynalezienia pierwszego w pełni funkcjonalnego urządzenia dla elektronicznego obrazu (CRT), dysektora. Opracował również pierwszy w pełni funkcjonalny i kompletny elektroniczny system telewizyjny i jako pierwszy zaprezentował taki system społeczeństwu. Farnsworth opracował system telewizyjny wraz z odbiornikiem i kamerą, który był produkowany w firmie Farnsworth Television and Radio Corporation, od 1938 do 1951.</Polish>

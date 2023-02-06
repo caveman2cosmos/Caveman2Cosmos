@@ -631,7 +631,7 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_VIRTUAL_SCHOOL</BuildingType>
+					<BuildingType>BUILDING_HOLOGRAPHIC_SCHOOL</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
@@ -927,7 +927,7 @@
 			<BuildingHealthChanges/>
 			<BuildingCommerceModifiers>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_STATUE_OF_ZEUS</BuildingType>
+					<BuildingType>BUILDING_THE_STATUE_OF_ZEUS</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>20</iCommerce>
@@ -992,7 +992,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_ISLAMIC_SHRINE</BuildingType>
+					<BuildingType>BUILDING_THE_MASJID_AL_HARAM</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>20</iCommerce>
 						<iCommerce>5</iCommerce>
@@ -1104,7 +1104,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_JAINISM_SHRINE</BuildingType>
+					<BuildingType>BUILDING_STATUE_OF_GOMATESHWARA</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -1308,7 +1308,7 @@
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_VIRTUAL_SCHOOL</BuildingType>
+					<BuildingType>BUILDING_HOLOGRAPHIC_SCHOOL</BuildingType>
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -1465,7 +1465,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_WEAPON_FACTORY</BuildingType>
+					<BuildingType>BUILDING_AMMUNITIONS_WORKSHOP</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -2602,7 +2602,7 @@
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_VIRTUAL_SCHOOL</BuildingType>
+					<BuildingType>BUILDING_HOLOGRAPHIC_SCHOOL</BuildingType>
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -5990,7 +5990,7 @@
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_WEAPON_FACTORY</BuildingType>
+					<BuildingType>BUILDING_AMMUNITIONS_WORKSHOP</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -7761,7 +7761,7 @@
 			<Flavors/>
 			<BuildingCommerceModifiers>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_STATUE_OF_ZEUS</BuildingType>
+					<BuildingType>BUILDING_THE_STATUE_OF_ZEUS</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>15</iCommerce>
@@ -7826,7 +7826,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_ISLAMIC_SHRINE</BuildingType>
+					<BuildingType>BUILDING_THE_MASJID_AL_HARAM</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -7938,7 +7938,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_JAINISM_SHRINE</BuildingType>
+					<BuildingType>BUILDING_STATUE_OF_GOMATESHWARA</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -9600,7 +9600,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_VIRTUAL_SCHOOL</BuildingType>
+					<BuildingType>BUILDING_HOLOGRAPHIC_SCHOOL</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -10261,7 +10261,7 @@
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_COURIER_SYSTEM</BuildingType>
+					<BuildingType>BUILDING_NATIONAL_COURIER_SYSTEM</BuildingType>
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -12645,7 +12645,7 @@
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+					<BuildingType>BUILDING_MEDICAL_CLINIC</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -12804,7 +12804,7 @@
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+					<BuildingType>BUILDING_MEDICAL_CLINIC</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -13139,7 +13139,7 @@
 			<SpecialistValids/>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_COURIER_SYSTEM</BuildingType>
+					<BuildingType>BUILDING_NATIONAL_COURIER_SYSTEM</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -13376,7 +13376,7 @@
 					<iHealthChange>3</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+					<BuildingType>BUILDING_MEDICAL_CLINIC</BuildingType>
 					<iHealthChange>3</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -13531,7 +13531,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_VIRTUAL_SCHOOL</BuildingType>
+					<BuildingType>BUILDING_HOLOGRAPHIC_SCHOOL</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -13573,7 +13573,7 @@
 					<iHealthChange>2</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+					<BuildingType>BUILDING_MEDICAL_CLINIC</BuildingType>
 					<iHealthChange>2</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -13839,7 +13839,7 @@
 					<iHealthChange>3</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+					<BuildingType>BUILDING_MEDICAL_CLINIC</BuildingType>
 					<iHealthChange>2</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -17093,7 +17093,7 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_VIRTUAL_SCHOOL</BuildingType>
+					<BuildingType>BUILDING_HOLOGRAPHIC_SCHOOL</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
@@ -17828,7 +17828,7 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_VIRTUAL_SCHOOL</BuildingType>
+					<BuildingType>BUILDING_HOLOGRAPHIC_SCHOOL</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>

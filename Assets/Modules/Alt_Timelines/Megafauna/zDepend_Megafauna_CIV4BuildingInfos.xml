@@ -51,7 +51,7 @@
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_IVORY_PROVIDER</Type>
+			<Type>BUILDING_RESOURCES_IVORY</Type>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HERD_MAMMOTH</BuildingType>
 			</PrereqOrBuildings>

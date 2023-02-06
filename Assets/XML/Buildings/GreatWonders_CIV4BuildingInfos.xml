@@ -676,7 +676,7 @@
 			<iHappiness>5</iHappiness>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+					<BuildingType>BUILDING_MEDICAL_CLINIC</BuildingType>
 					<CommerceChanges>
 						<iCommerce>5</iCommerce>
 					</CommerceChanges>
@@ -695,7 +695,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+				<BuildingType>BUILDING_MEDICAL_CLINIC</BuildingType>
 				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<bPrereqPower>1</bPrereqPower>
@@ -1542,7 +1542,7 @@
 			<iHappiness>10</iHappiness>
 			<iHealth>10</iHealth>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_VACUUM_POWER_PLANT</BuildingType>
 			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
@@ -4971,7 +4971,7 @@
 			</YieldChanges>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_MEGATOWER_MALL</BuildingType>
+					<BuildingType>BUILDING_MEGATOWER_MALL_LEVEL</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
@@ -6044,16 +6044,16 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EARTH_FESTIVAL</Type>
+			<Type>BUILDING_GRAND_EARTH_FESTIVAL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EARTH_FESTIVAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EARTH_FESTIVAL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_GRAND_EARTH_FESTIVAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GRAND_EARTH_FESTIVAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_EARTH_FESTIVAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GRAND_EARTH_FESTIVAL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_EARTH_FESTIVAL</MovieDefineTag>
 			<PrereqTech>TECH_CELEBRATION</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
@@ -6077,7 +6077,7 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_EARTH</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_E_EARTH</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_NATURE_DANCE</BuildingType>
@@ -7481,7 +7481,7 @@
 			</PrereqOrBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_GRAND_SKY_FESTIVAL</BuildingType>
-				<BuildingType>BUILDING_EARTH_FESTIVAL</BuildingType>
+				<BuildingType>BUILDING_GRAND_EARTH_FESTIVAL</BuildingType>
 				<BuildingType>BUILDING_MARINE_FESTIVAL</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iCost>516</iCost>
@@ -9722,15 +9722,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HANGING_GARDEN</Type>
+			<Type>BUILDING_THE_HANGING_GARDENS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HANGING_GARDEN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HANGING_GARDEN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_THE_HANGING_GARDENS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_THE_HANGING_GARDENS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_HANGING_GARDEN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_THE_HANGING_GARDENS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HANGING_GARDENS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_DUALISM</PrereqTech>
@@ -11705,13 +11705,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_KRAK_DES_CHEVS</Type>
+			<Type>BUILDING_KRAK_DES_CHEVALIERS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_KRAK_DES_CHEVS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_KRAK_DES_CHEVS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_KRAK_DES_CHEVALIERS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KRAK_DES_CHEVALIERS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_KRAK_DES_CHEVS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_KRAK_DES_CHEVALIERS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_KRAK_DES_CHEVS</MovieDefineTag>
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<ObsoleteTech>TECH_NATIONALISM</ObsoleteTech>
@@ -13049,7 +13049,7 @@
 			</PrereqOrBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_GRAND_SKY_FESTIVAL</BuildingType>
-				<BuildingType>BUILDING_EARTH_FESTIVAL</BuildingType>
+				<BuildingType>BUILDING_GRAND_EARTH_FESTIVAL</BuildingType>
 				<BuildingType>BUILDING_GRAND_FIRE_FESTIVAL</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iCost>516</iCost>
@@ -13223,7 +13223,7 @@
 				<iCommerce>5</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
-			<FreeBuilding>BUILDING_SOLARVOLT_ROOF</FreeBuilding>
+			<FreeBuilding>BUILDING_SOLAR_PHOTOVOLTAIC_ROOFS</FreeBuilding>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -13535,7 +13535,7 @@
 				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_CLIFF_DWELLING</BuildingType>
+				<BuildingType>BUILDING_HOUSING_CLIFF_DWELLING</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_HDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_HDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
@@ -14354,7 +14354,7 @@
 			</SpecialistCounts>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_E_SKY</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_EARTH</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_E_EARTH</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
@@ -15451,15 +15451,15 @@
 			</GlobalBuildingExtraCommerces>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_OTTOMAN_HAMMAM</Type>
+			<Type>BUILDING_HAMMAM</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_OTTOMAN_HAMMAM</Description>
-			<Civilopedia>TXT_KEY_BUILDING_OTTOMAN_HAMMAM_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HAMMAM</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HAMMAM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_OTTOMAN_HAMMAM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HAMMAM</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_OTTOMAN_HAMMAM</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_AQUEDUCT</ConstructSound>
 			<bCenterInCity>1</bCenterInCity>
@@ -15593,7 +15593,7 @@
 			</CommerceChanges>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_TRILOBITE_BREEDER</BuildingType>
-				<BuildingType>BUILDING_RAPTOR_BREEDER</BuildingType>
+				<BuildingType>BUILDING_VELOCIRAPTOR_BREEDER</BuildingType>
 				<BuildingType>BUILDING_TYRANNOSAURUS_REX_BREEDER</BuildingType>
 				<BuildingType>BUILDING_PTERADACTYL_BREEDER</BuildingType>
 			</PrereqOrBuildings>
@@ -15605,7 +15605,7 @@
 					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_RAPTOR_BREEDER</BuildingType>
+					<BuildingType>BUILDING_VELOCIRAPTOR_BREEDER</BuildingType>
 					<CommerceChanges>
 						<iCommerce>5</iCommerce>
 					</CommerceChanges>
@@ -15998,13 +15998,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PERIODIC_TABLE</Type>
+			<Type>BUILDING_PERIODIC_TABLE_OF_ELEMENTS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_PERIODIC_TABLE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_PERIODIC_TABLE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_PERIODIC_TABLE_OF_ELEMENTS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_PERIODIC_TABLE_OF_ELEMENTS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PERIODIC_TABLE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PERIODIC_TABLE_OF_ELEMENTS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_PERIODIC_TABLE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -18369,7 +18369,7 @@
 			</ReplacementBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_GRAND_FIRE_FESTIVAL</BuildingType>
-				<BuildingType>BUILDING_EARTH_FESTIVAL</BuildingType>
+				<BuildingType>BUILDING_GRAND_EARTH_FESTIVAL</BuildingType>
 				<BuildingType>BUILDING_MARINE_FESTIVAL</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iCost>516</iCost>
@@ -21435,13 +21435,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_WARHOL_FACTORY</Type>
+			<Type>BUILDING_WARHOLS_FACTORY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_WARHOL_FACTORY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WARHOL_FACTORY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_WARHOLS_FACTORY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_WARHOLS_FACTORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_WARHOL_FACTORY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_WARHOLS_FACTORY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_WARHOL_FACTORY</MovieDefineTag>
 			<PrereqTech>TECH_POP_ART</PrereqTech>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>

@@ -8,7 +8,7 @@
 		<UnitInfo>
 			<Type>UNIT_DIPLOMAT_MESSENGER</Type>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_NEGOTIATOR_HUT</BuildingType>
+				<BuildingType>BUILDING_NEGOTIATORS_HUT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_NEGOTIATION</PrereqTech>
 		</UnitInfo>

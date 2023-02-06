@@ -609,7 +609,7 @@ Base XP gained when defending
 				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
 				<BuildingType>BUILDING_HE3_FUSION_POWER_PLANT</BuildingType>
 				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
-				<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_VACUUM_POWER_PLANT</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_FUSION</PrereqTech>
 			<iCost>4056</iCost>
@@ -674,7 +674,7 @@ Base XP gained when defending
 				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
 				<BuildingType>BUILDING_HE3_FUSION_POWER_PLANT</BuildingType>
 				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
-				<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_VACUUM_POWER_PLANT</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_SHIELDING</PrereqTech>
 			<iCost>7381</iCost>

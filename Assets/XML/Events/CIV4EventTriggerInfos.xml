@@ -7883,7 +7883,7 @@
 			<iWeight>500</iWeight>
 			<iMinPopulation>10</iMinPopulation>
 			<BuildingsRequired>
-				<Building>BUILDING_DISEASE_PLAGUE</Building>
+				<Building>BUILDING_DISEASE_BUBONIC_PLAGUE</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<bOwnPlot>1</bOwnPlot>

@@ -3,11 +3,11 @@
 	<!-- Constructable buildings (should be) twice the regular hammer cost of buildings at that tech level -->
 	<BuildingInfos>
 		<BuildingInfo>
-			<Type>BUILDING_AMPHIBIAN_POND</Type>
+			<Type>BUILDING_ENCLOSURE_AMPHIBIAN_POND</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_AMPHIBIAN_POND</Description>
+			<Description>TXT_KEY_BUILDING_ENCLOSURE_AMPHIBIAN_POND</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WILD_ANIMAL_CAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
@@ -34,7 +34,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<iAsset>2</iAsset>
-			<ArtDefineTag>ART_DEF_BUILDING_AMPHIBIAN_POND</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ENCLOSURE_AMPHIBIAN_POND</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_REQUIREMENT</Type>
@@ -124,10 +124,10 @@
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FOLKLORE_ARCTICFOX</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_DHOLE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_USSURI_DHOLE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_DINGO</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_DOG</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_EWOLF</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_ETHIOPIAN_WOLF</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MANEDWOLF</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_REDFOX</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WOLF</BuildingType>
@@ -326,7 +326,7 @@
 						</Has>
 						<Has>
 							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_TIGER</ID>
+							<ID>BUILDING_FOLKLORE_T_TIGER</ID>
 						</Has>
 						<Has>
 							<GOMType>GOM_BUILDING</GOMType>
@@ -1296,7 +1296,7 @@
 				<BuildingType>BUILDING_FOLKLORE_AFRICANGREY</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BARNOWL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BARREDOWL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_BOOBY</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_BLUE_FOOTED_BOOBY</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_CASSOWARY</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_CROW</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_DUCK</BuildingType>
@@ -1437,11 +1437,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_FUR_FARM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GLYPTO_REMAINS</Type>
+			<Type>BUILDING_REMAINS_GLYPTODON</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GLYPTO_REMAINS</Description>
+			<Description>TXT_KEY_BUILDING_REMAINS_GLYPTODON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqAmountBuildings>
@@ -1749,11 +1749,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MARINE_INSTITUTE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MARSUPIAL_CAGE</Type>
-			<Description>TXT_KEY_BUILDING_MARSUPIAL_CAGE</Description>
+			<Type>BUILDING_ENCLOSURE_MARSUPIAL</Type>
+			<Description>TXT_KEY_BUILDING_ENCLOSURE_MARSUPIAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WILD_ANIMAL_CAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MARSUPIAL_CAGE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ENCLOSURE_MARSUPIAL</ArtDefineTag>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_MARSUPIAL</BuildingType>
@@ -2085,7 +2085,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_WONDERS_OF_THE_DEEP</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_LEVIATHAN</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SHARK</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_SHARKS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_RAY</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_KRAKEN</BuildingType>
 			</PrereqOrBuildings>
@@ -2104,11 +2104,11 @@
 			</UnitCombatFreeExperiences>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NOCTURNAL_CAGE</Type>
-			<Description>TXT_KEY_BUILDING_NOCTURNAL_CAGE</Description>
+			<Type>BUILDING_ENCLOSURE_NOCTURNAL</Type>
+			<Description>TXT_KEY_BUILDING_ENCLOSURE_NOCTURNAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WILD_ANIMAL_CAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NOCTURNAL_CAGE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ENCLOSURE_NOCTURNAL</ArtDefineTag>
 			<PrereqTech>TECH_INCANDESCENT_LIGHTING</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -2301,9 +2301,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PALEOLITHIC_MAMMOTH_REMAINS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PEACOCK_FLOCKS</Type>
-			<Description>TXT_KEY_BUILDING_PEACOCK_FLOCKS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_PEACOCK_FLOCKS_PEDIA</Civilopedia>
+			<Type>BUILDING_FLOCKS_OF_PEACOCK</Type>
+			<Description>TXT_KEY_BUILDING_FLOCKS_OF_PEACOCK</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FLOCKS_OF_PEACOCK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FLOCKS_OF_PEACOCK</ArtDefineTag>
 			<MapCategoryTypes>
@@ -2321,7 +2321,7 @@
 				<BuildingType>BUILDING_FOLKLORE_PEACOCK</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>184</iCost>
-			<FreeBuilding>BUILDING_PEACOCK_FLOCKS</FreeBuilding>
+			<FreeBuilding>BUILDING_FLOCKS_OF_PEACOCK</FreeBuilding>
 			<bNeverCapture>1</bNeverCapture>
 			<YieldChanges>
 				<iYield>1</iYield>

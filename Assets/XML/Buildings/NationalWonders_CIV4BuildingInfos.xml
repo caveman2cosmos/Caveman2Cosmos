@@ -244,13 +244,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_ARCHIVES</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BASKETROPEWAYS</Type>
+			<Type>BUILDING_AERIAL_BASKET_ROPEWAYS</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_BASKETROPEWAYS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BASKETROPEWAYS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_AERIAL_BASKET_ROPEWAYS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_AERIAL_BASKET_ROPEWAYS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_ARITHMETIC</PrereqTech>
 			<Bonus>BONUS_BASKETS</Bonus>
 			<PrereqBonuses>
@@ -295,7 +295,7 @@
 				</Flavor>
 			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_BASKETROPEWAYS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_AERIAL_BASKET_ROPEWAYS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BASKETROPEWAYS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -564,13 +564,13 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CAMEL_NATIONAL</Type>
+			<Type>BUILDING_CENTRAL_BREEDER_CAMEL</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CAMEL_NATIONAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CAMEL_NATIONAL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CENTRAL_BREEDER_CAMEL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CENTRAL_BREEDER_CAMEL_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CAMELID_DOMESTICATION</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_CAMEL</Bonus>
@@ -594,7 +594,7 @@
 				</Flavor>
 			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_CAMEL_NATIONAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CENTRAL_BREEDER_CAMEL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CAMEL_NATIONAL</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -658,7 +658,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_CAPTURED_FIRE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CONTROLLED_FIRE</PrereqTech>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_GATHERER_STICK</BuildingType>
+				<BuildingType>BUILDING_STICK_GATHERER</BuildingType>
 				<BuildingType>BUILDING_ANCIENT_CUSTOMS</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_EARTH_OVEN</ObsoleteTech>
@@ -1112,13 +1112,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_COSMONAUT_TRAINING_CENTRE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_COURIER_SYSTEM</Type>
+			<Type>BUILDING_NATIONAL_COURIER_SYSTEM</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_COURIER_SYSTEM</Description>
-			<Civilopedia>TXT_KEY_BUILDING_COURIER_SYSTEM_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_NATIONAL_COURIER_SYSTEM</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_COURIER_SYSTEM_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MAIL</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqBonuses>
@@ -1163,7 +1163,7 @@
 			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<ArtDefineTag>ART_DEF_BUILDING_COURIER_SYSTEM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_COURIER_SYSTEM</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_COURIER_SYSTEM</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1758,13 +1758,13 @@
 			<FreeBuilding>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</FreeBuilding>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FEDERAL_PRISON</Type>
+			<Type>BUILDING_MAXIMUM_SECURITY_PRISON</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FEDERAL_PRISON</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FEDERAL_PRISON_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_MAXIMUM_SECURITY_PRISON</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MAXIMUM_SECURITY_PRISON_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CONSTITUTION</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqBonuses>
@@ -1816,7 +1816,7 @@
 			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<ArtDefineTag>ART_DEF_BUILDING_FEDERAL_PRISON</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MAXIMUM_SECURITY_PRISON</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_FEDERAL_PRISON</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2666,7 +2666,7 @@
 			<PrereqTech>TECH_HERALDRY</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_SEAMSTRESS_HUT</BuildingType>
+				<BuildingType>BUILDING_SEAMSTRESS</BuildingType>
 				<BuildingType>BUILDING_TEXTILE_MILL</BuildingType>
 				<BuildingType>BUILDING_TEXTILE_FACTORY</BuildingType>
 				<BuildingType>BUILDING_TEXTILE_DISTRICT</BuildingType>
@@ -2690,7 +2690,7 @@
 			</PropertyManipulators>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_SEAMSTRESS_HUT</BuildingType>
+					<BuildingType>BUILDING_SEAMSTRESS</BuildingType>
 					<CommerceChanges>
 						<iCommerce>5</iCommerce>
 					</CommerceChanges>
@@ -3674,13 +3674,13 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HORSE_NATIONAL</Type>
+			<Type>BUILDING_CENTRAL_BREEDER_HORSE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HORSE_NATIONAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HORSE_NATIONAL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CENTRAL_BREEDER_HORSE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CENTRAL_BREEDER_HORSE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_EQUINE_DOMESTICATION</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_HORSE</Bonus>
@@ -3708,7 +3708,7 @@
 				</Flavor>
 			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_HORSE_NATIONAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CENTRAL_BREEDER_HORSE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HORSE_NATIONAL</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -4037,13 +4037,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_LABOR_UNION</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_LLAMA_NATIONAL</Type>
+			<Type>BUILDING_CENTRAL_BREEDER_LLAMA</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_LLAMA_NATIONAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LLAMA_NATIONAL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CENTRAL_BREEDER_LLAMA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CENTRAL_BREEDER_LLAMA_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CAMELID_DOMESTICATION</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_LLAMA</Bonus>
@@ -4067,7 +4067,7 @@
 				</Flavor>
 			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_LLAMA_NATIONAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CENTRAL_BREEDER_LLAMA</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LOG_ROLLER_SYSTEM</Type>
@@ -7553,7 +7553,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_WILDWEST_HOTEL</BuildingType>
+					<BuildingType>BUILDING_WILD_WEST_HOTEL</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
