@@ -2888,15 +2888,6 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 		}
 	}
 
-	const ImprovementTypes eImprovement = info.getImprovement();
-
-	// Build impossible if: A) outside of city culture range AND B) not a (military structure OR a route)
-	if (!isInCultureRangeOfCityByPlayer(ePlayer) &&
-		!(GC.getImprovementInfo(eImprovement).isMilitaryStructure() || ((RouteTypes)(info.getRoute()) != NO_ROUTE)))
-	{
-		return false;
-	}
-
 	if (!info.getPlaceBonusTypes().empty())
 	{
 		if (getBonusType() != NO_BONUS)
@@ -2946,6 +2937,7 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 		return false;
 	}
 
+	const ImprovementTypes eImprovement = info.getImprovement();
 	bool bValid = false;
 
 	if (eImprovement != NO_IMPROVEMENT)
@@ -2955,8 +2947,9 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 			return false;
 		}
 
+		const CvImprovementInfo& pInfo = GC.getImprovementInfo(eImprovement);
 		// Unique range between improvements within same improvement line (e.g. forts)
-		const int iUniqueRange = GC.getImprovementInfo(eImprovement).getUniqueRange();
+		const int iUniqueRange = pInfo.getUniqueRange();
 		if (iUniqueRange > 0)
 		{
 			foreach_(const CvPlot* pLoopPlot, rect(iUniqueRange, iUniqueRange))
@@ -2979,14 +2972,27 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 
 		if (!bTestVisible)
 		{
-			if (GET_PLAYER(ePlayer).getTeam() != getTeam()
-			// only allow specific improvements in neutral land.
-			&& (getTeam() != NO_TEAM || !GC.getImprovementInfo(eImprovement).isOutsideBorders()))
+			// Anywhere builds only fail in non-team/neutral territory
+			if (pInfo.isOutsideBorders())
+			{
+				if (getTeam() != NO_TEAM &&
+					getTeam() != GET_PLAYER(ePlayer).getTeam())
+				{
+					return false;
+				}
+			}
+			// Fail when on territory owned by non-teammate
+			// OR when outside influence of tile owner; this enables building on valid territory of teammates.
+			// NOTE: This prevents workers removing forts when in territory influenced by teammate. Also does not allow
+			// 		building on a tile owned by teammate but only influenced by you (rare occurrance though for it not to be a fort tile)
+			else if (GET_PLAYER(ePlayer).getTeam() != getTeam()
+				|| !isInCultureRangeOfCityByPlayer(getOwner()))
 			{
 				return false;
 			}
-			// Super Forts begin *AI_worker* - prevent workers from two different players from building a fort in the same plot
-			if(GC.getImprovementInfo(eImprovement).isMilitaryStructure())
+
+			// Super Forts begin *AI_worker* - prevent workers from two different players from building a fort/tower in the same plot
+			if(pInfo.isMilitaryStructure())
 			{
 				foreach_(const CvUnit* pLoopUnit, units())
 				{
@@ -3539,11 +3545,11 @@ void CvPlot::changeDefenseDamage(int iChange)
 }
 
 
-void CvPlot::pushCultureFromFort(PlayerTypes ePlayer, int iChange, int iRange, bool bUpdate)
+void CvPlot::pushCultureFromImprovement(PlayerTypes ePlayer, int iChange, int iRange, bool bUpdate)
 {
-	// Pushes a little culture from fort; used when fort is newly placed or acquired
+	// Pushes a little culture from improvements that generate it; used when improvement is newly placed or acquired
 	// to get potential nearby neutral plots. doImprovementCulture() gets regular culture.
-	// Removing culture on fort loss happens by natural decay or IDW
+	// Removing culture on loss happens by natural decay or IDW
 	if (0 == iChange || iRange < 0)
 	{
 		return;
@@ -6100,7 +6106,7 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 					GET_PLAYER(getOwner()).changeImprovementCount(getImprovementType(), 1);
 					if (GC.getImprovementInfo(getImprovementType()).getCulture() > 0)
 					{
-						pushCultureFromFort(getOwner(), 1, GC.getImprovementInfo(getImprovementType()).getCultureRange(), true);
+						pushCultureFromImprovement(getOwner(), 1, GC.getImprovementInfo(getImprovementType()).getCultureRange(), true);
 					}
 				}
 
@@ -6990,7 +6996,7 @@ void CvPlot::setImprovementType(ImprovementTypes eNewImprovement)
 				GET_PLAYER(getOwner()).changeImprovementCount(eNewImprovement, 1);
 				if (GC.getImprovementInfo(eNewImprovement).getCulture() > 0)
 				{
-					pushCultureFromFort(getOwner(), 1, GC.getImprovementInfo(eNewImprovement).getCultureRange(), true);
+					pushCultureFromImprovement(getOwner(), 1, GC.getImprovementInfo(eNewImprovement).getCultureRange(), true);
 				}
 			}
 		}

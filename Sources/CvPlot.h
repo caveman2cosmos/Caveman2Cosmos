@@ -288,7 +288,7 @@ public:
 	void changeDefenseDamage(int iChange);
 
 	// Super Forts *culture*
-	void pushCultureFromFort(PlayerTypes ePlayer, int iChange, int iRange, bool bUpdate);
+	void pushCultureFromImprovement(PlayerTypes ePlayer, int iChange, int iRange, bool bUpdate);
 	void doImprovementCulture(PlayerTypes ePlayer, const CvImprovementInfo& imp);
 
 	// Super Forts *canal* *choke*

@@ -2731,6 +2731,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 				{
 					if (eImprovement != NO_IMPROVEMENT)
 					{
+						// Anywhere builds only fail in non-team/neutral territory
 						if (improvement->isOutsideBorders())
 						{
 							if (pMissionPlot->getTeam() != pHeadSelectedUnit->getTeam() &&
@@ -2740,8 +2741,12 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 								szBuffer.append(gDLL->getText("TXT_KEY_ACTION_NEEDS_OUT_RIVAL_CULTURE_BORDER"));
 							}
 						}
-						else if (!pMissionPlot->isInCultureRangeOfCityByPlayer(pHeadSelectedUnit->getOwner()) ||
-								  pMissionPlot->getTeam() != pHeadSelectedUnit->getTeam())
+						// Fail when on territory owned by non-teammate
+						// OR when outside influence of tile owner; this enables building on valid territory of teammates.
+						// NOTE: This prevents workers removing forts when in territory influenced by teammate. Also does not allow
+						// 		building on a tile owned by teammate but only influenced by you (rare occurrance though for it not to be a fort tile
+						else if (pMissionPlot->getTeam() != pHeadSelectedUnit->getTeam()
+							 || !pMissionPlot->isInCultureRangeOfCityByPlayer(pMissionPlot->getOwner()))
 						{
 							szBuffer.append(NEWLINE);
 							szBuffer.append(gDLL->getText("TXT_KEY_ACTION_NEEDS_CULTURE_BORDER"));
