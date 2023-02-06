@@ -71,7 +71,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_PICKPOCKET</BuildingType>
+					<BuildingType>BUILDING_CRIME_PICKPOCKETING</BuildingType>
 					<iMinValue>125</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -226,7 +226,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_CHILDLABOR</BuildingType>
+					<BuildingType>BUILDING_CRIME_CHILD_LABOR</BuildingType>
 					<iMinValue>650</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -251,7 +251,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_CARBOMBING</BuildingType>
+					<BuildingType>BUILDING_CRIME_CAR_BOMBING</BuildingType>
 					<iMinValue>1125</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -266,7 +266,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_GUNRAMPAGE</BuildingType>
+					<BuildingType>BUILDING_CRIME_GUN_RAMPAGE</BuildingType>
 					<iMinValue>850</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -316,7 +316,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_ELDERABUSE</BuildingType>
+					<BuildingType>BUILDING_CRIME_ELDER_ABUSE</BuildingType>
 					<iMinValue>300</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -376,7 +376,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_ORGANTRADE</BuildingType>
+					<BuildingType>BUILDING_CRIME_ORGAN_TRAFFICKING</BuildingType>
 					<iMinValue>580</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -406,7 +406,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_TAXEVASION</BuildingType>
+					<BuildingType>BUILDING_CRIME_TAX_EVASION</BuildingType>
 					<iMinValue>290</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -621,32 +621,32 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_RIVER1</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_MINOR_RIVER_POLLUTION</BuildingType>
 					<iMinValue>550</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_RIVER2</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_MODERATE_RIVER_POLLUTION</BuildingType>
 					<iMinValue>1000</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_RIVER3</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_MAJOR_RIVER_POLLUTION</BuildingType>
 					<iMinValue>1500</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_COAST1</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_MINOR_COASTAL_POLLUTION</BuildingType>
 					<iMinValue>650</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_COAST2</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_MODERATE_COASTAL_POLLUTION</BuildingType>
 					<iMinValue>1100</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_COAST3</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_MAJOR_COASTAL_POLLUTION</BuildingType>
 					<iMinValue>1600</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -790,17 +790,17 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_OZONE1</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_MINOR_OZONE_DEPLETION</BuildingType>
 					<iMinValue>550</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_OZONE2</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_MODERATE_OZONE_DEPLETION</BuildingType>
 					<iMinValue>1100</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_OZONE3</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_MAJOR_OZONE_DEPLETION</BuildingType>
 					<iMinValue>1650</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -962,7 +962,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_DISEASE_SWINEFLU</BuildingType>
+					<BuildingType>BUILDING_DISEASE_SWINE_FLU</BuildingType>
 					<iMinValue>200</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>

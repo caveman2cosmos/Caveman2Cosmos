@@ -2309,7 +2309,7 @@
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_1</PrereqCorporation>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CORPORATION_1_HQ</BuildingType>
+				<BuildingType>BUILDING_HQ_CEREAL_MILLS</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -2366,7 +2366,7 @@
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_2</PrereqCorporation>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CORPORATION_2_HQ</BuildingType>
+				<BuildingType>BUILDING_HQ_SIDS_SUSHI_CO</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -2480,7 +2480,7 @@
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_4</PrereqCorporation>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CORPORATION_4_HQ</BuildingType>
+				<BuildingType>BUILDING_HQ_CREATIVE_CONSTRUCTIONS</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -2537,7 +2537,7 @@
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_5</PrereqCorporation>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CORPORATION_5_HQ</BuildingType>
+				<BuildingType>BUILDING_HQ_MINING_INC</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -2594,7 +2594,7 @@
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_6</PrereqCorporation>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CORPORATION_6_HQ</BuildingType>
+				<BuildingType>BUILDING_HQ_ALUMINUM_CO</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -2651,7 +2651,7 @@
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_7</PrereqCorporation>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CORPORATION_7_HQ</BuildingType>
+				<BuildingType>BUILDING_HQ_CIVILIZED_JEWELERS_INC</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -4419,7 +4419,7 @@
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_VOODOO</PrereqReligion>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_VOODOO_MONASTERY</BuildingType>
+				<BuildingType>BUILDING_HOUNFOR</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -4700,7 +4700,7 @@
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
+				<BuildingType>BUILDING_INVOCATION_HUT</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -4979,7 +4979,7 @@
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_MORMON</PrereqReligion>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_MORMON_MONASTERY</BuildingType>
+				<BuildingType>BUILDING_LDS_MISSIONARY_TRAINING_CENTRE</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -5211,7 +5211,7 @@
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_CAO_DAI</PrereqReligion>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CAODAI_MONASTERY</BuildingType>
+				<BuildingType>BUILDING_CAO_DAI_MONASTERY</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iMoves>2</iMoves>
@@ -14329,7 +14329,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_ELEPHANT_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_ELEPHANT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<TechTypes>
@@ -14444,7 +14444,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_ELEPHANT_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_ELEPHANT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<BonusType>BONUS_ELEPHANTS</BonusType>
@@ -14568,7 +14568,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_ELEPHANT_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_ELEPHANT</BuildingType>
 				<BuildingType>BUILDING_SIEGE_WEAPONS_WORKSHOP</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
@@ -14699,7 +14699,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_ELEPHANT_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_ELEPHANT</BuildingType>
 				<BuildingType>BUILDING_CANNON_FORGE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_CAVALRY_TACTICS</PrereqTech>
@@ -14831,7 +14831,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_ELEPHANT_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_ELEPHANT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_STEAM_POWER</PrereqTech>
 			<BonusType>BONUS_ELEPHANTS</BonusType>
@@ -33769,10 +33769,10 @@
 				<BuildingType>BUILDING_ORDINANCE_CLEAN_WATER_ACT</BuildingType>
 				<BuildingType>BUILDING_ORDINANCE_TIRE_RECYCLING_PROGRAM</BuildingType>
 				<BuildingType>BUILDING_ORDINANCE_COMMUTER_SHUTTLE_SERVICE</BuildingType>
-				<BuildingType>BUILDING_PROSTITUTION_BAN</BuildingType>
+				<BuildingType>BUILDING_ORDINANCE_PROSTITUTION_BAN</BuildingType>
 				<BuildingType>BUILDING_ORDINANCE_GAMBLING_BAN</BuildingType>
 				<BuildingType>BUILDING_ALCOHOL_PROHIBITION</BuildingType>
-				<BuildingType>BUILDING_DRUG_PROHIBITION</BuildingType>
+				<BuildingType>BUILDING_ORDINANCE_DRUG_PROHIBITION</BuildingType>
 				<BuildingType>BUILDING_SMOKING_PROHIBITION</BuildingType>
 				<BuildingType>BUILDING_NATIONAL_ALCOHOL_PROHIBITION</BuildingType>
 				<BuildingType>BUILDING_NATIONAL_DRUG_PROHIBITION</BuildingType>
@@ -36280,11 +36280,11 @@
 			</GreatPeoples>
 			<Buildings>
 				<BuildingType>BUILDING_THE_TEMPLE_OF_SOLOMON</BuildingType>
-				<BuildingType>BUILDING_CHRISTIAN_SHRINE</BuildingType>
+				<BuildingType>BUILDING_THE_CHURCH_OF_THE_NATIVITY</BuildingType>
 				<BuildingType>BUILDING_THE_MASJID_AL_HARAM</BuildingType>
 				<BuildingType>BUILDING_THE_KASHI_VISHWANATH</BuildingType>
 				<BuildingType>BUILDING_THE_MAHABODHI</BuildingType>
-				<BuildingType>BUILDING_CONFUCIAN_SHRINE</BuildingType>
+				<BuildingType>BUILDING_THE_KONG_MIAO</BuildingType>
 				<BuildingType>BUILDING_THE_DAI_MIAO</BuildingType>
 				<BuildingType>BUILDING_THE_STATUE_OF_ZEUS</BuildingType>
 				<BuildingType>BUILDING_PIR_E_SABZ</BuildingType>
@@ -36293,14 +36293,14 @@
 				<BuildingType>BUILDING_CORICANCHA</BuildingType>
 				<BuildingType>BUILDING_THE_ODINS_SANCTUARY</BuildingType>
 				<BuildingType>BUILDING_SHRINE_OF_BAB</BuildingType>
-				<BuildingType>BUILDING_CANAANISM_SHRINE</BuildingType>
+				<BuildingType>BUILDING_CANAANITE_SHRINE</BuildingType>
 				<BuildingType>BUILDING_GREAT_TEMPLE_TAY_NINH</BuildingType>
 				<BuildingType>BUILDING_NATURE_ANSWER</BuildingType>
 				<BuildingType>BUILDING_STATUE_OF_GOMATESHWARA</BuildingType>
 				<BuildingType>BUILDING_BABEL_TOWER</BuildingType>
 				<BuildingType>BUILDING_MORMAN_SHRINE</BuildingType>
 				<BuildingType>BUILDING_OLDOINYO_NGAI</BuildingType>
-				<BuildingType>BUILDING_RODNOVERY_SHRINE</BuildingType>
+				<BuildingType>BUILDING_ARKONA</BuildingType>
 				<BuildingType>BUILDING_SCIENTOLOGY_SHRINE</BuildingType>
 				<BuildingType>BUILDING_SPIRITS_ANSWER</BuildingType>
 				<BuildingType>BUILDING_THE_ISE_JINGU</BuildingType>
@@ -36632,7 +36632,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_HEROIC_EPIC</BuildingType>
 				<BuildingType>BUILDING_NATIONAL_EPIC</BuildingType>
-				<BuildingType>BUILDING_CORPORATION_7_HQ</BuildingType>
+				<BuildingType>BUILDING_HQ_CIVILIZED_JEWELERS_INC</BuildingType>
 				<BuildingType>BUILDING_CORPORATION_EMPCLOTH_HQ</BuildingType>
 				<BuildingType>BUILDING_CORPORATION_RED_HQ</BuildingType>
 				<BuildingType>BUILDING_TRADITION_ASTHETIC_APPRECIATION</BuildingType>
@@ -36898,7 +36898,7 @@
 			</GreatPeoples>
 			<Buildings>
 				<BuildingType>BUILDING_STANDARD_ETHANOL_HQ</BuildingType>
-				<BuildingType>BUILDING_CORPORATION_6_HQ</BuildingType>
+				<BuildingType>BUILDING_HQ_ALUMINUM_CO</BuildingType>
 				<BuildingType>BUILDING_THE_NATIONAL_STANDARD_OF_MEASUREMENT</BuildingType>
 				<BuildingType>BUILDING_ACADEMY</BuildingType>
 			</Buildings>
@@ -37119,8 +37119,8 @@
 			<Buildings>
 				<BuildingType>BUILDING_CENTRAL_BANK</BuildingType>
 				<BuildingType>BUILDING_WALL_STREET</BuildingType>
-				<BuildingType>BUILDING_CORPORATION_1_HQ</BuildingType>
-				<BuildingType>BUILDING_CORPORATION_2_HQ</BuildingType>
+				<BuildingType>BUILDING_HQ_CEREAL_MILLS</BuildingType>
+				<BuildingType>BUILDING_HQ_SIDS_SUSHI_CO</BuildingType>
 				<BuildingType>BUILDING_CORPORATION_ADVENTURE_HQ</BuildingType>
 				<BuildingType>BUILDING_CORPORATION_BURGERWORLD_HQ</BuildingType>
 				<BuildingType>BUILDING_CORPORATION_EWTRADE_HQ</BuildingType>
@@ -37352,8 +37352,8 @@
 				<BuildingType>BUILDING_TRADITION_WORK_ETHIC</BuildingType>
 				<BuildingType>BUILDING_IRONWORKS</BuildingType>
 				<BuildingType>BUILDING_PONT_DU_GARD_AQUEDUCT</BuildingType>
-				<BuildingType>BUILDING_CORPORATION_4_HQ</BuildingType>
-				<BuildingType>BUILDING_CORPORATION_5_HQ</BuildingType>
+				<BuildingType>BUILDING_HQ_CREATIVE_CONSTRUCTIONS</BuildingType>
+				<BuildingType>BUILDING_HQ_MINING_INC</BuildingType>
 				<BuildingType>BUILDING_CORPORATION_BULLSEYE_HQ</BuildingType>
 				<BuildingType>BUILDING_CORPORATION_MILEHIGH_HQ</BuildingType>
 				<BuildingType>BUILDING_THE_NATIONAL_STANDARD_OF_MEASUREMENT</BuildingType>
@@ -39276,7 +39276,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_AIRCRAFT_FACTORY</BuildingType>
+				<BuildingType>BUILDING_FACTORY_AIRCRAFT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_FLIGHT</PrereqTech>
@@ -39481,7 +39481,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_AIRCRAFT_FACTORY</BuildingType>
+				<BuildingType>BUILDING_FACTORY_AIRCRAFT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_ADVANCED_AVIATION</PrereqTech>
@@ -47374,7 +47374,7 @@
 				</GreatPeople>
 			</GreatPeoples>
 			<Buildings>
-				<BuildingType>BUILDING_GLADIATOR_SCHOOL</BuildingType>
+				<BuildingType>BUILDING_GLADIATORIAL_SCHOOL</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>

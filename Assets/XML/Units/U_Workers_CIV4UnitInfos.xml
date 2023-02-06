@@ -868,7 +868,7 @@
 				<BuildType>BUILD_SUBURBS</BuildType>
 			</Builds>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_ELEPHANT_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_ELEPHANT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
 			<ObsoleteTech>TECH_LOGISTICS</ObsoleteTech>
@@ -2856,7 +2856,7 @@
 			<StateReligion>RELIGION_VOODOO</StateReligion>
 			<PrereqReligion>RELIGION_VOODOO</PrereqReligion>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_VOODOO_MONASTERY</BuildingType>
+				<BuildingType>BUILDING_HOUNFOR</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>250</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>

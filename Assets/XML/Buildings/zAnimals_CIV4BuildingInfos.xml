@@ -46,7 +46,7 @@
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
+				<BuildingType>BUILDING_STORYTELLER</BuildingType>
 				<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
 			</PrereqOrBuildings>
@@ -1213,12 +1213,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HERD_ELEPHANT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EXOTIC_HERBIVORE</Type>
+			<Type>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EXOTIC_HERBIVORE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBIVORE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ENCLOSURE_EXOTIC_HERBIVORE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<ConstructCondition>
@@ -1279,7 +1279,7 @@
 			</TechCommerceModifiers>
 			<iAsset>2</iAsset>
 			<iConquestProb>25</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_EXOTIC_HERBIVORE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FEATHER_WORKER</Type>
@@ -1294,7 +1294,7 @@
 			<PrereqTech>TECH_BONE_WORKING</PrereqTech>
 			<PrereqOrBuildings> <!-- Sadly, bone working is well before taxonomy, so individual myths required -->
 				<BuildingType>BUILDING_FOLKLORE_AFRICANGREY</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_BARNOWL</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_BARN_OWL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BARREDOWL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BLUE_FOOTED_BOOBY</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_CASSOWARY</BuildingType>
@@ -2404,7 +2404,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_ENCLOSURE_PRIMATE</Type>
 			<Description>TXT_KEY_BUILDING_ENCLOSURE_PRIMATE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBIVORE_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_ENCLOSURE_EXOTIC_HERBIVORE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ENCLOSURE_PRIMATE</ArtDefineTag>
 			<PrereqTech>TECH_TRADE</PrereqTech>
@@ -2413,7 +2413,7 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_OLD_MAN</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_OLD_MAN_OF_THE_FOREST</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>306</iCost>
 			<MapCategoryTypes>
@@ -2520,7 +2520,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_ENCLOSURE_REPTILE</Type>
 			<Description>TXT_KEY_BUILDING_ENCLOSURE_REPTILE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBIVORE_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_ENCLOSURE_EXOTIC_HERBIVORE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ENCLOSURE_REPTILE</ArtDefineTag>
 			<PrereqTech>TECH_TRADE</PrereqTech>
@@ -2529,7 +2529,7 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_REPTILE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_REPTILE</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>306</iCost>
 			<MapCategoryTypes>
@@ -2556,7 +2556,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_ENCLOSURE_RODENT</Type>
 			<Description>TXT_KEY_BUILDING_ENCLOSURE_RODENT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBIVORE_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_ENCLOSURE_EXOTIC_HERBIVORE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ENCLOSURE_RODENT</ArtDefineTag>
 			<PrereqTech>TECH_TRADE</PrereqTech>
@@ -2727,7 +2727,7 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_E_SEALION</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SEA_LION</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>306</iCost>
 			<MapCategoryTypes>
@@ -3036,7 +3036,7 @@
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_E_SEALION</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SEA_LION</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WALRUS</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>306</iCost>

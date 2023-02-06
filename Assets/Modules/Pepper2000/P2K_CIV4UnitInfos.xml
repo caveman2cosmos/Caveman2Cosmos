@@ -60,7 +60,7 @@
 				<BuildType>BUILD_MARTIAN_MINE</BuildType>
 			</Builds>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CISLUNAR_STATION</BuildingType>
+				<BuildingType>BUILDING_SPACE_COLONY_CISLUNAR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
@@ -6970,7 +6970,7 @@
 			</UnitAIs>
 			<PrereqTech>TECH_PLANETARY_EXPLORATION</PrereqTech>
 			<Buildings>
-				<BuildingType>BUILDING_MARS_SCIENCE_LAB</BuildingType>
+				<BuildingType>BUILDING_MARS_SCIENCE_LABORATORY</BuildingType>
 				<BuildingType>BUILDING_MISSION_TO_MARS</BuildingType>
 			</Buildings>
 			<Actions>

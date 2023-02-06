@@ -281,7 +281,7 @@
 			</TechCommerceModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MORMON_MONASTERY</Type>
+			<Type>BUILDING_LDS_MISSIONARY_TRAINING_CENTRE</Type>
 			<TechCommerceModifiers>
 				<TechCommerceModifier>
 					<PrereqTech>TECH_CONSUMERISM</PrereqTech>

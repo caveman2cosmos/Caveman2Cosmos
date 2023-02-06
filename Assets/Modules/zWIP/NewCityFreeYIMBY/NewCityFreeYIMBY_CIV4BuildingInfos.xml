@@ -22,7 +22,7 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_GUILDS</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BASKETY_WORKSHOP</Type>
+			<Type>BUILDING_BASKET_MAKERS_WORKSHOP</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_ASSEMBLY_LINE</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>

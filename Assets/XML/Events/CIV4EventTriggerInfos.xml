@@ -320,23 +320,23 @@
 			<iWeight>200</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<Building>BUILDING_JEWISH_CATHEDRAL</Building>
+				<Building>BUILDING_JEWISH_SYNAGOGUE</Building>
 				<Building>BUILDING_CHRISTIAN_CATHEDRAL</Building>
 				<Building>BUILDING_ISLAMIC_CATHEDRAL</Building>
 				<Building>BUILDING_HINDU_MANDIR</Building>
 				<Building>BUILDING_BUDDHIST_CATHEDRAL</Building>
 				<Building>BUILDING_CONFUCIAN_CATHEDRAL</Building>
-				<Building>BUILDING_TAOIST_CATHEDRAL</Building>
+				<Building>BUILDING_TAOIST_PAGODA</Building>
 				<Building>BUILDING_HELLENIC_CATHEDRAL</Building>
 				<Building>BUILDING_ZOROASTRIAN_CATHEDRAL</Building>
 				<Building>BUILDING_MESOAMERICAN_CATHEDRAL</Building>
-				<Building>BUILDING_MORMON_CATHEDRAL</Building>
+				<Building>BUILDING_LDS_TEMPLE</Building>
 				<Building>BUILDING_SCIENTOLOGY_CATHEDRAL</Building>
-				<Building>BUILDING_SHINTO_CATHEDRAL</Building>
+				<Building>BUILDING_SHINTO_JINGU</Building>
 				<Building>BUILDING_SIKH_CATHEDRAL</Building>
-				<Building>BUILDING_VOODOO_CATHEDRAL</Building>
+				<Building>BUILDING_VOODOO_MARKET</Building>
 				<Building>BUILDING_JAIN_CATHEDRAL</Building>
-				<Building>BUILDING_CAODAI_CATHEDRAL</Building>
+				<Building>BUILDING_CAO_DAI_CATHEDRAL</Building>
 				<Building>BUILDING_CANAANISM_CATHEDRAL</Building>
 				<Building>BUILDING_BAHAI_DAR_BE_MEHR</Building>
 				<Building>BUILDING_ASATRU_CATHEDRAL</Building>
@@ -2853,11 +2853,11 @@
 				<Building>BUILDING_TAOIST_MONASTERY</Building>
 				<Building>BUILDING_HELLENIC_MONASTERY</Building>
 				<Building>BUILDING_ZOROASTRIAN_SHRINE</Building>
-				<Building>BUILDING_VOODOO_MONASTERY</Building>
+				<Building>BUILDING_HOUNFOR</Building>
 				<Building>BUILDING_SHINTO_MONASTERY</Building>
 				<Building>BUILDING_SCIENTOLOGY_MONASTERY</Building>
 				<Building>BUILDING_JAIN_MONASTERY</Building>
-				<Building>BUILDING_CAODAI_MONASTERY</Building>
+				<Building>BUILDING_CAO_DAI_MONASTERY</Building>
 				<Building>BUILDING_CANAANISM_MONASTERY</Building>
 				<Building>BUILDING_BAHAI_MONASTERY</Building>
 				<Building>BUILDING_ASATRU_MONASTERY</Building>
@@ -3732,7 +3732,7 @@
 				<Building>BUILDING_MESOAMERICAN_TEMPLE</Building>
 				<Building>BUILDING_JAIN_TEMPLE</Building>
 				<Building>BUILDING_CAO_DAI_TEMPLE</Building>
-				<Building>BUILDING_CANAANISM_TEMPLE</Building>
+				<Building>BUILDING_CANAANITE_TEMPLE</Building>
 				<Building>BUILDING_BAHAI_TEMPLE</Building>
 				<Building>BUILDING_ASATRU_TEMPLE</Building>
 				<Building>BUILDING_ANDEAN_TEMPLE</Building>
@@ -3861,21 +3861,21 @@
 			<iWeight>100</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<Building>BUILDING_JEWISH_CATHEDRAL</Building>
+				<Building>BUILDING_JEWISH_SYNAGOGUE</Building>
 				<Building>BUILDING_CHRISTIAN_CATHEDRAL</Building>
 				<Building>BUILDING_ISLAMIC_CATHEDRAL</Building>
 				<Building>BUILDING_HINDU_MANDIR</Building>
 				<Building>BUILDING_BUDDHIST_CATHEDRAL</Building>
 				<Building>BUILDING_CONFUCIAN_CATHEDRAL</Building>
-				<Building>BUILDING_TAOIST_CATHEDRAL</Building>
+				<Building>BUILDING_TAOIST_PAGODA</Building>
 				<Building>BUILDING_HELLENIC_CATHEDRAL</Building>
 				<Building>BUILDING_ZOROASTRIAN_CATHEDRAL</Building>
-				<Building>BUILDING_MORMON_CATHEDRAL</Building>
+				<Building>BUILDING_LDS_TEMPLE</Building>
 				<Building>BUILDING_SCIENTOLOGY_CATHEDRAL</Building>
-				<Building>BUILDING_SHINTO_CATHEDRAL</Building>
+				<Building>BUILDING_SHINTO_JINGU</Building>
 				<Building>BUILDING_SIKH_CATHEDRAL</Building>
 				<Building>BUILDING_JAIN_CATHEDRAL</Building>
-				<Building>BUILDING_CAODAI_CATHEDRAL</Building>
+				<Building>BUILDING_CAO_DAI_CATHEDRAL</Building>
 				<Building>BUILDING_CANAANISM_CATHEDRAL</Building>
 				<Building>BUILDING_BAHAI_DAR_BE_MEHR</Building>
 				<Building>BUILDING_ASATRU_CATHEDRAL</Building>
@@ -4017,7 +4017,7 @@
 			<iWeight>100</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<Building>BUILDING_COMPUTER_FACTORY</Building>
+				<Building>BUILDING_FACTORY_COMPUTERS</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -4830,12 +4830,12 @@
 				<Building>BUILDING_HELLENIC_MONASTERY</Building>
 				<Building>BUILDING_ZOROASTRIAN_SHRINE</Building>
 				<Building>BUILDING_EGYPT_MYTH_MONASTERY</Building>
-				<Building>BUILDING_VOODOO_MONASTERY</Building>
+				<Building>BUILDING_HOUNFOR</Building>
 				<Building>BUILDING_SHINTO_MONASTERY</Building>
 				<Building>BUILDING_SCIENTOLOGY_MONASTERY</Building>
 				<Building>BUILDING_JAIN_MONASTERY</Building>
 				<Building>BUILDING_NATURE_CIRCLE_OF_POWER</Building>
-				<Building>BUILDING_CAODAI_MONASTERY</Building>
+				<Building>BUILDING_CAO_DAI_MONASTERY</Building>
 				<Building>BUILDING_CANAANISM_MONASTERY</Building>
 				<Building>BUILDING_BAHAI_MONASTERY</Building>
 				<Building>BUILDING_ASATRU_MONASTERY</Building>

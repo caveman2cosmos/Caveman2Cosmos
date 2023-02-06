@@ -44,7 +44,7 @@
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CARCASS_PROVIDER</Type>
+			<Type>BUILDING_RESOURCES_CARCASS</Type>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HERD_MAMMOTH</BuildingType>
 				<BuildingType>BUILDING_HERD_ZEBRA</BuildingType>

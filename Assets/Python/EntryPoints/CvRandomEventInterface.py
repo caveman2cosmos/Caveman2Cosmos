@@ -2599,7 +2599,7 @@ def canTriggerWarships(argsList):
 
 def getHelpWarships1(argsList):
 	iNumUnits = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers()
-	iBuilding = GC.getInfoTypeForString("BUILDING_GREAT_LIGHTHOUSE")
+	iBuilding = GC.getInfoTypeForString("BUILDING_THE_GREAT_LIGHTHOUSE")
 	return TRNSLTR.getText("TXT_KEY_EVENT_WARSHIPS_HELP_1", (iNumUnits, GC.getBuildingInfo(iBuilding).getTextKey()))
 
 def canTriggerWarshipsDone(argsList):
@@ -2618,7 +2618,7 @@ def canApplyWarshipsDone2(argsList):
   data = argsList[1]
   player = GC.getPlayer(data.ePlayer)
 
-  iBuilding = GC.getInfoTypeForString("BUILDING_GREAT_LIGHTHOUSE")
+  iBuilding = GC.getInfoTypeForString("BUILDING_THE_GREAT_LIGHTHOUSE")
   if player.getBuildingCountWithUpgrades(iBuilding) == 0:
     return False
 

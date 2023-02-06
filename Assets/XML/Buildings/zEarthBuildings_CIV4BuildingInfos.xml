@@ -605,7 +605,7 @@
 			<iCost>57510</iCost>
 			<FreeBuilding>BUILDING_EFFECT_MULTIVERSAL_ECONOMY</FreeBuilding>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_UNIVERSAL_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_UNIVERSAL_ECONOMY</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
@@ -634,7 +634,7 @@
 			<PrereqTech>TECH_CONTROLLED_VACUUM_COLLAPSE</PrereqTech>
 			<iCost>22755</iCost>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_UNIVERSAL_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_UNIVERSAL_ECONOMY</BuildingType>
 			</PrereqInCityBuildings>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -754,13 +754,13 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DIGITAL_IDENTITY</Type>
+			<Type>BUILDING_HUMAN_MOD_DIGITAL_IDENTITY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_DIGITAL_IDENTITY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DIGITAL_IDENTITY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_DIGITAL_IDENTITY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_DIGITAL_IDENTITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DIGITAL_IDENTITY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_DIGITAL_IDENTITY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1076,13 +1076,13 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HIGH_DIMENSIONAL</Type>
+			<Type>BUILDING_HUMAN_MOD_HIGH_DIMENSIONAL</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_HIGH_DIMENSIONAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HIGH_DIMENSIONAL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_HIGH_DIMENSIONAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_HIGH_DIMENSIONAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_HIGH_DIMENSIONAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_HIGH_DIMENSIONAL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1483,11 +1483,11 @@
 			</CommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_LUNA_RING_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_LUNA_RING_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LUNA_RING_EFFECT_PEDIA</Civilopedia>
+			<Type>BUILDING_EFFECT_LUNA_RING</Type>
+			<Description>TXT_KEY_BUILDING_EFFECT_LUNA_RING</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EFFECT_LUNA_RING_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_LUNA_RING_EFFECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EFFECT_LUNA_RING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1553,13 +1553,13 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MARS_SCIENCE_LAB</Type>
+			<Type>BUILDING_MARS_SCIENCE_LABORATORY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_MARS_SCIENCE_LAB</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MARS_SCIENCE_LAB_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_MARS_SCIENCE_LABORATORY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MARS_SCIENCE_LABORATORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MARS_SCIENCE_LAB</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MARS_SCIENCE_LABORATORY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MARS_SCIENCE_LAB</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -2810,7 +2810,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COSMIC_ENGINEERING</PrereqTech>
 			<iCost>39510</iCost>
-			<FreeBuilding>BUILDING_UNIVERSAL_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_EFFECT_UNIVERSAL_ECONOMY</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_EFFECT_GALACTIC_ECONOMY</BuildingType>
 			</PrereqInCityBuildings>
@@ -2827,11 +2827,11 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_UNIVERSAL_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_UNIVERSAL_EFFECT</Description>
+			<Type>BUILDING_EFFECT_UNIVERSAL_ECONOMY</Type>
+			<Description>TXT_KEY_BUILDING_EFFECT_UNIVERSAL_ECONOMY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_UNIVERSAL_ECONOMY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSAL_EFFECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EFFECT_UNIVERSAL_ECONOMY</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>

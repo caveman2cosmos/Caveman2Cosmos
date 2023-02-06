@@ -9,7 +9,7 @@
 		<Russian>Ïðîäóêòû èç çëàêîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CORPORATION_1_HQ</Tag>
+		<Tag>TXT_KEY_BUILDING_HQ_CEREAL_MILLS</Tag>
 		<English>HQ - Cereal Mills</English>
 		<Italian>QG di Cereali del Mulino</Italian>
 		<Russian>Продукты из злаков</Russian>
@@ -29,7 +29,7 @@
 		<Russian>Суши от Сида</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CORPORATION_2_HQ</Tag>
+		<Tag>TXT_KEY_BUILDING_HQ_SIDS_SUSHI_CO</Tag>
 		<English>HQ - Sid's Sushi Co</English>
 		<Italian>QG di Sid's Sushi Co.</Italian>
 		<Russian>Суши от Сида</Russian>
@@ -75,7 +75,7 @@
 		<Russian>Êðåàòèâñòðîé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CORPORATION_4_HQ</Tag>
+		<Tag>TXT_KEY_BUILDING_HQ_CREATIVE_CONSTRUCTIONS</Tag>
 		<English>HQ - Creative Constructions</English>
 		<Italian>QG di Costruzioni Creative</Italian>
 		<Russian>Креативстрой</Russian>
@@ -97,7 +97,7 @@
 		<Russian>Ãîðíûå ðåñóðñû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CORPORATION_5_HQ</Tag>
+		<Tag>TXT_KEY_BUILDING_HQ_MINING_INC</Tag>
 		<English>HQ - Mining Inc</English>
 		<Italian>QG dell'Ente Estrazioni Minerarie</Italian>
 		<Russian>Горные ресурсы</Russian>
@@ -120,7 +120,7 @@
 		<Russian>Ïðîìàëþìèíèé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CORPORATION_6_HQ</Tag>
+		<Tag>TXT_KEY_BUILDING_HQ_ALUMINUM_CO</Tag>
 		<English>HQ - Aluminum Co</English>
 		<Italian>QG dell'Ente Alluminio</Italian>
 		<Russian>Промалюминий</Russian>
@@ -143,7 +143,7 @@
 		<Russian>Ìèðîâûå þâåëèðû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CORPORATION_7_HQ</Tag>
+		<Tag>TXT_KEY_BUILDING_HQ_CIVILIZED_JEWELERS_INC</Tag>
 		<English>HQ - Civilized Jewelers Inc</English>
 		<Italian>QG di Gioiellieri Uniti</Italian>
 		<Russian>Мировые ювелиры</Russian>

@@ -4137,7 +4137,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_GREAT_LIGHTHOUSE</BuildingType>
+					<BuildingType>BUILDING_THE_GREAT_LIGHTHOUSE</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -4974,7 +4974,7 @@
 			</ExtraFreeBonuses>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_JSBACH_CATHEDRAL</BuildingType>
+					<BuildingType>BUILDING_J_S_BACHS_CATHEDRAL</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>

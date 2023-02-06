@@ -534,11 +534,11 @@
 			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_BUDDHIST</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CANAANISM_SHRINE</Type>
-			<Description>TXT_KEY_BUILDING_CANAANISM_SHRINE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CANAANISM_SHRINE_PEDIA</Civilopedia>
+			<Type>BUILDING_CANAANITE_SHRINE</Type>
+			<Description>TXT_KEY_BUILDING_CANAANITE_SHRINE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CANAANITE_SHRINE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CANAANISM_SHRINE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CANAANITE_SHRINE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_CANAANISM</MovieDefineTag>
 			<HolyCity>RELIGION_CANAANISM</HolyCity>
 			<ReligionType>RELIGION_CANAANISM</ReligionType>
@@ -739,12 +739,12 @@
 			<MovieDefineTag>ART_DEF_MOVIE_CAVE_DWELLING</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CHRISTIAN_SHRINE</Type>
+			<Type>BUILDING_THE_CHURCH_OF_THE_NATIVITY</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CHRISTIAN_SHRINE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CHRISTIAN_SHRINE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_THE_CHURCH_OF_THE_NATIVITY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_THE_CHURCH_OF_THE_NATIVITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ConstructSound>AS2D_BUILD_CHRISTIAN</ConstructSound>
 			<ReligionType>RELIGION_CHRISTIANITY</ReligionType>
@@ -778,7 +778,7 @@
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<ArtDefineTag>ART_DEF_BUILDING_CHRISTIAN_SHRINE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_THE_CHURCH_OF_THE_NATIVITY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_CHRISTIAN</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -895,12 +895,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CIVIC_DEMOCRACY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CIVICEGALITARIAN</Type>
+			<Type>BUILDING_CIVIC_EGALITARIAN</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CIVICEGALITARIAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CIVICEGALITARIAN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CIVIC_EGALITARIAN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CIVIC_EGALITARIAN_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -923,7 +923,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_CIVICEGALITARIAN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CIVIC_EGALITARIAN</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CIVIC_FEUDAL</Type>
@@ -1019,12 +1019,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CIVIC_MARTIAL_LAW</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CIVICMERCENARIES</Type>
+			<Type>BUILDING_CIVIC_MERCENARIES</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CIVICMERCENARIES</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CIVICMERCENARIES_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CIVIC_MERCENARIES</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CIVIC_MERCENARIES_PEDIA</Civilopedia>
 			<PrereqAndCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_MERCENARIES</CivicOption>
@@ -1040,7 +1040,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_CIVICMERCENARIES</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CIVIC_MERCENARIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CIVIC_MILITIA</Type>
@@ -1068,12 +1068,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CIVIC_MILITIA</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CIVICMINDCONTROL</Type>
+			<Type>BUILDING_CIVIC_MIND_CONTROL</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CIVICMINDCONTROL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CIVICMINDCONTROL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CIVIC_MIND_CONTROL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CIVIC_MIND_CONTROL_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -1096,7 +1096,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_CIVICMINDCONTROL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CIVIC_MIND_CONTROL</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CIVICPOSTSCARCITY</Type>
@@ -1214,7 +1214,7 @@
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_DEPARTMENT_WATER</BuildingType>
+				<BuildingType>BUILDING_DEPARTMENT_OF_WATER</BuildingType>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
@@ -1313,12 +1313,12 @@
 			<MovieDefineTag>ART_DEF_MOVIE_COMMERCIAL_ACHIEVEMENT</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CONFUCIAN_SHRINE</Type>
+			<Type>BUILDING_THE_KONG_MIAO</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CONFUCIAN_SHRINE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CONFUCIAN_SHRINE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_THE_KONG_MIAO</Description>
+			<Civilopedia>TXT_KEY_BUILDING_THE_KONG_MIAO_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ConstructSound>AS2D_BUILD_CONFUCIAN</ConstructSound>
 			<ReligionType>RELIGION_CONFUCIANISM</ReligionType>
@@ -1357,17 +1357,17 @@
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<ArtDefineTag>ART_DEF_BUILDING_CONFUCIAN_SHRINE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_THE_KONG_MIAO</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_CONFUCIAN</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CORPORATION_1_HQ</Type>
+			<Type>BUILDING_HQ_CEREAL_MILLS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_CORPORATION_1_HQ</Description>
+			<Description>TXT_KEY_BUILDING_HQ_CEREAL_MILLS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_1_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_BANK</ConstructSound>
@@ -1399,13 +1399,13 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_1</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CORPORATION_2_HQ</Type>
+			<Type>BUILDING_HQ_SIDS_SUSHI_CO</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_CORPORATION_2_HQ</Description>
+			<Description>TXT_KEY_BUILDING_HQ_SIDS_SUSHI_CO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_2_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_BANK</ConstructSound>
@@ -1478,13 +1478,13 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_3</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CORPORATION_4_HQ</Type>
+			<Type>BUILDING_HQ_CREATIVE_CONSTRUCTIONS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_CORPORATION_4_HQ</Description>
+			<Description>TXT_KEY_BUILDING_HQ_CREATIVE_CONSTRUCTIONS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_4_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_BANK</ConstructSound>
@@ -1516,13 +1516,13 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_4</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CORPORATION_5_HQ</Type>
+			<Type>BUILDING_HQ_MINING_INC</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_CORPORATION_5_HQ</Description>
+			<Description>TXT_KEY_BUILDING_HQ_MINING_INC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_5_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_BANK</ConstructSound>
@@ -1554,13 +1554,13 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_5</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CORPORATION_6_HQ</Type>
+			<Type>BUILDING_HQ_ALUMINUM_CO</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_CORPORATION_6_HQ</Description>
+			<Description>TXT_KEY_BUILDING_HQ_ALUMINUM_CO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_6_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_BANK</ConstructSound>
@@ -1592,13 +1592,13 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_6</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CORPORATION_7_HQ</Type>
+			<Type>BUILDING_HQ_CIVILIZED_JEWELERS_INC</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_CORPORATION_7_HQ</Description>
+			<Description>TXT_KEY_BUILDING_HQ_CIVILIZED_JEWELERS_INC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_7_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_BANK</ConstructSound>
@@ -2652,12 +2652,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CRIME_CARBOMBING</Type>
+			<Type>BUILDING_CRIME_CAR_BOMBING</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CRIME_CARBOMBING</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CRIME_CARBOMBING_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CRIME_CAR_BOMBING</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CRIME_CAR_BOMBING_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<Bonus>BONUS_AUTOMOBILES</Bonus>
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
@@ -2722,12 +2722,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CRIME_CHILDLABOR</Type>
+			<Type>BUILDING_CRIME_CHILD_LABOR</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CRIME_CHILDLABOR</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CRIME_CHILDLABOR_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CRIME_CHILD_LABOR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CRIME_CHILD_LABOR_PEDIA</Civilopedia>
 			<PrereqTech>TECH_LABOR_UNIONS</PrereqTech>
 			<iHealth>-1</iHealth>
 			<iHappiness>-2</iHappiness>
@@ -2982,12 +2982,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CRIME_ELDERABUSE</Type>
+			<Type>BUILDING_CRIME_ELDER_ABUSE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CRIME_ELDERABUSE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CRIME_ELDERABUSE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CRIME_ELDER_ABUSE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CRIME_ELDER_ABUSE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MODERN_HEALTH_CARE</PrereqTech>
 			<iHealth>-3</iHealth>
 			<iHappiness>-1</iHappiness>
@@ -3306,12 +3306,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CRIME_GUNRAMPAGE</Type>
+			<Type>BUILDING_CRIME_GUN_RAMPAGE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CRIME_GUNRAMPAGE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CRIME_GUNRAMPAGE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CRIME_GUN_RAMPAGE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CRIME_GUN_RAMPAGE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SEMI_AUTOMATIC_WEAPONS</PrereqTech>
 			<Bonus>BONUS_FIREARMS</Bonus>
 			<iHealth>-3</iHealth>
@@ -4007,12 +4007,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CRIME_ORGANTRADE</Type>
+			<Type>BUILDING_CRIME_ORGAN_TRAFFICKING</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CRIME_ORGANTRADE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CRIME_ORGANTRADE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CRIME_ORGAN_TRAFFICKING</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CRIME_ORGAN_TRAFFICKING_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MODERN_HEALTH_CARE</PrereqTech>
 			<iHealth>-4</iHealth>
 			<iHappiness>-1</iHappiness>
@@ -4036,12 +4036,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CRIME_PICKPOCKET</Type>
+			<Type>BUILDING_CRIME_PICKPOCKETING</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CRIME_PICKPOCKET</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CRIME_PICKPOCKET_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CRIME_PICKPOCKETING</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CRIME_PICKPOCKETING_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CURRENCY</PrereqTech>
 			<iHappiness>-1</iHappiness>
 			<CommerceChanges>
@@ -4517,12 +4517,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CRIME_TAXEVASION</Type>
+			<Type>BUILDING_CRIME_TAX_EVASION</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CRIME_TAXEVASION</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CRIME_TAXEVASION_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CRIME_TAX_EVASION</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CRIME_TAX_EVASION_PEDIA</Civilopedia>
 			<PrereqTech>TECH_USURY</PrereqTech>
 			<iHappiness>-2</iHappiness>
 			<CommerceChanges>
@@ -5289,11 +5289,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYDISEASE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DISEASE_SWINEFLU</Type>
+			<Type>BUILDING_DISEASE_SWINE_FLU</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DISEASE_SWINEFLU</Description>
+			<Description>TXT_KEY_BUILDING_DISEASE_SWINE_FLU</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DISEASE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
 			<Bonus>BONUS_PIG</Bonus>
@@ -5367,19 +5367,19 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DISNEYLAND</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DRUG_PROHIBITION</Type>
+			<Type>BUILDING_ORDINANCE_DRUG_PROHIBITION</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DRUG_PROHIBITION</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DRUG_PROHIBITION_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ORDINANCE_DRUG_PROHIBITION</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ORDINANCE_DRUG_PROHIBITION_PEDIA</Civilopedia>
 			<PrereqTech>TECH_COUNTERCULTURE</PrereqTech>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUG_PROHIBITION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ORDINANCE_DRUG_PROHIBITION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NATURE_ANSWER</Type>
@@ -11445,7 +11445,7 @@
 				<BuildingType>BUILDING_HELLENIC_TEMPLE</BuildingType>
 				<BuildingType>BUILDING_EGYPT_MYTH_TEMPLE</BuildingType>
 				<BuildingType>BUILDING_NATURE_ALTAR</BuildingType>
-				<BuildingType>BUILDING_CANAANISM_TEMPLE</BuildingType>
+				<BuildingType>BUILDING_CANAANITE_TEMPLE</BuildingType>
 			</PrereqOrBuildings>
 			<FreeBuilding>BUILDING_BELIEF_RESURRECTION</FreeBuilding>
 			<iAsset>10</iAsset>
@@ -11466,7 +11466,7 @@
 				<BuildingType>BUILDING_SUPREME_COURT</BuildingType>
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
-			<FreeBuilding>BUILDING_DRUG_PROHIBITION</FreeBuilding>
+			<FreeBuilding>BUILDING_ORDINANCE_DRUG_PROHIBITION</FreeBuilding>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_DRUG_PROHIBITION</ArtDefineTag>
@@ -11502,7 +11502,7 @@
 				<BuildingType>BUILDING_SUPREME_COURT</BuildingType>
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
-			<FreeBuilding>BUILDING_PROSTITUTION_BAN</FreeBuilding>
+			<FreeBuilding>BUILDING_ORDINANCE_PROSTITUTION_BAN</FreeBuilding>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_PROSTITUTION_BAN</ArtDefineTag>
@@ -11764,11 +11764,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PESTS_BED_BUGS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PEST_COCKROACHES</Type>
+			<Type>BUILDING_PESTS_COCKROACHES</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_PEST_COCKROACHES</Description>
+			<Description>TXT_KEY_BUILDING_PESTS_COCKROACHES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
@@ -11790,7 +11790,7 @@
 			<iConquestProb>100</iConquestProb>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_PEST_COCKROACHES</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PESTS_COCKROACHES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PESTS_CROWS</Type>
@@ -12351,11 +12351,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_POLLUTION_COAST1</Type>
+			<Type>BUILDING_POLLUTION_MINOR_COASTAL_POLLUTION</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_POLLUTION_COAST1</Description>
+			<Description>TXT_KEY_BUILDING_POLLUTION_MINOR_COASTAL_POLLUTION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WATER_POLLUTION_PEDIA</Civilopedia>
 			<bWater>1</bWater>
 			<iHappiness>-1</iHappiness>
@@ -12387,11 +12387,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYWATERPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_POLLUTION_COAST2</Type>
+			<Type>BUILDING_POLLUTION_MODERATE_COASTAL_POLLUTION</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_POLLUTION_COAST2</Description>
+			<Description>TXT_KEY_BUILDING_POLLUTION_MODERATE_COASTAL_POLLUTION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WATER_POLLUTION_PEDIA</Civilopedia>
 			<bWater>1</bWater>
 			<iHealth>-2</iHealth>
@@ -12423,11 +12423,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYWATERPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_POLLUTION_COAST3</Type>
+			<Type>BUILDING_POLLUTION_MAJOR_COASTAL_POLLUTION</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_POLLUTION_COAST3</Description>
+			<Description>TXT_KEY_BUILDING_POLLUTION_MAJOR_COASTAL_POLLUTION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WATER_POLLUTION_PEDIA</Civilopedia>
 			<bWater>1</bWater>
 			<iHealth>-4</iHealth>
@@ -12635,11 +12635,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYWATERPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_POLLUTION_OZONE1</Type>
+			<Type>BUILDING_POLLUTION_MINOR_OZONE_DEPLETION</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_POLLUTION_OZONE1</Description>
+			<Description>TXT_KEY_BUILDING_POLLUTION_MINOR_OZONE_DEPLETION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AIR_POLLUTION_PEDIA</Civilopedia>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_OZONE_GENERATOR</BuildingType>
@@ -12668,11 +12668,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_POLLUTION_OZONE2</Type>
+			<Type>BUILDING_POLLUTION_MODERATE_OZONE_DEPLETION</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_POLLUTION_OZONE2</Description>
+			<Description>TXT_KEY_BUILDING_POLLUTION_MODERATE_OZONE_DEPLETION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AIR_POLLUTION_PEDIA</Civilopedia>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_OZONE_GENERATOR</BuildingType>
@@ -12701,11 +12701,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_POLLUTION_OZONE3</Type>
+			<Type>BUILDING_POLLUTION_MAJOR_OZONE_DEPLETION</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_POLLUTION_OZONE3</Description>
+			<Description>TXT_KEY_BUILDING_POLLUTION_MAJOR_OZONE_DEPLETION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AIR_POLLUTION_PEDIA</Civilopedia>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_OZONE_GENERATOR</BuildingType>
@@ -12798,11 +12798,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYWATERPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_POLLUTION_RIVER1</Type>
+			<Type>BUILDING_POLLUTION_MINOR_RIVER_POLLUTION</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_POLLUTION_RIVER1</Description>
+			<Description>TXT_KEY_BUILDING_POLLUTION_MINOR_RIVER_POLLUTION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WATER_POLLUTION_PEDIA</Civilopedia>
 			<bRiver>1</bRiver>
 			<iHappiness>-1</iHappiness>
@@ -12829,11 +12829,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYWATERPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_POLLUTION_RIVER2</Type>
+			<Type>BUILDING_POLLUTION_MODERATE_RIVER_POLLUTION</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_POLLUTION_RIVER2</Description>
+			<Description>TXT_KEY_BUILDING_POLLUTION_MODERATE_RIVER_POLLUTION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WATER_POLLUTION_PEDIA</Civilopedia>
 			<bRiver>1</bRiver>
 			<iHealth>-2</iHealth>
@@ -12860,11 +12860,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYWATERPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_POLLUTION_RIVER3</Type>
+			<Type>BUILDING_POLLUTION_MAJOR_RIVER_POLLUTION</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_POLLUTION_RIVER3</Description>
+			<Description>TXT_KEY_BUILDING_POLLUTION_MAJOR_RIVER_POLLUTION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WATER_POLLUTION_PEDIA</Civilopedia>
 			<bRiver>1</bRiver>
 			<iHealth>-5</iHealth>
@@ -13060,12 +13060,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYWATERPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PROSTITUTION_BAN</Type>
+			<Type>BUILDING_ORDINANCE_PROSTITUTION_BAN</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_PROSTITUTION_BAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_PROSTITUTION_BAN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ORDINANCE_PROSTITUTION_BAN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ORDINANCE_PROSTITUTION_BAN_PEDIA</Civilopedia>
 			<PrereqTech>TECH_JURISPRUDENCE</PrereqTech>
 			<iHealth>2</iHealth>
 			<CommerceChanges>
@@ -13073,7 +13073,7 @@
 			</CommerceChanges>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_PROSTITUTION_BAN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ORDINANCE_PROSTITUTION_BAN</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOUSING_PUEBLOS</Type>
@@ -13148,11 +13148,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_RAIN_DANCE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_RODNOVERY_SHRINE</Type>
-			<Description>TXT_KEY_BUILDING_RODNOVERY_SHRINE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_RODNOVERY_SHRINE_PEDIA</Civilopedia>
+			<Type>BUILDING_ARKONA</Type>
+			<Description>TXT_KEY_BUILDING_ARKONA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ARKONA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_RODNOVERY_SHRINE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ARKONA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_RODNOVERY_SHRINE</MovieDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -14007,7 +14007,7 @@
 			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
 			<PrereqTech>TECH_SLAVERY</PrereqTech>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
+				<BuildingType>BUILDING_STORYTELLER</BuildingType>
 				<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
 				<BuildingType>BUILDING_DANCE_HUT</BuildingType>
@@ -15516,7 +15516,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_BLACK_HAT_HIDEOUT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_COMMUNICATION_NETWORKS</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_WIRELESS_NETWORK</BuildingType>
+				<BuildingType>BUILDING_WIRELESS_NETWORKS</BuildingType>
 			</PrereqInCityBuildings>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>

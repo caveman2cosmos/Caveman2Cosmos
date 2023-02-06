@@ -504,7 +504,7 @@
 		<Polish>Oswajanie słoni (lecz nie udomowienie wciąż łapano dziko żyjące osobniki) rozpoczęło się około 4000 lat temu w dolinie Indusu. Pierwszym oswojonym gatunkiem słonia był słoń indyjski (Elephas maximus), którego używano do prac w polu. Pierwsze użycie tych zwierząt do celów militarnych, wspomniane w zapisanych w języku wedyjskim hymnach, datuje się na rok 1100 p.n.e., a miało miejsce w północnych Indiach.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_EXOTIC_HERBIVORE</Tag>
+		<Tag>TXT_KEY_BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</Tag>
 		<English>Enclosure - Exotic Herbivore</English>
 		<French>Enclos - Herbivores exotiques</French>
 		<Italian>Gabbia degli erbivori esotici</Italian>
@@ -512,7 +512,7 @@
 		<Russian>Êëåòêè ñ êîïûòíûìè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_EXOTIC_HERBIVORE_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_ENCLOSURE_EXOTIC_HERBIVORE_PEDIA</Tag>
 		<English>A cage used for wild subdued animals.</English>
 		<Italian>Una gabbia in cui vengono rinchiusi gli erbivori esotici addomesticati.</Italian>
 		<Polish>Klatka używana do przetrzymywania dzikich, poskromionych zwierząt.</Polish>
@@ -841,7 +841,7 @@
 		<Russian>Ìèô î áðàç. òàïèðå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_BUFFALO</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_CAPE_BUFFALO</Tag>
 		<English>Folklore - Cape Buffalo</English>
 		<French>Mythe du Buffle</French>
 		<German>
@@ -1355,7 +1355,7 @@
 		<Russian>Ìèô î êèò. àëëèãàòîð</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_GAZELLE</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_THOMSONS_GAZELLE</Tag>
 		<English>Folklore - Thomson's Gazelle</English>
 		<French>Mythe de la Gazelle de Thomson</French>
 		<German>
@@ -1736,7 +1736,7 @@
 		<Russian>Ìèô î Êðàêåíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_LANDFORM_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_E_LANDFORM_PEDIA</Tag>
 		<English>Folklore associated with formations found in the landscape.</English>
 		<French>Les Mythes associés aux paysages et éléments trouvés dans la nature.</French>
 		<German>Mythen in Zusammenhang mit landschaftlichen Formationen</German>
@@ -1917,7 +1917,7 @@
 		<Russian>Ìèô î ñóì÷àòîì</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_MERMAID</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_E_MERMAID</Tag>
 		<English>Folklore (E) - Mermaid</English>
 		<French>Mythe des Sirènes (E)</French>
 		<German>
@@ -2078,7 +2078,7 @@
 		<Russian>Ìèô îá îêàïè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_OLD_MAN</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_OLD_MAN_OF_THE_FOREST</Tag>
 		<English>Folklore (T) - Old Man of the Forest</English>
 		<French>Mythe de l'Ancien de la Forêt (T)</French>
 		<German>
@@ -2264,7 +2264,7 @@
 		<Russian>Ìèô î ïàâëèíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_PENGUIN</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_PENGUIN</Tag>
 		<English>Folklore (T) - Penguin</English>
 		<French>Mythe du Pingouin (T)</French>
 		<German>
@@ -2288,7 +2288,7 @@
 		<Russian>Ìèô î ôàçàíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_PHOENIX</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_E_PHOENIX</Tag>
 		<English>Folklore (E) - Phoenix</English>
 		<French>Mythe du Phoenix (E)</French>
 		<German>
@@ -2484,7 +2484,7 @@
 		<Russian>Ìèô î ðèô. àêóëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_REPTILE</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_REPTILE</Tag>
 		<English>Folklore (T) - Reptile</English>
 		<French>Mythe - Reptiles (T)</French>
 		<German>
@@ -2630,7 +2630,7 @@
 		<Russian>Ìèô î ìîðå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_E_SEALION</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SEA_LION</Tag>
 		<English>Folklore - Sea Lion</English>
 		<French>Mythe du Lion des mers</French>
 		<German>
@@ -2916,7 +2916,7 @@
 		<Russian>Ìèô îá èíäåéêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_UNICORN</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_E_UNICORN</Tag>
 		<English>Folklore (E) - Unicorn</English>
 		<French>Mythe de la Licorne (E)</French>
 		<German>
@@ -2965,7 +2965,7 @@
 		<Russian>Ìèô î ãðèôå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_WALLABY</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_RING_TAILED_WALLABY</Tag>
 		<English>Folklore - Ring-tailed Wallaby</English>
 		<German>
 			<Text>Mythos des Wallabys:Mythos des Wallabys:Mythos des Wallabys:Mythos des Wallabys</Text>

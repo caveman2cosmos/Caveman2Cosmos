@@ -3542,7 +3542,7 @@
 			<Bonus>BONUS_BONE</Bonus>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
-				<BuildingType>BUILDING_INDIAN_MAUSOLEUM</BuildingType>
+				<BuildingType>BUILDING_MAUSOLEUM</BuildingType>
 				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>2640</iCost>
@@ -4269,13 +4269,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CLEOPATRA_NEEDLE</Type>
+			<Type>BUILDING_CLEOPATRAS_NEEDLE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_CLEOPATRA_NEEDLE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CLEOPATRA_NEEDLE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CLEOPATRA_NEEDLE_HELP</Help>
+			<Description>TXT_KEY_BUILDING_CLEOPATRAS_NEEDLE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CLEOPATRAS_NEEDLE_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_CLEOPATRAS_NEEDLE_HELP</Help>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CLEOPATRA_NEEDLE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CLEOPATRAS_NEEDLE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CLEOPATRA_NEEDLE</MovieDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -5584,7 +5584,7 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_JEWISH_CATHEDRAL</BuildingType>
+					<BuildingType>BUILDING_JEWISH_SYNAGOGUE</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -5608,7 +5608,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_TAOIST_CATHEDRAL</BuildingType>
+					<BuildingType>BUILDING_TAOIST_PAGODA</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -5628,7 +5628,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_VOODOO_CATHEDRAL</BuildingType>
+					<BuildingType>BUILDING_VOODOO_MARKET</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -5648,7 +5648,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_SHINTO_CATHEDRAL</BuildingType>
+					<BuildingType>BUILDING_SHINTO_JINGU</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -5676,7 +5676,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_CAODAI_CATHEDRAL</BuildingType>
+					<BuildingType>BUILDING_CAO_DAI_CATHEDRAL</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -5962,7 +5962,7 @@
 			</YieldChanges>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_MEGATOWER_OFFICE</BuildingType>
+					<BuildingType>BUILDING_MEGATOWER_OFFICE_LEVEL</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
@@ -9036,15 +9036,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GREAT_LIGHTHOUSE</Type>
+			<Type>BUILDING_THE_GREAT_LIGHTHOUSE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GREAT_LIGHTHOUSE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GREAT_LIGHTHOUSE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_THE_GREAT_LIGHTHOUSE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_THE_GREAT_LIGHTHOUSE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GREAT_LIGHTHOUSE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_THE_GREAT_LIGHTHOUSE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GREAT_LIGHTHOUSE</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_LIGHTHOUSE</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -10721,7 +10721,7 @@
 			<iCost>24870</iCost>
 			<FreeBuilding>BUILDING_VACTRAIN_TERMINAL</FreeBuilding>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MEGATOWER_OFFICE</BuildingType>
+				<BuildingType>BUILDING_MEGATOWER_OFFICE_LEVEL</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_VACTRAIN_TERMINAL</BuildingType>
@@ -11245,13 +11245,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_JSBACH_CATHEDRAL</Type>
+			<Type>BUILDING_J_S_BACHS_CATHEDRAL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_JSBACH_CATHEDRAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_JSBACH_CATHEDRAL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_J_S_BACHS_CATHEDRAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_J_S_BACHS_CATHEDRAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BACH</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BACH</MovieDefineTag>
@@ -13983,7 +13983,7 @@
 			</YieldChanges>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_TELEGRAPH_OFFICE</BuildingType>
+					<BuildingType>BUILDING_TELEGRAPH_STATION</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -13992,7 +13992,7 @@
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_TELEGRAPH_OFFICE</BuildingType>
+				<BuildingType>BUILDING_TELEGRAPH_STATION</BuildingType>
 				<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
@@ -16893,7 +16893,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_POTTERS_HUT</BuildingType>
 				<BuildingType>BUILDING_POTTERS_WORKSHOP</BuildingType>
-				<BuildingType>BUILDING_CERAMICS_FACTORY</BuildingType>
+				<BuildingType>BUILDING_FACTORY_POTTERY</BuildingType>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>1200</iCost>
@@ -17171,7 +17171,7 @@
 					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_ANTHROPOLOGY_LAB</BuildingType>
+					<BuildingType>BUILDING_ANATOMY_LAB</BuildingType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>3</iCommerce>
@@ -18858,7 +18858,7 @@
 					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_AIRCRAFT_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_AIRCRAFT</BuildingType>
 					<CommerceChanges>
 						<iCommerce>3</iCommerce>
 					</CommerceChanges>
@@ -18877,7 +18877,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_AIRCRAFT_FACTORY</BuildingType>
+				<BuildingType>BUILDING_FACTORY_AIRCRAFT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
@@ -20020,7 +20020,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_POTTERS_HUT</BuildingType>
 				<BuildingType>BUILDING_POTTERS_WORKSHOP</BuildingType>
-				<BuildingType>BUILDING_CERAMICS_FACTORY</BuildingType>
+				<BuildingType>BUILDING_FACTORY_POTTERY</BuildingType>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>1296</iCost>
@@ -21141,15 +21141,15 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_VENUS_WILLENDORF</Type>
+			<Type>BUILDING_VENUS_OF_WILLENDORF</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_VENUS_WILLENDORF</Description>
-			<Civilopedia>TXT_KEY_BUILDING_VENUS_WILLENDORF_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_VENUS_OF_WILLENDORF</Description>
+			<Civilopedia>TXT_KEY_BUILDING_VENUS_OF_WILLENDORF_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VENUS_WILLENDORF</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_VENUS_OF_WILLENDORF</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_VENUS_WILLENDORF</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_CARVING</PrereqTech>

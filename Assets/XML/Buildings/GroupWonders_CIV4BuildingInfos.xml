@@ -1292,13 +1292,13 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CHAMPAGNE_WINERY</Type>
+			<Type>BUILDING_DW_CHAMPAGNE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_DELUXE_WINERIES</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CHAMPAGNE_WINERY</Description>
+			<Description>TXT_KEY_BUILDING_DW_CHAMPAGNE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VINTAGE_WINERY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CHAMPAGNE</ArtDefineTag>
@@ -1954,13 +1954,13 @@
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
 				</PrereqBuilding>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_ANTHROPOLOGY_LAB</BuildingType>
+					<BuildingType>BUILDING_ANATOMY_LAB</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
-				<BuildingType>BUILDING_ANTHROPOLOGY_LAB</BuildingType>
+				<BuildingType>BUILDING_ANATOMY_LAB</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>1520</iCost>
 			<BonusProductionModifiers>
@@ -2464,13 +2464,13 @@
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
 				</PrereqBuilding>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_ANTHROPOLOGY_LAB</BuildingType>
+					<BuildingType>BUILDING_ANATOMY_LAB</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
-				<BuildingType>BUILDING_ANTHROPOLOGY_LAB</BuildingType>
+				<BuildingType>BUILDING_ANATOMY_LAB</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>1520</iCost>
 			<BonusProductionModifiers>
@@ -2854,13 +2854,13 @@
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
 				</PrereqBuilding>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_ANTHROPOLOGY_LAB</BuildingType>
+					<BuildingType>BUILDING_ANATOMY_LAB</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
-				<BuildingType>BUILDING_ANTHROPOLOGY_LAB</BuildingType>
+				<BuildingType>BUILDING_ANATOMY_LAB</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>1520</iCost>
 			<BonusProductionModifiers>

@@ -162,7 +162,7 @@
 			<Button>Art/Interface/Buttons/Units/Barbaryape.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_BARNOWL</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_BARN_OWL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -292,7 +292,7 @@
 			<Button>Art/Interface/Buttons/Units/Bear.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_BUFFALO</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_CAPE_BUFFALO</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -662,7 +662,7 @@
 			<Button>Art/Interface/Buttons/Units/gator.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_GAZELLE</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_THOMSONS_GAZELLE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1382,7 +1382,7 @@
 			<Button>Art/Interface/Buttons/Units/Peacock.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_PENGUIN</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_T_PENGUIN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1592,7 +1592,7 @@
 			<Button>Art/Interface/Buttons/Units/Shark.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_REPTILE</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_T_REPTILE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1712,7 +1712,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_eagle.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_E_SEALION</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_SEA_LION</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1952,7 +1952,7 @@
 			<Button>Art/Interface/Buttons/Units/Vulture.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_WALLABY</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_RING_TAILED_WALLABY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
