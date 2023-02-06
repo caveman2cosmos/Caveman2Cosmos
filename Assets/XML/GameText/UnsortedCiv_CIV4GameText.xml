@@ -479,7 +479,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_HITLER_1</Tag>
-		<English>AAARRRRRGGGHHHH, its [OUR_NAME], tyrant of [OUR_CIV_ADJ] people. I consider you a second class "person". DONT CROSS ME OR TO CAMP WE WILL GO!!!</English>
+		<English>Greetings [CT_NAME]. Our [OUR_CIV_ADJ] men have no desire to fight for ourselves; only for [OUR_EMPIRE]!</English>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_HTN_1</Tag>
