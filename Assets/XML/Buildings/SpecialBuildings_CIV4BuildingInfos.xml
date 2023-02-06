@@ -2082,13 +2082,13 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_MOONBEAN_HQ</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CORPORATION_RED_HQ</Type>
+			<Type>BUILDING_HQ_RED_CURTAINS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_CORPORATION_RED_HQ</Description>
+			<Description>TXT_KEY_BUILDING_HQ_RED_CURTAINS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_RED_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_BANK</ConstructSound>
@@ -2118,7 +2118,7 @@
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_RED_HQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HQ_RED_CURTAINS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CORPORATION_SAFARI_HQ</Type>
@@ -2404,12 +2404,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CRIME_BLACKMARKETS</Type>
+			<Type>BUILDING_CRIME_BLACK_MARKETS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CRIME_BLACKMARKETS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CRIME_BLACKMARKETS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CRIME_BLACK_MARKETS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CRIME_BLACK_MARKETS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<iHealth>-2</iHealth>
 			<iHappiness>-2</iHappiness>
@@ -2446,12 +2446,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CRIME_BRAINWASHING</Type>
+			<Type>BUILDING_CRIME_ILLEGAL_BRAINWASHING</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CRIME_BRAINWASHING</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CRIME_BRAINWASHING_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CRIME_ILLEGAL_BRAINWASHING</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CRIME_ILLEGAL_BRAINWASHING_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MIND_UPLOADING</PrereqTech>
 			<iHealth>-2</iHealth>
 			<iHappiness>-4</iHappiness>
@@ -2959,12 +2959,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CRIME_DRUNKDRIVING</Type>
+			<Type>BUILDING_CRIME_DRUNK_DRIVING</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CRIME_DRUNKDRIVING</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CRIME_DRUNKDRIVING_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CRIME_DRUNK_DRIVING</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CRIME_DRUNK_DRIVING_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<Bonus>BONUS_ALCOHOL</Bonus>
 			<PrereqBonuses>
@@ -3805,12 +3805,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CRIME_MEDICALFRAUD</Type>
+			<Type>BUILDING_CRIME_MEDICAL_FRAUD</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CRIME_MEDICALFRAUD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CRIME_MEDICALFRAUD_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CRIME_MEDICAL_FRAUD</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CRIME_MEDICAL_FRAUD_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MODERN_HEALTH_CARE</PrereqTech>
 			<iHealth>-4</iHealth>
 			<iHappiness>-2</iHappiness>
@@ -4574,12 +4574,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CRIME_TOXICDUMPING</Type>
+			<Type>BUILDING_CRIME_ENVIRONMENTAL_DUMPING</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CRIME_TOXICDUMPING</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CRIME_TOXICDUMPING_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CRIME_ENVIRONMENTAL_DUMPING</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CRIME_ENVIRONMENTAL_DUMPING_PEDIA</Civilopedia>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iHealth>-6</iHealth>
 			<iHappiness>-3</iHappiness>
@@ -4616,12 +4616,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CRIME_TRESSPASSING</Type>
+			<Type>BUILDING_CRIME_TRESPASSING</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CRIME_TRESSPASSING</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CRIME_TRESSPASSING_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CRIME_TRESPASSING</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CRIME_TRESPASSING_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SURVEYING</PrereqTech>
 			<iHappiness>-1</iHappiness>
 			<iInsidiousness>1</iInsidiousness>
@@ -4764,12 +4764,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CRIME_WELFAREFRAUD</Type>
+			<Type>BUILDING_CRIME_WELFARE_FRAUD</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CRIME_WELFAREFRAUD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CRIME_WELFAREFRAUD_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CRIME_WELFARE_FRAUD</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CRIME_WELFARE_FRAUD_PEDIA</Civilopedia>
 			<PrereqTech>TECH_LABOR_UNIONS</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WELFARE_OFFICE</BuildingType>
@@ -4828,12 +4828,12 @@
 			<MovieDefineTag>ART_DEF_MOVIE_CULTURAL_ACHIEVEMENT</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DEPARTMENT_FOREIGN_EFFECT</Type>
+			<Type>BUILDING_DEPARTMENT_OF_FOREIGN_POLICY_EFFECT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DEPARTMENT_FOREIGN_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DEPARTMENT_FOREIGN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_DEPARTMENT_OF_FOREIGN_POLICY_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DEPARTMENT_OF_FOREIGN_POLICY_PEDIA</Civilopedia>
 			<PrereqTech>TECH_FOREIGN_POLICY</PrereqTech>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -4849,7 +4849,7 @@
 			</UnitCombatFreeExperiences>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_DEPARTMENT_FOREIGN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_DEPARTMENT_OF_FOREIGN_POLICY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DISEASE_ANTHRAX</Type>
@@ -4951,11 +4951,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYDISEASE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DISEASE_COMMONCOLD</Type>
+			<Type>BUILDING_DISEASE_COMMON_COLD</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DISEASE_COMMONCOLD</Description>
+			<Description>TXT_KEY_BUILDING_DISEASE_COMMON_COLD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DISEASE_PEDIA</Civilopedia>
 			<ObsoleteTech>TECH_SMART_DRUGS</ObsoleteTech>
 			<iHealth>-1</iHealth>
@@ -8444,11 +8444,11 @@
 					<Or>
 						<Has>
 							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_ARCTICFOX</ID>
+							<ID>BUILDING_FOLKLORE_ARCTIC_FOX</ID>
 						</Has>
 						<Has>
 							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_FENNECFOX</ID>
+							<ID>BUILDING_FOLKLORE_FENNEC_FOX</ID>
 						</Has>
 						<Has>
 							<GOMType>GOM_BUILDING</GOMType>
@@ -10231,7 +10231,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_WORLDVIEW_HUMAN_SACRIFICE_ACTIVE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WV_HUMAN_SACRIFICE_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_WORLDVIEW_HUMAN_SACRIFICE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -10900,11 +10900,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_LASCAUX_PAINTS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_LAUNCH_SITE_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_LAUNCH_SITE_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LAUNCH_SITE_EFFECT_PEDIA</Civilopedia>
+			<Type>BUILDING_EFFECT_LAUNCH_SITE</Type>
+			<Description>TXT_KEY_BUILDING_EFFECT_LAUNCH_SITE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EFFECT_LAUNCH_SITE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_LAUNCH_SITE_EFFECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EFFECT_LAUNCH_SITE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -11596,12 +11596,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NATURE_DANCE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NEIGHBORHOOD_WATCH</Type>
+			<Type>BUILDING_ORDINANCE_NEIGHBORHOOD_WATCH</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_NEIGHBORHOOD_WATCH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NEIGHBORHOOD_WATCH_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ORDINANCE_NEIGHBORHOOD_WATCH</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ORDINANCE_NEIGHBORHOOD_WATCH_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ConstructSound>AS2D_BUILD_POLICE_STATION</ConstructSound>
 			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
@@ -11625,7 +11625,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_NEIGHBORHOOD_WATCH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ORDINANCE_NEIGHBORHOOD_WATCH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OLDOINYO_NGAI</Type>
@@ -12281,11 +12281,11 @@
 			<MovieDefineTag>ART_DEF_MOVIE_POLITICAL_ACHIEVEMENT</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_POLLUTION_ACIDRAIN</Type>
+			<Type>BUILDING_POLLUTION_ACID_RAIN</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_POLLUTION_ACIDRAIN</Description>
+			<Description>TXT_KEY_BUILDING_POLLUTION_ACID_RAIN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AIR_POLLUTION_PEDIA</Civilopedia>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_DEACIDIFICATION_STATION</BuildingType>
@@ -13208,14 +13208,14 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ROUTE_66_TERMINUS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SAFETY_ACHIEVEMENT</Type>
+			<Type>BUILDING_ACHIEVEMENT_SAFETY</Type>
 			<SpecialBuildingType>SPECIALBUILDING_ACHIEVEMENT</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SAFETY_ACHIEVEMENT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SAFETY_ACHIEVEMENT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ACHIEVEMENT_SAFETY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_SAFETY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			<CommerceChanges>
@@ -13223,7 +13223,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<FreeBuilding>BUILDING_SAFETY_ACHIEVEMENT_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_EFFECT_ACHIEVEMENT_SAFETY</FreeBuilding>
 			<iAsset>10</iAsset>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -13231,12 +13231,12 @@
 			<MovieDefineTag>ART_DEF_MOVIE_SAFETY_A</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SAFETY_ACHIEVEMENT_EFFECT</Type>
+			<Type>BUILDING_EFFECT_ACHIEVEMENT_SAFETY</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SAFETY_ACHIEVEMENT_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SAFETY_ACHIEVEMENT_EFFECT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EFFECT_ACHIEVEMENT_SAFETY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EFFECT_ACHIEVEMENT_SAFETY_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			<Properties>
 				<Property>
@@ -13254,7 +13254,7 @@
 			<iRevIdxLocal>-5</iRevIdxLocal>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_ACHIEVEMENT_SAFETY_EFFECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EFFECT_ACHIEVEMENT_SAFETY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SAFETY_NAT_LEGAL_DATABASE</Type>
@@ -13342,11 +13342,11 @@
 			<MovieDefineTag>ART_DEF_MOVIE_SCIENTIFIC_ACHIEVEMENT</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SCIENTOLOGY_SHRINE</Type>
-			<Description>TXT_KEY_BUILDING_SCIENTOLOGY_SHRINE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SCIENTOLOGY_SHRINE_PEDIA</Civilopedia>
+			<Type>BUILDING_SCIENTOLOGY_SEDE</Type>
+			<Description>TXT_KEY_BUILDING_SCIENTOLOGY_SEDE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SCIENTOLOGY_SEDE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SCIENTOLOGY_SHRINE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_SCIENTOLOGY_SEDE</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -13831,11 +13831,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_WORLDVIEW_SLAVERY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SLAVERY_BAD_ZORO_I</Type>
+			<Type>BUILDING_WORLDVIEW_SLAVERY_ZOROASTRIANISM_I</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SLAVERY_BAD_ZORO_I</Description>
+			<Description>TXT_KEY_BUILDING_WORLDVIEW_SLAVERY_ZOROASTRIANISM_I</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SLAVERY_ZORO_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WORLDVIEW_SLAVERY_ACTIVE</BuildingType>
@@ -13852,11 +13852,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SLAVERY_BAD_ZORO</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SLAVERY_BAD_ZORO_II</Type>
+			<Type>BUILDING_WORLDVIEW_SLAVERY_ZOROASTRIANISM_II</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SLAVERY_BAD_ZORO_II</Description>
+			<Description>TXT_KEY_BUILDING_WORLDVIEW_SLAVERY_ZOROASTRIANISM_II</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SLAVERY_ZORO_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WORLDVIEW_SLAVERY_ACTIVE</BuildingType>
@@ -13959,11 +13959,11 @@
 				<BuildingType>BUILDING_GUARD_TOWER</BuildingType>
 				<BuildingType>BUILDING_KEEP_TOWER</BuildingType>
 				<BuildingType>BUILDING_ARTILLERY_BATTERY</BuildingType>
-				<BuildingType>BUILDING_AUTOCANNON_BATTERY</BuildingType>
+				<BuildingType>BUILDING_AUTO_CANNON_BATTERY</BuildingType>
 				<BuildingType>BUILDING_MISSILE_BATTERY</BuildingType>
 				<BuildingType>BUILDING_RAILGUN_BATTERY</BuildingType>
 				<BuildingType>BUILDING_LASER_BATTERY</BuildingType>
-				<BuildingType>BUILDING_ANTIMATTER_BATTERY</BuildingType>
+				<BuildingType>BUILDING_ANTI_MATTER_BATTERY</BuildingType>
 				<BuildingType>BUILDING_TOWN_WATCH</BuildingType>
 				<BuildingType>BUILDING_TOWN_PATROL</BuildingType>
 				<BuildingType>BUILDING_GUARDHOUSE</BuildingType>
@@ -15852,13 +15852,13 @@
 			<ArtDefineTag>ART_DEF_BUILDING_WORLDVIEW_CANNIBALISM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_WV_HUMAN_SACRIFICE</Type>
+			<Type>BUILDING_WORLDVIEW_HUMAN_SACRIFICE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_WV_HUMAN_SACRIFICE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WV_HUMAN_SACRIFICE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_WV_HUMAN_SACRIFICE_HELP</Help>
+			<Description>TXT_KEY_BUILDING_WORLDVIEW_HUMAN_SACRIFICE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_WORLDVIEW_HUMAN_SACRIFICE_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_WORLDVIEW_HUMAN_SACRIFICE_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_CEREMONIAL_ALTAR</ConstructSound>
 			<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
@@ -15871,7 +15871,7 @@
 			<FreeBuilding>BUILDING_WORLDVIEW_HUMAN_SACRIFICE_ACTIVE</FreeBuilding>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_WV_HUMAN_SACRIFICE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_WORLDVIEW_HUMAN_SACRIFICE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WORLDVIEW_SLAVERY</Type>

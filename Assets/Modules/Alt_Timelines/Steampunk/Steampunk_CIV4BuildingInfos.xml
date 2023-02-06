@@ -9,9 +9,9 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_COAL_FIRED_DYNAMO</ArtDefineTag>
 			<ObsoleteTech>TECH_FUSION</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_HIGHTECHCOAL_PLANT</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_HIGH_TECH_COAL_POWER_PLANT</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HIGHTECHCOAL_PLANT</BuildingType>
+				<BuildingType>BUILDING_HIGH_TECH_COAL_POWER_PLANT</BuildingType>
 				<BuildingType>BUILDING_D_T_FUSION_POWER_PLANT</BuildingType>
 				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
 				<BuildingType>BUILDING_HE3_FUSION_POWER_PLANT</BuildingType>

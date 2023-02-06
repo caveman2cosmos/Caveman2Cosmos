@@ -99,10 +99,10 @@
 			</MapCategoryTypes>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_LL_BLACKWATER_DRAW</BuildingType>
 				<BuildingType>BUILDING_SLAUGHTERHOUSE</BuildingType>
@@ -152,7 +152,7 @@
 				<BuildingType>BUILDING_DUNG_BEETLE_GATHERER</BuildingType>
 				<BuildingType>BUILDING_FIREFLY_GATHERER</BuildingType>
 				<BuildingType>BUILDING_FIREFLY_SANCTUARY</BuildingType>
-				<BuildingType>BUILDING_GATHERER_EARTHWORM</BuildingType>
+				<BuildingType>BUILDING_EARTHWORM_GATHERER</BuildingType>
 				<BuildingType>BUILDING_SNAIL_GATHERER</BuildingType>
 				<BuildingType>BUILDING_GOLIATH_BEETLE_GATHERER</BuildingType>
 				<BuildingType>BUILDING_GOLIATH_BEETLE_SANCTUARY</BuildingType>
@@ -200,10 +200,10 @@
 			</MapCategoryTypes>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 				<BuildingType>BUILDING_CAMP_ANTELOPE</BuildingType>
@@ -313,11 +313,11 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CHEMICALS_PROVIDER</Type>
-			<Description>TXT_KEY_BUILDING_CHEMICALS_PROVIDER</Description>
+			<Type>BUILDING_RESOURCES_CHEMICALS</Type>
+			<Description>TXT_KEY_BUILDING_RESOURCES_CHEMICALS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CHEMICALS_PROVIDER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_RESOURCES_CHEMICALS</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -392,7 +392,7 @@
 				<BuildingType>BUILDING_PLANTATION_MYRRH</BuildingType>
 				<BuildingType>BUILDING_PLANTATION_PEYOTE</BuildingType>
 				<BuildingType>BUILDING_PLANTATION_POPPY</BuildingType>
-				<BuildingType>BUILDING_TOBACCO_PLANTATION</BuildingType>
+				<BuildingType>BUILDING_PLANTATION_TOBACCO</BuildingType>
 			</PrereqOrBuildings>
 			<bAutoBuild>1</bAutoBuild>
 			<ExtraFreeBonuses>
@@ -412,9 +412,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<PrereqOrBuildings>
@@ -445,9 +445,9 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<PrereqOrBuildings>
@@ -639,15 +639,15 @@
 				<BuildingType>BUILDING_DIG_SITE_AMMONITE_FOSSILS</BuildingType>
 				<BuildingType>BUILDING_FOSSIL_ARCHAEOPTERYX</BuildingType>
 				<BuildingType>BUILDING_DIG_SITE_DIMETRODON_FOSSILS</BuildingType>
-				<BuildingType>BUILDING_FOSSIL_ICTHYOSTEGA</BuildingType>
+				<BuildingType>BUILDING_DIG_SITE_ICHTHYOSTEGA_FOSSILS</BuildingType>
 				<BuildingType>BUILDING_DIG_SITE_MAMMOTH_FOSSILS</BuildingType>
-				<BuildingType>BUILDING_FOSSIL_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_DIG_SITE_NEANDERTHAL_FOSSILS</BuildingType>
 				<BuildingType>BUILDING_FOSSIL_PETRIFIEDFOREST</BuildingType>
 				<BuildingType>BUILDING_DIG_SITE_PLESIOSAUR_FOSSILS</BuildingType>
-				<BuildingType>BUILDING_FOSSIL_PTERODACTYL</BuildingType>
+				<BuildingType>BUILDING_DIG_SITE_PTERODACTYL_FOSSILS</BuildingType>
 				<BuildingType>BUILDING_DIG_SITE_SHARK_TEETH</BuildingType>
 				<BuildingType>BUILDING_DIG_SITE_SMILODON_FOSSILS</BuildingType>
-				<BuildingType>BUILDING_FOSSIL_TRICERATOPS</BuildingType>
+				<BuildingType>BUILDING_DIG_SITE_TRICERATOPS_FOSSILS</BuildingType>
 				<BuildingType>BUILDING_DIG_SITE_TRILOBITE_FOSSILS</BuildingType>
 				<BuildingType>BUILDING_FOSSIL_VELOCIRAPTOR</BuildingType>
 			</PrereqOrBuildings>
@@ -678,9 +678,9 @@
 				<BuildingType>BUILDING_ORCHARD_APPLE</BuildingType>
 				<BuildingType>BUILDING_ORCHARD_APRICOT</BuildingType>
 				<BuildingType>BUILDING_ORCHARD_ATEMOYA</BuildingType>
-				<BuildingType>BUILDING_AVOCADO_PLANTATION</BuildingType>
+				<BuildingType>BUILDING_ORCHARD_AVOCADO</BuildingType>
 				<BuildingType>BUILDING_PLANTATION_BANANA</BuildingType>
-				<BuildingType>BUILDING_BREADFRUIT_ORCHARD</BuildingType>
+				<BuildingType>BUILDING_ORCHARD_BREADFRUIT</BuildingType>
 				<BuildingType>BUILDING_PLANTATION_CACTUS</BuildingType>
 				<BuildingType>BUILDING_FARM_CROP_CANTALOUPE</BuildingType>
 				<BuildingType>BUILDING_CARDONCACTUS_PLANTATION</BuildingType>
@@ -689,7 +689,7 @@
 				<BuildingType>BUILDING_DATEPALM_PLANTATION</BuildingType>
 				<BuildingType>BUILDING_ORCHARD_DURIAN</BuildingType>
 				<BuildingType>BUILDING_PLANTATION_FIGS</BuildingType>
-				<BuildingType>BUILDING_GRAPEFRUIT_ORCHARD</BuildingType>
+				<BuildingType>BUILDING_ORCHARD_GRAPEFRUIT</BuildingType>
 				<BuildingType>BUILDING_ORCHARD_GUAVA</BuildingType>
 				<BuildingType>BUILDING_FARM_CROP_HONEYDEW</BuildingType>
 				<BuildingType>BUILDING_ORCHARD_JUJUBE</BuildingType>
@@ -771,11 +771,11 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GLASSWARE_PROVIDER</Type>
-			<Description>TXT_KEY_BUILDING_GLASSWARE_PROVIDER</Description>
+			<Type>BUILDING_RESOURCES_GLASSWARE</Type>
+			<Description>TXT_KEY_BUILDING_RESOURCES_GLASSWARE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GLASSWARE_PROVIDER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_RESOURCES_GLASSWARE</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -898,9 +898,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<PrereqOrBuildings>
@@ -954,9 +954,9 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<PrereqOrBuildings>
@@ -1002,7 +1002,7 @@
 				<BuildingType>BUILDING_BUTCHERY</BuildingType>
 				<BuildingType>BUILDING_MEAT_PACKING_PLANT</BuildingType>
 				<BuildingType>BUILDING_RENDERING_PLANT</BuildingType>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 			</PrereqOrBuildings>
 			<bAutoBuild>1</bAutoBuild>
 			<ExtraFreeBonuses>
@@ -1085,7 +1085,7 @@
 				<BuildingType>BUILDING_GROVE_BRAZIL_NUT</BuildingType>
 				<BuildingType>BUILDING_GROVE_CASHEW</BuildingType>
 				<BuildingType>BUILDING_GROVE_CHESTNUT</BuildingType>
-				<BuildingType>BUILDING_COCONUT_PLANTATION</BuildingType>
+				<BuildingType>BUILDING_PLANTATION_COCONUT</BuildingType>
 				<BuildingType>BUILDING_GROVE_GEVUINA</BuildingType>
 				<BuildingType>BUILDING_GROVE_HAZELNUT</BuildingType>
 				<BuildingType>BUILDING_GROVE_MACADAMIA</BuildingType>
@@ -1141,9 +1141,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<PrereqOrBuildings>
@@ -1346,11 +1346,11 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SEASONING_PROVIDER</Type>
-			<Description>TXT_KEY_BUILDING_SEASONING_PROVIDER</Description>
+			<Type>BUILDING_RESOURCES_SEASONING</Type>
+			<Description>TXT_KEY_BUILDING_RESOURCES_SEASONING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SEASONING_PROVIDER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_RESOURCES_SEASONING</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1368,21 +1368,21 @@
 				<BuildingType>BUILDING_FARM_CROP_CLOVES</BuildingType>
 				<BuildingType>BUILDING_PLANTATION_COFFEE</BuildingType>
 				<BuildingType>BUILDING_FARM_CROP_GINGER_ROOT</BuildingType>
-				<BuildingType>BUILDING_INCENSE_PLANTATION</BuildingType>
+				<BuildingType>BUILDING_PLANTATION_FRANKINCENSE</BuildingType>
 				<BuildingType>BUILDING_FARM_CROP_LICORICE</BuildingType>
 				<BuildingType>BUILDING_GROVE_MAPLE</BuildingType>
 				<BuildingType>BUILDING_FARM_CROP_PEPPERMINT</BuildingType>
 				<BuildingType>BUILDING_PLANTATION_NUTMEG</BuildingType>
 				<BuildingType>BUILDING_FARM_CROP_BLACK_PEPPER</BuildingType>
 				<BuildingType>BUILDING_FARM_CROP_RHUBARB</BuildingType>
-				<BuildingType>BUILDING_SAFFRON_PLANTATION</BuildingType>
+				<BuildingType>BUILDING_PLANTATION_SAFFRON</BuildingType>
 				<BuildingType>BUILDING_GROVE_SASSAFRAS</BuildingType>
 				<BuildingType>BUILDING_FARM_CROP_SESAME</BuildingType>
 				<BuildingType>BUILDING_PLANTATION_CINNAMON</BuildingType>
 				<BuildingType>BUILDING_SPICE_VOYAGE</BuildingType>
 				<BuildingType>BUILDING_PLANTATION_SUGARCANE</BuildingType>
 				<BuildingType>BUILDING_PLANTATION_TEA</BuildingType>
-				<BuildingType>BUILDING_VANILLA_PLANTATION</BuildingType>
+				<BuildingType>BUILDING_PLANTATION_VANILLA</BuildingType>
 				<BuildingType>BUILDING_FARM_CROP_WASABI</BuildingType>
 			</PrereqOrBuildings>
 			<bAutoBuild>1</bAutoBuild>
@@ -1394,11 +1394,11 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SHELLFISH_PROVIDER</Type>
-			<Description>TXT_KEY_BUILDING_SHELLFISH_PROVIDER</Description>
+			<Type>BUILDING_RESOURCES_SHELLFISH</Type>
+			<Description>TXT_KEY_BUILDING_RESOURCES_SHELLFISH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SHELLFISH_PROVIDER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_RESOURCES_SHELLFISH</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1591,11 +1591,11 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_VEGETABLE_PROVIDER</Type>
-			<Description>TXT_KEY_BUILDING_VEGETABLE_PROVIDER</Description>
+			<Type>BUILDING_RESOURCES_VEGETABLES</Type>
+			<Description>TXT_KEY_BUILDING_RESOURCES_VEGETABLES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VEGETABLE_PROVIDER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_RESOURCES_VEGETABLES</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1656,7 +1656,7 @@
 			<ObsoletesToBuilding>BUILDING_AGROFOREST</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_GROVE_BRAZILWOOD</BuildingType>
-				<BuildingType>BUILDING_GATHERER_DRIFTWOOD</BuildingType>
+				<BuildingType>BUILDING_DRIFTWOOD_GATHERER</BuildingType>
 				<BuildingType>BUILDING_LUMBER_GATHERER</BuildingType>
 				<BuildingType>BUILDING_LUMBER_CAMP</BuildingType>
 				<BuildingType>BUILDING_GROVE_TIMBER</BuildingType>

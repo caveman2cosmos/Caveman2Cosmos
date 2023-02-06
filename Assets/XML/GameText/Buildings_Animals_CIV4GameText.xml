@@ -571,7 +571,7 @@
 		<Russian>Ìèô îá àôð. ñëîíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_AMPHIBIAN</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_AMPHIBIANS</Tag>
 		<English>Folklore (T) - Amphibians</English>
 		<French>Mythe - Amphibiens (T)</French>
 		<German>
@@ -615,7 +615,7 @@
 		<Russian>Ìèô îá àíòèëîïå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_ARCTICFOX</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_ARCTIC_FOX</Tag>
 		<English>Folklore - Arctic Fox</English>
 		<French>Mythe du Renard arctique</French>
 		<German>
@@ -627,7 +627,7 @@
 		<Russian>Ìèô î ïåñöå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_ARMADILLO</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_NINE_BANDED_ARMADILLO</Tag>
 		<English>Folklore - Nine-banded Armadillo</English>
 		<French>Mythe du Tatou</French>
 		<German>
@@ -1009,7 +1009,7 @@
 		<Russian>Ìèô î êðàáå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_CROCODILE</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_CROCODILE</Tag>
 		<English>Folklore (T) - Crocodile</English>
 		<French>Mythe du Crocodile (T)</French>
 		<German>
@@ -1254,7 +1254,7 @@
 		<Russian>Ìèô îá ýô. øàêàëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_FENNECFOX</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_FENNEC_FOX</Tag>
 		<English>Folklore - Fennec Fox</English>
 		<French>Mythe du Fennec</French>
 		<German>
@@ -1754,7 +1754,7 @@
 		<Italian>Mito del lemure</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_LEVIATHAN</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_LEVIATHAN</Tag>
 		<English>Folklore (T) - Leviathan</English>
 		<French>Mythe du Léviathan</French>
 		<German>
@@ -1880,7 +1880,7 @@
 		<Russian>Ìèô î ìàíäðèëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_MANEDWOLF</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_MANED_WOLF</Tag>
 		<English>Folklore - Maned Wolf</English>
 		<French>Mythe du Loup à crinière</French>
 		<German>
@@ -1904,7 +1904,7 @@
 		<Russian>Ìèô î ìàðëèíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_MARSUPIAL</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_MARSUPIAL</Tag>
 		<English>Folklore (T) - Marsupial</English>
 		<French>Mythe du Marsupial (T)</French>
 		<German>
@@ -2349,7 +2349,7 @@
 		<Russian>Ìèô î ïðîêîïòîäîíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_PUFFADDER</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PUFF_ADDER</Tag>
 		<English>Folklore - Puff Adder</English>
 		<French>Mythe de la Vipère heurtante</French>
 		<German>
@@ -2435,7 +2435,7 @@
 		<Russian>Ìèô î ñêàòå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_RAY_EAGLE</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_EAGLE_RAY</Tag>
 		<English>Folklore - Eagle Ray</English>
 		<French>Mythe de l'Aigle de mer</French>
 		<German>
@@ -2447,7 +2447,7 @@
 		<Russian>Ìèô îá îðë. ñêàòå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_RAY_MANTA</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_MANTA_RAY</Tag>
 		<English>Folklore - Manta Ray</English>
 		<French>Mythe de la Raie manta</French>
 		<German>
@@ -2604,7 +2604,7 @@
 		<Italian>Mito del coccodrillo di mare (grande)</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_SCAVENGER</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_SCAVENGER</Tag>
 		<English>Folklore (T) - Scavenger</English>
 		<French>Mythe du Mendiant (T)</French>
 		<German>
@@ -2798,7 +2798,7 @@
 		<Russian>Ìèô î òàïèðå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_TARANTULA</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_DESERT_TARANTULA</Tag>
 		<English>Folklore - Desert Tarantula</English>
 		<French>Mythe de la Tarentule du désert</French>
 		<German>
@@ -2809,7 +2809,7 @@
 		<Italian>Mito della tarantola del deserto</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_TARANTULA_JUNGLE</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_JUNGLE_TARANTULA</Tag>
 		<English>Folklore - Jungle Tarantula</English>
 		<French>Mythe de la Tarentule de la jungle</French>
 		<German>
@@ -2879,7 +2879,7 @@
 		<Russian>Ìèô î òóêàíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_TREESLOTH</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_THREE_TOED_SLOTH</Tag>
 		<English>Folklore - Three-toed Sloth</English>
 		<French>Mythe du paresseux</French>
 		<German>
@@ -3491,7 +3491,7 @@
 		<English>A kangoroo herd.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SABRETOOTH_REMAINS</Tag>
+		<Tag>TXT_KEY_BUILDING_REMAINS_SABRETOOTH</Tag>
 		<English>Remains - Sabretooth</English>
 		<French>Restes de Tigre à dents de sabre</French>
 		<German>

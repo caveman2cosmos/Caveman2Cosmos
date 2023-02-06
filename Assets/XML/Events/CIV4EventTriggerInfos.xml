@@ -324,10 +324,10 @@
 				<Building>BUILDING_CHRISTIAN_CATHEDRAL</Building>
 				<Building>BUILDING_ISLAMIC_MOSQUE</Building>
 				<Building>BUILDING_HINDU_MANDIR</Building>
-				<Building>BUILDING_BUDDHIST_CATHEDRAL</Building>
+				<Building>BUILDING_BUDDHIST_STUPA</Building>
 				<Building>BUILDING_CONFUCIAN_CATHEDRAL</Building>
 				<Building>BUILDING_TAOIST_PAGODA</Building>
-				<Building>BUILDING_HELLENIC_CATHEDRAL</Building>
+				<Building>BUILDING_HELLENIC_PANTHEON</Building>
 				<Building>BUILDING_ZOROASTRIAN_CATHEDRAL</Building>
 				<Building>BUILDING_MESOAMERICAN_CATHEDRAL</Building>
 				<Building>BUILDING_LDS_TEMPLE</Building>
@@ -2676,7 +2676,7 @@
 			<iWeight>150</iWeight>
 			<iMinPopulation>10</iMinPopulation>
 			<BuildingsRequired>
-				<Building>BUILDING_DISEASE_COMMONCOLD</Building>
+				<Building>BUILDING_DISEASE_COMMON_COLD</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<bOwnPlot>1</bOwnPlot>
@@ -2851,7 +2851,7 @@
 				<Building>BUILDING_ISLAMIC_MONASTERY</Building>
 				<Building>BUILDING_JEWISH_MONASTERY</Building>
 				<Building>BUILDING_TAOIST_MONASTERY</Building>
-				<Building>BUILDING_HELLENIC_MONASTERY</Building>
+				<Building>BUILDING_HELLENIC_GYMNASIA</Building>
 				<Building>BUILDING_ZOROASTRIAN_SHRINE</Building>
 				<Building>BUILDING_HOUNFOR</Building>
 				<Building>BUILDING_SHINTO_MONASTERY</Building>
@@ -3727,7 +3727,7 @@
 				<Building>BUILDING_SIKH_GURDWARA</Building>
 				<Building>BUILDING_LOA_HWE</Building>
 				<Building>BUILDING_HELLENIC_TEMPLE</Building>
-				<Building>BUILDING_ZOROASTRIAN_TEMPLE</Building>
+				<Building>BUILDING_ZOROASTRIAN_FIRE_TEMPLE</Building>
 				<Building>BUILDING_TEMPLE_OF_RA</Building>
 				<Building>BUILDING_MESOAMERICAN_TEMPLE</Building>
 				<Building>BUILDING_JAIN_TEMPLE</Building>
@@ -3865,10 +3865,10 @@
 				<Building>BUILDING_CHRISTIAN_CATHEDRAL</Building>
 				<Building>BUILDING_ISLAMIC_MOSQUE</Building>
 				<Building>BUILDING_HINDU_MANDIR</Building>
-				<Building>BUILDING_BUDDHIST_CATHEDRAL</Building>
+				<Building>BUILDING_BUDDHIST_STUPA</Building>
 				<Building>BUILDING_CONFUCIAN_CATHEDRAL</Building>
 				<Building>BUILDING_TAOIST_PAGODA</Building>
-				<Building>BUILDING_HELLENIC_CATHEDRAL</Building>
+				<Building>BUILDING_HELLENIC_PANTHEON</Building>
 				<Building>BUILDING_ZOROASTRIAN_CATHEDRAL</Building>
 				<Building>BUILDING_LDS_TEMPLE</Building>
 				<Building>BUILDING_SCIENTOLOGY_CATHEDRAL</Building>
@@ -4827,7 +4827,7 @@
 				<Building>BUILDING_ISLAMIC_MONASTERY</Building>
 				<Building>BUILDING_JEWISH_MONASTERY</Building>
 				<Building>BUILDING_TAOIST_MONASTERY</Building>
-				<Building>BUILDING_HELLENIC_MONASTERY</Building>
+				<Building>BUILDING_HELLENIC_GYMNASIA</Building>
 				<Building>BUILDING_ZOROASTRIAN_SHRINE</Building>
 				<Building>BUILDING_EGYPT_MYTH_MONASTERY</Building>
 				<Building>BUILDING_HOUNFOR</Building>

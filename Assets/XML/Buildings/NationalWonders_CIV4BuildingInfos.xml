@@ -267,7 +267,7 @@
 				<BuildingType>BUILDING_TRAVOIS_MAKER</BuildingType>
 				<BuildingType>BUILDING_WHEELWRIGHT</BuildingType>
 				<BuildingType>BUILDING_CARRIAGE_BUILDER</BuildingType>
-				<BuildingType>BUILDING_AUTOMOBILE_FACTORY</BuildingType>
+				<BuildingType>BUILDING_FACTORY_AUTOMOBILES</BuildingType>
 				<BuildingType>BUILDING_SELF_ASSEMBLY_FACTORY</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_MACHINERY</ObsoleteTech>
@@ -493,7 +493,7 @@
 				<BuildingType>BUILDING_CAMP_AUROCHS</BuildingType>
 				<BuildingType>BUILDING_BREEDING_PROGRAM_BISON</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_COMBAT_SPORTS</ObsoleteTech>
@@ -1357,13 +1357,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_DEPARTMENT_ENERGY</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DEPARTMENT_FOREIGN</Type>
+			<Type>BUILDING_DEPARTMENT_OF_FOREIGN_POLICY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DEPARTMENT_FOREIGN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DEPARTMENT_FOREIGN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_DEPARTMENT_OF_FOREIGN_POLICY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DEPARTMENT_OF_FOREIGN_POLICY_PEDIA</Civilopedia>
 			<PrereqTech>TECH_FOREIGN_POLICY</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<iCost>1660</iCost>
@@ -1385,7 +1385,7 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<FreeBuilding>BUILDING_DEPARTMENT_FOREIGN_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_DEPARTMENT_OF_FOREIGN_POLICY_EFFECT</FreeBuilding>
 			<iEspionageDefense>15</iEspionageDefense>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -1398,7 +1398,7 @@
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_DEPARTMENT_FOREIGN_WONDER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_DEPARTMENT_OF_FOREIGN_POLICY_WONDER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DEPARTMENT_FOREIGN_WONDER</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -3712,13 +3712,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_HORSE_NATIONAL</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HOUSE_OF_PARLIMENT</Type>
+			<Type>BUILDING_HOUSE_OF_PARLIAMENT</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HOUSE_OF_PARLIMENT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HOUSE_OF_PARLIMENT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSE_OF_PARLIAMENT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSE_OF_PARLIAMENT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_POLITICAL_PHILOSOPHY</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<Bonus>BONUS_FURNITURE</Bonus>
@@ -3768,7 +3768,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>100</fVisibilityPriority>
-			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_OF_PARLIMENT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_OF_PARLIAMENT</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HOUSE_OF_PARLIMENT</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -4545,7 +4545,7 @@
 				<BuildingType>BUILDING_MILITARY_AIRBASE</BuildingType>
 				<BuildingType>BUILDING_AEROSPACE_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
-			<FreeBuilding>BUILDING_LAUNCH_SITE_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_EFFECT_LAUNCH_SITE</FreeBuilding>
 			<iCost>2690</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<BonusProductionModifiers>
@@ -6695,7 +6695,7 @@
 			<PrereqTech>TECH_SPACE_STATIONS</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_LAUNCH_SITE</BuildingType>
 				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_SPACEPORT</BuildingType>
 			</PrereqOrBuildings>

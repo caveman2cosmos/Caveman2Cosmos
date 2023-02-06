@@ -1434,17 +1434,17 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HARVARD_UNIVERSITY</Type>
+			<Type>BUILDING_EU_HARVARD_UNIVERSITY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HARVARD_UNIVERSITY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HARVARD_UNIVERSITY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EU_HARVARD_UNIVERSITY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EU_HARVARD_UNIVERSITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_UNIVERSITIES</SpecialBuildingType>
-			<ArtDefineTag>ART_DEF_BUILDING_HARVARD_UNIVERSITY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EU_HARVARD_UNIVERSITY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
@@ -3325,13 +3325,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_UNIVERSITY_OF_SALAMANCA</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_VINTAGE_RED_WINERY</Type>
+			<Type>BUILDING_DW_VINTAGE_RED</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_DELUXE_WINERIES</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_VINTAGE_RED_WINERY</Description>
+			<Description>TXT_KEY_BUILDING_DW_VINTAGE_RED</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VINTAGE_WINERY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_VINTAGE_RED_WINE</ArtDefineTag>

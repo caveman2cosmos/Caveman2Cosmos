@@ -26,8 +26,8 @@ def doRemoveWVSlavery(argsList):
 		iSlaveMarket = GC.getInfoTypeForString("BUILDING_SLAVE_MARKET")
 		aiSlaveBuildings = [
 			GC.getInfoTypeForString("BUILDING_WORLDVIEW_SLAVERY_ACTIVE"),
-			GC.getInfoTypeForString("BUILDING_SLAVERY_BAD_ZORO_I"),
-			GC.getInfoTypeForString("BUILDING_SLAVERY_BAD_ZORO_II"),
+			GC.getInfoTypeForString("BUILDING_WORLDVIEW_SLAVERY_ZOROASTRIANISM_I"),
+			GC.getInfoTypeForString("BUILDING_WORLDVIEW_SLAVERY_ZOROASTRIANISM_II"),
 			GC.getInfoTypeForString("BUILDING_SLAVE_COMPOUND"),
 			GC.getInfoTypeForString("BUILDING_SLAVE_COMPOUND_MILITARY_SUPPORT"),
 			GC.getInfoTypeForString("BUILDING_SLAVE_COMPOUND_ENTERTAINMENT"),
@@ -159,7 +159,7 @@ def doRemoveWVHumanSacrifice(argsList):
 	if CyUnit == None:
 		return # False call
 
-	iWVSacrifice = GC.getInfoTypeForString("BUILDING_WV_HUMAN_SACRIFICE")
+	iWVSacrifice = GC.getInfoTypeForString("BUILDING_WORLDVIEW_HUMAN_SACRIFICE")
 	if iWVSacrifice > -1:
 		iAltar = GC.getInfoTypeForString("BUILDING_ALTAR_FOR_HUMAN_SACRIFICE")
 		iToken = GC.getInfoTypeForString("BUILDING_WORLDVIEW_HUMAN_SACRIFICE_ACTIVE")

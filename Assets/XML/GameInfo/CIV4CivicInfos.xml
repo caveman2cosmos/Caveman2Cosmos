@@ -1064,7 +1064,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_SCIENTOLOGY_SHRINE</BuildingType>
+					<BuildingType>BUILDING_SCIENTOLOGY_SEDE</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -6042,7 +6042,7 @@
 					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_AUTOCANNON_BATTERY</BuildingType>
+					<BuildingType>BUILDING_AUTO_CANNON_BATTERY</BuildingType>
 					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -6058,7 +6058,7 @@
 					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_ANTIMATTER_BATTERY</BuildingType>
+					<BuildingType>BUILDING_ANTI_MATTER_BATTERY</BuildingType>
 					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -7898,7 +7898,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_SCIENTOLOGY_SHRINE</BuildingType>
+					<BuildingType>BUILDING_SCIENTOLOGY_SEDE</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -12956,7 +12956,7 @@
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_HELLENIC_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_HELLENIC_GYMNASIA</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -17458,7 +17458,7 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_HELLENIC_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_HELLENIC_GYMNASIA</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -19703,7 +19703,7 @@
 			<SpecialistValids/>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_DEPARTMENT_FOREIGN</BuildingType>
+					<BuildingType>BUILDING_DEPARTMENT_OF_FOREIGN_POLICY</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -19938,7 +19938,7 @@
 			<SpecialistValids/>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_DEPARTMENT_FOREIGN</BuildingType>
+					<BuildingType>BUILDING_DEPARTMENT_OF_FOREIGN_POLICY</BuildingType>
 					<iHappinessChange>3</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -20057,7 +20057,7 @@
 			<SpecialistValids/>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_DEPARTMENT_FOREIGN</BuildingType>
+					<BuildingType>BUILDING_DEPARTMENT_OF_FOREIGN_POLICY</BuildingType>
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>

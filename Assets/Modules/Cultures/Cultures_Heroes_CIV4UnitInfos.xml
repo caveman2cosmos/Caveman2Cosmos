@@ -75,7 +75,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -266,7 +266,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -477,7 +477,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -667,7 +667,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -936,7 +936,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -1066,7 +1066,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -1289,7 +1289,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -1542,7 +1542,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -1769,7 +1769,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -2018,7 +2018,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -2235,7 +2235,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -2471,7 +2471,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -2697,7 +2697,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -2946,7 +2946,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -3208,7 +3208,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -3476,7 +3476,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -3746,7 +3746,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -4016,7 +4016,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -4275,7 +4275,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -4523,7 +4523,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -5046,7 +5046,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -5311,7 +5311,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -5550,7 +5550,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -5807,7 +5807,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -6067,7 +6067,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -6330,7 +6330,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -6604,7 +6604,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -6866,7 +6866,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -7123,7 +7123,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -7361,7 +7361,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -7577,7 +7577,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -7788,7 +7788,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -8001,7 +8001,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -8241,7 +8241,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -8477,7 +8477,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -8754,7 +8754,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -9029,7 +9029,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -9306,7 +9306,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -9581,7 +9581,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -9860,7 +9860,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -10139,7 +10139,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -10240,7 +10240,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -10509,7 +10509,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -10786,7 +10786,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -11063,7 +11063,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -11340,7 +11340,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -11618,7 +11618,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -11890,7 +11890,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -12159,7 +12159,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -12430,7 +12430,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -12671,7 +12671,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -12943,7 +12943,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -13214,7 +13214,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -13483,7 +13483,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -13754,7 +13754,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -14024,7 +14024,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -14290,7 +14290,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -14566,7 +14566,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -14840,7 +14840,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -15234,7 +15234,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -15731,7 +15731,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -15925,7 +15925,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -16276,7 +16276,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -16385,7 +16385,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -16621,7 +16621,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -16771,7 +16771,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -17014,7 +17014,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -17112,7 +17112,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -17211,7 +17211,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -17309,7 +17309,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -17411,7 +17411,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -17515,7 +17515,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -17612,7 +17612,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -17710,7 +17710,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -17807,7 +17807,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -17903,7 +17903,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -18009,7 +18009,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -18106,7 +18106,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -18203,7 +18203,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -18299,7 +18299,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -18397,7 +18397,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -18504,7 +18504,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -18610,7 +18610,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -18708,7 +18708,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -18806,7 +18806,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -18906,7 +18906,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -19003,7 +19003,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -19101,7 +19101,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -19199,7 +19199,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -19297,7 +19297,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -19395,7 +19395,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -19493,7 +19493,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -19597,7 +19597,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -19693,7 +19693,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -19792,7 +19792,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -19896,7 +19896,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -19994,7 +19994,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -20092,7 +20092,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -20188,7 +20188,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -20285,7 +20285,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -20391,7 +20391,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -20489,7 +20489,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -21194,7 +21194,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -21342,7 +21342,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -21443,7 +21443,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -21651,7 +21651,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -21797,7 +21797,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -21912,7 +21912,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -22463,7 +22463,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -22593,7 +22593,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -22723,7 +22723,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -22824,7 +22824,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -23231,7 +23231,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -23468,7 +23468,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -23590,7 +23590,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -24085,7 +24085,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -24311,7 +24311,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -24415,7 +24415,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -24511,7 +24511,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -24609,7 +24609,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -24739,7 +24739,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -25257,7 +25257,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -25403,7 +25403,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -25687,7 +25687,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -25801,7 +25801,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -25897,7 +25897,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -26139,7 +26139,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -26240,7 +26240,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -26370,7 +26370,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -26489,7 +26489,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -26599,7 +26599,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -26700,7 +26700,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -26798,7 +26798,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -27049,7 +27049,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -27289,7 +27289,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -27398,7 +27398,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -27496,7 +27496,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -27615,7 +27615,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -27997,7 +27997,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -28097,7 +28097,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -28195,7 +28195,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -28293,7 +28293,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -28431,7 +28431,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -28532,7 +28532,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -28628,7 +28628,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -28726,7 +28726,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -28824,7 +28824,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -28921,7 +28921,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -29390,7 +29390,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -29488,7 +29488,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -29592,7 +29592,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -29698,7 +29698,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -29808,7 +29808,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -30091,7 +30091,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -30221,7 +30221,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -30354,7 +30354,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -30497,7 +30497,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -30622,7 +30622,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -30722,7 +30722,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -30865,7 +30865,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -30968,7 +30968,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -31087,7 +31087,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -31290,7 +31290,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -31388,7 +31388,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -31619,7 +31619,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -31725,7 +31725,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -31844,7 +31844,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -32065,7 +32065,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -32171,7 +32171,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -32571,7 +32571,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -32677,7 +32677,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -32916,7 +32916,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -33023,7 +33023,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -33396,7 +33396,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -33526,7 +33526,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -33670,7 +33670,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -33899,7 +33899,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -34259,7 +34259,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -34538,7 +34538,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -34818,7 +34818,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -35049,7 +35049,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -35146,7 +35146,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -35545,7 +35545,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -35651,7 +35651,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -35906,7 +35906,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -36182,7 +36182,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -36324,7 +36324,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -36438,7 +36438,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -36584,7 +36584,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -36687,7 +36687,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -36791,7 +36791,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -36891,7 +36891,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -36991,7 +36991,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -37111,7 +37111,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -37257,7 +37257,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -37408,7 +37408,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -37511,7 +37511,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -37654,7 +37654,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -37909,7 +37909,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -38021,7 +38021,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -38171,7 +38171,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -38318,7 +38318,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -38432,7 +38432,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -38538,7 +38538,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -38644,7 +38644,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -38830,7 +38830,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -38944,7 +38944,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -39042,7 +39042,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -39184,7 +39184,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -39461,7 +39461,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -39578,7 +39578,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -39711,7 +39711,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -39808,7 +39808,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -39914,7 +39914,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -40369,7 +40369,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -40684,7 +40684,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -41023,7 +41023,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -41161,7 +41161,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -41308,7 +41308,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -41409,7 +41409,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -41507,7 +41507,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -41649,7 +41649,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -41746,7 +41746,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -41897,7 +41897,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -42029,7 +42029,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -42182,7 +42182,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -42280,7 +42280,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -42399,7 +42399,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -42529,7 +42529,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -42673,7 +42673,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -43036,7 +43036,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -43150,7 +43150,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -43551,7 +43551,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -43655,7 +43655,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -43936,7 +43936,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -44043,7 +44043,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -44149,7 +44149,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -44406,7 +44406,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -44643,7 +44643,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -44870,7 +44870,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -44968,7 +44968,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -45072,7 +45072,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -45672,7 +45672,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -45893,7 +45893,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -45997,7 +45997,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -46127,7 +46127,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -46271,7 +46271,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -46617,7 +46617,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -46727,7 +46727,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -46825,7 +46825,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -47059,7 +47059,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -47169,7 +47169,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -47413,7 +47413,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -47510,7 +47510,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -47614,7 +47614,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -48083,7 +48083,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
@@ -48229,7 +48229,7 @@
 				<BuildingType>BUILDING_MEDICAL_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_POLITICAL_ACHIEVEMENT</BuildingType>
-				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
+				<BuildingType>BUILDING_ACHIEVEMENT_SAFETY</BuildingType>
 				<BuildingType>BUILDING_SCIENTIFIC_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_SEAFARING_ACHIEVEMENT</BuildingType>
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>

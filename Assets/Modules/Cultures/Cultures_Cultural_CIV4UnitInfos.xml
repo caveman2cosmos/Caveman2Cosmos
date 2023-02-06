@@ -30153,7 +30153,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_LOCKSMITH</BuildingType>
 				<BuildingType>BUILDING_ELECTRONIC_SECURITY_SYSTEM</BuildingType>
-				<BuildingType>BUILDING_BIOMETRIC_SECURITY</BuildingType>
+				<BuildingType>BUILDING_BIOMETRIC_SECURITY_SYSTEM</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_THIEVES_HIDEOUT</BuildingType>
@@ -47117,7 +47117,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_LOCKSMITH</BuildingType>
 				<BuildingType>BUILDING_ELECTRONIC_SECURITY_SYSTEM</BuildingType>
-				<BuildingType>BUILDING_BIOMETRIC_SECURITY</BuildingType>
+				<BuildingType>BUILDING_BIOMETRIC_SECURITY_SYSTEM</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_THIEVES_HIDEOUT</BuildingType>

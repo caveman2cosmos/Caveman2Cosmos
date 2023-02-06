@@ -126,7 +126,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_LAUNCH_SITE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_LUNAR_EXPLORATION</PrereqTech>
 			<BonusType>BONUS_AUTOMOBILES</BonusType>
@@ -2566,7 +2566,7 @@
 				</Action>
 			</Actions>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_LAUNCH_SITE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SOLAR_PROPULSION</PrereqTech>
 			<iCost>2506</iCost>
@@ -2688,7 +2688,7 @@
 				</Action>
 			</Actions>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_LAUNCH_SITE</BuildingType>
 				<BuildingType>BUILDING_CISLUNAR_DOCKING_BAY</BuildingType>
 				<BuildingType>BUILDING_DEEP_SPACE_DOCKING_BAY</BuildingType>
 			</PrereqOrBuildings>
@@ -3919,7 +3919,7 @@
 				</Action>
 			</Actions>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_LAUNCH_SITE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SATELLITES</PrereqTech>
 			<iCost>1762</iCost>
@@ -3986,7 +3986,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_LAUNCH_SITE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPACE_STATIONS</PrereqTech>
 			<iCost>2106</iCost>
@@ -4720,7 +4720,7 @@
 				</Action>
 			</Actions>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_LAUNCH_SITE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_PLANETARY_EXPLORATION</PrereqTech>
 			<iCost>2306</iCost>
@@ -5675,7 +5675,7 @@
 			<iCost>2000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CERES_TRADING_POST</BuildingType>
+				<BuildingType>BUILDING_ASTEROID_CERES_TRADING_POST</BuildingType>
 			</PrereqAndBuildings>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -6285,7 +6285,7 @@
 				<BuildingType>BUILDING_LUNAR_XPRIZE</BuildingType>
 				<BuildingType>BUILDING_YUTU</BuildingType>
 				<BuildingType>BUILDING_MOON_ROCK_LAB</BuildingType>
-				<BuildingType>BUILDING_DEEP_SPACE_GATEWAY</BuildingType>
+				<BuildingType>BUILDING_LUNAR_ORBITAL_PLATFORM_GATEWAY</BuildingType>
 			</Buildings>
 			<Actions>
 				<Action>
@@ -7558,7 +7558,7 @@
 			</UnitAIs>
 			<PrereqTech>TECH_ION_PROPULSION</PrereqTech>
 			<Buildings>
-				<BuildingType>BUILDING_ASTRONOMY_DATABASE</BuildingType>
+				<BuildingType>BUILDING_ASTRONOMICAL_DATABASE</BuildingType>
 				<BuildingType>BUILDING_NEW_HORIZONS</BuildingType>
 			</Buildings>
 			<Actions>
@@ -7634,7 +7634,7 @@
 			<PrereqTech>TECH_MAGNETIC_SAILS</PrereqTech>
 			<Buildings>
 				<BuildingType>BUILDING_SEDNA_PROBE</BuildingType>
-				<BuildingType>BUILDING_ASTRONOMY_DATABASE</BuildingType>
+				<BuildingType>BUILDING_ASTRONOMICAL_DATABASE</BuildingType>
 			</Buildings>
 			<Actions>
 				<Action>

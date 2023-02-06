@@ -4220,7 +4220,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_NEWTONS_UNIVERSITY</BuildingType>
+					<BuildingType>BUILDING_ISAAC_NEWTONS_COLLEGE</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -12886,7 +12886,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_ELCAMINODESANTIAGO</BuildingType>
+					<BuildingType>BUILDING_EL_CAMINO_DE_SANTIAGO</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>

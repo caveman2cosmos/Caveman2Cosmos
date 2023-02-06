@@ -3502,7 +3502,7 @@
 				<BuildingType>BUILDING_SLAVE_COMPOUND_SANITATION</BuildingType>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_CRIME_PREVENTION</BuildingType>
 				<BuildingType>BUILDING_WORLDVIEW_CANNIBALISM</BuildingType>
-				<BuildingType>BUILDING_WV_HUMAN_SACRIFICE</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_HUMAN_SACRIFICE</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>

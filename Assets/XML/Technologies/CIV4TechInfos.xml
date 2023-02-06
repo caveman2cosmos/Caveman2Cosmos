@@ -9008,7 +9008,7 @@
 			</OrPreReqs>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_GATHERER_LAVA_ROCK</BuildingType>
+					<BuildingType>BUILDING_LAVA_ROCK_GATHERER</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>

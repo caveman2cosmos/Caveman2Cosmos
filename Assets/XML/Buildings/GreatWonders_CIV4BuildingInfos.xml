@@ -1736,7 +1736,7 @@
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_LAUNCH_SITE</BuildingType>
 			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
@@ -5596,7 +5596,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_BUDDHIST_CATHEDRAL</BuildingType>
+					<BuildingType>BUILDING_BUDDHIST_STUPA</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -5612,7 +5612,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_HELLENIC_CATHEDRAL</BuildingType>
+					<BuildingType>BUILDING_HELLENIC_PANTHEON</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -6577,12 +6577,12 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ELCAMINODESANTIAGO</Type>
+			<Type>BUILDING_EL_CAMINO_DE_SANTIAGO</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_ELCAMINODESANTIAGO</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELCAMINODESANTIAGO_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EL_CAMINO_DE_SANTIAGO</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EL_CAMINO_DE_SANTIAGO_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ELCAMINODESANTIAGO</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EL_CAMINO_DE_SANTIAGO</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ELCAMINODESANTIAGO</MovieDefineTag>
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqTech>TECH_THEOLOGY</PrereqTech>
@@ -6890,7 +6890,7 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_HELLENIC_CATHEDRAL</BuildingType>
+				<BuildingType>BUILDING_HELLENIC_PANTHEON</BuildingType>
 			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
@@ -7004,7 +7004,7 @@
 			</GlobalBuildingExtraCommerces>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_ASTRONOMY_DATABASE</BuildingType>
+					<BuildingType>BUILDING_ASTRONOMICAL_DATABASE</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 				<PrereqBuilding>
@@ -9810,7 +9810,7 @@
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BEADWORKER</BuildingType>
-				<BuildingType>BUILDING_BEADMAKER_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_BEADMAKERS_WORKSHOP</BuildingType>
 				<BuildingType>BUILDING_FACTORY_BEADS</BuildingType>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
@@ -11822,7 +11822,7 @@
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 				<BuildingType>BUILDING_HERD_COW</BuildingType>
 				<BuildingType>BUILDING_CAMP_AUROCHS</BuildingType>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>876</iCost>
@@ -14540,7 +14540,7 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_HELLENIC_CATHEDRAL</BuildingType>
+				<BuildingType>BUILDING_HELLENIC_PANTHEON</BuildingType>
 			</PrereqInCityBuildings>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
@@ -14685,13 +14685,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NEWTONS_UNIVERSITY</Type>
+			<Type>BUILDING_ISAAC_NEWTONS_COLLEGE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_NEWTONS_UNIVERSITY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NEWTONS_UNIVERSITY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ISAAC_NEWTONS_COLLEGE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ISAAC_NEWTONS_COLLEGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NEWTON</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NEWTON</MovieDefineTag>
@@ -15372,7 +15372,7 @@
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SPACE_SHIPPING_WAREHOUSE</BuildingType>
-				<BuildingType>BUILDING_TELEPORT_WAREHOUSE</BuildingType>
+				<BuildingType>BUILDING_TELEPORT_SHIPPING_WAREHOUSE</BuildingType>
 			</PrereqOrBuildings>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
@@ -15697,7 +15697,7 @@
 			<ReligionType>RELIGION_HELLENISM</ReligionType>
 			<StateReligion>RELIGION_HELLENISM</StateReligion>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_HELLENIC_CATHEDRAL</BuildingType>
+				<BuildingType>BUILDING_HELLENIC_PANTHEON</BuildingType>
 			</PrereqInCityBuildings>
 			<ObsoleteTech>TECH_SCIENTIFIC_METHOD</ObsoleteTech>
 			<iCost>1566</iCost>

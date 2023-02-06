@@ -167,7 +167,7 @@
 			</TechCommerceModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HELLENIC_MONASTERY</Type>
+			<Type>BUILDING_HELLENIC_GYMNASIA</Type>
 			<TechCommerceModifiers>
 				<TechCommerceModifier>
 					<PrereqTech>TECH_BIOLOGY</PrereqTech>

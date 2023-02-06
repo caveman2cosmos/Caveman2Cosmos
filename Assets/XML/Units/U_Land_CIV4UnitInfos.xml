@@ -3392,7 +3392,7 @@
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_RED</PrereqCorporation>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CORPORATION_RED_HQ</BuildingType>
+				<BuildingType>BUILDING_HQ_RED_CURTAINS</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -4012,7 +4012,7 @@
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_HELLENISM</PrereqReligion>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HELLENIC_MONASTERY</BuildingType>
+				<BuildingType>BUILDING_HELLENIC_GYMNASIA</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iBaseUpkeep>2</iBaseUpkeep>
@@ -28948,7 +28948,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_LOCKSMITH</BuildingType>
 				<BuildingType>BUILDING_ELECTRONIC_SECURITY_SYSTEM</BuildingType>
-				<BuildingType>BUILDING_BIOMETRIC_SECURITY</BuildingType>
+				<BuildingType>BUILDING_BIOMETRIC_SECURITY_SYSTEM</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_THIEVES_HIDEOUT</BuildingType>
@@ -29126,7 +29126,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_LOCKSMITH</BuildingType>
 				<BuildingType>BUILDING_ELECTRONIC_SECURITY_SYSTEM</BuildingType>
-				<BuildingType>BUILDING_BIOMETRIC_SECURITY</BuildingType>
+				<BuildingType>BUILDING_BIOMETRIC_SECURITY_SYSTEM</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_THIEVES_HIDEOUT</BuildingType>
@@ -32091,7 +32091,7 @@
 			<PrereqTech>TECH_NOCTURNALISM</PrereqTech>
 			<ObsoleteTech>TECH_CODE_OF_LAWS</ObsoleteTech>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_POISONCRAFTERS_HUT</BuildingType>
+				<BuildingType>BUILDING_POISON_CRAFTER</BuildingType>
 			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_STALKERS</UnitType>
@@ -32217,7 +32217,7 @@
 			</TechTypes>
 			<ObsoleteTech>TECH_MATCHLOCK</ObsoleteTech>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_POISONCRAFTERS_HUT</BuildingType>
+				<BuildingType>BUILDING_POISON_CRAFTER</BuildingType>
 			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_ASSASSIN</UnitType>
@@ -33762,7 +33762,7 @@
 				<BuildingType>BUILDING_ORDINANCE_CARPOOL</BuildingType>
 				<BuildingType>BUILDING_ORDINANCE_SMOKE_DETECTOR</BuildingType>
 				<BuildingType>BUILDING_ORDINANCE_FIRE_CODE</BuildingType>
-				<BuildingType>BUILDING_NEIGHBORHOOD_WATCH</BuildingType>
+				<BuildingType>BUILDING_ORDINANCE_NEIGHBORHOOD_WATCH</BuildingType>
 				<BuildingType>BUILDING_ORDINANCE_YOUTH_CURFEW</BuildingType>
 				<BuildingType>BUILDING_ORDINANCE_AUTOMOBILE_EMISSION_REDUCTION_ACT</BuildingType>
 				<BuildingType>BUILDING_ORDINANCE_CLEAN_AIR_ACT</BuildingType>
@@ -36301,7 +36301,7 @@
 				<BuildingType>BUILDING_MORMAN_SHRINE</BuildingType>
 				<BuildingType>BUILDING_OLDOINYO_NGAI</BuildingType>
 				<BuildingType>BUILDING_ARKONA</BuildingType>
-				<BuildingType>BUILDING_SCIENTOLOGY_SHRINE</BuildingType>
+				<BuildingType>BUILDING_SCIENTOLOGY_SEDE</BuildingType>
 				<BuildingType>BUILDING_SPIRITS_ANSWER</BuildingType>
 				<BuildingType>BUILDING_THE_ISE_JINGU</BuildingType>
 				<BuildingType>BUILDING_THE_GOLDEN_TEMPLE</BuildingType>
@@ -36634,7 +36634,7 @@
 				<BuildingType>BUILDING_NATIONAL_EPIC</BuildingType>
 				<BuildingType>BUILDING_HQ_CIVILIZED_JEWELERS_INC</BuildingType>
 				<BuildingType>BUILDING_CORPORATION_EMPCLOTH_HQ</BuildingType>
-				<BuildingType>BUILDING_CORPORATION_RED_HQ</BuildingType>
+				<BuildingType>BUILDING_HQ_RED_CURTAINS</BuildingType>
 				<BuildingType>BUILDING_TRADITION_ASTHETIC_APPRECIATION</BuildingType>
 			</Buildings>
 			<Flavors>
@@ -38498,7 +38498,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_WHEELWRIGHT</BuildingType>
 				<BuildingType>BUILDING_CARRIAGE_BUILDER</BuildingType>
-				<BuildingType>BUILDING_AUTOMOBILE_FACTORY</BuildingType>
+				<BuildingType>BUILDING_FACTORY_AUTOMOBILES</BuildingType>
 				<BuildingType>BUILDING_SELF_ASSEMBLY_FACTORY</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_CHARIOTRY</PrereqTech>
@@ -45471,7 +45471,7 @@
 				<BuildingType>BUILDING_SLAVE_COMPOUND_SANITATION</BuildingType>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_CRIME_PREVENTION</BuildingType>
 				<BuildingType>BUILDING_WORLDVIEW_CANNIBALISM</BuildingType>
-				<BuildingType>BUILDING_WV_HUMAN_SACRIFICE</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_HUMAN_SACRIFICE</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -46289,7 +46289,7 @@
 				<BuildingType>BUILDING_WORLDVIEW_SLAVERY</BuildingType>
 				<BuildingType>BUILDING_SLAVE_MARKET</BuildingType>
 				<BuildingType>BUILDING_WORLDVIEW_CANNIBALISM</BuildingType>
-				<BuildingType>BUILDING_WV_HUMAN_SACRIFICE</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_HUMAN_SACRIFICE</BuildingType>
 			</Buildings>
 			<Actions>
 				<Action>
