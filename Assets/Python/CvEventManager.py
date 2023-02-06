@@ -255,7 +255,7 @@ class CvEventManager:
 					"GREAT_JAGUAR_TEMPLE"	: GC.getInfoTypeForString('BUILDING_TEMPLE_OF_AH_CACAO'),
 					"GREAT_BATH"			: GC.getInfoTypeForString('BUILDING_GREAT_BATH_OF_MOHENJO_DARO'),
 					"TOPKAPI_PALACE"		: GC.getInfoTypeForString("BUILDING_TOPKAPI_PALACE"),
-					"NEANDERTHAL_EMBASSY"	: GC.getInfoTypeForString("BUILDING_CULTURE_X_NEANDERTHAL")
+					"NEANDERTHAL_EMBASSY"	: GC.getInfoTypeForString("BUILDING_CULTURE_NEANDERTHAL")
 				}
 				self.mapUnitType = {
 					"MONK"		: GC.getInfoTypeForString("UNIT_MONK"),
@@ -309,14 +309,14 @@ class CvEventManager:
 				self.CIVIC_TECHNOCRACY	= GC.getInfoTypeForString('CIVIC_TECHNOCRACY')
 				# onCityBuilt
 				self.aCultureList = [
-					[GC.getInfoTypeForString('PROMOTION_CULTURE_AFRICAN'), GC.getInfoTypeForString('BUILDING_CULTURE_LOCAL_AFRICAN'), GC.getInfoTypeForString('BUILDING_CULTURE_NATIVE_AFRICAN')],
-					[GC.getInfoTypeForString('PROMOTION_CULTURE_ASIAN'), GC.getInfoTypeForString('BUILDING_CULTURE_LOCAL_ASIAN'), GC.getInfoTypeForString('BUILDING_CULTURE_NATIVE_ASIAN')],
-					[GC.getInfoTypeForString('PROMOTION_CULTURE_EUROPEAN'), GC.getInfoTypeForString('BUILDING_CULTURE_LOCAL_EUROPEAN'), GC.getInfoTypeForString('BUILDING_CULTURE_NATIVE_EUROPEAN')],
-					[GC.getInfoTypeForString('PROMOTION_CULTURE_MIDDLE_EASTERN'), GC.getInfoTypeForString('BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN'), GC.getInfoTypeForString('BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN')],
-					[GC.getInfoTypeForString('PROMOTION_CULTURE_NEANDERTHAL'), GC.getInfoTypeForString('BUILDING_CULTURE_LOCAL_NEANDERTHAL'), GC.getInfoTypeForString('BUILDING_CULTURE_NATIVE_NEANDERTHAL')],
-					[GC.getInfoTypeForString('PROMOTION_CULTURE_NORTH_AMERICAN'), GC.getInfoTypeForString('BUILDING_CULTURE_LOCAL_NORTH_AMERICAN'), GC.getInfoTypeForString('BUILDING_CULTURE_NATIVE_NORTH_AMERICAN')],
-					[GC.getInfoTypeForString('PROMOTION_CULTURE_OCEANIAN'), GC.getInfoTypeForString('BUILDING_CULTURE_LOCAL_OCEANIAN'), GC.getInfoTypeForString('BUILDING_CULTURE_NATIVE_OCEANIAN')],
-					[GC.getInfoTypeForString('PROMOTION_CULTURE_SOUTH_AMERICAN'), GC.getInfoTypeForString('BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN'), GC.getInfoTypeForString('BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN')]
+					[GC.getInfoTypeForString('PROMOTION_CULTURE_AFRICAN'), GC.getInfoTypeForString('BUILDING_C_L_AFRICAN'), GC.getInfoTypeForString('BUILDING_C_N_AFRICAN')],
+					[GC.getInfoTypeForString('PROMOTION_CULTURE_ASIAN'), GC.getInfoTypeForString('BUILDING_C_L_ASIAN'), GC.getInfoTypeForString('BUILDING_C_N_ASIAN')],
+					[GC.getInfoTypeForString('PROMOTION_CULTURE_EUROPEAN'), GC.getInfoTypeForString('BUILDING_C_L_EUROPEAN'), GC.getInfoTypeForString('BUILDING_C_N_EUROPEAN')],
+					[GC.getInfoTypeForString('PROMOTION_CULTURE_MIDDLE_EASTERN'), GC.getInfoTypeForString('BUILDING_C_L_MIDDLE_EASTERN'), GC.getInfoTypeForString('BUILDING_C_N_MIDDLE_EASTERN')],
+					[GC.getInfoTypeForString('PROMOTION_CULTURE_NEANDERTHAL'), GC.getInfoTypeForString('BUILDING_C_L_NEANDERTHAL'), GC.getInfoTypeForString('BUILDING_C_N_NEANDERTHAL')],
+					[GC.getInfoTypeForString('PROMOTION_CULTURE_NORTH_AMERICAN'), GC.getInfoTypeForString('BUILDING_C_L_NORTH_AMERICAN'), GC.getInfoTypeForString('BUILDING_C_N_NORTH_AMERICAN')],
+					[GC.getInfoTypeForString('PROMOTION_CULTURE_OCEANIAN'), GC.getInfoTypeForString('BUILDING_C_L_OCEANIAN'), GC.getInfoTypeForString('BUILDING_C_N_OCEANIAN')],
+					[GC.getInfoTypeForString('PROMOTION_CULTURE_SOUTH_AMERICAN'), GC.getInfoTypeForString('BUILDING_C_L_SOUTH_AMERICAN'), GC.getInfoTypeForString('BUILDING_C_N_SOUTH_AMERICAN')]
 				]
 				self.UNIT_BAND = GC.getInfoTypeForString("UNIT_BAND")
 
@@ -1896,7 +1896,7 @@ class CvEventManager:
 				GC.getMap().resetRevealedPlots(iTeamX)
 			CvUtil.sendImmediateMessage(TRNSLTR.getText("TXT_KEY_MSG_ZIZKOV_JAM",()))
 		elif iBuilding == mapBuildingType["NEANDERTHAL_EMBASSY"]:
-			iLocal = GC.getInfoTypeForString("BUILDING_CULTURE_LOCAL_NEANDERTHAL")
+			iLocal = GC.getInfoTypeForString("BUILDING_C_L_NEANDERTHAL")
 			for cityX in CyPlayer.cities():
 				cityX.setNumRealBuilding(iLocal, 1)
 

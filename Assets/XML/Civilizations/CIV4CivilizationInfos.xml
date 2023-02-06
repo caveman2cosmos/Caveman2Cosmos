@@ -78,8 +78,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_C_N_NORTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_NORTH_AMERICAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -183,8 +183,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_C_N_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_C_AC_MIDDLE_EASTERN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -285,8 +285,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_C_N_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_C_AC_MIDDLE_EASTERN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -380,8 +380,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_C_N_NORTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_NORTH_AMERICAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -481,8 +481,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_C_N_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_C_AC_MIDDLE_EASTERN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -578,8 +578,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_C_N_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_C_AC_MIDDLE_EASTERN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -684,8 +684,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_AFRICAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
+				<BuildingType>BUILDING_C_N_AFRICAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_AFRICAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -793,8 +793,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -888,8 +888,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_ASIAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
+				<BuildingType>BUILDING_C_N_ASIAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_ASIAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -999,8 +999,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_AFRICAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
+				<BuildingType>BUILDING_C_N_AFRICAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_AFRICAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -1106,8 +1106,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -1209,8 +1209,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_AFRICAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
+				<BuildingType>BUILDING_C_N_AFRICAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_AFRICAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -1308,8 +1308,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -1423,8 +1423,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -1535,8 +1535,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -1668,8 +1668,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_C_N_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_C_AC_MIDDLE_EASTERN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -1759,8 +1759,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -1864,8 +1864,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_C_N_SOUTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_SOUTH_AMERICAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -2007,8 +2007,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_ASIAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
+				<BuildingType>BUILDING_C_N_ASIAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_ASIAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -2105,8 +2105,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_ASIAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
+				<BuildingType>BUILDING_C_N_ASIAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_ASIAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -2204,8 +2204,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_ASIAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
+				<BuildingType>BUILDING_C_N_ASIAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_ASIAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -2298,8 +2298,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_ASIAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
+				<BuildingType>BUILDING_C_N_ASIAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_ASIAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -2402,8 +2402,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_AFRICAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
+				<BuildingType>BUILDING_C_N_AFRICAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_AFRICAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -2492,8 +2492,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_C_N_NORTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_NORTH_AMERICAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -2591,8 +2591,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_ASIAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
+				<BuildingType>BUILDING_C_N_ASIAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_ASIAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -2704,8 +2704,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_C_N_NORTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_NORTH_AMERICAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -2799,8 +2799,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -2900,8 +2900,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_C_N_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_C_AC_MIDDLE_EASTERN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -3009,8 +3009,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_C_N_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_C_AC_MIDDLE_EASTERN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -3108,8 +3108,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -3225,8 +3225,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -3328,8 +3328,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -3439,8 +3439,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_ASIAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
+				<BuildingType>BUILDING_C_N_ASIAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_ASIAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -3533,8 +3533,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -3634,8 +3634,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_C_N_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_C_AC_MIDDLE_EASTERN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -3732,8 +3732,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -3826,8 +3826,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_AFRICAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
+				<BuildingType>BUILDING_C_N_AFRICAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_AFRICAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -3920,8 +3920,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_OCEANIAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
+				<BuildingType>BUILDING_C_N_OCEANIAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_OCEANIAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -4015,8 +4015,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -4127,8 +4127,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_C_N_NORTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_NORTH_AMERICAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -4334,8 +4334,8 @@
 				<City>TXT_KEY_CITY_NAME_ZGA</City>
 			</Cities>
 			<FreeBuildings>
-				<BuildingType>BUILDING_CULTURE_NATIVE_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_N_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 			</FreeBuildings>
 			<FreeTechs>
 				<FreeTech>
@@ -4626,8 +4626,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_OCEANIAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
+				<BuildingType>BUILDING_C_N_OCEANIAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_OCEANIAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -4724,8 +4724,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_OCEANIAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
+				<BuildingType>BUILDING_C_N_OCEANIAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_OCEANIAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -4827,8 +4827,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_C_N_SOUTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_SOUTH_AMERICAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -4922,8 +4922,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_C_N_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_C_AC_MIDDLE_EASTERN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -5017,8 +5017,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_C_N_SOUTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_SOUTH_AMERICAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -5107,8 +5107,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_OCEANIAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
+				<BuildingType>BUILDING_C_N_OCEANIAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_OCEANIAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -5197,10 +5197,10 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_N_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -5288,8 +5288,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_C_N_SOUTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_SOUTH_AMERICAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>

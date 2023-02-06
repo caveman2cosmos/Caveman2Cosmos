@@ -4918,15 +4918,15 @@
 			<MovieDefineTag>ART_DEF_MOVIE_CRUSADE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_CRYSTALPUNK</Type>
+			<Type>BUILDING_CULTURE_CRYSTALPUNK</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_CRYSTAL</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_CULTURE_X_CRYSTALPUNK</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CRYSTALPUNK_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CULTURE_CRYSTALPUNK</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CULTURE_CRYSTALPUNK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_CRYSTALPUNK</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_CRYSTALPUNK</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CRYSTALPUNK_EMBASSY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -5769,12 +5769,12 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_CETACEA_SAPIEN</Type>
+			<Type>BUILDING_CULTURE_CETACEA_SAPIEN</Type>
 			<bNoLimit>1</bNoLimit>
-			<Description>TXT_KEY_BUILDING_CULTURE_X_CETACEA_SAPIEN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CETACEA_SAPIEN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CULTURE_CETACEA_SAPIEN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CULTURE_CETACEA_SAPIEN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_CETACEA_SAPIEN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_CETACEA_SAPIEN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6640,7 +6640,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ELLIS_ISLAND</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ELLIS_ISLAND</MovieDefineTag>
 			<PrereqTech>TECH_STEAM_POWER</PrereqTech>
-			<FreeBuilding>BUILDING_CULTURE_LOCAL_EUROPEAN</FreeBuilding>
+			<FreeBuilding>BUILDING_C_L_EUROPEAN</FreeBuilding>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bWater>1</bWater>
@@ -6744,7 +6744,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PICTOGRAPHS</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_CULTURE_LOCAL_OCEANIAN</BuildingType>
+				<BuildingType>BUILDING_C_L_OCEANIAN</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CAMP_EMU</BuildingType>
@@ -9806,7 +9806,7 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
+				<BuildingType>BUILDING_C_L_ASIAN</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BEADWORKER</BuildingType>
@@ -11102,7 +11102,7 @@
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_C_L_SOUTH_AMERICAN</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MASK_CARVER</BuildingType>
@@ -13745,7 +13745,7 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
+				<BuildingType>BUILDING_C_L_ASIAN</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_PORCELAIN_WORKSHOP</BuildingType>
@@ -14371,14 +14371,14 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_NEANDERTHAL</Type>
+			<Type>BUILDING_CULTURE_NEANDERTHAL</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_CULTURE_X_NEANDERTHAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_NEANDERTHAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_X_NEANDERTHAL_HELP</Help>
+			<Description>TXT_KEY_BUILDING_CULTURE_NEANDERTHAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CULTURE_NEANDERTHAL_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_CULTURE_NEANDERTHAL_HELP</Help>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_NEANDERTHAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_NEANDERTHAL</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -14469,11 +14469,11 @@
 				</Or>
 			</ConstructCondition>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
 			</PrereqNotInCityBuildings>
 			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>
 			<iCost>60</iCost>
-			<FreeBuilding>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</FreeBuilding>
+			<FreeBuilding>BUILDING_C_AC_NEANDERTHAL</FreeBuilding>
 			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
@@ -14899,7 +14899,7 @@
 			<PrereqTech>TECH_ORNAMENTATION</PrereqTech>
 			<VicinityBonus>BONUS_FINE_CLAY</VicinityBonus>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_CULTURE_LOCAL_AFRICAN</BuildingType>
+				<BuildingType>BUILDING_C_L_AFRICAN</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>1008</iCost>
 			<iHappiness>1</iHappiness>
@@ -16887,7 +16887,7 @@
 			<PrereqTech>TECH_GLASS_BLOWING</PrereqTech>
 			<VicinityBonus>BONUS_FINE_CLAY</VicinityBonus>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_CULTURE_LOCAL_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_L_EUROPEAN</BuildingType>
 				<BuildingType>BUILDING_GLAZE_MAKER</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
@@ -18735,15 +18735,15 @@
 			<iPrereqPopulation>20</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_SPACEPUNK</Type>
+			<Type>BUILDING_CULTURE_SPACEPUNK</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_SPACE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_CULTURE_X_SPACEPUNK</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SPACEPUNK_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CULTURE_SPACEPUNK</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CULTURE_SPACEPUNK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_SPACEPUNK</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_SPACEPUNK</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SPACEPUNK_EMBASSY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -19079,15 +19079,15 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_STARPUNK</Type>
+			<Type>BUILDING_CULTURE_STARPUNK</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_STAR</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_CULTURE_X_STARPUNK</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_STARPUNK_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CULTURE_STARPUNK</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CULTURE_STARPUNK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_STARPUNK</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_STARPUNK</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_STARPUNK_EMBASSY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -19260,7 +19260,7 @@
 			<PrereqTech>TECH_BARTER</PrereqTech>
 			<VicinityBonus>BONUS_STONE</VicinityBonus>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_C_L_MIDDLE_EASTERN</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>372</iCost>
 			<CommerceChanges>
@@ -19471,7 +19471,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_HAWAIIAN_SURFBOARD_CARVER_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MARTIAL_ARTS</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_CULTURE_LOCAL_OCEANIAN</BuildingType>
+				<BuildingType>BUILDING_C_L_OCEANIAN</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>2064</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>

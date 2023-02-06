@@ -46,8 +46,8 @@
 			<bPillage>1</bPillage>
 			<PrereqTech>TECH_HARD_HAMMER_PERCUSSION</PrereqTech>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_WARRIOR</UnitType>
@@ -122,8 +122,8 @@
 			<bPillage>1</bPillage>
 			<PrereqTech>TECH_SHARPENING</PrereqTech>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_STONE_AGE_AXEMAN</UnitType>
@@ -208,8 +208,8 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bPillage>1</bPillage>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL</UnitType>
@@ -306,8 +306,8 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bPillage>1</bPillage>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_SLINGER</UnitType>
@@ -411,8 +411,8 @@
 			<bPillage>1</bPillage>
 			<PrereqTech>TECH_BINDING</PrereqTech>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_ARCHER</UnitType>
@@ -538,8 +538,8 @@
 			</FreePromotions>
 			<PrereqTech>TECH_DECEPTION</PrereqTech>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_LOOKOUT_POST</BuildingType>
@@ -675,8 +675,8 @@
 			</FreePromotions>
 			<PrereqTech>TECH_CONDUCT</PrereqTech>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SENTRY_POST</BuildingType>
@@ -792,8 +792,8 @@
 			<bPillage>1</bPillage>
 			<PrereqTech>TECH_NOMADISM</PrereqTech>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_SCOUT</UnitType>
@@ -861,8 +861,8 @@
 			<bWorkerTrade>1</bWorkerTrade>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_WORKER</UnitType>
@@ -959,8 +959,8 @@
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_HERBALISM</PrereqTech>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_WILD_HERBS_GATHERER</BuildingType>
@@ -1073,8 +1073,8 @@
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HEALERS_HUT</BuildingType>
@@ -1202,8 +1202,8 @@
 				<BonusType>BONUS_LLAMA</BonusType>
 			</PrereqBonuses>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_VET</UnitType>
@@ -1323,8 +1323,8 @@
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
 			<BonusType>BONUS_DOG</BonusType>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DOG_BREEDER</BuildingType>
@@ -1408,8 +1408,8 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 			</PrereqAndBuildings>
 			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>
 			<UnitUpgrades>
@@ -1504,8 +1504,8 @@
 				<BonusType>BONUS_WOOD</BonusType>
 			</PrereqBonuses>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CANOE_BUILDER</BuildingType>
 			</PrereqAndBuildings>
 			<UnitUpgrades>
@@ -1615,8 +1615,8 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<PrereqTech>TECH_HARPOON_MAKING</PrereqTech>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CANOE_BUILDER</BuildingType>
 			</PrereqAndBuildings>
 			<UnitUpgrades>
@@ -1729,8 +1729,8 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<PrereqTech>TECH_BOAT_BUILDING</PrereqTech>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CANOE_BUILDER</BuildingType>
 			</PrereqAndBuildings>
 			<UnitUpgrades>
@@ -1862,8 +1862,8 @@
 				<BonusType>BONUS_REEDS</BonusType>
 			</PrereqBonuses>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_CANOE</UnitType>
@@ -1960,8 +1960,8 @@
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_WORKBOAT_CLASSIC</UnitType>
@@ -2075,8 +2075,8 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<PrereqTech>TECH_WARFARE</PrereqTech>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_LUMBER_CAMP</BuildingType>
@@ -2193,8 +2193,8 @@
 			</TechTypes>
 			<BonusType>BONUS_ELEPHANTS</BonusType>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TRAINER_ELEPHANT</BuildingType>
 			</PrereqAndBuildings>
 			<UnitUpgrades>
@@ -2304,8 +2304,8 @@
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
 			<BonusType>BONUS_OBSIDIAN</BonusType>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_SPEARMAN</UnitType>
@@ -2405,8 +2405,8 @@
 			<bPillage>1</bPillage>
 			<PrereqTech>TECH_SPEAR_MAKING</PrereqTech>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_OBSIDIAN_SPEARMAN</UnitType>
@@ -2513,8 +2513,8 @@
 			<bPillage>1</bPillage>
 			<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_STONE_AGE_SPEARMAN</UnitType>
@@ -2614,8 +2614,8 @@
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
 			<BonusType>BONUS_OBSIDIAN</BonusType>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_LIGHT_SWORDSMAN</UnitType>
@@ -2713,8 +2713,8 @@
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
 			<BonusType>BONUS_OBSIDIAN</BonusType>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_AXEMAN</UnitType>
@@ -2817,8 +2817,8 @@
 			<bPillage>1</bPillage>
 			<PrereqTech>TECH_AXE_MAKING</PrereqTech>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_OBSIDIAN_AXEMAN</UnitType>
@@ -2922,8 +2922,8 @@
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
 			<BonusType>BONUS_OBSIDIAN</BonusType>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_EARLY_MACEMAN</UnitType>
@@ -3026,8 +3026,8 @@
 			<bPillage>1</bPillage>
 			<PrereqTech>TECH_COMPOSITE_TOOLS</PrereqTech>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_OBSIDIAN_MACEMAN</UnitType>
@@ -3150,8 +3150,8 @@
 			<bAssassin>1</bAssassin>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_RANGER</UnitType>
@@ -3239,8 +3239,8 @@
 			<bAssassin>1</bAssassin>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_HUNTER</UnitType>
@@ -3331,8 +3331,8 @@
 			</FreePromotions>
 			<PrereqTech>TECH_PERSISTENCE_HUNTING</PrereqTech>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_TRACKER</UnitType>
@@ -3429,8 +3429,8 @@
 			<bPillage>1</bPillage>
 			<PrereqTech>TECH_TRAILS</PrereqTech>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_GUIDE</UnitType>

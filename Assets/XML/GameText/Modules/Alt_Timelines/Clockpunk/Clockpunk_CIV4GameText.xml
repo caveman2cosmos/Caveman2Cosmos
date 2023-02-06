@@ -54,14 +54,14 @@
 		<Russian>Îðíèòîïòåðíàÿ ïëîùàäêà - ýòî äðåâíèé àýðîïîðò äëÿ îðíèòîïòåðîâ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CULTURE_X_CLOCKPUNK</Tag>
+		<Tag>TXT_KEY_BUILDING_CULTURE_CLOCKPUNK</Tag>
 		<English>Culture (Clockpunk)</English>
 		<Italian>Cultura (Clockpunk)</Italian>
 		<Polish>Kultura (Clockpunk)</Polish>
 		<Russian>Клокпанк</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CULTURE_X_CLOCKPUNK_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_CULTURE_CLOCKPUNK_PEDIA</Tag>
 		<English>[COLOR_BUILDING_TEXT]Clockpunk[COLOR_REVERT] is a subgenre of speculative fiction which is similar to steampunk. It portrays advanced technologies based on springs and clockwork, instead of current technologies, despite keeping a pre-modern design. Clockpunk is based very intensively on the works of Leonardo da Vinci and, as such, it is typically set during the Renaissance or in a Renaissance-like era.</English>
 		<French>Le [COLOR_BUILDING_TEXT]Clockpunk[COLOR_REVERT] est un sous-genre de fiction spéculative similaire au steampunk. Il décrit des technologies avancées basées sur des ressorts et des horloges, au lieu des technologies actuelles, tout en conservant un design pré-moderne. Clockpunk est très intensément basé sur les œuvres de Léonard de Vinci et, en tant que tel, il se déroule généralement à la Renaissance ou à une époque similaire à la Renaissance.</French>
 		<Italian>Il [COLOR_BUILDING_TEXT]Clockpunk[COLOR_REVERT] è un sottogenere della letteratura fantascientifica simile allo steampunk. Ritrae tecnologie avanzate basate su molle e orologi, al contrario dei meccanismi attuali, pur mantenendo un design pre-moderno. Il Clockpunk si basa ampiamente sulle opere di Leonardo da Vinci e, pertanto, è tipicamente ambientato durante il Rinascimento o in uno scenario simile all'epoca rinascimentale.</Italian>

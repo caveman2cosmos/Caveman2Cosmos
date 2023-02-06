@@ -58,7 +58,7 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_INDIAN</Type>
+			<Type>BUILDING_CULTURE_INDIAN</Type>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_NEMOS_NAVAL_ACADEMY</BuildingType>
@@ -333,14 +333,14 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_STEAMPUNK</Type>
+			<Type>BUILDING_CULTURE_STEAMPUNK</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_STEAM</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_CULTURE_X_STEAMPUNK</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_STEAMPUNK_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CULTURE_STEAMPUNK</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CULTURE_STEAMPUNK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_STEAMPUNK</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_STEAMPUNK</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
