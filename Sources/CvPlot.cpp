@@ -4389,7 +4389,6 @@ PlayerTypes CvPlot::calculateCulturalOwner(bool bCountLastTurn) const
 	const PlayerTypes eOwner = getOwner();
 	const PlayerTypes eHighestCulturePlayer = findHighestCulturePlayer(false, bCountLastTurn);
 
-	// non-city, non fort plots that are *adjacent* to cities may always belong to those cities' owners
 	if (eOwner == NO_PLAYER)
 	{
 		if (eHighestCulturePlayer != NO_PLAYER)
@@ -4401,6 +4400,7 @@ PlayerTypes CvPlot::calculateCulturalOwner(bool bCountLastTurn) const
 		return NO_PLAYER; //getPlayerWithTerritorySurroundingThisPlotCardinally();
 	}
 
+	// non-city, non fort plots that are *adjacent* to cities may always belong to those cities' owners
 	if (GC.getGame().isOption(GAMEOPTION_MIN_CITY_BORDER) && !isCity(true))
 	{
 		const CvCity* adjacentCity = getAdjacentCity();
@@ -7912,9 +7912,11 @@ PlayerTypes CvPlot::findHighestCulturePlayer(const bool bCountLegacyCulture, con
 
 		if (GET_PLAYER(ePlayerX).isAlive())
 		{
+			// Equilibium culture game option may result in negative culture when near equilibrium (loss of buildings, etc) and
+			// as a result can't be immediately set to unown; we are required to use decay dynamics instead to lose control
 			if (bCountLegacyCulture
-			|| getCultureRateThisTurn(ePlayerX) > 0
-			|| bCountLastTurn && getCultureRateLastTurn(ePlayerX) > 0)
+			|| (getCultureRateThisTurn(ePlayerX) > 0 || GC.getGame().isOption(GAMEOPTION_EQUILIBRIUM_CULTURE))
+			|| bCountLastTurn && (getCultureRateLastTurn(ePlayerX) > 0 || GC.getGame().isOption(GAMEOPTION_EQUILIBRIUM_CULTURE)))
 			{
 				const int iValue = getCulture(ePlayerX);
 				if (iValue > 0)
@@ -7977,6 +7979,9 @@ void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bU
 		FErrorMsg("Trace: Attempting to set plot culture to zero for player that owns the city on the plot");
 		iNewValue = 1;
 	}
+
+	// Protection from overzealous decay
+	iNewValue = std::max(0, iNewValue);
 
 	if (getCulture(eIndex) != iNewValue)
 	{
@@ -8061,8 +8066,6 @@ void CvPlot::changeCulture(PlayerTypes eIndex, int iChange, bool bUpdate)
 {
 	if (0 != iChange)
 	{
-		// May need to bump change up if below decay-in-one-turn value under equilibrium option.
-		if (GC.getGame().isOption(GAMEOPTION_EQUILIBRIUM_CULTURE) && iChange == 1) iChange = 2;
 		setCulture(eIndex, std::max(0, getCulture(eIndex) + iChange), bUpdate, true);
 	}
 }
@@ -10258,11 +10261,24 @@ void CvPlot::doCulture()
 		{
 			const PlayerTypes ePlayerX = static_cast<PlayerTypes>(i);
 
-			if (getCulture(ePlayerX) > 0 &&
-				(getCultureRateThisTurn(ePlayerX) < 1 && (!getPlotCity() || getOwner() != ePlayerX)) ||
-				GC.getGame().isOption(GAMEOPTION_EQUILIBRIUM_CULTURE))
+			if (getCulture(ePlayerX) > 0)
 			{
-				setCulture(ePlayerX, getCulture(ePlayerX) * (1000 - decayPermille) / 1000, false, false, true);
+				if (GC.getGame().isOption(GAMEOPTION_EQUILIBRIUM_CULTURE))
+				{
+					// Decay 20x faster (to 60% at default speeds) if outside of city control in equilibrium, since we can't immediately set to unowned when negative
+					if (isInCultureRangeOfCityByPlayer(ePlayerX))
+					{
+						setCulture(ePlayerX, getCulture(ePlayerX) * (1000 - decayPermille) / 1000, false, false, true);
+					}
+					else
+					{
+						setCulture(ePlayerX, getCulture(ePlayerX) * (1000 - 20 * decayPermille) / 1000, false, false, true);
+					}
+				}
+				else if (getCultureRateThisTurn(ePlayerX) < 1 && (!getPlotCity() || getOwner() != ePlayerX))
+				{
+					setCulture(ePlayerX, getCulture(ePlayerX) * (1000 - decayPermille) / 1000, false, false, true);
+				}
 			}
 		}
 	}
