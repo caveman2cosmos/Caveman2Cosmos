@@ -7775,7 +7775,7 @@ namespace {
 	};
 };
 
-//
+
 // Only used for improvement upgrading.
 int CvCityAI::AI_getImprovementValue(const CvPlot* pPlot, ImprovementTypes eImprovement, int iFoodPriority, int iProductionPriority, int iCommercePriority, int iFoodChange) const
 {
@@ -7811,33 +7811,33 @@ int CvCityAI::AI_getImprovementValue(const CvPlot* pPlot, ImprovementTypes eImpr
 	if (improvement.isCarriesIrrigation()) iValue += 200;
 
 	const int iCultureRange = improvement.getCultureRange() + 1;
-	iValue += 4 * improvement.getCulture() * iCultureRange * iCultureRange;
+	// Blaze: Comment out culture&range to not overvalue cottage line.
+	// iValue += 4 * improvement.getCulture() * iCultureRange * iCultureRange;
 
-	int iMilitaryValue = 3 * improvement.getAirBombDefense();
+	// We should only be caring about military stats on military improvements; others are incidential
+	if (improvement.isMilitaryStructure())
+	{
+		int iMilitaryValue = 3 * improvement.getAirBombDefense();
 
-	if (improvement.isZOCSource()) iMilitaryValue += 200;
+		if (improvement.isZOCSource()) iMilitaryValue += 200;
 
-	iMilitaryValue += 2 * (5 * improvement.getVisibilityChange() + 2 * improvement.getSeeFrom());
+		iMilitaryValue += 2 * (5 * improvement.getVisibilityChange() + 2 * improvement.getSeeFrom());
 
-	const int iDefense = improvement.getDefenseModifier();
-	if (iDefense < 0)
-	{
-		iMilitaryValue -= iDefense * iDefense;
-	}
-	else if (iDefense > 0)
-	{
-		iMilitaryValue += iDefense * iDefense;
-	}
-	if (improvement.isActsAsCity())
-	{
-		iMilitaryValue *= (2 + iCultureRange);
-	}
-	else if (improvement.isUpgradeRequiresFortify())
-	{
+		const int iDefense = improvement.getDefenseModifier();
+		if (iDefense < 0)
+		{
+			iMilitaryValue -= iDefense * iDefense;
+		}
+		else if (iDefense > 0)
+		{
+			iMilitaryValue += iDefense * iDefense;
+		}
+
+		iMilitaryValue *= (1 + iCultureRange);
 		iMilitaryValue *= 5;
 		iMilitaryValue /= 3;
+		iValue += iMilitaryValue;
 	}
-	iValue += iMilitaryValue;
 
 	const ImprovementTypes eFinalUpgrade = finalImprovementUpgrade(eImprovement);
 	FAssert(eFinalUpgrade != NO_IMPROVEMENT);
@@ -10338,7 +10338,7 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 		const CvImprovementInfo& potentialImprovementInfo = GC.getImprovementInfo(ePotentialImprovement);
 
 		// check if improvement is a fort or watchtower, then its a no.
-		if (potentialImprovementInfo.isActsAsCity() || potentialImprovementInfo.getVisibilityChange() > 0) continue;
+		if (potentialImprovementInfo.isMilitaryStructure()) continue;
 
 		// check if improvement can be built by team
 		if (!pPlot->canBuildImprovement(ePotentialImprovement, getTeam())) continue;

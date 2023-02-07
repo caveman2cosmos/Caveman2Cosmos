@@ -6574,7 +6574,8 @@ int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) c
 			if (mainPlot->isHills())
 			{
 				terrainDistance += GC.getTerrainInfo(GC.getTERRAIN_HILL()).getCultureDistance()
-					+ !GET_TEAM(getTeam()).isCanFoundOnPeaks();
+					+ !GET_TEAM(getTeam()).isCanFoundOnPeaks()
+					+ !GET_TEAM(getTeam()).isBridgeBuilding();
 			}
 		}
 	}
@@ -6592,32 +6593,37 @@ int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) c
 		{
 			terrainDistance += 1;
 		}
-		// penalty for improved features if not inside adjacent-surrounded territory
-		else
+		// penalty for improved features if outside player city affected territory
+		else if (!mainPlot->isInCultureRangeOfCityByPlayer(getOwner()))
 		{
-			foreach_(const CvPlot* adjacentPlot, mainPlot->cardinalDirectionAdjacent())
-			{
-				if (adjacentPlot->getOwner() == NO_PLAYER)
-				{
-					terrainDistance += 1;
-					break;
-				}
-			}
+			terrainDistance += 1;
 		}
+		// Always add base feature cost
 		terrainDistance += GC.getFeatureInfo(mainPlot->getFeatureType()).getCultureDistance();
 	}
 
 	// Using route value/tier as softer inhibitor by era
+	// Base distance (x): 0, 1, 2, 3, 4 ... translates to:
+	// Tier 0 (noroute):  0, 1, 3, 5, 7 ... // 2x-1: Always applies to tiles not yet influenced
+	// Tier 1 (trail):	  0, 1, 3, 4, 6 ... // 3x/2
+	// Tier 2 (path):	  0, 1, 2, 4, 5 ... // 4x/3
+	// Tier 3 (road):	  0, 1, 2, 3, 5 ... // 5x/4
 	if (!mainPlot->isWater())
 	{
-		if (mainPlot->getRouteType() == NO_ROUTE)
+		int routeTierMod = 0;
+
+		// If the plot has an existing route, and already inside the influence area of a city, maybe bump tier up (less penalties)
+		if (mainPlot->getRouteType() != NO_ROUTE && mainPlot->isInCultureRangeOfCityByPlayer(mainPlot->getOwner()))
+			routeTierMod = std::max(routeTierMod, GC.getRouteInfo(mainPlot->getRouteType()).getValue());
+
+		// Penalties applied for low tier routes (pre-paved road)
+		if (routeTierMod == 0)
 		{
-			terrainDistance = std::max(0, (terrainDistance - 1) * 2 + 1);
+			terrainDistance = std::max(0, 1 + 2 * (terrainDistance - 1));
 		}
-		else
+		else if (routeTierMod < 4)
 		{
-			const int routeTier = GC.getRouteInfo(mainPlot->getRouteType()).getValue();
-			if (routeTier < 4) terrainDistance = terrainDistance * (routeTier + 2) / (routeTier + 1);
+			terrainDistance = terrainDistance * (routeTierMod + 2) / (routeTierMod + 1);
 		}
 	}
 
@@ -6649,7 +6655,7 @@ int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) c
 			if (neighborDist == 0)
 			{
 				netDistanceModifier += mainPlot->isRiverCrossing(directionXY(mainPlot, adjacentPlot)) * (extraRiverPenalty);
-				netDistanceModifier /= 2;
+				netDistanceModifier /= 3;
 			}
 			else
 			{
@@ -16124,7 +16130,7 @@ void CvCity::doPlotCulture(PlayerTypes ePlayer, int iCultureRate)
 
 		if (iCultureDistance <= iCultureLevel && plotX->isPotentialCityWorkForArea(area()))
 		{
-			// changeCulture includes a check to culture value upward
+			// changeCulture includes a check to bump culture value upward
 			// to ensure plot cannot be lost thru decay even if culture gain is too small
 			plotX->changeCulture(
 				ePlayer,
@@ -16132,6 +16138,7 @@ void CvCity::doPlotCulture(PlayerTypes ePlayer, int iCultureRate)
 				// Toffer - Only update plot ownership when the culture of non-owners increase.
 				plotX->getOwner() != ePlayer
 			);
+			plotX->setInCultureRangeOfCityByPlayer(ePlayer);
 		}
 	}
 }

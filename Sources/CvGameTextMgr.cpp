@@ -1,4 +1,4 @@
-﻿//---------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------
 //
 //  *****************   Civilization IV   ********************
 //
@@ -8780,18 +8780,25 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 						pOwner.getCivilizationAdjective(), pPlot->getCulture(ePlotOwner)
 					)
 				);
-				{
-					const int iRate = pPlot->getCultureRateLastTurn(ePlotOwner);
 
-					if (iRate > 0)
-					{
-						szString.append(CvWString::format(L" + %d)\n", iRate));
-					}
-					else if (iRate < 0)
-					{
-						szString.append(CvWString::format(L" - %d)\n", -iRate));
-					}
-					else szString.append(L")\n");
+				const int iRate = pPlot->getCultureRateLastTurn(ePlotOwner);
+				if (iRate > 0)
+				{
+					szString.append(CvWString::format(L" + %d)\n", iRate));
+				}
+				else if (iRate < 0)
+				{
+					szString.append(CvWString::format(L" - %d)\n", -iRate));
+				}
+				else
+				{
+					szString.append(L")\n");
+				}
+				if (!pPlot->isInCultureRangeOfCityByPlayer(ePlotOwner))
+				{
+					szString.append(gDLL->getText("TXT_KEY_BULLET"));
+					szString.append(gDLL->getText("TXT_KEY_MISC_NO_CITY_INFLUENCE", pOwner.getCivilizationAdjective()));
+					szString.append(NEWLINE);
 				}
 			}
 			for (int iI = 0; iI < MAX_PLAYERS; iI++)
@@ -8808,8 +8815,8 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 							playerX.getCivilizationAdjective(), pPlot->getCulture(ePlayerX)
 						)
 					);
-					const int iRate = pPlot->getCultureRateLastTurn(ePlayerX);
 
+					const int iRate = pPlot->getCultureRateLastTurn(ePlayerX);
 					if (iRate > 0)
 					{
 						szString.append(CvWString::format(L" + %d)\n", iRate));
@@ -8818,7 +8825,16 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 					{
 						szString.append(CvWString::format(L" - %d)\n", -iRate));
 					}
-					else szString.append(L")\n");
+					else
+					{
+						szString.append(L")\n");
+					}
+					if (!pPlot->isInCultureRangeOfCityByPlayer(ePlayerX))
+					{
+						szString.append(gDLL->getText("TXT_KEY_BULLET"));
+						szString.append(gDLL->getText("TXT_KEY_MISC_NO_CITY_INFLUENCE", playerX.getCivilizationAdjective()));
+						szString.append(NEWLINE);
+					}
 				}
 			}
 		}
@@ -8863,8 +8879,8 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 						pOwner.getCivilizationAdjective(), pPlot->getCulture(eRevealOwner)
 					)
 				);
-				const int iRate = pPlot->getCultureRateLastTurn(ePlotOwner);
 
+				const int iRate = pPlot->getCultureRateLastTurn(ePlotOwner);
 				if (iRate > 0)
 				{
 					szString.append(CvWString::format(L" + %d)\n", iRate));
@@ -8873,7 +8889,16 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 				{
 					szString.append(CvWString::format(L" - %d)\n", -iRate));
 				}
-				else szString.append(L")\n");
+				else
+				{
+					szString.append(L")\n");
+				}
+				if (!pPlot->isInCultureRangeOfCityByPlayer(ePlotOwner))
+				{
+					szString.append(gDLL->getText("TXT_KEY_BULLET"));
+					szString.append(gDLL->getText("TXT_KEY_MISC_NO_CITY_INFLUENCE", pOwner.getCivilizationAdjective()));
+					szString.append(NEWLINE);
+				}
 			}
 			for (int iI = 0; iI < MAX_PLAYERS; iI++)
 			{
@@ -8887,8 +8912,8 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 							playerX.getPlayerTextColorR(), playerX.getPlayerTextColorG(), playerX.getPlayerTextColorB(), playerX.getPlayerTextColorA(),
 							playerX.getCivilizationAdjective(), pPlot->getCulture(ePlayerX)));
 					}
-					const int iRate = pPlot->getCultureRateLastTurn(ePlayerX);
 
+					const int iRate = pPlot->getCultureRateLastTurn(ePlayerX);
 					if (iRate > 0)
 					{
 						szString.append(CvWString::format(L" + %d)\n", iRate));
@@ -8897,7 +8922,16 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 					{
 						szString.append(CvWString::format(L" - %d)\n", -iRate));
 					}
-					else szString.append(L")\n");
+					else
+					{
+						szString.append(L")\n");
+					}
+					if (!pPlot->isInCultureRangeOfCityByPlayer(ePlayerX))
+					{
+						szString.append(gDLL->getText("TXT_KEY_BULLET"));
+						szString.append(gDLL->getText("TXT_KEY_MISC_NO_CITY_INFLUENCE", playerX.getCivilizationAdjective()));
+						szString.append(NEWLINE);
+					}
 				}
 			}
 		}
@@ -9028,7 +9062,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 				{
 					iMovementCost += GC.getPEAK_EXTRA_MOVEMENT();
 				}
-				else iMovementCost += 1;
+				iMovementCost += 3;
 			}
 
 			if (iMovementCost != 0)
