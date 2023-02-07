@@ -7027,7 +7027,7 @@ bool CvUnit::canGift(bool bTestVisible, bool bTestTransport) const
 {
 	const CvPlot* pPlot = plot();
 
-	if (!pPlot->isOwned() 
+	if (!pPlot->isOwned()
 	||  pPlot->getOwner() == getOwner()
 	||  pPlot->isVisibleEnemyUnit(this)
 	||  pPlot->isVisibleEnemyUnit(pPlot->getOwner()))

@@ -6507,7 +6507,7 @@ void CvCity::recalculateCultureDistances(int iMaxDistance) const
 		foreach_(const CvPlot* plotX, plot()->rect(iMaxDistance, iMaxDistance))
 		{
 			// Either ignore only core, or 9 tiles around city center depending on whether 1 tile start:
-			if (plotDistance(getX(), getY(), plotX->getX(), plotX->getY()) < 
+			if (plotDistance(getX(), getY(), plotX->getX(), plotX->getY()) <
 				(1 + !GC.getGame().isOption(GAMEOPTION_1_CITY_TILE_FOUNDING)))
 			{
 				// This is a slightly cursed function.
