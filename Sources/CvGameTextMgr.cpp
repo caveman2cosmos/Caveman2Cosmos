@@ -8780,10 +8780,8 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 						pOwner.getCivilizationAdjective(), pPlot->getCulture(ePlotOwner)
 					)
 				);
-				if (pPlot->isInCultureRangeOfCityByPlayer(ePlotOwner)) szString.append(L"(C)");
 
 				const int iRate = pPlot->getCultureRateLastTurn(ePlotOwner);
-
 				if (iRate > 0)
 				{
 					szString.append(CvWString::format(L" + %d)\n", iRate));
@@ -8792,7 +8790,16 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 				{
 					szString.append(CvWString::format(L" - %d)\n", -iRate));
 				}
-				else szString.append(L")\n");
+				else
+				{
+					szString.append(L")\n");
+				}
+				if (!pPlot->isInCultureRangeOfCityByPlayer(ePlotOwner))
+				{
+					szString.append(gDLL->getText("TXT_KEY_BULLET"));
+					szString.append(gDLL->getText("TXT_KEY_MISC_NO_CITY_INFLUENCE", pOwner.getCivilizationAdjective()));
+					szString.append(NEWLINE);
+				}
 			}
 			for (int iI = 0; iI < MAX_PLAYERS; iI++)
 			{
@@ -8808,10 +8815,8 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 							playerX.getCivilizationAdjective(), pPlot->getCulture(ePlayerX)
 						)
 					);
-					if (pPlot->isInCultureRangeOfCityByPlayer(ePlayerX)) szString.append(L"(C)");
 
 					const int iRate = pPlot->getCultureRateLastTurn(ePlayerX);
-
 					if (iRate > 0)
 					{
 						szString.append(CvWString::format(L" + %d)\n", iRate));
@@ -8820,7 +8825,16 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 					{
 						szString.append(CvWString::format(L" - %d)\n", -iRate));
 					}
-					else szString.append(L")\n");
+					else
+					{
+						szString.append(L")\n");
+					}
+					if (!pPlot->isInCultureRangeOfCityByPlayer(ePlayerX))
+					{
+						szString.append(gDLL->getText("TXT_KEY_BULLET"));
+						szString.append(gDLL->getText("TXT_KEY_MISC_NO_CITY_INFLUENCE", playerX.getCivilizationAdjective()));
+						szString.append(NEWLINE);
+					}
 				}
 			}
 		}
@@ -8865,10 +8879,8 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 						pOwner.getCivilizationAdjective(), pPlot->getCulture(eRevealOwner)
 					)
 				);
-				if (pPlot->isInCultureRangeOfCityByPlayer(ePlotOwner)) szString.append(L"(C)");
 
 				const int iRate = pPlot->getCultureRateLastTurn(ePlotOwner);
-
 				if (iRate > 0)
 				{
 					szString.append(CvWString::format(L" + %d)\n", iRate));
@@ -8877,7 +8889,16 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 				{
 					szString.append(CvWString::format(L" - %d)\n", -iRate));
 				}
-				else szString.append(L")\n");
+				else
+				{
+					szString.append(L")\n");
+				}
+				if (!pPlot->isInCultureRangeOfCityByPlayer(ePlotOwner))
+				{
+					szString.append(gDLL->getText("TXT_KEY_BULLET"));
+					szString.append(gDLL->getText("TXT_KEY_MISC_NO_CITY_INFLUENCE", pOwner.getCivilizationAdjective()));
+					szString.append(NEWLINE);
+				}
 			}
 			for (int iI = 0; iI < MAX_PLAYERS; iI++)
 			{
@@ -8891,10 +8912,8 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 							playerX.getPlayerTextColorR(), playerX.getPlayerTextColorG(), playerX.getPlayerTextColorB(), playerX.getPlayerTextColorA(),
 							playerX.getCivilizationAdjective(), pPlot->getCulture(ePlayerX)));
 					}
-					if (pPlot->isInCultureRangeOfCityByPlayer(ePlayerX)) szString.append(L"(C)");
 
 					const int iRate = pPlot->getCultureRateLastTurn(ePlayerX);
-
 					if (iRate > 0)
 					{
 						szString.append(CvWString::format(L" + %d)\n", iRate));
@@ -8903,7 +8922,16 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 					{
 						szString.append(CvWString::format(L" - %d)\n", -iRate));
 					}
-					else szString.append(L")\n");
+					else
+					{
+						szString.append(L")\n");
+					}
+					if (!pPlot->isInCultureRangeOfCityByPlayer(ePlayerX))
+					{
+						szString.append(gDLL->getText("TXT_KEY_BULLET"));
+						szString.append(gDLL->getText("TXT_KEY_MISC_NO_CITY_INFLUENCE", playerX.getCivilizationAdjective()));
+						szString.append(NEWLINE);
+					}
 				}
 			}
 		}

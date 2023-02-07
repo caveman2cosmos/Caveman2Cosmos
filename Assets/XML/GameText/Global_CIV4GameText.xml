@@ -15734,6 +15734,10 @@
 		<Russian>Âëàäåëåö</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MISC_NO_CITY_INFLUENCE</Tag>
+		<English>Not in %s1_CivAdj city influence.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MISC_PEACE_TREATY</Tag>
 		<English>Peace Treaty (%d1_Num Turns)</English>
 		<French>Traité de paix (%d1_Num tours)</French>
