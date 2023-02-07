@@ -5811,7 +5811,7 @@
 			<ArtDefineTag>ART_DEF_TERRAIN_HILL</ArtDefineTag>
 			<bWaterTerrain>1</bWaterTerrain>
 			<iBuildModifier>25</iBuildModifier>
-			<iCultureDistance>2</iCultureDistance> <!-- dll increases penalty 1 for missing bCanFoundOnPeaks -->
+			<iCultureDistance>1</iCultureDistance> <!-- dll increases penalty 1 for missing: bBridgeBuilding, bCanFoundOnPeaks -->
 			<iMovement>1</iMovement>
 			<Button>Art/Interface\Buttons\WorldBuilder\Terrain_Hill.dds</Button>
 			<FootstepSounds>

@@ -6574,7 +6574,8 @@ int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) c
 			if (mainPlot->isHills())
 			{
 				terrainDistance += GC.getTerrainInfo(GC.getTERRAIN_HILL()).getCultureDistance()
-					+ !GET_TEAM(getTeam()).isCanFoundOnPeaks();
+					+ !GET_TEAM(getTeam()).isCanFoundOnPeaks()
+					+ !GET_TEAM(getTeam()).isBridgeBuilding();
 			}
 		}
 	}
