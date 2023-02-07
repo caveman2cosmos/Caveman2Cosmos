@@ -6602,21 +6602,28 @@ int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) c
 	}
 
 	// Using route value/tier as softer inhibitor by era
-	// Base distance:	 0, 1, 2, 3, 4 ... translates to:
-	// Tier 0 (noroute): 0, 2, 4, 6, 8 ...
-	// Tier 1 (trail):	 0, 1, 3, 4, 6 ...
-	// Tier 2 (path):	 0, 1, 2, 4, 5 ...
-	// Tier 3 (road):	 0, 1, 2, 3, 5 ...
+	// Base distance (x): 0, 1, 2, 3, 4 ... translates to:
+	// Tier 0 (noroute):  0, 1, 3, 5, 7 ... // 2x-1: Always applies to tiles not yet influenced
+	// Tier 1 (trail):	  0, 1, 3, 4, 6 ... // 3x/2
+	// Tier 2 (path):	  0, 1, 2, 4, 5 ... // 4x/3
+	// Tier 3 (road):	  0, 1, 2, 3, 5 ... // 5x/4
 	if (!mainPlot->isWater())
 	{
 		int routeTierMod = 0;
 
-		// If the plot has an existing route, and already inside the borders of the city, maybe bump tier up (less penalties)
-		if (mainPlot->getRouteType() != NO_ROUTE && mainPlot->isInCultureRangeOfCityByPlayer(getOwner()))
+		// If the plot has an existing route, and already inside the influence area of a city, maybe bump tier up (less penalties)
+		if (mainPlot->getRouteType() != NO_ROUTE && mainPlot->isInCultureRangeOfCityByPlayer(mainPlot->getOwner()))
 			routeTierMod = std::max(routeTierMod, GC.getRouteInfo(mainPlot->getRouteType()).getValue());
 
-		// Penalties removed w/paved road
-		if (routeTierMod < 4) terrainDistance = terrainDistance * (routeTierMod + 2) / (routeTierMod + 1);
+		// Penalties applied for low tier routes (pre-paved road)
+		if (routeTierMod == 0)
+		{
+			terrainDistance = std::max(0, 1 + 2 * (terrainDistance - 1));
+		}
+		else if (routeTierMod < 4)
+		{
+			terrainDistance = terrainDistance * (routeTierMod + 2) / (routeTierMod + 1);
+		}
 	}
 
 	// Halve terrain distance if bonus is present

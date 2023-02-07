@@ -2982,7 +2982,7 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 				}
 			}
 			// Fail when on territory owned by non-teammate
-			// OR when outside influence of tile owner; this enables building on valid territory of teammates.
+			// OR when outside influence of tile owner; this (should?) enable building on valid territory of teammates.
 			// NOTE: This prevents workers removing forts when in territory influenced by teammate. Also does not allow
 			// 		building on a tile owned by teammate but only influenced by you (rare occurrance though for it not to be a fort tile)
 			else if (GET_PLAYER(ePlayer).getTeam() != getTeam()
