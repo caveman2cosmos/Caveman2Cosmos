@@ -8740,6 +8740,8 @@
 			<bPeakImprovement>1</bPeakImprovement>
 			<iAdvancedStartCost>50</iAdvancedStartCost>
 			<bOutsideBorders>1</bOutsideBorders>
+			<iCulture>30</iCulture>
+			<iCultureRange>1<iCultureRange>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_WIRELESS_ELECTRICITY</PrereqTech>
@@ -9672,7 +9674,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<iCulture>10</iCulture>
+			<iCulture>20</iCulture>
 			<iVisibilityChange>4</iVisibilityChange>
 			<iSeeFrom>2</iSeeFrom>
 			<iUniqueRange>0</iUniqueRange>
@@ -9762,7 +9764,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<iCulture>4</iCulture>
+			<iCulture>10</iCulture>
 			<ImprovementPillage>IMPROVEMENT_STONE_WATCHTOWER</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_RADAR_TOWER</ImprovementUpgrade>
 			<iVisibilityChange>3</iVisibilityChange>
@@ -9854,7 +9856,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<iCulture>2</iCulture>
+			<iCulture>4</iCulture>
 			<ImprovementPillage>IMPROVEMENT_WOODEN_WATCHTOWER</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_STEEL_WATCHTOWER</ImprovementUpgrade>
 			<iVisibilityChange>2</iVisibilityChange>
@@ -9947,7 +9949,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<iCulture>1</iCulture>
+			<iCulture>2</iCulture>
 			<ImprovementUpgrade>IMPROVEMENT_STONE_WATCHTOWER</ImprovementUpgrade>
 			<iVisibilityChange>1</iVisibilityChange>
 			<iUniqueRange>0</iUniqueRange>

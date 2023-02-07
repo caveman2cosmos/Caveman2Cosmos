@@ -7980,7 +7980,7 @@ void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bU
 		iNewValue = 1;
 	}
 
-	// Protection from overzealous decay
+	// Protection from overzealous decay, others
 	iNewValue = std::max(0, iNewValue);
 
 	if (getCulture(eIndex) != iNewValue)
@@ -10265,19 +10265,19 @@ void CvPlot::doCulture()
 			{
 				if (GC.getGame().isOption(GAMEOPTION_EQUILIBRIUM_CULTURE))
 				{
-					// Decay 20x faster (to 60% at default speeds) if outside of city control in equilibrium, since we can't immediately set to unowned when negative
+					// Decay 15x faster (to 45% at default speeds) if outside of city control in equilibrium, since we can't immediately set to unowned when negative
 					if (isInCultureRangeOfCityByPlayer(ePlayerX))
 					{
-						setCulture(ePlayerX, getCulture(ePlayerX) * (1000 - decayPermille) / 1000, false, false, true);
+						setCulture(ePlayerX, std::max(0, getCulture(ePlayerX) * (1000 - decayPermille) / 1000, false, false, true));
 					}
 					else
 					{
-						setCulture(ePlayerX, getCulture(ePlayerX) * (1000 - 20 * decayPermille) / 1000, false, false, true);
+						setCulture(ePlayerX, std::max(0, getCulture(ePlayerX) * (1000 - 15 * decayPermille) / 1000, false, false, true));
 					}
 				}
 				else if (getCultureRateThisTurn(ePlayerX) < 1 && (!getPlotCity() || getOwner() != ePlayerX))
 				{
-					setCulture(ePlayerX, getCulture(ePlayerX) * (1000 - decayPermille) / 1000, false, false, true);
+					setCulture(ePlayerX, std::max(0, getCulture(ePlayerX) * (1000 - decayPermille) / 1000, false, false, true));
 				}
 			}
 		}
