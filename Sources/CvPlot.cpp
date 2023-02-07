@@ -10268,16 +10268,16 @@ void CvPlot::doCulture()
 					// Decay 15x faster (to 45% at default speeds) if outside of city control in equilibrium, since we can't immediately set to unowned when negative
 					if (isInCultureRangeOfCityByPlayer(ePlayerX))
 					{
-						setCulture(ePlayerX, std::max(0, getCulture(ePlayerX) * (1000 - decayPermille) / 1000, false, false, true));
+						setCulture(ePlayerX, std::max(0, getCulture(ePlayerX) * (1000 - decayPermille) / 1000), false, false, true);
 					}
 					else
 					{
-						setCulture(ePlayerX, std::max(0, getCulture(ePlayerX) * (1000 - 15 * decayPermille) / 1000, false, false, true));
+						setCulture(ePlayerX, std::max(0, getCulture(ePlayerX) * (1000 - 15 * decayPermille) / 1000), false, false, true);
 					}
 				}
 				else if (getCultureRateThisTurn(ePlayerX) < 1 && (!getPlotCity() || getOwner() != ePlayerX))
 				{
-					setCulture(ePlayerX, std::max(0, getCulture(ePlayerX) * (1000 - decayPermille) / 1000, false, false, true));
+					setCulture(ePlayerX, std::max(0, getCulture(ePlayerX) * (1000 - decayPermille) / 1000), false, false, true);
 				}
 			}
 		}

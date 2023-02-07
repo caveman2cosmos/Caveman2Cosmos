@@ -8741,7 +8741,7 @@
 			<iAdvancedStartCost>50</iAdvancedStartCost>
 			<bOutsideBorders>1</bOutsideBorders>
 			<iCulture>30</iCulture>
-			<iCultureRange>1<iCultureRange>
+			<iCultureRange>1</iCultureRange>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_WIRELESS_ELECTRICITY</PrereqTech>
