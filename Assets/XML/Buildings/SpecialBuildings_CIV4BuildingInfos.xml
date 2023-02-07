@@ -10472,13 +10472,13 @@
 				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_RENAISSANCE</BuildingType>
 				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_INDUSTRIAL</BuildingType>
 				<!--
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_MODERN</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_INFORMATION</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_NANOTECH</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSHUMAN</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_GALACTIC</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_COSMIC</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_MODERN</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_INFORMATION</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_NANOTECH</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_TRANSHUMAN</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_GALACTIC</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_COSMIC</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_TRANSCENDENT</BuildingType>
 				-->
 			</ReplacementBuildings>
 		</BuildingInfo>
@@ -10512,13 +10512,13 @@
 				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_RENAISSANCE</BuildingType>
 				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_INDUSTRIAL</BuildingType>
 				<!--
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_MODERN</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_INFORMATION</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_NANOTECH</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSHUMAN</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_GALACTIC</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_COSMIC</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_MODERN</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_INFORMATION</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_NANOTECH</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_TRANSHUMAN</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_GALACTIC</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_COSMIC</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_TRANSCENDENT</BuildingType>
 				-->
 			</ReplacementBuildings>
 		</BuildingInfo>
@@ -10551,13 +10551,13 @@
 				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_RENAISSANCE</BuildingType>
 				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_INDUSTRIAL</BuildingType>
 				<!--
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_MODERN</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_INFORMATION</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_NANOTECH</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSHUMAN</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_GALACTIC</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_COSMIC</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_MODERN</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_INFORMATION</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_NANOTECH</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_TRANSHUMAN</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_GALACTIC</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_COSMIC</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_TRANSCENDENT</BuildingType>
 				-->
 			</ReplacementBuildings>
 		</BuildingInfo>
@@ -10589,13 +10589,13 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_INDUSTRIAL</BuildingType>
 				<!--
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_MODERN</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_INFORMATION</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_NANOTECH</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSHUMAN</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_GALACTIC</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_COSMIC</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_MODERN</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_INFORMATION</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_NANOTECH</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_TRANSHUMAN</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_GALACTIC</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_COSMIC</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_TRANSCENDENT</BuildingType>
 				-->
 			</ReplacementBuildings>
 		</BuildingInfo>
@@ -10626,24 +10626,24 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<!--
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_MODERN</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_INFORMATION</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_NANOTECH</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSHUMAN</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_GALACTIC</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_COSMIC</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_MODERN</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_INFORMATION</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_NANOTECH</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_TRANSHUMAN</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_GALACTIC</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_COSMIC</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_TRANSCENDENT</BuildingType>
 			</ReplacementBuildings>
 			-->
 		</BuildingInfo>
 		<!--
 		<BuildingInfo>
-			<Type>BUILDING_KNOWLEDGE_BASE_MODERN</Type>
+			<Type>BUILDING_EDUCATION_KNOWLEDGE_BASE_MODERN</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_MODERN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_MODERN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EDUCATION_KNOWLEDGE_BASE_MODERN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EDUCATION_KNOWLEDGE_BASE_MODERN_PEDIA</Civilopedia>
 			<PrereqTech>TECH_ATOMIC_LIFESTYLE</PrereqTech>
 			<PropertyManipulators>
 				<PropertySource>
@@ -10663,21 +10663,21 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_INFORMATION</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_NANOTECH</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSHUMAN</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_GALACTIC</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_COSMIC</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_INFORMATION</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_NANOTECH</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_TRANSHUMAN</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_GALACTIC</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_COSMIC</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_TRANSCENDENT</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_KNOWLEDGE_BASE_INFORMATION</Type>
+			<Type>BUILDING_EDUCATION_KNOWLEDGE_BASE_INFORMATION</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_INFORMATION</Description>
-			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_INFORMATION_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EDUCATION_KNOWLEDGE_BASE_INFORMATION</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EDUCATION_KNOWLEDGE_BASE_INFORMATION_PEDIA</Civilopedia>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<PropertyManipulators>
 				<PropertySource>
@@ -10697,20 +10697,20 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_NANOTECH</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSHUMAN</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_GALACTIC</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_COSMIC</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_NANOTECH</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_TRANSHUMAN</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_GALACTIC</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_COSMIC</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_TRANSCENDENT</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_KNOWLEDGE_BASE_NANOTECH</Type>
+			<Type>BUILDING_EDUCATION_KNOWLEDGE_BASE_NANOTECH</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_NANOTECH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_NANOTECH_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EDUCATION_KNOWLEDGE_BASE_NANOTECH</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EDUCATION_KNOWLEDGE_BASE_NANOTECH_PEDIA</Civilopedia>
 			<PrereqTech>TECH_NANOTECH_LIFESTYLE</PrereqTech>
 			<PropertyManipulators>
 				<PropertySource>
@@ -10730,19 +10730,19 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSHUMAN</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_GALACTIC</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_COSMIC</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_TRANSHUMAN</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_GALACTIC</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_COSMIC</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_TRANSCENDENT</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_KNOWLEDGE_BASE_TRANSHUMAN</Type>
+			<Type>BUILDING_EDUCATION_KNOWLEDGE_BASE_TRANSHUMAN</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_TRANSHUMAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_TRANSHUMAN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EDUCATION_KNOWLEDGE_BASE_TRANSHUMAN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EDUCATION_KNOWLEDGE_BASE_TRANSHUMAN_PEDIA</Civilopedia>
 			<PrereqTech>TECH_TRANSHUMAN_LIFESTYLE</PrereqTech>
 			<PropertyManipulators>
 				<PropertySource>
@@ -10762,18 +10762,18 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_GALACTIC</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_COSMIC</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_GALACTIC</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_COSMIC</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_TRANSCENDENT</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_KNOWLEDGE_BASE_GALACTIC</Type>
+			<Type>BUILDING_EDUCATION_KNOWLEDGE_BASE_GALACTIC</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_GALACTIC</Description>
-			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_GALACTIC_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EDUCATION_KNOWLEDGE_BASE_GALACTIC</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EDUCATION_KNOWLEDGE_BASE_GALACTIC_PEDIA</Civilopedia>
 			<PrereqTech>TECH_GALACTIC_LIFESTYLE</PrereqTech>
 			<PropertyManipulators>
 				<PropertySource>
@@ -10793,17 +10793,17 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_COSMIC</BuildingType>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_COSMIC</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_TRANSCENDENT</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_KNOWLEDGE_BASE_COSMIC</Type>
+			<Type>BUILDING_EDUCATION_KNOWLEDGE_BASE_COSMIC</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_COSMIC</Description>
-			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_COSMIC_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EDUCATION_KNOWLEDGE_BASE_COSMIC</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EDUCATION_KNOWLEDGE_BASE_COSMIC_PEDIA</Civilopedia>
 			<PrereqTech>TECH_COSMIC_LIFESTYLE</PrereqTech>
 			<PropertyManipulators>
 				<PropertySource>
@@ -10823,16 +10823,16 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGE_BASE_TRANSCENDENT</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</Type>
+			<Type>BUILDING_EDUCATION_KNOWLEDGE_BASE_TRANSCENDENT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_KNOWLEDGE_BASE_TRANSCENDENT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EDUCATION_KNOWLEDGE_BASE_TRANSCENDENT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EDUCATION_KNOWLEDGE_BASE_TRANSCENDENT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_TRANSCENDENT_LIFESTYLE</PrereqTech>
 			<PropertyManipulators>
 				<PropertySource>

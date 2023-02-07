@@ -516,7 +516,7 @@ class TestCode:
 			aBuildingReplacementList = []
 			for iReplacement in xrange(CvBuildingInfo.getNumReplacementBuilding()):
 				iBuildingReplacement = CvBuildingInfo.getReplacementBuilding(iReplacement)
-				if iBuildingReplacement not in aSpecialReplacementsList and GC.getBuildingInfo(iBuildingReplacement).getType().find("BUILDING_EQ_") == -1 and GC.getBuildingInfo(iBuildingReplacement).getType().find("BUILDING_KNOWLEDGE_BASE_") == -1:
+				if iBuildingReplacement not in aSpecialReplacementsList and GC.getBuildingInfo(iBuildingReplacement).getType().find("BUILDING_EDUCATION_") == -1:
 					aBuildingReplacementList.append(iBuildingReplacement)
 
 			#All replacements of replacements
@@ -697,7 +697,7 @@ class TestCode:
 			iTechBase = self.HF.checkBuildingTechRequirements(CvBuildingInfo)[0] #Tech level of building - most advanced tech XGrid
 
 			#Ignore Pollution, Bans and Education pseudobuildings
-			if iBuilding not in aSpecialBuildingsList and CvBuildingInfo.getNumReplacedBuilding() != 0 and CvBuildingInfo.getType().find("BUILDING_EQ_") == -1:
+			if iBuilding not in aSpecialBuildingsList and CvBuildingInfo.getNumReplacedBuilding() != 0 and CvBuildingInfo.getType().find("BUILDING_EDUCATION_") == -1:
 				#Get list of replaced buildings
 				aReplacedBuildings = []
 				for i in xrange(CvBuildingInfo.getNumReplacedBuilding()):

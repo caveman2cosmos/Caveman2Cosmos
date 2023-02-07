@@ -1360,7 +1360,7 @@ class Pedia:
 				iEra = GC.getTechInfo(iTech).getEra()
 
 		#Folklore handling - X Require tech requirement is treated as one of tech requirements of building, assuming X Require is main building requirement.
-		if CvBuildingInfo.getType().find("BUILDING_FOLKLORE_",0,18) != -1:
+		if CvBuildingInfo.getType().find("BUILDING_FOLKLORE_",0,18) != -1 or CvBuildingInfo.getType().find("BUILDING_PRESENCE_OF_",0,21) != -1:
 			iPrereqBuilding = GC.getInfoTypeForString("BUILDING_FOLKLORE_REQUIREMENT")
 			if GC.getTechInfo(GC.getBuildingInfo(iPrereqBuilding).getPrereqAndTech()).getEra() > iEra:
 				iEra = GC.getTechInfo(GC.getBuildingInfo(iPrereqBuilding).getPrereqAndTech()).getEra()
