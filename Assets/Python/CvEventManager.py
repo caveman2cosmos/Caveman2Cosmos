@@ -1916,7 +1916,7 @@ class CvEventManager:
 			popupInfo.addPopup(iPlayer)
 
 		# Eden project
-		if iProject == GC.getInfoTypeForString("PROJECT_EDEN"):
+		if iProject == GC.getInfoTypeForString("PROJECT_EDEN_PROJECT"):
 
 			iTeam = GC.getPlayer(iPlayer).getTeam()
 			iX = CyCity.getX()

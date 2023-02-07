@@ -570,11 +570,11 @@
 			<iPlacementOrder>9</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_HELIUM3</Type>
-			<Description>TXT_KEY_BONUS_HELIUM3</Description>
-			<Civilopedia>TXT_KEY_BONUS_HELIUM3_PEDIA</Civilopedia>
+			<Type>BONUS_HELIUM_3</Type>
+			<Description>TXT_KEY_BONUS_HELIUM_3</Description>
+			<Civilopedia>TXT_KEY_BONUS_HELIUM_3_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MISC</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_HELIUM3</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_HELIUM_3</ArtDefineTag>
 			<TechReveal>TECH_ASTROGEOLOGY</TechReveal>
 			<TechCityTrade>TECH_ASTROGEOLOGY</TechCityTrade>
 			<YieldChanges>
@@ -610,11 +610,11 @@
 			<iPlacementOrder>9</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_QUANTONIUM_CRYSTAL</Type>
-			<Description>TXT_KEY_BONUS_QUANTONIUM_CRYSTAL</Description>
-			<Civilopedia>TXT_KEY_BONUS_QUANTONIUM_CRYSTAL_PEDIA</Civilopedia>
+			<Type>BONUS_QUANTONIUM_CRYSTALS</Type>
+			<Description>TXT_KEY_BONUS_QUANTONIUM_CRYSTALS</Description>
+			<Civilopedia>TXT_KEY_BONUS_QUANTONIUM_CRYSTALS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MISC</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_QUANTONIUM_CRYSTAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_QUANTONIUM_CRYSTALS</ArtDefineTag>
 			<TechReveal>TECH_3D_PROJECTIONS</TechReveal>
 			<TechCityTrade>TECH_3D_PROJECTIONS</TechCityTrade>
 			<YieldChanges>

@@ -1635,7 +1635,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_HUMAN_MOD_NONSPATIAL</ID>
+						<ID>BONUS_HUMAN_MOD_NON_SPATIAL</ID>
 					</Has>
 				</And>
 			</ConstructCondition>
@@ -2019,7 +2019,7 @@
 			<Bonus>BONUS_HUMAN_MOD_HIGH_DIMENSIONAL</Bonus>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_HUMAN_MOD_NONSPATIAL</FreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_NON_SPATIAL</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>

@@ -1289,13 +1289,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_ARVERNIAN</Type>
+			<Type>BUILDING_CULTURE_AVERNIAN</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_CULTURE_ARVERNIAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ARVERNIAN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CULTURE_AVERNIAN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CULTURE_AVERNIAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_ARVERNIAN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_AVERNIAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5374,13 +5374,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_GUATEMALA</Type>
+			<Type>BUILDING_CULTURE_GUATEMALAN</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_CULTURE_GUATEMALAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_GUATEMALAN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CULTURE_GUATEMALANN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CULTURE_GUATEMALANN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_GUATEMALA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_GUATEMALAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5468,7 +5468,7 @@
 			</CommerceChanges>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_ROMANI</FreeBonus>
+					<FreeBonus>BONUS_ROMANE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -7211,13 +7211,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_KHAZAKH</Type>
+			<Type>BUILDING_CULTURE_KAZAKH</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_CULTURE_KHAZAKH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_KHAZAKH_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CULTURE_KAZAKH</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CULTURE_KAZAKH_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_KHAZAKH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_KAZAKH</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7715,13 +7715,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_KUSHAN</Type>
+			<Type>BUILDING_CULTURE_KUSHITE</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_KUSHITE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_KUSHITE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_KUSHAN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_KUSHITE</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -10673,7 +10673,7 @@
 			</CommerceChanges>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PHILISTINE</FreeBonus>
+					<FreeBonus>BONUS_PHILISTINES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>

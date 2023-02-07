@@ -3543,7 +3543,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_HUMAN_MOD_NONSPATIAL</ID>
+						<ID>BONUS_HUMAN_MOD_NON_SPATIAL</ID>
 					</Has>
 				</And>
 			</ConstructCondition>
@@ -3651,7 +3651,7 @@
 			<Bonus>BONUS_HUMAN_MOD_HIGH_DIMENSIONAL</Bonus>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_HUMAN_MOD_NONSPATIAL</FreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_NON_SPATIAL</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -13216,7 +13216,7 @@
 			</TechYieldChanges>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_HELIUM3</BonusType>
+					<BonusType>BONUS_HELIUM_3</BonusType>
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -16468,7 +16468,7 @@
 			</PrereqInCityBuildings>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_HELIUM3</FreeBonus>
+					<FreeBonus>BONUS_HELIUM_3</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -29172,7 +29172,7 @@
 			</CommerceChanges>
 			<BonusCommercePercentChanges>
 				<BonusCommercePercentChange>
-					<BonusType>BONUS_QUANTONIUM_CRYSTAL</BonusType>
+					<BonusType>BONUS_QUANTONIUM_CRYSTALS</BonusType>
 					<CommercePercents>
 						<iCommercePercent>3000</iCommercePercent>
 					</CommercePercents>

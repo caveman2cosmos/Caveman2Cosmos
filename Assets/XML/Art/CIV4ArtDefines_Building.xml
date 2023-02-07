@@ -3343,7 +3343,7 @@
 			<Button>Art/Embassy/avarsembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CULTURE_ARVERNIAN</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_AVERNIAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -18604,7 +18604,7 @@
 			<Button>art/Tower/Art/guardtower.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CULTURE_GUATEMALA</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_GUATEMALAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -23244,7 +23244,7 @@
 			<Button>Art/Interface/Buttons/Buildings/kevlarfactory.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CULTURE_KHAZAKH</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_KAZAKH</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -23714,7 +23714,7 @@
 			<Button>Art/Embassy/kushanembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CULTURE_KUSHAN</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_KUSHITE</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>

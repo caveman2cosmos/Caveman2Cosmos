@@ -3800,4 +3800,36 @@ class TestCode:
 	def listTagsAndNames(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-			self.log(CvBuildingInfo.getType()+" = "+CvBuildingInfo.getDescription()+" +")
+			self.log(CvBuildingInfo.getType()+" =BUILDING_ "+CvBuildingInfo.getDescription()+" ==")
+			
+		for iProject in xrange(GC.getNumProjectInfos()):
+			CvProjectInfo = GC.getProjectInfo(iProject)
+			self.log(CvProjectInfo.getType()+" =PROJECT_ "+CvProjectInfo.getDescription()+" ==")
+			
+		for iCivic in xrange(GC.getNumCivicInfos()):
+			CvCivicInfo = GC.getCivicInfo(iCivic)
+			self.log(CvCivicInfo.getType()+" =CIVIC_ "+CvCivicInfo.getDescription()+" ==")
+			
+		for iTerrain in xrange(GC.getNumTerrainInfos()):
+			CvTerrainInfo = GC.getTerrainInfo(iTerrain)
+			self.log(CvTerrainInfo.getType()+" =TERRAIN_ "+CvTerrainInfo.getDescription()+" ==")
+			
+		for iFeature in xrange(GC.getNumFeatureInfos()):
+			CvFeatureInfo = GC.getFeatureInfo(iFeature)
+			self.log(CvFeatureInfo.getType()+" =FEATURE_ "+CvFeatureInfo.getDescription()+" ==")
+			
+		for iBonus in xrange(GC.getNumBonusInfos()):
+			CvBonusInfo = GC.getBonusInfo(iBonus)
+			self.log(CvBonusInfo.getType()+" =BONUS_ "+CvBonusInfo.getDescription()+" ==")
+			
+		for iImprovement in xrange(GC.getNumImprovementInfos()):
+			CvImprovementInfo = GC.getImprovementInfo(iImprovement)
+			self.log(CvImprovementInfo.getType()+" =IMPROVEMENT_ "+CvImprovementInfo.getDescription()+" ==")
+			
+		for iBuild in xrange(GC.getNumBuildInfos()):
+			CvBuildInfo = GC.getBuildInfo(iBuild)
+			self.log(CvBuildInfo.getType()+" =BUILD_ "+CvBuildInfo.getDescription()+" ==")
+			
+		for iRoute in xrange(GC.getNumRouteInfos()):
+			CvRouteInfo = GC.getRouteInfo(iRoute)
+			self.log(CvRouteInfo.getType()+" =ROUTE_ "+CvRouteInfo.getDescription()+" ==")

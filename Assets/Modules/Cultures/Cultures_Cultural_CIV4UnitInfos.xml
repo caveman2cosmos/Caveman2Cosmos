@@ -28248,7 +28248,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
-			<BonusType>BONUS_PHILISTINE</BonusType>
+			<BonusType>BONUS_PHILISTINES</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_COPPER_WARES</BonusType>
 				<BonusType>BONUS_BRONZE_WARES</BonusType>
@@ -30149,7 +30149,7 @@
 			<bStealPlans>1</bStealPlans>
 			<bUpgradeAnywhere>1</bUpgradeAnywhere>
 			<PrereqTech>TECH_LOCKS</PrereqTech>
-			<BonusType>BONUS_ROMANI</BonusType>
+			<BonusType>BONUS_ROMANE</BonusType>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_LOCKSMITH</BuildingType>
 				<BuildingType>BUILDING_ELECTRONIC_SECURITY_SYSTEM</BuildingType>

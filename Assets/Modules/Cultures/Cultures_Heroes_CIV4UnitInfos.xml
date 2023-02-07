@@ -28437,7 +28437,7 @@
 				<BuildingType>BUILDING_ACHIEVEMENT_TOURISTIC</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_CALENDAR</PrereqTech>
-			<BonusType>BONUS_PHILISTINE</BonusType>
+			<BonusType>BONUS_PHILISTINES</BonusType>
 			<iCost>936</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -30097,7 +30097,7 @@
 				<BuildingType>BUILDING_ACHIEVEMENT_TOURISTIC</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_LIBERALISM</PrereqTech>
-			<BonusType>BONUS_ROMANI</BonusType>
+			<BonusType>BONUS_ROMANE</BonusType>
 			<iCost>2060</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
