@@ -4092,7 +4092,7 @@ int CvPlot::movementCost(const CvUnit* pUnit, const CvPlot* pFromPlot) const
 					{
 						iRegularCost += GC.getPEAK_EXTRA_MOVEMENT();
 					}
-					else iRegularCost += 1;
+					iRegularCost += 3;
 				}
 			}
 

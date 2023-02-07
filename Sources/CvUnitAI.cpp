@@ -20642,10 +20642,7 @@ bool CvUnitAI::AI_improveCity(CvCity* pCity)
 					{
 						iPlotMoveCost += GC.getPEAK_EXTRA_MOVEMENT();
 					}
-					else
-					{
-						iPlotMoveCost += 1;
-					}
+					iPlotMoveCost += 3;
 				}
 
 				if (iPlotMoveCost > 1)
@@ -20770,7 +20767,7 @@ bool CvUnitAI::AI_improveLocalPlot(int iRange, const CvCity* pIgnoreCity)
 				{
 					iPlotMoveCost += GC.getPEAK_EXTRA_MOVEMENT();
 				}
-				else iPlotMoveCost += 1;
+				iPlotMoveCost += 3;
 			}
 			if (iPlotMoveCost > 1)
 			{

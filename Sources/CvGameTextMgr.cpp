@@ -9062,7 +9062,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 				{
 					iMovementCost += GC.getPEAK_EXTRA_MOVEMENT();
 				}
-				else iMovementCost += 1;
+				iMovementCost += 3;
 			}
 
 			if (iMovementCost != 0)
