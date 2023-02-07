@@ -10283,6 +10283,11 @@ void CvPlot::doCulture()
 		m_cultureRatesLastTurn.push_back(std::make_pair((*it).first, (*it).second));
 	}
 	m_cultureRatesThisTurn.clear();
+	m_influencedByCityByPlayerLastTurn.clear();
+	for (std::vector<PlayerTypes>::const_iterator it = m_influencedByCityByPlayer.begin(); it != m_influencedByCityByPlayer.end(); ++it)
+	{
+		m_influencedByCityByPlayerLastTurn.push_back(*it);
+	}
 	m_influencedByCityByPlayer.clear();
 }
 
@@ -10914,7 +10919,16 @@ void CvPlot::read(FDataStreamBase* pStream)
 				m_cultureRatesLastTurn.push_back(std::make_pair(static_cast<PlayerTypes>(iType), iValue));
 			}
 		}
-		// Blaze TODO confirm working as intended
+		WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iSize, "InfluencedByCityByPlayerLastTurnSize");
+		for (short i = 0; i < iSize; ++i)
+		{
+			WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iType, "InfluencedByCityByPlayerLastTurn");
+
+			if (iType > -1 && iType < MAX_PLAYERS)
+			{
+				m_influencedByCityByPlayerLastTurn.push_back(static_cast<PlayerTypes>(iType));
+			}
+		}
 		WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iSize, "InfluencedByCityByPlayerSize");
 		for (short i = 0; i < iSize; ++i)
 		{
@@ -11309,7 +11323,11 @@ void CvPlot::write(FDataStreamBase* pStream)
 			WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", static_cast<short>((*it).first), "CultureRatesLastTurnPlayer");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (*it).second, "CultureRatesLastTurnRate");
 		}
-		// Blaze TODO confirm working as intended
+		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (short)m_influencedByCityByPlayerLastTurn.size(), "InfluencedByCityByPlayerLastTurnSize");
+		for (std::vector<PlayerTypes>::iterator it = m_influencedByCityByPlayerLastTurn.begin(); it != m_influencedByCityByPlayerLastTurn.end(); ++it)
+		{
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", static_cast<short>(*it), "InfluencedByCityByPlayerLastTurn");
+		}
 		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (short)m_influencedByCityByPlayer.size(), "InfluencedByCityByPlayerSize");
 		for (std::vector<PlayerTypes>::iterator it = m_influencedByCityByPlayer.begin(); it != m_influencedByCityByPlayer.end(); ++it)
 		{
@@ -13291,13 +13309,19 @@ int CvPlot::getCultureRateLastTurn(const PlayerTypes ePlayer) const
 
 void CvPlot::setInCultureRangeOfCityByPlayer(const PlayerTypes ePlayer)
 {
+	if (find(m_influencedByCityByPlayer.begin(), m_influencedByCityByPlayer.end(), ePlayer) == m_influencedByCityByPlayer.end())
+	{
+		m_influencedByCityByPlayer.push_back(ePlayer);
+	}
+	// Also put into 'last turn' cache if not already; messy, but this will
+	// make sure tiles are immediately available to build upon after aquisition
     if (!isInCultureRangeOfCityByPlayer(ePlayer))
     {
-        m_influencedByCityByPlayer.push_back(ePlayer);
+        m_influencedByCityByPlayerLastTurn.push_back(ePlayer);
     }
 }
 
 bool CvPlot::isInCultureRangeOfCityByPlayer(const PlayerTypes ePlayer) const
 {
-	return find(m_influencedByCityByPlayer.begin(), m_influencedByCityByPlayer.end(), ePlayer) != m_influencedByCityByPlayer.end();
+	return find(m_influencedByCityByPlayerLastTurn.begin(), m_influencedByCityByPlayerLastTurn.end(), ePlayer) != m_influencedByCityByPlayerLastTurn.end();
 }

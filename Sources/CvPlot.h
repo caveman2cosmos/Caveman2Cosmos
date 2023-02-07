@@ -393,6 +393,7 @@ protected:
 
 	std::vector<std::pair<PlayerTypes, int> > m_cultureRatesThisTurn;
 	std::vector<std::pair<PlayerTypes, int> > m_cultureRatesLastTurn;
+	std::vector<PlayerTypes> m_influencedByCityByPlayerLastTurn;
 	std::vector<PlayerTypes> m_influencedByCityByPlayer;
 
 public:
