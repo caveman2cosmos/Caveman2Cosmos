@@ -6593,8 +6593,9 @@ int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) c
 		{
 			terrainDistance += 1;
 		}
-		// penalty for improved features if outside player city affected territory
-		else if (!mainPlot->isInCultureRangeOfCityByPlayer(getOwner()))
+		// penalty for improved features if outside city affected territory
+		else if (!mainPlot->isInCultureRangeOfCityByPlayer(mainPlot->getOwner())
+			  || !mainPlot->isInCultureRangeOfCityByPlayer(getOwner()))
 		{
 			terrainDistance += 1;
 		}
@@ -6613,9 +6614,12 @@ int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) c
 		int routeTierMod = 0;
 
 		// If the plot has an existing route, and already inside the influence area of a city, maybe bump tier up (less penalties)
-		if (mainPlot->getRouteType() != NO_ROUTE && mainPlot->isInCultureRangeOfCityByPlayer(mainPlot->getOwner()))
+		if (mainPlot->getRouteType() != NO_ROUTE && 
+			(mainPlot->isInCultureRangeOfCityByPlayer(mainPlot->getOwner()) ||
+			 mainPlot->isInCultureRangeOfCityByPlayer(getOwner())))
+		{
 			routeTierMod = std::max(routeTierMod, GC.getRouteInfo(mainPlot->getRouteType()).getValue());
-
+		}
 		// Penalties applied for low tier routes (pre-paved road)
 		if (routeTierMod == 0)
 		{
