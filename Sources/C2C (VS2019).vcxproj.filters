@@ -306,6 +306,9 @@
     <ClCompile Include="FAssert.cpp">
       <Filter>Source\Tools\Debug\Assert</Filter>
     </ClCompile>
+    <ClInclude Include="FProfiler.cpp">
+      <Filter>Source\Tools\Debug\Profiling</Filter>
+    </ClInclude>
     <ClCompile Include="CvDate.cpp">
       <Filter>Source\Base\Date</Filter>
     </ClCompile>

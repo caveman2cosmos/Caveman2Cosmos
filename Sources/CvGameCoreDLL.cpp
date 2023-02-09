@@ -115,7 +115,7 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 //	the debug stream (view with DbgView or a debugger)
 #define DETAILED_TRACE
 
-#define MAX_SAMPLES				1200
+#define MAX_SAMPLES				20000
 static __declspec( thread ) ProfileLinkageInfo* _currentSample = NULL;
 static __declspec(thread) bool bIsMainThread = false;
 static __declspec(thread) int iThreadSlot = -1;
