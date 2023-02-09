@@ -12354,7 +12354,7 @@ int CvUnitAI::AI_getPlotDefendersNeeded(const CvPlot* pPlot, int iExtra) const
 
 	if (pPlot->getImprovementType() != NO_IMPROVEMENT && GC.getImprovementInfo(pPlot->getImprovementType()).getCulture() > 0)
 	{
-		iNeeded = std::max(1 + (GC.getImprovementInfo(pPlot->getImprovementType()).isActsAsCity() ? 1 : 0), iNeeded);
+		iNeeded = std::max(1 + (GC.getImprovementInfo(pPlot->getImprovementType()).isMilitaryStructure() ? 1 : 0), iNeeded);
 	}
 
 	if (iNeeded == 0)
@@ -12404,7 +12404,7 @@ bool CvUnitAI::AI_guardFort(bool bSearch)
 		const ImprovementTypes eImprovement = plot()->getImprovementType();
 		if (eImprovement != NO_IMPROVEMENT)
 		{
-			if (GC.getImprovementInfo(eImprovement).isActsAsCity() || GC.getImprovementInfo(eImprovement).getCulture() > 0)
+			if (GC.getImprovementInfo(eImprovement).isMilitaryStructure())
 			{
 				// Super Forts begin *AI_defense* - just tweaked a number here (iExtra now 1 instead of 0)
 				if (plot()->plotCount(PUF_isCityAIType, -1, -1, NULL, getOwner()) <= AI_getPlotDefendersNeeded(plot(), 1))
@@ -12439,7 +12439,7 @@ bool CvUnitAI::AI_guardFort(bool bSearch)
 				const ImprovementTypes eImprovement = pLoopPlot->getImprovementType();
 				if (eImprovement != NO_IMPROVEMENT)
 				{
-					if (GC.getImprovementInfo(eImprovement).isActsAsCity() || GC.getImprovementInfo(eImprovement).getCulture() > 0)
+					if (GC.getImprovementInfo(eImprovement).isMilitaryStructure())
 					{
 						// Super Forts begin *AI_defense* - just tweaked a number here (iExtra now 1 instead of 0)
 						int iValue = AI_getPlotDefendersNeeded(pLoopPlot, 1);
@@ -12502,7 +12502,7 @@ bool CvUnitAI::AI_guardFortMinDefender(bool bSearch)
 		const ImprovementTypes eImprovement = plot()->getImprovementType();
 		if (eImprovement != NO_IMPROVEMENT)
 		{
-			if (GC.getImprovementInfo(eImprovement).isActsAsCity() || GC.getImprovementInfo(eImprovement).isUpgradeRequiresFortify() || GC.getImprovementInfo(eImprovement).getCulture() > 0)
+			if (GC.getImprovementInfo(eImprovement).isMilitaryStructure() || GC.getImprovementInfo(eImprovement).isUpgradeRequiresFortify())
 			{
 				if (plot()->plotCount(PUF_isCityAIType, -1, -1, NULL, getOwner()) <= 1)
 				{
@@ -12533,7 +12533,7 @@ bool CvUnitAI::AI_guardFortMinDefender(bool bSearch)
 				const ImprovementTypes eImprovement = pLoopPlot->getImprovementType();
 				if (eImprovement != NO_IMPROVEMENT)
 				{
-					if (GC.getImprovementInfo(eImprovement).isActsAsCity() || GC.getImprovementInfo(eImprovement).isUpgradeRequiresFortify() || GC.getImprovementInfo(eImprovement).getCulture() > 0)
+					if (GC.getImprovementInfo(eImprovement).isMilitaryStructure() || GC.getImprovementInfo(eImprovement).isUpgradeRequiresFortify())
 					{
 						if (!(pLoopPlot->isVisibleEnemyUnit(this)))
 						{
@@ -20642,10 +20642,7 @@ bool CvUnitAI::AI_improveCity(CvCity* pCity)
 					{
 						iPlotMoveCost += GC.getPEAK_EXTRA_MOVEMENT();
 					}
-					else
-					{
-						iPlotMoveCost += 1;
-					}
+					iPlotMoveCost += 3;
 				}
 
 				if (iPlotMoveCost > 1)
@@ -20770,7 +20767,7 @@ bool CvUnitAI::AI_improveLocalPlot(int iRange, const CvCity* pIgnoreCity)
 				{
 					iPlotMoveCost += GC.getPEAK_EXTRA_MOVEMENT();
 				}
-				else iPlotMoveCost += 1;
+				iPlotMoveCost += 3;
 			}
 			if (iPlotMoveCost > 1)
 			{
@@ -21381,7 +21378,7 @@ bool CvUnitAI::AI_improveBonus(int iMinValue, CvPlot** ppBestPlot, BuildTypes* p
 											iCountervalue += 10 * pLoopPlot->calculateNatureYield((YieldTypes)iK, getTeam(), eFeature == NO_FEATURE ? true : GC.getBuildInfo(eBestTempBuild).isFeatureRemove(eFeature));
 										}
 									}
-									if (GC.getImprovementInfo(eImprovement).getCulture() > 0 || GC.getImprovementInfo(eImprovement).isActsAsCity())
+									if (GC.getImprovementInfo(eImprovement).isMilitaryStructure())
 									{
 										int iCounterDefenseValue = GC.getImprovementInfo(eImprovement).getAirBombDefense()/10;
 										iCounterDefenseValue += GC.getImprovementInfo(eImprovement).getDefenseModifier()/10;
@@ -26474,12 +26471,8 @@ BuildTypes CvUnitAI::AI_findBestFort(const CvPlot* pPlot) const
 		if (GC.getBuildInfo(eBuild).getImprovement() != NO_IMPROVEMENT)
 		{
 			const CvImprovementInfo& kImprovement = GC.getImprovementInfo(GC.getBuildInfo(eBuild).getImprovement());
-			// Is fort or tower
-			if ((kImprovement.isActsAsCity() || kImprovement.getVisibilityChange() > 0)
-			&& canBuild(pPlot, eBuild)
-			// If not (plot in workable radius of any city and is tower line improvement); 'plot in workable radius of owned city' might be better?
-			// Toffer - The next condition seems iffy considering the above comment about it...
-			&& (!pPlot->isCityRadius() || kImprovement.isActsAsCity()))
+			// Watchtower can claim land if fort can't
+			if (kImprovement.isMilitaryStructure() && canBuild(pPlot, eBuild))
 			{
 				int iValue =
 					(

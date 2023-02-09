@@ -235,7 +235,7 @@
 			<EffectType>EFFECT_BIRDSCATTER</EffectType>
 			<iEffectProbability>15</iEffectProbability>
 			<iAdvancedStartRemoveCost>40</iAdvancedStartRemoveCost>
-			<iCultureDistance>3</iCultureDistance>
+			<iCultureDistance>2</iCultureDistance>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1955,7 +1955,7 @@
 				</FootstepSound>
 			</FootstepSounds>
 			<WorldSoundscapeAudioScript>ASSS_OASIS_SELECT_AMB</WorldSoundscapeAudioScript>
-			<iCultureDistance>2</iCultureDistance>
+			<iCultureDistance>1</iCultureDistance>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2596,7 +2596,7 @@
 				</FootstepSound>
 			</FootstepSounds>
 			<GrowthSound>NONE</GrowthSound>
-			<iCultureDistance>2</iCultureDistance>
+			<iCultureDistance>1</iCultureDistance>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -5844,6 +5844,7 @@
 			<iAppearance>-1</iAppearance>
 			<bNoCity>1</bNoCity>
 			<bNukeImmune>1</bNukeImmune>
+			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
