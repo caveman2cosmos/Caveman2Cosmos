@@ -7985,6 +7985,9 @@ void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bU
 
 	if (getCulture(eIndex) != iNewValue)
 	{
+		// Many things apply 1 culture to tile to mark as claimed; setting to 2 instead ensures claim for at least a full turn on EQ setting
+		if (GC.getGame().isOption(GAMEOPTION_EQUILIBRIUM_CULTURE) && getCulture(eIndex) == 0 && iNewValue == 1) iNewValue = 2;
+
 		const int iChange = iNewValue - getCulture(eIndex);
 
 		if (bDecay || iChange > 0) // ignore influence driven war reductions
@@ -10265,14 +10268,16 @@ void CvPlot::doCulture()
 			{
 				if (GC.getGame().isOption(GAMEOPTION_EQUILIBRIUM_CULTURE))
 				{
-					// Decay 15x faster (to 45% at default speeds) if outside of city control in equilibrium, since we can't immediately set to unowned when negative
+					// By limiting decay to avoid 2+ -> 0, we can ensure that putting 2 culture on a tile will always be above 1 turn decay
+					const int iIsOverOne = getCulture(ePlayerX) > 1;
 					if (isInCultureRangeOfCityByPlayer(ePlayerX))
 					{
-						setCulture(ePlayerX, std::max(0, getCulture(ePlayerX) * (1000 - decayPermille) / 1000), false, false, true);
+						setCulture(ePlayerX, std::max(iIsOverOne, getCulture(ePlayerX) * (1000 - decayPermille) / 1000), false, false, true);
 					}
+					// Decay 15x faster (to 45% at default speeds) if outside of city control in equilibrium, since we can't immediately set to unowned when negative
 					else
 					{
-						setCulture(ePlayerX, std::max(0, getCulture(ePlayerX) * (1000 - 15 * decayPermille) / 1000), false, false, true);
+						setCulture(ePlayerX, std::max(iIsOverOne, getCulture(ePlayerX) * (1000 - 15 * decayPermille) / 1000), false, false, true);
 					}
 				}
 				else if (getCultureRateThisTurn(ePlayerX) < 1 && (!getPlotCity() || getOwner() != ePlayerX))

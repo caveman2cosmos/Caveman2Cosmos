@@ -778,7 +778,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WILD_PEDIA</Tag>
-		<English>Way of the Wild Trait is only available with the Ancient Ways Group Wonders. All Explorer Units gain the Way of the Wild promotion, giving them +1 Movement, -1 Mobility Cost and +1 Visibility Range. This promotion is only available during the Ancient era, it will be obsolete with Classical Lifestyle Technology.</English>
+		<English>Way of the Wild Trait is only available with the Ancient Ways Group Wonders. All Explorer Units gain the Way of the Wild promotion, giving them +1 Movement, -1 Mobility Cost and +1 Vision Range. This promotion is only available during the Ancient era, it will be obsolete with Classical Lifestyle Technology.</English>
 		<Russian>Путь «Дикости» доступен только для группы «Древние пути». Все отряды исследователей получают продвижение «Путь дикой природы», давая им +1 к движению, -1 от стоимости к подвижности и +1 к дальности обзора. Эта акция доступна только в Древнюю эпоху, она будет устаревшей с технологией Античного образа жизни.</Russian>
 	</TEXT>
 	<TEXT>
@@ -808,7 +808,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WOLF_PEDIA</Tag>
-		<English>Way of the Wolf Trait is only available with the Ancient Ways Group Wonders. All Canine Units gain the Way of the Wolf promotion, giving them +1 Movement, -1 Mobility Cost and +1 Visibility Range. This promotion is only available during the Ancient era, it will be obsolete with Classical Lifestyle Technology.</English>
+		<English>Way of the Wolf Trait is only available with the Ancient Ways Group Wonders. All Canine Units gain the Way of the Wolf promotion, giving them +1 Movement, -1 Mobility Cost and +1 Vision Range. This promotion is only available during the Ancient era, it will be obsolete with Classical Lifestyle Technology.</English>
 		<Russian>Черта «Пути Волка» доступна только с группой чудес Древних Путей. Все Клыки получают продвижение Путь Волка, давая им +1 к движению, -1 от стоимости движения и +1 к радиусу обзора. Эта акция доступна только в Древнюю эпоху, она будет устаревшей с технологией Античного образа жизни.</Russian>
 	</TEXT>
 	<TEXT>
@@ -887,7 +887,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_AQUARIUS_PEDIA</Tag>
-		<English>Astrological Influence of Aquarius trait is only available with the Astrological Influence of Aquarius Group Wonder. All Wooden Ships receive the Influence of Saturn promotion, giving bonus to Strength and Visibility during the Classical Era.</English>
+		<English>Astrological Influence of Aquarius trait is only available with the Astrological Influence of Aquarius Group Wonder. All Wooden Ships receive the Influence of Saturn promotion, giving bonus to Strength and Vision during the Classical Era.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_ARIES</Tag>
@@ -923,7 +923,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_CAPRICORN_PEDIA</Tag>
-		<English>Astrological Influence of Capricorn trait is only available with the Astrological Influence of Capricorn Group Wonder. All Wooden Ships receive the Influence of Saturn promotion, giving bonus to Strength and Visibility during the Classical Era.</English>
+		<English>Astrological Influence of Capricorn trait is only available with the Astrological Influence of Capricorn Group Wonder. All Wooden Ships receive the Influence of Saturn promotion, giving bonus to Strength and Vision during the Classical Era.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_GEMINI</Tag>

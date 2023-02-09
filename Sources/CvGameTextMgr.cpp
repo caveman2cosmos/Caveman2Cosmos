@@ -10412,7 +10412,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			}
 		}
 
-//HEALTH
+		//HEALTH
 		// iHealth
 		if (kTrait.getHealth() != 0)
 		{
@@ -10423,7 +10423,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			szHelpString.append(szTempBuffer);
 			szHelpString.append(gDLL->getText("TXT_KEY_PER_CITY"));
 		}
-//HAPPY
+		//HAPPY
 		// iHappiness
 		if (kTrait.getHappiness() != 0)
 		{
@@ -10521,7 +10521,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			szHelpString.append(NEWLINE);
 			szHelpString.append(gDLL->getText("TXT_KEY_BUILDINGHELP_ENEMY_WAR_WEAR", kTrait.getEnemyWarWearinessModifier()));
 		}
-//YIELD
+		//YIELD
 		//	Yield % Modifiers
 		setYieldChangeHelp(szHelpString, L"", L"", gDLL->getText("TXT_KEY_CIVICHELP_IN_ALL_CITIES").GetCString(), kTrait.getYieldModifierArray(), true);
 
@@ -10599,7 +10599,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			}
 		}
 
-//COMMERCE
+		//COMMERCE
 		// CommerceChanges
 		for (iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
 		{
@@ -10672,7 +10672,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			szHelpString.append(gDLL->getText("TXT_KEY_TRAITHELP_NONSTATE_RELIGIOUS_COMMERCE"));
 		}
 
-//SPECIALISTS && GP PTS
+		//SPECIALISTS && GP PTS
 		//	Free specialists
 		if (kTrait.getFreeSpecialist() != 0)
 		{
@@ -11003,7 +11003,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			}
 		}
 
-//UNIT EXPERIENCE
+		//UNIT EXPERIENCE
 		// iLevelExperienceModifier
 		if (kTrait.getLevelExperienceModifier() != 0)
 		{
@@ -11018,7 +11018,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			szHelpString.append(gDLL->getText("TXT_KEY_CIVICHELP_FREE_XP", kTrait.getFreeExperience()));
 		}
 
-	// Free Experience by Unit Combat
+		// Free Experience by Unit Combat
 		for (iI = 0; iI < kTrait.getNumUnitCombatFreeExperiences(); iI++)
 		{
 			iCurrentModifier = kTrait.getUnitCombatFreeExperience(iI).iModifier;
@@ -11204,7 +11204,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 		}
 
 		//ANARCHY
-				// iMaxAnarchy
+		// iMaxAnarchy
 		if (kTrait.getMaxAnarchy() != -1)
 		{
 			if (kTrait.getMaxAnarchy() == 0)
@@ -11237,7 +11237,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			szHelpString.append(gDLL->getText("TXT_KEY_RELIGIOUS_ANARCHY_CHANGE", kTrait.getReligiousAnarchyTimeModifier()));
 		}
 
-//TRADE
+		//TRADE
 		//	Trade routes
 		if (kTrait.getTradeRoutes() != 0)
 		{
@@ -11264,7 +11264,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			szHelpString.append(gDLL->getText("TXT_KEY_CIVICHELP_FOREIGN_TRADE_ROUTE_MOD", kTrait.getForeignTradeRouteModifier()));
 		}
 
-//CITY DEFENSE
+		//CITY DEFENSE
 		if (kTrait.getCityDefenseBonus() != 0)
 		{
 			szHelpString.append(NEWLINE);
@@ -11295,7 +11295,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			szHelpString.append(gDLL->getText("TXT_KEY_FREEDOM_FIGHTER_CHANGE", kTrait.getFreedomFighterChange()));
 		}
 
-//DIPLOMACY
+		//DIPLOMACY
 		//	Diplomatic Modifier
 		if (kTrait.getAttitudeModifier() > 0)
 		{
@@ -11309,8 +11309,8 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			szHelpString.append(gDLL->getText("TXT_KEY_TRAITHELP_ATTITUDE_MODIFIER_NEGATIVE", kTrait.getAttitudeModifier()));
 		}
 
-//Team Project (6)
-//RELIGION SPREADS
+		//Team Project (6)
+		//RELIGION SPREADS
 		if (kTrait.getStateReligionSpreadProbabilityModifier() != 0)
 		{
 			szHelpString.append(NEWLINE);
@@ -11323,7 +11323,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			szHelpString.append(gDLL->getText("TXT_KEY_TRAITHELP_NON_STATE_REL_SPREAD_MODIFIER", kTrait.getNonStateReligionSpreadProbabilityModifier()));
 		}
 
-//Team Project (5)
+		//Team Project (5)
 		if (GC.getGame().isOption(GAMEOPTION_RELIGIOUS_DISABLING))
 		{
 			// All Religions active
@@ -11340,7 +11340,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			}
 		}
 
-//GOLDEN AGE
+		//GOLDEN AGE
 		//	Golden Age Modifier
 		if (kTrait.getGoldenAgeDurationModifier() != 0)
 		{
@@ -11348,7 +11348,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			szHelpString.append(gDLL->getText("TXT_KEY_BUILDINGHELP_GOLDENAGE_MOD", kTrait.getGoldenAgeDurationModifier()));
 		}
 
-//Team Project (6)
+		//Team Project (6)
 		//	Golden Age On Birth of GP
 		if (kTrait.getGoldenAgeonBirthofGreatPeopleType() != NO_UNIT)
 		{
@@ -11356,7 +11356,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			szHelpString.append(gDLL->getText("TXT_KEY_TRAITHELP_GOLDEN_AGE_ON_BIRTH_OF_GP_TYPE", GC.getUnitInfo((UnitTypes)kTrait.getGoldenAgeonBirthofGreatPeopleType()).getTextKeyWide()));
 		}
 
-//POPULATION
+		//POPULATION
 		// Populationgrowthratepercentage
 		if (kTrait.getGlobalPopulationgrowthratepercentage() > 0)
 		{
@@ -11369,7 +11369,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			szHelpString.append(gDLL->getText("TXT_KEY_BUILDINGHELP_CITY_FAST_GROWTH_SPEED", kTrait.getGlobalPopulationgrowthratepercentage()));
 		}
 
-//CITY STARTS
+		//CITY STARTS
 		// City Start Population Bonus
 		if (kTrait.getBonusPopulationinNewCities() != 0)
 		{
@@ -11391,7 +11391,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			szHelpString.append(gDLL->getText("TXT_KEY_TRAITHELP_CITY_START_STATE_RELIGION"));
 		}
 
-//REVOLUTIONS
+		//REVOLUTIONS
 
 		if (GC.getGame().isOption(GAMEOPTION_REVOLUTION))
 		{
@@ -11523,7 +11523,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			}
 		}
 
-/*
+		/*
 		// Free Promotions
 		bool bFoundPromotion = false;
 		szTempBuffer.clear();
@@ -11554,9 +11554,9 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 				}
 			}
 		}
-*/
+		*/
 
-// MAINTENANCE MODIFIERS
+		// MAINTENANCE MODIFIERS
 		// iUpkeepModifier
 		if (kTrait.getUpkeepModifier() != 0)
 		{
@@ -11700,7 +11700,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 
 
 		//RESEARCH MODIFIERS
-				// Tech Research Modifier
+		// Tech Research Modifier
 		foreach_(const TechModifier& pair, kTrait.getTechResearchModifiers())
 		{
 			if (algo::none_of_equal(iIterationValues, pair.second))
@@ -11737,7 +11737,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 		bFound = false;
 		bFirst = true;
 
-//BUILDING MODIFIERS
+		//BUILDING MODIFIERS
 
 		// SpecialBuildings
 		iLast = 0;

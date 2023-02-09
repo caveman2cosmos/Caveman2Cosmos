@@ -33114,7 +33114,7 @@
 			<iNumCitiesMaintenanceModifier>-20</iNumCitiesMaintenanceModifier>
 			<iMilitaryProductionModifier>20</iMilitaryProductionModifier>
 			<GreatPeopleUnitType>UNIT_GREAT_STATESMAN</GreatPeopleUnitType>
-			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
+			<iGreatPeopleRateChange>-2</iGreatPeopleRateChange>
 			<bExtraGoody>1</bExtraGoody>
 			<ReplacementCondition>
 				<Has>
@@ -33404,7 +33404,7 @@
 			<iNumCitiesMaintenanceModifier>-20</iNumCitiesMaintenanceModifier>
 			<iMilitaryProductionModifier>0</iMilitaryProductionModifier>
 			<GreatPeopleUnitType>UNIT_GREAT_STATESMAN</GreatPeopleUnitType>
-			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
+			<iGreatPeopleRateChange>-2</iGreatPeopleRateChange>
 			<bExtraGoody>1</bExtraGoody>
 			<ReplacementCondition>
 				<Has>
@@ -33685,7 +33685,7 @@
 			<iMilitaryProductionModifier>15</iMilitaryProductionModifier>
 			<iMaxTradeRoutesChange>-1</iMaxTradeRoutesChange>
 			<GreatPeopleUnitType>UNIT_GREAT_STATESMAN</GreatPeopleUnitType>
-			<iGreatPeopleRateChange>4</iGreatPeopleRateChange>
+			<iGreatPeopleRateChange>-4</iGreatPeopleRateChange>
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_EXCESSIVE3</Type>
@@ -33838,7 +33838,7 @@
 			<iMilitaryProductionModifier>15</iMilitaryProductionModifier>
 			<iMaxTradeRoutesChange>-1</iMaxTradeRoutesChange>
 			<GreatPeopleUnitType>UNIT_GREAT_STATESMAN</GreatPeopleUnitType>
-			<iGreatPeopleRateChange>6</iGreatPeopleRateChange>
+			<iGreatPeopleRateChange>-6</iGreatPeopleRateChange>
 		</TraitInfo>
 		<TraitInfo>
 			<Type>TRAIT_AGRICULTURAL</Type>

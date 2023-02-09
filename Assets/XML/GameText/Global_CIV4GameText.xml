@@ -6487,7 +6487,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_CITY_VISIBILITY</Tag>
-		<English>City Visibility</English>
+		<English>City Vision</English>
 		<French>Afficher la ville</French>
 		<German>Stadtsichtbarkeit</German>
 		<Italian>Visibilità città</Italian>
@@ -9884,7 +9884,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_GO_TO_SENTRY_HELP</Tag>
-		<English>Order the selected unit to move to a tile. The unit stops before reaching its destination if an enemy unit of the same type enters its visibility range.</English>
+		<English>Order the selected unit to move to a tile. The unit stops before reaching its destination if an enemy unit of the same type enters its vision range.</English>
 		<French>Ordonner à l'unité sélectionnée de se déplacer vers une case. L'unité s'arrête avant sa destination si une unité ennemie ne pénètre pas dans son champ de vision.</French>
 		<German>Ausgewählte Einheit zu einem Zielfeld beordern. Die Einheit unterbricht ihre Bewegung, wenn eine feindliche Einheit desselben Typs ihr Sichtfeld betritt.</German>
 		<Italian>Ordina all'unità selezionata di muoversi verso una casella. L'unità si ferma prima di raggiungere la sua destinazione se un'unità nemica dello stesso tipo entra nel suo raggio di visibilità.</Italian>
