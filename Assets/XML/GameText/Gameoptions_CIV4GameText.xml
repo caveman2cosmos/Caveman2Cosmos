@@ -528,7 +528,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_HIDE_AND_SEEK_HELP</Tag>
-		<English>Adds new layers of invisibility. Units can have more than one type and intensity of invisibility (and can also have multiple visibility types and intensities) and it requires the opponent to have visibilities of all types and intensity on a plot to see the unit. (Forces Without Warning ON)</English>
+		<English>Adds new layers of invisibility. Units can have more than one type and intensity of invisibility (and can also have multiple vision types and intensities) and it requires the opponent to have vision of all types and intensity on a plot to see the unit. (Forces Without Warning ON)</English>
 		<French>Ajoute plusieurs types d'invisibilité. Les unités peuvent avoir plusieurs niveaux et types d'invisibilité, et il est nécessaire d'avoir un mode de détection compatible pour les repérer.</French>
 		<German>Statt simpler Standardunsichtbarkeit und entsprechenden Abwehrmechanismen gibt es nun feinere Unterteilungen. Mehrere Typen und Stärken von Unsichtbarkeit sorgen dafür, dass versteckte Einheiten nur entdeckt werden können, wenn der Gegner entsprechend geschulte Einheiten besitzt. (Die Mod Ohne Vorwarnung muss ebenfalls aktiviert sein.)</German>
 		<Russian>Äîáàâëÿåò íîâûå óðîâíè íåâèäèìîñòè. Отряды могут иметь несколько степеней невидимости (а также несколько типов и уровней видимости), и для этого требуется, чтобы противник имел видимость всех типов и очки хода на участке, для обнаружения отряда (Оповещение сил ВКЛ)</Russian>
