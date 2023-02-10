@@ -323,31 +323,31 @@
 			<Description>TXT_KEY_CONCEPT_ROM_MAPSCRIPTS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ROM_MAPSCRIPTS_PEDIA</Civilopedia>
 		</NewConceptInfo>
-		<NewConceptInfo>
+		<!-- <NewConceptInfo>
 			<Type>CONCEPT_ROM_MODULES_CIV_SPECIFIC_UNITARSTYLES</Type>
 			<Description>TXT_KEY_CONCEPT_ROM_MODULES_CIV_SPECIFIC_UNITARTSTYLES</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ROM_MODULES_CIV_SPECIFIC_UNITARTSTYLES_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
+		</NewConceptInfo> -->
+		<!-- <NewConceptInfo>
 			<Type>CONCEPT_ROM_MODULE_HOLY_WARS</Type>
 			<Description>TXT_KEY_CONCEPT_ROM_MODULE_HOLY_WARS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ROM_MODULE_HOLY_WARS_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
+		</NewConceptInfo> -->
+		<!-- <NewConceptInfo>
 			<Type>CONCEPT_ROM_MODULE_STATIC_LH</Type>
 			<Description>TXT_KEY_CONCEPT_ROM_MODULE_STATIC_LH</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ROM_MODULE_STATIC_LH_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
+		</NewConceptInfo> -->
+		<!-- <NewConceptInfo>
 			<Type>CONCEPT_ROM_MODULE_UN_FORCES</Type>
 			<Description>TXT_KEY_CONCEPT_ROM_MODULE_UN_FORCES</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ROM_MODULE_UN_FORCES_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
+		</NewConceptInfo> -->
+		<!-- <NewConceptInfo>
 			<Type>CONCEPT_ROM_NO_BUILDING_GRAPHICS</Type>
 			<Description>TXT_KEY_CONCEPT_ROM_NO_BUILDING_GRAPHICS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ROM_NO_BUILDING_GRAPHICS_PEDIA</Civilopedia>
-		</NewConceptInfo>
+		</NewConceptInfo> -->
 		<NewConceptInfo>
 			<Type>CONCEPT_ROM_RELIGION</Type>
 			<Description>TXT_KEY_CONCEPT_ROM_RELIGION</Description>
