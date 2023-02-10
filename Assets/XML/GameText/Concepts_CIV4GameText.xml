@@ -1743,7 +1743,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_REALISTIC_CULTURES_SPREAD_PEDIA</Tag>
-		<English>[BOLD]Overview[\BOLD]:[NEWLINE]Realistic Culture Spread creates a more natural style of cultural spread from your cities. Culture spreads more slowly over rivers, higher terrain like hills and peaks, heavily wooded areas, and ocean tiles. Because this more natural spread also has the effect of limiting your cultural borders, new intermediate culture levels have been added for this game option only, to account for the slower natural spread. The amount of actual culture to reach [COLOR_YELLOW]Monumental Culture[COLOR_REVERT] and all other thresholds is not altered.
+		<English>[BOLD]Overview[\BOLD]:[NEWLINE]Realistic Culture Spread creates a more natural style of cultural spread from your cities. Culture spreads more slowly over rivers, higher terrain like hills and peaks, heavily wooded areas, and ocean tiles. Because this more natural spread also has the effect of limiting your cultural borders, new intermediate culture levels have been added for this game option only, to account for the slower natural spread. The amount of actual culture to reach [COLOR_YELLOW]Monumental Culture[COLOR_REVERT] and all other thresholds is not altered.[NEWLINE]Improve the tiles inside your borders and research terrain utilization technologies to help it expand faster!
 [NEWLINE][BOLD]Mechanics[\BOLD]:
 [ICON_BULLET] "Difficulty" is a measure of how many *extra* border expansions are needed to claim a specific tile. A difficulty of 1 means that, in addition to the first expansion that would otherwise acquire the tile in a regular game, one further expansion is required. Due to there being just under twice the number of cultural levels in this game option, a tile of difficulty 1 spreads approximately just as quickly as in a regular game.
 [ICON_BULLET] In general: Land terrain provides between 0 and 3 difficulty. Coast/sea/ocean provide 2/3/4 difficulty. Features such as forests, marsh, reefs and similar provide 0-2 difficulty. Hills provide 1 difficulty and peaks 3. A tile has 2 higher difficulty if it must be reached by crossing a river.
@@ -3293,7 +3293,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_PROPERTIES_PEDIA</Tag>
-		<English>WIP Placeholder. Properties are things like crime, education, tourism, flammability. Find them on right of screen, watch them. They do passive stuff, take care you don't let them enter a negative spiral.</English>
+		<English>Properties are things like crime, education, tourism, and flammability. Find them on the right side of the city screen, watch them. They will create autobuilds in cities based on their values, as well as spread over map (to somewhat limited effect), so take care you don't let them enter a negative spiral. Note that flammability is unique in that it is a static value only dependent on buildings, rather than a gain/loss per turn.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_C2C_CULTURE</Tag>
@@ -3309,7 +3309,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_DEVELOPING_LEADERS_PEDIA</Tag>
-		<English>WIP Placeholder. Culture gained over time makes your traits stronger, can pick new ones, etc.</English>
+		<English>WIP Placeholder pedia text. Culture gained over time makes your traits stronger, can pick new ones, etc.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_C2C_GAMEPLAY</Tag>
@@ -3325,7 +3325,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_C2C_GAMEOPTIONS_PEDIA</Tag>
-		<English>Overview of C2C game options found through the custom game start mode (which is recommended). Note that some of these can be safely changed after game start through Worldbuilder, but others cannot! Not all options have an entry here, but most of the more impactful ones do.</English>
+		<English>Overview of C2C game options found through the custom game start mode (which is recommended). Note that some of these can be safely changed after game start through Worldbuilder, but others cannot! Not all options have an entry here, but several of the more impactful ones do. For others, it is recommended you search on the CivFanaticsForum or ask on the Discord channel if you need additional help figuring something out.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_C2C_BUGOPTIONS</Tag>
