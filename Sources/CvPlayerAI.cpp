@@ -19858,6 +19858,7 @@ void CvPlayerAI::AI_doDiplo()
 								}
 							}
 
+							// Trade military units
 							if (AI_getContactTimer(((PlayerTypes)iI), CONTACT_TRADE_MILITARY_UNITS) == 0)
 							{
 								PROFILE("CvPlayerAI::AI_doDiplo.TardeUnits");

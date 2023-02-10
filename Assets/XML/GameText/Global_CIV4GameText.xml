@@ -4724,6 +4724,14 @@
 		<Russian>%s1_BldgName была утрачена в городе %s2_CityName</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_NATURAL_WONDERS</Tag>
+		<English>1. Natural Wonders</English>
+		<French>1. Merveilles Naturelles</French>
+		<German>1. Naturwunder</German>
+		<Polish>1. Cuda Natury</Polish>
+		<Russian>1. ×óäî ïðèðîäû</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_NATURAL_WONDERS_PEDIA</Tag>
 		<English>[H1]Natural Wonders[\H1][PARAGRAPH:1]Natural Wonders include marvels that truly display the grand beauty of the natural world. Natural Wonders permanently increase happiness when seen by a civilization and grants Gold for the first civilization. Cities get a free specialist for each Natural Wonder nearby.</English>
 		<German>[H1]Naturwunder[\H1][NEWLINE][NEWLINE]Hierbei handelt es sich um natürlich entstandene Wunder, die eindrucksvoll die Schönheit der uns umgebenden Natur zeigen. Städte profitieren auf vielfältige Weise von Naturwundern in ihrem Umfeld. Sie erhöhen nicht nur die Zufriedenheit der Bevölkerung, sondern sorgen auch dafür, dass sich ein zusätzlicher freier Spezialist ansiedelt. Die Zivilisation, die ein Naturwunder als erstes entdeckt, erhält außerdem einen Bonus in Form von [ICON_GOLD].</German>
@@ -18854,14 +18862,6 @@
 		<Italian>[ICON_BULLET]Le unità hanno il %D1%% di chance di sfuggire alla cattura.</Italian>
 		<Polish>[ICON_BULLET]Jednostki mają %D1%% szansy na uniknięcie Przejęcia.</Polish>
 		<Russian>[ICON_BULLET]%D1%% øàíñîâ èçáåæàòü çàõâàòà.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_NATURAL_WONDERS</Tag>
-		<English>Natural Wonders</English>
-		<French>Merveilles Naturelles</French>
-		<German>Naturwunder</German>
-		<Polish>Cuda Natury</Polish>
-		<Russian>×óäî ïðèðîäû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_NEVER_MIND</Tag>
