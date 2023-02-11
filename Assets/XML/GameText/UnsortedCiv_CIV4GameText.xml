@@ -479,7 +479,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_HITLER_1</Tag>
-		<English>Greetings [CT_NAME]. Our [OUR_CIV_ADJ] men have no desire to fight for ourselves; only for [OUR_EMPIRE]!</English>
+		<English>I am [OUR_NAME], Führer of the [OUR_CIV_ADJ] people. We will restore our betrayed nation to greatness. You will not stand in our way.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_HTN_1</Tag>
