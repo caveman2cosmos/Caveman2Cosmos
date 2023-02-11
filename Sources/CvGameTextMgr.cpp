@@ -15587,11 +15587,6 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 		szHelpText.append(gDLL->getText("TXT_KEY_CIVICHELP_EXPERIENCE_IN_BORDERS", kCivic.getExpInBorderModifier()));
 	}
 
-/************************************************************************************************/
-/* REVDCM								 02/16/10								phungus420	*/
-/*																							  */
-/* RevCivic Effects																			 */
-/************************************************************************************************/
 	if (kCivic.isUpgradeAnywhere())
 	{
 		szHelpText.append(NEWLINE);
@@ -15616,7 +15611,7 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 		}
 	}
 
-//Team Project (5)
+	//Team Project (5)
 	if (GC.getGame().isOption(GAMEOPTION_RELIGIOUS_DISABLING))
 	{
 		// All Religions active
@@ -17530,7 +17525,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		bNormalView = true;
 	}
 
-/*
+	/*
 	//TBGRIDX
 	int iX = 0;
 	if ((TechTypes)kUnit.getPrereqAndTech() != -1)
@@ -17554,7 +17549,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_GRID_X", GC.getTechInfo(eMostAdvancedTech).getTextKeyWide(), iX));
 	}
-*/
+	*/
 	if (!bCivilopediaText)
 	{
 		szBuffer.append(NEWLINE);
@@ -17592,12 +17587,12 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_AIRRANGE", kUnit.getAirRange()));
 		}
 
-// BUG - Starting Experience - start
+		// BUG - Starting Experience - start
 		if (pCity && getBugOptionBOOL("MiscHover__UnitExperience", true, "BUG_UNIT_EXPERIENCE_HOVER"))
 		{
 			setUnitExperienceHelp(szBuffer, L", ", eUnit, pCity, bConscript);
 		}
-// BUG - Starting Experience - end
+		// BUG - Starting Experience - end
 	}
 
 	//bTBUnitView1 = (Combat)
@@ -23012,7 +23007,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 				szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_IN_CITY"));
 			iLast = modifier.second;
 		}
-/*
+		/*
 		iLast = 0;
 		for (int iI = 0; iI < NUM_YIELD_TYPES; ++iI)
 		{
@@ -23028,7 +23023,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 				}
 			}
 		}
-*/
+		*/
 		bFirst = true;
 		for (int iI = 0; iI < GC.getNumUnitInfos(); ++iI)
 		{
@@ -23391,9 +23386,12 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			{
 				for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 				{
-					int iDoubleTime = kBuilding.getCommerceChangeDoubleTime(iI);
-					int iAge = GC.getGame().getGameTurnYear() - iYear;
+					// Can't just use .getCommerce because source may be tech, other.
+					if (pCity->getBuildingCommerceByBuilding((CommerceTypes)iI, eBuilding, true, true) == 0) continue;
 
+					int iDoubleTime = kBuilding.getCommerceChangeDoubleTime(iI);
+
+					int iAge = GC.getGame().getGameTurnYear() - iYear;
 					if (iAge < iDoubleTime)
 					{
 						szBuffer.append(NEWLINE);
@@ -23405,6 +23403,11 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 						{
 							szBuffer.append(gDLL->getText("TXT_KEY_BUG_DOUBLE_COMMERCE_YEARS", GC.getCommerceInfo((CommerceTypes)iI).getTextKeyWide(), iDoubleTime - iAge));
 						}
+					}
+					else if (iDoubleTime > 0)
+					{
+						szBuffer.append(NEWLINE);
+						szBuffer.append(gDLL->getText("TXT_KEY_BUG_DOUBLE_COMMERCE_COMPLETE", iDoubleTime, GC.getCommerceInfo((CommerceTypes)iI).getTextKeyWide()));
 					}
 				}
 			}

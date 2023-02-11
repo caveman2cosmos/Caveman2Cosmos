@@ -12094,14 +12094,14 @@ int CvCity::getBuildingCommerce100(CommerceTypes eIndex) const
 }
 
 
-int CvCity::getBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding, const bool bFull) const
+int CvCity::getBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding, const bool bFull, const bool bTestVisible) const
 {
 	PROFILE_FUNC();
 
 	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex);
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding);
 
-	if (getNumActiveBuilding(eBuilding) < 1)
+	if (getNumActiveBuilding(eBuilding) < 1 && !bTestVisible)
 	{
 		return 0;
 	}
