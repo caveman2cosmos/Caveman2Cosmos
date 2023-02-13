@@ -5141,16 +5141,6 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 					{
 						iValue += 20;
 					}
-
-					if (kBuilding.getNumUnitCombatOngoingTrainingDurations() > 0)
-					{
-						int iDuration = kBuilding.getUnitCombatOngoingTrainingDuration(iI);
-
-						if (iDuration > 0 && iDuration < getUnitCombatOngoingTrainingTimeIncrement((UnitCombatTypes)iI))
-						{
-							iValue = 10 * (20 - iDuration);
-						}
-					}
 				}
 
 				for (int iI = 0; iI < NUM_DOMAIN_TYPES; iI++)
