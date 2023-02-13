@@ -244,9 +244,9 @@
 			<Civilopedia>TXT_KEY_CONCEPT_REALISTIC_CORPORATIONS_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
-			<Type>CONCEPT_REALISTIC_CULTURES_SPREAD</Type>
-			<Description>TXT_KEY_CONCEPT_REALISTIC_CULTURES_SPREAD</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_REALISTIC_CULTURES_SPREAD_PEDIA</Civilopedia>
+			<Type>CONCEPT_REALISTIC_CULTURE_SPREAD</Type>
+			<Description>TXT_KEY_CONCEPT_REALISTIC_CULTURE_SPREAD</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_REALISTIC_CULTURE_SPREAD_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_REVDCM</Type>
@@ -724,6 +724,16 @@
 			<Type>CONCEPT_STRATEGY_WORLD_WAR</Type>
 			<Description>TXT_KEY_STRATEGY_WORLD_WAR</Description>
 			<Civilopedia>TXT_KEY_STRATEGY_WORLD_WAR_PEDIA</Civilopedia>
+		</NewConceptInfo>
+		<NewConceptInfo>
+			<Type>CONCEPT_EQUILIBRIUM_CULTURE</Type>
+			<Description>TXT_KEY_CONCEPT_EQUILIBRIUM_CULTURE</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_EQUILIBRIUM_CULTURE_PEDIA</Civilopedia>
+		</NewConceptInfo>
+		<NewConceptInfo>
+			<Type>CONCEPT_1_CITY_TILE_FOUNDING</Type>
+			<Description>TXT_KEY_CONCEPT_1_CITY_TILE_FOUNDING</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_1_CITY_TILE_FOUNDING_PEDIA</Civilopedia>
 		</NewConceptInfo>
 	</NewConceptInfos>
 </Civ4NewConceptInfos>

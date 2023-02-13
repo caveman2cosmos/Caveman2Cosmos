@@ -1321,14 +1321,14 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_WITHDRAW_ON", pUnit->withdrawOnFeatureTotal((FeatureTypes)iI), CvWString(GC.getFeatureInfo((FeatureTypes) iI).getType()).GetCString(), GC.getFeatureInfo((FeatureTypes) iI).getTextKeyWide()));
 				}
 			}
-/*
+			/*
 			//Escape
 			if (pUnit->escapeModifier() != 0)
 			{
 				szString.append(NEWLINE);
 				szString.append(gDLL->getText("TXT_KEY_UNITHELP_ESCAPE_PLAN_MOD", pUnit->escapeModifier()));
 			}
-*/
+			*/
 			//Pursuit
 			if (pUnit->pursuitProbability() > 0)
 			{
@@ -2345,14 +2345,14 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 					}
 				}
 			}
-/*
+			/*
 			//Establish
 			if (pUnit->establishModifier() != 0)
 			{
 				szString.append(NEWLINE);
 				szString.append(gDLL->getText("TXT_KEY_UNITHELP_HEALING_HQ_MOD", pUnit->establishModifier()));
 			}
-*/
+			*/
 			if (pUnit->getVictoryAdjacentHeal() != 0)
 			{
 				szString.append(NEWLINE);
@@ -9361,7 +9361,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 			szString.append(CvWString::format(ENDCOLR));
 		}
 
-/* Toffer - Text is missing...
+		/* Toffer - Text is missing...
 
 		if (getBugOptionBOOL("MiscHover__PlotRecommendedBuild", true, "BUG_PLOT_HOVER_RECOMMENDED_BUILD"))
 		{
@@ -9391,7 +9391,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 				}
 			}
 		}
-*/
+		*/
 
 		if (pPlot->hasAnyBuildProgress() && getBugOptionBOOL("MiscHover__PartialBuilds", true, "BUG_PLOT_HOVER_PARTIAL_BUILDS"))
 		{
