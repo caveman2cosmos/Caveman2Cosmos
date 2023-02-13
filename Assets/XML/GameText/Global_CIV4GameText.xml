@@ -18534,6 +18534,10 @@
 		<Russian>%s1_Player îñíîâàë %s2_City íà îòäàëåííîé çåìëå.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MORECIV4LERTS_CITY_TO_EXPAND_RCS</Tag>
+		<English>[COLOR_MAGENTA]The culture of %s1 is about to reach a new threshold.[COLOR_REVERT]</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MORECIV4LERTS_CITY_TO_EXPAND</Tag>
 		<English>[COLOR_MAGENTA]The borders of %s1 are about to expand.[COLOR_REVERT]</English>
 		<French>[COLOR_MAGENTA]La frontière culturelle de %s1 est sur le point de s'étendre.[COLOR_REVERT]</French>
