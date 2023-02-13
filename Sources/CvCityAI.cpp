@@ -5461,6 +5461,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 					}
 
 					iValue += (kBuilding.getDomainFreeExperience(DOMAIN_SEA) * (bMetAnyCiv ? 16 : 8));
+
 					iValue += (kBuilding.getDomainProductionModifier(DOMAIN_SEA) / 4);
 				}
 
@@ -15638,6 +15639,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 				}
 
 				iValue += kBuilding.getDomainFreeExperience(DOMAIN_SEA) * (bMetAnyCiv ? 16 : 8);
+
 				iValue += kBuilding.getDomainProductionModifier(DOMAIN_SEA) / 4;
 				valuesCache->AccumulateTo(BUILDINGFOCUSINDEX_DOMAINSEA, iValue, false);
 				valuesCache->AccumulateTo(BUILDINGFOCUSINDEX_DOMAINSEA, iValue, true);

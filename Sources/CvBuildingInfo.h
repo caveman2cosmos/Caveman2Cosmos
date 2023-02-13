@@ -709,7 +709,7 @@ private:
 	int m_iMediumRangeSupportPercentModifier;
 	int m_iLongRangeSupportPercentModifier;
 	int m_iFlankSupportPercentModifier;
-#endif // STRENGTH_IN_NUMBERS
+#endif
 	int m_iNationalCaptureProbabilityModifier;
 	int m_iNationalCaptureResistanceModifier;
 	int m_iLocalCaptureProbabilityModifier;

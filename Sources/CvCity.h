@@ -1859,22 +1859,18 @@ protected:
 	int m_iTotalMediumRangeSupportPercentModifier;
 	int m_iTotalLongRangeSupportPercentModifier;
 	int m_iTotalFlankSupportPercentModifier;
-#endif // STRENGTH_IN_NUMBERS
+#endif
 	int* m_paiNewAfflictionTypeCount;
 	int* m_paiAidRate;
 	int** m_ppaaiExtraBonusAidModifier;
 	int* m_paiNewExtraAfflictionOutbreakLevelChange;
 	int* m_paiNewAfflictionToleranceChange;
-	int* m_paiPromotionLineAfflictionAttackCommunicability;
 	int* m_paiNewCurrentOvercomeChange;
 	int* m_paiUnitCombatProductionModifier;
 	int* m_paiUnitCombatRepelModifier;
 	int* m_paiUnitCombatRepelAgainstModifier;
 	int* m_paiUnitCombatDefenseAgainstModifier;
-#ifndef BREAK_SAVES
-	int* m_paiUnitCombatOngoingTrainingTimeCount;
-	int* m_paiUnitCombatOngoingTrainingTimeIncrement;
-#endif // !BREAK_SAVES
+	int* m_paiPromotionLineAfflictionAttackCommunicability;
 	//TB Building Tags
 	int m_iExtraLocalCaptureProbabilityModifier;
 	int m_iExtraLocalCaptureResistanceModifier;

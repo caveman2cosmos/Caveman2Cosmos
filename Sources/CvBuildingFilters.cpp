@@ -209,7 +209,7 @@ bool BuildingFilterIsCityDefense::isFilteredBuilding(const CvPlayer *pPlayer, Cv
 			return true;
 		}
 	}
-#endif // STRENGTH_IN_NUMBERS
+#endif
 	return buildingInfo.getDefenseModifier() > 0
 		|| buildingInfo.getAllCityDefenseModifier() > 0
 		|| buildingInfo.getAdjacentDamagePercent() > 0

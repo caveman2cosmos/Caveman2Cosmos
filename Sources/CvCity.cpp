@@ -120,11 +120,8 @@ CvCity::CvCity()
 	m_paiUnitCombatRepelAgainstModifier = NULL;
 	m_paiUnitCombatDefenseAgainstModifier = NULL;
 	m_paiPromotionLineAfflictionAttackCommunicability = NULL;
-#ifndef BREAK_SAVES
-	m_paiUnitCombatOngoingTrainingTimeCount = NULL;
-	m_paiUnitCombatOngoingTrainingTimeIncrement = NULL;
-#endif // !BREAK_SAVES
 	//TB Combat Mod (Buildings) end
+	//Team Project (1)
 	m_paiTechHappiness = NULL;
 	m_paiTechSpecialistHappiness = NULL;
 	m_paiTechHealth = NULL;
@@ -133,6 +130,7 @@ CvCity::CvCity()
 	m_ppaaiTechSpecialistHealthTypes = NULL;
 	m_ppaaiLocalSpecialistExtraYield = NULL;
 	m_ppaaiLocalSpecialistExtraCommerce = NULL;
+	//Team Project (5)
 	m_pabReligiouslyDisabledBuilding = NULL;
 	m_paiSpecialistBannedCount = NULL;
 	m_paiDamageAttackingUnitCombatCount = NULL;
@@ -435,16 +433,11 @@ void CvCity::uninit()
 	SAFE_DELETE_ARRAY(m_paiNewExtraAfflictionOutbreakLevelChange);
 	SAFE_DELETE_ARRAY(m_paiNewAfflictionToleranceChange);
 	SAFE_DELETE_ARRAY(m_paiNewCurrentOvercomeChange);
-	SAFE_DELETE_ARRAY(m_paiPromotionLineAfflictionAttackCommunicability);
-
 	SAFE_DELETE_ARRAY(m_paiUnitCombatProductionModifier);
 	SAFE_DELETE_ARRAY(m_paiUnitCombatRepelModifier);
 	SAFE_DELETE_ARRAY(m_paiUnitCombatRepelAgainstModifier);
 	SAFE_DELETE_ARRAY(m_paiUnitCombatDefenseAgainstModifier);
-#ifndef BREAK_SAVES
-	SAFE_DELETE_ARRAY(m_paiUnitCombatOngoingTrainingTimeCount);
-	SAFE_DELETE_ARRAY(m_paiUnitCombatOngoingTrainingTimeIncrement);
-#endif // !BREAK_SAVES
+	SAFE_DELETE_ARRAY(m_paiPromotionLineAfflictionAttackCommunicability);
 	SAFE_DELETE_ARRAY(m_pabReligiouslyDisabledBuilding);
 	SAFE_DELETE_ARRAY(m_paiStartDeferredSectionNumBonuses);
 	SAFE_DELETE_ARRAY(m_paiTechHappiness);
@@ -917,10 +910,6 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 		m_paiUnitCombatRepelModifier = new int[GC.getNumUnitCombatInfos()];
 		m_paiUnitCombatRepelAgainstModifier = new int[GC.getNumUnitCombatInfos()];
 		m_paiUnitCombatDefenseAgainstModifier = new int[GC.getNumUnitCombatInfos()];
-#ifndef BREAK_SAVES
-		m_paiUnitCombatOngoingTrainingTimeCount = new int[GC.getNumUnitCombatInfos()];
-		m_paiUnitCombatOngoingTrainingTimeIncrement = new int[GC.getNumUnitCombatInfos()];
-#endif // !BREAK_SAVES
 		m_paiDamageAttackingUnitCombatCount = new int[GC.getNumUnitCombatInfos()];
 		m_paiHealUnitCombatTypeVolume = new int[GC.getNumUnitCombatInfos()];
 		//TB Combat Mod (Buildings) end
@@ -933,10 +922,6 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 			m_paiUnitCombatRepelModifier[iI] = 0;
 			m_paiUnitCombatRepelAgainstModifier[iI] = 0;
 			m_paiUnitCombatDefenseAgainstModifier[iI] = 0;
-#ifndef BREAK_SAVES
-			m_paiUnitCombatOngoingTrainingTimeCount[iI] = 0;
-			m_paiUnitCombatOngoingTrainingTimeIncrement[iI] = 0;
-#endif // !BREAK_SAVES
 			m_paiDamageAttackingUnitCombatCount[iI] = 0;
 			m_paiHealUnitCombatTypeVolume[iI] = 0;
 			//TB Combat Mod (Buildings) end
@@ -1439,7 +1424,7 @@ void CvCity::doTurn()
 	{
 		for (int iI = 0; iI < GC.getNumPromotionLineInfos(); iI++)
 		{
-			const PromotionLineTypes eAfflictionLine = ((PromotionLineTypes)iI);
+			PromotionLineTypes eAfflictionLine = ((PromotionLineTypes)iI);
 
 			if (GC.getPromotionLineInfo(eAfflictionLine).isAffliction())
 			{
@@ -17221,16 +17206,11 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", &m_iTotalMediumRangeSupportPercentModifier, SAVE_VALUE_TYPE_INT);
 	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", &m_iTotalLongRangeSupportPercentModifier, SAVE_VALUE_TYPE_INT);
 	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", &m_iTotalFlankSupportPercentModifier, SAVE_VALUE_TYPE_INT);
-#endif // STRENGTH_IN_NUMBERS
-
-#ifndef BREAK_SAVES
-	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatOngoingTrainingTimeCount);
-	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatOngoingTrainingTimeIncrement);
-#endif // !BREAK_SAVES
+#endif
 
 	for (int i = 0; i < wrapper.getNumClassEnumValues(REMAPPED_CLASS_TYPE_TECHS); ++i)
 	{
-		const int iI = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_TECHS, i, true);
+		int	iI = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_TECHS, i, true);
 
 		if (iI != -1)
 		{
@@ -17694,19 +17674,13 @@ void CvCity::write(FDataStreamBase* pStream)
 	//TB Combat Mod (Buildings) begin
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatProductionModifier);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatRepelModifier);
-
 #ifdef STRENGTH_IN_NUMBERS
 	WRAPPER_WRITE(wrapper, "CvCity", m_iTotalFrontSupportPercentModifier);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iTotalShortRangeSupportPercentModifier);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iTotalMediumRangeSupportPercentModifier);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iTotalLongRangeSupportPercentModifier);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iTotalFlankSupportPercentModifier);
-#endif // STRENGTH_IN_NUMBERS
-
-#ifndef BREAK_SAVES
-	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatOngoingTrainingTimeCount);
-	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatOngoingTrainingTimeIncrement);
-#endif // !BREAK_SAVES
+#endif
 
 	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 	{
@@ -23388,7 +23362,7 @@ void CvCity::changeTotalFlankSupportPercentModifier(int iChange)
 	m_iTotalFlankSupportPercentModifier += iChange;
 	FASSERT_NOT_NEGATIVE(getTotalFlankSupportPercentModifier())
 }
-#endif // STRENGTH_IN_NUMBERS
+#endif
 
 bool CvCity::assignPromotionChecked(PromotionTypes promotion, CvUnit* unit) const
 {
