@@ -23576,6 +23576,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", dflIIUnit.iID);
 #endif // STRENGTH_IN_NUMBERS
 
+
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraDodgeModifier);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraPrecisionModifier);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraPowerShots);
