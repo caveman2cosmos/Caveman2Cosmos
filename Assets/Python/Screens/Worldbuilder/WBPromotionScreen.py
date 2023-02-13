@@ -1,6 +1,5 @@
 from CvPythonExtensions import *
 import CvScreenEnums
-import WBUnitScreen
 import WBPlayerScreen
 import WBTeamScreen
 import WBPlotScreen
@@ -161,10 +160,10 @@ class WBPromotionScreen:
 		global lList
 		lList = []
 		for i in xrange(GC.getNumPromotionInfos()):
-			ItemInfo = GC.getPromotionInfo(i)
-			if not isPromotionValid(i, pUnit.getUnitType(), True): continue
-			if iSelectedClass == -2 or ItemInfo.getUnitCombat(iSelectedClass):
-				lList.append([ItemInfo.getDescription(), i])
+			if pUnit.isPromotionValid(i):
+				ItemInfo = GC.getPromotionInfo(i)
+				if iSelectedClass == -2 or ItemInfo.getUnitCombat(iSelectedClass):
+					lList.append([ItemInfo.getDescription(), i])
 		lList.sort()
 		self.placePromotions()
 
@@ -204,7 +203,7 @@ class WBPromotionScreen:
 		if inputClass.getFunctionName() == "CurrentPage":
 			iIndex = screen.getPullDownData("CurrentPage", screen.getSelectedPullDownID("CurrentPage"))
 			if iIndex == 0:
-				WBUnitScreen.WBUnitScreen(self.WB).interfaceScreen(pUnit)
+				self.WB.goToSubScreen("UnitScreen", [pUnit])
 			elif iIndex == 2:
 				WBPlayerScreen.WBPlayerScreen(self.WB).interfaceScreen(pUnit.getOwner())
 			elif iIndex == 3:

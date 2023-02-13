@@ -6,7 +6,6 @@ import WBPlayerUnits
 import WBReligionScreen
 import WBCorporationScreen
 import WBInfoScreen
-import Popup
 
 GC = CyGlobalContext()
 iChange = 1
@@ -188,21 +187,23 @@ class WBPlayerScreen:
 		screen.appendTableRow("WBPlayerResearch")
 		sCurrentTech = CyTranslator().getText("TXT_KEY_CULTURELEVEL_NONE", ())
 		screen.setTableText("WBPlayerResearch", 0, 0, "<font=3>" + sColor + sCurrentTech + "</font></color>", CyArtFileMgr().getInterfaceArtInfo("INTERFACE_BUTTONS_CANCEL").getPath(), WidgetTypes.WIDGET_PYTHON, 7871, -1, 1<<0 )
-		for iTech in xrange(GC.getNumTechInfos()):
-			if pPlayer.canResearch(iTech):
+
+		for i in xrange(pTeam.getNumAdjacentResearch()):
+			iTechX = pTeam.getAdjacentResearch(i)
+			if pPlayer.canResearch(iTechX, True):
 				iColumn = iCount % nColumns
 				iRow = iCount /nColumns
 				if iRow > iMaxRows:
 					screen.appendTableRow("WBPlayerResearch")
 					iMaxRows = iRow
 				iCount += 1
-				ItemInfo = GC.getTechInfo(iTech)
+				ItemInfo = GC.getTechInfo(iTechX)
 				sColor = CyTranslator().getText("[COLOR_WARNING_TEXT]", ())
-				sText = u"%s (%d/%d)%c" %(ItemInfo.getDescription(), pTeam.getResearchProgress(iTech), pTeam.getResearchCost(iTech), GC.getCommerceInfo(CommerceTypes.COMMERCE_RESEARCH).getChar())
-				if iCurrentTech == iTech:
+				sText = u"%s (%d/%d)%c" %(ItemInfo.getDescription(), pTeam.getResearchProgress(iTechX), pTeam.getResearchCost(iTechX), GC.getCommerceInfo(CommerceTypes.COMMERCE_RESEARCH).getChar())
+				if iCurrentTech == iTechX:
 					sColor = CyTranslator().getText("[COLOR_POSITIVE_TEXT]", ())
 					sCurrentTech = sText
-				screen.setTableText("WBPlayerResearch", iColumn, iRow, "<font=3>" + sColor + sText + "</color></font>", ItemInfo.getButton(), WidgetTypes.WIDGET_PYTHON, 7871, iTech, 1<<0)
+				screen.setTableText("WBPlayerResearch", iColumn, iRow, "<font=3>" + sColor + sText + "</color></font>", ItemInfo.getButton(), WidgetTypes.WIDGET_PYTHON, 7871, iTechX, 1<<0)
 
 		if iCurrentTech > -1:
 			sText = u"%s: %d/%d%c" %(GC.getTechInfo(iCurrentTech).getDescription(), pTeam.getResearchProgress(iCurrentTech), pTeam.getResearchCost(iCurrentTech), GC.getCommerceInfo(CommerceTypes.COMMERCE_RESEARCH).getChar())
@@ -424,12 +425,11 @@ class WBPlayerScreen:
 			self.interfaceScreen(iPlayer)
 
 		elif inputClass.getFunctionName() == "PlayerEditScriptData":
-			popup = Popup.PyPopup(1111, EventContextTypes.EVENTCONTEXT_ALL)
-			popup.setHeaderString(CyTranslator().getText("TXT_KEY_WB_SCRIPT", ()))
+			popup = CyPopup(1111, EventContextTypes.EVENTCONTEXT_ALL, True)
+			popup.setHeaderString(CyTranslator().getText("TXT_KEY_WB_SCRIPT", ()), 1<<2)
 			popup.setUserData((pPlayer.getID(),))
-			popup.createEditBox(pPlayer.getScriptData())
-			popup.launch()
-			return
+			popup.createEditBox(pPlayer.getScriptData(), 0)
+			popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
 
 		return 1
 

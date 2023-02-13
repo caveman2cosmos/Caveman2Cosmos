@@ -39,6 +39,7 @@ public:
 	int getPower(bool bIncludeVassals) const;
 	int64_t getTotalVictoryScore() const;
 
+	bool isAtWar(bool bCountMinors) const;
 	int getAtWarCount(bool bIgnoreMinors) const;
 	int getHasMetCivCount(bool bIgnoreMinors) const;
 	bool isAVassal() const;
@@ -59,7 +60,6 @@ public:
 	bool hasHeadquarters(int /*CorporationTypes*/ eCorporation) const;
 
 	bool isHuman() const;
-	bool isBarbarian() const;
 	bool isNPC() const;
 	bool isHominid() const;
 	bool isMinorCiv() const;
@@ -143,7 +143,7 @@ public:
 	void changeExtraMoves(int /*DomainTypes*/ eIndex, int iChange);
 
 	bool isHasMet(int /*TeamTypes*/ eIndex) const;
-	bool isAtWar(int /*TeamTypes*/ eIndex) const;
+	bool isAtWarWith(int /*TeamTypes*/ eIndex) const;
 	bool isPermanentWarPeace(int /*TeamTypes*/ eIndex) const;
 	void setPermanentWarPeace(int /*TeamTypes*/ eIndex, bool bNewValue);
 
@@ -163,7 +163,6 @@ public:
 	int getBuildingCount(int /*BuildingTypes*/ eIndex) const;
 	bool isBuildingMaxedOut(int /*BuildingTypes*/ eIndex, int iExtra) const;
 	int getUnitCount(int /*UnitTypes*/ eIndex) const;
-	bool isUnitMaxedOut(int /*UnitTypes*/ eIndex, int iExtra) const;
 	bool isObsoleteBuilding(int /*BuildingTypes*/ eIndex) const;
 
 	int getResearchProgress(int /*TechTypes*/ eIndex) const;
@@ -176,11 +175,13 @@ public:
 	bool isHasTech(int /*TechTypes*/ iIndex) const;
 	void setHasTech(int /*TechTypes*/ eIndex, bool bNewValue, int /*PlayerTypes*/ ePlayer, bool bFirst, bool bAnnounce);
 	bool isNoTradeTech(int /*TechType */ iIndex) const;
+	int getNumAdjacentResearch() const;
+	int getAdjacentResearch(int i) const;
 
 	int getImprovementYieldChange(int /*ImprovementTypes*/ eIndex, int /*YieldTypes*/ eIndex2) const;
 	void changeImprovementYieldChange(int /*ImprovementTypes*/ eIndex1, int /*YieldTypes*/ eIndex2, int iChange);
 
-	int getBuildingYieldChange(int /*BuildingTypes*/ eIndex1, int /*YieldTypes*/ eIndex2) const;
+	int getBuildingCommerceTechChange(int eIndex, int eBuilding) const;
 
 	int getVictoryCountdown(int /*VictoryTypes*/ eVictory) const;
 	int getVictoryDelay(int /*VictoryTypes*/ eVictory) const;

@@ -43,8 +43,8 @@ public:
 
 	virtual void cityBuilt(CvCity *pCity) = 0;
 	virtual void cityRazed(CvCity *pCity, PlayerTypes ePlayer) = 0;
-	virtual void cityAcquired(PlayerTypes eOldOwner, PlayerTypes ePlayer, CvCity* pCity, bool bConquest, bool bTrade) = 0;
-	virtual void cityAcquiredAndKept(PlayerTypes ePlayer, CvCity* pCity) = 0;
+	virtual void cityAcquired(PlayerTypes eOldOwner, PlayerTypes ePlayer, CvCity* pCity, bool bConquest, bool bTrade, bool bAutoRaze) = 0;
+	virtual void cityAcquiredAndKept(PlayerTypes eOldOwner, PlayerTypes ePlayer, CvCity* pCity, bool bConquest, bool bTrade) = 0;
 	virtual void cityLost(CvCity *pCity) = 0;
 	virtual void cultureExpansion( CvCity *pCity, PlayerTypes ePlayer) = 0;
 	virtual void cityGrowth(CvCity *pCity, PlayerTypes ePlayer) = 0;
@@ -56,13 +56,10 @@ public:
 
 	virtual void selectionGroupPushMission(CvSelectionGroup* pSelectionGroup, MissionTypes eMission) = 0;
 
-	virtual void unitMove(CvPlot* pPlot, CvUnit* pUnit, CvPlot* pOldPlot) = 0;
 	virtual void unitCreated(CvUnit *pUnit) = 0;
 	virtual void unitBuilt(CvCity *pCity, CvUnit *pUnit) = 0;
 	virtual void unitKilled(CvUnit *pUnit, PlayerTypes eAttacker) = 0;
-	virtual void unitLost(CvUnit *pUnit) = 0;
 	virtual void unitPromoted(CvUnit *pUnit, PromotionTypes ePromotion) = 0;
-	virtual void unitSelected(CvUnit *pUnit) = 0;
 	virtual void unitRename(CvUnit* pUnit) = 0;
 	virtual void unitPillage(CvUnit* pUnit, ImprovementTypes eImprovement, RouteTypes eRoute, PlayerTypes ePlayer) = 0;
 	virtual void unitSpreadReligionAttempt(CvUnit* pUnit, ReligionTypes eReligion, bool bSuccess) = 0;

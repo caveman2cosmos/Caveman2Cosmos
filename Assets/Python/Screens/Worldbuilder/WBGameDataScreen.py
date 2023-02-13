@@ -541,8 +541,8 @@ class WBGameDataScreen:
 	def closeEditBox(self, screen, bOk):
 		if bOk:
 			self.szScriptData = screen.getEditBoxString("ScriptEditBox")
-			import CvUtil
-			self.GAME.setScriptData(CvUtil.convertToStr(self.szScriptData))
+			import TextUtil
+			self.GAME.setScriptData(TextUtil.convertToStr(self.szScriptData))
 		screen.hide("ScriptEditBG")
 		screen.hide("ScriptEditBox")
 		screen.hide("ScriptEditHeader")
@@ -704,7 +704,6 @@ class WBGameDataScreen:
 
 			elif NAME == "ExitSubScreen":
 				self.exit(screen)
-				return 1
 
 		elif iCode == 11: # List Select
 
@@ -745,6 +744,8 @@ class WBGameDataScreen:
 
 		return 1
 
+
+	def update(self, fDelta): return
 
 	# # # # # #
 	# Clean Up

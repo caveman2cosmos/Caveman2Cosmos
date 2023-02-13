@@ -8,8 +8,12 @@
 #include "CvString.h"
 
 class BoolExpr;
+class CvPlot;
 
 // XXX these should not be in the DLL per se (if the user changes them, we are screwed...)
+
+typedef bst::array<int, NUM_COMMERCE_TYPES> CommerceArray;
+typedef bst::array<int, NUM_YIELD_TYPES> YieldArray;
 
 //TB Combat Mod
 typedef std::vector< std::pair<UnitCombatTypes, int> > UnitCombatModifierArray;
@@ -24,23 +28,6 @@ typedef std::vector< std::pair<PromotionLineTypes, int> > PromotionLineModifierA
 typedef std::vector< std::pair<InvisibleTypes, int> > InvisibilityArray;
 typedef std::vector< std::pair<EraTypes, int> > EraArray;
 typedef std::vector< std::pair<PropertyTypes, int> > AidArray;
-
-struct plotInfo
-{
-	plotInfo();
-	std::string ToJSON();
-
-	int index;
-	bool worked;
-	bool owned;
-	bool bonusImproved;
-	int yieldValue;
-	short yields[NUM_YIELD_TYPES];
-	BonusTypes currentBonus;
-	ImprovementTypes currentImprovement;
-	FeatureTypes currentFeature;
-	BuildTypes currentBuild;
-};
 
 struct AidStruct
 {
@@ -129,20 +116,6 @@ struct UnitCombatModifier
 	operator int() const {return (int)eUnitCombat;}
 	bool operator< (const UnitCombatModifier& rhs) const {return (int)eUnitCombat < (int)rhs.eUnitCombat;}
 };
-struct BonusModifier
-{
-	BonusTypes eBonus;
-	int iModifier;
-	operator int() const {return (int)eBonus;}
-	bool operator< (const BonusModifier& rhs) const {return (int)eBonus < (int)rhs.eBonus;}
-};
-struct ImprovementModifier
-{
-	ImprovementTypes eImprovement;
-	int iModifier;
-	operator int() const {return (int)eImprovement;}
-	bool operator< (const ImprovementModifier& rhs) const {return (int)eImprovement < (int)rhs.eImprovement;}
-};
 struct DisallowedTraitType
 {
 	TraitTypes eTrait;
@@ -170,13 +143,6 @@ struct BuildingModifier
 	int* operator&() {return reinterpret_cast<int*>(&eBuilding);}
 	operator int() const {return (int)eBuilding;}
 	bool operator< (const BuildingModifier& rhs) const {return (int)eBuilding < (int)rhs.eBuilding;}
-};
-struct SpecialBuildingModifier
-{
-	SpecialBuildingTypes eSpecialBuilding;
-	int iModifier;
-	operator int() const {return (int)eSpecialBuilding;}
-	bool operator< (const SpecialBuildingModifier& rhs) const {return (int)eSpecialBuilding < (int)rhs.eSpecialBuilding;}
 };
 struct UnitModifier
 {
@@ -305,7 +271,7 @@ struct PlaceBonusTypes
 	TechTypes ePrereqTech;
 	TerrainTypes ePrereqTerrain;
 	FeatureTypes ePrereqFeature;
-	MapTypes ePrereqMap;
+	MapCategoryTypes ePrereqMapCategory;
 	operator int() const {return (int)eBonus;}
 	bool operator< (const PlaceBonusTypes& rhs) const {return (int)eBonus < (int)rhs.eBonus;}
 };
@@ -323,9 +289,10 @@ struct PromotionLineAfflictionModifier
 
 struct XYCoords
 {
-	XYCoords(int x=0, int y=0) : iX(x), iY(y) {}
-	int iX;
-	int iY;
+	XYCoords(int x = INVALID_PLOT_COORD, int y = INVALID_PLOT_COORD);
+	XYCoords(const CvPlot& plot);
+
+	CvPlot* plot() const;
 
 	bool operator<  (const XYCoords xy) const { return ((iY < xy.iY) || (iY == xy.iY && iX < xy.iX)); }
 	bool operator<= (const XYCoords xy) const { return ((iY < xy.iY) || (iY == xy.iY && iX <= xy.iX)); }
@@ -333,6 +300,9 @@ struct XYCoords
 	bool operator== (const XYCoords xy) const { return (!(iY != xy.iY || iX != xy.iX)); }
 	bool operator>= (const XYCoords xy) const { return ((iY > xy.iY) || (iY == xy.iY && iX >= xy.iX)); }
 	bool operator>  (const XYCoords xy) const { return ((iY > xy.iY) || (iY == xy.iY && iX > xy.iX)); }
+
+	int iX;
+	int iY;
 };
 
 struct IDInfo
@@ -393,6 +363,18 @@ struct OrderData
 			/*UnitAITypes*/uint16_t AIType;
 			/*UnitAITypes*/uint8_t contractedAIType; // aux, 0xFF for none
 			uint8_t contractFlags; // aux
+
+			/* Toffer - Project: Contracts needs to be objects that lives on in the contract broker.
+				OrderData should have a reference to it here for unit orders, contractFlags and contractedAIType should be moved out of this struct and into the contract object.
+				On the unit side there will be two different caches, a vector of all the unit backup request a unit might have,
+				while the other is a single reference to the contract that the unit is responding to (a unit can only respond to 1 contract at any given time).
+				When the unit is trained, and if this OrderData has a non-null contract reference then the finished unit should inherit/cache the contract reference from this order.
+				When a responding unit meets up with the unit requesting it, the contract object can be deleted,
+				the contract broker would store the contracts in a vector, and the contract would itself know its state,
+				if it is queued as an order in a city or if a unit is currently responding to it.
+				That way we can ensure that a contract is being handled correctly from its origin to its conclusion,
+				i.e. if the responding unit dies then the contract broker will try agaion to either find a valid unit or get a city to queue a valid unit order.
+			*/
 		} unit;
 		struct {
 			/*BuildingTypes*/int type;
@@ -691,22 +673,6 @@ struct PlotExtraYield
 	void write(FDataStreamBase* pStream);
 };
 
-struct PlotExtraCost
-{
-	int m_iX;
-	int m_iY;
-	int m_iCost;
-
-	PlotExtraCost()
-		: m_iX(0)
-		, m_iY(0)
-		, m_iCost(0)
-	{}
-
-	void read(FDataStreamBase* pStream);
-	void write(FDataStreamBase* pStream);
-};
-
 typedef std::vector< std::pair<BuildingTypes, int> > BuildingChangeArray;
 
 struct BuildingYieldChange
@@ -731,21 +697,16 @@ struct BuildingCommerceChange
 	CommerceTypes eCommerce;
 	int iChange;
 
-	BuildingCommerceChange()
-		: eBuilding(NO_BUILDING)
-		, eCommerce(NO_COMMERCE)
-		, iChange(0)
+	BuildingCommerceChange(BuildingTypes eBuilding = NO_BUILDING, CommerceTypes eCommerce = NO_COMMERCE, int iChange = 0)
+		: eBuilding(eBuilding)
+		, eCommerce(eCommerce)
+		, iChange(iChange)
 	{}
 
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
 };
 
-/************************************************************************************************/
-/* Afforess	                  Start		 01/25/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 struct PropertySpawns
 {
 	PropertyTypes eProperty;
@@ -759,56 +720,57 @@ struct PropertySpawns
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
 };
-struct BuildingYieldModifier
-{
-	BuildingTypes eBuilding;
-	YieldTypes eYield;
-	int iChange;
 
-	BuildingYieldModifier()
-		: eBuilding(NO_BUILDING)
-		, eYield(NO_YIELD)
-		, iChange(0)
+const struct TechYieldChange
+{
+	TechYieldChange(TechTypes eTech, YieldTypes eYield, int iChange)
+		: eTech(eTech)
+		, eYield(eYield)
+		, iChange(iChange)
 	{}
 
-	void read(FDataStreamBase* pStream);
-	void write(FDataStreamBase* pStream);
+	const TechTypes eTech;
+	const YieldTypes eYield;
+	const int iChange;
 };
 
-struct BuildingCommerceModifier
+const struct TechCommerceChange
 {
-	BuildingTypes eBuilding;
-	CommerceTypes eCommerce;
-	int iChange;
-
-	BuildingCommerceModifier()
-		: eBuilding(NO_BUILDING)
-		, eCommerce(NO_COMMERCE)
-		, iChange(0)
+	TechCommerceChange(TechTypes eTech, CommerceTypes eCommerce, int iChange)
+		: eTech(eTech)
+		, eCommerce(eCommerce)
+		, iChange(iChange)
 	{}
 
-	void read(FDataStreamBase* pStream);
-	void write(FDataStreamBase* pStream);
+	const TechTypes eTech;
+	const CommerceTypes eCommerce;
+	const int iChange;
 };
 
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-
-
-
-struct FOWVis
+const struct TerrainYieldChange
 {
-	uint uiCount;
-	POINT* pOffsets;  // array of "Offset" points
-
-	FOWVis()
-		: uiCount(0)
-		, pOffsets(NULL)
+	TerrainYieldChange(TerrainTypes eTerrain, YieldTypes eYield, int iChange)
+		: eTerrain(eTerrain)
+		, eYield(eYield)
+		, iChange(iChange)
 	{}
 
-	// python friendly accessors
-	POINT getOffsets(int i) const { return pOffsets[i]; }
+	const TerrainTypes eTerrain;
+	const YieldTypes eYield;
+	const int iChange;
+};
+
+const struct GenericTrippleInt
+{
+	GenericTrippleInt(int iType, int iIndex, int iValue)
+		: iType(iType)
+		, iIndex(iIndex)
+		, iValue(iValue)
+	{}
+
+	const int iType;
+	const int iIndex;
+	const int iValue;
 };
 
 struct DllExport PBGameSetupData

@@ -103,6 +103,11 @@ int CyTeam::getAtWarCount(bool bIgnoreMinors) const
 	return m_pTeam->getAtWarCount(bIgnoreMinors);
 }
 
+bool CyTeam::isAtWar(bool bCountMinors) const
+{
+	return m_pTeam->isAtWar(bCountMinors);
+}
+
 int CyTeam::getHasMetCivCount(bool bIgnoreMinors) const
 {
 	return m_pTeam->getHasMetCivCount(bIgnoreMinors);
@@ -168,11 +173,6 @@ bool CyTeam::isHuman() const
 	return m_pTeam->isHuman();
 }
 
-bool CyTeam::isBarbarian() const
-{
-	return m_pTeam->isBarbarian();
-}
-
 bool CyTeam::isNPC() const
 {
 	return m_pTeam->isNPC();
@@ -192,17 +192,10 @@ void CyTeam::setIsMinorCiv(bool bNewValue, bool bDoBarbCivCheck)
 {
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).getTeam() == m_pTeam->getID())
+		if (GET_PLAYER((PlayerTypes)iI).getTeam() == m_pTeam->getID() && GET_PLAYER((PlayerTypes)iI).getCivilizationType() < 0)
 		{
-			if (GET_PLAYER((PlayerTypes)iI).getCivilizationType() < 0)
-			{
-				FErrorMsg("GET_PLAYER((PlayerTypes)iI) of m_pTeam should have a civilizationType");
-#ifdef _DEBUG
-				throw new std::exception();
-#endif
-			}
+			FErrorMsg("GET_PLAYER((PlayerTypes)iI) of m_pTeam should have a civilizationType");
 		}
-
 	}
 	m_pTeam->setIsMinorCiv(bNewValue, bDoBarbCivCheck);
 }
@@ -540,7 +533,7 @@ void CyTeam::changeExtraMoves(int /*DomainTypes*/ eIndex, int iChange)
 bool CyTeam::isHasMet(int /*TeamTypes*/ eIndex) const
 {
 	//Fuyu: Catching Civ4lerts mess-ups
-	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex);
 	if (eIndex < 0 || eIndex >= MAX_TEAMS)
 	{
 #ifdef _DEBUG
@@ -552,7 +545,7 @@ bool CyTeam::isHasMet(int /*TeamTypes*/ eIndex) const
 	return m_pTeam->isHasMet((TeamTypes)eIndex);
 }
 
-bool CyTeam::isAtWar(int /*TeamTypes*/ iIndex) const
+bool CyTeam::isAtWarWith(int /*TeamTypes*/ iIndex) const
 {
 	return iIndex != NO_TEAM ? m_pTeam->isAtWar((TeamTypes)iIndex) : false;
 }
@@ -637,11 +630,6 @@ int CyTeam::getUnitCount(int /*UnitTypes*/ eIndex) const
 	return m_pTeam->getUnitCount((UnitTypes)eIndex);
 }
 
-bool CyTeam::isUnitMaxedOut(int /*UnitTypes*/ eIndex, int iExtra) const
-{
-	return m_pTeam->isUnitMaxedOut((UnitTypes)eIndex, iExtra);
-}
-
 int CyTeam::getBuildingCount(int /*BuildingTypes*/ eIndex) const
 {
 	return m_pTeam->getBuildingCount((BuildingTypes)eIndex);
@@ -704,6 +692,15 @@ bool CyTeam::isNoTradeTech(int /*TechTypes*/ iIndex) const
 	return m_pTeam->isNoTradeTech((TechTypes)iIndex);
 }
 
+int CyTeam::getNumAdjacentResearch() const
+{
+	return m_pTeam->getAdjacentResearch().size();
+}
+int CyTeam::getAdjacentResearch(int i) const
+{
+	return m_pTeam->getAdjacentResearch()[i];
+}
+
 int CyTeam::getImprovementYieldChange(int /*ImprovementTypes*/ eIndex1, int /*YieldTypes*/ eIndex2) const
 {
 	return m_pTeam->getImprovementYieldChange((ImprovementTypes)eIndex1, (YieldTypes)eIndex2);
@@ -714,9 +711,9 @@ void CyTeam::changeImprovementYieldChange(int /*ImprovementTypes*/ eIndex1, int 
 	m_pTeam->changeImprovementYieldChange((ImprovementTypes)eIndex1, (YieldTypes)eIndex2, iChange);
 }
 
-int CyTeam::getBuildingYieldChange(int /*BuildingTypes*/ eIndex1, int /*YieldTypes*/ eIndex2) const
+int CyTeam::getBuildingCommerceTechChange(int eIndex, int eBuilding) const
 {
-	return m_pTeam->getBuildingYieldChange((BuildingTypes)eIndex1, (YieldTypes)eIndex2);
+	return m_pTeam->getBuildingCommerceTechChange((CommerceTypes)eIndex, (BuildingTypes)eBuilding);
 }
 
 int CyTeam::getVictoryCountdown(int /*VictoryTypes*/ eVictory) const

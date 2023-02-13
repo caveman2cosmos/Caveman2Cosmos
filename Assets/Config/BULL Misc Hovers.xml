@@ -48,11 +48,6 @@
 					type="boolean" default="True"/>
 		</section>
 
-		<section id="Tech">
-			<option id="TechTradeDenial" key="Trade Denial"
-					type="boolean" default="True"/>
-		</section>
-
 		<section id="Bonus">
 			<option id="BonusTradeDenial" key="Trade Denial"
 					type="boolean" default="True"/>
@@ -96,9 +91,6 @@
 					type="boolean" default="False"/>
 
 			<option id="RemoveSpecialist" key="Remove Specialist"
-					type="boolean" default="True"/>
-
-			<option id="CDAZoomCityDetails" key="CDA Zoom City Details"
 					type="boolean" default="True"/>
 
 			<option id="RemoveFeatureHealthEffects" key="Remove Feature Health Effects"

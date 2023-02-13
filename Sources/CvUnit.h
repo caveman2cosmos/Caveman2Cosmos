@@ -7,11 +7,11 @@
 
 #include "CvDLLEntity.h"
 #include "CvGameObject.h"
+#include "CvProperties.h"
 #include "CvUnitComponents.h"
 
 #pragma warning( disable: 4251 )		// needs to have dll-interface to be used by clients of class
 
-class cvInternalGlobals;
 class CvArea;
 class CvCity;
 class CvPlot;
@@ -304,17 +304,14 @@ public:
 class TerrainKeyedInfo
 {
 public:
-	TerrainKeyedInfo() :	m_iTerrainProtected(0),
-							m_iTerrainDoubleMoveCount(0),
-							m_iExtraTerrainAttackPercent(0),
-							m_iExtraTerrainDefensePercent(0),
-							m_iTerrainWorkPercent(0),
-//Team Project (4)
-	//WorkRateMod
-							m_iExtraTerrainWorkPercent(0),
-							m_iExtraWithdrawOnTerrainType(0)
-	{
-	}
+	TerrainKeyedInfo() :
+		m_iTerrainProtected(0),
+		m_iTerrainDoubleMoveCount(0),
+		m_iExtraTerrainAttackPercent(0),
+		m_iExtraTerrainDefensePercent(0),
+		m_iExtraTerrainWorkPercent(0),
+		m_iExtraWithdrawOnTerrainType(0)
+	{ }
 
 	bool Empty() const
 	{
@@ -322,7 +319,6 @@ public:
 			m_iTerrainDoubleMoveCount == 0 &&
 			m_iExtraTerrainAttackPercent == 0 &&
 			m_iExtraTerrainDefensePercent == 0 &&
-			m_iTerrainWorkPercent == 0 &&
 			m_iExtraTerrainWorkPercent == 0 &&
 			m_iExtraWithdrawOnTerrainType == 0);
 	}
@@ -331,10 +327,6 @@ public:
 	int	m_iTerrainDoubleMoveCount;
 	int	m_iExtraTerrainAttackPercent;
 	int	m_iExtraTerrainDefensePercent;
-	//ls612: Terrain Work Modifiers
-	int m_iTerrainWorkPercent;
-//Team Project (4)
-	//WorkRateMod
 	int m_iExtraTerrainWorkPercent;
 	int m_iExtraWithdrawOnTerrainType;
 };
@@ -342,23 +334,19 @@ public:
 class FeatureKeyedInfo
 {
 public:
-	FeatureKeyedInfo() :	m_iFeatureDoubleMoveCount(0),
-							m_iExtraFeatureAttackPercent(0),
-							m_iExtraFeatureDefensePercent(0),
-							m_iFeatureWorkPercent(0),
-//Team Project (4)
-	//WorkRateMod
-							m_iExtraFeatureWorkPercent(0),
-							m_iExtraWithdrawOnFeatureType(0)
-	{
-	}
+	FeatureKeyedInfo() :
+		m_iFeatureDoubleMoveCount(0),
+		m_iExtraFeatureAttackPercent(0),
+		m_iExtraFeatureDefensePercent(0),
+		m_iExtraFeatureWorkPercent(0),
+		m_iExtraWithdrawOnFeatureType(0)
+	{ }
 
 	bool Empty() const
 	{
 		return (m_iFeatureDoubleMoveCount == 0 &&
 			m_iExtraFeatureAttackPercent == 0 &&
 			m_iExtraFeatureDefensePercent == 0 &&
-			m_iFeatureWorkPercent == 0 &&
 			m_iExtraFeatureWorkPercent == 0 &&
 			m_iExtraWithdrawOnFeatureType == 0);
 	}
@@ -366,21 +354,16 @@ public:
 	int	m_iFeatureDoubleMoveCount;
 	int	m_iExtraFeatureAttackPercent;
 	int	m_iExtraFeatureDefensePercent;
-	//ls612: Terrain Work Modifiers
-	int m_iFeatureWorkPercent;
-//Team Project (4)
-	//WorkRateMod
 	int m_iExtraFeatureWorkPercent;
 	int m_iExtraWithdrawOnFeatureType;
 };
 
+// @SAVEBREAK Restructure/Rethink - Toffer
 class UnitCombatKeyedInfo
 {
 public:
 	UnitCombatKeyedInfo() :		m_bHasUnitCombat(false),
 								m_iExtraUnitCombatModifier(0),
-								m_iSubCombatTypeCount(0),
-								m_iRemovesUnitCombatTypeCount(0),
 								m_iExtraFlankingStrengthbyUnitCombatType(0),
 								m_iExtraWithdrawVSUnitCombatType(0),
 								m_iExtraPursuitVSUnitCombatType(0),
@@ -407,8 +390,6 @@ public:
 	{
 		return (!m_bHasUnitCombat &&
 			m_iExtraUnitCombatModifier == 0 &&
-			m_iSubCombatTypeCount == 0 &&
-			m_iRemovesUnitCombatTypeCount == 0 &&
 			m_iExtraFlankingStrengthbyUnitCombatType == 0 &&
 			m_iExtraWithdrawVSUnitCombatType == 0 &&
 			m_iExtraPursuitVSUnitCombatType == 0 &&
@@ -432,8 +413,6 @@ public:
 
 	bool m_bHasUnitCombat;
 	int	m_iExtraUnitCombatModifier;
-	int m_iSubCombatTypeCount;
-	int m_iRemovesUnitCombatTypeCount;
 	int m_iExtraFlankingStrengthbyUnitCombatType;
 	int m_iExtraWithdrawVSUnitCombatType;
 	int m_iExtraPursuitVSUnitCombatType;
@@ -454,6 +433,7 @@ public:
 	int	m_iExtraTrapAvoidanceUnitCombatType;
 	int	m_iExtraTrapTriggerUnitCombatType;
 };
+// SAVEBREAK@
 
 class CvUnit : public CvDLLEntity
 {
@@ -463,6 +443,8 @@ public:
 
 	CvGameObjectUnit* getGameObject() { return &m_GameObject; }
 	const CvGameObjectUnit* getGameObject() const { return &m_GameObject; }
+
+	CvUnit& operator=(const CvUnit& other);
 
 	// Comparison operators
 	// Use address identity for now (more than one map means x/y compare wouldn't work)
@@ -513,7 +495,7 @@ public:
 	DllExport const CvWString getName(uint uiForm = 0) const;
 	DllExport int getSubUnitsAlive() const;
 	DllExport const CvArtInfoUnit* getArtInfo(int i, EraTypes eEra) const;
-	DllExport const TCHAR* getButton() const;
+	DllExport const char* getButton() const;
 	DllExport int getGroupSize() const;
 	DllExport int getGroupDefinitions() const;
 	DllExport int getUnitGroupRequired(int i) const;
@@ -541,6 +523,8 @@ protected:
 		m_worker;
 
 public:
+	bool isInBattle() const;
+
 	void reloadEntity(bool bForceLoad = false);
 	void init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOwner, int iX, int iY, DirectionTypes eFacingDirection, int iBirthmark);
 	void changeIdentity(UnitTypes eUnit);
@@ -561,7 +545,7 @@ public:
 	bool isActionRecommended(int iAction) const;
 
 	int defenderValue(const CvUnit* pAttacker) const;
-	bool isBetterDefenderThan(const CvUnit* pDefender, const CvUnit* pAttacker, int* pBestDefenderRank) const;
+	bool isBetterDefenderThan(const CvUnit* pDefender, const CvUnit* pAttacker) const;
 
 	bool canDoCommand(CommandTypes eCommand, int iData1, int iData2, bool bTestVisible = false, bool bTestBusy = true) const;
 	void doCommand(CommandTypes eCommand, int iData1, int iData2);
@@ -578,27 +562,14 @@ public:
 	bool canEnterArea(TeamTypes eTeam, const CvArea* pArea, bool bIgnoreRightOfPassage = false) const;
 	TeamTypes getDeclareWarMove(const CvPlot* pPlot) const;
 
+	bool canEnterPlot(const CvPlot* pPlot, MoveCheck::flags flags = MoveCheck::None, CvUnit** ppDefender = nullptr) const;
 
-	bool canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags = MoveCheck::None, CvUnit** ppDefender = nullptr) const;
-	// Deprecated - use method above
-	//bool canMoveInto(const CvPlot* pPlot,
-	//	bool bAttack = false,
-	//	bool bDeclareWar = false,
-	//	bool bIgnoreLoad = false,
-	//	bool bIgnoreTileLimit = false,
-	//	bool bIgnoreLocation = false,
-	//	bool bIgnoreAttack = false,
-	//	CvUnit** pDefender = NULL,
-	//	bool bCheckForBest = false,
-	//	bool bAssassinate = false,
-	//	bool bSuprise = false) const;
-
-	bool canMoveOrAttackInto(const CvPlot* pPlot, bool bDeclareWar = false) const;
+	bool canEnterOrAttackPlot(const CvPlot* pPlot, bool bDeclareWar = false) const;
 	bool canMoveThrough(const CvPlot* pPlot, bool bDeclareWar = false) const;
 	void attack(CvPlot* pPlot, bool bQuick, bool bStealth = false, bool bNoCache = false);
-	void attackForDamage(CvUnit *pDefender, int attackerDamageChange, int defenderDamageChange);
+	//void attackForDamage(CvUnit *pDefender, int attackerDamageChange, int defenderDamageChange);
 	void fightInterceptor(const CvPlot* pPlot, bool bQuick);
-	void move(CvPlot* pPlot, bool bShow, bool bFree = false);
+	void move(CvPlot* pPlot, bool bShow);
 
 	bool jumpToNearestValidPlot(bool bKill = true);
 
@@ -616,7 +587,7 @@ public:
 	bool spyNukeAffected(const CvPlot* pPlot, TeamTypes eTeam, int iRange) const;
 	bool canClaimTerritory(const CvPlot* pPlot) const;
 	bool claimTerritory();
-	int getMaxHurryFood(CvCity* pCity) const;
+	int getMaxHurryFood() const;
 	int getHurryFood(const CvPlot* pPlot) const;
 	bool canHurryFood(const CvPlot* pPlot) const;
 	bool hurryFood();
@@ -637,24 +608,16 @@ public:
 
 	int interceptionChance(const CvPlot* pPlot) const;
 
-	int getRandomMinExperienceTimes100() const;
-
-	//Great Commanders... By KillmePlease
-
-	//for combat units:
 	CvUnit* getCommander() const;
-	void tryUseCommander(); //assigns m_pUsedCommander by call to getCommander() and consumes command points from used commander.
+	void tryUseCommander();
 	bool isCommander() const;
+	bool isCommanderReady() const;
 	void setCommander(bool bNewVal);
-	void nullUsedCommander(); //delete m_pUsedCommander
-	void clearCommanderCache() ; //	Should be called prior to each turn
-	//UnitCompCommander* getCommanderComp() const;
+	void nullLastCommander();
+	UnitCompCommander* getCommanderComp() const;
 
 	CvUnit* getUsedCommander() const;
-
-	int controlPointsLeft() const;
-	int controlPoints() const;
-	int commandRange() const;
+	CvUnit* getLastCommander() const;
 
 	int getZoneOfControlCount() const;
 	bool isZoneOfControl() const;
@@ -664,17 +627,19 @@ public:
 	PlayerTypes getOriginalOwner() const;
 
 	int getExperience100() const;
-	void setExperience100(int iNewValue, int iMax = -1);
+	void setExperience100(int iNewValue);
 	void changeExperience100(int iChange, int iMax = -1, bool bFromCombat = false, bool bInBorders = false, bool bUpdateGlobal = false);
 
 	void doBattleFieldPromotions(CvUnit* pDefender, const CombatDetails& cdDefenderDetails, const CvPlot* pPlot, bool bAttackerHasLostNoHP, bool bAttackerWithdrawn, int iAttackerInitialDamage, int iWinningOdds, int iInitialAttXP, int iInitialAttGGXP, int iDefenderInitialDamage, int iInitialDefXP, int iInitialDefGGXP, bool &bAttackerPromoted, bool &bDefenderPromoted, int iNonLethalAttackWinChance, int iNonLethalDefenseWinChance, int iDefenderFirstStrikes, int iAttackerFirstStrikes);
-	void doDynamicXP(CvUnit* pDefender, const CvPlot* pPlot, int iAttackerInitialDamage, int iWinningOdds, int iDefenderInitialDamage, int iInitialAttXP, int iInitialDefXP, int iInitialAttGGXP, int iInitialDefGGXP, bool bPromotion, bool bDefPromotion);
+
+	void doDynamicXP(CvUnit* pDefender, const CvPlot* pPlot, int iAttackerInitialDamage, int iWinningOdds, int iDefenderInitialDamage, bool bPromotion = false, bool bDefPromotion = false);
+	void applyDynamicXP(const int iExperience, const bool bHomeTerritory, int iMaxTotalXP);
+	int getVanquishDynamicXP(const int iLoseOdds, const int iInitialDamage, const int iMaxXP) const;
+	int getEngagementDynamicXP(const CvUnit* enemy, const int iLoseOdds, const int iInitialDamageEnemy, const int iInitialDamage, const int iMaxXP) const;
 
 	void changeTerrainProtected(TerrainTypes eIndex, int iNewValue);
 	bool isTerrainProtected(TerrainTypes eIndex) const;
-	int getTerrainProtectedCount(TerrainTypes eIndex, bool bIgnoreCommanders = false) const;
-
-	void doCommerceAttacks(const CvUnit* pDefender, const CvPlot* pPlot);
+	int getTerrainProtectedCount(TerrainTypes eIndex) const;
 
 	bool isAutoPromoting() const;
 	void setAutoPromoting(bool bNewValue);
@@ -688,10 +653,6 @@ public:
 
 	void setShadowUnit(const CvUnit* pUnit);
 	CvUnit* getShadowUnit() const;
-
-	TechTypes getDesiredDiscoveryTech() const;
-	void setDesiredDiscoveryTech(TechTypes eTech);
-	void waitForTech(int iFlag, int eTech);
 
 	bool canGift(bool bTestVisible = false, bool bTestTransport = true) const;
 	void gift(bool bTestTransport = true);
@@ -709,12 +670,10 @@ public:
 	bool canUnloadAll() const;
 	void unloadAll();
 
-	bool canHold(const CvPlot* pPlot) const;
-	bool canSleep(const CvPlot* pPlot) const;
-	bool canFortify(const CvPlot* pPlot) const;
-	bool canEstablish(const CvPlot* pPlot) const;
-	bool canEscape(const CvPlot* pPlot) const;
-	bool canBuildUp(const CvPlot* pPlot) const;
+	bool canHold() const;
+	bool canSleep() const;
+	bool canFortify() const;
+	bool canBuildUp() const;
 	bool canAirPatrol(const CvPlot* pPlot) const;
 	void airCircle(bool bStart);
 
@@ -728,17 +687,20 @@ public:
 	int healTurns(const CvPlot* pPlot) const;
 	int healTurnsAsType(const CvPlot* pPlot, UnitCombatTypes eHealAsType) const;
 	void doHeal();
+#ifdef OUTBREAKS_AND_AFFLICTIONS
+	void doAffliction(const bool bHeal);
+#endif
 
 	bool canAirlift(const CvPlot* pPlot) const;
 	bool canAirliftAt(const CvPlot* pPlot, int iX, int iY) const;
 	bool airlift(int iX, int iY);
 
 	bool isNukeVictim(const CvPlot* pPlot, TeamTypes eTeam) const;
-	bool canNuke(const CvPlot* pPlot) const;
+	bool canNuke() const;
 	bool canNukeAt(const CvPlot* pPlot, int iX, int iY) const;
 	bool nuke(int iX, int iY, bool bTrap = false);
 
-	bool canRecon(const CvPlot* pPlot) const;
+	bool canRecon() const;
 	bool canReconAt(const CvPlot* pPlot, int iX, int iY) const;
 	bool recon(int iX, int iY);
 
@@ -807,9 +769,9 @@ public:
 	bool construct(BuildingTypes eBuilding);
 
 	TechTypes getDiscoveryTech() const;
-	int getDiscoverResearch(TechTypes eTech) const;
+	int getDiscoverResearch(const TechTypes eTech = NO_TECH) const;
 	bool canDiscover() const;
-	bool discover();
+	bool discover(TechTypes eTech = NO_TECH);
 
 	int getMaxHurryProduction(const CvCity* pCity) const;
 	int getHurryProduction(const CvPlot* pPlot) const;
@@ -820,13 +782,13 @@ public:
 	bool canTrade(const CvPlot* pPlot, bool bTestVisible = false) const;
 	bool trade();
 
-	int getGreatWorkCulture(const CvPlot* pPlot) const;
+	int getGreatWorkCulture() const;
 	bool canGreatWork(const CvPlot* pPlot) const;
 	bool greatWork();
 
 	bool doOutcomeMission(MissionTypes eMission);
 
-	int getEspionagePoints(const CvPlot* pPlot) const;
+	int getEspionagePoints() const;
 	bool canInfiltrate() const;
 	bool canInfiltrate(const CvPlot* pPlot, bool bTestVisible = false) const;
 	bool infiltrate();
@@ -837,7 +799,7 @@ public:
 	int getSpyInterceptPercent(TeamTypes eTargetTeam) const;
 	bool isIntruding() const;
 
-	bool canGoldenAge(const CvPlot* pPlot, bool bTestVisible = false) const;
+	bool canGoldenAge(bool bTestVisible = false) const;
 	bool goldenAge();
 
 	bool canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestVisible = false) const;
@@ -875,7 +837,6 @@ public:
 
 	int flavorValue(FlavorTypes eFlavor) const;
 
-	bool isBarbarian() const;
 	bool isNPC() const;
 	bool isHominid() const;
 	bool isHuman() const;
@@ -942,9 +903,6 @@ public:
 	/*** Dexy - Surround and Destroy START ****/
 	int maxCombatStr(const CvPlot* pPlot, const CvUnit* pAttacker, CombatDetails* pCombatDetails = NULL, bool bSurroundedModifier = true) const;
 	int currCombatStr(const CvPlot* pPlot, const CvUnit* pAttacker, CombatDetails* pCombatDetails = NULL, bool bSurroundedModifier = true) const;
-	// OLD CODE
-	// int maxCombatStr(const CvPlot* pPlot, const CvUnit* pAttacker, CombatDetails* pCombatDetails = NULL) const;
-	// int currCombatStr(const CvPlot* pPlot, const CvUnit* pAttacker, CombatDetails* pCombatDetails = NULL) const;
 	/*** Dexy - Surround and Destroy  END  ****/
 	int currFirepower(const CvPlot* pPlot, const CvUnit* pAttacker) const;
 	int currEffectiveStr(const CvPlot* pPlot, const CvUnit* pAttacker, CombatDetails* pCombatDetails = NULL) const;
@@ -968,13 +926,11 @@ public:
 
 	bool isAutomated() const;
 	bool isFortifyable() const;
-	bool isEstablishable() const;
-	bool isEscapable() const;
+
 	bool isBuildUpable() const;
 	int fortifyModifier() const;
 	//int establishModifier() const;
 	//int escapeModifier() const;
-	int buildupLevel() const;
 	//TB Combat Mods begin
 	int fortifyRepelModifier() const;
 	//TB Combat Mods End
@@ -1001,15 +957,7 @@ public:
 	int getNoInvisibilityCount() const;
 	void changeNoInvisibilityCount(int iChange);
 	bool isNukeImmune() const;
-/************************************************************************************************/
-/* REVDCM_OC                              02/16/10                                phungus420    */
-/*                                                                                              */
-/* Inquisitions                                                                                 */
-/************************************************************************************************/
 	bool isInquisitor() const;
-/************************************************************************************************/
-/* REVDCM_OC                               END                                                  */
-/************************************************************************************************/
 
 	int maxInterceptionProbability(bool bIgnoreCommanders = false) const;
 	int currInterceptionProbability() const;
@@ -1054,8 +1002,6 @@ public:
 	bool canAnimalIgnoresImprovements() const;
 	bool canAnimalIgnoresCities() const;
 	bool canOnslaught() const;
-	bool hasCombatType(UnitCombatTypes eCombatType) const;
-	bool hasSubCombatType(UnitCombatTypes eCombatType) const;
 	bool hasCureAfflictionType(PromotionLineTypes ePromotionLineType) const;
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 	int fortitudeTotal() const;
@@ -1093,15 +1039,10 @@ public:
 	int unitCombatModifier(UnitCombatTypes eUnitCombat) const;
 	int domainModifier(DomainTypes eDomain) const;
 
-	SpecialUnitTypes specialCargo() const;
-	SpecialUnitTypes SMspecialCargo() const;
-	SpecialUnitTypes SMnotSpecialCargo() const;
-	DomainTypes domainCargo() const;
 	int cargoSpace() const;
 	void changeCargoSpace(int iChange);
 	bool isFull() const;
 	int cargoSpaceAvailable(SpecialUnitTypes eSpecialCargo = NO_SPECIALUNIT, DomainTypes eDomainCargo = NO_DOMAIN) const;
-	int SMcargoSpaceAvailable(SpecialUnitTypes eSpecialCargo = NO_SPECIALUNIT, DomainTypes eDomainCargo = NO_DOMAIN) const;
 	bool hasCargo() const;
 	bool canCargoAllMove() const;
 	bool canCargoEnterArea(TeamTypes eTeam, const CvArea* pArea, bool bIgnoreRightOfPassage) const;
@@ -1129,7 +1070,6 @@ public:
 	CvPlot* plot() const;
 	int getArea() const;
 	CvArea* area() const;
-	bool onMap() const;
 
 	int getLastMoveTurn() const;
 	void setLastMoveTurn(int iNewValue);
@@ -1156,7 +1096,7 @@ public:
 	void finishMoves();
 
 	int getExperience() const;
-	void setExperience(int iNewValue, int iMax = -1);
+	void setExperience(int iNewValue);
 	void changeExperience(int iChange, int iMax = -1, bool bFromCombat = false, bool bInBorders = false, bool bUpdateGlobal = false);
 
 	int getLevel() const;
@@ -1183,7 +1123,6 @@ public:
 
 	int getFortifyTurns() const;
 	void setFortifyTurns(int iNewValue);
-	void changeFortifyTurns(int iChange);
 
 	int getBlitzCount() const;
 	bool isBlitz() const;
@@ -1346,16 +1285,16 @@ public:
 	int getUpkeepMultiplierSM() const;
 	int getUpkeep100() const;
 
-	int getExtraOverrun (bool bIgnoreCommanders = false) const;
+	int getExtraOverrun(bool bIgnoreCommanders = false) const;
 	void changeExtraOverrun (int iChange);
 
-	int getExtraRepel (bool bIgnoreCommanders = false) const;
+	int getExtraRepel(bool bIgnoreCommanders = false) const;
 	void changeExtraRepel (int iChange);
 
-	int getExtraFortRepel (bool bIgnoreCommanders = false) const;
+	int getExtraFortRepel() const;
 	void changeExtraFortRepel (int iChange);
 
-	int getExtraRepelRetries (bool bIgnoreCommanders = false) const;
+	int getExtraRepelRetries() const;
 	void changeExtraRepelRetries (int iChange);
 
 	int getExtraUnyielding (bool bIgnoreCommanders = false) const;
@@ -1381,24 +1320,16 @@ public:
 	void changeIgnoreNoEntryLevelCount(int iChange);
 
 	int getIgnoreZoneofControlCount() const;
-	void setIgnoreZoneofControlCount(int iChange);
 	void changeIgnoreZoneofControlCount(int iChange);
 
 	int getFliesToMoveCount() const;
 	void setFliesToMoveCount(int iChange);
 	void changeFliesToMoveCount(int iChange);
 
-	int getExtraStrAdjperRnd (bool bIgnoreCommanders = false) const;
-	void changeExtraStrAdjperRnd (int iChange);
-
-	int getExtraStrAdjperAtt (bool bIgnoreCommanders = false) const;
-	void changeExtraStrAdjperAtt (int iChange);
-
-	int getExtraStrAdjperDef (bool bIgnoreCommanders = false) const;
-	void changeExtraStrAdjperDef (int iChange);
-
-	int getExtraWithdrawAdjperAtt (bool bIgnoreCommanders = false) const;
-	void changeExtraWithdrawAdjperAtt (int iChange);
+	void changeExtraStrAdjperRnd(int iChange);
+	void changeExtraStrAdjperAtt(int iChange);
+	void changeExtraStrAdjperDef(int iChange);
+	void changeExtraWithdrawAdjperAtt(int iChange);
 
 	int getExtraUnnerve (bool bIgnoreCommanders = false) const;
 	void changeExtraUnnerve (int iChange);
@@ -1419,20 +1350,11 @@ public:
 	void setSMStrength ();
 
 	int getAnimalIgnoresBordersCount() const;
-	bool mayAnimalIgnoresBorders() const;
 	void changeAnimalIgnoresBordersCount(int iChange);
 
 	int getOnslaughtCount() const;
 	bool mayOnslaught() const;
 	void changeOnslaughtCount(int iChange);
-
-	int getSubCombatTypeCount(UnitCombatTypes eCombatType) const;
-	bool hasExtraSubCombatType(UnitCombatTypes eCombatType) const;
-	void changeSubCombatTypeCount(UnitCombatTypes eCombatType, int iChange);
-
-	int getRemovesUnitCombatTypeCount(UnitCombatTypes eCombatType) const;
-	bool hasRemovesUnitCombatType(UnitCombatTypes eCombatType) const;
-	void changeRemovesUnitCombatTypeCount(UnitCombatTypes eCombatType, int iChange);
 
 	int getCureAfflictionCount(PromotionLineTypes ePromotionLineType) const;
 	bool hasExtraCureAffliction(PromotionLineTypes ePromotionLineType) const;
@@ -1560,7 +1482,6 @@ public:
 	void testPromotionReady();
 
 	bool isDelayedDeath() const;
-	void startDelayedDeath();
 	bool doDelayedDeath();
 
 	bool isCombatFocus() const;
@@ -1619,8 +1540,6 @@ public:
 	int getExtraFeatureDefensePercent(FeatureTypes eIndex) const;
 	void changeExtraFeatureDefensePercent(FeatureTypes eIndex, int iChange);
 
-	int getTerrainWorkPercent(TerrainTypes eIndex) const;
-	int getFeatureWorkPercent(FeatureTypes eIndex) const;
 	int getExtraTerrainWorkPercent(TerrainTypes eIndex) const;
 	void changeExtraTerrainWorkPercent (TerrainTypes eIndex, int iChange);
 	int getExtraFeatureWorkPercent(FeatureTypes eIndex) const;
@@ -1629,15 +1548,15 @@ public:
 	int featureWorkPercent(FeatureTypes eIndex) const;
 	int buildWorkPercent(BuildTypes eIndex) const;
 
-	int getExtraUnitCombatModifier(UnitCombatTypes eIndex) const;
+	int getExtraUnitCombatModifier(UnitCombatTypes eIndex, const bool bIntrinsic = true) const;
 	void changeExtraUnitCombatModifier(UnitCombatTypes eIndex, int iChange);
 	//TB Combat Mods (adjusted the following line to include ", bool bEquip = false, bool bAfflict = false, bool bPromote = false"
 	bool canAcquirePromotion(PromotionTypes ePromotion, PromotionRequirements::flags requirements) const;
 	// Deprecated, use the one above that takes enum flags instead for increased readability.
-	bool canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas = false, bool bEquip = false, bool bAfflict = false, bool bPromote = false, bool bForLeader = false, bool bForOffset = false, bool bForFree = false, bool bForBuildUp = false, bool bForStatus = false) const;
+	bool canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas = false, bool bEquip = false, bool bAfflict = false, bool bForLeader = false, bool bForOffset = false, bool bForFree = false, bool bForBuildUp = false, bool bForStatus = false) const;
 	//TB Combat Mods end
 	bool canAcquirePromotionAny() const;
-	bool isPromotionValid(PromotionTypes ePromotion, bool bKeepCheck = false) const;
+	bool isPromotionValid(PromotionTypes ePromotion, bool bFree = false, bool bKeepCheck = false) const;
 	bool isHealsUnitCombat(UnitCombatTypes eIndex) const;
 	bool isHasUnitCombat(UnitCombatTypes eIndex) const;
 	void processUnitCombat(UnitCombatTypes eIndex, bool bAdding, bool bByPromo = false);
@@ -1701,16 +1620,16 @@ public:
 	bool canAirBomb1() const;
 	bool canAirBomb1At(const CvPlot* pPlot, int iX, int iY) const;
 	bool airBomb1(int iX, int iY);
-	bool canAirBomb2(const CvPlot* pPlot) const;
+	bool canAirBomb2() const;
 	bool canAirBomb2At(const CvPlot* pPlot, int iX, int iY) const;
 	bool airBomb2(int iX, int iY);
-	bool canAirBomb3(const CvPlot* pPlot) const;
+	bool canAirBomb3() const;
 	bool canAirBomb3At(const CvPlot* pPlot, int iX, int iY) const;
 	bool airBomb3(int iX, int iY);
-	bool canAirBomb4(const CvPlot* pPlot) const;
+	bool canAirBomb4() const;
 	bool canAirBomb4At(const CvPlot* pPlot, int iX, int iY) const;
 	bool airBomb4(int iX, int iY);
-	bool canAirBomb5(const CvPlot* pPlot) const;
+	bool canAirBomb5() const;
 	bool canAirBomb5At(const CvPlot* pPlot, int iX, int iY) const;
 	bool airBomb5(int iX, int iY);
 
@@ -1765,12 +1684,16 @@ public:
 	virtual void setToWaitOnUnitAI(UnitAITypes eUnitAI, bool bAdd) = 0;
 	virtual bool isWaitingOnUnitAI(int iIndex) const = 0;
 	virtual bool isWaitingOnUnitAIAny() const = 0;
+	virtual bool processContracts(int iMinPriority = 0) = 0;
 
 	inline int getMovementCharacteristicsHash() const { return m_movementCharacteristicsHash; }
 
 	PlayerTypes m_eOriginalOwner;
 
 	bool isWorker() const;
+	UnitCompWorker* CvUnit::getWorkerComponent() const;
+	void deselect(const bool bQuick = false);
+	void forceInvalidCoordinates();
 
 protected:
 	int m_iDCMBombRange;
@@ -1802,11 +1725,10 @@ protected:
 	bool m_bAutoPromoting;
 	bool m_bAutoUpgrading;
 	IDInfo m_shadowUnit;
-	TechTypes m_eDesiredDiscoveryTech;
 	//Great Commanders... By KillmePlease
-	int m_iCommanderID; //id of commander. used for game save/load
+	mutable int m_iCommanderID; //id of commander. used for game save/load
+	int m_iUsedCommanderID;
 	mutable int m_iCommanderCacheTurn;
-	mutable int m_iCachedCommander;
 #define	NO_COMMANDER_ID	-2	//	Pseudo-id used to signify an assertion that the unit has no commander
 	int m_iPreCombatDamage;
 
@@ -1833,6 +1755,7 @@ protected:
 	int m_iCombatFirstStrikes;
 	int m_iCombatDamage;
 	int m_iFortifyTurns;
+	int m_iBuildUpTurns;
 	int m_iBlitzCount;
 	int m_iRBombardForceAbilityCount;
 	int m_iAmphibCount;
@@ -1950,7 +1873,6 @@ protected:
 	int m_iHiddenNationalityCount;
 	bool m_bIsArmed;
 	bool m_bHasAnyInvisibility;
-	bool m_bHasAnyInvisibilityAbility;
 	bool m_bRevealed;
 #ifdef STRENGTH_IN_NUMBERS
 	IDInfo afIUnit;
@@ -2122,7 +2044,7 @@ protected:
 	bool canAdvance(const CvPlot* pPlot, int iThreshold) const;
 	void collateralCombat(const CvPlot* pPlot, CvUnit* pSkipUnit = NULL);
 	void rBombardCombat(const CvPlot* pPlot, CvUnit* pFirstUnit = NULL);
-	void flankingStrikeCombat(const CvPlot* pPlot, int iAttackerStrength, int iAttackerFirepower, int iDefenderOdds, int iDefenderDamage, CvUnit* pSkipUnit = NULL, bool bSamePlot = false);
+	void flankingStrikeCombat(const CvPlot* pPlot, int iAttackerStrength, int iAttackerFirepower, int iDefenderOdds, int iDefenderDamage, CvUnit* pSkipUnit);
 
 	bool interceptTest(const CvPlot* pPlot);
 	CvUnit* airStrikeTarget(const CvPlot* pPlot) const;
@@ -2140,19 +2062,17 @@ protected:
 	void increaseBattleRounds( CvBattleDefinition & battleDefinition ) const;
 	int computeWaveSize( bool bRangedRound, int iAttackerMax, int iDefenderMax ) const;
 
-	void getDefenderCombatValues(const CvUnit& kDefender, const CvPlot* pPlot, int iOurStrength, int iOurFirepower,
-		int& iTheirOdds, int& iTheirStrength, int& iOurDamage, int& iTheirDamage,
-		CombatDetails* pTheirDetails = NULL, const CvUnit* pDefender = NULL, bool bSamePlot = false) const;
+	void getDefenderCombatValues(const CvUnit& kDefender, const CvPlot* pPlot, int iOurStrength, int iOurFirepower, int& iTheirOdds,
+		int& iTheirStrength, int& iOurDamage, int& iTheirDamage, CombatDetails* pTheirDetails, const CvUnit* pDefender) const;
 
 	bool isCombatVisible(const CvUnit* pDefender) const;
 	void resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition& kBattle, bool bSamePlot = false);
 	void resolveAirCombat(CvUnit* pInterceptor, CvPlot* pPlot, CvAirMissionDefinition& kBattle);
-	void checkRemoveSelectionAfterAttack();
 
 	// ------ BEGIN InfluenceDrivenWar -------------------------------
-	float doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWithdrawal);
+	int doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWithdrawal);
 	void influencePlots(CvPlot* pCentralPlot, const PlayerTypes eTargetPlayer, const int iLocationMultiplier);
-	float doPillageInfluence();
+	int doPillageInfluence();
 	// ------ END InfluenceDrivenWar ---------------------------------
 
 	const PromotionKeyedInfo*	findPromotionKeyedInfo(PromotionTypes ePromotion) const;
@@ -2191,6 +2111,7 @@ public:
 	static bool isRealEntity(const CvEntity* entity);
 
 	std::map<UnitCombatTypes, UnitCombatKeyedInfo>&  getUnitCombatKeyedInfo() const;
+	const std::map<PromotionTypes, PromotionKeyedInfo>& getPromotionKeyedInfo() const;
 	std::map<PromotionLineTypes, PromotionLineKeyedInfo>&  getPromotionLineKeyedInfo() const;
 
 private:
@@ -2364,7 +2285,6 @@ public:
 	bool canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree = false, bool bMessageOnFalse = false) const;
 	bool isPromotionFree(PromotionTypes ePromotion) const;
 	int getPromotionFreeCount(PromotionTypes ePromotion) const;
-	void changePromotionFreeCount(PromotionTypes ePromotion, int iChange);
 	void setPromotionFreeCount(PromotionTypes ePromotion, int iChange);
 	void checkFreetoCombatClass();
 	//TB Combat Mods end
@@ -2376,71 +2296,58 @@ public:
 	void statusUpdate(PromotionTypes eStatus);
 
 	int flankingStrengthbyUnitCombatTotal(UnitCombatTypes eCombatType) const;
-	int getExtraFlankingStrengthbyUnitCombatType(UnitCombatTypes eIndex) const;
+	int getExtraFlankingStrengthbyUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic = true) const;
 	void changeExtraFlankingStrengthbyUnitCombatType(UnitCombatTypes eIndex, int iChange);
-	bool hasExtraFlankingStrikebyUnitCombatType(UnitCombatTypes eIndex) const;
 
 	int withdrawOnTerrainTotal(TerrainTypes eTerrainType) const;
-	int getExtraWithdrawOnTerrainType(TerrainTypes eIndex) const;
+	int getExtraWithdrawOnTerrainType(TerrainTypes eIndex, const bool bIntrinsic = true) const;
 	void changeExtraWithdrawOnTerrainType(TerrainTypes eIndex, int iChange);
-	bool hasExtraWithdrawOnTerrainType(TerrainTypes eIndex) const;
 
 	int withdrawOnFeatureTotal(FeatureTypes eFeatureType) const;
-	int getExtraWithdrawOnFeatureType(FeatureTypes eIndex) const;
+	int getExtraWithdrawOnFeatureType(FeatureTypes eIndex, const bool bIntrinsic = true) const;
 	void changeExtraWithdrawOnFeatureType(FeatureTypes eIndex, int iChange);
-	bool hasExtraWithdrawOnFeatureType(FeatureTypes eIndex) const;
 
 	int withdrawVSUnitCombatTotal(UnitCombatTypes eCombatType) const;
-	int getExtraWithdrawVSUnitCombatType(UnitCombatTypes eIndex) const;
+	int getExtraWithdrawVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic = true) const;
 	void changeExtraWithdrawVSUnitCombatType(UnitCombatTypes eIndex, int iChange);
-	bool hasExtraWithdrawVSUnitCombatType(UnitCombatTypes eIndex) const;
 
 	int pursuitVSUnitCombatTotal(UnitCombatTypes eCombatType) const;
-	int getExtraPursuitVSUnitCombatType(UnitCombatTypes eIndex) const;
+	int getExtraPursuitVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic = true) const;
 	void changeExtraPursuitVSUnitCombatType(UnitCombatTypes eIndex, int iChange);
-	bool hasExtraPursuitVSUnitCombatType(UnitCombatTypes eIndex) const;
 
 	int repelVSUnitCombatTotal(UnitCombatTypes eCombatType) const;
-	int getExtraRepelVSUnitCombatType(UnitCombatTypes eIndex) const;
+	int getExtraRepelVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic = true) const;
 	void changeExtraRepelVSUnitCombatType(UnitCombatTypes eIndex, int iChange);
-	bool hasExtraRepelVSUnitCombatType(UnitCombatTypes eIndex) const;
 
 	int knockbackVSUnitCombatTotal(UnitCombatTypes eCombatType) const;
-	int getExtraKnockbackVSUnitCombatType(UnitCombatTypes eIndex) const;
+	int getExtraKnockbackVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic = true) const;
 	void changeExtraKnockbackVSUnitCombatType(UnitCombatTypes eIndex, int iChange);
-	bool hasExtraKnockbackVSUnitCombatType(UnitCombatTypes eIndex) const;
 
 	int punctureVSUnitCombatTotal(UnitCombatTypes eCombatType) const;
-	int getExtraPunctureVSUnitCombatType(UnitCombatTypes eIndex) const;
+	int getExtraPunctureVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic = true) const;
 	void changeExtraPunctureVSUnitCombatType(UnitCombatTypes eIndex, int iChange);
-	bool hasExtraPunctureVSUnitCombatType(UnitCombatTypes eIndex) const;
 
 	int armorVSUnitCombatTotal(UnitCombatTypes eCombatType) const;
-	int getExtraArmorVSUnitCombatType(UnitCombatTypes eIndex) const;
+	int getExtraArmorVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic = true) const;
 	void changeExtraArmorVSUnitCombatType(UnitCombatTypes eIndex, int iChange);
-	bool hasExtraArmorVSUnitCombatType(UnitCombatTypes eIndex) const;
 
 	int dodgeVSUnitCombatTotal(UnitCombatTypes eCombatType) const;
-	int getExtraDodgeVSUnitCombatType(UnitCombatTypes eIndex) const;
+	int getExtraDodgeVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic = true) const;
 	void changeExtraDodgeVSUnitCombatType(UnitCombatTypes eIndex, int iChange);
-	bool hasExtraDodgeVSUnitCombatType(UnitCombatTypes eIndex) const;
 
 	int precisionVSUnitCombatTotal(UnitCombatTypes eCombatType) const;
-	int getExtraPrecisionVSUnitCombatType(UnitCombatTypes eIndex) const;
+	int getExtraPrecisionVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic = true) const;
 	void changeExtraPrecisionVSUnitCombatType(UnitCombatTypes eIndex, int iChange);
-	bool hasExtraPrecisionVSUnitCombatType(UnitCombatTypes eIndex) const;
 
 	int criticalVSUnitCombatTotal(UnitCombatTypes eCombatType) const;
-	int getExtraCriticalVSUnitCombatType(UnitCombatTypes eIndex) const;
+	int getExtraCriticalVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic = true) const;
 	void changeExtraCriticalVSUnitCombatType(UnitCombatTypes eIndex, int iChange);
-	bool hasExtraCriticalVSUnitCombatType(UnitCombatTypes eIndex) const;
 
 	int roundStunVSUnitCombatTotal(UnitCombatTypes eCombatType) const;
-	int getExtraRoundStunVSUnitCombatType(UnitCombatTypes eIndex) const;
+	int getExtraRoundStunVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic = true) const;
 	void changeExtraRoundStunVSUnitCombatType(UnitCombatTypes eIndex, int iChange);
-	bool hasExtraRoundStunVSUnitCombatType(UnitCombatTypes eIndex) const;
 
-	int getExtraRoundStunProb (bool bIgnoreCommanders = false) const;
+	int getExtraRoundStunProb(const bool bIntrinsic = true) const;
 	void changeExtraRoundStunProb(int iChange);
 	int roundStunProbTotal() const;
 
@@ -2503,15 +2410,11 @@ public:
 	int worsenedProbabilitytoAfflict(PromotionLineTypes eAfflictionLine) const;
 #endif // OUTBREAKS_AND_AFFLICTIONS
 
-	bool hasHealUnitCombat() const;
 	int getHealUnitCombatCount() const;
-	void setHealUnitCombatCount();
 	int getHealUnitCombatTypeTotal(UnitCombatTypes eUnitCombatType) const;
 	void changeHealUnitCombatTypeVolume(UnitCombatTypes eUnitCombatType, int iChange);
-	void setHealUnitCombatTypeVolume(UnitCombatTypes eUnitCombatType, int iChange);
 	int getHealUnitCombatTypeAdjacentTotal(UnitCombatTypes eUnitCombatType) const;
 	void changeHealUnitCombatTypeAdjacentVolume(UnitCombatTypes eUnitCombatType, int iChange);
-	void setHealUnitCombatTypeAdjacentVolume(UnitCombatTypes eUnitCombatType, int iChange);
 
 	void doSetUnitCombats();
 	void doSetFreePromotions(bool bAdding, TraitTypes eTrait = NO_TRAIT);
@@ -2523,26 +2426,19 @@ public:
 
 	int getExperiencefromWithdrawal(const int iWithdrawalProbability) const;
 
-//Team Project (3)
-	int getExtraCaptureProbabilityModifier(bool bIgnoreCommanders = false) const;
 	void changeExtraCaptureProbabilityModifier(int iChange);
 	int captureProbabilityTotal() const;
 
-	int getExtraCaptureResistanceModifier (bool bIgnoreCommanders = false) const;
 	void changeExtraCaptureResistanceModifier(int iChange);
 	int captureResistanceTotal() const;
-	//
-	int getExtraBreakdownChance (bool bIgnoreCommanders = false) const;
+
 	void changeExtraBreakdownChance(int iChange);
 	int breakdownChanceTotal() const;
 
-	int getExtraBreakdownDamage (bool bIgnoreCommanders = false) const;
 	void changeExtraBreakdownDamage(int iChange);
 	int breakdownDamageTotal() const;
 
-	int getExtraTaunt() const;
 	void changeExtraTaunt(int iChange);
-	void setExtraTaunt(int iChange);
 	int tauntTotal() const;
 
 	int getExtraCombatModifierPerSizeMore() const;
@@ -2572,7 +2468,7 @@ public:
 	void checkCityAttackDefensesDamage(CvCity* pCity, const std::vector<UnitCombatTypes>& kDamagableUnitCombatTypes);
 
 	bool isBreakdownCombat(const CvPlot* pPlot, bool bSamePlot = false) const;
-	void resolveBreakdownAttack(const CvPlot* pPlot, CvUnit* pDefender, const int AdjustedRepel);
+	void resolveBreakdownAttack(const CvPlot* pPlot, const int AdjustedRepel);
 
 	int getDiminishingReturn(int i) const;
 	int getApproaching0Return(int i) const;
@@ -2628,12 +2524,10 @@ public:
 	SpecialUnitTypes getSpecialCargo() const;
 	void setNewSpecialCargo(SpecialUnitTypes eSpecialUnit);
 	SpecialUnitTypes getSMSpecialCargo() const;
-	void setNewSMSpecialCargo(SpecialUnitTypes eSpecialUnit);
 	SpecialUnitTypes getSMNotSpecialCargo() const;
 	void setNewSMNotSpecialCargo(SpecialUnitTypes eSpecialUnit);
 
 	void changeSMCargoSpace(int iChange);
-	int SMcargoSpace() const;
 	int SMcargoSpaceFilter() const;
 	int SMcargoCapacityPreCheck() const;
 	int getSMCargoCapacity() const;
@@ -2688,10 +2582,7 @@ public:
 
 	int getExtraBombardRate() const;
 	void changeExtraBombardRate(int iChange);
-	void setExtraBombardRate(int iChange);
 	int getBombardRate() const;
-	int getSMBombardRateTotalBase() const;
-	int getSMBombardRate() const;
 	void setSMBombardRate();
 
 	int getAirBombCurrRate() const;
@@ -2709,9 +2600,8 @@ public:
 	int getRevoltProtection() const;
 	void changeRevoltProtection(int iChange);
 	int revoltProtectionTotal() const;
-	int revoltProtectionTotalPreCheck() const;
-	int getSMRevoltProtection() const;
-	void setSMRevoltProtection();
+	//int getSMRevoltProtection() const;
+	//void setSMRevoltProtection();
 
 	bool canPerformActionSM() const;
 	void setSMValues(bool bForLoad = false);
@@ -2749,6 +2639,7 @@ public:
 	void changeBombardDirectCount(int iChange);
 
 	static int applySMRank(int value, int rankChange, int rankMultiplier);
+	static int64_t applySMRank64(int64_t value, int rankChange, int rankMultiplier, bool bScaleUp = true);
 
 	int getNoSelfHealCount() const;
 	bool hasNoSelfHeal() const;
@@ -2770,14 +2661,14 @@ public:
 	void setSleepType(MissionTypes eSleepType);
 	void establishBuildups();
 	PromotionLineTypes getBuildUpType() const;
-	void setBuildUpType(PromotionLineTypes ePromotionLine = NO_PROMOTIONLINE, bool bRemove = false, MissionTypes eSleepType = NO_MISSION);
+	void setBuildUpType(PromotionLineTypes ePromotionLine = NO_PROMOTIONLINE, MissionTypes eSleepType = NO_MISSION);
 	void clearBuildups();
+	void incrementBuildUp();
 	bool isInhibitMerge() const;
 	void setInhibitMerge(bool bNewValue);
 	bool isInhibitSplit() const;
 	void setInhibitSplit(bool bNewValue);
 	bool isBuildUp() const;
-	void setBuildUp(bool bNewValue);
 	void setSpecialUnit(bool bChange, SpecialUnitTypes eSpecialUnit);
 	bool isHiddenNationality() const;
 	void doHNCapture();
@@ -2806,26 +2697,24 @@ public:
 	bool isUpgradeAnywhere() const;
 	void changeUpgradeAnywhereCount(int iChange);
 
-	bool hasVisibilityType(InvisibleTypes eInvisibleType) const;
+	void updateSpotIntensity(const InvisibleTypes eInvisibleType = NO_INVISIBLE, const bool bSameTile = false);
 	int visibilityIntensityTotal(InvisibleTypes eInvisibleType) const;
 	int getExtraVisibilityIntensityType(InvisibleTypes eIndex) const;
 	void changeExtraVisibilityIntensityType(InvisibleTypes eIndex, int iChange);
 
-	bool hasAnyInvisibilityType(bool bAbilityCheck = false) const;
-	bool hasInvisibilityType(InvisibleTypes eInvisibleType, bool bAbilityCheck = false) const;
-	int invisibilityIntensityTotal(InvisibleTypes eInvisibleType, bool bAbilityCheck = false) const;
+	bool hasAnyInvisibilityType() const;
+	bool hasInvisibilityType(InvisibleTypes eInvisibleType) const;
+	int invisibilityIntensityTotal(InvisibleTypes eInvisibleType) const;
 	int getExtraInvisibilityIntensityType(InvisibleTypes eIndex) const;
 	void changeExtraInvisibilityIntensityType(InvisibleTypes eIndex, int iChange);
 	void setHasAnyInvisibility();
 
 	//These need text displays on the unit
-	bool hasVisibilityRangeType(InvisibleTypes eInvisibleType) const;
 	int visibilityIntensityRangeTotal(InvisibleTypes eInvisibleType) const;
 	int getExtraVisibilityIntensityRangeType(InvisibleTypes eIndex) const;
 	void changeExtraVisibilityIntensityRangeType(InvisibleTypes eIndex, int iChange);
 
 	int visibilityIntensitySameTileTotal(InvisibleTypes eInvisibleType) const;
-	int getExtraVisibilityIntensitySameTileType(InvisibleTypes eIndex) const;
 	void changeExtraVisibilityIntensitySameTileType(InvisibleTypes eIndex, int iChange);
 
 	int getNumExtraInvisibleTerrains() const;
@@ -2879,9 +2768,6 @@ public:
 	void changeExtraAidChange(PropertyTypes eProperty, int iChange);
 	int extraAidChange(PropertyTypes eProperty) const;
 #endif
-	void deleteVisibility();
-	void addVisibility();
-
 	bool isNegatesInvisible(InvisibleTypes eInvisible) const;
 	int getNegatesInvisibleCount(InvisibleTypes eInvisible) const;
 	void changeNegatesInvisibleCount(InvisibleTypes eInvisible, int iChange);
@@ -2964,7 +2850,6 @@ public:
 	bool hasTrapImmunityUnitCombat(UnitCombatTypes eUnitCombat) const;
 	void changeTrapImmunityUnitCombatCount(UnitCombatTypes eUnitCombat, int iChange);
 
-	int getTargetUnitCombatCount(UnitCombatTypes eUnitCombat) const;
 	bool hasTargetUnitCombat(UnitCombatTypes eUnitCombat) const;
 	void changeTargetUnitCombatCount(UnitCombatTypes eUnitCombat, int iChange);
 
@@ -3053,10 +2938,8 @@ private:
 	//ls612: Terrain Work Modifiers
 	static int* g_paiTempExtraBuildWorkPercent;
 	static int*	g_paiTempExtraUnitCombatModifier;
-	static bool*	g_pabTempHasPromotion;
-	static bool*	g_pabTempHasUnitCombat;
-	static int* g_paiTempSubCombatTypeCount;
-	static int* g_paiTempRemovesUnitCombatTypeCount;
+	static bool* g_pabTempHasPromotion;
+	static bool* g_pabTempHasUnitCombat;
 	static int* g_paiTempExtraFlankingStrengthbyUnitCombatType;
 	static int* g_paiTempExtraWithdrawVSUnitCombatType;
 	static int* g_paiTempExtraPursuitVSUnitCombatType;
@@ -3099,7 +2982,6 @@ public:
 	struct fn {
 		DECLARE_MAP_FUNCTOR(CvUnit, void, doActiveDefense);
 		DECLARE_MAP_FUNCTOR(CvUnit, void, doOpportunityFire);
-		DECLARE_MAP_FUNCTOR(CvUnit, void, clearCommanderCache);
 		DECLARE_MAP_FUNCTOR(CvUnit, void, setSMValues);
 		DECLARE_MAP_FUNCTOR(CvUnit, void, checkPromotionObsoletion);
 		DECLARE_MAP_FUNCTOR(CvUnit, void, reloadEntity);
@@ -3195,9 +3077,5 @@ public:
 
 typedef std::vector<CvUnit*> UnitVector;
 typedef std::vector<const CvUnit*> ConstUnitVector;
-
-// Safe unit iterators (they copy the whole range before iterating, but this is just copying pointers so not a big deal in most cases
-// However it shouldn't be used in inner loops
-typedef copy_iterator<CvUnit> safe_unit_iterator;
 
 #endif

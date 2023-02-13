@@ -20,7 +20,8 @@ typedef struct
 } plotGroupCheckInfo;
 
 class CvPlot;
-class CvPlotGroup : bst::noncopyable
+class CvPlotGroup
+	: private bst::noncopyable
 {
 friend class CvPlot;
 

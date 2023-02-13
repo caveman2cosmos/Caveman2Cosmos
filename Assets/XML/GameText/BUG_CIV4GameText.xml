@@ -1189,34 +1189,6 @@
 		<Russian>Øèðîêèé ýêðàí</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__STARTDATE_HOVER</Tag>
-		<English>Select which turn number 200 000 BC should be.</English>
-		<French>Sélectionnez quel devrait être le numéro de tour de 200 000 av.J.C.</French>
-		<German>Bestimmt die Runde, der das Jahr 200 000 n.Chr. entsprechen soll</German>
-		<Italian>Indica quale numero di turno debba corrispondere all'anno 200 000 a.C.</Italian>
-		<Spanish>Elige qué número de turno será el año 200 000 a.C.</Spanish>
-		<Russian>Âûáåðèòå êîãäà õîä íîìåð 200 000BC äîëæåí áûòü.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__STARTDATE_TEXT</Tag>
-		<English>200 000 BC is Turn</English>
-		<French>200 000 av. J.C. est le Tour</French>
-		<German>200000 n.Chr. ist Runde</German>
-		<Italian>200 000 a.C. è il turno</Italian>
-		<Spanish>200 000 a.C. es el turno</Spanish>
-		<Russian>200 000BC ýòî õîä</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__BBAILEVEL_HOVER</Tag>
-		<English>Set the level of BBAI logging - 0 = off, 1 = important events, 2 = many decisions, 3 = most detailed</English>
-		<Spanish>Cambie el nivel de registrado de BBAI: 0 = desactivado, 1 = eventos importantes, 2 = decisiones, 3 = más detallado.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__BBAILEVEL_TEXT</Tag>
-		<English>BBAI logging level</English>
-		<Spanish>Nivel de registro de BBAI</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__COLORCODING_HOVER</Tag>
 		<English>When checked, comments are color-coded for forum posts.</English>
 		<French>Lorsque activé, les commentaires sont colorés pour les forums.</French>
@@ -1263,7 +1235,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__ENABLED_TEXT</Tag>
-		<English>Enable Logging</English>
+		<English>Enable BBAI Logging</English>
 		<French>Activer le log</French>
 		<German>Protokollierung aktivieren</German>
 		<Italian>Abilita Registro Automatico</Italian>
@@ -1306,13 +1278,57 @@
 		<Russian>Ïóòü</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__FORMAT_HOVER</Tag>
-		<English>The format of the log output.</English>
-		<French>Le style du log.</French>
-		<German>Bestimmt die Formatierung, in der das Protokoll erstellt wird</German>
-		<Italian>Lo stile di visualizzazione del registro.</Italian>
-		<Spanish>Formato de la salida del registro.</Spanish>
-		<Russian>Ôîðìàò âûäà÷è â æóðíàë.</Russian>
+		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__FILEPATH_HOVER</Tag>
+		<English>Directory where log file resides (fully qualified path, i.e. C:\folder\subfolder or blank).</English>
+		<French>Le Répertoire ou le fichier de log sera sauvegardé (chemin complet, p.ex. C:\folder\subfolder ou vide).</French>
+		<German>Verzeichnis, in dem sich die Protokolldatei befindet (komplette Pfadangabe, d.h. C:\Ordner\Unterordner oder leer lassen)</German>
+		<Italian>Cartella dove è localizzato il file di registro (percorso completo (ad esempio C:\cartella\sottocartella) o vuoto).</Italian>
+		<Spanish>Directorio donde reside el archivo de registro (ruta completa, p. ej. C:\carpeta\subcarpeta o vacío).</Spanish>
+		<Russian>Êàòàëîã, â êîòîðîì ôàéë æóðíàëà ðàñïîëîæåí (ïîëíûé ïóòü, ò.å. C:\folder\subfolder èëè ïóñòî).</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGLEVELCITYBBAI_HOVER</Tag>
+		<English>Set the level of BBAI logging - 0 = off, 1 = important events, 2 = many decisions, 3 = most detailed</English>
+		<Spanish>Cambie el nivel de registrado de BBAI: 0 = desactivado, 1 = eventos importantes, 2 = decisiones, 3 = más detallado.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGLEVELCITYBBAI_TEXT</Tag>
+		<English>City log</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGLEVELPLAYERBBAI_HOVER</Tag>
+		<English>Set the level of BBAI logging - 0 = off, 1 = important events, 2 = many decisions, 3 = most detailed</English>
+		<Spanish>Cambie el nivel de registrado de BBAI: 0 = desactivado, 1 = eventos importantes, 2 = decisiones, 3 = más detallado.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGLEVELPLAYERBBAI_TEXT</Tag>
+		<English>Player log</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGLEVELTEAMBBAI_HOVER</Tag>
+		<English>Set the level of BBAI logging - 0 = off, 1 = important events, 2 = many decisions, 3 = most detailed</English>
+		<Spanish>Cambie el nivel de registrado de BBAI: 0 = desactivado, 1 = eventos importantes, 2 = decisiones, 3 = más detallado.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGLEVELTEAMBBAI_TEXT</Tag>
+		<English>Team log</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGLEVELUNITBBAI_HOVER</Tag>
+		<English>Set the level of BBAI logging - 0 = off, 1 = important events, 2 = many decisions, 3 = most detailed</English>
+		<Spanish>Cambie el nivel de registrado de BBAI: 0 = desactivado, 1 = eventos importantes, 2 = decisiones, 3 = más detallado.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGLEVELUNITBBAI_TEXT</Tag>
+		<English>Unit log</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__MISCLOGGING_TEXT</Tag>
+		<English>Misc Logging</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__MISCLOGGING_HOVER</Tag>
+		<English>Enables a wide variation of specialized logs.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__FORMAT_LIST</Tag>
@@ -1918,6 +1934,24 @@
 		<Italian>Avvio automatico</Italian>
 		<Spanish>Inicio automático</Spanish>
 		<Russian>Íà÷àòü àâòîìàòè÷åñêè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__STARTDATE_HOVER</Tag>
+		<English>Select which turn number 200 000 BC should be.</English>
+		<French>Sélectionnez quel devrait être le numéro de tour de 200 000 av.J.C.</French>
+		<German>Bestimmt die Runde, der das Jahr 200 000 n.Chr. entsprechen soll</German>
+		<Italian>Indica quale numero di turno debba corrispondere all'anno 200 000 a.C.</Italian>
+		<Spanish>Elige qué número de turno será el año 200 000 a.C.</Spanish>
+		<Russian>Âûáåðèòå êîãäà õîä íîìåð 200 000BC äîëæåí áûòü.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__STARTDATE_TEXT</Tag>
+		<English>200 000 BC is Turn</English>
+		<French>200 000 av. J.C. est le Tour</French>
+		<German>200000 n.Chr. ist Runde</German>
+		<Italian>200 000 a.C. è il turno</Italian>
+		<Spanish>200 000 a.C. es el turno</Spanish>
+		<Russian>200 000BC ýòî õîä</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__AIRUNITCANDEFEND_HOVER</Tag>
@@ -2578,22 +2612,6 @@
 		<Russian>Èêîíêè ñòðîèòåëüñòâà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_CITYBAR__CITYCONTROLLEDPLOTS_HOVER</Tag>
-		<English>When checked, highlights the area of tiles controlled by the selected city, similar to when you select a Settler.</English>
-		<French>Lorsque activé, met en évidence la zone de cases controllées par la ville.</French>
-		<German>Hebt die von der gewählten Stadt bearbeitbaren Geländefelder hervor (ähnlich wie bei Auswahl eines Siedlers)</German>
-		<Spanish>Cuando se activa, resalta las casillas controladas por la ciudad seleccionada, de forma similar a cuando se selecciona un Colono.</Spanish>
-		<Russian>Êîãäà óñòàíîâëåí, ïîäñâå÷èâàåò îáëàñòü êëåòîê óïðàâëÿåìóþ âûáðàííûì ãîðîäîì, ïîäîáíî òîìó, êàê ïðè âûáîðå ïîñåëåíöà.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_CITYBAR__CITYCONTROLLEDPLOTS_TEXT</Tag>
-		<English>Highlight Workable Area</English>
-		<French>Mise en évidence de la zone utile</French>
-		<German>Bearbeitbares Gebiet hervorheben</German>
-		<Spanish>Resaltar área trabajable</Spanish>
-		<Russian>Ïîäñâåòèòü ðàáî÷óþ îáëàñòü</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CITYBAR__CITYPLOTSTATUS_HOVER</Tag>
 		<English>When checked, highlights each tile controlled by the selected city using a color based on whether it's being worked and your ability to improve it.</English>
 		<French>Lorsque activé, met en évidence chaque case possédée par la ville avec une couleur particulière si elle est utilisée, ou peut être améliorée.</French>
@@ -2624,23 +2642,6 @@
 		<German>Wirtschaft</German>
 		<Italian>Oro</Italian>
 		<Russian>Êîììåðöèÿ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_CITYBAR__CULTURETURNS_HOVER</Tag>
-		<English>When checked, shows the number of turns until the city's borders expand due to culture ([ICON_CULTURE]).</English>
-		<French>Lorsque activé, affiche le nombre de tours restants avant l'expansion des limites de la ville en raison de sa Culture ([ICON_CULTURE]).</French>
-		<German>Zeigt die Anzahl der Runden an, bis sich die Kulturgrenzen ([ICON_CULTURE]) einer Stadt erweitern</German>
-		<Italian>Quando è selezionato, mostra il numero di turni mancanti per la successiva espansione culturale ([ICON_CULTURE]).</Italian>
-		<Spanish>Cuando se activa, muestra el número de turnos restantes para la expansión cultural ([ICON_CULTURE]) de las fronteras de la ciudad.</Spanish>
-		<Russian>Êîãäà óñòàíîâëåí, îòîáðàæàåò ÷èñëî õîäîâ ïîêà ãðàíèöû ãîðîäà ðàñøèðÿòñÿ èç-çà êóëüòóðû ([ICON_CULTURE]).</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_CITYBAR__CULTURETURNS_TEXT</Tag>
-		<English>Culture Turns</English>
-		<French>Expansion Culturelle</French>
-		<German>Kultur</German>
-		<Italian>Turni culturali</Italian>
-		<Russian>Õîäîâ êóëüòóðû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CITYBAR__DRAFTANGER_HOVER</Tag>
@@ -3023,6 +3024,30 @@
 		<Italian>Infelicità da sacrifici</Italian>
 		<Spanish>Contador de insatisfacción</Spanish>
 		<Russian>Ñ÷åò÷èê ãíåâà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__BASEWEIGHTFOOD_HOVER</Tag>
+		<English>AI yield value weight defines the relative value ratio between the yield types.[NEWLINE]Don't mess with this unless you know what you're doing!</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__BASEWEIGHTFOOD_TEXT</Tag>
+		<English>Food</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__BASEWEIGHTHAMMER_HOVER</Tag>
+		<English>AI yield value weight defines the relative value ratio between the yield types.[NEWLINE]Don't mess with this unless you know what you're doing!</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__BASEWEIGHTHAMMER_TEXT</Tag>
+		<English>Hammer</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__BASEWEIGHTCOMMERCE_HOVER</Tag>
+		<English>AI yield value weight defines the relative value ratio between the yield types.[NEWLINE]Don't mess with this unless you know what you're doing!</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__BASEWEIGHTCOMMERCE_TEXT</Tag>
+		<English>Commerce</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__GREATPERSONINFO_HOVER</Tag>
@@ -3507,6 +3532,46 @@
 		<Italian>Imminente</Italian>
 		<Spanish>Inminente</Spanish>
 		<Russian>Ïðåäñòîÿùèé</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_CIV4LERTS__COMPLETEUNIT_HOVER</Tag>
+		<English>When checked, displays an alert when a city trains a unit.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_CIV4LERTS__COMPLETEUNIT_TEXT</Tag>
+		<English>Unit</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_CIV4LERTS__COMPLETEBUILDING_HOVER</Tag>
+		<English>When checked, displays an alert when a city constructs a building.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_CIV4LERTS__COMPLETEBUILDING_TEXT</Tag>
+		<English>Building</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_CIV4LERTS__COMPLETEPROJECT_HOVER</Tag>
+		<English>When checked, displays an alert when a city finish a project.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_CIV4LERTS__COMPLETEPROJECT_TEXT</Tag>
+		<English>Project</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_CIV4LERTS__COMPLETESPECIAL_HOVER</Tag>
+		<English>When checked, displays an alert when a city finish anything that is limited.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_CIV4LERTS__COMPLETESPECIAL_TEXT</Tag>
+		<English>Special</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_CIV4LERTS__COMPLETEBEGUNON_HOVER</Tag>
+		<English>When checked, add info about what is next in queue to the completion alert.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_CIV4LERTS__COMPLETEBEGUNON_TEXT</Tag>
+		<English>Begun on add-on</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CIV4LERTS__ENABLED_TEXT</Tag>
@@ -4179,6 +4244,22 @@
 		<English>Auto-end turn delay</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__CYCLEDELAYMIN_HOVER</Tag>
+		<English>Minimum slice delay before unit cycle will occur after unit does any action that should end its turn.[NEWLINE]Each slice is about 0.25 seconds long.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__CYCLEDELAYMIN_TEXT</Tag>
+		<English>Min cycle delay</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__CYCLEDELAYMOVE_HOVER</Tag>
+		<English>The slice delay before unit cycle will occur after unit finish its turn by moving.[NEWLINE]Each slice is about 0.25 seconds long.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__CYCLEDELAYMOVE_TEXT</Tag>
+		<English>Move cycle delay</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__ENABLEGRAPHICALPAGING_HOVER</Tag>
 		<English>Turn on or off paging out of off-focus graphics to save memory</English>
 		<French>Activer la Pagination des Graphiques hors champ pour préserver de la mémoire</French>
@@ -4578,24 +4659,6 @@
 		<Russian>Ñîäåðæàíèå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_MISCHOVER__CDAZOOMCITYDETAILS_HOVER</Tag>
-		<English>When checked, the Zoom to City button includes detailed information about the city as when hovering over a city bar on the map.</English>
-		<French>Lorsque activé, Les Infos du bouton de Zoom sur la ville inclut les informations détaillées concernant celle-ci, de la même manière que l'infobulle de la ville sur la carte.</French>
-		<German>Zeigt im Tooltip der Schaltfläche "Zur Stadt zoomen" dieselben ausführlichen Informationen an, wie wenn der Mauszeiger über einen Stadtbalken auf der Karte bewegt würde</German>
-		<Italian>Quando è selezionato, il testo a comparsa del Bottone di Zoom Cittadino nella schermata del 'Consigliere Interno' include informazioni dettagliate sulla Città, come quelle visualizzate quando si posiziona il cursore sulla Barra Cittadina sulla mappa.</Italian>
-		<Spanish>Cuando se activa, el botón 'Detalles de la ciudad' incluye información detallada sobre la ciudad, como cuando se pasa el ratón por encima de la barra de ciudad en el mapa.</Spanish>
-		<Russian>Êîãäà óñòàíîâëåí, êíîïêà ïåðåéòè ê ãîðîäó âêëþ÷àåò òàêóþ æå ïîäðîáíóþ èíôîðìàöèþ î ãîðîäå êàê êîãäà ïåðåìåùàåòåñü íàä ïîëîñêîé ãîðîäà íà êàðòå.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_MISCHOVER__CDAZOOMCITYDETAILS_TEXT</Tag>
-		<English>Zoom to City Details</English>
-		<French>Zoom des Détails de Ville</French>
-		<German>Zur Stadt zoomen</German>
-		<Italian>Bottone di Zoom Cittadino</Italian>
-		<Spanish>Botón de 'Detalles de la ciudad'</Spanish>
-		<Russian>Ïîäðîáíîñòè ïåðåéòè ê ãîðîäó</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MISCHOVER__CONSCRIPTLIMIT_HOVER</Tag>
 		<English>When checked, displays the number of units you can draft this turn and whether the city has already drafted in the Draft button hover.</English>
 		<French>Lorsque activé, affiche le nombre d'unité qu'il est possible de recruter pour ce tour, et si la ville a déjà procédé à un recrutement.</French>
@@ -4827,24 +4890,6 @@
 		<German>Gesundheitseffekte von Gelände</German>
 		<Spanish>Efectos del terreno en la salud</Spanish>
 		<Russian>Ýôôåêòû çäîðîâüÿ îò îñîáåííîñòåé</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_MISCHOVER__TECHTRADEDENIAL_HOVER</Tag>
-		<English>When checked, hovering over a technology in the "Won't Trade" column of the Foreign Advisor's TECHS page will show you the AI's reason for denying the trade.</English>
-		<French>Lorsque activé, La raison qu'a l'IA pour refuser l'échange d'une technologie sera disponible en infobulle dans l'écran du Conseiller aux relations étrangères.</French>
-		<German>Zeigt die Gründe für die Verweigerung eines Handels an, wenn der Mauszeiger über eine Technologie in der Spalte "Unverhandelbar" auf der Seite "Technologien" des Auslandsberaters bewegt wird</German>
-		<Italian>Quando è selezionato, posizionando il cursore su una Tecnologia nella colonna 'Non commercia' della pagina delle Tecnologie del Consigliere Estero verrà visualizzata la ragione per cui l'AI rifiuta di commerciare tale Tecnologia.</Italian>
-		<Spanish>Cuando se activa, mostrará la razón por la que la IA no comerciará una tecnología pasando el ratón por encima de ella en la columna de 'No comercia' en la pantalla de Tecnología en el Consejero de Exteriores.</Spanish>
-		<Russian>Êîãäà óñòàíîâëåí, ïåðåìåùåíèå íàä òåõíîëîãèåé â êîëîíêå "Íå ìîæåò òîðãîâàòü" íà ñòðàíèöå òåõíîëîãèé ñîâåòíèêà ïî èíîñòðàííûì äåëàì áóäåò ïîêàçûâàòü âàì ïðè÷èíó îòêàçà ÈÈ â òîðãîâëå.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_MISCHOVER__TECHTRADEDENIAL_TEXT</Tag>
-		<English>Technology Trade Denial</English>
-		<French>Refus d'échange de Technologies</French>
-		<German>Verweigerung von Technologien</German>
-		<Italian>Rifiuto di commercio di Tecnologie</Italian>
-		<Spanish>Rechazo a comerciar tecnología</Spanish>
-		<Russian>Îòêàç òîðãîâëè òåõíîëîãèÿìè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MISCHOVER__UNITEXPERIENCEMODIFIERS_HOVER</Tag>
@@ -5426,22 +5471,6 @@
 		<Russian>Óëó÷øåííûå àâèàíàëåòû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_REVDCM__DCM_ATTACK_SUPPORT_HOVER</Tag>
-		<English>Enables both offensive and defensive bombard units to bombard assist the attacking/defending unit while retaining their turn; is dependent on whether archer and ranged bombardment are enabled</English>
-		<French>Permet aux unités de bombardement (offensif et défensif) d'assister les attaquants ou défenseurs, tout les privant alors de la possibilité d'effectuer d'autres actions. Cette Option dépend des choix concernant les options de bombardement et d'attaque à distance des Archers.</French>
-		<German>Ermöglicht es, offensiven und defensiven Bombardierungseinheiten andere angreifende oder verteidigende Einheiten durch Bombardement zu unterstützen und dabei keinen Bewegungspunkt zu verlieren; hängt davon ab, ob Bogenschützen- und Fernbombardierung aktiviert sind</German>
-		<Spanish>Habilita a las unidades capaces de bombardeo a distancia, el apoyo tanto al ataque como a la defensa de otras unidades mientras permanezcan en su turno; depende de si está habilitado el bombardeo a distancia de arqueros y unidades de asedio.</Spanish>
-		<Russian>Ïîçâîëÿåò êàê íàñòóïàòåëüíûì, òàê è îáîðîíèòåëüíûì îòðÿäàì îêàçûâàòü îãíåâóþ ïîääåðæêó ñîþçíèêó, ñîõðàíèâ ñâîþ î÷åðåäü õîäà; çàâèñèìîñòü îò íàëè÷èÿ ëó÷íèêà è äèñòàíöèîííîãî îáñòðåëà âêëþ÷åíà.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_REVDCM__DCM_ATTACK_SUPPORT_TEXT</Tag>
-		<English>Attack Support</English>
-		<French>Support d'Attaques</French>
-		<German>Angriffsunterstützung</German>
-		<Spanish>Apoyo al ataque</Spanish>
-		<Russian>Êîîðäèíàöèÿ àòàêè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__DCM_FIGHTER_ENGAGE_HOVER</Tag>
 		<English>Enables fighters to actively target and engage enemy aircraft</English>
 		<French>Permet aux Avions de Chasse d'engager le Combat en sélectionnant une cible aérienne.</French>
@@ -5490,6 +5519,14 @@
 		<Russian>Äèñò. îáñòðåë</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_REVDCM__DYNAMIC_CIV_NAMES_HOVER</Tag>
+		<English>Civ names will have various names depending on civic choices and other factors</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_REVDCM__DYNAMIC_CIV_NAMES_TEXT</Tag>
+		<English>Dynamic Civ Names</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__IDW_EMERGENCY_DRAFT_ENABLED_HOVER</Tag>
 		<English>Causes weakened units to spawn in defense of cities that are under attack with no defender if the defenseless city still has significant cultural influence of the owning civilization</English>
 		<French>Lorsque activé, les Villes sans défense, mais possédant une influence culturelle suffisante vont spontanément générer des unités défensives de base.</French>
@@ -5515,11 +5552,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__IDW_ENABLED_TEXT</Tag>
-		<English>IDW Enabled</English>
-		<French>Activation IDW</French>
-		<German>EbK aktiviert</German>
-		<Spanish>IDW activado</Spanish>
-		<Russian>Âêë. êóëüò. ýêñïàíñèþ</Russian>
+		<English>Influence Driven War (IDW)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__IDW_NO_BARBARIAN_INFLUENCE_HOVER</Tag>
@@ -6751,21 +6784,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__IMPROVEDXP_HOVER</Tag>
-		<English>XP Gains based on how units fought in battle. The harder the battle, the more XP will be earned.</English>
-		<French>Les Gains d'EXP basés sur la manière dont l'unité se bat au combat. Plus la bataille est difficile, plus d'EXP est obtenu.</French>
-		<German>Die Erfahrungspunkte (EP) basieren darauf, wie erfolgreich die Einheiten in der Schlacht gekämpft haben. Je härter die Schlacht, umso mehr Erfahrungspunkte kommen hinzu.</German>
-		<Italian>Guadagni di XP basati su come combatte l'unità in battaglia. Più la battaglia è difficile, più XP viene guadagnata.</Italian>
-		<Spanish>La obtención de experiencia se basará en la destreza demostrada en la batalla. Cuanto más complicada sea, más experiencia se ganará.</Spanish>
-		<Russian>Ïðèðîñò îïûòà áóäåò çàâèñåòü èç òîãî, êàê îòðÿäû ñðàæàëèñü â áîþ. ×åì æåñò÷å áîé, òåì áîëüøå îïûòà áóäåò íà÷èñëÿòüñÿ.</Russian>
+		<English>Even without this option enabled, XP from combat is partially determined by victory chance. However, enabling this "Dynamic XP" game option will significantly magnify the effect, making it slower to train high-level units through low-risk combat (Minimum XP lowered to 0.01 from 1), but increasing further the XP gained by winning at lower odds (Maximum XP uncapped from 10). Additionally, many combat-adjacent actions such as pillaging, bombardment, etc. will give small amounts of XP.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__IMPROVEDXP_TEXT</Tag>
 		<English>Dynamic XP</English>
-		<French>EXP amélioré</French>
-		<German>Dynamischer Erfahrungsgewinn</German>
-		<Italian>XP dinamica</Italian>
-		<Spanish>Experiencia dinámica</Spanish>
-		<Russian>Äèíàìè÷åñêèé îïûò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__INFRASTRUCTUREIGNORESIMPROVEMENTS_HOVER</Tag>
@@ -6907,7 +6930,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__NOPRODUCTIONPOPUP_HOVER</Tag>
-		<English>Zooms the city when the production queue is empty instead of opening a popup (best combined with the minimize popups option).</English>
+		<English>Zooms the city when the production queue is empty instead of opening a popup (best combined with the minimize popups option). The popup shows limited selection of units and buildings for performance reasons.</English>
 		<French>Affiche automatiquement l'écran de ville lorsqu'il n'y a plus de constructions dans la liste, plutôt que d'afficher l'information sous forme de popup (à combiner avec l'option popus minimisés).</French>
 		<German>Das Spiel wechselt automatisch in den Stadtbildschirm, wenn die Bauliste leer ist, anstatt ein Popup-Fenster einzublenden (funktioniert am besten in Verbindung mit der Option Popups minimieren).</German>
 		<Italian>Zoomma sulla città quando la coda di protezione è vuota invece di aprire un popup (meglio se combinato con l'opzione minimizza popup).</Italian>
@@ -7036,6 +7059,26 @@
 		<Italian>Riforestazione</Italian>
 		<Spanish>Reforestación</Spanish>
 		<Russian>Âêë. ëåñîïîñàäêè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__RELIGIONDECAY_HOVER</Tag>
+		<English>Cities with many religions may have less popular ones slowly decay.</English>
+		<French>Les Villes avec plusieurs religions peuvent voir leur influence décroître. Les religions les moins populaires sont amenées à disparaitre lentement.</French>
+		<German>In Städten mit vielen Religionen können die unpopuläreren nach und nach in Vergessenheit geraten.</German>
+		<Italian>Nelle città con più religioni, quelle meno popolari svaniranno.</Italian>
+		<Spanish>En ciudades con muchas religiones, las menos populares podrían ir decayendo lentamente y desaparecer.</Spanish>
+		<Polish>Miasta z dużą ilością religii w którym jest przewaga jednej religii najmniejsze z nich mogą zniknąć.</Polish>
+		<Russian>Ó ãîðîäîâ ñî ìíîãèìè ðåëèãèÿìè, ìåíåå ïîïóëÿðíûå ìåäëåííî ðàñïàäàþòñÿ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__RELIGIONDECAY_TEXT</Tag>
+		<English>Religion Decay</English>
+		<French>Décadence des Religions</French>
+		<German>Religionsverfall</German>
+		<Italian>Decadenza delle religioni</Italian>
+		<Spanish>Decadencia de religiones</Spanish>
+		<Polish>Zanikanie Religii</Polish>
+		<Russian>Ðàñïàä ðåëèãèé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__ROMRESET_HOVER</Tag>

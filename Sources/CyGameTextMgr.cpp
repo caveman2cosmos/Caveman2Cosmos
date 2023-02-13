@@ -104,6 +104,13 @@ std::wstring CyGameTextMgr::getPromotionHelp(int iPromotion, bool bCivilopediaTe
 	return szBuffer.getCString();
 }
 
+std::wstring CyGameTextMgr::getUnitCombatHelp(int iUnitCombat, bool bCivilopediaText)
+{
+	CvWStringBuffer szBuffer;
+	GAMETEXT.setUnitCombatHelp(szBuffer, (UnitCombatTypes)iUnitCombat, bCivilopediaText);
+	return szBuffer.getCString();
+}
+
 std::wstring CyGameTextMgr::getTraitHelp(int iTrait)
 {
 	CvWStringBuffer szBuffer;
@@ -296,5 +303,12 @@ std::wstring CyGameTextMgr::getDefenseHelp(CyCity *pCity)
 {
 	CvWStringBuffer szBuffer;
 	GAMETEXT.getDefenseHelp(szBuffer, *pCity->getCity());
+	return szBuffer.getCString();
+}
+
+std::wstring CyGameTextMgr::getFlagHelp()
+{
+	CvWStringBuffer szBuffer;
+	GAMETEXT.setFlagHelp(szBuffer);
 	return szBuffer.getCString();
 }

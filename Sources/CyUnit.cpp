@@ -8,11 +8,6 @@
 // Python wrapper class for CvUnit
 //
 
-CyUnit::CyUnit() : m_pUnit(NULL)
-{
-	FErrorMsg("Error");
-}
-
 CyUnit::CyUnit(CvUnit* pUnit) : m_pUnit(pUnit)
 {
 	FAssert(m_pUnit != NULL);
@@ -43,9 +38,9 @@ void CyUnit::doCommand(CommandTypes eCommand, int iData1, int iData2)
 	m_pUnit->doCommand(eCommand, iData1, iData2);
 }
 
-bool CyUnit::canMoveInto(const CyPlot& kPlot, bool bAttack, bool bDeclareWar, bool bIgnoreLoad) const
+bool CyUnit::canEnterPlot(const CyPlot& kPlot, bool bAttack, bool bDeclareWar, bool bIgnoreLoad) const
 {
-	return m_pUnit->canMoveInto(kPlot.getPlot(),
+	return m_pUnit->canEnterPlot(kPlot.getPlot(),
 		(bAttack ? MoveCheck::Attack : MoveCheck::None) |
 		(bDeclareWar ? MoveCheck::DeclareWar : MoveCheck::None) |
 		(bIgnoreLoad ? MoveCheck::IgnoreLoad : MoveCheck::None)
@@ -94,17 +89,12 @@ bool CyUnit::canTrade(const CyPlot& kPlot, bool bTestVisible) const
 
 int CyUnit::getGreatWorkCulture(const CyPlot& kPlot) const
 {
-	return m_pUnit->getGreatWorkCulture(kPlot.getPlot());
+	return m_pUnit->getGreatWorkCulture();
 }
 
 int CyUnit::getEspionagePoints(const CyPlot& kPlot) const
 {
-	return m_pUnit->getEspionagePoints(kPlot.getPlot());
-}
-
-bool CyUnit::canBuild(const CyPlot& kPlot, int /*BuildTypes*/ eBuild, bool bTestVisible) const
-{
-	return m_pUnit->canBuild(kPlot.getPlot(), (BuildTypes) eBuild, bTestVisible);
+	return m_pUnit->getEspionagePoints();
 }
 
 bool CyUnit::canUpgrade(int /*UnitTypes*/ eUnit, bool bTestVisible) const
@@ -127,7 +117,7 @@ int /*SpecialUnitTypes*/ CyUnit::getSpecialUnitType() const
 	return m_pUnit->getSpecialUnitType();
 }
 
-int /*UnitTypes*/ CyUnit::getCaptureUnitType() const
+UnitTypes CyUnit::getCaptureUnitType() const
 {
 	return m_pUnit->getCaptureUnitType();
 }
@@ -140,11 +130,6 @@ int /*UnitCombatTypes*/ CyUnit::getUnitCombatType() const
 DomainTypes CyUnit::getDomainType() const
 {
 	return m_pUnit->getDomainType();
-}
-
-bool CyUnit::isBarbarian() const
-{
-	return m_pUnit->isBarbarian();
 }
 
 bool CyUnit::isNPC() const
@@ -212,9 +197,9 @@ bool CyUnit::isGoldenAge() const
 	return m_pUnit->isGoldenAge();
 }
 
-bool CyUnit::isFighting() const
+bool CyUnit::isInBattle() const
 {
-	return m_pUnit->isFighting();
+	return m_pUnit->isInBattle();
 }
 
 int CyUnit::getMaxHP() const
@@ -307,14 +292,14 @@ int CyUnit::bombardRate() const
 	return m_pUnit->getBombardRate();
 }
 
-int /*SpecialUnitTypes*/ CyUnit::specialCargo() const
+int /*SpecialUnitTypes*/ CyUnit::getSpecialCargo() const
 {
-	return m_pUnit->specialCargo();
+	return m_pUnit->getSpecialCargo();
 }
 
-int /*DomainTypes*/ CyUnit::domainCargo() const
+int /*DomainTypes*/ CyUnit::getDomainCargo() const
 {
-	return m_pUnit->domainCargo();
+	return m_pUnit->getDomainCargo();
 }
 
 int CyUnit::cargoSpace() const
@@ -427,9 +412,9 @@ int CyUnit::getExperience() const
 	return m_pUnit->getExperience();
 }
 
-void CyUnit::setExperience(int iNewValue, int iMax)
+void CyUnit::setExperience(int iNewValue)
 {
-	m_pUnit->setExperience(iNewValue, iMax);
+	m_pUnit->setExperience(iNewValue);
 }
 
 void CyUnit::changeExperience(int iChange, int iMax, bool bFromCombat, bool bInBorders, bool bUpdateGlobal)
@@ -480,11 +465,6 @@ void CyUnit::setFortifyTurns(int iNewValue)
 bool CyUnit::isRiver() const
 {
 	return m_pUnit->isRiver();
-}
-
-int CyUnit::getExtraMoves() const
-{
-	return m_pUnit->getExtraMoves();
 }
 
 int CyUnit::getRevoltProtection() const
@@ -583,9 +563,9 @@ bool CyUnit::isCargo() const
 	return m_pUnit->isCargo();
 }
 
-void CyUnit::setTransportUnit(const CyUnit& kTransportUnit)
+void CyUnit::setTransportUnit(const CyUnit& kTransportUnit, const bool bLoad)
 {
-	m_pUnit->setTransportUnit(kTransportUnit.getUnit());
+	m_pUnit->setTransportUnit(bLoad ? kTransportUnit.getUnit() : NULL);
 }
 
 std::wstring CyUnit::getName() const
@@ -698,14 +678,14 @@ bool CyUnit::isCommander() const
 	return m_pUnit->isCommander();
 }
 
-int CyUnit::controlPointsLeft() const
+int CyUnit::getControlPointsLeft() const
 {
-	return m_pUnit->controlPointsLeft();
+	return m_pUnit->getCommanderComp()->getControlPointsLeft();
 }
 
-int CyUnit::controlPoints() const
+int CyUnit::getControlPoints() const
 {
-	return m_pUnit->controlPoints();
+	return m_pUnit->getCommanderComp()->getControlPoints();
 }
 
 float CyUnit::getRealExperience() const

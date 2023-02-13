@@ -10,12 +10,14 @@
 class CyPlot;
 class CvMap;
 class CyArea;
+class CyUnit;
 
 class CyMap
 {
 public:
 	CyMap();
-	explicit CyMap(CvMap* pMap); // Call from C++
+	explicit CyMap(MapTypes eMap);
+
 	//const CvMapInterfaceBase* getMap() const { return m_pMap; } // Call from C++
 
 	int getType();
@@ -31,6 +33,7 @@ public:
 	int	getViewportXFromMapX(int iX);
 	int	getViewportYFromMapY(int iY);
 	bool isInViewport(int X, int Y);
+	bool isMidSwitch() const;
 
 	void closeAdvisor(int advisorWidth, int iMinimapLeft, int iMinimapRight, int iMinimapTop, int iMinimapBottom);
 	void bringIntoView(int iX, int iY, bool bLookAt, bool bForceCenter, bool bDisplayCityScreen, bool bSelectCity, bool bAddSelectedCity);
@@ -102,8 +105,7 @@ public:
 	int getLastPathStepNum() const;
 	CyPlot* getLastPathPlotByIndex(int index) const;
 
-	// Super Forts *canal* *choke*
-	void calculateCanalAndChokePoints();
+	void moveUnitToMap(const CyUnit* unit, int numTravelTurns);
 
 protected:
 	CvMap* m_pMap;

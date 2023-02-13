@@ -52,7 +52,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_MODERN_WARFARE</ForceObsoleteTech>
+			<ObsoleteTech>TECH_MODERN_WARFARE</ObsoleteTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CLOCKWORK_WORKSHOP</BuildingType>
 			</PrereqAndBuildings>
@@ -168,14 +168,9 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_SULPHUR</BonusType>
 			</PrereqBonuses>
-			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_CANNON_FORGE</ID>
-					</Has>
-				</And>
-			</TrainCondition>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_CANNON_FORGE</BuildingType>
+			</PrereqAndBuildings>
 			<iCost>410</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>26</iCombat>

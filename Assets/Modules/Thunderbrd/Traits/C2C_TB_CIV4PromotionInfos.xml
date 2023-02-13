@@ -980,6 +980,9 @@
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
 			</UnitCombats>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<Button>Art/Buttons/Promotions/PromotionNomadic.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -1254,6 +1257,10 @@
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
 			</UnitCombats>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_CIVILIAN</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<Button>Art/Buttons/Promotions/PromotionAerialSuperiority.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>

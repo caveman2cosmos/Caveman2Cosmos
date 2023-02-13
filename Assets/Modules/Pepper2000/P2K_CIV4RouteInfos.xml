@@ -9,7 +9,7 @@
 		<RouteInfo>
 			<Type>ROUTE_LUNAR_PATH</Type>
 			<Description>TXT_KEY_ROUTE_LUNAR_PATH</Description>
-			<iValue>5</iValue>
+			<iValue>1</iValue>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iMovement>100</iMovement>
 			<iFlatMovement>100</iFlatMovement>
@@ -20,28 +20,9 @@
 			<Button>Art/Interface/Buttons/Builds/buildlunarpath.dds</Button>
 		</RouteInfo>
 		<RouteInfo>
-			<Type>ROUTE_PLANETARY_MAGLEV</Type>
-			<Description>TXT_KEY_ROUTE_PLANETARY_MAGLEV</Description>
-			<iValue>5</iValue>
-			<iAdvancedStartCost>30</iAdvancedStartCost>
-			<iMovement>100</iMovement>
-			<iFlatMovement>100</iFlatMovement>
-			<BonusType>BONUS_COPPER_WARES</BonusType>
-			<PrereqOrBonuses>
-				<BonusType>BONUS_PLASTIC</BonusType>
-			</PrereqOrBonuses>
-			<Yields>
-				<iYield>1</iYield>
-				<iYield>1</iYield>
-				<iYield>1</iYield>
-			</Yields>
-			<TechMovementChanges/>
-			<Button>Art/Interface/Buttons/Builds/buildplanetarymaglev.dds</Button>
-		</RouteInfo>
-		<RouteInfo>
 			<Type>ROUTE_ORBITAL_TRAJECTORY</Type>
 			<Description>TXT_KEY_ROUTE_ORBITAL_TRAJECTORY</Description>
-			<iValue>5</iValue>
+			<iValue>1</iValue>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iMovement>100</iMovement>
 			<iFlatMovement>100</iFlatMovement>
@@ -56,12 +37,28 @@
 			<Button>art/interface/buttons/improvements/cislunar_trajectory.dds</Button>
 		</RouteInfo>
 		<RouteInfo>
+			<Type>ROUTE_PLANETARY_MAGLEV</Type>
+			<Description>TXT_KEY_ROUTE_PLANETARY_MAGLEV</Description>
+			<iValue>2</iValue>
+			<iAdvancedStartCost>30</iAdvancedStartCost>
+			<iMovement>50</iMovement>
+			<iFlatMovement>50</iFlatMovement>
+			<BonusType>BONUS_PLASTIC</BonusType>
+			<Yields>
+				<iYield>1</iYield>
+				<iYield>1</iYield>
+				<iYield>1</iYield>
+			</Yields>
+			<TechMovementChanges/>
+			<Button>Art/Interface/Buttons/Builds/buildplanetarymaglev.dds</Button>
+		</RouteInfo>
+		<RouteInfo>
 			<Type>ROUTE_SOLAR_TRAJECTORY</Type>
 			<Description>TXT_KEY_ROUTE_SOLAR_TRAJECTORY</Description>
-			<iValue>6</iValue>
+			<iValue>2</iValue>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
-			<iMovement>100</iMovement>
-			<iFlatMovement>100</iFlatMovement>
+			<iMovement>50</iMovement>
+			<iFlatMovement>50</iFlatMovement>
 			<BonusType>NONE</BonusType>
 			<PrereqOrBonuses/>
 			<Yields>
@@ -75,10 +72,10 @@
 		<RouteInfo>
 			<Type>ROUTE_WORMHOLE</Type>
 			<Description>TXT_KEY_ROUTE_WORMHOLE</Description>
-			<iValue>7</iValue>
+			<iValue>3</iValue>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
-			<iMovement>100</iMovement>
-			<iFlatMovement>100</iFlatMovement>
+			<iMovement>25</iMovement>
+			<iFlatMovement>25</iFlatMovement>
 			<BonusType>NONE</BonusType>
 			<PrereqOrBonuses/>
 			<Yields>
@@ -90,29 +87,12 @@
 			<Button>art/interface/buttons/improvements/wormhole.dds</Button>
 		</RouteInfo>
 		<RouteInfo>
-			<Type>ROUTE_COMPACT_WORMHOLE</Type>
-			<Description>TXT_KEY_ROUTE_COMPACT_WORMHOLE</Description>
-			<iValue>8</iValue>
-			<iAdvancedStartCost>30</iAdvancedStartCost>
-			<iMovement>50</iMovement>
-			<iFlatMovement>50</iFlatMovement>
-			<BonusType>NONE</BonusType>
-			<PrereqOrBonuses/>
-			<Yields>
-				<iYield>1</iYield>
-				<iYield>1</iYield>
-				<iYield>1</iYield>
-			</Yields>
-			<TechMovementChanges/>
-			<Button>art/interface/buttons/improvements/microwormhole.dds</Button>
-		</RouteInfo>
-		<RouteInfo>
 			<Type>ROUTE_MEGAWORMHOLE</Type>
 			<Description>TXT_KEY_ROUTE_MEGAWORMHOLE</Description>
-			<iValue>8</iValue>
+			<iValue>4</iValue>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
-			<iMovement>50</iMovement>
-			<iFlatMovement>50</iFlatMovement>
+			<iMovement>15</iMovement>
+			<iFlatMovement>15</iFlatMovement>
 			<BonusType>NONE</BonusType>
 			<PrereqOrBonuses/>
 			<Yields>
@@ -122,6 +102,23 @@
 			</Yields>
 			<TechMovementChanges/>
 			<Button>art/interface/buttons/improvements/megawormhole_route.dds</Button>
+		</RouteInfo>
+		<RouteInfo>
+			<Type>ROUTE_COMPACT_WORMHOLE</Type>
+			<Description>TXT_KEY_ROUTE_COMPACT_WORMHOLE</Description>
+			<iValue>4</iValue>
+			<iAdvancedStartCost>30</iAdvancedStartCost>
+			<iMovement>15</iMovement>
+			<iFlatMovement>15</iFlatMovement>
+			<BonusType>NONE</BonusType>
+			<PrereqOrBonuses/>
+			<Yields>
+				<iYield>1</iYield>
+				<iYield>1</iYield>
+				<iYield>1</iYield>
+			</Yields>
+			<TechMovementChanges/>
+			<Button>art/interface/buttons/improvements/microwormhole.dds</Button>
 		</RouteInfo>
 		<RouteInfo>
 			<Type>ROUTE_HYPERLANE</Type>
@@ -143,10 +140,10 @@
 		<RouteInfo>
 			<Type>ROUTE_ASPATIAL_ROUTE</Type>
 			<Description>TXT_KEY_ROUTE_ASPATIAL_ROUTE</Description>
-			<iValue>9</iValue>
+			<iValue>6</iValue>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
-			<iMovement>20</iMovement>
-			<iFlatMovement>20</iFlatMovement>
+			<iMovement>5</iMovement>
+			<iFlatMovement>5</iFlatMovement>
 			<BonusType>NONE</BonusType>
 			<PrereqOrBonuses/>
 			<Yields>

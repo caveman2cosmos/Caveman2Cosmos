@@ -10,6 +10,7 @@
 #include "CvCity.h"
 #include "CvCityAI.h"
 #include "CvGlobals.h"
+#include "CvBonusInfo.h"
 #include "CvInfos.h"
 #include "CvMap.h"
 #include "CvOutcome.h"
@@ -23,6 +24,7 @@
 #include "CyUnit.h"
 #include "CyPlot.h"
 #include "CheckSum.h"
+#include "CvGameAI.h"
 #include "IntExpr.h"
 
 CvOutcome::CvOutcome(): m_eUnitType(NO_UNIT),
@@ -88,7 +90,7 @@ CvOutcome::~CvOutcome()
 
 int CvOutcome::getYield(YieldTypes eYield, const CvUnit& kUnit) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eYield)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eYield);
 
 	if (m_aiYield[eYield])
 	{
@@ -102,7 +104,7 @@ int CvOutcome::getYield(YieldTypes eYield, const CvUnit& kUnit) const
 
 int CvOutcome::getCommerce(CommerceTypes eCommerce, const CvUnit& kUnit) const
 {
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eCommerce)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eCommerce);
 
 	if (m_aiCommerce[eCommerce])
 	{
@@ -407,45 +409,38 @@ bool CvOutcome::isPossible(const CvUnit& kUnit) const
 			return false;
 		}
 	}
+	else if (GET_PLAYER(ePlotOwner).isNPC())
+	{
+		if (!kInfo.getBarbarianTerritory())
+		{
+			return false;
+		}
+	}
 	else
 	{
-		if (GET_PLAYER(ePlotOwner).isBarbarian())
+		const TeamTypes ePlotOwnerTeam = GET_PLAYER(ePlotOwner).getTeam();
+		const CvTeam& kPlotOwnerTeam = GET_TEAM(ePlotOwnerTeam);
+		if (kOwnerTeam.isAtWar(ePlotOwnerTeam))
 		{
-			if (!kInfo.getBarbarianTerritory())
+			if (!kInfo.getHostileTerritory())
 			{
 				return false;
 			}
 		}
-		else
+		else if ((eOwnerTeam == ePlotOwnerTeam) || (kPlotOwnerTeam.isVassal(eOwnerTeam)))
 		{
-			const TeamTypes ePlotOwnerTeam = GET_PLAYER(ePlotOwner).getTeam();
-			const CvTeam& kPlotOwnerTeam = GET_TEAM(ePlotOwnerTeam);
-			if (kOwnerTeam.isAtWar(ePlotOwnerTeam))
+			if (!kInfo.getFriendlyTerritory())
 			{
-				if (!kInfo.getHostileTerritory())
-				{
-					return false;
-				}
+				return false;
 			}
-			else if ((eOwnerTeam == ePlotOwnerTeam) || (kPlotOwnerTeam.isVassal(eOwnerTeam)))
-			{
-				if (!kInfo.getFriendlyTerritory())
-				{
-					return false;
-				}
-			}
-			else
-			{
-				if (!kInfo.getNeutralTerritory())
-				{
-					return false;
-				}
-			}
+		}
+		else if (!kInfo.getNeutralTerritory())
+		{
+			return false;
 		}
 	}
 
-	const int iPrereqBuildings = kInfo.getNumPrereqBuildings();
-	if (iPrereqBuildings > 0)
+	if (!kInfo.getPrereqBuildings().empty())
 	{
 		const CvCity* pCity = kUnit.plot()->getPlotCity();
 		if (!pCity)
@@ -453,9 +448,9 @@ bool CvOutcome::isPossible(const CvUnit& kUnit) const
 			return false;
 		}
 
-		for (int i=0; i < iPrereqBuildings; i++)
+		foreach_(const BuildingTypes ePrereq, kInfo.getPrereqBuildings())
 		{
-			if (pCity->getNumActiveBuilding(kInfo.getPrereqBuilding(i)) <= 0)
+			if (pCity->getNumActiveBuilding(ePrereq) <= 0)
 			{
 				return false;
 			}
@@ -466,7 +461,7 @@ bool CvOutcome::isPossible(const CvUnit& kUnit) const
 	/*if (m_ePromotionType != NO_PROMOTION)
 	{
 		CvPromotionInfo& kPromotion = GC.getPromotionInfo(m_ePromotionType);
-		if (!kTeam.isHasTech((TechTypes)kPromotion.getTechPrereq()))
+		if (!kTeam.isHasTech(kPromotion.getTechPrereq()))
 		{
 			return false;
 		}
@@ -623,15 +618,11 @@ bool CvOutcome::isPossibleSomewhere(const CvUnit& kUnit) const
 	//TeamTypes eOwnerTeam = GET_PLAYER(kUnit.getOwner()).getTeam();
 	//CvTeam& kOwnerTeam = GET_TEAM(eOwnerTeam);
 
-	const int iPrereqBuildings = kInfo.getNumPrereqBuildings();
-	if (iPrereqBuildings > 0)
+	foreach_(const BuildingTypes ePrereq, kInfo.getPrereqBuildings())
 	{
-		for (int i=0; i<iPrereqBuildings; i++)
+		if (GET_PLAYER(kUnit.getOwner()).getBuildingCount(ePrereq) <= 0)
 		{
-			if (GET_PLAYER(kUnit.getOwner()).getBuildingCount(kInfo.getPrereqBuilding(i)) <= 0)
-			{
-				return false;
-			}
+			return false;
 		}
 	}
 
@@ -639,7 +630,7 @@ bool CvOutcome::isPossibleSomewhere(const CvUnit& kUnit) const
 	/*if (m_ePromotionType != NO_PROMOTION)
 	{
 		CvPromotionInfo& kPromotion = GC.getPromotionInfo(m_ePromotionType);
-		if (!kTeam.isHasTech((TechTypes)kPromotion.getTechPrereq()))
+		if (!kTeam.isHasTech(kPromotion.getTechPrereq()))
 		{
 			return false;
 		}
@@ -739,45 +730,41 @@ bool CvOutcome::isPossibleInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool 
 			return false;
 		}
 	}
+	else if (GET_PLAYER(ePlotOwner).isNPC())
+	{
+		if (!kInfo.getBarbarianTerritory())
+		{
+			return false;
+		}
+	}
 	else
 	{
-		if (GET_PLAYER(ePlotOwner).isBarbarian())
+		const TeamTypes ePlotOwnerTeam = GET_PLAYER(ePlotOwner).getTeam();
+		const CvTeam& kPlotOwnerTeam = GET_TEAM(ePlotOwnerTeam);
+		if (kOwnerTeam.isAtWar(ePlotOwnerTeam))
 		{
-			if (!kInfo.getBarbarianTerritory())
+			if (!kInfo.getHostileTerritory())
+			{
+				return false;
+			}
+		}
+		else if ((eOwnerTeam == ePlotOwnerTeam) || (kPlotOwnerTeam.isVassal(eOwnerTeam)))
+		{
+			if (!kInfo.getFriendlyTerritory())
 			{
 				return false;
 			}
 		}
 		else
 		{
-			const TeamTypes ePlotOwnerTeam = GET_PLAYER(ePlotOwner).getTeam();
-			const CvTeam& kPlotOwnerTeam = GET_TEAM(ePlotOwnerTeam);
-			if (kOwnerTeam.isAtWar(ePlotOwnerTeam))
+			if (!kInfo.getNeutralTerritory())
 			{
-				if (!kInfo.getHostileTerritory())
-				{
-					return false;
-				}
-			}
-			else if ((eOwnerTeam == ePlotOwnerTeam) || (kPlotOwnerTeam.isVassal(eOwnerTeam)))
-			{
-				if (!kInfo.getFriendlyTerritory())
-				{
-					return false;
-				}
-			}
-			else
-			{
-				if (!kInfo.getNeutralTerritory())
-				{
-					return false;
-				}
+				return false;
 			}
 		}
 	}
 
-	const int iPrereqBuildings = kInfo.getNumPrereqBuildings();
-	if (iPrereqBuildings > 0)
+	if (!kInfo.getPrereqBuildings().empty())
 	{
 		const CvCity* pCity = kPlot.getPlotCity();
 		if (!pCity)
@@ -785,9 +772,9 @@ bool CvOutcome::isPossibleInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool 
 			return false;
 		}
 
-		for (int i = 0; i < iPrereqBuildings; i++)
+		foreach_(const BuildingTypes ePrereq, kInfo.getPrereqBuildings())
 		{
-			if (pCity->getNumActiveBuilding(kInfo.getPrereqBuilding(i)) <= 0)
+			if (pCity->getNumActiveBuilding(ePrereq) <= 0)
 			{
 				return false;
 			}
@@ -798,7 +785,7 @@ bool CvOutcome::isPossibleInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool 
 	/*if (m_ePromotionType != NO_PROMOTION)
 	{
 		CvPromotionInfo& kPromotion = GC.getPromotionInfo(m_ePromotionType);
-		if (!kTeam.isHasTech((TechTypes)kPromotion.getTechPrereq()))
+		if (!kTeam.isHasTech(kPromotion.getTechPrereq()))
 		{
 			return false;
 		}
@@ -955,7 +942,7 @@ bool CvOutcome::isPossible(const CvPlayerAI& kPlayer) const
 	/*if (m_ePromotionType != NO_PROMOTION)
 	{
 		CvPromotionInfo& kPromotion = GC.getPromotionInfo(m_ePromotionType);
-		if (!kTeam.isHasTech((TechTypes)kPromotion.getTechPrereq()))
+		if (!kTeam.isHasTech(kPromotion.getTechPrereq()))
 		{
 			return false;
 		}
@@ -1306,7 +1293,7 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 
 	if (!m_szPythonCallback.empty())
 	{
-		Cy::call(PYRandomEventModule, m_szPythonCallback, Cy::Args() << &kUnit << eDefeatedUnitPlayer << eDefeatedUnitType);
+		Cy::call("CvOutcomeInterface", m_szPythonCallback, Cy::Args() << &kUnit << eDefeatedUnitPlayer << eDefeatedUnitType);
 	}
 
 	if (m_pPythonExecFunc)
@@ -1399,7 +1386,7 @@ int CvOutcome::AI_getValueInPlot(const CvUnit &kUnit, const CvPlot &kPlot, bool 
 	if (aiYield[YIELD_PRODUCTION] || aiYield[YIELD_FOOD] || aiYield[YIELD_COMMERCE] || aiCommerce[COMMERCE_GOLD] || aiCommerce[COMMERCE_RESEARCH] || aiCommerce[COMMERCE_CULTURE] || aiCommerce[COMMERCE_ESPIONAGE] || m_iGPP)
 	{
 		// short circuit plot city as this method will be called for city plots most of the time
-		CvCityAI* pCity = (CvCityAI*) kPlot.getPlotCity();
+		CvCityAI* pCity = static_cast<CvCityAI*>(kPlot.getPlotCity());
 		if (!pCity || (bToCoastalCity && (!pCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()))))
 			pCity = (CvCityAI*) GC.getMap().findCity(kPlot.getX(), kPlot.getY(), kUnit.getOwner(), NO_TEAM, true, bToCoastalCity);
 		if (!pCity)
@@ -1963,7 +1950,7 @@ void CvOutcome::buildDisplayString(CvWStringBuffer &szBuffer, const CvUnit& kUni
 	szBuffer.append(L" )");
 }
 
-void CvOutcome::getCheckSum(unsigned int &iSum) const
+void CvOutcome::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_eType);
 	m_iChance->getCheckSum(iSum);

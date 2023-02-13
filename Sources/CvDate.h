@@ -20,14 +20,14 @@ class CvDate
 public:
 
 	CvDate();
-	explicit CvDate(unsigned int iTick);
+	explicit CvDate(uint32_t iTick);
 
 	int getYear() const;
 	int getMonth() const;
 	int getWeek() const; // number of the week in a month
 	SeasonTypes getSeason() const;
 	int getDay() const;
-	unsigned int GetTick() const;
+	uint32_t GetTick() const;
 
 	CvDateIncrement getIncrement(GameSpeedTypes eGameSpeed = NO_GAMESPEED) const;
 	void increment(GameSpeedTypes eGameSpeed = NO_GAMESPEED);
@@ -45,7 +45,7 @@ public:
 	bool operator!=(const CvDate& kDate) const;
 
 protected:
-	unsigned int m_iTick;
+	uint32_t m_iTick;
 };
 
 struct CvDateIncrement

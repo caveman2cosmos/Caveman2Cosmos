@@ -6,6 +6,7 @@
 #define CIV4_UNIT_AI_H
 
 #include "CvUnit.h"
+#include "GroupingParams.h"
 
 typedef enum
 {
@@ -27,6 +28,8 @@ class CvUnitAI : public CvUnit
 public:
 	CvUnitAI(bool bIsDummy = false);
 	virtual ~CvUnitAI();
+
+	CvUnitAI& operator=(const CvUnitAI& other);
 
 	void AI_init(UnitAITypes eUnitAI, int iBirthmark);
 	void AI_uninit();
@@ -67,6 +70,7 @@ public:
 	bool AI_isAwaitingContract() const;
 	bool AI_isCityGarrison(const CvCity* pCity) const;
 	void AI_setAsGarrison(const CvCity* pCity = NULL);
+	int AI_searchRange(int iRange = 1) const;
 
 	BuildingTypes getIntendedConstructBuilding() const { return m_eIntendedConstructBuilding; };
 
@@ -87,8 +91,8 @@ protected:
 	int m_iGarrisonCity;
 	int m_iAffirmedGarrisonCity;
 
-	BuildingTypes	m_eIntendedConstructBuilding;	//	Used to coordinate subdued animal and great person builds
-	static ConstructionNeeds*	m_constructionNeeds;
+	BuildingTypes m_eIntendedConstructBuilding; // Used to coordinate subdued animal and great person builds
+	static ConstructionNeeds* m_constructionNeeds;
 
 	int m_iGroupLeadOverride;
 	int m_iPredictedHitPoints;
@@ -103,9 +107,9 @@ protected:
 	void doUnitAIMove();
 
 	void AI_animalMove();
+	bool AI_SettleFirstCity();
 	void AI_settleMove();
 	int AI_minSettlerDefense() const;
-	bool Worker_CanDefend();
 	bool IsAbroad();
 	int GetNumberOfUnitsInGroup();
 	bool AI_upgradeWorker();
@@ -171,57 +175,6 @@ protected:
 
 	bool AI_shadow(UnitAITypes eUnitAI, int iMax = -1, int iMaxRatio = -1, bool bWithCargoOnly = true, bool bOutsideCityOnly = false, int iMaxPath = MAX_INT);
 
-	struct GroupingParams
-	{
-		GroupingParams()
-			: eUnitAI(NO_UNITAI)
-			, iMaxGroup(-1)
-			, iMaxOwnUnitAI(-1)
-			, iMinUnitAI(-1)
-			, bIgnoreFaster(false)
-			, bIgnoreOwnUnitType(false)
-			, bStackOfDoom(false)
-			, bBiggerGroupOnly(false)
-			, bMergeWholeGroup(false)
-			, iMaxPath(MAX_INT)
-			, bAllowRegrouping(false)
-			, bWithCargoOnly(false)
-			, bInCityOnly(false)
-			, eIgnoreMissionAIType(NO_MISSIONAI)
-		{}
-		GroupingParams& withUnitAI(UnitAITypes unitAI) { eUnitAI = unitAI; return *this; }
-		GroupingParams& maxGroupSize(int maxGroup) { iMaxGroup = maxGroup; return *this; }
-		GroupingParams& maxOwnUnitAI(int maxOwnUnitAI) { iMaxOwnUnitAI = maxOwnUnitAI; return *this; }
-		GroupingParams& minUnitAI(int minUnitAI) { iMinUnitAI = minUnitAI; return *this; }
-		GroupingParams& ignoreFaster(bool state = true) { bIgnoreFaster = state; return *this; }
-		GroupingParams& ignoreOwnUnitType(bool state = true) { bIgnoreOwnUnitType = state; return *this; }
-		GroupingParams& biggerGroupOnly(bool state = true) { bBiggerGroupOnly = state; return *this; }
-		GroupingParams& mergeWholeGroup(bool state = true) { bBiggerGroupOnly = state; return *this; }
-		GroupingParams& stackOfDoom(bool state = true) { bStackOfDoom = state; return *this; }
-		GroupingParams& maxPathTurns(int maxPath) { iMaxPath = maxPath; return *this; }
-		GroupingParams& allowRegrouping(bool state = true) { bAllowRegrouping = state; return *this; }
-		GroupingParams& withCargoOnly(bool state = true) { bWithCargoOnly = state; return *this; }
-		GroupingParams& inCityOnly(bool state = true) { bInCityOnly = state; return *this; }
-		GroupingParams& ignoreMissionAIType(MissionAITypes ignoreMissionAIType) { eIgnoreMissionAIType = ignoreMissionAIType; return *this; }
-
-		UnitAITypes eUnitAI;
-		int iMaxGroup;
-		int iMaxOwnUnitAI;
-		int iMinUnitAI;
-		bool bIgnoreFaster;
-		bool bIgnoreOwnUnitType;
-		bool bStackOfDoom;
-		bool bBiggerGroupOnly;
-		bool bMergeWholeGroup;
-		int iMaxPath;
-		bool bAllowRegrouping;
-		bool bWithCargoOnly;
-		bool bInCityOnly;
-		MissionAITypes eIgnoreMissionAIType;
-	};
-
-
-	// Returns true if a group was joined or a mission was pushed...
 	bool AI_group(const GroupingParams& params);
 
 	//bool AI_load(UnitAITypes eUnitAI, MissionAITypes eMissionAI, UnitAITypes eTransportedUnitAI = NO_UNITAI, int iMinCargo = -1, int iMinCargoSpace = -1, int iMaxCargoSpace = -1, int iMaxCargoOurUnitAI = -1, int iFlags = 0, int iMaxPath = MAX_INT, int iMaxTransportPath = MAX_INT);
@@ -233,29 +186,26 @@ protected:
 	bool AI_guardBonus(int iMinValue = 0);
 	int AI_getPlotDefendersNeeded(const CvPlot* pPlot, int iExtra) const;
 	bool AI_guardFort(bool bSearch = true);
-	// Super Forts begin *AI_defense*
+
 	bool AI_guardFortMinDefender(bool bSearch = true);
-	// Super Forts end
+
 	bool AI_guardCitySite();
 	bool AI_guardSpy(int iRandomPercent);
-	bool AI_destroySpy();
-	bool AI_sabotageSpy();
-	bool AI_pickupTargetSpy();
+
 	bool AI_chokeDefend();
 	bool AI_heal(int iDamagePercent = 0, int iMaxPath = MAX_INT);
 	bool AI_afterAttack();
-	/*TB Prophet Mod begin*/
+
 	bool AI_foundReligion();
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 	bool AI_cureAffliction(PromotionLineTypes eAfflictionLine);
 #endif
-	/*TB Prophet Mod end*/
 	bool AI_goldenAge();
 	bool AI_spreadReligion();
 	bool AI_spreadCorporation();
 	bool AI_spreadReligionAirlift();
 	bool AI_spreadCorporationAirlift();
-	bool AI_discover(bool bThisTurnOnly = false, bool bFirstResearchOnly = false);
+	bool AI_discover(const bool bFirstResearchOnly = false);
 
 	bool AI_leadLegend();
 
@@ -283,11 +233,10 @@ protected:
 	bool AI_patrol(bool bIgnoreDanger = false);
 	bool AI_defend();
 	bool AI_safety(int iRange = 1);
+	bool AI_reachHome(const bool bMockRun = false) const;
 	bool AI_hide();
 	bool AI_goody(int iRange);
 
-	// Send explorer units to group up with combat groups if we are at war
-	// Return true if it happens
 	bool AI_explorerJoinOffensiveStacks();
 	bool AI_explore();
 	bool AI_exploreRange(int iRange);
@@ -300,16 +249,13 @@ protected:
 	bool AI_bombardCity();
 	bool AI_cityAttack(int iRange, int iOddsThreshold, bool bFollow = false);
 	bool AI_anyAttack(int iRange, int iOddsThreshold, int iMinStack = 0, bool bAllowCities = true, bool bFollow = false);
-	bool AI_attackTargets(int iRange, int iOddsThreshold, int iMinStack = 0, bool bAllowCities = true, bool bFollow = false);
 
-// Dale - RB: Field Bombard
 	bool AI_RbombardPlot(int iRange, int iBonusValueThreshold); // RevolutionDCM
 	bool AI_RbombardUnit(int iRange, int iHighestOddsThreshold, int iMinStack, int iSeigeDiff, int iPowerThreshold, bool bCity = false);
 	bool AI_RbombardCity(const CvCity* pCity);
 	bool AI_RbombardNaval();
-// Dale - FE: Fighters
+
 	bool AI_FEngage();
-// ! Dale
 
 	bool AI_rangeAttack(int iRange);
 	bool AI_leaveAttack(int iRange, int iThreshold, int iStrengthThreshold);
@@ -391,7 +337,6 @@ protected:
 	int AI_nukeValue(const CvCity* pCity) const;
 	bool AI_canPillage(const CvPlot& kPlot) const;
 
-	int AI_searchRange(int iRange) const;
 	bool AI_plotValid(const CvPlot* pPlot) const;
 
 	int AI_finalOddsThreshold(const CvPlot* pPlot, int iOddsThreshold) const;
@@ -480,7 +425,9 @@ public:
 	bool AI_arrest();
 	bool AI_ambush(int iOddsThreshold, bool bAssassinationOnly = false);
 
-	bool AI_activateStatus(bool bChange, bool bStack, PromotionTypes eStatus, CvUnit* pUnit = NULL);
+private:
+	bool AI_activateStatus(bool bStack, PromotionTypes eStatus, CvUnit* pUnit);
+public:
 	bool AI_selectStatus(bool bStack, CvUnit* pUnit = NULL);
 	bool AI_groupSelectStatus();
 
@@ -496,8 +443,6 @@ public:
 	bool AI_isNegativePropertyUnit() const;
 	int getMyAggression(int iAttackProb) const;
 
-	//	Check whether a plot is dangerous for the unit (alone) with provided acceptable
-	//	survival odds
 	bool exposedToDanger(const CvPlot* pPlot, int acceptableOdds, bool bConsiderOnlyWorstThreat = false) const;
 	bool getThreateningUnit(const CvPlot* pPlot, CvUnit*& pThreateningUnit, const CvPlot* pAttackPlot, int& iIndex, bool bReturnWorstOfMultiple = false) const;
 

@@ -297,26 +297,26 @@ void CvEventReporter::gotoPlotSet(CvPlot *pPlot, PlayerTypes ePlayer)
 	m_kPythonEventMgr.reportGotoPlotSet(pPlot, ePlayer);
 }
 
-void CvEventReporter::cityBuilt( CvCity *pCity, CvUnit *pUnit )
+void CvEventReporter::cityBuilt(CvCity* pCity, CvUnit* pUnit)
 {
 	m_kPythonEventMgr.reportCityBuilt(pCity, pUnit);
 	m_kStatistics.cityBuilt(pCity);
 }
 
-void CvEventReporter::cityRazed( CvCity *pCity, PlayerTypes ePlayer )
+void CvEventReporter::cityRazed(CvCity* pCity, PlayerTypes ePlayer)
 {
 	m_kPythonEventMgr.reportCityRazed(pCity, ePlayer);
-	m_kStatistics.cityRazed(pCity, ePlayer);
+	m_kStatistics.cityRazed(ePlayer);
 }
 
-void CvEventReporter::cityAcquired(PlayerTypes eOldOwner, PlayerTypes iPlayer, CvCity* pCity, bool bConquest, bool bTrade)
+void CvEventReporter::cityAcquired(PlayerTypes eOldOwner, PlayerTypes ePlayer, CvCity* pCity, bool bConquest, bool bTrade, bool bAutoRaze)
 {
-	m_kPythonEventMgr.reportCityAcquired(eOldOwner, iPlayer, pCity, bConquest, bTrade);
+	m_kPythonEventMgr.reportCityAcquired(eOldOwner, ePlayer, pCity, bConquest, bTrade, bAutoRaze);
 }
 
-void CvEventReporter::cityAcquiredAndKept(PlayerTypes iPlayer, CvCity* pCity)
+void CvEventReporter::cityAcquiredAndKept(PlayerTypes eOldOwner, PlayerTypes ePlayer, CvCity* pCity, bool bConquest, bool bTrade)
 {
-	m_kPythonEventMgr.reportCityAcquiredAndKept(iPlayer, pCity);
+	m_kPythonEventMgr.reportCityAcquiredAndKept(eOldOwner, ePlayer, pCity, bConquest, bTrade);
 }
 
 void CvEventReporter::cityLost( CvCity *pCity)
@@ -378,11 +378,6 @@ void CvEventReporter::selectionGroupPushMission(CvSelectionGroup* pSelectionGrou
 	m_kPythonEventMgr.reportSelectionGroupPushMission(pSelectionGroup, eMission);
 }
 
-void CvEventReporter::unitMove(CvPlot* pPlot, CvUnit* pUnit, CvPlot* pOldPlot)
-{
-	m_kPythonEventMgr.reportUnitMove(pPlot, pUnit, pOldPlot);
-}
-
 void CvEventReporter::unitCreated(CvUnit *pUnit)
 {
 	m_kPythonEventMgr.reportUnitCreated(pUnit);
@@ -400,16 +395,9 @@ void CvEventReporter::unitKilled(CvUnit *pUnit, PlayerTypes eAttacker )
 	m_kStatistics.unitKilled(pUnit, eAttacker);
 }
 
-// BUG - Unit Captured Event - start
 void CvEventReporter::unitCaptured(PlayerTypes eFromPlayer, UnitTypes eUnitType, CvUnit* pNewUnit)
 {
 	m_kPythonEventMgr.reportUnitCaptured(eFromPlayer, eUnitType, pNewUnit);
-}
-// BUG - Unit Captured Event - end
-
-void CvEventReporter::unitLost(CvUnit *pUnit)
-{
-	m_kPythonEventMgr.reportUnitLost(pUnit);
 }
 
 void CvEventReporter::unitPromoted(CvUnit *pUnit, PromotionTypes ePromotion)
@@ -417,16 +405,16 @@ void CvEventReporter::unitPromoted(CvUnit *pUnit, PromotionTypes ePromotion)
 	m_kPythonEventMgr.reportUnitPromoted(pUnit, ePromotion);
 }
 
-// BUG - Upgrade Unit Event - start
 void CvEventReporter::unitUpgraded(CvUnit *pOldUnit, CvUnit *pNewUnit, int iPrice)
 {
 	m_kPythonEventMgr.reportUnitUpgraded(pOldUnit, pNewUnit, iPrice);
 }
-// BUG - Upgrade Unit Event - end
 
-void CvEventReporter::unitSelected( CvUnit *pUnit)
+/*DllExport*/ void CvEventReporter::unitSelected( CvUnit *pUnit)
 {
-	m_kPythonEventMgr.reportUnitSelected(pUnit);
+#ifdef _DEBUG
+	OutputDebugString(CvString::format("exe says that unit %S (%d) at (%d,%d) has been selected\n", pUnit->getDescription().c_str(), pUnit->getID(), pUnit->getX(), pUnit->getY()).c_str());
+#endif
 }
 
 void CvEventReporter::unitRename(CvUnit* pUnit)
@@ -552,13 +540,6 @@ void CvEventReporter::playerGoldTrade(PlayerTypes eFromPlayer, PlayerTypes eToPl
 {
 	m_kPythonEventMgr.reportPlayerGoldTrade(eFromPlayer, eToPlayer, iAmount);
 }
-
-// BUG - Revolution Event - start
-void CvEventReporter::playerRevolution(PlayerTypes ePlayerID, int iAnarchyLength, CivicTypes* paeOldCivics, CivicTypes* paeNewCivics)
-{
-	m_kPythonEventMgr.reportPlayerRevolution(ePlayerID, iAnarchyLength, paeOldCivics, paeNewCivics);
-}
-// BUG - Revolution Event - end
 
 void CvEventReporter::chat(CvWString szString)
 {

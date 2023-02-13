@@ -9,7 +9,6 @@ EXPORTS
 ?getX@CvUnit@@QBEHXZ=?getViewportX@CvUnit@@QBEHXZ
 ?getY@CvUnit@@QBEHXZ=?getViewportY@CvUnit@@QBEHXZ
 ?plot@CvUnit@@QBEPAVCvPlot@@XZ=?plotExternal@CvUnit@@QBEPAVCvPlot@@XZ
-?plot@CvSelectionGroup@@QBEPAVCvPlot@@XZ=?plotExternal@CvSelectionGroup@@QBEPAVCvPlot@@XZ
 ?plot@CvCity@@QBEPAVCvPlot@@XZ=?plotExternal@CvCity@@QBEPAVCvPlot@@XZ
 ?getX@CvCity@@QBEHXZ=?getViewportX@CvCity@@QBEHXZ
 ?getY@CvCity@@QBEHXZ=?getViewportY@CvCity@@QBEHXZ
@@ -17,7 +16,7 @@ EXPORTS
 ?nextUnit@CvPlayer@@QBEPAVCvUnit@@PAH_N@Z=?nextUnitExternal@CvPlayer@@QBEPAVCvUnit@@PAH_N@Z
 ?firstCity@CvPlayer@@QBEPAVCvCity@@PAH_N@Z=?firstCityExternal@CvPlayer@@QBEPAVCvCity@@PAH_N@Z
 ?nextCity@CvPlayer@@QBEPAVCvCity@@PAH_N@Z=?nextCityExternal@CvPlayer@@QBEPAVCvCity@@PAH_N@Z
-?headMissionQueueNode@CvSelectionGroup@@QBEPAV?$CLLNode@UMissionData@@@@XZ=?headMissionQueueNodeExternal@CvSelectionGroup@@QBEPAV?$CLLNode@UMissionData@@@@XZ
+?getTeamNonInl@CvTeamAI@@SAAAV1@W4TeamTypes@@@Z=?getTeam@CvTeamAI@@SAAAV1@W4TeamTypes@@@Z
 ?erasePlots@CvMap@@QAEXXZ=?erasePlots@CvMapExternal@@QAEXXZ
 ?findCity@CvMap@@QAEPAVCvCity@@HHW4PlayerTypes@@W4TeamTypes@@_N21W4DirectionTypes@@PAV2@@Z=?findCity@CvMapExternal@@QAEPAVCvCity@@HHW4PlayerTypes@@W4TeamTypes@@_N21W4DirectionTypes@@PAV2@@Z
 ?getGridHeight@CvMap@@QBEHXZ=?getGridHeight@CvMapExternal@@QBEHXZ
@@ -44,8 +43,11 @@ EXPORTS
 ?getMap@CvGlobals@@QAEAAVCvMap@@XZ=?getMap@CvGlobals@@QAEAAVCvMapExternal@@XZ
 ?getBestDefender@CvPlot@@QBEPAVCvUnit@@W4PlayerTypes@@0PBV2@_N22@Z=?getBestDefenderExternal@CvPlot@@QBEPAVCvUnit@@W4PlayerTypes@@0PBV2@_N22@Z
 ?setAIAutoPlay@CvGame@@QAEXH@Z=?setAIAutoPlayExternal@CvGame@@QAEXH@Z
-?lastMissionPlot@CvSelectionGroup@@QAEPAVCvPlot@@XZ=?_lastMissionPlot@CvSelectionGroup@@QAEPAVCvPlot@@XZ
-?canAllMove@CvSelectionGroup@@QAE_NXZ=?_canAllMove@CvSelectionGroup@@QAE_NXZ
-?isBusy@CvSelectionGroup@@QAE_NXZ=?_isBusy@CvSelectionGroup@@QAE_NXZ
-?canMoveInto@CvSelectionGroup@@QAE_NPAVCvPlot@@_N@Z=?_canMoveInto@CvSelectionGroup@@QAE_NPAVCvPlot@@_N@Z
-?canMoveOrAttackInto@CvSelectionGroup@@QAE_NPAVCvPlot@@_N@Z=?_canMoveOrAttackInto@CvSelectionGroup@@QAE_NPAVCvPlot@@_N@Z
+?plot@CvSelectionGroup@@QBEPAVCvPlot@@XZ=?plotExternal@CvSelectionGroup@@QBEPAVCvPlot@@XZ
+?headMissionQueueNode@CvSelectionGroup@@QBEPAV?$CLLNode@UMissionData@@@@XZ=?headMissionQueueNodeExternal@CvSelectionGroup@@QBEPAV?$CLLNode@UMissionData@@@@XZ
+?lastMissionPlot@CvSelectionGroup@@QAEPAVCvPlot@@XZ=?lastMissionPlot@CvSelectionGroup@@QBEPAVCvPlot@@XZ
+?canAllMove@CvSelectionGroup@@QAE_NXZ=?canAllMove@CvSelectionGroup@@QBE_NXZ
+?isBusy@CvSelectionGroup@@QAE_NXZ=?isBusy@CvSelectionGroup@@QBE_NXZ
+?getNumLanguages@CvGameText@@QBEHXZ=?getNumLanguages@CvGameText@@SAHXZ
+?setNumLanguages@CvGameText@@QAEXH@Z=?setNumLanguages@CvGameText@@SAXH@Z
+?cyclePlotUnits@CvGame@@QBE_NPAVCvPlot@@_N1H@Z=?cyclePlotUnits@CvGame@@QBE_NPBVCvPlot@@_N1H@Z

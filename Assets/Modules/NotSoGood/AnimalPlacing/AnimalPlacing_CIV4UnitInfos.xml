@@ -99,7 +99,7 @@
 				<BuildType>BUILD_BONUS_VANILLA</BuildType>
 			</Builds>
 			<PrereqTech>TECH_AGRICULTURAL_TOOLS</PrereqTech>
-			<iCost>500</iCost>
+			<iCost>415</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iWorkRate>500</iWorkRate>

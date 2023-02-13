@@ -1,9 +1,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvGlobals.h"
-
 #include <psapi.h>
 
-static CRITICAL_SECTION g_cPythonSection;
 #ifdef USE_INTERNAL_PROFILER
 static CRITICAL_SECTION cSampleSection;
 #endif
@@ -40,7 +38,7 @@ bool runProcess(const std::string& exe, const std::string& workingDir)
 
 BOOL APIENTRY DllMain(HANDLE hModule,
 					  DWORD  ul_reason_for_call,
-					  LPVOID lpReserved)
+					  LPVOID /*lpReserved*/)
 {
 	switch( ul_reason_for_call ) {
 	case DLL_PROCESS_ATTACH:
@@ -50,10 +48,8 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 		// The DLL is being loaded into the virtual address space of the current process as a result of the process starting up
 		OutputDebugString("[C2C] DLL_PROCESS_ATTACH\n");
 
-		InitializeCriticalSection(&g_cPythonSection);
-
 #ifdef USE_INTERNAL_PROFILER
-		InitializeCriticalSectionAndSpinCount(&cSampleSection,2000);
+		InitializeCriticalSectionAndSpinCount(&cSampleSection, 2000);
 #endif
 
 		// set timer precision

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\Xml\Schema\Caveman2Cosmos.xsd">
+	<BonusArtInfos>
+		<BonusArtInfo>
+			<Type>ART_DEF_BONUS_NANOPUNK</Type>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Empty.nif</NIF>
+			<KFM></KFM>
+			<Button>art/spacepunk.dds</Button>
+			<FontButtonIndex>104</FontButtonIndex>
+		</BonusArtInfo>
+	</BonusArtInfos>
+</Civ4ArtDefines>

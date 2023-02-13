@@ -4,8 +4,8 @@
 //
 
 #include "CvGameCoreDLL.h"
-#include "CvArtFileMgr.h"
 #include "CvBuildingInfo.h"
+#include "CvBonusInfo.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvInfos.h"
@@ -18,12 +18,20 @@
 #include "CyPlayer.h"
 #include "CyTeam.h"
 
-CyGlobalContext::CyGlobalContext()
-{
-}
+std::vector<CyPlayer> g_cyPlayers;
+std::vector<CyTeam>   g_cyTeams;
+std::vector<CyMap>    g_cyMaps;
 
-CyGlobalContext::~CyGlobalContext()
+void CyGlobalContext::initStatics()
 {
+	for (int i = 0; i < MAX_PLAYERS; i++)
+		g_cyPlayers.push_back(CyPlayer(&GET_PLAYER((PlayerTypes)i)));
+
+	for (int i = 0; i < MAX_TEAMS; i++)
+		g_cyTeams.push_back(CyTeam(&GET_TEAM((TeamTypes)i)));
+
+	for (int i = 0; i < NUM_MAPS; i++)
+		g_cyMaps.push_back(CyMap((MapTypes)i));
 }
 
 CyGlobalContext& CyGlobalContext::getInstance()
@@ -47,95 +55,76 @@ CyGame* CyGlobalContext::getCyGame() const
 	return &cyGame;
 }
 
-
 CyMap* CyGlobalContext::getCyMap() const
 {
-	static CyMap cyMap(&GC.getMap());
-	return &cyMap;
-}
-
-void CyGlobalContext::switchMap(int iMap)
-{
-	GC.switchMap((MapTypes)iMap);
-}
-
-CyMap* CyGlobalContext::getMapByIndex(int iIndex)
-{
 	static CyMap cyMap;
-	cyMap = GC.getMapByIndex((MapTypes)iIndex);
 	return &cyMap;
+	//return g_cyMaps[CURRENT_MAP];
 }
 
-CyPlayer* CyGlobalContext::getCyPlayer(int idx) const
+void CyGlobalContext::switchMap(MapTypes eMap)
 {
-	static CyPlayer cyPlayers[MAX_PLAYERS];
-	static bool bInit = false;
-
-	if (!bInit)
-	{
-		for (int i = 0; i < MAX_PLAYERS; i++)
-			cyPlayers[i] = CyPlayer(&GET_PLAYER((PlayerTypes)i));
-		bInit = true;
-	}
-
-	if (idx >= 0 && idx < MAX_PLAYERS)
-	{
-		return &cyPlayers[idx];
-	}
-
-	FErrorMsg("Player index requested isn't valid");
-	return NULL;
+	GC.switchMap(eMap);
 }
 
+CyMap* CyGlobalContext::getMapByIndex(MapTypes eMap) const
+{
+	FASSERT_BOUNDS(0, NUM_MAPS, eMap);
+	return &g_cyMaps[eMap];
+}
+
+CyPlayer* CyGlobalContext::getCyPlayer(PlayerTypes ePlayer) const
+{
+	FASSERT_BOUNDS(0, MAX_PLAYERS, ePlayer);
+	return ePlayer >= 0 && ePlayer < MAX_PLAYERS ? &g_cyPlayers[ePlayer] : NULL;
+}
 
 CyPlayer* CyGlobalContext::getCyActivePlayer() const
 {
-	const PlayerTypes pt = GC.getGame().getActivePlayer();
-	return pt != NO_PLAYER ? getCyPlayer(pt) : NULL;
+	return getCyPlayer(GC.getGame().getActivePlayer());
 }
-
 
 CvRandom& CyGlobalContext::getCyASyncRand() const
 {
 	return GC.getASyncRand();
 }
 
-CyTeam* CyGlobalContext::getCyTeam(int i) const
+CyTeam* CyGlobalContext::getCyTeam(TeamTypes eTeam) const
 {
-	static CyTeam cyTeams[MAX_TEAMS];
-	static bool bInit=false;
+	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam);
+	return eTeam < MAX_TEAMS ? &g_cyTeams[eTeam] : NULL;
+}
 
-	if (!bInit)
+int CyGlobalContext::getInfoTypeForString(const char* szInfoType, bool bHideAssert) const
+{
+	return GC.getInfoTypeForString(szInfoType, bHideAssert);
+}
+
+int CyGlobalContext::getNumFlavorTypes() const
+{
+	return GC.getNumFlavorTypes();
+}
+
+const char* CyGlobalContext::getFlavorType(FlavorTypes e) const
+{
+	return GC.getFlavorTypes(e).c_str();
+}
+
+const python::list CyGlobalContext::getFlavorTypes() const
+{
+	python::list l = python::list();
+	const CvString*& flavorTypes = GC.getFlavorTypes();
+
+	for (int i = 0, num = GC.getNumFlavorTypes(); i < num; i++)
 	{
-		int j;
-		for(j=0;j<MAX_TEAMS;j++)
-		{
-			cyTeams[j]=CyTeam(&GET_TEAM((TeamTypes)j));
-		}
-		bInit = true;
+		l.append(flavorTypes[i].c_str());
 	}
-
-	return i<MAX_TEAMS ? &cyTeams[i] : NULL;
+	return l;
 }
 
-int CyGlobalContext::getInfoTypeForString(const char* szInfoType) const
+const CvMapInfo& CyGlobalContext::getMapInfo(MapTypes eMap) const
 {
-	return GC.getInfoTypeForString(szInfoType);
-}
-
-int CyGlobalContext::getInfoTypeForStringWithHiddenAssert(const char* szInfoType) const
-{
-	return GC.getInfoTypeForString(szInfoType, true);
-}
-
-int CyGlobalContext::getTypesEnum(const char* szType) const
-{
-	return GC.getTypesEnum(szType);
-}
-
-const CvMapInfo& CyGlobalContext::getMapInfo(int i) const
-{
-	return GC.getMapInfo((MapTypes)i);
+	return GC.getMapInfo(eMap);
 }
 
 const CvEffectInfo* CyGlobalContext::getEffectInfo(int /*EffectTypes*/ i) const
@@ -411,6 +400,13 @@ const CvColorInfo* CyGlobalContext::getColorInfo(int i) const
 	return (i>=0 && i<GC.getNumColorInfos()) ? &GC.getColorInfo((ColorTypes)i) : NULL;
 }
 
+
+const CvAdvisorInfo* CyGlobalContext::getAdvisorInfo(int i) const
+{
+	return (i>=0 && i<GC.getNumAdvisorInfos()) ? &GC.getAdvisorInfo((AdvisorTypes)i) : NULL;
+}
+
+
 const CvPropertyInfo* CyGlobalContext::getPropertyInfo(int i) const
 {
 	return (i>=0 && i<GC.getNumPropertyInfos()) ? &GC.getPropertyInfo((PropertyTypes)i) : NULL;
@@ -526,54 +522,6 @@ const CvEspionageMissionInfo* CyGlobalContext::getEspionageMissionInfo(int i) co
 const CvUnitArtStyleTypeInfo* CyGlobalContext::getUnitArtStyleTypeInfo(int i) const
 {
 	return (i>=0 && i<GC.getNumUnitArtStyleTypeInfos()) ? &GC.getUnitArtStyleTypeInfo((UnitArtStyleTypes)i) : NULL;
-}
-
-
-const CvArtInfoInterface* CyGlobalContext::getInterfaceArtInfo(int i) const
-{
-	return (i>=0 && i<ARTFILEMGR.getNumInterfaceArtInfos()) ? &ARTFILEMGR.getInterfaceArtInfo(i) : NULL;
-}
-
-
-const CvArtInfoMovie* CyGlobalContext::getMovieArtInfo(int i) const
-{
-	return (i>=0 && i<ARTFILEMGR.getNumMovieArtInfos()) ? &ARTFILEMGR.getMovieArtInfo(i) : NULL;
-}
-
-
-const CvArtInfoMisc* CyGlobalContext::getMiscArtInfo(int i) const
-{
-	return (i>=0 && i<ARTFILEMGR.getNumMiscArtInfos()) ? &ARTFILEMGR.getMiscArtInfo(i) : NULL;
-}
-
-
-const CvArtInfoUnit* CyGlobalContext::getUnitArtInfo(int i) const
-{
-	return (i>=0 && i<ARTFILEMGR.getNumUnitArtInfos()) ? &ARTFILEMGR.getUnitArtInfo(i) : NULL;
-}
-
-
-const CvArtInfoBuilding* CyGlobalContext::getBuildingArtInfo(int i) const
-{
-	return (i>=0 && i<ARTFILEMGR.getNumBuildingArtInfos()) ? &ARTFILEMGR.getBuildingArtInfo(i) : NULL;
-}
-
-
-const CvArtInfoCivilization* CyGlobalContext::getCivilizationArtInfo(int i) const
-{
-	return (i>=0 && i<ARTFILEMGR.getNumCivilizationArtInfos()) ? &ARTFILEMGR.getCivilizationArtInfo(i) : NULL;
-}
-
-
-const CvArtInfoBonus* CyGlobalContext::getBonusArtInfo(int i) const
-{
-	return (i>=0 && i<ARTFILEMGR.getNumBonusArtInfos()) ? &ARTFILEMGR.getBonusArtInfo(i) : NULL;
-}
-
-
-const CvArtInfoImprovement* CyGlobalContext::getImprovementArtInfo(int i) const
-{
-	return (i>=0 && i<ARTFILEMGR.getNumImprovementArtInfos()) ? &ARTFILEMGR.getImprovementArtInfo(i) : NULL;
 }
 
 

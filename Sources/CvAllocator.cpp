@@ -130,7 +130,7 @@ void CvFreeArray(void* p)
 	if (gDLL)
 	{
 #ifdef _DEBUG
-		memset(p, 0xFA, gDLL->memSize(p));
+		// memset(p, 0xFA, gDLL->memSize(p));
 #endif
 		gDLL->delMemArray(p, __FILE__, __LINE__);
 	}
@@ -869,7 +869,7 @@ namespace MemTrack
 			}
 		}
 
-		std::sort(diffs.rbegin(), diffs.rend());
+		algo::sort(diffs);
 
 		for (std::vector<MemInfoDiff>::const_iterator itr = diffs.begin(); itr != diffs.end(); ++itr)
 		{

@@ -5,9 +5,9 @@ from CvPythonExtensions import *
 class PediaTech:
 
 	def __init__(self, parent, H_BOT_ROW):
-		import TestCode
-		self.GOMReqs = TestCode.TestCode([0])
-		
+		import HelperFunctions
+		self.HF = HelperFunctions.HelperFunctions([0])
+
 		self.main = parent
 
 		H_PEDIA_PAGE = parent.H_PEDIA_PAGE
@@ -99,7 +99,7 @@ class PediaTech:
 		iEra = CvTheTechInfo.getEra()
 #		szTechEra = TRNSLTR.changeTextColor(GC.getEraInfo(iEra).getDescription(), iEra * 255 / GC.getNumEraInfos())
 		if CyPlayer:
-			szTechCost = TRNSLTR.getText("TXT_KEY_PEDIA_COST", (GC.getTeam(GC.getGame().getActiveTeam()).getResearchCost(iTheTech),))
+			szTechCost = TRNSLTR.getText("TXT_KEY_PEDIA_COST", (GC.getTeam(CyPlayer.getTeam()).getResearchCost(iTheTech),))
 		else:
 			szTechCost = TRNSLTR.getText("%d1_Num", (CvTheTechInfo.getResearchCost(),))
 		szCostText = szTechCost + u"%c" % (GC.getCommerceInfo(CommerceTypes.COMMERCE_RESEARCH).getChar())
@@ -156,7 +156,7 @@ class PediaTech:
 			aGOMTechReqList = []
 			for i in range(2):
 				aGOMTechReqList.append([])
-			self.GOMReqs.getGOMReqs(GC.getBuildingInfo(iBuilding).getConstructCondition(), GOMTypes.GOM_TECH, aGOMTechReqList)
+			self.HF.getGOMReqs(GC.getBuildingInfo(iBuilding).getConstructCondition(), GOMTypes.GOM_TECH, aGOMTechReqList)
 			if isTechRequiredForBuilding(iTheTech, iBuilding) or iTheTech in aGOMTechReqList[BoolExprTypes.BOOLEXPR_AND] or iTheTech in aGOMTechReqList[BoolExprTypes.BOOLEXPR_OR]:
 				aList1.append(iBuilding)
 		for iProject in range(GC.getNumProjectInfos()):
@@ -186,7 +186,7 @@ class PediaTech:
 			aGOMTechReqList = []
 			for i in range(2):
 				aGOMTechReqList.append([])
-			self.GOMReqs.getGOMReqs(GC.getUnitInfo(iUnit).getTrainCondition(), GOMTypes.GOM_TECH, aGOMTechReqList)
+			self.HF.getGOMReqs(GC.getUnitInfo(iUnit).getTrainCondition(), GOMTypes.GOM_TECH, aGOMTechReqList)
 			if isTechRequiredForUnit(iTheTech, iUnit) or iTheTech in aGOMTechReqList[BoolExprTypes.BOOLEXPR_AND] or iTheTech in aGOMTechReqList[BoolExprTypes.BOOLEXPR_OR]:
 				aList1.append(iUnit)
 		if aList1:
@@ -297,17 +297,11 @@ class PediaTech:
 			screen.show(Pnl)
 		# Leads To
 		Pnl = aName()
+
 		screen.addPanel(Pnl, TRNSLTR.getText("TXT_KEY_PEDIA_LEADS_TO", ()), "", False, True, self.X_COL_3, Y_BOT_ROW_3, W_COL_3, H_BOT_ROW, ePnlBlue50)
-		for i in range(GC.getNumTechInfos()):
-			CvTechInfo = GC.getTechInfo(i)
-
-			for iType in CvTechInfo.getPrereqOrTechs():
-				if iType == iTheTech:
-					screen.attachImageButton(Pnl, "", CvTechInfo.getButton(), enumGBS, eWidJuToDerTech, i, 1, False)
-
-			for iType in CvTechInfo.getPrereqAndTechs():
-				if iType == iTheTech:
-					screen.attachImageButton(Pnl, "", CvTechInfo.getButton(), enumGBS, eWidJuToDerTech, i, 1, False)
+		for i in xrange(CvTheTechInfo.getNumLeadsToTechs()):
+			iTechX = CvTheTechInfo.getLeadsToTech(i)
+			screen.attachImageButton(Pnl, "", GC.getTechInfo(iTechX).getButton(), enumGBS, eWidJuToDerTech, iTechX, 1, False)
 
 		# Quote
 		szTxt = CvTheTechInfo.getQuote()

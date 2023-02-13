@@ -12,7 +12,7 @@ void CySelectionGroupInterface()
 {
 	OutputDebugString("Python Extension Module - CySelectionGroupInterface\n");
 
-	python::class_<CySelectionGroup>("CySelectionGroup")
+	python::class_<CySelectionGroup>("CySelectionGroup", python::no_init)
 		.def("pushMission", &CySelectionGroup::pushMission, "void (eMission, iData1, iData2, iFlags, bAppend, bManual, eMissionAI, pMissionAIPlot, pMissionAIUnit)")
 		.def("canStartMission", &CySelectionGroup::canStartMission, "bool (int iMission, int iData1, int iData2, CyPlot* pPlot, bool bTestVisible)")
 
@@ -21,7 +21,6 @@ void CySelectionGroupInterface()
 		.def("isWaiting", &CySelectionGroup::isWaiting, "bool ()")
 		.def("isFull", &CySelectionGroup::isFull, "bool ()")
 		.def("hasMoved", &CySelectionGroup::hasMoved, "bool ()")
-		.def("canMoveInto", &CySelectionGroup::canMoveInto, "bool (CyPlot* pPlot, bool bAttack) - can the group move into pPlot?")
 		.def("canFight", &CySelectionGroup::canFight, "bool ()")
 		.def("isInvisible", &CySelectionGroup::isInvisible, "bool (int eTeam)")
 

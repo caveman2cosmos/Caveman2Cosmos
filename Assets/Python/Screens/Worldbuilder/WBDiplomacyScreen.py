@@ -206,7 +206,7 @@ class WBDiplomacyScreen:
 				sText = CyTranslator().getText("[ICON_DEFENSIVEPACT]",())
 			screen.setTableText("WBDiplomacy", 7, iRow, "<font=4>" + sText + "</font>", "", WidgetTypes.WIDGET_PYTHON, 1034, iTeam , 1<<2)
 			sText = ""
-			if pTeam.isAtWar(iSelectedTeam):
+			if pTeam.isAtWarWith(iSelectedTeam):
 				sText = CyTranslator().getText("[ICON_OCCUPATION]",())
 			screen.setTableText("WBDiplomacy", 8, iRow, "<font=4>" + sText + "</font>", "", WidgetTypes.WIDGET_PYTHON, 1035, iTeam , 1<<2)
 			screen.setTableText("WBDiplomacy", 9, iRow, "<font=3>" + sWeariness + "</font>", "", WidgetTypes.WIDGET_PYTHON, 1036, iTeam, 1<<1)
@@ -391,7 +391,7 @@ class WBDiplomacyScreen:
 			elif inputClass.getData1() == 1034:
 				self.editDefensivePact(inputClass.getData2(), pSelectedTeam.isDefensivePact(inputClass.getData2()))
 			elif inputClass.getData1() == 1035:
-				self.editWarStatus(inputClass.getData2(), pSelectedTeam.isAtWar(inputClass.getData2()))
+				self.editWarStatus(inputClass.getData2(), pSelectedTeam.isAtWarWith(inputClass.getData2()))
 			elif inputClass.getData1() == 1036:
 				self.editWarWeariness(iSelectedTeam, inputClass.getData2())
 			self.setGeneralPage()
@@ -533,7 +533,7 @@ class WBDiplomacyScreen:
 
 	def editAttitude(self, iPlayer):
 		pPlayer = GC.getPlayer(iPlayer)
-		if pPlayer.isBarbarian(): return
+		if pPlayer.isNPC(): return
 		iPlayer2 = iPlayer
 		pPlayer1 = GC.getPlayer(iSelectedPlayer)
 		if bTowardsPlayer:
@@ -555,7 +555,7 @@ class WBDiplomacyScreen:
 		iPlayer2 = iPlayer
 		pPlayer1 = GC.getPlayer(iSelectedPlayer)
 		if bTowardsPlayer:
-			pPlayer1 = GC.getPlayer(iPlayer)
+			pPlayer1 = pPlayer
 			iPlayer2 = iSelectedPlayer
 		iCount = iChange
 		if bRemove:

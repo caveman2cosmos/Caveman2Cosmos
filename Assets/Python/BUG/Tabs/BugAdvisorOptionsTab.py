@@ -22,7 +22,6 @@ class BugAdvisorOptionsTab(BugOptionsTab.BugOptionsTab):
 		self.addLabel(screen, left, "Domestic_Advisor", "Domestic [F1]:")
 		leftL, leftR = self.addTwoColumnLayout(screen, left, "Advisors__CustDomAdv")
 		self.addTextDropdown(screen, leftL, leftR, "CustDomAdv__ProductionGrouping", True)
-		self.addCheckbox(screen, left, "MiscHover__CDAZoomCityDetails")
 
 		self.addLabel(screen, left, "Foreign_Advisor", "Foreign [F4]:")
 		comboBox = "Advisors_ComboBoxEFA"
@@ -31,7 +30,6 @@ class BugAdvisorOptionsTab(BugOptionsTab.BugOptionsTab):
 		self.addTextDropdown(screen, None, comboBox, "Advisors__EFAGlanceAttitudes")
 		self.addCheckbox(screen, left, "Advisors__EFAImprovedInfo")
 		self.addCheckbox(screen, left, "Advisors__EFADealTurnsLeft")
-		self.addCheckbox(screen, left, "MiscHover__TechTradeDenial")
 		self.addCheckbox(screen, left, "MiscHover__BonusTradeDenial")
 
 		self.addLabel(screen, center, "Technology_Advisor", "Technology [F6]:")

@@ -1,11 +1,12 @@
 //	Internal path generation engine
 
 #include "CvGameCoreDLL.h"
+#include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvMap.h"
 #include "CvPathGenerator.h"
-#include "CvSelectionGroup.h"
 #include "CvRandom.h"
+#include "CvPlayerAI.h"
 #include "CheckSum.h"
 
 #ifdef DYNAMIC_PATH_STRUCTURE_VALIDATION
@@ -353,8 +354,6 @@ void CvPathGenerator::ValidatePlotInfo(CvPathGeneratorPlotInfo* pPlotInfo)
 	}
 }
 
-bool CvPathGenerator::m_bFastMode = false;
-
 CvPathGenerator::CvPathGenerator(CvMap* pMap)
 	: m_map(pMap)
 	, m_plotInfo(new CvPathPlotInfoStore(pMap, 0))
@@ -692,7 +691,7 @@ void CvPathGenerator::DeleteChildTree(CvPathNode* node, bool bIsDeletionRoot)
 	node->m_firstChild = NULL;
 }
 
-bool CvPathGenerator::groupMatches(const CvSelectionGroup* pGroup, int iFlags, unsigned int& iGroupMembershipChecksum)
+bool CvPathGenerator::groupMatches(const CvSelectionGroup* pGroup, int iFlags, uint32_t& iGroupMembershipChecksum)
 {
 	iGroupMembershipChecksum = 0;
 
@@ -709,9 +708,9 @@ bool CvPathGenerator::groupMatches(const CvSelectionGroup* pGroup, int iFlags, u
 	return (m_iTurn == GC.getGame().getGameTurn() && m_currentGroupMembershipChecksum == iGroupMembershipChecksum && m_iFlags == iFlags);
 }
 
-bool	CvPathGenerator::haveRouteLength(const CvPlot* pTo, CvSelectionGroup* pGroup, int iFlags, int& iRouteLen)
+bool CvPathGenerator::haveRouteLength(const CvPlot* pTo, CvSelectionGroup* pGroup, int iFlags, int& iRouteLen)
 {
-	unsigned int dummy;
+	uint32_t dummy;
 	//	Only consider flags that effect the calculated path
 	iFlags &= SIGNIFICANT_PATHING_FLAGS;
 
@@ -882,7 +881,7 @@ bool CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 			iFlags |= MOVE_TERMINUS_DECLARES_WAR;
 		}
 
-		unsigned int iGroupMembershipChecksum;
+		uint32_t iGroupMembershipChecksum;
 		const bool bSameGroup = groupMatches(pGroup, iFlags, iGroupMembershipChecksum);
 
 		if (!bSameGroup)
@@ -906,7 +905,8 @@ bool CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 		// Optimize the case where we'e just stepping along the previously calculated path (as continueMission() does)
 		// If it is a MPOPTION_SIMULTANEOUS_TURNS game, don't apply that optimization to avoid sync issues
 		// TBOOSDEBUGNOTE : Changed !isHuman() to MPOPTION_SIMULTANEOUS_TURNS because it wasn't protecting against AI opponents withdrawing then re-evaluating Safety checks.
-		if (bSameGroup && m_generatedPath.lastPlot() == pTo && m_generatedPath.containsNode(pFrom))
+		if (bSameGroup && m_generatedPath.lastPlot() == pTo && m_generatedPath.containsNode(pFrom)
+		&& m_pBestTerminalNode != NULL && m_pBestTerminalNode->m_iPathTurns <= iMaxTurns)
 		{
 			bool bValid = true;
 
@@ -1395,7 +1395,7 @@ bool CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 												}
 												else
 												{
-													FAssert(false);
+													FErrorMsg("error");
 												}
 											}
 											continue;
@@ -1835,7 +1835,6 @@ bool CvPathGenerator::generatePathForHypotheticalUnit(const CvPlot* pFrom, const
 {
 	PROFILE_FUNC();
 
-	bool bResult;
 	CvUnit*	pTempUnit = GET_PLAYER(ePlayer).getTempUnit(eUnit, pFrom->getX(), pFrom->getY());
 
 	pTempUnit->finishMoves();
@@ -1847,7 +1846,7 @@ bool CvPathGenerator::generatePathForHypotheticalUnit(const CvPlot* pFrom, const
 	//	FUTURE - might want to move the no-land-units-across-water flags up to the callers once they
 	//	become aware of it.  For now it's here to prevent paths Python generates to build roads etc
 	//	crossing water
-	bResult = generatePath(pFrom, pTo, pTempUnit->getGroup(), iFlags | MOVE_NO_LAND_UNITS_ACROSS_WATER, iMaxTurns);
+	const bool bResult = generatePath(pFrom, pTo, pTempUnit->getGroup(), iFlags | MOVE_NO_LAND_UNITS_ACROSS_WATER, iMaxTurns);
 
 	GET_PLAYER(ePlayer).releaseTempUnit();
 
@@ -1885,8 +1884,6 @@ void CvPathGenerator::SelfTest()
 	int	iPathsRemaining = NUM_PATHS;
 	//	Pick an arbitrary unit with more than 1 movement point
 	const UnitTypes eLandUnit = GC.getUNIT_WORKER();
-
-	EnableMaxPerformance(true);
 
 	while( iPathsRemaining > 0 )
 	{
@@ -1954,8 +1951,6 @@ void CvPathGenerator::SelfTest()
 			GET_PLAYER((PlayerTypes)0).releaseTempUnit();
 		}
 	}
-
-	EnableMaxPerformance(false);
 
 	sprintf(buffer,"%d paths out of %d successful\r\n", iPathsSuccessful, NUM_PATHS);
 	OutputDebugString(buffer);

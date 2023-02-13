@@ -214,7 +214,10 @@ def pediaJumpToBuilding(argsList):
 	screenMap[PEDIA].pediaJump(-3, "", argsList[0])
 
 def pediaJumpToUnit(argsList):
-	screenMap[PEDIA].pediaJump(-2, "", argsList[0])
+	if argsList[0] > -1:
+		screenMap[PEDIA].pediaJump(-2, "", argsList[0])
+	else:
+		screenMap[PEDIA].pediaJump(10, "UnitCombat", argsList[0] + 100000)
 
 def pediaMain(argsList):
 	screenMap[PEDIA].pediaJump(-1, "", argsList[0])
@@ -258,9 +261,6 @@ def pediaJumpToCivic(argsList):
 def pediaJumpToReligion(argsList):
 	screenMap[PEDIA].pediaJump(9, "Religion", argsList[0])
 
-def pediaJumpToUnitChart(argsList):
-	screenMap[PEDIA].pediaJump(10, "UnitCombat", argsList[0])
-
 def pediaJumpToProject(argsList):
 	screenMap[PEDIA].pediaJump(10, "Project", argsList[0])
 
@@ -290,7 +290,9 @@ def showWorldBuilderScreen():
 
 def WorldBuilderExitCB():
 	print "WorldBuilderExitCB"
-	CyInterface().setWorldBuilder(False)
+	if CyInterface().isInAdvancedStart():
+		CyInterface().setWorldBuilder(False)
+	else: CyGame().exitWorldBuilder()
 
 def hideWorldBuilderScreen():
 	print "hideWorldBuilderScreen"
@@ -451,6 +453,7 @@ def rightMouseDown(argsList):
 
 def mouseOverPlot(argsList):
 
+	print argsList[0]
 	if argsList[0] == STRATEGY_OVERLAY_SCREEN:
 		overlayScreen.onMouseOverPlot()
 
@@ -712,7 +715,6 @@ def lateInit():
 	import WBProjectScreen
 	import WBTeamScreen
 	import WBPlayerScreen
-	import WBUnitScreen
 	import WBPromotionScreen
 	import WBDiplomacyScreen
 	import WBPlayerUnits
@@ -728,7 +730,6 @@ def lateInit():
 	screenMap[WB_PROJECT]		= WBProjectScreen.WBProjectScreen(worldBuilderScreen)
 	screenMap[WB_TEAM]			= WBTeamScreen.WBTeamScreen(worldBuilderScreen)
 	screenMap[WB_PLAYER]		= WBPlayerScreen.WBPlayerScreen(worldBuilderScreen)
-	screenMap[WB_UNIT]			= WBUnitScreen.WBUnitScreen(worldBuilderScreen)
 	screenMap[WB_PROMOTION]		= WBPromotionScreen.WBPromotionScreen(worldBuilderScreen)
 	screenMap[WB_DIPLOMACY]		= WBDiplomacyScreen.WBDiplomacyScreen(worldBuilderScreen)
 	screenMap[WB_UNITLIST]		= WBPlayerUnits.WBPlayerUnits(worldBuilderScreen)
@@ -737,6 +738,8 @@ def lateInit():
 	screenMap[WB_INFO]			= WBInfoScreen.WBInfoScreen(worldBuilderScreen)
 	screenMap[WB_TRADE]			= WBTradeScreen.WBTradeScreen(worldBuilderScreen)
 
+	import CivicData
+	CivicData.initCivicData()
 
 
 def earlyInit():

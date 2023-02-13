@@ -8,18 +8,7 @@
 #
 
 from CvPythonExtensions import *
-import CvMapGeneratorUtil
-from CvMapGeneratorUtil import FractalWorld
-#from CvMapGeneratorUtil import TerrainGenerator
-from CvMapGeneratorUtil import FeatureGenerator
-#from CvMapGeneratorUtil import BonusBalancer
-
-#balancer = BonusBalancer()
-
-# Rise of Mankind 2.53
-#which map size was selected
-sizeSelected = 0
-# Rise of Mankind 2.53
+import CvMapGeneratorUtil as MGU
 
 def getDescription():
 	return "TXT_KEY_MAP_SCRIPT_MIRROR_DESCR"
@@ -148,20 +137,9 @@ def getGridSize(argsList):
 	if (argsList[0] == -1): # (-1,) is passed to function on loads
 		return []
 	[eWorldSize] = argsList
-# Rise of Mankind 2.53 - giant and gigantic mapsize fix
-	global sizeSelected
-	sizeSelected = eWorldSize
-	print "	sizeSelected",sizeSelected
-	# Giant size
-	if ( sizeSelected == 6 ):
-		return (26, 16)
-	# Gigantic size
-	elif ( sizeSelected == 7 ):
-		return (32, 20)
-# Rise of Mankind 2.53 - giant and gigantic mapsize fix
 	return grid_sizes[eWorldSize]
 
-class MirrorMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
+class MirrorMultilayeredFractal(MGU.MultilayeredFractal):
 	# Subclass. Only the controlling function overridden in this case.
 	def generatePlotsByRegion(self, terrain_type):
 		# Sirian's MultilayeredFractal class, controlling function.
@@ -264,7 +242,7 @@ def generatePlotTypes():
 
 	# Teams together on an all land map.
 	if userInputLandmass == 0 or (userInputLandmass == 5 and terrainRoll < 4): # LvR
-		land_world = FractalWorld()
+		land_world = MGU.FractalWorld()
 		land_world.initFractal(continent_grain = 4, rift_grain = -1, has_center_rift = False, invert_heights = True)
 		return land_world.generatePlotTypes(water_percent = 8)
 
@@ -308,7 +286,7 @@ def generateTerrainTypes():
 
 	# Now generate the terrain.
 	NiTextOut("Generating Terrain (Python Mirror) ...")
-	terraingen = CvMapGeneratorUtil.TerrainGenerator()
+	terraingen = MGU.TerrainGenerator()
 	terrainTypes = terraingen.generateTerrain()
 	return terrainTypes
 
@@ -498,7 +476,7 @@ def addFeatures():
 
 	# Now add the features.
 	NiTextOut("Adding Features (Python Mirror) ...")
-	featuregen = FeatureGenerator()
+	featuregen = MGU.FeatureGenerator()
 	featuregen.addFeatures()
 	return 0
 
@@ -534,7 +512,7 @@ def addGoodies():
 	return CyPythonMgr().allowDefaultImpl()
 
 def afterGeneration():
-	CvMapGeneratorUtil.placeC2CBonuses()
+	MGU.placeC2CBonuses()
 	# MIRRORIZE GOODIES
 	gc = CyGlobalContext()
 	map = CyMap()
@@ -635,7 +613,7 @@ def assignStartingPlots():
 		# This will provide a truly random order, which may or may not be "fair". But hey, starting anywhere means ANYwhere. OK?
 		for playerID in shuffledPlayers:
 			player = gc.getPlayer(playerID)
-			startPlot = CvMapGeneratorUtil.findStartingPlot(playerID, isValidToStartAnywhere)
+			startPlot = MGU.findStartingPlot(playerID, isValidToStartAnywhere)
 			sPlot = map.plotByIndex(startPlot)
 			player.setStartingPlot(sPlot, true)
 		# All done.
@@ -722,7 +700,7 @@ def assignStartingPlots():
 		teamOneIndex = 0
 		for thisPlayer in playersOnTeamTwo:
 			player = gc.getPlayer(thisPlayer)
-			startPlot = CvMapGeneratorUtil.findStartingPlot(thisPlayer, isValidForMirror)
+			startPlot = MGU.findStartingPlot(thisPlayer, isValidForMirror)
 			sPlot = map.plotByIndex(startPlot)
 			player.setStartingPlot(sPlot, true)
 			iX = sPlot.getX()
@@ -737,7 +715,7 @@ def assignStartingPlots():
 		teamTwoIndex = 0
 		for thisPlayer in playersOnTeamOne:
 			player = gc.getPlayer(thisPlayer)
-			startPlot = CvMapGeneratorUtil.findStartingPlot(thisPlayer, isValidForMirror)
+			startPlot = MGU.findStartingPlot(thisPlayer, isValidForMirror)
 			sPlot = map.plotByIndex(startPlot)
 			player.setStartingPlot(sPlot, true)
 			iX = sPlot.getX()
@@ -845,15 +823,14 @@ def findStartingPlot(argsList):
 		# All conditions have failed? Wow. Is that even possible? :)
 		return true
 
-	return CvMapGeneratorUtil.findStartingPlot(playerID, isValid)
+	return MGU.findStartingPlot(playerID, isValid)
 
 def normalizeStartingPlotLocations():
 	numTeams = CyGlobalContext().getGame().countCivTeamsAlive()
 	userInputProximity = CyMap().getCustomMapOption(1)
 	if (numTeams > 4 or numTeams < 2) and userInputProximity == 0:
 		CyPythonMgr().allowDefaultImpl()
-	else:
-		return None
+
 
 def normalizeAddRiver():
 	return None

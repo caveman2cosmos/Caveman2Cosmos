@@ -362,7 +362,7 @@ class CvMilitaryAdvisor:
 					if bUnitSelected or bGroup2Selected and iPlayerX in self.selectedCivs:
 
 						iTeamX = CyPlayerX.getTeam()
-						if CyTeam.isAtWar(iTeamX):
+						if CyTeam.isAtWarWith(iTeamX):
 							iColor = iColRed
 						elif iTeamX != iTeam:
 							iColor = iColCyan

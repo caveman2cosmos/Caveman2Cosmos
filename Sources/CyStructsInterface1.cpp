@@ -1,4 +1,5 @@
 #include "CvGameCoreDLL.h"
+#include "CvDate.h"
 
 //
 // Python interface for structs
@@ -34,12 +35,6 @@ void CyStructsPythonInterface1()
 	python::class_<POINT>("POINT")
 		.def_readwrite("x", &POINT::x)
 		.def_readwrite("y", &POINT::y)
-		;
-
-	python::class_<XYCoords>("XYCoords")
-		.def(python::init<int, int>())	// ctor which takes 2 ints
-		.def_readwrite("iX", &XYCoords::iX)
-		.def_readwrite("iY", &XYCoords::iY)
 		;
 
 	python::class_<IDInfo>("IDInfo")
@@ -101,11 +96,6 @@ void CyStructsPythonInterface1()
 		.def("getDescription", &EventMessage::getDescription)
 		;
 
-	python::class_<FOWVis>("FOWVis")
-		.def_readwrite("uiCount", &FOWVis::uiCount)
-		.def("getOffsets", &FOWVis::getOffsets)  // array of "Offset" points
-		;
-
 	python::class_<PBGameSetupData>("PBGameSetupData")
 		.def_readwrite("iSize", &PBGameSetupData::iSize)
 		.def_readwrite("iClimate", &PBGameSetupData::iClimate)
@@ -142,7 +132,7 @@ void CyStructsPythonInterface1()
 		.def_readwrite("bClaimed", &PBPlayerAdminData::bClaimed)
 		.def_readwrite("bTurnActive", &PBPlayerAdminData::bTurnActive)
 		;
-	//Added ST
+
 	python::class_<CombatDetails>("CombatDetails")
 		.def_readwrite("iExtraCombatPercent", &CombatDetails::iExtraCombatPercent)
 		.def_readwrite("iAnimalCombatModifierTA", &CombatDetails::iAnimalCombatModifierTA)
@@ -188,8 +178,52 @@ void CyStructsPythonInterface1()
 		.def_readwrite("sUnitName", &CombatDetails::sUnitName)
 		;
 
-	python::class_<std::pair<int, int> >("CyPair")
-		.def_readwrite("id", &std::pair<int, int>::first)
-		.def_readwrite("value", &std::pair<int, int>::second)
+	python::class_<std::pair<int, int> >("CyPair", python::no_init)
+		.def_readonly("id", &std::pair<int, int>::first)
+		.def_readonly("value", &std::pair<int, int>::second)
+	;
+
+	python::class_<BuildingCommerceChange>("BuildingCommerceChange", python::no_init)
+		.def_readonly("eBuilding", &BuildingCommerceChange::eBuilding)
+		.def_readonly("eCommerce", &BuildingCommerceChange::eCommerce)
+		.def_readonly("value", &BuildingCommerceChange::iChange)
+	;
+
+	python::class_<BuildingModifier>("BuildingModifier", python::no_init)
+		.def_readonly("id", &BuildingModifier::eBuilding)
+		.def_readonly("value", &BuildingModifier::iModifier)
+	;
+
+	python::class_<HealUnitCombat>("HealUnitCombat", python::no_init)
+		.def_readonly("eUnitCombat", &HealUnitCombat::eUnitCombat)
+		.def_readonly("value", &HealUnitCombat::iHeal)
+	;
+
+	python::class_<TechCommerceChange>("TechCommerceChange", python::no_init)
+		.def_readonly("eTech", &TechCommerceChange::eTech)
+		.def_readonly("eCommerce", &TechCommerceChange::eCommerce)
+		.def_readonly("value", &TechCommerceChange::iChange)
+	;
+
+	python::class_<TechYieldChange>("TechYieldChange", python::no_init)
+		.def_readonly("eTech", &TechYieldChange::eTech)
+		.def_readonly("eYield", &TechYieldChange::eYield)
+		.def_readonly("value", &TechYieldChange::iChange)
+	;
+
+	python::class_<TerrainYieldChange>("TerrainYieldChange", python::no_init)
+		.def_readonly("eTerrain", &TerrainYieldChange::eTerrain)
+		.def_readonly("eYield", &TerrainYieldChange::eYield)
+		.def_readonly("value", &TerrainYieldChange::iChange)
+	;
+
+	python::class_<GenericTrippleInt>("GenericTrippleInt", python::no_init)
+		.def_readonly("iType", &GenericTrippleInt::iType)
+		.def_readonly("iIndex", &GenericTrippleInt::iIndex)
+		.def_readonly("iValue", &GenericTrippleInt::iValue)
+	;
+
+	python::class_<FreePromoTypes>("FreePromoTypes", python::no_init)
+		.def_readonly("ePromotion", &FreePromoTypes::ePromotion)
 	;
 }

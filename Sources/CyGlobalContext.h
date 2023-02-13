@@ -10,7 +10,6 @@
 
 #include "CvGlobals.h"
 
-class CvArtFileMgr;
 class CyGame;
 class CyMap;
 class CyPlayer;
@@ -20,28 +19,26 @@ class CyTeam;
 class CyGlobalContext
 {
 public:
-	CyGlobalContext();
-	virtual ~CyGlobalContext();
-
 	static CyGlobalContext& getInstance();		// singleton accessor
+	static void initStatics();
 
 	bool isDebugBuild() const;
 	CyGame* getCyGame() const;
 	CyMap* getCyMap() const;
-
-	void switchMap(int iMap);
-	CyMap* getMapByIndex(int iIndex);
-
-	CyPlayer* getCyPlayer(int idx) const;
+	void switchMap(MapTypes eMap);
+	CyMap* getMapByIndex(MapTypes eMap) const;
+	CyPlayer* getCyPlayer(PlayerTypes ePlayer) const;
 	CyPlayer* getCyActivePlayer() const;
 	CvRandom& getCyASyncRand() const;
-	CyTeam* getCyTeam(int i) const;
+	CyTeam* getCyTeam(TeamTypes eTeam) const;
 
-	int getInfoTypeForString(const char* szInfoType) const;
-	int getInfoTypeForStringWithHiddenAssert(const char* szInfoType) const;
-	int getTypesEnum(const char* szType) const;
+	int getInfoTypeForString(const char* szInfoType, bool bHideAssert = false) const;
 
-	const CvMapInfo& getMapInfo(int i) const;
+	int getNumFlavorTypes() const;
+	const char* getFlavorType(FlavorTypes e) const;
+	const python::list getFlavorTypes() const;
+
+	const CvMapInfo& getMapInfo(MapTypes eMap) const;
 	const CvEffectInfo* getEffectInfo(int i) const;
 	const CvTerrainInfo* getTerrainInfo(int i) const;
 	const CvBonusClassInfo* getBonusClassInfo(int i) const;
@@ -90,6 +87,7 @@ public:
 	const CvSeaLevelInfo * getSeaLevelInfo(int i) const;
 	const CvInfoBase * getUnitAIInfo(int i) const;
 	const CvColorInfo* getColorInfo(int i) const;
+	const CvAdvisorInfo* getAdvisorInfo(int i) const;
 	const CvUnitArtStyleTypeInfo* getUnitArtStyleTypeInfo(int i) const;
 	const CvPropertyInfo* getPropertyInfo(int i) const;
 	const CvPlayerColorInfo* getPlayerColorInfo(int i) const;
@@ -112,24 +110,15 @@ public:
 	const CvPlayerOptionInfo& getPlayerOptionInfo(int i) const;
 	const CvGraphicOptionInfo& getGraphicOptionInfo(int i) const;
 
-	// ArtInfos
-	const CvArtInfoInterface* getInterfaceArtInfo(int i) const;
-	const CvArtInfoMovie* getMovieArtInfo(int i) const;
-	const CvArtInfoMisc* getMiscArtInfo(int i) const;
-	const CvArtInfoUnit* getUnitArtInfo(int i) const;
-	const CvArtInfoBuilding* getBuildingArtInfo(int i) const;
-	const CvArtInfoCivilization* getCivilizationArtInfo(int i) const;
-	const CvArtInfoBonus* getBonusArtInfo(int i) const;
-	const CvArtInfoImprovement* getImprovementArtInfo(int i) const;
-
 	const char* getArtStyleTypes(int i) const { return GC.getArtStyleTypes((ArtStyleTypes) i); }
-	const char* getFlavorTypes(int i) const { return GC.getFlavorTypes((FlavorTypes) i); }
-	const char* getDiplomacyPowerTypes(int i) const { return GC.getDiplomacyPowerTypes((DiplomacyPowerTypes) i); }
+
+	int getMapBonus(int i) const { return GC.getMapBonus(i); }
+	int getNumMapBonuses() const { return GC.getNumMapBonuses(); }
 
 	int getNumEffectInfos() const { return GC.getNumEffectInfos(); }
 	int getNumTerrainInfos() const { return GC.getNumTerrainInfos(); }
 	int getNumSpecialBuildingInfos() const { return GC.getNumSpecialBuildingInfos(); }
-	int getNumBonusInfos() const { return GC.getNumBonusInfos(); };
+	int getNumBonusInfos() const { return GC.getNumBonusInfos(); }
 	int getNumPlayableCivilizationInfos() const { return GC.getNumPlayableCivilizationInfos(); }
 	int getNumCivilizatonInfos() const { return GC.getNumCivilizationInfos(); }
 	int getNumLeaderHeadInfos() const { return GC.getNumLeaderHeadInfos(); }
@@ -186,11 +175,6 @@ public:
 	int getNumPropertyInfos() const { return GC.getNumPropertyInfos(); }
 	int getNumPlayerColorInfos() const { return GC.getNumPlayerColorInfos(); }
 
-	int getNumAnimationOperatorTypes() const { return GC.getNumAnimationOperatorTypes(); }
-	int getNumArtStyleTypes() const { return GC.getNumArtStyleTypes(); }
-	int getNumFlavorTypes() const { return GC.getNumFlavorTypes(); }
-	int getNumFootstepAudioTypes() const { return GC.getNumFootstepAudioTypes(); }
-
 	//////////////////////
 	// Globals Defines
 	//////////////////////
@@ -203,7 +187,6 @@ public:
 
 	bool isDCM_AIR_BOMBING() const { return GC.isDCM_AIR_BOMBING(); }
 	bool isDCM_RANGE_BOMBARD() const { return GC.isDCM_RANGE_BOMBARD(); }
-	bool isDCM_ATTACK_SUPPORT() const { return GC.isDCM_ATTACK_SUPPORT(); }
 	bool isDCM_OPP_FIRE() const { return GC.isDCM_OPP_FIRE(); }
 	bool isDCM_ACTIVE_DEFENSE() const { return GC.isDCM_ACTIVE_DEFENSE(); }
 	bool isDCM_FIGHTER_ENGAGE() const { return GC.isDCM_FIGHTER_ENGAGE(); }
@@ -218,16 +201,17 @@ public:
 	bool isSS_BRIBE() const { return GC.isSS_BRIBE(); }
 	bool isSS_ASSASSINATE() const { return GC.isSS_ASSASSINATE(); }
 
-	int getMAX_PC_PLAYERS() const { return GC.getMAX_PC_PLAYERS(); }
-	int getMAX_PLAYERS() const { return GC.getMAX_PLAYERS(); }
-	int getMAX_PC_TEAMS() const { return GC.getMAX_PC_TEAMS(); }
-	int getMAX_TEAMS() const { return GC.getMAX_TEAMS(); }
-	int getBARBARIAN_PLAYER() const { return GC.getBARBARIAN_PLAYER(); }
-	int getBARBARIAN_TEAM() const { return GC.getBARBARIAN_TEAM(); }
+	int getMAX_PC_PLAYERS() const { return MAX_PC_PLAYERS; }
+	int getMAX_PLAYERS() const { return MAX_PLAYERS; }
+	int getMAX_PC_TEAMS() const { return MAX_PC_TEAMS; }
+	int getMAX_TEAMS() const { return MAX_TEAMS; }
+	int getBARBARIAN_PLAYER() const { return BARBARIAN_PLAYER; }
+	int getBARBARIAN_TEAM() const { return BARBARIAN_TEAM; }
 
 	int getNUM_CITY_PLOTS() const { return NUM_CITY_PLOTS; }
 
 	void setIsBug() { GC.setIsBug(); }
+	void refreshOptionsBUG() { GC.refreshOptionsBUG(); }
 
 	void setNoUpdateDefineFLOAT( const char * szName, float fValue ) { return GC.setDefineFLOAT( szName, fValue, false ); }
 

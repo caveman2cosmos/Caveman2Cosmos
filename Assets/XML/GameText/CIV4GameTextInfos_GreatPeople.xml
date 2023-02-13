@@ -31,1137 +31,6 @@
 		</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_ALCIBIADES</Tag>
-		<English>Alcibiades</English>
-		<French>
-			<Text>Alcibiades</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Alcibiades</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Alcibiade</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Alcibiades</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Alcibiades</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_ALEXANDER_HAMILTON</Tag>
-		<English>Alexander Hamilton</English>
-		<French>
-			<Text>Alexander Hamilton</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Alexander Hamilton</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Alexander Hamilton</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Alexander Hamilton</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Alexander Hamilton</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_ARISTIDES</Tag>
-		<English>Aristides</English>
-		<French>
-			<Text>Aristides</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Aristides</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Aristide</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Aristides</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Aristides</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_BIRGER_JARL</Tag>
-		<English>Birger Jarl</English>
-		<French>
-			<Text>Birger Jarl</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Birger Jarl</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Birger Jarl</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Birger Jarl</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Birger Jarl</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_DAVID_GEN_GURION</Tag>
-		<English>David Gen Gurion</English>
-		<French>
-			<Text>David Gen Gurion</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>David Gen Gurion</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>David Gen Gurion</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>David Gen Gurion</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>David Gen Gurion</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_DR._HENRY_KISSINGER</Tag>
-		<English>Dr. Henry Kissinger</English>
-		<French>
-			<Text>Dr. Henry Kissinger</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Dr. Henry Kissinger</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Dr. Henry Kissinger</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Dr. Henry Kissinger</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Dr. Henry Kissinger</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_EDMUND_BURKE</Tag>
-		<English>Edmund Burke</English>
-		<French>
-			<Text>Edmund Burke</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Edmund Burke</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Edmund Burke</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Edmund Burke</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Edmund Burke</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_EMILIANO_ZAPATA</Tag>
-		<English>Emiliano Zapata</English>
-		<French>
-			<Text>Emiliano Zapata</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Emiliano Zapata</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Emiliano Zapata</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Emiliano Zapata</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Emiliano Zapata</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_EMPEROR_AKIHITO</Tag>
-		<English>Emperor Akihito</English>
-		<French>
-			<Text>Empereur Akihito</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Emperor Akihito</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Imperatore Akihito</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Emperor Akihito</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Emperor Akihito</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_HAROLD_MACMILLAN</Tag>
-		<English>Harold Macmillan</English>
-		<French>
-			<Text>Harold Macmillan</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Harold Macmillan</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Harold Macmillan</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Harold Macmillan</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Harold Macmillan</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_JAMES_MADISON</Tag>
-		<English>James Madison</English>
-		<French>
-			<Text>James Madison</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>James Madison</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>James Madison</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>James Madison</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>James Madison</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_JOHN_F._KENNEDY</Tag>
-		<English>John F. Kennedy</English>
-		<French>
-			<Text>John F. Kennedy</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>John F. Kennedy</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>John F. Kennedy</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>John F. Kennedy</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>John F. Kennedy</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_JOHN_QUINCY_ADAMS</Tag>
-		<English>John Quincy Adams</English>
-		<French>
-			<Text>John Quincy Adams</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>John Quincy Adams</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>John Quincy Adams</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>John Quincy Adams</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>John Quincy Adams</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_JOSEPH_STALIN</Tag>
-		<English>Joseph Stalin</English>
-		<French>
-			<Text>Joseph Stalin</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Joseph Stalin</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Joseph Stalin</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Joseph Stalin</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Joseph Stalin</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_KEMAL_ATATURK</Tag>
-		<English>Kemal Ataturk</English>
-		<French>
-			<Text>Kemal Ataturk</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Kemal Ataturk</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Kemal Ataturk</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Kemal Ataturk</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Kemal Ataturk</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_KIMON</Tag>
-		<English>Kimon</English>
-		<French>
-			<Text>Kimon</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Kimon</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Kimon</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Kimon</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Kimon</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_LEON_TROTSKY</Tag>
-		<English>Leon Trotsky</English>
-		<French>
-			<Text>Leon Trotsky</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Leon Trotsky</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Leon Trotsky</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Leon Trotsky</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Leon Trotsky</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_LORD_CHESTERFIELD</Tag>
-		<English>Lord Chesterfield</English>
-		<French>
-			<Text>Lord Chesterfield</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Lord Chesterfield</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Lord Chesterfield</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Lord Chesterfield</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Lord Chesterfield</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_LORD_MELBOURNE</Tag>
-		<English>Lord Melbourne</English>
-		<French>
-			<Text>Lord Melbourne</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Lord Melbourne</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Lord Melbourne</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Lord Melbourne</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Lord Melbourne</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_MAO_ZEDONG</Tag>
-		<English>Mao Zedong</English>
-		<French>
-			<Text>Mao Zedong</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Mao Zedong</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Mao Zedong</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Mao Zedong</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Mao Zedong</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_MARCUS_JUNIUS_BRUTUS</Tag>
-		<English>Marcus Junius Brutus</English>
-		<French>
-			<Text>Marcus Junius Brutus</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Marcus Junius Brutus</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Marco Giunio Bruto</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Marcus Junius Brutus</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Marcus Junius Brutus</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_MARGARET_THATCHER</Tag>
-		<English>Margaret Thatcher</English>
-		<French>
-			<Text>Margaret Thatcher</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Margaret Thatcher</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Margaret Thatcher</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Margaret Thatcher</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Margaret Thatcher</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_MARK_ANTONY</Tag>
-		<English>Mark Antony</English>
-		<French>
-			<Text>Mark Antony</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Mark Antony</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Marcantonio</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Mark Antony</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Mark Antony</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_MARTIN_VAN_BUREN</Tag>
-		<English>Martin Van Buren</English>
-		<French>
-			<Text>Martin Van Buren</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Martin Van Buren</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Martin Van Buren</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Martin Van Buren</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Martin Van Buren</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_MENACHEM_BEGIN</Tag>
-		<English>Menachem Begin</English>
-		<French>
-			<Text>Menachem Begin</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Menachem Begin</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Menachem Begin</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Menachem Begin</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Menachem Begin</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_MIKHAIL_GORBACHEV</Tag>
-		<English>Mikhail Gorbachev</English>
-		<French>
-			<Text>Mikhail Gorbachev</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Mikhail Gorbachev</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Mikhail Gorbachev</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Mikhail Gorbachev</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Mikhail Gorbachev</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_NELSON_MANDELA</Tag>
-		<English>Nelson Mandela</English>
-		<French>
-			<Text>Nelson Mandela</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Nelson Mandela</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Nelson Mandela</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Nelson Mandela</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Nelson Mandela</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_NIKITA_KHRUSHCHEV</Tag>
-		<English>Nikita Khrushchev</English>
-		<French>
-			<Text>Nikita Khrushchev</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Nikita Khrushchev</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Nikita Khrushchev</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Nikita Khrushchev</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Nikita Khrushchev</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_PANCHO_VILLA</Tag>
-		<English>Pancho Villa</English>
-		<French>
-			<Text>Pancho Villa</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Pancho Villa</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Pancho Villa</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Pancho Villa</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Pancho Villa</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_PASCUAL_OROZCO</Tag>
-		<English>Pascual Orozco</English>
-		<French>
-			<Text>Pascual Orozco</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Pascual Orozco</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Pascual Orozco</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Pascual Orozco</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Pascual Orozco</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_QIN_SHI_HUANG</Tag>
-		<English>Qin Shi Huang</English>
-		<French>
-			<Text>Qin Shi Huang</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Qin Shi Huang</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Qin Shi Huang</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Qin Shi Huang</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Qin Shi Huang</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_ROBERT_LIVINGSTON</Tag>
-		<English>Robert Livingston</English>
-		<French>
-			<Text>Robert Livingston</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Robert Livingston</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Robert Livingston</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Robert Livingston</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Robert Livingston</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_RONALD_REAGAN</Tag>
-		<English>Ronald Reagan</English>
-		<French>
-			<Text>Ronald Reagan</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Ronald Reagan</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Ronald Reagan</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Ronald Reagan</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Ronald Reagan</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_SIR_FRANCIS_BACON</Tag>
-		<English>Sir Francis Bacon</English>
-		<French>
-			<Text>Sir Francis Bacon</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Sir Francis Bacon</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Sir Francis Bacon</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Sir Francis Bacon</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Sir Francis Bacon</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_THOMAS_JEFFERSON</Tag>
-		<English>Thomas Jefferson</English>
-		<French>
-			<Text>Thomas Jefferson</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Thomas Jefferson</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Thomas Jefferson</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Thomas Jefferson</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Thomas Jefferson</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_VLADIMIR_LENIN</Tag>
-		<English>Vladimir Lenin</English>
-		<French>
-			<Text>Vladimir Lenin</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Vladimir Lenin</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Vladimir Lenin</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Vladimir Lenin</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Vladimir Lenin</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_WILLY_BRANDT</Tag>
-		<English>Willy Brandt</English>
-		<French>
-			<Text>Willy Brandt</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Willy Brandt</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Willy Brandt</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Willy Brandt</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Willy Brandt</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_YASSER_ARAFAT</Tag>
-		<English>Yasser Arafat</English>
-		<French>
-			<Text>Yasser Arafat</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Yasser Arafat</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Yasser Arafat</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Yasser Arafat</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Yasser Arafat</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_YITZHAK_RABIN</Tag>
-		<English>Yitzhak Rabin</English>
-		<French>
-			<Text>Yitzhak Rabin</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Yitzhak Rabin</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Yitzhak Rabin</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Yitzhak Rabin</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Yitzhak Rabin</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_AARON_BURR_PEDIA</Tag>
 		<English>[BOLD][H1]Aaron Burr[\H1][\BOLD][NEWLINE]Was an American politician. He was the third Vice President of the United States (1801-1805); he served during President Thomas Jefferson's first term. He was elected twice to the New York State Assembly (1784-1785, 1798-1799), was appointed New York State Attorney General (1789-1791), was chosen as a United States Senator (1791-1797) from the state of New York, and reached the apex of his career as vice president.</English>
 		<French>[BOLD][H1]Aaron Burr[\H1][\BOLD][NEWLINE]C'est un politicien américain. Il était le troisième vice-président des États-Unis (1801-1805); il a servi pendant le premier mandat du président Thomas Jefferson. Il a été élu deux fois à l'Assemblée de l'État de New York (1784-1785, 1798-1799), a été nommé procureur général de l'État de New York (1789-1791), a été choisi comme sénateur des États-Unis (1791-1797) de l'État de New York. York, et a atteint le sommet de sa carrière en tant que vice-président.</French>
@@ -1279,7 +148,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ACAMAPICHTLI_PEDIA</Tag>
-		<English>[BOLD][H1]Acamapichtli[\H1][\BOLD][NEWLINE][BOLD](ruled 1375-1394)[\BOLD][NEWLINE]Was the first tlatoani, or ruler, of the Aztecs (or Mexica) of Tenochtitlan, and founder of the Aztec imperial dynasty.[NEWLINE]Before the death of Acamapichtili, they chose his eldest son Huitzilihuitl. Acamapichtili approved the election, and then died.</English>
+		<English>[BOLD][H1]Acamapichtli[\H1][\BOLD][NEWLINE][BOLD](ruled 1375-1394)[\BOLD][NEWLINE]Was the first tlatoani, or ruler, of the Aztecs (or Mexico) of Tenochtitlan, and founder of the Aztec imperial dynasty.[NEWLINE]Before the death of Acamapichtli, they chose his eldest son Huitzilihuitl. Acamapichtli approved the election, and then died.</English>
 		<French>[BOLD][H1]Acamapichtli[\H1][\BOLD][NEWLINE][BOLD](règne: 1375-1394)[\BOLD][NEWLINE]Il fut le premier tlatoani, ou guide, des Aztèques de Tenochtitlan, et le fondateur de la dynastie impériale Aztèque.[NEWLINE]Avant la mort d'Acamapichtili, ils choisirent son fils ainé, Huitzilihuitl. Acamapichtili approuva l'élection, puis mouru.</French>
 		<Polish>[BOLD][H1]Acamapichtli[\H1][\BOLD][NEWLINE][BOLD](rządził 1375-1394)[\BOLD][NEWLINE]Władca Tenochtitlanu, pierwszy tlatoani (władca) Azteków (Mexicas) (1376-1395), założyciel dynastii. Jego imię w języku nahuatl znaczy "Garść Trzciny". Acamapichtli był synem Opochtzina i Atotoztli, ojciec późniejszych tlatoani Huitzilihuitla, Itzcoatla i wielu innych dzieci.</Polish>
 	</TEXT>
@@ -1364,7 +233,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_AHMADE_ROSTE_ESFAHANI_PEDIA</Tag>
-		<English>[BOLD][H1]Ahmade Roste Esfahani[\H1][\BOLD][NEWLINE]Was a 10th-century Persian explorer and geographer born in Rosta district, Isfahan, Persia.[NEWLINE]As for the Rus, they live on an island...[NEWLINE]Ahmad-e Roste Esfahani</English>
+		<English>[BOLD][H1]Ahmad ibn Rustah Isfahani[\H1][\BOLD][NEWLINE]Was a 10th-century Persian explorer and geographer born in Rosta district, Isfahan, Persia.[NEWLINE]As for the Rus, they live on an island...[NEWLINE]Ahmad ibn Rustah Isfahani</English>
 		<French>[BOLD][H1]Ahmed Ibn Rustah[\H1][\BOLD][NEWLINE]Un explorateur et géographe perse né au Xe siècle dans le district de Rosta, à Ispahan, Iran.[NEWLINE]Quant aux Rus', ils vivent sur une île...[NEWLINE]Ahmed Ibn Rustah</French>
 		<Polish>[BOLD][H1]Ahmade Roste Esfahani[\H1][\BOLD][NEWLINE]X wieczny perski odkrywca i geograf. Auto wielu opracowań i map z czasów Imperium Perskiego.</Polish>
 		<Russian>[BOLD][H1]Ахмад Росте Эсфахани[\H1][\BOLD][NEWLINE]Персидский исследователь и географ X века родился в районе Роста, Исфахан, Персия.[NEWLINE]Что касается русов, то они живут на острове...[NEWLINE]Ахмад-и Росте Исфахани</Russian>
@@ -1544,6 +413,35 @@
 		<Russian>[BOLD][H1]Альбрехт фон Валленштейн[\H1][\BOLD][NEWLINE][BOLD](24 сентября 1583 - 25 февраля 1634)[\BOLD][NEWLINE]Полководец и политик чешского происхождения времен Тридцатилетней войны. Он родился в семье мелкого дворянства в Херманице около Яромежа. В 1626 году Валленштейн предложил императору Фердинанду создать армию, которая будет сражаться с протестантами на севере и станет противовесом армии принца Тилли. Репутация, которую он приобрел ранее, быстро окупилась, и вскоре под его командованием воевали 30 тысяч солдат. Затем эти силы увеличились до 50 000 человек. В следующем году обе католические армии сражались против Мансфельда.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_ALCIBIADES</Tag>
+		<English>Alcibiades</English>
+		<French>
+			<Text>Alcibiades</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Alcibiades</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Alcibiade</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Alcibiades</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>
+			<Text>Alcibiades</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ALCIBIADES_PEDIA</Tag>
 		<English>[BOLD][H1]Alcibiades[\H1][\BOLD][NEWLINE]Was a prominent Athenian statesman, orator, and general. He was the last famous member of his mother's aristocratic family, the Alcmaeonidae, which fell from prominence after the Peloponnesian War. He played a major role in the second half of that conflict as a strategic advisor, military commander, and politician.</English>
 		<French>[BOLD][H1]Alcibiades[\H1][\BOLD][NEWLINE]C'est un éminent homme d'État, orateur et général athénien. Il était le dernier membre célèbre de la famille aristocratique de sa mère, les Alcmaeonidae, qui est tombé de la proéminence après la guerre du Péloponnèse. Il a joué un rôle majeur dans la seconde moitié de ce conflit en tant que conseiller stratégique, commandant militaire et homme politique.</French>
@@ -1552,7 +450,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ALEKSANDR_A_KOZAKOV</Tag>
-		<English>Aleksandr A. Kozakov</English>
+		<English>Aleksandr A. Kazakov</English>
 		<French>Alexandre Kazakov</French>
 		<Russian>Àëåêñàíäð A. Êîçàêîâ</Russian>
 	</TEXT>
@@ -1634,6 +532,35 @@
 		<English>[BOLD][H1]Alexander Graham Bell[\H1][\BOLD][NEWLINE][BOLD](3 March 1847 - 2 August 1922)[\BOLD][NEWLINE]Was an eminent scientist, inventor and innovator most noted as the inventor of the telephone.[NEWLINE]Mr. Watson - Come here - I want to see you.</English>
 		<French>[BOLD][H1]Alexander Graham Bell[\H1][\BOLD][NEWLINE][BOLD](3 Mars 1847 - 2 Août 1922)[\BOLD][NEWLINE]Un scientifique, un ingénieur et un inventeur britanno-canadien, qui est surtout connu pour l'invention du téléphone,[NEWLINE]Mr. Watson - Venez - Je veux vous voir.</French>
 		<Polish>[BOLD][H1]Alexander Graham Bell[\H1][\BOLD][NEWLINE][BOLD](3 Marca 1847 - 2 Sierpnia 1922)[\BOLD][NEWLINE]Szkocki wynalazca telefonu i kilkudziesięciu innych wynalazków telekomunikacyjnych. Z zawodu był logopedą i nauczycielem muzyki. Graham Bell był też współzałożycielem dwóch znanych czasopism Science i National Geographic. Uhonorowało go Medalem Edisona za wybitne osiągnięcia przy wynalezieniu telefonu.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_ALEXANDER_HAMILTON</Tag>
+		<English>Alexander Hamilton</English>
+		<French>
+			<Text>Alexander Hamilton</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Alexander Hamilton</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Alexander Hamilton</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Alexander Hamilton</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>
+			<Text>Alexander Hamilton</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ALEXANDER_HAMILTON_PEDIA</Tag>
@@ -1836,7 +763,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_AL_KWARIZMI_PEDIA</Tag>
-		<English>[BOLD][H1]Al-Kwarizmi[\H1][\BOLD][NEWLINE][BOLD](c. 780 - c. 850)[\BOLD][NEWLINE]Was a Persian mathematician, astronomer and geographer during the Abbasid Caliphate.His Compendious Book on Calculation by Completion and Balancing presented the first systematic solution of linear and quadratic equations in Arabic.</English>
+		<English>[BOLD][H1]Al-Kwarizmi[\H1][\BOLD][NEWLINE][BOLD](c. 780 - c. 850)[\BOLD][NEWLINE]Was a Persian mathematician, astronomer and geographer during the Abbasid Caliphate. His Compendious Book on Calculation by Completion and Balancing presented the first systematic solution of linear and quadratic equations in Arabic.</English>
 		<French>[BOLD][H1]Al-Kwarizmi[\H1][\BOLD][NEWLINE][BOLD](c. 780 - c. 850)[\BOLD][NEWLINE]Mathématicien, géographe, astrologue et astronome perse, membre de la Maison de la sagesse de Bagdad. Ses écrits, rédigés en langue arabe, puis traduits en latin à partir du XIIe siècle, ont permis l'introduction de l'Algèbre en Europe. Son nom est à l'origine du mot algorithme.</French>
 		<Polish>[BOLD][H1]Al-Kwarizmi[\H1][\BOLD][NEWLINE][BOLD](ok. 780 - ok. 850)[\BOLD][NEWLINE]Perski matematyk, astronom, geograf i kartograf pochodzenia chorezmijskiego żyjący w IX wieku (prawdopodobnie ok. 780 - ok. 850). Urodzony w Chiwie, w latach 813-833 żył w Bagdadzie. Wszystkie jego dzieła zostały napisane po arabsku. Nosił przydomek "pana tablic".</Polish>
 	</TEXT>
@@ -1935,7 +862,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_AMERIGO_VESPUCCI_PEDIA</Tag>
-		<English>[BOLD][H1]Amerigo Vespucci[\H1][\BOLD][NEWLINE][BOLD](March 9, 1454 - February 22, 1512)[\BOLD][NEWLINE]Was an Italian explorer, financier, navigator and cartographer who first demonstrated that Brazil and the West Indies did not represent Asia's eastern outskirts but instead constituted an entirely separate landmas.</English>
+		<English>[BOLD][H1]Amerigo Vespucci[\H1][\BOLD][NEWLINE][BOLD](March 9, 1454 - February 22, 1512)[\BOLD][NEWLINE]Was an Italian explorer, financier, navigator and cartographer who first demonstrated that Brazil and the West Indies did not represent Asia's eastern outskirts but instead constituted an entirely separate landmass.</English>
 		<French>[BOLD][H1]Amerigo Vespucci[\H1][\BOLD][NEWLINE][BOLD](9 Mars 1454 - 22 Février 1512)[\BOLD][NEWLINE]navigateur florentin qui travailla au service du Royaume de Portugal et de la Couronne de Castille. Il est considéré comme le premier européen à comprendre que les terres découvertes par Christophe Colomb faisaient partie d'un nouveau continent. Le terme "Amérique" provient de son nom.</French>
 		<Polish>[BOLD][H1]Amerigo Vespucci[\H1][\BOLD][NEWLINE][BOLD](9 Marca 1454 - 22 Lutego 1512)[\BOLD][NEWLINE]Włoski kupiec, nawigator, podróżnik morski i kartograf, tercjarz franciszkański. Według własnego świadectwa został wybrany przez króla Manuela I miał jakoby w latach 1497-1504 odbyć cztery wyprawy odkrywcze, w co powątpiewają dzisiejsi badacze. Dotarłszy w sierpniu 1500 roku nad jezioro Maracaibo, żeglarze zobaczyli Indian żyjących w palafitos, czyli chatkach zbudowanych na palach wbitych w wodę. Amerigo Vespucci nazwał to miejsce Małą Wenecją - Venezuelą.</Polish>
 	</TEXT>
@@ -1968,7 +895,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ANACHARSIS_PEDIA</Tag>
-		<English>[BOLD][H1]Anacharsis[\H1][\BOLD][NEWLINE]Was a Scythian philosopher who travelled from his homeland on the northern shores of the Black Sea to Athens in the early 6th century BC and made a great impresion as a forthright, outspoken "barbarian." Reputedly a forerunner of the Cynics, none of his works have survived.</English>
+		<English>[BOLD][H1]Anacharsis[\H1][\BOLD][NEWLINE]Was a Scythian philosopher who travelled from his homeland on the northern shores of the Black Sea to Athens in the early 6th century BC and made a great impression as a forthright, outspoken "barbarian." Reputedly a forerunner of the Cynics, none of his works have survived.</English>
 		<French>[BOLD][H1]Anacharsis[\H1][\BOLD][NEWLINE]Philosophe d'origine « barbare » puisque venu en Grèce du peuple des Scythes au nord de la mer Noire au début du VIe siècle av. J.-C. Il est parfois rangé parmi les Sept sages. Il ne reste aucun texte de lui hormis des traditions indirectes. Ce personnage presque légendaire représente l'étranger avisé, le « regard du dehors » dans la civilisation hellénique, une sorte de préfiguration de la perspective des cyniques mettant à distance les mours habituelles de la Cité.</French>
 		<Polish>[BOLD][H1]Anacharsis[\H1][\BOLD][NEWLINE]Scytyjski filozof, przez niektórych autorów starożytnych zaliczany do siedmiu mędrców. Pochodził z królewskiej rodziny, sprawującej władzę nad jednym z plemion scytyjskich. Jego ojcem był Gnuros, bratem Saulios, a bratankiem - Idantyrsos, czyli kolejni władcy Scytów. Natomiast matką jego była nieznana nam z imienia Greczynka.</Polish>
 	</TEXT>
@@ -2015,7 +942,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ANDREI_RUBLEV_PEDIA</Tag>
-		<English>[BOLD][H1]Andrei Rublev[\H1][\BOLD][NEWLINE][BOLD](1360 - 29 January 1427)[\BOLD][NEWLINE]Is considered to be the greatest medieval Russian painter of Orthodox icons and frescoes.Chronicles tell us that in 1408 he painted the Asumption Cathedral in Vladimir and in 1425 - 1427 the Cathedral of St. Trinity in the Trinity-St. Sergius Lavra.</English>
+		<English>[BOLD][H1]Andrei Rublev[\H1][\BOLD][NEWLINE][BOLD](1360 - 29 January 1427)[\BOLD][NEWLINE]Is considered to be the greatest medieval Russian painter of Orthodox icons and frescoes. Chronicles tell us that in 1408 he painted the Assumption Cathedral in Vladimir and in 1425 - 1427 the Cathedral of St. Trinity in the Trinity-St. Sergius Lavra.</English>
 		<French>[BOLD][H1]Andreï Roublev[\H1][\BOLD][NEWLINE][BOLD](1360 - 29 Janvier 1427)[\BOLD][NEWLINE]Moine et peintre d'icônes russe du XVe siècle. Roublev peint avec son assistant Daniil Tcherny les fresques et l'iconostase de la cathédrale de la Dormition à Vladimir. en 1408, et l'intérieur de la cathédrale de la Trinité à Serguiev Possad ainsi qu'une partie de l'iconostase en 1425 - 1427.</French>
 		<Polish>[BOLD][H1]Andrei Rublev[\H1][\BOLD][NEWLINE][BOLD](1360 - 29 Stycznia 1427)[\BOLD][NEWLINE]Rosyjski mnich, święty prawosławny, pisarz, twórca ikon. Jest uważany za najwybitniejszego przedstawiciela moskiewskiej szkoły pisania ikon. Był uczniem św. Sergiusza z Radoneża.</Polish>
 		<Russian>[BOLD][H1]Андрей Рублев[\H1][\BOLD][NEWLINE][BOLD](ок. 1360 - 29 января 1427)[\BOLD][NEWLINE]Монах и русский иконописец 15 века. Рублев создавал иконы вместе со своим помощником Даниилом Черным, а также фрески и иконостас Успенского собора во Владимире. В 1408 году он расписал интерьер Троицкого собора в Сергиевом Посаде и часть иконостаса в 1425 - 1427 годах.</Russian>
@@ -2321,6 +1248,35 @@
 		<Polish>[BOLD][H1]Ariabignes[\H1][\BOLD][NEWLINE]Był jednym z synów perskiego króla Dariusza I. Brał udział w drugiej inwazji perskiej na Grecję jako jeden z czterech admirałów floty. Został zabity podczas bitwy pod Salaminą w 480 r p.n.e.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_ARISTIDES</Tag>
+		<English>Aristides</English>
+		<French>
+			<Text>Aristides</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Aristides</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Aristide</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Aristides</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>
+			<Text>Aristides</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ARISTIDES_PEDIA</Tag>
 		<English>[BOLD][H1]Aristides[\H1][\BOLD][NEWLINE]Was an ancient Athenian statesman. Nicknamed "the Just", he flourished in the early quarter of Athens' Classical period and is remembered for his generalship in the Persian War. The ancient historian Herodotus cited him as "the best and most honourable man in Athens", and he received similarly reverent treatment in Plato's Socratic dialogues.</English>
 		<French>[BOLD][H1]Aristides[\H1][\BOLD][NEWLINE]C'est un ancien homme d'État athénien. Surnommé "le Juste", il s'est épanoui au début du trimestre de la période classique d'Athènes et est connu pour son rôle de général dans la guerre de Perse. L'historien antique Hérodote l'a cité comme "l'homme le meilleur et le plus honorable d'Athènes", et il a reçu un traitement tout aussi respectueux dans les dialogues socratiques de Platon.</French>
@@ -2419,12 +1375,6 @@
 		<Russian>Àðòåìèäà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_ARTEMIS_PEDIA</Tag>
-		<English>[BOLD][H1]Artemis[\H1][\BOLD][NEWLINE]Was one of the most widely venerated of the Ancient Greek deities. Some scholars believe that the name, and indeed the goddess herself, was originally pre-Greek. Homer refers to her as Artemis Agrotera, Potnia Theron: "Artemis of the wildland, Mistres of Animals". The Arcadians believed she was the daughter of Demeter.</English>
-		<French>[BOLD][H1]Artémis[\H1][\BOLD][NEWLINE]dans la mythologie grecque, la déesse de la chasse et une des déesses associées à la Lune (par rapport à son frère Apollon, qui est lui, associé au Soleil). Elle est assimilée dans la mythologie romaine à la déesse Diane. Les Arcadiens la considèrent comme la fille de Démeter.</French>
-		<Polish>[BOLD][H1]Artemida[\H1][\BOLD][NEWLINE]W mitologii greckiej bogini łowów, zwierząt, lasów, gór i roślinności; wielka łowczyni. Uważana również za boginię płodności, niosącą pomoc rodzącym kobietom. Podobnie jak Apollo był bogiem słońca i życia, tak Artemidę uznawano za boginię księżyca i śmierci. Wierzono bowiem, że bliźniacze rodzeństwo charakteryzuje podobna konstrukcja duchowa. Ze względu na związek między obrotami księżyca a przypływami i odpływami morza Artemidę zaczęto uważać za bóstwo opiekuńcze rybaków. Jej atrybutami były łuk, strzały i kołczan, a ulubionym zwierzęciem łania.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ARTEMISIA_I_OF_CARIA</Tag>
 		<English>Artemisia I of Caria</English>
 		<French>Artémise Ière</French>
@@ -2435,6 +1385,12 @@
 		<English>[BOLD][H1]Artemisia I of Caria[\H1][\BOLD][NEWLINE][BOLD](fl. 480 BCE)[\BOLD][NEWLINE]Was queen of Halicarnasus. She fought for her overlord Xerxes I, King of Persia against the free Greek city states during the second Persian invasion of Greece. She personally commanded her contribution of five ships at the naval battle of Artemisium.</English>
 		<French>[BOLD][H1]Artémise Ière[\H1][\BOLD][NEWLINE][BOLD](fl. 480 Av. JCE)[\BOLD][NEWLINE]Reine de la cité d'Halicarnasse en Carie (zone actuelle: Bodrum en Turquie) au Ve siècle av. J.-C. Elle gouverna sous la suzeraineté de l'empire des Achéménides. Elle participe avec cinq navires à la campagne de Xerxès Ier en 480 av. J.-C. contre les Grecs et se distingue à la bataille de Salamine.</French>
 		<Polish>[BOLD][H1]Artemisia I of Caria[\H1][\BOLD][NEWLINE][BOLD](480 p.n.e.)[\BOLD][NEWLINE]Artemizja, żyła na przełomie VI/V wieku p.n.e. władczyni (po śmierci swojego męża) Halikarnasu i kilku miast karyjskich w Azji Mniejszej oraz pobliskich wysp. Znana głównie ze swojego udziału w bitwie pod Salaminą.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_ARTEMIS_PEDIA</Tag>
+		<English>[BOLD][H1]Artemis[\H1][\BOLD][NEWLINE]Was one of the most widely venerated of the Ancient Greek deities. Some scholars believe that the name, and indeed the goddess herself, was originally pre-Greek. Homer refers to her as Artemis Agrotera, Potnia Theron: "Artemis of the wildland, Mistres of Animals". The Arcadians believed she was the daughter of Demeter.</English>
+		<French>[BOLD][H1]Artémis[\H1][\BOLD][NEWLINE]dans la mythologie grecque, la déesse de la chasse et une des déesses associées à la Lune (par rapport à son frère Apollon, qui est lui, associé au Soleil). Elle est assimilée dans la mythologie romaine à la déesse Diane. Les Arcadiens la considèrent comme la fille de Démeter.</French>
+		<Polish>[BOLD][H1]Artemida[\H1][\BOLD][NEWLINE]W mitologii greckiej bogini łowów, zwierząt, lasów, gór i roślinności; wielka łowczyni. Uważana również za boginię płodności, niosącą pomoc rodzącym kobietom. Podobnie jak Apollo był bogiem słońca i życia, tak Artemidę uznawano za boginię księżyca i śmierci. Wierzono bowiem, że bliźniacze rodzeństwo charakteryzuje podobna konstrukcja duchowa. Ze względu na związek między obrotami księżyca a przypływami i odpływami morza Artemidę zaczęto uważać za bóstwo opiekuńcze rybaków. Jej atrybutami były łuk, strzały i kołczan, a ulubionym zwierzęciem łania.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ARTHUR_CONAN_DOYLE</Tag>
@@ -2881,6 +1837,35 @@
 		<English>[BOLD][H1]Bernard Montgomery[\H1][\BOLD][NEWLINE][BOLD](17 November 1887 - 24 March 1976)[\BOLD][NEWLINE]Was a British military commander of World War II, victor of El Alamein.[NEWLINE]The United States has broken the second rule of war. That is: don't go fighting with your land army on the mainland in Asia. Rule One is, don't march on Moscow. I developed those two rules myself.[NEWLINE]Interview, 2 July, 1968; quoted in NYT</English>
 		<French>[BOLD][H1]Bernard Montgomery[\H1][\BOLD][NEWLINE][BOLD](17 Novembre 1887 - 24 Mars 1976)[\BOLD][NEWLINE]Commandant militaire de la seconde guerre mondiale, il conduisit ses troupes à la vicoitre à El Alamein.</French>
 		<Polish>[BOLD][H1]Bernard Montgomery[\H1][\BOLD][NEWLINE][BOLD](17 Listopada 1887 - 24 Marca 1976)[\BOLD][NEWLINE]Brytyjski dowódca wojskowy, marszałek polny British Army. Szlak bojowy w czasie II wojny światowej rozpoczął od kampanii francuskiej 1940. Jako głównodowodzący 2 Korpusu BEF czas tzw. drole de guerre poświęcił na szkolenie oficerów i żołnierzy. Przewidując, że uderzenie niemieckie spowoduje klęskę, zwracał przede wszystkim na ćwiczenie działań obronnych w odwrocie.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_BIRGER_JARL</Tag>
+		<English>Birger Jarl</English>
+		<French>
+			<Text>Birger Jarl</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Birger Jarl</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Birger Jarl</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Birger Jarl</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>
+			<Text>Birger Jarl</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_BIRGER_JARL_PEDIA</Tag>
@@ -3839,6 +2824,35 @@
 		<Polish>[BOLD][H1]David Dixon Porter[\H1][\BOLD][NEWLINE][BOLD](8 Czerwca 1813 - 13 Lutego 1891)[\BOLD][NEWLINE]Oficer marynarki wojennej Stanów Zjednoczonych, admirał, jeden z bohaterów wojny secesyjnej. Po wybuchu wojny secesyjnej, początkowo Porter służył w 1861 r. w Eskadrze Zatoki Meksykańskiej Marynarki USA (Gulf Squadron), dowodząc w stopniu komandora porucznika bocznokołową fregatą USS "Powhatan".</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_DAVID_GEN_GURION</Tag>
+		<English>David Gen Gurion</English>
+		<French>
+			<Text>David Gen Gurion</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>David Gen Gurion</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>David Gen Gurion</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>David Gen Gurion</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>
+			<Text>David Gen Gurion</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_DAVID_GEN_GURION_PEDIA</Tag>
 		<English>[BOLD][H1]David Ben Gurion[\H1][\BOLD][NEWLINE]Was the primary founder of the State of Israel and the first Prime Minister of Israel. Ben-Gurion's passion for Zionism, which began early in life, led him to become a major Zionist leader and Executive Head of the World Zionist Organization in 1946. As head of the Jewish Agency from 1935, and later president of the Jewish Agency Executive, he was the de facto leader of the Jewish community in Palestine, and largely led its struggle for an independent Jewish state in Mandatory Palestine.</English>
 		<French>[BOLD][H1]David Ben Gurion[\H1][\BOLD][NEWLINE]A été le premier fondateur de l'État d'Israël et le premier Premier ministre d'Israël. La passion de Ben Gourion pour le sionisme, qui a commencé tôt dans la vie, l'a amené à devenir un leader sioniste majeur et chef exécutif de l'Organisation sioniste mondiale en 1946. En tant que chef de l'Agence juive à partir de 1935, puis président de l'Exécutif de l'Agence juive, il était le chef de facto de la communauté juive en Palestine, et a largement mené sa lutte pour un État juif indépendant dans la Palestine mandataire.</French>
@@ -4073,6 +3087,35 @@
 		<Polish>[BOLD][H1]Douglas Macarthur[\H1][\BOLD][NEWLINE][BOLD](26 Stycznia 1880 - 5 Kwietnia 1964)[\BOLD][NEWLINE]Amerykański generał armii, dowódca armii alianckich na południowo-zachodnim teatrze działań na Pacyfiku podczas II wojny światowej. Uhonorowany najwyższym odznaczeniem wojskowym w Stanach Zjednoczonych - Medalem Honoru. Był jednym z pięciu amerykańskich oficerów, którzy osiągnęli stopień generała armii (ang. General of the Army, odpowiednik marszałka). Wyższy stopień - generała armii (l. mn. - "General of the Armies") otrzymali jedynie John Pershing i pośmiertnie George Washington.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_DR._HENRY_KISSINGER</Tag>
+		<English>Dr. Henry Kissinger</English>
+		<French>
+			<Text>Dr. Henry Kissinger</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Dr. Henry Kissinger</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Dr. Henry Kissinger</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Dr. Henry Kissinger</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>
+			<Text>Dr. Henry Kissinger</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_DR._HENRY_KISSINGER_PEDIA</Tag>
 		<English>[BOLD][H1]Dr. Henry Kissinger[\H1][\BOLD][NEWLINE]Is an American diplomat and political scientist. He served as National Security Advisor and later concurrently as United States Secretary of State in the administrations of Presidents Richard Nixon and Gerald Ford. For his actions negotiating the ceasefire in Vietnam (though never realised), Kissinger received the 1973 Nobel Peace Prize under controversial circumstances,with two members of the committee resigning in protest.</English>
 		<French>[BOLD][H1]Dr. Henry Kissinger[\H1][\BOLD][NEWLINE]Est un diplomate et politologue américain. Il a été conseiller en matière de sécurité nationale et, plus tard, simultanément secrétaire d'État américain dans les administrations des présidents Richard Nixon et Gerald Ford. Pour ses actions de négociation du cessez-le-feu au Vietnam (bien que jamais réalisé), Kissinger a reçu le prix Nobel de la paix 1973 dans des circonstances controversées, deux membres du comité ayant démissionné pour protester.</French>
@@ -4143,6 +3186,35 @@
 		<English>[BOLD][H1]Edgar Rice Burroughs[\H1][\BOLD][NEWLINE][BOLD](September 1, 1875 - March 19, 1950)[\BOLD][NEWLINE]Was an American writer, best known for his creations of the jungle hero Tarzan and the heroic Mars adventurer John Carter, although he produced works in many genres.</English>
 		<French>[BOLD][H1]Edgar Rice Burroughs[\H1][\BOLD][NEWLINE][BOLD](September 1, 1875 - Mars 19, 1950)[\BOLD][NEWLINE]C'est un romancier américain, créateur de Tarzan, l'homme-singe, l'un des personnages de fiction les plus connus au monde et de John Carter, l'un des premiers héros de science fiction. Il est également l'auteur de plusieurs séries de science-fiction et de romans policiers.</French>
 		<Polish>[BOLD][H1]Edgar Rice Burroughs[\H1][\BOLD][NEWLINE][BOLD](1 Września 1875 - 19 Marca 1950)[\BOLD][NEWLINE]Amerykański pisarz, twórca cykli książek o przygodach Tarzana wśród małp, Johna Cartera na Marsie i innych.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_EDMUND_BURKE</Tag>
+		<English>Edmund Burke</English>
+		<French>
+			<Text>Edmund Burke</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Edmund Burke</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Edmund Burke</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Edmund Burke</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>
+			<Text>Edmund Burke</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_EDMUND_BURKE_PEDIA</Tag>
@@ -4327,6 +3399,35 @@
 		<Polish>[BOLD][H1]El Greco[\H1][\BOLD][NEWLINE][BOLD](1541 - 7 Kwietnia 1614)[\BOLD][NEWLINE]Malarz, rzeźbiarz i architekt hiszpański pochodzenia greckiego, jeden z najwybitniejszych przedstawicieli manieryzmu. Jego twórczość określona została przez idee kontrreformacji i wizje hiszpańskich mistyków. Obrazy El Greca są pełne ekstazy, mają żywą kolorystykę i wyróżniają się ekspresją form.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_EMILIANO_ZAPATA</Tag>
+		<English>Emiliano Zapata</English>
+		<French>
+			<Text>Emiliano Zapata</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Emiliano Zapata</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Emiliano Zapata</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Emiliano Zapata</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>
+			<Text>Emiliano Zapata</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_EMILIANO_ZAPATA_PEDIA</Tag>
 		<English>[BOLD][H1]Emiliano Zapata[\H1][\BOLD][NEWLINE]Was a leading figure in the Mexican Revolution, the main leader of the peasant revolution in the state of Morelos, and the inspiration of the agrarian movement called Zapatismo. Zapata remains an iconic figure in Mexico, used both as a nationalist symbol as well as a symbol of the neo-Zapatista movement.</English>
 		<French>[BOLD][H1]Emiliano Zapata[\H1][\BOLD][NEWLINE]A été une figure de proue de la Révolution mexicaine, le principal dirigeant de la révolution paysanne dans l'État de Morelos, et l'inspiration du mouvement agraire appelé Zapatismo. Zapata reste une figure emblématique du Mexique, utilisée à la fois comme symbole nationaliste et comme symbole du mouvement néo-zapatiste.</French>
@@ -4354,6 +3455,35 @@
 		<English>[BOLD][H1]Empedocles[\H1][\BOLD][NEWLINE][BOLD](c. 490 - c. 430 BC)[\BOLD][NEWLINE]Was a Greek pre-Socratic philosopher and a citizen of Agrigentum, a Greek city in Sicily. Empedocles' philosophy is best known for being the originator of the cosmogenic theory of the four Classical elements.</English>
 		<French>[BOLD][H1]Empédocle[\H1][\BOLD][NEWLINE][BOLD](c. 490 - c. 430 Av. JC)[\BOLD][NEWLINE]Empédocle est un philosophe, ingénieur et médecin grec (de Sicile) du Ve siècle av. J.-C. Empédocle fut à la fois ingénieur, philosophe, thaumaturge et poète. Il serait également le premier à avoir rassemblé des observations sur ce qui allait devenir la rhétorique.</French>
 		<Polish>[BOLD][H1]Empedocles[\H1][\BOLD][NEWLINE][BOLD](ok. 490 - ok. 430 p.n.e.)[\BOLD][NEWLINE]Starożytny poeta, filozof, uzdrowiciel, cudotwórca. Twórca koncepcji czterech żywiołów. Według Empedoklesa, zasada bytu jest czworaka i tworzą ją cztery (rhizai, korzenie), nazwane później żywiołami, elementami (stoicheia), lub pierwiastkami. Są to ziemia, woda, powietrze i ogień. Elementy są wieczne, bo "to, co jest", nie powstaje, nie przemija i jest niezmienne.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_EMPEROR_AKIHITO</Tag>
+		<English>Emperor Akihito</English>
+		<French>
+			<Text>Empereur Akihito</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Emperor Akihito</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Imperatore Akihito</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Emperor Akihito</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>
+			<Text>Emperor Akihito</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_EMPEROR_AKIHITO_PEDIA</Tag>
@@ -4699,7 +3829,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_FEODOR_I_PEDIA</Tag>
-		<English>[BOLD][H1]Feodor I[\H1][\BOLD][NEWLINE][BOLD](31 May 1557 - 16/ January 1598)[\BOLD][NEWLINE]Was the last Rurikid Tsar of Russia (1584-1598) son of Ivan IV (The Terrible) and Anastasia Romanovna. Feodor I once sending out nine elks, one bear and a black-and-brown fox.</English>
+		<English>[BOLD][H1]Feodor I[\H1][\BOLD][NEWLINE][BOLD](31 May 1557 - 16/ January 1598)[\BOLD][NEWLINE]Was the last Rurikid Tsar of Russia (1584-1598) son of Ivan IV (The Terrible) and Anastasia Romanovna. Feodor I once sent out nine elks, one bear and a black-and-brown fox.</English>
 		<French>[BOLD][H1]Féodor I[\H1][\BOLD][NEWLINE][BOLD](31 Mai 1557 - 16/ Janvier 1598)[\BOLD][NEWLINE]Tsar de Russie de 1584 à 1598. Fils d'Ivan IV le Terrible et d'Anastasia Romanovna Zakharine. En 1580, il épouse Irina Godounova (1557-1603), soeur de Boris Godounov.</French>
 		<Polish>[BOLD][H1]Feodor I[\H1][\BOLD][NEWLINE][BOLD](31 Maja 1557 - 16/ Stycznia 1598)[\BOLD][NEWLINE]Car Rosji w latach 1584-1598, ostatni władca Rosji z dynastii Rurykowiczów, syn Iwana IV (1533-1584) i Anastazji Romanowny Zacharyny. Fiodor Iwanowicz był trzecim synem cara Iwana Groźnego, drugim, który dorósł wieku dojrzałego. Następcą tronu był jego starszy o trzy lata brat - Iwan. Fiodor w odróżnieniu od energicznego brata i ojca był człowiekiem spokojnym, niezwykle pobożnym i niezbyt inteligentnym. Nie był przygotowywany do pełnienia władzy, stale też chorował.</Polish>
 	</TEXT>
@@ -5314,7 +4444,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_GEORGES_GUYNEMER_PEDIA</Tag>
-		<English>[BOLD][H1]Georges Guynemer[\H1][\BOLD][NEWLINE][BOLD](24 December 1894 - 11 September 1917)[\BOLD][NEWLINE]Was a top fighter ace for France during World War I, and a French national hero at the time of his death. uynemer became influential enough to affect French fighter aircraft design.</English>
+		<English>[BOLD][H1]Georges Guynemer[\H1][\BOLD][NEWLINE][BOLD](24 December 1894 - 11 September 1917)[\BOLD][NEWLINE]Was a top fighter ace for France during World War I, and a French national hero at the time of his death. Guynemer became influential enough to affect French fighter aircraft design.</English>
 		<French>[BOLD][H1]Georges Guynemer[\H1][\BOLD][NEWLINE][BOLD](24 Décembre 1894 - 11 Septembre 1917)[\BOLD][NEWLINE]C'est l'un des pilotes de guerre français les plus renommés de la Première Guerre mondiale. Capitaine dans l'aviation française, il remporta 53 victoires homologuées, plus une trentaine de victoires probables en combat aérien.</French>
 		<Polish>[BOLD][H1]Georges Guynemer[\H1][\BOLD][NEWLINE][BOLD](24 Grudnia 1894 - 11 Września 1917)[\BOLD][NEWLINE]Francuski pilot, jeden z czołowych francuskich asów myśliwskich okresu I wojny światowej. Odniósł 53 zwycięstwa powietrzne. Od najmłodszych lat uchodził za słabego i chorowitego, dlatego początkowo odmówiono mu wstąpienia do armii. Wstąpił więc do francuskich sił lotniczych w listopadzie 1914 roku jako mechanik. Jednakże po szkoleniu lotniczym udało mu się zostać pilotem myśliwskim i w kwietniu 1915 otrzymał upragnioną licencję pilota.</Polish>
 	</TEXT>
@@ -6121,6 +5251,35 @@
 		<English>[BOLD][H1]Harold II Godwinson[\H1][\BOLD][NEWLINE][BOLD](c. 1022 - 14 October 1066)[\BOLD][NEWLINE]Was the last Anglo-Saxon King of England. Harold reigned from 6 January 1066 until his death at the Battle of Hastings on 14 October, fighting the Norman invaders led by William the Conqueror during the Norman conquest of England.</English>
 		<French>[BOLD][H1]Harold II Godwinson[\H1][\BOLD][NEWLINE][BOLD](c. 1022 - 14 Octobre 1066)[\BOLD][NEWLINE]Roi Anglo-Saxon de Grande Bretagne. Harold a régné du 6 Janvier 1066 jusqu'à sa mort lors de la bataille de Hastings le 14 Octobre, en combattant les envahisseurs Normands menés par Guillaume le conquérant.</French>
 		<Polish>[BOLD][H1]Harold II Godwinson[\H1][\BOLD][NEWLINE][BOLD](ok. 1022 - 14 Października 1066)[\BOLD][NEWLINE]Król Anglii w 1066 r. Syn Godwina, earla Wessex, i Gythy Thorkelsdóttir. Król Edward Wyznawca zmarł 5 stycznia 1066 r. Harold twierdził, że na łożu śmierci przekazał mu koronę. Rację Harolda uznał witan, czyli zgromadzenie tanów anglosaskich. Harold został błyskawicznie koronowany przez ekskomunikowanego arcybiskupa Stiganda (była to pierwsza koronacja dokonana w opactwie westminsterskim).</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_HAROLD_MACMILLAN</Tag>
+		<English>Harold Macmillan</English>
+		<French>
+			<Text>Harold Macmillan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Harold Macmillan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Harold Macmillan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Harold Macmillan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>
+			<Text>Harold Macmillan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_HAROLD_MACMILLAN_PEDIA</Tag>
@@ -6934,12 +6093,6 @@
 		<Russian>Èøè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_ISHI_PEDIA</Tag>
-		<English>[BOLD][H1]Ishi[\H1][\BOLD][NEWLINE]The last surviving member of the Yahi tribe, was taken in as a refugee by Pope and Young. Ishi taught Pope and Young how to make archery tackle, shoot accurately and hunt like a Yahi. Ishi lived most of his life completely outside modern culture.</English>
-		<French>[BOLD][H1]Ishi[\H1][\BOLD][NEWLINE]Il est connu comme "le dernier des Yahi", sous-groupe de la tribu Yana en Californie. Il a été découvert effrayé et affamé à Oroville où il a été capturé et emprisonné. Alfred Kroeber demanda sa libération et le fit venir au musée de l'université de Californie à San Francisco pour étude.</French>
-		<Polish>[BOLD][H1]Ishi[\H1][\BOLD][NEWLINE]Ostatni ocalały członek plemienia Yahi. Schronienia udzili mu traperzy Pope i Young. Ishi nauczył traperów jak przygotowywać i zakładać pułapki oraz polować przy użyciu łuku. Całe swoje życie Ishi spędził poza cywilizacją.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ISHIKAWA_GOEMON</Tag>
 		<English>Ishikawa Goemon</English>
 		<Russian>Èñèêàâà Ãîýìîí</Russian>
@@ -6949,6 +6102,12 @@
 		<English>[BOLD][H1]Ishikawa Goemon[\H1][\BOLD][NEWLINE][BOLD](1558 - October 8, 1594)[\BOLD][NEWLINE]Was a semi-legendary Japanese outlaw hero who stole gold and valuables and gave them to the poor. Goemon is notable for being boiled alive along with his son in public after a failed assassination attempt on the civil war-era warlord Toyotomi Hideyoshi.</English>
 		<French>[BOLD][H1]Ishikawa Goemon[\H1][\BOLD][NEWLINE][BOLD](1558 - Octobre 8, 1594)[\BOLD][NEWLINE]C'est un bandit japonais semi-légendaire qui volait de l'or et d'autres objets de valeurs afin de les remettre aux pauvres. L'élément probablement le plus remarquable de sa vie, celui avec lequel on l'associe la plupart du temps, est de s'être fait bouillir vivant en public après une tentative d'assassinat raté du seigneur de guerre Toyotomi Hideyoshi. Une grande baignoire en forme de bouilloire de fer est maintenant appelée un Goemon-buro («baignoire Goemon»).</French>
 		<Polish>[BOLD][H1]Ishikawa Goemon[\H1][\BOLD][NEWLINE][BOLD](1558 - 8 Października 1594)[\BOLD][NEWLINE]Na wpół legendarny japoński bandyta i bohater ludowy żyjący w okresie Azuchi-Momoyama. Rzekomo został ugotowany żywcem wraz z synem za nieudaną próbę zabójstwa Hideyoshiego Toyotomi (stąd żelazną kadź w charakterystycznym kształcie nazywa się po japońsku goemonburo - "balią Goemona"). Jego legenda żyje do dziś i w ramach japońskiej kultury popularnej cały czas wzbogaca się o nowe wątki. Często przypisuje mu się ponadnaturalne zdolności (zob. ninja).</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_ISHI_PEDIA</Tag>
+		<English>[BOLD][H1]Ishi[\H1][\BOLD][NEWLINE]The last surviving member of the Yahi tribe, was taken in as a refugee by Pope and Young. Ishi taught Pope and Young how to make archery tackle, shoot accurately and hunt like a Yahi. Ishi lived most of his life completely outside modern culture.</English>
+		<French>[BOLD][H1]Ishi[\H1][\BOLD][NEWLINE]Il est connu comme "le dernier des Yahi", sous-groupe de la tribu Yana en Californie. Il a été découvert effrayé et affamé à Oroville où il a été capturé et emprisonné. Alfred Kroeber demanda sa libération et le fit venir au musée de l'université de Californie à San Francisco pour étude.</French>
+		<Polish>[BOLD][H1]Ishi[\H1][\BOLD][NEWLINE]Ostatni ocalały członek plemienia Yahi. Schronienia udzili mu traperzy Pope i Young. Ishi nauczył traperów jak przygotowywać i zakładać pułapki oraz polować przy użyciu łuku. Całe swoje życie Ishi spędził poza cywilizacją.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ISHMAEL</Tag>
@@ -7237,6 +6396,35 @@
 		<English>[BOLD][H1]James J. Hill[\H1][\BOLD][NEWLINE][BOLD](September 16, 1838 - May 29, 1916)[\BOLD][NEWLINE]Was a Canadian-American railroad executive. He was the chief executive officer of a family of lines headed by the Great Northern Railway. Hill became known during his lifetime as "The Empire Builder".</English>
 		<French>[BOLD][H1]James J. Hill[\H1][\BOLD][NEWLINE][BOLD](September 16, 1838 - Mai 29, 1916)[\BOLD][NEWLINE]C'est un industriel ferroviaire américain et canadien, PDG d'une série de lignes ferrovières gérées par la Great Northern Railway. On l'a surnommé le constructeur d'Empires.</French>
 		<Polish>[BOLD][H1]James J. Hill[\H1][\BOLD][NEWLINE][BOLD](16 Września 1838 - 29 Maja 1916)[\BOLD][NEWLINE]Kanadyjsko-Amerykański przedsiębiorca kolejowy. Był prezesem rodzinnej linii kolejowej prowadzącej przez Wielki Północne Przedsiębiorstwo Kolejowe. Za życia Hill był znany pod pseudonimeme Budowniczy Imperiów.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_JAMES_MADISON</Tag>
+		<English>James Madison</English>
+		<French>
+			<Text>James Madison</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>James Madison</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>James Madison</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>James Madison</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>
+			<Text>James Madison</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JAMES_MADISON_PEDIA</Tag>
@@ -7765,6 +6953,35 @@
 		<Polish>[BOLD][H1]John D. Rockefeller[\H1][\BOLD][NEWLINE][BOLD](8 Lipca 1839 - 23 Maja 1937)[\BOLD][NEWLINE]Amerykański przedsiębiorca, filantrop i fundator Uniwersytetu Chicagowskiego. Obecnie uważany za najbogatszego człowieka w historii, którego majątek w chwili śmierci ocenia się na 663.4 mld dolarów (według przelicznika z 2007 roku). Jego majątek odziedziczył John D. Rockefeller, Jr. a wnuk David Rockefeller operuje biznesem po dzień dzisiejszy.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_JOHN_F._KENNEDY</Tag>
+		<English>John F. Kennedy</English>
+		<French>
+			<Text>John F. Kennedy</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>John F. Kennedy</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>John F. Kennedy</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>John F. Kennedy</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>
+			<Text>John F. Kennedy</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JOHN_F._KENNEDY_PEDIA</Tag>
 		<English>[BOLD][H1]John F. Kennedy[\H1][\BOLD][NEWLINE]Was an American politician who served as the 35th President of the United States from January 1961 until his assassination in November 1963. The Cuban Missile Crisis, The Bay of Pigs Invasion, the Nuclear Test Ban Treaty, the establishment of the Peace Corps, developments in the Space Race, the building of the Berlin Wall, the Civil Rights Movement, the "New Frontier" domestic program, abolition of the federal death penalty in the District of Columbia, and increased U.S. involvement in the Vietnam War all took place during his presidency.</English>
 		<French>[BOLD][H1]John F. Kennedy[\H1][\BOLD][NEWLINE]C'est un politicien américain qui a été le 35e président des États-Unis de janvier 1961 jusqu'à son assassinat en novembre 1963. La crise des missiles cubains, l'invasion de la baie des Cochons, le traité d'interdiction des essais nucléaires, la création du Peace Corps, les développements dans la course à l'espace, la construction du mur de Berlin, le mouvement des droits civiques, le programme national "New Frontier", l'abolition de la peine de mort fédérale dans le district de Columbia et la participation accrue des États-Unis à la guerre du Vietnam ont tous eu lieu pendant sa présidence .</French>
@@ -7915,6 +7132,35 @@
 		<English>[BOLD][H1]John of Austria[\H1][\BOLD][NEWLINE][BOLD](24 February 1547 - 1 October 1578)[\BOLD][NEWLINE]Was an illegitimate son of Holy Roman Emperor Charles V. He became a military leader in the service of his half-brother, Philip of Spain and is best known for his naval victory at the Battle of Lepanto in 1571 against the Ottoman Empire.</English>
 		<French>[BOLD][H1]Juan d'Autriche[\H1][\BOLD][NEWLINE][BOLD](24 Février 1547 - 1 Octobre 1578)[\BOLD][NEWLINE]C'est un prince espagnol de la famille des Habsbourg - fils illégitime de Charles Quint - qui fait une carrière militaire dans les armées de son demi-frère Philippe II et est gouverneur des Pays-Bas de 1576 à 1578. Il est notamment le commandant de la flotte chrétienne lors de la célèbre bataille de Lépante, victoire navale décisive des puissances chrétiennes regroupées en une Sainte Ligue contre l'Empire ottoman.</French>
 		<Polish>[BOLD][H1]Juan de Austria[\H1][\BOLD][NEWLINE][BOLD](24 Lutego 1547 - 1 Października 1578)[\BOLD][NEWLINE]Wódz i admirał hiszpański. Był nieślubnym synem cesarza Karola V i Niemki, Barbary Blomberg. Jego przyrodnią siostrą była Małgorzata Parmeńska, generalna namiestniczka Niderlandów. Wsławił się zwycięstwem nad flotą turecką w bitwie pod Lepanto.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_JOHN_QUINCY_ADAMS</Tag>
+		<English>John Quincy Adams</English>
+		<French>
+			<Text>John Quincy Adams</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>John Quincy Adams</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>John Quincy Adams</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>John Quincy Adams</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>
+			<Text>John Quincy Adams</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JOHN_QUINCY_ADAMS_PEDIA</Tag>
@@ -8097,6 +7343,35 @@
 		<English>[BOLD][H1]Joseph Shabalala[\H1][\BOLD][NEWLINE][BOLD](born 28 August 1941)[\BOLD][NEWLINE]He is the founder and musical director of the South African choral group Ladysmith Black Mambazo. In 1987, the group won their first solo Grammy Award for Shaka Zulu. Since then, they have won one more and have been nominated over ten times.</English>
 		<French>[BOLD][H1]Joseph Shabalala[\H1][\BOLD][NEWLINE][BOLD]né le 28 Août 1941)[\BOLD][NEWLINE]Ladysmith Black Mambazo est un groupe vocal sud-africain, fondé en 1960 par Joseph Shabalala. Célèbre pour ses performances a cappella, il est représentatif des styles mbube et isicathamiya. Sa composition a évolué au fil des années. Il a été rendu mondialement célèbre grâce à sa participation à l'album de Paul Simon, "Graceland".</French>
 		<Polish>[BOLD][H1]Joseph Shabalala[\H1][\BOLD][NEWLINE][BOLD](ur. 28 Sierpnia 1941)[\BOLD][NEWLINE]Założyciel i dyrkertor południowo-afrykańskiego chóru Ladysmith Black Mambazo. W 1987 chór zdobył swoją pierwszą nagrodę Grammy za muzykę do filmu Shaka Zulu. Od tego czasu chór zdobył o więcej nagród oraz był nominowany wielokrotnie.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_JOSEPH_STALIN</Tag>
+		<English>Joseph Stalin</English>
+		<French>
+			<Text>Joseph Stalin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Joseph Stalin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Joseph Stalin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Joseph Stalin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>
+			<Text>Joseph Stalin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_JOSEPH_STALIN_PEDIA</Tag>
@@ -8348,6 +7623,35 @@
 		<Polish>[BOLD][H1]Kazimierz Malewicz[\H1][\BOLD][NEWLINE][BOLD](23 Lutego 1879 - 15 Maja 1935)[\BOLD][NEWLINE]Rosyjski malarz i teoretyk sztuki, pochodzenia polskiego, przedstawiciel rosyjskiej awangardy artystycznej, twórca suprematyzmu. Kazimierz Malewicz wywarł znaczny wpływ na rosyjskich konstruktywistów i polską awangardę lat 20. XX wieku, był zapowiedzią minimalistów. Do jego najsłynniejszych dzieł zalicza się Czarny kwadrat na białym tle, pokazany po raz pierwszy w 1915 Piotrogrodzie.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_KEMAL_ATATURK</Tag>
+		<English>Kemal Ataturk</English>
+		<French>
+			<Text>Kemal Ataturk</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kemal Ataturk</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kemal Ataturk</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kemal Ataturk</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>
+			<Text>Kemal Ataturk</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_KEMAL_ATATURK_PEDIA</Tag>
 		<English>[BOLD][H1]Kemal Ataturk[\H1][\BOLD][NEWLINE]Was a Turkish army officer, revolutionary, and the first President of Turkey. He is credited with being the founder of the Republic of Turkey. His surname, Atatürk (meaning "Father of the Turks"), was granted to him in 1934 and forbidden to any other person by the Turkish parliament.</English>
 		<French>[BOLD][H1]Kemal Ataturk[\H1][\BOLD][NEWLINE]C'est un officier de l'armée turque, révolutionnaire et le premier président de la Turquie. Il est reconnu comme le fondateur de la République de Turquie. Son nom de famille, Atatürk (qui signifie «père des Turcs»), lui a été accordé en 1934 et interdit à toute autre personne par le parlement turc.</French>
@@ -8379,12 +7683,6 @@
 		<Tag>TXT_KEY_GREAT_PERSON_KHA</Tag>
 		<English>Kha</English>
 		<Russian>Êõà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_KHA_PEDIA</Tag>
-		<English>[BOLD][H1]Kha[\H1][\BOLD][NEWLINE]Was an important foreman at Deir El-Medina, where he had been responsible for projects constructed during the reigns of three kings: Amenhotep II, Thutmose IV and Amenhotep III respectively.</English>
-		<French>[BOLD][H1]Kha[\H1][\BOLD][NEWLINE]Un important gestionnaire de Deir El-Medina, responsable de projets de construction durant le règne des trois rois: Amenhotep II, Thutmose IV et Amenhotep III.</French>
-		<Polish>[BOLD][H1]Kha[\H1][\BOLD][NEWLINE]Był ważnym zarządcą w miejscowości Deir El-Medina gdzie był za projekty zlecane mu przez trzech faraonów: Amenhotepa II, Thutmosa IV i Amenhotepa III.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_KHAEMWESET</Tag>
@@ -8420,6 +7718,12 @@
 		<English>[BOLD][H1]Khalid Ibn Al-Walid[\H1][\BOLD][NEWLINE][BOLD](592 - 642)[\BOLD][NEWLINE]Was a companion of the Islamic prophet Muhammad. He is noted for his military tactics and prowes, commanding the forces of Medina under Muhammad and the forces of his immediate successors of the Rashidun Caliphate, Abu Bakr and Umar ibn Khattab.</English>
 		<French>[BOLD][H1]Khalid Ibn Al-Walid[\H1][\BOLD][NEWLINE][BOLD](592 - 642)[\BOLD][NEWLINE]C'est un quraychite et le principal général du prophète de l'islam Mahomet et du premier calife Abu Bakr. Après la mort de Mahomet, il participe à la reconquête de la péninsule d'Arabie et est le commandant des armées musulmanes lors des conquêtes de l'Irak, de la Syrie, et des deux grandes puissances de l'époque.</French>
 		<Polish>[BOLD][H1]Khalid Ibn Al-Walid[\H1][\BOLD][NEWLINE][BOLD](592 - 642)[\BOLD][NEWLINE]Wódz arabski okresu podbojów. Zgodnie z tą tradycją Chalid ibn al-Walid należał do rodu Machzum, obok Umajjadów i Haszymitów jednego z trzech najznaczniejszych rodów ówczesnej Mekki. W roku 627 lub 629 nawrócił się jednak na islam i brał udział w bitwie pod Mutą, gdzie po śmierci wyznaczonych przez Mahometa dowódców wyprowadził z pola bitwy resztę rozbitych oddziałów. To po tej bitwie miał otrzymać od Proroka tytuł Miecz Boga (Sajf Allah), często przywoływany w późniejszej tradycji.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_KHA_PEDIA</Tag>
+		<English>[BOLD][H1]Kha[\H1][\BOLD][NEWLINE]Was an important foreman at Deir El-Medina, where he had been responsible for projects constructed during the reigns of three kings: Amenhotep II, Thutmose IV and Amenhotep III respectively.</English>
+		<French>[BOLD][H1]Kha[\H1][\BOLD][NEWLINE]Un important gestionnaire de Deir El-Medina, responsable de projets de construction durant le règne des trois rois: Amenhotep II, Thutmose IV et Amenhotep III.</French>
+		<Polish>[BOLD][H1]Kha[\H1][\BOLD][NEWLINE]Był ważnym zarządcą w miejscowości Deir El-Medina gdzie był za projekty zlecane mu przez trzech faraonów: Amenhotepa II, Thutmosa IV i Amenhotepa III.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_KHONVOUM</Tag>
@@ -8466,6 +7770,35 @@
 		<English>[BOLD][H1]Kiichiro Toyoda[\H1][\BOLD][NEWLINE][BOLD](June 11, 1894 - March 27, 1952)[\BOLD][NEWLINE]Was a Japanese entrepreneur and the son of Toyoda Loom Works founder Sakichi Toyoda. His decision to take Toyoda Loom Works into automobile manufacturing would create what would eventually become Toyota Motor Corporation.</English>
 		<French>[BOLD][H1]Kiichiro Toyoda[\H1][\BOLD][NEWLINE][BOLD](Juin 11, 1894 - Mars27, 1952)[\BOLD][NEWLINE]C'est un industriel japonais et le fils de Sakichi Toyoda, fondateur du groupe japonais Toyota.</French>
 		<Polish>[BOLD][H1]Kiichiro Toyoda[\H1][\BOLD][NEWLINE][BOLD](11 Czerwca 1894 - Marca 27, 1952)[\BOLD][NEWLINE]Japoński przedsiębiorca, syn założyciela koncernu Toyota Sakichiego Toyody. W 1931 opracował prototyp własnego silnika spalinowego. We wrześniu 1933 zakłady Toyody uruchomiły dział samochodowy. W tym samym roku wyprodukowano pierwszy, sześciocylindrowy silnik o pojemności 3389 cm3, a w maju 1935 wyprodukowano pierwsze egzemplarze Toyoty A1.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_KIMON</Tag>
+		<English>Kimon</English>
+		<French>
+			<Text>Kimon</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kimon</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kimon</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kimon</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>
+			<Text>Kimon</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_KIMON_PEDIA</Tag>
@@ -8686,6 +8019,35 @@
 		<Polish>[BOLD][H1]Leonidas[\H1][\BOLD][NEWLINE][BOLD](zmarł 480 p.n.e.)[\BOLD][NEWLINE]Od około 490 p.n.e. król Sparty, syn Anaksandridasa II i jego pierwszej żony. W 480 p.n.e. dowodził obroną przesmyku termopilskiego, stojąc na czele 300 Spartan i kilku tysięcy żołnierzy z innych państw greckich. Przez trzy dni odpierał ataki wielotysięcznej armii króla Persji, Kserksesa I, która nie mogła w wąskim przejściu wykorzystać swojej przewagi liczebnej. Wraz z trzystoma Spartanami, tyluż Helotami oraz siedmioma setkami Tespijczyków bronił wąwozu do końca.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_LEON_TROTSKY</Tag>
+		<English>Leon Trotsky</English>
+		<French>
+			<Text>Leon Trotsky</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Leon Trotsky</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Leon Trotsky</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Leon Trotsky</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>
+			<Text>Leon Trotsky</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_LEON_TROTSKY_PEDIA</Tag>
 		<English>[BOLD][H1]Leon Trotsky[\H1][\BOLD][NEWLINE]Was a Marxist revolutionary and theorist, Soviet politician, and the founding leader of the Red Army. Trotsky initially supported the Menshevik Internationalists faction of the Russian Social Democratic Labour Party. He joined the Bolsheviks immediately prior to the 1917 October Revolution, and eventually became a leader within the Communist Party. He was one of the seven members of the first Politburo, founded in 1917 in order to manage the Bolshevik Revolution.</English>
 		<French>[BOLD][H1]Leon Trotsky[\H1][\BOLD][NEWLINE]C'est un révolutionnaire et théoricien marxiste, un politicien soviétique et le chef fondateur de l'Armée rouge. Trotsky a d'abord soutenu la faction internationaliste menchévik du Parti travailliste social-démocrate russe. Il a rejoint les bolcheviks juste avant la révolution d'octobre 1917 et est finalement devenu un leader au sein du Parti communiste. Il était l'un des sept membres du premier Politburo, fondé en 1917 pour gérer la révolution bolchevique.</French>
@@ -8827,10 +8189,68 @@
 		<Polish>[BOLD][H1]Lope De Vega[\H1][\BOLD][NEWLINE][BOLD](25 Listopada 1562 - 27 Sierpnia 1635)[\BOLD][NEWLINE]Dramatopisarz hiszpańskiego baroku, twórca lirycznego dramatu hiszpańskiego, w którym tragizm splatał się z komizmem, a realizm z fantastyką. W sposób mistrzowski budował intrygę swoich utworów i portrety bohaterów. Napisał około 2200 sztuk, z których zachowało się 500, w większości opartych na historii i legendach ludowych. Biorąc pod uwagę ilość napisanych przez niego dzieł, jest jednym z najbardziej płodnych autorów literatury światowej.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_LORD_CHESTERFIELD</Tag>
+		<English>Lord Chesterfield</English>
+		<French>
+			<Text>Lord Chesterfield</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Lord Chesterfield</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Lord Chesterfield</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Lord Chesterfield</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>
+			<Text>Lord Chesterfield</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_LORD_CHESTERFIELD_PEDIA</Tag>
 		<English>[BOLD][H1]Lord Chesterfield[\H1][\BOLD][NEWLINE]Was a British statesman, and a man of letters, and wit. He was born in London to Philip Stanhope, 3rd Earl of Chesterfield, and Lady Elizabeth Savile, and known as Lord Stanhope until the death of his father, in 1726. Educated at Trinity Hall, Cambridge, he subsequently embarked on the Grand Tour of the Continent, to complete his education as a nobleman, by exposure to the cultural legacies of Classical antiquity and the Renaissance, and to become acquainted with his aristocratic counterparts and the polite society of Continental Europe.</English>
 		<French>[BOLD][H1]Lord Chesterfield[\H1][\BOLD][NEWLINE]C'est un homme d'État britannique, un homme de lettres et d'esprit. Il est né à Londres de Philip Stanhope, 3e comte de Chesterfield, et de Lady Elizabeth Savile, et connu sous le nom de Lord Stanhope jusqu'à la mort de son père, en 1726. Formé au Trinity Hall, Cambridge, il a ensuite entrepris le Grand Tour de the Continent, pour achever ses études de noble, en se familiarisant avec l'héritage culturel de l'Antiquité classique et de la Renaissance, et pour se familiariser avec ses homologues aristocratiques et la société polie de l'Europe continentale.</French>
 		<Polish>[BOLD][H1]Lord Chesterfield[\H1][\BOLD][NEWLINE]Brytyjski pisarz i polityk partii Wigów. Po śmierci jego ojca (1726) tytułowano go Lord Stanhope (lub Lord Chesterfield). W roku 1715 wszedł do parlamentu jako Lord Stanhope of Shelford z okręgu St Germans. Gdy dyskutowano czy przeprowadzić impeachment jednego z innych posłów James Butler, 2. książę Ormonde Stanhope wygłosił (5 VIII 1715) pierwszą ze swych słynnych płomiennych mów. Była ona na tyle gwałtowna, że ściągnęła nań gniew większości posłów i grzywnę w wysokości 500 funtów. Wówczas zdecydował się wyjechać na kontynent. Stanhope, 5. hrabia Chesterfield.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_LORD_MELBOURNE</Tag>
+		<English>Lord Melbourne</English>
+		<French>
+			<Text>Lord Melbourne</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Lord Melbourne</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Lord Melbourne</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Lord Melbourne</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>
+			<Text>Lord Melbourne</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_LORD_MELBOURNE_PEDIA</Tag>
@@ -9101,12 +8521,6 @@
 		<Russian>Ìàãîí</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_MAGO_PEDIA</Tag>
-		<English>[BOLD][H1]Mago[\H1][\BOLD][NEWLINE]Mago was a Carthaginian writer, author of an agricultural manual in Punic which was a record of the farming knowledge of Carthage. Mago's long work (it was divided into 28 books) was partly based on earlier Greek agricultural writings but no doubt incorporated local North African and Phoenician traditional practices, Carthage being a Phoenician colony.</English>
-		<French>[BOLD][H1]Magon[\H1][\BOLD][NEWLINE]C'est un érudit carthaginois du 3e ou 2e siècle av. J.-C. Il rédigea un important traité sur l'agriculture en langue punique qui fut l'une des sources les plus importantes sur le sujet pendant plusieurs siècles.</French>
-		<Polish>[BOLD][H1]Mago[\H1][\BOLD][NEWLINE]Karagiński pisarz, autor podręcznika agrokultury w języku fenickim, który spisywał całą znaną wiedzę na ten temat w Kartaginie. 28 księgowy podręcznik częściowo opierał się na dziełach greckich pisarzy, lecz bez wątpienia w głównej mierze opisywał lokalne, pólnocno afrykańskie i fenickie doświadczenia rolnicze.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_MAGO_BARCA</Tag>
 		<English>Mago Barca</English>
 		<French>Magon Barca</French>
@@ -9117,6 +8531,12 @@
 		<English>[BOLD][H1]Mago Barca[\H1][\BOLD][NEWLINE][BOLD](243 BC - 203 BC)[\BOLD][NEWLINE]Was a member of the Barcid family, and played an important role in the Second Punic War, leading forces of Carthage against the Roman Republic in Hispania, Gallia Cisalpina and Italy.</English>
 		<French>[BOLD][H1]Magon Barca[\H1][\BOLD][NEWLINE][BOLD](243 Av. JC - 203 Av. JC)[\BOLD][NEWLINE]C'est un général carthaginois membre de la famille des Barcides. Il est le fils de Hamilcar Barca et le frère cadet1 de Hannibal et de Hasdrubal Barca. On ignore tout de sa vie avant la Deuxième guerre punique.</French>
 		<Polish>[BOLD][H1]Mago Barca[\H1][\BOLD][NEWLINE][BOLD](243 p.n.e. - 203 p.n.e.)[\BOLD][NEWLINE]Członek rodu Barkidów z Kartaginy. Odgrywał ważną rolę w drugiej Wojnie Punickiej dowodząc wojskami Kartaginy w Hiszpanii i walcząc z Republiką Rzymską. Zapuszczał się także w rejony Galii Cisalpiny.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_MAGO_PEDIA</Tag>
+		<English>[BOLD][H1]Mago[\H1][\BOLD][NEWLINE]Mago was a Carthaginian writer, author of an agricultural manual in Punic which was a record of the farming knowledge of Carthage. Mago's long work (it was divided into 28 books) was partly based on earlier Greek agricultural writings but no doubt incorporated local North African and Phoenician traditional practices, Carthage being a Phoenician colony.</English>
+		<French>[BOLD][H1]Magon[\H1][\BOLD][NEWLINE]C'est un érudit carthaginois du 3e ou 2e siècle av. J.-C. Il rédigea un important traité sur l'agriculture en langue punique qui fut l'une des sources les plus importantes sur le sujet pendant plusieurs siècles.</French>
+		<Polish>[BOLD][H1]Mago[\H1][\BOLD][NEWLINE]Karagiński pisarz, autor podręcznika agrokultury w języku fenickim, który spisywał całą znaną wiedzę na ten temat w Kartaginie. 28 księgowy podręcznik częściowo opierał się na dziełach greckich pisarzy, lecz bez wątpienia w głównej mierze opisywał lokalne, pólnocno afrykańskie i fenickie doświadczenia rolnicze.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_MAHAVIRA</Tag>
@@ -9253,6 +8673,35 @@
 		<Polish>[BOLD][H1]Manuel Pessanha[\H1][\BOLD][NEWLINE]Genueński kupiec i żeglarz, który w XIV wieku służył jako pierwszy admirał Portugalii w czasach rządów króla Denisa. Brał udział w morskich bitwach z Kastylią w czasie rebelii króla Alfonso IV.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_MAO_ZEDONG</Tag>
+		<English>Mao Zedong</English>
+		<French>
+			<Text>Mao Zedong</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mao Zedong</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Mao Zedong</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Mao Zedong</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>
+			<Text>Mao Zedong</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_MAO_ZEDONG_PEDIA</Tag>
 		<English>[BOLD][H1]Mao Zedong[\H1][\BOLD][NEWLINE]Was a Chinese Communist revolutionary and the founding father of the People's Republic of China, which he governed as Chairman of the Communist Party of China from its establishment in 1949 until his death in 1976. His Marxist-Leninist theories, military strategies, and political policies are collectively known as Marxism-Leninism-Maoism or Mao Zedong Thought.</English>
 		<French>[BOLD][H1]Mao Zedong[\H1][\BOLD][NEWLINE]C'est un révolutionnaire communiste chinois et le père fondateur de la République populaire de Chine, qu'il dirigeait en tant que président du Parti communiste chinois depuis sa création en 1949 jusqu'à sa mort en 1976. Ses théories marxistes-léninistes, ses stratégies militaires et ses politiques politiques sont collectivement connus sous le nom de marxisme-léninisme-maoïsme ou pensée de Mao Zedong.</French>
@@ -9315,6 +8764,35 @@
 		<Polish>[BOLD][H1]Marcus Aurelius[\H1][\BOLD][NEWLINE][BOLD](26 Kwietnia 121 - 17 Marca 180 r n.e.)[\BOLD][NEWLINE]Cesarz rzymski, pisarz i filozof. Czasy rządów Marka Aureliusza przypadły na okres bardzo trudny: nieustających wojen i klęsk żywiołowych (wylew Tybru, głód, rozruchy uliczne, pożary, plaga szarańczy, epidemia dżumy). Głównymi wrogami Rzymu były wówczas plemiona germańskie i Partowie. Marek Aureliusz zmarł na dżumę w trakcie wyprawy wojennej przeciw Markomanom 17 marca 180 roku w Vindobonie (dzisiejszy Wiedeń).</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_MARCUS_JUNIUS_BRUTUS</Tag>
+		<English>Marcus Junius Brutus</English>
+		<French>
+			<Text>Marcus Junius Brutus</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Marcus Junius Brutus</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Marco Giunio Bruto</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Marcus Junius Brutus</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>
+			<Text>Marcus Junius Brutus</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_MARCUS_JUNIUS_BRUTUS_PEDIA</Tag>
 		<English>[BOLD][H1]Marcus Junius Brutus[\H1][\BOLD][NEWLINE]Was a politician of the late Roman Republic. After being adopted by his uncle he used the name Quintus Servilius Caepio Brutus, but eventually returned to using his original name. He is best known in modern times for taking a leading role in the assassination of Julius Caesar.</English>
 		<French>[BOLD][H1]Marcus Junius Brutus[\H1][\BOLD][NEWLINE]C'est un politicien de la fin de la République romaine. Après avoir été adopté par son oncle, il a utilisé le nom Quintus Servilius Caepio Brutus, mais a finalement repris son nom d'origine. Il est surtout connu dans les temps modernes pour avoir joué un rôle de premier plan dans l'assassinat de Jules César.</French>
@@ -9354,6 +8832,35 @@
 		<Polish>[BOLD][H1]Marc Chagall[\H1][\BOLD][NEWLINE][BOLD](24 Czerwca 1887 - 28 Marca 1985)[\BOLD][NEWLINE]Malarz i grafik żydowskiego pochodzenia posiadający obywatelstwo rosyjskie i francuskie; czołowy przedstawiciel kubizmu i internacjonalizmu w malarstwie. Latem 1908 stworzył swoje pierwsze znaczące dzieło, Śmierć, w którym zaznaczyły się pewne wpływy Gauguina.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_MARGARET_THATCHER</Tag>
+		<English>Margaret Thatcher</English>
+		<French>
+			<Text>Margaret Thatcher</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Margaret Thatcher</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Margaret Thatcher</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Margaret Thatcher</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>
+			<Text>Margaret Thatcher</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_MARGARET_THATCHER_PEDIA</Tag>
 		<English>[BOLD][H1]Margaret Thatcher[\H1][\BOLD][NEWLINE]Was a British politician, who was the Prime Minister of the United Kingdom from 1979 to 1990, and the Leader of the Conservative Party from 1975 to 1990. She was the longest-serving British Prime Minister of the 20th century and is currently the only woman to have held the office. A Soviet journalist dubbed her the "Iron Lady", a nickname that became associated with her uncompromising politics and leadership style. As Prime Minister, she implemented policies that have come to be known as Thatcherism.</English>
 		<French>[BOLD][H1]Margaret Thatcher[\H1][\BOLD][NEWLINE]C'est une politicienne britannique, qui a été Premier ministre du Royaume-Uni de 1979 à 1990, et chef du Parti conservateur de 1975 à 1990. Elle a été le Premier ministre britannique le plus ancien du 20e siècle et est actuellement la seule femme avoir occupé le poste. Un journaliste soviétique l'a surnommée la «Dame de fer», un surnom qui est devenu associé à sa politique intransigeante et à son style de leadership. En tant que Premier ministre, elle a mis en œuvre des politiques qui sont connues sous le nom de Thatcherism.</French>
@@ -9369,6 +8876,35 @@
 		<English>[BOLD][H1]Marie Curie[\H1][\BOLD][NEWLINE][BOLD](7 November 1867 - 4 July 1934)[\BOLD][NEWLINE]Was a Polish and naturalized-French physicist and chemist who conducted pioneering research on radioactivity. She was the first woman to win a Nobel Prize, the first person (and only woman) to win twice, the only person to win twice in multiple fields.</English>
 		<French>[BOLD][H1]Marie Curie[\H1][\BOLD][NEWLINE][BOLD](7 Novembre 1867 - 4 Juillet 1934)[\BOLD][NEWLINE]C'est une physicienne et chimiste polonaise, naturalisée française. Pierre Curie - son époux - et Marie Curie reçoivent une moitié du prix Nobel de physique de 1903 (l'autre moitié est remise à Henri Becquerel) pour leurs recherches sur les radiations.</French>
 		<Polish>[BOLD][H1]Marie Curie[\H1][\BOLD][NEWLINE][BOLD](7 Listopada 1867 - 4 Lipca 1934)[\BOLD][NEWLINE]Fizyczka i chemiczka, dwukrotna laureatka Nagrody Nobla za osiągnięcia naukowe, po raz pierwszy w roku 1903 z fizyki wraz z mężem i Henrim Becquerelem za badania nad odkrytym przez Becquerela zjawiskiem promieniotwórczości, po raz drugi w 1911 roku z chemii za wydzielenie czystego radu i badanie właściwości chemicznych pierwiastków promieniotwórczych. Jest jedyną kobietą, która tę nagrodę otrzymała dwukrotnie.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_MARK_ANTONY</Tag>
+		<English>Mark Antony</English>
+		<French>
+			<Text>Mark Antony</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mark Antony</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Marcantonio</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Mark Antony</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>
+			<Text>Mark Antony</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_MARK_ANTONY_PEDIA</Tag>
@@ -9426,12 +8962,6 @@
 		<Russian>Ìàðòèí Ëþòåð Êèíã</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_MARTIN_LUTHER_PEDIA</Tag>
-		<English>[BOLD][H1]Martin Luther[\H1][\BOLD][NEWLINE][BOLD](10 November 1483 - 18 February 1546)[\BOLD][NEWLINE]Was a friar, priest, professor of theology and seminal figure of the 16th-century movement in Christianity known later as the Protestant Reformation.[NEWLINE]"Here I stand; I can do no otherwise. God help me. Amen!"</English>
-		<French>[BOLD][H1]Martin Luther[\H1][\BOLD][NEWLINE][BOLD](10 Novembre 1483 - 18 Février 1546)[\BOLD][NEWLINE]C'est un frère augustin théologien, professeur d'université, père du protestantisme et réformateur de l'Église dont les idées exercèrent une grande influence sur la Réforme protestante, qui changea le cours de la civilisation occidentale.</French>
-		<Polish>[BOLD][H1]Marcin Luter[\H1][\BOLD][NEWLINE][BOLD](10 Listopada 1483 - 18 Lutego 1546)[\BOLD][NEWLINE]Niemiecki reformator religijny, teolog i inicjator reformacji, mnich augustiański, doktor teologii, współtwórca luteranizmu. Autor 95 tez potępiających praktykę sprzedaży odpustów, w których odrzucał możliwość kupienia łaski Bożej. Pomimo że nie brał czynnego udziału w wystąpieniach religijnych i społeczno-politycznych, a jedynie pisał polemiki i katechezy, skupił wokół swojej idei całą opozycję Kościoła katolickiego.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_MARTIN_LUTHER_KING</Tag>
 		<English>Martin Luther King</English>
 		<Russian>Ìàðòèí Ëþòåð Êèíã</Russian>
@@ -9441,6 +8971,41 @@
 		<English>[BOLD][H1]Martin Luther King[\H1][\BOLD][NEWLINE][BOLD](January 15, 1929 - April 4, 1968)[\BOLD][NEWLINE]Was an American pastor, activist, humanitarian, and leader in the African-American Civil Rights Movement.[NEWLINE]I Have a Dream</English>
 		<French>[BOLD][H1]Martin Luther King[\H1][\BOLD][NEWLINE][BOLD](Janvier 15, 1929 - Avril 4, 1968)[\BOLD][NEWLINE]Martin Luther King Jr. est un pasteur baptiste afro-américain, militant non-violent pour les droits civiques des Noirs aux États-Unis, pour la paix et contre la pauvreté, né à Atlanta (Géorgie) le 15 janvier 1929 et mort assassiné le 4 avril 1968 à Memphis (Tennessee).[NEWLINE]I Have a Dream</French>
 		<Polish>[BOLD][H1]Martin Luther King[\H1][\BOLD][NEWLINE][BOLD](15 Stycznia 1929 - 4 Kwietnia 1968)[\BOLD][NEWLINE]Pastor baptystyczny, działacz na rzecz równouprawnienia, zniesienia dyskryminacji rasowej, laureat pokojowej Nagrody Nobla z roku 1964, Człowiek Roku 1963 według magazynu "Time". Zamordowany 4 kwietnia 1968 przez przeciwników równouprawnienia Afroamerykanów.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_MARTIN_LUTHER_PEDIA</Tag>
+		<English>[BOLD][H1]Martin Luther[\H1][\BOLD][NEWLINE][BOLD](10 November 1483 - 18 February 1546)[\BOLD][NEWLINE]Was a friar, priest, professor of theology and seminal figure of the 16th-century movement in Christianity known later as the Protestant Reformation.[NEWLINE]"Here I stand; I can do no otherwise. God help me. Amen!"</English>
+		<French>[BOLD][H1]Martin Luther[\H1][\BOLD][NEWLINE][BOLD](10 Novembre 1483 - 18 Février 1546)[\BOLD][NEWLINE]C'est un frère augustin théologien, professeur d'université, père du protestantisme et réformateur de l'Église dont les idées exercèrent une grande influence sur la Réforme protestante, qui changea le cours de la civilisation occidentale.</French>
+		<Polish>[BOLD][H1]Marcin Luter[\H1][\BOLD][NEWLINE][BOLD](10 Listopada 1483 - 18 Lutego 1546)[\BOLD][NEWLINE]Niemiecki reformator religijny, teolog i inicjator reformacji, mnich augustiański, doktor teologii, współtwórca luteranizmu. Autor 95 tez potępiających praktykę sprzedaży odpustów, w których odrzucał możliwość kupienia łaski Bożej. Pomimo że nie brał czynnego udziału w wystąpieniach religijnych i społeczno-politycznych, a jedynie pisał polemiki i katechezy, skupił wokół swojej idei całą opozycję Kościoła katolickiego.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_MARTIN_VAN_BUREN</Tag>
+		<English>Martin Van Buren</English>
+		<French>
+			<Text>Martin Van Buren</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Martin Van Buren</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Martin Van Buren</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Martin Van Buren</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>
+			<Text>Martin Van Buren</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_MARTIN_VAN_BUREN_PEDIA</Tag>
@@ -9581,6 +9146,35 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 		<English>[BOLD][H1]Mehmed I Celebi[\H1][\BOLD][NEWLINE][BOLD](1381 - May 26, 1421)[\BOLD][NEWLINE]Was the sultan of the Ottoman Empire. He was buried in Bursa, in a mausoleum erected by himself near the celebrated mosque which he built there, and which, because of its decorations of green porcelain, is called the Green Mosque.</English>
 		<French>[BOLD][H1]Mehmed Ier[\H1][\BOLD][NEWLINE][BOLD](1381 - Mai 26, 1421)[\BOLD][NEWLINE]Il est le quatrième fils de Bayezid Ier. Sa mère, Devlet, est une princesse de Germiyan. Après la guerre civile appelée « l'interrègne » de 1403 à 1413, il fut reconnu sultan dans tout l'Empire ottoman.</French>
 		<Polish>[BOLD][H1]Mehmed I Celebi[\H1][\BOLD][NEWLINE][BOLD](1381 - 26 Maja 1421)[\BOLD][NEWLINE]Sułtan osmański od 1413, który zjednoczył imperium osmańskie po długoletniej wojnie domowej. Mehmed działał aktywnie na polu organizacji wewnętrznej państwa, de facto tworząc ją (po dekonstrukcji w okresie najazdu Timura i wojny domowej) na nowych zasadach. Mehmed zmarł w 1421 r., jego następcą został jego syn, Murad II, który objął tron mimo oporu wspomnianego stryja Mustafy oraz młodszego brata o tym samym imieniu.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_MENACHEM_BEGIN</Tag>
+		<English>Menachem Begin</English>
+		<French>
+			<Text>Menachem Begin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Menachem Begin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Menachem Begin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Menachem Begin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>
+			<Text>Menachem Begin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_MENACHEM_BEGIN_PEDIA</Tag>
@@ -9793,6 +9387,35 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 		<Polish>[BOLD][H1]Michaił Glinka[\H1][\BOLD][NEWLINE][BOLD](1 Czerwca 1804 - 15 Lutego1857)[\BOLD][NEWLINE]Kompozytor rosyjski. Kompozytor jest uważany za twórcę narodowej opery rosyjskiej, łączącego w niej tradycyjny folklor Rusi i patriotyzm z nowymi prądami w muzyce zachodniej Europy. Twórczość Michaiła Glinki była inspiracją dla grupy rosyjskich kompozytorów nazwanej Potężną gromadką. "Życie za cara" wystawiono 7 lutego 1940 na scenie berlińskiej Staatsoper w ramach niemiecko-radzieckiej współpracy kulturalnej, będącej wynikiem zawartego pół roku wcześniej paktu Ribbentrop-Mołotow.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_MIKHAIL_GORBACHEV</Tag>
+		<English>Mikhail Gorbachev</English>
+		<French>
+			<Text>Mikhail Gorbachev</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mikhail Gorbachev</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Mikhail Gorbachev</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Mikhail Gorbachev</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>
+			<Text>Mikhail Gorbachev</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_MIKHAIL_GORBACHEV_PEDIA</Tag>
 		<English>[BOLD][H1]Mikhail Gorbachev[\H1][\BOLD][NEWLINE]Is a former Soviet statesman. He was the eighth and last leader of the Soviet Union, having served as General Secretary of the Communist Party of the Soviet Union from 1985 until 1991 when the party was dissolved. He served as the country's head of state from 1988 until its dissolution in 1991 (titled as Chairman of the Presidium of the Supreme Soviet from 1988 to 1989, as Chairman of the Supreme Soviet from 1989 to 1990, and as President of the Soviet Union from 1990 to 1991). He was the only general secretary in the history of the Soviet Union to have been born after the October Revolution.</English>
 		<French>[BOLD][H1]Mikhail Gorbachev[\H1][\BOLD][NEWLINE]Est un ancien homme d'État soviétique. Il était le huitième et dernier dirigeant de l'Union soviétique, ayant occupé le poste de secrétaire général du Parti communiste de l'Union soviétique de 1985 à 1991, date à laquelle le parti a été dissous. Il a été chef de l'État du pays de 1988 jusqu'à sa dissolution en 1991 (nommé président du présidium du Soviet suprême de 1988 à 1989, président du Soviet suprême de 1989 à 1990 et président de l'Union soviétique de 1990 à 1991). Il était le seul secrétaire général de l'histoire de l'Union soviétique à être né après la révolution d'octobre.</French>
@@ -9840,7 +9463,7 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_MIKHAIL_SKOBELEV_PEDIA</Tag>
-		<English>[BOLD][H1]Mikhail Skobelev[\H1][\BOLD][NEWLINE][BOLD](29 September 1843 - 7 July 1882)[\BOLD][NEWLINE]Was a Russian general famous for his conquest of Central Asia and heroism during the Ruso-Turkish War. Dresed in white and mounted on a white horse, and always in the thickest of the fray, he was known and adored by his soldiers as the "White General".</English>
+		<English>[BOLD][H1]Mikhail Skobelev[\H1][\BOLD][NEWLINE][BOLD](29 September 1843 - 7 July 1882)[\BOLD][NEWLINE]Was a Russian general famous for his conquest of Central Asia and heroism during the Ruso-Turkish War. Dressed in white and mounted on a white horse, and always in the thickest of the fray, he was known and adored by his soldiers as the "White General".</English>
 		<French>[BOLD][H1]Mikhail Skobelev[\H1][\BOLD][NEWLINE][BOLD](29 Septembre 1843 - 7 Juillet 1882)[\BOLD][NEWLINE]C'est un chimiste, physicien, astronome, historien, poète, dramaturge, linguiste, slaviste, pédagogue et mosaïste russe. Patriote convaincu, polymathe enthousiaste, amoureux des sciences, il fut professeur à l'Académie des sciences de Saint-Pétersbourg et fondateur de l'université de Moscou.</French>
 		<Polish>[BOLD][H1]Michaił Skobielew[\H1][\BOLD][NEWLINE][BOLD](29 Września 1843 - 7 Lipca 1882)[\BOLD][NEWLINE]Generał piechoty Armii Imperium Rosyjskiego 1881, generał adiutant 1878, uczestnik wojny rosyjsko-tureckiej 1877-1878. Dowodząc 16 Dywizją uczestniczył w blokadzie Plewny i w zimowym przejściu wojsk rosyjskich przez Bałkany, odgrywając decydującą rolę w bitwie pod Szejnową. W lutym 1878 zajął San-Stefano pod Stambułem. Waleczność w wojnie 1877-78 dało mu wielką popularność w Rosji i Bułgarii. W Bułgarii jego nazwiskiem nazwano place, ulice i parki w wielu miastach.</Polish>
 	</TEXT>
@@ -9928,12 +9551,6 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 		<Russian>Ìîíòåñóìà I</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_MOCTEZUMA_I_PEDIA</Tag>
-		<English>[BOLD][H1]Moctezuma I[\H1][\BOLD][NEWLINE][BOLD](c. 1398 - 1469)[\BOLD][NEWLINE]Was the fifth Aztec emperor and king of Tenochtitlan. During his reign the Aztec Empire was consolidated, major expansion was undertaken and Tenochtitlan started becoming the dominant partner of the Aztec Triple Alliance.</English>
-		<French>[BOLD][H1]Moctezuma I[\H1][\BOLD][NEWLINE][BOLD](c. 1398 - 1469)[\BOLD][NEWLINE]Moctezuma, ou Montezuma, est le nom d'une divinité préhispanique amérindienne. Le culte de cette divinité a été constaté chez des groupes zapotèques, tepehuas, totonaques, nahuas, mayas, lacandons, mixes, chontals, popolocas, chinantèques et otomis et s'étend même au nord du Mexique et au sud-ouest des États-Unis.</French>
-		<Polish>[BOLD][H1]Montezuma I[\H1][\BOLD][NEWLINE][BOLD](ok. 1398 - 1469)[\BOLD][NEWLINE]Zwany Gniewnym (nazwisko można tłumaczyć "samotny, który wystrzela strzałę w niebo"); (? - 1469). Pozostawał w zawartym przez poprzednika bardzo korzystnym dla Azteków Trójprzymierzu z sąsiednimi cywilizacjami: miastem-państwem Texcoco i małym suwerennym królestwem Tlacopan (Tacuba). W tym umiejętnie skonstruowanym sojuszu 4/5 wszelkich zdobyczy w wyprawach wojennych dzielone było między Azteków i Texcoco, a 1/5 przypadała Tlacopan.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_MOCTEZUMA_II</Tag>
 		<English>Moctezuma II</English>
 		<Russian>Ìîíòåñóìà II</Russian>
@@ -9943,6 +9560,12 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 		<English>[BOLD][H1]Moctezuma II[\H1][\BOLD][NEWLINE][BOLD](c. 1466 - 29 June 1520)[\BOLD][NEWLINE]Was the ninth tlatoani or ruler of Tenochtitlan. The first contact between indigenous civilizations of Mesoamerica and Europeans took place during his reign, and he was killed during the initial stages of the Spanish conquest of Mexico.</English>
 		<French>[BOLD][H1]Moctezuma II[\H1][\BOLD][NEWLINE][BOLD](c. 1466 - 29 Juin 1520)[\BOLD][NEWLINE]C'est le neuvième huey tlatoani (souverain) de Mexico-Tenochtitlan. C'est pendant son règne, de 1502 à 1520, qu'a commencé la conquête espagnole de l'empire aztèque. La représentation de Moctezuma dans l'histoire a surtout été influencée par son rôle de roi d'une nation vaincue, et de nombreuses sources le décrivent comme faible et indécis.</French>
 		<Polish>[BOLD][H1]Montezuma II[\H1][\BOLD][NEWLINE][BOLD](ok. 1466 - 29 Czerwca 1520)[\BOLD][NEWLINE]Ostatni przed przybyciem Hiszpanów tlatoani (władca) Azteków w latach 1502-1520; syn Axayacatla, brat Cuitlahuaca. Montezuma, uznawany za władcę absolutnego, był władcą Azteków u szczytu potęgi miasta-państwa Tenochtitlan. Za jego panowania utrwalone zostały dotychczasowe podboje Azteków. Był władcą niezdecydowanym, ulegającym presji proroctw. Otaczali go wróżbici, którzy przepowiedzieli przybycie jednego z bogów - Quetzalcoatla.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_MOCTEZUMA_I_PEDIA</Tag>
+		<English>[BOLD][H1]Moctezuma I[\H1][\BOLD][NEWLINE][BOLD](c. 1398 - 1469)[\BOLD][NEWLINE]Was the fifth Aztec emperor and king of Tenochtitlan. During his reign the Aztec Empire was consolidated, major expansion was undertaken and Tenochtitlan started becoming the dominant partner of the Aztec Triple Alliance.</English>
+		<French>[BOLD][H1]Moctezuma I[\H1][\BOLD][NEWLINE][BOLD](c. 1398 - 1469)[\BOLD][NEWLINE]Moctezuma, ou Montezuma, est le nom d'une divinité préhispanique amérindienne. Le culte de cette divinité a été constaté chez des groupes zapotèques, tepehuas, totonaques, nahuas, mayas, lacandons, mixes, chontals, popolocas, chinantèques et otomis et s'étend même au nord du Mexique et au sud-ouest des États-Unis.</French>
+		<Polish>[BOLD][H1]Montezuma I[\H1][\BOLD][NEWLINE][BOLD](ok. 1398 - 1469)[\BOLD][NEWLINE]Zwany Gniewnym (nazwisko można tłumaczyć "samotny, który wystrzela strzałę w niebo"); (? - 1469). Pozostawał w zawartym przez poprzednika bardzo korzystnym dla Azteków Trójprzymierzu z sąsiednimi cywilizacjami: miastem-państwem Texcoco i małym suwerennym królestwem Tlacopan (Tacuba). W tym umiejętnie skonstruowanym sojuszu 4/5 wszelkich zdobyczy w wyprawach wojennych dzielone było między Azteków i Texcoco, a 1/5 przypadała Tlacopan.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_MOENGKE_KHAN</Tag>
@@ -10279,6 +9902,35 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 		<Polish>[BOLD][H1]Neith[\H1][\BOLD][NEWLINE]W mitologii egipskiej lokalna, wojownicza bogini w Delcie (Sais), z czasem zyskała na popularności (szczyt jej świetności przypadł na panowanie saickiej XXVI dynastii). Przedstawiana jako kobieta z łukiem i strzałami. Była czasami uważana za opiekunkę zmarłych (niektórzy uważają, że zwyczaj umieszczania łuku i strzał w grobie zmarłych wskazywał właśnie na jej kult), a już w czasach historycznych była określana także jako patronka tkactwa, która ofiarowuje bandaże i całuny do zabezpieczania mumii.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_NELSON_MANDELA</Tag>
+		<English>Nelson Mandela</English>
+		<French>
+			<Text>Nelson Mandela</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Nelson Mandela</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Nelson Mandela</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Nelson Mandela</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>
+			<Text>Nelson Mandela</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_NELSON_MANDELA_PEDIA</Tag>
 		<English>[BOLD][H1]Nelson Mandela[\H1][\BOLD][NEWLINE]Was a South African anti-apartheid revolutionary, politician, and philanthropist, who served as President of South Africa from 1994 to 1999. He was the country's first black chief executive, and the first elected in a fully representative democratic election. His government focused on dismantling the legacy of apartheid through tackling institutionalised racism and fostering racial reconciliation.</English>
 		<French>[BOLD][H1]Nelson Mandela[\H1][\BOLD][NEWLINE]C'est un révolutionnaire, politicien et philanthrope anti-apartheid sud-africain, qui a été président de l'Afrique du Sud de 1994 à 1999. Il a été le premier directeur général noir du pays et le premier élu lors d'élections démocratiques pleinement représentatives. Son gouvernement s'est concentré sur le démantèlement de l'héritage de l'apartheid en s'attaquant au racisme institutionnalisé et en encourageant la réconciliation raciale.</French>
@@ -10372,6 +10024,35 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 		<English>[BOLD][H1]Niels Bohr[\H1][\BOLD][NEWLINE][BOLD](7 October 1885 - 18 November 1962)[\BOLD][NEWLINE]Was a Danish physicist who made foundational contributions to understanding atomic structure and quantum theory, for which he received the Nobel Prize in Physics in 1922.</English>
 		<French>[BOLD][H1]Niels Bohr[\H1][\BOLD][NEWLINE][BOLD](7 Octobre 1885 - 18 Novembre 1962)[\BOLD][NEWLINE]C'est un physicien danois. Il est surtout connu pour son apport à l'édification de la mécanique quantique, pour lequel il a reçu de nombreux honneurs. Il est notamment lauréat du prix Nobel de physique de 1922.</French>
 		<Polish>[BOLD][H1]Niels Bohr[\H1][\BOLD][NEWLINE][BOLD](7 Października 1885 - 18 Listopada 1962)[\BOLD][NEWLINE]Duński fizyk, laureat Nagrody Nobla w dziedzinie fizyki w 1922 za opracowanie badania struktury atomu. Jego prace naukowe przyczyniły się do zrozumienia budowy atomu oraz rozwoju mechaniki kwantowej. Bohr był orędownikiem najbardziej egzotycznych idei mechaniki kwantowej, czyli zjawiska dualizmu korpuskularno-falowego oraz zasady nieoznaczoności. Razem z Maxem Planckiem prowadzili na ten temat ożywione dyskusje z Albertem Einsteinem, który był zwolennikiem teorii w duchu mechaniki klasycznej.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_NIKITA_KHRUSHCHEV</Tag>
+		<English>Nikita Khrushchev</English>
+		<French>
+			<Text>Nikita Khrushchev</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Nikita Khrushchev</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Nikita Khrushchev</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Nikita Khrushchev</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>
+			<Text>Nikita Khrushchev</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_NIKITA_KHRUSHCHEV_PEDIA</Tag>
@@ -10795,6 +10476,35 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 		<Polish>[BOLD][H1]Pakhet[\H1][\BOLD][NEWLINE]Bogini o postaci lwicy. Władczyni Pustyni Arabskiej.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_PANCHO_VILLA</Tag>
+		<English>Pancho Villa</English>
+		<French>
+			<Text>Pancho Villa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Pancho Villa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Pancho Villa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Pancho Villa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>
+			<Text>Pancho Villa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_PANCHO_VILLA_PEDIA</Tag>
 		<English>[BOLD][H1]Pancho Villa[\H1][\BOLD][NEWLINE]Was a Mexican Revolutionary general and one of the most prominent figures of the Mexican Revolution. Villa was in alliance with southern revolutionary Emiliano Zapata, who remained fighting in his own region of Morelos; however, the two revolutionary generals briefly came together to take Mexico City after Carranza's forces retreated from it. Later, Villa's heretofore undefeated División del Norte engaged the military forces of Carranza under Carrancista general Álvaro Obregón and was defeated in the 1915 Battle of Celaya. Villa's army then collapsed as a significant military force</English>
 		<French>[BOLD][H1]Pancho Villa[\H1][\BOLD][NEWLINE]C'est un général révolutionnaire mexicain et l'une des figures les plus importantes de la révolution mexicaine. Villa était en alliance avec le révolutionnaire méridional Emiliano Zapata, qui continuait de combattre dans sa propre région de Morelos; cependant, les deux généraux révolutionnaires se sont brièvement réunis pour prendre Mexico après le retrait des forces de Carranza. Plus tard, la División del Norte, invaincue jusqu'ici, engagea les forces militaires de Carranza sous le commandement du général Carrancista Álvaro Obregón et fut défaite lors de la bataille de Celaya en 1915. L'armée de Villa s'est ensuite effondrée en tant que force militaire importante.</French>
@@ -10891,6 +10601,35 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 		<English>[BOLD][H1]Parmenion[\H1][\BOLD][NEWLINE][BOLD](c. 400 - Ecbatana, 330 BC)[\BOLD][NEWLINE]Was a Macedonian general in the service of Philip II of Macedon and Alexander the Great, murdered on a suspected false charge of treason. During the reign of Philip II, Parmenion obtained a great victory over the Illyrians in 356 BC.</English>
 		<French>[BOLD][H1]Parménion [\H1][\BOLD][NEWLINE][BOLD](c. 400 - Ecbatana, 330 Av. JC)[\BOLD][NEWLINE]C'est l'un des officiers de Philippe II de Macédoine, puis de son fils Alexandre le Grand. C'est lui qui s'empare du trésor achéménide de Damas (333), qui commande l'aile gauche de l'armée à Issos</French>
 		<Polish>[BOLD][H1]Parmenion[\H1][\BOLD][NEWLINE][BOLD](ok. 400 - 330 p.n.e.)[\BOLD][NEWLINE]Macedoński generał w służbie Filipa II Macedońskiego i Aleksandra Macedońskiego. W 336 p.n.e. prowadził razem z Amyntasem i Attalosem macedońską kampanię w Azji Mniejszej, służącą przygotowaniu planowanej przez Filipa wyprawy przeciwko imperium Perskiemu. Po objęciu władzy królewskiej przez Aleksandra został drugim co do ważności wodzem armii macedońskiej.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_PASCUAL_OROZCO</Tag>
+		<English>Pascual Orozco</English>
+		<French>
+			<Text>Pascual Orozco</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Pascual Orozco</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Pascual Orozco</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Pascual Orozco</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>
+			<Text>Pascual Orozco</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_PASCUAL_OROZCO_PEDIA</Tag>
@@ -11062,12 +10801,6 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 		<Russian>Ôèëîí</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_PHILO_PEDIA</Tag>
-		<English>[BOLD][H1]Philo[\H1][\BOLD][NEWLINE][BOLD](c. 25 BC - c. 50 AD)[\BOLD][NEWLINE]Also called Philo Judaeus, was a Hellenistic Jewish philosopher who lived in Alexandria, in the Roman province of Egypt.</English>
-		<French>[BOLD][H1]Philon d'Alexandrie[\H1][\BOLD][NEWLINE][BOLD](c. 25 Av. JC - c. 50 Ap. JC)[\BOLD][NEWLINE]C'est un philosophe juif hellénisé, contemporain des débuts de l'ère chrétienne. Son oeuvre abondante est principalement apologétique, entendant démontrer la parfaite adéquation entre la foi juive et la philosophie hellène.</French>
-		<Polish>[BOLD][H1]Filon z Aleksandrii[\H1][\BOLD][NEWLINE][BOLD](ok. 25 p.n.e. - ok. 50 r n.e.)[\BOLD][NEWLINE]Filozof i teolog żydowski, pozostający pod wpływem kultury greckiej. Filon analizował ludzką kondycję w raju w dziełach O stworzeniu świata (De opificio mundi) oraz Alegorie praw. W trakcie refleksji, myśl filozofa prawie natychmiast, niepostrzeżenie przechodzi z sensu dosłownego w alegoryczny. Drzewo poznania dobra i zła jest dla niego symbolem mądrości, roztropności, dającej duszy zdolność rozeznawania. Raj dla Filona jest bowiem symbolem ludzkiej duszy.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_PHILO_FARNSWORTH</Tag>
 		<English>Philo Farnsworth</English>
 		<Russian>Ôèëî Òýéëîð Ôàðíñóîðò</Russian>
@@ -11077,6 +10810,12 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 		<English>[BOLD][H1]Philo Farnsworth[\H1][\BOLD][NEWLINE][BOLD](August 19, 1906 - March 11, 1971)[\BOLD][NEWLINE]Was an American inventor and television pioneer. He made many contributions that were crucial to the early development of all-electronic television. He is perhaps best known for inventing first fully functional and complete television system.</English>
 		<French>[BOLD][H1]Philo Farnsworth[\H1][\BOLD][NEWLINE][BOLD](Août 19, 1906 - Mars 11, 1971)[\BOLD][NEWLINE]C'était un inventeur américain qui contribua à l'invention du tube de prises de vue pour la télévision. On attribue généralement à Vladimir Zworykin la paternité de l'invention. Si, en Russie, il avait bien mis au point le tube à rayon cathodique, c'est Farnsworth qui, le premier, montrera une chaîne de télévision complète.</French>
 		<Polish>[BOLD][H1]Philo Farnsworth[\H1][\BOLD][NEWLINE][BOLD](19 Sierpnia 1906 - 11 Marca 1971)[\BOLD][NEWLINE]Amerykański wynalazca i pionier telewizji. Twórca wielu wynalazków, które miały kluczowe znaczenie dla wczesnego rozwoju elektronicznej telewizji. Najbardziej znany za wynalezienia pierwszego w pełni funkcjonalnego urządzenia dla elektronicznego obrazu (CRT), dysektora. Opracował również pierwszy w pełni funkcjonalny i kompletny elektroniczny system telewizyjny i jako pierwszy zaprezentował taki system społeczeństwu.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_PHILO_PEDIA</Tag>
+		<English>[BOLD][H1]Philo[\H1][\BOLD][NEWLINE][BOLD](c. 25 BC - c. 50 AD)[\BOLD][NEWLINE]Also called Philo Judaeus, was a Hellenistic Jewish philosopher who lived in Alexandria, in the Roman province of Egypt.</English>
+		<French>[BOLD][H1]Philon d'Alexandrie[\H1][\BOLD][NEWLINE][BOLD](c. 25 Av. JC - c. 50 Ap. JC)[\BOLD][NEWLINE]C'est un philosophe juif hellénisé, contemporain des débuts de l'ère chrétienne. Son oeuvre abondante est principalement apologétique, entendant démontrer la parfaite adéquation entre la foi juive et la philosophie hellène.</French>
+		<Polish>[BOLD][H1]Filon z Aleksandrii[\H1][\BOLD][NEWLINE][BOLD](ok. 25 p.n.e. - ok. 50 r n.e.)[\BOLD][NEWLINE]Filozof i teolog żydowski, pozostający pod wpływem kultury greckiej. Filon analizował ludzką kondycję w raju w dziełach O stworzeniu świata (De opificio mundi) oraz Alegorie praw. W trakcie refleksji, myśl filozofa prawie natychmiast, niepostrzeżenie przechodzi z sensu dosłownego w alegoryczny. Drzewo poznania dobra i zła jest dla niego symbolem mądrości, roztropności, dającej duszy zdolność rozeznawania. Raj dla Filona jest bowiem symbolem ludzkiej duszy.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_PHUNGA_KAGUMEDE</Tag>
@@ -11150,12 +10889,6 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 		<Russian>Ïèíãà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_PINGA_PEDIA</Tag>
-		<English>[BOLD][H1]Pinga[\H1][\BOLD][NEWLINE]In Inuit mythology, Pinga ("the one who is [up on] high") was a goddess of the hunt, fertility and medicine. She was also the psychopomp, bringing souls of the newly dead to Adlivun, the underworld.</English>
-		<French>[BOLD][H1]Pinga[\H1][\BOLD][NEWLINE]Dans la mythologie inuit, Pinga ("celle qui est au courant de tout") est la déesse de la chasse, fertilité et médecine. Elle était aussi le psychopompe, accompagnant l'âme du défunt vers Adlivun (la vie après la mort).</French>
-		<Polish>[BOLD][H1]Pinga[\H1][\BOLD][NEWLINE]W mitologii Inuitów, Pinga ("Ta, która jest wysoka"). Była boginią polowań, płodności i medycyny. Była także przewodnikiem dusz do zaświatów, Adlivun.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_PINGALA</Tag>
 		<English>Pingala</English>
 		<Russian>Ïèíãàëà</Russian>
@@ -11165,6 +10898,12 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 		<English>[BOLD][H1]Pingala[\H1][\BOLD][NEWLINE][BOLD](Is the traditional name of the author of the Chandahsastra (also Chandahsutra) the earliest known Sanskrit treatise on prosody.</English>
 		<French>[BOLD][H1]Pingala[\H1][\BOLD][NEWLINE][BOLD]c' est un mathématicien indien (450 av. J.-C. - 250 av. J.-C.)[réf. nécessaire]. Son nom vient du sanskrit Pigala (sanskrit) (en devanagari). Il a fait une théorie de la prosodie au IVe siècle[réf. souhaitée] ; son Chandasastra décrit la combinatoire des combinaisons de n syllabes longues (guru) ou brèves (laghu).</French>
 		<Polish>[BOLD][H1]Pingala[\H1][\BOLD][NEWLINE]Tradycyjnie jest uważany za autora Chandahsastra (lubChandahsutra) - najwcześniejszek pieśni muzycznej w Sanskrycie.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_PINGA_PEDIA</Tag>
+		<English>[BOLD][H1]Pinga[\H1][\BOLD][NEWLINE]In Inuit mythology, Pinga ("the one who is [up on] high") was a goddess of the hunt, fertility and medicine. She was also the psychopomp, bringing souls of the newly dead to Adlivun, the underworld.</English>
+		<French>[BOLD][H1]Pinga[\H1][\BOLD][NEWLINE]Dans la mythologie inuit, Pinga ("celle qui est au courant de tout") est la déesse de la chasse, fertilité et médecine. Elle était aussi le psychopompe, accompagnant l'âme du défunt vers Adlivun (la vie après la mort).</French>
+		<Polish>[BOLD][H1]Pinga[\H1][\BOLD][NEWLINE]W mitologii Inuitów, Pinga ("Ta, która jest wysoka"). Była boginią polowań, płodności i medycyny. Była także przewodnikiem dusz do zaświatów, Adlivun.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_PIYALE_PASHA</Tag>
@@ -11253,12 +10992,6 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 		<Russian>Ïòîëåìåé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_PTOLEMY_PEDIA</Tag>
-		<English>[BOLD][H1]Ptolemy[\H1][\BOLD][NEWLINE][BOLD](c.100 - c.178 BC)[\BOLD][NEWLINE]Was an ancient Greek geographer, astronomer, and astrologer.[NEWLINE]Everything that is hard to attain is easily assailed by the generality of men.</English>
-		<French>[BOLD][H1]Ptolémée[\H1][\BOLD][NEWLINE][BOLD](c.100 - c.178 Av. JC)[\BOLD][NEWLINE]C'est un astronome et astrologue grec qui vécut à Alexandrie (Égypte). Il est également l'un des précurseurs de la géographie.</French>
-		<Polish>[BOLD][H1]Klaudiusz Ptolemeusz[\H1][\BOLD][NEWLINE][BOLD](ok. 210 - ok. 178 p.n.e.)[\BOLD][NEWLINE]Astronom, matematyk i geograf greckiego pochodzenia. Urodzony w Tebaidzie, kształcił się i działał w Aleksandrii należącej wówczas do Imperium rzymskiego około II wieku n.e. Autor m.in. napisanej po grecku Mathematike Syntaxis znanej bardziej jako Almagest, traktatu w trzynastu księgach, zawierającego kompendium wiedzy astronomicznej tego okresu oraz matematyczny wykład teorii geocentrycznej.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_PTOLEMY_I_SOTER</Tag>
 		<English>Ptolemy I Soter</English>
 		<French>Ptolémée Ier</French>
@@ -11269,6 +11002,12 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 		<English>[BOLD][H1]Ptolemy I Soter[\H1][\BOLD][NEWLINE][BOLD](367 BC - c. 283 BC)[\BOLD][NEWLINE]Was a Macedonian general under Alexander the Great, who became ruler of Egypt and founder of both the Ptolemaic Kingdom and the Ptolemaic Dynasty.</English>
 		<French>[BOLD][H1]Ptolémée Ier Soter[\H1][\BOLD][NEWLINE][BOLD](367 Av. JC - c. 283 Av. JC)[\BOLD][NEWLINE]C'est un général d'Alexandre le Grand et l'un des principaux diadoques. Désigné Satrape d'Égypte au partage de l'empire d'Alexandre, il en devient roi, et non pharaon, en -305 ; c'est son fils Ptolémée II qui le premier aurait reçu ce titre des prêtres égyptiens. Il est le fondateur de la dynastie ptolémaïque (ou lagide) qui règne sur l'Égypte jusqu'en -30.</French>
 		<Polish>[BOLD][H1]Ptolemeusz I Soter[\H1][\BOLD][NEWLINE][BOLD](367 p.n.e. - ok. 283 p.n.e.)[\BOLD][NEWLINE]Założyciel dynastii Ptolemeuszy, władca Egiptu w latach 323-282 p.n.e. Był jednym z generałów Aleksandra Wielkiego. Po jego śmierci, w 323 p.n.e., objął rządy jako satrapa Egiptu. Brał aktywny udział w wojnach diadochów. W 321 p.n.e. przechwycił zabalsamowane zwłoki Aleksandra Wielkiego, które następnie przewiózł do Memfis, a później do świeżo wybudowanej Aleksandrii, czyniąc ją jednocześnie stolicą swego państwa. W listopadzie 305 roku p.n.e. przyjął tytuł króla.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_PTOLEMY_PEDIA</Tag>
+		<English>[BOLD][H1]Ptolemy[\H1][\BOLD][NEWLINE][BOLD](c.100 - c.178 BC)[\BOLD][NEWLINE]Was an ancient Greek geographer, astronomer, and astrologer.[NEWLINE]Everything that is hard to attain is easily assailed by the generality of men.</English>
+		<French>[BOLD][H1]Ptolémée[\H1][\BOLD][NEWLINE][BOLD](c.100 - c.178 Av. JC)[\BOLD][NEWLINE]C'est un astronome et astrologue grec qui vécut à Alexandrie (Égypte). Il est également l'un des précurseurs de la géographie.</French>
+		<Polish>[BOLD][H1]Klaudiusz Ptolemeusz[\H1][\BOLD][NEWLINE][BOLD](ok. 210 - ok. 178 p.n.e.)[\BOLD][NEWLINE]Astronom, matematyk i geograf greckiego pochodzenia. Urodzony w Tebaidzie, kształcił się i działał w Aleksandrii należącej wówczas do Imperium rzymskiego około II wieku n.e. Autor m.in. napisanej po grecku Mathematike Syntaxis znanej bardziej jako Almagest, traktatu w trzynastu księgach, zawierającego kompendium wiedzy astronomicznej tego okresu oraz matematyczny wykład teorii geocentrycznej.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_PUBLIUS_SITTIUS</Tag>
@@ -11350,6 +11089,35 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 		<English>[BOLD][H1]Qian Sanqiang[\H1][\BOLD][NEWLINE][BOLD](1913-1992)[\BOLD][NEWLINE]Was a Chinese nuclear physicist.[NEWLINE]Qian made outstanding contributions to the establishment of nuclear science in the People's Republic of China and to the development of PRC's atomic and hydrogen bombs.</English>
 		<French>[BOLD][H1]Qian Sanqiang[\H1][\BOLD][NEWLINE][BOLD](1913-1992)[\BOLD][NEWLINE]C'est un physicien nucléaire Chinois.[NEWLINE]Qian a apporté des contributions importantes pour développer la science nucléaire pour la république populaire de Chine.</French>
 		<Polish>[BOLD][H1]Qian Sanqiang[\H1][\BOLD][NEWLINE][BOLD](1913-1992)[\BOLD][NEWLINE]Był chińskim fizykiem nuklearnym. Qian wniósł ogromny wkład w ustanowieniu chińskiego programu atomowego w CHRL i wyprodukowaniu pierwszych bomb atomowych i wodorowych dla Chińskiej Armiii.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_QIN_SHI_HUANG</Tag>
+		<English>Qin Shi Huang</English>
+		<French>
+			<Text>Qin Shi Huang</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Qin Shi Huang</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Qin Shi Huang</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Qin Shi Huang</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>
+			<Text>Qin Shi Huang</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_QIN_SHI_HUANG_PEDIA</Tag>
@@ -11778,6 +11546,35 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 		<Polish>[BOLD][H1]Robert Koch[\H1][\BOLD][NEWLINE][BOLD](11 Grudnia 1843 - 27 Maja 1910)[\BOLD][NEWLINE]Niemiecki uczony, lekarz i bakteriolog. Odkrywca m.in. bakterii wywołujących wąglika, cholerę i gruźlicę. Laureat Nagrody Nobla w dziedzinie fizjologii lub medycyny w 1905 r. za badania nad gruźlicą. Wprowadził do praktyki pożywki zestalane żelatyną. Był, obok Ludwika Pasteura, jednym z twórców mikrobiologii lekarskiej.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_ROBERT_LIVINGSTON</Tag>
+		<English>Robert Livingston</English>
+		<French>
+			<Text>Robert Livingston</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Robert Livingston</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Robert Livingston</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Robert Livingston</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>
+			<Text>Robert Livingston</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_ROBERT_LIVINGSTON_PEDIA</Tag>
 		<English>[BOLD][H1]Robert Livingston[\H1][\BOLD][NEWLINE]Was an American lawyer, politician, diplomat from New York, and a Founding Father of the United States. He was known as "The Chancellor", after the high New York state legal office he held for 25 years. Livingston was appointed Recorder of New York City in October 1773, but soon identified himself with the anti-colonial Whig Party and was replaced a few months later with John Watts, Jr. He was a member of the Committee of Five that drafted the Declaration of Independence, although he was recalled by his state before he could sign the final version of the document.</English>
 		<French>[BOLD][H1]Robert Livingston[\H1][\BOLD][NEWLINE]Avocat, politicien, diplomate américain de New York et père fondateur des États-Unis. Il était connu comme "le Chancelier", après le haut bureau juridique de l'État de New York qu'il a occupé pendant 25 ans. Livingston a été nommé enregistreur de la ville de New York en octobre 1773, mais s'est rapidement identifié avec le parti Whig anti-colonial et a été remplacé quelques mois plus tard par John Watts, Jr. Il était membre du Comité des Cinq qui a rédigé la Déclaration de L'indépendance, bien qu'il ait été rappelé par son État avant de pouvoir signer la version finale du document.</French>
@@ -11871,6 +11668,35 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 		<English>[BOLD][H1]Roman Polanski[\H1][\BOLD][NEWLINE][BOLD](18 August 1933)[\BOLD][NEWLINE]Is a Polish and, since 1976, naturalized-French film director, producer, writer, and actor. He is considered one of the few "truly international filmmakers".</English>
 		<French>[BOLD][H1]Roman Polanski[\H1][\BOLD][NEWLINE][BOLD](18 Août 1933)[\BOLD][NEWLINE]Est un réalisateur, producteur, écrivain et acteur naturalisé français et polonais depuis 1976. Il est considéré comme l'un des rares "cinéastes véritablement internationaux".</French>
 		<Polish>[BOLD][H1]Roman Polański[\H1][\BOLD][NEWLINE][BOLD](18 Sierpnia 1933)[\BOLD][NEWLINE]Polski reżyser, aktor, scenarzysta i producent filmowy nagrodzony Oscarem za reżyserię filmu Pianista. Obszerny dorobek filmowy Polańskiego uplasował go wśród najlepszych twórców światowej kinematografii oraz przyniósł wiele prestiżowych nagród, m.in.: Złotą Palmę za film Pianista (2002), nagrody BAFTA za filmy Pianista oraz Chinatown, trzykrotnie Złoty Glob za: najlepszy film i najlepszą reżyserię - Chinatown, najlepszy film zagraniczny - Tess, oraz liczne nominacje do Oscarów.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_RONALD_REAGAN</Tag>
+		<English>Ronald Reagan</English>
+		<French>
+			<Text>Ronald Reagan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ronald Reagan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ronald Reagan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ronald Reagan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>
+			<Text>Ronald Reagan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_RONALD_REAGAN_PEDIA</Tag>
@@ -12042,12 +11868,6 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 		<Russian>Ñâÿòîé Êîëóìáà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_SAINT_COLUMBA_PEDIA</Tag>
-		<English>[BOLD][H1]Saint Columba[\H1][\BOLD][NEWLINE][BOLD](7 December 521 - 9 June 597)[\BOLD][NEWLINE]Was an Irish abbot and missionary credited with spreading Christianity in present-day Scotland. He founded the important abbey on Iona, which became a dominant religious and political institution in the region for centuries.</English>
-		<French>[BOLD][H1]Colomba d'Iona[\H1][\BOLD][NEWLINE][BOLD](7 Décembre 521 - 9 Juin 597)[\BOLD][NEWLINE]Missionnaire irlandais qui aida à réintroduire le christianisme en Écosse et dans le nord de l'Angleterre. Il établit un nouvel ordre monastique dont la principale communauté s'installa sur l'île de Iona en 563.</French>
-		<Polish>[BOLD][H1]Św. Kolumba[\H1][\BOLD][NEWLINE][BOLD](7 Grudnia 521 - 9 Czerwca 597)[\BOLD][NEWLINE]Irlandzki opat i misjonarz, jeden z dwunastu apostołów Irlandii, święty Kościoła katolickiego i anglikańskiego, prawosławny święty mnich. Niektóre Kościoły protestanckie uznają go za bohatera wiary. Luteranie i anglikanie zaliczają go do odnowicieli Kościoła. Założył w sumie około 53 klasztorów i kościołów na terenie Szkocji i północnej Anglii, związanych federacyjnie z Ioną (dla porównania w Irlandii Kolumba założył 37 klasztorów).</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_SAINT_COLUMBANUS</Tag>
 		<English>Saint Columbanus</English>
 		<French>Colomban de Luxeuil</French>
@@ -12058,6 +11878,12 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 		<English>[BOLD][H1]Saint Columbanus[\H1][\BOLD][NEWLINE][BOLD](543 - 21 November 615)[\BOLD][NEWLINE]Was an Irish missionary He is remembered as an exemplar of Irish missionary activity in early medieval Europe.</English>
 		<French>[BOLD][H1]Colomban de Luxeuil[\H1][\BOLD][NEWLINE][BOLD](543 - 21 Novembre 615)[\BOLD][NEWLINE]Moine irlandais qui a évangélisé les populations campagnardes de Gaule, d'Allemagne, d'Helvétie, et d'Italie.</French>
 		<Polish>[BOLD][H1]Św. Kolumban Młodszy[\H1][\BOLD][NEWLINE][BOLD](543 - 21 Listopada 615)[\BOLD][NEWLINE]Opat, misjonarz, uznawany przez Kościół katolicki świętym, jeden z pomniejszych patronów Irlandii. Zapoczątkował działalność misyjną Kościoła iryjskiego w Europie. Kodyfikator prawa klasztornego iryjskiego. Znany głównie pod łacińskim imieniem Columbanus wytworzonym z celtyckiego Koloman (znaczy Pustelnik) i skojarzenia z nim łacińskiego Columba, czyli Gołąb.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_SAINT_COLUMBA_PEDIA</Tag>
+		<English>[BOLD][H1]Saint Columba[\H1][\BOLD][NEWLINE][BOLD](7 December 521 - 9 June 597)[\BOLD][NEWLINE]Was an Irish abbot and missionary credited with spreading Christianity in present-day Scotland. He founded the important abbey on Iona, which became a dominant religious and political institution in the region for centuries.</English>
+		<French>[BOLD][H1]Colomba d'Iona[\H1][\BOLD][NEWLINE][BOLD](7 Décembre 521 - 9 Juin 597)[\BOLD][NEWLINE]Missionnaire irlandais qui aida à réintroduire le christianisme en Écosse et dans le nord de l'Angleterre. Il établit un nouvel ordre monastique dont la principale communauté s'installa sur l'île de Iona en 563.</French>
+		<Polish>[BOLD][H1]Św. Kolumba[\H1][\BOLD][NEWLINE][BOLD](7 Grudnia 521 - 9 Czerwca 597)[\BOLD][NEWLINE]Irlandzki opat i misjonarz, jeden z dwunastu apostołów Irlandii, święty Kościoła katolickiego i anglikańskiego, prawosławny święty mnich. Niektóre Kościoły protestanckie uznają go za bohatera wiary. Luteranie i anglikanie zaliczają go do odnowicieli Kościoła. Założył w sumie około 53 klasztorów i kościołów na terenie Szkocji i północnej Anglii, związanych federacyjnie z Ioną (dla porównania w Irlandii Kolumba założył 37 klasztorów).</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_SAINT_CYPRIAN</Tag>
@@ -12637,12 +12463,6 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 		<Russian>Øàïóð I</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_SHAPUR_I_PEDIA</Tag>
-		<English>[BOLD][H1]Shapur I[\H1][\BOLD][NEWLINE]Was the second shahanshah (king of kings) of the Sasanian Empire. The dates of his reign are commonly given as 240/42 - 270/72 AD, but it is likely that he also reigned as co-regent (together with his father) prior to his father's death in 242 (more probably than 240). He continued his father's wars with Rome, conquering Nisibis and Carrhae and advancing deep into Syria.</English>
-		<French>[BOLD][H1]Shapur I[\H1][\BOLD][NEWLINE]C'est le deuxième shahanshah (roi des rois) de l'Empire sassanide. Les dates de son règne sont communément données comme 240/42 - 270/72 Ap. JC, mais il est probable qu'il ait également régné comme co-régent (avec son père) avant la mort de son père en 242 (plus probablement que 240). Il a continué les guerres de son père avec Rome, conquérant Nisibis et Carrhae et s'avançant profondément en Syrie.</French>
-		<Polish>[BOLD][H1]Szapur I[\H1][\BOLD][NEWLINE]Władca Persji z dynastii Sasanidów, syn Ardaszira I. Dążył do odbudowania dawnej potęgi Persji, przyjął tytuł szachinszach eran ud aneran. Rozpoczął likwidację niezależnych księstw powstałych w czasach panowania dynastii Arsacydów osadzając w nich swoich krewnych jako namiestników. W roku 241 rozpoczął wojnę z Cesarstwem rzymskim podbijając prowincję Mezopotamia i Syrię. W 243 Rzymianie zdołali odzyskać część utraconego terytorium. Po roku 253 wojska Szapura podbijają Antiochię oraz część Kapadocji. W 256 podbił Armenię.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_SHAPUR_II</Tag>
 		<English>Shapur II</English>
 		<Russian>Øàïóð II</Russian>
@@ -12652,6 +12472,12 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 		<English>[BOLD][H1]Shapur II[\H1][\BOLD][NEWLINE][BOLD](ad 309 - 379)[\BOLD][NEWLINE]Was the tenth king of the Sasanian Empire, who withstood Roman strength by astute military strategy and diplomacy and brought the empire to the zenith of its power.</English>
 		<French>[BOLD][H1]Shapur II[\H1][\BOLD][NEWLINE][BOLD](ad 309 - 379)[\BOLD][NEWLINE]C'est le dixième roi de l'Empire sassanide, qui a résisté à la force romaine par une stratégie militaire et une diplomatie astucieuses et a amené l'empire au zénith de son pouvoir.</French>
 		<Polish>[BOLD][H1]Szapur II[\H1][\BOLD][NEWLINE][BOLD](ad 309 - 379)[\BOLD][NEWLINE]Król Persji z dynastii Sasanidów. Królem Szapur został w chwili urodzenia. Z inicjatywy magnatów, po śmierci Hormizda II zabito bowiem najstarszego syna króla, oślepiono drugiego i wtrącono do więzienia trzeciego. W 325 roku uśmierzył brutalnie bunt plemion wschodnioarabskich. Część plemion przesiedlono do Kirmanu. W 359, po wyczerpującym 73 dniowym oblężeniu zdobywa Amidę, potężną twierdzę nad górnym Tygrysem.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_SHAPUR_I_PEDIA</Tag>
+		<English>[BOLD][H1]Shapur I[\H1][\BOLD][NEWLINE]Was the second shahanshah (king of kings) of the Sasanian Empire. The dates of his reign are commonly given as 240/42 - 270/72 AD, but it is likely that he also reigned as co-regent (together with his father) prior to his father's death in 242 (more probably than 240). He continued his father's wars with Rome, conquering Nisibis and Carrhae and advancing deep into Syria.</English>
+		<French>[BOLD][H1]Shapur I[\H1][\BOLD][NEWLINE]C'est le deuxième shahanshah (roi des rois) de l'Empire sassanide. Les dates de son règne sont communément données comme 240/42 - 270/72 Ap. JC, mais il est probable qu'il ait également régné comme co-régent (avec son père) avant la mort de son père en 242 (plus probablement que 240). Il a continué les guerres de son père avec Rome, conquérant Nisibis et Carrhae et s'avançant profondément en Syrie.</French>
+		<Polish>[BOLD][H1]Szapur I[\H1][\BOLD][NEWLINE]Władca Persji z dynastii Sasanidów, syn Ardaszira I. Dążył do odbudowania dawnej potęgi Persji, przyjął tytuł szachinszach eran ud aneran. Rozpoczął likwidację niezależnych księstw powstałych w czasach panowania dynastii Arsacydów osadzając w nich swoich krewnych jako namiestników. W roku 241 rozpoczął wojnę z Cesarstwem rzymskim podbijając prowincję Mezopotamia i Syrię. W 243 Rzymianie zdołali odzyskać część utraconego terytorium. Po roku 253 wojska Szapura podbijają Antiochię oraz część Kapadocji. W 256 podbił Armenię.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_SHEN_KUO</Tag>
@@ -12747,12 +12573,6 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 		<Russian>Ñèíàí</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_SINAN_PEDIA</Tag>
-		<English>[BOLD][H1]Sinan[\H1][\BOLD][NEWLINE][BOLD](c. 1489 - July 17, 1588)[\BOLD][NEWLINE]Was the chief Ottoman architect and civil engineer for sultans Suleiman the Magnificent, Selim II, and Murad III. He was responsible for the construction of more than 300 major structures and other more modest projects.</English>
-		<French>[BOLD][H1]Sinan[\H1][\BOLD][NEWLINE][BOLD](c. 1489 - Juillet 17, 1588)[\BOLD][NEWLINE]C'est le principal architecte ottoman et ingénieur civil des sultans Suleiman le Magnifique, Selim II et Murad III. Il était responsable de la construction de plus de 300 structures majeures et d'autres projets plus modestes.</French>
-		<Polish>[BOLD][H1]Sinan[\H1][\BOLD][NEWLINE][BOLD](ok. 1489 - 17 Lipca 1588)[\BOLD][NEWLINE]Turecki architekt, nadworny architekt trzech sułtanów Turcji, twórca prawie 400 budowli. Uczył się w szkole dla janczarów w Stambule. W 1538 został architektem nadwornym kolejnych sułtanów Turcji: Sulejmana Wspaniałego, Selima II, Murada III. Pierwszym dziełem Sinana był meczet sehzade, wybudowany w 1548. Budowę Meczetu Sulejmana zaczął w 1550, kończąc w siedem lat później.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_SINAN_PASHA</Tag>
 		<English>Sinan Pasha</English>
 		<Russian>Ñèíàí-ïàøà</Russian>
@@ -12762,6 +12582,12 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 		<English>[BOLD][H1]Sinan Pasha[\H1][\BOLD][NEWLINE][BOLD](died 21 December 1553)[\BOLD][NEWLINE]Was a Kapudan Pasha of the Ottoman Navy for nearly four years between 1550 and the end of 1553, during the reign of Suleiman the Magnificent. Sinan Pasha collaborated on several naval expeditions in the Mediterranean Sea, particularly on the coasts of Italy and North Africa.</English>
 		<French>[BOLD][H1]Sinan Pasha[\H1][\BOLD][NEWLINE][BOLD](mort en 21 Décembre 1553)[\BOLD][NEWLINE]C'est un pacha Kapudan de la marine ottomane pendant près de quatre ans entre 1550 et la fin de 1553, sous le règne de Soliman le Magnifique. Sinan Pacha a collaboré à plusieurs expéditions navales en Méditerranée, en particulier sur les côtes de l'Italie et de l'Afrique du Nord.</French>
 		<Polish>[BOLD][H1]Sinan Pasza[\H1][\BOLD][NEWLINE][BOLD](zmarł 21 Grudnia 1553)[\BOLD][NEWLINE]Był kapudanem paszą (admirałem) osmańskiej floty przez okres około czterech lat od 1550 do końca 1553, za panowania Sulejmana Wspaniałego. Poprzednik na tym stanowisku Pijala Paszy; brat wielkiego wezyra Damat Rustema, zięcia sułtana Sulejmana.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_SINAN_PEDIA</Tag>
+		<English>[BOLD][H1]Sinan[\H1][\BOLD][NEWLINE][BOLD](c. 1489 - July 17, 1588)[\BOLD][NEWLINE]Was the chief Ottoman architect and civil engineer for sultans Suleiman the Magnificent, Selim II, and Murad III. He was responsible for the construction of more than 300 major structures and other more modest projects.</English>
+		<French>[BOLD][H1]Sinan[\H1][\BOLD][NEWLINE][BOLD](c. 1489 - Juillet 17, 1588)[\BOLD][NEWLINE]C'est le principal architecte ottoman et ingénieur civil des sultans Suleiman le Magnifique, Selim II et Murad III. Il était responsable de la construction de plus de 300 structures majeures et d'autres projets plus modestes.</French>
+		<Polish>[BOLD][H1]Sinan[\H1][\BOLD][NEWLINE][BOLD](ok. 1489 - 17 Lipca 1588)[\BOLD][NEWLINE]Turecki architekt, nadworny architekt trzech sułtanów Turcji, twórca prawie 400 budowli. Uczył się w szkole dla janczarów w Stambule. W 1538 został architektem nadwornym kolejnych sułtanów Turcji: Sulejmana Wspaniałego, Selima II, Murada III. Pierwszym dziełem Sinana był meczet sehzade, wybudowany w 1548. Budowę Meczetu Sulejmana zaczął w 1550, kończąc w siedem lat później.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_SINCHI_ROCA</Tag>
@@ -12795,6 +12621,35 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 		<English>[BOLD][H1]Sir David Attenborough[\H1][\BOLD][NEWLINE][BOLD](born 8 May 1926)[\BOLD][NEWLINE]Is an English broadcaster and naturalist. He is best known for writing and presenting the nine Life series, in conjunction with the BBC Natural History Unit, which collectively form a comprehensive survey of all life on the planet.</English>
 		<French>[BOLD][H1]Sir David Attenborough[\H1][\BOLD][NEWLINE][BOLD](born 8 May 1926)[\BOLD][NEWLINE]Est un diffuseur et naturaliste anglais. Il est surtout connu pour avoir écrit et présenté les neuf séries Life, en collaboration avec l'Unité d'histoire naturelle de la BAv. JC, qui forment collectivement un aperçu complet de toute la vie sur la planète.</French>
 		<Polish>[BOLD][H1]Sir David Attenborough[\H1][\BOLD][NEWLINE][BOLD](ur. 8 Maja 1926)[\BOLD][NEWLINE]Brytyjski popularyzator wiedzy przyrodniczej na świecie, pisarz, narrator i podróżnik. Jest młodszym bratem aktora i reżysera Richarda Attenborougha. W 1985 David Attenborough za działalność naukową otrzymał od królowej Elżbiety II tytuł szlachecki. Został odznaczony Orderem Imperium Brytyjskiego oraz przyjęty do Royal Society. W 2005 został odznaczony brytyjskim Orderem Zasługi (Order of Merit).</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_SIR_FRANCIS_BACON</Tag>
+		<English>Sir Francis Bacon</English>
+		<French>
+			<Text>Sir Francis Bacon</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sir Francis Bacon</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sir Francis Bacon</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sir Francis Bacon</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>
+			<Text>Sir Francis Bacon</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_SIR_FRANCIS_BACON_PEDIA</Tag>
@@ -13006,7 +12861,7 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_STEFAN_BANIC_PEDIA</Tag>
-		<English>[BOLD][H1]Stefan Banic[\H1][\BOLD][NEWLINE][BOLD](23 November 1870 - 2 January 1941)[\BOLD][NEWLINE]Was a Slovak inventor who devised a military parachute, the first parachute ever deployed in actual use. It was the first parachute known to be actively used, saving the lives of many American aviators during World War I.</English>
+		<English>[BOLD][H1]Stefan Banic[\H1][\BOLD][NEWLINE][BOLD](23 November 1870 - 2 January 1941)[\BOLD][NEWLINE]Was a Slovak inventor who devised a military parachute, the first parachute ever deployed in actual use. It saved the lives of many American aviators during World War I.</English>
 		<French>[BOLD][H1]Stefan Banic[\H1][\BOLD][NEWLINE][BOLD](23 Novembre 1870 - 2 Janvier 1941)[\BOLD][NEWLINE]C'est un constructeur et inventeur slovaque d'une sorte de parachute.</French>
 		<Polish>[BOLD][H1]Stefan Banic[\H1][\BOLD][NEWLINE][BOLD](23 Listopada 1870 - 2 Stycznia 1941)[\BOLD][NEWLINE]Słowacki wynalazca spadochronu wojskowego, pierwszego wykorzystywanego w praktyce. Stefan Banic skonstruował prototyp spadochronu w 1913 roku i przetestował go w Waszyngtonie w Stanach Zjednoczonych przed przedstawicielami z Urzędu Patentowego i wojska, skacząc z 41-piętrowego budynku, a następnie z samolotu, w 1914 roku.</Polish>
 	</TEXT>
@@ -13198,7 +13053,7 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_TAKUAN_SOHO_PEDIA</Tag>
-		<English>[BOLD][H1]Takuan Soho[\H1][\BOLD][NEWLINE][BOLD](December 24, 1573 - January 27, 1645)[\BOLD][NEWLINE]Was a major figure in the Rinzai school of Zen Buddhism. He become the first abbot of Tokai-ji Temple in Edo, which was constructed especially for the Tokugawa family.</English>
+		<English>[BOLD][H1]Takuan Soho[\H1][\BOLD][NEWLINE][BOLD](December 24, 1573 - January 27, 1645)[\BOLD][NEWLINE]Was a major figure in the Rinzai school of Zen Buddhism. He became the first abbot of Tokai-ji Temple in Edo, which was constructed especially for the Tokugawa family.</English>
 		<French>[BOLD][H1]Takuan Soho[\H1][\BOLD][NEWLINE][BOLD](Décembre 24, 1573 - Janvier 27, 1645)[\BOLD][NEWLINE]C'est une figure majeure de l'école Rinzai de bouddhisme zen. Il est devenu le premier abbé du temple Tokai-ji à Edo, qui a été construit spécialement pour la famille Tokugawa.</French>
 		<Polish>[BOLD][H1]Takuan Soho[\H1][\BOLD][NEWLINE][BOLD](24 Grudnia 1573 - 27 Stycznia 1645)[\BOLD][NEWLINE]Japoński mistrz zen szkoły rinzai, pisarz, artysta zen, poeta, kaligraf, twórca ogrodów i mistrz sztuk walki. Został wędrownym mnichem i żył w krańcowej biedzie. Studiował zen i praktykował medytację, zarabiał kopiując teksty i żebrał. Za zarobione pieniądze kupował olej do lampy i książki. Wkrotce stał się znany w Kioto i był zapraszany przez kilka klasztorów na stanowisko głównego mnicha, jednak odmawiał i poświęcał się dalszym studiom.</Polish>
 	</TEXT>
@@ -13348,6 +13203,35 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 		<English>[BOLD][H1]Thomas Edison[\H1][\BOLD][NEWLINE][BOLD](11 February 1847 - 18 October 1931)[\BOLD][NEWLINE]Was an American inventor and businessman who developed many devices which greatly influenced life worldwide into the twenty-first century.[NEWLINE]Genius is one percent inspiration, ninety-nine percent perspiration.[NEWLINE]Spoken statement (c. 1903);</English>
 		<French>[BOLD][H1]Thomas Edison[\H1][\BOLD][NEWLINE][BOLD](11 Février 1847 - 18 Octobre 1931)[\BOLD][NEWLINE]C'est un inventeur et homme d'affaires américain qui a développé de nombreux appareils qui ont grandement influencé la vie dans le monde entier au XXIe siècle.[NEWLINE]Le génie est un pour cent d'inspiration, quatre-vingt-dix-neuf pour cent de transpiration.[NEWLINE]Déclaration orale (c. 1903);</French>
 		<Polish>[BOLD][H1]Thomas Edison[\H1][\BOLD][NEWLINE][BOLD](11 Lutego 1847 - 18 Października 1931)[\BOLD][NEWLINE]Jeden z najbardziej znanych i twórczych wynalazców na świecie, przedsiębiorca. Dorobek założonych i administrowanych przez niego laboratoriów to ponad 1000 patentów, z których wystawionych na jego nazwisko jest w Stanach Zjednoczonych 1093, a poza nimi 1239, w większości podobnych do patentów amerykańskich. Założyciel prestiżowego czasopisma naukowego Science (1880).</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_THOMAS_JEFFERSON</Tag>
+		<English>Thomas Jefferson</English>
+		<French>
+			<Text>Thomas Jefferson</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Thomas Jefferson</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Thomas Jefferson</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Thomas Jefferson</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>
+			<Text>Thomas Jefferson</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_THOMAS_JEFFERSON_PEDIA</Tag>
@@ -13953,6 +13837,35 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 		<Polish>[BOLD][H1]Vladimir Kosma Zworykin[\H1][\BOLD][NEWLINE][BOLD](29 Lipca 1888 - 29 Lipca 1982)[\BOLD][NEWLINE]Amerykański radiotechnik i elektronik rosyjskiego pochodzenia. Od 1919 przebywał w USA. Wynalazca ikonoskopu (lampy analizującej) w 1930. Pracował też nad telewizją kolorową i stereoskopową oraz noktowizją i mikroskopią elektronową.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_VLADIMIR_LENIN</Tag>
+		<English>Vladimir Lenin</English>
+		<French>
+			<Text>Vladimir Lenin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Vladimir Lenin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Vladimir Lenin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Vladimir Lenin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>
+			<Text>Vladimir Lenin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_VLADIMIR_LENIN_PEDIA</Tag>
 		<English>[BOLD][H1]Vladimir Lenin[\H1][\BOLD][NEWLINE]Was a Russian communist revolutionary, politician, and political theorist. Under his administration, Russia and then the wider Soviet Union became a one-party communist state governed by the Russian Communist Party. Ideologically a Marxist, his political theories are known as Leninism.</English>
 		<French>[BOLD][H1]Vladimir Lenin[\H1][\BOLD][NEWLINE]C'est un révolutionnaire communiste russe, un politicien et un théoricien politique. Sous son administration, la Russie puis l'ensemble de l'Union soviétique sont devenues un État communiste à parti unique dirigé par le Parti communiste russe. Idéologiquement marxiste, ses théories politiques sont connues sous le nom de léninisme.</French>
@@ -14369,6 +14282,35 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 		<Polish>[BOLD][H1]William Worrall Mayo[\H1][\BOLD][NEWLINE][BOLD](31 Maja 1819 - 5 Marca 1911)[\BOLD][NEWLINE]Był brytyjsko-amerykańskim lekarzem i chemikiem, szerzej znanym jako twórca prywatnej pratkyki lekarskiej, która później przekształciła się w Klinikę Mayo. Jest potomkiem sławnego angielskiego chemika, Johna Mayowa.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_WILLY_BRANDT</Tag>
+		<English>Willy Brandt</English>
+		<French>
+			<Text>Willy Brandt</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Willy Brandt</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Willy Brandt</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Willy Brandt</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>
+			<Text>Willy Brandt</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_WILLY_BRANDT_PEDIA</Tag>
 		<English>[BOLD][H1]Willy Brandt[\H1][\BOLD][NEWLINE]Was a German statesman and politician, leader of the Social Democratic Party of Germany (SPD) from 1964 to 1987 and chancellor of the Federal Republic of Germany from 1969 to 1974. He was awarded the Nobel Peace Prize in 1971 for his efforts to strengthen cooperation in western Europe through the EEC and to achieve reconciliation between West Germany and the countries of Eastern Europe. He was the first Social Democrat chancellor since 1930.</English>
 		<French>[BOLD][H1]Willy Brandt[\H1][\BOLD][NEWLINE]C'est un homme d'État et homme politique allemand, chef du Parti social-démocrate d'Allemagne (SPD) de 1964 à 1987 et chancelier de la République fédérale d'Allemagne de 1969 à 1974. Il a reçu le prix Nobel de la paix en 1971 pour ses efforts visant à renforcer la coopération en Europe occidentale par le biais de la CEE et pour parvenir à la réconciliation entre l'Allemagne de l'Ouest et les pays d'Europe orientale. Il a été le premier chancelier social-démocrate depuis 1930.</French>
@@ -14502,7 +14444,7 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_XOLOTL_PEDIA</Tag>
-		<English>[BOLD][H1]Xolotl[\H1][\BOLD][NEWLINE]In Aztec mythology, Xolotl was the god with asociations to both lightning and death. Xolotl was also the god of fire and lighting, sicknes and deformities. He was the twin of Quetzalcoatl, the pair being sons of the virgin Coatlicue, and was the dark personification of Venus, the evening star.</English>
+		<English>[BOLD][H1]Xolotl[\H1][\BOLD][NEWLINE]In Aztec mythology, Xolotl was the god with asociations to both lightning and death. Xolotl was also the god of fire and lighting, sickness and deformities. He was the twin of Quetzalcoatl, the pair being sons of the virgin Coatlicue, and was the dark personification of Venus, the evening star.</English>
 		<French>[BOLD][H1]Xolotl[\H1][\BOLD][NEWLINE]Dans la mythologie aztèque, Xolotl était le dieu associé à la fois à la foudre et à la mort. Xolotl était aussi le dieu du feu et de l'éclairage, des maladies et des déformations. Il était le jumeau de Quetzalcoatl, le couple étant les fils de la vierge Coatlicue, et était la sombre personnification de Vénus, l'étoile du soir.</French>
 		<Polish>[BOLD][H1]Xolotl[\H1][\BOLD][NEWLINE]W wierzeniach indian Mezoameryki, w szczególności u Azteków i Tolteków bóg poronień i personifikacja planety Wenus (nazywanej także Gwiazdą Wieczorną), a także strażnik słońca towarzyszący mu w nocnej wędrówce przez świat podziemny, skąd według legend wykradł niegdyś dla ludzi ogień (stąd niekiedy nazywany "Panem Światła"). Często identyfikowany z bogiem ognia Azteków Xocotlem.</Polish>
 	</TEXT>
@@ -14516,6 +14458,35 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 		<English>[BOLD][H1]Xu Xiake[\H1][\BOLD][NEWLINE][BOLD](January 5, 1587 - March 8, 1641)[\BOLD][NEWLINE]Was a Chinese travel writer and geographer of the Ming Dynasty, known best for his famous geographical treatise, and noted for his bravery and humility.</English>
 		<French>[BOLD][H1]Xu Xiake[\H1][\BOLD][NEWLINE][BOLD](Janvier 5, 1587 - Mars 8, 1641)[\BOLD][NEWLINE]C'est un écrivain et géographe de voyage chinois de la dynastie Ming, connu pour son célèbre traité géographique, et connu pour sa bravoure et son humilité.</French>
 		<Polish>[BOLD][H1]Xu Xiake[\H1][\BOLD][NEWLINE][BOLD](5 Stycznia 1587 - 8 Marca 1641)[\BOLD][NEWLINE]Był chińskim podróżnikiem, pisarzem i geografem z czasów dynastii Ming. Jest znany szerzej jako autor swoich sławnych traktatów geograficznych i ze swojej odwagi i pokory.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_YASSER_ARAFAT</Tag>
+		<English>Yasser Arafat</English>
+		<French>
+			<Text>Yasser Arafat</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Yasser Arafat</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Yasser Arafat</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Yasser Arafat</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>
+			<Text>Yasser Arafat</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_YASSER_ARAFAT_PEDIA</Tag>
@@ -14577,6 +14548,35 @@ Il était le quatrième fils de Mourad II2. Il serait né le 30 mars 1432 à Edi
 		<English>[BOLD][H1]Yitzhak Mordechai[\H1][\BOLD][NEWLINE][BOLD](born 22 November 1944)[\BOLD][NEWLINE]Is an Israeli former general and politician. He served as a member of the Kneset between and as Minister of Defense and Minister of Transport. He retired from political life after being indicted for sexual asaults during his military service and later periods.</English>
 		<French>[BOLD][H1]Yitzhak Mordechai[\H1][\BOLD][NEWLINE][BOLD]né le 22 Novembre 1944)[\BOLD][NEWLINE]C'est un général Israélien, et un homme politique. Il a été tour à tour membre de la Kneset, Ministre de la défense et des Transports.</French>
 		<Polish>[BOLD][H1]Jicchak Mordechaj\H1][\BOLD][NEWLINE][BOLD](ur. 22 Listopada 1944)[\BOLD][NEWLINE]Izraelski wojskowy i polityk, członek Knesetu w latach 1996-2001, minister obrony (1996-1999), a następnie minister transportu (1999-2000). Od 1962 do 1995 służył w wojsku, od 1986 był szefem kolejno Południowego, Centralnego i Północnego Dowództwa w stopniu generała. Od 1995 w polityce, należał do Likudu, przez pięć lat był posłem do Knesetu, pełnił też funkcje ministerialne.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GREAT_PERSON_YITZHAK_RABIN</Tag>
+		<English>Yitzhak Rabin</English>
+		<French>
+			<Text>Yitzhak Rabin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Yitzhak Rabin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Yitzhak Rabin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Yitzhak Rabin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>
+			<Text>Yitzhak Rabin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_YITZHAK_RABIN_PEDIA</Tag>

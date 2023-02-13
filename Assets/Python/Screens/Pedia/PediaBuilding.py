@@ -5,9 +5,9 @@ from CvPythonExtensions import *
 class PediaBuilding:
 
 	def __init__(self, parent, H_BOT_ROW):
-		import TestCode
-		self.GOMReqs = TestCode.TestCode([0])
-	
+		import HelperFunctions
+		self.HF = HelperFunctions.HelperFunctions([0])
+
 		self.main = parent
 
 		H_PEDIA_PAGE = parent.H_PEDIA_PAGE
@@ -50,10 +50,6 @@ class PediaBuilding:
 		bNotCulture = self.main.SECTION[1] != TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_C2C_CULTURES", ())
 
 		eWidGen				= WidgetTypes.WIDGET_GENERAL
-		eWidJuToBonus		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_BONUS
-		eWidJuToBuilding	= WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING
-		eWidJuToTech		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_TECH
-		eWidJuToTerrain		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_TERRAIN
 		ePanelBlue50		= PanelStyles.PANEL_STYLE_BLUE50
 
 		enumGBS	= self.main.enumGBS
@@ -248,6 +244,8 @@ class PediaBuilding:
 		aList1 = []
 		aList2 = []
 		aList3 = []
+		aList4 = []
+		aList5 = []
 		if bNotCulture:
 			for i in xrange(CvTheBuildingInfo.getNumReplacedBuilding()):
 				iReplaced = CvTheBuildingInfo.getReplacedBuilding(i)
@@ -314,26 +312,32 @@ class PediaBuilding:
 			screen.attachImageButton(panelName, szChild + str(iType), GC.getTechInfo(iType).getButton(), enumGBS, eWidGen, 1, 1, False)
 			bPlus = True
 			i += 1
-			
-		# GOM tech requirements 
+
+		# GOM tech requirements
 		aGOMTechReqList = []
 		for i in range(2):
 			aGOMTechReqList.append([])
-		self.GOMReqs.getGOMReqs(CvTheBuildingInfo.getConstructCondition(), GOMTypes.GOM_TECH, aGOMTechReqList)
-		# GOM AND requirements are treated as regular AND requirements
+		self.HF.getGOMReqs(CvTheBuildingInfo.getConstructCondition(), GOMTypes.GOM_TECH, aGOMTechReqList)
+
+		#GOM AND requirements
 		for GOMTech in xrange(len(aGOMTechReqList[BoolExprTypes.BOOLEXPR_AND])):
 			iType = aGOMTechReqList[BoolExprTypes.BOOLEXPR_AND][GOMTech]
 			screen.attachImageButton(panelName, szChild + str(iType), GC.getTechInfo(iType).getButton(), enumGBS, eWidGen, 1, 1, False)
 			bPlus = True
 			i += 1
-		# GOM OR requirements are treated as regular OR requirements
-		for GOMTech in xrange(len(aGOMTechReqList[BoolExprTypes.BOOLEXPR_OR])):
-			iType = aGOMTechReqList[BoolExprTypes.BOOLEXPR_OR][GOMTech]
-			screen.attachImageButton(panelName, szChild + str(iType), GC.getTechInfo(iType).getButton(), enumGBS, eWidGen, 1, 1, False)
-			bPlus = True
-			i += 1
-		# TODO: Change it, so those are treated as separate requirement groups
-		
+
+		# GOM OR requirements
+		if len(aGOMTechReqList[BoolExprTypes.BOOLEXPR_OR]) > 0:
+			screen.attachLabel(panelName, "", szBracketL)
+			for GOMTech in xrange(len(aGOMTechReqList[BoolExprTypes.BOOLEXPR_OR])):
+				iType = aGOMTechReqList[BoolExprTypes.BOOLEXPR_OR][GOMTech]
+				screen.attachImageButton(panelName, szChild + str(iType), GC.getTechInfo(iType).getButton(), enumGBS, eWidGen, 1, 1, False)
+				if GOMTech+1 != len(aGOMTechReqList[BoolExprTypes.BOOLEXPR_OR]):
+					screen.attachLabel(panelName, "", szOr)
+				bPlus = True
+				i += 1
+			screen.attachLabel(panelName, "", szBracketR)
+
 		# Religion Req
 		szChild = PF + "REL"
 		iType = CvTheBuildingInfo.getPrereqReligion()
@@ -353,7 +357,7 @@ class PediaBuilding:
 				bPlus = True
 			screen.attachImageButton(panelName, szChild + str(iType), GC.getCorporationInfo(iType).getButton(), enumGBS, eWidGen, 1, 1, False)
 		# Bonus Req
-		# TODO: Expand functionality so it can handle 8 differently defined bonus requirements: Bonus, Bonuses, RawBonus, RawBonuses, VicinityRawBonus, VicinityRawBonuses, GOM AND/OR Bonus 
+		# TODO: Expand functionality so it can handle 8 differently defined bonus requirements: Bonus, Bonuses, RawBonus, RawBonuses, VicinityRawBonus, VicinityRawBonuses, GOM AND/OR Bonus
 		szChild = PF + "BONUS"
 		iType = CvTheBuildingInfo.getPrereqAndBonus()
 		nOr = 0
@@ -407,40 +411,39 @@ class PediaBuilding:
 			aList1.append(CvTheBuildingInfo.getPrereqInCityBuilding(j))
 
 		# Empire building requirements
-		for pair in CvTheBuildingInfo.getPrereqNumOfBuildings():
-			j = pair.id
-			iPrereqNumOfBuilding = pair.value
-			if CyPlayer:
-				if iPrereqNumOfBuilding > 0:
-					iPrereqNumOfBuilding = int(iPrereqNumOfBuilding * (100 + GC.getWorldInfo(GC.getMap().getWorldSize()).getBuildingPrereqModifier()) / 100.0)			
-					aList3.append((j, iPrereqNumOfBuilding))
-			elif iPrereqNumOfBuilding > 0:
-				aList3.append((j, iPrereqNumOfBuilding))
+		for eBuildingX, iPrereqNumOfBuilding in CvTheBuildingInfo.getPrereqNumOfBuildings():
+			if iPrereqNumOfBuilding > 0:
+				if CyPlayer:
+					aList3.append((eBuildingX, CyPlayer.getBuildingPrereqBuilding(iTheBuilding, eBuildingX, 0)))
+				else:
+					aList3.append((eBuildingX, iPrereqNumOfBuilding))
 
 		# Or building requirements
 		for j in xrange(CvTheBuildingInfo.getNumPrereqOrBuilding()):
 			aList2.append(CvTheBuildingInfo.getPrereqOrBuilding(j))
-			
-		# GOM building requirements 
+
+		# GOM building requirements
 		aGOMBuildingReqList = []
 		for i in range(2):
 			aGOMBuildingReqList.append([])
-		self.GOMReqs.getGOMReqs(CvTheBuildingInfo.getConstructCondition(), GOMTypes.GOM_BUILDING, aGOMBuildingReqList)
-		# GOM AND requirements are treated as regular AND requirements
-		for GOMBuilding in xrange(len(aGOMBuildingReqList[BoolExprTypes.BOOLEXPR_AND])):
-			aList1.append(aGOMBuildingReqList[BoolExprTypes.BOOLEXPR_AND][GOMBuilding])
-		# GOM OR requirements are treated as regular OR requirements
-		for GOMBuilding in xrange(len(aGOMBuildingReqList[BoolExprTypes.BOOLEXPR_OR])):
-			aList2.append(aGOMBuildingReqList[BoolExprTypes.BOOLEXPR_OR][GOMBuilding])
-		# TODO: Change it, so those are treated as separate requirement groups
+		self.HF.getGOMReqs(CvTheBuildingInfo.getConstructCondition(), GOMTypes.GOM_BUILDING, aGOMBuildingReqList)
 
-		if aList1 or aList2 or aList3:
+		#GOM AND prereqs
+		for GOMBuilding in xrange(len(aGOMBuildingReqList[BoolExprTypes.BOOLEXPR_AND])):
+			aList4.append(aGOMBuildingReqList[BoolExprTypes.BOOLEXPR_AND][GOMBuilding])
+
+		#GOM OR prereqs
+		for GOMBuilding in xrange(len(aGOMBuildingReqList[BoolExprTypes.BOOLEXPR_OR])):
+			aList5.append(aGOMBuildingReqList[BoolExprTypes.BOOLEXPR_OR][GOMBuilding])
+
+
+		if aList1 or aList2 or aList3 or aList4 or aList5:
 			if bPlus:
 				screen.attachLabel(panelName, "", szAnd)
 			else:
 				bPlus = True
 			if aList3:
-				screen.attachLabel(panelName, "", szBracketL + szfont2b + "Own")
+				screen.attachLabel(panelName, "", szBracketL + szfont2b + TRNSLTR.getText("TXT_KEY_PEDIA_OWN", ()))
 				for i in range(len(aList3)):
 					iType, iAmount = aList3[i]
 					screen.attachLabel(panelName, "", szfont4b + " " + str(iAmount))
@@ -456,7 +459,7 @@ class PediaBuilding:
 				aList1 = []
 			if aList2:
 				iListLength = len(aList2)
-				if  iListLength > 1:
+				if iListLength > 1:
 					screen.attachLabel(panelName, "", szBracketL)
 				for i in range(iListLength):
 					iType = aList2[i]
@@ -466,6 +469,24 @@ class PediaBuilding:
 				if iListLength > 1:
 					screen.attachLabel(panelName, "", szBracketR)
 				aList2 = []
+			if aList4:
+				for i in range(len(aList4)):
+					iType = aList4[i]
+					screen.attachImageButton(panelName, szChild + str(iType), GC.getBuildingInfo(iType).getButton(), enumGBS, eWidGen, 1, 1, False)
+				aList4 = []
+			if aList5:
+				iListLength = len(aList5)
+				if iListLength > 1:
+					screen.attachLabel(panelName, "", szBracketL)
+				for i in range(iListLength):
+					iType = aList5[i]
+					if i != 0:
+						screen.attachLabel(panelName, "", szOr)
+					screen.attachImageButton(panelName, szChild + str(iType), GC.getBuildingInfo(iType).getButton(), enumGBS, eWidGen, 1, 1, False)
+				if iListLength > 1:
+					screen.attachLabel(panelName, "", szBracketR)
+				aList5 = []
+
 		# Civic Req
 		szChild = PF + "CIVIC"
 		for j in range(GC.getNumCivicInfos()):
@@ -528,9 +549,8 @@ class PediaBuilding:
 			aList2 = []
 		# Improvement Req
 		szChild = PF + "IMP"
-		for i in range(GC.getNumImprovementInfos()):
-			if CvTheBuildingInfo.isPrereqOrImprovement(i):
-				aList2.append(i)
+		for iPrereqOrImprovement in CvTheBuildingInfo.getPrereqOrImprovements():
+			aList2.append(iPrereqOrImprovement)
 		if aList2:
 			if bPlus:
 				screen.attachLabel(panelName, "", szAnd)

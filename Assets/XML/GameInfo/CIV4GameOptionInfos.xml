@@ -89,11 +89,12 @@
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
+			<!-- @SAVEBREAK DELETE -->
 			<Type>GAMEOPTION_ADVANCED_ECONOMY</Type>
 			<Description>TXT_KEY_GAMEOPTION_ADVANCED_ECONOMY</Description>
 			<Help>TXT_KEY_GAMEOPTION_ADVANCED_ECONOMY_HELP</Help>
 			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
+			<bVisible>0</bVisible>
 			<EnforcesGameOptionOnTypes>
 				<GameOptionType>GAMEOPTION_ADVANCED_DIPLOMACY</GameOptionType>
 			</EnforcesGameOptionOnTypes>
@@ -146,9 +147,6 @@
 			<Help>TXT_KEY_GAMEOPTION_1_CITY_TILE_FOUNDING_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
-			<EnforcesGameOptionOffTypes>
-				<GameOptionType>GAMEOPTION_MIN_CITY_BORDER</GameOptionType>
-			</EnforcesGameOptionOffTypes>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_MIN_CITY_BORDER</Type>
@@ -318,11 +316,12 @@
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
+			<!-- @SAVEBREAK DELETE - Deprecated, moved to BUG options -->
 			<Type>GAMEOPTION_RELIGION_DECAY</Type>
-			<Description>TXT_KEY_GAMEOPTION_RELIGION_DECAY</Description>
-			<Help>TXT_KEY_GAMEOPTION_RELIGION_DECAY_HELP</Help>
+			<Description>TXT_KEY_BUG_OPT_ROMSETTINGS__RELIGIONDECAY_TEXT</Description>
+			<Help>TXT_KEY_BUG_OPT_ROMSETTINGS__RELIGIONDECAY_HOVER</Help>
 			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
+			<bVisible>0</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_DIVINE_PROPHETS</Type>
@@ -699,6 +698,20 @@
 			<Type>GAMEOPTION_ADVANCED_ROUTES</Type>
 			<Description>TXT_KEY_GAMEOPTION_ADVANCED_ROUTES</Description>
 			<Help>TXT_KEY_GAMEOPTION_ADVANCED_ROUTES_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_ALWAYS_RAZE_CITIES</Type>
+			<Description>TXT_KEY_GAMEOPTION_ALWAYS_RAZE_CITIES</Description>
+			<Help>TXT_KEY_GAMEOPTION_ALWAYS_RAZE_CITIES_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_EQUILIBRIUM_CULTURE</Type>
+			<Description>TXT_KEY_GAMEOPTION_EQUILIBRIUM_CULTURE</Description>
+			<Help>TXT_KEY_GAMEOPTION_EQUILIBRIUM_CULTURE_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>

@@ -24,10 +24,10 @@ class ANDAutomationsTab(BugOptionsTab.BugOptionsTab):
 		#Standard Settings
 		self.addLabel(screen, panel, "AutomatedSettings__AutomatedSettings")
 		column = self.addOneColumnLayout(screen, panel, panel)
-		left, right = self.addTwoColumnLayout(screen, column, "Options", False)
+		left, right = self.addTwoColumnLayout(screen, column, "Options")
 
 		screen.attachHSeparator(column, column + "SepInterface1")
-		left, right = self.addTwoColumnLayout(screen, column, "Options", False)
+		left, right = self.addTwoColumnLayout(screen, column, "Options")
 
 		#Automate Pillage Options
 		self.addLabel(screen, left, "AutomatedSettings__PillageSettings")
@@ -38,7 +38,7 @@ class ANDAutomationsTab(BugOptionsTab.BugOptionsTab):
 		self.addCheckbox(screen, col3, "AutomatedSettings__HideAutomatePillage")
 
 		screen.attachHSeparator(column, column + "SepInterface1")
-		left, right = self.addTwoColumnLayout(screen, column, "Options", False)
+		left, right = self.addTwoColumnLayout(screen, column, "Options")
 
 		#Automate Hunt Options
 
@@ -52,7 +52,7 @@ class ANDAutomationsTab(BugOptionsTab.BugOptionsTab):
 		self.addIntDropdown(screen, col2, col2, "AutomatedSettings__AutoHuntMinimumAttackOdds", True, "RIGHT")
 
 		screen.attachHSeparator(column, column + "SepInterface1")
-		left, right = self.addTwoColumnLayout(screen, column, "Options", False)
+		left, right = self.addTwoColumnLayout(screen, column, "Options")
 
 		#Automate Patrol Options:
 
@@ -66,7 +66,7 @@ class ANDAutomationsTab(BugOptionsTab.BugOptionsTab):
 		self.addCheckbox(screen, col3, "AutomatedSettings__NoPatrolCapturingCities")
 
 		screen.attachHSeparator(column, column + "SepInterface1")
-		left, right = self.addTwoColumnLayout(screen, column, "Options", False)
+		left, right = self.addTwoColumnLayout(screen, column, "Options")
 
 		#Automate Defense Options:
 
@@ -78,7 +78,7 @@ class ANDAutomationsTab(BugOptionsTab.BugOptionsTab):
 		self.addIntDropdown(screen, col3, col3, "AutomatedSettings__AutoDefenseMinimumAttackOdds", True, "RIGHT")
 
 		screen.attachHSeparator(column, column + "SepInterface1")
-		left, right = self.addTwoColumnLayout(screen, column, "Options", False)
+		left, right = self.addTwoColumnLayout(screen, column, "Options")
 
 		#Automate Air Options:
 
@@ -90,7 +90,7 @@ class ANDAutomationsTab(BugOptionsTab.BugOptionsTab):
 		self.addCheckbox(screen, col3, "AutomatedSettings__HideAirAutomations")
 
 		screen.attachHSeparator(column, column + "SepInterface1")
-		left, right = self.addTwoColumnLayout(screen, column, "Options", False)
+		left, right = self.addTwoColumnLayout(screen, column, "Options")
 
 		#Automate Explore Options:
 
@@ -100,7 +100,7 @@ class ANDAutomationsTab(BugOptionsTab.BugOptionsTab):
 		self.addCheckbox(screen, col1, "AutomatedSettings__HideAutoExplore")
 
 		screen.attachHSeparator(column, column + "SepInterface1")
-		left, right = self.addTwoColumnLayout(screen, column, "Options", False)
+		left, right = self.addTwoColumnLayout(screen, column, "Options")
 
 		#Automate Spread Options:
 
@@ -110,7 +110,7 @@ class ANDAutomationsTab(BugOptionsTab.BugOptionsTab):
 		self.addCheckbox(screen, col1, "AutomatedSettings__HideAutoSpread")
 
 		screen.attachHSeparator(column, column + "SepInterface1")
-		left, right = self.addTwoColumnLayout(screen, column, "Options", False)
+		left, right = self.addTwoColumnLayout(screen, column, "Options")
 
 		#Automate Caravan Options:
 
@@ -120,7 +120,7 @@ class ANDAutomationsTab(BugOptionsTab.BugOptionsTab):
 		self.addCheckbox(screen, col1, "AutomatedSettings__HideAutoCaravan")
 
 		screen.attachHSeparator(column, column + "SepInterface1")
-		left, right = self.addTwoColumnLayout(screen, column, "Options", False)
+		left, right = self.addTwoColumnLayout(screen, column, "Options")
 
 		#Automate Protect Options:
 
@@ -130,7 +130,7 @@ class ANDAutomationsTab(BugOptionsTab.BugOptionsTab):
 		self.addCheckbox(screen, col1, "AutomatedSettings__HideAutoProtect")
 
 		screen.attachHSeparator(column, column + "SepInterface1")
-		left, right = self.addTwoColumnLayout(screen, column, "Options", False)
+		left, right = self.addTwoColumnLayout(screen, column, "Options")
 
 		#Automate Pirate Options:
 
@@ -141,7 +141,7 @@ class ANDAutomationsTab(BugOptionsTab.BugOptionsTab):
 		self.addIntDropdown(screen, col2, col2, "AutomatedSettings__AutoPirateMinimumAttackOdds", True, "RIGHT")
 
 		screen.attachHSeparator(column, column + "SepInterface1")
-		left, right = self.addTwoColumnLayout(screen, column, "Options", False)
+		left, right = self.addTwoColumnLayout(screen, column, "Options")
 
 		#Automate Upgrading Options:
 
@@ -154,7 +154,7 @@ class ANDAutomationsTab(BugOptionsTab.BugOptionsTab):
 		self.addCheckbox(screen, col2, "AutomatedSettings__MostExpierenced")
 
 		screen.attachHSeparator(column, column + "SepInterface1")
-		left, right = self.addTwoColumnLayout(screen, column, "Options", False)
+		left, right = self.addTwoColumnLayout(screen, column, "Options")
 
 		#Automate Promote Options:
 
@@ -164,7 +164,7 @@ class ANDAutomationsTab(BugOptionsTab.BugOptionsTab):
 		self.addCheckbox(screen, col1, "AutomatedSettings__HideAutoPromote")
 
 		screen.attachHSeparator(column, column + "SepInterface1")
-		left, right = self.addTwoColumnLayout(screen, column, "Options", False)
+		left, right = self.addTwoColumnLayout(screen, column, "Options")
 
 		#Automate Worker Options:
 
@@ -173,7 +173,7 @@ class ANDAutomationsTab(BugOptionsTab.BugOptionsTab):
 
 		bFirst = True
 
-		import CvUtil
+		import TextUtil
 		GC = CyGlobalContext()
 
 		if self.buildNames is None:
@@ -181,7 +181,7 @@ class ANDAutomationsTab(BugOptionsTab.BugOptionsTab):
 			self.buildNames = [(0,0)] * iNumBuilds
 			# Strip the <link="IMPROVEMENT_FOOBAR"> and </link> pair from the description while retaining the bit between them
 			for iI in range(iNumBuilds):
-				szDescription = CvUtil.convertToAscii(GC.getBuildInfo(iI).getDescription())
+				szDescription = TextUtil.convertToAscii(GC.getBuildInfo(iI).getDescription())
 				szNewDescription = ""
 				iStartIndex = szDescription.rfind("<link")
 				iEndIndex = szDescription.rfind("'>") + 2
@@ -201,14 +201,16 @@ class ANDAutomationsTab(BugOptionsTab.BugOptionsTab):
 		TRNSLTR = CyTranslator()
 		iNumBuilds = GC.getNumBuildInfos()
 		if self.ANewDawnOpt.isShowCityAutomations():
+			n = -1
 			for cityX in player.cities():
 				if not bFirst:
 					self.addSpacer(screen, left, "City Spacer")
 				bFirst = False
 
-				szCityName = CvUtil.convertToAscii(cityX.getName())
+				szCityName = TextUtil.convertToAscii(cityX.getName())
+				n += 1
+				self.addLabel(screen, left, szCityName + str(n), TRNSLTR.getText("TXT_KEY_AUTOMATED_WORKERS_CAN_BUILD_CITY", (szCityName,)), None, False, True)
 
-				self.addLabel(screen, left, TRNSLTR.getText("TXT_KEY_AUTOMATED_WORKERS_CAN_BUILD_CITY", (szCityName,)), TRNSLTR.getText("TXT_KEY_AUTOMATED_WORKERS_CAN_BUILD_CITY", (szCityName,)), None, False, True)
 				col1, col2, col3, col4, col5 = self.addMultiColumnLayout(screen, left, 5, "Automate_Workers")
 
 				iCount = 0
@@ -241,7 +243,7 @@ class ANDAutomationsTab(BugOptionsTab.BugOptionsTab):
 
 				columnKey = (col1, col2, col3, col4, col5)[iCount % 5]
 
-				control = CvUtil.convertToAscii(szNameKey + CvBuildInfo.getDescription() + "Check")
+				control = TextUtil.convertToAscii(szNameKey + CvBuildInfo.getDescription() + "Check")
 				bEnabled = player.isAutomatedCanBuild(i)
 
 				szNewDescription = self.buildNames[i]

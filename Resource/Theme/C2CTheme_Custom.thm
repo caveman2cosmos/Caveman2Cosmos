@@ -3795,6 +3795,120 @@ with GFC_Control_Button
 		map GFC_Control							= GFC_Control_DefaultButton_Style;
 	}
 
+	style SF_CtrlTheme_Civ4_Control_DarkMarbleButton_Style
+	{
+		with .Size
+		{
+			.FocusMargin_Text		= GRectMargin(0,0,0,0);
+			.FocusMargin_Image		= GRectMargin(0,0,0,0);
+			.FocusMargin_Content	= GRectMargin(0,0,0,0);
+			.FocusMargin_Control	= GRectMargin(0,0,0,0);
+			.TextOffset				= GPoint(0,0);
+			.DownOffset_Content		= GPoint(0,0);
+			.DownOffset_Text		= GPoint(0,0);
+			.DownOffset_Image		= GPoint(0,0);
+			.Default				= GSize(64,64);
+		}
+		with GFC_CtrlTheme_Bitmap_Control_Button_Skin
+		{
+			.Default
+			{
+				layer {
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					FactorCombine	= GColorCombine(Modulate,Source);
+					FactorColor		= GColor(180,200,220);
+					Image			= GBitmap("GUI/Button/DarkMarble_Btn_BG.tga", HVGrid, 1, 1, 0, 0);
+					Indent			= GRectMargin(4,4,4,4);
+				}
+				layer {
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					Image			= GBitmap("GUI/Button/Etched_Btn_Border.tga", HVGrid, 1, 1, 0, 0);
+					Margin			= GRectMargin(8,8,8,8);
+					Indent			= GRectMargin(2,2,2,2);
+				}
+			}
+			.Press
+			{
+				layer {
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					FactorCombine	= GColorCombine(Modulate2X,Source);
+					FactorColor		= GColor(255,255,255);
+					Image			= GBitmap("GUI/Button/DarkMarble_Btn_BG.tga", HVGrid, 1, 1, 0, 0);
+					Indent			= GRectMargin(4,4,4,4);
+				}
+				layer {
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					Image			= GBitmap("GUI/Button/Etched_Btn_Border.tga", HVGrid, 1, 1, 0, 0);
+					Margin			= GRectMargin(8,8,8,8);
+					Indent			= GRectMargin(2,2,2,2);
+				}
+			}
+			.Rollover
+			{
+				layer { Inherit = .Default; }
+				layer { FactorColor = GColor(120,240,255); }
+				layer { FactorColor = GColor(255,255,255); }
+			}
+			.Disable
+			{
+				layer {
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_TILE);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					FactorCombine	= GColorCombine(Modulate2X,Source);
+					FactorColor		= GColor(0,50,100);
+					Image			= GBitmap("GUI/Button/DarkMarble_Btn_BG.tga", HVGrid, 1, 1, 0, 0);
+					Indent			= GRectMargin(4,4,4,4);
+				}
+				layer {
+					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_EMPTY, GFC_BITMAPSKIN_SIDES_SCALE);
+					DestCombine		= GColorCombine(BlendSource,Disable);
+					FactorCombine	= GColorCombine(Modulate2X,Source);
+					FactorColor		= GColor(0,100,150);
+					Image			= GBitmap("GUI/Button/Etched_Btn_Border.tga", HVGrid, 1, 1, 0, 0);
+					Margin			= GRectMargin(8,8,8,8);
+					Indent			= GRectMargin(2,2,2,2);
+				}
+			}
+			.Focus					= .Rollover;
+			.FocusPress				= .Press;
+			.FocusRollover			= .Rollover;
+			.FocusDisable			= .Disable;
+
+			.Toggle					= .Press;
+			.ToggleRollover			= .Press;
+			.TogglePress			= .Rollover;
+			.ToggleDisable			= .Disable;
+			.ToggleFocus			= .FocusPress;
+			.ToggleFocusRollover	= .FocusPress;
+			.ToggleFocusPress		= .FocusRollover;
+			.ToggleFocusDisable		= .FocusDisable;
+
+			.Inactive				= .Default;
+			.InactiveRollover		= .Rollover;
+			.InactivePress			= .Press;
+			.InactiveDisable		= .Disable;
+			.InactiveToggle			= .Toggle;
+			.InactiveToggleRollover	= .TogglePress;
+			.InactiveTogglePress	= .ToggleRollover;
+			.InactiveToggleDisable	= .ToggleDisable;
+
+			.Winoff					= .Default;
+			.WinoffRollover			= .Rollover;
+			.WinoffPress			= .Press;
+			.WinoffDisable			= .Disable;
+			.WinoffToggle			= .Toggle;
+			.WinoffToggleRollover	= .TogglePress;
+			.WinoffTogglePress		= .ToggleRollover;
+			.WinoffToggleDisable	= .ToggleDisable;
+		}
+		map GFC_CtrlTheme_Bitmap_Control_Button		= GFC_Control_DefaultButton_Style;
+		map GFC_Control								= GFC_Control_DefaultButton_Style;
+	}
+
 
 	// Main Menu - Toggle Radio Button
 	style SF_CtrlTheme_Civ4_Control_Button_ToggleRadio_Style

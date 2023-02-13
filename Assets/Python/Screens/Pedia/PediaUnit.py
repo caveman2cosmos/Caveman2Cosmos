@@ -5,9 +5,9 @@ from CvPythonExtensions import *
 class PediaUnit:
 
 	def __init__(self, parent, H_BOT_ROW):
-		import TestCode
-		self.GOMReqs = TestCode.TestCode([0])
-	
+		import HelperFunctions
+		self.HF = HelperFunctions.HelperFunctions([0])
+
 		self.main = parent
 
 		H_PEDIA_PAGE = parent.H_PEDIA_PAGE
@@ -56,13 +56,6 @@ class PediaUnit:
 		aName = self.main.getNextWidgetName
 
 		eWidGen				= WidgetTypes.WIDGET_GENERAL
-		eWidJuToBonus		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_BONUS
-		eWidJuToBuilding	= WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING
-		eWidJuToTech		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_TECH
-		eWidJuToCombat		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT_COMBAT
-		eWidJuToUnit		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT
-		eWidJuToPromo		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROMOTION
-		eWidJuToCivic		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_CIVIC
 		ePnlBlue50			= PanelStyles.PANEL_STYLE_BLUE50
 		eFontTitle			= FontTypes.TITLE_FONT
 
@@ -90,18 +83,19 @@ class PediaUnit:
 		iCombatType = CvTheUnitInfo.getUnitCombatType()
 		if iCombatType != -1:
 			if szfontEdge == "<font=4b>":
-				aSize = 28
+				aSize = 22
 			elif szfontEdge == "<font=3b":
-				aSize = 26
-			else:
 				aSize = 18
+			else:
+				aSize = 16
 			CvCombatInfo = GC.getUnitCombatInfo(iCombatType)
 			szText += " - " + '<img=%s size=%d></img>' %(CvCombatInfo.getButton(), aSize) + " " + CvCombatInfo.getDescription()
-			del CvCombatInfo
-			iWidget = eWidJuToCombat
+
+			Txt = "JumpTo|COMBAT" + str(iCombatType)
+			self.main.aWidgetBucket.append(Txt)
 		else:
-			iWidget = eWidGen
-		screen.setText(aName(), "", szfontEdge + szText, 1<<0, X_COL_1, 0, 0, eFontTitle, iWidget, iCombatType, 0)
+			Txt = aName()
+		screen.setText(Txt, "", szfontEdge + szText, 1<<0, X_COL_1, 0, 0, eFontTitle, eWidGen, iCombatType, 0)
 
 		Pnl = aName()
 		screen.addPanel(Pnl, "", "", False, False, X_COL_1 - 3, Y_TOP_ROW_1 + 2, W_COL_1 + 8, H_TOP_ROW + 2, PanelStyles.PANEL_STYLE_MAIN)
@@ -113,17 +107,17 @@ class PediaUnit:
 		screen.addListBoxGFC(szName, "", self.X_STATS, self.Y_STATS, self.W_STATS, self.H_STATS, TableStyles.TABLE_STYLE_EMPTY)
 		screen.enableSelect(szName, False)
 
-		szText = ""
-		iType = CvTheUnitInfo.getCombat()
+		import TextUtil
+
+		if CvTheUnitInfo.getDomainType() == DomainTypes.DOMAIN_AIR:
+			iType = CvTheUnitInfo.getTotalModifiedAirCombatStrength100()
+		else: iType = CvTheUnitInfo.getTotalModifiedCombatStrength100()
+
 		if iType > 0:
-			szText = "%d " %iType
-		iType = CvTheUnitInfo.getAirCombat()
-		if iType > 0:
-			if szText:
-				szText += "/ "
-			szText += "%d (Air) " %iType
-		if szText:
-			szText += unichr(8855)
+			szText = TextUtil.floatToString(iType / 100.0) + " " + unichr(8855)
+		else: szText = ""
+
+
 		iType = CvTheUnitInfo.getMoves()
 		if iType > 0:
 			szTemp = "%d" %iType + unichr(8856)
@@ -155,23 +149,44 @@ class PediaUnit:
 			screen.appendListBoxStringNoUpdate(szName, szfont3 + szText, eWidGen, 0, 0, 1<<0)
 		screen.updateListBox(szName)
 
-		#Combat types
+		PF = "ToolTip|JumpTo|"
 		aList0 = []
 		aList1 = []
+		aList2 = []
+		aList3 = []
+		#Combat types
 		for k in xrange(GC.getNumUnitCombatInfos()):
 			if CvTheUnitInfo.isSubCombatType(k):
 				CvUnitCombatInfo = GC.getUnitCombatInfo(k)
 				if not CvUnitCombatInfo.isGraphicalOnly():
 					aList0.append((CvUnitCombatInfo.getButton(), k))
 		if aList0:
-			szTemp = TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_SUBCOMBAT_TYPE", ())
-			screen.addPanel(aName(), szTemp, "", True, True, X_COL_2, Y_TOP_ROW_1, W_COL_2 - 4, H_TOP_ROW, ePnlBlue50)
-			aSize = H_TOP_ROW / 3
-			aSize = aSize - aSize % 8
-			szName = aName()
-			screen.addMultiListControlGFC(szName, "", X_COL_2 + 8, Y_TOP_ROW_1 + 32, W_COL_2 - 12, H_TOP_ROW - 36, 1, aSize, aSize, TableStyles.TABLE_STYLE_STANDARD)
-			for BTN, iCombat in aList0:
-				screen.appendMultiListButton(szName, BTN, 0, eWidJuToCombat, iCombat, -1, False)
+			Pnl = aName()
+			screen.addPanel(Pnl, "", "", True, True, X_COL_2, Y_TOP_ROW_1, W_COL_2 - 4, H_TOP_ROW, ePnlBlue50)
+			szTxt = szfont3b + TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_SUBCOMBAT_TYPE", ())
+			screen.setLabelAt("", Pnl, szTxt, 1<<2, (W_COL_2 - 4) / 2, 2, 0, eFontTitle, eWidGen, 0, 0)
+			ScrlPnl = aName()
+			screen.addScrollPanel(ScrlPnl, "", X_COL_2 - 2, Y_TOP_ROW_1, W_COL_2, H_TOP_ROW - 26, ePnlBlue50)
+			screen.setStyle(ScrlPnl, "ScrollPanel_Alt_Style")
+			aSize = (H_TOP_ROW - 48) / 2
+			aSize = aSize - aSize % 4
+			szChild = PF + "COMBAT"
+			iDelta = aSize + 4
+			x = 4
+			y2 = H_TOP_ROW - 20 - aSize
+			y1 = y2 - iDelta
+			y = y1
+			i = 0
+			for BTN, iUnitCombat in aList0:
+				screen.setImageButtonAt(szChild + str(iUnitCombat), ScrlPnl, BTN, x, y, aSize, aSize, eWidGen, 1, 2)
+
+				if i % 2:
+					x += iDelta
+					y = y1
+				else:
+					y = y2
+				i += 1
+
 			aList0 = []
 
 		# Graphic
@@ -180,12 +195,11 @@ class PediaUnit:
 		self.main.aWidgetBucket.append("Preview|Min")
 
 		# Requires
-		PF = "ToolTip|JumpTo|"
 		AND = ["TXT", "<font=4b>&#38", 1<<2, 10, 14]
 		OR = ["TXT", "<font=4b>||", 1<<2, 6, 10]
 		braL = ["TXT", "<font=4b> {", 1<<0, 0, 14]
 		braR = ["TXT", "<font=4b>} ", 1<<0, 0, 14]
-		# Tech Req
+		# Tech Req, TODO: Add GOM AND/OR requirements, when units will have GOM tech requirements.
 		aReqList = []
 		n = 0
 		szChild = PF + "TECH"
@@ -196,39 +210,39 @@ class PediaUnit:
 		for iType in CvTheUnitInfo.getPrereqAndTechs():
 			aReqList.append([szChild + str(iType) + "|" + str(n), GC.getTechInfo(iType).getButton()])
 			n += 1
-			
-		# GOM tech requirements 
-		aGOMTechReqList = []
-		for i in range(2):
-			aGOMTechReqList.append([])
-		self.GOMReqs.getGOMReqs(CvTheUnitInfo.getTrainCondition(), GOMTypes.GOM_TECH, aGOMTechReqList)
-		# GOM AND requirements are treated as regular AND requirements
-		for GOMTech in xrange(len(aGOMTechReqList[BoolExprTypes.BOOLEXPR_AND])):
-			iType = aGOMTechReqList[BoolExprTypes.BOOLEXPR_AND][GOMTech]
-			aReqList.append([szChild + str(iType) + "|" + str(n), GC.getTechInfo(iType).getButton()])
-			n += 1
-		# GOM OR requirements are treated as regular OR requirements
-		for GOMTech in xrange(len(aGOMTechReqList[BoolExprTypes.BOOLEXPR_OR])):
-			iType = aGOMTechReqList[BoolExprTypes.BOOLEXPR_OR][GOMTech]
-			aReqList.append([szChild + str(iType) + "|" + str(n), GC.getTechInfo(iType).getButton()])
-			n += 1
-		# TODO: Change it, so those are treated as separate requirement groups
-				
+
 		# Bonus Req
-		# TODO: Rework it, so it supports GOM AND/OR requirements
 		szChild = PF + "BONUS"
 		nOr = 0
+		nGOMOr = 0
+
+		# GOM bonus requirements
+		aGOMBUnitReqList = []
+		for i in range(2):
+			aGOMBUnitReqList.append([])
+		self.HF.getGOMReqs(CvTheUnitInfo.getTrainCondition(), GOMTypes.GOM_BONUS, aGOMBUnitReqList)
+
 		for iType in CvTheUnitInfo.getPrereqOrBonuses():
 			aList0.append(iType)
 			n += 1
 			nOr += 1
+		for iType in xrange(len(aGOMBUnitReqList[BoolExprTypes.BOOLEXPR_OR])):
+			aList2.append(aGOMBUnitReqList[BoolExprTypes.BOOLEXPR_OR][iType])
+			n += 1
+			nGOMOr += 1
 		iType = CvTheUnitInfo.getPrereqAndBonus()
-		if iType != -1 or aList0:
+		if iType != -1 or aList0 or aList2:
 			if aReqList:
 				aReqList.append(AND)
 			if iType != -1:
 				aReqList.append([szChild + str(iType) + "|" + str(n), GC.getBonusInfo(iType).getButton()])
 				n += 1
+			if aReqList and len(aGOMBUnitReqList[BoolExprTypes.BOOLEXPR_AND]) > 0:
+				aReqList.append(AND)
+			for iType in xrange(len(aGOMBUnitReqList[BoolExprTypes.BOOLEXPR_AND])):
+				aReqList.append([szChild + str(aGOMBUnitReqList[BoolExprTypes.BOOLEXPR_AND][iType]) + "|" + str(n), GC.getBonusInfo(aGOMBUnitReqList[BoolExprTypes.BOOLEXPR_AND][iType]).getButton()])
+				n += 1
+
 			if aList0:
 				if nOr > 1:
 					aReqList.append(braL)
@@ -243,6 +257,21 @@ class PediaUnit:
 					aReqList.append(braR)
 				aList0 = []
 				nOr = 0
+			if aList2:
+				if nGOMOr > 1:
+					aReqList.append(braL)
+				iType = aList2.pop(0)
+				aReqList.append([szChild + str(iType) + "|" + str(n), GC.getBonusInfo(iType).getButton()])
+				n += 1
+				for iType in aList2:
+					aReqList.append(OR)
+					aReqList.append([szChild + str(iType) + "|" + str(n), GC.getBonusInfo(iType).getButton()])
+					n += 1
+				if nGOMOr > 1:
+					aReqList.append(braR)
+				aList2 = []
+				nGOMOr = 0
+
 		# Civic Req
 		szChild = PF + "CIVIC"
 		for iType in xrange(GC.getNumCivicInfos()):
@@ -279,27 +308,35 @@ class PediaUnit:
 		for i in xrange(CvTheUnitInfo.getPrereqOrBuildingsNum()):
 			aList1.append(CvTheUnitInfo.getPrereqOrBuilding(i))
 			nOr += 1
-			
-		# GOM building requirements 
+
+		# GOM building requirements
 		aGOMBUnitReqList = []
 		for i in range(2):
 			aGOMBUnitReqList.append([])
-		self.GOMReqs.getGOMReqs(CvTheUnitInfo.getTrainCondition(), GOMTypes.GOM_BUILDING, aGOMBUnitReqList)
-		# GOM AND requirements are treated as regular AND requirements
+		self.HF.getGOMReqs(CvTheUnitInfo.getTrainCondition(), GOMTypes.GOM_BUILDING, aGOMBUnitReqList)
+		# GOM AND requirements
 		for GOMBuilding in xrange(len(aGOMBUnitReqList[BoolExprTypes.BOOLEXPR_AND])):
-			aList0.append(aGOMBUnitReqList[BoolExprTypes.BOOLEXPR_AND][GOMBuilding])
-		# GOM OR requirements are treated as regular OR requirements
-		for GOMBuilding in xrange(len(aGOMBUnitReqList[BoolExprTypes.BOOLEXPR_OR])):
-			aList1.append(aGOMBUnitReqList[BoolExprTypes.BOOLEXPR_OR][GOMBuilding])
-			nOr += 1
-		# TODO: Change it, so those are treated as separate requirement groups
+			aList2.append(aGOMBUnitReqList[BoolExprTypes.BOOLEXPR_AND][GOMBuilding])
 
-		if aList0 or aList1:
+		# GOM OR requirements
+		nGOMOr = 0
+		for GOMBuilding in xrange(len(aGOMBUnitReqList[BoolExprTypes.BOOLEXPR_OR])):
+			aList3.append(aGOMBUnitReqList[BoolExprTypes.BOOLEXPR_OR][GOMBuilding])
+			nGOMOr += 1
+
+		if aList0 or aList1 or aList2 or aList3:
 			if aReqList:
 				aReqList.append(AND)
 			for iType in aList0:
 				aReqList.append([szChild + str(iType) + "|" + str(n), GC.getBuildingInfo(iType).getButton()])
 				n += 1
+
+			if aReqList and len(aGOMBUnitReqList[BoolExprTypes.BOOLEXPR_AND]) > 0:
+				aReqList.append(AND)
+			for iType in aList2:
+				aReqList.append([szChild + str(iType) + "|" + str(n), GC.getBuildingInfo(iType).getButton()])
+				n += 1
+
 			if aList1:
 				if nOr > 1:
 					aReqList.append(braL)
@@ -315,6 +352,21 @@ class PediaUnit:
 				aList1 = []
 				nOr = 0
 
+			if aList3:
+				if nGOMOr > 1:
+					aReqList.append(braL)
+				iType = aList3.pop(0)
+				aReqList.append([szChild + str(iType) + "|" + str(n), GC.getBuildingInfo(iType).getButton()])
+				n += 1
+				for iType in aList3:
+					aReqList.append(OR)
+					aReqList.append([szChild + str(iType) + "|" + str(n), GC.getBuildingInfo(iType).getButton()])
+					n += 1
+				if nGOMOr > 1:
+					aReqList.append(braR)
+				aList3 = []
+				nGOMOr = 0
+
 		# Upgrades To
 		aUpgList = []
 		szChild = PF + "UNIT"
@@ -322,7 +374,7 @@ class PediaUnit:
 			iUnit = CvTheUnitInfo.getUnitUpgrade(i)
 			aUpgList.append([szChild + str(iUnit),  GC.getUnitInfo(iUnit).getButton()])
 
-		iType = CvTheUnitInfo.getForceObsoleteTech()
+		iType = CvTheUnitInfo.getObsoleteTech()
 		if aReqList or aUpgList or iType != -1:
 			W_BOT_ROW = W_PEDIA_PAGE
 			x = (H_BOT_ROW - S_BOT_ROW) / 2

@@ -9,7 +9,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_1_CITY_TILE_FOUNDING_HELP</Tag>
-		<English>All city founding starts with the main city tile only. Culture Level Poor values must be achieved to expand city culture and expand to surrounding tiles. Scaled for Game Speeds.[NEWLINE]This option disables "Minimum city border" option.</English>
+		<English>All city founding starts with the main city tile only. Culture Level "Poor" values must be achieved to expand city culture and expand to surrounding tiles. Scaled for Game Speeds.[NEWLINE]When enabled along with "Realistic Culture Spread", the first expansion will only acquire the 4 tiles sharing an edge with the city instead of all 8 adjacent tiles. This is challenging!</English>
 		<German>Der Einflussbereich jeder neu gegründeten Stadt wird mit dieser Einstellung zunächst immer auf das Stadtfeld begrenzt. Um den Stadtradius auf die umgebenden Felder auszudehnen, muss zunächst die Kulturstufe "schwach" erreicht werden.</German>
 		<French>Toutes les fondations de villes commencent par la tuile ville principale uniquement. Niveau de culture De mauvaises valeurs doivent être atteintes pour étendre la culture de la ville et s'étendre aux carreaux environnants. Adapté aux vitesses de jeu.[NEWLINE]Cette option désactive l'option "Limite minimale de la ville".</French>
 		<Russian>Âñå ãîðîäà ïðè îñíîâàíèè íà÷èíàþò ñ îäíîé ñòàðòîâîé êëåòêè. Äîëæåí áûòü äîñòèãíóò áåäíûé óðîâåíü êóëüòóðû äëÿ ðàñøèðåíèÿ ãîðîäà è îñâîåíèÿ ñîñåäíèõ êëåòîê. Ìàñøòàáèðóåòñÿ â çàâèñèìîñòè îò ñêîðîñòè èãðû.</Russian>
@@ -88,6 +88,18 @@
 		<Spanish>Activa nuevas variantes más avanzadas de armas nucleares para tu arsenal.</Spanish>
 		<Polish>Udostępnia więcej typów broni nuklearnej do Twojego Arsenału.</Polish>
 		<Russian>Ïîçâîëÿåò èñïîëüçîâàòü áîëåå ïåðåäîâûå èçìåíåíèÿ ÿäåðíîãî îðóæèÿ äëÿ âàøåãî àðñåíàëà.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_ROUTES</Tag>
+		<English>Advanced Routes</English>
+		<Italian>Percorsi avanzati</Italian>
+		<Russian>Улучшенные маршруты</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_ROUTES_HELP</Tag>
+		<English>Requires more technology than the minimum normal route qualifying techs to construct routes on more difficult terrain/feature plots. Intended to give a more realistic feel to tougher terrains throughout the game.</English>
+		<Italian>Richiede più tecnologia rispetto alle tecnologie minime per i percorsi normali per poter costruire su terreni più difficili. Progettato per dare una sensazione più realistica ai terreni più difficili durante il gioco.</Italian>
+		<Russian>Требуется больше технологий, для создания обычных дорог, а также дополнительные науки, позволяющие прокладывать дороги на сложной пересеченной местности. Основной замысел состоит в том, чтобы дать более реалистичное ощущение передвижения на более сложном рельефе местности на протяжении всей игры.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_START</Tag>
@@ -690,12 +702,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_MIN_CITY_BORDER_HELP</Tag>
-		<English>8 tiles around any city can never be conquered via cultural influence.[NEWLINE]This option is disabled by "City starts with 1 tile" option.</English>
+		<English>8 tiles around any city can never be conquered via cultural influence.</English>
 		<French>Les 8 cases les plus proches d'une Ville ne peuvent jamais être conquises par l'influence culturelle</French>
 		<German>Die 8 Felder rings um eine Stadt können niemals durch kulturellen Einfluss übernommen werden.</German>
 		<Spanish>No se podrán conquistar las 8 casillas alrededor de una ciudad mediante la influencia cultural.</Spanish>
 		<Polish>8 pól wokół miasta jest nienaruszalne przez granice kulturalne wroga.</Polish>
-		<Russian>8 êëåòîê âîêðóã ëþáîãî ãîðîäà íèêîãäà íå ìîãóò áûòü çàõâà÷åíû ÷åðåç êóëüòóðíîå âëèÿíèå.[NEWLINE]Данная настройка не работает с опцией «Города стартуют с 1 клетки».</Russian>
+		<Russian>8 êëåòîê âîêðóã ëþáîãî ãîðîäà íèêîãäà íå ìîãóò áûòü çàõâà÷åíû ÷åðåç êóëüòóðíîå âëèÿíèå.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_MORE_RESOURCES</Tag>
@@ -1193,7 +1205,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_REALISTIC_CORPORATIONS_HELP</Tag>
-		<English>Corporations will expand and grow dynamically, without player involvement, behaving more like real world Corporations, and not tied to central governments. Corporations can be taxed for a profit, or be subsidized by your nation to help it expand faster. It reduces the tedious micromanagement of corporations, and gives corporate policies real value and meaning.</English>
+		<English>Corporations will expand and grow dynamically, without player involvement, behaving more like real world Corporations, and not tied to central governments. Corporations can be taxed for a profit, or be subsidized by your nation to help it expand faster. It reduces the tedious micromanagement of corporations, and gives corporate policies real value and meaning.[NEWLINE]This game option needs multiple players to meet requirements for corporations to spawn. Both you and AIs must be in Industrial era, as corporation requirements are unlocked in this era. If you are ahead of AI, then you should sell techs to AI, so corporations would spawn.</English>
 		<French>Les Corporations s'étendent et se développement sans l'intervention du joueur, se comportement de manière plus réaliste par rapport au mont réel, sans influence des gouvernements. Les Corporations peuvent être taxées, ou subventionnées par notre nation pour accroître son expansion.</French>
 		<German>Kapitalgesellschaften wachsen und expandieren dynamisch ohne Einwirken der Spieler. Sie sind nicht mehr an Regierungen gebunden und verhalten sich damit mehr wie reale Kapitalgesellschaften. Vom Staat kann maximal eine Unternehmenssteuer erhoben werden, um Profit zu machen, oder es können Subventionen vergeben werden, die dafür sorgen, dass sich Kapitalgesellschaften schneller im eigenen Gebiet ausbreiten. Dadurch wird das ermüdende Mikromanagement abgeschafft und Unternehmenspolitik erhält echte Bedeutung.</German>
 		<Italian>Le corporazioni si espanderanno dinamicamente, senza intervento del giocatore, comportandosi più come Corporazioni reali, slegate dai governi centrali. Le corporazioni possono essere tassate (per un profitto) o ricevere sussidi (per un'espansione più veloce). Riduce la tediosa microgestione delle corporazioni e da un vero valore alle forme di governo legate alle Corporazioni.</Italian>
@@ -1213,7 +1225,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_REALISTIC_CULTURE_SPREAD_HELP</Tag>
-		<English>Culture spreads from Cities in a more realistic fashion, over low lying areas more quickly than peaks, hills, or jungles.</English>
+		<English>Culture spreads from cities in a more realistic fashion, over low lying areas more quickly than peaks, hills, or jungles.[NEWLINE]When enabled along with "City starts with 1 tile", the first expansion will only acquire the 4 tiles sharing an edge with the city instead of all 8 adjacent tiles. This is challenging!</English>
 		<French>L'expansion de Culture des Villes s'opère de manière plus réaliste, de manière régulière, et sur les zones accessibles plus rapidement que sur les collines ou les Jungles.</French>
 		<German>Die eigene Kultur breitet sich von Städten nun realistischer aus, schneller im Flachland, langsamer in Bergen, Hügeln oder im Dschungel.</German>
 		<Italian>La cultura si espande dalle città in modo più realistico, più velocemente sulle aree aperte rispetto a colline, picchi e giungle.</Italian>
@@ -1248,26 +1260,6 @@ Only affects SmartMap if terrain options is:
 		<German>Schaltet die verbesserte Tierintelligenz aus und lässt Tiere wieder wesentlich öfter angreifen.</German>
 		<French>Rend les animaux beaucoup plus susceptibles d'attaquer sans égard aux cotes ou à la personnalité animale.</French>
 		<Russian>Óâåëè÷èâàåò âåðîÿòíîñòü àòàêè æèâîòíîãî áåçîòíîñèòåëüíî øàíñîâ íà ïîáåäó èëè åãî âèäà.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_RELIGION_DECAY</Tag>
-		<English>Religion Decay</English>
-		<French>Décadence des Religions</French>
-		<German>Religionsverfall</German>
-		<Italian>Decadenza delle religioni</Italian>
-		<Spanish>Decadencia de religiones</Spanish>
-		<Polish>Zanikanie Religii</Polish>
-		<Russian>Ðàñïàä ðåëèãèé</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_RELIGION_DECAY_HELP</Tag>
-		<English>Cities with many religions may have less popular ones slowly decay.</English>
-		<French>Les Villes avec plusieurs religions peuvent voir leur influence décroître. Les religions les moins populaires sont amenées à disparaitre lentement.</French>
-		<German>In Städten mit vielen Religionen können die unpopuläreren nach und nach in Vergessenheit geraten.</German>
-		<Italian>Nelle città con più religioni, quelle meno popolari svaniranno.</Italian>
-		<Spanish>En ciudades con muchas religiones, las menos populares podrían ir decayendo lentamente y desaparecer.</Spanish>
-		<Polish>Miasta z dużą ilością religii w którym jest przewaga jednej religii najmniejsze z nich mogą zniknąć.</Polish>
-		<Russian>Ó ãîðîäîâ ñî ìíîãèìè ðåëèãèÿìè, ìåíåå ïîïóëÿðíûå ìåäëåííî ðàñïàäàþòñÿ.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_RELIGIOUS_DISABLING</Tag>
@@ -1632,15 +1624,19 @@ Only affects SmartMap if terrain options is:
 		<Russian>Зона контроля (ЗК) мешает вражеским отрядам ходить по фортам с гарнизоном или городам со рвами. Данный эффект действует в радиусе одной клетки. Отряд, оказавшийся внутри вражеской ЗК, не может перейти на другую клетку в пределах ЗК, но должен выйти из ЗК, прежде чем сможет достичь других участков ЗК. Не рекомендуется на данный момент, так как есть известная ошибка, которую он создает для путей, и некоторые игроки могут скверно застраивать текущие форты. Автор этого варианта также считает, что данный сабмод оставляет мало места для честного боя во многих случаях, когда вы предпочитаете принимать удар на угрожаемом участке и хотели бы в конечном итоге создать полосу ЗК, генерирующую вместо этого дармовую дальнюю атаку против агрессора, вместо того, чтобы удерживать его от движения вообще (так как в любом случае это концепция, лежащая в основе эффекта).</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_ROUTES</Tag>
-		<English>Advanced Routes</English>
-		<Italian>Percorsi avanzati</Italian>
-		<Russian>Улучшенные маршруты</Russian>
+		<Tag>TXT_KEY_GAMEOPTION_ALWAYS_RAZE_CITIES</Tag>
+		<English>Always Raze Cities</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_ROUTES_HELP</Tag>
-		<English>Requires more technology than the minimum normal route qualifying techs to construct routes on more difficult terrain/feature plots. Intended to give a more realistic feel to tougher terrains throughout the game.</English>
-		<Italian>Richiede più tecnologia rispetto alle tecnologie minime per i percorsi normali per poter costruire su terreni più difficili. Progettato per dare una sensazione più realistica ai terreni più difficili durante il gioco.</Italian>
-		<Russian>Требуется больше технологий, для создания обычных дорог, а также дополнительные науки, позволяющие прокладывать дороги на сложной пересеченной местности. Основной замысел состоит в том, чтобы дать более реалистичное ощущение передвижения на более сложном рельефе местности на протяжении всей игры.</Russian>
+		<Tag>TXT_KEY_GAMEOPTION_ALWAYS_RAZE_CITIES_HELP</Tag>
+		<English>Cities will be auto-razed when they would normally change owner.[NEWLINE]Exceptions are made for the Barbarian civ option and revolution option, city ownership change can occur from these options. Cities won't be auto-razed when barbs conquer a city because of this option since there's an option called "Barbarian Always Raze".</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_EQUILIBRIUM_CULTURE</Tag>
+		<English>Equilibrium Culture</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_EQUILIBRIUM_CULTURE_HELP</Tag>
+		<English>Culture decays on all tiles, not just unowned. This means culture wars are dependent on the last ~100 turns of culture output (adjusted for gamespeed) rather than all culture ever produced by a city.</English>
 	</TEXT>
 </Civ4GameText>

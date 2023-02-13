@@ -1433,25 +1433,6 @@ def AngleDifference(a1,a2):
     while(diff > 180.0):
         diff -= 360.0
     return diff
-def AppendUnique(theList,newItem):
-    if IsInList(theList,newItem) == False:
-        theList.append(newItem)
-    return
-
-def IsInList(theList,newItem):
-    itemFound = False
-    for item in theList:
-        if item == newItem:
-            itemFound = True
-            break
-    return itemFound
-
-def DeleteFromList(theList,oldItem):
-    for n in range(len(theList)):
-        if theList[n] == oldItem:
-            del theList[n]
-            break
-    return
 
 def ShuffleList(theList):
         preshuffle = list()
@@ -1472,26 +1453,6 @@ def GetInfoType(string):
 def GetDistance(x,y,dx,dy):
     distance = math.sqrt(abs((float(x - dx) * float(x - dx)) + (float(y - dy) * float(y - dy))))
     return distance
-
-def GetOppositeDirection(direction):
-    opposite = mc.L
-    if direction == mc.N:
-        opposite = mc.S
-    elif direction == mc.S:
-        opposite = mc.N
-    elif direction == mc.E:
-        opposite = mc.W
-    elif direction == mc.W:
-        opposite = mc.E
-    elif direction == mc.NW:
-        opposite = mc.SE
-    elif direction == mc.SE:
-        opposite = mc.NW
-    elif direction == mc.SW:
-        opposite = mc.NE
-    elif direction == mc.NE:
-        opposite = mc.SW
-    return opposite
 
 def GetXYFromDirection(x,y,direction):
     xx = x
@@ -4090,10 +4051,10 @@ class RiverMap :
                     #never go straight when you have other choices
                     count = len(drainList)
                     if count == 3:
-                        oppDir = GetOppositeDirection(nonDrainList[0])
-                        for n in range(count):
-                            if drainList[n] == oppDir:
-                                del drainList[n]
+                        oppDir = getOppositeDirection(nonDrainList[0])
+                        for dirX in drainList:
+                            if dirX == oppDir:
+                                del dirX
                                 break
                         count = len(drainList)
 
@@ -4505,8 +4466,8 @@ class BonusPlacer :
 
     def AssignBonusAreas(self):
         gc = CyGlobalContext()
-        self.areas = CvMapGeneratorUtil.getAreas()
         gameMap = CyMap()
+        self.areas = gameMap.areas()
         self.bonusList = list()
         #Create and shuffle the bonus list and keep tally on
         #one-area bonuses and find the smallest min area requirement
@@ -4802,7 +4763,7 @@ class StartingPlotFinder :
             gameMap = CyMap()
             iPlayers = gc.getGame().countCivPlayersEverAlive()
             gameMap.recalculateAreas()
-            areas = CvMapGeneratorUtil.getAreas()
+            areas = gameMap.areas()
 
             #get old/new world status
             areaOldWorld = self.setupOldWorldAreaList()
@@ -4949,7 +4910,7 @@ class StartingPlotFinder :
         gameMap = CyMap()
         #get official areas and make corresponding lists that determines old
         #world vs. new and also the pre-settled value.
-        areas = CvMapGeneratorUtil.getAreas()
+        areas = gameMap.areas()
         areaOldWorld = list()
 
         print "number of map areas = %d" % len(areas)
@@ -5650,12 +5611,12 @@ class StartPlot :
         self.vacant = True
         self.owner = None
         self.avgDistance = 0
-        return
+
     def isCoast(self):
         gameMap = CyMap()
         plot = gameMap.plot(self.x,self.y)
         waterArea = plot.waterArea()
-        if waterArea.isNone() == True or waterArea.isLake() == True:
+        if waterArea is None or waterArea.isLake():
             return False
         return True
 
@@ -5703,6 +5664,9 @@ def getWrapX():
 def getWrapY():
     print "mc.WrapY == %d at getWrapY" % mc.WrapY
     return mc.WrapY
+
+def getNumHiddenCustomMapOptions():
+	return 0
 
 def getNumCustomMapOptions():
     """

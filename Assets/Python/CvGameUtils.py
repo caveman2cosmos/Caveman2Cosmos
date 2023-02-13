@@ -44,10 +44,10 @@ class CvGameUtils:
 		return -1 # Returning 0 means "No", 1 or greater means "Yes", and negative numbers means "continue this evaluation on the dll side".
 
 	def cannotMaintain(self, argsList):
-		CyCity, iProcess, bContinue, = argsList
+		CyCity, iProcess, = argsList
 		if not CyCity:
 			print "CyCity == None"
-			print "CyCity, iProcess, bContinue", argsList
+			print "CyCity, iProcess", argsList
 			return False
 
 		aMap = {
@@ -197,18 +197,15 @@ class CvGameUtils:
 		if CyCity.getNumActiveBuilding(self.iNationalMint):
 			gold *= 10
 
-		if (iOwnerNew == GAME.getActivePlayer()):
-			CvUtil.sendMessage(CyTranslator().getText("TXT_KEY_MISC_PILLAGED_CITY_CAPTURED", (int(gold), CyCity.getName())), iOwnerNew, 10, '', ColorTypes(10))
-
 		return int(gold)
 
 	def getWidgetHelp(self, argsList):
 		eWidgetType, iData1, iData2, bOption = argsList
-## Religion Screen ##
+
 		if eWidgetType == WidgetTypes.WIDGET_HELP_RELIGION:
 			if iData1 == -1:
 				return CyTranslator().getText("TXT_KEY_CULTURELEVEL_NONE", ())
-## Platy WorldBuilder ##
+
 		elif eWidgetType == WidgetTypes.WIDGET_PYTHON:
 			if iData1 == 1027:
 				return CyTranslator().getText("TXT_KEY_WB_PLOT_DATA",())
@@ -257,7 +254,7 @@ class CvGameUtils:
 				elif iData2 == 7:
 					return CyTranslator().getText("TXT_KEY_WB_CITY_DATA2",())
 				elif iData2 == 8:
-					return CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_BUILDING",())
+					return CyTranslator().getText("TXT_KEY_WB_BUILDINGS",())
 				elif iData2 == 9:
 					return "Platy Builder\nVersion: 4.17b"
 				elif iData2 == 10:
@@ -304,10 +301,6 @@ class CvGameUtils:
 					return CyTranslator().getText("TXT_KEY_INFO_SCREEN", ())
 				elif iData2 == 34:
 					return CyTranslator().getText("TXT_KEY_CONCEPT_TRADE", ())
-			elif iData1 > 1029 and iData1 < 1040:
-				if iData1 %2:
-					return "-"
-				return "+"
 			elif iData1 == 1041:
 				return CyTranslator().getText("TXT_KEY_WB_KILL",())
 			elif iData1 == 1042:
@@ -320,7 +313,7 @@ class CvGameUtils:
 				elif iData2 == 2:
 					return CyTranslator().getText("TXT_KEY_WB_WAIT",())
 			elif iData1 == 6785:
-				return CyGameTextMgr().getProjectHelp(iData2, False, CyCity())
+				return CyGameTextMgr().getProjectHelp(iData2, False, None)
 			elif iData1 == 6787:
 				return GC.getProcessInfo(iData2).getDescription()
 			elif iData1 == 6788:
@@ -383,7 +376,10 @@ class CvGameUtils:
 					if iGPRate > 0 or iProgress > 0:
 						sText += u"\n%s: %d/%d %+d" %(CyTranslator().getText("[ICON_GREATPEOPLE]", ()), iProgress, pPlayer.greatPeopleThresholdNonMilitary(), iGPRate)
 
-					sText += u"\n%s: %d/%d (%s)" %(CyTranslator().getText("[ICON_CULTURE]", ()), pCity.getCulture(iPlayer), pCity.getCultureThreshold(), GC.getCultureLevelInfo(pCity.getCultureLevel()).getDescription())
+					if pCity.getCultureThreshold() > 0:
+						sText += u"\n%s: %d/%d (%s)" %(CyTranslator().getText("[ICON_CULTURE]", ()), pCity.getCulture(iPlayer), pCity.getCultureThreshold(), GC.getCultureLevelInfo(pCity.getCultureLevel()).getDescription())
+					else: sText += u"\n%s: %d (%s)" %(CyTranslator().getText("[ICON_CULTURE]", ()), pCity.getCulture(iPlayer), GC.getCultureLevelInfo(pCity.getCultureLevel()).getDescription())
+
 
 					lTemp = []
 					for i in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
@@ -413,7 +409,7 @@ class CvGameUtils:
 								lBuildings.append(GC.getBuildingInfo(i).getDescription())
 					if lBuildings:
 						lBuildings.sort()
-						sText += "\n" + CyTranslator().getText("[COLOR_BUILDING_TEXT]", ()) + CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_BUILDING", ()) + ": </color>"
+						sText += "\n" + CyTranslator().getText("[COLOR_BUILDING_TEXT]", ()) + CyTranslator().getText("TXT_KEY_WB_BUILDINGS", ()) + ": </color>"
 						iRange = len(lBuildings)
 						for i in xrange(iRange):
 							sText += lBuildings[i]

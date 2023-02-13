@@ -119,7 +119,7 @@ def getAttitudeText(nPlayer, nTarget, bNumber, bSmily, bWorstEnemy, bWarPeace):
 		pTeam = GC.getTeam(nTeam)
 		nTargetTeam = pTarget.getTeam()
 		pTargetTeam = GC.getTeam(nTargetTeam)
-		if pTeam.isAtWar(nTargetTeam):
+		if pTeam.isAtWarWith(nTargetTeam):
 			szIcons += unichr(8525)
 		elif GAME.getActiveTeam() in (nTeam, nTargetTeam):
 			bPeace = False
@@ -284,7 +284,7 @@ class Attitude:
 				pThisTeam = GC.getTeam(iThisTeam)
 				iTargetTeam = pTargetPlayer.getTeam()
 				pTargetTeam = GC.getTeam(iTargetTeam)
-				if pThisTeam.isAtWar(iTargetTeam):
+				if pThisTeam.isAtWarWith(iTargetTeam):
 					szText += u"%c" %(GC.getCommerceInfo(CommerceTypes.COMMERCE_GOLD).getChar() + 25)
 				elif GAME.getActiveTeam() in (iThisTeam, iTargetTeam):
 					bPeace = False

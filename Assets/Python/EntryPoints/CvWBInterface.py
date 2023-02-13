@@ -28,7 +28,6 @@ def readAndApplyDesc(argsList):
 	'''
 	print "--- CvWBInterface.readAndApplyDesc(argsList) ---"
 	fileName = argsList[0]
-	if not adjustMap(fileName): return -1
 
 	if WBDesc.read(fileName) < 0:
 		return -1
@@ -58,7 +57,7 @@ def getGameData():
 	After reading a scenario file,
 	return game/player data as a tuple
 	'''
-	print "IF getGameData"
+	print "CvWBInterface.getGameData"
 	gameWB = WBDesc.gameDesc
 	t = ()
 	t += (
@@ -133,7 +132,7 @@ def applyMapDesc():
 	''' Called from exe
 	Applies game and map data
 	'''
-	print "IF applyMapDesc"
+	print "CvWBInterface.applyMapDesc"
 	return WBDesc.applyMap()
 
 def getAssignedStartingPlots():

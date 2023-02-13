@@ -10,8 +10,9 @@
 #ifndef CV_OUTCOME_MISSION_H
 #define CV_OUTCOME_MISSION_H
 
-class CvOutcomeList;
-class CvProperties;
+#include "CvOutcomeList.h"
+#include "CvProperties.h"
+
 class CvUnit;
 class CvXMLLoadUtility;
 class BoolExpr;
@@ -30,13 +31,13 @@ public:
 	GameObjectTypes getPayerType() const;
 
 	bool isPossible(const CvUnit* pUnit, bool bTestVisible = false) const;
-	void buildDisplayString(CvWStringBuffer& szBuffer, CvUnit* pUnit);
-	void execute(CvUnit* pUnit);
+	void buildDisplayString(CvWStringBuffer& szBuffer, const CvUnit* pUnit) const;
+	void execute(CvUnit* pUnit) const;
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvOutcomeMission* pOutcomeMission);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 protected:
 	MissionTypes m_eMission;

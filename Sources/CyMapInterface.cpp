@@ -25,6 +25,7 @@ void CyMapPythonInterface()
 		.def("getViewportXFromMapX", &CyMap::getViewportXFromMapX, "int (int iX)")
 		.def("getViewportYFromMapY", &CyMap::getViewportYFromMapY, "int (int iY)")
 		.def("isInViewport", &CyMap::isInViewport, "bool (int iX, int iY)")
+		.def("isMidSwitch", &CyMap::isMidSwitch)
 
 		.def("closeAdvisor", &CyMap::closeAdvisor, "void (int advisorWidth, int iMinimapLeft, int iMinimapRight, int iMinimapTop, int iMinimapBottom)")
 		.def("bringIntoView", &CyMap::bringIntoView, "void (int iX, int iY, bool bDisplayCityScreen)")
@@ -98,7 +99,6 @@ void CyMapPythonInterface()
 		.def("getLastPathStepNum", &CyMap::getLastPathStepNum, "int ()")
 		.def("getLastPathPlotByIndex", &CyMap::getLastPathPlotByIndex, python::return_value_policy<python::manage_new_object>(), "CyPlot (index) - get a plot on the path by its Index")
 
-		// Super Forts *canal* *choke*
-		.def("calculateCanalAndChokePoints", &CyMap::calculateCanalAndChokePoints, "void ()")
+		.def("moveUnitToMap", &CyMap::moveUnitToMap)
 	;
 }

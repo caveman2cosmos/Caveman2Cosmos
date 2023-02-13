@@ -11,9 +11,6 @@
 #ifndef CV_GAME_OBJECT_H
 #define CV_GAME_OBJECT_H
 
-#include "CvProperties.h"
-#include "CvPropertyManipulators.h"
-#include "BoolExpr.h"
 #include "CvPython.h"
 
 class CvGameObjectGame;
@@ -28,6 +25,9 @@ class CvPlayer;
 class CvCity;
 class CvUnit;
 class CvPlot;
+class CvProperties;
+class CvPropertyManipulators;
+class BoolExpr;
 
 class CvGameObject
 {
@@ -176,8 +176,6 @@ public:
 	virtual void foreachRelated(GameObjectTypes eType, RelationTypes eRelation, bst::function<void (const CvGameObject*)> func, int iData = 0) const;
 
 	virtual void foreachManipulator(ManipCallbackFn func) const;
-
-	virtual void eventPropertyChanged(PropertyTypes eProperty, int iNewValue);
 
 	virtual int getAttribute(AttributeTypes eAttribute) const;
 	virtual bool isTag(TagTypes eTag) const;

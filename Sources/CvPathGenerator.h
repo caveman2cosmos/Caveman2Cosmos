@@ -233,8 +233,7 @@ public:
 
 	const CvPath& getLastPath() const;
 	void SelfTest();
-	static void EnableMaxPerformance(bool bEnable) { m_bFastMode = bEnable; }
-	static bool IsMaxPerformance() { return m_bFastMode; }
+
 private:
 	class CvPathNodeComparer
 	{
@@ -246,7 +245,7 @@ private:
 	};
 
 	CvPathNode*	allocatePathNode();
-	bool groupMatches(const CvSelectionGroup* pGroup, int iFlags, unsigned int& iGroupMembershipChecksum);
+	bool groupMatches(const CvSelectionGroup* pGroup, int iFlags, uint32_t& iGroupMembershipChecksum);
 	void AdjustChildTreeCosts(CvPathNode* node, int iAmount, bool bHasQueued);
 	void OrphanChildTree(CvPathNode* node);
 	void DeleteChildTree(CvPathNode* node, bool bIsDeletionRoot);
@@ -276,7 +275,7 @@ private:
 	CvPathNode*							m_pReplacedNonTerminalNode;
 	const CvPlot*						m_pTerminalPlot;
 	CvPath								m_generatedPath;
-	unsigned int						m_currentGroupMembershipChecksum;
+	uint32_t							m_currentGroupMembershipChecksum;
 	const CvPlot*						m_pFrom;
 	int									m_iFlags;
 	int									m_iTurn;
@@ -287,8 +286,6 @@ private:
 	EdgeValidity						m_ValidFunc;
 	TerminusValidity					m_TerminusValidFunc;
 	TurnEndValidityCheckRequired		m_TurnEndValidCheckNeeded;
-
-	static bool							m_bFastMode;
 
 public:
 	int									m_nodesProcessed;

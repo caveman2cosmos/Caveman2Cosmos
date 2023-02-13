@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
@@ -15,7 +15,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MILITARY_SCIENCE</PrereqTech>
-			<!--iCost>4080</iCost-->
+			<iCost>4080</iCost>
 			<iConquestProb>66</iConquestProb>
 			<iHappiness>-1</iHappiness>
 			<iAsset>6</iAsset>

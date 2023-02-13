@@ -9,14 +9,13 @@
 #include "CvGameCoreDLL.h"
 #include "CvGameObject.h"
 #include "CvGlobals.h"
-#include "CvOutcomeList.h"
 #include "CvOutcomeMission.h"
-#include "CvProperties.h"
 #include "CvPlayerAI.h"
 #include "CvUnit.h"
 #include "CvXMLLoadUtility.h"
 #include "CheckSum.h"
 #include "IntExpr.h"
+#include "BoolExpr.h"
 
 CvOutcomeMission::CvOutcomeMission() :
 m_eMission(NO_MISSION),
@@ -126,7 +125,7 @@ bool CvOutcomeMission::isPossible(const CvUnit* pUnit, bool bTestVisible) const
 	return true;
 }
 
-void CvOutcomeMission::buildDisplayString(CvWStringBuffer &szBuffer, CvUnit *pUnit)
+void CvOutcomeMission::buildDisplayString(CvWStringBuffer& szBuffer, const CvUnit* pUnit) const
 {
 	if (!m_PropertyCost.isEmpty())
 	{
@@ -137,7 +136,7 @@ void CvOutcomeMission::buildDisplayString(CvWStringBuffer &szBuffer, CvUnit *pUn
 
 	if (m_iCost)
 	{
-		if (m_iCost->evaluate(pUnit->getGameObject())!=0)
+		if (m_iCost->evaluate(pUnit->getGameObject()) != 0)
 		{	/*GC.getGame().getGameObject()->adaptValueToGame(m_iID, m_pExpr->evaluate(GC.getGame().getGameObject())*/
 			CvWString szTempBuffer;
 
@@ -174,7 +173,7 @@ void CvOutcomeMission::buildDisplayString(CvWStringBuffer &szBuffer, CvUnit *pUn
 	m_OutcomeList.buildDisplayString(szBuffer, *pUnit);
 }
 
-void CvOutcomeMission::execute(CvUnit* pUnit)
+void CvOutcomeMission::execute(CvUnit* pUnit) const
 {
 	if (m_iCost)
 	{
@@ -275,7 +274,7 @@ void CvOutcomeMission::copyNonDefaults(CvOutcomeMission* pOutcomeMission)
 	}
 }
 
-void CvOutcomeMission::getCheckSum(unsigned int &iSum) const
+void CvOutcomeMission::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_eMission);
 	CheckSum(iSum, m_bKill);

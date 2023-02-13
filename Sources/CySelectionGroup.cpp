@@ -9,11 +9,6 @@
 // Python wrapper class for CvSelectionGroup
 //
 
-CySelectionGroup::CySelectionGroup() : m_pSelectionGroup(NULL)
-{
-	FErrorMsg("Error");
-}
-
 CySelectionGroup::CySelectionGroup(CvSelectionGroup* pSelectionGroup) : m_pSelectionGroup(pSelectionGroup)
 {
 	FAssert(m_pSelectionGroup != NULL);
@@ -52,16 +47,6 @@ bool CySelectionGroup::isFull() const
 bool CySelectionGroup::hasMoved() const
 {
 	return m_pSelectionGroup->hasMoved();
-}
-
-bool CySelectionGroup::canMoveInto(const CyPlot& kPlot, bool bAttack) const
-{
-	return m_pSelectionGroup->canMoveInto(kPlot.getPlot(), bAttack);
-}
-
-bool CySelectionGroup::canMoveOrAttackInto(const CyPlot& kPlot, bool bDeclareWar) const
-{
-	return m_pSelectionGroup->canMoveOrAttackInto(kPlot.getPlot(), bDeclareWar);
 }
 
 bool CySelectionGroup::canFight() const

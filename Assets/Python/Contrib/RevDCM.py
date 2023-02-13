@@ -17,7 +17,7 @@
 from CvPythonExtensions import *
 import BugOptions
 import BugCore
-# Globals
+
 GC = CyGlobalContext()
 RevDCMOpt = BugCore.game.RevDCM
 
@@ -54,8 +54,6 @@ def changedReset (option, value):
 #DCM
 def changedDCM_RANGE_BOMBARD (option, value):
 	GC.setDefineINT("DCM_RANGE_BOMBARD", RevDCMOpt.isDCM_RANGE_BOMBARD())
-def changedDCM_ATTACK_SUPPORT (option, value):
-	GC.setDefineINT("DCM_ATTACK_SUPPORT", RevDCMOpt.isDCM_ATTACK_SUPPORT())
 def changedDCM_OPP_FIRE (option, value):
 	GC.setDefineINT("DCM_OPP_FIRE", RevDCMOpt.isDCM_OPP_FIRE())
 def changedDCM_AIR_BOMBING (option, value):
@@ -95,12 +93,17 @@ def changedLIMITED_RELIGIONS_EXCEPTIONS (option, value):
 def changedHiddenAttitude(option, value):
 	GC.setDefineINT("SHOW_HIDDEN_ATTITUDE", RevDCMOpt.isHiddenAttitude())
 
+def changedDYNAMIC_CIV_NAMES(option, value):
+	import DynamicCivNames
+	if value:
+		DynamicCivNames.init()
+	else:
+		DynamicCivNames.uninit()
 
 def setXMLOptionsfromIniFile():
 	print "Reinitialising RevDCM SDK variables"
 	#DCM
 	GC.setDefineINT("DCM_RANGE_BOMBARD", RevDCMOpt.isDCM_RANGE_BOMBARD())
-	GC.setDefineINT("DCM_ATTACK_SUPPORT", RevDCMOpt.isDCM_ATTACK_SUPPORT())
 	GC.setDefineINT("DCM_OPP_FIRE", RevDCMOpt.isDCM_OPP_FIRE())
 	GC.setDefineINT("DCM_AIR_BOMBING", RevDCMOpt.isDCM_AIR_BOMBING())
 	GC.setDefineINT("DCM_ACTIVE_DEFENSE", RevDCMOpt.isDCM_ACTIVE_DEFENSE())
@@ -120,6 +123,8 @@ def setXMLOptionsfromIniFile():
 	GC.setDefineINT("LIMITED_RELIGIONS_EXCEPTIONS", 0)
 	#Hidden Attitude
 	GC.setDefineINT("SHOW_HIDDEN_ATTITUDE", RevDCMOpt.isHiddenAttitude())
+
+	changedDYNAMIC_CIV_NAMES(None, RevDCMOpt.isDYNAMIC_CIV_NAMES())
 
 def resetOptions():
 	revDCMoptions = BugOptions.getOptions("RevDCM").options

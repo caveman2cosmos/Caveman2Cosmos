@@ -8,7 +8,6 @@
 
 from CvPythonExtensions import *
 import BugOptionsTab
-gc = CyGlobalContext()
 
 class ANDDiplomacyTab(BugOptionsTab.BugOptionsTab):
 
@@ -20,8 +19,8 @@ class ANDDiplomacyTab(BugOptionsTab.BugOptionsTab):
 		panel = self.createMainPanel(screen)
 		left, center, right = self.addThreeColumnLayout(screen, panel, panel, True)
 
-		control = None
-		bCanAdjustSettings = not gc.getGame().isGameMultiPlayer() or gc.getGame().getActivePlayer() == 0
+		GAME = CyGlobalContext().getGame()
+		bCanAdjustSettings = not GAME.isNetworkMultiPlayer() or GAME.getActivePlayer() == 0
 
 		#Standard Settings
 		control = self.addLabel(screen, left, "DiplomacySettings__DiplomacySettings")
@@ -41,7 +40,7 @@ class ANDDiplomacyTab(BugOptionsTab.BugOptionsTab):
 		control = self.addCheckbox(screen, left, "DiplomacySettings__CanTradeMaps")
 		screen.setEnabled(control, bCanAdjustSettings)
 		control = self.addCheckbox(screen, left, "DiplomacySettings__CanTradeVassals")
-		screen.setEnabled(control, not gc.getGame().isGameMultiPlayer())
+		screen.setEnabled(control, bCanAdjustSettings)
 		# control = self.addCheckbox(screen, left, "DiplomacySettings__CanCapitulate")
 		# screen.setEnabled(control, bCanAdjustSettings)
 
@@ -62,17 +61,14 @@ class ANDDiplomacyTab(BugOptionsTab.BugOptionsTab):
 		control = self.addCheckbox(screen, center, "DiplomacySettings__CanTradeDefensivePact")
 		screen.setEnabled(control, bCanAdjustSettings)
 		control = self.addCheckbox(screen, center, "DiplomacySettings__CanTradeAlliance")
-		screen.setEnabled(control, not gc.getGame().isGameMultiPlayer())
+		screen.setEnabled(control, bCanAdjustSettings)
 
 		#Advanced Diplomacy
 		self.addLabel(screen, right, "DiplomacySettings__AdvancedDiplomacy")
 
 		control = self.addCheckbox(screen, right, "DiplomacySettings__AdvancedDiplomacy")
-		screen.setEnabled(control, not gc.getGame().isGameMultiPlayer())
+		screen.setEnabled(control, bCanAdjustSettings)
 		self.addSpacer(screen, center, "General2")
-
-		if bCanAdjustSettings:
-			bCanAdjustSettings = gc.getGame().isOption(GameOptionTypes.GAMEOPTION_ADVANCED_DIPLOMACY)
 
 		control = self.addCheckbox(screen, right, "DiplomacySettings__CanTradeWorkers")
 		screen.setEnabled(control, bCanAdjustSettings)
