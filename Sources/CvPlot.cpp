@@ -292,6 +292,7 @@ void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 	m_cultureRatesThisTurn.clear();
 	m_cultureRatesLastTurn.clear();
 	m_influencedByCityByPlayer.clear();
+	m_influencedByCityByPlayerLastTurn.clear();
 
 	m_bPlotGroupsDirty = false;
 	m_aiVisibilityCount = new short[MAX_TEAMS];
@@ -13334,15 +13335,13 @@ void CvPlot::setInCultureRangeOfCityByPlayer(const PlayerTypes ePlayer)
 	{
 		m_influencedByCityByPlayer.push_back(ePlayer);
 	}
-	// Also put into 'last turn' cache if not already; messy, but this will
-	// make sure tiles are immediately available to build upon after aquisition
-    if (!isInCultureRangeOfCityByPlayer(ePlayer))
-    {
-        m_influencedByCityByPlayerLastTurn.push_back(ePlayer);
-    }
 }
 
 bool CvPlot::isInCultureRangeOfCityByPlayer(const PlayerTypes ePlayer) const
 {
-	return find(m_influencedByCityByPlayerLastTurn.begin(), m_influencedByCityByPlayerLastTurn.end(), ePlayer) != m_influencedByCityByPlayerLastTurn.end();
+	return (
+		find(m_influencedByCityByPlayerLastTurn.begin(), m_influencedByCityByPlayerLastTurn.end(), ePlayer) != m_influencedByCityByPlayerLastTurn.end()
+		||
+		find(m_influencedByCityByPlayer.begin(), m_influencedByCityByPlayer.end(), ePlayer) != m_influencedByCityByPlayer.end()
+	);
 }
