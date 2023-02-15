@@ -10911,6 +10911,10 @@
 		<Spanish>Las tartas de cangrejo preparadas en nuestras ciudades se han vuelto enormemente populares en toda la región.</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_EVENT_CRAB_CAKES_1</Tag>
+		<English>If everything evolves into crabs, what do crabs evolve into? Now we have our answer.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_CRISIS_IN_THE_SENATE_1</Tag>
 		<English>The eldest senator of the leading opposition party has been disgraced by scandal. The entire senate has been thrown into chaos.</English>
 		<French>Le plus vieux sénateur du principal parti d'opposition est en disgrâce à cause d'un scandale. Le sénat tout entier est plongé dans le chaos.</French>

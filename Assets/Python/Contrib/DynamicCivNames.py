@@ -63,7 +63,7 @@ def uninit():
 	EM = getEventManager()
 	EM.removeEventHandler("BeginPlayerTurn", onBeginPlayerTurn)
 	EM.removeEventHandler("setPlayerAlive", onSetPlayerAlive)
-	EM.removeEventHandler("cityAcquired", onCityAcquired)
+	EM.removeEventHandler("cityAcquiredAndKept", onCityAcquiredAndKept)
 	EM.removeEventHandler("cityBuilt", onCityBuilt)
 	EM.removeEventHandler("vassalState", onVassalState)
 	EM.removeEventHandler("addTeam", onAddTeam)
@@ -375,7 +375,8 @@ def newNameByCivics(iPlayer):
 
 	# Anarchy Naming
 	if pPlayer.isAnarchy and pPlayer.getAnarchyTurns() > 1:
-		if 75 > GAME.getSorenRandNum(100,'Rev: Naming'):
+		# Don't want the anarchy name to change during multiple turns of anarchy
+		if (iPlayer + pPlayer.getNumCities())%2 == 1:
 			newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_PROVISIONAL_GOV", ())%(curAdj)
 		else:
 			newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_PROVISIONAL_AUTH", ())%(curAdj)

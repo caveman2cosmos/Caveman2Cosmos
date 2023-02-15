@@ -6529,6 +6529,7 @@ void CvCity::recalculateCultureDistances(int iMaxDistance) const
 		if (numLoops > 100)
 		{
 			bHasChanged = false;
+			FAssertMsg(numLoops < 100, "Realistic Culture hit infinte loop trying to update distances! Bypassing...");
 		}
 	}
 }
@@ -6542,6 +6543,22 @@ int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) c
 	// if the plot distance is greater than the maximum desired plot distance
 	// or if the plot does not exist, then the plot distance is maximal
 	if (plotDistance(getX(), getY(), mainPlot->getX(), mainPlot->getY()) > iMaxDistance) return MAX_INT;
+
+	// Potentially don't need to calculate anything if plot has no already calculated neighbors
+	bool bHasCalculatedNeighbors = false;
+	foreach_(const CvPlot* adjacentPlot, mainPlot->cardinalDirectionAdjacent())
+	{
+		int neighborDist = m_aCultureDistances[adjacentPlot];
+		// neighborDist is 0 on first iteration after cleared cache. Don't calculate from such tiles,
+		// unless we are adjacent to capital (needed if 1tile founding is on); can use that as valid neighbor.
+		if (neighborDist != MAX_INT &&
+			(neighborDist != 0 || (adjacentPlot->getX() == getX() && adjacentPlot->getY() == getY())))
+		{
+			bHasCalculatedNeighbors = true;
+			break;
+		}
+	}
+	if (!bHasCalculatedNeighbors) return MAX_INT;
 
 	// Calculate terrain distance necessary before neighbors, because city presence can
 	// remove any combination of terrain and river crossing penalties; chosing which neighbor
@@ -6603,13 +6620,14 @@ int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) c
 		terrainDistance += GC.getFeatureInfo(mainPlot->getFeatureType()).getCultureDistance();
 	}
 
+	bool bIsBonus = mainPlot->getBonusType(getTeam()) != NO_BONUS;
 	// Using route value/tier as softer inhibitor by era
 	// Base distance (x): 0, 1, 2, 3, 4 ... translates to:
 	// Tier 0 (noroute):  0, 1, 3, 5, 7 ... // 2x-1: Always applies to tiles not yet influenced
 	// Tier 1 (trail):	  0, 1, 3, 4, 6 ... // 3x/2
 	// Tier 2 (path):	  0, 1, 2, 4, 5 ... // 4x/3
 	// Tier 3 (road):	  0, 1, 2, 3, 5 ... // 5x/4
-	if (!mainPlot->isWater())
+	if (!mainPlot->isWater() && !bIsBonus)
 	{
 		int routeTierMod = 0;
 
@@ -6632,7 +6650,7 @@ int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) c
 	}
 
 	// Halve terrain distance if bonus is present
-	if (mainPlot->getBonusType(getTeam()) != NO_BONUS) terrainDistance /= 2;
+	if (bIsBonus) terrainDistance /= 2;
 
 	/* Determine the final cultural distance of given plot:
 		1: All directions from given plot are checked (could come from weird direction)
@@ -12094,14 +12112,14 @@ int CvCity::getBuildingCommerce100(CommerceTypes eIndex) const
 }
 
 
-int CvCity::getBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding, const bool bFull) const
+int CvCity::getBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding, const bool bFull, const bool bTestVisible) const
 {
 	PROFILE_FUNC();
 
 	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex);
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding);
 
-	if (getNumActiveBuilding(eBuilding) < 1)
+	if (getNumActiveBuilding(eBuilding) < 1 && !bTestVisible)
 	{
 		return 0;
 	}

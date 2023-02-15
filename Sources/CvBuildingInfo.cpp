@@ -497,6 +497,8 @@ int* CvBuildingInfo::getCommercePerPopChangeArray() const
 int CvBuildingInfo::getCommerceChangeDoubleTime(int i) const
 {
 	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i);
+	if (i == COMMERCE_CULTURE && GC.getGame().isOption(GAMEOPTION_EQUILIBRIUM_CULTURE))
+		return m_piCommerceChangeDoubleTime ? m_piCommerceChangeDoubleTime[i] : 1000;
 	return m_piCommerceChangeDoubleTime ? m_piCommerceChangeDoubleTime[i] : 0;
 }
 

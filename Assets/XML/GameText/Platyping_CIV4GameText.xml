@@ -2,9 +2,9 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_WORLD_TECH</Tag>
-		<English>World Tech</English>
-		<French>Tech Mondiale limitée</French>
-		<Russian>Óíèêàëüíûå òåõíîëîãèè</Russian>
+		<English>1. World Tech</English>
+		<French>1. Tech Mondiale limitée</French>
+		<Russian>1. Óíèêàëüíûå òåõíîëîãèè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_WORLD_TECH_PEDIA</Tag>
