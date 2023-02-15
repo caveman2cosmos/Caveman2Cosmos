@@ -9,7 +9,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_1_CITY_TILE_FOUNDING_HELP</Tag>
-		<English>All city founding starts with the main city tile only. Culture Level "Poor" values must be achieved to expand city culture and expand to surrounding tiles. Scaled for Game Speeds.[NEWLINE]When enabled along with "Realistic Culture Spread", the first expansion will only acquire the 4 tiles sharing an edge with the city instead of all 8 adjacent tiles. This is challenging!</English>
+		<English>All city founding starts with the main city tile only. A small amount of generated culture is required to acquire the adjacent tiles, after which culture progresses normally. Scaled for Game Speeds.[NEWLINE]When enabled along with "Realistic Culture Spread", the first expansion *may* only acquire the 4 tiles sharing an edge with the city instead of all 8 adjacent tiles. This is challenging!</English>
 		<German>Der Einflussbereich jeder neu gegründeten Stadt wird mit dieser Einstellung zunächst immer auf das Stadtfeld begrenzt. Um den Stadtradius auf die umgebenden Felder auszudehnen, muss zunächst die Kulturstufe "schwach" erreicht werden.</German>
 		<French>Toutes les fondations de villes commencent par la tuile ville principale uniquement. Niveau de culture De mauvaises valeurs doivent être atteintes pour étendre la culture de la ville et s'étendre aux carreaux environnants. Adapté aux vitesses de jeu.[NEWLINE]Cette option désactive l'option "Limite minimale de la ville".</French>
 		<Russian>Âñå ãîðîäà ïðè îñíîâàíèè íà÷èíàþò ñ îäíîé ñòàðòîâîé êëåòêè. Äîëæåí áûòü äîñòèãíóò áåäíûé óðîâåíü êóëüòóðû äëÿ ðàñøèðåíèÿ ãîðîäà è îñâîåíèÿ ñîñåäíèõ êëåòîê. Ìàñøòàáèðóåòñÿ â çàâèñèìîñòè îò ñêîðîñòè èãðû.</Russian>
@@ -130,7 +130,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_AGGRESSIVE_AI_HELP</Tag>
-		<English>AI leaders favor war over diplomacy</English>
+		<English>AI leaders favor war over diplomacy.</English>
 		<French>Les héros gérés par l'IA préfèrent la guerre à la diplomatie.</French>
 		<German>KI-Staatsoberhäupter bevorzugen den Krieg gegenüber der Diplomatie.</German>
 		<Italian>L'IA dei leader preferisce la guerra alla diplomazia</Italian>
@@ -340,7 +340,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_COMPLEX_TRAITS_HELP</Tag>
-		<English>Adds new traits and deepens and strengthens existing traits</English>
+		<English>Adds new traits and deepens and strengthens existing traits.</English>
 		<French>Ajoute de nouveaux Traits, et rend les existants plus profonds et marqués</French>
 		<German>Die bereits existierenden Charakterzüge für Staatsoberhäupter werden vertieft und um vollkommen neue ergänzt.</German>
 		<Italian>Aggiunge nuove caratteristiche per i leader, approfondendo e rafforzando le caratteristiche esistenti</Italian>
@@ -375,7 +375,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_DANGEROUS_WILDLIFE_HELP</Tag>
-		<English>All animals can spawn not only within borders, but on improved tiles too.[NEWLINE]Your civilians are tasty - protect them within your borders too.[NEWLINE]This option is polar opposite of "Keep Animals Out" - Dangerous Wildlife disables it.</English>
+		<English>All animals can spawn not only within borders, but on improved tiles too.[NEWLINE]Your civilians are tasty - protect them even within your borders.[NEWLINE]This option is polar opposite of "Keep Animals Out" - Dangerous Wildlife disables it.</English>
 		<French>Tous les animaux peuvent apparaître non seulement à l'intérieur des frontières, mais aussi sur des cases aménagées.[NEWLINE]Vos civils sont savoureux - protégez-les également à l'intérieur de vos frontières.[NEWLINE]Cette option est à l'opposé de "Animaux restent dehors" - Faune dangereuse la désactive.</French>
 		<Russian>Все животные могут появляться не только в пределах границ, но и на улучшенных клетках.[NEWLINE] Ваши мирные жители - отныне желанное лакомство, защищайте их и в своих границах.[NEWLINE] Этот параметр полярно противоположен «Keep Animals Out» - Dangerous Wildlife отключает его.</Russian>
 	</TEXT>
@@ -391,7 +391,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_DIVINE_PROPHETS_HELP</Tag>
-		<English>Use Prophets to found religions</English>
+		<English>First to research a religious tech receives a great prophet, which they may use to place a valid religious holy city in a location of their choice.</English>
 		<French>Utilise des Prophète pour fonder les Religions</French>
 		<German>Religionen entstehen nicht mehr automatisch. Sie müssen stattdessen von Großen Propheten begründet werden.</German>
 		<Italian>Usa i grandi profeti per fondare le religioni.</Italian>
@@ -457,7 +457,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_FIXED_BORDERS_HELP</Tag>
-		<English>Fixed border mechanics</English>
+		<English>With this option on, some civics will enable Fixed Borders, which causes the civilization's owned tiles to be far more influenced by military might than culture.</English>
 		<French>Mécanisme de frontières fixes, provenant des doctrines ou d'autres origines</French>
 		<German>Es können festen Landesgrenzen festgelegt werden, durch Gesellschaftsformen oder auf anderem Weg.</German>
 		<Italian>Niente confini fissi - né dalle forme di governo, né da altra fonte</Italian>
@@ -476,7 +476,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_FLIPPING_AFTER_CONQUEST_HELP</Tag>
-		<English>Cities which have been captured via conquest can convert peacefully back to a previous owner</English>
+		<English>Cities which have been captured via conquest can convert peacefully back to a previous owner.</English>
 		<French>Les villes capturées par la conquête peuvent basculer à nouveau pacifiquement vers leur ancienne civilisation.</French>
 		<German>Städte, die während einer Eroberung eingenommen wurden, können entscheiden, welcher Kultur sie sich zukünftig anschließen wollen.</German>
 		<Italian>Le città acquisite tramite conquista possono convertirsi pacificamente al precedente possessore</Italian>
@@ -528,7 +528,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_HIDE_AND_SEEK_HELP</Tag>
-		<English>Adds new layers of invisibility. Units can have more than one type and intensity of invisibility (and can also have multiple visibility types and intensities) and it requires the opponent to have visibilities of all types and intensity on a plot to see the unit. (Forces Without Warning ON)</English>
+		<English>Adds new layers of invisibility. Units can have more than one type and intensity of invisibility (and can also have multiple vision types and intensities) and it requires the opponent to have vision of all types and intensity on a plot to see the unit. (Forces Without Warning ON)</English>
 		<French>Ajoute plusieurs types d'invisibilité. Les unités peuvent avoir plusieurs niveaux et types d'invisibilité, et il est nécessaire d'avoir un mode de détection compatible pour les repérer.</French>
 		<German>Statt simpler Standardunsichtbarkeit und entsprechenden Abwehrmechanismen gibt es nun feinere Unterteilungen. Mehrere Typen und Stärken von Unsichtbarkeit sorgen dafür, dass versteckte Einheiten nur entdeckt werden können, wenn der Gegner entsprechend geschulte Einheiten besitzt. (Die Mod Ohne Vorwarnung muss ebenfalls aktiviert sein.)</German>
 		<Russian>Äîáàâëÿåò íîâûå óðîâíè íåâèäèìîñòè. Отряды могут иметь несколько степеней невидимости (а также несколько типов и уровней видимости), и для этого требуется, чтобы противник имел видимость всех типов и очки хода на участке, для обнаружения отряда (Оповещение сил ВКЛ)</Russian>
@@ -544,7 +544,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_INFINITE_XP_HELP</Tag>
-		<English>No loss of experience when upgrading troops</English>
+		<English>No loss of experience when upgrading troops.</English>
 		<French>Pas de perte d'expérience lors de l'amélioration des unités</French>
 		<German>Bei der Modernisierung von Einheiten gehen keine Erfahrungspunkte mehr verloren.</German>
 		<Italian>Nessuna perdita di XP quando si aggiornano le unità</Italian>
@@ -579,7 +579,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_LARGER_CITIES_HELP</Tag>
-		<English>Cities will be able to expand from a size two radius to a size three radius after achieving the cultural distinction of "Influential" without needing a Metropolitan Administration</English>
+		<English>Cities will be able to expand from a size two radius to a size three radius after achieving the cultural distinction of "Influential" without needing the much-later available Metropolitan Administration.</English>
 		<French>Les Villes seront capables d'étendre leur champ d'action de deux à trois cases, après avoir atteint le niveau culturel "Influent" sans la Tech. 'Administration de Métropole'</French>
 		<German>Städte können ihr Einzugsgebiet auf einen dritten Ring von Feldern ausdehnen, wenn sie die Kulturstufe "einflussreich" erreichen, ohne dabei eine Stadtverwaltung (Gebäude) zu benötigen.</German>
 		<Italian>Le città si espanderanno da raggio 2 a 3 raggiungendo il livello culturale "Influente", senza richiedere Amministrazione Metropolitana</Italian>
@@ -789,7 +789,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NEW_RANDOM_SEED_HELP</Tag>
-		<English>A new random seed is generated every time the game is reloaded - which, for example, will lead to different combat results</English>
+		<English>A new random seed is generated every time the game is reloaded - which, for example, will lead to different combat results.</English>
 		<French>Un nouveau classement aléatoire est généré chaque fois que le jeu est rechargé, ce qui peut entraîner différents résultats de combat, par exemple.</French>
 		<German>Jedes Mal, wenn das Spiel neu geladen wird, wird ein neuer Startwert für den Zufallszahlengenerator erstellt, was zum Beispiel zu unterschiedlichen Kampfausgängen führen kann.</German>
 		<Italian>Ogni volta che ricaricherai il gioco verrà generata una nuova estrazione casuale, portando, per esempio, a diversi risultati di combattimento.</Italian>
@@ -805,7 +805,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_BARBARIANS_HELP</Tag>
-		<English>No Barbarians will appear</English>
+		<English>No Barbarians will appear.</English>
 		<French>Aucun barbare n'apparaîtra sur la carte.</French>
 		<German>Es erscheinen keine Barbaren und Neandertaler. Tiere werden trotzdem weiterhin auftauchen.</German>
 		<Italian>Non appariranno Barbari</Italian>
@@ -824,7 +824,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_CITY_FLIPPING_HELP</Tag>
-		<English>Cities cannot convert peacefully from culture</English>
+		<English>Cities cannot convert peacefully from culture.</English>
 		<French>Les villes ne peuvent pas être converties pacifiquement par la culture.</French>
 		<German>Städte können sich nicht friedlich anderen Kulturen anschließen, außerdem sind keine kulturellen Revolten mehr möglich.</German>
 		<Italian>Le città non possono essere convertite pacificamente dalla cultura</Italian>
@@ -842,7 +842,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_CITY_RAZING_HELP</Tag>
-		<English>Cities cannot be razed after capture</English>
+		<English>Cities cannot be razed after capture.</English>
 		<French>Les villes ne peuvent pas être rasées après leur capture.</French>
 		<German>Städte können nach der Einnahme nicht vernichtet werden.</German>
 		<Italian>Le città non possono essere distrutte dopo la conquista</Italian>
@@ -899,7 +899,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_GOODY_HUTS_HELP</Tag>
-		<English>Random map generator does not place any tribal villages ("goody huts") on the map</English>
+		<English>Random map generator does not place any tribal villages ("goody huts") on the map.</English>
 		<French>Le générateur de carte aléatoire ne place pas de villages tribaux ("huttes à cadeaux") sur la carte</French>
 		<German>Der Zufallskartengenerator platziert keine Stammesdörfer ("Bonusdörfer") auf der Karte.</German>
 		<Italian>Il generatore di mappe casuali non collocherà alcun villaggio tribale (le capanne "utili") sulla mappa.</Italian>
@@ -953,7 +953,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_TECH_BROKERING_HELP</Tag>
-		<English>Players cannot trade technologies that they have not researched themselves</English>
+		<English>Players cannot trade technologies that they have not researched themselves.</English>
 		<French>Les joueurs ne peuvent pas échanger des technologies qu'ils ne peuvent pas rechercher eux-mêmes.</French>
 		<German>Spieler können nicht mit Technologien handeln, die sie nicht selbst erforscht haben.</German>
 		<Italian>I giocatori non possono commerciare tecnologie che non hanno scoperto autonomamente.</Italian>
@@ -984,7 +984,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_TECH_TRADING_HELP</Tag>
-		<English>Technologies cannot be traded via diplomacy</English>
+		<English>Technologies cannot be traded via diplomacy.</English>
 		<French>Il est impossible d'échanger des technologies par voie diplomatique.</French>
 		<German>Der Technologiehandel auf diplomatischem Weg ist komplett deaktiviert.</German>
 		<Italian>Le tecnologie non possono essere scambiate attraverso la diplomazia</Italian>
@@ -1002,7 +1002,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_VASSAL_STATES_HELP</Tag>
-		<English>Disable Vassal State Treaties, which ensure a weaker civilization protection against a stronger rival</English>
+		<English>Disable Vassal State Treaties, which ensure a weaker civilization protection against a stronger rival.</English>
 		<French>Désactive les traités d'états vassaux. Une civilisation sera moins bien protégée face à une rivale plus forte</French>
 		<German>Deaktiviert vasallenstaatliche Abkommen, die den Schutz einer schwächeren Zivilisation gegenüber einem stärkeren Gegner vorsehen.</German>
 		<Italian>Disabilita i trattati di vassallaggio, che forniscono alle civiltà più deboli protezione contro le rivali più forti</Italian>
@@ -1020,7 +1020,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ONE_CITY_CHALLENGE_HELP</Tag>
-		<English>The human player can never control more than one city</English>
+		<English>The human player can never control more than one city.</English>
 		<French>Le joueur humain ne peut jamais contrôler plus d'une ville à la fois.</French>
 		<German>Jeder menschliche Spieler kann maximal eine Stadt kontrollieren.</German>
 		<Italian>Il giocatore non può mai controllare più di una città</Italian>
@@ -1037,7 +1037,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ONGOING_TRAINING_HELP</Tag>
-		<English>Training Buildings in Cities will gradually give XP to qualifying Units stationed there</English>
+		<English>Training Buildings in Cities will gradually give XP to qualifying Units stationed there.</English>
 		<French>Les Bâtiments procurant de l'expérience donnent de l'XP aux unités présentes dans la ville</French>
 		<German>Ausbildungsgebäude führen zu einem ständigen Zuwachs an Erfahrungspunkten bei den entsprechenden in der Stadt stationierten Einheiten.</German>
 		<Polish>Budynki trenerskie w miastach będą stale dodawały XP to jedn. stacjonujących w mieście.</Polish>
@@ -1094,7 +1094,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_PERMANENT_ALLIANCES_HELP</Tag>
-		<English>Two civilizations can form a Permanent Alliance which lasts the rest of the game</English>
+		<English>Two civilizations can form a Permanent Alliance which lasts the rest of the game.</English>
 		<French>Deux civilisations peuvent former une alliance permanente qui dure jusqu'à la fin du jeu.</French>
 		<German>Zwei Zivilisationen können eine Allianz schließen, die die restliche Spielzeit überdauert.</German>
 		<Italian>Due civiltà possono formare una alleanza permanente che duri fino alla fine della partita</Italian>
@@ -1186,7 +1186,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_RANDOM_PERSONALITIES_HELP</Tag>
-		<English>Each AI leader's personality is determined randomly at game start</English>
+		<English>Each AI leader's personality is determined randomly at game start.</English>
 		<French>La personnalité des héros gérés par l'IA est déterminée aléatoirement au début du jeu.</French>
 		<German>Die Persönlichkeitsmerkmale aller KI-Staatsoberhäupter werden beim Spielstart zufällig ausgewählt.</German>
 		<Italian>L'IA dei leader viene determinata casualmente all'inizio della partita</Italian>
@@ -1225,7 +1225,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_REALISTIC_CULTURE_SPREAD_HELP</Tag>
-		<English>Culture spreads from cities in a more realistic fashion, over low lying areas more quickly than peaks, hills, or jungles.[NEWLINE]When enabled along with "City starts with 1 tile", the first expansion will only acquire the 4 tiles sharing an edge with the city instead of all 8 adjacent tiles. This is challenging!</English>
+		<English>Culture spreads from cities in a more realistic fashion, over low lying areas more quickly than peaks, hills, or jungles.[NEWLINE]When enabled along with "City starts with 1 tile", the first expansion *may* only acquire the 4 tiles sharing an edge with the city instead of all 8 adjacent tiles. This is challenging!</English>
 		<French>L'expansion de Culture des Villes s'opère de manière plus réaliste, de manière régulière, et sur les zones accessibles plus rapidement que sur les collines ou les Jungles.</French>
 		<German>Die eigene Kultur breitet sich von Städten nun realistischer aus, schneller im Flachland, langsamer in Bergen, Hügeln oder im Dschungel.</German>
 		<Italian>La cultura si espande dalle città in modo più realistico, più velocemente sulle aree aperte rispetto a colline, picchi e giungle.</Italian>
@@ -1331,7 +1331,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_SAD_HELP</Tag>
-		<English>Surround and Destroy adds military bonuses for surrounding enemy troops and cities, simulating real world land ambushes</English>
+		<English>Surround and Destroy adds military bonuses for surrounding enemy troops and cities, simulating real world land ambushes.</English>
 		<French>Ajoute un bonus militaire pour l'encerclement des troupes ou villes ennemies, simulant les embuscades du monde réel.</French>
 		<German>Ihr erhaltet einen militärischen Bonus, wenn feindliche Truppen und Städte eingekesselt werden. Dies simuliert die großen Kesselschlachten der Weltgeschichte.</German>
 		<Italian>Circonda e distruggi aggiunge bonus militari per aver circondato città e truppe nemiche, simulando le imboscate come nel mondo reale.</Italian>
@@ -1425,7 +1425,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_TECH_DIFFUSION_HELP</Tag>
-		<English>Tech Diffusion: tech knowledge will slowly diffuse to civs that are behind.</English>
+		<English>Tech Diffusion: Tech knowledge will slowly diffuse to civs that are behind.</English>
 		<French>Diffusion des Techs: La Connaissance des Technologies sera lentement diffusée aux autres civilisations.</French>
 		<German>Langsame Verbreitung von technologischem Wissen an Zivilisationen, die noch nicht so weit entwickelt sind.</German>
 		<Italian>Diffusione delle tecnologie: la tecnologia non si diffonderà alle civiltà più arretrate.</Italian>
@@ -1478,7 +1478,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UNLIMITED_NATIONAL_UNITS_HELP</Tag>
-		<English>Removes the limits on the amount of National Units a player or team may train and maintain</English>
+		<English>Removes the limits on the amount of National Units a player or team may train and maintain.</English>
 		<French>Supprime les limitations du nombre d'Unités Nationales par joueur ou équipe</French>
 		<German>Entfernt die Begrenzung bei der Anzahl an Nationaleinheiten, die ein Spieler oder Team unterhalten können.</German>
 		<Italian>Rimuove i limiti sulle Unità nazionali che un giocatore o team può addestrare e mantenere</Italian>
@@ -1497,7 +1497,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UNLIMITED_WONDERS_HELP</Tag>
-		<English>Removes the restriction on the number of wonders that can be built in one city</English>
+		<English>Removes the restriction on the number of wonders that can be built in one city.</English>
 		<French>Enlève la restriction du nombre de Merveilles que peut construire une Ville</French>
 		<German>Entfernt die Begrenzung bei der Anzahl an Wundern, die in einer Stadt gebaut werden können.</German>
 		<Italian>Rimuove la restrizione sul numero delle meraviglie che possono essere costruite in una città.</Italian>
@@ -1603,7 +1603,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_XP_FROM_ASSIGNED_SPECIALISTS_HELP</Tag>
-		<English>Specialists assigned from population in the city will offer some XP to units produced in the city of specifically defined Unit Combats</English>
+		<English>Specialists assigned from population in the city will offer some XP to units produced in the city of specifically defined Unit Combats.</English>
 		<French>Les Spécialistes attachées à une ville donneront un bonus d'XP aux nouvelles unités produites</French>
 		<German>Spezialisten aus der Stadtbevölkerung sorgen bei passenden produzierten Einheiten in der Stadt für zusätzliche Erfahrungspunkte. So fördern Doktoren z.B. ausgebildete Heilereinheiten.</German>
 		<Polish>Specjaliści przypisani z populacji w mieście bedą generować XP dla jednostek wybudowanych w tym mieście.</Polish>
@@ -1637,6 +1637,6 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_EQUILIBRIUM_CULTURE_HELP</Tag>
-		<English>Culture decays on all tiles, not just unowned. This means culture wars are dependent on the last ~100 turns of culture output (adjusted for gamespeed) rather than all culture ever produced by a city.</English>
+		<English>Culture decays on all tiles, not just unowned. This means culture wars are dependent on the last ~100 turns of culture output (adjusted for gamespeed) rather than all culture ever produced by a city. Tiles that lose cultural input lose control via decay instead of immediately.</English>
 	</TEXT>
 </Civ4GameText>

@@ -116,7 +116,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENTHELP_SEE_FROM</Tag>
-		<English>[ICON_BULLET]%D1_Change Visibility Height</English>
+		<English>[ICON_BULLET]%D1_Change Vision Height</English>
 		<French>[ICON_BULLET]%D1_Change en Hauteur de Visibilité</French>
 		<Italian>[ICON_BULLET]%D1_Change visibilità Altezza</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change a la altura de la visibilidad</Spanish>
@@ -216,7 +216,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENTHELP_VISIBILITY_RANGE</Tag>
-		<English>[ICON_BULLET]%D1_Change Visibility Range</English>
+		<English>[ICON_BULLET]%D1_Change Vision Range</English>
 		<French>[ICON_BULLET]Champ de vision %D1_Change</French>
 		<German>[ICON_BULLET]%D1_Change Sichtweite</German>
 		<Italian>[ICON_BULLET]%D1_Change raggio di visibilità</Italian>
