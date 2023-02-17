@@ -7783,7 +7783,6 @@ int CvCity::getEffectiveMaintenanceModifier() const
 	{
 		iModifier += GET_PLAYER(getOwner()).getConnectedCityMaintenanceModifier();
 	}
-	OutputDebugString(CvString::format("getEffectiveMaintenanceModifier: %d\n", iModifier).c_str());
 	return iModifier;
 }
 
