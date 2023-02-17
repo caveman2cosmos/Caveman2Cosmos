@@ -3995,8 +3995,8 @@ int CvPlayerAI::AI_goldTarget() const
 	);
 	int iGold = iEra * (iEra * 2 * getNumCities() + getTotalPopulation()) * iModGS / 300;
 
-	iGold *= 100 + calculateInflationRate();
-	iGold /= 100;
+	iGold *= getInflationMod10000();
+	iGold /= 10000;
 
 	const bool bAnyWar = GET_TEAM(getTeam()).hasWarPlan(true);
 	if (bAnyWar)
@@ -4027,7 +4027,7 @@ int CvPlayerAI::AI_goldTarget() const
 	{
 		if (getHasCorporationCount((CorporationTypes)iI) > 0)
 		{
-			iGold += std::max(0, GC.getCorporationInfo((CorporationTypes)iI).getSpreadCost() * (100 + calculateInflationRate())) / 50;
+			iGold += std::max(0, 2*GC.getCorporationInfo((CorporationTypes)iI).getSpreadCost());
 			break;
 		}
 	}
@@ -4524,6 +4524,7 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 	int iConnectedForeignCities = countPotentialForeignTradeCitiesConnected();
 
 	const int iCityCount = getNumCities();
+	const int iRCSMultiplier = 1 + GC.getGame().isOption(GAMEOPTION_REALISTIC_CULTURE_SPREAD);
 
 	int iValue = 0;
 
@@ -4532,7 +4533,7 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 	// Map stuff
 	if (iCoastalCities > 0 && kTech.isExtraWaterSeeFrom())
 	{
-		iValue += 100;
+		iValue += 100 * iRCSMultiplier;
 
 		if (bCapitalAlone)
 		{
@@ -4616,7 +4617,7 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 	// Tile improvement abilities
 	if (kTech.isBridgeBuilding())
 	{
-		iValue += 400;
+		iValue += 400 * iRCSMultiplier;
 	}
 
 	if (kTech.isIrrigation())
@@ -4642,19 +4643,19 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 			if (pPlot->isAsPeak() && pPlot->getOwner() != NO_PLAYER
 			&& GET_PLAYER(pPlot->getOwner()).getID() == getID())
 			{
-				iValue += 35;
+				iValue += 35 * iRCSMultiplier;
 			}
 		}
 	}
 
 	if (kTech.isMoveFastPeaks())
 	{
-		iValue += 150;
+		iValue += 150 * iRCSMultiplier;
 	}
 
 	if (kTech.isCanFoundOnPeaks())
 	{
-		iValue += 100;
+		iValue += 100 * iRCSMultiplier;
 	}
 
 	if (gPlayerLogLevel > 2)
@@ -4766,7 +4767,7 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 
 				if (iCoastalCities > 0)
 				{
-					iValue += ((bCapitalAlone) ? 950 : 350);
+					iValue += ((bCapitalAlone) ? 950 : 350) * iRCSMultiplier;
 				}
 
 				iValue += 50;
@@ -4777,7 +4778,7 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 
 	if (kTech.isRiverTrade())
 	{
-		iValue += 1000;
+		iValue += 1000 * iRCSMultiplier;
 	}
 
 	/* ------------------ Tile Improvement Value  ------------------ */
@@ -8913,8 +8914,6 @@ int CvPlayerAI::AI_maxGoldTrade(PlayerTypes ePlayer) const
 	}
 	if (iMaxGold > 0)
 	{
-		iMaxGold *= 100 + calculateInflationRate();
-		iMaxGold /= 100;
 		iMaxGold = std::min<int64_t>(iMaxGold, iGold);
 
 		iMaxGold -= (iMaxGold % GC.getDIPLOMACY_VALUE_REMAINDER());
@@ -13083,6 +13082,7 @@ CivicTypes CvPlayerAI::AI_bestCivic(CivicOptionTypes eCivicOption, int* iBestVal
 			}
 		}
 	}
+	FAssert(!bCivicOptionVacuum || eBestCivic != NO_CIVIC);
 	return eBestCivic;
 }
 
@@ -19857,6 +19857,7 @@ void CvPlayerAI::AI_doDiplo()
 								}
 							}
 
+							// Trade military units
 							if (AI_getContactTimer(((PlayerTypes)iI), CONTACT_TRADE_MILITARY_UNITS) == 0)
 							{
 								PROFILE("CvPlayerAI::AI_doDiplo.TardeUnits");
@@ -25793,7 +25794,7 @@ int CvPlayerAI::AI_getPlotChokeValue(const CvPlot* pPlot) const
 					}
 					if (pPlot->getImprovementType() != NO_IMPROVEMENT)
 					{
-						if (!GC.getImprovementInfo(pPlot->getImprovementType()).isActsAsCity())
+						if (!GC.getImprovementInfo(pPlot->getImprovementType()).isMilitaryStructure())
 						{
 							return 0;
 						}

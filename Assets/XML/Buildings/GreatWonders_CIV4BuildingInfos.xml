@@ -124,6 +124,7 @@
 			</CommerceChangeDoubleTimes>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
+			<iOccupationTimeModifier>50</iOccupationTimeModifier>
 			<iAsset>16</iAsset>
 			<Flavors>
 				<Flavor>
@@ -601,6 +602,7 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iOccupationTimeModifier>50</iOccupationTimeModifier>
 			<iAsset>10</iAsset>
 			<Flavors>
 				<Flavor>
@@ -995,6 +997,7 @@
 				</FreePromoType>
 			</FreePromoTypes>
 			<bGovernmentCenter>1</bGovernmentCenter>
+			<iOccupationTimeModifier>50</iOccupationTimeModifier>
 			<iAsset>10</iAsset>
 			<Flavors>
 				<Flavor>
@@ -6072,6 +6075,34 @@
 					<FeatureType>FEATURE_CAVES</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_PLATY_BARRINGER_CRATER</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_PLATY_BASALT_ORGAN</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_PLATY_DEVILS_TABLE</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_PLATY_NGORONGORO_CRATER</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_PLATY_NUKUORO</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_PLATY_PRAVCICKA_BRANA</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_PLATY_ULURU</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
 			</PrereqOrFeature>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_EARTH</BuildingType>
@@ -6332,6 +6363,7 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iOccupationTimeModifier>50</iOccupationTimeModifier>
 			<iAsset>12</iAsset>
 			<Flavors>
 				<Flavor>
@@ -6924,6 +6956,7 @@
 			<iCost>2640</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
+			<iOccupationTimeModifier>50</iOccupationTimeModifier>
 			<iAsset>10</iAsset>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -18346,10 +18379,6 @@
 					<TerrainType>TERRAIN_PEAK</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_HILL</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_SKY</BuildingType>
@@ -21224,6 +21253,7 @@
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bGovernmentCenter>1</bGovernmentCenter>
+			<iOccupationTimeModifier>50</iOccupationTimeModifier>
 			<iAsset>16</iAsset>
 			<Flavors>
 				<Flavor>

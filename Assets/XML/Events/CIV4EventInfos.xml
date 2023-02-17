@@ -2185,7 +2185,7 @@
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_CRAB_CAKES_1</Type>
-			<Description>TXT_KEY_EVENT_TRIGGER_CRAB_CAKES_1</Description>
+			<Description>TXT_KEY_EVENT_CRAB_CAKES_1</Description>
 			<iGold>30</iGold>
 			<iRandomGold>40</iRandomGold>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>

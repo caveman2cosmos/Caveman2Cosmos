@@ -3832,7 +3832,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_NEANDERTHAL_HELP</Tag>
-		<English>WARNING: This world wonder gives you Neanderthal units, but you can't build criminal units in Prehistoric era</English>
+		<English>[COLOR_WARNING_TEXT]WARNING:[COLOR_REVERT] This world wonder gives you Neanderthal units, but you can't build criminal units in Prehistoric era</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_NEPALESE</Tag>

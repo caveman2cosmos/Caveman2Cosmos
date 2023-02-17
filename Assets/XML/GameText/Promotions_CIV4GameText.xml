@@ -1987,7 +1987,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_CHECKPOINTS_HELP</Tag>
-		<English>On the first, third and fifth rounds spent building up Checkpoints, the unit gains 1 intensity of [COLOR_HIGHLIGHT_TEXT]Disguise Visibility[COLOR_REVERT] up to a maximum bonus of +3, provided each promotion level is qualified for by the unit.</English>
+		<English>On the first, third and fifth rounds spent building up Checkpoints, the unit gains 1 intensity of [COLOR_HIGHLIGHT_TEXT]Disguise Vision[COLOR_REVERT] up to a maximum bonus of +3, provided each promotion level is qualified for by the unit.</English>
 		<French>Lors du premier, troisième et cinquième round passé en développement de la spécialisation Checkpoints, L'unité gagne 1 en intensité de [COLOR_HIGHLIGHT_TEXT]Détection des Déguisements[COLOR_REVERT] jusqu'à un bonus maximum de +3, reçu pour chaque niveau de promotion obtenu par l'unité.</French>
 		<German>Das Training der Personenkontrolle erhöht in der ersten, dritten und fünften Runde die Fähigkeit der Einheit zur [COLOR_HIGHLIGHT_TEXT]Erkennung von Verkleidungen[COLOR_REVERT] um 1 (maximal 3).</German>
 		<Russian>В первом, третьем и пятом раундах, потраченных на фокус на контрольных точках, отряд получает 1 к [COLOR_HIGHLIGHT_TEXT]обнаружению[COLOR_REVERT] скрытых отрядов до максимального бонуса +3, при условии, что отряд соответствует каждому уровню квалификации.</Russian>
@@ -2186,7 +2186,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_OBSERVATION_HELP</Tag>
-		<English>On the first rounds spent building up Observation, the unit gains 1 intensity of [COLOR_HIGHLIGHT_TEXT]Camouflage Visibility[COLOR_REVERT]. On the third and fifth rounds, the unit gains 1 additional [COLOR_HIGHLIGHT_TEXT]Camouflage Visibility Range[COLOR_REVERT], provided each promotion level is qualified for by the unit.</English>
+		<English>On the first rounds spent building up Observation, the unit gains 1 intensity of [COLOR_HIGHLIGHT_TEXT]Camouflage Vision[COLOR_REVERT]. On the third and fifth rounds, the unit gains 1 additional [COLOR_HIGHLIGHT_TEXT]Camouflage Vision Range[COLOR_REVERT], provided each promotion level is qualified for by the unit.</English>
 		<French>Lors du premier Round de développement de la spécialisation Observation, l'unité gagne 1 en intensité de [COLOR_HIGHLIGHT_TEXT]Détection du Camouflage[COLOR_REVERT]. Pour le troisième et le cinquième Round, elle gagne 1 en [COLOR_HIGHLIGHT_TEXT]Portée de détection ud Camouflage[COLOR_REVERT], et ce reçu pour chaque niveau de promotion obtenu par l'unité.</French>
 	</TEXT>
 	<TEXT>
@@ -2299,7 +2299,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_TERRITORIAL_VIGILANCE_HELP</Tag>
-		<English>On the first, third and fifth rounds spent building up Territorial Vigilance, the unit gains 1 intensity of [COLOR_HIGHLIGHT_TEXT]Camouflage Visibility[COLOR_REVERT] up to a maximum bonus of +3, provided each promotion level is qualified for by the unit.</English>
+		<English>On the first, third and fifth rounds spent building up Territorial Vigilance, the unit gains 1 intensity of [COLOR_HIGHLIGHT_TEXT]Camouflage Vision[COLOR_REVERT] up to a maximum bonus of +3, provided each promotion level is qualified for by the unit.</English>
 		<French>Lors du premier, troisième et cinquième round passé en développement de la spécialisation Surveillance du territoire, L'unité gagne 1 en intensité de [COLOR_HIGHLIGHT_TEXT]détection du Camouflage [COLOR_REVERT] jusqu'à un bonus maximum de +3, reçu pour chaque niveau de promotion obtenu par l'unité.</French>
 	</TEXT>
 	<TEXT>

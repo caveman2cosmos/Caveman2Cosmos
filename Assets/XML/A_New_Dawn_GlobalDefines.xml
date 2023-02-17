@@ -120,7 +120,7 @@
 	</Define>
 	<Define>
 		<DefineName>PEAK_EXTRA_MOVEMENT</DefineName>
-		<iDefineIntVal>3</iDefineIntVal>
+		<iDefineIntVal>2</iDefineIntVal> <!-- Applied on top of base 3 cost if lacking bMoveFastPeaks tech -->
 	</Define>
 	<Define>
 		<DefineName>PEAK_BUILD_TIME_MODIFIER</DefineName>

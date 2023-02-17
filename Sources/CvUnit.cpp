@@ -7022,7 +7022,7 @@ bool CvUnit::canGift(bool bTestVisible, bool bTestTransport) const
 {
 	const CvPlot* pPlot = plot();
 
-	if (!pPlot->isOwned() 
+	if (!pPlot->isOwned()
 	||  pPlot->getOwner() == getOwner()
 	||  pPlot->isVisibleEnemyUnit(this)
 	||  pPlot->isVisibleEnemyUnit(pPlot->getOwner()))
@@ -10116,10 +10116,9 @@ bool CvUnit::canSpreadCorporation(const CvPlot* pPlot, CorporationTypes eCorpora
 
 int CvUnit::spreadCorporationCost(CorporationTypes eCorporation, const CvCity* pCity) const
 {
-	int iCost = std::max(0, GC.getCorporationInfo(eCorporation).getSpreadCost() * (100 + GET_PLAYER(getOwner()).calculateInflationRate()));
-	iCost /= 100;
+	int iCost = std::max(0, GC.getCorporationInfo(eCorporation).getSpreadCost());
 
-	if (NULL != pCity)
+	if (pCity)
 	{
 		if (getTeam() != pCity->getTeam() && !GET_TEAM(pCity->getTeam()).isVassal(getTeam()))
 		{
@@ -18850,8 +18849,6 @@ void CvUnit::collectBlockadeGold()
 			if (pCity->area() == area() || pCity->plot()->isAdjacentToArea(area()))
 			{
 				int iGold = pCity->calculateTradeProfit(pCity) * pCity->getTradeRoutes();
-				iGold *= (100 + GET_PLAYER(getOwner()).calculateInflationRate());
-				iGold /= 100;
 				if (iGold > 0)
 				{
 					pCity->setPlundered(true);
@@ -27536,10 +27533,10 @@ void CvUnit::influencePlots(CvPlot* pCentralPlot, const PlayerTypes eTargetPlaye
 					if (iCultureTransfer > 0)
 					{
 						// target player's culture in plot is lowered
-						pLoopPlot->changeCulture(eTargetPlayer, -iCultureTransfer, false, false);
+						pLoopPlot->changeCulture(eTargetPlayer, -iCultureTransfer, false);
 						// owners's culture in plot is raised
 					}
-						pLoopPlot->changeCulture(getOwner(), iCultureTransfer, true, false);
+						pLoopPlot->changeCulture(getOwner(), iCultureTransfer, true);
 				}
 			}
 		}
@@ -27595,8 +27592,8 @@ int CvUnit::doPillageInfluence()
 	{
 		const int iOurCultureBefore = pPlot->getCulture(getOwner()); //used later for influence %
 
-		pPlot->changeCulture(eTargetPlayer, -iCultureTransfer, false, false);
-		pPlot->changeCulture(getOwner(), iCultureTransfer, true, false);
+		pPlot->changeCulture(eTargetPlayer, -iCultureTransfer, false);
+		pPlot->changeCulture(getOwner(), iCultureTransfer, true);
 
 		// calculate 10x influence % in pillaged plot (to be displayed in game log)
 		return (pPlot->getCulture(getOwner()) - iOurCultureBefore) * 1000 / pPlot->countTotalCulture();
@@ -35470,11 +35467,12 @@ void CvUnit::changeRevoltProtection(int iChange)
 	if (iChange != 0)
 	{
 		m_iRevoltProtection += iChange;
-
+		/*
 		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 		{
 			setSMRevoltProtection();
 		}
+		*/
 		setInfoBarDirty(true);
 	}
 }
@@ -35482,29 +35480,21 @@ void CvUnit::changeRevoltProtection(int iChange)
 //need to change references to getRevoltProtection to the following:
 int CvUnit::revoltProtectionTotal() const
 {
-
-	return std::max(0, revoltProtectionTotalPreCheck());
-
+	return getRevoltProtection();
+}
+/* flabbert - disabling size matters revolt protection, it seems to give some weird results
 	// The call that plugs into the rest of the code (final value).
 	// This can be plugged into the existing final, or even be renamed to the existing final (though experience has shown me this causes me tremendous confusion!).
 
-	// disabling size matters revolt protection, it seems to give some weird results -- flabbert
-	//if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS)
-	//// if the current final result of the SMM multiplicative mechanism is nothing but an empty shell
-	//// then this is the first time it's being run so we take from the base value to start.
-	//// Either that or the base is 0 anyhow.
-	//|| getSMRevoltProtection() == 0)
-	//{
-	//		return std::max(0, revoltProtectionTotalPreCheck());
-	//}
-	// return std::max(0, getSMRevoltProtection());
-}
-
-int CvUnit::revoltProtectionTotalPreCheck() const//The total before the Size Matters multiplicative method adjusts for the final value.
-{
-	// Unless we WANT some units to have a negative revolt protection (more likely to revolt when unit is present)
-	// which could be useful for criminal mentality afflictions, then this really should be a min of 0.
-	return std::max(0, getRevoltProtection());
+	if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS)
+	// if the current final result of the SMM multiplicative mechanism is nothing but an empty shell
+	// then this is the first time it's being run so we take from the base value to start.
+	// Either that or the base is 0 anyhow.
+	|| getSMRevoltProtection() == 0)
+	{
+		return getRevoltProtection();
+	}
+	 return std::max(0, getSMRevoltProtection());
 }
 
 int CvUnit::getSMRevoltProtection() const//The final result of the Multiplicative adjustment
@@ -35520,7 +35510,7 @@ void CvUnit::setSMRevoltProtection()
 	(
 		applySMRank
 		(
-			revoltProtectionTotalPreCheck(),
+			getRevoltProtection(),
 			getSizeMattersOffsetValue(),
 			GC.getSIZE_MATTERS_MOST_MULTIPLIER()
 		)
@@ -35529,6 +35519,7 @@ void CvUnit::setSMRevoltProtection()
 	FASSERT_NOT_NEGATIVE(m_iSMRevoltProtection);
 	m_iSMRevoltProtection = std::max(0, m_iSMRevoltProtection);
 }
+*/
 
 bool CvUnit::canPerformActionSM() const
 {
@@ -35553,7 +35544,7 @@ void CvUnit::setSMValues(bool bForLoad)
 	setSMBombardRate();
 	setSMAirBombBaseRate();
 	setSMBaseWorkRate();
-	setSMRevoltProtection();
+	//setSMRevoltProtection();
 	//many missions may require the unit be at base unit defined group size.
 		//construct or force a building - code adjusted.
 		//
