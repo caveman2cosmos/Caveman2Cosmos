@@ -187,10 +187,6 @@ protected:
 	int* m_aiPower;
 	int* m_aiBestFoundValue;
 	int* m_aiMaintenanceModifier;
-	// @SAVEBREAK DELETE
-	int* m_aiHomeAreaMaintenanceModifier;
-	int* m_aiOtherAreaMaintenanceModifier;
-	// @SAVEBREAK
 	int* m_aiNumRevealedTiles;
 	int* m_aiCleanPowerCount;
 	int* m_aiBorderObstacleCount;

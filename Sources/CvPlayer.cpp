@@ -18949,12 +18949,6 @@ void CvPlayer::read(FDataStreamBase* pStream)
 				EventTypes eEvent = NO_EVENT;
 				WRAPPER_READ_CLASS_ENUM_ALLOW_MISSING(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_EVENTS, (int*)&eEvent);
 
-				if ( eEvent == NO_EVENT )
-				{
-					//	Old format so go for a raw read as the best we can do
-					WRAPPER_READ(wrapper, "CvPlayer", (int*)&eEvent);
-				}
-
 				kData.read(pStream);
 				if (eEvent != NO_EVENT)
 				{

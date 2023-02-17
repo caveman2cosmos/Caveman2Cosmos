@@ -8153,9 +8153,8 @@ void CvGame::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper,"CvGame",&m_bDiploVictoryEnabled);
 	WRAPPER_READ_ARRAY(wrapper,"CvGame",MAX_PLAYERS, m_aiFlexibleDifficultyTimer);
 
-	//	Super forts adaptation to C2C - has this game state had its choke points calculated?
-	m_iChokePointCalculationVersion = 0;	//	Ensure old format loads get their values calculated later
-	WRAPPER_READ(wrapper,"CvGame",&m_iChokePointCalculationVersion);
+	// Super forts adaptation to C2C - has this game state had its choke points calculated?
+	WRAPPER_READ(wrapper,"CvGame", &m_iChokePointCalculationVersion);
 
 	calculateRiverBuildings();
 	calculateCoastalBuildings();
@@ -8455,7 +8454,7 @@ void CvGame::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvGame", m_bDiploVictoryEnabled);
 	WRAPPER_WRITE_ARRAY(wrapper, "CvGame", MAX_PLAYERS, m_aiFlexibleDifficultyTimer);
 
-	//	Super forts adaptation to C2C - has this game state had its choke points calculated?
+	// Super forts adaptation to C2C - has this game state had its choke points calculated?
 	WRAPPER_WRITE(wrapper,"CvGame", m_iChokePointCalculationVersion);
 
 	// m_uiInitialTime not saved

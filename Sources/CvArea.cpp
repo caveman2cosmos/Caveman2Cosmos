@@ -29,10 +29,6 @@ CvArea::CvArea()
 	m_aiPower = new int[MAX_PLAYERS];
 	m_aiBestFoundValue = new int[MAX_PLAYERS];
 	m_aiMaintenanceModifier = new int[MAX_PLAYERS];
-	// @SAVEBREAK DELETE
-	m_aiHomeAreaMaintenanceModifier = new int[MAX_PLAYERS];
-	m_aiOtherAreaMaintenanceModifier = new int[MAX_PLAYERS];
-	// @SAVEBREAK
 	m_abHomeArea = new bool[MAX_PLAYERS];
 
 	m_aiNumRevealedTiles = new int[MAX_TEAMS];
@@ -82,10 +78,6 @@ CvArea::~CvArea()
 	SAFE_DELETE_ARRAY(m_aiPower);
 	SAFE_DELETE_ARRAY(m_aiBestFoundValue);
 	SAFE_DELETE_ARRAY(m_aiMaintenanceModifier);
-	// @SAVEBREAK DELETE
-	SAFE_DELETE_ARRAY(m_aiHomeAreaMaintenanceModifier);
-	SAFE_DELETE_ARRAY(m_aiOtherAreaMaintenanceModifier);
-	// @SAVEBREAK
 	SAFE_DELETE_ARRAY(m_abHomeArea);
 	SAFE_DELETE_ARRAY(m_aiNumRevealedTiles);
 	SAFE_DELETE_ARRAY(m_aiCleanPowerCount);
@@ -246,10 +238,6 @@ void CvArea::read(FDataStreamBase* pStream)
 	WRAPPER_READ_ARRAY(wrapper, "CvArea", MAX_PLAYERS, m_aiPower);
 	WRAPPER_READ_ARRAY(wrapper, "CvArea", MAX_PLAYERS, m_aiBestFoundValue);
 	WRAPPER_READ_ARRAY(wrapper, "CvArea", MAX_PLAYERS, m_aiMaintenanceModifier);
-	// @SAVEBREAK DELETE
-	WRAPPER_READ_ARRAY(wrapper, "CvArea", MAX_PLAYERS, m_aiHomeAreaMaintenanceModifier);
-	WRAPPER_READ_ARRAY(wrapper, "CvArea", MAX_PLAYERS, m_aiOtherAreaMaintenanceModifier);
-	// @SAVEBREAK
 	WRAPPER_READ_ARRAY(wrapper, "CvArea", MAX_PLAYERS, m_abHomeArea);
 
 	WRAPPER_READ_ARRAY(wrapper, "CvArea", MAX_TEAMS, m_aiNumRevealedTiles);
@@ -334,10 +322,6 @@ void CvArea::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_ARRAY(wrapper, "CvArea", MAX_PLAYERS, m_aiPower);
 	WRAPPER_WRITE_ARRAY(wrapper, "CvArea", MAX_PLAYERS, m_aiBestFoundValue);
 	WRAPPER_WRITE_ARRAY(wrapper, "CvArea", MAX_PLAYERS, m_aiMaintenanceModifier);
-	// @SAVEBREAK DELETE
-	WRAPPER_WRITE_ARRAY(wrapper, "CvArea", MAX_PLAYERS, m_aiHomeAreaMaintenanceModifier);
-	WRAPPER_WRITE_ARRAY(wrapper, "CvArea", MAX_PLAYERS, m_aiOtherAreaMaintenanceModifier);
-	// @SAVEBREAK
 	WRAPPER_WRITE_ARRAY(wrapper, "CvArea", MAX_PLAYERS, m_abHomeArea);
 
 	WRAPPER_WRITE_ARRAY(wrapper, "CvArea", MAX_TEAMS, m_aiNumRevealedTiles);

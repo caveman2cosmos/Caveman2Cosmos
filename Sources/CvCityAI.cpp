@@ -11586,8 +11586,6 @@ void CvCityAI::read(FDataStreamBase* pStream)
 	WRAPPER_READ_CLASS_ENUM_ARRAY(wrapper, "CvCityAI", REMAPPED_CLASS_TYPE_BUILDS, NUM_CITY_PLOTS, (int*)m_aeBestBuild);
 	WRAPPER_READ_ARRAY(wrapper, "CvCityAI", GC.getNumEmphasizeInfos(), m_pbEmphasize);
 
-	//	Old saves incorrectly had this as a plain array - allow either on load - whichever is not present will be skipped
-	WRAPPER_READ_ARRAY(wrapper, "CvCityAI", GC.getNumSpecialistInfos(), m_pbEmphasizeSpecialist);
 	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvCityAI", REMAPPED_CLASS_TYPE_SPECIALISTS, GC.getNumSpecialistInfos(), m_pbEmphasizeSpecialist, "EmphasizeSpecialist");
 
 	WRAPPER_READ_ARRAY(wrapper, "CvCityAI", NUM_YIELD_TYPES, m_aiSpecialYieldMultiplier);
