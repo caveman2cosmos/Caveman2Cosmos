@@ -559,7 +559,6 @@ public:
 	int getNumBuildings() const;
 	void changeNumBuildings(int iChange);
 
-	int getGovernmentCenterCount() const;
 	bool isGovernmentCenter() const;
 	void changeGovernmentCenterCount(int iChange);
 
@@ -570,7 +569,7 @@ public:
 	int getMaintenanceTimes100() const;
 	int getEffectiveMaintenanceModifier() const;
 	void updateMaintenance() const;
-	void setMaintenanceDirty(bool bDirty) const;
+	void setMaintenanceDirty(const bool bDirty, const bool bPlayer = true) const;
 	int calculateDistanceMaintenance() const;
 	int calculateNumCitiesMaintenance() const;
 	int calculateColonyMaintenance() const;
