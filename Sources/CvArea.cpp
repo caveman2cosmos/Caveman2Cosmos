@@ -29,8 +29,10 @@ CvArea::CvArea()
 	m_aiPower = new int[MAX_PLAYERS];
 	m_aiBestFoundValue = new int[MAX_PLAYERS];
 	m_aiMaintenanceModifier = new int[MAX_PLAYERS];
+	// @SAVEBREAK DELETE
 	m_aiHomeAreaMaintenanceModifier = new int[MAX_PLAYERS];
 	m_aiOtherAreaMaintenanceModifier = new int[MAX_PLAYERS];
+	// @SAVEBREAK
 	m_abHomeArea = new bool[MAX_PLAYERS];
 
 	m_aiNumRevealedTiles = new int[MAX_TEAMS];
@@ -80,8 +82,10 @@ CvArea::~CvArea()
 	SAFE_DELETE_ARRAY(m_aiPower);
 	SAFE_DELETE_ARRAY(m_aiBestFoundValue);
 	SAFE_DELETE_ARRAY(m_aiMaintenanceModifier);
+	// @SAVEBREAK DELETE
 	SAFE_DELETE_ARRAY(m_aiHomeAreaMaintenanceModifier);
 	SAFE_DELETE_ARRAY(m_aiOtherAreaMaintenanceModifier);
+	// @SAVEBREAK
 	SAFE_DELETE_ARRAY(m_abHomeArea);
 	SAFE_DELETE_ARRAY(m_aiNumRevealedTiles);
 	SAFE_DELETE_ARRAY(m_aiCleanPowerCount);
@@ -135,8 +139,6 @@ void CvArea::reset(int iID, bool bWater, bool bConstructorCall)
 		m_aiPower[iI] = 0;
 		m_aiBestFoundValue[iI] = 0;
 		m_aiMaintenanceModifier[iI] = 0;
-		m_aiHomeAreaMaintenanceModifier[iI] = 0;
-		m_aiOtherAreaMaintenanceModifier[iI] = 0;
 		m_abHomeArea[iI] = 0;
 		m_aTargetCities[iI].reset();
 
@@ -197,8 +199,6 @@ void CvArea::clearModifierTotals()
 		m_aiFreeSpecialist[iI] = 0;
 		m_aiPower[iI] = 0;
 		m_aiMaintenanceModifier[iI] = 0;
-		m_aiHomeAreaMaintenanceModifier[iI] = 0;
-		m_aiOtherAreaMaintenanceModifier[iI] = 0;
 
 		for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 		{
@@ -246,8 +246,10 @@ void CvArea::read(FDataStreamBase* pStream)
 	WRAPPER_READ_ARRAY(wrapper, "CvArea", MAX_PLAYERS, m_aiPower);
 	WRAPPER_READ_ARRAY(wrapper, "CvArea", MAX_PLAYERS, m_aiBestFoundValue);
 	WRAPPER_READ_ARRAY(wrapper, "CvArea", MAX_PLAYERS, m_aiMaintenanceModifier);
+	// @SAVEBREAK DELETE
 	WRAPPER_READ_ARRAY(wrapper, "CvArea", MAX_PLAYERS, m_aiHomeAreaMaintenanceModifier);
 	WRAPPER_READ_ARRAY(wrapper, "CvArea", MAX_PLAYERS, m_aiOtherAreaMaintenanceModifier);
+	// @SAVEBREAK
 	WRAPPER_READ_ARRAY(wrapper, "CvArea", MAX_PLAYERS, m_abHomeArea);
 
 	WRAPPER_READ_ARRAY(wrapper, "CvArea", MAX_TEAMS, m_aiNumRevealedTiles);
@@ -332,8 +334,10 @@ void CvArea::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_ARRAY(wrapper, "CvArea", MAX_PLAYERS, m_aiPower);
 	WRAPPER_WRITE_ARRAY(wrapper, "CvArea", MAX_PLAYERS, m_aiBestFoundValue);
 	WRAPPER_WRITE_ARRAY(wrapper, "CvArea", MAX_PLAYERS, m_aiMaintenanceModifier);
+	// @SAVEBREAK DELETE
 	WRAPPER_WRITE_ARRAY(wrapper, "CvArea", MAX_PLAYERS, m_aiHomeAreaMaintenanceModifier);
 	WRAPPER_WRITE_ARRAY(wrapper, "CvArea", MAX_PLAYERS, m_aiOtherAreaMaintenanceModifier);
+	// @SAVEBREAK
 	WRAPPER_WRITE_ARRAY(wrapper, "CvArea", MAX_PLAYERS, m_abHomeArea);
 
 	WRAPPER_WRITE_ARRAY(wrapper, "CvArea", MAX_TEAMS, m_aiNumRevealedTiles);
@@ -786,43 +790,11 @@ int CvArea::getMaintenanceModifier(PlayerTypes eIndex) const
 void CvArea::changeMaintenanceModifier(PlayerTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex);
-	m_aiMaintenanceModifier[eIndex] += iChange;
-}
-
-int CvArea::getHomeAreaMaintenanceModifier(PlayerTypes eIndex) const
-{
-	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex);
-	return m_aiHomeAreaMaintenanceModifier[eIndex];
-}
-
-void CvArea::changeHomeAreaMaintenanceModifier(PlayerTypes eIndex, int iChange)
-{
-	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex);
-	m_aiHomeAreaMaintenanceModifier[eIndex] += iChange;
-}
-
-void CvArea::setHomeAreaMaintenanceModifier(PlayerTypes eIndex, int iNewValue)
-{
-	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex);
-	m_aiHomeAreaMaintenanceModifier[eIndex] = iNewValue;
-}
-
-int CvArea::getOtherAreaMaintenanceModifier(PlayerTypes eIndex) const
-{
-	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex);
-	return m_aiOtherAreaMaintenanceModifier[eIndex];
-}
-
-void CvArea::changeOtherAreaMaintenanceModifier(PlayerTypes eIndex, int iChange)
-{
-	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex);
-	m_aiOtherAreaMaintenanceModifier[eIndex] += iChange;
-}
-
-void CvArea::setOtherAreaMaintenanceModifier(PlayerTypes eIndex, int iNewValue)
-{
-	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex);
-	m_aiOtherAreaMaintenanceModifier[eIndex] = iNewValue;
+	if (iChange != 0)
+	{
+		m_aiMaintenanceModifier[eIndex] += iChange;
+		GET_PLAYER(eIndex).setMaintenanceDirty(true);
+	}
 }
 
 
@@ -839,23 +811,23 @@ bool CvArea::isHomeArea(PlayerTypes eIndex) const
  If you've done this correctly, no Area should have both a HomeArea and an OtherArea modifier value.*/
 void CvArea::setHomeArea(PlayerTypes ePlayer, CvArea* pOldHomeArea)
 {
-	if (pOldHomeArea != NULL && pOldHomeArea != this)
+	if (pOldHomeArea != this)
 	{
-		setHomeAreaMaintenanceModifier(ePlayer, (pOldHomeArea->getHomeAreaMaintenanceModifier(ePlayer)));
-		pOldHomeArea->setHomeAreaMaintenanceModifier(ePlayer, 0);
-
-		pOldHomeArea->setOtherAreaMaintenanceModifier(ePlayer, getOtherAreaMaintenanceModifier(ePlayer));
-		setOtherAreaMaintenanceModifier(ePlayer, 0);
-
-		pOldHomeArea->m_abHomeArea[ePlayer] = false;
+		if (pOldHomeArea)
+		{
+			pOldHomeArea->m_abHomeArea[ePlayer] = false;
+		}
+		m_abHomeArea[ePlayer] = true;
 	}
-
-	m_abHomeArea[ePlayer] = true;
 }
 
 int CvArea::getTotalAreaMaintenanceModifier(PlayerTypes ePlayer) const
 {
-	return getHomeAreaMaintenanceModifier(ePlayer) + getOtherAreaMaintenanceModifier(ePlayer) + getMaintenanceModifier(ePlayer);
+	if (isHomeArea(ePlayer))
+	{
+		return getMaintenanceModifier(ePlayer) + GET_PLAYER(ePlayer).getHomeAreaMaintenanceModifier();
+	}
+	return getMaintenanceModifier(ePlayer) + GET_PLAYER(ePlayer).getOtherAreaMaintenanceModifier();
 }
 
 

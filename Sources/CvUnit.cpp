@@ -10121,10 +10121,9 @@ bool CvUnit::canSpreadCorporation(const CvPlot* pPlot, CorporationTypes eCorpora
 
 int CvUnit::spreadCorporationCost(CorporationTypes eCorporation, const CvCity* pCity) const
 {
-	int iCost = std::max(0, GC.getCorporationInfo(eCorporation).getSpreadCost() * (100 + GET_PLAYER(getOwner()).calculateInflationRate()));
-	iCost /= 100;
+	int iCost = std::max(0, GC.getCorporationInfo(eCorporation).getSpreadCost());
 
-	if (NULL != pCity)
+	if (pCity)
 	{
 		if (getTeam() != pCity->getTeam() && !GET_TEAM(pCity->getTeam()).isVassal(getTeam()))
 		{
@@ -18855,8 +18854,6 @@ void CvUnit::collectBlockadeGold()
 			if (pCity->area() == area() || pCity->plot()->isAdjacentToArea(area()))
 			{
 				int iGold = pCity->calculateTradeProfit(pCity) * pCity->getTradeRoutes();
-				iGold *= (100 + GET_PLAYER(getOwner()).calculateInflationRate());
-				iGold /= 100;
 				if (iGold > 0)
 				{
 					pCity->setPlundered(true);
