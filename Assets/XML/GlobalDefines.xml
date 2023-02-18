@@ -787,12 +787,13 @@
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
+		<!-- Occupation timers scale to this; 0% revolt multiplier at this culture value. Don't use 0. -->
 		<DefineName>OCCUPATION_CULTURE_PERCENT_THRESHOLD</DefineName>
 		<iDefineIntVal>75</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>BASE_OCCUPATION_TURNS</DefineName>
-		<iDefineIntVal>3</iDefineIntVal>
+		<iDefineIntVal>5</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>OCCUPATION_TURNS_POPULATION_PERCENT</DefineName>
