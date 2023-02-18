@@ -10812,11 +10812,7 @@ void CvCity::updateCultureLevel(bool bUpdatePlotGroups)
 	}
 	CvGameAI& GAME = GC.getGame();
 
-	if (!isOccupation()
-	|| GAME.isOption(GAMEOPTION_REVOLUTION)
-	&& GAME.getGameTurn() - getGameTurnAcquired()
-		// Duration bigger than Max Occupation Timer
-		> GC.getBASE_OCCUPATION_TURNS() + getHighestPopulation()*GC.getOCCUPATION_TURNS_POPULATION_PERCENT()/100)
+	if (!isOccupation())
 	{
 		const GameSpeedTypes eSpeed = GAME.getGameSpeedType();
 		const int iCulture = getCultureTimes100(getOwner()) / 100;
