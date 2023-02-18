@@ -8805,8 +8805,7 @@ bool CvCityAI::AI_bestSpreadUnit(bool bMissionary, bool bExecutive, int iBaseCha
 								}
 								iCorporationValue /= std::max(1, (iTotalCount / 4) + iPlotCount);
 
-								int iCost = std::max(0, GC.getCorporationInfo(eCorporation).getSpreadCost() * (100 + GET_PLAYER(getOwner()).calculateInflationRate()));
-								iCost /= 100;
+								int iCost = std::max(0, GC.getCorporationInfo(eCorporation).getSpreadCost());
 
 								if (kPlayer.getGold() >= iCost)
 								{
