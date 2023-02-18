@@ -2,12 +2,12 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_WORLD_VIEW</Tag>
-		<English>World View</English>
-		<French>Vision du Monde</French>
-		<Italian>Concezioni del mondo</Italian>
-		<German>Weltanschauung</German>
-		<Polish>Swiatopogląd</Polish>
-		<Russian>Ìèðîâîççðåíèÿ</Russian>
+		<English>1. World View</English>
+		<French>1. Vision du Monde</French>
+		<Italian>1. Concezioni del mondo</Italian>
+		<German>1. Weltanschauung</German>
+		<Polish>1. Swiatopogląd</Polish>
+		<Russian>1. Ìèðîâîççðåíèÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_WORLD_VIEW_PEDIA</Tag>

@@ -133,7 +133,10 @@ class MoreCiv4lertsEvent(AbstractMoreCiv4lertsEvent):
 						iGrowthCount += 1
 					if bCheck2 and cityX.getCultureThreshold() > 0:
 						if cityX.getCulture(iPlayerX) + cityX.getCommerceRate(CommerceTypes.COMMERCE_CULTURE) >= cityX.getCultureThreshold():
-							msg = TRNSLTR.getText("TXT_KEY_MORECIV4LERTS_CITY_TO_EXPAND",(cityX.getName(),))
+							if GAME.isOption(GameOptionTypes.GAMEOPTION_REALISTIC_CULTURE_SPREAD):
+								msg = TRNSLTR.getText("TXT_KEY_MORECIV4LERTS_CITY_TO_EXPAND_RCS",(cityX.getName(),))
+							else:
+								msg = TRNSLTR.getText("TXT_KEY_MORECIV4LERTS_CITY_TO_EXPAND",(cityX.getName(),))
 							CvUtil.sendMessage(msg, iPlayer, EVENT_MESSAGE_TIME_LONG, icon, -1, cityX.getX(), cityX.getY(), True, True)
 
 		# Check Domination Limit

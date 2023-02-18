@@ -5558,7 +5558,6 @@
 			<Era>C2C_ERA_ANCIENT</Era>
 			<iAsset>24</iAsset>
 			<bTrade>1</bTrade>
-			<bIrrigation>1</bIrrigation>
 			<iGridX>26</iGridX>
 			<iGridY>7</iGridY>
 			<Flavors>
@@ -11268,7 +11267,6 @@
 			<Sound>AS2D_TECH_CARTOGRAPHY</Sound>
 			<SoundMP>AS2D_TECH_CARTOGRAPHY</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/Mapmaking.dds</Button>
-			<bMoveFastPeaks>1</bMoveFastPeaks>
 		</TechInfo>
 		<TechInfo>
 			<Type>TECH_CHARTERS</Type>
@@ -12698,6 +12696,7 @@
 			<Sound>AS2D_TECH_COLONIALISM</Sound>
 			<SoundMP>AS2D_TECH_COLONIALISM</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/colonialism.dds</Button>
+			<bMoveFastPeaks>1</bMoveFastPeaks>
 		</TechInfo>
 		<TechInfo>
 			<Type>TECH_WEATHER_FORECASTING</Type>

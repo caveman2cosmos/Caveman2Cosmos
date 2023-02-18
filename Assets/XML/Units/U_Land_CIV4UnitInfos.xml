@@ -773,7 +773,6 @@
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
-			<PrereqGameOption>GAMEOPTION_ADVANCED_DIPLOMACY</PrereqGameOption>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_PACK_LLAMA</Type>
@@ -1046,7 +1045,6 @@
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
-			<PrereqGameOption>GAMEOPTION_ADVANCED_DIPLOMACY</PrereqGameOption>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_MOTORCYCLE</Type>

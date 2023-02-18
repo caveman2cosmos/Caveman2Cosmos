@@ -93,7 +93,7 @@ namespace {
 			{
 				void* test_alloc = malloc(PAGING_TEST_ALLOC);
 
-				if (!test_alloc) break; 
+				if (!test_alloc) break;
 
 				test_allocs.push_back(test_alloc);
 			}

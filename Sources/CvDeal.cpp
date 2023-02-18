@@ -1474,17 +1474,12 @@ bool CvDeal::isAnnual(TradeableItems eItem)
 	case TRADE_OPEN_BORDERS:
 	case TRADE_DEFENSIVE_PACT:
 	case TRADE_PERMANENT_ALLIANCE:
-/************************************************************************************************/
-/* Afforess	                  Start		 06/16/10                                               */
-/*                                                                                              */
-/* Advanced Diplomacy                                                                           */
-/************************************************************************************************/
+
+	// Advanced Diplomacy
 	case TRADE_RITE_OF_PASSAGE:
 	case TRADE_FREE_TRADE_ZONE:
 	case TRADE_EMBASSY:
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+	
 		return true;
 		break;
 	}
@@ -1500,17 +1495,12 @@ bool CvDeal::isDual(TradeableItems eItem, bool bExcludePeace)
 	case TRADE_OPEN_BORDERS:
 	case TRADE_DEFENSIVE_PACT:
 	case TRADE_PERMANENT_ALLIANCE:
-/************************************************************************************************/
-/* Afforess	                  Start		 06/16/10                                               */
-/*                                                                                              */
-/* Advanced Diplomacy                                                                           */
-/************************************************************************************************/
+
+	// Advanced Diplomacy
 	case TRADE_EMBASSY:
 	case TRADE_RITE_OF_PASSAGE:
 	case TRADE_FREE_TRADE_ZONE:
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 		return true;
 	case TRADE_PEACE_TREATY:
 		return (!bExcludePeace);
@@ -1522,11 +1512,7 @@ bool CvDeal::isDual(TradeableItems eItem, bool bExcludePeace)
 // static
 bool CvDeal::hasData(TradeableItems eItem)
 {
-/************************************************************************************************/
-/* Afforess	                  Start		 07/17/10                                               */
-/*                                                                                              */
-/* Advanced Diplomacy                                                                           */
-/************************************************************************************************/
+	// Advanced Diplomacy
 	if (GC.getGame().isOption(GAMEOPTION_ADVANCED_DIPLOMACY))
 	{
 		return (eItem != TRADE_MAPS &&
@@ -1538,9 +1524,6 @@ bool CvDeal::hasData(TradeableItems eItem)
 			eItem != TRADE_PEACE_TREATY &&
 			eItem != TRADE_EMBASSY);
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	return (eItem != TRADE_MAPS &&
 		eItem != TRADE_VASSAL &&
 		eItem != TRADE_SURRENDER &&

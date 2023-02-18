@@ -6075,6 +6075,34 @@
 					<FeatureType>FEATURE_CAVES</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_PLATY_BARRINGER_CRATER</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_PLATY_BASALT_ORGAN</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_PLATY_DEVILS_TABLE</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_PLATY_NGORONGORO_CRATER</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_PLATY_NUKUORO</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_PLATY_PRAVCICKA_BRANA</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_PLATY_ULURU</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
 			</PrereqOrFeature>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_EARTH</BuildingType>
@@ -18349,10 +18377,6 @@
 			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_PEAK</TerrainType>
-					<bPrereqTerrain>1</bPrereqTerrain>
-				</PrereqTerrain>
-				<PrereqTerrain>
-					<TerrainType>TERRAIN_HILL</TerrainType>
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 			</PrereqOrTerrain>

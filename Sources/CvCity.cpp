@@ -1485,6 +1485,8 @@ void CvCity::doTurn()
 
 	if (getOccupationTimer() > 0)
 	{
+		// Blaze: v43 temp fix for games with over-long occupation timers from recent bug
+		if (getOccupationTimer() > 300) setOccupationTimer(2);
 		changeOccupationTimer(-1);
 	}
 
@@ -6475,6 +6477,7 @@ void CvCity::recalculateCultureDistances(int iMaxDistance) const
 	// then (inefficiently, atm) calls calculateCultureDistance to compute specific tiles
 	PROFILE_FUNC();
 
+	// 1-tile start and realistic culture together has unique rules, otherwise:
 	// if the point is within one square of the city center
 	foreach_(const CvPlot* plotX, plots(NUM_CITY_PLOTS_1))
 	{
@@ -6482,8 +6485,6 @@ void CvCity::recalculateCultureDistances(int iMaxDistance) const
 		if (getX() == plotX->getX() && getY() == plotX->getY()) m_aCultureDistances[plotX] = 0;
 		// If 1 tile start is off, the rest in range 1 have distance 1, no modifiers
 		else if (!GC.getGame().isOption(GAMEOPTION_1_CITY_TILE_FOUNDING)) m_aCultureDistances[plotX] = 1;
-		// If 1 tile start is on and are vertical or adjacent from core, then distance 1. Leftovers need calculating.
-		else if (getX() == plotX->getX() || getY() == plotX->getY()) m_aCultureDistances[plotX] = 1;
 	}
 
 	// Blaze: Spiraling outward from center (style of getCityIndexPlot) is more efficient if perf issues exist;
@@ -6505,12 +6506,9 @@ void CvCity::recalculateCultureDistances(int iMaxDistance) const
 
 		foreach_(const CvPlot* plotX, plot()->rect(iMaxDistance, iMaxDistance))
 		{
-			// Some tiles at center should not be calculated with formula (as they already are defined above):
-			if (plotDistance(getX(), getY(), plotX->getX(), plotX->getY()) < 2 &&
-				// Regular realistic culture, with any adjacency to city, and
-				(!GC.getGame().isOption(GAMEOPTION_1_CITY_TILE_FOUNDING) ||
-				// 1-tile-start with cardinal adjacency to city
-				getX() == plotX->getX() || getY() == plotX->getY()))
+			// Either ignore only core, or 9 tiles around city center depending on whether 1 tile start:
+			if (plotDistance(getX(), getY(), plotX->getX(), plotX->getY()) <
+				(1 + !GC.getGame().isOption(GAMEOPTION_1_CITY_TILE_FOUNDING)))
 			{
 				// This is a slightly cursed function.
 				continue;
@@ -6531,6 +6529,7 @@ void CvCity::recalculateCultureDistances(int iMaxDistance) const
 		if (numLoops > 100)
 		{
 			bHasChanged = false;
+			FAssertMsg(numLoops < 100, "Realistic Culture hit infinte loop trying to update distances! Bypassing...");
 		}
 	}
 }
@@ -6544,6 +6543,22 @@ int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) c
 	// if the plot distance is greater than the maximum desired plot distance
 	// or if the plot does not exist, then the plot distance is maximal
 	if (plotDistance(getX(), getY(), mainPlot->getX(), mainPlot->getY()) > iMaxDistance) return MAX_INT;
+
+	// Potentially don't need to calculate anything if plot has no already calculated neighbors
+	bool bHasCalculatedNeighbors = false;
+	foreach_(const CvPlot* adjacentPlot, mainPlot->cardinalDirectionAdjacent())
+	{
+		int neighborDist = m_aCultureDistances[adjacentPlot];
+		// neighborDist is 0 on first iteration after cleared cache. Don't calculate from such tiles,
+		// unless we are adjacent to capital (needed if 1tile founding is on); can use that as valid neighbor.
+		if (neighborDist != MAX_INT &&
+			(neighborDist != 0 || (adjacentPlot->getX() == getX() && adjacentPlot->getY() == getY())))
+		{
+			bHasCalculatedNeighbors = true;
+			break;
+		}
+	}
+	if (!bHasCalculatedNeighbors) return MAX_INT;
 
 	// Calculate terrain distance necessary before neighbors, because city presence can
 	// remove any combination of terrain and river crossing penalties; chosing which neighbor
@@ -6576,7 +6591,8 @@ int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) c
 			if (mainPlot->isHills())
 			{
 				terrainDistance += GC.getTerrainInfo(GC.getTERRAIN_HILL()).getCultureDistance()
-					+ !GET_TEAM(getTeam()).isCanFoundOnPeaks();
+					+ !GET_TEAM(getTeam()).isCanFoundOnPeaks()
+					+ !GET_TEAM(getTeam()).isBridgeBuilding();
 			}
 		}
 	}
@@ -6589,30 +6605,52 @@ int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) c
 		{
 			terrainDistance = 0;
 		}
-		// otherwise, increase distance by 1 on unimproved tiles. Slows down earlygame expansion.
+		// penalty for unimproved features
 		else if (mainPlot->getImprovementType() == NO_IMPROVEMENT)
 		{
 			terrainDistance += 1;
 		}
+		// penalty for improved features if outside city affected territory
+		else if (!mainPlot->isInCultureRangeOfCityByPlayer(mainPlot->getOwner())
+			  || !mainPlot->isInCultureRangeOfCityByPlayer(getOwner()))
+		{
+			terrainDistance += 1;
+		}
+		// Always add base feature cost
 		terrainDistance += GC.getFeatureInfo(mainPlot->getFeatureType()).getCultureDistance();
 	}
 
+	bool bIsBonus = mainPlot->getBonusType(getTeam()) != NO_BONUS;
 	// Using route value/tier as softer inhibitor by era
-	if (!mainPlot->isWater())
+	// Base distance (x): 0, 1, 2, 3, 4 ... translates to:
+	// Tier 0 (noroute):  0, 1, 3, 5, 7 ... // 2x-1: Always applies to tiles not yet influenced
+	// Tier 1 (trail):	  0, 1, 3, 4, 6 ... // 3x/2
+	// Tier 2 (path):	  0, 1, 2, 4, 5 ... // 4x/3
+	// Tier 3 (road):	  0, 1, 2, 3, 5 ... // 5x/4
+	if (!mainPlot->isWater() && !bIsBonus)
 	{
-		if (mainPlot->getRouteType() == NO_ROUTE)
+		int routeTierMod = 0;
+
+		// If the plot has an existing route, and already inside the influence area of a city, maybe bump tier up (less penalties)
+		if (mainPlot->getRouteType() != NO_ROUTE && 
+			(mainPlot->isInCultureRangeOfCityByPlayer(mainPlot->getOwner()) ||
+			 mainPlot->isInCultureRangeOfCityByPlayer(getOwner())))
 		{
-			terrainDistance = std::max(0, (terrainDistance - 1) * 2 + 1);
+			routeTierMod = std::max(routeTierMod, GC.getRouteInfo(mainPlot->getRouteType()).getValue());
 		}
-		else
+		// Penalties applied for low tier routes (pre-paved road)
+		if (routeTierMod == 0)
 		{
-			const int routeTier = GC.getRouteInfo(mainPlot->getRouteType()).getValue();
-			if (routeTier < 4) terrainDistance = terrainDistance * (routeTier + 2) / (routeTier + 1);
+			terrainDistance = std::max(0, 1 + 2 * (terrainDistance - 1));
+		}
+		else if (routeTierMod < 4)
+		{
+			terrainDistance = terrainDistance * (routeTierMod + 2) / (routeTierMod + 1);
 		}
 	}
 
 	// Halve terrain distance if bonus is present
-	if (mainPlot->getBonusType(getTeam()) != NO_BONUS) terrainDistance /= 2;
+	if (bIsBonus) terrainDistance /= 2;
 
 	/* Determine the final cultural distance of given plot:
 		1: All directions from given plot are checked (could come from weird direction)
@@ -6629,11 +6667,26 @@ int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) c
 	foreach_(const CvPlot* adjacentPlot, mainPlot->cardinalDirectionAdjacent())
 	{
 		int neighborDist = m_aCultureDistances[adjacentPlot];
-		if (neighborDist != 0 && neighborDist != MAX_INT)
+		// neighborDist is 0 on first iteration after cleared cache. Don't calculate from such tiles,
+		// unless we are adjacent to capital (needed if 1tile founding is on); can use that as valid neighbor.
+		if (neighborDist != MAX_INT &&
+			(neighborDist != 0 || (adjacentPlot->getX() == getX() && adjacentPlot->getY() == getY())))
 		{
-			int netDistanceModifier = terrainDistance + mainPlot->isRiverCrossing(directionXY(mainPlot, adjacentPlot)) * (1 + extraRiverPenalty) * 2;
-			// City tiles are easier to influence even if across river (city itself crosses river)
+			int netDistanceModifier = terrainDistance;
+			// If we are adjacent to our own city center (1 tile founding rule), different rules. Cheaper, but not straight 0 cost.
+			if (neighborDist == 0)
+			{
+				netDistanceModifier += mainPlot->isRiverCrossing(directionXY(mainPlot, adjacentPlot)) * (extraRiverPenalty);
+				netDistanceModifier /= 3;
+			}
+			else
+			{
+				netDistanceModifier += mainPlot->isRiverCrossing(directionXY(mainPlot, adjacentPlot)) * (1 + extraRiverPenalty) * 2;
+			}
+
+			// Other city tiles are easier to influence even if across river (city itself crosses river)
 			netDistanceModifier /= (1 + isCity);
+
 			neighborDist += 1 + std::max(0, netDistanceModifier);
 			if (neighborDist < distance) distance = neighborDist;
 		}
@@ -6651,27 +6704,30 @@ void CvCity::clearCultureDistanceCache()
 // End realistic culture
 
 
-int CvCity::netRevoltRisk(PlayerTypes cultureAttacker) const
+int CvCity::netRevoltRisk100(PlayerTypes cultureAttacker) const
 {
 	// Returns 100x % chance of revolt to eCultureAttacker when modified by defending units
-	// 100 = 1%, 10,000 = 100%
-	return std::max(0, baseRevoltRisk(cultureAttacker) * (100 - cultureGarrison(cultureAttacker)));
+	// 108 = 1.08%, 9,876 = 98.76%
+	return std::max(0, baseRevoltRisk100(cultureAttacker) * (unitRevoltRiskModifier(cultureAttacker))) / 100;
 }
 
 
-int CvCity::baseRevoltRisk(PlayerTypes eCultureAttacker) const
+int CvCity::baseRevoltRisk100(PlayerTypes eCultureAttacker) const
 {
-	// Returns % chance of revolt to eCultureAttacker unmodified by defending units
+	// Returns 100x% chance of revolt to eCultureAttacker unmodified by defending units
 	// Should probably be less dependent on era or pop.
 	int iRisk = (getHighestPopulation() * 2);
 
 	// Presence of 3rd party culture lowers max bonus
-	const int iAttackerPercent = 100 * plot()->calculateCulturePercent(eCultureAttacker, 2);
-	int iDefenderPercent = 100 * plot()->calculateCulturePercent(getOwner(), 2);
+	const int iAttackerPercent100 = plot()->calculateCulturePercent(eCultureAttacker, 2);
+	int iDefenderPercent100 = plot()->calculateCulturePercent(getOwner(), 2);
 	// Adjust defender percent by possible fixed border modifier
 	// (otherwise inflated risk when FB city is threatened)
-	iDefenderPercent *= GET_PLAYER(getOwner()).hasFixedBorders() * (GC.getDefineINT("FIXED_BORDERS_CULTURE_RATIO_PERCENT") - 100);
-	iDefenderPercent /= 100;
+	if (GET_PLAYER(getOwner()).hasFixedBorders())
+	{
+		iDefenderPercent100 *= (GC.getDefineINT("FIXED_BORDERS_CULTURE_RATIO_PERCENT"));
+		iDefenderPercent100 /= 100;
+	}
 
 	// If adjacent tiles can be acquired, factor in, else there's an additional min risk
 	if (!GC.getGame().isOption(GAMEOPTION_MIN_CITY_BORDER))
@@ -6683,15 +6739,17 @@ int CvCity::baseRevoltRisk(PlayerTypes eCultureAttacker) const
 		}
 	}
 	else iRisk += (GC.getGame().getCurrentEra() + 1);
+	// iRisk is currently something like 10 aka 10%
 
-	// Ranges from 100 to 1,000,000 as attacker:defender culture % ratio goes from 1:1 to 1:0.01
+	// Ranges from 10000 to 1,000,000 as attacker:defender culture % ratio goes from 1:1 to 1:0.01
 	// Nonlinear!
-	const int iCultureRatioModifier = iAttackerPercent / std::max(1, iDefenderPercent);
-	// XML to make this even stronker (default 100 doubles above modifier)
-	iRisk *= (GC.getREVOLT_TOTAL_CULTURE_MODIFIER() + 100) * iCultureRatioModifier;
-	iRisk /= 10000;
+	const int iCultureRatioModifier = 10000 * iAttackerPercent100 / std::max(1, iDefenderPercent100);
+	// XML to make this even stronker (default 200 doubles *only mod part* of above modifier)
+	iRisk *= ((iCultureRatioModifier - 10000) * (GC.getREVOLT_TOTAL_CULTURE_MODIFIER()) / 100 + 10000);
+	iRisk /= 100;
+	// iRisk is now measured in x100 here aka 505 or 2345 meaning 5.05% or 23.45%.
 
-	// By default, attacker having a state religion doubles attacking power
+	// By default (100), attacker having a state religion doubles attacking power
 	if (GET_PLAYER(eCultureAttacker).getStateReligion() != NO_RELIGION)
 	{
 		if (isHasReligion(GET_PLAYER(eCultureAttacker).getStateReligion()))
@@ -6701,7 +6759,7 @@ int CvCity::baseRevoltRisk(PlayerTypes eCultureAttacker) const
 		}
 	}
 
-	// By default, defender having state religion halves attacker's power
+	// By default (-50), defender having state religion halves attacker's power
 	if (GET_PLAYER(getOwner()).getStateReligion() != NO_RELIGION)
 	{
 		if (isHasReligion(GET_PLAYER(getOwner()).getStateReligion()))
@@ -6714,18 +6772,24 @@ int CvCity::baseRevoltRisk(PlayerTypes eCultureAttacker) const
 }
 
 
-int CvCity::cultureGarrison(PlayerTypes eCultureAttacker) const
+int CvCity::unitRevoltRiskModifier(PlayerTypes eCultureAttacker) const
 {
-	// Sums all culture revolt defense of units on tile. No limit... should probably have one, somehow
+	// constructed from icultureGarrison of stationed units
+	// returns percent modifier on revolt risk due to units
 	int iGarrison = 0;
 
 	foreach_ (const CvUnit * unit, plot()->units())
 		iGarrison += unit->revoltProtectionTotal();
 
+	// Blaze: This also doubles negative impact of criminal units while at war. Intended? Fix?
 	if (atWar(GET_PLAYER(eCultureAttacker).getTeam(), getTeam()))
 		iGarrison *= 2;
 
-	return iGarrison;
+	// Negative revolt protection increases multiplier (-5% revolt protection -> 105% multiplier)
+	if (iGarrison < 0) return 100 - iGarrison;
+	// Positive revolt protection has diminishing returns
+	// 100% protection -> 50% multiplier, 200% protection -> 33% multiplier
+	return (10000 / (100 + iGarrison));
 }
 
 
@@ -12048,14 +12112,14 @@ int CvCity::getBuildingCommerce100(CommerceTypes eIndex) const
 }
 
 
-int CvCity::getBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding, const bool bFull) const
+int CvCity::getBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding, const bool bFull, const bool bTestVisible) const
 {
 	PROFILE_FUNC();
 
 	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex);
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding);
 
-	if (getNumActiveBuilding(eBuilding) < 1)
+	if (getNumActiveBuilding(eBuilding) < 1 && !bTestVisible)
 	{
 		return 0;
 	}
@@ -16088,7 +16152,7 @@ void CvCity::doPlotCulture(PlayerTypes ePlayer, int iCultureRate)
 
 		if (iCultureDistance <= iCultureLevel && plotX->isPotentialCityWorkForArea(area()))
 		{
-			// changeCulture includes a check to culture value upward
+			// changeCulture includes a check to bump culture value upward
 			// to ensure plot cannot be lost thru decay even if culture gain is too small
 			plotX->changeCulture(
 				ePlayer,
@@ -16096,6 +16160,7 @@ void CvCity::doPlotCulture(PlayerTypes ePlayer, int iCultureRate)
 				// Toffer - Only update plot ownership when the culture of non-owners increase.
 				plotX->getOwner() != ePlayer
 			);
+			plotX->setInCultureRangeOfCityByPlayer(ePlayer);
 		}
 	}
 }
