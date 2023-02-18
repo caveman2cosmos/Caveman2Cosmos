@@ -804,8 +804,10 @@
 		<iDefineIntVal>2</iDefineIntVal>
 	</Define>
 	<Define>
+		<!-- % of city revolt/turn chance added to revolt timer. E.g. if a city with 4% revolt chance/turn
+			 successfully revolts, 25 here means it adds 1 turn to revolt timer -->
 		<DefineName>REVOLT_OCCUPATION_TURNS_PERCENT</DefineName>
-		<iDefineIntVal>3</iDefineIntVal>
+		<iDefineIntVal>25</iDefineIntVal>
 	</Define>
 	<Define>
 		<!-- 50 halves effect of culture ratio on liklihood of culture revolt, 100 is baseline, 200 doubles. -->
