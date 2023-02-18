@@ -1485,8 +1485,6 @@ void CvCity::doTurn()
 
 	if (getOccupationTimer() > 0)
 	{
-		// Blaze: v43 temp fix for games with over-long occupation timers from recent bug
-		if (getOccupationTimer() > 300) setOccupationTimer(2);
 		changeOccupationTimer(-1);
 	}
 
