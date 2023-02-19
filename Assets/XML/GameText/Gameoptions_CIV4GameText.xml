@@ -115,7 +115,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_AGGRESSIVE_AI_HELP</Tag>
-		<English>AI leaders favor war over diplomacy.</English>
+		<English>AI leaders favor war over diplomacy.[NEWLINE]This option is required for, and will thus be forced ON, if Ruthless AI is used!</English>
 		<French>Les héros gérés par l'IA préfèrent la guerre à la diplomatie.</French>
 		<German>KI-Staatsoberhäupter bevorzugen den Krieg gegenüber der Diplomatie.</German>
 		<Italian>L'IA dei leader preferisce la guerra alla diplomazia</Italian>
@@ -1136,7 +1136,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_RANDOM_PERSONALITIES</Tag>
-		<English>Leader - Random Personalities</English>
+		<English>AI - Random Personalities</English>
 		<French>Personnalités aléatoires</French>
 		<German>Zufällige Persönlichkeiten</German>
 		<Italian>Personalità casuali</Italian>
@@ -1270,7 +1270,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_RUTHLESS_AI_HELP</Tag>
-		<English>Ruthless AI is a step up from Aggressive AI. The AI will be more backstabbing, less predictable, more ready to declare war on everyone, less likely to forgive past slights, and will trade with your worst enemies, just to spite you. Expect no mercy, for you shall receive none!</English>
+		<English>Ruthless AI is a step up from Aggressive AI. The AI will be more backstabbing, less predictable, more ready to declare war on everyone, less likely to forgive past slights, and will trade with your worst enemies, just to spite you. Expect no mercy, for you shall receive none![NEWLINE]This option requires, and thus will force, Aggressive AI to be ON!</English>
 		<French>IA Sans merci est le niveau au-dessus de l'IA Aggressive. L'IA est plus sournoise, moins prévisible, prête à déclarer la Guerre à tout moment, ne pardonne pas, et va commercer avec vos pires ennemis, juste pour vous déstabiliser. N'attendez aucune pitié, vous n'en recevrez pas!</French>
 		<German>Skrupellose KI geht einen Schritt weiter als Aggressive KI. Die KI wird hinterhältiger sein, schlechter berechenbar, schneller Kriege erklären, frühere Vergehen weniger schnell vergessen und mit Euren schlimmsten Feinden handeln, nur aus Boshaftigkeit Euch gegenüber. Erwartet keine Gnade, es wird keine geben!</German>
 		<Italian>IA spietata è un passo sopra a IA aggressiva. L'IA sarà più pugnalatrice, meno prevedibile, più disposta a dichiarare guerra a tutti, meno incline a perdonare gli screzi passati, e commercerà con i tuoi peggiori nemici solo per farti incazzare. Non aspettarti alcuna pietà!</Italian>
@@ -1394,7 +1394,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_TELEPORT_HUNTING_AWARDS</Tag>
-		<English>Unit - Teleport Hunting Awards</English>
+		<English>Animal - Teleport Hunting Awards</English>
 		<French>Téléporter les Trophées de chasse</French>
 		<German>Teleportation der Jagdbeute</German>
 		<Russian>Òåëåïîðòàöèÿ äîáû÷è</Russian>

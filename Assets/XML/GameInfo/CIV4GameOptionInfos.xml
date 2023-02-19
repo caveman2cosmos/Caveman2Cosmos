@@ -11,10 +11,10 @@
 	There's no way to add it automatically since the option help hover is completely handled in the core.
 	Thus use the following line in the text (for english anyhow) at the end of the normal Help string
 	(copy and paste onto the end of the help text after a space and replace the (indicatedOption(s))):
-	"This option requires, and thus will force, the [indicated game option(s)] to be ON!"
-	or "This option is incompatible with, and thus will force, the [indicated game option(s)] to be OFF!"
-	and on the enforced option(s): "This option is required for, and will thus be forced ON, if [indicated game option] is used!"
-	and on the enforced off option(s): "This option is incompatible with, and will thus be forced OFF, if [indicated game option] is used!" -->
+	"[NEWLINE]This option requires, and thus will force, the [indicated game option(s)] to be ON!"
+	or "[NEWLINE]This option is incompatible with, and thus will force, the [indicated game option(s)] to be OFF!"
+	and on the enforced option(s): "[NEWLINE]This option is required for, and will thus be forced ON, if [indicated game option] is used!"
+	and on the enforced off option(s): "[NEWLINE]This option is incompatible with, and will thus be forced OFF, if [indicated game option] is used!" -->
 <!-- Match ordering of these options with CvEnums.h -->
 <Civ4GameOptionInfos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Schema\Caveman2Cosmos.xsd">
 	<GameOptionInfos>
@@ -24,14 +24,17 @@
 			<Description>TXT_KEY_GAMEOPTION_AGGRESSIVE_AI</Description>
 			<Help>TXT_KEY_GAMEOPTION_AGGRESSIVE_AI_HELP</Help>
 			<bDefault>0</bDefault>
-			<bVisible>0</bVisible>
+			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_RUTHLESS_AI</Type>
 			<Description>TXT_KEY_GAMEOPTION_RUTHLESS_AI</Description>
 			<Help>TXT_KEY_GAMEOPTION_RUTHLESS_AI_HELP</Help>
 			<bDefault>0</bDefault>
-			<bVisible>0</bVisible>
+			<bVisible>1</bVisible>
+			<EnforcesGameOptionOnTypes>
+				<GameOptionType>GAMEOPTION_AGGRESSIVE_AI</GameOptionType>
+			</EnforcesGameOptionOnTypes>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_RANDOM_PERSONALITIES</Type>

@@ -305,12 +305,6 @@ void CvGame::init(HandicapTypes eHandicap)
 		}
 	}
 
-	//Ruthless AI means Aggressive AI is on too.
-	if (isOption(GAMEOPTION_RUTHLESS_AI) && !isOption(GAMEOPTION_AGGRESSIVE_AI))
-	{
-		setOption(GAMEOPTION_AGGRESSIVE_AI, true);
-	}
-
 	if (!isOption(GAMEOPTION_GREAT_COMMANDERS))
 	{
 		foreach_(CvUnitInfo* info, GC.getUnitInfos())
