@@ -345,7 +345,7 @@ bool CvSelectionGroup::showMoves() const
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		const CvPlayer& pPlayer = GET_PLAYER((PlayerTypes)iI);
-		if (pPlayer.isAlive() && pPlayer.isHuman())
+		if (pPlayer.isAlive() && pPlayer.isHumanPlayer())
 		{
 			const CvUnit* pHeadUnit = getHeadUnit();
 			if (pHeadUnit && (pHeadUnit->isEnemy(pPlayer.getTeam()) ? pPlayer.isOption(PLAYEROPTION_SHOW_ENEMY_MOVES) : pPlayer.isOption(PLAYEROPTION_SHOW_FRIENDLY_MOVES)))
@@ -1218,7 +1218,7 @@ bool CvSelectionGroup::startMission()
 	}
 	else
 	{
-		FAssertMsg(GET_PLAYER(getOwner()).isTurnActive() || GET_PLAYER(getOwner()).isHuman(), "It's expected that either the turn is active for this player or the player is human");
+		FAssertMsg(GET_PLAYER(getOwner()).isTurnActive() || GET_PLAYER(getOwner()).isHumanPlayer(), "It's expected that either the turn is active for this player or the player is human");
 
 		switch (headMissionQueueNode()->m_data.eMissionType)
 		{
@@ -2716,7 +2716,7 @@ bool CvSelectionGroup::canDoInterfaceModeAt(InterfaceModeTypes eInterfaceMode, C
 
 bool CvSelectionGroup::isHuman() const
 {
-	return (getOwner() != NO_PLAYER) ? GET_PLAYER(getOwner()).isHuman() : true;
+	return (getOwner() != NO_PLAYER) ? GET_PLAYER(getOwner()).isHumanPlayer() : true;
 }
 
 bool CvSelectionGroup::isBusy() const

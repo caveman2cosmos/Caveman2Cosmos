@@ -1715,7 +1715,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 
 				pkCapturedUnit->finishMoves();
 
-				if (!GET_PLAYER(eCapturingPlayer).isHuman())
+				if (!GET_PLAYER(eCapturingPlayer).isHumanPlayer())
 				{
 					pPlot = pkCapturedUnit->plot();
 					if (pPlot && !pPlot->isCity(false)
@@ -5769,7 +5769,7 @@ bool CvUnit::canEnterArea(TeamTypes eTeam, const CvArea* pArea, bool bIgnoreRigh
 // Returns the ID of the team to declare war against
 TeamTypes CvUnit::getDeclareWarMove(const CvPlot* pPlot) const
 {
-	FAssert(isHuman() || GET_PLAYER(getOwner()).isHumanDisabled());
+	FAssert(GET_PLAYER(getOwner()).isHumanPlayer(true));
 
 	if (getDomainType() != DOMAIN_AIR)
 	{
@@ -8160,7 +8160,7 @@ bool CvUnit::nuke(int iX, int iY, bool bTrap)
 		{
 			for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 			{
-				if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman())
+				if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHumanPlayer())
 				{
 					AddDLLMessage(
 						(PlayerTypes)iI, iI == getOwner(), GC.getEVENT_MESSAGE_TIME(),
@@ -8259,7 +8259,7 @@ bool CvUnit::nuke(int iX, int iY, bool bTrap)
 
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman())
+		if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHumanPlayer())
 		{
 			AddDLLMessage(
 				(PlayerTypes)iI, iI == getOwner(), GC.getEVENT_MESSAGE_TIME(),
@@ -9104,7 +9104,7 @@ bool CvUnit::pillage()
 										pPlot->getX(), pPlot->getY()
 									);
 								}
-								if (GET_PLAYER(ePlayerPillaged).isHuman())
+								if (GET_PLAYER(ePlayerPillaged).isHumanPlayer())
 								{
 									AddDLLMessage(
 										ePlayerPillaged, false, GC.getEVENT_MESSAGE_TIME(),
@@ -9166,7 +9166,7 @@ bool CvUnit::pillage()
 						}
 					}
 				}
-				if (GET_PLAYER(ePlayerPillaged).isHuman())
+				if (GET_PLAYER(ePlayerPillaged).isHumanPlayer())
 				{
 					CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_IMP_DESTROYED", GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide(), getNameKey(), getVisualCivAdjective(pPlot->getTeam()));
 
@@ -9196,7 +9196,7 @@ bool CvUnit::pillage()
 			// A pillage implies a source of danger even if we can't see it
 			GET_PLAYER(ePlayerPillaged).addPlotDangerSource(pPlot, 100);
 
-			if (GET_PLAYER(ePlayerPillaged).isHuman())
+			if (GET_PLAYER(ePlayerPillaged).isHumanPlayer())
 			{
 				AddDLLMessage(
 					pPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
@@ -9860,7 +9860,7 @@ bool CvUnit::found()
 	}
 
 	//	For the AI we need to run the turn for the new city to get production set
-	if ( !GET_PLAYER(getOwner()).isHuman() )
+	if (!GET_PLAYER(getOwner()).isHumanPlayer())
 	{
 		CvCity* pCity = pPlot->getPlotCity();
 
@@ -11022,7 +11022,7 @@ bool CvUnit::espionage(EspionageMissionTypes eMission, int iData)
 
 	if (NO_ESPIONAGEMISSION == eMission)
 	{
-		FAssert(GET_PLAYER(getOwner()).isHuman());
+		FAssert(GET_PLAYER(getOwner()).isHumanPlayer());
 		CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_DOESPIONAGE);
 		if (NULL != pInfo)
 		{
@@ -11031,7 +11031,7 @@ bool CvUnit::espionage(EspionageMissionTypes eMission, int iData)
 	}
 	else if (GC.getEspionageMissionInfo(eMission).isTwoPhases() && -1 == iData)
 	{
-		FAssert(GET_PLAYER(getOwner()).isHuman());
+		FAssert(GET_PLAYER(getOwner()).isHumanPlayer());
 		CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_DOESPIONAGE_TARGET);
 		if (NULL != pInfo)
 		{
@@ -12176,7 +12176,7 @@ bool CvUnit::isHominid() const
 
 bool CvUnit::isHuman() const
 {
-	return GET_PLAYER(getOwner()).isHuman();
+	return GET_PLAYER(getOwner()).isHumanPlayer();
 }
 
 
@@ -12980,8 +12980,8 @@ int CvUnit::maxCombatStr(const CvPlot* pPlot, const CvUnit* pAttacker, CombatDet
 	}
 	else if (bSurroundedModifier
 	// And doesn't involve a human player
-	&& !GET_PLAYER(getOwner()).isHuman()
-	&& (pAttacker == NULL || !GET_PLAYER(pAttacker->getOwner()).isHuman()))
+	&& !GET_PLAYER(getOwner()).isHumanPlayer()
+	&& (pAttacker == NULL || !GET_PLAYER(pAttacker->getOwner()).isHumanPlayer()))
 	{
 		PROFILE("maxCombatStr.Cachable");
 
@@ -27860,7 +27860,7 @@ void CvUnit::tradeUnit(PlayerTypes eReceivingPlayer)
 	if (pTradeUnit != NULL)
 	{
 		pTradeUnit->convert(this);
-		if (receiver.isHuman())
+		if (receiver.isHumanPlayer())
 		{
 			AddDLLMessage(
 				eReceivingPlayer, false, GC.getEVENT_MESSAGE_TIME(),
@@ -27970,7 +27970,7 @@ bool CvUnit::spyNuke(int iX, int iY, bool bCaught)
 	);
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman())
+		if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHumanPlayer())
 		{
 			AddDLLMessage(
 				(PlayerTypes)iI, iI == getOwner(), GC.getEVENT_MESSAGE_TIME(),
@@ -34178,7 +34178,7 @@ void CvUnit::checkCityAttackDefensesDamage(CvCity* pCity, const std::vector<Unit
 									AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_COMBAT", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), pCity->getX(), pCity->getY());
 								}
 
-								if (GET_PLAYER(pCity->getOwner()).isHuman())
+								if (GET_PLAYER(pCity->getOwner()).isHumanPlayer())
 								{
 
 									szBuffer = gDLL->getText("TXT_KEY_MISC_BUILDING_DAMAGED_ATTACKER", getNameKey(), pCity->getNameKey(), GC.getBuildingInfo(eBuilding).getTextKeyWide(), iBuildingAttackDamageTotal);

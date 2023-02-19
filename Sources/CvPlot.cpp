@@ -920,7 +920,7 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 		{
 			setImprovementType(eUpgrade);
 		}
-		else if (GET_PLAYER(getOwner()).isHuman()) //send popup if player is human
+		else if (GET_PLAYER(getOwner()).isHumanPlayer()) //send popup if player is human
 		{
 			GET_PLAYER(getOwner()).upgradePlotPopup(getImprovementType(), getX(), getY());
 		}
@@ -4659,7 +4659,7 @@ bool CvPlot::isVisibleToWatchingHuman() const
 	for (int iI = 0; iI < MAX_PC_PLAYERS; ++iI)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive()
-		&&  GET_PLAYER((PlayerTypes)iI).isHuman()
+		&&  GET_PLAYER((PlayerTypes)iI).isHumanPlayer()
 		&& isVisible(GET_PLAYER((PlayerTypes)iI).getTeam(), false))
 		{
 			return true;

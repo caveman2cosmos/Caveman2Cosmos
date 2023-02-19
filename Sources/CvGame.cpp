@@ -509,7 +509,7 @@ void CvGame::onFinalInitialized(const bool bNewGame)
 		{
 			player.RecalculatePlotGroupHashes();
 
-			if (player.isHuman())
+			if (player.isHumanPlayer())
 			{
 				player.resetIdleCities();
 			}
@@ -2438,7 +2438,7 @@ void CvGame::testExtendedGame()
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
 		if(GET_PLAYER((PlayerTypes)iI).isAlive()
-		&& GET_PLAYER((PlayerTypes)iI).isHuman()
+		&& GET_PLAYER((PlayerTypes)iI).isHumanPlayer()
 		&& GET_PLAYER((PlayerTypes)iI).isExtendedGame())
 		{
 			setGameState(GAMESTATE_EXTENDED);
@@ -2967,7 +2967,7 @@ int CvGame::countHumanPlayersAlive() const
 
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman())
+		if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHumanPlayer())
 		{
 			iCount++;
 		}
@@ -3526,7 +3526,7 @@ int CvGame::countNumHumanGameTurnActive() const
 	int iCount = 0;
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isHuman() && GET_PLAYER((PlayerTypes)iI).isTurnActive())
+		if (GET_PLAYER((PlayerTypes)iI).isHumanPlayer() && GET_PLAYER((PlayerTypes)iI).isTurnActive())
 		{
 			iCount++;
 		}
@@ -4470,7 +4470,7 @@ void CvGame::setActivePlayer(PlayerTypes eNewValue, bool bForceHotSeat)
 		const int iActiveNetId = ((NO_PLAYER != eOldActivePlayer) ? GET_PLAYER(eOldActivePlayer).getNetID() : -1);
 		GC.getInitCore().setActivePlayer(eNewValue);
 
-		if (GET_PLAYER(eNewValue).isHuman() && (isHotSeat() || isPbem() || bForceHotSeat))
+		if (GET_PLAYER(eNewValue).isHumanPlayer() && (isHotSeat() || isPbem() || bForceHotSeat))
 		{
 			gDLL->getPassword(eNewValue);
 			setHotPbemBetweenTurns(false);
@@ -4681,7 +4681,7 @@ void CvGame::setGameState(GameStateTypes eNewValue)
 
 			for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 			{
-				if (GET_PLAYER((PlayerTypes)iI).isHuman())
+				if (GET_PLAYER((PlayerTypes)iI).isHumanPlayer())
 				{
 					// One more turn?
 					CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_EXTENDED_GAME);
@@ -5252,7 +5252,7 @@ void CvGame::makeSpecialBuildingValid(SpecialBuildingTypes eIndex, bool bAnnounc
 		{
 			for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 			{
-				if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman())
+				if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHumanPlayer())
 				{
 					AddDLLMessage(
 						(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(),
@@ -5270,7 +5270,7 @@ bool CvGame::isInAdvancedStart() const
 {
 	for (int iPlayer = 0; iPlayer < MAX_PC_PLAYERS; iPlayer++)
 	{
-		if (GET_PLAYER((PlayerTypes)iPlayer).isHuman() && GET_PLAYER((PlayerTypes)iPlayer).getAdvancedStartPoints() >= 0)
+		if (GET_PLAYER((PlayerTypes)iPlayer).isHumanPlayer() && GET_PLAYER((PlayerTypes)iPlayer).getAdvancedStartPoints() >= 0)
 		{
 			return true;
 		}
@@ -5341,7 +5341,7 @@ void CvGame::setHolyCity(ReligionTypes eIndex, const CvCity* pNewValue, bool bAn
 			);
 			for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 			{
-				if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman())
+				if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHumanPlayer())
 				{
 					if (pHolyCity->isRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false))
 					{
@@ -5727,7 +5727,7 @@ void CvGame::doTurn()
 		{
 			if (GET_PLAYER((PlayerTypes)iI).isAlive())
 			{
-				if (!isPbem() || GET_PLAYER((PlayerTypes)iI).isHuman())
+				if (!isPbem() || GET_PLAYER((PlayerTypes)iI).isHumanPlayer())
 				{
 					GET_PLAYER((PlayerTypes)iI).setTurnActive(true);
 					FAssert(getNumGameTurnActive() == 1);
@@ -6998,7 +6998,7 @@ void CvGame::updateMoves()
 			// orders on their automated units before hitting enter, but for the AI
 			// it is desirable to start with automated units in case the automation is broken
 			// be events, so that we know this before all other units process
-			if (player.isHuman())
+			if (player.isHumanPlayer())
 			{
 				PROFILE("CvGame::updateMoves.Human");
 
@@ -7420,7 +7420,7 @@ void CvGame::testVictory()
 				// Inform Players
 				for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 				{
-					if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman())
+					if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHumanPlayer())
 					{
 						if (GET_PLAYER((PlayerTypes)iI).getTeam() == iBestTeam)
 						{
@@ -7449,7 +7449,7 @@ void CvGame::testVictory()
 				{
 					for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 					{
-						if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman())
+						if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHumanPlayer())
 						{
 
 							if (GET_PLAYER((PlayerTypes)iI).getTeam() == iBestTeam)
@@ -7480,7 +7480,7 @@ void CvGame::testVictory()
 			setMercyRuleCounter(0);
 			for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 			{
-				if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman())
+				if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHumanPlayer())
 				{
 					AddDLLMessage(
 						(PlayerTypes)iI, true, GC.getEVENT_MESSAGE_TIME(),
@@ -8364,7 +8364,7 @@ void CvGame::read(FDataStreamBase* pStream)
 	{
 		for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 		{
-			if (GET_PLAYER((PlayerTypes)iI).isHuman())
+			if (GET_PLAYER((PlayerTypes)iI).isHumanPlayer())
 			{
 				setActivePlayer((PlayerTypes)iI);
 				break;
@@ -8611,7 +8611,7 @@ void CvGame::showEndGameSequence()
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
 		CvPlayer& player = GET_PLAYER((PlayerTypes)iI);
-		if (player.isHuman())
+		if (player.isHumanPlayer())
 		{
 			addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, (PlayerTypes)iI, gDLL->getText("TXT_KEY_MISC_TIME_SPENT", iHours, iMinutes));
 
@@ -9165,7 +9165,7 @@ VoteTriggeredData* CvGame::addVoteTriggered(VoteSourceTypes eVoteSource, const V
 			CvPlayer& kPlayer = GET_PLAYER((PlayerTypes)iI);
 			if (kPlayer.isAlive() && kPlayer.isVotingMember(eVoteSource))
 			{
-				if (kPlayer.isHuman())
+				if (kPlayer.isHumanPlayer())
 				{
 					CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_DIPLOVOTE);
 					if (NULL != pInfo)
@@ -9345,7 +9345,7 @@ void CvGame::doVoteResults()
 			for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 			{
 				CvPlayer& kPlayer = GET_PLAYER((PlayerTypes)iI);
-				if (kPlayer.isHuman())
+				if (kPlayer.isHumanPlayer())
 				{
 					bool bShow = kPlayer.isVotingMember(pVoteTriggered->eVoteSource);
 
@@ -9467,7 +9467,7 @@ void CvGame::doVoteSelection()
 				{
 					setVoteTimer(eVoteSource, 0);
 				}
-				else if (GET_PLAYER(eSecretaryPlayer).isHuman())
+				else if (GET_PLAYER(eSecretaryPlayer).isHumanPlayer())
 				{
 					CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_CHOOSEELECTION);
 					if (NULL != pInfo)
@@ -9688,7 +9688,7 @@ void CvGame::doFinalFive()
 
 			for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 			{
-				if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman())
+				if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHumanPlayer())
 				{
 					AddDLLMessage(
 						(PlayerTypes)iI, true, GC.getEVENT_MESSAGE_TIME(),
@@ -9710,7 +9710,7 @@ void CvGame::doHightoLow()
 	{
 		for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 		{
-			if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman() && getPlayerRank((PlayerTypes)iI) == 0)
+			if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHumanPlayer() && getPlayerRank((PlayerTypes)iI) == 0)
 			{
 				GC.getInitCore().reassignPlayerAdvanced((PlayerTypes)iI, getRankPlayer(countCivPlayersAlive() -1));
 				changeHighToLowCounter(1);
@@ -9734,16 +9734,14 @@ void CvGame::doIncreasingDifficulty()
 		if (getIncreasingDifficultyCounter() >= GC.getDefineINT("INCREASING_DIFFICULTY_TURN_CHECK_INCREMENTS") * GC.getGameSpeedInfo(getGameSpeedType()).getSpeedPercent() / 100
 		&& getHandicapType() < GC.getNumHandicapInfos() - 1)
 		{
-			setHandicapType((HandicapTypes)(getHandicapType() + 1));
+			setHandicapType(HandicapTypes(getHandicapType() + 1));
 			changeIncreasingDifficultyCounter(getIncreasingDifficultyCounter() * -1);
 
 			for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 			{
-				if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman())
+				if (GET_PLAYER((PlayerTypes)iI).isHumanPlayer(true) && GET_PLAYER((PlayerTypes)iI).isAlive())
 				{
-					GC.getInitCore().setHandicap((PlayerTypes)iI, getHandicapType());
-					GET_PLAYER((PlayerTypes)iI).AI_makeAssignWorkDirty();
-					algo::for_each(GET_PLAYER((PlayerTypes)iI).cities(), CvCity::fn::setInfoDirty(true));
+					GET_PLAYER((PlayerTypes)iI).setHandicap(getHandicapType());
 
 					AddDLLMessage(
 						(PlayerTypes)iI, true, GC.getEVENT_MESSAGE_TIME(),
@@ -9761,25 +9759,28 @@ void CvGame::doFlexibleDifficulty()
 	logging::logMsg("C2C.log", "doFlexibleDifficulty");
 
 	const bool bFlexDiffForAI = isModderGameOption(MODDERGAMEOPTION_AI_USE_FLEXIBLE_DIFFICULTY);
+	const bool bIncreasingDifficulty = isOption(GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY);
+	bool bHumanHandicapChanged = false;
 
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
 		const PlayerTypes ePlayer = static_cast<PlayerTypes>(iI);
-		CvPlayer& kPlayer = GET_PLAYER(ePlayer);
+		CvPlayer& playerX = GET_PLAYER(ePlayer);
 		//Check we are rebalancing the score for the team leader (and ignoring vassals)
-		if (kPlayer.isAlive() && GET_TEAM(kPlayer.getTeam()).getLeaderID() == ePlayer)
+		if (playerX.isAlive() && GET_TEAM(playerX.getTeam()).getLeaderID() == ePlayer)
 		{
-			int iTurns = kPlayer.getModderOption(MODDEROPTION_FLEXIBLE_DIFFICULTY_TURN_INCREMENTS);
+			int iTurns = playerX.getModderOption(MODDEROPTION_FLEXIBLE_DIFFICULTY_TURN_INCREMENTS);
 			int iTimer = getFlexibleDifficultyTimer(ePlayer);
+			const bool bHuman = playerX.isHumanPlayer();
 
-			if (iTurns <= 0 || bFlexDiffForAI && !kPlayer.isHuman())
+			if (iTurns <= 0 || bFlexDiffForAI && !bHuman)
 			{
 				iTurns = GC.getDefineINT("DEFAULT_FLEXIBLE_DIFFICULTY_TURN_INCREMENTS", 25);
 				iTurns *= GC.getGameSpeedInfo(getGameSpeedType()).getSpeedPercent();
 				iTurns /= 100;
 			}
 
-			logging::logMsg("C2C.log", "[Flexible Difficulty] (%d / %d) turns until next flexible difficulty check for Player: %S\n", iTimer, iTurns, kPlayer.getName());
+			logging::logMsg("C2C.log", "[Flexible Difficulty] (%d / %d) turns until next flexible difficulty check for Player: %S\n", iTimer, iTurns, playerX.getName());
 
 			//Increase timer
 			iTimer++;
@@ -9787,18 +9788,26 @@ void CvGame::doFlexibleDifficulty()
 
 			if (iTimer < iTurns) continue;
 
-			logging::logMsg("C2C.log", "[Flexible Difficulty] Player: %S, Checking Flexible Difficulty\n", kPlayer.getName());
+			logging::logMsg("C2C.log", "[Flexible Difficulty] Player: %S, Checking Flexible Difficulty\n", playerX.getName());
 
-			if (!kPlayer.isModderOption(MODDEROPTION_FLEXIBLE_DIFFICULTY)
-			&& (!bFlexDiffForAI || kPlayer.isHuman()))
+			if (!playerX.isModderOption(MODDEROPTION_FLEXIBLE_DIFFICULTY) && (!bFlexDiffForAI || bHuman))
 			{
 				continue;
 			}
-			logging::logMsg("C2C.log", "[Flexible Difficulty] Player: %S has Flexible Difficulty Enabled\n", kPlayer.getName());
-			int iMinHandicap = kPlayer.getModderOption(MODDEROPTION_FLEXIBLE_DIFFICULTY_MIN_DIFFICULTY);
-			int iMaxHandicap = kPlayer.getModderOption(MODDEROPTION_FLEXIBLE_DIFFICULTY_MAX_DIFFICULTY);
+			logging::logMsg("C2C.log", "[Flexible Difficulty] Player: %S has Flexible Difficulty Enabled\n", playerX.getName());
 
-			if (bFlexDiffForAI && !kPlayer.isHuman())
+			int iMinHandicap = 0;
+			// Toffer - The whole point of the increasing difficulty challenge is that the human handicap only increases.
+			if (bIncreasingDifficulty && playerX.isHumanPlayer(true))
+			{
+				iMinHandicap = playerX.getHandicapType();
+			}
+			else {
+				iMinHandicap = playerX.getModderOption(MODDEROPTION_FLEXIBLE_DIFFICULTY_MIN_DIFFICULTY);
+			}
+			int iMaxHandicap = playerX.getModderOption(MODDEROPTION_FLEXIBLE_DIFFICULTY_MAX_DIFFICULTY);
+
+			if (bFlexDiffForAI && !bHuman)
 			{
 				iMinHandicap = 0;
 				iMaxHandicap = GC.getNumHandicapInfos() - 1;
@@ -9809,12 +9818,6 @@ void CvGame::doFlexibleDifficulty()
 			}
 			//Reset counter
 			setFlexibleDifficultyTimer(ePlayer, 0);
-
-			//int iMinRank = kPlayer.getModderOption(MODDEROPTION_FLEXIBLE_DIFFICULTY_MIN_RANK);
-			//int iMaxRank = kPlayer.getModderOption(MODDEROPTION_FLEXIBLE_DIFFICULTY_MAX_RANK);
-			//if (iMaxRank < 0)
-			//	iMaxRank = MAX_INT;
-			//int iCurrentRank = getPlayerRank(ePlayer);
 
 			int iBestScore = MIN_INT;
 			int iAliveCount = 0;
@@ -9853,56 +9856,60 @@ void CvGame::doFlexibleDifficulty()
 			const int iCurrentScore = getPlayerScore(ePlayer);
 			logging::logMsg("C2C.log",
 				"[Flexible Difficulty] Player: %S, Score: %d, Difficulty: %S, Avg Score: %d, Std Dev: %d/100\n",
-				kPlayer.getName(), iCurrentScore,
-				GC.getHandicapInfo((HandicapTypes)kPlayer.getHandicapType()).getDescription(),
+				playerX.getName(), iCurrentScore,
+				GC.getHandicapInfo((HandicapTypes)playerX.getHandicapType()).getDescription(),
 				iMeanScore, stddev
 			);
 			int iNewHandicap =
 			(
-				kPlayer.getHandicapType() > iMaxHandicap
+				playerX.getHandicapType() > iMaxHandicap
 				?
 				iMaxHandicap
 				:
 				(
-					kPlayer.getHandicapType() < iMinHandicap
+					playerX.getHandicapType() < iMinHandicap
 					?
 					iMinHandicap
 					:
-					kPlayer.getHandicapType()
+					playerX.getHandicapType()
 				)
 			);
 			//Increased Difficulty (player's score is > 1 std dev away)
 			if (100*iCurrentScore > 100*iMeanScore + stddev)
 			{
-				logging::logMsg("C2C.log", "[Flexible Difficulty] Player: %S score is > 1 std dev above average.\n", kPlayer.getName());
+				logging::logMsg("C2C.log", "[Flexible Difficulty] Player: %S score is > 1 std dev above average.\n", playerX.getName());
 				if (iNewHandicap < (GC.getNumHandicapInfos() - 1) && iNewHandicap < iMaxHandicap)
 				{
 					logging::logMsg("C2C.log",
 						"[Flexible Difficulty] Player: %S difficulty is increasing from %S to %S\n",
-						kPlayer.getName(),
-						GC.getHandicapInfo(kPlayer.getHandicapType()).getDescription(),
-						GC.getHandicapInfo((HandicapTypes)(kPlayer.getHandicapType() + 1)).getDescription()
+						playerX.getName(),
+						GC.getHandicapInfo(playerX.getHandicapType()).getDescription(),
+						GC.getHandicapInfo((HandicapTypes)(playerX.getHandicapType() + 1)).getDescription()
 					);
 					iNewHandicap++;
 				}
 			}
 			else if (100*iCurrentScore < 100*iMeanScore - stddev)
 			{
-				logging::logMsg("C2C.log", "[Flexible Difficulty] Player: %S score is > 1 std dev below average.\n", kPlayer.getName());
+				logging::logMsg("C2C.log", "[Flexible Difficulty] Player: %S score is > 1 std dev below average.\n", playerX.getName());
 				if (iNewHandicap > 0 && iNewHandicap > iMinHandicap)
 				{
 					logging::logMsg("C2C.log",
 						"[Flexible Difficulty] Player: %S difficulty is decreasing from %S to %S\n",
-						kPlayer.getName(),
-						GC.getHandicapInfo(kPlayer.getHandicapType()).getDescription(),
-						GC.getHandicapInfo((HandicapTypes)(kPlayer.getHandicapType() - 1)).getDescription()
+						playerX.getName(),
+						GC.getHandicapInfo(playerX.getHandicapType()).getDescription(),
+						GC.getHandicapInfo((HandicapTypes)(playerX.getHandicapType() - 1)).getDescription()
 					);
 					iNewHandicap--;
 				}
 			}
-			if (iNewHandicap != kPlayer.getHandicapType())
+			if (iNewHandicap != playerX.getHandicapType())
 			{
-				const bool diffIncreasing = iNewHandicap > kPlayer.getHandicapType();
+				if (bHuman)
+				{
+					bHumanHandicapChanged = true;
+				}
+				const bool diffIncreasing = iNewHandicap > playerX.getHandicapType();
 				const char* TXT_KEY_DIFFICULTY_PLAYER_ID =
 				(
 					diffIncreasing
@@ -9916,8 +9923,8 @@ void CvGame::doFlexibleDifficulty()
 				//Inform all human players of any other players difficulty changes
 				for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
 				{
-					const CvPlayer& player = GET_PLAYER((PlayerTypes)iJ);
-					if (player.isAlive() && player.isHuman() && GET_TEAM(player.getTeam()).isHasMet(kPlayer.getTeam()))
+					const CvPlayer& playerY = GET_PLAYER((PlayerTypes)iJ);
+					if (playerY.isAlive() && playerY.isHumanPlayer() && GET_TEAM(playerY.getTeam()).isHasMet(playerX.getTeam()))
 					{
 						if (iJ == iI) // Difficulty increased for us
 						{
@@ -9940,7 +9947,7 @@ void CvGame::doFlexibleDifficulty()
 								(PlayerTypes)iJ, true, GC.getEVENT_MESSAGE_TIME(),
 								gDLL->getText(
 									TXT_KEY_DIFFICULTY_PLAYER_ID,
-									kPlayer.getCivilizationDescriptionKey()
+									playerX.getCivilizationDescriptionKey()
 								).GetCString(),
 								AS2D_ID, MESSAGE_TYPE_MAJOR_EVENT, NULL, GC.getCOLOR_WARNING_TEXT()
 							);
@@ -9948,15 +9955,14 @@ void CvGame::doFlexibleDifficulty()
 					}
 				}
 				//Change the difficulty
-				GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)iNewHandicap);
-
-				//Clean the interface
-				kPlayer.AI_makeAssignWorkDirty();
-				algo::for_each(kPlayer.cities(), CvCity::fn::setInfoDirty(true));
+				playerX.setHandicap(iNewHandicap);
 			}
 		}
 	}
-	averageHandicaps();
+	if (bHumanHandicapChanged)
+	{
+		averageHandicaps();
+	}
 }
 
 void CvGame::averageHandicaps()
@@ -9965,16 +9971,15 @@ void CvGame::averageHandicaps()
 	int iHumanCount = 0;
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman())
+		if (GET_PLAYER((PlayerTypes)iI).isHumanPlayer() && GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
-			iAverageHandicap += GET_PLAYER((PlayerTypes)iI).getHandicapType();
+			iAverageHandicap += 1 + GET_PLAYER((PlayerTypes)iI).getHandicapType();
 			iHumanCount++;
 		}
 	}
 	if (iHumanCount > 0)
 	{
 		iAverageHandicap /= iHumanCount;
-		iAverageHandicap = range(iAverageHandicap, 0, GC.getNumHandicapInfos() - 1);
 		setHandicapType((HandicapTypes)iAverageHandicap);
 	}
 }

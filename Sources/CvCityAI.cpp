@@ -485,7 +485,7 @@ bool CvCityAI::AI_avoidGrowth()
 	}
 
 	// AI should avoid growth when it has angry citizens, even if emphasizing great people
-	if (!(isHuman()) || (!AI_isEmphasizeYield(YIELD_FOOD) && !AI_isEmphasizeGreatPeople()))
+	if (!isHuman() || !AI_isEmphasizeYield(YIELD_FOOD) && !AI_isEmphasizeGreatPeople())
 	{
 		int iExtra = (isHuman()) ? 0 : 1;
 		int iHappinessLevel = happyLevel() - unhappyLevel(iExtra);
@@ -6289,7 +6289,7 @@ ProjectTypes CvCityAI::AI_bestProject() const
 
 				const int iTurnsLeft = getProductionTurnsLeft(((ProjectTypes)iI), 0);
 
-				if ((iTurnsLeft <= GC.getGame().AI_turnsPercent(10, GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent())) || !(GET_TEAM(getTeam()).isHuman()))
+				if ((iTurnsLeft <= GC.getGame().AI_turnsPercent(10, GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent())) || !GET_TEAM(getTeam()).isHuman())
 				{
 					if ((iTurnsLeft <= GC.getGame().AI_turnsPercent(20, GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent())) || (iProductionRank <= std::max(3, (GET_PLAYER(getOwner()).getNumCities() / 2))))
 					{
@@ -8132,7 +8132,7 @@ void CvCityAI::AI_doHurry(bool bForce)
 			{
 				/* Toffer - Disabled governors ability to rush.
 				// City governor hard limitation.
-				if (player.isHuman() && player.getHurriedCount() > 32)
+				if (player.isHumanPlayer() && player.getHurriedCount() > 32)
 				{
 					continue;
 				}

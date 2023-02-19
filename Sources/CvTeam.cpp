@@ -1471,7 +1471,7 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan)
 				for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 				{
 					if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(eTeam)
-					&& GET_PLAYER((PlayerTypes)iI).isHuman()
+					&& GET_PLAYER((PlayerTypes)iI).isHumanPlayer()
 					&& GET_PLAYER(getLeaderID()).canContact((PlayerTypes)iI))
 					{
 						CvDiploParameters* pDiplo = new CvDiploParameters(getLeaderID());
@@ -2714,7 +2714,7 @@ bool CvTeam::isHuman(const bool bCountDisabledHuman) const
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID())
-		&& (GET_PLAYER((PlayerTypes)iI).isHuman() || bCountDisabledHuman && GET_PLAYER((PlayerTypes)iI).isHumanDisabled()))
+		&&  GET_PLAYER((PlayerTypes)iI).isHumanPlayer(bCountDisabledHuman))
 		{
 			return true;
 		}
@@ -3009,7 +3009,7 @@ PlayerTypes CvTeam::getSecretaryID() const
 {
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID()) && GET_PLAYER((PlayerTypes)iI).isHuman())
+		if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID()) && GET_PLAYER((PlayerTypes)iI).isHumanPlayer())
 		{
 			return (PlayerTypes) iI;
 		}
@@ -3715,7 +3715,7 @@ void CvTeam::makeHasMet(TeamTypes eIndex, bool bNewDiplo)
 				for (int iI = 0; iI < MAX_PLAYERS; iI++)
 				{
 					if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID())
-					&& !GET_PLAYER((PlayerTypes)iI).isHuman())
+					&& !GET_PLAYER((PlayerTypes)iI).isHumanPlayer())
 					{
 						GET_PLAYER((PlayerTypes)iI).clearResearchQueue();
 						GET_PLAYER((PlayerTypes)iI).AI_makeProductionDirty();
@@ -3749,7 +3749,7 @@ void CvTeam::makeHasMet(TeamTypes eIndex, bool bNewDiplo)
 			{
 				if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(eIndex)
 				&&  GET_PLAYER(getLeaderID()).canContact((PlayerTypes)iI)
-				&&  GET_PLAYER((PlayerTypes)iI).isHuman())
+				&&  GET_PLAYER((PlayerTypes)iI).isHumanPlayer())
 				{
 					pDiplo = new CvDiploParameters(getLeaderID());
 					FAssertMsg(pDiplo != NULL, "pDiplo must be valid");
@@ -4571,7 +4571,7 @@ void CvTeam::processProjectChange(ProjectTypes eIndex, int iChange, int iOldProj
 			{
 				if (player.getTeam() == getID())
 				{
-					if (!player.isHuman())
+					if (!player.isHumanPlayer())
 					{
 						for (int iJ = 0; iJ < GC.getNumProjectInfos(); iJ++)
 						{
@@ -5346,7 +5346,7 @@ void CvTeam::setHasTech(TechTypes eTech, bool bNewValue, PlayerTypes ePlayer, bo
 						{
 							if (GC.getGame().isOption(GAMEOPTION_RELIGION_PICK))
 							{
-								if (GET_PLAYER(eBestPlayer).isHuman())
+								if (GET_PLAYER(eBestPlayer).isHumanPlayer())
 								{
 									GET_PLAYER(eBestPlayer).m_bChoosingReligion = true;
 									CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_FOUND_RELIGION, iI);
@@ -5523,7 +5523,7 @@ void CvTeam::setHasTech(TechTypes eTech, bool bNewValue, PlayerTypes ePlayer, bo
 			{
 				for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 				{
-					if (GET_PLAYER((PlayerTypes)iI).isAlive() && !GET_PLAYER((PlayerTypes)iI).isHuman()
+					if (GET_PLAYER((PlayerTypes)iI).isAlive() && !GET_PLAYER((PlayerTypes)iI).isHumanPlayer()
 					&&  GET_PLAYER((PlayerTypes)iI).isResearchingTech(eTech))
 					{
 						GET_PLAYER((PlayerTypes)iI).clearResearchQueue();
@@ -5568,7 +5568,7 @@ void CvTeam::setHasTech(TechTypes eTech, bool bNewValue, PlayerTypes ePlayer, bo
 			{
 				const CvPlayer& playerX = GET_PLAYER((PlayerTypes)iI);
 
-				if (playerX.isAliveAndTeam(getID()) && playerX.isHuman() && playerX.canRevolution(NULL)
+				if (playerX.isAliveAndTeam(getID()) && playerX.isHumanPlayer() && playerX.canRevolution(NULL)
 				&& (!bReligionFounded || playerX.getLastStateReligion() != NO_RELIGION || iI != ePlayer))
 				{
 					CivicOptionTypes eCivicOptionType = NO_CIVICOPTION;
@@ -6447,11 +6447,11 @@ int CvTeam::countNumHumanGameTurnActive() const
 
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
-		const CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);
+		const CvPlayer& playerX = GET_PLAYER((PlayerTypes)iI);
 
-		if (kLoopPlayer.isHuman() && kLoopPlayer.getTeam() == getID())
+		if (playerX.isHumanPlayer() && playerX.getTeam() == getID())
 		{
-			if (kLoopPlayer.isTurnActive())
+			if (playerX.isTurnActive())
 			{
 				++iCount;
 			}

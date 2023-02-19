@@ -1354,7 +1354,7 @@ void CvDLLWidgetData::doContactCiv(CvWidgetDataStruct &widgetDataStruct)
 
 	if (gDLL->shiftKey() && !gDLL->altKey())
 	{
-		if (GET_PLAYER((PlayerTypes)widgetDataStruct.m_iData1).isHuman()
+		if (GET_PLAYER((PlayerTypes)widgetDataStruct.m_iData1).isHumanPlayer()
 		&& widgetDataStruct.m_iData1 != GC.getGame().getActivePlayer())
 		{
 			gDLL->getInterfaceIFace()->showTurnLog((ChatTargetTypes)widgetDataStruct.m_iData1);
@@ -4520,7 +4520,7 @@ void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, 
 
 		if (eTeam != eActiveTeam)
 		{
-			if (!kPlayer.isHuman())
+			if (!kPlayer.isHumanPlayer())
 			{
 				if (!kPlayer.AI_isWillingToTalk(eActivePlayer))
 				{
@@ -4559,7 +4559,7 @@ void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, 
 		}
 	}
 
-	if (kPlayer.isHuman())
+	if (kPlayer.isHumanPlayer())
 	{
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_MISC_SHIFT_SEND_CHAT"));

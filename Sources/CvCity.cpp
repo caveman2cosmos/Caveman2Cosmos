@@ -248,7 +248,7 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 	reset(iID, eOwner, pPlot->getX(), pPlot->getY());
 
 	CvPlayer& player = GET_PLAYER(eOwner);
-	if (isHuman() || player.isHumanDisabled())
+	if (player.isHumanPlayer(true))
 	{
 		player.setIdleCity(getID(), true);
 	}
@@ -1232,7 +1232,7 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 	//AI_assignWorkingPlots();
 	clearOrderQueue();
 
-	if (m_orderQueue.empty() && (isHuman() || kOwner.isHumanDisabled()))
+	if (m_orderQueue.empty() && kOwner.isHumanPlayer(true))
 	{
 		kOwner.setIdleCity(getID(), false);
 	}
@@ -5556,7 +5556,7 @@ bool CvCity::isHominid() const
 
 bool CvCity::isHuman() const
 {
-	return GET_PLAYER(getOwner()).isHuman();
+	return GET_PLAYER(getOwner()).isHumanPlayer();
 }
 
 bool CvCity::isVisible(TeamTypes eTeam, bool bDebug) const
@@ -10722,7 +10722,7 @@ void CvCity::setCultureLevel(CultureLevelTypes eNewValue, bool bUpdatePlotGroups
 		{
 			for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 			{
-				if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman())
+				if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHumanPlayer())
 				{
 					if (isRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false))
 					{
@@ -14468,7 +14468,7 @@ void CvCity::setupBuilding(const CvBuildingInfo& kBuilding, const BuildingTypes 
 					);
 					for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 					{
-						if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman())
+						if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHumanPlayer())
 						{
 							if (isRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false))
 							{
@@ -14853,7 +14853,7 @@ void CvCity::setHasReligion(ReligionTypes eIndex, bool bNewValue, bool bAnnounce
 					for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 					{
 						if (GET_PLAYER((PlayerTypes)iI).isAlive()
-						&&  GET_PLAYER((PlayerTypes)iI).isHuman()
+						&&  GET_PLAYER((PlayerTypes)iI).isHumanPlayer()
 						&& isRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false)
 						&& (getOwner() == iI || GET_PLAYER((PlayerTypes)iI).getStateReligion() == eIndex || GET_PLAYER((PlayerTypes)iI).hasHolyCity(eIndex)))
 						{
@@ -14886,7 +14886,7 @@ void CvCity::setHasReligion(ReligionTypes eIndex, bool bNewValue, bool bAnnounce
 			for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 			{
 				if (GET_PLAYER((PlayerTypes)iI).isAlive()
-				&&  GET_PLAYER((PlayerTypes)iI).isHuman()
+				&&  GET_PLAYER((PlayerTypes)iI).isHumanPlayer()
 				&& isRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false)
 				&& (getOwner() == iI || GET_PLAYER((PlayerTypes)iI).getStateReligion() == eIndex || GET_PLAYER((PlayerTypes)iI).hasHolyCity(eIndex)))
 				{
@@ -14914,7 +14914,7 @@ void CvCity::setHasReligion(ReligionTypes eIndex, bool bNewValue, bool bAnnounce
 
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		if (!GET_PLAYER((PlayerTypes) iI).isHuman()
+		if (!GET_PLAYER((PlayerTypes) iI).isHumanPlayer()
 		&& (getTeam() == GET_PLAYER((PlayerTypes)iI).getTeam() || GET_TEAM(getTeam()).isVassal(GET_PLAYER((PlayerTypes)iI).getTeam())))
 		{
 			GET_PLAYER((PlayerTypes)iI).AI_setHasInquisitionTarget();
@@ -15072,7 +15072,7 @@ void CvCity::setHasCorporation(CorporationTypes eIndex, bool bNewValue, bool bAn
 		{
 			for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 			{
-				if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman()
+				if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHumanPlayer()
 				&& (getOwner() == iI || GET_PLAYER((PlayerTypes)iI).hasHeadquarters(eIndex)))
 				{
 					if (bNewValue)
@@ -15431,7 +15431,7 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 		return;
 	}
 
-	if (m_orderQueue.empty() && (isHuman() || owner.isHumanDisabled()))
+	if (m_orderQueue.empty() && owner.isHumanPlayer(true))
 	{
 		owner.setIdleCity(getID(), false);
 	}
@@ -15871,7 +15871,7 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 
 	if (m_orderQueue.empty())
 	{
-		if (isHuman() || owner.isHumanDisabled())
+		if (owner.isHumanPlayer(true))
 		{
 			owner.setIdleCity(getID(), true);
 		}
@@ -18955,7 +18955,7 @@ void CvCity::liberate(bool bConquest)
 	const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_LIBERATED", getNameKey(), GET_PLAYER(eOwner).getNameKey(), GET_PLAYER(ePlayer).getCivilizationAdjectiveKey());
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman() && isRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false))
+		if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHumanPlayer() && isRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false))
 		{
 			AddDLLMessage(
 				(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(),
@@ -20840,14 +20840,14 @@ void CvCity::setReligiouslyLimitedBuilding(BuildingTypes eIndex, bool bNewValue)
 
 		if (!bNewValue)
 		{
-			if (/*!GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_IGNORE_DISABLED_ALERTS) &&*/ GET_PLAYER(getOwner()).isHuman())
+			if (/*!GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_IGNORE_DISABLED_ALERTS) &&*/ GET_PLAYER(getOwner()).isHumanPlayer())
 			{
 
 				const CvWString szBuffer = gDLL->getText("TXT_KEY_CITY_RELIGIOUSLY_RESTORED_BUILDINGS", getNameKey(), GC.getReligionInfo(eReligion).getDescription(), GC.getBuildingInfo(eIndex).getDescription());
 				AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, GC.getBuildingInfo(eIndex).getButton(), GC.getCOLOR_WHITE(), getX(), getY(), true, true);
 			}
 		}
-		else if (/*!GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_IGNORE_DISABLED_ALERTS) && */GET_PLAYER(getOwner()).isHuman())
+		else if (/*!GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_IGNORE_DISABLED_ALERTS) && */GET_PLAYER(getOwner()).isHumanPlayer())
 		{
 
 			const CvWString szBuffer = gDLL->getText("TXT_KEY_CITY_RELIGIOUSLY_DISABLED_BUILDINGS", getNameKey(), GC.getReligionInfo(eReligion).getDescription(), GC.getBuildingInfo(eIndex).getDescription());
