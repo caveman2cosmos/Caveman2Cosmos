@@ -787,24 +787,23 @@
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
+		<!-- Occupation timers scale to this; 0% revolt multiplier at this culture value. Don't use 0. -->
 		<DefineName>OCCUPATION_CULTURE_PERCENT_THRESHOLD</DefineName>
 		<iDefineIntVal>75</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>BASE_OCCUPATION_TURNS</DefineName>
-		<iDefineIntVal>3</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>OCCUPATION_TURNS_POPULATION_PERCENT</DefineName>
-		<iDefineIntVal>50</iDefineIntVal>
+		<iDefineIntVal>5</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>BASE_REVOLT_OCCUPATION_TURNS</DefineName>
 		<iDefineIntVal>2</iDefineIntVal>
 	</Define>
 	<Define>
+		<!-- % of city revolt/turn chance added to revolt timer. E.g. if a city with 4% revolt chance/turn
+			 successfully revolts, 25 here means it adds 1 turn to revolt timer -->
 		<DefineName>REVOLT_OCCUPATION_TURNS_PERCENT</DefineName>
-		<iDefineIntVal>3</iDefineIntVal>
+		<iDefineIntVal>25</iDefineIntVal>
 	</Define>
 	<Define>
 		<!-- 50 halves effect of culture ratio on liklihood of culture revolt, 100 is baseline, 200 doubles. -->
