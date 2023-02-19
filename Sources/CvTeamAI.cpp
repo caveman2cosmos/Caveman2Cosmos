@@ -1395,7 +1395,7 @@ int CvTeamAI::AI_techTradeVal(TechTypes eTech, TeamTypes eTeam)
 
 		CvPlayerAI& teamLeader = GET_PLAYER(getLeaderID());
 
-		const bool bAsync = (teamLeader.isHuman() || GET_PLAYER(GET_TEAM(eTeam).getLeaderID()).isHuman());
+		const bool bAsync = (teamLeader.isHumanPlayer() || GET_PLAYER(GET_TEAM(eTeam).getLeaderID()).isHumanPlayer());
 
 		const float iOurActualTechValue = (float)teamLeader.AI_TechValueCached(eTech, bAsync, true);
 		const float iAverageTechValue = (float)teamLeader.AI_averageCurrentTechValue(eTech, bAsync);
@@ -3346,7 +3346,7 @@ void CvTeamAI::AI_setWarPlan(TeamTypes eIndex, WarPlanTypes eNewValue, bool bWar
 
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
-			if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID()) && !GET_PLAYER((PlayerTypes)iI).isHuman())
+			if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID()) && !GET_PLAYER((PlayerTypes)iI).isHumanPlayer())
 			{
 				GET_PLAYER((PlayerTypes)iI).AI_makeProductionDirty();
 			}

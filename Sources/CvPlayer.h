@@ -139,7 +139,8 @@ public:
 	bool hasTrait(TraitTypes eTrait) const;
 
 	void setHumanDisabled(bool newVal);
-	bool isHumanDisabled() const;
+	inline bool isHumanDisabled() const { return m_bDisableHuman; }
+	inline bool isHumanPlayer(const bool bCountDisabled = false) const { return m_bHuman || bCountDisabled && m_bDisableHuman; }
 	bool isNormalAI() const;
 
 	DllExport bool isHuman() const;

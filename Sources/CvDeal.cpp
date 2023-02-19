@@ -126,7 +126,7 @@ void CvDeal::addTrades(CLinkList<TradeData>* pFirstList, CLinkList<TradeData>* p
 			{
 				return;
 			}
-			if (GET_PLAYER(getFirstPlayer()).isHuman())
+			if (GET_PLAYER(getFirstPlayer()).isHumanPlayer())
 			{
 				iHumanValue += GET_PLAYER(getSecondPlayer()).AI_dealVal(getFirstPlayer(), pFirstList, true, 0);
 			}

@@ -79,13 +79,6 @@
 			<fAlpha>1</fAlpha>
 		</ColorVal>
 		<ColorVal>
-			<Type>COLOR_DARK_ORANGE</Type>
-			<fRed>1</fRed>
-			<fGreen>0.55</fGreen>
-			<fBlue>0</fBlue>
-			<fAlpha>1</fAlpha>
-		</ColorVal>
-		<ColorVal>
 			<Type>COLOR_GREEN</Type>
 			<fRed>0</fRed>
 			<fGreen>1</fGreen>
@@ -843,6 +836,13 @@
 			<fGreen>1</fGreen>
 			<fBlue>.28</fBlue>
 			<fAlpha>1.00</fAlpha>
+		</ColorVal>
+		<ColorVal>
+			<Type>COLOR_DARK_ORANGE</Type>
+			<fRed>1</fRed>
+			<fGreen>0.55</fGreen>
+			<fBlue>0</fBlue>
+			<fAlpha>1</fAlpha>
 		</ColorVal>
 	</ColorVals>
 </Civ4ColorVals>
