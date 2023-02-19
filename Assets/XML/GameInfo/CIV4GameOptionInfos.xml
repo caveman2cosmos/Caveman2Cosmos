@@ -15,54 +15,57 @@
 	or "This option is incompatible with, and thus will force, the [indicated game option(s)] to be OFF!"
 	and on the enforced option(s): "This option is required for, and will thus be forced ON, if [indicated game option] is used!"
 	and on the enforced off option(s): "This option is incompatible with, and will thus be forced OFF, if [indicated game option] is used!" -->
+<!-- Match ordering of these options with CvEnums.h -->
 <Civ4GameOptionInfos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Schema\Caveman2Cosmos.xsd">
 	<GameOptionInfos>
+		<!-- AI -->
 		<GameOptionInfo>
-			<Type>GAMEOPTION_ADVANCED_START</Type>
-			<Description>TXT_KEY_GAMEOPTION_ADVANCED_START</Description>
-			<Help>TXT_KEY_GAMEOPTION_ADVANCED_START_HELP</Help>
+			<Type>GAMEOPTION_AGGRESSIVE_AI</Type>
+			<Description>TXT_KEY_GAMEOPTION_AGGRESSIVE_AI</Description>
+			<Help>TXT_KEY_GAMEOPTION_AGGRESSIVE_AI_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>0</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_RUTHLESS_AI</Type>
+			<Description>TXT_KEY_GAMEOPTION_RUTHLESS_AI</Description>
+			<Help>TXT_KEY_GAMEOPTION_RUTHLESS_AI_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>0</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_RANDOM_PERSONALITIES</Type>
+			<Description>TXT_KEY_GAMEOPTION_RANDOM_PERSONALITIES</Description>
+			<Help>TXT_KEY_GAMEOPTION_RANDOM_PERSONALITIES_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<!-- Leader -->
+		<GameOptionInfo>
+			<Type>GAMEOPTION_LEADERHEAD_LEVELUPS</Type>
+			<Description>TXT_KEY_GAMEOPTION_LEADERHEAD_LEVELUPS</Description>
+			<Help>TXT_KEY_GAMEOPTION_LEADERHEAD_LEVELUPS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
-			<Type>GAMEOPTION_NEW_RANDOM_SEED</Type>
-			<Description>TXT_KEY_GAMEOPTION_NEW_RANDOM_SEED</Description>
-			<Help>TXT_KEY_GAMEOPTION_NEW_RANDOM_SEED_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>0</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_LOCK_MODS</Type>
-			<Description>TXT_KEY_GAMEOPTION_LOCK_MODS</Description>
-			<Help>TXT_KEY_GAMEOPTION_LOCK_MODS_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>0</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_NO_GOODY_HUTS</Type>
-			<Description>TXT_KEY_GAMEOPTION_NO_GOODY_HUTS</Description>
-			<Help>TXT_KEY_GAMEOPTION_NO_GOODY_HUTS_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>0</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_NO_FUTURE</Type>
-			<Description>TXT_KEY_GAMEOPTION_NO_FUTURE</Description>
-			<Help>TXT_KEY_GAMEOPTION_NO_FUTURE_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>0</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_COMPLETE_KILLS</Type>
-			<Description>TXT_KEY_GAMEOPTION_COMPLETE_KILLS</Description>
-			<Help>TXT_KEY_GAMEOPTION_COMPLETE_KILLS_HELP</Help>
+			<Type>GAMEOPTION_START_NO_POSITIVE_TRAITS</Type>
+			<Description>TXT_KEY_GAMEOPTION_START_NO_POSITIVE_TRAITS</Description>
+			<Help>TXT_KEY_GAMEOPTION_START_NO_POSITIVE_TRAITS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
-			<Type>GAMEOPTION_NO_EVENTS</Type>
-			<Description>TXT_KEY_GAMEOPTION_NO_EVENTS</Description>
-			<Help>TXT_KEY_GAMEOPTION_NO_EVENTS_HELP</Help>
+			<Type>GAMEOPTION_PURE_TRAITS</Type>
+			<Description>TXT_KEY_GAMEOPTION_PURE_TRAITS</Description>
+			<Help>TXT_KEY_GAMEOPTION_PURE_TRAITS_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_NO_NEGATIVE_TRAITS</Type>
+			<Description>TXT_KEY_GAMEOPTION_NO_NEGATIVE_TRAITS</Description>
+			<Help>TXT_KEY_GAMEOPTION_NO_NEGATIVE_TRAITS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
@@ -75,6 +78,14 @@
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
+			<Type>GAMEOPTION_COMPLEX_TRAITS</Type>
+			<Description>TXT_KEY_GAMEOPTION_COMPLEX_TRAITS</Description>
+			<Help>TXT_KEY_GAMEOPTION_COMPLEX_TRAITS_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<!-- Enable -->
+		<GameOptionInfo>
 			<Type>GAMEOPTION_UNITED_NATIONS</Type>
 			<Description>TXT_KEY_GAMEOPTION_UNITED_NATIONS</Description>
 			<Help>TXT_KEY_GAMEOPTION_UNITED_NATIONS_HELP</Help>
@@ -82,25 +93,40 @@
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
-			<Type>GAMEOPTION_ADVANCED_DIPLOMACY</Type>
-			<Description>TXT_KEY_GAMEOPTION_ADVANCED_DIPLOMACY</Description>
-			<Help>TXT_KEY_GAMEOPTION_ADVANCED_DIPLOMACY_HELP</Help>
+			<Type>GAMEOPTION_PERMANENT_ALLIANCES</Type>
+			<Description>TXT_KEY_GAMEOPTION_PERMANENT_ALLIANCES</Description>
+			<Help>TXT_KEY_GAMEOPTION_PERMANENT_ALLIANCES_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<!-- Disable -->
+		<GameOptionInfo>
+			<Type>GAMEOPTION_NO_EVENTS</Type>
+			<Description>TXT_KEY_GAMEOPTION_NO_EVENTS</Description>
+			<Help>TXT_KEY_GAMEOPTION_NO_EVENTS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
-			<Type>GAMEOPTION_REALISTIC_CORPORATIONS</Type>
-			<Description>TXT_KEY_GAMEOPTION_REALISTIC_CORPORATIONS</Description>
-			<Help>TXT_KEY_GAMEOPTION_REALISTIC_CORPORATIONS_HELP</Help>
+			<Type>GAMEOPTION_NO_FUTURE</Type>
+			<Description>TXT_KEY_GAMEOPTION_NO_FUTURE</Description>
+			<Help>TXT_KEY_GAMEOPTION_NO_FUTURE_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>0</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_NO_NUKES</Type>
+			<Description>TXT_KEY_GAMEOPTION_NO_NUKES</Description>
+			<Help>TXT_KEY_GAMEOPTION_NO_NUKES_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
-			<Type>GAMEOPTION_ADVANCED_ESPIONAGE</Type>
-			<Description>TXT_KEY_GAMEOPTION_ADVANCED_ESPIONAGE</Description>
-			<Help>TXT_KEY_GAMEOPTION_ADVANCED_ESPIONAGE_HELP</Help>
+			<Type>GAMEOPTION_LOCK_MODS</Type>
+			<Description>TXT_KEY_GAMEOPTION_LOCK_MODS</Description>
+			<Help>TXT_KEY_GAMEOPTION_LOCK_MODS_HELP</Help>
 			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
+			<bVisible>0</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_NO_CITY_RAZING</Type>
@@ -109,6 +135,78 @@
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_UNLIMITED_WONDERS</Type>
+			<Description>TXT_KEY_GAMEOPTION_UNLIMITED_WONDERS</Description>
+			<Help>TXT_KEY_GAMEOPTION_UNLIMITED_WONDERS_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_UNLIMITED_NATIONAL_UNITS</Type>
+			<Description>TXT_KEY_GAMEOPTION_UNLIMITED_NATIONAL_UNITS</Description>
+			<Help>TXT_KEY_GAMEOPTION_UNLIMITED_NATIONAL_UNITS_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_NO_VASSAL_STATES</Type>
+			<Description>TXT_KEY_GAMEOPTION_NO_VASSAL_STATES</Description>
+			<Help>TXT_KEY_GAMEOPTION_NO_VASSAL_STATES_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_NO_TECH_BROKERING</Type>
+			<Description>TXT_KEY_GAMEOPTION_NO_TECH_BROKERING</Description>
+			<Help>TXT_KEY_GAMEOPTION_NO_TECH_BROKERING_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_NO_TECH_TRADING</Type>
+			<Description>TXT_KEY_GAMEOPTION_NO_TECH_TRADING</Description>
+			<Help>TXT_KEY_GAMEOPTION_NO_TECH_TRADING_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<!-- Tech -->
+		<GameOptionInfo>
+			<Type>GAMEOPTION_TECH_DIFFUSION</Type>
+			<Description>TXT_KEY_GAMEOPTION_TECH_DIFFUSION</Description>
+			<Help>TXT_KEY_GAMEOPTION_TECH_DIFFUSION_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_WIN_FOR_LOSING</Type>
+			<Description>TXT_KEY_GAMEOPTION_WIN_FOR_LOSING</Description>
+			<Help>TXT_KEY_GAMEOPTION_WIN_FOR_LOSING_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_NO_TECH_HANDICAPS_FOR_HUMANS</Type>
+			<Description>TXT_KEY_GAMEOPTION_NO_TECH_HANDICAPS_FOR_HUMANS</Description>
+			<Help>TXT_KEY_GAMEOPTION_NO_TECH_HANDICAPS_FOR_HUMANS_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_UPSCALED_RESEARCH_COSTS</Type>
+			<Description>TXT_KEY_GAMEOPTION_UPSCALED_RESEARCH_COSTS</Description>
+			<Help>TXT_KEY_GAMEOPTION_UPSCALED_RESEARCH_COSTS_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_BEELINE_STINGS</Type>
+			<Description>TXT_KEY_GAMEOPTION_BEELINE_STINGS</Description>
+			<Help>TXT_KEY_GAMEOPTION_BEELINE_STINGS_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<!-- Culture -->
 		<GameOptionInfo>
 			<Type>GAMEOPTION_NO_CITY_FLIPPING</Type>
 			<Description>TXT_KEY_GAMEOPTION_NO_CITY_FLIPPING</Description>
@@ -131,9 +229,16 @@
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
-			<Type>GAMEOPTION_1_CITY_TILE_FOUNDING</Type>
-			<Description>TXT_KEY_GAMEOPTION_1_CITY_TILE_FOUNDING</Description>
-			<Help>TXT_KEY_GAMEOPTION_1_CITY_TILE_FOUNDING_HELP</Help>
+			<Type>GAMEOPTION_FIXED_BORDERS</Type>
+			<Description>TXT_KEY_GAMEOPTION_FIXED_BORDERS</Description>
+			<Help>TXT_KEY_GAMEOPTION_FIXED_BORDERS_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_EQUILIBRIUM_CULTURE</Type>
+			<Description>TXT_KEY_GAMEOPTION_EQUILIBRIUM_CULTURE</Description>
+			<Help>TXT_KEY_GAMEOPTION_EQUILIBRIUM_CULTURE_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
@@ -145,11 +250,76 @@
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
+			<Type>GAMEOPTION_1_CITY_TILE_FOUNDING</Type>
+			<Description>TXT_KEY_GAMEOPTION_1_CITY_TILE_FOUNDING</Description>
+			<Help>TXT_KEY_GAMEOPTION_1_CITY_TILE_FOUNDING_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<!-- Religion -->
+		<GameOptionInfo>
+			<Type>GAMEOPTION_DIVINE_PROPHETS</Type>
+			<Description>TXT_KEY_GAMEOPTION_DIVINE_PROPHETS</Description>
+			<Help>TXT_KEY_GAMEOPTION_DIVINE_PROPHETS_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_RELIGIOUS_DISABLING</Type>
+			<Description>TXT_KEY_GAMEOPTION_RELIGIOUS_DISABLING</Description>
+			<Help>TXT_KEY_GAMEOPTION_RELIGIOUS_DISABLING_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_INQUISITIONS</Type>
+			<Description>TXT_KEY_GAMEOPTION_INQUISITIONS</Description>
+			<Help>TXT_KEY_GAMEOPTION_INQUISITIONS_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_LIMITED_RELIGIONS</Type>
+			<Description>TXT_KEY_GAMEOPTION_LIMITED_RELIGIONS</Description>
+			<Help>TXT_KEY_GAMEOPTION_LIMITED_RELIGIONS_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_PICK_RELIGION</Type>
+			<Description>TXT_KEY_GAMEOPTION_PICK_RELIGION</Description>
+			<Help>TXT_KEY_GAMEOPTION_PICK_RELIGION_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<!-- Expansion -->
+		<GameOptionInfo>
+			<Type>GAMEOPTION_ALWAYS_RAZE_CITIES</Type>
+			<Description>TXT_KEY_GAMEOPTION_ALWAYS_RAZE_CITIES</Description>
+			<Help>TXT_KEY_GAMEOPTION_ALWAYS_RAZE_CITIES_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_COMPLETE_KILLS</Type>
+			<Description>TXT_KEY_GAMEOPTION_COMPLETE_KILLS</Description>
+			<Help>TXT_KEY_GAMEOPTION_COMPLETE_KILLS_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
 			<Type>GAMEOPTION_LARGER_CITIES</Type>
 			<Description>TXT_KEY_GAMEOPTION_LARGER_CITIES</Description>
 			<Help>TXT_KEY_GAMEOPTION_LARGER_CITIES_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_MAXIMUM_POPULATION</Type>
+			<Description>TXT_KEY_GAMEOPTION_MAXIMUM_POPULATION</Description>
+			<Help>TXT_KEY_GAMEOPTION_MAXIMUM_POPULATION_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>0</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_OVEREXPANSION_PENALTIES</Type>
@@ -159,23 +329,24 @@
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
-			<Type>GAMEOPTION_UNLIMITED_WONDERS</Type>
-			<Description>TXT_KEY_GAMEOPTION_UNLIMITED_WONDERS</Description>
-			<Help>TXT_KEY_GAMEOPTION_UNLIMITED_WONDERS_HELP</Help>
+			<Type>GAMEOPTION_UPSCALED_BUILDING_AND_UNIT_COSTS</Type>
+			<Description>TXT_KEY_GAMEOPTION_UPSCALED_BUILDING_AND_UNIT_COSTS</Description>
+			<Help>TXT_KEY_GAMEOPTION_UPSCALED_BUILDING_AND_UNIT_COSTS_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<!-- Map -->
+		<GameOptionInfo>
+			<Type>GAMEOPTION_CULTURALLY_LINKED_STARTS</Type>
+			<Description>TXT_KEY_GAMEOPTION_CULTURALLY_LINKED_STARTS</Description>
+			<Help>TXT_KEY_GAMEOPTION_CULTURALLY_LINKED_STARTS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
-			<Type>GAMEOPTION_UNLIMITED_NATIONAL_UNITS</Type>
-			<Description>TXT_KEY_GAMEOPTION_UNLIMITED_NATIONAL_UNITS</Description>
-			<Help>TXT_KEY_GAMEOPTION_UNLIMITED_NATIONAL_UNITS_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_MAXIMUM_POPULATION</Type>
-			<Description>TXT_KEY_GAMEOPTION_MAXIMUM_POPULATION</Description>
-			<Help>TXT_KEY_GAMEOPTION_MAXIMUM_POPULATION_HELP</Help>
+			<Type>GAMEOPTION_NO_GOODY_HUTS</Type>
+			<Description>TXT_KEY_GAMEOPTION_NO_GOODY_HUTS</Description>
+			<Help>TXT_KEY_GAMEOPTION_NO_GOODY_HUTS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>0</bVisible>
 		</GameOptionInfo>
@@ -200,65 +371,7 @@
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_NO_BARBARIANS</Type>
-			<Description>TXT_KEY_GAMEOPTION_NO_BARBARIANS</Description>
-			<Help>TXT_KEY_GAMEOPTION_NO_BARBARIANS_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-			<EnforcesGameOptionOffTypes>
-				<GameOptionType>GAMEOPTION_BARBARIAN_WORLD</GameOptionType>
-			</EnforcesGameOptionOffTypes>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_RAGING_BARBARIANS</Type>
-			<Description>TXT_KEY_GAMEOPTION_RAGING_BARBARIANS</Description>
-			<Help>TXT_KEY_GAMEOPTION_RAGING_BARBARIANS_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_BARBARIAN_WORLD</Type>
-			<Description>TXT_KEY_GAMEOPTION_BARBARIAN_WORLD</Description>
-			<Help>TXT_KEY_GAMEOPTION_BARBARIAN_WORLD_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_BARBARIAN_CIV</Type>
-			<Description>TXT_KEY_GAMEOPTION_BARBARIAN_CIV</Description>
-			<Help>TXT_KEY_GAMEOPTION_BARBARIAN_CIV_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_BARBARIANS_ALWAYS_RAZE</Type>
-			<Description>TXT_KEY_GAMEOPTION_BARBARIAN_ALWAYS_RAZE</Description>
-			<Help>TXT_KEY_GAMEOPTION_BARBARIAN_ALWAYS_RAZE_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_NEANDERTHAL_CITIES</Type>
-			<Description>TXT_KEY_GAMEOPTION_NEANDERTHAL_CITIES</Description>
-			<Help>TXT_KEY_GAMEOPTION_NEANDERTHAL_CITIES_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_TELEPORT_HUNTING_AWARDS</Type>
-			<Description>TXT_KEY_GAMEOPTION_TELEPORT_HUNTING_AWARDS</Description>
-			<Help>TXT_KEY_GAMEOPTION_TELEPORT_HUNTING_AWARDS_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_PEACE_AMONG_NPCS</Type>
-			<Description>TXT_KEY_GAMEOPTION_PEACE_AMONG_NPCS</Description>
-			<Help>TXT_KEY_GAMEOPTION_PEACE_AMONG_NPCS_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
+		<!-- Animal -->
 		<GameOptionInfo>
 			<Type>GAMEOPTION_ANIMALS_STAY_OUT</Type>
 			<Description>TXT_KEY_GAMEOPTION_ANIMALS_STAY_OUT</Description>
@@ -284,194 +397,66 @@
 			</EnforcesGameOptionOffTypes>
 		</GameOptionInfo>
 		<GameOptionInfo>
-			<Type>GAMEOPTION_PICK_RELIGION</Type>
-			<Description>TXT_KEY_GAMEOPTION_PICK_RELIGION</Description>
-			<Help>TXT_KEY_GAMEOPTION_PICK_RELIGION_HELP</Help>
+			<Type>GAMEOPTION_TELEPORT_HUNTING_AWARDS</Type>
+			<Description>TXT_KEY_GAMEOPTION_TELEPORT_HUNTING_AWARDS</Description>
+			<Help>TXT_KEY_GAMEOPTION_TELEPORT_HUNTING_AWARDS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
-			<Type>GAMEOPTION_LIMITED_RELIGIONS</Type>
-			<Description>TXT_KEY_GAMEOPTION_LIMITED_RELIGIONS</Description>
-			<Help>TXT_KEY_GAMEOPTION_LIMITED_RELIGIONS_HELP</Help>
+			<Type>GAMEOPTION_PEACE_AMONG_NPCS</Type>
+			<Description>TXT_KEY_GAMEOPTION_PEACE_AMONG_NPCS</Description>
+			<Help>TXT_KEY_GAMEOPTION_PEACE_AMONG_NPCS_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<!-- Barbarian -->
+		<GameOptionInfo>
+			<Type>GAMEOPTION_NO_BARBARIANS</Type>
+			<Description>TXT_KEY_GAMEOPTION_NO_BARBARIANS</Description>
+			<Help>TXT_KEY_GAMEOPTION_NO_BARBARIANS_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+			<EnforcesGameOptionOffTypes>
+				<GameOptionType>GAMEOPTION_BARBARIAN_WORLD</GameOptionType>
+			</EnforcesGameOptionOffTypes>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_BARBARIANS_ALWAYS_RAZE</Type>
+			<Description>TXT_KEY_GAMEOPTION_BARBARIAN_ALWAYS_RAZE</Description>
+			<Help>TXT_KEY_GAMEOPTION_BARBARIAN_ALWAYS_RAZE_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
-			<Type>GAMEOPTION_INQUISITIONS</Type>
-			<Description>TXT_KEY_GAMEOPTION_INQUISITIONS</Description>
-			<Help>TXT_KEY_GAMEOPTION_INQUISITIONS_HELP</Help>
+			<Type>GAMEOPTION_BARBARIAN_CIV</Type>
+			<Description>TXT_KEY_GAMEOPTION_BARBARIAN_CIV</Description>
+			<Help>TXT_KEY_GAMEOPTION_BARBARIAN_CIV_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
-			<Type>GAMEOPTION_DIVINE_PROPHETS</Type>
-			<Description>TXT_KEY_GAMEOPTION_DIVINE_PROPHETS</Description>
-			<Help>TXT_KEY_GAMEOPTION_DIVINE_PROPHETS_HELP</Help>
+			<Type>GAMEOPTION_BARBARIAN_WORLD</Type>
+			<Description>TXT_KEY_GAMEOPTION_BARBARIAN_WORLD</Description>
+			<Help>TXT_KEY_GAMEOPTION_BARBARIAN_WORLD_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
-			<Type>GAMEOPTION_RELIGIOUS_DISABLING</Type>
-			<Description>TXT_KEY_GAMEOPTION_RELIGIOUS_DISABLING</Description>
-			<Help>TXT_KEY_GAMEOPTION_RELIGIOUS_DISABLING_HELP</Help>
+			<Type>GAMEOPTION_NEANDERTHAL_CITIES</Type>
+			<Description>TXT_KEY_GAMEOPTION_NEANDERTHAL_CITIES</Description>
+			<Help>TXT_KEY_GAMEOPTION_NEANDERTHAL_CITIES_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
-			<Type>GAMEOPTION_RANDOM_PERSONALITIES</Type>
-			<Description>TXT_KEY_GAMEOPTION_RANDOM_PERSONALITIES</Description>
-			<Help>TXT_KEY_GAMEOPTION_RANDOM_PERSONALITIES_HELP</Help>
+			<Type>GAMEOPTION_RAGING_BARBARIANS</Type>
+			<Description>TXT_KEY_GAMEOPTION_RAGING_BARBARIANS</Description>
+			<Help>TXT_KEY_GAMEOPTION_RAGING_BARBARIANS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_PERMANENT_ALLIANCES</Type>
-			<Description>TXT_KEY_GAMEOPTION_PERMANENT_ALLIANCES</Description>
-			<Help>TXT_KEY_GAMEOPTION_PERMANENT_ALLIANCES_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_START_AS_MINORS</Type>
-			<Description>TXT_KEY_GAMEOPTION_START_AS_MINORS</Description>
-			<Help>TXT_KEY_GAMEOPTION_START_AS_MINORS_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_CULTURALLY_LINKED_STARTS</Type>
-			<Description>TXT_KEY_GAMEOPTION_CULTURALLY_LINKED_STARTS</Description>
-			<Help>TXT_KEY_GAMEOPTION_CULTURALLY_LINKED_STARTS_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_NO_VASSAL_STATES</Type>
-			<Description>TXT_KEY_GAMEOPTION_NO_VASSAL_STATES</Description>
-			<Help>TXT_KEY_GAMEOPTION_NO_VASSAL_STATES_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_REVOLUTION</Type>
-			<Description>TXT_KEY_GAMEOPTION_REVOLUTION</Description>
-			<Help>TXT_KEY_GAMEOPTION_REVOLUTION_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_AGGRESSIVE_AI</Type>
-			<Description>TXT_KEY_GAMEOPTION_AGGRESSIVE_AI</Description>
-			<Help>TXT_KEY_GAMEOPTION_AGGRESSIVE_AI_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>0</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_RUTHLESS_AI</Type>
-			<Description>TXT_KEY_GAMEOPTION_RUTHLESS_AI</Description>
-			<Help>TXT_KEY_GAMEOPTION_RUTHLESS_AI_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>0</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_NO_TECH_TRADING</Type>
-			<Description>TXT_KEY_GAMEOPTION_NO_TECH_TRADING</Description>
-			<Help>TXT_KEY_GAMEOPTION_NO_TECH_TRADING_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_NO_TECH_BROKERING</Type>
-			<Description>TXT_KEY_GAMEOPTION_NO_TECH_BROKERING</Description>
-			<Help>TXT_KEY_GAMEOPTION_NO_TECH_BROKERING_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_TECH_DIFFUSION</Type>
-			<Description>TXT_KEY_GAMEOPTION_TECH_DIFFUSION</Description>
-			<Help>TXT_KEY_GAMEOPTION_TECH_DIFFUSION_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_WIN_FOR_LOSING</Type>
-			<Description>TXT_KEY_GAMEOPTION_WIN_FOR_LOSING</Description>
-			<Help>TXT_KEY_GAMEOPTION_WIN_FOR_LOSING_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_BEELINE_STINGS</Type>
-			<Description>TXT_KEY_GAMEOPTION_BEELINE_STINGS</Description>
-			<Help>TXT_KEY_GAMEOPTION_BEELINE_STINGS_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_NO_TECH_HANDICAPS_FOR_HUMANS</Type>
-			<Description>TXT_KEY_GAMEOPTION_NO_TECH_HANDICAPS_FOR_HUMANS</Description>
-			<Help>TXT_KEY_GAMEOPTION_NO_TECH_HANDICAPS_FOR_HUMANS_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_UPSCALED_RESEARCH_COSTS</Type>
-			<Description>TXT_KEY_GAMEOPTION_UPSCALED_RESEARCH_COSTS</Description>
-			<Help>TXT_KEY_GAMEOPTION_UPSCALED_RESEARCH_COSTS_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_UPSCALED_BUILDING_AND_UNIT_COSTS</Type>
-			<Description>TXT_KEY_GAMEOPTION_UPSCALED_BUILDING_AND_UNIT_COSTS</Description>
-			<Help>TXT_KEY_GAMEOPTION_UPSCALED_BUILDING_AND_UNIT_COSTS_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_NO_NEGATIVE_TRAITS</Type>
-			<Description>TXT_KEY_GAMEOPTION_NO_NEGATIVE_TRAITS</Description>
-			<Help>TXT_KEY_GAMEOPTION_NO_NEGATIVE_TRAITS_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_PURE_TRAITS</Type>
-			<Description>TXT_KEY_GAMEOPTION_PURE_TRAITS</Description>
-			<Help>TXT_KEY_GAMEOPTION_PURE_TRAITS_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_START_NO_POSITIVE_TRAITS</Type>
-			<Description>TXT_KEY_GAMEOPTION_START_NO_POSITIVE_TRAITS</Description>
-			<Help>TXT_KEY_GAMEOPTION_START_NO_POSITIVE_TRAITS_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_LEADERHEAD_LEVELUPS</Type>
-			<Description>TXT_KEY_GAMEOPTION_LEADERHEAD_LEVELUPS</Description>
-			<Help>TXT_KEY_GAMEOPTION_LEADERHEAD_LEVELUPS_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_COMPLEX_TRAITS</Type>
-			<Description>TXT_KEY_GAMEOPTION_COMPLEX_TRAITS</Description>
-			<Help>TXT_KEY_GAMEOPTION_COMPLEX_TRAITS_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_VANILLA_COMBAT_ENGINE</Type>
-			<Description>TXT_KEY_GAMEOPTION_VANILLA_COMBAT_ENGINE</Description>
-			<Help>TXT_KEY_GAMEOPTION_VANILLA_COMBAT_ENGINE_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
+		<!-- Combat -->
 		<GameOptionInfo>
 			<Type>GAMEOPTION_SIZE_MATTERS</Type>
 			<Description>TXT_KEY_GAMEOPTION_SIZE_MATTERS</Description>
@@ -480,9 +465,16 @@
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
-			<Type>GAMEOPTION_FIGHT_OR_FLIGHT</Type>
-			<Description>TXT_KEY_GAMEOPTION_FIGHT_OR_FLIGHT</Description>
-			<Help>TXT_KEY_GAMEOPTION_FIGHT_OR_FLIGHT_HELP</Help>
+			<Type>GAMEOPTION_STRENGTH_IN_NUMBERS</Type>
+			<Description>TXT_KEY_GAMEOPTION_STRENGTH_IN_NUMBERS</Description>
+			<Help>TXT_KEY_GAMEOPTION_STRENGTH_IN_NUMBERS_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>0</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_SAD</Type>
+			<Description>TXT_KEY_GAMEOPTION_SAD</Description>
+			<Help>TXT_KEY_GAMEOPTION_SAD_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
@@ -504,16 +496,16 @@
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
+			<Type>GAMEOPTION_FIGHT_OR_FLIGHT</Type>
+			<Description>TXT_KEY_GAMEOPTION_FIGHT_OR_FLIGHT</Description>
+			<Help>TXT_KEY_GAMEOPTION_FIGHT_OR_FLIGHT_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
 			<Type>GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS</Type>
 			<Description>TXT_KEY_GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS</Description>
 			<Help>TXT_KEY_GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>0</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_STRENGTH_IN_NUMBERS</Type>
-			<Description>TXT_KEY_GAMEOPTION_STRENGTH_IN_NUMBERS</Description>
-			<Help>TXT_KEY_GAMEOPTION_STRENGTH_IN_NUMBERS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>0</bVisible>
 		</GameOptionInfo>
@@ -549,30 +541,9 @@
 			</EnforcesGameOptionOnTypes>
 		</GameOptionInfo>
 		<GameOptionInfo>
-			<Type>GAMEOPTION_ONGOING_TRAINING</Type>
-			<Description>TXT_KEY_GAMEOPTION_ONGOING_TRAINING</Description>
-			<Help>TXT_KEY_GAMEOPTION_ONGOING_TRAINING_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>0</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_SAD</Type>
-			<Description>TXT_KEY_GAMEOPTION_SAD</Description>
-			<Help>TXT_KEY_GAMEOPTION_SAD_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
 			<Type>GAMEOPTION_REALISTIC_SIEGE</Type>
 			<Description>TXT_KEY_GAMEOPTION_REALISTIC_SIEGE</Description>
 			<Help>TXT_KEY_GAMEOPTION_REALISTIC_SIEGE_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_ZONE_OF_CONTROL</Type>
-			<Description>TXT_KEY_GAMEOPTION_ZONE_OF_CONTROL</Description>
-			<Help>TXT_KEY_GAMEOPTION_ZONE_OF_CONTROL_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
@@ -584,12 +555,20 @@
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
-			<Type>GAMEOPTION_FIXED_BORDERS</Type>
-			<Description>TXT_KEY_GAMEOPTION_FIXED_BORDERS</Description>
-			<Help>TXT_KEY_GAMEOPTION_FIXED_BORDERS_HELP</Help>
+			<Type>GAMEOPTION_NEW_RANDOM_SEED</Type>
+			<Description>TXT_KEY_GAMEOPTION_NEW_RANDOM_SEED</Description>
+			<Help>TXT_KEY_GAMEOPTION_NEW_RANDOM_SEED_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>0</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_VANILLA_COMBAT_ENGINE</Type>
+			<Description>TXT_KEY_GAMEOPTION_VANILLA_COMBAT_ENGINE</Description>
+			<Help>TXT_KEY_GAMEOPTION_VANILLA_COMBAT_ENGINE_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
+		<!-- Unit -->
 		<GameOptionInfo>
 			<Type>GAMEOPTION_GREAT_COMMANDERS</Type>
 			<Description>TXT_KEY_GAMEOPTION_GREAT_COMMANDERS</Description>
@@ -598,16 +577,23 @@
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
-			<Type>GAMEOPTION_INFINITE_XP</Type>
-			<Description>TXT_KEY_GAMEOPTION_INFINITE_XP</Description>
-			<Help>TXT_KEY_GAMEOPTION_INFINITE_XP_HELP</Help>
+			<Type>GAMEOPTION_ONGOING_TRAINING</Type>
+			<Description>TXT_KEY_GAMEOPTION_ONGOING_TRAINING</Description>
+			<Help>TXT_KEY_GAMEOPTION_ONGOING_TRAINING_HELP</Help>
 			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
+			<bVisible>0</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_XP_FROM_ASSIGNED_SPECIALISTS</Type>
 			<Description>TXT_KEY_GAMEOPTION_XP_FROM_ASSIGNED_SPECIALISTS</Description>
 			<Help>TXT_KEY_GAMEOPTION_XP_FROM_ASSIGNED_SPECIALISTS_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_INFINITE_XP</Type>
+			<Description>TXT_KEY_GAMEOPTION_INFINITE_XP</Description>
+			<Help>TXT_KEY_GAMEOPTION_INFINITE_XP_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
@@ -625,6 +611,21 @@
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
+		<!-- Advanced -->
+		<GameOptionInfo>
+			<Type>GAMEOPTION_ADVANCED_DIPLOMACY</Type>
+			<Description>TXT_KEY_GAMEOPTION_ADVANCED_DIPLOMACY</Description>
+			<Help>TXT_KEY_GAMEOPTION_ADVANCED_DIPLOMACY_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_ADVANCED_ESPIONAGE</Type>
+			<Description>TXT_KEY_GAMEOPTION_ADVANCED_ESPIONAGE</Description>
+			<Help>TXT_KEY_GAMEOPTION_ADVANCED_ESPIONAGE_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_ADVANCED_NUKES</Type>
 			<Description>TXT_KEY_GAMEOPTION_ADVANCED_NUKES</Description>
@@ -633,19 +634,20 @@
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
-			<Type>GAMEOPTION_NO_NUKES</Type>
-			<Description>TXT_KEY_GAMEOPTION_NO_NUKES</Description>
-			<Help>TXT_KEY_GAMEOPTION_NO_NUKES_HELP</Help>
+			<Type>GAMEOPTION_ADVANCED_ROUTES</Type>
+			<Description>TXT_KEY_GAMEOPTION_ADVANCED_ROUTES</Description>
+			<Help>TXT_KEY_GAMEOPTION_ADVANCED_ROUTES_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
-			<Type>GAMEOPTION_ONE_CITY_CHALLENGE</Type>
-			<Description>TXT_KEY_GAMEOPTION_ONE_CITY_CHALLENGE</Description>
-			<Help>TXT_KEY_GAMEOPTION_ONE_CITY_CHALLENGE_HELP</Help>
+			<Type>GAMEOPTION_REALISTIC_CORPORATIONS</Type>
+			<Description>TXT_KEY_GAMEOPTION_REALISTIC_CORPORATIONS</Description>
+			<Help>TXT_KEY_GAMEOPTION_REALISTIC_CORPORATIONS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
+		<!-- Challenge -->
 		<GameOptionInfo>
 			<Type>GAMEOPTION_CHALLENGE_CUT_LOSERS</Type>
 			<Description>TXT_KEY_GAMEOPTION_CHALLENGE_CUT_LOSERS</Description>
@@ -668,23 +670,38 @@
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
-			<Type>GAMEOPTION_ADVANCED_ROUTES</Type>
-			<Description>TXT_KEY_GAMEOPTION_ADVANCED_ROUTES</Description>
-			<Help>TXT_KEY_GAMEOPTION_ADVANCED_ROUTES_HELP</Help>
+			<Type>GAMEOPTION_ONE_CITY_CHALLENGE</Type>
+			<Description>TXT_KEY_GAMEOPTION_ONE_CITY_CHALLENGE</Description>
+			<Help>TXT_KEY_GAMEOPTION_ONE_CITY_CHALLENGE_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<!-- Unsupported -->
+		<GameOptionInfo>
+			<Type>GAMEOPTION_ADVANCED_START</Type>
+			<Description>TXT_KEY_GAMEOPTION_ADVANCED_START</Description>
+			<Help>TXT_KEY_GAMEOPTION_ADVANCED_START_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
-			<Type>GAMEOPTION_ALWAYS_RAZE_CITIES</Type>
-			<Description>TXT_KEY_GAMEOPTION_ALWAYS_RAZE_CITIES</Description>
-			<Help>TXT_KEY_GAMEOPTION_ALWAYS_RAZE_CITIES_HELP</Help>
+			<Type>GAMEOPTION_START_AS_MINORS</Type>
+			<Description>TXT_KEY_GAMEOPTION_START_AS_MINORS</Description>
+			<Help>TXT_KEY_GAMEOPTION_START_AS_MINORS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
-			<Type>GAMEOPTION_EQUILIBRIUM_CULTURE</Type>
-			<Description>TXT_KEY_GAMEOPTION_EQUILIBRIUM_CULTURE</Description>
-			<Help>TXT_KEY_GAMEOPTION_EQUILIBRIUM_CULTURE_HELP</Help>
+			<Type>GAMEOPTION_ZONE_OF_CONTROL</Type>
+			<Description>TXT_KEY_GAMEOPTION_ZONE_OF_CONTROL</Description>
+			<Help>TXT_KEY_GAMEOPTION_ZONE_OF_CONTROL_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_REVOLUTION</Type>
+			<Description>TXT_KEY_GAMEOPTION_REVOLUTION</Description>
+			<Help>TXT_KEY_GAMEOPTION_REVOLUTION_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
