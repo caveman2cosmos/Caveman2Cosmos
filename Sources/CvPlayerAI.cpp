@@ -3995,8 +3995,8 @@ int CvPlayerAI::AI_goldTarget() const
 	);
 	int iGold = iEra * (iEra * 2 * getNumCities() + getTotalPopulation()) * iModGS / 300;
 
-	iGold *= 100 + calculateInflationRate();
-	iGold /= 100;
+	iGold *= getInflationMod10000();
+	iGold /= 10000;
 
 	const bool bAnyWar = GET_TEAM(getTeam()).hasWarPlan(true);
 	if (bAnyWar)
@@ -4027,7 +4027,7 @@ int CvPlayerAI::AI_goldTarget() const
 	{
 		if (getHasCorporationCount((CorporationTypes)iI) > 0)
 		{
-			iGold += std::max(0, GC.getCorporationInfo((CorporationTypes)iI).getSpreadCost() * (100 + calculateInflationRate())) / 50;
+			iGold += std::max(0, 2*GC.getCorporationInfo((CorporationTypes)iI).getSpreadCost());
 			break;
 		}
 	}
@@ -8914,8 +8914,6 @@ int CvPlayerAI::AI_maxGoldTrade(PlayerTypes ePlayer) const
 	}
 	if (iMaxGold > 0)
 	{
-		iMaxGold *= 100 + calculateInflationRate();
-		iMaxGold /= 100;
 		iMaxGold = std::min<int64_t>(iMaxGold, iGold);
 
 		iMaxGold -= (iMaxGold % GC.getDIPLOMACY_VALUE_REMAINDER());
@@ -13084,6 +13082,7 @@ CivicTypes CvPlayerAI::AI_bestCivic(CivicOptionTypes eCivicOption, int* iBestVal
 			}
 		}
 	}
+	FAssert(!bCivicOptionVacuum || eBestCivic != NO_CIVIC);
 	return eBestCivic;
 }
 

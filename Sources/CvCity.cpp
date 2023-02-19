@@ -1485,8 +1485,6 @@ void CvCity::doTurn()
 
 	if (getOccupationTimer() > 0)
 	{
-		// Blaze: v43 temp fix for games with over-long occupation timers from recent bug
-		if (getOccupationTimer() > 300) setOccupationTimer(2);
 		changeOccupationTimer(-1);
 	}
 
@@ -4713,13 +4711,14 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 		FErrorMsg("Trying to process in a building that is already processed in! Code copes, but it shouldn't have to!");
 		return;
 	}
+	CvPlayer& owner = GET_PLAYER(getOwner());
 
 	// Process the building
 	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 
 	if (!bReligiously && kBuilding.isOrbitalInfrastructure())
 	{
-		GET_PLAYER(getOwner()).noteOrbitalInfrastructureCountDirty();
+		owner.noteOrbitalInfrastructureCountDirty();
 	}
 
 	{
@@ -4763,7 +4762,7 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 		{
 			if (GC.getTraitInfo(eTrait).isCivilizationTrait())
 			{
-				GET_PLAYER(getOwner()).setHasTrait(eTrait, bChange);
+				owner.setHasTrait(eTrait, bChange);
 			}
 		}
 
@@ -4884,9 +4883,9 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 
 		changeCommercePerPopFromBuildings(eCommerceX, iChange * kBuilding.getCommercePerPopChange(iI));
 
-		changeBuildingCommerceChange(eBuilding, eCommerceX, iChange * GET_PLAYER(getOwner()).getBuildingCommerceChange(eBuilding, eCommerceX));
+		changeBuildingCommerceChange(eBuilding, eCommerceX, iChange * owner.getBuildingCommerceChange(eBuilding, eCommerceX));
 
-		changeBuildingCommerceModifier(eCommerceX, iChange * (kBuilding.getCommerceModifier(iI) + GET_PLAYER(getOwner()).getBuildingCommerceModifier(eBuilding, eCommerceX)));
+		changeBuildingCommerceModifier(eCommerceX, iChange * (kBuilding.getCommerceModifier(iI) + owner.getBuildingCommerceModifier(eBuilding, eCommerceX)));
 
 		changeCommerceHappinessPer(eCommerceX, kBuilding.getCommerceHappiness(iI) * iChange);
 	}
@@ -5323,7 +5322,7 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 	{
 		for (int i = 0; i < NUM_COMMERCE_TYPES; i++)
 		{
-			GET_PLAYER(getOwner()).changeBuildingCommerceChange(kChange.first, (CommerceTypes)i, kChange.second[i] * iChange);
+			owner.changeBuildingCommerceChange(kChange.first, (CommerceTypes)i, kChange.second[i] * iChange);
 		}
 	}
 /*
@@ -5340,10 +5339,10 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 		updateExtraBuildingHappiness();
 		updateExtraBuildingHealth();
 
-		GET_PLAYER(getOwner()).changeAssets(kBuilding.getAssetValue() * iChange);
+		owner.changeAssets(kBuilding.getAssetValue() * iChange);
 
 		area()->changePower(getOwner(), kBuilding.getPowerValue() * iChange);
-		GET_PLAYER(getOwner()).changePower(kBuilding.getPowerValue() * iChange);
+		owner.changePower(kBuilding.getPowerValue() * iChange);
 
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
@@ -5382,10 +5381,10 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 		const SpecialBuildingTypes eSpecialBuilding = kBuilding.getSpecialBuilding();
 		if (eSpecialBuilding != NO_SPECIALBUILDING)
 		{
-			GET_PLAYER(getOwner()).changeBuildingGroupCount(eSpecialBuilding, iChange);
+			owner.changeBuildingGroupCount(eSpecialBuilding, iChange);
 		}
 
-		GET_PLAYER(getOwner()).changeWondersScore(getWonderScore(eBuilding) * iChange);
+		owner.changeWondersScore(getWonderScore(eBuilding) * iChange);
 
 		for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
 		{
@@ -5395,8 +5394,6 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 			}
 		}
 	}
-
-	setMaintenanceDirty(true); // Always assume a change in buildings can change maintenance
 	updateBuildingCommerce();
 
 	m_buildingSourcedPropertyCache.clear();
@@ -5406,11 +5403,11 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 
 	if (!bReligiously && GC.getGame().isOption(GAMEOPTION_RELIGIOUS_DISABLING))
 	{
-		checkReligiousDisabling(eBuilding, GET_PLAYER(getOwner()));
-		setMaintenanceDirty(true);
+		checkReligiousDisabling(eBuilding, owner);
 		updateReligionHappiness();
 		updateReligionCommerce();
 	}
+	setMaintenanceDirty(true);
 	setLayoutDirty(true);
 }
 
@@ -6379,9 +6376,6 @@ int64_t CvCity::getHurryGold(const HurryTypes eHurry, int iHurryCost) const
 	}
 	int64_t iGold = iHurryCost * GC.getHurryInfo(eHurry).getGoldPerProduction();
 
-	iGold *= 100 + GET_PLAYER(getOwner()).getHurriedCount();
-	iGold /= 100;
-
 	FAssert(iGold <= 2000000000); // We'll need to take measures if this comes up
 
 	return std::max<int64_t>(1, iGold);
@@ -7084,68 +7078,70 @@ void CvCity::setPopulation(int iNewValue, bool bNormal)
 {
 	const int iOldPopulation = getPopulation();
 
-	if (iOldPopulation != iNewValue)
+	if (iOldPopulation == iNewValue)
 	{
-		m_iPopulation = iNewValue;
+		return;
+	}
+	m_iPopulation = iNewValue;
 
-		FASSERT_NOT_NEGATIVE(iNewValue);
+	FASSERT_NOT_NEGATIVE(iNewValue);
 
-		GET_PLAYER(getOwner()).invalidatePopulationRankCache();
+	CvPlayer& owner = GET_PLAYER(getOwner());
+	owner.invalidatePopulationRankCache();
 
-		if (iNewValue > getHighestPopulation())
+	if (iNewValue > getHighestPopulation())
+	{
+		setHighestPopulation(iNewValue);
+	}
+
+	area()->changePopulationPerPlayer(getOwner(), (iNewValue - iOldPopulation));
+	owner.changeTotalPopulation(iNewValue - iOldPopulation);
+	GET_TEAM(getTeam()).changeTotalPopulation(iNewValue - iOldPopulation);
+	GC.getGame().changeTotalPopulation(iNewValue - iOldPopulation);
+
+	if (iNewValue > 0)
+	{
+		if (plot()->getFeatureType() != NO_FEATURE)
 		{
-			setHighestPopulation(iNewValue);
-		}
-
-		area()->changePopulationPerPlayer(getOwner(), (iNewValue - iOldPopulation));
-		GET_PLAYER(getOwner()).changeTotalPopulation(iNewValue - iOldPopulation);
-		GET_TEAM(getTeam()).changeTotalPopulation(iNewValue - iOldPopulation);
-		GC.getGame().changeTotalPopulation(iNewValue - iOldPopulation);
-
-		if (iNewValue > 0)
-		{
-			if (plot()->getFeatureType() != NO_FEATURE)
+			const int iPopDestroys = GC.getFeatureInfo(plot()->getFeatureType()).getPopDestroys();
+			if (iPopDestroys > -1 && iNewValue >= iPopDestroys)
 			{
-				const int iPopDestroys = GC.getFeatureInfo(plot()->getFeatureType()).getPopDestroys();
-				if (iPopDestroys > -1 && iNewValue >= iPopDestroys)
-				{
-					plot()->setFeatureType(NO_FEATURE);
-				}
+				plot()->setFeatureType(NO_FEATURE);
 			}
-			updateFeatureHealth();
-			if (bNormal)
-			{
-				checkBuildings();
-			}
-
-			if (
-				!isHuman()
-			&&
-				(
-					iOldPopulation == 1 && iNewValue > 1
-					||
-					iNewValue == 1 && iOldPopulation > 1
-					||
-					iNewValue > iOldPopulation && GET_PLAYER(getOwner()).getNumCities() <= 2
-				)
-			) AI_setChooseProductionDirty(true);
 		}
-		plot()->updateYield();
-		setMaintenanceDirty(true);
-
-		GET_PLAYER(getOwner()).AI_makeAssignWorkDirty();
-
-		setInfoDirty(true);
-		setLayoutDirty(true);
-
-		plot()->plotAction(PUF_makeInfoBarDirty);
-
-		if (isCitySelected())
+		updateFeatureHealth();
+		if (bNormal)
 		{
-			gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
-			gDLL->getInterfaceIFace()->setDirty(CityScreen_DIRTY_BIT, true);
-			gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
+			checkBuildings();
 		}
+
+		if (
+			!isHuman()
+		&&
+			(
+				iOldPopulation == 1 && iNewValue > 1
+				||
+				iNewValue == 1 && iOldPopulation > 1
+				||
+				iNewValue > iOldPopulation && owner.getNumCities() <= 2
+			)
+		) AI_setChooseProductionDirty(true);
+	}
+	plot()->updateYield();
+	owner.setMaintenanceDirty(true);
+
+	owner.AI_makeAssignWorkDirty();
+
+	setInfoDirty(true);
+	setLayoutDirty(true);
+
+	plot()->plotAction(PUF_makeInfoBarDirty);
+
+	if (isCitySelected())
+	{
+		gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
+		gDLL->getInterfaceIFace()->setDirty(CityScreen_DIRTY_BIT, true);
+		gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
 	}
 }
 
@@ -7591,26 +7587,23 @@ void CvCity::changeNumBuildings(int iChange)
 }
 
 
-int CvCity::getGovernmentCenterCount() const
-{
-	return m_iGovernmentCenterCount;
-}
-
-
 bool CvCity::isGovernmentCenter() const
 {
-	return (getGovernmentCenterCount() > 0);
+	return m_iGovernmentCenterCount > 0;
 }
-
 
 void CvCity::changeGovernmentCenterCount(int iChange)
 {
 	if (iChange != 0)
 	{
+		const bool bGovernmentCenter = m_iGovernmentCenterCount > 0;
 		m_iGovernmentCenterCount += iChange;
-		FASSERT_NOT_NEGATIVE(getGovernmentCenterCount());
+		FASSERT_NOT_NEGATIVE(m_iGovernmentCenterCount);
 
-		setMaintenanceDirty(true);
+		if (bGovernmentCenter != isGovernmentCenter())
+		{
+			GET_PLAYER(getOwner()).setMaintenanceDirty(true);
+		}
 	}
 }
 
@@ -7791,18 +7784,19 @@ int CvCity::getEffectiveMaintenanceModifier() const
 	return iModifier;
 }
 
-void CvCity::setMaintenanceDirty(bool bDirty) const
+void CvCity::setMaintenanceDirty(const bool bDirty, const bool bPlayer) const
 {
 	m_bMaintenanceDirty = bDirty;
-	if (bDirty)
+
+	if (bPlayer)
 	{
-		GET_PLAYER(getOwner()).setMaintenanceDirty(true);
+		GET_PLAYER(getOwner()).setMaintenanceDirty(bDirty, false);
 	}
 }
 
 void CvCity::updateMaintenance() const
 {
-	setMaintenanceDirty(false);
+	m_bMaintenanceDirty = false;
 
 	int iNewMaintenance = GC.getEraInfo(GET_PLAYER(getOwner()).getCurrentEra()).getInitialCityMaintenancePercent();
 	if (!isDisorder() && !isWeLoveTheKingDay() && getPopulation() > 0)
@@ -7898,8 +7892,8 @@ int CvCity::calculateNumCitiesMaintenanceTimes100(int iExtraModifier) const
 	// Toffer - ToDo: Add global define called BASE_NUM_CITY_MAINTENANCE_PERCENT
 	int iNumCitiesPercent = 72;
 
-	iNumCitiesPercent *= 16 + getPopulation();
-	iNumCitiesPercent /= 16;
+	iNumCitiesPercent *= 13 + getPopulation();
+	iNumCitiesPercent /= 13;
 
 	/* Toffer - Skews early game balance too much between map sizes.
 	Large maps have a discount on distance maintenance, that is adequate, this doesn't skew early game very much as you settle close to capital anyway.
@@ -8050,10 +8044,6 @@ int CvCity::calculateCorporationMaintenanceTimes100(CorporationTypes eCorporatio
 	const CvPlayer& owner = GET_PLAYER(getOwner());
 	// National Modifier
 	iMaintenance = getModifiedIntValue(iMaintenance, owner.getCorporationMaintenanceModifier() + GET_TEAM(getTeam()).getCorporationMaintenanceModifier());
-
-	// Toffer - Huh, not sure why inflation here reduce corporation maintenance, does it make sense?
-	iMaintenance *= 100;
-	iMaintenance /= 100 + owner.calculateInflationRate();
 
 	FASSERT_NOT_NEGATIVE(iMaintenance);
 
@@ -10426,7 +10416,6 @@ void CvCity::setOccupationTimer(int iNewValue)
 		if (wasOccupation != isOccupation())
 		{
 			updateCorporation();
-			setMaintenanceDirty(true);
 			updateTradeRoutes();
 
 			updateCultureLevel(true);
@@ -10557,13 +10546,14 @@ void CvCity::setWeLoveTheKingDay(bool bNewValue)
 	{
 		m_bWeLoveTheKingDay = bNewValue;
 
+		CvPlayer& owner = GET_PLAYER(getOwner());
 		setMaintenanceDirty(true);
 
 		CivicTypes eCivic = NO_CIVIC;
 
 		for (int iI = 0; iI < GC.getNumCivicInfos(); iI++)
 		{
-			if (GET_PLAYER(getOwner()).isCivic((CivicTypes)iI))
+			if (owner.isCivic((CivicTypes)iI))
 			{
 				if (!CvWString(GC.getCivicInfo((CivicTypes)iI).getWeLoveTheKing()).empty())
 				{
@@ -10822,11 +10812,7 @@ void CvCity::updateCultureLevel(bool bUpdatePlotGroups)
 	}
 	CvGameAI& GAME = GC.getGame();
 
-	if (!isOccupation()
-	|| GAME.isOption(GAMEOPTION_REVOLUTION)
-	&& GAME.getGameTurn() - getGameTurnAcquired()
-		// Duration bigger than Max Occupation Timer
-		> GC.getBASE_OCCUPATION_TURNS() + getHighestPopulation()*GC.getOCCUPATION_TURNS_POPULATION_PERCENT()/100)
+	if (!isOccupation())
 	{
 		const GameSpeedTypes eSpeed = GAME.getGameSpeedType();
 		const int iCulture = getCultureTimes100(getOwner()) / 100;
@@ -12650,19 +12636,16 @@ void CvCity::updateCorporationYield(YieldTypes eIndex)
 void CvCity::updateCorporation()
 {
 	updateCorporationBonus();
-
 	updateBuildingCommerce();
 
 	for (int iI = 0; iI < NUM_YIELD_TYPES; ++iI)
 	{
 		updateCorporationYield((YieldTypes)iI);
 	}
-
 	for (int iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
 	{
 		updateCorporationCommerce((CommerceTypes)iI);
 	}
-
 	setMaintenanceDirty(true);
 }
 
@@ -21400,10 +21383,6 @@ int CvCity::calculateCorporateTaxes() const
 				iTaxes /= iAveragePopulation;
 			}
 			iTaxes = getModifiedIntValue(iTaxes, GET_PLAYER(getOwner()).getCorporationMaintenanceModifier() + GET_TEAM(getTeam()).getCorporationMaintenanceModifier());
-
-			// Toffer - Huh, not sure why inflation here reduce corporation tax, does it make sense?
-			iTaxes *= 100;
-			iTaxes /= 100 + GET_PLAYER(getOwner()).calculateInflationRate();
 
 			iTaxes *= 100;
 			iTaxes /= GC.getHandicapInfo(getHandicapType()).getCorporationMaintenancePercent();

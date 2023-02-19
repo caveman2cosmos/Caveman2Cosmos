@@ -5151,11 +5151,15 @@ int CvUnit::defenderValue(const CvUnit* pAttacker) const
 {
 	if (pAttacker)
 	{
-		// If the attacker is an air unit then does my current damage exceed the attackers damage limit?
-		if (pAttacker->getDomainType() == DOMAIN_AIR && getDamage() >= pAttacker->airCombatLimit(this)
-		// Some basic disqualifiers
-		|| canCoexistWithAttacker(*pAttacker)
-		|| !pAttacker->canAttack(*this))
+		if (pAttacker->getDomainType() == DOMAIN_AIR)
+		{
+			// Does my current damage exceed the attackers damage limit?
+			if (getDamage() >= pAttacker->airCombatLimit(this))
+			{
+				return 0;
+			}
+		}
+		else if (canCoexistWithAttacker(*pAttacker) || !pAttacker->canAttack(*this))
 		{
 			return 0;
 		}
@@ -10121,10 +10125,9 @@ bool CvUnit::canSpreadCorporation(const CvPlot* pPlot, CorporationTypes eCorpora
 
 int CvUnit::spreadCorporationCost(CorporationTypes eCorporation, const CvCity* pCity) const
 {
-	int iCost = std::max(0, GC.getCorporationInfo(eCorporation).getSpreadCost() * (100 + GET_PLAYER(getOwner()).calculateInflationRate()));
-	iCost /= 100;
+	int iCost = std::max(0, GC.getCorporationInfo(eCorporation).getSpreadCost());
 
-	if (NULL != pCity)
+	if (pCity)
 	{
 		if (getTeam() != pCity->getTeam() && !GET_TEAM(pCity->getTeam()).isVassal(getTeam()))
 		{
@@ -13906,21 +13909,9 @@ int CvUnit::combatLimit(const CvUnit* pOpponent) const
 
 int CvUnit::airCombatLimit(const CvUnit* pOpponent) const
 {
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre                                                                          **/
-/**  Date: 18.09.2009                                                                               **/
-/**  ModComp: TLOTags                                                                               **/
-/**  Reason Added: Implement iAirCombatLimitChange                                                  **/
-/**  Notes:                                                                                         **/
-/*****************************************************************************************************
-	return m_pUnitInfo->getAirCombatLimit();*/
-	//return (m_pUnitInfo->getAirCombatLimit() + getAirCombatLimitChange());
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 18.09.2009; TLOTags                                                             **/
-/*****************************************************************************************************/
+	int iTotal = m_pUnitInfo->getAirCombatLimit() + getAirCombatLimitChange();
 
-	int iTotal = (m_pUnitInfo->getAirCombatLimit() + getAirCombatLimitChange());
-	if (pOpponent != NULL)
+	if (pOpponent)
 	{
 		iTotal *= pOpponent->getMaxHP();
 		iTotal /= 100;
@@ -13931,23 +13922,13 @@ int CvUnit::airCombatLimit(const CvUnit* pOpponent) const
 
 bool CvUnit::canAirAttack() const
 {
-	if (isMadeAttack())
-	{
-		return false;
-	}
-
-	if (hasMoved())
-	{
-		return false;
-	}
-
-	return (airBaseCombatStr() > 0);
+	return !isMadeAttack() && !hasMoved() && airBaseCombatStr() > 0;
 }
 
 
 bool CvUnit::canAirDefend(const CvPlot* pPlot) const
 {
-	if (pPlot == NULL)
+	if (!pPlot)
 	{
 		pPlot = plot();
 	}
@@ -18855,8 +18836,6 @@ void CvUnit::collectBlockadeGold()
 			if (pCity->area() == area() || pCity->plot()->isAdjacentToArea(area()))
 			{
 				int iGold = pCity->calculateTradeProfit(pCity) * pCity->getTradeRoutes();
-				iGold *= (100 + GET_PLAYER(getOwner()).calculateInflationRate());
-				iGold /= 100;
 				if (iGold > 0)
 				{
 					pCity->setPlundered(true);
@@ -24576,13 +24555,8 @@ bool CvUnit::interceptTest(const CvPlot* pPlot)
 	if (GC.getGame().getSorenRandNum(100, "Evasion Rand") >= evasionProbability())
 	{
 		CvUnit* pInterceptor = bestInterceptor(pPlot);
-		if (pInterceptor != NULL)
+		if (pInterceptor)
 		{
-/************************************************************************************************/
-/* Afforess	                  Start		 03/6/10                                                */
-/*                                                                                              */
-/*  Better Air Interception                                                                     */
-/************************************************************************************************/
 			int iInterceptionOdds;
 			if (GC.getGame().isModderGameOption(MODDERGAMEOPTION_BETTER_INTERCETION))
 			{
@@ -24593,17 +24567,12 @@ bool CvUnit::interceptTest(const CvPlot* pPlot)
 				iInterceptionOdds = pInterceptor->currInterceptionProbability();
 			}
 			if (GC.getGame().getSorenRandNum(100, "Intercept Rand (Air)") < iInterceptionOdds)
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 			{
 				fightInterceptor(pPlot, false);
-
 				return true;
 			}
 		}
 	}
-
 	return false;
 }
 
@@ -24612,7 +24581,7 @@ CvUnit* CvUnit::airStrikeTarget(const CvPlot* pPlot) const
 {
 	CvUnit* pDefender = pPlot->getBestDefender(NO_PLAYER, getOwner(), this, true);
 
-	if (pDefender != NULL && !pDefender->isDead() && pDefender->canDefend())
+	if (pDefender && !pDefender->isDead() && pDefender->canDefend())
 	{
 		return pDefender;
 	}
@@ -24622,6 +24591,9 @@ CvUnit* CvUnit::airStrikeTarget(const CvPlot* pPlot) const
 
 bool CvUnit::canAirStrike(const CvPlot* pPlot) const
 {
+	const int iX = pPlot->getX();
+	const int iY = pPlot->getY();
+
 	if (getDomainType() != DOMAIN_AIR)
 	{
 		return false;
@@ -24642,12 +24614,12 @@ bool CvUnit::canAirStrike(const CvPlot* pPlot) const
 		return false;
 	}
 
-	if (plotDistance(getX(), getY(), pPlot->getX(), pPlot->getY()) > airRange())
+	if (plotDistance(getX(), getY(), iX, iY) > airRange())
 	{
 		return false;
 	}
 
-	if (airStrikeTarget(pPlot) == NULL)
+	if (!airStrikeTarget(pPlot))
 	{
 		return false;
 	}

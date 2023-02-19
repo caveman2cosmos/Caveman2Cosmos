@@ -439,9 +439,9 @@ void CvPlayer::initMore(PlayerTypes eID, LeaderHeadTypes ePersonality, bool bSet
 	}
 	// Toffer: Someone should look into if it's possible to not set any civics at all for NPC teams.
 	// I imagine there's a lot of code that doesn't expect NO_CIVIC to be the set civic though.
-	for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
+	for (int iI = GC.getNumCivicOptionInfos() - 1; iI > -1; iI--)
 	{
-		setCivics(((CivicOptionTypes)iI), ((CivicTypes)(GC.getCivilizationInfo(getCivilizationType()).getCivilizationInitialCivics(iI))));
+		setCivics((CivicOptionTypes)iI, (CivicTypes)GC.getCivilizationInfo(getCivilizationType()).getCivilizationInitialCivics(iI));
 	}
 
 	for (int iI = 0; iI < GC.getNumUnitInfos(); ++iI)
@@ -797,11 +797,13 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iMaintenanceModifier = 0;
 	m_iCoastalDistanceMaintenanceModifier = 0;
 	m_iConnectedCityMaintenanceModifier = 0;
-
 	m_iDistanceMaintenanceModifier = 0;
 	m_iNumCitiesMaintenanceModifier = 0;
 	m_iCorporationMaintenanceModifier = 0;
+	m_iHomeAreaMaintenanceModifier = 0;
+	m_iOtherAreaMaintenanceModifier = 0;
 	m_iTotalMaintenance = 0;
+
 	m_iUpkeepModifier = 0;
 	m_iLevelExperienceModifier = 0;
 	m_iExtraHealth = 0;
@@ -2655,15 +2657,16 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 
 			if (iTeamCulturePercent < GC.getDefineINT("OCCUPATION_CULTURE_PERCENT_THRESHOLD"))
 			{
-				int iOccupationTime = (3 * GC.getDefineINT("BASE_OCCUPATION_TURNS") + pNewCity->getPopulation()); // Divide by 3
+				int iOccupationTime = GC.getDefineINT("BASE_OCCUPATION_TURNS") + intSqrt(pNewCity->getPopulation());
 
-				iOccupationTime *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent(); // Divide by 100
+				iOccupationTime *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent(); // Extra 100x
 
-				iOccupationTime *= 100 - iTeamCulturePercent; // Divide by 100
+				// Normalize: Full timer at 0 culture, no timer when culture == occupation threshold.
+				iOccupationTime *= 1000 - 1000 * iTeamCulturePercent / GC.getDefineINT("OCCUPATION_CULTURE_PERCENT_THRESHOLD"); // Extra 1000x
 
 				iOccupationTime = getModifiedIntValue(iOccupationTime, iOccupationTimeModifier);
 
-				iOccupationTime /= 30000; // 3*100*100
+				iOccupationTime /= 100000; // 100*1000
 
 				pNewCity->changeOccupationTimer(iOccupationTime);
 			}
@@ -3805,7 +3808,7 @@ void CvPlayer::dumpStats() const
 	const int iCivicUpkeepCosts = getCivicUpkeep();
 	const int iCorporateTaxIncome = getCorporateTaxIncome();
 	const int64_t iTotalPreInflatedCosts = iUnitUpkeep + iUnitSupplyCosts + iMaintenanceCosts + iCivicUpkeepCosts - iCorporateTaxIncome;
-	const int64_t iTotalCosts = iTotalPreInflatedCosts*std::max(0, calculateInflationRate() + 100)/100;
+	const int64_t iTotalCosts = iTotalPreInflatedCosts * std::max(0, (getInflationMod10000() / 100 - 100) + 100) / 100;
 
 	//	Accrue some stats off cities
 	int iTotalProduction = 0;
@@ -4195,21 +4198,6 @@ void CvPlayer::RecalculatePlotGroupHashes()
 void CvPlayer::updateYield()
 {
 	algo::for_each(cities(), CvCity::fn::updateYield());
-}
-
-
-void CvPlayer::updateMaintenance() const
-{
-	m_iTotalMaintenance = 0;
-
-	foreach_(CvCity* pLoopCity, cities())
-	{
-		pLoopCity->updateMaintenance();
-		m_iTotalMaintenance += pLoopCity->getMaintenanceTimes100();
-	}
-	setMaintenanceDirty(false);
-
-	FASSERT_NOT_NEGATIVE(m_iTotalMaintenance);
 }
 
 
@@ -7534,8 +7522,6 @@ int CvPlayer::getBuildCost(const CvPlot* pPlot, BuildTypes eBuild) const
 	int iCost = GC.getBuildInfo(eBuild).getCost();
 	if (iCost != 0)
 	{
-		iCost *= std::max(0, 100 + calculateInflationRate());
-		iCost /= 100;
 		if (GC.getBuildInfo(eBuild).getRoute() != NO_ROUTE && pPlot->getRouteType() != NO_ROUTE && GC.getDefineINT("ROUTES_UPGRADE") > 0)
 		{
 			for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
@@ -7864,8 +7850,7 @@ int64_t CvPlayer::calculatePreInflatedCosts() const
 	{
 		return 0;
 	}
-	return
-	(
+	return (
 		getTreasuryUpkeep()
 		+ getTotalMaintenance()
 		+ getCivicUpkeep()
@@ -7909,11 +7894,6 @@ int CvPlayer::getInflationMod10000() const
 		}
 	}
 	return 10000 + iInflationPerTurnTimes10000;
-}
-
-int CvPlayer::calculateInflationRate() const
-{
-	return getInflationMod10000() / 100 - 100;
 }
 
 int64_t CvPlayer::getInflationCost() const
@@ -9398,7 +9378,6 @@ void CvPlayer::changeAnarchyTurns(int iChange, bool bHideMessages)
 		if (bOldAnarchy != isAnarchy())
 		{
 			setCommerceDirty();
-			setMaintenanceDirty(true);
 			updateTradeRoutes();
 			updateCorporation();
 
@@ -10479,7 +10458,32 @@ void CvPlayer::changeBuildingOnlyHealthyCount(int iChange, bool bLimited)
 }
 
 
-//DPII < Maintenance Modifiers >
+void CvPlayer::setMaintenanceDirty(const bool bDirty, const bool bCities) const
+{
+	m_bMaintenanceDirty = bDirty;
+
+	if (bCities)
+	{
+		foreach_(CvCity* cityX, cities())
+		{
+			cityX->setMaintenanceDirty(bDirty, false);
+		}
+	}
+}
+
+void CvPlayer::updateMaintenance() const
+{
+	m_iTotalMaintenance = 0;
+
+	foreach_(CvCity* cityX, cities())
+	{
+		m_iTotalMaintenance += cityX->getMaintenanceTimes100();
+	}
+	m_bMaintenanceDirty = false;
+
+	FASSERT_NOT_NEGATIVE(m_iTotalMaintenance);
+}
+
 int CvPlayer::getMaintenanceModifier()
 {
 	return m_iMaintenanceModifier;
@@ -10490,7 +10494,6 @@ void CvPlayer::changeMaintenanceModifier(int iChange)
 	if (iChange != 0)
 	{
 		m_iMaintenanceModifier += iChange;
-
 		setMaintenanceDirty(true);
 	}
 }
@@ -10505,7 +10508,6 @@ void CvPlayer::changeCoastalDistanceMaintenanceModifier(int iChange)
 	if (iChange != 0)
 	{
 		m_iCoastalDistanceMaintenanceModifier += iChange;
-
 		setMaintenanceDirty(true);
 	}
 }
@@ -10520,54 +10522,29 @@ void CvPlayer::changeConnectedCityMaintenanceModifier(int iChange)
 	if (iChange != 0)
 	{
 		m_iConnectedCityMaintenanceModifier += iChange;
-
 		setMaintenanceDirty(true);
 	}
 }
-//DPII < Maintenance Modifiers >
 
-
-int CvPlayer::getDistanceMaintenanceModifier() const
-{
-	return m_iDistanceMaintenanceModifier;
-}
-
-
-void CvPlayer::changeDistanceMaintenanceModifier(int iChange)
+void CvPlayer::changeDistanceMaintenanceModifier(const int iChange)
 {
 	if (iChange != 0)
 	{
 		m_iDistanceMaintenanceModifier += iChange;
-
 		setMaintenanceDirty(true);
 	}
 }
 
-
-int CvPlayer::getNumCitiesMaintenanceModifier() const
-{
-	return m_iNumCitiesMaintenanceModifier;
-}
-
-
-void CvPlayer::changeNumCitiesMaintenanceModifier(int iChange)
+void CvPlayer::changeNumCitiesMaintenanceModifier(const int iChange)
 {
 	if (iChange != 0)
 	{
 		m_iNumCitiesMaintenanceModifier += iChange;
-
 		setMaintenanceDirty(true);
 	}
 }
 
-
-int CvPlayer::getCorporationMaintenanceModifier() const
-{
-	return m_iCorporationMaintenanceModifier;
-}
-
-
-void CvPlayer::changeCorporationMaintenanceModifier(int iChange, bool bLimited)
+void CvPlayer::changeCorporationMaintenanceModifier(const int iChange, const bool bLimited)
 {
 	if (iChange != 0)
 	{
@@ -10580,6 +10557,23 @@ void CvPlayer::changeCorporationMaintenanceModifier(int iChange, bool bLimited)
 	}
 }
 
+void CvPlayer::changeHomeAreaMaintenanceModifier(const int iChange)
+{
+	if (iChange != 0)
+	{
+		m_iHomeAreaMaintenanceModifier += iChange;
+		setMaintenanceDirty(true);
+	}
+}
+
+void CvPlayer::changeOtherAreaMaintenanceModifier(const int iChange)
+{
+	if (iChange != 0)
+	{
+		m_iOtherAreaMaintenanceModifier += iChange;
+		setMaintenanceDirty(true);
+	}
+}
 
 int CvPlayer::getTotalMaintenance() const
 {
@@ -11056,7 +11050,7 @@ void CvPlayer::changeStateReligionCount(int iChange, bool bLimited)
 
 			gDLL->getInterfaceIFace()->setDirty(Score_DIRTY_BIT, true);
 		}
-		//Team Project (5)
+
 		checkReligiousDisablingAllBuildings();
 	}
 }
@@ -11240,10 +11234,10 @@ void CvPlayer::setCapitalCity(CvCity* pNewCapitalCity)
 			}
 			endDeferredPlotGroupBonusCalculation();
 		}
-		//DPII < Maintenance Modifier >
-		if (pNewCapitalCity != NULL)
+
+		if (pNewCapitalCity)
 		{
-			if (pOldCapitalCity == NULL)
+			if (!pOldCapitalCity)
 			{
 				pNewCapitalCity->area()->setHomeArea(getID(), NULL);
 			}
@@ -11252,7 +11246,7 @@ void CvPlayer::setCapitalCity(CvCity* pNewCapitalCity)
 				pNewCapitalCity->area()->setHomeArea(getID(), pOldCapitalCity->area());
 			}
 		}
-		//DPII < Maintenance Modifier >
+
 		setMaintenanceDirty(true);
 		updateTradeRoutes();
 
@@ -12483,7 +12477,6 @@ void CvPlayer::setLastStateReligion(const ReligionTypes eNewReligion)
 	{
 		m_eLastStateReligion = eNewReligion;
 
-		setMaintenanceDirty(true);
 		updateReligionHappiness();
 		updateReligionCommerce();
 
@@ -13865,7 +13858,7 @@ void CvPlayer::changeHurryCount(HurryTypes eIndex, int iChange)
 
 	const int oldHurryCount = m_paiHurryCount[eIndex];
 	m_paiHurryCount[eIndex] += iChange;
-	FASSERT_NOT_NEGATIVE(getHurryCount(eIndex));
+	FASSERT_NOT_NEGATIVE(m_paiHurryCount[eIndex]);
 
 	// if we just went from 0 to 1 (or the reverse)
 	if ((oldHurryCount > 0) != (m_paiHurryCount[eIndex] > 0))
@@ -14198,16 +14191,14 @@ int CvPlayer::getSingleCivicUpkeep(CivicTypes eCivic, bool bIgnoreAnarchy) const
 		+
 		std::max(0, (getNumCities() + GC.getDefineINT("UPKEEP_CITY_OFFSET")) * GC.getUpkeepInfo((UpkeepTypes)GC.getCivicInfo(eCivic).getUpkeep()).getCityPercent() / 100)
 	);
-	int iMod = calculateInflationRate() + getUpkeepModifier();
-
-	iUpkeep = getModifiedIntValue(iUpkeep, iMod);
+	iUpkeep = getModifiedIntValue(iUpkeep, getUpkeepModifier());
 
 	iUpkeep *= GC.getHandicapInfo(getHandicapType()).getCivicUpkeepPercent();
 	iUpkeep /= 100;
 
 	if (isNormalAI())
 	{
-		iMod = (
+		const int iMod = (
 			GC.getHandicapInfo(GC.getGame().getHandicapType()).getAICivicUpkeepPercent() - 100
 			+
 			GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIPerEraModifier() * getCurrentEra()
@@ -16578,8 +16569,6 @@ bool CvPlayer::doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eT
 			iNumTotalGold *= pCity->getPopulation();
 			iNumTotalGold /= std::max(1, GET_PLAYER(eTargetPlayer).getTotalPopulation());
 		}
-		iNumTotalGold *= std::max(0, calculateInflationRate() + 100);
-		iNumTotalGold /= 100;
 
 		strcpy(szSound, "AS2D_WONDERGOLD");
 		szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_STEAL_TREASURY").GetCString();
@@ -18020,8 +18009,11 @@ void CvPlayer::processCivics(const CivicTypes eCivic, const int iChange, const b
 		changeGreatGeneralRateModifier(kCivic.getGreatGeneralRateModifier() * iChange);
 		changeDomesticGreatGeneralRateModifier(kCivic.getDomesticGreatGeneralRateModifier() * iChange);
 		changeStateReligionGreatPeopleRateModifier(kCivic.getStateReligionGreatPeopleRateModifier() * iChange);
+
 		changeDistanceMaintenanceModifier(kCivic.getDistanceMaintenanceModifier() * iChange);
 		changeNumCitiesMaintenanceModifier(kCivic.getNumCitiesMaintenanceModifier() * iChange);
+		changeHomeAreaMaintenanceModifier(kCivic.getHomeAreaMaintenanceModifier() * iChange);
+		changeOtherAreaMaintenanceModifier(kCivic.getOtherAreaMaintenanceModifier() * iChange);
 
 		changeFreeExperience(kCivic.getFreeExperience() * iChange);
 		changeWorkerSpeedModifier(kCivic.getWorkerSpeedModifier() * iChange);
@@ -18040,23 +18032,6 @@ void CvPlayer::processCivics(const CivicTypes eCivic, const int iChange, const b
 		changeStateReligionBuildingProductionModifier(kCivic.getStateReligionBuildingProductionModifier() * iChange);
 		changeStateReligionFreeExperience(kCivic.getStateReligionFreeExperience() * iChange);
 		changeExpInBorderModifier(kCivic.getExpInBorderModifier() * iChange);
-
-		 //DPII < Maintenance Modifiers >
-		if ((kCivic.getOtherAreaMaintenanceModifier() != 0) || (kCivic.getHomeAreaMaintenanceModifier() != 0))
-		{
-			foreach_(CvArea* pLoopArea, GC.getMap().areas())
-			{
-				if (pLoopArea->isHomeArea(getID()))
-				{
-					pLoopArea->changeHomeAreaMaintenanceModifier(getID(), (kCivic.getHomeAreaMaintenanceModifier()  * iChange));
-				}
-				else
-				{
-					pLoopArea->changeOtherAreaMaintenanceModifier(getID(), (kCivic.getOtherAreaMaintenanceModifier()  * iChange));
-				}
-			}
-		}
-		//DPII < Maintenance Modifiers >
 
 		changeUpgradeAnywhere((kCivic.isUpgradeAnywhere())? iChange : 0);
 		changeRevIdxHolyCityGood(kCivic.getRevIdxHolyCityGood() * iChange);
@@ -19610,6 +19585,10 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		{
 			cacheKeyFinanceNumbers();
 		}
+
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iHomeAreaMaintenanceModifier);
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iOtherAreaMaintenanceModifier);
+
 		//Example of how to skip element
 		//WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iPopulationgrowthratepercentage, SAVE_VALUE_ANY);
 	}
@@ -20420,6 +20399,9 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", fMinTaxIncome);
 		double fMaxTaxIncome = static_cast<double>(m_iMaxTaxIncome);
 		WRAPPER_WRITE(wrapper, "CvPlayer", fMaxTaxIncome);
+
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_iHomeAreaMaintenanceModifier);
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_iOtherAreaMaintenanceModifier);
 	}
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
@@ -22437,9 +22419,6 @@ int CvPlayer::getEventCost(EventTypes eEvent, PlayerTypes eOtherPlayer, bool bRa
 	{
 		iGold += kEvent.getRandomGold();
 	}
-
-	iGold *= std::max(0, calculateInflationRate() + 100);
-	iGold /= 100;
 
 	const TechTypes eBestTech = getBestEventTech(eEvent, eOtherPlayer);
 
@@ -27803,14 +27782,16 @@ void CvPlayer::clearModifierTotals()
 	m_iNoUnhealthyPopulationCount = 0;
 	m_iExpInBorderModifier = 0;
 	m_iBuildingOnlyHealthyCount = 0;
-	//DPII < Maintenance Modifier >
+
 	m_iMaintenanceModifier = 0;
 	m_iCoastalDistanceMaintenanceModifier = 0;
 	m_iConnectedCityMaintenanceModifier = 0;
-	//DPII < Maintenance Modifier >
 	m_iDistanceMaintenanceModifier = 0;
 	m_iNumCitiesMaintenanceModifier = 0;
 	m_iCorporationMaintenanceModifier = 0;
+	m_iHomeAreaMaintenanceModifier = 0;
+	m_iOtherAreaMaintenanceModifier = 0;
+
 	m_iUpkeepModifier = 0;
 	m_iLevelExperienceModifier = 0;
 	m_iExtraHealth = 0;
@@ -28468,19 +28449,7 @@ void CvPlayer::recalculateModifiers()
 	//Remove trait promos during recalc - it will add them back when processing in the traits.
 	algo::for_each(units(), CvUnit::fn::doSetFreePromotions(false, NO_TRAIT));
 
-	//	Owing to an old bug the home area may not know it is our home area
-	//	so set that up now if needed as well
-	if ( getCapitalCity() != NULL )
-	{
-		CvArea*	homeArea = getCapitalCity()->area();
-
-		if ( !homeArea->isHomeArea(getID()) )
-		{
-			homeArea->setHomeArea(getID(),NULL);
-		}
-	}
-
-	//	Put back city-sourced modifiers
+	// Put back city-sourced modifiers
 	algo::for_each(cities(), CvCity::fn::recalculateModifiers());
 
 	//	Put back civic-sourced modifiers
