@@ -31,11 +31,7 @@
 	</TEXT-->
 	<TEXT>
 		<Tag>CHANGED_TXT_KEY_MAIN_MENU_WARLORS</Tag>
-		<English>Beyond the Sword Content</English>
-		<French>Contenu de Beyond the Sword</French>
-		<German>Beyond The Sword-Inhalte</German>
-		<Italian>Contenuti di Beyond the Sword</Italian>
-		<Spanish>Contenido de Beyond the Sword</Spanish>
+		<English>Space maps</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_BUDDY_LIST_PLAYING_LOC</Tag>
@@ -1624,15 +1620,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_CUSTOM_GAME</Tag>
-		<English>Custom Game (Recommended!)</English>
-		<French>Partie personnalisée</French>
-		<German>Eigenes Spiel</German>
-		<Italian>Partita personalizzata</Italian>
-		<Spanish>Personalizar partida</Spanish>
+		<English>Full Game</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_CUSTOM_SCENARIO</Tag>
-		<English>Custom Scenario (Recommended!)</English>
+		<English>Custom Scenario</English>
 		<French>Personnaliser scénario</French>
 		<German>Eigenes Szenario</German>
 		<Italian>Scenario personalizzato</Italian>
@@ -2314,7 +2306,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_PLAY_NOW</Tag>
-		<English>Simple Game!</English>
+		<English>Simple Game</English>
 		<French>Jouer</French>
 		<German>Jetzt spielen!</German>
 		<Italian>Gioca ora!</Italian>
@@ -2386,11 +2378,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_SCENARIO</Tag>
-		<English>Simple Scenario</English>
-		<French>Jouer un scénario</French>
-		<German>Szenario spielen</German>
-		<Italian>Gioca uno scenario</Italian>
-		<Spanish>Jugar un escenario</Spanish>
+		<English>Scenario</English>
+		<French>Scénario</French>
+		<German>Szenario</German>
+		<Spanish>Escenario</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_SELECT_A</Tag>

@@ -345,7 +345,7 @@ void CvGameTextMgr::setInterfaceTime(CvWString& szString, PlayerTypes ePlayer)
 
 void CvGameTextMgr::setOOSSeeds(CvWString& szString, PlayerTypes ePlayer)
 {
-	if (GET_PLAYER(ePlayer).isHuman())
+	if (GET_PLAYER(ePlayer).isHumanPlayer())
 	{
 		int iNetID = GET_PLAYER(ePlayer).getNetID();
 		if (gDLL->isConnected(iNetID))
@@ -359,7 +359,7 @@ void CvGameTextMgr::setNetStats(CvWString& szString, PlayerTypes ePlayer)
 {
 	if (ePlayer != GC.getGame().getActivePlayer())
 	{
-		if (GET_PLAYER(ePlayer).isHuman())
+		if (GET_PLAYER(ePlayer).isHumanPlayer())
 		{
 			if (gDLL->getInterfaceIFace()->isNetStatsVisible())
 			{
@@ -16575,7 +16575,7 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 			aiPlayerDiplomacyChanges[iK] = 0;
 			if (GET_PLAYER((PlayerTypes)iK).isAlive())
 			{
-				if (!GET_PLAYER((PlayerTypes)iK).isHuman())
+				if (!GET_PLAYER((PlayerTypes)iK).isHumanPlayer())
 				{
 					if (GET_TEAM(kPlayer.getTeam()).isHasMet(GET_PLAYER((PlayerTypes)iK).getTeam()))
 					{
