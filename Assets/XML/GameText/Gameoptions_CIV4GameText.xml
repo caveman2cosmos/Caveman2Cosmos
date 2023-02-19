@@ -238,7 +238,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CHALLENGE_CUT_LOSERS</Tag>
-		<English>Game - Final Five</English>
+		<English>Challenge - Final Five</English>
 		<French>5 Finalistes</French>
 		<German>Die Letzten Fünf</German>
 		<Italian>5 finalisti</Italian>
@@ -258,7 +258,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CHALLENGE_HIGH_TO_LOW</Tag>
-		<English>Game - High to Low</English>
+		<English>Challenge - High to Low</English>
 		<French>Premier au Dernier</French>
 		<German>Höhen und Tiefen</German>
 		<Italian>Dalle stelle alle stalle</Italian>
@@ -278,7 +278,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY</Tag>
-		<English>Game - Increasing Difficulty</English>
+		<English>Challenge - Increasing Difficulty</English>
 		<French>Difficulté progressive</French>
 		<German>Steigende Schwierigkeit</German>
 		<Italian>Difficoltà progressiva</Italian>
@@ -298,7 +298,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_COMPLETE_KILLS</Tag>
-		<English>Game - Require Complete Kills</English>
+		<English>Expansion - Require Complete Kills</English>
 		<French>Annihilation totale requise</French>
 		<German>Vollständige Vernichtung</German>
 		<Italian>Richiede l'annientamento totale</Italian>
@@ -630,7 +630,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_LOCK_MODS</Tag>
-		<English>Game - Lock Modified Assets</English>
+		<English>Disable - Worldbuilder</English>
 		<French>Verrouiller les 'Assets' modifiés</French>
 		<German>Modifizierte Assets sperren</German>
 		<Italian>Blocca la modifica dei beni</Italian>
@@ -740,7 +740,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NEW_RANDOM_SEED</Tag>
-		<English>Game - New Random Seed on Reload</English>
+		<English>Combat - New Random Seed on Reload</English>
 		<French>Nouveau classement aléatoire au rechargement</French>
 		<German>Neustart des Zufallszahlengenerators bei erneutem Laden</German>
 		<Italian>Nuova estrazione casuale per ricarica</Italian>
@@ -793,7 +793,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_CITY_RAZING</Tag>
-		<English>Game - No City Razing</English>
+		<English>Disable - City Razing</English>
 		<French>Impossible de raser les villes</French>
 		<German>Keine Stadtvernichtung</German>
 		<Italian>Nessuna possibilità di razziare le città</Italian>
@@ -970,7 +970,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ONE_CITY_CHALLENGE</Tag>
-		<English>Game - One-City Challenge</English>
+		<English>Challenge - One-City Challenge</English>
 		<French>Défier une ville</French>
 		<German>Einzelstadt-Wettkampf</German>
 		<Italian>Sfida a città singola</Italian>
@@ -1030,14 +1030,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_PEACE_AMONG_NPCS</Tag>
-		<English>Game - Peace Among NPCs</English>
+		<English>Animal - Peace Among NPCs</English>
 		<German>Frieden zwischen Computergegnern</German>
 		<French>Paix entre les PNJs</French>
 		<Russian>Êîìïüþòåðíîå ïåðåìèðèå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_PEACE_AMONG_NPCS_HELP</Tag>
-		<English>Keeps NPC players from being in an eternal 'at war' state with each other. Thus barbs don't attack animals. Beast team animals don't attack Creature team animals. And so on.</English>
+		<English>Keeps NPC players from being in an eternal 'at war' state with each other, primarily allowing weak animals to be more easily found. Barbs don't attack animals. Beast team animals don't attack Creature team animals. And so on.</English>
 		<German>Diese Option verhindert, dass sich Computergegner in einem ewigen Kriegszustand miteinander befinden. Dadurch attackieren Barbaren keine Tiere und Tiere keine Barbaren mehr, usw.</German>
 		<French>Empêche les joueurs PNJ d'être dans un état éternel de «guerre» entre eux. Ainsi, les barbares n'attaquent pas les animaux. Les animaux de l'équipe "bêtes" n'attaquent pas les animaux de l'équipe "Créature". Etc.</French>
 		<Russian>Óäåðæèâàåò êîìïüþòåðíûõ èãðîêîâ îò âå÷íîãî ñîñòîÿíèÿ âîéíû äðóã ñ äðóãîì. Òàêèì îáðàçîì, âàðâàðû íå íàïàäàþò íà æèâîòíûõ. Õèùíèêè íå íàïàäàþò íà òðàâîÿäíûõ. È òàê äàëåå.</Russian>
@@ -1584,7 +1584,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ALWAYS_RAZE_CITIES</Tag>
-		<English>Game - Always Raze Cities</English>
+		<English>Expansion - Always Raze Cities</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ALWAYS_RAZE_CITIES_HELP</Tag>
