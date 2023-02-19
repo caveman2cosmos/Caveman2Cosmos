@@ -1484,8 +1484,6 @@ void CvCity::doTurn()
 
 	if (getOccupationTimer() > 0)
 	{
-		// Blaze: v43 temp fix for games with over-long occupation timers from recent bug
-		if (getOccupationTimer() > 300) setOccupationTimer(2);
 		changeOccupationTimer(-1);
 	}
 
@@ -7782,7 +7780,6 @@ int CvCity::getEffectiveMaintenanceModifier() const
 	{
 		iModifier += GET_PLAYER(getOwner()).getConnectedCityMaintenanceModifier();
 	}
-	OutputDebugString(CvString::format("getEffectiveMaintenanceModifier: %d\n", iModifier).c_str());
 	return iModifier;
 }
 
@@ -10779,11 +10776,7 @@ void CvCity::updateCultureLevel(bool bUpdatePlotGroups)
 	}
 	CvGameAI& GAME = GC.getGame();
 
-	if (!isOccupation()
-	|| GAME.isOption(GAMEOPTION_UNSUPPORTED_REVOLUTION)
-	&& GAME.getGameTurn() - getGameTurnAcquired()
-		// Duration bigger than Max Occupation Timer
-		> GC.getBASE_OCCUPATION_TURNS() + getHighestPopulation()*GC.getOCCUPATION_TURNS_POPULATION_PERCENT()/100)
+	if (!isOccupation())
 	{
 		const GameSpeedTypes eSpeed = GAME.getGameSpeedType();
 		const int iCulture = getCultureTimes100(getOwner()) / 100;

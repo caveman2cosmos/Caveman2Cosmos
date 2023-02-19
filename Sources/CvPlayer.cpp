@@ -2657,15 +2657,16 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 
 			if (iTeamCulturePercent < GC.getDefineINT("OCCUPATION_CULTURE_PERCENT_THRESHOLD"))
 			{
-				int iOccupationTime = (3 * GC.getDefineINT("BASE_OCCUPATION_TURNS") + pNewCity->getPopulation()); // Divide by 3
+				int iOccupationTime = GC.getDefineINT("BASE_OCCUPATION_TURNS") + intSqrt(pNewCity->getPopulation());
 
-				iOccupationTime *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent(); // Divide by 100
+				iOccupationTime *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent(); // Extra 100x
 
-				iOccupationTime *= 100 - iTeamCulturePercent; // Divide by 100
+				// Normalize: Full timer at 0 culture, no timer when culture == occupation threshold.
+				iOccupationTime *= 1000 - 1000 * iTeamCulturePercent / GC.getDefineINT("OCCUPATION_CULTURE_PERCENT_THRESHOLD"); // Extra 1000x
 
 				iOccupationTime = getModifiedIntValue(iOccupationTime, iOccupationTimeModifier);
 
-				iOccupationTime /= 30000; // 3*100*100
+				iOccupationTime /= 100000; // 100*1000
 
 				pNewCity->changeOccupationTimer(iOccupationTime);
 			}
