@@ -5298,7 +5298,7 @@
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_WAR_CHARIOTS</Type>
 			<NotOnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</NotOnGameOptions>
 			<TriggerTexts>
 				<TriggerText>
@@ -5352,7 +5352,7 @@
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_ELITE_SWORDS</Type>
 			<NotOnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</NotOnGameOptions>
 			<TriggerTexts>
 				<TriggerText>
@@ -5405,7 +5405,7 @@
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_WARSHIPS</Type>
 			<NotOnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</NotOnGameOptions>
 			<TriggerTexts>
 				<TriggerText>
@@ -5459,7 +5459,7 @@
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_GUNS_BUTTER</Type>
 			<NotOnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</NotOnGameOptions>
 			<TriggerTexts>
 				<TriggerText>
@@ -5513,7 +5513,7 @@
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_NOBLE_KNIGHTS</Type>
 			<NotOnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</NotOnGameOptions>
 			<TriggerTexts>
 				<TriggerText>

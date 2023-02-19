@@ -2036,7 +2036,7 @@
 			<Description>TXT_KEY_PROMOTIONLINE_MIGHT</Description>
 			<Button>Art/Buttons/Promotions/Might1Promotion.dds</Button>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
@@ -2053,7 +2053,7 @@
 			<Help>TXT_KEY_PROMOTIONLINE_BUILD_UP_CHASE_PLANS_HELP</Help>
 			<Button>Art/Buttons/Promotions/ChasePlans1BuildUp.dds</Button>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
 			<UnitCombatPrereqTypes>
 				<UnitCombatPrereqType>UNITCOMBAT_SPEED_FAST</UnitCombatPrereqType>
@@ -2184,7 +2184,7 @@
 			<Help>TXT_KEY_PROMOTIONLINE_BUILD_UP_ESCAPE_PLANS_HELP</Help>
 			<Button>Art/Buttons/Promotions/EscapePlans1BuildUp.dds</Button>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
 			<UnitCombatPrereqTypes>
 				<UnitCombatPrereqType>UNITCOMBAT_SPEED_FAST</UnitCombatPrereqType>
@@ -2527,7 +2527,7 @@
 			<Help>TXT_KEY_PROMOTIONLINE_BUILD_UP_CONCEALMENT_HELP</Help>
 			<Button>Art/Buttons/Promotions/Concealment1BuildUp.dds</Button>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<UnitCombatPrereqTypes>
 				<UnitCombatPrereqType>UNITCOMBAT_ANIMAL_COMBAT_HIDING</UnitCombatPrereqType>
@@ -2556,7 +2556,7 @@
 			<Help>TXT_KEY_PROMOTIONLINE_BUILD_UP_BLEND_INTO_CROWD_HELP</Help>
 			<Button>Art/Buttons/Promotions/BlendIntoCrowd1BuildUp.dds</Button>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<UnitCombatPrereqTypes>
 				<UnitCombatPrereqType>UNITCOMBAT_CRIMINAL</UnitCombatPrereqType>
@@ -2580,7 +2580,7 @@
 			<Help>TXT_KEY_PROMOTIONLINE_BUILD_UP_CHECKPOINTS_HELP</Help>
 			<Button>Art/Buttons/Promotions/Checkpoints1BuildUp.dds</Button>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<UnitCombatPrereqTypes>
 				<UnitCombatPrereqType>UNITCOMBAT_LAW_ENFORCEMENT</UnitCombatPrereqType>
@@ -2604,7 +2604,7 @@
 			<Help>TXT_KEY_PROMOTIONLINE_BUILD_UP_TERRITORIAL_VIGILANCE_HELP</Help>
 			<Button>Art/Buttons/Promotions/TerritorialVigilance1BuildUp.dds</Button>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<UnitCombatPrereqTypes>
 				<UnitCombatPrereqType>UNITCOMBAT_CANINE</UnitCombatPrereqType>
@@ -2629,7 +2629,7 @@
 			<Help>TXT_KEY_PROMOTIONLINE_BUILD_UP_OBSERVATION_HELP</Help>
 			<Button>Art/Buttons/Promotions/Observation1BuildUp.dds</Button>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<UnitCombatPrereqTypes>
 				<UnitCombatPrereqType>UNITCOMBAT_EXPLORER</UnitCombatPrereqType>
@@ -2652,7 +2652,7 @@
 			<Description>TXT_KEY_PROMOTIONLINE_HIDE_IN_SHADOWS</Description>
 			<Button>Art/Buttons/Promotions/HideInShadows1Promotion.dds</Button>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<UnitCombatPrereqTypes>
 				<UnitCombatPrereqType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</UnitCombatPrereqType>
@@ -2678,7 +2678,7 @@
 			<Description>TXT_KEY_PROMOTIONLINE_FAKE_IDENTITY</Description>
 			<Button>Art/Buttons/Promotions/FakeIdentity1Promotion.dds</Button>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<UnitCombatPrereqTypes>
 				<UnitCombatPrereqType>UNITCOMBAT_ENTERTAINER</UnitCombatPrereqType>
@@ -2701,7 +2701,7 @@
 			<Description>TXT_KEY_PROMOTIONLINE_INNOCENT_MERCHANTS</Description>
 			<Button>Art/Buttons/Promotions/InnocentMerchants1Promotion.dds</Button>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<UnitCombatPrereqTypes>
 				<UnitCombatPrereqType>UNITCOMBAT_PIRATE</UnitCombatPrereqType>
@@ -2723,7 +2723,7 @@
 			<Description>TXT_KEY_PROMOTIONLINE_KEEN_EARS</Description>
 			<Button>Art/Buttons/Promotions/KeenEars1Promotion.dds</Button>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<UnitCombatPrereqTypes>
 				<UnitCombatPrereqType>UNITCOMBAT_CANINE</UnitCombatPrereqType>
@@ -2746,7 +2746,7 @@
 			<Description>TXT_KEY_PROMOTIONLINE_HAWK_EYES</Description>
 			<Button>Art/Buttons/Promotions/HawkEyes1Promotion.dds</Button>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<UnitCombatPrereqTypes>
 				<UnitCombatPrereqType>UNITCOMBAT_EXPLORER</UnitCombatPrereqType>
@@ -2770,7 +2770,7 @@
 			<Description>TXT_KEY_PROMOTIONLINE_CROWS_NEST</Description>
 			<Button>Art/Buttons/Promotions/CrowsNest1Promotion.dds</Button>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<UnitCombatPrereqTypes>
 				<UnitCombatPrereqType>UNITCOMBAT_EXPLORER</UnitCombatPrereqType>
@@ -2794,7 +2794,7 @@
 			<Description>TXT_KEY_PROMOTIONLINE_IDENTIFY</Description>
 			<Button>Art/Buttons/Promotions/Identify1Promotion.dds</Button>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<UnitCombatPrereqTypes>
 				<UnitCombatPrereqType>UNITCOMBAT_LAW_ENFORCEMENT</UnitCombatPrereqType>
@@ -2816,7 +2816,7 @@
 			<Description>TXT_KEY_PROMOTIONLINE_COVERT_OPERATIONS</Description>
 			<Button>Art/Buttons/Promotions/CovertOperations1Promotion.dds</Button>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<UnitCombatPrereqTypes>
 				<UnitCombatPrereqType>UNITCOMBAT_COMBATANT</UnitCombatPrereqType>
@@ -2840,7 +2840,7 @@
 			<Description>TXT_KEY_PROMOTIONLINE_WARRIORS_INTUITION</Description>
 			<Button>Art/Buttons/Promotions/WarriorIntuition1Promotion.dds</Button>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<UnitCombatPrereqTypes>
 				<UnitCombatPrereqType>UNITCOMBAT_COMBATANT</UnitCombatPrereqType>
@@ -2862,8 +2862,8 @@
 			<Description>TXT_KEY_PROMOTIONLINE_LOW_PROFILE</Description>
 			<Button>Art/Buttons/Promotions/LowProfile1Promotion.dds</Button>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_SPY</NotOnUnitCombatType>
@@ -2878,8 +2878,8 @@
 			<Description>TXT_KEY_PROMOTIONLINE_SPOT</Description>
 			<Button>Art/Buttons/Promotions/Spot1Promotion.dds</Button>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<UnitCombatPrereqTypes>
 				<UnitCombatPrereqType>UNITCOMBAT_EXPLORER</UnitCombatPrereqType>
@@ -2897,7 +2897,7 @@
 			<Description>TXT_KEY_PROMOTIONLINE_RED_TAPE</Description>
 			<Button>Art/Buttons/Promotions/RedTape1Promotion.dds</Button>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<UnitCombatPrereqTypes>
 				<UnitCombatPrereqType>UNITCOMBAT_CRIMINAL</UnitCombatPrereqType>
@@ -2916,7 +2916,7 @@
 			<Description>TXT_KEY_PROMOTIONLINE_CLOUT</Description>
 			<Button>Art/Buttons/Promotions/Clout1Promotion.dds</Button>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<UnitCombatPrereqTypes>
 				<UnitCombatPrereqType>UNITCOMBAT_LAW_ENFORCEMENT</UnitCombatPrereqType>
@@ -3294,7 +3294,7 @@
 			<Description>TXT_KEY_PROMOTIONLINE_HUNTING_STRIKE</Description>
 			<Button>Art/Interface/Buttons/Promotions/HuntingStrike1Promotion.dds</Button>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<UnitCombatPrereqTypes>
 				<UnitCombatPrereqType>UNITCOMBAT_HUNTER</UnitCombatPrereqType>

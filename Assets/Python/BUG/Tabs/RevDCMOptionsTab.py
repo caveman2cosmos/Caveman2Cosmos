@@ -73,8 +73,8 @@ class RevDCMOptionsTab(BugOptionsTab.BugOptionsTab):
 			screen.attachHSeparator(right, right + "SepInq2")
 
 			#Religion options
-			bInquisition = GAME.isOption(GameOptionTypes.GAMEOPTION_INQUISITIONS)
-			bLimitedReli = GAME.isOption(GameOptionTypes.GAMEOPTION_LIMITED_RELIGIONS)
+			bInquisition = GAME.isOption(GameOptionTypes.GAMEOPTION_RELIGION_INQUISITIONS)
+			bLimitedReli = GAME.isOption(GameOptionTypes.GAMEOPTION_RELIGION_LIMITED)
 			if bInquisition or bLimitedReli:
 				self.addLabel(screen, left, "RevDCM__Religion", TRNSLTR.getText("TXT_KEY_REVDCMTAB_RELIGION_OPTIONS", ()))
 				col1, col2 = self.addMultiColumnLayout(screen, right, 2, "Religion Options")
@@ -132,7 +132,7 @@ class RevDCMOptionsTab(BugOptionsTab.BugOptionsTab):
 			if bDebug:
 
 				#Revolutions
-				if GAME.isOption(GameOptionTypes.GAMEOPTION_REVOLUTION):
+				if GAME.isOption(GameOptionTypes.GAMEOPTION_UNSUPPORTED_REVOLUTION):
 					self.addLabel(screen, left, "Revolution__Revolution", "Debug Options:")
 					col1, col2, col3, col4 = self.addMultiColumnLayout(screen, right, 4, "Debug Settings")
 					self.addCheckbox(screen, col1, "Revolution__RevDebugMode")

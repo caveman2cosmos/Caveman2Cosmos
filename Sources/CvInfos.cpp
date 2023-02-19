@@ -849,7 +849,7 @@ const UnitCombatModifier& CvSpecialistInfo::getUnitCombatExperienceType(int iUni
 	FASSERT_BOUNDS(0, (int)m_aUnitCombatExperienceTypes.size(), iUnitCombat);
 	FASSERT_BOUNDS(0, (int)m_aUnitCombatExperienceTypesNull.size(), iUnitCombat);
 
-	if (!GC.getGame().isOption(GAMEOPTION_XP_FROM_ASSIGNED_SPECIALISTS) && isVisible())
+	if (!GC.getGame().isOption(GAMEOPTION_UNIT_XP_FROM_SPECIALISTS) && isVisible())
 	{
 		return m_aUnitCombatExperienceTypesNull[iUnitCombat];
 	}
@@ -2853,7 +2853,7 @@ int CvPromotionInfo::getDefenseCombatModifierChange() const
 
 int CvPromotionInfo::getPursuitChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_FIGHT_OR_FLIGHT))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT))
 	{
 		return 0;
 	}
@@ -2862,7 +2862,7 @@ int CvPromotionInfo::getPursuitChange() const
 
 int CvPromotionInfo::getEarlyWithdrawChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_FIGHT_OR_FLIGHT))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT))
 	{
 		return 0;
 	}
@@ -2887,7 +2887,7 @@ int CvPromotionInfo::getPunctureChange() const
 //Heart of War
 int CvPromotionInfo::getOverrunChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -2896,7 +2896,7 @@ int CvPromotionInfo::getOverrunChange() const
 
 int CvPromotionInfo::getRepelChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -2905,7 +2905,7 @@ int CvPromotionInfo::getRepelChange() const
 
 int CvPromotionInfo::getFortRepelChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -2914,7 +2914,7 @@ int CvPromotionInfo::getFortRepelChange() const
 
 int CvPromotionInfo::getRepelRetriesChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -2923,7 +2923,7 @@ int CvPromotionInfo::getRepelRetriesChange() const
 
 int CvPromotionInfo::getUnyieldingChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -2932,7 +2932,7 @@ int CvPromotionInfo::getUnyieldingChange() const
 
 int CvPromotionInfo::getKnockbackChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -2941,7 +2941,7 @@ int CvPromotionInfo::getKnockbackChange() const
 
 int CvPromotionInfo::getKnockbackRetriesChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -2952,7 +2952,7 @@ int CvPromotionInfo::getKnockbackRetriesChange() const
 //Battleworn
 int CvPromotionInfo::getStrAdjperRndChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_BATTLEWORN))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_BATTLEWORN))
 	{
 		return 0;
 	}
@@ -2961,7 +2961,7 @@ int CvPromotionInfo::getStrAdjperRndChange() const
 
 int CvPromotionInfo::getStrAdjperAttChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_BATTLEWORN))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_BATTLEWORN))
 	{
 		return 0;
 	}
@@ -2970,7 +2970,7 @@ int CvPromotionInfo::getStrAdjperAttChange() const
 
 int CvPromotionInfo::getStrAdjperDefChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_BATTLEWORN))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_BATTLEWORN))
 	{
 		return 0;
 	}
@@ -2979,7 +2979,7 @@ int CvPromotionInfo::getStrAdjperDefChange() const
 
 int CvPromotionInfo::getWithdrawAdjperAttChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_BATTLEWORN))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_BATTLEWORN))
 	{
 		return 0;
 	}
@@ -2990,7 +2990,7 @@ int CvPromotionInfo::getWithdrawAdjperAttChange() const
 //S&D extended
 int CvPromotionInfo::getUnnerveChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_SAD))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_SURROUND_DESTROY))
 	{
 		return 0;
 	}
@@ -2999,7 +2999,7 @@ int CvPromotionInfo::getUnnerveChange() const
 
 int CvPromotionInfo::getEncloseChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_SAD))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_SURROUND_DESTROY))
 	{
 		return 0;
 	}
@@ -3008,7 +3008,7 @@ int CvPromotionInfo::getEncloseChange() const
 
 int CvPromotionInfo::getLungeChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_SAD))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_SURROUND_DESTROY))
 	{
 		return 0;
 	}
@@ -3017,7 +3017,7 @@ int CvPromotionInfo::getLungeChange() const
 
 int CvPromotionInfo::getDynamicDefenseChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_SAD))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_SURROUND_DESTROY))
 	{
 		return 0;
 	}
@@ -3059,7 +3059,7 @@ int CvPromotionInfo::getWeakenperTurn() const
 #ifdef STRENGTH_IN_NUMBERS
 int CvPromotionInfo::getFrontSupportPercentChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_STRENGTH_IN_NUMBERS))
 	{
 		return 0;
 	}
@@ -3068,7 +3068,7 @@ int CvPromotionInfo::getFrontSupportPercentChange() const
 
 int CvPromotionInfo::getShortRangeSupportPercentChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_STRENGTH_IN_NUMBERS))
 	{
 		return 0;
 	}
@@ -3077,7 +3077,7 @@ int CvPromotionInfo::getShortRangeSupportPercentChange() const
 
 int CvPromotionInfo::getMediumRangeSupportPercentChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_STRENGTH_IN_NUMBERS))
 	{
 		return 0;
 	}
@@ -3086,7 +3086,7 @@ int CvPromotionInfo::getMediumRangeSupportPercentChange() const
 
 int CvPromotionInfo::getLongRangeSupportPercentChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_STRENGTH_IN_NUMBERS))
 	{
 		return 0;
 	}
@@ -3095,7 +3095,7 @@ int CvPromotionInfo::getLongRangeSupportPercentChange() const
 
 int CvPromotionInfo::getFlankSupportPercentChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_STRENGTH_IN_NUMBERS))
 	{
 		return 0;
 	}
@@ -3252,7 +3252,7 @@ int CvPromotionInfo::getDCMBombAccuracyChange() const
 
 int CvPromotionInfo::getCombatModifierPerSizeMoreChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 	{
 		return 0;
 	}
@@ -3261,7 +3261,7 @@ int CvPromotionInfo::getCombatModifierPerSizeMoreChange() const
 
 int CvPromotionInfo::getCombatModifierPerSizeLessChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 	{
 		return 0;
 	}
@@ -3270,7 +3270,7 @@ int CvPromotionInfo::getCombatModifierPerSizeLessChange() const
 
 int CvPromotionInfo::getCombatModifierPerVolumeMoreChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 	{
 		return 0;
 	}
@@ -3279,7 +3279,7 @@ int CvPromotionInfo::getCombatModifierPerVolumeMoreChange() const
 
 int CvPromotionInfo::getCombatModifierPerVolumeLessChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 	{
 		return 0;
 	}
@@ -3343,7 +3343,7 @@ int CvPromotionInfo::getAssassinChange() const
 
 int CvPromotionInfo::getStealthStrikesChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_WITHOUT_WARNING))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_WITHOUT_WARNING))
 	{
 		return 0;
 	}
@@ -3352,7 +3352,7 @@ int CvPromotionInfo::getStealthStrikesChange() const
 
 int CvPromotionInfo::getStealthCombatModifierChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_WITHOUT_WARNING))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_WITHOUT_WARNING))
 	{
 		return 0;
 	}
@@ -3361,7 +3361,7 @@ int CvPromotionInfo::getStealthCombatModifierChange() const
 
 int CvPromotionInfo::getStealthDefenseChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_WITHOUT_WARNING))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_WITHOUT_WARNING))
 	{
 		return 0;
 	}
@@ -4009,7 +4009,7 @@ int CvPromotionInfo::getNumPursuitVSUnitCombatChangeTypes() const
 
 int CvPromotionInfo::getPursuitVSUnitCombatChangeType(int iUnitCombat, bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_FIGHT_OR_FLIGHT))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT))
 	{
 		return 0;
 	}
@@ -4025,7 +4025,7 @@ int CvPromotionInfo::getPursuitVSUnitCombatChangeType(int iUnitCombat, bool bFor
 
 bool CvPromotionInfo::isPursuitVSUnitCombatChangeType(int iUnitCombat, bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_FIGHT_OR_FLIGHT))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT))
 	{
 		return false;
 	}
@@ -4047,7 +4047,7 @@ int CvPromotionInfo::getNumRepelVSUnitCombatChangeTypes() const
 
 int CvPromotionInfo::getRepelVSUnitCombatChangeType(int iUnitCombat, bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_COMBAT_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -4063,7 +4063,7 @@ int CvPromotionInfo::getRepelVSUnitCombatChangeType(int iUnitCombat, bool bForLo
 
 bool CvPromotionInfo::isRepelVSUnitCombatChangeType(int iUnitCombat, bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_COMBAT_HEART_OF_WAR))
 	{
 		return false;
 	}
@@ -4084,7 +4084,7 @@ int CvPromotionInfo::getNumKnockbackVSUnitCombatChangeTypes() const
 
 int CvPromotionInfo::getKnockbackVSUnitCombatChangeType(int iUnitCombat, bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_COMBAT_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -4100,7 +4100,7 @@ int CvPromotionInfo::getKnockbackVSUnitCombatChangeType(int iUnitCombat, bool bF
 
 bool CvPromotionInfo::isKnockbackVSUnitCombatChangeType(int iUnitCombat, bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_COMBAT_HEART_OF_WAR))
 	{
 		return false;
 	}
@@ -7662,7 +7662,7 @@ bool CvSpawnInfo::getTreatAsBarbarian() const
 
 bool CvSpawnInfo::getNeutralOnly() const
 {
-	if (GC.getUnitInfo(getUnitType()).isWildAnimal() && GC.getGame().isOption(GAMEOPTION_DANGEROUS_WILDLIFE))
+	if (GC.getUnitInfo(getUnitType()).isWildAnimal() && GC.getGame().isOption(GAMEOPTION_ANIMAL_DANGEROUS))
 	{
 		return false;
 	}
@@ -8017,7 +8017,7 @@ int CvSpecialUnitInfo::getWithdrawalChange() const
 
 int CvSpecialUnitInfo::getPursuitChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_FIGHT_OR_FLIGHT))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT))
 	{
 		return 0;
 	}
@@ -9059,7 +9059,7 @@ int CvCivicInfo::getSpecialistCommercePercentChanges(int i, int j ) const
 
 int CvCivicInfo::getCityLimit(PlayerTypes ePlayer) const
 {
-	if (ePlayer > NO_PLAYER && GC.getGame().isOption(GAMEOPTION_OVEREXPANSION_PENALTIES))
+	if (ePlayer > NO_PLAYER && GC.getGame().isOption(GAMEOPTION_EXP_OVEREXPANSION_PENALTIES))
 	{
 		const int iAdaptID = GC.getInfoTypeForString("ADAPT_SCALE_CITY_LIMITS");
 		return GET_PLAYER(ePlayer).getGameObject()->adaptValueToGame(iAdaptID , m_iCityLimit);
@@ -12489,7 +12489,7 @@ int CvGameSpeedInfo::getSpeedPercent() const
 
 int CvGameSpeedInfo::getHammerCostPercent() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_UPSCALED_BUILDING_AND_UNIT_COSTS))
+	if (GC.getGame().isOption(GAMEOPTION_EXP_UPSCALED_BUILDING_AND_UNIT_COSTS))
 	{
 		return getModifiedIntValue(m_iSpeedPercent, GC.getUPSCALED_HAMMER_COST_MODIFIER());
 	}
@@ -19142,7 +19142,7 @@ CvTraitInfo::~CvTraitInfo()
 
 int CvTraitInfo::getHealth() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iHealth > 0)
 		{
@@ -19158,7 +19158,7 @@ int CvTraitInfo::getHealth() const
 
 int CvTraitInfo::getHappiness() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iHappiness > 0)
 		{
@@ -19174,7 +19174,7 @@ int CvTraitInfo::getHappiness() const
 
 int CvTraitInfo::getMaxAnarchy() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iMaxAnarchy > -1)
 		{
@@ -19186,7 +19186,7 @@ int CvTraitInfo::getMaxAnarchy() const
 
 int CvTraitInfo::getUpkeepModifier() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iUpkeepModifier < 0)
 		{
@@ -19202,7 +19202,7 @@ int CvTraitInfo::getUpkeepModifier() const
 
 int CvTraitInfo::getLevelExperienceModifier() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iLevelExperienceModifier < 0)
 		{
@@ -19218,7 +19218,7 @@ int CvTraitInfo::getLevelExperienceModifier() const
 
 int CvTraitInfo::getGreatPeopleRateModifier() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iGreatPeopleRateModifier > 0)
 		{
@@ -19234,7 +19234,7 @@ int CvTraitInfo::getGreatPeopleRateModifier() const
 
 int CvTraitInfo::getGreatGeneralRateModifier() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iGreatGeneralRateModifier > 0)
 		{
@@ -19250,7 +19250,7 @@ int CvTraitInfo::getGreatGeneralRateModifier() const
 
 int CvTraitInfo::getDomesticGreatGeneralRateModifier() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iDomesticGreatGeneralRateModifier > 0)
 		{
@@ -19266,7 +19266,7 @@ int CvTraitInfo::getDomesticGreatGeneralRateModifier() const
 
 int CvTraitInfo::getMaxGlobalBuildingProductionModifier() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iMaxGlobalBuildingProductionModifier > 0)
 		{
@@ -19282,7 +19282,7 @@ int CvTraitInfo::getMaxGlobalBuildingProductionModifier() const
 
 int CvTraitInfo::getMaxTeamBuildingProductionModifier() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iMaxTeamBuildingProductionModifier > 0)
 		{
@@ -19298,7 +19298,7 @@ int CvTraitInfo::getMaxTeamBuildingProductionModifier() const
 
 int CvTraitInfo::getMaxPlayerBuildingProductionModifier() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iMaxPlayerBuildingProductionModifier > 0)
 		{
@@ -19321,7 +19321,7 @@ int CvTraitInfo::getMaxPlayerBuildingProductionModifier() const
 int CvTraitInfo::getRevIdxLocal() const
 //Note: Positive is penalty
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iRevIdxLocal < 0)
 		{
@@ -19338,7 +19338,7 @@ int CvTraitInfo::getRevIdxLocal() const
 int CvTraitInfo::getRevIdxNational() const
 {
 //Note: Positive is Penalty
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iRevIdxNational < 0)
 		{
@@ -19355,7 +19355,7 @@ int CvTraitInfo::getRevIdxNational() const
 int CvTraitInfo::getRevIdxDistanceModifier() const
 {
 //Note: Positive is penalty
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iRevIdxDistanceModifier < 0)
 		{
@@ -19372,7 +19372,7 @@ int CvTraitInfo::getRevIdxDistanceModifier() const
 int CvTraitInfo::getRevIdxHolyCityGood() const
 {
 //Note: Positive is bonus
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iRevIdxHolyCityGood > 0)
 		{
@@ -19389,7 +19389,7 @@ int CvTraitInfo::getRevIdxHolyCityGood() const
 int CvTraitInfo::getRevIdxHolyCityBad() const
 {
 //Note: Positive is Penalty
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iRevIdxHolyCityBad < 0)
 		{
@@ -19406,7 +19406,7 @@ int CvTraitInfo::getRevIdxHolyCityBad() const
 float CvTraitInfo::getRevIdxNationalityMod() const
 {
 //Note: Positive is Penalty
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_fRevIdxNationalityMod < 0)
 		{
@@ -19423,7 +19423,7 @@ float CvTraitInfo::getRevIdxNationalityMod() const
 float CvTraitInfo::getRevIdxBadReligionMod() const
 {
 //Note: Positive is Penalty
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_fRevIdxBadReligionMod < 0)
 		{
@@ -19440,7 +19440,7 @@ float CvTraitInfo::getRevIdxBadReligionMod() const
 float CvTraitInfo::getRevIdxGoodReligionMod() const
 {
 //Note: Positive is Bonus
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_fRevIdxGoodReligionMod > 0)
 		{
@@ -19456,7 +19456,7 @@ float CvTraitInfo::getRevIdxGoodReligionMod() const
 
 bool CvTraitInfo::isNonStateReligionCommerce() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_bNonStateReligionCommerce)
 		{
@@ -19468,7 +19468,7 @@ bool CvTraitInfo::isNonStateReligionCommerce() const
 
 bool CvTraitInfo::isUpgradeAnywhere() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_bUpgradeAnywhere)
 		{
@@ -19498,7 +19498,7 @@ int CvTraitInfo::getExtraYieldThreshold(int i) const
 	if (!m_paiExtraYieldThreshold)
 		return -1;
 
-	if (m_paiExtraYieldThresholdFiltered && GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (m_paiExtraYieldThresholdFiltered && GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_paiExtraYieldThreshold[i] > -1)
 		{
@@ -19520,7 +19520,7 @@ int CvTraitInfo::getTradeYieldModifier(int i) const
 {
 	if (m_paiTradeYieldModifier)
 	{
-		if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS) && m_paiTradeYieldModifierFiltered)
+		if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS) && m_paiTradeYieldModifierFiltered)
 		{
 			if (isNegativeTrait() && m_paiTradeYieldModifier[i] > 0)
 			{
@@ -19544,7 +19544,7 @@ int CvTraitInfo::getCommerceChange(int i) const
 {
 	if (m_paiCommerceChange)
 	{
-		if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS) && m_paiCommerceChangeFiltered)
+		if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS) && m_paiCommerceChangeFiltered)
 		{
 			if (isNegativeTrait() && m_paiCommerceChange[i] > 0)
 			{
@@ -19568,7 +19568,7 @@ int CvTraitInfo::getCommerceModifier(int i) const
 {
 	if (m_paiCommerceModifier)
 	{
-		if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS) && m_paiCommerceModifierFiltered)
+		if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS) && m_paiCommerceModifierFiltered)
 		{
 			if (isNegativeTrait() && m_paiCommerceModifier[i] > 0)
 			{
@@ -19590,7 +19590,7 @@ int CvTraitInfo::getCommerceModifier(int i) const
 
 bool CvTraitInfo::isFreePromotionUnitCombats(int i, int j) const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS) && isImpurePromotions())
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS) && isImpurePromotions())
 	{
 		return false;
 	}
@@ -19611,7 +19611,7 @@ int CvTraitInfo::getGreatPeopleUnitType() const
 
 SpecialistTypes CvTraitInfo::getEraAdvanceFreeSpecialistType() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_eEraAdvanceFreeSpecialistType != NO_SPECIALIST)
 		{
@@ -19623,7 +19623,7 @@ SpecialistTypes CvTraitInfo::getEraAdvanceFreeSpecialistType() const
 
 int CvTraitInfo::getGoldenAgeonBirthofGreatPeopleType() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iGoldenAgeonBirthofGreatPeopleType != NO_UNIT)
 		{
@@ -19635,7 +19635,7 @@ int CvTraitInfo::getGoldenAgeonBirthofGreatPeopleType() const
 
 int CvTraitInfo::getWarWearinessAccumulationModifier() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iWarWearinessAccumulationModifier < 0)
 		{
@@ -19651,7 +19651,7 @@ int CvTraitInfo::getWarWearinessAccumulationModifier() const
 
 int CvTraitInfo::getCivicAnarchyTimeModifier() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iCivicAnarchyTimeModifier < 0)
 		{
@@ -19667,7 +19667,7 @@ int CvTraitInfo::getCivicAnarchyTimeModifier() const
 
 int CvTraitInfo::getReligiousAnarchyTimeModifier() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iReligiousAnarchyTimeModifier < 0)
 		{
@@ -19683,7 +19683,7 @@ int CvTraitInfo::getReligiousAnarchyTimeModifier() const
 
 int CvTraitInfo::getImprovementUpgradeRateModifier() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iImprovementUpgradeRateModifier > 0)
 		{
@@ -19699,7 +19699,7 @@ int CvTraitInfo::getImprovementUpgradeRateModifier() const
 
 int CvTraitInfo::getWorkerSpeedModifier() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iWorkerSpeedModifier > 0)
 		{
@@ -19715,7 +19715,7 @@ int CvTraitInfo::getWorkerSpeedModifier() const
 
 int CvTraitInfo::getMaxConscript() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iMaxConscript > 0)
 		{
@@ -19731,7 +19731,7 @@ int CvTraitInfo::getMaxConscript() const
 
 int CvTraitInfo::getDistanceMaintenanceModifier() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iDistanceMaintenanceModifier < 0)
 		{
@@ -19747,7 +19747,7 @@ int CvTraitInfo::getDistanceMaintenanceModifier() const
 
 int CvTraitInfo::getNumCitiesMaintenanceModifier() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iNumCitiesMaintenanceModifier < 0)
 		{
@@ -19763,7 +19763,7 @@ int CvTraitInfo::getNumCitiesMaintenanceModifier() const
 
 int CvTraitInfo::getCorporationMaintenanceModifier() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iCorporationMaintenanceModifier < 0)
 		{
@@ -19779,7 +19779,7 @@ int CvTraitInfo::getCorporationMaintenanceModifier() const
 
 int CvTraitInfo::getStateReligionGreatPeopleRateModifier() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iStateReligionGreatPeopleRateModifier > 0)
 		{
@@ -19795,7 +19795,7 @@ int CvTraitInfo::getStateReligionGreatPeopleRateModifier() const
 
 int CvTraitInfo::getFreeExperience() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iFreeExperience > 0)
 		{
@@ -19811,7 +19811,7 @@ int CvTraitInfo::getFreeExperience() const
 
 int CvTraitInfo::getFreeUnitUpkeepCivilian() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait())
 		{
@@ -19830,7 +19830,7 @@ int CvTraitInfo::getFreeUnitUpkeepCivilian() const
 
 int CvTraitInfo::getFreeUnitUpkeepMilitary() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait())
 		{
@@ -19849,7 +19849,7 @@ int CvTraitInfo::getFreeUnitUpkeepMilitary() const
 
 int CvTraitInfo::getFreeUnitUpkeepCivilianPopPercent() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait())
 		{
@@ -19868,7 +19868,7 @@ int CvTraitInfo::getFreeUnitUpkeepCivilianPopPercent() const
 
 int CvTraitInfo::getFreeUnitUpkeepMilitaryPopPercent() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait())
 		{
@@ -19887,7 +19887,7 @@ int CvTraitInfo::getFreeUnitUpkeepMilitaryPopPercent() const
 
 int CvTraitInfo::getCivilianUnitUpkeepMod() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait())
 		{
@@ -19906,7 +19906,7 @@ int CvTraitInfo::getCivilianUnitUpkeepMod() const
 
 int CvTraitInfo::getMilitaryUnitUpkeepMod() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait())
 		{
@@ -19925,7 +19925,7 @@ int CvTraitInfo::getMilitaryUnitUpkeepMod() const
 
 int CvTraitInfo::getHappyPerMilitaryUnit() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iHappyPerMilitaryUnit > 0)
 		{
@@ -19941,7 +19941,7 @@ int CvTraitInfo::getHappyPerMilitaryUnit() const
 
 int CvTraitInfo::getLargestCityHappiness() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iLargestCityHappiness > 0)
 		{
@@ -19957,7 +19957,7 @@ int CvTraitInfo::getLargestCityHappiness() const
 
 int CvTraitInfo::getFreeSpecialist() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait())
 		{
@@ -19976,7 +19976,7 @@ int CvTraitInfo::getFreeSpecialist() const
 
 int CvTraitInfo::getTradeRoutes() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait())
 		{
@@ -19995,7 +19995,7 @@ int CvTraitInfo::getTradeRoutes() const
 
 int CvTraitInfo::getStateReligionHappiness() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait())
 		{
@@ -20014,7 +20014,7 @@ int CvTraitInfo::getStateReligionHappiness() const
 
 int CvTraitInfo::getNonStateReligionHappiness() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iNonStateReligionHappiness > 0)
 		{
@@ -20030,7 +20030,7 @@ int CvTraitInfo::getNonStateReligionHappiness() const
 
 int CvTraitInfo::getStateReligionUnitProductionModifier() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iStateReligionUnitProductionModifier > 0)
 		{
@@ -20046,7 +20046,7 @@ int CvTraitInfo::getStateReligionUnitProductionModifier() const
 
 int CvTraitInfo::getStateReligionBuildingProductionModifier() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iStateReligionBuildingProductionModifier > 0)
 		{
@@ -20062,7 +20062,7 @@ int CvTraitInfo::getStateReligionBuildingProductionModifier() const
 
 int CvTraitInfo::getStateReligionFreeExperience() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iStateReligionFreeExperience > 0)
 		{
@@ -20078,7 +20078,7 @@ int CvTraitInfo::getStateReligionFreeExperience() const
 
 int CvTraitInfo::getExpInBorderModifier() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iExpInBorderModifier > 0)
 		{
@@ -20094,7 +20094,7 @@ int CvTraitInfo::getExpInBorderModifier() const
 
 int CvTraitInfo::getCityDefenseBonus() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iCityDefenseBonus > 0)
 		{
@@ -20110,7 +20110,7 @@ int CvTraitInfo::getCityDefenseBonus() const
 
 int CvTraitInfo::getMilitaryProductionModifier() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iMilitaryProductionModifier > 0)
 		{
@@ -20126,7 +20126,7 @@ int CvTraitInfo::getMilitaryProductionModifier() const
 
 int CvTraitInfo::getAttitudeModifier() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iAttitudeModifier > 0)
 		{
@@ -20147,7 +20147,7 @@ int CvTraitInfo::getLinePriority() const
 
 int CvTraitInfo::getEspionageDefense() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iEspionageDefense > 0)
 		{
@@ -20163,7 +20163,7 @@ int CvTraitInfo::getEspionageDefense() const
 
 int CvTraitInfo::getMinAnarchy() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iMinAnarchy < 0)
 		{
@@ -20179,7 +20179,7 @@ int CvTraitInfo::getMinAnarchy() const
 
 int CvTraitInfo::getMaxTradeRoutesChange() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iMaxTradeRoutesChange > 0)
 		{
@@ -20195,7 +20195,7 @@ int CvTraitInfo::getMaxTradeRoutesChange() const
 
 int CvTraitInfo::getGoldenAgeDurationModifier() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iGoldenAgeDurationModifier > 0)
 		{
@@ -20211,7 +20211,7 @@ int CvTraitInfo::getGoldenAgeDurationModifier() const
 
 int CvTraitInfo::getGreatPeopleRateChange() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iGreatPeopleRateChange > 0)
 		{
@@ -20227,7 +20227,7 @@ int CvTraitInfo::getGreatPeopleRateChange() const
 
 int CvTraitInfo::getHurryAngerModifier() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iHurryAngerModifier < 0)
 		{
@@ -20243,7 +20243,7 @@ int CvTraitInfo::getHurryAngerModifier() const
 
 int CvTraitInfo::getHurryCostModifier() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iHurryCostModifier < 0)
 		{
@@ -20259,7 +20259,7 @@ int CvTraitInfo::getHurryCostModifier() const
 
 int CvTraitInfo::getEnemyWarWearinessModifier() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iEnemyWarWearinessModifier > 0)
 		{
@@ -20275,7 +20275,7 @@ int CvTraitInfo::getEnemyWarWearinessModifier() const
 
 int CvTraitInfo::getForeignTradeRouteModifier() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iForeignTradeRouteModifier > 0)
 		{
@@ -20291,7 +20291,7 @@ int CvTraitInfo::getForeignTradeRouteModifier() const
 
 int CvTraitInfo::getBombardDefense() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iBombardDefense > 0)
 		{
@@ -20307,7 +20307,7 @@ int CvTraitInfo::getBombardDefense() const
 
 int CvTraitInfo::getUnitUpgradePriceModifier() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iUnitUpgradePriceModifier < 0)
 		{
@@ -20323,7 +20323,7 @@ int CvTraitInfo::getUnitUpgradePriceModifier() const
 
 int CvTraitInfo::getCoastalTradeRoutes() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iCoastalTradeRoutes > 0)
 		{
@@ -20339,7 +20339,7 @@ int CvTraitInfo::getCoastalTradeRoutes() const
 
 int CvTraitInfo::getGlobalPopulationgrowthratepercentage() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iGlobalPopulationgrowthratepercentage < 0)
 		{
@@ -20355,11 +20355,11 @@ int CvTraitInfo::getGlobalPopulationgrowthratepercentage() const
 
 int CvTraitInfo::getCityStartCulture(bool bForLoad) const
 {
-	if (!bForLoad && GC.getGame().isOption(GAMEOPTION_1_CITY_TILE_FOUNDING))
+	if (!bForLoad && GC.getGame().isOption(GAMEOPTION_CULTURE_1_CITY_TILE_FOUNDING))
 	{
 		return 0;
 	}
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iCityStartCulture > 0)
 		{
@@ -20375,7 +20375,7 @@ int CvTraitInfo::getCityStartCulture(bool bForLoad) const
 
 int CvTraitInfo::getGlobalAirUnitCapacity() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iGlobalAirUnitCapacity > 0)
 		{
@@ -20391,7 +20391,7 @@ int CvTraitInfo::getGlobalAirUnitCapacity() const
 
 int CvTraitInfo::getCapitalXPModifier() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iCapitalXPModifier > 0)
 		{
@@ -20407,7 +20407,7 @@ int CvTraitInfo::getCapitalXPModifier() const
 
 int CvTraitInfo::getHolyCityofStateReligionXPModifier() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iHolyCityofStateReligionXPModifier > 0)
 		{
@@ -20423,7 +20423,7 @@ int CvTraitInfo::getHolyCityofStateReligionXPModifier() const
 
 int CvTraitInfo::getHolyCityofNonStateReligionXPModifier() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iHolyCityofNonStateReligionXPModifier > 0)
 		{
@@ -20439,7 +20439,7 @@ int CvTraitInfo::getHolyCityofNonStateReligionXPModifier() const
 
 int CvTraitInfo::getBonusPopulationinNewCities() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iBonusPopulationinNewCities > 0)
 		{
@@ -20455,7 +20455,7 @@ int CvTraitInfo::getBonusPopulationinNewCities() const
 
 int CvTraitInfo::getMissileRange() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iMissileRange > 0)
 		{
@@ -20471,7 +20471,7 @@ int CvTraitInfo::getMissileRange() const
 
 int CvTraitInfo::getFlightOperationRange() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iFlightOperationRange > 0)
 		{
@@ -20487,7 +20487,7 @@ int CvTraitInfo::getFlightOperationRange() const
 
 int CvTraitInfo::getNavalCargoSpace() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iNavalCargoSpace > 0)
 		{
@@ -20503,7 +20503,7 @@ int CvTraitInfo::getNavalCargoSpace() const
 
 int CvTraitInfo::getMissileCargoSpace() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iMissileCargoSpace > 0)
 		{
@@ -20519,7 +20519,7 @@ int CvTraitInfo::getMissileCargoSpace() const
 
 int CvTraitInfo::getNationalCaptureProbabilityModifier() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iNationalCaptureProbabilityModifier > 0)
 		{
@@ -20535,7 +20535,7 @@ int CvTraitInfo::getNationalCaptureProbabilityModifier() const
 
 int CvTraitInfo::getNationalCaptureResistanceModifier() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iNationalCaptureResistanceModifier > 0)
 		{
@@ -20551,7 +20551,7 @@ int CvTraitInfo::getNationalCaptureResistanceModifier() const
 
 int CvTraitInfo::getStateReligionSpreadProbabilityModifier() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iStateReligionSpreadProbabilityModifier > 0)
 		{
@@ -20567,7 +20567,7 @@ int CvTraitInfo::getStateReligionSpreadProbabilityModifier() const
 
 int CvTraitInfo::getNonStateReligionSpreadProbabilityModifier() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iNonStateReligionSpreadProbabilityModifier > 0)
 		{
@@ -20583,7 +20583,7 @@ int CvTraitInfo::getNonStateReligionSpreadProbabilityModifier() const
 
 int CvTraitInfo::getFreedomFighterChange() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_iFreedomFighterChange > 0)
 		{
@@ -20599,7 +20599,7 @@ int CvTraitInfo::getFreedomFighterChange() const
 
 bool CvTraitInfo::isMilitaryFoodProduction() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (isNegativeTrait() && m_bMilitaryFoodProduction)
 		{
@@ -20631,7 +20631,7 @@ bool CvTraitInfo::isCivilizationTrait() const
 
 bool CvTraitInfo::isAllowsInquisitions() const
 {
-	return m_bAllowsInquisitions && (!GC.getGame().isOption(GAMEOPTION_PURE_TRAITS) || !isNegativeTrait());
+	return m_bAllowsInquisitions && (!GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS) || !isNegativeTrait());
 }
 
 bool CvTraitInfo::isCoastalAIInfluence() const
@@ -20646,47 +20646,47 @@ bool CvTraitInfo::isBarbarianSelectionOnly() const
 
 bool CvTraitInfo::isCitiesStartwithStateReligion() const
 {
-	return m_bCitiesStartwithStateReligion && (!GC.getGame().isOption(GAMEOPTION_PURE_TRAITS) || !isNegativeTrait());
+	return m_bCitiesStartwithStateReligion && (!GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS) || !isNegativeTrait());
 }
 
 bool CvTraitInfo::isDraftsOnCityCapture() const
 {
-	return m_bDraftsOnCityCapture && (!GC.getGame().isOption(GAMEOPTION_PURE_TRAITS) || !isNegativeTrait());
+	return m_bDraftsOnCityCapture && (!GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS) || !isNegativeTrait());
 }
 
 bool CvTraitInfo::isFreeSpecialistperWorldWonder() const
 {
-	return m_bFreeSpecialistperWorldWonder && (!GC.getGame().isOption(GAMEOPTION_PURE_TRAITS) || !isNegativeTrait());
+	return m_bFreeSpecialistperWorldWonder && (!GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS) || !isNegativeTrait());
 }
 
 bool CvTraitInfo::isFreeSpecialistperNationalWonder() const
 {
-	return m_bFreeSpecialistperNationalWonder && (!GC.getGame().isOption(GAMEOPTION_PURE_TRAITS) || !isNegativeTrait());
+	return m_bFreeSpecialistperNationalWonder && (!GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS) || !isNegativeTrait());
 }
 
 bool CvTraitInfo::isFreeSpecialistperTeamProject() const
 {
-	return m_bFreeSpecialistperTeamProject && (!GC.getGame().isOption(GAMEOPTION_PURE_TRAITS) || !isNegativeTrait());
+	return m_bFreeSpecialistperTeamProject && (!GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS) || !isNegativeTrait());
 }
 
 bool CvTraitInfo::isExtraGoody() const
 {
-	return m_bExtraGoody && (!GC.getGame().isOption(GAMEOPTION_PURE_TRAITS) || !isNegativeTrait());
+	return m_bExtraGoody && (!GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS) || !isNegativeTrait());
 }
 
 bool CvTraitInfo::isAllReligionsActive() const
 {
-	return m_bAllReligionsActive && (!GC.getGame().isOption(GAMEOPTION_PURE_TRAITS) || !isNegativeTrait());
+	return m_bAllReligionsActive && (!GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS) || !isNegativeTrait());
 }
 
 bool CvTraitInfo::isBansNonStateReligions() const
 {
-	return m_bBansNonStateReligions && (!GC.getGame().isOption(GAMEOPTION_PURE_TRAITS) || isNegativeTrait());
+	return m_bBansNonStateReligions && (!GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS) || isNegativeTrait());
 }
 
 bool CvTraitInfo::isFreedomFighter() const
 {
-	return m_bFreedomFighter && (!GC.getGame().isOption(GAMEOPTION_PURE_TRAITS) || !isNegativeTrait());
+	return m_bFreedomFighter && (!GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS) || !isNegativeTrait());
 }
 
 // bool vector without delayed resolution
@@ -20755,20 +20755,20 @@ bool CvTraitInfo::isValidTrait(bool bGameStart) const
 
 	if (isNegativeTrait())
 	{
-		if (GC.getGame().isOption(GAMEOPTION_NO_NEGATIVE_TRAITS)
-		|| bGameStart && GC.getGame().isOption(GAMEOPTION_START_NO_POSITIVE_TRAITS) && GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS))
+		if (GC.getGame().isOption(GAMEOPTION_LEADER_NO_NEGATIVE_TRAITS)
+		|| bGameStart && GC.getGame().isOption(GAMEOPTION_LEADER_START_NO_POSITIVE_TRAITS) && GC.getGame().isOption(GAMEOPTION_LEADER_DEVELOPING))
 		{
 			return false;
 		}
 	}
-	else if (bGameStart && GC.getGame().isOption(GAMEOPTION_START_NO_POSITIVE_TRAITS))
+	else if (bGameStart && GC.getGame().isOption(GAMEOPTION_LEADER_START_NO_POSITIVE_TRAITS))
 	{
 		return false;
 	}
 
 	if (isCivilizationTrait()) return true;
 
-	if (GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_DEVELOPING))
 	{
 		if (getLinePriority() == 0)
 		{
@@ -20788,7 +20788,7 @@ int CvTraitInfo::getSpecialistYieldChange(int i, int j) const
 	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i);
 	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j);
 
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (m_ppaiSpecialistYieldChange && m_ppaiSpecialistYieldChange[i] && m_ppaiSpecialistYieldChangeFiltered && m_ppaiSpecialistYieldChangeFiltered[i])
 		{
@@ -20814,7 +20814,7 @@ int* CvTraitInfo::getSpecialistYieldChangeArray(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i);
 
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		for (int j = 0; j < NUM_YIELD_TYPES; j++)
 		{
@@ -20843,7 +20843,7 @@ int CvTraitInfo::getYieldModifier(int i) const
 {
 	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
 
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (m_piYieldModifier && m_piYieldModifierFiltered)
 		{
@@ -20867,7 +20867,7 @@ int CvTraitInfo::getYieldModifier(int i) const
 
 int* CvTraitInfo::getYieldModifierArray() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		for (int i = 0; i < NUM_YIELD_TYPES; i++)
 		{
@@ -20896,7 +20896,7 @@ int CvTraitInfo::getCapitalYieldModifier(int i) const
 {
 	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
 
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (m_piCapitalYieldModifier && m_piCapitalYieldModifierFiltered)
 		{
@@ -20920,7 +20920,7 @@ int CvTraitInfo::getCapitalYieldModifier(int i) const
 
 int* CvTraitInfo::getCapitalYieldModifierArray() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		for (int i = 0; i < NUM_YIELD_TYPES; i++)
 		{
@@ -20949,7 +20949,7 @@ int CvTraitInfo::getCapitalCommerceModifier(int i) const
 {
 	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i);
 
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (m_piCapitalCommerceModifier && m_piCapitalCommerceModifierFiltered)
 		{
@@ -20973,7 +20973,7 @@ int CvTraitInfo::getCapitalCommerceModifier(int i) const
 
 int* CvTraitInfo::getCapitalCommerceModifierArray() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		for (int i = 0; i < NUM_COMMERCE_TYPES; i++)
 		{
@@ -21002,7 +21002,7 @@ int CvTraitInfo::getSpecialistExtraCommerce(int i) const
 {
 	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i);
 
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (m_piSpecialistExtraCommerce && m_piSpecialistExtraCommerceFiltered)
 		{
@@ -21026,7 +21026,7 @@ int CvTraitInfo::getSpecialistExtraCommerce(int i) const
 
 int* CvTraitInfo::getSpecialistExtraCommerceArray() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		for (int i = 0; i < NUM_COMMERCE_TYPES; i++)
 		{
@@ -21055,7 +21055,7 @@ int CvTraitInfo::getSpecialistExtraYield(int i) const
 {
 	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
 
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (m_piSpecialistExtraYield && m_piSpecialistExtraYieldFiltered)
 		{
@@ -21079,7 +21079,7 @@ int CvTraitInfo::getSpecialistExtraYield(int i) const
 
 int* CvTraitInfo::getSpecialistExtraYieldArray() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		for (int i = 0; i < NUM_YIELD_TYPES; i++)
 		{
@@ -21115,7 +21115,7 @@ int CvTraitInfo::getYieldChange(int i) const
 {
 	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
 
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (m_piYieldChange && m_piYieldChangeFiltered)
 		{
@@ -21142,7 +21142,7 @@ int CvTraitInfo::getSpecialistCommerceChange(int i, int j) const
 	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i);
 	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, j);
 
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (m_ppaiSpecialistCommerceChange && m_ppaiSpecialistCommerceChange[i] && m_ppaiSpecialistCommerceChangeFiltered && m_ppaiSpecialistCommerceChangeFiltered[i])
 		{
@@ -21168,7 +21168,7 @@ int* CvTraitInfo::getSpecialistCommerceChangeArray(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i);
 
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		for (int j = 0; j < NUM_COMMERCE_TYPES; j++)
 		{
@@ -21195,7 +21195,7 @@ int* CvTraitInfo::getSpecialistCommerceChangeArray(int i) const
 
 int CvTraitInfo::getLessYieldThreshold(int i) const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (m_paiLessYieldThreshold && m_paiLessYieldThresholdFiltered)
 		{
@@ -21219,7 +21219,7 @@ int CvTraitInfo::getSeaPlotYieldChanges(int i) const
 {
 	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
 
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (m_piSeaPlotYieldChanges && m_piSeaPlotYieldChangesFiltered)
 		{
@@ -21243,7 +21243,7 @@ int CvTraitInfo::getSeaPlotYieldChanges(int i) const
 
 int* CvTraitInfo::getSeaPlotYieldChangesArray() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		for (int i = 0; i < NUM_YIELD_TYPES; i++)
 		{
@@ -21273,7 +21273,7 @@ int CvTraitInfo::getImprovementYieldChange(int i, int j) const
 	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), i);
 	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j);
 
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (m_ppaiImprovementYieldChange && m_ppaiImprovementYieldChange[i] && m_ppaiImprovementYieldChangeFiltered && m_ppaiImprovementYieldChangeFiltered[i])
 		{
@@ -21299,7 +21299,7 @@ int* CvTraitInfo::getImprovementYieldChangeArray(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), i);
 
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		for (int j = 0; j < NUM_YIELD_TYPES; j++)
 		{
@@ -21328,7 +21328,7 @@ int CvTraitInfo::getGoldenAgeYieldChanges(int i) const
 {
 	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
 
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (m_piGoldenAgeYieldChanges && m_piGoldenAgeYieldChangesFiltered)
 		{
@@ -21352,7 +21352,7 @@ int CvTraitInfo::getGoldenAgeYieldChanges(int i) const
 
 int* CvTraitInfo::getGoldenAgeYieldChangesArray() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		for (int i = 0; i < NUM_YIELD_TYPES; i++)
 		{
@@ -21381,7 +21381,7 @@ int CvTraitInfo::getGoldenAgeCommerceChanges(int i) const
 {
 	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i);
 
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		if (m_piGoldenAgeCommerceChanges && m_piGoldenAgeCommerceChangesFiltered)
 		{
@@ -21405,7 +21405,7 @@ int CvTraitInfo::getGoldenAgeCommerceChanges(int i) const
 
 int* CvTraitInfo::getGoldenAgeCommerceChangesArray() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		for (int i = 0; i < NUM_COMMERCE_TYPES; i++)
 		{
@@ -21454,7 +21454,7 @@ namespace PureTraits
 	template <typename T1, typename T2>
 	bst::function<bool(const std::pair<T1, T2>&)> getPredicate(bool bNegativeTrait)
 	{
-		if (!GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+		if (!GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 			return bind(anyValue<T1, T2>, _1);
 
 		if (bNegativeTrait)
@@ -21505,7 +21505,7 @@ BuildingModifier CvTraitInfo::getBuildingProductionModifier(int iBuilding) const
 {
 	FASSERT_BOUNDS(0, getNumBuildingProductionModifiers(), iBuilding);
 
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		BuildingModifier kMod = m_aBuildingProductionModifiers[iBuilding];
 		if (isNegativeTrait() && kMod.iModifier > 0)
@@ -21545,7 +21545,7 @@ UnitModifier CvTraitInfo::getUnitProductionModifier(int iUnit) const
 {
 	FASSERT_BOUNDS(0, getNumUnitProductionModifiers(), iUnit);
 
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		UnitModifier kMod = m_aUnitProductionModifiers[iUnit];
 		if (isNegativeTrait() && kMod.iModifier > 0)
@@ -21570,7 +21570,7 @@ SpecialUnitModifier CvTraitInfo::getSpecialUnitProductionModifier(int iSpecialUn
 {
 	FASSERT_BOUNDS(0, getNumSpecialUnitProductionModifiers(), iSpecialUnit);
 
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		SpecialUnitModifier kMod = m_aSpecialUnitProductionModifiers[iSpecialUnit];
 		if (isNegativeTrait() && kMod.iModifier > 0)
@@ -21595,7 +21595,7 @@ CivicOptionTypeBool CvTraitInfo::isCivicOptionNoUpkeepType(int iCivicOption) con
 {
 	FASSERT_BOUNDS(0, getNumCivicOptionNoUpkeepTypes(), iCivicOption);
 
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		CivicOptionTypeBool kMod = m_aCivicOptionNoUpkeepTypes[iCivicOption];
 		if (isNegativeTrait() && kMod.bBool)
@@ -21621,7 +21621,7 @@ UnitCombatModifier CvTraitInfo::getUnitCombatFreeExperience(int iUnitCombat) con
 {
 	FASSERT_BOUNDS(0, getNumUnitCombatFreeExperiences(), iUnitCombat);
 
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		UnitCombatModifier kMod = m_aUnitCombatFreeExperiences[iUnitCombat];
 		if (isNegativeTrait() && kMod.iModifier > 0)
@@ -21646,7 +21646,7 @@ UnitCombatModifier CvTraitInfo::getUnitCombatProductionModifier(int iUnitCombat)
 {
 	FASSERT_BOUNDS(0, getNumUnitCombatProductionModifiers(), iUnitCombat);
 
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
 		UnitCombatModifier kMod = m_aUnitCombatProductionModifiers[iUnitCombat];
 		if (isNegativeTrait() && kMod.iModifier > 0)
@@ -23416,7 +23416,7 @@ void CvTraitInfo::getCheckSum(uint32_t& iSum) const
 
 const CvPropertyManipulators* CvTraitInfo::getPropertyManipulators() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_PURE_TRAITS) && isImpurePropertyManipulators())
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS) && isImpurePropertyManipulators())
 	{
 		return &m_PropertyManipulatorsNull;
 	}
@@ -32500,7 +32500,7 @@ int CvUnitCombatInfo::getDefenseCombatModifierChange() const
 
 int CvUnitCombatInfo::getPursuitChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_FIGHT_OR_FLIGHT))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT))
 	{
 		return 0;
 	}
@@ -32509,7 +32509,7 @@ int CvUnitCombatInfo::getPursuitChange() const
 
 int CvUnitCombatInfo::getEarlyWithdrawChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_FIGHT_OR_FLIGHT))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT))
 	{
 		return 0;
 	}
@@ -32533,7 +32533,7 @@ int CvUnitCombatInfo::getPunctureChange() const
 
 int CvUnitCombatInfo::getOverrunChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -32542,7 +32542,7 @@ int CvUnitCombatInfo::getOverrunChange() const
 
 int CvUnitCombatInfo::getRepelChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -32551,7 +32551,7 @@ int CvUnitCombatInfo::getRepelChange() const
 
 int CvUnitCombatInfo::getFortRepelChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -32560,7 +32560,7 @@ int CvUnitCombatInfo::getFortRepelChange() const
 
 int CvUnitCombatInfo::getRepelRetriesChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -32569,7 +32569,7 @@ int CvUnitCombatInfo::getRepelRetriesChange() const
 
 int CvUnitCombatInfo::getUnyieldingChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -32578,7 +32578,7 @@ int CvUnitCombatInfo::getUnyieldingChange() const
 
 int CvUnitCombatInfo::getKnockbackChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -32587,7 +32587,7 @@ int CvUnitCombatInfo::getKnockbackChange() const
 
 int CvUnitCombatInfo::getKnockbackRetriesChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -32597,7 +32597,7 @@ int CvUnitCombatInfo::getKnockbackRetriesChange() const
 #ifdef BATTLEWORN
 int CvUnitCombatInfo::getStrAdjperAttChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_BATTLEWORN))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_BATTLEWORN))
 	{
 		return 0;
 	}
@@ -32606,7 +32606,7 @@ int CvUnitCombatInfo::getStrAdjperAttChange() const
 
 int CvUnitCombatInfo::getStrAdjperDefChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_BATTLEWORN))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_BATTLEWORN))
 	{
 		return 0;
 	}
@@ -32615,7 +32615,7 @@ int CvUnitCombatInfo::getStrAdjperDefChange() const
 
 int CvUnitCombatInfo::getWithdrawAdjperAttChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_BATTLEWORN))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_BATTLEWORN))
 	{
 		return 0;
 	}
@@ -32625,7 +32625,7 @@ int CvUnitCombatInfo::getWithdrawAdjperAttChange() const
 
 int CvUnitCombatInfo::getUnnerveChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_SAD))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_SURROUND_DESTROY))
 	{
 		return 0;
 	}
@@ -32634,7 +32634,7 @@ int CvUnitCombatInfo::getUnnerveChange() const
 
 int CvUnitCombatInfo::getEncloseChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_SAD))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_SURROUND_DESTROY))
 	{
 		return 0;
 	}
@@ -32643,7 +32643,7 @@ int CvUnitCombatInfo::getEncloseChange() const
 
 int CvUnitCombatInfo::getLungeChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_SAD))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_SURROUND_DESTROY))
 	{
 		return 0;
 	}
@@ -32652,7 +32652,7 @@ int CvUnitCombatInfo::getLungeChange() const
 
 int CvUnitCombatInfo::getDynamicDefenseChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_SAD))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_SURROUND_DESTROY))
 	{
 		return 0;
 	}
@@ -32672,7 +32672,7 @@ int CvUnitCombatInfo::getFortitudeChange() const
 #ifdef STRENGTH_IN_NUMBERS
 int CvUnitCombatInfo::getFrontSupportPercentChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_STRENGTH_IN_NUMBERS))
 	{
 		return 0;
 	}
@@ -32681,7 +32681,7 @@ int CvUnitCombatInfo::getFrontSupportPercentChange() const
 
 int CvUnitCombatInfo::getShortRangeSupportPercentChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_STRENGTH_IN_NUMBERS))
 	{
 		return 0;
 	}
@@ -32690,7 +32690,7 @@ int CvUnitCombatInfo::getShortRangeSupportPercentChange() const
 
 int CvUnitCombatInfo::getMediumRangeSupportPercentChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_STRENGTH_IN_NUMBERS))
 	{
 		return 0;
 	}
@@ -32699,7 +32699,7 @@ int CvUnitCombatInfo::getMediumRangeSupportPercentChange() const
 
 int CvUnitCombatInfo::getLongRangeSupportPercentChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_STRENGTH_IN_NUMBERS))
 	{
 		return 0;
 	}
@@ -32708,7 +32708,7 @@ int CvUnitCombatInfo::getLongRangeSupportPercentChange() const
 
 int CvUnitCombatInfo::getFlankSupportPercentChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_STRENGTH_IN_NUMBERS))
 	{
 		return 0;
 	}
@@ -32798,7 +32798,7 @@ int CvUnitCombatInfo::getTauntChange() const
 
 int CvUnitCombatInfo::getMaxHPChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 	{
 		return 0;
 	}
@@ -32867,7 +32867,7 @@ int CvUnitCombatInfo::getDCMBombAccuracyBase() const
 
 int CvUnitCombatInfo::getCombatModifierPerSizeMoreChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 	{
 		return 0;
 	}
@@ -32876,7 +32876,7 @@ int CvUnitCombatInfo::getCombatModifierPerSizeMoreChange() const
 
 int CvUnitCombatInfo::getCombatModifierPerSizeLessChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 	{
 		return 0;
 	}
@@ -32885,7 +32885,7 @@ int CvUnitCombatInfo::getCombatModifierPerSizeLessChange() const
 
 int CvUnitCombatInfo::getCombatModifierPerVolumeMoreChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 	{
 		return 0;
 	}
@@ -32894,7 +32894,7 @@ int CvUnitCombatInfo::getCombatModifierPerVolumeMoreChange() const
 
 int CvUnitCombatInfo::getCombatModifierPerVolumeLessChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 	{
 		return 0;
 	}
@@ -32948,7 +32948,7 @@ int CvUnitCombatInfo::getInvestigationChange() const
 
 int CvUnitCombatInfo::getStealthStrikesChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_WITHOUT_WARNING))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_WITHOUT_WARNING))
 	{
 		return 0;
 	}
@@ -32957,7 +32957,7 @@ int CvUnitCombatInfo::getStealthStrikesChange() const
 
 int CvUnitCombatInfo::getStealthCombatModifierChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_WITHOUT_WARNING))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_WITHOUT_WARNING))
 	{
 		return 0;
 	}
@@ -32966,7 +32966,7 @@ int CvUnitCombatInfo::getStealthCombatModifierChange() const
 
 int CvUnitCombatInfo::getStealthDefenseChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_WITHOUT_WARNING))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_WITHOUT_WARNING))
 	{
 		return 0;
 	}

@@ -1032,11 +1032,11 @@ void CvPlot::checkCityRevolt()
 			}
 
 			if (pCity->isNPC()
-			|| !GC.getGame().isOption(GAMEOPTION_NO_CITY_FLIPPING)
-			&& (GC.getGame().isOption(GAMEOPTION_FLIPPING_AFTER_CONQUEST) || !pCity->isEverOwned(eCulturalOwner))
+			|| !GC.getGame().isOption(GAMEOPTION_CULTURE_NO_CITY_FLIPPING)
+			&& (GC.getGame().isOption(GAMEOPTION_CULTURE_FLIPPING_AFTER_CONQUEST) || !pCity->isEverOwned(eCulturalOwner))
 			&&	pCity->getNumRevolts(eCulturalOwner) >= GC.getDefineINT("NUM_WARNING_REVOLTS"))
 			{
-				if (GC.getGame().isOption(GAMEOPTION_ONE_CITY_CHALLENGE))
+				if (GC.getGame().isOption(GAMEOPTION_CHALLENGE_ONE_CITY))
 				{
 					pCity->kill(true);
 				}
@@ -2102,7 +2102,7 @@ int CvPlot::getTerrainElevation() const
 
 void CvPlot::changeAdjacentSight(TeamTypes eTeam, int iRange, bool bIncrement, CvUnit* pUnit, bool bUpdatePlotGroups)
 {
-	const bool bHideSeek = GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK);
+	const bool bHideSeek = GC.getGame().isOption(GAMEOPTION_COMBAT_HIDE_SEEK);
 
 	int iUnitID = 0;
 	//fill invisible types
@@ -4399,7 +4399,7 @@ PlayerTypes CvPlot::calculateCulturalOwner(bool bCountLastTurn) const
 	}
 
 	// non-city, non fort plots that are *adjacent* to cities may always belong to those cities' owners
-	if (GC.getGame().isOption(GAMEOPTION_MIN_CITY_BORDER) && !isCity(true))
+	if (GC.getGame().isOption(GAMEOPTION_CULTURE_MIN_CITY_BORDER) && !isCity(true))
 	{
 		const CvCity* adjacentCity = getAdjacentCity();
 		if (adjacentCity) return adjacentCity->getOwner();
@@ -6552,7 +6552,7 @@ void CvPlot::setFeatureType(FeatureTypes eNewValue, int iVariety, bool bImprovem
 	}
 
 	//Feature Removed or Fallout
-	if (GC.getGame().isOption(GAMEOPTION_PERSONALIZED_MAP))
+	if (GC.getGame().isOption(GAMEOPTION_MAP_PERSONALIZED))
 	{
 		if (getOwner() != NO_PLAYER
 		&& (eNewValue == NO_FEATURE || GC.getFeatureInfo(eNewValue).getHealthPercent() < 0)
@@ -7801,7 +7801,7 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 				}
 			}
 		}
-		if (getLandmarkType() != NO_LANDMARK && GC.getGame().isOption(GAMEOPTION_PERSONALIZED_MAP))
+		if (getLandmarkType() != NO_LANDMARK && GC.getGame().isOption(GAMEOPTION_MAP_PERSONALIZED))
 		{
 			iYield += GET_PLAYER(ePlayer).getLandmarkYield(eYield);
 		}
@@ -7913,8 +7913,8 @@ PlayerTypes CvPlot::findHighestCulturePlayer(const bool bCountLegacyCulture, con
 			// Equilibium culture game option may result in negative culture when near equilibrium (loss of buildings, etc) and
 			// as a result can't be immediately set to unown; we are required to use decay dynamics instead to lose control
 			if (bCountLegacyCulture
-			|| (getCultureRateThisTurn(ePlayerX) > 0 || GC.getGame().isOption(GAMEOPTION_EQUILIBRIUM_CULTURE))
-			|| bCountLastTurn && (getCultureRateLastTurn(ePlayerX) > 0 || GC.getGame().isOption(GAMEOPTION_EQUILIBRIUM_CULTURE)))
+			|| (getCultureRateThisTurn(ePlayerX) > 0 || GC.getGame().isOption(GAMEOPTION_CULTURE_EQUILIBRIUM))
+			|| bCountLastTurn && (getCultureRateLastTurn(ePlayerX) > 0 || GC.getGame().isOption(GAMEOPTION_CULTURE_EQUILIBRIUM)))
 			{
 				const int iValue = getCulture(ePlayerX);
 				if (iValue > 0)
@@ -7984,7 +7984,7 @@ void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bU
 	if (getCulture(eIndex) != iNewValue)
 	{
 		// Many things apply 1 culture to tile to mark as claimed; setting to 2 instead ensures claim for at least a full turn on EQ setting
-		if (GC.getGame().isOption(GAMEOPTION_EQUILIBRIUM_CULTURE) && getCulture(eIndex) == 0 && iNewValue == 1) iNewValue = 2;
+		if (GC.getGame().isOption(GAMEOPTION_CULTURE_EQUILIBRIUM) && getCulture(eIndex) == 0 && iNewValue == 1) iNewValue = 2;
 
 		const int iChange = iNewValue - getCulture(eIndex);
 
@@ -9916,7 +9916,7 @@ void CvPlot::changeInvisibleVisibilityCount(TeamTypes eTeam, InvisibleTypes eInv
 
 void CvPlot::setSpotIntensity(TeamTypes eTeam, InvisibleTypes eInvisible, int iUnitID, int iIntensity)
 {
-	if (!GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_HIDE_SEEK))
 	{
 		return;
 	}
@@ -10264,7 +10264,7 @@ void CvPlot::doCulture()
 
 			if (getCulture(ePlayerX) > 0)
 			{
-				if (GC.getGame().isOption(GAMEOPTION_EQUILIBRIUM_CULTURE))
+				if (GC.getGame().isOption(GAMEOPTION_CULTURE_EQUILIBRIUM))
 				{
 					// By limiting decay to avoid 2+ -> 0, we can ensure that putting 2 culture on a tile will always be above 1 turn decay
 					const int iIsOverOne = getCulture(ePlayerX) > 1;
@@ -11988,7 +11988,7 @@ int CvPlot::airUnitSpaceAvailable(TeamTypes eTeam) const
 	const CvCity* pCity = getPlotCity();
 	if (NULL != pCity)
 	{
-		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+		if (GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 		{
 			iMaxUnits = pCity->getSMAirUnitCapacity(getTeam());
 		}
@@ -11999,7 +11999,7 @@ int CvPlot::airUnitSpaceAvailable(TeamTypes eTeam) const
 	}
 	else
 	{
-		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+		if (GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 		{
 			iMaxUnits = GC.getCITY_AIR_UNIT_CAPACITY() * 50;
 		}
@@ -12009,7 +12009,7 @@ int CvPlot::airUnitSpaceAvailable(TeamTypes eTeam) const
 		}
 	}
 
-	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 	{
 		return (iMaxUnits - countNumAirUnitCargoVolume(eTeam));
 	}
@@ -12211,7 +12211,7 @@ bool CvPlot::hasDefender(bool bCheckCanAttack, PlayerTypes eOwner, PlayerTypes e
 }
 bool CvPlot::hasStealthDefender(const CvUnit* pAttacker) const
 {
-	if (pAttacker == NULL || !GC.getGame().isOption(GAMEOPTION_WITHOUT_WARNING))
+	if (pAttacker == NULL || !GC.getGame().isOption(GAMEOPTION_COMBAT_WITHOUT_WARNING))
 	{
 		return false;
 	}
@@ -12249,7 +12249,7 @@ void CvPlot::revealBestStealthDefender(const CvUnit* pAttacker)
 	int iBestValue = 0;
 	CvUnit* pBestUnit = NULL;
 
-	if (pAttacker == NULL || !GC.getGame().isOption(GAMEOPTION_WITHOUT_WARNING))
+	if (pAttacker == NULL || !GC.getGame().isOption(GAMEOPTION_COMBAT_WITHOUT_WARNING))
 	{
 		return;
 	}
@@ -13041,7 +13041,7 @@ int CvPlot::countSeeInvisibleActive(PlayerTypes ePlayer, InvisibleTypes eVisible
 		{
 			if (pLoopUnit->getOwner() == ePlayer)
 			{
-				if (GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
+				if (GC.getGame().isOption(GAMEOPTION_COMBAT_HIDE_SEEK))
 				{
 					if (GC.getUnitInfo(pLoopUnit->getUnitType()).getVisibilityIntensityType(eVisible) > 0)
 					{

@@ -365,7 +365,7 @@ void CvPlayer::initMore(PlayerTypes eID, LeaderHeadTypes ePersonality, bool bSet
 		setCommercePercent(((CommerceTypes)iI), GC.getCommerceInfo((CommerceTypes)iI).getInitialPercent());
 	}
 
-	if (GC.getGame().isOption(GAMEOPTION_RANDOM_PERSONALITIES) && !isNPC() && !isMinorCiv())
+	if (GC.getGame().isOption(GAMEOPTION_AI_RANDOM_PERSONALITIES) && !isNPC() && !isMinorCiv())
 	{
 		ePersonality = NO_LEADER;
 		int iBestValue = 0;
@@ -401,7 +401,7 @@ void CvPlayer::initMore(PlayerTypes eID, LeaderHeadTypes ePersonality, bool bSet
 		const int iNumCoreDefaultTraits = GC.getLeaderHeadInfo(ePersonality).getNumDefaultTraits();
 		const int iNumDefaultComplexTraits = GC.getLeaderHeadInfo(ePersonality).getNumDefaultComplexTraits();
 
-		if (GC.getGame().isOption(GAMEOPTION_COMPLEX_TRAITS) && iNumDefaultComplexTraits > 0)
+		if (GC.getGame().isOption(GAMEOPTION_LEADER_COMPLEX_TRAITS) && iNumDefaultComplexTraits > 0)
 		{
 			for (int iI = 0; iI < iNumDefaultComplexTraits; ++iI)
 			{
@@ -485,7 +485,7 @@ void CvPlayer::init(PlayerTypes eID)
 		}
 	}
 
-	if (GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_DEVELOPING))
 	{
 		setLeaderHeadLevel(0);
 	}
@@ -702,7 +702,7 @@ void CvPlayer::uninit()
 
 	clearDiplomacy();
 
-	if (GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_DEVELOPING))
 	{
 		setLeaderHeadLevel(0);
 	}
@@ -1439,7 +1439,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 
 void CvPlayer::changePersonalityType()
 {
-	if (GC.getGame().isOption(GAMEOPTION_RANDOM_PERSONALITIES))
+	if (GC.getGame().isOption(GAMEOPTION_AI_RANDOM_PERSONALITIES))
 	{
 		if (!isNPC())
 		{
@@ -1536,7 +1536,7 @@ void CvPlayer::changeLeader(LeaderHeadTypes eNewLeader)
 	int iNumDefaultComplexTraits = GC.getLeaderHeadInfo(eLeader).getNumDefaultComplexTraits();
 	TraitTypes eTrait = NO_TRAIT;
 
-	if (GC.getGame().isOption(GAMEOPTION_COMPLEX_TRAITS) && iNumDefaultComplexTraits > 0)
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_COMPLEX_TRAITS) && iNumDefaultComplexTraits > 0)
 	{
 		for (int iI = 0; iI < iNumDefaultComplexTraits; ++iI)
 		{
@@ -1831,7 +1831,7 @@ void CvPlayer::initFreeUnits()
 {
 	if (getStartingPlot() == NULL) return;
 
-	if (GC.getGame().isOption(GAMEOPTION_ADVANCED_START))
+	if (GC.getGame().isOption(GAMEOPTION_UNSUPPORTED_ADVANCED_START))
 	{
 		int iPoints = GC.getGame().getNumAdvancedStartPoints();
 
@@ -1865,7 +1865,7 @@ void CvPlayer::initFreeUnits()
 	{
 		const EraTypes startEra = GC.getGame().getStartEra();
 		const int iMult = (
-			GC.getGame().isOption(GAMEOPTION_ONE_CITY_CHALLENGE) ? 1
+			GC.getGame().isOption(GAMEOPTION_CHALLENGE_ONE_CITY) ? 1
 			:
 			std::max(1, GC.getEraInfo(startEra).getStartingUnitMultiplier())
 		);
@@ -2724,7 +2724,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 		if (!bConquest)
 		{
 			// Silences double ask for accepting new city from Revolution mod
-			if (!bTrade && !GC.getGame().isOption(GAMEOPTION_REVOLUTION))
+			if (!bTrade && !GC.getGame().isOption(GAMEOPTION_UNSUPPORTED_REVOLUTION))
 			{
 				if (bHuman)
 				{
@@ -2836,7 +2836,7 @@ void CvPlayer::getCivilizationCityName(CvWString& szBuffer, CivilizationTypes eC
 {
 	int iRandOffset = 0;
 
-	if (GC.getGame().isOption(GAMEOPTION_REVOLUTION) || GC.getGame().isOption(GAMEOPTION_BARBARIAN_CIV))
+	if (GC.getGame().isOption(GAMEOPTION_UNSUPPORTED_REVOLUTION) || GC.getGame().isOption(GAMEOPTION_BARBARIAN_CIV))
 	{
 		if (isNPC())
 		{
@@ -5964,7 +5964,7 @@ bool CvPlayer::canReceiveGoody(const CvPlot* pPlot, GoodyTypes eGoody, const CvU
 			return false;
 		}
 
-		if (GC.getGame().isOption(GAMEOPTION_ONE_CITY_CHALLENGE)
+		if (GC.getGame().isOption(GAMEOPTION_CHALLENGE_ONE_CITY)
 		&& GC.getUnitInfo((UnitTypes)GC.getGoodyInfo(eGoody).getGoodyUnit()).isFound())
 		{
 			return false;
@@ -5973,7 +5973,7 @@ bool CvPlayer::canReceiveGoody(const CvPlot* pPlot, GoodyTypes eGoody, const CvU
 
 	if (GC.getGoodyInfo(eGoody).getBarbarianUnit() != NO_UNIT)
 	{
-		if (GC.getGame().isOption(GAMEOPTION_NO_BARBARIANS) || pUnit == NULL)
+		if (GC.getGame().isOption(GAMEOPTION_BARBARIAN_NONE) || pUnit == NULL)
 		{
 			return false;
 		}
@@ -6205,7 +6205,7 @@ void CvPlayer::doGoody(CvPlot* pPlot, CvUnit* pUnit)
 
 bool CvPlayer::canFound(int iX, int iY, bool bTestVisible) const
 {
-	if (GC.getGame().isFinalInitialized() && GC.getGame().isOption(GAMEOPTION_ONE_CITY_CHALLENGE) && !isNPC() && getNumCities() > 0)
+	if (GC.getGame().isFinalInitialized() && GC.getGame().isOption(GAMEOPTION_CHALLENGE_ONE_CITY) && !isNPC() && getNumCities() > 0)
 	{
 		return false;
 	}
@@ -6440,7 +6440,7 @@ bool CvPlayer::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool
 
 	if (!bPropertySpawn)
 	{
-		if (GC.getGame().isOption(GAMEOPTION_ONE_CITY_CHALLENGE) && kUnit.isFound())
+		if (GC.getGame().isOption(GAMEOPTION_CHALLENGE_ONE_CITY) && kUnit.isFound())
 		{
 			return false;
 		}
@@ -6934,7 +6934,7 @@ int64_t CvPlayer::getBaseUnitCost100(const UnitTypes eUnit) const
 		iBaseCost /= 100;
 
 		int iMod = 100;
-		if (!GC.getGame().isOption(GAMEOPTION_BEELINE_STINGS))
+		if (!GC.getGame().isOption(GAMEOPTION_TECH_BEELINE_STINGS))
 		{
 			EraTypes eEra = (EraTypes)GC.getGame().getStartEra();
 			if (GC.getUnitInfo(eUnit).getEraInfo() != NO_ERA)
@@ -6949,7 +6949,7 @@ int64_t CvPlayer::getBaseUnitCost100(const UnitTypes eUnit) const
 		iBaseCost /= 100;
 
 		// Trade units aren't impacted by SM production reduction due to ROI oddities. They can't merge anyway, so...
-		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS) && GC.getUnitInfo(eUnit).getUnitCombatType() != GC.getInfoTypeForString("UNITCOMBAT_TRADE"))
+		if (GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS) && GC.getUnitInfo(eUnit).getUnitCombatType() != GC.getInfoTypeForString("UNITCOMBAT_TRADE"))
 		{
 			iMod = GC.getUNIT_PRODUCTION_PERCENT_SM();
 		}
@@ -6994,7 +6994,7 @@ int CvPlayer::getProductionNeeded(UnitTypes eUnit) const
 		const int iInstanceCostModifier = GC.getUnitInfo(eUnit).getInstanceCostModifier();
 		if (iInstanceCostModifier != 0)
 		{
-			if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+			if (GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 			{
 				iProductionNeeded = getModifiedIntValue64(iProductionNeeded, getUnitCountSM(eUnit) * iInstanceCostModifier);
 			}
@@ -7075,7 +7075,7 @@ int CvPlayer::getProductionNeeded(ProjectTypes eProject) const
 
 	const EraTypes eEra = getCurrentEra();
 	int iModifier = 0;
-	if (!GC.getGame().isOption(GAMEOPTION_BEELINE_STINGS) && GC.getProjectInfo(eProject).getTechPrereq() != NO_TECH)
+	if (!GC.getGame().isOption(GAMEOPTION_TECH_BEELINE_STINGS) && GC.getProjectInfo(eProject).getTechPrereq() != NO_TECH)
 	{
 		iModifier = GC.getEraInfo((EraTypes)GC.getTechInfo(GC.getProjectInfo(eProject).getTechPrereq()).getEra()).getCreatePercent();
 	}
@@ -7237,7 +7237,7 @@ int CvPlayer::getBuildingPrereqBuilding(BuildingTypes eBuilding, BuildingTypes e
 	}
 	if (kBuilding.isForceNoPrereqScaling() || isLimitedWonder(ePrereqBuilding))
 	{
-		if (iPrereqs > 1 && GC.getGame().isOption(GAMEOPTION_ONE_CITY_CHALLENGE))
+		if (iPrereqs > 1 && GC.getGame().isOption(GAMEOPTION_CHALLENGE_ONE_CITY))
 		{
 			return 1;
 		}
@@ -7250,7 +7250,7 @@ int CvPlayer::getBuildingPrereqBuilding(BuildingTypes eBuilding, BuildingTypes e
 		iPrereqs *= 1 + getBuildingCount(eBuilding) + iExtra;
 	}
 
-	if (iPrereqs > 1 && GC.getGame().isOption(GAMEOPTION_ONE_CITY_CHALLENGE))
+	if (iPrereqs > 1 && GC.getGame().isOption(GAMEOPTION_CHALLENGE_ONE_CITY))
 	{
 		return 1;
 	}
@@ -7980,7 +7980,7 @@ int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 	}
 	int iModifier = 100;
 
-	if (GC.getGame().isOption(GAMEOPTION_WIN_FOR_LOSING) && (!isHuman() || !GC.getGame().isOption(GAMEOPTION_NO_TECH_HANDICAPS_FOR_HUMANS)))
+	if (GC.getGame().isOption(GAMEOPTION_TECH_WIN_FOR_LOSING) && (!isHuman() || !GC.getGame().isOption(GAMEOPTION_TECH_NO_HANDICAPS_FOR_HUMANS)))
 	{
 		if ((int)getCurrentEra() > 0)
 		{
@@ -7988,7 +7988,7 @@ int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 		}
 	}
 
-	if(GC.getGame().isOption(GAMEOPTION_TECH_DIFFUSION) && (!isHuman() || !GC.getGame().isOption(GAMEOPTION_NO_TECH_HANDICAPS_FOR_HUMANS)))
+	if(GC.getGame().isOption(GAMEOPTION_TECH_DIFFUSION) && (!isHuman() || !GC.getGame().isOption(GAMEOPTION_TECH_NO_HANDICAPS_FOR_HUMANS)))
 	{
 		double knownExp = 0.0;
 		// Tech flows better through open borders
@@ -8154,7 +8154,7 @@ bool CvPlayer::canEverResearch(TechTypes eTech) const
 
 	// Limited religions must not allow a player to hoard religious techs to deny the religions from being founded anywhere.
 	// Religion techs are global and can thus only be invented once by one player in a game.
-	if (GC.getGame().isOption(GAMEOPTION_LIMITED_RELIGIONS) && !canFoundReligion())
+	if (GC.getGame().isOption(GAMEOPTION_RELIGION_LIMITED) && !canFoundReligion())
 	{
 		foreach_(const CvReligionInfo* info, GC.getReligionInfos())
 		{
@@ -8616,7 +8616,7 @@ int CvPlayer::countHolyCities() const
 void CvPlayer::foundReligion(ReligionTypes eReligion, ReligionTypes eSlotReligion, bool bAward)
 {
 	//TB Prophet Mod
-	if(GC.getGame().isOption(GAMEOPTION_DIVINE_PROPHETS))
+	if(GC.getGame().isOption(GAMEOPTION_RELIGION_DIVINE_PROPHETS))
 	{
 		return;
 	}
@@ -8634,7 +8634,7 @@ void CvPlayer::foundReligion(ReligionTypes eReligion, ReligionTypes eSlotReligio
 	// Clear queued religious techs for human player when founding a religion
 	// Religious techs are not researchable after founding a religion under "Limited Religions" rules
 	// AI always clear their entire tech queue when a religion is founded in CvTeam::setHasTech
-	if (GC.getGame().isOption(GAMEOPTION_LIMITED_RELIGIONS))
+	if (GC.getGame().isOption(GAMEOPTION_RELIGION_LIMITED))
 	{
 		foreach_(const CvReligionInfo* info, GC.getReligionInfos())
 		{
@@ -9927,7 +9927,7 @@ void CvPlayer::changeRevIdxGoodReligionMod(float fChange)
 
 bool CvPlayer::isInquisitionConditions() const
 {
-	return GC.getGame().isOption(GAMEOPTION_INQUISITIONS) && getStateReligion() != NO_RELIGION && m_iInquisitionCount > 0;
+	return GC.getGame().isOption(GAMEOPTION_RELIGION_INQUISITIONS) && getStateReligion() != NO_RELIGION && m_iInquisitionCount > 0;
 }
 
 //TB Note: Should be unnecessary now but leaving it in for a bit to allow for a reversal of method if needbe.
@@ -9935,7 +9935,7 @@ bool CvPlayer::isInquisitionConditions() const
 //{
 //	m_bInquisitionConditions = false;
 //
-//	if (!GC.getGame().isOption(GAMEOPTION_INQUISITIONS) || getStateReligion() == NO_RELIGION)
+//	if (!GC.getGame().isOption(GAMEOPTION_RELIGION_INQUISITIONS) || getStateReligion() == NO_RELIGION)
 //	{
 //		return;
 //	}
@@ -9973,7 +9973,7 @@ bool CvPlayer::canFoundReligion() const
 		return false;
 	}
 
-	if(GC.getGame().isOption(GAMEOPTION_LIMITED_RELIGIONS))
+	if(GC.getGame().isOption(GAMEOPTION_RELIGION_LIMITED))
 	{
 		if( ((getNumCities() > 1) && !(isRebel())) || !GC.isLIMITED_RELIGIONS_EXCEPTIONS() )
 		{
@@ -11664,7 +11664,7 @@ void CvPlayer::setAlive(bool bNewValue)
 			killUnits();
 
 			clearTileCulture();
-			if (!GC.getGame().isOption(GAMEOPTION_REVOLUTION))
+			if (!GC.getGame().isOption(GAMEOPTION_UNSUPPORTED_REVOLUTION))
 			{
 				clearCityCulture();
 			}
@@ -11808,7 +11808,7 @@ void CvPlayer::verifyAlive()
 				getNumUnits() == 0
 				||
 				// Are units enough to stay alive?
-				!GC.getGame().isOption(GAMEOPTION_COMPLETE_KILLS) // If option is active, YES.
+				!GC.getGame().isOption(GAMEOPTION_EXP_COMPLETE_KILLS) // If option is active, YES.
 				&&
 				!isRebel() // Rebel players do not need cities
 				&&
@@ -13523,7 +13523,7 @@ bool CvPlayer::isUnitMaxedOut(const UnitTypes eIndex, const int iExtra) const
 	{
 		return false;
 	}
-	if (GC.getGame().isOption(GAMEOPTION_UNLIMITED_NATIONAL_UNITS)
+	if (GC.getGame().isOption(GAMEOPTION_NO_NATIONAL_UNIT_LIMIT)
 	&& !GC.getUnitInfo(eIndex).isUnlimitedException())
 	{
 		return false;
@@ -15643,7 +15643,7 @@ bool CvPlayer::canDoEspionageMission(EspionageMissionTypes eMission, PlayerTypes
 	{
 		return false;
 	}
-	if (kMission.isRevolt() && !GC.getGame().isOption(GAMEOPTION_REVOLUTION))
+	if (kMission.isRevolt() && !GC.getGame().isOption(GAMEOPTION_UNSUPPORTED_REVOLUTION))
 	{
 		return false;
 	}
@@ -24361,7 +24361,7 @@ void CvPlayer::verifyUnitStacksValid()
 //TB Prophet Mod begin
 UnitTypes CvPlayer::getTechFreeProphet(TechTypes eTech) const
 {
-	if (GC.getGame().isOption(GAMEOPTION_DIVINE_PROPHETS))
+	if (GC.getGame().isOption(GAMEOPTION_RELIGION_DIVINE_PROPHETS))
 	{
 		return (UnitTypes) GC.getTechInfo(eTech).getFirstFreeProphet();
 	}
@@ -26759,7 +26759,7 @@ void CvPlayer::changeLandmarkHappiness(int iChange)
 
 bool CvPlayer::isShowLandmarks() const
 {
-	return m_bShowLandmarks && GC.getGame().isOption(GAMEOPTION_PERSONALIZED_MAP);
+	return m_bShowLandmarks && GC.getGame().isOption(GAMEOPTION_MAP_PERSONALIZED);
 }
 
 void CvPlayer::setShowLandmarks(bool bNewVal)
@@ -27378,7 +27378,7 @@ void CvPlayer::doTaxes()
 	const int iOldTaxes = getCorporateTaxIncome();
 	changeCorporateTaxIncome(-iOldTaxes);
 
-	if (GC.getGame().isOption(GAMEOPTION_REALISTIC_CORPORATIONS))
+	if (GC.getGame().isOption(GAMEOPTION_ADVANCED_REALISTIC_CORPORATIONS))
 	{
 		changeCorporateTaxIncome(algo::accumulate(cities() | transformed(CvCity::fn::calculateCorporateTaxes()), 0));
 	}
@@ -28275,13 +28275,13 @@ void CvPlayer::recalculateModifiers()
 	//bool bHasCompiled = false;
 	//Apparently some games have displayed the ability to have a non-leaderhead (iLinePriority 0) trait being assigned to leaders in a Developing Leaderhead Game.
 	//This section should at least convert them if this takes place.  In the meantime... need to figure out HOW that's happening at all.  I've seen rev leaders initiated in the middle of the game come in with extra traits... may have something to do with that?
-	if (GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_DEVELOPING))
 	{
 		for (int iI = 0; iI <GC.getNumTraitInfos(); iI++)
 		{
 			const TraitTypes eTrait = ((TraitTypes)iI);
 			////removes the extra negative trait if it shouldn't be there.  After a version or two, this should be removed entirely and m_iCompatCheckCount can be repurposed later.
-			//if (hasTrait(eTrait) && GC.getTraitInfo(eTrait).isNegativeTrait() && GC.getGame().isOption(GAMEOPTION_START_NO_POSITIVE_TRAITS))
+			//if (hasTrait(eTrait) && GC.getTraitInfo(eTrait).isNegativeTrait() && GC.getGame().isOption(GAMEOPTION_LEADER_START_NO_POSITIVE_TRAITS))
 			//{
 			//	if (GC.getLeaderHeadInfo(getLeaderType()).hasTrait(eTrait) && m_iCompatCheckCount != 1)
 			//	{
@@ -28329,7 +28329,7 @@ void CvPlayer::recalculateModifiers()
 				{
 					m_pabHasTrait[eTrait] = false;
 				}
-				if (GC.getGame().isOption(GAMEOPTION_COMPLEX_TRAITS))
+				if (GC.getGame().isOption(GAMEOPTION_LEADER_COMPLEX_TRAITS))
 				{
 					if (GC.getLeaderHeadInfo(getLeaderType()).isDefaultComplexTrait((int)eTrait))
 					{
@@ -28348,12 +28348,12 @@ void CvPlayer::recalculateModifiers()
 				{
 					if (GC.getTraitInfo(eTrait).isNegativeTrait())
 					{
-						if (!GC.getGame().isOption(GAMEOPTION_NO_NEGATIVE_TRAITS))
+						if (!GC.getGame().isOption(GAMEOPTION_LEADER_NO_NEGATIVE_TRAITS))
 						{
 							m_pabHasTrait[eTrait] = true;
 						}
 					}
-					else if (!GC.getGame().isOption(GAMEOPTION_START_NO_POSITIVE_TRAITS))
+					else if (!GC.getGame().isOption(GAMEOPTION_LEADER_START_NO_POSITIVE_TRAITS))
 					{
 						m_pabHasTrait[eTrait] = true;
 					}
@@ -29070,7 +29070,7 @@ void CvPlayer::setHasTrait(TraitTypes eIndex, bool bNewValue)
 		m_pabHasTrait[eIndex] = bNewValue;
 		processTrait(eIndex, bNewValue ? 1 : -1);
 
-		if (GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS) && GC.getTraitInfo(eIndex).getLinePriority() != 0)
+		if (GC.getGame().isOption(GAMEOPTION_LEADER_DEVELOPING) && GC.getTraitInfo(eIndex).getLinePriority() != 0)
 		{
 			const bool bNegativeTrait = GC.getTraitInfo(eIndex).isNegativeTrait();
 
@@ -29271,11 +29271,11 @@ bool CvPlayer::canUnlearnTrait(TraitTypes eTrait, bool bPositive) const
 		return false;
 	}
 
-	if (GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS) && GC.getTraitInfo(eTrait).getLinePriority() == 0)
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_DEVELOPING) && GC.getTraitInfo(eTrait).getLinePriority() == 0)
 	{
 		return false;
 	}
-	else if (!GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS) && GC.getTraitInfo(eTrait).getLinePriority() != 0)
+	else if (!GC.getGame().isOption(GAMEOPTION_LEADER_DEVELOPING) && GC.getTraitInfo(eTrait).getLinePriority() != 0)
 	{
 		return false;
 	}
@@ -29324,7 +29324,7 @@ bool CvPlayer::canUnlearnTrait(TraitTypes eTrait, bool bPositive) const
 
 int CvPlayer::getLeaderHeadLevel() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS))
+	if (!GC.getGame().isOption(GAMEOPTION_LEADER_DEVELOPING))
 	{
 		return 0;
 	}
@@ -29347,7 +29347,7 @@ uint64_t CvPlayer::getLeaderLevelupNextCultureTotal() const
 	uint64_t iX = 1000;
 	int iY = 10 * GC.getNEXT_TRAIT_CULTURE_REQ_PERCENT() / 100;
 
-	if (GC.getGame().isOption(GAMEOPTION_START_NO_POSITIVE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_START_NO_POSITIVE_TRAITS))
 	{
 		iX = 10;
 		iY = 8 * GC.getNEXT_TRAIT_CULTURE_REQ_PERCENT() / 100;
@@ -29383,7 +29383,7 @@ uint64_t CvPlayer::getLeaderLevelupCultureToEarn() const
 
 bool CvPlayer::canLeaderPromote() const
 {
-	return GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS) && getLeaderLevelupCultureToEarn() == 0;
+	return GC.getGame().isOption(GAMEOPTION_LEADER_DEVELOPING) && getLeaderLevelupCultureToEarn() == 0;
 }
 
 void CvPlayer::doPromoteLeader()
@@ -29417,7 +29417,7 @@ void CvPlayer::doPromoteLeader()
 					if (GC.getTraitInfo(eTrait).getLinePriority() > 0)
 					{
 						int iLevelModifier = getLeaderHeadLevel();
-						if (GC.getGame().isOption(GAMEOPTION_START_NO_POSITIVE_TRAITS))
+						if (GC.getGame().isOption(GAMEOPTION_LEADER_START_NO_POSITIVE_TRAITS))
 						{
 							iLevelModifier -= 2;
 						}
@@ -29465,7 +29465,7 @@ void CvPlayer::doPromoteLeader()
 		}
 	}
 	//Negative Trait select/assign
-	if (!GC.getGame().isOption(GAMEOPTION_NO_NEGATIVE_TRAITS))
+	if (!GC.getGame().isOption(GAMEOPTION_LEADER_NO_NEGATIVE_TRAITS))
 	{
 		int iLL = getLeaderHeadLevel();
 		if (iLL > 1 && iLL%2 == 0)
@@ -29491,7 +29491,7 @@ void CvPlayer::doPromoteLeader()
 						if (GC.getTraitInfo(eTrait).getLinePriority() < 0)
 						{
 							int iLevelModifier = getLeaderHeadLevel();
-							if (GC.getGame().isOption(GAMEOPTION_START_NO_POSITIVE_TRAITS))
+							if (GC.getGame().isOption(GAMEOPTION_LEADER_START_NO_POSITIVE_TRAITS))
 							{
 								iLevelModifier -= 2;
 							}
@@ -30105,7 +30105,7 @@ void CvPlayer::endDeferredPlotGroupBonusCalculation()
 
 bool CvPlayer::hasFixedBorders() const
 {
-	if (!isNPC() && GC.getGame().isOption(GAMEOPTION_FIXED_BORDERS) )
+	if (!isNPC() && GC.getGame().isOption(GAMEOPTION_CULTURE_FIXED_BORDERS) )
 	{
 		return (m_iFixedBordersCount > 0);
 	}

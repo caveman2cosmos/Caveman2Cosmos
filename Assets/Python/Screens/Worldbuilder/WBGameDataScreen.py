@@ -339,21 +339,21 @@ class WBGameDataScreen:
 			iSelectedCiv = -1
 			iSelectedLeader = -1
 			self.placeNewPlayer(screen)
-		elif iGameOption == GameOptionTypes.GAMEOPTION_NO_GOODY_HUTS and self.GAME.isOption(iGameOption):
+		elif iGameOption == GameOptionTypes.GAMEOPTION_MAP_NO_GOODY_HUTS and self.GAME.isOption(iGameOption):
 			CyMapGenerator().eraseGoodies()
 		elif iGameOption == GameOptionTypes.GAMEOPTION_NO_VASSAL_STATES and self.GAME.isOption(iGameOption):
 			for iTeamX in xrange(self.GC.getMAX_PC_TEAMS()):
 				pTeamX = self.GC.getTeam(iTeamX)
 				for iTeamY in xrange(self.GC.getMAX_PC_TEAMS()):
 					pTeamX.freeVassal(iTeamY)
-		elif iGameOption == GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE and self.GAME.isOption(iGameOption):
+		elif iGameOption == GameOptionTypes.GAMEOPTION_CHALLENGE_ONE_CITY and self.GAME.isOption(iGameOption):
 			for iPlayerX in xrange(self.GC.getMAX_PC_PLAYERS()):
 				pPlayerX = self.GC.getPlayer(iPlayerX)
 				if pPlayerX.isHuman():
 					for cityX in pPlayerX.cities():
 						if not cityX.isCapital():
 							cityX.kill()
-		elif iGameOption == GameOptionTypes.GAMEOPTION_NO_BARBARIANS and self.GAME.isOption(iGameOption):
+		elif iGameOption == GameOptionTypes.GAMEOPTION_BARBARIAN_NONE and self.GAME.isOption(iGameOption):
 			pPlayerBarb = self.GC.getPlayer(self.GC.getBARBARIAN_PLAYER())
 			pPlayerBarb.killCities()
 			pPlayerBarb.killUnits()

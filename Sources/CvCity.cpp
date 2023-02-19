@@ -259,7 +259,7 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 	//--------------------------------
 	// Init other game data
 	bool bFound = false;
-	if (GC.getGame().isOption(GAMEOPTION_PERSONALIZED_MAP) && player.isModderOption(MODDEROPTION_USE_LANDMARK_NAMES))
+	if (GC.getGame().isOption(GAMEOPTION_MAP_PERSONALIZED) && player.isModderOption(MODDEROPTION_USE_LANDMARK_NAMES))
 	{
 		for (int iI = 0; iI < NUM_CITY_PLOTS_2; iI++)
 		{
@@ -288,7 +288,7 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 
 	pPlot->changeCulture(getOwner(), GC.getFREE_CITY_CULTURE(), bBumpUnits);
 
-	if (!GC.getGame().isOption(GAMEOPTION_1_CITY_TILE_FOUNDING))
+	if (!GC.getGame().isOption(GAMEOPTION_CULTURE_1_CITY_TILE_FOUNDING))
 	{
 		const int iAdjCulture = GC.getFREE_CITY_ADJACENT_CULTURE();
 		foreach_(CvPlot* pAdjacentPlot, plot()->adjacent())
@@ -1441,7 +1441,7 @@ void CvCity::doTurn()
 
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 	//TB Combat Mod (Buildings) begin
-	if (GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
+	if (GC.getGame().isOption(GAMEOPTION_COMBAT_OUTBREAKS_AND_AFFLICTIONS))
 	{
 		for (int iI = 0; iI < GC.getNumPromotionLineInfos(); iI++)
 		{
@@ -1607,7 +1607,7 @@ void CvCity::doAutobuild()
 void CvCity::checkPropertyBuildings()
 {
 #ifdef OUTBREAKS_AND_AFFLICTIONS
-	const bool bOaA = GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS);
+	const bool bOaA = GC.getGame().isOption(GAMEOPTION_COMBAT_OUTBREAKS_AND_AFFLICTIONS);
 #endif
 
 	for (int iI = GC.getNumPropertyInfos() - 1; iI > -1; iI--)
@@ -2221,11 +2221,11 @@ int CvCity::getMaxNumWorldWonders() const
 
 bool CvCity::isWorldWondersMaxed() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_ONE_CITY_CHALLENGE))
+	if (GC.getGame().isOption(GAMEOPTION_CHALLENGE_ONE_CITY))
 	{
 		return false;
 	}
-	if (GC.getGame().isOption(GAMEOPTION_UNLIMITED_WONDERS))
+	if (GC.getGame().isOption(GAMEOPTION_NO_WONDER_LIMIT))
 	{
 		return false;
 	}
@@ -2244,11 +2244,11 @@ int CvCity::getMaxNumTeamWonders() const
 
 bool CvCity::isTeamWondersMaxed() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_ONE_CITY_CHALLENGE))
+	if (GC.getGame().isOption(GAMEOPTION_CHALLENGE_ONE_CITY))
 	{
 		return false;
 	}
-	if (GC.getGame().isOption(GAMEOPTION_UNLIMITED_WONDERS))
+	if (GC.getGame().isOption(GAMEOPTION_NO_WONDER_LIMIT))
 	{
 		return false;
 	}
@@ -2262,12 +2262,12 @@ bool CvCity::isTeamWondersMaxed() const
 
 int CvCity::getMaxNumNationalWonders() const
 {
-	return GC.getGame().isOption(GAMEOPTION_ONE_CITY_CHALLENGE) ? GC.getCultureLevelInfo(getCultureLevel()).getMaxNationalWondersOCC() : GC.getCultureLevelInfo(getCultureLevel()).getMaxNationalWonders();
+	return GC.getGame().isOption(GAMEOPTION_CHALLENGE_ONE_CITY) ? GC.getCultureLevelInfo(getCultureLevel()).getMaxNationalWondersOCC() : GC.getCultureLevelInfo(getCultureLevel()).getMaxNationalWonders();
 }
 
 bool CvCity::isNationalWondersMaxed() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_UNLIMITED_WONDERS))
+	if (GC.getGame().isOption(GAMEOPTION_NO_WONDER_LIMIT))
 	{
 		return false;
 	}
@@ -2370,7 +2370,7 @@ bool CvCity::canTrainInternal(UnitTypes eUnit, bool bContinue, bool bTestVisible
 			return false;
 		}
 	}
-	if (GC.getGame().isOption(GAMEOPTION_REALISTIC_CORPORATIONS) && GET_PLAYER(getOwner()).isNoForeignCorporations())
+	if (GC.getGame().isOption(GAMEOPTION_ADVANCED_REALISTIC_CORPORATIONS) && GET_PLAYER(getOwner()).isNoForeignCorporations())
 	{
 		for (int iI = 0; iI < GC.getNumCorporationInfos(); iI++)
 		{
@@ -5119,7 +5119,7 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 
 		int iMinBuildingDefenseLevel = kBuilding.getNoEntryDefenseLevel();
 
-		if (!GC.getGame().isOption(GAMEOPTION_REALISTIC_SIEGE))
+		if (!GC.getGame().isOption(GAMEOPTION_COMBAT_REALISTIC_SIEGE))
 		{
 			iMinBuildingDefenseLevel = 0;
 		}
@@ -5402,7 +5402,7 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 	// New or removed buildings can affect the assessment of the best plot builds
 	AI_markBestBuildValuesStale();
 
-	if (!bReligiously && GC.getGame().isOption(GAMEOPTION_RELIGIOUS_DISABLING))
+	if (!bReligiously && GC.getGame().isOption(GAMEOPTION_RELIGION_DISABLING))
 	{
 		checkReligiousDisabling(eBuilding, owner);
 		updateReligionHappiness();
@@ -5941,7 +5941,7 @@ int CvCity::unhappyLevel(int iExtra) const
 			iForeignAnger = ((100 - plot()->calculateCulturePercent(getOwner())) * iForeignAnger) / 100;
 			iUnhappiness += std::max(0, iForeignAnger);
 		}
-		if (GC.getGame().isOption(GAMEOPTION_PERSONALIZED_MAP))
+		if (GC.getGame().isOption(GAMEOPTION_MAP_PERSONALIZED))
 		{
 			if (!GET_PLAYER(getOwner()).isNoLandmarkAnger())
 			{
@@ -5993,7 +5993,7 @@ int CvCity::happyLevel() const
 	iHappiness += std::max(0, (GET_PLAYER(getOwner()).getProjectHappiness()));
 	iHappiness += std::max(0, calculateCorporationHappiness());
 
-	if (GC.getGame().isOption(GAMEOPTION_PERSONALIZED_MAP))
+	if (GC.getGame().isOption(GAMEOPTION_MAP_PERSONALIZED))
 	{
 		iHappiness += std::max(0, GET_PLAYER(getOwner()).getLandmarkHappiness());
 	}
@@ -6446,7 +6446,7 @@ int CvCity::cultureDistance(const CvPlot& plot) const
 	// In either case need to recompute cache each turn because many things can change distance.
 	PROFILE_FUNC();
 
-	if (GC.getGame().isOption(GAMEOPTION_REALISTIC_CULTURE_SPREAD))
+	if (GC.getGame().isOption(GAMEOPTION_CULTURE_REALISTIC_SPREAD))
 	{
 		std::map<const CvPlot*, int>::const_iterator itr = m_aCultureDistances.find(&plot);
 
@@ -6479,7 +6479,7 @@ void CvCity::recalculateCultureDistances(int iMaxDistance) const
 		// Center has 0 distance to helps city tile itself have more culture
 		if (getX() == plotX->getX() && getY() == plotX->getY()) m_aCultureDistances[plotX] = 0;
 		// If 1 tile start is off, the rest in range 1 have distance 1, no modifiers
-		else if (!GC.getGame().isOption(GAMEOPTION_1_CITY_TILE_FOUNDING)) m_aCultureDistances[plotX] = 1;
+		else if (!GC.getGame().isOption(GAMEOPTION_CULTURE_1_CITY_TILE_FOUNDING)) m_aCultureDistances[plotX] = 1;
 	}
 
 	// Blaze: Spiraling outward from center (style of getCityIndexPlot) is more efficient if perf issues exist;
@@ -6490,7 +6490,7 @@ void CvCity::recalculateCultureDistances(int iMaxDistance) const
 	// Currently: Calculate distance values of all tiles in iMaxDistance radial size grid,
 	//   recalculating entire grid until no values have changed. This happens ~iMaxDistance times per city per turn.
 	bool bHasChanged = (iMaxDistance > 1 ||
-		(iMaxDistance > 0 && GC.getGame().isOption(GAMEOPTION_1_CITY_TILE_FOUNDING)));
+		(iMaxDistance > 0 && GC.getGame().isOption(GAMEOPTION_CULTURE_1_CITY_TILE_FOUNDING)));
 
 	int numLoops = 0;
 	// as long as there are changes during the last iteration
@@ -6503,7 +6503,7 @@ void CvCity::recalculateCultureDistances(int iMaxDistance) const
 		{
 			// Either ignore only core, or 9 tiles around city center depending on whether 1 tile start:
 			if (plotDistance(getX(), getY(), plotX->getX(), plotX->getY()) <
-				(1 + !GC.getGame().isOption(GAMEOPTION_1_CITY_TILE_FOUNDING)))
+				(1 + !GC.getGame().isOption(GAMEOPTION_CULTURE_1_CITY_TILE_FOUNDING)))
 			{
 				// This is a slightly cursed function.
 				continue;
@@ -6725,7 +6725,7 @@ int CvCity::baseRevoltRisk100(PlayerTypes eCultureAttacker) const
 	}
 
 	// If adjacent tiles can be acquired, factor in, else there's an additional min risk
-	if (!GC.getGame().isOption(GAMEOPTION_MIN_CITY_BORDER))
+	if (!GC.getGame().isOption(GAMEOPTION_CULTURE_MIN_CITY_BORDER))
 	{
 		foreach_(const CvPlot* pLoopPlot, plot()->adjacent()
 		| filtered(CvPlot::fn::getOwner() == eCultureAttacker))
@@ -8028,7 +8028,7 @@ int CvCity::calculateCorporationMaintenanceTimes100(CorporationTypes eCorporatio
 	iMaintenance /= 18;
 
 	// Handicap
-	if (GC.getGame().isOption(GAMEOPTION_REALISTIC_CORPORATIONS))
+	if (GC.getGame().isOption(GAMEOPTION_ADVANCED_REALISTIC_CORPORATIONS))
 	{
 		iMaintenance = (
 			iMaintenance
@@ -10780,7 +10780,7 @@ void CvCity::updateCultureLevel(bool bUpdatePlotGroups)
 	CvGameAI& GAME = GC.getGame();
 
 	if (!isOccupation()
-	|| GAME.isOption(GAMEOPTION_REVOLUTION)
+	|| GAME.isOption(GAMEOPTION_UNSUPPORTED_REVOLUTION)
 	&& GAME.getGameTurn() - getGameTurnAcquired()
 		// Duration bigger than Max Occupation Timer
 		> GC.getBASE_OCCUPATION_TURNS() + getHighestPopulation()*GC.getOCCUPATION_TURNS_POPULATION_PERCENT()/100)
@@ -14740,7 +14740,7 @@ bool CvCity::isHasReligion(ReligionTypes eIndex) const
 
 void CvCity::checkReligiousDisablingAllBuildings()
 {
-	if (!GC.getGame().isOption(GAMEOPTION_RELIGIOUS_DISABLING) || getReligionCount() == 0)
+	if (!GC.getGame().isOption(GAMEOPTION_RELIGION_DISABLING) || getReligionCount() == 0)
 	{
 		return;
 	}
@@ -15669,7 +15669,7 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 
 					if (GC.getUnitInfo(eTrainUnit).getDomainType() == DOMAIN_AIR)
 					{
-						if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+						if (GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 						{
 							if (plot()->countNumAirUnitCargoVolume(getTeam()) > getSMAirUnitCapacity(getTeam()))
 							{
@@ -19271,7 +19271,7 @@ void CvCity::emergencyConscript()
 
 int CvCity::getRevTrend() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_REVOLUTION))
+	if (!GC.getGame().isOption(GAMEOPTION_UNSUPPORTED_REVOLUTION))
 		return 0;
 
 	//This is the value from python
@@ -19312,7 +19312,7 @@ is a city size of 1.
 */
 int CvCity::getNumCityPlots() const
 {
-	if (getWorkableRadiusOverride() == 0 && !GC.getGame().isOption(GAMEOPTION_LARGER_CITIES))
+	if (getWorkableRadiusOverride() == 0 && !GC.getGame().isOption(GAMEOPTION_EXP_LARGER_CITIES))
 	{
 		return NUM_CITY_PLOTS_2;
 	}
@@ -21003,7 +21003,7 @@ void CvCity::doCorporation()
 {
 	PROFILE_FUNC();
 
-	if (!GC.getGame().isOption(GAMEOPTION_REALISTIC_CORPORATIONS))
+	if (!GC.getGame().isOption(GAMEOPTION_ADVANCED_REALISTIC_CORPORATIONS))
 	{
 		return;
 	}
@@ -21413,7 +21413,7 @@ void CvCity::calculateExtraTradeRouteProfit(int iExtra, int*& aiTradeYields) con
 
 int CvCity::getMinimumDefenseLevel() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_REALISTIC_SIEGE))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_REALISTIC_SIEGE))
 	{
 		return 0;
 	}
