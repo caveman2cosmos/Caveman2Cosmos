@@ -839,7 +839,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_FUTURE_HELP</Tag>
-		<English>Future and Transhuman Eras are disabled. The game ends at the end of the Modern Era.</English>
+		<English>ALERT: Future era units, techs and concepts are not fully implemented. Use this if you want a more polished experience.[NEWLINE]Future and Transhuman Eras are disabled. The game ends at the end of the Modern Era.</English>
 		<French>Les Eres Futuriste et Transhumaine sont désactivées. Le Jeu se termine à la fin de l'Ere moderne.</French>
 		<German>Alle zukünftigen Zeitalter sind deaktiviert. Das Spiel endet mit dem Abschluss der Moderne.</German>
 		<Italian>L'era futura e transumana vengono disattivate; il gioco termina alla fine dell'era moderna.</Italian>
@@ -903,7 +903,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_TECH_BROKERING</Tag>
-		<English>Disable - Tech. Brokering</English>
+		<English>Disable - Technology Brokering</English>
 		<French>Pas de Commerce de Technologies</French>
 		<German>Kein Technologieaustausch</German>
 		<Italian>Nessuna vendita di tecnologie</Italian>
@@ -922,7 +922,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_TECH_HANDICAPS_FOR_HUMANS</Tag>
-		<English>Tech - No Tech Handicaps for Humans</English>
+		<English>Tech - No Technology Handicaps for Humans</English>
 		<French>Pas de Diff. Tech pour les Joueurs</French>
 		<Russian>Нет помех в науч. гонке живым игрокам</Russian>
 	</TEXT>
@@ -1154,7 +1154,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_REALISTIC_CORPORATIONS</Tag>
-		<English>Advanced - Corporations</English>
+		<English>Advanced - Realistic Corporations</English>
 		<French>Corporations Réalistes</French>
 		<German>Realistische Kapitalgesellschaften</German>
 		<Italian>Corporazioni realistiche</Italian>
@@ -1164,7 +1164,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_REALISTIC_CORPORATIONS_HELP</Tag>
-		<English>Corporations will expand and grow dynamically, without player involvement, behaving more like real world Corporations, and not tied to central governments. Corporations can be taxed for a profit, or be subsidized by your nation to help it expand faster. It reduces the tedious micromanagement of corporations, and gives corporate policies real value and meaning.[NEWLINE]This game option needs multiple players to meet requirements for corporations to spawn. Both you and AIs must be in Industrial era, as corporation requirements are unlocked in this era. If you are ahead of AI, then you should sell techs to AI, so corporations would spawn.</English>
+		<English>Corporations will expand and grow dynamically, without player involvement, behaving more like real world Corporations, and not tied to central governments. Corporations can be taxed for a profit, or be subsidized by your nation to help it expand faster. It reduces the tedious micromanagement of corporations, and gives corporate policies real value and meaning.[NEWLINE]ALERT: This game option needs multiple players to meet requirements for corporations to spawn. Both you and AIs must be in Industrial era, as corporation requirements are unlocked in this era. If you are ahead of AI, then you should sell techs to AI, so corporations would spawn.</English>
 		<French>Les Corporations s'étendent et se développement sans l'intervention du joueur, se comportement de manière plus réaliste par rapport au mont réel, sans influence des gouvernements. Les Corporations peuvent être taxées, ou subventionnées par notre nation pour accroître son expansion.</French>
 		<German>Kapitalgesellschaften wachsen und expandieren dynamisch ohne Einwirken der Spieler. Sie sind nicht mehr an Regierungen gebunden und verhalten sich damit mehr wie reale Kapitalgesellschaften. Vom Staat kann maximal eine Unternehmenssteuer erhoben werden, um Profit zu machen, oder es können Subventionen vergeben werden, die dafür sorgen, dass sich Kapitalgesellschaften schneller im eigenen Gebiet ausbreiten. Dadurch wird das ermüdende Mikromanagement abgeschafft und Unternehmenspolitik erhält echte Bedeutung.</German>
 		<Italian>Le corporazioni si espanderanno dinamicamente, senza intervento del giocatore, comportandosi più come Corporazioni reali, slegate dai governi centrali. Le corporazioni possono essere tassate (per un profitto) o ricevere sussidi (per un'espansione più veloce). Riduce la tediosa microgestione delle corporazioni e da un vero valore alle forme di governo legate alle Corporazioni.</Italian>
