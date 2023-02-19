@@ -2,7 +2,7 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_1_CITY_TILE_FOUNDING</Tag>
-		<English>City starts with 1 tile</English>
+		<English>Culture - City starts with 1 tile</English>
 		<French>Ville avec 1 seule Case</French>
 		<German>Städte beginnen nur mit dem Startfeld</German>
 		<Russian>Ãîðîäà ñòàðòóþò ñ 1 êëåòêè</Russian>
@@ -16,7 +16,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_DIPLOMACY</Tag>
-		<English>Advanced Diplomacy</English>
+		<English>Advanced - Diplomacy</English>
 		<French>Diplomatie avancée</French>
 		<German>Verbesserte Diplomatie</German>
 		<Italian>Diplomazia avanzata</Italian>
@@ -36,7 +36,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_ESPIONAGE</Tag>
-		<English>Advanced Espionage</English>
+		<English>Advanced - Espionage</English>
 		<French>Espionnage Avancé</French>
 		<German>Verbesserte Spionage</German>
 		<Italian>Spionaggio avanzato</Italian>
@@ -56,7 +56,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_NUKES</Tag>
-		<English>Advanced Nukes</English>
+		<English>Advanced - Nukes</English>
 		<French>Armes Nucléaires Avancées</French>
 		<German>Verbesserte Atomwaffen</German>
 		<Italian>Armi atomiche avanzate</Italian>
@@ -76,7 +76,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_ROUTES</Tag>
-		<English>Advanced Routes</English>
+		<English>Advanced - Routes</English>
 		<Italian>Percorsi avanzati</Italian>
 		<Russian>Улучшенные маршруты</Russian>
 	</TEXT>
@@ -88,7 +88,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_START</Tag>
-		<English>Advanced Start</English>
+		<English>Unsupported - Advanced Start</English>
 		<French>Démarrage avancé</French>
 		<German>Fortgeschrittener Start</German>
 		<Italian>Avvio avanzato</Italian>
@@ -106,7 +106,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_AGGRESSIVE_AI</Tag>
-		<English>Aggressive AI</English>
+		<English>AI - Aggressive</English>
 		<French>IA agressive</French>
 		<German>Aggressive KI</German>
 		<Italian>IA aggressiva</Italian>
@@ -124,7 +124,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_AMNESTY</Tag>
-		<English>Amnesty for units using Right of Passage</English>
+		<English>Combat - Amnesty for units using Right of Passage</English>
 		<French>Amnistie pour les unités avec droits de passage</French>
 		<German>Amnestie für Einheiten mit Durchreiseerlaubnis</German>
 		<Russian>Àìíèñòèÿ þíèòîâ, èñïîëüçóþùèõ îáðÿä ïåðåõîäà</Russian>
@@ -138,7 +138,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ANIMALS_STAY_OUT</Tag>
-		<English>Animals Stay Out!</English>
+		<English>Animal - Stay Out!</English>
 		<French>Les animaux restent dehors!</French>
 		<German>Tiere müssen draußen bleiben!</German>
 		<Russian>Èçãíàíèå æèâîòíûõ</Russian>
@@ -152,7 +152,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_BARBARIAN_ALWAYS_RAZE</Tag>
-		<English>Barbarians Always Raze</English>
+		<English>Barbarian - Always Raze</English>
 		<French>Les Barbares Rasent les Villes</French>
 		<German>Barbaren zerstören Städte immer</German>
 		<Italian>I barbari razziano sempre</Italian>
@@ -172,7 +172,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_BARBARIAN_CIV</Tag>
-		<English>Barbarian Civ</English>
+		<English>Barbarian - Civ Development</English>
 		<French>Civs Barbares</French>
 		<German>Barbarenzivilisationen</German>
 		<Italian>Civiltà barbariche</Italian>
@@ -188,7 +188,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_BARBARIAN_WORLD</Tag>
-		<English>Barbarian World</English>
+		<English>Barbarian - Barbaric World</English>
 		<French>Monde plein de Barbares</French>
 		<German>Barbarenwelt</German>
 		<Italian>Mondo Barbarico</Italian>
@@ -208,7 +208,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_BATTLEWORN</Tag>
-		<English>C2C Combat Mod - Battleworn</English>
+		<English>Combat - Battleworn</English>
 		<French>Mode de Combat C2C - Epuisement</French>
 		<German>C2C-Kampfmod - Schlachtauswirkungen</German>
 		<Polish>C2C Modyfikacja Bojowa - Zmęczenie</Polish>
@@ -224,7 +224,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_BEELINE_STINGS</Tag>
-		<English>Beeline Stings</English>
+		<English>Tech - Beeline Stings</English>
 		<German>Durchmarschstrafen</German>
 		<French>Pénalités des Eres</French>
 		<Russian>Спешка наказуема</Russian>
@@ -238,7 +238,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CHALLENGE_CUT_LOSERS</Tag>
-		<English>Final Five</English>
+		<English>Game - Final Five</English>
 		<French>5 Finalistes</French>
 		<German>Die Letzten Fünf</German>
 		<Italian>5 finalisti</Italian>
@@ -258,7 +258,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CHALLENGE_HIGH_TO_LOW</Tag>
-		<English>High to Low</English>
+		<English>Game - High to Low</English>
 		<French>Premier au Dernier</French>
 		<German>Höhen und Tiefen</German>
 		<Italian>Dalle stelle alle stalle</Italian>
@@ -278,7 +278,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY</Tag>
-		<English>Increasing Difficulty</English>
+		<English>Game - Increasing Difficulty</English>
 		<French>Difficulté progressive</French>
 		<German>Steigende Schwierigkeit</German>
 		<Italian>Difficoltà progressiva</Italian>
@@ -298,7 +298,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_COMPLETE_KILLS</Tag>
-		<English>Require Complete Kills</English>
+		<English>Game - Require Complete Kills</English>
 		<French>Annihilation totale requise</French>
 		<German>Vollständige Vernichtung</German>
 		<Italian>Richiede l'annientamento totale</Italian>
@@ -316,7 +316,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_COMPLEX_TRAITS</Tag>
-		<English>Complex Traits</English>
+		<English>Leader - Complex Traits</English>
 		<French>Traits Complexes</French>
 		<German>Komplexe Charakterzüge</German>
 		<Italian>Tratti complessi</Italian>
@@ -334,7 +334,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CULTURALLY_LINKED_STARTS</Tag>
-		<English>Culturally Linked Starts</English>
+		<English>Map - Culturally Linked Starts</English>
 		<French>Emplacements en fonction des Liens Culturels</French>
 		<German>Kulturorientierter Spielbeginn</German>
 		<Italian>Avvio legato alla cultura</Italian>
@@ -354,7 +354,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_DANGEROUS_WILDLIFE</Tag>
-		<English>Dangerous Wildlife</English>
+		<English>Animal - Dangerous Wildlife</English>
 		<French>Faune dangereuse</French>
 		<Russian>Опасная фауна</Russian>
 	</TEXT>
@@ -366,7 +366,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_DIVINE_PROPHETS</Tag>
-		<English>Divine Prophets</English>
+		<English>Religion - Divine Prophets</English>
 		<French>Prophètes Divins</French>
 		<German>Göttliche Propheten</German>
 		<Italian>Profeti divini</Italian>
@@ -386,7 +386,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_DOWNSIZING_IS_PROFITABLE</Tag>
-		<English>Downsizing is Profitable</English>
+		<English>Unit - Downsizing is Profitable</English>
 		<French>Réduction des effectifs rentable</French>
 		<Russian>Прибыльное сокращение</Russian>
 	</TEXT>
@@ -398,7 +398,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_EQUIPMENT</Tag>
-		<English>C2C Combat Mod - Arms and Equipment</English>
+		<English>Combat - Arms and Equipment</English>
 		<French>Mode de Combat C2C - Armes and Équipement</French>
 		<German>C2C-Kampfmod - Waffen und Ausrüstung</German>
 		<Polish>C2C Modyfikacja Bojowa - Wyposażenie i uzbrojenie.</Polish>
@@ -414,7 +414,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_FIGHT_OR_FLIGHT</Tag>
-		<English>C2C Combat Mod - Fight or Flight</English>
+		<English>Combat - Fight or Flight</English>
 		<French>Mode de Combat C2C - Bataille ou Fuite</French>
 		<German>C2C-Kampfmod - Kampf oder Flucht</German>
 		<Italian>C2C Combat Mod - Combatti o scappa</Italian>
@@ -432,7 +432,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_FIXED_BORDERS</Tag>
-		<English>Fixed borders</English>
+		<English>Culture - Fixed borders</English>
 		<French>Frontières fixes</French>
 		<German>Festen Grenzen</German>
 		<Italian>Confini fissi</Italian>
@@ -452,7 +452,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_FLIPPING_AFTER_CONQUEST</Tag>
-		<English>City Flipping after Conquest</English>
+		<English>Culture - City Flipping after Conquest</English>
 		<French>Conversion possible après conquête</French>
 		<German>Stadtbefreiung durch Eroberung</German>
 		<Italian>Conversione città dopo conquista</Italian>
@@ -470,7 +470,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_GREAT_COMMANDERS</Tag>
-		<English>Great Commanders</English>
+		<English>Unit - Great Commanders</English>
 		<French>Commandants Illustres</French>
 		<German>Große Anführer</German>
 		<Italian>Grandi comandanti</Italian>
@@ -490,7 +490,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_HEART_OF_WAR</Tag>
-		<English>C2C Combat Mod - Heart of War</English>
+		<English>Combat - Heart of War</English>
 		<French>Mode de Combat C2C - Le Coeur de la Guerre</French>
 		<German>C2C-Kampfmod - Herz des Krieges</German>
 		<Polish>C2C Modyfikacja Bojowa - Serce Wojny</Polish>
@@ -506,7 +506,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_HIDE_AND_SEEK</Tag>
-		<English>C2C Combat Mod - Hide and Seek</English>
+		<English>Combat - Hide and Seek</English>
 		<French>Mode de Combat C2C - Cache-cache</French>
 		<German>C2C-Kampfmod - Versteckspiel</German>
 		<Russian>C2C Combat Mod - Ïðÿòêè</Russian>
@@ -520,7 +520,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_INFINITE_XP</Tag>
-		<English>Infinite XP</English>
+		<English>Unit - Infinite XP</English>
 		<French>EXP Infinie</French>
 		<German>Unendlich Erfahrungspunkte</German>
 		<Italian>XP Infinita</Italian>
@@ -538,7 +538,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_INQUISITIONS</Tag>
-		<English>Inquisitions</English>
+		<English>Religion - Inquisitions</English>
 		<French>Inquisitions</French>
 		<German>Inquisitionen</German>
 		<Italian>Inquisizioni</Italian>
@@ -554,7 +554,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_LARGER_CITIES</Tag>
-		<English>Larger Cities without Metropolitan Administration</English>
+		<English>Expansion - Larger Cities without Metropolitan Administration</English>
 		<French>Villes plus Larges sans Metropolitan Administration</French>
 		<German>Größere Städte ohne Stadtverwaltung</German>
 		<Italian>Città più grandi senza Amministrazione Metropolitana</Italian>
@@ -574,7 +574,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_LEADERHEAD_LEVELUPS</Tag>
-		<English>Developing Leaders</English>
+		<English>Leader - Developing</English>
 		<French>Développement des Leaders</French>
 		<German>Führungskräfteentwicklung</German>
 		<Italian>Personalità in sviluppo</Italian>
@@ -592,7 +592,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_LEAD_ANY_CIV</Tag>
-		<English>Unrestricted Leaders</English>
+		<English>Leader - Unrestricted</English>
 		<French>Pas de restriction de dirigeants</French>
 		<German>Beliebige Staatsoberhäupter</German>
 		<Italian>Leader senza limitazioni</Italian>
@@ -610,7 +610,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_LIMITED_RELIGIONS</Tag>
-		<English>Limited Religions</English>
+		<English>Religion - Limited Founding</English>
 		<French>Religions Limitées</French>
 		<German>Limitierte Religionen</German>
 		<Italian>Religioni limitate</Italian>
@@ -630,7 +630,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_LOCK_MODS</Tag>
-		<English>Lock Modified Assets</English>
+		<English>Game - Lock Modified Assets</English>
 		<French>Verrouiller les 'Assets' modifiés</French>
 		<German>Modifizierte Assets sperren</German>
 		<Italian>Blocca la modifica dei beni</Italian>
@@ -644,7 +644,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_MAXIMUM_POPULATION</Tag>
-		<English>Maximum Population</English>
+		<English>Expansion - Maximum Population</English>
 		<French>Maximum de Population</French>
 		<German>Bevölkerungsmaximum</German>
 		<Polish>Maksymalna Populacja</Polish>
@@ -660,7 +660,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_MIN_CITY_BORDER</Tag>
-		<English>Minimum City Border</English>
+		<English>Culture - Minimum City Border</English>
 		<French>Territoire Minimum des Villes</French>
 		<German>Minimale Stadtgrenze</German>
 		<Spanish>Fronteras mínimas de ciudad</Spanish>
@@ -678,7 +678,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_MORE_RESOURCES</Tag>
-		<English>More Resources</English>
+		<English>Map - More Resources</English>
 		<French>Ressources supplémentaires</French>
 		<German>Zusätzliche Ressourcen</German>
 		<Polish>Więcej Zasobów.</Polish>
@@ -686,10 +686,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_MORE_RESOURCES_HELP</Tag>
-		<English>Maps that use default resource spawn settings will spawn more resources
-Has no effect on these mapscripts:
-[SPACE][SPACE] * PerfectWorld, PerfectMongoose and World
-Only affects SmartMap when "Bonus Placement = Standard"</English>
+		<English>Maps that use default resource spawn settings will spawn more resources.[NEWLINE]Has no effect on these mapscripts:[NEWLINE][SPACE][SPACE] * PerfectWorld, PerfectMongoose and World[NEWLINE]Only affects SmartMap when "Bonus Placement = Standard"</English>
 		<French>Une carte avec les paramètres par défaut comprendra des ressources supplémentaires</French>
 		<German>Auf Karten mit Standardeinstellungen für Ressourcen werden mehr Ressourcen verteilt.</German>
 		<Polish>Mapy używające standardowych ustawień wygenerują więcej zasobów.</Polish>
@@ -697,7 +694,7 @@ Only affects SmartMap when "Bonus Placement = Standard"</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_MORE_RIVERS</Tag>
-		<English>More Rivers</English>
+		<English>Map - More Rivers</English>
 		<French>Fleuves supplémentaires</French>
 		<German>Zusätzliche Flüsse</German>
 		<Polish>Więcej Rzek</Polish>
@@ -705,11 +702,7 @@ Only affects SmartMap when "Bonus Placement = Standard"</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_MORE_RIVERS_HELP</Tag>
-		<English>Maps that use default river settings will spawn more rivers.
-Has no effect on these mapscripts:
-[SPACE][SPACE] * PerfectWorld, PerfectMongoose and World
-Only affects SmartMap if terrain options is:
-[SPACE][SPACE] * Standard, Great Plains or Oasis</English>
+		<English>Maps that use default river settings will spawn more rivers.[NEWLINE]Has no effect on these mapscripts:[NEWLINE][SPACE][SPACE] * PerfectWorld, PerfectMongoose and World[NEWLINE]Only affects SmartMap if terrain options is:[NEWLINE][SPACE][SPACE] * Standard, Great Plains or Oasis</English>
 		<French>Une carte avec les paramètres par défaut, fera apparaître des fleuves et rivières supplémentaires</French>
 		<German>Auf Karten mit Standardeinstellungen für Flüsse werden mehr Flüsse verteilt.</German>
 		<Polish>Mapy używające standardowych ustawień wygenerują więcej rzek.</Polish>
@@ -717,7 +710,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_MORE_XP_TO_LEVEL</Tag>
-		<English>More XP to Level</English>
+		<English>Unit - More XP to Level</English>
 		<French>XP requis x2</French>
 		<German>Langsamere Einheitenentwicklung</German>
 		<Polish>Więcej XP na poziom.</Polish>
@@ -733,7 +726,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NEANDERTHAL_CITIES</Tag>
-		<English>Neanderthal Cities</English>
+		<English>Barbarian - Neanderthal Cities</English>
 		<French>Villes Néanderthal</French>
 		<German>Neandertalerstädte</German>
 		<Russian>Ãîðîäà íåàíäåðòàëüöåâ</Russian>
@@ -747,7 +740,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NEW_RANDOM_SEED</Tag>
-		<English>New Random Seed on Reload</English>
+		<English>Game - New Random Seed on Reload</English>
 		<French>Nouveau classement aléatoire au rechargement</French>
 		<German>Neustart des Zufallszahlengenerators bei erneutem Laden</German>
 		<Italian>Nuova estrazione casuale per ricarica</Italian>
@@ -765,7 +758,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_BARBARIANS</Tag>
-		<English>No Barbarians</English>
+		<English>Barbarian - No Barbarians</English>
 		<French>Pas de Barbares</French>
 		<German>Keine Barbaren</German>
 		<Russian>Áåç âàðâàðîâ</Russian>
@@ -782,7 +775,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_CITY_FLIPPING</Tag>
-		<English>No City Flipping From Culture</English>
+		<English>Culture - No City Flipping From Culture</English>
 		<French>Pas de conversion culturelle</French>
 		<German>Keine kulturbedingten Stadtübernahmen</German>
 		<Italian>No conversione città per cultura</Italian>
@@ -800,7 +793,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_CITY_RAZING</Tag>
-		<English>No City Razing</English>
+		<English>Game - No City Razing</English>
 		<French>Impossible de raser les villes</French>
 		<German>Keine Stadtvernichtung</German>
 		<Italian>Nessuna possibilità di razziare le città</Italian>
@@ -818,7 +811,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_EVENTS</Tag>
-		<English>No Random Events</English>
+		<English>Disable - Random Events</English>
 		<French>Pas d'événements aléatoires</French>
 		<German>Keine Zufallsereignisse</German>
 		<Italian>Nessun evento casuale</Italian>
@@ -827,8 +820,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_EVENTS_HELP</Tag>
-		<English>Random Events do not occur.
-		Events are currently unsupported - may be buggy and or unbalanced.</English>
+		<English>Random Events do not occur.[NEWLINE]ALERT: DO enable this option for multiplayer games to increase game stability.[NEWLINE]WARNING: Events are currently unsupported - may be buggy and/or unbalanced.</English>
 		<French>Les événements aléatoires ne se produisent pas</French>
 		<German>Es finden keine Zufallsereignisse statt.</German>
 		<Italian>Non si verificano eventi casuali</Italian>
@@ -837,7 +829,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_FUTURE</Tag>
-		<English>No Future Era</English>
+		<English>Disable - Future Era</English>
 		<French>Pas d'Ere Futuriste</French>
 		<German>Keine zukünftigen Zeitalter</German>
 		<Italian>Niente Era futura</Italian>
@@ -857,7 +849,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_GOODY_HUTS</Tag>
-		<English>No Tribal Villages</English>
+		<English>Map - No Tribal Villages</English>
 		<French>Pas de village tribal</French>
 		<German>Keine Stammesdörfer</German>
 		<Italian>Niente villaggi tribali</Italian>
@@ -875,7 +867,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_NEGATIVE_TRAITS</Tag>
-		<English>No Negative Traits</English>
+		<English>Leader - No Negative Traits</English>
 		<French>Pas de Traits Négatifs</French>
 		<German>Keine negativen Charakterzüge</German>
 		<Italian>Niente tratti negativi</Italian>
@@ -893,7 +885,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_NUKES</Tag>
-		<English>No Nukes</English>
+		<English>Disable - Nukes</English>
 		<French>Pas de nucléaire</French>
 		<German>Keine Nuklearwaffen</German>
 		<Italian>Niente bombe atomiche</Italian>
@@ -911,7 +903,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_TECH_BROKERING</Tag>
-		<English>No Tech. Brokering</English>
+		<English>Disable - Tech. Brokering</English>
 		<French>Pas de Commerce de Technologies</French>
 		<German>Kein Technologieaustausch</German>
 		<Italian>Nessuna vendita di tecnologie</Italian>
@@ -930,7 +922,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_TECH_HANDICAPS_FOR_HUMANS</Tag>
-		<English>No Tech Handicaps for Humans</English>
+		<English>Tech - No Tech Handicaps for Humans</English>
 		<French>Pas de Diff. Tech pour les Joueurs</French>
 		<Russian>Нет помех в науч. гонке живым игрокам</Russian>
 	</TEXT>
@@ -942,7 +934,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_TECH_TRADING</Tag>
-		<English>No Technology Trading</English>
+		<English>Disable - Technology Trading</English>
 		<French>Aucun échange de Technologies</French>
 		<German>Kein Technologiehandel</German>
 		<Italian>Nessuno scambio di tecnologie</Italian>
@@ -960,7 +952,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_VASSAL_STATES</Tag>
-		<English>No Vassal States</English>
+		<English>Disable - Vassal States</English>
 		<French>Pas d'état vassal</French>
 		<German>Keine Vasallenstaaten</German>
 		<Italian>Niente Stati vassalli</Italian>
@@ -978,7 +970,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ONE_CITY_CHALLENGE</Tag>
-		<English>One-City Challenge</English>
+		<English>Game - One-City Challenge</English>
 		<French>Défier une ville</French>
 		<German>Einzelstadt-Wettkampf</German>
 		<Italian>Sfida a città singola</Italian>
@@ -996,7 +988,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ONGOING_TRAINING</Tag>
-		<English>Ongoing Training</English>
+		<English>Unit - Ongoing Training</English>
 		<French>Entraînement permanent</French>
 		<German>Kontinuierliche Weiterbildung</German>
 		<Polish>Ciągły Trening</Polish>
@@ -1012,7 +1004,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS</Tag>
-		<English>C2C Combat Mod - Outbreaks and Afflictions</English>
+		<English>Combat - Outbreaks and Afflictions</English>
 		<French>Mod de Combat C2C - Éclosions et afflictions</French>
 		<German>C2C-Kampfmod - Zivile Notstände</German>
 		<Russian>C2C Combat Mod - Эпидемии и Криминал</Russian>
@@ -1026,7 +1018,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_OVEREXPANSION_PENALTIES</Tag>
-		<English>Happiness penalties from overexpansion</English>
+		<English>Expansion - Happiness Penalties</English>
 		<French>Pénalités de Bonheur en cas de sur-expansion</French>
 		<Russian>Не в размерах счастье</Russian>
 	</TEXT>
@@ -1038,7 +1030,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_PEACE_AMONG_NPCS</Tag>
-		<English>Peace Among NPCs</English>
+		<English>Game - Peace Among NPCs</English>
 		<German>Frieden zwischen Computergegnern</German>
 		<French>Paix entre les PNJs</French>
 		<Russian>Êîìïüþòåðíîå ïåðåìèðèå</Russian>
@@ -1052,7 +1044,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_PERMANENT_ALLIANCES</Tag>
-		<English>Permanent Alliances</English>
+		<English>Enable - Permanent Alliances</English>
 		<French>Alliances permanentes</French>
 		<German>Permanente Allianzen</German>
 		<Italian>Alleanze permanenti</Italian>
@@ -1070,7 +1062,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_PERSONALIZED_MAP</Tag>
-		<English>Personalized Map</English>
+		<English>Map - Personalized</English>
 		<French>Carte Personnalisée</French>
 		<German>Personalisierte Karte</German>
 		<Italian>Mappa personalizzata</Italian>
@@ -1090,7 +1082,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_PICK_RELIGION</Tag>
-		<English>Choose Religions</English>
+		<English>Religion - Choose Upon Founding</English>
 		<French>Choisir religions</French>
 		<German>Religionen wählen</German>
 		<Italian>Scegli religioni</Italian>
@@ -1108,7 +1100,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_PURE_TRAITS</Tag>
-		<English>Pure Traits</English>
+		<English>Leader - Pure Traits</English>
 		<French>Traits Purs</French>
 		<German>Reine Charakterzüge</German>
 		<Italian>Tratti puri</Italian>
@@ -1126,7 +1118,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_RAGING_BARBARIANS</Tag>
-		<English>Raging Barbarians</English>
+		<English>Barbarian - Raging</English>
 		<French>Barbares déchaînés</French>
 		<German>Wütende Barbaren</German>
 		<Italian>Barbari furiosi</Italian>
@@ -1144,7 +1136,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_RANDOM_PERSONALITIES</Tag>
-		<English>Random Personalities</English>
+		<English>Leader - Random Personalities</English>
 		<French>Personnalités aléatoires</French>
 		<German>Zufällige Persönlichkeiten</German>
 		<Italian>Personalità casuali</Italian>
@@ -1162,7 +1154,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_REALISTIC_CORPORATIONS</Tag>
-		<English>Realistic Corporations</English>
+		<English>Advanced - Corporations</English>
 		<French>Corporations Réalistes</French>
 		<German>Realistische Kapitalgesellschaften</German>
 		<Italian>Corporazioni realistiche</Italian>
@@ -1182,7 +1174,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_REALISTIC_CULTURE_SPREAD</Tag>
-		<English>Realistic Culture Spread</English>
+		<English>Culture - Realistic Culture Spread</English>
 		<French>Expansion Culturelle Réaliste</French>
 		<German>Realistische Kulturausbreitung</German>
 		<Italian>Diffusione realistica della cultura</Italian>
@@ -1202,7 +1194,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_REALISTIC_SIEGE</Tag>
-		<English>Realistic Siege</English>
+		<English>Combat - Realistic Siege</English>
 		<German>Realistische Belagerungen</German>
 		<French>Sièges Réalistes</French>
 		<Russian>Ðåàëèñòè÷íàÿ îñàäà</Russian>
@@ -1216,7 +1208,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_RECKLESS_ANIMALS</Tag>
-		<English>Reckless Animals</English>
+		<English>Animal - Reckless</English>
 		<German>Draufgängerische Tiere</German>
 		<French>Animaux téméraires</French>
 		<Russian>Áåçðàññóäíûå æèâîòíûå</Russian>
@@ -1230,7 +1222,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_RELIGIOUS_DISABLING</Tag>
-		<English>Religious Disabling</English>
+		<English>Religion - Religious Disabling</English>
 		<French>Désactivation des bâtiments Religieux</French>
 		<German>Deaktivierung von religiösen Gebäuden</German>
 		<Italian>Disabilitazione religiosa</Italian>
@@ -1248,7 +1240,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_REVOLUTION</Tag>
-		<English>Revolutions</English>
+		<English>Unsupported - Revolutions</English>
 		<French>Révolutions</French>
 		<German>Revolutionen</German>
 		<Italian>Rivoluzioni</Italian>
@@ -1268,7 +1260,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_RUTHLESS_AI</Tag>
-		<English>Ruthless AI</English>
+		<English>AI - Ruthless</English>
 		<French>IA Sans merci</French>
 		<German>Skrupellose KI</German>
 		<Italian>IA spietata</Italian>
@@ -1288,7 +1280,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_SAD</Tag>
-		<English>Surround and Destroy</English>
+		<English>Combat - Surround and Destroy</English>
 		<French>Encercler et Détruire</French>
 		<German>Einkesselung</German>
 		<Italian>Circonda e distruggi</Italian>
@@ -1298,7 +1290,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_SAD_HELP</Tag>
-		<English>Surround and Destroy adds military bonuses for surrounding enemy troops and cities, simulating real world land ambushes.</English>
+		<English>WARNING: AI underutilizes this option, consider it a crutch for the player.[NEWLINE]Surround and Destroy adds military bonuses for surrounding enemy troops and cities, simulating real world land ambushes.</English>
 		<French>Ajoute un bonus militaire pour l'encerclement des troupes ou villes ennemies, simulant les embuscades du monde réel.</French>
 		<German>Ihr erhaltet einen militärischen Bonus, wenn feindliche Truppen und Städte eingekesselt werden. Dies simuliert die großen Kesselschlachten der Weltgeschichte.</German>
 		<Italian>Circonda e distruggi aggiunge bonus militari per aver circondato città e truppe nemiche, simulando le imboscate come nel mondo reale.</Italian>
@@ -1308,7 +1300,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_SIZE_MATTERS</Tag>
-		<English>C2C Combat Mod - Size Matters</English>
+		<English>Combat - Size Matters</English>
 		<French>Mode de Combat C2C - La Taille Compte!</French>
 		<German>C2C-Kampfmod - Größe ist wichtig</German>
 		<Italian>C2C Combat Mod - La dimensione conta</Italian>
@@ -1326,7 +1318,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_START_AS_MINORS</Tag>
-		<English>Start as minor civs</English>
+		<English>Unsupported - Start as minor civs</English>
 		<French>Civs mineures au départ</French>
 		<German>Start als unbedeutende Zivilisation</German>
 		<Italian>Inizi come civs secondari</Italian>
@@ -1346,7 +1338,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_START_NO_POSITIVE_TRAITS</Tag>
-		<English>Start Without Positive Traits</English>
+		<English>Leader - Start Without Positive Traits</English>
 		<French>Démarrer sans Traits positifs</French>
 		<German>Start ohne positive Charakterzüge</German>
 		<Italian>Partenza senza tratti positivi</Italian>
@@ -1364,7 +1356,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_STRENGTH_IN_NUMBERS</Tag>
-		<English>C2C Combat Mod - Strength in Numbers</English>
+		<English>Combat - Strength in Numbers</English>
 		<French>Mode de Combat C2C - La Force du nombre</French>
 		<German>C2C-Kampfmod - Gemeinsam sind wir stark</German>
 		<Italian>La forza dei numeri</Italian>
@@ -1382,7 +1374,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_TECH_DIFFUSION</Tag>
-		<English>Tech Diffusion</English>
+		<English>Tech - Diffusion</English>
 		<French>Diffusion des Technologies</French>
 		<German>Technologieverbreitung</German>
 		<Italian>Diffusione di tecnologie</Italian>
@@ -1392,7 +1384,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_TECH_DIFFUSION_HELP</Tag>
-		<English>Tech Diffusion: Tech knowledge will slowly diffuse to civs that are behind.</English>
+		<English>Tech knowledge will slowly diffuse to civs that are behind.</English>
 		<French>Diffusion des Techs: La Connaissance des Technologies sera lentement diffusée aux autres civilisations.</French>
 		<German>Langsame Verbreitung von technologischem Wissen an Zivilisationen, die noch nicht so weit entwickelt sind.</German>
 		<Italian>Diffusione delle tecnologie: la tecnologia non si diffonderà alle civiltà più arretrate.</Italian>
@@ -1402,7 +1394,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_TELEPORT_HUNTING_AWARDS</Tag>
-		<English>Teleport Hunting Awards</English>
+		<English>Unit - Teleport Hunting Awards</English>
 		<French>Téléporter les Trophées de chasse</French>
 		<German>Teleportation der Jagdbeute</German>
 		<Russian>Òåëåïîðòàöèÿ äîáû÷è</Russian>
@@ -1416,7 +1408,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UNITED_NATIONS</Tag>
-		<English>United Nations</English>
+		<English>Enable - United Nations</English>
 		<French>Nations Unies</French>
 		<German>Vereinte Nationen</German>
 		<Italian>Nazioni Unite</Italian>
@@ -1436,7 +1428,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UNLIMITED_NATIONAL_UNITS</Tag>
-		<English>Unlimited National Units</English>
+		<English>Disable - National Unit Limits</English>
 		<French>Unités Nationales Illimitées</French>
 		<German>Unbegrenzte Anzahl an Nationaleinheiten</German>
 		<Italian>Unità senza limiti nazionali</Italian>
@@ -1454,7 +1446,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UNLIMITED_WONDERS</Tag>
-		<English>Unlimited Wonders</English>
+		<English>Disable - Wonder Limits</English>
 		<French>Merveilles Illimitées</French>
 		<German>Unbegrenzte Wunderanzahl</German>
 		<Italian>Meraviglie illimitate</Italian>
@@ -1474,7 +1466,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UPRANGE</Tag>
-		<English>C2C Combat Mod - Uprange and Personal</English>
+		<English>Combat - Uprange and Personal</English>
 		<French>Mode de Combat C2C - Portée et proximité</French>
 		<German>C2C-Kampfmod - Nah und fern</German>
 		<Polish>C2C Modyfikacja Bojowa - Walka wręcz i dystansowa</Polish>
@@ -1490,7 +1482,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UPSCALED_BUILDING_AND_UNIT_COSTS</Tag>
-		<English>Upscaled Production Time</English>
+		<English>Expansion - Upscaled Production Time</English>
 		<French>Coûts des Unités et Bâtiments Augmentés</French>
 		<German>Erhöhte Kosten für Gebäude und Einheiten</German>
 		<Italian>Costi maggiorati</Italian>
@@ -1508,7 +1500,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UPSCALED_RESEARCH_COSTS</Tag>
-		<English>Upscaled Research Time</English>
+		<English>Tech - Upscaled Research Time</English>
 		<French>Temps de recherche accru</French>
 		<Russian>Твердый гранит науки</Russian>
 	</TEXT>
@@ -1520,7 +1512,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_VANILLA_COMBAT_ENGINE</Tag>
-		<English>Vanilla BTS Combat Engine</English>
+		<English>Combat - Vanilla BTS Combat Engine</English>
 		<French>Moteur de Combat du Jeu d'origine</French>
 		<German>Unmodifiziertes BTS-Kampfsystem</German>
 		<Russian>Îðèãèíàëüíàÿ áîåâàÿ ñèñòåìà BTS</Russian>
@@ -1534,7 +1526,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_WIN_FOR_LOSING</Tag>
-		<English>Win for Losing</English>
+		<English>Tech - Win for Losing</English>
 		<German>Gewinne für Verlierer</German>
 		<French>Bonus de Technologies pour les perdants</French>
 		<Russian>Поощрение отстающим</Russian>
@@ -1548,7 +1540,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_WITHOUT_WARNING</Tag>
-		<English>C2C Combat Mod - Without Warning</English>
+		<English>Combat - Without Warning</English>
 		<German>C2C-Kampfmod - Ohne Vorwarnung</German>
 		<French>Mod de Combat C2C - Sans Avert.</French>
 		<Russian>C2C Combat Mod - Áåç ïðåäóïðåæäåíèÿ</Russian>
@@ -1562,7 +1554,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_XP_FROM_ASSIGNED_SPECIALISTS</Tag>
-		<English>Assigned Specialists XP</English>
+		<English>Unit - Assigned Specialists XP</English>
 		<French>XP des spécialistes</French>
 		<German>Erfahrungsgewinn durch anwesende Spezialisten</German>
 		<Polish>XP dla przypisanych specjalistów.</Polish>
@@ -1578,7 +1570,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ZONE_OF_CONTROL</Tag>
-		<English>Zone of Control</English>
+		<English>Unsupported - Zone of Control</English>
 		<French>Zones de Contrôle</French>
 		<German>Kontrollzonen</German>
 		<Polish>Strefy Kontroli</Polish>
@@ -1592,7 +1584,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ALWAYS_RAZE_CITIES</Tag>
-		<English>Always Raze Cities</English>
+		<English>Game - Always Raze Cities</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ALWAYS_RAZE_CITIES_HELP</Tag>
@@ -1600,7 +1592,7 @@ Only affects SmartMap if terrain options is:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_EQUILIBRIUM_CULTURE</Tag>
-		<English>Equilibrium Culture</English>
+		<English>Culture - Equilibrium</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_EQUILIBRIUM_CULTURE_HELP</Tag>
