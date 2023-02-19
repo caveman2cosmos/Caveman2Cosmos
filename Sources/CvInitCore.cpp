@@ -2192,7 +2192,7 @@ void CvInitCore::checkVersions()
 	{
 		const PlayerTypes ePlayer = GC.getGame().getActivePlayer();
 		// DLL or assets changed, recommend modifier reloading
-		if (NO_PLAYER != ePlayer && GET_PLAYER(ePlayer).isAlive() && GET_PLAYER(ePlayer).isHuman())
+		if (NO_PLAYER != ePlayer && GET_PLAYER(ePlayer).isAlive() && GET_PLAYER(ePlayer).isHumanPlayer())
 		{
 			CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_MODIFIER_RECALCULATION);
 			if (NULL != pInfo)

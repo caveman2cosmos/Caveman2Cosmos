@@ -1746,10 +1746,10 @@ void CvPlayer::changeCiv(CivilizationTypes eNewCiv)
 //
 void CvPlayer::setIsHuman( bool bNewValue )
 {
-	if( bNewValue == isHuman() )
+	if (bNewValue == isHumanPlayer())
 		return;
 
-	if( bNewValue )
+	if (bNewValue)
 		GC.getInitCore().setSlotStatus( getID(), SS_TAKEN );
 	else
 		GC.getInitCore().setSlotStatus( getID(), SS_COMPUTER ); // or SS_OPEN for multiplayer?
@@ -1838,7 +1838,7 @@ void CvPlayer::initFreeUnits()
 		iPoints *= GC.getHandicapInfo(getHandicapType()).getAdvancedStartPointsMod();
 		iPoints /= 100;
 
-		if (!isHuman())
+		if (!isHumanPlayer())
 		{
 			iPoints *= GC.getHandicapInfo(getHandicapType()).getAIAdvancedStartPercent();
 			iPoints /= 100;
@@ -1875,7 +1875,7 @@ void CvPlayer::initFreeUnits()
 
 		// Defensive units
 		int iCount = GC.getEraInfo(startEra).getStartingDefenseUnits();
-		iCount += isHuman() ? GC.getHandicapInfo(getHandicapType()).getStartingDefenseUnits() : GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIStartingDefenseUnits();
+		iCount += isHumanPlayer() ? GC.getHandicapInfo(getHandicapType()).getStartingDefenseUnits() : GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIStartingDefenseUnits();
 
 		if (iCount > 0 && !addStartUnitAI(UNITAI_CITY_DEFENSE, iCount * iMult))
 		{
@@ -1884,7 +1884,7 @@ void CvPlayer::initFreeUnits()
 		}
 		// Worker units
 		iCount = GC.getEraInfo(startEra).getStartingWorkerUnits();
-		iCount += isHuman() ? GC.getHandicapInfo(getHandicapType()).getStartingWorkerUnits() : GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIStartingWorkerUnits();
+		iCount += isHumanPlayer() ? GC.getHandicapInfo(getHandicapType()).getStartingWorkerUnits() : GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIStartingWorkerUnits();
 
 		if (iCount > 0 && !addStartUnitAI(UNITAI_WORKER, iCount * iMult))
 		{
@@ -1892,7 +1892,7 @@ void CvPlayer::initFreeUnits()
 		}
 		// Explorer units
 		iCount = GC.getEraInfo(GC.getGame().getStartEra()).getStartingExploreUnits();
-		iCount += isHuman() ? GC.getHandicapInfo(getHandicapType()).getStartingExploreUnits() : GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIStartingExploreUnits();
+		iCount += isHumanPlayer() ? GC.getHandicapInfo(getHandicapType()).getStartingExploreUnits() : GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIStartingExploreUnits();
 		if (iCount > 0)
 		{
 			addStartUnitAI(UNITAI_EXPLORE, iCount * iMult);
@@ -2261,7 +2261,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 	const PlayerTypes eOldOwner = pOldCity->getOwner();
 	const PlayerTypes eOriginalOwner = pOldCity->getOriginalOwner();
 	const PlayerTypes eHighestCulturePlayer = pOldCity->findHighestCulture();
-	const bool bHuman = isHuman();
+	const bool bHuman = isHumanPlayer();
 	const bool bRecapture = (eHighestCulturePlayer != NO_PLAYER ? GET_PLAYER(eHighestCulturePlayer).getTeam() == getTeam() : false);
 
 	CvPlayerAI& oldOwner = GET_PLAYER(eOldOwner);
@@ -2343,7 +2343,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 
 			for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 			{
-				if (iI != eNewOwner && GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHuman())
+				if (iI != eNewOwner && GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isHumanPlayer())
 				{
 					if (pOldCity->isRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false))
 					{
@@ -2711,7 +2711,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 			AI_setHasInquisitionTarget();
 		}
 	}
-	if (!oldOwner.isHuman())
+	if (!oldOwner.isHumanPlayer())
 	{
 		oldOwner.AI_setHasInquisitionTarget();
 	}
@@ -3205,10 +3205,9 @@ CvSelectionGroup* CvPlayer::cycleSelectionGroups(const CvUnit* pUnit, bool bForw
 
 bool CvPlayer::hasTrait(TraitTypes eTrait) const
 {
-	FAssertMsg((getLeaderType() >= 0), "getLeaderType() is less than zero");
-	FAssertMsg((eTrait >= 0), "eTrait is less than zero");
-	//TB Traits (original) return GC.getLeaderHeadInfo(getLeaderType()).hasTrait(eTrait);
-	return (m_pabHasTrait == NULL ? false : m_pabHasTrait[eTrait]);
+	FAssertMsg(getLeaderType() >= 0, "getLeaderType() is less than zero");
+	FAssertMsg(eTrait >= 0, "eTrait is less than zero");
+	return m_pabHasTrait ? m_pabHasTrait[eTrait] : false;
 }
 
 
@@ -3217,14 +3216,12 @@ void CvPlayer::setHumanDisabled(bool newVal)
 	m_bDisableHuman = newVal;
 	updateHuman();
 }
-bool CvPlayer::isHumanDisabled() const
-{
-	return m_bDisableHuman;
-}
 
-
-bool CvPlayer::isHuman() const
+/*DllExport*/ bool CvPlayer::isHuman() const
 {
+#ifdef _DEBUG
+	OutputDebugString(CvString::format("exe is asking if player (%d) is human\n", m_eID).c_str());
+#endif
 	return m_bHuman;
 }
 
@@ -4353,7 +4350,7 @@ bool CvPlayer::hasReadyUnautomatedUnit(bool bAny) const
 	PROFILE_FUNC();
 
 	return algo::any_of(groups() | filtered(!CvSelectionGroup::fn::isAutomated()),
-		CvSelectionGroup::fn::readyToMove(bAny, !isHuman())
+		CvSelectionGroup::fn::readyToMove(bAny, !isHumanPlayer())
 	);
 }
 
@@ -4361,7 +4358,7 @@ bool CvPlayer::hasReadyUnit(bool bAny) const
 {
 	PROFILE_FUNC();
 
-	return algo::any_of(groups(), CvSelectionGroup::fn::readyToMove(bAny, !isHuman()));
+	return algo::any_of(groups(), CvSelectionGroup::fn::readyToMove(bAny, !isHumanPlayer()));
 }
 
 
@@ -4826,7 +4823,7 @@ void CvPlayer::contact(PlayerTypes ePlayer)
 		return;
 	}
 
-	if (GET_PLAYER(ePlayer).isHuman())
+	if (GET_PLAYER(ePlayer).isHumanPlayer())
 	{
 		if (GC.getGame().isPbem() || GC.getGame().isHotSeat() || (GC.getGame().isPitboss() && !gDLL->isConnected(GET_PLAYER(ePlayer).getNetID())))
 		{
@@ -5075,7 +5072,7 @@ void CvPlayer::handleDiploEvent(DiploEventTypes eDiploEvent, PlayerTypes ePlayer
 		}
 		case DIPLOEVENT_DO_NOT_BOTHER:
 		{
-			if (!isHuman())
+			if (!isHumanPlayer())
 			{
 				m_bDoNotBotherStatus = (PlayerTypes)iData1;
 			}
@@ -5181,7 +5178,7 @@ bool CvPlayer::canTradeItem(PlayerTypes eWhoTo, TradeData item, bool bTestDenial
 			{
 				const bool bCanTradeAll =
 				(
-					isHuman()
+					isHumanPlayer()
 					||
 					getTeam() == GET_PLAYER(eWhoTo).getTeam()
 					||
@@ -6376,7 +6373,7 @@ void CvPlayer::found(int iX, int iY, CvUnit *pUnit)
 
 	pCity->doAutobuild();
 
-	if (!isHuman() || getAdvancedStartPoints() > -1)
+	if (!isHumanPlayer() || getAdvancedStartPoints() > -1)
 	{
 		pCity->doFoundMessage();
 	}
@@ -7981,7 +7978,7 @@ int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 	}
 	int iModifier = 100;
 
-	if (GC.getGame().isOption(GAMEOPTION_WIN_FOR_LOSING) && (!isHuman() || !GC.getGame().isOption(GAMEOPTION_NO_TECH_HANDICAPS_FOR_HUMANS)))
+	if (GC.getGame().isOption(GAMEOPTION_WIN_FOR_LOSING) && (!isHumanPlayer() || !GC.getGame().isOption(GAMEOPTION_NO_TECH_HANDICAPS_FOR_HUMANS)))
 	{
 		if ((int)getCurrentEra() > 0)
 		{
@@ -7989,7 +7986,7 @@ int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 		}
 	}
 
-	if(GC.getGame().isOption(GAMEOPTION_TECH_DIFFUSION) && (!isHuman() || !GC.getGame().isOption(GAMEOPTION_NO_TECH_HANDICAPS_FOR_HUMANS)))
+	if(GC.getGame().isOption(GAMEOPTION_TECH_DIFFUSION) && (!isHumanPlayer() || !GC.getGame().isOption(GAMEOPTION_NO_TECH_HANDICAPS_FOR_HUMANS)))
 	{
 		double knownExp = 0.0;
 		// Tech flows better through open borders
@@ -8653,7 +8650,7 @@ void CvPlayer::foundReligion(ReligionTypes eReligion, ReligionTypes eSlotReligio
 	}
 	if (GC.getGame().isReligionFounded(eReligion))
 	{
-		if (isHuman())
+		if (isHumanPlayer())
 		{
 			CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_FOUND_RELIGION, eSlotReligion);
 			if (NULL != pInfo)
@@ -10233,7 +10230,7 @@ void CvPlayer::applyUnitUpkeepHandicap(int64_t& iUpkeep)
 	iUpkeep *= GC.getHandicapInfo(getHandicapType()).getUnitUpkeepPercent();
 	iUpkeep /= 100;
 
-	if (!isHuman())
+	if (!isHumanPlayer())
 	{
 		iUpkeep *= GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIUnitUpkeepPercent();
 		iUpkeep /= 100;
@@ -11675,7 +11672,7 @@ void CvPlayer::setAlive(bool bNewValue)
 			gDLL->endMPDiplomacy();
 			gDLL->endDiplomacy();
 
-			if (!isHuman())
+			if (!isHumanPlayer())
 			{
 				gDLL->closeSlot(getID());
 			}
@@ -11758,7 +11755,7 @@ void CvPlayer::setNewPlayerAlive(bool bNewValue)
 			gDLL->endMPDiplomacy();
 			gDLL->endDiplomacy();
 
-			if (!isHuman())
+			if (!isHumanPlayer())
 			{
 				gDLL->closeSlot(getID());
 			}
@@ -11834,7 +11831,7 @@ void CvPlayer::verifyAlive()
 			{
 				for (int x = 0; x < MAX_PC_PLAYERS; x++)
 				{
-					if (GET_PLAYER((PlayerTypes)x).isAlive() && !GET_PLAYER((PlayerTypes)x).isHumanDisabled() && !GET_PLAYER((PlayerTypes)x).isHuman())
+					if (GET_PLAYER((PlayerTypes)x).isAlive() && !GET_PLAYER((PlayerTypes)x).isHumanPlayer(true))
 					{
 						GC.getGame().changeHumanPlayer((PlayerTypes)getID(), (PlayerTypes)x);
 						break;
@@ -12044,12 +12041,12 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 			}
 
 			// Send email to disconnected human players if this is the pitboss.
-			if (gDLL->IsPitbossHost() && isHuman() && !isConnected())
+			if (gDLL->IsPitbossHost() && isHumanPlayer() && !isConnected())
 			{
 				sendReminder();
 			}
 
-			if ((GC.getGame().isHotSeat() || GC.getGame().isPbem()) && isHuman() && bDoTurn)
+			if ((GC.getGame().isHotSeat() || GC.getGame().isPbem()) && isHumanPlayer() && bDoTurn)
 			{
 				gDLL->getInterfaceIFace()->clearEventMessages();
 				GC.setResourceLayer(false);
@@ -12077,7 +12074,7 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 
 				m_contractBroker.reset();
 
-				if (isAlive() && !isHuman() && !isNPC() && getAdvancedStartPoints() >= 0)
+				if (isAlive() && !isHumanPlayer() && !isNPC() && getAdvancedStartPoints() >= 0)
 				{
 					AI_doAdvancedStart();
 				}
@@ -12138,14 +12135,14 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 				PROFILE("CvPlayer::setTurnActive.SetInactive.doTurn");
 
 #ifdef USE_UNIT_TENDERING
-				if (isAlive() && !isHuman())
+				if (isAlive() && !isHumanPlayer())
 				{
 					getContractBroker().finalizeTenderContracts();
 				}
 #endif
 				if (!GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
 				{
-					if ((GC.getGame().isPbem() || GC.getGame().isHotSeat()) && isHuman() && GC.getGame().countHumanPlayersAlive() > 1)
+					if ((GC.getGame().isPbem() || GC.getGame().isHotSeat()) && isHumanPlayer() && GC.getGame().countHumanPlayersAlive() > 1)
 					{
 						GC.getGame().setHotPbemBetweenTurns(true);
 					}
@@ -12156,7 +12153,7 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 						{
 							if (GET_PLAYER((PlayerTypes)iI).isAlive())
 							{
-								if (!GC.getGame().isPbem() || !GET_PLAYER((PlayerTypes)iI).isHuman())
+								if (!GC.getGame().isPbem() || !GET_PLAYER((PlayerTypes)iI).isHumanPlayer())
 								{
 									GET_PLAYER((PlayerTypes)iI).setTurnActive(true);
 								}
@@ -12228,7 +12225,7 @@ void CvPlayer::setAutoMoves(bool bNewValue)
 	{
 		m_bAutoMoves = bNewValue;
 
-		if (!isAutoMoves() && (isEndTurn() || !isHuman() && !hasReadyUnit(true)))
+		if (!isAutoMoves() && (isEndTurn() || !isHumanPlayer() && !hasReadyUnit(true)))
 		{
 			setTurnActive(false);
 		}
@@ -12269,7 +12266,7 @@ bool CvPlayer::isTurnDone() const
 	{
 		return false;
 	}
-	if (!isHuman() )
+	if (!isHumanPlayer())
 	{
 		return true;
 	}
@@ -12440,7 +12437,7 @@ void CvPlayer::setCurrentEra(EraTypes eNewValue)
 			gDLL->getInterfaceIFace()->setDirty(Soundtrack_DIRTY_BIT, true);
 		}
 
-		if (isHuman() && (getCurrentEra() != GC.getGame().getStartEra()) && !GC.getGame().isNetworkMultiPlayer())
+		if (isHumanPlayer() && (getCurrentEra() != GC.getGame().getStartEra()) && !GC.getGame().isNetworkMultiPlayer())
 		{
 			if (GC.getGame().isFinalInitialized() && !(gDLL->GetWorldBuilderMode()))
 			{
@@ -12499,7 +12496,7 @@ void CvPlayer::setLastStateReligion(const ReligionTypes eNewReligion)
 				{
 					const CvPlayer& playerX = GET_PLAYER((PlayerTypes)iI);
 
-					if (playerX.isAlive() && playerX.isHuman() && GET_TEAM(getTeam()).isHasMet(playerX.getTeam()))
+					if (playerX.isAlive() && playerX.isHumanPlayer() && GET_TEAM(getTeam()).isHasMet(playerX.getTeam()))
 					{
 						AddDLLMessage(
 							(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(),
@@ -13210,7 +13207,7 @@ void CvPlayer::changeGoldPerTurnByPlayer(PlayerTypes eIndex, int iChange)
 			gDLL->getInterfaceIFace()->setDirty(GameData_DIRTY_BIT, true);
 		}
 
-		if (!isHuman())
+		if (!isHumanPlayer())
 		{
 			AI_doCommerce();
 		}
@@ -15202,7 +15199,7 @@ void CvPlayer::expireMessages()
 
 void CvPlayer::addPopup(CvPopupInfo* pInfo, bool bFront)
 {
-	if (isHuman())
+	if (isHumanPlayer())
 	{
 		if (bFront)
 		{
@@ -15460,7 +15457,7 @@ void CvPlayer::doResearch()
 
 	if (getCurrentResearch() == NO_TECH)
 	{
-		FAssert(isHuman())
+		FAssert(isHumanPlayer())
 
 		if (getID() == GC.getGame().getActivePlayer())
 		{
@@ -16770,7 +16767,7 @@ void CvPlayer::doAdvancedStartAction(AdvancedStartActionTypes eAction, int iX, i
 			gDLL->getInterfaceIFace()->setInAdvancedStart(false);
 		}
 
-		if (isHuman())
+		if (isHumanPlayer())
 		{
 			chooseTech();
 
@@ -17878,7 +17875,7 @@ void CvPlayer::doWarnings()
 
 // BUG - Ignore Harmless Barbarians - start
 	bool bCheckBarbarians = false;
-	bool bCheckBarbariansInitialized = !isHuman();
+	bool bCheckBarbariansInitialized = !isHumanPlayer();
 // BUG - Ignore Harmless Barbarians - end
 
 	//update enemy units close to your territory
@@ -21478,7 +21475,7 @@ bool CvPlayer::canDoEvent(EventTypes eEvent, const EventTriggeredData& kTriggere
 			return false;
 		}
 
-		if (GET_PLAYER(kTriggeredData.m_eOtherPlayer).isHuman())
+		if (GET_PLAYER(kTriggeredData.m_eOtherPlayer).isHumanPlayer())
 		{
 			if (0 == kEvent.getOurAttitudeModifier())
 			{
@@ -22668,7 +22665,7 @@ void CvPlayer::trigger(EventTriggerTypes eTrigger)
 
 void CvPlayer::trigger(const EventTriggeredData& kData)
 {
-	if (isHuman())
+	if (isHumanPlayer())
 	{
 		CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_EVENT, kData.getID());
 		addPopup(pInfo);
@@ -22713,7 +22710,7 @@ bool CvPlayer::canTrigger(EventTriggerTypes eTrigger, PlayerTypes ePlayer, Relig
 		return false;
 	}
 
-	if (isHuman() && kTrigger.isOtherPlayerAI())
+	if (isHumanPlayer() && kTrigger.isOtherPlayerAI())
 	{
 		return false;
 	}
@@ -24610,7 +24607,7 @@ void CvPlayer::buildTradeTable(PlayerTypes eOtherPlayer, CLinkList<TradeData>& o
 			break;
 
 		case TRADE_PEACE:
-			if (!isHuman())
+			if (!isHumanPlayer())
 			{
 				for (int j = 0; j < MAX_PC_TEAMS; j++)
 				{
@@ -24631,7 +24628,7 @@ void CvPlayer::buildTradeTable(PlayerTypes eOtherPlayer, CLinkList<TradeData>& o
 			break;
 
 		case TRADE_WAR:
-			if (!isHuman())
+			if (!isHumanPlayer())
 			{
 				for (int j = 0; j < MAX_PC_TEAMS; j++)
 				{
@@ -24652,7 +24649,7 @@ void CvPlayer::buildTradeTable(PlayerTypes eOtherPlayer, CLinkList<TradeData>& o
 			break;
 
 		case TRADE_EMBARGO:
-			if (!isHuman())
+			if (!isHumanPlayer())
 			{
 				for (int j = 0; j < MAX_PC_TEAMS; j++)
 				{
@@ -25204,7 +25201,7 @@ void CvPlayer::updateTradeList(PlayerTypes eOtherPlayer, CLinkList<TradeData>& o
 	/*																							  */
 	/* Allow city trades for other items															*/
 	/************************************************************************************************/
-	/*if (!isHuman() || !GET_PLAYER(eOtherPlayer).isHuman())  // everything allowed in human-human trades
+	/*if (!isHumanPlayer() || !GET_PLAYER(eOtherPlayer).isHumanPlayer())  // everything allowed in human-human trades
 	{
 		CLLNode<TradeData>* pFirstOffer = ourOffer.head();
 		if (pFirstOffer == NULL)
@@ -25967,7 +25964,7 @@ DenialTypes CvPlayer::AI_corporationTrade(CorporationTypes eCorporation, PlayerT
 		return NO_DENIAL;
 	}
 
-	if (isHuman())
+	if (isHumanPlayer())
 	{
 		return NO_DENIAL;
 	}
@@ -26034,7 +26031,7 @@ DenialTypes CvPlayer::AI_secretaryGeneralTrade(VoteSourceTypes eVoteSource, Play
 DenialTypes CvPlayer::AI_workerTrade(const CvUnit* pUnit, PlayerTypes ePlayer) const
 {
 
-	if (isHuman())
+	if (isHumanPlayer())
 	{
 		return NO_DENIAL;
 	}
@@ -26088,7 +26085,7 @@ DenialTypes CvPlayer::AI_workerTrade(const CvUnit* pUnit, PlayerTypes ePlayer) c
 DenialTypes CvPlayer::AI_militaryUnitTrade(const CvUnit* pUnit, PlayerTypes ePlayer) const
 {
 
-	if (isHuman())
+	if (isHumanPlayer())
 	{
 		return NO_DENIAL;
 	}
@@ -26746,7 +26743,7 @@ int CvPlayer::doMultipleResearch(int iOverflow)
 
 	if (eCurrentTech == NO_TECH || GET_TEAM(getTeam()).isHasTech(eCurrentTech))
 	{
-		if (!isHuman())
+		if (!isHumanPlayer())
 		{
 			AI_chooseResearch();
 			eCurrentTech = getCurrentResearch();
@@ -26770,7 +26767,7 @@ int CvPlayer::doMultipleResearch(int iOverflow)
 		{
 			GET_TEAM(getTeam()).setNoTradeTech(eCurrentTech, true);
 		}
-		if (!isHuman())
+		if (!isHumanPlayer())
 		{
 			AI_chooseResearch();
 		}
@@ -27301,8 +27298,14 @@ void CvPlayer::setColor(PlayerColorTypes eColor)
 
 void CvPlayer::setHandicap(int iNewVal)
 {
-	GC.getInitCore().setHandicap(getID(), (HandicapTypes)iNewVal);
-	AI_makeAssignWorkDirty();
+	FASSERT_BOUNDS(0, GC.getNumHandicapInfos(), iNewVal);
+
+	if (iNewVal != getHandicapType())
+	{
+		GC.getInitCore().setHandicap(getID(), (HandicapTypes)iNewVal);
+		setMaintenanceDirty(true);
+		calcFinalUnitUpkeep();
+	}
 }
 
 bool CvPlayer::canBuild(const CvPlot* pPlot, ImprovementTypes eImprovement, bool bTestVisible) const
@@ -29155,7 +29158,7 @@ void CvPlayer::setHasTrait(TraitTypes eIndex, bool bNewValue)
 			{
 				for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 				{
-					if (GET_PLAYER((PlayerTypes)iI).isAlive() && iI != getID() && GET_PLAYER((PlayerTypes)iI).isHuman()
+					if (GET_PLAYER((PlayerTypes)iI).isAlive() && iI != getID() && GET_PLAYER((PlayerTypes)iI).isHumanPlayer()
 					&& GET_TEAM(getTeam()).isHasMet(GET_PLAYER((PlayerTypes)iI).getTeam()))
 					{
 						if (bNegativeTrait)
@@ -29189,7 +29192,7 @@ void CvPlayer::setHasTrait(TraitTypes eIndex, bool bNewValue)
 			{
 				for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 				{
-					if (GET_PLAYER((PlayerTypes)iI).isAlive() && iI != getID() && GET_PLAYER((PlayerTypes)iI).isHuman()
+					if (GET_PLAYER((PlayerTypes)iI).isAlive() && iI != getID() && GET_PLAYER((PlayerTypes)iI).isHumanPlayer()
 					&& GET_TEAM(getTeam()).isHasMet(GET_PLAYER((PlayerTypes)iI).getTeam()))
 					{
 						if (bNegativeTrait)
@@ -29472,7 +29475,7 @@ void CvPlayer::doPromoteLeader()
 	TraitTypes eTrait = NO_TRAIT;
 
 	changeLeaderHeadLevel(1);
-	if (isHuman())
+	if (isHumanPlayer())
 	{
 		CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_CHOOSE_TRAIT);
 		pInfo->setData1(getID());
@@ -29547,7 +29550,7 @@ void CvPlayer::doPromoteLeader()
 		int iLL = getLeaderHeadLevel();
 		if (iLL > 1 && iLL%2 == 0)
 		{
-			if (isHuman())
+			if (isHumanPlayer())
 			{
 				CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_CHOOSE_TRAIT_NEGATIVE);
 				pInfo->setData1(getID());
