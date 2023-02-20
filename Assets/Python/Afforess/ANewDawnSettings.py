@@ -58,8 +58,6 @@ class ANewDawnSettings:
 				ANewDawnOpt.setRealisiticDiplomacy(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_BATTLEFIELD_PROMOTIONS):
 				ANewDawnOpt.setBattlefieldPromotions(data3)
-			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_NO_STORMS):
-				ANewDawnOpt.setNoStorms(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_IMPROVED_XP):
 				ANewDawnOpt.setImprovedXP(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_RELIGION_DECAY):
@@ -184,10 +182,6 @@ def changedHideReplacedBuildings(option, value):
 	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_HIDE_REPLACED_BUILDINGS, value)
 	CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderOptionTypes.MODDEROPTION_HIDE_REPLACED_BUILDINGS), int(value), 0)
 
-def changedNoStorms(option, value):
-	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_NO_STORMS, value)
-	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_NO_STORMS), int(value), 0)
-
 def changedImprovedXP(option, value):
 	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_IMPROVED_XP, value)
 	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_IMPROVED_XP), int(value), 0)
@@ -295,7 +289,6 @@ def setXMLOptionsfromIniFile():
 	changedShowRevCivics(ANewDawnOpt, ANewDawnOpt.isShowRevCivics())
 	changedBattlefieldPromotions(ANewDawnOpt, ANewDawnOpt.isBattlefieldPromotions())
 	changedHideReplacedBuildings(ANewDawnOpt, ANewDawnOpt.isHideReplacedBuildings())
-	changedNoStorms(ANewDawnOpt, ANewDawnOpt.isNoStorms())
 	changedImprovedXP(ANewDawnOpt, ANewDawnOpt.isImprovedXP())
 	changedUseLandmarkNames(ANewDawnOpt, ANewDawnOpt.isUseLandmarkNames())
 	changedHideUnavailableBuilds(ANewDawnOpt, ANewDawnOpt.isHideUnavailableBuilds())

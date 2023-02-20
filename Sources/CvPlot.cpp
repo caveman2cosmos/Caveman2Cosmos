@@ -10172,11 +10172,6 @@ void CvPlot::doFeature()
 		return;
 	}
 
-	// flabbert
-	// these defines are broken, they remove all feature spreading, implementing storms have to be done differently (full remake, maybe as an "unkillable" unit?)
-	// const int iStorm = GC.getInfoTypeForString("FEATURE_STORM", true);
-	// const bool bNoStorms = GC.getGame().isModderGameOption(MODDERGAMEOPTION_NO_STORMS);
-
 	for (int iI = 0; iI < GC.getNumFeatureInfos(); ++iI)
 	{
 		const CvFeatureInfo& kFeature = GC.getFeatureInfo((FeatureTypes)iI);
@@ -10188,22 +10183,20 @@ void CvPlot::doFeature()
 		{
 			int iProbability = kFeature.isCanGrowAnywhere() ? kFeature.getGrowthProbability() : 0;
 
-			foreach_(const CvPlot* pLoopPlot, cardinalDirectionAdjacent())
+			foreach_(const CvPlot* plotX, cardinalDirectionAdjacent())
 			{
-				if (pLoopPlot == NULL) {
-					continue;
-				}
-				if (pLoopPlot->getFeatureType() == (FeatureTypes)iI)
+				if (plotX && plotX->getFeatureType() == iI)
 				{
-					if (pLoopPlot->getImprovementType() == NO_IMPROVEMENT)
-					{
-						iProbability += kFeature.getGrowthProbability();
-					}
-					else
-					{
-						iProbability += GC.getImprovementInfo(pLoopPlot->getImprovementType()).getFeatureGrowthProbability();
-					}
-					iProbability += kFeature.getSpreadProbability();
+					iProbability += (
+						(
+							plotX->getImprovementType() == NO_IMPROVEMENT
+							?
+							kFeature.getGrowthProbability()
+							:
+							GC.getImprovementInfo(plotX->getImprovementType()).getFeatureGrowthProbability()
+						)
+						+ kFeature.getSpreadProbability()
+					);
 				}
 			}
 			iProbability *= std::max(0, (GC.getFEATURE_GROWTH_MODIFIER() + 100));
@@ -10219,21 +10212,19 @@ void CvPlot::doFeature()
 			&& iProbability > GC.getGame().getSorenRandNum(100 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent(), "Feature Growth"))
 			{
 				setFeatureType((FeatureTypes)iI);
-				// Afforess 2/9/10 - Feature Sound Effect
-				// Default Sound Effect is Forest Growth if no XML value is set
 				TCHAR szSound[1024] = "AS2D_FEATUREGROWTH";
 				strcpy(szSound, kFeature.getGrowthSound());
-				// ! Afforess
 
 				const CvCity* pCity = GC.getMap().findCity(getX(), getY(), getOwner(), NO_TEAM, false);
 
-				if (pCity != NULL && isInViewport())
+				if (pCity && isInViewport())
 				{
-					// Tell the owner of this city.
-					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_FEATURE_GROWN_NEAR_CITY", kFeature.getTextKeyWide(), pCity->getNameKey());
-
-					AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, szSound, MESSAGE_TYPE_INFO,
-						kFeature.getButton(), GC.getCOLOR_WHITE(), getViewportX(),getViewportY(), true, true);
+					AddDLLMessage(
+						getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText("TXT_KEY_MISC_FEATURE_GROWN_NEAR_CITY",
+						kFeature.getTextKeyWide(), pCity->getNameKey()), szSound, MESSAGE_TYPE_INFO,
+						kFeature.getButton(), GC.getCOLOR_WHITE(), getViewportX(),getViewportY(), true, true
+					);
 				}
 				break;
 			}
