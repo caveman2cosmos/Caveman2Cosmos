@@ -1,21 +1,17 @@
 ### PARAMETERS ###
 
-funcExtraProfileMacro = "PROFILE_EXTRA_FUNC"
+funcExtraProfileMacro = "PROFILE_EXTRA_FUNC"  # name of the macro to be included in profiled methods
 
-limit = 100000      # max number of profilings to add
+limit = 100000  # max number of methods to add profiling
 
-filesToProcess = [ 
-    #"CheckSum.h"
-    #"CvGame.cpp"
-    "*.h", "*.cpp"  
-    ]
+filesToProcess = [ "*.h", "*.cpp" ]
 
 excludedFiles = [
     "cvgamecoredll.h", "cvgamecoredll.cpp", "nipoint.h", "fassert.h", "fassert.cpp", "win32.h", "win32.cpp", 
     "logging.h", "logging.cpp"
-    ] 
+    ]   
 
-excludedProts = [ ] # prototypes of methods not to profile
+excludedProts = [ ]  # prototypes of methods not to be profiled
 
 
 
@@ -38,19 +34,19 @@ from xitools.cppcrawler import *
 
 
 
-### Definitions ###
+#### Definitions ####
 
-__  = f"(?:\\s|{Syntax.commentRe})"
-___ = f"{__}*+"
+__  = f"(?:{Syntax.commentRe}|\\s)" # used in regular expressions to match code considered a white space in C++
+___ = f"{__}*+"                     # like above but many
 
 crawler = CppCrawler(r"..\..\..\Sources", backupDir="Backup", encoding="utf-8-sig")
 sources = crawler.loadSourceFiles(filesToProcess)
 
-excludedFiles += ["fprofiler.h"]
+excludedFiles =  [str.lower() for str in excludedFiles] + ["fprofiler.h"]
 
 
 
-### Emergency handling ###
+#### Utils ####
 
 def info(msg, src=None, ln=None):
     lnPart = f"[{ln}]" if ln else ""
@@ -69,9 +65,15 @@ def error(msg, src=None, ln=None):
     print(msg)
     raise Exception
 
+def askYesNo(msg):
+    res = input(msg + " (y/n): ").strip().lower()
+    while res not in ["y", "n"]:
+        res = input("Wrong answer. Try again:").strip().lower()
+    return res
 
 
-### Source processing globals ###
+
+#### Source processing globals ####
     
 alreadyProfiledStd = {}
 alreadyProfiledNew = {}
@@ -85,11 +87,11 @@ skippedFiles       = set()
 skippedDefs        = {}
 includesToAdd      = {}
 includesWarn       = {}
-modifiedSrcs       = set()
+sourcesToSave       = set()
 
 
 
-### Includes adding ###
+#### Include adding ####
 
 srcPrefixPat = regex.compile(
         f"{___}"
@@ -99,15 +101,14 @@ srcPrefixPat = regex.compile(
         r"#ifndef.*\r\n"
         r"#define.*\r\n)?"
         r"(?P<insert1>(\s*\r\n)?)"
-        f"({__}"
+        f"({___}"
         r'|(?P<insert2>)#include[ \t]+"(?P<inc1>[^">]*)"[ \t]*\r\n'
         r'|(?P<insert3>)#include[ \t]+<(?P<inc2>[^">]*)>[ \t]*\r\n'
         r'|#.*\r\n)*+')
 
 
+# adds #include "incname" in the file (either path or SourceFile) if it is not present
 def addInclude(file, incname):
-    global sources
-
     if isinstance(file, str):
         try:
             src = [ src for src in sources 
@@ -118,12 +119,12 @@ def addInclude(file, incname):
     else:
         src = file
 
-    mresPref = src.matchUnscoped(srcPrefixPat)
+    matchPref = src.matchUnscoped(srcPrefixPat, 0)
     qIncluded = src.findUnscoped(r'#include[ \t]+"(?i:'f"{incname}"r')"')
     aIncluded = src.findUnscoped(r'#include[ \t]+<(?i:'f"{incname}"r')>')
     included = qIncluded or aIncluded
 
-    if not mresPref:
+    if not matchPref:
         if included:
             includesWarn.setdefault(src, []).append(("bad prefix", incname))
             warning(f"Included, but cannot parse the file prefix: {incname}", src)
@@ -131,13 +132,13 @@ def addInclude(file, incname):
         else:
             error(f"Not included and cannot parse the file prefix: {incname}", src)
             
-    if src.filepath().endswith(".h") and not mresPref.group("prag") and not mresPref.group("ifdef"):
+    if src.filepath().endswith(".h") and not matchPref.group("prag") and not matchPref.group("ifdef"):
         warning(f"Header not guarded", src)
 
-    if incname.lower() in map(str.lower, mresPref.captures("inc1")):
+    if incname.lower() in map(str.lower, matchPref.captures("inc1")):
         info(f"Already included: {incname}", src)
 
-    elif incname.lower() in map(str.lower, mresPref.captures("inc2")):
+    elif incname.lower() in map(str.lower, matchPref.captures("inc2")):
         includesWarn.setdefault(src, []).append(("in <>", incname))
         warning(f"Included, but in <> brackets: {incname}", src)
 
@@ -146,50 +147,53 @@ def addInclude(file, incname):
         warning(f"Included, but not present in the expected file prefix: {incname}", src)
 
     else:
-        if   mresPref.group("inc1"): src.insert(mresPref.starts("insert2")[0], f'#include "{incname}"\r\n')
-        elif mresPref.group("inc2"): src.insert(mresPref.starts("insert3")[0], f'#include "{incname}"\r\n')
-        else: src.insert(mresPref.start("insert1"), 
-                         f'\r\n#include "{incname}"\r\n' + ("" if mresPref.group("insert1") else "\r\n"))
+        if   matchPref.group("inc1"): src.insert(matchPref.starts("insert2")[0], f'#include "{incname}"\r\n')
+        elif matchPref.group("inc2"): src.insert(matchPref.starts("insert3")[0], f'#include "{incname}"\r\n')
+        else: src.insert(matchPref.start("insert1"), 
+                         f'\r\n#include "{incname}"\r\n' + ("" if matchPref.group("insert1") else "\r\n"))
         includesToAdd.setdefault(src, []).append(incname)
-        modifiedSrcs.add(src)
+        sourcesToSave.add(src)
         info(f"Include directive added: {incname}", src)
 
 
 
-### Qualifying for profiling ###
+#### Code qualification for profiling ####
 
-profFunc0Re = r"\bPROFILE_(?P<newprof>EXTRA_)?FUNC\b|\bPROFILE(?:_BEGIN|_THREAD\b|\b)"
-returnRe    = r"(?P<ret>\breturn\b(?:"f"{Syntax.clipRe}"r"|[^;])*+;)"
-assignRe    = r"(?P<assign>\((?:"f"{Syntax.clipRe}"r"|[^;)=])*\)"f"{___}"r")?[^;(\n]+=[^;]+;)"
-hdmacroRe   = r"(?P<mac>PROXY_TRACK|(?P<prof>"f"{profFunc0Re}"r"))[^;\n]*(?:;|\r\n)"
-condppRe    = r"(?P<condpp>#if\b|#ifdef\b|#ifndef\b).*\r\n"
+# macros recognized as a profiling start
+profFuncRe = r"\bPROFILE_(?P<newprof>EXTRA_)?FUNC\b|\bPROFILE(?:_BEGIN|_THREAD\b|\b)"
+# all macros that are considered a method header (profiled methods are expected to call profiling in the header)
+hdMacroRe   = r"(?P<mac>PROXY_TRACK|(?P<prof>"f"{profFuncRe}"r"))[^;\n]*(?:;|\r\n)"
 methBlockPat = regex.compile(
     r"\{"
-    f"(?:{__}|{hdmacroRe})*+"
-        r"(?P<body>(?s:.*?))" # the last token can be a macro or a directive thus \w
+    f"(?:{__}|{hdMacroRe})*+"
+        r"(?P<body>(?s:.*?))"
     f"{___}"
     r"}")
 profPat  = regex.compile(r"\bPROFILE")
-loop0Pat = regex.compile(r"\bwhile\b|\bfor\b|(?i:foreach\w*\s*\()")
+loopPat = regex.compile(r"\bwhile\b|\bfor\b|(?i:foreach\w*\s*\()")
 
 
+# qualifies a method block for profiling (positive if it contains a loop or a call that is likely an iteration)
+# begin - start position of a block (the { character), 
+# prot - parsed method prototype,
+# ln - line number where the prototype begins
 def qualifyBlock(src, begin, prot, ln):
     end  = src.blockEnd(begin)
     code = src.intCode(begin, end + 1)
-    mres = src.fullmatchUnscoped(methBlockPat, begin, end + 1)
-    if not mres:
+    match1 = src.fullmatchUnscoped(methBlockPat, begin, end + 1)
+    if not match1:
         warning(f"Could not match the method's body: {prot}", src, ln)
         return False
 
-    bodyBegin = mres.start("body")
-    bodyEnd   = mres.end("body")
+    bodyBegin = match1.start("body")
+    bodyEnd   = match1.end("body")
 
-    if mres.group("newprof"):
+    if match1.group("newprof"):
         alreadyProfiledNew.setdefault(src, []).append((ln, prot, code, begin))
         info(f"Already profiled (extra): {prot}", src, ln)
         return False
 
-    if mres.group("prof"):
+    if match1.group("prof"):
         alreadyProfiledStd.setdefault(src, []).append((ln, prot, code, begin))
         info(f"Already profiled (standard): {prot}", src, ln)
         return False
@@ -199,15 +203,15 @@ def qualifyBlock(src, begin, prot, ln):
         warning(f"Pofile macros that cannot be qualified in: {prot} (SKIPPING)", src, ln)
         return False
 
-    methname = Syntax.methProtName(prot)
-    if (   (mres2 := src.findUnscoped(r"(?:\b(\w+)\s*->\s*)?"f"\b{methname}"r"\s*\(", bodyBegin, bodyEnd)) and
-            mres2.group(1) == "this"):
+    methname = Syntax.extractMethProtId(prot)[0][-1]
+    if (   (match2 := src.findUnscoped(r"(?:\b(\w+)\s*->\s*)?"f"\b{methname}"r"\s*\(", bodyBegin, bodyEnd)) and
+            match2.group(1) == "this"):
 
         unprofiledMaybeRec.setdefault(src, []).append((ln, prot, code, begin))
         warning(f"Possibly recursive unprofiled method: {prot} (SKIPPING)", src, ln)
         return False
         
-    if src.findUnscoped(loop0Pat, bodyBegin, bodyEnd):
+    if src.findUnscoped(loopPat, bodyBegin, bodyEnd):
         profileToAdd.setdefault(src, []).append((ln, prot, code, begin))
         info(f"Adding profiling to: {prot}", src, ln)
         return True
@@ -218,25 +222,29 @@ def qualifyBlock(src, begin, prot, ln):
 
 
 
-### Files proccessing ###
+#### Files processing ####
+
+# regular expression used to find method/function definitions (sufficient in this project)
+methFinderPat = SourceFile.makeSkipBlocksPat(r"(?:\b\w+"f"{___}::{___})*{Syntax.methFinderRe}")
 
 initRe = r"(?::(?:\s|"f"{Syntax.clipRe}"r"|[^{])*+)"
-methDef0Pat = SourceFile.makeSkipBlocksPat(Syntax.methFinderRe)
-methDef1Pat = regex.compile(f"{___}{initRe}?{___}"r"(?:(?P<block>\{)|[;=])")
+methProtSuffixPat = regex.compile(f"{___}{initRe}?{___}"r"(?:(?P<block>\{)|[;=])") # possible suffixes of
+                                                                                   # a method prototype
 
-scopeSelectors = [lambda src: True, 
-                  lambda src: src.tryScopeToNamespaceBody("\w+", skipBlocks=False),
-                  lambda src: src.tryScopeToStructBody("\w+", skipBlocks=False),
-                  lambda src: src.tryScopeToClassBody("\w+", skipBlocks=False)]
+
+# following functions take a SourceFile and set search scopes in it
+scopeSelectors = [lambda src: True, # leavs the default (total) scope
+                  lambda src: src.tryScopeToNamespaceBody(r"\w+", skipBlocks=False),  # scope to all namespaces
+                  lambda src: src.tryScopeToClassBody("*", r"\w+", skipBlocks=False)] # scope to all classes
+
+# reads sources and qualifies methods for profiling
 def qualify():
-    global alreadyProfiledCount, skippedDefs, skippedFiles, sources
     qualified = 0
 
     for src in sources:
         if qualified == limit: break
-
-        basename = os.path.basename(src.filepath()).lower()
-        if basename in excludedFiles: 
+        
+        if crawler.sourceRelPath(src).lower() in excludedFiles: 
             warning(f"File excluded", src)
             skippedFiles.add(src)
             continue
@@ -244,30 +252,30 @@ def qualify():
         methBlockBegins = []
 
         for selectScope in scopeSelectors:
-            if selectScope(src):
-                matches = list(src.findAll(methDef0Pat, skipBlocks=True, scopeTag=True))
-                for (mres, scopeTag) in matches:
-                    ln = mres.startLoc()[0]
-                    match Syntax.parseMethPrototype(src.intCode(), mres.intStart()):
-                        case (prot, _, pos):
-                            pos = src.orgPos(pos)
-                            match scopeTag:
-                                case (_, name): prot = f"{name}::{prot}"
-                            mres2 = src.matchUnscoped(methDef1Pat, pos)
-                            if not mres2:
-                                unparsable1.setdefault(src, []).append((ln, prot))
+            if not selectScope(src): continue
+            
+            for (match1, scopeTag) in src.findAll(methFinderPat, skipBlocks=True, scopeTag=True):
+                ln = match1.startLoc()[0]
+                match Syntax.parseMethPrototype(src.intCode(), match1.intStart()):
+                    case (prot, _, pos):
+                        pos = src.orgPos(pos)
+                        match scopeTag:
+                            case (_, name): prot = f"{name}::{prot}" # in this case the scope is a class
+                        match2 = src.matchUnscoped(methProtSuffixPat, pos)
+                        if not match2:
+                            unparsable1.setdefault(src, []).append((ln, prot))
+                            continue
+                        if match2.group("block"):
+                            if prot in excludedProts:
+                                warning(f"Prototype excluded: {prot}", src, ln)
+                                skippedDefs.setdefault(src, []).append((ln, prot))
                                 continue
-                            if mres2.group("block"):
-                                if prot in excludedProts:
-                                    warning(f"Prototype excluded: {prot}", src, ln)
-                                    skippedDefs.setdefault(src, []).append((ln, prot))
-                                    continue
-                                methBlockBegins.append((mres2.start("block"), prot, ln))
+                            methBlockBegins.append((match2.start("block"), prot, ln))
 
-                        case None:
-                            unparsable0.setdefault(src, []).append((ln, mres.group(0)))
+                    case None:
+                        unparsable0.setdefault(src, []).append((ln, match1.group(0)))
 
-                src.resetScopes()
+            src.resetScopes()
                 
         for (begin, prot, ln) in methBlockBegins:
             if qualifyBlock(src, begin, prot, ln): qualified += 1
@@ -277,9 +285,11 @@ def qualify():
     print()
     print("---")
     print("Profilings to be added (variable: profileToAdd):", len(flatten(profileToAdd.values())))
-    print("Already profiled methods - standard (variable: alreadyProfiledStd):", len(flatten(alreadyProfiledStd.values())))
-    print("Already profiled methods - extra (variable: alreadyProfiledNew):", len(flatten(alreadyProfiledNew.values())))
-    print("Methods with profiling that couldn't be analised (variable: uncertainProfiling):", 
+    print("Already profiled methods - standard (variable: alreadyProfiledStd):", 
+          len(flatten(alreadyProfiledStd.values())))
+    print("Already profiled methods - extra (variable: alreadyProfiledNew):", 
+          len(flatten(alreadyProfiledNew.values())))
+    print("Methods with profiling that couldn't be analysed (variable: uncertainProfiling):", 
         len(flatten(uncertainProfiling.values())))
     print("Unprofiled methods that maybe be recursive - candidates (variable: unprofiledMaybeRec):", 
         len(flatten(unprofiledMaybeRec.values())))
@@ -290,26 +300,33 @@ def qualify():
     print()
 
 
+# adds profiling macros to methods stored in profileToAdd
 def addProfiling():
-    addFProfilerTo = set()
+    addFProfilerTo = set() # list of source files where to include FProfiler.h
 
     for src in profileToAdd:
-        replMatches = []
+        replMatches = [] # list of pairs (SourceMatch, code), where the former is a 0-width match that points the
+                         # place to insert and the latter is the profiling code to be inserted - later used as a list
+                         # of tagged matches
 
         for (ln, prot, code, begin) in profileToAdd[src]:
-            (pos, space) = src.posToInsertBlockSPrefix(begin)
+            (hdspace, pos, tlspace) = src.blockSPrefixInsertPos(begin) # position to insert a single-line block prefix and
+                                                              # space to be added behind for indentation preservation
             replMatches.append((SourceRangeMatch(src, (pos, pos), copySource=False), 
-                                f"{funcExtraProfileMacro}();" + space))
+                                hdspace + f"{funcExtraProfileMacro}();" + tlspace))
 
         if replMatches:
-            src.replaceMatches(replMatches, lambda tmres: tmres[1])
-            modifiedSrcs.add(src)
+            src.replaceMatches(replMatches, lambda tmatch: tmatch[1]) # the method takes a list of possibly tagged 
+                                                                      # matches and a function that for such a match
+                                                                      # returns the replacement code
+            sourcesToSave.add(src)
             addFProfilerTo.add(src.filepath())
     
     print()
     print("PROFILE MACROS ADDED")
     print()
 
+    # the following including procedure is sufficient in this project (in general some .cpp could miss FProfiler.h)
     for filepath in addFProfilerTo:
         if not (filepath.endswith(".cpp") and filepath[:-3] + "h" in addFProfilerTo):
             addInclude(filepath, "FProfiler.h")
@@ -323,7 +340,7 @@ def addProfiling():
 
 def save():
     print("Saving...", end=" ")
-    crawler.saveSources(modifiedSrcs)
+    crawler.saveSources(sourcesToSave)
     print("Done")
     print("Backup available in:", crawler.backupBucketDirs()[-1])
     print()
@@ -332,18 +349,20 @@ def save():
 
 
 
+#### Main ####
+
 qualify()
 
-if input(f"Do you want to continue? You can do it later by calling 'addProfiling()'.\n"
-          "You are free to move records from other variables to profileToAdd if you want additional methods to be "
-          "profiled. (y/n):").strip().lower() == 'y':
+if askYesNo(f"Do you want to continue? You can do it later by calling 'addProfiling()'.\n"
+             "You are free to move records from other variables to profileToAdd if you want additional methods to be "
+             "profiled.") == 'y':
     addProfiling()
 
-    if not modifiedSrcs:
+    if not sourcesToSave:
         print("Nothing to save")
 
-    elif input(f"Do you want to save {len(modifiedSrcs)} file(s)? You can do it later by calling 'save()'. "
-                "(y/n):").strip().lower() == 'y':
+    elif askYesNo(f"Do you want to save {len(sourcesToSave)} file(s)? You can do it later by calling 'save()'.\n"
+                   "You can verify the content to be saved in the sourcesToSave variable.") == 'y':
         save()
 
 print()
