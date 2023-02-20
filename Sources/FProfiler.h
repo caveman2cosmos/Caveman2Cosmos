@@ -75,29 +75,8 @@ class CProfileScope
 public:
 	// cppcheck-suppress uninitMemberVar
 	CProfileScope() { bValid= false;};
-	explicit CProfileScope(ProfileSample *pSample)
-	{
-		bValid = true;
-#ifdef USE_INTERNAL_PROFILER
-		m_linkage.sample = pSample;
-		IFPBeginSample(&m_linkage);
-#else
-		m_pSample = pSample;
-		gDLL->BeginSample(m_pSample);
-#endif
-	};
-	~CProfileScope()
-	{
-		if(bValid )
-		{
-#ifdef USE_INTERNAL_PROFILER
-			IFPEndSample(&m_linkage);
-#else
-			gDLL->EndSample(m_pSample);
-#endif
-			bValid = false;
-		}
-	};
+	explicit CProfileScope(ProfileSample *pSample);
+	~CProfileScope();
 
 private:
 	bool bValid;
