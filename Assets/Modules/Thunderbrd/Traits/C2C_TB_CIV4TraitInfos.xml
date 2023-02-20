@@ -14,7 +14,7 @@
 			<PromotionLine>PROMOTIONLINE_WARMONGER</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<DisallowedTraitTypes>
 				<DisallowedTraitType>
@@ -101,7 +101,7 @@
 			<PromotionLine>PROMOTIONLINE_WARMONGER</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<DisallowedTraitTypes>
 				<DisallowedTraitType>
@@ -187,7 +187,7 @@
 			<PromotionLine>PROMOTIONLINE_WARMONGER</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_WARMONGER1</TraitPrereq>
@@ -275,7 +275,7 @@
 			<PromotionLine>PROMOTIONLINE_WARMONGER</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_WARMONGER2</TraitPrereq>
@@ -360,7 +360,7 @@
 			<PromotionLine>PROMOTIONLINE_PACIFIST</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -448,7 +448,7 @@
 			<PromotionLine>PROMOTIONLINE_PACIFIST</PromotionLine>
 			<iLinePriority>-1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<DisallowedTraitTypes>
 				<DisallowedTraitType>
@@ -531,7 +531,7 @@
 			<PromotionLine>PROMOTIONLINE_PACIFIST</PromotionLine>
 			<iLinePriority>-2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_PACIFIST1</TraitPrereq>
@@ -619,7 +619,7 @@
 			<PromotionLine>PROMOTIONLINE_PACIFIST</PromotionLine>
 			<iLinePriority>-3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_PACIFIST2</TraitPrereq>
@@ -706,7 +706,7 @@
 			<PromotionLine>PROMOTIONLINE_STRATEGIST</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -1169,7 +1169,7 @@
 			<PromotionLine>PROMOTIONLINE_STRATEGIST</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<DisallowedTraitTypes>
 				<DisallowedTraitType>
@@ -1470,7 +1470,7 @@
 			<PromotionLine>PROMOTIONLINE_STRATEGIST</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -1677,7 +1677,7 @@
 			<PromotionLine>PROMOTIONLINE_STRATEGIST</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_STRATEGIST2</TraitPrereq>
@@ -1812,7 +1812,7 @@
 			<PromotionLine>PROMOTIONLINE_CARELESS</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<DisallowedTraitTypes>
 				<DisallowedTraitType>
@@ -2271,7 +2271,7 @@
 			<PromotionLine>PROMOTIONLINE_CARELESS</PromotionLine>
 			<iLinePriority>-1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<DisallowedTraitTypes>
 				<DisallowedTraitType>
@@ -2570,7 +2570,7 @@
 			<PromotionLine>PROMOTIONLINE_CARELESS</PromotionLine>
 			<iLinePriority>-2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -2775,7 +2775,7 @@
 			<PromotionLine>PROMOTIONLINE_CARELESS</PromotionLine>
 			<iLinePriority>-3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_CARELESS2</TraitPrereq>
@@ -3035,7 +3035,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -3154,7 +3154,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -3167,7 +3167,7 @@
 			<PromotionLine>PROMOTIONLINE_AGGRESSIVE</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_AGGRESSIVE1</TraitPrereq>
@@ -3284,7 +3284,7 @@
 			<PromotionLine>PROMOTIONLINE_AGGRESSIVE</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_AGGRESSIVE2</TraitPrereq>
@@ -3381,7 +3381,7 @@
 			<PromotionLine>PROMOTIONLINE_TIMID</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<DisallowedTraitTypes>
 				<DisallowedTraitType>
@@ -3589,7 +3589,7 @@
 			<PromotionLine>PROMOTIONLINE_TIMID</PromotionLine>
 			<iLinePriority>-2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_TIMID1</TraitPrereq>
@@ -3686,7 +3686,7 @@
 			<PromotionLine>PROMOTIONLINE_TIMID</PromotionLine>
 			<iLinePriority>-3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_TIMID2</TraitPrereq>
@@ -3783,7 +3783,7 @@
 			<PromotionLine>PROMOTIONLINE_DEFENSIVE</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -4024,7 +4024,7 @@
 			<PromotionLine>PROMOTIONLINE_DEFENSIVE</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<DisallowedTraitTypes>
 				<DisallowedTraitType>
@@ -4243,7 +4243,7 @@
 			<PromotionLine>PROMOTIONLINE_DEFENSIVE</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_DEFENSIVE1</TraitPrereq>
@@ -4466,7 +4466,7 @@
 			<PromotionLine>PROMOTIONLINE_DEFENSIVE</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_DEFENSIVE2</TraitPrereq>
@@ -4669,7 +4669,7 @@
 			<PromotionLine>PROMOTIONLINE_COWARDLY</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<DisallowedTraitTypes>
 				<DisallowedTraitType>
@@ -4870,7 +4870,7 @@
 			<PromotionLine>PROMOTIONLINE_COWARDLY</PromotionLine>
 			<iLinePriority>-1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<DisallowedTraitTypes>
 				<DisallowedTraitType>
@@ -5068,7 +5068,7 @@
 			<PromotionLine>PROMOTIONLINE_COWARDLY</PromotionLine>
 			<iLinePriority>-2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_COWARDLY1</TraitPrereq>
@@ -5269,7 +5269,7 @@
 			<PromotionLine>PROMOTIONLINE_COWARDLY</PromotionLine>
 			<iLinePriority>-3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_COWARDLY2</TraitPrereq>
@@ -6154,7 +6154,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -6627,7 +6627,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -6640,7 +6640,7 @@
 			<PromotionLine>PROMOTIONLINE_PROTECTIVE</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_PROTECTIVE1</TraitPrereq>
@@ -6967,7 +6967,7 @@
 			<PromotionLine>PROMOTIONLINE_PROTECTIVE</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_PROTECTIVE2</TraitPrereq>
@@ -7236,7 +7236,7 @@
 			<PromotionLine>PROMOTIONLINE_NEGLIGENT</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -7703,7 +7703,7 @@
 			<PromotionLine>PROMOTIONLINE_NEGLIGENT</PromotionLine>
 			<iLinePriority>-1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -8006,7 +8006,7 @@
 			<PromotionLine>PROMOTIONLINE_NEGLIGENT</PromotionLine>
 			<iLinePriority>-2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_NEGLIGENT1</TraitPrereq>
@@ -8237,7 +8237,7 @@
 			<PromotionLine>PROMOTIONLINE_NEGLIGENT</PromotionLine>
 			<iLinePriority>-3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_NEGLIGENT2</TraitPrereq>
@@ -8819,7 +8819,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -9038,7 +9038,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -9051,7 +9051,7 @@
 			<PromotionLine>PROMOTIONLINE_IMPERIALIST</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_IMPERIALIST1</TraitPrereq>
@@ -9272,7 +9272,7 @@
 			<PromotionLine>PROMOTIONLINE_IMPERIALIST</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_IMPERIALIST2</TraitPrereq>
@@ -9421,7 +9421,7 @@
 			<PromotionLine>PROMOTIONLINE_MEEK</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -9753,7 +9753,7 @@
 			<PromotionLine>PROMOTIONLINE_MEEK</PromotionLine>
 			<iLinePriority>-1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -9953,7 +9953,7 @@
 			<PromotionLine>PROMOTIONLINE_MEEK</PromotionLine>
 			<iLinePriority>-2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_MEEK1</TraitPrereq>
@@ -10156,7 +10156,7 @@
 			<PromotionLine>PROMOTIONLINE_MEEK</PromotionLine>
 			<iLinePriority>-3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_MEEK2</TraitPrereq>
@@ -10854,7 +10854,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -11326,7 +11326,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -11339,7 +11339,7 @@
 			<PromotionLine>PROMOTIONLINE_SEAFARING</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_SEAFARING1</TraitPrereq>
@@ -11691,7 +11691,7 @@
 			<PromotionLine>PROMOTIONLINE_SEAFARING</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_SEAFARING2</TraitPrereq>
@@ -13520,7 +13520,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -14818,7 +14818,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -14831,7 +14831,7 @@
 			<PromotionLine>PROMOTIONLINE_NOMADIC</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_NOMAD1</TraitPrereq>
@@ -15877,7 +15877,7 @@
 			<PromotionLine>PROMOTIONLINE_NOMADIC</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_NOMADIC2</TraitPrereq>
@@ -16947,7 +16947,7 @@
 			<PromotionLine>PROMOTIONLINE_AERIAL</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -18050,7 +18050,7 @@
 			<PromotionLine>PROMOTIONLINE_AERIAL</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -18476,7 +18476,7 @@
 			<PromotionLine>PROMOTIONLINE_AERIAL</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_AERIAL1</TraitPrereq>
@@ -18989,7 +18989,7 @@
 			<PromotionLine>PROMOTIONLINE_AERIAL</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_AERIAL2</TraitPrereq>
@@ -19793,7 +19793,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -20133,7 +20133,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -20146,7 +20146,7 @@
 			<PromotionLine>PROMOTIONLINE_SPIRITUAL</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_SPIRITUAL1</TraitPrereq>
@@ -20310,7 +20310,7 @@
 			<PromotionLine>PROMOTIONLINE_SPIRITUAL</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_SPIRITUAL2</TraitPrereq>
@@ -20847,7 +20847,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -21010,7 +21010,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -21023,7 +21023,7 @@
 			<PromotionLine>PROMOTIONLINE_ANTI_CLERICAL</PromotionLine>
 			<iLinePriority>-2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_ANTI_CLERICAL1</TraitPrereq>
@@ -21186,7 +21186,7 @@
 			<PromotionLine>PROMOTIONLINE_ANTI_CLERICAL</PromotionLine>
 			<iLinePriority>-3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_ANTI_CLERICAL2</TraitPrereq>
@@ -21349,7 +21349,7 @@
 			<PromotionLine>PROMOTIONLINE_PIOUS</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -21605,7 +21605,7 @@
 			<PromotionLine>PROMOTIONLINE_PIOUS</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -21861,7 +21861,7 @@
 			<PromotionLine>PROMOTIONLINE_PIOUS</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_PIOUS1</TraitPrereq>
@@ -22111,7 +22111,7 @@
 			<PromotionLine>PROMOTIONLINE_PIOUS</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_PIOUS2</TraitPrereq>
@@ -22245,7 +22245,7 @@
 			<PromotionLine>PROMOTIONLINE_ZEALOUS</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -22492,7 +22492,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -22506,7 +22506,7 @@
 			<PromotionLine>PROMOTIONLINE_ZEALOUS</PromotionLine>
 			<iLinePriority>-1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -22747,7 +22747,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -22760,7 +22760,7 @@
 			<PromotionLine>PROMOTIONLINE_ZEALOUS</PromotionLine>
 			<iLinePriority>-2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_FANATICAL1</TraitPrereq>
@@ -23012,7 +23012,7 @@
 			<PromotionLine>PROMOTIONLINE_ZEALOUS</PromotionLine>
 			<iLinePriority>-3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_ZEALOUS2</TraitPrereq>
@@ -23144,7 +23144,7 @@
 			<PromotionLine>PROMOTIONLINE_GLORIOUS</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -23262,7 +23262,7 @@
 			<PromotionLine>PROMOTIONLINE_GLORIOUS</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -23380,7 +23380,7 @@
 			<PromotionLine>PROMOTIONLINE_GLORIOUS</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_GLORIOUS1</TraitPrereq>
@@ -23497,7 +23497,7 @@
 			<PromotionLine>PROMOTIONLINE_GLORIOUS</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_GLORIOUS1</TraitPrereq>
@@ -23614,7 +23614,7 @@
 			<PromotionLine>PROMOTIONLINE_GLOOMY</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -23734,7 +23734,7 @@
 			<PromotionLine>PROMOTIONLINE_GLOOMY</PromotionLine>
 			<iLinePriority>-1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -23854,7 +23854,7 @@
 			<PromotionLine>PROMOTIONLINE_GLOOMY</PromotionLine>
 			<iLinePriority>-2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_GLOOMY1</TraitPrereq>
@@ -23974,7 +23974,7 @@
 			<PromotionLine>PROMOTIONLINE_GLOOMY</PromotionLine>
 			<iLinePriority>-3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_GLOOMY2</TraitPrereq>
@@ -24094,7 +24094,7 @@
 			<PromotionLine>PROMOTIONLINE_PREEMINENT</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -24427,7 +24427,7 @@
 			<PromotionLine>PROMOTIONLINE_PREEMINENT</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -24760,7 +24760,7 @@
 			<PromotionLine>PROMOTIONLINE_PREEMINENT</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_PREEMINENT1</TraitPrereq>
@@ -25093,7 +25093,7 @@
 			<PromotionLine>PROMOTIONLINE_PREEMINENT</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_PREEMINENT2</TraitPrereq>
@@ -25300,7 +25300,7 @@
 			<PromotionLine>PROMOTIONLINE_ALOOF</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -25633,7 +25633,7 @@
 			<PromotionLine>PROMOTIONLINE_ALOOF</PromotionLine>
 			<iLinePriority>-1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -25966,7 +25966,7 @@
 			<PromotionLine>PROMOTIONLINE_ALOOF</PromotionLine>
 			<iLinePriority>-2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_ALOOF1</TraitPrereq>
@@ -26299,7 +26299,7 @@
 			<PromotionLine>PROMOTIONLINE_ALOOF</PromotionLine>
 			<iLinePriority>-3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_ALOOF2</TraitPrereq>
@@ -27498,7 +27498,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -28143,7 +28143,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -28156,7 +28156,7 @@
 			<PromotionLine>PROMOTIONLINE_INDUSTRIOUS</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_INDUSTRIOUS1</TraitPrereq>
@@ -28633,7 +28633,7 @@
 			<PromotionLine>PROMOTIONLINE_INDUSTRIOUS</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_INDUSTRIOUS2</TraitPrereq>
@@ -29052,7 +29052,7 @@
 			<PromotionLine>PROMOTIONLINE_LAZY</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -30053,7 +30053,7 @@
 			<PromotionLine>PROMOTIONLINE_LAZY</PromotionLine>
 			<iLinePriority>-1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -30694,7 +30694,7 @@
 			<PromotionLine>PROMOTIONLINE_LAZY</PromotionLine>
 			<iLinePriority>-2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_LAZY1</TraitPrereq>
@@ -31171,7 +31171,7 @@
 			<PromotionLine>PROMOTIONLINE_LAZY</PromotionLine>
 			<iLinePriority>-3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_LAZY2</TraitPrereq>
@@ -31590,7 +31590,7 @@
 			<PromotionLine>PROMOTIONLINE_EFFICIENT</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -31989,7 +31989,7 @@
 			<PromotionLine>PROMOTIONLINE_EFFICIENT</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -32287,7 +32287,7 @@
 			<PromotionLine>PROMOTIONLINE_EFFICIENT</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_EFFICIENT1</TraitPrereq>
@@ -32574,7 +32574,7 @@
 			<PromotionLine>PROMOTIONLINE_EFFICIENT</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_EFFICIENT2</TraitPrereq>
@@ -33119,7 +33119,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -33409,7 +33409,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -33422,7 +33422,7 @@
 			<PromotionLine>PROMOTIONLINE_EXCESSIVE</PromotionLine>
 			<iLinePriority>-2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_EXCESSIVE1</TraitPrereq>
@@ -33696,7 +33696,7 @@
 			<PromotionLine>PROMOTIONLINE_EXCESSIVE</PromotionLine>
 			<iLinePriority>-3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_EXCESSIVE2</TraitPrereq>
@@ -34453,7 +34453,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -35002,7 +35002,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -35015,7 +35015,7 @@
 			<PromotionLine>PROMOTIONLINE_AGRICULTURAL</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_AGRICULTURAL1</TraitPrereq>
@@ -35515,7 +35515,7 @@
 			<PromotionLine>PROMOTIONLINE_AGRICULTURAL</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_AGRICULTURAL2</TraitPrereq>
@@ -36027,7 +36027,7 @@
 			<PromotionLine>PROMOTIONLINE_GLUTTONOUS</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -36618,7 +36618,7 @@
 			<PromotionLine>PROMOTIONLINE_GLUTTONOUS</PromotionLine>
 			<iLinePriority>-1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -37138,7 +37138,7 @@
 			<PromotionLine>PROMOTIONLINE_GLUTTONOUS</PromotionLine>
 			<iLinePriority>-2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_GLUTTONOUS2</TraitPrereq>
@@ -37615,7 +37615,7 @@
 			<PromotionLine>PROMOTIONLINE_GLUTTONOUS</PromotionLine>
 			<iLinePriority>-3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_GLUTTONOUS2</TraitPrereq>
@@ -39331,7 +39331,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -40035,7 +40035,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -40048,7 +40048,7 @@
 			<PromotionLine>PROMOTIONLINE_CREATIVE</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_CREATIVE1</TraitPrereq>
@@ -40598,7 +40598,7 @@
 			<PromotionLine>PROMOTIONLINE_CREATIVE</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_CREATIVE2</TraitPrereq>
@@ -40896,7 +40896,7 @@
 			<PromotionLine>PROMOTIONLINE_UNREFINED</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -41823,7 +41823,7 @@
 			<PromotionLine>PROMOTIONLINE_UNREFINED</PromotionLine>
 			<iLinePriority>-1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -42382,7 +42382,7 @@
 			<PromotionLine>PROMOTIONLINE_CREATIVE</PromotionLine>
 			<iLinePriority>-2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_UNREFINED1</TraitPrereq>
@@ -42799,7 +42799,7 @@
 			<PromotionLine>PROMOTIONLINE_UNREFINED</PromotionLine>
 			<iLinePriority>-3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_UNREFINED2</TraitPrereq>
@@ -43860,7 +43860,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -44361,7 +44361,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -44374,7 +44374,7 @@
 			<PromotionLine>PROMOTIONLINE_FINANCIAL</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_FINANCIAL1</TraitPrereq>
@@ -44697,7 +44697,7 @@
 			<PromotionLine>PROMOTIONLINE_FINANCIAL</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_FINANCIAL2</TraitPrereq>
@@ -44980,7 +44980,7 @@
 			<PromotionLine>PROMOTIONLINE_GREEDY</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -45780,7 +45780,7 @@
 			<PromotionLine>PROMOTIONLINE_GREEDY</PromotionLine>
 			<iLinePriority>-1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -46276,7 +46276,7 @@
 			<PromotionLine>PROMOTIONLINE_GREEDY</PromotionLine>
 			<iLinePriority>-2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_GREEDY1</TraitPrereq>
@@ -46598,7 +46598,7 @@
 			<PromotionLine>PROMOTIONLINE_GREEDY</PromotionLine>
 			<iLinePriority>-3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_GREEDY2</TraitPrereq>
@@ -47546,7 +47546,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -47948,7 +47948,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -47961,7 +47961,7 @@
 			<PromotionLine>PROMOTIONLINE_DECEIVER</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_DECEIVER1</TraitPrereq>
@@ -48237,7 +48237,7 @@
 			<PromotionLine>PROMOTIONLINE_DECEIVER</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_DECEIVER2</TraitPrereq>
@@ -48566,7 +48566,7 @@
 			<PromotionLine>PROMOTIONLINE_NAIVE</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -49240,7 +49240,7 @@
 			<PromotionLine>PROMOTIONLINE_NAIVE</PromotionLine>
 			<iLinePriority>-1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -49638,7 +49638,7 @@
 			<PromotionLine>PROMOTIONLINE_NAIVE</PromotionLine>
 			<iLinePriority>-2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_NAIVE1</TraitPrereq>
@@ -49913,7 +49913,7 @@
 			<PromotionLine>PROMOTIONLINE_NAIVE</PromotionLine>
 			<iLinePriority>-3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_NAIVE2</TraitPrereq>
@@ -51094,7 +51094,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -51405,7 +51405,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -51418,7 +51418,7 @@
 			<PromotionLine>PROMOTIONLINE_SCIENTIFIC</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_SCIENTIFIC1</TraitPrereq>
@@ -51838,7 +51838,7 @@
 			<PromotionLine>PROMOTIONLINE_SCIENTIFIC</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_SCIENTIFIC2</TraitPrereq>
@@ -52287,7 +52287,7 @@
 			<PromotionLine>PROMOTIONLINE_TRADITIONAL</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -53146,7 +53146,7 @@
 			<PromotionLine>PROMOTIONLINE_TRADITIONAL</PromotionLine>
 			<iLinePriority>-1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -53437,7 +53437,7 @@
 			<PromotionLine>PROMOTIONLINE_TRADITIONAL</PromotionLine>
 			<iLinePriority>-2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_TRADITIONAL1</TraitPrereq>
@@ -53826,7 +53826,7 @@
 			<PromotionLine>PROMOTIONLINE_TRADITIONAL</PromotionLine>
 			<iLinePriority>-3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_TRADITIONAL2</TraitPrereq>
@@ -54259,7 +54259,7 @@
 			<PromotionLine>PROMOTIONLINE_NEGOTIATOR</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -54378,7 +54378,7 @@
 			<PromotionLine>PROMOTIONLINE_NEGOTIATOR</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -54497,7 +54497,7 @@
 			<PromotionLine>PROMOTIONLINE_NEGOTIATOR</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_NEGOTIATOR1</TraitPrereq>
@@ -54616,7 +54616,7 @@
 			<PromotionLine>PROMOTIONLINE_NEGOTIATOR</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_NEGOTIATOR2</TraitPrereq>
@@ -54846,7 +54846,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -54969,7 +54969,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -54982,7 +54982,7 @@
 			<PromotionLine>PROMOTIONLINE_ISOLATIONIST</PromotionLine>
 			<iLinePriority>-2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_ISOLATIONIST1</TraitPrereq>
@@ -55102,7 +55102,7 @@
 			<PromotionLine>PROMOTIONLINE_ISOLATIONIST</PromotionLine>
 			<iLinePriority>-3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_ISOLATIONIST2</TraitPrereq>
@@ -55303,7 +55303,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -55398,7 +55398,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -55411,7 +55411,7 @@
 			<PromotionLine>PROMOTIONLINE_INNOVATIVE</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_PROGRESSIST1</TraitPrereq>
@@ -55502,7 +55502,7 @@
 			<PromotionLine>PROMOTIONLINE_INNOVATIVE</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_INNOVATIVE2</TraitPrereq>
@@ -55593,7 +55593,7 @@
 			<PromotionLine>PROMOTIONLINE_COVETOUS</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -55685,7 +55685,7 @@
 			<PromotionLine>PROMOTIONLINE_COVETOUS</PromotionLine>
 			<iLinePriority>-1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -55777,7 +55777,7 @@
 			<PromotionLine>PROMOTIONLINE_COVETOUS</PromotionLine>
 			<iLinePriority>-2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_COVETOUS1</TraitPrereq>
@@ -55869,7 +55869,7 @@
 			<PromotionLine>PROMOTIONLINE_COVETOUS</PromotionLine>
 			<iLinePriority>-3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_COVETOUS2</TraitPrereq>
@@ -55961,7 +55961,7 @@
 			<PromotionLine>PROMOTIONLINE_HUMBLE</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -56065,7 +56065,7 @@
 			<PromotionLine>PROMOTIONLINE_HUMBLE</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -56169,7 +56169,7 @@
 			<PromotionLine>PROMOTIONLINE_HUMBLE</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_HUMBLE1</TraitPrereq>
@@ -56273,7 +56273,7 @@
 			<PromotionLine>PROMOTIONLINE_HUMBLE</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_HUMBLE2</TraitPrereq>
@@ -56472,7 +56472,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -56580,7 +56580,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -56593,7 +56593,7 @@
 			<PromotionLine>PROMOTIONLINE_MEGALOMANIAC</PromotionLine>
 			<iLinePriority>-2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_MEGALOMANIAC1</TraitPrereq>
@@ -56697,7 +56697,7 @@
 			<PromotionLine>PROMOTIONLINE_MEGALOMANIAC</PromotionLine>
 			<iLinePriority>-3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_MEGALOMANIAC2</TraitPrereq>
@@ -56801,7 +56801,7 @@
 			<PromotionLine>PROMOTIONLINE_CIVILIZED</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -56942,7 +56942,7 @@
 			<PromotionLine>PROMOTIONLINE_CIVILIZED</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -57059,7 +57059,7 @@
 			<PromotionLine>PROMOTIONLINE_CIVILIZED</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_CIVILIZED1</TraitPrereq>
@@ -57176,7 +57176,7 @@
 			<PromotionLine>PROMOTIONLINE_CIVILIZED</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_CIVILIZED2</TraitPrereq>
@@ -57417,7 +57417,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -57538,7 +57538,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -57551,7 +57551,7 @@
 			<PromotionLine>PROMOTIONLINE_BARBARIC</PromotionLine>
 			<iLinePriority>-2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_BARBARIC1</TraitPrereq>
@@ -57668,7 +57668,7 @@
 			<PromotionLine>PROMOTIONLINE_BARBARIC</PromotionLine>
 			<iLinePriority>-3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_BARBARIC2</TraitPrereq>
@@ -57874,7 +57874,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -58002,7 +58002,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -58015,7 +58015,7 @@
 			<PromotionLine>PROMOTIONLINE_CHARISMATIC</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_CHARISMATIC1</TraitPrereq>
@@ -58130,7 +58130,7 @@
 			<PromotionLine>PROMOTIONLINE_CHARISMATIC</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_CHARISMATIC2</TraitPrereq>
@@ -58326,7 +58326,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -58420,7 +58420,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -58433,7 +58433,7 @@
 			<PromotionLine>PROMOTIONLINE_TEMPERAMENTAL</PromotionLine>
 			<iLinePriority>-2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_TEMPERAMENTAL1</TraitPrereq>
@@ -58524,7 +58524,7 @@
 			<PromotionLine>PROMOTIONLINE_TEMPERAMENTAL</PromotionLine>
 			<iLinePriority>-3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_TEMPERAMENTAL1</TraitPrereq>
@@ -58903,7 +58903,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -59060,7 +59060,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -59073,7 +59073,7 @@
 			<PromotionLine>PROMOTIONLINE_PHILOSOPHICAL</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_PHILOSOPHICAL1</TraitPrereq>
@@ -59188,7 +59188,7 @@
 			<PromotionLine>PROMOTIONLINE_PHILOSOPHICAL</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_PHILOSOPHICAL2</TraitPrereq>
@@ -59713,7 +59713,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -59882,7 +59882,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -59895,7 +59895,7 @@
 			<PromotionLine>PROMOTIONLINE_POPULIST</PromotionLine>
 			<iLinePriority>-2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_POPULIST1</TraitPrereq>
@@ -60021,7 +60021,7 @@
 			<PromotionLine>PROMOTIONLINE_POPULIST</PromotionLine>
 			<iLinePriority>-3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_POPULIST2</TraitPrereq>
@@ -60395,7 +60395,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -60521,7 +60521,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -60534,7 +60534,7 @@
 			<PromotionLine>PROMOTIONLINE_POLITICIAN</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_POLITICIAN1</TraitPrereq>
@@ -60682,7 +60682,7 @@
 			<PromotionLine>PROMOTIONLINE_POLITICIAN</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_POLITICIAN2</TraitPrereq>
@@ -60932,7 +60932,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -61047,7 +61047,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -61060,7 +61060,7 @@
 			<PromotionLine>PROMOTIONLINE_FOREIGNER</PromotionLine>
 			<iLinePriority>-2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_FOREIGN1</TraitPrereq>
@@ -61177,7 +61177,7 @@
 			<PromotionLine>PROMOTIONLINE_FOREIGNER</PromotionLine>
 			<iLinePriority>-3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_FOREIGN2</TraitPrereq>
@@ -61404,7 +61404,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -61533,7 +61533,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -61546,7 +61546,7 @@
 			<PromotionLine>PROMOTIONLINE_REVOLUTIONARY</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_REVOLUTIONARY1</TraitPrereq>
@@ -61691,7 +61691,7 @@
 			<PromotionLine>PROMOTIONLINE_REVOLUTIONARY</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_REVOLUTIONARY2</TraitPrereq>
@@ -61836,7 +61836,7 @@
 			<PromotionLine>PROMOTIONLINE_USURPER</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -61977,7 +61977,7 @@
 			<PromotionLine>PROMOTIONLINE_USURPER</PromotionLine>
 			<iLinePriority>-1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -62098,7 +62098,7 @@
 			<PromotionLine>PROMOTIONLINE_USURPER</PromotionLine>
 			<iLinePriority>-2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_USURPER1</TraitPrereq>
@@ -62239,7 +62239,7 @@
 			<PromotionLine>PROMOTIONLINE_USURPER</PromotionLine>
 			<iLinePriority>-3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_USURPER2</TraitPrereq>
@@ -62489,7 +62489,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -62628,7 +62628,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -62641,7 +62641,7 @@
 			<PromotionLine>PROMOTIONLINE_EXPANSIVE</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_EXPANSIVE1</TraitPrereq>
@@ -62767,7 +62767,7 @@
 			<PromotionLine>PROMOTIONLINE_EXPANSIVE</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_EXPANSIVE2</TraitPrereq>
@@ -62893,7 +62893,7 @@
 			<PromotionLine>PROMOTIONLINE_MINIMALIST</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -63011,7 +63011,7 @@
 			<PromotionLine>PROMOTIONLINE_MINIMALIST</PromotionLine>
 			<iLinePriority>-1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -63147,7 +63147,7 @@
 			<PromotionLine>PROMOTIONLINE_MINIMALIST</PromotionLine>
 			<iLinePriority>-2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_MINIMALIST1</TraitPrereq>
@@ -63274,7 +63274,7 @@
 			<PromotionLine>PROMOTIONLINE_MINIMALIST</PromotionLine>
 			<iLinePriority>-3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_MINIMALIST2</TraitPrereq>
@@ -63401,7 +63401,7 @@
 			<PromotionLine>PROMOTIONLINE_PROLIFIC</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -63506,7 +63506,7 @@
 			<PromotionLine>PROMOTIONLINE_PROLIFIC</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -63620,7 +63620,7 @@
 			<PromotionLine>PROMOTIONLINE_PROLIFIC</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_PROLIFIC1</TraitPrereq>
@@ -63744,7 +63744,7 @@
 			<PromotionLine>PROMOTIONLINE_PROLIFIC</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_PROLIFIC2</TraitPrereq>
@@ -63868,7 +63868,7 @@
 			<PromotionLine>PROMOTIONLINE_GRIM</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -63990,7 +63990,7 @@
 			<PromotionLine>PROMOTIONLINE_GRIM</PromotionLine>
 			<iLinePriority>-1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -64121,7 +64121,7 @@
 			<PromotionLine>PROMOTIONLINE_GRIM</PromotionLine>
 			<iLinePriority>-2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_GRIM1</TraitPrereq>
@@ -64252,7 +64252,7 @@
 			<PromotionLine>PROMOTIONLINE_GRIM</PromotionLine>
 			<iLinePriority>-3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_GRIM2</TraitPrereq>
@@ -64461,7 +64461,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -64579,7 +64579,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -64592,7 +64592,7 @@
 			<PromotionLine>PROMOTIONLINE_ORGANIZED</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_ORGANIZED1</TraitPrereq>
@@ -64688,7 +64688,7 @@
 			<PromotionLine>PROMOTIONLINE_ORGANIZED</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_ORGANIZED2</TraitPrereq>
@@ -64801,7 +64801,7 @@
 			<PromotionLine>PROMOTIONLINE_IMPULSIVE</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -64897,7 +64897,7 @@
 			<PromotionLine>PROMOTIONLINE_IMPULSIVE</PromotionLine>
 			<iLinePriority>-1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -65010,7 +65010,7 @@
 			<PromotionLine>PROMOTIONLINE_IMPULSIVE</PromotionLine>
 			<iLinePriority>-2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_IMPULSIVE1</TraitPrereq>
@@ -65106,7 +65106,7 @@
 			<PromotionLine>PROMOTIONLINE_IMPULSIVE</PromotionLine>
 			<iLinePriority>-3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_IMPULSIVE2</TraitPrereq>
@@ -65220,7 +65220,7 @@
 			<PromotionLine>PROMOTIONLINE_DYNAMIC</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -65749,7 +65749,7 @@
 			<PromotionLine>PROMOTIONLINE_DYNAMIC</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -66050,7 +66050,7 @@
 			<PromotionLine>PROMOTIONLINE_DYNAMIC</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_DYNAMIC1</TraitPrereq>
@@ -66307,7 +66307,7 @@
 			<PromotionLine>PROMOTIONLINE_DYNAMIC</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_DYNAMIC2</TraitPrereq>
@@ -66480,7 +66480,7 @@
 			<PromotionLine>PROMOTIONLINE_STUBBORN</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -67009,7 +67009,7 @@
 			<PromotionLine>PROMOTIONLINE_STUBBORN</PromotionLine>
 			<iLinePriority>-1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -67309,7 +67309,7 @@
 			<PromotionLine>PROMOTIONLINE_STUBBORN</PromotionLine>
 			<iLinePriority>-2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_STUBBORN1</TraitPrereq>
@@ -67565,7 +67565,7 @@
 			<PromotionLine>PROMOTIONLINE_STUBBORN</PromotionLine>
 			<iLinePriority>-3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_STUBBORN2</TraitPrereq>
@@ -67737,7 +67737,7 @@
 			<PromotionLine>PROMOTIONLINE_PRAGMATIC</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -67851,7 +67851,7 @@
 			<PromotionLine>PROMOTIONLINE_PRAGMATIC</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -67965,7 +67965,7 @@
 			<PromotionLine>PROMOTIONLINE_PRAGMATIC</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_PRAGMATIC1</TraitPrereq>
@@ -68079,7 +68079,7 @@
 			<PromotionLine>PROMOTIONLINE_PRAGMATIC</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_PRAGMATIC2</TraitPrereq>
@@ -68298,7 +68298,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -68416,7 +68416,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -68429,7 +68429,7 @@
 			<PromotionLine>PROMOTIONLINE_IDEALISTIC</PromotionLine>
 			<iLinePriority>-2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_IDEALISTIC1</TraitPrereq>
@@ -68543,7 +68543,7 @@
 			<PromotionLine>PROMOTIONLINE_IDEALISTIC</PromotionLine>
 			<iLinePriority>-3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_IDEALISTIC2</TraitPrereq>
@@ -68894,7 +68894,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -69094,7 +69094,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -69107,7 +69107,7 @@
 			<PromotionLine>PROMOTIONLINE_HUMANITARIAN</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_HUMANITARIAN1</TraitPrereq>
@@ -69321,7 +69321,7 @@
 			<PromotionLine>PROMOTIONLINE_HUMANITARIAN</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_HUMANITARIAN2</TraitPrereq>
@@ -69731,7 +69731,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -69918,7 +69918,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -69931,7 +69931,7 @@
 			<PromotionLine>PROMOTIONLINE_CRUEL</PromotionLine>
 			<iLinePriority>-2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_CRUEL1</TraitPrereq>
@@ -70114,7 +70114,7 @@
 			<PromotionLine>PROMOTIONLINE_CRUEL</PromotionLine>
 			<iLinePriority>-3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_CRUEL2</TraitPrereq>
@@ -70283,7 +70283,7 @@
 			<PromotionLine>PROMOTIONLINE_LAWFUL</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -71209,7 +71209,7 @@
 			<PromotionLine>PROMOTIONLINE_LAWFUL</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -71791,7 +71791,7 @@
 			<PromotionLine>PROMOTIONLINE_LAWFUL</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_LAWFUL1</TraitPrereq>
@@ -72159,7 +72159,7 @@
 			<PromotionLine>PROMOTIONLINE_LAWFUL</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_LAWFUL2</TraitPrereq>
@@ -72511,7 +72511,7 @@
 			<PromotionLine>PROMOTIONLINE_CROOKED</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -73149,7 +73149,7 @@
 			<PromotionLine>PROMOTIONLINE_CROOKED</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -73470,7 +73470,7 @@
 			<PromotionLine>PROMOTIONLINE_CROOKED</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_CROOKED1</TraitPrereq>
@@ -73847,7 +73847,7 @@
 			<PromotionLine>PROMOTIONLINE_CROOKED</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_CROOKED2</TraitPrereq>
@@ -74075,7 +74075,7 @@
 			<PromotionLine>PROMOTIONLINE_MEDICAL</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -74804,7 +74804,7 @@
 			<PromotionLine>PROMOTIONLINE_MEDICAL</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -75245,7 +75245,7 @@
 			<PromotionLine>PROMOTIONLINE_MEDICAL</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_MEDICAL1</TraitPrereq>
@@ -75539,7 +75539,7 @@
 			<PromotionLine>PROMOTIONLINE_MEDICAL</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_MEDICAL1</TraitPrereq>
@@ -75895,7 +75895,7 @@
 			<PromotionLine>PROMOTIONLINE_UNSANITARY</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -76659,7 +76659,7 @@
 			<PromotionLine>PROMOTIONLINE_UNSANITARY</PromotionLine>
 			<iLinePriority>-1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -77103,7 +77103,7 @@
 			<PromotionLine>PROMOTIONLINE_UNSANITARY</PromotionLine>
 			<iLinePriority>-2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_UNSANITARY1</TraitPrereq>
@@ -77401,7 +77401,7 @@
 			<PromotionLine>PROMOTIONLINE_UNSANITARY</PromotionLine>
 			<iLinePriority>-3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_UNSANITARY1</TraitPrereq>
@@ -77760,7 +77760,7 @@
 			<PromotionLine>PROMOTIONLINE_NATURALIST</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -78065,7 +78065,7 @@
 			<PromotionLine>PROMOTIONLINE_NATURALIST</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -78359,7 +78359,7 @@
 			<PromotionLine>PROMOTIONLINE_NATURALIST</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_NATURALIST1</TraitPrereq>
@@ -78577,7 +78577,7 @@
 			<PromotionLine>PROMOTIONLINE_NATURALIST</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_NATURALIST2</TraitPrereq>
@@ -78790,7 +78790,7 @@
 			<PromotionLine>PROMOTIONLINE_SLOB</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -78953,7 +78953,7 @@
 			<PromotionLine>PROMOTIONLINE_SLOB</PromotionLine>
 			<iLinePriority>-1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -79105,7 +79105,7 @@
 			<PromotionLine>PROMOTIONLINE_SLOB</PromotionLine>
 			<iLinePriority>-2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_SLOB1</TraitPrereq>
@@ -79215,7 +79215,7 @@
 			<PromotionLine>PROMOTIONLINE_SLOB</PromotionLine>
 			<iLinePriority>-3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_SLOB2</TraitPrereq>
@@ -79324,7 +79324,7 @@
 			<PromotionLine>PROMOTIONLINE_HONEST</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -79422,7 +79422,7 @@
 			<PromotionLine>PROMOTIONLINE_HONEST</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -79514,7 +79514,7 @@
 			<PromotionLine>PROMOTIONLINE_HONEST</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_HONEST1</TraitPrereq>
@@ -79612,7 +79612,7 @@
 			<PromotionLine>PROMOTIONLINE_HONEST</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_HONEST2</TraitPrereq>
@@ -79710,7 +79710,7 @@
 			<PromotionLine>PROMOTIONLINE_LIAR</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -79808,7 +79808,7 @@
 			<PromotionLine>PROMOTIONLINE_LIAR</PromotionLine>
 			<iLinePriority>-1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -79900,7 +79900,7 @@
 			<PromotionLine>PROMOTIONLINE_LIAR</PromotionLine>
 			<iLinePriority>-2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_LIAR1</TraitPrereq>
@@ -79998,7 +79998,7 @@
 			<PromotionLine>PROMOTIONLINE_LIAR</PromotionLine>
 			<iLinePriority>-3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_LIAR2</TraitPrereq>
@@ -80096,7 +80096,7 @@
 			<PromotionLine>PROMOTIONLINE_PROGRESSIVE</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -80203,7 +80203,7 @@
 			<PromotionLine>PROMOTIONLINE_PROGRESSIVE</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -80310,7 +80310,7 @@
 			<PromotionLine>PROMOTIONLINE_PROGRESSIVE</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_PROGRESSIVE1</TraitPrereq>
@@ -80416,7 +80416,7 @@
 			<PromotionLine>PROMOTIONLINE_PROGRESSIVE</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_PROGRESSIVE2</TraitPrereq>
@@ -80520,7 +80520,7 @@
 			<PromotionLine>PROMOTIONLINE_BIGOT</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -80666,7 +80666,7 @@
 			<PromotionLine>PROMOTIONLINE_BIGOT</PromotionLine>
 			<iLinePriority>-1</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -80811,7 +80811,7 @@
 			<PromotionLine>PROMOTIONLINE_BIGOT</PromotionLine>
 			<iLinePriority>-2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_BIGOT1</TraitPrereq>
@@ -80955,7 +80955,7 @@
 			<PromotionLine>PROMOTIONLINE_BIGOT</PromotionLine>
 			<iLinePriority>-3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_BIGOT2</TraitPrereq>
@@ -81201,7 +81201,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -81324,7 +81324,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>
@@ -81337,7 +81337,7 @@
 			<PromotionLine>PROMOTIONLINE_HUNTER_GATHERER</PromotionLine>
 			<iLinePriority>-2</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_HUNTER_GATHERER1</TraitPrereq>
@@ -81456,7 +81456,7 @@
 			<PromotionLine>PROMOTIONLINE_HUNTER_GATHERER</PromotionLine>
 			<iLinePriority>-3</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<TraitPrereq>TRAIT_HUNTER_GATHERER2</TraitPrereq>

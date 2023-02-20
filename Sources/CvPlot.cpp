@@ -93,7 +93,6 @@ CvPlot::CvPlot()
 	m_aeRevealedImprovementType = NULL;
 	m_aeRevealedRouteType = NULL;
 	m_paiBuildProgress = NULL;
-	m_apaiCultureRangeCities = NULL;
 	m_apaiInvisibleVisibilityCount = NULL;
 
 	m_aiMountainLeaderCount = NULL;	//	Koshling - mountain mod efficiency
@@ -200,7 +199,6 @@ void CvPlot::uninit()
 
 	SAFE_DELETE_ARRAY(m_aiMountainLeaderCount);
 	SAFE_DELETE_ARRAY(m_paiBuildProgress);
-	SAFE_DELETE_ARRAY2(m_apaiCultureRangeCities, MAX_PLAYERS);
 	SAFE_DELETE_ARRAY2(m_apaiInvisibleVisibilityCount, MAX_TEAMS);
 
 	m_aPlotTeamVisibilityIntensity.clear();
@@ -229,7 +227,6 @@ void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 	m_iFeatureVariety = 0;
 	m_iOwnershipDuration = 0;
 	m_iUpgradeProgress = 0;
-	m_iForceUnownedTimer = 0; // SAVEBREAK remove
 	m_iCityRadiusCount = 0;
 	m_iRiverID = -1;
 	m_iMinOriginalStartDist = -1;
@@ -1035,11 +1032,11 @@ void CvPlot::checkCityRevolt()
 			}
 
 			if (pCity->isNPC()
-			|| !GC.getGame().isOption(GAMEOPTION_NO_CITY_FLIPPING)
-			&& (GC.getGame().isOption(GAMEOPTION_FLIPPING_AFTER_CONQUEST) || !pCity->isEverOwned(eCulturalOwner))
+			|| !GC.getGame().isOption(GAMEOPTION_CULTURE_NO_CITY_FLIPPING)
+			&& (GC.getGame().isOption(GAMEOPTION_CULTURE_FLIPPING_AFTER_CONQUEST) || !pCity->isEverOwned(eCulturalOwner))
 			&&	pCity->getNumRevolts(eCulturalOwner) >= GC.getDefineINT("NUM_WARNING_REVOLTS"))
 			{
-				if (GC.getGame().isOption(GAMEOPTION_ONE_CITY_CHALLENGE))
+				if (GC.getGame().isOption(GAMEOPTION_CHALLENGE_ONE_CITY))
 				{
 					pCity->kill(true);
 				}
@@ -2106,7 +2103,7 @@ int CvPlot::getTerrainElevation() const
 
 void CvPlot::changeAdjacentSight(TeamTypes eTeam, int iRange, bool bIncrement, CvUnit* pUnit, bool bUpdatePlotGroups)
 {
-	const bool bHideSeek = GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK);
+	const bool bHideSeek = GC.getGame().isOption(GAMEOPTION_COMBAT_HIDE_SEEK);
 
 	int iUnitID = 0;
 	//fill invisible types
@@ -4403,7 +4400,7 @@ PlayerTypes CvPlot::calculateCulturalOwner(bool bCountLastTurn) const
 	}
 
 	// non-city, non fort plots that are *adjacent* to cities may always belong to those cities' owners
-	if (GC.getGame().isOption(GAMEOPTION_MIN_CITY_BORDER) && !isCity(true))
+	if (GC.getGame().isOption(GAMEOPTION_CULTURE_MIN_CITY_BORDER) && !isCity(true))
 	{
 		const CvCity* adjacentCity = getAdjacentCity();
 		if (adjacentCity) return adjacentCity->getOwner();
@@ -6556,7 +6553,7 @@ void CvPlot::setFeatureType(FeatureTypes eNewValue, int iVariety, bool bImprovem
 	}
 
 	//Feature Removed or Fallout
-	if (GC.getGame().isOption(GAMEOPTION_PERSONALIZED_MAP))
+	if (GC.getGame().isOption(GAMEOPTION_MAP_PERSONALIZED))
 	{
 		if (getOwner() != NO_PLAYER
 		&& (eNewValue == NO_FEATURE || GC.getFeatureInfo(eNewValue).getHealthPercent() < 0)
@@ -7805,7 +7802,7 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 				}
 			}
 		}
-		if (getLandmarkType() != NO_LANDMARK && GC.getGame().isOption(GAMEOPTION_PERSONALIZED_MAP))
+		if (getLandmarkType() != NO_LANDMARK && GC.getGame().isOption(GAMEOPTION_MAP_PERSONALIZED))
 		{
 			iYield += GET_PLAYER(ePlayer).getLandmarkYield(eYield);
 		}
@@ -7917,8 +7914,8 @@ PlayerTypes CvPlot::findHighestCulturePlayer(const bool bCountLegacyCulture, con
 			// Equilibium culture game option may result in negative culture when near equilibrium (loss of buildings, etc) and
 			// as a result can't be immediately set to unown; we are required to use decay dynamics instead to lose control
 			if (bCountLegacyCulture
-			|| (getCultureRateThisTurn(ePlayerX) > 0 || GC.getGame().isOption(GAMEOPTION_EQUILIBRIUM_CULTURE))
-			|| bCountLastTurn && (getCultureRateLastTurn(ePlayerX) > 0 || GC.getGame().isOption(GAMEOPTION_EQUILIBRIUM_CULTURE)))
+			|| (getCultureRateThisTurn(ePlayerX) > 0 || GC.getGame().isOption(GAMEOPTION_CULTURE_EQUILIBRIUM))
+			|| bCountLastTurn && (getCultureRateLastTurn(ePlayerX) > 0 || GC.getGame().isOption(GAMEOPTION_CULTURE_EQUILIBRIUM)))
 			{
 				const int iValue = getCulture(ePlayerX);
 				if (iValue > 0)
@@ -7988,7 +7985,7 @@ void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bU
 	if (getCulture(eIndex) != iNewValue)
 	{
 		// Many things apply 1 culture to tile to mark as claimed; setting to 2 instead ensures claim for at least a full turn on EQ setting
-		if (GC.getGame().isOption(GAMEOPTION_EQUILIBRIUM_CULTURE) && getCulture(eIndex) == 0 && iNewValue == 1) iNewValue = 2;
+		if (GC.getGame().isOption(GAMEOPTION_CULTURE_EQUILIBRIUM) && getCulture(eIndex) == 0 && iNewValue == 1) iNewValue = 2;
 
 		const int iChange = iNewValue - getCulture(eIndex);
 
@@ -9920,7 +9917,7 @@ void CvPlot::changeInvisibleVisibilityCount(TeamTypes eTeam, InvisibleTypes eInv
 
 void CvPlot::setSpotIntensity(TeamTypes eTeam, InvisibleTypes eInvisible, int iUnitID, int iIntensity)
 {
-	if (!GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_HIDE_SEEK))
 	{
 		return;
 	}
@@ -10172,11 +10169,6 @@ void CvPlot::doFeature()
 		return;
 	}
 
-	// flabbert
-	// these defines are broken, they remove all feature spreading, implementing storms have to be done differently (full remake, maybe as an "unkillable" unit?)
-	// const int iStorm = GC.getInfoTypeForString("FEATURE_STORM", true);
-	// const bool bNoStorms = GC.getGame().isModderGameOption(MODDERGAMEOPTION_NO_STORMS);
-
 	for (int iI = 0; iI < GC.getNumFeatureInfos(); ++iI)
 	{
 		const CvFeatureInfo& kFeature = GC.getFeatureInfo((FeatureTypes)iI);
@@ -10188,22 +10180,20 @@ void CvPlot::doFeature()
 		{
 			int iProbability = kFeature.isCanGrowAnywhere() ? kFeature.getGrowthProbability() : 0;
 
-			foreach_(const CvPlot* pLoopPlot, cardinalDirectionAdjacent())
+			foreach_(const CvPlot* plotX, cardinalDirectionAdjacent())
 			{
-				if (pLoopPlot == NULL) {
-					continue;
-				}
-				if (pLoopPlot->getFeatureType() == (FeatureTypes)iI)
+				if (plotX && plotX->getFeatureType() == iI)
 				{
-					if (pLoopPlot->getImprovementType() == NO_IMPROVEMENT)
-					{
-						iProbability += kFeature.getGrowthProbability();
-					}
-					else
-					{
-						iProbability += GC.getImprovementInfo(pLoopPlot->getImprovementType()).getFeatureGrowthProbability();
-					}
-					iProbability += kFeature.getSpreadProbability();
+					iProbability += (
+						(
+							plotX->getImprovementType() == NO_IMPROVEMENT
+							?
+							kFeature.getGrowthProbability()
+							:
+							GC.getImprovementInfo(plotX->getImprovementType()).getFeatureGrowthProbability()
+						)
+						+ kFeature.getSpreadProbability()
+					);
 				}
 			}
 			iProbability *= std::max(0, (GC.getFEATURE_GROWTH_MODIFIER() + 100));
@@ -10219,21 +10209,19 @@ void CvPlot::doFeature()
 			&& iProbability > GC.getGame().getSorenRandNum(100 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent(), "Feature Growth"))
 			{
 				setFeatureType((FeatureTypes)iI);
-				// Afforess 2/9/10 - Feature Sound Effect
-				// Default Sound Effect is Forest Growth if no XML value is set
 				TCHAR szSound[1024] = "AS2D_FEATUREGROWTH";
 				strcpy(szSound, kFeature.getGrowthSound());
-				// ! Afforess
 
 				const CvCity* pCity = GC.getMap().findCity(getX(), getY(), getOwner(), NO_TEAM, false);
 
-				if (pCity != NULL && isInViewport())
+				if (pCity && isInViewport())
 				{
-					// Tell the owner of this city.
-					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_FEATURE_GROWN_NEAR_CITY", kFeature.getTextKeyWide(), pCity->getNameKey());
-
-					AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, szSound, MESSAGE_TYPE_INFO,
-						kFeature.getButton(), GC.getCOLOR_WHITE(), getViewportX(),getViewportY(), true, true);
+					AddDLLMessage(
+						getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText("TXT_KEY_MISC_FEATURE_GROWN_NEAR_CITY",
+						kFeature.getTextKeyWide(), pCity->getNameKey()), szSound, MESSAGE_TYPE_INFO,
+						kFeature.getButton(), GC.getCOLOR_WHITE(), getViewportX(),getViewportY(), true, true
+					);
 				}
 				break;
 			}
@@ -10268,7 +10256,7 @@ void CvPlot::doCulture()
 
 			if (getCulture(ePlayerX) > 0)
 			{
-				if (GC.getGame().isOption(GAMEOPTION_EQUILIBRIUM_CULTURE))
+				if (GC.getGame().isOption(GAMEOPTION_CULTURE_EQUILIBRIUM))
 				{
 					// By limiting decay to avoid 2+ -> 0, we can ensure that putting 2 culture on a tile will always be above 1 turn decay
 					const int iIsOverOne = getCulture(ePlayerX) > 1;
@@ -10493,11 +10481,7 @@ void CvPlot::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ(wrapper, "CvPlot", &m_iFeatureVariety);
 	WRAPPER_READ(wrapper, "CvPlot", &m_iOwnershipDuration);
-	// @SAVEBREAK DELETE
-	WRAPPER_SKIP_ELEMENT(wrapper, "CvPlot", m_iImprovementDuration, SAVE_VALUE_ANY);
-	// SAVEBREAK@
 	WRAPPER_READ(wrapper, "CvPlot", &m_iUpgradeProgress);
-	WRAPPER_READ(wrapper, "CvPlot", &m_iForceUnownedTimer); // SAVEBREAK remove
 	WRAPPER_READ(wrapper, "CvPlot", &m_iCityRadiusCount);
 	WRAPPER_READ(wrapper, "CvPlot", &m_iRiverID);
 	WRAPPER_READ(wrapper, "CvPlot", &m_iMinOriginalStartDist);
@@ -10520,20 +10504,6 @@ void CvPlot::read(FDataStreamBase* pStream)
 	WRAPPER_READ_STRING(wrapper, "CvPlot", m_szLandmarkName);
 	WRAPPER_READ(wrapper, "CvPlot", &m_eClaimingOwner);
 	WRAPPER_READ(wrapper, "CvPlot", (int*)&m_eLandmarkType);
-
-	// @SAVEBREAK DELETE - Toffer
-	{
-		char cCount = 0;
-		WRAPPER_READ_DECORATED(wrapper, "CvPlot", &cCount, "cConditional");
-
-		if (cCount > 0)
-		{
-			char* m_aiOccupationCultureRangeCities = new char[cCount];
-			WRAPPER_READ_ARRAY(wrapper, "CvPlot", cCount, m_aiOccupationCultureRangeCities);
-		}
-	}
-	// SAVEBREAK@
-
 	WRAPPER_READ(wrapper, "CvPlot", &m_zobristContribution);
 
 	WRAPPER_READ_DECORATED(wrapper, "CvPlot", &bVal, "m_bNOfRiver");
@@ -10786,41 +10756,6 @@ void CvPlot::read(FDataStreamBase* pStream)
 	}
 	// SAVEBREAK@
 
-	// SAVEBREAK start remove
-	//WRAPPER_SKIP_ELEMENT(wrapper, "CvPlot", m_apaiCultureRangeCities, SAVE_VALUE_ANY); // Is this right?
-	if (NULL != m_apaiCultureRangeCities)
-	{
-		for (int iI = 0; iI < MAX_PLAYERS; ++iI)
-		{
-			SAFE_DELETE_ARRAY(m_apaiCultureRangeCities[iI]);
-		}
-		SAFE_DELETE_ARRAY(m_apaiCultureRangeCities);
-	}
-	WRAPPER_READ_DECORATED(wrapper, "CvPlot", &cCount, "cConditional");
-	if (cCount > 0)
-	{
-		m_apaiCultureRangeCities = new char*[cCount];
-		for (iI = 0; iI < cCount; ++iI)
-		{
-			WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iCount, "CultureLevelCount");
-			if (iCount > 0)
-			{
-				m_apaiCultureRangeCities[iI] = new char[iCount >= GC.getNumCultureLevelInfos()? iCount : GC.getNumCultureLevelInfos()];
-				WRAPPER_READ_ARRAY(wrapper, "CvPlot", iCount, m_apaiCultureRangeCities[iI]);
-
-				for(int iJ = iCount; iJ < GC.getNumCultureLevelInfos(); iJ++)
-				{
-					m_apaiCultureRangeCities[iI][iJ] = 0;
-				}
-			}
-			else
-			{
-				m_apaiCultureRangeCities[iI] = NULL;
-			}
-		}
-	}
-	// SAVEBREAK end
-
 	//	Read the plot danger counts for all players that have any here
 	int	iPlayersWithDanger = 0;
 
@@ -11016,7 +10951,6 @@ void CvPlot::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iFeatureVariety);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iOwnershipDuration);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iUpgradeProgress);
-	WRAPPER_WRITE(wrapper, "CvPlot", m_iForceUnownedTimer); // SAVEBREAK remove
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iCityRadiusCount);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iRiverID);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iMinOriginalStartDist);
@@ -11035,15 +10969,10 @@ void CvPlot::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE_STRING(wrapper, "CvPlot", m_szLandmarkMessage);
 	WRAPPER_WRITE_STRING(wrapper, "CvPlot", m_szLandmarkName);
+
 	WRAPPER_WRITE(wrapper, "CvPlot", m_eClaimingOwner);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_eLandmarkType);
-
-	// @SAVEBREAK DELETE - Toffer
-	WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)0, "cConditional");
-	// SAVEBREAK@
-
 	WRAPPER_WRITE(wrapper, "CvPlot", m_zobristContribution);
-
 	WRAPPER_WRITE(wrapper, "CvPlot", m_bNOfRiver);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_bWOfRiver);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_bIrrigated);
@@ -11230,29 +11159,6 @@ void CvPlot::write(FDataStreamBase* pStream)
 	{
 		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (int)0, "iConditional");
 	}
-
-	// SAVEBREAK start remove
-	if (NULL == m_apaiCultureRangeCities)
-	{
-		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)0, "cConditional");
-	}
-	else
-	{
-		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)MAX_PLAYERS, "cConditional");
-		for (int iI=0; iI < MAX_PLAYERS; ++iI)
-		{
-			if (NULL == m_apaiCultureRangeCities[iI])
-			{
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (int)0, "CultureLevelCount");
-			}
-			else
-			{
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (int)GC.getNumCultureLevelInfos(), "CultureLevelCount");
-				WRAPPER_WRITE_ARRAY(wrapper, "CvPlot", GC.getNumCultureLevelInfos(), m_apaiCultureRangeCities[iI]);
-			}
-		}
-	}
-	// SAVEBREAK end remove
 
 	//	Write out plot danger counts for all players that have any here
 	int	iPlayersWithDanger = 0;
@@ -12074,7 +11980,7 @@ int CvPlot::airUnitSpaceAvailable(TeamTypes eTeam) const
 	const CvCity* pCity = getPlotCity();
 	if (NULL != pCity)
 	{
-		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+		if (GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 		{
 			iMaxUnits = pCity->getSMAirUnitCapacity(getTeam());
 		}
@@ -12085,7 +11991,7 @@ int CvPlot::airUnitSpaceAvailable(TeamTypes eTeam) const
 	}
 	else
 	{
-		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+		if (GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 		{
 			iMaxUnits = GC.getCITY_AIR_UNIT_CAPACITY() * 50;
 		}
@@ -12095,7 +12001,7 @@ int CvPlot::airUnitSpaceAvailable(TeamTypes eTeam) const
 		}
 	}
 
-	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 	{
 		return (iMaxUnits - countNumAirUnitCargoVolume(eTeam));
 	}
@@ -12297,7 +12203,7 @@ bool CvPlot::hasDefender(bool bCheckCanAttack, PlayerTypes eOwner, PlayerTypes e
 }
 bool CvPlot::hasStealthDefender(const CvUnit* pAttacker) const
 {
-	if (pAttacker == NULL || !GC.getGame().isOption(GAMEOPTION_WITHOUT_WARNING))
+	if (pAttacker == NULL || !GC.getGame().isOption(GAMEOPTION_COMBAT_WITHOUT_WARNING))
 	{
 		return false;
 	}
@@ -12335,7 +12241,7 @@ void CvPlot::revealBestStealthDefender(const CvUnit* pAttacker)
 	int iBestValue = 0;
 	CvUnit* pBestUnit = NULL;
 
-	if (pAttacker == NULL || !GC.getGame().isOption(GAMEOPTION_WITHOUT_WARNING))
+	if (pAttacker == NULL || !GC.getGame().isOption(GAMEOPTION_COMBAT_WITHOUT_WARNING))
 	{
 		return;
 	}
@@ -13127,7 +13033,7 @@ int CvPlot::countSeeInvisibleActive(PlayerTypes ePlayer, InvisibleTypes eVisible
 		{
 			if (pLoopUnit->getOwner() == ePlayer)
 			{
-				if (GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
+				if (GC.getGame().isOption(GAMEOPTION_COMBAT_HIDE_SEEK))
 				{
 					if (GC.getUnitInfo(pLoopUnit->getUnitType()).getVisibilityIntensityType(eVisible) > 0)
 					{

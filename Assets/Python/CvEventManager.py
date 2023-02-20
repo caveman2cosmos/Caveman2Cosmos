@@ -555,10 +555,10 @@ class CvEventManager:
 
 		CvAdvisorUtils.resetNoLiberateCities()
 
-		self.GO_1_CITY_TILE_FOUNDING	= GAME.isOption(GameOptionTypes.GAMEOPTION_1_CITY_TILE_FOUNDING)
-		self.GO_START_AS_MINORS			= GAME.isOption(GameOptionTypes.GAMEOPTION_START_AS_MINORS)
+		self.GO_1_CITY_TILE_FOUNDING	= GAME.isOption(GameOptionTypes.GAMEOPTION_CULTURE_1_CITY_TILE_FOUNDING)
+		self.GO_START_AS_MINORS			= GAME.isOption(GameOptionTypes.GAMEOPTION_UNSUPPORTED_START_AS_MINORS)
 		self.GO_NO_CITY_RAZING			= GAME.isOption(GameOptionTypes.GAMEOPTION_NO_CITY_RAZING)
-		self.GO_ONE_CITY_CHALLENGE		= GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE)
+		self.GO_ONE_CITY_CHALLENGE		= GAME.isOption(GameOptionTypes.GAMEOPTION_CHALLENGE_ONE_CITY)
 
 		if bNewGame and self.GO_START_AS_MINORS:
 			for iTeam in xrange(GC.getMAX_PC_TEAMS()):
@@ -699,7 +699,7 @@ class CvEventManager:
 			szText = ""
 			if GC.getDefineINT("START_YEAR") != GAME.getGameTurnYear():
 				szText += "\n\n" + TRNSLTR.getText("TXT_KEY_MOD_GAMESTART_NOT_PREHISTORIC", ())
-			if GAME.isOption(GameOptionTypes.GAMEOPTION_ADVANCED_START):
+			if GAME.isOption(GameOptionTypes.GAMEOPTION_UNSUPPORTED_ADVANCED_START):
 				szText += "\n\n" + TRNSLTR.getText("TXT_KEY_MOD_GAMESTART_ADVANCED_START", ())
 			if szText:
 				szText = TRNSLTR.getText("TXT_KEY_MOD_HEADER", ()) + szText

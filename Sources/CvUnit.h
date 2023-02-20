@@ -1705,7 +1705,6 @@ protected:
 
 	DomainTypes m_eNewDomainCargo;
 	SpecialUnitTypes m_eNewSpecialCargo;
-	SpecialUnitTypes m_eNewSMSpecialCargo;
 	SpecialUnitTypes m_eNewSMNotSpecialCargo;
 	SpecialUnitTypes m_eSpecialUnit;
 	MissionTypes m_eSleepType;
@@ -2940,10 +2939,6 @@ private:
 	static int* g_paiTempDistanceAttackCommunicability;
 	static int* g_paiTempAfflictOnAttackTypeMeleeCount;
 	static int* g_paiTempAfflictOnAttackTypeDistanceCount;
-//Team Project (4)
-	//WorkRateMod
-	//ls612: Terrain Work Modifiers
-	static int* g_paiTempExtraBuildWorkPercent;
 	static int*	g_paiTempExtraUnitCombatModifier;
 	static bool* g_pabTempHasPromotion;
 	static bool* g_pabTempHasUnitCombat;

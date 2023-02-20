@@ -16,7 +16,7 @@ def init():
 	BugUtil.debug("Barbarian Diplomacy INIT.")
 
 	global gb_NoGoodyHuts
-	gb_NoGoodyHuts = CyGame().isOption(GameOptionTypes.GAMEOPTION_NO_GOODY_HUTS)
+	gb_NoGoodyHuts = CyGame().isOption(GameOptionTypes.GAMEOPTION_MAP_NO_GOODY_HUTS)
 
 	global giIndigenousPeopleImprovement
 	giIndigenousPeopleImprovement = gc.getInfoTypeForString("IMPROVEMENT_INDIGENOUS_COMMUNITY")

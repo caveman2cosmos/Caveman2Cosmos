@@ -6942,24 +6942,6 @@
 		<Russian>Îòêë. î÷åðåäü íà ñòðîèò-âî</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__NOSTORMS_HOVER</Tag>
-		<English>Storms will stop spawning, and dissipate over time.</English>
-		<French>Les Tempêtes vont arrêter d'apparaître, et se dissipent avec le temps.</French>
-		<German>Es werden keine neuen Stürme entstehen und bereits vorhandene lösen sich langsam auf.</German>
-		<Italian>I temporali non verranno più creati, e svaniranno con il tempo.</Italian>
-		<Spanish>Las tormentas dejarán de engendrarse, y se disiparán con el tiempo.</Spanish>
-		<Russian>Óðàãàíû ïðåêðàùàþò ïîÿâëÿòüñÿ íà êàðòå, à óæå ñóùåñòâóþùèå ïîñòåïåííî ðàñïàäàþòñÿ.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__NOSTORMS_TEXT</Tag>
-		<English>No Storms</English>
-		<French>Pas de Tempêtes</French>
-		<German>Keine Stürme</German>
-		<Italian>Niente temporali</Italian>
-		<Spanish>Sin tormentas</Spanish>
-		<Russian>Íåò øòîðìîâ</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__PLAYERCOLOR_HOVER</Tag>
 		<English>Changes the color of your civilization</English>
 		<French>Change la Couleur de votre Civilisation</French>

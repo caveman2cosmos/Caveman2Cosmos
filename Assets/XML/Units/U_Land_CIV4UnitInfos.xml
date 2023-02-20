@@ -5500,7 +5500,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<bStateReligion>1</bStateReligion>
-			<PrereqGameOption>GAMEOPTION_INQUISITIONS</PrereqGameOption>
+			<PrereqGameOption>GAMEOPTION_RELIGION_INQUISITIONS</PrereqGameOption>
 			<PrereqOrCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_INQUISITORIAL</CivicOption>

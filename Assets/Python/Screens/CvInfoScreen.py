@@ -116,7 +116,7 @@ class CvInfoScreen:
 			TRNSLTR.getText("TXT_WORD_CULTURE", ()),
 			TRNSLTR.getText("TXT_WORD_ESPIONAGE", ()),
 		]
-		if GAME.isOption(GameOptionTypes.GAMEOPTION_REVOLUTION):
+		if GAME.isOption(GameOptionTypes.GAMEOPTION_UNSUPPORTED_REVOLUTION):
 			sTemp1.append(TRNSLTR.getText("TXT_KEY_REVOLUTION_GRAPH_TITLE_SMALL", ()))
 			self.iNumGraphs = 8
 		else: self.iNumGraphs = 7
