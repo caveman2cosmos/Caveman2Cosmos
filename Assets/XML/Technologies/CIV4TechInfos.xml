@@ -9007,11 +9007,11 @@
 			</OrPreReqs>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_GATHERER_LAVA_ROCK</BuildingType>
+					<BuildingType>BUILDING_LAVA_ROCK_GATHERER</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
+					<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
@@ -12777,11 +12777,11 @@
 			</OrPreReqs>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_GLASSSMITH</BuildingType>
+					<BuildingType>BUILDING_GLASSBLOWERS_WORKSHOP</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_GLASS_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_GLASSWARE</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>

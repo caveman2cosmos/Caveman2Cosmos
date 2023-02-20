@@ -239,7 +239,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_SIEGE_WEAPONS_WORKSHOP</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_CLOCKPUNK</PrereqTech>
 			<BonusType>BONUS_CLOCKPUNK</BonusType>
@@ -424,7 +424,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_SIEGE_WEAPONS_WORKSHOP</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_HOT_AIR_BALLOON</PrereqTech>
 			<TechTypes>

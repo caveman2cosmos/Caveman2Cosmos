@@ -27,7 +27,7 @@
 		<Russian>Àâòîìàòè÷åñêèå ÷àñû - ýòî òèï ÷àñîâ ñ àâòîìàòèçèðîâàííûì áîåì. Ýòè ÷àñû ñîçäàâàëèñü â Åâðîïå íà÷èíàÿ ñî ñðåäíåâåêîâüÿ è äî âèêòîðèàíñêîé ýïîõè. Òðàäèöèè èçîáðåòàòåëüñòâà äåëàþò èõ áîëåå ðàñïðîñòðàíåíûìè â íàøåé ñòðàíå, ÷åì â äðóãèõ. Àâòîìàò, êàê ïðàâèëî, óñòàíàâëèâàëè íà ÷àñ, ïîë÷àñà èëè ÷åòâåðòü ÷àñà, îáû÷íî ñ óäàðàìè êîëîêîëà.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CLOCKPUNK_AIRPORT</Tag>
+		<Tag>TXT_KEY_BUILDING_ORNITHOPTER_AERIE</Tag>
 		<English>Ornithopter Aerie</English>
 		<French>
 			<Text>Aire d'ornithoptères</Text>
@@ -47,21 +47,21 @@
 		<Russian>Îðíèòîïò. ïëîùàäêà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CLOCKPUNK_AIRPORT_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_ORNITHOPTER_AERIE_PEDIA</Tag>
 		<English>An [COLOR_BUILDING_TEXT]Ornithopter Aerie[COLOR_REVERT] is an early airport for [COLOR_UNIT_TEXT]ornithopters[COLOR_REVERT].</English>
 		<French>Un [COLOR_BUILDING_TEXT]aire d'ornithoptères[COLOR_REVERT] est un petit aérodrome, d'où peuvent décoller les [COLOR_UNIT_TEXT]ornithoptères[COLOR_REVERT].</French>
 		<Italian>Un [COLOR_BUILDING_TEXT]nido per ornitotteri[COLOR_REVERT] è un primitivo aeroporto, ideato per gli [COLOR_UNIT_TEXT]ornitotteri[COLOR_REVERT].</Italian>
 		<Russian>Îðíèòîïòåðíàÿ ïëîùàäêà - ýòî äðåâíèé àýðîïîðò äëÿ îðíèòîïòåðîâ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CLOCKPUNK_EMBASSY</Tag>
+		<Tag>TXT_KEY_BUILDING_CULTURE_CLOCKPUNK</Tag>
 		<English>Culture (Clockpunk)</English>
 		<Italian>Cultura (Clockpunk)</Italian>
 		<Polish>Kultura (Clockpunk)</Polish>
 		<Russian>Клокпанк</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CLOCKPUNK_EMBASSY_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_CULTURE_CLOCKPUNK_PEDIA</Tag>
 		<English>[COLOR_BUILDING_TEXT]Clockpunk[COLOR_REVERT] is a subgenre of speculative fiction which is similar to steampunk. It portrays advanced technologies based on springs and clockwork, instead of current technologies, despite keeping a pre-modern design. Clockpunk is based very intensively on the works of Leonardo da Vinci and, as such, it is typically set during the Renaissance or in a Renaissance-like era.</English>
 		<French>Le [COLOR_BUILDING_TEXT]Clockpunk[COLOR_REVERT] est un sous-genre de fiction spéculative similaire au steampunk. Il décrit des technologies avancées basées sur des ressorts et des horloges, au lieu des technologies actuelles, tout en conservant un design pré-moderne. Clockpunk est très intensément basé sur les œuvres de Léonard de Vinci et, en tant que tel, il se déroule généralement à la Renaissance ou à une époque similaire à la Renaissance.</French>
 		<Italian>Il [COLOR_BUILDING_TEXT]Clockpunk[COLOR_REVERT] è un sottogenere della letteratura fantascientifica simile allo steampunk. Ritrae tecnologie avanzate basate su molle e orologi, al contrario dei meccanismi attuali, pur mantenendo un design pre-moderno. Il Clockpunk si basa ampiamente sulle opere di Leonardo da Vinci e, pertanto, è tipicamente ambientato durante il Rinascimento o in uno scenario simile all'epoca rinascimentale.</Italian>
@@ -120,7 +120,7 @@
 		<Russian>Îðêåñòðèîí - íàçâàíèå ðÿäà ìóçûêàëüíûõ èíñòðóìåíòîâ, ïðèñïîñîáëåííûõ äëÿ èìèòàöèè çâó÷àíèÿ îðêåñòðà.[PARAGRAPH:1]Èíñòðóìåíò èìåë âèä øêàôà, âíóòðè êîòîðîãî áûë ïîìåùåí ïðóæèííûé èëè ïíåâìàòè÷åñêèé ìåõàíèçì, êîòîðûé ïðè âáðàñûâàíèè ìîíåòû ïðèâîäèëñÿ â äåéñòâèå. Ðàñïîëîæåíèå ñòðóí èëè òðóá èíñòðóìåíòà áûëî ïîäîáðàíî òàêèì îáðàçîì, ÷òîáû ïðè ðàáîòå ìåõàíèçìà çâó÷àëè îïðåäåë¸ííûå ìóçûêàëüíûå ïðîèçâåäåíèÿ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_STEPRECKONER_MANUFACTORY</Tag>
+		<Tag>TXT_KEY_BUILDING_STEP_RECKONER_MANUFACTURE</Tag>
 		<English>Step Reckoner Manufacture</English>
 		<French>
 			<Text>Usine de calculateurs mécaniques</Text>
@@ -140,7 +140,7 @@
 		<Russian>Ôàáðèêà ñ÷åò. ìàøèí</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_STEPRECKONER_MANUFACTORY_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_STEP_RECKONER_MANUFACTURE_PEDIA</Tag>
 		<English>A [COLOR_BUILDING_TEXT]Step Reckoner[COLOR_REVERT] is a portable cranked mechanical calculator that can perform all four basic arithmetic operations (addition, subtraction, multiplication, and division). They're a real step up from the abacus, when it comes to calculating arithmetic.</English>
 		<Italian>Un [COLOR_BUILDING_TEXT]calcolatore meccanico[COLOR_REVERT] è uno strumento portatile in grado di effettuare le quattro operazioni aritmetiche di base (addizione, sottrazione, moltiplicazione e divisione). È un grande passo avanti rispetto all'abaco, per quanto riguarda i calcoli aritmetici.</Italian>
 		<Russian>Ñ÷åòíûå ìàøèíû - ýòî ïåðåíîñíûå ìåõàíè÷åñêèå êàëüêóëÿòîðû, êîòîðûå óìåþò âûïîëíÿòü ïðîñòåéøèå àðèôìåòè÷åñêèå îïåðàöèè.[PARAGRAPH:1]Ýòè ìåõàíèçìû - ñåðüåçíûé øàã âïåðåä, ïî ñðàâíåíèþ ñî ñ÷åòàìè. Äðóãèå, ìåíåå èçîáðåòàòåëüíûå ñòðàíû óòâåðæäàþò, ÷òî îíè ñëîæíû è íåíàäåæíû, íî ìû ñïðàâëÿåìñÿ ñ íèìè ïðîñòî îòëè÷íî.</Russian>

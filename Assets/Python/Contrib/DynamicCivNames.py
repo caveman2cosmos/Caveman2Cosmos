@@ -435,7 +435,7 @@ def newNameByCivics(iPlayer):
 				else:
 					newName = curDesc
 			elif bFederal:
-				if (pPlayer.getCivilizationType() == GC.getInfoTypeForString("CIVILIZATION_UNITED_STATES")):
+				if (pPlayer.getCivilizationType() == GC.getInfoTypeForString("CIVILIZATION_AMERICA")):
 					newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_UNITED_STATES", ())%(curShort)
 				elif 50 > GAME.getSorenRandNum(100,'Rev: Naming'):
 					newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_FEDERATED_STATES", ())%(curShort)

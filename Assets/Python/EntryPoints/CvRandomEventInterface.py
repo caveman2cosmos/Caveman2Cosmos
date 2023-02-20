@@ -1993,7 +1993,7 @@ def applyClassicLiteratureDone2(argsList):
 		team.setHasTech(listTechs[GAME.getSorenRandNum(len(listTechs), "Classic Literature Event Tech selection")], True, data.ePlayer, True, True)
 
 def getHelpClassicLiteratureDone3(argsList):
-	iGreatLibrary = GC.getInfoTypeForString("BUILDING_GREAT_LIBRARY")
+	iGreatLibrary = GC.getInfoTypeForString("BUILDING_THE_GREAT_LIBRARY")
 
 	szCityName = ""
 	for city in GC.getPlayer(argsList[1].ePlayer).cities():
@@ -2004,7 +2004,7 @@ def getHelpClassicLiteratureDone3(argsList):
 	return TRNSLTR.getText("TXT_KEY_EVENT_FREE_SPECIALIST", (1, GC.getSpecialistInfo(GC.getInfoTypeForString("SPECIALIST_SCIENTIST")).getTextKey(), szCityName))
 
 def canApplyClassicLiteratureDone3(argsList):
-	iGreatLibrary = GC.getInfoTypeForString("BUILDING_GREAT_LIBRARY")
+	iGreatLibrary = GC.getInfoTypeForString("BUILDING_THE_GREAT_LIBRARY")
 
 	for city in GC.getPlayer(argsList[1].ePlayer).cities():
 		if city.getNumRealBuilding(iGreatLibrary):
@@ -2012,7 +2012,7 @@ def canApplyClassicLiteratureDone3(argsList):
 	return False
 
 def applyClassicLiteratureDone3(argsList):
-	iGreatLibrary = GC.getInfoTypeForString("BUILDING_GREAT_LIBRARY")
+	iGreatLibrary = GC.getInfoTypeForString("BUILDING_THE_GREAT_LIBRARY")
 
 	for city in GC.getPlayer(argsList[1].ePlayer).cities():
 		if city.getNumRealBuilding(iGreatLibrary):
@@ -2144,7 +2144,7 @@ def applyBestDefenseDone2(argsList):
 
 
 def canApplyBestDefenseDone3(argsList):
-	iGreatWall = GC.getInfoTypeForString("BUILDING_GREAT_WALL")
+	iGreatWall = GC.getInfoTypeForString("BUILDING_GREAT_WALL_OF_CHINA")
 
 	for city in GC.getPlayer(argsList[1].ePlayer).cities():
 		if city.getNumRealBuilding(iGreatWall):
@@ -2333,7 +2333,7 @@ def applyCrusadeDone3(argsList):
 ######## ESTEEMEED_PLAYWRIGHT ###########
 
 def canTriggerEsteemedPlaywright(argsList):
-	return not GC.getPlayer(argsList[0].ePlayer).hasBuilding(GC.getInfoTypeForString("BUILDING_SLAVERY"))
+	return not GC.getPlayer(argsList[0].ePlayer).hasBuilding(GC.getInfoTypeForString("BUILDING_WORLDVIEW_SLAVERY_ACTIVE"))
 
 
 ######## SECRET_KNOWLEDGE ###########
@@ -2599,7 +2599,7 @@ def canTriggerWarships(argsList):
 
 def getHelpWarships1(argsList):
 	iNumUnits = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers()
-	iBuilding = GC.getInfoTypeForString("BUILDING_GREAT_LIGHTHOUSE")
+	iBuilding = GC.getInfoTypeForString("BUILDING_THE_GREAT_LIGHTHOUSE")
 	return TRNSLTR.getText("TXT_KEY_EVENT_WARSHIPS_HELP_1", (iNumUnits, GC.getBuildingInfo(iBuilding).getTextKey()))
 
 def canTriggerWarshipsDone(argsList):
@@ -2618,7 +2618,7 @@ def canApplyWarshipsDone2(argsList):
   data = argsList[1]
   player = GC.getPlayer(data.ePlayer)
 
-  iBuilding = GC.getInfoTypeForString("BUILDING_GREAT_LIGHTHOUSE")
+  iBuilding = GC.getInfoTypeForString("BUILDING_THE_GREAT_LIGHTHOUSE")
   if player.getBuildingCountWithUpgrades(iBuilding) == 0:
     return False
 
@@ -2665,7 +2665,7 @@ def canTriggerNobleKnights(argsList):
 
 def getHelpNobleKnights1(argsList):
 	iNumUnits = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers() + 1
-	iBuilding = GC.getInfoTypeForString("BUILDING_ORACLE")
+	iBuilding = GC.getInfoTypeForString("BUILDING_THE_ORACLE")
 	return TRNSLTR.getText("TXT_KEY_EVENT_NOBLE_KNIGHTS_HELP_1", (iNumUnits, GC.getBuildingInfo(iBuilding).getTextKey()))
 
 def canTriggerNobleKnightsDone(argsList):
@@ -2682,7 +2682,7 @@ def canTriggerNobleKnightsDone(argsList):
   kActualTriggeredDataObject = player.getEventTriggered(data.iId)
   kActualTriggeredDataObject.eReligion = kOrigTriggeredData.eReligion
 
-  iBuilding = GC.getInfoTypeForString("BUILDING_ORACLE")
+  iBuilding = GC.getInfoTypeForString("BUILDING_THE_ORACLE")
 
   for loopCity in player.cities():
     if loopCity.getNumRealBuilding(iBuilding):
@@ -2723,7 +2723,7 @@ def getHelpOverwhelm1(argsList):
   iNumCarriers = 3
   iFighter = GC.getInfoTypeForString("SPECIALUNIT_FIGHTER")
   iNumFighters = 9
-  iBuilding = GC.getInfoTypeForString("BUILDING_MANHATTAN")
+  iBuilding = GC.getInfoTypeForString("BUILDING_MANHATTAN_PROJECT")
 
 # szHelp = TRNSLTR.getText("TXT_KEY_EVENT_OVERWHELM_HELP_1", (iNumDestroyers, GC.getUnitInfo(iDestroyer).getTextKey(), iNumBattleships, GC.getUnitInfo(iBattleship).getTextKey(), iNumCarriers, GC.getUnitInfo(iCarrier).getTextKey(), iNumFighters, GC.getSpecialUnitInfo(iFighter).getTextKey(), GC.getProjectInfo(iProject).getTextKey()))
   szHelp = TRNSLTR.getText("TXT_KEY_EVENT_OVERWHELM_HELP_1", (iNumDestroyers, GC.getUnitInfo(iDestroyer).getTextKey(), iNumBattleships, GC.getUnitInfo(iBattleship).getTextKey(), iNumCarriers, GC.getUnitInfo(iCarrier).getTextKey(), iNumFighters, GC.getSpecialUnitInfo(iFighter).getTextKey(), GC.getBuildingInfo(iBuilding).getTextKey()))
@@ -2764,7 +2764,7 @@ def getHelpOverwhelmDone3(argsList):
 def canApplyOverwhelmDone3(argsList):
   data = argsList[1]
   player = GC.getPlayer(data.ePlayer)
-  iBuilding = GC.getInfoTypeForString("BUILDING_MANHATTAN")
+  iBuilding = GC.getInfoTypeForString("BUILDING_MANHATTAN_PROJECT")
 
 # if GC.getTeam(player.getTeam()).getProjectCount(iProject) == 0:
   if player.getBuildingCountWithUpgrades(iBuilding) == 0:
@@ -3303,7 +3303,7 @@ def canTriggerCureforCancer(argsList):
 
 	if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_DIVINE_CULT")):
 		return False
-	if pPlayer.getBuildingCountWithUpgrades(GC.getInfoTypeForString("BUILDING_MEDICAL_DATABASE")) == 0:
+	if pPlayer.getBuildingCountWithUpgrades(GC.getInfoTypeForString("BUILDING_NATIONAL_MEDICAL_DATABASE")) == 0:
 		return False
 
 	return True
@@ -3435,7 +3435,7 @@ def canTriggerSyntheticFuels(argsList):
 
 	if (
 		not pPlayer.hasBonus(GC.getInfoTypeForString("BONUS_COAL"))
-	or pPlayer.getBuildingCountWithUpgrades(GC.getInfoTypeForString("BUILDING_CORPORATION_3_HQ")) > 0
+	or pPlayer.getBuildingCountWithUpgrades(GC.getInfoTypeForString("BUILDING_HQ_STANDARD_ETHANOL")) > 0
 	):
 		return False
 
@@ -3481,7 +3481,7 @@ def doSyntheticFuels4(argsList):
 
 def canTriggerAlternativeEnergy(argsList):
 	CyPlayer = GC.getPlayer(argsList[0].ePlayer)
-	if CyPlayer.getBuildingCountWithUpgrades(GC.getInfoTypeForString("BUILDING_GREAT_DAM")):
+	if CyPlayer.getBuildingCountWithUpgrades(GC.getInfoTypeForString("BUILDING_THREE_GORGES_DAM")):
 		return False
 	if not CyPlayer.getBuildingCountWithUpgrades(GC.getInfoTypeForString("BUILDING_COAL_PLANT")):
 		return False
@@ -3492,14 +3492,14 @@ def getHelpAlternativeEnergy1(argsList):
 	return TRNSLTR.getText("TXT_KEY_EVENT_ALTERNATIVE_ENERGY_HELP_1", (GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers(), ))
 
 def expireAlternativeEnergy1(argsList):
-	return GC.getPlayer(argsList[1].ePlayer).getBuildingCountWithUpgrades(GC.getInfoTypeForString("BUILDING_GREAT_DAM"))
+	return GC.getPlayer(argsList[1].ePlayer).getBuildingCountWithUpgrades(GC.getInfoTypeForString("BUILDING_THREE_GORGES_DAM"))
 
 
 def canTriggerAlternativeEnergyDone(argsList):
 	data = argsList[0]
 	trigger = GC.getEventTriggerInfo(data.eTrigger)
 	pPlayer = GC.getPlayer(data.ePlayer)
-	i3Gorges = GC.getInfoTypeForString("BUILDING_GREAT_DAM")
+	i3Gorges = GC.getInfoTypeForString("BUILDING_THREE_GORGES_DAM")
 
 	iNuke = GC.getInfoTypeForString("BUILDING_NUCLEAR_PLANT")
 	iHydro = GC.getInfoTypeForString("BUILDING_HYDRO_PLANT")
@@ -3538,7 +3538,7 @@ def canTriggerMoreFiatMoney(argsList):
 ##### INDUSTRIAL_ACTION #####
 
 def canTriggerIndustrialAction(argsList):
-	return not GC.getPlayer(argsList[0].ePlayer).hasBuilding(GC.getInfoTypeForString("BUILDING_SLAVERY"))
+	return not GC.getPlayer(argsList[0].ePlayer).hasBuilding(GC.getInfoTypeForString("BUILDING_WORLDVIEW_SLAVERY_ACTIVE"))
 
 def canDoTriggerCityIndustrialAction(argsList):
 	iCity = argsList[2]
@@ -5957,7 +5957,7 @@ def triggerNewWorldCities(argsList):
 			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_MARKET"), 1)
 			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_HARBOR"), 1)
 			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_LIGHTHOUSE"), 1)
-			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_FISHERMAN_HUT"), 1)
+			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_FISHERMANS_HUT"), 1)
 		iNeededCities -= 1
 
 
@@ -6559,9 +6559,9 @@ def doGlobalWarming(argsList):
 
 		if plot.isCity():
 			city = plot.getPlotCity()
-			iGW += city.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_POLLUTION_GLOBALWARMING1")) * 100
-			iGW += city.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_POLLUTION_GLOBALWARMING2")) * 10000
-			iGW += city.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_POLLUTION_GLOBALWARMING3")) * 1000000
+			iGW += city.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_POLLUTION_MINOR_GLOBAL_WARMING")) * 100
+			iGW += city.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_POLLUTION_MODERATE_GLOBAL_WARMING")) * 10000
+			iGW += city.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_POLLUTION_MAJOR_GLOBAL_WARMING")) * 1000000
 
 	maxRand = GAME.getEstimateEndTurn() * iNumPlots
 	iIce = 2*iNumPlots / countIce

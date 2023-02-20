@@ -220,42 +220,42 @@ class CvEventManager:
 				self.iArcologyCityID = -1
 				self.iOldCityID = -1
 				self.mapBuildingType = {
-					"ZIZKOV"				: GC.getInfoTypeForString("BUILDING_ZIZKOV"),
-					"HELSINKI"				: GC.getInfoTypeForString("BUILDING_HELSINKI"),
+					"ZIZKOV"				: GC.getInfoTypeForString("BUILDING_ZIZKOV_TELEVISION_TOWER"),
+					"HELSINKI"				: GC.getInfoTypeForString("BUILDING_HELSINKI_CATHEDRAL"),
 					"TAIPEI_101"			: GC.getInfoTypeForString('BUILDING_TAIPEI_101'),
 					"LOTUS_TEMPLE"			: GC.getInfoTypeForString('BUILDING_LOTUS_TEMPLE'),
 					"NANITE_DEFUSER"		: GC.getInfoTypeForString("BUILDING_NANITE_DEFUSER"),
-					"MARCO_POLO"			: GC.getInfoTypeForString('BUILDING_MARCO_POLO'),
-					"APPIAN_WAY"			: GC.getInfoTypeForString('BUILDING_APPIAN_WAY'),
+					"MARCO_POLO"			: GC.getInfoTypeForString('BUILDING_MARCO_POLOS_EMBASSY'),
+					"APPIAN_WAY"			: GC.getInfoTypeForString('BUILDING_VIA_APPIA'),
 					"GOLDEN_SPIKE"			: GC.getInfoTypeForString('BUILDING_GOLDEN_SPIKE'),
-					"FIELD_GOLD"			: GC.getInfoTypeForString('BUILDING_FIELD_GOLD'),
+					"FIELD_GOLD"			: GC.getInfoTypeForString('BUILDING_FIELD_OF_THE_CLOTH_OF_GOLD'),
 					"MACHU_PICCHU"			: GC.getInfoTypeForString("BUILDING_MACHU_PICCHU"),
-					"MAGINOTLINE"			: GC.getInfoTypeForString('BUILDING_MAGINOTLINE'),
+					"MAGINOTLINE"			: GC.getInfoTypeForString('BUILDING_MAGINOT_LINE'),
 					"ROUTE_66"				: GC.getInfoTypeForString('BUILDING_ROUTE_66'),
 					"SILK_ROAD"				: GC.getInfoTypeForString('BUILDING_SILK_ROAD'),
-					"CLEOPATRA_NEEDLE"		: GC.getInfoTypeForString("BUILDING_CLEOPATRA_NEEDLE"),
-					"FA_MEN_SI"				: GC.getInfoTypeForString("BUILDING_FA_MEN_SI"),
-					"LASCAUX"				: GC.getInfoTypeForString("BUILDING_LASCAUX"),
+					"CLEOPATRA_NEEDLE"		: GC.getInfoTypeForString("BUILDING_CLEOPATRAS_NEEDLE"),
+					"FA_MEN_SI"				: GC.getInfoTypeForString("BUILDING_FAMEN_TEMPLE"),
+					"LASCAUX"				: GC.getInfoTypeForString("BUILDING_LASCAUX_PAINTS"),
 					"ARCOLOGY"				: GC.getInfoTypeForString("BUILDING_ARCOLOGY"),
 					"ARCOLOGY_SHIELDING"	: GC.getInfoTypeForString("BUILDING_ARCOLOGY_SHIELDING"),
 					"ADVANCED_SHIELDING"	: GC.getInfoTypeForString("BUILDING_ADVANCED_SHIELDING"),
 					"GREAT_ZIMBABWE"		: GC.getInfoTypeForString("BUILDING_GREAT_ZIMBABWE"),
-					"CRUSADE"				: GC.getInfoTypeForString("BUILDING_CRUSADE"),
+					"CRUSADE"				: GC.getInfoTypeForString("BUILDING_KINGS_CRUSADE"),
 					"ALAMO"					: GC.getInfoTypeForString("BUILDING_ALAMO"),
 					"WORLD_BANK"			: GC.getInfoTypeForString("BUILDING_WORLD_BANK"),
 					"CYRUS_CYLINDER"		: GC.getInfoTypeForString("BUILDING_CYRUS_CYLINDER"),
-					"CYRUS_TOMB"			: GC.getInfoTypeForString("BUILDING_CYRUS_TOMB"),
-					"WEMBLEY"				: GC.getInfoTypeForString("BUILDING_WEMBLEY"),
-					"PERGAMON"				: GC.getInfoTypeForString("BUILDING_PERGAMON"),
-					"TSUKIJI"				: GC.getInfoTypeForString("BUILDING_TSUKIJI"),
-					"BIODOME"				: GC.getInfoTypeForString("BUILDING_BIODOME"),
+					"CYRUS_TOMB"			: GC.getInfoTypeForString("BUILDING_TOMB_OF_CYRUS"),
+					"WEMBLEY"				: GC.getInfoTypeForString("BUILDING_WEMBLEY_STADIUM"),
+					"PERGAMON"				: GC.getInfoTypeForString("BUILDING_PERGAMON_ALTAR"),
+					"TSUKIJI"				: GC.getInfoTypeForString("BUILDING_TSUKIJI_FISH_MARKET"),
+					"BIODOME"				: GC.getInfoTypeForString("BUILDING_MONTREAL_BIODOME"),
 					"NAZCA_LINES"			: GC.getInfoTypeForString("BUILDING_NAZCA_LINES"),
 					"THE_MOTHERLAND_CALLS"	: GC.getInfoTypeForString("BUILDING_THE_MOTHERLAND_CALLS"),
-					"ISHTAR"				: GC.getInfoTypeForString('BUILDING_ISHTAR'),
-					"GREAT_JAGUAR_TEMPLE"	: GC.getInfoTypeForString('BUILDING_GREAT_JAGUAR_TEMPLE'),
-					"GREAT_BATH"			: GC.getInfoTypeForString('BUILDING_GREAT_BATH'),
+					"ISHTAR"				: GC.getInfoTypeForString('BUILDING_THE_ISHTAR_GATE'),
+					"GREAT_JAGUAR_TEMPLE"	: GC.getInfoTypeForString('BUILDING_TEMPLE_OF_AH_CACAO'),
+					"GREAT_BATH"			: GC.getInfoTypeForString('BUILDING_GREAT_BATH_OF_MOHENJO_DARO'),
 					"TOPKAPI_PALACE"		: GC.getInfoTypeForString("BUILDING_TOPKAPI_PALACE"),
-					"NEANDERTHAL_EMBASSY"	: GC.getInfoTypeForString("BUILDING_NEANDERTHAL_EMBASSY")
+					"NEANDERTHAL_EMBASSY"	: GC.getInfoTypeForString("BUILDING_CULTURE_NEANDERTHAL")
 				}
 				self.mapUnitType = {
 					"MONK"		: GC.getInfoTypeForString("UNIT_MONK"),
@@ -309,14 +309,14 @@ class CvEventManager:
 				self.CIVIC_TECHNOCRACY	= GC.getInfoTypeForString('CIVIC_TECHNOCRACY')
 				# onCityBuilt
 				self.aCultureList = [
-					[GC.getInfoTypeForString('PROMOTION_CULTURE_AFRICAN'), GC.getInfoTypeForString('BUILDING_CULTURE_LOCAL_AFRICAN'), GC.getInfoTypeForString('BUILDING_CULTURE_NATIVE_AFRICAN')],
-					[GC.getInfoTypeForString('PROMOTION_CULTURE_ASIAN'), GC.getInfoTypeForString('BUILDING_CULTURE_LOCAL_ASIAN'), GC.getInfoTypeForString('BUILDING_CULTURE_NATIVE_ASIAN')],
-					[GC.getInfoTypeForString('PROMOTION_CULTURE_EUROPEAN'), GC.getInfoTypeForString('BUILDING_CULTURE_LOCAL_EUROPEAN'), GC.getInfoTypeForString('BUILDING_CULTURE_NATIVE_EUROPEAN')],
-					[GC.getInfoTypeForString('PROMOTION_CULTURE_MIDDLE_EASTERN'), GC.getInfoTypeForString('BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN'), GC.getInfoTypeForString('BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN')],
-					[GC.getInfoTypeForString('PROMOTION_CULTURE_NEANDERTHAL'), GC.getInfoTypeForString('BUILDING_CULTURE_LOCAL_NEANDERTHAL'), GC.getInfoTypeForString('BUILDING_CULTURE_NATIVE_NEANDERTHAL')],
-					[GC.getInfoTypeForString('PROMOTION_CULTURE_NORTH_AMERICAN'), GC.getInfoTypeForString('BUILDING_CULTURE_LOCAL_NORTH_AMERICAN'), GC.getInfoTypeForString('BUILDING_CULTURE_NATIVE_NORTH_AMERICAN')],
-					[GC.getInfoTypeForString('PROMOTION_CULTURE_OCEANIAN'), GC.getInfoTypeForString('BUILDING_CULTURE_LOCAL_OCEANIAN'), GC.getInfoTypeForString('BUILDING_CULTURE_NATIVE_OCEANIAN')],
-					[GC.getInfoTypeForString('PROMOTION_CULTURE_SOUTH_AMERICAN'), GC.getInfoTypeForString('BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN'), GC.getInfoTypeForString('BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN')]
+					[GC.getInfoTypeForString('PROMOTION_CULTURE_AFRICAN'), GC.getInfoTypeForString('BUILDING_C_L_AFRICAN'), GC.getInfoTypeForString('BUILDING_C_N_AFRICAN')],
+					[GC.getInfoTypeForString('PROMOTION_CULTURE_ASIAN'), GC.getInfoTypeForString('BUILDING_C_L_ASIAN'), GC.getInfoTypeForString('BUILDING_C_N_ASIAN')],
+					[GC.getInfoTypeForString('PROMOTION_CULTURE_EUROPEAN'), GC.getInfoTypeForString('BUILDING_C_L_EUROPEAN'), GC.getInfoTypeForString('BUILDING_C_N_EUROPEAN')],
+					[GC.getInfoTypeForString('PROMOTION_CULTURE_MIDDLE_EASTERN'), GC.getInfoTypeForString('BUILDING_C_L_MIDDLE_EASTERN'), GC.getInfoTypeForString('BUILDING_C_N_MIDDLE_EASTERN')],
+					[GC.getInfoTypeForString('PROMOTION_CULTURE_NEANDERTHAL'), GC.getInfoTypeForString('BUILDING_C_L_NEANDERTHAL'), GC.getInfoTypeForString('BUILDING_C_N_NEANDERTHAL')],
+					[GC.getInfoTypeForString('PROMOTION_CULTURE_NORTH_AMERICAN'), GC.getInfoTypeForString('BUILDING_C_L_NORTH_AMERICAN'), GC.getInfoTypeForString('BUILDING_C_N_NORTH_AMERICAN')],
+					[GC.getInfoTypeForString('PROMOTION_CULTURE_OCEANIAN'), GC.getInfoTypeForString('BUILDING_C_L_OCEANIAN'), GC.getInfoTypeForString('BUILDING_C_N_OCEANIAN')],
+					[GC.getInfoTypeForString('PROMOTION_CULTURE_SOUTH_AMERICAN'), GC.getInfoTypeForString('BUILDING_C_L_SOUTH_AMERICAN'), GC.getInfoTypeForString('BUILDING_C_N_SOUTH_AMERICAN')]
 				]
 				self.UNIT_BAND = GC.getInfoTypeForString("UNIT_BAND")
 
@@ -1896,7 +1896,7 @@ class CvEventManager:
 				GC.getMap().resetRevealedPlots(iTeamX)
 			CvUtil.sendImmediateMessage(TRNSLTR.getText("TXT_KEY_MSG_ZIZKOV_JAM",()))
 		elif iBuilding == mapBuildingType["NEANDERTHAL_EMBASSY"]:
-			iLocal = GC.getInfoTypeForString("BUILDING_CULTURE_LOCAL_NEANDERTHAL")
+			iLocal = GC.getInfoTypeForString("BUILDING_C_L_NEANDERTHAL")
 			for cityX in CyPlayer.cities():
 				cityX.setNumRealBuilding(iLocal, 1)
 
@@ -1916,7 +1916,7 @@ class CvEventManager:
 			popupInfo.addPopup(iPlayer)
 
 		# Eden project
-		if iProject == GC.getInfoTypeForString("PROJECT_EDEN"):
+		if iProject == GC.getInfoTypeForString("PROJECT_EDEN_PROJECT"):
 
 			iTeam = GC.getPlayer(iPlayer).getTeam()
 			iX = CyCity.getX()

@@ -9485,7 +9485,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BEACON_GREAT_BARRIER_REEF</Tag>
-		<English>Beacon(Great Barrier Reef)</English>
+		<English>Beacon (Great Barrier Reef)</English>
 		<French>
 			<Text>Balise - Grande barrière de corails</Text>
 			<Gender>Female</Gender>
@@ -9503,7 +9503,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER_REEF</Tag>
-		<English>Lighthouse(Great Barrier Reef)</English>
+		<English>Lighthouse (Great Barrier Reef)</English>
 		<French>
 			<Text>Phare - Grande barrière de corails</Text>
 			<Gender>Male</Gender>

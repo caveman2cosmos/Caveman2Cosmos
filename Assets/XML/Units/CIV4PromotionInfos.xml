@@ -2516,7 +2516,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_WETLAND1</Type>
-			<Description>TXT_KEY_PROMOTION_WETLAND1_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_WETLAND1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_COMBAT1</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_WETLAND</PromotionLine>
@@ -2547,7 +2547,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_WETLAND2</Type>
-			<Description>TXT_KEY_PROMOTION_WETLAND2_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_WETLAND2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_WETLAND1</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_WETLAND</PromotionLine>
@@ -2578,7 +2578,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_WETLAND3</Type>
-			<Description>TXT_KEY_PROMOTION_WETLAND3_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_WETLAND3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_WETLAND2</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_WETLAND</PromotionLine>
@@ -2609,7 +2609,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_RUGGED1</Type>
-			<Description>TXT_KEY_PROMOTION_RUGGED1_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_RUGGED1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_COMBAT1</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_RUGGED</PromotionLine>
@@ -2640,7 +2640,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_RUGGED2</Type>
-			<Description>TXT_KEY_PROMOTION_RUGGED2_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_RUGGED2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_RUGGED1</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_RUGGED</PromotionLine>
@@ -2672,7 +2672,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_RUGGED3</Type>
-			<Description>TXT_KEY_PROMOTION_RUGGED3_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_RUGGED3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_RUGGED2</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_RUGGED</PromotionLine>
@@ -7858,7 +7858,7 @@
 		<!-- RETINUE FOR HEROES -->
 		<PromotionInfo>
 			<Type>PROMOTION_RETINUE_ADVENTURER</Type>
-			<Description>TXT_KEY_PROMOTION_RETINUE_ADVENTURER_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_RETINUE_ADVENTURER</Description>
 			<Sound>AS2D_IF_GET_RETINUE</Sound>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_AIR</DomainType>
@@ -7896,7 +7896,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_RETINUE_BANDIT</Type>
-			<Description>TXT_KEY_PROMOTION_RETINUE_BANDIT_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_RETINUE_BANDIT</Description>
 			<Sound>AS2D_IF_GET_RETINUE</Sound>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_AIR</DomainType>
@@ -7969,7 +7969,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_RETINUE_BARD</Type>
-			<Description>TXT_KEY_PROMOTION_RETINUE_BARD_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_RETINUE_BARD</Description>
 			<Sound>AS2D_IF_GET_RETINUE</Sound>
 			<bImmuneToFirstStrikes>1</bImmuneToFirstStrikes>
 			<iEnemyHealChange>6</iEnemyHealChange>
@@ -7989,7 +7989,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_RETINUE_BODYGUARD</Type>
-			<Description>TXT_KEY_PROMOTION_RETINUE_BODYGUARD_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_RETINUE_BODYGUARD</Description>
 			<Sound>AS2D_IF_GET_RETINUE</Sound>
 			<iWithdrawalChange>10</iWithdrawalChange>
 			<iChanceFirstStrikesChange>1</iChanceFirstStrikesChange>
@@ -8005,7 +8005,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_RETINUE_BUILDER</Type>
-			<Description>TXT_KEY_PROMOTION_RETINUE_BUILDER_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_RETINUE_BUILDER</Description>
 			<Sound>AS2D_IF_GET_RETINUE</Sound>
 			<iWithdrawalChange>10</iWithdrawalChange>
 			<iCityAttack>33</iCityAttack>
@@ -8021,7 +8021,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_RETINUE_LIEUTENANT</Type>
-			<Description>TXT_KEY_PROMOTION_RETINUE_LIEUTENANT_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_RETINUE_LIEUTENANT</Description>
 			<Sound>AS2D_IF_GET_RETINUE</Sound>
 			<bBlitz>1</bBlitz>
 			<iWithdrawalChange>10</iWithdrawalChange>
@@ -8047,7 +8047,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_RETINUE_LOYAL_SERVANT</Type>
-			<Description>TXT_KEY_PROMOTION_RETINUE_LOYAL_SERVANT_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_RETINUE_LOYAL_SERVANT</Description>
 			<Sound>AS2D_IF_GET_RETINUE</Sound>
 			<iMovesChange>1</iMovesChange>
 			<iWithdrawalChange>25</iWithdrawalChange>
@@ -8062,7 +8062,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_RETINUE_MESSENGER</Type>
-			<Description>TXT_KEY_PROMOTION_RETINUE_MESSENGER_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_RETINUE_MESSENGER</Description>
 			<Help>TXT_KEY_PROMOTION_RETINUE_MESSENGER_HELP</Help>
 			<Sound>AS2D_IF_GET_RETINUE</Sound>
 			<iVisibilityChange>1</iVisibilityChange>
@@ -8080,7 +8080,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_RETINUE_PRIEST</Type>
-			<Description>TXT_KEY_PROMOTION_RETINUE_PRIEST_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_RETINUE_PRIEST</Description>
 			<Sound>AS2D_IF_GET_RETINUE</Sound>
 			<bAlwaysHeal>1</bAlwaysHeal>
 			<iEnemyHealChange>15</iEnemyHealChange>
@@ -8100,7 +8100,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_RETINUE_SCHOLAR</Type>
-			<Description>TXT_KEY_PROMOTION_RETINUE_SCHOLAR_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_RETINUE_SCHOLAR</Description>
 			<Sound>AS2D_IF_GET_RETINUE</Sound>
 			<iPillageChange>300</iPillageChange>
 			<UnitCombats>
@@ -8114,7 +8114,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_RETINUE_SPOUSE</Type>
-			<Description>TXT_KEY_PROMOTION_RETINUE_SPOUSE_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_RETINUE_SPOUSE</Description>
 			<Sound>AS2D_IF_GET_RETINUE</Sound>
 			<iSelfHealModifier>4</iSelfHealModifier>
 			<iExperiencePercent>10</iExperiencePercent>
@@ -8129,7 +8129,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_RETINUE_STRATEGIST</Type>
-			<Description>TXT_KEY_PROMOTION_RETINUE_STRATEGIST_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_RETINUE_STRATEGIST</Description>
 			<Sound>AS2D_IF_GET_RETINUE</Sound>
 			<bEnemyRoute>1</bEnemyRoute>
 			<iCombatPercent>5</iCombatPercent>
@@ -8158,7 +8158,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_RETINUE_WAR_VETERAN</Type>
-			<Description>TXT_KEY_PROMOTION_RETINUE_WAR_VETERAN_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_RETINUE_WAR_VETERAN</Description>
 			<Sound>AS2D_IF_GET_RETINUE</Sound>
 			<bAmphib>1</bAmphib>
 			<bRiver>1</bRiver>
@@ -17938,7 +17938,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_POLICING1</Type>
-			<Description>TXT_KEY_PROMOTION_POLICING1_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_POLICING1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_CONDUCT</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_POLICING</PromotionLine>
@@ -17973,7 +17973,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_POLICING2</Type>
-			<Description>TXT_KEY_PROMOTION_POLICING2_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_POLICING2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_DUALISM</TechPrereq>
 			<MinEraType>C2C_ERA_ANCIENT</MinEraType>
@@ -18009,7 +18009,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_POLICING3</Type>
-			<Description>TXT_KEY_PROMOTION_POLICING3_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_POLICING3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_LAW_ENFORCEMENT</TechPrereq>
 			<MinEraType>C2C_ERA_CLASSICAL</MinEraType>
@@ -18045,7 +18045,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_POLICING4</Type>
-			<Description>TXT_KEY_PROMOTION_POLICING4_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_POLICING4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_WARRANTS_AND_DECREES</TechPrereq>
 			<MinEraType>C2C_ERA_MEDIEVAL</MinEraType>
@@ -18081,7 +18081,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_POLICING5</Type>
-			<Description>TXT_KEY_PROMOTION_POLICING5_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_POLICING5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_DEPUTIZATION</TechPrereq>
 			<MinEraType>C2C_ERA_INDUSTRIAL</MinEraType>
@@ -18117,7 +18117,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_POLICING6</Type>
-			<Description>TXT_KEY_PROMOTION_POLICING6_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_POLICING6</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_CRIMINOLOGY</TechPrereq>
 			<MinEraType>C2C_ERA_INDUSTRIAL</MinEraType>
@@ -18153,7 +18153,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_POLICING7</Type>
-			<Description>TXT_KEY_PROMOTION_POLICING7_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_POLICING7</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_VERTICAL_FLIGHT</TechPrereq>
 			<MinEraType>C2C_ERA_ATOMIC</MinEraType>
@@ -18189,7 +18189,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_POLICING8</Type>
-			<Description>TXT_KEY_PROMOTION_POLICING8_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_POLICING8</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_FORENSICS</TechPrereq>
 			<MinEraType>C2C_ERA_INFORMATION</MinEraType>
@@ -18225,7 +18225,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_POLICING9</Type>
-			<Description>TXT_KEY_PROMOTION_POLICING9_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_POLICING9</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_DISASTER_ROBOTS</TechPrereq>
 			<MinEraType>C2C_ERA_INFORMATION</MinEraType>
@@ -18261,7 +18261,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_POLICING10</Type>
-			<Description>TXT_KEY_PROMOTION_POLICING10_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_POLICING10</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_TERRA_COMPUTER</TechPrereq>
 			<MinEraType>C2C_ERA_TRANSHUMAN</MinEraType>
@@ -19763,7 +19763,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_AN</Type>
-			<Description>TXT_KEY_PROMOTION_AN_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_AN</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<StateReligionPrereq>RELIGION_MESOPOTAMISM</StateReligionPrereq>
 			<iEnemyHealChange>7</iEnemyHealChange>
@@ -19804,7 +19804,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_ENKI</Type>
-			<Description>TXT_KEY_PROMOTION_ENKI_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_ENKI</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<StateReligionPrereq>RELIGION_MESOPOTAMISM</StateReligionPrereq>
 			<iWithdrawalChange>15</iWithdrawalChange>
@@ -19821,7 +19821,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_ENLIL</Type>
-			<Description>TXT_KEY_PROMOTION_ENLIL_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_ENLIL</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<StateReligionPrereq>RELIGION_MESOPOTAMISM</StateReligionPrereq>
 			<iFirstStrikesChange>1</iFirstStrikesChange>
@@ -19846,7 +19846,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_INANNA</Type>
-			<Description>TXT_KEY_PROMOTION_INANNA_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_INANNA</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<StateReligionPrereq>RELIGION_MESOPOTAMISM</StateReligionPrereq>
 			<iCityAttack>10</iCityAttack>
@@ -19862,7 +19862,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_KI</Type>
-			<Description>TXT_KEY_PROMOTION_KI_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_KI</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<StateReligionPrereq>RELIGION_MESOPOTAMISM</StateReligionPrereq>
 			<bImmuneToFirstStrikes>1</bImmuneToFirstStrikes>
