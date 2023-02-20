@@ -141,7 +141,7 @@ void CvTeam::init(TeamTypes eID)
 				//SUPPOSED TO BE FRIENDLY WITH PLAYERS or any other NPC faction!
 				if (bNPC || GET_TEAM((TeamTypes)iI).isNPC())
 				{
-					if (bNPC && GC.getGame().isOption(GAMEOPTION_PEACE_AMONG_NPCS) && GET_TEAM((TeamTypes)iI).isNPC())
+					if (bNPC && GC.getGame().isOption(GAMEOPTION_ANIMAL_PEACE_AMONG_NPCS) && GET_TEAM((TeamTypes)iI).isNPC())
 					{
 						continue;
 					}
@@ -767,7 +767,7 @@ void CvTeam::addTeam(TeamTypes eTeam)
 
 			plotX->changeInvisibleVisibilityCount(getID(), eInvisible, plotX->getInvisibleVisibilityCount(eTeam, eInvisible));
 
-			if (GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
+			if (GC.getGame().isOption(GAMEOPTION_COMBAT_HIDE_SEEK))
 			{
 				for (int iK = 0; iK < plotX->getNumPlotTeamVisibilityIntensity(); iK++)
 				{
@@ -1207,7 +1207,7 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan)
 
 	CvTeamAI& teamFoe = GET_TEAM(eTeam);
 
-	if (GC.getGame().isOption(GAMEOPTION_PEACE_AMONG_NPCS) && isNPC() && teamFoe.isNPC())
+	if (GC.getGame().isOption(GAMEOPTION_ANIMAL_PEACE_AMONG_NPCS) && isNPC() && teamFoe.isNPC())
 	{
 		if (isAtWar(eTeam))
 		{
@@ -1358,7 +1358,7 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan)
 				}
 			}
 
-			if (GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI))
+			if (GC.getGame().isOption(GAMEOPTION_AI_RUTHLESS))
 			{
 				for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 				{
@@ -2576,7 +2576,7 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 	uint64_t iCost = 100 * iInitialCost;
 
 	int iBeelineStingsTechCostModifier = 0;
-	if (GC.getGame().isOption(GAMEOPTION_BEELINE_STINGS))
+	if (GC.getGame().isOption(GAMEOPTION_TECH_BEELINE_STINGS))
 	{
 		const int iTechEra = GC.getTechInfo(eTech).getEra();
 		int iPlayerEra = MAX_INT;
@@ -2635,7 +2635,7 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 			GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIPerEraModifier() * GET_PLAYER(getLeaderID()).getCurrentEra()
 		);
 	}
-	if (GC.getGame().isOption(GAMEOPTION_UPSCALED_RESEARCH_COSTS))
+	if (GC.getGame().isOption(GAMEOPTION_TECH_UPSCALED_COSTS))
 	{
 		iMod += GC.getUPSCALED_RESEARCH_COST_MODIFIER();
 	}
@@ -2829,7 +2829,7 @@ void CvTeam::setIsMinorCiv(bool bNewValue, bool bDoBarbCivCheck)
 				{
 					if (abHasMet[iI])
 					{
-						if (!GC.getGame().isOption(GAMEOPTION_START_AS_MINORS))
+						if (!GC.getGame().isOption(GAMEOPTION_UNSUPPORTED_START_AS_MINORS))
 						{
 							// Does other player want to keep war with us?
 							bool bPeace = true;
@@ -3329,7 +3329,7 @@ int CvTeam::getPermanentAllianceTradingCount() const
 
 bool CvTeam::isPermanentAllianceTrading() const
 {
-	return GC.getGame().isOption(GAMEOPTION_PERMANENT_ALLIANCES) && m_iPermanentAllianceTradingCount > 0;
+	return GC.getGame().isOption(GAMEOPTION_ENABLE_PERMANENT_ALLIANCES) && m_iPermanentAllianceTradingCount > 0;
 }
 
 void CvTeam::changePermanentAllianceTradingCount(int iChange)
@@ -5304,7 +5304,7 @@ void CvTeam::setHasTech(TechTypes eTech, bool bNewValue, PlayerTypes ePlayer, bo
 
 		if (bFirst && GC.getGame().countKnownTechNumTeams(eTech) == 1)
 		{
-			if (!GC.getGame().isOption(GAMEOPTION_DIVINE_PROPHETS)
+			if (!GC.getGame().isOption(GAMEOPTION_RELIGION_DIVINE_PROPHETS)
 			&& GC.getGame().isTechCanFoundReligion(eTech))
 			{
 				for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
@@ -5344,7 +5344,7 @@ void CvTeam::setHasTech(TechTypes eTech, bool bNewValue, PlayerTypes ePlayer, bo
 						}
 						if (eBestPlayer != NO_PLAYER)
 						{
-							if (GC.getGame().isOption(GAMEOPTION_PICK_RELIGION))
+							if (GC.getGame().isOption(GAMEOPTION_RELIGION_PICK))
 							{
 								if (GET_PLAYER(eBestPlayer).isHumanPlayer())
 								{
@@ -5465,7 +5465,7 @@ void CvTeam::setHasTech(TechTypes eTech, bool bNewValue, PlayerTypes ePlayer, bo
 				}
 			}
 			//TB Prophet Mod begin
-			if (GC.getGame().isOption(GAMEOPTION_DIVINE_PROPHETS))
+			if (GC.getGame().isOption(GAMEOPTION_RELIGION_DIVINE_PROPHETS))
 			{
 				const UnitTypes eFreeProphet = GET_PLAYER(ePlayer).getTechFreeProphet(eTech);
 				if (eFreeProphet != NO_UNIT)
@@ -6681,10 +6681,6 @@ void CvTeam::read(FDataStreamBase* pStream)
 	{
 		int	newIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BUILDINGS, i, true);
 
-		// @SAVEBREAK DELETE - Toffer
-		WRAPPER_SKIP_ELEMENT(wrapper, "CvTeam", m_ppiBuildingCommerceChange[newIndex], SAVE_VALUE_TYPE_INT_ARRAY);
-		WRAPPER_SKIP_ELEMENT(wrapper, "CvTeam", m_ppiBuildingYieldChange[newIndex], SAVE_VALUE_TYPE_INT_ARRAY);
-		// SAVEBREAK@
 		if (newIndex != -1)
 		{
 			WRAPPER_READ_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_SPECIALISTS, GC.getNumSpecialistInfos(), m_ppiBuildingSpecialistChange[newIndex]);
@@ -6692,13 +6688,10 @@ void CvTeam::read(FDataStreamBase* pStream)
 		}
 		else
 		{
-			//	Consume the values
+			// Consume the values
 			WRAPPER_SKIP_ELEMENT(wrapper, "CvTeam", m_ppiBuildingSpecialistChange[newIndex], SAVE_VALUE_TYPE_CLASS_INT_ARRAY);
 			WRAPPER_SKIP_ELEMENT(wrapper, "CvTeam", m_ppiBuildingCommerceModifier[newIndex], SAVE_VALUE_TYPE_INT_ARRAY);
 		}
-		// @SAVEBREAK DELETE - Toffer
-		WRAPPER_SKIP_ELEMENT(wrapper, "CvTeam", m_ppiBuildingYieldModifier[newIndex], SAVE_VALUE_TYPE_INT_ARRAY);
-		// SAVEBREAK@
 	}
 
 	m_Properties.readWrapper(pStream);

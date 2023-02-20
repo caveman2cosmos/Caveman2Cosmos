@@ -1559,7 +1559,7 @@ def placeC2CBonuses():
 	GAME = GC.getGame()
 	mapRand = GAME.getMapRand()
 
-	bGoodyHuts = not GAME.isOption(GameOptionTypes.GAMEOPTION_NO_GOODY_HUTS)
+	bGoodyHuts = not GAME.isOption(GameOptionTypes.GAMEOPTION_MAP_NO_GOODY_HUTS)
 
 	c2CMapReport("Before adjustment")
 

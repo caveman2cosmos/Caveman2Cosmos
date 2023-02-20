@@ -37,7 +37,7 @@ def canTriggerBlessedSea(argsList):
 	data = argsList[0]
 	MAP = GC.getMap()
 
-	if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE):
+	if GAME.isOption(GameOptionTypes.GAMEOPTION_CHALLENGE_ONE_CITY):
 		return False
 
 	iMapMinLandmass = 2 * GC.getWorldInfo(MAP.getWorldSize()).getDefaultPlayers()
@@ -151,7 +151,7 @@ def getHelpHolyMountain1(argsList):
 def canTriggerHolyMountain(argsList):
 	data = argsList[0]
 
-	if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE):
+	if GAME.isOption(GameOptionTypes.GAMEOPTION_CHALLENGE_ONE_CITY):
 		return False
 
 	CyPlot = GC.getMap().plot(data.iPlotX, data.iPlotY)
@@ -1426,7 +1426,7 @@ def canTriggerTheHuns(argsList):
   player = GC.getPlayer(data.ePlayer)
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_NONE):
     return False
 
 #   At least one civ on the board must know Mounted Archery.
@@ -1509,7 +1509,7 @@ def canTriggerTheVandals(argsList):
   player = GC.getPlayer(data.ePlayer)
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_NONE):
     return False
 
 #   At least one civ on the board must know Metal Casting.
@@ -1593,7 +1593,7 @@ def canTriggerTheGoths(argsList):
   player = GC.getPlayer(data.ePlayer)
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_NONE):
     return False
 
 #   At least one civ on the board must know Mathematics.
@@ -1676,7 +1676,7 @@ def canTriggerThePhilistines(argsList):
   player = GC.getPlayer(data.ePlayer)
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_NONE):
     return False
 
 #   At least one civ on the board must know Monotheism.
@@ -1760,7 +1760,7 @@ def canTriggerTheVedicAryans(argsList):
   player = GC.getPlayer(data.ePlayer)
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_NONE):
     return False
 
 #   At least one civ on the board must know Polytheism.
@@ -1878,7 +1878,7 @@ def canTriggerTea(argsList):
 ######## HORSE WHISPERING ###########
 
 def canTriggerHorseWhispering(argsList):
-	return not GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE)
+	return not GAME.isOption(GameOptionTypes.GAMEOPTION_CHALLENGE_ONE_CITY)
 
 def getHelpHorseWhispering1(argsList):
 	return TRNSLTR.getText("TXT_KEY_EVENT_HORSE_WHISPERING_HELP", (GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers(), ))
@@ -1918,7 +1918,7 @@ def canTriggerHarbormaster(argsList):
   trigger = GC.getEventTriggerInfo(data.eTrigger)
   player = GC.getPlayer(data.ePlayer)
 
-  if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_CHALLENGE_ONE_CITY):
     return False
 
   map = GC.getMap()
@@ -1951,7 +1951,7 @@ def canTriggerHarbormasterDone(argsList):
 ######## CLASSIC LITERATURE ###########
 
 def canTriggerClassicLiterature(argsList):
-	return not GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE)
+	return not GAME.isOption(GameOptionTypes.GAMEOPTION_CHALLENGE_ONE_CITY)
 
 def getHelpClassicLiterature1(argsList):
 	return TRNSLTR.getText("TXT_KEY_EVENT_CLASSIC_LITERATURE_HELP_1", (GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers(), ))
@@ -2022,7 +2022,7 @@ def applyClassicLiteratureDone3(argsList):
 ######## MASTER BLACKSMITH ###########
 
 def canTriggerMasterBlacksmith(argsList):
-	return not GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE)
+	return not GAME.isOption(GameOptionTypes.GAMEOPTION_CHALLENGE_ONE_CITY)
 
 def getHelpMasterBlacksmith1(argsList):
 	return (
@@ -2112,7 +2112,7 @@ def applyMasterBlacksmithDone1(argsList):
 ######## THE BEST DEFENSE ###########
 
 def canTriggerBestDefense(argsList):
-	return not GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE)
+	return not GAME.isOption(GameOptionTypes.GAMEOPTION_CHALLENGE_ONE_CITY)
 
 def getHelpBestDefense1(argsList):
 	return TRNSLTR.getText("TXT_KEY_EVENT_BEST_DEFENSE_HELP_1", (GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers(), ))
@@ -2154,7 +2154,7 @@ def canApplyBestDefenseDone3(argsList):
 ######## NATIONAL SPORTS LEAGUE ###########
 
 def canTriggerSportsLeague(argsList):
-	return not GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE)
+	return not GAME.isOption(GameOptionTypes.GAMEOPTION_CHALLENGE_ONE_CITY)
 
 def getHelpSportsLeague1(argsList):
 	return (
@@ -2192,7 +2192,7 @@ def canApplySportsLeagueDone3(argsList):
 def canTriggerCrusade(argsList):
 	data = argsList[0]
 
-	if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE):
+	if GAME.isOption(GameOptionTypes.GAMEOPTION_CHALLENGE_ONE_CITY):
 		return False
 
 	holyCity = GAME.getHolyCity(data.eReligion)
@@ -2857,7 +2857,7 @@ def canTriggerHostileTakeover(argsList):
 	data = argsList[0]
 	player = GC.getPlayer(data.ePlayer)
 
-	if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE):
+	if GAME.isOption(GameOptionTypes.GAMEOPTION_CHALLENGE_ONE_CITY):
 		return False
 
 	city = GAME.getHeadquarters(data.eCorporation)
@@ -3616,7 +3616,7 @@ def canTriggerTheBuccaneers(argsList):
   pPlayer = GC.getPlayer(data.ePlayer)
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_NONE):
     return False
 
 #   At least one civ on the board must know Gunpowder.
@@ -3697,7 +3697,7 @@ def applyTheBuccaneers1(argsList):
 
 def canTriggerBlackbeard(argsList):
 	# If Barbarians are disabled in this game, this event will not occur.
-	if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+	if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_NONE):
 		return False
 
 	iPlayer = argsList[0].ePlayer
@@ -3784,7 +3784,7 @@ def applyBlackbeard1(argsList):
 
 def canTriggerPiratesoftheNeutralZones(argsList):
 	# If Barbarians are disabled in this game, this event will not occur.
-	if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+	if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_NONE):
 		return False
 
 	# At least one civ on the board must know Stealth
@@ -3858,7 +3858,7 @@ def canTriggerMalaccanPirates(argsList):
   map = GC.getMap()
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_NONE):
     return False
 
 ###     data.ePlayer must have less than a variable number of combat ships based on map size
@@ -3987,7 +3987,7 @@ def canTriggerHenryMorgan(argsList):
   map = GC.getMap()
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_NONE):
     return False
 
 ###     data.ePlayer must have less than a variable number of combat ships based on map size
@@ -4128,7 +4128,7 @@ def canTriggerStedeBonnet(argsList):
   map = GC.getMap()
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_NONE):
     return False
 
 ###     data.ePlayer must have less than a variable number of combat ships based on map size
@@ -4281,7 +4281,7 @@ def canTriggerTheCorsairs(argsList):
   map = GC.getMap()
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_NONE):
     return False
 
 ###     data.ePlayer must have less than a variable number of combat ships based on map size
@@ -4411,7 +4411,7 @@ def canTriggerIllyrianPirates(argsList):
   map = GC.getMap()
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_NONE):
     return False
 
 ###     data.ePlayer must have less than a variable number of combat ships based on map size
@@ -4555,7 +4555,7 @@ def canTriggerMahdiArmy(argsList):
   pPlayer = GC.getPlayer(data.ePlayer)
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_NONE):
     return False
 
 #   At least one civ on the board must know Flintlock.
@@ -4638,7 +4638,7 @@ def canTriggerTheTaliban(argsList):
   pPlayer = GC.getPlayer(data.ePlayer)
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_NONE):
     return False
 
 #   At least one civ on the board must know Satellites.
@@ -4783,7 +4783,7 @@ def canTriggerMercenariesAncient(argsList):
 	data = argsList[0]
 	CyPlayer = GC.getPlayer(data.ePlayer)
 
-	if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+	if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_NONE):
 		return False
 
 	# Can we build the counter unit?
@@ -4872,7 +4872,7 @@ def canTriggerMercenariesClassical(argsList):
 	data = argsList[0]
 	CyPlayer = GC.getPlayer(data.ePlayer)
 
-	if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+	if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_NONE):
 		return False
 
 	# Can we build the counter unit?
@@ -4960,7 +4960,7 @@ def canTriggerMercenariesMedieval(argsList):
 	data = argsList[0]
 	CyPlayer = GC.getPlayer(data.ePlayer)
 
-	if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+	if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_NONE):
 		return False
 
 	# Can we build the counter unit?
@@ -5250,7 +5250,7 @@ def canTriggerSilverRain(argsList):
   pPlayer = GC.getPlayer(data.ePlayer)
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_NONE):
     return False
 
 #   At least one civ on the board must know Weather control
@@ -7046,7 +7046,7 @@ def applyCivilWar(argsList):
 
 ################ BEST HUNTERS ################
 def canDoBestHunters1(argsList):
-	return GAME.isOption(GameOptionTypes.GAMEOPTION_WITHOUT_WARNING)
+	return GAME.isOption(GameOptionTypes.GAMEOPTION_COMBAT_WITHOUT_WARNING)
 
 def canDoBestHunters2(argsList):
-	return GAME.isOption(GameOptionTypes.GAMEOPTION_HIDE_AND_SEEK) and GAME.isOption(GameOptionTypes.GAMEOPTION_SIZE_MATTERS)
+	return GAME.isOption(GameOptionTypes.GAMEOPTION_COMBAT_HIDE_SEEK) and GAME.isOption(GameOptionTypes.GAMEOPTION_COMBAT_SIZE_MATTERS)

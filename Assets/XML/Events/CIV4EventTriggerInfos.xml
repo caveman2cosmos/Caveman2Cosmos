@@ -5121,25 +5121,6 @@
 			<bPickCity>1</bPickCity>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
-			<!-- @SAVEBREAK - Delete -->
-			<Type>EVENTTRIGGER_PARTISANS</Type>
-			<WorldNewsTexts>
-				<Text>TXT_KEY_EVENTTRIGGER_PARTISANS</Text>
-			</WorldNewsTexts>
-			<TriggerTexts>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_PARTISANS_1</Text>
-					<Era>NONE</Era>
-				</TriggerText>
-			</TriggerTexts>
-			<EventArt>Art/Event_Images/Partisans.dds</EventArt>
-			<iWeight>-1</iWeight>
-			<Events>
-				<Event>EVENT_PARTISANS_1</Event>
-				<Event>EVENT_PARTISANS_2</Event>
-			</Events>
-		</EventTriggerInfo>
-		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_NEW_DYNASTY</Type>
 			<WorldNewsTexts>
 				<Text>TXT_KEY_EVENTTRIGGER_NEW_DYNASTY</Text>
@@ -5317,7 +5298,7 @@
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_WAR_CHARIOTS</Type>
 			<NotOnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</NotOnGameOptions>
 			<TriggerTexts>
 				<TriggerText>
@@ -5371,7 +5352,7 @@
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_ELITE_SWORDS</Type>
 			<NotOnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</NotOnGameOptions>
 			<TriggerTexts>
 				<TriggerText>
@@ -5424,7 +5405,7 @@
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_WARSHIPS</Type>
 			<NotOnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</NotOnGameOptions>
 			<TriggerTexts>
 				<TriggerText>
@@ -5478,7 +5459,7 @@
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_GUNS_BUTTER</Type>
 			<NotOnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</NotOnGameOptions>
 			<TriggerTexts>
 				<TriggerText>
@@ -5532,7 +5513,7 @@
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_NOBLE_KNIGHTS</Type>
 			<NotOnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</NotOnGameOptions>
 			<TriggerTexts>
 				<TriggerText>
@@ -6130,16 +6111,6 @@
 			</ObsoleteTechs>
 			<bPickCity>1</bPickCity>
 			<PythonCanDoCity>canTriggerPreachingResearcherCity</PythonCanDoCity>
-		</EventTriggerInfo>
-		<!-- @SAVEBREAK delete EVENTTRIGGER_TOXCATL once we can remove event triggers - cultures are modularized -->
-		<EventTriggerInfo>
-			<Type>EVENTTRIGGER_TOXCATL</Type>
-		</EventTriggerInfo>
-		<EventTriggerInfo>
-			<Type>EVENTTRIGGER_VOLCANO</Type>
-		</EventTriggerInfo>
-		<EventTriggerInfo>
-			<Type>EVENTTRIGGER_TORNADO</Type>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_DISSIDENT_PRIEST</Type>

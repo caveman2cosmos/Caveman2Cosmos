@@ -4445,7 +4445,7 @@ def addFeatures():
 	MAP = GC.getMap()
 	mapRand = GC.getGame().getMapRand()
 	bGoodyHuts = True
-	if CyGame().isOption(GameOptionTypes.GAMEOPTION_NO_GOODY_HUTS):
+	if CyGame().isOption(GameOptionTypes.GAMEOPTION_MAP_NO_GOODY_HUTS):
 		bGoodyHuts = False
 	impGoodyIsland		= GC.getInfoTypeForString("IMPROVEMENT_GOODY_ISLAND")
 	featureForest		= GC.getInfoTypeForString("FEATURE_FOREST")

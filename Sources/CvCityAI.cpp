@@ -496,7 +496,7 @@ bool CvCityAI::AI_avoidGrowth()
 			iHappinessLevel += ((GC.getNO_MILITARY_PERCENT_ANGER() * (getPopulation() + 1)) / GC.getPERCENT_ANGER_DIVISOR());
 		}
 
-		if (GC.getGame().isOption(GAMEOPTION_REVOLUTION))
+		if (GC.getGame().isOption(GAMEOPTION_UNSUPPORTED_REVOLUTION))
 		{
 			iHappinessLevel -= std::min(getRevolutionIndex() / 600, 2);
 		}
@@ -892,7 +892,7 @@ void CvCityAI::AI_chooseProduction()
 	}
 
 	bool bGetBetterUnits = player.AI_isDoStrategy(AI_STRATEGY_GET_BETTER_UNITS);
-	bool bAggressiveAI = GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI);
+	bool bAggressiveAI = GC.getGame().isOption(GAMEOPTION_AI_AGGRESSIVE);
 
 	int iUnitCostPercentage = static_cast<int>(player.getFinalUnitUpkeep() * 100 / std::max<int64_t>(1, player.calculatePreInflatedCosts()));
 	int iWaterPercent = AI_calculateWaterWorldPercent();
@@ -2434,7 +2434,7 @@ void CvCityAI::AI_chooseProduction()
 
 	// Afforess - Encourage Aggressive AI to stock up on a few nukes
 	if (!bInhibitUnits && !bFinancialTrouble
-		&& (GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI) || GC.getGame().getSorenRandNum(10, "AI consider Nuke") == 0))
+		&& (GC.getGame().isOption(GAMEOPTION_AI_RUTHLESS) || GC.getGame().getSorenRandNum(10, "AI consider Nuke") == 0))
 	{
 		//keep between 3 to 8 nukes, at least for early considerations
 		const int iNukesNeeded = std::max(3, std::min((GC.getGame().getNumCities() - player.getNumCities()) / 5, 8));
@@ -3014,7 +3014,7 @@ void CvCityAI::AI_chooseProduction()
 	m_iTempBuildPriority--;
 
 	//Afforess reduced 12 -> 6, since AI rarely reaches this logic, Added exemption for MAD players
-	const int chance = !GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI) ? 6 : 3;
+	const int chance = !GC.getGame().isOption(GAMEOPTION_AI_RUTHLESS) ? 6 : 3;
 
 	if (!bInhibitUnits && !bFinancialTrouble
 		&& (player.AI_isDoStrategy(AI_STRATEGY_OWABWNW) || GC.getGame().getSorenRandNum(chance, "AI consider Nuke") == 0))
@@ -4873,7 +4873,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 					}
 
 
-					if (GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL))
+					if (GC.getGame().isOption(GAMEOPTION_UNSUPPORTED_ZONE_OF_CONTROL))
 					{
 						iValue += kBuilding.isZoneOfControl() ? 50 : 0;
 					}
@@ -4915,12 +4915,12 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 
 					iValue += kBuilding.getBombardDefenseModifier() / 4;
 
-					if (GC.getGame().isOption(GAMEOPTION_SAD))
+					if (GC.getGame().isOption(GAMEOPTION_COMBAT_SURROUND_DESTROY))
 					{
 						iValue += kBuilding.getLocalDynamicDefense() / 2;
 					}
 #ifdef STRENGTH_IN_NUMBERS
-					if (GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+					if (GC.getGame().isOption(GAMEOPTION_COMBAT_STRENGTH_IN_NUMBERS))
 					{
 						iValue += kBuilding.getFrontSupportPercentModifier() / 4;
 						iValue += kBuilding.getShortRangeSupportPercentModifier() / 4;
@@ -4965,11 +4965,11 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 
 				iValue += kBuilding.getAirlift() * 25;
 
-				if (kBuilding.isAreaBorderObstacle() && !GC.getGame().isOption(GAMEOPTION_NO_BARBARIANS))
+				if (kBuilding.isAreaBorderObstacle() && !GC.getGame().isOption(GAMEOPTION_BARBARIAN_NONE))
 				{
 					int iTempValue = iNumCitiesInArea * 3 / 2;
 					//The great wall is much more valuable with more barbarian activity.
-					if (GC.getGame().isOption(GAMEOPTION_RAGING_BARBARIANS))
+					if (GC.getGame().isOption(GAMEOPTION_BARBARIAN_RAGING))
 					{
 						iTempValue *= 2;
 					}
@@ -5066,7 +5066,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 					iValue += (pair.second * (kOwner.getBuildingCount(pair.first) - getNumRealBuilding(pair.first)) * 8);
 				}
 
-				if (GC.getGame().isOption(GAMEOPTION_REVOLUTION))
+				if (GC.getGame().isOption(GAMEOPTION_UNSUPPORTED_REVOLUTION))
 				{
 					if (kBuilding.getRevIdxLocal() != 0)
 					{
@@ -5548,11 +5548,11 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 				}
 
 				if (kBuilding.isAreaBorderObstacle() && !pArea->isBorderObstacle(getTeam())
-				&& !GC.getGame().isOption(GAMEOPTION_NO_BARBARIANS))
+				&& !GC.getGame().isOption(GAMEOPTION_BARBARIAN_NONE))
 				{
 					iValue += iNumCitiesInArea;
 
-					if (GC.getGame().isOption(GAMEOPTION_RAGING_BARBARIANS))
+					if (GC.getGame().isOption(GAMEOPTION_BARBARIAN_RAGING))
 					{
 						iValue += iNumCitiesInArea;
 					}
@@ -6701,7 +6701,7 @@ int CvCityAI::AI_neededDefenders()
 		}
 	}
 
-	if (GC.getGame().isOption(GAMEOPTION_REVOLUTION))
+	if (GC.getGame().isOption(GAMEOPTION_UNSUPPORTED_REVOLUTION))
 	{
 		const int iExtraRevDefenders = intSqrt(getRevolutionIndex()) - 10;
 		if (iExtraRevDefenders > 0)
@@ -9819,7 +9819,7 @@ int CvCityAI::AI_yieldValueInternal(short* piYields, short* piCommerceYields, bo
 				if (bCanPopRush && (iHappinessLevel > 0))
 				{
 					iSlaveryValue = 30 * 14 * std::max(0, aiYields[YIELD_FOOD] - ((iHealthLevel < 0) ? 1 : 0));
-					iSlaveryValue /= std::max(10, (growthThreshold() * (100 - getMaxFoodKeptPercent())));
+					iSlaveryValue /= std::max(10, growthThreshold() * (100 - getFoodKeptPercent()));
 
 					iSlaveryValue *= 100;
 					iSlaveryValue /= getHurryCostModifier();
@@ -11586,8 +11586,6 @@ void CvCityAI::read(FDataStreamBase* pStream)
 	WRAPPER_READ_CLASS_ENUM_ARRAY(wrapper, "CvCityAI", REMAPPED_CLASS_TYPE_BUILDS, NUM_CITY_PLOTS, (int*)m_aeBestBuild);
 	WRAPPER_READ_ARRAY(wrapper, "CvCityAI", GC.getNumEmphasizeInfos(), m_pbEmphasize);
 
-	//	Old saves incorrectly had this as a plain array - allow either on load - whichever is not present will be skipped
-	WRAPPER_READ_ARRAY(wrapper, "CvCityAI", GC.getNumSpecialistInfos(), m_pbEmphasizeSpecialist);
 	WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper, "CvCityAI", REMAPPED_CLASS_TYPE_SPECIALISTS, GC.getNumSpecialistInfos(), m_pbEmphasizeSpecialist, "EmphasizeSpecialist");
 
 	WRAPPER_READ_ARRAY(wrapper, "CvCityAI", NUM_YIELD_TYPES, m_aiSpecialYieldMultiplier);
@@ -11597,9 +11595,7 @@ void CvCityAI::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvCityAI", &m_iNeededFloatingDefenders);
 	WRAPPER_READ(wrapper, "CvCityAI", &m_iNeededFloatingDefendersCacheTurn);
 	WRAPPER_READ(wrapper, "CvCityAI", &m_iWorkersNeeded);
-	// @SAVEBREAK DELETE
-	WRAPPER_SKIP_ELEMENT(wrapper, "CvCityAI", m_iWorkersHave, SAVE_VALUE_ANY);
-	// SAVEBREAK@
+
 	WRAPPER_READ(wrapper, "CvCityAI", &m_iTempBuildPriority);
 	WRAPPER_READ(wrapper, "CvCityAI", &m_iBuildPriority);
 	WRAPPER_READ(wrapper, "CvCityAI", &m_bNavalMilitaryProductionCity);
@@ -11662,7 +11658,7 @@ bool CvCityAI::AI_trainInquisitor()
 {
 	const CvPlayerAI& kPlayerAI = GET_PLAYER(getOwner());
 
-	if (!GC.getGame().isOption(GAMEOPTION_INQUISITIONS)
+	if (!GC.getGame().isOption(GAMEOPTION_RELIGION_INQUISITIONS)
 		|| !kPlayerAI.isInquisitionConditions())
 	{
 		return false;
@@ -11782,7 +11778,7 @@ bool CvCityAI::AI_buildCaravan()
 		if (eBestUnit != NO_UNIT)
 		{
 			int iOdds = 100;
-			if (GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI))
+			if (GC.getGame().isOption(GAMEOPTION_AI_AGGRESSIVE))
 				iOdds *= 2;
 			iOdds /= iNumCities;
 			iOdds *= iAveProduction;
@@ -12167,7 +12163,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 	if ((iFocusFlags & BUILDINGFOCUS_DEFENSE) != 0)
 	{
 #ifdef STRENGTH_IN_NUMBERS
-		if (GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+		if (GC.getGame().isOption(GAMEOPTION_COMBAT_STRENGTH_IN_NUMBERS))
 		{
 			if (kBuilding.getFrontSupportPercentModifier() > 0
 				|| kBuilding.getShortRangeSupportPercentModifier() > 0
@@ -12184,7 +12180,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 			kBuilding.getAllCityDefenseModifier() > 0 ||
 			kBuilding.isNeverCapture() ||
 			kBuilding.isNukeImmune() ||
-			GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL) && kBuilding.isZoneOfControl() ||
+			GC.getGame().isOption(GAMEOPTION_UNSUPPORTED_ZONE_OF_CONTROL) && kBuilding.isZoneOfControl() ||
 			kBuilding.getLineOfSight() > 0 ||
 			!kBuilding.getUnitCombatExtraStrength().empty() ||
 			kBuilding.getAdjacentDamagePercent() > 0 ||
@@ -12193,7 +12189,7 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 			kBuilding.getNoEntryDefenseLevel() > 0 ||
 			kBuilding.getNumUnitFullHeal() > 0 ||
 			kBuilding.isAreaBorderObstacle() ||
-			GC.getGame().isOption(GAMEOPTION_SAD) && kBuilding.getLocalDynamicDefense() > 0 ||
+			GC.getGame().isOption(GAMEOPTION_COMBAT_SURROUND_DESTROY) && kBuilding.getLocalDynamicDefense() > 0 ||
 			kBuilding.getLocalCaptureProbabilityModifier() > 0 ||
 			kBuilding.getLocalCaptureResistanceModifier() > 0 ||
 			kBuilding.getNationalCaptureResistanceModifier() > 0 ||
@@ -12368,10 +12364,10 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 	const bool bCapital = isCapital();
 	const bool bCanPopRush = kOwner.canPopRush();
 	const bool bAreaAlone = kOwner.AI_isAreaAlone(pArea);
-	const bool bZOC = bAreaAlone ? false : GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL);
-	const bool bSAD = bAreaAlone ? false : GC.getGame().isOption(GAMEOPTION_SAD);
+	const bool bZOC = bAreaAlone ? false : GC.getGame().isOption(GAMEOPTION_UNSUPPORTED_ZONE_OF_CONTROL);
+	const bool bSAD = bAreaAlone ? false : GC.getGame().isOption(GAMEOPTION_COMBAT_SURROUND_DESTROY);
 #ifdef STRENGTH_IN_NUMBERS
-	const bool bSIN = bAreaAlone ? false : GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS);
+	const bool bSIN = bAreaAlone ? false : GC.getGame().isOption(GAMEOPTION_COMBAT_STRENGTH_IN_NUMBERS);
 #endif
 	const UnitTypes eBestLandUnit = bAreaAlone ? NO_UNIT : GC.getGame().getBestLandUnit();
 
@@ -12741,11 +12737,11 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 				iValue += kBuilding.getAllCityDefenseModifier() * iNumCities / 5;
 				iValue += kBuilding.getAirlift() * 25;
 
-				if (kBuilding.isAreaBorderObstacle() && !GC.getGame().isOption(GAMEOPTION_NO_BARBARIANS))
+				if (kBuilding.isAreaBorderObstacle() && !GC.getGame().isOption(GAMEOPTION_BARBARIAN_NONE))
 				{
 					int areaBorderObstacleValue = iNumCitiesInArea * 3 / 2;
 					//The great wall is much more valuable with more barbarian activity.
-					if (GC.getGame().isOption(GAMEOPTION_RAGING_BARBARIANS))
+					if (GC.getGame().isOption(GAMEOPTION_BARBARIAN_RAGING))
 						areaBorderObstacleValue *= 2;
 					iValue += areaBorderObstacleValue;
 				}
@@ -12826,7 +12822,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 					iValue += (pair.second * (kOwner.getBuildingCount(pair.first) - getNumRealBuilding(pair.first)) * 8);
 				}
 
-				if (GC.getGame().isOption(GAMEOPTION_REVOLUTION))
+				if (GC.getGame().isOption(GAMEOPTION_UNSUPPORTED_REVOLUTION))
 				{
 					if (kBuilding.getRevIdxLocal() != 0)
 					{
@@ -13326,11 +13322,11 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 				// Very few buildings have this (great wall), so no need to cache these values before the loop
 				if (kBuilding.isAreaBorderObstacle() && !pArea->isBorderObstacle(eTeam))
 				{
-					if (!GC.getGame().isOption(GAMEOPTION_NO_BARBARIANS))
+					if (!GC.getGame().isOption(GAMEOPTION_BARBARIAN_NONE))
 					{
 						iValue += iNumCitiesInArea;
 
-						if (GC.getGame().isOption(GAMEOPTION_RAGING_BARBARIANS))
+						if (GC.getGame().isOption(GAMEOPTION_BARBARIAN_RAGING))
 						{
 							iValue += iNumCitiesInArea;
 						}
@@ -15017,7 +15013,7 @@ bool CvCityAI::AI_meetsUnitSelectionCriteria(UnitTypes eUnit, const CvUnitSelect
 				return false;
 			}
 
-			if (!GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
+			if (!GC.getGame().isOption(GAMEOPTION_COMBAT_HIDE_SEEK))
 			{
 				int iVisibilityRequested = (int)criteria->m_eVisibility;
 				bool bFound = false;
