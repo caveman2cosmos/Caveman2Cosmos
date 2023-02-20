@@ -141,7 +141,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ADVANCED_ESPIONAGE_SPREAD</Tag>
-		<English>2. Advanced Espionage</English>
+		<English>2. Advanced - Espionage</English>
 		<French>2. Espionnage Avancé</French>
 		<German>2. Verbesserte Spionage</German>
 		<Italian>2. Spionaggio avanzato</Italian>
@@ -934,7 +934,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_FIXED_BORDERS</Tag>
-		<English>2. Fixed Borders</English>
+		<English>2. Culture - Fixed Borders</English>
 		<French>2. Frontières Fixes</French>
 		<German>2. Feste Grenzen</German>
 		<Italian>2. Confini fissi</Italian>
@@ -1035,7 +1035,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_GREAT_COMMANDERS</Tag>
-		<English>2. Great Commanders</English>
+		<English>2. Unit - Great Commanders</English>
 		<French>2. Commandants Illustres</French>
 		<German>2. Große Anführer</German>
 		<Italian>2. Grandi comandanti</Italian>
@@ -1226,10 +1226,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_INFLUENCE_DRIVEN_WAR</Tag>
-		<English>2. Influence Driven War</English>
-		<French>2. Influence culturelle de la Guerre</French>
-		<Spanish>2. Influencia por la guerra</Spanish>
-		<Russian>2. Ñòèìóëÿöèÿ âîéíû</Russian>
+		<English>3. Influence Driven War</English>
+		<French>3. Influence culturelle de la Guerre</French>
+		<Spanish>3. Influencia por la guerra</Spanish>
+		<Russian>3. Ñòèìóëÿöèÿ âîéíû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_INFLUENCE_DRIVEN_WAR_PEDIA</Tag>
@@ -1277,7 +1277,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_INQUISITION</Tag>
-		<English>2. Inquisition</English>
+		<English>2. Religion - Inquisition</English>
 		<Spanish>2. Inquisición</Spanish>
 		<Russian>2. Èíêâèçèöèÿ</Russian>
 	</TEXT>
@@ -1305,7 +1305,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_LARGER_CITIES</Tag>
-		<English>2. Larger Cities</English>
+		<English>2. Expansion - Larger Cities</English>
 		<French>2. Villes plus Larges</French>
 		<German>2. Größere Städte</German>
 		<Italian>2. Città più grandi</Italian>
@@ -1434,7 +1434,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_MASTERY</Tag>
-		<English>2. Mastery Victory</English>
+		<English>2. Victory - Mastery</English>
 		<French>2. Victoire de Maître</French>
 		<German>2. Meistersieg</German>
 		<Italian>2. Vittoria master</Italian>
@@ -1717,7 +1717,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_REALISTIC_CORPORATIONS</Tag>
-		<English>2. Realistic Corporations</English>
+		<English>2. Advanced - Realistic Corporations</English>
 		<French>2. Corporations Réalistes</French>
 		<German>2. Realistische Kapitalgesellschaften</German>
 		<Italian>2. Corporazioni realistiche</Italian>
@@ -1734,7 +1734,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_REALISTIC_CULTURE_SPREAD</Tag>
-		<English>2. Realistic Culture Spread</English>
+		<English>2. Culture - Realistic Culture Spread</English>
 		<French>2. Propagation Culturelle Réaliste</French>
 		<German>2. Realistische Kulturausbreitung</German>
 		<Italian>2. Diffusione realistica della cultura</Italian>
@@ -1859,7 +1859,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_REVDCM</Tag>
-		<English>2. Revolution</English>
+		<English>2. Unsupported - Revolution</English>
 		<French>2. Révolution</French>
 		<Russian>2. Ðåâîëþöèè</Russian>
 	</TEXT>
@@ -1893,7 +1893,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_REV_BARBARIANCIV</Tag>
-		<English>2. Barbarian Civ</English>
+		<English>2. Barbarian - Civ Development</English>
 		<French>2. Civ Barbares</French>
 		<Russian>2. Èìïåðèÿ âàðâàðîâ</Russian>
 	</TEXT>
@@ -1937,7 +1937,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_REV_TECH_DIFFUSION</Tag>
-		<English>2. Tech Diffusion</English>
+		<English>2. Tech - Diffusion</English>
 		<Spanish>2. Difusión tecnológica</Spanish>
 		<Russian>2. Ðàñïðîñòðàíåíèå òåõíîëîãèé</Russian>
 	</TEXT>
@@ -2571,7 +2571,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ROM_LIMITED_RELIGION</Tag>
-		<English>2. Limited Religions</English>
+		<English>2. Religion - Limited</English>
 		<Spanish>2. Religiones limitadas</Spanish>
 		<Russian>2. Ëèìèò ðåëèãèé</Russian>
 	</TEXT>
@@ -2690,7 +2690,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ROM_RELIGIOUS_VICTORY</Tag>
-		<English>2. Religious Victory</English>
+		<English>2. Victory - Religious</English>
 		<Spanish>2. Victoria religiosa</Spanish>
 		<Russian>2. Ðåëèãèîçíàÿ ïîáåäà</Russian>
 	</TEXT>
@@ -2706,7 +2706,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ROM_SCIENTIFIC_VICTORY</Tag>
-		<English>2. Scientific Victory</English>
+		<English>2. Victory - Scientific</English>
 		<Spanish>2. Victoria científica</Spanish>
 		<Russian>2. Íàó÷íàÿ ïîáåäà</Russian>
 	</TEXT>
@@ -2740,9 +2740,9 @@ Remember: If you're having trouble with which civic to choose, just think of his
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ROM_UNIT_NAMING</Tag>
-		<English>2. Unit Naming</English>
-		<Spanish>2. Nomenclatura de unidades</Spanish>
-		<Russian>2. Èìåíà þíèòîâ</Russian>
+		<English>3. Unit Naming</English>
+		<Spanish>3. Nomenclatura de unidades</Spanish>
+		<Russian>3. Èìåíà þíèòîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ROM_UNIT_NAMING_PEDIA</Tag>
@@ -2760,7 +2760,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_RUTHLESS_AI</Tag>
-		<English>2. Ruthless AI</English>
+		<English>2. AI - Ruthless</English>
 		<French>2. AI sans Merci</French>
 		<German>2. Skrupellose KI</German>
 		<Italian>2. IA spietata</Italian>
@@ -2777,7 +2777,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_SAD</Tag>
-		<English>2. Surround and Destroy</English>
+		<English>2. Combat - Surround and Destroy</English>
 		<French>2. Encercler et Détruire</French>
 		<German>2. Einkesselung</German>
 		<Italian>2. Circonda e distruggi</Italian>
@@ -3307,7 +3307,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_DEVELOPING_LEADERS</Tag>
-		<English>2. Developing Leaders</English>
+		<English>2. Leader - Developing</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_DEVELOPING_LEADERS_PEDIA</Tag>
@@ -3339,7 +3339,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_EQUILIBRIUM_CULTURE</Tag>
-		<English>2. Equilibrium Culture</English>
+		<English>2. Culture - Equilibrium</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_EQUILIBRIUM_CULTURE_PEDIA</Tag>
@@ -3347,7 +3347,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_1_CITY_TILE_FOUNDING</Tag>
-		<English>2. City starts with 1 tile</English>
+		<English>2. Culture - City Starts With 1 Tile</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_1_CITY_TILE_FOUNDING_PEDIA</Tag>
