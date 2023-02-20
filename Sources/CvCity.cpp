@@ -19944,9 +19944,8 @@ void CvCity::doPromotion()
 		}
 	}
 }
-/*
 
-*/
+
 bool CvCity::isValidTerrainForBuildings(BuildingTypes eBuilding) const
 {
 	//This had to be hardcoded, since there is a terrain peak, but it is really a plot type, not a terrain.
@@ -19955,6 +19954,7 @@ bool CvCity::isValidTerrainForBuildings(BuildingTypes eBuilding) const
 
 	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 
+	// Terrain checks requires owned tile
 	bool bRequiresTerrain = false;
 	bool bValidTerrain = false;
 	for (int iI = 0; iI < GC.getNumTerrainInfos(); iI++)
@@ -19967,6 +19967,8 @@ bool CvCity::isValidTerrainForBuildings(BuildingTypes eBuilding) const
 
 			foreach_(const CvPlot* plotX, plots())
 			{
+				if (plotX->getTeam() != getTeam()) continue;
+
 				if (bPeak)
 				{
 					if (plotX->isAsPeak())
@@ -19996,10 +19998,11 @@ bool CvCity::isValidTerrainForBuildings(BuildingTypes eBuilding) const
 			const bool bPeak = iI == iTerrainPeak;
 			const bool bHill = iI == iTerrainHill;
 
-			//Checks the city plots for a valid terrain
 			bool bHasAndTerrain = false;
 			foreach_(const CvPlot* plotX, plots())
 			{
+				if ( plotX->getTeam() != getTeam()) continue;
+
 				if (bPeak)
 				{
 					if (plotX->isAsPeak())
@@ -20033,12 +20036,13 @@ bool CvCity::isValidTerrainForBuildings(BuildingTypes eBuilding) const
 		return false;
 	}
 
+	// Improvement checks require owned tile
 	if (!kBuilding.getPrereqOrImprovements().empty())
 	{
 		bool bHasValidImprovement = false;
 		foreach_(const ImprovementTypes prereqOrImprovement, kBuilding.getPrereqOrImprovements())
 		{
-			if (algo::any_of(plots(), bind(CvPlot::getImprovementType, _1) == prereqOrImprovement))
+			if (algo::any_of(plots(), bind(CvPlot::getImprovementType, _1) == prereqOrImprovement && bind(CvPlot::getTeam, _1) == getTeam()))
 			{
 				bHasValidImprovement = true;
 				break;
@@ -20052,15 +20056,28 @@ bool CvCity::isValidTerrainForBuildings(BuildingTypes eBuilding) const
 
 	bool bRequiresOrFeature = false;
 	bool bHasValidFeature = false;
+	// Feature checks require owned tile unless strict vicinity off; then, neutral OK too
 	for (int iI = 0; iI < GC.getNumFeatureInfos(); iI++)
 	{
 		if (kBuilding.isPrereqOrFeature(iI))
 		{
 			bRequiresOrFeature = true;
-			if (algo::any_of(plots(), bind(CvPlot::getFeatureType, _1) == iI))
+			foreach_(const CvPlot* plotX, plots())
 			{
-				bHasValidFeature = true;
-				break;
+				if (plotX->getFeatureType() == iI)
+				{
+					if (plotX->getTeam() == getTeam())
+					{
+						bHasValidFeature = true;
+						break;
+					}
+					// Features are allowed from neutral territory with Strict Vicinity OFF
+					else if (!GC.getGame().isOption(GAMEOPTION_EXP_STRICT_VICINITY) && plotX->getTeam() == NO_TEAM)
+					{
+						bHasValidFeature = true;
+						break;
+					}
+				}
 			}
 		}
 	}

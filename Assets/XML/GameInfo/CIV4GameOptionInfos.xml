@@ -338,6 +338,13 @@
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_EXP_STRICT_VICINITY</Type>
+			<Description>TXT_KEY_GAMEOPTION_EXP_STRICT_VICINITY</Description>
+			<Help>TXT_KEY_GAMEOPTION_EXP_STRICT_VICINITY_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
 		<!-- Map -->
 		<GameOptionInfo>
 			<Type>GAMEOPTION_MAP_CULTURALLY_LINKED_STARTS</Type>

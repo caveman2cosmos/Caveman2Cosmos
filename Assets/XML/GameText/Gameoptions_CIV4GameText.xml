@@ -1598,4 +1598,12 @@
 		<Tag>TXT_KEY_GAMEOPTION_CULTURE_EQUILIBRIUM_HELP</Tag>
 		<English>Culture decays on all tiles, not just unowned. This means culture wars are dependent on the last ~100 turns of culture output (adjusted for gamespeed) rather than all culture ever produced by a city. Tiles that lose cultural input lose control via decay instead of immediately.</English>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_EXP_STRICT_VICINITY</Tag>
+		<English>Expansion - Strict Vicinity</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_EXP_STRICT_VICINITY_HELP</Tag>
+		<English>Buildings and wonders that require a terrain type, feature, or improvement in city vicinity also require that tile to be culturally owned instead of possibly in neutral terrain. Works best when combined with Culture options of 1 Tile Start and/or Realistic Spread.</English>
+	</TEXT>
 </Civ4GameText>
