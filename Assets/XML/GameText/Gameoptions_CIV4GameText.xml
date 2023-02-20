@@ -9,7 +9,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CULTURE_1_CITY_TILE_FOUNDING_HELP</Tag>
-		<English>All city founding starts with the main city tile only. A small amount of generated culture is required to acquire the adjacent tiles, after which culture progresses normally. Scaled for Game Speeds.[NEWLINE]When enabled along with "Realistic Culture Spread", the first expansion *may* only acquire the 4 tiles sharing an edge with the city instead of all 8 adjacent tiles. This is challenging!</English>
+		<English>All city founding starts with the main city tile only. A small amount of generated culture is required to acquire the adjacent tiles, after which culture progresses normally. Scaled for Game Speeds.[NEWLINE]When enabled along with "Realistic Culture Spread", the first expansion *may* only acquire the 4 tiles sharing an edge with the city guaranteed to have all 4.</English>
 		<German>Der Einflussbereich jeder neu gegründeten Stadt wird mit dieser Einstellung zunächst immer auf das Stadtfeld begrenzt. Um den Stadtradius auf die umgebenden Felder auszudehnen, muss zunächst die Kulturstufe "schwach" erreicht werden.</German>
 		<French>Toutes les fondations de villes commencent par la tuile ville principale uniquement. Niveau de culture De mauvaises valeurs doivent être atteintes pour étendre la culture de la ville et s'étendre aux carreaux environnants. Adapté aux vitesses de jeu.[NEWLINE]Cette option désactive l'option "Limite minimale de la ville".</French>
 		<Russian>Âñå ãîðîäà ïðè îñíîâàíèè íà÷èíàþò ñ îäíîé ñòàðòîâîé êëåòêè. Äîëæåí áûòü äîñòèãíóò áåäíûé óðîâåíü êóëüòóðû äëÿ ðàñøèðåíèÿ ãîðîäà è îñâîåíèÿ ñîñåäíèõ êëåòîê. Ìàñøòàáèðóåòñÿ â çàâèñèìîñòè îò ñêîðîñòè èãðû.</Russian>
@@ -1184,7 +1184,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CULTURE_REALISTIC_SPREAD_HELP</Tag>
-		<English>Culture spreads from cities in a more realistic fashion, over low lying areas more quickly than peaks, hills, or jungles.[NEWLINE]When enabled along with "City starts with 1 tile", the first expansion *may* only acquire the 4 tiles sharing an edge with the city instead of all 8 adjacent tiles. This is challenging!</English>
+		<English>Culture spreads from cities in a more realistic fashion, over low lying areas more quickly than peaks, hills, or jungles. Further, the city only claims the adjacent 4 tiles rather than all 8 on placement.[NEWLINE]Note: When enabled along with "City starts with 1 tile", the first expansion *may* only acquire the adjacent 4 tiles, depending on their terrain cost.</English>
 		<French>L'expansion de Culture des Villes s'opère de manière plus réaliste, de manière régulière, et sur les zones accessibles plus rapidement que sur les collines ou les Jungles.</French>
 		<German>Die eigene Kultur breitet sich von Städten nun realistischer aus, schneller im Flachland, langsamer in Bergen, Hügeln oder im Dschungel.</German>
 		<Italian>La cultura si espande dalle città in modo più realistico, più velocemente sulle aree aperte rispetto a colline, picchi e giungle.</Italian>

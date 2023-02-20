@@ -291,7 +291,8 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 	if (!GC.getGame().isOption(GAMEOPTION_CULTURE_1_CITY_TILE_FOUNDING))
 	{
 		const int iAdjCulture = GC.getFREE_CITY_ADJACENT_CULTURE();
-		foreach_(CvPlot* pAdjacentPlot, plot()->adjacent())
+		// RCS gets free culture on cardinal adjacent tiles only
+		foreach_(CvPlot* pAdjacentPlot, GC.getGame().isOption(GAMEOPTION_CULTURE_REALISTIC_SPREAD) ? plot()->cardinalDirectionAdjacent() : plot()->adjacent())
 		{
 			pAdjacentPlot->changeCulture(getOwner(), iAdjCulture, bBumpUnits);
 			pAdjacentPlot->updateCulture(bBumpUnits, false);
@@ -6470,13 +6471,10 @@ void CvCity::recalculateCultureDistances(int iMaxDistance) const
 	// then (inefficiently, atm) calls calculateCultureDistance to compute specific tiles
 	PROFILE_FUNC();
 
-	// 1-tile start and realistic culture together has unique rules, otherwise:
-	// if the point is within one square of the city center
-	foreach_(const CvPlot* plotX, plots(NUM_CITY_PLOTS_1))
+	// 1-tile start and realistic culture together has unique rules, otherwise distance 0, 1:
+	foreach_(const CvPlot* plotX, plot()->cardinalDirectionAdjacent())
 	{
-		// Center has 0 distance to helps city tile itself have more culture
-		if (getX() == plotX->getX() && getY() == plotX->getY()) m_aCultureDistances[plotX] = 0;
-		// If 1 tile start is off, the rest in range 1 have distance 1, no modifiers
+		if (plotX == plot()) m_aCultureDistances[plotX] = 0;
 		else if (!GC.getGame().isOption(GAMEOPTION_CULTURE_1_CITY_TILE_FOUNDING)) m_aCultureDistances[plotX] = 1;
 	}
 
@@ -6487,8 +6485,7 @@ void CvCity::recalculateCultureDistances(int iMaxDistance) const
 
 	// Currently: Calculate distance values of all tiles in iMaxDistance radial size grid,
 	//   recalculating entire grid until no values have changed. This happens ~iMaxDistance times per city per turn.
-	bool bHasChanged = (iMaxDistance > 1 ||
-		(iMaxDistance > 0 && GC.getGame().isOption(GAMEOPTION_CULTURE_1_CITY_TILE_FOUNDING)));
+	bool bHasChanged = iMaxDistance > 0;
 
 	int numLoops = 0;
 	// as long as there are changes during the last iteration
@@ -6499,13 +6496,24 @@ void CvCity::recalculateCultureDistances(int iMaxDistance) const
 
 		foreach_(const CvPlot* plotX, plot()->rect(iMaxDistance, iMaxDistance))
 		{
-			// Either ignore only core, or 9 tiles around city center depending on whether 1 tile start:
-			if (plotDistance(getX(), getY(), plotX->getX(), plotX->getY()) <
-				(1 + !GC.getGame().isOption(GAMEOPTION_CULTURE_1_CITY_TILE_FOUNDING)))
+			// This is a slightly cursed function.
+			// Center should never be calculated:
+			if (plotX == plot()) continue;
+			// RCS without 1TF should consider city cardinal adjacent tiles distance 1; don't recalc
+			if (!GC.getGame().isOption(GAMEOPTION_CULTURE_1_CITY_TILE_FOUNDING))
 			{
-				// This is a slightly cursed function.
-				continue;
+				bool bCityAdjacent = false;
+				foreach_(const CvPlot* plotXCardinalAdjacent, plotX->cardinalDirectionAdjacent())
+				{
+					if (plotXCardinalAdjacent == plot())
+					{
+						bCityAdjacent = true;
+						break;
+					}
+				}
+				if (bCityAdjacent) continue;
 			}
+
 			// recalculate the value to determine if it has changed
 			const int iNewValue = calculateCultureDistance(plotX, iMaxDistance);
 
