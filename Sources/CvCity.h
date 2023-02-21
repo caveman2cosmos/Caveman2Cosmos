@@ -365,9 +365,9 @@ public:
 	int hurryAngerLength(HurryTypes eHurry) const;
 	int maxHurryPopulation() const;
 
-	int netRevoltRisk(PlayerTypes cultureAttacker) const;
-	int baseRevoltRisk(PlayerTypes eCultureAttacker) const;
-	int cultureGarrison(PlayerTypes eCultureAttacker) const;
+	int netRevoltRisk100(PlayerTypes cultureAttacker) const;
+	int baseRevoltRisk100(PlayerTypes eCultureAttacker) const;
+	int unitRevoltRiskModifier(PlayerTypes eCultureAttacker) const;
 
 	//	Note arrival or leaving of a unit
 	void noteUnitMoved(const CvUnit* pUnit) const;
@@ -553,7 +553,6 @@ public:
 	int getNumBuildings() const;
 	void changeNumBuildings(int iChange);
 
-	int getGovernmentCenterCount() const;
 	bool isGovernmentCenter() const;
 	void changeGovernmentCenterCount(int iChange);
 
@@ -564,7 +563,7 @@ public:
 	int getMaintenanceTimes100() const;
 	int getEffectiveMaintenanceModifier() const;
 	void updateMaintenance() const;
-	void setMaintenanceDirty(bool bDirty) const;
+	void setMaintenanceDirty(const bool bDirty, const bool bPlayer = true) const;
 	int calculateDistanceMaintenance() const;
 	int calculateNumCitiesMaintenance() const;
 	int calculateColonyMaintenance() const;
@@ -719,8 +718,8 @@ public:
 	void setFoodKept(int iNewValue);
 	void changeFoodKept(int iChange);
 
-	int getMaxFoodKeptPercent() const;
-	void changeMaxFoodKeptPercent(int iChange, bool bAdd);
+	int getFoodKeptPercent() const;
+	void changeFoodKeptPercent(int iChange);
 
 	int getMaxProductionOverflow() const;
 
@@ -951,7 +950,7 @@ public:
 
 	int getBuildingCommerce(CommerceTypes eIndex) const;
 	int getBuildingCommerce100(CommerceTypes eIndex) const;
-	int getBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding, const bool bFull = false) const;
+	int getBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding, const bool bFull = false, const bool bTestVisible = false) const;
 	int getAdditionalCommerceTimes100ByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding) const;
 	int getBaseCommerceRateFromBuilding100(CommerceTypes eIndex, BuildingTypes eBuilding) const;
 	int getAdditionalCommerceRateModifierByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding) const;
@@ -1165,7 +1164,6 @@ public:
 	int getTradeRoutes() const;
 	void clearTradeRoutes();
 	void updateTradeRoutes();
-	void resizeTradeRouteVector();
 
 	void clearOrderQueue();
 	void pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bool bPop, bool bAppend, bool bForce = false, CvPlot* deliveryDestination = NULL, UnitAITypes contractedAIType = NO_UNITAI, uint8_t contractFlags = 0);
@@ -1622,8 +1620,8 @@ protected:
 	int m_iBuildingOnlyHealthyCount;
 	int m_iFood;
 	int m_iFoodKept;
-	float m_fMaxFoodKeptMultiplierLog;
-#define INVALID_STORED_FOOD_PERCENT_LOG (-1000000)	//	Used as a reserved value to trigger calculation on upgrade of save format
+	int m_iFoodKeptPercent;
+
 	int m_iOverflowProduction;
 	int m_iFeatureProduction;
 

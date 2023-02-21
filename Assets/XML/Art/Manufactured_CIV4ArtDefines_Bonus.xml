@@ -1484,7 +1484,7 @@
 		</BonusArtInfo>
 		<!-- Nets -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_NETS</Type>
+			<Type>ART_DEF_BONUS_FISHING_NETS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2950,7 +2950,7 @@
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_HUMAN_MOD_NONSPATIAL</Type>
+			<Type>ART_DEF_BONUS_HUMAN_MOD_NON_SPATIAL</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>

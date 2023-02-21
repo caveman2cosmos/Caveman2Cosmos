@@ -1354,7 +1354,7 @@ void CvDLLWidgetData::doContactCiv(CvWidgetDataStruct &widgetDataStruct)
 
 	if (gDLL->shiftKey() && !gDLL->altKey())
 	{
-		if (GET_PLAYER((PlayerTypes)widgetDataStruct.m_iData1).isHuman()
+		if (GET_PLAYER((PlayerTypes)widgetDataStruct.m_iData1).isHumanPlayer()
 		&& widgetDataStruct.m_iData1 != GC.getGame().getActivePlayer())
 		{
 			gDLL->getInterfaceIFace()->showTurnLog((ChatTargetTypes)widgetDataStruct.m_iData1);
@@ -2731,21 +2731,25 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 				{
 					if (eImprovement != NO_IMPROVEMENT)
 					{
-						if (pMissionPlot->getTeam() != pHeadSelectedUnit->getTeam())
+						// Anywhere builds only fail in non-team/neutral territory
+						if (improvement->isOutsideBorders())
 						{
-							if (improvement->isOutsideBorders())
-							{
-								if (pMissionPlot->getTeam() != NO_TEAM)
-								{
-									szBuffer.append(NEWLINE);
-									szBuffer.append(gDLL->getText("TXT_KEY_ACTION_NEEDS_OUT_RIVAL_CULTURE_BORDER"));
-								}
-							}
-							else
+							if (pMissionPlot->getTeam() != pHeadSelectedUnit->getTeam() &&
+								pMissionPlot->getTeam() != NO_TEAM)
 							{
 								szBuffer.append(NEWLINE);
-								szBuffer.append(gDLL->getText("TXT_KEY_ACTION_NEEDS_CULTURE_BORDER"));
+								szBuffer.append(gDLL->getText("TXT_KEY_ACTION_NEEDS_OUT_RIVAL_CULTURE_BORDER"));
 							}
+						}
+						// Fail when on territory owned by non-teammate
+						// OR when outside influence of tile owner; this (should) enable building on valid territory of teammates.
+						// NOTE: This prevents workers removing forts when in territory influenced by teammate. Also does not allow
+						// 		building on a tile owned by teammate but only influenced by you (rare occurrance though for it not to be a fort tile)
+						else if (pMissionPlot->getTeam() != pHeadSelectedUnit->getTeam()
+							 || !pMissionPlot->isInCultureRangeOfCityByPlayer(pMissionPlot->getOwner()))
+						{
+							szBuffer.append(NEWLINE);
+							szBuffer.append(gDLL->getText("TXT_KEY_ACTION_NEEDS_CULTURE_BORDER"));
 						}
 
 						if ((ePlotBonus == NO_BONUS || !improvement->isImprovementBonusTrade(ePlotBonus))
@@ -3379,7 +3383,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 			// BUG - Delete All Action - start
 			else if (GC.getActionInfo(widgetDataStruct.m_iData1).getCommandType() == COMMAND_DELETE)
 			{
-				if (GC.getGame().isOption(GAMEOPTION_DOWNSIZING_IS_PROFITABLE))
+				if (GC.getGame().isOption(GAMEOPTION_UNIT_DOWNSIZING_IS_PROFITABLE))
 				{
 					const CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 
@@ -3980,7 +3984,7 @@ void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, 
 
 		// calculate war percentages
 		float fOverallWarPercentage = 0;
-		bool bAggressive = GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI);
+		bool bAggressive = GC.getGame().isOption(GAMEOPTION_AI_AGGRESSIVE);
 
 		bool bIsAnyCapitalAreaAlone = kTeam.AI_isAnyCapitalAreaAlone();
 
@@ -4516,7 +4520,7 @@ void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, 
 
 		if (eTeam != eActiveTeam)
 		{
-			if (!kPlayer.isHuman())
+			if (!kPlayer.isHumanPlayer())
 			{
 				if (!kPlayer.AI_isWillingToTalk(eActivePlayer))
 				{
@@ -4555,7 +4559,7 @@ void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, 
 		}
 	}
 
-	if (kPlayer.isHuman())
+	if (kPlayer.isHumanPlayer())
 	{
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_MISC_SHIFT_SEND_CHAT"));
@@ -5129,20 +5133,20 @@ void CvDLLWidgetData::parseNationalityHelp(CvWidgetDataStruct &widgetDataStruct,
 		{
 			if (GET_PLAYER(eCulturalOwner).getTeam() != pHeadSelectedCity->getTeam())
 			{
-				int iCityStrength = pHeadSelectedCity->netRevoltRisk(eCulturalOwner);
-				int iOriginal = pHeadSelectedCity->baseRevoltRisk(eCulturalOwner);
-				int iSpeedAdjustment = GC.getREVOLT_TEST_PROB() * 100 /
+				const int iNetRevoltRisk100 = pHeadSelectedCity->netRevoltRisk100(eCulturalOwner);
+				const int iOriginal100 = pHeadSelectedCity->baseRevoltRisk100(eCulturalOwner);
+				const int iSpeedAdjustment = GC.getREVOLT_TEST_PROB() * 100 /
 					GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
-				int iGarrison = pHeadSelectedCity->cultureGarrison(eCulturalOwner);
+				const int iGarrison = pHeadSelectedCity->unitRevoltRiskModifier(eCulturalOwner);
 
-				if (iCityStrength > 0)
+				if (iNetRevoltRisk100 > 0)
 				{
 					szBuffer.append(NEWLINE);
 					szBuffer.append(gDLL->getText("TXT_KEY_MISC_CHANCE_OF_REVOLT",
-						CvWString::format(L"" SETCOLR L"%.2f%%" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), ((float)iCityStrength*iSpeedAdjustment)/10000).GetCString(),
-						CvWString::format(L"" SETCOLR L"%d%%" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), iOriginal).GetCString(),
+						CvWString::format(L"" SETCOLR L"%.2f%%" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), ((float)iNetRevoltRisk100*iSpeedAdjustment)/10000).GetCString(),
+						CvWString::format(L"" SETCOLR L"%.1f%%" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), (float)iOriginal100/100).GetCString(),
 						CvWString::format(L"" SETCOLR L"%d%%" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), iSpeedAdjustment).GetCString(),
-						CvWString::format(L"" SETCOLR L"%d%%" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), (100-iGarrison)).GetCString()
+						CvWString::format(L"" SETCOLR L"%d%%" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), iGarrison).GetCString()
 					));
 				}
 			}

@@ -2,21 +2,6 @@
 <Civ4SpecialBuildingInfos xmlns="x-schema:../Schema/C2C_CIV4BuildingsSchema.xml">
 	<SpecialBuildingInfos>
 		<SpecialBuildingInfo>
-			<!-- @SAVEBREAK Remove this on savebreak -->
-			<Type>SPECIALBUILDING_BOMB_SHELTER</Type>
-			<bValid>0</bValid>
-		</SpecialBuildingInfo>
-		<SpecialBuildingInfo>
-			<!-- @SAVEBREAK Remove this on savebreak -->
-			<Type>SPECIALBUILDING_STORY</Type>
-			<bValid>0</bValid>
-		</SpecialBuildingInfo>
-		<SpecialBuildingInfo>
-			<!-- @SAVEBREAK Remove this on savebreak -->
-			<Type>SPECIALBUILDING_STORIES</Type>
-			<bValid>0</bValid>
-		</SpecialBuildingInfo>
-		<SpecialBuildingInfo>
 			<Type>SPECIALBUILDING_TEMPLE</Type>
 			<Description>TXT_KEY_SPECIALBUILDING_TEMPLE</Description>
 			<TechPrereq>TECH_PRIESTHOOD</TechPrereq>
@@ -56,8 +41,8 @@
 			<bValid>1</bValid>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
-			<Type>SPECIALBUILDING_DEEP_SPACE_RESEARCH</Type>
-			<Description>TXT_KEY_SPECIALBUILDING_DEEP_SPACE_RESEARCH</Description>
+			<Type>SPECIALBUILDING_DEEP_SPACE_RESEARCH_INSTITUTE</Type>
+			<Description>TXT_KEY_SPECIALBUILDING_DEEP_SPACE_RESEARCH_INSTITUTE</Description>
 			<bValid>0</bValid>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
@@ -71,8 +56,8 @@
 			<bValid>0</bValid>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
-			<Type>SPECIALBUILDING_FUSION_PLANT</Type>
-			<Description>TXT_KEY_SPECIALBUILDING_FUSION_PLANT</Description>
+			<Type>SPECIALBUILDING_D_T_FUSION_POWER_PLANT</Type>
+			<Description>TXT_KEY_SPECIALBUILDING_D_T_FUSION_POWER_PLANT</Description>
 			<bValid>0</bValid>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>

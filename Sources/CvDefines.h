@@ -172,7 +172,7 @@
 /************************************************************************************************/
 
 // AlbertS2: Save file format version, can be use to make a new dll incompatible with older saves
-#define SAVE_FORMAT_VERSION	(3)
+#define SAVE_FORMAT_VERSION	(4)
 
 #define GC				cvInternalGlobals::getInstance()
 #define ARTFILEMGR		CvArtFileMgr::GetInstance()

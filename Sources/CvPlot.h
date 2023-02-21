@@ -288,7 +288,7 @@ public:
 	void changeDefenseDamage(int iChange);
 
 	// Super Forts *culture*
-	void pushCultureFromFort(PlayerTypes ePlayer, int iChange, int iRange, bool bUpdate);
+	void pushCultureFromImprovement(PlayerTypes ePlayer, int iChange, int iRange, bool bUpdate);
 	void doImprovementCulture(PlayerTypes ePlayer, const CvImprovementInfo& imp);
 
 	// Super Forts *canal* *choke*
@@ -377,6 +377,9 @@ public:
 	int getCultureRateThisTurn(const PlayerTypes ePlayer) const;
 	int getCultureRateLastTurn(const PlayerTypes ePlayer) const;
 
+	void setInCultureRangeOfCityByPlayer(const PlayerTypes ePlayer);
+	bool isInCultureRangeOfCityByPlayer(const PlayerTypes ePlayer) const;
+
 protected:
 	CvGameObjectPlot m_GameObject;
 
@@ -390,6 +393,8 @@ protected:
 
 	std::vector<std::pair<PlayerTypes, int> > m_cultureRatesThisTurn;
 	std::vector<std::pair<PlayerTypes, int> > m_cultureRatesLastTurn;
+	std::vector<PlayerTypes> m_influencedByCityByPlayerLastTurn;
+	std::vector<PlayerTypes> m_influencedByCityByPlayer;
 
 public:
 	PlayerTypes calculateCulturalOwner(bool bCountLastTurn = true) const;
@@ -914,7 +919,6 @@ protected:
 	short m_iFeatureVariety;
 	short m_iOwnershipDuration;
 	short m_iUpgradeProgress;
-	short m_iForceUnownedTimer; // SAVEBREAK remove
 	short m_iCityRadiusCount;
 	int m_iRiverID;
 	short m_iMinOriginalStartDist;
@@ -1013,7 +1017,6 @@ protected:
 
 	CvPlotBuilder* m_pPlotBuilder; // builds bonuses and improvements
 
-	char** m_apaiCultureRangeCities; // SAVEBREAK remove
 	short** m_apaiInvisibleVisibilityCount;
 
 	/* Koshling - need to cache presence of mountain leaders in mountain plots so that CanMoveThrough calculations don't get bogged down searching unit stacks.

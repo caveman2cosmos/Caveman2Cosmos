@@ -35,8 +35,8 @@ def InitCoordinatesDictionary():
 		coords.append(GeographicalCoordinate("CIVILIZATION_CANADA", 45.389, -75.681))
 	if (GC.getInfoTypeForString("CIVILIZATION_TILLIKUM", True) > -1):
 		coords.append(GeographicalCoordinate("CIVILIZATION_TILLIKUM", 53.265, -131.990))
-	if (GC.getInfoTypeForString("CIVILIZATION_UNITED_STATES", True) > -1):
-		coords.append(GeographicalCoordinate("CIVILIZATION_UNITED_STATES", 38.895, -77.037))
+	if (GC.getInfoTypeForString("CIVILIZATION_AMERICA", True) > -1):
+		coords.append(GeographicalCoordinate("CIVILIZATION_AMERICA", 38.895, -77.037))
 	if (GC.getInfoTypeForString("CIVILIZATION_CUBA", True) > -1):
 		coords.append(GeographicalCoordinate("CIVILIZATION_CUBA", 23.132, -82.367))
 	if (GC.getInfoTypeForString("CIVILIZATION_HAITI", True) > -1):
@@ -69,8 +69,8 @@ def InitCoordinatesDictionary():
 		coords.append(GeographicalCoordinate("CIVILIZATION_NAZCA", -14.880, -74.994))
 	if (GC.getInfoTypeForString("CIVILIZATION_ZAPOTEC", True) > -1):
 		coords.append(GeographicalCoordinate("CIVILIZATION_ZAPOTEC", 17.036, -96.784))
-	if (GC.getInfoTypeForString("CIVILIZATION_NATIVE_AMERICA", True) > -1):
-		coords.append(GeographicalCoordinate("CIVILIZATION_NATIVE_AMERICA", 39.883, 5.025))
+	if (GC.getInfoTypeForString("CIVILIZATION_SIOUX", True) > -1):
+		coords.append(GeographicalCoordinate("CIVILIZATION_SIOUX", 39.883, 5.025))
 	if (GC.getInfoTypeForString("CIVILIZATION_SIOUX", True) > -1):
 		coords.append(GeographicalCoordinate("CIVILIZATION_SIOUX", 43.75, -102.5))
 	if (GC.getInfoTypeForString("CIVILIZATION_LOWER_SIOUX", True) > -1):
@@ -327,8 +327,8 @@ def InitCoordinatesDictionary():
 		coords.append(GeographicalCoordinate("CIVILIZATION_PERSIA", 30.012, 52.408))
 	if (GC.getInfoTypeForString("CIVILIZATION_SUMERIA", True) > -1):
 		coords.append(GeographicalCoordinate("CIVILIZATION_SUMERIA", 31.322, 45.636))
-	if (GC.getInfoTypeForString("CIVILIZATION_VIKING", True) > -1):
-		coords.append(GeographicalCoordinate("CIVILIZATION_VIKING", 63.420, 10.393))
+	if (GC.getInfoTypeForString("CIVILIZATION_SCANDINAVIA", True) > -1):
+		coords.append(GeographicalCoordinate("CIVILIZATION_SCANDINAVIA", 63.420, 10.393))
 	if (GC.getInfoTypeForString("CIVILIZATION_NEANDERTHAL", True) > -1):
 		coords.append(GeographicalCoordinate("CIVILIZATION_NEANDERTHAL", 51.227, 6.951))
 	if (GC.getInfoTypeForString("CIVILIZATION_ARAWAK", True) > -1):

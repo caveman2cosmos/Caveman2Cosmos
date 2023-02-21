@@ -71,7 +71,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_PICKPOCKET</BuildingType>
+					<BuildingType>BUILDING_CRIME_PICKPOCKETING</BuildingType>
 					<iMinValue>125</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -91,7 +91,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_CARTHEIFT</BuildingType>
+					<BuildingType>BUILDING_CRIME_CAR_THEFT</BuildingType>
 					<iMinValue>500</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -106,7 +106,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_DRUNKDRIVING</BuildingType>
+					<BuildingType>BUILDING_CRIME_DRUNK_DRIVING</BuildingType>
 					<iMinValue>200</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -116,7 +116,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_BANKROBBERY</BuildingType>
+					<BuildingType>BUILDING_CRIME_BANK_ROBBERY</BuildingType>
 					<iMinValue>450</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -126,7 +126,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_MOB</BuildingType>
+					<BuildingType>BUILDING_CRIME_ORGANIZED_CRIME</BuildingType>
 					<iMinValue>1300</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -161,7 +161,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_EPIRACY</BuildingType>
+					<BuildingType>BUILDING_CRIME_ONLINE_PIRACY</BuildingType>
 					<iMinValue>125</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -181,42 +181,42 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_GENEFORGERY</BuildingType>
+					<BuildingType>BUILDING_CRIME_GENE_FORGERY</BuildingType>
 					<iMinValue>500</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_LITERING</BuildingType>
+					<BuildingType>BUILDING_CRIME_LITTERING</BuildingType>
 					<iMinValue>75</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_MONEYLAUNDERING</BuildingType>
+					<BuildingType>BUILDING_CRIME_MONEY_LAUNDERING</BuildingType>
 					<iMinValue>375</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_TRESSPASSING</BuildingType>
+					<BuildingType>BUILDING_CRIME_TRESPASSING</BuildingType>
 					<iMinValue>175</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_HATECRIME</BuildingType>
+					<BuildingType>BUILDING_CRIME_HATE_CRIME</BuildingType>
 					<iMinValue>350</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_ASIMOV</BuildingType>
+					<BuildingType>BUILDING_CRIME_ASIMOV_TAMPERING</BuildingType>
 					<iMinValue>1000</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_BRAINWASHING</BuildingType>
+					<BuildingType>BUILDING_CRIME_ILLEGAL_BRAINWASHING</BuildingType>
 					<iMinValue>1625</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_FALSEACCUSATIONS</BuildingType>
+					<BuildingType>BUILDING_CRIME_FALSE_ACCUSATIONS</BuildingType>
 					<iMinValue>75</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -226,17 +226,17 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_CHILDLABOR</BuildingType>
+					<BuildingType>BUILDING_CRIME_CHILD_LABOR</BuildingType>
 					<iMinValue>650</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_SEXUALHARASSMENT</BuildingType>
+					<BuildingType>BUILDING_CRIME_SEXUAL_HARASSMENT</BuildingType>
 					<iMinValue>200</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_MILITARYDESERTION</BuildingType>
+					<BuildingType>BUILDING_CRIME_MILITARY_DESERTION</BuildingType>
 					<iMinValue>585</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -246,32 +246,32 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_TOXICDUMPING</BuildingType>
+					<BuildingType>BUILDING_CRIME_ENVIRONMENTAL_DUMPING</BuildingType>
 					<iMinValue>800</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_CARBOMBING</BuildingType>
+					<BuildingType>BUILDING_CRIME_CAR_BOMBING</BuildingType>
 					<iMinValue>1125</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_SPORTSRIOTS</BuildingType>
+					<BuildingType>BUILDING_CRIME_SPORTS_RIOTS</BuildingType>
 					<iMinValue>350</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_PLANEHIJACKING</BuildingType>
+					<BuildingType>BUILDING_CRIME_AIRCRAFT_HIJACKING</BuildingType>
 					<iMinValue>1300</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_GUNRAMPAGE</BuildingType>
+					<BuildingType>BUILDING_CRIME_GUN_RAMPAGE</BuildingType>
 					<iMinValue>850</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_TIMELINETAMPERING</BuildingType>
+					<BuildingType>BUILDING_CRIME_TIMELINE_TAMPERING</BuildingType>
 					<iMinValue>1950</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -281,7 +281,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_SCHOOLSHOOTING</BuildingType>
+					<BuildingType>BUILDING_CRIME_SCHOOL_SHOOTINGS</BuildingType>
 					<iMinValue>980</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -291,17 +291,17 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_DOMESTICVIOLENCE</BuildingType>
+					<BuildingType>BUILDING_CRIME_DOMESTIC_VIOLENCE</BuildingType>
 					<iMinValue>315</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_MEDICALFRAUD</BuildingType>
+					<BuildingType>BUILDING_CRIME_MEDICAL_FRAUD</BuildingType>
 					<iMinValue>710</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_INTERNETFRAUD</BuildingType>
+					<BuildingType>BUILDING_CRIME_INTERNET_FRAUD</BuildingType>
 					<iMinValue>250</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -311,32 +311,32 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_ANIMALABUSE</BuildingType>
+					<BuildingType>BUILDING_CRIME_ANIMAL_ABUSE</BuildingType>
 					<iMinValue>250</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_ELDERABUSE</BuildingType>
+					<BuildingType>BUILDING_CRIME_ELDER_ABUSE</BuildingType>
 					<iMinValue>300</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_SECTARIANVIOLENCE</BuildingType>
+					<BuildingType>BUILDING_CRIME_SECTARIAN_VIOLENCE</BuildingType>
 					<iMinValue>1750</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_DRUGCARTELS</BuildingType>
+					<BuildingType>BUILDING_CRIME_DRUG_CARTELS</BuildingType>
 					<iMinValue>1450</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_GANGWARFARE</BuildingType>
+					<BuildingType>BUILDING_CRIME_GANG_WARFARE</BuildingType>
 					<iMinValue>1100</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_HUMANTRAFFICKING</BuildingType>
+					<BuildingType>BUILDING_CRIME_HUMAN_TRAFFICKING</BuildingType>
 					<iMinValue>1000</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -346,12 +346,12 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_JAILBREAK</BuildingType>
+					<BuildingType>BUILDING_CRIME_PRISON_BREAKOUTS</BuildingType>
 					<iMinValue>900</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_UNLICENSEDCLONING</BuildingType>
+					<BuildingType>BUILDING_CRIME_UNLICENSED_CLONING</BuildingType>
 					<iMinValue>1075</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -366,17 +366,17 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_WEAPONSTRAFFICKING</BuildingType>
+					<BuildingType>BUILDING_CRIME_WEAPONS_TRAFFICKING</BuildingType>
 					<iMinValue>800</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_ARMEDCOMMUNITIES</BuildingType>
+					<BuildingType>BUILDING_CRIME_ARMED_COMMUNITIES</BuildingType>
 					<iMinValue>650</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_ORGANTRADE</BuildingType>
+					<BuildingType>BUILDING_CRIME_ORGAN_TRAFFICKING</BuildingType>
 					<iMinValue>580</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -386,32 +386,32 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_BLACKMARKETS</BuildingType>
+					<BuildingType>BUILDING_CRIME_BLACK_MARKETS</BuildingType>
 					<iMinValue>425</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_IDENTITYTHEFT</BuildingType>
+					<BuildingType>BUILDING_CRIME_IDENTITY_THEFT</BuildingType>
 					<iMinValue>350</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_RACKETEERTING</BuildingType>
+					<BuildingType>BUILDING_CRIME_RACKETEERING</BuildingType>
 					<iMinValue>600</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_INSIDERTRADING</BuildingType>
+					<BuildingType>BUILDING_CRIME_INSIDER_TRADING</BuildingType>
 					<iMinValue>325</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_TAXEVASION</BuildingType>
+					<BuildingType>BUILDING_CRIME_TAX_EVASION</BuildingType>
 					<iMinValue>290</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_ILLEGALIMMIGRATION</BuildingType>
+					<BuildingType>BUILDING_CRIME_ILLEGAL_IMMIGRATION</BuildingType>
 					<iMinValue>225</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -426,7 +426,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_INSURANCEFRAUD</BuildingType>
+					<BuildingType>BUILDING_CRIME_INSURANCE_FRAUD</BuildingType>
 					<iMinValue>400</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -436,57 +436,57 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_WELFAREFRAUD</BuildingType>
+					<BuildingType>BUILDING_CRIME_WELFARE_FRAUD</BuildingType>
 					<iMinValue>260</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_PUBLICINTOXICATION</BuildingType>
+					<BuildingType>BUILDING_CRIME_PUBLIC_INTOXICATION</BuildingType>
 					<iMinValue>50</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_UNSANCTIONED_BANDITS_HIDEOUT1</BuildingType>
+					<BuildingType>BUILDING_THIEVES_HIDEOUT_UNSANCTIONED</BuildingType>
 					<iMinValue>500</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_UNSANCTIONED_BANDITS_HIDEOUT2</BuildingType>
+					<BuildingType>BUILDING_ROGUES_HIDEOUT_UNSANCTIONED</BuildingType>
 					<iMinValue>1000</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_UNSANCTIONED_BANDITS_HIDEOUT3</BuildingType>
+					<BuildingType>BUILDING_BURGLARS_HIDEOUT_UNSANCTIONED</BuildingType>
 					<iMinValue>1600</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_UNSANCTIONED_ASSASSINS_DEN</BuildingType>
+					<BuildingType>BUILDING_ASSASSINS_DEN_UNSANCTIONED</BuildingType>
 					<iMinValue>1000</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_UNSANCTIONED_LOANSHARK</BuildingType>
+					<BuildingType>BUILDING_LOAN_SHARK_UNSANCTIONED</BuildingType>
 					<iMinValue>800</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_UNSANCTIONED_CONSPIRATORS_HIDEOUT</BuildingType>
+					<BuildingType>BUILDING_CONSPIRATORS_HIDEOUT_UNSANCTIONED</BuildingType>
 					<iMinValue>1200</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_UNSANCTIONED_MOB_STOREFRONT</BuildingType>
+					<BuildingType>BUILDING_MOB_STOREFRONT_UNSANCTIONED</BuildingType>
 					<iMinValue>2200</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_UNSANCTIONED_MOTORCYCLE_CLUB</BuildingType>
+					<BuildingType>BUILDING_MOTORCYCLE_CLUB_UNSANCTIONED</BuildingType>
 					<iMinValue>2000</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_UNSANCTIONED_BLACK_HAT_HIDEOUT</BuildingType>
+					<BuildingType>BUILDING_BLACK_HAT_HIDEOUT_UNSANCTIONED</BuildingType>
 					<iMinValue>2500</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -606,62 +606,62 @@
 			</PropertyManipulators>
 			<PropertyBuildings>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_GROUNDWATER1</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_MINOR_GROUNDWATER_POLLUTION</BuildingType>
 					<iMinValue>450</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_GROUNDWATER2</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_MODERATE_GROUNDWATER_POLLUTION</BuildingType>
 					<iMinValue>900</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_GROUNDWATER3</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_MAJOR_GROUNDWATER_POLLUTION</BuildingType>
 					<iMinValue>1400</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_RIVER1</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_MINOR_RIVER_POLLUTION</BuildingType>
 					<iMinValue>550</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_RIVER2</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_MODERATE_RIVER_POLLUTION</BuildingType>
 					<iMinValue>1000</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_RIVER3</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_MAJOR_RIVER_POLLUTION</BuildingType>
 					<iMinValue>1500</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_COAST1</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_MINOR_COASTAL_POLLUTION</BuildingType>
 					<iMinValue>650</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_COAST2</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_MODERATE_COASTAL_POLLUTION</BuildingType>
 					<iMinValue>1100</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_COAST3</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_MAJOR_COASTAL_POLLUTION</BuildingType>
 					<iMinValue>1600</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_REDTIDE</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_RED_TIDE</BuildingType>
 					<iMinValue>750</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_REEFBLEACHING</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_REEF_BLEACHING</BuildingType>
 					<iMinValue>1200</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_TOXICHYDROSPHERE</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_TOXIC_HYDROSPHERE</BuildingType>
 					<iMinValue>1800</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -760,62 +760,62 @@
 			</PropertyManipulators>
 			<PropertyBuildings>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_SMOG1</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_LIGHT_SMOG</BuildingType>
 					<iMinValue>400</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_SMOG2</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_MODERATE_SMOG</BuildingType>
 					<iMinValue>850</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_SMOG3</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_HEAVY_SMOG</BuildingType>
 					<iMinValue>1300</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_GLOBALWARMING1</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_MINOR_GLOBAL_WARMING</BuildingType>
 					<iMinValue>700</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_GLOBALWARMING2</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_MODERATE_GLOBAL_WARMING</BuildingType>
 					<iMinValue>1200</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_GLOBALWARMING3</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_MAJOR_GLOBAL_WARMING</BuildingType>
 					<iMinValue>1750</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_OZONE1</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_MINOR_OZONE_DEPLETION</BuildingType>
 					<iMinValue>550</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_OZONE2</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_MODERATE_OZONE_DEPLETION</BuildingType>
 					<iMinValue>1100</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_OZONE3</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_MAJOR_OZONE_DEPLETION</BuildingType>
 					<iMinValue>1650</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_ACIDRAIN</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_ACID_RAIN</BuildingType>
 					<iMinValue>950</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_TOXICATMOSPHERE</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_TOXIC_ATMOSPHERE</BuildingType>
 					<iMinValue>1450</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_BLACKENEDSKIES</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_BLACKENED_SKIES</BuildingType>
 					<iMinValue>1950</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -897,7 +897,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_DISEASE_BIRDFLU</BuildingType>
+					<BuildingType>BUILDING_DISEASE_BIRD_FLU</BuildingType>
 					<iMinValue>225</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -907,7 +907,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_DISEASE_COMMONCOLD</BuildingType>
+					<BuildingType>BUILDING_DISEASE_COMMON_COLD</BuildingType>
 					<iMinValue>10</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -922,7 +922,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_DISEASE_HIV</BuildingType>
+					<BuildingType>BUILDING_DISEASE_SYPHILIS</BuildingType>
 					<iMinValue>550</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -942,12 +942,12 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_DISEASE_PLAGUE</BuildingType>
+					<BuildingType>BUILDING_DISEASE_BUBONIC_PLAGUE</BuildingType>
 					<iMinValue>900</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_DISEASE_SCARLETFEAVER</BuildingType>
+					<BuildingType>BUILDING_DISEASE_SCARLET_FEVER</BuildingType>
 					<iMinValue>125</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -962,12 +962,12 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_DISEASE_SWINEFLU</BuildingType>
+					<BuildingType>BUILDING_DISEASE_SWINE_FLU</BuildingType>
 					<iMinValue>200</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_DISEASE_TYPHOIDFEAVER</BuildingType>
+					<BuildingType>BUILDING_DISEASE_TYPHOID_FEVER</BuildingType>
 					<iMinValue>500</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -1056,262 +1056,262 @@
 			</PropertyManipulators>
 			<PropertyBuildings>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_PLUS1</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_INTUITIVE</BuildingType>
 					<iMinValue>100</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_PLUS2</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_BRILLIANT</BuildingType>
 					<iMinValue>250</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_PLUS3</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_CULTIVATED</BuildingType>
 					<iMinValue>500</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_PLUS4</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_KNOWLEDGEABLE</BuildingType>
 					<iMinValue>1000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_PLUS5</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_ACUMEN</BuildingType>
 					<iMinValue>2500</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_PLUS6</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_SCHOLARLY</BuildingType>
 					<iMinValue>5000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_PLUS7</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_ENLIGHTENED</BuildingType>
 					<iMinValue>7500</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_PLUS8</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_COSMOPOLITAN</BuildingType>
 					<iMinValue>10000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_PLUS9</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_WUNDERKIND</BuildingType>
 					<iMinValue>15000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_PLUS10</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_MASTERMIND</BuildingType>
 					<iMinValue>20000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_PLUS11</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_GENIUS</BuildingType>
 					<iMinValue>25000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_PLUS12</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_WISE</BuildingType>
 					<iMinValue>30000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_PLUS13</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_OMNISCIENCE</BuildingType>
 					<iMinValue>35000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_MINUS1</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_UNAWARE</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-100</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_MINUS2</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_FOOLISH</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-250</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_MINUS3</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_SENSELESS</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-500</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_MINUS4</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_ABSURD</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-1000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_MINUS5</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_MORONIC</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-2500</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_MINUS6</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_FARCICAL</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-5000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_MINUS7</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_DIMWITTED</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-7500</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_MINUS8</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_RIDICULOUS</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-10000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_MINUS9</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_PREPOSTEROUS</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-15000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_MINUS10</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_IDIOCRACY</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-20000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_MINUS11</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_IGNORANCE</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-25000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_MINUS12</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_BEWILDERED</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-30000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_MINUS13</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_MINDLESS</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-35000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_PLUS1</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_1</BuildingType>
 					<iMinValue>100</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_PLUS2</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_2</BuildingType>
 					<iMinValue>250</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_PLUS3</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_3</BuildingType>
 					<iMinValue>500</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_PLUS4</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_4</BuildingType>
 					<iMinValue>1000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_PLUS5</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_5</BuildingType>
 					<iMinValue>2500</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_PLUS6</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_6</BuildingType>
 					<iMinValue>5000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_PLUS7</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_7</BuildingType>
 					<iMinValue>7500</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_PLUS8</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_8</BuildingType>
 					<iMinValue>10000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_PLUS9</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_9</BuildingType>
 					<iMinValue>15000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_PLUS10</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_10</BuildingType>
 					<iMinValue>20000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_PLUS11</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_11</BuildingType>
 					<iMinValue>25000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_PLUS12</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_12</BuildingType>
 					<iMinValue>30000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_PLUS13</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_13</BuildingType>
 					<iMinValue>35000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_MINUS1</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_1</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-100</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_MINUS2</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_2</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-250</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_MINUS3</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_3</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-500</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_MINUS4</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_4</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-1000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_MINUS5</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_5</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-2500</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_MINUS6</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_6</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-5000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_MINUS7</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_7</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-7500</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_MINUS8</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_8</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-10000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_MINUS9</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_9</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-15000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_MINUS10</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_10</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-20000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_MINUS11</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_11</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-25000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_MINUS12</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_12</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-30000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_MINUS13</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_13</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-35000</iMaxValue>
 				</PropertyBuilding>
@@ -1349,52 +1349,52 @@
 			</PropertyManipulators>
 			<PropertyBuildings>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_TOURISM_PLUS1</BuildingType>
+					<BuildingType>BUILDING_TOURISM_LEVEL_1</BuildingType>
 					<iMinValue>10</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_TOURISM_PLUS2</BuildingType>
+					<BuildingType>BUILDING_TOURISM_LEVEL_2</BuildingType>
 					<iMinValue>25</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_TOURISM_PLUS3</BuildingType>
+					<BuildingType>BUILDING_TOURISM_LEVEL_3</BuildingType>
 					<iMinValue>50</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_TOURISM_PLUS4</BuildingType>
+					<BuildingType>BUILDING_TOURISM_LEVEL_4</BuildingType>
 					<iMinValue>100</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_TOURISM_PLUS5</BuildingType>
+					<BuildingType>BUILDING_TOURISM_LEVEL_5</BuildingType>
 					<iMinValue>250</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_TOURISM_PLUS6</BuildingType>
+					<BuildingType>BUILDING_TOURISM_LEVEL_6</BuildingType>
 					<iMinValue>500</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_TOURISM_PLUS7</BuildingType>
+					<BuildingType>BUILDING_TOURISM_LEVEL_7</BuildingType>
 					<iMinValue>750</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_TOURISM_PLUS8</BuildingType>
+					<BuildingType>BUILDING_TOURISM_LEVEL_8</BuildingType>
 					<iMinValue>1000</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_TOURISM_PLUS9</BuildingType>
+					<BuildingType>BUILDING_TOURISM_LEVEL_9</BuildingType>
 					<iMinValue>1500</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_TOURISM_PLUS10</BuildingType>
+					<BuildingType>BUILDING_TOURISM_LEVEL_10</BuildingType>
 					<iMinValue>3000</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>

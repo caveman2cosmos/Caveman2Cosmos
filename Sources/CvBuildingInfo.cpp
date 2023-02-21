@@ -497,6 +497,8 @@ int* CvBuildingInfo::getCommercePerPopChangeArray() const
 int CvBuildingInfo::getCommerceChangeDoubleTime(int i) const
 {
 	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i);
+	if (i == COMMERCE_CULTURE && GC.getGame().isOption(GAMEOPTION_CULTURE_EQUILIBRIUM))
+		return m_piCommerceChangeDoubleTime ? m_piCommerceChangeDoubleTime[i] : 1000;
 	return m_piCommerceChangeDoubleTime ? m_piCommerceChangeDoubleTime[i] : 0;
 }
 
@@ -908,7 +910,7 @@ const char* CvBuildingInfo::getMovie() const
 
 int CvBuildingInfo::getNoEntryDefenseLevel() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_REALISTIC_SIEGE))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_REALISTIC_SIEGE))
 	{
 		return 0;
 	}
@@ -1116,7 +1118,7 @@ int CvBuildingInfo::getRiverDefensePenalty() const
 
 int CvBuildingInfo::getLocalRepel() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -1125,7 +1127,7 @@ int CvBuildingInfo::getLocalRepel() const
 
 int CvBuildingInfo::getMinDefense() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_REALISTIC_SIEGE))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_REALISTIC_SIEGE))
 	{
 		return 0;
 	}
@@ -1154,7 +1156,7 @@ int CvBuildingInfo::getDamageToAttacker() const
 
 int CvBuildingInfo::getMaxPopulationAllowed() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_MAXIMUM_POPULATION))
+	if (!GC.getGame().isOption(GAMEOPTION_EXP_MAXIMUM_POPULATION))
 	{
 		return -1;
 	}
@@ -1163,7 +1165,7 @@ int CvBuildingInfo::getMaxPopulationAllowed() const
 
 int CvBuildingInfo::getMaxPopulationChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_MAXIMUM_POPULATION))
+	if (!GC.getGame().isOption(GAMEOPTION_EXP_MAXIMUM_POPULATION))
 	{
 		return 0;
 	}
@@ -1292,7 +1294,7 @@ int CvBuildingInfo::getNumUnitCombatRepelModifiers() const
 
 int CvBuildingInfo::getUnitCombatRepelModifier(int iUnitCombat, bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_COMBAT_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -1314,7 +1316,7 @@ int CvBuildingInfo::getNumUnitCombatRepelAgainstModifiers() const
 
 int CvBuildingInfo::getUnitCombatRepelAgainstModifier(int iUnitCombat, bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_COMBAT_HEART_OF_WAR))
 	{
 		return 0;
 	}

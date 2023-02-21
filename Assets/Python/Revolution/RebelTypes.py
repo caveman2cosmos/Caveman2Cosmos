@@ -48,7 +48,7 @@ def setup():
 	iMali			= GC.getInfoTypeForString('CIVILIZATION_MALI')
 	iMaya			= GC.getInfoTypeForString('CIVILIZATION_MAYA')
 	iMongol			= GC.getInfoTypeForString('CIVILIZATION_MONGOL')
-	iNativeAmerica	= GC.getInfoTypeForString('CIVILIZATION_NATIVE_AMERICA')
+	iNativeAmerica	= GC.getInfoTypeForString('CIVILIZATION_SIOUX')
 	iNetherlands	= GC.getInfoTypeForString('CIVILIZATION_NETHERLANDS')
 	iOttoman		= GC.getInfoTypeForString('CIVILIZATION_OTTOMAN')
 	iPersia			= GC.getInfoTypeForString('CIVILIZATION_PERSIA')
@@ -58,8 +58,8 @@ def setup():
 	iSiam			= GC.getInfoTypeForString('CIVILIZATION_SIAM')
 	iSpain			= GC.getInfoTypeForString('CIVILIZATION_SPAIN')
 	iSumeria		= GC.getInfoTypeForString('CIVILIZATION_SUMERIA')
-	iUnitedStates	= GC.getInfoTypeForString('CIVILIZATION_UNITED_STATES')
-	iViking			= GC.getInfoTypeForString('CIVILIZATION_VIKING')
+	iUnitedStates	= GC.getInfoTypeForString('CIVILIZATION_AMERICA')
+	iViking			= GC.getInfoTypeForString('CIVILIZATION_SCANDINAVIA')
 	iZulu			= GC.getInfoTypeForString('CIVILIZATION_ZULU')
 
 # Format is:

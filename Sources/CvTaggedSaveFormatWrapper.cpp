@@ -1066,6 +1066,17 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 			m_stream->WriteString(info.getType());
 		}
 		break;
+	case REMAPPED_CLASS_TYPE_MAPS:
+		entry.numClasses = NUM_MAPS;
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
+		for (int i = 0; i < entry.numClasses; i++)
+		{
+			const CvMapInfo& info = GC.getMapInfo((MapTypes)i);
+
+			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
+			m_stream->WriteString(info.getType());
+		}
+		break;
 	default:
 		FErrorMsg("Unexpected RemappedClassType");
 		break;
@@ -1125,6 +1136,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTables()
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_COMMERCES);
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_DOMAINS);
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_CATEGORIES);
+	WriteClassMappingTable(REMAPPED_CLASS_TYPE_MAPS);
 }
 
 //	How many members of a given class type were present at save time?
@@ -1265,6 +1277,9 @@ CvTaggedSaveFormatWrapper::getNumClassEnumValues(RemappedClassType classType) co
 			break;
 		case REMAPPED_CLASS_TYPE_DOMAINS:
 			result = NUM_DOMAIN_TYPES;
+			break;
+		case REMAPPED_CLASS_TYPE_MAPS:
+			result = NUM_MAPS;
 			break;
 		default:
 			FErrorMsg("Unexpected RemappedClassType");

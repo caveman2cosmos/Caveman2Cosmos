@@ -6,7 +6,7 @@
 <Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\Xml\Schema\Caveman2Cosmos.xsd">
 	<BuildingArtInfos>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ATOMPUNK_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_ATOMPUNK</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -36,7 +36,7 @@
 			<Button>art/pushbuttonautomat.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MID_CLASS_SKYPAD_APARTMENTS</Type>
+			<Type>ART_DEF_BUILDING_HOUSING_MID_CLASS_SKYPAD_APARTMENTS</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -106,7 +106,7 @@
 			<Button>Art/Interface/Buttons/National_Wonders/venture_industries.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GOOD_ATOM</Type>
+			<Type>ART_DEF_BUILDING_POWER_NUCLEAR</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>

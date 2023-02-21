@@ -368,7 +368,7 @@ void CvStatistics::setVictory( TeamTypes eWinner, VictoryTypes eVictory )
 		{
 			// DAN: They could be eliminated and still watching the game and get a win!
 			// How to prevent this?
-			if ( (GET_PLAYER((PlayerTypes)i).isHuman()) && (GET_PLAYER((PlayerTypes)i).getTeam() == eWinner) )
+			if (GET_PLAYER((PlayerTypes)i).isHumanPlayer() && GET_PLAYER((PlayerTypes)i).getTeam() == eWinner)
 			{
 				// If this guy is still alive and on the winning team, record the victory
 				getPlayerRecord(i)->setVictory(eVictory);

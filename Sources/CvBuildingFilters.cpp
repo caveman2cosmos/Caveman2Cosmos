@@ -203,13 +203,13 @@ bool BuildingFilterIsMilitary::isFilteredBuilding(const CvPlayer *pPlayer, CvCit
 bool BuildingFilterIsCityDefense::isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const
 {
 	const CvBuildingInfo& buildingInfo = GC.getBuildingInfo(eBuilding);
-	if (GC.getGame().isOption(GAMEOPTION_SAD))
+	if (GC.getGame().isOption(GAMEOPTION_COMBAT_SURROUND_DESTROY))
 	{
 		if (buildingInfo.getLocalDynamicDefense() > 0)
 			return true;
 	}
 #ifdef STRENGTH_IN_NUMBERS
-	if (GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (GC.getGame().isOption(GAMEOPTION_COMBAT_STRENGTH_IN_NUMBERS))
 	{
 		if(buildingInfo.getFrontSupportPercentModifier() > 0
 		|| buildingInfo.getShortRangeSupportPercentModifier() > 0
