@@ -110,12 +110,12 @@ class CvMainInterface:
 		self.bNetworkMP		= GAME.isNetworkMultiPlayer()
 		self.bMultiPlayer	= GAME.isGameMultiPlayer()
 		# Cache Game Options
-		self.GO_REVOLUTION			= GAME.isOption(GameOptionTypes.GAMEOPTION_REVOLUTION)
-		self.GO_PICK_RELIGION		= GAME.isOption(GameOptionTypes.GAMEOPTION_PICK_RELIGION)
-		self.GO_SIZE_MATTERS		= GAME.isOption(GameOptionTypes.GAMEOPTION_SIZE_MATTERS)
-		self.GO_WIN_FOR_LOSING		= GAME.isOption(GameOptionTypes.GAMEOPTION_WIN_FOR_LOSING)
+		self.GO_REVOLUTION			= GAME.isOption(GameOptionTypes.GAMEOPTION_UNSUPPORTED_REVOLUTION)
+		self.GO_PICK_RELIGION		= GAME.isOption(GameOptionTypes.GAMEOPTION_RELIGION_PICK)
+		self.GO_SIZE_MATTERS		= GAME.isOption(GameOptionTypes.GAMEOPTION_COMBAT_SIZE_MATTERS)
+		self.GO_WIN_FOR_LOSING		= GAME.isOption(GameOptionTypes.GAMEOPTION_TECH_WIN_FOR_LOSING)
 		self.GO_TECH_DIFFUSION   	= GAME.isOption(GameOptionTypes.GAMEOPTION_TECH_DIFFUSION)
-		self.GO_ONE_CITY_CHALLENGE	= GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE)
+		self.GO_ONE_CITY_CHALLENGE	= GAME.isOption(GameOptionTypes.GAMEOPTION_CHALLENGE_ONE_CITY)
 		# First pass initialization.
 		if self.bInitialize:
 			import DebugUtils

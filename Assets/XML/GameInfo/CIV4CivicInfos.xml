@@ -531,15 +531,15 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_METAMATERIAL_WALL</BuildingType>
+					<BuildingType>BUILDING_METAMATERIAL_WALLS</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALL</BuildingType>
+					<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALLS</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
+					<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALLS</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -571,7 +571,7 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_SPANISH_CITADEL</BuildingType>
+					<BuildingType>BUILDING_CITADEL</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -579,11 +579,11 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_ARROW_SLITS</BuildingType>
+					<BuildingType>BUILDING_BALISTRARIA</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_SIEGE_TOWERS</BuildingType>
+					<BuildingType>BUILDING_BALLISTA_TURRET</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -591,11 +591,11 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_KEEP</BuildingType>
+					<BuildingType>BUILDING_CASTLE_KEEP</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_HEAVY_GATES</BuildingType>
+					<BuildingType>BUILDING_CASTLE_GATEHOUSE</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -631,7 +631,7 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_VIRTUAL_SCHOOL</BuildingType>
+					<BuildingType>BUILDING_HOLOGRAPHIC_SCHOOL</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
@@ -927,7 +927,7 @@
 			<BuildingHealthChanges/>
 			<BuildingCommerceModifiers>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_STATUE_OF_ZEUS</BuildingType>
+					<BuildingType>BUILDING_THE_STATUE_OF_ZEUS</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>20</iCommerce>
@@ -936,7 +936,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_MESOAMERICAN_SHRINE</BuildingType>
+					<BuildingType>BUILDING_TEOTIHUACAN</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>10</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -944,7 +944,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_EGYPT_MYTH_SHRINE</BuildingType>
+					<BuildingType>BUILDING_THE_KARNAK_TEMPLE_COMPLEX</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -952,7 +952,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_ZOROASTRIAN_SHRINE</BuildingType>
+					<BuildingType>BUILDING_PIR_E_SABZ</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>20</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -960,7 +960,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_TAOIST_SHRINE</BuildingType>
+					<BuildingType>BUILDING_THE_DAI_MIAO</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>20</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -968,15 +968,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_CONFUCIAN_SHRINE</BuildingType>
-					<CommerceModifiers>
-						<iCommerce>20</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>10</iCommerce>
-					</CommerceModifiers>
-				</BuildingCommerceModifier>
-				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_BUDDHIST_SHRINE</BuildingType>
+					<BuildingType>BUILDING_THE_KONG_MIAO</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>20</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -984,7 +976,15 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_HINDU_SHRINE</BuildingType>
+					<BuildingType>BUILDING_THE_MAHABODHI</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>20</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_THE_KASHI_VISHWANATH</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>20</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -992,7 +992,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_ISLAMIC_SHRINE</BuildingType>
+					<BuildingType>BUILDING_THE_MASJID_AL_HARAM</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>20</iCommerce>
 						<iCommerce>5</iCommerce>
@@ -1000,7 +1000,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_CHRISTIAN_SHRINE</BuildingType>
+					<BuildingType>BUILDING_THE_CHURCH_OF_THE_NATIVITY</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>20</iCommerce>
 						<iCommerce>5</iCommerce>
@@ -1008,7 +1008,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_JEWISH_SHRINE</BuildingType>
+					<BuildingType>BUILDING_THE_TEMPLE_OF_SOLOMON</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>20</iCommerce>
 						<iCommerce>5</iCommerce>
@@ -1016,7 +1016,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_YORUBA_SHRINE</BuildingType>
+					<BuildingType>BUILDING_PATTAKY_OF_OLODUMARE</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -1024,7 +1024,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_VOODOO_SHRINE</BuildingType>
+					<BuildingType>BUILDING_THE_TOMB_OF_ANSYEN_BON</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -1032,23 +1032,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_TENGRI_SHRINE</BuildingType>
-					<CommerceModifiers>
-						<iCommerce>15</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
-					</CommerceModifiers>
-				</BuildingCommerceModifier>
-				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_SIKH_SHRINE</BuildingType>
-					<CommerceModifiers>
-						<iCommerce>15</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-					</CommerceModifiers>
-				</BuildingCommerceModifier>
-				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_SHINTO_SHRINE</BuildingType>
+					<BuildingType>BUILDING_KHAN_TENGRI</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -1056,15 +1040,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_SHAMAN_SHRINE</BuildingType>
-					<CommerceModifiers>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
-					</CommerceModifiers>
-				</BuildingCommerceModifier>
-				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_SCIENTOLOGY_SHRINE</BuildingType>
+					<BuildingType>BUILDING_THE_GOLDEN_TEMPLE</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -1072,15 +1048,15 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_RODNOVERY_SHRINE</BuildingType>
+					<BuildingType>BUILDING_THE_ISE_JINGU</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
+						<iCommerce>20</iCommerce>
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_NGAI_SHRINE</BuildingType>
+					<BuildingType>BUILDING_SPIRITS_ANSWER</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -1088,7 +1064,31 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_MORMON_SHRINE</BuildingType>
+					<BuildingType>BUILDING_SCIENTOLOGY_SEDE</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_ARKONA</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_OLDOINYO_NGAI</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>20</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_MORMAN_SHRINE</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>10</iCommerce>
@@ -1096,7 +1096,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_MESO_SHRINE</BuildingType>
+					<BuildingType>BUILDING_BABEL_TOWER</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -1104,7 +1104,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_JAINISM_SHRINE</BuildingType>
+					<BuildingType>BUILDING_STATUE_OF_GOMATESHWARA</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -1112,7 +1112,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_DRUID_SHRINE</BuildingType>
+					<BuildingType>BUILDING_NATURE_ANSWER</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -1120,7 +1120,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_CAODAI_SHRINE</BuildingType>
+					<BuildingType>BUILDING_GREAT_TEMPLE_TAY_NINH</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -1128,7 +1128,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_CANAANISM_SHRINE</BuildingType>
+					<BuildingType>BUILDING_CANAANITE_SHRINE</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -1136,7 +1136,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_BAHAI_SHRINE</BuildingType>
+					<BuildingType>BUILDING_SHRINE_OF_BAB</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -1144,7 +1144,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_ASATRU_SHRINE</BuildingType>
+					<BuildingType>BUILDING_THE_ODINS_SANCTUARY</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -1152,7 +1152,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_ANDEAN_SHRINE</BuildingType>
+					<BuildingType>BUILDING_CORICANCHA</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -1308,7 +1308,7 @@
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_VIRTUAL_SCHOOL</BuildingType>
+					<BuildingType>BUILDING_HOLOGRAPHIC_SCHOOL</BuildingType>
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -1461,15 +1461,15 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_NATIONAL_SECURITY</BuildingType>
+					<BuildingType>BUILDING_SECURITY_BUREAU</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_WEAPON_FACTORY</BuildingType>
+					<BuildingType>BUILDING_AMMUNITIONS_WORKSHOP</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_AMMUNITION</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -1481,11 +1481,11 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_PENTAGON</BuildingType>
+					<BuildingType>BUILDING_THE_PENTAGON</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_ARC</BuildingType>
+					<BuildingType>BUILDING_ARC_DE_TRIOMPHE</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -2371,15 +2371,15 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_METAMATERIAL_WALL</BuildingType>
+					<BuildingType>BUILDING_METAMATERIAL_WALLS</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALL</BuildingType>
+					<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALLS</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
+					<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALLS</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -2602,7 +2602,7 @@
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_VIRTUAL_SCHOOL</BuildingType>
+					<BuildingType>BUILDING_HOLOGRAPHIC_SCHOOL</BuildingType>
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -2771,7 +2771,7 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_GREAT_PALACE</BuildingType>
+					<BuildingType>BUILDING_FORBIDDEN_PALACE</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
@@ -3159,7 +3159,7 @@
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+					<BuildingType>BUILDING_EFFECT_EMANCIPATION_PROCLAMATION</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -3210,7 +3210,7 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_CUSTOM_HOUSE</BuildingType>
+					<BuildingType>BUILDING_CUSTOMS_OFFICE</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -3655,7 +3655,7 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_AI_LAWYER</BuildingType>
+					<BuildingType>BUILDING_AI_LEGAL_SYSTEM</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -3742,7 +3742,7 @@
 			<SpecialistValids/>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_SOYLENT_GREEN_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_SOYLENT_GREEN</BuildingType>
 					<iHappinessChange>-5</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -3752,7 +3752,7 @@
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_SOYLENT_GREEN_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_SOYLENT_GREEN</BuildingType>
 					<iHealthChange>-4</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -4447,15 +4447,15 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_METAMATERIAL_WALL</BuildingType>
+					<BuildingType>BUILDING_METAMATERIAL_WALLS</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALL</BuildingType>
+					<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALLS</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
+					<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALLS</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -5990,11 +5990,11 @@
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_WEAPON_FACTORY</BuildingType>
+					<BuildingType>BUILDING_AMMUNITIONS_WORKSHOP</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_AMMUNITION</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -6006,7 +6006,7 @@
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_GLADIATOR_SCHOOL</BuildingType>
+					<BuildingType>BUILDING_GLADIATORIAL_SCHOOL</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -6014,7 +6014,7 @@
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_PENTAGON</BuildingType>
+					<BuildingType>BUILDING_THE_PENTAGON</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -6022,7 +6022,7 @@
 					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_TTWATCH_TOWER</BuildingType>
+					<BuildingType>BUILDING_WATCH_TOWER</BuildingType>
 					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -6042,7 +6042,7 @@
 					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_AUTOCANNON_BATTERY</BuildingType>
+					<BuildingType>BUILDING_AUTO_CANNON_BATTERY</BuildingType>
 					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -6058,11 +6058,11 @@
 					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_ANTIMATTER_BATTERY</BuildingType>
+					<BuildingType>BUILDING_ANTI_MATTER_BATTERY</BuildingType>
 					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_SIEGE_TOWERS</BuildingType>
+					<BuildingType>BUILDING_BALLISTA_TURRET</BuildingType>
 					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -6070,7 +6070,7 @@
 					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_ARC</BuildingType>
+					<BuildingType>BUILDING_ARC_DE_TRIOMPHE</BuildingType>
 					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -7269,7 +7269,7 @@
 			<SpecialistValids/>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_SHAMANHUT</BuildingType>
+					<BuildingType>BUILDING_SAGE</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -7304,7 +7304,7 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_NATIVE_AMERICA_TOTEM</BuildingType>
+					<BuildingType>BUILDING_TOTEM_POLE</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -7312,7 +7312,7 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_DICTATOR_MONUMENT</BuildingType>
+					<BuildingType>BUILDING_MONUMENT_OF_THE_DICTATOR</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -7324,7 +7324,7 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<BuildingType>BUILDING_HIGH_TECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
@@ -7480,7 +7480,7 @@
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_NATIVE_AMERICA_TOTEM</BuildingType>
+					<BuildingType>BUILDING_TOTEM_POLE</BuildingType>
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -7488,7 +7488,7 @@
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_DICTATOR_MONUMENT</BuildingType>
+					<BuildingType>BUILDING_MONUMENT_OF_THE_DICTATOR</BuildingType>
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -7504,11 +7504,11 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_GREAT_PALACE</BuildingType>
+					<BuildingType>BUILDING_FORBIDDEN_PALACE</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_GREAT_PYRAMID</BuildingType>
+					<BuildingType>BUILDING_THE_GREAT_PYRAMID</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -7520,11 +7520,11 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_MESOAMERICAN_MAGICIAN_PYRAMID</BuildingType>
+					<BuildingType>BUILDING_PYRAMID_OF_THE_MAGICIAN</BuildingType>
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<BuildingType>BUILDING_HIGH_TECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -7598,7 +7598,7 @@
 			<SpecialistValids/>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_ORACLE</BuildingType>
+					<BuildingType>BUILDING_THE_ORACLE</BuildingType>
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -7724,7 +7724,7 @@
 			</SpecialistValids>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_SANKORE</BuildingType>
+					<BuildingType>BUILDING_UNIVERSITY_OF_SANKORE</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -7761,7 +7761,7 @@
 			<Flavors/>
 			<BuildingCommerceModifiers>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_STATUE_OF_ZEUS</BuildingType>
+					<BuildingType>BUILDING_THE_STATUE_OF_ZEUS</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>15</iCommerce>
@@ -7770,39 +7770,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_MESOAMERICAN_SHRINE</BuildingType>
-					<CommerceModifiers>
-						<iCommerce>15</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
-					</CommerceModifiers>
-				</BuildingCommerceModifier>
-				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_EGYPT_MYTH_SHRINE</BuildingType>
-					<CommerceModifiers>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
-					</CommerceModifiers>
-				</BuildingCommerceModifier>
-				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_ZOROASTRIAN_SHRINE</BuildingType>
-					<CommerceModifiers>
-						<iCommerce>15</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-					</CommerceModifiers>
-				</BuildingCommerceModifier>
-				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_TAOIST_SHRINE</BuildingType>
-					<CommerceModifiers>
-						<iCommerce>15</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-					</CommerceModifiers>
-				</BuildingCommerceModifier>
-				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_CONFUCIAN_SHRINE</BuildingType>
+					<BuildingType>BUILDING_TEOTIHUACAN</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -7810,7 +7778,31 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_BUDDHIST_SHRINE</BuildingType>
+					<BuildingType>BUILDING_THE_KARNAK_TEMPLE_COMPLEX</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>20</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_PIR_E_SABZ</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_THE_DAI_MIAO</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_THE_KONG_MIAO</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -7818,55 +7810,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_HINDU_SHRINE</BuildingType>
-					<CommerceModifiers>
-						<iCommerce>15</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-					</CommerceModifiers>
-				</BuildingCommerceModifier>
-				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_ISLAMIC_SHRINE</BuildingType>
-					<CommerceModifiers>
-						<iCommerce>15</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-					</CommerceModifiers>
-				</BuildingCommerceModifier>
-				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_CHRISTIAN_SHRINE</BuildingType>
-					<CommerceModifiers>
-						<iCommerce>15</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-					</CommerceModifiers>
-				</BuildingCommerceModifier>
-				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_JEWISH_SHRINE</BuildingType>
-					<CommerceModifiers>
-						<iCommerce>15</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-					</CommerceModifiers>
-				</BuildingCommerceModifier>
-				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_YORUBA_SHRINE</BuildingType>
-					<CommerceModifiers>
-						<iCommerce>15</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-					</CommerceModifiers>
-				</BuildingCommerceModifier>
-				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_VOODOO_SHRINE</BuildingType>
-					<CommerceModifiers>
-						<iCommerce>15</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-					</CommerceModifiers>
-				</BuildingCommerceModifier>
-				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_TENGRI_SHRINE</BuildingType>
+					<BuildingType>BUILDING_THE_MAHABODHI</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -7874,7 +7818,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_SIKH_SHRINE</BuildingType>
+					<BuildingType>BUILDING_THE_KASHI_VISHWANATH</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -7882,7 +7826,47 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_SHINTO_SHRINE</BuildingType>
+					<BuildingType>BUILDING_THE_MASJID_AL_HARAM</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_THE_CHURCH_OF_THE_NATIVITY</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_THE_TEMPLE_OF_SOLOMON</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_PATTAKY_OF_OLODUMARE</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_THE_TOMB_OF_ANSYEN_BON</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_KHAN_TENGRI</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -7890,7 +7874,15 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_SHAMAN_SHRINE</BuildingType>
+					<BuildingType>BUILDING_THE_GOLDEN_TEMPLE</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_THE_ISE_JINGU</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -7898,23 +7890,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_SCIENTOLOGY_SHRINE</BuildingType>
-					<CommerceModifiers>
-						<iCommerce>15</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-					</CommerceModifiers>
-				</BuildingCommerceModifier>
-				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_RODNOVERY_SHRINE</BuildingType>
-					<CommerceModifiers>
-						<iCommerce>15</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-					</CommerceModifiers>
-				</BuildingCommerceModifier>
-				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_NGAI_SHRINE</BuildingType>
+					<BuildingType>BUILDING_SPIRITS_ANSWER</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -7922,7 +7898,31 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_MORMON_SHRINE</BuildingType>
+					<BuildingType>BUILDING_SCIENTOLOGY_SEDE</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_ARKONA</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_OLDOINYO_NGAI</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>20</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_MORMAN_SHRINE</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>10</iCommerce>
@@ -7930,7 +7930,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_MESO_SHRINE</BuildingType>
+					<BuildingType>BUILDING_BABEL_TOWER</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -7938,7 +7938,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_JAINISM_SHRINE</BuildingType>
+					<BuildingType>BUILDING_STATUE_OF_GOMATESHWARA</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -7946,15 +7946,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_DRUID_SHRINE</BuildingType>
-					<CommerceModifiers>
-						<iCommerce>15</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
-					</CommerceModifiers>
-				</BuildingCommerceModifier>
-				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_CAODAI_SHRINE</BuildingType>
+					<BuildingType>BUILDING_NATURE_ANSWER</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -7962,7 +7954,15 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_CANAANISM_SHRINE</BuildingType>
+					<BuildingType>BUILDING_GREAT_TEMPLE_TAY_NINH</BuildingType>
+					<CommerceModifiers>
+						<iCommerce>15</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>20</iCommerce>
+					</CommerceModifiers>
+				</BuildingCommerceModifier>
+				<BuildingCommerceModifier>
+					<BuildingType>BUILDING_CANAANITE_SHRINE</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -7970,7 +7970,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_BAHAI_SHRINE</BuildingType>
+					<BuildingType>BUILDING_SHRINE_OF_BAB</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -7978,7 +7978,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_ASATRU_SHRINE</BuildingType>
+					<BuildingType>BUILDING_THE_ODINS_SANCTUARY</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -7986,7 +7986,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_ANDEAN_SHRINE</BuildingType>
+					<BuildingType>BUILDING_CORICANCHA</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -8200,7 +8200,7 @@
 			<SpecialistValids/>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CRUSADE</BuildingType>
+					<BuildingType>BUILDING_KINGS_CRUSADE</BuildingType>
 					<iHappinessChange>3</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -8415,11 +8415,11 @@
 			<SpecialistValids/>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_EINSTEIN_LAB</BuildingType>
+					<BuildingType>BUILDING_EINSTEINS_LABORATORY</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_SANKORE</BuildingType>
+					<BuildingType>BUILDING_UNIVERSITY_OF_SANKORE</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -8786,15 +8786,15 @@
 			<iPopulationgrowthratepercentage>33</iPopulationgrowthratepercentage>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_SLAVERY</BuildingType>
+					<BuildingType>BUILDING_WORLDVIEW_SLAVERY_ACTIVE</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CANNIBALISM</BuildingType>
+					<BuildingType>BUILDING_WORLDVIEW_CANNIBALISM_ACTIVE</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+					<BuildingType>BUILDING_EFFECT_EMANCIPATION_PROCLAMATION</BuildingType>
 					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -8908,15 +8908,15 @@
 			<SpecialistValids/>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_SLAVERY</BuildingType>
+					<BuildingType>BUILDING_WORLDVIEW_SLAVERY_ACTIVE</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CANNIBALISM</BuildingType>
+					<BuildingType>BUILDING_WORLDVIEW_CANNIBALISM_ACTIVE</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+					<BuildingType>BUILDING_EFFECT_EMANCIPATION_PROCLAMATION</BuildingType>
 					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -9281,7 +9281,7 @@
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+					<BuildingType>BUILDING_EFFECT_EMANCIPATION_PROCLAMATION</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -9345,11 +9345,11 @@
 					<iHappinessChange>3</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_GAMBLING_BAN</BuildingType>
+					<BuildingType>BUILDING_ORDINANCE_GAMBLING_BAN</BuildingType>
 					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_PROSTITUTION_BAN</BuildingType>
+					<BuildingType>BUILDING_ORDINANCE_PROSTITUTION_BAN</BuildingType>
 					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -9363,7 +9363,7 @@
 					<iHealthChange>-2</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+					<BuildingType>BUILDING_METALS_MEGACOMPLEX</BuildingType>
 					<iHealthChange>-2</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -9379,7 +9379,7 @@
 					<iHealthChange>-1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_WILLOWRUN</BuildingType>
+					<BuildingType>BUILDING_WILLOW_RUN</BuildingType>
 					<iHealthChange>-2</iHealthChange>
 				</BuildingHealthChange>
 			</BuildingHealthChanges>
@@ -9488,15 +9488,15 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_MEATPACKING_PLANT</BuildingType>
+					<BuildingType>BUILDING_MEAT_PACKING_PLANT</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+					<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_FISHERMAN_HUT</BuildingType>
+					<BuildingType>BUILDING_FISHERMANS_HUT</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -9592,7 +9592,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_GUILDHALL</BuildingType>
+					<BuildingType>BUILDING_GUILD_HALL</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -9600,7 +9600,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_VIRTUAL_SCHOOL</BuildingType>
+					<BuildingType>BUILDING_HOLOGRAPHIC_SCHOOL</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -9741,11 +9741,11 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_MEATPACKING_PLANT</BuildingType>
+					<BuildingType>BUILDING_MEAT_PACKING_PLANT</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+					<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -9757,7 +9757,7 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_FISHERMAN_HUT</BuildingType>
+					<BuildingType>BUILDING_FISHERMANS_HUT</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -9853,11 +9853,11 @@
 			<SpecialistValids/>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CANNIBALISM</BuildingType>
+					<BuildingType>BUILDING_WORLDVIEW_CANNIBALISM_ACTIVE</BuildingType>
 					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+					<BuildingType>BUILDING_EFFECT_EMANCIPATION_PROCLAMATION</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -9923,15 +9923,15 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_METAMATERIAL_WALL</BuildingType>
+					<BuildingType>BUILDING_METAMATERIAL_WALLS</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALL</BuildingType>
+					<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALLS</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
+					<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALLS</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -10030,11 +10030,11 @@
 					<iHappinessChange>-5</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CANNIBALISM</BuildingType>
+					<BuildingType>BUILDING_WORLDVIEW_CANNIBALISM_ACTIVE</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+					<BuildingType>BUILDING_EFFECT_EMANCIPATION_PROCLAMATION</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -10070,7 +10070,7 @@
 					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_KREMLIN</BuildingType>
+					<BuildingType>BUILDING_THE_KREMLIN</BuildingType>
 					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -10084,7 +10084,7 @@
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_BURNINGMAN</BuildingType>
+					<BuildingType>BUILDING_BURNING_MAN</BuildingType>
 					<iHealthChange>2</iHealthChange>
 				</BuildingHealthChange>
 			</BuildingHealthChanges>
@@ -10253,7 +10253,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_BOMB_SHELTER</BuildingType>
+					<BuildingType>BUILDING_BOMB_SHELTERS</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -10261,15 +10261,15 @@
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_COURIER_SYSTEM</BuildingType>
+					<BuildingType>BUILDING_NATIONAL_COURIER_SYSTEM</BuildingType>
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_PENTAGON</BuildingType>
+					<BuildingType>BUILDING_THE_PENTAGON</BuildingType>
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_GREAT_WALL</BuildingType>
+					<BuildingType>BUILDING_GREAT_WALL_OF_CHINA</BuildingType>
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -10281,15 +10281,15 @@
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CANNIBALISM</BuildingType>
+					<BuildingType>BUILDING_WORLDVIEW_CANNIBALISM_ACTIVE</BuildingType>
 					<iHappinessChange>-5</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+					<BuildingType>BUILDING_EFFECT_EMANCIPATION_PROCLAMATION</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_BAYREUTH</BuildingType>
+					<BuildingType>BUILDING_BAYREUTH_FESTSPIELHAUS</BuildingType>
 					<iHappinessChange>3</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -10297,7 +10297,7 @@
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_MAGINOTLINE</BuildingType>
+					<BuildingType>BUILDING_MAGINOT_LINE</BuildingType>
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -10415,15 +10415,15 @@
 			<SpecialistValids/>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_SLAVERY</BuildingType>
+					<BuildingType>BUILDING_WORLDVIEW_SLAVERY_ACTIVE</BuildingType>
 					<iHappinessChange>-5</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CANNIBALISM</BuildingType>
+					<BuildingType>BUILDING_WORLDVIEW_CANNIBALISM_ACTIVE</BuildingType>
 					<iHappinessChange>-5</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+					<BuildingType>BUILDING_EFFECT_EMANCIPATION_PROCLAMATION</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -10433,7 +10433,7 @@
 					<iHealthChange>-1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+					<BuildingType>BUILDING_METALS_MEGACOMPLEX</BuildingType>
 					<iHealthChange>-1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -10449,7 +10449,7 @@
 					<iHealthChange>-1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_WILLOWRUN</BuildingType>
+					<BuildingType>BUILDING_WILLOW_RUN</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 			</BuildingHealthChanges>
@@ -10562,11 +10562,11 @@
 			<SpecialistValids/>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CANNIBALISM</BuildingType>
+					<BuildingType>BUILDING_WORLDVIEW_CANNIBALISM_ACTIVE</BuildingType>
 					<iHappinessChange>-5</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+					<BuildingType>BUILDING_EFFECT_EMANCIPATION_PROCLAMATION</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -12196,7 +12196,7 @@
 			<SpecialistValids/>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_BURNINGMAN</BuildingType>
+					<BuildingType>BUILDING_BURNING_MAN</BuildingType>
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -12623,7 +12623,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_ORACLE</BuildingType>
+					<BuildingType>BUILDING_THE_ORACLE</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -12633,19 +12633,19 @@
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_HEALERHUT</BuildingType>
+					<BuildingType>BUILDING_HEALERS_HUT</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_DOCTOR</BuildingType>
+					<BuildingType>BUILDING_DOCTORS_OFFICE</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
+					<BuildingType>BUILDING_SURGEONS_OFFICE</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+					<BuildingType>BUILDING_MEDICAL_CLINIC</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -12786,25 +12786,25 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<BuildingType>BUILDING_HIGH_TECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_HEALERHUT</BuildingType>
+					<BuildingType>BUILDING_HEALERS_HUT</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_DOCTOR</BuildingType>
+					<BuildingType>BUILDING_DOCTORS_OFFICE</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
+					<BuildingType>BUILDING_SURGEONS_OFFICE</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+					<BuildingType>BUILDING_MEDICAL_CLINIC</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -12832,7 +12832,7 @@
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<BuildingType>BUILDING_HIGH_TECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -12956,31 +12956,31 @@
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_HELLENIC_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_HELLENIC_GYMNASIA</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_ZOROASTRIAN_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_ZOROASTRIAN_SHRINE</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_EGYPT_MYTH_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_TEMPLE_OF_CHONS</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_MESOAMERICAN_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_CALMACEC</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_SHAOLIN</BuildingType>
+					<BuildingType>BUILDING_SHAOLIN_TEMPLE</BuildingType>
 					<iHealthChange>2</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_OLOFIN</BuildingType>
+					<BuildingType>BUILDING_PATTAKY_OF_OLOFIN</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_VOODOO_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_HOUNFOR</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -12988,7 +12988,7 @@
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_SIKH_TEMPLE</BuildingType>
+					<BuildingType>BUILDING_SIKH_GURDWARA</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -12996,7 +12996,7 @@
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_INVOCATION_HUT</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -13004,19 +13004,19 @@
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_RODNOVERY_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_IDOL</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_NGAI</BuildingType>
+					<BuildingType>BUILDING_NGAI_BLESS</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_MORMON_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_LDS_MISSIONARY_TRAINING_CENTRE</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_AN</BuildingType>
+					<BuildingType>BUILDING_TEMPLE_OF_AN</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -13024,15 +13024,15 @@
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_NATURE_CIRCLE_OF_POWER</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_CAODAI_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_CAO_DAI_MONASTERY</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_CANAANISM_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_CANAANITE_MONASTERY</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -13139,11 +13139,11 @@
 			<SpecialistValids/>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_COURIER_SYSTEM</BuildingType>
+					<BuildingType>BUILDING_NATIONAL_COURIER_SYSTEM</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_GREAT_DAM</BuildingType>
+					<BuildingType>BUILDING_THREE_GORGES_DAM</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -13153,7 +13153,7 @@
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_PONT_DU_GARD_AQUEDUCT</BuildingType>
+					<BuildingType>BUILDING_PONT_DU_GARD</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -13239,7 +13239,7 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
+					<BuildingType>BUILDING_SKYROAD_CONTROL_TOWER</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -13338,7 +13338,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_MOVIETHEATRE</BuildingType>
+					<BuildingType>BUILDING_MOVIE_THEATRE</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -13368,15 +13368,15 @@
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_DOCTOR</BuildingType>
+					<BuildingType>BUILDING_DOCTORS_OFFICE</BuildingType>
 					<iHealthChange>3</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
+					<BuildingType>BUILDING_SURGEONS_OFFICE</BuildingType>
 					<iHealthChange>3</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+					<BuildingType>BUILDING_MEDICAL_CLINIC</BuildingType>
 					<iHealthChange>3</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -13384,47 +13384,47 @@
 					<iHealthChange>2</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_LONGHOUSE</BuildingType>
+					<BuildingType>BUILDING_HOUSING_LONGHOUSE</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_PUEBLO</BuildingType>
+					<BuildingType>BUILDING_HOUSING_PUEBLOS</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_HOUSE_ERA1_MDLW</BuildingType>
+					<BuildingType>BUILDING_HOUSING_SLUMS</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_HOUSE_ERA2_MDLW</BuildingType>
+					<BuildingType>BUILDING_HOUSING_SHANTY_TOWN</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_HOUSE_ERA3_MDLW</BuildingType>
+					<BuildingType>BUILDING_HOUSING_GHETTOS</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_HOUSE_ERA4_MDLW</BuildingType>
+					<BuildingType>BUILDING_HOUSING_INNER_CITY</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_HOUSE_ERA3_HDLW</BuildingType>
+					<BuildingType>BUILDING_HOUSING_PROJECTS</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_HOUSE_ERA4_HDLW</BuildingType>
+					<BuildingType>BUILDING_HOUSING_HABITATION_PODS</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_HOUSE_ERA4_SDLW</BuildingType>
+					<BuildingType>BUILDING_HOUSING_ARCOLOGY_SLUMS</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
+					<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+					<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -13531,7 +13531,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_VIRTUAL_SCHOOL</BuildingType>
+					<BuildingType>BUILDING_HOLOGRAPHIC_SCHOOL</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -13543,7 +13543,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<BuildingType>BUILDING_HIGH_TECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -13561,19 +13561,19 @@
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_LASIK</BuildingType>
+					<BuildingType>BUILDING_LASER_EYE_SURGERY_CLINIC</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_DOCTOR</BuildingType>
+					<BuildingType>BUILDING_DOCTORS_OFFICE</BuildingType>
 					<iHealthChange>2</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
+					<BuildingType>BUILDING_SURGEONS_OFFICE</BuildingType>
 					<iHealthChange>2</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+					<BuildingType>BUILDING_MEDICAL_CLINIC</BuildingType>
 					<iHealthChange>2</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -13593,7 +13593,7 @@
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<BuildingType>BUILDING_HIGH_TECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -13694,19 +13694,19 @@
 			<BuildingHappinessChanges/>
 			<BuildingHealthChanges>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_CORPORATION_BULLSEYE_STORE</BuildingType>
+					<BuildingType>BUILDING_BULLSEYE_STORE</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_CORPORATION_MOBBY_STORE</BuildingType>
+					<BuildingType>BUILDING_MOBBY_MEATS_STORE</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_CORPORATION_MALLWART_STORE</BuildingType>
+					<BuildingType>BUILDING_MALLWART_STORE</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_CORPORATION_EWTRADE_STORE</BuildingType>
+					<BuildingType>BUILDING_EAST_WEST_TRADERS_STORE</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -13714,7 +13714,7 @@
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_AMERICAN_MALL</BuildingType>
+					<BuildingType>BUILDING_MALL</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -13817,17 +13817,17 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 					<BuildingHappinessChange>
-					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<BuildingType>BUILDING_HIGH_TECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_DOCTOR</BuildingType>
+					<BuildingType>BUILDING_DOCTORS_OFFICE</BuildingType>
 					<iHealthChange>2</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
+					<BuildingType>BUILDING_SURGEONS_OFFICE</BuildingType>
 					<iHealthChange>2</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -13839,43 +13839,43 @@
 					<iHealthChange>3</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+					<BuildingType>BUILDING_MEDICAL_CLINIC</BuildingType>
 					<iHealthChange>2</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_HOUSE_ERA1_MDLW</BuildingType>
+					<BuildingType>BUILDING_HOUSING_SLUMS</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_HOUSE_ERA2_MDLW</BuildingType>
+					<BuildingType>BUILDING_HOUSING_SHANTY_TOWN</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_HOUSE_ERA3_MDLW</BuildingType>
+					<BuildingType>BUILDING_HOUSING_GHETTOS</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_HOUSE_ERA4_MDLW</BuildingType>
+					<BuildingType>BUILDING_HOUSING_INNER_CITY</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_HOUSE_ERA3_HDLW</BuildingType>
+					<BuildingType>BUILDING_HOUSING_PROJECTS</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_HOUSE_ERA4_HDLW</BuildingType>
+					<BuildingType>BUILDING_HOUSING_HABITATION_PODS</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_HOUSE_ERA4_SDLW</BuildingType>
+					<BuildingType>BUILDING_HOUSING_ARCOLOGY_SLUMS</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
+					<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+					<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -13887,7 +13887,7 @@
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<BuildingType>BUILDING_HIGH_TECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 					<BuildingHealthChange>
@@ -14747,7 +14747,7 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_AMERICAN_MALL</BuildingType>
+					<BuildingType>BUILDING_MALL</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -15752,11 +15752,11 @@
 			</CapitalCommerceModifiers>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CANNIBALISM</BuildingType>
+					<BuildingType>BUILDING_WORLDVIEW_CANNIBALISM_ACTIVE</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+					<BuildingType>BUILDING_EFFECT_EMANCIPATION_PROCLAMATION</BuildingType>
 					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -15983,31 +15983,31 @@
 			<SpecialistValids/>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CORPORATION_ADVENTURE_FRANCHISE</BuildingType>
+					<BuildingType>BUILDING_ADVENTURE_TOURS_FRANCHISE</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CORPORATION_MILEHIGH_FRANCHISE</BuildingType>
+					<BuildingType>BUILDING_MILEHIGH_TRAVELS_INTERNATIONAL_FRANCHISE</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_ALUMINUM_CO_R_AND_D</BuildingType>
+					<BuildingType>BUILDING_ALUMINUM_CO_RESEARCH_AND_DEVELOPMENT</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CORPORATION_MCDOWELLS_RESTAURANT</BuildingType>
+					<BuildingType>BUILDING_BIG_MCDOWELLS_RESTAURANT</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CORPORATION_MALLWART_STORE</BuildingType>
+					<BuildingType>BUILDING_MALLWART_STORE</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CORPORATION_BULLSEYE_STORE</BuildingType>
+					<BuildingType>BUILDING_BULLSEYE_STORE</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CORPORATION_BURGERWORLD_RESTAURANT</BuildingType>
+					<BuildingType>BUILDING_BURGERWORLD_RESTAURANT</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -16019,43 +16019,43 @@
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CREATIVE_CONSTRUCTIONS_OFFICE</BuildingType>
+					<BuildingType>BUILDING_CREATIVE_CONSTRUCTIONS_CONTRACTORS</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CORPORATION_EWTRADE_STORE</BuildingType>
+					<BuildingType>BUILDING_EAST_WEST_TRADERS_STORE</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CORPORATION_FASHION_STORE</BuildingType>
+					<BuildingType>BUILDING_FASHION_HOUSE_STORE</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CORPORATION_MOBBY_STORE</BuildingType>
+					<BuildingType>BUILDING_MOBBY_MEATS_STORE</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CORPORATION_EMPCLOTH_STORE</BuildingType>
+					<BuildingType>BUILDING_EMPERORS_CLOTHING_STORE</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_MINING_INC_SURVEY_OFFICE</BuildingType>
+					<BuildingType>BUILDING_MINING_INC_SURVEY</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CORPORATION_MOONBEAN_SHOP</BuildingType>
+					<BuildingType>BUILDING_MOONBEAN_COFFEESHOP</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CORPORATION_RED_THEATER</BuildingType>
+					<BuildingType>BUILDING_RED_CURTAINS_THEATRE</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CORPORATION_SAFARI_GUIDE</BuildingType>
+					<BuildingType>BUILDING_SAFARI_HUNTERS_GUIDE</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_SID_SUSHI_RESTAURANT</BuildingType>
+					<BuildingType>BUILDING_SIDS_SUSHI_RESTAURANT</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -16063,11 +16063,11 @@
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CORPORATION_ULTSOLDIER_TRAINER</BuildingType>
+					<BuildingType>BUILDING_ULTIMATE_SOLDIERS_TRAINER</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CORPORATION_WONKA_SHOP</BuildingType>
+					<BuildingType>BUILDING_WONKA_CONFECTIONERIES_SHOP</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -16328,11 +16328,11 @@
 			<SpecialistValids/>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_SLAVERY</BuildingType>
+					<BuildingType>BUILDING_WORLDVIEW_SLAVERY_ACTIVE</BuildingType>
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+					<BuildingType>BUILDING_EFFECT_EMANCIPATION_PROCLAMATION</BuildingType>
 					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -16442,11 +16442,11 @@
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_SLAVERY</BuildingType>
+					<BuildingType>BUILDING_WORLDVIEW_SLAVERY_ACTIVE</BuildingType>
 					<iHappinessChange>-3</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+					<BuildingType>BUILDING_EFFECT_EMANCIPATION_PROCLAMATION</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -16551,11 +16551,11 @@
 			<SpecialistValids/>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_SLAVERY</BuildingType>
+					<BuildingType>BUILDING_WORLDVIEW_SLAVERY_ACTIVE</BuildingType>
 					<iHappinessChange>-3</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+					<BuildingType>BUILDING_EFFECT_EMANCIPATION_PROCLAMATION</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -16665,11 +16665,11 @@
 			</FreeSpecialistCounts>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_SLAVERY</BuildingType>
+					<BuildingType>BUILDING_WORLDVIEW_SLAVERY_ACTIVE</BuildingType>
 					<iHappinessChange>-5</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+					<BuildingType>BUILDING_EFFECT_EMANCIPATION_PROCLAMATION</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -17069,7 +17069,7 @@
 			<Flavors/>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
+					<BuildingType>BUILDING_STORYTELLER</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -17093,7 +17093,7 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_VIRTUAL_SCHOOL</BuildingType>
+					<BuildingType>BUILDING_HOLOGRAPHIC_SCHOOL</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
@@ -17458,23 +17458,23 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_HELLENIC_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_HELLENIC_GYMNASIA</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_ZOROASTRIAN_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_ZOROASTRIAN_SHRINE</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_EGYPT_MYTH_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_TEMPLE_OF_CHONS</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_MESOAMERICAN_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_CALMACEC</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_VOODOO_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_HOUNFOR</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -17482,7 +17482,7 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_INVOCATION_HUT</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -17490,15 +17490,15 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_NATURE_CIRCLE_OF_POWER</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_CAODAI_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_CAO_DAI_MONASTERY</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_CANAANISM_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_CANAANITE_MONASTERY</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -17828,7 +17828,7 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_VIRTUAL_SCHOOL</BuildingType>
+					<BuildingType>BUILDING_HOLOGRAPHIC_SCHOOL</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -17918,7 +17918,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_AD_AGENCY</BuildingType>
+					<BuildingType>BUILDING_ADVERTISING_AGENCY</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -19703,11 +19703,11 @@
 			<SpecialistValids/>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_DEPARTMENT_FOREIGN</BuildingType>
+					<BuildingType>BUILDING_DEPARTMENT_OF_FOREIGN_POLICY</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_AMBASSADOR_HOUSE</BuildingType>
+					<BuildingType>BUILDING_AMBASSADORS_HOUSE</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -19938,7 +19938,7 @@
 			<SpecialistValids/>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_DEPARTMENT_FOREIGN</BuildingType>
+					<BuildingType>BUILDING_DEPARTMENT_OF_FOREIGN_POLICY</BuildingType>
 					<iHappinessChange>3</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -20057,7 +20057,7 @@
 			<SpecialistValids/>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_DEPARTMENT_FOREIGN</BuildingType>
+					<BuildingType>BUILDING_DEPARTMENT_OF_FOREIGN_POLICY</BuildingType>
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -20430,7 +20430,7 @@
 		</CivicInfo>
 		<!-- Starter Civic -->
 		<CivicInfo>
-			<CivicOptionType>CIVICOPTION_AGICULTURE</CivicOptionType>
+			<CivicOptionType>CIVICOPTION_AGRICULTURE</CivicOptionType>
 			<Type>CIVIC_HUNTER_GATHERING</Type>
 			<Description>TXT_KEY_CIVIC_HUNTER_GATHERING</Description>
 			<Civilopedia>TXT_KEY_CIVIC_HUNTER_GATHERING_PEDIA</Civilopedia>
@@ -20535,7 +20535,7 @@
 			</Flavors>
 		</CivicInfo>
 		<CivicInfo>
-			<CivicOptionType>CIVICOPTION_AGICULTURE</CivicOptionType>
+			<CivicOptionType>CIVICOPTION_AGRICULTURE</CivicOptionType>
 			<Type>CIVIC_SMALLHOLDING</Type>
 			<Description>TXT_KEY_CIVIC_SMALLHOLDING</Description>
 			<Civilopedia>TXT_KEY_CIVIC_SMALLHOLDING_PEDIA</Civilopedia>
@@ -20640,7 +20640,7 @@
 			<Flavors/>
 		</CivicInfo>
 		<CivicInfo>
-			<CivicOptionType>CIVICOPTION_AGICULTURE</CivicOptionType>
+			<CivicOptionType>CIVICOPTION_AGRICULTURE</CivicOptionType>
 			<Type>CIVIC_AGRICULTURAL_GUILDS</Type>
 			<Description>TXT_KEY_CIVIC_AGRICULTURAL_GUILDS</Description>
 			<Civilopedia>TXT_KEY_CIVIC_AGRICULTURAL_GUILDS_PEDIA</Civilopedia>
@@ -20734,7 +20734,7 @@
 			<Flavors/>
 		</CivicInfo>
 		<CivicInfo>
-			<CivicOptionType>CIVICOPTION_AGICULTURE</CivicOptionType>
+			<CivicOptionType>CIVICOPTION_AGRICULTURE</CivicOptionType>
 			<Type>CIVIC_PRIVATE_OWNED</Type>
 			<Description>TXT_KEY_CIVIC_PRIVATE_OWNED</Description>
 			<Civilopedia>TXT_KEY_CIVIC_PRIVATE_OWNED_PEDIA</Civilopedia>
@@ -20829,7 +20829,7 @@
 			<Flavors/>
 		</CivicInfo>
 		<CivicInfo>
-			<CivicOptionType>CIVICOPTION_AGICULTURE</CivicOptionType>
+			<CivicOptionType>CIVICOPTION_AGRICULTURE</CivicOptionType>
 			<Type>CIVIC_INCENTIVIZED</Type>
 			<Description>TXT_KEY_CIVIC_INCENTIVIZED</Description>
 			<Civilopedia>TXT_KEY_CIVIC_INCENTIVIZED_PEDIA</Civilopedia>
@@ -20924,7 +20924,7 @@
 			<Flavors/>
 		</CivicInfo>
 		<CivicInfo>
-			<CivicOptionType>CIVICOPTION_AGICULTURE</CivicOptionType>
+			<CivicOptionType>CIVICOPTION_AGRICULTURE</CivicOptionType>
 			<Type>CIVIC_CORPORATE_OWNED</Type>
 			<Description>TXT_KEY_CIVIC_CORPORATE_OWNED</Description>
 			<Civilopedia>TXT_KEY_CIVIC_CORPORATE_OWNED_PEDIA</Civilopedia>
@@ -21052,7 +21052,7 @@
 			<Flavors/>
 		</CivicInfo>
 		<CivicInfo>
-			<CivicOptionType>CIVICOPTION_AGICULTURE</CivicOptionType>
+			<CivicOptionType>CIVICOPTION_AGRICULTURE</CivicOptionType>
 			<Type>CIVIC_STATE_OWNED</Type>
 			<Description>TXT_KEY_CIVIC_STATE_OWNED</Description>
 			<Civilopedia>TXT_KEY_CIVIC_STATE_OWNED_PEDIA</Civilopedia>
@@ -21164,7 +21164,7 @@
 			<Flavors/>
 		</CivicInfo>
 		<CivicInfo>
-			<CivicOptionType>CIVICOPTION_AGICULTURE</CivicOptionType>
+			<CivicOptionType>CIVICOPTION_AGRICULTURE</CivicOptionType>
 			<Type>CIVIC_ORGANIC_FARMING</Type>
 			<Description>TXT_KEY_CIVIC_ORGANIC_FARMING</Description>
 			<Civilopedia>TXT_KEY_CIVIC_ORGANIC_FARMING_PEDIA</Civilopedia>
@@ -21275,7 +21275,7 @@
 			<Flavors/>
 		</CivicInfo>
 		<CivicInfo>
-			<CivicOptionType>CIVICOPTION_AGICULTURE</CivicOptionType>
+			<CivicOptionType>CIVICOPTION_AGRICULTURE</CivicOptionType>
 			<Type>CIVIC_LAB_GROWN_FOOD</Type>
 			<Description>TXT_KEY_CIVIC_LAB_GROWN_FOOD</Description>
 			<Civilopedia>TXT_KEY_CIVIC_LAB_GROWN_FOOD_PEDIA</Civilopedia>
@@ -21386,7 +21386,7 @@
 			<Flavors/>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+					<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -21396,7 +21396,7 @@
 			</BuildingProductionModifiers>
 		</CivicInfo>
 		<CivicInfo>
-			<CivicOptionType>CIVICOPTION_AGICULTURE</CivicOptionType>
+			<CivicOptionType>CIVICOPTION_AGRICULTURE</CivicOptionType>
 			<Type>CIVIC_NUTRIENT_REPLICATION</Type>
 			<Description>TXT_KEY_CIVIC_NUTRIENT_REPLICATION</Description>
 			<Civilopedia>TXT_KEY_CIVIC_NUTRIENT_REPLICATION_PEDIA</Civilopedia>
@@ -21910,7 +21910,7 @@
 			<iAttitudeShareMod>0</iAttitudeShareMod>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_GARBAGE_DUMP</BuildingType>
+					<BuildingType>BUILDING_LANDFILL</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>

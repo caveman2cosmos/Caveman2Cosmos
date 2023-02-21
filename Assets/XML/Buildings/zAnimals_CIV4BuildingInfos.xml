@@ -3,16 +3,16 @@
 	<!-- Constructable buildings (should be) twice the regular hammer cost of buildings at that tech level -->
 	<BuildingInfos>
 		<BuildingInfo>
-			<Type>BUILDING_AMPHIBIAN_POND</Type>
+			<Type>BUILDING_ENCLOSURE_AMPHIBIAN_POND</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_AMPHIBIAN_POND</Description>
+			<Description>TXT_KEY_BUILDING_ENCLOSURE_AMPHIBIAN_POND</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WILD_ANIMAL_CAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_AMPHIBIAN</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_AMPHIBIANS</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
@@ -34,19 +34,19 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<iAsset>2</iAsset>
-			<ArtDefineTag>ART_DEF_BUILDING_AMPHIBIAN_POND</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ENCLOSURE_AMPHIBIAN_POND</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANIMAL_FOLKLORE_REQUIRE</Type>
+			<Type>BUILDING_FOLKLORE_REQUIREMENT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_REQUIRE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_REQUIRE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_FOLKLORE_REQUIREMENT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_REQUIREMENT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
+				<BuildingType>BUILDING_STORYTELLER</BuildingType>
 				<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
 			</PrereqOrBuildings>
@@ -79,12 +79,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TAMER_COMPLEX</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANIMAL_TOTEM</Type>
+			<Type>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ANIMAL_TOTEM</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TOTEM_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<PrereqTech>TECH_CULTURAL_IDENTITY</PrereqTech>
@@ -105,32 +105,32 @@
 			</UnitCombatFreeExperiences>
 			<iAsset>1</iAsset>
 			<iConquestProb>25</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TOTEM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANIMAL_TOTEM_DOGS</Type>
+			<Type>BUILDING_MILITARY_STANDARD_CANINES</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ANIMAL_TOTEM_DOGS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TOTEM_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_ANIMAL_TOTEM_DOGS_HELP</Help>
+			<Description>TXT_KEY_BUILDING_MILITARY_STANDARD_CANINES</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_MILITARY_STANDARD_CANINES_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
 			<Bonus>BONUS_DOG</Bonus>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_ARCTICFOX</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_DHOLE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_ARCTIC_FOX</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_USSURI_DHOLE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_DINGO</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_DOG</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_EWOLF</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_MANEDWOLF</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_REDFOX</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_GREY_WOLF</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_DIRE_WOLF</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_ETHIOPIAN_WOLF</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_MANED_WOLF</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_RED_FOX</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_WOLF</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>92</iCost>
 			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
@@ -158,29 +158,29 @@
 			</UnitProductionModifiers>
 			<iAsset>1</iAsset>
 			<iConquestProb>25</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TOTEM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANIMAL_TOTEM_WORKERS</Type>
+			<Type>BUILDING_MILITARY_STANDARD_WORKERS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ANIMAL_TOTEM_WORKERS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TOTEM_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_ANIMAL_TOTEM_WORKERS_HELP</Help>
+			<Description>TXT_KEY_BUILDING_MILITARY_STANDARD_WORKERS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_MILITARY_STANDARD_WORKERS_HELP</Help>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<PrereqTech>TECH_CULTURAL_IDENTITY</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FOLKLORE_AARDVARK</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ANTEATER</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_ARMADILLO</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_NINE_BANDED_ARMADILLO</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BEAVER</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_GLYPTO</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_GROUNDSLOTH</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_GLYPTODON</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_GROUND_SLOTH</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>70</iCost>
 			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
@@ -192,14 +192,14 @@
 			</UnitCombatProdModifiers>
 			<iAsset>1</iAsset>
 			<iConquestProb>25</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TOTEM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BAD_BOY_CAGE</Type>
+			<Type>BUILDING_ENCLOSURE_BAD_BOYS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_BAD_BOY_CAGE</Description>
+			<Description>TXT_KEY_BUILDING_ENCLOSURE_BAD_BOYS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WILD_ANIMAL_CAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
@@ -218,11 +218,11 @@
 					<Or>
 						<Has>
 							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_CROCODILE</ID>
+							<ID>BUILDING_FOLKLORE_T_CROCODILE</ID>
 						</Has>
 						<Has>
 							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_WEASEL</ID>
+							<ID>BUILDING_FOLKLORE_T_WEASEL</ID>
 						</Has>
 					</Or>
 				</And>
@@ -245,24 +245,24 @@
 			</TechCommerceChanges>
 			<iAsset>1</iAsset>
 			<iConquestProb>25</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_BAD_BOY_CAGE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ENCLOSURE_BAD_BOYS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BEAR_CAGE</Type>
+			<Type>BUILDING_ENCLOSURE_BEAR</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_BEAR_CAGE</Description>
+			<Description>TXT_KEY_BUILDING_ENCLOSURE_BEAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WILD_ANIMAL_CAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_BEAR</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_BEAR</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>306</iCost>
 			<iHappiness>1</iHappiness>
@@ -295,11 +295,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CAVEBEAR_CAGE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BIG_CAT_CAGE</Type>
+			<Type>BUILDING_ENCLOSURE_BIG_CAT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_BIG_CAT_CAGE</Description>
+			<Description>TXT_KEY_BUILDING_ENCLOSURE_BIG_CAT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WILD_ANIMAL_CAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
@@ -308,7 +308,7 @@
 					<Or>
 						<Has>
 							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_GOVENORS_MENAGERIE</ID>
+							<ID>BUILDING_GOVERNORS_MENAGERIE</ID>
 						</Has>
 						<Has>
 							<GOMType>GOM_BUILDING</GOMType>
@@ -326,11 +326,11 @@
 						</Has>
 						<Has>
 							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_TIGER</ID>
+							<ID>BUILDING_FOLKLORE_T_TIGER</ID>
 						</Has>
 						<Has>
 							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_SPOTTED_CAT</ID>
+							<ID>BUILDING_FOLKLORE_T_SPOTTED_CAT</ID>
 						</Has>
 					</Or>
 				</And>
@@ -370,11 +370,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_LION_CAGE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BIRD_CAGE</Type>
+			<Type>BUILDING_ENCLOSURE_BIRD</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_BIRD_CAGE</Description>
+			<Description>TXT_KEY_BUILDING_ENCLOSURE_BIRD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WILD_ANIMAL_CAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
@@ -383,7 +383,7 @@
 					<Or>
 						<Has>
 							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_GOVENORS_MENAGERIE</ID>
+							<ID>BUILDING_GOVERNORS_MENAGERIE</ID>
 						</Has>
 						<Has>
 							<GOMType>GOM_BUILDING</GOMType>
@@ -397,15 +397,15 @@
 					<Or>
 						<Has>
 							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_BIRD</ID>
+							<ID>BUILDING_FOLKLORE_T_BIRDS</ID>
 						</Has>
 						<Has>
 							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_FLIGHTLESS_BIRD</ID>
+							<ID>BUILDING_FOLKLORE_T_FLIGHTLESS_BIRDS</ID>
 						</Has>
 						<Has>
 							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_RAPTOR</ID>
+							<ID>BUILDING_FOLKLORE_T_RAPTORS</ID>
 						</Has>
 					</Or>
 				</And>
@@ -428,15 +428,15 @@
 			</TechCommerceChanges>
 			<iAsset>1</iAsset>
 			<iConquestProb>25</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_BIRD_CAGE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ENCLOSURE_BIRD</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BISON_HERD</Type>
+			<Type>BUILDING_HERD_BISON</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_BISON_HERD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BISON_HERD_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HERD_BISON</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HERD_BISON_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 			<YieldChanges>
@@ -450,27 +450,27 @@
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
+				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<iAsset>3</iAsset>
 			<iConquestProb>75</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_BISON_HERD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HERD_BISON</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BOXING_KANGAROO</Type>
+			<Type>BUILDING_CARNIVAL_BOXING_KANGAROO</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_BOXING_KANGAROO</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BOXING_KANGAROO_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CARNIVAL_BOXING_KANGAROO</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CARNIVAL_BOXING_KANGAROO_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_MARSUPIAL</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_MARSUPIAL</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>306</iCost>
 			<ObsoleteTech>TECH_ADVANCED_AVIATION</ObsoleteTech>
@@ -482,15 +482,15 @@
 			</CommerceChanges>
 			<iAsset>1</iAsset>
 			<iConquestProb>25</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_BOXING_KANGAROO</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CARNIVAL_BOXING_KANGAROO</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BUFFALO_HERD</Type>
+			<Type>BUILDING_HERD_BUFFALO</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_BUFFALO_HERD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BUFFALO_HERD_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HERD_BUFFALO</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HERD_BUFFALO_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 			<YieldChanges>
@@ -498,17 +498,17 @@
 				<iYield>1</iYield>
 			</YieldChanges>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
+				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<iAsset>3</iAsset>
 			<iConquestProb>75</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_BUFFALO_HERD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HERD_BUFFALO</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BUFFALO_TRAINER</Type>
+			<Type>BUILDING_ANIMAL_TRAINER_BUFFALO</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -517,16 +517,16 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_BUFFALO_TRAINER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BUFFALO_TRAINER_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ANIMAL_TRAINER_BUFFALO</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TRAINER_BUFFALO_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<PrereqTech>TECH_EQUINE_DOMESTICATION</PrereqTech>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_BUFFALO_HERD</BuildingType>
-				<BuildingType>BUILDING_OXEN_FARM</BuildingType>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_HERD_BUFFALO</BuildingType>
+				<BuildingType>BUILDING_FARM_ANIMAL_OXEN</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
+				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>92</iCost>
 			<CommerceChanges>
@@ -548,15 +548,15 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>75</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_BUFFALO_TRAINER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TRAINER_BUFFALO</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CAMEL_HERD</Type>
+			<Type>BUILDING_HERD_CAMEL</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CAMEL_HERD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CAMEL_HERD_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HERD_CAMEL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HERD_CAMEL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>SND_AMB_CAMEL_COBBLESTONES</ConstructSound>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
@@ -571,14 +571,14 @@
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
+				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<iAsset>3</iAsset>
 			<iConquestProb>75</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_CAMEL_HERD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HERD_CAMEL</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CARNIVAL</Type>
@@ -648,11 +648,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CARNIVAL</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CAVE_BEAR_REMAINS</Type>
+			<Type>BUILDING_REMAINS_CAVE_BEAR</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CAVE_BEAR_REMAINS</Description>
+			<Description>TXT_KEY_BUILDING_REMAINS_CAVE_BEAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqAmountBuildings>
@@ -662,7 +662,7 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -700,14 +700,14 @@
 			<iAsset>1</iAsset>
 			<iConquestProb>90</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CAVE_BEAR_REMAINS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_REMAINS_CAVE_BEAR</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CAVE_LION_REMAINS</Type>
+			<Type>BUILDING_REMAINS_CAVE_LION</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CAVE_LION_REMAINS</Description>
+			<Description>TXT_KEY_BUILDING_REMAINS_CAVE_LION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqAmountBuildings>
@@ -717,7 +717,7 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -758,12 +758,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_CAVE_LION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CEPHALOPOD_INSTITUTE</Type>
+			<Type>BUILDING_CENTER_FOR_CEPHALOPOD_STUDIES</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CEPHALOPOD_INSTITUTE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CEPHALOPOD_INSTITUTE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CENTER_FOR_CEPHALOPOD_STUDIES</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CENTER_FOR_CEPHALOPOD_STUDIES_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<iMaxLatitude>70</iMaxLatitude>
@@ -779,8 +779,8 @@
 				<BuildingType>BUILDING_WONDERS_OF_THE_DEEP</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_CETAEA_INSTITUTE</BuildingType>
-				<BuildingType>BUILDING_SALACHIMORPHA_INSTITUTE</BuildingType>
+				<BuildingType>BUILDING_CENTER_FOR_WHALE_STUDIES</BuildingType>
+				<BuildingType>BUILDING_CENTER_FOR_SHARK_STUDIES</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iCost>1260</iCost>
 			<CommerceChanges>
@@ -795,15 +795,15 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAsset>3</iAsset>
-			<ArtDefineTag>ART_DEF_BUILDING_CEPHALOPOD_INSTITUTE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CENTER_FOR_CEPHALOPOD_STUDIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CETAEA_INSTITUTE</Type>
+			<Type>BUILDING_CENTER_FOR_WHALE_STUDIES</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CETAEA_INSTITUTE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CETAEA_INSTITUTE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CENTER_FOR_WHALE_STUDIES</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CENTER_FOR_WHALE_STUDIES_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<iMaxLatitude>70</iMaxLatitude>
@@ -819,8 +819,8 @@
 				<BuildingType>BUILDING_WONDERS_OF_THE_DEEP</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_CEPHALOPOD_INSTITUTE</BuildingType>
-				<BuildingType>BUILDING_SALACHIMORPHA_INSTITUTE</BuildingType>
+				<BuildingType>BUILDING_CENTER_FOR_CEPHALOPOD_STUDIES</BuildingType>
+				<BuildingType>BUILDING_CENTER_FOR_SHARK_STUDIES</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iCost>1260</iCost>
 			<CommerceChanges>
@@ -835,7 +835,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAsset>3</iAsset>
-			<ArtDefineTag>ART_DEF_BUILDING_CETAEA_INSTITUTE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CENTER_FOR_WHALE_STUDIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COASTAL_FISH_FARM</Type>
@@ -853,7 +853,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_FISH</ID>
+						<ID>BUILDING_FOLKLORE_T_FISH</ID>
 					</Has>
 					<Or>
 						<Has>
@@ -898,12 +898,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_COASTAL_FISH_FARM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_COW_HERD</Type>
+			<Type>BUILDING_HERD_COW</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_COW_HERD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_COW_HERD_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HERD_COW</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HERD_COW_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
@@ -918,14 +918,14 @@
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
+				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<iAsset>3</iAsset>
 			<iConquestProb>75</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_COW_HERD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HERD_COW</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRAB_NETS</Type>
@@ -963,17 +963,17 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRAB_NETS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DANCING_BEAR</Type>
+			<Type>BUILDING_CARNIVAL_DANCING_BEAR</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DANCING_BEAR</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DANCING_BEAR_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CARNIVAL_DANCING_BEAR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CARNIVAL_DANCING_BEAR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_BEAR</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_BEAR</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>306</iCost>
 			<ObsoleteTech>TECH_ADVANCED_AVIATION</ObsoleteTech>
@@ -985,15 +985,15 @@
 			</CommerceChanges>
 			<iAsset>1</iAsset>
 			<iConquestProb>25</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_DANCING_BEAR</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CARNIVAL_DANCING_BEAR</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DEER_HERD</Type>
+			<Type>BUILDING_HERD_DEER</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DEER_HERD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DEER_HERD_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HERD_DEER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HERD_DEER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 			<YieldChanges>
@@ -1007,17 +1007,17 @@
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
+				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<iAsset>3</iAsset>
 			<iConquestProb>75</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_DEER_HERD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HERD_DEER</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DOG_KENNEL</Type>
+			<Type>BUILDING_DOG_KENNELS</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -1026,14 +1026,14 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DOG_KENNEL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DOG_KENNEL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_DOG_KENNELS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DOG_KENNELS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DOG_BREEDER</BuildingType>
-				<BuildingType>BUILDING_RE_PET_SHOP</BuildingType>
+				<BuildingType>BUILDING_REPET</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>92</iCost>
 			<UnitCombatFreeExperiences>
@@ -1068,12 +1068,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DOG</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DONKEY_HERD</Type>
+			<Type>BUILDING_HERD_DONKEY</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DONKEY_HERD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DONKEY_HERD_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HERD_DONKEY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HERD_DONKEY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
@@ -1089,19 +1089,19 @@
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
+				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<iAsset>3</iAsset>
 			<iConquestProb>75</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_DONKEY_HERD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HERD_DONKEY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DUCK_FLOCKS</Type>
-			<Description>TXT_KEY_BUILDING_DUCK_FLOCKS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DUCK_FLOCKS_PEDIA</Civilopedia>
+			<Type>BUILDING_FLOCKS_OF_DUCK</Type>
+			<Description>TXT_KEY_BUILDING_FLOCKS_OF_DUCK</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FLOCKS_OF_DUCK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FLOCKS_OF_DUCK</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1110,7 +1110,7 @@
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
-			<FreeBuilding>BUILDING_DUCK_FLOCKS</FreeBuilding>
+			<FreeBuilding>BUILDING_FLOCKS_OF_DUCK</FreeBuilding>
 			<bNeverCapture>1</bNeverCapture>
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -1123,27 +1123,27 @@
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_POULTRY_HERD</BuildingType>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_HERD_POULTRY</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
+				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ELASMOTHERIUM_REMAINS</Type>
+			<Type>BUILDING_REMAINS_GIANT_RHINOCEROS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ELASMOTHERIUM_REMAINS</Description>
+			<Description>TXT_KEY_BUILDING_REMAINS_GIANT_RHINOCEROS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_FOLKLORE_ELASMOTHERIUM</BuildingType>
+					<BuildingType>BUILDING_FOLKLORE_GIANT_RHINOCEROS</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1181,15 +1181,15 @@
 			<iAsset>1</iAsset>
 			<iConquestProb>90</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_ELASMOTHERIUM_REMAINS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_REMAINS_GIANT_RHINOCEROS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ELEPHANT_HERD</Type>
+			<Type>BUILDING_HERD_ELEPHANT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ELEPHANT_HERD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEPHANT_HERD_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HERD_ELEPHANT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HERD_ELEPHANT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 			<YieldChanges>
@@ -1203,22 +1203,22 @@
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
+				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<iAsset>3</iAsset>
 			<iConquestProb>75</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_ELEPHANT_HERD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HERD_ELEPHANT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EXOTIC_HERBAVOURS</Type>
+			<Type>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EXOTIC_HERBIVORE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBIVORE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ENCLOSURE_EXOTIC_HERBIVORE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<ConstructCondition>
@@ -1236,27 +1236,27 @@
 				<Or>
 					<Has>
 						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_ELEPHANT</ID>
+						<ID>BUILDING_FOLKLORE_T_ELEPHANT</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_FLIGHTLESS_BIRD</ID>
+						<ID>BUILDING_FOLKLORE_T_FLIGHTLESS_BIRDS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_ELEPHANT</ID>
+						<ID>BUILDING_FOLKLORE_T_ELEPHANT</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_ANTELOPE</ID>
+						<ID>BUILDING_FOLKLORE_T_ANTELOPE</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_BOAR</ID>
+						<ID>BUILDING_FOLKLORE_T_BOAR</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_RHINO_TAXONOMY</ID>
+						<ID>BUILDING_FOLKLORE_T_RHINOCEROSES</ID>
 					</Has>
 				</Or>
 			</And>
@@ -1279,7 +1279,7 @@
 			</TechCommerceModifiers>
 			<iAsset>2</iAsset>
 			<iConquestProb>25</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_EXOTIC_HERBAVOURS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FEATHER_WORKER</Type>
@@ -1293,22 +1293,22 @@
 			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
 			<PrereqTech>TECH_BONE_WORKING</PrereqTech>
 			<PrereqOrBuildings> <!-- Sadly, bone working is well before taxonomy, so individual myths required -->
-				<BuildingType>BUILDING_FOLKLORE_AFRICANGREY</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_BARNOWL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_BARREDOWL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_BOOBY</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_AFRICAN_GREY_PARROT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_BARN_OWL</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_BARRED_OWL</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_BLUE_FOOTED_BOOBY</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_CASSOWARY</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_CROW</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_DUCK</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_EAGLE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_EAGLE_BALD</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_BALD_EAGLE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_EMU</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_FLAMINGO</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_GULL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_HAAST_EAGLE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_HARPYEAGLE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SEAGULL</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_HAASTS_EAGLE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_HARPY_EAGLE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_HAWK</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_HORNED_OWL</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_GREAT_HORNED_OWL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_KOOKABURRA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_LOON</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MACAW</BuildingType>
@@ -1322,18 +1322,18 @@
 				<BuildingType>BUILDING_FOLKLORE_RAVEN</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_RAZORBILL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_RHEA</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SEAEAGLE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SECRETARYBIRD</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_TERN</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_STELLERS_SEA_EAGLE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SECRETARY_BIRD</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_ARCTIC_TERN</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_TOUCAN</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_TURKEY</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_WILD_TURKEY</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>90</iCost>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
+				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -1359,7 +1359,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_FISH</ID>
+						<ID>BUILDING_FOLKLORE_T_FISH</ID>
 					</Has>
 					<Or>
 						<Has>
@@ -1412,12 +1412,12 @@
 			<iMaxLatitude>60</iMaxLatitude>
 			<PrereqTech>TECH_FREE_ARTISTRY</PrereqTech>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_ARCTICFOX</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_ARCTIC_FOX</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BEAVER</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_FENNECFOX</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_FENNEC_FOX</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_KOALA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_PLATYPUS</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_REDFOX</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_RED_FOX</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA_OTTER</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>850</iCost>
@@ -1437,21 +1437,21 @@
 			<ArtDefineTag>ART_DEF_BUILDING_FUR_FARM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GLYPTO_REMAINS</Type>
+			<Type>BUILDING_REMAINS_GLYPTODON</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GLYPTO_REMAINS</Description>
+			<Description>TXT_KEY_BUILDING_REMAINS_GLYPTODON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_FOLKLORE_GLYPTO</BuildingType>
+					<BuildingType>BUILDING_FOLKLORE_GLYPTODON</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1489,15 +1489,15 @@
 			<iAsset>1</iAsset>
 			<iConquestProb>90</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_GLYPTO</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_GLYPTODON</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GOAT_HERD</Type>
+			<Type>BUILDING_HERD_GOAT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GOAT_HERD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GOAT_HERD_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HERD_GOAT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HERD_GOAT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 			<YieldChanges>
@@ -1506,29 +1506,29 @@
 				<iYield>1</iYield>
 			</YieldChanges>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
+				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<iAsset>3</iAsset>
 			<iConquestProb>75</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_GOAT_HERD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HERD_GOAT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GOVENORS_MENAGERIE</Type>
+			<Type>BUILDING_GOVERNORS_MENAGERIE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GOVERNOR_MENAGERIE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GOVERNOR_MENAGERIE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_GOVERNORS_MENAGERIE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GOVERNORS_MENAGERIE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
 			<PrereqTech>TECH_MONARCHY</PrereqTech>
 			<iCost>300</iCost>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -1542,10 +1542,10 @@
 			<iRevIdxLocal>-5</iRevIdxLocal>
 			<iAsset>1</iAsset>
 			<iConquestProb>25</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_GOVENORS_MENAGERIE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GOVERNORS_MENAGERIE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GOVENORS_PETS</Type>
+			<Type>BUILDING_GOVERNORS_PETS</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -1554,8 +1554,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GOVERNOR_PETS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GOVERNOR_PETS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_GOVERNORS_PETS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GOVERNORS_PETS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<PrereqTech>TECH_CHIEFDOM</PrereqTech>
@@ -1569,24 +1569,24 @@
 			<iRevIdxLocal>-2</iRevIdxLocal>
 			<iAsset>1</iAsset>
 			<iConquestProb>25</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_GOVENORS_PETS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GOVERNORS_PETS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HAAST_EAGLE_REMAINS</Type>
+			<Type>BUILDING_REMAINS_HAASTS_EAGLE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HAAST_EAGLE_REMAINS</Description>
+			<Description>TXT_KEY_BUILDING_REMAINS_HAASTS_EAGLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_FOLKLORE_HAAST_EAGLE</BuildingType>
+					<BuildingType>BUILDING_FOLKLORE_HAASTS_EAGLE</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1624,21 +1624,21 @@
 			<iAsset>1</iAsset>
 			<iConquestProb>90</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_HAAST_EAGLE_REMAINS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_REMAINS_HAASTS_EAGLE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HAWKING</Type>
+			<Type>BUILDING_HAWKING_HUT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HAWKING</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HAWKING_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HAWKING_HUT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HAWKING_HUT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
 			<PrereqTech>TECH_FALCONRY</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_RAPTOR</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_RAPTORS</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
@@ -1655,14 +1655,14 @@
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
 			<iAsset>1</iAsset>
-			<ArtDefineTag>ART_DEF_BUILDING_HAWKING_HUT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HAWKING_HUT_HUT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HORSE_HERD</Type>
-			<Description>TXT_KEY_BUILDING_HORSE_HERD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HORSE_HERD_PEDIA</Civilopedia>
+			<Type>BUILDING_HERD_HORSE</Type>
+			<Description>TXT_KEY_BUILDING_HERD_HORSE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HERD_HORSE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_HORSE_HERD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HERD_HORSE</ArtDefineTag>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
@@ -1674,10 +1674,10 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
+				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<iAsset>3</iAsset>
 			<iConquestProb>75</iConquestProb>
@@ -1688,12 +1688,12 @@
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_LLAMA_HERD</Type>
+			<Type>BUILDING_HERD_LLAMA</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_LLAMA_HERD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LLAMA_HERD_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HERD_LLAMA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HERD_LLAMA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 			<YieldChanges>
@@ -1707,14 +1707,14 @@
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
+				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<iAsset>3</iAsset>
 			<iConquestProb>75</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_LLAMA_HERD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HERD_LLAMA</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARINE_INSTITUTE</Type>
@@ -1731,7 +1731,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_AQUARIUM</BuildingType>
 				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_FISH</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>1260</iCost>
 			<CommerceChanges>
@@ -1749,14 +1749,14 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MARINE_INSTITUTE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MARSUPIAL_CAGE</Type>
-			<Description>TXT_KEY_BUILDING_MARSUPIAL_CAGE</Description>
+			<Type>BUILDING_ENCLOSURE_MARSUPIAL</Type>
+			<Description>TXT_KEY_BUILDING_ENCLOSURE_MARSUPIAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WILD_ANIMAL_CAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MARSUPIAL_CAGE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ENCLOSURE_MARSUPIAL</ArtDefineTag>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_MARSUPIAL</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_MARSUPIAL</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>306</iCost>
 			<MapCategoryTypes>
@@ -1956,11 +1956,11 @@
 			</UnitCombatFreeExperiences>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MOA_REMAINS</Type>
+			<Type>BUILDING_REMAINS_MOA</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_MOA_REMAINS</Description>
+			<Description>TXT_KEY_BUILDING_REMAINS_MOA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqAmountBuildings>
@@ -1970,7 +1970,7 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2008,14 +2008,14 @@
 			<iAsset>1</iAsset>
 			<iConquestProb>90</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_MOA_REMAINS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_REMAINS_MOA</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MULE_TRAINER</Type>
-			<Description>TXT_KEY_BUILDING_MULE_TRAINER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MULE_TRAINER_PEDIA</Civilopedia>
+			<Type>BUILDING_ANIMAL_TRAINER_DONKEY</Type>
+			<Description>TXT_KEY_BUILDING_ANIMAL_TRAINER_DONKEY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TRAINER_DONKEY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MULE_TRAINER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TRAINER_DONKEY</ArtDefineTag>
 			<PrereqTech>TECH_EQUINE_DOMESTICATION</PrereqTech>
 			<iCost>92</iCost>
 			<MapCategoryTypes>
@@ -2031,11 +2031,11 @@
 			</CommerceChanges>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_DONKEY_FARM</BuildingType>
-				<BuildingType>BUILDING_DONKEY_HERD</BuildingType>
-				<BuildingType>BUILDING_DONKEY_NATIONAL</BuildingType>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_FARM_ANIMAL_DONKEY</BuildingType>
+				<BuildingType>BUILDING_HERD_DONKEY</BuildingType>
+				<BuildingType>BUILDING_CENTRAL_BREEDER_DONKEY</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
+				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
 			<Bonus>BONUS_DONKEY</Bonus>
 			<Flavors>
@@ -2046,17 +2046,17 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MUSKOX_HERD</Type>
-			<Description>TXT_KEY_BUILDING_MUSKOX_HERD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MUSKOX_HERD_PEDIA</Civilopedia>
+			<Type>BUILDING_HERD_MUSKOX</Type>
+			<Description>TXT_KEY_BUILDING_HERD_MUSKOX</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HERD_MUSKOX_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MUSKOX_HERD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HERD_MUSKOX</ArtDefineTag>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
+				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -2072,11 +2072,11 @@
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NAVAL_TOTEM</Type>
-			<Description>TXT_KEY_BUILDING_NAVAL_TOTEM</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NAVAL_TOTEM_PEDIA</Civilopedia>
+			<Type>BUILDING_NAVAL_STANDARD_ANIMAL_MASCOT</Type>
+			<Description>TXT_KEY_BUILDING_NAVAL_STANDARD_ANIMAL_MASCOT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NAVAL_STANDARD_ANIMAL_MASCOT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NAVAL_TOTEM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_NAVAL_STANDARD_ANIMAL_MASCOT</ArtDefineTag>
 			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -2084,10 +2084,10 @@
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_WONDERS_OF_THE_DEEP</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_LEVIATHAN</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SHARK</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_RAY</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_KRAKEN</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_LEVIATHAN</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_SHARKS</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_RAY</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_GIANT_SQUID</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>264</iCost>
 			<iConquestProb>25</iConquestProb>
@@ -2104,23 +2104,23 @@
 			</UnitCombatFreeExperiences>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NOCTURNAL_CAGE</Type>
-			<Description>TXT_KEY_BUILDING_NOCTURNAL_CAGE</Description>
+			<Type>BUILDING_ENCLOSURE_NOCTURNAL</Type>
+			<Description>TXT_KEY_BUILDING_ENCLOSURE_NOCTURNAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WILD_ANIMAL_CAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NOCTURNAL_CAGE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ENCLOSURE_NOCTURNAL</ArtDefineTag>
 			<PrereqTech>TECH_INCANDESCENT_LIGHTING</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_OWL</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_OWLS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BADGER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_KOALA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_RACCOON</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_RATEL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SKUNK</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_TASMANIANDEVIL</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_TASMANIAN_DEVIL</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>1600</iCost>
 			<MapCategoryTypes>
@@ -2136,21 +2136,21 @@
 			</CommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PALEOLITHIC_DOG_REMAINS</Type>
+			<Type>BUILDING_REMAINS_DIRE_WOLF</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_PALEOLITHIC_DOG_REMAINS</Description>
+			<Description>TXT_KEY_BUILDING_REMAINS_DIRE_WOLF</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_DOG</BuildingType>
+					<BuildingType>BUILDING_FOLKLORE_DIRE_WOLF</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2188,24 +2188,24 @@
 			<iAsset>1</iAsset>
 			<iConquestProb>90</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_PALEOLITHIC_DOG_REMAINS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_REMAINS_DIRE_WOLF</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PALEOLITHIC_GROUNDSLOTH_REMAINS</Type>
+			<Type>BUILDING_REMAINS_GROUND_SLOTH</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_PALEOLITHIC_GROUNDSLOTH_REMAINS</Description>
+			<Description>TXT_KEY_BUILDING_REMAINS_GROUND_SLOTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_GROUNDSLOTH</BuildingType>
+					<BuildingType>BUILDING_FOLKLORE_GROUND_SLOTH</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2243,24 +2243,24 @@
 			<iAsset>1</iAsset>
 			<iConquestProb>90</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_PALEOLITHIC_GROUNDSLOTH_REMAINS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_REMAINS_GROUND_SLOTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PALEOLITHIC_MAMMOTH_REMAINS</Type>
+			<Type>BUILDING_REMAINS_MAMMOTH</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_PALEOLITHIC_MAMMOTH_REMAINS</Description>
+			<Description>TXT_KEY_BUILDING_REMAINS_MAMMOTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_MAMMOTH</BuildingType>
+					<BuildingType>BUILDING_FOLKLORE_MAMMOTH</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2298,12 +2298,12 @@
 			<iAsset>1</iAsset>
 			<iConquestProb>90</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_PALEOLITHIC_MAMMOTH_REMAINS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_REMAINS_MAMMOTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PEACOCK_FLOCKS</Type>
-			<Description>TXT_KEY_BUILDING_PEACOCK_FLOCKS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_PEACOCK_FLOCKS_PEDIA</Civilopedia>
+			<Type>BUILDING_FLOCKS_OF_PEACOCK</Type>
+			<Description>TXT_KEY_BUILDING_FLOCKS_OF_PEACOCK</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FLOCKS_OF_PEACOCK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FLOCKS_OF_PEACOCK</ArtDefineTag>
 			<MapCategoryTypes>
@@ -2313,15 +2313,15 @@
 			<iPower>2</iPower>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_POULTRY_HERD</BuildingType>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_HERD_POULTRY</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
+				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_PEACOCK</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>184</iCost>
-			<FreeBuilding>BUILDING_PEACOCK_FLOCKS</FreeBuilding>
+			<FreeBuilding>BUILDING_FLOCKS_OF_PEACOCK</FreeBuilding>
 			<bNeverCapture>1</bNeverCapture>
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -2335,11 +2335,11 @@
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PIG_HERD</Type>
-			<Description>TXT_KEY_BUILDING_PIG_HERD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_PIG_HERD_PEDIA</Civilopedia>
+			<Type>BUILDING_HERD_PIG</Type>
+			<Description>TXT_KEY_BUILDING_HERD_PIG</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HERD_PIG_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PIG_HERD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HERD_PIG</ArtDefineTag>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
@@ -2348,10 +2348,10 @@
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
+				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -2366,16 +2366,16 @@
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_POULTRY_HERD</Type>
-			<Description>TXT_KEY_BUILDING_POULTRY_HERD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_POULTRY_HERD_PEDIA</Civilopedia>
+			<Type>BUILDING_HERD_POULTRY</Type>
+			<Description>TXT_KEY_BUILDING_HERD_POULTRY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HERD_POULTRY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_POULTRY_HERD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HERD_POULTRY</ArtDefineTag>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FOLKLORE_PEACOCK</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_PHEASANT</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_TURKEY</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_WILD_TURKEY</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_DUCK</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>184</iCost>
@@ -2386,10 +2386,10 @@
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
+				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -2402,18 +2402,18 @@
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PRIMATE_CAGE</Type>
-			<Description>TXT_KEY_BUILDING_PRIMATE_CAGE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBIVORE_PEDIA</Civilopedia>
+			<Type>BUILDING_ENCLOSURE_PRIMATE</Type>
+			<Description>TXT_KEY_BUILDING_ENCLOSURE_PRIMATE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ENCLOSURE_EXOTIC_HERBIVORE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PRIMATE_CAGE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ENCLOSURE_PRIMATE</ArtDefineTag>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_OLD_MAN</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_OLD_MAN_OF_THE_FOREST</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>306</iCost>
 			<MapCategoryTypes>
@@ -2438,11 +2438,11 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PROCOPTODON_REMAINS</Type>
+			<Type>BUILDING_REMAINS_PROCOPTODON</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_PROCOPTODON_REMAINS</Description>
+			<Description>TXT_KEY_BUILDING_REMAINS_PROCOPTODON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqAmountBuildings>
@@ -2452,7 +2452,7 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2490,21 +2490,21 @@
 			<iAsset>1</iAsset>
 			<iConquestProb>90</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_PROCOPTODON_REMAINS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_REMAINS_PROCOPTODON</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_RATITE_HERD</Type>
+			<Type>BUILDING_HERD_RATITE</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_RATITE_HERD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_RATITE_HERD_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HERD_RATITE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HERD_RATITE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_RATITE_HERD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HERD_RATITE</ArtDefineTag>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
+				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -2518,18 +2518,18 @@
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_REPTILE_CAGE</Type>
-			<Description>TXT_KEY_BUILDING_REPTILE_CAGE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBIVORE_PEDIA</Civilopedia>
+			<Type>BUILDING_ENCLOSURE_REPTILE</Type>
+			<Description>TXT_KEY_BUILDING_ENCLOSURE_REPTILE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ENCLOSURE_EXOTIC_HERBIVORE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_REPTILE_CAGE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ENCLOSURE_REPTILE</ArtDefineTag>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_REPTILE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_REPTILE</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>306</iCost>
 			<MapCategoryTypes>
@@ -2554,18 +2554,18 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_RODENT_CAGE</Type>
-			<Description>TXT_KEY_BUILDING_RODENT_CAGE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBIVORE_PEDIA</Civilopedia>
+			<Type>BUILDING_ENCLOSURE_RODENT</Type>
+			<Description>TXT_KEY_BUILDING_ENCLOSURE_RODENT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ENCLOSURE_EXOTIC_HERBIVORE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_RODENT_CAGE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ENCLOSURE_RODENT</ArtDefineTag>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_RODENT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_RODENT</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>306</iCost>
 			<MapCategoryTypes>
@@ -2590,11 +2590,11 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ROO_HERD</Type>
-			<Description>TXT_KEY_BUILDING_ROO_HERD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ROO_HERD_PEDIA</Civilopedia>
+			<Type>BUILDING_HERD_KANGAROO</Type>
+			<Description>TXT_KEY_BUILDING_HERD_KANGAROO</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HERD_KANGAROO_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ROO_HERD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HERD_KANGAROO</ArtDefineTag>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_KANGAROO</FreeBonus>
@@ -2602,10 +2602,10 @@
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
+				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -2619,11 +2619,11 @@
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SABRETOOTH_REMAINS</Type>
+			<Type>BUILDING_REMAINS_SABRETOOTH</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SABRETOOTH_REMAINS</Description>
+			<Description>TXT_KEY_BUILDING_REMAINS_SABRETOOTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqAmountBuildings>
@@ -2633,7 +2633,7 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2674,11 +2674,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_SABRETOOTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SALACHIMORPHA_INSTITUTE</Type>
-			<Description>TXT_KEY_BUILDING_SALACHIMORPHA_INSTITUTE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SALACHIMORPHA_INSTITUTE_PEDIA</Civilopedia>
+			<Type>BUILDING_CENTER_FOR_SHARK_STUDIES</Type>
+			<Description>TXT_KEY_BUILDING_CENTER_FOR_SHARK_STUDIES</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CENTER_FOR_SHARK_STUDIES_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SALACHIMORPHA_INSTITUTE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CENTER_FOR_SHARK_STUDIES</ArtDefineTag>
 			<PrereqTech>TECH_MARINE_BIOLOGY</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -2702,8 +2702,8 @@
 				<BuildingType>BUILDING_WONDERS_OF_THE_DEEP</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_CEPHALOPOD_INSTITUTE</BuildingType>
-				<BuildingType>BUILDING_CETAEA_INSTITUTE</BuildingType>
+				<BuildingType>BUILDING_CENTER_FOR_CEPHALOPOD_STUDIES</BuildingType>
+				<BuildingType>BUILDING_CENTER_FOR_WHALE_STUDIES</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iCost>1260</iCost>
 			<PropertyManipulators>
@@ -2715,11 +2715,11 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SEAL_CAGE</Type>
-			<Description>TXT_KEY_BUILDING_SEAL_CAGE</Description>
+			<Type>BUILDING_ENCLOSURE_SEAL</Type>
+			<Description>TXT_KEY_BUILDING_ENCLOSURE_SEAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WILD_ANIMAL_CAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SEAL_CAGE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ENCLOSURE_SEAL</ArtDefineTag>
 			<PrereqTech>TECH_ZOOLOGY</PrereqTech>
 			<bWater>1</bWater>
 			<PrereqOrBuildings>
@@ -2727,7 +2727,7 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_SEALION</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SEA_LION</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>306</iCost>
 			<MapCategoryTypes>
@@ -2749,12 +2749,12 @@
 			</UnitCombatFreeExperiences>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SHEEP_HERD</Type>
+			<Type>BUILDING_HERD_SHEEP</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SHEEP_HERD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SHEEP_HERD_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HERD_SHEEP</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HERD_SHEEP_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 			<YieldChanges>
@@ -2769,14 +2769,14 @@
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
+				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<iAsset>3</iAsset>
 			<iConquestProb>75</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_SHEEP_HERD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HERD_SHEEP</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SNAKE_CHARMER</Type>
@@ -2794,11 +2794,11 @@
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_BALLPYTHON</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_BALL_PYTHON</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_COBRA</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_PUFFADDER</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_PUFF_ADDER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_VIPER</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_VIPER_CHAIN</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_CHAIN_VIPER</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>100</iCost>
 			<CommerceChanges>
@@ -2836,9 +2836,9 @@
 			<PrereqTech>TECH_POISON_CRAFTING</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FOLKLORE_COBRA</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_PUFFADDER</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_PUFF_ADDER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_VIPER</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_VIPER_CHAIN</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_CHAIN_VIPER</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>80</iCost>
 			<iHappiness>1</iHappiness>
@@ -2851,11 +2851,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SNAKE_PIT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_THYLACINE_REMAINS</Type>
+			<Type>BUILDING_REMAINS_THYLACINE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_THYLACINE_REMAINS</Description>
+			<Description>TXT_KEY_BUILDING_REMAINS_THYLACINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqAmountBuildings>
@@ -2865,7 +2865,7 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2906,12 +2906,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_THYLACINE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TORTOISE_SHELL_WORKER</Type>
+			<Type>BUILDING_SHELL_WORKERS_HUT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_TORTOISE_SHELL_WORKER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TORTOISE_SHELL_WORKER_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_SHELL_WORKERS_HUT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SHELL_WORKERS_HUT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
@@ -2919,7 +2919,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FOLKLORE_DESERT_TORTOISE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_GALAPAGOS_TORTOISE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SEATURTLE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SEA_TURTLE</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>90</iCost>
 			<ObsoleteTech>TECH_PLASTICS</ObsoleteTech>
@@ -2928,7 +2928,7 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<iAsset>1</iAsset>
-			<ArtDefineTag>ART_DEF_BUILDING_TORTOISE_SHELL_WORKER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_SHELL_WORKERS_HUT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRADITION_HUNTER</Type>
@@ -2957,23 +2957,23 @@
 			<MovieDefineTag>ART_DEF_MOVIE_TRADITION_HUNTER</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TRADITION_NAVAL_TOTEM</Type>
+			<Type>BUILDING_TRADITION_NAVAL_MASCOT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
-			<Description>TXT_KEY_BUILDING_TRADITION_NAVAL_TOTEM</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NAVAL_TOTEM_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_TRADITION_NAVAL_MASCOT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NAVAL_STANDARD_ANIMAL_MASCOT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_NAVAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_NAVAL_STANDARD_ANIMAL_MASCOT</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_NAVAL_TOTEM</FreeBuilding>
+			<FreeBuilding>BUILDING_NAVAL_STANDARD_ANIMAL_MASCOT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_TRADITION_NAVAL_TOTEM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_TRADITION_NAVAL_MASCOT</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TRADITION_NAVAL_TOTEM</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -3003,20 +3003,20 @@
 			<MovieDefineTag>ART_DEF_MOVIE_TRADITION_SEA_HUNTING</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TRADITION_TOTEM</Type>
+			<Type>BUILDING_TRADITION_MILITARY_STANDARD_MASCOT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
-			<Description>TXT_KEY_BUILDING_TRADITION_TOTEM</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TOTEM_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_TRADITION_MILITARY_STANDARD_MASCOT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqTech>TECH_CULTURAL_IDENTITY</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 			</PrereqInCityBuildings>
 			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_ANIMAL_TOTEM</FreeBuilding>
+			<FreeBuilding>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -3024,19 +3024,19 @@
 			<MovieDefineTag>ART_DEF_MOVIE_TRADITION_TOTEM</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TRAINED_SEAL</Type>
+			<Type>BUILDING_CARNIVAL_TRAINED_SEAL</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_TRAINED_SEAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TRAINED_SEAL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CARNIVAL_TRAINED_SEAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CARNIVAL_TRAINED_SEAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_SEALION</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SEA_LION</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WALRUS</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>306</iCost>
@@ -3049,12 +3049,12 @@
 			</CommerceChanges>
 			<iAsset>2</iAsset>
 			<iConquestProb>25</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_TRAINED_SEAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CARNIVAL_TRAINED_SEAL</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TURKEY_FLOCKS</Type>
-			<Description>TXT_KEY_BUILDING_TURKEY_FLOCKS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TURKEY_FLOCKS_PEDIA</Civilopedia>
+			<Type>BUILDING_FLOCKS_OF_TURKEY</Type>
+			<Description>TXT_KEY_BUILDING_FLOCKS_OF_TURKEY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FLOCKS_OF_TURKEY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FLOCKS_OF_TURKEY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -3064,15 +3064,15 @@
 			<iPower>2</iPower>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_POULTRY_HERD</BuildingType>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_HERD_POULTRY</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
+				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_TURKEY</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_WILD_TURKEY</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>184</iCost>
-			<FreeBuilding>BUILDING_TURKEY_FLOCKS</FreeBuilding>
+			<FreeBuilding>BUILDING_FLOCKS_OF_TURKEY</FreeBuilding>
 			<bNeverCapture>1</bNeverCapture>
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -3085,17 +3085,17 @@
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_POULTRY_HERD</BuildingType>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_HERD_POULTRY</BuildingType>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
+				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_WALRUS_CAGE</Type>
-			<Description>TXT_KEY_BUILDING_WALRUS_CAGE</Description>
+			<Type>BUILDING_ENCLOSURE_WALRUS</Type>
+			<Description>TXT_KEY_BUILDING_ENCLOSURE_WALRUS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WILD_ANIMAL_CAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_WALRUS_CAGE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ENCLOSURE_WALRUS</ArtDefineTag>
 			<PrereqTech>TECH_ZOOLOGY</PrereqTech>
 			<bWater>1</bWater>
 			<PrereqInCityBuildings>
@@ -3125,19 +3125,19 @@
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_WOLF_CAGE</Type>
+			<Type>BUILDING_ENCLOSURE_WOLF</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_WOLF_CAGE</Description>
+			<Description>TXT_KEY_BUILDING_ENCLOSURE_WOLF</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WILD_ANIMAL_CAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_WOLF</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_WOLF</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqOrBuildings>
@@ -3183,7 +3183,7 @@
 			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_E_SEA</BuildingType>
 			</PrereqInCityBuildings>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3196,14 +3196,14 @@
 			<ArtDefineTag>ART_DEF_BUILDING_WONDERS_OF_THE_DEEP</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANIMAL_FOLKLORE_CORAL</Type>
+			<Type>BUILDING_PRESENCE_OF_CORAL</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_CORAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_ORIGIN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_PRESENCE_OF_CORAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_ORIGIN_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -3236,14 +3236,14 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CREATION_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANIMAL_FOLKLORE_FALL</Type>
+			<Type>BUILDING_PRESENCE_OF_CRATER</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_FALL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_ORIGIN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_PRESENCE_OF_CRATER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_ORIGIN_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -3264,15 +3264,15 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CREATION_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANIMAL_FOLKLORE_METAL</Type>
+			<Type>BUILDING_PRESENCE_OF_METAL</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_METAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_ORIGIN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_PRESENCE_OF_METAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_ORIGIN_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_COPPER_ORE</VicinityBonus>
@@ -3288,14 +3288,14 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CREATION_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANIMAL_FOLKLORE_OASIS</Type>
+			<Type>BUILDING_PRESENCE_OF_OASIS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_OASIS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_ORIGIN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_PRESENCE_OF_OASIS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_ORIGIN_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -3308,14 +3308,14 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CREATION_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANIMAL_FOLKLORE_OUTCROP</Type>
+			<Type>BUILDING_PRESENCE_OF_LANDFORM</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_OUTCROP</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_ORIGIN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_PRESENCE_OF_LANDFORM</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_ORIGIN_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -3400,14 +3400,14 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CREATION_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANIMAL_FOLKLORE_REEF</Type>
+			<Type>BUILDING_PRESENCE_OF_REEF</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_REEF</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_ORIGIN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_PRESENCE_OF_REEF</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_ORIGIN_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -3428,14 +3428,14 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CREATION_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANIMAL_FOLKLORE_VOLCANO</Type>
+			<Type>BUILDING_PRESENCE_OF_VOLCANO</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_VOLCANO</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_ORIGIN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_PRESENCE_OF_VOLCANO</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_ORIGIN_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -3468,14 +3468,14 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CREATION_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANIMAL_FOLKLORE_SEA</Type>
+			<Type>BUILDING_PRESENCE_OF_SEA</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_SEA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_ORIGIN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_PRESENCE_OF_SEA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_ORIGIN_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<bWater>1</bWater>
 			<bAutoBuild>1</bAutoBuild>
@@ -3483,14 +3483,14 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CREATION_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANIMAL_FOLKLORE_EARTH</Type>
+			<Type>BUILDING_PRESENCE_OF_EARTH</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_EARTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_ORIGIN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_PRESENCE_OF_EARTH</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_ORIGIN_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
@@ -3507,14 +3507,14 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CREATION_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANIMAL_FOLKLORE_FIRE</Type>
+			<Type>BUILDING_PRESENCE_OF_FIRE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_FIRE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_ORIGIN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_PRESENCE_OF_FIRE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_ORIGIN_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<ConstructCondition>
 				<Or>

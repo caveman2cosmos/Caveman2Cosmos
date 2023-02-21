@@ -22,6 +22,16 @@ def init(dir):
 		file = open(path, 'wb')
 		Config.write(file)
 		file.close()
+
+	# Set correct MainMenuMods if current is invalid.
+	szMainMenuMods = Config.get("GAME", "MainMenuMods")
+	if szMainMenuMods != "Caveman2Cosmos":
+		print "Fixing MainMenuMods"
+		Config.set("GAME", "MainMenuMods", "Caveman2Cosmos")
+		file = open(path, 'wb')
+		Config.write(file)
+		file.close()
+
 	#Config.sections()
 	X0 = Config.get("DEBUG", "ScreenWidth")
 	Y0 = Config.get("DEBUG", "ScreenHeight")

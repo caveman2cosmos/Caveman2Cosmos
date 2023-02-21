@@ -2,19 +2,19 @@
 <Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Schema\Caveman2Cosmos.xsd">
 	<CivilizationArtInfos>
 		<CivilizationArtInfo>
-			<Type>ART_DEF_CIVILIZATION_ANIMAL_BEAST</Type>
+			<Type>ART_DEF_CIVILIZATION_NPC_BEAST</Type>
 			<Button>Art/Interface/Buttons/Civilizations/Beast.dds</Button>
 			<Path>Art/Interface/TeamColor/FlagDecal_Beast.dds</Path>
 			<bWhiteFlag>1</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
-			<Type>ART_DEF_CIVILIZATION_ANIMAL_PREDATOR</Type>
+			<Type>ART_DEF_CIVILIZATION_NPC_PREDATOR</Type>
 			<Button>Art/Interface/Buttons/Civilizations/Predator.dds</Button>
 			<Path>Art/Interface/TeamColor/FlagDecal_Predator.dds</Path>
 			<bWhiteFlag>1</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
-			<Type>ART_DEF_CIVILIZATION_ANIMAL_PREY</Type>
+			<Type>ART_DEF_CIVILIZATION_NPC_PREY</Type>
 			<Button>Art/Interface/Buttons/Civilizations/Creature.dds</Button>
 			<Path>Art/Interface/TeamColor/FlagDecal_Creature.dds</Path>
 			<bWhiteFlag>1</bWhiteFlag>
@@ -50,7 +50,7 @@
 			<bWhiteFlag>1</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
-			<Type>ART_DEF_CIVILIZATION_BARBARIAN</Type>
+			<Type>ART_DEF_CIVILIZATION_NPC_BARBARIAN</Type>
 			<Button>,Art/Interface/Buttons/Civilizations/Barbarian.dds,Art/Interface/Buttons/Civics_Civilizations_Religions_Atlas.dds,4,5</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Skullcrossbones.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
@@ -188,7 +188,7 @@
 			<bWhiteFlag>1</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
-			<Type>ART_DEF_CIVILIZATION_NATIVE_AMERICA</Type>
+			<Type>ART_DEF_CIVILIZATION_SIOUX</Type>
 			<Button>Art/Interface/TeamColor/Siouxbutton.dds</Button>
 			<Path>Art/Interface/TeamColor/SiouxFlag.dds</Path>
 			<bWhiteFlag>1</bWhiteFlag>
@@ -254,13 +254,13 @@
 			<bWhiteFlag>1</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
-			<Type>ART_DEF_CIVILIZATION_UNITED_STATES</Type>
+			<Type>ART_DEF_CIVILIZATION_AMERICA</Type>
 			<Button>Art/Interface/TeamColor/america.dds</Button>
 			<Path>Art/Interface/TeamColor/flagdecal_america.dds</Path>
 			<bWhiteFlag>1</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
-			<Type>ART_DEF_CIVILIZATION_VIKINGS</Type>
+			<Type>ART_DEF_CIVILIZATION_SCANDINAVIAS</Type>
 			<Button>Art/Interface/TeamColor/norsebutton.dds</Button>
 			<Path>Art/Interface/TeamColor/flagdecal_norse.dds</Path>
 			<bWhiteFlag>1</bWhiteFlag>

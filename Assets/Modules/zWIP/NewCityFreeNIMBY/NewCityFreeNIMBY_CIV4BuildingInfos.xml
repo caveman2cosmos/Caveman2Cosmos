@@ -10,7 +10,7 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_MILITARY_ROBOTICS</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CROSSES</Type>
+			<Type>BUILDING_CRUCIFIXION_CROSSES</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_CODE_OF_LAWS</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -22,11 +22,11 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_CONSTRUCTION</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GAMBLINGDEN</Type>
+			<Type>BUILDING_GAMBLING_DEN</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_USURY</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_LANDMINES_TRAPS</Type>
+			<Type>BUILDING_LANDMINES</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_GUERRILLA_WARFARE</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -46,7 +46,7 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_SLAVERY</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TATTOO_HUT</Type>
+			<Type>BUILDING_TATTOOER</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_MILITARY_TRADITION</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>

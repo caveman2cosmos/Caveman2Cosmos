@@ -37,7 +37,7 @@ def canTriggerBlessedSea(argsList):
 	data = argsList[0]
 	MAP = GC.getMap()
 
-	if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE):
+	if GAME.isOption(GameOptionTypes.GAMEOPTION_CHALLENGE_ONE_CITY):
 		return False
 
 	iMapMinLandmass = 2 * GC.getWorldInfo(MAP.getWorldSize()).getDefaultPlayers()
@@ -151,7 +151,7 @@ def getHelpHolyMountain1(argsList):
 def canTriggerHolyMountain(argsList):
 	data = argsList[0]
 
-	if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE):
+	if GAME.isOption(GameOptionTypes.GAMEOPTION_CHALLENGE_ONE_CITY):
 		return False
 
 	CyPlot = GC.getMap().plot(data.iPlotX, data.iPlotY)
@@ -1426,7 +1426,7 @@ def canTriggerTheHuns(argsList):
   player = GC.getPlayer(data.ePlayer)
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_NONE):
     return False
 
 #   At least one civ on the board must know Mounted Archery.
@@ -1509,7 +1509,7 @@ def canTriggerTheVandals(argsList):
   player = GC.getPlayer(data.ePlayer)
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_NONE):
     return False
 
 #   At least one civ on the board must know Metal Casting.
@@ -1593,7 +1593,7 @@ def canTriggerTheGoths(argsList):
   player = GC.getPlayer(data.ePlayer)
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_NONE):
     return False
 
 #   At least one civ on the board must know Mathematics.
@@ -1676,7 +1676,7 @@ def canTriggerThePhilistines(argsList):
   player = GC.getPlayer(data.ePlayer)
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_NONE):
     return False
 
 #   At least one civ on the board must know Monotheism.
@@ -1760,7 +1760,7 @@ def canTriggerTheVedicAryans(argsList):
   player = GC.getPlayer(data.ePlayer)
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_NONE):
     return False
 
 #   At least one civ on the board must know Polytheism.
@@ -1878,7 +1878,7 @@ def canTriggerTea(argsList):
 ######## HORSE WHISPERING ###########
 
 def canTriggerHorseWhispering(argsList):
-	return not GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE)
+	return not GAME.isOption(GameOptionTypes.GAMEOPTION_CHALLENGE_ONE_CITY)
 
 def getHelpHorseWhispering1(argsList):
 	return TRNSLTR.getText("TXT_KEY_EVENT_HORSE_WHISPERING_HELP", (GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers(), ))
@@ -1918,7 +1918,7 @@ def canTriggerHarbormaster(argsList):
   trigger = GC.getEventTriggerInfo(data.eTrigger)
   player = GC.getPlayer(data.ePlayer)
 
-  if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_CHALLENGE_ONE_CITY):
     return False
 
   map = GC.getMap()
@@ -1951,7 +1951,7 @@ def canTriggerHarbormasterDone(argsList):
 ######## CLASSIC LITERATURE ###########
 
 def canTriggerClassicLiterature(argsList):
-	return not GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE)
+	return not GAME.isOption(GameOptionTypes.GAMEOPTION_CHALLENGE_ONE_CITY)
 
 def getHelpClassicLiterature1(argsList):
 	return TRNSLTR.getText("TXT_KEY_EVENT_CLASSIC_LITERATURE_HELP_1", (GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers(), ))
@@ -1993,7 +1993,7 @@ def applyClassicLiteratureDone2(argsList):
 		team.setHasTech(listTechs[GAME.getSorenRandNum(len(listTechs), "Classic Literature Event Tech selection")], True, data.ePlayer, True, True)
 
 def getHelpClassicLiteratureDone3(argsList):
-	iGreatLibrary = GC.getInfoTypeForString("BUILDING_GREAT_LIBRARY")
+	iGreatLibrary = GC.getInfoTypeForString("BUILDING_THE_GREAT_LIBRARY")
 
 	szCityName = ""
 	for city in GC.getPlayer(argsList[1].ePlayer).cities():
@@ -2004,7 +2004,7 @@ def getHelpClassicLiteratureDone3(argsList):
 	return TRNSLTR.getText("TXT_KEY_EVENT_FREE_SPECIALIST", (1, GC.getSpecialistInfo(GC.getInfoTypeForString("SPECIALIST_SCIENTIST")).getTextKey(), szCityName))
 
 def canApplyClassicLiteratureDone3(argsList):
-	iGreatLibrary = GC.getInfoTypeForString("BUILDING_GREAT_LIBRARY")
+	iGreatLibrary = GC.getInfoTypeForString("BUILDING_THE_GREAT_LIBRARY")
 
 	for city in GC.getPlayer(argsList[1].ePlayer).cities():
 		if city.getNumRealBuilding(iGreatLibrary):
@@ -2012,7 +2012,7 @@ def canApplyClassicLiteratureDone3(argsList):
 	return False
 
 def applyClassicLiteratureDone3(argsList):
-	iGreatLibrary = GC.getInfoTypeForString("BUILDING_GREAT_LIBRARY")
+	iGreatLibrary = GC.getInfoTypeForString("BUILDING_THE_GREAT_LIBRARY")
 
 	for city in GC.getPlayer(argsList[1].ePlayer).cities():
 		if city.getNumRealBuilding(iGreatLibrary):
@@ -2022,7 +2022,7 @@ def applyClassicLiteratureDone3(argsList):
 ######## MASTER BLACKSMITH ###########
 
 def canTriggerMasterBlacksmith(argsList):
-	return not GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE)
+	return not GAME.isOption(GameOptionTypes.GAMEOPTION_CHALLENGE_ONE_CITY)
 
 def getHelpMasterBlacksmith1(argsList):
 	return (
@@ -2112,7 +2112,7 @@ def applyMasterBlacksmithDone1(argsList):
 ######## THE BEST DEFENSE ###########
 
 def canTriggerBestDefense(argsList):
-	return not GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE)
+	return not GAME.isOption(GameOptionTypes.GAMEOPTION_CHALLENGE_ONE_CITY)
 
 def getHelpBestDefense1(argsList):
 	return TRNSLTR.getText("TXT_KEY_EVENT_BEST_DEFENSE_HELP_1", (GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers(), ))
@@ -2144,7 +2144,7 @@ def applyBestDefenseDone2(argsList):
 
 
 def canApplyBestDefenseDone3(argsList):
-	iGreatWall = GC.getInfoTypeForString("BUILDING_GREAT_WALL")
+	iGreatWall = GC.getInfoTypeForString("BUILDING_GREAT_WALL_OF_CHINA")
 
 	for city in GC.getPlayer(argsList[1].ePlayer).cities():
 		if city.getNumRealBuilding(iGreatWall):
@@ -2154,7 +2154,7 @@ def canApplyBestDefenseDone3(argsList):
 ######## NATIONAL SPORTS LEAGUE ###########
 
 def canTriggerSportsLeague(argsList):
-	return not GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE)
+	return not GAME.isOption(GameOptionTypes.GAMEOPTION_CHALLENGE_ONE_CITY)
 
 def getHelpSportsLeague1(argsList):
 	return (
@@ -2192,7 +2192,7 @@ def canApplySportsLeagueDone3(argsList):
 def canTriggerCrusade(argsList):
 	data = argsList[0]
 
-	if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE):
+	if GAME.isOption(GameOptionTypes.GAMEOPTION_CHALLENGE_ONE_CITY):
 		return False
 
 	holyCity = GAME.getHolyCity(data.eReligion)
@@ -2333,7 +2333,7 @@ def applyCrusadeDone3(argsList):
 ######## ESTEEMEED_PLAYWRIGHT ###########
 
 def canTriggerEsteemedPlaywright(argsList):
-	return not GC.getPlayer(argsList[0].ePlayer).hasBuilding(GC.getInfoTypeForString("BUILDING_SLAVERY"))
+	return not GC.getPlayer(argsList[0].ePlayer).hasBuilding(GC.getInfoTypeForString("BUILDING_WORLDVIEW_SLAVERY_ACTIVE"))
 
 
 ######## SECRET_KNOWLEDGE ###########
@@ -2599,7 +2599,7 @@ def canTriggerWarships(argsList):
 
 def getHelpWarships1(argsList):
 	iNumUnits = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers()
-	iBuilding = GC.getInfoTypeForString("BUILDING_GREAT_LIGHTHOUSE")
+	iBuilding = GC.getInfoTypeForString("BUILDING_THE_GREAT_LIGHTHOUSE")
 	return TRNSLTR.getText("TXT_KEY_EVENT_WARSHIPS_HELP_1", (iNumUnits, GC.getBuildingInfo(iBuilding).getTextKey()))
 
 def canTriggerWarshipsDone(argsList):
@@ -2618,7 +2618,7 @@ def canApplyWarshipsDone2(argsList):
   data = argsList[1]
   player = GC.getPlayer(data.ePlayer)
 
-  iBuilding = GC.getInfoTypeForString("BUILDING_GREAT_LIGHTHOUSE")
+  iBuilding = GC.getInfoTypeForString("BUILDING_THE_GREAT_LIGHTHOUSE")
   if player.getBuildingCountWithUpgrades(iBuilding) == 0:
     return False
 
@@ -2665,7 +2665,7 @@ def canTriggerNobleKnights(argsList):
 
 def getHelpNobleKnights1(argsList):
 	iNumUnits = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers() + 1
-	iBuilding = GC.getInfoTypeForString("BUILDING_ORACLE")
+	iBuilding = GC.getInfoTypeForString("BUILDING_THE_ORACLE")
 	return TRNSLTR.getText("TXT_KEY_EVENT_NOBLE_KNIGHTS_HELP_1", (iNumUnits, GC.getBuildingInfo(iBuilding).getTextKey()))
 
 def canTriggerNobleKnightsDone(argsList):
@@ -2682,7 +2682,7 @@ def canTriggerNobleKnightsDone(argsList):
   kActualTriggeredDataObject = player.getEventTriggered(data.iId)
   kActualTriggeredDataObject.eReligion = kOrigTriggeredData.eReligion
 
-  iBuilding = GC.getInfoTypeForString("BUILDING_ORACLE")
+  iBuilding = GC.getInfoTypeForString("BUILDING_THE_ORACLE")
 
   for loopCity in player.cities():
     if loopCity.getNumRealBuilding(iBuilding):
@@ -2723,7 +2723,7 @@ def getHelpOverwhelm1(argsList):
   iNumCarriers = 3
   iFighter = GC.getInfoTypeForString("SPECIALUNIT_FIGHTER")
   iNumFighters = 9
-  iBuilding = GC.getInfoTypeForString("BUILDING_MANHATTAN")
+  iBuilding = GC.getInfoTypeForString("BUILDING_MANHATTAN_PROJECT")
 
 # szHelp = TRNSLTR.getText("TXT_KEY_EVENT_OVERWHELM_HELP_1", (iNumDestroyers, GC.getUnitInfo(iDestroyer).getTextKey(), iNumBattleships, GC.getUnitInfo(iBattleship).getTextKey(), iNumCarriers, GC.getUnitInfo(iCarrier).getTextKey(), iNumFighters, GC.getSpecialUnitInfo(iFighter).getTextKey(), GC.getProjectInfo(iProject).getTextKey()))
   szHelp = TRNSLTR.getText("TXT_KEY_EVENT_OVERWHELM_HELP_1", (iNumDestroyers, GC.getUnitInfo(iDestroyer).getTextKey(), iNumBattleships, GC.getUnitInfo(iBattleship).getTextKey(), iNumCarriers, GC.getUnitInfo(iCarrier).getTextKey(), iNumFighters, GC.getSpecialUnitInfo(iFighter).getTextKey(), GC.getBuildingInfo(iBuilding).getTextKey()))
@@ -2764,7 +2764,7 @@ def getHelpOverwhelmDone3(argsList):
 def canApplyOverwhelmDone3(argsList):
   data = argsList[1]
   player = GC.getPlayer(data.ePlayer)
-  iBuilding = GC.getInfoTypeForString("BUILDING_MANHATTAN")
+  iBuilding = GC.getInfoTypeForString("BUILDING_MANHATTAN_PROJECT")
 
 # if GC.getTeam(player.getTeam()).getProjectCount(iProject) == 0:
   if player.getBuildingCountWithUpgrades(iBuilding) == 0:
@@ -2857,7 +2857,7 @@ def canTriggerHostileTakeover(argsList):
 	data = argsList[0]
 	player = GC.getPlayer(data.ePlayer)
 
-	if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE):
+	if GAME.isOption(GameOptionTypes.GAMEOPTION_CHALLENGE_ONE_CITY):
 		return False
 
 	city = GAME.getHeadquarters(data.eCorporation)
@@ -3303,7 +3303,7 @@ def canTriggerCureforCancer(argsList):
 
 	if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_DIVINE_CULT")):
 		return False
-	if pPlayer.getBuildingCountWithUpgrades(GC.getInfoTypeForString("BUILDING_MEDICAL_DATABASE")) == 0:
+	if pPlayer.getBuildingCountWithUpgrades(GC.getInfoTypeForString("BUILDING_NATIONAL_MEDICAL_DATABASE")) == 0:
 		return False
 
 	return True
@@ -3435,7 +3435,7 @@ def canTriggerSyntheticFuels(argsList):
 
 	if (
 		not pPlayer.hasBonus(GC.getInfoTypeForString("BONUS_COAL"))
-	or pPlayer.getBuildingCountWithUpgrades(GC.getInfoTypeForString("BUILDING_CORPORATION_3_HQ")) > 0
+	or pPlayer.getBuildingCountWithUpgrades(GC.getInfoTypeForString("BUILDING_HQ_STANDARD_ETHANOL")) > 0
 	):
 		return False
 
@@ -3481,7 +3481,7 @@ def doSyntheticFuels4(argsList):
 
 def canTriggerAlternativeEnergy(argsList):
 	CyPlayer = GC.getPlayer(argsList[0].ePlayer)
-	if CyPlayer.getBuildingCountWithUpgrades(GC.getInfoTypeForString("BUILDING_GREAT_DAM")):
+	if CyPlayer.getBuildingCountWithUpgrades(GC.getInfoTypeForString("BUILDING_THREE_GORGES_DAM")):
 		return False
 	if not CyPlayer.getBuildingCountWithUpgrades(GC.getInfoTypeForString("BUILDING_COAL_PLANT")):
 		return False
@@ -3492,14 +3492,14 @@ def getHelpAlternativeEnergy1(argsList):
 	return TRNSLTR.getText("TXT_KEY_EVENT_ALTERNATIVE_ENERGY_HELP_1", (GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers(), ))
 
 def expireAlternativeEnergy1(argsList):
-	return GC.getPlayer(argsList[1].ePlayer).getBuildingCountWithUpgrades(GC.getInfoTypeForString("BUILDING_GREAT_DAM"))
+	return GC.getPlayer(argsList[1].ePlayer).getBuildingCountWithUpgrades(GC.getInfoTypeForString("BUILDING_THREE_GORGES_DAM"))
 
 
 def canTriggerAlternativeEnergyDone(argsList):
 	data = argsList[0]
 	trigger = GC.getEventTriggerInfo(data.eTrigger)
 	pPlayer = GC.getPlayer(data.ePlayer)
-	i3Gorges = GC.getInfoTypeForString("BUILDING_GREAT_DAM")
+	i3Gorges = GC.getInfoTypeForString("BUILDING_THREE_GORGES_DAM")
 
 	iNuke = GC.getInfoTypeForString("BUILDING_NUCLEAR_PLANT")
 	iHydro = GC.getInfoTypeForString("BUILDING_HYDRO_PLANT")
@@ -3538,7 +3538,7 @@ def canTriggerMoreFiatMoney(argsList):
 ##### INDUSTRIAL_ACTION #####
 
 def canTriggerIndustrialAction(argsList):
-	return not GC.getPlayer(argsList[0].ePlayer).hasBuilding(GC.getInfoTypeForString("BUILDING_SLAVERY"))
+	return not GC.getPlayer(argsList[0].ePlayer).hasBuilding(GC.getInfoTypeForString("BUILDING_WORLDVIEW_SLAVERY_ACTIVE"))
 
 def canDoTriggerCityIndustrialAction(argsList):
 	iCity = argsList[2]
@@ -3616,7 +3616,7 @@ def canTriggerTheBuccaneers(argsList):
   pPlayer = GC.getPlayer(data.ePlayer)
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_NONE):
     return False
 
 #   At least one civ on the board must know Gunpowder.
@@ -3697,7 +3697,7 @@ def applyTheBuccaneers1(argsList):
 
 def canTriggerBlackbeard(argsList):
 	# If Barbarians are disabled in this game, this event will not occur.
-	if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+	if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_NONE):
 		return False
 
 	iPlayer = argsList[0].ePlayer
@@ -3784,7 +3784,7 @@ def applyBlackbeard1(argsList):
 
 def canTriggerPiratesoftheNeutralZones(argsList):
 	# If Barbarians are disabled in this game, this event will not occur.
-	if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+	if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_NONE):
 		return False
 
 	# At least one civ on the board must know Stealth
@@ -3858,7 +3858,7 @@ def canTriggerMalaccanPirates(argsList):
   map = GC.getMap()
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_NONE):
     return False
 
 ###     data.ePlayer must have less than a variable number of combat ships based on map size
@@ -3987,7 +3987,7 @@ def canTriggerHenryMorgan(argsList):
   map = GC.getMap()
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_NONE):
     return False
 
 ###     data.ePlayer must have less than a variable number of combat ships based on map size
@@ -4128,7 +4128,7 @@ def canTriggerStedeBonnet(argsList):
   map = GC.getMap()
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_NONE):
     return False
 
 ###     data.ePlayer must have less than a variable number of combat ships based on map size
@@ -4281,7 +4281,7 @@ def canTriggerTheCorsairs(argsList):
   map = GC.getMap()
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_NONE):
     return False
 
 ###     data.ePlayer must have less than a variable number of combat ships based on map size
@@ -4411,7 +4411,7 @@ def canTriggerIllyrianPirates(argsList):
   map = GC.getMap()
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_NONE):
     return False
 
 ###     data.ePlayer must have less than a variable number of combat ships based on map size
@@ -4555,7 +4555,7 @@ def canTriggerMahdiArmy(argsList):
   pPlayer = GC.getPlayer(data.ePlayer)
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_NONE):
     return False
 
 #   At least one civ on the board must know Flintlock.
@@ -4638,7 +4638,7 @@ def canTriggerTheTaliban(argsList):
   pPlayer = GC.getPlayer(data.ePlayer)
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_NONE):
     return False
 
 #   At least one civ on the board must know Satellites.
@@ -4783,7 +4783,7 @@ def canTriggerMercenariesAncient(argsList):
 	data = argsList[0]
 	CyPlayer = GC.getPlayer(data.ePlayer)
 
-	if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+	if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_NONE):
 		return False
 
 	# Can we build the counter unit?
@@ -4872,7 +4872,7 @@ def canTriggerMercenariesClassical(argsList):
 	data = argsList[0]
 	CyPlayer = GC.getPlayer(data.ePlayer)
 
-	if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+	if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_NONE):
 		return False
 
 	# Can we build the counter unit?
@@ -4960,7 +4960,7 @@ def canTriggerMercenariesMedieval(argsList):
 	data = argsList[0]
 	CyPlayer = GC.getPlayer(data.ePlayer)
 
-	if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+	if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_NONE):
 		return False
 
 	# Can we build the counter unit?
@@ -5250,7 +5250,7 @@ def canTriggerSilverRain(argsList):
   pPlayer = GC.getPlayer(data.ePlayer)
 
 #   If Barbarians are disabled in this game, this event will not occur.
-  if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIANS):
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_NONE):
     return False
 
 #   At least one civ on the board must know Weather control
@@ -5957,7 +5957,7 @@ def triggerNewWorldCities(argsList):
 			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_MARKET"), 1)
 			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_HARBOR"), 1)
 			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_LIGHTHOUSE"), 1)
-			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_FISHERMAN_HUT"), 1)
+			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_FISHERMANS_HUT"), 1)
 		iNeededCities -= 1
 
 
@@ -6559,9 +6559,9 @@ def doGlobalWarming(argsList):
 
 		if plot.isCity():
 			city = plot.getPlotCity()
-			iGW += city.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_POLLUTION_GLOBALWARMING1")) * 100
-			iGW += city.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_POLLUTION_GLOBALWARMING2")) * 10000
-			iGW += city.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_POLLUTION_GLOBALWARMING3")) * 1000000
+			iGW += city.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_POLLUTION_MINOR_GLOBAL_WARMING")) * 100
+			iGW += city.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_POLLUTION_MODERATE_GLOBAL_WARMING")) * 10000
+			iGW += city.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_POLLUTION_MAJOR_GLOBAL_WARMING")) * 1000000
 
 	maxRand = GAME.getEstimateEndTurn() * iNumPlots
 	iIce = 2*iNumPlots / countIce
@@ -7046,7 +7046,7 @@ def applyCivilWar(argsList):
 
 ################ BEST HUNTERS ################
 def canDoBestHunters1(argsList):
-	return GAME.isOption(GameOptionTypes.GAMEOPTION_WITHOUT_WARNING)
+	return GAME.isOption(GameOptionTypes.GAMEOPTION_COMBAT_WITHOUT_WARNING)
 
 def canDoBestHunters2(argsList):
-	return GAME.isOption(GameOptionTypes.GAMEOPTION_HIDE_AND_SEEK) and GAME.isOption(GameOptionTypes.GAMEOPTION_SIZE_MATTERS)
+	return GAME.isOption(GameOptionTypes.GAMEOPTION_COMBAT_HIDE_SEEK) and GAME.isOption(GameOptionTypes.GAMEOPTION_COMBAT_SIZE_MATTERS)

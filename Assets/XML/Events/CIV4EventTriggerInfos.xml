@@ -320,25 +320,25 @@
 			<iWeight>200</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<Building>BUILDING_JEWISH_CATHEDRAL</Building>
+				<Building>BUILDING_JEWISH_SYNAGOGUE</Building>
 				<Building>BUILDING_CHRISTIAN_CATHEDRAL</Building>
-				<Building>BUILDING_ISLAMIC_CATHEDRAL</Building>
-				<Building>BUILDING_HINDU_CATHEDRAL</Building>
-				<Building>BUILDING_BUDDHIST_CATHEDRAL</Building>
-				<Building>BUILDING_CONFUCIAN_CATHEDRAL</Building>
-				<Building>BUILDING_TAOIST_CATHEDRAL</Building>
-				<Building>BUILDING_HELLENIC_CATHEDRAL</Building>
-				<Building>BUILDING_ZOROASTRIAN_CATHEDRAL</Building>
-				<Building>BUILDING_MESOAMERICAN_CATHEDRAL</Building>
-				<Building>BUILDING_MORMON_CATHEDRAL</Building>
+				<Building>BUILDING_ISLAMIC_MOSQUE</Building>
+				<Building>BUILDING_HINDU_MANDIR</Building>
+				<Building>BUILDING_BUDDHIST_STUPA</Building>
+				<Building>BUILDING_CONFUCIAN_ACADEMY</Building>
+				<Building>BUILDING_TAOIST_PAGODA</Building>
+				<Building>BUILDING_HELLENIC_PANTHEON</Building>
+				<Building>BUILDING_ZOROASTRIAN_PANTHEON</Building>
+				<Building>BUILDING_TEMPLE_OF_TLALOC</Building>
+				<Building>BUILDING_LDS_TEMPLE</Building>
 				<Building>BUILDING_SCIENTOLOGY_CATHEDRAL</Building>
-				<Building>BUILDING_SHINTO_CATHEDRAL</Building>
+				<Building>BUILDING_SHINTO_JINGU</Building>
 				<Building>BUILDING_SIKH_CATHEDRAL</Building>
-				<Building>BUILDING_VOODOO_CATHEDRAL</Building>
+				<Building>BUILDING_VOODOO_MARKET</Building>
 				<Building>BUILDING_JAIN_CATHEDRAL</Building>
-				<Building>BUILDING_CAODAI_CATHEDRAL</Building>
-				<Building>BUILDING_CANAANISM_CATHEDRAL</Building>
-				<Building>BUILDING_BAHAI_CATHEDRAL</Building>
+				<Building>BUILDING_CAO_DAI_CATHEDRAL</Building>
+				<Building>BUILDING_CANAANITE_CATHEDRAL</Building>
+				<Building>BUILDING_BAHAI_DAR_BE_MEHR</Building>
 				<Building>BUILDING_ASATRU_CATHEDRAL</Building>
 				<Building>BUILDING_ANDEAN_CATHEDRAL</Building>
 			</BuildingsRequired>
@@ -449,7 +449,7 @@
 			<iMinPopulation>4</iMinPopulation>
 			<iAngry>5</iAngry>
 			<BuildingsRequired>
-				<Building>BUILDING_WV_SLAVERY</Building>
+				<Building>BUILDING_WORLDVIEW_SLAVERY</Building>
 			<BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<bOwnPlot>1</bOwnPlot>
@@ -2676,7 +2676,7 @@
 			<iWeight>150</iWeight>
 			<iMinPopulation>10</iMinPopulation>
 			<BuildingsRequired>
-				<Building>BUILDING_DISEASE_COMMONCOLD</Building>
+				<Building>BUILDING_DISEASE_COMMON_COLD</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<bOwnPlot>1</bOwnPlot>
@@ -2851,14 +2851,14 @@
 				<Building>BUILDING_ISLAMIC_MONASTERY</Building>
 				<Building>BUILDING_JEWISH_MONASTERY</Building>
 				<Building>BUILDING_TAOIST_MONASTERY</Building>
-				<Building>BUILDING_HELLENIC_MONASTERY</Building>
-				<Building>BUILDING_ZOROASTRIAN_MONASTERY</Building>
-				<Building>BUILDING_VOODOO_MONASTERY</Building>
+				<Building>BUILDING_HELLENIC_GYMNASIA</Building>
+				<Building>BUILDING_ZOROASTRIAN_SHRINE</Building>
+				<Building>BUILDING_HOUNFOR</Building>
 				<Building>BUILDING_SHINTO_MONASTERY</Building>
 				<Building>BUILDING_SCIENTOLOGY_MONASTERY</Building>
 				<Building>BUILDING_JAIN_MONASTERY</Building>
-				<Building>BUILDING_CAODAI_MONASTERY</Building>
-				<Building>BUILDING_CANAANISM_MONASTERY</Building>
+				<Building>BUILDING_CAO_DAI_MONASTERY</Building>
+				<Building>BUILDING_CANAANITE_MONASTERY</Building>
 				<Building>BUILDING_BAHAI_MONASTERY</Building>
 				<Building>BUILDING_ASATRU_MONASTERY</Building>
 				<Building>BUILDING_ANDEAN_MONASTERY</Building>
@@ -3721,18 +3721,18 @@
 				<Building>BUILDING_TAOIST_TEMPLE</Building>
 				<Building>BUILDING_CHRISTIAN_TEMPLE</Building>
 				<Building>BUILDING_ISLAMIC_TEMPLE</Building>
-				<Building>BUILDING_MORMON_TEMPLE</Building>
+				<Building>BUILDING_LDS_MEETINGHOUSE</Building>
 				<Building>BUILDING_SCIENTOLOGY_TEMPLE</Building>
 				<Building>BUILDING_SHINTO_TEMPLE</Building>
-				<Building>BUILDING_SIKH_TEMPLE</Building>
-				<Building>BUILDING_VOODOO_TEMPLE</Building>
+				<Building>BUILDING_SIKH_GURDWARA</Building>
+				<Building>BUILDING_LOA_HWE</Building>
 				<Building>BUILDING_HELLENIC_TEMPLE</Building>
-				<Building>BUILDING_ZOROASTRIAN_TEMPLE</Building>
-				<Building>BUILDING_EGYPT_MYTH_TEMPLE</Building>
-				<Building>BUILDING_MESOAMERICAN_TEMPLE</Building>
+				<Building>BUILDING_ZOROASTRIAN_FIRE_TEMPLE</Building>
+				<Building>BUILDING_TEMPLE_OF_RA</Building>
+				<Building>BUILDING_TEMPLE_OF_QUETZALCOATL</Building>
 				<Building>BUILDING_JAIN_TEMPLE</Building>
-				<Building>BUILDING_CAODAI_TEMPLE</Building>
-				<Building>BUILDING_CANAANISM_TEMPLE</Building>
+				<Building>BUILDING_CAO_DAI_TEMPLE</Building>
+				<Building>BUILDING_CANAANITE_TEMPLE</Building>
 				<Building>BUILDING_BAHAI_TEMPLE</Building>
 				<Building>BUILDING_ASATRU_TEMPLE</Building>
 				<Building>BUILDING_ANDEAN_TEMPLE</Building>
@@ -3861,23 +3861,23 @@
 			<iWeight>100</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<Building>BUILDING_JEWISH_CATHEDRAL</Building>
+				<Building>BUILDING_JEWISH_SYNAGOGUE</Building>
 				<Building>BUILDING_CHRISTIAN_CATHEDRAL</Building>
-				<Building>BUILDING_ISLAMIC_CATHEDRAL</Building>
-				<Building>BUILDING_HINDU_CATHEDRAL</Building>
-				<Building>BUILDING_BUDDHIST_CATHEDRAL</Building>
-				<Building>BUILDING_CONFUCIAN_CATHEDRAL</Building>
-				<Building>BUILDING_TAOIST_CATHEDRAL</Building>
-				<Building>BUILDING_HELLENIC_CATHEDRAL</Building>
-				<Building>BUILDING_ZOROASTRIAN_CATHEDRAL</Building>
-				<Building>BUILDING_MORMON_CATHEDRAL</Building>
+				<Building>BUILDING_ISLAMIC_MOSQUE</Building>
+				<Building>BUILDING_HINDU_MANDIR</Building>
+				<Building>BUILDING_BUDDHIST_STUPA</Building>
+				<Building>BUILDING_CONFUCIAN_ACADEMY</Building>
+				<Building>BUILDING_TAOIST_PAGODA</Building>
+				<Building>BUILDING_HELLENIC_PANTHEON</Building>
+				<Building>BUILDING_ZOROASTRIAN_PANTHEON</Building>
+				<Building>BUILDING_LDS_TEMPLE</Building>
 				<Building>BUILDING_SCIENTOLOGY_CATHEDRAL</Building>
-				<Building>BUILDING_SHINTO_CATHEDRAL</Building>
+				<Building>BUILDING_SHINTO_JINGU</Building>
 				<Building>BUILDING_SIKH_CATHEDRAL</Building>
 				<Building>BUILDING_JAIN_CATHEDRAL</Building>
-				<Building>BUILDING_CAODAI_CATHEDRAL</Building>
-				<Building>BUILDING_CANAANISM_CATHEDRAL</Building>
-				<Building>BUILDING_BAHAI_CATHEDRAL</Building>
+				<Building>BUILDING_CAO_DAI_CATHEDRAL</Building>
+				<Building>BUILDING_CANAANITE_CATHEDRAL</Building>
+				<Building>BUILDING_BAHAI_DAR_BE_MEHR</Building>
 				<Building>BUILDING_ASATRU_CATHEDRAL</Building>
 				<Building>BUILDING_ANDEAN_CATHEDRAL</Building>
 			</BuildingsRequired>
@@ -3909,7 +3909,7 @@
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>100</iWeight>
 			<BuildingsRequired>
-				<Building>BUILDING_SCULPTOR</Building>
+				<Building>BUILDING_SCULPTORS_WORKSHOP</Building>
 			</BuildingsRequired>
 			<iNumBuildingsGlobal>3</iNumBuildingsGlobal>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
@@ -4017,7 +4017,7 @@
 			<iWeight>100</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<Building>BUILDING_COMPUTER_FACTORY</Building>
+				<Building>BUILDING_FACTORY_COMPUTERS</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -4162,7 +4162,7 @@
 			<iWeight>100</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<Building>BUILDING_TEXTILE_FACTORY</Building>
+				<Building>BUILDING_FACTORY_CLOTHING</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<iNumBuildingsGlobal>1</iNumBuildingsGlobal>
@@ -4383,7 +4383,7 @@
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>500</iWeight>
 			<BuildingsRequired>
-				<Building>BUILDING_HARBORMASTER_OFFICE</Building>
+				<Building>BUILDING_HARBORMASTERS_OFFICE</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -4827,16 +4827,16 @@
 				<Building>BUILDING_ISLAMIC_MONASTERY</Building>
 				<Building>BUILDING_JEWISH_MONASTERY</Building>
 				<Building>BUILDING_TAOIST_MONASTERY</Building>
-				<Building>BUILDING_HELLENIC_MONASTERY</Building>
-				<Building>BUILDING_ZOROASTRIAN_MONASTERY</Building>
-				<Building>BUILDING_EGYPT_MYTH_MONASTERY</Building>
-				<Building>BUILDING_VOODOO_MONASTERY</Building>
+				<Building>BUILDING_HELLENIC_GYMNASIA</Building>
+				<Building>BUILDING_ZOROASTRIAN_SHRINE</Building>
+				<Building>BUILDING_TEMPLE_OF_CHONS</Building>
+				<Building>BUILDING_HOUNFOR</Building>
 				<Building>BUILDING_SHINTO_MONASTERY</Building>
 				<Building>BUILDING_SCIENTOLOGY_MONASTERY</Building>
 				<Building>BUILDING_JAIN_MONASTERY</Building>
-				<Building>BUILDING_DRUID_MONASTERY</Building>
-				<Building>BUILDING_CAODAI_MONASTERY</Building>
-				<Building>BUILDING_CANAANISM_MONASTERY</Building>
+				<Building>BUILDING_NATURE_CIRCLE_OF_POWER</Building>
+				<Building>BUILDING_CAO_DAI_MONASTERY</Building>
+				<Building>BUILDING_CANAANITE_MONASTERY</Building>
 				<Building>BUILDING_BAHAI_MONASTERY</Building>
 				<Building>BUILDING_ASATRU_MONASTERY</Building>
 				<Building>BUILDING_ANDEAN_MONASTERY</Building>
@@ -5121,25 +5121,6 @@
 			<bPickCity>1</bPickCity>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
-			<!-- @SAVEBREAK - Delete -->
-			<Type>EVENTTRIGGER_PARTISANS</Type>
-			<WorldNewsTexts>
-				<Text>TXT_KEY_EVENTTRIGGER_PARTISANS</Text>
-			</WorldNewsTexts>
-			<TriggerTexts>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_PARTISANS_1</Text>
-					<Era>NONE</Era>
-				</TriggerText>
-			</TriggerTexts>
-			<EventArt>Art/Event_Images/Partisans.dds</EventArt>
-			<iWeight>-1</iWeight>
-			<Events>
-				<Event>EVENT_PARTISANS_1</Event>
-				<Event>EVENT_PARTISANS_2</Event>
-			</Events>
-		</EventTriggerInfo>
-		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_NEW_DYNASTY</Type>
 			<WorldNewsTexts>
 				<Text>TXT_KEY_EVENTTRIGGER_NEW_DYNASTY</Text>
@@ -5317,7 +5298,7 @@
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_WAR_CHARIOTS</Type>
 			<NotOnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</NotOnGameOptions>
 			<TriggerTexts>
 				<TriggerText>
@@ -5371,7 +5352,7 @@
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_ELITE_SWORDS</Type>
 			<NotOnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</NotOnGameOptions>
 			<TriggerTexts>
 				<TriggerText>
@@ -5424,7 +5405,7 @@
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_WARSHIPS</Type>
 			<NotOnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</NotOnGameOptions>
 			<TriggerTexts>
 				<TriggerText>
@@ -5478,7 +5459,7 @@
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_GUNS_BUTTER</Type>
 			<NotOnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</NotOnGameOptions>
 			<TriggerTexts>
 				<TriggerText>
@@ -5532,7 +5513,7 @@
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_NOBLE_KNIGHTS</Type>
 			<NotOnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</NotOnGameOptions>
 			<TriggerTexts>
 				<TriggerText>
@@ -6079,7 +6060,7 @@
 			<iWeight>100</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<Building>BUILDING_GOLDSMITH</Building>
+				<Building>BUILDING_SMITH_GOLD</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<ReligionsRequired>
@@ -6130,16 +6111,6 @@
 			</ObsoleteTechs>
 			<bPickCity>1</bPickCity>
 			<PythonCanDoCity>canTriggerPreachingResearcherCity</PythonCanDoCity>
-		</EventTriggerInfo>
-		<!-- @SAVEBREAK delete EVENTTRIGGER_TOXCATL once we can remove event triggers - cultures are modularized -->
-		<EventTriggerInfo>
-			<Type>EVENTTRIGGER_TOXCATL</Type>
-		</EventTriggerInfo>
-		<EventTriggerInfo>
-			<Type>EVENTTRIGGER_VOLCANO</Type>
-		</EventTriggerInfo>
-		<EventTriggerInfo>
-			<Type>EVENTTRIGGER_TORNADO</Type>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_DISSIDENT_PRIEST</Type>
@@ -6661,7 +6632,7 @@
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<iMinTreasury>30000</iMinTreasury>
 			<BuildingsRequired>
-				<Building>BUILDING_COAL_MINE</Building>
+				<Building>BUILDING_MINE_COAL</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -7547,7 +7518,7 @@
 			</UnitsRequired>
 			<iNumUnits>2</iNumUnits>
 			<BuildingsRequired>
-				<Building>BUILDING_IRONSMITH</Building>
+				<Building>BUILDING_SMITH_IRON</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<bOwnPlot>1</bOwnPlot>
@@ -7883,7 +7854,7 @@
 			<iWeight>500</iWeight>
 			<iMinPopulation>10</iMinPopulation>
 			<BuildingsRequired>
-				<Building>BUILDING_DISEASE_PLAGUE</Building>
+				<Building>BUILDING_DISEASE_BUBONIC_PLAGUE</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<bOwnPlot>1</bOwnPlot>
@@ -9982,7 +9953,7 @@
 			<iWeight>-1</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<Building>BUILDING_AGRICULTURAL_ACHIEVEMENT</Building>
+				<Building>BUILDING_ACHIEVEMENT_AGRICULTURAL</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -10002,7 +9973,7 @@
 			<iWeight>-1</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<Building>BUILDING_COMMERCIAL_ACHIEVEMENT</Building>
+				<Building>BUILDING_ACHIEVEMENT_COMMERCIAL</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -10022,7 +9993,7 @@
 			<iWeight>-1</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<Building>BUILDING_INDUSTRIAL_ACHIEVEMENT</Building>
+				<Building>BUILDING_ACHIEVEMENT_INDUSTRIAL</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -10042,7 +10013,7 @@
 			<iWeight>-1</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<Building>BUILDING_CULTURAL_ACHIEVEMENT</Building>
+				<Building>BUILDING_ACHIEVEMENT_CULTURAL</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -10062,7 +10033,7 @@
 			<iWeight>-1</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<Building>BUILDING_MILITARY_ACHIEVEMENT</Building>
+				<Building>BUILDING_ACHIEVEMENT_MILITARY</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -10082,7 +10053,7 @@
 			<iWeight>-1</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<Building>BUILDING_POLITICAL_ACHIEVEMENT</Building>
+				<Building>BUILDING_ACHIEVEMENT_POLITICAL</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -10102,7 +10073,7 @@
 			<iWeight>-1</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<Building>BUILDING_SCIENTIFIC_ACHIEVEMENT</Building>
+				<Building>BUILDING_ACHIEVEMENT_SCIENTIFIC</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -10122,7 +10093,7 @@
 			<iWeight>-1</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<Building>BUILDING_SEAFARING_ACHIEVEMENT</Building>
+				<Building>BUILDING_ACHIEVEMENT_SEAFARING</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -10149,7 +10120,7 @@
 				<Building>BUILDING_HARBOR</Building>
 				<Building>BUILDING_PORT</Building>
 				<Building>BUILDING_DRYDOCK</Building>
-				<Building>BUILDING_CUSTOM_HOUSE</Building>
+				<Building>BUILDING_CUSTOMS_OFFICE</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<bOwnPlot>1</bOwnPlot>
@@ -10178,7 +10149,7 @@
 				<Building>BUILDING_HARBOR</Building>
 				<Building>BUILDING_PORT</Building>
 				<Building>BUILDING_DRYDOCK</Building>
-				<Building>BUILDING_CUSTOM_HOUSE</Building>
+				<Building>BUILDING_CUSTOMS_OFFICE</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<bOwnPlot>1</bOwnPlot>
@@ -10438,7 +10409,7 @@
 			<iMinTreasury>100</iMinTreasury>
 			<iUnhealthy>1</iUnhealthy>
 			<BuildingsRequired>
-				<Building>BUILDING_DOCTOR</Building>
+				<Building>BUILDING_DOCTORS_OFFICE</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -10463,7 +10434,7 @@
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>200</iWeight>
 			<BuildingsRequired>
-				<Building>BUILDING_SLED_DOGS</Building>
+				<Building>BUILDING_SLED_DOG_TRAINER</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -10863,7 +10834,7 @@
 			<iWeight>50</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<Building>BUILDING_POLLUTION_GLOBALWARMING3</Building>
+				<Building>BUILDING_POLLUTION_MAJOR_GLOBAL_WARMING</Building>
 			</BuildingsRequired>
 			<iNumBuildingsGlobal>1</iNumBuildingsGlobal>
 			<Events>
@@ -11097,7 +11068,7 @@
 			<iUnitExperienceWeight>0</iUnitExperienceWeight>
 			<bUnitsOnPlot>0</bUnitsOnPlot>
 			<BuildingsRequired>
-				<Building>BUILDING_BLARNEY</Building>
+				<Building>BUILDING_BLARNEY_CASTLE</Building>
 			</BuildingsRequired>
 			<iNumBuildings>0</iNumBuildings>
 			<iNumBuildingsGlobal>1</iNumBuildingsGlobal>
@@ -11166,7 +11137,7 @@
 			<iUnitExperienceWeight>0</iUnitExperienceWeight>
 			<bUnitsOnPlot>0</bUnitsOnPlot>
 			<BuildingsRequired>
-				<Building>BUILDING_DINO_PARK</Building>
+				<Building>BUILDING_DINOSAUR_PARK</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<iNumBuildingsGlobal>0</iNumBuildingsGlobal>
@@ -11426,7 +11397,7 @@
 			<iUnitExperienceWeight>0</iUnitExperienceWeight>
 			<bUnitsOnPlot>0</bUnitsOnPlot>
 			<BuildingsRequired>
-				<Building>BUILDING_PLEISTO_PARK</Building>
+				<Building>BUILDING_PLEISTOCENE_PARK</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<iNumBuildingsGlobal>0</iNumBuildingsGlobal>

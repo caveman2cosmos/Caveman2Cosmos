@@ -830,9 +830,6 @@
 				<!-- High Research -->
 				<GoodyType>GOODY_HIGH_RESEARCH</GoodyType>
 				<GoodyType>GOODY_HIGH_RESEARCH</GoodyType>
-				<!-- Tech -->
-				<GoodyType>GOODY_TECH</GoodyType>
-				<GoodyType>GOODY_TECH</GoodyType>
 			</Goodies>
 		</HandicapInfo>
 		<HandicapInfo>
@@ -1067,9 +1064,6 @@
 				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
 				<!-- High Research -->
 				<GoodyType>GOODY_HIGH_RESEARCH</GoodyType>
-				<!-- Tech -->
-				<GoodyType>GOODY_TECH</GoodyType>
-				<GoodyType>GOODY_TECH</GoodyType>
 			</Goodies>
 		</HandicapInfo>
 		<HandicapInfo>
@@ -1324,9 +1318,6 @@
 				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
 				<!-- High Research -->
 				<GoodyType>GOODY_HIGH_RESEARCH</GoodyType>
-				<!-- Tech -->
-				<GoodyType>GOODY_TECH</GoodyType>
-				<GoodyType>GOODY_TECH</GoodyType>
 			</Goodies>
 		</HandicapInfo>
 		<HandicapInfo>
@@ -1595,9 +1586,6 @@
 				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
 				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
 				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
-				<!-- Tech -->
-				<GoodyType>GOODY_TECH</GoodyType>
-				<GoodyType>GOODY_TECH</GoodyType>
 			</Goodies>
 		</HandicapInfo>
 		<HandicapInfo>
@@ -1881,9 +1869,6 @@
 				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
 				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
 				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
-				<!-- Tech -->
-				<GoodyType>GOODY_TECH</GoodyType>
-				<GoodyType>GOODY_TECH</GoodyType>
 			</Goodies>
 		</HandicapInfo>
 		<HandicapInfo>

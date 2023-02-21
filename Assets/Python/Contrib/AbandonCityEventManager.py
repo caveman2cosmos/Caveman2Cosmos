@@ -31,7 +31,7 @@ def startCityDemolish(screen, xRes, yRes):
 			CD.CyCity = CyCity
 			if GAME.isOption(GameOptionTypes.GAMEOPTION_NO_CITY_RAZING):
 				CD.bAbandonCity = False
-			elif not GAME.isOption(GameOptionTypes.GAMEOPTION_COMPLETE_KILLS) and CyPlayer.getNumCities() < 2:
+			elif not GAME.isOption(GameOptionTypes.GAMEOPTION_EXP_COMPLETE_KILLS) and CyPlayer.getNumCities() < 2:
 				CD.bAbandonCity = False
 			else:
 				CD.bAbandonCity = True
