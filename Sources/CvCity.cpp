@@ -288,14 +288,30 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 
 	pPlot->changeCulture(getOwner(), GC.getFREE_CITY_CULTURE(), bBumpUnits);
 
+	// Immediately put some tiles on adjacent tiles if not 1TF option. Which tiles depends on game options.
 	if (!GC.getGame().isOption(GAMEOPTION_CULTURE_1_CITY_TILE_FOUNDING))
 	{
 		const int iAdjCulture = GC.getFREE_CITY_ADJACENT_CULTURE();
-		// RCS gets free culture on cardinal adjacent tiles only
-		foreach_(CvPlot* pAdjacentPlot, GC.getGame().isOption(GAMEOPTION_CULTURE_REALISTIC_SPREAD) ? plot()->cardinalDirectionAdjacent() : plot()->adjacent())
+		// Special case: RCS with no MCB gains only tiles a lvl 1 city would gain as defined by RCS
+		if (GC.getGame().isOption(GAMEOPTION_CULTURE_REALISTIC_SPREAD) && !GC.getGame().isOption(GAMEOPTION_CULTURE_MIN_CITY_BORDER))
 		{
-			pAdjacentPlot->changeCulture(getOwner(), iAdjCulture, bBumpUnits);
-			pAdjacentPlot->updateCulture(bBumpUnits, false);
+			foreach_(CvPlot* pAdjacentPlot, plot()->cardinalDirectionAdjacent())
+			{
+				if (cultureDistance(*pAdjacentPlot) == 1)
+				{
+					pAdjacentPlot->changeCulture(getOwner(), iAdjCulture, bBumpUnits);
+					pAdjacentPlot->updateCulture(bBumpUnits, false);
+				}
+			}
+		}
+		// All 8 tiles gained. MCB enables this even if RCS also on; 'soft' RCS
+		else
+		{
+			foreach_(CvPlot* pAdjacentPlot, plot()->adjacent())
+			{
+				pAdjacentPlot->changeCulture(getOwner(), iAdjCulture, bBumpUnits);
+				pAdjacentPlot->updateCulture(bBumpUnits, false);
+			}
 		}
 	}
 
@@ -2939,6 +2955,7 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 	/* when not ordinarily hiding uncosntructable (since you cannot influence your vicinity bonuses	*/
 	/* so its not useful information for the most part												*/
 	/************************************************************************************************/
+	// Blaze - Might be useful in some situations - is in radius, tile not owned - but that's a TODO
 	if (!bExposed)
 	{
 		if (kBuilding.getPrereqVicinityBonus() != NO_BONUS
@@ -3050,6 +3067,7 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 	}
 
 	// Koshling - Always hide unbuildable due to vicinity bonuses, it's not really useful to see them
+	// Blaze - Might be useful in some situations - is in radius, tile not owned - but that's a TODO
 	if (!bExposed)
 	{
 		bool bHasAnyVicinityBonus = false;
@@ -5325,7 +5343,7 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 			owner.changeBuildingCommerceChange(kChange.first, (CommerceTypes)i, kChange.second[i] * iChange);
 		}
 	}
-/*
+	/*
 	for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
 	{
 		for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
@@ -5333,7 +5351,7 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 			changeImprovementYieldChange(((ImprovementTypes)iI), ((YieldTypes)iJ), (kBuilding.getImprovementYieldChanges(iI, iJ) * iChange));
 		}
 	}
-*/
+	*/
 	{
 		PROFILE("CvCity::processBuilding.Part5");
 		updateExtraBuildingHappiness();
@@ -6471,12 +6489,16 @@ void CvCity::recalculateCultureDistances(int iMaxDistance) const
 	// then (inefficiently, atm) calls calculateCultureDistance to compute specific tiles
 	PROFILE_FUNC();
 
-	// 1-tile start and realistic culture together has unique rules, otherwise distance 0, 1:
-	foreach_(const CvPlot* plotX, plot()->cardinalDirectionAdjacent())
+	// MCB w/o 1TF makes 8 adjacent tiles dist 1 ('soft' RCS)
+	if (GC.getGame().isOption(GAMEOPTION_CULTURE_MIN_CITY_BORDER) && !GC.getGame().isOption(GAMEOPTION_CULTURE_1_CITY_TILE_FOUNDING))
 	{
-		if (plotX == plot()) m_aCultureDistances[plotX] = 0;
-		else if (!GC.getGame().isOption(GAMEOPTION_CULTURE_1_CITY_TILE_FOUNDING)) m_aCultureDistances[plotX] = 1;
+		foreach_(const CvPlot* plotX, plot()->adjacent())
+		{
+			m_aCultureDistances[plotX] = 1;
+		}
 	}
+	// City tile itself should always have dist 0
+	m_aCultureDistances[plot()] = 0;
 
 	// Blaze: Spiraling outward from center (style of getCityIndexPlot) is more efficient if perf issues exist;
 	// 	this implementation is rather brute-force and inefficient. Will need to make edits to existing func tho,
@@ -6499,13 +6521,13 @@ void CvCity::recalculateCultureDistances(int iMaxDistance) const
 			// This is a slightly cursed function.
 			// Center should never be calculated:
 			if (plotX == plot()) continue;
-			// RCS without 1TF should consider city cardinal adjacent tiles distance 1; don't recalc
-			if (!GC.getGame().isOption(GAMEOPTION_CULTURE_1_CITY_TILE_FOUNDING))
+			// MCB w/o 1TF makes adjacent 8 always distance 1; should not be custom calculated
+			if (GC.getGame().isOption(GAMEOPTION_CULTURE_MIN_CITY_BORDER) && !GC.getGame().isOption(GAMEOPTION_CULTURE_1_CITY_TILE_FOUNDING))
 			{
 				bool bCityAdjacent = false;
-				foreach_(const CvPlot* plotXCardinalAdjacent, plotX->cardinalDirectionAdjacent())
+				foreach_(const CvPlot* plotAdjacent, plotX->adjacent())
 				{
-					if (plotXCardinalAdjacent == plot())
+					if (plotAdjacent == plot())
 					{
 						bCityAdjacent = true;
 						break;
@@ -6550,10 +6572,10 @@ int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) c
 	foreach_(const CvPlot* adjacentPlot, mainPlot->cardinalDirectionAdjacent())
 	{
 		int neighborDist = m_aCultureDistances[adjacentPlot];
-		// neighborDist is 0 on first iteration after cleared cache. Don't calculate from such tiles,
-		// unless we are adjacent to capital (needed if 1tile founding is on); can use that as valid neighbor.
+		// An uncalculated tile will either have MAX_INT (no neighbors on prev calc) or 0 (1st iteration).
+		// 0 may be used if it's the city tile itself, though.
 		if (neighborDist != MAX_INT &&
-			(neighborDist != 0 || (adjacentPlot->getX() == getX() && adjacentPlot->getY() == getY())))
+			(neighborDist != 0 || adjacentPlot == plot()))
 		{
 			bHasCalculatedNeighbors = true;
 			break;
@@ -6561,9 +6583,7 @@ int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) c
 	}
 	if (!bHasCalculatedNeighbors) return MAX_INT;
 
-	// Calculate terrain distance necessary before neighbors, because city presence can
-	// remove any combination of terrain and river crossing penalties; chosing which neighbor
-	// therefore requires the current terrain known to avoid an endlessly-updating loop.
+	// Calculate base terrain distance. May be modified later based on neighbor chosen (river, city, etc)
 	int terrainDistance = 0;
 
 	// Distance from ground tile type (peak or specific terrain)
@@ -6622,7 +6642,8 @@ int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) c
 	}
 
 	bool bIsBonus = mainPlot->getBonusType(getTeam()) != NO_BONUS;
-	// Using route value/tier as softer inhibitor by era
+
+	// Using route value/tier as softer land tile inhibitor by era
 	// Base distance (x): 0, 1, 2, 3, 4 ... translates to:
 	// Tier 0 (noroute):  0, 1, 3, 5, 7 ... // 2x-1: Always applies to tiles not yet influenced
 	// Tier 1 (trail):	  0, 1, 3, 4, 6 ... // 3x/2
@@ -6668,13 +6689,13 @@ int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) c
 	foreach_(const CvPlot* adjacentPlot, mainPlot->cardinalDirectionAdjacent())
 	{
 		int neighborDist = m_aCultureDistances[adjacentPlot];
-		// neighborDist is 0 on first iteration after cleared cache. Don't calculate from such tiles,
-		// unless we are adjacent to capital (needed if 1tile founding is on); can use that as valid neighbor.
+		// An uncalculated tile will either have MAX_INT (no neighbors on prev calc) or 0 (1st iteration).
+		// 0 may be used if it's the city tile itself, though.
 		if (neighborDist != MAX_INT &&
-			(neighborDist != 0 || (adjacentPlot->getX() == getX() && adjacentPlot->getY() == getY())))
+			(neighborDist != 0 || adjacentPlot == plot()))
 		{
 			int netDistanceModifier = terrainDistance;
-			// If we are adjacent to our own city center (1 tile founding rule), different rules. Cheaper, but not straight 0 cost.
+			// If we are adjacent to our own city center, different rules. Cheaper, but not straight 0 cost.
 			if (neighborDist == 0)
 			{
 				netDistanceModifier += mainPlot->isRiverCrossing(directionXY(mainPlot, adjacentPlot)) * (extraRiverPenalty);
@@ -6692,8 +6713,6 @@ int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) c
 			if (neighborDist < distance) distance = neighborDist;
 		}
 	}
-
-	// at this point, we are done; distance still might be MAX_INT if not adjacent to others.
 	return distance;
 }
 
@@ -16091,8 +16110,6 @@ void CvCity::doPlotCulture(PlayerTypes ePlayer, int iCultureRate)
 
 	int iCultureLevel = GC.getCultureLevelInfo(getCultureLevel()).getLevel();
 
-	// Put culture onto plots from the city, even if "0" culture output,
-	// to prevent loss thru decay if 0 culture and not realistic culture.
 	clearCultureDistanceCache();
 
 	foreach_(CvPlot* plotX, plot()->rect(iCultureLevel, iCultureLevel))
