@@ -720,7 +720,7 @@ void CvGame::updateTestEndTurn()
 {
 	PROFILE_FUNC();
 	const CvPlayer& player = GET_PLAYER(getActivePlayer());
-	FAssertMsg(player.isHuman(), "Why would exe call this for AI players?")
+	FAssertMsg(player.isHumanPlayer(), "Why would exe call this for AI players?")
 
 	if (!player.isTurnActive())
 	{

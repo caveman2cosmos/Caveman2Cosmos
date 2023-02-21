@@ -76,14 +76,14 @@ public:
 					int iTurns = getInvasionChance() / 2;
 					changeInvasionTimer(iTurns);
 					//Alert the Player
-					if (pPlayer->isHuman())
+					if (pPlayer->isHumanPlayer())
 					{
 						CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_INVASION);
 						pInfo->setData1(thisCity->getID());
 						gDLL->getInterfaceIFace()->addPopup(pInfo, thisCity->getOwner());
 					}
 					//Alert the invader
-					if (GET_PLAYER(ePlayer).isHuman())
+					if (GET_PLAYER(ePlayer).isHumanPlayer())
 					{
 						CvWString szBuffer = gDLL->getText("TXT_KEY_INVASION_SUCCESSFUL", thisCity->getNameKey());
 						AddDLLMessage(ePlayer, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BUILD_BARRACKS", MESSAGE_TYPE_INFO, ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), GC.getCOLOR_GREEN(), getX(), getY(), true, true);

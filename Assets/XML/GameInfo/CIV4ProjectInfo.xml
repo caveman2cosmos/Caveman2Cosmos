@@ -53,8 +53,8 @@
 			<Button>,Art/Interface/Buttons/Buildings/SDI.dds,Art/Interface/Buttons/Buildings_Atlas.dds,1,6</Button>
 		</ProjectInfo>
 		<ProjectInfo>
-			<Type>PROJECT_MISSILE_DEFENCE_I</Type>
-			<Description>TXT_KEY_PROJECT_MISSILE_DEFENCE_I</Description>
+			<Type>PROJECT_AA_MISSILE_DEFENSES</Type>
+			<Description>TXT_KEY_PROJECT_AA_MISSILE_DEFENSES</Description>
 			<Civilopedia>TXT_KEY_PROJECT_MISSILE_DEFENCE_PEDIA</Civilopedia>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -74,8 +74,8 @@
 			<Button>art/Interface/Buttons/Projects/MissileAAGun.dds</Button>
 		</ProjectInfo>
 		<ProjectInfo>
-			<Type>PROJECT_MISSILE_DEFENCE_II</Type>
-			<Description>TXT_KEY_PROJECT_MISSILE_DEFENCE_II</Description>
+			<Type>PROJECT_LASER_AUTO_DEFENSES</Type>
+			<Description>TXT_KEY_PROJECT_LASER_AUTO_DEFENSES</Description>
 			<Civilopedia>TXT_KEY_PROJECT_MISSILE_DEFENCE_PEDIA</Civilopedia>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -99,8 +99,8 @@
 			<Button>art/Interface/Buttons/Projects/LaserDefenses.dds</Button>
 		</ProjectInfo>
 		<ProjectInfo>
-			<Type>PROJECT_MISSILE_RAILGUN</Type>
-			<Description>TXT_KEY_PROJECT_MISSILE_RAILGUN</Description>
+			<Type>PROJECT_ANTI_MISSILE_RAILGUN</Type>
+			<Description>TXT_KEY_PROJECT_ANTI_MISSILE_RAILGUN</Description>
 			<Civilopedia>TXT_KEY_PROJECT_MISSILE_DEFENCE_PEDIA</Civilopedia>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -398,16 +398,16 @@
 			<Button>Art/Interface/Buttons/Buildings/Cloned_mammal.dds</Button>
 		</ProjectInfo>
 		<ProjectInfo>
-			<Type>PROJECT_HUBBLE</Type>
-			<Description>TXT_KEY_PROJECT_HUBBLE</Description>
-			<Civilopedia>TXT_KEY_PROJECT_HUBBLE_PEDIA</Civilopedia>
+			<Type>PROJECT_HUBBLE_SPACE_TELESCOPE</Type>
+			<Description>TXT_KEY_PROJECT_HUBBLE_SPACE_TELESCOPE</Description>
+			<Civilopedia>TXT_KEY_PROJECT_HUBBLE_SPACE_TELESCOPE_PEDIA</Civilopedia>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<TechPrereq>TECH_ASTRONAUTICS</TechPrereq>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iCost>11800</iCost>
-			<EveryoneSpecialBuilding>SPECIALBUILDING_DEEP_SPACE_RESEARCH</EveryoneSpecialBuilding>
+			<EveryoneSpecialBuilding>SPECIALBUILDING_DEEP_SPACE_RESEARCH_INSTITUTE</EveryoneSpecialBuilding>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_ALUMINUM_INGOTS</BonusType>
@@ -418,9 +418,9 @@
 			<Button>art/Interface/Buttons/Projects/hubble.dds</Button>
 		</ProjectInfo>
 		<ProjectInfo>
-			<Type>PROJECT_ENCYCLOPEDIE</Type>
-			<Description>TXT_KEY_PROJECT_ENCYCLOPEDIE</Description>
-			<Civilopedia>TXT_KEY_PROJECT_ENCYCLOPEDIE_PEDIA</Civilopedia>
+			<Type>PROJECT_ENCYCLOPEDIA</Type>
+			<Description>TXT_KEY_PROJECT_ENCYCLOPEDIA</Description>
+			<Civilopedia>TXT_KEY_PROJECT_ENCYCLOPEDIA_PEDIA</Civilopedia>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -436,9 +436,9 @@
 			<Button>Art/Interface/Buttons/Buildings/CodeCivil.dds</Button>
 		</ProjectInfo>
 		<ProjectInfo>
-			<Type>PROJECT_IST</Type>
-			<Description>TXT_KEY_PROJECT_IST</Description>
-			<Civilopedia>TXT_KEY_PROJECT_IST_PEDIA</Civilopedia>
+			<Type>PROJECT_INTERNATIONAL_SPACE_STATION</Type>
+			<Description>TXT_KEY_PROJECT_INTERNATIONAL_SPACE_STATION</Description>
+			<Civilopedia>TXT_KEY_PROJECT_INTERNATIONAL_SPACE_STATION_PEDIA</Civilopedia>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -466,13 +466,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_FUSION_PLANT</MovieDefineTag>
 			<iMaxTeamInstances>1</iMaxTeamInstances>
 			<iCost>18440</iCost>
-			<EveryoneSpecialBuilding>SPECIALBUILDING_FUSION_PLANT</EveryoneSpecialBuilding>
+			<EveryoneSpecialBuilding>SPECIALBUILDING_D_T_FUSION_POWER_PLANT</EveryoneSpecialBuilding>
 			<Button>Art/Interface/Buttons/buildings/ITER.dds</Button>
 		</ProjectInfo>
 		<ProjectInfo>
-			<Type>PROJECT_IMF</Type>
-			<Description>TXT_KEY_PROJECT_IMF</Description>
-			<Civilopedia>TXT_KEY_PROJECT_IMF_PEDIA</Civilopedia>
+			<Type>PROJECT_INTERNATIONAL_MONETARY_FUND</Type>
+			<Description>TXT_KEY_PROJECT_INTERNATIONAL_MONETARY_FUND</Description>
+			<Civilopedia>TXT_KEY_PROJECT_INTERNATIONAL_MONETARY_FUND_PEDIA</Civilopedia>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -489,9 +489,9 @@
 			<Button>Art/Interface/Buttons/buildings/IMF.dds</Button>
 		</ProjectInfo>
 		<ProjectInfo>
-			<Type>PROJECT_EDEN</Type>
-			<Description>TXT_KEY_PROJECT_EDEN</Description>
-			<Civilopedia>TXT_KEY_PROJECT_EDEN_PEDIA</Civilopedia>
+			<Type>PROJECT_EDEN_PROJECT</Type>
+			<Description>TXT_KEY_PROJECT_EDEN_PROJECT</Description>
+			<Civilopedia>TXT_KEY_PROJECT_EDEN_PROJECT_PEDIA</Civilopedia>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -518,7 +518,7 @@
 			<Button>,Art/Interface/Buttons/Buildings/Cancer.dds,Art/Interface/Buttons/RoM_Building_Atlas.dds,5,2</Button>
 		</ProjectInfo>
 		<ProjectInfo>
-			<Type>PROJECT_HUMAN_GENOME</Type>
+			<Type>PROJECT_HUMAN_GENOME_PROJECT</Type>
 			<Description>TXT_KEY_BUILDING_HUMAN_GENOME_PROJECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HUMAN_GENOME_PROJECT_PEDIA</Civilopedia>
 			<MapCategoryTypes>

@@ -308,7 +308,7 @@ bool CvReachablePlotSet::canMoveBetweenWithFlags(const CvSelectionGroup* group, 
 		}
 	}
 
-	if (GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL))
+	if (GC.getGame().isOption(GAMEOPTION_UNSUPPORTED_ZONE_OF_CONTROL))
 	{
 		const TeamTypes eTeam = group->getTeam();
 		const PlayerTypes eOwner = group->getHeadOwner();

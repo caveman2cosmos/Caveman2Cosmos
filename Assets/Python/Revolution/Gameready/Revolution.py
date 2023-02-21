@@ -5638,7 +5638,7 @@ class Revolution:
 					CyInterface().addMessage(iPlayer, False, GC.getEVENT_MESSAGE_TIME(), mess, None, InterfaceMessageTypes.MESSAGE_TYPE_MAJOR_EVENT, None, ColorTypes(79), -1, -1, False, False)
 
 			# Change personality type
-			if GAME.isOption(GameOptionTypes.GAMEOPTION_RANDOM_PERSONALITIES):
+			if GAME.isOption(GameOptionTypes.GAMEOPTION_AI_RANDOM_PERSONALITIES):
 				if self.LOG_DEBUG: print "[REV] Revolt: Giving new, random personality by game option"
 				RevUtils.changePersonality(pPlayer.getID())
 			elif newLeaderName == TextUtil.convertToStr(GC.getLeaderHeadInfo( newLeaderType ).getDescription()):

@@ -2,14 +2,14 @@
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<Type>BUILDING_CYBERPUNK_EMBASSY</Type>
+			<Type>BUILDING_CULTURE_CYBERPUNK</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_CYBER</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_CYBERPUNK_EMBASSY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CYBERPUNK_EMBASSY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CULTURE_CYBERPUNK</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CULTURE_CYBERPUNK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CYBERPUNK_EMBASSY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_CYBERPUNK</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>

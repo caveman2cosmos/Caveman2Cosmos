@@ -1264,15 +1264,6 @@
 		<Russian>Ôàéë</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__FILEPATH_HOVER</Tag>
-		<English>Directory where log file resides (fully qualified path, i.e. C:\folder\subfolder or blank).</English>
-		<French>Le Répertoire ou le fichier de log sera sauvegardé (chemin complet, p.ex. C:\folder\subfolder ou vide).</French>
-		<German>Verzeichnis, in dem sich die Protokolldatei befindet (komplette Pfadangabe, d.h. C:\Ordner\Unterordner oder leer lassen)</German>
-		<Italian>Cartella dove è localizzato il file di registro (percorso completo (ad esempio C:\cartella\sottocartella) o vuoto).</Italian>
-		<Spanish>Directorio donde reside el archivo de registro (ruta completa, p. ej. C:\carpeta\subcarpeta o vacío).</Spanish>
-		<Russian>Êàòàëîã, â êîòîðîì ôàéë æóðíàëà ðàñïîëîæåí (ïîëíûé ïóòü, ò.å. C:\folder\subfolder èëè ïóñòî).</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__FILEPATH_TEXT</Tag>
 		<English>Path</English>
 		<French>Chemin</French>
@@ -6949,24 +6940,6 @@
 		<Italian>Niente Popup della produzione</Italian>
 		<Spanish>No mostrar avisos emergentes de producción</Spanish>
 		<Russian>Îòêë. î÷åðåäü íà ñòðîèò-âî</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__NOSTORMS_HOVER</Tag>
-		<English>Storms will stop spawning, and dissipate over time.</English>
-		<French>Les Tempêtes vont arrêter d'apparaître, et se dissipent avec le temps.</French>
-		<German>Es werden keine neuen Stürme entstehen und bereits vorhandene lösen sich langsam auf.</German>
-		<Italian>I temporali non verranno più creati, e svaniranno con il tempo.</Italian>
-		<Spanish>Las tormentas dejarán de engendrarse, y se disiparán con el tiempo.</Spanish>
-		<Russian>Óðàãàíû ïðåêðàùàþò ïîÿâëÿòüñÿ íà êàðòå, à óæå ñóùåñòâóþùèå ïîñòåïåííî ðàñïàäàþòñÿ.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__NOSTORMS_TEXT</Tag>
-		<English>No Storms</English>
-		<French>Pas de Tempêtes</French>
-		<German>Keine Stürme</German>
-		<Italian>Niente temporali</Italian>
-		<Spanish>Sin tormentas</Spanish>
-		<Russian>Íåò øòîðìîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__PLAYERCOLOR_HOVER</Tag>

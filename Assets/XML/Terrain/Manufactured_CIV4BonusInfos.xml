@@ -1523,11 +1523,11 @@
 		</BonusInfo>
 		<!-- Nets -->
 		<BonusInfo>
-			<Type>BONUS_NETS</Type>
-			<Description>TXT_KEY_BONUS_NETS</Description>
-			<Civilopedia>TXT_KEY_BONUS_NETS_PEDIA</Civilopedia>
+			<Type>BONUS_FISHING_NETS</Type>
+			<Description>TXT_KEY_BONUS_FISHING_NETS</Description>
+			<Civilopedia>TXT_KEY_BONUS_FISHING_NETS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_NETS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_FISHING_NETS</ArtDefineTag>
 			<TechReveal>TECH_TRAP_FISHING</TechReveal>
 			<TechCityTrade>TECH_TRAP_FISHING</TechCityTrade>
 		</BonusInfo>

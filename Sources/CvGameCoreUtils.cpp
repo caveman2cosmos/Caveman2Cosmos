@@ -482,7 +482,7 @@ int getCombatOdds(const CvUnit* pAttacker, const CvUnit* pDefender)
 	iDefenderFirepower = pDefender->currFirepower(pDefender->plot(), pAttacker);
 
 #ifdef STRENGTH_IN_NUMBERS
-	if (GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (GC.getGame().isOption(GAMEOPTION_COMBAT_STRENGTH_IN_NUMBERS))
 	{
 		int iAttackerSupportStrength = pAttacker->getAttackerSupportValue();
 		iAttackerStrength += iAttackerSupportStrength;
@@ -815,7 +815,7 @@ float getCombatOddsSpecific(const CvUnit* pAttacker, const CvUnit* pDefender, in
 	iDefenderFirepower = pDefender->currFirepower(pDefender->plot(), pAttacker);
 
 #ifdef STRENGTH_IN_NUMBERS
-	if (GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (GC.getGame().isOption(GAMEOPTION_COMBAT_STRENGTH_IN_NUMBERS))
 	{
 		int iDefenderSupportStrength = pDefender->getDefenderSupportValue(pAttacker);
 		int iAttackerSupportStrength = pAttacker->getAttackerSupportValue();
@@ -1264,7 +1264,7 @@ TechTypes getDiscoveryTech(const UnitTypes eUnit, const PlayerTypes ePlayer)
 			if (iValue > 0)
 			{
 				iValue *= 10;
-				iValue += player.AI_TechValueCached(eTechX, player.isHuman());
+				iValue += player.AI_TechValueCached(eTechX, player.isHumanPlayer());
 
 				if (iValue > iBestValue)
 				{
@@ -1827,7 +1827,7 @@ int pathDestValid(int iToX, int iToY, const void* pointer, FAStar* finder)
 
 	//OutputDebugString(CvString::format("PathDestValid (%d,%d)\n", iToX, iToY).c_str());
 	//TB OOS Debug
-	if (!pSelectionGroup->AI_isControlled() || GET_PLAYER(pSelectionGroup->getHeadOwner()).isHuman())
+	if (!pSelectionGroup->AI_isControlled() || GET_PLAYER(pSelectionGroup->getHeadOwner()).isHumanPlayer())
 	{
 		gDLL->getFAStarIFace()->ForceReset(finder);
 #ifdef PATHFINDING_CACHE
@@ -3391,7 +3391,7 @@ bool ContextFreeNewPathValidFunc(const CvSelectionGroup* pSelectionGroup, int iF
 			default: break;
 		}
 
-		if (GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL))
+		if (GC.getGame().isOption(GAMEOPTION_UNSUPPORTED_ZONE_OF_CONTROL))
 		{
 			const TeamTypes eTeam = pSelectionGroup->getHeadTeam();
 
@@ -4264,7 +4264,7 @@ int calcBaseExpNeeded(const int iLevel, const PlayerTypes ePlayer)
 {
 	int iThreshold = 99 + (iLevel*iLevel + 1) * (100 + GET_PLAYER(ePlayer).getLevelExperienceModifier());
 
-	if (GC.getGame().isOption(GAMEOPTION_MORE_XP_TO_LEVEL))
+	if (GC.getGame().isOption(GAMEOPTION_UNIT_MORE_XP_TO_LEVEL))
 	{
 		iThreshold *= GC.getDefineINT("MORE_XP_TO_LEVEL_MODIFIER");
 		iThreshold /= 100;

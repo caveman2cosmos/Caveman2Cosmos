@@ -325,7 +325,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_NATURAL</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_RECKLESS_ANIMALS</GameOptionType>
+				<GameOptionType>GAMEOPTION_ANIMAL_RECKLESS</GameOptionType>
 			</OnGameOptions>
 			<iDefenseOnlyChange>-1</iDefenseOnlyChange>
 			<iAnimalIgnoresBordersChange>-1</iAnimalIgnoresBordersChange>
@@ -1168,7 +1168,7 @@
 			<iPrecisionModifierChange>40</iPrecisionModifierChange>
 			<iDamageModifierChange>-40</iDamageModifierChange>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iSizeBase>1</iSizeBase>
 			<InvisibilityIntensityChangeTypes>
@@ -1207,7 +1207,7 @@
 			<iPrecisionModifierChange>30</iPrecisionModifierChange>
 			<iDamageModifierChange>-30</iDamageModifierChange>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iSizeBase>2</iSizeBase>
 			<InvisibilityIntensityChangeTypes>
@@ -1246,7 +1246,7 @@
 			<iPrecisionModifierChange>20</iPrecisionModifierChange>
 			<iDamageModifierChange>-20</iDamageModifierChange>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iSizeBase>3</iSizeBase>
 			<InvisibilityIntensityChangeTypes>
@@ -1285,7 +1285,7 @@
 			<iPrecisionModifierChange>10</iPrecisionModifierChange>
 			<iDamageModifierChange>-10</iDamageModifierChange>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iSizeBase>4</iSizeBase>
 			<InvisibilityIntensityChangeTypes>
@@ -1321,7 +1321,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_SIZE</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iSizeBase>5</iSizeBase>
 			<Button>Art/Interface/Buttons/units/sparth/categories/size_medium.dds</Button>
@@ -1336,7 +1336,7 @@
 			<iPrecisionModifierChange>-10</iPrecisionModifierChange>
 			<iDamageModifierChange>10</iDamageModifierChange>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iSizeBase>6</iSizeBase>
 			<InvisibilityIntensityChangeTypes>
@@ -1373,7 +1373,7 @@
 			<iPrecisionModifierChange>-20</iPrecisionModifierChange>
 			<iDamageModifierChange>20</iDamageModifierChange>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iSizeBase>7</iSizeBase>
 			<InvisibilityIntensityChangeTypes>
@@ -1410,7 +1410,7 @@
 			<iPrecisionModifierChange>-30</iPrecisionModifierChange>
 			<iDamageModifierChange>30</iDamageModifierChange>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iSizeBase>8</iSizeBase>
 			<InvisibilityIntensityChangeTypes>
@@ -1447,7 +1447,7 @@
 			<iPrecisionModifierChange>-40</iPrecisionModifierChange>
 			<iDamageModifierChange>40</iDamageModifierChange>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iSizeBase>9</iSizeBase>
 			<InvisibilityIntensityChangeTypes>
@@ -2261,7 +2261,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_UPRANGE</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_UPRANGE</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/style_h2h.dds</Button>
 		</UnitCombatInfo>
@@ -2272,7 +2272,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/style_h2h.dds</Button>
 		</UnitCombatInfo>
@@ -2283,7 +2283,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/style_h2h.dds</Button>
 		</UnitCombatInfo>
@@ -2294,7 +2294,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/style_h2h.dds</Button>
 		</UnitCombatInfo>
@@ -2305,7 +2305,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/style_h2h.dds</Button>
 		</UnitCombatInfo>
@@ -2316,7 +2316,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/style_h2h.dds</Button>
 		</UnitCombatInfo>
@@ -2327,7 +2327,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/style_sidearm.dds</Button>
 		</UnitCombatInfo>
@@ -2338,7 +2338,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/style_sidearm.dds</Button>
 		</UnitCombatInfo>
@@ -2349,7 +2349,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/style_sidearm.dds</Button>
 		</UnitCombatInfo>
@@ -2360,7 +2360,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/style_sidearm.dds</Button>
 		</UnitCombatInfo>
@@ -2371,7 +2371,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/style_sidearm.dds</Button>
 		</UnitCombatInfo>
@@ -2382,7 +2382,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_distance.dds</Button>
 		</UnitCombatInfo>
@@ -2393,7 +2393,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_distance.dds</Button>
 		</UnitCombatInfo>
@@ -2404,7 +2404,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_distance.dds</Button>
 		</UnitCombatInfo>
@@ -2415,7 +2415,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_distance.dds</Button>
 		</UnitCombatInfo>
@@ -2426,7 +2426,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_distance.dds</Button>
 		</UnitCombatInfo>
@@ -2437,7 +2437,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_distance.dds</Button>
 		</UnitCombatInfo>
@@ -2448,7 +2448,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
 		</UnitCombatInfo>
@@ -2459,7 +2459,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
 		</UnitCombatInfo>
@@ -2470,7 +2470,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
 		</UnitCombatInfo>
@@ -2481,7 +2481,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
 		</UnitCombatInfo>
@@ -2492,7 +2492,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
 		</UnitCombatInfo>
@@ -2719,7 +2719,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
 		</UnitCombatInfo>
@@ -2730,7 +2730,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
 		</UnitCombatInfo>
@@ -2741,7 +2741,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
 		</UnitCombatInfo>
@@ -2752,7 +2752,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
 		</UnitCombatInfo>
@@ -2763,7 +2763,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
 		</UnitCombatInfo>
@@ -2774,7 +2774,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
 		</UnitCombatInfo>
@@ -2785,7 +2785,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
 		</UnitCombatInfo>
@@ -2796,7 +2796,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
 		</UnitCombatInfo>
@@ -2807,7 +2807,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
 		</UnitCombatInfo>
@@ -2818,7 +2818,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
 		</UnitCombatInfo>
@@ -2829,7 +2829,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
 		</UnitCombatInfo>
@@ -2840,7 +2840,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
 		</UnitCombatInfo>
@@ -2851,7 +2851,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
 		</UnitCombatInfo>
@@ -2862,7 +2862,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
 		</UnitCombatInfo>
@@ -2873,7 +2873,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
 		</UnitCombatInfo>
@@ -2884,7 +2884,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
 		</UnitCombatInfo>
@@ -2895,7 +2895,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
 		</UnitCombatInfo>
@@ -2906,7 +2906,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
 		</UnitCombatInfo>
@@ -2917,7 +2917,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
 		</UnitCombatInfo>
@@ -2928,7 +2928,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
 		</UnitCombatInfo>
@@ -2939,7 +2939,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
 		</UnitCombatInfo>
@@ -2950,7 +2950,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
 		</UnitCombatInfo>
@@ -2961,7 +2961,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
 		</UnitCombatInfo>
@@ -2972,7 +2972,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
 		</UnitCombatInfo>
@@ -2983,7 +2983,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
 		</UnitCombatInfo>
@@ -2994,7 +2994,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_sidearm.dds</Button>
 		</UnitCombatInfo>
@@ -3420,7 +3420,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
 		</UnitCombatInfo>
@@ -3431,7 +3431,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
 		</UnitCombatInfo>
@@ -3442,7 +3442,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
 		</UnitCombatInfo>
@@ -3453,7 +3453,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
 		</UnitCombatInfo>
@@ -3464,7 +3464,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
 		</UnitCombatInfo>
@@ -3475,7 +3475,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
 		</UnitCombatInfo>
@@ -3486,7 +3486,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
 		</UnitCombatInfo>
@@ -3497,7 +3497,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
 		</UnitCombatInfo>
@@ -3508,7 +3508,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
 		</UnitCombatInfo>
@@ -3519,7 +3519,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
 		</UnitCombatInfo>
@@ -3530,7 +3530,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
 		</UnitCombatInfo>
@@ -3541,7 +3541,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
 		</UnitCombatInfo>
@@ -3552,7 +3552,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
 		</UnitCombatInfo>
@@ -3563,7 +3563,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
 		</UnitCombatInfo>
@@ -3574,7 +3574,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
 		</UnitCombatInfo>
@@ -3585,7 +3585,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
 		</UnitCombatInfo>
@@ -3596,7 +3596,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
 		</UnitCombatInfo>
@@ -3607,7 +3607,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
 		</UnitCombatInfo>
@@ -3618,7 +3618,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
 		</UnitCombatInfo>
@@ -3629,7 +3629,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
 		</UnitCombatInfo>
@@ -3640,7 +3640,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
 		</UnitCombatInfo>
@@ -3651,7 +3651,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
 		</UnitCombatInfo>
@@ -3662,7 +3662,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
 		</UnitCombatInfo>
@@ -3673,7 +3673,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
 		</UnitCombatInfo>
@@ -3684,7 +3684,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
 		</UnitCombatInfo>
@@ -3695,7 +3695,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
 		</UnitCombatInfo>
@@ -3706,7 +3706,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
 		</UnitCombatInfo>
@@ -3717,7 +3717,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
 		</UnitCombatInfo>
@@ -3728,7 +3728,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
 		</UnitCombatInfo>
@@ -3739,7 +3739,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
 		</UnitCombatInfo>
@@ -3750,7 +3750,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_backup.dds</Button>
 		</UnitCombatInfo>
@@ -3761,7 +3761,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_distance_backup.dds</Button>
 		</UnitCombatInfo>
@@ -3772,7 +3772,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_distance_backup.dds</Button>
 		</UnitCombatInfo>
@@ -3783,7 +3783,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_distance_backup.dds</Button>
 		</UnitCombatInfo>
@@ -3794,7 +3794,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_distance_backup.dds</Button>
 		</UnitCombatInfo>
@@ -3805,7 +3805,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_distance_backup.dds</Button>
 		</UnitCombatInfo>
@@ -3816,7 +3816,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_distance_backup.dds</Button>
 		</UnitCombatInfo>
@@ -3827,7 +3827,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_distance_backup.dds</Button>
 		</UnitCombatInfo>
@@ -3838,7 +3838,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_distance_backup.dds</Button>
 		</UnitCombatInfo>
@@ -3849,7 +3849,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_EQUIPMENT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_EQUIPMENT</GameOptionType>
 			</OnGameOptions>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_distance_backup.dds</Button>
 		</UnitCombatInfo>
@@ -7404,7 +7404,7 @@
 			<iSelfHealModifier>18</iSelfHealModifier>
 			<iGroupBase>1</iGroupBase>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<InvisibilityIntensityChangeTypes>
 				<InvisibilityIntensityChangeType>
@@ -7436,7 +7436,7 @@
 			<iSelfHealModifier>12</iSelfHealModifier>
 			<iGroupBase>2</iGroupBase>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<InvisibilityIntensityChangeTypes>
 				<InvisibilityIntensityChangeType>
@@ -7462,7 +7462,7 @@
 			<iSelfHealModifier>7</iSelfHealModifier>
 			<iGroupBase>3</iGroupBase>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<InvisibilityIntensityChangeTypes>
 				<InvisibilityIntensityChangeType>
@@ -7482,7 +7482,7 @@
 			<iSelfHealModifier>3</iSelfHealModifier>
 			<iGroupBase>4</iGroupBase>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<InvisibilityIntensityChangeTypes>
 				<InvisibilityIntensityChangeType>
@@ -7506,7 +7506,7 @@
 			</Categories>
 			<iGroupBase>5</iGroupBase>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<VisibilityIntensityChangeTypes>
 				<VisibilityIntensityChangeType>
@@ -7532,7 +7532,7 @@
 			<iSelfHealModifier>-3</iSelfHealModifier>
 			<iGroupBase>6</iGroupBase>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<InvisibilityIntensityChangeTypes>
 				<InvisibilityIntensityChangeType>
@@ -7574,7 +7574,7 @@
 			<iSelfHealModifier>-7</iSelfHealModifier>
 			<iGroupBase>7</iGroupBase>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<InvisibilityIntensityChangeTypes>
 				<InvisibilityIntensityChangeType>
@@ -7616,7 +7616,7 @@
 			<iSelfHealModifier>-12</iSelfHealModifier>
 			<iGroupBase>8</iGroupBase>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<InvisibilityIntensityChangeTypes>
 				<InvisibilityIntensityChangeType>
@@ -7658,7 +7658,7 @@
 			<iSelfHealModifier>-18</iSelfHealModifier>
 			<iGroupBase>9</iGroupBase>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<InvisibilityIntensityChangeTypes>
 				<InvisibilityIntensityChangeType>
@@ -7700,7 +7700,7 @@
 			<iSelfHealModifier>-25</iSelfHealModifier>
 			<iGroupBase>10</iGroupBase>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<InvisibilityIntensityChangeTypes>
 				<InvisibilityIntensityChangeType>
@@ -7742,7 +7742,7 @@
 			<iSelfHealModifier>-33</iSelfHealModifier>
 			<iGroupBase>11</iGroupBase>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<InvisibilityIntensityChangeTypes>
 				<InvisibilityIntensityChangeType>
@@ -7784,7 +7784,7 @@
 			<iSelfHealModifier>-42</iSelfHealModifier>
 			<iGroupBase>12</iGroupBase>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<InvisibilityIntensityChangeTypes>
 				<InvisibilityIntensityChangeType>
@@ -7826,7 +7826,7 @@
 			<iSelfHealModifier>-52</iSelfHealModifier>
 			<iGroupBase>13</iGroupBase>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<InvisibilityIntensityChangeTypes>
 				<InvisibilityIntensityChangeType>
@@ -8259,7 +8259,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_QUALITY</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iExperiencePercent>75</iExperiencePercent>
 			<iQualityBase>0</iQualityBase>
@@ -8282,7 +8282,7 @@
 			<iQualityBase>1</iQualityBase>
 			<iUpkeepModifier>-140</iUpkeepModifier>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<VisibilityIntensityChangeTypes>
 				<VisibilityIntensityChangeType>
@@ -8314,7 +8314,7 @@
 			<iQualityBase>2</iQualityBase>
 			<iUpkeepModifier>-90</iUpkeepModifier>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<VisibilityIntensityChangeTypes>
 				<VisibilityIntensityChangeType>
@@ -8346,7 +8346,7 @@
 			<iQualityBase>3</iQualityBase>
 			<iUpkeepModifier>-50</iUpkeepModifier>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<VisibilityIntensityChangeTypes>
 				<VisibilityIntensityChangeType>
@@ -8378,7 +8378,7 @@
 			<iQualityBase>4</iQualityBase>
 			<iUpkeepModifier>-20</iUpkeepModifier>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<VisibilityIntensityChangeTypes>
 				<VisibilityIntensityChangeType>
@@ -8408,7 +8408,7 @@
 			</Categories>
 			<iQualityBase>5</iQualityBase>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<VisibilityIntensityChangeTypes>
 				<VisibilityIntensityChangeType>
@@ -8440,7 +8440,7 @@
 			<iQualityBase>6</iQualityBase>
 			<iUpkeepModifier>20</iUpkeepModifier>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<VisibilityIntensityChangeTypes>
 				<VisibilityIntensityChangeType>
@@ -8472,7 +8472,7 @@
 			<iQualityBase>7</iQualityBase>
 			<iUpkeepModifier>50</iUpkeepModifier>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<VisibilityIntensitySameTileChangeTypes>
 				<VisibilityIntensitySameTileChangeType>
@@ -8498,7 +8498,7 @@
 			<iQualityBase>8</iQualityBase>
 			<iUpkeepModifier>90</iUpkeepModifier>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<VisibilityIntensitySameTileChangeTypes>
 				<VisibilityIntensitySameTileChangeType>
@@ -8524,7 +8524,7 @@
 			<iQualityBase>9</iQualityBase>
 			<iUpkeepModifier>140</iUpkeepModifier>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<VisibilityIntensitySameTileChangeTypes>
 				<VisibilityIntensitySameTileChangeType>
@@ -8547,7 +8547,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_QUALITY</Category>
 			</Categories>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iExperiencePercent>-75</iExperiencePercent>
 			<iQualityBase>10</iQualityBase>
@@ -9597,7 +9597,7 @@
 			<iPrecisionModifierChange>60</iPrecisionModifierChange>
 			<iDamageModifierChange>-60</iDamageModifierChange>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iSizeBase>0</iSizeBase>
 			<InvisibilityIntensityChangeTypes>

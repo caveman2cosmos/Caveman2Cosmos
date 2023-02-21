@@ -677,7 +677,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_FLETCHER</BuildingType>
+				<BuildingType>BUILDING_FLETCHERS_HUT</BuildingType>
 			</PrereqBuildings>
 		</OutcomeInfo>
 		<OutcomeInfo>
@@ -689,7 +689,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_TRADITION_ARCHERY_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_TRADITION_ARCHERY</BuildingType>
 			</PrereqBuildings>
 			<ReplaceOutcomes>
 				<OutcomeType>OUTCOME_UPGRADE_TO_ARCHER</OutcomeType>
@@ -803,7 +803,7 @@
 			<Description>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_STORY</Description>
 			<Message>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_MESSAGE</Message>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
+				<BuildingType>BUILDING_STORYTELLER</BuildingType>
 			</PrereqBuildings>
 			<bNeutralTerritory>0</bNeutralTerritory>
 			<bHostileTerritory>0</bHostileTerritory>
@@ -817,7 +817,7 @@
 			<Description>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_CAVE</Description>
 			<Message>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_MESSAGE</Message>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_CAVE_PAINTING</BuildingType>
+				<BuildingType>BUILDING_CAVE_PAINTINGS</BuildingType>
 			</PrereqBuildings>
 			<bNeutralTerritory>0</bNeutralTerritory>
 			<bHostileTerritory>0</bHostileTerritory>
@@ -832,7 +832,7 @@
 			<Description>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_CAVE</Description>
 			<Message>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_MESSAGE</Message>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_LASCAUX_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_LASCAUX_CAVES</BuildingType>
 			</PrereqBuildings>
 			<bNeutralTerritory>0</bNeutralTerritory>
 			<bHostileTerritory>0</bHostileTerritory>
@@ -848,7 +848,7 @@
 			<Description>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_FRESCO</Description>
 			<Message>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_MESSAGE</Message>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_FRESCO</BuildingType>
+				<BuildingType>BUILDING_FRESCO_MURAL</BuildingType>
 			</PrereqBuildings>
 			<bNeutralTerritory>0</bNeutralTerritory>
 			<bHostileTerritory>0</bHostileTerritory>
@@ -1018,7 +1018,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_SLAVERY</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_SLAVERY_ACTIVE</BuildingType>
 			</PrereqBuildings>
 		</OutcomeInfo>
 		<OutcomeInfo>
@@ -1042,7 +1042,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_SLAVE_COMPOUND_PRODUCTION</BuildingType>
+				<BuildingType>BUILDING_SLAVE_COMPOUND_INDUSTRY</BuildingType>
 			</PrereqBuildings>
 		</OutcomeInfo>
 		<OutcomeInfo>
@@ -1149,7 +1149,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_SLAVERY</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_SLAVERY_ACTIVE</BuildingType>
 			</PrereqBuildings>
 			<ReplaceOutcomes>
 				<OutcomeType>OUTCOME_SLAVE_SALE_NOT_SLAVERY</OutcomeType>
@@ -1179,7 +1179,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_SLAVERY</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_SLAVERY_ACTIVE</BuildingType>
 			</PrereqBuildings>
 		</OutcomeInfo>
 		<OutcomeInfo>
@@ -1191,7 +1191,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_CANNIBALISM</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_CANNIBALISM_ACTIVE</BuildingType>
 			</PrereqBuildings>
 		</OutcomeInfo>
 		<OutcomeInfo>
@@ -1203,7 +1203,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_CANNIBALISM</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_CANNIBALISM_ACTIVE</BuildingType>
 				<BuildingType>BUILDING_BUTCHERY</BuildingType>
 			</PrereqBuildings>
 			<ReplaceOutcomes>
@@ -1219,8 +1219,8 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_CANNIBALISM</BuildingType>
-				<BuildingType>BUILDING_MEATPACKING_PLANT</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_CANNIBALISM_ACTIVE</BuildingType>
+				<BuildingType>BUILDING_MEAT_PACKING_PLANT</BuildingType>
 			</PrereqBuildings>
 			<ReplaceOutcomes>
 				<OutcomeType>OUTCOME_HUMAN_BUTCHERED_CITY</OutcomeType>
@@ -1236,8 +1236,8 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_CANNIBALISM</BuildingType>
-				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_CANNIBALISM_ACTIVE</BuildingType>
+				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</PrereqBuildings>
 			<ReplaceOutcomes>
 				<OutcomeType>OUTCOME_HUMAN_BUTCHERED_CITY</OutcomeType>
@@ -1254,7 +1254,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_CANNIBALISM</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_CANNIBALISM_ACTIVE</BuildingType>
 			</PrereqBuildings>
 		</OutcomeInfo>
 		<OutcomeInfo>
@@ -1266,7 +1266,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_HUMAN_SACRIFICE</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_HUMAN_SACRIFICE_ACTIVE</BuildingType>
 			</PrereqBuildings>
 		</OutcomeInfo>
 		<OutcomeInfo>
@@ -1278,8 +1278,8 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_HUMAN_SACRIFICE</BuildingType>
-				<BuildingType>BUILDING_HUMAN_SACRIFICE_ALTAR</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_HUMAN_SACRIFICE_ACTIVE</BuildingType>
+				<BuildingType>BUILDING_ALTAR_FOR_HUMAN_SACRIFICE</BuildingType>
 			</PrereqBuildings>
 			<ReplaceOutcomes>
 				<OutcomeType>OUTCOME_SACRIFICE_CAPTIVE</OutcomeType>
@@ -1294,7 +1294,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_HUMAN_SACRIFICE</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_HUMAN_SACRIFICE_ACTIVE</BuildingType>
 				<BuildingType>BUILDING_SACRIFICIAL_ALTAR</BuildingType>
 			</PrereqBuildings>
 			<ReplaceOutcomes>
@@ -1311,8 +1311,8 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_HUMAN_SACRIFICE</BuildingType>
-				<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_HUMAN_SACRIFICE_ACTIVE</BuildingType>
+				<BuildingType>BUILDING_NATURE_CIRCLE_OF_POWER</BuildingType>
 			</PrereqBuildings>
 			<ReplaceOutcomes>
 				<OutcomeType>OUTCOME_SACRIFICE_CAPTIVE</OutcomeType>
@@ -1327,9 +1327,9 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_HUMAN_SACRIFICE</BuildingType>
-				<BuildingType>BUILDING_HUMAN_SACRIFICE_ALTAR</BuildingType>
-				<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_HUMAN_SACRIFICE_ACTIVE</BuildingType>
+				<BuildingType>BUILDING_ALTAR_FOR_HUMAN_SACRIFICE</BuildingType>
+				<BuildingType>BUILDING_NATURE_CIRCLE_OF_POWER</BuildingType>
 			</PrereqBuildings>
 			<ReplaceOutcomes>
 				<OutcomeType>OUTCOME_SACRIFICE_CAPTIVE_ALTER_I</OutcomeType>
@@ -1344,9 +1344,9 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_HUMAN_SACRIFICE</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_HUMAN_SACRIFICE_ACTIVE</BuildingType>
 				<BuildingType>BUILDING_SACRIFICIAL_ALTAR</BuildingType>
-				<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
+				<BuildingType>BUILDING_NATURE_CIRCLE_OF_POWER</BuildingType>
 			</PrereqBuildings>
 			<ReplaceOutcomes>
 				<OutcomeType>OUTCOME_SACRIFICE_CAPTIVE_ALTER_II</OutcomeType>
@@ -1361,8 +1361,8 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_HUMAN_SACRIFICE</BuildingType>
-				<BuildingType>BUILDING_MESOAMERICAN_MONASTERY</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_HUMAN_SACRIFICE_ACTIVE</BuildingType>
+				<BuildingType>BUILDING_CALMACEC</BuildingType>
 			</PrereqBuildings>
 			<ReplaceOutcomes>
 				<OutcomeType>OUTCOME_SACRIFICE_CAPTIVE</OutcomeType>
@@ -1377,9 +1377,9 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_HUMAN_SACRIFICE</BuildingType>
-				<BuildingType>BUILDING_HUMAN_SACRIFICE_ALTAR</BuildingType>
-				<BuildingType>BUILDING_MESOAMERICAN_MONASTERY</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_HUMAN_SACRIFICE_ACTIVE</BuildingType>
+				<BuildingType>BUILDING_ALTAR_FOR_HUMAN_SACRIFICE</BuildingType>
+				<BuildingType>BUILDING_CALMACEC</BuildingType>
 			</PrereqBuildings>
 			<ReplaceOutcomes>
 				<OutcomeType>OUTCOME_SACRIFICE_CAPTIVE_ALTER_I</OutcomeType>
@@ -1394,9 +1394,9 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_HUMAN_SACRIFICE</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_HUMAN_SACRIFICE_ACTIVE</BuildingType>
 				<BuildingType>BUILDING_SACRIFICIAL_ALTAR</BuildingType>
-				<BuildingType>BUILDING_MESOAMERICAN_MONASTERY</BuildingType>
+				<BuildingType>BUILDING_CALMACEC</BuildingType>
 			</PrereqBuildings>
 			<ReplaceOutcomes>
 				<OutcomeType>OUTCOME_SACRIFICE_CAPTIVE_ALTER_II</OutcomeType>
@@ -1412,7 +1412,7 @@
 			<bFriendlyTerritory>1</bFriendlyTerritory>
 			<bCity>1</bCity>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_HUMAN_SACRIFICE</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_HUMAN_SACRIFICE_ACTIVE</BuildingType>
 			</PrereqBuildings>
 		</OutcomeInfo>
 		<OutcomeInfo>

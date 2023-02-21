@@ -1354,7 +1354,7 @@ void CvDLLWidgetData::doContactCiv(CvWidgetDataStruct &widgetDataStruct)
 
 	if (gDLL->shiftKey() && !gDLL->altKey())
 	{
-		if (GET_PLAYER((PlayerTypes)widgetDataStruct.m_iData1).isHuman()
+		if (GET_PLAYER((PlayerTypes)widgetDataStruct.m_iData1).isHumanPlayer()
 		&& widgetDataStruct.m_iData1 != GC.getGame().getActivePlayer())
 		{
 			gDLL->getInterfaceIFace()->showTurnLog((ChatTargetTypes)widgetDataStruct.m_iData1);
@@ -3383,7 +3383,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 			// BUG - Delete All Action - start
 			else if (GC.getActionInfo(widgetDataStruct.m_iData1).getCommandType() == COMMAND_DELETE)
 			{
-				if (GC.getGame().isOption(GAMEOPTION_DOWNSIZING_IS_PROFITABLE))
+				if (GC.getGame().isOption(GAMEOPTION_UNIT_DOWNSIZING_IS_PROFITABLE))
 				{
 					const CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 
@@ -3984,7 +3984,7 @@ void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, 
 
 		// calculate war percentages
 		float fOverallWarPercentage = 0;
-		bool bAggressive = GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI);
+		bool bAggressive = GC.getGame().isOption(GAMEOPTION_AI_AGGRESSIVE);
 
 		bool bIsAnyCapitalAreaAlone = kTeam.AI_isAnyCapitalAreaAlone();
 
@@ -4520,7 +4520,7 @@ void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, 
 
 		if (eTeam != eActiveTeam)
 		{
-			if (!kPlayer.isHuman())
+			if (!kPlayer.isHumanPlayer())
 			{
 				if (!kPlayer.AI_isWillingToTalk(eActivePlayer))
 				{
@@ -4559,7 +4559,7 @@ void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, 
 		}
 	}
 
-	if (kPlayer.isHuman())
+	if (kPlayer.isHumanPlayer())
 	{
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_MISC_SHIFT_SEND_CHAT"));

@@ -615,7 +615,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_GUERRILLA_WARFARE</PrereqTech>
 			<BonusType>BONUS_HORSE</BonusType>
