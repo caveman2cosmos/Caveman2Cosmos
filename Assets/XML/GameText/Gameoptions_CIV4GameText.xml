@@ -984,22 +984,6 @@
 		<Russian>Èãðîê-÷åëîâåê ìîæåò åäèíîâðåìåííî êîíòðîëèðîâàòü òîëüêî îäèí ãîðîä.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_UNIT_ONGOING_TRAINING</Tag>
-		<English>Unit - Ongoing Training</English>
-		<French>Entraînement permanent</French>
-		<German>Kontinuierliche Weiterbildung</German>
-		<Polish>Ciągły Trening</Polish>
-		<Russian>Íåïðåðûâíîå îáó÷åíèå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_UNIT_ONGOING_TRAINING_HELP</Tag>
-		<English>Training Buildings in Cities will gradually give XP to qualifying Units stationed there.</English>
-		<French>Les Bâtiments procurant de l'expérience donnent de l'XP aux unités présentes dans la ville</French>
-		<German>Ausbildungsgebäude führen zu einem ständigen Zuwachs an Erfahrungspunkten bei den entsprechenden in der Stadt stationierten Einheiten.</German>
-		<Polish>Budynki trenerskie w miastach będą stale dodawały XP to jedn. stacjonujących w mieście.</Polish>
-		<Russian>Òðåíèðîâî÷íûå çäàíèÿ â ãîðîäàõ ïîñòåïåííî óâåëè÷èâàþò îïûò ðàçìåùåííûõ òàì þíèòîâ.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_COMBAT_OUTBREAKS_AND_AFFLICTIONS</Tag>
 		<English>Combat - Outbreaks and Afflictions</English>
 		<French>Mod de Combat C2C - Éclosions et afflictions</French>

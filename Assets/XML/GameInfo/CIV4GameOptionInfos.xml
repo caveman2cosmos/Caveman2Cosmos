@@ -587,13 +587,6 @@
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
-			<Type>GAMEOPTION_UNIT_ONGOING_TRAINING</Type>
-			<Description>TXT_KEY_GAMEOPTION_UNIT_ONGOING_TRAINING</Description>
-			<Help>TXT_KEY_GAMEOPTION_UNIT_ONGOING_TRAINING_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>0</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
 			<Type>GAMEOPTION_UNIT_XP_FROM_SPECIALISTS</Type>
 			<Description>TXT_KEY_GAMEOPTION_UNIT_XP_FROM_SPECIALISTS</Description>
 			<Help>TXT_KEY_GAMEOPTION_UNIT_XP_FROM_SPECIALISTS_HELP</Help>
