@@ -450,12 +450,6 @@ public:
 	void changeTotalFlankSupportPercentModifier(int iChange);
 #endif // STRENGTH_IN_NUMBERS
 
-	int getUnitCombatOngoingTrainingTimeCount(UnitCombatTypes eIndex) const;
-	void changeUnitCombatOngoingTrainingTimeCount(UnitCombatTypes eIndex, int iChange);
-	int getUnitCombatOngoingTrainingTimeIncrement(UnitCombatTypes eIndex) const;
-	void setUnitCombatOngoingTrainingTimeIncrement(UnitCombatTypes eIndex, int iChange);
-	void updateOngoingTraining(UnitCombatTypes eCombat);
-	void assignOngoingTraining(UnitCombatTypes eCombat, const CvPlot* pPlot);
 	bool canEquip(const CvUnit* pUnit, PromotionTypes eEquipment) const;
 
 	bool assignPromotionChecked(PromotionTypes ePromotion, CvUnit* pUnit) const;
@@ -1764,8 +1758,6 @@ protected:
 	int* m_paiUnitCombatRepelAgainstModifier;
 	int* m_paiUnitCombatDefenseAgainstModifier;
 	int* m_paiPromotionLineAfflictionAttackCommunicability;
-	int* m_paiUnitCombatOngoingTrainingTimeCount;
-	int* m_paiUnitCombatOngoingTrainingTimeIncrement;
 	//TB Building Tags
 	int m_iExtraLocalCaptureProbabilityModifier;
 	int m_iExtraLocalCaptureResistanceModifier;

@@ -364,7 +364,6 @@ class UnitCombatKeyedInfo
 public:
 	UnitCombatKeyedInfo() :		m_bHasUnitCombat(false),
 								m_iExtraUnitCombatModifier(0),
-								m_iOngoingTrainingCount(0),
 								m_iExtraFlankingStrengthbyUnitCombatType(0),
 								m_iExtraWithdrawVSUnitCombatType(0),
 								m_iExtraPursuitVSUnitCombatType(0),
@@ -391,7 +390,6 @@ public:
 	{
 		return (!m_bHasUnitCombat &&
 			m_iExtraUnitCombatModifier == 0 &&
-			m_iOngoingTrainingCount == 0 &&
 			m_iExtraFlankingStrengthbyUnitCombatType == 0 &&
 			m_iExtraWithdrawVSUnitCombatType == 0 &&
 			m_iExtraPursuitVSUnitCombatType == 0 &&
@@ -415,7 +413,6 @@ public:
 
 	bool m_bHasUnitCombat;
 	int	m_iExtraUnitCombatModifier;
-	int m_iOngoingTrainingCount;
 	int m_iExtraFlankingStrengthbyUnitCombatType;
 	int m_iExtraWithdrawVSUnitCombatType;
 	int m_iExtraPursuitVSUnitCombatType;
@@ -2261,10 +2258,6 @@ public:
 	void ClearSupports();
 #endif
 
-	int getOngoingTrainingCount(UnitCombatTypes eUnitCombatType) const;
-	void changeOngoingTrainingCount(UnitCombatTypes eUnitCombatType, int iChange);
-	void setOngoingTrainingCount(UnitCombatTypes eUnitCombatType, int iChange);
-
 	void checkPromotionObsoletion();
 	void processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial = false);
 
@@ -2942,7 +2935,6 @@ private:
 	static int*	g_paiTempExtraUnitCombatModifier;
 	static bool* g_pabTempHasPromotion;
 	static bool* g_pabTempHasUnitCombat;
-	static int* g_paiTempOngoingTrainingCount;
 	static int* g_paiTempExtraFlankingStrengthbyUnitCombatType;
 	static int* g_paiTempExtraWithdrawVSUnitCombatType;
 	static int* g_paiTempExtraPursuitVSUnitCombatType;

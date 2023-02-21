@@ -131,8 +131,6 @@ CvCity::CvCity()
 	m_paiUnitCombatRepelAgainstModifier = NULL;
 	m_paiUnitCombatDefenseAgainstModifier = NULL;
 	m_paiPromotionLineAfflictionAttackCommunicability = NULL;
-	m_paiUnitCombatOngoingTrainingTimeCount = NULL;
-	m_paiUnitCombatOngoingTrainingTimeIncrement = NULL;
 	//TB Combat Mod (Buildings) end
 	//Team Project (1)
 	m_paiTechHappiness = NULL;
@@ -459,9 +457,6 @@ void CvCity::uninit()
 	SAFE_DELETE_ARRAY(m_paiUnitCombatRepelAgainstModifier);
 	SAFE_DELETE_ARRAY(m_paiUnitCombatDefenseAgainstModifier);
 	SAFE_DELETE_ARRAY(m_paiPromotionLineAfflictionAttackCommunicability);
-	SAFE_DELETE_ARRAY(m_paiUnitCombatOngoingTrainingTimeCount);
-	SAFE_DELETE_ARRAY(m_paiUnitCombatOngoingTrainingTimeIncrement);
-
 	SAFE_DELETE_ARRAY(m_pabReligiouslyDisabledBuilding);
 	SAFE_DELETE_ARRAY(m_paiStartDeferredSectionNumBonuses);
 	SAFE_DELETE_ARRAY(m_paiTechHappiness);
@@ -933,8 +928,6 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 		m_paiUnitCombatRepelModifier = new int[GC.getNumUnitCombatInfos()];
 		m_paiUnitCombatRepelAgainstModifier = new int[GC.getNumUnitCombatInfos()];
 		m_paiUnitCombatDefenseAgainstModifier = new int[GC.getNumUnitCombatInfos()];
-		m_paiUnitCombatOngoingTrainingTimeCount = new int[GC.getNumUnitCombatInfos()];
-		m_paiUnitCombatOngoingTrainingTimeIncrement = new int[GC.getNumUnitCombatInfos()];
 		m_paiDamageAttackingUnitCombatCount = new int[GC.getNumUnitCombatInfos()];
 		m_paiHealUnitCombatTypeVolume = new int[GC.getNumUnitCombatInfos()];
 		//TB Combat Mod (Buildings) end
@@ -947,8 +940,6 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 			m_paiUnitCombatRepelModifier[iI] = 0;
 			m_paiUnitCombatRepelAgainstModifier[iI] = 0;
 			m_paiUnitCombatDefenseAgainstModifier[iI] = 0;
-			m_paiUnitCombatOngoingTrainingTimeCount[iI] = 0;
-			m_paiUnitCombatOngoingTrainingTimeIncrement[iI] = 0;
 			m_paiDamageAttackingUnitCombatCount[iI] = 0;
 			m_paiHealUnitCombatTypeVolume[iI] = 0;
 			//TB Combat Mod (Buildings) end
@@ -1488,10 +1479,6 @@ void CvCity::doTurn()
 	}
 #endif // OUTBREAKS_AND_AFFLICTIONS
 
-	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		updateOngoingTraining((UnitCombatTypes)iI);
-	}
 	//TB Combat Mod (Buildings) end
 
 	if (getCultureUpdateTimer() > 0)
@@ -5054,29 +5041,6 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 			//TB Defense Mod
 			changeUnitCombatRepelAgainstModifierTotal(eCombatX, kBuilding.getUnitCombatRepelAgainstModifier(iI) * iChange);
 			changeUnitCombatDefenseAgainstModifierTotal(eCombatX, kBuilding.getUnitCombatDefenseAgainstModifier(iI) * iChange);
-		}
-		const int iUnitCombatOngoingTrainingDuration = kBuilding.getUnitCombatOngoingTrainingDuration(iI);
-		if (iUnitCombatOngoingTrainingDuration > 0)
-		{
-			if (iChange == 1 && iUnitCombatOngoingTrainingDuration > getUnitCombatOngoingTrainingTimeIncrement(eCombatX))
-			{
-				setUnitCombatOngoingTrainingTimeIncrement(eCombatX, iUnitCombatOngoingTrainingDuration);
-			}
-			if (iChange == -1 && iUnitCombatOngoingTrainingDuration == getUnitCombatOngoingTrainingTimeIncrement(eCombatX))
-			{
-				int iBestValue = 0;
-				for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
-				{
-					const BuildingTypes eBuildingX = static_cast<BuildingTypes>(iJ);
-					const int iTrain = GC.getBuildingInfo(eBuildingX).getUnitCombatOngoingTrainingDuration(iI);
-
-					if (iTrain > iBestValue && eBuildingX != eBuilding && getNumActiveBuilding(eBuildingX) > 0)
-					{
-						iBestValue = iTrain;
-					}
-				}
-				setUnitCombatOngoingTrainingTimeIncrement(eCombatX, iBestValue);
-			}
 		}
 	}
 	//TB Combat Mods (Buildings) end
@@ -17035,8 +16999,6 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", &m_iTotalLongRangeSupportPercentModifier, SAVE_VALUE_TYPE_INT);
 	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", &m_iTotalFlankSupportPercentModifier, SAVE_VALUE_TYPE_INT);
 #endif
-	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatOngoingTrainingTimeCount);
-	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatOngoingTrainingTimeIncrement);
 
 	for (int i = 0; i < wrapper.getNumClassEnumValues(REMAPPED_CLASS_TYPE_TECHS); ++i)
 	{
@@ -17600,8 +17562,6 @@ void CvCity::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvCity", m_iTotalLongRangeSupportPercentModifier);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iTotalFlankSupportPercentModifier);
 #endif
-	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatOngoingTrainingTimeCount);
-	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatOngoingTrainingTimeIncrement);
 
 	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 	{
@@ -21819,8 +21779,6 @@ void CvCity::clearModifierTotals()
 		m_paiUnitCombatRepelModifier[iI] = 0;
 		m_paiUnitCombatRepelAgainstModifier[iI] = 0;
 		m_paiUnitCombatDefenseAgainstModifier[iI] = 0;
-		m_paiUnitCombatOngoingTrainingTimeCount[iI] = 0;
-		m_paiUnitCombatOngoingTrainingTimeIncrement[iI] = 0;
 		m_paiDamageAttackingUnitCombatCount[iI] = 0;
 		m_paiHealUnitCombatTypeVolume[iI] = 0;
 		//TB Combat Mods (Buildings) end
@@ -22939,71 +22897,6 @@ void CvCity::changeTotalFlankSupportPercentModifier(int iChange)
 	FASSERT_NOT_NEGATIVE(getTotalFlankSupportPercentModifier());
 }
 #endif
-
-int CvCity::getUnitCombatOngoingTrainingTimeCount(UnitCombatTypes eIndex) const
-{
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
-	return m_paiUnitCombatOngoingTrainingTimeCount[eIndex];
-}
-
-void CvCity::changeUnitCombatOngoingTrainingTimeCount(UnitCombatTypes eIndex, int iChange)
-{
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
-	m_paiUnitCombatOngoingTrainingTimeCount[eIndex] += iChange;
-}
-
-int CvCity::getUnitCombatOngoingTrainingTimeIncrement(UnitCombatTypes eIndex) const
-{
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
-	return m_paiUnitCombatOngoingTrainingTimeIncrement[eIndex];
-}
-
-void CvCity::setUnitCombatOngoingTrainingTimeIncrement(UnitCombatTypes eIndex, int iChange)
-{
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
-	m_paiUnitCombatOngoingTrainingTimeIncrement[eIndex] = iChange;
-}
-
-void CvCity::updateOngoingTraining(UnitCombatTypes eCombat)
-{
-	const CvPlot* pPlot = plot();
-	changeUnitCombatOngoingTrainingTimeCount(eCombat, 1);
-	if (getUnitCombatOngoingTrainingTimeCount(eCombat) == getUnitCombatOngoingTrainingTimeIncrement(eCombat))
-	{
-		const int iChange = -(getUnitCombatOngoingTrainingTimeCount(eCombat));
-		changeUnitCombatOngoingTrainingTimeCount(eCombat, iChange);
-		assignOngoingTraining(eCombat, pPlot);
-	}
-}
-
-void CvCity::assignOngoingTraining(UnitCombatTypes eCombat, const CvPlot* pPlot)
-{
-	PROFILE_FUNC();
-
-	int iLowestValidity = MAX_INT;
-
-	CvUnit* pBestUnit = NULL;
-	foreach_(CvUnit* pLoopUnit, pPlot->units())
-	{
-		if (pLoopUnit->getTeam() == getTeam())
-		{
-			if (pLoopUnit->isHasUnitCombat(eCombat))
-			{
-				const int iCurrentValidity = pLoopUnit->getExperience() + pLoopUnit->getOngoingTrainingCount(eCombat);
-				if (iCurrentValidity < iLowestValidity)
-				{
-					pBestUnit = pLoopUnit;
-					iLowestValidity = iCurrentValidity;
-				}
-			}
-		}
-	}
-	if (pBestUnit != NULL)
-	{
-		pBestUnit->changeExperience(1);
-		pBestUnit->changeOngoingTrainingCount(eCombat, 1);
-	}
-}
 
 bool CvCity::assignPromotionChecked(PromotionTypes promotion, CvUnit* unit) const
 {
