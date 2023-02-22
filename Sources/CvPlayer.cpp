@@ -19245,14 +19245,8 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iFreeUnitUpkeepMilitaryPopPercent);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iGold);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iCulture);
-
-		double fMinTaxIncome;
-		WRAPPER_READ(wrapper, "CvPlayer", &fMinTaxIncome);
-		m_iMinTaxIncome = static_cast<int64_t>(fMinTaxIncome + 0.01);
-
-		double fMaxTaxIncome;
-		WRAPPER_READ(wrapper, "CvPlayer", &fMaxTaxIncome);
-		m_iMaxTaxIncome = static_cast<int64_t>(fMaxTaxIncome + 0.01);
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iMinTaxIncome);
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iMaxTaxIncome);
 
 		// Toffer - Read maps
 		{
