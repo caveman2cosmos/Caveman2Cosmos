@@ -4,7 +4,7 @@ funcExtraProfileMacro = "PROFILE_EXTRA_FUNC"  # name of the macro to be included
 
 limit = 100000  # max number of methods to add profiling
 
-filesToProcess = [ "*.h", "*.cpp" ]
+includedFiles = [ "*.h", "*.cpp" ]
 
 excludedFiles = [
     "cvgamecoredll.h", "cvgamecoredll.cpp", "nipoint.h", "fassert.h", "fassert.cpp", "win32.h", "win32.cpp", 
@@ -40,9 +40,8 @@ __  = f"(?:{Syntax.commentRe}|\\s)" # used in regular expressions to match code 
 ___ = f"{__}*+"                     # like above but many
 
 crawler = CppCrawler(r"..\..\..\Sources", backupDir="Backup", encoding="utf-8-sig")
-sources = crawler.loadSourceFiles(filesToProcess)
-
-excludedFiles =  [str.lower() for str in excludedFiles] + ["fprofiler.h"]
+sources = crawler.loadSourceFiles(includedFiles)
+excludedFiles =  [path.lower() for path in excludedFiles] + ["fprofiler.h"]
 
 
 
@@ -87,7 +86,7 @@ skippedFiles       = set()
 skippedDefs        = {}
 includesToAdd      = {}
 includesWarn       = {}
-sourcesToSave       = set()
+sourcesToSave      = set()
 
 
 
@@ -340,7 +339,7 @@ def addProfiling():
 
 def save():
     print("Saving...", end=" ")
-    crawler.saveSources(sourcesToSave)
+    crawler.saveSources(sourcesToSave, encoding="utf-8")
     print("Done")
     print("Backup available in:", crawler.backupBucketDirs()[-1])
     print()
