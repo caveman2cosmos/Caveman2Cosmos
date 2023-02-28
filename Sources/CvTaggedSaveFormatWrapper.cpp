@@ -82,6 +82,11 @@ public:
 	virtual void 		Read(int count, long values[]) { m_wrapped->Read(count, values); m_lenRead += 4*count;}
 	virtual void 		Read(int count, unsigned long values[])  { m_wrapped->Read(count, values); m_lenRead += 4*count;}
 
+	virtual void		Read(int64_t* ll) { m_wrapped->Read(ll); m_lenRead += 4; }
+	virtual void		Read(uint64_t* ll) { m_wrapped->Read(ll); m_lenRead += 4; }
+	virtual void 		Read(int count, int64_t values[]) { m_wrapped->Read(count, values); m_lenRead += 4 * count; }
+	virtual void 		Read(int count, uint64_t values[]) { m_wrapped->Read(count, values); m_lenRead += 4 * count; }
+
 	virtual void		Read(float* value) { m_wrapped->Read(value); m_lenRead += sizeof(float);}
 	virtual void		Read(int count, float values[]) { m_wrapped->Read(count, values); m_lenRead += count*sizeof(float);}
 
@@ -110,6 +115,11 @@ public:
 	virtual void		Write(unsigned long  value) { m_wrapped->Write(value); }
 	virtual void 		Write(int count, const long values[]) { m_wrapped->Write(count, values); }
 	virtual void		Write(int count, const unsigned long values[]) { m_wrapped->Write(count, values); }
+
+	virtual void		Write(int64_t value) { m_wrapped->Write(value); }
+	virtual void		Write(uint64_t value) { m_wrapped->Write(value); }
+	virtual void 		Write(int count, const int64_t values[]) { m_wrapped->Write(count, values); }
+	virtual void		Write(int count, const uint64_t values[]) { m_wrapped->Write(count, values); }
 
 	virtual void		Write(float value) { m_wrapped->Write(value); }
 	virtual void		Write(int count, const float values[]) { m_wrapped->Write(count, values); }
@@ -303,7 +313,7 @@ typedef struct value_entry_unsigned_int_array
 {
 	int id;
 	int numInts;
-	uint16_t value[VAR];
+	uint32_t value[VAR];
 } value_entry_unsigned_int_array;
 
 //	Value entry for type long
@@ -335,6 +345,36 @@ typedef struct value_entry_unsigned_long_array
 	int numLongs;
 	uint16_t value[VAR];
 } value_entry_unsigned_long_array;
+
+//	Value entry for type long long
+typedef struct value_entry_long_long
+{
+	int id;
+	int64_t value;
+} value_entry_long_long;
+
+//	Value entry for type unsigned long long
+typedef struct value_entry_unsigned_long_long {
+	int id;
+	int64_t value;
+} value_entry_unsigned_long_long;
+
+//	Value entry for type long long array
+typedef struct value_entry_long_long_array
+{
+	int id;
+	int numLongLongs;
+	int64_t value[VAR];
+} value_entry_long_long_array;
+#define VALUE_ENTRY_LONG_LONG_ARRAY_SIZE_FROM_NUM(numLongLongs)	((int)sizeof(value_entry_long_long_array)+((int)sizeof(int64_t))*(numLongLongs-VAR))
+
+//	Value entry for type unsigned long array
+typedef struct value_entry_unsigned_long_long_array
+{
+	int id;
+	int numLongLongs;
+	uint64_t value[VAR];
+} value_entry_unsigned_long_long_array;
 
 //	Value entry for type float
 typedef struct value_entry_float
@@ -1066,6 +1106,17 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 			m_stream->WriteString(info.getType());
 		}
 		break;
+	case REMAPPED_CLASS_TYPE_MAPS:
+		entry.numClasses = NUM_MAPS;
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
+		for (int i = 0; i < entry.numClasses; i++)
+		{
+			const CvMapInfo& info = GC.getMapInfo((MapTypes)i);
+
+			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
+			m_stream->WriteString(info.getType());
+		}
+		break;
 	default:
 		FErrorMsg("Unexpected RemappedClassType");
 		break;
@@ -1125,6 +1176,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTables()
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_COMMERCES);
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_DOMAINS);
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_CATEGORIES);
+	WriteClassMappingTable(REMAPPED_CLASS_TYPE_MAPS);
 }
 
 //	How many members of a given class type were present at save time?
@@ -1265,6 +1317,9 @@ CvTaggedSaveFormatWrapper::getNumClassEnumValues(RemappedClassType classType) co
 			break;
 		case REMAPPED_CLASS_TYPE_DOMAINS:
 			result = NUM_DOMAIN_TYPES;
+			break;
+		case REMAPPED_CLASS_TYPE_MAPS:
+			result = NUM_MAPS;
 			break;
 		default:
 			FErrorMsg("Unexpected RemappedClassType");
@@ -1988,6 +2043,93 @@ CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int 
 	else
 	{
 		m_stream->Write(count, values);
+	}
+}
+
+
+void CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int64_t value)
+{
+	PROFILE_FUNC();
+
+	if (m_useTaggedFormat)
+	{
+		value_entry_long_long entry;
+
+		DEBUG_TRACE3("Write long long %s: %d\n", name, value)
+
+		entry.id = getId(name, idHint, idSeq, SAVE_VALUE_TYPE_LONG_LONG, true);
+		entry.value = value;
+
+		m_stream->Write((int)sizeof(entry), (const uint8_t*)&entry);
+	}
+	else
+	{
+		m_stream->WriteString((const char*)value);
+	}
+}
+
+void CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, uint64_t value) 
+{
+	PROFILE_FUNC();
+
+	if (m_useTaggedFormat)
+	{
+		value_entry_unsigned_long_long entry;
+
+		DEBUG_TRACE3("Write unsigned long long %s: %lu\n", name, value)
+
+		entry.id = getId(name, idHint, idSeq, SAVE_VALUE_TYPE_UNSIGNED_LONG_LONG, true);
+		entry.value = value;
+
+		m_stream->Write((int)sizeof(entry), (const uint8_t*)&entry);
+	}
+	else
+	{
+		m_stream->WriteString((const char*)value);
+	}
+}
+
+void CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int count, const int64_t values[])
+{
+	PROFILE_FUNC();
+
+	if (m_useTaggedFormat)
+	{
+		value_entry_long_long_array entry;
+
+		DEBUG_TRACE3("Write long long array %s, count=%d\n", name, count)
+
+		entry.id = getId(name, idHint, idSeq, SAVE_VALUE_TYPE_LONG_LONG_ARRAY, true);
+		entry.numLongLongs = count;
+
+		m_stream->Write(VALUE_ENTRY_LONG_LONG_ARRAY_SIZE_FROM_NUM(0), (const uint8_t*)&entry);
+		m_stream->WriteString((const char*)values);
+	}
+	else
+	{
+		m_stream->Write((const char*)values);
+	}
+}
+
+void CvTaggedSaveFormatWrapper::Write(const char* name, int& idHint, int& idSeq, int count, const uint64_t values[])
+{
+	PROFILE_FUNC();
+
+	if (m_useTaggedFormat)
+	{
+		value_entry_unsigned_long_long_array entry;
+
+		DEBUG_TRACE3("Write unsigned long long array %s, count=%d\n", name, count)
+
+		entry.id = getId(name, idHint, idSeq, SAVE_VALUE_TYPE_UNSIGNED_LONG_LONG_ARRAY, true);
+		entry.numLongLongs = count;
+
+		m_stream->Write(VALUE_ENTRY_LONG_LONG_ARRAY_SIZE_FROM_NUM(0), (const uint8_t*)&entry);
+		m_stream->WriteString((const char*)values);
+	}
+	else
+	{
+		m_stream->WriteString((const char*)values);
 	}
 }
 
@@ -2939,6 +3081,104 @@ void CvTaggedSaveFormatWrapper::Read(const char* name, int count, unsigned long 
 }
 
 
+void CvTaggedSaveFormatWrapper::Read(const char* name, int64_t* ll)
+{
+	PROFILE_FUNC();
+
+	if (m_useTaggedFormat)
+	{
+		DEBUG_TRACE2("Read long long, name %s\n", name)
+
+		if (Expect(name, SAVE_VALUE_TYPE_LONG_LONG))
+		{
+			m_stream->Read(sizeof(int64_t), (char*)ll);
+		}
+	}
+	else
+	{
+			m_stream->Read(sizeof(int64_t), (char*)ll);
+	}
+}
+
+
+void CvTaggedSaveFormatWrapper::Read(const char* name, uint64_t* ll)
+{
+	PROFILE_FUNC();
+
+	if (m_useTaggedFormat)
+	{
+		DEBUG_TRACE2("Read unsigned long long, name %s\n", name)
+
+		if (Expect(name, SAVE_VALUE_TYPE_UNSIGNED_LONG_LONG))
+		{
+			m_stream->Read(sizeof(uint64_t), (char*)ll);
+		}
+	}
+	else
+	{
+		m_stream->Read(sizeof(uint64_t), (char*)ll);
+	}
+}
+
+
+void CvTaggedSaveFormatWrapper::Read(const char* name, int count, int64_t values[])
+{
+	PROFILE_FUNC();
+
+	if (m_useTaggedFormat)
+	{
+		DEBUG_TRACE3("Read long long array, name %s, count=%d\n", name, count)
+
+		if (Expect(name, SAVE_VALUE_TYPE_LONG_LONG_ARRAY))
+		{
+			int num;
+
+			m_stream->Read(&num);
+
+			if (num != count)
+			{
+				//	Incompatible save
+				HandleIncompatibleSave(CvString::format("Save format is not compatible (%s)", name).c_str());
+			}
+			m_stream->Read(count * sizeof(int64_t), (char*)values);
+		}
+	}
+	else
+	{
+		m_stream->Read(count * sizeof(int64_t), (char*)values);
+	}
+}
+
+
+void CvTaggedSaveFormatWrapper::Read(const char* name, int count, uint64_t values[])
+{
+	PROFILE_FUNC();
+
+	if (m_useTaggedFormat)
+	{
+		DEBUG_TRACE3("Read unsigned long long array, name %s, count=%d\n", name, count)
+
+		if (Expect(name, SAVE_VALUE_TYPE_UNSIGNED_LONG_LONG_ARRAY))
+		{
+			int num;
+
+			m_stream->Read(&num);
+
+			if (num != count)
+			{
+				//	Incompatible save
+				HandleIncompatibleSave(CvString::format("Save format is not compatible (%s)", name).c_str());
+			}
+			m_stream->Read(count * sizeof(uint64_t), (char*)values);
+		}
+	}
+	else
+	{
+		m_stream->Read(count * sizeof(uint64_t), (char*)values);
+	}
+}
+
+
 
 void CvTaggedSaveFormatWrapper::Read(const char* name, float* value)
 {
@@ -3671,6 +3911,20 @@ CvTaggedSaveFormatWrapper::SkipElement()
 	case SAVE_VALUE_TYPE_UNSIGNED_LONG_ARRAY:
 		m_stream->Read(&arraySize);
 		ConsumeBytes(sizeof(unsigned long)*arraySize);
+		break;
+	case SAVE_VALUE_TYPE_LONG_LONG:
+		ConsumeBytes(sizeof(value_entry_long_long)-sizeof(int));
+		break;
+	case SAVE_VALUE_TYPE_UNSIGNED_LONG_LONG:
+		ConsumeBytes(sizeof(value_entry_unsigned_long_long)-sizeof(int));
+		break;
+	case SAVE_VALUE_TYPE_LONG_LONG_ARRAY:
+		m_stream->Read(&arraySize);
+		ConsumeBytes(sizeof(int64_t)*arraySize);
+		break;
+	case SAVE_VALUE_TYPE_UNSIGNED_LONG_LONG_ARRAY:
+		m_stream->Read(&arraySize);
+		ConsumeBytes(sizeof(uint64_t)*arraySize);
 		break;
 	case SAVE_VALUE_TYPE_FLOAT:
 		ConsumeBytes(sizeof(value_entry_float)-sizeof(int));

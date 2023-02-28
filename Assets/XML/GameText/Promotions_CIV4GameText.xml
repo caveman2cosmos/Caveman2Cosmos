@@ -1987,7 +1987,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_CHECKPOINTS_HELP</Tag>
-		<English>On the first, third and fifth rounds spent building up Checkpoints, the unit gains 1 intensity of [COLOR_HIGHLIGHT_TEXT]Disguise Visibility[COLOR_REVERT] up to a maximum bonus of +3, provided each promotion level is qualified for by the unit.</English>
+		<English>On the first, third and fifth rounds spent building up Checkpoints, the unit gains 1 intensity of [COLOR_HIGHLIGHT_TEXT]Disguise Vision[COLOR_REVERT] up to a maximum bonus of +3, provided each promotion level is qualified for by the unit.</English>
 		<French>Lors du premier, troisième et cinquième round passé en développement de la spécialisation Checkpoints, L'unité gagne 1 en intensité de [COLOR_HIGHLIGHT_TEXT]Détection des Déguisements[COLOR_REVERT] jusqu'à un bonus maximum de +3, reçu pour chaque niveau de promotion obtenu par l'unité.</French>
 		<German>Das Training der Personenkontrolle erhöht in der ersten, dritten und fünften Runde die Fähigkeit der Einheit zur [COLOR_HIGHLIGHT_TEXT]Erkennung von Verkleidungen[COLOR_REVERT] um 1 (maximal 3).</German>
 		<Russian>В первом, третьем и пятом раундах, потраченных на фокус на контрольных точках, отряд получает 1 к [COLOR_HIGHLIGHT_TEXT]обнаружению[COLOR_REVERT] скрытых отрядов до максимального бонуса +3, при условии, что отряд соответствует каждому уровню квалификации.</Russian>
@@ -2186,7 +2186,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_OBSERVATION_HELP</Tag>
-		<English>On the first rounds spent building up Observation, the unit gains 1 intensity of [COLOR_HIGHLIGHT_TEXT]Camouflage Visibility[COLOR_REVERT]. On the third and fifth rounds, the unit gains 1 additional [COLOR_HIGHLIGHT_TEXT]Camouflage Visibility Range[COLOR_REVERT], provided each promotion level is qualified for by the unit.</English>
+		<English>On the first rounds spent building up Observation, the unit gains 1 intensity of [COLOR_HIGHLIGHT_TEXT]Camouflage Vision[COLOR_REVERT]. On the third and fifth rounds, the unit gains 1 additional [COLOR_HIGHLIGHT_TEXT]Camouflage Vision Range[COLOR_REVERT], provided each promotion level is qualified for by the unit.</English>
 		<French>Lors du premier Round de développement de la spécialisation Observation, l'unité gagne 1 en intensité de [COLOR_HIGHLIGHT_TEXT]Détection du Camouflage[COLOR_REVERT]. Pour le troisième et le cinquième Round, elle gagne 1 en [COLOR_HIGHLIGHT_TEXT]Portée de détection ud Camouflage[COLOR_REVERT], et ce reçu pour chaque niveau de promotion obtenu par l'unité.</French>
 	</TEXT>
 	<TEXT>
@@ -2299,7 +2299,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_TERRITORIAL_VIGILANCE_HELP</Tag>
-		<English>On the first, third and fifth rounds spent building up Territorial Vigilance, the unit gains 1 intensity of [COLOR_HIGHLIGHT_TEXT]Camouflage Visibility[COLOR_REVERT] up to a maximum bonus of +3, provided each promotion level is qualified for by the unit.</English>
+		<English>On the first, third and fifth rounds spent building up Territorial Vigilance, the unit gains 1 intensity of [COLOR_HIGHLIGHT_TEXT]Camouflage Vision[COLOR_REVERT] up to a maximum bonus of +3, provided each promotion level is qualified for by the unit.</English>
 		<French>Lors du premier, troisième et cinquième round passé en développement de la spécialisation Surveillance du territoire, L'unité gagne 1 en intensité de [COLOR_HIGHLIGHT_TEXT]détection du Camouflage [COLOR_REVERT] jusqu'à un bonus maximum de +3, reçu pour chaque niveau de promotion obtenu par l'unité.</French>
 	</TEXT>
 	<TEXT>
@@ -11884,7 +11884,7 @@
 		<Russian>Ïîëÿðíûé ðàáîòíèê III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_POLICING10_DESC</Tag>
+		<Tag>TXT_KEY_PROMOTION_POLICING10</Tag>
 		<English>Policing X</English>
 		<French>Maintien de l'ordre X</French>
 		<German>Überwachung X</German>
@@ -11894,7 +11894,7 @@
 		<Russian>Оперативник X</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_POLICING1_DESC</Tag>
+		<Tag>TXT_KEY_PROMOTION_POLICING1</Tag>
 		<English>Policing I</English>
 		<French>Maintien de l'ordre I</French>
 		<German>Überwachung I</German>
@@ -11904,7 +11904,7 @@
 		<Russian>Оперативник I</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_POLICING2_DESC</Tag>
+		<Tag>TXT_KEY_PROMOTION_POLICING2</Tag>
 		<English>Policing II</English>
 		<French>Maintien de l'ordre II</French>
 		<German>Überwachung II</German>
@@ -11914,7 +11914,7 @@
 		<Russian>Оперативник II</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_POLICING3_DESC</Tag>
+		<Tag>TXT_KEY_PROMOTION_POLICING3</Tag>
 		<English>Policing III</English>
 		<French>Maintien de l'ordre III</French>
 		<German>Überwachung III</German>
@@ -11924,7 +11924,7 @@
 		<Russian>Оперативник III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_POLICING4_DESC</Tag>
+		<Tag>TXT_KEY_PROMOTION_POLICING4</Tag>
 		<English>Policing IV</English>
 		<French>Maintien de l'ordre IV</French>
 		<German>Überwachung IV</German>
@@ -11934,7 +11934,7 @@
 		<Russian>Оперативник IV</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_POLICING5_DESC</Tag>
+		<Tag>TXT_KEY_PROMOTION_POLICING5</Tag>
 		<English>Policing V</English>
 		<French>Maintien de l'ordre V</French>
 		<German>Überwachung V</German>
@@ -11944,7 +11944,7 @@
 		<Russian>Оперативник V</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_POLICING6_DESC</Tag>
+		<Tag>TXT_KEY_PROMOTION_POLICING6</Tag>
 		<English>Policing VI</English>
 		<French>Maintien de l'ordre VI</French>
 		<German>Überwachung VI</German>
@@ -11954,7 +11954,7 @@
 		<Russian>Оперативник VI</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_POLICING7_DESC</Tag>
+		<Tag>TXT_KEY_PROMOTION_POLICING7</Tag>
 		<English>Policing VII</English>
 		<French>Maintien de l'ordre VII</French>
 		<German>Überwachung VII</German>
@@ -11964,7 +11964,7 @@
 		<Russian>Оперативник VII</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_POLICING8_DESC</Tag>
+		<Tag>TXT_KEY_PROMOTION_POLICING8</Tag>
 		<English>Policing VIII</English>
 		<French>Maintien de l'ordre VIII</French>
 		<German>Überwachung VIII</German>
@@ -11974,7 +11974,7 @@
 		<Russian>Оперативник VIII</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_POLICING9_DESC</Tag>
+		<Tag>TXT_KEY_PROMOTION_POLICING9</Tag>
 		<English>Policing IX</English>
 		<French>Maintien de l'ordre IX</French>
 		<German>Überwachung IX</German>
@@ -12917,7 +12917,7 @@
 		<Russian>Ñïàñàòåëü III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_RETINUE_ADVENTURER_DESC</Tag>
+		<Tag>TXT_KEY_PROMOTION_RETINUE_ADVENTURER</Tag>
 		<English>Adventurer</English>
 		<French>Aventurier (Héros)</French>
 		<German>Adventurer</German>
@@ -12927,7 +12927,7 @@
 		<Russian>Àâàíòþðèñò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_RETINUE_BANDIT_DESC</Tag>
+		<Tag>TXT_KEY_PROMOTION_RETINUE_BANDIT</Tag>
 		<English>Bandit</English>
 		<French>Bandit (Héros)</French>
 		<German>Bandit</German>
@@ -12937,7 +12937,7 @@
 		<Russian>Áàíäèò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_RETINUE_BARD_DESC</Tag>
+		<Tag>TXT_KEY_PROMOTION_RETINUE_BARD</Tag>
 		<English>Bard</English>
 		<French>Barde (Héros)</French>
 		<German>Bard</German>
@@ -12947,7 +12947,7 @@
 		<Russian>Ìåíåñòðåëü</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_RETINUE_BODYGUARD_DESC</Tag>
+		<Tag>TXT_KEY_PROMOTION_RETINUE_BODYGUARD</Tag>
 		<English>Bodyguard</English>
 		<French>Garde du corps (Héros)</French>
 		<German>Bodyguard</German>
@@ -12957,7 +12957,7 @@
 		<Russian>Òåëîõðàíèòåëü</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_RETINUE_BUILDER_DESC</Tag>
+		<Tag>TXT_KEY_PROMOTION_RETINUE_BUILDER</Tag>
 		<English>Builder</English>
 		<French>Constructeur (Héros)</French>
 		<German>Builder</German>
@@ -12967,7 +12967,7 @@
 		<Russian>Ñòðîèòåëü</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_RETINUE_LIEUTENANT_DESC</Tag>
+		<Tag>TXT_KEY_PROMOTION_RETINUE_LIEUTENANT</Tag>
 		<English>Lieutenant</English>
 		<French>Lieutenant (Héros)</French>
 		<German>Lieutenant</German>
@@ -12977,7 +12977,7 @@
 		<Russian>Ëåéòåíàíò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_RETINUE_LOYAL_SERVANT_DESC</Tag>
+		<Tag>TXT_KEY_PROMOTION_RETINUE_LOYAL_SERVANT</Tag>
 		<English>Loyal Servant</English>
 		<French>Serviteur Loyal (Héros)</French>
 		<German>Loyal Servant</German>
@@ -12987,7 +12987,7 @@
 		<Russian>Âåðíûé ñëóãà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_RETINUE_MESSENGER_DESC</Tag>
+		<Tag>TXT_KEY_PROMOTION_RETINUE_MESSENGER</Tag>
 		<English>Messenger</English>
 		<French>Messager (Héros)</French>
 		<German>Messenger</German>
@@ -13006,7 +13006,7 @@
 		<Russian>[ICON_BULLET]10% øàíñ èñöåëèòüñÿ ïîñëå ïîáåäû â áèòâå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_RETINUE_PRIEST_DESC</Tag>
+		<Tag>TXT_KEY_PROMOTION_RETINUE_PRIEST</Tag>
 		<English>Priest</English>
 		<French>Prêtre (Héros)</French>
 		<Italian>Sacerdote</Italian>
@@ -13015,7 +13015,7 @@
 		<Russian>Æðåö</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_RETINUE_SCHOLAR_DESC</Tag>
+		<Tag>TXT_KEY_PROMOTION_RETINUE_SCHOLAR</Tag>
 		<English>Scholar</English>
 		<French>Erudit (Héros)</French>
 		<German>Scholar</German>
@@ -13025,7 +13025,7 @@
 		<Russian>Ýðóäèò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_RETINUE_SPOUSE_DESC</Tag>
+		<Tag>TXT_KEY_PROMOTION_RETINUE_SPOUSE</Tag>
 		<English>Spouse</English>
 		<French>Epouse (Héros)</French>
 		<German>Spouse</German>
@@ -13035,7 +13035,7 @@
 		<Russian>Ñóïðóã</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_RETINUE_STRATEGIST_DESC</Tag>
+		<Tag>TXT_KEY_PROMOTION_RETINUE_STRATEGIST</Tag>
 		<English>Strategist</English>
 		<French>Stratège (Héros)</French>
 		<German>Strategist</German>
@@ -13045,7 +13045,7 @@
 		<Russian>Ñòðàòåã</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_RETINUE_WAR_VETERAN_DESC</Tag>
+		<Tag>TXT_KEY_PROMOTION_RETINUE_WAR_VETERAN</Tag>
 		<English>War Veteran</English>
 		<French>Vétéran de Guerre (Héros)</French>
 		<German>War Veteran</German>
@@ -13109,7 +13109,7 @@
 		<Russian>Ãðîìîâåðæåö III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_RUGGED1_DESC</Tag>
+		<Tag>TXT_KEY_PROMOTION_RUGGED1</Tag>
 		<English>Rugged Combat I</English>
 		<French>Terrain Désolé I</French>
 		<German>Über Stock und Stein I</German>
@@ -13119,7 +13119,7 @@
 		<Russian>Ñóðîâûé âîèí I</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_RUGGED2_DESC</Tag>
+		<Tag>TXT_KEY_PROMOTION_RUGGED2</Tag>
 		<English>Rugged Combat II</English>
 		<French>Terrain Désolé II</French>
 		<German>Über Stock und Stein II</German>
@@ -13129,7 +13129,7 @@
 		<Russian>Ñóðîâûé âîèí II</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_RUGGED3_DESC</Tag>
+		<Tag>TXT_KEY_PROMOTION_RUGGED3</Tag>
 		<English>Rugged Combat III</English>
 		<French>Terrain Désolé III</French>
 		<German>Über Stock und Stein III</German>
@@ -15805,7 +15805,7 @@
 		<Russian>Ìîðñêîé ñèíîïòèê</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_WETLAND1_DESC</Tag>
+		<Tag>TXT_KEY_PROMOTION_WETLAND1</Tag>
 		<English>Wetland Combat I</English>
 		<French>Zone Humide I</French>
 		<German>Morastläufer I</German>
@@ -15815,7 +15815,7 @@
 		<Russian>Áîëîòíûé âîèí I</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_WETLAND2_DESC</Tag>
+		<Tag>TXT_KEY_PROMOTION_WETLAND2</Tag>
 		<English>Wetland Combat II</English>
 		<French>Zone Humide II</French>
 		<German>Morastläufer II</German>
@@ -15825,7 +15825,7 @@
 		<Russian>Áîëîòíûé âîèí II</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_WETLAND3_DESC</Tag>
+		<Tag>TXT_KEY_PROMOTION_WETLAND3</Tag>
 		<English>Wetland Combat III</English>
 		<French>Zone Humide III</French>
 		<German>Morastläufer III</German>

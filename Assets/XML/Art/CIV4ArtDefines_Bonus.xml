@@ -980,7 +980,7 @@
 			<FontButtonIndex>192</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_HELIUM3</Type>
+			<Type>ART_DEF_BONUS_HELIUM_3</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/HELIUM3/helium3.nif</NIF>
@@ -989,7 +989,7 @@
 			<FontButtonIndex>70</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_QUANTONIUM_CRYSTAL</Type>
+			<Type>ART_DEF_BONUS_QUANTONIUM_CRYSTALS</Type>
 			<fScale>1.1</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Terrain/Resources/Quantonium_Crystal/MarkerMana.nif</NIF>

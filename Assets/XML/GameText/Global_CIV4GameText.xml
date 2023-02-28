@@ -1477,11 +1477,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_NEEDS_CULTURE_BORDER</Tag>
-		<English>[COLOR_WARNING_TEXT]Must be within our Cultural Borders.[COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]Uniquement à l'intérieur de nos frontières culturelles.[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Muss sich innerhalb unserer kulturellen Grenzen befinden.[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]Bisogna essere all'interno dei propri confini culturali.[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_WARNING_TEXT]Ha de estar dentro de las fronteras de nuestra cultura.[COLOR_REVERT]</Spanish>
+		<English>[COLOR_WARNING_TEXT]Must be within Cultural Borders owned by of one of our cities.[COLOR_REVERT]</English>
+		<!-- <French>[COLOR_WARNING_TEXT]Uniquement à l'intérieur de nos frontières culturelles.[COLOR_REVERT]</French> -->
+		<!-- <German>[COLOR_WARNING_TEXT]Muss sich innerhalb unserer kulturellen Grenzen befinden.[COLOR_REVERT]</German> -->
+		<!-- <Italian>[COLOR_WARNING_TEXT]Bisogna essere all'interno dei propri confini culturali.[COLOR_REVERT]</Italian> -->
+		<!-- <Spanish>[COLOR_WARNING_TEXT]Ha de estar dentro de las fronteras de nuestra cultura.[COLOR_REVERT]</Spanish> -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_NEEDS_OUT_RIVAL_CULTURE_BORDER</Tag>
@@ -4724,6 +4724,14 @@
 		<Russian>%s1_BldgName была утрачена в городе %s2_CityName</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_NATURAL_WONDERS</Tag>
+		<English>1. Natural Wonders</English>
+		<French>1. Merveilles Naturelles</French>
+		<German>1. Naturwunder</German>
+		<Polish>1. Cuda Natury</Polish>
+		<Russian>1. ×óäî ïðèðîäû</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_NATURAL_WONDERS_PEDIA</Tag>
 		<English>[H1]Natural Wonders[\H1][PARAGRAPH:1]Natural Wonders include marvels that truly display the grand beauty of the natural world. Natural Wonders permanently increase happiness when seen by a civilization and grants Gold for the first civilization. Cities get a free specialist for each Natural Wonder nearby.</English>
 		<German>[H1]Naturwunder[\H1][NEWLINE][NEWLINE]Hierbei handelt es sich um natürlich entstandene Wunder, die eindrucksvoll die Schönheit der uns umgebenden Natur zeigen. Städte profitieren auf vielfältige Weise von Naturwundern in ihrem Umfeld. Sie erhöhen nicht nur die Zufriedenheit der Bevölkerung, sondern sorgen auch dafür, dass sich ein zusätzlicher freier Spezialist ansiedelt. Die Zivilisation, die ein Naturwunder als erstes entdeckt, erhält außerdem einen Bonus in Form von [ICON_GOLD].</German>
@@ -6487,7 +6495,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_CITY_VISIBILITY</Tag>
-		<English>City Visibility</English>
+		<English>City Vision</English>
 		<French>Afficher la ville</French>
 		<German>Stadtsichtbarkeit</German>
 		<Italian>Visibilità città</Italian>
@@ -9477,7 +9485,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BEACON_GREAT_BARRIER_REEF</Tag>
-		<English>Beacon(Great Barrier Reef)</English>
+		<English>Beacon (Great Barrier Reef)</English>
 		<French>
 			<Text>Balise - Grande barrière de corails</Text>
 			<Gender>Female</Gender>
@@ -9495,7 +9503,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER_REEF</Tag>
-		<English>Lighthouse(Great Barrier Reef)</English>
+		<English>Lighthouse (Great Barrier Reef)</English>
 		<French>
 			<Text>Phare - Grande barrière de corails</Text>
 			<Gender>Male</Gender>
@@ -9884,7 +9892,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_GO_TO_SENTRY_HELP</Tag>
-		<English>Order the selected unit to move to a tile. The unit stops before reaching its destination if an enemy unit of the same type enters its visibility range.</English>
+		<English>Order the selected unit to move to a tile. The unit stops before reaching its destination if an enemy unit of the same type enters its vision range.</English>
 		<French>Ordonner à l'unité sélectionnée de se déplacer vers une case. L'unité s'arrête avant sa destination si une unité ennemie ne pénètre pas dans son champ de vision.</French>
 		<German>Ausgewählte Einheit zu einem Zielfeld beordern. Die Einheit unterbricht ihre Bewegung, wenn eine feindliche Einheit desselben Typs ihr Sichtfeld betritt.</German>
 		<Italian>Ordina all'unità selezionata di muoversi verso una casella. L'unità si ferma prima di raggiungere la sua destinazione se un'unità nemica dello stesso tipo entra nel suo raggio di visibilità.</Italian>
@@ -15734,6 +15742,10 @@
 		<Russian>Âëàäåëåö</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MISC_NO_CITY_INFLUENCE</Tag>
+		<English>Not in %s1_CivAdj city influence.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MISC_PEACE_TREATY</Tag>
 		<English>Peace Treaty (%d1_Num Turns)</English>
 		<French>Traité de paix (%d1_Num tours)</French>
@@ -18522,6 +18534,10 @@
 		<Russian>%s1_Player îñíîâàë %s2_City íà îòäàëåííîé çåìëå.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MORECIV4LERTS_CITY_TO_EXPAND_RCS</Tag>
+		<English>[COLOR_MAGENTA]The culture of %s1 is about to reach a new threshold.[COLOR_REVERT]</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MORECIV4LERTS_CITY_TO_EXPAND</Tag>
 		<English>[COLOR_MAGENTA]The borders of %s1 are about to expand.[COLOR_REVERT]</English>
 		<French>[COLOR_MAGENTA]La frontière culturelle de %s1 est sur le point de s'étendre.[COLOR_REVERT]</French>
@@ -18850,14 +18866,6 @@
 		<Italian>[ICON_BULLET]Le unità hanno il %D1%% di chance di sfuggire alla cattura.</Italian>
 		<Polish>[ICON_BULLET]Jednostki mają %D1%% szansy na uniknięcie Przejęcia.</Polish>
 		<Russian>[ICON_BULLET]%D1%% øàíñîâ èçáåæàòü çàõâàòà.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_NATURAL_WONDERS</Tag>
-		<English>Natural Wonders</English>
-		<French>Merveilles Naturelles</French>
-		<German>Naturwunder</German>
-		<Polish>Cuda Natury</Polish>
-		<Russian>×óäî ïðèðîäû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_NEVER_MIND</Tag>

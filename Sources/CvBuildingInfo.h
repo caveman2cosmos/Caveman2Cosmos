@@ -418,9 +418,6 @@ public:
 	int getNumUnitCombatProdModifiers() const;
 	int getUnitCombatProdModifier(int iUnitCombat) const;
 
-	int getNumUnitCombatOngoingTrainingDurations() const;
-	int getUnitCombatOngoingTrainingDuration(int iUnitCombat, bool bForLoad = false) const;
-
 	int getNumAfflictionOutbreakLevelChanges() const;
 	int getAfflictionOutbreakLevelChange(int iAfflictionLine) const;
 
@@ -780,7 +777,6 @@ private:
 	UnitCombatModifierArray m_aUnitCombatRepelAgainstModifiers;
 	UnitCombatModifierArray m_aUnitCombatDefenseAgainstModifiers;
 	UnitCombatModifierArray m_aUnitCombatProdModifiers;
-	UnitCombatModifierArray m_aUnitCombatOngoingTrainingDurations;
 	PromotionLineModifierArray m_aAfflictionOutbreakLevelChanges;
 	TechModifierArray m_aTechOutbreakLevelChanges;
 	IDValueMap<BonusTypes, int> m_piBonusHealthChanges;

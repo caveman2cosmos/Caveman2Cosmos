@@ -122,19 +122,11 @@ std::wstring CyPlayer::getNewCityName() const
 
 CyUnit* CyPlayer::initUnit(int /*UnitTypes*/ iIndex, int iX, int iY, UnitAITypes eUnitAI, DirectionTypes eFacingDirection)
 {
-/************************************************************************************************/
-/* Afforess	                  Start		 09/29/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	if (iIndex == -1)
 	{
 		FErrorMsg("Initiating NO_UNIT Type!");
 		return NULL;
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	CvUnit* unit = m_pPlayer->initUnit((UnitTypes) iIndex, iX, iY, eUnitAI, eFacingDirection, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
 	return unit ? new CyUnit(unit) : NULL;
 }
@@ -151,7 +143,7 @@ bool CyPlayer::hasTrait(int /*TraitTypes*/ iIndex) const
 
 bool CyPlayer::isHuman() const
 {
-	return m_pPlayer->isHuman();
+	return m_pPlayer->isHumanPlayer();
 }
 
 bool CyPlayer::isHumanDisabled() const

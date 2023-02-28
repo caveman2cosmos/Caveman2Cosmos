@@ -6,7 +6,7 @@
 			<Bonus>BONUS_DUTCH</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HAKA</Type>
+			<Type>BUILDING_DANCE_HAKA</Type>
 			<PrereqBonuses>
 				<BonusType>BONUS_ABORIGINE</BonusType>
 				<BonusType>BONUS_FIJIAN</BonusType>
@@ -27,7 +27,7 @@
 			</PrereqBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MAYA_BALL_COURT</Type>
+			<Type>BUILDING_BALL_COURT</Type>
 			<PrereqBonuses>
 				<Bonus>BONUS_MAYAN</Bonus>
 				<Bonus>BONUS_AZTEC</Bonus>
@@ -48,7 +48,7 @@
 			</PrereqBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SIAM_HO_TRAI</Type>
+			<Type>BUILDING_HO_TRAI_LIBRARY</Type>
 			<Bonus>BONUS_SIAMESE</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>

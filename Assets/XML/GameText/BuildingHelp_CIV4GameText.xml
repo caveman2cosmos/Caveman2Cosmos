@@ -1479,14 +1479,6 @@
 		<Russian>[ICON_BULLET]Îòðÿäû, îáîðîíÿþùèå ãîðîä, ïîëó÷àþò ìîäèôèêàòîð áîÿ %D1_Amount%% ïðîòèâ àòàêè %s2_Unit_Combat.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDINGHELP_UNIT_COMBAT_ONGOING_TRAINING_DURATION</Tag>
-		<English>[ICON_BULLET]Adds One Experience Point to the least trained %s1_UnitCombat Unit present in the city every %d1_Amount rounds.</English>
-		<French>[ICON_BULLET]Ajoute un point d'EXP à l'unité %s1_UnitCombat la moins entraînée présente dans la ville, tous les %d1_Amount rounds.</French>
-		<Italian>[ICON_BULLET]Aggiunge un punto esperienza all'unità addestrata di tipo %s1_UnitCombat presente in città ogni %d1_Amount turni.</Italian>
-		<Polish>[ICON_BULLET]Dodaje jeden punkt doświadczenia do szkolonych jednostek: %s1_UnitCombat w mieście w każdej turze przez %d1_Amount tur.</Polish>
-		<Russian>[ICON_BULLET]Äîáàâëÿåò îäíî î÷êî îïûòà äëÿ íàèìåíåå îáó÷åííîãî îòðÿäà %s1_UnitCombat íàõîäÿùåãîñÿ â ãîðîäå %d1_Amount õîäîâ.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_UNIT_COMBAT_PROD_NEGATIVE_MODIFIER</Tag>
 		<English>[ICON_BULLET]Builds %s1_Unit_Combat %d2_Amount%% Slower</English>
 		<French>[ICON_BULLET]Construit %s1_Unit_Combat %d2_Amount%% fois plus lentement</French>

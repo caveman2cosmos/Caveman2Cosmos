@@ -139,7 +139,8 @@ public:
 	bool hasTrait(TraitTypes eTrait) const;
 
 	void setHumanDisabled(bool newVal);
-	bool isHumanDisabled() const;
+	inline bool isHumanDisabled() const { return m_bDisableHuman; }
+	inline bool isHumanPlayer(const bool bCountDisabled = false) const { return m_bHuman || bCountDisabled && m_bDisableHuman; }
 	bool isNormalAI() const;
 
 	DllExport bool isHuman() const;
@@ -189,7 +190,7 @@ public:
 
 	void updateYield();
 	void updateMaintenance() const;
-	inline void setMaintenanceDirty(bool bDirty) const { m_bMaintenanceDirty = bDirty; }
+	void setMaintenanceDirty(const bool bDirty, const bool bCities = true) const;
 
 	void updateFeatureHappiness(bool bLimited = false);
 	void updateReligionHappiness(bool bLimited = false);
@@ -313,7 +314,6 @@ public:
 
 	int calculateUnitSupply(int& iPaidUnits, int& iBaseSupplyCost) const;
 	int calculateUnitSupply() const;
-	int calculateInflationRate() const;
 	int64_t calculatePreInflatedCosts() const;
 	int getInflationMod10000() const;
 	int64_t getInflationCost() const;
@@ -643,14 +643,20 @@ public:
 
 	void changeBuildingOnlyHealthyCount(int iChange, bool bLimited = false);
 
-	int getDistanceMaintenanceModifier() const;
-	void changeDistanceMaintenanceModifier(int iChange);
+	inline int getDistanceMaintenanceModifier() const { return m_iDistanceMaintenanceModifier; }
+	void changeDistanceMaintenanceModifier(const int iChange);
 
-	int getNumCitiesMaintenanceModifier() const;
-	void changeNumCitiesMaintenanceModifier(int iChange);
+	inline int getNumCitiesMaintenanceModifier() const { return m_iNumCitiesMaintenanceModifier; }
+	void changeNumCitiesMaintenanceModifier(const int iChange);
 
-	int getCorporationMaintenanceModifier() const;
-	void changeCorporationMaintenanceModifier(int iChange, bool bLimited = false);
+	inline int getCorporationMaintenanceModifier() const { return m_iCorporationMaintenanceModifier; }
+	void changeCorporationMaintenanceModifier(const int iChange, const bool bLimited = false);
+
+	inline int getHomeAreaMaintenanceModifier() const { return m_iHomeAreaMaintenanceModifier; }
+	void changeHomeAreaMaintenanceModifier(const int iChange);
+
+	inline int getOtherAreaMaintenanceModifier() const { return m_iOtherAreaMaintenanceModifier; }
+	void changeOtherAreaMaintenanceModifier(const int iChange);
 
 	int getTotalMaintenance() const;
 
@@ -1797,7 +1803,10 @@ protected:
 	int m_iDistanceMaintenanceModifier;
 	int m_iNumCitiesMaintenanceModifier;
 	int m_iCorporationMaintenanceModifier;
+	int m_iHomeAreaMaintenanceModifier;
+	int m_iOtherAreaMaintenanceModifier;
 	mutable int m_iTotalMaintenance;
+
 	int m_iUpkeepModifier;
 	int m_iLevelExperienceModifier;
 	int m_iExtraHealth;
@@ -2272,7 +2281,6 @@ public:
 	int getFocusPlotX() const;
 	int getFocusPlotY() const;
 
-public:
 	void RecalculatePlotGroupHashes();
 	CvContractBroker& getContractBroker();
 

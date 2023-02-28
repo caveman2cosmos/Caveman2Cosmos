@@ -443,7 +443,7 @@ void CvUnitAI::doUnitAIMove()
 		return;
 	}
 
-	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS)
+	if (GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS)
 	&& (!isAnimal() || isGatherHerd())
 	&& getGroup()->doMergeCheck())
 	{
@@ -1628,7 +1628,7 @@ void CvUnitAI::AI_animalMove()
 {
 	PROFILE_FUNC();
 
-	const bool bReckless = GC.getGame().isOption(GAMEOPTION_RECKLESS_ANIMALS);
+	const bool bReckless = GC.getGame().isOption(GAMEOPTION_ANIMAL_RECKLESS);
 
 	if (canAttack())
 	{
@@ -2329,7 +2329,7 @@ void CvUnitAI::AI_workerMove()
 			}
 
 			// Avoid filling a galley which has just a settler in it, reduce chances for other ships
-			if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+			if (GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 			{
 				if (AI_load(UNITAI_SETTLER_SEA, MISSIONAI_LOAD_SETTLER, NO_UNITAI, -1, (2 * GET_PLAYER(getOwner()).getBestUnitTypeCargoVolume(UNITAI_WORKER)), -1, -1, MOVE_SAFE_TERRITORY))
 				{
@@ -2430,7 +2430,7 @@ void CvUnitAI::AI_barbAttackMove()
 		return;
 	}
 
-	const bool bRaging = GC.getGame().isOption(GAMEOPTION_RAGING_BARBARIANS);
+	const bool bRaging = GC.getGame().isOption(GAMEOPTION_BARBARIAN_RAGING);
 
 	if (bRaging || GC.getGame().getNumCivCities() > GC.getGame().countCivPlayersAlive() * 2)
 	{
@@ -2697,7 +2697,7 @@ void CvUnitAI::AI_attackMove()
 				}
 
 				// Pick new transport which has space for other unit ai types to join
-				if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+				if (GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 				{
 					if (AI_load(UNITAI_ASSAULT_SEA, MISSIONAI_LOAD_ASSAULT, NO_UNITAI, -1, (2 * GET_PLAYER(getOwner()).getBestUnitTypeCargoVolume(UNITAI_ASSAULT_SEA)), -1, -1, MOVE_SAFE_TERRITORY, 4))
 					{
@@ -3339,7 +3339,7 @@ void CvUnitAI::AI_attackCityMove()
 				}
 
 				//	Also try to get a great commander if we don't have one
-				if (GC.getGame().isOption(GAMEOPTION_GREAT_COMMANDERS) && !getGroup()->hasCommander())
+				if (GC.getGame().isOption(GAMEOPTION_UNIT_GREAT_COMMANDERS) && !getGroup()->hasCommander())
 				{
 					GET_PLAYER(getOwner()).getContractBroker().advertiseWork(
 						bReadyToAttack ? HIGH_PRIORITY_ESCORT_PRIORITY : LOW_PRIORITY_ESCORT_PRIORITY,
@@ -4215,7 +4215,7 @@ void CvUnitAI::AI_reserveMove()
 
 	if (plot()->getOwner() == getOwner())
 	{
-		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+		if (GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 		{
 			if (AI_load(UNITAI_SETTLER_SEA, MISSIONAI_LOAD_SETTLER, UNITAI_SETTLE, -1, -1, ((SMCargoVolume() * 2) - 1), -1, MOVE_SAFE_TERRITORY))
 			{
@@ -4675,7 +4675,7 @@ void CvUnitAI::AI_cityDefenseMove()
 	{
 		if (plot()->getOwner() == getOwner())
 		{
-			if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+			if (GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 			{
 				if (AI_load(UNITAI_SETTLER_SEA, MISSIONAI_LOAD_SETTLER, UNITAI_SETTLE, -1, -1, ((SMCargoVolume() * 2) - 1), -1, MOVE_SAFE_TERRITORY, 1))
 				{
@@ -4733,7 +4733,7 @@ void CvUnitAI::AI_cityDefenseMove()
 
 		if (plot()->getOwner() == getOwner())
 		{
-			if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+			if (GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 			{
 				if (AI_load(UNITAI_SETTLER_SEA, MISSIONAI_LOAD_SETTLER, UNITAI_SETTLE, -1, -1, ((SMCargoVolume() * 2) - 1), -1, MOVE_SAFE_TERRITORY))
 				{
@@ -4852,7 +4852,7 @@ void CvUnitAI::AI_cityDefenseMove()
 	}
 
 	//This should make it so that if the AI accepts that the city is going to be overwhelmed then it starts splitting its units to buy time for more production and reinforcements.
-	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS) && plot()->isCity(true))
+	if (GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS) && plot()->isCity(true))
 	{
 		int iOurDefense = GET_TEAM(getTeam()).AI_getOurPlotStrength(plot(), 0, true, false, true);
 		int iEnemyOffense = GET_PLAYER(getOwner()).AI_getEnemyPlotStrength(plot(), 2, false, false);
@@ -4955,7 +4955,7 @@ void CvUnitAI::AI_cityDefenseExtraMove()
 		{
 			if (plot()->getOwner() == getOwner())
 			{
-				if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+				if (GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 				{
 					if (AI_load(UNITAI_SETTLER_SEA, MISSIONAI_LOAD_SETTLER, UNITAI_SETTLE, -1, -1, ((SMCargoVolume() * 2) - 1), -1, MOVE_SAFE_TERRITORY, 1))
 					{
@@ -5863,7 +5863,7 @@ void CvUnitAI::AI_generalMove()
 				return;
 			}
 			//try load on transport
-			if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+			if (GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 			{
 				if (AI_load(UNITAI_ASSAULT_SEA, MISSIONAI_LOAD_ASSAULT, NO_UNITAI, -1, (2 * GET_PLAYER(getOwner()).getBestUnitTypeCargoVolume(UNITAI_ASSAULT_SEA)), 0, ((bCanDefend ? MOVE_SAFE_TERRITORY : MOVE_OUR_TERRITORY) | MOVE_WITH_CAUTION)))
 				{
@@ -8582,7 +8582,7 @@ void CvUnitAI::AI_assaultSeaMove()
 	else if (!bFull)
 	{
 		bool bHasOneLoad = false;
-		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+		if (GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 		{
 			bHasOneLoad = (getGroup()->getCargo(true) >= cargoSpace());
 		}
@@ -8896,7 +8896,7 @@ void CvUnitAI::AI_settlerSeaMove()
 				return;
 			}
 		}
-		else if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+		else if (GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 		{
 			if (cargoSpace() - 2 * GET_PLAYER(getOwner()).getBestUnitTypeCargoVolume(UNITAI_WORKER) >= SMgetCargo() + iWorkerCount * GET_PLAYER(getOwner()).getBestUnitTypeCargoVolume(UNITAI_WORKER))
 			{
@@ -8953,10 +8953,10 @@ void CvUnitAI::AI_settlerSeaMove()
 	//	through here without ever actually wanting to load a settler (which it never does without an
 	//	escort unit also) and wound up giving no orders at all to this unit, then looping over this 100 times
 	//	a ta higher level before giving up and skipping moves for this unit.
-	if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS)
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS)
 	&& cargoSpace() > 1 && cargoSpace() - getCargo() < 2 && iWorkerCount > 0
 
-	|| GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS)
+	|| GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS)
 	&& cargoSpace() > GET_PLAYER(getOwner()).getBestUnitTypeCargoVolume(UNITAI_SETTLE)
 	&& cargoSpace() - SMgetCargo() < 2 * GET_PLAYER(getOwner()).getBestUnitTypeCargoVolume(UNITAI_WORKER)
 	&& iWorkerCount > 0)
@@ -10746,7 +10746,7 @@ void CvUnitAI::AI_InfiltratorMove()
 		return;
 	}
 
-	if (!isWanted() && GC.getGame().isOption(GAMEOPTION_UNLIMITED_NATIONAL_UNITS) && !isNPC()
+	if (!isWanted() && GC.getGame().isOption(GAMEOPTION_NO_NATIONAL_UNIT_LIMIT) && !isNPC()
 	&& plot() != NULL && plot()->isCity(false) && plot()->getOwner() != getOwner()
 	&& !GET_PLAYER(getOwner()).AI_isFinancialTrouble())
 	{
@@ -11452,7 +11452,7 @@ bool CvUnitAI::AI_load(UnitAITypes eUnitAI, MissionAITypes eMissionAI, UnitAITyp
 
 	int iCurrentGroupSize = getGroup()->getNumUnits();
 	// Under Size Matters we need the volume of the group
-	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 	{
 		iCurrentGroupSize = getGroup()->getNumUnitCargoVolumeTotal();
 	}
@@ -11483,7 +11483,7 @@ bool CvUnitAI::AI_load(UnitAITypes eUnitAI, MissionAITypes eMissionAI, UnitAITyp
 					int iCargoSpaceAvailable = pLoopUnit->cargoSpaceAvailable(getSpecialUnitType(), getDomainType());
 
 					// iCargoSpaceAvailable refers to the space (in unit counts here) available to load units on the transport under eval
-					if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+					if (GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 					{
 						// here we make it refer to the space (in cargo volumes) available to load units on the transport instead
 						iCargoSpaceAvailable -= GET_PLAYER(getOwner()).AI_unitTargetMissionAIs(pLoopUnit, aeLoadMissionAI, iLoadMissionAICount, getGroup(), -1, true);
@@ -11624,7 +11624,7 @@ bool CvUnitAI::AI_load(UnitAITypes eUnitAI, MissionAITypes eMissionAI, UnitAITyp
 			CvSelectionGroup* pOtherGroup = NULL;
 			//woooo... how to convert THIS???
 			CvSelectionGroup* pSplitGroup = NULL;
-			if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+			if (!GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 			{
 				pSplitGroup = getGroup()->splitGroup(iCargoSpaceAvailable, this, &pOtherGroup);
 			}
@@ -12354,7 +12354,7 @@ int CvUnitAI::AI_getPlotDefendersNeeded(const CvPlot* pPlot, int iExtra) const
 
 	if (pPlot->getImprovementType() != NO_IMPROVEMENT && GC.getImprovementInfo(pPlot->getImprovementType()).getCulture() > 0)
 	{
-		iNeeded = std::max(1 + (GC.getImprovementInfo(pPlot->getImprovementType()).isActsAsCity() ? 1 : 0), iNeeded);
+		iNeeded = std::max(1 + (GC.getImprovementInfo(pPlot->getImprovementType()).isMilitaryStructure() ? 1 : 0), iNeeded);
 	}
 
 	if (iNeeded == 0)
@@ -12404,7 +12404,7 @@ bool CvUnitAI::AI_guardFort(bool bSearch)
 		const ImprovementTypes eImprovement = plot()->getImprovementType();
 		if (eImprovement != NO_IMPROVEMENT)
 		{
-			if (GC.getImprovementInfo(eImprovement).isActsAsCity() || GC.getImprovementInfo(eImprovement).getCulture() > 0)
+			if (GC.getImprovementInfo(eImprovement).isMilitaryStructure())
 			{
 				// Super Forts begin *AI_defense* - just tweaked a number here (iExtra now 1 instead of 0)
 				if (plot()->plotCount(PUF_isCityAIType, -1, -1, NULL, getOwner()) <= AI_getPlotDefendersNeeded(plot(), 1))
@@ -12439,7 +12439,7 @@ bool CvUnitAI::AI_guardFort(bool bSearch)
 				const ImprovementTypes eImprovement = pLoopPlot->getImprovementType();
 				if (eImprovement != NO_IMPROVEMENT)
 				{
-					if (GC.getImprovementInfo(eImprovement).isActsAsCity() || GC.getImprovementInfo(eImprovement).getCulture() > 0)
+					if (GC.getImprovementInfo(eImprovement).isMilitaryStructure())
 					{
 						// Super Forts begin *AI_defense* - just tweaked a number here (iExtra now 1 instead of 0)
 						int iValue = AI_getPlotDefendersNeeded(pLoopPlot, 1);
@@ -12502,7 +12502,7 @@ bool CvUnitAI::AI_guardFortMinDefender(bool bSearch)
 		const ImprovementTypes eImprovement = plot()->getImprovementType();
 		if (eImprovement != NO_IMPROVEMENT)
 		{
-			if (GC.getImprovementInfo(eImprovement).isActsAsCity() || GC.getImprovementInfo(eImprovement).isUpgradeRequiresFortify() || GC.getImprovementInfo(eImprovement).getCulture() > 0)
+			if (GC.getImprovementInfo(eImprovement).isMilitaryStructure() || GC.getImprovementInfo(eImprovement).isUpgradeRequiresFortify())
 			{
 				if (plot()->plotCount(PUF_isCityAIType, -1, -1, NULL, getOwner()) <= 1)
 				{
@@ -12533,7 +12533,7 @@ bool CvUnitAI::AI_guardFortMinDefender(bool bSearch)
 				const ImprovementTypes eImprovement = pLoopPlot->getImprovementType();
 				if (eImprovement != NO_IMPROVEMENT)
 				{
-					if (GC.getImprovementInfo(eImprovement).isActsAsCity() || GC.getImprovementInfo(eImprovement).isUpgradeRequiresFortify() || GC.getImprovementInfo(eImprovement).getCulture() > 0)
+					if (GC.getImprovementInfo(eImprovement).isMilitaryStructure() || GC.getImprovementInfo(eImprovement).isUpgradeRequiresFortify())
 					{
 						if (!(pLoopPlot->isVisibleEnemyUnit(this)))
 						{
@@ -13746,7 +13746,7 @@ namespace {
 	{
 		const CvUnitInfo& unitInfo = GC.getUnitInfo(unit->getUnitType());
 		return (unitInfo.getMaxGlobalInstances() > 0 && unitInfo.getMaxGlobalInstances() <= 3)
-			|| (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS) && unit->qualityRank() > 8);
+			|| (GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS) && unit->qualityRank() > 8);
 	}
 }
 
@@ -15454,7 +15454,7 @@ bool CvUnitAI::AI_patrol(bool bIgnoreDanger)
 
 			if (isAnimal())
 			{
-				if (GC.getGame().isOption(GAMEOPTION_DANGEROUS_WILDLIFE))
+				if (GC.getGame().isOption(GAMEOPTION_ANIMAL_DANGEROUS))
 				{
 					if (pAdjacentPlot->isVisibleEnemyUnit(this))
 					{
@@ -20626,10 +20626,7 @@ bool CvUnitAI::AI_improveCity(CvCity* pCity)
 					{
 						iPlotMoveCost += GC.getPEAK_EXTRA_MOVEMENT();
 					}
-					else
-					{
-						iPlotMoveCost += 1;
-					}
+					iPlotMoveCost += 3;
 				}
 
 				if (iPlotMoveCost > 1)
@@ -20754,7 +20751,7 @@ bool CvUnitAI::AI_improveLocalPlot(int iRange, const CvCity* pIgnoreCity)
 				{
 					iPlotMoveCost += GC.getPEAK_EXTRA_MOVEMENT();
 				}
-				else iPlotMoveCost += 1;
+				iPlotMoveCost += 3;
 			}
 			if (iPlotMoveCost > 1)
 			{
@@ -21365,7 +21362,7 @@ bool CvUnitAI::AI_improveBonus(int iMinValue, CvPlot** ppBestPlot, BuildTypes* p
 											iCountervalue += 10 * pLoopPlot->calculateNatureYield((YieldTypes)iK, getTeam(), eFeature == NO_FEATURE ? true : GC.getBuildInfo(eBestTempBuild).isFeatureRemove(eFeature));
 										}
 									}
-									if (GC.getImprovementInfo(eImprovement).getCulture() > 0 || GC.getImprovementInfo(eImprovement).isActsAsCity())
+									if (GC.getImprovementInfo(eImprovement).isMilitaryStructure())
 									{
 										int iCounterDefenseValue = GC.getImprovementInfo(eImprovement).getAirBombDefense()/10;
 										iCounterDefenseValue += GC.getImprovementInfo(eImprovement).getDefenseModifier()/10;
@@ -22568,7 +22565,7 @@ bool CvUnitAI::AI_pickup(UnitAITypes eUnitAI, bool bCountProduction, int iMaxPat
 						}
 					}
 
-					if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+					if (!GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 					{
 						if (GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pCity->plot(), MISSIONAI_PICKUP, getGroup()) < ((iCount + (getGroup()->getCargoSpace() - 1)) / std::max(1, getGroup()->getCargoSpace())))
 						{
@@ -22657,7 +22654,7 @@ bool CvUnitAI::AI_pickup(UnitAITypes eUnitAI, bool bCountProduction, int iMaxPat
 						if (!(pLoopCity->plot()->isVisibleEnemyUnit(this)))
 						{
 							bool bCheck = false;
-							if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+							if (GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 							{
 								bCheck = (GET_PLAYER(getOwner()).AI_plotTargetMissionAIsinCargoVolume(pLoopCity->plot(), MISSIONAI_PICKUP, getGroup()) < (((iCount * 100) + (getGroup()->getCargoSpace() - 100)) / std::max(1, getGroup()->getCargoSpace())));
 							}
@@ -22751,7 +22748,7 @@ bool CvUnitAI::AI_pickupStranded(UnitAITypes eUnitAI, int iMaxPath)
 		return false;
 	}
 
-	const bool bSM = GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS);
+	const bool bSM = GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS);
 
 	const CvPlayerAI& player = GET_PLAYER(getOwner());
 
@@ -23351,7 +23348,7 @@ bool CvUnitAI::AI_airCarrier()
 				iValue += 20;
 			}
 
-			if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+			if (GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 			{
 				iValue /= (unitX->SMgetCargo() + GC.getGame().getBaseAirUnitIncrementsbyCargoVolume()) / GC.getGame().getBaseAirUnitIncrementsbyCargoVolume();
 			}
@@ -23384,7 +23381,7 @@ bool CvUnitAI::AI_missileLoad(UnitAITypes eTargetUnitAI, int iMaxOwnUnitAI, bool
 	CvUnit* pBestUnit = NULL;
 	int iBestValue = 0;
 
-	const bool bSM = GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS);
+	const bool bSM = GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS);
 	const int iCargoValueFactorSM =
 		(
 			bSM ? GC.getGame().getBaseMissileUnitIncrementsbyCargoVolume() : 0
@@ -24691,7 +24688,7 @@ bool CvUnitAI::AI_moveToStagingCity()
 						// Attraction to cities which are serving as launch/pickup points
 						iValue += 3 * pLoopCity->plot()->plotCount(PUF_isUnitAIType, UNITAI_ASSAULT_SEA, -1, NULL, getOwner());
 						iValue += 2 * pLoopCity->plot()->plotCount(PUF_isUnitAIType, UNITAI_ESCORT_SEA, -1, NULL, getOwner());
-						if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+						if (!GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 						{
 							iValue += 5 * GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pLoopCity->plot(), MISSIONAI_PICKUP);
 						}
@@ -26458,12 +26455,8 @@ BuildTypes CvUnitAI::AI_findBestFort(const CvPlot* pPlot) const
 		if (GC.getBuildInfo(eBuild).getImprovement() != NO_IMPROVEMENT)
 		{
 			const CvImprovementInfo& kImprovement = GC.getImprovementInfo(GC.getBuildInfo(eBuild).getImprovement());
-			// Is fort or tower
-			if ((kImprovement.isActsAsCity() || kImprovement.getVisibilityChange() > 0)
-			&& canBuild(pPlot, eBuild)
-			// If not (plot in workable radius of any city and is tower line improvement); 'plot in workable radius of owned city' might be better?
-			// Toffer - The next condition seems iffy considering the above comment about it...
-			&& (!pPlot->isCityRadius() || kImprovement.isActsAsCity()))
+			// Watchtower can claim land if fort can't
+			if (kImprovement.isMilitaryStructure() && canBuild(pPlot, eBuild))
 			{
 				int iValue =
 					(
@@ -26721,7 +26714,7 @@ bool CvUnitAI::AI_hurryFood()
 
 bool CvUnitAI::AI_command()
 {
-	if (!GC.getGame().isOption(GAMEOPTION_GREAT_COMMANDERS))
+	if (!GC.getGame().isOption(GAMEOPTION_UNIT_GREAT_COMMANDERS))
 	{
 		return false;
 	}
@@ -28684,7 +28677,7 @@ bool CvUnitAI::AI_foundReligion()
 	int iProphetCount = GET_PLAYER(getOwner()).AI_getNumAIUnits(UNITAI_PROPHET);
 
 	const ReligionTypes eFavorite = (ReligionTypes)GC.getLeaderHeadInfo(GET_PLAYER(getOwner()).getLeaderType()).getFavoriteReligion();
-	if (GC.getGame().isOption(GAMEOPTION_DIVINE_PROPHETS))
+	if (GC.getGame().isOption(GAMEOPTION_RELIGION_DIVINE_PROPHETS))
 	{
 		if (eFavorite != NO_RELIGION && !GC.getGame().isReligionFounded(eFavorite))
 		{
@@ -28711,7 +28704,7 @@ bool CvUnitAI::AI_foundReligion()
 		eBestReligion = NO_RELIGION;
 
 		//go over all religions that can be founded:
-		if (!GC.getGame().isOption(GAMEOPTION_LIMITED_RELIGIONS))
+		if (!GC.getGame().isOption(GAMEOPTION_RELIGION_LIMITED))
 		{
 			for (iI = 0; iI < GC.getNumReligionInfos(); iI++)
 			{
@@ -28741,7 +28734,7 @@ bool CvUnitAI::AI_foundReligion()
 			}
 		}
 
-		if (GC.getGame().isOption(GAMEOPTION_LIMITED_RELIGIONS) && GC.getGame().isReligionFounded(eFavorite))
+		if (GC.getGame().isOption(GAMEOPTION_RELIGION_LIMITED) && GC.getGame().isReligionFounded(eFavorite))
 		{
 			for (iI = 0; iI < GC.getNumReligionInfos(); iI++)
 			{

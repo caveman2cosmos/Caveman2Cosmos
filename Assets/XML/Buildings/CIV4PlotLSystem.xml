@@ -396,7 +396,7 @@
 		</ArtRef>
 		<!-- 1x1 GENERIC ANCIENT -->
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_eu_farm02.nif</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -405,7 +405,7 @@
 			<Scale>0.55</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_eu_farm03.nif</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -414,7 +414,7 @@
 			<Scale>0.7</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_eu.nif::2x2_01</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -423,7 +423,7 @@
 			<Scale>0.25</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_GRECO_ROMAN,ARTSTYLE_IBERIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_eu.nif::1x1_01</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -432,7 +432,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_GRECO_ROMAN,ARTSTYLE_IBERIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_eu.nif::1x1_02</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -441,7 +441,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_eu.nif::1x1_03</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -450,7 +450,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_eu.nif::1x1_04</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -459,7 +459,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_GRECO_ROMAN,ARTSTYLE_IBERIA,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_eu.nif::1x1_05</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -468,7 +468,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_GRECO_ROMAN,ARTSTYLE_IBERIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_eu.nif::1x1_06</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -477,7 +477,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_eu.nif::1x1_07</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_GRECO_ROMAN,ARTSTYLE_IBERIA</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -486,7 +486,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_eu.nif::1x1_08</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -495,7 +495,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_eu.nif::1x1_09</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_GRECO_ROMAN,ARTSTYLE_IBERIA</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -551,7 +551,7 @@
 		</ArtRef>
 		<!-- 1x1 AFRO ANCIENT/CLASSICAL -->
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_africa.nif::1x1x1_01</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -560,7 +560,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_africa.nif::1x1x1_02</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -569,7 +569,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_africa.nif::1x1x2_01</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -578,7 +578,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_africa.nif::1x1x2_02</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -587,7 +587,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_africa.nif::1x1x2_03</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -643,7 +643,7 @@
 		</ArtRef>
 		<!-- 1x1 ARAB ANCIENT/CLASSICAL -->
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_arabia.nif::1x1x1_01</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -652,7 +652,7 @@
 			<Scale>0.26</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_arabia.nif::1x1x1_02</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -661,7 +661,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_arabia.nif::1x1x2_01</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -670,7 +670,7 @@
 			<Scale>0.26</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_arabia.nif::1x1x2_02</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -679,7 +679,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_arabia.nif::1x1x1_01</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -688,7 +688,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_arabia.nif::1x1x2_01</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -982,7 +982,7 @@
 		</ArtRef>
 		<!-- 1x1 SOUTH_EAST_ASIAN ANCIENT/CLASSICAL/MEDIEVAL -->
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_EAST_ASIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_asia.nif::1x1_01</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -1000,7 +1000,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_EAST_ASIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_asia.nif::1x1_03</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -1018,7 +1018,7 @@
 			<Scale>0.3</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_EAST_ASIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_asia.nif::1x1_05</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -1092,7 +1092,7 @@
 		</ArtRef>
 		<!-- 1x1 EGYPT ANCIENT/CLASSICAL/MEDIEVAL -->
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_EGYPT</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_egypt.nif::1x1_05</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -1101,7 +1101,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_EGYPT</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_egypt.nif::1x1_06</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -1110,7 +1110,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_EGYPT</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_egypt.nif::1x1x1_01</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -1119,7 +1119,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_EGYPT</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_egypt.nif::1x1x1_02</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -1128,7 +1128,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_EGYPT</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_egypt.nif::1x1x2_01</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -1137,7 +1137,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_EGYPT</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_egypt.nif::1x1x2_02</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -1156,7 +1156,7 @@
 		</ArtRef>
 		<!-- 1x1 CRESCENT ANCIENT/CLASSICAL/MEDIEVAL -->
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_CRESCENT</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_egypt.nif::1x1_01</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -1165,7 +1165,7 @@
 			<Scale>0.31</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_CRESCENT</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_egypt.nif::1x1_02</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -1174,7 +1174,7 @@
 			<Scale>0.31</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_CRESCENT</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_egypt.nif::1x1_03</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -1183,7 +1183,7 @@
 			<Scale>0.31</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_CRESCENT</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_egypt.nif::1x1_04</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -1192,7 +1192,7 @@
 			<Scale>0.31</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_CRESCENT</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_egypt.nif::1x1_05</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -1201,7 +1201,7 @@
 			<Scale>0.31</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_CRESCENT</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_egypt.nif::1x1_06</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -1210,7 +1210,7 @@
 			<Scale>0.31</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_CRESCENT</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_egypt.nif::1x1_07</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -1219,7 +1219,7 @@
 			<Scale>0.31</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_egypt.nif::1x1_08</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_CRESCENT</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -1228,7 +1228,7 @@
 			<Scale>0.31</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_egypt.nif::1x1_09</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_CRESCENT</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -1977,7 +1977,7 @@
 		</ArtRef>
 		<!-- 1x1 NORSE ANCIENT/CLASSICAL/MEDIEVAL -->
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_NORSE,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/clas_norsca.nif::1x1x1_01</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -1986,7 +1986,7 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_NORSE,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/clas_norsca.nif::1x1x1_02</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -2013,7 +2013,7 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_NORSE,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/clas_norsca.nif::1x1x2_03</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -2023,7 +2023,7 @@
 		</ArtRef>
 		<!-- 1x1 RUSSIAN ANCIENT/CLASSICAL -->
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/clas_norsca.nif::1x1x1_01</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -2032,7 +2032,7 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/clas_norsca.nif::1x1x1_02</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -2059,7 +2059,7 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/clas_norsca.nif::1x1x2_03</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -2226,7 +2226,7 @@
 		</ArtRef>
 		<!-- 1x1 INDIAN ANCIENT/CLASSICAL -->
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_INDIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_egypt.nif::1x1_01</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -2235,7 +2235,7 @@
 			<Scale>0.31</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_INDIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_egypt.nif::1x1_02</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -2244,7 +2244,7 @@
 			<Scale>0.31</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_INDIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_egypt.nif::1x1_03</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -2253,7 +2253,7 @@
 			<Scale>0.31</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_INDIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_egypt.nif::1x1_04</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -2262,7 +2262,7 @@
 			<Scale>0.31</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_INDIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_egypt.nif::1x1_05</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -2271,7 +2271,7 @@
 			<Scale>0.31</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_INDIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_egypt.nif::1x1_06</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -2280,7 +2280,7 @@
 			<Scale>0.31</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_INDIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_egypt.nif::1x1_07</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -2289,7 +2289,7 @@
 			<Scale>0.31</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_egypt.nif::1x1_08</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_INDIA</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -2298,7 +2298,7 @@
 			<Scale>0.31</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_egypt.nif::1x1_09</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_INDIA</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -2483,7 +2483,7 @@
 		</ArtRef>
 		<!-- 1x1 INCA/PACIFIC ANCIENT/CLASSICAL -->
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_AMERICA,ARTSTYLE_SOUTH_PACIFIC</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_South_America.nif::1x1_03</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -2492,7 +2492,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_AMERICA,ARTSTYLE_SOUTH_PACIFIC</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_South_America.nif::1x1_04</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -2501,7 +2501,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_AMERICA,ARTSTYLE_SOUTH_PACIFIC</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_South_America.nif::1x2_03</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -2566,7 +2566,7 @@
 		</ArtRef>
 		<!-- 1x1 MESO ANCIENT/CLASSICAL -->
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_MESO_AMERICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_Meso_America.nif::1x1_01</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -2576,7 +2576,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_MESO_AMERICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_Meso_America.nif::1x1_02</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -2586,7 +2586,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_MESO_AMERICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_Meso_America.nif::1x1_03</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -2596,7 +2596,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_MESO_AMERICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_Meso_America.nif::1x1_04</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -2745,7 +2745,7 @@
 		</ArtRef>
 		<!-- 1x1 NATIVE ANCIENT/CLASSICAL -->
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_NATIVE_AMERICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_Native_American.nif::1x1_01</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -2754,7 +2754,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_NATIVE_AMERICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_Native_American.nif::1x1_02</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -2763,7 +2763,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="art:building">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_NATIVE_AMERICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_Native_American.nif::1x1_04</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
@@ -2915,7 +2915,7 @@
 		<Height>1</Height>
 		<!--Ancient Land Worked -->
 		<ArtRef Name="goal:IMPROVEMENT_LAND_WORKED">
-			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL,C2C_ERA_RENAISSANCE</Attribute>
+			<Attribute Class="Era">C2C_ERA_PREHISTORIC,C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL,C2C_ERA_RENAISSANCE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/LandWorked/sm_farm_house.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/LandWorked/sm_farm_house.kfm</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_LAND_WORKED</Attribute>

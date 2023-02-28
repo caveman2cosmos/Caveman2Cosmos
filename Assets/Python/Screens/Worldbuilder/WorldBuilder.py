@@ -1117,7 +1117,7 @@ class WorldBuilder:
 
 	def RevealCurrentPlot(self, bReveal, pPlot):
 		if self.iPlayerAddMode == "Blockade": return
-		iType = GC.getInfoTypeForStringWithHiddenAssert(self.iPlayerAddMode)
+		iType = GC.getInfoTypeForString(self.iPlayerAddMode)
 		if iType == -1:
 			if bReveal or (not pPlot.isVisible(self.m_iCurrentTeam, False)):
 				pPlot.setRevealed(self.m_iCurrentTeam, bReveal, False, -1)

@@ -65,6 +65,7 @@ typedef enum
 	REMAPPED_CLASS_TYPE_COMMERCES,
 	REMAPPED_CLASS_TYPE_DOMAINS,
 	REMAPPED_CLASS_TYPE_CATEGORIES,
+	REMAPPED_CLASS_TYPE_MAPS,
 
 	NUM_REMAPPED_TYPES
 } RemappedClassType;
@@ -90,6 +91,10 @@ typedef enum
 	SAVE_VALUE_TYPE_UNSIGNED_LONG,
 	SAVE_VALUE_TYPE_LONG_ARRAY,
 	SAVE_VALUE_TYPE_UNSIGNED_LONG_ARRAY,
+	SAVE_VALUE_TYPE_LONG_LONG,
+	SAVE_VALUE_TYPE_UNSIGNED_LONG_LONG,
+	SAVE_VALUE_TYPE_LONG_LONG_ARRAY,
+	SAVE_VALUE_TYPE_UNSIGNED_LONG_LONG_ARRAY,
 	SAVE_VALUE_TYPE_FLOAT,
 	SAVE_VALUE_TYPE_FLOAT_ARRAY,
 	SAVE_VALUE_TYPE_DOUBLE,
@@ -183,6 +188,11 @@ public:
 	void 		Write(const char* name, int& idHint, int& idSeq, int count, const long values[]);
 	void		Write(const char* name, int& idHint, int& idSeq, int count, const unsigned long values[]) ;
 
+	void		Write(const char* name, int& idHint, int& idSeq, int64_t value);
+	void		Write(const char* name, int& idHint, int& idSeq, uint64_t value);
+	void 		Write(const char* name, int& idHint, int& idSeq, int count, const int64_t values[]);
+	void		Write(const char* name, int& idHint, int& idSeq, int count, const uint64_t values[]);
+
 	void		Write(const char* name, int& idHint, int& idSeq, float value);
 	void		Write(const char* name, int& idHint, int& idSeq, int count, const float values[]);
 
@@ -241,6 +251,11 @@ public:
 	void Read(const char* name, unsigned long* l);
 	void Read(const char* name, int count, long values[]);
 	void Read(const char* name, int count, unsigned long values[]);
+
+	void Read(const char* name, int64_t* ll);
+	void Read(const char* name, uint64_t* ll);
+	void Read(const char* name, int count, int64_t values[]);
+	void Read(const char* name, int count, uint64_t values[]);
 
 	void Read(const char* name, float* value);
 	void Read(const char* name, int count, float values[]);

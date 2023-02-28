@@ -2,7 +2,7 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_MYTHS_LEGENDS_STORIES</Tag>
-		<English>Folklore</English>
+		<English>1. Folklore</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_MYTHS_LEGENDS_STORIES_PEDIA</Tag>
@@ -10,12 +10,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_SUBDUED_ANIMALS</Tag>
-		<English>Subdued animals</English>
-		<French>Animaux apprivoisés</French>
-		<German>Gefangene Tiere</German>
-		<Italian>Animali addomesticati</Italian>
-		<Polish>Poskromione zwierzęta</Polish>
-		<Russian>Ïðèðó÷åííûå æèâîòíûå</Russian>
+		<English>1. Subdued animals</English>
+		<French>1. Animaux apprivoisés</French>
+		<German>1. Gefangene Tiere</German>
+		<Italian>1. Animali addomesticati</Italian>
+		<Polish>1. Poskromione zwierzęta</Polish>
+		<Russian>1. Ïðèðó÷åííûå æèâîòíûå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Tag>

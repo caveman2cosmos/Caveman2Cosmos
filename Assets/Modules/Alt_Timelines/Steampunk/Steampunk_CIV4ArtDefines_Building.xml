@@ -6,7 +6,7 @@
 <Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\Xml\Schema\Caveman2Cosmos.xsd">
 	<BuildingArtInfos>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_STEAMPUNK_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_STEAMPUNK</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -26,7 +26,7 @@
 			<Button>art/computing_engine_button.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TR_WORKSHOP</Type>
+			<Type>ART_DEF_BUILDING_TRACTION_ENGINE_WORKSHOP</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -46,7 +46,7 @@
 			<Button>art/panopticonprison.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MADSCIENTIST_CASTLE</Type>
+			<Type>ART_DEF_BUILDING_MAD_SCIENTISTS_CASTLE</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -56,7 +56,7 @@
 			<Button>art/madscientistcastle.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_COAL_DYNAMO</Type>
+			<Type>ART_DEF_BUILDING_COAL_FIRED_DYNAMO</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -66,7 +66,7 @@
 			<Button>art/coaldynamo.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_WOOD_DYNAMO</Type>
+			<Type>ART_DEF_BUILDING_WOOD_FIRED_DYNAMO</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -76,7 +76,7 @@
 			<Button>art/wooddynamo.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PEAT_DYNAMO</Type>
+			<Type>ART_DEF_BUILDING_PEAT_FIRED_DYNAMO</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -86,7 +86,7 @@
 			<Button>art/peatdynamo.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_NEMO_ACADEMY</Type>
+			<Type>ART_DEF_BUILDING_NEMOS_NAVAL_ACADEMY</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>

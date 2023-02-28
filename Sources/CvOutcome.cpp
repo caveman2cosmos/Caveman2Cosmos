@@ -1027,7 +1027,7 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 		||
 		m_eUnitType > NO_UNIT
 		&&
-		GC.getGame().isOption(GAMEOPTION_TELEPORT_HUNTING_AWARDS)
+		GC.getGame().isOption(GAMEOPTION_ANIMAL_TELEPORT_AWARDS)
 		&& (
 			GC.getUnitInfo(m_eUnitType).hasUnitCombat(GC.getUNITCOMBAT_SUBDUED())
 			||
@@ -1702,7 +1702,7 @@ void CvOutcome::buildDisplayString(CvWStringBuffer &szBuffer, const CvUnit& kUni
 	}
 
 	bool bUnitToCity = getUnitToCity(kUnit);
-	if (GC.getGame().isOption(GAMEOPTION_TELEPORT_HUNTING_AWARDS) &&
+	if (GC.getGame().isOption(GAMEOPTION_ANIMAL_TELEPORT_AWARDS) &&
 		m_eUnitType > NO_UNIT &&
 		(GC.getUnitInfo(m_eUnitType).hasUnitCombat(GC.getUNITCOMBAT_SUBDUED()) ||
 		GC.getUnitInfo(m_eUnitType).hasUnitCombat(GC.getUNITCOMBAT_IDEA())))

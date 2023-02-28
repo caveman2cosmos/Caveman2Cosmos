@@ -48,14 +48,14 @@
 			<iPrereqPopulation>7</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DIESELPUNK_EMBASSY</Type>
+			<Type>BUILDING_CULTURE_DIESELPUNK</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_DIESEL</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_DIESELPUNK_EMBASSY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DIESELPUNK_EMBASSY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CULTURE_DIESELPUNK</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CULTURE_DIESELPUNK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DIESELPUNK_EMBASSY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_DIESELPUNK</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -106,12 +106,12 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FARNSWORTH_LAB</Type>
+			<Type>BUILDING_FARNSWORTH_ELECTRONICS_LAB</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_DIESEL</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_FARNSWORTH_LAB</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FARNSWORTH_LAB_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_FARNSWORTH_ELECTRONICS_LAB</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FARNSWORTH_ELECTRONICS_LAB_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_FARNSWORTH_LAB</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_FARNSWORTH_ELECTRONICS_LAB</ArtDefineTag>
 			<PrereqTech>TECH_ELECTRONICS</PrereqTech>
 			<ObsoleteTech>TECH_CLOUD_COMPUTING</ObsoleteTech>
 			<MapCategoryTypes>

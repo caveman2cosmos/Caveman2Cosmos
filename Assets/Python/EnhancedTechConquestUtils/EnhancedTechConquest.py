@@ -148,5 +148,9 @@ class EnhancedTechConquest:
 				else: # Inform the player they didn't get any new technologies
 					szTxt = TRNSLTR.getText("TXT_KEY_ENHANCED_TECH_CONQUEST_FAIL", ()) + " %s" %(city.getName())
 
-				artPath = GC.getCivilizationInfo(CyPlayerO.getCivilizationType()).getButton()
-				CvUtil.sendMessage(szTxt, iOwnerNew, 20, artPath, ColorTypes(12), city.getX(), city.getY(), True, True)
+				CvUtil.sendMessage(
+					szTxt, iOwnerNew, 20,
+					GC.getCivilizationInfo(CyPlayerO.getCivilizationType()).getButton(),
+					ColorTypes(GC.getInfoTypeForString("COLOR_GREEN")),
+					city.getX(), city.getY(), True, True
+				)

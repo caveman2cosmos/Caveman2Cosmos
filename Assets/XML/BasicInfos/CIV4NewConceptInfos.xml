@@ -2,6 +2,22 @@
 <!-- This file contains the C2C game concepts, traits and strategy. -->
 <Civ4NewConceptInfos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Schema\Caveman2Cosmos.xsd">
 	<NewConceptInfos>
+		<!-- Divisors for sections -->
+		<NewConceptInfo>
+			<Type>CONCEPT_C2C_GAMEPLAY</Type>
+			<Description>TXT_KEY_CONCEPT_C2C_GAMEPLAY</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_C2C_GAMEPLAY_PEDIA</Civilopedia>
+		</NewConceptInfo>
+		<NewConceptInfo>
+			<Type>CONCEPT_C2C_GAMEOPTIONS</Type>
+			<Description>TXT_KEY_CONCEPT_C2C_GAMEOPTIONS</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_C2C_GAMEOPTIONS_PEDIA</Civilopedia>
+		</NewConceptInfo>
+		<NewConceptInfo>
+			<Type>CONCEPT_C2C_BUGOPTIONS</Type>
+			<Description>TXT_KEY_CONCEPT_C2C_BUGOPTIONS</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_C2C_BUGOPTIONS_PEDIA</Civilopedia>
+		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_ACTIVE_DEFENSE</Type>
 			<Description>TXT_KEY_CONCEPT_ACTIVE_DEFENSE</Description>
@@ -15,7 +31,7 @@
 		<NewConceptInfo>
 			<Type>CONCEPT_ADVANCED_DIPLOMACY</Type>
 			<Description>TXT_KEY_CONCEPT_ADVDIPLOMACY</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_DIPLOMACY_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_CONCEPT_ADVDIPLOMACY_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_ADVANCED_ESPIONAGE</Type>
@@ -51,11 +67,6 @@
 			<Type>CONCEPT_BUG_GREAT_PERSON_PROGRESS_BAR</Type>
 			<Description>TXT_KEY_CONCEPT_BUG_GREAT_PERSON_PROGRESS_BAR</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_BUG_GREAT_PERSON_PROGRESS_BAR_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
-			<Type>CONCEPT_BUG_GREAT_PERSON_TECH_PREFERENCIES</Type>
-			<Description>TXT_KEY_CONCEPT_BUG_GREAT_PERSON_TECH_PREFERENCIES</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_BUG_GREAT_PERSON_TECH_PREFERENCIES_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_BUG_IMPROVED_GLANCE_TAB</Type>
@@ -98,6 +109,11 @@
 			<Civilopedia>TXT_KEY_CONCEPT_C2C_TERRAINS_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
+			<Type>CONCEPT_C2C_CULTURE</Type>
+			<Description>TXT_KEY_CONCEPT_C2C_CULTURE</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_C2C_CULTURE_PEDIA</Civilopedia>
+		</NewConceptInfo>
+		<NewConceptInfo>
 			<Type>CONCEPT_CASTLE_IMPROVEMENTS</Type>
 			<Description>TXT_KEY_CONCEPT_CASTLE_IMPROVEMENTS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_CASTLE_IMPROVEMENTS_PEDIA</Civilopedia>
@@ -106,6 +122,11 @@
 			<Type>CONCEPT_CRIME</Type>
 			<Description>TXT_KEY_CONCEPT_CRIME</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_CRIME_PEDIA</Civilopedia>
+		</NewConceptInfo>
+		<NewConceptInfo>
+			<Type>CONCEPT_DEVELOPING_LEADERS</Type>
+			<Description>TXT_KEY_CONCEPT_DEVELOPING_LEADERS</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_DEVELOPING_LEADERS_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_DYNAMIC_EXPERIENCE</Type>
@@ -183,6 +204,11 @@
 			<Civilopedia>TXT_KEY_CONCEPT_MYTHS_LEGENDS_STORIES_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
+			<Type>CONCEPT_NATURAL_WONDERS</Type>
+			<Description>TXT_KEY_NATURAL_WONDERS</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_NATURAL_WONDERS_PEDIA</Civilopedia>
+		</NewConceptInfo>
+		<NewConceptInfo>
 			<Type>CONCEPT_OCCASIONAL_PROMOTIONS</Type>
 			<Description>TXT_KEY_CONCEPT_OCCASIONAL_PROMOTIONS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_OCCASIONAL_PROMOTIONS_PEDIA</Civilopedia>
@@ -203,6 +229,11 @@
 			<Civilopedia>TXT_KEY_CONCEPT_POLLUTION_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
+			<Type>CONCEPT_PROPERTIES</Type>
+			<Description>TXT_KEY_CONCEPT_PROPERTIES</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_PROPERTIES_PEDIA</Civilopedia>
+		</NewConceptInfo>
+		<NewConceptInfo>
 			<Type>CONCEPT_RBOMBARD</Type>
 			<Description>TXT_KEY_CONCEPT_RBOMBARD</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_RBOMBARD_PEDIA</Civilopedia>
@@ -213,9 +244,9 @@
 			<Civilopedia>TXT_KEY_CONCEPT_REALISTIC_CORPORATIONS_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
-			<Type>CONCEPT_REALISTIC_CULTURES_SPREAD</Type>
-			<Description>TXT_KEY_CONCEPT_REALISTIC_CULTURES_SPREAD</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_REALISTIC_CULTURES_SPREAD_PEDIA</Civilopedia>
+			<Type>CONCEPT_REALISTIC_CULTURE_SPREAD</Type>
+			<Description>TXT_KEY_CONCEPT_REALISTIC_CULTURE_SPREAD</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_REALISTIC_CULTURE_SPREAD_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_REVDCM</Type>
@@ -292,31 +323,31 @@
 			<Description>TXT_KEY_CONCEPT_ROM_MAPSCRIPTS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ROM_MAPSCRIPTS_PEDIA</Civilopedia>
 		</NewConceptInfo>
-		<NewConceptInfo>
+		<!-- <NewConceptInfo>
 			<Type>CONCEPT_ROM_MODULES_CIV_SPECIFIC_UNITARSTYLES</Type>
 			<Description>TXT_KEY_CONCEPT_ROM_MODULES_CIV_SPECIFIC_UNITARTSTYLES</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ROM_MODULES_CIV_SPECIFIC_UNITARTSTYLES_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
+		</NewConceptInfo> -->
+		<!-- <NewConceptInfo>
 			<Type>CONCEPT_ROM_MODULE_HOLY_WARS</Type>
 			<Description>TXT_KEY_CONCEPT_ROM_MODULE_HOLY_WARS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ROM_MODULE_HOLY_WARS_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
+		</NewConceptInfo> -->
+		<!-- <NewConceptInfo>
 			<Type>CONCEPT_ROM_MODULE_STATIC_LH</Type>
 			<Description>TXT_KEY_CONCEPT_ROM_MODULE_STATIC_LH</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ROM_MODULE_STATIC_LH_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
+		</NewConceptInfo> -->
+		<!-- <NewConceptInfo>
 			<Type>CONCEPT_ROM_MODULE_UN_FORCES</Type>
 			<Description>TXT_KEY_CONCEPT_ROM_MODULE_UN_FORCES</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ROM_MODULE_UN_FORCES_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
+		</NewConceptInfo> -->
+		<!-- <NewConceptInfo>
 			<Type>CONCEPT_ROM_NO_BUILDING_GRAPHICS</Type>
 			<Description>TXT_KEY_CONCEPT_ROM_NO_BUILDING_GRAPHICS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ROM_NO_BUILDING_GRAPHICS_PEDIA</Civilopedia>
-		</NewConceptInfo>
+		</NewConceptInfo> -->
 		<NewConceptInfo>
 			<Type>CONCEPT_ROM_RELIGION</Type>
 			<Description>TXT_KEY_CONCEPT_ROM_RELIGION</Description>
@@ -367,11 +398,11 @@
 			<Description>TXT_KEY_CONCEPT_SEA_TUNNELS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SEA_TUNNELS_PEDIA</Civilopedia>
 		</NewConceptInfo>
-		<NewConceptInfo>
+		<!-- <NewConceptInfo>
 			<Type>CONCEPT_STACK_ATTACK</Type>
 			<Description>TXT_KEY_CONCEPT_STACK_ATTACK</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_STACK_ATTACK_PEDIA</Civilopedia>
-		</NewConceptInfo>
+		</NewConceptInfo> -->
 		<NewConceptInfo>
 			<Type>CONCEPT_SUBDUED_ANIMALS</Type>
 			<Description>TXT_KEY_CONCEPT_SUBDUED_ANIMALS</Description>
@@ -695,9 +726,14 @@
 			<Civilopedia>TXT_KEY_STRATEGY_WORLD_WAR_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
-			<Type>CONCEPT_NATURAL_WONDERS</Type>
-			<Description>TXT_KEY_NATURAL_WONDERS</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_NATURAL_WONDERS_PEDIA</Civilopedia>
+			<Type>CONCEPT_EQUILIBRIUM_CULTURE</Type>
+			<Description>TXT_KEY_CONCEPT_EQUILIBRIUM_CULTURE</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_EQUILIBRIUM_CULTURE_PEDIA</Civilopedia>
+		</NewConceptInfo>
+		<NewConceptInfo>
+			<Type>CONCEPT_1_CITY_TILE_FOUNDING</Type>
+			<Description>TXT_KEY_CONCEPT_1_CITY_TILE_FOUNDING</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_1_CITY_TILE_FOUNDING_PEDIA</Civilopedia>
 		</NewConceptInfo>
 	</NewConceptInfos>
 </Civ4NewConceptInfos>
