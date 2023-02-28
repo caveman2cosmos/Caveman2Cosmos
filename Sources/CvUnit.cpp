@@ -9006,7 +9006,7 @@ bool CvUnit::canPillage(const CvPlot* pPlot) const
 }
 
 
-bool CvUnit::pillage()
+bool CvUnit::pillage(const bool bAutoPillage)
 {
 	CvPlot* pPlot = plot();
 
@@ -9183,7 +9183,7 @@ bool CvUnit::pillage()
 		}
 		pPlot->setImprovementType(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage());
 	}
-	else if (pPlot->isRoute())
+	else if (pPlot->isRoute() && !bAutoPillage)
 	{
 		eTempRoute = pPlot->getRouteType();
 		pPlot->setRouteType(NO_ROUTE, true); // XXX downgrade rail???
@@ -9211,7 +9211,7 @@ bool CvUnit::pillage()
 	}
 	changeMoves(GC.getMOVE_DENOMINATOR());
 
-	if (GC.getGame().isModderGameOption(MODDERGAMEOPTION_IMPROVED_XP) && !pPlot->isRoute())
+	if (GC.getGame().isModderGameOption(MODDERGAMEOPTION_IMPROVED_XP))
 	{
 		setExperience100(getExperience100() + 10 + GC.getGame().getSorenRandNum(21, "Random Min XP"));
 	}
@@ -15874,104 +15874,12 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 			gDLL->getInterfaceIFace()->setDirty(PlotListButtons_DIRTY_BIT, true);
 		}
 
-		if (isPillageOnMove() && pNewPlot->isOwned()
-		&& GET_PLAYER(pNewPlot->getOwner()).getTeam() != myPlayer.getTeam()
-		&& pNewPlot->getImprovementType() != NO_IMPROVEMENT)
+		// Pillage on move: Only if unowned tile, or at war
+		if (isPillageOnMove() && pNewPlot->getImprovementType() != NO_IMPROVEMENT)
 		{
-			if (atWar(getTeam(), GET_PLAYER(pNewPlot->getOwner()).getTeam()))
+			if (!pNewPlot->isOwned() || atWar(getTeam(), GET_PLAYER(pNewPlot->getOwner()).getTeam()))
 			{
-				int iPillageGold = Cy::call<int>(PYGameModule, "doPillageGold", Cy::Args() << pNewPlot << this);
-
-				if (iPillageGold > 0)
-				{
-					iPillageGold = iPillageGold * getPillageChange() / 100;
-					myPlayer.changeGold(iPillageGold);
-
-					AddDLLMessage(
-						eMyPlayer, true, GC.getEVENT_MESSAGE_TIME(),
-						gDLL->getText("TXT_KEY_MISC_PLUNDERED_GOLD_FROM_IMP", iPillageGold, GC.getImprovementInfo(pNewPlot->getImprovementType()).getTextKeyWide()),
-						"AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pNewPlot->getX(), pNewPlot->getY()
-					);
-					for (int iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
-					{
-						switch (static_cast<CommerceTypes>(iI))
-						{
-							case COMMERCE_GOLD:
-							{
-								if (isPillageMarauder())
-								{
-									myPlayer.changeGold(iPillageGold);
-									pNewPlot->setImprovementType(GC.getImprovementInfo(pNewPlot->getImprovementType()).getImprovementPillage());
-
-									AddDLLMessage(
-										eMyPlayer, true, GC.getEVENT_MESSAGE_TIME(),
-										gDLL->getText("TXT_KEY_MISC_MARAUDERS_PLUNDERED_IMP", iPillageGold, GC.getImprovementInfo(pNewPlot->getImprovementType()).getTextKeyWide()),
-										"AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pNewPlot->getX(), pNewPlot->getY()
-									);
-									AddDLLMessage(
-										pNewPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
-										gDLL->getText("TXT_KEY_MISC_IMP_DESTROYED_BY_MARAUDERS", getVisualCivAdjective(getTeam())),
-										"AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), pNewPlot->getX(), pNewPlot->getY(), true, true
-									);
-								}
-								break;
-							}
-							case COMMERCE_RESEARCH:
-							{
-								if (isPillageResearch())
-								{
-									const int iPillageResearch = iPillageGold;
-									GET_TEAM(myPlayer.getTeam()).changeResearchProgress(myPlayer.getCurrentResearch(), iPillageResearch, eMyPlayer);
-
-									AddDLLMessage(
-										eMyPlayer, true, GC.getEVENT_MESSAGE_TIME(),
-										gDLL->getText(
-											"TXT_KEY_MISC_PLUNDERED_RESEARCH_FROM_IMP",
-											iPillageResearch, GC.getImprovementInfo(pNewPlot->getImprovementType()).getTextKeyWide()
-										),
-										"AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pNewPlot->getX(), pNewPlot->getY()
-									);
-								}
-								break;
-							}
-							case COMMERCE_CULTURE: break;
-							case COMMERCE_ESPIONAGE:
-							{
-								if (isPillageEspionage() && pNewPlot->getTeam() != NO_TEAM)
-								{
-									const int iPillageEspionage = iPillageGold;
-									GET_TEAM(myPlayer.getTeam()).changeEspionagePointsAgainstTeam(pNewPlot->getTeam(), iPillageEspionage);
-
-									AddDLLMessage(
-										eMyPlayer, true, GC.getEVENT_MESSAGE_TIME(),
-										gDLL->getText(
-											"TXT_KEY_MISC_PLUNDERED_ESPIONAGE_FROM_IMP",
-											iPillageEspionage, GC.getImprovementInfo(pNewPlot->getImprovementType()).getTextKeyWide()
-										),
-										"AS2D_PILLAGE", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pNewPlot->getX(), pNewPlot->getY()
-									);
-								}
-								break;
-							}
-						}
-					}
-					if (pNewPlot->isOwned())
-					{
-						AddDLLMessage(
-							pNewPlot->getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText(
-								"TXT_KEY_MISC_IMP_DESTROYED",
-								GC.getImprovementInfo(pNewPlot->getImprovementType()).getTextKeyWide(),
-								getNameKey(), getVisualCivAdjective(pNewPlot->getTeam())
-							),
-							"AS2D_PILLAGED", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), pNewPlot->getX(), pNewPlot->getY(), true, true
-						);
-					}
-				}
-			}
-			if (pNewPlot->getImprovementType() != NO_IMPROVEMENT)
-			{
-				pNewPlot->setImprovementType(GC.getImprovementInfo(pNewPlot->getImprovementType()).getImprovementPillage());
+				pillage(true);
 			}
 		}
 	}
