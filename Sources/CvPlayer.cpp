@@ -18295,12 +18295,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iConscriptCount);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iMaxConscript);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iHighestUnitLevel);
-#ifdef BREAK_SAVES
-		WRAPPER_READ(wrapper, "CvPlayer", (char*)&m_iOverflowResearch);
-#else
-		WRAPPER_READ(wrapper, "CvPlayer", (int*)&m_iOverflowResearch);
-#endif
-		// @SAVEBREAK
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iOverflowResearch);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iNoUnhealthyPopulationCount);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iExpInBorderModifier);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iBuildingOnlyHealthyCount);
@@ -19612,16 +19607,7 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iConscriptCount);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iMaxConscript);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iHighestUnitLevel);
-#ifdef BREAK_SAVES
-		WRAPPER_WRITE(wrapper, "CvPlayer", (const char*)m_iOverflowResearch);
-#else
-		{
-			int64_t iCurrentOverflow = m_iOverflowResearch;
-			m_iOverflowResearch = std::min<int64_t>(m_iOverflowResearch, MAX_INT);
-			WRAPPER_WRITE(wrapper, "CvPlayer", (int)m_iOverflowResearch);
-			m_iOverflowResearch = iCurrentOverflow;
-		}
-#endif
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_iOverflowResearch);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNoUnhealthyPopulationCount);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iExpInBorderModifier);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iBuildingOnlyHealthyCount);
@@ -21167,7 +21153,7 @@ bool CvPlayer::canDoEvent(EventTypes eEvent, const EventTriggeredData& kTriggere
 
 	if (kEvent.getPrereqGameOption() != NO_GAMEOPTION)
 	{
-		if (!GC.getGame().isOption((GameOptionTypes)kEvent.getPrereqGameOption()))
+		if (!(GC.getGame().isOption((GameOptionTypes)kEvent.getPrereqGameOption())))
 		{
 			return false;
 		}
@@ -21394,7 +21380,7 @@ bool CvPlayer::canDoEvent(EventTypes eEvent, const EventTriggeredData& kTriggere
 			return false;
 		}
 
-		const TeamTypes eWorstEnemy = GET_TEAM(GET_PLAYER(kTriggeredData.m_eOtherPlayer).getTeam()).AI_getWorstEnemy();
+		TeamTypes eWorstEnemy = GET_TEAM(GET_PLAYER(kTriggeredData.m_eOtherPlayer).getTeam()).AI_getWorstEnemy();
 		if (NO_TEAM == eWorstEnemy || eWorstEnemy == getTeam())
 		{
 			return false;
@@ -22574,7 +22560,7 @@ void CvPlayer::trigger(const EventTriggeredData& kData)
 	}
 	else
 	{
-		const EventTypes eEvent = AI_chooseEvent(kData.getID());
+		EventTypes eEvent = AI_chooseEvent(kData.getID());
 		if (NO_EVENT != eEvent)
 		{
 			applyEvent(eEvent, kData.getID());
@@ -26637,7 +26623,7 @@ void CvPlayer::changeTerrainYieldChange(TerrainTypes eIndex1, YieldTypes eIndex2
 	}
 }
 
-int64_t CvPlayer::doMultipleResearch(int64_t iOverflow)
+uint64_t CvPlayer::doMultipleResearch(int64_t iOverflow)
 {
 	TechTypes eCurrentTech = getCurrentResearch();
 
@@ -26675,7 +26661,7 @@ int64_t CvPlayer::doMultipleResearch(int64_t iOverflow)
 		}
 		eCurrentTech = getCurrentResearch();
 	}
-	return std::max<int64_t>(0, iOverflow);
+	return std::max<uint64_t>(0, iOverflow);
 }
 
 int CvPlayer::getCivilizationHealth() const

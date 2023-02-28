@@ -1376,7 +1376,7 @@ public:
 	int getEnslavementChance() const;
 	void changeEnslavementChance(int iChange);
 
-	int64_t doMultipleResearch(int64_t iOverflow);
+	uint64_t doMultipleResearch(int64_t iOverflow);
 
 	void acquireFort(CvPlot* pPlot);
 

@@ -17443,7 +17443,7 @@ void CvGameTextMgr::setTechHelp(CvWStringBuffer &szBuffer, TechTypes eTech, bool
 		}
 		else if (GET_TEAM(GC.getGame().getActiveTeam()).isHasTech(eTech))
 		{
-			szTempBuffer.Format(L"\n%d%c", GET_TEAM(GC.getGame().getActiveTeam()).getResearchCost(eTech), GC.getCommerceInfo(COMMERCE_RESEARCH).getChar());
+			szTempBuffer.Format(L"\n%llu%c", GET_TEAM(GC.getGame().getActiveTeam()).getResearchCost(eTech), GC.getCommerceInfo(COMMERCE_RESEARCH).getChar());
 			szBuffer.append(szTempBuffer);
 		}
 		else
@@ -17451,7 +17451,7 @@ void CvGameTextMgr::setTechHelp(CvWStringBuffer &szBuffer, TechTypes eTech, bool
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_NUM_TURNS", playerAct->getResearchTurnsLeft(eTech, (gDLL->ctrlKey() || !(gDLL->shiftKey())))));
 
-			szTempBuffer.Format(L" (%d/%llu %c)", (int)GET_TEAM(GC.getGame().getActiveTeam()).getResearchProgress(eTech), GET_TEAM(GC.getGame().getActiveTeam()).getResearchCost(eTech), GC.getCommerceInfo(COMMERCE_RESEARCH).getChar());
+			szTempBuffer.Format(L" (%llu/%llu %c)", GET_TEAM(GC.getGame().getActiveTeam()).getResearchProgress(eTech), GET_TEAM(GC.getGame().getActiveTeam()).getResearchCost(eTech), GC.getCommerceInfo(COMMERCE_RESEARCH).getChar());
 			szBuffer.append(szTempBuffer);
 		}
 	}

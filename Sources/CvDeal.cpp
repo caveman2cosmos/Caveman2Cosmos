@@ -71,7 +71,7 @@ void CvDeal::kill(bool bKillTeam)
 	{
 		CvWString szString;
 		CvWStringBuffer szDealString;
-		const CvWString szCancelString = gDLL->getText("TXT_KEY_POPUP_DEAL_CANCEL");
+		CvWString szCancelString = gDLL->getText("TXT_KEY_POPUP_DEAL_CANCEL");
 
 		if (GET_TEAM(GET_PLAYER(getFirstPlayer()).getTeam()).isHasMet(GET_PLAYER(getSecondPlayer()).getTeam()))
 		{
