@@ -68,7 +68,6 @@ bool*	CvUnit::g_pabTempValidBuildUp = NULL;
 int*	CvUnit::g_paiTempExtraUnitCombatModifier = NULL;
 bool*	CvUnit::g_pabTempHasPromotion = NULL;
 bool*	CvUnit::g_pabTempHasUnitCombat = NULL;
-int*	CvUnit::g_paiTempOngoingTrainingCount = NULL;
 int*	CvUnit::g_paiTempExtraFlankingStrengthbyUnitCombatType = NULL;
 int*	CvUnit::g_paiTempExtraWithdrawVSUnitCombatType = NULL;
 int*	CvUnit::g_paiTempExtraPursuitVSUnitCombatType = NULL;
@@ -181,7 +180,6 @@ m_Properties(this)
 		g_paiTempExtraUnitCombatModifier = new int[GC.getNumUnitCombatInfos()];
 		g_pabTempHasPromotion = new bool[GC.getNumPromotionInfos()];
 		g_pabTempHasUnitCombat = new bool[GC.getNumUnitCombatInfos()];
-		g_paiTempOngoingTrainingCount = new int[GC.getNumUnitCombatInfos()]();
 		g_paiTempExtraFlankingStrengthbyUnitCombatType = new int[GC.getNumUnitCombatInfos()];
 		g_paiTempExtraWithdrawVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
 		g_paiTempExtraPursuitVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
@@ -23094,7 +23092,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 
 	for (int iI = GC.getNumUnitCombatInfos() - 1; iI > -1; iI--)
 	{
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempOngoingTrainingCount[iI], "ongoingTrainingCount");
 		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempHealUnitCombatTypeVolume[iI], "healUnitCombatTypeVolume");
 		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempHealUnitCombatTypeAdjacentVolume[iI], "healUnitCombatTypeAdjacentVolume");
 		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempTrapImmunityUnitCombatCount[iI], "trapImmunityUnitCombatCount");
@@ -23103,8 +23100,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraTrapAvoidanceUnitCombatType[iI], "extraTrapAvoidanceUnitCombatType");
 		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraTrapTriggerUnitCombatType[iI], "extraTrapTriggerUnitCombatType");
 
-		if (g_paiTempOngoingTrainingCount[iI] != 0
-		||  g_paiTempHealUnitCombatTypeVolume[iI] != 0
+		if (g_paiTempHealUnitCombatTypeVolume[iI] != 0
 		||  g_paiTempHealUnitCombatTypeAdjacentVolume[iI] != 0
 		||  g_paiTempTrapImmunityUnitCombatCount[iI] != 0
 		||  g_paiTempTargetUnitCombatCount[iI] != 0
@@ -23114,7 +23110,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 		{
 			UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)iI);
 
-			info->m_iOngoingTrainingCount = g_paiTempOngoingTrainingCount[iI];
 			info->m_iHealUnitCombatTypeVolume = g_paiTempHealUnitCombatTypeVolume[iI];
 			info->m_iHealUnitCombatTypeAdjacentVolume = g_paiTempHealUnitCombatTypeAdjacentVolume[iI];
 			info->m_iTrapImmunityUnitCombatCount = g_paiTempTrapImmunityUnitCombatCount[iI];
@@ -23998,7 +23993,6 @@ void CvUnit::write(FDataStreamBase* pStream)
 	{
 		const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(static_cast<UnitCombatTypes>(iI));
 
-		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info ? info->m_iOngoingTrainingCount : 0, "ongoingTrainingCount");
 		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info ? info->m_iHealUnitCombatTypeVolume : 0, "healUnitCombatTypeVolume");
 		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info ? info->m_iHealUnitCombatTypeAdjacentVolume : 0, "healUnitCombatTypeAdjacentVolume");
 		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info ? info->m_iTrapImmunityUnitCombatCount : 0, "trapImmunityUnitCombatCount");
@@ -31300,41 +31294,7 @@ void CvUnit::ClearSupports()
 		dflIIUnit.reset();
 	}
 }
-
 #endif // #ifdef STRENGTH_IN_NUMBERS
-
-int CvUnit::getOngoingTrainingCount(UnitCombatTypes eUnitCombatType) const
-{
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombatType);
-
-	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eUnitCombatType);
-
-	return info ? info->m_iOngoingTrainingCount : 0;
-}
-
-void CvUnit::changeOngoingTrainingCount(UnitCombatTypes eUnitCombatType, int iChange)
-{
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombatType);
-
-	if (iChange != 0)
-	{
-		UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo(eUnitCombatType);
-
-		info->m_iOngoingTrainingCount += iChange;
-	}
-}
-
-void CvUnit::setOngoingTrainingCount(UnitCombatTypes eUnitCombatType, int iChange)
-{
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombatType);
-
-	UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo(eUnitCombatType, iChange != 0);
-
-	if (info != NULL)
-	{
-		info->m_iOngoingTrainingCount = iChange;
-	}
-}
 
 void CvUnit::checkPromotionObsoletion()
 {

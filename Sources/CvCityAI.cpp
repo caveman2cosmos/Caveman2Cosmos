@@ -5141,16 +5141,6 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 					{
 						iValue += 20;
 					}
-
-					if (kBuilding.getNumUnitCombatOngoingTrainingDurations() > 0)
-					{
-						int iDuration = kBuilding.getUnitCombatOngoingTrainingDuration(iI);
-
-						if (iDuration > 0 && iDuration < getUnitCombatOngoingTrainingTimeIncrement((UnitCombatTypes)iI))
-						{
-							iValue = 10 * (20 - iDuration);
-						}
-					}
 				}
 
 				for (int iI = 0; iI < NUM_DOMAIN_TYPES; iI++)
@@ -5402,15 +5392,6 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						if (kBuilding.isUnitCombatRetrainType(eCombatType))
 						{
 							iValue += 20;
-						}
-
-						if (kBuilding.getNumUnitCombatOngoingTrainingDurations() > 0)
-						{
-							int iDuration = kBuilding.getUnitCombatOngoingTrainingDuration(eCombatType);
-							if (iDuration > 0 && iDuration < getUnitCombatOngoingTrainingTimeIncrement(eCombatType))
-							{
-								iValue = 10 * (20 - iDuration);
-							}
 						}
 					}
 				}
@@ -12270,7 +12251,6 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 			!kBuilding.getFreePromoTypes().empty() ||
 			kBuilding.getNumUnitCombatRetrainTypes() > 0 ||
 			kBuilding.getNationalCaptureProbabilityModifier() > 0 ||
-			kBuilding.getNumUnitCombatOngoingTrainingDurations() > 0 ||
 			!kBuilding.getUnitCombatFreeExperience().empty() ||
 			kBuilding.isAnyDomainFreeExperience())
 		{
@@ -12889,13 +12869,6 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 					{
 						iValue += 20;
 					}
-
-					if (kBuilding.getNumUnitCombatOngoingTrainingDurations() > 0
-						&& kBuilding.getUnitCombatOngoingTrainingDuration(iI) > 0
-						&& kBuilding.getUnitCombatOngoingTrainingDuration(iI) < getUnitCombatOngoingTrainingTimeIncrement((UnitCombatTypes)iI))
-					{
-						iValue = (20 - kBuilding.getUnitCombatOngoingTrainingDuration(iI)) * 10;
-					}
 				}
 
 				for (int iI = 0; iI < NUM_DOMAIN_TYPES; iI++)
@@ -13167,14 +13140,6 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 						{
 							iValue += 20;
 						}
-#ifdef ONGOING_TRAINING
-						if (kBuilding.getNumUnitCombatOngoingTrainingDurations() > 0
-							&& kBuilding.getUnitCombatOngoingTrainingDuration(eCombatType) > 0
-							&& kBuilding.getUnitCombatOngoingTrainingDuration(eCombatType) < getUnitCombatOngoingTrainingTimeIncrement(eCombatType))
-						{
-							iValue = (20 - kBuilding.getUnitCombatOngoingTrainingDuration(eCombatType)) * 10;
-						}
-#endif // ONGOING_TRAINING
 					}
 				}
 

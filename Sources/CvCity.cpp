@@ -131,8 +131,6 @@ CvCity::CvCity()
 	m_paiUnitCombatRepelAgainstModifier = NULL;
 	m_paiUnitCombatDefenseAgainstModifier = NULL;
 	m_paiPromotionLineAfflictionAttackCommunicability = NULL;
-	m_paiUnitCombatOngoingTrainingTimeCount = NULL;
-	m_paiUnitCombatOngoingTrainingTimeIncrement = NULL;
 	//TB Combat Mod (Buildings) end
 	//Team Project (1)
 	m_paiTechHappiness = NULL;
@@ -288,13 +286,30 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 
 	pPlot->changeCulture(getOwner(), GC.getFREE_CITY_CULTURE(), bBumpUnits);
 
+	// Immediately put some tiles on adjacent tiles if not 1TF option. Which tiles depends on game options.
 	if (!GC.getGame().isOption(GAMEOPTION_CULTURE_1_CITY_TILE_FOUNDING))
 	{
 		const int iAdjCulture = GC.getFREE_CITY_ADJACENT_CULTURE();
-		foreach_(CvPlot* pAdjacentPlot, plot()->adjacent())
+		// Special case: RCS with no MCB gains only tiles a lvl 1 city would gain as defined by RCS
+		if (GC.getGame().isOption(GAMEOPTION_CULTURE_REALISTIC_SPREAD) && !GC.getGame().isOption(GAMEOPTION_CULTURE_MIN_CITY_BORDER))
 		{
-			pAdjacentPlot->changeCulture(getOwner(), iAdjCulture, bBumpUnits);
-			pAdjacentPlot->updateCulture(bBumpUnits, false);
+			foreach_(CvPlot* pAdjacentPlot, plot()->cardinalDirectionAdjacent())
+			{
+				if (cultureDistance(*pAdjacentPlot) == 1)
+				{
+					pAdjacentPlot->changeCulture(getOwner(), iAdjCulture, bBumpUnits);
+					pAdjacentPlot->updateCulture(bBumpUnits, false);
+				}
+			}
+		}
+		// All 8 tiles gained. MCB enables this even if RCS also on; 'soft' RCS
+		else
+		{
+			foreach_(CvPlot* pAdjacentPlot, plot()->adjacent())
+			{
+				pAdjacentPlot->changeCulture(getOwner(), iAdjCulture, bBumpUnits);
+				pAdjacentPlot->updateCulture(bBumpUnits, false);
+			}
 		}
 	}
 
@@ -442,9 +457,6 @@ void CvCity::uninit()
 	SAFE_DELETE_ARRAY(m_paiUnitCombatRepelAgainstModifier);
 	SAFE_DELETE_ARRAY(m_paiUnitCombatDefenseAgainstModifier);
 	SAFE_DELETE_ARRAY(m_paiPromotionLineAfflictionAttackCommunicability);
-	SAFE_DELETE_ARRAY(m_paiUnitCombatOngoingTrainingTimeCount);
-	SAFE_DELETE_ARRAY(m_paiUnitCombatOngoingTrainingTimeIncrement);
-
 	SAFE_DELETE_ARRAY(m_pabReligiouslyDisabledBuilding);
 	SAFE_DELETE_ARRAY(m_paiStartDeferredSectionNumBonuses);
 	SAFE_DELETE_ARRAY(m_paiTechHappiness);
@@ -916,8 +928,6 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 		m_paiUnitCombatRepelModifier = new int[GC.getNumUnitCombatInfos()];
 		m_paiUnitCombatRepelAgainstModifier = new int[GC.getNumUnitCombatInfos()];
 		m_paiUnitCombatDefenseAgainstModifier = new int[GC.getNumUnitCombatInfos()];
-		m_paiUnitCombatOngoingTrainingTimeCount = new int[GC.getNumUnitCombatInfos()];
-		m_paiUnitCombatOngoingTrainingTimeIncrement = new int[GC.getNumUnitCombatInfos()];
 		m_paiDamageAttackingUnitCombatCount = new int[GC.getNumUnitCombatInfos()];
 		m_paiHealUnitCombatTypeVolume = new int[GC.getNumUnitCombatInfos()];
 		//TB Combat Mod (Buildings) end
@@ -930,8 +940,6 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 			m_paiUnitCombatRepelModifier[iI] = 0;
 			m_paiUnitCombatRepelAgainstModifier[iI] = 0;
 			m_paiUnitCombatDefenseAgainstModifier[iI] = 0;
-			m_paiUnitCombatOngoingTrainingTimeCount[iI] = 0;
-			m_paiUnitCombatOngoingTrainingTimeIncrement[iI] = 0;
 			m_paiDamageAttackingUnitCombatCount[iI] = 0;
 			m_paiHealUnitCombatTypeVolume[iI] = 0;
 			//TB Combat Mod (Buildings) end
@@ -1471,10 +1479,6 @@ void CvCity::doTurn()
 	}
 #endif // OUTBREAKS_AND_AFFLICTIONS
 
-	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		updateOngoingTraining((UnitCombatTypes)iI);
-	}
 	//TB Combat Mod (Buildings) end
 
 	if (getCultureUpdateTimer() > 0)
@@ -2938,6 +2942,7 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 	/* when not ordinarily hiding uncosntructable (since you cannot influence your vicinity bonuses	*/
 	/* so its not useful information for the most part												*/
 	/************************************************************************************************/
+	// Blaze - Might be useful in some situations - is in radius, tile not owned - but that's a TODO
 	if (!bExposed)
 	{
 		if (kBuilding.getPrereqVicinityBonus() != NO_BONUS
@@ -3049,6 +3054,7 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 	}
 
 	// Koshling - Always hide unbuildable due to vicinity bonuses, it's not really useful to see them
+	// Blaze - Might be useful in some situations - is in radius, tile not owned - but that's a TODO
 	if (!bExposed)
 	{
 		bool bHasAnyVicinityBonus = false;
@@ -5036,29 +5042,6 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 			changeUnitCombatRepelAgainstModifierTotal(eCombatX, kBuilding.getUnitCombatRepelAgainstModifier(iI) * iChange);
 			changeUnitCombatDefenseAgainstModifierTotal(eCombatX, kBuilding.getUnitCombatDefenseAgainstModifier(iI) * iChange);
 		}
-		const int iUnitCombatOngoingTrainingDuration = kBuilding.getUnitCombatOngoingTrainingDuration(iI);
-		if (iUnitCombatOngoingTrainingDuration > 0)
-		{
-			if (iChange == 1 && iUnitCombatOngoingTrainingDuration > getUnitCombatOngoingTrainingTimeIncrement(eCombatX))
-			{
-				setUnitCombatOngoingTrainingTimeIncrement(eCombatX, iUnitCombatOngoingTrainingDuration);
-			}
-			if (iChange == -1 && iUnitCombatOngoingTrainingDuration == getUnitCombatOngoingTrainingTimeIncrement(eCombatX))
-			{
-				int iBestValue = 0;
-				for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
-				{
-					const BuildingTypes eBuildingX = static_cast<BuildingTypes>(iJ);
-					const int iTrain = GC.getBuildingInfo(eBuildingX).getUnitCombatOngoingTrainingDuration(iI);
-
-					if (iTrain > iBestValue && eBuildingX != eBuilding && getNumActiveBuilding(eBuildingX) > 0)
-					{
-						iBestValue = iTrain;
-					}
-				}
-				setUnitCombatOngoingTrainingTimeIncrement(eCombatX, iBestValue);
-			}
-		}
 	}
 	//TB Combat Mods (Buildings) end
 
@@ -5324,7 +5307,7 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 			owner.changeBuildingCommerceChange(kChange.first, (CommerceTypes)i, kChange.second[i] * iChange);
 		}
 	}
-/*
+	/*
 	for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
 	{
 		for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
@@ -5332,7 +5315,7 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 			changeImprovementYieldChange(((ImprovementTypes)iI), ((YieldTypes)iJ), (kBuilding.getImprovementYieldChanges(iI, iJ) * iChange));
 		}
 	}
-*/
+	*/
 	{
 		PROFILE("CvCity::processBuilding.Part5");
 		updateExtraBuildingHappiness();
@@ -6470,15 +6453,16 @@ void CvCity::recalculateCultureDistances(int iMaxDistance) const
 	// then (inefficiently, atm) calls calculateCultureDistance to compute specific tiles
 	PROFILE_FUNC();
 
-	// 1-tile start and realistic culture together has unique rules, otherwise:
-	// if the point is within one square of the city center
-	foreach_(const CvPlot* plotX, plots(NUM_CITY_PLOTS_1))
+	// MCB w/o 1TF makes 8 adjacent tiles dist 1 ('soft' RCS)
+	if (GC.getGame().isOption(GAMEOPTION_CULTURE_MIN_CITY_BORDER) && !GC.getGame().isOption(GAMEOPTION_CULTURE_1_CITY_TILE_FOUNDING))
 	{
-		// Center has 0 distance to helps city tile itself have more culture
-		if (getX() == plotX->getX() && getY() == plotX->getY()) m_aCultureDistances[plotX] = 0;
-		// If 1 tile start is off, the rest in range 1 have distance 1, no modifiers
-		else if (!GC.getGame().isOption(GAMEOPTION_CULTURE_1_CITY_TILE_FOUNDING)) m_aCultureDistances[plotX] = 1;
+		foreach_(const CvPlot* plotX, plot()->adjacent())
+		{
+			m_aCultureDistances[plotX] = 1;
+		}
 	}
+	// City tile itself should always have dist 0
+	m_aCultureDistances[plot()] = 0;
 
 	// Blaze: Spiraling outward from center (style of getCityIndexPlot) is more efficient if perf issues exist;
 	// 	this implementation is rather brute-force and inefficient. Will need to make edits to existing func tho,
@@ -6487,8 +6471,7 @@ void CvCity::recalculateCultureDistances(int iMaxDistance) const
 
 	// Currently: Calculate distance values of all tiles in iMaxDistance radial size grid,
 	//   recalculating entire grid until no values have changed. This happens ~iMaxDistance times per city per turn.
-	bool bHasChanged = (iMaxDistance > 1 ||
-		(iMaxDistance > 0 && GC.getGame().isOption(GAMEOPTION_CULTURE_1_CITY_TILE_FOUNDING)));
+	bool bHasChanged = iMaxDistance > 0;
 
 	int numLoops = 0;
 	// as long as there are changes during the last iteration
@@ -6499,13 +6482,24 @@ void CvCity::recalculateCultureDistances(int iMaxDistance) const
 
 		foreach_(const CvPlot* plotX, plot()->rect(iMaxDistance, iMaxDistance))
 		{
-			// Either ignore only core, or 9 tiles around city center depending on whether 1 tile start:
-			if (plotDistance(getX(), getY(), plotX->getX(), plotX->getY()) <
-				(1 + !GC.getGame().isOption(GAMEOPTION_CULTURE_1_CITY_TILE_FOUNDING)))
+			// This is a slightly cursed function.
+			// Center should never be calculated:
+			if (plotX == plot()) continue;
+			// MCB w/o 1TF makes adjacent 8 always distance 1; should not be custom calculated
+			if (GC.getGame().isOption(GAMEOPTION_CULTURE_MIN_CITY_BORDER) && !GC.getGame().isOption(GAMEOPTION_CULTURE_1_CITY_TILE_FOUNDING))
 			{
-				// This is a slightly cursed function.
-				continue;
+				bool bCityAdjacent = false;
+				foreach_(const CvPlot* plotAdjacent, plotX->adjacent())
+				{
+					if (plotAdjacent == plot())
+					{
+						bCityAdjacent = true;
+						break;
+					}
+				}
+				if (bCityAdjacent) continue;
 			}
+
 			// recalculate the value to determine if it has changed
 			const int iNewValue = calculateCultureDistance(plotX, iMaxDistance);
 
@@ -6542,10 +6536,10 @@ int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) c
 	foreach_(const CvPlot* adjacentPlot, mainPlot->cardinalDirectionAdjacent())
 	{
 		int neighborDist = m_aCultureDistances[adjacentPlot];
-		// neighborDist is 0 on first iteration after cleared cache. Don't calculate from such tiles,
-		// unless we are adjacent to capital (needed if 1tile founding is on); can use that as valid neighbor.
+		// An uncalculated tile will either have MAX_INT (no neighbors on prev calc) or 0 (1st iteration).
+		// 0 may be used if it's the city tile itself, though.
 		if (neighborDist != MAX_INT &&
-			(neighborDist != 0 || (adjacentPlot->getX() == getX() && adjacentPlot->getY() == getY())))
+			(neighborDist != 0 || adjacentPlot == plot()))
 		{
 			bHasCalculatedNeighbors = true;
 			break;
@@ -6553,9 +6547,7 @@ int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) c
 	}
 	if (!bHasCalculatedNeighbors) return MAX_INT;
 
-	// Calculate terrain distance necessary before neighbors, because city presence can
-	// remove any combination of terrain and river crossing penalties; chosing which neighbor
-	// therefore requires the current terrain known to avoid an endlessly-updating loop.
+	// Calculate base terrain distance. May be modified later based on neighbor chosen (river, city, etc)
 	int terrainDistance = 0;
 
 	// Distance from ground tile type (peak or specific terrain)
@@ -6614,7 +6606,8 @@ int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) c
 	}
 
 	bool bIsBonus = mainPlot->getBonusType(getTeam()) != NO_BONUS;
-	// Using route value/tier as softer inhibitor by era
+
+	// Using route value/tier as softer land tile inhibitor by era
 	// Base distance (x): 0, 1, 2, 3, 4 ... translates to:
 	// Tier 0 (noroute):  0, 1, 3, 5, 7 ... // 2x-1: Always applies to tiles not yet influenced
 	// Tier 1 (trail):	  0, 1, 3, 4, 6 ... // 3x/2
@@ -6660,13 +6653,13 @@ int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) c
 	foreach_(const CvPlot* adjacentPlot, mainPlot->cardinalDirectionAdjacent())
 	{
 		int neighborDist = m_aCultureDistances[adjacentPlot];
-		// neighborDist is 0 on first iteration after cleared cache. Don't calculate from such tiles,
-		// unless we are adjacent to capital (needed if 1tile founding is on); can use that as valid neighbor.
+		// An uncalculated tile will either have MAX_INT (no neighbors on prev calc) or 0 (1st iteration).
+		// 0 may be used if it's the city tile itself, though.
 		if (neighborDist != MAX_INT &&
-			(neighborDist != 0 || (adjacentPlot->getX() == getX() && adjacentPlot->getY() == getY())))
+			(neighborDist != 0 || adjacentPlot == plot()))
 		{
 			int netDistanceModifier = terrainDistance;
-			// If we are adjacent to our own city center (1 tile founding rule), different rules. Cheaper, but not straight 0 cost.
+			// If we are adjacent to our own city center, different rules. Cheaper, but not straight 0 cost.
 			if (neighborDist == 0)
 			{
 				netDistanceModifier += mainPlot->isRiverCrossing(directionXY(mainPlot, adjacentPlot)) * (extraRiverPenalty);
@@ -6684,8 +6677,6 @@ int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) c
 			if (neighborDist < distance) distance = neighborDist;
 		}
 	}
-
-	// at this point, we are done; distance still might be MAX_INT if not adjacent to others.
 	return distance;
 }
 
@@ -16083,8 +16074,6 @@ void CvCity::doPlotCulture(PlayerTypes ePlayer, int iCultureRate)
 
 	int iCultureLevel = GC.getCultureLevelInfo(getCultureLevel()).getLevel();
 
-	// Put culture onto plots from the city, even if "0" culture output,
-	// to prevent loss thru decay if 0 culture and not realistic culture.
 	clearCultureDistanceCache();
 
 	foreach_(CvPlot* plotX, plot()->rect(iCultureLevel, iCultureLevel))
@@ -17010,8 +16999,6 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", &m_iTotalLongRangeSupportPercentModifier, SAVE_VALUE_TYPE_INT);
 	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", &m_iTotalFlankSupportPercentModifier, SAVE_VALUE_TYPE_INT);
 #endif
-	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatOngoingTrainingTimeCount);
-	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatOngoingTrainingTimeIncrement);
 
 	for (int i = 0; i < wrapper.getNumClassEnumValues(REMAPPED_CLASS_TYPE_TECHS); ++i)
 	{
@@ -17575,8 +17562,6 @@ void CvCity::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvCity", m_iTotalLongRangeSupportPercentModifier);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iTotalFlankSupportPercentModifier);
 #endif
-	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatOngoingTrainingTimeCount);
-	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatOngoingTrainingTimeIncrement);
 
 	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 	{
@@ -19944,9 +19929,8 @@ void CvCity::doPromotion()
 		}
 	}
 }
-/*
 
-*/
+
 bool CvCity::isValidTerrainForBuildings(BuildingTypes eBuilding) const
 {
 	//This had to be hardcoded, since there is a terrain peak, but it is really a plot type, not a terrain.
@@ -19955,6 +19939,7 @@ bool CvCity::isValidTerrainForBuildings(BuildingTypes eBuilding) const
 
 	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 
+	// Terrain checks requires owned tile
 	bool bRequiresTerrain = false;
 	bool bValidTerrain = false;
 	for (int iI = 0; iI < GC.getNumTerrainInfos(); iI++)
@@ -19967,6 +19952,8 @@ bool CvCity::isValidTerrainForBuildings(BuildingTypes eBuilding) const
 
 			foreach_(const CvPlot* plotX, plots())
 			{
+				if (plotX->getTeam() != getTeam()) continue;
+
 				if (bPeak)
 				{
 					if (plotX->isAsPeak())
@@ -19996,10 +19983,11 @@ bool CvCity::isValidTerrainForBuildings(BuildingTypes eBuilding) const
 			const bool bPeak = iI == iTerrainPeak;
 			const bool bHill = iI == iTerrainHill;
 
-			//Checks the city plots for a valid terrain
 			bool bHasAndTerrain = false;
 			foreach_(const CvPlot* plotX, plots())
 			{
+				if ( plotX->getTeam() != getTeam()) continue;
+
 				if (bPeak)
 				{
 					if (plotX->isAsPeak())
@@ -20033,12 +20021,13 @@ bool CvCity::isValidTerrainForBuildings(BuildingTypes eBuilding) const
 		return false;
 	}
 
+	// Improvement checks require owned tile
 	if (!kBuilding.getPrereqOrImprovements().empty())
 	{
 		bool bHasValidImprovement = false;
 		foreach_(const ImprovementTypes prereqOrImprovement, kBuilding.getPrereqOrImprovements())
 		{
-			if (algo::any_of(plots(), bind(CvPlot::getImprovementType, _1) == prereqOrImprovement))
+			if (algo::any_of(plots(), bind(CvPlot::getImprovementType, _1) == prereqOrImprovement && bind(CvPlot::getTeam, _1) == getTeam()))
 			{
 				bHasValidImprovement = true;
 				break;
@@ -20052,15 +20041,28 @@ bool CvCity::isValidTerrainForBuildings(BuildingTypes eBuilding) const
 
 	bool bRequiresOrFeature = false;
 	bool bHasValidFeature = false;
+	// Feature checks require owned tile unless strict vicinity off; then, neutral OK too
 	for (int iI = 0; iI < GC.getNumFeatureInfos(); iI++)
 	{
 		if (kBuilding.isPrereqOrFeature(iI))
 		{
 			bRequiresOrFeature = true;
-			if (algo::any_of(plots(), bind(CvPlot::getFeatureType, _1) == iI))
+			foreach_(const CvPlot* plotX, plots())
 			{
-				bHasValidFeature = true;
-				break;
+				if (plotX->getFeatureType() == iI)
+				{
+					if (plotX->getTeam() == getTeam())
+					{
+						bHasValidFeature = true;
+						break;
+					}
+					// Features are allowed from neutral territory with Strict Vicinity OFF
+					else if (!GC.getGame().isOption(GAMEOPTION_EXP_STRICT_VICINITY) && plotX->getTeam() == NO_TEAM)
+					{
+						bHasValidFeature = true;
+						break;
+					}
+				}
 			}
 		}
 	}
@@ -21777,8 +21779,6 @@ void CvCity::clearModifierTotals()
 		m_paiUnitCombatRepelModifier[iI] = 0;
 		m_paiUnitCombatRepelAgainstModifier[iI] = 0;
 		m_paiUnitCombatDefenseAgainstModifier[iI] = 0;
-		m_paiUnitCombatOngoingTrainingTimeCount[iI] = 0;
-		m_paiUnitCombatOngoingTrainingTimeIncrement[iI] = 0;
 		m_paiDamageAttackingUnitCombatCount[iI] = 0;
 		m_paiHealUnitCombatTypeVolume[iI] = 0;
 		//TB Combat Mods (Buildings) end
@@ -22897,71 +22897,6 @@ void CvCity::changeTotalFlankSupportPercentModifier(int iChange)
 	FASSERT_NOT_NEGATIVE(getTotalFlankSupportPercentModifier());
 }
 #endif
-
-int CvCity::getUnitCombatOngoingTrainingTimeCount(UnitCombatTypes eIndex) const
-{
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
-	return m_paiUnitCombatOngoingTrainingTimeCount[eIndex];
-}
-
-void CvCity::changeUnitCombatOngoingTrainingTimeCount(UnitCombatTypes eIndex, int iChange)
-{
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
-	m_paiUnitCombatOngoingTrainingTimeCount[eIndex] += iChange;
-}
-
-int CvCity::getUnitCombatOngoingTrainingTimeIncrement(UnitCombatTypes eIndex) const
-{
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
-	return m_paiUnitCombatOngoingTrainingTimeIncrement[eIndex];
-}
-
-void CvCity::setUnitCombatOngoingTrainingTimeIncrement(UnitCombatTypes eIndex, int iChange)
-{
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
-	m_paiUnitCombatOngoingTrainingTimeIncrement[eIndex] = iChange;
-}
-
-void CvCity::updateOngoingTraining(UnitCombatTypes eCombat)
-{
-	const CvPlot* pPlot = plot();
-	changeUnitCombatOngoingTrainingTimeCount(eCombat, 1);
-	if (getUnitCombatOngoingTrainingTimeCount(eCombat) == getUnitCombatOngoingTrainingTimeIncrement(eCombat))
-	{
-		const int iChange = -(getUnitCombatOngoingTrainingTimeCount(eCombat));
-		changeUnitCombatOngoingTrainingTimeCount(eCombat, iChange);
-		assignOngoingTraining(eCombat, pPlot);
-	}
-}
-
-void CvCity::assignOngoingTraining(UnitCombatTypes eCombat, const CvPlot* pPlot)
-{
-	PROFILE_FUNC();
-
-	int iLowestValidity = MAX_INT;
-
-	CvUnit* pBestUnit = NULL;
-	foreach_(CvUnit* pLoopUnit, pPlot->units())
-	{
-		if (pLoopUnit->getTeam() == getTeam())
-		{
-			if (pLoopUnit->isHasUnitCombat(eCombat))
-			{
-				const int iCurrentValidity = pLoopUnit->getExperience() + pLoopUnit->getOngoingTrainingCount(eCombat);
-				if (iCurrentValidity < iLowestValidity)
-				{
-					pBestUnit = pLoopUnit;
-					iLowestValidity = iCurrentValidity;
-				}
-			}
-		}
-	}
-	if (pBestUnit != NULL)
-	{
-		pBestUnit->changeExperience(1);
-		pBestUnit->changeOngoingTrainingCount(eCombat, 1);
-	}
-}
 
 bool CvCity::assignPromotionChecked(PromotionTypes promotion, CvUnit* unit) const
 {

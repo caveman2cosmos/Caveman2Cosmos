@@ -338,6 +338,13 @@
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_EXP_STRICT_VICINITY</Type>
+			<Description>TXT_KEY_GAMEOPTION_EXP_STRICT_VICINITY</Description>
+			<Help>TXT_KEY_GAMEOPTION_EXP_STRICT_VICINITY_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
 		<!-- Map -->
 		<GameOptionInfo>
 			<Type>GAMEOPTION_MAP_CULTURALLY_LINKED_STARTS</Type>
@@ -578,13 +585,6 @@
 			<Help>TXT_KEY_GAMEOPTION_UNIT_GREAT_COMMANDERS_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_UNIT_ONGOING_TRAINING</Type>
-			<Description>TXT_KEY_GAMEOPTION_UNIT_ONGOING_TRAINING</Description>
-			<Help>TXT_KEY_GAMEOPTION_UNIT_ONGOING_TRAINING_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>0</bVisible>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_UNIT_XP_FROM_SPECIALISTS</Type>

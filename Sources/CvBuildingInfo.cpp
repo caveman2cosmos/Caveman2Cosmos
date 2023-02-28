@@ -1367,28 +1367,6 @@ int CvBuildingInfo::getUnitCombatProdModifier(int iUnitCombat) const
 	return 0;
 }
 
-int CvBuildingInfo::getNumUnitCombatOngoingTrainingDurations() const
-{
-	return m_aUnitCombatOngoingTrainingDurations.size();
-}
-
-int CvBuildingInfo::getUnitCombatOngoingTrainingDuration(int iUnitCombat, bool bForLoad) const
-{
-	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_UNIT_ONGOING_TRAINING))
-	{
-		return 0;
-	}
-	for (UnitCombatModifierArray::const_iterator it = m_aUnitCombatOngoingTrainingDurations.begin(); it != m_aUnitCombatOngoingTrainingDurations.end(); ++it)
-	{
-		if ((*it).first == (UnitCombatTypes)iUnitCombat)
-		{
-			return (*it).second;
-		}
-	}
-
-	return 0;
-}
-
 int CvBuildingInfo::getNumAfflictionOutbreakLevelChanges() const
 {
 	return m_aAfflictionOutbreakLevelChanges.size();
@@ -1952,7 +1930,6 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumC(iSum, m_aUnitCombatRepelAgainstModifiers);
 	CheckSumC(iSum, m_aUnitCombatDefenseAgainstModifiers);
 	CheckSumC(iSum, m_aUnitCombatProdModifiers);
-	CheckSumC(iSum, m_aUnitCombatOngoingTrainingDurations);
 	CheckSumC(iSum, m_aAfflictionOutbreakLevelChanges);
 	CheckSumC(iSum, m_aTechOutbreakLevelChanges);
 	CheckSumC(iSum, m_aiFreeTraitTypes);
@@ -3186,8 +3163,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->SetOptionalPairVector<UnitCombatModifierArray, UnitCombatTypes, int>(&m_aUnitCombatProdModifiers, L"UnitCombatProdModifiers");
 
-	pXML->SetOptionalPairVector<UnitCombatModifierArray, UnitCombatTypes, int>(&m_aUnitCombatOngoingTrainingDurations, L"UnitCombatOngoingTrainingDurations");
-
 	pXML->SetOptionalPairVector<PromotionLineModifierArray, PromotionLineTypes, int>(&m_aAfflictionOutbreakLevelChanges, L"AfflictionOutbreakLevelChanges");
 
 	pXML->SetOptionalPairVector<TechModifierArray, TechTypes, int>(&m_aTechOutbreakLevelChanges, L"TechOutbreakLevelChanges");
@@ -4183,16 +4158,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 			const UnitCombatTypes eUnitCombat = ((UnitCombatTypes)i);
 			const int iChange = pClassInfo->getUnitCombatProdModifier(i);
 			m_aUnitCombatProdModifiers.push_back(std::make_pair(eUnitCombat, iChange));
-		}
-	}
-
-	if (getNumUnitCombatOngoingTrainingDurations()==0)
-	{
-		for (int i=0; i < pClassInfo->getNumUnitCombatOngoingTrainingDurations(); i++)
-		{
-			const UnitCombatTypes eUnitCombat = ((UnitCombatTypes)i);
-			const int iChange = pClassInfo->getUnitCombatOngoingTrainingDuration(i, true);
-			m_aUnitCombatOngoingTrainingDurations.push_back(std::make_pair(eUnitCombat, iChange));
 		}
 	}
 

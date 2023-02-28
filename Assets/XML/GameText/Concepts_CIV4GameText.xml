@@ -141,7 +141,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ADVANCED_ESPIONAGE_SPREAD</Tag>
-		<English>2. Advanced Espionage</English>
+		<English>2. Advanced - Espionage</English>
 		<French>2. Espionnage Avancé</French>
 		<German>2. Verbesserte Spionage</German>
 		<Italian>2. Spionaggio avanzato</Italian>
@@ -934,7 +934,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_FIXED_BORDERS</Tag>
-		<English>2. Fixed Borders</English>
+		<English>2. Culture - Fixed Borders</English>
 		<French>2. Frontières Fixes</French>
 		<German>2. Feste Grenzen</German>
 		<Italian>2. Confini fissi</Italian>
@@ -1035,7 +1035,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_GREAT_COMMANDERS</Tag>
-		<English>2. Great Commanders</English>
+		<English>2. Unit - Great Commanders</English>
 		<French>2. Commandants Illustres</French>
 		<German>2. Große Anführer</German>
 		<Italian>2. Grandi comandanti</Italian>
@@ -1226,10 +1226,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_INFLUENCE_DRIVEN_WAR</Tag>
-		<English>2. Influence Driven War</English>
-		<French>2. Influence culturelle de la Guerre</French>
-		<Spanish>2. Influencia por la guerra</Spanish>
-		<Russian>2. Ñòèìóëÿöèÿ âîéíû</Russian>
+		<English>3. Influence Driven War</English>
+		<French>3. Influence culturelle de la Guerre</French>
+		<Spanish>3. Influencia por la guerra</Spanish>
+		<Russian>3. Ñòèìóëÿöèÿ âîéíû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_INFLUENCE_DRIVEN_WAR_PEDIA</Tag>
@@ -1277,7 +1277,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_INQUISITION</Tag>
-		<English>2. Inquisition</English>
+		<English>2. Religion - Inquisition</English>
 		<Spanish>2. Inquisición</Spanish>
 		<Russian>2. Èíêâèçèöèÿ</Russian>
 	</TEXT>
@@ -1305,7 +1305,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_LARGER_CITIES</Tag>
-		<English>2. Larger Cities</English>
+		<English>2. Expansion - Larger Cities</English>
 		<French>2. Villes plus Larges</French>
 		<German>2. Größere Städte</German>
 		<Italian>2. Città più grandi</Italian>
@@ -1434,7 +1434,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_MASTERY</Tag>
-		<English>2. Mastery Victory</English>
+		<English>2. Victory - Mastery</English>
 		<French>2. Victoire de Maître</French>
 		<German>2. Meistersieg</German>
 		<Italian>2. Vittoria master</Italian>
@@ -1717,7 +1717,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_REALISTIC_CORPORATIONS</Tag>
-		<English>2. Realistic Corporations</English>
+		<English>2. Advanced - Realistic Corporations</English>
 		<French>2. Corporations Réalistes</French>
 		<German>2. Realistische Kapitalgesellschaften</German>
 		<Italian>2. Corporazioni realistiche</Italian>
@@ -1734,7 +1734,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_REALISTIC_CULTURE_SPREAD</Tag>
-		<English>2. Realistic Culture Spread</English>
+		<English>2. Culture - Realistic Culture Spread</English>
 		<French>2. Propagation Culturelle Réaliste</French>
 		<German>2. Realistische Kulturausbreitung</German>
 		<Italian>2. Diffusione realistica della cultura</Italian>
@@ -1743,7 +1743,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_REALISTIC_CULTURE_SPREAD_PEDIA</Tag>
-		<English>[BOLD]Overview[\BOLD]:[NEWLINE]Realistic Culture Spread creates a more natural style of cultural spread from your cities. Culture spreads more slowly over rivers, higher terrain like hills and peaks, heavily wooded areas, and ocean tiles. Because this more natural spread also has the effect of limiting your cultural borders, new intermediate culture levels have been added for this game option only, to account for the slower natural spread. The amount of actual culture to reach [COLOR_YELLOW]Monumental Culture[COLOR_REVERT] and all other thresholds is not altered.[NEWLINE]Improve the tiles inside your borders and research terrain utilization technologies to help it expand faster!
+		<English>[BOLD]Overview[\BOLD]:[NEWLINE]Realistic Culture Spread creates a more natural style of cultural spread from your cities, and dramatically slows down the rate of your cities expansion over land. Culture spreads more slowly over rivers, higher terrain like hills and peaks, heavily wooded areas, and ocean tiles. Because this more natural spread also has the effect of limiting your cultural borders, new intermediate culture levels have been added for this game option only, to account for the slower natural spread. The amount of actual culture to reach [COLOR_YELLOW]Monumental Culture[COLOR_REVERT] and all other thresholds is not altered.[NEWLINE]Improve the tiles inside your borders and research terrain utilization technologies to help it expand faster![NEWLINE][BOLD]NOTE[\BOLD]: Combining this option with "Minimum City Borders" ON and "1 Tile Start" OFF provides a less harsh version, in which the same general theme applies but tiles near cities are acquired much more easily.
 [NEWLINE][BOLD]Mechanics[\BOLD]:
 [ICON_BULLET] "Difficulty" is a measure of how many *extra* border expansions are needed to claim a specific tile. A difficulty of 1 means that, in addition to the first expansion that would otherwise acquire the tile in a regular game, one further expansion is required. Due to there being just under twice the number of cultural levels in this game option, a tile of difficulty 1 spreads approximately just as quickly as in a regular game.
 [ICON_BULLET] As a baseline, land terrain types provide between 0 and 3 difficulty. Coast/sea/ocean provide 2/3/4 difficulty. Features such as forests, marsh, reefs and similar provide 0-2 difficulty. Hills provide 1 difficulty and peaks 3. A tile has 2 higher difficulty if it must be reached by crossing a river.
@@ -1755,7 +1755,8 @@
 [ICON_BULLET] The difficulty of a land tile is multiplied by a percentage if the tier of route is below Paved Roads (approximately doubled for no route, 3/2 for trails, 4/3 for paths, 5/4 for roads, rounding down).
 [ICON_BULLET] The penalty for unimproved feature and route are always applied if the tile is not yet in the cultural influence of a city, and the tile does not have a bonus. This means that building roads or towers just outside of your territory will not acquire city-influence tiles faster!
 [ICON_BULLET] Having a revealed bonus on a tile halves difficulty cost from all sources.
-[ICON_BULLET] If the [LINK=CONCEPT_1_CITY_TILE_FOUNDING]City starts with one tile[\LINK] gameoption is on, the cost of the adjacent 4 tiles has a 1/3 multiplier applied but is not granted immediately on first expansion. If the gameoption is off, cities will be founded with the adjacent 8 tiles under their control as normal.
+[ICON_BULLET] The cost of the adjacent 4 tiles has a 1/3 multiplier applied but is not granted immediately on first expansion.
+[ICON_BULLET] If "Minimum City Borders" is ENABLED, and "Cities Start with 1 Tile" is DISABLED, then cities will be founded with all 8 adjacent tiles (they will have a fixed distance of 1, ignoring all other rules here), but the city will gain further tiles as these rules describe.
 [ICON_BULLET] Difficulty cannot be negative, but the cost of a tile will reduce after it is acquired by a city. Thus, often borders will expand, and then as a result of that expansion more tiles may be acquired on the turn following that.
 [NEWLINE][BOLD]Example[\BOLD]:
 [ICON_BULLET] A tile that is of raw distance 2 from a city would normally be acquired on the first expansion (if "City starts with one tile" gameoption is off). At that start of the game, if that tile is a grassland (0 cost) hill (1 + 2[Missing Tech] = 3 cost) with forest (1[Feature] + 1[Unimproved] = 2 cost, net 5) and no freshwater (1[No fresh water] -> net 6) with a revealed bonus (net 6 -> 3 for bonus cost reduction), the total difficulty is therefore 3, and will instead be acquired on the fourth expansion instead of first. However, after acquisition and building a route and improvement or chopping the cost will drop, meaning further tiles may be acquired even without another city cultural level increase.
@@ -1859,7 +1860,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_REVDCM</Tag>
-		<English>2. Revolution</English>
+		<English>2. Unsupported - Revolution</English>
 		<French>2. Révolution</French>
 		<Russian>2. Ðåâîëþöèè</Russian>
 	</TEXT>
@@ -1893,7 +1894,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_REV_BARBARIANCIV</Tag>
-		<English>2. Barbarian Civ</English>
+		<English>2. Barbarian - Civ Development</English>
 		<French>2. Civ Barbares</French>
 		<Russian>2. Èìïåðèÿ âàðâàðîâ</Russian>
 	</TEXT>
@@ -1937,7 +1938,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_REV_TECH_DIFFUSION</Tag>
-		<English>2. Tech Diffusion</English>
+		<English>2. Tech - Diffusion</English>
 		<Spanish>2. Difusión tecnológica</Spanish>
 		<Russian>2. Ðàñïðîñòðàíåíèå òåõíîëîãèé</Russian>
 	</TEXT>
@@ -2571,7 +2572,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ROM_LIMITED_RELIGION</Tag>
-		<English>2. Limited Religions</English>
+		<English>2. Religion - Limited</English>
 		<Spanish>2. Religiones limitadas</Spanish>
 		<Russian>2. Ëèìèò ðåëèãèé</Russian>
 	</TEXT>
@@ -2690,7 +2691,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ROM_RELIGIOUS_VICTORY</Tag>
-		<English>2. Religious Victory</English>
+		<English>2. Victory - Religious</English>
 		<Spanish>2. Victoria religiosa</Spanish>
 		<Russian>2. Ðåëèãèîçíàÿ ïîáåäà</Russian>
 	</TEXT>
@@ -2706,7 +2707,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ROM_SCIENTIFIC_VICTORY</Tag>
-		<English>2. Scientific Victory</English>
+		<English>2. Victory - Scientific</English>
 		<Spanish>2. Victoria científica</Spanish>
 		<Russian>2. Íàó÷íàÿ ïîáåäà</Russian>
 	</TEXT>
@@ -2740,9 +2741,9 @@ Remember: If you're having trouble with which civic to choose, just think of his
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ROM_UNIT_NAMING</Tag>
-		<English>2. Unit Naming</English>
-		<Spanish>2. Nomenclatura de unidades</Spanish>
-		<Russian>2. Èìåíà þíèòîâ</Russian>
+		<English>3. Unit Naming</English>
+		<Spanish>3. Nomenclatura de unidades</Spanish>
+		<Russian>3. Èìåíà þíèòîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ROM_UNIT_NAMING_PEDIA</Tag>
@@ -2760,7 +2761,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_RUTHLESS_AI</Tag>
-		<English>2. Ruthless AI</English>
+		<English>2. AI - Ruthless</English>
 		<French>2. AI sans Merci</French>
 		<German>2. Skrupellose KI</German>
 		<Italian>2. IA spietata</Italian>
@@ -2777,7 +2778,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_SAD</Tag>
-		<English>2. Surround and Destroy</English>
+		<English>2. Combat - Surround and Destroy</English>
 		<French>2. Encercler et Détruire</French>
 		<German>2. Einkesselung</German>
 		<Italian>2. Circonda e distruggi</Italian>
@@ -3117,7 +3118,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_VICINITY_PEDIA</Tag>
-		<English>Vicinity is about how close to the city a resource is and if the resource has been made available to the trade network.[PARAGRAPH:2][BOLD]Near[\BOLD] (or [BOLD]"Raw Vicinity"[\BOLD]) means that the resource is in the work area of the city.[PARAGRAPH:2][BOLD]Local[\BOLD] or [BOLD]Vicinity[\BOLD] means that the resource is in the work area of the city and is connected to the trade network; i.e. has a route connecting it to the city and the plot has an improvement on it that grants access to the bonus.[PARAGRAPH:2][BOLD]Far[\BOLD] refers to bonuses that are not in the work area of any of your cities but are in your borders and is connected to the trade network.[PARAGRAPH:2]Any bonus provided by a building in the city is counted as being in the city vicinity.[PARAGRAPH:3]There is currently a [BOLD]known bug[\BOLD] where by the bonus does not need to be inside your borders but can also be in neutral territory. This bug shows up anytime that your city borders are smaller than the "fat cross" for example if you are using the "City starts with one tile" or "Realistic Cultural Spread" game options or when your city can only work the first 9 plots because of its cultural level.</English>
+		<English>Vicinity is about how close to the city a resource is and if the resource has been made available to the trade network.[PARAGRAPH:2][BOLD]Near[\BOLD] (or [BOLD]"Raw Vicinity"[\BOLD]) means that the resource is in the work area of the city.[PARAGRAPH:2][BOLD]Local[\BOLD] or [BOLD]Vicinity[\BOLD] means that the resource is in the work area of the city and is connected to the trade network; i.e. has a route connecting it to the city and the plot has an improvement on it that grants access to the bonus.[PARAGRAPH:2][BOLD]Far[\BOLD] refers to bonuses that are not in the work area of any of your cities but are in your borders and is connected to the trade network.[PARAGRAPH:2]Any bonus provided by a building in the city is counted as being in the city vicinity.</English>
 		<Russian>Ðàäèóñ ãîðîäà äëÿ çäàíèé îçíà÷àåò, ÷òî íåêèé ðåñóðñ íóæåí â ïðåäåëàõ ìàêñèìàëüíîé ðàáî÷åé çîíû ãîðîäà. Ýòî îçíà÷àåò, ÷òî â ïðåäåëàõ ðàáî÷åé çîíû ãîðîäà äîëæåí áûòü ïðîëîæåí òîðãîâûé ïóòü äî êëåòêè ñ ðåñóðñîì.[PARAGRAPH:2]Çäàíèÿ â ãîðîäå òàêæå ìîãóò äàòü áîíóñû, íàïðèìåð, òàáóí ëîøàäåé, â ñëó÷àå îñâîåíèÿ êëåòêè ñ ñîîòâåòñòâóþùèì ðåñóðñîì ïðåäîñòàâèò áîíóñ ëîøàäåé è ãðàôó â ðàäèóñå ãîðîäà.[PARAGRAPH:2]Íåñêîëüêî ãîðîäîâ ìîãóò èìåòü îäèíàêîâóþ êàðòó ðåñóðñîâ â èõ ðàäèóñå, íî ëèøü îäèí ìîæåò ðàáîòàòü íà ó÷àñòêå.[PARAGRAPH:2]Èçíà÷àëüíî ðàáî÷èé ðàäèóñ ãîðîäà âûãëÿäèò êàê Áîëüøîé Êðåñò, íî ïî ìåðå ðîñòà êóëüòóðíûõ ãðàíèö ãîðîäà, ðàñòåò è åãî ðàáî÷èé ðàäèóñ (äî 3 êëåòîê îò öåíòðà).[PARAGRAPH:2]Äàííîå ïðàâèëî ðàáîòàåò, åñëè òîëüêî âû èñïîëüçóåòå îïöèþ Ðåàëèñòè÷íûé Ðîñò Êóëüòóðíûõ ãðàíèö.</Russian>
 	</TEXT>
 	<TEXT>
@@ -3307,7 +3308,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_DEVELOPING_LEADERS</Tag>
-		<English>2. Developing Leaders</English>
+		<English>2. Leader - Developing</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_DEVELOPING_LEADERS_PEDIA</Tag>
@@ -3339,18 +3340,18 @@ Remember: If you're having trouble with which civic to choose, just think of his
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_EQUILIBRIUM_CULTURE</Tag>
-		<English>2. Equilibrium Culture</English>
+		<English>2. Culture - Equilibrium</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_EQUILIBRIUM_CULTURE_PEDIA</Tag>
-		<English>This option is meant to represent the idea that an old city does not necessarily have more [LINK=CONCEPT_C2C_CULTURE]culture[\LINK] by simple virtue of being older, but should have more culture because it has had more years to build shrines, temples, houses of learning, etc. Mechanically, this involves:[NEWLINE][ICON_BULLET]Tile culture will decay on all plots regardless of if the tile has gained culture or not[NEWLINE][ICON_BULLET]Control of a tile will not be lost due to insufficient culture gains per turn. Instead decay is increased 10x if a tile is outside city influence, and control disappears at 0 culture[NEWLINE][ICON_BULLET]All buildings that generate culture will have their output doubled after 1000 years[NEWLINE][NEWLINE]These changes have several implications, but in essence the constant decay means that the cultural strength of a city is more representative of the last 50 turns of cultural output (on normal gamespeed) rather than culture of all time. Older cities will have a strong advantage by the 1000 years doubling rule, but even an old city will get overpowered by multiple foreign cities or those that keep more up to date with culture and construct powerful wonders. Use this setting if you want culture wars to be more dynamic and responsive to current events rather than historic weight.</English>
+		<English>This option is meant to represent the idea that an old city does not necessarily have more [LINK=CONCEPT_C2C_CULTURE]culture[\LINK] by simple virtue of being older, but should have more culture because it has had more years to build shrines, temples, houses of learning, etc. Mechanically, this involves:[NEWLINE][ICON_BULLET]Tile culture will decay on all plots regardless of if the tile has gained culture or not[NEWLINE][ICON_BULLET]Control of a tile will not be lost due to insufficient culture gains per turn. Instead decay is increased 10x if a tile is outside city influence, and control disappears at 0 culture (barring other mechanisms of keeping control such as Fixed Borders, Minimum City Borders, etc.)[NEWLINE][ICON_BULLET]All buildings that generate culture will have their output doubled after 1000 years[NEWLINE][NEWLINE]These changes have several implications, but in essence the constant decay means that the cultural strength of a city is more representative of the last 50 turns of cultural output (on normal gamespeed) rather than culture of all time. Older cities will have a strong advantage by the 1000 years doubling rule, but even an old city will get overpowered by multiple foreign cities or those that keep more up to date with culture and construct powerful wonders. Use this setting if you want culture wars to have a stronger dependence and responsiveness to current events.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_1_CITY_TILE_FOUNDING</Tag>
-		<English>2. City starts with 1 tile</English>
+		<English>2. Culture - City Starts With 1 Tile</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_1_CITY_TILE_FOUNDING_PEDIA</Tag>
-		<English>With this option, cities will not immediately acquire the 8 adjacent tiles upon founding. Instead, a new threshold of culture is inserted into the possible city levels below the first normal city expansion, and a city must reach this value to expand. For example, if in a normal game a city expands from 9 tiles to 21 at 100 total generated culture, under this option the city will first expand from 1 tile to 9 at 20 culture, then at 100 culture expand to 21 and continue as normal from there on. However, when this option is combined with [LINK=CONCEPT_REALISTIC_CULTURE_SPREAD]Realistic Culture Spread[\LINK], the first expansion may only acquire the 4 cardinally adjacent tiles instead.</English>
+		<English>With this option, cities will not immediately acquire adjacent tiles upon founding. Instead, a new threshold of culture is inserted into the possible city levels below the first normal city expansion, and a city must reach this value to expand. For example, if in a normal game a city expands from 9 tiles to 21 at 100 total generated culture, under this option the city will first expand from 1 tile to 9 at 20 culture, then at 100 culture expand to 21 and continue as normal from there on.[NEWLINE]This option will partially override the Minimum City Border option if MCB is enabled, in that founded cities will not immediately have all adjacent 8 tiles. However, once gained, they will not be ever lost from your cultural control.</English>
 	</TEXT>
 </Civ4GameText>

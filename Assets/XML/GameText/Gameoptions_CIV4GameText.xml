@@ -9,10 +9,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CULTURE_1_CITY_TILE_FOUNDING_HELP</Tag>
-		<English>All city founding starts with the main city tile only. A small amount of generated culture is required to acquire the adjacent tiles, after which culture progresses normally. Scaled for Game Speeds.[NEWLINE]When enabled along with "Realistic Culture Spread", the first expansion *may* only acquire the 4 tiles sharing an edge with the city instead of all 8 adjacent tiles. This is challenging!</English>
-		<German>Der Einflussbereich jeder neu gegründeten Stadt wird mit dieser Einstellung zunächst immer auf das Stadtfeld begrenzt. Um den Stadtradius auf die umgebenden Felder auszudehnen, muss zunächst die Kulturstufe "schwach" erreicht werden.</German>
-		<French>Toutes les fondations de villes commencent par la tuile ville principale uniquement. Niveau de culture De mauvaises valeurs doivent être atteintes pour étendre la culture de la ville et s'étendre aux carreaux environnants. Adapté aux vitesses de jeu.[NEWLINE]Cette option désactive l'option "Limite minimale de la ville".</French>
-		<Russian>Âñå ãîðîäà ïðè îñíîâàíèè íà÷èíàþò ñ îäíîé ñòàðòîâîé êëåòêè. Äîëæåí áûòü äîñòèãíóò áåäíûé óðîâåíü êóëüòóðû äëÿ ðàñøèðåíèÿ ãîðîäà è îñâîåíèÿ ñîñåäíèõ êëåòîê. Ìàñøòàáèðóåòñÿ â çàâèñèìîñòè îò ñêîðîñòè èãðû.</Russian>
+		<English>All city founding starts with the main city tile only. A small amount of generated culture is required to acquire the adjacent tiles, after which culture progresses normally. Scaled for Game Speeds.[NEWLINE]This option will partially override "Minimum City Borders"; if MCB is also enabled, founded cities will not immediately have all adjacent 8 tiles, but nor will they be lost when acquired.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_DIPLOMACY</Tag>
@@ -669,7 +666,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CULTURE_MIN_CITY_BORDER_HELP</Tag>
-		<English>8 tiles around any city can never be conquered via cultural influence.</English>
+		<English>8 tiles around any city can never be conquered via cultural influence, but cities are still allowed to flip from cultural pressure (unless disabled by the corresponding game option).[NEWLINE]NOTE: When combined with "Realistic City Spread" ON and "1 Tile Founding" OFF, a less harsh version of RCS will be used.</English>
 		<French>Les 8 cases les plus proches d'une Ville ne peuvent jamais être conquises par l'influence culturelle</French>
 		<German>Die 8 Felder rings um eine Stadt können niemals durch kulturellen Einfluss übernommen werden.</German>
 		<Spanish>No se podrán conquistar las 8 casillas alrededor de una ciudad mediante la influencia cultural.</Spanish>
@@ -686,7 +683,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_MAP_MORE_RESOURCES_HELP</Tag>
-		<English>Maps that use default resource spawn settings will spawn more resources.[NEWLINE]Has no effect on these mapscripts:[NEWLINE][SPACE][SPACE] * PerfectWorld, PerfectMongoose and World[NEWLINE]Only affects SmartMap when "Bonus Placement = Standard"</English>
+		<English>Maps that use default resource spawn settings will spawn more resources.[NEWLINE]Has no effect on these mapscripts:[NEWLINE][SPACE][SPACE] * PerfectWorld, PerfectMongoose and World[NEWLINE]Only affects SmartMap when "Bonus Placement = Standard"[NEWLINE]NOTE: This option will largely reduce the efficiency of Realistic Culture Spread on slowing border growth, particularly on smaller mapsizes.</English>
 		<French>Une carte avec les paramètres par défaut comprendra des ressources supplémentaires</French>
 		<German>Auf Karten mit Standardeinstellungen für Ressourcen werden mehr Ressourcen verteilt.</German>
 		<Polish>Mapy używające standardowych ustawień wygenerują więcej zasobów.</Polish>
@@ -987,22 +984,6 @@
 		<Russian>Èãðîê-÷åëîâåê ìîæåò åäèíîâðåìåííî êîíòðîëèðîâàòü òîëüêî îäèí ãîðîä.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_UNIT_ONGOING_TRAINING</Tag>
-		<English>Unit - Ongoing Training</English>
-		<French>Entraînement permanent</French>
-		<German>Kontinuierliche Weiterbildung</German>
-		<Polish>Ciągły Trening</Polish>
-		<Russian>Íåïðåðûâíîå îáó÷åíèå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_UNIT_ONGOING_TRAINING_HELP</Tag>
-		<English>Training Buildings in Cities will gradually give XP to qualifying Units stationed there.</English>
-		<French>Les Bâtiments procurant de l'expérience donnent de l'XP aux unités présentes dans la ville</French>
-		<German>Ausbildungsgebäude führen zu einem ständigen Zuwachs an Erfahrungspunkten bei den entsprechenden in der Stadt stationierten Einheiten.</German>
-		<Polish>Budynki trenerskie w miastach będą stale dodawały XP to jedn. stacjonujących w mieście.</Polish>
-		<Russian>Òðåíèðîâî÷íûå çäàíèÿ â ãîðîäàõ ïîñòåïåííî óâåëè÷èâàþò îïûò ðàçìåùåííûõ òàì þíèòîâ.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_COMBAT_OUTBREAKS_AND_AFFLICTIONS</Tag>
 		<English>Combat - Outbreaks and Afflictions</English>
 		<French>Mod de Combat C2C - Éclosions et afflictions</French>
@@ -1184,7 +1165,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CULTURE_REALISTIC_SPREAD_HELP</Tag>
-		<English>Culture spreads from cities in a more realistic fashion, over low lying areas more quickly than peaks, hills, or jungles.[NEWLINE]When enabled along with "City starts with 1 tile", the first expansion *may* only acquire the 4 tiles sharing an edge with the city instead of all 8 adjacent tiles. This is challenging!</English>
+		<English>Culture spreads from cities in a more realistic fashion, over low lying areas more quickly than peaks, hills, or jungles. Further, the city may only claim up to the adjacent 4 tiles rather than all 8 on placement; together, this drastically reduces the rate of border growth of cities.[NEWLINE]NOTE: When enabled along with "Minimum City Borders" ON and "City starts with 1 tile" OFF, the rate of border growth will be less harsh, falling roughly halfway between vanilla and RCS proper. Use this combination of settings if you find RCS too inhibiting.</English>
 		<French>L'expansion de Culture des Villes s'opère de manière plus réaliste, de manière régulière, et sur les zones accessibles plus rapidement que sur les collines ou les Jungles.</French>
 		<German>Die eigene Kultur breitet sich von Städten nun realistischer aus, schneller im Flachland, langsamer in Bergen, Hügeln oder im Dschungel.</German>
 		<Italian>La cultura si espande dalle città in modo più realistico, più velocemente sulle aree aperte rispetto a colline, picchi e giungle.</Italian>
@@ -1597,5 +1578,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CULTURE_EQUILIBRIUM_HELP</Tag>
 		<English>Culture decays on all tiles, not just unowned. This means culture wars are dependent on the last ~100 turns of culture output (adjusted for gamespeed) rather than all culture ever produced by a city. Tiles that lose cultural input lose control via decay instead of immediately.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_EXP_STRICT_VICINITY</Tag>
+		<English>Expansion - Strict Vicinity</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_EXP_STRICT_VICINITY_HELP</Tag>
+		<English>Buildings and wonders that require a terrain type, feature, or improvement in city vicinity also require that tile to be culturally owned instead of possibly in neutral terrain. Works best when combined with Culture options of 1 Tile Start and/or Realistic Spread.</English>
 	</TEXT>
 </Civ4GameText>
