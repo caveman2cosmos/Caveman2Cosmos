@@ -720,7 +720,7 @@ public:
 	bool paradrop(int iX, int iY);
 
 	bool canPillage(const CvPlot* pPlot) const;
-	bool pillage();
+	bool pillage(const bool bAutoPillage = false);
 
 	//TSHEEP Assassin Mission
 	bool canAssassin(const CvPlot* pPlot, bool bTestVisible) const;
