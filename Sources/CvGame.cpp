@@ -4555,7 +4555,7 @@ void CvGame::setHandicapType(HandicapTypes eHandicap)
 	if (m_eHandicap != eHandicap)
 	{
 		m_eHandicap = eHandicap;
-		
+
 		if (eHandicap != NO_HANDICAP)
 		{
 			for (int i = 0; i < GC.getNumUnitInfos(); i++)
@@ -4567,6 +4567,10 @@ void CvGame::setHandicapType(HandicapTypes eHandicap)
 						GET_PLAYER((PlayerTypes)j).setUnitExtraCost((UnitTypes)i, GET_PLAYER((PlayerTypes)j).getNewCityProductionValue());
 					}
 				}
+			}
+			for (int j = 0; j < MAX_PLAYERS; j++)
+			{
+				GET_PLAYER((PlayerTypes)j).setUnitUpkeepDirty();
 			}
 		}
 	}
@@ -9749,7 +9753,7 @@ void CvGame::doIncreasingDifficulty()
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
 		CvPlayer& playerX = GET_PLAYER((PlayerTypes)iI);
-		if (playerX.isHumanPlayer(true) && playerX.isAlive())
+		if (playerX.isHumanPlayer(true) && playerX.isAlive() && playerX.getHandicapType() < GC.getNumHandicapInfos() - 1)
 		{
 			playerX.setHandicap(playerX.getHandicapType() + 1);
 

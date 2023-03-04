@@ -424,7 +424,7 @@ public:
 
 	int getBuildingCountWithUpgrades(int /*BuildingTypes*/ iBuilding) const;
 	void setColor(int /*PlayerColorTypes*/ iColor);
-	void setHandicap(int iNewVal);
+	void setHandicap(int iNewVal, bool bAverageGameHandicap);
 
 	void setModderOption(int /*ModderOptionTypes*/ eIndex, int iNewValue);
 

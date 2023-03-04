@@ -215,6 +215,7 @@ m_cachedBonusCount(NULL)
 	//TB Traits end
 
 	m_bDisableHuman = false;
+	m_bUnitUpkeepDirty = true;
 
 	m_iStabilityIndex = 500;
 	m_iStabilityIndexAverage = 500;
@@ -230,6 +231,7 @@ m_cachedBonusCount(NULL)
 	CvWString m_szCivAdj;
 
 	m_bDoNotBotherStatus = NO_PLAYER;
+
 
 	// Free Tech Popup Fix
 	m_iChoosingFreeTech = 0;
@@ -917,6 +919,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iChoosingFreeTech = 0;
 
 	m_bDisableHuman = false;
+	m_bUnitUpkeepDirty = true;
 
 	m_iStabilityIndex = 500;
 	m_iStabilityIndexAverage = 500;
@@ -10027,7 +10030,7 @@ void CvPlayer::changeBaseFreeUnitUpkeepCivilian(const int iChange)
 	if (iChange != 0)
 	{
 		m_iBaseFreeUnitUpkeepCivilian += iChange;
-		calcFinalUnitUpkeep();
+		m_bUnitUpkeepDirty = true;
 	}
 }
 
@@ -10041,7 +10044,7 @@ void CvPlayer::changeBaseFreeUnitUpkeepMilitary(const int iChange)
 	if (iChange != 0)
 	{
 		m_iBaseFreeUnitUpkeepMilitary += iChange;
-		calcFinalUnitUpkeep();
+		m_bUnitUpkeepDirty = true;
 	}
 }
 
@@ -10055,7 +10058,7 @@ void CvPlayer::changeFreeUnitUpkeepCivilianPopPercent(const int iChange)
 	if (iChange != 0)
 	{
 		m_iFreeUnitUpkeepCivilianPopPercent += iChange;
-		calcFinalUnitUpkeep();
+		m_bUnitUpkeepDirty = true;
 	}
 }
 
@@ -10069,7 +10072,7 @@ void CvPlayer::changeFreeUnitUpkeepMilitaryPopPercent(const int iChange)
 	if (iChange != 0)
 	{
 		m_iFreeUnitUpkeepMilitaryPopPercent += iChange;
-		calcFinalUnitUpkeep();
+		m_bUnitUpkeepDirty = true;
 	}
 }
 
@@ -10097,7 +10100,7 @@ void CvPlayer::changeCivilianUnitUpkeepMod(const int iChange)
 	if (iChange != 0)
 	{
 		m_iCivilianUnitUpkeepMod += iChange;
-		calcFinalUnitUpkeep();
+		m_bUnitUpkeepDirty = true;
 	}
 }
 void CvPlayer::changeMilitaryUnitUpkeepMod(const int iChange)
@@ -10105,7 +10108,7 @@ void CvPlayer::changeMilitaryUnitUpkeepMod(const int iChange)
 	if (iChange != 0)
 	{
 		m_iMilitaryUnitUpkeepMod += iChange;
-		calcFinalUnitUpkeep();
+		m_bUnitUpkeepDirty = true;
 	}
 }
 
@@ -10119,7 +10122,7 @@ void CvPlayer::changeUnitUpkeep(const int iChange, const bool bMilitary)
 			m_iUnitUpkeepMilitary100 += iChange;
 		else m_iUnitUpkeepCivilian100 += iChange;
 
-		calcFinalUnitUpkeep();
+		m_bUnitUpkeepDirty = true;
 	}
 }
 
@@ -10184,10 +10187,10 @@ int64_t CvPlayer::getUnitUpkeepNet(const bool bMilitary, const int iUnitUpkeep) 
 
 int64_t CvPlayer::getFinalUnitUpkeep() const
 {
-	return m_iFinalUnitUpkeep;
+	return m_bUnitUpkeepDirty ? calcFinalUnitUpkeep() : m_iFinalUnitUpkeep;
 }
 
-int64_t CvPlayer::calcFinalUnitUpkeep(const bool bReal)
+int64_t CvPlayer::calcFinalUnitUpkeep(const bool bReal) const
 {
 	if (isNPC())
 	{
@@ -10200,7 +10203,18 @@ int64_t CvPlayer::calcFinalUnitUpkeep(const bool bReal)
 
 	if (iCalc > 0)
 	{
-		applyUnitUpkeepHandicap(iCalc);
+		// Difficulty adjustment
+		iCalc *= GC.getHandicapInfo(getHandicapType()).getUnitUpkeepPercent();
+		iCalc /= 100;
+
+		if (!isHumanPlayer())
+		{
+			iCalc *= GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIUnitUpkeepPercent();
+			iCalc /= 100;
+
+			iCalc *= std::max(0, 100 + GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIPerEraModifier() * getCurrentEra());
+			iCalc /= 100;
+		}
 	}
 	if (iCalc < 0)
 	{
@@ -10210,6 +10224,7 @@ int64_t CvPlayer::calcFinalUnitUpkeep(const bool bReal)
 	if (bReal)
 	{
 		m_iFinalUnitUpkeep = iCalc;
+		m_bUnitUpkeepDirty = false;
 
 		// Refresh relevant UI
 		if (getID() == GC.getGame().getActivePlayer())
@@ -10218,22 +10233,6 @@ int64_t CvPlayer::calcFinalUnitUpkeep(const bool bReal)
 		}
 	}
 	return iCalc;
-}
-
-void CvPlayer::applyUnitUpkeepHandicap(int64_t& iUpkeep)
-{
-	// Difficulty adjustment
-	iUpkeep *= GC.getHandicapInfo(getHandicapType()).getUnitUpkeepPercent();
-	iUpkeep /= 100;
-
-	if (!isHumanPlayer())
-	{
-		iUpkeep *= GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIUnitUpkeepPercent();
-		iUpkeep /= 100;
-
-		iUpkeep *= std::max(0, 100 + GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIPerEraModifier() * getCurrentEra());
-		iUpkeep /= 100;
-	}
 }
 
 int CvPlayer::getFinalUnitUpkeepChange(const int iExtra, const bool bMilitary)
@@ -19234,7 +19233,6 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iMilitaryUnitUpkeepMod);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iUnitUpkeepCivilian100);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iUnitUpkeepMilitary100);
-		WRAPPER_READ(wrapper, "CvPlayer", &m_iFinalUnitUpkeep);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iBaseFreeUnitUpkeepCivilian);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iBaseFreeUnitUpkeepMilitary);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iFreeUnitUpkeepCivilianPopPercent);
@@ -20159,7 +20157,6 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iMilitaryUnitUpkeepMod);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iUnitUpkeepCivilian100);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iUnitUpkeepMilitary100);
-		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFinalUnitUpkeep);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iBaseFreeUnitUpkeepCivilian);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iBaseFreeUnitUpkeepMilitary);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFreeUnitUpkeepCivilianPopPercent);
@@ -27183,15 +27180,20 @@ void CvPlayer::setColor(PlayerColorTypes eColor)
 	setupGraphical();
 }
 
-void CvPlayer::setHandicap(int iNewVal)
+void CvPlayer::setHandicap(int iNewVal, bool bAdjustGameHandicap)
 {
 	FASSERT_BOUNDS(0, GC.getNumHandicapInfos(), iNewVal);
 
 	if (iNewVal != getHandicapType())
 	{
 		GC.getInitCore().setHandicap(getID(), (HandicapTypes)iNewVal);
+
+		if (bAdjustGameHandicap)
+		{
+			GC.getGame().averageHandicaps();
+		}
 		setMaintenanceDirty(true);
-		calcFinalUnitUpkeep();
+		m_bUnitUpkeepDirty = true;
 	}
 }
 

@@ -75,7 +75,7 @@ class ANewDawnSettings:
 		#Change Difficulty
 		elif protocol == DIFFICULTY_EVENT_ID:
 			pPlayer = GC.getPlayer(data1)
-			pPlayer.setHandicap(data2)
+			pPlayer.setHandicap(data2, True)
 		#Change Color
 		elif protocol == COLOR_EVENT_ID:
 			pPlayer = GC.getPlayer(data1)
@@ -195,9 +195,8 @@ def updateAliveCivsOption():
 	aliveCivsOption.setValues(descs)
 
 def changedCurrentDifficulty(option, value):
-	iDifficulty = value - 1
-	if (iDifficulty >= 0):
-		CyMessageControl().sendModNetMessage(DIFFICULTY_EVENT_ID, GC.getGame().getActivePlayer(), iDifficulty, 0, 0)
+	if (value > 0):
+		CyMessageControl().sendModNetMessage(DIFFICULTY_EVENT_ID, GC.getGame().getActivePlayer(), value - 1, 0, 0)
 
 def changedUseLandmarkNames(option, value):
 	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_USE_LANDMARK_NAMES, value)
