@@ -596,7 +596,7 @@ void CvGame::doPreTurn0()
 		gDLL->getEngineIFace()->AutoSave(true);
 	}
 	// Toffer - Move camera after autosave as the latter interrupts the former from completing succsessfully.
-	GC.getCurrentViewport()->bringIntoView(GET_PLAYER(GC.getGame().getActivePlayer()).getStartingPlot()->getX(), GET_PLAYER(GC.getGame().getActivePlayer()).getStartingPlot()->getY());
+	GC.getCurrentViewport()->bringIntoView(GET_PLAYER(getActivePlayer()).getStartingPlot()->getX(), GET_PLAYER(getActivePlayer()).getStartingPlot()->getY());
 
 	OutputDebugString("doPreTurn0: End\n");
 }
@@ -862,7 +862,6 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 	m_iMercyRuleCounter = 0;
 	m_iCutLosersCounter = 0;
 	m_iHighToLowCounter = 0;
-	m_iIncreasingDifficultyCounter = 0;
 	m_iRiverBuildings = 0;
 	m_iNumWonders = 0;
 	m_bDiploVictoryEnabled = false;
@@ -889,7 +888,7 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 	m_bHotPbemBetweenTurns = false;
 	m_bPlayerOptionsSent = false;
 
-	m_eHandicap = eHandicap;
+	m_eHandicap = NO_HANDICAP;
 	m_ePausePlayer = NO_PLAYER;
 	m_eBestLandUnit = NO_UNIT;
 	m_eWinner = NO_TEAM;
@@ -2544,7 +2543,7 @@ void CvGame::selectAll(CvPlot* pPlot) const
 {
 	if (pPlot)
 	{
-		CvUnit* pCenterUnit = pPlot->getCenterUnit(GC.getGame().isDebugMode());
+		CvUnit* pCenterUnit = pPlot->getCenterUnit(isDebugMode());
 
 		if (pCenterUnit && pCenterUnit->getOwner() == getActivePlayer())
 		{
@@ -2608,7 +2607,7 @@ void CvGame::implementDeal(PlayerTypes eWho, PlayerTypes eOtherWho, CLinkList<Tr
 
 void CvGame::verifyDeals()
 {
-	algo::for_each(GC.getGame().deals(), bind(&CvDeal::verify, _1));
+	algo::for_each(deals(), bind(&CvDeal::verify, _1));
 }
 
 
@@ -4547,12 +4546,30 @@ void CvGame::updateUnitEnemyGlow()
 
 HandicapTypes CvGame::getHandicapType() const
 {
+	FAssert(m_eHandicap != NO_HANDICAP);
 	return m_eHandicap;
 }
 
 void CvGame::setHandicapType(HandicapTypes eHandicap)
 {
-	m_eHandicap = eHandicap;
+	if (m_eHandicap != eHandicap)
+	{
+		m_eHandicap = eHandicap;
+		
+		if (eHandicap != NO_HANDICAP)
+		{
+			for (int i = 0; i < GC.getNumUnitInfos(); i++)
+			{
+				if (GC.getUnitInfo((UnitTypes)i).isFound())
+				{
+					for (int j = 0; j < MAX_PLAYERS; j++)
+					{
+						GET_PLAYER((PlayerTypes)j).setUnitExtraCost((UnitTypes)i, GET_PLAYER((PlayerTypes)j).getNewCityProductionValue());
+					}
+				}
+			}
+		}
+	}
 }
 
 
@@ -5785,7 +5802,7 @@ void CvGame::doDeals()
 {
 	verifyDeals();
 
-	algo::for_each(GC.getGame().deals(), bind(&CvDeal::doTurn, _1));
+	algo::for_each(deals(), bind(&CvDeal::doTurn, _1));
 }
 
 //Enumerates all currently possible spawn plots for a spawning rule, for use in a thread, local density is not checked
@@ -8142,7 +8159,6 @@ void CvGame::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper,"CvGame",&m_iCurrentVoteID);
 	WRAPPER_READ(wrapper,"CvGame",&m_iCutLosersCounter);
 	WRAPPER_READ(wrapper,"CvGame",&m_iHighToLowCounter);
-	WRAPPER_READ(wrapper,"CvGame",&m_iIncreasingDifficultyCounter);
 	WRAPPER_READ(wrapper,"CvGame",&m_iMercyRuleCounter);
 	WRAPPER_READ(wrapper,"CvGame",&m_bDiploVictoryEnabled);
 	WRAPPER_READ_ARRAY(wrapper,"CvGame",MAX_PLAYERS, m_aiFlexibleDifficultyTimer);
@@ -8163,7 +8179,6 @@ void CvGame::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper,"CvGame",&m_bHotPbemBetweenTurns);
 	// m_bPlayerOptionsSent not saved
 
-	WRAPPER_READ(wrapper,"CvGame",(int*)&m_eHandicap);
 	WRAPPER_READ(wrapper,"CvGame",(int*)&m_ePausePlayer);
 
 	m_eBestLandUnit = NO_UNIT;
@@ -8383,14 +8398,13 @@ void CvGame::read(FDataStreamBase* pStream)
 
 	m_Properties.readWrapper(pStream);
 
-	int iCurrentHandicap = range(getHandicapType(), 0, GC.getNumHandicapInfos() - 1);
-	setHandicapType((HandicapTypes)iCurrentHandicap);
-
 	//Example of how to skip element
 	//WRAPPER_SKIP_ELEMENT(wrapper,"CvGame",m_bCircumnavigated, SAVE_VALUE_ANY);
 	WRAPPER_READ_CLASS_ARRAY(wrapper,"CvGame", REMAPPED_CLASS_TYPE_IMPROVEMENTS, GC.getNumImprovementInfos(), m_paiImprovementCount);
 	WRAPPER_READ_CLASS_ARRAY(wrapper,"CvGame", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_paiTechGameTurnDiscovered);
 	WRAPPER_READ_OBJECT_END(wrapper);
+
+	averageHandicaps();
 
 	//establish improvement costs
 	//for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
@@ -8443,7 +8457,6 @@ void CvGame::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvGame", m_iCurrentVoteID);
 	WRAPPER_WRITE(wrapper, "CvGame", m_iCutLosersCounter);
 	WRAPPER_WRITE(wrapper, "CvGame", m_iHighToLowCounter);
-	WRAPPER_WRITE(wrapper, "CvGame", m_iIncreasingDifficultyCounter);
 	WRAPPER_WRITE(wrapper, "CvGame", m_iMercyRuleCounter);
 	WRAPPER_WRITE(wrapper, "CvGame", m_bDiploVictoryEnabled);
 	WRAPPER_WRITE_ARRAY(wrapper, "CvGame", MAX_PLAYERS, m_aiFlexibleDifficultyTimer);
@@ -8460,7 +8473,6 @@ void CvGame::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvGame", m_bHotPbemBetweenTurns);
 	// m_bPlayerOptionsSent not saved
 
-	WRAPPER_WRITE(wrapper, "CvGame", m_eHandicap);
 	WRAPPER_WRITE(wrapper, "CvGame", m_ePausePlayer);
 	WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvGame", REMAPPED_CLASS_TYPE_UNITS, m_eBestLandUnit);
 	WRAPPER_WRITE(wrapper, "CvGame", m_eWinner);
@@ -9666,16 +9678,6 @@ void CvGame::changeHighToLowCounter(int iChange)
 	m_iHighToLowCounter += iChange;
 }
 
-int CvGame::getIncreasingDifficultyCounter() const
-{
-	return m_iIncreasingDifficultyCounter;
-}
-
-void CvGame::changeIncreasingDifficultyCounter(int iChange)
-{
-	m_iIncreasingDifficultyCounter += iChange;
-}
-
 void CvGame::doFinalFive()
 {
 	if (!isGameMultiPlayer() && isOption(GAMEOPTION_CHALLENGE_CUT_LOSERS) && countCivPlayersAlive() > 5)
@@ -9703,7 +9705,6 @@ void CvGame::doFinalFive()
 
 void CvGame::doHightoLow()
 {
-
 	if (!isGameMultiPlayer() && isOption(GAMEOPTION_CHALLENGE_HIGH_TO_LOW)
 	&& getGameTurn() >= GC.getDefineINT("HIGH_TO_LOW_FIRST_TURN_CHECK")
 	&& getHighToLowCounter() < 2)
@@ -9727,30 +9728,43 @@ void CvGame::doHightoLow()
 
 void CvGame::doIncreasingDifficulty()
 {
+	if (
+		!isOption(GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY)
+	// If game handicap is at max then all human players handicaps must also be at max.
+	||	getHandicapType() == GC.getNumHandicapInfos() - 1
+	// Are we at a valid turn for the check to occur?
+	||	0 != (
+			getGameTurn() % (
+				GC.getDefineINT("INCREASING_DIFFICULTY_TURN_CHECK_INCREMENTS")
+				*
+				GC.getGameSpeedInfo(getGameSpeedType()).getSpeedPercent()
+				/
+				100
+			)
+		)
+	) return;
 
-	if (isOption(GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY))
+	bool bHumanHandicapChanged = false;
+
+	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
-		changeIncreasingDifficultyCounter(1);
-		if (getIncreasingDifficultyCounter() >= GC.getDefineINT("INCREASING_DIFFICULTY_TURN_CHECK_INCREMENTS") * GC.getGameSpeedInfo(getGameSpeedType()).getSpeedPercent() / 100
-		&& getHandicapType() < GC.getNumHandicapInfos() - 1)
+		CvPlayer& playerX = GET_PLAYER((PlayerTypes)iI);
+		if (playerX.isHumanPlayer(true) && playerX.isAlive())
 		{
-			setHandicapType(HandicapTypes(getHandicapType() + 1));
-			changeIncreasingDifficultyCounter(getIncreasingDifficultyCounter() * -1);
+			playerX.setHandicap(playerX.getHandicapType() + 1);
 
-			for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
-			{
-				if (GET_PLAYER((PlayerTypes)iI).isHumanPlayer(true) && GET_PLAYER((PlayerTypes)iI).isAlive())
-				{
-					GET_PLAYER((PlayerTypes)iI).setHandicap(getHandicapType());
-
-					AddDLLMessage(
-						(PlayerTypes)iI, true, GC.getEVENT_MESSAGE_TIME(),
-						gDLL->getText("TXT_KEY_DIFFICULTY_INCREASED").GetCString(),
-						"AS2D_FEAT_ACCOMPLISHED", MESSAGE_TYPE_MAJOR_EVENT, NULL, GC.getCOLOR_WARNING_TEXT()
-					);
-				}
-			}
+			AddDLLMessage(
+				(PlayerTypes)iI, true, GC.getEVENT_MESSAGE_TIME(),
+				gDLL->getText("TXT_KEY_DIFFICULTY_INCREASED").GetCString(),
+				"AS2D_FEAT_ACCOMPLISHED", MESSAGE_TYPE_MAJOR_EVENT, NULL, GC.getCOLOR_WARNING_TEXT()
+			);
+			bHumanHandicapChanged = true;
 		}
+	}
+
+	if (bHumanHandicapChanged)
+	{
+		averageHandicaps();
 	}
 }
 
@@ -9771,7 +9785,7 @@ void CvGame::doFlexibleDifficulty()
 		{
 			int iTurns = playerX.getModderOption(MODDEROPTION_FLEXIBLE_DIFFICULTY_TURN_INCREMENTS);
 			int iTimer = getFlexibleDifficultyTimer(ePlayer);
-			const bool bHuman = playerX.isHumanPlayer();
+			const bool bHuman = playerX.isHumanPlayer(true);
 
 			if (iTurns <= 0 || bFlexDiffForAI && !bHuman)
 			{
@@ -9798,7 +9812,7 @@ void CvGame::doFlexibleDifficulty()
 
 			int iMinHandicap = 0;
 			// Toffer - The whole point of the increasing difficulty challenge is that the human handicap only increases.
-			if (bIncreasingDifficulty && playerX.isHumanPlayer(true))
+			if (bIncreasingDifficulty && bHuman)
 			{
 				iMinHandicap = playerX.getHandicapType();
 			}
@@ -9851,7 +9865,7 @@ void CvGame::doFlexibleDifficulty()
 					logging::logMsg("C2C.log", "[Flexible Difficulty] Adding score for player %S, score: %d\n", pPlayer.getName(), iScore);
 				}
 			}
-			const int stddev = iVariance >= 0 ? intSqrt(10000 * iVariance / iAliveCount) : 0;
+			const int stddev = intSqrt(10000 * iVariance / iAliveCount);
 
 			const int iCurrentScore = getPlayerScore(ePlayer);
 			logging::logMsg("C2C.log",
@@ -9965,23 +9979,24 @@ void CvGame::doFlexibleDifficulty()
 	}
 }
 
+// Corrects game difficulty to match average human player difficulty.
 void CvGame::averageHandicaps()
 {
-	int iAverageHandicap = 0;
+	int iAggregate = 0;
 	int iHumanCount = 0;
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isHumanPlayer() && GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
-			iAverageHandicap += 1 + GET_PLAYER((PlayerTypes)iI).getHandicapType();
+			iAggregate += GET_PLAYER((PlayerTypes)iI).getHandicapType();
 			iHumanCount++;
 		}
 	}
 	if (iHumanCount > 0)
 	{
-		iAverageHandicap /= iHumanCount;
-		setHandicapType((HandicapTypes)iAverageHandicap);
+		setHandicapType(HandicapTypes(iAggregate / iHumanCount));
 	}
+	else setHandicapType((HandicapTypes)GC.getDefineINT("STANDARD_HANDICAP"));
 }
 
 int CvGame::getMercyRuleCounter() const
@@ -10701,7 +10716,7 @@ void CvGame::doFoundCorporation(CorporationTypes eCorporation, bool bForce)
 	{
 		return;
 	}
-	if (GC.getGame().isModderGameOption(MODDERGAMEOPTION_NO_AUTO_CORPORATION_FOUNDING))
+	if (isModderGameOption(MODDERGAMEOPTION_NO_AUTO_CORPORATION_FOUNDING))
 	{
 		for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 		{
@@ -11045,7 +11060,7 @@ void CvGame::loadPirateShip(CvUnit* pUnit)
 {
 	FAssertMsg(pUnit->getDomainType() == DOMAIN_SEA, "loadPirateShip expects to be passed a water unit");
 
-	const bool bSM = GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS);
+	const bool bSM = isOption(GAMEOPTION_COMBAT_SIZE_MATTERS);
 
 	for (int iI = 0; iI < pUnit->cargoSpace(); iI++)
 	{

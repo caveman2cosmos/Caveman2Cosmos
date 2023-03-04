@@ -32633,7 +32633,6 @@ void CvGameTextMgr::setScoreHelp(CvWStringBuffer &szString, PlayerTypes ePlayer)
 	{
 		CvPlayer& player = GET_PLAYER(ePlayer);
 
-
 		int iPop = player.getPopScore();
 		int iMaxPop = GC.getGame().getMaxPopulation();
 		int iPopScore = 0;
@@ -32668,7 +32667,6 @@ void CvGameTextMgr::setScoreHelp(CvWStringBuffer &szString, PlayerTypes ePlayer)
 			iPopScore, iPop, iMaxPop, iLandScore, iLand, iMaxLand, iTechScore,
 			iTech, iMaxTech, iWondersScore, iWonders, iMaxWonders, iTotalScore, iVictoryScore)
 		);
-		szString.append(gDLL->getText("TXT_KEY_SCORE_DIFFICULTY_LEVEL", GC.getHandicapInfo(player.getHandicapType()).getTextKeyWide()));
 	}
 }
 
@@ -35796,7 +35794,10 @@ void CvGameTextMgr::setFlagHelp(CvWStringBuffer &szBuffer)
 
 	szBuffer.append(CvWString::format(SETCOLR L"%s\n", TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), player.getCivilizationDescription()));
 
-	szBuffer.append(CvWString::format(SETCOLR L"Caveman2Cosmos %S" ENDCOLR, TEXT_COLOR("COLOR_YELLOW"), GC.getDefineSTRING("C2C_VERSION")));
+	szBuffer.append(CvWString::format(SETCOLR L"Caveman2Cosmos %S\n" ENDCOLR, TEXT_COLOR("COLOR_YELLOW"), GC.getDefineSTRING("C2C_VERSION")));
+
+	szBuffer.append(CvWString::format(SETCOLR L"%s\n" ENDCOLR, TEXT_COLOR("COLOR_MAGENTA"), gDLL->getText("TXT_KEY_SETTINGS_DIFFICULTY_GAME", GC.getHandicapInfo(GAME.getHandicapType()).getTextKeyWide()).GetCString()));
+	szBuffer.append(CvWString::format(SETCOLR L"%s" ENDCOLR, TEXT_COLOR("COLOR_MAGENTA"), gDLL->getText("TXT_KEY_SETTINGS_DIFFICULTY_PLAYER", GC.getHandicapInfo(player.getHandicapType()).getTextKeyWide()).GetCString()));
 
 	// Traits
 	if (player.isModderOption(MODDEROPTION_SHOW_TRAITS_FLAG) || GAME.isOption(GAMEOPTION_LEADER_DEVELOPING))

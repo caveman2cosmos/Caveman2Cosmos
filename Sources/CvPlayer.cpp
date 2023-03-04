@@ -443,14 +443,6 @@ void CvPlayer::initMore(PlayerTypes eID, LeaderHeadTypes ePersonality, bool bSet
 	{
 		setCivics((CivicOptionTypes)iI, (CivicTypes)GC.getCivilizationInfo(getCivilizationType()).getCivilizationInitialCivics(iI));
 	}
-
-	for (int iI = 0; iI < GC.getNumUnitInfos(); ++iI)
-	{
-		if (GC.getUnitInfo((UnitTypes)iI).isFound())
-		{
-			setUnitExtraCost((UnitTypes)iI, getNewCityProductionValue());
-		}
-	}
 }
 
 
@@ -463,6 +455,10 @@ void CvPlayer::init(PlayerTypes eID)
 
 	if (GC.getInitCore().getSlotStatus(getID()) == SS_TAKEN || GC.getInitCore().getSlotStatus(getID()) == SS_COMPUTER)
 	{
+		if (eID == BARBARIAN_PLAYER)
+		{
+			GC.getGame().averageHandicaps();
+		}
 		initMore(eID, getLeaderType());
 
 		updateMaxAnarchyTurns();
