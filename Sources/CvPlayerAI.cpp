@@ -20527,10 +20527,11 @@ void CvPlayerAI::read(FDataStreamBase* pStream)
 
 		m_eBestResearchTarget = NO_TECH;
 		WRAPPER_READ_CLASS_ENUM(wrapper, "CvPlayerAI", REMAPPED_CLASS_TYPE_TECHS, (int*)&m_eBestResearchTarget);
+
+		AI_updateBonusValue();
 	}
 	WRAPPER_READ_OBJECT_END(wrapper);
 
-	AI_updateBonusValue();
 	//	If the total number of barb units is getting dangerously close to the limit we can
 	//	cull some animals.  Note - this has to be done in PlayerAI not Player, because kills won't
 	//	operate correctly until AI structures are initialized (class counting for example)
