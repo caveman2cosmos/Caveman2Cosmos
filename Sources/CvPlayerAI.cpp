@@ -20419,10 +20419,10 @@ void CvPlayerAI::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ_OBJECT_START(wrapper);
 
-	CvPlayer::read(pStream);	// read base class data first
+	CvPlayer::read(pStream); // read base class data first
 
 	uint uiFlag = 0;
-	WRAPPER_READ(wrapper, "CvPlayerAI", &uiFlag);	// flags for expansion
+	WRAPPER_READ(wrapper, "CvPlayerAI", &uiFlag); // flags for expansion
 
 	if ((uiFlag & PLAYERAI_UI_FLAG_OMITTED) == 0)
 	{
@@ -20527,10 +20527,11 @@ void CvPlayerAI::read(FDataStreamBase* pStream)
 
 		m_eBestResearchTarget = NO_TECH;
 		WRAPPER_READ_CLASS_ENUM(wrapper, "CvPlayerAI", REMAPPED_CLASS_TYPE_TECHS, (int*)&m_eBestResearchTarget);
+
+		AI_updateBonusValue();
 	}
 	WRAPPER_READ_OBJECT_END(wrapper);
 
-	AI_updateBonusValue();
 	//	If the total number of barb units is getting dangerously close to the limit we can
 	//	cull some animals.  Note - this has to be done in PlayerAI not Player, because kills won't
 	//	operate correctly until AI structures are initialized (class counting for example)
@@ -20589,28 +20590,15 @@ void CvPlayerAI::write(FDataStreamBase* pStream)
 
 		WRAPPER_WRITE(wrapper, "CvPlayerAI", m_iStrategyHash);
 		WRAPPER_WRITE(wrapper, "CvPlayerAI", m_iStrategyHashCacheTurn);
-		/************************************************************************************************/
-		/* BETTER_BTS_AI_MOD					  03/18/10								jdog5000	  */
-		/*																							  */
-		/* Victory Strategy AI																		  */
-		/************************************************************************************************/
+
 		WRAPPER_WRITE(wrapper, "CvPlayerAI", m_iStrategyRand);
 		WRAPPER_WRITE(wrapper, "CvPlayerAI", m_iVictoryStrategyHash);
 		WRAPPER_WRITE(wrapper, "CvPlayerAI", m_iVictoryStrategyHashCacheTurn);
-		/************************************************************************************************/
-		/* BETTER_BTS_AI_MOD					   END												  */
-		/************************************************************************************************/
-		/************************************************************************************************/
-		/* RevDCM					  Start		 12/9/09												*/
-		/*																							  */
-		/* Inquisitions																				 */
-		/************************************************************************************************/
+
 		WRAPPER_WRITE(wrapper, "CvPlayerAI", m_bPushReligiousVictory);
 		WRAPPER_WRITE(wrapper, "CvPlayerAI", m_bConsiderReligiousVictory);
 		WRAPPER_WRITE(wrapper, "CvPlayerAI", m_bHasInquisitionTarget);
-		/************************************************************************************************/
-		/* RevDCM						 END															*/
-		/************************************************************************************************/
+
 		WRAPPER_WRITE(wrapper, "CvPlayerAI", m_iAveragesCacheTurn);
 		WRAPPER_WRITE(wrapper, "CvPlayerAI", m_iAverageGreatPeopleMultiplier);
 

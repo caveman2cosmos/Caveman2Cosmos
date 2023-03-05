@@ -792,7 +792,7 @@ void CvInitCore::resetPlayer(PlayerTypes eID, CvInitCore * pSource, bool bClear,
 			setFlagDecal(eID, pSource->getFlagDecal(eID));
 			setWhiteFlag(eID, pSource->getWhiteFlag(eID));
 
-			setHandicap(eID, pSource->getHandicap(eID));
+			setHandicap(eID, (HandicapTypes)range(pSource->getHandicap(eID), 0, GC.getNumHandicapInfos() - 1));
 			setCiv(eID, pSource->getCiv(eID));
 			setTeam(eID, pSource->getTeam(eID));
 			setLeader(eID, pSource->getLeader(eID));
