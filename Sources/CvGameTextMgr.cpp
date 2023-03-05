@@ -24729,7 +24729,7 @@ void CvGameTextMgr::setBadHealthHelp(CvWStringBuffer &szBuffer, CvCity& city)
 			szBuffer.append(NEWLINE);
 		}
 
-		iHealth = city.getExtraTechUnHealthTotal();
+		iHealth = -city.getExtraTechHealthTotal();
 		if (iHealth > 0)
 		{
 			szBuffer.append(gDLL->getText("TXT_KEY_UNHEALTHY_TECH_SPECIALIST", iHealth));
@@ -25277,7 +25277,7 @@ void CvGameTextMgr::setAngerHelp(CvWStringBuffer &szBuffer, CvCity& city)
 		iTotal += iAnger;
 	}
 
-	iAnger = city.getExtraTechUnHappinessTotal();
+	iAnger = -city.getExtraTechHappinessTotal();
 	if (iAnger > 0)
 	{
 		szBuffer.append(gDLL->getText("TXT_KEY_UNHAPPY_TECH_SPECIALIST", iAnger));

@@ -5069,7 +5069,7 @@ bool CvTeam::isHasTech(TechTypes eIndex) const
 		return true;
 	}
 	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eIndex);
-	FAssertMsg(m_pabHasTech != NULL, "m_pabHasTech is not expected to be equal with NULL");
+	FAssertMsg(m_pabHasTech, "m_pabHasTech is not expected to be equal with NULL");
 	return m_pabHasTech[eIndex];
 }
 
@@ -5898,34 +5898,34 @@ void CvTeam::setCircumnavigated(bool bNewValue)
 void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 {
 	PROFILE_FUNC();
+	const CvTechInfo& tech = GC.getTechInfo(eTech);
 
-	if (GC.getTechInfo(eTech).isExtraWaterSeeFrom())
+	if (tech.isExtraWaterSeeFrom())
 	{
 		changeExtraWaterSeeFromCount(iChange);
 	}
 
-	if (iChange > 0 && GC.getTechInfo(eTech).isMapCentering())
+	if (iChange > 0 && tech.isMapCentering())
 	{
 		setMapCentering(true);
 	}
 
-	if (GC.getTechInfo(eTech).isMapTrading())
+	if (tech.isMapTrading())
 	{
 		changeMapTradingCount(iChange);
 	}
 
-	const CvTechInfo& kTech = GC.getTechInfo(eTech);
-	if (kTech.isCanPassPeaks())
+	if (tech.isCanPassPeaks())
 	{
 		changeCanPassPeaksCount(iChange);
 		//	Koshling - makes peaks workable which chnages the yield calculation
 		updateYield();
 	}
-	if (kTech.isMoveFastPeaks())
+	if (tech.isMoveFastPeaks())
 	{
 		changeMoveFastPeaksCount(iChange);
 	}
-	if (kTech.isCanFoundOnPeaks())
+	if (tech.isCanFoundOnPeaks())
 	{
 		changeCanFoundOnPeaksCount(iChange);
 	}
@@ -5937,96 +5937,96 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 		GC.getGame().makeTechDiscovered(eTech);
 	}
 
-	if (kTech.isEmbassyTrading())
+	if (tech.isEmbassyTrading())
 	{
 		changeEmbassyTradingCount(iChange);
 	}
 
-	if (kTech.isRebaseAnywhere())
+	if (tech.isRebaseAnywhere())
 	{
 		changeRebaseAnywhereCount(iChange);
 	}
 
-	if (kTech.getGlobalTradeModifier() != 0)
+	if (tech.getGlobalTradeModifier() != 0)
 	{
-		changeTradeModifier(kTech.getGlobalTradeModifier() * iChange);
+		changeTradeModifier(tech.getGlobalTradeModifier() * iChange);
 	}
 
-	if (kTech.getGlobalForeignTradeModifier() != 0)
+	if (tech.getGlobalForeignTradeModifier() != 0)
 	{
-		changeForeignTradeModifier(kTech.getGlobalForeignTradeModifier() * iChange);
+		changeForeignTradeModifier(tech.getGlobalForeignTradeModifier() * iChange);
 	}
 
-	if (kTech.getTradeMissionModifier() != 0)
+	if (tech.getTradeMissionModifier() != 0)
 	{
-		changeTradeMissionModifier(kTech.getTradeMissionModifier() * iChange);
+		changeTradeMissionModifier(tech.getTradeMissionModifier() * iChange);
 	}
 
-	if (kTech.getCorporationRevenueModifier() != 0)
+	if (tech.getCorporationRevenueModifier() != 0)
 	{
-		changeCorporationRevenueModifier(kTech.getCorporationRevenueModifier() * iChange);
+		changeCorporationRevenueModifier(tech.getCorporationRevenueModifier() * iChange);
 	}
 
-	if (kTech.getCorporationMaintenanceModifier() != 0)
+	if (tech.getCorporationMaintenanceModifier() != 0)
 	{
-		changeCorporationMaintenanceModifier(kTech.getCorporationMaintenanceModifier() * iChange);
+		changeCorporationMaintenanceModifier(tech.getCorporationMaintenanceModifier() * iChange);
 	}
 
-	if (kTech.isEnablesDesertFarming())
+	if (tech.isEnablesDesertFarming())
 	{
 		changeCanFarmDesertCount(iChange);
 		setLastRoundOfValidImprovementCacheUpdate();
 	}
 
-	if (GC.getTechInfo(eTech).isTechTrading())
+	if (tech.isTechTrading())
 	{
 		changeTechTradingCount(iChange);
 	}
 
-	if (GC.getTechInfo(eTech).isGoldTrading())
+	if (tech.isGoldTrading())
 	{
 		changeGoldTradingCount(iChange);
 	}
 
-	if (GC.getTechInfo(eTech).isOpenBordersTrading())
+	if (tech.isOpenBordersTrading())
 	{
 		changeOpenBordersTradingCount(iChange);
 		changeLimitedBordersTradingCount(iChange);
 	}
 
-	if (GC.getTechInfo(eTech).isDefensivePactTrading())
+	if (tech.isDefensivePactTrading())
 	{
 		changeDefensivePactTradingCount(iChange);
 	}
 
-	if (GC.getTechInfo(eTech).isPermanentAllianceTrading())
+	if (tech.isPermanentAllianceTrading())
 	{
 		changePermanentAllianceTradingCount(iChange);
 	}
 
-	if (GC.getTechInfo(eTech).isVassalStateTrading())
+	if (tech.isVassalStateTrading())
 	{
 		changeVassalTradingCount(iChange);
 	}
 
-	if (GC.getTechInfo(eTech).isBridgeBuilding())
+	if (tech.isBridgeBuilding())
 	{
 		changeBridgeBuildingCount(iChange);
 	}
 
-	if (GC.getTechInfo(eTech).isIrrigation())
+	if (tech.isIrrigation())
 	{
 		changeIrrigationCount(iChange);
 		setLastRoundOfValidImprovementCacheUpdate();
 	}
 
-	if (GC.getTechInfo(eTech).isIgnoreIrrigation())
+	if (tech.isIgnoreIrrigation())
 	{
 		changeIgnoreIrrigationCount(iChange);
 		setLastRoundOfValidImprovementCacheUpdate();
 	}
 
-	if (GC.getTechInfo(eTech).isWaterWork())
+	if (tech.isWaterWork())
 	{
 		changeWaterWorkCount(iChange);
 		setLastRoundOfValidImprovementCacheUpdate();
@@ -6039,12 +6039,12 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 
 	for (int iI = 0; iI < NUM_DOMAIN_TYPES; iI++)
 	{
-		changeExtraMoves(((DomainTypes)iI), (GC.getTechInfo(eTech).getDomainExtraMoves(iI) * iChange));
+		changeExtraMoves(((DomainTypes)iI), (tech.getDomainExtraMoves(iI) * iChange));
 	}
 
 	for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 	{
-		if (GC.getTechInfo(eTech).isCommerceFlexible(iI))
+		if (tech.isCommerceFlexible(iI))
 		{
 			changeCommerceFlexibleCount(((CommerceTypes)iI), iChange);
 		}
@@ -6052,13 +6052,13 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 
 	for (int iI = 0; iI < GC.getNumTerrainInfos(); iI++)
 	{
-		if (GC.getTechInfo(eTech).isTerrainTrade(iI))
+		if (tech.isTerrainTrade(iI))
 		{
 			changeTerrainTradeCount(((TerrainTypes)iI), iChange);
 		}
 	}
 
-	if (GC.getTechInfo(eTech).isRiverTrade())
+	if (tech.isRiverTrade())
 	{
 		changeRiverTradeCount(iChange);
 	}
@@ -6095,27 +6095,7 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 
 		if (playerX.isAliveAndTeam(getID()))
 		{
-			playerX.changeFeatureProductionModifier(GC.getTechInfo(eTech).getFeatureProductionModifier() * iChange);
-			playerX.changeWorkerSpeedModifier(GC.getTechInfo(eTech).getWorkerSpeedModifier() * iChange);
-			playerX.changeTradeRoutes(GC.getTechInfo(eTech).getTradeRoutes() * iChange);
-			playerX.changeExtraHealth(GC.getTechInfo(eTech).getHealth() * iChange);
-			playerX.changeExtraHappiness(GC.getTechInfo(eTech).getHappiness() * iChange);
-			playerX.changeDistanceMaintenanceModifier(GC.getTechInfo(eTech).getDistanceMaintenanceModifier() * iChange);
-			playerX.changeNumCitiesMaintenanceModifier(GC.getTechInfo(eTech).getNumCitiesMaintenanceModifier() * iChange);
-			playerX.changeMaintenanceModifier(GC.getTechInfo(eTech).getMaintenanceModifier() * iChange);
-			playerX.changeCoastalDistanceMaintenanceModifier(GC.getTechInfo(eTech).getCoastalDistanceMaintenanceModifier() * iChange);
-
-			playerX.changeAssets(GC.getTechInfo(eTech).getAssetValue() * iChange);
-			playerX.changeTechPower(GC.getTechInfo(eTech).getPowerValue() * iChange);
-			playerX.changeTechScore(getTechScore(eTech) * iChange);
-
-			playerX.changeTechInflation(kTech.getInflationModifier() * iChange);
-
-			for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
-			{
-				playerX.changeCommerceRateModifier((CommerceTypes)iJ, GC.getTechInfo(eTech).getCommerceModifier(iJ) * iChange);
-			}
-			playerX.updateTechHappinessandHealth();
+			playerX.processTech(eTech, iChange);
 		}
 	}
 

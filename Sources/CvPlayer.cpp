@@ -595,7 +595,7 @@ void CvPlayer::resetPlotAndCityData()
 		plotX->setFoundValue(getID(), 0);
 
 		CvCity* city = plotX->getPlotCity();
-		if (city != NULL)
+		if (city)
 		{
 			city->setCulture(getID(), 0, false, false);
 			city->changeNumRevolts(getID(), -city->getNumRevolts(getID()));
@@ -11450,7 +11450,7 @@ void CvPlayer::changeTechScore(int iChange)
 	if (iChange != 0)
 	{
 		m_iTechScore += iChange;
-		FASSERT_NOT_NEGATIVE(getTechScore());
+		FASSERT_NOT_NEGATIVE(m_iTechScore);
 
 		GC.getGame().setScoreDirty(true);
 
@@ -26553,24 +26553,25 @@ void CvPlayer::changeNoCapitalUnhappiness(int iChange)
 {
 	if (iChange != 0)
 	{
+		const bool bWasTrue = isNoCapitalUnhappiness();
+
 		m_iNoCapitalUnhappiness += iChange;
-		CvCity* pCapitalCity = getCapitalCity();
 
-		if (pCapitalCity != NULL)
+		if (bWasTrue != isNoCapitalUnhappiness())
 		{
-			pCapitalCity->AI_setAssignWorkDirty(true);
+			CvCity* pCapitalCity = getCapitalCity();
 
-			if (pCapitalCity->getTeam() == GC.getGame().getActiveTeam())
+			if (pCapitalCity)
 			{
-				pCapitalCity->setInfoDirty(true);
+				pCapitalCity->AI_setAssignWorkDirty(true);
+
+				if (pCapitalCity->getTeam() == GC.getGame().getActiveTeam())
+				{
+					pCapitalCity->setInfoDirty(true);
+				}
 			}
 		}
 	}
-}
-
-int CvPlayer::getNoCapitalUnhappiness() const
-{
-	return m_iNoCapitalUnhappiness;
 }
 
 int CvPlayer::getFreeSpecialistCount(SpecialistTypes eIndex) const
@@ -30150,13 +30151,6 @@ void CvPlayer::changeExtraNonStateReligionSpreadModifier(int iChange)
 	m_iExtraNonStateReligionSpreadModifier += iChange;
 }
 
-void CvPlayer::updateTechHappinessandHealth()
-{
-	PROFILE_FUNC();
-
-	for_each(cities(), CvCity::fn::updateTechHappinessandHealth());
-}
-
 void CvPlayer::checkReligiousDisablingAllBuildings()
 {
 	PROFILE_FUNC();
@@ -30564,4 +30558,30 @@ void CvPlayer::setCommandFieldPlot(bool bNewValue, CvPlot* aPlot)
 		m_commandFieldPlots.erase(itr);
 	}
 	else FErrorMsg("Vector element to remove was missing!");
+}
+
+
+void CvPlayer::processTech(const TechTypes eTech, const int iChange)
+{
+	const CvTechInfo& tech = GC.getTechInfo(eTech);
+
+	changeFeatureProductionModifier(tech.getFeatureProductionModifier() * iChange);
+	changeWorkerSpeedModifier(tech.getWorkerSpeedModifier() * iChange);
+	changeTradeRoutes(tech.getTradeRoutes() * iChange);
+	changeExtraHealth(tech.getHealth() * iChange);
+	changeExtraHappiness(tech.getHappiness() * iChange);
+	changeDistanceMaintenanceModifier(tech.getDistanceMaintenanceModifier() * iChange);
+	changeNumCitiesMaintenanceModifier(tech.getNumCitiesMaintenanceModifier() * iChange);
+	changeMaintenanceModifier(tech.getMaintenanceModifier() * iChange);
+	changeCoastalDistanceMaintenanceModifier(tech.getCoastalDistanceMaintenanceModifier() * iChange);
+	changeAssets(tech.getAssetValue() * iChange);
+	changeTechPower(tech.getPowerValue() * iChange);
+	changeTechScore(getScoreValueOfTech(eTech) * iChange);
+	changeTechInflation(tech.getInflationModifier() * iChange);
+
+	for (int i = 0; i < NUM_COMMERCE_TYPES; i++)
+	{
+		changeCommerceRateModifier(static_cast<CommerceTypes>(i), tech.getCommerceModifier(i) * iChange);
+	}
+	algo::for_each(cities(), CvCity::fn::processTech(eTech, iChange));
 }

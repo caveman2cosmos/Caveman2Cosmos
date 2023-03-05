@@ -65,6 +65,8 @@ public:
 	bool isIdleCity(const int iCityID) const;
 	void resetIdleCities();
 
+	void processTech(const TechTypes eTech, const int iChange);
+
 protected:
 	CvGameObjectPlayer m_GameObject;
 	void baseInit(PlayerTypes eID);
@@ -1277,7 +1279,7 @@ public:
 	int getProjectHealth() const;
 	void changeProjectHealth(int iChange);
 
-	int getNoCapitalUnhappiness() const;
+	inline bool isNoCapitalUnhappiness() const { return m_iNoCapitalUnhappiness > 0; }
 	void changeNoCapitalUnhappiness(int iChange);
 
 	int getCivilizationHealth() const;
@@ -2235,7 +2237,6 @@ public:
 	void setExtraNonStateReligionSpreadModifier(int iValue);
 	void changeExtraNonStateReligionSpreadModifier(int iChange);
 
-	void updateTechHappinessandHealth();
 	void checkReligiousDisablingAllBuildings();
 	//TB Traits end
 

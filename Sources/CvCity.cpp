@@ -696,6 +696,10 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 		m_aiTradeYield[iI] = 0;
 		m_aiCorporationYield[iI] = 0;
 		m_aiExtraSpecialistYield[iI] = 0;
+		m_abBaseYieldRankValid[iI] = false;
+		m_abYieldRankValid[iI] = false;
+		m_aiBaseYieldRank[iI] = -1;
+		m_aiYieldRank[iI] = -1;
 	}
 
 	for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
@@ -715,6 +719,8 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 		m_aiBuildingCommerceTechChange[iI] = 0;
 		m_aiExtraSpecialistCommerce[iI] = 0;
 		m_buildingCommerceMod[iI] = 0;
+		m_abCommerceRankValid[iI] = false;
+		m_aiCommerceRank[iI] = -1;
 	}
 
 	for (int iI = 0; iI < NUM_DOMAIN_TYPES; iI++)
@@ -727,10 +733,6 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	{
 		m_aiCulture[iI] = 0;
 		m_aiNumRevolts[iI] = 0;
-	}
-
-	for (int iI = 0; iI < MAX_PLAYERS; iI++)
-	{
 		m_abEverOwned[iI] = false;
 		m_abTradeRoute[iI] = false;
 	}
@@ -738,10 +740,6 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	for (int iI = 0; iI < MAX_TEAMS; iI++)
 	{
 		m_abRevealed[iI] = false;
-	}
-
-	for (int iI = 0; iI < MAX_TEAMS; iI++)
-	{
 		m_abEspionageVisibility[iI] = false;
 	}
 
@@ -750,21 +748,6 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 
 	m_bPopulationRankValid = false;
 	m_iPopulationRank = -1;
-
-
-	for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
-	{
-		m_abBaseYieldRankValid[iI] = false;
-		m_abYieldRankValid[iI] = false;
-		m_aiBaseYieldRank[iI] = -1;
-		m_aiYieldRank[iI] = -1;
-	}
-
-	for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
-	{
-		m_abCommerceRankValid[iI] = false;
-		m_aiCommerceRank[iI] = -1;
-	}
 
 	if (!bConstructorCall)
 	{
@@ -5869,77 +5852,78 @@ int CvCity::unhappyLevel(int iExtra) const
 {
 	PROFILE_FUNC();
 
-	int iUnhappiness = 0;
-	if (!isNoUnhappiness() && (!isCapital() || GET_PLAYER(getOwner()).getNoCapitalUnhappiness() == 0))
+	if (isNoUnhappiness() || isCapital() && GET_PLAYER(getOwner()).isNoCapitalUnhappiness())
 	{
-		int  iAngerPercent = 0;
+		return 0;
+	}
+	int iUnhappiness = 0;
+	int iAngerPercent = 0;
 
-		iAngerPercent += getOvercrowdingPercentAnger(iExtra);
-		iAngerPercent += getNoMilitaryPercentAnger();
-		iAngerPercent += getCulturePercentAnger();
-		iAngerPercent += getReligionPercentAnger();
-		iAngerPercent += getHurryPercentAnger(iExtra);
-		iAngerPercent += getConscriptPercentAnger(iExtra);
-		iAngerPercent += getDefyResolutionPercentAnger(iExtra);
-		iAngerPercent += getWarWearinessPercentAnger();
-		iAngerPercent += getRevRequestPercentAnger(iExtra);
-		iAngerPercent += getRevIndexPercentAnger();
+	iAngerPercent += getOvercrowdingPercentAnger(iExtra);
+	iAngerPercent += getNoMilitaryPercentAnger();
+	iAngerPercent += getCulturePercentAnger();
+	iAngerPercent += getReligionPercentAnger();
+	iAngerPercent += getHurryPercentAnger(iExtra);
+	iAngerPercent += getConscriptPercentAnger(iExtra);
+	iAngerPercent += getDefyResolutionPercentAnger(iExtra);
+	iAngerPercent += getWarWearinessPercentAnger();
+	iAngerPercent += getRevRequestPercentAnger(iExtra);
+	iAngerPercent += getRevIndexPercentAnger();
 
-		for (int iI = 0; iI < GC.getNumCivicInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumCivicInfos(); iI++)
+	{
+		iAngerPercent += GET_PLAYER(getOwner()).getCivicPercentAnger((CivicTypes)iI);
+	}
+
+	iUnhappiness = ((iAngerPercent * (getPopulation() + iExtra)) / GC.getPERCENT_ANGER_DIVISOR());
+
+	iUnhappiness -= std::min(0, getLargestCityHappiness());
+	iUnhappiness -= std::min(0, getMilitaryHappiness());
+	iUnhappiness -= std::min(0, getCurrentStateReligionHappiness());
+	iUnhappiness -= std::min(0, getBuildingBadHappiness());
+	iUnhappiness -= std::min(0, getExtraBuildingBadHappiness());
+	iUnhappiness -= std::min(0, getFeatureBadHappiness());
+	iUnhappiness -= std::min(0, getBonusBadHappiness());
+	iUnhappiness -= std::min(0, getReligionBadHappiness());
+	iUnhappiness -= std::min(0, getCommerceHappiness());
+	iUnhappiness -= std::min(0, area()->getBuildingHappiness(getOwner()));
+	iUnhappiness -= std::min(0, GET_PLAYER(getOwner()).getBuildingHappiness());
+	iUnhappiness -= std::min(0, (getExtraHappiness() + GET_PLAYER(getOwner()).getExtraHappiness()));
+	iUnhappiness -= std::min(0, GC.getHandicapInfo(getHandicapType()).getHappyBonus());
+	iUnhappiness += std::max(0, getVassalUnhappiness());
+	iUnhappiness += std::max(0, getEspionageHappinessCounter());
+	iUnhappiness -= std::min(0, getCivicHappiness());
+	iUnhappiness -= std::min(0, getSpecialistUnhappiness() / 100);
+	iUnhappiness -= std::min(0, (GET_PLAYER(getOwner()).getWorldHappiness()));
+	iUnhappiness -= std::min(0, (GET_PLAYER(getOwner()).getProjectHappiness()));
+	iUnhappiness += std::max(0, GET_PLAYER(getOwner()).calculateTaxRateUnhappiness());
+	iUnhappiness -= std::min(0, calculateCorporationHappiness());
+	iUnhappiness += std::max(0, getEventAnger());
+	iUnhappiness -= std::min(0, getExtraTechHappinessTotal());
+
+	int iForeignAnger = GET_PLAYER(getOwner()).getForeignUnhappyPercent();
+	if (iForeignAnger != 0) {
+		iForeignAnger = 100 / iForeignAnger;
+		iForeignAnger = ((100 - plot()->calculateCulturePercent(getOwner())) * iForeignAnger) / 100;
+		iUnhappiness += std::max(0, iForeignAnger);
+	}
+	if (GC.getGame().isOption(GAMEOPTION_MAP_PERSONALIZED))
+	{
+		if (!GET_PLAYER(getOwner()).isNoLandmarkAnger())
 		{
-			iAngerPercent += GET_PLAYER(getOwner()).getCivicPercentAnger((CivicTypes)iI);
+			iUnhappiness += std::max(0, getLandmarkAnger());
 		}
+		iUnhappiness -= std::min(0, GET_PLAYER(getOwner()).getLandmarkHappiness());
+	}
 
-		iUnhappiness = ((iAngerPercent * (getPopulation() + iExtra)) / GC.getPERCENT_ANGER_DIVISOR());
+	if (GET_PLAYER(getOwner()).getCityLimit() != 0 &&
+		GET_PLAYER(getOwner()).getCityOverLimitUnhappy() != 0)
+	{
+		int overLimitCities = GET_PLAYER(getOwner()).getNumCities() - GET_PLAYER(getOwner()).getCityLimit();
 
-		iUnhappiness -= std::min(0, getLargestCityHappiness());
-		iUnhappiness -= std::min(0, getMilitaryHappiness());
-		iUnhappiness -= std::min(0, getCurrentStateReligionHappiness());
-		iUnhappiness -= std::min(0, getBuildingBadHappiness());
-		iUnhappiness -= std::min(0, getExtraBuildingBadHappiness());
-		iUnhappiness -= std::min(0, getFeatureBadHappiness());
-		iUnhappiness -= std::min(0, getBonusBadHappiness());
-		iUnhappiness -= std::min(0, getReligionBadHappiness());
-		iUnhappiness -= std::min(0, getCommerceHappiness());
-		iUnhappiness -= std::min(0, area()->getBuildingHappiness(getOwner()));
-		iUnhappiness -= std::min(0, GET_PLAYER(getOwner()).getBuildingHappiness());
-		iUnhappiness -= std::min(0, (getExtraHappiness() + GET_PLAYER(getOwner()).getExtraHappiness()));
-		iUnhappiness -= std::min(0, GC.getHandicapInfo(getHandicapType()).getHappyBonus());
-		iUnhappiness += std::max(0, getVassalUnhappiness());
-		iUnhappiness += std::max(0, getEspionageHappinessCounter());
-		iUnhappiness -= std::min(0, getCivicHappiness());
-		iUnhappiness -= std::min(0, getSpecialistUnhappiness() / 100);
-		iUnhappiness -= std::min(0, (GET_PLAYER(getOwner()).getWorldHappiness()));
-		iUnhappiness -= std::min(0, (GET_PLAYER(getOwner()).getProjectHappiness()));
-		iUnhappiness += std::max(0, GET_PLAYER(getOwner()).calculateTaxRateUnhappiness());
-		iUnhappiness -= std::min(0, calculateCorporationHappiness());
-		iUnhappiness += std::max(0, getEventAnger());
-		iUnhappiness += getExtraTechUnHappinessTotal();
-
-		int iForeignAnger = GET_PLAYER(getOwner()).getForeignUnhappyPercent();
-		if (iForeignAnger != 0) {
-			iForeignAnger = 100 / iForeignAnger;
-			iForeignAnger = ((100 - plot()->calculateCulturePercent(getOwner())) * iForeignAnger) / 100;
-			iUnhappiness += std::max(0, iForeignAnger);
-		}
-		if (GC.getGame().isOption(GAMEOPTION_MAP_PERSONALIZED))
+		if (overLimitCities > 0)
 		{
-			if (!GET_PLAYER(getOwner()).isNoLandmarkAnger())
-			{
-				iUnhappiness += std::max(0, getLandmarkAnger());
-			}
-			iUnhappiness -= std::min(0, GET_PLAYER(getOwner()).getLandmarkHappiness());
-		}
-
-		if (GET_PLAYER(getOwner()).getCityLimit() != 0 &&
-			GET_PLAYER(getOwner()).getCityOverLimitUnhappy() != 0)
-		{
-			int overLimitCities = GET_PLAYER(getOwner()).getNumCities() - GET_PLAYER(getOwner()).getCityLimit();
-
-			if (overLimitCities > 0)
-			{
-				iUnhappiness += GET_PLAYER(getOwner()).getCityOverLimitUnhappy() * overLimitCities;
-			}
+			iUnhappiness += GET_PLAYER(getOwner()).getCityOverLimitUnhappy() * overLimitCities;
 		}
 	}
 
@@ -5973,6 +5957,8 @@ int CvCity::happyLevel() const
 	iHappiness += std::max(0, (GET_PLAYER(getOwner()).getWorldHappiness()));
 	iHappiness += std::max(0, (GET_PLAYER(getOwner()).getProjectHappiness()));
 	iHappiness += std::max(0, calculateCorporationHappiness());
+	iHappiness += std::max(0, getCelebrityHappiness());
+	iHappiness += std::max(0, getExtraTechHappinessTotal());
 
 	if (GC.getGame().isOption(GAMEOPTION_MAP_PERSONALIZED))
 	{
@@ -5982,9 +5968,6 @@ int CvCity::happyLevel() const
 	{
 		iHappiness += GC.getTEMP_HAPPY();
 	}
-	iHappiness += std::max(0, getCelebrityHappiness());
-	iHappiness += getExtraTechHappinessTotal();
-
 	return std::max(0, iHappiness);
 }
 
@@ -6132,7 +6115,7 @@ int CvCity::badHealth(bool bNoAngry, int iExtra) const
 	iTotalHealth += std::min<int>(0, calculateCorporationHealth());
 	iTotalHealth += std::min<int>(0, GET_PLAYER(getOwner()).getWorldHealth());
 	iTotalHealth += std::min<int>(0, GET_PLAYER(getOwner()).getProjectHealth());
-	iTotalHealth += std::max<int>(0, getExtraTechUnHealthTotal());
+	iTotalHealth += std::max<int>(0, -getExtraTechHealthTotal());
 
 	return unhealthyPopulation(bNoAngry, iExtra) - iTotalHealth;
 }
@@ -12991,7 +12974,7 @@ void CvCity::changeNumRevolts(PlayerTypes eIndex, int iChange)
 {
 	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex);
 	m_aiNumRevolts[eIndex] += iChange;
-	FASSERT_NOT_NEGATIVE(getNumRevolts(eIndex));
+	FASSERT_NOT_NEGATIVE(m_aiNumRevolts[eIndex]);
 }
 
 bool CvCity::isEverOwned(PlayerTypes eIndex) const
@@ -23244,21 +23227,8 @@ void CvCity::updateExtraTechSpecialistHappiness()
 			iRunningTotal += iBaseSpecialistCount * getTechSpecialistHappiness(eTech);
 		}
 	}
-
 	m_iExtraTechSpecialistHappiness = iRunningTotal;
 }
-
-int CvCity::getExtraTechSpecialistHappiness() const
-{
-	return m_iExtraTechSpecialistHappiness;
-}
-
-int CvCity::getTechHappiness(TechTypes eTech) const
-{
-	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech);
-	return m_paiTechHappiness[eTech];
-}
-
 
 void CvCity::changeTechHappiness(TechTypes eTech, int iChange)
 {
@@ -23268,53 +23238,21 @@ void CvCity::changeTechHappiness(TechTypes eTech, int iChange)
 	{
 		m_paiTechHappiness[eTech] += iChange;
 
-		updateExtraTechHappiness();
-	}
-}
-
-void CvCity::updateExtraTechHappiness()
-{
-	int iRunningTotal = 0;
-
-	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
-	{
-		const TechTypes eTech = ((TechTypes)iI);
 		if (GET_TEAM(getTeam()).isHasTech(eTech))
 		{
-			iRunningTotal += getTechHappiness(eTech);
+			m_iExtraTechHappiness += iChange;
 		}
 	}
-	m_iExtraTechHappiness = iRunningTotal;
-}
-
-int CvCity::getExtraTechHappiness() const
-{
-	return m_iExtraTechHappiness;
 }
 
 int CvCity::getExtraTechHappinessTotal() const
 {
-	int iTotal = 0;
-	iTotal += getExtraTechSpecialistHappiness();
-	iTotal += getExtraTechHappiness();
-	int iGrandTotal = std::max(0, iTotal);
-	return (iGrandTotal);
-}
-
-int CvCity::getExtraTechUnHappinessTotal() const
-{
-	int iTotal = 0;
-	iTotal += getExtraTechSpecialistHappiness();
-	iTotal += getExtraTechHappiness();
-	int iGrandTotal = std::max(0, -iTotal);
-	return (iGrandTotal);
+	return m_iExtraTechHappiness + m_iExtraTechSpecialistHappiness;
 }
 
 void CvCity::updateTechHappinessandHealth()
 {
-	updateExtraTechHappiness();
 	updateExtraTechSpecialistHappiness();
-	updateExtraTechHealth();
 	updateExtraTechSpecialistHealth();
 
 	AI_setAssignWorkDirty(true);
@@ -23406,12 +23344,6 @@ int CvCity::getExtraTechSpecialistHealth() const
 	return m_iExtraTechSpecialistHealth;
 }
 
-int CvCity::getTechHealth(TechTypes eTech) const
-{
-	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech);
-	return m_paiTechHealth[eTech];
-}
-
 
 void CvCity::changeTechHealth(TechTypes eTech, int iChange)
 {
@@ -23421,46 +23353,16 @@ void CvCity::changeTechHealth(TechTypes eTech, int iChange)
 	{
 		m_paiTechHealth[eTech] += iChange;
 
-		updateExtraTechHealth();
-	}
-}
-
-void CvCity::updateExtraTechHealth()
-{
-	int iRunningTotal = 0;
-
-	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
-	{
-		const TechTypes eTech = ((TechTypes)iI);
 		if (GET_TEAM(getTeam()).isHasTech(eTech))
 		{
-			iRunningTotal += getTechHealth(eTech);
+			m_iExtraTechHealth += iChange;
 		}
 	}
-	m_iExtraTechHealth = iRunningTotal;
-}
-
-int CvCity::getExtraTechHealth() const
-{
-	return m_iExtraTechHealth;
 }
 
 int CvCity::getExtraTechHealthTotal() const
 {
-	int iTotal = 0;
-	iTotal += getExtraTechSpecialistHealth();
-	iTotal += getExtraTechHealth();
-	int iGrandTotal = std::max(0, iTotal);
-	return iGrandTotal;
-}
-
-int CvCity::getExtraTechUnHealthTotal() const
-{
-	int iTotal = 0;
-	iTotal += getExtraTechSpecialistHealth();
-	iTotal += getExtraTechHealth();
-	int iGrandTotal = std::max(0, -iTotal);
-	return iGrandTotal;
+	return m_iExtraTechHealth + m_iExtraTechSpecialistHealth;
 }
 
 int CvCity::getLocalSpecialistExtraYield(SpecialistTypes eSpecialist, YieldTypes eYield) const
@@ -23988,6 +23890,21 @@ void CvCity::setWorkerHave(const int iUnitID, const bool bNewValue)
 		FErrorMsg("Vector element to remove was missing!");
 	}
 }
+
+void CvCity::processTech(const TechTypes eTech, const int iChange)
+{
+	updateTechHappinessandHealth();
+
+	if (m_paiTechHappiness[eTech] != 0)
+	{
+		m_iExtraTechHappiness += m_paiTechHappiness[eTech] * iChange;
+	}
+	if (m_paiTechHealth[eTech] != 0)
+	{
+		m_iExtraTechHealth += m_paiTechHealth[eTech] * iChange;
+	}
+}
+
 
 const CityOutputHistory* CvCity::getCityOutputHistory() const
 {

@@ -272,7 +272,6 @@ public:
 	void setFoundedFirstCity(bool bNewValue);
 	void setAlive(bool bNewValue);
 	void setNewPlayerAlive(bool bNewValue);
-	void changeTechScore(int iChange);
 
 	bool isStrike() const;
 

@@ -3756,7 +3756,7 @@ void CvGame::initScoreCalculation()
 	m_iMaxTech = 0;
 	for (int i = 0; i < GC.getNumTechInfos(); i++)
 	{
-		m_iMaxTech += getTechScore((TechTypes)i);
+		m_iMaxTech += getScoreValueOfTech((TechTypes)i);
 	}
 	m_iMaxWonders = 0;
 	for (int i = 0; i < GC.getNumBuildingInfos(); i++)
@@ -3787,12 +3787,12 @@ void CvGame::initScoreCalculation()
 				if (GC.getCivilizationInfo((CivilizationTypes)iCiv).isPlayable()
 				&&  GC.getCivilizationInfo((CivilizationTypes)iCiv).isCivilizationFreeTechs(i))
 				{
-					m_iInitTech += getTechScore((TechTypes)i);
+					m_iInitTech += getScoreValueOfTech((TechTypes)i);
 					break;
 				}
 			}
 		}
-		else m_iInitTech += getTechScore((TechTypes)i);
+		else m_iInitTech += getScoreValueOfTech((TechTypes)i);
 	}
 	m_iInitWonders = 0;
 }
