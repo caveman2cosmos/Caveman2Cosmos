@@ -1695,9 +1695,9 @@ int CyPlayer::getBuildingCountWithUpgrades(int iBuilding) const
 	return m_pPlayer->getBuildingCountWithUpgrades((BuildingTypes)iBuilding);
 }
 
-void CyPlayer::setHandicap(int iNewVal)
+void CyPlayer::setHandicap(int iNewVal, bool bAdjustGameHandicap)
 {
-	m_pPlayer->setHandicap(iNewVal);
+	m_pPlayer->setHandicap(iNewVal, bAdjustGameHandicap);
 }
 
 void CyPlayer::setModderOption(int /*ModderOptionTypes*/ eIndex, int iNewValue)

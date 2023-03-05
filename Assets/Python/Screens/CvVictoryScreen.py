@@ -923,7 +923,10 @@ class CvVictoryScreen:
 			szTxt = ufont1 + "\t<color=200,200,200>(" + szTxt + ")\n"
 			screen.appendListBoxStringNoUpdate(szSettingsTable, szTxt, eWidGen, 1, 2, 1<<0)
 
-		szTxt = BULLET + ufont2 + TRNSLTR.getText("TXT_KEY_SETTINGS_DIFFICULTY", (GC.getHandicapInfo(CyPlayer.getHandicapType()).getTextKey(),))
+		szTxt = BULLET + ufont2 + TRNSLTR.getText("TXT_KEY_SETTINGS_DIFFICULTY_GAME", (GC.getHandicapInfo(GAME.getHandicapType()).getTextKey(),))
+		screen.appendListBoxStringNoUpdate(szSettingsTable, szTxt, eWidGen, 1, 2, 1<<0)
+
+		szTxt = BULLET + ufont2 + TRNSLTR.getText("TXT_KEY_SETTINGS_DIFFICULTY_PLAYER", (GC.getHandicapInfo(CyPlayer.getHandicapType()).getTextKey(),))
 		screen.appendListBoxStringNoUpdate(szSettingsTable, szTxt, eWidGen, 1, 2, 1<<0)
 
 		szTxt = BULLET + ufont2 + TRNSLTR.getText("TXT_KEY_SETTINGS_GAME_SPEED", (GC.getGameSpeedInfo(GAME.getGameSpeedType()).getTextKey(),))
