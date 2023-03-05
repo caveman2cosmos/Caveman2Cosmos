@@ -669,7 +669,8 @@ public:
 	void changeLevelExperienceModifier(int iChange);
 
 	int getExtraHealth() const;
-	void changeExtraHealth(int iChange, bool bLimited = false);
+	void changeExtraHealth(int iChange);
+	void changeCivicHealth(const int iChange, const bool bLimited = false);
 
 	int getCivicHealth() const; // Included in getExtraHealth() but split off to aid hover text displays
 
@@ -1813,6 +1814,7 @@ protected:
 	int m_iUpkeepModifier;
 	int m_iLevelExperienceModifier;
 	int m_iExtraHealth;
+	int m_iCivicHealth;
 	int m_iBuildingGoodHealth;
 	int m_iBuildingBadHealth;
 	int m_iExtraHappiness;

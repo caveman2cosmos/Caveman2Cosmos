@@ -1774,14 +1774,12 @@ protected:
 
 	int** m_ppaaiTechSpecialistHappinessTypes;
 	int* m_paiTechSpecialistHappiness;
-	int* m_paiTechHappiness;
 	int m_iExtraTechSpecialistHappiness;
-	int m_iExtraTechHappiness;
+	int m_iExtraBuildingHappinessFromTech;
+	int m_iExtraBuildingHealthFromTech;
 	int** m_ppaaiTechSpecialistHealthTypes;
 	int* m_paiTechSpecialistHealth;
-	int* m_paiTechHealth;
 	int m_iExtraTechSpecialistHealth;
-	int m_iExtraTechHealth;
 	int** m_ppaaiLocalSpecialistExtraYield;
 	int** m_ppaaiLocalSpecialistExtraCommerce;
 	int m_iPrioritySpecialist;
@@ -1871,6 +1869,8 @@ protected:
 	OrderQueue m_orderQueue;
 
 	std::vector< std::pair < float, float> > m_kWallOverridePoints;
+	std::vector< std::pair<TechTypes, int> > m_buildingHappinessFromTech;
+	std::vector< std::pair<TechTypes, int> > m_buildingHealthFromTech;
 
 	std::vector<EventTypes> m_aEventsOccured;
 	std::vector<BuildingYieldChange> m_aBuildingYieldChange;
@@ -1945,20 +1945,26 @@ public:
 	int getExtraTechHealthTotal() const;
 	int getLocalSpecialistExtraYield(SpecialistTypes eSpecialist, YieldTypes eYield) const;
 	int getLocalSpecialistExtraCommerce(SpecialistTypes eSpecialist, CommerceTypes eCommerce) const;
+
 private:
 	void changeTechSpecialistHappinessTypes(TechTypes eTech, SpecialistTypes eSpecialist, int iChange);
 	void changeTechSpecialistHappiness(TechTypes eTech, int iChange);
 	void updateExtraTechSpecialistHappiness();
-	void changeTechHappiness(TechTypes eTech, int iChange);
+
+	int getBuildingHappinessFromTech(const TechTypes eTech) const;
+	void changeBuildingHappinessFromTech(const TechTypes eTech, const int iChange);
+	int getBuildingHealthFromTech(const TechTypes eTech) const;
+	void changeBuildingHealthFromTech(const TechTypes eTech, const int iChange);
+
 	void updateExtraTechHappiness();
 	void changeTechSpecialistHealthTypes(TechTypes eTech, SpecialistTypes eSpecialist, int iChange);
 	void changeTechSpecialistHealth(TechTypes eTech, int iChange);
 	void updateExtraTechSpecialistHealth();
 	int getExtraTechSpecialistHealth() const;
 	int getTechHealth(TechTypes eTech) const;
-	void changeTechHealth(TechTypes eTech, int iChange);
 	void changeLocalSpecialistExtraYield(SpecialistTypes eSpecialist, YieldTypes eYield, int iChange);
 	void changeLocalSpecialistExtraCommerce(SpecialistTypes eSpecialist, CommerceTypes eCommerce, int iChange);
+
 public:
 	int specialistCount(SpecialistTypes eSpecialist) const;
 	int specialistYield(SpecialistTypes eSpecialist, YieldTypes eYield) const;
@@ -1990,7 +1996,7 @@ public:
 	int getExtraLocalCaptureProbabilityModifier() const;
 	int getExtraLocalCaptureResistanceModifier() const;
 
-	void updateTechHappinessandHealth();
+	void updateSpecialistHappinessHealthFromTech();
 
 	int getExtraLocalDynamicDefense() const;
 	void setExtraLocalDynamicDefense(int iValue);

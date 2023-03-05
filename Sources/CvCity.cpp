@@ -132,16 +132,14 @@ CvCity::CvCity()
 	m_paiUnitCombatDefenseAgainstModifier = NULL;
 	m_paiPromotionLineAfflictionAttackCommunicability = NULL;
 	//TB Combat Mod (Buildings) end
-	//Team Project (1)
-	m_paiTechHappiness = NULL;
+
 	m_paiTechSpecialistHappiness = NULL;
-	m_paiTechHealth = NULL;
 	m_paiTechSpecialistHealth = NULL;
 	m_ppaaiTechSpecialistHappinessTypes = NULL;
 	m_ppaaiTechSpecialistHealthTypes = NULL;
 	m_ppaaiLocalSpecialistExtraYield = NULL;
 	m_ppaaiLocalSpecialistExtraCommerce = NULL;
-	//Team Project (5)
+
 	m_pabReligiouslyDisabledBuilding = NULL;
 	m_paiSpecialistBannedCount = NULL;
 	m_paiDamageAttackingUnitCombatCount = NULL;
@@ -459,9 +457,7 @@ void CvCity::uninit()
 	SAFE_DELETE_ARRAY(m_paiPromotionLineAfflictionAttackCommunicability);
 	SAFE_DELETE_ARRAY(m_pabReligiouslyDisabledBuilding);
 	SAFE_DELETE_ARRAY(m_paiStartDeferredSectionNumBonuses);
-	SAFE_DELETE_ARRAY(m_paiTechHappiness);
 	SAFE_DELETE_ARRAY(m_paiTechSpecialistHappiness);
-	SAFE_DELETE_ARRAY(m_paiTechHealth);
 	SAFE_DELETE_ARRAY(m_paiSpecialistBannedCount);
 	SAFE_DELETE_ARRAY(m_paiDamageAttackingUnitCombatCount);
 	SAFE_DELETE_ARRAY(m_paiBuildingCostPopulationCount);
@@ -471,23 +467,6 @@ void CvCity::uninit()
 	SAFE_DELETE_ARRAY2(m_ppaaiTechSpecialistHealthTypes, GC.getNumTechInfos());
 	SAFE_DELETE_ARRAY2(m_ppaaiLocalSpecialistExtraYield, GC.getNumSpecialistInfos());
 	SAFE_DELETE_ARRAY2(m_ppaaiLocalSpecialistExtraCommerce, GC.getNumSpecialistInfos());
-
-	m_vDisabledBuildings.clear();
-	m_vFreeBuildings.clear();
-	m_freeAreaBuildingCount.clear();
-	m_paTradeCities.clear();
-	m_orderQueue.clear();
-	m_aEventsOccured.clear();
-	m_aBuildingYieldChange.clear();
-	m_aBuildingCommerceChange.clear();
-	m_aBuildingHappyChange.clear();
-	m_aBuildingHealthChange.clear();
-	m_buildingProductionMod.clear();
-	m_unitProductionMod.clear();
-	m_bonusDefenseChanges.clear();
-
-	m_terrainYieldChanges.clear();
-	m_plotYieldChanges.clear();
 }
 
 // FUNCTION: reset()
@@ -505,7 +484,6 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 			setCommerceModifierDirty((CommerceTypes)iI);
 		}
 	}
-
 	m_iID = iID;
 	m_iX = iX;
 	m_iY = iY;
@@ -635,8 +613,6 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 
 	m_bPlotWorkingMasked = false;
 
-	m_Properties.clear();
-
 	m_bPopProductionProcess = false;
 
 	m_eOwner = eOwner;
@@ -669,9 +645,9 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	m_iModifiedBuildingDefenseRecoverySpeedCap = 0;
 	m_iExtraCityDefenseRecoverySpeedModifier = 0;
 	m_iExtraTechSpecialistHappiness = 0;
-	m_iExtraTechHappiness = 0;
+	m_iExtraBuildingHappinessFromTech = 0;
 	m_iExtraTechSpecialistHealth = 0;
-	m_iExtraTechHealth = 0;
+	m_iExtraBuildingHealthFromTech = 0;
 	m_iPrioritySpecialist = NO_SPECIALIST;
 	m_iExtraInsidiousness = 0;
 	m_iExtraInvestigation = 0;
@@ -743,6 +719,28 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 		m_abEspionageVisibility[iI] = false;
 	}
 
+	m_vDisabledBuildings.clear();
+	m_vFreeBuildings.clear();
+	m_freeAreaBuildingCount.clear();
+	m_paTradeCities.clear();
+	m_orderQueue.clear();
+	m_aEventsOccured.clear();
+	m_aBuildingYieldChange.clear();
+	m_aBuildingCommerceChange.clear();
+	m_aBuildingHappyChange.clear();
+	m_aBuildingHealthChange.clear();
+	m_buildingProductionMod.clear();
+	m_unitProductionMod.clear();
+	m_bonusDefenseChanges.clear();
+	m_terrainYieldChanges.clear();
+	m_plotYieldChanges.clear();
+	m_Properties.clear();
+	m_aPropertySpawns.clear();
+	m_terrainYieldChanges.clear();
+	m_plotYieldChanges.clear();
+	m_buildingHappinessFromTech.clear();
+	m_buildingHealthFromTech.clear();
+
 	m_szName.clear();
 	m_szScriptData = "";
 
@@ -754,9 +752,7 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 		FAssertMsg((0 < GC.getNumTechInfos()), "GC.getNumTechInfos() is not greater than zero but an array is being allocated in CvCity::reset");
 		FAssertMsg(m_ppaaiTechSpecialistHappinessTypes == NULL, "about to leak memory, CvCity::m_ppaaiTechSpecialistHappinessTypes");
 		FAssertMsg(m_ppaaiTechSpecialistHealthTypes == NULL, "about to leak memory, CvCity::m_ppaaiTechSpecialistHealthTypes");
-		m_paiTechHappiness = new int[GC.getNumTechInfos()];
 		m_paiTechSpecialistHappiness = new int[GC.getNumTechInfos()];
-		m_paiTechHealth = new int[GC.getNumTechInfos()];
 		m_paiTechSpecialistHealth = new int[GC.getNumTechInfos()];
 		m_ppaaiTechSpecialistHappinessTypes = new int* [GC.getNumTechInfos()];
 		m_ppaaiTechSpecialistHealthTypes = new int* [GC.getNumTechInfos()];
@@ -769,9 +765,7 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 				m_ppaaiTechSpecialistHappinessTypes[iI][iJ] = 0;
 				m_ppaaiTechSpecialistHealthTypes[iI][iJ] = 0;
 			}
-			m_paiTechHappiness[iI] = 0;
 			m_paiTechSpecialistHappiness[iI] = 0;
-			m_paiTechHealth[iI] = 0;
 			m_paiTechSpecialistHealth[iI] = 0;
 		}
 
@@ -1002,7 +996,6 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 		{
 			m_pabAutomatedCanBuild[iI] = true;
 		}
-		m_aPropertySpawns.clear();
 	}
 
 	if (eOwner != NO_PLAYER)
@@ -1017,8 +1010,6 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 		m_BuildingList.init();
 		AI_reset();
 	}
-	m_terrainYieldChanges.clear();
-	m_plotYieldChanges.clear();
 
 	m_bIsGreatWallSeed = false;
 	m_deferringBonusProcessingCount = 0;
@@ -4915,26 +4906,6 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 	{
 		PROFILE("CvCity::processBuilding.Part3");
 
-		const int iTechBuildingHealth = GET_TEAM(getTeam()).getTechExtraBuildingHealth(eBuilding);
-		if (iTechBuildingHealth > 0)
-		{
-			changeBuildingGoodHealth(iTechBuildingHealth * iChange);
-		}
-		else if (iTechBuildingHealth < 0)
-		{
-			changeBuildingBadHealth(iTechBuildingHealth * iChange);
-		}
-
-		const int iTechBuildingHappiness = GET_TEAM(getTeam()).getTechExtraBuildingHappiness(eBuilding);
-		if (iTechBuildingHappiness > 0)
-		{
-			changeBuildingGoodHappiness(iTechBuildingHappiness * iChange);
-		}
-		else if (iTechBuildingHappiness < 0)
-		{
-			changeBuildingGoodHappiness(iTechBuildingHappiness * iChange);
-		}
-
 		foreach_(const UnitCombatModifier2& modifier, kBuilding.getUnitCombatExtraStrength())
 		{
 			changeUnitCombatExtraStrength(modifier.first, modifier.second * iChange);
@@ -5051,12 +5022,12 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 
 	foreach_(const TechModifier& modifier, kBuilding.getTechHappinessChanges())
 	{
-		changeTechHappiness(modifier.first, modifier.second * iChange);
+		changeBuildingHappinessFromTech(modifier.first, modifier.second * iChange);
 	}
 
 	foreach_(const TechModifier& modifier, kBuilding.getTechHealthChanges())
 	{
-		changeTechHealth(modifier.first, modifier.second * iChange);
+		changeBuildingHealthFromTech(modifier.first, modifier.second * iChange);
 	}
 
 	for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
@@ -5425,7 +5396,7 @@ void CvCity::processSpecialist(SpecialistTypes eSpecialist, int iChange)
 
 	updateExtraSpecialistYield();
 	updateExtraSpecialistCommerce();
-	updateTechHappinessandHealth();
+	updateSpecialistHappinessHealthFromTech();
 
 	if (GC.getSpecialistInfo(eSpecialist).getHealthPercent() > 0)
 	{
@@ -6075,6 +6046,7 @@ int CvCity::totalBadBuildingHealth() const
 int CvCity::goodHealth() const
 {
 	PROFILE_FUNC();
+	const CvPlayer& owner = GET_PLAYER(getOwner());
 
 	int iTotalHealth = 0;
 
@@ -6082,15 +6054,17 @@ int CvCity::goodHealth() const
 	iTotalHealth += std::max<int>(0, getFeatureGoodHealth());
 	iTotalHealth += std::max<int>(0, getBonusGoodHealth());
 	iTotalHealth += std::max<int>(0, totalGoodBuildingHealth());
-	iTotalHealth += std::max<int>(0, GET_PLAYER(getOwner()).getExtraHealth() + getExtraHealth());
+	iTotalHealth += std::max<int>(0, getExtraHealth());
 	iTotalHealth += std::max<int>(0, GC.getHandicapInfo(getHandicapType()).getHealthBonus());
 	iTotalHealth += std::max<int>(0, getImprovementGoodHealth() / 100);
 	iTotalHealth += std::max<int>(0, getSpecialistGoodHealth() / 100);
-	iTotalHealth += std::max<int>(0, GET_PLAYER(getOwner()).getCivilizationHealth());
 	iTotalHealth += std::max<int>(0, calculateCorporationHealth());
-	iTotalHealth += std::max<int>(0, GET_PLAYER(getOwner()).getWorldHealth());
-	iTotalHealth += std::max<int>(0, GET_PLAYER(getOwner()).getProjectHealth());
 	iTotalHealth += std::max<int>(0, getExtraTechHealthTotal());
+	iTotalHealth += std::max<int>(0, owner.getExtraHealth());
+	iTotalHealth += std::max<int>(0, owner.getCivicHealth());
+	iTotalHealth += std::max<int>(0, owner.getCivilizationHealth());
+	iTotalHealth += std::max<int>(0, owner.getWorldHealth());
+	iTotalHealth += std::max<int>(0, owner.getProjectHealth());
 
 	return iTotalHealth;
 }
@@ -6099,6 +6073,7 @@ int CvCity::goodHealth() const
 int CvCity::badHealth(bool bNoAngry, int iExtra) const
 {
 	PROFILE_FUNC();
+	const CvPlayer& owner = GET_PLAYER(getOwner());
 
 	int iTotalHealth = 0;
 
@@ -6106,16 +6081,18 @@ int CvCity::badHealth(bool bNoAngry, int iExtra) const
 	iTotalHealth += std::min<int>(0, getFeatureBadHealth());
 	iTotalHealth += std::min<int>(0, getBonusBadHealth());
 	iTotalHealth += std::min<int>(0, totalBadBuildingHealth());
-	iTotalHealth += std::min<int>(0, GET_PLAYER(getOwner()).getExtraHealth() + getExtraHealth());
+	iTotalHealth += std::min<int>(0, getExtraHealth());
 	iTotalHealth += std::min<int>(0, GC.getHandicapInfo(getHandicapType()).getHealthBonus());
 	iTotalHealth += std::min<int>(0, getExtraBuildingBadHealth());
 	iTotalHealth += std::min<int>(0, getImprovementBadHealth() / 100);
 	iTotalHealth += std::min<int>(0, getSpecialistBadHealth() / 100);
-	iTotalHealth += std::min<int>(0, GET_PLAYER(getOwner()).getCivilizationHealth());
 	iTotalHealth += std::min<int>(0, calculateCorporationHealth());
-	iTotalHealth += std::min<int>(0, GET_PLAYER(getOwner()).getWorldHealth());
-	iTotalHealth += std::min<int>(0, GET_PLAYER(getOwner()).getProjectHealth());
-	iTotalHealth += std::max<int>(0, -getExtraTechHealthTotal());
+	iTotalHealth += std::min<int>(0, getExtraTechHealthTotal());
+	iTotalHealth += std::min<int>(0, owner.getExtraHealth());
+	iTotalHealth += std::min<int>(0, owner.getCivicHealth());
+	iTotalHealth += std::min<int>(0, owner.getCivilizationHealth());
+	iTotalHealth += std::min<int>(0, owner.getWorldHealth());
+	iTotalHealth += std::min<int>(0, owner.getProjectHealth());
 
 	return unhealthyPopulation(bNoAngry, iExtra) - iTotalHealth;
 }
@@ -6920,11 +6897,7 @@ CvArea* CvCity::area() const
 	return plot()->area();
 }
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      01/02/09                                jdog5000      */
-/*                                                                                              */
-/* General AI                                                                                   */
-/************************************************************************************************/
+
 CvArea* CvCity::waterArea(const bool bNoImpassable) const
 {
 	return plot()->waterArea(bNoImpassable);
@@ -6940,36 +6913,34 @@ CvArea* CvCity::secondWaterArea() const
 CvArea* CvCity::sharedWaterArea(const CvCity* pOtherCity) const
 {
 	CvArea* pWaterArea = waterArea(true);
-	if (pWaterArea != NULL)
+	if (pWaterArea)
 	{
 		CvArea* pOtherWaterArea = pOtherCity->waterArea(true);
-		if (pOtherWaterArea != NULL)
+		if (pOtherWaterArea)
 		{
 			if (pWaterArea == pOtherWaterArea)
 			{
 				return pWaterArea;
 			}
-			else
-			{
-				CvArea* pSecondWaterArea = secondWaterArea();
-				CvArea* pOtherSecondWaterArea = pOtherCity->secondWaterArea();
+			CvArea* pSecondWaterArea = secondWaterArea();
 
-				if (pSecondWaterArea != NULL && pSecondWaterArea == pOtherWaterArea)
-				{
-					return pSecondWaterArea;
-				}
-				else if (pOtherSecondWaterArea != NULL && pWaterArea == pOtherSecondWaterArea)
-				{
-					return pWaterArea;
-				}
-				else if (pSecondWaterArea != NULL && pOtherSecondWaterArea != NULL && pSecondWaterArea == pOtherSecondWaterArea)
-				{
-					return pSecondWaterArea;
-				}
+			if (pSecondWaterArea && pSecondWaterArea == pOtherWaterArea)
+			{
+				return pSecondWaterArea;
+			}
+			CvArea* pOtherSecondWaterArea = pOtherCity->secondWaterArea();
+
+			if (pOtherSecondWaterArea && pWaterArea == pOtherSecondWaterArea)
+			{
+				return pWaterArea;
+			}
+
+			if (pSecondWaterArea && pOtherSecondWaterArea && pSecondWaterArea == pOtherSecondWaterArea)
+			{
+				return pSecondWaterArea;
 			}
 		}
 	}
-
 	return NULL;
 }
 
@@ -6977,9 +6948,7 @@ bool CvCity::isBlockaded() const
 {
 	return algo::any_of(plot()->adjacent(), CvPlot::fn::getBlockadedCount(getTeam()) > 0);
 }
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+
 
 CvPlot* CvCity::getRallyPlot() const
 {
@@ -6991,7 +6960,7 @@ void CvCity::setRallyPlot(const CvPlot* pPlot)
 {
 	if (getRallyPlot() != pPlot)
 	{
-		if (pPlot != NULL)
+		if (pPlot)
 		{
 			m_iRallyX = pPlot->getX();
 			m_iRallyY = pPlot->getY();
@@ -8471,7 +8440,6 @@ int CvCity::getBuildingGoodHealth(BuildingTypes eBuilding) const
 	int iHealth = std::max(0, GC.getBuildingInfo(eBuilding).getHealth());
 	iHealth += std::max(0, getBuildingHealthChange(eBuilding));
 	iHealth += std::max(0, GET_PLAYER(getOwner()).getExtraBuildingHealth(eBuilding));
-	iHealth += std::max(0, GET_TEAM(getTeam()).getTechExtraBuildingHealth(eBuilding));
 	iHealth += std::max(0, (GC.getBuildingInfo(eBuilding).getHealthPercentPerPopulation() * getPopulation()) / 100);
 
 	return iHealth;
@@ -8487,7 +8455,6 @@ int CvCity::getBuildingBadHealth(BuildingTypes eBuilding) const
 	int iHealth = std::min(0, GC.getBuildingInfo(eBuilding).getHealth());
 	iHealth += std::min(0, getBuildingHealthChange(eBuilding));
 	iHealth += std::min(0, GET_PLAYER(getOwner()).getExtraBuildingHealth(eBuilding));
-	iHealth += std::min(0, GET_TEAM(getTeam()).getTechExtraBuildingHealth(eBuilding));
 	iHealth += std::min(0, (GC.getBuildingInfo(eBuilding).getHealthPercentPerPopulation() * getPopulation()) / 100);
 
 	return iHealth;
@@ -8613,8 +8580,6 @@ int CvCity::getBuildingHappiness(BuildingTypes eBuilding) const
 		getBuildingHappyChange(eBuilding)
 		+
 		GET_PLAYER(getOwner()).getExtraBuildingHappiness(eBuilding)
-		+
-		GET_TEAM(getTeam()).getTechExtraBuildingHappiness(eBuilding)
 	);
 
 	if (info.getReligionType() != NO_RELIGION && info.getReligionType() == GET_PLAYER(getOwner()).getStateReligion())
@@ -9585,10 +9550,6 @@ int CvCity::getReligionHappiness(ReligionTypes eReligion) const
 }
 
 
-/********************************************************************************/
-/* 	New Civic AI						02.08.2010				Fuyu			*/
-/********************************************************************************/
-//Fuyu bLimited
 void CvCity::updateReligionHappiness(bool bLimited)
 {
 	int iNewReligionGoodHappiness = 0;
@@ -9630,9 +9591,6 @@ void CvCity::updateReligionHappiness(bool bLimited)
 		}
 	}
 }
-/********************************************************************************/
-/* 	New Civic AI												END 			*/
-/********************************************************************************/
 
 
 int CvCity::getExtraHappiness() const
@@ -17009,14 +16967,12 @@ void CvCity::read(FDataStreamBase* pStream)
 			WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_ppaaiTechSpecialistHealthTypes[iI], SAVE_VALUE_TYPE_INT_ARRAY);
 		}
 	}
-	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_paiTechHappiness);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_paiTechSpecialistHappiness);
 	WRAPPER_READ(wrapper, "CvCity", &m_iExtraTechSpecialistHappiness);
-	WRAPPER_READ(wrapper, "CvCity", &m_iExtraTechHappiness);
-	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_paiTechHealth);
+	WRAPPER_READ(wrapper, "CvCity", &m_iExtraBuildingHappinessFromTech);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_paiTechSpecialistHealth);
 	WRAPPER_READ(wrapper, "CvCity", &m_iExtraTechSpecialistHealth);
-	WRAPPER_READ(wrapper, "CvCity", &m_iExtraTechHealth);
+	WRAPPER_READ(wrapper, "CvCity", &m_iExtraBuildingHealthFromTech);
 	for (int i = 0; i < wrapper.getNumClassEnumValues(REMAPPED_CLASS_TYPE_SPECIALISTS); ++i)
 	{
 		int	iI = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_SPECIALISTS, i, true);
@@ -17191,6 +17147,31 @@ void CvCity::read(FDataStreamBase* pStream)
 
 					m_outputHistory.addToHistory(static_cast<OrderTypes>(iOrderType), iType, static_cast<short>(iI));
 				}
+			}
+		}
+		// Techs
+		WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iSize, "BuildingHappinessFromTechSize");
+		for (short i = 0; i < iSize; ++i)
+		{
+			int iValue = 0;
+			WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iType, "BuildingHappinessFromTechType");
+			WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iValue, "BuildingHappinessFromTechValue");
+
+			if (iType > -1 && iType < MAX_PLAYERS)
+			{
+				m_buildingHappinessFromTech.push_back(std::make_pair(static_cast<TechTypes>(iType), iValue));
+			}
+		}
+		WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iSize, "BuildingHealthFromTechSize");
+		for (short i = 0; i < iSize; ++i)
+		{
+			int iValue = 0;
+			WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iType, "BuildingHealthFromTechType");
+			WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iValue, "BuildingHealthFromTechValue");
+
+			if (iType > -1 && iType < MAX_PLAYERS)
+			{
+				m_buildingHealthFromTech.push_back(std::make_pair(static_cast<TechTypes>(iType), iValue));
 			}
 		}
 	}
@@ -17554,14 +17535,12 @@ void CvCity::write(FDataStreamBase* pStream)
 	{
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_SPECIALISTS, GC.getNumSpecialistInfos(), m_ppaaiTechSpecialistHealthTypes[iI]);
 	}
-	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_paiTechHappiness);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_paiTechSpecialistHappiness);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iExtraTechSpecialistHappiness);
-	WRAPPER_WRITE(wrapper, "CvCity", m_iExtraTechHappiness);
-	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_paiTechHealth);
+	WRAPPER_WRITE(wrapper, "CvCity", m_iExtraBuildingHappinessFromTech);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_paiTechSpecialistHealth);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iExtraTechSpecialistHealth);
-	WRAPPER_WRITE(wrapper, "CvCity", m_iExtraTechHealth);
+	WRAPPER_WRITE(wrapper, "CvCity", m_iExtraBuildingHealthFromTech);
 	for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 	{
 		WRAPPER_WRITE_ARRAY(wrapper, "CvCity", NUM_YIELD_TYPES, m_ppaaiLocalSpecialistExtraYield[iI]);
@@ -17657,19 +17636,33 @@ void CvCity::write(FDataStreamBase* pStream)
 		{
 			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", iUnitID, "WorkerUnitID");
 		}
-
-		uint16_t iCityOutputHistorySize = CityOutputHistory::getCityOutputHistorySize();
-		WRAPPER_WRITE_DECORATED(wrapper, "CvCity", iCityOutputHistorySize, "CityOutputHistorySize");
-		for (uint16_t iI = 0; iI < iCityOutputHistorySize; iI++)
 		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", m_outputHistory.getRecentOutputTurn(iI), "RecentOutputTurn");
-			uint16_t iCityOutputHistoryNumEntries = m_outputHistory.getCityOutputHistoryNumEntries(iI);
-			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", iCityOutputHistoryNumEntries, "CityOutputHistoryNumEntries");
-			for (uint16_t iJ = 0; iJ < iCityOutputHistoryNumEntries; iJ++)
+			uint16_t iCityOutputHistorySize = CityOutputHistory::getCityOutputHistorySize();
+			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", iCityOutputHistorySize, "CityOutputHistorySize");
+			for (uint16_t iI = 0; iI < iCityOutputHistorySize; iI++)
 			{
-				WRAPPER_WRITE_DECORATED(wrapper, "CvCity", m_outputHistory.getCityOutputHistoryEntry(iI, iJ, true), "OrderType");
-				WRAPPER_WRITE_DECORATED(wrapper, "CvCity", m_outputHistory.getCityOutputHistoryEntry(iI, iJ, false), "Type");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvCity", m_outputHistory.getRecentOutputTurn(iI), "RecentOutputTurn");
+				uint16_t iCityOutputHistoryNumEntries = m_outputHistory.getCityOutputHistoryNumEntries(iI);
+				WRAPPER_WRITE_DECORATED(wrapper, "CvCity", iCityOutputHistoryNumEntries, "CityOutputHistoryNumEntries");
+				for (uint16_t iJ = 0; iJ < iCityOutputHistoryNumEntries; iJ++)
+				{
+					WRAPPER_WRITE_DECORATED(wrapper, "CvCity", m_outputHistory.getCityOutputHistoryEntry(iI, iJ, true), "OrderType");
+					WRAPPER_WRITE_DECORATED(wrapper, "CvCity", m_outputHistory.getCityOutputHistoryEntry(iI, iJ, false), "Type");
+				}
 			}
+		}
+		// Techs
+		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (short)m_buildingHappinessFromTech.size(), "BuildingHappinessFromTechSize");
+		for (std::vector< std::pair<TechTypes, int> >::iterator it = m_buildingHappinessFromTech.begin(); it != m_buildingHappinessFromTech.end(); ++it)
+		{
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", static_cast<short>((*it).first), "BuildingHappinessFromTechType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (*it).second, "BuildingHappinessFromTechValue");
+		}
+		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (short)m_buildingHealthFromTech.size(), "BuildingHealthFromTechSize");
+		for (std::vector< std::pair<TechTypes, int> >::iterator it = m_buildingHealthFromTech.begin(); it != m_buildingHealthFromTech.end(); ++it)
+		{
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", static_cast<short>((*it).first), "BuildingHealthFromTechType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (*it).second, "BuildingHealthFromTechValue");
 		}
 	}
 	// Toffer - Write Maps
@@ -21629,27 +21622,21 @@ int CvCity::getMintedCommerceTimes100() const
 
 void CvCity::clearModifierTotals()
 {
-	//	If the city is running a process turn it off until the recalc completes
+	// If the city is running a process turn it off until the recalc completes
 	bst::optional<OrderData> headOrder = getHeadOrder();
 	if (headOrder)
 	{
-		switch (headOrder->eOrderType)
+		if (headOrder->eOrderType == ORDER_MAINTAIN)
 		{
-		case ORDER_MAINTAIN:
 			processProcess(headOrder->getProcessType(), -1);
-			break;
-		default:
-			break;
 		}
 	}
-
-	//	Remove this city from its plot group (without bothering to do any recalculation iteratively)
+	// Remove this city from its plot group (without bothering to do any recalculation iteratively)
 	CvPlotGroup* ownerPlotGroup = plotGroup(getOwner());
-	if (ownerPlotGroup != NULL)
+	if (ownerPlotGroup)
 	{
 		ownerPlotGroup->removePlot(plot(), false);
 	}
-
 	m_iNumNationalWonders = 0;
 	m_iNumWorldWonders = 0;
 	m_iNumTeamWonders = 0;
@@ -21714,7 +21701,7 @@ void CvCity::clearModifierTotals()
 	m_iBaseGreatPeopleRate = 0;
 	m_iNumPopulationEmployed = 0;
 
-	for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
+	for (int iI = GC.getNumBonusInfos() - 1; iI > -1; iI--)
 	{
 		for (int iJ = 0; iJ < GC.getNumPropertyInfos(); iJ++)
 		{
@@ -21726,12 +21713,12 @@ void CvCity::clearModifierTotals()
 		m_paiNumCorpProducedBonuses[iI] = 0;
 	}
 
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	for (int iI = GC.getNumBuildingInfos() - 1; iI > -1; iI--)
 	{
 		m_pabReligiouslyDisabledBuilding[iI] = false;
 	}
 
-	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
+	for (int iI = GC.getNumUnitInfos() - 1; iI > -1; iI--)
 	{
 		m_paiGreatPeopleUnitRate[iI] = 0;
 	}
@@ -21753,18 +21740,16 @@ void CvCity::clearModifierTotals()
 		m_paiStateReligionHappiness[iI] = 0;
 	}
 
-	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = GC.getNumUnitCombatInfos() - 1; iI > -1; iI--)
 	{
 		m_paiUnitCombatFreeExperience[iI] = 0;
 		m_paiUnitCombatExtraStrength[iI] = 0;
-		//TB Combat Mods (Buildings) begin
 		m_paiUnitCombatProductionModifier[iI] = 0;
 		m_paiUnitCombatRepelModifier[iI] = 0;
 		m_paiUnitCombatRepelAgainstModifier[iI] = 0;
 		m_paiUnitCombatDefenseAgainstModifier[iI] = 0;
 		m_paiDamageAttackingUnitCombatCount[iI] = 0;
 		m_paiHealUnitCombatTypeVolume[iI] = 0;
-		//TB Combat Mods (Buildings) end
 	}
 
 	for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
@@ -21772,7 +21757,6 @@ void CvCity::clearModifierTotals()
 		m_paiFreePromotionCount[iI] = 0;
 	}
 
-	//TB Combat Mods (Buildings) Begin
 	for (int iI = 0; iI < GC.getNumPromotionLineInfos(); iI++)
 	{
 		m_paiNewAfflictionTypeCount[iI] = 0;
@@ -21780,7 +21764,6 @@ void CvCity::clearModifierTotals()
 		m_paiNewAfflictionToleranceChange[iI] = 0;
 		m_paiNewCurrentOvercomeChange[iI] = 0;
 	}
-	//TB Combat Mods (Buildings) end
 
 	for (int iI = 0; iI < GC.getNumPropertyInfos(); iI++)
 	{
@@ -21838,6 +21821,8 @@ void CvCity::clearModifierTotals()
 	m_buildingProductionMod.clear();
 	m_unitProductionMod.clear();
 	m_bonusDefenseChanges.clear();
+	m_buildingHappinessFromTech.clear();
+	m_buildingHealthFromTech.clear();
 
 	m_terrainYieldChanges.clear();
 	m_plotYieldChanges.clear();
@@ -21866,7 +21851,7 @@ void CvCity::clearModifierTotals()
 	m_iExtraBuildingDefenseRecoverySpeedModifier = 0;
 	m_iModifiedBuildingDefenseRecoverySpeedCap = 0;
 	m_iExtraCityDefenseRecoverySpeedModifier = 0;
-	//Team Project (1)
+
 	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 	{
 		for (int iJ = 0; iJ < GC.getNumSpecialistInfos(); iJ++)
@@ -21874,15 +21859,13 @@ void CvCity::clearModifierTotals()
 			m_ppaaiTechSpecialistHappinessTypes[iI][iJ] = 0;
 			m_ppaaiTechSpecialistHealthTypes[iI][iJ] = 0;
 		}
-		m_paiTechHappiness[iI] = 0;
 		m_paiTechSpecialistHappiness[iI] = 0;
-		m_paiTechHealth[iI] = 0;
 		m_paiTechSpecialistHealth[iI] = 0;
 	}
 	m_iExtraTechSpecialistHappiness = 0;
-	m_iExtraTechHappiness = 0;
+	m_iExtraBuildingHappinessFromTech = 0;
 	m_iExtraTechSpecialistHealth = 0;
-	m_iExtraTechHealth = 0;
+	m_iExtraBuildingHealthFromTech = 0;
 	m_iPrioritySpecialist = NO_SPECIALIST;
 	m_iExtraInsidiousness = 0;
 	m_iExtraInvestigation = 0;
@@ -23230,27 +23213,56 @@ void CvCity::updateExtraTechSpecialistHappiness()
 	m_iExtraTechSpecialistHappiness = iRunningTotal;
 }
 
-void CvCity::changeTechHappiness(TechTypes eTech, int iChange)
+int CvCity::getBuildingHappinessFromTech(const TechTypes eTech) const
+{
+	for (std::vector< std::pair<TechTypes, int> >::const_iterator it = m_buildingHappinessFromTech.begin(); it != m_buildingHappinessFromTech.end(); ++it)
+	{
+		if ((*it).first == eTech)
+		{
+			return ((*it).second);
+		}
+	}
+	return 0;
+}
+
+void CvCity::changeBuildingHappinessFromTech(const TechTypes eTech, const int iChange)
 {
 	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech);
 
-	if (iChange != 0)
+	if (iChange == 0)
 	{
-		m_paiTechHappiness[eTech] += iChange;
-
-		if (GET_TEAM(getTeam()).isHasTech(eTech))
+		return;
+	}
+	if (GET_TEAM(getTeam()).isHasTech(eTech))
+	{
+		m_iExtraBuildingHappinessFromTech += iChange;
+	}
+	bool bFirst = true;
+	for (std::vector< std::pair<TechTypes, int> >::iterator it = m_buildingHappinessFromTech.begin(); it != m_buildingHappinessFromTech.end(); ++it)
+	{
+		if ((*it).first == eTech)
 		{
-			m_iExtraTechHappiness += iChange;
+			if ((*it).second == -iChange)
+			{
+				m_buildingHappinessFromTech.erase(it);
+			}
+			else
+			{
+				(*it).second += iChange;
+			}
+			bFirst = false;
+			break;
 		}
 	}
+	if (bFirst) m_buildingHappinessFromTech.push_back(std::make_pair(eTech, iChange));
 }
 
 int CvCity::getExtraTechHappinessTotal() const
 {
-	return m_iExtraTechHappiness + m_iExtraTechSpecialistHappiness;
+	return m_iExtraBuildingHappinessFromTech + m_iExtraTechSpecialistHappiness;
 }
 
-void CvCity::updateTechHappinessandHealth()
+void CvCity::updateSpecialistHappinessHealthFromTech()
 {
 	updateExtraTechSpecialistHappiness();
 	updateExtraTechSpecialistHealth();
@@ -23344,25 +23356,54 @@ int CvCity::getExtraTechSpecialistHealth() const
 	return m_iExtraTechSpecialistHealth;
 }
 
+int CvCity::getBuildingHealthFromTech(const TechTypes eTech) const
+{
+	for (std::vector< std::pair<TechTypes, int> >::const_iterator it = m_buildingHealthFromTech.begin(); it != m_buildingHealthFromTech.end(); ++it)
+	{
+		if ((*it).first == eTech)
+		{
+			return ((*it).second);
+		}
+	}
+	return 0;
+}
 
-void CvCity::changeTechHealth(TechTypes eTech, int iChange)
+void CvCity::changeBuildingHealthFromTech(const TechTypes eTech, const int iChange)
 {
 	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech);
 
-	if (iChange != 0)
+	if (iChange == 0)
 	{
-		m_paiTechHealth[eTech] += iChange;
-
-		if (GET_TEAM(getTeam()).isHasTech(eTech))
+		return;
+	}
+	if (GET_TEAM(getTeam()).isHasTech(eTech))
+	{
+		FAssertMsg(false, CvString::format("changeBuildingHealthFromTech oldValue=%d, newValue=%d, difference=%d", m_iExtraBuildingHealthFromTech, m_iExtraBuildingHealthFromTech + iChange, iChange).c_str());
+		m_iExtraBuildingHealthFromTech += iChange;
+	}
+	bool bFirst = true;
+	for (std::vector< std::pair<TechTypes, int> >::iterator it = m_buildingHealthFromTech.begin(); it != m_buildingHealthFromTech.end(); ++it)
+	{
+		if ((*it).first == eTech)
 		{
-			m_iExtraTechHealth += iChange;
+			if ((*it).second == -iChange)
+			{
+				m_buildingHealthFromTech.erase(it);
+			}
+			else
+			{
+				(*it).second += iChange;
+			}
+			bFirst = false;
+			break;
 		}
 	}
+	if (bFirst) m_buildingHealthFromTech.push_back(std::make_pair(eTech, iChange));
 }
 
 int CvCity::getExtraTechHealthTotal() const
 {
-	return m_iExtraTechHealth + m_iExtraTechSpecialistHealth;
+	return m_iExtraBuildingHealthFromTech + m_iExtraTechSpecialistHealth;
 }
 
 int CvCity::getLocalSpecialistExtraYield(SpecialistTypes eSpecialist, YieldTypes eYield) const
@@ -23893,15 +23934,26 @@ void CvCity::setWorkerHave(const int iUnitID, const bool bNewValue)
 
 void CvCity::processTech(const TechTypes eTech, const int iChange)
 {
-	updateTechHappinessandHealth();
+	if (!GC.getGame().isRecalculatingModifiers())
+	{
+		updateSpecialistHappinessHealthFromTech();
+		{
+			const int iBuildingHappinessFromTech = getBuildingHappinessFromTech(eTech);
 
-	if (m_paiTechHappiness[eTech] != 0)
-	{
-		m_iExtraTechHappiness += m_paiTechHappiness[eTech] * iChange;
-	}
-	if (m_paiTechHealth[eTech] != 0)
-	{
-		m_iExtraTechHealth += m_paiTechHealth[eTech] * iChange;
+			if (iBuildingHappinessFromTech != 0)
+			{
+				m_iExtraBuildingHappinessFromTech += iBuildingHappinessFromTech * iChange;
+			}
+		}
+		{
+			const int iBuildingHealthFromTech = getBuildingHealthFromTech(eTech);
+
+			if (iBuildingHealthFromTech != 0)
+			{
+				FAssertMsg(false, CvString::format("processTech iChange=%d, oldValue=%d, newValue=%d, difference=%d", iChange, m_iExtraBuildingHealthFromTech, m_iExtraBuildingHealthFromTech + iBuildingHealthFromTech * iChange, iBuildingHealthFromTech * iChange).c_str());
+				m_iExtraBuildingHealthFromTech += iBuildingHealthFromTech * iChange;
+			}
+		}
 	}
 }
 
