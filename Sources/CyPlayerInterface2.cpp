@@ -65,7 +65,7 @@ void CyPlayerPythonInterface2(python::class_<CyPlayer>& x)
 
 		.def("getBuildingCountWithUpgrades", &CyPlayer::getBuildingCountWithUpgrades, "int (int iBuilding)")
 		.def("setColor", &CyPlayer::setColor, "void (int iColor)")
-		.def("setHandicap", &CyPlayer::setHandicap, "void (int iNewVal)")
+		.def("setHandicap", &CyPlayer::setHandicap, "void (int iNewVal, bool bAverageGameHandicap)")
 		.def("setModderOption", &CyPlayer::setModderOption, "void ()")
 		.def("doRevolution", &CyPlayer::doRevolution, "void (int (CivicTypes*) paeNewCivics, bool bForce)")
 		.def("isAutomatedCanBuild", &CyPlayer::isAutomatedCanBuild, "bool ()")

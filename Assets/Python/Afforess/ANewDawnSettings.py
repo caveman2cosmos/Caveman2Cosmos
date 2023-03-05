@@ -75,7 +75,7 @@ class ANewDawnSettings:
 		#Change Difficulty
 		elif protocol == DIFFICULTY_EVENT_ID:
 			pPlayer = GC.getPlayer(data1)
-			pPlayer.setHandicap(data2)
+			pPlayer.setHandicap(data2, True)
 		#Change Color
 		elif protocol == COLOR_EVENT_ID:
 			pPlayer = GC.getPlayer(data1)
@@ -114,9 +114,16 @@ def changedCanNotClaimOcean(option, value):
 	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_CANNOT_CLAIM_OCEAN, value)
 	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_CANNOT_CLAIM_OCEAN), int(value), 0)
 
-def changedShowCivTraits(option, value):
-	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_SHOW_TRAITS_FLAG, value)
-	CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderOptionTypes.MODDEROPTION_SHOW_TRAITS_FLAG), int(value), 0)
+def changedShowCivTraits(option, value, bAllHumans):
+	if (bAllHumans):
+		for iPlayer in range(GC.getMAX_PC_PLAYERS()):
+			CyPlayer = GC.getPlayer(iPlayer)
+			if CyPlayer.isHuman():
+				CyPlayer.setModderOption(ModderOptionTypes.MODDEROPTION_SHOW_TRAITS_FLAG, value)
+				CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, iPlayer, int(ModderOptionTypes.MODDEROPTION_SHOW_TRAITS_FLAG), int(value), 0)
+	else:
+		GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_SHOW_TRAITS_FLAG, value)
+		CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderOptionTypes.MODDEROPTION_SHOW_TRAITS_FLAG), int(value), 0)
 
 def changedNoFriendlyPillaging(option, value):
 	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_NO_FRIENDLY_PILLAGING, value)
@@ -195,9 +202,8 @@ def updateAliveCivsOption():
 	aliveCivsOption.setValues(descs)
 
 def changedCurrentDifficulty(option, value):
-	iDifficulty = value - 1
-	if (iDifficulty >= 0):
-		CyMessageControl().sendModNetMessage(DIFFICULTY_EVENT_ID, GC.getGame().getActivePlayer(), iDifficulty, 0, 0)
+	if (value > 0):
+		CyMessageControl().sendModNetMessage(DIFFICULTY_EVENT_ID, GC.getGame().getActivePlayer(), value - 1, 0, 0)
 
 def changedUseLandmarkNames(option, value):
 	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_USE_LANDMARK_NAMES, value)
@@ -266,7 +272,7 @@ def setXMLOptionsfromIniFile():
 	changedFlexibleDifficultyTurnIncrements(ANewDawnOpt, ANewDawnOpt.getFlexibleDifficultyTurnIncrements())
 	changedMaxBombardDefense(ANewDawnOpt, ANewDawnOpt.getMaxBombardDefense())
 	changedCanNotClaimOcean(ANewDawnOpt, ANewDawnOpt.isCanNotClaimOcean())
-	changedShowCivTraits(ANewDawnOpt, ANewDawnOpt.isShowCivTraits())
+	changedShowCivTraits(ANewDawnOpt, ANewDawnOpt.isShowCivTraits(), GC.getGame().isHotSeat())
 	changedNoFriendlyPillaging(ANewDawnOpt, ANewDawnOpt.isNoFriendlyPillaging())
 	changedEnableFlexibleDifficulty(ANewDawnOpt, ANewDawnOpt.isEnableFlexibleDifficulty())
 	changedFlexibleDifficultyMinimumDiff(ANewDawnOpt, ANewDawnOpt.getFlexibleDifficultyMinimumDiff())
