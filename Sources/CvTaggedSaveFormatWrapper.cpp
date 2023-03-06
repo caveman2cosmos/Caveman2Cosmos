@@ -1340,51 +1340,39 @@ CvTaggedSaveFormatWrapper::getNumClassEnumValues(RemappedClassType classType) co
 	}
 }
 
-//	Translate explicitly from an old enum value to the current
-int
-CvTaggedSaveFormatWrapper::getNewClassEnumValue(RemappedClassType classType, int oldValue, bool allowMissing)
+// Translate explicitly from an old enum value to the current
+int CvTaggedSaveFormatWrapper::getNewClassEnumValue(RemappedClassType classType, int oldValue, bool allowMissing)
 {
 	PROFILE_FUNC();
 
-	if ( m_useTaggedFormat )
+	if (m_useTaggedFormat)
 	{
-		if ( oldValue == -1 )
+		if (oldValue == -1)
 		{
 			return -1;
 		}
-		else
+		std::vector<EnumInfo>& mapVector = m_enumMaps[classType];
+
+		if (oldValue < (int)mapVector.size())
 		{
-			std::vector<EnumInfo>& mapVector = m_enumMaps[classType];
+			EnumInfo& info = mapVector[oldValue];
 
-			if ( oldValue < (int)mapVector.size() )
+			if (info.m_id == -1 && !info.m_lookedUp)
 			{
-				EnumInfo& info = mapVector[oldValue];
+				info.m_id = GC.getInfoTypeForString(info.m_szType, true);
 
-				if ( info.m_id == -1 && !info.m_lookedUp )
+				if (info.m_id == -1 && !allowMissing)
 				{
-					info.m_id = GC.getInfoTypeForString(info.m_szType, true);
-
-					if ( info.m_id == -1 && !allowMissing )
-					{
-						//	Instantiated object uses class no longer defined - game is not save compatible
-						HandleIncompatibleSave(CvString::format("Save format is not compatible due to missing class %s", info.m_szType.c_str()).c_str());
-					}
-
-					info.m_lookedUp = true;
+					// Instantiated object uses class no longer defined - game is not save compatible
+					HandleIncompatibleSave(CvString::format("Save format is not compatible due to missing class %s", info.m_szType.c_str()).c_str());
 				}
-
-				return info.m_id;
+				info.m_lookedUp = true;
 			}
-			else
-			{
-				return -1;
-			}
+			return info.m_id;
 		}
+		return -1;
 	}
-	else
-	{
-		return oldValue;
-	}
+	return oldValue;
 }
 
 void
