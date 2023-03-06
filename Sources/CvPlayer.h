@@ -65,6 +65,8 @@ public:
 	bool isIdleCity(const int iCityID) const;
 	void resetIdleCities();
 
+	void processTech(const TechTypes eTech, const int iChange);
+
 protected:
 	CvGameObjectPlayer m_GameObject;
 	void baseInit(PlayerTypes eID);
@@ -667,7 +669,8 @@ public:
 	void changeLevelExperienceModifier(int iChange);
 
 	int getExtraHealth() const;
-	void changeExtraHealth(int iChange, bool bLimited = false);
+	void changeExtraHealth(int iChange);
+	void changeCivicHealth(const int iChange, const bool bLimited = false);
 
 	int getCivicHealth() const; // Included in getExtraHealth() but split off to aid hover text displays
 
@@ -1277,7 +1280,7 @@ public:
 	int getProjectHealth() const;
 	void changeProjectHealth(int iChange);
 
-	int getNoCapitalUnhappiness() const;
+	inline bool isNoCapitalUnhappiness() const { return m_iNoCapitalUnhappiness > 0; }
 	void changeNoCapitalUnhappiness(int iChange);
 
 	int getCivilizationHealth() const;
@@ -1811,6 +1814,7 @@ protected:
 	int m_iUpkeepModifier;
 	int m_iLevelExperienceModifier;
 	int m_iExtraHealth;
+	int m_iCivicHealth;
 	int m_iBuildingGoodHealth;
 	int m_iBuildingBadHealth;
 	int m_iExtraHappiness;
@@ -2235,7 +2239,6 @@ public:
 	void setExtraNonStateReligionSpreadModifier(int iValue);
 	void changeExtraNonStateReligionSpreadModifier(int iChange);
 
-	void updateTechHappinessandHealth();
 	void checkReligiousDisablingAllBuildings();
 	//TB Traits end
 

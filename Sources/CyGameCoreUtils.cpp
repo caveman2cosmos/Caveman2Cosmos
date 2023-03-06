@@ -115,11 +115,6 @@ CyUnit* cyGetUnit(const IDInfo unit)
 	return new CyUnit(getUnit(unit));
 }
 
-int cyGetTechScore(int /*TechTypes*/ eTech)
-{
-	return getTechScore((TechTypes)eTech);
-}
-
 int cyGetWonderScore(int /*BuildingTypes*/ eWonder)
 {
 	return getWonderScore((BuildingTypes)eWonder);

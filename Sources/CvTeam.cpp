@@ -70,8 +70,6 @@ m_Properties(this)
 
 	m_ppiBuildingSpecialistChange = NULL;
 	m_ppiBuildingCommerceModifier = NULL;
-	m_paiTechExtraBuildingHappiness = NULL;
-	m_paiTechExtraBuildingHealth = NULL;
 	m_abEmbassy = new bool[MAX_TEAMS];
 	m_abLimitedBorders = new bool[MAX_TEAMS];
 	m_abFreeTrade = new bool[MAX_TEAMS];
@@ -174,8 +172,6 @@ void CvTeam::uninit()
 	SAFE_DELETE_ARRAY(m_aiForceTeamVoteEligibilityCount);
 	SAFE_DELETE_ARRAY(m_pabHasTech);
 	SAFE_DELETE_ARRAY2(m_ppaaiImprovementYieldChange, GC.getNumImprovementInfos());
-	SAFE_DELETE_ARRAY(m_paiTechExtraBuildingHappiness);
-	SAFE_DELETE_ARRAY(m_paiTechExtraBuildingHealth);
 	SAFE_DELETE_ARRAY(m_paiFreeSpecialistCount);
 	SAFE_DELETE_ARRAY2(m_ppiBuildingSpecialistChange, GC.getNumBuildingInfos());
 	SAFE_DELETE_ARRAY2(m_ppiBuildingCommerceModifier, GC.getNumBuildingInfos());
@@ -354,20 +350,6 @@ void CvTeam::reset(TeamTypes eID, bool bConstructorCall)
 		for (iI = 0; iI < GC.getNumVictoryInfos(); iI++)
 		{
 			m_aiVictoryCountdown[iI] = -1;
-		}
-
-		FAssertMsg(m_paiTechExtraBuildingHappiness==NULL, "about to leak memory, m_paiTechExtraBuildingHappiness"); //Afforess
-		m_paiTechExtraBuildingHappiness = new int[GC.getNumBuildingInfos()];
-		for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
-		{
-			m_paiTechExtraBuildingHappiness[iI] = 0;
-		}
-
-		FAssertMsg(m_paiTechExtraBuildingHealth==NULL, "about to leak memory, m_paiTechExtraBuildingHealth");
-		m_paiTechExtraBuildingHealth = new int[GC.getNumBuildingInfos()];
-		for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
-		{
-			m_paiTechExtraBuildingHealth[iI] = 0;
 		}
 
 		FAssertMsg(m_pabHasTech==NULL, "about to leak memory, CvTeam::m_pabHasTech");
@@ -5069,7 +5051,7 @@ bool CvTeam::isHasTech(TechTypes eIndex) const
 		return true;
 	}
 	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eIndex);
-	FAssertMsg(m_pabHasTech != NULL, "m_pabHasTech is not expected to be equal with NULL");
+	FAssertMsg(m_pabHasTech, "m_pabHasTech is not expected to be equal with NULL");
 	return m_pabHasTech[eIndex];
 }
 
@@ -5898,34 +5880,34 @@ void CvTeam::setCircumnavigated(bool bNewValue)
 void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 {
 	PROFILE_FUNC();
+	const CvTechInfo& tech = GC.getTechInfo(eTech);
 
-	if (GC.getTechInfo(eTech).isExtraWaterSeeFrom())
+	if (tech.isExtraWaterSeeFrom())
 	{
 		changeExtraWaterSeeFromCount(iChange);
 	}
 
-	if (iChange > 0 && GC.getTechInfo(eTech).isMapCentering())
+	if (iChange > 0 && tech.isMapCentering())
 	{
 		setMapCentering(true);
 	}
 
-	if (GC.getTechInfo(eTech).isMapTrading())
+	if (tech.isMapTrading())
 	{
 		changeMapTradingCount(iChange);
 	}
 
-	const CvTechInfo& kTech = GC.getTechInfo(eTech);
-	if (kTech.isCanPassPeaks())
+	if (tech.isCanPassPeaks())
 	{
 		changeCanPassPeaksCount(iChange);
 		//	Koshling - makes peaks workable which chnages the yield calculation
 		updateYield();
 	}
-	if (kTech.isMoveFastPeaks())
+	if (tech.isMoveFastPeaks())
 	{
 		changeMoveFastPeaksCount(iChange);
 	}
-	if (kTech.isCanFoundOnPeaks())
+	if (tech.isCanFoundOnPeaks())
 	{
 		changeCanFoundOnPeaksCount(iChange);
 	}
@@ -5937,96 +5919,96 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 		GC.getGame().makeTechDiscovered(eTech);
 	}
 
-	if (kTech.isEmbassyTrading())
+	if (tech.isEmbassyTrading())
 	{
 		changeEmbassyTradingCount(iChange);
 	}
 
-	if (kTech.isRebaseAnywhere())
+	if (tech.isRebaseAnywhere())
 	{
 		changeRebaseAnywhereCount(iChange);
 	}
 
-	if (kTech.getGlobalTradeModifier() != 0)
+	if (tech.getGlobalTradeModifier() != 0)
 	{
-		changeTradeModifier(kTech.getGlobalTradeModifier() * iChange);
+		changeTradeModifier(tech.getGlobalTradeModifier() * iChange);
 	}
 
-	if (kTech.getGlobalForeignTradeModifier() != 0)
+	if (tech.getGlobalForeignTradeModifier() != 0)
 	{
-		changeForeignTradeModifier(kTech.getGlobalForeignTradeModifier() * iChange);
+		changeForeignTradeModifier(tech.getGlobalForeignTradeModifier() * iChange);
 	}
 
-	if (kTech.getTradeMissionModifier() != 0)
+	if (tech.getTradeMissionModifier() != 0)
 	{
-		changeTradeMissionModifier(kTech.getTradeMissionModifier() * iChange);
+		changeTradeMissionModifier(tech.getTradeMissionModifier() * iChange);
 	}
 
-	if (kTech.getCorporationRevenueModifier() != 0)
+	if (tech.getCorporationRevenueModifier() != 0)
 	{
-		changeCorporationRevenueModifier(kTech.getCorporationRevenueModifier() * iChange);
+		changeCorporationRevenueModifier(tech.getCorporationRevenueModifier() * iChange);
 	}
 
-	if (kTech.getCorporationMaintenanceModifier() != 0)
+	if (tech.getCorporationMaintenanceModifier() != 0)
 	{
-		changeCorporationMaintenanceModifier(kTech.getCorporationMaintenanceModifier() * iChange);
+		changeCorporationMaintenanceModifier(tech.getCorporationMaintenanceModifier() * iChange);
 	}
 
-	if (kTech.isEnablesDesertFarming())
+	if (tech.isEnablesDesertFarming())
 	{
 		changeCanFarmDesertCount(iChange);
 		setLastRoundOfValidImprovementCacheUpdate();
 	}
 
-	if (GC.getTechInfo(eTech).isTechTrading())
+	if (tech.isTechTrading())
 	{
 		changeTechTradingCount(iChange);
 	}
 
-	if (GC.getTechInfo(eTech).isGoldTrading())
+	if (tech.isGoldTrading())
 	{
 		changeGoldTradingCount(iChange);
 	}
 
-	if (GC.getTechInfo(eTech).isOpenBordersTrading())
+	if (tech.isOpenBordersTrading())
 	{
 		changeOpenBordersTradingCount(iChange);
 		changeLimitedBordersTradingCount(iChange);
 	}
 
-	if (GC.getTechInfo(eTech).isDefensivePactTrading())
+	if (tech.isDefensivePactTrading())
 	{
 		changeDefensivePactTradingCount(iChange);
 	}
 
-	if (GC.getTechInfo(eTech).isPermanentAllianceTrading())
+	if (tech.isPermanentAllianceTrading())
 	{
 		changePermanentAllianceTradingCount(iChange);
 	}
 
-	if (GC.getTechInfo(eTech).isVassalStateTrading())
+	if (tech.isVassalStateTrading())
 	{
 		changeVassalTradingCount(iChange);
 	}
 
-	if (GC.getTechInfo(eTech).isBridgeBuilding())
+	if (tech.isBridgeBuilding())
 	{
 		changeBridgeBuildingCount(iChange);
 	}
 
-	if (GC.getTechInfo(eTech).isIrrigation())
+	if (tech.isIrrigation())
 	{
 		changeIrrigationCount(iChange);
 		setLastRoundOfValidImprovementCacheUpdate();
 	}
 
-	if (GC.getTechInfo(eTech).isIgnoreIrrigation())
+	if (tech.isIgnoreIrrigation())
 	{
 		changeIgnoreIrrigationCount(iChange);
 		setLastRoundOfValidImprovementCacheUpdate();
 	}
 
-	if (GC.getTechInfo(eTech).isWaterWork())
+	if (tech.isWaterWork())
 	{
 		changeWaterWorkCount(iChange);
 		setLastRoundOfValidImprovementCacheUpdate();
@@ -6039,12 +6021,12 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 
 	for (int iI = 0; iI < NUM_DOMAIN_TYPES; iI++)
 	{
-		changeExtraMoves(((DomainTypes)iI), (GC.getTechInfo(eTech).getDomainExtraMoves(iI) * iChange));
+		changeExtraMoves(((DomainTypes)iI), (tech.getDomainExtraMoves(iI) * iChange));
 	}
 
 	for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 	{
-		if (GC.getTechInfo(eTech).isCommerceFlexible(iI))
+		if (tech.isCommerceFlexible(iI))
 		{
 			changeCommerceFlexibleCount(((CommerceTypes)iI), iChange);
 		}
@@ -6052,13 +6034,13 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 
 	for (int iI = 0; iI < GC.getNumTerrainInfos(); iI++)
 	{
-		if (GC.getTechInfo(eTech).isTerrainTrade(iI))
+		if (tech.isTerrainTrade(iI))
 		{
 			changeTerrainTradeCount(((TerrainTypes)iI), iChange);
 		}
 	}
 
-	if (GC.getTechInfo(eTech).isRiverTrade())
+	if (tech.isRiverTrade())
 	{
 		changeRiverTradeCount(iChange);
 	}
@@ -6095,34 +6077,8 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 
 		if (playerX.isAliveAndTeam(getID()))
 		{
-			playerX.changeFeatureProductionModifier(GC.getTechInfo(eTech).getFeatureProductionModifier() * iChange);
-			playerX.changeWorkerSpeedModifier(GC.getTechInfo(eTech).getWorkerSpeedModifier() * iChange);
-			playerX.changeTradeRoutes(GC.getTechInfo(eTech).getTradeRoutes() * iChange);
-			playerX.changeExtraHealth(GC.getTechInfo(eTech).getHealth() * iChange);
-			playerX.changeExtraHappiness(GC.getTechInfo(eTech).getHappiness() * iChange);
-			playerX.changeDistanceMaintenanceModifier(GC.getTechInfo(eTech).getDistanceMaintenanceModifier() * iChange);
-			playerX.changeNumCitiesMaintenanceModifier(GC.getTechInfo(eTech).getNumCitiesMaintenanceModifier() * iChange);
-			playerX.changeMaintenanceModifier(GC.getTechInfo(eTech).getMaintenanceModifier() * iChange);
-			playerX.changeCoastalDistanceMaintenanceModifier(GC.getTechInfo(eTech).getCoastalDistanceMaintenanceModifier() * iChange);
-
-			playerX.changeAssets(GC.getTechInfo(eTech).getAssetValue() * iChange);
-			playerX.changeTechPower(GC.getTechInfo(eTech).getPowerValue() * iChange);
-			playerX.changeTechScore(getTechScore(eTech) * iChange);
-
-			playerX.changeTechInflation(kTech.getInflationModifier() * iChange);
-
-			for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
-			{
-				playerX.changeCommerceRateModifier((CommerceTypes)iJ, GC.getTechInfo(eTech).getCommerceModifier(iJ) * iChange);
-			}
-			playerX.updateTechHappinessandHealth();
+			playerX.processTech(eTech, iChange);
 		}
-	}
-
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
-	{
-		changeTechExtraBuildingHappiness((BuildingTypes)iI, GC.getBuildingInfo((BuildingTypes)iI).getTechHappiness(eTech) * iChange);
-		changeTechExtraBuildingHealth((BuildingTypes)iI, GC.getBuildingInfo((BuildingTypes)iI).getTechHealth(eTech) * iChange);
 	}
 
 	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
@@ -6673,8 +6629,6 @@ void CvTeam::read(FDataStreamBase* pStream)
 	WRAPPER_READ_ARRAY(wrapper, "CvTeam", MAX_TEAMS, m_abEmbassy);
 	WRAPPER_READ_ARRAY(wrapper, "CvTeam", MAX_TEAMS, m_abLimitedBorders);
 	WRAPPER_READ_ARRAY(wrapper, "CvTeam", MAX_TEAMS, m_abFreeTrade);
-	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiTechExtraBuildingHappiness);
-	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiTechExtraBuildingHealth);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_SPECIALISTS, GC.getNumSpecialistInfos(), m_paiFreeSpecialistCount);
 
 	for (int i = 0; i < wrapper.getNumClassEnumValues(REMAPPED_CLASS_TYPE_BUILDINGS); ++i)
@@ -6840,8 +6794,6 @@ void CvTeam::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_ARRAY(wrapper, "CvTeam", MAX_TEAMS, m_abLimitedBorders);
 	WRAPPER_WRITE_ARRAY(wrapper, "CvTeam", MAX_TEAMS, m_abFreeTrade);
 
-	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiTechExtraBuildingHappiness);
-	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiTechExtraBuildingHealth);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_SPECIALISTS, GC.getNumSpecialistInfos(), m_paiFreeSpecialistCount);
 
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
@@ -6974,48 +6926,7 @@ void CvTeam::changeRebaseAnywhereCount(int iChange)
 {
 	m_iRebaseAnywhereCount += iChange;
 }
-/* Returns the happiness added to a single building type by all acquired techs.
- *
- * eBuilding - the building type to look up
- */
-int CvTeam::getTechExtraBuildingHappiness(BuildingTypes eIndex) const
-{
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex);
-	return m_paiTechExtraBuildingHappiness[eIndex];
-}
 
-/* Adds iChange to the current happiness added to a single building type by all acquired techs.
- * Called from processTech() when a tech is acquired or lost.
- *
- * eIndex - the building type to change
- * iChange - the additional happiness to add to the existing value
- */
-void CvTeam::changeTechExtraBuildingHappiness(BuildingTypes eIndex, int iChange)
-{
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex);
-
-	if (iChange != 0)
-	{
-		setTechExtraBuildingHappiness(eIndex, getTechExtraBuildingHappiness(eIndex) + iChange);
-	}
-}
-
-int CvTeam::getTechExtraBuildingHealth(BuildingTypes eIndex) const
-{
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex);
-	return m_paiTechExtraBuildingHealth[eIndex];
-}
-
-
-void CvTeam::changeTechExtraBuildingHealth(BuildingTypes eIndex, int iChange)
-{
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex);
-
-	if (iChange != 0)
-	{
-		setTechExtraBuildingHealth(eIndex, getTechExtraBuildingHealth(eIndex) + iChange);
-	}
-}
 
 void CvTeam::AI_setAssignWorkDirtyInEveryPlayerCityWithActiveBuilding(BuildingTypes eBuilding)
 {
@@ -7027,92 +6938,6 @@ void CvTeam::AI_setAssignWorkDirtyInEveryPlayerCityWithActiveBuilding(BuildingTy
 				GET_PLAYER((PlayerTypes)i).cities() | filtered(CvCity::fn::getNumActiveBuilding(eBuilding) > 0),
 				CvCity::fn::AI_setAssignWorkDirty(true)
 			);
-		}
-	}
-}
-/* Sets the happiness added to a single building type by all acquired techs.
- *
- * eIndex - the building type to change
- * iNewValue - the new happiness value for the building
- */
-void CvTeam::setTechExtraBuildingHappiness(BuildingTypes eIndex, int iNewValue)
-{
-	if (m_paiTechExtraBuildingHappiness[eIndex] != iNewValue)
-	{
-		const int iOldValue = m_paiTechExtraBuildingHappiness[eIndex];
-		m_paiTechExtraBuildingHappiness[eIndex] = iNewValue;
-
-		for (int i = 0; i < MAX_PLAYERS; i++)
-		{
-			if (GET_PLAYER((PlayerTypes)i).isAliveAndTeam(getID()))
-			{
-				foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)i).cities())
-				{
-					if (pLoopCity->hasFullyActiveBuilding(eIndex))
-					{
-						// Remove the old value
-						if (iOldValue > 0)
-						{
-							pLoopCity->changeBuildingGoodHappiness(-iOldValue);
-						}
-						else if (iOldValue < 0)
-						{
-							pLoopCity->changeBuildingBadHappiness(-iOldValue);
-						}
-
-						// Add the new value
-						if (iNewValue > 0)
-						{
-							pLoopCity->changeBuildingGoodHappiness(iNewValue);
-						}
-						else if (iNewValue < 0)
-						{
-							pLoopCity->changeBuildingBadHappiness(iNewValue);
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
-void CvTeam::setTechExtraBuildingHealth(BuildingTypes eIndex, int iNewValue)
-{
-	if (m_paiTechExtraBuildingHealth[eIndex] != iNewValue)
-	{
-		const int iOldValue = m_paiTechExtraBuildingHealth[eIndex];
-		m_paiTechExtraBuildingHealth[eIndex] = iNewValue;
-
-		for (int i = 0; i < MAX_PLAYERS; i++)
-		{
-			if (GET_PLAYER((PlayerTypes)i).isAliveAndTeam(getID()))
-			{
-				foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)i).cities())
-				{
-					if (pLoopCity->hasFullyActiveBuilding(eIndex))
-					{
-						// Remove the old value
-						if (iOldValue > 0)
-						{
-							pLoopCity->changeBuildingGoodHealth(-iOldValue);
-						}
-						else if (iOldValue < 0)
-						{
-							pLoopCity->changeBuildingBadHealth(-iOldValue);
-						}
-
-						// Add the new value
-						if (iNewValue > 0)
-						{
-							pLoopCity->changeBuildingGoodHealth(iNewValue);
-						}
-						else if (iNewValue < 0)
-						{
-							pLoopCity->changeBuildingBadHealth(iNewValue);
-						}
-					}
-				}
-			}
 		}
 	}
 }
@@ -7846,8 +7671,6 @@ void CvTeam::recalculateModifiers()
 	{
 		m_paiBuildingCount[iI] = 0;
 		m_paiObsoleteBuildingCount[iI] = 0;
-		m_paiTechExtraBuildingHappiness[iI] = 0;
-		m_paiTechExtraBuildingHealth[iI] = 0;
 
 		for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
 		{
@@ -7873,6 +7696,7 @@ void CvTeam::recalculateModifiers()
 	{
 		m_paiRouteChange[iI] = 0;
 	}
+
 	// Recalculate player modifiers
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
@@ -7881,8 +7705,7 @@ void CvTeam::recalculateModifiers()
 			GET_PLAYER((PlayerTypes)iI).recalculateModifiers();
 		}
 	}
-
-	//	Reapply techs
+	// Reapply techs
 	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 	{
 		if (isHasTech((TechTypes)iI))
@@ -7890,12 +7713,12 @@ void CvTeam::recalculateModifiers()
 			processTech((TechTypes)iI, 1);
 		}
 	}
-	//	Reapply circumnavigation bonus
+	// Reapply circumnavigation bonus
 	if (GC.getGame().getCircumnavigatedTeam() == getID())
 	{
 		setCircumnavigated(true);
 	}
-	//	Reapply projects
+	// Reapply projects
 	for (int iI = 0; iI < GC.getNumProjectInfos(); iI++)
 	{
 		if (getProjectCount((ProjectTypes)iI) > 0)
