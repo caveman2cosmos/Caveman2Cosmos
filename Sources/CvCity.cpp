@@ -17156,8 +17156,9 @@ void CvCity::read(FDataStreamBase* pStream)
 			int iValue = 0;
 			WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iType, "BuildingHappinessFromTechType");
 			WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iValue, "BuildingHappinessFromTechValue");
+			iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_TECHS, iType, true));
 
-			if (iType > -1 && iType < MAX_PLAYERS)
+			if (iType > -1)
 			{
 				m_buildingHappinessFromTech.push_back(std::make_pair(static_cast<TechTypes>(iType), iValue));
 			}
@@ -17168,8 +17169,9 @@ void CvCity::read(FDataStreamBase* pStream)
 			int iValue = 0;
 			WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iType, "BuildingHealthFromTechType");
 			WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iValue, "BuildingHealthFromTechValue");
+			iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_TECHS, iType, true));
 
-			if (iType > -1 && iType < MAX_PLAYERS)
+			if (iType > -1)
 			{
 				m_buildingHealthFromTech.push_back(std::make_pair(static_cast<TechTypes>(iType), iValue));
 			}
