@@ -17156,10 +17156,11 @@ void CvCity::read(FDataStreamBase* pStream)
 			int iValue = 0;
 			WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iType, "BuildingHappinessFromTechType");
 			WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iValue, "BuildingHappinessFromTechValue");
+			const TechTypes eTech = static_cast<TechTypes>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_TECHS, iType, true));
 
-			if (iType > -1 && iType < MAX_PLAYERS)
+			if (eTech != NO_TECH)
 			{
-				m_buildingHappinessFromTech.push_back(std::make_pair(static_cast<TechTypes>(iType), iValue));
+				m_buildingHappinessFromTech.push_back(std::make_pair(eTech, iValue));
 			}
 		}
 		WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iSize, "BuildingHealthFromTechSize");
@@ -17168,10 +17169,11 @@ void CvCity::read(FDataStreamBase* pStream)
 			int iValue = 0;
 			WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iType, "BuildingHealthFromTechType");
 			WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iValue, "BuildingHealthFromTechValue");
+			const TechTypes eTech = static_cast<TechTypes>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_TECHS, iType, true));
 
-			if (iType > -1 && iType < MAX_PLAYERS)
+			if (eTech != NO_TECH)
 			{
-				m_buildingHealthFromTech.push_back(std::make_pair(static_cast<TechTypes>(iType), iValue));
+				m_buildingHealthFromTech.push_back(std::make_pair(eTech, iValue));
 			}
 		}
 	}
