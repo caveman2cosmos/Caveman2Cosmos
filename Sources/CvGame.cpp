@@ -1,5 +1,8 @@
 // game.cpp
 
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
@@ -44,6 +47,7 @@ CvGame::CvGame()
 	, m_iChokePointCalculationVersion(0)
 	, m_eCurrentMap(MAP_EARTH)
 {
+	PROFILE_EXTRA_FUNC();
 	m_aiRankPlayer = new int[MAX_PLAYERS];        // Ordered by rank...
 	m_aiPlayerRank = new int[MAX_PLAYERS];        // Ordered by player ID...
 	m_aiPlayerScore = new int[MAX_PLAYERS];       // Ordered by player ID...
@@ -104,6 +108,7 @@ CvGame::~CvGame()
 // Toffer - Called every time one starts a new game, be it scenario, custom, or play now.
 void CvGame::init(HandicapTypes eHandicap)
 {
+	PROFILE_EXTRA_FUNC();
 	GC.getInitCore().endGameSetup();
 	//--------------------------------
 	// Init saved data
@@ -693,6 +698,7 @@ bool CvGame::canRegenerateMap() const
 
 void CvGame::regenerateMap()
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		GET_PLAYER((PlayerTypes)iI).killUnits();
@@ -744,6 +750,7 @@ void CvGame::regenerateMap()
 
 void CvGame::uninit()
 {
+	PROFILE_EXTRA_FUNC();
 	SAFE_DELETE_ARRAY(m_paiImprovementCount);
 	SAFE_DELETE_ARRAY(m_paiUnitCreatedCount);
 	SAFE_DELETE_ARRAY(m_paiBuildingCreatedCount);
@@ -818,6 +825,7 @@ CvString create_game_id()
 // Initializes data members that are serialized.
 void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 {
+	PROFILE_EXTRA_FUNC();
 	CvPlotPaging::ResetPaging();
 
 	// Toffer - bStartingGameSession is true when starting any new game or when loading any save,
@@ -1120,6 +1128,7 @@ void CvGame::initDiplomacy()
 
 void CvGame::initFreeState()
 {
+	PROFILE_EXTRA_FUNC();
 	const EraTypes iStartEra = getStartEra();
 
 	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
@@ -1163,6 +1172,7 @@ void CvGame::initFreeState()
 
 void CvGame::initFreeUnits()
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive()
@@ -1177,6 +1187,7 @@ void CvGame::initFreeUnits()
 
 void setBestStartingPlotFromSet(CvPlayerAI* playerX, std::vector<CvPlot*>& startingPlots)
 {
+	PROFILE_EXTRA_FUNC();
 	playerX->AI_updateFoundValues(true);
 
 	int iBestValue = 0;
@@ -1304,6 +1315,7 @@ void CvGame::assignStartingPlots(const bool bScenario, const bool bMapScript)
 // Toffer - This conflict a bit with the "starting plot quality by difficulty" setup.
 void CvGame::normalizeStartingPlotLocations()
 {
+	PROFILE_EXTRA_FUNC();
 	int* aaiDistances[MAX_PC_PLAYERS];
 	int aiStartingLocs[MAX_PC_PLAYERS];
 
@@ -1411,6 +1423,7 @@ void CvGame::normalizeStartingPlotLocations()
 
 void CvGame::normalizeAddRiver()
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
@@ -1460,6 +1473,7 @@ void CvGame::normalizeAddRiver()
 
 void CvGame::normalizeRemovePeaks()
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
@@ -1479,6 +1493,7 @@ void CvGame::normalizeRemovePeaks()
 
 void CvGame::normalizeAddLakes()
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
@@ -1494,6 +1509,7 @@ void CvGame::normalizeAddLakes()
 
 CvPlot* CvGame::normalizeFindLakePlot(PlayerTypes ePlayer)
 {
+	PROFILE_EXTRA_FUNC();
 	if (GET_PLAYER(ePlayer).isAlive())
 	{
 		const CvPlot* pStartingPlot = GET_PLAYER(ePlayer).getStartingPlot();
@@ -1530,6 +1546,7 @@ CvPlot* CvGame::normalizeFindLakePlot(PlayerTypes ePlayer)
 
 void CvGame::normalizeRemoveBadFeatures()
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
@@ -1581,6 +1598,7 @@ void CvGame::normalizeRemoveBadFeatures()
 
 void CvGame::normalizeRemoveBadTerrain()
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
 		if (!GET_PLAYER((PlayerTypes)iI).isAlive())
@@ -1638,6 +1656,7 @@ void CvGame::normalizeRemoveBadTerrain()
 
 void CvGame::normalizeAddFoodBonuses()
 {
+	PROFILE_EXTRA_FUNC();
 	const bool bIgnoreLatitude = pythonIsBonusIgnoreLatitudes();
 
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
@@ -1721,6 +1740,7 @@ void CvGame::normalizeAddFoodBonuses()
 
 void CvGame::normalizeAddGoodTerrain()
 {
+	PROFILE_EXTRA_FUNC();
 	const int iConsumption = GC.getFOOD_CONSUMPTION_PER_POPULATION();
 
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
@@ -1808,6 +1828,7 @@ void CvGame::normalizeAddGoodTerrain()
 
 void CvGame::normalizeAddExtras()
 {
+	PROFILE_EXTRA_FUNC();
 	bool bIgnoreLatitude = pythonIsBonusIgnoreLatitudes();
 
 	int iTotalValue = 0;
@@ -2114,6 +2135,7 @@ void CvGame::normalizeStartingPlots()
 
 int CvGame::getTeamClosenessScore(int** aaiDistances, int* aiStartingLocs)
 {
+	PROFILE_EXTRA_FUNC();
 	int iScore = 0;
 
 	for (int iTeam = 0; iTeam < MAX_PC_TEAMS; iTeam++)
@@ -2637,6 +2659,7 @@ int CvGame::getSymbolID(int iSymbol)
 
 int CvGame::getAdjustedPopulationPercent(VictoryTypes eVictory) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (GC.getVictoryInfo(eVictory).getPopulationPercentLead() == 0)
 	{
 		return 0;
@@ -2707,6 +2730,7 @@ bool CvGame::isChooseElection(VoteTypes eVote) const
 
 bool CvGame::isTeamVoteEligible(TeamTypes eTeam, VoteSourceTypes eVoteSource) const
 {
+	PROFILE_EXTRA_FUNC();
 	const CvTeam& kTeam = GET_TEAM(eTeam);
 
 	if (kTeam.isForceTeamVoteEligible(eVoteSource))
@@ -2758,6 +2782,7 @@ bool CvGame::isTeamVoteEligible(TeamTypes eTeam, VoteSourceTypes eVoteSource) co
 
 int CvGame::countVote(const VoteTriggeredData& kData, PlayerVoteTypes eChoice) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 	for (int iI = 0; iI < MAX_PC_PLAYERS; ++iI)
 	{
@@ -2772,6 +2797,7 @@ int CvGame::countVote(const VoteTriggeredData& kData, PlayerVoteTypes eChoice) c
 
 int CvGame::countPossibleVote(VoteTypes eVote, VoteSourceTypes eVoteSource) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
@@ -2787,6 +2813,7 @@ int CvGame::countPossibleVote(VoteTypes eVote, VoteSourceTypes eVoteSource) cons
 
 TeamTypes CvGame::findHighestVoteTeam(const VoteTriggeredData& kData) const
 {
+	PROFILE_EXTRA_FUNC();
 	TeamTypes eBestTeam = NO_TEAM;
 	int iBestCount = 0;
 
@@ -2817,6 +2844,7 @@ int CvGame::getVoteRequired(VoteTypes eVote, VoteSourceTypes eVoteSource) const
 
 TeamTypes CvGame::getSecretaryGeneral(VoteSourceTypes eVoteSource) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (!canHaveSecretaryGeneral(eVoteSource))
 	{
 		for (int iBuilding = 0; iBuilding < GC.getNumBuildingInfos(); ++iBuilding)
@@ -2855,6 +2883,7 @@ TeamTypes CvGame::getSecretaryGeneral(VoteSourceTypes eVoteSource) const
 
 bool CvGame::canHaveSecretaryGeneral(VoteSourceTypes eVoteSource) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < GC.getNumVoteInfos(); iI++)
 	{
 		if (GC.getVoteInfo((VoteTypes)iI).isVoteSourceType(eVoteSource) && GC.getVoteInfo((VoteTypes)iI).isSecretaryGeneral())
@@ -2867,6 +2896,7 @@ bool CvGame::canHaveSecretaryGeneral(VoteSourceTypes eVoteSource) const
 
 void CvGame::clearSecretaryGeneral(VoteSourceTypes eVoteSource)
 {
+	PROFILE_EXTRA_FUNC();
 	for (int j = 0; j < GC.getNumVoteInfos(); ++j)
 	{
 		const CvVoteInfo& kVote = GC.getVoteInfo((VoteTypes)j);
@@ -2901,6 +2931,7 @@ void CvGame::updateSecretaryGeneral()
 
 int CvGame::countCivPlayersAlive() const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
@@ -2912,6 +2943,7 @@ int CvGame::countCivPlayersAlive() const
 
 int CvGame::countCivPlayersEverAlive() const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
@@ -2927,6 +2959,7 @@ int CvGame::countCivPlayersEverAlive() const
 
 int CvGame::countCivTeamsAlive() const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 	{
@@ -2938,6 +2971,7 @@ int CvGame::countCivTeamsAlive() const
 
 int CvGame::countCivTeamsEverAlive() const
 {
+	PROFILE_EXTRA_FUNC();
 	bool teamsAlive[MAX_PC_TEAMS];
 	memset(teamsAlive, 0, sizeof(bool)*MAX_PC_TEAMS);
 
@@ -2962,6 +2996,7 @@ int CvGame::countCivTeamsEverAlive() const
 
 int CvGame::countHumanPlayersAlive() const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
@@ -2977,6 +3012,7 @@ int CvGame::countHumanPlayersAlive() const
 
 int CvGame::countTotalCivPower() const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
@@ -2991,6 +3027,7 @@ int CvGame::countTotalCivPower() const
 
 int CvGame::countTotalNukeUnits() const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
@@ -3005,6 +3042,7 @@ int CvGame::countTotalNukeUnits() const
 
 int CvGame::countKnownTechNumTeams(TechTypes eTech) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 	{
@@ -3019,6 +3057,7 @@ int CvGame::countKnownTechNumTeams(TechTypes eTech) const
 
 int CvGame::countReligionLevels(ReligionTypes eReligion) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
@@ -3032,6 +3071,7 @@ int CvGame::countReligionLevels(ReligionTypes eReligion) const
 
 int CvGame::countCorporationLevels(CorporationTypes eCorporation) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
@@ -3046,6 +3086,7 @@ int CvGame::countCorporationLevels(CorporationTypes eCorporation) const
 
 void CvGame::replaceCorporation(CorporationTypes eCorporation1, CorporationTypes eCorporation2)
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		const CvPlayer& player = GET_PLAYER((PlayerTypes)iI);
@@ -3073,6 +3114,7 @@ void CvGame::replaceCorporation(CorporationTypes eCorporation1, CorporationTypes
 
 int CvGame::calculateReligionPercent(ReligionTypes eReligion) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (getTotalPopulation() == 0)
 	{
 		return 0;
@@ -3127,6 +3169,7 @@ int CvGame::getImprovementUpgradeTime(ImprovementTypes eImprovement) const
 
 bool CvGame::canTrainNukes() const
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		const CvPlayer& player = GET_PLAYER((PlayerTypes)iI);
@@ -3147,6 +3190,7 @@ bool CvGame::canTrainNukes() const
 
 EraTypes CvGame::getHighestEra() const
 {
+	PROFILE_EXTRA_FUNC();
 	int iHighestEra = 0;
 
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
@@ -3165,6 +3209,7 @@ EraTypes CvGame::getHighestEra() const
 
 EraTypes CvGame::getCurrentEra() const
 {
+	PROFILE_EXTRA_FUNC();
 	int iEra = 0;
 	int iCount = 0;
 
@@ -3466,6 +3511,7 @@ void CvGame::incrementTurnTimer(int iNumTurnSlices)
 
 int CvGame::getMaxTurnLen() const
 {
+	PROFILE_EXTRA_FUNC();
 	if (isPitboss())
 	{
 		// Use the user provided input, turn time is in hours
@@ -3522,6 +3568,7 @@ int CvGame::getNumGameTurnActive() const
 
 int CvGame::countNumHumanGameTurnActive() const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
@@ -3741,6 +3788,7 @@ int CvGame::getInitWonders() const
 
 void CvGame::initScoreCalculation()
 {
+	PROFILE_EXTRA_FUNC();
 	// initialize score calculation
 	int iMaxFood = 0;
 	for (int i = 0; i < GC.getMap().numPlots(); i++)
@@ -3994,6 +4042,7 @@ int CvGame::getDiploVoteCount(VoteSourceTypes eVoteSource) const
 
 void CvGame::changeDiploVote(VoteSourceTypes eVoteSource, int iChange)
 {
+	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, GC.getNumVoteSourceInfos(), eVoteSource);
 
 	if (0 != iChange)
@@ -4021,6 +4070,7 @@ void CvGame::changeDiploVote(VoteSourceTypes eVoteSource, int iChange)
 
 bool CvGame::canDoResolution(VoteSourceTypes eVoteSource, const VoteSelectionSubData& kData) const
 {
+	PROFILE_EXTRA_FUNC();
 	const bool bVictory = GC.getVoteInfo(kData.eVote).isVictory();
 
 	if (bVictory)
@@ -4063,6 +4113,7 @@ bool CvGame::canDoResolution(VoteSourceTypes eVoteSource, const VoteSelectionSub
 
 bool CvGame::isValidVoteSelection(VoteSourceTypes eVoteSource, const VoteSelectionSubData& kData) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (NO_PLAYER != kData.ePlayer)
 	{
 		const CvPlayer& kPlayer = GET_PLAYER(kData.ePlayer);
@@ -4435,6 +4486,7 @@ bool CvGame::isPlayerOptionsSent() const
 
 void CvGame::sendPlayerOptions(bool bForce)
 {
+	PROFILE_EXTRA_FUNC();
 	if (getActivePlayer() != NO_PLAYER && (bForce || !isPlayerOptionsSent()))
 	{
 		m_bPlayerOptionsSent = true;
@@ -4463,6 +4515,7 @@ PlayerTypes CvGame::getActivePlayer() const
 
 void CvGame::setActivePlayer(PlayerTypes eNewValue, bool bForceHotSeat)
 {
+	PROFILE_EXTRA_FUNC();
 	const PlayerTypes eOldActivePlayer = getActivePlayer();
 	if (eOldActivePlayer != eNewValue)
 	{
@@ -4552,6 +4605,7 @@ HandicapTypes CvGame::getHandicapType() const
 
 void CvGame::setHandicapType(HandicapTypes eHandicap)
 {
+	PROFILE_EXTRA_FUNC();
 	if (m_eHandicap != eHandicap)
 	{
 		m_eHandicap = eHandicap;
@@ -4595,6 +4649,7 @@ void CvGame::setPausePlayer(PlayerTypes eNewValue)
 
 UnitTypes CvGame::getBestLandUnit() const
 {
+	PROFILE_EXTRA_FUNC();
 	if (m_eBestLandUnit == NO_UNIT)
 	{
 		// This can occur after a load in which the previous best land unit was deleted from the assets
@@ -4690,6 +4745,7 @@ GameStateTypes CvGame::getGameState() const
 
 void CvGame::setGameState(GameStateTypes eNewValue)
 {
+	PROFILE_EXTRA_FUNC();
 	if (m_eGameState != eNewValue)
 	{
 		m_eGameState = eNewValue;
@@ -4765,6 +4821,7 @@ int CvGame::getPlayerRank(PlayerTypes ePlayer) const
 
 void CvGame::setPlayerRank(PlayerTypes ePlayer, int iRank)
 {
+	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, MAX_PLAYERS, ePlayer);
 
 	// Attitude cache
@@ -4997,6 +5054,7 @@ bool CvGame::isForceCivic(CivicTypes eIndex) const
 
 bool CvGame::isForceCivicOption(CivicOptionTypes eCivicOption) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < GC.getNumCivicInfos(); iI++)
 	{
 		if (GC.getCivicInfo((CivicTypes)iI).getCivicOptionType() == eCivicOption && isForceCivic((CivicTypes)iI))
@@ -5048,6 +5106,7 @@ bool CvGame::isVotePassed(VoteTypes eIndex) const
 
 void CvGame::setVoteOutcome(const VoteTriggeredData& kData, PlayerVoteTypes eNewValue)
 {
+	PROFILE_EXTRA_FUNC();
 	const VoteTypes eIndex = kData.kVoteOption.eVote;
 	FASSERT_BOUNDS(0, GC.getNumVoteInfos(), eIndex);
 
@@ -5088,6 +5147,7 @@ bool CvGame::isReligionFounded(ReligionTypes eIndex) const
 
 void CvGame::makeReligionFounded(ReligionTypes eIndex, PlayerTypes ePlayer)
 {
+	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, GC.getNumReligionInfos(), eIndex);
 
 	if (!isReligionFounded(eIndex))
@@ -5177,6 +5237,7 @@ void CvGame::checkGameStart()
 
 int CvGame::countNumReligionsFounded() const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 	for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
 	{
@@ -5190,6 +5251,7 @@ int CvGame::countNumReligionsFounded() const
 
 int CvGame::countNumReligionTechsDiscovered() const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 	foreach_(const CvReligionInfo* info, GC.getReligionInfos())
 	{
@@ -5263,6 +5325,7 @@ bool CvGame::isSpecialBuildingValid(SpecialBuildingTypes eIndex) const
 
 void CvGame::makeSpecialBuildingValid(SpecialBuildingTypes eIndex, bool bAnnounce)
 {
+	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, GC.getNumSpecialBuildingInfos(), eIndex);
 
 	if (!m_pabSpecialBuildingValid[eIndex])
@@ -5289,6 +5352,7 @@ void CvGame::makeSpecialBuildingValid(SpecialBuildingTypes eIndex, bool bAnnounc
 
 bool CvGame::isInAdvancedStart() const
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iPlayer = 0; iPlayer < MAX_PC_PLAYERS; iPlayer++)
 	{
 		if (GET_PLAYER((PlayerTypes)iPlayer).isHumanPlayer() && GET_PLAYER((PlayerTypes)iPlayer).getAdvancedStartPoints() >= 0)
@@ -5319,6 +5383,7 @@ CvCity* CvGame::getHolyCity(ReligionTypes eIndex) const
 
 void CvGame::setHolyCity(ReligionTypes eIndex, const CvCity* pNewValue, bool bAnnounce)
 {
+	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, GC.getNumReligionInfos(), eIndex);
 
 	CvCity* pOldValue = getHolyCity(eIndex);
@@ -5427,6 +5492,7 @@ CvCity* CvGame::getHeadquarters(CorporationTypes eIndex) const
 
 void CvGame::setHeadquarters(CorporationTypes eIndex, CvCity* pNewValue, bool bAnnounce)
 {
+	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, GC.getNumCorporationInfos(), eIndex);
 
 	CvCity* pOldValue = getHeadquarters(eIndex);
@@ -5537,6 +5603,7 @@ void CvGame::setPlayerVote(PlayerTypes eOwnerIndex, int iVoteId, PlayerVoteTypes
 
 void CvGame::castVote(PlayerTypes eOwnerIndex, int iVoteId, PlayerVoteTypes ePlayerVote)
 {
+	PROFILE_EXTRA_FUNC();
 	const VoteTriggeredData* pTriggeredData = getVoteTriggered(iVoteId);
 	if (NULL != pTriggeredData)
 	{
@@ -5812,6 +5879,7 @@ void CvGame::doDeals()
 //Enumerates all currently possible spawn plots for a spawning rule, for use in a thread, local density is not checked
 void enumSpawnPlots(const CvSpawnInfo& spawnInfo, std::vector<CvPlot*>* plots)
 {
+	PROFILE_EXTRA_FUNC();
 	if (spawnInfo.getRateOverride() == 0)
 	{
 		return;
@@ -6246,6 +6314,7 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 #ifdef GLOBAL_WARMING
 void CvGame::doGlobalWarming()
 {
+	PROFILE_EXTRA_FUNC();
 	// Loop to look for environmentalism written by EmperorFool
 	bool abTreeHugger[MAX_PC_PLAYERS];
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
@@ -6511,6 +6580,7 @@ void CvGame::doGlobalWarming()
 
 void CvGame::doHeadquarters()
 {
+	PROFILE_EXTRA_FUNC();
 	if (Cy::call_optional(PYGameModule, "doHeadquarters"))
 	{
 		return;
@@ -6615,6 +6685,7 @@ void CvGame::doDiploVote()
 
 void CvGame::createBarbarianCities(bool bNeanderthal)
 {
+	PROFILE_EXTRA_FUNC();
 	if (
 		getMaxCityElimination() > 0
 	||
@@ -6864,6 +6935,7 @@ namespace {
 
 void CvGame::createBarbarianUnits()
 {
+	PROFILE_EXTRA_FUNC();
 	if (isOption(GAMEOPTION_BARBARIAN_NONE) || GC.getEraInfo(getCurrentEra()).isNoBarbUnits())
 	{
 		return;
@@ -7782,6 +7854,7 @@ void CvGame::logRandomResult(const wchar_t* szStreamName, const char* pszLog, in
 
 int CvGame::getSorenRandNum(int iNum, const char* pszLog)
 {
+	PROFILE_EXTRA_FUNC();
 	int iScale = 0;
 	while(iNum > MAX_UNSIGNED_SHORT)
 	{
@@ -8007,6 +8080,7 @@ void CvGame::addReplayMessage(ReplayMessageTypes eType, PlayerTypes ePlayer, CvW
 
 void CvGame::clearReplayMessageMap()
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(const CvReplayMessage* pMessage, m_listReplayMessages)
 	{
 		SAFE_DELETE(pMessage);
@@ -8119,6 +8193,7 @@ uint CvGame::getNumReplayMessages() const
 
 void CvGame::read(FDataStreamBase* pStream)
 {
+	PROFILE_EXTRA_FUNC();
 	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	reset(NO_HANDICAP);
@@ -8421,6 +8496,7 @@ void CvGame::read(FDataStreamBase* pStream)
 
 void CvGame::write(FDataStreamBase* pStream)
 {
+	PROFILE_EXTRA_FUNC();
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	uint32_t uiFlag = GAME_SAVE_UI_FLAG_VALUE_AND_BASE;
@@ -8621,6 +8697,7 @@ void CvGame::saveReplay(PlayerTypes ePlayer)
 
 void CvGame::showEndGameSequence()
 {
+	PROFILE_EXTRA_FUNC();
 	const int iHours = getMinutesPlayed() / 60;
 	const int iMinutes = getMinutesPlayed() % 60;
 
@@ -8736,6 +8813,7 @@ void CvGame::logNetMsgData(char* format, ...)
 
 void CvGame::addPlayer(PlayerTypes eNewPlayer, LeaderHeadTypes eLeader, CivilizationTypes eCiv, bool bSetAlive)
 {
+	PROFILE_EXTRA_FUNC();
 	// Reset names for recycled player slot
 	CvWString szEmptyString = L"";
 	const LeaderHeadTypes eOldLeader = GET_PLAYER(eNewPlayer).getLeaderType();
@@ -8797,6 +8875,7 @@ void CvGame::addPlayer(PlayerTypes eNewPlayer, LeaderHeadTypes eLeader, Civiliza
 
 void CvGame::changeHumanPlayer( PlayerTypes eOldHuman, PlayerTypes eNewHuman )
 {
+	PROFILE_EXTRA_FUNC();
 	// It's a multiplayer game, eep!
 	if(GC.getInitCore().getMultiplayer())
 	{
@@ -8824,6 +8903,7 @@ void CvGame::changeHumanPlayer( PlayerTypes eOldHuman, PlayerTypes eNewHuman )
 
 bool CvGame::isCompetingCorporation(CorporationTypes eCorporation1, CorporationTypes eCorporation2) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (GC.getCorporationInfo(eCorporation1).isCompetingCorporation(eCorporation2) || GC.getCorporationInfo(eCorporation2).isCompetingCorporation(eCorporation1))
 		return true;
 
@@ -8842,6 +8922,7 @@ bool CvGame::isCompetingCorporation(CorporationTypes eCorporation1, CorporationT
 //	so move it over to CvPlot and store extra yield in an array of three elements per plot.
 int CvGame::getPlotExtraYield(int iX, int iY, YieldTypes eYield) const
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(const PlotExtraYield& extraYield, m_aPlotExtraYields)
 	{
 		if (extraYield.m_iX == iX && extraYield.m_iY == iY)
@@ -8854,6 +8935,7 @@ int CvGame::getPlotExtraYield(int iX, int iY, YieldTypes eYield) const
 
 void CvGame::setPlotExtraYield(int iX, int iY, YieldTypes eYield, int iExtraYield)
 {
+	PROFILE_EXTRA_FUNC();
 	bool bFound = false;
 
 	foreach_(PlotExtraYield& extraYield, m_aPlotExtraYields)
@@ -8926,6 +9008,7 @@ ReligionTypes CvGame::getVoteSourceReligion(VoteSourceTypes eVoteSource) const
 
 void CvGame::setVoteSourceReligion(VoteSourceTypes eVoteSource, ReligionTypes eReligion, bool bAnnounce)
 {
+	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, GC.getNumReligionInfos(), eReligion);
 
 	m_mapVoteSourceReligions[eVoteSource] = eReligion;
@@ -8978,6 +9061,7 @@ int CvGame::getCultureThreshold(CultureLevelTypes eLevel) const
 
 void CvGame::doUpdateCacheOnTurn()
 {
+	PROFILE_EXTRA_FUNC();
 	// reset cultural victories
 	m_iNumCultureVictoryCities = 0;
 	for (int iI = 0; iI < GC.getNumVictoryInfos(); iI++)
@@ -9005,6 +9089,7 @@ VoteSelectionData* CvGame::getVoteSelection(int iID) const
 
 VoteSelectionData* CvGame::addVoteSelection(VoteSourceTypes eVoteSource)
 {
+	PROFILE_EXTRA_FUNC();
 	VoteSelectionData* pData = m_voteSelections.add();
 
 	if  (NULL != pData)
@@ -9169,6 +9254,7 @@ VoteTriggeredData* CvGame::addVoteTriggered(const VoteSelectionData& kData, int 
 
 VoteTriggeredData* CvGame::addVoteTriggered(VoteSourceTypes eVoteSource, const VoteSelectionSubData& kOptionData)
 {
+	PROFILE_EXTRA_FUNC();
 	VoteTriggeredData* pData = m_votesTriggered.add();
 
 	if (NULL != pData)
@@ -9208,6 +9294,7 @@ void CvGame::deleteVoteTriggered(int iID)
 
 void CvGame::doVoteResults()
 {
+	PROFILE_EXTRA_FUNC();
 	int iLoop;
 	for (VoteTriggeredData* pVoteTriggered = m_votesTriggered.beginIter(&iLoop); NULL != pVoteTriggered; pVoteTriggered = m_votesTriggered.nextIter(&iLoop))
 	{
@@ -9412,6 +9499,7 @@ void CvGame::doVoteResults()
 
 void CvGame::doVoteSelection()
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < GC.getNumVoteSourceInfos(); ++iI)
 	{
 		const VoteSourceTypes eVoteSource = (VoteSourceTypes)iI;
@@ -9506,6 +9594,7 @@ bool CvGame::isEventActive(EventTriggerTypes eTrigger) const
 
 void CvGame::initEvents()
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iTrigger = 0; iTrigger < GC.getNumEventTriggerInfos(); ++iTrigger)
 	{
 		if (isOption(GAMEOPTION_NO_EVENTS) || getSorenRandNum(100, "Event Active?") >= GC.getEventTriggerInfo((EventTriggerTypes)iTrigger).getPercentGamesActive())
@@ -9517,6 +9606,7 @@ void CvGame::initEvents()
 
 bool CvGame::isCivEverActive(CivilizationTypes eCivilization) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iPlayer = 0; iPlayer < MAX_PLAYERS; iPlayer++)
 	{
 		const CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iPlayer);
@@ -9531,6 +9621,7 @@ bool CvGame::isCivEverActive(CivilizationTypes eCivilization) const
 
 bool CvGame::isLeaderEverActive(LeaderHeadTypes eLeader) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iPlayer = 0; iPlayer < MAX_PLAYERS; iPlayer++)
 	{
 		const CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iPlayer);
@@ -9569,6 +9660,7 @@ bool CvGame::pythonIsBonusIgnoreLatitudes() const
 // BarbarianWorld
 bool CvGame::foundBarbarianCity()
 {
+	PROFILE_EXTRA_FUNC();
 	int iBestValue = 0;
 	CvPlot* pBestPlot = NULL;
 
@@ -9684,6 +9776,7 @@ void CvGame::changeHighToLowCounter(int iChange)
 
 void CvGame::doFinalFive()
 {
+	PROFILE_EXTRA_FUNC();
 	if (!isGameMultiPlayer() && isOption(GAMEOPTION_CHALLENGE_CUT_LOSERS) && countCivPlayersAlive() > 5)
 	{
 		changeCutLosersCounter(1);
@@ -9709,6 +9802,7 @@ void CvGame::doFinalFive()
 
 void CvGame::doHightoLow()
 {
+	PROFILE_EXTRA_FUNC();
 	if (!isGameMultiPlayer() && isOption(GAMEOPTION_CHALLENGE_HIGH_TO_LOW)
 	&& getGameTurn() >= GC.getDefineINT("HIGH_TO_LOW_FIRST_TURN_CHECK")
 	&& getHighToLowCounter() < 2)
@@ -9732,6 +9826,7 @@ void CvGame::doHightoLow()
 
 void CvGame::doIncreasingDifficulty()
 {
+	PROFILE_EXTRA_FUNC();
 	if (
 		!isOption(GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY)
 	// If game handicap is at max then all human players handicaps must also be at max.
@@ -9774,6 +9869,7 @@ void CvGame::doIncreasingDifficulty()
 
 void CvGame::doFlexibleDifficulty()
 {
+	PROFILE_EXTRA_FUNC();
 	logging::logMsg("C2C.log", "doFlexibleDifficulty");
 
 	const bool bFlexDiffForAI = isModderGameOption(MODDERGAMEOPTION_AI_USE_FLEXIBLE_DIFFICULTY);
@@ -9986,6 +10082,7 @@ void CvGame::doFlexibleDifficulty()
 // Corrects game difficulty to match average human player difficulty.
 void CvGame::averageHandicaps()
 {
+	PROFILE_EXTRA_FUNC();
 	int iAggregate = 0;
 	int iHumanCount = 0;
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
@@ -10020,6 +10117,7 @@ void CvGame::setMercyRuleCounter(int iNewVal)
 
 void CvGame::clearLandmarks(bool bClear)
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iPlot = 0; iPlot < GC.getMap().numPlots(); iPlot++)
 	{
 		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iPlot);
@@ -10043,6 +10141,7 @@ void CvGame::clearLandmarks(bool bClear)
 
 void CvGame::pruneLandmarks()
 {
+	PROFILE_EXTRA_FUNC();
 	int iWorldSize = GC.getMap().getWorldSize();
 
 	for (int iPlot = 0; iPlot < GC.getMap().numPlots(); iPlot++)
@@ -10057,6 +10156,7 @@ void CvGame::pruneLandmarks()
 
 void CvGame::removeAdjacentLandmarks(const CvPlot* pCenterPlot, const CvPlot* pExceptionPlot, int iRadius)
 {
+	PROFILE_EXTRA_FUNC();
 	if (pCenterPlot == NULL || iRadius <= 0)
 	{
 		return;
@@ -10078,6 +10178,7 @@ void CvGame::removeAdjacentLandmarks(const CvPlot* pCenterPlot, const CvPlot* pE
 
 void CvGame::findMountainRanges()
 {
+	PROFILE_EXTRA_FUNC();
 	int iMinimumRangeSize = GC.getDefineINT("MINIMUM_MOUNTAIN_RANGE_SIZE");
 	iMinimumRangeSize += (int)GC.getMap().getWorldSize();
 	for (int iPlot = 0; iPlot < GC.getMap().numPlots(); iPlot++)
@@ -10108,6 +10209,7 @@ void CvGame::findMountainRanges()
 
 void CvGame::findLonePeaks()
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iPlot = 0; iPlot < GC.getMap().numPlots(); iPlot++)
 	{
 		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iPlot);
@@ -10145,6 +10247,7 @@ void CvGame::findLonePeaks()
 //(X and Y are land, O, water. We are looking for Y, which should only be adjacent to 1 water tile... the bay!)
 void CvGame::findBays()
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iPlot = 0; iPlot < GC.getMap().numPlots(); iPlot++)
 	{
 		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iPlot);
@@ -10180,6 +10283,7 @@ void CvGame::findBays()
 
 void CvGame::findForests()
 {
+	PROFILE_EXTRA_FUNC();
 	const FeatureTypes eForest = GC.getFEATURE_FOREST();
 	int iMinimumForestSize = GC.getMINIMUM_FOREST_SIZE();
 	iMinimumForestSize += (int)GC.getMap().getWorldSize() * 2;
@@ -10207,6 +10311,7 @@ void CvGame::findForests()
 
 void CvGame::findJungles()
 {
+	PROFILE_EXTRA_FUNC();
 	const FeatureTypes eJungle = GC.getFEATURE_JUNGLE();
 	int iMinimumJungleSize = GC.getMINIMUM_JUNGLE_SIZE();
 	iMinimumJungleSize += (int)GC.getMap().getWorldSize() * 2;
@@ -10235,6 +10340,7 @@ void CvGame::findJungles()
 
 void CvGame::findDeserts()
 {
+	PROFILE_EXTRA_FUNC();
 	const TerrainTypes eDesert = GC.getTERRAIN_DESERT();
 	int iMinimumDesertSize = GC.getMINIMUM_DESERT_SIZE();
 	iMinimumDesertSize += (int)GC.getMap().getWorldSize() * 2;
@@ -10262,6 +10368,7 @@ void CvGame::findDeserts()
 
 void CvGame::findLakes()
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iPlot = 0; iPlot < GC.getMap().numPlots(); iPlot++)
 	{
 		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iPlot);
@@ -10286,6 +10393,7 @@ void CvGame::findLakes()
 //Used to ensure no more than 1 sign gets placed on each lake.
 void CvGame::markLakePlots(const CvPlot* pPlot)
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(CvPlot* pAdjacentPlot, pPlot->adjacent())
 	{
 		if (!pAdjacentPlot->isCountedPlot() && pAdjacentPlot->isLake())
@@ -10368,6 +10476,7 @@ char CvGame::getRandomConsonant()
 }
 CvWString CvGame::generateRandomWord(int iMaxLength)
 {
+	PROFILE_EXTRA_FUNC();
 	CvWString szName;
 	char chNextLetter;
 
@@ -10399,6 +10508,7 @@ CvWString CvGame::generateRandomWord(int iMaxLength)
 
 bool CvGame::isValidName(CvWString szName) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iConsonantCount = 0;
 	int iVowelCount = 0;
 	int iVowelStreak = 0;
@@ -10443,6 +10553,7 @@ bool CvGame::isValidName(CvWString szName) const
 
 CvWString CvGame::getRandomName(int iMaxLength)
 {
+	PROFILE_EXTRA_FUNC();
 	CvWString szName;
 	CvWString szRandomName;
 	int iLength = 0;
@@ -10485,6 +10596,7 @@ CvWString CvGame::getRandomName(int iMaxLength)
 
 int CvGame::countDesert(const CvPlot* pPlot)
 {
+	PROFILE_EXTRA_FUNC();
 	int iDesert = 0;
 	foreach_(CvPlot* pAdjacentPlot, pPlot->adjacent())
 	{
@@ -10503,6 +10615,7 @@ int CvGame::countDesert(const CvPlot* pPlot)
 
 int CvGame::countJungle(const CvPlot* pPlot, int iJungle)
 {
+	PROFILE_EXTRA_FUNC();
 	//This is a big jungle
 	if (iJungle > GC.getMINIMUM_JUNGLE_SIZE() * 2)
 		return iJungle;
@@ -10523,6 +10636,7 @@ int CvGame::countJungle(const CvPlot* pPlot, int iJungle)
 
 int CvGame::countForest(const CvPlot* pPlot, int iForest)
 {
+	PROFILE_EXTRA_FUNC();
 	//This is a big forest
 	if (iForest > GC.getMINIMUM_FOREST_SIZE() * 2)
 		return iForest;
@@ -10544,6 +10658,7 @@ int CvGame::countForest(const CvPlot* pPlot, int iForest)
 //Maximum length of message is 21 chars
 void CvGame::addLandmarkSigns()
 {
+	PROFILE_EXTRA_FUNC();
 	CvWString szSign;
 	CvWString szName;
 	CvWString szTextKey;
@@ -10602,6 +10717,7 @@ void CvGame::addLandmarkSigns()
 //Marks nearby tiles as counted so that they will not receive multiple signs
 void CvGame::markBayPlots(const CvPlot* pPlot)
 {
+	PROFILE_EXTRA_FUNC();
 	//Marks all plots around the given plot, and all plots around the adjacent plots as counted
 	foreach_(CvPlot* pAdjacentPlot, pPlot->adjacent())
 	{
@@ -10621,6 +10737,7 @@ void CvGame::markBayPlots(const CvPlot* pPlot)
 
 int CvGame::countPeaks(const CvPlot* pPlot, bool bCountHill)
 {
+	PROFILE_EXTRA_FUNC();
 	int iPeak = 0;
 	foreach_(CvPlot* pAdjacentPlot, pPlot->adjacent())
 	{
@@ -10696,6 +10813,7 @@ void CvGame::setModderGameOption(ModderGameOptionTypes eIndex, int iNewValue)
 
 void CvGame::doFoundCorporations()
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < GC.getNumCorporationInfos(); iI++)
 	{
 		doFoundCorporation((CorporationTypes)iI, false);
@@ -10705,6 +10823,7 @@ void CvGame::doFoundCorporations()
 // Toffer - Realistic Corporation specific routine
 void CvGame::doFoundCorporation(CorporationTypes eCorporation, bool bForce)
 {
+	PROFILE_EXTRA_FUNC();
 	if (!isOption(GAMEOPTION_ADVANCED_REALISTIC_CORPORATIONS)
 	|| !canEverSpread(eCorporation)
 	|| getHeadquarters(eCorporation) != NULL)
@@ -10803,6 +10922,7 @@ void CvGame::doFoundCorporation(CorporationTypes eCorporation, bool bForce)
 
 int CvGame::getAverageCorporationInfluence(const CvCity* pCity, const CorporationTypes eCorporation) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (getHeadquarters(eCorporation) == NULL)
 	{
 		return 100;
@@ -10907,6 +11027,7 @@ void CvGame::setFlexibleDifficultyTimer(PlayerTypes eIndex, int iNewValue)
 
 void CvGame::calculateRiverBuildings()
 {
+	PROFILE_EXTRA_FUNC();
 	m_iRiverBuildings = 0;
 	for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
 	{
@@ -10924,6 +11045,7 @@ int CvGame::getRiverBuildings() const
 
 void CvGame::calculateCoastalBuildings()
 {
+	PROFILE_EXTRA_FUNC();
 	m_iCoastalBuildings = 0;
 	for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
 	{
@@ -10950,6 +11072,7 @@ bool CvGame::canExitToMainMenu() const
 
 void CvGame::calculateNumWonders()
 {
+	PROFILE_EXTRA_FUNC();
 	m_iNumWonders = 0;
 	for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
 	{
@@ -11004,6 +11127,7 @@ bool CvGame::canEverConstruct(BuildingTypes eBuilding) const
 
 bool CvGame::canEverTrain(UnitTypes eUnit) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (eUnit == NO_UNIT)
 	{
 		return false;
@@ -11062,6 +11186,7 @@ namespace {
 
 void CvGame::loadPirateShip(CvUnit* pUnit)
 {
+	PROFILE_EXTRA_FUNC();
 	FAssertMsg(pUnit->getDomainType() == DOMAIN_SEA, "loadPirateShip expects to be passed a water unit");
 
 	const bool bSM = isOption(GAMEOPTION_COMBAT_SIZE_MATTERS);
@@ -11295,6 +11420,7 @@ void CvGame::setCurrentMap(MapTypes eNewMap)
 
 void CvGame::processGreatWall(bool bIn, bool bForce, bool bSeeded) const
 {
+	PROFILE_EXTRA_FUNC();
 #ifdef THE_GREAT_WALL
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
@@ -11369,6 +11495,7 @@ void CvGame::logOOSSpecial(int iLocID, int iVar, int iVar2, int iVar3)
 
 int CvGame::getTopCityCount() const
 {
+	PROFILE_EXTRA_FUNC();
 	int iBest = 0;
 	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 	{
@@ -11383,6 +11510,7 @@ int CvGame::getTopCityCount() const
 
 int CvGame::getTopPopCount() const
 {
+	PROFILE_EXTRA_FUNC();
 	int iBest = 0;
 	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 	{
@@ -11412,6 +11540,7 @@ void CvGame::changeImprovementCount(ImprovementTypes eIndex, int iChange)
 
 bool CvGame::isValidByGameOption(const CvUnitCombatInfo& info) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < info.getNumNotOnGameOptions(); iI++)
 	{
 		if (isOption((GameOptionTypes) info.getNotOnGameOption(iI)))
@@ -11437,6 +11566,7 @@ int CvGame::SorenRand::operator()(const int maxVal) const
 
 void CvGame::enforceOptionCompatibility(GameOptionTypes eOption)
 {
+	PROFILE_EXTRA_FUNC();
 	const CvGameOptionInfo& info = GC.getGameOptionInfo(eOption);
 
 	foreach_(const GameOptionTypes& eOptionMustOn, info.getEnforcesGameOptionOnTypes())

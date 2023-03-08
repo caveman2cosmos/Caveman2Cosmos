@@ -2,6 +2,9 @@
  Essentially an extension on CvCity, i.e. not a generic class.
  Not far from being a generic though.
  */
+
+#include "FProfiler.h"
+
 #include "CityOutputHistory.h"
 #include "CvGameCoreDLL.h"
 #include "CvGameAI.h"
@@ -18,6 +21,7 @@ CityOutputHistory::~CityOutputHistory()
 
 void CityOutputHistory::reset()
 {
+	PROFILE_EXTRA_FUNC();
 	for (uint16_t iI = 0; iI < iHistorySize; iI++)
 	{
 		recentOutputTurn[iI] = 0;
@@ -28,6 +32,7 @@ void CityOutputHistory::reset()
 
 void CityOutputHistory::addToHistory(OrderTypes eOrder, uint16_t iType, short iHistory)
 {
+	PROFILE_EXTRA_FUNC();
 	if (iHistory > -1) // Used when reading saves.
 	{
 		if (iHistory < static_cast<int>(iHistorySize))

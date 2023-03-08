@@ -1,6 +1,9 @@
 
 //	AIAndy: An implementation of FDataStreamBase for manual caching, based on fstream
 
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "FDataIOStream.h"
 #include <sstream>
@@ -125,6 +128,7 @@ uint32_t FDataIOStream::WriteString(int count, std::wstring values[])
 
 uint32_t FDataIOStream::ReadString(char* szName)
 {
+	PROFILE_EXTRA_FUNC();
 	char c;
 	do
 	{
@@ -138,6 +142,7 @@ uint32_t FDataIOStream::ReadString(char* szName)
 }
 uint32_t FDataIOStream::ReadString(wchar_t* szName)
 {
+	PROFILE_EXTRA_FUNC();
 	wchar_t c;
 	do
 	{
@@ -151,6 +156,7 @@ uint32_t FDataIOStream::ReadString(wchar_t* szName)
 }
 uint32_t FDataIOStream::ReadString(std::string& szName)
 {
+	PROFILE_EXTRA_FUNC();
 	char c;
 	stream.get(c);
 	szName.clear();
@@ -165,6 +171,7 @@ uint32_t FDataIOStream::ReadString(std::string& szName)
 }
 uint32_t FDataIOStream::ReadString(std::wstring& szName)
 {
+	PROFILE_EXTRA_FUNC();
 	wchar_t c;
 	stream.read((char*)&c, sizeof(wchar_t));
 	szName.clear();

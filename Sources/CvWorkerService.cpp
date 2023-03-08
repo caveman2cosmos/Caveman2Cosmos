@@ -1,4 +1,7 @@
-﻿#include "CvWorkerService.h"
+
+#include "FProfiler.h"
+
+#include "CvWorkerService.h"
 #include "CvDefines.h"
 #include "CvInfos.h"
 #include "CvPlayerAI.h"
@@ -9,6 +12,7 @@
 
 bool CvWorkerService::ShouldImproveCity(CvCity* targetCity)
 {
+	PROFILE_EXTRA_FUNC();
 	if (targetCity == NULL) return false;
 	foreach_(const CvPlot * pLoopPlot, targetCity->plots())
 	{
@@ -31,6 +35,7 @@ bool CvWorkerService::ShouldImproveCity(CvCity* targetCity)
 
 bool CvWorkerService::ImproveBonus(CvUnitAI* unit, int allowedMovementTurns)
 {
+	PROFILE_EXTRA_FUNC();
 	const CvPlot* unitPlot = unit->plot();
 	const PlayerTypes unitOwner = unit->getOwner();
 	const CvPlayerAI& ownerReference = GET_PLAYER(unitOwner);
@@ -162,6 +167,7 @@ bool CvWorkerService::IsPlotValid(CvUnit* unit, CvPlot* plot)
 
 BuildTypes CvWorkerService::GetFastestBuildForImprovementType(const CvPlayer& player, const ImprovementTypes improvementType, const CvPlot* plot, const CvUnitAI* unit, bool includeCurrentImprovement)
 {
+	PROFILE_EXTRA_FUNC();
 	int fastestTime = 10000;
 	BuildTypes fastestBuild = NO_BUILD;
 	const ImprovementTypes currentImprovementOnPlot = plot->getImprovementType();

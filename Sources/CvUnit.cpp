@@ -1,5 +1,8 @@
 // unit.cpp
 
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
@@ -314,6 +317,7 @@ void CvUnit::changeIdentity(UnitTypes eUnit)
 
 void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOwner, int iX, int iY, DirectionTypes eFacingDirection, int iBirthmark)
 {
+	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit);
 
 	//	If the current viewport is not yet initialized center it on the first unit created for the active player
@@ -504,6 +508,7 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 // Initializes data members that are serialized.
 void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstructorCall, bool bIdentityChange)
 {
+	PROFILE_EXTRA_FUNC();
 	clearCityOfOrigin();
 
 	m_iHealUnitCombatCount = 0;
@@ -1936,6 +1941,7 @@ void CvUnit::updateAirStrike(CvPlot* pPlot, bool bQuick, bool bFinish)
 
 void CvUnit::resolveAirCombat(CvUnit* pInterceptor, CvPlot* pPlot, CvAirMissionDefinition& kBattle)
 {
+	PROFILE_EXTRA_FUNC();
 	CvWString szBuffer;
 
 	int iTheirStrength = (DOMAIN_AIR == pInterceptor->getDomainType() ? pInterceptor->airCurrCombatStr(this) : pInterceptor->currCombatStr(NULL, NULL));
@@ -5142,6 +5148,7 @@ bool CvUnit::isActionRecommended(int iAction) const
 
 int CvUnit::defenderValue(const CvUnit* pAttacker) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (pAttacker)
 	{
 		if (pAttacker->getDomainType() == DOMAIN_AIR)
@@ -5224,6 +5231,7 @@ int CvUnit::defenderValue(const CvUnit* pAttacker) const
 
 bool CvUnit::isBetterDefenderThan(const CvUnit* pDefender, const CvUnit* pAttacker) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (pDefender == NULL)
 	{
 		return true;
@@ -5796,6 +5804,7 @@ TeamTypes CvUnit::getDeclareWarMove(const CvPlot* pPlot) const
 
 bool CvUnit::willRevealByMove(const CvPlot* pPlot) const
 {
+	PROFILE_EXTRA_FUNC();
 	const int iRange = visibilityRange(pPlot) + 1;
 
 	foreach_(const CvPlot* plotX, pPlot->rect(iRange, iRange))
@@ -6552,6 +6561,7 @@ void CvUnit::move(CvPlot* pPlot, bool bShow)
 // false if unit is killed
 bool CvUnit::jumpToNearestValidPlot(bool bKill)
 {
+	PROFILE_EXTRA_FUNC();
 	FAssertMsg(!isAttacking(), "isAttacking did not return false as expected");
 	FAssertMsg(!isInBattle(), "isInBattle did not return false as expected");
 
@@ -6924,6 +6934,7 @@ bool CvUnit::canAutomate(AutomateTypes eAutomate) const
 
 void CvUnit::automate(AutomateTypes eAutomate)
 {
+	PROFILE_EXTRA_FUNC();
 	if (!canAutomate(eAutomate))
 	{
 		return;
@@ -7022,6 +7033,7 @@ void CvUnit::scrap()
 
 bool CvUnit::canGift(bool bTestVisible, bool bTestTransport) const
 {
+	PROFILE_EXTRA_FUNC();
 	const CvPlot* pPlot = plot();
 
 	if (!pPlot->isOwned()
@@ -7274,6 +7286,7 @@ bool CvUnit::canLoad(const CvPlot* pPlot) const
 
 void CvUnit::load()
 {
+	PROFILE_EXTRA_FUNC();
 	if (!canLoad(plot()))
 	{
 		return;
@@ -7398,6 +7411,7 @@ bool CvUnit::canUnloadAll() const
 
 void CvUnit::unloadAll()
 {
+	PROFILE_EXTRA_FUNC();
 	if (!canUnloadAll())
 	{
 		return;
@@ -7792,6 +7806,7 @@ int CvUnit::getHealRateAsType(const CvPlot* pPlot, bool bHealCheck, UnitCombatTy
 
 int CvUnit::healTurns(const CvPlot* pPlot) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (!isHurt() || pPlot->getTotalTurnDamage(this) > 0)
 	{
 		return 0;
@@ -7872,6 +7887,7 @@ int CvUnit::healTurnsAsType(const CvPlot* pPlot, UnitCombatTypes eHealAsType) co
 
 void CvUnit::doHeal()
 {
+	PROFILE_EXTRA_FUNC();
 	UnitCombatTypes eHealAsType = NO_UNITCOMBAT;
 
 	if (m_pUnitInfo->getNumHealAsTypes() > 0)
@@ -7906,6 +7922,7 @@ void CvUnit::doHeal()
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 void CvUnit::doAffliction(const bool bHeal)
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = GC.getNumPromotionLineInfos() - 1; iI > -1; iI--)
 	{
 		const PromotionLineTypes ePromoLine = static_cast<PromotionLineTypes>(iI);
@@ -8056,6 +8073,7 @@ bool CvUnit::airlift(int iX, int iY)
 
 bool CvUnit::isNukeVictim(const CvPlot* pPlot, TeamTypes eTeam) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (!GET_TEAM(eTeam).isAlive() || eTeam == getTeam())
 	{
 		return false;
@@ -8084,6 +8102,7 @@ bool CvUnit::canNuke() const
 
 bool CvUnit::canNukeAt(const CvPlot* pPlot, int iX, int iY) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (!canNuke())
 	{
 		return false;
@@ -8110,6 +8129,7 @@ bool CvUnit::canNukeAt(const CvPlot* pPlot, int iX, int iY) const
 
 bool CvUnit::nuke(int iX, int iY, bool bTrap)
 {
+	PROFILE_EXTRA_FUNC();
 	if (!canNukeAt(plot(), iX, iY))
 	{
 		return false;
@@ -8452,6 +8472,7 @@ bool CvUnit::canAirBomb() const
 
 bool CvUnit::canAirBombAt(const CvPlot* pPlot, int iX, int iY) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (!canAirBomb())
 	{
 		return false;
@@ -8529,6 +8550,7 @@ bool CvUnit::canAirBombAt(const CvPlot* pPlot, int iX, int iY) const
 
 bool CvUnit::airBomb(int iX, int iY)
 {
+	PROFILE_EXTRA_FUNC();
 	if (!canAirBombAt(plot(), iX, iY))
 	{
 		return false;
@@ -8780,6 +8802,7 @@ bool CvUnit::airBomb(int iX, int iY)
 
 CvCity* CvUnit::bombardTarget(const CvPlot* pPlot) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iBestValue = MAX_INT;
 	CvCity* pBestCity = NULL;
 
@@ -8812,6 +8835,7 @@ CvCity* CvUnit::bombardTarget(const CvPlot* pPlot) const
 // Super Forts begin *bombard*
 CvPlot* CvUnit::bombardImprovementTarget(const CvPlot* pPlot) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iBestValue = MAX_INT;
 	CvPlot* pBestPlot = NULL;
 
@@ -9008,6 +9032,7 @@ bool CvUnit::canPillage(const CvPlot* pPlot) const
 
 bool CvUnit::pillage(const bool bAutoPillage)
 {
+	PROFILE_EXTRA_FUNC();
 	CvPlot* pPlot = plot();
 
 	if (!canPillage(pPlot))
@@ -9343,6 +9368,7 @@ void CvUnit::updatePlunder(int iChange, bool bUpdatePlotGroups)
 
 int CvUnit::sabotageProb(const CvPlot* pPlot, ProbabilityTypes eProbStyle) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (!pPlot->isOwned())
 	{
 		return 40 + 50 * (eProbStyle != PROBABILITY_LOW);
@@ -9513,6 +9539,7 @@ int CvUnit::destroyCost(const CvPlot* pPlot) const
 
 int CvUnit::destroyProb(const CvPlot* pPlot, ProbabilityTypes eProbStyle) const
 {
+	PROFILE_EXTRA_FUNC();
 	const CvCity* pCity = pPlot->getPlotCity();
 
 	if (pCity == NULL)
@@ -9666,6 +9693,7 @@ int CvUnit::stealPlansCost(const CvPlot* pPlot) const
 // XXX compare with destroy prob...
 int CvUnit::stealPlansProb(const CvPlot* pPlot, ProbabilityTypes eProbStyle) const
 {
+	PROFILE_EXTRA_FUNC();
 	const CvCity* pCity = pPlot->getPlotCity();
 	if (pCity == NULL)
 	{
@@ -10002,6 +10030,7 @@ bool CvUnit::spread(ReligionTypes eReligion)
 
 bool CvUnit::canSpreadCorporation(const CvPlot* pPlot, CorporationTypes eCorporation, bool bTestVisible) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (NO_CORPORATION == eCorporation)
 	{
 		return false;
@@ -10118,6 +10147,7 @@ bool CvUnit::canSpreadCorporation(const CvPlot* pPlot, CorporationTypes eCorpora
 
 int CvUnit::spreadCorporationCost(CorporationTypes eCorporation, const CvCity* pCity) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCost = std::max(0, GC.getCorporationInfo(eCorporation).getSpreadCost());
 
 	if (pCity)
@@ -10630,6 +10660,7 @@ bool CvUnit::canGreatWork(const CvPlot* pPlot) const
 
 bool CvUnit::greatWork()
 {
+	PROFILE_EXTRA_FUNC();
 	if (!canGreatWork(plot()))
 	{
 		return false;
@@ -10668,6 +10699,7 @@ bool CvUnit::greatWork()
 
 bool CvUnit::doOutcomeMission(MissionTypes eMission)
 {
+	PROFILE_EXTRA_FUNC();
 	const CvOutcomeMission* pOutcomeMission = getUnitInfo().getOutcomeMissionByMission(eMission);
 
 	if (!pOutcomeMission)
@@ -11676,6 +11708,7 @@ int CvUnit::canLead(const CvPlot* pPlot, int iUnitId) const
 
 int CvUnit::canGiveExperience(const CvPlot* pPlot) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iNumUnits = 0;
 
 	if (NO_UNIT != getUnitType() && m_pUnitInfo->getLeaderExperience() > 0)
@@ -11706,6 +11739,7 @@ int CvUnit::canGiveExperience(const CvPlot* pPlot) const
 
 bool CvUnit::giveExperience()
 {
+	PROFILE_EXTRA_FUNC();
 	const CvPlot* pPlot = plot();
 
 	if (pPlot)
@@ -12274,6 +12308,7 @@ namespace CvUnitInternal
 {
 	bool canBuildRoute(const std::vector<BuildTypes>& aBuilds, const CvTeam& team)
 	{
+		PROFILE_EXTRA_FUNC();
 		foreach_(const BuildTypes eBuild, aBuilds)
 		{
 			const CvBuildInfo& info = GC.getBuildInfo(eBuild);
@@ -12864,6 +12899,7 @@ static int iNextCombatCacheLRU = 1;
 
 static void FlushCombatStrCache(CvUnit* pMovingUnit)
 {
+	PROFILE_EXTRA_FUNC();
 	if ( pMovingUnit == NULL || pMovingUnit->isCommander() )
 	{
 		memset(CombatStrCache, 0, sizeof(CombatStrCache));
@@ -13824,6 +13860,7 @@ bool CvUnit::canSiege(TeamTypes eTeam) const
 
 int CvUnit::airMaxCombatStr(const CvUnit* pOther) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (airBaseCombatStr() == 0)
 	{
 		return 0;
@@ -13983,6 +14020,7 @@ int CvUnit::rangeCombatDamage(const CvUnit* pDefender) const
 
 CvUnit* CvUnit::bestInterceptor(const CvPlot* pPlot) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iBestValue = 0;
 	CvUnit* pBestUnit = NULL;
 
@@ -14030,6 +14068,7 @@ CvUnit* CvUnit::bestInterceptor(const CvPlot* pPlot) const
 
 CvUnit* CvUnit::bestSeaPillageInterceptor(const CvUnit* pPillager, int iMinOdds) const
 {
+	PROFILE_EXTRA_FUNC();
 	CvUnit* pBestUnit = NULL;
 
 	foreach_(const CvPlot* pLoopPlot, pPillager->plot()->rect(1, 1))
@@ -14190,6 +14229,7 @@ int CvUnit::maxFirstStrikes() const
 
 bool CvUnit::isRanged() const
 {
+	PROFILE_EXTRA_FUNC();
 	const int groupDefinitions = getUnitInfo().getGroupDefinitions();
 	for (int  i = 0; i < groupDefinitions; i++)
 	{
@@ -14275,6 +14315,7 @@ void CvUnit::changeNoInvisibilityCount(int iChange)
 
 bool CvUnit::isInvisible(TeamTypes eTeam, bool bDebug, bool bCheckCargo) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (bDebug && GC.getGame().isDebugMode())
 	{
 		return false;
@@ -14766,6 +14807,7 @@ bool CvUnit::canOnslaught() const
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 bool CvUnit::hasCureAfflictionType(PromotionLineTypes ePromotionLineType) const
 {
+	PROFILE_EXTRA_FUNC();
 	bool bCureAffliction = ePromotionLineType != NO_PROMOTIONLINE && hasExtraCureAffliction(ePromotionLineType);
 	if (!bCureAffliction)
 	{
@@ -14897,6 +14939,7 @@ int CvUnit::cityDefenseModifier() const
 
 int CvUnit::cityDefenseVSOpponent(const CvUnit* pOpponent) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (noDefensiveBonus())
 	{
 		return 0;
@@ -15366,6 +15409,7 @@ int CvUnit::getHotKeyNumber()
 
 void CvUnit::setHotKeyNumber(int iNewValue)
 {
+	PROFILE_EXTRA_FUNC();
 	FAssert(getOwner() != NO_PLAYER);
 
 	if (getHotKeyNumber() != iNewValue)
@@ -16114,6 +16158,7 @@ void CvUnit::changeHealAsDamage(UnitCombatTypes eHealAsType, int iChange, Player
 
 void CvUnit::setHealAsDamage(UnitCombatTypes eHealAsType, int iNewValue, PlayerTypes ePlayer, bool bNotifyEntity)
 {
+	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eHealAsType);
 
 	UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo(eHealAsType);
@@ -16153,6 +16198,7 @@ int CvUnit::getPreCombatDamage() const
 
 void CvUnit::setDamage(int iNewValue, PlayerTypes ePlayer, bool bNotifyEntity, UnitCombatTypes eHealAsType, bool bSecondPass)
 {
+	PROFILE_EXTRA_FUNC();
 	const int iOldValue = getDamage();
 
 	if (eHealAsType == NO_UNITCOMBAT && !bSecondPass && m_pUnitInfo->getNumHealAsTypes() > 0)
@@ -16201,6 +16247,7 @@ void CvUnit::setDamage(int iNewValue, PlayerTypes ePlayer, bool bNotifyEntity, U
 
 void CvUnit::changeDamage(int iChange, PlayerTypes ePlayer, UnitCombatTypes eHealAsType)
 {
+	PROFILE_EXTRA_FUNC();
 	if (eHealAsType == NO_UNITCOMBAT && m_pUnitInfo->getNumHealAsTypes() > 0)
 	{
 		for (int iI = 0; iI < m_pUnitInfo->getNumHealAsTypes(); iI++)
@@ -16432,6 +16479,7 @@ void CvUnit::SMchangeCargo(int iChange)
 
 void CvUnit::getCargoUnits(std::vector<CvUnit*>& aUnits) const
 {
+	PROFILE_EXTRA_FUNC();
 	aUnits.clear();
 
 #if FASSERT_ENABLE
@@ -16464,6 +16512,7 @@ void CvUnit::getCargoUnits(std::vector<CvUnit*>& aUnits) const
 
 void CvUnit::validateCargoUnits()
 {
+	PROFILE_EXTRA_FUNC();
 #if FASSERT_ENABLE
 	int iCheck = 0;
 	int iCount = 0;
@@ -17448,6 +17497,7 @@ int CvUnit::getUpkeepMultiplierSM() const
 
 void CvUnit::calcUpkeepMultiplierSM(const int iGroupOffset)
 {
+	PROFILE_EXTRA_FUNC();
 	m_iUpkeepMultiplierSM = 0;
 
 	if (iGroupOffset > 0)
@@ -18720,6 +18770,7 @@ void CvUnit::setBlockading(bool bNewValue)
 
 void CvUnit::collectBlockadeGold()
 {
+	PROFILE_EXTRA_FUNC();
 	if (plot()->getTeam() == getTeam())
 	{
 		return;
@@ -19866,6 +19917,7 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 
 bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bFree, bool bKeepCheck) const
 {
+	PROFILE_EXTRA_FUNC();
 	const CvPromotionInfo& promo = GC.getPromotionInfo(ePromotion);
 
 	if (!bKeepCheck) // If the unit got the promo then these checks have already passed.
@@ -20006,6 +20058,7 @@ bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bFree, bool bKeepC
 
 bool CvUnit::canAcquirePromotionAny() const
 {
+	PROFILE_EXTRA_FUNC();
 	//TB Debug note: I had not originally considered how this was really only to be used for determination of the unit being able to access any
 	//skill based promos only.  This is here to check if any skill promos are left that can be accessed right now and my previous considerations
 	//to include the potential to receive equipments and afflictions will now be disincluded from this routine to avoid screwing up the entire purpose
@@ -20254,6 +20307,7 @@ bool CvUnit::isHasUnitCombat(UnitCombatTypes eIndex) const
 
 void CvUnit::processUnitCombat(UnitCombatTypes eIndex, bool bAdding, bool bByPromo)
 {
+	PROFILE_EXTRA_FUNC();
 	const CvUnitCombatInfo& kUnitCombat = GC.getUnitCombatInfo(eIndex);
 	const int iChange = (bAdding ? 1 : -1);
 	int	iI;
@@ -20803,6 +20857,7 @@ bool CvUnit::isHasPromotion(PromotionTypes eIndex) const
 
 void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial)
 {
+	PROFILE_EXTRA_FUNC();
 	const CvPromotionInfo& kPromotion = GC.getPromotionInfo(eIndex);
 	const int iChange = (bAdding ? 1 : -1);
 	int	iI;
@@ -21529,6 +21584,7 @@ void CvUnit::setHasPromotion(PromotionTypes eIndex, bool bNewValue, bool bFree, 
 
 bool CvUnit::applyUnitPromotions(const std::vector<CvUnit*>& units, int number, PromotionPredicateFn promotionPredicateFn)
 {
+	PROFILE_EXTRA_FUNC();
 	FAssertMsg(number >= 0, "Number of promotions to apply cannot be negative");
 
 	if (units.size() == 0)
@@ -21567,6 +21623,7 @@ bool CvUnit::normalizeUnitPromotions(CvUnit* unit, int offset, PromotionPredicat
 
 UnitCombatTypes CvUnit::getBestHealingType()
 {
+	PROFILE_EXTRA_FUNC();
 	UnitCombatTypes eBestUnitCombat = NO_UNITCOMBAT;
 	int iBestValue = 0;
 
@@ -21587,6 +21644,7 @@ UnitCombatTypes CvUnit::getBestHealingType()
 
 UnitCombatTypes CvUnit::getBestHealingTypeConst() const
 {
+	PROFILE_EXTRA_FUNC();
 	UnitCombatTypes eBestUnitCombat = NO_UNITCOMBAT;
 	int iBestValue = 0;
 
@@ -21655,6 +21713,7 @@ bool CvUnit::potentialWarAction(const CvPlot* pPlot) const
 
 void CvUnit::read(FDataStreamBase* pStream)
 {
+	PROFILE_EXTRA_FUNC();
 	// Init data before load
 	reset();
 
@@ -23151,6 +23210,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 
 void CvUnit::write(FDataStreamBase* pStream)
 {
+	PROFILE_EXTRA_FUNC();
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
@@ -23968,6 +24028,7 @@ bool CvUnit::canAdvance(const CvPlot* pPlot, int iThreshold) const
 
 void CvUnit::collateralCombat(const CvPlot* pPlot, CvUnit* pSkipUnit)
 {
+	PROFILE_EXTRA_FUNC();
 	const int iCollateralStrength = (getDomainType() == DOMAIN_AIR ? airBaseCombatStr() : baseCombatStr()) * collateralDamage() / 100;
 
 	if (iCollateralStrength == 0)
@@ -24100,6 +24161,7 @@ void CvUnit::collateralCombat(const CvPlot* pPlot, CvUnit* pSkipUnit)
 
 void CvUnit::rBombardCombat(const CvPlot* pPlot, CvUnit* pFirstUnit)
 {
+	PROFILE_EXTRA_FUNC();
 	const int iRBombardStrength = (getDomainType() == DOMAIN_AIR ? airBaseCombatStr() : baseCombatStr()) * rBombardDamage() / 100;
 
 	if (iRBombardStrength == 0)
@@ -24319,6 +24381,7 @@ void CvUnit::rBombardCombat(const CvPlot* pPlot, CvUnit* pFirstUnit)
 
 void CvUnit::flankingStrikeCombat(const CvPlot* pPlot, int iAttackerStrength, int iAttackerFirepower, int iDefenderOdds, int iDefenderDamage, CvUnit* pSkipUnit)
 {
+	PROFILE_EXTRA_FUNC();
 	if (pSkipUnit && pPlot->isCity(true, pSkipUnit->getTeam()))
 	{
 		return;
@@ -24498,6 +24561,7 @@ bool CvUnit::canAirStrike(const CvPlot* pPlot) const
 
 bool CvUnit::airStrike(CvPlot* pPlot)//
 {
+	PROFILE_EXTRA_FUNC();
 	if (!canAirStrike(pPlot))
 	{
 		return false;
@@ -24676,6 +24740,7 @@ bool CvUnit::canRangeStrikeAt(const CvPlot* pPlot, int iX, int iY) const
 
 bool CvUnit::rangeStrike(int iX, int iY)
 {
+	PROFILE_EXTRA_FUNC();
 	CvPlot* pPlot = GC.getMap().plot(iX, iY);
 	if (NULL == pPlot)
 	{
@@ -24786,6 +24851,7 @@ bool CvUnit::rangeStrike(int iX, int iY)
 //------------------------------------------------------------------------------------------------
 int CvUnit::planBattle( CvBattleDefinition & kBattleDefinition ) const
 {
+PROFILE_EXTRA_FUNC();
 #define BATTLE_TURNS_SETUP 4
 /************************************************************************************************/
 /* Afforess	                  Start		 6/20/11                                                */
@@ -24990,6 +25056,7 @@ int CvUnit::computeUnitsToDie( const CvBattleDefinition & kDefinition, bool bRan
 //------------------------------------------------------------------------------------------------
 bool CvUnit::verifyRoundsValid( const CvBattleDefinition & battleDefinition ) const
 {
+	PROFILE_EXTRA_FUNC();
 	for(int i=0;i<battleDefinition.getNumBattleRounds();i++)
 	{
 		if(!battleDefinition.getBattleRound(i).isValid())
@@ -25046,6 +25113,7 @@ int CvUnit::computeWaveSize( bool bRangedRound, int iAttackerMax, int iDefenderM
 
 bool CvUnit::isTargetOf(const CvUnit& attacker) const
 {
+	PROFILE_EXTRA_FUNC();
 	const CvUnitInfo& attackerInfo = attacker.getUnitInfo();
 	const CvUnitInfo& ourInfo = getUnitInfo();
 
@@ -25237,6 +25305,7 @@ void CvUnit::getDefenderCombatValues(const CvUnit& kDefender, const CvPlot* pPlo
 
 int CvUnit::getTriggerValue(EventTriggerTypes eTrigger, const CvPlot* pPlot, bool bCheckPlot) const
 {
+	PROFILE_EXTRA_FUNC();
 	const CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(eTrigger);
 	if (kTrigger.getNumUnits() <= 0)
 	{
@@ -25469,6 +25538,7 @@ bool CvUnit::isAlwaysHostile(const CvPlot* pPlot) const
 
 bool CvUnit::verifyStackValid()
 {
+	PROFILE_EXTRA_FUNC();
 	if (isDead()) return true;
 
 	const CvPlot* pPlot = plot();
@@ -25559,6 +25629,7 @@ float CvUnit::getHealthBarModifier() const
 
 void CvUnit::getLayerAnimationPaths(std::vector<AnimationPathTypes>& aAnimationPaths) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (int i = 0; i < GC.getNumPromotionInfos(); ++i)
 	{
 		if (isHasPromotion((PromotionTypes)i))
@@ -25642,6 +25713,7 @@ bool CvUnit::canAirBomb1At(const CvPlot* pPlot, int iX, int iY) const
 
 bool CvUnit::airBomb1(int iX, int iY)
 {
+	PROFILE_EXTRA_FUNC();
 	if (!canAirBomb1At(plot(), iX, iY))
 	{
 		return false;
@@ -25804,6 +25876,7 @@ bool CvUnit::canAirBomb2At(const CvPlot* pPlot, int iX, int iY) const
 
 bool CvUnit::airBomb2(int iX, int iY)
 {
+	PROFILE_EXTRA_FUNC();
 	CvCity* pCity;
 	CvPlot* pPlot;
 	CvWString szBuffer;
@@ -26039,6 +26112,7 @@ bool CvUnit::canAirBomb3At(const CvPlot* pPlot, int iX, int iY) const
 
 bool CvUnit::airBomb3(int iX, int iY)
 {
+	PROFILE_EXTRA_FUNC();
 	CvCity* pCity;
 	CvPlot* pPlot;
 	CvWString szBuffer;
@@ -26250,6 +26324,7 @@ bool CvUnit::canAirBomb4() const
 
 bool CvUnit::canAirBomb4At(const CvPlot* pPlot, int iX, int iY) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (!canAirBomb4())
 	{
 		return false;
@@ -26287,6 +26362,7 @@ bool CvUnit::canAirBomb4At(const CvPlot* pPlot, int iX, int iY) const
 
 bool CvUnit::airBomb4(int iX, int iY)
 {
+	PROFILE_EXTRA_FUNC();
 	CvUnit* pUnit;
 	CvWString szBuffer;
 	bool bSuccess = false, bNoTarget = true;
@@ -26501,6 +26577,7 @@ bool CvUnit::canAirBomb5At(const CvPlot* pPlot, int iX, int iY) const
 
 bool CvUnit::airBomb5(int iX, int iY)
 {
+	PROFILE_EXTRA_FUNC();
 	CvCity* pCity;
 	CvPlot* pPlot;
 	CvWString szBuffer;
@@ -26836,6 +26913,7 @@ bool CvUnit::bombardRanged(int iX, int iY, bool sAttack)
 // Estimate if a unit stack is worth range bombarding
 bool CvUnit::isRbombardable(int iMinStack) const
 {
+	PROFILE_EXTRA_FUNC();
 	int collateralCount = 0;
 	int averageDamage = 0;
 	int averageProtection = 0;
@@ -26887,6 +26965,7 @@ int CvUnit::getRbombardSeigeCount(const CvPlot* pPlot) const
 
 void CvUnit::doOpportunityFire()
 {
+	PROFILE_EXTRA_FUNC();
 	//TB Notes regarding Opportunity Fire:
 	//While the mechanism has been updated to only target the strongest adjacent unit with this opportunity fire, there is still some work here to do.
 	//There is absolutely zero resistability to this damage and no potential for failure to strike, making it far more powerful than any player determined
@@ -26964,6 +27043,7 @@ void CvUnit::doOpportunityFire()
 // Dale - SA: Active Defense
 void CvUnit::doActiveDefense()
 {
+	PROFILE_EXTRA_FUNC();
 	int iDamage, iUnitDamage;
 	CvUnit* pDefender = NULL;
 	CvCity* pCity = NULL;
@@ -27094,6 +27174,7 @@ bool CvUnit::canFEngage() const
 
 bool CvUnit::canFEngageAt(const CvPlot* pPlot, int iX, int iY) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (!canFEngage())
 	{
 		return false;
@@ -27126,6 +27207,7 @@ bool CvUnit::canFEngageAt(const CvPlot* pPlot, int iX, int iY) const
 
 bool CvUnit::fighterEngage(int iX, int iY)
 {
+	PROFILE_EXTRA_FUNC();
 	if (!canFEngageAt(plot(), iX, iY))
 	{
 		return false;
@@ -27336,6 +27418,7 @@ int CvUnit::doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWithdr
 // unit influences given plot and surounding area i.e. transfers culture from target civ to unit's owner
 void CvUnit::influencePlots(CvPlot* pCentralPlot, const PlayerTypes eTargetPlayer, const int iLocationMultiplier)
 {
+	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, MAX_PLAYERS, eTargetPlayer);
 
 	// get influence radius
@@ -27519,6 +27602,7 @@ bool CvUnit::canPerformInquisition(const CvPlot* pPlot) const
 
 bool CvUnit::performInquisition()
 {
+	PROFILE_EXTRA_FUNC();
 	const CvPlot* pPlot = plot();
 
 	if (!canPerformInquisition(pPlot))
@@ -27712,6 +27796,7 @@ bool CvUnit::performInquisition()
 
 bool CvUnit::canTradeUnit(PlayerTypes eReceivingPlayer) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (eReceivingPlayer == NO_PLAYER || eReceivingPlayer > MAX_PLAYERS)
 	{
 		return false;
@@ -27779,6 +27864,7 @@ void CvUnit::tradeUnit(PlayerTypes eReceivingPlayer)
 
 bool CvUnit::spyNukeAffected(const CvPlot* pPlot, TeamTypes eTeam, int iRange) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (!GET_TEAM(eTeam).isAlive() || eTeam == getTeam())
 	{
 		return false;
@@ -27799,6 +27885,7 @@ bool CvUnit::spyNukeAffected(const CvPlot* pPlot, TeamTypes eTeam, int iRange) c
 
 bool CvUnit::spyNuke(int iX, int iY, bool bCaught)
 {
+	PROFILE_EXTRA_FUNC();
 	bool abTeamsAffected[MAX_TEAMS];
 
 	CvPlot* pPlot = GC.getMap().plot(iX, iY);
@@ -27991,6 +28078,7 @@ bool CvUnit::claimTerritory()
 
 int CvUnit::surroundedDefenseModifier(const CvPlot *pPlot, const CvUnit *pDefender) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_SURROUND_DESTROY))
 	{
 		return 0;
@@ -28190,6 +28278,7 @@ bool CvUnit::isCommanderReady() const
 
 void CvUnit::setCommander(bool bNewVal)
 {
+	PROFILE_EXTRA_FUNC();
 	if (isCommander() == bNewVal) return;
 
 	if (bNewVal)
@@ -28314,6 +28403,7 @@ CvUnit* CvUnit::getLastCommander() const
 
 int CvUnit::interceptionChance(const CvPlot* pPlot) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iNoInterceptionChanceTimes100 = 10000;
 
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
@@ -28353,6 +28443,7 @@ PlayerTypes CvUnit::getOriginalOwner() const
 
 void CvUnit::doBattleFieldPromotions(CvUnit* pDefender, const CombatDetails& cdDefenderDetails, const CvPlot* pPlot, bool bAttackerHasLostNoHP, bool bAttackerWithdrawn, int iAttackerInitialDamage, int iWinningOdds, int iInitialAttXP, int iInitialAttGGXP, int iDefenderInitialDamage, int iInitialDefXP, int iInitialDefGGXP, bool& bAttackerPromoted, bool& bDefenderPromoted, int iNonLethalAttackWinChance, int iNonLethalDefenseWinChance, int iDefenderFirstStrikes, int iAttackerFirstStrikes)
 {
+	PROFILE_EXTRA_FUNC();
 	if (!GC.getGame().getModderGameOption(MODDERGAMEOPTION_BATTLEFIELD_PROMOTIONS) ||
 		getUnitCombatType() == NO_UNITCOMBAT || pDefender->getUnitCombatType() == NO_UNITCOMBAT)
 	{
@@ -28993,6 +29084,7 @@ bool CvUnit::isArcher() const
 //TB Combat Mods begin
 bool CvUnit::isPromotionOverriden(PromotionTypes ePromotionType) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (isHasPromotion(ePromotionType))
 	{
 		for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
@@ -29020,6 +29112,7 @@ bool CvUnit::isPromotionOverriden(PromotionTypes ePromotionType) const
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 bool CvUnit::canCure(const CvPlot* pPlot, PromotionLineTypes eAfflictionLine) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_OUTBREAKS_AND_AFFLICTIONS))
 	{
 		return false;
@@ -29044,6 +29137,7 @@ bool CvUnit::canCure(const CvPlot* pPlot, PromotionLineTypes eAfflictionLine) co
 
 bool CvUnit::CureAffliction(PromotionLineTypes eAfflictionLine)
 {
+	PROFILE_EXTRA_FUNC();
 	const CvPlot* pPlot = plot();
 
 	if (!canCure(pPlot, eAfflictionLine))
@@ -29089,6 +29183,7 @@ int CvUnit::getTotalCommunicableExposure(PromotionLineTypes eAfflictionLine) con
 
 int CvUnit::getCityCommunicability(PromotionLineTypes eAfflictionLine) const
 {
+	PROFILE_EXTRA_FUNC();
 	CvPlot* pPlot = plot();
 	if (pPlot == NULL)
 	{
@@ -29115,6 +29210,7 @@ int CvUnit::getCityCommunicability(PromotionLineTypes eAfflictionLine) const
 
 int CvUnit::getUnitCommunicability(PromotionLineTypes eAfflictionLine) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iWorstCommunicability = 0;
 	int iCommunicability = 0;
 	const CvPlot* pPlot = plot();
@@ -29413,6 +29509,7 @@ void CvUnit::setUnitAfflictionTolerance(PromotionLineTypes ePromotionLineType, i
 
 int CvUnit::getContractChanceChange(PromotionLineTypes eAfflictionLine) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iI;
 	int iModifier = 0;
 
@@ -29439,6 +29536,7 @@ int CvUnit::getContractChanceChange(PromotionLineTypes eAfflictionLine) const
 
 int CvUnit::getOvercomeChange(PromotionLineTypes eAfflictionLine) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iI;
 	int iModifier = 0;
 
@@ -29465,6 +29563,7 @@ int CvUnit::getOvercomeChange(PromotionLineTypes eAfflictionLine) const
 
 int CvUnit::getFortitudeModifierTypeAmount(PromotionLineTypes ePromotionLineType) const
 {
+	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 
 	const PromotionLineKeyedInfo* info = findPromotionLineKeyedInfo(ePromotionLineType);
@@ -31375,6 +31474,7 @@ void CvUnit::checkForCritical(int iDamage, CvUnit* pOpponent)
 
 void CvUnit::assignCritical(CvUnit* pOpponent)
 {
+	PROFILE_EXTRA_FUNC();
 	std::vector<PromotionTypes> aAvailableCriticals;
 	PromotionLineTypes eAfflictionLine = NO_PROMOTIONLINE;
 	int iLinePriority = 0;
@@ -31939,6 +32039,7 @@ void CvUnit::setPromotionFreeCount(PromotionTypes ePromotion, int iChange)
 
 void CvUnit::checkFreetoCombatClass()
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = GC.getNumUnitCombatInfos() -1; iI > -1; iI--)
 	{
 		if (isHasUnitCombat(static_cast<UnitCombatTypes>(iI)))
@@ -32044,6 +32145,7 @@ bool CvUnit::shouldUseWithdrawalOddsCap() const
 
 bool CvUnit::isPursuitinUse() const
 {
+	PROFILE_EXTRA_FUNC();
 	bool bInUse = false;
 	int iI;
 
@@ -32166,6 +32268,7 @@ bool CvUnit::canSwitchEquipment(PromotionTypes eEquipment) const
 
 void CvUnit::reEquip(PromotionTypes eEquipment)
 {
+	PROFILE_EXTRA_FUNC();
 	bool bReplaced = false;
 
 	for (int iI = 0; iI < GC.getNumPromotionInfos() && !bReplaced; iI++)
@@ -32209,6 +32312,7 @@ void CvUnit::reEquip(PromotionTypes eEquipment)
 
 void CvUnit::statusUpdate(PromotionTypes eStatus)
 {
+	PROFILE_EXTRA_FUNC();
 	bool bReplaced = false;
 
 	for (int iI = 0; iI < GC.getNumPromotionInfos() && !bReplaced; iI++)
@@ -32794,6 +32898,7 @@ int CvUnit::roundStunProbTotal() const
 
 int CvUnit::roundStunVSOpponentProbTotal(CvUnit* pOpponent) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iRoundStunBase = roundStunProbTotal();
 
 	for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = pOpponent->m_unitCombatKeyedInfo.begin(), end = pOpponent->m_unitCombatKeyedInfo.end(); it != end; ++it)
@@ -32949,6 +33054,7 @@ int CvUnit::pursuitVSOpponentProbTotal(const CvUnit* pOpponent) const
 
 int CvUnit::repelVSOpponentProbTotal(const CvUnit* pOpponent) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (noDefensiveBonus())
 	{
 		return 0;
@@ -32977,6 +33083,7 @@ int CvUnit::repelVSOpponentProbTotal(const CvUnit* pOpponent) const
 
 int CvUnit::knockbackVSOpponentProbTotal(const CvUnit* pOpponent) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iBase = knockbackTotal();
 	for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = pOpponent->m_unitCombatKeyedInfo.begin(), end = pOpponent->m_unitCombatKeyedInfo.end(); it != end; ++it)
 	{
@@ -32992,6 +33099,7 @@ int CvUnit::knockbackVSOpponentProbTotal(const CvUnit* pOpponent) const
 
 int CvUnit::punctureVSOpponentProbTotal(const CvUnit* pOpponent) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iBase = punctureTotal();
 	for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = pOpponent->m_unitCombatKeyedInfo.begin(), end = pOpponent->m_unitCombatKeyedInfo.end(); it != end; ++it)
 	{
@@ -33007,6 +33115,7 @@ int CvUnit::punctureVSOpponentProbTotal(const CvUnit* pOpponent) const
 
 int CvUnit::armorVSOpponentProbTotal(const CvUnit* pOpponent) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iBase = armorTotal();
 	for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = pOpponent->m_unitCombatKeyedInfo.begin(), end = pOpponent->m_unitCombatKeyedInfo.end(); it != end; ++it)
 	{
@@ -33022,6 +33131,7 @@ int CvUnit::armorVSOpponentProbTotal(const CvUnit* pOpponent) const
 
 int CvUnit::dodgeVSOpponentProbTotal(const CvUnit* pOpponent) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iBase = dodgeTotal();
 	for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = pOpponent->m_unitCombatKeyedInfo.begin(), end = pOpponent->m_unitCombatKeyedInfo.end(); it != end; ++it)
 	{
@@ -33037,6 +33147,7 @@ int CvUnit::dodgeVSOpponentProbTotal(const CvUnit* pOpponent) const
 
 int CvUnit::precisionVSOpponentProbTotal(const CvUnit* pOpponent) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iBase = precisionTotal();
 	for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = pOpponent->m_unitCombatKeyedInfo.begin(), end = pOpponent->m_unitCombatKeyedInfo.end(); it != end; ++it)
 	{
@@ -33052,6 +33163,7 @@ int CvUnit::precisionVSOpponentProbTotal(const CvUnit* pOpponent) const
 
 int CvUnit::criticalVSOpponentProbTotal(const CvUnit* pOpponent) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iBase = criticalModifierTotal();
 	for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = pOpponent->m_unitCombatKeyedInfo.begin(), end = pOpponent->m_unitCombatKeyedInfo.end(); it != end; ++it)
 	{
@@ -33067,6 +33179,7 @@ int CvUnit::criticalVSOpponentProbTotal(const CvUnit* pOpponent) const
 
 bool CvUnit::canInflictCritical(PromotionTypes eCritical) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (GC.getPromotionLineInfo((PromotionLineTypes)GC.getPromotionInfo(eCritical).getPromotionLine()).getNumCriticalOriginCombatClassTypes() > 0)
 	{
 		for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
@@ -33114,6 +33227,7 @@ void CvUnit::changeAfflictionLineCount(PromotionLineTypes ePromotionLineType, in
 
 void CvUnit::afflict(PromotionLineTypes eAfflictionLine, bool bPoisoned, CvUnit* pOpponent, bool bTrap, int iTrapDmg)
 {
+	PROFILE_EXTRA_FUNC();
 	int iI;
 	CvWString szBuffer;
 	PromotionTypes eAfflictionHad = NO_PROMOTION;
@@ -33231,6 +33345,7 @@ void CvUnit::afflict(PromotionLineTypes eAfflictionLine, bool bPoisoned, CvUnit*
 
 void CvUnit::recover(PromotionLineTypes eAfflictionLine)
 {
+	PROFILE_EXTRA_FUNC();
 	int iI;
 	CvWString szBuffer;
 	PromotionTypes eAfflictionHad = NO_PROMOTION;
@@ -33274,6 +33389,7 @@ void CvUnit::recover(PromotionLineTypes eAfflictionLine)
 
 int CvUnit::getAfflictOnAttackTypeProbability(PromotionLineTypes ePromotionLineType) const
 {
+	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 
 	const PromotionLineKeyedInfo* info = findPromotionLineKeyedInfo(ePromotionLineType);
@@ -33322,6 +33438,7 @@ void CvUnit::setAfflictOnAttackTypeProbability(PromotionLineTypes ePromotionLine
 
 bool CvUnit::hasAfflictOnAttackType(PromotionLineTypes ePromotionLineType) const
 {
+	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 
 	const PromotionLineKeyedInfo* info = findPromotionLineKeyedInfo(ePromotionLineType);
@@ -33385,6 +33502,7 @@ int CvUnit::getAfflictOnAttackTypeImmediateCount(PromotionLineTypes ePromotionLi
 
 bool CvUnit::isAfflictOnAttackTypeImmediate(PromotionLineTypes ePromotionLineType) const
 {
+	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 
 	const PromotionLineKeyedInfo* info = findPromotionLineKeyedInfo(ePromotionLineType);
@@ -33439,6 +33557,7 @@ int CvUnit::getAfflictOnAttackTypeMeleeCount(PromotionLineTypes ePromotionLineTy
 
 bool CvUnit::isAfflictOnAttackTypeMelee(PromotionLineTypes ePromotionLineType) const
 {
+	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 
 	const PromotionLineKeyedInfo* info = findPromotionLineKeyedInfo(ePromotionLineType);
@@ -33493,6 +33612,7 @@ int CvUnit::getAfflictOnAttackTypeDistanceCount(PromotionLineTypes ePromotionLin
 
 bool CvUnit::isAfflictOnAttackTypeDistance(PromotionLineTypes ePromotionLineType) const
 {
+	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLineType);
 
 	const PromotionLineKeyedInfo* info = findPromotionLineKeyedInfo(ePromotionLineType);
@@ -33653,6 +33773,7 @@ void CvUnit::changeHealUnitCombatTypeAdjacentVolume(UnitCombatTypes eUnitCombatT
 
 void CvUnit::doSetUnitCombats()
 {
+	PROFILE_EXTRA_FUNC();
 	if (getUnitCombatType() != NO_UNITCOMBAT)
 	{
 		setHasUnitCombat(getUnitCombatType(), true);
@@ -33685,6 +33806,7 @@ void CvUnit::doSetUnitCombats()
 
 void CvUnit::setFreePromotion(PromotionTypes ePromotion, bool bAdding, TraitTypes eTrait)
 {
+	PROFILE_EXTRA_FUNC();
 	const CvPlayer& pPlayer = GET_PLAYER(getOwner());
 
 	if (bAdding && !isHasPromotion(ePromotion))
@@ -33755,6 +33877,7 @@ void CvUnit::setFreePromotion(PromotionTypes ePromotion, bool bAdding, TraitType
 
 void CvUnit::doSetFreePromotions(bool bAdding, TraitTypes eTrait)
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = GC.getNumPromotionInfos() - 1; iI > -1; iI--)
 	{
 		setFreePromotion(static_cast<PromotionTypes>(iI), bAdding, eTrait);
@@ -33996,6 +34119,7 @@ void CvUnit::setExtraStrengthModifier(int iChange)
 
 void CvUnit::checkCityAttackDefensesDamage(CvCity* pCity, const std::vector<UnitCombatTypes>& kDamagableUnitCombatTypes)
 {
+	PROFILE_EXTRA_FUNC();
 	//Here we cycle through each active building in the city that's triggering the fact that it can possibly damage the attacking unit here and make a check
 	//using the building's % chance to damage - Dodge.  Then if it hits, deals DamageToAttacker modified by the unit's Armor.
 	//Then battle would proceed as normal.
@@ -34116,6 +34240,7 @@ void CvUnit::resolveBreakdownAttack(const CvPlot* pPlot, const int AdjustedRepel
 
 int CvUnit::getDiminishingReturn(int i) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (i < 51)
 	{
 		return i;
@@ -34453,6 +34578,7 @@ bool CvUnit::isQualityDowngradePromotion(PromotionTypes promotion) const
 
 void CvUnit::doMerge()
 {
+	PROFILE_EXTRA_FUNC();
 	FAssertMsg(plot() != NULL, "doMerge requires CvUnit plot to be valid");
 	GET_PLAYER(getOwner()).setBaseMergeSelectionUnit(getID());
 	if (isHuman())
@@ -34759,6 +34885,7 @@ void CvUnit::doSplit()
 
 void CvUnit::setGGExperienceEarnedTowardsType()
 {
+	PROFILE_EXTRA_FUNC();
 	//TB notes: This has been setup to allow the UnitCombat tag to take multiple entries but has not been setup to manage this in CvUnit.
 	//It paves the way for future potential but leaves the design where it is for now where only the first definition the unit finds will be established.
 	//(No examples of setting up a singular text reference on a delayed resolution was part of the motivation here)
@@ -35207,6 +35334,7 @@ void CvUnit::setSMAirBombBaseRate()
 
 int CvUnit::workRate(bool bMax) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (!bMax && !canMove())
 	{
 		return 0;
@@ -35431,6 +35559,7 @@ int CvUnit::getBaseRBombardDamage() const
 
 void CvUnit::changeBaseRBombardDamage(int iChange, bool bAdding, UnitCombatTypes eUnitCombat)
 {
+	PROFILE_EXTRA_FUNC();
 	if (bAdding && iChange > m_iBaseRBombardDamage)
 	{
 		m_iBaseRBombardDamage = iChange;
@@ -35498,6 +35627,7 @@ int CvUnit::getBaseRBombardDamageLimit() const
 
 void CvUnit::changeBaseRBombardDamageLimit(int iChange, bool bAdding, UnitCombatTypes eUnitCombat)
 {
+	PROFILE_EXTRA_FUNC();
 	if (bAdding && iChange > m_iBaseRBombardDamageLimit)
 	{
 		m_iBaseRBombardDamageLimit = iChange;
@@ -35562,6 +35692,7 @@ int CvUnit::getBaseRBombardDamageMaxUnits() const
 
 void CvUnit::changeBaseRBombardDamageMaxUnits(int iChange, bool bAdding, UnitCombatTypes eUnitCombat)
 {
+	PROFILE_EXTRA_FUNC();
 	if (bAdding && iChange > m_iBaseRBombardDamageMaxUnits)
 	{
 		m_iBaseRBombardDamageMaxUnits = iChange;
@@ -35616,6 +35747,7 @@ int CvUnit::getBaseDCMBombRange() const
 
 void CvUnit::changeBaseDCMBombRange(int iChange, bool bAdding, UnitCombatTypes eUnitCombat)
 {
+	PROFILE_EXTRA_FUNC();
 	if (bAdding && iChange > m_iBaseDCMBombRange)
 	{
 		m_iBaseDCMBombRange = iChange;
@@ -35670,6 +35802,7 @@ int CvUnit::getBaseDCMBombAccuracy() const
 
 void CvUnit::changeBaseDCMBombAccuracy(int iChange, bool bAdding, UnitCombatTypes eUnitCombat)
 {
+	PROFILE_EXTRA_FUNC();
 	if (bAdding && iChange > m_iBaseDCMBombAccuracy)
 	{
 		m_iBaseDCMBombAccuracy = iChange;
@@ -35710,6 +35843,7 @@ void CvUnit::changeBombardDirectCount(int iChange)
 // Equation demonstrated here: https://www.desmos.com/calculator/wivft5kfcc
 int CvUnit::applySMRank(int value, int rankChange, int rankMultiplier)
 {
+	PROFILE_EXTRA_FUNC();
 	FAssertMsg(rankMultiplier > 0, "rankMultiplier must be greater than 0");
 	int64_t lvalue = 100 * value;
 	if (rankChange > 0)
@@ -35733,6 +35867,7 @@ int CvUnit::applySMRank(int value, int rankChange, int rankMultiplier)
 
 int64_t CvUnit::applySMRank64(int64_t value, int rankChange, int rankMultiplier, bool bScaleUp)
 {
+	PROFILE_EXTRA_FUNC();
 	FAssertMsg(rankMultiplier > 0, "rankMultiplier must be greater than 0");
 	if (bScaleUp) value *= 100;
 
@@ -35833,6 +35968,7 @@ void CvUnit::setSleepType(MissionTypes eSleepType)
 
 void CvUnit::establishBuildups()
 {
+	PROFILE_EXTRA_FUNC();
 	m_bHasBuildUp = false;
 
 	for (std::map<PromotionLineTypes, PromotionLineKeyedInfo>::iterator it = m_promotionLineKeyedInfo.begin(), end = m_promotionLineKeyedInfo.end(); it != end; ++it)
@@ -35870,6 +36006,7 @@ PromotionLineTypes CvUnit::getBuildUpType() const
 
 void CvUnit::setBuildUpType(PromotionLineTypes ePromotionLine, MissionTypes eSleepType)
 {
+	PROFILE_EXTRA_FUNC();
 	if (isHuman())
 	{
 		// Buildup chosen
@@ -36029,6 +36166,7 @@ void CvUnit::setBuildUpType(PromotionLineTypes ePromotionLine, MissionTypes eSle
 
 void CvUnit::clearBuildups()
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iJ = 0; iJ < GC.getNumPromotionLineInfos(); iJ++)
 	{
 		if (GC.getPromotionLineInfo((PromotionLineTypes)iJ).isBuildUp())
@@ -36053,6 +36191,7 @@ void CvUnit::clearBuildups()
 
 void CvUnit::incrementBuildUp()
 {
+	PROFILE_EXTRA_FUNC();
 	if (getBuildUpType() == NO_PROMOTIONLINE)
 	{
 		FErrorMsg("Units build up status corrupted")
@@ -36131,6 +36270,7 @@ bool CvUnit::isHiddenNationality() const
 
 void CvUnit::doHNCapture()
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 	{
 		if (GC.getPromotionInfo((PromotionTypes)iI).isSetOnHNCapture()
@@ -36145,6 +36285,7 @@ void CvUnit::doHNCapture()
 
 void CvUnit::removeHNCapturePromotion()
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 	{
 		if (GC.getPromotionInfo((PromotionTypes)iI).isSetOnHNCapture() && isHasPromotion((PromotionTypes)iI))
@@ -36284,6 +36425,7 @@ void CvUnit::changeUpgradeAnywhereCount(int iChange)
 // Only used when unit spot stats change, not when the sight area of this unit change.
 void CvUnit::updateSpotIntensity(const InvisibleTypes eInvisibleType, const bool bSameTile)
 {
+	PROFILE_EXTRA_FUNC();
 	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_HIDE_SEEK))
 	{
 		return;
@@ -36463,6 +36605,7 @@ bool CvUnit::hasAnyInvisibilityType() const
 
 void CvUnit::setHasAnyInvisibility()
 {
+	PROFILE_EXTRA_FUNC();
 	if (m_pUnitInfo->isNoInvisibility() || getNoInvisibilityCount() > 0)
 	{
 		m_bHasAnyInvisibility = false;
@@ -36558,6 +36701,7 @@ InvisibleTerrainChanges& CvUnit::getExtraInvisibleTerrain(int iIndex)
 
 void CvUnit::changeExtraInvisibleTerrain(InvisibleTypes eInvisible, TerrainTypes eTerrain, int iChange)
 {
+	PROFILE_EXTRA_FUNC();
 	bool bFound = false;
 	int iSize = getNumExtraInvisibleTerrains();
 	for (int iI = 0; iI < iSize; iI++)
@@ -36586,6 +36730,7 @@ void CvUnit::changeExtraInvisibleTerrain(InvisibleTypes eInvisible, TerrainTypes
 
 int CvUnit::extraInvisibleTerrain(InvisibleTypes eInvisible, TerrainTypes eTerrain) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < getNumExtraInvisibleTerrains(); iI++)
 	{
 		if (m_aExtraInvisibleTerrains[iI].eInvisible == eInvisible && m_aExtraInvisibleTerrains[iI].eTerrain == eTerrain)
@@ -36608,6 +36753,7 @@ InvisibleFeatureChanges& CvUnit::getExtraInvisibleFeature(int iIndex)
 
 void CvUnit::changeExtraInvisibleFeature(InvisibleTypes eInvisible, FeatureTypes eFeature, int iChange)
 {
+	PROFILE_EXTRA_FUNC();
 	bool bFound = false;
 	int iSize = getNumExtraInvisibleFeatures();
 	for (int iI = 0; iI < iSize; iI++)
@@ -36636,6 +36782,7 @@ void CvUnit::changeExtraInvisibleFeature(InvisibleTypes eInvisible, FeatureTypes
 
 int CvUnit::extraInvisibleFeature(InvisibleTypes eInvisible, FeatureTypes eFeature) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < getNumExtraInvisibleFeatures(); iI++)
 	{
 		if (m_aExtraInvisibleFeatures[iI].eInvisible == eInvisible && m_aExtraInvisibleFeatures[iI].eFeature == eFeature)
@@ -36658,6 +36805,7 @@ InvisibleImprovementChanges& CvUnit::getExtraInvisibleImprovement(int iIndex)
 
 void CvUnit::changeExtraInvisibleImprovement(InvisibleTypes eInvisible, ImprovementTypes eImprovement, int iChange)
 {
+	PROFILE_EXTRA_FUNC();
 	bool bFound = false;
 	int iSize = getNumExtraInvisibleImprovements();
 	for (int iI = 0; iI < iSize; iI++)
@@ -36686,6 +36834,7 @@ void CvUnit::changeExtraInvisibleImprovement(InvisibleTypes eInvisible, Improvem
 
 int CvUnit::extraInvisibleImprovement(InvisibleTypes eInvisible, ImprovementTypes eImprovement) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < getNumExtraInvisibleImprovements(); iI++)
 	{
 		if (m_aExtraInvisibleImprovements[iI].eInvisible == eInvisible && m_aExtraInvisibleImprovements[iI].eImprovement == eImprovement)
@@ -36708,6 +36857,7 @@ InvisibleTerrainChanges& CvUnit::getExtraVisibleTerrain(int iIndex)
 
 void CvUnit::changeExtraVisibleTerrain(InvisibleTypes eInvisible, TerrainTypes eTerrain, int iChange)
 {
+	PROFILE_EXTRA_FUNC();
 	if (iChange == 0)
 	{
 		return;
@@ -36739,6 +36889,7 @@ void CvUnit::changeExtraVisibleTerrain(InvisibleTypes eInvisible, TerrainTypes e
 
 int CvUnit::extraVisibleTerrain(InvisibleTypes eInvisible, TerrainTypes eTerrain) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < getNumExtraVisibleTerrains(); iI++)
 	{
 		if (m_aExtraVisibleTerrains[iI].eInvisible == eInvisible && m_aExtraVisibleTerrains[iI].eTerrain == eTerrain)
@@ -36761,6 +36912,7 @@ InvisibleFeatureChanges& CvUnit::getExtraVisibleFeature(int iIndex)
 
 void CvUnit::changeExtraVisibleFeature(InvisibleTypes eInvisible, FeatureTypes eFeature, int iChange)
 {
+	PROFILE_EXTRA_FUNC();
 	if (iChange == 0)
 	{
 		return;
@@ -36792,6 +36944,7 @@ void CvUnit::changeExtraVisibleFeature(InvisibleTypes eInvisible, FeatureTypes e
 
 int CvUnit::extraVisibleFeature(InvisibleTypes eInvisible, FeatureTypes eFeature) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < getNumExtraVisibleFeatures(); iI++)
 	{
 		if (m_aExtraVisibleFeatures[iI].eInvisible == eInvisible && m_aExtraVisibleFeatures[iI].eFeature == eFeature)
@@ -36814,6 +36967,7 @@ InvisibleImprovementChanges& CvUnit::getExtraVisibleImprovement(int iIndex)
 
 void CvUnit::changeExtraVisibleImprovement(InvisibleTypes eInvisible, ImprovementTypes eImprovement, int iChange)
 {
+	PROFILE_EXTRA_FUNC();
 	if (iChange == 0)
 	{
 		return;
@@ -36845,6 +36999,7 @@ void CvUnit::changeExtraVisibleImprovement(InvisibleTypes eInvisible, Improvemen
 
 int CvUnit::extraVisibleImprovement(InvisibleTypes eInvisible, ImprovementTypes eImprovement) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < getNumExtraVisibleImprovements(); iI++)
 	{
 		if (m_aExtraVisibleImprovements[iI].eInvisible == eInvisible && m_aExtraVisibleImprovements[iI].eImprovement == eImprovement)
@@ -36867,6 +37022,7 @@ InvisibleTerrainChanges& CvUnit::getExtraVisibleTerrainRange(int iIndex)
 
 void CvUnit::changeExtraVisibleTerrainRange(InvisibleTypes eInvisible, TerrainTypes eTerrain, int iChange)
 {
+	PROFILE_EXTRA_FUNC();
 	if (iChange == 0)
 	{
 		return;
@@ -36898,6 +37054,7 @@ void CvUnit::changeExtraVisibleTerrainRange(InvisibleTypes eInvisible, TerrainTy
 
 int CvUnit::extraVisibleTerrainRange(InvisibleTypes eInvisible, TerrainTypes eTerrain) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < getNumExtraVisibleTerrainRanges(); iI++)
 	{
 		if (m_aExtraVisibleTerrainRanges[iI].eInvisible == eInvisible && m_aExtraVisibleTerrainRanges[iI].eTerrain == eTerrain)
@@ -36920,6 +37077,7 @@ InvisibleFeatureChanges& CvUnit::getExtraVisibleFeatureRange(int iIndex)
 
 void CvUnit::changeExtraVisibleFeatureRange(InvisibleTypes eInvisible, FeatureTypes eFeature, int iChange)
 {
+	PROFILE_EXTRA_FUNC();
 	if (iChange == 0)
 	{
 		return;
@@ -36951,6 +37109,7 @@ void CvUnit::changeExtraVisibleFeatureRange(InvisibleTypes eInvisible, FeatureTy
 
 int CvUnit::extraVisibleFeatureRange(InvisibleTypes eInvisible, FeatureTypes eFeature) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < getNumExtraVisibleFeatureRanges(); iI++)
 	{
 		if (m_aExtraVisibleFeatureRanges[iI].eInvisible == eInvisible && m_aExtraVisibleFeatureRanges[iI].eFeature == eFeature)
@@ -36973,6 +37132,7 @@ InvisibleImprovementChanges& CvUnit::getExtraVisibleImprovementRange(int iIndex)
 
 void CvUnit::changeExtraVisibleImprovementRange(InvisibleTypes eInvisible, ImprovementTypes eImprovement, int iChange)
 {
+	PROFILE_EXTRA_FUNC();
 	if (iChange == 0)
 	{
 		return;
@@ -37004,6 +37164,7 @@ void CvUnit::changeExtraVisibleImprovementRange(InvisibleTypes eInvisible, Impro
 
 int CvUnit::extraVisibleImprovementRange(InvisibleTypes eInvisible, ImprovementTypes eImprovement) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < getNumExtraVisibleImprovementRanges(); iI++)
 	{
 		if (m_aExtraVisibleImprovementRanges[iI].eInvisible == eInvisible && m_aExtraVisibleImprovementRanges[iI].eImprovement == eImprovement)
@@ -37027,6 +37188,7 @@ AidStruct& CvUnit::getExtraAidChange(int iIndex)
 
 void CvUnit::changeExtraAidChange(PropertyTypes eProperty, int iChange)
 {
+	PROFILE_EXTRA_FUNC();
 	if (iChange == 0)
 		return;
 
@@ -37057,6 +37219,7 @@ void CvUnit::changeExtraAidChange(PropertyTypes eProperty, int iChange)
 
 int CvUnit::extraAidChange(PropertyTypes eProperty) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < getNumExtraAidChanges(); iI++)
 	{
 		if (m_aExtraAidChanges[iI].eProperty == eProperty)
@@ -37214,6 +37377,7 @@ void CvUnit::doInsidiousnessVSInvestigationCheck()
 
 void CvUnit::doRemoveInvestigatedPromotionCheck()
 {
+	PROFILE_EXTRA_FUNC();
 	if (plot() != NULL &&
 		(!plot()->isVisible(GET_PLAYER(m_pPlayerInvestigated).getTeam(), false) ||
 		(plot()->getOwner() != m_pPlayerInvestigated && (isInvisible(GET_PLAYER(m_pPlayerInvestigated).getTeam(), false, false) || m_pPlayerInvestigated == getOwner()))))
@@ -37285,6 +37449,7 @@ bool CvUnit::canArrest() const
 
 void CvUnit::doArrest()
 {
+	PROFILE_EXTRA_FUNC();
 	GET_PLAYER(getOwner()).setArrestingUnit(getID());
 	if (isHuman())
 	{
@@ -37568,6 +37733,7 @@ bool CvUnit::isRevealed() const
 
 void CvUnit::doSetDefaultStatuses()
 {
+	PROFILE_EXTRA_FUNC();
 	std::vector<int> m_iDefaultStatusTypes;
 	m_iDefaultStatusTypes.clear();
 	//Step 1: Assign all statuses from defaults into a local vector to create a singular list
@@ -37918,6 +38084,7 @@ bool CvUnit::isArmedTrap() const
 // pUnit is the unit setting the trap
 void CvUnit::setTrap(CvUnit* pUnit)
 {
+	PROFILE_EXTRA_FUNC();
 	m_bIsArmed = true;
 	for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 	{
@@ -37936,6 +38103,7 @@ bool CvUnit::isArmed() const
 
 void CvUnit::doTrap(CvUnit* pUnit)
 {
+	PROFILE_EXTRA_FUNC();
 	//pUnit is the unit moving onto the trap
 	if (!isArmed())
 	{
@@ -38010,6 +38178,7 @@ void CvUnit::doTrap(CvUnit* pUnit)
 
 void CvUnit::doTrapTrigger(CvUnit* pUnit, bool bImmune)
 {
+	PROFILE_EXTRA_FUNC();
 	CvWString szBuffer;
 	int iTrapDmgMin = trapDamageMinTotal();
 	int iTrapDmgMax = trapDamageMaxTotal();
@@ -38109,6 +38278,7 @@ void CvUnit::changeNoCaptureCount(int iChange)
 
 void CvUnit::makeWanted(const CvCity* pCity)
 {
+	PROFILE_EXTRA_FUNC();
 	if (pCity == NULL)
 	{
 		return;
@@ -38142,6 +38312,7 @@ void CvUnit::makeWanted(const CvCity* pCity)
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 int CvUnit::getDistanceAttackCommunicability(PromotionLineTypes eAfflictionLine) const
 {
+	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), eAfflictionLine);
 
 	const PromotionLineKeyedInfo* info = findPromotionLineKeyedInfo(eAfflictionLine);
@@ -38256,7 +38427,8 @@ void CvUnit::changeExtraGatherHerdCount(int iChange)
 }
 
 void CvUnit::defineReligion()
-{//call this when a unitcombat that has a religion is processed in and for all units when the state religion is changed.
+{PROFILE_EXTRA_FUNC();
+	//call this when a unitcombat that has a religion is processed in and for all units when the state religion is changed.
 	//Check for dedicated faith by unit type, assign it and let it not be changeable unless the unit type changes
 	if (!m_bIsReligionLocked)//purely meaning the unit has an overriding religious unitcombat in its base definition (like a missionary, crusader or hellsmouth dog would)
 	{

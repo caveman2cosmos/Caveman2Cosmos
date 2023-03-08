@@ -50,6 +50,7 @@ CvPlayerAI* CvPlayerAI::m_aPlayers = NULL;
 
 void CvPlayerAI::initStatics()
 {
+	PROFILE_EXTRA_FUNC();
 	m_aPlayers = new CvPlayerAI[MAX_PLAYERS];
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
@@ -85,6 +86,7 @@ DllExport CvPlayerAI& CvPlayerAI::getPlayerNonInl(PlayerTypes ePlayer)
 
 CvPlayerAI::CvPlayerAI()
 {
+	PROFILE_EXTRA_FUNC();
 	m_aiNumTrainAIUnits = new int[NUM_UNITAI_TYPES];
 	m_aiNumAIUnits = new int[NUM_UNITAI_TYPES];
 	m_aiSameReligionCounter = new int[MAX_PLAYERS];
@@ -196,6 +198,7 @@ void CvPlayerAI::AI_uninit()
 
 void CvPlayerAI::AI_reset(bool bConstructor)
 {
+	PROFILE_EXTRA_FUNC();
 	AI_uninit();
 
 	m_iPeaceWeight = 0;
@@ -1246,6 +1249,7 @@ void CvPlayerAI::AI_updateFoundValues(bool bClear, const CvArea* area) const
 
 void CvPlayerAI::AI_updateAreaTargets()
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(CvArea * pLoopArea, GC.getMap().areas())
 	{
 		if (!pLoopArea->isWater())
@@ -1642,6 +1646,7 @@ void CvPlayerAI::AI_makeProductionDirty()
 // War tactics AI
 void CvPlayerAI::AI_conquerCity(PlayerTypes eOldOwner, CvCity* pCity, bool bConquest, bool bTrade)
 {
+	PROFILE_EXTRA_FUNC();
 	bool bRaze = false;
 
 	if ( // Can raze
@@ -2035,6 +2040,7 @@ int CvPlayerAI::AI_yieldWeight(YieldTypes eYield) const
 
 int CvPlayerAI::AI_commerceWeight(CommerceTypes eCommerce, const CvCity* pCity) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iWeight = GC.getCommerceInfo(eCommerce).getAIWeightPercent();
 
 	switch (eCommerce)
@@ -2225,6 +2231,7 @@ int CvPlayerAI::AI_commerceWeight(CommerceTypes eCommerce, const CvCity* pCity) 
 // Improved as per Blake - thanks!
 int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStartingLoc) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (!canFound(iX, iY))
 	{
 		return 0;
@@ -3261,6 +3268,7 @@ int CvPlayerAI::AI_targetCityValue(const CvCity* pCity, bool bRandomize, bool bI
 
 CvCity* CvPlayerAI::AI_findTargetCity(const CvArea* pArea) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iBestValue = 0;
 	CvCity* pBestCity = NULL;
 
@@ -3298,6 +3306,7 @@ bool CvPlayerAI::AI_isCommercePlot(const CvPlot* pPlot) const
 
 bool CvPlayerAI::AI_getVisiblePlotDanger(const CvPlot* pPlot, int iRange, bool bAnimalOnly, CvSelectionGroup* group, int acceptableOdds) const
 {
+	PROFILE_EXTRA_FUNC();
 	const CvArea* pPlotArea = pPlot->area();
 
 	foreach_(const CvPlot * pLoopPlot, pPlot->rect(iRange, iRange) | filtered(CvPlot::fn::area() == pPlotArea))
@@ -3586,6 +3595,7 @@ int CvPlayerAI::AI_getPlotDanger(const CvPlot* pPlot, int iRange, bool bTestMove
 
 int CvPlayerAI::AI_getPlotDangerInternal(const CvPlot* pPlot, int iRange, bool bTestMoves) const
 {
+	PROFILE_EXTRA_FUNC();
 	const CvArea* pPlotArea = pPlot->area();
 	const TeamTypes eTeam = getTeam();
 
@@ -3971,6 +3981,7 @@ bool CvPlayerAI::AI_isFinancialTrouble() const
 
 int CvPlayerAI::AI_goldTarget() const
 {
+	PROFILE_EXTRA_FUNC();
 	if (getNumCities() < 1)
 	{
 		return 0;
@@ -4213,6 +4224,7 @@ struct TechResearchDist
 //	for performance reasons we just sample rather than measuring all possibilities
 int CvPlayerAI::AI_averageCurrentTechValue(TechTypes eRelativeTo, bool bAsync)
 {
+	PROFILE_EXTRA_FUNC();
 	const size_t MAX_SAMPLE_SIZE = 4;
 	const CvTeamAI& team = GET_TEAM(getTeam());
 
@@ -4354,6 +4366,7 @@ int CvPlayerAI::AI_TechValueCached(TechTypes eTech, bool bAsync, bool considerFo
 
 int CvPlayerAI::techPathValuePerUnitCost(techPath* path, TechTypes eTech, bool bIgnoreCost, bool bAsync)
 {
+	PROFILE_EXTRA_FUNC();
 	int	iCost = 0;
 	int	iValue = 0;
 	int iScaleFactor = 1;
@@ -4443,6 +4456,7 @@ techPath* CvPlayerAI::findBestPath(TechTypes eTech, int& valuePerUnitCost, bool 
 
 TechTypes CvPlayerAI::findStartTech(techPath* path) const
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(const TechTypes & tech, *path)
 	{
 		if (canResearch(tech))
@@ -4457,6 +4471,7 @@ TechTypes CvPlayerAI::findStartTech(techPath* path) const
 
 void CvPlayerAI::resetBonusClassTallyCache(const int iTurn, const bool bFull)
 {
+	PROFILE_EXTRA_FUNC();
 	if (m_iBonusClassTallyCachedTurn != iTurn)
 	{
 		if (bFull)
@@ -5892,6 +5907,7 @@ int CvPlayerAI::AI_techBuildingValue(TechTypes eTech, int iPathLength, bool& bEn
 
 // abstraction of the loop to check if civilization can already train a settler, and set a boolean if it can
 bool CvPlayerAI::AI_canTrainSettler() {
+	PROFILE_EXTRA_FUNC();
 	if (!m_canTrainSettler) {
 		for (int iI = GC.getNumUnitInfos() - 1; iI > -1; iI--)
 		{
@@ -5908,6 +5924,7 @@ bool CvPlayerAI::AI_canTrainSettler() {
 
 int CvPlayerAI::AI_techUnitValue(TechTypes eTech, int iPathLength, bool& bEnablesUnitWonder)
 {
+	PROFILE_EXTRA_FUNC();
 	const bool bWarPlan =
 		(
 			GET_TEAM(getTeam()).hasWarPlan(true)
@@ -6396,6 +6413,7 @@ void CvPlayerAI::AI_startGoldenAge()
 
 void CvPlayerAI::AI_chooseResearch()
 {
+	PROFILE_EXTRA_FUNC();
 	FAssert(!isNPC())
 		clearResearchQueue();
 
@@ -6595,6 +6613,7 @@ bool CvPlayerAI::AI_demandRebukedWar(PlayerTypes ePlayer) const
 // XXX maybe make this a little looser (by time...)
 bool CvPlayerAI::AI_hasTradedWithTeam(TeamTypes eTeam) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iI;
 
 	for (iI = 0; iI < MAX_PLAYERS; iI++)
@@ -6813,6 +6832,7 @@ int CvPlayerAI::AI_getTeamSizeAttitude(PlayerTypes ePlayer) const
 // Count only players visible on the active player's scoreboard
 int CvPlayerAI::AI_getKnownPlayerRank(PlayerTypes ePlayer) const
 {
+	PROFILE_EXTRA_FUNC();
 	PlayerTypes eActivePlayer = GC.getGame().getActivePlayer();
 	if (NO_PLAYER == eActivePlayer || GC.getGame().isDebugMode()) {
 		// Use the full scoreboard
@@ -6843,6 +6863,7 @@ int CvPlayerAI::AI_getKnownPlayerRank(PlayerTypes ePlayer) const
 
 int CvPlayerAI::AI_getTraitAttitude(PlayerTypes ePlayer) const
 {
+	PROFILE_EXTRA_FUNC();
 	CvPlayerAI& kPlayer = GET_PLAYER(ePlayer);
 	int iAttitude = kPlayer.getAIAttitudeModifier();
 
@@ -7855,6 +7876,7 @@ PlayerVoteTypes CvPlayerAI::AI_diploVote(const VoteSelectionSubData& kVoteData, 
 
 int CvPlayerAI::AI_dealVal(PlayerTypes ePlayer, const CLinkList<TradeData>* pList, bool bIgnoreAnnual, int iChange) const
 {
+	PROFILE_EXTRA_FUNC();
 	CLLNode<TradeData>* pNode;
 
 	FAssertMsg(ePlayer != getID(), "shouldn't call this function on ourselves");
@@ -8033,6 +8055,7 @@ int CvPlayerAI::AI_dealVal(PlayerTypes ePlayer, const CLinkList<TradeData>* pLis
 
 bool CvPlayerAI::AI_goldDeal(const CLinkList<TradeData>* pList) const
 {
+	PROFILE_EXTRA_FUNC();
 	CLLNode<TradeData>* pNode;
 
 	for (pNode = pList->head(); pNode; pNode = pList->next(pNode))
@@ -8058,6 +8081,7 @@ bool CvPlayerAI::AI_goldDeal(const CLinkList<TradeData>* pList) const
 /// considering proposals from the human player made in the diplomacy window as well as a couple other places.
 bool CvPlayerAI::AI_considerOffer(PlayerTypes ePlayer, const CLinkList<TradeData>* pTheirList, const CLinkList<TradeData>* pOurList, int iChange) const
 {
+	PROFILE_EXTRA_FUNC();
 	FAssertMsg(ePlayer != getID(), "shouldn't call this function on ourselves");
 
 	if (AI_goldDeal(pTheirList) && AI_goldDeal(pOurList))
@@ -8193,6 +8217,7 @@ bool CvPlayerAI::AI_considerOffer(PlayerTypes ePlayer, const CLinkList<TradeData
 
 bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeData>* pTheirList, const CLinkList<TradeData>* pOurList, CLinkList<TradeData>* pTheirInventory, CLinkList<TradeData>* pOurInventory, CLinkList<TradeData>* pTheirCounter, CLinkList<TradeData>* pOurCounter) const
 {
+	PROFILE_EXTRA_FUNC();
 	const bool bTheirGoldDeal = AI_goldDeal(pTheirList);
 	const bool bOurGoldDeal = AI_goldDeal(pOurList);
 
@@ -9482,6 +9507,7 @@ int CvPlayerAI::AI_baseBonusVal(BonusTypes eBonus, bool bForTrade) const
 
 int CvPlayerAI::AI_corporationBonusVal(BonusTypes eBonus) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iValue = 0;
 	int iCityCount = getNumCities();
 	iCityCount += iCityCount / 6 + 1;
@@ -9669,6 +9695,7 @@ DenialTypes CvPlayerAI::AI_bonusTrade(BonusTypes eBonus, PlayerTypes ePlayer) co
 
 int CvPlayerAI::AI_cityTradeVal(CvCity* pCity) const
 {
+	PROFILE_EXTRA_FUNC();
 	FAssert(pCity->getOwner() != getID());
 
 	int iValue = 500;
@@ -9771,6 +9798,7 @@ int CvPlayerAI::AI_cityTradeVal(CvCity* pCity) const
 
 int CvPlayerAI::AI_ourCityValue(CvCity* pCity) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iValue = 150;
 	//consider infrastructure
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
@@ -9903,6 +9931,7 @@ DenialTypes CvPlayerAI::AI_cityTrade(CvCity* pCity, PlayerTypes ePlayer) const
 
 int CvPlayerAI::AI_stopTradingTradeVal(TeamTypes eTradeTeam, PlayerTypes ePlayer) const
 {
+	PROFILE_EXTRA_FUNC();
 	FAssertMsg(ePlayer != getID(), "shouldn't call this function on ourselves");
 	FAssertMsg(GET_PLAYER(ePlayer).getTeam() != getTeam(), "shouldn't call this function on ourselves");
 	FAssertMsg(eTradeTeam != getTeam(), "shouldn't call this function on ourselves");
@@ -9992,6 +10021,7 @@ int CvPlayerAI::AI_stopTradingTradeVal(TeamTypes eTradeTeam, PlayerTypes ePlayer
 
 DenialTypes CvPlayerAI::AI_stopTradingTrade(TeamTypes eTradeTeam, PlayerTypes ePlayer) const
 {
+	PROFILE_EXTRA_FUNC();
 	FAssertMsg(ePlayer != getID(), "shouldn't call this function on ourselves");
 	FAssertMsg(GET_PLAYER(ePlayer).getTeam() != getTeam(), "shouldn't call this function on ourselves");
 	FAssertMsg(eTradeTeam != getTeam(), "shouldn't call this function on ourselves");
@@ -10212,6 +10242,7 @@ DenialTypes CvPlayerAI::AI_religionTrade(ReligionTypes eReligion, PlayerTypes eP
 
 int CvPlayerAI::AI_unitImpassableCount(UnitTypes eUnit) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 	foreach_(const TerrainTypes impassableTerrain, GC.getUnitInfo(eUnit).getImpassableTerrains())
 	{
@@ -10235,6 +10266,7 @@ int CvPlayerAI::AI_unitImpassableCount(UnitTypes eUnit) const
 
 int CvPlayerAI::AI_unitHealerValue(UnitTypes eUnit, UnitCombatTypes eUnitCombat) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iValue = 0;
 	const int iNumHealUnitCombatTypes = GC.getUnitInfo(eUnit).getNumHealUnitCombatTypes();
 	if (eUnitCombat != NO_UNITCOMBAT)
@@ -10269,6 +10301,7 @@ int CvPlayerAI::AI_unitHealerValue(UnitTypes eUnit, UnitCombatTypes eUnitCombat)
 
 int CvPlayerAI::AI_unitPropertyValue(UnitTypes eUnit, PropertyTypes eProperty) const
 {
+	PROFILE_EXTRA_FUNC();
 	const CvPropertyManipulators* propertyManipulators = GC.getUnitInfo(eUnit).getPropertyManipulators();
 	int iValue = 0;
 
@@ -11714,6 +11747,7 @@ int CvPlayerAI::AI_totalAreaUnitAIs(const CvArea* pArea, UnitAITypes eUnitAI) co
 
 int CvPlayerAI::AI_totalWaterAreaUnitAIs(const CvArea* pArea, UnitAITypes eUnitAI) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = AI_totalAreaUnitAIs(pArea, eUnitAI);
 
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
@@ -11749,6 +11783,7 @@ int CvPlayerAI::AI_countCargoSpace(UnitAITypes eUnitAI) const
 
 int CvPlayerAI::AI_neededExplorers(const CvArea* pArea) const
 {
+	PROFILE_EXTRA_FUNC();
 	FAssert(pArea != NULL);
 	int iNeeded = (
 		std::min(
@@ -11811,6 +11846,7 @@ int CvPlayerAI::AI_neededHunters(const CvArea* pArea) const
 
 int CvPlayerAI::AI_neededWorkers(const CvArea* pArea) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iNeeded = 0;
 	int iCities = 0;
 	foreach_(const CvCity * pLoopCity, cities())
@@ -11938,6 +11974,7 @@ int CvPlayerAI::AI_neededExecutives(const CvArea* pArea, CorporationTypes eCorpo
 //Looks like this is an expression of the amount of supporting (same player's) attackers available adjacent to the plot in question
 int CvPlayerAI::AI_adjacentPotentialAttackers(const CvPlot* pPlot, bool bTestCanMove) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 
 	foreach_(const CvPlot * pLoopPlot, pPlot->adjacent() | filtered(CvPlot::fn::area() == pPlot->area()))
@@ -12032,6 +12069,7 @@ int CvPlayerAI::AI_totalMissionAIs(MissionAITypes eMissionAI, const CvSelectionG
 
 int CvPlayerAI::AI_missionaryValue(const CvArea* pArea, ReligionTypes eReligion, PlayerTypes* peBestPlayer) const
 {
+	PROFILE_EXTRA_FUNC();
 	CvTeam& kTeam = GET_TEAM(getTeam());
 	CvGame& kGame = GC.getGame();
 
@@ -12241,6 +12279,7 @@ int CvPlayerAI::AI_missionaryValue(const CvArea* pArea, ReligionTypes eReligion,
 
 int CvPlayerAI::AI_executiveValue(const CvArea* pArea, CorporationTypes eCorporation, PlayerTypes* peBestPlayer) const
 {
+	PROFILE_EXTRA_FUNC();
 	const CvTeam& kTeam = GET_TEAM(getTeam());
 	const CvGame& kGame = GC.getGame();
 
@@ -12418,6 +12457,7 @@ int CvPlayerAI::AI_executiveValue(const CvArea* pArea, CorporationTypes eCorpora
 int CvPlayerAI::AI_corporationValue(CorporationTypes eCorporation, const CvCity* pCity) const
 {
 
+	PROFILE_EXTRA_FUNC();
 	if (pCity == NULL)
 	{
 		if (getCapitalCity() != NULL)
@@ -13039,6 +13079,7 @@ CivicTypes CvPlayerAI::AI_bestCivic(CivicOptionTypes eCivicOption) const
 
 CivicTypes CvPlayerAI::AI_bestCivic(CivicOptionTypes eCivicOption, int* iBestValue, bool bCivicOptionVacuum, CivicTypes* paeSelectedCivics) const
 {
+	PROFILE_EXTRA_FUNC();
 	(*iBestValue) = MIN_INT;
 	CivicTypes eBestCivic = NO_CIVIC;
 
@@ -13065,6 +13106,7 @@ CivicTypes CvPlayerAI::AI_bestCivic(CivicOptionTypes eCivicOption, int* iBestVal
 //	Provide a measure of overall happyness (weighted appropriately by city)
 int CvPlayerAI::AI_getOverallHappyness(int iExtraUnhappy) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iHappyness = 0;
 
 	foreach_(const CvCity * pLoopCity, cities() | filtered(CvCity::fn::isNoUnhappiness()))
@@ -15260,6 +15302,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 
 int CvPlayerAI::AI_RevCalcCivicRelEffect(CivicTypes eCivic) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (isNPC())
 		return 0;
 	if (!isAlive())
@@ -15409,6 +15452,7 @@ int CvPlayerAI::AI_RevCalcCivicRelEffect(CivicTypes eCivic) const
 
 ReligionTypes CvPlayerAI::AI_bestReligion() const
 {
+	PROFILE_EXTRA_FUNC();
 	int iBestValue = 0;
 	ReligionTypes eBestReligion = NO_RELIGION;
 	const ReligionTypes eFavorite = (ReligionTypes)GC.getLeaderHeadInfo(getLeaderType()).getFavoriteReligion();
@@ -15464,6 +15508,7 @@ ReligionTypes CvPlayerAI::AI_bestReligion() const
 
 int CvPlayerAI::AI_religionValue(ReligionTypes eReligion) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (getHasReligionCount(eReligion) == 0)
 	{
 		return 0;
@@ -15531,6 +15576,7 @@ int CvPlayerAI::AI_religionValue(ReligionTypes eReligion) const
 
 ReligionTypes CvPlayerAI::AI_findHighestHasReligion()
 {
+	PROFILE_EXTRA_FUNC();
 	int iValue;
 	int iBestValue;
 	int iI;
@@ -15554,6 +15600,7 @@ ReligionTypes CvPlayerAI::AI_findHighestHasReligion()
 
 EspionageMissionTypes CvPlayerAI::AI_bestPlotEspionage(CvPlot* pSpyPlot, PlayerTypes& eTargetPlayer, CvPlot*& pPlot, int& iData) const
 {
+	PROFILE_EXTRA_FUNC();
 	//ooookay what missions are possible
 
 	FAssert(pSpyPlot != NULL);
@@ -16696,6 +16743,7 @@ void CvPlayerAI::AI_changeMemoryCount(PlayerTypes eIndex1, MemoryTypes eIndex2, 
 
 int CvPlayerAI::AI_calculateGoldenAgeValue() const
 {
+	PROFILE_EXTRA_FUNC();
 	int iValue = 0;
 	for (int iI = 0; iI < NUM_YIELD_TYPES; ++iI)
 	{
@@ -20413,6 +20461,7 @@ void CvPlayerAI::AI_doDiplo()
 //
 void CvPlayerAI::read(FDataStreamBase* pStream)
 {
+	PROFILE_EXTRA_FUNC();
 	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
@@ -20667,6 +20716,7 @@ void CvPlayerAI::write(FDataStreamBase* pStream)
 
 int CvPlayerAI::AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTriggeredData) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (kTriggeredData.m_eTrigger == NO_EVENTTRIGGER)
 	{
 		return 0;
@@ -21208,6 +21258,7 @@ int CvPlayerAI::AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTrig
 
 EventTypes CvPlayerAI::AI_chooseEvent(int iTriggeredId, int* pValue) const
 {
+	PROFILE_EXTRA_FUNC();
 	const EventTriggeredData* pTriggeredData = getEventTriggered(iTriggeredId);
 	if (NULL == pTriggeredData || pTriggeredData->m_eTrigger == NO_EVENTTRIGGER)
 	{
@@ -21311,6 +21362,7 @@ void CvPlayerAI::AI_doSplit()
 
 void CvPlayerAI::AI_launch(VictoryTypes eVictory)
 {
+	PROFILE_EXTRA_FUNC();
 	if (GET_TEAM(getTeam()).isHuman())
 	{
 		return;
@@ -21388,6 +21440,7 @@ void CvPlayerAI::AI_doCheckFinancialTrouble()
 
 bool CvPlayerAI::AI_disbandUnit(int iExpThreshold)
 {
+	PROFILE_EXTRA_FUNC();
 	int iBestValue = MAX_INT;
 	CvUnit* pBestUnit = NULL;
 
@@ -21628,6 +21681,7 @@ bool CvPlayerAI::AI_disbandUnit(int iExpThreshold)
 int CvPlayerAI::AI_cultureVictoryTechValue(TechTypes eTech) const
 {
 
+	PROFILE_EXTRA_FUNC();
 	if (eTech == NO_TECH)
 	{
 		return 0;
@@ -21694,6 +21748,7 @@ int CvPlayerAI::AI_cultureVictoryTechValue(TechTypes eTech) const
 int CvPlayerAI::AI_getCultureVictoryStage() const
 {
 
+	PROFILE_EXTRA_FUNC();
 	if (GC.getDefineINT("BBAI_VICTORY_STRATEGY_CULTURE") <= 0 || !GC.getGame().culturalVictoryValid())
 	{
 		return 0;
@@ -21824,6 +21879,7 @@ int CvPlayerAI::AI_getCultureVictoryStage() const
 
 int CvPlayerAI::AI_getSpaceVictoryStage() const
 {
+	PROFILE_EXTRA_FUNC();
 	int iValue;
 
 	if (GC.getDefineINT("BBAI_VICTORY_STRATEGY_SPACE") <= 0)
@@ -21967,6 +22023,7 @@ int CvPlayerAI::AI_getSpaceVictoryStage() const
 
 int CvPlayerAI::AI_getConquestVictoryStage() const
 {
+	PROFILE_EXTRA_FUNC();
 	int iValue;
 
 	if (GET_TEAM(getTeam()).isAVassal())
@@ -22097,6 +22154,7 @@ int CvPlayerAI::AI_getConquestVictoryStage() const
 
 int CvPlayerAI::AI_getDominationVictoryStage() const
 {
+	PROFILE_EXTRA_FUNC();
 	int iValue = 0;
 
 	if (GET_TEAM(getTeam()).isAVassal())
@@ -22175,6 +22233,7 @@ int CvPlayerAI::AI_getDominationVictoryStage() const
 
 int CvPlayerAI::AI_getDiplomacyVictoryStage() const
 {
+	PROFILE_EXTRA_FUNC();
 	int iValue = 0;
 
 	if (GC.getDefineINT("BBAI_VICTORY_STRATEGY_DIPLOMACY") <= 0)
@@ -22497,6 +22556,7 @@ void CvPlayerAI::AI_calculateStrategyRand()
 // K-Mod, based on BBAI
 int CvPlayerAI::AI_getStrategyRand(int iShift) const
 {
+	PROFILE_EXTRA_FUNC();
 	const unsigned iBits = 16;
 
 	iShift += getCurrentEra();
@@ -23363,6 +23423,7 @@ void CvPlayerAI::AI_nowHasTech(TechTypes eTech)
 
 int CvPlayerAI::AI_countDeadlockedBonuses(const CvPlot* pPlot) const
 {
+	PROFILE_EXTRA_FUNC();
 	CvPlot* pLoopPlot;
 	CvPlot* pLoopPlot2;
 	int iDX, iDY;
@@ -23637,6 +23698,7 @@ int CvPlayerAI::AI_averageCommerceExchange(CommerceTypes eCommerce) const
 
 void CvPlayerAI::AI_calculateAverages() const
 {
+	PROFILE_EXTRA_FUNC();
 	if (m_iAveragesCacheTurn != GC.getGame().getGameTurn())
 	{
 		for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
@@ -23716,6 +23778,7 @@ void CvPlayerAI::AI_calculateAverages() const
 // K-Mod edition
 void CvPlayerAI::AI_convertUnitAITypesForCrush()
 {
+	PROFILE_EXTRA_FUNC();
 	std::map<int, int> spare_units;
 	std::multimap<int, CvUnit*> ordered_units;
 
@@ -23981,6 +24044,7 @@ int CvPlayerAI::AI_getTotalFloatingDefenders(const CvArea* pArea) const
 
 RouteTypes CvPlayerAI::AI_bestAdvancedStartRoute(const CvPlot* pPlot, int* piYieldValue) const
 {
+	PROFILE_EXTRA_FUNC();
 	RouteTypes eBestRoute = NO_ROUTE;
 	int iBestValue = -1;
 	for (int iI = 0; iI < GC.getNumRouteInfos(); iI++)
@@ -24023,6 +24087,7 @@ RouteTypes CvPlayerAI::AI_bestAdvancedStartRoute(const CvPlot* pPlot, int* piYie
 
 UnitTypes CvPlayerAI::AI_bestAdvancedStartUnitAI(const CvPlot* pPlot, UnitAITypes eUnitAI) const
 {
+	PROFILE_EXTRA_FUNC();
 	FAssertMsg(eUnitAI != NO_UNITAI, "UnitAI is not assigned a valid value");
 
 	int iValue;
@@ -24103,6 +24168,7 @@ UnitTypes CvPlayerAI::AI_bestAdvancedStartUnitAI(const CvPlot* pPlot, UnitAIType
 
 CvPlot* CvPlayerAI::AI_advancedStartFindCapitalPlot() const
 {
+	PROFILE_EXTRA_FUNC();
 	CvPlot* pBestPlot = NULL;
 	int iBestValue = -1;
 
@@ -24207,6 +24273,7 @@ CvPlot* CvPlayerAI::AI_advancedStartFindCapitalPlot() const
 
 bool CvPlayerAI::AI_advancedStartPlaceExploreUnits(bool bLand)
 {
+	PROFILE_EXTRA_FUNC();
 	CvPlot* pBestExplorePlot = NULL;
 	int iBestExploreValue = 0;
 	UnitTypes eBestUnitType = NO_UNIT;
@@ -24281,6 +24348,7 @@ bool CvPlayerAI::AI_advancedStartPlaceExploreUnits(bool bLand)
 
 void CvPlayerAI::AI_advancedStartRevealRadius(const CvPlot* pPlot, int iRadius)
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iRange = 1; iRange <= iRadius; iRange++)
 	{
 		for (int iX = -iRange; iX <= iRange; iX++)
@@ -24306,6 +24374,7 @@ void CvPlayerAI::AI_advancedStartRevealRadius(const CvPlot* pPlot, int iRadius)
 
 bool CvPlayerAI::AI_advancedStartPlaceCity(const CvPlot* pPlot)
 {
+	PROFILE_EXTRA_FUNC();
 	//If there is already a city, then improve it.
 	CvCity* pCity = pPlot->getPlotCity();
 	if (pCity == NULL)
@@ -24409,6 +24478,7 @@ bool CvPlayerAI::AI_advancedStartPlaceCity(const CvPlot* pPlot)
 //Returns false if we have no more points.
 bool CvPlayerAI::AI_advancedStartDoRoute(const CvPlot* pFromPlot, const CvPlot* pToPlot)
 {
+	PROFILE_EXTRA_FUNC();
 	FAssert(pFromPlot != NULL);
 	FAssert(pToPlot != NULL);
 
@@ -24444,6 +24514,7 @@ bool CvPlayerAI::AI_advancedStartDoRoute(const CvPlot* pFromPlot, const CvPlot* 
 }
 void CvPlayerAI::AI_advancedStartRouteTerritory()
 {
+	PROFILE_EXTRA_FUNC();
 	CvPlot* pLoopPlot;
 
 	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
@@ -24564,6 +24635,7 @@ void CvPlayerAI::AI_advancedStartRouteTerritory()
 
 void CvPlayerAI::AI_doAdvancedStart(bool bNoExit)
 {
+	PROFILE_EXTRA_FUNC();
 	FAssertMsg(!isNPC(), "Should not be called for NPCs!");
 
 	if (NULL == getStartingPlot())
@@ -24863,6 +24935,7 @@ void CvPlayerAI::AI_doAdvancedStart(bool bNoExit)
 
 void CvPlayerAI::AI_recalculateFoundValues(int iX, int iY, int iInnerRadius, int iOuterRadius) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iLoopX = -iOuterRadius; iLoopX <= iOuterRadius; iLoopX++)
 	{
 		for (int iLoopY = -iOuterRadius; iLoopY <= iOuterRadius; iLoopY++)
@@ -24908,6 +24981,7 @@ int CvPlayerAI::AI_getMinFoundValue() const
 // returns value between 1 to 10 based on how much potential land can be gained.
 int CvPlayerAI::AI_getCitySitePriorityFactor(const CvPlot* pPlot) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iPriorityCount = 1;
 	const int iX = pPlot->getX();
 	const int iY = pPlot->getY();
@@ -24927,6 +25001,7 @@ int CvPlayerAI::AI_getCitySitePriorityFactor(const CvPlot* pPlot) const
 
 void CvPlayerAI::AI_updateCitySites(int iMinFoundValueThreshold, int iMaxSites) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (gPlayerLogLevel > 1)
 	{
 		logBBAI("Player %d (%S) begin Update City Sites (min. value: %d)...", getID(), getCivilizationDescription(0), iMinFoundValueThreshold);
@@ -25021,6 +25096,7 @@ bool CvPlayerAI::AI_isPlotCitySite(const CvPlot* pPlot) const
 
 int CvPlayerAI::AI_getNumAreaCitySites(int iAreaID, int& iBestValue) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 	iBestValue = 0;
 
@@ -25057,6 +25133,7 @@ int CvPlayerAI::AI_getNumAreaCitySites(int iAreaID, int& iBestValue) const
 
 int CvPlayerAI::AI_getNumAdjacentAreaCitySites(int iWaterAreaID, int iExcludeArea, int& iBestValue) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 	iBestValue = 0;
 
@@ -25090,6 +25167,7 @@ CvPlot* CvPlayerAI::AI_getCitySite(int iIndex) const
 
 int CvPlayerAI::AI_bestAreaUnitAIValue(UnitAITypes eUnitAI, const CvArea* pArea, UnitTypes* peBestUnitType, const CvUnitSelectionCriteria* criteria) const
 {
+	PROFILE_EXTRA_FUNC();
 	CvCity* pCity = NULL;
 
 	if (pArea != NULL)
@@ -25174,6 +25252,7 @@ int CvPlayerAI::AI_bestCityUnitAIValue(UnitAITypes eUnitAI, const CvCity* pCity,
 
 int CvPlayerAI::AI_calculateTotalBombard(DomainTypes eDomain) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iTotalBombard = 0;
 
 	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
@@ -25373,6 +25452,7 @@ void CvPlayerAI::AI_doEnemyUnitData()
 
 int CvPlayerAI::AI_calculateUnitAIViability(UnitAITypes eUnitAI, DomainTypes eDomain) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iBestUnitAIStrength = 0;
 	int iBestOtherStrength = 0;
 
@@ -25398,6 +25478,7 @@ int CvPlayerAI::AI_calculateUnitAIViability(UnitAITypes eUnitAI, DomainTypes eDo
 
 ReligionTypes CvPlayerAI::AI_chooseReligion()
 {
+	PROFILE_EXTRA_FUNC();
 	const ReligionTypes eFavorite = (ReligionTypes)GC.getLeaderHeadInfo(getLeaderType()).getFavoriteReligion();
 	if (NO_RELIGION != eFavorite && !GC.getGame().isReligionFounded(eFavorite))
 	{
@@ -25698,6 +25779,7 @@ int CvPlayerAI::AI_getPlotChokeValue(const CvPlot* pPlot) const
 
 bool CvPlayerAI::AI_isCivicCanChangeOtherValues(CivicTypes eCivicSelected, ReligionTypes eAssumedReligion) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (eCivicSelected == NO_CIVIC)
 	{
 		return false;
@@ -25770,6 +25852,7 @@ bool CvPlayerAI::AI_isCivicCanChangeOtherValues(CivicTypes eCivicSelected, Relig
 
 bool CvPlayerAI::AI_isCivicValueRecalculationRequired(CivicTypes eCivic, CivicTypes eCivicSelected, ReligionTypes eAssumedReligion) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (eCivicSelected == NO_CIVIC || eCivic == NO_CIVIC)
 	{
 		return false;
@@ -25884,6 +25967,7 @@ bool CvPlayerAI::AI_isCivicValueRecalculationRequired(CivicTypes eCivic, CivicTy
 //100 * iHappy means a high value.
 int CvPlayerAI::AI_getHappinessWeight(int iHappy, int iExtraPop) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 
 	if (0 == iHappy)
@@ -25929,6 +26013,7 @@ int CvPlayerAI::AI_getHappinessWeight(int iHappy, int iExtraPop) const
 
 int CvPlayerAI::AI_getHealthWeight(int iHealth, int iExtraPop) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 
 	if (0 == iHealth)
@@ -25962,6 +26047,7 @@ int CvPlayerAI::AI_getHealthWeight(int iHealth, int iExtraPop) const
 
 void CvPlayerAI::AI_invalidateCloseBordersAttitudeCache()
 {
+	PROFILE_EXTRA_FUNC();
 	for (int i = 0; i < MAX_PLAYERS; ++i)
 	{
 		m_aiCloseBordersAttitudeCache[i] = MAX_INT;
@@ -26035,6 +26121,7 @@ bool CvPlayerAI::AI_isPlotThreatened(const CvPlot* pPlot, int iRange, bool bTest
 
 bool CvPlayerAI::AI_isFirstTech(TechTypes eTech) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
 	{
 		if (GC.getReligionInfo((ReligionTypes)iI).getTechPrereq() == eTech
@@ -26059,6 +26146,7 @@ void CvPlayerAI::AI_invalidateAttitudeCache(PlayerTypes ePlayer)
 
 void CvPlayerAI::AI_invalidateAttitudeCache()
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		AI_invalidateAttitudeCache((PlayerTypes)iI);
@@ -26078,6 +26166,7 @@ void CvPlayerAI::AI_changeAttitudeCache(const PlayerTypes ePlayer, const int iCh
 
 CvCity* CvPlayerAI::getInquisitionRevoltCity(const CvUnit* pUnit, const bool bNoUnit, int iRevIndexThreshold, const int iTrendThreshold) const
 {
+	PROFILE_EXTRA_FUNC();
 	FAssert(pUnit != NULL);
 	if (!(hasInquisitionTarget()))
 	{
@@ -26114,6 +26203,7 @@ CvCity* CvPlayerAI::getInquisitionRevoltCity(const CvUnit* pUnit, const bool bNo
 
 CvCity* CvPlayerAI::getTeamInquisitionRevoltCity(const CvUnit* pUnit, const bool bNoUnit, int iRevIndexThreshold, const int iTrendThreshold) const
 {
+	PROFILE_EXTRA_FUNC();
 	FAssert(pUnit != NULL);
 	if (!(hasInquisitionTarget()))
 	{
@@ -26161,6 +26251,7 @@ CvCity* CvPlayerAI::getTeamInquisitionRevoltCity(const CvUnit* pUnit, const bool
 
 CvCity* CvPlayerAI::getReligiousVictoryTarget(const CvUnit* pUnit, const bool bNoUnit) const
 {
+	PROFILE_EXTRA_FUNC();
 	FAssert(pUnit != NULL);
 
 	if (!hasInquisitionTarget() || (!isPushReligiousVictory() && !isConsiderReligiousVictory()))
@@ -26486,6 +26577,7 @@ void CvPlayerAI::AI_setHasInquisitionTarget()
 
 int CvPlayerAI::countCityReligionRevolts() const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 
 	foreach_(const CvCity * pLoopCity, cities())
@@ -26597,6 +26689,7 @@ int CvPlayerAI::AI_workerTradeVal(const CvUnit* pUnit) const
 
 CvCity* CvPlayerAI::findBestCoastalCity() const
 {
+	PROFILE_EXTRA_FUNC();
 	CvCity* pBestCity = NULL;
 	bool	bFoundConnected = false;
 
@@ -26873,6 +26966,7 @@ int CvPlayerAI::AI_corporationTradeVal(CorporationTypes eCorporation) const
 
 int CvPlayerAI::AI_secretaryGeneralTradeVal(VoteSourceTypes eVoteSource, PlayerTypes ePlayer) const
 {
+	PROFILE_EXTRA_FUNC();
 	typedef bst::array<int, MAX_TEAMS> VotesArray;
 	VotesArray aiVotes;
 	aiVotes.assign(0);
@@ -26970,6 +27064,7 @@ int CvPlayerAI::AI_secretaryGeneralTradeVal(VoteSourceTypes eVoteSource, PlayerT
 
 int CvPlayerAI::AI_getCivicAttitudeChange(PlayerTypes ePlayer) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iAttitude = 0;
 
 	for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
@@ -26995,6 +27090,7 @@ int CvPlayerAI::AI_getCivicAttitudeChange(PlayerTypes ePlayer) const
 
 int CvPlayerAI::AI_getCivicShareAttitude(PlayerTypes ePlayer) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iAttitude = 0;
 	for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
 	{
@@ -27009,6 +27105,7 @@ int CvPlayerAI::AI_getCivicShareAttitude(PlayerTypes ePlayer) const
 
 TeamTypes CvPlayerAI::AI_bestJoinWarTeam(PlayerTypes eOtherPlayer) const
 {
+	PROFILE_EXTRA_FUNC();
 	const CvPlayer& playerOther = GET_PLAYER(eOtherPlayer);
 	const TeamTypes eOtherTeam = playerOther.getTeam();
 	const CvTeamAI& teamOther = GET_TEAM(eOtherTeam);
@@ -27063,6 +27160,7 @@ TeamTypes CvPlayerAI::AI_bestJoinWarTeam(PlayerTypes eOtherPlayer) const
 
 TeamTypes CvPlayerAI::AI_bestMakePeaceTeam(PlayerTypes ePlayer) const
 {
+	PROFILE_EXTRA_FUNC();
 	//kWarTeam is the team that is at war with the player we want them to make peace with
 	const CvTeamAI& kWarTeam = GET_TEAM(GET_PLAYER(ePlayer).getTeam());
 	const int iTheirPower = kWarTeam.getPower(true);
@@ -27109,6 +27207,7 @@ TeamTypes CvPlayerAI::AI_bestMakePeaceTeam(PlayerTypes ePlayer) const
 
 TeamTypes CvPlayerAI::AI_bestStopTradeTeam(PlayerTypes eOtherPlayer) const
 {
+	PROFILE_EXTRA_FUNC();
 	const CvPlayer& playerOther = GET_PLAYER(eOtherPlayer);
 	const TeamTypes eOtherTeam = playerOther.getTeam();
 	const CvTeamAI& teamOther = GET_TEAM(eOtherTeam);
@@ -27148,6 +27247,7 @@ TeamTypes CvPlayerAI::AI_bestStopTradeTeam(PlayerTypes eOtherPlayer) const
 
 int CvPlayerAI::AI_militaryBonusVal(BonusTypes eBonus)
 {
+	PROFILE_EXTRA_FUNC();
 	int iValue = 0;
 
 	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
@@ -27188,6 +27288,7 @@ int CvPlayerAI::AI_militaryBonusVal(BonusTypes eBonus)
 int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, const CvUnit* pUnit, UnitAITypes eUnitAI, bool bForBuildUp) const
 {
 
+	PROFILE_EXTRA_FUNC();
 	int iTemp;
 	int iExtra;
 	int iI;
@@ -32398,6 +32499,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 
 int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit, const CvUnit* pUnit, UnitAITypes eUnitAI) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iTemp;
 	int iExtra;
 	int iI;
@@ -36696,6 +36798,7 @@ int CvPlayerAI::AI_getNavalMilitaryProductionCityCount() const
 
 int	CvPlayerAI::AI_getNumBuildingsNeeded(BuildingTypes eBuilding, bool bCoastal) const
 {
+	PROFILE_EXTRA_FUNC();
 	// Total needed to have one in every city
 	BuildingCountMap::const_iterator itr = m_numBuildingsNeeded.find(eBuilding);
 
@@ -36760,6 +36863,7 @@ void CvPlayerAI::AI_recalculateUnitCounts()
 
 int CvPlayerAI::AI_calculateAverageLocalInstability() const
 {
+	PROFILE_EXTRA_FUNC();
 	int	result = 0;
 	int iNum = 0;
 
@@ -36777,6 +36881,7 @@ int CvPlayerAI::AI_calculateAverageLocalInstability() const
 
 int CvPlayerAI::AI_calculateAverageCityDistance() const
 {
+	PROFILE_EXTRA_FUNC();
 	int	result = 0;
 	int iNum = 0;
 	const CvCity* pCapital = getCapitalCity();

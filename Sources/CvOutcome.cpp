@@ -6,6 +6,9 @@
 //  PURPOSE: A single outcome from an outcome list
 //
 //------------------------------------------------------------------------------------------------
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
 #include "CvCityAI.h"
@@ -48,6 +51,7 @@ CvOutcome::CvOutcome(): m_eUnitType(NO_UNIT),
 						m_pPythonExecFunc(NULL),
 						m_pPythonPossibleFunc(NULL)
 {
+	PROFILE_EXTRA_FUNC();
 	for (int i=0; i<NUM_YIELD_TYPES; i++)
 	{
 		m_aiYield[i] = NULL;
@@ -61,6 +65,7 @@ CvOutcome::CvOutcome(): m_eUnitType(NO_UNIT),
 
 CvOutcome::~CvOutcome()
 {
+	PROFILE_EXTRA_FUNC();
 	GC.removeDelayedResolution((int*)&m_eType);
 	GC.removeDelayedResolution((int*)&m_eUnitType);
 	GC.removeDelayedResolution((int*)&m_ePromotionType);
@@ -197,6 +202,7 @@ bool CvOutcome::isKill() const
 
 void preparePython(CvString& szCode)
 {
+	PROFILE_EXTRA_FUNC();
 	//bst::replace_all(szCode, "\r\n", "\n");
 	//bst::replace_all(szCode, "\n", "\r\n");
 	//bst::replace_all(szCode, "\t", "  ");
@@ -329,6 +335,7 @@ void CvOutcome::compilePython()
 
 int CvOutcome::getChance(const CvUnit &kUnit) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iChance = m_iChance->evaluate(kUnit.getGameObject());
 	const CvOutcomeInfo& kInfo = GC.getOutcomeInfo(m_eType);
 
@@ -351,6 +358,7 @@ int CvOutcome::getChance(const CvUnit &kUnit) const
 
 bool CvOutcome::isPossible(const CvUnit& kUnit) const
 {
+	PROFILE_EXTRA_FUNC();
 	const CvTeam& kTeam = GET_TEAM(kUnit.getTeam());
 	const CvOutcomeInfo& kInfo = GC.getOutcomeInfo(m_eType);
 
@@ -591,6 +599,7 @@ bool CvOutcome::isPossible(const CvUnit& kUnit) const
 // Can return a false positive if an outcome requires a building combination
 bool CvOutcome::isPossibleSomewhere(const CvUnit& kUnit) const
 {
+	PROFILE_EXTRA_FUNC();
 	const CvTeam& kTeam = GET_TEAM(kUnit.getTeam());
 	const CvOutcomeInfo& kInfo = GC.getOutcomeInfo(m_eType);
 
@@ -680,6 +689,7 @@ bool CvOutcome::isPossibleSomewhere(const CvUnit& kUnit) const
 
 bool CvOutcome::isPossibleInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool bForTrade) const
 {
+	PROFILE_EXTRA_FUNC();
 	const CvTeam& kTeam = GET_TEAM(kUnit.getTeam());
 	const CvOutcomeInfo& kInfo = GC.getOutcomeInfo(m_eType);
 
@@ -984,6 +994,7 @@ bool CvOutcome::isPossible(const CvPlayerAI& kPlayer) const
 
 bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitTypes eDefeatedUnitType) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (!isPossible(kUnit))
 	{
 		return false;
@@ -1324,6 +1335,7 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 
 int CvOutcome::AI_getValueInPlot(const CvUnit &kUnit, const CvPlot &kPlot, bool bForTrade) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (!isPossibleInPlot(kUnit, kPlot, bForTrade))
 	{
 		return 0;
@@ -1456,6 +1468,7 @@ int CvOutcome::AI_getValueInPlot(const CvUnit &kUnit, const CvPlot &kPlot, bool 
 
 bool CvOutcome::read(CvXMLLoadUtility* pXML)
 {
+	PROFILE_EXTRA_FUNC();
 	CvString szTextVal;
 	pXML->GetChildXmlValByName(szTextVal, L"OutcomeType");
 	GC.addDelayedResolution((int*)&m_eType, szTextVal);
@@ -1563,6 +1576,7 @@ bool CvOutcome::read(CvXMLLoadUtility* pXML)
 
 void CvOutcome::copyNonDefaults(CvOutcome* pOutcome)
 {
+	PROFILE_EXTRA_FUNC();
 	GC.copyNonDefaultDelayedResolution((int*)&m_eType, (int*)&(pOutcome->m_eType));
 	//if (m_eType == NO_OUTCOME)
 	//{
@@ -1952,6 +1966,7 @@ void CvOutcome::buildDisplayString(CvWStringBuffer &szBuffer, const CvUnit& kUni
 
 void CvOutcome::getCheckSum(uint32_t& iSum) const
 {
+	PROFILE_EXTRA_FUNC();
 	CheckSum(iSum, m_eType);
 	m_iChance->getCheckSum(iSum);
 	CheckSum(iSum, m_eUnitType);

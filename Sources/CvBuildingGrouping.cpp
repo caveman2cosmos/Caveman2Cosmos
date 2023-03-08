@@ -6,6 +6,9 @@
 //  PURPOSE: Grouping classes for buildings
 //
 //------------------------------------------------------------------------------------------------
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvBuildingGrouping.h"
 
@@ -37,6 +40,7 @@ int BuildingGroupingWonderType::getGroupBuilding(const CvPlayer *pPlayer, CvCity
 
 int BuildingGroupingFilters::getGroupBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const
 {
+	PROFILE_EXTRA_FUNC();
 	const int iSize = m_apFilters.size();
 	for (int i = 0; i < iSize; i++)
 		if (m_apFilters[i]->isFiltered(pPlayer, pCity, eBuilding))
@@ -51,6 +55,7 @@ void BuildingGroupingFilters::addGroupingFilter(BuildingFilterBase *pFilter)
 
 BuildingGroupingFilters::~BuildingGroupingFilters()
 {
+	PROFILE_EXTRA_FUNC();
 	for (unsigned int i = 0; i < m_apFilters.size(); i++)
 		delete m_apFilters[i];
 }
@@ -69,6 +74,7 @@ BuildingGroupingList::BuildingGroupingList(CvPlayer *pPlayer, CvCity *pCity) : m
 
 BuildingGroupingList::~BuildingGroupingList()
 {
+	PROFILE_EXTRA_FUNC();
 	for (int i = 0; i < NUM_BUILDING_GROUPING; i++)
 	{
 		delete m_apBuildingGrouping[i];
