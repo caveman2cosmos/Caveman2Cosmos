@@ -136,6 +136,7 @@ PUSHD ..
 echo 3. Making required links from '%cd%' Git directory to '%C2C_MOD_DIR%' ...
 mklink /J "%C2C_MOD_DIR%\Assets" Assets
 mklink /J "%C2C_MOD_DIR%\PrivateMaps" PrivateMaps
+mklink /J "%C2C_MOD_DIR%\PublicMaps" PublicMaps
 mklink /J "%C2C_MOD_DIR%\Resource" Resource
 
 echo 4. Copying config files ...

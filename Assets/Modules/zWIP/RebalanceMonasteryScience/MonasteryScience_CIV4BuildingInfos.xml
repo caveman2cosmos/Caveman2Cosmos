@@ -91,7 +91,7 @@
 			</TechCommerceModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CANAANISM_MONASTERY</Type>
+			<Type>BUILDING_CANAANITE_MONASTERY</Type>
 			<TechCommerceModifiers>
 				<TechCommerceModifier>
 					<PrereqTech>TECH_BIOLOGY</PrereqTech>
@@ -148,7 +148,7 @@
 			</TechCommerceModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EGYPT_MYTH_MONASTERY</Type>
+			<Type>BUILDING_TEMPLE_OF_CHONS</Type>
 			<TechCommerceModifiers>
 				<TechCommerceModifier>
 					<PrereqTech>TECH_BIOLOGY</PrereqTech>
@@ -167,7 +167,7 @@
 			</TechCommerceModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HELLENIC_MONASTERY</Type>
+			<Type>BUILDING_HELLENIC_GYMNASIA</Type>
 			<TechCommerceModifiers>
 				<TechCommerceModifier>
 					<PrereqTech>TECH_BIOLOGY</PrereqTech>
@@ -262,7 +262,7 @@
 			</TechCommerceModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MESOAMERICAN_MONASTERY</Type>
+			<Type>BUILDING_CALMACEC</Type>
 			<TechCommerceModifiers>
 				<TechCommerceModifier>
 					<PrereqTech>TECH_BIOLOGY</PrereqTech>
@@ -281,7 +281,7 @@
 			</TechCommerceModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MORMON_MONASTERY</Type>
+			<Type>BUILDING_LDS_MISSIONARY_TRAINING_CENTRE</Type>
 			<TechCommerceModifiers>
 				<TechCommerceModifier>
 					<PrereqTech>TECH_CONSUMERISM</PrereqTech>
@@ -359,7 +359,7 @@
 			</TechCommerceModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ZOROASTRIAN_MONASTERY</Type>
+			<Type>BUILDING_ZOROASTRIAN_SHRINE</Type>
 			<TechCommerceModifiers>
 				<TechCommerceModifier>
 					<PrereqTech>TECH_BIOLOGY</PrereqTech>

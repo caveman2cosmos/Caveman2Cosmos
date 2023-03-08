@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SLAVERY</Tag>
+		<Tag>TXT_KEY_BUILDING_WORLDVIEW_SLAVERY_ACTIVE</Tag>
 		<English>Worldview - Slavery active</English>
 		<French>Vision du monde - Activité d'Esclavage</French>
 		<Italian>Concezione del mondo - Schiavismo attivo</Italian>
@@ -9,7 +9,7 @@
 		<Russian>Ðàáû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SLAVERY_BAD_ZORO_I</Tag>
+		<Tag>TXT_KEY_BUILDING_WORLDVIEW_SLAVERY_ZOROASTRIANISM_I</Tag>
 		<English>Worldview - Slavery (Zoroastrianism I)</English>
 		<French>Vision du monde - Esclavage (Zoroastrisme I)</French>
 		<Italian>Concezione del mondo - Schiavismo (Zoroastrismo I)</Italian>
@@ -17,7 +17,7 @@
 		<Russian>Ðàáû (çîðîàñòðèçì I)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SLAVERY_BAD_ZORO_II</Tag>
+		<Tag>TXT_KEY_BUILDING_WORLDVIEW_SLAVERY_ZOROASTRIANISM_II</Tag>
 		<English>Worldview - Slavery (Zoroastrianism II)</English>
 		<French>Vision du monde - Esclavage (Zoroastrisme II)</French>
 		<Italian>Concezione del mondo - Schiavismo (Zoroastrismo II)</Italian>
@@ -93,7 +93,7 @@
 		<Russian>Улучшения, связанные с «Рабским трудом» - это место поселения городских рабов-специалистов.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SLAVE_COMPOUND_PRODUCTION</Tag>
+		<Tag>TXT_KEY_BUILDING_SLAVE_COMPOUND_INDUSTRY</Tag>
 		<English>Slave Compound - Industry</English>
 		<French>Camp d'esclaves - Industrie</French>
 		<Italian>Baracca degli schiavi - Industria</Italian>
@@ -117,7 +117,7 @@
 		<Russian>Íåâîëüíè÷èé ðûíîê óâåëè÷èâàåò ïðîèçâîäñòâî, èñïîëüçóÿ ïëåííèêîâ â êà÷åñòâå ðàáîâ, à èìåííî, óâåëè÷èâàåò êîëè÷åñòâî çîëîòà ïîëó÷àåìîãî îò ïðîäàæè ïëåííûõ â ðàáñòâî.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WV_SLAVERY</Tag>
+		<Tag>TXT_KEY_BUILDING_WORLDVIEW_SLAVERY</Tag>
 		<English>Worldview - Slavery</English>
 		<French>Vision du monde - Esclavage</French>
 		<Italian>Concezione del mondo - Schiavismo</Italian>
@@ -125,7 +125,7 @@
 		<Russian>Ðàáîâëàäåíèå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WV_SLAVERY_HELP</Tag>
+		<Tag>TXT_KEY_BUILDING_WORLDVIEW_SLAVERY_HELP</Tag>
 		<English>[ICON_BULLET]Allows you to sell captives into slavery.</English>
 		<French>[ICON_BULLET]vous permet de vendre les prisonniers en tant qu'esclaves.</French>
 		<Italian>[ICON_BULLET]Ti permette di vendere come schiavi i tuoi prigionieri.</Italian>
@@ -133,7 +133,7 @@
 		<Russian>Ïîçâîëÿåò âàì ïðîäàâàòü ïëåííèêîâ â ðàáñòâî.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WV_SLAVERY_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_WORLDVIEW_SLAVERY_PEDIA</Tag>
 		<English>Slavery...</English>
 		<French>Esclavage...</French>
 		<Italian>Schiavismo...</Italian>

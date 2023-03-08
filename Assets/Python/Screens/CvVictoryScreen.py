@@ -809,7 +809,7 @@ class CvVictoryScreen:
 								screen.setTableText(szTable, 2, iRow, ufont2 + sSSPlayer, "", eWidGen, 1, 2, 1<<0)
 								screen.setTableText(szTable, 3, iRow, ufont2 + sSSCount, "", eWidGen, 1, 2, 1<<0)
 
-				if CvVictoryInfo.isDiploVote() and not GAME.isOption(GameOptionTypes.GAMEOPTION_UNITED_NATIONS):
+				if CvVictoryInfo.isDiploVote() and not GAME.isOption(GameOptionTypes.GAMEOPTION_ENABLE_UNITED_NATIONS):
 					for (iVoteBuilding, iUNTeam, bUnknown) in aiVoteBuilding:
 						iRow = screen.appendTableRow(szTable)
 						szText = TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_ELECTION", (GC.getBuildingInfo(iVoteBuilding).getTextKey(),))
@@ -923,7 +923,10 @@ class CvVictoryScreen:
 			szTxt = ufont1 + "\t<color=200,200,200>(" + szTxt + ")\n"
 			screen.appendListBoxStringNoUpdate(szSettingsTable, szTxt, eWidGen, 1, 2, 1<<0)
 
-		szTxt = BULLET + ufont2 + TRNSLTR.getText("TXT_KEY_SETTINGS_DIFFICULTY", (GC.getHandicapInfo(CyPlayer.getHandicapType()).getTextKey(),))
+		szTxt = BULLET + ufont2 + TRNSLTR.getText("TXT_KEY_SETTINGS_DIFFICULTY_GAME", (GC.getHandicapInfo(GAME.getHandicapType()).getTextKey(),))
+		screen.appendListBoxStringNoUpdate(szSettingsTable, szTxt, eWidGen, 1, 2, 1<<0)
+
+		szTxt = BULLET + ufont2 + TRNSLTR.getText("TXT_KEY_SETTINGS_DIFFICULTY_PLAYER", (GC.getHandicapInfo(CyPlayer.getHandicapType()).getTextKey(),))
 		screen.appendListBoxStringNoUpdate(szSettingsTable, szTxt, eWidGen, 1, 2, 1<<0)
 
 		szTxt = BULLET + ufont2 + TRNSLTR.getText("TXT_KEY_SETTINGS_GAME_SPEED", (GC.getGameSpeedInfo(GAME.getGameSpeedType()).getTextKey(),))
@@ -978,7 +981,7 @@ class CvVictoryScreen:
 
 			screen.appendListBoxStringNoUpdate(szOptionsTable, szTxt, eWidGen, 1, 2, 1<<0)
 
-		if GAME.isOption(GameOptionTypes.GAMEOPTION_ADVANCED_START):
+		if GAME.isOption(GameOptionTypes.GAMEOPTION_UNSUPPORTED_ADVANCED_START):
 			szTxt = BULLET + ufont2 + u"%s %d" %(TRNSLTR.getText("TXT_KEY_ADVANCED_START_POINTS", ()), GAME.getNumAdvancedStartPoints()) + "\n"
 			screen.appendListBoxStringNoUpdate(szOptionsTable, szTxt, eWidGen, 1, 2, 1<<0)
 

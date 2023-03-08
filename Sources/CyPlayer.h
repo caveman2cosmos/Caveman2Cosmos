@@ -272,7 +272,6 @@ public:
 	void setFoundedFirstCity(bool bNewValue);
 	void setAlive(bool bNewValue);
 	void setNewPlayerAlive(bool bNewValue);
-	void changeTechScore(int iChange);
 
 	bool isStrike() const;
 
@@ -424,7 +423,7 @@ public:
 
 	int getBuildingCountWithUpgrades(int /*BuildingTypes*/ iBuilding) const;
 	void setColor(int /*PlayerColorTypes*/ iColor);
-	void setHandicap(int iNewVal);
+	void setHandicap(int iNewVal, bool bAverageGameHandicap);
 
 	void setModderOption(int /*ModderOptionTypes*/ eIndex, int iNewValue);
 

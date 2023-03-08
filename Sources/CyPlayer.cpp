@@ -122,19 +122,11 @@ std::wstring CyPlayer::getNewCityName() const
 
 CyUnit* CyPlayer::initUnit(int /*UnitTypes*/ iIndex, int iX, int iY, UnitAITypes eUnitAI, DirectionTypes eFacingDirection)
 {
-/************************************************************************************************/
-/* Afforess	                  Start		 09/29/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	if (iIndex == -1)
 	{
 		FErrorMsg("Initiating NO_UNIT Type!");
 		return NULL;
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	CvUnit* unit = m_pPlayer->initUnit((UnitTypes) iIndex, iX, iY, eUnitAI, eFacingDirection, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
 	return unit ? new CyUnit(unit) : NULL;
 }
@@ -151,7 +143,7 @@ bool CyPlayer::hasTrait(int /*TraitTypes*/ iIndex) const
 
 bool CyPlayer::isHuman() const
 {
-	return m_pPlayer->isHuman();
+	return m_pPlayer->isHumanPlayer();
 }
 
 bool CyPlayer::isHumanDisabled() const
@@ -1032,11 +1024,6 @@ void CyPlayer::setNewPlayerAlive(bool bNewValue)
 	m_pPlayer->setNewPlayerAlive(bNewValue);
 }
 
-void CyPlayer::changeTechScore(int iChange)
-{
-	m_pPlayer->changeTechScore(iChange);
-}
-
 bool CyPlayer::isStrike() const
 {
 	return m_pPlayer->isStrike();
@@ -1703,9 +1690,9 @@ int CyPlayer::getBuildingCountWithUpgrades(int iBuilding) const
 	return m_pPlayer->getBuildingCountWithUpgrades((BuildingTypes)iBuilding);
 }
 
-void CyPlayer::setHandicap(int iNewVal)
+void CyPlayer::setHandicap(int iNewVal, bool bAdjustGameHandicap)
 {
-	m_pPlayer->setHandicap(iNewVal);
+	m_pPlayer->setHandicap(iNewVal, bAdjustGameHandicap);
 }
 
 void CyPlayer::setModderOption(int /*ModderOptionTypes*/ eIndex, int iNewValue)

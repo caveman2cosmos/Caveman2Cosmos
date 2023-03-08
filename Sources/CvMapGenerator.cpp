@@ -68,7 +68,7 @@ bool CvMapGenerator::canPlaceBonusAt(BonusTypes eBonus, int iX, int iY, bool bIg
 	{
 		iRange0 += (GC.getMap().getWorldSize() + 1) / 2;
 
-		if (GC.getGame().isOption(GAMEOPTION_MORE_RESOURCES))
+		if (GC.getGame().isOption(GAMEOPTION_MAP_MORE_RESOURCES))
 		{
 			iRange0 /= 2;
 		}
@@ -101,7 +101,7 @@ bool CvMapGenerator::canPlaceBonusAt(BonusTypes eBonus, int iX, int iY, bool bIg
 	{
 		iRange1 += GC.getMap().getWorldSize();
 
-		if (GC.getGame().isOption(GAMEOPTION_MORE_RESOURCES))
+		if (GC.getGame().isOption(GAMEOPTION_MAP_MORE_RESOURCES))
 		{
 			iRange1 /= 2;
 		}
@@ -134,7 +134,7 @@ bool CvMapGenerator::canPlaceGoodyAt(ImprovementTypes eImprovement, int iX, int 
 	FAssertMsg(eImprovement != NO_IMPROVEMENT, "Improvement is not assigned a valid value");
 	FAssertMsg(GC.getImprovementInfo(eImprovement).isGoody(), "ImprovementType eImprovement is expected to be a goody");
 
-	if (GC.getGame().isOption(GAMEOPTION_NO_GOODY_HUTS))
+	if (GC.getGame().isOption(GAMEOPTION_MAP_NO_GOODY_HUTS))
 	{
 		return false;
 	}
@@ -230,17 +230,17 @@ void CvMapGenerator::addRivers()
 
 	for (int iPass = 0; iPass < 4; iPass++)
 	{
-		int iRiverSourceRange = iPass <= 1 || !GC.getGame().isOption(GAMEOPTION_MORE_RIVERS)
+		int iRiverSourceRange = iPass <= 1 || !GC.getGame().isOption(GAMEOPTION_MAP_MORE_RIVERS)
 			? GC.getDefineINT("RIVER_SOURCE_MIN_RIVER_RANGE")
 			: GC.getDefineINT("RIVER_SOURCE_MIN_RIVER_RANGE") / 2;
 
-		int iSeaWaterRange = iPass <= 1 || !GC.getGame().isOption(GAMEOPTION_MORE_RIVERS)
+		int iSeaWaterRange = iPass <= 1 || !GC.getGame().isOption(GAMEOPTION_MAP_MORE_RIVERS)
 			? GC.getDefineINT("RIVER_SOURCE_MIN_SEAWATER_RANGE")
 			: GC.getDefineINT("RIVER_SOURCE_MIN_SEAWATER_RANGE") / 2;
 
 		int iRand = 8;
 		int iPPRE = GC.getDefineINT("PLOTS_PER_RIVER_EDGE");
-		if (GC.getGame().isOption(GAMEOPTION_MORE_RIVERS))
+		if (GC.getGame().isOption(GAMEOPTION_MAP_MORE_RIVERS))
 		{
 			iRand = GC.getDefineINT("RIVER_RAND_ON_MORE_RIVERS");
 			iPPRE /= std::max(1, GC.getDefineINT("PLOTS_PER_RIVER_EDGE_DIVISOR"));
@@ -1018,7 +1018,7 @@ int CvMapGenerator::calculateNumBonusesToAdd(BonusTypes eBonusType)
 		iBaseCount += iNumPossible * 1000 / (pBonusInfo.getTilesPer() * (GC.getMap().getWorldSize() + 7)); // Density scaled by map size, less dense on large maps.
 	}
 
-	if (GC.getGame().isOption(GAMEOPTION_MORE_RESOURCES))
+	if (GC.getGame().isOption(GAMEOPTION_MAP_MORE_RESOURCES))
 	{
 		iBaseCount *= (GC.getDefineINT("BONUS_COUNT_PERCENTAGE_MODIFIER_ON_MORE_RESOURCES") + 100);
 		iBaseCount /= 100;

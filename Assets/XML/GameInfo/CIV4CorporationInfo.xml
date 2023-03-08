@@ -307,7 +307,7 @@
 		<CorporationInfo>
 			<Type>CORPORATION_MOONBEAN</Type>
 			<Description>TXT_KEY_BUILDING_CORPORATION_MOONBEAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MOONBEAN_HQ_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_HQ_MOONBEAN_COFFEE_PEDIA</Civilopedia>
 			<TechPrereq>NONE</TechPrereq>
 			<iSpreadFactor>200</iSpreadFactor>
 			<iSpreadCost>50</iSpreadCost>

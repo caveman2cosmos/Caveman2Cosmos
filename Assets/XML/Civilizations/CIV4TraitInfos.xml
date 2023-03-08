@@ -50,7 +50,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CONVENTION_CENTER</BuildingType>
+					<BuildingType>BUILDING_CONVENTION_CENTRE</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -162,7 +162,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
+					<BuildingType>BUILDING_SIEGE_WEAPONS_WORKSHOP</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -170,11 +170,11 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_FLETCHER</BuildingType>
+					<BuildingType>BUILDING_FLETCHERS_HUT</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_GLADIATOR_SCHOOL</BuildingType>
+					<BuildingType>BUILDING_GLADIATORIAL_SCHOOL</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -182,7 +182,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_WARRIOR_HUT</BuildingType>
+					<BuildingType>BUILDING_WARRIORS_HUT</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -214,7 +214,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CROSSES</BuildingType>
+					<BuildingType>BUILDING_CRUCIFIXION_CROSSES</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -246,7 +246,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<BuildingType>BUILDING_HIGH_TECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -320,7 +320,7 @@
 			<!-- Revolution Trait Effects End -->
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SUMERIAN_ZIGGURAT</BuildingType>
+					<BuildingType>BUILDING_ZIGGURAT</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -336,7 +336,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CANDLEMAKER</BuildingType>
+					<BuildingType>BUILDING_CANDLEMAKERS_SHOP</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -344,7 +344,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_INDIAN_MAUSOLEUM</BuildingType>
+					<BuildingType>BUILDING_MAUSOLEUM</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -360,15 +360,15 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_TEMPLE_OF_SET</BuildingType>
+					<BuildingType>BUILDING_TEMPLE_OF_SETH</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_AZTEC_SACRIFICIAL_ALTAR</BuildingType>
+					<BuildingType>BUILDING_TLALOCS_ALTAR</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CANDLE_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_CANDLES</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -380,7 +380,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<BuildingType>BUILDING_HIGH_TECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -418,23 +418,23 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_HELLENIC_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_HELLENIC_GYMNASIA</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_ZOROASTRIAN_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_ZOROASTRIAN_SHRINE</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_EGYPT_MYTH_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_TEMPLE_OF_CHONS</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_MESOAMERICAN_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_CALMACEC</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_NATURE_CIRCLE_OF_POWER</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -442,11 +442,11 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_AN</BuildingType>
+					<BuildingType>BUILDING_TEMPLE_OF_AN</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_MORMON_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_LDS_MISSIONARY_TRAINING_CENTRE</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -454,7 +454,7 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_INVOCATION_HUT</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -555,7 +555,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_GERMAN_ASSEMBLY_PLANT</BuildingType>
+					<BuildingType>BUILDING_ASSEMBLY_PLANT</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -603,7 +603,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_AI_LAWYER</BuildingType>
+					<BuildingType>BUILDING_AI_LEGAL_SYSTEM</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -623,11 +623,11 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_3DPRINTING_MILL</BuildingType>
+					<BuildingType>BUILDING_3D_PRINTING_MILL</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_NANOPRINTING_MILL</BuildingType>
+					<BuildingType>BUILDING_NANOBOTIC_PRINTING_MILL</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
@@ -706,11 +706,11 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_GUILDHALL</BuildingType>
+					<BuildingType>BUILDING_GUILD_HALL</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_GLASSSMITH</BuildingType>
+					<BuildingType>BUILDING_GLASSBLOWERS_WORKSHOP</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -730,7 +730,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_GLASS_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_GLASSWARE</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -738,7 +738,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+					<BuildingType>BUILDING_METALS_MEGACOMPLEX</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -924,11 +924,11 @@
 			</CommerceModifiers>
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ARABIAN_MADRASSA</BuildingType>
+					<BuildingType>BUILDING_MADRASSA</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CHINESE_PAVILLION</BuildingType>
+					<BuildingType>BUILDING_PAVILION</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -944,7 +944,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_GREEK_ODEON</BuildingType>
+					<BuildingType>BUILDING_ODEON</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -972,15 +972,15 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ACTORS_SCHOOL</BuildingType>
+					<BuildingType>BUILDING_DRAMA_SCHOOL</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MUSICIAN_SCHOOL</BuildingType>
+					<BuildingType>BUILDING_MUSIC_SCHOOL</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CAVE_PAINTING</BuildingType>
+					<BuildingType>BUILDING_CAVE_PAINTINGS</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -988,11 +988,11 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MOVIETHEATRE</BuildingType>
+					<BuildingType>BUILDING_MOVIE_THEATRE</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_VR_THEATER</BuildingType>
+					<BuildingType>BUILDING_VIRTUAL_REALITY_THEATER</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -1008,7 +1008,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SIAM_HO_TRAI</BuildingType>
+					<BuildingType>BUILDING_HO_TRAI_LIBRARY</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -1020,7 +1020,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MAYA_BALL_COURT</BuildingType>
+					<BuildingType>BUILDING_BALL_COURT</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -1044,11 +1044,11 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_FRESCO</BuildingType>
+					<BuildingType>BUILDING_FRESCO_MURAL</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_TOURNAMENT</BuildingType>
+					<BuildingType>BUILDING_ROYAL_TOURNAMENT</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -1060,7 +1060,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<BuildingType>BUILDING_HIGH_TECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -1076,21 +1076,21 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_VIRTUAL_SCHOOL</BuildingType>
+					<BuildingType>BUILDING_HOLOGRAPHIC_SCHOOL</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_ARABIAN_MADRASSA</BuildingType>
+					<BuildingType>BUILDING_MADRASSA</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_SCULPTOR</BuildingType>
+					<BuildingType>BUILDING_SCULPTORS_WORKSHOP</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_SCULPTURE_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_SCULPTURES</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -1102,7 +1102,7 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_SIAM_HO_TRAI</BuildingType>
+					<BuildingType>BUILDING_HO_TRAI_LIBRARY</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -1267,11 +1267,11 @@
 			<!-- Revolution Trait Effects End -->
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_OTTOMAN_HAMMAM</BuildingType>
+					<BuildingType>BUILDING_HAMMAM</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_KHMER_BARAY</BuildingType>
+					<BuildingType>BUILDING_BARAY</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -1299,11 +1299,11 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
+					<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+					<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -1423,7 +1423,7 @@
 			<!-- Revolution Trait Effects End -->
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_RECRUITMENT_OFFICE</BuildingType>
+					<BuildingType>BUILDING_RECRUITMENT_CENTER</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
@@ -1441,7 +1441,7 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_DICTATOR_MONUMENT</BuildingType>
+					<BuildingType>BUILDING_MONUMENT_OF_THE_DICTATOR</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -1461,7 +1461,7 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_NATIVE_AMERICA_TOTEM</BuildingType>
+					<BuildingType>BUILDING_TOTEM_POLE</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -1481,7 +1481,7 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<BuildingType>BUILDING_HIGH_TECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
@@ -1585,7 +1585,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MISSILE_SILO</BuildingType>
+					<BuildingType>BUILDING_MISSILE_LAB</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -1621,19 +1621,19 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SIEGE_TOWERS</BuildingType>
+					<BuildingType>BUILDING_BALLISTA_TURRET</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_EARTHWALL</BuildingType>
+					<BuildingType>BUILDING_EARTH_WALL</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_EBGATEHOUSE</BuildingType>
+					<BuildingType>BUILDING_CITY_GATEHOUSE</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_FEDERAL_PRISON</BuildingType>
+					<BuildingType>BUILDING_MAXIMUM_SECURITY_PRISON</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -1665,15 +1665,15 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_METAMATERIAL_WALL</BuildingType>
+					<BuildingType>BUILDING_METAMATERIAL_WALLS</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALL</BuildingType>
+					<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALLS</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
+					<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALLS</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -1681,7 +1681,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_WIRELESS_FENCE</BuildingType>
+					<BuildingType>BUILDING_WIRELESS_ELECTRIC_FENCE</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -1693,7 +1693,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_BOMB_SHELTER</BuildingType>
+					<BuildingType>BUILDING_BOMB_SHELTERS</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -1863,11 +1863,11 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_FISHERMAN_HUT</BuildingType>
+					<BuildingType>BUILDING_FISHERMANS_HUT</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_FISHTRAPS</BuildingType>
+					<BuildingType>BUILDING_FISH_TRAPS</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -1891,7 +1891,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SAIL_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_SAILS</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -2074,7 +2074,7 @@
 			</FreePromotionUnitCombatTypes>
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MONGOL_GER</BuildingType>
+					<BuildingType>BUILDING_GER</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -2086,7 +2086,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_BEADMAKER</BuildingType>
+					<BuildingType>BUILDING_BEADWORKER</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -2094,7 +2094,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_KNIGHT_STABLE</BuildingType>
+					<BuildingType>BUILDING_KNIGHTS_STABLE</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -2106,15 +2106,15 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+					<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MEATPACKING_PLANT</BuildingType>
+					<BuildingType>BUILDING_MEAT_PACKING_PLANT</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_LEATHER_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_LEATHER</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -2122,11 +2122,11 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_BEADMAKER_WORKSHOP</BuildingType>
+					<BuildingType>BUILDING_BEADMAKERS_WORKSHOP</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_BEAD_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_BEADS</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -2136,7 +2136,7 @@
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_BASKETWEAVER</BuildingType>
+					<BuildingType>BUILDING_BASKETMAKER</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -2148,19 +2148,19 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_BASKETY_WORKSHOP</BuildingType>
+					<BuildingType>BUILDING_BASKET_MAKERS_WORKSHOP</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_BASKETY_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_BASKETS</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
+					<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+					<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
@@ -2335,7 +2335,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_OXEN_FARM</BuildingType>
+					<BuildingType>BUILDING_FARM_ANIMAL_OXEN</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -2363,7 +2363,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_INCAN_TERRACE</BuildingType>
+					<BuildingType>BUILDING_TERRACE</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -2375,11 +2375,11 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+					<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
+					<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -2499,7 +2499,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CYROGENIC_PRISON</BuildingType>
+					<BuildingType>BUILDING_CRYOGENIC_PRISON</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -2539,11 +2539,11 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_BANDITS_HIDEOUT</BuildingType>
+					<BuildingType>BUILDING_THIEVES_HIDEOUT</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_POACHER_CAMP</BuildingType>
+					<BuildingType>BUILDING_POACHERS_CAMP</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -2633,7 +2633,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_LAB</BuildingType>
+					<BuildingType>BUILDING_ALCHEMISTS_LAB</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -2641,7 +2641,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_RUSSIAN_RESEARCH_INSTITUTE</BuildingType>
+					<BuildingType>BUILDING_RESEARCH_INSTITUTE</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -2649,7 +2649,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_FRENCH_SALON</BuildingType>
+					<BuildingType>BUILDING_SALON</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -2746,11 +2746,11 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_HEALERHUT</BuildingType>
+					<BuildingType>BUILDING_HEALERS_HUT</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_DOCTOR</BuildingType>
+					<BuildingType>BUILDING_DOCTORS_OFFICE</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -2770,11 +2770,11 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
+					<BuildingType>BUILDING_SURGEONS_OFFICE</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+					<BuildingType>BUILDING_MEDICAL_CLINIC</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -2782,17 +2782,17 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<BuildingType>BUILDING_HIGH_TECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_HEALERHUT</BuildingType>
+					<BuildingType>BUILDING_HEALERS_HUT</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_DOCTOR</BuildingType>
+					<BuildingType>BUILDING_DOCTORS_OFFICE</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -2804,11 +2804,11 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
+					<BuildingType>BUILDING_SURGEONS_OFFICE</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+					<BuildingType>BUILDING_MEDICAL_CLINIC</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -3063,7 +3063,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CUSTOM_HOUSE</BuildingType>
+					<BuildingType>BUILDING_CUSTOMS_OFFICE</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -3158,23 +3158,23 @@
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_HELLENIC_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_HELLENIC_GYMNASIA</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_ZOROASTRIAN_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_ZOROASTRIAN_SHRINE</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_EGYPT_MYTH_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_TEMPLE_OF_CHONS</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_MESOAMERICAN_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_CALMACEC</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_NATURE_CIRCLE_OF_POWER</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -3182,11 +3182,11 @@
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_AN</BuildingType>
+					<BuildingType>BUILDING_TEMPLE_OF_AN</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_MORMON_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_LDS_MISSIONARY_TRAINING_CENTRE</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -3194,7 +3194,7 @@
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_INVOCATION_HUT</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -3294,7 +3294,7 @@
 			</CommerceModifiers>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_DICTATOR_MONUMENT</BuildingType>
+					<BuildingType>BUILDING_MONUMENT_OF_THE_DICTATOR</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
@@ -4035,7 +4035,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CONVENTION_CENTER</BuildingType>
+					<BuildingType>BUILDING_CONVENTION_CENTRE</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -4127,7 +4127,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
+					<BuildingType>BUILDING_SIEGE_WEAPONS_WORKSHOP</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -4135,11 +4135,11 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_FLETCHER</BuildingType>
+					<BuildingType>BUILDING_FLETCHERS_HUT</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_GLADIATOR_SCHOOL</BuildingType>
+					<BuildingType>BUILDING_GLADIATORIAL_SCHOOL</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -4147,7 +4147,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_WARRIOR_HUT</BuildingType>
+					<BuildingType>BUILDING_WARRIORS_HUT</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -4179,7 +4179,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CROSSES</BuildingType>
+					<BuildingType>BUILDING_CRUCIFIXION_CROSSES</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -4211,7 +4211,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<BuildingType>BUILDING_HIGH_TECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -4274,7 +4274,7 @@
 			<!-- Revolution Trait Effects End -->
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SUMERIAN_ZIGGURAT</BuildingType>
+					<BuildingType>BUILDING_ZIGGURAT</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -4290,7 +4290,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CANDLEMAKER</BuildingType>
+					<BuildingType>BUILDING_CANDLEMAKERS_SHOP</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -4298,7 +4298,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_INDIAN_MAUSOLEUM</BuildingType>
+					<BuildingType>BUILDING_MAUSOLEUM</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -4314,15 +4314,15 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_TEMPLE_OF_SET</BuildingType>
+					<BuildingType>BUILDING_TEMPLE_OF_SETH</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_AZTEC_SACRIFICIAL_ALTAR</BuildingType>
+					<BuildingType>BUILDING_TLALOCS_ALTAR</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CANDLE_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_CANDLES</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -4334,7 +4334,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<BuildingType>BUILDING_HIGH_TECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -4372,23 +4372,23 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_HELLENIC_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_HELLENIC_GYMNASIA</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_ZOROASTRIAN_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_ZOROASTRIAN_SHRINE</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_EGYPT_MYTH_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_TEMPLE_OF_CHONS</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_MESOAMERICAN_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_CALMACEC</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_NATURE_CIRCLE_OF_POWER</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -4396,11 +4396,11 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_AN</BuildingType>
+					<BuildingType>BUILDING_TEMPLE_OF_AN</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_MORMON_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_LDS_MISSIONARY_TRAINING_CENTRE</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -4408,7 +4408,7 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_INVOCATION_HUT</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -4515,7 +4515,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_GERMAN_ASSEMBLY_PLANT</BuildingType>
+					<BuildingType>BUILDING_ASSEMBLY_PLANT</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -4563,7 +4563,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_AI_LAWYER</BuildingType>
+					<BuildingType>BUILDING_AI_LEGAL_SYSTEM</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -4583,11 +4583,11 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_3DPRINTING_MILL</BuildingType>
+					<BuildingType>BUILDING_3D_PRINTING_MILL</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_NANOPRINTING_MILL</BuildingType>
+					<BuildingType>BUILDING_NANOBOTIC_PRINTING_MILL</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
@@ -4655,11 +4655,11 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_GUILDHALL</BuildingType>
+					<BuildingType>BUILDING_GUILD_HALL</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_GLASSSMITH</BuildingType>
+					<BuildingType>BUILDING_GLASSBLOWERS_WORKSHOP</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -4679,7 +4679,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_GLASS_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_GLASSWARE</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -4687,7 +4687,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+					<BuildingType>BUILDING_METALS_MEGACOMPLEX</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -4863,11 +4863,11 @@
 			</CommerceChanges>
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ARABIAN_MADRASSA</BuildingType>
+					<BuildingType>BUILDING_MADRASSA</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CHINESE_PAVILLION</BuildingType>
+					<BuildingType>BUILDING_PAVILION</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -4883,7 +4883,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_GREEK_ODEON</BuildingType>
+					<BuildingType>BUILDING_ODEON</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -4911,15 +4911,15 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ACTORS_SCHOOL</BuildingType>
+					<BuildingType>BUILDING_DRAMA_SCHOOL</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MUSICIAN_SCHOOL</BuildingType>
+					<BuildingType>BUILDING_MUSIC_SCHOOL</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CAVE_PAINTING</BuildingType>
+					<BuildingType>BUILDING_CAVE_PAINTINGS</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -4927,11 +4927,11 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MOVIETHEATRE</BuildingType>
+					<BuildingType>BUILDING_MOVIE_THEATRE</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_VR_THEATER</BuildingType>
+					<BuildingType>BUILDING_VIRTUAL_REALITY_THEATER</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -4947,7 +4947,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SIAM_HO_TRAI</BuildingType>
+					<BuildingType>BUILDING_HO_TRAI_LIBRARY</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -4959,7 +4959,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MAYA_BALL_COURT</BuildingType>
+					<BuildingType>BUILDING_BALL_COURT</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -4983,11 +4983,11 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_FRESCO</BuildingType>
+					<BuildingType>BUILDING_FRESCO_MURAL</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_TOURNAMENT</BuildingType>
+					<BuildingType>BUILDING_ROYAL_TOURNAMENT</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -4999,7 +4999,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<BuildingType>BUILDING_HIGH_TECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -5015,21 +5015,21 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_VIRTUAL_SCHOOL</BuildingType>
+					<BuildingType>BUILDING_HOLOGRAPHIC_SCHOOL</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_ARABIAN_MADRASSA</BuildingType>
+					<BuildingType>BUILDING_MADRASSA</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_SCULPTOR</BuildingType>
+					<BuildingType>BUILDING_SCULPTORS_WORKSHOP</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_SCULPTURE_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_SCULPTURES</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -5041,7 +5041,7 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_SIAM_HO_TRAI</BuildingType>
+					<BuildingType>BUILDING_HO_TRAI_LIBRARY</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -5220,11 +5220,11 @@
 			<!-- Revolution Trait Effects End -->
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_OTTOMAN_HAMMAM</BuildingType>
+					<BuildingType>BUILDING_HAMMAM</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_KHMER_BARAY</BuildingType>
+					<BuildingType>BUILDING_BARAY</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -5252,11 +5252,11 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
+					<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+					<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -5365,7 +5365,7 @@
 			<!-- Revolution Trait Effects End -->
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_RECRUITMENT_OFFICE</BuildingType>
+					<BuildingType>BUILDING_RECRUITMENT_CENTER</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
@@ -5383,7 +5383,7 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_DICTATOR_MONUMENT</BuildingType>
+					<BuildingType>BUILDING_MONUMENT_OF_THE_DICTATOR</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -5403,7 +5403,7 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_NATIVE_AMERICA_TOTEM</BuildingType>
+					<BuildingType>BUILDING_TOTEM_POLE</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -5423,7 +5423,7 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<BuildingType>BUILDING_HIGH_TECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
@@ -5509,7 +5509,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MISSILE_SILO</BuildingType>
+					<BuildingType>BUILDING_MISSILE_LAB</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -5545,19 +5545,19 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SIEGE_TOWERS</BuildingType>
+					<BuildingType>BUILDING_BALLISTA_TURRET</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_EARTHWALL</BuildingType>
+					<BuildingType>BUILDING_EARTH_WALL</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_EBGATEHOUSE</BuildingType>
+					<BuildingType>BUILDING_CITY_GATEHOUSE</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_FEDERAL_PRISON</BuildingType>
+					<BuildingType>BUILDING_MAXIMUM_SECURITY_PRISON</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -5589,15 +5589,15 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_METAMATERIAL_WALL</BuildingType>
+					<BuildingType>BUILDING_METAMATERIAL_WALLS</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALL</BuildingType>
+					<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALLS</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
+					<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALLS</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -5605,7 +5605,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_WIRELESS_FENCE</BuildingType>
+					<BuildingType>BUILDING_WIRELESS_ELECTRIC_FENCE</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -5617,7 +5617,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_BOMB_SHELTER</BuildingType>
+					<BuildingType>BUILDING_BOMB_SHELTERS</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -5793,11 +5793,11 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_FISHERMAN_HUT</BuildingType>
+					<BuildingType>BUILDING_FISHERMANS_HUT</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_FISHTRAPS</BuildingType>
+					<BuildingType>BUILDING_FISH_TRAPS</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -5821,7 +5821,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SAIL_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_SAILS</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -5995,7 +5995,7 @@
 			</FreePromotionUnitCombatTypes>
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MONGOL_GER</BuildingType>
+					<BuildingType>BUILDING_GER</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -6007,7 +6007,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_BEADMAKER</BuildingType>
+					<BuildingType>BUILDING_BEADWORKER</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -6015,7 +6015,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_KNIGHT_STABLE</BuildingType>
+					<BuildingType>BUILDING_KNIGHTS_STABLE</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -6027,15 +6027,15 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+					<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MEATPACKING_PLANT</BuildingType>
+					<BuildingType>BUILDING_MEAT_PACKING_PLANT</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_LEATHER_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_LEATHER</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -6043,11 +6043,11 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_BEADMAKER_WORKSHOP</BuildingType>
+					<BuildingType>BUILDING_BEADMAKERS_WORKSHOP</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_BEAD_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_BEADS</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -6057,7 +6057,7 @@
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_BASKETWEAVER</BuildingType>
+					<BuildingType>BUILDING_BASKETMAKER</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -6069,19 +6069,19 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_BASKETY_WORKSHOP</BuildingType>
+					<BuildingType>BUILDING_BASKET_MAKERS_WORKSHOP</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_BASKETY_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_BASKETS</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
+					<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+					<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
@@ -6258,7 +6258,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_OXEN_FARM</BuildingType>
+					<BuildingType>BUILDING_FARM_ANIMAL_OXEN</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -6286,7 +6286,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_INCAN_TERRACE</BuildingType>
+					<BuildingType>BUILDING_TERRACE</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -6298,11 +6298,11 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
+					<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
+					<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -6423,7 +6423,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CYROGENIC_PRISON</BuildingType>
+					<BuildingType>BUILDING_CRYOGENIC_PRISON</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -6463,11 +6463,11 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_BANDITS_HIDEOUT</BuildingType>
+					<BuildingType>BUILDING_THIEVES_HIDEOUT</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_POACHER_CAMP</BuildingType>
+					<BuildingType>BUILDING_POACHERS_CAMP</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -6559,7 +6559,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_LAB</BuildingType>
+					<BuildingType>BUILDING_ALCHEMISTS_LAB</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -6567,7 +6567,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_RUSSIAN_RESEARCH_INSTITUTE</BuildingType>
+					<BuildingType>BUILDING_RESEARCH_INSTITUTE</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -6575,7 +6575,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_FRENCH_SALON</BuildingType>
+					<BuildingType>BUILDING_SALON</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -6671,11 +6671,11 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_HEALERHUT</BuildingType>
+					<BuildingType>BUILDING_HEALERS_HUT</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_DOCTOR</BuildingType>
+					<BuildingType>BUILDING_DOCTORS_OFFICE</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -6695,11 +6695,11 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
+					<BuildingType>BUILDING_SURGEONS_OFFICE</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+					<BuildingType>BUILDING_MEDICAL_CLINIC</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -6707,17 +6707,17 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<BuildingType>BUILDING_HIGH_TECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_HEALERHUT</BuildingType>
+					<BuildingType>BUILDING_HEALERS_HUT</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_DOCTOR</BuildingType>
+					<BuildingType>BUILDING_DOCTORS_OFFICE</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -6729,11 +6729,11 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
+					<BuildingType>BUILDING_SURGEONS_OFFICE</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+					<BuildingType>BUILDING_MEDICAL_CLINIC</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -6990,7 +6990,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CUSTOM_HOUSE</BuildingType>
+					<BuildingType>BUILDING_CUSTOMS_OFFICE</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -7086,23 +7086,23 @@
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_HELLENIC_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_HELLENIC_GYMNASIA</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_ZOROASTRIAN_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_ZOROASTRIAN_SHRINE</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_EGYPT_MYTH_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_TEMPLE_OF_CHONS</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_MESOAMERICAN_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_CALMACEC</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_NATURE_CIRCLE_OF_POWER</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -7110,11 +7110,11 @@
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_AN</BuildingType>
+					<BuildingType>BUILDING_TEMPLE_OF_AN</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_MORMON_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_LDS_MISSIONARY_TRAINING_CENTRE</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -7122,7 +7122,7 @@
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_INVOCATION_HUT</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -7223,7 +7223,7 @@
 			</CommerceModifiers>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_DICTATOR_MONUMENT</BuildingType>
+					<BuildingType>BUILDING_MONUMENT_OF_THE_DICTATOR</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>

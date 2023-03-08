@@ -521,7 +521,7 @@
 				<BuildType>BUILD_SUBURBS</BuildType>
 			</Builds>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_BUFFALO_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_BUFFALO</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
 			<ObsoleteTech>TECH_LOGISTICS</ObsoleteTech>
@@ -690,8 +690,8 @@
 				<BuildType>BUILD_SUBURBS</BuildType>
 			</Builds>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MULE_TRAINER</BuildingType>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_DONKEY</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
 			<ObsoleteTech>TECH_LOGISTICS</ObsoleteTech>
@@ -868,7 +868,7 @@
 				<BuildType>BUILD_SUBURBS</BuildType>
 			</Builds>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_ELEPHANT_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_ELEPHANT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
 			<ObsoleteTech>TECH_LOGISTICS</ObsoleteTech>
@@ -1041,7 +1041,7 @@
 				<BuildType>BUILD_SUBURBS</BuildType>
 			</Builds>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_LLAMA_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_LLAMA</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
 			<ObsoleteTech>TECH_LOGISTICS</ObsoleteTech>
@@ -1214,7 +1214,7 @@
 				<BuildType>BUILD_SUBURBS</BuildType>
 			</Builds>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CAMEL_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_CAMEL</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
 			<ObsoleteTech>TECH_LOGISTICS</ObsoleteTech>
@@ -1915,7 +1915,7 @@
 				<BuildType>BUILD_JUMPLANE</BuildType>
 			</Builds>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_ANDROID_FACTORY</BuildingType>
+				<BuildingType>BUILDING_FACTORY_ANDROIDS</BuildingType>
 				<BuildingType>BUILDING_NANOTECH_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_PERSONAL_ROBOTS</PrereqTech>
@@ -2856,7 +2856,7 @@
 			<StateReligion>RELIGION_VOODOO</StateReligion>
 			<PrereqReligion>RELIGION_VOODOO</PrereqReligion>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_VOODOO_MONASTERY</BuildingType>
+				<BuildingType>BUILDING_HOUNFOR</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>250</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>

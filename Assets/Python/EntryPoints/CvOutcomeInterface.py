@@ -19,20 +19,20 @@ def doRemoveWVSlavery(argsList):
 	if not player.isAlive():
 		return
 
-	iWVSlavery = GC.getInfoTypeForString("BUILDING_WV_SLAVERY")
+	iWVSlavery = GC.getInfoTypeForString("BUILDING_WORLDVIEW_SLAVERY")
 
 	if iWVSlavery > -1:
 
 		iSlaveMarket = GC.getInfoTypeForString("BUILDING_SLAVE_MARKET")
 		aiSlaveBuildings = [
-			GC.getInfoTypeForString("BUILDING_SLAVERY"),
-			GC.getInfoTypeForString("BUILDING_SLAVERY_BAD_ZORO_I"),
-			GC.getInfoTypeForString("BUILDING_SLAVERY_BAD_ZORO_II"),
+			GC.getInfoTypeForString("BUILDING_WORLDVIEW_SLAVERY_ACTIVE"),
+			GC.getInfoTypeForString("BUILDING_WORLDVIEW_SLAVERY_ZOROASTRIANISM_I"),
+			GC.getInfoTypeForString("BUILDING_WORLDVIEW_SLAVERY_ZOROASTRIANISM_II"),
 			GC.getInfoTypeForString("BUILDING_SLAVE_COMPOUND"),
 			GC.getInfoTypeForString("BUILDING_SLAVE_COMPOUND_MILITARY_SUPPORT"),
 			GC.getInfoTypeForString("BUILDING_SLAVE_COMPOUND_ENTERTAINMENT"),
 			GC.getInfoTypeForString("BUILDING_SLAVE_COMPOUND_FOOD"),
-			GC.getInfoTypeForString("BUILDING_SLAVE_COMPOUND_PRODUCTION"),
+			GC.getInfoTypeForString("BUILDING_SLAVE_COMPOUND_INDUSTRY"),
 			GC.getInfoTypeForString("BUILDING_SLAVE_COMPOUND_COMMERCE"),
 			GC.getInfoTypeForString("BUILDING_SLAVE_COMPOUND_SANITATION"),
 		]
@@ -135,7 +135,7 @@ def doRemoveWVCannibalism(argsList):
 		print "[INFO] doRemoveWVCannibalism(CyUnit) where CyUnit is None"
 		return # False call
 
-	iType = GC.getInfoTypeForString("BUILDING_WV_CANNIBALISM")
+	iType = GC.getInfoTypeForString("BUILDING_WORLDVIEW_CANNIBALISM")
 	if iType > -1:
 		iPlayer = CyUnit.getOwner()
 		CyPlayer = GC.getPlayer(iPlayer)
@@ -143,7 +143,7 @@ def doRemoveWVCannibalism(argsList):
 		if CyCity is None:
 			print "[INFO] doRemoveWVCannibalism(args) happened for a player with no cities"
 		else:
-			iType0 = GC.getInfoTypeForString("BUILDING_CANNIBALISM")
+			iType0 = GC.getInfoTypeForString("BUILDING_WORLDVIEW_CANNIBALISM_ACTIVE")
 			for CyCity in CyPlayer.cities():
 				CyCity.setNumRealBuilding(iType, 0)
 				if iType0 > -1:
@@ -159,10 +159,10 @@ def doRemoveWVHumanSacrifice(argsList):
 	if CyUnit == None:
 		return # False call
 
-	iWVSacrifice = GC.getInfoTypeForString("BUILDING_WV_HUMAN_SACRIFICE")
+	iWVSacrifice = GC.getInfoTypeForString("BUILDING_WORLDVIEW_HUMAN_SACRIFICE")
 	if iWVSacrifice > -1:
-		iAltar = GC.getInfoTypeForString("BUILDING_HUMAN_SACRIFICE_ALTAR")
-		iToken = GC.getInfoTypeForString("BUILDING_HUMAN_SACRIFICE")
+		iAltar = GC.getInfoTypeForString("BUILDING_ALTAR_FOR_HUMAN_SACRIFICE")
+		iToken = GC.getInfoTypeForString("BUILDING_WORLDVIEW_HUMAN_SACRIFICE_ACTIVE")
 		CyPlayer = GC.getPlayer(CyUnit.getOwner())
 
 		for CyCity in CyPlayer.cities():

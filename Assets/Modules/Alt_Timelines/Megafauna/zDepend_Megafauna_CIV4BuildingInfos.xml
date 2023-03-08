@@ -4,56 +4,56 @@
 		<BuildingInfo>
 			<Type>BUILDING_CARAVAN_POST</Type>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_DEER_TRAINER</BuildingType>
-				<BuildingType>BUILDING_GIRAFFE_TRAINER</BuildingType>
-				<BuildingType>BUILDING_MAMMOTH_TRAINER</BuildingType>
-				<BuildingType>BUILDING_ZEBRA_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_DEER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_GIRAFFE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_MAMMOTH</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_ZEBRA</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHARIOT_WORKSHOP</Type>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_ZEBRA_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_ZEBRA</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLO_FIELD</Type>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_DEER_TRAINER</BuildingType>
-				<BuildingType>BUILDING_GIRAFFE_TRAINER</BuildingType>
-				<BuildingType>BUILDING_MAMMOTH_TRAINER</BuildingType>
-				<BuildingType>BUILDING_ZEBRA_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_DEER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_GIRAFFE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_MAMMOTH</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_ZEBRA</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SHEARING_BARN</Type>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MAMMOTH_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_MAMMOTH</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STABLE</Type>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MAMMOTH_TRAINER</BuildingType>
-				<BuildingType>BUILDING_RHINO_TRAINER</BuildingType>
-				<BuildingType>BUILDING_ZEBRA_TRAINER</BuildingType>
-				<BuildingType>BUILDING_BISON_TRAINER</BuildingType>
-				<BuildingType>BUILDING_DEER_TRAINER</BuildingType>
-				<BuildingType>BUILDING_GIRAFFE_TRAINER</BuildingType>
-				<BuildingType>BUILDING_BEAR_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_MAMMOTH</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_RHINOCEROS</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_ZEBRA</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_BISON</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_DEER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_GIRAFFE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_BEAR</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CARCASS_PROVIDER</Type>
+			<Type>BUILDING_RESOURCES_CARCASS</Type>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MAMMOTH_HERD</BuildingType>
-				<BuildingType>BUILDING_ZEBRA_HERD</BuildingType>
+				<BuildingType>BUILDING_HERD_MAMMOTH</BuildingType>
+				<BuildingType>BUILDING_HERD_ZEBRA</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_IVORY_PROVIDER</Type>
+			<Type>BUILDING_RESOURCES_IVORY</Type>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MAMMOTH_HERD</BuildingType>
+				<BuildingType>BUILDING_HERD_MAMMOTH</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 	</BuildingInfos>

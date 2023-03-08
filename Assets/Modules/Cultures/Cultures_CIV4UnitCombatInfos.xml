@@ -1642,7 +1642,7 @@
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_CULTURE_PHILISTINE</Type>
 			<Description>TXT_KEY_UNITCOMBAT_CULTURE_PHILISTINE</Description>
-			<CultureType>BONUS_PHILISTINE</CultureType>
+			<CultureType>BONUS_PHILISTINES</CultureType>
 			<Button>Art/categories/culture_newcultures.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
