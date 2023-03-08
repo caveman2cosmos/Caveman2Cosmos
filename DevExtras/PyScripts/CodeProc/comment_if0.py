@@ -1,3 +1,15 @@
+### MANUAL ###
+#
+# The script comments out #if 0 blocks. 
+# 
+# It supports #else. Blocks with #elif are not commented (there are none in C2C).
+#
+# Requirements: XiTools CppCrawler 0.1-alpha1 ( https://github.com/klara-zielinska/xitools.py.cppcrawler )
+#
+# Remark: The script can be run from Visual Studio: Debug > Execute File in Python Interactive.
+
+
+
 ### PARAMETERS ###
 
 includedSources = ["*.h", "*.cpp"]
