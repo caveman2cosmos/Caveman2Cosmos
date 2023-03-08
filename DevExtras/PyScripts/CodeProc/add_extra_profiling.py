@@ -57,7 +57,7 @@ from xitools.cppcrawler import *
 __  = f"(?:{Syntax.commentRe}|\\s)" # used in regular expressions to match code considered a white space in C++
 ___ = f"{__}*+"                     # like above but many
 
-crawler = CppCrawler(r"..\..\..\Sources", backupDir="Backup", encoding="utf-8-sig")
+crawler = CppCrawler(r"..\..\..\Sources", backupDir="..\..\Backup", encoding="utf-8-sig")
 sources = crawler.loadSourceFiles(includedFiles)
 excludedFiles =  [path.lower() for path in excludedFiles] + ["fprofiler.h"]
 
