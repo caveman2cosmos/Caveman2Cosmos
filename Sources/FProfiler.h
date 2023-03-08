@@ -149,14 +149,14 @@ private:
 	else\
 		{IFPCancelSample(&sample__linkage1);IFPEndSample(&sample__linkage2,true);}
 
-#if 0
-#define PROFILE_DEFINE_MULTI(name)\
+//#if 0
+//#define PROFILE_DEFINE_MULTI(name)\
 	static ProfileSample sample__##name##(#name);
-#define PROFILE_BEGIN_MULTI(name)\
+//#define PROFILE_BEGIN_MULTI(name)\
 	IFPBeginSample(&sample__##name##);
-#define PROFILE_END_MULTI(name)\
+//#define PROFILE_END_MULTI(name)\
 	IFPEndSample(&sample__##name##);
-#endif
+//#endif
 
 #define PROFILE_FUNC()\
 	static ProfileSample sample(__FUNCTION__);\

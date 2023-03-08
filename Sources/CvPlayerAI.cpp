@@ -1540,92 +1540,92 @@ void CvPlayerAI::AI_doCentralizedProduction()
 	return;
 	//}
 
-#if 0 // Disabled to stop static analysis from triggering [11/12/2019 billw]
-	CvCity* pLoopCity;
-	int iLoop;
-	int iI;
-	// Determine number of cities player can use building wonders currently
-	int iMaxNumWonderCities = 1 + getNumCities() / 5;
-	bool bIndustrious = (getMaxPlayerBuildingProductionModifier() > 0);
-	bool bAtWar = GET_TEAM(getTeam()).isAtWar();
-
-	if (bIndustrious)
-	{
-		iMaxNumWonderCities += 1;
-	}
-
-	// Danger?
-	// Power?
-	// Research?
-
-	if (bAtWar)
-	{
-		int iWarCapRatio = GET_TEAM(getTeam()).AI_getWarSuccessCapitulationRatio();
-		if (iWarCapRatio < -90)
-		{
-			iMaxNumWonderCities = 0;
-		}
-		else
-		{
-			if (iWarCapRatio < 30)
-			{
-				iMaxNumWonderCities -= 1;
-			}
-			if (iWarCapRatio < -50)
-			{
-				iMaxNumWonderCities /= 2;
-			}
-		}
-	}
-
-	if (isMinorCiv() && (GET_TEAM(getTeam()).getHasMetCivCount(false) > 1))
-	{
-		iMaxNumWonderCities /= 2;
-	}
-
-	iMaxNumWonderCities = std::min(iMaxNumWonderCities, getNumCities());
-
-	// Gather city statistics
-	// Could rank cities based on gold, production here, could be O(n) instead of O(n^2)
-	int iWorldWonderCities = 0;
-	int iLimitedWonderCities = 0;
-	int iNumDangerCities = 0;
-	foreach_(const CvCity * pLoopCity, cities())
-	{
-		if (pLoopCity->isProductionBuilding())
-		{
-			if (isLimitedWonder(pLoopCity->getProductionBuilding()))
-			{
-				iLimitedWonderCities++;
-
-				if (isWorldWonder(pLoopCity->getProductionBuilding()))
-				{
-					iWorldWonderCities++;
-				}
-			}
-		}
-
-		if (pLoopCity->isProductionProject())
-		{
-			if (isLimitedProject(pLoopCity->getProductionProject()))
-			{
-				iLimitedWonderCities++;
-				if (isWorldProject(pLoopCity->getProductionProject()))
-				{
-					iWorldWonderCities++;
-				}
-			}
-		}
-	}
-
-	// Check for any projects to build
-	for (iI = 0; iI < GC.getNumProjectInfos(); iI++)
-	{
-
-	}
-
-	// Check for any national/team wonders to build
-#endif
+//#if 0 // Disabled to stop static analysis from triggering [11/12/2019 billw]
+//	CvCity* pLoopCity;
+//	int iLoop;
+//	int iI;
+//	// Determine number of cities player can use building wonders currently
+//	int iMaxNumWonderCities = 1 + getNumCities() / 5;
+//	bool bIndustrious = (getMaxPlayerBuildingProductionModifier() > 0);
+//	bool bAtWar = GET_TEAM(getTeam()).isAtWar();
+//
+//	if (bIndustrious)
+//	{
+//		iMaxNumWonderCities += 1;
+//	}
+//
+//	// Danger?
+//	// Power?
+//	// Research?
+//
+//	if (bAtWar)
+//	{
+//		int iWarCapRatio = GET_TEAM(getTeam()).AI_getWarSuccessCapitulationRatio();
+//		if (iWarCapRatio < -90)
+//		{
+//			iMaxNumWonderCities = 0;
+//		}
+//		else
+//		{
+//			if (iWarCapRatio < 30)
+//			{
+//				iMaxNumWonderCities -= 1;
+//			}
+//			if (iWarCapRatio < -50)
+//			{
+//				iMaxNumWonderCities /= 2;
+//			}
+//		}
+//	}
+//
+//	if (isMinorCiv() && (GET_TEAM(getTeam()).getHasMetCivCount(false) > 1))
+//	{
+//		iMaxNumWonderCities /= 2;
+//	}
+//
+//	iMaxNumWonderCities = std::min(iMaxNumWonderCities, getNumCities());
+//
+//	// Gather city statistics
+//	// Could rank cities based on gold, production here, could be O(n) instead of O(n^2)
+//	int iWorldWonderCities = 0;
+//	int iLimitedWonderCities = 0;
+//	int iNumDangerCities = 0;
+//	foreach_(const CvCity * pLoopCity, cities())
+//	{
+//		if (pLoopCity->isProductionBuilding())
+//		{
+//			if (isLimitedWonder(pLoopCity->getProductionBuilding()))
+//			{
+//				iLimitedWonderCities++;
+//
+//				if (isWorldWonder(pLoopCity->getProductionBuilding()))
+//				{
+//					iWorldWonderCities++;
+//				}
+//			}
+//		}
+//
+//		if (pLoopCity->isProductionProject())
+//		{
+//			if (isLimitedProject(pLoopCity->getProductionProject()))
+//			{
+//				iLimitedWonderCities++;
+//				if (isWorldProject(pLoopCity->getProductionProject()))
+//				{
+//					iWorldWonderCities++;
+//				}
+//			}
+//		}
+//	}
+//
+//	// Check for any projects to build
+//	for (iI = 0; iI < GC.getNumProjectInfos(); iI++)
+//	{
+//
+//	}
+//
+//	// Check for any national/team wonders to build
+//#endif
 }
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD					   END												  */
@@ -17286,29 +17286,29 @@ void CvPlayerAI::AI_doCivics()
 		int iFoodDiffDivisor = std::abs(iFoodPerTurn - 1) + 5;
 		int iHappyDivisor = std::max(1, -iCityHappy + 1) + 4;
 
-#if 0
-		//	We Always count at least 3 food per turn on any city we evaluate at all, and want to
-		//	evaluate any that are near suplus.  This is to promote civic stability, since small
-		//	health changes are likely in any civic switch and we don't want them to move a city
-		//	from not counting at all to counting a lot
-		if (iFoodPerTurn > -2)
-		{
-			if (iCityHappy >= 0)
-			{
-				//	We look at the food difference without trade yields because otherwise civic switches that change the trade
-				//	yield can wildly distort the value of growth.
-				iCityValue = (std::min(3, iCityHappy + 1) * iCurrentFoodToGrow) / std::max(3, iFoodPerTurn - pLoopCity->getTradeYield(YIELD_FOOD));
-				if (gPlayerLogLevel > 1)
-				{
-					logBBAI("Player %d (%S) city %S growth value %d",
-							getID(),
-							getCivilizationDescription(0),
-							pLoopCity->getName().c_str(),
-							iCityValue);
-				}
-			}
-		}
-#else
+//#if 0
+//		//	We Always count at least 3 food per turn on any city we evaluate at all, and want to
+//		//	evaluate any that are near suplus.  This is to promote civic stability, since small
+//		//	health changes are likely in any civic switch and we don't want them to move a city
+//		//	from not counting at all to counting a lot
+//		if (iFoodPerTurn > -2)
+//		{
+//			if (iCityHappy >= 0)
+//			{
+//				//	We look at the food difference without trade yields because otherwise civic switches that change the trade
+//				//	yield can wildly distort the value of growth.
+//				iCityValue = (std::min(3, iCityHappy + 1) * iCurrentFoodToGrow) / std::max(3, iFoodPerTurn - pLoopCity->getTradeYield(YIELD_FOOD));
+//				if (gPlayerLogLevel > 1)
+//				{
+//					logBBAI("Player %d (%S) city %S growth value %d",
+//							getID(),
+//							getCivilizationDescription(0),
+//							pLoopCity->getName().c_str(),
+//							iCityValue);
+//				}
+//			}
+//		}
+//#else
 		iCityValue = (iCityValue * 10) / (iFoodDiffDivisor + iHappyDivisor);
 		if (gPlayerLogLevel > 1)
 		{
@@ -17318,7 +17318,7 @@ void CvPlayerAI::AI_doCivics()
 					pLoopCity->getName().c_str(),
 					iCityValue);
 		}
-#endif
+//#endif
 
 		m_iCityGrowthValueBase += iCityValue;
 	}
