@@ -1,3 +1,20 @@
+### DESCRIPTION ###
+#
+# The script adds funcExtraProfileMacro at the beginning of methods and functions that contain a loop or a call
+# of an iterating function, and are not already profiled.
+#
+# The iterating functions are functions containing "foreach" in the name - case-insensitive.
+#
+# The script can be run from Visual Studio: Debug > Execute File in Python Interactive.
+#
+# Requirements:
+# * XiTools CppCrawler 0.1-alpha1 ( https://github.com/klara-zielinska/xitools.py.cppcrawler )
+# * run DevExtras\setup.ps1
+#
+###
+
+
+
 ### PARAMETERS ###
 
 funcExtraProfileMacro = "PROFILE_EXTRA_FUNC"  # name of the macro to be included in profiled methods
@@ -11,7 +28,8 @@ excludedFiles = [
     "logging.h", "logging.cpp"
     ]   
 
-excludedProts = [ ]  # prototypes of methods not to be profiled
+excludedProts = [ ]  # prototypes of methods not to be profiled - these have to be in the base prototype normal form
+                     # described in the Syntax.makeBaseProtRe() documentation of CppCrawler
 
 
 
