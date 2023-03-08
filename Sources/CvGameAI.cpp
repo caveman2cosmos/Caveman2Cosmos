@@ -104,7 +104,7 @@ int CvGameAI::AI_combatValue(const UnitTypes eUnit) const
 	}
 	//  disabled this, need to test this function properly, just get a better handle on Size matters sizing
 	//  strongly suspect that the call evaluated size matters able units to be at default strength -1, and not at default strength
-	//if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+	//if (GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 	//{
 	//	iValue = CvUnit::applySMRank(iValue, GC.getUnitInfo(eUnit).getSMRankTotal() - 15, GC.getSIZE_MATTERS_MOST_MULTIPLIER());
 	//}

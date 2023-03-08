@@ -29,7 +29,7 @@ class CvForeignAdvisor:
 		screen = self.getScreen()
 		if screen.isActive():
 			return
-		self.bRandomPers				 = GAME.isOption(GameOptionTypes.GAMEOPTION_RANDOM_PERSONALITIES)
+		self.bRandomPers				 = GAME.isOption(GameOptionTypes.GAMEOPTION_AI_RANDOM_PERSONALITIES)
 		self.bNoTechTrade = bNoTechTrade = GAME.isOption(GameOptionTypes.GAMEOPTION_NO_TECH_TRADING)
 		# Cache Bonus categories
 		BONUSCLASS_CULTURE = GC.getInfoTypeForString("BONUSCLASS_CULTURE")

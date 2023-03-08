@@ -291,8 +291,6 @@ public:
 	void changeCutLosersCounter(int iChange);
 	int getHighToLowCounter() const;
 	void changeHighToLowCounter(int iChange);
-	int getIncreasingDifficultyCounter() const;
-	void changeIncreasingDifficultyCounter(int iChange);
 
 	void averageHandicaps();
 
@@ -412,7 +410,6 @@ protected:
 	int m_iCurrentVoteID;
 	int m_iCutLosersCounter;
 	int m_iHighToLowCounter;
-	int m_iIncreasingDifficultyCounter;
 	int m_iMercyRuleCounter;
 
 	bool starshipLaunched[MAX_TEAMS]; 				//Ordered by team ID (both)

@@ -63,7 +63,6 @@ void CyGameCoreUtilsPythonInterface()
 
 	python::def("isCardinalDirection", isCardinalDirection,"bool (DirectionTypes eDirection)");
 
-	python::def("getTechScore", getTechScore, "int (int /*TechTypes*/ eTech)");
 	python::def("getWonderScore", getWonderScore, "int (int /*BuildingTypes*/ eWonder)");
 
 	python::def("intSqrt", cyIntSqrt64, "int64_t (uint64_t iValue)");

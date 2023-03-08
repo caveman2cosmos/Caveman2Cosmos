@@ -509,11 +509,6 @@ def giveTechs(toPlayer, fromPlayer):
 						iMin = iCostX
 				iMinCostly = iMin
 
-	# Reset tech score, removing techs does not reduce tech score...
-	iTemp = toPlayer.getTechScore()
-	if iTemp:
-		toPlayer.changeTechScore(-iTemp)
-
 	# Simplify costly tech list
 	bestTechs = ()
 	for i in xrange(iNumCostly):

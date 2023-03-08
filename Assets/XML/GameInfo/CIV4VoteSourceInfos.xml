@@ -29,7 +29,7 @@
 		</VoteSourceInfo>
 		<VoteSourceInfo>
 			<Type>DIPLOVOTE_CVIENNA</Type>
-			<Description>TXT_KEY_BUILDING_CONGVIENNA</Description>
+			<Description>TXT_KEY_BUILDING_CONGRESS_OF_VIENNA</Description>
 			<PopupText>TXT_KEY_POPUP_CHAIR_ELECTION</PopupText>
 			<SecretaryGeneralText>TXT_KEY_VOTE_CONGVIENNA_CHAIR</SecretaryGeneralText>
 			<iVoteInterval>5</iVoteInterval>

@@ -345,7 +345,7 @@ bool CvSelectionGroup::showMoves() const
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		const CvPlayer& pPlayer = GET_PLAYER((PlayerTypes)iI);
-		if (pPlayer.isAlive() && pPlayer.isHuman())
+		if (pPlayer.isAlive() && pPlayer.isHumanPlayer())
 		{
 			const CvUnit* pHeadUnit = getHeadUnit();
 			if (pHeadUnit && (pHeadUnit->isEnemy(pPlayer.getTeam()) ? pPlayer.isOption(PLAYEROPTION_SHOW_ENEMY_MOVES) : pPlayer.isOption(PLAYEROPTION_SHOW_FRIENDLY_MOVES)))
@@ -1140,7 +1140,7 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 			}
 			case MISSION_GREAT_COMMANDER:
 			{
-				if (GC.getGame().isOption(GAMEOPTION_GREAT_COMMANDERS) && pLoopUnit->getUnitInfo().isGreatGeneral() && !pLoopUnit->isCommander())
+				if (GC.getGame().isOption(GAMEOPTION_UNIT_GREAT_COMMANDERS) && pLoopUnit->getUnitInfo().isGreatGeneral() && !pLoopUnit->isCommander())
 				{
 					return true;
 				}
@@ -1218,7 +1218,7 @@ bool CvSelectionGroup::startMission()
 	}
 	else
 	{
-		FAssertMsg(GET_PLAYER(getOwner()).isTurnActive() || GET_PLAYER(getOwner()).isHuman(), "It's expected that either the turn is active for this player or the player is human");
+		FAssertMsg(GET_PLAYER(getOwner()).isTurnActive() || GET_PLAYER(getOwner()).isHumanPlayer(), "It's expected that either the turn is active for this player or the player is human");
 
 		switch (headMissionQueueNode()->m_data.eMissionType)
 		{
@@ -2716,7 +2716,7 @@ bool CvSelectionGroup::canDoInterfaceModeAt(InterfaceModeTypes eInterfaceMode, C
 
 bool CvSelectionGroup::isHuman() const
 {
-	return (getOwner() != NO_PLAYER) ? GET_PLAYER(getOwner()).isHuman() : true;
+	return (getOwner() != NO_PLAYER) ? GET_PLAYER(getOwner()).isHumanPlayer() : true;
 }
 
 bool CvSelectionGroup::isBusy() const
@@ -2822,7 +2822,7 @@ bool CvSelectionGroup::hasCargo() const
 //Call for volume when you want the total cargo volume held by the group
 int CvSelectionGroup::getCargo(bool bVolume) const
 {
-	if (bVolume && GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (bVolume && GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 	{
 		return algo::accumulate(units() | transformed(CvUnit::fn::SMgetCargo()), 0);
 	}
@@ -4043,7 +4043,7 @@ void CvSelectionGroup::setTransportUnit(CvUnit* pTransportUnit, CvSelectionGroup
 
 		// if there is space, but not enough to fit whole group, then split us, and set on the new group
 		//Definitely only applicable in mechanism to non-sm
-		if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+		if (!GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 		{
 			if (iCargoSpaceAvailable < getNumUnits())
 			{
@@ -4091,7 +4091,7 @@ void CvSelectionGroup::setTransportUnit(CvUnit* pTransportUnit, CvSelectionGroup
 			FAssertMsg(pLoopUnit->getTransportUnit() != pTransportUnit, "Unit is already changed");
 
 			// if there is room, load the unit
-			if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+			if (GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 			{
 				if (pTransportUnit->cargoSpaceAvailable(pLoopUnit->getSpecialUnitType(), pLoopUnit->getDomainType()) >= pLoopUnit->SMCargoVolume())
 				{
@@ -4147,7 +4147,7 @@ void CvSelectionGroup::setRemoteTransportUnit(CvUnit* pTransportUnit)
 		}
 
 		// if there is space, but not enough to fit whole group, then split us, and set on the new group
-		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+		if (GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 		{
 			if (iCargoSpaceAvailable < getNumUnitCargoVolumeTotal())
 			{
@@ -4192,7 +4192,7 @@ void CvSelectionGroup::setRemoteTransportUnit(CvUnit* pTransportUnit)
 				if (pLoopUnit->getTransportUnit() != pTransportUnit && pLoopUnit->getOwner() == pTransportUnit->getOwner())
 				{
 					bool bSpaceAvailable = false;
-					if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+					if (GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 					{
 						bSpaceAvailable = pTransportUnit->cargoSpaceAvailable(pLoopUnit->getSpecialUnitType(), pLoopUnit->getDomainType()) > pLoopUnit->SMCargoVolume();
 					}
@@ -6025,7 +6025,7 @@ int CvSelectionGroup::countSeeInvisibleActive(UnitAITypes eUnitAI, InvisibleType
 	{
 		if (pLoopUnit->AI_getUnitAIType() == eUnitAI)
 		{
-			if (GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
+			if (GC.getGame().isOption(GAMEOPTION_COMBAT_HIDE_SEEK))
 			{
 				if (pLoopUnit->visibilityIntensityTotal(eInvisibleType) > 0)
 				{

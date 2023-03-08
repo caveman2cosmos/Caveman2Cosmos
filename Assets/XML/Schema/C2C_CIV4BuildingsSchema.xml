@@ -111,15 +111,6 @@
 	<ElementType name="UnitCombatProdModifiers" content="eltOnly">
 		<element type="UnitCombatProdModifier" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="UnitCombatOngoingTraining" content="textOnly"/>
-	<ElementType name="iUnitCombatOngoingTrainingDuration" content="textOnly" dt:type="int"/>
-	<ElementType name="UnitCombatOngoingTrainingDuration" content="eltOnly">
-		<element type="UnitCombatOngoingTraining" minOccurs="0" maxOccurs="*"/>
-		<element type="iUnitCombatOngoingTrainingDuration" minOccurs="0"/>
-	</ElementType>
-	<ElementType name="UnitCombatOngoingTrainingDurations" content="eltOnly">
-		<element type="UnitCombatOngoingTrainingDuration" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
 	<ElementType name="iBonusAidModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="BonusAidModifier" content="eltOnly">
 		<element type="BonusType" minOccurs="0" maxOccurs="*"/>
@@ -1034,7 +1025,6 @@
 		<element type="UnitCombatRepelAgainstModifiers" minOccurs="0"/>
 		<element type="UnitCombatDefenseAgainstModifiers" minOccurs="0"/>
 		<element type="UnitCombatProdModifiers" minOccurs="0"/>
-		<element type="UnitCombatOngoingTrainingDurations" minOccurs="0"/>
 		<element type="BonusAidModifiers" minOccurs="0"/>
 		<element type="AfflictionOutbreakLevelChanges" minOccurs="0"/>
 		<element type="TechOutbreakLevelChanges" minOccurs="0"/>

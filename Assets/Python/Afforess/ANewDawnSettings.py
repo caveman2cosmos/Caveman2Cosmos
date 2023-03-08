@@ -58,8 +58,6 @@ class ANewDawnSettings:
 				ANewDawnOpt.setRealisiticDiplomacy(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_BATTLEFIELD_PROMOTIONS):
 				ANewDawnOpt.setBattlefieldPromotions(data3)
-			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_NO_STORMS):
-				ANewDawnOpt.setNoStorms(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_IMPROVED_XP):
 				ANewDawnOpt.setImprovedXP(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_RELIGION_DECAY):
@@ -77,7 +75,7 @@ class ANewDawnSettings:
 		#Change Difficulty
 		elif protocol == DIFFICULTY_EVENT_ID:
 			pPlayer = GC.getPlayer(data1)
-			pPlayer.setHandicap(data2)
+			pPlayer.setHandicap(data2, True)
 		#Change Color
 		elif protocol == COLOR_EVENT_ID:
 			pPlayer = GC.getPlayer(data1)
@@ -116,9 +114,16 @@ def changedCanNotClaimOcean(option, value):
 	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_CANNOT_CLAIM_OCEAN, value)
 	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_CANNOT_CLAIM_OCEAN), int(value), 0)
 
-def changedShowCivTraits(option, value):
-	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_SHOW_TRAITS_FLAG, value)
-	CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderOptionTypes.MODDEROPTION_SHOW_TRAITS_FLAG), int(value), 0)
+def changedShowCivTraits(option, value, bAllHumans):
+	if (bAllHumans):
+		for iPlayer in range(GC.getMAX_PC_PLAYERS()):
+			CyPlayer = GC.getPlayer(iPlayer)
+			if CyPlayer.isHuman():
+				CyPlayer.setModderOption(ModderOptionTypes.MODDEROPTION_SHOW_TRAITS_FLAG, value)
+				CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, iPlayer, int(ModderOptionTypes.MODDEROPTION_SHOW_TRAITS_FLAG), int(value), 0)
+	else:
+		GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_SHOW_TRAITS_FLAG, value)
+		CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderOptionTypes.MODDEROPTION_SHOW_TRAITS_FLAG), int(value), 0)
 
 def changedNoFriendlyPillaging(option, value):
 	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_NO_FRIENDLY_PILLAGING, value)
@@ -129,20 +134,12 @@ def changedEnableFlexibleDifficulty(option, value):
 	CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderOptionTypes.MODDEROPTION_FLEXIBLE_DIFFICULTY), int(value), 0)
 
 def changedFlexibleDifficultyMinimumDiff(option, value):
-	if value > 0:
-		GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_FLEXIBLE_DIFFICULTY_MIN_DIFFICULTY, value - 1)
-		CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderOptionTypes.MODDEROPTION_FLEXIBLE_DIFFICULTY_MIN_DIFFICULTY), int(value - 1), 0)
-	else:
-		GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_FLEXIBLE_DIFFICULTY_MIN_DIFFICULTY, -1)
-		CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderOptionTypes.MODDEROPTION_FLEXIBLE_DIFFICULTY_MIN_DIFFICULTY), int(-1), 0)
+	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_FLEXIBLE_DIFFICULTY_MIN_DIFFICULTY, value - 1)
+	CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderOptionTypes.MODDEROPTION_FLEXIBLE_DIFFICULTY_MIN_DIFFICULTY), int(value - 1), 0)
 
 def changedFlexibleDifficultyMaximumDiff(option, value):
-	if (value > 0):
-		GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_FLEXIBLE_DIFFICULTY_MAX_DIFFICULTY, value - 1)
-		CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderOptionTypes.MODDEROPTION_FLEXIBLE_DIFFICULTY_MAX_DIFFICULTY), int(value - 1), 0)
-	else:
-		GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_FLEXIBLE_DIFFICULTY_MAX_DIFFICULTY, -1)
-		CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderOptionTypes.MODDEROPTION_FLEXIBLE_DIFFICULTY_MAX_DIFFICULTY), int(-1), 0)
+	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_FLEXIBLE_DIFFICULTY_MAX_DIFFICULTY, value - 1)
+	CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderOptionTypes.MODDEROPTION_FLEXIBLE_DIFFICULTY_MAX_DIFFICULTY), int(value - 1), 0)
 
 def changedFlexibleDifficultyMinRank(option, value):
 	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_FLEXIBLE_DIFFICULTY_MIN_RANK, value)
@@ -184,10 +181,6 @@ def changedHideReplacedBuildings(option, value):
 	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_HIDE_REPLACED_BUILDINGS, value)
 	CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderOptionTypes.MODDEROPTION_HIDE_REPLACED_BUILDINGS), int(value), 0)
 
-def changedNoStorms(option, value):
-	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_NO_STORMS, value)
-	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_NO_STORMS), int(value), 0)
-
 def changedImprovedXP(option, value):
 	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_IMPROVED_XP, value)
 	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_IMPROVED_XP), int(value), 0)
@@ -209,9 +202,8 @@ def updateAliveCivsOption():
 	aliveCivsOption.setValues(descs)
 
 def changedCurrentDifficulty(option, value):
-	iDifficulty = value - 1
-	if (iDifficulty >= 0):
-		CyMessageControl().sendModNetMessage(DIFFICULTY_EVENT_ID, GC.getGame().getActivePlayer(), iDifficulty, 0, 0)
+	if (value > 0):
+		CyMessageControl().sendModNetMessage(DIFFICULTY_EVENT_ID, GC.getGame().getActivePlayer(), value - 1, 0, 0)
 
 def changedUseLandmarkNames(option, value):
 	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_USE_LANDMARK_NAMES, value)
@@ -280,11 +272,11 @@ def setXMLOptionsfromIniFile():
 	changedFlexibleDifficultyTurnIncrements(ANewDawnOpt, ANewDawnOpt.getFlexibleDifficultyTurnIncrements())
 	changedMaxBombardDefense(ANewDawnOpt, ANewDawnOpt.getMaxBombardDefense())
 	changedCanNotClaimOcean(ANewDawnOpt, ANewDawnOpt.isCanNotClaimOcean())
-	changedShowCivTraits(ANewDawnOpt, ANewDawnOpt.isShowCivTraits())
+	changedShowCivTraits(ANewDawnOpt, ANewDawnOpt.isShowCivTraits(), GC.getGame().isHotSeat())
 	changedNoFriendlyPillaging(ANewDawnOpt, ANewDawnOpt.isNoFriendlyPillaging())
 	changedEnableFlexibleDifficulty(ANewDawnOpt, ANewDawnOpt.isEnableFlexibleDifficulty())
-	changedFlexibleDifficultyMinimumDiff(ANewDawnOpt, ANewDawnOpt.getFlexibleDifficultyMinimumDiff() - 1)
-	changedFlexibleDifficultyMaximumDiff(ANewDawnOpt, ANewDawnOpt.getFlexibleDifficultyMaximumDiff() - 1)
+	changedFlexibleDifficultyMinimumDiff(ANewDawnOpt, ANewDawnOpt.getFlexibleDifficultyMinimumDiff())
+	changedFlexibleDifficultyMaximumDiff(ANewDawnOpt, ANewDawnOpt.getFlexibleDifficultyMaximumDiff())
 	changedFlexibleDifficultyMinRank(ANewDawnOpt, ANewDawnOpt.getFlexibleDifficultyMinRank())
 	changedFlexibleDifficultyMaxRank(ANewDawnOpt, ANewDawnOpt.getFlexibleDifficultyMaxRank())
 	changedDepletionMod(ANewDawnOpt, ANewDawnOpt.isDepletionMod())
@@ -295,7 +287,6 @@ def setXMLOptionsfromIniFile():
 	changedShowRevCivics(ANewDawnOpt, ANewDawnOpt.isShowRevCivics())
 	changedBattlefieldPromotions(ANewDawnOpt, ANewDawnOpt.isBattlefieldPromotions())
 	changedHideReplacedBuildings(ANewDawnOpt, ANewDawnOpt.isHideReplacedBuildings())
-	changedNoStorms(ANewDawnOpt, ANewDawnOpt.isNoStorms())
 	changedImprovedXP(ANewDawnOpt, ANewDawnOpt.isImprovedXP())
 	changedUseLandmarkNames(ANewDawnOpt, ANewDawnOpt.isUseLandmarkNames())
 	changedHideUnavailableBuilds(ANewDawnOpt, ANewDawnOpt.isHideUnavailableBuilds())

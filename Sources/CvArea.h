@@ -108,14 +108,6 @@ public:
 	int getMaintenanceModifier(PlayerTypes eIndex) const;
 	void changeMaintenanceModifier(PlayerTypes eIndex, int iChange);
 
-	int getHomeAreaMaintenanceModifier(PlayerTypes eIndex) const;
-	void changeHomeAreaMaintenanceModifier(PlayerTypes eIndex, int iChange);
-	void setHomeAreaMaintenanceModifier(PlayerTypes eIndex, int iNewValue);
-
-	int getOtherAreaMaintenanceModifier(PlayerTypes eIndex) const;
-	void changeOtherAreaMaintenanceModifier(PlayerTypes eIndex, int iChange);
-	void setOtherAreaMaintenanceModifier(PlayerTypes eIndex, int iNewValue);
-
 	int getTotalAreaMaintenanceModifier(PlayerTypes ePlayer) const;
 
 	bool isHomeArea(PlayerTypes eIndex) const;
@@ -195,8 +187,6 @@ protected:
 	int* m_aiPower;
 	int* m_aiBestFoundValue;
 	int* m_aiMaintenanceModifier;
-	int* m_aiHomeAreaMaintenanceModifier;
-	int* m_aiOtherAreaMaintenanceModifier;
 	int* m_aiNumRevealedTiles;
 	int* m_aiCleanPowerCount;
 	int* m_aiBorderObstacleCount;

@@ -8,14 +8,14 @@
 		<Russian>Òðàäèöèè ëó÷íèêîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TRADITION_ARCHERY_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_EFFECT_TRADITION_ARCHERY</Tag>
 		<English>Effect - Tradition - Archery</English>
 		<French>Effect (Tradition - Archerie)</French>
 		<German>Effekt (Tradition - Bogenschießen)</German>
 		<Russian>Øêîëà ëó÷íèêîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TRADITION_ARCHERY_EFFECT_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_EFFECT_TRADITION_ARCHERY_PEDIA</Tag>
 		<English>Archers are improved.</English>
 		<French>Les Archers sont améliorés.</French>
 		<German>Bogenschützen sind verbessert.</German>
@@ -29,21 +29,21 @@
 		<Russian>В вашей стране поощряется стрельба из лука.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TRADITION_ASTHETIC_APPRECIATION</Tag>
+		<Tag>TXT_KEY_BUILDING_TRADITION_AESTHETIC_APPRECIATION</Tag>
 		<English>Tradition - Aesthetic Appreciation</English>
 		<French>Tradition (Appréciation esthétique)</French>
 		<German>Tradition - Ästhetische Würdigung</German>
 		<Russian>Ýñòåòè÷åñêèå òðàäèöèè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TRADITION_ASTHETIC_APPRECIATION_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_EFFECT_TRADITION_AESTHETIC_APPRECIATION</Tag>
 		<English>Effect - Tradition - Aesthetic Appreciation</English>
 		<French>Effet - Tradition (Appréciation esthétique)</French>
 		<German>Effekt - Tradition - Ästhetische Würdigung</German>
 		<Russian>Ýñòåòè÷åñêîå âîñïèòàíèå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TRADITION_ASTHETIC_APPRECIATION_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_TRADITION_AESTHETIC_APPRECIATION_PEDIA</Tag>
 		<English>Aesthetic appreciation is commonly referred to as the appreciation of beauty and excellence, defined by Peterson and Seligman as the ability to find, recognize, and take pleasure in goodness in the physical and social worlds.</English>
 		<German>Ästhetische Würdigung ist die allgemeine Wertschätzung von Schönheit und Perfektion. Peterson und Seligman definieren sie als Fähigkeit, Ästhetik zu finden, zu erkennen und sich an ihr zu erfreuen, sowohl im physischen wie im sozialen Umfeld.</German>
 		<Russian>Эстетическое воспитание обычно упоминается как оценка красоты и совершенства, определяемая Петерсоном и Селигманом как способность находить, распознавать и получать удовольствие от добра в физическом и социальном мирах.</Russian>
@@ -56,7 +56,7 @@
 		<Russian>Òðóäîâûå òðàäèöèè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TRADITION_WORK_ETHIC_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_EFFECT_TRADITION_WORK_ETHIC</Tag>
 		<English>Effect - Tradition - Work Ethic</English>
 		<French>Effet (Tradition - Éthique du Travail)</French>
 		<German>Effekt - Tradition - Arbeitsmoral</German>

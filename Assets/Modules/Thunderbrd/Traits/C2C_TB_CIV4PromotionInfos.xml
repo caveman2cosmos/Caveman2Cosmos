@@ -109,7 +109,7 @@
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 			<Button>Art/Buttons/Promotions/PromotionAggressive.dds</Button>
