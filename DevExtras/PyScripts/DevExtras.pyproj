@@ -25,7 +25,7 @@
     <Folder Include="Profiling\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CodeProc\comment_if0s.py" />
+    <Compile Include="CodeProc\comment_if0.py" />
     <Compile Include="Profiling\aggregate_c2c_profilelog.py" />
     <Compile Include="settings.py" />
   </ItemGroup>
