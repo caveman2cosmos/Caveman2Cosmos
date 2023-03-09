@@ -109,6 +109,7 @@ typedef enum
 	SAVE_VALUE_TYPE_CLASS_INT_ARRAY,
 	SAVE_VALUE_TYPE_CLASS_BOOL_ARRAY,
 	SAVE_VALUE_TYPE_CLASS_ENUM_ARRAY,
+	SAVE_VALUE_TYPE_CLASS_UNSIGNED_LONG_LONG_ARRAY,
 } SaveValueType;
 
 #define SAVE_VALUE_ANY	((SaveValueType)-1)
@@ -157,6 +158,7 @@ public:
 	void		WriteClassEnum(const char* name, int& idHint, int& idSeq, RemappedClassType classType, short value);
 	//	The following are for arrays whose index is a class enum value
 	void		WriteClassArray(const char* name, int& idHint, int& idSeq, RemappedClassType classType, int count, const int values[]);
+	void		WriteClassArray(const char* name, int& idHint, int& idSeq, RemappedClassType classType, int count, const uint64_t values[]);
 	void		WriteClassArray(const char* name, int& idHint, int& idSeq, RemappedClassType classType, int count, const bool values[]);
 	//	Array whose values are class enum entities
 	void		WriteClassEnumArray(const char* name, int& idHint, int& idSeq, RemappedClassType classType, int count, short values[]);
@@ -214,6 +216,7 @@ public:
 	void ReadClassEnum(const char* name, RemappedClassType classType, int16_t* value, bool allowMissing = false);
 	//	The following are for arrays whose index is a class enum value
 	void ReadClassArray(const char* name, RemappedClassType classType, int count, int values[], bool allowMissing = false, bool allowRawArray = false);
+	void ReadClassArray(const char* name, RemappedClassType classType, int count, uint64_t values[]);
 	void ReadClassArray(const char* name, RemappedClassType classType, int count, bool values[], bool allowMissing = false, bool allowRawArray = false);
 	//	Array whose values are class enum entities
 	void ReadClassEnumArray(const char* name, RemappedClassType classType, int count, int16_t values[], bool allowMissing = false);

@@ -54,9 +54,12 @@ public:
 
 	CvGameObjectCity* getGameObject() { return &m_GameObject; }
 	const CvGameObjectCity* getGameObject() const { return &m_GameObject; }
+
 	int getNumWorkers() const { return m_workers.size(); }
 	std::vector<int> getWorkers() const { return m_workers; }
 	void setWorkerHave(const int iUnitID, const bool bNewValue);
+
+	void processTech(const TechTypes eTech, const int iChange);
 
 private:
 	bool canHurryInternal(const HurryTypes eHurry) const;
@@ -1771,14 +1774,12 @@ protected:
 
 	int** m_ppaaiTechSpecialistHappinessTypes;
 	int* m_paiTechSpecialistHappiness;
-	int* m_paiTechHappiness;
 	int m_iExtraTechSpecialistHappiness;
-	int m_iExtraTechHappiness;
+	int m_iExtraBuildingHappinessFromTech;
+	int m_iExtraBuildingHealthFromTech;
 	int** m_ppaaiTechSpecialistHealthTypes;
 	int* m_paiTechSpecialistHealth;
-	int* m_paiTechHealth;
 	int m_iExtraTechSpecialistHealth;
-	int m_iExtraTechHealth;
 	int** m_ppaaiLocalSpecialistExtraYield;
 	int** m_ppaaiLocalSpecialistExtraCommerce;
 	int m_iPrioritySpecialist;
@@ -1868,6 +1869,8 @@ protected:
 	OrderQueue m_orderQueue;
 
 	std::vector< std::pair < float, float> > m_kWallOverridePoints;
+	std::vector< std::pair<TechTypes, int> > m_buildingHappinessFromTech;
+	std::vector< std::pair<TechTypes, int> > m_buildingHealthFromTech;
 
 	std::vector<EventTypes> m_aEventsOccured;
 	std::vector<BuildingYieldChange> m_aBuildingYieldChange;
@@ -1937,32 +1940,31 @@ public:
 	int localCitizenCaptureResistance() const;
 	int getTechSpecialistHappiness(TechTypes eTech) const;
 	int getExtraTechHappinessTotal() const;
-	int getExtraTechUnHappinessTotal() const;
 	int getTechSpecialistHealthTypes(TechTypes eTech, SpecialistTypes eSpecialist) const;
 	int getTechSpecialistHealth(TechTypes eTech) const;
 	int getExtraTechHealthTotal() const;
-	int getExtraTechUnHealthTotal() const;
 	int getLocalSpecialistExtraYield(SpecialistTypes eSpecialist, YieldTypes eYield) const;
 	int getLocalSpecialistExtraCommerce(SpecialistTypes eSpecialist, CommerceTypes eCommerce) const;
+
 private:
 	void changeTechSpecialistHappinessTypes(TechTypes eTech, SpecialistTypes eSpecialist, int iChange);
 	void changeTechSpecialistHappiness(TechTypes eTech, int iChange);
 	void updateExtraTechSpecialistHappiness();
-	int getExtraTechSpecialistHappiness() const;
-	int getTechHappiness(TechTypes eTech) const;
-	void changeTechHappiness(TechTypes eTech, int iChange);
+
+	int getBuildingHappinessFromTech(const TechTypes eTech) const;
+	void changeBuildingHappinessFromTech(const TechTypes eTech, const int iChange);
+	int getBuildingHealthFromTech(const TechTypes eTech) const;
+	void changeBuildingHealthFromTech(const TechTypes eTech, const int iChange);
+
 	void updateExtraTechHappiness();
-	int getExtraTechHappiness() const;
 	void changeTechSpecialistHealthTypes(TechTypes eTech, SpecialistTypes eSpecialist, int iChange);
 	void changeTechSpecialistHealth(TechTypes eTech, int iChange);
 	void updateExtraTechSpecialistHealth();
 	int getExtraTechSpecialistHealth() const;
 	int getTechHealth(TechTypes eTech) const;
-	void changeTechHealth(TechTypes eTech, int iChange);
-	void updateExtraTechHealth();
-	int getExtraTechHealth() const;
 	void changeLocalSpecialistExtraYield(SpecialistTypes eSpecialist, YieldTypes eYield, int iChange);
 	void changeLocalSpecialistExtraCommerce(SpecialistTypes eSpecialist, CommerceTypes eCommerce, int iChange);
+
 public:
 	int specialistCount(SpecialistTypes eSpecialist) const;
 	int specialistYield(SpecialistTypes eSpecialist, YieldTypes eYield) const;
@@ -1994,7 +1996,7 @@ public:
 	int getExtraLocalCaptureProbabilityModifier() const;
 	int getExtraLocalCaptureResistanceModifier() const;
 
-	void updateTechHappinessandHealth();
+	void updateSpecialistHappinessHealthFromTech();
 
 	int getExtraLocalDynamicDefense() const;
 	void setExtraLocalDynamicDefense(int iValue);
@@ -2102,7 +2104,6 @@ public:
 		DECLARE_MAP_FUNCTOR(CvCity, void, doTurn);
 		DECLARE_MAP_FUNCTOR(CvCity, void, clearCanTrainCache);
 		DECLARE_MAP_FUNCTOR(CvCity, void, checkReligiousDisablingAllBuildings);
-		DECLARE_MAP_FUNCTOR(CvCity, void, updateTechHappinessandHealth);
 		DECLARE_MAP_FUNCTOR(CvCity, void, updateExtraSpecialistYield);
 		DECLARE_MAP_FUNCTOR(CvCity, void, updateExtraSpecialistCommerce);
 		DECLARE_MAP_FUNCTOR(CvCity, void, updateReligionCommerce);
@@ -2146,6 +2147,7 @@ public:
 		DECLARE_MAP_FUNCTOR_2(CvCity, void, changeFreeAreaBuildingCount, BuildingTypes, int);
 		DECLARE_MAP_FUNCTOR_2(CvCity, void, changeFreeSpecialistCount, SpecialistTypes, int);
 		DECLARE_MAP_FUNCTOR_2(CvCity, void, processVoteSourceBonus, VoteSourceTypes, bool);
+		DECLARE_MAP_FUNCTOR_2(CvCity, void, processTech, const TechTypes, const int);
 
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, bool, isCapital);
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, bool, isNoUnhappiness);

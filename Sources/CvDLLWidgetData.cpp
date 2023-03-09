@@ -3656,6 +3656,8 @@ void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, 
 	// make sure its empty to start
 	szBuffer.clear();
 
+	szBuffer.append(gDLL->getText("TXT_KEY_SETTINGS_DIFFICULTY_PLAYER", GC.getHandicapInfo(GET_PLAYER((PlayerTypes)widgetDataStruct.m_iData1).getHandicapType()).getTextKeyWide()));
+	szBuffer.append(NEWLINE);
 	if (kPlayer.isMinorCiv())
 	{
 		szBuffer.assign(gDLL->getText("TXT_KEY_REV_CONTACT_MINOR", kPlayer.getCivilizationDescription()));
@@ -4474,9 +4476,8 @@ void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, 
 		}
 	}
 
-
 	// Show score info instead if we are trying to contact ourselves...
-	if (eActivePlayer == ePlayer || gDLL->ctrlKey() && gDLL->getChtLvl() > 0)
+	if (eActivePlayer == ePlayer || gDLL->ctrlKey() && GC.getGame().isDebugMode())
 	{
 		parseScoreHelp(widgetDataStruct, szBuffer);
 		return;

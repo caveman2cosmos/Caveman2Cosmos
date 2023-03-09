@@ -219,7 +219,7 @@ bool isBeforeUnitCycle(const CvUnit* pFirstUnit, const CvUnit* pSecondUnit)
 
 
 
-int getTechScore(TechTypes eTech)
+int getScoreValueOfTech(TechTypes eTech)
 {
 	return 1 + GC.getTechInfo(eTech).getEra();
 }

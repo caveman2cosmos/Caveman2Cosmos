@@ -210,7 +210,7 @@ DllExport CvUnit* getUnit(IDInfo unit);
 
 bool isBeforeUnitCycle(const CvUnit* pFirstUnit, const CvUnit* pSecondUnit);
 
-int getTechScore(TechTypes eTech);
+int getScoreValueOfTech(TechTypes eTech);
 int getWonderScore(BuildingTypes eWonder);
 
 ImprovementTypes finalImprovementUpgrade(ImprovementTypes eImprovement, int iCount = 0);

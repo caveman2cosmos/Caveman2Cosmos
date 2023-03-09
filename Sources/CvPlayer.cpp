@@ -215,6 +215,7 @@ m_cachedBonusCount(NULL)
 	//TB Traits end
 
 	m_bDisableHuman = false;
+	m_bUnitUpkeepDirty = true;
 
 	m_iStabilityIndex = 500;
 	m_iStabilityIndexAverage = 500;
@@ -230,6 +231,7 @@ m_cachedBonusCount(NULL)
 	CvWString m_szCivAdj;
 
 	m_bDoNotBotherStatus = NO_PLAYER;
+
 
 	// Free Tech Popup Fix
 	m_iChoosingFreeTech = 0;
@@ -443,14 +445,6 @@ void CvPlayer::initMore(PlayerTypes eID, LeaderHeadTypes ePersonality, bool bSet
 	{
 		setCivics((CivicOptionTypes)iI, (CivicTypes)GC.getCivilizationInfo(getCivilizationType()).getCivilizationInitialCivics(iI));
 	}
-
-	for (int iI = 0; iI < GC.getNumUnitInfos(); ++iI)
-	{
-		if (GC.getUnitInfo((UnitTypes)iI).isFound())
-		{
-			setUnitExtraCost((UnitTypes)iI, getNewCityProductionValue());
-		}
-	}
 }
 
 
@@ -463,6 +457,10 @@ void CvPlayer::init(PlayerTypes eID)
 
 	if (GC.getInitCore().getSlotStatus(getID()) == SS_TAKEN || GC.getInitCore().getSlotStatus(getID()) == SS_COMPUTER)
 	{
+		if (eID == BARBARIAN_PLAYER)
+		{
+			GC.getGame().averageHandicaps();
+		}
 		initMore(eID, getLeaderType());
 
 		updateMaxAnarchyTurns();
@@ -597,7 +595,7 @@ void CvPlayer::resetPlotAndCityData()
 		plotX->setFoundValue(getID(), 0);
 
 		CvCity* city = plotX->getPlotCity();
-		if (city != NULL)
+		if (city)
 		{
 			city->setCulture(getID(), 0, false, false);
 			city->changeNumRevolts(getID(), -city->getNumRevolts(getID()));
@@ -807,6 +805,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iUpkeepModifier = 0;
 	m_iLevelExperienceModifier = 0;
 	m_iExtraHealth = 0;
+	m_iCivicHealth = 0;
 	m_iBuildingGoodHealth = 0;
 	m_iBuildingBadHealth = 0;
 	m_iExtraHappiness = 0;
@@ -921,6 +920,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iChoosingFreeTech = 0;
 
 	m_bDisableHuman = false;
+	m_bUnitUpkeepDirty = true;
 
 	m_iStabilityIndex = 500;
 	m_iStabilityIndexAverage = 500;
@@ -1366,8 +1366,8 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 		FAssertMsg(m_ppiSpecialistYieldPercentChanges==NULL, "about to leak memory, CvPlayer::m_ppiSpecialistYieldPercentChanges");
 		m_ppiSpecialistCommercePercentChanges = new int*[GC.getNumSpecialistInfos()];
 		m_ppiSpecialistYieldPercentChanges = new int*[GC.getNumSpecialistInfos()];
-	//Team Project (6)
 		m_paiEraAdvanceFreeSpecialistCount = new int[GC.getNumSpecialistInfos()];
+
 		for (iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 		{
 			m_ppiSpecialistCommercePercentChanges[iI] = new int[NUM_COMMERCE_TYPES];
@@ -1380,7 +1380,6 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 			{
 				m_ppiSpecialistYieldPercentChanges[iI][iJ] = 0;
 			}
-	//Team Project (6)
 			m_paiEraAdvanceFreeSpecialistCount[iI] = 0;
 		}
 
@@ -10030,7 +10029,7 @@ void CvPlayer::changeBaseFreeUnitUpkeepCivilian(const int iChange)
 	if (iChange != 0)
 	{
 		m_iBaseFreeUnitUpkeepCivilian += iChange;
-		calcFinalUnitUpkeep();
+		m_bUnitUpkeepDirty = true;
 	}
 }
 
@@ -10044,7 +10043,7 @@ void CvPlayer::changeBaseFreeUnitUpkeepMilitary(const int iChange)
 	if (iChange != 0)
 	{
 		m_iBaseFreeUnitUpkeepMilitary += iChange;
-		calcFinalUnitUpkeep();
+		m_bUnitUpkeepDirty = true;
 	}
 }
 
@@ -10058,7 +10057,7 @@ void CvPlayer::changeFreeUnitUpkeepCivilianPopPercent(const int iChange)
 	if (iChange != 0)
 	{
 		m_iFreeUnitUpkeepCivilianPopPercent += iChange;
-		calcFinalUnitUpkeep();
+		m_bUnitUpkeepDirty = true;
 	}
 }
 
@@ -10072,7 +10071,7 @@ void CvPlayer::changeFreeUnitUpkeepMilitaryPopPercent(const int iChange)
 	if (iChange != 0)
 	{
 		m_iFreeUnitUpkeepMilitaryPopPercent += iChange;
-		calcFinalUnitUpkeep();
+		m_bUnitUpkeepDirty = true;
 	}
 }
 
@@ -10100,7 +10099,7 @@ void CvPlayer::changeCivilianUnitUpkeepMod(const int iChange)
 	if (iChange != 0)
 	{
 		m_iCivilianUnitUpkeepMod += iChange;
-		calcFinalUnitUpkeep();
+		m_bUnitUpkeepDirty = true;
 	}
 }
 void CvPlayer::changeMilitaryUnitUpkeepMod(const int iChange)
@@ -10108,7 +10107,7 @@ void CvPlayer::changeMilitaryUnitUpkeepMod(const int iChange)
 	if (iChange != 0)
 	{
 		m_iMilitaryUnitUpkeepMod += iChange;
-		calcFinalUnitUpkeep();
+		m_bUnitUpkeepDirty = true;
 	}
 }
 
@@ -10122,7 +10121,7 @@ void CvPlayer::changeUnitUpkeep(const int iChange, const bool bMilitary)
 			m_iUnitUpkeepMilitary100 += iChange;
 		else m_iUnitUpkeepCivilian100 += iChange;
 
-		calcFinalUnitUpkeep();
+		m_bUnitUpkeepDirty = true;
 	}
 }
 
@@ -10187,10 +10186,10 @@ int64_t CvPlayer::getUnitUpkeepNet(const bool bMilitary, const int iUnitUpkeep) 
 
 int64_t CvPlayer::getFinalUnitUpkeep() const
 {
-	return m_iFinalUnitUpkeep;
+	return m_bUnitUpkeepDirty ? calcFinalUnitUpkeep() : m_iFinalUnitUpkeep;
 }
 
-int64_t CvPlayer::calcFinalUnitUpkeep(const bool bReal)
+int64_t CvPlayer::calcFinalUnitUpkeep(const bool bReal) const
 {
 	if (isNPC())
 	{
@@ -10203,7 +10202,18 @@ int64_t CvPlayer::calcFinalUnitUpkeep(const bool bReal)
 
 	if (iCalc > 0)
 	{
-		applyUnitUpkeepHandicap(iCalc);
+		// Difficulty adjustment
+		iCalc *= GC.getHandicapInfo(getHandicapType()).getUnitUpkeepPercent();
+		iCalc /= 100;
+
+		if (!isHumanPlayer())
+		{
+			iCalc *= GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIUnitUpkeepPercent();
+			iCalc /= 100;
+
+			iCalc *= std::max(0, 100 + GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIPerEraModifier() * getCurrentEra());
+			iCalc /= 100;
+		}
 	}
 	if (iCalc < 0)
 	{
@@ -10213,6 +10223,7 @@ int64_t CvPlayer::calcFinalUnitUpkeep(const bool bReal)
 	if (bReal)
 	{
 		m_iFinalUnitUpkeep = iCalc;
+		m_bUnitUpkeepDirty = false;
 
 		// Refresh relevant UI
 		if (getID() == GC.getGame().getActivePlayer())
@@ -10221,22 +10232,6 @@ int64_t CvPlayer::calcFinalUnitUpkeep(const bool bReal)
 		}
 	}
 	return iCalc;
-}
-
-void CvPlayer::applyUnitUpkeepHandicap(int64_t& iUpkeep)
-{
-	// Difficulty adjustment
-	iUpkeep *= GC.getHandicapInfo(getHandicapType()).getUnitUpkeepPercent();
-	iUpkeep /= 100;
-
-	if (!isHumanPlayer())
-	{
-		iUpkeep *= GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIUnitUpkeepPercent();
-		iUpkeep /= 100;
-
-		iUpkeep *= std::max(0, 100 + GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIPerEraModifier() * getCurrentEra());
-		iUpkeep /= 100;
-	}
 }
 
 int CvPlayer::getFinalUnitUpkeepChange(const int iExtra, const bool bMilitary)
@@ -10604,6 +10599,29 @@ void CvPlayer::changeLevelExperienceModifier(int iChange)
 }
 
 
+int CvPlayer::getCivicHealth() const
+{
+	// AIAndy: Barbarians do not get player wide unhealthiness
+	if (isNPC() && m_iCivicHealth < 0)
+	{
+		return 0;
+	}
+	return m_iCivicHealth;
+}
+
+void CvPlayer::changeCivicHealth(const int iChange, const bool bLimited)
+{
+	if (iChange != 0)
+	{
+		m_iCivicHealth += iChange;
+
+		if (!bLimited)
+		{
+			AI_makeAssignWorkDirty();
+		}
+	}
+}
+
 int CvPlayer::getExtraHealth() const
 {
 	// AIAndy: Barbarians do not get player wide unhealthiness
@@ -10614,23 +10632,12 @@ int CvPlayer::getExtraHealth() const
 	return m_iExtraHealth;
 }
 
-
-void CvPlayer::changeExtraHealth(int iChange, bool bLimited)
+void CvPlayer::changeExtraHealth(int iChange)
 {
 	if (iChange != 0)
 	{
 		m_iExtraHealth += iChange;
-
-		//AIAndy: Barbarians do not get player wide unhealthiness
-		if (m_iExtraHealth < 0 && isNPC())
-		{
-			m_iExtraHealth = 0;
-		}
-
-		if (!bLimited)
-		{
-			AI_makeAssignWorkDirty();
-		}
+		AI_makeAssignWorkDirty();
 	}
 }
 
@@ -11454,7 +11461,7 @@ void CvPlayer::changeTechScore(int iChange)
 	if (iChange != 0)
 	{
 		m_iTechScore += iChange;
-		FASSERT_NOT_NEGATIVE(getTechScore());
+		FASSERT_NOT_NEGATIVE(m_iTechScore);
 
 		GC.getGame().setScoreDirty(true);
 
@@ -17924,24 +17931,6 @@ void CvPlayer::verifyGoldCommercePercent()
 	}
 }
 
-int CvPlayer::getCivicHealth() const
-{
-	int	iTotal = 0;
-
-	for(int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
-	{
-		const CivicTypes eCivic = getCivics((CivicOptionTypes)iI);
-
-		if ( eCivic != NO_CIVIC )
-		{
-			const CvCivicInfo& kCivic = GC.getCivicInfo(eCivic);
-
-			iTotal += kCivic.getExtraHealth();
-		}
-	}
-
-	return iTotal;
-}
 
 void CvPlayer::processCivics(const CivicTypes eCivic, const int iChange, const bool bLimited)
 {
@@ -18151,7 +18140,7 @@ void CvPlayer::processCivics(const CivicTypes eCivic, const int iChange, const b
 	changeTaxRateUnhappiness(kCivic.getTaxRateUnhappiness() * iChange);
 	changeHappyPerMilitaryUnit(kCivic.getHappyPerMilitaryUnit() * iChange,  bLimited);
 
-	changeExtraHealth(kCivic.getExtraHealth() * iChange,  bLimited);
+	changeCivicHealth(kCivic.getExtraHealth() * iChange,  bLimited);
 	changeNoUnhealthyPopulationCount(kCivic.isNoUnhealthyPopulation() * iChange, bLimited);
 	changeBuildingOnlyHealthyCount(kCivic.isBuildingOnlyHealthy() * iChange, bLimited);
 
@@ -18309,6 +18298,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iUpkeepModifier);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iLevelExperienceModifier);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iExtraHealth);
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iCivicHealth);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iBuildingGoodHealth);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iBuildingBadHealth);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iExtraHappiness);
@@ -19236,7 +19226,6 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iMilitaryUnitUpkeepMod);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iUnitUpkeepCivilian100);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iUnitUpkeepMilitary100);
-		WRAPPER_READ(wrapper, "CvPlayer", &m_iFinalUnitUpkeep);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iBaseFreeUnitUpkeepCivilian);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iBaseFreeUnitUpkeepMilitary);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iFreeUnitUpkeepCivilianPopPercent);
@@ -19621,6 +19610,7 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iUpkeepModifier);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iLevelExperienceModifier);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iExtraHealth);
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_iCivicHealth);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iBuildingGoodHealth);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iBuildingBadHealth);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iExtraHappiness);
@@ -20161,7 +20151,6 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iMilitaryUnitUpkeepMod);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iUnitUpkeepCivilian100);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iUnitUpkeepMilitary100);
-		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFinalUnitUpkeep);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iBaseFreeUnitUpkeepCivilian);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iBaseFreeUnitUpkeepMilitary);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFreeUnitUpkeepCivilianPopPercent);
@@ -26557,24 +26546,25 @@ void CvPlayer::changeNoCapitalUnhappiness(int iChange)
 {
 	if (iChange != 0)
 	{
+		const bool bWasTrue = isNoCapitalUnhappiness();
+
 		m_iNoCapitalUnhappiness += iChange;
-		CvCity* pCapitalCity = getCapitalCity();
 
-		if (pCapitalCity != NULL)
+		if (bWasTrue != isNoCapitalUnhappiness())
 		{
-			pCapitalCity->AI_setAssignWorkDirty(true);
+			CvCity* pCapitalCity = getCapitalCity();
 
-			if (pCapitalCity->getTeam() == GC.getGame().getActiveTeam())
+			if (pCapitalCity)
 			{
-				pCapitalCity->setInfoDirty(true);
+				pCapitalCity->AI_setAssignWorkDirty(true);
+
+				if (pCapitalCity->getTeam() == GC.getGame().getActiveTeam())
+				{
+					pCapitalCity->setInfoDirty(true);
+				}
 			}
 		}
 	}
-}
-
-int CvPlayer::getNoCapitalUnhappiness() const
-{
-	return m_iNoCapitalUnhappiness;
 }
 
 int CvPlayer::getFreeSpecialistCount(SpecialistTypes eIndex) const
@@ -27184,15 +27174,20 @@ void CvPlayer::setColor(PlayerColorTypes eColor)
 	setupGraphical();
 }
 
-void CvPlayer::setHandicap(int iNewVal)
+void CvPlayer::setHandicap(int iNewVal, bool bAdjustGameHandicap)
 {
 	FASSERT_BOUNDS(0, GC.getNumHandicapInfos(), iNewVal);
 
 	if (iNewVal != getHandicapType())
 	{
 		GC.getInitCore().setHandicap(getID(), (HandicapTypes)iNewVal);
+
+		if (bAdjustGameHandicap)
+		{
+			GC.getGame().averageHandicaps();
+		}
 		setMaintenanceDirty(true);
-		calcFinalUnitUpkeep();
+		m_bUnitUpkeepDirty = true;
 	}
 }
 
@@ -27686,6 +27681,7 @@ void CvPlayer::clearModifierTotals()
 	m_iUpkeepModifier = 0;
 	m_iLevelExperienceModifier = 0;
 	m_iExtraHealth = 0;
+	m_iCivicHealth = 0;
 	m_iBuildingGoodHealth = 0;
 	m_iBuildingBadHealth = 0;
 	m_iExtraHappiness = 0;
@@ -30149,13 +30145,6 @@ void CvPlayer::changeExtraNonStateReligionSpreadModifier(int iChange)
 	m_iExtraNonStateReligionSpreadModifier += iChange;
 }
 
-void CvPlayer::updateTechHappinessandHealth()
-{
-	PROFILE_FUNC();
-
-	for_each(cities(), CvCity::fn::updateTechHappinessandHealth());
-}
-
 void CvPlayer::checkReligiousDisablingAllBuildings()
 {
 	PROFILE_FUNC();
@@ -30563,4 +30552,30 @@ void CvPlayer::setCommandFieldPlot(bool bNewValue, CvPlot* aPlot)
 		m_commandFieldPlots.erase(itr);
 	}
 	else FErrorMsg("Vector element to remove was missing!");
+}
+
+
+void CvPlayer::processTech(const TechTypes eTech, const int iChange)
+{
+	const CvTechInfo& tech = GC.getTechInfo(eTech);
+
+	changeFeatureProductionModifier(tech.getFeatureProductionModifier() * iChange);
+	changeWorkerSpeedModifier(tech.getWorkerSpeedModifier() * iChange);
+	changeTradeRoutes(tech.getTradeRoutes() * iChange);
+	changeExtraHealth(tech.getHealth() * iChange);
+	changeExtraHappiness(tech.getHappiness() * iChange);
+	changeDistanceMaintenanceModifier(tech.getDistanceMaintenanceModifier() * iChange);
+	changeNumCitiesMaintenanceModifier(tech.getNumCitiesMaintenanceModifier() * iChange);
+	changeMaintenanceModifier(tech.getMaintenanceModifier() * iChange);
+	changeCoastalDistanceMaintenanceModifier(tech.getCoastalDistanceMaintenanceModifier() * iChange);
+	changeAssets(tech.getAssetValue() * iChange);
+	changeTechPower(tech.getPowerValue() * iChange);
+	changeTechScore(getScoreValueOfTech(eTech) * iChange);
+	changeTechInflation(tech.getInflationModifier() * iChange);
+
+	for (int i = 0; i < NUM_COMMERCE_TYPES; i++)
+	{
+		changeCommerceRateModifier(static_cast<CommerceTypes>(i), tech.getCommerceModifier(i) * iChange);
+	}
+	algo::for_each(cities(), CvCity::fn::processTech(eTech, iChange));
 }

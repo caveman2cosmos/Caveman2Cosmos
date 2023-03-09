@@ -20625,7 +20625,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit, bool
  */
 void CvGameTextMgr::setBuildingActualEffects(CvWStringBuffer &szBuffer, const CvWString& szStart, BuildingTypes eBuilding, const CvCity* pCity, bool bNewLine)
 {
-	if (NULL != pCity)
+	if (pCity)
 	{
 		bool bStarted = false;
 
@@ -24533,11 +24533,9 @@ void CvGameTextMgr::setProjectHelp(CvWStringBuffer &szBuffer, ProjectTypes eProj
 
 void CvGameTextMgr::setProcessHelp(CvWStringBuffer &szBuffer, ProcessTypes eProcess)
 {
-	int iI;
-
 	szBuffer.append(GC.getProcessInfo(eProcess).getDescription());
 
-	for (iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
+	for (int iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
 	{
 		if (GC.getProcessInfo(eProcess).getProductionToCommerceModifier(iI) != 0)
 		{
@@ -24549,364 +24547,377 @@ void CvGameTextMgr::setProcessHelp(CvWStringBuffer &szBuffer, ProcessTypes eProc
 
 void CvGameTextMgr::setBadHealthHelp(CvWStringBuffer &szBuffer, CvCity& city)
 {
-	FeatureTypes eFeature;
-	int iHealth;
-
-	if (city.badHealth() > 0)
+	const int iBadHealthTotal = city.badHealth();
+	if (iBadHealthTotal < 1)
 	{
-		iHealth = -(city.getFeatureBadHealth());
-		if (iHealth > 0)
-		{
-			eFeature = NO_FEATURE;
+		return;
+	}
+	int iSum = 0;
+	int iHealth = -(city.getFeatureBadHealth());
+	if (iHealth > 0)
+	{
+		iSum += iHealth;
+		FeatureTypes eFeature = NO_FEATURE;
 
-			foreach_(const CvPlot* pLoopPlot, city.plots(NUM_CITY_PLOTS))
+		foreach_(const CvPlot* pLoopPlot, city.plots(NUM_CITY_PLOTS))
+		{
+			if (pLoopPlot->getFeatureType() != NO_FEATURE
+			&& GC.getFeatureInfo(pLoopPlot->getFeatureType()).getHealthPercent() < 0)
 			{
-				if (pLoopPlot->getFeatureType() != NO_FEATURE
-				&& GC.getFeatureInfo(pLoopPlot->getFeatureType()).getHealthPercent() < 0)
+				if (eFeature == NO_FEATURE)
 				{
-					if (eFeature == NO_FEATURE)
-					{
-						eFeature = pLoopPlot->getFeatureType();
-					}
-					else if (eFeature != pLoopPlot->getFeatureType())
-					{
-						eFeature = NO_FEATURE;
-						break;
-					}
+					eFeature = pLoopPlot->getFeatureType();
+				}
+				else if (eFeature != pLoopPlot->getFeatureType())
+				{
+					eFeature = NO_FEATURE;
+					break;
 				}
 			}
-
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_FEAT_HEALTH", iHealth, ((eFeature == NO_FEATURE) ? L"TXT_KEY_MISC_FEATURES" : GC.getFeatureInfo(eFeature).getTextKeyWide())));
-			szBuffer.append(NEWLINE);
 		}
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_FEAT_HEALTH", iHealth, ((eFeature == NO_FEATURE) ? L"TXT_KEY_MISC_FEATURES" : GC.getFeatureInfo(eFeature).getTextKeyWide())));
+		szBuffer.append(NEWLINE);
+	}
 
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 06/19/09														*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-		iHealth = -(city.getImprovementBadHealth()) / 100;
-		const CvPlayer& kPlayer = GET_PLAYER(city.getOwner());
-		if (iHealth > 0)
+	iHealth = -city.getImprovementBadHealth() / 100;
+	const CvPlayer& kPlayer = GET_PLAYER(city.getOwner());
+	if (iHealth > 0)
+	{
+		iSum += iHealth;
+		ImprovementTypes eImprovement = NO_IMPROVEMENT;
+		int iTotalHealth;
+		int iBestHealth = 0;
+		for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
 		{
-			ImprovementTypes eImprovement = NO_IMPROVEMENT;
-			int iTotalHealth;
-			int iBestHealth = 0;
-			for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
-			{
-				iTotalHealth = 0;
+			iTotalHealth = 0;
 
-				if (GC.getImprovementInfo((ImprovementTypes)iI).getHealthPercent() < 0)
+			if (GC.getImprovementInfo((ImprovementTypes)iI).getHealthPercent() < 0)
+			{
+				foreach_(const CvPlot* pLoopPlot, city.plots())
 				{
-					foreach_(const CvPlot* pLoopPlot, city.plots())
+					if (pLoopPlot->getImprovementType() == iI)
 					{
-						if (pLoopPlot->getImprovementType() == iI)
+						iTotalHealth -= GC.getImprovementInfo((ImprovementTypes)iI).getHealthPercent();
+						for (int iK = 0; iK < GC.getNumCivicOptionInfos(); iK++)
 						{
-							iTotalHealth -= GC.getImprovementInfo((ImprovementTypes)iI).getHealthPercent();
-							for (int iK = 0; iK < GC.getNumCivicOptionInfos(); iK++)
+							if (kPlayer.getCivics((CivicOptionTypes)iK) != NO_CIVIC)
 							{
-								if (kPlayer.getCivics((CivicOptionTypes)iK) != NO_CIVIC)
-								{
-									iTotalHealth -= std::min(0, GC.getCivicInfo(kPlayer.getCivics((CivicOptionTypes)iK)).getImprovementHealthPercentChanges(iI)) / 100;
-								}
+								iTotalHealth -= std::min(0, GC.getCivicInfo(kPlayer.getCivics((CivicOptionTypes)iK)).getImprovementHealthPercentChanges(iI)) / 100;
 							}
 						}
 					}
 				}
-				if (iTotalHealth > iBestHealth)
-				{
-					eImprovement = (ImprovementTypes)iI;
-					iBestHealth = iTotalHealth;
-				}
 			}
-
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_IMPR_HEALTH", iHealth, ((eImprovement == NO_IMPROVEMENT) ? L"TXT_KEY_MISC_IMPROVEMENTS" : GC.getImprovementInfo(eImprovement).getTextKeyWide())));
-			szBuffer.append(NEWLINE);
-		}
-/************************************************************************************************/
-/* JOOYO_ADDON						  END													 */
-/************************************************************************************************/
-
-/************************************************************************************************/
-/* Specialists Enhancements, by Supercheese 10/9/09												   */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-		iHealth = -(city.getSpecialistBadHealth() / 100);
-		if (iHealth > 0)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_BAD_HEALTH_FROM_SPECIALISTS", iHealth));
-			szBuffer.append(NEWLINE);
-		}
-/************************************************************************************************/
-/* Specialists Enhancements						  END											  */
-/************************************************************************************************/
-
-		iHealth = city.getEspionageHealthCounter();
-		if (iHealth > 0)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HEALTH_FROM_ESPIONAGE", iHealth));
-			szBuffer.append(NEWLINE);
-		}
-
-		iHealth = -(city.getBonusBadHealth());
-		if (iHealth > 0)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HEALTH_FROM_BONUSES", iHealth));
-			szBuffer.append(NEWLINE);
-		}
-
-		iHealth = -(city.totalBadBuildingHealth());
-		if (iHealth > 0)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HEALTH_FROM_BUILDINGS", iHealth));
-			szBuffer.append(NEWLINE);
-		}
-
-		iHealth = -GET_PLAYER(city.getOwner()).getCivicHealth();
-		if (iHealth > 0)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_BAD_HEALTH_FROM_CIVICS", iHealth));
-			szBuffer.append(NEWLINE);
-		}
-		iHealth = -GET_PLAYER(city.getOwner()).getCivilizationHealth();
-
-		if (iHealth > 0)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HEALTH_FROM_CIV", iHealth));
-			szBuffer.append(NEWLINE);
-		}
-
-		//	Koshling - event health
-		iHealth = -GET_PLAYER(city.getOwner()).getExtraHealth() + GET_PLAYER(city.getOwner()).getCivicHealth();
-		if (iHealth > 0)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_BAD_HEALTH_FROM_EVENTS", iHealth));
-			szBuffer.append(NEWLINE);
-		}
-
-		iHealth = -city.getExtraHealth();
-		if (iHealth > 0)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_UNHEALTH_EXTRA", iHealth));
-			szBuffer.append(NEWLINE);
-		}
-
-		if ( GC.getGame().getHandicapType() != NO_HANDICAP )
-		{
-			iHealth = -(GC.getHandicapInfo(city.getHandicapType()).getHealthBonus());
-			if (iHealth > 0)
+			if (iTotalHealth > iBestHealth)
 			{
-				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HEALTH_FROM_HANDICAP", iHealth));
-				szBuffer.append(NEWLINE);
+				eImprovement = (ImprovementTypes)iI;
+				iBestHealth = iTotalHealth;
 			}
 		}
-
-		iHealth = city.unhealthyPopulation();
-		if (iHealth > 0)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HEALTH_FROM_POP", iHealth));
-			szBuffer.append(NEWLINE);
-		}
-
-		iHealth = -(GET_PLAYER(city.getOwner()).getWorldHealth());
-		if (iHealth > 0)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HEALTH_FROM_WORLD_PROJECT", iHealth));
-			szBuffer.append(NEWLINE);
-		}
-
-		iHealth = -(GET_PLAYER(city.getOwner()).getProjectHealth());
-		if (iHealth > 0)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HEALTH_FROM_PROJECT", iHealth));
-			szBuffer.append(NEWLINE);
-		}
-		iHealth = -city.calculateCorporationHealth();
-		if (iHealth > 0)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HEALTH_FROM_CORPORATION", iHealth));
-			szBuffer.append(NEWLINE);
-		}
-
-		iHealth = city.getExtraTechUnHealthTotal();
-		if (iHealth > 0)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_UNHEALTHY_TECH_SPECIALIST", iHealth));
-			szBuffer.append(NEWLINE);
-		}
-		szBuffer.append(L"-----------------------\n");
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_TOTAL_UNHEALTHY", city.badHealth()));
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_IMPR_HEALTH", iHealth, ((eImprovement == NO_IMPROVEMENT) ? L"TXT_KEY_MISC_IMPROVEMENTS" : GC.getImprovementInfo(eImprovement).getTextKeyWide())));
+		szBuffer.append(NEWLINE);
 	}
+
+	iHealth = -(city.getSpecialistBadHealth() / 100);
+	if (iHealth > 0)
+	{
+		iSum += iHealth;
+		szBuffer.append(gDLL->getText("TXT_KEY_BAD_HEALTH_FROM_SPECIALISTS", iHealth));
+		szBuffer.append(NEWLINE);
+	}
+
+	iHealth = city.getEspionageHealthCounter();
+	if (iHealth > 0)
+	{
+		iSum += iHealth;
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HEALTH_FROM_ESPIONAGE", iHealth));
+		szBuffer.append(NEWLINE);
+	}
+
+	iHealth = -(city.getBonusBadHealth());
+	if (iHealth > 0)
+	{
+		iSum += iHealth;
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HEALTH_FROM_BONUSES", iHealth));
+		szBuffer.append(NEWLINE);
+	}
+
+	iHealth = -(city.totalBadBuildingHealth());
+	if (iHealth > 0)
+	{
+		iSum += iHealth;
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HEALTH_FROM_BUILDINGS", iHealth));
+		szBuffer.append(NEWLINE);
+	}
+
+	iHealth = -GET_PLAYER(city.getOwner()).getCivicHealth();
+	if (iHealth > 0)
+	{
+		iSum += iHealth;
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_BAD_HEALTH_FROM_CIVICS", iHealth));
+		szBuffer.append(NEWLINE);
+	}
+	iHealth = -GET_PLAYER(city.getOwner()).getCivilizationHealth();
+
+	if (iHealth > 0)
+	{
+		iSum += iHealth;
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HEALTH_FROM_CIV", iHealth));
+		szBuffer.append(NEWLINE);
+	}
+
+	//	Koshling - event health
+	iHealth = -GET_PLAYER(city.getOwner()).getExtraHealth();
+	if (iHealth > 0)
+	{
+		iSum += iHealth;
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_BAD_HEALTH_FROM_EVENTS", iHealth));
+		szBuffer.append(NEWLINE);
+	}
+
+	iHealth = -city.getExtraHealth();
+	if (iHealth > 0)
+	{
+		iSum += iHealth;
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_UNHEALTH_EXTRA", iHealth));
+		szBuffer.append(NEWLINE);
+	}
+
+	if ( GC.getGame().getHandicapType() != NO_HANDICAP )
+	{
+		iHealth = -(GC.getHandicapInfo(city.getHandicapType()).getHealthBonus());
+		if (iHealth > 0)
+		{
+			iSum += iHealth;
+			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HEALTH_FROM_HANDICAP", iHealth));
+			szBuffer.append(NEWLINE);
+		}
+	}
+
+	iHealth = city.unhealthyPopulation();
+	if (iHealth > 0)
+	{
+		iSum += iHealth;
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HEALTH_FROM_POP", iHealth));
+		szBuffer.append(NEWLINE);
+	}
+
+	iHealth = -(GET_PLAYER(city.getOwner()).getWorldHealth());
+	if (iHealth > 0)
+	{
+		iSum += iHealth;
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HEALTH_FROM_WORLD_PROJECT", iHealth));
+		szBuffer.append(NEWLINE);
+	}
+
+	iHealth = -(GET_PLAYER(city.getOwner()).getProjectHealth());
+	if (iHealth > 0)
+	{
+		iSum += iHealth;
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HEALTH_FROM_PROJECT", iHealth));
+		szBuffer.append(NEWLINE);
+	}
+	iHealth = -city.calculateCorporationHealth();
+	if (iHealth > 0)
+	{
+		iSum += iHealth;
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HEALTH_FROM_CORPORATION", iHealth));
+		szBuffer.append(NEWLINE);
+	}
+
+	iHealth = -city.getExtraTechHealthTotal();
+	if (iHealth > 0)
+	{
+		iSum += iHealth;
+		szBuffer.append(gDLL->getText("TXT_KEY_UNHEALTHY_TECH_SPECIALIST", iHealth));
+		szBuffer.append(NEWLINE);
+	}
+	szBuffer.append(L"-----------------------\n");
+	szBuffer.append(gDLL->getText("TXT_KEY_MISC_TOTAL_UNHEALTHY", iBadHealthTotal));
+
+	FAssertMsg(iBadHealthTotal == iSum, CvString::format("Actual: %d; displayed: %d", iBadHealthTotal, iSum));
 }
 
 void CvGameTextMgr::setGoodHealthHelp(CvWStringBuffer &szBuffer, CvCity& city)
 {
-	FeatureTypes eFeature;
-	int iHealth;
-
-	if (city.goodHealth() > 0)
+	const int iGoodHealthTotal = city.goodHealth();
+	if (iGoodHealthTotal < 1)
 	{
-		iHealth = city.getFreshWaterGoodHealth();
-		if (iHealth > 0)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HEALTH_FROM_FRESH_WATER", iHealth));
-			szBuffer.append(NEWLINE);
-		}
+		return;
+	}
+	int iSum = 0;
+	int iHealth = city.getFreshWaterGoodHealth();
+	if (iHealth > 0)
+	{
+		iSum += iHealth;
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HEALTH_FROM_FRESH_WATER", iHealth));
+		szBuffer.append(NEWLINE);
+	}
 
-		iHealth = city.getFeatureGoodHealth();
-		if (iHealth > 0)
-		{
-			eFeature = NO_FEATURE;
+	iHealth = city.getFeatureGoodHealth();
+	if (iHealth > 0)
+	{
+		iSum += iHealth;
+		FeatureTypes eFeature = NO_FEATURE;
 
-			foreach_(const CvPlot* pLoopPlot, city.plots(NUM_CITY_PLOTS))
+		foreach_(const CvPlot* pLoopPlot, city.plots(NUM_CITY_PLOTS))
+		{
+			if (pLoopPlot->getFeatureType() != NO_FEATURE
+			&& GC.getFeatureInfo(pLoopPlot->getFeatureType()).getHealthPercent() > 0)
 			{
-				if (pLoopPlot->getFeatureType() != NO_FEATURE
-				&& GC.getFeatureInfo(pLoopPlot->getFeatureType()).getHealthPercent() > 0)
+				if (eFeature == NO_FEATURE)
 				{
-					if (eFeature == NO_FEATURE)
-					{
-						eFeature = pLoopPlot->getFeatureType();
-					}
-					else if (eFeature != pLoopPlot->getFeatureType())
-					{
-						eFeature = NO_FEATURE;
-						break;
-					}
+					eFeature = pLoopPlot->getFeatureType();
+				}
+				else if (eFeature != pLoopPlot->getFeatureType())
+				{
+					eFeature = NO_FEATURE;
+					break;
 				}
 			}
-
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_FEAT_GOOD_HEALTH", iHealth, ((eFeature == NO_FEATURE) ? L"TXT_KEY_MISC_FEATURES" : GC.getFeatureInfo(eFeature).getTextKeyWide())));
-			szBuffer.append(NEWLINE);
 		}
-		iHealth = city.getImprovementGoodHealth() / 100;
-		const CvPlayer& kPlayer = GET_PLAYER(city.getOwner());
-		if (iHealth > 0)
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_FEAT_GOOD_HEALTH", iHealth, ((eFeature == NO_FEATURE) ? L"TXT_KEY_MISC_FEATURES" : GC.getFeatureInfo(eFeature).getTextKeyWide())));
+		szBuffer.append(NEWLINE);
+	}
+	iHealth = city.getImprovementGoodHealth() / 100;
+	const CvPlayer& kPlayer = GET_PLAYER(city.getOwner());
+	if (iHealth > 0)
+	{
+		iSum += iHealth;
+		ImprovementTypes eImprovement = NO_IMPROVEMENT;
+		int iBestHealth = 0;
+		for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
 		{
-			ImprovementTypes eImprovement = NO_IMPROVEMENT;
-			int iTotalHealth;
-			int iBestHealth = 0;
-			for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
-			{
-				iTotalHealth = 0;
+			int iTotalHealth = 0;
 
-				if (GC.getImprovementInfo((ImprovementTypes)iI).getHealthPercent() > 0)
+			if (GC.getImprovementInfo((ImprovementTypes)iI).getHealthPercent() > 0)
+			{
+				foreach_(const CvPlot* pLoopPlot, city.plots())
 				{
-					foreach_(const CvPlot* pLoopPlot, city.plots())
+					if (pLoopPlot->getImprovementType() == iI)
 					{
-						if (pLoopPlot->getImprovementType() == iI)
+						iTotalHealth += GC.getImprovementInfo((ImprovementTypes)iI).getHealthPercent();
+						for (int iK = 0; iK < GC.getNumCivicOptionInfos(); iK++)
 						{
-							iTotalHealth += GC.getImprovementInfo((ImprovementTypes)iI).getHealthPercent();
-							for (int iK = 0; iK < GC.getNumCivicOptionInfos(); iK++)
+							if (kPlayer.getCivics((CivicOptionTypes)iK) != NO_CIVIC)
 							{
-								if (kPlayer.getCivics((CivicOptionTypes)iK) != NO_CIVIC)
-								{
-									iTotalHealth += std::max(0, GC.getCivicInfo(kPlayer.getCivics((CivicOptionTypes)iK)).getImprovementHealthPercentChanges(iI)) / 100;
-								}
+								iTotalHealth += std::max(0, GC.getCivicInfo(kPlayer.getCivics((CivicOptionTypes)iK)).getImprovementHealthPercentChanges(iI)) / 100;
 							}
 						}
 					}
 				}
-				if (iTotalHealth > iBestHealth)
-				{
-					eImprovement = (ImprovementTypes)iI;
-					iBestHealth = iTotalHealth;
-				}
 			}
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_IMPR_GOOD_HEALTH", iHealth, ((eImprovement == NO_IMPROVEMENT) ? L"TXT_KEY_MISC_IMPROVEMENTS" : GC.getImprovementInfo(eImprovement).getTextKeyWide())));
-			szBuffer.append(NEWLINE);
-		}
-		iHealth = city.getSpecialistGoodHealth() / 100;
-		if (iHealth > 0)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_GOOD_HEALTH_FROM_SPECIALISTS", iHealth));
-			szBuffer.append(NEWLINE);
-		}
-
-		iHealth = city.getBonusGoodHealth();
-		if (iHealth > 0)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_GOOD_HEALTH_FROM_BONUSES", iHealth));
-			szBuffer.append(NEWLINE);
-		}
-
-		iHealth = city.totalGoodBuildingHealth();
-		if (iHealth > 0)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_GOOD_HEALTH_FROM_BUILDINGS", iHealth));
-			szBuffer.append(NEWLINE);
-		}
-
-		iHealth = GET_PLAYER(city.getOwner()).getCivicHealth();
-		if (iHealth > 0)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_GOOD_HEALTH_FROM_CIVICS", iHealth));
-			szBuffer.append(NEWLINE);
-		}
-		iHealth = GET_PLAYER(city.getOwner()).getCivilizationHealth();
-
-		if (iHealth > 0)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_GOOD_HEALTH_FROM_CIV", iHealth));
-			szBuffer.append(NEWLINE);
-		}
-
-		//	Koshling - event health
-		iHealth = GET_PLAYER(city.getOwner()).getExtraHealth() - GET_PLAYER(city.getOwner()).getCivicHealth();
-		if (iHealth > 0)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_GOOD_HEALTH_FROM_EVENTS", iHealth));
-			szBuffer.append(NEWLINE);
-		}
-
-		iHealth = city.getExtraHealth();
-		if (iHealth > 0)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HEALTH_EXTRA", iHealth));
-			szBuffer.append(NEWLINE);
-		}
-
-		if ( GC.getGame().getHandicapType() != NO_HANDICAP )
-		{
-			iHealth = GC.getHandicapInfo(city.getHandicapType()).getHealthBonus();
-			if (iHealth > 0)
+			if (iTotalHealth > iBestHealth)
 			{
-				szBuffer.append(gDLL->getText("TXT_KEY_MISC_GOOD_HEALTH_FROM_HANDICAP", iHealth));
-				szBuffer.append(NEWLINE);
+				eImprovement = (ImprovementTypes)iI;
+				iBestHealth = iTotalHealth;
 			}
 		}
-		iHealth = (GET_PLAYER(city.getOwner()).getWorldHealth());
-		if (iHealth > 0)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_GOOD_HEALTH_FROM_WORLD_PROJECT", iHealth));
-			szBuffer.append(NEWLINE);
-		}
-
-		iHealth = (GET_PLAYER(city.getOwner()).getProjectHealth());
-		if (iHealth > 0)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_GOOD_HEALTH_FROM_PROJECT", iHealth));
-			szBuffer.append(NEWLINE);
-		}
-
-		iHealth = city.calculateCorporationHealth();
-		if (iHealth > 0)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_GOOD_HEALTH_FROM_CORPORATION", iHealth));
-			szBuffer.append(NEWLINE);
-		}
-
-		iHealth = city.getExtraTechHealthTotal();
-		if (iHealth > 0)
-		{
-			szBuffer.append(gDLL->getText("TXT_KEY_HEALTHY_TECH_SPECIALIST", iHealth));
-			szBuffer.append(NEWLINE);
-		}
-
-		szBuffer.append(L"-----------------------\n");
-
-		szBuffer.append(gDLL->getText("TXT_KEY_MISC_TOTAL_HEALTHY", city.goodHealth()));
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_IMPR_GOOD_HEALTH", iHealth, ((eImprovement == NO_IMPROVEMENT) ? L"TXT_KEY_MISC_IMPROVEMENTS" : GC.getImprovementInfo(eImprovement).getTextKeyWide())));
+		szBuffer.append(NEWLINE);
 	}
+	iHealth = city.getSpecialistGoodHealth() / 100;
+	if (iHealth > 0)
+	{
+		iSum += iHealth;
+		szBuffer.append(gDLL->getText("TXT_KEY_GOOD_HEALTH_FROM_SPECIALISTS", iHealth));
+		szBuffer.append(NEWLINE);
+	}
+
+	iHealth = city.getBonusGoodHealth();
+	if (iHealth > 0)
+	{
+		iSum += iHealth;
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_GOOD_HEALTH_FROM_BONUSES", iHealth));
+		szBuffer.append(NEWLINE);
+	}
+
+	iHealth = city.totalGoodBuildingHealth();
+	if (iHealth > 0)
+	{
+		iSum += iHealth;
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_GOOD_HEALTH_FROM_BUILDINGS", iHealth));
+		szBuffer.append(NEWLINE);
+	}
+
+	iHealth = GET_PLAYER(city.getOwner()).getCivicHealth();
+	if (iHealth > 0)
+	{
+		iSum += iHealth;
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_GOOD_HEALTH_FROM_CIVICS", iHealth));
+		szBuffer.append(NEWLINE);
+	}
+	iHealth = GET_PLAYER(city.getOwner()).getCivilizationHealth();
+
+	if (iHealth > 0)
+	{
+		iSum += iHealth;
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_GOOD_HEALTH_FROM_CIV", iHealth));
+		szBuffer.append(NEWLINE);
+	}
+
+	//	Koshling - event health
+	iHealth = GET_PLAYER(city.getOwner()).getExtraHealth();
+	if (iHealth > 0)
+	{
+		iSum += iHealth;
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_GOOD_HEALTH_FROM_EVENTS", iHealth));
+		szBuffer.append(NEWLINE);
+	}
+
+	iHealth = city.getExtraHealth();
+	if (iHealth > 0)
+	{
+		iSum += iHealth;
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HEALTH_EXTRA", iHealth));
+		szBuffer.append(NEWLINE);
+	}
+
+	if ( GC.getGame().getHandicapType() != NO_HANDICAP )
+	{
+		iHealth = GC.getHandicapInfo(city.getHandicapType()).getHealthBonus();
+		if (iHealth > 0)
+		{
+			iSum += iHealth;
+			szBuffer.append(gDLL->getText("TXT_KEY_MISC_GOOD_HEALTH_FROM_HANDICAP", iHealth));
+			szBuffer.append(NEWLINE);
+		}
+	}
+	iHealth = (GET_PLAYER(city.getOwner()).getWorldHealth());
+	if (iHealth > 0)
+	{
+		iSum += iHealth;
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_GOOD_HEALTH_FROM_WORLD_PROJECT", iHealth));
+		szBuffer.append(NEWLINE);
+	}
+
+	iHealth = (GET_PLAYER(city.getOwner()).getProjectHealth());
+	if (iHealth > 0)
+	{
+		iSum += iHealth;
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_GOOD_HEALTH_FROM_PROJECT", iHealth));
+		szBuffer.append(NEWLINE);
+	}
+
+	iHealth = city.calculateCorporationHealth();
+	if (iHealth > 0)
+	{
+		iSum += iHealth;
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_GOOD_HEALTH_FROM_CORPORATION", iHealth));
+		szBuffer.append(NEWLINE);
+	}
+
+	iHealth = city.getExtraTechHealthTotal();
+	if (iHealth > 0)
+	{
+		iSum += iHealth;
+		szBuffer.append(gDLL->getText("TXT_KEY_HEALTHY_TECH_SPECIALIST", iHealth));
+		szBuffer.append(NEWLINE);
+	}
+	szBuffer.append(L"-----------------------\n");
+	szBuffer.append(gDLL->getText("TXT_KEY_MISC_TOTAL_HEALTHY", iGoodHealthTotal));
+
+	FAssertMsg(iGoodHealthTotal == iSum, CvString::format("Actual: %d; displayed: %d", iGoodHealthTotal, iSum));
 }
 
 
@@ -25277,7 +25288,7 @@ void CvGameTextMgr::setAngerHelp(CvWStringBuffer &szBuffer, CvCity& city)
 		iTotal += iAnger;
 	}
 
-	iAnger = city.getExtraTechUnHappinessTotal();
+	iAnger = -city.getExtraTechHappinessTotal();
 	if (iAnger > 0)
 	{
 		szBuffer.append(gDLL->getText("TXT_KEY_UNHAPPY_TECH_SPECIALIST", iAnger));
@@ -32633,7 +32644,6 @@ void CvGameTextMgr::setScoreHelp(CvWStringBuffer &szString, PlayerTypes ePlayer)
 	{
 		CvPlayer& player = GET_PLAYER(ePlayer);
 
-
 		int iPop = player.getPopScore();
 		int iMaxPop = GC.getGame().getMaxPopulation();
 		int iPopScore = 0;
@@ -32668,7 +32678,6 @@ void CvGameTextMgr::setScoreHelp(CvWStringBuffer &szString, PlayerTypes ePlayer)
 			iPopScore, iPop, iMaxPop, iLandScore, iLand, iMaxLand, iTechScore,
 			iTech, iMaxTech, iWondersScore, iWonders, iMaxWonders, iTotalScore, iVictoryScore)
 		);
-		szString.append(gDLL->getText("TXT_KEY_SCORE_DIFFICULTY_LEVEL", GC.getHandicapInfo(player.getHandicapType()).getTextKeyWide()));
 	}
 }
 
@@ -35796,7 +35805,13 @@ void CvGameTextMgr::setFlagHelp(CvWStringBuffer &szBuffer)
 
 	szBuffer.append(CvWString::format(SETCOLR L"%s\n", TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), player.getCivilizationDescription()));
 
-	szBuffer.append(CvWString::format(SETCOLR L"Caveman2Cosmos %S" ENDCOLR, TEXT_COLOR("COLOR_YELLOW"), GC.getDefineSTRING("C2C_VERSION")));
+	szBuffer.append(CvWString::format(SETCOLR L"Caveman2Cosmos %S\n" ENDCOLR, TEXT_COLOR("COLOR_YELLOW"), GC.getDefineSTRING("C2C_VERSION")));
+
+	if (GAME.getNumHumanPlayers() > 1)
+	{
+		szBuffer.append(CvWString::format(SETCOLR L"%s\n" ENDCOLR, TEXT_COLOR("COLOR_MAGENTA"), gDLL->getText("TXT_KEY_SETTINGS_DIFFICULTY_PLAYER", GC.getHandicapInfo(player.getHandicapType()).getTextKeyWide()).GetCString()));
+	}
+	szBuffer.append(CvWString::format(SETCOLR L"%s" ENDCOLR, TEXT_COLOR("COLOR_MAGENTA"), gDLL->getText("TXT_KEY_SETTINGS_DIFFICULTY_GAME", GC.getHandicapInfo(GAME.getHandicapType()).getTextKeyWide()).GetCString()));
 
 	// Traits
 	if (player.isModderOption(MODDEROPTION_SHOW_TRAITS_FLAG) || GAME.isOption(GAMEOPTION_LEADER_DEVELOPING))
