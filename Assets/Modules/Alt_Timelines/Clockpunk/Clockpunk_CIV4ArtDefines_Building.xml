@@ -6,7 +6,7 @@
 <Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\Xml\Schema\Caveman2Cosmos.xsd">
 	<BuildingArtInfos>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CLOCKPUNK_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_CLOCKPUNK</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -36,7 +36,7 @@
 			<Button>art/orchestriontheater.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_STEPRECKONER_MANUFACTORY</Type>
+			<Type>ART_DEF_BUILDING_STEP_RECKONER_MANUFACTURE</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -56,7 +56,7 @@
 			<Button>art/clockworkworkshop.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CLOCKPUNK_AIRPORT</Type>
+			<Type>ART_DEF_BUILDING_ORNITHOPTER_AERIE</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>

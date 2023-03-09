@@ -478,11 +478,11 @@
 			<ArtDefineTag>ART_DEF_BONUS_GREEK</ArtDefineTag>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_ROMANI</Type>
-			<Description>TXT_KEY_BONUS_ROMANI</Description>
+			<Type>BONUS_ROMANE</Type>
+			<Description>TXT_KEY_BONUS_ROMANE</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_ROMANI</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_ROMANE</ArtDefineTag>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HAIDA</Type>
@@ -2592,11 +2592,11 @@
 			<TechCityTrade>NONE</TechCityTrade>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_PHILISTINE</Type>
-			<Description>TXT_KEY_BONUS_PHILISTINE</Description>
+			<Type>BONUS_PHILISTINES</Type>
+			<Description>TXT_KEY_BONUS_PHILISTINES</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_PHILISTINE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_PHILISTINES</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 		</BonusInfo>

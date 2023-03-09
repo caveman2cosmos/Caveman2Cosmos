@@ -5246,6 +5246,7 @@
 			<iAppearance>500</iAppearance>
 			<bNoAdjacent>1</bNoAdjacent>
 			<iPopDestroys>-1</iPopDestroys>
+			<iCultureDistance>-1</iCultureDistance>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_BARREN</TerrainType>

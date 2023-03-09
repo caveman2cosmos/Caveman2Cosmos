@@ -919,7 +919,6 @@ protected:
 	short m_iFeatureVariety;
 	short m_iOwnershipDuration;
 	short m_iUpgradeProgress;
-	short m_iForceUnownedTimer; // SAVEBREAK remove
 	short m_iCityRadiusCount;
 	int m_iRiverID;
 	short m_iMinOriginalStartDist;
@@ -1018,7 +1017,6 @@ protected:
 
 	CvPlotBuilder* m_pPlotBuilder; // builds bonuses and improvements
 
-	char** m_apaiCultureRangeCities; // SAVEBREAK remove
 	short** m_apaiInvisibleVisibilityCount;
 
 	/* Koshling - need to cache presence of mountain leaders in mountain plots so that CanMoveThrough calculations don't get bogged down searching unit stacks.

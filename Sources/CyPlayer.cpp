@@ -1024,11 +1024,6 @@ void CyPlayer::setNewPlayerAlive(bool bNewValue)
 	m_pPlayer->setNewPlayerAlive(bNewValue);
 }
 
-void CyPlayer::changeTechScore(int iChange)
-{
-	m_pPlayer->changeTechScore(iChange);
-}
-
 bool CyPlayer::isStrike() const
 {
 	return m_pPlayer->isStrike();
@@ -1695,9 +1690,9 @@ int CyPlayer::getBuildingCountWithUpgrades(int iBuilding) const
 	return m_pPlayer->getBuildingCountWithUpgrades((BuildingTypes)iBuilding);
 }
 
-void CyPlayer::setHandicap(int iNewVal)
+void CyPlayer::setHandicap(int iNewVal, bool bAdjustGameHandicap)
 {
-	m_pPlayer->setHandicap(iNewVal);
+	m_pPlayer->setHandicap(iNewVal, bAdjustGameHandicap);
 }
 
 void CyPlayer::setModderOption(int /*ModderOptionTypes*/ eIndex, int iNewValue)

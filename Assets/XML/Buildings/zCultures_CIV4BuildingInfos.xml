@@ -2,10 +2,10 @@
 <Civ4BuildingInfos xmlns="x-schema:../Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_ACTIVE_AFRICAN</Type>
-			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_AFRICAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE_HELP</Help>
+			<Type>BUILDING_C_AC_AFRICAN</Type>
+			<Description>TXT_KEY_BUILDING_C_AC_AFRICAN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_C_AC_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_C_AC_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_AFRICAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -14,10 +14,10 @@
 			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_ACTIVE_ASIAN</Type>
-			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_ASIAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE_HELP</Help>
+			<Type>BUILDING_C_AC_ASIAN</Type>
+			<Description>TXT_KEY_BUILDING_C_AC_ASIAN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_C_AC_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_C_AC_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_ASIAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -26,10 +26,10 @@
 			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_ACTIVE_EUROPEAN</Type>
-			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_EUROPEAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE_HELP</Help>
+			<Type>BUILDING_C_AC_EUROPEAN</Type>
+			<Description>TXT_KEY_BUILDING_C_AC_EUROPEAN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_C_AC_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_C_AC_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_EUROPEAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -38,10 +38,10 @@
 			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</Type>
-			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE_HELP</Help>
+			<Type>BUILDING_C_AC_MIDDLE_EASTERN</Type>
+			<Description>TXT_KEY_BUILDING_C_AC_MIDDLE_EASTERN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_C_AC_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_C_AC_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_MIDDLE_EASTERN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -50,16 +50,16 @@
 			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</Type>
+			<Type>BUILDING_C_AC_NEANDERTHAL</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
-			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_NEANDERTHAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE_HELP</Help>
-			<ArtDefineTag>ART_DEF_BUILDING_NEANDERTHAL_EMBASSY</ArtDefineTag>
+			<Description>TXT_KEY_BUILDING_C_AC_NEANDERTHAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_C_AC_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_C_AC_HELP</Help>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_NEANDERTHAL</ArtDefineTag>
 			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -68,10 +68,10 @@
 			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</Type>
-			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE_HELP</Help>
+			<Type>BUILDING_C_AC_NORTH_AMERICAN</Type>
+			<Description>TXT_KEY_BUILDING_C_AC_NORTH_AMERICAN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_C_AC_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_C_AC_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_NORTH_AMERICAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -80,10 +80,10 @@
 			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_ACTIVE_OCEANIAN</Type>
-			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_OCEANIAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE_HELP</Help>
+			<Type>BUILDING_C_AC_OCEANIAN</Type>
+			<Description>TXT_KEY_BUILDING_C_AC_OCEANIAN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_C_AC_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_C_AC_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_OCEANIAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -92,10 +92,10 @@
 			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</Type>
-			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_ACTIVE_HELP</Help>
+			<Type>BUILDING_C_AC_SOUTH_AMERICAN</Type>
+			<Description>TXT_KEY_BUILDING_C_AC_SOUTH_AMERICAN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_C_AC_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_C_AC_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_SOUTH_AMERICAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -104,12 +104,12 @@
 			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_ADOPTED_AFRICAN</Type>
+			<Type>BUILDING_C_AD_AFRICAN</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNoLimit>1</bNoLimit>
-			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_AFRICAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED_HELP</Help>
+			<Description>TXT_KEY_BUILDING_C_AD_AFRICAN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_C_AD_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_C_AD_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_AFRICAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -119,25 +119,25 @@
 			</PrereqInCityBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_CULTURE_LOCAL_AFRICAN</BuildingType>
+					<BuildingType>BUILDING_C_L_AFRICAN</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_CULTURE_NATIVE_AFRICAN</BuildingType>
+				<BuildingType>BUILDING_C_N_AFRICAN</BuildingType>
 			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_CULTURE_ACTIVE_AFRICAN</FreeBuilding>
+			<FreeBuilding>BUILDING_C_AC_AFRICAN</FreeBuilding>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_ADOPTED_ASIAN</Type>
+			<Type>BUILDING_C_AD_ASIAN</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNoLimit>1</bNoLimit>
-			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_ASIAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED_HELP</Help>
+			<Description>TXT_KEY_BUILDING_C_AD_ASIAN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_C_AD_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_C_AD_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_ASIAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -147,25 +147,25 @@
 			</PrereqInCityBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
+					<BuildingType>BUILDING_C_L_ASIAN</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_CULTURE_NATIVE_ASIAN</BuildingType>
+				<BuildingType>BUILDING_C_N_ASIAN</BuildingType>
 			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_CULTURE_ACTIVE_ASIAN</FreeBuilding>
+			<FreeBuilding>BUILDING_C_AC_ASIAN</FreeBuilding>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_ADOPTED_EUROPEAN</Type>
+			<Type>BUILDING_C_AD_EUROPEAN</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNoLimit>1</bNoLimit>
-			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_EUROPEAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED_HELP</Help>
+			<Description>TXT_KEY_BUILDING_C_AD_EUROPEAN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_C_AD_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_C_AD_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_EUROPEAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -175,25 +175,25 @@
 			</PrereqInCityBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_CULTURE_LOCAL_EUROPEAN</BuildingType>
+					<BuildingType>BUILDING_C_L_EUROPEAN</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
 			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_CULTURE_ACTIVE_EUROPEAN</FreeBuilding>
+			<FreeBuilding>BUILDING_C_AC_EUROPEAN</FreeBuilding>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_ADOPTED_MIDDLE_EASTERN</Type>
+			<Type>BUILDING_C_AD_MIDDLE_EASTERN</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNoLimit>1</bNoLimit>
-			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_MIDDLE_EASTERN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED_HELP</Help>
+			<Description>TXT_KEY_BUILDING_C_AD_MIDDLE_EASTERN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_C_AD_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_C_AD_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_MIDDLE_EASTERN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -203,26 +203,26 @@
 			</PrereqInCityBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</BuildingType>
+					<BuildingType>BUILDING_C_L_MIDDLE_EASTERN</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_C_N_MIDDLE_EASTERN</BuildingType>
 			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</FreeBuilding>
+			<FreeBuilding>BUILDING_C_AC_MIDDLE_EASTERN</FreeBuilding>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_ADOPTED_NEANDERTHAL</Type>
+			<Type>BUILDING_C_AD_NEANDERTHAL</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNoLimit>1</bNoLimit>
-			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_NEANDERTHAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED_HELP</Help>
-			<ArtDefineTag>ART_DEF_BUILDING_NEANDERTHAL_EMBASSY</ArtDefineTag>
+			<Description>TXT_KEY_BUILDING_C_AD_NEANDERTHAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_C_AD_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_C_AD_HELP</Help>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_NEANDERTHAL</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -231,26 +231,26 @@
 			</PrereqInCityBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+					<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_CULTURE_NATIVE_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_N_NEANDERTHAL</BuildingType>
 			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</FreeBuilding>
+			<FreeBuilding>BUILDING_C_AC_NEANDERTHAL</FreeBuilding>
 			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_ADOPTED_NORTH_AMERICAN</Type>
+			<Type>BUILDING_C_AD_NORTH_AMERICAN</Type>
 			<bNoLimit>1</bNoLimit>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
-			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_NORTH_AMERICAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED_HELP</Help>
+			<Description>TXT_KEY_BUILDING_C_AD_NORTH_AMERICAN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_C_AD_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_C_AD_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_NORTH_AMERICAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -260,25 +260,25 @@
 			</PrereqInCityBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</BuildingType>
+					<BuildingType>BUILDING_C_L_NORTH_AMERICAN</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_C_N_NORTH_AMERICAN</BuildingType>
 			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</FreeBuilding>
+			<FreeBuilding>BUILDING_C_AC_NORTH_AMERICAN</FreeBuilding>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_ADOPTED_OCEANIAN</Type>
+			<Type>BUILDING_C_AD_OCEANIAN</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNoLimit>1</bNoLimit>
-			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_OCEANIAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED_HELP</Help>
+			<Description>TXT_KEY_BUILDING_C_AD_OCEANIAN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_C_AD_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_C_AD_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_OCEANIAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -288,25 +288,25 @@
 			</PrereqInCityBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_CULTURE_LOCAL_OCEANIAN</BuildingType>
+					<BuildingType>BUILDING_C_L_OCEANIAN</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_CULTURE_NATIVE_OCEANIAN</BuildingType>
+				<BuildingType>BUILDING_C_N_OCEANIAN</BuildingType>
 			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_CULTURE_ACTIVE_OCEANIAN</FreeBuilding>
+			<FreeBuilding>BUILDING_C_AC_OCEANIAN</FreeBuilding>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_ADOPTED_SOUTH_AMERICAN</Type>
+			<Type>BUILDING_C_AD_SOUTH_AMERICAN</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNoLimit>1</bNoLimit>
-			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_SOUTH_AMERICAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED_HELP</Help>
+			<Description>TXT_KEY_BUILDING_C_AD_SOUTH_AMERICAN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_C_AD_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_C_AD_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_SOUTH_AMERICAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -316,29 +316,29 @@
 			</PrereqInCityBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
+					<BuildingType>BUILDING_C_L_SOUTH_AMERICAN</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_C_N_SOUTH_AMERICAN</BuildingType>
 			</PrereqNotInCityBuildings>
-			<FreeBuilding>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</FreeBuilding>
+			<FreeBuilding>BUILDING_C_AC_SOUTH_AMERICAN</FreeBuilding>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_LOCAL_AFRICAN</Type>
-			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_AFRICAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL_HELP</Help>
+			<Type>BUILDING_C_L_AFRICAN</Type>
+			<Description>TXT_KEY_BUILDING_C_L_AFRICAN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_C_L_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_C_L_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_AFRICAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_AFRICAN</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>100</iCost>
 			<CommerceChanges>
@@ -348,35 +348,35 @@
 			</CommerceChanges>
 			<GlobalBuildingCostModifiers>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_AFRICAN</BuildingType>
+					<BuildingType>BUILDING_C_L_AFRICAN</BuildingType>
 					<iModifier>-5</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
+					<BuildingType>BUILDING_C_L_ASIAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_EUROPEAN</BuildingType>
+					<BuildingType>BUILDING_C_L_EUROPEAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</BuildingType>
+					<BuildingType>BUILDING_C_L_MIDDLE_EASTERN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+					<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</BuildingType>
+					<BuildingType>BUILDING_C_L_NORTH_AMERICAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_OCEANIAN</BuildingType>
+					<BuildingType>BUILDING_C_L_OCEANIAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
+					<BuildingType>BUILDING_C_L_SOUTH_AMERICAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 			</GlobalBuildingCostModifiers>
@@ -401,16 +401,16 @@
 			<iConquestProb>85</iConquestProb>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_LOCAL_ASIAN</Type>
-			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_ASIAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL_HELP</Help>
+			<Type>BUILDING_C_L_ASIAN</Type>
+			<Description>TXT_KEY_BUILDING_C_L_ASIAN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_C_L_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_C_L_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_ASIAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_ASIAN</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>100</iCost>
 			<CommerceChanges>
@@ -420,35 +420,35 @@
 			</CommerceChanges>
 			<GlobalBuildingCostModifiers>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_AFRICAN</BuildingType>
+					<BuildingType>BUILDING_C_L_AFRICAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
+					<BuildingType>BUILDING_C_L_ASIAN</BuildingType>
 					<iModifier>-5</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_EUROPEAN</BuildingType>
+					<BuildingType>BUILDING_C_L_EUROPEAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</BuildingType>
+					<BuildingType>BUILDING_C_L_MIDDLE_EASTERN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+					<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</BuildingType>
+					<BuildingType>BUILDING_C_L_NORTH_AMERICAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_OCEANIAN</BuildingType>
+					<BuildingType>BUILDING_C_L_OCEANIAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
+					<BuildingType>BUILDING_C_L_SOUTH_AMERICAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 			</GlobalBuildingCostModifiers>
@@ -473,16 +473,16 @@
 			<iConquestProb>85</iConquestProb>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_LOCAL_EUROPEAN</Type>
-			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_EUROPEAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL_HELP</Help>
+			<Type>BUILDING_C_L_EUROPEAN</Type>
+			<Description>TXT_KEY_BUILDING_C_L_EUROPEAN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_C_L_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_C_L_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_EUROPEAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>100</iCost>
 			<CommerceChanges>
@@ -492,35 +492,35 @@
 			</CommerceChanges>
 			<GlobalBuildingCostModifiers>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_AFRICAN</BuildingType>
+					<BuildingType>BUILDING_C_L_AFRICAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
+					<BuildingType>BUILDING_C_L_ASIAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_EUROPEAN</BuildingType>
+					<BuildingType>BUILDING_C_L_EUROPEAN</BuildingType>
 					<iModifier>-5</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</BuildingType>
+					<BuildingType>BUILDING_C_L_MIDDLE_EASTERN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+					<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</BuildingType>
+					<BuildingType>BUILDING_C_L_NORTH_AMERICAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_OCEANIAN</BuildingType>
+					<BuildingType>BUILDING_C_L_OCEANIAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
+					<BuildingType>BUILDING_C_L_SOUTH_AMERICAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 			</GlobalBuildingCostModifiers>
@@ -545,16 +545,16 @@
 			<iConquestProb>85</iConquestProb>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</Type>
-			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL_HELP</Help>
+			<Type>BUILDING_C_L_MIDDLE_EASTERN</Type>
+			<Description>TXT_KEY_BUILDING_C_L_MIDDLE_EASTERN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_C_L_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_C_L_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_MIDDLE_EASTERN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_C_AC_MIDDLE_EASTERN</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>100</iCost>
 			<CommerceChanges>
@@ -564,35 +564,35 @@
 			</CommerceChanges>
 			<GlobalBuildingCostModifiers>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_AFRICAN</BuildingType>
+					<BuildingType>BUILDING_C_L_AFRICAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
+					<BuildingType>BUILDING_C_L_ASIAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_EUROPEAN</BuildingType>
+					<BuildingType>BUILDING_C_L_EUROPEAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</BuildingType>
+					<BuildingType>BUILDING_C_L_MIDDLE_EASTERN</BuildingType>
 					<iModifier>-5</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+					<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</BuildingType>
+					<BuildingType>BUILDING_C_L_NORTH_AMERICAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_OCEANIAN</BuildingType>
+					<BuildingType>BUILDING_C_L_OCEANIAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
+					<BuildingType>BUILDING_C_L_SOUTH_AMERICAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 			</GlobalBuildingCostModifiers>
@@ -617,21 +617,21 @@
 			<iConquestProb>85</iConquestProb>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_LOCAL_NEANDERTHAL</Type>
+			<Type>BUILDING_C_L_NEANDERTHAL</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
-			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_NEANDERTHAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL_HELP</Help>
-			<ArtDefineTag>ART_DEF_BUILDING_NEANDERTHAL_EMBASSY</ArtDefineTag>
+			<Description>TXT_KEY_BUILDING_C_L_NEANDERTHAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_C_L_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_C_L_HELP</Help>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_NEANDERTHAL</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
 			</PrereqInCityBuildings>
 			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>
 			<iCost>100</iCost>
@@ -642,35 +642,35 @@
 			</CommerceChanges>
 			<GlobalBuildingCostModifiers>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_AFRICAN</BuildingType>
+					<BuildingType>BUILDING_C_L_AFRICAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
+					<BuildingType>BUILDING_C_L_ASIAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_EUROPEAN</BuildingType>
+					<BuildingType>BUILDING_C_L_EUROPEAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</BuildingType>
+					<BuildingType>BUILDING_C_L_MIDDLE_EASTERN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+					<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 					<iModifier>-5</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</BuildingType>
+					<BuildingType>BUILDING_C_L_NORTH_AMERICAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_OCEANIAN</BuildingType>
+					<BuildingType>BUILDING_C_L_OCEANIAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
+					<BuildingType>BUILDING_C_L_SOUTH_AMERICAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 			</GlobalBuildingCostModifiers>
@@ -695,16 +695,16 @@
 			<iConquestProb>85</iConquestProb>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</Type>
-			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL_HELP</Help>
+			<Type>BUILDING_C_L_NORTH_AMERICAN</Type>
+			<Description>TXT_KEY_BUILDING_C_L_NORTH_AMERICAN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_C_L_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_C_L_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_NORTH_AMERICAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_NORTH_AMERICAN</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>100</iCost>
 			<CommerceChanges>
@@ -714,35 +714,35 @@
 			</CommerceChanges>
 			<GlobalBuildingCostModifiers>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_AFRICAN</BuildingType>
+					<BuildingType>BUILDING_C_L_AFRICAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
+					<BuildingType>BUILDING_C_L_ASIAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_EUROPEAN</BuildingType>
+					<BuildingType>BUILDING_C_L_EUROPEAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</BuildingType>
+					<BuildingType>BUILDING_C_L_MIDDLE_EASTERN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+					<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</BuildingType>
+					<BuildingType>BUILDING_C_L_NORTH_AMERICAN</BuildingType>
 					<iModifier>-5</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_OCEANIAN</BuildingType>
+					<BuildingType>BUILDING_C_L_OCEANIAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
+					<BuildingType>BUILDING_C_L_SOUTH_AMERICAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 			</GlobalBuildingCostModifiers>
@@ -767,16 +767,16 @@
 			<iConquestProb>85</iConquestProb>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_LOCAL_OCEANIAN</Type>
-			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_OCEANIAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL_HELP</Help>
+			<Type>BUILDING_C_L_OCEANIAN</Type>
+			<Description>TXT_KEY_BUILDING_C_L_OCEANIAN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_C_L_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_C_L_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_OCEANIAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_OCEANIAN</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>100</iCost>
 			<CommerceChanges>
@@ -786,35 +786,35 @@
 			</CommerceChanges>
 			<GlobalBuildingCostModifiers>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_AFRICAN</BuildingType>
+					<BuildingType>BUILDING_C_L_AFRICAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
+					<BuildingType>BUILDING_C_L_ASIAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_EUROPEAN</BuildingType>
+					<BuildingType>BUILDING_C_L_EUROPEAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</BuildingType>
+					<BuildingType>BUILDING_C_L_MIDDLE_EASTERN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+					<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</BuildingType>
+					<BuildingType>BUILDING_C_L_NORTH_AMERICAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_OCEANIAN</BuildingType>
+					<BuildingType>BUILDING_C_L_OCEANIAN</BuildingType>
 					<iModifier>-5</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
+					<BuildingType>BUILDING_C_L_SOUTH_AMERICAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 			</GlobalBuildingCostModifiers>
@@ -839,16 +839,16 @@
 			<iConquestProb>85</iConquestProb>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</Type>
-			<Description>TXT_KEY_BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_LOCAL_HELP</Help>
+			<Type>BUILDING_C_L_SOUTH_AMERICAN</Type>
+			<Description>TXT_KEY_BUILDING_C_L_SOUTH_AMERICAN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_C_L_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_C_L_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_SOUTH_AMERICAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_SOUTH_AMERICAN</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>100</iCost>
 			<CommerceChanges>
@@ -858,35 +858,35 @@
 			</CommerceChanges>
 			<GlobalBuildingCostModifiers>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_AFRICAN</BuildingType>
+					<BuildingType>BUILDING_C_L_AFRICAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
+					<BuildingType>BUILDING_C_L_ASIAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_EUROPEAN</BuildingType>
+					<BuildingType>BUILDING_C_L_EUROPEAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</BuildingType>
+					<BuildingType>BUILDING_C_L_MIDDLE_EASTERN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+					<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</BuildingType>
+					<BuildingType>BUILDING_C_L_NORTH_AMERICAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_OCEANIAN</BuildingType>
+					<BuildingType>BUILDING_C_L_OCEANIAN</BuildingType>
 					<iModifier>10</iModifier>
 				</BuildingCostModifier>
 				<BuildingCostModifier>
-					<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
+					<BuildingType>BUILDING_C_L_SOUTH_AMERICAN</BuildingType>
 					<iModifier>-5</iModifier>
 				</BuildingCostModifier>
 			</GlobalBuildingCostModifiers>
@@ -911,114 +911,114 @@
 			<iConquestProb>85</iConquestProb>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_NATIVE_AFRICAN</Type>
-			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_AFRICAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE_HELP</Help>
+			<Type>BUILDING_C_N_AFRICAN</Type>
+			<Description>TXT_KEY_BUILDING_C_N_AFRICAN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_C_N_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_C_N_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_AFRICAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<FreeBuilding>BUILDING_CULTURE_ACTIVE_AFRICAN</FreeBuilding>
+			<FreeBuilding>BUILDING_C_AC_AFRICAN</FreeBuilding>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_NATIVE_ASIAN</Type>
-			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_ASIAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE_HELP</Help>
+			<Type>BUILDING_C_N_ASIAN</Type>
+			<Description>TXT_KEY_BUILDING_C_N_ASIAN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_C_N_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_C_N_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_ASIAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<FreeBuilding>BUILDING_CULTURE_ACTIVE_ASIAN</FreeBuilding>
+			<FreeBuilding>BUILDING_C_AC_ASIAN</FreeBuilding>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_NATIVE_EUROPEAN</Type>
-			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_EUROPEAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE_HELP</Help>
+			<Type>BUILDING_C_N_EUROPEAN</Type>
+			<Description>TXT_KEY_BUILDING_C_N_EUROPEAN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_C_N_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_C_N_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_EUROPEAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<FreeBuilding>BUILDING_CULTURE_ACTIVE_EUROPEAN</FreeBuilding>
+			<FreeBuilding>BUILDING_C_AC_EUROPEAN</FreeBuilding>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</Type>
-			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE_HELP</Help>
+			<Type>BUILDING_C_N_MIDDLE_EASTERN</Type>
+			<Description>TXT_KEY_BUILDING_C_N_MIDDLE_EASTERN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_C_N_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_C_N_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_MIDDLE_EASTERN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<FreeBuilding>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</FreeBuilding>
+			<FreeBuilding>BUILDING_C_AC_MIDDLE_EASTERN</FreeBuilding>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_NATIVE_NEANDERTHAL</Type>
+			<Type>BUILDING_C_N_NEANDERTHAL</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
-			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_NEANDERTHAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE_HELP</Help>
-			<ArtDefineTag>ART_DEF_BUILDING_NEANDERTHAL_EMBASSY</ArtDefineTag>
+			<Description>TXT_KEY_BUILDING_C_N_NEANDERTHAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_C_N_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_C_N_HELP</Help>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_NEANDERTHAL</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<FreeBuilding>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</FreeBuilding>
+			<FreeBuilding>BUILDING_C_AC_NEANDERTHAL</FreeBuilding>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</Type>
-			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE_HELP</Help>
+			<Type>BUILDING_C_N_NORTH_AMERICAN</Type>
+			<Description>TXT_KEY_BUILDING_C_N_NORTH_AMERICAN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_C_N_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_C_N_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_NORTH_AMERICAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<FreeBuilding>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</FreeBuilding>
+			<FreeBuilding>BUILDING_C_AC_NORTH_AMERICAN</FreeBuilding>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_NATIVE_OCEANIAN</Type>
-			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_OCEANIAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE_HELP</Help>
+			<Type>BUILDING_C_N_OCEANIAN</Type>
+			<Description>TXT_KEY_BUILDING_C_N_OCEANIAN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_C_N_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_C_N_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_OCEANIAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<FreeBuilding>BUILDING_CULTURE_ACTIVE_OCEANIAN</FreeBuilding>
+			<FreeBuilding>BUILDING_C_AC_OCEANIAN</FreeBuilding>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN</Type>
-			<Description>TXT_KEY_BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CULTURE_NATIVE_HELP</Help>
+			<Type>BUILDING_C_N_SOUTH_AMERICAN</Type>
+			<Description>TXT_KEY_BUILDING_C_N_SOUTH_AMERICAN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_C_N_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_C_N_HELP</Help>
 			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_SOUTH_AMERICAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<FreeBuilding>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</FreeBuilding>
+			<FreeBuilding>BUILDING_C_AC_SOUTH_AMERICAN</FreeBuilding>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

@@ -6994,7 +6994,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CRUSADER_HELP</Tag>
-		<English>[ICON_BULLET]Spawned by [COLOR_BUILDING_TEXT][LINK=BUILDING_CRUSADE]King's Crusade[\LINK][COLOR_REVERT] every few turns</English>
+		<English>[ICON_BULLET]Spawned by [COLOR_BUILDING_TEXT][LINK=BUILDING_KINGS_CRUSADE]King's Crusade[\LINK][COLOR_REVERT] every few turns</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CRUSADER_PEDIA</Tag>

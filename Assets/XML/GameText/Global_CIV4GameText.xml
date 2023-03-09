@@ -9485,7 +9485,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BEACON_GREAT_BARRIER_REEF</Tag>
-		<English>Beacon(Great Barrier Reef)</English>
+		<English>Beacon (Great Barrier Reef)</English>
 		<French>
 			<Text>Balise - Grande barrière de corails</Text>
 			<Gender>Female</Gender>
@@ -9503,7 +9503,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER_REEF</Tag>
-		<English>Lighthouse(Great Barrier Reef)</English>
+		<English>Lighthouse (Great Barrier Reef)</English>
 		<French>
 			<Text>Phare - Grande barrière de corails</Text>
 			<Gender>Male</Gender>
@@ -22829,12 +22829,20 @@
 		<Spanish>Clima: %s1</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SETTINGS_DIFFICULTY</Tag>
-		<English>%s1 Difficulty</English>
-		<French>Difficulté : %s1</French>
-		<German>Schwierigkeit: %s1</German>
-		<Italian>Difficoltà %s1</Italian>
-		<Spanish>Dificultad: %s1</Spanish>
+		<Tag>TXT_KEY_SETTINGS_DIFFICULTY_GAME</Tag>
+		<English>Game difficulty: %s1 </English>
+		<French>Jeu difficulté : %s1</French>
+		<German>Spiel schwierigkeit: %s1</German>
+		<Italian>Difficoltà partita %s1</Italian>
+		<Spanish>Dificultad partida: %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SETTINGS_DIFFICULTY_PLAYER</Tag>
+		<English>Player difficulty: %s1</English>
+		<French>Joueur difficulté : %s1</French>
+		<German>Spieler schwierigkeit: %s1</German>
+		<Italian>Difficoltà giocatore %s1</Italian>
+		<Spanish>Dificultad el jugador: %s1</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SETTINGS_GAME_SPEED</Tag>
@@ -23598,10 +23606,8 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SHORTCUTS_MP</Tag>
-		<English>Multi-Player</English>
+		<English>Multiplayer</English>
 		<French>Multi-Joueur</French>
-		<German>Multiplayer</German>
-		<Italian>Multiplayer</Italian>
 		<Spanish>Multijugador</Spanish>
 		<Polish>Wieloosobowa</Polish>
 		<Russian>Ìóëüòèïëååð</Russian>

@@ -45,14 +45,14 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BIOPUNK_EMBASSY</Type>
+			<Type>BUILDING_CULTURE_BIOPUNK</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_BIO</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_BIOPUNK_EMBASSY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BIOPUNK_EMBASSY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CULTURE_BIOPUNK</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CULTURE_BIOPUNK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BIOPUNK_EMBASSY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_BIOPUNK</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -117,9 +117,9 @@
 			</MapCategoryTypes>
 			<Bonus>BONUS_BIOPUNK</Bonus>
 			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_HIGH_TECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+				<BuildingType>BUILDING_HIGH_TECH_CULTURAL_ENRICHMENT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>3665</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -136,7 +136,7 @@
 				<iCommerce>1</iCommerce>
 			</CommerceModifiers>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_PLASTICSURGERY_CLINIC</BuildingType>
+				<BuildingType>BUILDING_PLASTIC_SURGERY_CLINIC</BuildingType>
 				<BuildingType>BUILDING_BIOPUNK_LAB</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>

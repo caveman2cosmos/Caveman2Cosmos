@@ -2105,7 +2105,7 @@
 			<iRandomGold>30</iRandomGold>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_JEWISH_CATHEDRAL</Building>
+					<Building>BUILDING_JEWISH_SYNAGOGUE</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2115,42 +2115,42 @@
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_ISLAMIC_CATHEDRAL</Building>
+					<Building>BUILDING_ISLAMIC_MOSQUE</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_HINDU_CATHEDRAL</Building>
+					<Building>BUILDING_HINDU_MANDIR</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_BUDDHIST_CATHEDRAL</Building>
+					<Building>BUILDING_BUDDHIST_STUPA</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_CONFUCIAN_CATHEDRAL</Building>
+					<Building>BUILDING_CONFUCIAN_ACADEMY</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_TAOIST_CATHEDRAL</Building>
+					<Building>BUILDING_TAOIST_PAGODA</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_CAODAI_CATHEDRAL</Building>
+					<Building>BUILDING_CAO_DAI_CATHEDRAL</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_CANAANISM_CATHEDRAL</Building>
+					<Building>BUILDING_CANAANITE_CATHEDRAL</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_BAHAI_CATHEDRAL</Building>
+					<Building>BUILDING_BAHAI_DAR_BE_MEHR</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2175,7 +2175,7 @@
 			<iRandomGold>-20</iRandomGold>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_SCULPTOR</Building>
+					<Building>BUILDING_SCULPTORS_WORKSHOP</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -2320,7 +2320,7 @@
 					<iExtraYield>1</iExtraYield>
 				</BuildingExtraYield>
 				<BuildingExtraYield>
-					<Building>BUILDING_KNIGHT_STABLE</Building>
+					<Building>BUILDING_KNIGHTS_STABLE</Building>
 					<YieldType>YIELD_FOOD</YieldType>
 					<iExtraYield>1</iExtraYield>
 				</BuildingExtraYield>
@@ -2599,7 +2599,7 @@
 			<bGlobal>1</bGlobal>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_GREAT_WALL</Building>
+					<Building>BUILDING_GREAT_WALL_OF_CHINA</Building>
 					<CommerceType>COMMERCE_ESPIONAGE</CommerceType>
 					<iExtraCommerce>25</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -4008,7 +4008,7 @@
 			<bPickCity>1</bPickCity>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_GOLDSMITH</Building>
+					<Building>BUILDING_SMITH_GOLD</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>6</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -4150,22 +4150,22 @@
 			<Description>TXT_KEY_EVENT_ANTIMONARCHISTS_2</Description>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_JEWISH_CATHEDRAL</Building>
+					<Building>BUILDING_JEWISH_SYNAGOGUE</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_HINDU_CATHEDRAL</Building>
+					<Building>BUILDING_HINDU_MANDIR</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_BUDDHIST_CATHEDRAL</Building>
+					<Building>BUILDING_BUDDHIST_STUPA</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_CONFUCIAN_CATHEDRAL</Building>
+					<Building>BUILDING_CONFUCIAN_ACADEMY</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -4175,32 +4175,32 @@
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_TAOIST_CATHEDRAL</Building>
+					<Building>BUILDING_TAOIST_PAGODA</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_ISLAMIC_CATHEDRAL</Building>
+					<Building>BUILDING_ISLAMIC_MOSQUE</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_HELLENIC_CATHEDRAL</Building>
+					<Building>BUILDING_HELLENIC_PANTHEON</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_ZOROASTRIAN_CATHEDRAL</Building>
+					<Building>BUILDING_ZOROASTRIAN_PANTHEON</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_MESOAMERICAN_CATHEDRAL</Building>
+					<Building>BUILDING_TEMPLE_OF_TLALOC</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_MORMON_CATHEDRAL</Building>
+					<Building>BUILDING_LDS_TEMPLE</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -4210,7 +4210,7 @@
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_SHINTO_CATHEDRAL</Building>
+					<Building>BUILDING_SHINTO_JINGU</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -4220,7 +4220,7 @@
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_VOODOO_CATHEDRAL</Building>
+					<Building>BUILDING_VOODOO_MARKET</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -4230,17 +4230,17 @@
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_CAODAI_CATHEDRAL</Building>
+					<Building>BUILDING_CAO_DAI_CATHEDRAL</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_CANAANISM_CATHEDRAL</Building>
+					<Building>BUILDING_CANAANITE_CATHEDRAL</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_BAHAI_CATHEDRAL</Building>
+					<Building>BUILDING_BAHAI_DAR_BE_MEHR</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -5089,7 +5089,7 @@
 			<Type>EVENT_NATUROPATHY_FOUNDED_1</Type>
 			<Description>TXT_KEY_EVENT_NATUROPATHY_FOUNDED_1</Description>
 			<bPickCity>1</bPickCity>
-			<Building>BUILDING_HEALERHUT</Building>
+			<Building>BUILDING_HEALERS_HUT</Building>
 			<iBuildingChange>1</iBuildingChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
@@ -6766,7 +6766,7 @@
 			<iRandomGold>-50</iRandomGold>
 			<BuildingExtraHealths>
 				<BuildingExtraHealth>
-					<Building>BUILDING_DOCTOR</Building>
+					<Building>BUILDING_DOCTORS_OFFICE</Building>
 					<iHealth>-1</iHealth>
 				</BuildingExtraHealth>
 			</BuildingExtraHealths>
@@ -6780,14 +6780,14 @@
 			<PrereqTech>TECH_MERCANTILISM</PrereqTech>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_DOCTOR</Building>
+					<Building>BUILDING_DOCTORS_OFFICE</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</BuildingExtraCommerces>
 			<BuildingExtraHealths>
 				<BuildingExtraHealth>
-					<Building>BUILDING_DOCTOR</Building>
+					<Building>BUILDING_DOCTORS_OFFICE</Building>
 					<iHealth>-2</iHealth>
 				</BuildingExtraHealth>
 			</BuildingExtraHealths>
@@ -6802,7 +6802,7 @@
 			<PrereqTech>TECH_MEDICINE</PrereqTech>
 			<BuildingExtraHappies>
 				<BuildingExtraHappy>
-					<Building>BUILDING_DOCTOR</Building>
+					<Building>BUILDING_DOCTORS_OFFICE</Building>
 					<iHappy>1</iHappy>
 				</BuildingExtraHappy>
 			</BuildingExtraHappies>
@@ -6836,19 +6836,19 @@
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_SLED_DOGS</Building>
+					<Building>BUILDING_SLED_DOG_TRAINER</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>-3</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_SLED_DOGS</Building>
+					<Building>BUILDING_SLED_DOG_TRAINER</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</BuildingExtraCommerces>
 			<BuildingExtraHappies>
 				<BuildingExtraHappy>
-					<Building>BUILDING_SLED_DOGS</Building>
+					<Building>BUILDING_SLED_DOG_TRAINER</Building>
 					<iHappy>2</iHappy>
 				</BuildingExtraHappy>
 			</BuildingExtraHappies>
@@ -6915,7 +6915,7 @@
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_FAIR_GROUNDS</Building>
+					<Building>BUILDING_FAIRGROUNDS</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>1</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -6945,7 +6945,7 @@
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_FAIR_GROUNDS</Building>
+					<Building>BUILDING_FAIRGROUNDS</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -6965,7 +6965,7 @@
 					<iExtraCommerce>-5</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_FAIR_GROUNDS</Building>
+					<Building>BUILDING_FAIRGROUNDS</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>-5</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -6985,7 +6985,7 @@
 					<iHappy>1</iHappy>
 				</BuildingExtraHappy>
 				<BuildingExtraHappy>
-					<Building>BUILDING_FAIR_GROUNDS</Building>
+					<Building>BUILDING_FAIRGROUNDS</Building>
 					<iHappy>1</iHappy>
 				</BuildingExtraHappy>
 				<BuildingExtraHappy>
@@ -8169,7 +8169,7 @@
 			<iUnitImmobileTurns>0</iUnitImmobileTurns>
 			<UnitName/>
 			<UnitCombatPromotions/>
-			<Building>BUILDING_GUILD_APOTHECARY</Building>
+			<Building>BUILDING_GUILD_APOTHECARIES</Building>
 			<iBuildingChange>1</iBuildingChange>
 			<BuildingExtraYields/>
 			<BuildingExtraCommerces/>

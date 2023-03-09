@@ -497,7 +497,7 @@ int* CvBuildingInfo::getCommercePerPopChangeArray() const
 int CvBuildingInfo::getCommerceChangeDoubleTime(int i) const
 {
 	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i);
-	if (i == COMMERCE_CULTURE && GC.getGame().isOption(GAMEOPTION_EQUILIBRIUM_CULTURE))
+	if (i == COMMERCE_CULTURE && GC.getGame().isOption(GAMEOPTION_CULTURE_EQUILIBRIUM))
 		return m_piCommerceChangeDoubleTime ? m_piCommerceChangeDoubleTime[i] : 1000;
 	return m_piCommerceChangeDoubleTime ? m_piCommerceChangeDoubleTime[i] : 0;
 }
@@ -910,7 +910,7 @@ const char* CvBuildingInfo::getMovie() const
 
 int CvBuildingInfo::getNoEntryDefenseLevel() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_REALISTIC_SIEGE))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_REALISTIC_SIEGE))
 	{
 		return 0;
 	}
@@ -1118,7 +1118,7 @@ int CvBuildingInfo::getRiverDefensePenalty() const
 
 int CvBuildingInfo::getLocalRepel() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -1127,7 +1127,7 @@ int CvBuildingInfo::getLocalRepel() const
 
 int CvBuildingInfo::getMinDefense() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_REALISTIC_SIEGE))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_REALISTIC_SIEGE))
 	{
 		return 0;
 	}
@@ -1156,7 +1156,7 @@ int CvBuildingInfo::getDamageToAttacker() const
 
 int CvBuildingInfo::getMaxPopulationAllowed() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_MAXIMUM_POPULATION))
+	if (!GC.getGame().isOption(GAMEOPTION_EXP_MAXIMUM_POPULATION))
 	{
 		return -1;
 	}
@@ -1165,7 +1165,7 @@ int CvBuildingInfo::getMaxPopulationAllowed() const
 
 int CvBuildingInfo::getMaxPopulationChange() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_MAXIMUM_POPULATION))
+	if (!GC.getGame().isOption(GAMEOPTION_EXP_MAXIMUM_POPULATION))
 	{
 		return 0;
 	}
@@ -1294,7 +1294,7 @@ int CvBuildingInfo::getNumUnitCombatRepelModifiers() const
 
 int CvBuildingInfo::getUnitCombatRepelModifier(int iUnitCombat, bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_COMBAT_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -1316,7 +1316,7 @@ int CvBuildingInfo::getNumUnitCombatRepelAgainstModifiers() const
 
 int CvBuildingInfo::getUnitCombatRepelAgainstModifier(int iUnitCombat, bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_COMBAT_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -1357,28 +1357,6 @@ int CvBuildingInfo::getNumUnitCombatProdModifiers() const
 int CvBuildingInfo::getUnitCombatProdModifier(int iUnitCombat) const
 {
 	for (UnitCombatModifierArray::const_iterator it = m_aUnitCombatProdModifiers.begin(); it != m_aUnitCombatProdModifiers.end(); ++it)
-	{
-		if ((*it).first == (UnitCombatTypes)iUnitCombat)
-		{
-			return (*it).second;
-		}
-	}
-
-	return 0;
-}
-
-int CvBuildingInfo::getNumUnitCombatOngoingTrainingDurations() const
-{
-	return m_aUnitCombatOngoingTrainingDurations.size();
-}
-
-int CvBuildingInfo::getUnitCombatOngoingTrainingDuration(int iUnitCombat, bool bForLoad) const
-{
-	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_ONGOING_TRAINING))
-	{
-		return 0;
-	}
-	for (UnitCombatModifierArray::const_iterator it = m_aUnitCombatOngoingTrainingDurations.begin(); it != m_aUnitCombatOngoingTrainingDurations.end(); ++it)
 	{
 		if ((*it).first == (UnitCombatTypes)iUnitCombat)
 		{
@@ -1952,7 +1930,6 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumC(iSum, m_aUnitCombatRepelAgainstModifiers);
 	CheckSumC(iSum, m_aUnitCombatDefenseAgainstModifiers);
 	CheckSumC(iSum, m_aUnitCombatProdModifiers);
-	CheckSumC(iSum, m_aUnitCombatOngoingTrainingDurations);
 	CheckSumC(iSum, m_aAfflictionOutbreakLevelChanges);
 	CheckSumC(iSum, m_aTechOutbreakLevelChanges);
 	CheckSumC(iSum, m_aiFreeTraitTypes);
@@ -3186,8 +3163,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->SetOptionalPairVector<UnitCombatModifierArray, UnitCombatTypes, int>(&m_aUnitCombatProdModifiers, L"UnitCombatProdModifiers");
 
-	pXML->SetOptionalPairVector<UnitCombatModifierArray, UnitCombatTypes, int>(&m_aUnitCombatOngoingTrainingDurations, L"UnitCombatOngoingTrainingDurations");
-
 	pXML->SetOptionalPairVector<PromotionLineModifierArray, PromotionLineTypes, int>(&m_aAfflictionOutbreakLevelChanges, L"AfflictionOutbreakLevelChanges");
 
 	pXML->SetOptionalPairVector<TechModifierArray, TechTypes, int>(&m_aTechOutbreakLevelChanges, L"TechOutbreakLevelChanges");
@@ -4183,16 +4158,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 			const UnitCombatTypes eUnitCombat = ((UnitCombatTypes)i);
 			const int iChange = pClassInfo->getUnitCombatProdModifier(i);
 			m_aUnitCombatProdModifiers.push_back(std::make_pair(eUnitCombat, iChange));
-		}
-	}
-
-	if (getNumUnitCombatOngoingTrainingDurations()==0)
-	{
-		for (int i=0; i < pClassInfo->getNumUnitCombatOngoingTrainingDurations(); i++)
-		{
-			const UnitCombatTypes eUnitCombat = ((UnitCombatTypes)i);
-			const int iChange = pClassInfo->getUnitCombatOngoingTrainingDuration(i, true);
-			m_aUnitCombatOngoingTrainingDurations.push_back(std::make_pair(eUnitCombat, iChange));
 		}
 	}
 

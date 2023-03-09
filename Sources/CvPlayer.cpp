@@ -215,6 +215,7 @@ m_cachedBonusCount(NULL)
 	//TB Traits end
 
 	m_bDisableHuman = false;
+	m_bUnitUpkeepDirty = true;
 
 	m_iStabilityIndex = 500;
 	m_iStabilityIndexAverage = 500;
@@ -230,6 +231,7 @@ m_cachedBonusCount(NULL)
 	CvWString m_szCivAdj;
 
 	m_bDoNotBotherStatus = NO_PLAYER;
+
 
 	// Free Tech Popup Fix
 	m_iChoosingFreeTech = 0;
@@ -365,7 +367,7 @@ void CvPlayer::initMore(PlayerTypes eID, LeaderHeadTypes ePersonality, bool bSet
 		setCommercePercent(((CommerceTypes)iI), GC.getCommerceInfo((CommerceTypes)iI).getInitialPercent());
 	}
 
-	if (GC.getGame().isOption(GAMEOPTION_RANDOM_PERSONALITIES) && !isNPC() && !isMinorCiv())
+	if (GC.getGame().isOption(GAMEOPTION_AI_RANDOM_PERSONALITIES) && !isNPC() && !isMinorCiv())
 	{
 		ePersonality = NO_LEADER;
 		int iBestValue = 0;
@@ -401,7 +403,7 @@ void CvPlayer::initMore(PlayerTypes eID, LeaderHeadTypes ePersonality, bool bSet
 		const int iNumCoreDefaultTraits = GC.getLeaderHeadInfo(ePersonality).getNumDefaultTraits();
 		const int iNumDefaultComplexTraits = GC.getLeaderHeadInfo(ePersonality).getNumDefaultComplexTraits();
 
-		if (GC.getGame().isOption(GAMEOPTION_COMPLEX_TRAITS) && iNumDefaultComplexTraits > 0)
+		if (GC.getGame().isOption(GAMEOPTION_LEADER_COMPLEX_TRAITS) && iNumDefaultComplexTraits > 0)
 		{
 			for (int iI = 0; iI < iNumDefaultComplexTraits; ++iI)
 			{
@@ -443,14 +445,6 @@ void CvPlayer::initMore(PlayerTypes eID, LeaderHeadTypes ePersonality, bool bSet
 	{
 		setCivics((CivicOptionTypes)iI, (CivicTypes)GC.getCivilizationInfo(getCivilizationType()).getCivilizationInitialCivics(iI));
 	}
-
-	for (int iI = 0; iI < GC.getNumUnitInfos(); ++iI)
-	{
-		if (GC.getUnitInfo((UnitTypes)iI).isFound())
-		{
-			setUnitExtraCost((UnitTypes)iI, getNewCityProductionValue());
-		}
-	}
 }
 
 
@@ -463,6 +457,10 @@ void CvPlayer::init(PlayerTypes eID)
 
 	if (GC.getInitCore().getSlotStatus(getID()) == SS_TAKEN || GC.getInitCore().getSlotStatus(getID()) == SS_COMPUTER)
 	{
+		if (eID == BARBARIAN_PLAYER)
+		{
+			GC.getGame().averageHandicaps();
+		}
 		initMore(eID, getLeaderType());
 
 		updateMaxAnarchyTurns();
@@ -485,7 +483,7 @@ void CvPlayer::init(PlayerTypes eID)
 		}
 	}
 
-	if (GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_DEVELOPING))
 	{
 		setLeaderHeadLevel(0);
 	}
@@ -597,7 +595,7 @@ void CvPlayer::resetPlotAndCityData()
 		plotX->setFoundValue(getID(), 0);
 
 		CvCity* city = plotX->getPlotCity();
-		if (city != NULL)
+		if (city)
 		{
 			city->setCulture(getID(), 0, false, false);
 			city->changeNumRevolts(getID(), -city->getNumRevolts(getID()));
@@ -702,7 +700,7 @@ void CvPlayer::uninit()
 
 	clearDiplomacy();
 
-	if (GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_DEVELOPING))
 	{
 		setLeaderHeadLevel(0);
 	}
@@ -807,6 +805,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iUpkeepModifier = 0;
 	m_iLevelExperienceModifier = 0;
 	m_iExtraHealth = 0;
+	m_iCivicHealth = 0;
 	m_iBuildingGoodHealth = 0;
 	m_iBuildingBadHealth = 0;
 	m_iExtraHappiness = 0;
@@ -921,6 +920,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iChoosingFreeTech = 0;
 
 	m_bDisableHuman = false;
+	m_bUnitUpkeepDirty = true;
 
 	m_iStabilityIndex = 500;
 	m_iStabilityIndexAverage = 500;
@@ -1366,8 +1366,8 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 		FAssertMsg(m_ppiSpecialistYieldPercentChanges==NULL, "about to leak memory, CvPlayer::m_ppiSpecialistYieldPercentChanges");
 		m_ppiSpecialistCommercePercentChanges = new int*[GC.getNumSpecialistInfos()];
 		m_ppiSpecialistYieldPercentChanges = new int*[GC.getNumSpecialistInfos()];
-	//Team Project (6)
 		m_paiEraAdvanceFreeSpecialistCount = new int[GC.getNumSpecialistInfos()];
+
 		for (iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 		{
 			m_ppiSpecialistCommercePercentChanges[iI] = new int[NUM_COMMERCE_TYPES];
@@ -1380,7 +1380,6 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 			{
 				m_ppiSpecialistYieldPercentChanges[iI][iJ] = 0;
 			}
-	//Team Project (6)
 			m_paiEraAdvanceFreeSpecialistCount[iI] = 0;
 		}
 
@@ -1439,7 +1438,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 
 void CvPlayer::changePersonalityType()
 {
-	if (GC.getGame().isOption(GAMEOPTION_RANDOM_PERSONALITIES))
+	if (GC.getGame().isOption(GAMEOPTION_AI_RANDOM_PERSONALITIES))
 	{
 		if (!isNPC())
 		{
@@ -1536,7 +1535,7 @@ void CvPlayer::changeLeader(LeaderHeadTypes eNewLeader)
 	int iNumDefaultComplexTraits = GC.getLeaderHeadInfo(eLeader).getNumDefaultComplexTraits();
 	TraitTypes eTrait = NO_TRAIT;
 
-	if (GC.getGame().isOption(GAMEOPTION_COMPLEX_TRAITS) && iNumDefaultComplexTraits > 0)
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_COMPLEX_TRAITS) && iNumDefaultComplexTraits > 0)
 	{
 		for (int iI = 0; iI < iNumDefaultComplexTraits; ++iI)
 		{
@@ -1831,7 +1830,7 @@ void CvPlayer::initFreeUnits()
 {
 	if (getStartingPlot() == NULL) return;
 
-	if (GC.getGame().isOption(GAMEOPTION_ADVANCED_START))
+	if (GC.getGame().isOption(GAMEOPTION_UNSUPPORTED_ADVANCED_START))
 	{
 		int iPoints = GC.getGame().getNumAdvancedStartPoints();
 
@@ -1865,7 +1864,7 @@ void CvPlayer::initFreeUnits()
 	{
 		const EraTypes startEra = GC.getGame().getStartEra();
 		const int iMult = (
-			GC.getGame().isOption(GAMEOPTION_ONE_CITY_CHALLENGE) ? 1
+			GC.getGame().isOption(GAMEOPTION_CHALLENGE_ONE_CITY) ? 1
 			:
 			std::max(1, GC.getEraInfo(startEra).getStartingUnitMultiplier())
 		);
@@ -2725,7 +2724,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 		if (!bConquest)
 		{
 			// Silences double ask for accepting new city from Revolution mod
-			if (!bTrade && !GC.getGame().isOption(GAMEOPTION_REVOLUTION))
+			if (!bTrade && !GC.getGame().isOption(GAMEOPTION_UNSUPPORTED_REVOLUTION))
 			{
 				if (bHuman)
 				{
@@ -2837,7 +2836,7 @@ void CvPlayer::getCivilizationCityName(CvWString& szBuffer, CivilizationTypes eC
 {
 	int iRandOffset = 0;
 
-	if (GC.getGame().isOption(GAMEOPTION_REVOLUTION) || GC.getGame().isOption(GAMEOPTION_BARBARIAN_CIV))
+	if (GC.getGame().isOption(GAMEOPTION_UNSUPPORTED_REVOLUTION) || GC.getGame().isOption(GAMEOPTION_BARBARIAN_CIV))
 	{
 		if (isNPC())
 		{
@@ -5962,7 +5961,7 @@ bool CvPlayer::canReceiveGoody(const CvPlot* pPlot, GoodyTypes eGoody, const CvU
 			return false;
 		}
 
-		if (GC.getGame().isOption(GAMEOPTION_ONE_CITY_CHALLENGE)
+		if (GC.getGame().isOption(GAMEOPTION_CHALLENGE_ONE_CITY)
 		&& GC.getUnitInfo((UnitTypes)GC.getGoodyInfo(eGoody).getGoodyUnit()).isFound())
 		{
 			return false;
@@ -5971,7 +5970,7 @@ bool CvPlayer::canReceiveGoody(const CvPlot* pPlot, GoodyTypes eGoody, const CvU
 
 	if (GC.getGoodyInfo(eGoody).getBarbarianUnit() != NO_UNIT)
 	{
-		if (GC.getGame().isOption(GAMEOPTION_NO_BARBARIANS) || pUnit == NULL)
+		if (GC.getGame().isOption(GAMEOPTION_BARBARIAN_NONE) || pUnit == NULL)
 		{
 			return false;
 		}
@@ -6203,7 +6202,7 @@ void CvPlayer::doGoody(CvPlot* pPlot, CvUnit* pUnit)
 
 bool CvPlayer::canFound(int iX, int iY, bool bTestVisible) const
 {
-	if (GC.getGame().isFinalInitialized() && GC.getGame().isOption(GAMEOPTION_ONE_CITY_CHALLENGE) && !isNPC() && getNumCities() > 0)
+	if (GC.getGame().isFinalInitialized() && GC.getGame().isOption(GAMEOPTION_CHALLENGE_ONE_CITY) && !isNPC() && getNumCities() > 0)
 	{
 		return false;
 	}
@@ -6438,7 +6437,7 @@ bool CvPlayer::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool
 
 	if (!bPropertySpawn)
 	{
-		if (GC.getGame().isOption(GAMEOPTION_ONE_CITY_CHALLENGE) && kUnit.isFound())
+		if (GC.getGame().isOption(GAMEOPTION_CHALLENGE_ONE_CITY) && kUnit.isFound())
 		{
 			return false;
 		}
@@ -6932,7 +6931,7 @@ int64_t CvPlayer::getBaseUnitCost100(const UnitTypes eUnit) const
 		iBaseCost /= 100;
 
 		int iMod = 100;
-		if (!GC.getGame().isOption(GAMEOPTION_BEELINE_STINGS))
+		if (!GC.getGame().isOption(GAMEOPTION_TECH_BEELINE_STINGS))
 		{
 			EraTypes eEra = (EraTypes)GC.getGame().getStartEra();
 			if (GC.getUnitInfo(eUnit).getEraInfo() != NO_ERA)
@@ -6947,7 +6946,7 @@ int64_t CvPlayer::getBaseUnitCost100(const UnitTypes eUnit) const
 		iBaseCost /= 100;
 
 		// Trade units aren't impacted by SM production reduction due to ROI oddities. They can't merge anyway, so...
-		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS) && GC.getUnitInfo(eUnit).getUnitCombatType() != GC.getInfoTypeForString("UNITCOMBAT_TRADE"))
+		if (GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS) && GC.getUnitInfo(eUnit).getUnitCombatType() != GC.getInfoTypeForString("UNITCOMBAT_TRADE"))
 		{
 			iMod = GC.getUNIT_PRODUCTION_PERCENT_SM();
 		}
@@ -6992,7 +6991,7 @@ int CvPlayer::getProductionNeeded(UnitTypes eUnit) const
 		const int iInstanceCostModifier = GC.getUnitInfo(eUnit).getInstanceCostModifier();
 		if (iInstanceCostModifier != 0)
 		{
-			if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+			if (GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 			{
 				iProductionNeeded = getModifiedIntValue64(iProductionNeeded, getUnitCountSM(eUnit) * iInstanceCostModifier);
 			}
@@ -7073,7 +7072,7 @@ int CvPlayer::getProductionNeeded(ProjectTypes eProject) const
 
 	const EraTypes eEra = getCurrentEra();
 	int iModifier = 0;
-	if (!GC.getGame().isOption(GAMEOPTION_BEELINE_STINGS) && GC.getProjectInfo(eProject).getTechPrereq() != NO_TECH)
+	if (!GC.getGame().isOption(GAMEOPTION_TECH_BEELINE_STINGS) && GC.getProjectInfo(eProject).getTechPrereq() != NO_TECH)
 	{
 		iModifier = GC.getEraInfo((EraTypes)GC.getTechInfo(GC.getProjectInfo(eProject).getTechPrereq()).getEra()).getCreatePercent();
 	}
@@ -7235,7 +7234,7 @@ int CvPlayer::getBuildingPrereqBuilding(BuildingTypes eBuilding, BuildingTypes e
 	}
 	if (kBuilding.isForceNoPrereqScaling() || isLimitedWonder(ePrereqBuilding))
 	{
-		if (iPrereqs > 1 && GC.getGame().isOption(GAMEOPTION_ONE_CITY_CHALLENGE))
+		if (iPrereqs > 1 && GC.getGame().isOption(GAMEOPTION_CHALLENGE_ONE_CITY))
 		{
 			return 1;
 		}
@@ -7248,7 +7247,7 @@ int CvPlayer::getBuildingPrereqBuilding(BuildingTypes eBuilding, BuildingTypes e
 		iPrereqs *= 1 + getBuildingCount(eBuilding) + iExtra;
 	}
 
-	if (iPrereqs > 1 && GC.getGame().isOption(GAMEOPTION_ONE_CITY_CHALLENGE))
+	if (iPrereqs > 1 && GC.getGame().isOption(GAMEOPTION_CHALLENGE_ONE_CITY))
 	{
 		return 1;
 	}
@@ -7978,7 +7977,7 @@ int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 	}
 	int iModifier = 100;
 
-	if (GC.getGame().isOption(GAMEOPTION_WIN_FOR_LOSING) && (!isHumanPlayer() || !GC.getGame().isOption(GAMEOPTION_NO_TECH_HANDICAPS_FOR_HUMANS)))
+	if (GC.getGame().isOption(GAMEOPTION_TECH_WIN_FOR_LOSING) && (!isHumanPlayer() || !GC.getGame().isOption(GAMEOPTION_TECH_NO_HANDICAPS_FOR_HUMANS)))
 	{
 		if ((int)getCurrentEra() > 0)
 		{
@@ -7986,7 +7985,7 @@ int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 		}
 	}
 
-	if(GC.getGame().isOption(GAMEOPTION_TECH_DIFFUSION) && (!isHumanPlayer() || !GC.getGame().isOption(GAMEOPTION_NO_TECH_HANDICAPS_FOR_HUMANS)))
+	if(GC.getGame().isOption(GAMEOPTION_TECH_DIFFUSION) && (!isHumanPlayer() || !GC.getGame().isOption(GAMEOPTION_TECH_NO_HANDICAPS_FOR_HUMANS)))
 	{
 		double knownExp = 0.0;
 		// Tech flows better through open borders
@@ -8152,7 +8151,7 @@ bool CvPlayer::canEverResearch(TechTypes eTech) const
 
 	// Limited religions must not allow a player to hoard religious techs to deny the religions from being founded anywhere.
 	// Religion techs are global and can thus only be invented once by one player in a game.
-	if (GC.getGame().isOption(GAMEOPTION_LIMITED_RELIGIONS) && !canFoundReligion())
+	if (GC.getGame().isOption(GAMEOPTION_RELIGION_LIMITED) && !canFoundReligion())
 	{
 		foreach_(const CvReligionInfo* info, GC.getReligionInfos())
 		{
@@ -8614,7 +8613,7 @@ int CvPlayer::countHolyCities() const
 void CvPlayer::foundReligion(ReligionTypes eReligion, ReligionTypes eSlotReligion, bool bAward)
 {
 	//TB Prophet Mod
-	if(GC.getGame().isOption(GAMEOPTION_DIVINE_PROPHETS))
+	if(GC.getGame().isOption(GAMEOPTION_RELIGION_DIVINE_PROPHETS))
 	{
 		return;
 	}
@@ -8632,7 +8631,7 @@ void CvPlayer::foundReligion(ReligionTypes eReligion, ReligionTypes eSlotReligio
 	// Clear queued religious techs for human player when founding a religion
 	// Religious techs are not researchable after founding a religion under "Limited Religions" rules
 	// AI always clear their entire tech queue when a religion is founded in CvTeam::setHasTech
-	if (GC.getGame().isOption(GAMEOPTION_LIMITED_RELIGIONS))
+	if (GC.getGame().isOption(GAMEOPTION_RELIGION_LIMITED))
 	{
 		foreach_(const CvReligionInfo* info, GC.getReligionInfos())
 		{
@@ -9925,7 +9924,7 @@ void CvPlayer::changeRevIdxGoodReligionMod(float fChange)
 
 bool CvPlayer::isInquisitionConditions() const
 {
-	return GC.getGame().isOption(GAMEOPTION_INQUISITIONS) && getStateReligion() != NO_RELIGION && m_iInquisitionCount > 0;
+	return GC.getGame().isOption(GAMEOPTION_RELIGION_INQUISITIONS) && getStateReligion() != NO_RELIGION && m_iInquisitionCount > 0;
 }
 
 //TB Note: Should be unnecessary now but leaving it in for a bit to allow for a reversal of method if needbe.
@@ -9933,7 +9932,7 @@ bool CvPlayer::isInquisitionConditions() const
 //{
 //	m_bInquisitionConditions = false;
 //
-//	if (!GC.getGame().isOption(GAMEOPTION_INQUISITIONS) || getStateReligion() == NO_RELIGION)
+//	if (!GC.getGame().isOption(GAMEOPTION_RELIGION_INQUISITIONS) || getStateReligion() == NO_RELIGION)
 //	{
 //		return;
 //	}
@@ -9971,7 +9970,7 @@ bool CvPlayer::canFoundReligion() const
 		return false;
 	}
 
-	if(GC.getGame().isOption(GAMEOPTION_LIMITED_RELIGIONS))
+	if(GC.getGame().isOption(GAMEOPTION_RELIGION_LIMITED))
 	{
 		if( ((getNumCities() > 1) && !(isRebel())) || !GC.isLIMITED_RELIGIONS_EXCEPTIONS() )
 		{
@@ -10031,7 +10030,7 @@ void CvPlayer::changeBaseFreeUnitUpkeepCivilian(const int iChange)
 	if (iChange != 0)
 	{
 		m_iBaseFreeUnitUpkeepCivilian += iChange;
-		calcFinalUnitUpkeep();
+		m_bUnitUpkeepDirty = true;
 	}
 }
 
@@ -10045,7 +10044,7 @@ void CvPlayer::changeBaseFreeUnitUpkeepMilitary(const int iChange)
 	if (iChange != 0)
 	{
 		m_iBaseFreeUnitUpkeepMilitary += iChange;
-		calcFinalUnitUpkeep();
+		m_bUnitUpkeepDirty = true;
 	}
 }
 
@@ -10059,7 +10058,7 @@ void CvPlayer::changeFreeUnitUpkeepCivilianPopPercent(const int iChange)
 	if (iChange != 0)
 	{
 		m_iFreeUnitUpkeepCivilianPopPercent += iChange;
-		calcFinalUnitUpkeep();
+		m_bUnitUpkeepDirty = true;
 	}
 }
 
@@ -10073,7 +10072,7 @@ void CvPlayer::changeFreeUnitUpkeepMilitaryPopPercent(const int iChange)
 	if (iChange != 0)
 	{
 		m_iFreeUnitUpkeepMilitaryPopPercent += iChange;
-		calcFinalUnitUpkeep();
+		m_bUnitUpkeepDirty = true;
 	}
 }
 
@@ -10101,7 +10100,7 @@ void CvPlayer::changeCivilianUnitUpkeepMod(const int iChange)
 	if (iChange != 0)
 	{
 		m_iCivilianUnitUpkeepMod += iChange;
-		calcFinalUnitUpkeep();
+		m_bUnitUpkeepDirty = true;
 	}
 }
 void CvPlayer::changeMilitaryUnitUpkeepMod(const int iChange)
@@ -10109,7 +10108,7 @@ void CvPlayer::changeMilitaryUnitUpkeepMod(const int iChange)
 	if (iChange != 0)
 	{
 		m_iMilitaryUnitUpkeepMod += iChange;
-		calcFinalUnitUpkeep();
+		m_bUnitUpkeepDirty = true;
 	}
 }
 
@@ -10123,7 +10122,7 @@ void CvPlayer::changeUnitUpkeep(const int iChange, const bool bMilitary)
 			m_iUnitUpkeepMilitary100 += iChange;
 		else m_iUnitUpkeepCivilian100 += iChange;
 
-		calcFinalUnitUpkeep();
+		m_bUnitUpkeepDirty = true;
 	}
 }
 
@@ -10188,10 +10187,10 @@ int64_t CvPlayer::getUnitUpkeepNet(const bool bMilitary, const int iUnitUpkeep) 
 
 int64_t CvPlayer::getFinalUnitUpkeep() const
 {
-	return m_iFinalUnitUpkeep;
+	return m_bUnitUpkeepDirty ? calcFinalUnitUpkeep() : m_iFinalUnitUpkeep;
 }
 
-int64_t CvPlayer::calcFinalUnitUpkeep(const bool bReal)
+int64_t CvPlayer::calcFinalUnitUpkeep(const bool bReal) const
 {
 	if (isNPC())
 	{
@@ -10204,7 +10203,18 @@ int64_t CvPlayer::calcFinalUnitUpkeep(const bool bReal)
 
 	if (iCalc > 0)
 	{
-		applyUnitUpkeepHandicap(iCalc);
+		// Difficulty adjustment
+		iCalc *= GC.getHandicapInfo(getHandicapType()).getUnitUpkeepPercent();
+		iCalc /= 100;
+
+		if (!isHumanPlayer())
+		{
+			iCalc *= GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIUnitUpkeepPercent();
+			iCalc /= 100;
+
+			iCalc *= std::max(0, 100 + GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIPerEraModifier() * getCurrentEra());
+			iCalc /= 100;
+		}
 	}
 	if (iCalc < 0)
 	{
@@ -10214,6 +10224,7 @@ int64_t CvPlayer::calcFinalUnitUpkeep(const bool bReal)
 	if (bReal)
 	{
 		m_iFinalUnitUpkeep = iCalc;
+		m_bUnitUpkeepDirty = false;
 
 		// Refresh relevant UI
 		if (getID() == GC.getGame().getActivePlayer())
@@ -10222,22 +10233,6 @@ int64_t CvPlayer::calcFinalUnitUpkeep(const bool bReal)
 		}
 	}
 	return iCalc;
-}
-
-void CvPlayer::applyUnitUpkeepHandicap(int64_t& iUpkeep)
-{
-	// Difficulty adjustment
-	iUpkeep *= GC.getHandicapInfo(getHandicapType()).getUnitUpkeepPercent();
-	iUpkeep /= 100;
-
-	if (!isHumanPlayer())
-	{
-		iUpkeep *= GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIUnitUpkeepPercent();
-		iUpkeep /= 100;
-
-		iUpkeep *= std::max(0, 100 + GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIPerEraModifier() * getCurrentEra());
-		iUpkeep /= 100;
-	}
 }
 
 int CvPlayer::getFinalUnitUpkeepChange(const int iExtra, const bool bMilitary)
@@ -10605,6 +10600,29 @@ void CvPlayer::changeLevelExperienceModifier(int iChange)
 }
 
 
+int CvPlayer::getCivicHealth() const
+{
+	// AIAndy: Barbarians do not get player wide unhealthiness
+	if (isNPC() && m_iCivicHealth < 0)
+	{
+		return 0;
+	}
+	return m_iCivicHealth;
+}
+
+void CvPlayer::changeCivicHealth(const int iChange, const bool bLimited)
+{
+	if (iChange != 0)
+	{
+		m_iCivicHealth += iChange;
+
+		if (!bLimited)
+		{
+			AI_makeAssignWorkDirty();
+		}
+	}
+}
+
 int CvPlayer::getExtraHealth() const
 {
 	// AIAndy: Barbarians do not get player wide unhealthiness
@@ -10615,23 +10633,12 @@ int CvPlayer::getExtraHealth() const
 	return m_iExtraHealth;
 }
 
-
-void CvPlayer::changeExtraHealth(int iChange, bool bLimited)
+void CvPlayer::changeExtraHealth(int iChange)
 {
 	if (iChange != 0)
 	{
 		m_iExtraHealth += iChange;
-
-		//AIAndy: Barbarians do not get player wide unhealthiness
-		if (m_iExtraHealth < 0 && isNPC())
-		{
-			m_iExtraHealth = 0;
-		}
-
-		if (!bLimited)
-		{
-			AI_makeAssignWorkDirty();
-		}
+		AI_makeAssignWorkDirty();
 	}
 }
 
@@ -11455,7 +11462,7 @@ void CvPlayer::changeTechScore(int iChange)
 	if (iChange != 0)
 	{
 		m_iTechScore += iChange;
-		FASSERT_NOT_NEGATIVE(getTechScore());
+		FASSERT_NOT_NEGATIVE(m_iTechScore);
 
 		GC.getGame().setScoreDirty(true);
 
@@ -11662,7 +11669,7 @@ void CvPlayer::setAlive(bool bNewValue)
 			killUnits();
 
 			clearTileCulture();
-			if (!GC.getGame().isOption(GAMEOPTION_REVOLUTION))
+			if (!GC.getGame().isOption(GAMEOPTION_UNSUPPORTED_REVOLUTION))
 			{
 				clearCityCulture();
 			}
@@ -11806,7 +11813,7 @@ void CvPlayer::verifyAlive()
 				getNumUnits() == 0
 				||
 				// Are units enough to stay alive?
-				!GC.getGame().isOption(GAMEOPTION_COMPLETE_KILLS) // If option is active, YES.
+				!GC.getGame().isOption(GAMEOPTION_EXP_COMPLETE_KILLS) // If option is active, YES.
 				&&
 				!isRebel() // Rebel players do not need cities
 				&&
@@ -13521,7 +13528,7 @@ bool CvPlayer::isUnitMaxedOut(const UnitTypes eIndex, const int iExtra) const
 	{
 		return false;
 	}
-	if (GC.getGame().isOption(GAMEOPTION_UNLIMITED_NATIONAL_UNITS)
+	if (GC.getGame().isOption(GAMEOPTION_NO_NATIONAL_UNIT_LIMIT)
 	&& !GC.getUnitInfo(eIndex).isUnlimitedException())
 	{
 		return false;
@@ -13541,35 +13548,11 @@ void CvPlayer::recalculateUnitCounts()
 {
 	PROFILE_FUNC();
 
-	// @SAVEBREAK REPLACE - Toffer
-	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
-	{
-		foreach_(CvUnit* unit, units())
-		{
-			if (unit->groupRank() > 0)
-			{
-				m_unitCountSM[(short)unit->getUnitType()] += intPow(3, unit->groupRank() - 1);
-			}
-			unit->recalculateUnitUpkeep();
-			unit->area()->changePower(getID(), unit->getPowerValueTotal());
-		}
-	}
-	// If SM is on, we count how many trained-unit equivalents are present, not purely units themselves, after resetting the count.
-	else
-	{
-		foreach_(CvUnit* unit, units())
-		{
-			unit->recalculateUnitUpkeep();
-			unit->area()->changePower(getID(), unit->getPowerValueTotal());
-		}
-	}
-	/* REPLACE WITH
 	foreach_(CvUnit* unit, units())
 	{
 		unit->recalculateUnitUpkeep();
 		unit->area()->changePower(getID(), unit->getPowerValueTotal());
 	}
-	// SAVEBREAK@ */
 }
 
 void CvPlayer::changeUnitCount(const UnitTypes eUnit, const int iChange)
@@ -15665,7 +15648,7 @@ bool CvPlayer::canDoEspionageMission(EspionageMissionTypes eMission, PlayerTypes
 	{
 		return false;
 	}
-	if (kMission.isRevolt() && !GC.getGame().isOption(GAMEOPTION_REVOLUTION))
+	if (kMission.isRevolt() && !GC.getGame().isOption(GAMEOPTION_UNSUPPORTED_REVOLUTION))
 	{
 		return false;
 	}
@@ -16969,7 +16952,7 @@ void CvPlayer::doAdvancedStartAction(AdvancedStartActionTypes eAction, int iX, i
 					else if (pCity->getPopulation() > 1)
 					{
 						pCity->setFood(pCity->growthThreshold() / 2);
-						pCity->setFoodKept((pCity->getFood() * pCity->getMaxFoodKeptPercent()) / 100);
+						pCity->setFoodKept(pCity->getFood() * pCity->getFoodKeptPercent() / 100);
 					}
 				}
 			}
@@ -17038,7 +17021,7 @@ void CvPlayer::doAdvancedStartAction(AdvancedStartActionTypes eAction, int iX, i
 						changeAdvancedStartPoints(-iCost);
 						if (GC.getBuildingInfo(eBuilding).getFoodKept() != 0)
 						{
-							pCity->setFoodKept((pCity->getFood() * pCity->getMaxFoodKeptPercent()) / 100);
+							pCity->setFoodKept(pCity->getFood() * pCity->getFoodKeptPercent() / 100);
 						}
 					}
 				}
@@ -17050,7 +17033,7 @@ void CvPlayer::doAdvancedStartAction(AdvancedStartActionTypes eAction, int iX, i
 					changeAdvancedStartPoints(iCost);
 					if (GC.getBuildingInfo(eBuilding).getFoodKept() != 0)
 					{
-						pCity->setFoodKept((pCity->getFood() * pCity->getMaxFoodKeptPercent()) / 100);
+						pCity->setFoodKept(pCity->getFood() * pCity->getFoodKeptPercent() / 100);
 					}
 				}
 			}
@@ -17950,24 +17933,6 @@ void CvPlayer::verifyGoldCommercePercent()
 	}
 }
 
-int CvPlayer::getCivicHealth() const
-{
-	int	iTotal = 0;
-
-	for(int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
-	{
-		const CivicTypes eCivic = getCivics((CivicOptionTypes)iI);
-
-		if ( eCivic != NO_CIVIC )
-		{
-			const CvCivicInfo& kCivic = GC.getCivicInfo(eCivic);
-
-			iTotal += kCivic.getExtraHealth();
-		}
-	}
-
-	return iTotal;
-}
 
 void CvPlayer::processCivics(const CivicTypes eCivic, const int iChange, const bool bLimited)
 {
@@ -18177,7 +18142,7 @@ void CvPlayer::processCivics(const CivicTypes eCivic, const int iChange, const b
 	changeTaxRateUnhappiness(kCivic.getTaxRateUnhappiness() * iChange);
 	changeHappyPerMilitaryUnit(kCivic.getHappyPerMilitaryUnit() * iChange,  bLimited);
 
-	changeExtraHealth(kCivic.getExtraHealth() * iChange,  bLimited);
+	changeCivicHealth(kCivic.getExtraHealth() * iChange,  bLimited);
 	changeNoUnhealthyPopulationCount(kCivic.isNoUnhealthyPopulation() * iChange, bLimited);
 	changeBuildingOnlyHealthyCount(kCivic.isBuildingOnlyHealthy() * iChange, bLimited);
 
@@ -18265,13 +18230,6 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		// Init data before load
 		reset();
 
-		// @SAVEBREAK DELETE - Toffer
-		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iMADDeterrent, SAVE_VALUE_ANY);
-		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iMADIncoming, SAVE_VALUE_ANY);
-		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iMADOutgoing, SAVE_VALUE_ANY);
-		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iMADNukesCount, SAVE_VALUE_ANY);
-		// SAVEBREAK@
-
 		int m_iStartingX, m_iStartingY;
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iStartingX);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iStartingY);
@@ -18342,6 +18300,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iUpkeepModifier);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iLevelExperienceModifier);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iExtraHealth);
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iCivicHealth);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iBuildingGoodHealth);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iBuildingBadHealth);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iExtraHappiness);
@@ -18446,241 +18405,6 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_FEATURES, GC.getNumFeatureInfos(), m_paiFeatureHappiness);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingCount);
 
-		// Toffer - Read maps
-		{
-			short iSize = 0;
-			short iType;
-			char cCount;
-			int iCount;
-			short sCount;
-			uint16_t sCountU;
-			uint32_t iCountU;
-			// Bonus counters
-			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iBonusExportSize");
-			while (iSize-- > 0)
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iBonusExportType");
-				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCountU, "iBonusExportCount");
-				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BONUSES, iType, true));
-
-				if (iType > -1)
-				{
-					m_bonusExport.insert(std::make_pair(iType, iCountU));
-				}
-			}
-			iSize = 0;
-			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iBonusImportSize");
-			while (iSize-- > 0)
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iBonusImportType");
-				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCountU, "iBonusImportCount");
-				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BONUSES, iType, true));
-
-				if (iType > -1)
-				{
-					m_bonusImport.insert(std::make_pair(iType, iCountU));
-				}
-			}
-			iSize = 0;
-			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iBonusMintedPercentSize");
-			while (iSize-- > 0)
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iBonusMintedPercentType");
-				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCount, "iBonusMintedPercentCount");
-				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BONUSES, iType, true));
-
-				if (iType > -1)
-				{
-					m_bonusMintedPercent.insert(std::make_pair(iType, iCount));
-				}
-			}
-			// Building counters
-			iSize = 0;
-			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iBuildingMakingSize");
-			while (iSize-- > 0)
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iBuildingMakingType");
-				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCountU, "iBuildingMakingCount");
-				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BUILDINGS, iType, true));
-
-				if (iType > -1)
-				{
-					m_buildingMaking.insert(std::make_pair(iType, iCountU));
-				}
-			}
-			iSize = 0;
-			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iFreeBuildingCountSize");
-			while (iSize-- > 0)
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iFreeBuildingCountType");
-				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &sCountU, "iFreeBuildingCountCount");
-				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BUILDINGS, iType, true));
-
-				if (iType > -1)
-				{
-					m_freeBuildingCount.insert(std::make_pair(iType, sCountU));
-				}
-			}
-			iSize = 0;
-			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iExtraBuildingHappinessSize");
-			while (iSize-- > 0)
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iExtraBuildingHappinessType");
-				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCount, "iExtraBuildingHappinessCount");
-				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BUILDINGS, iType, true));
-
-				if (iType > -1)
-				{
-					m_extraBuildingHappiness.insert(std::make_pair(iType, iCount));
-				}
-			}
-			iSize = 0;
-			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iExtraBuildingHealthSize");
-			while (iSize-- > 0)
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iExtraBuildingHealthType");
-				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCount, "iExtraBuildingHealthCount");
-				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BUILDINGS, iType, true));
-
-				if (iType > -1)
-				{
-					m_extraBuildingHealth.insert(std::make_pair(iType, iCount));
-				}
-			}
-			iSize = 0;
-			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iBuildingProductionModSize");
-			while (iSize-- > 0)
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iBuildingProductionModType");
-				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCount, "iBuildingProductionModCount");
-				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BUILDINGS, iType, true));
-
-				if (iType > -1)
-				{
-					m_buildingProductionMod.insert(std::make_pair(iType, iCount));
-				}
-			}
-			iSize = 0;
-			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iBuildingCostModSize");
-			while (iSize-- > 0)
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iBuildingCostModType");
-				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCount, "iBuildingCostModCount");
-				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BUILDINGS, iType, true));
-
-				if (iType > -1)
-				{
-					m_buildingCostMod.insert(std::make_pair(iType, iCount));
-				}
-			}
-			// Unit counters
-			iSize = 0;
-			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iUnitCountSize");
-			while (iSize-- > 0)
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iUnitCountType");
-				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCountU, "iUnitCountCount");
-				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_UNITS, iType, true));
-
-				if (iType > -1)
-				{
-					m_unitCount.insert(std::make_pair(iType, iCountU));
-				}
-			}
-			iSize = 0;
-			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iUnitMakingSize");
-			while (iSize-- > 0)
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iUnitMakingType");
-				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCountU, "iUnitMakingCount");
-				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_UNITS, iType, true));
-
-				if (iType > -1)
-				{
-					m_unitMaking.insert(std::make_pair(iType, iCountU));
-				}
-			}
-			iSize = 0;
-			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iGreatGeneralPointsTypeSize");
-			while (iSize-- > 0)
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iGreatGeneralPointsTypeType");
-				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCountU, "iGreatGeneralPointsTypeCount");
-				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_UNITS, iType, true));
-
-				if (iType > -1)
-				{
-					m_greatGeneralPointsType.insert(std::make_pair(iType, iCountU));
-				}
-			}
-			iSize = 0;
-			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iGoldenAgeOnBirthOfGreatPersonCountSize");
-			while (iSize-- > 0)
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iGoldenAgeOnBirthOfGreatPersonCountType");
-				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &cCount, "iGoldenAgeOnBirthOfGreatPersonCountCount");
-				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_UNITS, iType, true));
-
-				if (iType > -1)
-				{
-					m_goldenAgeOnBirthOfGreatPersonCount.insert(std::make_pair(iType, cCount));
-				}
-			}
-			iSize = 0;
-			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iGreatPeopleRateforUnitSize");
-			while (iSize-- > 0)
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iGreatPeopleRateforUnitType");
-				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCount, "iGreatPeopleRateforUnitCount");
-				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_UNITS, iType, true));
-
-				if (iType > -1)
-				{
-					m_greatPeopleRateforUnit.insert(std::make_pair(iType, iCount));
-				}
-			}
-			iSize = 0;
-			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iUnitProductionModSize");
-			while (iSize-- > 0)
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iUnitProductionModType");
-				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCount, "iUnitProductionModCount");
-				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_UNITS, iType, true));
-
-				if (iType > -1)
-				{
-					m_unitProductionMod.insert(std::make_pair(iType, iCount));
-				}
-			}
-			// Unit-Combat counters
-			iSize = 0;
-			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iUnitCombatProductionModSize");
-			while (iSize-- > 0)
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iUnitCombatProductionModType");
-				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCount, "iUnitCombatProductionModCount");
-				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iType, true));
-
-				if (iType > -1)
-				{
-					m_unitCombatProductionMod.insert(std::make_pair(iType, iCount));
-				}
-			}
-			iSize = 0;
-			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iUnitCombatFreeXPSize");
-			while (iSize-- > 0)
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iUnitCombatFreeXPType");
-				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &sCount, "iUnitCombatFreeXPCount");
-				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iType, true));
-
-				if (iType > -1)
-				{
-					m_unitCombatFreeXP.insert(std::make_pair(iType, sCount));
-				}
-			}
-		}
-
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_HURRIES, GC.getNumHurryInfos(), m_paiHurryCount);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIAL_BUILDINGS, GC.getNumSpecialBuildingInfos(), m_paiSpecialBuildingNotRequiredCount);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_CIVIC_OPTIONS, GC.getNumCivicOptionInfos(), m_paiHasCivicOptionCount);
@@ -18709,17 +18433,11 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iProjectHealth);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iProjectHappiness);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iForceAllTradeRoutes);
-		// @SAVEBREAK DELETE - Toffer
-		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iWorldTradeRoutes, SAVE_VALUE_ANY);
-		// SAVEBREAK@
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iCivilizationHealth);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iBuildingInflation);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iProjectInflation);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iTechInflation);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iCivicInflation);
-		// @SAVEBREAK DELETE - Toffer
-		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_accruedCostRatioTimes10000, SAVE_VALUE_ANY);
-		// SAVEBREAK@
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iHurryCostModifier);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iHurryInflationModifier);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iHurryCount);
@@ -18963,11 +18681,12 @@ void CvPlayer::read(FDataStreamBase* pStream)
 				m_cityNames.insertAtEnd(szBuffer);
 			}
 		}
-#ifdef BREAK_SAVES
-		for (int i = 0; i < NUM_MAPS; i++)
-#else
-		for (int i = 0; i < 1; i++)
-#endif
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iMaxTradeRoutesAdjustment);
+
+		int iSize;
+		WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "NUM_MAPS");
+
+		for (int i = 0; i < iSize; i++)
 		{
 			m_groupCycles[i]->Read(pStream);
 			ReadStreamableFFreeListTrashArray(*m_plotGroups[i], pStream);
@@ -19218,12 +18937,6 @@ void CvPlayer::read(FDataStreamBase* pStream)
 				EventTypes eEvent = NO_EVENT;
 				WRAPPER_READ_CLASS_ENUM_ALLOW_MISSING(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_EVENTS, (int*)&eEvent);
 
-				if ( eEvent == NO_EVENT )
-				{
-					//	Old format so go for a raw read as the best we can do
-					WRAPPER_READ(wrapper, "CvPlayer", (int*)&eEvent);
-				}
-
 				kData.read(pStream);
 				if (eEvent != NO_EVENT)
 				{
@@ -19451,14 +19164,6 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iInquisitionCount);
 		WRAPPER_READ_ARRAY(wrapper, "CvPlayer", NUM_YIELD_TYPES, m_aiLessYieldThreshold);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iCompatCheckCount);
-		// SAVEBREAK - Toffer - Move this to before cities are read in at ReadStreamableFFreeListTrashArray(*m_cities[i], pStream);
-		WRAPPER_READ(wrapper, "CvPlayer", &m_iMaxTradeRoutesAdjustment);
-		// And get rid of this stuff, do the resize when reading in m_paTradeCities for cities.
-		foreach_(CvCity* cityX, cities())
-		{
-			cityX->resizeTradeRouteVector();
-		}
-		// ! SAVEBREAK
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iNationalHurryAngerModifier);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iNationalEnemyWarWearinessModifier);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iNationalBombardDefenseModifier);
@@ -19514,9 +19219,6 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIAL_BUILDINGS, GC.getNumSpecialBuildingInfos(), m_paiBuildingGroupMaking);
 
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iArrestingUnit);
-		// @SAVEBREAK DELETE
-		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_bPopBad, SAVE_VALUE_ANY);
-		// SAVEBREAK@
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iUpgradeRoundCount);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iSelectionRegroup);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iFreedomFighterCount);
@@ -19524,37 +19226,249 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iNationalGreatPeopleRate);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iCivilianUnitUpkeepMod);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iMilitaryUnitUpkeepMod);
-
-		double fUnitUpkeepCivilian100;
-		WRAPPER_READ(wrapper, "CvPlayer", &fUnitUpkeepCivilian100);
-		m_iUnitUpkeepCivilian100 = static_cast<int64_t>(fUnitUpkeepCivilian100 + 0.01);
-
-		double fUnitUpkeepMilitary100;
-		WRAPPER_READ(wrapper, "CvPlayer", &fUnitUpkeepMilitary100);
-		m_iUnitUpkeepMilitary100 = static_cast<int64_t>(fUnitUpkeepMilitary100 + 0.01);
-
-		double fFinalUnitUpkeep;
-		WRAPPER_READ(wrapper, "CvPlayer", &fFinalUnitUpkeep);
-		m_iFinalUnitUpkeep = static_cast<int64_t>(fFinalUnitUpkeep + 0.01);
-
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iUnitUpkeepCivilian100);
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iUnitUpkeepMilitary100);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iBaseFreeUnitUpkeepCivilian);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iBaseFreeUnitUpkeepMilitary);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iFreeUnitUpkeepCivilianPopPercent);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iFreeUnitUpkeepMilitaryPopPercent);
-
-		double fGold;
-		WRAPPER_READ(wrapper, "CvPlayer", &fGold);
-		m_iGold += static_cast<int64_t>(fGold + 0.01); // +0.01 to avoid different rounding result on different CPU's
-
-		double fCulture;
-		WRAPPER_READ(wrapper, "CvPlayer", &fCulture);
-		m_iCulture += static_cast<int64_t>(fCulture + 0.01); // +0.01 to avoid different rounding result on different CPU's
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iGold);
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iCulture);
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iMinTaxIncome);
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iMaxTaxIncome);
 
 		// Toffer - Read maps
 		{
-			short iSize = 0;
+			short iSize;
 			short iType;
+			char cCount;
+			int iCount;
+			short sCount;
+			uint16_t sCountU;
 			uint32_t iCountU;
+			// Bonus counters
+			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iBonusExportSize");
+			while (iSize-- > 0)
+			{
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iBonusExportType");
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCountU, "iBonusExportCount");
+				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BONUSES, iType, true));
+
+				if (iType > -1)
+				{
+					m_bonusExport.insert(std::make_pair(iType, iCountU));
+				}
+			}
+
+			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iBonusImportSize");
+			while (iSize-- > 0)
+			{
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iBonusImportType");
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCountU, "iBonusImportCount");
+				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BONUSES, iType, true));
+
+				if (iType > -1)
+				{
+					m_bonusImport.insert(std::make_pair(iType, iCountU));
+				}
+			}
+
+			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iBonusMintedPercentSize");
+			while (iSize-- > 0)
+			{
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iBonusMintedPercentType");
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCount, "iBonusMintedPercentCount");
+				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BONUSES, iType, true));
+
+				if (iType > -1)
+				{
+					m_bonusMintedPercent.insert(std::make_pair(iType, iCount));
+				}
+			}
+			// Building counters
+
+			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iBuildingMakingSize");
+			while (iSize-- > 0)
+			{
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iBuildingMakingType");
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCountU, "iBuildingMakingCount");
+				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BUILDINGS, iType, true));
+
+				if (iType > -1)
+				{
+					m_buildingMaking.insert(std::make_pair(iType, iCountU));
+				}
+			}
+
+			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iFreeBuildingCountSize");
+			while (iSize-- > 0)
+			{
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iFreeBuildingCountType");
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &sCountU, "iFreeBuildingCountCount");
+				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BUILDINGS, iType, true));
+
+				if (iType > -1)
+				{
+					m_freeBuildingCount.insert(std::make_pair(iType, sCountU));
+				}
+			}
+
+			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iExtraBuildingHappinessSize");
+			while (iSize-- > 0)
+			{
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iExtraBuildingHappinessType");
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCount, "iExtraBuildingHappinessCount");
+				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BUILDINGS, iType, true));
+
+				if (iType > -1)
+				{
+					m_extraBuildingHappiness.insert(std::make_pair(iType, iCount));
+				}
+			}
+
+			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iExtraBuildingHealthSize");
+			while (iSize-- > 0)
+			{
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iExtraBuildingHealthType");
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCount, "iExtraBuildingHealthCount");
+				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BUILDINGS, iType, true));
+
+				if (iType > -1)
+				{
+					m_extraBuildingHealth.insert(std::make_pair(iType, iCount));
+				}
+			}
+
+			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iBuildingProductionModSize");
+			while (iSize-- > 0)
+			{
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iBuildingProductionModType");
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCount, "iBuildingProductionModCount");
+				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BUILDINGS, iType, true));
+
+				if (iType > -1)
+				{
+					m_buildingProductionMod.insert(std::make_pair(iType, iCount));
+				}
+			}
+
+			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iBuildingCostModSize");
+			while (iSize-- > 0)
+			{
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iBuildingCostModType");
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCount, "iBuildingCostModCount");
+				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BUILDINGS, iType, true));
+
+				if (iType > -1)
+				{
+					m_buildingCostMod.insert(std::make_pair(iType, iCount));
+				}
+			}
+			// Unit counters
+			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iUnitCountSize");
+			while (iSize-- > 0)
+			{
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iUnitCountType");
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCountU, "iUnitCountCount");
+				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_UNITS, iType, true));
+
+				if (iType > -1)
+				{
+					m_unitCount.insert(std::make_pair(iType, iCountU));
+				}
+			}
+
+			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iUnitMakingSize");
+			while (iSize-- > 0)
+			{
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iUnitMakingType");
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCountU, "iUnitMakingCount");
+				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_UNITS, iType, true));
+
+				if (iType > -1)
+				{
+					m_unitMaking.insert(std::make_pair(iType, iCountU));
+				}
+			}
+
+			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iGreatGeneralPointsTypeSize");
+			while (iSize-- > 0)
+			{
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iGreatGeneralPointsTypeType");
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCountU, "iGreatGeneralPointsTypeCount");
+				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_UNITS, iType, true));
+
+				if (iType > -1)
+				{
+					m_greatGeneralPointsType.insert(std::make_pair(iType, iCountU));
+				}
+			}
+
+			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iGoldenAgeOnBirthOfGreatPersonCountSize");
+			while (iSize-- > 0)
+			{
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iGoldenAgeOnBirthOfGreatPersonCountType");
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &cCount, "iGoldenAgeOnBirthOfGreatPersonCountCount");
+				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_UNITS, iType, true));
+
+				if (iType > -1)
+				{
+					m_goldenAgeOnBirthOfGreatPersonCount.insert(std::make_pair(iType, cCount));
+				}
+			}
+
+			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iGreatPeopleRateforUnitSize");
+			while (iSize-- > 0)
+			{
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iGreatPeopleRateforUnitType");
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCount, "iGreatPeopleRateforUnitCount");
+				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_UNITS, iType, true));
+
+				if (iType > -1)
+				{
+					m_greatPeopleRateforUnit.insert(std::make_pair(iType, iCount));
+				}
+			}
+
+			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iUnitProductionModSize");
+			while (iSize-- > 0)
+			{
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iUnitProductionModType");
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCount, "iUnitProductionModCount");
+				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_UNITS, iType, true));
+
+				if (iType > -1)
+				{
+					m_unitProductionMod.insert(std::make_pair(iType, iCount));
+				}
+			}
+			// Unit-Combat counters
+			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iUnitCombatProductionModSize");
+			while (iSize-- > 0)
+			{
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iUnitCombatProductionModType");
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iCount, "iUnitCombatProductionModCount");
+				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iType, true));
+
+				if (iType > -1)
+				{
+					m_unitCombatProductionMod.insert(std::make_pair(iType, iCount));
+				}
+			}
+
+			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "iUnitCombatFreeXPSize");
+			while (iSize-- > 0)
+			{
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iType, "iUnitCombatFreeXPType");
+				WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &sCount, "iUnitCombatFreeXPCount");
+				iType = static_cast<short>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iType, true));
+
+				if (iType > -1)
+				{
+					m_unitCombatFreeXP.insert(std::make_pair(iType, sCount));
+				}
+			}
+
 			// Unit counters
 			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "UnitCountSMSize");
 			while (iSize-- > 0)
@@ -19569,23 +19483,8 @@ void CvPlayer::read(FDataStreamBase* pStream)
 				}
 			}
 		}
-
-		double fMinTaxIncome = -1;
-		WRAPPER_READ(wrapper, "CvPlayer", &fMinTaxIncome);
-		m_iMinTaxIncome = static_cast<int64_t>(fMinTaxIncome + 0.01);
-
-		double fMaxTaxIncome = -1;
-		WRAPPER_READ(wrapper, "CvPlayer", &fMaxTaxIncome);
-		m_iMaxTaxIncome = static_cast<int64_t>(fMaxTaxIncome + 0.01);
-
-		if (fMaxTaxIncome < 0) // Old save.
-		{
-			cacheKeyFinanceNumbers();
-		}
-
-		WRAPPER_READ(wrapper, "CvPlayer", &m_iHomeAreaMaintenanceModifier);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iOtherAreaMaintenanceModifier);
-
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iHomeAreaMaintenanceModifier);
 		//Example of how to skip element
 		//WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iPopulationgrowthratepercentage, SAVE_VALUE_ANY);
 	}
@@ -19713,6 +19612,7 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iUpkeepModifier);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iLevelExperienceModifier);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iExtraHealth);
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_iCivicHealth);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iBuildingGoodHealth);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iBuildingBadHealth);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iExtraHappiness);
@@ -19803,116 +19703,6 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_IMPROVEMENTS, GC.getNumImprovementInfos(), m_paiImprovementCount);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_FEATURES, GC.getNumFeatureInfos(), m_paiFeatureHappiness);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingCount);
-
-		// Toffer - Write maps
-		{
-			// Bonus counters
-			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_bonusExport.size(), "iBonusExportSize");
-			for (std::map<short, uint32_t>::const_iterator it = m_bonusExport.begin(), itEnd = m_bonusExport.end(); it != itEnd; ++it)
-			{
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iBonusExportType");
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iBonusExportCount");
-			}
-			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_bonusImport.size(), "iBonusImportSize");
-			for (std::map<short, uint32_t>::const_iterator it = m_bonusImport.begin(), itEnd = m_bonusImport.end(); it != itEnd; ++it)
-			{
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iBonusImportType");
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iBonusImportCount");
-			}
-			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_bonusMintedPercent.size(), "iBonusMintedPercentSize");
-			for (std::map<short, int>::const_iterator it = m_bonusMintedPercent.begin(), itEnd = m_bonusMintedPercent.end(); it != itEnd; ++it)
-			{
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iBonusMintedPercentType");
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iBonusMintedPercentCount");
-			}
-			// Building counters
-			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_buildingMaking.size(), "iBuildingMakingSize");
-			for (std::map<short, uint32_t>::const_iterator it = m_buildingMaking.begin(), itEnd = m_buildingMaking.end(); it != itEnd; ++it)
-			{
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iBuildingMakingType");
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iBuildingMakingCount");
-			}
-			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_freeBuildingCount.size(), "iFreeBuildingCountSize");
-			for (std::map<short, uint16_t>::const_iterator it = m_freeBuildingCount.begin(), itEnd = m_freeBuildingCount.end(); it != itEnd; ++it)
-			{
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iFreeBuildingCountType");
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iFreeBuildingCountCount");
-			}
-			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_extraBuildingHappiness.size(), "iExtraBuildingHappinessSize");
-			for (std::map<short, int>::const_iterator it = m_extraBuildingHappiness.begin(), itEnd = m_extraBuildingHappiness.end(); it != itEnd; ++it)
-			{
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iExtraBuildingHappinessType");
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iExtraBuildingHappinessCount");
-			}
-			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_extraBuildingHealth.size(), "iExtraBuildingHealthSize");
-			for (std::map<short, int>::const_iterator it = m_extraBuildingHealth.begin(), itEnd = m_extraBuildingHealth.end(); it != itEnd; ++it)
-			{
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iExtraBuildingHealthType");
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iExtraBuildingHealthCount");
-			}
-			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_buildingProductionMod.size(), "iBuildingProductionModSize");
-			for (std::map<short, int>::const_iterator it = m_buildingProductionMod.begin(), itEnd = m_buildingProductionMod.end(); it != itEnd; ++it)
-			{
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iBuildingProductionModType");
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iBuildingProductionModCount");
-			}
-			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_buildingCostMod.size(), "iBuildingCostModSize");
-			for (std::map<short, int>::const_iterator it = m_buildingCostMod.begin(), itEnd = m_buildingCostMod.end(); it != itEnd; ++it)
-			{
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iBuildingCostModType");
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iBuildingCostModCount");
-			}
-			// Unit counters
-			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_unitCount.size(), "iUnitCountSize");
-			for (std::map<short, uint32_t>::const_iterator it = m_unitCount.begin(), itEnd = m_unitCount.end(); it != itEnd; ++it)
-			{
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iUnitCountType");
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iUnitCountCount");
-			}
-			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_unitMaking.size(), "iUnitMakingSize");
-			for (std::map<short, uint32_t>::const_iterator it = m_unitMaking.begin(), itEnd = m_unitMaking.end(); it != itEnd; ++it)
-			{
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iUnitMakingType");
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iUnitMakingCount");
-			}
-			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_greatGeneralPointsType.size(), "iGreatGeneralPointsTypeSize");
-			for (std::map<short, uint32_t>::const_iterator it = m_greatGeneralPointsType.begin(), itEnd = m_greatGeneralPointsType.end(); it != itEnd; ++it)
-			{
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iGreatGeneralPointsTypeType");
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iGreatGeneralPointsTypeCount");
-			}
-			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_goldenAgeOnBirthOfGreatPersonCount.size(), "iGoldenAgeOnBirthOfGreatPersonCountSize");
-			for (std::map<short, char>::const_iterator it = m_goldenAgeOnBirthOfGreatPersonCount.begin(), itEnd = m_goldenAgeOnBirthOfGreatPersonCount.end(); it != itEnd; ++it)
-			{
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iGoldenAgeOnBirthOfGreatPersonCountType");
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iGoldenAgeOnBirthOfGreatPersonCountCount");
-			}
-			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_greatPeopleRateforUnit.size(), "iGreatPeopleRateforUnitSize");
-			for (std::map<short, int>::const_iterator it = m_greatPeopleRateforUnit.begin(), itEnd = m_greatPeopleRateforUnit.end(); it != itEnd; ++it)
-			{
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iGreatPeopleRateforUnitType");
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iGreatPeopleRateforUnitCount");
-			}
-			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_unitProductionMod.size(), "iUnitProductionModSize");
-			for (std::map<short, int>::const_iterator it = m_unitProductionMod.begin(), itEnd = m_unitProductionMod.end(); it != itEnd; ++it)
-			{
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iUnitProductionModType");
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iUnitProductionModCount");
-			}
-			// Unit-Combat counters
-			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_unitCombatProductionMod.size(), "iUnitCombatProductionModSize");
-			for (std::map<short, int>::const_iterator it = m_unitCombatProductionMod.begin(), itEnd = m_unitCombatProductionMod.end(); it != itEnd; ++it)
-			{
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iUnitCombatProductionModType");
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iUnitCombatProductionModCount");
-			}
-			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_unitCombatFreeXP.size(), "iUnitCombatFreeXPSize");
-			for (std::map<short, short>::const_iterator it = m_unitCombatFreeXP.begin(), itEnd = m_unitCombatFreeXP.end(); it != itEnd; ++it)
-			{
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iUnitCombatFreeXPType");
-				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iUnitCombatFreeXPCount");
-			}
-		}
 
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_HURRIES, GC.getNumHurryInfos(), m_paiHurryCount);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIAL_BUILDINGS, GC.getNumSpecialBuildingInfos(), m_paiSpecialBuildingNotRequiredCount);
@@ -20042,11 +19832,11 @@ void CvPlayer::write(FDataStreamBase* pStream)
 			}
 		}
 
-#ifdef BREAK_SAVES
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_iMaxTradeRoutesAdjustment);
+
+		WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", NUM_MAPS, "NUM_MAPS");
+
 		for (int i = 0; i < NUM_MAPS; i++)
-#else
-		for (int i = 0; i < 1; i++)
-#endif
 		{
 			m_groupCycles[i]->Write(pStream);
 			WriteStreamableFFreeListTrashArray(*m_plotGroups[i], pStream);
@@ -20301,7 +20091,6 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iInquisitionCount);
 		WRAPPER_WRITE_ARRAY(wrapper, "CvPlayer", NUM_YIELD_TYPES, m_aiLessYieldThreshold);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iCompatCheckCount);
-		WRAPPER_WRITE(wrapper, "CvPlayer", m_iMaxTradeRoutesAdjustment);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNationalHurryAngerModifier);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNationalEnemyWarWearinessModifier);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNationalBombardDefenseModifier);
@@ -20362,28 +20151,125 @@ void CvPlayer::write(FDataStreamBase* pStream)
 
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iCivilianUnitUpkeepMod);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iMilitaryUnitUpkeepMod);
-
-		double fUnitUpkeepCivilian100 = static_cast<double>(m_iUnitUpkeepCivilian100);
-		WRAPPER_WRITE(wrapper, "CvPlayer", fUnitUpkeepCivilian100);
-
-		double fUnitUpkeepMilitary100 = static_cast<double>(m_iUnitUpkeepMilitary100);
-		WRAPPER_WRITE(wrapper, "CvPlayer", fUnitUpkeepMilitary100);
-
-		double fFinalUnitUpkeep = static_cast<double>(m_iFinalUnitUpkeep);
-		WRAPPER_WRITE(wrapper, "CvPlayer", fFinalUnitUpkeep);
-
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_iUnitUpkeepCivilian100);
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_iUnitUpkeepMilitary100);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iBaseFreeUnitUpkeepCivilian);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iBaseFreeUnitUpkeepMilitary);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFreeUnitUpkeepCivilianPopPercent);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iFreeUnitUpkeepMilitaryPopPercent);
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_iGold);
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_iCulture);
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_iMinTaxIncome);
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_iMaxTaxIncome);
 
-		double fGold = static_cast<double>(m_iGold);
-		WRAPPER_WRITE(wrapper, "CvPlayer", fGold);
-
-		double fCulture = static_cast<double>(this->m_iCulture);
-		WRAPPER_WRITE(wrapper, "CvPlayer", fCulture);
 		// Toffer - Write maps
 		{
+			// Bonus counters
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_bonusExport.size(), "iBonusExportSize");
+			for (std::map<short, uint32_t>::const_iterator it = m_bonusExport.begin(), itEnd = m_bonusExport.end(); it != itEnd; ++it)
+			{
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iBonusExportType");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iBonusExportCount");
+			}
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_bonusImport.size(), "iBonusImportSize");
+			for (std::map<short, uint32_t>::const_iterator it = m_bonusImport.begin(), itEnd = m_bonusImport.end(); it != itEnd; ++it)
+			{
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iBonusImportType");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iBonusImportCount");
+			}
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_bonusMintedPercent.size(), "iBonusMintedPercentSize");
+			for (std::map<short, int>::const_iterator it = m_bonusMintedPercent.begin(), itEnd = m_bonusMintedPercent.end(); it != itEnd; ++it)
+			{
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iBonusMintedPercentType");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iBonusMintedPercentCount");
+			}
+			// Building counters
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_buildingMaking.size(), "iBuildingMakingSize");
+			for (std::map<short, uint32_t>::const_iterator it = m_buildingMaking.begin(), itEnd = m_buildingMaking.end(); it != itEnd; ++it)
+			{
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iBuildingMakingType");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iBuildingMakingCount");
+			}
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_freeBuildingCount.size(), "iFreeBuildingCountSize");
+			for (std::map<short, uint16_t>::const_iterator it = m_freeBuildingCount.begin(), itEnd = m_freeBuildingCount.end(); it != itEnd; ++it)
+			{
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iFreeBuildingCountType");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iFreeBuildingCountCount");
+			}
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_extraBuildingHappiness.size(), "iExtraBuildingHappinessSize");
+			for (std::map<short, int>::const_iterator it = m_extraBuildingHappiness.begin(), itEnd = m_extraBuildingHappiness.end(); it != itEnd; ++it)
+			{
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iExtraBuildingHappinessType");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iExtraBuildingHappinessCount");
+			}
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_extraBuildingHealth.size(), "iExtraBuildingHealthSize");
+			for (std::map<short, int>::const_iterator it = m_extraBuildingHealth.begin(), itEnd = m_extraBuildingHealth.end(); it != itEnd; ++it)
+			{
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iExtraBuildingHealthType");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iExtraBuildingHealthCount");
+			}
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_buildingProductionMod.size(), "iBuildingProductionModSize");
+			for (std::map<short, int>::const_iterator it = m_buildingProductionMod.begin(), itEnd = m_buildingProductionMod.end(); it != itEnd; ++it)
+			{
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iBuildingProductionModType");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iBuildingProductionModCount");
+			}
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_buildingCostMod.size(), "iBuildingCostModSize");
+			for (std::map<short, int>::const_iterator it = m_buildingCostMod.begin(), itEnd = m_buildingCostMod.end(); it != itEnd; ++it)
+			{
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iBuildingCostModType");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iBuildingCostModCount");
+			}
+			// Unit counters
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_unitCount.size(), "iUnitCountSize");
+			for (std::map<short, uint32_t>::const_iterator it = m_unitCount.begin(), itEnd = m_unitCount.end(); it != itEnd; ++it)
+			{
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iUnitCountType");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iUnitCountCount");
+			}
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_unitMaking.size(), "iUnitMakingSize");
+			for (std::map<short, uint32_t>::const_iterator it = m_unitMaking.begin(), itEnd = m_unitMaking.end(); it != itEnd; ++it)
+			{
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iUnitMakingType");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iUnitMakingCount");
+			}
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_greatGeneralPointsType.size(), "iGreatGeneralPointsTypeSize");
+			for (std::map<short, uint32_t>::const_iterator it = m_greatGeneralPointsType.begin(), itEnd = m_greatGeneralPointsType.end(); it != itEnd; ++it)
+			{
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iGreatGeneralPointsTypeType");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iGreatGeneralPointsTypeCount");
+			}
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_goldenAgeOnBirthOfGreatPersonCount.size(), "iGoldenAgeOnBirthOfGreatPersonCountSize");
+			for (std::map<short, char>::const_iterator it = m_goldenAgeOnBirthOfGreatPersonCount.begin(), itEnd = m_goldenAgeOnBirthOfGreatPersonCount.end(); it != itEnd; ++it)
+			{
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iGoldenAgeOnBirthOfGreatPersonCountType");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iGoldenAgeOnBirthOfGreatPersonCountCount");
+			}
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_greatPeopleRateforUnit.size(), "iGreatPeopleRateforUnitSize");
+			for (std::map<short, int>::const_iterator it = m_greatPeopleRateforUnit.begin(), itEnd = m_greatPeopleRateforUnit.end(); it != itEnd; ++it)
+			{
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iGreatPeopleRateforUnitType");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iGreatPeopleRateforUnitCount");
+			}
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_unitProductionMod.size(), "iUnitProductionModSize");
+			for (std::map<short, int>::const_iterator it = m_unitProductionMod.begin(), itEnd = m_unitProductionMod.end(); it != itEnd; ++it)
+			{
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iUnitProductionModType");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iUnitProductionModCount");
+			}
+			// Unit-Combat counters
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_unitCombatProductionMod.size(), "iUnitCombatProductionModSize");
+			for (std::map<short, int>::const_iterator it = m_unitCombatProductionMod.begin(), itEnd = m_unitCombatProductionMod.end(); it != itEnd; ++it)
+			{
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iUnitCombatProductionModType");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iUnitCombatProductionModCount");
+			}
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_unitCombatFreeXP.size(), "iUnitCombatFreeXPSize");
+			for (std::map<short, short>::const_iterator it = m_unitCombatFreeXP.begin(), itEnd = m_unitCombatFreeXP.end(); it != itEnd; ++it)
+			{
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->first, "iUnitCombatFreeXPType");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "iUnitCombatFreeXPCount");
+			}
 			// Unit counters
 			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (short)m_unitCountSM.size(), "UnitCountSMSize");
 			for (std::map<short, uint32_t>::const_iterator it = m_unitCountSM.begin(), itEnd = m_unitCountSM.end(); it != itEnd; ++it)
@@ -20392,15 +20278,9 @@ void CvPlayer::write(FDataStreamBase* pStream)
 				WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", it->second, "UnitCountSM");
 			}
 		}
-		double fMinTaxIncome = static_cast<double>(m_iMinTaxIncome);
-		WRAPPER_WRITE(wrapper, "CvPlayer", fMinTaxIncome);
-		double fMaxTaxIncome = static_cast<double>(m_iMaxTaxIncome);
-		WRAPPER_WRITE(wrapper, "CvPlayer", fMaxTaxIncome);
-
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iHomeAreaMaintenanceModifier);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iOtherAreaMaintenanceModifier);
 	}
-
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
 
@@ -24431,7 +24311,7 @@ void CvPlayer::verifyUnitStacksValid()
 //TB Prophet Mod begin
 UnitTypes CvPlayer::getTechFreeProphet(TechTypes eTech) const
 {
-	if (GC.getGame().isOption(GAMEOPTION_DIVINE_PROPHETS))
+	if (GC.getGame().isOption(GAMEOPTION_RELIGION_DIVINE_PROPHETS))
 	{
 		return (UnitTypes) GC.getTechInfo(eTech).getFirstFreeProphet();
 	}
@@ -26669,24 +26549,25 @@ void CvPlayer::changeNoCapitalUnhappiness(int iChange)
 {
 	if (iChange != 0)
 	{
+		const bool bWasTrue = isNoCapitalUnhappiness();
+
 		m_iNoCapitalUnhappiness += iChange;
-		CvCity* pCapitalCity = getCapitalCity();
 
-		if (pCapitalCity != NULL)
+		if (bWasTrue != isNoCapitalUnhappiness())
 		{
-			pCapitalCity->AI_setAssignWorkDirty(true);
+			CvCity* pCapitalCity = getCapitalCity();
 
-			if (pCapitalCity->getTeam() == GC.getGame().getActiveTeam())
+			if (pCapitalCity)
 			{
-				pCapitalCity->setInfoDirty(true);
+				pCapitalCity->AI_setAssignWorkDirty(true);
+
+				if (pCapitalCity->getTeam() == GC.getGame().getActiveTeam())
+				{
+					pCapitalCity->setInfoDirty(true);
+				}
 			}
 		}
 	}
-}
-
-int CvPlayer::getNoCapitalUnhappiness() const
-{
-	return m_iNoCapitalUnhappiness;
 }
 
 int CvPlayer::getFreeSpecialistCount(SpecialistTypes eIndex) const
@@ -26829,7 +26710,7 @@ void CvPlayer::changeLandmarkHappiness(int iChange)
 
 bool CvPlayer::isShowLandmarks() const
 {
-	return m_bShowLandmarks && GC.getGame().isOption(GAMEOPTION_PERSONALIZED_MAP);
+	return m_bShowLandmarks && GC.getGame().isOption(GAMEOPTION_MAP_PERSONALIZED);
 }
 
 void CvPlayer::setShowLandmarks(bool bNewVal)
@@ -27296,15 +27177,20 @@ void CvPlayer::setColor(PlayerColorTypes eColor)
 	setupGraphical();
 }
 
-void CvPlayer::setHandicap(int iNewVal)
+void CvPlayer::setHandicap(int iNewVal, bool bAdjustGameHandicap)
 {
 	FASSERT_BOUNDS(0, GC.getNumHandicapInfos(), iNewVal);
 
 	if (iNewVal != getHandicapType())
 	{
 		GC.getInitCore().setHandicap(getID(), (HandicapTypes)iNewVal);
+
+		if (bAdjustGameHandicap)
+		{
+			GC.getGame().averageHandicaps();
+		}
 		setMaintenanceDirty(true);
-		calcFinalUnitUpkeep();
+		m_bUnitUpkeepDirty = true;
 	}
 }
 
@@ -27454,7 +27340,7 @@ void CvPlayer::doTaxes()
 	const int iOldTaxes = getCorporateTaxIncome();
 	changeCorporateTaxIncome(-iOldTaxes);
 
-	if (GC.getGame().isOption(GAMEOPTION_REALISTIC_CORPORATIONS))
+	if (GC.getGame().isOption(GAMEOPTION_ADVANCED_REALISTIC_CORPORATIONS))
 	{
 		changeCorporateTaxIncome(algo::accumulate(cities() | transformed(CvCity::fn::calculateCorporateTaxes()), 0));
 	}
@@ -27798,6 +27684,7 @@ void CvPlayer::clearModifierTotals()
 	m_iUpkeepModifier = 0;
 	m_iLevelExperienceModifier = 0;
 	m_iExtraHealth = 0;
+	m_iCivicHealth = 0;
 	m_iBuildingGoodHealth = 0;
 	m_iBuildingBadHealth = 0;
 	m_iExtraHappiness = 0;
@@ -27877,7 +27764,6 @@ void CvPlayer::clearModifierTotals()
 	m_iArrestedUnit = FFreeList::INVALID_INDEX;
 	m_iAmbushingUnit = FFreeList::INVALID_INDEX;
 	m_bAssassinate = false;
-	//m_Properties.clear();
 
 	setPopulationgrowthratepercentage(0);
 	m_iReligionSpreadRate = 0;
@@ -27885,9 +27771,6 @@ void CvPlayer::clearModifierTotals()
 	setExtraCityDefense(0);
 	setTraitExtraCityDefense(0);
 
-	// @SAVEBREAK DELETE - Toffer
-	m_unitCountSM.clear();
-	// SAVEBREAK@ */
 	m_bonusMintedPercent.clear();
 	m_freeBuildingCount.clear();
 	m_extraBuildingHappiness.clear();
@@ -28355,13 +28238,13 @@ void CvPlayer::recalculateModifiers()
 	//bool bHasCompiled = false;
 	//Apparently some games have displayed the ability to have a non-leaderhead (iLinePriority 0) trait being assigned to leaders in a Developing Leaderhead Game.
 	//This section should at least convert them if this takes place.  In the meantime... need to figure out HOW that's happening at all.  I've seen rev leaders initiated in the middle of the game come in with extra traits... may have something to do with that?
-	if (GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_DEVELOPING))
 	{
 		for (int iI = 0; iI <GC.getNumTraitInfos(); iI++)
 		{
 			const TraitTypes eTrait = ((TraitTypes)iI);
 			////removes the extra negative trait if it shouldn't be there.  After a version or two, this should be removed entirely and m_iCompatCheckCount can be repurposed later.
-			//if (hasTrait(eTrait) && GC.getTraitInfo(eTrait).isNegativeTrait() && GC.getGame().isOption(GAMEOPTION_START_NO_POSITIVE_TRAITS))
+			//if (hasTrait(eTrait) && GC.getTraitInfo(eTrait).isNegativeTrait() && GC.getGame().isOption(GAMEOPTION_LEADER_START_NO_POSITIVE_TRAITS))
 			//{
 			//	if (GC.getLeaderHeadInfo(getLeaderType()).hasTrait(eTrait) && m_iCompatCheckCount != 1)
 			//	{
@@ -28409,7 +28292,7 @@ void CvPlayer::recalculateModifiers()
 				{
 					m_pabHasTrait[eTrait] = false;
 				}
-				if (GC.getGame().isOption(GAMEOPTION_COMPLEX_TRAITS))
+				if (GC.getGame().isOption(GAMEOPTION_LEADER_COMPLEX_TRAITS))
 				{
 					if (GC.getLeaderHeadInfo(getLeaderType()).isDefaultComplexTrait((int)eTrait))
 					{
@@ -28428,12 +28311,12 @@ void CvPlayer::recalculateModifiers()
 				{
 					if (GC.getTraitInfo(eTrait).isNegativeTrait())
 					{
-						if (!GC.getGame().isOption(GAMEOPTION_NO_NEGATIVE_TRAITS))
+						if (!GC.getGame().isOption(GAMEOPTION_LEADER_NO_NEGATIVE_TRAITS))
 						{
 							m_pabHasTrait[eTrait] = true;
 						}
 					}
-					else if (!GC.getGame().isOption(GAMEOPTION_START_NO_POSITIVE_TRAITS))
+					else if (!GC.getGame().isOption(GAMEOPTION_LEADER_START_NO_POSITIVE_TRAITS))
 					{
 						m_pabHasTrait[eTrait] = true;
 					}
@@ -29150,7 +29033,7 @@ void CvPlayer::setHasTrait(TraitTypes eIndex, bool bNewValue)
 		m_pabHasTrait[eIndex] = bNewValue;
 		processTrait(eIndex, bNewValue ? 1 : -1);
 
-		if (GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS) && GC.getTraitInfo(eIndex).getLinePriority() != 0)
+		if (GC.getGame().isOption(GAMEOPTION_LEADER_DEVELOPING) && GC.getTraitInfo(eIndex).getLinePriority() != 0)
 		{
 			const bool bNegativeTrait = GC.getTraitInfo(eIndex).isNegativeTrait();
 
@@ -29351,11 +29234,11 @@ bool CvPlayer::canUnlearnTrait(TraitTypes eTrait, bool bPositive) const
 		return false;
 	}
 
-	if (GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS) && GC.getTraitInfo(eTrait).getLinePriority() == 0)
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_DEVELOPING) && GC.getTraitInfo(eTrait).getLinePriority() == 0)
 	{
 		return false;
 	}
-	else if (!GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS) && GC.getTraitInfo(eTrait).getLinePriority() != 0)
+	else if (!GC.getGame().isOption(GAMEOPTION_LEADER_DEVELOPING) && GC.getTraitInfo(eTrait).getLinePriority() != 0)
 	{
 		return false;
 	}
@@ -29404,7 +29287,7 @@ bool CvPlayer::canUnlearnTrait(TraitTypes eTrait, bool bPositive) const
 
 int CvPlayer::getLeaderHeadLevel() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS))
+	if (!GC.getGame().isOption(GAMEOPTION_LEADER_DEVELOPING))
 	{
 		return 0;
 	}
@@ -29427,7 +29310,7 @@ uint64_t CvPlayer::getLeaderLevelupNextCultureTotal() const
 	uint64_t iX = 1000;
 	int iY = 10 * GC.getNEXT_TRAIT_CULTURE_REQ_PERCENT() / 100;
 
-	if (GC.getGame().isOption(GAMEOPTION_START_NO_POSITIVE_TRAITS))
+	if (GC.getGame().isOption(GAMEOPTION_LEADER_START_NO_POSITIVE_TRAITS))
 	{
 		iX = 10;
 		iY = 8 * GC.getNEXT_TRAIT_CULTURE_REQ_PERCENT() / 100;
@@ -29463,7 +29346,7 @@ uint64_t CvPlayer::getLeaderLevelupCultureToEarn() const
 
 bool CvPlayer::canLeaderPromote() const
 {
-	return GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS) && getLeaderLevelupCultureToEarn() == 0;
+	return GC.getGame().isOption(GAMEOPTION_LEADER_DEVELOPING) && getLeaderLevelupCultureToEarn() == 0;
 }
 
 void CvPlayer::doPromoteLeader()
@@ -29497,7 +29380,7 @@ void CvPlayer::doPromoteLeader()
 					if (GC.getTraitInfo(eTrait).getLinePriority() > 0)
 					{
 						int iLevelModifier = getLeaderHeadLevel();
-						if (GC.getGame().isOption(GAMEOPTION_START_NO_POSITIVE_TRAITS))
+						if (GC.getGame().isOption(GAMEOPTION_LEADER_START_NO_POSITIVE_TRAITS))
 						{
 							iLevelModifier -= 2;
 						}
@@ -29545,7 +29428,7 @@ void CvPlayer::doPromoteLeader()
 		}
 	}
 	//Negative Trait select/assign
-	if (!GC.getGame().isOption(GAMEOPTION_NO_NEGATIVE_TRAITS))
+	if (!GC.getGame().isOption(GAMEOPTION_LEADER_NO_NEGATIVE_TRAITS))
 	{
 		int iLL = getLeaderHeadLevel();
 		if (iLL > 1 && iLL%2 == 0)
@@ -29571,7 +29454,7 @@ void CvPlayer::doPromoteLeader()
 						if (GC.getTraitInfo(eTrait).getLinePriority() < 0)
 						{
 							int iLevelModifier = getLeaderHeadLevel();
-							if (GC.getGame().isOption(GAMEOPTION_START_NO_POSITIVE_TRAITS))
+							if (GC.getGame().isOption(GAMEOPTION_LEADER_START_NO_POSITIVE_TRAITS))
 							{
 								iLevelModifier -= 2;
 							}
@@ -30185,7 +30068,7 @@ void CvPlayer::endDeferredPlotGroupBonusCalculation()
 
 bool CvPlayer::hasFixedBorders() const
 {
-	if (!isNPC() && GC.getGame().isOption(GAMEOPTION_FIXED_BORDERS) )
+	if (!isNPC() && GC.getGame().isOption(GAMEOPTION_CULTURE_FIXED_BORDERS) )
 	{
 		return (m_iFixedBordersCount > 0);
 	}
@@ -30263,13 +30146,6 @@ void CvPlayer::setExtraNonStateReligionSpreadModifier(int iValue)
 void CvPlayer::changeExtraNonStateReligionSpreadModifier(int iChange)
 {
 	m_iExtraNonStateReligionSpreadModifier += iChange;
-}
-
-void CvPlayer::updateTechHappinessandHealth()
-{
-	PROFILE_FUNC();
-
-	for_each(cities(), CvCity::fn::updateTechHappinessandHealth());
 }
 
 void CvPlayer::checkReligiousDisablingAllBuildings()
@@ -30679,4 +30555,30 @@ void CvPlayer::setCommandFieldPlot(bool bNewValue, CvPlot* aPlot)
 		m_commandFieldPlots.erase(itr);
 	}
 	else FErrorMsg("Vector element to remove was missing!");
+}
+
+
+void CvPlayer::processTech(const TechTypes eTech, const int iChange)
+{
+	const CvTechInfo& tech = GC.getTechInfo(eTech);
+
+	changeFeatureProductionModifier(tech.getFeatureProductionModifier() * iChange);
+	changeWorkerSpeedModifier(tech.getWorkerSpeedModifier() * iChange);
+	changeTradeRoutes(tech.getTradeRoutes() * iChange);
+	changeExtraHealth(tech.getHealth() * iChange);
+	changeExtraHappiness(tech.getHappiness() * iChange);
+	changeDistanceMaintenanceModifier(tech.getDistanceMaintenanceModifier() * iChange);
+	changeNumCitiesMaintenanceModifier(tech.getNumCitiesMaintenanceModifier() * iChange);
+	changeMaintenanceModifier(tech.getMaintenanceModifier() * iChange);
+	changeCoastalDistanceMaintenanceModifier(tech.getCoastalDistanceMaintenanceModifier() * iChange);
+	changeAssets(tech.getAssetValue() * iChange);
+	changeTechPower(tech.getPowerValue() * iChange);
+	changeTechScore(getScoreValueOfTech(eTech) * iChange);
+	changeTechInflation(tech.getInflationModifier() * iChange);
+
+	for (int i = 0; i < NUM_COMMERCE_TYPES; i++)
+	{
+		changeCommerceRateModifier(static_cast<CommerceTypes>(i), tech.getCommerceModifier(i) * iChange);
+	}
+	algo::for_each(cities(), CvCity::fn::processTech(eTech, iChange));
 }

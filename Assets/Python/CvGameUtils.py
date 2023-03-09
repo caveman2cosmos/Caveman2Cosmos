@@ -25,7 +25,7 @@ class CvGameUtils:
 		self.CAPTURE_GOLD_MAX_TURNS = GC.getDefineINT("CAPTURE_GOLD_MAX_TURNS")
 
 		self.iNationalMint = GC.getInfoTypeForString("BUILDING_NATIONAL_MINT")
-		self.iHimejiCastle = GC.getInfoTypeForString("BUILDING_HIMEJI_CASTLE")
+		self.iHimejiCastle = GC.getInfoTypeForString("BUILDING_HIMEJI_SAMURAI_CASTLE")
 
 	def canBuild(self, argsList):
 		iX, iY, iBuild, iPlayer = argsList

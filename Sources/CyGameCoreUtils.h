@@ -37,7 +37,6 @@ bool cyIsPotentialEnemy(int /*TeamTypes*/ eOurPlayer, int /*TeamTypes*/ eTheirPl
 CyCity* cyGetCity(const IDInfo city);
 CyUnit* cyGetUnit(const IDInfo unit);
 
-int cyGetTechScore(int /*TechTypes*/ eTech);
 int cyGetWonderScore(int /*BuildingTypes*/ eWonder);
 int /*ImprovementTypes*/ cyFinalImprovementUpgrade(int /*ImprovementTypes*/ eImprovement, int iCount);
 

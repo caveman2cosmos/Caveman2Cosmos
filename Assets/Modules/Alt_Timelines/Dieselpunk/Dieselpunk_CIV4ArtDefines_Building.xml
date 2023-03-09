@@ -6,7 +6,7 @@
 <Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\Xml\Schema\Caveman2Cosmos.xsd">
 	<BuildingArtInfos>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DIESELPUNK_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_DIESELPUNK</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -56,7 +56,7 @@
 			<Button>art/dirigibleterminal.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FARNSWORTH_LAB</Type>
+			<Type>ART_DEF_BUILDING_FARNSWORTH_ELECTRONICS_LAB</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>

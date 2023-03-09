@@ -65,6 +65,8 @@ public:
 	bool isIdleCity(const int iCityID) const;
 	void resetIdleCities();
 
+	void processTech(const TechTypes eTech, const int iChange);
+
 protected:
 	CvGameObjectPlayer m_GameObject;
 	void baseInit(PlayerTypes eID);
@@ -583,7 +585,7 @@ public:
 	void changeCivilianUnitUpkeepMod(const int iChange);
 	void changeMilitaryUnitUpkeepMod(const int iChange);
 	void changeUnitUpkeep(const int iChange, const bool bMilitary);
-	void applyUnitUpkeepHandicap(int64_t& iUpkeep);
+	inline void setUnitUpkeepDirty() const { m_bUnitUpkeepDirty = true; }
 
 	int64_t getUnitUpkeepCivilian100() const;
 	int64_t getUnitUpkeepCivilian() const;
@@ -592,7 +594,7 @@ public:
 	int64_t getUnitUpkeepMilitary() const;
 	int64_t getUnitUpkeepMilitaryNet() const;
 	int64_t getUnitUpkeepNet(const bool bMilitary, const int iUnitUpkeep = MAX_INT) const;
-	int64_t calcFinalUnitUpkeep(const bool bReal=true);
+	int64_t calcFinalUnitUpkeep(const bool bReal=true) const;
 	int64_t getFinalUnitUpkeep() const;
 	int getFinalUnitUpkeepChange(const int iExtra, const bool bMilitary);
 	// ! Unit Upkeep
@@ -667,7 +669,8 @@ public:
 	void changeLevelExperienceModifier(int iChange);
 
 	int getExtraHealth() const;
-	void changeExtraHealth(int iChange, bool bLimited = false);
+	void changeExtraHealth(int iChange);
+	void changeCivicHealth(const int iChange, const bool bLimited = false);
 
 	int getCivicHealth() const; // Included in getExtraHealth() but split off to aid hover text displays
 
@@ -1277,7 +1280,7 @@ public:
 	int getProjectHealth() const;
 	void changeProjectHealth(int iChange);
 
-	int getNoCapitalUnhappiness() const;
+	inline bool isNoCapitalUnhappiness() const { return m_iNoCapitalUnhappiness > 0; }
 	void changeNoCapitalUnhappiness(int iChange);
 
 	int getCivilizationHealth() const;
@@ -1423,7 +1426,7 @@ public:
 
 	void setColor(PlayerColorTypes eColor);
 
-	void setHandicap(int iNewVal);
+	void setHandicap(int iNewVal, bool bAdjustGameHandicap = false);
 
 	bool canBuild(const CvPlot* pPlot, ImprovementTypes eImprovement, bool bTestVisible) const;
 
@@ -1784,7 +1787,8 @@ protected:
 
 	int64_t m_iUnitUpkeepCivilian100;
 	int64_t m_iUnitUpkeepMilitary100;
-	int64_t m_iFinalUnitUpkeep;
+	mutable int64_t m_iFinalUnitUpkeep;
+	mutable bool m_bUnitUpkeepDirty;
 
 	int m_iNumMilitaryUnits;
 	int m_iHappyPerMilitaryUnit;
@@ -1810,6 +1814,7 @@ protected:
 	int m_iUpkeepModifier;
 	int m_iLevelExperienceModifier;
 	int m_iExtraHealth;
+	int m_iCivicHealth;
 	int m_iBuildingGoodHealth;
 	int m_iBuildingBadHealth;
 	int m_iExtraHappiness;
@@ -1862,7 +1867,6 @@ protected:
 	//TB Nukefix
 	bool m_bNukesValid;
 	bool m_bHuman;
-
 	bool m_bDisableHuman; // Set to true to disable isHuman() check
 
 	int m_iStabilityIndex;
@@ -2235,7 +2239,6 @@ public:
 	void setExtraNonStateReligionSpreadModifier(int iValue);
 	void changeExtraNonStateReligionSpreadModifier(int iChange);
 
-	void updateTechHappinessandHealth();
 	void checkReligiousDisablingAllBuildings();
 	//TB Traits end
 

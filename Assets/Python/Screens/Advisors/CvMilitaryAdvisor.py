@@ -43,7 +43,7 @@ class CvMilitaryAdvisor:
 		self.iconMoves		= u'%c' % GAME.getSymbolID(FontSymbols.MOVES_CHAR)
 		self.iconStrength	= u'%c' % GAME.getSymbolID(FontSymbols.STRENGTH_CHAR)
 		self.fMoveDenominator = float(GC.getMOVE_DENOMINATOR())
-		self.GO_SIZE_MATTERS = GAME.isOption(GameOptionTypes.GAMEOPTION_SIZE_MATTERS)
+		self.GO_SIZE_MATTERS = GAME.isOption(GameOptionTypes.GAMEOPTION_COMBAT_SIZE_MATTERS)
 		self.selectedCivs = [iPlayer]
 		self.selectedGroups = set()
 		self.selectedUnits = set()

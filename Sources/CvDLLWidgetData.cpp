@@ -3383,7 +3383,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 			// BUG - Delete All Action - start
 			else if (GC.getActionInfo(widgetDataStruct.m_iData1).getCommandType() == COMMAND_DELETE)
 			{
-				if (GC.getGame().isOption(GAMEOPTION_DOWNSIZING_IS_PROFITABLE))
+				if (GC.getGame().isOption(GAMEOPTION_UNIT_DOWNSIZING_IS_PROFITABLE))
 				{
 					const CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 
@@ -3656,6 +3656,8 @@ void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, 
 	// make sure its empty to start
 	szBuffer.clear();
 
+	szBuffer.append(gDLL->getText("TXT_KEY_SETTINGS_DIFFICULTY_PLAYER", GC.getHandicapInfo(GET_PLAYER((PlayerTypes)widgetDataStruct.m_iData1).getHandicapType()).getTextKeyWide()));
+	szBuffer.append(NEWLINE);
 	if (kPlayer.isMinorCiv())
 	{
 		szBuffer.assign(gDLL->getText("TXT_KEY_REV_CONTACT_MINOR", kPlayer.getCivilizationDescription()));
@@ -3984,7 +3986,7 @@ void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, 
 
 		// calculate war percentages
 		float fOverallWarPercentage = 0;
-		bool bAggressive = GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI);
+		bool bAggressive = GC.getGame().isOption(GAMEOPTION_AI_AGGRESSIVE);
 
 		bool bIsAnyCapitalAreaAlone = kTeam.AI_isAnyCapitalAreaAlone();
 
@@ -4474,9 +4476,8 @@ void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, 
 		}
 	}
 
-
 	// Show score info instead if we are trying to contact ourselves...
-	if (eActivePlayer == ePlayer || gDLL->ctrlKey() && gDLL->getChtLvl() > 0)
+	if (eActivePlayer == ePlayer || gDLL->ctrlKey() && GC.getGame().isDebugMode())
 	{
 		parseScoreHelp(widgetDataStruct, szBuffer);
 		return;

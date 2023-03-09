@@ -254,11 +254,11 @@
 			<TechCityTrade>TECH_ATEMPORAL_BEINGS</TechCityTrade>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_HUMAN_MOD_NONSPATIAL</Type>
-			<Description>TXT_KEY_BONUS_HUMAN_MOD_NONSPATIAL</Description>
+			<Type>BONUS_HUMAN_MOD_NON_SPATIAL</Type>
+			<Description>TXT_KEY_BONUS_HUMAN_MOD_NON_SPATIAL</Description>
 			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_NONSPATIAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_NON_SPATIAL</ArtDefineTag>
 			<TechReveal>TECH_SPATIAL_TRANSCENDENCE</TechReveal>
 			<TechCityTrade>TECH_SPATIAL_TRANSCENDENCE</TechCityTrade>
 		</BonusInfo>

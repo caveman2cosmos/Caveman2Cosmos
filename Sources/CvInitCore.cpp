@@ -792,7 +792,7 @@ void CvInitCore::resetPlayer(PlayerTypes eID, CvInitCore * pSource, bool bClear,
 			setFlagDecal(eID, pSource->getFlagDecal(eID));
 			setWhiteFlag(eID, pSource->getWhiteFlag(eID));
 
-			setHandicap(eID, pSource->getHandicap(eID));
+			setHandicap(eID, (HandicapTypes)range(pSource->getHandicap(eID), 0, GC.getNumHandicapInfos() - 1));
 			setCiv(eID, pSource->getCiv(eID));
 			setTeam(eID, pSource->getTeam(eID));
 			setLeader(eID, pSource->getLeader(eID));
@@ -1723,17 +1723,12 @@ void CvInitCore::read(FDataStreamBase* pStream)
 		WRAPPER_READ_ARRAY(wrapper, "CvInitCore", m_iNumVictories, m_abVictories);
 	}
 
-// BUG - Save Format - start
 	if (bugSaveFlag)
 	{
 		// read and ignore number of game options as it's only for external tools
 		int iNumGameOptions = 0;
-		// @SAVEBREAK DELETE
-		WRAPPER_READ_DECORATED(wrapper, "CvInitCore", &iNumGameOptions, "NUM_GAMEOPTION_TYPES");
-		// SAVEBREAK@
 		WRAPPER_READ_DECORATED(wrapper, "CvInitCore", &iNumGameOptions, "GC.getNumGameOptionInfos()");
 	}
-// BUG - Save Format - end
 
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 11/30/07                                MRGENIE      */

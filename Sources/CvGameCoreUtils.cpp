@@ -219,7 +219,7 @@ bool isBeforeUnitCycle(const CvUnit* pFirstUnit, const CvUnit* pSecondUnit)
 
 
 
-int getTechScore(TechTypes eTech)
+int getScoreValueOfTech(TechTypes eTech)
 {
 	return 1 + GC.getTechInfo(eTech).getEra();
 }
@@ -482,7 +482,7 @@ int getCombatOdds(const CvUnit* pAttacker, const CvUnit* pDefender)
 	iDefenderFirepower = pDefender->currFirepower(pDefender->plot(), pAttacker);
 
 #ifdef STRENGTH_IN_NUMBERS
-	if (GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (GC.getGame().isOption(GAMEOPTION_COMBAT_STRENGTH_IN_NUMBERS))
 	{
 		int iAttackerSupportStrength = pAttacker->getAttackerSupportValue();
 		iAttackerStrength += iAttackerSupportStrength;
@@ -815,7 +815,7 @@ float getCombatOddsSpecific(const CvUnit* pAttacker, const CvUnit* pDefender, in
 	iDefenderFirepower = pDefender->currFirepower(pDefender->plot(), pAttacker);
 
 #ifdef STRENGTH_IN_NUMBERS
-	if (GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (GC.getGame().isOption(GAMEOPTION_COMBAT_STRENGTH_IN_NUMBERS))
 	{
 		int iDefenderSupportStrength = pDefender->getDefenderSupportValue(pAttacker);
 		int iAttackerSupportStrength = pAttacker->getAttackerSupportValue();
@@ -3391,7 +3391,7 @@ bool ContextFreeNewPathValidFunc(const CvSelectionGroup* pSelectionGroup, int iF
 			default: break;
 		}
 
-		if (GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL))
+		if (GC.getGame().isOption(GAMEOPTION_UNSUPPORTED_ZONE_OF_CONTROL))
 		{
 			const TeamTypes eTeam = pSelectionGroup->getHeadTeam();
 
@@ -4264,7 +4264,7 @@ int calcBaseExpNeeded(const int iLevel, const PlayerTypes ePlayer)
 {
 	int iThreshold = 99 + (iLevel*iLevel + 1) * (100 + GET_PLAYER(ePlayer).getLevelExperienceModifier());
 
-	if (GC.getGame().isOption(GAMEOPTION_MORE_XP_TO_LEVEL))
+	if (GC.getGame().isOption(GAMEOPTION_UNIT_MORE_XP_TO_LEVEL))
 	{
 		iThreshold *= GC.getDefineINT("MORE_XP_TO_LEVEL_MODIFIER");
 		iThreshold /= 100;
