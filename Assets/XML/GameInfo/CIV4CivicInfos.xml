@@ -1338,7 +1338,7 @@
 					<iHappinessChange>-4</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_PENTAGON</BuildingType>
+					<BuildingType>BUILDING_THE_PENTAGON</BuildingType>
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
