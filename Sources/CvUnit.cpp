@@ -34850,11 +34850,6 @@ void CvUnit::changeExtraMaxHP(int iChange)
 	m_iExtraMaxHP += iChange;
 }
 
-void CvUnit::setExtraMaxHP(int iChange)
-{
-	m_iExtraMaxHP = iChange;
-}
-
 int CvUnit::getMaxHP() const
 {
 	int iMaxHP = 0;

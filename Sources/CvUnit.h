@@ -2533,7 +2533,6 @@ public:
 
 	int getExtraMaxHP() const;
 	void changeExtraMaxHP(int iChange);
-	void setExtraMaxHP(int iChange);
 	int getMaxHP() const;
 	int getHP() const;
 	int HPValueTotalPreCheck() const;
