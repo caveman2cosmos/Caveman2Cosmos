@@ -2470,7 +2470,6 @@ public:
 	void resolveBreakdownAttack(const CvPlot* pPlot, const int AdjustedRepel);
 
 	int getDiminishingReturn(int i) const;
-	int getApproaching0Return(int i) const;
 
 	bool isPursuitPossible(const CvUnit* pOpponent) const;
 
@@ -2636,9 +2635,6 @@ public:
 	void changeBaseDCMBombAccuracy(int iChange, bool bAdding, UnitCombatTypes eUnitCombat);
 	bool isRBombardDirect() const;
 	void changeBombardDirectCount(int iChange);
-
-	static int applySMRank(int value, int rankChange, int rankMultiplier);
-	static int64_t applySMRank64(int64_t value, int rankChange, int rankMultiplier, bool bScaleUp = true);
 
 	int getNoSelfHealCount() const;
 	bool hasNoSelfHeal() const;

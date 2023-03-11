@@ -17550,30 +17550,28 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_GRID_X", GC.getTechInfo(eMostAdvancedTech).getTextKeyWide(), iX));
 	}
 	*/
+
 	if (!bCivilopediaText)
 	{
 		szBuffer.append(NEWLINE);
 
-		if (kUnit.getDomainType() == DOMAIN_AIR)
+		if (GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 		{
-			if (kUnit.getAirCombat() > 0)
-			{
-				float fBase = kUnit.getTotalModifiedAirCombatStrength100() / 100.0f;;
-
-				szTempBuffer.Format(L"%.1f%c, ", fBase, gDLL->getSymbolID(STRENGTH_CHAR));
-				szBuffer.append(szTempBuffer);
-
-				//szTempBuffer.Format(L"%d%c, ", kUnit.getAirCombat(), gDLL->getSymbolID(STRENGTH_CHAR));
-				//szBuffer.append(szTempBuffer);
-			}
-		}
-		else
-		{
-			const float fCombat = kUnit.getTotalModifiedCombatStrength100() / 100.0f;
+			const float fCombat = kUnit.getTotalModifiedCombatStrength100(true) / 100.0f;
 
 			if (fCombat > 0)
 			{
 				szTempBuffer.Format(L"%.1f%c, ", fCombat, gDLL->getSymbolID(STRENGTH_CHAR));
+				szBuffer.append(szTempBuffer);
+			}
+		}
+		else
+		{
+			const int iCombat = kUnit.getTotalModifiedCombatStrength100(false) / 100;
+
+			if (iCombat > 0)
+			{
+				szTempBuffer.Format(L"%d%c, ", iCombat, gDLL->getSymbolID(STRENGTH_CHAR));
 				szBuffer.append(szTempBuffer);
 			}
 		}
@@ -17587,12 +17585,10 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_AIRRANGE", kUnit.getAirRange()));
 		}
 
-		// BUG - Starting Experience - start
 		if (pCity && getBugOptionBOOL("MiscHover__UnitExperience", true, "BUG_UNIT_EXPERIENCE_HOVER"))
 		{
 			setUnitExperienceHelp(szBuffer, L", ", eUnit, pCity, bConscript);
 		}
-		// BUG - Starting Experience - end
 	}
 
 	//bTBUnitView1 = (Combat)
@@ -19130,7 +19126,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 	if (bNormalView)
 	{
 		//Max HP
-		if (kUnit.getTotalModifiedCombatStrength100() > 0 && kUnit.getMaxHP() != 100)
+		if (kUnit.getTotalModifiedCombatStrength100(false) > 0 && kUnit.getMaxHP() != 100)
 		{
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_MAX_HP", kUnit.getMaxHP()));
