@@ -1772,13 +1772,9 @@ protected:
 	int m_iModifiedBuildingDefenseRecoverySpeedCap;
 	int m_iExtraCityDefenseRecoverySpeedModifier;
 
-	int** m_ppaaiTechSpecialistHappinessTypes;
-	int* m_paiTechSpecialistHappiness;
 	int m_iExtraTechSpecialistHappiness;
 	int m_iExtraBuildingHappinessFromTech;
 	int m_iExtraBuildingHealthFromTech;
-	int** m_ppaaiTechSpecialistHealthTypes;
-	int* m_paiTechSpecialistHealth;
 	int m_iExtraTechSpecialistHealth;
 	int** m_ppaaiLocalSpecialistExtraYield;
 	int** m_ppaaiLocalSpecialistExtraCommerce;
@@ -1935,20 +1931,13 @@ protected:
 	bool m_bMarkedForDestruction;
 
 public:
-	int getTechSpecialistHappinessTypes(TechTypes eTech, SpecialistTypes eSpecialist) const;
-
 	int localCitizenCaptureResistance() const;
-	int getTechSpecialistHappiness(TechTypes eTech) const;
 	int getExtraTechHappinessTotal() const;
-	int getTechSpecialistHealthTypes(TechTypes eTech, SpecialistTypes eSpecialist) const;
-	int getTechSpecialistHealth(TechTypes eTech) const;
 	int getExtraTechHealthTotal() const;
 	int getLocalSpecialistExtraYield(SpecialistTypes eSpecialist, YieldTypes eYield) const;
 	int getLocalSpecialistExtraCommerce(SpecialistTypes eSpecialist, CommerceTypes eCommerce) const;
 
 private:
-	void changeTechSpecialistHappinessTypes(TechTypes eTech, SpecialistTypes eSpecialist, int iChange);
-	void changeTechSpecialistHappiness(TechTypes eTech, int iChange);
 	void updateExtraTechSpecialistHappiness();
 
 	int getBuildingHappinessFromTech(const TechTypes eTech) const;
@@ -1957,8 +1946,6 @@ private:
 	void changeBuildingHealthFromTech(const TechTypes eTech, const int iChange);
 
 	void updateExtraTechHappiness();
-	void changeTechSpecialistHealthTypes(TechTypes eTech, SpecialistTypes eSpecialist, int iChange);
-	void changeTechSpecialistHealth(TechTypes eTech, int iChange);
 	void updateExtraTechSpecialistHealth();
 	int getExtraTechSpecialistHealth() const;
 	int getTechHealth(TechTypes eTech) const;

@@ -12172,13 +12172,9 @@ void CvGameTextMgr::parseSpecialistHelpActual(CvWStringBuffer &szHelpString, Spe
 
 	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 	{
-		const TechTypes eTech = ((TechTypes)iI);
+		const TechTypes eTech = static_cast<TechTypes>(iI);
 		int iSpecialistHealth = GC.getSpecialistInfo(eSpecialist).getTechHealth(eTech);
-		if (pCity && GC.getGame().getActivePlayer() == NO_PLAYER)
-		{
-			iSpecialistHealth += pCity->getTechSpecialistHealth(eTech);
-			iSpecialistHealth += pCity->getTechSpecialistHealthTypes(eTech, eSpecialist);
-		}
+
 		if (iSpecialistHealth > 0)
 		{
 			szHelpString.append(NEWLINE);
@@ -12226,13 +12222,9 @@ void CvGameTextMgr::parseSpecialistHelpActual(CvWStringBuffer &szHelpString, Spe
 	}
 	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 	{
-		const TechTypes eTech = ((TechTypes)iI);
+		const TechTypes eTech = static_cast<TechTypes>(iI);
 		int iSpecialistHappiness = GC.getSpecialistInfo(eSpecialist).getTechHappiness(eTech);
-		if (GC.getGame().getActivePlayer() == NO_PLAYER && pCity)
-		{
-			iSpecialistHappiness += pCity->getTechSpecialistHappiness(eTech);
-			iSpecialistHappiness += pCity->getTechSpecialistHappinessTypes(eTech, eSpecialist);
-		}
+
 		if (iSpecialistHappiness > 0)
 		{
 			szHelpString.append(NEWLINE);
@@ -12395,13 +12387,9 @@ void CvGameTextMgr::parseFreeSpecialistHelp(CvWStringBuffer &szHelpString, const
 
 			for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 			{
-				const TechTypes eTech = ((TechTypes)iI);
+				const TechTypes eTech = static_cast<TechTypes>(iI);
 				int iSpecialistHealth = GC.getSpecialistInfo(eSpecialist).getTechHealth(eTech);
-				if (GC.getGame().getActivePlayer() == NO_PLAYER && GET_PLAYER(kCity.getOwner()).getID() != NO_PLAYER)
-				{
-					iSpecialistHealth += kCity.getTechSpecialistHealth(eTech);
-					iSpecialistHealth += kCity.getTechSpecialistHealthTypes(eTech, eSpecialist);
-				}
+
 				if (iSpecialistHealth > 0)
 				{
 					szHelpString.append(L", ");
@@ -12450,13 +12438,9 @@ void CvGameTextMgr::parseFreeSpecialistHelp(CvWStringBuffer &szHelpString, const
 
 			for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 			{
-				const TechTypes eTech = ((TechTypes)iI);
+				const TechTypes eTech = static_cast<TechTypes>(iI);
 				int iSpecialistHappiness = GC.getSpecialistInfo(eSpecialist).getTechHappiness(eTech);
-				if (GC.getGame().getActivePlayer() == NO_PLAYER && GET_PLAYER(kCity.getOwner()).getID() != NO_PLAYER)
-				{
-					iSpecialistHappiness += kCity.getTechSpecialistHappiness(eTech);
-					iSpecialistHappiness += kCity.getTechSpecialistHappinessTypes(eTech, eSpecialist);
-				}
+
 				if (iSpecialistHappiness > 0)
 				{
 					szHelpString.append(L", ");

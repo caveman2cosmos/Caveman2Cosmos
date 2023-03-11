@@ -118,8 +118,6 @@ CvCity::CvCity()
 	m_pabHasRawVicinityBonusCached = NULL;
 	m_paiUnitCombatExtraStrength = NULL;
 	m_pabAutomatedCanBuild = NULL;
-
-	//TB Combat Mod (Buildings) begin
 	m_paiNewAfflictionTypeCount = NULL;
 	m_paiAidRate = NULL;
 	m_ppaaiExtraBonusAidModifier = NULL;
@@ -131,15 +129,8 @@ CvCity::CvCity()
 	m_paiUnitCombatRepelAgainstModifier = NULL;
 	m_paiUnitCombatDefenseAgainstModifier = NULL;
 	m_paiPromotionLineAfflictionAttackCommunicability = NULL;
-	//TB Combat Mod (Buildings) end
-
-	m_paiTechSpecialistHappiness = NULL;
-	m_paiTechSpecialistHealth = NULL;
-	m_ppaaiTechSpecialistHappinessTypes = NULL;
-	m_ppaaiTechSpecialistHealthTypes = NULL;
 	m_ppaaiLocalSpecialistExtraYield = NULL;
 	m_ppaaiLocalSpecialistExtraCommerce = NULL;
-
 	m_pabReligiouslyDisabledBuilding = NULL;
 	m_paiSpecialistBannedCount = NULL;
 	m_paiDamageAttackingUnitCombatCount = NULL;
@@ -457,14 +448,10 @@ void CvCity::uninit()
 	SAFE_DELETE_ARRAY(m_paiPromotionLineAfflictionAttackCommunicability);
 	SAFE_DELETE_ARRAY(m_pabReligiouslyDisabledBuilding);
 	SAFE_DELETE_ARRAY(m_paiStartDeferredSectionNumBonuses);
-	SAFE_DELETE_ARRAY(m_paiTechSpecialistHappiness);
 	SAFE_DELETE_ARRAY(m_paiSpecialistBannedCount);
 	SAFE_DELETE_ARRAY(m_paiDamageAttackingUnitCombatCount);
 	SAFE_DELETE_ARRAY(m_paiBuildingCostPopulationCount);
 	SAFE_DELETE_ARRAY(m_paiHealUnitCombatTypeVolume);
-	SAFE_DELETE_ARRAY(m_paiTechSpecialistHealth);
-	SAFE_DELETE_ARRAY2(m_ppaaiTechSpecialistHappinessTypes, GC.getNumTechInfos());
-	SAFE_DELETE_ARRAY2(m_ppaaiTechSpecialistHealthTypes, GC.getNumTechInfos());
 	SAFE_DELETE_ARRAY2(m_ppaaiLocalSpecialistExtraYield, GC.getNumSpecialistInfos());
 	SAFE_DELETE_ARRAY2(m_ppaaiLocalSpecialistExtraCommerce, GC.getNumSpecialistInfos());
 }
@@ -749,27 +736,7 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 
 	if (!bConstructorCall)
 	{
-		FAssertMsg((0 < GC.getNumTechInfos()), "GC.getNumTechInfos() is not greater than zero but an array is being allocated in CvCity::reset");
-		FAssertMsg(m_ppaaiTechSpecialistHappinessTypes == NULL, "about to leak memory, CvCity::m_ppaaiTechSpecialistHappinessTypes");
-		FAssertMsg(m_ppaaiTechSpecialistHealthTypes == NULL, "about to leak memory, CvCity::m_ppaaiTechSpecialistHealthTypes");
-		m_paiTechSpecialistHappiness = new int[GC.getNumTechInfos()];
-		m_paiTechSpecialistHealth = new int[GC.getNumTechInfos()];
-		m_ppaaiTechSpecialistHappinessTypes = new int* [GC.getNumTechInfos()];
-		m_ppaaiTechSpecialistHealthTypes = new int* [GC.getNumTechInfos()];
-		for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
-		{
-			m_ppaaiTechSpecialistHappinessTypes[iI] = new int[GC.getNumSpecialistInfos()];
-			m_ppaaiTechSpecialistHealthTypes[iI] = new int[GC.getNumSpecialistInfos()];
-			for (int iJ = 0; iJ < GC.getNumSpecialistInfos(); iJ++)
-			{
-				m_ppaaiTechSpecialistHappinessTypes[iI][iJ] = 0;
-				m_ppaaiTechSpecialistHealthTypes[iI][iJ] = 0;
-			}
-			m_paiTechSpecialistHappiness[iI] = 0;
-			m_paiTechSpecialistHealth[iI] = 0;
-		}
-
-		FAssertMsg((0 < GC.getNumSpecialistInfos()), "GC.getNumSpecialistInfos() is not greater than zero but an array is being allocated in CvCity::reset");
+		FAssertMsg(0 < GC.getNumSpecialistInfos(), "GC.getNumSpecialistInfos() is not greater than zero but an array is being allocated in CvCity::reset");
 		FAssertMsg(m_ppaaiLocalSpecialistExtraYield == NULL, "about to leak memory, CvCity::m_ppaaiLocalSpecialistExtraYield");
 		m_ppaaiLocalSpecialistExtraYield = new int* [GC.getNumSpecialistInfos()];
 		FAssertMsg(m_ppaaiLocalSpecialistExtraCommerce == NULL, "about to leak memory, CvCity::m_ppaaiLocalSpecialistExtraCommerce");
@@ -16941,36 +16908,8 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", &m_iTotalFlankSupportPercentModifier, SAVE_VALUE_TYPE_INT);
 #endif
 
-	for (int i = 0; i < wrapper.getNumClassEnumValues(REMAPPED_CLASS_TYPE_TECHS); ++i)
-	{
-		int	iI = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_TECHS, i, true);
-
-		if (iI != -1)
-		{
-			WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_SPECIALISTS, GC.getNumSpecialistInfos(), m_ppaaiTechSpecialistHappinessTypes[iI]);
-		}
-		else
-		{
-			WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_ppaaiTechSpecialistHappinessTypes[iI], SAVE_VALUE_TYPE_INT_ARRAY);
-		}
-	}
-	for (int i = 0; i < wrapper.getNumClassEnumValues(REMAPPED_CLASS_TYPE_TECHS); ++i)
-	{
-		int	iI = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_TECHS, i, true);
-
-		if (iI != -1)
-		{
-			WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_SPECIALISTS, GC.getNumSpecialistInfos(), m_ppaaiTechSpecialistHealthTypes[iI]);
-		}
-		else
-		{
-			WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_ppaaiTechSpecialistHealthTypes[iI], SAVE_VALUE_TYPE_INT_ARRAY);
-		}
-	}
-	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_paiTechSpecialistHappiness);
 	WRAPPER_READ(wrapper, "CvCity", &m_iExtraTechSpecialistHappiness);
 	WRAPPER_READ(wrapper, "CvCity", &m_iExtraBuildingHappinessFromTech);
-	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_paiTechSpecialistHealth);
 	WRAPPER_READ(wrapper, "CvCity", &m_iExtraTechSpecialistHealth);
 	WRAPPER_READ(wrapper, "CvCity", &m_iExtraBuildingHealthFromTech);
 	for (int i = 0; i < wrapper.getNumClassEnumValues(REMAPPED_CLASS_TYPE_SPECIALISTS); ++i)
@@ -17529,18 +17468,8 @@ void CvCity::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvCity", m_iTotalFlankSupportPercentModifier);
 #endif
 
-	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
-	{
-		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_SPECIALISTS, GC.getNumSpecialistInfos(), m_ppaaiTechSpecialistHappinessTypes[iI]);
-	}
-	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
-	{
-		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_SPECIALISTS, GC.getNumSpecialistInfos(), m_ppaaiTechSpecialistHealthTypes[iI]);
-	}
-	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_paiTechSpecialistHappiness);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iExtraTechSpecialistHappiness);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iExtraBuildingHappinessFromTech);
-	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_paiTechSpecialistHealth);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iExtraTechSpecialistHealth);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iExtraBuildingHealthFromTech);
 	for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
@@ -21836,7 +21765,7 @@ void CvCity::clearModifierTotals()
 	//	want chnages to other thuings like traits, adjusting trhe not-yte-set
 	//	city yields based on plots being worked until we explicitly add them back in
 	m_bPlotWorkingMasked = true;
-	//TB Combat Mods (Buildings) begin
+
 #ifdef STRENGTH_IN_NUMBERS
 	m_iTotalFrontSupportPercentModifier = 0;
 	m_iTotalShortRangeSupportPercentModifier = 0;
@@ -21853,17 +21782,6 @@ void CvCity::clearModifierTotals()
 	m_iExtraBuildingDefenseRecoverySpeedModifier = 0;
 	m_iModifiedBuildingDefenseRecoverySpeedCap = 0;
 	m_iExtraCityDefenseRecoverySpeedModifier = 0;
-
-	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
-	{
-		for (int iJ = 0; iJ < GC.getNumSpecialistInfos(); iJ++)
-		{
-			m_ppaaiTechSpecialistHappinessTypes[iI][iJ] = 0;
-			m_ppaaiTechSpecialistHealthTypes[iI][iJ] = 0;
-		}
-		m_paiTechSpecialistHappiness[iI] = 0;
-		m_paiTechSpecialistHealth[iI] = 0;
-	}
 	m_iExtraTechSpecialistHappiness = 0;
 	m_iExtraBuildingHappinessFromTech = 0;
 	m_iExtraTechSpecialistHealth = 0;
@@ -21871,6 +21789,7 @@ void CvCity::clearModifierTotals()
 	m_iPrioritySpecialist = NO_SPECIALIST;
 	m_iExtraInsidiousness = 0;
 	m_iExtraInvestigation = 0;
+
 	for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 	{
 		for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
@@ -21883,7 +21802,6 @@ void CvCity::clearModifierTotals()
 			m_ppaaiLocalSpecialistExtraCommerce[iI][iJ] = 0;
 		}
 	}
-	//TB Combat Mods (Buildings) end
 }
 
 void CvCity::recalculateModifiers()
@@ -23139,77 +23057,22 @@ void CvCity::changeBuildingCostPopulationCount(BuildingTypes eBuilding, int iCha
 	m_paiBuildingCostPopulationCount[eBuilding] += iChange;
 }
 
-//Team Project (1)
-int CvCity::getTechSpecialistHappinessTypes(TechTypes eTech, SpecialistTypes eSpecialist) const
-{
-	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech);
-	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eSpecialist);
-	return m_ppaaiTechSpecialistHappinessTypes[eTech][eSpecialist];
-}
-
-
-void CvCity::changeTechSpecialistHappinessTypes(TechTypes eTech, SpecialistTypes eSpecialist, int iChange)
-{
-	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech);
-	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eSpecialist);
-
-	if (iChange != 0)
-	{
-		m_ppaaiTechSpecialistHappinessTypes[eTech][eSpecialist] += iChange;
-
-		updateExtraTechSpecialistHappiness();
-
-		AI_setAssignWorkDirty(true);
-	}
-}
-
-int CvCity::getTechSpecialistHappiness(TechTypes eTech) const
-{
-	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech);
-	return m_paiTechSpecialistHappiness[eTech];
-}
-
-
-void CvCity::changeTechSpecialistHappiness(TechTypes eTech, int iChange)
-{
-	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech);
-
-	if (iChange != 0)
-	{
-		m_paiTechSpecialistHappiness[eTech] += iChange;
-
-		updateExtraTechSpecialistHappiness();
-
-		AI_setAssignWorkDirty(true);
-	}
-}
 
 void CvCity::updateExtraTechSpecialistHappiness()
 {
-	int iBaseSpecialistCount = 0;
 	int iRunningTotal = 0;
 
-	for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
+	for (int iI = GC.getNumSpecialistInfos() - 1; iI > -1; iI--)
 	{
-		const SpecialistTypes eSpecialist = ((SpecialistTypes)iI);
-		iBaseSpecialistCount += specialistCount(eSpecialist);
+		const SpecialistTypes eSpecialist = static_cast<SpecialistTypes>(iI);;
 		const int iSpecificSpecialistCount = specialistCount(eSpecialist);
-		for (int iJ = 0; iJ < GC.getNumTechInfos(); iJ++)
+
+		for (int iJ = GC.getNumTechInfos() - 1; iJ > -1; iJ--)
 		{
-			const TechTypes eTech = ((TechTypes)iJ);
-			if (GET_TEAM(getTeam()).isHasTech(eTech))
+			if (GET_TEAM(getTeam()).isHasTech(static_cast<TechTypes>(iJ)))
 			{
-				iRunningTotal += iSpecificSpecialistCount * getTechSpecialistHappinessTypes(eTech, eSpecialist);
-				iRunningTotal += iSpecificSpecialistCount * GC.getSpecialistInfo(eSpecialist).getTechHappiness(eTech);
+				iRunningTotal += iSpecificSpecialistCount * GC.getSpecialistInfo(eSpecialist).getTechHappiness(static_cast<TechTypes>(iJ));
 			}
-		}
-	}
-	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
-	{
-		const TechTypes eTech = ((TechTypes)iI);
-		if (GET_TEAM(getTeam()).isHasTech(eTech))
-		{
-			iRunningTotal += iBaseSpecialistCount * getTechSpecialistHappiness(eTech);
 		}
 	}
 	m_iExtraTechSpecialistHappiness = iRunningTotal;
@@ -23277,79 +23140,24 @@ void CvCity::updateSpecialistHappinessHealthFromTech()
 	}
 }
 
-int CvCity::getTechSpecialistHealthTypes(TechTypes eTech, SpecialistTypes eSpecialist) const
-{
-	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech);
-	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eSpecialist);
-	return m_ppaaiTechSpecialistHealthTypes[eTech][eSpecialist];
-}
-
-
-void CvCity::changeTechSpecialistHealthTypes(TechTypes eTech, SpecialistTypes eSpecialist, int iChange)
-{
-	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech);
-	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eSpecialist);
-
-	if (iChange != 0)
-	{
-		m_ppaaiTechSpecialistHealthTypes[eTech][eSpecialist] += iChange;
-
-		updateExtraTechSpecialistHealth();
-
-		AI_setAssignWorkDirty(true);
-	}
-}
-
-int CvCity::getTechSpecialistHealth(TechTypes eTech) const
-{
-	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech);
-	return m_paiTechSpecialistHealth[eTech];
-}
-
-
-void CvCity::changeTechSpecialistHealth(TechTypes eTech, int iChange)
-{
-	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eTech);
-
-	if (iChange != 0)
-	{
-		m_paiTechSpecialistHealth[eTech] += iChange;
-
-		updateExtraTechSpecialistHealth();
-
-		AI_setAssignWorkDirty(true);
-	}
-}
 
 void CvCity::updateExtraTechSpecialistHealth()
 {
-	int iBaseSpecialistCount = 0;
 	int iRunningTotal = 0;
 
-	for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
+	for (int iI = GC.getNumSpecialistInfos() - 1; iI > -1; iI--)
 	{
-		const SpecialistTypes eSpecialist = ((SpecialistTypes)iI);
-		iBaseSpecialistCount += specialistCount(eSpecialist);
+		const SpecialistTypes eSpecialist = static_cast<SpecialistTypes>(iI);
 		const int iSpecificSpecialistCount = specialistCount(eSpecialist);
-		for (int iJ = 0; iJ < GC.getNumTechInfos(); iJ++)
+
+		for (int iJ = GC.getNumTechInfos() - 1; iJ > -1; iJ--)
 		{
-			const TechTypes eTech = ((TechTypes)iJ);
-			if (GET_TEAM(getTeam()).isHasTech(eTech))
+			if (GET_TEAM(getTeam()).isHasTech(static_cast<TechTypes>(iJ)))
 			{
-				iRunningTotal += iSpecificSpecialistCount * getTechSpecialistHealthTypes(eTech, eSpecialist);
-				iRunningTotal += iSpecificSpecialistCount * GC.getSpecialistInfo(eSpecialist).getTechHealth(eTech);
+				iRunningTotal += iSpecificSpecialistCount * GC.getSpecialistInfo(eSpecialist).getTechHealth(static_cast<TechTypes>(iJ));
 			}
 		}
 	}
-	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
-	{
-		const TechTypes eTech = ((TechTypes)iI);
-		if (GET_TEAM(getTeam()).isHasTech(eTech))
-		{
-			iRunningTotal += iBaseSpecialistCount * getTechSpecialistHealth(eTech);
-		}
-	}
-
 	m_iExtraTechSpecialistHealth = iRunningTotal;
 }
 
