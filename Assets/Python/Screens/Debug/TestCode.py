@@ -3810,6 +3810,10 @@ class TestCode:
 			CvCivicInfo = GC.getCivicInfo(iCivic)
 			self.log(CvCivicInfo.getType()+" =CIVIC_ "+CvCivicInfo.getDescription()+" ==")
 			
+		for iTech in xrange(GC.getNumTechInfos()):
+			CvTechInfo = GC.getTechInfo(iTech)
+			self.log(CvTechInfo.getType()+" =TECH_ "+CvTechInfo.getDescription()+" ==")
+			
 		for iTerrain in xrange(GC.getNumTerrainInfos()):
 			CvTerrainInfo = GC.getTerrainInfo(iTerrain)
 			self.log(CvTerrainInfo.getType()+" =TERRAIN_ "+CvTerrainInfo.getDescription()+" ==")
@@ -3832,4 +3836,5 @@ class TestCode:
 			
 		for iRoute in xrange(GC.getNumRouteInfos()):
 			CvRouteInfo = GC.getRouteInfo(iRoute)
-			self.log(CvRouteInfo.getType()+" =ROUTE_ "+CvRouteInfo.getDescription()+" ==")
+			self.log(CvRouteInfo.getType()+" =ROUTE_ "+CvRouteInfo.getDescription()+" ==")	
+		
