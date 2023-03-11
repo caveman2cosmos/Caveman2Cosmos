@@ -5561,11 +5561,6 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						/ (100 * std::max(1, kOwner.getNumTradeableBonuses(pair.first)));
 				}
 
-				if (kBuilding.getNoBonus() != NO_BONUS)
-				{
-					iValue -= kOwner.AI_bonusVal((BonusTypes)kBuilding.getNoBonus());
-				}
-
 				int iCivicOption = kBuilding.getCivicOption();
 				if (iCivicOption != NO_CIVICOPTION)
 				{
@@ -13320,11 +13315,6 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 						/
 						std::max(1, kOwner.getNumTradeableBonuses(pair.first))
 					);
-				}
-
-				if (kBuilding.getNoBonus() != NO_BONUS)
-				{
-					iValue -= kOwner.AI_bonusVal((BonusTypes)kBuilding.getNoBonus());
 				}
 
 				if (kBuilding.getCivicOption() != NO_CIVICOPTION)

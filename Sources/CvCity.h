@@ -1228,10 +1228,6 @@ public:
 	PlayerTypes getLiberationPlayer(bool bConquest) const;
 	void liberate(bool bConquest);
 
-	void changeNoBonusCount(BonusTypes eBonus, int iChange);
-	int getNoBonusCount(BonusTypes eBonus) const;
-	bool isNoBonus(BonusTypes eBonus) const;
-
 	DllExport int getMusicScriptId() const;
 	DllExport int getSoundscapeScriptId() const;
 	DllExport void cheat(bool bCtrl, bool bAlt, bool bShift);
@@ -1823,7 +1819,6 @@ protected:
 	CvWString m_szName;
 	CvString m_szScriptData;
 
-	int* m_paiNoBonus;
 	int* m_paiFreeBonus;
 	int* m_paiNumBonuses;
 	int* m_paiNumCorpProducedBonuses;

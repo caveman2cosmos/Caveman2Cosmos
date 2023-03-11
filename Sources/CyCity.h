@@ -343,8 +343,6 @@ public:
 	std::wstring getNameForm(int iForm) const;
 	std::wstring getNameKey() const;
 	void setName(std::wstring szNewValue, bool bFound);
-	void changeNoBonusCount(int /*BonusTypes*/ eBonus, int iChange);
-	bool isNoBonus(int /*BonusTypes*/ eBonus) const;
 	int getFreeBonus(int /*BonusTypes*/ eIndex) const;
 	void changeFreeBonus(int /*BonusTypes*/ eIndex, int iChange);
 	int getNumBonuses(int /*BonusTypes*/ iBonus) const;

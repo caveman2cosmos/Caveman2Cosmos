@@ -21081,13 +21081,6 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 		}
 	}
 
-	if (kBuilding.getNoBonus() != NO_BONUS)
-	{
-		const CvBonusInfo& kBonus = GC.getBonusInfo((BonusTypes) kBuilding.getNoBonus());
-		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_DISABLES", CvWString(kBonus.getType()).GetCString(), kBonus.getTextKeyWide(), kBonus.getChar()));
-	}
-
 	foreach_(const BonusModifier& pair, kBuilding.getFreeBonuses())
 	{
 		const CvBonusInfo& kBonus = GC.getBonusInfo(pair.first);

@@ -1292,11 +1292,6 @@ class WorldBuilder:
 			pNewCity.changeSpecialistCommerce(iCommerce, pOldCity.getSpecialistCommerce(iCommerce) - pNewCity.getSpecialistCommerce(iCommerce))
 		for iBonus in xrange(GC.getNumBonusInfos()):
 			pNewCity.changeFreeBonus(iBonus, pOldCity.getFreeBonus(iBonus) - pNewCity.getFreeBonus(iBonus))
-			while pOldCity.isNoBonus(iBonus) != pNewCity.isNoBonus(iBonus):
-				if pOldCity.isNoBonus(iBonus):
-					pNewCity.changeNoBonusCount(iBonus, 1)
-				else:
-					pNewCity.changeNoBonusCount(iBonus, -1)
 		for iOrder in xrange(pOldCity.getOrderQueueLength()):
 			OrderData = pOldCity.getOrderFromQueue(iOrder)
 			pNewCity.pushOrder(OrderData.eOrderType, OrderData.iData1, OrderData.iData2, OrderData.bSave, False, True, False)

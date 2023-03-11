@@ -41,7 +41,6 @@ m_iFreeStartEra(NO_ERA),
 m_iMaxStartEra(NO_ERA),
 m_iObsoleteTech(NO_TECH),
 m_iPrereqAndTech(NO_TECH),
-m_iNoBonus(NO_BONUS),
 m_iPowerBonus(NO_BONUS),
 m_iFreeBuilding(NO_BUILDING),
 m_iFreeAreaBuilding(NO_BUILDING),
@@ -1570,7 +1569,6 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iFreeStartEra);
 	CheckSum(iSum, m_iMaxStartEra);
 	CheckSum(iSum, m_iPrereqAndTech);
-	CheckSum(iSum, m_iNoBonus);
 	CheckSum(iSum, m_iPowerBonus);
 	CheckSum(iSum, m_iFreeBuilding);
 	CheckSum(iSum, m_iFreeAreaBuilding);
@@ -2056,9 +2054,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	//Alberts2 PrereqBonuses
 	pXML->SetOptionalVector(&m_aePrereqOrBonuses, L"PrereqBonuses");
-
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"NoBonus");
-	m_iNoBonus = pXML->GetInfoClass(szTextVal);
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"PowerBonus");
 	m_iPowerBonus = pXML->GetInfoClass(szTextVal);
@@ -3304,7 +3299,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 
 	if (getPrereqAndBonus() == NO_BONUS) m_iPrereqAndBonus = pClassInfo->getPrereqAndBonus();
 
-	if (getNoBonus() == iTextDefault) m_iNoBonus = pClassInfo->getNoBonus();
 	if (getPowerBonus() == iTextDefault) m_iPowerBonus = pClassInfo->getPowerBonus();
 	if (getCivicOption() == iTextDefault) m_iCivicOption = pClassInfo->getCivicOption();
 	if (getGreatPeopleUnitType() == iTextDefault) m_iGreatPeopleUnitType = pClassInfo->getGreatPeopleUnitType();

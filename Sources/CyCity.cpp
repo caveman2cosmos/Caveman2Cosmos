@@ -1324,16 +1324,6 @@ void CyCity::setName(std::wstring szNewValue, bool bFound)
 	m_pCity->setName((CvWString)szNewValue, bFound);
 }
 
-void CyCity::changeNoBonusCount(int /*BonusTypes*/ eBonus, int iChange)
-{
-	m_pCity->changeNoBonusCount((BonusTypes)eBonus, iChange);
-}
-
-bool CyCity::isNoBonus(int /*BonusTypes*/ eBonus) const
-{
-	return m_pCity->isNoBonus((BonusTypes)eBonus);
-}
-
 int CyCity::getFreeBonus(int /*BonusTypes*/ eIndex) const
 {
 	return m_pCity->getFreeBonus((BonusTypes)eIndex);
