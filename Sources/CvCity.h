@@ -401,7 +401,6 @@ public:
 
 	int getExtraBonusAidModifier(BonusTypes eBonusType, PropertyTypes ePropertyType) const;
 	void changeExtraBonusAidModifier(BonusTypes eBonusType, PropertyTypes ePropertyType, int iChange);
-	void setExtraBonusAidModifier(BonusTypes eBonusType, PropertyTypes ePropertyType, int iChange);
 
 	int getExtraAfflictionOutbreakLevelChange(PromotionLineTypes ePromotionLine) const;
 	void changeExtraAfflictionOutbreakLevelChange(PromotionLineTypes ePromotionLine, int iChange);
@@ -455,7 +454,6 @@ public:
 
 	bool canEquip(const CvUnit* pUnit, PromotionTypes eEquipment) const;
 
-	bool assignPromotionChecked(PromotionTypes ePromotion, CvUnit* pUnit) const;
 	void assignPromotionsFromBuildingChecked(const CvBuildingInfo& kBuilding, CvUnit* pLoopUnit) const;
 
 	//TB Combat Mods (Buildings) end
@@ -1121,9 +1119,7 @@ public:
 	int getUnitCombatFreeExperience(UnitCombatTypes eIndex) const;
 	void changeUnitCombatFreeExperience(UnitCombatTypes eIndex, int iChange);
 
-	int getFreePromotionCount(PromotionTypes eIndex) const;
 	bool isFreePromotion(PromotionTypes eIndex) const;
-	void changeFreePromotionCount(PromotionTypes eIndex, int iChange);
 
 	int getSpecialistFreeExperience() const;
 	void changeSpecialistFreeExperience(int iChange);
@@ -1840,7 +1836,6 @@ protected:
 	int* m_paiReligionInfluence;
 	int* m_paiStateReligionHappiness;
 	int* m_paiUnitCombatFreeExperience;
-	int* m_paiFreePromotionCount;
 	int* m_paiNumRealBuilding;
 
 	bool* m_pabWorkingPlot;

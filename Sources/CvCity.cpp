@@ -96,7 +96,6 @@ CvCity::CvCity()
 	m_paiReligionInfluence = NULL;
 	m_paiStateReligionHappiness = NULL;
 	m_paiUnitCombatFreeExperience = NULL;
-	m_paiFreePromotionCount = NULL;
 	m_paiNumRealBuilding = NULL;
 	m_bPropertyControlBuildingQueued = false;
 
@@ -418,7 +417,6 @@ void CvCity::uninit()
 	SAFE_DELETE_ARRAY(m_paiReligionInfluence);
 	SAFE_DELETE_ARRAY(m_paiStateReligionHappiness);
 	SAFE_DELETE_ARRAY(m_paiUnitCombatFreeExperience);
-	SAFE_DELETE_ARRAY(m_paiFreePromotionCount);
 	SAFE_DELETE_ARRAY(m_paiNumRealBuilding);
 	SAFE_DELETE_ARRAY(m_cachedPropertyNeeds);
 	SAFE_DELETE_ARRAY(m_pabHadVicinityBonus);
@@ -595,9 +593,7 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	m_bLayoutDirty = false;
 	m_bMaintenanceDirty = false;
 	m_bPlundered = false;
-
 	m_bPlotWorkingMasked = false;
-
 	m_bPopProductionProcess = false;
 
 	m_eOwner = eOwner;
@@ -863,38 +859,25 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 		FAssertMsg((0 < GC.getNumUnitCombatInfos()), "GC.getNumUnitCombatInfos() is not greater than zero but an array is being allocated in CvCity::reset");
 		m_paiUnitCombatFreeExperience = new int[GC.getNumUnitCombatInfos()];
 		m_paiUnitCombatExtraStrength = new int[GC.getNumUnitCombatInfos()];
-		//TB Combat Mod (Buildings) begin
 		m_paiUnitCombatProductionModifier = new int[GC.getNumUnitCombatInfos()];
 		m_paiUnitCombatRepelModifier = new int[GC.getNumUnitCombatInfos()];
 		m_paiUnitCombatRepelAgainstModifier = new int[GC.getNumUnitCombatInfos()];
 		m_paiUnitCombatDefenseAgainstModifier = new int[GC.getNumUnitCombatInfos()];
 		m_paiDamageAttackingUnitCombatCount = new int[GC.getNumUnitCombatInfos()];
 		m_paiHealUnitCombatTypeVolume = new int[GC.getNumUnitCombatInfos()];
-		//TB Combat Mod (Buildings) end
+
 		for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 		{
 			m_paiUnitCombatFreeExperience[iI] = 0;
 			m_paiUnitCombatExtraStrength[iI] = 0;
-			//TB Combat Mod (Buildings) begin
 			m_paiUnitCombatProductionModifier[iI] = 0;
 			m_paiUnitCombatRepelModifier[iI] = 0;
 			m_paiUnitCombatRepelAgainstModifier[iI] = 0;
 			m_paiUnitCombatDefenseAgainstModifier[iI] = 0;
 			m_paiDamageAttackingUnitCombatCount[iI] = 0;
 			m_paiHealUnitCombatTypeVolume[iI] = 0;
-			//TB Combat Mod (Buildings) end
 		}
 
-		FAssertMsg((0 < GC.getNumPromotionInfos()), "GC.getNumPromotionInfos() is not greater than zero but an array is being allocated in CvCity::reset");
-		//TB Combat Mods (Buildings) begin
-		m_paiFreePromotionCount = new int[GC.getNumPromotionInfos()];
-		for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-		{
-			m_paiFreePromotionCount[iI] = 0;
-			//TB Combat Mods (Buildings) end
-		}
-
-		//TB Combat Mods (Buildings) begin
 		FAssertMsg((0 < GC.getNumPromotionLineInfos()), "GC.getNumPromotionLineInfos() is not greater than zero but an array is being allocated in CvCity::reset");
 		m_paiNewAfflictionTypeCount = new int[GC.getNumPromotionLineInfos()];
 		m_paiNewExtraAfflictionOutbreakLevelChange = new int[GC.getNumPromotionLineInfos()];
@@ -906,7 +889,6 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 			m_paiNewExtraAfflictionOutbreakLevelChange[iI] = 0;
 			m_paiNewAfflictionToleranceChange[iI] = 0;
 			m_paiNewCurrentOvercomeChange[iI] = 0;
-			//TB Combat Mods (Buildings) end
 		}
 
 		FAssertMsg((0 < GC.getNumPropertyInfos()), "GC.getNumPropertyInfos() is not greater than zero but an array is being allocated in CvCity::reset");
@@ -3305,27 +3287,11 @@ void CvCity::addProductionExperience(CvUnit* pUnit, bool bConscript)
 		pUnit->changeExperience(getProductionExperience(pUnit->getUnitType()) / ((bConscript) ? 2 : 1));
 	}
 
-	const int iNumPromotionInfos = GC.getNumPromotionInfos();
-
-	for (int iI = 0; iI < iNumPromotionInfos; iI++)
+	for (int iI = GC.getNumBuildingInfos() -1; iI > -1; iI--)
 	{
-		const PromotionTypes ePromotion = (PromotionTypes) iI;
-
-		if (isFreePromotion(ePromotion))
+		if (getNumActiveBuilding(static_cast<BuildingTypes>(iI)) > 0)
 		{
-			assignPromotionChecked(ePromotion, pUnit);
-		}
-	}
-
-	const int iNumBuildingInfos = GC.getNumBuildingInfos();
-
-	for (int iI = 0; iI < iNumBuildingInfos; iI++)
-	{
-		const BuildingTypes eBuilding = static_cast<BuildingTypes>(iI);
-
-		if (getNumActiveBuilding(eBuilding) > 0)
-		{
-			assignPromotionsFromBuildingChecked(GC.getBuildingInfo(eBuilding), pUnit);
+			assignPromotionsFromBuildingChecked(GC.getBuildingInfo(static_cast<BuildingTypes>(iI)), pUnit);
 		}
 	}
 }
@@ -4715,11 +4681,6 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 			clearRawVicinityBonusCache(pair.first);
 		}
 
-		//if (kBuilding.getFreePromotion() != NO_PROMOTION)
-		//{
-		//	changeFreePromotionCount((PromotionTypes)kBuilding.getFreePromotion(), iChange);
-		//}
-
 		if (kBuilding.getPropertySpawnProperty() != NO_PROPERTY && kBuilding.getPropertySpawnUnit() != NO_UNIT)
 		{
 			FAssertMsg(GC.getUnitInfo(kBuilding.getPropertySpawnUnit()).isBlendIntoCity(),
@@ -4728,16 +4689,6 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 
 			changePropertySpawn(iChange, kBuilding.getPropertySpawnProperty(), kBuilding.getPropertySpawnUnit());
 		}
-
-		//if (kBuilding.getFreePromotion_2() != NO_PROMOTION)
-		//{
-		//	changeFreePromotionCount((PromotionTypes)kBuilding.getFreePromotion_2(), iChange);
-		//}
-
-		//if (kBuilding.getFreePromotion_3() != NO_PROMOTION)
-		//{
-		//	changeFreePromotionCount((PromotionTypes)kBuilding.getFreePromotion_3(), iChange);
-		//}
 
 		changeEspionageDefenseModifier(kBuilding.getEspionageDefenseModifier() * iChange);
 
@@ -4927,17 +4878,6 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 		}
 	}
 #endif // OUTBREAKS_AND_AFFLICTIONS
-
-	//int iNum = kBuilding.getNumFreePromoTypes();
-	//for (iI=0; iI<iNum; iI++)
-	//{
-	//	PROFILE("CvCity::processBuilding.FreePromotions");
-	//	PromotionTypes eFreePromo = (PromotionTypes)kBuilding.getFreePromoType(iI);
-	//	if (eFreePromo != NO_PROMOTION)
-	//	{
-	//		changeFreePromotionCount(eFreePromo, iChange);
-	//	}
-	//}
 
 	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
@@ -13886,30 +13826,31 @@ void CvCity::changeUnitCombatFreeExperience(UnitCombatTypes eIndex, int iChange)
 	m_paiUnitCombatFreeExperience[eIndex] += iChange;
 }
 
-
-int CvCity::getFreePromotionCount(PromotionTypes eIndex) const
-{
-	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), eIndex);
-	//TB Debug
-	//Somehow we are getting under 0 values here and that could cause problems down the road
-	//This method enforces minimum of 0 without changing the actual value of m_paiFreePromotionCount[eIndex](particularly puzzling) as the integrity of that value should be maintained.
-	return std::max(0, m_paiFreePromotionCount[eIndex]);
-}
-
-
 bool CvCity::isFreePromotion(PromotionTypes eIndex) const
 {
-	return getFreePromotionCount(eIndex) > 0;
+	for (int iI = GC.getNumBuildingInfos() - 1; iI > -1; iI--)
+	{
+		if (getNumActiveBuilding(static_cast<BuildingTypes>(iI)) == 0)
+		{
+			continue;
+		}
+		const CvBuildingInfo& building = GC.getBuildingInfo(static_cast<BuildingTypes>(iI));
+
+		foreach_(const FreePromoTypes& freePromoType, building.getFreePromoTypes())
+		{
+			if (eIndex == freePromoType.ePromotion)
+			{
+				// Toffer - This should be expanded to evaluate specific units and unitinfos
+				if (!freePromoType.m_pExprFreePromotionCondition)
+				{
+					return true;
+				}
+				break;
+			}
+		}
+	}
+	return false;
 }
-
-
-void CvCity::changeFreePromotionCount(PromotionTypes eIndex, int iChange)
-{
-	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), eIndex);
-	m_paiFreePromotionCount[eIndex] += iChange;
-	FASSERT_NOT_NEGATIVE(m_paiFreePromotionCount[eIndex]);
-}
-
 
 int CvCity::getSpecialistFreeExperience() const
 {
@@ -16671,7 +16612,6 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_RELIGIONS, GC.getNumReligionInfos(), m_paiReligionInfluence);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_RELIGIONS, GC.getNumReligionInfos(), m_paiStateReligionHappiness);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatFreeExperience);
-	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_PROMOTIONS, GC.getNumPromotionInfos(), m_paiFreePromotionCount);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiNumRealBuilding);
 
 	WRAPPER_READ_ARRAY(wrapper, "CvCity", NUM_CITY_PLOTS, m_pabWorkingPlot);
@@ -17306,7 +17246,6 @@ void CvCity::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_RELIGIONS, GC.getNumReligionInfos(), m_paiReligionInfluence);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_RELIGIONS, GC.getNumReligionInfos(), m_paiStateReligionHappiness);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatFreeExperience);
-	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_PROMOTIONS, GC.getNumPromotionInfos(), m_paiFreePromotionCount);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiNumRealBuilding);
 
 	WRAPPER_WRITE_ARRAY(wrapper, "CvCity", NUM_CITY_PLOTS, m_pabWorkingPlot);
@@ -21628,11 +21567,6 @@ void CvCity::clearModifierTotals()
 		m_paiHealUnitCombatTypeVolume[iI] = 0;
 	}
 
-	for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-	{
-		m_paiFreePromotionCount[iI] = 0;
-	}
-
 	for (int iI = 0; iI < GC.getNumPromotionLineInfos(); iI++)
 	{
 		m_paiNewAfflictionTypeCount[iI] = 0;
@@ -22248,12 +22182,6 @@ void CvCity::changeExtraBonusAidModifier(BonusTypes eBonusType, PropertyTypes eP
 	m_ppaaiExtraBonusAidModifier[eBonusType][ePropertyType] += iChange;
 }
 
-void CvCity::setExtraBonusAidModifier(BonusTypes eBonusType, PropertyTypes ePropertyType, int iChange)
-{
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eBonusType);
-	m_ppaaiExtraBonusAidModifier[eBonusType][ePropertyType] = iChange;
-}
-
 int CvCity::getExtraAfflictionOutbreakLevelChange(PromotionLineTypes ePromotionLine) const
 {
 	FASSERT_BOUNDS(0, GC.getNumPromotionLineInfos(), ePromotionLine);
@@ -22728,19 +22656,6 @@ void CvCity::changeTotalFlankSupportPercentModifier(int iChange)
 	FASSERT_NOT_NEGATIVE(getTotalFlankSupportPercentModifier());
 }
 #endif
-
-bool CvCity::assignPromotionChecked(PromotionTypes promotion, CvUnit* unit) const
-{
-	if (unit->canAcquirePromotion(promotion, PromotionRequirements::Promote | PromotionRequirements::ForFree)
-#ifdef COMBAT_MOD_EQUIPTMENT
-	|| (GC.getPromotionInfo(promotion).isEquipment() && canEquip(unit, promotion))
-#endif COMBAT_MOD_EQUIPTMENT
-	) {
-		unit->setHasPromotion(promotion, true);
-		return true;
-	}
-	return false;
-}
 
 void CvCity::assignPromotionsFromBuildingChecked(const CvBuildingInfo& building, CvUnit* unit) const
 {
