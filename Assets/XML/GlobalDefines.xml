@@ -1377,7 +1377,7 @@
 	<Define>
 		<DefineName>MINIMAP_RENDER_SIZE</DefineName>
 		<!--Minimap size in pixels-->
-		<iDefineIntVal>512</iDefineIntVal>
+		<iDefineIntVal>1024</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>TURN_LOG_MAX_WIDTH</DefineName>

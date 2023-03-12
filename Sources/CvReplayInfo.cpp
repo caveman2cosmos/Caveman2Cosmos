@@ -11,7 +11,7 @@
 #include "CvDLLInterfaceIFaceBase.h"
 #include "CvDLLUtilityIFaceBase.h"
 
-int CvReplayInfo::REPLAY_VERSION = 5;
+int CvReplayInfo::REPLAY_VERSION = 6;
 
 CvReplayInfo::CvReplayInfo()
 	: m_iActivePlayer(0)
@@ -556,116 +556,142 @@ bool CvReplayInfo::read(FDataStreamBase& stream)
 {
 	int iVersion;
 	stream.Read(&iVersion);
-
-	if (iVersion < 5)
+	if (iVersion < 6)
 	{
 		return false;
 	}
-	int iType;
-	int iNumTypes;
-	stream.Read(&m_iActivePlayer);
-	stream.Read(&iType);
-	m_eDifficulty = (HandicapTypes)iType;
-	stream.ReadString(m_szLeaderName);
-	stream.ReadString(m_szCivDescription);
-	stream.ReadString(m_szShortCivDescription);
-	stream.ReadString(m_szCivAdjective);
-	stream.ReadString(m_szMapScriptName);
-
-	stream.Read(&iType);
-	m_eWorldSize = (WorldSizeTypes)iType;
-	stream.Read(&iType);
-	m_eClimate = (ClimateTypes)iType;
-	stream.Read(&iType);
-	m_eSeaLevel = (SeaLevelTypes)iType;
-	stream.Read(&iType);
-	m_eEra = (EraTypes)iType;
-	stream.Read(&iType);
-	m_eGameSpeed = (GameSpeedTypes)iType;
-
-	stream.Read(&iNumTypes);
-	for (int i = 0; i < iNumTypes; i++)
+	// Use iVersion in below code to maintain backwards compatibility for versions higher than 5.
+	//	I.e if write code change, REPLAY_VERSION should iterate, 
+	//	and the old read code must be kept around in addition to the new read code (which match the current write code),
+	//	where iVersion is used to determine which read code to use in a particular read.
 	{
-		stream.Read(&iType);
-		m_listGameOptions.push_back((GameOptionTypes)iType);
-	}
-
-	stream.Read(&iNumTypes);
-	for (int i = 0; i < iNumTypes; i++)
-	{
-		stream.Read(&iType);
-		m_listVictoryTypes.push_back((VictoryTypes)iType);
-	}
-	stream.Read(&iType);
-	m_eVictoryType = (VictoryTypes)iType;
-
-	stream.Read(&iNumTypes);
-	for (int i = 0; i < iNumTypes; i++)
-	{
-		CvReplayMessage* pMessage = new CvReplayMessage(0);
-		if (pMessage)
+		int iMinimapSize;
+		stream.Read(&iMinimapSize);
+		if (iMinimapSize != m_nMinimapSize)
 		{
-			pMessage->read(stream);
+			// Exe will get exceptions when drawing the replay map as it expect the sample size o be MINIMAP_RENDER_SIZE
+			// So this replay must be discarded and there's no way to make it work.
+			return false;
 		}
-		m_listReplayMessages.push_back(pMessage);
 	}
-	stream.Read(&m_iInitialTurn);
-	stream.Read(&m_iStartYear);
-	stream.Read(&m_iFinalTurn);
-	stream.ReadString(m_szFinalDate);
-	stream.Read(&iType);
-	m_eCalendar = (CalendarTypes)iType;
-	stream.Read(&m_iNormalizedScore);
-
-	stream.Read(&iNumTypes);
-	for (int i = 0; i < iNumTypes; i++)
+	// So much can seemingly go wrong here that we cannot always expect to secure backwards compatibility in all cases by code alone.
+	// E.g. Certain XML changes can cause this try section to fail.
+	try
 	{
-		PlayerInfo info;
+		SAFE_DELETE(m_pcMinimapPixels);
+		m_pcMinimapPixels = new uint8_t[m_nMinimapSize];
+		stream.Read(m_nMinimapSize, m_pcMinimapPixels);
+
+		int iType;
+		int iNumTypes;
+		stream.Read(&m_iActivePlayer);
 		stream.Read(&iType);
-		info.m_eLeader = (LeaderHeadTypes)iType;
+		m_eDifficulty = (HandicapTypes)iType;
+		stream.ReadString(m_szLeaderName);
+		stream.ReadString(m_szCivDescription);
+		stream.ReadString(m_szShortCivDescription);
+		stream.ReadString(m_szCivAdjective);
+		stream.ReadString(m_szMapScriptName);
+
 		stream.Read(&iType);
-		info.m_eColor = (ColorTypes)iType;
-		int jNumTypes;
-		stream.Read(&jNumTypes);
-		for (int j = 0; j < jNumTypes; j++)
+		m_eWorldSize = (WorldSizeTypes)iType;
+		stream.Read(&iType);
+		m_eClimate = (ClimateTypes)iType;
+		stream.Read(&iType);
+		m_eSeaLevel = (SeaLevelTypes)iType;
+		stream.Read(&iType);
+		m_eEra = (EraTypes)iType;
+		stream.Read(&iType);
+		m_eGameSpeed = (GameSpeedTypes)iType;
+
+		stream.Read(&iNumTypes);
+		for (int i = 0; i < iNumTypes; i++)
 		{
-			TurnData data;
-
-			double fScore;
-			stream.Read(&fScore);
-			data.m_iScore = static_cast<int64_t>(fScore);
-
-			double fEconomy;
-			stream.Read(&fEconomy);
-			data.m_iEconomy = static_cast<int64_t>(fEconomy);
-
-			double fIndustry;
-			stream.Read(&fIndustry);
-			data.m_iIndustry = static_cast<int64_t>(fIndustry);
-
-			double fAgriculture;
-			stream.Read(&fAgriculture);
-			data.m_iAgriculture = static_cast<int64_t>(fAgriculture);
-
-			info.m_listScore.push_back(data);
+			stream.Read(&iType);
+			m_listGameOptions.push_back((GameOptionTypes)iType);
 		}
-		m_listPlayerScoreHistory.push_back(info);
+
+		stream.Read(&iNumTypes);
+		for (int i = 0; i < iNumTypes; i++)
+		{
+			stream.Read(&iType);
+			m_listVictoryTypes.push_back((VictoryTypes)iType);
+		}
+		stream.Read(&iType);
+		m_eVictoryType = (VictoryTypes)iType;
+
+		stream.Read(&iNumTypes);
+		for (int i = 0; i < iNumTypes; i++)
+		{
+			CvReplayMessage* pMessage = new CvReplayMessage(0);
+			if (pMessage)
+			{
+				pMessage->read(stream);
+			}
+			m_listReplayMessages.push_back(pMessage);
+		}
+		stream.Read(&m_iInitialTurn);
+		stream.Read(&m_iStartYear);
+		stream.Read(&m_iFinalTurn);
+		stream.ReadString(m_szFinalDate);
+		stream.Read(&iType);
+		m_eCalendar = (CalendarTypes)iType;
+		stream.Read(&m_iNormalizedScore);
+
+		stream.Read(&iNumTypes);
+		for (int i = 0; i < iNumTypes; i++)
+		{
+			PlayerInfo info;
+			stream.Read(&iType);
+			info.m_eLeader = (LeaderHeadTypes)iType;
+			stream.Read(&iType);
+			info.m_eColor = (ColorTypes)iType;
+			int jNumTypes;
+			stream.Read(&jNumTypes);
+			for (int j = 0; j < jNumTypes; j++)
+			{
+				TurnData data;
+
+				double fScore;
+				stream.Read(&fScore);
+				data.m_iScore = static_cast<int64_t>(fScore);
+
+				double fEconomy;
+				stream.Read(&fEconomy);
+				data.m_iEconomy = static_cast<int64_t>(fEconomy);
+
+				double fIndustry;
+				stream.Read(&fIndustry);
+				data.m_iIndustry = static_cast<int64_t>(fIndustry);
+
+				double fAgriculture;
+				stream.Read(&fAgriculture);
+				data.m_iAgriculture = static_cast<int64_t>(fAgriculture);
+
+				info.m_listScore.push_back(data);
+			}
+			m_listPlayerScoreHistory.push_back(info);
+		}
+		stream.Read(&m_iMapWidth);
+		stream.Read(&m_iMapHeight);
+		stream.Read(&m_bMultiplayer);
+
+		stream.ReadString(m_szModName);
+
+		return true;
 	}
-	stream.Read(&m_iMapWidth);
-	stream.Read(&m_iMapHeight);
-	SAFE_DELETE(m_pcMinimapPixels);
-	m_pcMinimapPixels = new uint8_t[m_nMinimapSize];
-	stream.Read(m_nMinimapSize, m_pcMinimapPixels);
-	stream.Read(&m_bMultiplayer);
-
-	stream.ReadString(m_szModName);
-
-	return true;
+	catch (...)
+	{
+		FErrorMsg("Backwards compatibility for replay data has been broken somehow")
+		return false;
+	}
 }
 
 void CvReplayInfo::write(FDataStreamBase& stream)
 {
 	stream.Write(REPLAY_VERSION);
+	stream.Write(m_nMinimapSize);
+	stream.Write(m_nMinimapSize, m_pcMinimapPixels);
 	stream.Write(m_iActivePlayer);
 	stream.Write((int)m_eDifficulty);
 	stream.WriteString(m_szLeaderName);
@@ -720,7 +746,6 @@ void CvReplayInfo::write(FDataStreamBase& stream)
 	}
 	stream.Write(m_iMapWidth);
 	stream.Write(m_iMapHeight);
-	stream.Write(m_nMinimapSize, m_pcMinimapPixels);
 	stream.Write(m_bMultiplayer);
 	stream.WriteString(m_szModName);
 }
