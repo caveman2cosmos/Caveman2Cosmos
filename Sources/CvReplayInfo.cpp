@@ -560,7 +560,7 @@ bool CvReplayInfo::read(FDataStreamBase& stream)
 	{
 		return false;
 	}
-	// Use iVersion in below code to maintain backwards compatibility for versions higher than 5.
+	// Use iVersion in below code to maintain backwards compatibility for versions higher than 5 if possible.
 	//	I.e if write code change, REPLAY_VERSION should iterate, 
 	//	and the old read code must be kept around in addition to the new read code (which match the current write code),
 	//	where iVersion is used to determine which read code to use in a particular read.
@@ -569,7 +569,7 @@ bool CvReplayInfo::read(FDataStreamBase& stream)
 		stream.Read(&iMinimapSize);
 		if (iMinimapSize != m_nMinimapSize)
 		{
-			// Exe will get exceptions when drawing the replay map as it expect the sample size o be MINIMAP_RENDER_SIZE
+			// Exe will get exceptions when drawing the replay map as it expect the sample size to be MINIMAP_RENDER_SIZE
 			// So this replay must be discarded and there's no way to make it work.
 			return false;
 		}
