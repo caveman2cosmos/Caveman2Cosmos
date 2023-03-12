@@ -1850,7 +1850,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BRATTAHLID</Tag>
-		<English>Brattahlíð</English>
+		<English>Brattahlíd</English>
 		<Russian>Братталид</Russian>
 	</TEXT>
 	<TEXT>
@@ -4514,7 +4514,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HEITHABYR</Tag>
-		<English>Heiðabýr</English>
+		<English>Heithabýr</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HELIOPOLIS</Tag>
@@ -4684,7 +4684,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HOLMGARTHR</Tag>
-		<English>Holmgarðr</English>
+		<English>Holmgarthr</English>
 		<Russian>Хольмгард</Russian>
 	</TEXT>
 	<TEXT>
@@ -5339,8 +5339,8 @@
 		<Russian>Кабул</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_KAENUGARTHR</Tag>
-		<English>Kœnugarðr</English>
+		<Tag>TXT_KEY_CITY_NAME_KOENUGARTHR</Tag>
+		<English>Koenugarthr</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KAESONG</Tag>
@@ -6370,8 +6370,8 @@
 		<Russian>Лейден</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_LEIFSBUDIR</Tag>
-		<English>Leifsbuðir</English>
+		<Tag>TXT_KEY_CITY_NAME_LEIFSBUTHIR</Tag>
+		<English>Leifsbuthir</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LEIPZIG</Tag>
@@ -6506,7 +6506,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LIODHUSA</Tag>
-		<English>Lioðhusa</English>
+		<English>Liodhusa</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LISBON</Tag>
@@ -7972,8 +7972,8 @@
 		<Russian>Никополь</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_NIDAROSS</Tag>
-		<English>Niðaróss</English>
+		<Tag>TXT_KEY_CITY_NAME_NITHAROSS</Tag>
+		<English>Nitharóss</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NIJMEGEN</Tag>
@@ -8504,7 +8504,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_OTHENSWE</Tag>
-		<English>Oðenswe</English>
+		<English>Othenswe</English><!-- Odense - Odin's Shrine -->
 		<Russian>Îäåíñå</Russian>
 	</TEXT>
 	<TEXT>
@@ -10393,7 +10393,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SKITHA</Tag>
-		<English>Skiða</English>
+		<English>Skitha</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SKOIYASE</Tag>
@@ -11191,17 +11191,17 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_THINGANES</Tag>
-		<English>Þinganes</English>
+		<English>Thinganes</English>
 		<Russian>Тинганес</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_THINGVELLIR</Tag>
-		<English>Þingvellir</English>
+		<English>Thingvellir</English>
 		<Russian>Тингведлир</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_THINGVOLLR</Tag>
-		<English>Þingvöllr</English>
+		<English>Thingvöllr</English>
 		<Russian>Тингводльр</Russian>
 	</TEXT>
 	<TEXT>
@@ -11215,7 +11215,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_THJODHILDARSTATHIR</Tag>
-		<English>Þjóðhildarstaðir</English>
+		<English>Thjódhildarstathir</English><!-- Þjóðhildarstaðir (Thjódhildsstead) -->
 		<Russian>Тьодхилдарстатир</Russian>
 	</TEXT>
 	<TEXT>
@@ -11228,7 +11228,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_THRAELLBORG</Tag>
-		<English>Þrællborg</English>
+		<English>Thraellborg</English>
 		<Russian>Треллеборг</Russian>
 	</TEXT>
 	<TEXT>
@@ -12006,7 +12006,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_VETHRAFJORTHR</Tag>
-		<English>Veðrafjörðr</English>
+		<English>Vethrafjörthr</English>
 		<Russian>Ведрафьорд</Russian>
 	</TEXT>
 	<TEXT>

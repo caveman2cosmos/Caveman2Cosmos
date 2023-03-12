@@ -3700,7 +3700,7 @@
 				<City>TXT_KEY_CITY_NAME_HOLMGARTHR</City><!-- 862 -->
 				<City>TXT_KEY_CITY_NAME_JORVIK</City><!-- 866 -->
 				<City>TXT_KEY_CITY_NAME_SMALESKJA</City><!-- 882 -->
-				<City>TXT_KEY_CITY_NAME_KAENUGARTHR</City><!-- 882 -->
+				<City>TXT_KEY_CITY_NAME_KOENUGARTHR</City><!-- 882 -->
 				<City>TXT_KEY_CITY_NAME_SYRNES</City><!-- 862-900 -->
 				<City>TXT_KEY_CITY_NAME_VISBY</City><!-- 900 -->
 				<City>TXT_KEY_CITY_NAME_VETHRAFJORTHR</City><!-- 914 -->
@@ -3718,17 +3718,17 @@
 				<City>TXT_KEY_CITY_NAME_THJODHILDARSTATHIR</City><!-- 985-1000 -->
 				<City>TXT_KEY_CITY_NAME_VESTRA_AROS</City><!-- 990 -->
 				<City>TXT_KEY_CITY_NAME_LUND</City><!-- 990 -->
-				<City>TXT_KEY_CITY_NAME_NIDAROSS</City><!-- 997 -->
+				<City>TXT_KEY_CITY_NAME_NITHAROSS</City><!-- 997 -->
 				<City>TXT_KEY_CITY_NAME_KONUGAHELLA</City><!-- 1000 -->
 				<City>TXT_KEY_CITY_NAME_SKITHA</City><!-- 1000 -->
-				<City>TXT_KEY_CITY_NAME_LEIFSBUDIR</City><!-- 1001 -->
+				<City>TXT_KEY_CITY_NAME_LEIFSBUTHIR</City><!-- 1001 -->
 				<City>TXT_KEY_CITY_NAME_HAMARKAUPANGR</City><!-- 1000-1050 -->
 				<City>TXT_KEY_CITY_NAME_KIRKJUVAGR</City><!-- 1046 -->
 				<City>TXT_KEY_CITY_NAME_LIODHUSA</City><!-- 1050 -->
 				<City>TXT_KEY_CITY_NAME_BJORGVIN</City><!-- 1070 -->
 				<City>TXT_KEY_CITY_NAME_LIUNGA_KAUPING</City><!-- 1100 -->
 				<City>TXT_KEY_CITY_NAME_SKARA</City><!-- 1100 -->
-				<City>TXT_KEY_CITY_NAME_THRAELLBORG</City>
+				<City>TXT_KEY_CITY_NAME_THRAELLBORG</City><!-- 1257 -->
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
