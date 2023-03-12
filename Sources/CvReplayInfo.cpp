@@ -11,7 +11,7 @@
 #include "CvDLLInterfaceIFaceBase.h"
 #include "CvDLLUtilityIFaceBase.h"
 
-int CvReplayInfo::REPLAY_VERSION = 4;
+int CvReplayInfo::REPLAY_VERSION = 5;
 
 CvReplayInfo::CvReplayInfo()
 	: m_iActivePlayer(0)
@@ -32,7 +32,7 @@ CvReplayInfo::CvReplayInfo()
 	, m_iStartYear(0)
 	, m_eCalendar(NO_CALENDAR)
 {
-	m_nMinimapSize = ((GC.getDefineINT("MINIMAP_RENDER_SIZE") * GC.getDefineINT("MINIMAP_RENDER_SIZE")) / 2);
+	m_nMinimapSize = GC.getDefineINT("MINIMAP_RENDER_SIZE") * GC.getDefineINT("MINIMAP_RENDER_SIZE") / 2;
 }
 
 CvReplayInfo::~CvReplayInfo()
@@ -154,7 +154,7 @@ void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 		if (it != mapPlayers.end())
 		{
 			CvReplayMessage* pMsg = new CvReplayMessage(game.getReplayMessageTurn(i), game.getReplayMessageType(i), (PlayerTypes)it->second);
-			if (NULL != pMsg)
+			if (pMsg)
 			{
 				pMsg->setColor(game.getReplayMessageColor(i));
 				pMsg->setText(game.getReplayMessageText(i));
@@ -165,7 +165,7 @@ void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 		else
 		{
 			CvReplayMessage* pMsg = new CvReplayMessage(game.getReplayMessageTurn(i), game.getReplayMessageType(i), NO_PLAYER);
-			if (NULL != pMsg)
+			if (pMsg)
 			{
 				pMsg->setColor(game.getReplayMessageColor(i));
 				pMsg->setText(game.getReplayMessageText(i));
@@ -554,126 +554,113 @@ const char* CvReplayInfo::getModName() const
 
 bool CvReplayInfo::read(FDataStreamBase& stream)
 {
+	int iVersion;
+	stream.Read(&iVersion);
+
+	if (iVersion < 5)
+	{
+		return false;
+	}
 	int iType;
 	int iNumTypes;
-	bool bSuccess = true;
+	stream.Read(&m_iActivePlayer);
+	stream.Read(&iType);
+	m_eDifficulty = (HandicapTypes)iType;
+	stream.ReadString(m_szLeaderName);
+	stream.ReadString(m_szCivDescription);
+	stream.ReadString(m_szShortCivDescription);
+	stream.ReadString(m_szCivAdjective);
+	stream.ReadString(m_szMapScriptName);
 
-	try
+	stream.Read(&iType);
+	m_eWorldSize = (WorldSizeTypes)iType;
+	stream.Read(&iType);
+	m_eClimate = (ClimateTypes)iType;
+	stream.Read(&iType);
+	m_eSeaLevel = (SeaLevelTypes)iType;
+	stream.Read(&iType);
+	m_eEra = (EraTypes)iType;
+	stream.Read(&iType);
+	m_eGameSpeed = (GameSpeedTypes)iType;
+
+	stream.Read(&iNumTypes);
+	for (int i = 0; i < iNumTypes; i++)
 	{
-		int iVersion;
-		stream.Read(&iVersion);
-		if (iVersion < 2)
-		{
-			return false;
-		}
-
-		stream.Read(&m_iActivePlayer);
-
 		stream.Read(&iType);
-		m_eDifficulty = (HandicapTypes)iType;
-		stream.ReadString(m_szLeaderName);
-		stream.ReadString(m_szCivDescription);
-		stream.ReadString(m_szShortCivDescription);
-		stream.ReadString(m_szCivAdjective);
-		if (iVersion > 3)
-		{
-			stream.ReadString(m_szMapScriptName);
-		}
-		else
-		{
-			m_szMapScriptName = gDLL->getText("TXT_KEY_TRAITHELP_PLAYER_UNKNOWN");
-		}
-		stream.Read(&iType);
-		m_eWorldSize = (WorldSizeTypes)iType;
-		stream.Read(&iType);
-		m_eClimate = (ClimateTypes)iType;
-		stream.Read(&iType);
-		m_eSeaLevel = (SeaLevelTypes)iType;
-		stream.Read(&iType);
-		m_eEra = (EraTypes)iType;
-		stream.Read(&iType);
-		m_eGameSpeed = (GameSpeedTypes)iType;
-		stream.Read(&iNumTypes);
-		for (int i = 0; i < iNumTypes; i++)
-		{
-			stream.Read(&iType);
-			m_listGameOptions.push_back((GameOptionTypes)iType);
-		}
-		stream.Read(&iNumTypes);
-		for (int i = 0; i < iNumTypes; i++)
-		{
-			stream.Read(&iType);
-			m_listVictoryTypes.push_back((VictoryTypes)iType);
-		}
-		stream.Read(&iType);
-		m_eVictoryType = (VictoryTypes)iType;
-		stream.Read(&iNumTypes);
-		for (int i = 0; i < iNumTypes; i++)
-		{
-			CvReplayMessage* pMessage = new CvReplayMessage(0);
-			if (NULL != pMessage)
-			{
-				pMessage->read(stream);
-			}
-			m_listReplayMessages.push_back(pMessage);
-		}
-		stream.Read(&m_iInitialTurn);
-		stream.Read(&m_iStartYear);
-		stream.Read(&m_iFinalTurn);
-		stream.ReadString(m_szFinalDate);
-		stream.Read(&iType);
-		m_eCalendar = (CalendarTypes)iType;
-		stream.Read(&m_iNormalizedScore);
-		stream.Read(&iNumTypes);
-		for (int i = 0; i < iNumTypes; i++)
-		{
-			PlayerInfo info;
-			stream.Read(&iType);
-			info.m_eLeader = (LeaderHeadTypes)iType;
-			stream.Read(&iType);
-			info.m_eColor = (ColorTypes)iType;
-			int jNumTypes;
-			stream.Read(&jNumTypes);
-			for (int j = 0; j < jNumTypes; j++)
-			{
-				TurnData data;
-
-				double fScore;
-				stream.Read(&fScore);
-				data.m_iScore = static_cast<int64_t>(fScore);
-
-				double fEconomy;
-				stream.Read(&fEconomy);
-				data.m_iEconomy = static_cast<int64_t>(fEconomy);
-
-				double fIndustry;
-				stream.Read(&fIndustry);
-				data.m_iIndustry = static_cast<int64_t>(fIndustry);
-
-				double fAgriculture;
-				stream.Read(&fAgriculture);
-				data.m_iAgriculture = static_cast<int64_t>(fAgriculture);
-
-				info.m_listScore.push_back(data);
-			}
-			m_listPlayerScoreHistory.push_back(info);
-		}
-		stream.Read(&m_iMapWidth);
-		stream.Read(&m_iMapHeight);
-		SAFE_DELETE(m_pcMinimapPixels);
-		m_pcMinimapPixels = new uint8_t[m_nMinimapSize];
-		stream.Read(m_nMinimapSize, m_pcMinimapPixels);
-		stream.Read(&m_bMultiplayer);
-		if (iVersion > 2)
-		{
-			stream.ReadString(m_szModName);
-		}
+		m_listGameOptions.push_back((GameOptionTypes)iType);
 	}
-	catch (...)
+
+	stream.Read(&iNumTypes);
+	for (int i = 0; i < iNumTypes; i++)
 	{
-		bSuccess = false;
+		stream.Read(&iType);
+		m_listVictoryTypes.push_back((VictoryTypes)iType);
 	}
-	return bSuccess;
+	stream.Read(&iType);
+	m_eVictoryType = (VictoryTypes)iType;
+
+	stream.Read(&iNumTypes);
+	for (int i = 0; i < iNumTypes; i++)
+	{
+		CvReplayMessage* pMessage = new CvReplayMessage(0);
+		if (pMessage)
+		{
+			pMessage->read(stream);
+		}
+		m_listReplayMessages.push_back(pMessage);
+	}
+	stream.Read(&m_iInitialTurn);
+	stream.Read(&m_iStartYear);
+	stream.Read(&m_iFinalTurn);
+	stream.ReadString(m_szFinalDate);
+	stream.Read(&iType);
+	m_eCalendar = (CalendarTypes)iType;
+	stream.Read(&m_iNormalizedScore);
+
+	stream.Read(&iNumTypes);
+	for (int i = 0; i < iNumTypes; i++)
+	{
+		PlayerInfo info;
+		stream.Read(&iType);
+		info.m_eLeader = (LeaderHeadTypes)iType;
+		stream.Read(&iType);
+		info.m_eColor = (ColorTypes)iType;
+		int jNumTypes;
+		stream.Read(&jNumTypes);
+		for (int j = 0; j < jNumTypes; j++)
+		{
+			TurnData data;
+
+			double fScore;
+			stream.Read(&fScore);
+			data.m_iScore = static_cast<int64_t>(fScore);
+
+			double fEconomy;
+			stream.Read(&fEconomy);
+			data.m_iEconomy = static_cast<int64_t>(fEconomy);
+
+			double fIndustry;
+			stream.Read(&fIndustry);
+			data.m_iIndustry = static_cast<int64_t>(fIndustry);
+
+			double fAgriculture;
+			stream.Read(&fAgriculture);
+			data.m_iAgriculture = static_cast<int64_t>(fAgriculture);
+
+			info.m_listScore.push_back(data);
+		}
+		m_listPlayerScoreHistory.push_back(info);
+	}
+	stream.Read(&m_iMapWidth);
+	stream.Read(&m_iMapHeight);
+	SAFE_DELETE(m_pcMinimapPixels);
+	m_pcMinimapPixels = new uint8_t[m_nMinimapSize];
+	stream.Read(m_nMinimapSize, m_pcMinimapPixels);
+	stream.Read(&m_bMultiplayer);
+
+	stream.ReadString(m_szModName);
+
+	return true;
 }
 
 void CvReplayInfo::write(FDataStreamBase& stream)
@@ -705,7 +692,7 @@ void CvReplayInfo::write(FDataStreamBase& stream)
 	stream.Write((int)m_listReplayMessages.size());
 	foreach_(const CvReplayMessage* pMessage, m_listReplayMessages)
 	{
-		if (pMessage != NULL)
+		if (pMessage)
 		{
 			pMessage->write(stream);
 		}
