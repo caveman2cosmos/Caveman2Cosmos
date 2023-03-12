@@ -895,8 +895,8 @@
 		<English>Arnkell-lág</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_AROS</Tag>
-		<English>Árós</English>
+		<Tag>TXT_KEY_CITY_NAME_AROSS</Tag>
+		<English>Áróss</English>
 		<Russian>Àðîñ</Russian>
 	</TEXT>
 	<TEXT>
@@ -10386,6 +10386,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SKARA</Tag>
 		<English>Skara</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SKARTHABORG</Tag>
+		<English>Skarthaborg</English><!-- Scarborough, North Yorkshire -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SKIRINGSSALR</Tag>

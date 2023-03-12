@@ -3680,9 +3680,10 @@
 				<City>TXT_KEY_CITY_NAME_UPPSALIR</City><!-- 500 -->
 				<City>TXT_KEY_CITY_NAME_BORG</City><!-- 500 -->
 				<City>TXT_KEY_CITY_NAME_RIPA</City><!-- 710 -->
+				<City>TXT_KEY_CITY_NAME_SKIRINGSSALR</City><!-- 740-760 -->
 				<City>TXT_KEY_CITY_NAME_BIRKA</City><!-- 750 -->
 				<City>TXT_KEY_CITY_NAME_HEITHABYR</City><!-- 770 -->
-				<City>TXT_KEY_CITY_NAME_AROS</City><!-- 775-800 -->
+				<City>TXT_KEY_CITY_NAME_AROSS</City><!-- 750-800 -->
 				<City>TXT_KEY_CITY_NAME_KAUPANG</City><!-- 780 -->
 				<City>TXT_KEY_CITY_NAME_THINGVOLLR</City><!-- 800 -->
 				<City>TXT_KEY_CITY_NAME_ARNKELL_LAG</City><!-- 801-827 -->
@@ -3690,7 +3691,6 @@
 				<City>TXT_KEY_CITY_NAME_TUNSBERG</City><!-- 801-871 -->
 				<City>TXT_KEY_CITY_NAME_VIKINGA_LO</City><!-- 840-860 -->
 				<City>TXT_KEY_CITY_NAME_REYKJAVIK</City><!-- 874 -->
-				<City>TXT_KEY_CITY_NAME_SKIRINGSSALR</City><!-- 801-900 -->
 				<City>TXT_KEY_CITY_NAME_STAFANGR</City><!-- 801-872 -->
 				<City>TXT_KEY_CITY_NAME_JALUNG</City><!-- 801-900 -->
 				<City>TXT_KEY_CITY_NAME_HLYMREKR</City><!-- 812 -->
@@ -3708,6 +3708,7 @@
 				<City>TXT_KEY_CITY_NAME_THINGVELLIR</City><!-- 930 -->
 				<City>TXT_KEY_CITY_NAME_HROARSKELDA</City><!-- 900-980 -->
 				<City>TXT_KEY_CITY_NAME_JOMSBORG</City><!-- 960-969 -->
+				<City>TXT_KEY_CITY_NAME_SKARTHABORG</City><!-- 966 -->
 				<City>TXT_KEY_CITY_NAME_HERJOLFSNES</City><!-- 985 -->
 				<City>TXT_KEY_CITY_NAME_BRATTAHLID</City><!-- 985 -->
 				<City>TXT_KEY_CITY_NAME_BORGUNDKAUPANGR</City><!-- 900-1000 -->
