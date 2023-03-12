@@ -1502,6 +1502,11 @@
 		<English>Beja</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BELEM</Tag>
+		<English>Belém</English>
+		<Russian>Áåëåí</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BELISE</Tag>
 		<English>Belise</English>
 		<Russian>Áåëèç</Russian>
@@ -1685,6 +1690,10 @@
 		<Russian>Блекпул</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BOA_VISTA</Tag>
+		<English>Boa Vista</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BOCHUM</Tag>
 		<English>Bochum</English>
 		<Russian>Бохум</Russian>
@@ -1833,6 +1842,11 @@
 		<Italian>Brandeburgo</Italian>
 		<Spanish>Brandeburgo</Spanish>
 		<Russian>Бранденбург</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BRASILIA</Tag>
+		<English>Brasília</English>
+		<Russian>Áðàçèëèà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BRATTAHLID</Tag>
@@ -2312,6 +2326,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CHAN_CHAN</Tag>
 		<English>Chan Chan</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CHAPECO</Tag>
+		<English>Chapecó</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CHAPULTEPEC</Tag>
@@ -2796,6 +2814,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CUENCA</Tag>
 		<English>Cuenca</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CUIABA</Tag>
+		<English>Cuiabá</English>
+		<Russian>Êóÿáà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CUMAE</Tag>
@@ -3742,8 +3765,17 @@
 		<Russian>Флоренция</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_FLORIANOPOLIS</Tag>
+		<English>Florianópolis</English>
+		<Russian>Ôëîðèàíîïîëèñ</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_FORT_ANCIENT</Tag>
 		<English>Fort Ancient</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_FOZ_DO_IGUACU</Tag>
+		<English>Foz do Iguaçu</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_FRANEKER</Tag>
@@ -4043,6 +4075,11 @@
 		<Tag>TXT_KEY_CITY_NAME_GLOUCESTER</Tag>
 		<English>Gloucester</English>
 		<Russian>Глостер</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GOIANIA</Tag>
+		<English>Goiânia</English>
+		<Russian>Ãîÿíèÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_GOIOGOUEN</Tag>
@@ -4840,6 +4877,10 @@
 		<Russian>Иксан</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ILHEUS</Tag>
+		<English>Ilhéus</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ILLINOIS</Tag>
 		<English>Illinois</English>
 		<Russian>Иллинойс</Russian>
@@ -5227,6 +5268,11 @@
 		<Russian>Чинджу</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_JOAO_PESSOA</Tag>
+		<English>João Pessoa</English>
+		<Russian>Æóàí-Ïåñîà</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_JOARA</Tag>
 		<English>Joara</English>
 	</TEXT>
@@ -5251,6 +5297,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_JORVIK</Tag>
 		<English>Jórvík</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_JUNDIAI</Tag>
+		<English>Jundiaí</English>
+		<Russian>Æóíäèàè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_JURAMENTO</Tag>
@@ -6665,7 +6716,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MACAPA</Tag>
-		<English>Macapa</English>
+		<English>Macapá</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MACAPABA</Tag>
+		<English>Macapaba</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MACAU</Tag>
@@ -6675,6 +6730,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MACAYA</Tag>
 		<English>Macaya</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MACEIO</Tag>
+		<English>Maceió</English>
+		<Russian>Ìàñåéî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MACHU_PIKCHU</Tag>
@@ -6883,6 +6943,11 @@
 		<Tag>TXT_KEY_CITY_NAME_MARI</Tag>
 		<English>Mari</English>
 		<Russian>Мари</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MARINGA</Tag>
+		<English>Maringá</English>
+		<Russian>Ìàðèíãà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MARIONA</Tag>
@@ -8573,9 +8638,12 @@
 		<Russian>Ïàëèêèð</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_PALMA</Tag>
-		<English>Palma</English>
-		<Russian>Пальма</Russian>
+		<Tag>TXT_KEY_CITY_NAME_PALMA_DE_MALLORCA</Tag>
+		<English>Palma de Mallorca</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PALMAS</Tag>
+		<English>Palmas</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PALMELA</Tag>
@@ -8791,6 +8859,14 @@
 		<Russian>Петерборо</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PETROLINA</Tag>
+		<English>Petrolina</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PETROPOLIS</Tag>
+		<English>Petrópolis</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PETROZAVODSK</Tag>
 		<English>Petrozavodsk</English>
 		<Russian>Ïåòðîçàâîäñê</Russian>
@@ -9000,6 +9076,10 @@
 		<English>Porto</English>
 		<Spanish>Oporto</Spanish>
 		<Russian>Порту</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PORTO_VELHO</Tag>
+		<English>Porto Velho</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PORTSMOUTH</Tag>
@@ -9386,6 +9466,11 @@
 		<Russian>Рибе</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_RIBEIRAO_PRETO</Tag>
+		<English>Ribeirão Preto</English>
+		<Russian>Ðèáåéðàí-Ïðåòó</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_RIBLAH</Tag>
 		<English>Riblah</English>
 		<Russian>Рибла</Russian>
@@ -9394,6 +9479,10 @@
 		<Tag>TXT_KEY_CITY_NAME_RICHMOND</Tag>
 		<English>Richmond</English>
 		<Russian>Ðè÷ìîíä</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_RIO_BRANCO</Tag>
+		<English>Rio Branco</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_RIO_DE_JANEIRO</Tag>
@@ -9661,26 +9750,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SAMSUN</Tag>
 		<English>Samsun</English>
-		<French>
-			<Text>Samsun</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Samsun</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Samsun</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Samsun</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SAMUHA</Tag>
@@ -9748,6 +9817,11 @@
 		<Russian>Сан-Диего</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAN_JOSE_DOS_CAMPOS</Tag>
+		<English>São José dos Campos</English>
+		<Russian>Ñàí-Æîçå-äóñ-Êàìïóñ</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SAN_FRANCISCO</Tag>
 		<English>San Francisco</English>
 		<Russian>Сан-Франциско</Russian>
@@ -9757,6 +9831,21 @@
 		<English>San Sebastián</English>
 		<French>Saint-Sébastien</French>
 		<Russian>Сан-Себастьян</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAO_LUIS</Tag>
+		<English>São Luís</English>
+		<Russian>Ñàí-Ëóèñ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAO_PAULO</Tag>
+		<English>São Paulo</English>
+		<Russian>Ñàí Ïàóëó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAO_VICENTE</Tag>
+		<English>São Vicente</English>
+		<Russian>Ñàí-Âèñåíòè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SAPIA</Tag>
@@ -10333,6 +10422,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SNUOL</Tag>
 		<English>Snuol</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SOBRAL</Tag>
+		<English>Sobral</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SOKCHO</Tag>
@@ -11594,6 +11687,11 @@
 		<Russian>Убайд</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_UBERLANDIA</Tag>
+		<English>Uberlândia</English>
+		<Russian>Óáåðëàíäèà</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_UBIORUM</Tag>
 		<English>Ubiorum</English>
 	</TEXT>
@@ -11992,8 +12090,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_VITORIA</Tag>
-		<English>Vitoria</English>
-		<Russian>Витория</Russian>
+		<English>Vitória</English>
+		<Russian>Âèêòîðèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VITORIA_GASTEIZ</Tag>
+		<English>Vitoria-Gasteiz</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_VLADIMIR</Tag>
