@@ -1256,7 +1256,7 @@ class WorldBuilder:
 		pNewCity.setPopulation(pOldCity.getPopulation())
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 
-			pNewCity.setBuildingProduction(iBuilding, pOldCity.getBuildingProgress(iBuilding))
+			pNewCity.setProgressOnBuilding(iBuilding, pOldCity.getProgressOnBuilding(iBuilding))
 
 			for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 				pNewCity.setBuildingCommerceChange(iBuilding, iCommerce, pOldCity.getBuildingCommerceChange(iBuilding, iCommerce))
@@ -1318,7 +1318,7 @@ class WorldBuilder:
 		pNewCity.setOccupationTimer(pOldCity.getOccupationTimer())
 		pNewCity.setOverflowProduction(pOldCity.getOverflowProduction())
 		pNewCity.setPlundered(pOldCity.isPlundered())
-		pNewCity.setProduction(pOldCity.getProduction())
+		pNewCity.setProductionProgress(pOldCity.getProductionProgress())
 		pNewCity.setScriptData(pOldCity.getScriptData())
 		pNewCity.setWallOverride(pOldCity.isWallOverride())
 

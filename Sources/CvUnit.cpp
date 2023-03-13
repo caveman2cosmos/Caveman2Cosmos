@@ -9498,7 +9498,7 @@ int CvUnit::destroyCost(const CvPlot* pPlot) const
 	(
 		GC.getDefineINT("BASE_SPY_DESTROY_COST")
 		+
-		pCity->getProduction()
+		pCity->getProductionProgress()
 		*
 		(
 			bLimited
@@ -9553,7 +9553,7 @@ bool CvUnit::canDestroy(const CvPlot* pPlot, bool bTestVisible) const
 
 	const CvCity* pCity = pPlot->getPlotCity();
 
-	if (pCity == NULL || pCity->getProduction() == 0)
+	if (pCity == NULL || pCity->getProductionProgress() == 0)
 	{
 		return false;
 	}
@@ -9587,7 +9587,7 @@ bool CvUnit::destroy()
 
 	if (!bCaught)
 	{
-		pCity->setProduction(pCity->getProduction() / 2);
+		pCity->setProductionProgress(pCity->getProductionProgress() / 2);
 
 		finishMoves();
 
@@ -26524,7 +26524,7 @@ bool CvUnit::airBomb5(int iX, int iY)
 		if (GC.getGame().getSorenRandNum(100, "Airbomb") < 50)
 		{
 			bNoTarget = false;
-			pCity->setProduction(pCity->getProduction() / 2);
+			pCity->setProductionProgress(pCity->getProductionProgress() / 2);
 			bSuccess = true;
 			{
 

@@ -3214,12 +3214,12 @@ class CvMainInterface:
 
 			elif iOrder == OrderTypes.ORDER_CONSTRUCT:
 				szTxt1 = GC.getBuildingInfo(iType).getDescription()
-				if CyCity.getBuildingProgress(iType) > 0:
+				if CyCity.getProgressOnBuilding(iType) > 0:
 					szTxt2 = "<color=0,255,255,255>"
 				szTxt2 += str(CyCity.getBuildingProductionTurnsLeft(iType, iNode))
 				# BUG - Production Decay
 				if CityOpt.isShowProductionDecayQueue():
-					if CyCity.getBuildingProgress(iType) > 0:
+					if CyCity.getProgressOnBuilding(iType) > 0:
 						if CyCity.isBuildingProductionDecay(iType):
 							szTxt1 = TRNSLTR.getText("TXT_KEY_BUG_PRODUCTION_DECAY_THIS_TURN", (szTxt1,))
 						elif CyCity.getBuildingProductionTime(iType) > 0:
@@ -3626,7 +3626,7 @@ class CvMainInterface:
 		screen.addScrollPanel(Pnl, "", x, y0, w, h, PanelStyles.PANEL_STYLE_MAIN)
 		screen.setStyle(Pnl, "ScrollPanel_Alt_Style")
 
-		if InCity.WorkQueue and not city.getProduction():
+		if InCity.WorkQueue and not city.getProductionProgress():
 			self.bFreshQueue = False
 		else: self.bFreshQueue = True
 
@@ -4023,7 +4023,7 @@ class CvMainInterface:
 						szTxt += str(CyCity.getUnitProductionTurnsLeft(iType, iNode))
 
 					elif TYPE == "BUILDING":
-						bPre = CyCity.getBuildingProgress(iType) > 0
+						bPre = CyCity.getProgressOnBuilding(iType) > 0
 						szTxt += str(CyCity.getBuildingProductionTurnsLeft(iType, iNode))
 
 					elif TYPE == "PROJECT":
@@ -4039,7 +4039,7 @@ class CvMainInterface:
 						szRow = aList[2]
 						bAlt = CyIF.getOrderNodeSave(0)
 						x = self.xMidL-146
-						bPre = CyCity.getProduction() > 0
+						bPre = CyCity.getProductionProgress() > 0
 						szTxt = self.aFontList[5] + str(CyCity.getGeneralProductionTurnsLeft())
 					else:
 						szTxt = ""
@@ -4355,7 +4355,7 @@ class CvMainInterface:
 			iProductionDiffNoFood = CyCity.getCurrentProductionDifference(True, True)
 			iProductionDiffJustFood = CyCity.getCurrentProductionDifference(False, True) - iProductionDiffNoFood
 			iNeeded = CyCity.getProductionNeeded()
-			iStored = CyCity.getProduction()
+			iStored = CyCity.getProductionProgress()
 			screen.setBarPercentage("ProductionBar", InfoBarTypes.INFOBAR_STORED, float(iStored) / iNeeded)
 			if iNeeded > iStored:
 				screen.setBarPercentage("ProductionBar", InfoBarTypes.INFOBAR_RATE, float(iProductionDiffNoFood) / (iNeeded - iStored))
@@ -5661,7 +5661,7 @@ class CvMainInterface:
 							if self.bInverseShiftQueue:
 								bShift = not bShift
 
-							if not bShift and CyCity.getProduction():
+							if not bShift and CyCity.getProductionProgress():
 								bCtrl = True
 
 						# Determine order type

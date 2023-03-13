@@ -263,7 +263,7 @@ class WBCityEditScreen:
 		if pCity.isProductionProcess():
 			sText = pCity.getProductionName()
 		elif pCity.isProduction():
-			sText = u"%s: %d/%d%c" %(pCity.getProductionName(), pCity.getProduction(), pCity.getProductionNeeded(), GC.getYieldInfo(YieldTypes.YIELD_PRODUCTION).getChar())
+			sText = u"%s: %d/%d%c" %(pCity.getProductionName(), pCity.getProductionProgress(), pCity.getProductionNeeded(), GC.getYieldInfo(YieldTypes.YIELD_PRODUCTION).getChar())
 			screen.setButtonGFC("CurrentProductionPlus", "", "", screen.getXResolution() - 70, iY, 24, 24, WidgetTypes.WIDGET_PYTHON, 1030, -1, ButtonStyles.BUTTON_STYLE_CITY_PLUS)
 			screen.setButtonGFC("CurrentProductionMinus", "", "", screen.getXResolution() - 45, iY, 24, 24, WidgetTypes.WIDGET_PYTHON, 1031, -1, ButtonStyles.BUTTON_STYLE_CITY_MINUS)
 
@@ -510,9 +510,9 @@ class WBCityEditScreen:
 
 		elif inputClass.getFunctionName().find("CurrentProduction") > -1:
 			if inputClass.getData1() == 1030:
-				pCity.changeProduction(min(iChange, pCity.getProductionNeeded() - pCity.getProduction()))
+				pCity.changeProduction(min(iChange, pCity.getProductionNeeded() - pCity.getProductionProgress()))
 			elif inputClass.getData1() == 1031:
-				pCity.changeProduction(- min(iChange, pCity.getProduction()))
+				pCity.changeProduction(- min(iChange, pCity.getProductionProgress()))
 			self.placeProduction()
 
 		elif inputClass.getFunctionName().find("CityEditScriptData") > -1:

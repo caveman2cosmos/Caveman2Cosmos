@@ -246,9 +246,9 @@ int CyCity::getNumTrainUnitAI(int /*UnitAITypes*/ eUnitAI) const
 	return m_pCity->getNumTrainUnitAI((UnitAITypes) eUnitAI);
 }
 
-int CyCity::getProduction() const
+int CyCity::getProductionProgress() const
 {
-	return m_pCity->getProduction();
+	return m_pCity->getProductionProgress();
 }
 
 int CyCity::getProductionNeeded() const
@@ -276,9 +276,9 @@ int CyCity::getProjectProductionTurnsLeft(int /*ProjectTypes*/ eProject, int iNu
 	return m_pCity->getProductionTurnsLeft((ProjectTypes) eProject, iNum);
 }
 
-void CyCity::setProduction(int iNewValue)
+void CyCity::setProductionProgress(int iNewValue)
 {
-	m_pCity->setProduction(iNewValue);
+	m_pCity->setProductionProgress(iNewValue);
 }
 
 void CyCity::changeProduction(int iChange)
@@ -1344,14 +1344,14 @@ bool CyCity::hasBonus(int /*BonusTypes*/ iBonus) const
 	return m_pCity->hasBonus((BonusTypes) iBonus);
 }
 
-int CyCity::getBuildingProgress(int /*BuildingTypes*/ iIndex) const
+int CyCity::getProgressOnBuilding(int /*BuildingTypes*/ iIndex) const
 {
-	return m_pCity->getBuildingProgress((BuildingTypes) iIndex);
+	return m_pCity->getProgressOnBuilding((BuildingTypes) iIndex);
 }
 
-void CyCity::setBuildingProgress(int /*BuildingTypes*/ iIndex, int iNewValue)
+void CyCity::setProgressOnBuilding(int /*BuildingTypes*/ iIndex, int iNewValue)
 {
-	m_pCity->setBuildingProgress((BuildingTypes) iIndex, std::max(0, iNewValue));
+	m_pCity->setProgressOnBuilding((BuildingTypes) iIndex, std::max(0, iNewValue));
 }
 
 int CyCity::getBuildingProductionTime(int /*BuildingTypes*/ eIndex) const

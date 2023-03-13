@@ -82,13 +82,13 @@ public:
 	int getFirstUnitOrder(int /*UnitTypes*/ eUnit) const;
 	int getNumTrainUnitAI(int /*UnitAITypes*/ eUnitAI) const;
 	int getFirstBuildingOrder(int /*BuildingTypes*/ eBuilding) const;
-	int getProduction() const;
+	int getProductionProgress() const;
 	int getProductionNeeded() const;
 	int getProductionTurnsLeft() const;
 	int getUnitProductionTurnsLeft(int /*UnitTypes*/ iUnit, int iNum) const;
 	int getBuildingProductionTurnsLeft(int /*BuildingTypes*/ iBuilding, int iNum) const;
 	int getProjectProductionTurnsLeft(int /*ProjectTypes*/ eProject, int iNum) const;
-	void setProduction(int iNewValue);
+	void setProductionProgress(int iNewValue);
 	void changeProduction(int iChange);
 	int getCurrentProductionDifference(bool bIgnoreFood, bool bOverflow) const;
 
@@ -348,8 +348,8 @@ public:
 	int getNumBonuses(int /*BonusTypes*/ iBonus) const;
 	bool hasBonus(int /*BonusTypes */ iBonus) const;
 
-	int getBuildingProgress(int /*BuildingTypes*/ iIndex) const;
-	void setBuildingProgress(int /*BuildingTypes*/ iIndex, int iNewValue);
+	int getProgressOnBuilding(int /*BuildingTypes*/ iIndex) const;
+	void setProgressOnBuilding(int /*BuildingTypes*/ iIndex, int iNewValue);
 	int getBuildingProductionTime(int /*BuildingTypes*/ eIndex) const;
 	bool isBuildingProductionDecay(int /*BuildingTypes*/ eIndex) const;
 	int getBuildingProductionDecayTurns(int /*BuildingTypes*/ eIndex) const;

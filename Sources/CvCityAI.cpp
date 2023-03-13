@@ -793,7 +793,7 @@ void CvCityAI::AI_chooseProduction()
 
 	if (isProduction())
 	{
-		if (getProduction() > 0)
+		if (getProductionProgress() > 0)
 		{
 			// If nearly done, keep building current item (Turns equal/less than: 21=Eternity, 3=Normal, 2=Blitz)
 			if (getProductionTurnsLeft() <= 1 + GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent() / 50)
@@ -4243,7 +4243,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 				iValue /= 100;
 
 				// Add on how much this building is already constructed (could be partially constructed already)
-				iValue += getBuildingProgress(eBuilding);
+				iValue += getProgressOnBuilding(eBuilding);
 
 				// Factor in how many turns are left to complete this building
 				const int iTurnsLeft = getProductionTurnsLeft(eBuilding, 0);
@@ -7128,7 +7128,7 @@ void CvCityAI::AI_setEmphasize(EmphasizeTypes eIndex, bool bNewValue)
 
 		//	If we're using AI govenors and not part way through a build reflect
 		//	the changes in a new production choice immediately
-		if (isHuman() && (!isProduction() || getProduction() == 0) && isProductionAutomated() && GET_PLAYER(getOwner()).isOption(PLAYEROPTION_MODDER_3))
+		if (isHuman() && (!isProduction() || getProductionProgress() == 0) && isProductionAutomated() && GET_PLAYER(getOwner()).isOption(PLAYEROPTION_MODDER_3))
 		{
 			AI_chooseProduction();
 		}
@@ -8044,7 +8044,7 @@ void CvCityAI::AI_doHurry(bool bForce)
 
 	FAssert(!isHuman() /*|| isProductionAutomated()*/); // Toffer - Disabled governors ability to rush.
 
-	if (isNPC() || getProduction() == 0 && !bForce)
+	if (isNPC() || getProductionProgress() == 0 && !bForce)
 	{
 		return;
 	}
@@ -8815,7 +8815,7 @@ bool CvCityAI::AI_chooseBuilding(int iFocusFlags, int iMaxTurns, int iMinThresho
 	{
 		const BuildingTypes eBestBuilding = bestBuildings[i].building;
 		if (iOdds < 0
-		|| getBuildingProgress(eBestBuilding) > 0
+		|| getProgressOnBuilding(eBestBuilding) > 0
 		|| GC.getGame().getSorenRandNum(100, "City AI choose building") < iOdds)
 		{
 			pushOrder(ORDER_CONSTRUCT, eBestBuilding, -1, false, false, false);
@@ -10419,7 +10419,7 @@ bool CvCityAI::AI_doPanic()
 
 			if (eProductionUnit != NO_UNIT)
 			{
-				if (getProduction() > 0 && GC.getUnitInfo(eProductionUnit).getCombat() > 0)
+				if (getProductionProgress() > 0 && GC.getUnitInfo(eProductionUnit).getCombat() > 0)
 				{
 					AI_doHurry(true);
 					return true;

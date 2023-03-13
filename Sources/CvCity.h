@@ -236,7 +236,7 @@ public:
 	int getFirstProjectOrder(ProjectTypes eProject) const;
 	int getNumTrainUnitAI(UnitAITypes eUnitAI) const;
 
-	int getProduction() const;
+	int getProductionProgress() const;
 	int getProductionNeeded() const;
 	int getProductionNeeded(const OrderData& order) const;
 	int getProductionNeeded(UnitTypes eUnit) const;
@@ -252,7 +252,7 @@ public:
 	int getProductionTurnsLeft(ProjectTypes eProject, int iNum) const;
 	int getProductionTurnsLeft(int iProductionNeeded, int iProduction, int iFirstProductionDifference, int iProductionDifference) const;
 
-	void setProduction(int iNewValue);
+	void setProductionProgress(int iNewValue);
 	void changeProduction(int iChange);
 	int numQueuedUnits(UnitAITypes contractedAIType, const CvPlot* contractedPlot) const;
 
@@ -1047,9 +1047,9 @@ public:
 	bool isActiveCorporation(CorporationTypes eCorporation) const;
 
 	// How many hammers already put into production of the building
-	int getBuildingProgress(const BuildingTypes eIndex) const;
-	void setBuildingProgress(const BuildingTypes eIndex, int iNewValue);
-	void changeBuildingProgress(const BuildingTypes eIndex, const int iChange);
+	int getProgressOnBuilding(const BuildingTypes eIndex) const;
+	void setProgressOnBuilding(const BuildingTypes eIndex, int iNewValue);
+	void changeProgressOnBuilding(const BuildingTypes eIndex, const int iChange);
 
 	int getBuildingProductionTime(BuildingTypes eIndex) const;
 	void setBuildingProductionTime(BuildingTypes eIndex, int iNewValue);
@@ -1856,7 +1856,7 @@ protected:
 	std::vector< std::pair < float, float> > m_kWallOverridePoints;
 	std::vector< std::pair<TechTypes, int> > m_buildingHappinessFromTech;
 	std::vector< std::pair<TechTypes, int> > m_buildingHealthFromTech;
-	std::vector< std::pair<BuildingTypes, int> > m_buildingProgress;
+	std::vector< std::pair<BuildingTypes, int> > m_progressOnBuilding;
 
 	std::vector<EventTypes> m_aEventsOccured;
 	std::vector<BuildingYieldChange> m_aBuildingYieldChange;
