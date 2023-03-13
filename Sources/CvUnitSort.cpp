@@ -81,12 +81,9 @@ int UnitSortCost::getUnitValue(const CvPlayer *pPlayer, const CvCity *pCity, Uni
 {
 	if (pCity)
 	{
-		return pCity->getProductionNeeded(eUnit) - pCity->getUnitProduction(eUnit);
+		return pCity->getProductionNeeded(eUnit) - pCity->getProgressOnUnit(eUnit);
 	}
-	else
-	{
-		return pPlayer->getProductionNeeded(eUnit);
-	}
+	return pPlayer->getProductionNeeded(eUnit);
 }
 
 // dummy

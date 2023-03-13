@@ -1286,7 +1286,7 @@ class WorldBuilder:
 			pNewCity.setFreeSpecialistCount(iSpecialist, pOldCity.getFreeSpecialistCount(iSpecialist))
 			pNewCity.setForceSpecialistCount(iSpecialist, pOldCity.getForceSpecialistCount(iSpecialist))
 		for iUnit in xrange(GC.getNumUnitInfos()):
-			pNewCity.setUnitProduction(iUnit, pOldCity.getUnitProduction(iUnit))
+			pNewCity.setProgressOnUnit(iUnit, pOldCity.getProgressOnUnit(iUnit))
 			pNewCity.setGreatPeopleUnitProgress(iUnit, pOldCity.getGreatPeopleUnitProgress(iUnit))
 		for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 			pNewCity.changeSpecialistCommerce(iCommerce, pOldCity.getSpecialistCommerce(iCommerce) - pNewCity.getSpecialistCommerce(iCommerce))

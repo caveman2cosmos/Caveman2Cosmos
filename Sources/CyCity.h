@@ -358,8 +358,8 @@ public:
 	int getBuildingOriginalTime(int /*BuildingTypes*/ iIndex) const;
 	void setBuildingOriginalTime(int iBuildingType, int i);
 
-	int getUnitProduction(int iIndex) const;
-	void setUnitProduction(int iIndex, int iNewValue);
+	int getProgressOnUnit(int iIndex) const;
+	void setProgressOnUnit(int iIndex, int iNewValue);
 	int getUnitProductionTime(int /*UnitTypes*/ eIndex) const;
 	bool isUnitProductionDecay(int /*UnitTypes*/ eIndex) const;
 	int getUnitProductionDecayTurns(int /*UnitTypes*/ eIndex) const;

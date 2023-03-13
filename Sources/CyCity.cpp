@@ -1384,14 +1384,14 @@ void CyCity::setBuildingOriginalTime(int iIndex, int iNewValue)
 	m_pCity->setBuildingOriginalTime((BuildingTypes) iIndex, iNewValue);
 }
 
-int CyCity::getUnitProduction(int iIndex) const
+int CyCity::getProgressOnUnit(int iIndex) const
 {
-	return m_pCity->getUnitProduction((UnitTypes) iIndex);
+	return m_pCity->getProgressOnUnit((UnitTypes) iIndex);
 }
 
-void CyCity::setUnitProduction(int iIndex, int iNewValue)
+void CyCity::setProgressOnUnit(int iIndex, int iNewValue)
 {
-	m_pCity->setUnitProduction((UnitTypes)iIndex, iNewValue);
+	m_pCity->setProgressOnUnit((UnitTypes)iIndex, iNewValue);
 }
 
 int CyCity::getUnitProductionTime(int /*UnitTypes*/ eIndex) const

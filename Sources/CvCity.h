@@ -1047,9 +1047,9 @@ public:
 	bool isActiveCorporation(CorporationTypes eCorporation) const;
 
 	// How many hammers already put into production of the building
-	int getProgressOnBuilding(const BuildingTypes eIndex) const;
-	void setProgressOnBuilding(const BuildingTypes eIndex, int iNewValue);
-	void changeProgressOnBuilding(const BuildingTypes eIndex, const int iChange);
+	int getProgressOnBuilding(const BuildingTypes eType) const;
+	void setProgressOnBuilding(const BuildingTypes eType, int iNewValue);
+	void changeProgressOnBuilding(const BuildingTypes eType, const int iChange);
 
 	int getBuildingProductionTime(BuildingTypes eIndex) const;
 	void setBuildingProductionTime(BuildingTypes eIndex, int iNewValue);
@@ -1067,9 +1067,9 @@ public:
 	int getBuildingOriginalTime(BuildingTypes eIndex) const;
 	void setBuildingOriginalTime(BuildingTypes eIndex, int iNewValue);
 
-	int getUnitProduction(UnitTypes eIndex) const;
-	void setUnitProduction(UnitTypes eIndex, int iNewValue);
-	void changeUnitProduction(UnitTypes eIndex, int iChange);
+	int getProgressOnUnit(const UnitTypes eUnit) const;
+	void setProgressOnUnit(const UnitTypes eUnit, int iNewValue);
+	void changeProgressOnUnit(const UnitTypes eUnit, const int iChange);
 
 	int getUnitProductionTime(UnitTypes eIndex) const;
 	void setUnitProductionTime(UnitTypes eIndex, int iNewValue);
@@ -1857,6 +1857,7 @@ protected:
 	std::vector< std::pair<TechTypes, int> > m_buildingHappinessFromTech;
 	std::vector< std::pair<TechTypes, int> > m_buildingHealthFromTech;
 	std::vector< std::pair<BuildingTypes, int> > m_progressOnBuilding;
+	std::vector< std::pair<UnitTypes, int> > m_progressOnUnit;
 
 	std::vector<EventTypes> m_aEventsOccured;
 	std::vector<BuildingYieldChange> m_aBuildingYieldChange;
