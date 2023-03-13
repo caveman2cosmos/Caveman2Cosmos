@@ -14653,7 +14653,7 @@ bool CvUnitAI::AI_switchHurry()
 		{
 			if (pCity->canConstruct(eBuilding))
 			{
-				if (pCity->getBuildingProduction(eBuilding) == 0)
+				if (pCity->getBuildingProgress(eBuilding) == 0)
 				{
 					if (getMaxHurryProduction(pCity) >= pCity->getProductionNeeded(eBuilding))
 					{

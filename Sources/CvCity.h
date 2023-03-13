@@ -1047,9 +1047,9 @@ public:
 	bool isActiveCorporation(CorporationTypes eCorporation) const;
 
 	// How many hammers already put into production of the building
-	int getBuildingProduction(BuildingTypes eIndex) const;
-	void setBuildingProduction(BuildingTypes eIndex, int iNewValue);
-	void changeBuildingProduction(BuildingTypes eIndex, int iChange);
+	int getBuildingProgress(const BuildingTypes eIndex) const;
+	void setBuildingProgress(const BuildingTypes eIndex, int iNewValue);
+	void changeBuildingProgress(const BuildingTypes eIndex, const int iChange);
 
 	int getBuildingProductionTime(BuildingTypes eIndex) const;
 	void setBuildingProductionTime(BuildingTypes eIndex, int iNewValue);
@@ -1819,7 +1819,6 @@ protected:
 	int* m_paiNumBonuses;
 	int* m_paiNumCorpProducedBonuses;
 	int* m_paiProjectProduction;
-	int* m_paiBuildingProduction;
 	int* m_paiBuildingProductionTime;
 	int* m_paiBuildingOriginalOwner;
 	int* m_paiBuildingOriginalTime;
@@ -1857,6 +1856,7 @@ protected:
 	std::vector< std::pair < float, float> > m_kWallOverridePoints;
 	std::vector< std::pair<TechTypes, int> > m_buildingHappinessFromTech;
 	std::vector< std::pair<TechTypes, int> > m_buildingHealthFromTech;
+	std::vector< std::pair<BuildingTypes, int> > m_buildingProgress;
 
 	std::vector<EventTypes> m_aEventsOccured;
 	std::vector<BuildingYieldChange> m_aBuildingYieldChange;

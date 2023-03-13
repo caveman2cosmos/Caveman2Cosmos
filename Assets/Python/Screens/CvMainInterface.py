@@ -3214,12 +3214,12 @@ class CvMainInterface:
 
 			elif iOrder == OrderTypes.ORDER_CONSTRUCT:
 				szTxt1 = GC.getBuildingInfo(iType).getDescription()
-				if CyCity.getBuildingProduction(iType) > 0:
+				if CyCity.getBuildingProgress(iType) > 0:
 					szTxt2 = "<color=0,255,255,255>"
 				szTxt2 += str(CyCity.getBuildingProductionTurnsLeft(iType, iNode))
 				# BUG - Production Decay
 				if CityOpt.isShowProductionDecayQueue():
-					if CyCity.getBuildingProduction(iType) > 0:
+					if CyCity.getBuildingProgress(iType) > 0:
 						if CyCity.isBuildingProductionDecay(iType):
 							szTxt1 = TRNSLTR.getText("TXT_KEY_BUG_PRODUCTION_DECAY_THIS_TURN", (szTxt1,))
 						elif CyCity.getBuildingProductionTime(iType) > 0:
@@ -4023,7 +4023,7 @@ class CvMainInterface:
 						szTxt += str(CyCity.getUnitProductionTurnsLeft(iType, iNode))
 
 					elif TYPE == "BUILDING":
-						bPre = CyCity.getBuildingProduction(iType) > 0
+						bPre = CyCity.getBuildingProgress(iType) > 0
 						szTxt += str(CyCity.getBuildingProductionTurnsLeft(iType, iNode))
 
 					elif TYPE == "PROJECT":

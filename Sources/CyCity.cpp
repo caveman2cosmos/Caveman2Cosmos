@@ -1344,14 +1344,14 @@ bool CyCity::hasBonus(int /*BonusTypes*/ iBonus) const
 	return m_pCity->hasBonus((BonusTypes) iBonus);
 }
 
-int CyCity::getBuildingProduction(int /*BuildingTypes*/ iIndex) const
+int CyCity::getBuildingProgress(int /*BuildingTypes*/ iIndex) const
 {
-	return m_pCity->getBuildingProduction((BuildingTypes) iIndex);
+	return m_pCity->getBuildingProgress((BuildingTypes) iIndex);
 }
 
-void CyCity::setBuildingProduction(int /*BuildingTypes*/ iIndex, int iNewValue)
+void CyCity::setBuildingProgress(int /*BuildingTypes*/ iIndex, int iNewValue)
 {
-	m_pCity->setBuildingProduction((BuildingTypes) iIndex, std::max(0, iNewValue));
+	m_pCity->setBuildingProgress((BuildingTypes) iIndex, std::max(0, iNewValue));
 }
 
 int CyCity::getBuildingProductionTime(int /*BuildingTypes*/ eIndex) const

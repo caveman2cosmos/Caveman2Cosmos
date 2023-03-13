@@ -1256,7 +1256,7 @@ class WorldBuilder:
 		pNewCity.setPopulation(pOldCity.getPopulation())
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 
-			pNewCity.setBuildingProduction(iBuilding, pOldCity.getBuildingProduction(iBuilding))
+			pNewCity.setBuildingProduction(iBuilding, pOldCity.getBuildingProgress(iBuilding))
 
 			for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 				pNewCity.setBuildingCommerceChange(iBuilding, iCommerce, pOldCity.getBuildingCommerceChange(iBuilding, iCommerce))

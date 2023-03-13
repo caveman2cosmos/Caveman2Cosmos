@@ -4243,7 +4243,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 				iValue /= 100;
 
 				// Add on how much this building is already constructed (could be partially constructed already)
-				iValue += getBuildingProduction(eBuilding);
+				iValue += getBuildingProgress(eBuilding);
 
 				// Factor in how many turns are left to complete this building
 				const int iTurnsLeft = getProductionTurnsLeft(eBuilding, 0);
@@ -8466,14 +8466,7 @@ void CvCityAI::AI_doEmphasize()
 	}
 }
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      01/09/10                                jdog5000      */
-/*                                                                                              */
-/* City AI                                                                                      */
-/************************************************************************************************/
-/********************************************************************************/
-/* 	City Defenders						24.07.2010				Fuyu			*/
-/********************************************************************************/
+
 //Fuyu bIgnoreNotUnitAIs
 bool CvCityAI::AI_chooseUnit(const char* reason, UnitAITypes eUnitAI, int iOdds, int iUnitStrength, int iPriorityOverride, const CvUnitSelectionCriteria* criteria)
 {//Adding a unit type direct selection here...
@@ -8577,9 +8570,6 @@ bool CvCityAI::AI_chooseUnitImmediate(const char* reason, UnitAITypes eUnitAI, c
 	return false;
 }
 
-/********************************************************************************/
-/* 	City Defenders												END 			*/
-/********************************************************************************/
 bool CvCityAI::AI_chooseUnit(UnitTypes eUnit, UnitAITypes eUnitAI)
 {
 	if (eUnit != NO_UNIT)
@@ -8692,11 +8682,7 @@ bool CvCityAI::AI_bestSpreadUnit(bool bMissionary, bool bExecutive, int iBaseCha
 						iRoll /= 2;
 					}
 				}
-				/************************************************************************************************/
-				/* RevDCM	                  Start		 5/1/09                                                 */
-				/*                                                                                              */
-				/* Inquisitions                                                                                 */
-				/************************************************************************************************/
+
 				if (kPlayer.isPushReligiousVictory() && (kPlayer.getStateReligion() == eReligion))
 				{
 					iRoll += 25;
@@ -8710,9 +8696,6 @@ bool CvCityAI::AI_bestSpreadUnit(bool bMissionary, bool bExecutive, int iBaseCha
 				{
 					iRoll = 0;
 				}
-				/************************************************************************************************/
-				/* Inquisitions	                     END                                                        */
-				/************************************************************************************************/
 
 				if (iRoll > kGame.getSorenRandNum(100, "AI choose missionary"))
 				{
@@ -8831,18 +8814,15 @@ bool CvCityAI::AI_chooseBuilding(int iFocusFlags, int iMaxTurns, int iMinThresho
 	for (size_t i = 0; i < bestBuildings.size() && getTotalProductionQueueTurnsLeft() < desiredQueueTurns; ++i)
 	{
 		const BuildingTypes eBestBuilding = bestBuildings[i].building;
-		if (iOdds < 0 ||
-			getBuildingProduction(eBestBuilding) > 0 ||
-			GC.getGame().getSorenRandNum(100, "City AI choose building") < iOdds)
+		if (iOdds < 0
+		|| getBuildingProgress(eBestBuilding) > 0
+		|| GC.getGame().getSorenRandNum(100, "City AI choose building") < iOdds)
 		{
 			pushOrder(ORDER_CONSTRUCT, eBestBuilding, -1, false, false, false);
 			enqueuedBuilding = true;
 		}
-		else
-		{
-			// If we failed a roll then abort now, we don't want to choose worse buildings
-			break;
-		}
+		// If we failed a roll then abort now, we don't want to choose worse buildings
+		else break;
 	}
 #ifdef USE_UNIT_TENDERING
 	if (enqueuedBuilding)
@@ -8856,9 +8836,6 @@ bool CvCityAI::AI_chooseBuilding(int iFocusFlags, int iMaxTurns, int iMinThresho
 	return enqueuedBuilding;
 #endif
 }
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
 
 bool CvCityAI::AI_chooseProject()

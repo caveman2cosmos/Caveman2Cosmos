@@ -348,8 +348,8 @@ public:
 	int getNumBonuses(int /*BonusTypes*/ iBonus) const;
 	bool hasBonus(int /*BonusTypes */ iBonus) const;
 
-	int getBuildingProduction(int /*BuildingTypes*/ iIndex) const;
-	void setBuildingProduction(int /*BuildingTypes*/ iIndex, int iNewValue);
+	int getBuildingProgress(int /*BuildingTypes*/ iIndex) const;
+	void setBuildingProgress(int /*BuildingTypes*/ iIndex, int iNewValue);
 	int getBuildingProductionTime(int /*BuildingTypes*/ eIndex) const;
 	bool isBuildingProductionDecay(int /*BuildingTypes*/ eIndex) const;
 	int getBuildingProductionDecayTurns(int /*BuildingTypes*/ eIndex) const;

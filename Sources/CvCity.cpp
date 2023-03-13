@@ -79,7 +79,6 @@ CvCity::CvCity()
 	m_paiNumBonuses = NULL;
 	m_paiNumCorpProducedBonuses = NULL;
 	m_paiProjectProduction = NULL;
-	m_paiBuildingProduction = NULL;
 	m_paiBuildingProductionTime = NULL;
 	m_paiBuildingOriginalOwner = NULL;
 	m_paiBuildingOriginalTime = NULL;
@@ -400,7 +399,6 @@ void CvCity::uninit()
 	SAFE_DELETE_ARRAY(m_paiNumBonuses);
 	SAFE_DELETE_ARRAY(m_paiNumCorpProducedBonuses);
 	SAFE_DELETE_ARRAY(m_paiProjectProduction);
-	SAFE_DELETE_ARRAY(m_paiBuildingProduction);
 	SAFE_DELETE_ARRAY(m_paiBuildingProductionTime);
 	SAFE_DELETE_ARRAY(m_paiBuildingOriginalOwner);
 	SAFE_DELETE_ARRAY(m_paiBuildingOriginalTime);
@@ -783,24 +781,18 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 		}
 
 		FAssertMsg((0 < GC.getNumBuildingInfos()), "GC.getNumBuildingInfos() is not greater than zero but an array is being allocated in CvCity::reset");
-		//m_ppBuildings = new CvBuilding *[GC.getNumBuildingInfos()];
-		m_paiBuildingProduction = new int[GC.getNumBuildingInfos()];
 		m_paiBuildingProductionTime = new int[GC.getNumBuildingInfos()];
 		m_paiBuildingOriginalOwner = new int[GC.getNumBuildingInfos()];
 		m_paiBuildingOriginalTime = new int[GC.getNumBuildingInfos()];
 		m_paiNumRealBuilding = new int[GC.getNumBuildingInfos()];
-		//Team Project (5)
 		m_pabReligiouslyDisabledBuilding = new bool[GC.getNumBuildingInfos()];
 		m_paiBuildingCostPopulationCount = new int[GC.getNumBuildingInfos()];
 		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 		{
-			//m_ppBuildings[iI] = NULL;
-			m_paiBuildingProduction[iI] = 0;
 			m_paiBuildingProductionTime[iI] = 0;
 			m_paiBuildingOriginalOwner[iI] = -1;
 			m_paiBuildingOriginalTime[iI] = MIN_INT;
 			m_paiNumRealBuilding[iI] = 0;
-			//Team Project (5)
 			m_pabReligiouslyDisabledBuilding[iI] = false;
 			m_paiBuildingCostPopulationCount[iI] = 0;
 		}
@@ -3599,7 +3591,7 @@ int CvCity::getProduction() const
 		case ORDER_TRAIN:
 			return getUnitProduction(order->getUnitType());
 		case ORDER_CONSTRUCT:
-			return getBuildingProduction(order->getBuildingType());
+			return getBuildingProgress(order->getBuildingType());
 		case ORDER_CREATE:
 			return getProjectProduction(order->getProjectType());
 		case ORDER_MAINTAIN:
@@ -3764,7 +3756,7 @@ int CvCity::getProductionTurnsLeft(BuildingTypes eBuilding, int orderIndex) cons
 	// We can count production already put towards this if we are looking
 	// at the first one enqueued, or it isn't enqueued at all (and therefore would
 	// be the first one were it to be)
-	const int alreadyDone = (firstOrderIndex == -1 || firstOrderIndex == orderIndex) ? getBuildingProduction(eBuilding) : 0;
+	const int alreadyDone = (firstOrderIndex == -1 || firstOrderIndex == orderIndex) ? getBuildingProgress(eBuilding) : 0;
 	const int perTurnProduction = getProductionPerTurn(ProductionCalc::Yield);
 	// If we are looking at the first order then overflow would be applied
 	const int nextTurnProduction = (orderIndex == 0) ? getProductionPerTurn(ProductionCalc::Overflow | ProductionCalc::Yield) : perTurnProduction;
@@ -3815,7 +3807,7 @@ void CvCity::setProduction(int iNewValue)
 	}
 	else if (isProductionBuilding())
 	{
-		setBuildingProduction(getProductionBuilding(), iAdaptedNewValue);
+		setBuildingProgress(getProductionBuilding(), iNewValue);
 	}
 	else if (isProductionProject())
 	{
@@ -3832,7 +3824,7 @@ void CvCity::changeProduction(int iChange)
 	}
 	else if (isProductionBuilding())
 	{
-		changeBuildingProduction(getProductionBuilding(), iChange);
+		changeBuildingProgress(getProductionBuilding(), iChange);
 	}
 	else if (isProductionProject())
 	{
@@ -4089,7 +4081,7 @@ bool CvCity::canHurryBuilding(HurryTypes eHurry, BuildingTypes eBuilding) const
 		return false;
 	}
 
-	if (getBuildingProduction(eBuilding) >= getProductionNeeded(eBuilding))
+	if (getBuildingProgress(eBuilding) >= getProductionNeeded(eBuilding))
 	{
 		return false;
 	}
@@ -4195,7 +4187,7 @@ bool CvCity::hurryOverflow(HurryTypes eHurry, int* iProduction, int* iGold, bool
 		const BuildingTypes eBuilding = getProductionBuilding();
 		FAssertMsg(eBuilding != NO_BUILDING, "eBuilding is expected to be assigned a valid building type");
 		iTotal = getProductionNeeded(eBuilding);
-		iCurrent = getBuildingProduction(eBuilding);
+		iCurrent = getBuildingProgress(eBuilding);
 		iGoldPercent = GC.getMAXED_BUILDING_GOLD_PERCENT();
 	}
 	else if (isProductionProject())
@@ -6196,7 +6188,7 @@ int CvCity::getHurryCost(UnitTypes eUnit) const
 
 int CvCity::getHurryCost(BuildingTypes eBuilding) const
 {
-	return getHurryCost(getProductionNeeded(eBuilding) - getBuildingProduction(eBuilding), getHurryCostModifier(eBuilding));
+	return getHurryCost(getProductionNeeded(eBuilding) - getBuildingProgress(eBuilding), getHurryCostModifier(eBuilding));
 }
 
 int CvCity::getHurryCost(int iProductionLeft, int iHurryModifier) const
@@ -13210,39 +13202,65 @@ bool CvCity::isActiveCorporation(CorporationTypes eCorporation) const
 	return false;
 }
 
-int CvCity::getBuildingProduction(BuildingTypes eIndex)	const
+int CvCity::getBuildingProgress(const BuildingTypes eIndex)	const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex);
-	return std::max(0, m_paiBuildingProduction[eIndex]);
+
+	for (std::vector< std::pair<BuildingTypes, int> >::const_iterator it = m_buildingProgress.begin(); it != m_buildingProgress.end(); ++it)
+	{
+		if ((*it).first == eIndex)
+		{
+			return (*it).second;
+		}
+	}
+	return 0;
 }
 
-
-void CvCity::setBuildingProduction(BuildingTypes eIndex, int iNewValue)
+void CvCity::setBuildingProgress(const BuildingTypes eIndex, int iNewValue)
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex);
+	FASSERT_NOT_NEGATIVE(iNewValue);
+	if (iNewValue < 0) iNewValue = 0;
 
-	if (getBuildingProduction(eIndex) != iNewValue)
+	const int iOldValue = getBuildingProgress(eIndex);
+	if (iOldValue != iNewValue)
 	{
-		m_paiBuildingProduction[eIndex] = iNewValue;
-		FASSERT_NOT_NEGATIVE(getBuildingProduction(eIndex));
+		changeBuildingProgress(eIndex, iNewValue - iOldValue);
+	}
+}
 
-		if (getTeam() == GC.getGame().getActiveTeam())
-		{
-			setInfoDirty(true);
-		}
+void CvCity::changeBuildingProgress(const BuildingTypes eIndex, const int iChange)
+{
+	if (iChange == 0)
+	{
+		return;
+	}
+	if (getTeam() == GC.getGame().getActiveTeam())
+	{
+		setInfoDirty(true);
 
-		if ((getOwner() == GC.getGame().getActivePlayer()) && isCitySelected())
+		if (isCitySelected())
 		{
 			gDLL->getInterfaceIFace()->setDirty(CityScreen_DIRTY_BIT, true);
 		}
 	}
-}
-
-
-void CvCity::changeBuildingProduction(BuildingTypes eIndex, int iChange)
-{
-	int iAdaptedChange = std::max(0, (getBuildingProduction(eIndex) + iChange));
-	setBuildingProduction(eIndex, iAdaptedChange);
+	for (std::vector< std::pair<BuildingTypes, int> >::iterator it = m_buildingProgress.begin(); it != m_buildingProgress.end(); ++it)
+	{
+		if ((*it).first == eIndex)
+		{
+			if ((*it).second <= -iChange)
+			{
+				m_buildingProgress.erase(it);
+				setBuildingProductionTime(eIndex, 0);
+			}
+			else
+			{
+				(*it).second += iChange;
+			}
+			return;
+		}
+	}
+	m_buildingProgress.push_back(std::make_pair(eIndex, iChange));
 }
 
 
@@ -13274,7 +13292,7 @@ void CvCity::changeBuildingProductionTime(BuildingTypes eIndex, int iChange)
 bool CvCity::isBuildingProductionDecay(BuildingTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex);
-	return isHuman() && getProductionBuilding() != eIndex && getBuildingProduction(eIndex) > 0
+	return isHuman() && getProductionBuilding() != eIndex && getBuildingProgress(eIndex) > 0
 		&& 100 * getBuildingProductionTime(eIndex) >= GC.getBUILDING_PRODUCTION_DECAY_TIME() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 }
 
@@ -13285,7 +13303,7 @@ bool CvCity::isBuildingProductionDecay(BuildingTypes eIndex) const
 int CvCity::getBuildingProductionDecay(BuildingTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex);
-	const int iProduction = getBuildingProduction(eIndex);
+	const int iProduction = getBuildingProgress(eIndex);
 	return iProduction - ((iProduction * GC.getBUILDING_PRODUCTION_DECAY_PERCENT()) / 100);
 }
 
@@ -15497,14 +15515,15 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 						getName().GetCString(),
 						GC.getBuildingInfo(eConstructBuilding).getDescription());
 				}
-				const int iRawOverflow = getBuildingProduction(eConstructBuilding) - getProductionNeeded(eConstructBuilding);
+				const int iBuildingProgress = getBuildingProgress(eConstructBuilding);
+				const int iRawOverflow = iBuildingProgress - getProductionNeeded(eConstructBuilding);
 				const int iMaxOverflow = getMaxProductionOverflow();
 				const int iOverflow = std::min(iMaxOverflow, iRawOverflow);
 				if (iOverflow > 0)
 				{
 					changeOverflowProduction(iOverflow);
 				}
-				setBuildingProduction(eConstructBuilding, 0);
+				changeBuildingProgress(eConstructBuilding, -iBuildingProgress);
 				setBuildingProductionTime(eConstructBuilding, 0);
 
 				m_iLostProductionModified = std::max(0, iRawOverflow - iMaxOverflow);
@@ -15519,13 +15538,12 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 				{
 					if (m_iLostProduction == 0)
 					{
-						m_iLostProduction = getBuildingProduction(eConstructBuilding);
-						setBuildingProduction(eConstructBuilding, 0);
+						m_iLostProduction = getBuildingProgress(eConstructBuilding);
+						changeBuildingProgress(eConstructBuilding, -m_iLostProduction);
 					}
 					if (m_iLostProduction > 0)
 					{
-
-						setBuildingProduction(eBuilding, m_iLostProduction);
+						changeBuildingProgress(eBuilding, m_iLostProduction);
 						const CvWString szMessage = gDLL->getText("TXT_KEY_MISC_PROD_CONVERTED", m_iLostProduction, GC.getBuildingInfo(eConstructBuilding).getTextKeyWide(), GC.getBuildingInfo(eBuilding).getTextKeyWide());
 						AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szMessage, "AS2D_WONDERGOLD", MESSAGE_TYPE_MINOR_EVENT, GC.getYieldInfo(YIELD_PRODUCTION).getButton(), GC.getCOLOR_GREEN(), getX(), getY(), true, true);
 
@@ -15949,34 +15967,44 @@ bool CvCity::doCheckProduction()
 		}
 	}
 
-	for (int iI = GC.getNumBuildingInfos() - 1; iI > -1; iI--)
 	{
-		const BuildingTypes eTypeX = static_cast<BuildingTypes>(iI);
-		if (getBuildingProduction(eTypeX) > 0 && player.isProductionMaxedBuilding(eTypeX))
+		std::vector< std::pair<BuildingTypes, int> > buildingDecay;
+		for (std::vector< std::pair<BuildingTypes, int> >::iterator it = m_buildingProgress.begin(); it != m_buildingProgress.end(); ++it)
 		{
-			if (GC.getBuildingInfo(eTypeX).getProductionContinueBuilding() != NO_BUILDING && canConstruct(eTypeX))
-			{
-				m_iLostProduction = getBuildingProduction(eTypeX);
-			}
-			else
-			{
-				const int iProductionGold = getBuildingProduction(eTypeX) * GC.getMAXED_BUILDING_GOLD_PERCENT() / 100;
+			const BuildingTypes eTypeX = (*it).first;
 
-				if (iProductionGold > 0)
+			if (player.isProductionMaxedBuilding(eTypeX))
+			{
+				const int iBuildingProgress = (*it).second;
+
+				if (GC.getBuildingInfo(eTypeX).getProductionContinueBuilding() != NO_BUILDING && canConstruct(eTypeX))
 				{
-					player.changeGold(iProductionGold);
-					AddDLLMessage(
-						getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
-						gDLL->getText(
-							"TXT_KEY_MISC_LOST_WONDER_PROD_CONVERTED",
-							getNameKey(), GC.getBuildingInfo(eTypeX).getTextKeyWide(), iProductionGold
-						),
-						"AS2D_WONDERGOLD", MESSAGE_TYPE_MINOR_EVENT, GC.getCommerceInfo(COMMERCE_GOLD).getButton(),
-						GC.getCOLOR_RED(), getX(), getY(), true, true
-					);
+					m_iLostProduction = iBuildingProgress;
 				}
+				else
+				{
+					const int iProductionGold = iBuildingProgress * GC.getMAXED_BUILDING_GOLD_PERCENT() / 100;
+
+					if (iProductionGold > 0)
+					{
+						player.changeGold(iProductionGold);
+						AddDLLMessage(
+							getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+							gDLL->getText(
+								"TXT_KEY_MISC_LOST_WONDER_PROD_CONVERTED",
+								getNameKey(), GC.getBuildingInfo(eTypeX).getTextKeyWide(), iProductionGold
+							),
+							"AS2D_WONDERGOLD", MESSAGE_TYPE_MINOR_EVENT, GC.getCommerceInfo(COMMERCE_GOLD).getButton(),
+							GC.getCOLOR_RED(), getX(), getY(), true, true
+						);
+					}
+				}
+				buildingDecay.push_back(std::make_pair(eTypeX, -iBuildingProgress));
 			}
-			setBuildingProduction(eTypeX, 0);
+		}
+		for (std::vector< std::pair<BuildingTypes, int> >::iterator it = buildingDecay.begin(); it != buildingDecay.end(); ++it)
+		{
+			changeBuildingProgress((*it).first, (*it).second);
 		}
 	}
 
@@ -16149,44 +16177,45 @@ void CvCity::doProduction(bool bAllowNoProduction)
 
 void CvCity::doDecay()
 {
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	if (isHuman())
 	{
-		BuildingTypes eBuilding = (BuildingTypes)iI;
-		if (getProductionBuilding() != eBuilding)
 		{
-			if (getBuildingProduction(eBuilding) > 0)
+			std::vector< std::pair<BuildingTypes, int> > buildingDecay;
+			for (std::vector< std::pair<BuildingTypes, int> >::iterator it = m_buildingProgress.begin(); it != m_buildingProgress.end(); ++it)
 			{
-				changeBuildingProductionTime(eBuilding, 1);
+				const BuildingTypes eTypeX = (*it).first;
 
-				if (isHuman())
+				if (getProductionBuilding() != eTypeX)
 				{
+					changeBuildingProductionTime(eTypeX, 1);
+
 					const int iGameSpeedPercent = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
-					if (100 * getBuildingProductionTime(eBuilding) > GC.getBUILDING_PRODUCTION_DECAY_TIME()* iGameSpeedPercent)
+					if (100 * getBuildingProductionTime(eTypeX) > GC.getBUILDING_PRODUCTION_DECAY_TIME()* iGameSpeedPercent)
 					{
-						const int iProduction = getBuildingProduction(eBuilding);
-						const int iAdaptedProduction = std::max(0, (iProduction - (iProduction * (100 - GC.getBUILDING_PRODUCTION_DECAY_PERCENT()) + iGameSpeedPercent - 1) / iGameSpeedPercent));
-						setBuildingProduction(eBuilding, iAdaptedProduction);
+						buildingDecay.push_back(
+							std::make_pair(
+								eTypeX,
+								-((*it).second * (100 - GC.getBUILDING_PRODUCTION_DECAY_PERCENT()) + iGameSpeedPercent - 1) / iGameSpeedPercent
+							)
+						);
 					}
 				}
 			}
-			else
+			for (std::vector< std::pair<BuildingTypes, int> >::iterator it = buildingDecay.begin(); it != buildingDecay.end(); ++it)
 			{
-				setBuildingProductionTime(eBuilding, 0);
+				changeBuildingProgress((*it).first, (*it).second);
 			}
 		}
-	}
 
-	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
-	{
-		const UnitTypes eUnit = (UnitTypes)iI;
-		if (getProductionUnit() != eUnit)
+		for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 		{
-			if (getUnitProduction(eUnit) > 0)
+			const UnitTypes eUnit = (UnitTypes)iI;
+			if (getProductionUnit() != eUnit)
 			{
-				changeUnitProductionTime(eUnit, 1);
-
-				if (isHuman())
+				if (getUnitProduction(eUnit) > 0)
 				{
+					changeUnitProductionTime(eUnit, 1);
+
 					const int iGameSpeedPercent = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 					if (100 * getUnitProductionTime(eUnit) > GC.getUNIT_PRODUCTION_DECAY_TIME() * iGameSpeedPercent)
 					{
@@ -16194,10 +16223,10 @@ void CvCity::doDecay()
 						setUnitProduction(eUnit, iProduction - (iProduction * (100 - GC.getUNIT_PRODUCTION_DECAY_PERCENT()) + iGameSpeedPercent - 1) / iGameSpeedPercent);
 					}
 				}
-			}
-			else
-			{
-				setUnitProductionTime(eUnit, 0);
+				else
+				{
+					setUnitProductionTime(eUnit, 0);
+				}
 			}
 		}
 	}
@@ -16595,7 +16624,6 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiNumBonuses);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiNumCorpProducedBonuses);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_PROJECTS, GC.getNumProjectInfos(), m_paiProjectProduction);
-	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingProduction);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingProductionTime);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingOriginalOwner);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingOriginalTime);
@@ -16975,13 +17003,26 @@ void CvCity::read(FDataStreamBase* pStream)
 				}
 			}
 		}
-		// Techs
-		WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iSize, "BuildingHappinessFromTechSize");
+		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "BuildingProgressSize");
 		for (short i = 0; i < iSize; ++i)
 		{
 			int iValue = 0;
-			WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iType, "BuildingHappinessFromTechType");
-			WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iValue, "BuildingHappinessFromTechValue");
+			WRAPPER_READ_DECORATED(wrapper, "CvCity", &iType, "BuildingProgressType");
+			WRAPPER_READ_DECORATED(wrapper, "CvCity", &iValue, "BuildingProgressValue");
+			const BuildingTypes eBuilding = static_cast<BuildingTypes>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_TECHS, iType, true));
+
+			if (eBuilding != NO_BUILDING)
+			{
+				m_buildingProgress.push_back(std::make_pair(eBuilding, iValue));
+			}
+		}
+		// Techs
+		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "BuildingHappinessFromTechSize");
+		for (short i = 0; i < iSize; ++i)
+		{
+			int iValue = 0;
+			WRAPPER_READ_DECORATED(wrapper, "CvCity", &iType, "BuildingHappinessFromTechType");
+			WRAPPER_READ_DECORATED(wrapper, "CvCity", &iValue, "BuildingHappinessFromTechValue");
 			const TechTypes eTech = static_cast<TechTypes>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_TECHS, iType, true));
 
 			if (eTech != NO_TECH)
@@ -16989,12 +17030,12 @@ void CvCity::read(FDataStreamBase* pStream)
 				m_buildingHappinessFromTech.push_back(std::make_pair(eTech, iValue));
 			}
 		}
-		WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iSize, "BuildingHealthFromTechSize");
+		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "BuildingHealthFromTechSize");
 		for (short i = 0; i < iSize; ++i)
 		{
 			int iValue = 0;
-			WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iType, "BuildingHealthFromTechType");
-			WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iValue, "BuildingHealthFromTechValue");
+			WRAPPER_READ_DECORATED(wrapper, "CvCity", &iType, "BuildingHealthFromTechType");
+			WRAPPER_READ_DECORATED(wrapper, "CvCity", &iValue, "BuildingHealthFromTechValue");
 			const TechTypes eTech = static_cast<TechTypes>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_TECHS, iType, true));
 
 			if (eTech != NO_TECH)
@@ -17229,7 +17270,6 @@ void CvCity::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiNumBonuses);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiNumCorpProducedBonuses);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_PROJECTS, GC.getNumProjectInfos(), m_paiProjectProduction);
-	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingProduction);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingProductionTime);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingOriginalOwner);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingOriginalTime);
@@ -17467,18 +17507,24 @@ void CvCity::write(FDataStreamBase* pStream)
 				}
 			}
 		}
+		WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (short)m_buildingProgress.size(), "BuildingProgressSize");
+		for (std::vector< std::pair<BuildingTypes, int> >::iterator it = m_buildingProgress.begin(); it != m_buildingProgress.end(); ++it)
+		{
+			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", static_cast<short>((*it).first), "BuildingProgressType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (*it).second, "BuildingProgressValue");
+		}
 		// Techs
-		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (short)m_buildingHappinessFromTech.size(), "BuildingHappinessFromTechSize");
+		WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (short)m_buildingHappinessFromTech.size(), "BuildingHappinessFromTechSize");
 		for (std::vector< std::pair<TechTypes, int> >::iterator it = m_buildingHappinessFromTech.begin(); it != m_buildingHappinessFromTech.end(); ++it)
 		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", static_cast<short>((*it).first), "BuildingHappinessFromTechType");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (*it).second, "BuildingHappinessFromTechValue");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", static_cast<short>((*it).first), "BuildingHappinessFromTechType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (*it).second, "BuildingHappinessFromTechValue");
 		}
-		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (short)m_buildingHealthFromTech.size(), "BuildingHealthFromTechSize");
+		WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (short)m_buildingHealthFromTech.size(), "BuildingHealthFromTechSize");
 		for (std::vector< std::pair<TechTypes, int> >::iterator it = m_buildingHealthFromTech.begin(); it != m_buildingHealthFromTech.end(); ++it)
 		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", static_cast<short>((*it).first), "BuildingHealthFromTechType");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (*it).second, "BuildingHealthFromTechValue");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", static_cast<short>((*it).first), "BuildingHealthFromTechType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (*it).second, "BuildingHealthFromTechValue");
 		}
 	}
 	// Toffer - Write Maps
