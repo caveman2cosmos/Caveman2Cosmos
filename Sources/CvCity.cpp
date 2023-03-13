@@ -13407,7 +13407,7 @@ void CvCity::setProgressOnUnit(const UnitTypes eUnit, int iNewValue)
 
 void CvCity::changeProgressOnUnit(const UnitTypes eUnit, const int iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eType);
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit);
 	if (iChange == 0)
 	{
 		return;
