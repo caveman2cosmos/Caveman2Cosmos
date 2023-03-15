@@ -10,6 +10,9 @@
 //------------------------------------------------------------------------------------------------
 //  Copyright (c) 2003 Firaxis Games, Inc. All rights reserved.
 //------------------------------------------------------------------------------------------------
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvGlobals.h"
 #include "CvInfos.h"
@@ -22,6 +25,7 @@ namespace CvXMLLoadUtilitySetMod
 	// In the following method we set the order of loading properly
 	void setModLoadControlDirArray(bool bSetModControl)
 	{
+		PROFILE_EXTRA_FUNC();
 		// basic variables
 		GC.resetModLoadControlVector();
 		if (!bSetModControl)
@@ -243,6 +247,7 @@ namespace CvXMLLoadUtilitySetMod
 		const CvString& refcstrExtension,
 		bool bSearchSubdirectories)
 	{
+		PROFILE_EXTRA_FUNC();
 		CvString		strFilePath;		// Filepath
 		CvString		strModPath;			// Modules path
 		CvString		strPattern;			// Pattern
@@ -339,6 +344,7 @@ namespace CvXMLLoadUtilitySetMod
 		const CvString& refcstrExtension,
 		bool							bSearchSubdirectories)
 	{
+		PROFILE_EXTRA_FUNC();
 		CvString		strFilePath;		// Filepath
 		CvString		strModPath;			// Modules path
 		CvString		strPattern;			// Pattern
@@ -431,6 +437,7 @@ namespace CvXMLLoadUtilitySetMod
 
 	void loadModControlArray(std::vector<CvString>& aszFiles, const char* szFileRoot)
 	{
+		PROFILE_EXTRA_FUNC();
 		const CvString szModDirectory = GC.getInitCore().getDLLPath() + "\\";
 
 		for (int iI = 0; iI < GC.getModLoadControlVectorSize(); iI++)

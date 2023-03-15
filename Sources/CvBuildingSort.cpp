@@ -6,6 +6,9 @@
 //  PURPOSE: Sorting classes for buildings
 //
 //------------------------------------------------------------------------------------------------
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvBuildingInfo.h"
 #include "CvCity.h"
@@ -163,6 +166,7 @@ bool BuildingSortName::isLesserBuilding(const CvPlayer* pPlayer, CvCity* pCity, 
 
 int BuildingSortProperty::getBuildingValue(const CvPlayer* pPlayer, CvCity* pCity, BuildingTypes eBuilding) const
 {
+	PROFILE_EXTRA_FUNC();
 	const CvBuildingInfo& kInfo = GC.getBuildingInfo(eBuilding);
 	int iSum = kInfo.getProperties()->getValueByProperty(m_eProperty) + kInfo.getPropertiesAllCities()->getValueByProperty(m_eProperty);
 
@@ -178,6 +182,7 @@ int BuildingSortProperty::getBuildingValue(const CvPlayer* pPlayer, CvCity* pCit
 
 BuildingSortList::BuildingSortList(CvPlayer *pPlayer, CvCity *pCity)
 {
+	PROFILE_EXTRA_FUNC();
 	m_pPlayer = pPlayer;
 	m_pCity = pCity;
 
@@ -191,6 +196,7 @@ BuildingSortList::BuildingSortList(CvPlayer *pPlayer, CvCity *pCity)
 
 BuildingSortList::~BuildingSortList()
 {
+	PROFILE_EXTRA_FUNC();
 	for (int i = 0; i < NUM_BUILDING_SORT; i++)
 	{
 		SAFE_DELETE(m_apBuildingSort[i]);
@@ -199,6 +205,7 @@ BuildingSortList::~BuildingSortList()
 
 void BuildingSortList::init()
 {
+	PROFILE_EXTRA_FUNC();
 	for (int i = 0; i < NUM_BUILDING_SORT; i++)
 	{
 		SAFE_DELETE(m_apBuildingSort[i]);

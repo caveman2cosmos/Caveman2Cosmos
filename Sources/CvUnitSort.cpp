@@ -6,6 +6,9 @@
 //  PURPOSE: Sorting classes for units
 //
 //------------------------------------------------------------------------------------------------
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
 #include "CvGlobals.h"
@@ -125,6 +128,7 @@ UnitSortList::UnitSortList(const CvPlayer *pPlayer, const CvCity *pCity)
 
 UnitSortList::~UnitSortList()
 {
+	PROFILE_EXTRA_FUNC();
 	for (int i = 0; i < NUM_UNIT_SORT; i++)
 	{
 		delete m_apUnitSort[i];

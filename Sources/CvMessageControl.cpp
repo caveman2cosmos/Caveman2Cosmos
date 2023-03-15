@@ -1,3 +1,6 @@
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvBuildLists.h"
 #include "CvGameAI.h"
@@ -229,6 +232,7 @@ void CvMessageControl::sendRecalculateModifiers()
 
 void CvMessageControl::sendBuildLists()
 {
+	PROFILE_EXTRA_FUNC();
 	if (NO_PLAYER != GC.getGame().getActivePlayer())
 	{
 		// Split the build list data into a sufficient number of messages

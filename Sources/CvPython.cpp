@@ -39,6 +39,7 @@ namespace Cy {;
 
 	std::vector<StackFrame> get_stack_trace()
 	{
+		PROFILE_EXTRA_FUNC();
 		std::vector<StackFrame> trace;
 
 		PyInterpreterState* firstInterp = PyInterpreterState_Head();

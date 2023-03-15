@@ -3,6 +3,8 @@
 #ifndef FFreeListTrashArray_h__
 #define FFreeListTrashArray_h__
 
+#include "FProfiler.h"
+
 #include "FDataStreamBase.h"
 #include "CvTaggedSaveFormatWrapper.h"
 #include "FFreeListArrayBase.h"
@@ -623,6 +625,7 @@ inline void FFreeListTrashArray< T >::Write( FDataStreamBase* pStream )
 template < class T >
 inline void ReadStreamableFFreeListTrashArray( FFreeListTrashArray< T >& flist, FDataStreamBase* pStream )
 {
+	PROFILE_EXTRA_FUNC();
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
@@ -667,6 +670,7 @@ inline void ReadStreamableFFreeListTrashArray( FFreeListTrashArray< T >& flist, 
 template < class T >
 inline void WriteStreamableFFreeListTrashArray( FFreeListTrashArray< T >& flist, FDataStreamBase* pStream )
 {
+	PROFILE_EXTRA_FUNC();
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);

@@ -1,3 +1,6 @@
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvDeal.h"
 #include "CyDeal.h"
@@ -43,6 +46,7 @@ int CyDeal::getLengthSecondTrades() const
 
 TradeData* CyDeal::getFirstTrade(int i) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (i < getLengthFirstTrades() && NULL != m_pDeal && NULL != m_pDeal->getFirstTrades())
 	{
 		const CLinkList<TradeData>& listTradeData = *(m_pDeal->getFirstTrades());
@@ -61,6 +65,7 @@ TradeData* CyDeal::getFirstTrade(int i) const
 
 TradeData* CyDeal::getSecondTrade(int i) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (i < getLengthSecondTrades() && NULL != m_pDeal && NULL != m_pDeal->getSecondTrades())
 	{
 		const CLinkList<TradeData>& listTradeData = *(m_pDeal->getSecondTrades());

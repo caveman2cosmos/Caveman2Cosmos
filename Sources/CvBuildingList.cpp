@@ -6,6 +6,9 @@
 //  PURPOSE: Filter, group, sort and cache a building list for a city or player
 //
 //------------------------------------------------------------------------------------------------
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvBuildingList.h"
 #include "CvBuildingSort.h"
@@ -127,6 +130,7 @@ BuildingTypes CvBuildingList::getBuildingType(int iGroup, int iPos)
 
 void CvBuildingList::doFilter()
 {
+	PROFILE_EXTRA_FUNC();
 	m_aiBuildingList.clear();
 	for (int i = 0; i < GC.getNumBuildingInfos(); i++)
 	{
@@ -139,6 +143,7 @@ void CvBuildingList::doFilter()
 
 void CvBuildingList::doGroup()
 {
+	PROFILE_EXTRA_FUNC();
 	if (!m_bFilteringValid)
 		doFilter();
 
@@ -167,6 +172,7 @@ void CvBuildingList::doGroup()
 
 void CvBuildingList::doSort()
 {
+	PROFILE_EXTRA_FUNC();
 	if (!m_bGroupingValid)
 		doGroup();
 
@@ -181,6 +187,7 @@ void CvBuildingList::doSort()
 
 int CvBuildingList::getBuildingSelectionRow()
 {
+	PROFILE_EXTRA_FUNC();
 	if (m_eSelectedBuilding != NO_BUILDING)
 	{
 		for (int i = 0; i < static_cast<int>(m_aaiGroupedBuildingList.size()); i++)
@@ -204,6 +211,7 @@ int CvBuildingList::getBuildingSelectionRow()
 
 int CvBuildingList::getWonderSelectionRow()
 {
+	PROFILE_EXTRA_FUNC();
 	if (m_eSelectedWonder != NO_BUILDING)
 	{
 		for (int i = 0; i < static_cast<int>(m_aaiGroupedBuildingList.size()); i++)

@@ -34,6 +34,9 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
 OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvAllocator.h"
 #include <assert.h>
@@ -291,6 +294,7 @@ namespace MemTrack
 
 	size_t BlockHeader::CountBlocks()
 	{
+		PROFILE_EXTRA_FUNC();
 		size_t count = 0;
 		BlockHeader* currNode = ourFirstNode;
 		while (currNode != NULL)
@@ -305,6 +309,7 @@ namespace MemTrack
 
 	void BlockHeader::GetBlocks(BlockHeader** blockHeaderPP)
 	{
+		PROFILE_EXTRA_FUNC();
 		BlockHeader* currNode = ourFirstNode;
 		while (currNode != NULL)
 		{
@@ -547,6 +552,7 @@ namespace MemTrack
 	}
 
 	std::string convertSize(size_t size) {
+		PROFILE_EXTRA_FUNC();
 		static const char* SIZES[] = { "B ", "KB", "MB", "GB" };
 		int div = 0;
 		size_t rem = 0;
@@ -562,6 +568,7 @@ namespace MemTrack
 
 	template < typename SizeTy_ >
 	std::string convertSize(SizeTy_ size) {
+		PROFILE_EXTRA_FUNC();
 		static const char* SIZES[] = { "B ", "KB", "MB", "GB" };
 		int div = 0;
 		SizeTy_ rem = 0;
@@ -581,6 +588,7 @@ namespace MemTrack
 
 	void TrackDumpBlocks()
 	{
+		PROFILE_EXTRA_FUNC();
 		// Get an array of pointers to all extant blocks.
 		size_t numBlocks = BlockHeader::CountBlocks();
 		BlockHeader** ppBlockHeader =
@@ -634,6 +642,7 @@ namespace MemTrack
 		size_t endPost
 	)
 	{
+		PROFILE_EXTRA_FUNC();
 		MEMTRACK_EXEMPT;
 
 		pMemDigest->typeName = ppBlockHeader[startPost]->GetTypeName();
@@ -651,6 +660,7 @@ namespace MemTrack
 
 	void TrackListMemoryUsage()
 	{
+		PROFILE_EXTRA_FUNC();
 		MEMTRACK_EXEMPT;
 
 		// If there are no allocated blocks, then return now.
@@ -812,6 +822,7 @@ namespace MemTrack
 
 	void TrackListMemoryUsageTurnDiff()
 	{
+		PROFILE_EXTRA_FUNC();
 		if (turnIndex++ % 10 != 0)
 		{
 			return;
