@@ -1,6 +1,3 @@
-
-#include "FProfiler.h"
-
 #include "CvGameCoreDLL.h"
 #include "CvGameCoreUtils.h"
 #include "CvRandom.h"
@@ -220,7 +217,6 @@ int64_t cyIntSqrt64(uint64_t iValue)
 
 void cyShufflePyList(python::list& pyList, CvRandom& rand)
 {
-	PROFILE_EXTRA_FUNC();
 	PyObject* pyObj = pyList.ptr();
 
 	for (int i = 0, size = PySequence_Length(pyObj); i < size; i++)

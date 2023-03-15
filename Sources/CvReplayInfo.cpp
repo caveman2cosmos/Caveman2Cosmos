@@ -1,6 +1,3 @@
-
-#include "FProfiler.h"
-
 #include "CvGameCoreDLL.h"
 #include "CvGameAI.h"
 #include "CvGameTextMgr.h"
@@ -40,7 +37,6 @@ CvReplayInfo::CvReplayInfo()
 
 CvReplayInfo::~CvReplayInfo()
 {
-	PROFILE_EXTRA_FUNC();
 	foreach_(const CvReplayMessage* pMessage, m_listReplayMessages)
 	{
 		SAFE_DELETE(pMessage);
@@ -50,7 +46,6 @@ CvReplayInfo::~CvReplayInfo()
 
 void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 {
-	PROFILE_EXTRA_FUNC();
 	CvGame& game = GC.getGame();
 
 	if (!game.isFinalInitialized())
@@ -297,7 +292,6 @@ GameSpeedTypes CvReplayInfo::getGameSpeed() const
 
 bool CvReplayInfo::isGameOption(GameOptionTypes eOption) const
 {
-	PROFILE_EXTRA_FUNC();
 	for (uint i = 0; i < m_listGameOptions.size(); i++)
 	{
 		if (m_listGameOptions[i] == eOption)
@@ -310,7 +304,6 @@ bool CvReplayInfo::isGameOption(GameOptionTypes eOption) const
 
 bool CvReplayInfo::isVictoryCondition(VictoryTypes eVictory) const
 {
-	PROFILE_EXTRA_FUNC();
 	for (uint i = 0; i < m_listVictoryTypes.size(); i++)
 	{
 		if (m_listVictoryTypes[i] == eVictory)
@@ -339,7 +332,6 @@ void CvReplayInfo::addReplayMessage(CvReplayMessage* pMessage)
 
 void CvReplayInfo::clearReplayMessageMap()
 {
-	PROFILE_EXTRA_FUNC();
 	foreach_(const CvReplayMessage* pMessage, m_listReplayMessages)
 	{
 		SAFE_DELETE(pMessage);
@@ -562,7 +554,6 @@ const char* CvReplayInfo::getModName() const
 
 bool CvReplayInfo::read(FDataStreamBase& stream)
 {
-	PROFILE_EXTRA_FUNC();
 	int iType;
 	int iNumTypes;
 	bool bSuccess = true;
@@ -687,7 +678,6 @@ bool CvReplayInfo::read(FDataStreamBase& stream)
 
 void CvReplayInfo::write(FDataStreamBase& stream)
 {
-	PROFILE_EXTRA_FUNC();
 	stream.Write(REPLAY_VERSION);
 	stream.Write(m_iActivePlayer);
 	stream.Write((int)m_eDifficulty);

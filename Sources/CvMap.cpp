@@ -6,9 +6,6 @@
 //	Copyright (c) 2004 Firaxis Games, Inc. All rights reserved.
 //-----------------------------------------------------------------------------
 
-
-#include "FProfiler.h"
-
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
@@ -122,7 +119,6 @@ void CvMap::init(CvMapInitData* pInitInfo/*=NULL*/)
 
 void CvMap::uninit()
 {
-	PROFILE_EXTRA_FUNC();
 	SAFE_DELETE_ARRAY(m_paiNumBonus);
 	SAFE_DELETE_ARRAY(m_paiNumBonusOnLand);
 
@@ -147,7 +143,6 @@ void CvMap::uninit()
 // Initializes data members that are serialized.
 void CvMap::reset(CvMapInitData* pInitInfo)
 {
-	PROFILE_EXTRA_FUNC();
 	//--------------------------------
 	// Uninit class
 	uninit();
@@ -324,7 +319,6 @@ void CvMap::setupGraphical()
 
 void CvMap::erasePlots()
 {
-	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < numPlots(); iI++)
 	{
 		plotByIndex(iI)->erase();
@@ -363,7 +357,6 @@ void CvMap::resetRevealedPlots(TeamTypes eTeam)
 
 void CvMap::setAllPlotTypes(PlotTypes ePlotType)
 {
-	PROFILE_EXTRA_FUNC();
 	//float startTime = (float) timeGetTime();
 
 	for(int i = 0; i < numPlots(); i++)
@@ -393,7 +386,6 @@ void CvMap::moveUnitToMap(CvUnit& unit, int numTravelTurns)
 
 void CvMap::updateIncomingUnits()
 {
-	PROFILE_EXTRA_FUNC();
 	foreach_(TravelingUnit* travelingUnit, m_IncomingUnits)
 	{
 		if (travelingUnit->numTurnsUntilArrival-- <= 0)
@@ -466,7 +458,6 @@ void CvMap::updateFog()
 
 void CvMap::updateVisibility()
 {
-	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < numPlots(); iI++)
 	{
 		plotByIndex(iI)->updateVisibility();
@@ -476,7 +467,6 @@ void CvMap::updateVisibility()
 
 void CvMap::updateSymbolVisibility()
 {
-	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < numPlots(); iI++)
 	{
 		plotByIndex(iI)->updateSymbolVisibility();
@@ -510,7 +500,6 @@ void CvMap::updateMinimapColor()
 
 void CvMap::updateSight(bool bIncrement, bool bUpdatePlotGroups)
 {
-	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < numPlots(); iI++)
 	{
 		plotByIndex(iI)->updateSight(bIncrement, false);
@@ -525,7 +514,6 @@ void CvMap::updateSight(bool bIncrement, bool bUpdatePlotGroups)
 
 void CvMap::updateIrrigated()
 {
-	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < numPlots(); iI++)
 	{
 		plotByIndex(iI)->updateIrrigated();
@@ -535,7 +523,6 @@ void CvMap::updateIrrigated()
 
 void CvMap::updateCenterUnit()
 {
-	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < numPlots(); iI++)
 	{
 		plotByIndex(iI)->updateCenterUnit();
@@ -545,7 +532,6 @@ void CvMap::updateCenterUnit()
 
 void CvMap::updateWorkingCity()
 {
-	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < numPlots(); iI++)
 	{
 		plotByIndex(iI)->updateWorkingCity();
@@ -597,7 +583,6 @@ void CvMap::updateMinOriginalStartDist(const CvArea* pArea)
 
 void CvMap::updateYield()
 {
-	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < numPlots(); iI++)
 	{
 		plotByIndex(iI)->updateYield();
@@ -607,7 +592,6 @@ void CvMap::updateYield()
 
 void CvMap::verifyUnitValidPlot()
 {
-	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < numPlots(); iI++)
 	{
 		plotByIndex(iI)->verifyUnitValidPlot();
@@ -637,7 +621,6 @@ void CvMap::combinePlotGroups(CvPlotGroup* pPlotGroup1, CvPlotGroup* pPlotGroup2
 
 CvPlot* CvMap::syncRandPlot(int iFlags, int iArea, int iMinUnitDistance, int iTimeout)
 {
-	PROFILE_EXTRA_FUNC();
 	CvPlot* pPlot = NULL;
 	int iCount = 0;
 
@@ -801,7 +784,6 @@ CvSelectionGroup* CvMap::findSelectionGroup(int iX, int iY, PlayerTypes eOwner, 
 
 CvSelectionGroup* CvMap::findSelectionGroupInternal(int iX, int iY, PlayerTypes eOwner, bool bReadyToSelect, bool bWorkers, bool bAllowViewportSwitch) const
 {
-	PROFILE_EXTRA_FUNC();
 	// XXX look for barbarian cities???
 
 	int iBestValue = MAX_INT;
@@ -861,7 +843,6 @@ int CvMap::getMapFractalFlags() const
 //"Check plots for wetlands or seaWater.  Returns true if found"
 bool CvMap::findWater(const CvPlot* pPlot, int iRange, bool bFreshWater) const
 {
-	PROFILE_EXTRA_FUNC();
 	foreach_(const CvPlot* pLoopPlot, pPlot->rect(iRange, iRange))
 	{
 		if (bFreshWater ? pLoopPlot->isFreshWater() : pLoopPlot->isWater())
@@ -1160,7 +1141,6 @@ int CvMap::calculatePathDistance(const CvPlot* pSource, const CvPlot* pDest, con
 // Super Forts begin *canal* *choke*
 void CvMap::calculateCanalAndChokePoints()
 {
-	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < numPlots(); iI++)
 	{
 		plotByIndex(iI)->calculateCanalValue();
@@ -1227,7 +1207,6 @@ const std::pair<CvPlot*, CvPlot*> CvMap::plots() const
 //
 void CvMap::read(FDataStreamBase* pStream)
 {
-	PROFILE_EXTRA_FUNC();
 	OutputDebugString("Reading Map: Start\n");
 	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
@@ -1282,7 +1261,6 @@ void CvMap::read(FDataStreamBase* pStream)
 //
 void CvMap::write(FDataStreamBase* pStream)
 {
-	PROFILE_EXTRA_FUNC();
 	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
@@ -1575,7 +1553,6 @@ void CvMap::calculateAreas()
 
 void CvMap::toggleCitiesDisplay()
 {
-	PROFILE_EXTRA_FUNC();
 	m_bCitiesDisplayed = !m_bCitiesDisplayed;
 
 	gDLL->getInterfaceIFace()->clearSelectedCities();
@@ -1599,7 +1576,6 @@ void CvMap::toggleCitiesDisplay()
 
 void CvMap::toggleUnitsDisplay()
 {
-	PROFILE_EXTRA_FUNC();
 	int* paiFirstBuilt = new int[GC.getNumBuildingInfos()];
 	int** paiBuiltNum = new int*[GC.getNumBuildingInfos()];
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)

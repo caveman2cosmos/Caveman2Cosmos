@@ -6,9 +6,6 @@
 //  PURPOSE: A list of possible outcomes with a relative chance
 //
 //------------------------------------------------------------------------------------------------
-
-#include "FProfiler.h"
-
 #include "CvGameCoreDLL.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
@@ -38,7 +35,6 @@ int CvOutcomeList::getNumOutcomes() const
 
 bool CvOutcomeList::isPossible(const CvUnit &kUnit) const
 {
-	PROFILE_EXTRA_FUNC();
 	const int iNum = getNumOutcomes();
 
 	for (int i=0; i<iNum; i++)
@@ -54,7 +50,6 @@ bool CvOutcomeList::isPossible(const CvUnit &kUnit) const
 
 bool CvOutcomeList::isPossibleSomewhere(const CvUnit &kUnit) const
 {
-	PROFILE_EXTRA_FUNC();
 	const int iNum = getNumOutcomes();
 
 	for (int i=0; i<iNum; i++)
@@ -70,7 +65,6 @@ bool CvOutcomeList::isPossibleSomewhere(const CvUnit &kUnit) const
 
 bool CvOutcomeList::isPossibleInPlot(const CvUnit &kUnit, const CvPlot& kPlot, bool bForTrade) const
 {
-	PROFILE_EXTRA_FUNC();
 	const int iNum = getNumOutcomes();
 
 	for (int i=0; i<iNum; i++)
@@ -91,7 +85,6 @@ bool CvOutcomeList::isEmpty() const
 
 void CvOutcomeList::clear()
 {
-	PROFILE_EXTRA_FUNC();
 	if (!m_bIsReference)
 	{
 		for (int i=0; i<(int)m_aOutcome.size(); i++)
@@ -104,7 +97,6 @@ void CvOutcomeList::clear()
 
 void insertReplaceOutcomesRecursive(std::set<OutcomeTypes>& aeReplacedOutcomes, OutcomeTypes eOutcome)
 {
-	PROFILE_EXTRA_FUNC();
 	foreach_(const OutcomeTypes eReplOutcome, GC.getOutcomeInfo(eOutcome).getReplaceOutcomes())
 	{
 		aeReplacedOutcomes.insert(eReplOutcome);
@@ -171,7 +163,6 @@ bool CvOutcomeList::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, Unit
 
 int CvOutcomeList::AI_getValueInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool bForTrade) const
 {
-	PROFILE_EXTRA_FUNC();
 	std::vector<std::pair<const CvOutcome*, int> > apOutcome;
 	std::set<OutcomeTypes> aeReplacedOutcomes;
 	int iChanceSum = 0;
@@ -219,7 +210,6 @@ int CvOutcomeList::AI_getValueInPlot(const CvUnit& kUnit, const CvPlot& kPlot, b
 
 bool CvOutcomeList::read(CvXMLLoadUtility* pXML, const wchar_t* szTagName)
 {
-	PROFILE_EXTRA_FUNC();
 	if(pXML->TryMoveToXmlFirstChild(szTagName))
 	{
 		if(pXML->TryMoveToXmlFirstChild())
@@ -243,7 +233,6 @@ bool CvOutcomeList::read(CvXMLLoadUtility* pXML, const wchar_t* szTagName)
 
 void CvOutcomeList::copyNonDefaults(CvOutcomeList* pOutcomeList)
 {
-	PROFILE_EXTRA_FUNC();
 	if (isEmpty())
 	{
 		const int num = pOutcomeList->getNumOutcomes();
@@ -257,7 +246,6 @@ void CvOutcomeList::copyNonDefaults(CvOutcomeList* pOutcomeList)
 
 void CvOutcomeList::getCheckSum(uint32_t& iSum) const
 {
-	PROFILE_EXTRA_FUNC();
 	const int num = getNumOutcomes();
 	for (int index = 0; index < num; index++)
 	{
@@ -267,7 +255,6 @@ void CvOutcomeList::getCheckSum(uint32_t& iSum) const
 
 void CvOutcomeList::buildDisplayString(CvWStringBuffer& szBuffer, const CvUnit& kUnit) const
 {
-	PROFILE_EXTRA_FUNC();
 	std::vector<std::pair<const CvOutcome*, int> > apOutcome;
 	std::set<OutcomeTypes> aeReplacedOutcomes;
 	int iChanceSum = 0;
@@ -316,7 +303,6 @@ void CvOutcomeList::buildDisplayString(CvWStringBuffer& szBuffer, const CvUnit& 
 
 void CvOutcomeListMerged::addOutcomeList(const CvOutcomeList* pList)
 {
-	PROFILE_EXTRA_FUNC();
 	if ((pList == NULL) || (pList->isEmpty()))
 	{
 		// nothing to do

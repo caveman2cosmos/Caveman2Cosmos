@@ -1,8 +1,5 @@
 // plotGroup.cpp
 
-
-#include "FProfiler.h"
-
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
 #include "CvGlobals.h"
@@ -145,7 +142,6 @@ void CvPlotGroup::removePlot(CvPlot* pPlot, bool bRecalculateBonuses)
 #ifdef _DEBUG
 void CvPlotGroup::Validate()
 {
-	PROFILE_EXTRA_FUNC();
 #if 0
 	CLLNode<XYCoords>* pPlotNode = headPlotsNode();
 
@@ -162,7 +158,6 @@ void CvPlotGroup::Validate()
 
 CvPlot* CvPlotGroup::getRepresentativePlot() const
 {
-	PROFILE_EXTRA_FUNC();
 	CvPlot*	result = NULL;
 
 	if ( m_seedPlotX != -1 && m_seedPlotY != -1 )
@@ -655,7 +650,6 @@ int CvPlotGroup::getNumCities()
 
 void CvPlotGroup::read(FDataStreamBase* pStream)
 {
-	PROFILE_EXTRA_FUNC();
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);

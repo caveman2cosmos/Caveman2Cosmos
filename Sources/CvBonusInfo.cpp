@@ -1,6 +1,3 @@
-
-#include "FProfiler.h"
-
 #include "CvBonusInfo.h"
 #include "CvDefines.h"
 #include "CvImprovementInfo.h"
@@ -334,7 +331,6 @@ void CvBonusInfo::setProvidedByImprovementTypes(const ImprovementTypes eType)
 
 void CvBonusInfo::getCheckSum(uint32_t& iSum) const
 {
-	PROFILE_EXTRA_FUNC();
 	CheckSum(iSum, m_iBonusClassType);
 	CheckSum(iSum, m_iTechReveal);
 	CheckSum(iSum, m_iTechCityTrade);
@@ -388,7 +384,6 @@ void CvBonusInfo::getCheckSum(uint32_t& iSum) const
 bool CvBonusInfo::read(CvXMLLoadUtility* pXML)
 {
 
-	PROFILE_EXTRA_FUNC();
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
 	{
@@ -492,7 +487,6 @@ bool CvBonusInfo::read(CvXMLLoadUtility* pXML)
 }
 void CvBonusInfo::copyNonDefaults(const CvBonusInfo* pClassInfo)
 {
-	PROFILE_EXTRA_FUNC();
 	bool bDefault = false;
 	int iDefault = 0;
 	int iTextDefault = -1;  //all integers which are TEXT_KEYS in the xml are -1 by default
@@ -586,7 +580,6 @@ void CvBonusInfo::copyNonDefaults(const CvBonusInfo* pClassInfo)
 
 const std::vector<std::pair<ImprovementTypes, BuildTypes> >* CvBonusInfo::getTradeProvidingImprovements()
 {
-	PROFILE_EXTRA_FUNC();
 	if (m_tradeProvidingImprovements == NULL)
 	{
 
