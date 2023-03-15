@@ -4,12 +4,12 @@
 #define CvGameCoreDLLDefNew_h__
 
 #ifdef USE_MEMMANAGER
-#if 0
-void* operator new(size_t size);
-void* operator new[](size_t size);
-void operator delete(void* pvMem);
-void operator delete[](void* pvMem);
-#endif
+//#if 0
+//void* operator new(size_t size);
+//void* operator new[](size_t size);
+//void operator delete(void* pvMem);
+//void operator delete[](void* pvMem);
+//#endif
 void* operator new(size_t size, char* pcFile, int iLine);
 void* operator new[](size_t size, char* pcFile, int iLine);
 void operator delete(void* pvMem, char* pcFile, int iLine);

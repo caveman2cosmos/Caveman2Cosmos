@@ -3705,10 +3705,10 @@ void CvPlayer::doTurn()
 
 	doEspionagePoints();
 
-#if 0 // AI_doCentralizedProduction is unfinished, no point calling it. [11/12/2019 billw]
-	// New function to handle wonder construction in a centralized manner
-	AI_doCentralizedProduction();
-#endif
+//#if 0 // AI_doCentralizedProduction is unfinished, no point calling it. [11/12/2019 billw]
+//	// New function to handle wonder construction in a centralized manner
+//	AI_doCentralizedProduction();
+//#endif
 
 	//Clear the cache each turn.
 	recalculateAllResourceConsumption();
@@ -28628,26 +28628,26 @@ void CvPlayer::makeNukesValid(bool bValid)
 #ifdef _DEBUG
 void CvPlayer::ValidatePlotGroup(CvPlot* plot, CvPlotGroup* group)
 {
-#if 0
-	CvPlotGroup* pLoopPlotGroup;
-	int iLoop;
-
-	for(pLoopPlotGroup = firstPlotGroup(&iLoop); pLoopPlotGroup != NULL; pLoopPlotGroup = nextPlotGroup(&iLoop))
-	{
-		if ( pLoopPlotGroup != group )
-		{
-			CLLNode<XYCoords>* pPlotNode;
-
-			pPlotNode = pLoopPlotGroup->headPlotsNode();
-			while (pPlotNode != NULL)
-			{
-				FAssert(pPlotNode->m_data.iX != plot->getX() || pPlotNode->m_data.iY != plot->getY());
-
-				pPlotNode = pLoopPlotGroup->nextPlotsNode(pPlotNode);
-			}
-		}
-	}
-#endif
+//#if 0
+//	CvPlotGroup* pLoopPlotGroup;
+//	int iLoop;
+//
+//	for(pLoopPlotGroup = firstPlotGroup(&iLoop); pLoopPlotGroup != NULL; pLoopPlotGroup = nextPlotGroup(&iLoop))
+//	{
+//		if ( pLoopPlotGroup != group )
+//		{
+//			CLLNode<XYCoords>* pPlotNode;
+//
+//			pPlotNode = pLoopPlotGroup->headPlotsNode();
+//			while (pPlotNode != NULL)
+//			{
+//				FAssert(pPlotNode->m_data.iX != plot->getX() || pPlotNode->m_data.iY != plot->getY());
+//
+//				pPlotNode = pLoopPlotGroup->nextPlotsNode(pPlotNode);
+//			}
+//		}
+//	}
+//#endif
 }
 #endif
 

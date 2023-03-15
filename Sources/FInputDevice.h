@@ -55,11 +55,11 @@ public:
 		INP_FOREGROUND	= 0x2,
 		INP_BUFFERED	= 0x4,
 
-#if 0
-		INP_DEFAULT_FLAGS = (INP_EXCLUSIVE | INP_BUFFERED)	// allow background access for debugger
-#else
+//#if 0
+//		INP_DEFAULT_FLAGS = (INP_EXCLUSIVE | INP_BUFFERED)	// allow background access for debugger
+//#else
 		INP_DEFAULT_FLAGS = (INP_EXCLUSIVE | INP_FOREGROUND | INP_BUFFERED)
-#endif
+//#endif
 	};
 
 	// these input events are added to the input map (if appropriate) whenever the input device is sampled.

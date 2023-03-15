@@ -1893,16 +1893,16 @@ int pathValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointe
 	{
 		PROFILE("pathValid domain sea");
 
-#if 0
-		//	Optimisation short-circuit some invalid pathing choices quickly
-		if (!pToPlot->isWater() && !pSelectionGroup->canMoveAllTerrain() && !pToPlot->isCanMoveSeaUnits())
-		{
-			if (!pToPlot->isCity())
-			{
-				return FALSE;
-			}
-		}
-#endif
+//#if 0
+//		//	Optimisation short-circuit some invalid pathing choices quickly
+//		if (!pToPlot->isWater() && !pSelectionGroup->canMoveAllTerrain() && !pToPlot->isCanMoveSeaUnits())
+//		{
+//			if (!pToPlot->isCity())
+//			{
+//				return FALSE;
+//			}
+//		}
+//#endif
 		//	Can't cross diagonally across 'land'
 		if (pFromPlot->isWater() && pToPlot->isWater())
 		{
@@ -2001,16 +2001,16 @@ int pathAdd(FAStarNode* parent, FAStarNode* node, int data, const void* pointer,
 
 		iMoves = pSelectionGroup->movesRemainingAfterMovingTo((iStartMoves == 0 ? -1 : iStartMoves), pFromPlot, pToPlot);
 
-#if 0
-		if ( gDLL->getFAStarIFace()->GetDestX(finder) == pToPlot->getX() && gDLL->getFAStarIFace()->GetDestY(finder) == pToPlot->getY() )
-		{
-			if (!pSelectionGroup->AI_isControlled())
-			{
-				OutputDebugString("Force reset find at possible end of path\n");
-				gDLL->getFAStarIFace()->ForceReset(finder);
-			}
-		}
-#endif
+//#if 0
+//		if ( gDLL->getFAStarIFace()->GetDestX(finder) == pToPlot->getX() && gDLL->getFAStarIFace()->GetDestY(finder) == pToPlot->getY() )
+//		{
+//			if (!pSelectionGroup->AI_isControlled())
+//			{
+//				OutputDebugString("Force reset find at possible end of path\n");
+//				gDLL->getFAStarIFace()->ForceReset(finder);
+//			}
+//		}
+//#endif
 	}
 
 	FASSERT_NOT_NEGATIVE(iMoves);
@@ -2018,16 +2018,16 @@ int pathAdd(FAStarNode* parent, FAStarNode* node, int data, const void* pointer,
 	node->m_iData1 = iMoves;
 	node->m_iData2 = iTurns;
 
-#if 0
-	if ( parent != NULL )
-	{
-		OutputDebugString(CvString::format("PathAdd (%d,%d)->(%d,%d)\n", parent->m_iX, parent->m_iY, node->m_iX, node->m_iY).c_str());
-	}
-	else
-	{
-		OutputDebugString(CvString::format("PathAdd NULL->(%d,%d)\n", node->m_iX, node->m_iY).c_str());
-	}
-#endif
+//#if 0
+//	if ( parent != NULL )
+//	{
+//		OutputDebugString(CvString::format("PathAdd (%d,%d)->(%d,%d)\n", parent->m_iX, parent->m_iY, node->m_iX, node->m_iY).c_str());
+//	}
+//	else
+//	{
+//		OutputDebugString(CvString::format("PathAdd NULL->(%d,%d)\n", node->m_iX, node->m_iY).c_str());
+//	}
+//#endif
 
 	return 1;
 }
@@ -2165,27 +2165,27 @@ int pathCost(FAStarNode* parent, FAStarNode* node, int data, const void* pointer
 
 			if ( bEndsTurn )
 			{
-#if 0
-				PROFILE("pathCost.endTurnDetermined");
-
-				if ( bHaveEndTurnCachedEdgeValue )
-				{
-					PROFILE("pathCost.endTurnDetermined.Cached");
-				}
-#endif
+//#if 0
+//				PROFILE("pathCost.endTurnDetermined");
+//
+//				if ( bHaveEndTurnCachedEdgeValue )
+//				{
+//					PROFILE("pathCost.endTurnDetermined.Cached");
+//				}
+//#endif
 				bDoesntEndTurn = false;
 			}
-#if 0
-			else if ( bDoesntEndTurn )
-			{
-				PROFILE("pathCost.nonEndTurnDetermined");
-
-				if ( bHaveNonEndTurnCachedEdgeValue )
-				{
-					PROFILE("pathCost.NonEndTurnDetermined.Cached");
-				}
-			}
-#endif
+//#if 0
+//			else if ( bDoesntEndTurn )
+//			{
+//				PROFILE("pathCost.nonEndTurnDetermined");
+//
+//				if ( bHaveNonEndTurnCachedEdgeValue )
+//				{
+//					PROFILE("pathCost.NonEndTurnDetermined.Cached");
+//				}
+//			}
+//#endif
 		}
 		else
 		{
@@ -2803,27 +2803,27 @@ int	NewPathCostFunc(const CvPathGeneratorBase* generator, const CvSelectionGroup
 
 			if ( bEndsTurn )
 			{
-#if 0
-				PROFILE("pathCost.endTurnDetermined");
-
-				if ( bHaveEndTurnCachedEdgeValue )
-				{
-					PROFILE("pathCost.endTurnDetermined.Cached");
-				}
-#endif
+//#if 0
+//				PROFILE("pathCost.endTurnDetermined");
+//
+//				if ( bHaveEndTurnCachedEdgeValue )
+//				{
+//					PROFILE("pathCost.endTurnDetermined.Cached");
+//				}
+//#endif
 				bDoesntEndTurn = false;
 			}
-#if 0
-			else if ( bDoesntEndTurn )
-			{
-				PROFILE("pathCost.nonEndTurnDetermined");
-
-				if ( bHaveNonEndTurnCachedEdgeValue )
-				{
-					PROFILE("pathCost.NonEndTurnDetermined.Cached");
-				}
-			}
-#endif
+//#if 0
+//			else if ( bDoesntEndTurn )
+//			{
+//				PROFILE("pathCost.nonEndTurnDetermined");
+//
+//				if ( bHaveNonEndTurnCachedEdgeValue )
+//				{
+//					PROFILE("pathCost.NonEndTurnDetermined.Cached");
+//				}
+//			}
+//#endif
 		}
 		else
 		{
@@ -3363,13 +3363,13 @@ bool ContextFreeNewPathValidFunc(const CvSelectionGroup* pSelectionGroup, int iF
 			{
 				{
 					PROFILE("pathValid domain sea");
-			#if 0
-					// Optimisation short-circuit some invalid pathing choices quickly
-					if (!pToPlot->isWater() && !pSelectionGroup->canMoveAllTerrain() && !pToPlot->isCanMoveSeaUnits() && !pToPlot->isCity())
-					{
-						return false;
-					}
-			#endif
+//			#if 0
+//					// Optimisation short-circuit some invalid pathing choices quickly
+//					if (!pToPlot->isWater() && !pSelectionGroup->canMoveAllTerrain() && !pToPlot->isCanMoveSeaUnits() && !pToPlot->isCity())
+//					{
+//						return false;
+//					}
+//			#endif
 					// Can't cross diagonally across 'land'
 					if (pFromPlot->isWater() && pToPlot->isWater()
 					&& !GC.getMap().plot(pFromPlot->getX(), pToPlot->getY())->isWater() && !GC.getMap().plot(pToPlot->getX(), pFromPlot->getY())->isWater()

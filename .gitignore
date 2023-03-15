@@ -73,4 +73,4 @@ UserSettings/
 DevExtras/.vs/
 DevExtras/__pycache__/
 DevExtras/PyScripts/Profiling/Backup/
-DevExtras/PyScripts/__pycache__/
+DevExtras/PyScripts/Profiling/__pycache__/
