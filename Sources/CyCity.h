@@ -82,13 +82,13 @@ public:
 	int getFirstUnitOrder(int /*UnitTypes*/ eUnit) const;
 	int getNumTrainUnitAI(int /*UnitAITypes*/ eUnitAI) const;
 	int getFirstBuildingOrder(int /*BuildingTypes*/ eBuilding) const;
-	int getProductionProgress() const;
+	int getProduction() const;
 	int getProductionNeeded() const;
 	int getProductionTurnsLeft() const;
 	int getUnitProductionTurnsLeft(int /*UnitTypes*/ iUnit, int iNum) const;
 	int getBuildingProductionTurnsLeft(int /*BuildingTypes*/ iBuilding, int iNum) const;
 	int getProjectProductionTurnsLeft(int /*ProjectTypes*/ eProject, int iNum) const;
-	void setProductionProgress(int iNewValue);
+	void setProduction(int iNewValue);
 	void changeProduction(int iChange);
 	int getCurrentProductionDifference(bool bIgnoreFood, bool bOverflow) const;
 
@@ -343,13 +343,15 @@ public:
 	std::wstring getNameForm(int iForm) const;
 	std::wstring getNameKey() const;
 	void setName(std::wstring szNewValue, bool bFound);
+	void changeNoBonusCount(int /*BonusTypes*/ eBonus, int iChange);
+	bool isNoBonus(int /*BonusTypes*/ eBonus) const;
 	int getFreeBonus(int /*BonusTypes*/ eIndex) const;
 	void changeFreeBonus(int /*BonusTypes*/ eIndex, int iChange);
 	int getNumBonuses(int /*BonusTypes*/ iBonus) const;
 	bool hasBonus(int /*BonusTypes */ iBonus) const;
 
-	int getProgressOnBuilding(int /*BuildingTypes*/ iIndex) const;
-	void setProgressOnBuilding(int /*BuildingTypes*/ iIndex, int iNewValue);
+	int getBuildingProduction(int /*BuildingTypes*/ iIndex) const;
+	void setBuildingProduction(int /*BuildingTypes*/ iIndex, int iNewValue);
 	int getBuildingProductionTime(int /*BuildingTypes*/ eIndex) const;
 	bool isBuildingProductionDecay(int /*BuildingTypes*/ eIndex) const;
 	int getBuildingProductionDecayTurns(int /*BuildingTypes*/ eIndex) const;
@@ -358,8 +360,8 @@ public:
 	int getBuildingOriginalTime(int /*BuildingTypes*/ iIndex) const;
 	void setBuildingOriginalTime(int iBuildingType, int i);
 
-	int getProgressOnUnit(int iIndex) const;
-	void setProgressOnUnit(int iIndex, int iNewValue);
+	int getUnitProduction(int iIndex) const;
+	void setUnitProduction(int iIndex, int iNewValue);
 	int getUnitProductionTime(int /*UnitTypes*/ eIndex) const;
 	bool isUnitProductionDecay(int /*UnitTypes*/ eIndex) const;
 	int getUnitProductionDecayTurns(int /*UnitTypes*/ eIndex) const;

@@ -1138,641 +1138,3588 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ALYAWARRE</Tag>
 		<English>Alyawarre</English>
+		<French>
+			<Text>Alyawarre</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Alyawarre</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Alyawarre</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Àëÿâàððå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_AMANINDEUA</Tag>
+		<English>Amanindeua</English>
+		<French>
+			<Text>Amanindeua</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Amanindeua</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Amanindeua</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Amanindeua</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Àìàíèíäåéà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ANAPOLIS</Tag>
+		<English>Anapolis</English>
+		<French>
+			<Text>Anapolis</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Anapolis</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Anapolis</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Anapolis</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Àíàïîëèñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ANMATYERRE</Tag>
 		<English>Anmatyerre</English>
+		<French>
+			<Text>Anmatyerre</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Anmatyerre</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Anmatyerre</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Àíìàòüåððå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ANTAKARINJA</Tag>
 		<English>Antakarinja</English>
+		<French>
+			<Text>Antakarinja</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Antakarinja</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Antakarinja</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Àíòàêàðèíüÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ARACAJU</Tag>
 		<English>Aracaju</English>
+		<French>
+			<Text>Aracaju</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Aracaju</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Aracaju</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Aracaju</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Àðàêàæó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ARRERNTE</Tag>
 		<English>Arrernte</English>
+		<French>
+			<Text>Arrernte</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Arrernte</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Arrernte</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Àððåíòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AWABAKAL</Tag>
 		<English>Awabakal</English>
+		<French>
+			<Text>Awabakal</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Awabakal</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Awabakal</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Àâàáàêàë</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BAURU</Tag>
 		<English>Bauru</English>
+		<French>
+			<Text>Bauru</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Bauru</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Bauru</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Bauru</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Áàóðó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BELEM</Tag>
+		<English>Belem</English>
+		<French>
+			<Text>Belem</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Belem</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Belem</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Belem</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Áåëåí</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BELFORD_ROXO</Tag>
+		<English>Belford Roxo</English>
+		<French>
+			<Text>Belford Roxo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Belford Roxo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Belford Roxo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Belford Roxo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Ïîðòó-Àëåãðè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BELO_HORIZONTE</Tag>
 		<English>Belo Horizonte</English>
+		<French>
+			<Text>Belo Horizonte</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Belo Horizonte</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Belo Horizonte</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Belo Horizonte</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Áåëó-Îðèçîíòè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BETIM</Tag>
+		<English>Betim</English>
+		<French>
+			<Text>Betim</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Betim</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Betim</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Betim</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Äóêè-äå-Êàøèàñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BLUMENAU</Tag>
 		<English>Blumenau</English>
+		<French>
+			<Text>Blumenau</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Blumenau</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Blumenau</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Blumenau</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íîâà-Èãóàñó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BRASILIA</Tag>
+		<English>Brasilia</English>
+		<French>
+			<Text>Brasilia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Brasilia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Brasilia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Brasilia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Áðàçèëèà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BUNURONG</Tag>
 		<English>Bunurong</English>
+		<French>
+			<Text>Bunurong</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Bunurong</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Bunurong</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Áóíóðîíã</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BURARRA</Tag>
 		<English>Burarra</English>
+		<French>
+			<Text>Burarra</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Burarra</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Burarra</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Áóðàððà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CAMPINAS</Tag>
 		<English>Campinas</English>
+		<French>
+			<Text>Campinas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Campinas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Campinas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Campinas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Êàìïèíàñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CAMPINA_GRANDE</Tag>
 		<English>Campina Grande</English>
+		<French>
+			<Text>Campina Grande</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Campina Grande</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Campina Grande</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Campina Grande</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Êàìïèíà-Ãðàíäè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CAMPO_GRANDE</Tag>
 		<English>Campo Grande</English>
+		<French>
+			<Text>Campo Grande</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Campo Grande</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Campo Grande</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Campo Grande</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Êàìïó-Ãðàíäè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CARAPICUIBA</Tag>
+		<English>Carapicuiba</English>
+		<French>
+			<Text>Carapicuiba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Carapicuiba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Carapicuiba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Carapicuiba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Êàðàïèñóèáà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CAXIAS_DO_SUL</Tag>
 		<English>Caxias Do Sul</English>
+		<French>
+			<Text>Caxias Do Sul</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Caxias Do Sul</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Caxias Do Sul</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Caxias Do Sul</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ñàíòó-Àíäðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_COCAMA</Tag>
 		<English>Cocama</English>
+		<French>
+			<Text>Cocama</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Cocama</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Cocama</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Cocama</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Êîñàìà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CUIABA</Tag>
+		<English>Cuiaba</English>
+		<French>
+			<Text>Cuiaba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Cuiaba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Cuiaba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Cuiaba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Êóÿáà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CURITIBA</Tag>
 		<English>Curitiba</English>
+		<French>
+			<Text>Curitiba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Curitiba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Curitiba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Curitiba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Êóðèòèáà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_DHARUG</Tag>
 		<English>Dharug</English>
+		<French>
+			<Text>Dharug</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Dharug</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Dharug</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Äõàðóã</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DIADEMA</Tag>
+		<English>Diadema</English>
+		<French>
+			<Text>Diadema</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Diadema</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Diadema</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Diadema</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Äèàäåìà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_DIERE</Tag>
 		<English>Diere</English>
+		<French>
+			<Text>Diere</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Diere</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Diere</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Äüåðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_EORA</Tag>
 		<English>Eora</English>
+		<French>
+			<Text>Eora</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Eora</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Eora</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ýîðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_FEIRA_DE_SANTANA</Tag>
 		<English>Feira de Santana</English>
+		<French>
+			<Text>Feira de Santana</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Feira de Santana</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Feira de Santana</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Feira de Santana</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ôåéðà-äè-Ñàíòàíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_FLORIANOPOLIS</Tag>
+		<English>Florianopolis</English>
+		<French>
+			<Text>Florianopolis</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Florianopolis</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Florianopolis</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Florianopolis</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Ôëîðèàíîïîëèñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_FORTALEZA</Tag>
 		<English>Fortaleza</English>
+		<French>
+			<Text>Fortaleza</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Fortaleza</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Fortaleza</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Fortaleza</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ôîðòàëåçà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GOIANIA</Tag>
+		<English>Goiana</English>
+		<French>
+			<Text>Goiana</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Goiana</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Goiana</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Goiana</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Ãîÿíèÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_GUAPORE</Tag>
 		<English>Guapore</English>
+		<French>
+			<Text>Guapore</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Guapore</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Guapore</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Guapore</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ãâàïîðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_GUBBI_GUBBI</Tag>
 		<English>Gubbi Gubbi</English>
+		<French>
+			<Text>Gubbi Gubbi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Gubbi Gubbi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Gubbi Gubbi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Êóïèãóááè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_GUNAI</Tag>
 		<English>Gunai</English>
+		<French>
+			<Text>Gunai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Kurnai</German>
+		<Italian>
+			<Text>Gunai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Gunai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ãóíàè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_GUNIVUGI</Tag>
 		<English>Gunivugi</English>
+		<French>
+			<Text>Gunivugi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Gunivugi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Gunivugi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ãóíèâóãè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_GURINDJI</Tag>
 		<English>Gurindji</English>
+		<French>
+			<Text>Gurindji</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Gurindji</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Gurindji</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ãóðèíäæè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_GUUGU_YIMITHIRR</Tag>
 		<English>Guugu Yimithirr</English>
+		<French>
+			<Text>Guugu Yimithirr</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Guugu Yimithirr</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Guugu Yimithirr</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ãóäè Éèìèòõèð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HAURAKI</Tag>
 		<English>Hauraki</English>
+		<French>
+			<Text>Hauraki</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Hauraki</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Hauraki</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Hauraki</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Õàóðàêè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_IPATINGA</Tag>
 		<English>Ipatinga</English>
+		<French>
+			<Text>Ipatinga</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ipatinga</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ipatinga</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ipatinga</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Èïàòèíãà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_IWAIDJA</Tag>
 		<English>Iwaidja</English>
+		<French>
+			<Text>Iwaidja</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Iwaidja</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Iwaidja</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Èâàéäúÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_JARU</Tag>
 		<English>Jaru</English>
+		<French>
+			<Text>Jaru</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Jaru</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Jaru</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>ßðó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_JOAO_PESSOA</Tag>
+		<English>Joao Pessoa</English>
+		<French>
+			<Text>Joao Pessoa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Joao Pessoa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Joao Pessoa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Joao Pessoa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Æóàí-Ïåñîà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_JOINVILLE</Tag>
 		<English>Joinville</English>
+		<French>
+			<Text>Joinville</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Joinville</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Joinville</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Joinville</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Æîèíâèëëè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_JUIZ_DE_FORA</Tag>
 		<English>Juiz de Fora</English>
+		<French>
+			<Text>Juiz de Fora</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Juiz de Fora</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Juiz de Fora</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Juiz de Fora</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Æóèñ-äè-Ôîðà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_JUNDIAI</Tag>
+		<English>Jundiai</English>
+		<French>
+			<Text>Jundiai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Jundiai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Jundiai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Jundiai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Æóíäèàè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KAYTEJ</Tag>
 		<English>Kaytej</English>
+		<French>
+			<Text>Kaytej</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Kaytej</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kaytej</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Êàéòåæ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KOKATHA</Tag>
 		<English>Kokatha</English>
+		<French>
+			<Text>Kokatha</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Kokatha</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kokatha</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Êîêàòõà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KUKU_YALANII</Tag>
 		<English>Kuku-Yalanii</English>
+		<French>
+			<Text>Kuku-Yalanii</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Kuku Yalanji</German>
+		<Italian>
+			<Text>Kuku-Yalanii</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kuku-Yalanii</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Êóãó-ßëàíèé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LARRAKIA</Tag>
 		<English>Larrakia</English>
+		<French>
+			<Text>Larrakia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Larrakia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Larrakia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ëàððàêèÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LONDRINA</Tag>
 		<English>Londrina</English>
+		<French>
+			<Text>Londrina</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Londrina</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Londrina</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Londrina</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ëîíäðèíà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LURITJA</Tag>
 		<English>Luritja</English>
+		<French>
+			<Text>Luritja</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Luritja</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Luritja</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ëóðèòúÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MACEIO</Tag>
+		<English>Maceio</English>
+		<French>
+			<Text>Maceio</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Maceio</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Maceio</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Maceio</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Ìàñåéî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MANAUS</Tag>
 		<English>Manaus</English>
+		<French>
+			<Text>Manaus</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Manaus</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Manaus</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Manaus</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ìàíàóñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MANDJI</Tag>
 		<English>Mandji</English>
+		<French>
+			<Text>Mandji</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Manji</German>
+		<Italian>
+			<Text>Mandji</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Mandji</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ìàíäæè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MARINGA</Tag>
+		<English>Maringa</English>
+		<French>
+			<Text>Maringa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Maringa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Maringa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Maringa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Ìàðèíãà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NAKAKO</Tag>
 		<English>Nakako</English>
+		<French>
+			<Text>Nakako</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Nakako</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Nakako</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íàêàãî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NATAL</Tag>
 		<English>Natal</English>
+		<French>
+			<Text>Natal</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Natal</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Natal</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Natal</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íàòàë</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGAITERANGI</Tag>
 		<English>Ngaiterangi</English>
+		<French>
+			<Text>Ngaiterangi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ngaiterangi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ngaiterangi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngaiterangi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãàòåðàíãè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGAI_TAHU</Tag>
 		<English>Ngai Tahu</English>
+		<French>
+			<Text>Ngai Tahu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ngai Tahu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ngai Tahu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngai Tahu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãàè Òàõó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGALEA</Tag>
 		<English>Ngalea</English>
+		<French>
+			<Text>Ngalea</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Ngalia</German>
+		<Italian>
+			<Text>Ngalea</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngalea</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãàëåÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGAPUHI</Tag>
 		<English>Ngapuhi</English>
+		<French>
+			<Text>Ngapuhi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ngapuhi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ngapuhi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngapuhi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãàïóõè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGARTI</Tag>
 		<English>Ngarti</English>
+		<French>
+			<Text>Ngarti</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Ngarti</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngarti</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãàðòè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGATATJARA</Tag>
 		<English>Ngatatjara</English>
+		<French>
+			<Text>Ngatatjara</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Ngatatjara</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngatatjara</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãàòàòüÿðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGATI_AWA</Tag>
 		<English>Ngati Awa</English>
+		<French>
+			<Text>Ngati Awa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ngati Awa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ngati Awa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngati Awa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãàòè Àâà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGATI_KAHU</Tag>
 		<English>Ngati Kahu</English>
+		<French>
+			<Text>Ngati Kahu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ngati Kahu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ngati Kahu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngati Kahu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãàòè Êàõó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGATI_KAHUNGUNU</Tag>
 		<English>Ngati Kahungunu</English>
+		<French>
+			<Text>Ngati Kahungunu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ngati Kahungunu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ngati Kahungunu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngati Kahungunu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãàòè Êàõóíãóíó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGATI_KURI</Tag>
 		<English>Ngati Kuri</English>
+		<French>
+			<Text>Ngati Kuri</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ngati Kuri</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ngati Kuri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngati Kuri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãàòè Êóðó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGATI_MANIAPOTO</Tag>
 		<English>Ngati Maniapoto</English>
+		<French>
+			<Text>Ngati Maniapoto</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ngati Maniapoto</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ngati Maniapoto</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngati Maniapoto</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãàòè Ìàíèàïîòî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGATI_PROU</Tag>
 		<English>Ngati Prou</English>
+		<French>
+			<Text>Ngati Prou</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ngati Prou</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ngati Prou</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngati Prou</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãàòè Ïðîó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGATI_RANGINUI</Tag>
 		<English>Ngati Ranginui</English>
+		<French>
+			<Text>Ngati Ranginui</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ngati Ranginui</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ngati Ranginui</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngati Ranginui</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãàòè Ðàíãèíóè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGATI_RAUKAWA</Tag>
 		<English>Ngati Raukawa</English>
+		<French>
+			<Text>Ngati Raukawa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ngati Raukawa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ngati Raukawa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngati Raukawa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãàòè Ðàóêàâà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGATI_RUANUI</Tag>
 		<English>Ngati Ruanui</English>
+		<French>
+			<Text>Ngati Ruanui</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ngati Ruanui</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ngati Ruanui</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngati Ruanui</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãàòè Ðóàíóè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGATI_TOA_RANGATIRA</Tag>
 		<English>Ngati Toa Rangatira</English>
+		<French>
+			<Text>Ngati Toa Rangatira</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ngati Toa Rangatira</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ngati Toa Rangatira</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngati Toa Rangatira</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãàòè-òîà-Ðàíãàòèðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGATI_TUWHARETOA</Tag>
 		<English>Ngati Tuwharetoa</English>
+		<French>
+			<Text>Ngati Tuwharetoa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ngati Tuwharetoa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ngati Tuwharetoa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngati Tuwharetoa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãàòè Òóâõàðåòîà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGATI_WAI</Tag>
 		<English>Ngati Wai</English>
+		<French>
+			<Text>Ngati Wai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ngati Wai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ngati Wai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngati Wai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãàòè Âàé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGATI_WHATUA</Tag>
 		<English>Ngati Whatua</English>
+		<French>
+			<Text>Ngati Whatua</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ngati Whatua</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ngati Whatua</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngati Whatua</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãàòè Âõàòóà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGA_RAURU</Tag>
 		<English>Nga Rauru</English>
+		<French>
+			<Text>Nga Rauru</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Nga Rauru</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Nga Rauru</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Nga Rauru</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãà Ðàóðó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGA_RUAHINE</Tag>
 		<English>Nga Ruahine</English>
+		<French>
+			<Text>Nga Ruahine</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Nga Ruahine</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Nga Ruahine</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Nga Ruahine</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãà Ðóàõèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGUNAWAL</Tag>
 		<English>Ngunawal</English>
+		<French>
+			<Text>Ngunawal</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Ngunnawal</German>
+		<Italian>
+			<Text>Ngunawal</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngunawal</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãóíàâàëü</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NHEHGATU</Tag>
 		<English>Nhehgatu</English>
+		<French>
+			<Text>Nhehgatu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Nhehgatu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Nhehgatu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Nhehgatu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íõåõãàòó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NOONGAR</Tag>
 		<English>Noongar</English>
+		<French>
+			<Text>Noongar</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Noongar</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Noongar</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íóíãàð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NYANGANYATYARA</Tag>
 		<English>Nyanganyatyara</English>
+		<French>
+			<Text>Nyanganyatyara</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Nyanganyatyara</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Nyanganyatyara</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íÿíãàíÿòéàðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_OLINDA</Tag>
 		<English>Olinda</English>
+		<French>
+			<Text>Olinda</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Olinda</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Olinda</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Olinda</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Îëèíäà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_OMAGUA</Tag>
 		<English>Omagua</English>
+		<French>
+			<Text>Omagua</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Omagua</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Omagua</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Omagua</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Îìàãóà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PARA</Tag>
 		<English>Para</English>
+		<French>
+			<Text>Para</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Para</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Para</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Para</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ïàðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PARAIBA</Tag>
 		<English>Paraiba</English>
+		<French>
+			<Text>Paraiba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Paraiba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Paraiba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Paraiba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ïàðàéáà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PARANA</Tag>
 		<English>Parana</English>
+		<French>
+			<Text>Parana</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Parana</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Parana</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Parana</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ïàðàíà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PEABIRU</Tag>
 		<English>Peabiru</English>
+		<French>
+			<Text>Peabiru</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Peabiru</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Peabiru</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Peabiru</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ïåàáèðó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PELOTAS</Tag>
 		<English>Pelotas</English>
+		<French>
+			<Text>Pelotas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Pelotas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Pelotas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Pelotas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ïåëîòàñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PERAMANGK</Tag>
 		<English>Peramangk</English>
+		<French>
+			<Text>Peramangk</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Peramangk</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Peramangk</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ïåðàìàíãê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PERNAMBUCO</Tag>
 		<English>Pernambuco</English>
+		<French>
+			<Text>Pernambuco</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Pernambuco</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Pernambuco</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Pernambuco</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ïåðíàìáóêó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PIABUYU</Tag>
 		<English>Piabuyu</English>
+		<French>
+			<Text>Piabuyu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Piabuyu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Piabuyu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Piabuyu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ïèàáóþ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PIAUY</Tag>
 		<English>Piauy</English>
+		<French>
+			<Text>Piauy</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Piauy</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Piauy</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Piauy</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ïèàó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PINTUPI</Tag>
 		<English>Pintupi</English>
+		<French>
+			<Text>Pintupi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Pintupi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Pintupi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ïèíòóïè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PIRACICABA</Tag>
 		<English>Piracicaba</English>
+		<French>
+			<Text>Piracicaba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Piracicaba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Piracicaba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Piracicaba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ïèðàñèêàáà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PITJANTJATJARA</Tag>
 		<English>Pitjantjatjara</English>
+		<French>
+			<Text>Pitjantjatjara</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Pitjantjatjara</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Pitjantjatjara</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ïèòúÿíòúÿåúÿðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PORTO_ALEGRE</Tag>
 		<English>Porto Alegre</English>
+		<French>
+			<Text>Porto Alegre</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Porto Alegre</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Porto Alegre</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Porto Alegre</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ïîðòó-Àëåãðè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_POTIGUARA</Tag>
 		<English>Potiguara</English>
+		<French>
+			<Text>Potiguara</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Potiguara</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Potiguara</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Potiguara</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ïîòèãóàðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PRESIDENTE_PRUDENTE</Tag>
 		<English>Presidente Prudente</English>
+		<French>
+			<Text>Presidente Prudente</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Presidente Prudente</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Presidente Prudente</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Presidente Prudente</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ïðåçèäåíòè-Ýïèòàñèó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_RANGITANE</Tag>
 		<English>Rangitane</English>
+		<French>
+			<Text>Rangitane</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Rangitane</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Rangitane</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Rangitane</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ðàíãèòàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_RECIFE</Tag>
 		<English>Recife</English>
+		<French>
+			<Text>Recife</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Recife</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Recife</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Recife</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ðåñèôè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_RIBEIRAO_PRETO</Tag>
+		<English>Ribeirao Preto</English>
+		<French>
+			<Text>Ribeirao Preto</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ribeirao Preto</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ribeirao Preto</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ribeirao Preto</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Ðèáåéðàí-Ïðåòó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_RONGOWHAKAATA</Tag>
 		<English>Rongowhakaata</English>
+		<French>
+			<Text>Rongowhakaata</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Rongowhakaata</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Rongowhakaata</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Rongowhakaata</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ðîíãîâõàêààòà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SALVADOR</Tag>
 		<English>Salvador</English>
+		<French>
+			<Text>Salvador</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Salvador</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Salvador</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Salvador</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ñàëüâàäîð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SANTOS</Tag>
 		<English>Santos</English>
+		<French>
+			<Text>Santos</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Santos</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Santos</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Santos</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ñàíòóñ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAN_JOSE_DOS_CAMPOS</Tag>
+		<English>San Jose Dos Campos</English>
+		<French>
+			<Text>San Jose Dos Campos</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>San Jose Dos Campos</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>San Jose Dos Campos</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>San Jose Dos Campos</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Ñàí-Æîçå-äóñ-Êàìïóñ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAO_CAETANO</Tag>
+		<English>Sao Caetano</English>
+		<French>
+			<Text>Sao Caetano</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sao Caetano</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sao Caetano</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sao Caetano</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Âîëòà-Ðåäîíäà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAO_LUIS</Tag>
+		<English>Sao Luis</English>
+		<French>
+			<Text>Sao Luis</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sao Luis</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sao Luis</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sao Luis</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Ñàí-Ëóèñ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAO_PAULO</Tag>
+		<English>Sao Paulo</English>
+		<French>
+			<Text>Sao Paulo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sao Paulo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sao Paulo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sao Paulo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Ñàí Ïàóëó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAO_VINCENTE</Tag>
+		<English>Sao Vincente</English>
+		<French>
+			<Text>Sao Vincente</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sao Vincente</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sao Vincente</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sao Vincente</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Ñàí-Âèñåíòè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SERRA</Tag>
+		<English>Serra</English>
+		<French>
+			<Text>Serra</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Serra</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Serra</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Serra</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Ñåððà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SIRI_JIBE</Tag>
 		<English>Siri Jibe</English>
+		<French>
+			<Text>Siri Jibe</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Siri Jibe</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Siri Jibe</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Siri Jibe</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ñèðè-Æèáå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SOROCABA</Tag>
 		<English>Sorocaba</English>
+		<French>
+			<Text>Sorocaba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sorocaba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sorocaba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sorocaba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ñîðîêàáà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SY_ARA</Tag>
 		<English>Sy Ara</English>
+		<French>
+			<Text>Sy Ara</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sy Ara</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sy Ara</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sy Ara</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ñó-Àðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TAMOYO</Tag>
 		<English>Tamoyo</English>
+		<French>
+			<Text>Tamoyo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tamoyo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tamoyo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tamoyo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Òàìîéî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TAPE_AVIRU</Tag>
 		<English>Tape Aviru</English>
+		<French>
+			<Text>Tape Aviru</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tape Aviru</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tape Aviru</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tape Aviru</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Òàïå-Àâèðó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TARANAKI</Tag>
 		<English>Taranaki</English>
+		<French>
+			<Text>Taranaki</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Taranaki</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Taranaki</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Taranaki</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Òàðàíàêè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TAUBATE</Tag>
 		<English>Taubate</English>
+		<French>
+			<Text>Taubate</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Taubate</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Taubate</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Taubate</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Òàâáàòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TAUNGURONG</Tag>
 		<English>Taungurong</English>
+		<French>
+			<Text>Taungurong</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Taungurong</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Taungurong</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Òàóíãóðîíã</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TERESINA</Tag>
 		<English>Teresina</English>
+		<French>
+			<Text>Teresina</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Teresina</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Teresina</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Teresina</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Òåðåçèíà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TE_AITANGA_A_MAHAKI</Tag>
 		<English>Te Aitanga a Mahaki</English>
+		<French>
+			<Text>Te Aitanga a Mahaki</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Te Aitanga a Mahaki</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Te Aitanga a Mahaki</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Te Aitanga a Mahaki</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Òå-Àéòàíãà-ÌÀÕàêè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TE_ARAWA</Tag>
 		<English>Te Arawa</English>
+		<French>
+			<Text>Te Arawa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Te Arawa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Te Arawa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Te Arawa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Òå Àðàâà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TE_ATIAWA</Tag>
 		<English>Te Atiawa</English>
+		<French>
+			<Text>Te Atiawa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Te Atiawa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Te Atiawa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Te Atiawa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Òå Àòèàâà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TE_ATIHAUNUI_A_PAPARANG</Tag>
 		<English>Te Atihaunui a Paparang</English>
+		<French>
+			<Text>Te Atihaunui a Paparang</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Te Atihaunui a Paparang</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Te Atihaunui a Paparang</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Te Atihaunui a Paparang</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Òå Àòèõàóíóè Ïàïàðàíã</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TE_AUPOURI</Tag>
 		<English>Te Aupouri</English>
+		<French>
+			<Text>Te Aupouri</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Te Aupouri</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Te Aupouri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Te Aupouri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Òå Àóïîóðè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TE_RARAWA</Tag>
 		<English>Te Rarawa</English>
+		<French>
+			<Text>Te Rarawa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Te Rarawa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Te Rarawa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Te Rarawa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Òå Ðàðàâà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TE_WHANAU_A_APANUI</Tag>
 		<English>Te Whanau a Apanui</English>
+		<French>
+			<Text>Te Whanau a Apanui</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Te Whanau a Apanui</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Te Whanau a Apanui</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Te Whanau a Apanui</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Òå Âõàíàó Àïàíóè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TOCANTINS</Tag>
 		<English>Tocantins</English>
+		<French>
+			<Text>Tocantins</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tocantins</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tocantins</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tocantins</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Òîêàíòèñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TUHOE</Tag>
 		<English>Tuhoe</English>
+		<French>
+			<Text>Tuhoe</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tuhoe</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tuhoe</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tuhoe</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Òóõîý</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TUPINAMBA</Tag>
 		<English>Tupinamba</English>
+		<French>
+			<Text>Tupinamba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tupinamba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tupinamba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tupinamba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Òóïèíàìáà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TUPINIQUIM</Tag>
 		<English>Tupiniquim</English>
+		<French>
+			<Text>Tupiniquim</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tupiniquim</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tupiniquim</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tupiniquim</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Òóïèíèêóèì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TURUWAL</Tag>
 		<English>Turuwal</English>
+		<French>
+			<Text>Turuwal</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Turuwal</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Turuwal</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Òóðóâàëü</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_UBERLANDIA</Tag>
+		<English>Uberlandia</English>
+		<French>
+			<Text>Uberlandia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Uberlandia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Uberlandia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Uberlandia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Óáåðëàíäèà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VICTORIA</Tag>
+		<English>Victoria</English>
+		<French>
+			<Text>Victoria</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Victoria</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Victoria</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Victoria</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Âèêòîðèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VILA_VELHA</Tag>
+		<English>Vila Velha</English>
+		<French>
+			<Text>Vila Velha</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Vila Velha</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Vila Velha</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Vila Velha</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Âèëà-Âèëüÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_WADIYGINI</Tag>
 		<English>Wadiygini</English>
+		<French>
+			<Text>Wadiygini</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Wadiygini</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Wadiygini</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Âàäèéãèíè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_WAIKATO</Tag>
 		<English>Waikato</English>
+		<French>
+			<Text>Waikato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Waikato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Waikato</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Waikato</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Âàéêàòî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_WAJUK</Tag>
 		<English>Wajuk</English>
+		<French>
+			<Text>Wajuk</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Wajuk</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Wajuk</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Âàþê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_WAKAYA</Tag>
 		<English>Wakaya</English>
+		<French>
+			<Text>Wakaya</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Wakaya</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Wakaya</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Âàêàéà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_WARIMANPA</Tag>
 		<English>Warlmanpa</English>
+		<French>
+			<Text>Warlmanpa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Warlmanpa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Warlmanpa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Âàðëìàíïà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_WARLPIRI</Tag>
 		<English>Warlpiri</English>
+		<French>
+			<Text>Warlpiri</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Warlpiri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Warlpiri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Âàðëïèðè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_WARUMUNGU</Tag>
 		<English>Warumungu</English>
+		<French>
+			<Text>Warumungu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Warumungu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Warumungu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Âàðóìóíãó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_WATHAURONG</Tag>
 		<English>Wathaurong</English>
+		<French>
+			<Text>Wathaurong</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Wathaurong</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Wathaurong</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Âàòõàóðîíã</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_WATJARRI</Tag>
 		<English>Watjarri</English>
+		<French>
+			<Text>Watjarri</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Wajarri</German>
+		<Italian>
+			<Text>Watjarri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Watjarri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Âàòúÿððè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_WHAKATOHEA</Tag>
 		<English>Whakatohea</English>
+		<French>
+			<Text>Whakatohea</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Whakatohea</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Whakatohea</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Whakatohea</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Âõàêàòîõåà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_WIRADJURI</Tag>
 		<English>Wiradjuri</English>
+		<French>
+			<Text>Wiradjuri</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Wiradjuri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Wiradjuri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Âèðàäúþðè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_WOOLNA</Tag>
 		<English>Woolna</English>
+		<French>
+			<Text>Woolna</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Wulna</German>
+		<Italian>
+			<Text>Woolna</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Woolna</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Âóëüíà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_WURUNDJERI</Tag>
 		<English>Wurundjeri</English>
+		<French>
+			<Text>Wurundjeri</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Wurundjeri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Wurundjeri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Âóðóíäúåðè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_YANKUNTJATJARA</Tag>
 		<English>Yankuntjatjara</English>
+		<French>
+			<Text>Yankuntjatjara</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Yankuntjatjara</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Yankuntjatjara</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>ßíêóíòéàòüÿðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_YOLNGU</Tag>
 		<English>Yolngu</English>
+		<French>
+			<Text>Yolngu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Yolngu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Yolngu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Éîëíãó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_YUGGERA</Tag>
 		<English>Yuggera</English>
+		<French>
+			<Text>Yuggera</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Yuggera</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Yuggera</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Þãåððà</Russian>
 	</TEXT>
 	<TEXT>

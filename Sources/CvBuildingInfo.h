@@ -79,6 +79,7 @@ public:
 	int getMaxStartEra() const						{ return m_iMaxStartEra; }
 	TechTypes getObsoleteTech() const				{ return m_iObsoleteTech; }
 	int getPrereqAndTech() const					{ return m_iPrereqAndTech; }
+	int getNoBonus() const							{ return m_iNoBonus; }
 	int getPowerBonus() const						{ return m_iPowerBonus; }
 	BuildingTypes getFreeBuilding() const			{ return m_iFreeBuilding; }
 	BuildingTypes getFreeAreaBuilding() const		{ return m_iFreeAreaBuilding; }
@@ -568,6 +569,7 @@ private:
 	int m_iMaxStartEra;
 	TechTypes m_iObsoleteTech;
 	int m_iPrereqAndTech;
+	int m_iNoBonus;
 	int m_iPowerBonus;
 	BuildingTypes m_iFreeBuilding;
 	BuildingTypes m_iFreeAreaBuilding;

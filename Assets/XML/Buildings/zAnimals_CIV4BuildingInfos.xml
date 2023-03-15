@@ -1109,7 +1109,6 @@
 			</MapCategoryTypes>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
-			<iCost>184</iCost>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
 			<FreeBuilding>BUILDING_FLOCKS_OF_DUCK</FreeBuilding>
 			<bNeverCapture>1</bNeverCapture>

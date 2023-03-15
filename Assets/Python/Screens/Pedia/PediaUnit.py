@@ -109,7 +109,9 @@ class PediaUnit:
 
 		import TextUtil
 
-		iType = CvTheUnitInfo.getTotalModifiedCombatStrength100(GC.getGame().isOption(GameOptionTypes.GAMEOPTION_COMBAT_SIZE_MATTERS))
+		if CvTheUnitInfo.getDomainType() == DomainTypes.DOMAIN_AIR:
+			iType = CvTheUnitInfo.getTotalModifiedAirCombatStrength100()
+		else: iType = CvTheUnitInfo.getTotalModifiedCombatStrength100()
 
 		if iType > 0:
 			szText = TextUtil.floatToString(iType / 100.0) + " " + unichr(8855)

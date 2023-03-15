@@ -347,7 +347,7 @@ class WBPlayerUnits:
 		if pCity.isProduction():
 			sText += u"\n%s:" %(CyTranslator().getText("[ICON_PRODUCTION]", ()))
 			if not pCity.isProductionProcess():
-				sText += u" %d/%d" %(pCity.getProductionProgress(), pCity.getProductionNeeded())
+				sText += u" %d/%d" %(pCity.getProduction(), pCity.getProductionNeeded())
 				iProduction = pCity.getCurrentProductionDifference(False, True)
 				if iProduction != 0:
 					sText += u" %+d" %(iProduction)

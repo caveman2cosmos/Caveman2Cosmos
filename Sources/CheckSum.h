@@ -9,6 +9,8 @@
 #ifndef CHECKSUM_H
 #define CHECKSUM_H
 
+#include "FProfiler.h"
+
 inline void CheckSum(uint32_t& iSum, uint32_t iData)
 {
 	iSum += iData;
@@ -33,6 +35,7 @@ inline void CheckSum(uint32_t& iSum, float fData)
 
 inline void CheckSum(uint32_t& iSum, const int* aiData, int iNum)
 {
+	PROFILE_EXTRA_FUNC();
 	if (aiData)
 	{
 		for (int i = 0; i < iNum; i++)
@@ -42,6 +45,7 @@ inline void CheckSum(uint32_t& iSum, const int* aiData, int iNum)
 
 inline void CheckSum(uint32_t& iSum, const bool* abData, int iNum)
 {
+	PROFILE_EXTRA_FUNC();
 	if (abData)
 	{
 		for (int i = 0; i < iNum; i++)
@@ -64,6 +68,7 @@ inline void CheckSum(uint32_t& iSum, const std::pair<T1, T2>& p)
 template <typename T, size_t N>
 inline void CheckSum(uint32_t& iSum, const bst::array<T, N>& kArray)
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(const T& element, kArray)
 		CheckSum(iSum, element);
 }
@@ -71,6 +76,7 @@ inline void CheckSum(uint32_t& iSum, const bst::array<T, N>& kArray)
 template<typename Cont>
 inline void CheckSumC(uint32_t& iSum, const Cont& kCont)
 {
+	PROFILE_EXTRA_FUNC();
 	for (Cont::const_iterator it = kCont.begin(); it != kCont.end(); ++it)
 	{
 		CheckSum(iSum, *it);

@@ -94,7 +94,7 @@ BeginPlayer
 EndPlayer
 BeginPlayer
 	LeaderType=LEADER_SITTING_BULL
-	CivType=CIVILIZATION_SIOUX
+	CivType=CIVILIZATION_NATIVE_AMERICA
 	StartingX=17, StartingY=52
 EndPlayer
 BeginPlayer

@@ -1,3 +1,6 @@
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvGameAI.h"
 #include "CvGameTextMgr.h"
@@ -11,7 +14,7 @@
 #include "CvDLLInterfaceIFaceBase.h"
 #include "CvDLLUtilityIFaceBase.h"
 
-int CvReplayInfo::REPLAY_VERSION = 6;
+int CvReplayInfo::REPLAY_VERSION = 4;
 
 CvReplayInfo::CvReplayInfo()
 	: m_iActivePlayer(0)
@@ -32,11 +35,12 @@ CvReplayInfo::CvReplayInfo()
 	, m_iStartYear(0)
 	, m_eCalendar(NO_CALENDAR)
 {
-	m_nMinimapSize = GC.getDefineINT("MINIMAP_RENDER_SIZE") * GC.getDefineINT("MINIMAP_RENDER_SIZE") / 2;
+	m_nMinimapSize = ((GC.getDefineINT("MINIMAP_RENDER_SIZE") * GC.getDefineINT("MINIMAP_RENDER_SIZE")) / 2);
 }
 
 CvReplayInfo::~CvReplayInfo()
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(const CvReplayMessage* pMessage, m_listReplayMessages)
 	{
 		SAFE_DELETE(pMessage);
@@ -46,6 +50,7 @@ CvReplayInfo::~CvReplayInfo()
 
 void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 {
+	PROFILE_EXTRA_FUNC();
 	CvGame& game = GC.getGame();
 
 	if (!game.isFinalInitialized())
@@ -154,7 +159,7 @@ void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 		if (it != mapPlayers.end())
 		{
 			CvReplayMessage* pMsg = new CvReplayMessage(game.getReplayMessageTurn(i), game.getReplayMessageType(i), (PlayerTypes)it->second);
-			if (pMsg)
+			if (NULL != pMsg)
 			{
 				pMsg->setColor(game.getReplayMessageColor(i));
 				pMsg->setText(game.getReplayMessageText(i));
@@ -165,7 +170,7 @@ void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 		else
 		{
 			CvReplayMessage* pMsg = new CvReplayMessage(game.getReplayMessageTurn(i), game.getReplayMessageType(i), NO_PLAYER);
-			if (pMsg)
+			if (NULL != pMsg)
 			{
 				pMsg->setColor(game.getReplayMessageColor(i));
 				pMsg->setText(game.getReplayMessageText(i));
@@ -292,6 +297,7 @@ GameSpeedTypes CvReplayInfo::getGameSpeed() const
 
 bool CvReplayInfo::isGameOption(GameOptionTypes eOption) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (uint i = 0; i < m_listGameOptions.size(); i++)
 	{
 		if (m_listGameOptions[i] == eOption)
@@ -304,6 +310,7 @@ bool CvReplayInfo::isGameOption(GameOptionTypes eOption) const
 
 bool CvReplayInfo::isVictoryCondition(VictoryTypes eVictory) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (uint i = 0; i < m_listVictoryTypes.size(); i++)
 	{
 		if (m_listVictoryTypes[i] == eVictory)
@@ -332,6 +339,7 @@ void CvReplayInfo::addReplayMessage(CvReplayMessage* pMessage)
 
 void CvReplayInfo::clearReplayMessageMap()
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(const CvReplayMessage* pMessage, m_listReplayMessages)
 	{
 		SAFE_DELETE(pMessage);
@@ -554,45 +562,36 @@ const char* CvReplayInfo::getModName() const
 
 bool CvReplayInfo::read(FDataStreamBase& stream)
 {
-	int iVersion;
-	stream.Read(&iVersion);
-	if (iVersion < 6)
-	{
-		return false;
-	}
-	// Use iVersion in below code to maintain backwards compatibility for versions higher than 5 if possible.
-	//	I.e if write code change, REPLAY_VERSION should iterate, 
-	//	and the old read code must be kept around in addition to the new read code (which match the current write code),
-	//	where iVersion is used to determine which read code to use in a particular read.
-	{
-		int iMinimapSize;
-		stream.Read(&iMinimapSize);
-		if (iMinimapSize != m_nMinimapSize)
-		{
-			// Exe will get exceptions when drawing the replay map as it expect the sample size to be MINIMAP_RENDER_SIZE
-			// So this replay must be discarded and there's no way to make it work.
-			return false;
-		}
-	}
-	// So much can seemingly go wrong here that we cannot always expect to secure backwards compatibility in all cases by code alone.
-	// E.g. Certain XML changes can cause this try section to fail.
+	PROFILE_EXTRA_FUNC();
+	int iType;
+	int iNumTypes;
+	bool bSuccess = true;
+
 	try
 	{
-		SAFE_DELETE(m_pcMinimapPixels);
-		m_pcMinimapPixels = new uint8_t[m_nMinimapSize];
-		stream.Read(m_nMinimapSize, m_pcMinimapPixels);
+		int iVersion;
+		stream.Read(&iVersion);
+		if (iVersion < 2)
+		{
+			return false;
+		}
 
-		int iType;
-		int iNumTypes;
 		stream.Read(&m_iActivePlayer);
+
 		stream.Read(&iType);
 		m_eDifficulty = (HandicapTypes)iType;
 		stream.ReadString(m_szLeaderName);
 		stream.ReadString(m_szCivDescription);
 		stream.ReadString(m_szShortCivDescription);
 		stream.ReadString(m_szCivAdjective);
-		stream.ReadString(m_szMapScriptName);
-
+		if (iVersion > 3)
+		{
+			stream.ReadString(m_szMapScriptName);
+		}
+		else
+		{
+			m_szMapScriptName = gDLL->getText("TXT_KEY_TRAITHELP_PLAYER_UNKNOWN");
+		}
 		stream.Read(&iType);
 		m_eWorldSize = (WorldSizeTypes)iType;
 		stream.Read(&iType);
@@ -603,14 +602,12 @@ bool CvReplayInfo::read(FDataStreamBase& stream)
 		m_eEra = (EraTypes)iType;
 		stream.Read(&iType);
 		m_eGameSpeed = (GameSpeedTypes)iType;
-
 		stream.Read(&iNumTypes);
 		for (int i = 0; i < iNumTypes; i++)
 		{
 			stream.Read(&iType);
 			m_listGameOptions.push_back((GameOptionTypes)iType);
 		}
-
 		stream.Read(&iNumTypes);
 		for (int i = 0; i < iNumTypes; i++)
 		{
@@ -619,12 +616,11 @@ bool CvReplayInfo::read(FDataStreamBase& stream)
 		}
 		stream.Read(&iType);
 		m_eVictoryType = (VictoryTypes)iType;
-
 		stream.Read(&iNumTypes);
 		for (int i = 0; i < iNumTypes; i++)
 		{
 			CvReplayMessage* pMessage = new CvReplayMessage(0);
-			if (pMessage)
+			if (NULL != pMessage)
 			{
 				pMessage->read(stream);
 			}
@@ -637,7 +633,6 @@ bool CvReplayInfo::read(FDataStreamBase& stream)
 		stream.Read(&iType);
 		m_eCalendar = (CalendarTypes)iType;
 		stream.Read(&m_iNormalizedScore);
-
 		stream.Read(&iNumTypes);
 		for (int i = 0; i < iNumTypes; i++)
 		{
@@ -674,24 +669,26 @@ bool CvReplayInfo::read(FDataStreamBase& stream)
 		}
 		stream.Read(&m_iMapWidth);
 		stream.Read(&m_iMapHeight);
+		SAFE_DELETE(m_pcMinimapPixels);
+		m_pcMinimapPixels = new uint8_t[m_nMinimapSize];
+		stream.Read(m_nMinimapSize, m_pcMinimapPixels);
 		stream.Read(&m_bMultiplayer);
-
-		stream.ReadString(m_szModName);
-
-		return true;
+		if (iVersion > 2)
+		{
+			stream.ReadString(m_szModName);
+		}
 	}
 	catch (...)
 	{
-		FErrorMsg("Backwards compatibility for replay data has been broken somehow")
-		return false;
+		bSuccess = false;
 	}
+	return bSuccess;
 }
 
 void CvReplayInfo::write(FDataStreamBase& stream)
 {
+	PROFILE_EXTRA_FUNC();
 	stream.Write(REPLAY_VERSION);
-	stream.Write(m_nMinimapSize);
-	stream.Write(m_nMinimapSize, m_pcMinimapPixels);
 	stream.Write(m_iActivePlayer);
 	stream.Write((int)m_eDifficulty);
 	stream.WriteString(m_szLeaderName);
@@ -718,7 +715,7 @@ void CvReplayInfo::write(FDataStreamBase& stream)
 	stream.Write((int)m_listReplayMessages.size());
 	foreach_(const CvReplayMessage* pMessage, m_listReplayMessages)
 	{
-		if (pMessage)
+		if (pMessage != NULL)
 		{
 			pMessage->write(stream);
 		}
@@ -746,6 +743,7 @@ void CvReplayInfo::write(FDataStreamBase& stream)
 	}
 	stream.Write(m_iMapWidth);
 	stream.Write(m_iMapHeight);
+	stream.Write(m_nMinimapSize, m_pcMinimapPixels);
 	stream.Write(m_bMultiplayer);
 	stream.WriteString(m_szModName);
 }

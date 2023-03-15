@@ -13059,7 +13059,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MYTHOLOGICAL_BESTIARY</TechType>
+					<TechType>TECH_MYTHOLOCIAL_BEASTIARY</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -16793,7 +16793,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_MYTHOLOGICAL_BESTIARY</TechType>
+					<TechType>TECH_MYTHOLOCIAL_BEASTIARY</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -50975,7 +50975,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_BIOMATHEMATICS</TechType>
+					<TechType>TECH_BIOMATHMATICS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -52148,7 +52148,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_BIOMATHEMATICS</TechType>
+					<TechType>TECH_BIOMATHMATICS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -53023,7 +53023,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_BIOMATHEMATICS</TechType>
+					<TechType>TECH_BIOMATHMATICS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -54136,7 +54136,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_BIOMATHEMATICS</TechType>
+					<TechType>TECH_BIOMATHMATICS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -74699,7 +74699,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_BIOMATHEMATICS</TechType>
+					<TechType>TECH_BIOMATHMATICS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -75791,7 +75791,7 @@
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_BIOMATHEMATICS</TechType>
+					<TechType>TECH_BIOMATHMATICS</TechType>
 					<iModifier>20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -76554,7 +76554,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_BIOMATHEMATICS</TechType>
+					<TechType>TECH_BIOMATHMATICS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
@@ -77656,7 +77656,7 @@
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>
-					<TechType>TECH_BIOMATHEMATICS</TechType>
+					<TechType>TECH_BIOMATHMATICS</TechType>
 					<iModifier>-20</iModifier>
 				</TechResearchModifier>
 				<TechResearchModifier>

@@ -14,6 +14,7 @@
 			<Yields>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
+				<iYield>0</iYield>
 			</Yields>
 			<UnitCombatExperienceTypes>
 				<UnitCombatExperienceType>
@@ -44,19 +45,10 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>-1</iCommerce>
 				<iCommerce>-1</iCommerce>
+				<iCommerce>0</iCommerce>
 			</Commerces>
 			<iHappinessPercent>-100</iHappinessPercent>
 			<iHealthPercent>-100</iHealthPercent>
-			<TechHappinessTypes>
-				<TechHappinessType>
-					<TechType>TECH_HUMANISM</TechType>
-					<iModifier>-1</iModifier>
-				</TechHappinessType>
-				<TechHappinessType>
-					<TechType>TECH_EMANCIPATION</TechType>
-					<iModifier>-1</iModifier>
-				</TechHappinessType>
-			</TechHappinessTypes>
 			<Button>Art/Interface/MainScreen/CityScreen/slave.dds</Button>
 			<PropertyManipulators>
 				<PropertySource>

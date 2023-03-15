@@ -163,6 +163,15 @@ Settings
                     + ' /DUSE_INTERNAL_PROFILER'
 ]
 
+.ConfigProfileExtra = 
+[
+    Using(.ConfigNonDebugCommon)
+    .ConfigName     = 'ProfileExtra'
+
+    .CLOptions      + ' /DFP_PROFILE_EXTRA_ENABLE' 
+                    + ' /DUSE_INTERNAL_PROFILER'
+]
+
 .ConfigTesting = 
 [
     Using(.ConfigNonDebugCommon)
@@ -181,7 +190,8 @@ Settings
                     + ' /DFINAL_RELEASE'
 ]
 
-.Configs = { .ConfigDebug, .ConfigRelease, .ConfigAssert, .ConfigProfile, .ConfigTesting, .ConfigFinalRelease }
+.Configs = { .ConfigDebug, .ConfigRelease, .ConfigAssert, .ConfigProfile, .ConfigProfileExtra, .ConfigTesting, 
+	.ConfigFinalRelease }
 
 .AllTargets = {}
 

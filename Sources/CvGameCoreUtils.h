@@ -5,6 +5,8 @@
 #ifndef CIV4_GAMECORE_UTILS_H
 #define CIV4_GAMECORE_UTILS_H
 
+#include "FProfiler.h"
+
 #include "CvMap.h"
 #include "CvGlobals.h"
 
@@ -390,6 +392,7 @@ void AddDLLMessage(PlayerTypes ePlayer, bool bForce, int iLength, CvWString szSt
 template <class T1, class T2>
 bool isMapCategory(const T1& source1, const T2& source2)
 {
+	PROFILE_EXTRA_FUNC();
 	const std::vector<MapCategoryTypes>& mapCategories1 = source1.getMapCategories();
 	if (mapCategories1.empty())
 	{

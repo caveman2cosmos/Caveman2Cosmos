@@ -21470,6 +21470,16 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PRODUCTION_DECAY</Tag>
+		<English>[COLOR_NEGATIVE_TEXT]Will lose %d1[ICON_PRODUCTION] this turn[COLOR_REVERT]</English>
+		<French>[COLOR_NEGATIVE_TEXT]Va perdre %d1[ICON_PRODUCTION] ce tour[COLOR_REVERT]</French>
+		<German>[COLOR_NEGATIVE_TEXT]%d1[ICON_PRODUCTION] gehen in dieser Runde verloren[COLOR_REVERT]</German>
+		<Italian>[COLOR_NEGATIVE_TEXT]Perderà %d1[ICON_PRODUCTION] questo turno[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_NEGATIVE_TEXT]Perderá %d1[ICON_PRODUCTION] este turno[COLOR_REVERT]</Spanish>
+		<Polish>[COLOR_NEGATIVE_TEXT]Straci %d1[ICON_PRODUCTION] w tej turze[COLOR_REVERT]</Polish>
+		<Russian>[COLOR_NEGATIVE_TEXT]Áóäåò ïîòåðÿíî %d1[ICON_PRODUCTION] íà ýòîì õîäó[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PRODUCTION_DECAY_PRODUCING</Tag>
 		<English>[COLOR_WARNING_TEXT]Will lose %d1[ICON_PRODUCTION] if not produced this turn[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Va perdre %d1[ICON_PRODUCTION] si non utilisé ce tour[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]%d1[ICON_PRODUCTION] gehen verloren, falls nicht in dieser Runde produziert wird[COLOR_REVERT]</German>
@@ -21480,13 +21490,23 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PRODUCTION_DECAY_TURNS</Tag>
-		<English>[COLOR_NEGATIVE_TEXT]Will lose %d1[ICON_PRODUCTION] if delayed for %d2 [NUM2:turn:turns][COLOR_REVERT]</English>
+		<English>[COLOR_NEGATIVE_TEXT]Will lose %d1[ICON_PRODUCTION] in %d2 [NUM2:turn:turns][COLOR_REVERT]</English>
 		<French>[COLOR_NEGATIVE_TEXT]Va perdre %d1[ICON_PRODUCTION] en %d2 [NUM2:tour:tours][COLOR_REVERT]</French>
 		<German>[COLOR_NEGATIVE_TEXT]%d1[ICON_PRODUCTION] gehen in %d2 [NUM2:Runde:Runden] verloren[COLOR_REVERT]</German>
 		<Italian>[COLOR_NEGATIVE_TEXT]Perderà %d1[ICON_PRODUCTION] in %d2 [NUM2:Turno:turni][COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_NEGATIVE_TEXT]Perderá %d1[ICON_PRODUCTION] en %d2 [NUM2:turno:turnos][COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_NEGATIVE_TEXT]Straci %d1[ICON_PRODUCTION] za %d2 [NUM2:turę:tur][COLOR_REVERT]</Polish>
 		<Russian>[COLOR_NEGATIVE_TEXT]Áóäåò ïîòåðÿíî %d1[ICON_PRODUCTION] çà %d2 [NUM2:õîä:õîäîâ][COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PRODUCTION_DECAY_TURNS_PRODUCING</Tag>
+		<English>[COLOR_WARNING_TEXT]Will lose %d1[ICON_PRODUCTION] if not produced for %d2 [NUM2:turn:turns][COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Va perdre %d1[ICON_PRODUCTION] si non utilisé en %d2 [NUM2:tour:tours][COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]%d1[ICON_PRODUCTION] gehen verloren, falls für %d2 [NUM2:Runde:Runden] nicht produziert wird[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Perderà %d1[ICON_PRODUCTION] se non viene prodotto per %d2 [NUM2:Turno:turni][COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Perderá %d1[ICON_PRODUCTION] si no se sigue produciendo en %d2 [NUM2:turno:turnos][COLOR_REVERT]</Spanish>
+		<Polish>[COLOR_WARNING_TEXT]Straci %d1[ICON_PRODUCTION] jeśli nie wyprodukuje w ciągu %d2 [NUM2:tury:tur][COLOR_REVERT]</Polish>
+		<Russian>[COLOR_WARNING_TEXT]Áóäåò ïîòåðÿíî %d1[ICON_PRODUCTION] åñëè íå ïðîèçâåäåì çà %d2 [NUM2:õîä:õîäîâ][COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PRODUCTION_MODIFIER_TRAIT</Tag>

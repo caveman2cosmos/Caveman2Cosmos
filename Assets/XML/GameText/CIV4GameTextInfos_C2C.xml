@@ -29,6 +29,15 @@
 		<Russian>Строит %d1_Mod%% быстрее, если есть [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_DISABLES</Tag>
+		<English>[ICON_BULLET]Removes access to [LINK=%s1_BonusNameType]%s2_BonusName[\LINK][COLOR_REVERT] (%F3_BonusIcon) from the city.</English>
+		<French>[ICON_BULLET]Interdit l'accès au bonus [LINK=%s1_BonusNameType]%s2_BonusName[\LINK][COLOR_REVERT] (%F3_BonusIcon) de la ville.</French>
+		<German>[ICON_BULLET]Entfernt den Bonus [LINK=%s1_BonusNameType]%s2_BonusName[\LINK][COLOR_REVERT] (%F3_BonusIcon) aus der Stadt.</German>
+		<Italian>[ICON_BULLET]Elimina l'accesso a [LINK=%s1_BonusNameType]%s2_BonusName[\LINK][COLOR_REVERT] (%F3_BonusIcon) dalla città.</Italian>
+		<Spanish>[ICON_BULLET]Elimina el acceso [NUM1:al:a la:a los:a las] [LINK=%s1_BonusNameType]%s2_BonusName[\LINK][COLOR_REVERT] (%F3_BonusIcon) de la ciudad.</Spanish>
+		<Russian>[ICON_BULLET]Делает невозможным доступ к [LINK=%s1_BonusNameType]%s2_BonusName[\LINK][COLOR_REVERT] (%F3_BonusIcon) в этом городе.</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_DOUBLE_SPEED_WITH</Tag>
 		<English>Double production speed with [LINK=%s1_BonusType]%s2_Bonus[\LINK]</English>
 		<French>Vitesse de production doublée avec : [LINK=%s1_BonusType]%s2_Bonus[\LINK]</French>

@@ -76,12 +76,14 @@ void CyCityPythonInterface2(python::class_<CyCity>& x)
 		.def("getNameForm", &CyCity::getNameForm, "string () - city name")
 		.def("getNameKey", &CyCity::getNameKey, "string () - city name")
 		.def("setName", &CyCity::setName, "void (const char* szNewValue, bool bFound) - sets the name to szNewValue")
+		.def("isNoBonus", &CyCity::isNoBonus, "bool (int eIndex)")
+		.def("changeNoBonusCount", &CyCity::changeNoBonusCount, "void (int eIndex, int iChange)")
 		.def("getFreeBonus", &CyCity::getFreeBonus, "int (int eIndex)")
 		.def("changeFreeBonus", &CyCity::changeFreeBonus, "void (int eIndex, int iChange)")
 		.def("getNumBonuses", &CyCity::getNumBonuses, "int (PlayerID)")
 		.def("hasBonus", &CyCity::hasBonus, "bool - (BonusID) - is BonusID connected to the city?")
-		.def("getProgressOnBuilding", &CyCity::getProgressOnBuilding, "int (BuildingID) - current production towards BuildingID")
-		.def("setProgressOnBuilding", &CyCity::setProgressOnBuilding, "void (BuildingID, iNewValue) - set progress towards BuildingID as iNewValue")
+		.def("getBuildingProduction", &CyCity::getBuildingProduction, "int (BuildingID) - current production towards BuildingID")
+		.def("setBuildingProduction", &CyCity::setBuildingProduction, "void (BuildingID, iNewValue) - set progress towards BuildingID as iNewValue")
 		.def("getBuildingProductionTime", &CyCity::getBuildingProductionTime, "int (int eIndex)")
 
 		.def("getGreatPeopleUnitProgress", &CyCity::getGreatPeopleUnitProgress, "int (int /*UnitTypes*/ iIndex)")
@@ -152,25 +154,38 @@ void CyCityPythonInterface2(python::class_<CyCity>& x)
 
 		.def("getNumRevolts", &CyCity::getNumRevolts, "int (PlayerTypes eIndex)")
 		.def("changeNumRevolts", &CyCity::changeNumRevolts, "int (PlayerTypes eIndex, int iChange)" )
-
+// BUG - Fractional Trade Routes - start
 #ifdef _MOD_FRACTRADE
 		.def("calculateTradeProfitTimes100", &CyCity::calculateTradeProfitTimes100, "int (CyCity) - returns the unrounded trade profit created by CyCity")
 #endif
+// BUG - Fractional Trade Routes - end
+// BUG - Production Decay - start
+		.def("isBuildingProductionDecay", &CyCity::isBuildingProductionDecay, "bool (int eIndex)")
+		.def("getBuildingProductionDecayTurns", &CyCity::getBuildingProductionDecayTurns, "int (int eIndex)")
+// BUG - Production Decay - end
+// BUG - Production Decay - start
+		.def("getUnitProductionTime", &CyCity::getUnitProductionTime, "int (int eIndex)")
+		.def("isUnitProductionDecay", &CyCity::isUnitProductionDecay, "bool (int eIndex)")
+		.def("getUnitProductionDecayTurns", &CyCity::getUnitProductionDecayTurns, "int (int eIndex)")
+// BUG - Production Decay - end
 
+// BUG - Production Decay - start
 		.def("isBuildingProductionDecay", &CyCity::isBuildingProductionDecay, "bool (int /*BuildingTypes*/ eIndex)")
 		.def("getBuildingProductionDecayTurns", &CyCity::getBuildingProductionDecayTurns, "int (int /*BuildingTypes*/ eIndex)")
-
+// BUG - Production Decay - end
 		.def("getBuildingOriginalOwner", &CyCity::getBuildingOriginalOwner, "int (BuildingType) - index of original building owner")
 		.def("getBuildingOriginalTime", &CyCity::getBuildingOriginalTime, "int (int BuildingType) - original build date")
 		.def("setBuildingOriginalTime", &CyCity::setBuildingOriginalTime, "void (int iBuildingType, int iNewValue) - original build date")
-
-		.def("getProgressOnUnit", &CyCity::getProgressOnUnit, "int (UnitID) - gets current production towards UnitID")
-		.def("setProgressOnUnit", &CyCity::setProgressOnUnit, "void (UnitID, iNewValue) - sets production towards UnitID as iNewValue")
+		.def("getUnitProduction", &CyCity::getUnitProduction, "int (UnitID) - gets current production towards UnitID")
+		.def("setUnitProduction", &CyCity::setUnitProduction, "void (UnitID, iNewValue) - sets production towards UnitID as iNewValue")
+// BUG - Production Decay - start
 		.def("getUnitProductionTime", &CyCity::getUnitProductionTime, "int (int /*UnitTypes*/ eIndex)")
 		.def("isUnitProductionDecay", &CyCity::isUnitProductionDecay, "bool (int /*UnitTypes*/ eIndex)")
 		.def("getUnitProductionDecayTurns", &CyCity::getUnitProductionDecayTurns, "int (int /*UnitTypes*/ eIndex)")
-
+// BUG - Production Decay - end
+// BUG - Project Production - start
 		.def("getProjectProduction", &CyCity::getProjectProduction, "int (int /*ProjectTypes*/ eIndex)")
+// BUG - Project Production - end
 
 		.def("getArea", &CyCity::getArea, "int ()")
 		.def("isWeLoveTheKingDay", &CyCity::isWeLoveTheKingDay, "bool ()")

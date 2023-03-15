@@ -11,6 +11,8 @@
 #ifndef CVINFOREPLACEMENTS_H
 #define CVINFOREPLACEMENTS_H
 
+#include "FProfiler.h"
+
 //#include "BoolExpr.h"
 //#include "CvGameAI.h"
 //#include "CvGlobals.h"
@@ -91,6 +93,7 @@ protected:
 public:
 	void read(FDataStreamBase* pStream)
 	{
+		PROFILE_EXTRA_FUNC();
 		unsigned int iSize;
 		pStream->Read(&iSize);
 		for (unsigned int i=0; i<iSize; i++)
@@ -103,6 +106,7 @@ public:
 
 	void write(FDataStreamBase* pStream)
 	{
+		PROFILE_EXTRA_FUNC();
 		const unsigned int iSize = m_apReplacements.size();
 		pStream->Write(iSize);
 		for (unsigned int i=0; i<iSize; i++)
@@ -115,6 +119,7 @@ public:
 
 	CvInfoReplacement<T>* getReplacement(uint uiID, uint uiReplID) const
 	{
+		PROFILE_EXTRA_FUNC();
 		const unsigned int iSize = m_apReplacements.size();
 		for (unsigned int i=0; i<iSize; i++)
 		{
@@ -151,6 +156,7 @@ public:
 
 	void readPass3()
 	{
+		PROFILE_EXTRA_FUNC();
 		for (unsigned int i=0; i<m_apReplacements.size(); i++)
 		{
 			m_apReplacements[i]->getInfo()->readPass3();
@@ -159,6 +165,7 @@ public:
 
 	void updateReplacements(std::vector<T*>& aInfos)
 	{
+		PROFILE_EXTRA_FUNC();
 		// Restore base info classes from backup
 		unsigned int iSize = m_apBackups.size();
 		for (unsigned int i=0; i<iSize; i++)
