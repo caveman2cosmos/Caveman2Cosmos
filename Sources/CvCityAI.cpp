@@ -2104,35 +2104,35 @@ void CvCityAI::AI_chooseProduction()
 		bChooseWorker = true;
 	}
 
-#if 0
-	//do a check for one tile island type thing?
-	//this can be overridden by "wait and grow more"
-	if (!bDanger && iWorkersInArea == 0 && (isCapital() || iNeededWorkersInArea > 0 || iNeededSeaWorkers > iExistingSeaWorkers))
-	{
-		if (!bStrategyTurtle && (!bDefenseWar || iWarSuccessRatio >= -30))
-		{
-			if ((AI_countNumBonuses(NO_BONUS, /*bIncludeOurs*/ true, /*bIncludeNeutral*/ true, -1, /*bLand*/ true, /*bWater*/ false) > 0) ||
-				(isCapital() && (getPopulation() > 3) && iNumCitiesInArea > 1))
-			{
-				if (!bChooseWorker && AI_chooseUnit(UNITAI_WORKER))
-				{
-					if (gCityLogLevel >= 2) logBBAI("      City %S uses choose worker 5", getName().GetCString());
-					return;
-				}
-				bChooseWorker = true;
-			}
-
-			if (iNeededSeaWorkers > iExistingSeaWorkers)
-			{
-				if (AI_chooseUnit(UNITAI_WORKER_SEA))
-				{
-					if (gCityLogLevel >= 2) logBBAI("      City %S uses choose worker sea 2", getName().GetCString());
-					return;
-				}
-			}
-		}
-	}
-#endif
+//#if 0
+//	//do a check for one tile island type thing?
+//	//this can be overridden by "wait and grow more"
+//	if (!bDanger && iWorkersInArea == 0 && (isCapital() || iNeededWorkersInArea > 0 || iNeededSeaWorkers > iExistingSeaWorkers))
+//	{
+//		if (!bStrategyTurtle && (!bDefenseWar || iWarSuccessRatio >= -30))
+//		{
+//			if ((AI_countNumBonuses(NO_BONUS, /*bIncludeOurs*/ true, /*bIncludeNeutral*/ true, -1, /*bLand*/ true, /*bWater*/ false) > 0) ||
+//				(isCapital() && (getPopulation() > 3) && iNumCitiesInArea > 1))
+//			{
+//				if (!bChooseWorker && AI_chooseUnit(UNITAI_WORKER))
+//				{
+//					if (gCityLogLevel >= 2) logBBAI("      City %S uses choose worker 5", getName().GetCString());
+//					return;
+//				}
+//				bChooseWorker = true;
+//			}
+//
+//			if (iNeededSeaWorkers > iExistingSeaWorkers)
+//			{
+//				if (AI_chooseUnit(UNITAI_WORKER_SEA))
+//				{
+//					if (gCityLogLevel >= 2) logBBAI("      City %S uses choose worker sea 2", getName().GetCString());
+//					return;
+//				}
+//			}
+//		}
+//	}
+//#endif
 
 	m_iTempBuildPriority--;
 

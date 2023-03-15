@@ -8359,17 +8359,17 @@ void CvPlot::updatePlotGroup(PlayerTypes ePlayer, bool bRecalculate, bool bRecal
 			if (isTradeNetwork(GET_PLAYER(ePlayer).getTeam()))
 			{
 				bConnected = true;
-#if 0
-				foreach_(const CvPlot* pAdjacentPlot, adjacent())
-				{
-					if (pAdjacentPlot->getPlotGroup(ePlayer) == pPlotGroup
-					&& !isTradeNetworkConnected(pAdjacentPlot, GET_PLAYER(ePlayer).getTeam()))
-					{
-						bConnected = false;
-						break;
-					}
-				}
-#endif
+//#if 0
+//				foreach_(const CvPlot* pAdjacentPlot, adjacent())
+//				{
+//					if (pAdjacentPlot->getPlotGroup(ePlayer) == pPlotGroup
+//					&& !isTradeNetworkConnected(pAdjacentPlot, GET_PLAYER(ePlayer).getTeam()))
+//					{
+//						bConnected = false;
+//						break;
+//					}
+//				}
+//#endif
 			}
 
 			if (!bConnected)
