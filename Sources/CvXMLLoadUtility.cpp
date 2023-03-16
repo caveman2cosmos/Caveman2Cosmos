@@ -190,6 +190,7 @@ CvXMLLoadUtility::~CvXMLLoadUtility()
 //------------------------------------------------------------------------------------------------------
 void CvXMLLoadUtility::ResetLandscapeInfo()
 {
+	PROFILE_EXTRA_FUNC();
 	for (int i = 0; i < GC.getNumLandscapeInfos(); ++i)
 	{
 		SAFE_DELETE(GC.m_paLandscapeInfo[i]);
@@ -209,6 +210,7 @@ void CvXMLLoadUtility::ResetLandscapeInfo()
 //------------------------------------------------------------------------------------------------------
 void CvXMLLoadUtility::ResetGlobalEffectInfo()
 {
+	PROFILE_EXTRA_FUNC();
 	for (int i = 0; i < GC.getNumEffectInfos(); ++i)
 	{
 		SAFE_DELETE(GC.m_paEffectInfo[i]);
@@ -411,6 +413,7 @@ CvWString CvXMLLoadUtility::CreateHotKeyFromDescription(const char* pszHotKey, b
 
 bool CvXMLLoadUtility::SetStringList(CvString** ppszStringArray, int* piSize)
 {
+	PROFILE_EXTRA_FUNC();
 	int i;
 	CvString* pszStringArray;
 

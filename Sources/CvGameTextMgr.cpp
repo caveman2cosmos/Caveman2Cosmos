@@ -10,6 +10,9 @@
 //  Copyright (c) 2004 Firaxis Games, Inc. All rights reserved.
 //---------------------------------------------------------------------------------------
 
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
 #include "CvArtFileMgr.h"
@@ -7733,6 +7736,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 // DO NOT REMOVE - needed for font testing - Moose
 void createTestFontString(CvWStringBuffer& szString)
 {
+	PROFILE_EXTRA_FUNC();
 	int iI;
 	for (iI=0;iI<NUM_YIELD_TYPES;++iI)
 		szString.append(CvWString::format(L"%c", GC.getYieldInfo((YieldTypes) iI).getChar()));
@@ -20611,6 +20615,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit, bool
  */
 void CvGameTextMgr::setBuildingActualEffects(CvWStringBuffer &szBuffer, const CvWString& szStart, BuildingTypes eBuilding, const CvCity* pCity, bool bNewLine)
 {
+	PROFILE_EXTRA_FUNC();
 	if (pCity)
 	{
 		bool bStarted = false;
@@ -23544,6 +23549,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 
 void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, BuildingTypes eBuilding, bool bCivilopediaText, bool bTechChooserText, const CvCity* pCity)
 {
+	PROFILE_EXTRA_FUNC();
 	bool bFirst;
 	CvWString szTempBuffer;
 	CvWString szFirstBuffer;
@@ -24489,6 +24495,7 @@ void CvGameTextMgr::setProjectHelp(CvWStringBuffer &szBuffer, ProjectTypes eProj
 
 void CvGameTextMgr::setProcessHelp(CvWStringBuffer &szBuffer, ProcessTypes eProcess)
 {
+	PROFILE_EXTRA_FUNC();
 	szBuffer.append(GC.getProcessInfo(eProcess).getDescription());
 
 	for (int iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
@@ -24503,6 +24510,7 @@ void CvGameTextMgr::setProcessHelp(CvWStringBuffer &szBuffer, ProcessTypes eProc
 
 void CvGameTextMgr::setBadHealthHelp(CvWStringBuffer &szBuffer, CvCity& city)
 {
+	PROFILE_EXTRA_FUNC();
 	const int iBadHealthTotal = city.badHealth();
 	if (iBadHealthTotal < 1)
 	{
@@ -24696,6 +24704,7 @@ void CvGameTextMgr::setBadHealthHelp(CvWStringBuffer &szBuffer, CvCity& city)
 
 void CvGameTextMgr::setGoodHealthHelp(CvWStringBuffer &szBuffer, CvCity& city)
 {
+	PROFILE_EXTRA_FUNC();
 	const int iGoodHealthTotal = city.goodHealth();
 	if (iGoodHealthTotal < 1)
 	{
@@ -24879,6 +24888,7 @@ void CvGameTextMgr::setGoodHealthHelp(CvWStringBuffer &szBuffer, CvCity& city)
 
 bool CvGameTextMgr::setBuildingAdditionalHealthHelp(CvWStringBuffer &szBuffer, CvCity& city, const CvWString& szStart, bool bStarted)
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
 		const BuildingTypes eBuilding = static_cast<BuildingTypes>(iI);
@@ -24928,6 +24938,7 @@ void CvGameTextMgr::parseHappinessHelp(CvWStringBuffer &szBuffer)
 
 void CvGameTextMgr::setAngerHelp(CvWStringBuffer &szBuffer, CvCity& city)
 {
+	PROFILE_EXTRA_FUNC();
 	if (city.isOccupation())
 	{
 		szBuffer.append(gDLL->getText("TXT_KEY_ANGER_RESISTANCE"));
@@ -25480,6 +25491,7 @@ void CvGameTextMgr::setHappyHelp(CvWStringBuffer &szBuffer, CvCity& city)
 // BUG - Building Additional Happiness - start
 bool CvGameTextMgr::setBuildingAdditionalHappinessHelp(CvWStringBuffer &szBuffer, CvCity& city, const CvWString& szStart, bool bStarted)
 {
+	PROFILE_EXTRA_FUNC();
 	for (int i = 0; i < GC.getNumBuildingInfos(); i++)
 	{
 		const BuildingTypes eBuilding = static_cast<BuildingTypes>(i);
@@ -25526,6 +25538,7 @@ void CvGameTextMgr::setYieldPerPopChangeHelp(CvWStringBuffer &szBuffer, const Cv
  */
 bool CvGameTextMgr::setResumableYieldChangeHelp(CvWStringBuffer &szBuffer, const CvWString& szStart, const CvWString& szSpace, const CvWString& szEnd, const int* piYieldChange, bool bPercent, bool bNewLine, bool bStarted, bool bPerPop)
 {
+	PROFILE_EXTRA_FUNC();
 	CvWString szPerPop;
 
 	if (bPerPop)
@@ -25635,6 +25648,7 @@ bool CvGameTextMgr::setResumableYieldChangeHelp(CvWStringBuffer &szBuffer, const
 
 void CvGameTextMgr::listCommerceChange(CvWStringBuffer &szBuffer, const CvWString& szStart, const CvWString& szEnd, const int* aList, bool bPercent)
 {
+	PROFILE_EXTRA_FUNC();
 	bool bStarted = false;
 	for (int iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
 	{
@@ -25672,6 +25686,7 @@ void CvGameTextMgr::setCommerceTimes100ChangeHelp(CvWStringBuffer &szBuffer, con
  */
 bool CvGameTextMgr::setResumableCommerceTimes100ChangeHelp(CvWStringBuffer &szBuffer, const CvWString& szStart, const CvWString& szSpace, const CvWString& szEnd, const int* piCommerceChange, bool bNewLine, bool bStarted)
 {
+	PROFILE_EXTRA_FUNC();
 	CvWString szTempBuffer;
 
 	for (int iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
@@ -25830,6 +25845,7 @@ void CvGameTextMgr::setBonusHelp(CvWStringBuffer &szBuffer, BonusTypes eBonus, b
 
 void CvGameTextMgr::setBonusTradeHelp(CvWStringBuffer &szBuffer, BonusTypes eBonus, bool bCivilopediaText, PlayerTypes eTradePlayer)
 {
+PROFILE_EXTRA_FUNC();
 /************************************************************************************************/
 /* REVOLUTION_MOD						  END												  */
 /************************************************************************************************/
@@ -26098,6 +26114,7 @@ void CvGameTextMgr::setReligionHelp(CvWStringBuffer &szBuffer, ReligionTypes eRe
 
 void CvGameTextMgr::setReligionHelpCity(CvWStringBuffer &szBuffer, ReligionTypes eReligion, CvCity *pCity, bool bCityBar, bool bForceReligion, bool bForceState, bool bNoStateReligion)
 {
+	PROFILE_EXTRA_FUNC();
 	int i;
 	CvWString szTempBuffer;
 	bool bHandled = false;
@@ -26230,6 +26247,7 @@ void CvGameTextMgr::setReligionHelpCity(CvWStringBuffer &szBuffer, ReligionTypes
 
 void CvGameTextMgr::setCorporationHelp(CvWStringBuffer &szBuffer, CorporationTypes eCorporation, bool bCivilopedia)
 {
+	PROFILE_EXTRA_FUNC();
 	if (NO_CORPORATION == eCorporation)
 	{
 		return;
@@ -26460,6 +26478,7 @@ void CvGameTextMgr::setCorporationHelp(CvWStringBuffer &szBuffer, CorporationTyp
 
 void CvGameTextMgr::setCorporationHelpCity(CvWStringBuffer &szBuffer, CorporationTypes eCorporation, CvCity *pCity, bool bCityBar, bool bForceCorporation)
 {
+	PROFILE_EXTRA_FUNC();
 	if (!pCity)
 	{
 		return;
@@ -26661,6 +26680,7 @@ void CvGameTextMgr::buildObsoleteSpecialString(CvWStringBuffer &szBuffer, int iI
 
 void CvGameTextMgr::buildMoveString(CvWStringBuffer &szBuffer, TechTypes eTech, bool bList, bool bPlayerContext)
 {
+	PROFILE_EXTRA_FUNC();
 	int iI;
 	int iMoveDiff;
 
@@ -26745,6 +26765,7 @@ void CvGameTextMgr::buildHealthRateString(CvWStringBuffer &szBuffer, TechTypes e
 //Team Project (1)
 void CvGameTextMgr::buildSpecialistHealthString(CvWStringBuffer &szBuffer, TechTypes eTech, bool bList, bool bPlayerContext)
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 	{
 		const CvSpecialistInfo& kSpecialist = GC.getSpecialistInfo((SpecialistTypes)iI);
@@ -26784,6 +26805,7 @@ void CvGameTextMgr::buildHappinessRateString(CvWStringBuffer &szBuffer, TechType
 //Team Project (1)
 void CvGameTextMgr::buildSpecialistHappinessString(CvWStringBuffer &szBuffer, TechTypes eTech, bool bList, bool bPlayerContext)
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 	{
 		const CvSpecialistInfo& kSpecialist = GC.getSpecialistInfo((SpecialistTypes)iI);
@@ -27017,6 +27039,7 @@ void CvGameTextMgr::buildWaterWorkString(CvWStringBuffer &szBuffer, TechTypes eT
 
 void CvGameTextMgr::buildImprovementString(CvWStringBuffer &szBuffer, TechTypes eTech, BuildTypes eBuild, bool bList, bool bPlayerContext)
 {
+	PROFILE_EXTRA_FUNC();
 	const CvBuildInfo& kBuild = GC.getBuildInfo(eBuild);
 	const bool bIsTeam = (GC.getGame().getActiveTeam() != NO_TEAM);
 
@@ -27183,6 +27206,7 @@ void CvGameTextMgr::buildYieldChangeString(CvWStringBuffer &szBuffer, TechTypes 
 
 void CvGameTextMgr::buildBuildingTechSpecialistChangeString(CvWStringBuffer &szBuffer, TechTypes eTech, int iBuildingType, bool bList, bool bPlayerContext)
 {
+	PROFILE_EXTRA_FUNC();
 	CvWString szTempBuffer;
 	for (int iSpecialist = 0; iSpecialist < GC.getNumSpecialistInfos(); iSpecialist++)
 	{
@@ -27364,6 +27388,7 @@ bool CvGameTextMgr::buildPromotionString(CvWStringBuffer &szBuffer, TechTypes eT
 // Displays a list of derived technologies - no distinction between AND/OR prerequisites
 void CvGameTextMgr::buildSingleLineTechTreeString(CvWStringBuffer &szBuffer, TechTypes eTech, bool bPlayerContext)
 {
+	PROFILE_EXTRA_FUNC();
 	CvWString szTempBuffer;	// Formatting
 
 	if (NO_TECH == eTech)
@@ -27396,6 +27421,7 @@ void CvGameTextMgr::buildSingleLineTechTreeString(CvWStringBuffer &szBuffer, Tec
 // Information about other prerequisite technologies to eTech besides eFromTech
 void CvGameTextMgr::buildTechTreeString(CvWStringBuffer &szBuffer, TechTypes eTech, bool bPlayerContext, TechTypes eFromTech)
 {
+	PROFILE_EXTRA_FUNC();
 	CvWString szTempBuffer;	// Formatting
 
 	if (NO_TECH == eTech || NO_TECH == eFromTech)
@@ -27557,6 +27583,7 @@ void CvGameTextMgr::setTraitHelp(CvWStringBuffer &szBuffer, TraitTypes eTrait)
 
 void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer& szBuffer, UnitCombatTypes eUnitCombat, bool bCivilopediaText) const
 {
+	PROFILE_EXTRA_FUNC();
 	const CvUnitCombatInfo& info = GC.getUnitCombatInfo(eUnitCombat);
 
 	if (!bCivilopediaText)
@@ -29161,6 +29188,7 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer& szBuffer, UnitCombatTypes
 
 void CvGameTextMgr::setImprovementHelp(CvWStringBuffer &szBuffer, ImprovementTypes eImprovement, FeatureTypes eFeature, bool bCivilopediaText)
 {
+	PROFILE_EXTRA_FUNC();
 	if (NO_IMPROVEMENT == eImprovement)
 	{
 		return;
@@ -29612,6 +29640,7 @@ void CvGameTextMgr::setImprovementHelp(CvWStringBuffer &szBuffer, ImprovementTyp
 
 void CvGameTextMgr::setRouteHelp(CvWStringBuffer &szBuffer, RouteTypes eRoute, bool bCivilopediaText)
 {
+	PROFILE_EXTRA_FUNC();
 	if (NO_ROUTE == eRoute)
 	{
 		return;
@@ -29717,6 +29746,7 @@ void CvGameTextMgr::getDealString(CvWStringBuffer& szBuffer, CvDeal& deal, Playe
 
 void CvGameTextMgr::getDealString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer1, PlayerTypes ePlayer2, const CLinkList<TradeData>* pListPlayer1, const CLinkList<TradeData>* pListPlayer2, PlayerTypes ePlayerPerspective)
 {
+	PROFILE_EXTRA_FUNC();
 	if (NO_PLAYER == ePlayer1 || NO_PLAYER == ePlayer2)
 	{
 		FErrorMsg("Deal needs two parties");
@@ -29819,6 +29849,7 @@ void CvGameTextMgr::getWarplanString(CvWStringBuffer& szString, WarPlanTypes eWa
 
 void CvGameTextMgr::getAttitudeString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer, PlayerTypes eTargetPlayer)
 {
+	PROFILE_EXTRA_FUNC();
 	CvWString szTempBuffer;
 	int iAttitudeChange;
 	int iPass;
@@ -30253,6 +30284,7 @@ void CvGameTextMgr::getTradeString(CvWStringBuffer& szBuffer, const TradeData& t
 
 void CvGameTextMgr::setFeatureHelp(CvWStringBuffer &szBuffer, FeatureTypes eFeature, bool bCivilopediaText)
 {
+	PROFILE_EXTRA_FUNC();
 	if (NO_FEATURE == eFeature)
 	{
 		return;
@@ -30360,6 +30392,7 @@ void CvGameTextMgr::setFeatureHelp(CvWStringBuffer &szBuffer, FeatureTypes eFeat
 
 void CvGameTextMgr::setTerrainHelp(CvWStringBuffer &szBuffer, TerrainTypes eTerrain, bool bCivilopediaText)
 {
+	PROFILE_EXTRA_FUNC();
 	if (NO_TERRAIN == eTerrain)
 	{
 		return;
@@ -30441,6 +30474,7 @@ void CvGameTextMgr::setTerrainHelp(CvWStringBuffer &szBuffer, TerrainTypes eTerr
 
 void CvGameTextMgr::buildFinanceSpecialistGoldString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (NO_PLAYER == ePlayer)
 	{
 		return;
@@ -30518,6 +30552,7 @@ void CvGameTextMgr::buildFinanceInflationString(CvWStringBuffer& szBuffer, Playe
 
 void CvGameTextMgr::buildFinanceUnitUpkeepString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (NO_PLAYER == ePlayer)
 	{
 		return;
@@ -30672,6 +30707,7 @@ void CvGameTextMgr::buildFinanceAwaySupplyString(CvWStringBuffer& szBuffer, Play
 
 void CvGameTextMgr::buildFinanceCityMaintString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (NO_PLAYER == ePlayer)
 	{
 		return;
@@ -30749,6 +30785,7 @@ void CvGameTextMgr::buildFinanceCityMaintString(CvWStringBuffer& szBuffer, Playe
 
 void CvGameTextMgr::buildFinanceCivicUpkeepString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (NO_PLAYER == ePlayer)
 	{
 		return;
@@ -30772,6 +30809,7 @@ void CvGameTextMgr::buildFinanceCivicUpkeepString(CvWStringBuffer& szBuffer, Pla
 
 void CvGameTextMgr::buildFinanceForeignIncomeString(CvWStringBuffer& szBuffer, PlayerTypes ePlayer) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (NO_PLAYER == ePlayer)
 	{
 		return;
@@ -30905,6 +30943,7 @@ void CvGameTextMgr::setFoodHelp(CvWStringBuffer &szBuffer, CvCity& city)
 // BUG - Building Additional Yield - start
 bool CvGameTextMgr::setBuildingAdditionalYieldHelp(CvWStringBuffer &szBuffer, CvCity& city, YieldTypes eIndex, const CvWString& szStart, bool bStarted)
 {
+	PROFILE_EXTRA_FUNC();
 	const CvYieldInfo& info = GC.getYieldInfo(eIndex);
 
 	for (int i = 0; i < GC.getNumBuildingInfos(); i++)
@@ -30937,6 +30976,7 @@ bool CvGameTextMgr::setBuildingAdditionalYieldHelp(CvWStringBuffer &szBuffer, Cv
 // BUG - Building Additional Commerce - start
 bool CvGameTextMgr::setBuildingAdditionalCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, CommerceTypes eIndex, const CvWString& szStart, bool bStarted)
 {
+	PROFILE_EXTRA_FUNC();
 	const CvCommerceInfo& info = GC.getCommerceInfo(eIndex);
 
 	for (int i = 0; i < GC.getNumBuildingInfos(); i++)
@@ -30972,6 +31012,7 @@ bool CvGameTextMgr::setBuildingAdditionalCommerceHelp(CvWStringBuffer &szBuffer,
 // BUG - Building Saved Maintenance - start
 bool CvGameTextMgr::setBuildingSavedMaintenanceHelp(CvWStringBuffer &szBuffer, const CvCity& city, const CvWString& szStart, bool bStarted)
 {
+	PROFILE_EXTRA_FUNC();
 	const CvCommerceInfo& info = GC.getCommerceInfo(COMMERCE_GOLD);
 
 	for (int i = 0; i < GC.getNumBuildingInfos(); i++)
@@ -31017,6 +31058,7 @@ void CvGameTextMgr::setProductionHelp(CvWStringBuffer &szBuffer, CvCity& city)
 
 void CvGameTextMgr::parsePlayerTraits(CvWStringBuffer &szBuffer, PlayerTypes ePlayer)
 {
+	PROFILE_EXTRA_FUNC();
 	CvPlayer& kPlayer = GET_PLAYER(ePlayer);
 	int iPotentialDisplays = 0;
 
@@ -31156,6 +31198,7 @@ void CvGameTextMgr::parseLeaderHeadHelp(CvWStringBuffer &szBuffer, PlayerTypes e
 
 void CvGameTextMgr::getActiveDealsString(CvWStringBuffer &szBuffer, PlayerTypes eThisPlayer, PlayerTypes eOtherPlayer)
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(CvDeal& kDeal, GC.getGame().deals())
 	{
 		if ((kDeal.getFirstPlayer() == eThisPlayer && kDeal.getSecondPlayer() == eOtherPlayer)
@@ -31263,6 +31306,7 @@ void CvGameTextMgr::getOtherRelationsString(CvWStringBuffer& szString, PlayerTyp
  */
 void CvGameTextMgr::getOtherRelationsString(CvWStringBuffer& szString, TeamTypes eThisTeam, TeamTypes eOtherTeam, TeamTypes eSkipTeam)
 {
+	PROFILE_EXTRA_FUNC();
 	if (eThisTeam == NO_TEAM)
 	{
 		return;
@@ -31365,6 +31409,7 @@ void CvGameTextMgr::getOtherRelationsString(CvWStringBuffer& szString, TeamTypes
 
 void CvGameTextMgr::buildHintsList(CvWStringBuffer& szBuffer)
 {
+	PROFILE_EXTRA_FUNC();
 	for (int i = 0; i < GC.getNumHints(); i++)
 	{
 		szBuffer.append(CvWString::format(L"%c%s", gDLL->getSymbolID(BULLET_CHAR), GC.getHints(i).getText()));
@@ -31375,6 +31420,7 @@ void CvGameTextMgr::buildHintsList(CvWStringBuffer& szBuffer)
 
 void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, CommerceTypes eCommerceType)
 {
+	PROFILE_EXTRA_FUNC();
 	if (NO_COMMERCE == eCommerceType || NO_PLAYER == city.getOwner())
 	{
 		return;
@@ -31642,6 +31688,7 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 
 void CvGameTextMgr::setYieldHelp(CvWStringBuffer &szBuffer, CvCity& city, YieldTypes eYieldType)
 {
+	PROFILE_EXTRA_FUNC();
 	FAssertMsg(NO_PLAYER != city.getOwner(), "City must have an owner");
 
 	if (NO_YIELD == eYieldType || NO_PLAYER == city.getOwner())
@@ -32035,6 +32082,7 @@ void CvGameTextMgr::setVassalRevoltHelp(CvWStringBuffer& szBuffer, TeamTypes eMa
 
 void CvGameTextMgr::parseGreatPeopleHelp(CvWStringBuffer &szBuffer, CvCity& city)
 {
+	PROFILE_EXTRA_FUNC();
 	if (NO_PLAYER == city.getOwner())
 	{
 		return;
@@ -32272,6 +32320,7 @@ void CvGameTextMgr::parseGreatPeopleHelp(CvWStringBuffer &szBuffer, CvCity& city
 // BUG - Building Additional Great People - start
 bool CvGameTextMgr::setBuildingAdditionalGreatPeopleHelp(CvWStringBuffer &szBuffer, CvCity& city, const CvWString& szStart, bool bStarted)
 {
+	PROFILE_EXTRA_FUNC();
 	CvWString szLabel;
 
 	for (int i = 0; i < GC.getNumBuildingInfos(); i++)
@@ -32303,6 +32352,7 @@ bool CvGameTextMgr::setBuildingAdditionalGreatPeopleHelp(CvWStringBuffer &szBuff
 
 void CvGameTextMgr::parseGreatGeneralHelp(CvWStringBuffer &szBuffer, CvPlayer& kPlayer)
 {
+	PROFILE_EXTRA_FUNC();
 	szBuffer.append(gDLL->getText("TXT_KEY_MISC_GREAT_MILITARY_PERSON", kPlayer.getCombatExperience(), kPlayer.greatPeopleThresholdMilitary(), GC.getUnitInfo(kPlayer.getGreatGeneralTypetoAssign()).getTextKeyWide()));
 
 	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
@@ -32321,6 +32371,7 @@ void CvGameTextMgr::parseGreatGeneralHelp(CvWStringBuffer &szBuffer, CvPlayer& k
 
 void CvGameTextMgr::buildCityBillboardIconString( CvWStringBuffer& szBuffer, CvCity* pCity)
 {
+	PROFILE_EXTRA_FUNC();
 	szBuffer.clear();
 /************************************************************************************************/
 /* TGA_INDEXATION						  02/18/08								MRGENIE	  */
@@ -32639,6 +32690,7 @@ void CvGameTextMgr::setScoreHelp(CvWStringBuffer &szString, PlayerTypes ePlayer)
 
 void CvGameTextMgr::setEventHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, int iEventTriggeredId, PlayerTypes ePlayer)
 {
+	PROFILE_EXTRA_FUNC();
 	if (NO_EVENT == eEvent || NO_PLAYER == ePlayer)
 	{
 		return;
@@ -33457,6 +33509,7 @@ void CvGameTextMgr::eventGoldHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, 
 
 void CvGameTextMgr::setTradeRouteHelp(CvWStringBuffer &szBuffer, int iRoute, CvCity* pCity)
 {
+	PROFILE_EXTRA_FUNC();
 	if (NULL != pCity)
 	{
 		CvCity* pOtherCity = pCity->getTradeCity(iRoute);
@@ -34147,6 +34200,7 @@ void CvGameTextMgr::getTradeScreenTitleIcon(CvString& szButton, CvWidgetDataStru
 
 void CvGameTextMgr::getTradeScreenIcons(std::vector< std::pair<CvString, CvWidgetDataStruct> >& aIconInfos, PlayerTypes ePlayer)
 {
+	PROFILE_EXTRA_FUNC();
 	aIconInfos.clear();
 	for (int i = 0; i < GC.getNumCivicOptionInfos(); i++)
 	{
@@ -34389,6 +34443,7 @@ void CvGameTextMgr::getGlobeLayerName(GlobeLayerTypes eType, int iOption, CvWStr
 
 void CvGameTextMgr::getPlotHelp(CvPlot* pMouseOverPlot, CvCity* pCity, CvPlot* pFlagPlot, bool bAlt, CvWStringBuffer& strHelp)
 {
+	PROFILE_EXTRA_FUNC();
 	if (gDLL->getInterfaceIFace()->isCityScreenUp())
 	{
 		if (pMouseOverPlot)
@@ -34638,6 +34693,7 @@ void CvGameTextMgr::getRebasePlotHelp(const CvPlot* pPlot, CvWString& strHelp) c
 
 void CvGameTextMgr::getNukePlotHelp(const CvPlot* pPlot, CvWString& strHelp) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (NULL != pPlot)
 	{
 		const CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
@@ -34677,6 +34733,7 @@ void CvGameTextMgr::getInterfaceCenterText(CvWString& strText)
 
 void CvGameTextMgr::getTurnTimerText(CvWString& strText)
 {
+	PROFILE_EXTRA_FUNC();
 	strText.clear();
 	if (gDLL->getInterfaceIFace()->getShowInterface() == INTERFACE_SHOW || gDLL->getInterfaceIFace()->getShowInterface() == INTERFACE_ADVANCED_START)
 	{
@@ -34763,6 +34820,7 @@ void CvGameTextMgr::getTurnTimerText(CvWString& strText)
 
 void CvGameTextMgr::getFontSymbols(std::vector< std::vector<wchar_t> >& aacSymbols, std::vector<int>& aiMaxNumRows)
 {
+	PROFILE_EXTRA_FUNC();
 	aacSymbols.push_back(std::vector<wchar_t>());
 	aiMaxNumRows.push_back(1);
 	for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
@@ -34824,6 +34882,7 @@ void CvGameTextMgr::getFontSymbols(std::vector< std::vector<wchar_t> >& aacSymbo
 
 void CvGameTextMgr::assignFontIds(int iFirstSymbolCode, int iPadAmount)
 {
+	PROFILE_EXTRA_FUNC();
 	int iCurSymbolID = iFirstSymbolCode;  // first symbol code = 8483
 	int i;
 
@@ -34945,6 +35004,7 @@ void CvGameTextMgr::assignFontIds(int iFirstSymbolCode, int iPadAmount)
 
 void CvGameTextMgr::getCityDataForAS(std::vector<CvWBData>& mapCityList, std::vector<CvWBData>& mapBuildingList, std::vector<CvWBData>& mapAutomateList)
 {
+	PROFILE_EXTRA_FUNC();
 	CvPlayer& kActivePlayer = GET_PLAYER(GC.getGame().getActivePlayer());
 
 	CvWString szHelp;
@@ -34994,6 +35054,7 @@ void CvGameTextMgr::getCityDataForAS(std::vector<CvWBData>& mapCityList, std::ve
 
 void CvGameTextMgr::getUnitDataForAS(std::vector<CvWBData>& mapUnitList)
 {
+	PROFILE_EXTRA_FUNC();
 	CvPlayer& kActivePlayer = GET_PLAYER(GC.getGame().getActivePlayer());
 
 	CvWStringBuffer szBuffer;
@@ -35017,6 +35078,7 @@ void CvGameTextMgr::getUnitDataForAS(std::vector<CvWBData>& mapUnitList)
 
 void CvGameTextMgr::getImprovementDataForAS(std::vector<CvWBData>& mapImprovementList, std::vector<CvWBData>& mapRouteList)
 {
+	PROFILE_EXTRA_FUNC();
 	const CvPlayer& kActivePlayer = GET_PLAYER(GC.getGame().getActivePlayer());
 
 	CvWStringBuffer szBuffer;
@@ -35072,6 +35134,7 @@ void CvGameTextMgr::getTechDataForAS(std::vector<CvWBData>& mapTechList)
 
 void CvGameTextMgr::getUnitDataForWB(std::vector<CvWBData>& mapUnitData)
 {
+	PROFILE_EXTRA_FUNC();
 	CvWStringBuffer szBuffer;
 	for (int i = 0; i < GC.getNumUnitInfos(); i++)
 	{
@@ -35083,6 +35146,7 @@ void CvGameTextMgr::getUnitDataForWB(std::vector<CvWBData>& mapUnitData)
 
 void CvGameTextMgr::getBuildingDataForWB(bool bStickyButton, std::vector<CvWBData>& mapBuildingData)
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 	if (!bStickyButton)
 	{
@@ -35100,6 +35164,7 @@ void CvGameTextMgr::getBuildingDataForWB(bool bStickyButton, std::vector<CvWBDat
 
 void CvGameTextMgr::getTerrainDataForWB(std::vector<CvWBData>& mapTerrainData, std::vector<CvWBData>& mapFeatureData, std::vector<CvWBData>& mapPlotData, std::vector<CvWBData>& mapRouteData)
 {
+	PROFILE_EXTRA_FUNC();
 	CvWStringBuffer szBuffer;
 
 	for (int i = 0; i < GC.getNumTerrainInfos(); i++)
@@ -35136,6 +35201,7 @@ void CvGameTextMgr::getTerrainDataForWB(std::vector<CvWBData>& mapTerrainData, s
 
 void CvGameTextMgr::getTerritoryDataForWB(std::vector<CvWBData>& mapTerritoryData)
 {
+	PROFILE_EXTRA_FUNC();
 	for (int i = 0; i < MAX_PLAYERS; i++)
 	{
 		CvWString szName = gDLL->getText("TXT_KEY_MAIN_MENU_NONE");
@@ -35153,6 +35219,7 @@ void CvGameTextMgr::getTerritoryDataForWB(std::vector<CvWBData>& mapTerritoryDat
 
 void CvGameTextMgr::getTechDataForWB(std::vector<CvWBData>& mapTechData)
 {
+	PROFILE_EXTRA_FUNC();
 	CvWStringBuffer szBuffer;
 	for (int i=0; i < GC.getNumTechInfos(); i++)
 	{
@@ -35164,6 +35231,7 @@ void CvGameTextMgr::getTechDataForWB(std::vector<CvWBData>& mapTechData)
 
 void CvGameTextMgr::getPromotionDataForWB(std::vector<CvWBData>& mapPromotionData)
 {
+	PROFILE_EXTRA_FUNC();
 	CvWStringBuffer szBuffer;
 	for (int i=0; i < GC.getNumPromotionInfos(); i++)
 	{
@@ -35188,6 +35256,7 @@ void CvGameTextMgr::getTraitDataForWB(std::vector<CvWBData>& mapTraitData) const
 
 void CvGameTextMgr::getBonusDataForWB(std::vector<CvWBData>& mapBonusData)
 {
+	PROFILE_EXTRA_FUNC();
 	CvWStringBuffer szBuffer;
 	for (int i=0; i < GC.getNumBonusInfos(); i++)
 	{
@@ -35199,6 +35268,7 @@ void CvGameTextMgr::getBonusDataForWB(std::vector<CvWBData>& mapBonusData)
 
 void CvGameTextMgr::getImprovementDataForWB(std::vector<CvWBData>& mapImprovementData)
 {
+	PROFILE_EXTRA_FUNC();
 	CvWStringBuffer szBuffer;
 	for (int i=0; i < GC.getNumImprovementInfos(); i++)
 	{
@@ -35231,6 +35301,7 @@ void CvGameTextMgr::getRouteDataForWB(std::vector<CvWBData>& mapRouteData) const
 
 void CvGameTextMgr::getReligionDataForWB(bool bHolyCity, std::vector<CvWBData>& mapReligionData)
 {
+	PROFILE_EXTRA_FUNC();
 	for (int i = 0; i < GC.getNumReligionInfos(); ++i)
 	{
 		const CvReligionInfo& kInfo = GC.getReligionInfo((ReligionTypes) i);
@@ -35246,6 +35317,7 @@ void CvGameTextMgr::getReligionDataForWB(bool bHolyCity, std::vector<CvWBData>& 
 
 void CvGameTextMgr::getCorporationDataForWB(bool bHeadquarters, std::vector<CvWBData>& mapCorporationData)
 {
+	PROFILE_EXTRA_FUNC();
 	for (int i = 0; i < GC.getNumCorporationInfos(); ++i)
 	{
 		const CvCorporationInfo& kInfo = GC.getCorporationInfo((CorporationTypes) i);
@@ -35710,6 +35782,7 @@ void CvGameTextMgr::getDefenseHelp(CvWStringBuffer &szBuffer, CvCity& city)
 
 bool CvGameTextMgr::setBuildingAdditionalDefenseHelp(CvWStringBuffer &szBuffer, const CvCity& city, const CvWString& szStart, bool bStarted)
 {
+	PROFILE_EXTRA_FUNC();
 	CvWString szLabel;
 
 	for (int i = 0; i < GC.getNumBuildingInfos(); i++)
@@ -35735,6 +35808,7 @@ bool CvGameTextMgr::setBuildingAdditionalDefenseHelp(CvWStringBuffer &szBuffer, 
 
 void CvGameTextMgr::setEmploymentHelp(CvWStringBuffer &szBuffer, CvCity& city)
 {
+	PROFILE_EXTRA_FUNC();
 	FAssertMsg(NO_PLAYER != city.getOwner(), "City must have an owner");
 
 	bool bFirst = true;

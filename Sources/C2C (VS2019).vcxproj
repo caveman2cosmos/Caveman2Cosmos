@@ -13,6 +13,10 @@
       <Configuration>FinalRelease</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="ProfileExtra|Win32">
+      <Configuration>ProfileExtra</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="Profile|Win32">
       <Configuration>Profile</Configuration>
       <Platform>Win32</Platform>
@@ -33,6 +37,10 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ProfileExtra|Win32'" Label="Configuration">
     <ConfigurationType>Makefile</ConfigurationType>
     <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
@@ -60,6 +68,9 @@
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ProfileExtra|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Assert|Win32'" Label="PropertySheets">
@@ -91,6 +102,19 @@
     <AdditionalOptions>/DBOOST_FUNCTION_PARMS=0 /DBOOST_FUNCTION_PARM=0</AdditionalOptions>
     <NMakeOutput>
     </NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ProfileExtra|Win32'">
+    <ReferencePath>..\Sources;$(ReferencePath)</ReferencePath>
+    <OutDir>$(SolutionDir)..\Build\vs\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)..\Build\vs\$(Configuration)\</IntDir>
+    <NMakeBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) build deploy</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) rebuild deploy</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) clean</NMakeCleanCommandLine>
+    <IncludePath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.55.0\include;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</IncludePath>
+    <NMakePreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_MOD_SENTRY;_MOD_FRACTRADE;_MOD_GOVWORKERS;FP_PROFILE_EXTRA_ENABLE;USE_INTERNAL_PROFILER</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</NMakeIncludeSearchPath>
+    <AdditionalOptions>/DBOOST_FUNCTION_PARMS=0 /DBOOST_FUNCTION_PARM=0</AdditionalOptions>
+    <NMakeOutput />
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Assert|Win32'">
     <ReferencePath>..\Sources;$(ReferencePath)</ReferencePath>
@@ -174,6 +198,11 @@
     </BuildLog>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">
+    <BuildLog>
+      <Path>$(IntDir)$(MSBuildProjectName).log</Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ProfileExtra|Win32'">
     <BuildLog>
       <Path>$(IntDir)$(MSBuildProjectName).log</Path>
     </BuildLog>
@@ -349,6 +378,7 @@
     <ClCompile Include="SCvDebug.cpp" />
     <ClCompile Include="SCvInternalGlobals.cpp" />
     <ClCompile Include="SCyDebug.cpp" />
+    <ClInclude Include="FProfiler.cpp" />
     <ClCompile Include="FAssert.cpp" />
     <ClCompile Include="FDataIOStream.cpp" />
     <ClCompile Include="FDialogTemplate.cpp" />

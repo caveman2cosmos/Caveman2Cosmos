@@ -7,6 +7,9 @@
 //
 //------------------------------------------------------------------------------------------------
 
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvBonusInfo.h"
 #include "CvBuildingInfo.h"
@@ -526,26 +529,31 @@ void addToVector(const CvGameObject* pObject, std::vector<const CvGameObject*> *
 
 void CvGameObject::enumerate(std::vector<const CvGameObject*> &kEnum, GameObjectTypes eType) const
 {
+	PROFILE_EXTRA_FUNC();
 	foreach(eType, bind(addToVector, _1, &kEnum));
 }
 
 void CvGameObject::enumerateOn(std::vector<const CvGameObject*> &kEnum, GameObjectTypes eType) const
 {
+	PROFILE_EXTRA_FUNC();
 	foreachOn(eType, bind(addToVector, _1, &kEnum));
 }
 
 void CvGameObject::enumerateNear(std::vector<const CvGameObject*> &kEnum, GameObjectTypes eType, int iDistance) const
 {
+	PROFILE_EXTRA_FUNC();
 	foreachNear(eType, bind(addToVector, _1, &kEnum), iDistance);
 }
 
 void CvGameObject::enumerateRelated(std::vector<const CvGameObject*>& kEnum, GameObjectTypes eType, RelationTypes eRelation, int iData) const
 {
+	PROFILE_EXTRA_FUNC();
 	foreachRelated(eType, eRelation, bind(addToVector, _1, &kEnum), iData);
 }
 
 void CvGameObject::enumerateRelatedCond(std::vector<const CvGameObject*>& kEnum, GameObjectTypes eType, RelationTypes eRelation, const BoolExpr* pExpr, int iData) const
 {
+	PROFILE_EXTRA_FUNC();
 	foreachRelatedCond(eType, eRelation, bind(addToVector, _1, &kEnum), pExpr, iData);
 }
 
@@ -613,6 +621,7 @@ void CvGameObjectPlot::foreachRelated(GameObjectTypes eType, RelationTypes eRela
 
 void CvGameObjectPlayer::foreachManipulator(ManipCallbackFn func) const
 {
+	PROFILE_EXTRA_FUNC();
 	// Civics
 	for (int i=0; i<GC.getNumCivicOptionInfos(); i++)
 	{
@@ -642,6 +651,7 @@ void CvGameObjectPlayer::foreachManipulator(ManipCallbackFn func) const
 
 void CvGameObjectCity::foreachManipulator(ManipCallbackFn func) const
 {
+	PROFILE_EXTRA_FUNC();
 	// Building manipulators apply to cities
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
@@ -682,6 +692,7 @@ void CvGameObjectCity::foreachManipulator(ManipCallbackFn func) const
 
 void CvGameObjectUnit::foreachManipulator(ManipCallbackFn func) const
 {
+	PROFILE_EXTRA_FUNC();
 	// Unit Type
 	func(m_pUnit->getUnitInfo().getPropertyManipulators());
 
@@ -909,6 +920,7 @@ int CvGameObjectCity::getAttribute(AttributeTypes eAttribute) const
 
 int CvGameObjectGame::getAttribute(AttributeTypes eAttribute) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 
 	switch (eAttribute)
@@ -946,6 +958,7 @@ void aggregateHasGOM(const CvGameObject* pObject, GOMTypes eType, int iID, bool*
 
 bool CvGameObjectGame::hasGOM(GOMTypes eType, int iID) const
 {
+	PROFILE_EXTRA_FUNC();
 	switch (eType)
 	{
 		case GOM_BUILDING:
@@ -1046,6 +1059,7 @@ bool CvGameObjectGame::hasGOM(GOMTypes eType, int iID) const
 
 bool CvGameObjectTeam::hasGOM(GOMTypes eType, int iID) const
 {
+	PROFILE_EXTRA_FUNC();
 	switch (eType)
 	{
 		case GOM_BUILDING:
@@ -1255,6 +1269,7 @@ bool CvGameObjectPlayer::hasGOM(GOMTypes eType, int iID) const
 
 bool CvGameObjectCity::hasGOM(GOMTypes eType, int iID) const
 {
+	PROFILE_EXTRA_FUNC();
 	switch (eType)
 	{
 		case GOM_BUILDING:
@@ -1507,6 +1522,7 @@ bool CvGameObjectUnit::hasGOM(GOMTypes eType, int iID) const
 
 bool CvGameObjectPlot::hasGOM(GOMTypes eType, int iID) const
 {
+	PROFILE_EXTRA_FUNC();
 	switch (eType)
 	{
 		case GOM_BUILDING:

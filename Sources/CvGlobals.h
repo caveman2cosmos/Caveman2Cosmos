@@ -6,6 +6,8 @@
 #ifndef CIV4_GLOBALS_H
 #define CIV4_GLOBALS_H
 
+#include "FProfiler.h"
+
 //
 // 'global' vars for Civ IV.  singleton class.
 // All globals and global types should be contained in this class
@@ -260,6 +262,7 @@ public:
 	template<class T>
 	void removeDelayedResolutionVector(const std::vector<T>& vector)
 	{
+		PROFILE_EXTRA_FUNC();
 		foreach_(const T& type, vector)
 			removeDelayedResolution((int*)&type);
 	}
@@ -267,6 +270,7 @@ public:
 	template<class T>
 	void copyNonDefaultDelayedResolutionVector(std::vector<T>& aTarget, const std::vector<T>& aSource)
 	{
+		PROFILE_EXTRA_FUNC();
 		std::stack<CvString> aszTemp;
 		std::vector<T>::const_iterator it = aTarget.end(), it2 = aSource.begin();
 		while (it > aTarget.begin())

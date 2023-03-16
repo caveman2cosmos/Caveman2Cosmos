@@ -1,3 +1,6 @@
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
 #include "CvBonusInfo.h"
@@ -589,6 +592,7 @@ void CvMapGenerator::addBonuses()
 
 void CvMapGenerator::addUniqueBonusType(BonusTypes eBonus)
 {
+	PROFILE_EXTRA_FUNC();
 	int iBonusCount = calculateNumBonusesToAdd(eBonus);
 	if (iBonusCount == 0)
 	{
@@ -705,6 +709,7 @@ void CvMapGenerator::setBonusClusterValues(const CvBonusInfo& bonus, const int i
 
 void CvMapGenerator::placeBonusWithCluster(const BonusTypes eBonus, const int iGroupRange, const int iGroupRand, const int iMaxCluster, const bool bIgnoreLatitude, int& iBonusCount, const CvArea *pBestArea)
 {
+	PROFILE_EXTRA_FUNC();
 	int* piShuffle = shuffle(GC.getMap().numPlots(), GC.getGame().getMapRand());
 
 	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
@@ -801,6 +806,7 @@ void CvMapGenerator::addGoodies()
 
 void CvMapGenerator::eraseRivers()
 {
+	PROFILE_EXTRA_FUNC();
 	int i;
 
 	for (i = 0; i < GC.getMap().numPlots(); i++)
@@ -819,6 +825,7 @@ void CvMapGenerator::eraseRivers()
 
 void CvMapGenerator::eraseFeatures()
 {
+	PROFILE_EXTRA_FUNC();
 	int i;
 
 	for (i = 0; i < GC.getMap().numPlots(); i++)
@@ -830,6 +837,7 @@ void CvMapGenerator::eraseFeatures()
 
 void CvMapGenerator::eraseBonuses()
 {
+	PROFILE_EXTRA_FUNC();
 	int i;
 
 	for (i = 0; i < GC.getMap().numPlots(); i++)
@@ -841,6 +849,7 @@ void CvMapGenerator::eraseBonuses()
 
 void CvMapGenerator::eraseGoodies()
 {
+	PROFILE_EXTRA_FUNC();
 	int i;
 
 	for (i = 0; i < GC.getMap().numPlots(); i++)
@@ -920,6 +929,7 @@ void CvMapGenerator::afterGeneration()
 
 void CvMapGenerator::setPlotTypes(const std::vector<int>& plotTypes)
 {
+	PROFILE_EXTRA_FUNC();
 	const int iNumPlots = GC.getMap().numPlots();
 
 	for (int iI = 0; iI < iNumPlots; iI++)
@@ -953,6 +963,7 @@ void CvMapGenerator::setPlotTypes(const std::vector<int>& plotTypes)
 
 int CvMapGenerator::getRiverValueAtPlot(CvPlot* pPlot) const
 {
+	PROFILE_EXTRA_FUNC();
 	FAssert(pPlot != NULL);
 
 	long result = 0;
@@ -989,6 +1000,7 @@ int CvMapGenerator::getRiverValueAtPlot(CvPlot* pPlot) const
 
 int CvMapGenerator::calculateNumBonusesToAdd(BonusTypes eBonusType)
 {
+	PROFILE_EXTRA_FUNC();
 	const CvBonusInfo& pBonusInfo = GC.getBonusInfo(eBonusType);
 
 	int iBaseCount =

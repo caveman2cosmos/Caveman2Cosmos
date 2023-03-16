@@ -1,4 +1,7 @@
 //	Class representing a set of plots reachable in a fixed number of tiles with given flags
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
 #include "CvGameAI.h"
@@ -112,6 +115,7 @@ CvReachablePlotSet::~CvReachablePlotSet()
 
 CvReachablePlotSet::const_iterator CvReachablePlotSet::begin() const
 {
+	PROFILE_EXTRA_FUNC();
 	CvReachablePlotSet::const_iterator result = CvReachablePlotSet::const_iterator(this, (m_proxyTo == NULL ? m_reachablePlots->begin() : m_proxyTo->m_reachablePlots->begin()));
 
 	while (result != end() && result.stepDistance() > m_iRange)
@@ -172,6 +176,7 @@ static PlotSetCache* CachedPlotSets = NULL;
 
 void CvReachablePlotSet::ClearCache()
 {
+	PROFILE_EXTRA_FUNC();
 	if (CachedPlotSets != NULL)
 	{
 		for (int iI = 0; iI < PLOT_SET_CACHE_SIZE; iI++)
@@ -183,6 +188,7 @@ void CvReachablePlotSet::ClearCache()
 
 CvReachablePlotSet* CvReachablePlotSet::findCachedPlotSet(const CvSelectionGroup* pGroup, int iFlags, int iOutsideOwnedRange)
 {
+	PROFILE_EXTRA_FUNC();
 	if (CachedPlotSets == NULL)
 	{
 		CachedPlotSets = new PlotSetCache;
@@ -347,6 +353,7 @@ bool CvReachablePlotSet::canMoveBetweenWithFlags(const CvSelectionGroup* group, 
 
 void CvReachablePlotSet::enumerateReachablePlotsInternal(int iRange, int iDepth, std::vector< std::pair<CvPlot*,int> >& prevRing)
 {
+	PROFILE_EXTRA_FUNC();
 	if (iRange > 0 && !prevRing.empty())
 	{
 		std::vector<std::pair<CvPlot*,int> >	nextRing;

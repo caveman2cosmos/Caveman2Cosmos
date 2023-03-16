@@ -6,6 +6,9 @@
 //  PURPOSE: Boolean Expressions for Civ4 classes
 //
 //------------------------------------------------------------------------------------------------
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
@@ -21,6 +24,7 @@ IntExpr::~IntExpr()
 
 const IntExpr* IntExpr::read(CvXMLLoadUtility *pXML)
 {
+	PROFILE_EXTRA_FUNC();
 	// In general we assume no comments to simplify reading code
 
 	//TCHAR szTag[1024];
@@ -590,6 +594,7 @@ IntExprIntegrateOp::~IntExprIntegrateOp()
 
 int IntExprIntegrateOp::evaluate(const CvGameObject* pObject) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iAcc = 0;
 	pObject->foreachRelated(m_eType, m_eRelation, bind(getOp(), _1, m_pExpr, &iAcc));
 	return iAcc;
@@ -646,6 +651,7 @@ IntExprTypes IntExprIntegrateAvg::getType() const
 
 int IntExprIntegrateAvg::evaluate(const CvGameObject* pObject) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iAcc = 0;
 	int iCount = 0;
 	pObject->foreachRelated(m_eType, m_eRelation, bind(evalExprIntegrateAvg, _1, m_pExpr, &iAcc, &iCount));
@@ -673,6 +679,7 @@ IntExprIntegrateCount::~IntExprIntegrateCount()
 
 int IntExprIntegrateCount::evaluate(const CvGameObject* pObject) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iAcc = 0;
 	pObject->foreachRelated(m_eType, m_eRelation, bind(evalExprIntegrateCount, _1, m_pExpr, &iAcc));
 	return iAcc;
