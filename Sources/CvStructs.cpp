@@ -11,9 +11,6 @@
 //  Copyright (c) 2005 Firaxis Games, Inc. All rights reserved.
 //------------------------------------------------------------------------------------------------
 
-
-#include "FProfiler.h"
-
 #include "CvCityAI.h"
 #include "CvGameCoreDLL.h"
 #include "CvGlobals.h"
@@ -120,7 +117,6 @@ void VoteSelectionData::setID(int iID)
 
 void VoteSelectionData::read(FDataStreamBase* pStream)
 {
-	PROFILE_EXTRA_FUNC();
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
@@ -151,7 +147,6 @@ void VoteSelectionData::read(FDataStreamBase* pStream)
 
 void VoteSelectionData::write(FDataStreamBase* pStream)
 {
-	PROFILE_EXTRA_FUNC();
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
@@ -223,7 +218,6 @@ void VoteTriggeredData::write(FDataStreamBase* pStream)
 
 void PlotExtraYield::read(FDataStreamBase* pStream)
 {
-	PROFILE_EXTRA_FUNC();
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
@@ -245,7 +239,6 @@ void PlotExtraYield::read(FDataStreamBase* pStream)
 
 void PlotExtraYield::write(FDataStreamBase* pStream)
 {
-	PROFILE_EXTRA_FUNC();
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
@@ -503,7 +496,6 @@ CvBattleDefinition::CvBattleDefinition(CvPlot* plot, CvUnit* attacker, CvUnit* d
 	, m_iNumMeleeRounds(0)
 	, m_iNumRangedRounds(0)
 {
-	PROFILE_EXTRA_FUNC();
 	FAssertMsg(attacker != NULL, "Attacker must be valid in a Battle");
 	FAssertMsg(defender != NULL, "Defender must be valid in a Battle");
 
@@ -528,7 +520,6 @@ CvBattleDefinition::CvBattleDefinition(CvPlot* plot, CvUnit* attacker, CvUnit* d
 CvBattleDefinition::CvBattleDefinition( const CvBattleDefinition & kCopy ) :
 	m_bAdvanceSquare( kCopy.m_bAdvanceSquare )
 {
-	PROFILE_EXTRA_FUNC();
 	m_fMissionTime = kCopy.m_fMissionTime;
 	m_eMissionType = MISSION_BEGIN_COMBAT;
 	m_iNumMeleeRounds = kCopy.m_iNumMeleeRounds;
@@ -677,7 +668,6 @@ CvAirMissionDefinition::CvAirMissionDefinition(MissionTypes type /*= MISSION_AIR
 //------------------------------------------------------------------------------------------------
 CvAirMissionDefinition::CvAirMissionDefinition( const CvAirMissionDefinition & kCopy )
 {
-	PROFILE_EXTRA_FUNC();
 	m_fMissionTime = kCopy.m_fMissionTime;
 	m_eMissionType = kCopy.m_eMissionType;
 	m_pPlot = kCopy.m_pPlot;
@@ -723,7 +713,6 @@ PBGameSetupData::PBGameSetupData()
 	, iNumVictories(0)
 	, abVictories(NULL)
 {
-	PROFILE_EXTRA_FUNC();
 	for (int i = 0; i < GC.getNumGameOptionInfos(); i++)
 	{
 		abOptions.push_back(false);

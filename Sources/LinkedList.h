@@ -7,8 +7,6 @@
 #ifndef		LINKEDLIST_H
 #define		LINKEDLIST_H
 
-#include "FProfiler.h"
-
 #include "CvTaggedSaveFormatWrapper.h"
 
 template <class tVARTYPE> class CLinkList;
@@ -492,7 +490,6 @@ inline void CLinkList< T >::WriteNonWrapperSubset( FDataStreamBase* pStream, int
 template < class T >
 inline void ReadStreamableLinkList( CLinkList< T >& llist, FDataStreamBase* pStream )
 {
-	PROFILE_EXTRA_FUNC();
 	int iLength;
 	pStream->Read(&iLength );
 	llist.init();
@@ -512,7 +509,6 @@ inline void ReadStreamableLinkList( CLinkList< T >& llist, FDataStreamBase* pStr
 template < class T >
 inline void WriteStreamableLinkList( CLinkList< T >& llist, FDataStreamBase* pStream )
 {
-	PROFILE_EXTRA_FUNC();
 	int iLength = llist.getLength();
 	pStream->Write( iLength );
 	CLLNode< T >* pNode = llist.head();

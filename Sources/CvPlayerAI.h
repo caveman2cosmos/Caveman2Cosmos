@@ -5,8 +5,6 @@
 #ifndef CIV4_PLAYER_AI_H
 #define CIV4_PLAYER_AI_H
 
-#include "FProfiler.h"
-
 #include "CvPlayer.h"
 #include "AI_defines.h"
 
@@ -56,7 +54,6 @@ public:
 
 	void clear()
 	{
-		PROFILE_EXTRA_FUNC();
 		if ( currentUseCounter != 0 )
 		{
 			currentUseCounter = 0;

@@ -3,8 +3,6 @@
 #ifndef XML_LOAD_UTILITY_H
 #define XML_LOAD_UTILITY_H
 
-#include "FProfiler.h"
-
 //  $Header:
 //------------------------------------------------------------------------------------------------
 //
@@ -310,7 +308,6 @@ public:
 
 	int  GetXmlChildrenNumber(const XMLCh* name) const
 	{
-		PROFILE_EXTRA_FUNC();
 		int number = 0;
 		for (xercesc::DOMElement* child = m_pCurrentXmlElement->getFirstElementChild();
 			child;
@@ -324,7 +321,6 @@ public:
 
 	int  GetXmlSiblingsNumber(const XMLCh* name) const
 	{
-		PROFILE_EXTRA_FUNC();
 		int number = 0;
 		for (xercesc::DOMElement* sibling = m_pCurrentXmlElement;
 			sibling;
@@ -346,7 +342,6 @@ public:
 
 	const XMLCh* GetXmlFirstText() const
 	{
-		PROFILE_EXTRA_FUNC();
 		for (xercesc::DOMNode* node = m_pCurrentXmlElement->getFirstChild();
 			node;
 			node = node->getNextSibling())
@@ -367,7 +362,6 @@ public:
 
 	const XMLCh* TryGetXmlFirstText() const
 	{
-		PROFILE_EXTRA_FUNC();
 		for (xercesc::DOMNode* node = m_pCurrentXmlElement->getFirstChild();
 			node;
 			node = node->getNextSibling())
@@ -416,7 +410,6 @@ public:
 
 	bool  TryMoveToXmlFirstChild(const XMLCh* name)
 	{
-		PROFILE_EXTRA_FUNC();
 		for (xercesc::DOMElement* child = m_pCurrentXmlElement->getFirstElementChild();
 			child;
 			child = child->getNextElementSibling())
@@ -432,7 +425,6 @@ public:
 
 	bool  TryMoveToXmlFirstOfSiblings(const XMLCh* name)
 	{
-		PROFILE_EXTRA_FUNC();
 		xercesc::DOMElement* lastFound = 0;
 		for (xercesc::DOMElement* sibling = m_pCurrentXmlElement;
 			sibling;
@@ -462,7 +454,6 @@ public:
 
 	bool  TryMoveToXmlNextSibling(const XMLCh* name)
 	{
-		PROFILE_EXTRA_FUNC();
 		for (
 			xercesc::DOMElement* sibling = m_pCurrentXmlElement->getNextElementSibling();
 			sibling;
@@ -607,7 +598,6 @@ public:
 	template <class T>
 	void SetOptionalVectorWithDelayedResolution(std::vector<T>& aInfos, const wchar_t* szRootTagName)
 	{
-		PROFILE_EXTRA_FUNC();
 		if (TryMoveToXmlFirstChild(szRootTagName))
 		{
 			aInfos.clear();
@@ -639,7 +629,6 @@ public:
 	template<class T1, class T2, class T3>
 	void SetOptionalPairVector(T1* aInfos, const wchar_t* szRootTagName)
 	{
-		PROFILE_EXTRA_FUNC();
 		CvString szTextVal;
 		aInfos->clear();
 		if (TryMoveToXmlFirstChild(szRootTagName))
@@ -678,7 +667,6 @@ public:
 	template<class T>
 	static void CopyNonDefaultsFromVector(std::vector<T>& target, const std::vector<T>& source)
 	{
-		PROFILE_EXTRA_FUNC();
 		foreach_(const T& element, source)
 		{
 			if (/*it > -1 &&*/ algo::none_of_equal(target, element))
@@ -693,7 +681,6 @@ public:
 	template<class T>
 	void SetOptionalVector(std::vector<T>* aInfos, const wchar_t* szRootTagName)
 	{
-		PROFILE_EXTRA_FUNC();
 		if (TryMoveToXmlFirstChild(szRootTagName))
 		{
 			const int iNumSibs = GetXmlChildrenNumber();
@@ -842,7 +829,6 @@ private:
 template <class T>
 void CvXMLLoadUtility::InitList(T** ppList, int size, T val)
 {
-	PROFILE_EXTRA_FUNC();
 	FAssert(size > 0);
 
 	*ppList = new T[size];
@@ -854,7 +840,6 @@ void CvXMLLoadUtility::InitList(T** ppList, int size, T val)
 template <class T>
 void CvXMLLoadUtility::Init2DList(T*** pppList, int size1, int size2, T val)
 {
-	PROFILE_EXTRA_FUNC();
 	FAssertMsg(*pppList == NULL, "memory leak?");
 	FAssert(size1 > 0);
 
@@ -869,7 +854,6 @@ void CvXMLLoadUtility::Init2DList(T*** pppList, int size1, int size2, T val)
 template <class T>
 void CvXMLLoadUtility::InitPointerList(T*** pppList, int size)
 {
-	PROFILE_EXTRA_FUNC();
 	FAssertMsg(*pppList == NULL, "memory leak?");
 	FAssert(size > 0);
 
@@ -884,7 +868,6 @@ void CvXMLLoadUtility::InitPointerList(T*** pppList, int size)
 template <typename T, size_t Size>
 void CvXMLLoadUtility::set(bst::array<T, Size>& array, const wchar_t* tag)
 {
-	PROFILE_EXTRA_FUNC();
 	if (TryMoveToXmlFirstChild(tag))
 	{
 		if (const int iNumSibs = GetXmlChildrenNumber())
@@ -910,7 +893,6 @@ void CvXMLLoadUtility::set(bst::array<T, Size>& array, const wchar_t* tag)
 template <class T>
 int CvXMLLoadUtility::SetCommerce(T** ppbCommerce)
 {
-	PROFILE_EXTRA_FUNC();
 	int i=0;			//loop counter
 	int iNumSibs=0;		// the number of siblings the current xml node has
 	T *pbCommerce;	// local pointer for the Commerce memory
@@ -975,7 +957,6 @@ int CvXMLLoadUtility::SetCommerce(T** ppbCommerce)
 // Returns true if the dependency list is satisfied, false if not.
 bool CvXMLLoadUtility::CheckDependency()
 {
-	PROFILE_EXTRA_FUNC();
 	CvString szTypeDepend;
 	bool bDependencyNotFound = false;
 	if (GetOptionalChildXmlValByName(szTypeDepend, L"DependencyType")) {

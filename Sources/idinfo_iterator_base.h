@@ -3,8 +3,6 @@
 #ifndef idinfo_iterator_h__
 #define idinfo_iterator_h__
 
-#include "FProfiler.h"
-
 //#include "LinkedList.h"
 
 struct IDInfo;
@@ -36,7 +34,6 @@ private:
 
 	void increment()
 	{
-		PROFILE_EXTRA_FUNC();
 		if (m_node == nullptr)
 		{
 			m_ptr = nullptr;

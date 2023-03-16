@@ -13,8 +13,6 @@
 #ifndef CV_INFO_H
 #define CV_INFO_H
 
-#include "FProfiler.h"
-
 #include "CvProperties.h"
 #include "CvPropertySource.h"
 #include "CvPropertyInteraction.h"
@@ -558,7 +556,6 @@ public:
 	int getNumLeadsToTechs() const { return m_leadsTo.size(); }
 	int getLeadsToTech(const int iCount) const
 	{
-		PROFILE_EXTRA_FUNC();
 		std::set<TechTypes>::const_iterator itr = m_leadsTo.begin();
 		for (int i = 0; i < iCount; i++) itr++;
 		return *itr;

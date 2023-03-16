@@ -1,8 +1,5 @@
 // gameAI.cpp
 
-
-#include "FProfiler.h"
-
 #include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvGlobals.h"
@@ -50,7 +47,6 @@ void CvGameAI::AI_reset()
 
 void CvGameAI::AI_makeAssignWorkDirty()
 {
-	PROFILE_EXTRA_FUNC();
 	int iI;
 
 	for (iI = 0; iI < MAX_PLAYERS; iI++)

@@ -1,6 +1,3 @@
-
-#include "FProfiler.h"
-
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
 #include "CvEventReporter.h"
@@ -551,7 +548,6 @@ void CvEventReporter::chat(CvWString szString)
 
 void CvEventReporter::victory(TeamTypes eWinner, VictoryTypes eVictory)
 {
-	PROFILE_EXTRA_FUNC();
 	m_kPythonEventMgr.reportVictory(eWinner, eVictory);
 	m_kStatistics.setVictory(eWinner, eVictory);
 
@@ -598,7 +594,6 @@ void CvEventReporter::getGameStatistics(std::vector<CvStatBase*>& aStats)
 
 void CvEventReporter::getPlayerStatistics(PlayerTypes ePlayer, std::vector<CvStatBase*>& aStats)
 {
-	PROFILE_EXTRA_FUNC();
 	aStats.clear();
 	CvPlayerRecord* pRecord = m_kStatistics.getPlayerRecord(ePlayer);
 	if (pRecord != NULL)
