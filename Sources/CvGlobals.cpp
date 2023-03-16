@@ -49,7 +49,6 @@ static char gVersionString[1024] = { 0 };
 
 void deleteInfoArray(std::vector<CvInfoBase*>* array)
 {
-	PROFILE_EXTRA_FUNC();
 	foreach_(const CvInfoBase* info, *array)
 	{
 		delete info;
@@ -191,7 +190,6 @@ cvInternalGlobals::~cvInternalGlobals()
 
 std::string getPyTrace()
 {
-	PROFILE_EXTRA_FUNC();
 	std::vector<Cy::StackFrame> trace = Cy::get_stack_trace();
 
 	std::stringstream buffer;
@@ -271,7 +269,6 @@ LONG WINAPI CustomFilter(EXCEPTION_POINTERS *ExceptionInfo)
 //
 void cvInternalGlobals::init()
 {
-	PROFILE_EXTRA_FUNC();
 	OutputDebugString("Initializing Internal Globals: Start\n");
 
 #ifdef MINIDUMP
@@ -456,7 +453,6 @@ namespace
 //
 void cvInternalGlobals::uninit()
 {
-	PROFILE_EXTRA_FUNC();
 	//
 	// See also CvXMLLoadUtilityInit.cpp::CleanUpGlobalVariables()
 	//
@@ -2040,7 +2036,6 @@ CvPromotionInfo& cvInternalGlobals::getPromotionInfo(PromotionTypes ePromotionNu
 
 PromotionTypes cvInternalGlobals::findPromotion(PromotionPredicateFn predicateFn) const
 {
-	PROFILE_EXTRA_FUNC();
 	for (int idx = 0; idx < static_cast<int>(m_paPromotionInfo.size()); ++idx)
 	{
 		if (predicateFn(m_paPromotionInfo[idx], static_cast<PromotionTypes>(idx)))
@@ -2397,7 +2392,6 @@ CvString& cvInternalGlobals::getFootstepAudioTypes(int i)
 
 int cvInternalGlobals::getFootstepAudioTypeByTag(const CvString strTag) const
 {
-	PROFILE_EXTRA_FUNC();
 	if (strTag.GetLength() > 0)
 	{
 		for (int i = 0; i < m_iNumFootstepAudioTypes; i++)
@@ -2670,7 +2664,6 @@ int cvInternalGlobals::getOrCreateInfoTypeForString(const char* szType)
 
 void cvInternalGlobals::logInfoTypeMap(const char* tagMsg)
 {
-	PROFILE_EXTRA_FUNC();
 	logging::logMsg("cvInternalGlobals_logInfoTypeMap.log", " === Info Type Map Dump BEGIN: %s ===", tagMsg);
 
 	int iCnt = 0;
@@ -2698,7 +2691,6 @@ void cvInternalGlobals::logInfoTypeMap(const char* tagMsg)
 
 void cvInternalGlobals::infoTypeFromStringReset()
 {
-	PROFILE_EXTRA_FUNC();
 	for (InfosMap::const_iterator it = m_infosMap.begin(); it != m_infosMap.end(); ++it)
 	{
 		delete[] it->first;
@@ -2720,7 +2712,6 @@ void cvInternalGlobals::addToInfosVectors(void* infoVector, InfoClassTypes eInfo
 
 void cvInternalGlobals::infosReset()
 {
-	PROFILE_EXTRA_FUNC();
 	foreach_(const std::vector<CvInfoBase*>* infoVector, m_aInfoVectors)
 	{
 		foreach_(CvInfoBase* info, *infoVector)
@@ -2838,7 +2829,6 @@ void cvInternalGlobals::copyNonDefaultDelayedResolution(int* pTypeSelf, int* pTy
 
 void cvInternalGlobals::resolveDelayedResolution()
 {
-	PROFILE_EXTRA_FUNC();
 	for (DelayedResolutionMap::iterator it = m_delayedResolutionMap.begin(); it != m_delayedResolutionMap.end(); ++it)
 	{
 		GC.setCurrentXMLFile(it->second.second);
@@ -2953,7 +2943,6 @@ bool cvInternalGlobals::bugInitCalled() const
 // Toffer - Only ever called once, happens the first time one start a new game, or loads a save.
 void cvInternalGlobals::setIsBug()
 {
-	PROFILE_EXTRA_FUNC();
 	bBugInitCalled = true;
 
 	::setIsBug();
@@ -3017,7 +3006,6 @@ bool cvInternalGlobals::getTECH_DIFFUSION_ENABLE() const
 // calculate asset checksum
 uint32_t cvInternalGlobals::getAssetCheckSum() const
 {
-	PROFILE_EXTRA_FUNC();
 	uint32_t iSum = 0;
 	foreach_(const std::vector<CvInfoBase*>* infoVector, m_aInfoVectors)
 	{
@@ -3032,7 +3020,6 @@ uint32_t cvInternalGlobals::getAssetCheckSum() const
 
 void cvInternalGlobals::doPostLoadCaching()
 {
-	PROFILE_EXTRA_FUNC();
 	checkInitialCivics();
 
 	//Establish Promotion Pedia Help info
@@ -3096,7 +3083,6 @@ void cvInternalGlobals::doPostLoadCaching()
 
 void cvInternalGlobals::checkInitialCivics()
 {
-	PROFILE_EXTRA_FUNC();
 	for (int iCiv = getNumCivilizationInfos() - 1; iCiv > -1; iCiv--)
 	{
 		CvCivilizationInfo& civ = getCivilizationInfo(static_cast<CivilizationTypes>(iCiv));
@@ -3131,7 +3117,6 @@ void cvInternalGlobals::checkInitialCivics()
 
 void cvInternalGlobals::cacheGameSpecificValues()
 {
-	PROFILE_EXTRA_FUNC();
 	int iLevel = 0;
 
 	foreach_(CvCultureLevelInfo* info, m_paCultureLevelInfo)

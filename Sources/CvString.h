@@ -3,8 +3,6 @@
 #ifndef CvString_h
 #define CvString_h
 
-#include "FProfiler.h"
-
 #include <string>
 #pragma warning( disable: 4251 )		// needs to have dll-interface to be used by clients of class
 
@@ -273,7 +271,6 @@ public:
 
 inline int CvString::Replace( char chOld, char chNew )
 {
-	PROFILE_EXTRA_FUNC();
 	int i, iCnt = 0;
 	for(i=0;i<(int)size();i++)
 	{
@@ -293,7 +290,6 @@ inline int CvString::Replace( char chOld, char chNew )
 /************************************************************************************************/
 inline int CvString::Replace(const CvString& searchString, const CvString& replaceString)
 {
-	PROFILE_EXTRA_FUNC();
 	int iCnt = 0;
 	std::string::size_type pos = this->find(searchString, 0);
 	int intLengthSearch = searchString.length();
@@ -313,7 +309,6 @@ inline int CvString::Replace(const CvString& searchString, const CvString& repla
 /************************************************************************************************/
 inline void CvString::getTokens(const CvString& delimiters, std::vector<CvString>& tokensOut) const
 {
-	PROFILE_EXTRA_FUNC();
 	//tokenizer code taken from http://www.digitalpeer.com/id/simple
 
 	// skip delimiters at beginning.
@@ -341,7 +336,6 @@ inline void CvString::getTokens(const CvString& delimiters, std::vector<CvString
 //
 inline bool CvString::formatv(std::string & out, const char * fmt, va_list args)
 {
-	PROFILE_EXTRA_FUNC();
 	char buf[2048];
 	char * pbuf = buf;
 	int attempts = 0;
@@ -384,7 +378,6 @@ inline bool CvString::formatv(std::string & out, const char * fmt, va_list args)
 //
 inline bool CvWString::formatv(std::wstring& out, const wchar_t* fmt, va_list args)
 {
-	PROFILE_EXTRA_FUNC();
 	wchar_t buf[2048];
 	wchar_t* pbuf = buf;
 	int attempts = 0;

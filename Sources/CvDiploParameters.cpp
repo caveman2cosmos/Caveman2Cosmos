@@ -1,6 +1,3 @@
-
-#include "FProfiler.h"
-
 #include "CvGameCoreDLL.h"
 #include "CvDiploParameters.h"
 #include "FVariableSystem.h"
@@ -106,7 +103,6 @@ DiploCommentTypes CvDiploParameters::getDiploComment() const
 
 void CvDiploParameters::setOurOfferList(const CLinkList<TradeData>& ourOffer)
 {
-	PROFILE_EXTRA_FUNC();
 	CLLNode<TradeData> *pNode;
 
 	m_ourOffer.clear();
@@ -124,7 +120,6 @@ const CLinkList<TradeData>& CvDiploParameters::getOurOfferList() const
 
 void CvDiploParameters::setTheirOfferList(const CLinkList<TradeData>& theirOffer)
 {
-	PROFILE_EXTRA_FUNC();
 	CLLNode<TradeData> *pNode;
 
 	m_theirOffer.clear();
@@ -225,7 +220,6 @@ const wchar_t* CvDiploParameters::getChatText() const
 
 void CvDiploParameters::read(FDataStreamBase& stream)
 {
-	PROFILE_EXTRA_FUNC();
 	int iType;
 
 	stream.Read(&iType);
@@ -252,7 +246,6 @@ void CvDiploParameters::read(FDataStreamBase& stream)
 
 void CvDiploParameters::write(FDataStreamBase& stream) const
 {
-	PROFILE_EXTRA_FUNC();
 	stream.Write(m_eWhoTalkingTo);
 	stream.Write(m_eCommentType);
 	m_ourOffer.Write(&stream);

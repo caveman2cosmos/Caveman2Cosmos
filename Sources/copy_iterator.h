@@ -3,8 +3,6 @@
 #ifndef copy_iterator_h__
 #define copy_iterator_h__
 
-#include "FProfiler.h"
-
 template <class Value>
 class copy_iterator : public bst::iterator_facade<copy_iterator<Value>, Value*, bst::forward_traversal_tag, Value*>
 {
@@ -14,7 +12,6 @@ public:
 	explicit copy_iterator(OtherItr_ begin, OtherItr_ end)
 		: m_idx(-1)
 	{
-		PROFILE_EXTRA_FUNC();
 		for (; begin != end; ++begin)
 		{
 			m_copy.push_back(*begin);

@@ -1,8 +1,5 @@
 // plotGroup.cpp
 
-
-#include "FProfiler.h"
-
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
 #include "CvGlobals.h"
@@ -161,7 +158,6 @@ void CvPlotGroup::Validate()
 
 CvPlot* CvPlotGroup::getRepresentativePlot() const
 {
-	PROFILE_EXTRA_FUNC();
 	CvPlot*	result = NULL;
 
 	if ( m_seedPlotX != -1 && m_seedPlotY != -1 )
@@ -654,7 +650,6 @@ int CvPlotGroup::getNumCities()
 
 void CvPlotGroup::read(FDataStreamBase* pStream)
 {
-	PROFILE_EXTRA_FUNC();
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);

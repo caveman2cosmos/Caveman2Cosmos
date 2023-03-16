@@ -1,6 +1,3 @@
-
-#include "FProfiler.h"
-
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
 #include "CvDLLEngineIFaceBase.h"
@@ -285,7 +282,6 @@ void CvViewport::closeAdvisor(int advisorWidth, int iMinimapLeft, int iMinimapRi
 //	Process the current action state (which may include transitioning to another state)
 void CvViewport::processActionState()
 {
-	PROFILE_EXTRA_FUNC();
 	/*
 	if (m_countdown > 0)
 	{

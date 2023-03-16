@@ -78,7 +78,6 @@ bool isCardinalDirection(DirectionTypes eDirection)
 
 DirectionTypes estimateDirection(int iDX, int iDY)
 {
-	PROFILE_EXTRA_FUNC();
 	const int displacementSize = 8;
 	static float sqrt2 = 1 / sqrt(2.0f);
 	//													N			NE			E			SE				S			SW				W			NW
@@ -258,7 +257,6 @@ int getWorldSizeMaxConscript(CivicTypes eCivic)
 
 bool isReligionTech(TechTypes eTech)
 {
-	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
 	{
 		if (GC.getReligionInfo((ReligionTypes)iI).getTechPrereq() == eTech)
@@ -271,7 +269,6 @@ bool isReligionTech(TechTypes eTech)
 
 bool isCorporationTech(TechTypes eTech)
 {
-	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < GC.getNumCorporationInfos(); iI++)
 	{
 		if (GC.getCorporationInfo((CorporationTypes)iI).getTechPrereq() == eTech)
@@ -430,7 +427,6 @@ bool isLimitedProject(ProjectTypes eProject)
 // Modified by Jason Winokur to keep the intermediate factorials small
 int64_t getBinomialCoefficient(int iN, int iK)
 {
-	PROFILE_EXTRA_FUNC();
 	int64_t iTemp = 1;
 	//take advantage of symmetry in combination, eg. 15C12 = 15C3
 	iK = std::min(iK, iN - iK);
@@ -448,7 +444,6 @@ int64_t getBinomialCoefficient(int iN, int iK)
 // Written by DeepO
 int getCombatOdds(const CvUnit* pAttacker, const CvUnit* pDefender)
 {
-	PROFILE_EXTRA_FUNC();
 	float fOddsEvent;
 	float fOddsAfterEvent;
 	int iAttackerStrength;
@@ -2612,7 +2607,6 @@ int pathCost(FAStarNode* parent, FAStarNode* node, int data, const void* pointer
 //	Heuristic cost
 int	NewPathHeuristicFunc(const CvSelectionGroup* pGroup, int iFromX, int iFromY, int iToX, int iToY, int& iLimitCost)
 {
-	PROFILE_EXTRA_FUNC();
 	//PROFILE_FUNC();
 
 	int iStepDistance = stepDistance(iFromX, iFromY, iToX, iToY);
@@ -3866,7 +3860,6 @@ int* shuffle(int iNum, CvRandom& rand)
 
 void shuffleArray(int* piShuffle, int iNum, CvRandom& rand)
 {
-	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < iNum; iI++)
 	{
 		piShuffle[iI] = iI;
@@ -3876,7 +3869,6 @@ void shuffleArray(int* piShuffle, int iNum, CvRandom& rand)
 
 void shuffle(int* piShuffle, int iNum, CvRandom& rand)
 {
-	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < iNum; iI++)
 	{
 		const int iJ = iI + rand.get(iNum - iI);
@@ -4285,7 +4277,6 @@ int calcBaseExpNeeded(const int iLevel, const PlayerTypes ePlayer)
  */
 int calculateLevel(const int iExperience, const PlayerTypes ePlayer)
 {
-	PROFILE_EXTRA_FUNC();
 	FAssertMsg(ePlayer != NO_PLAYER, "ePlayer must be a valid player");
 
 	if (iExperience <= 0)
@@ -4374,7 +4365,6 @@ int getTreatyLength()
 
 void CvChecksum::add(int i)
 {
-	PROFILE_EXTRA_FUNC();
 	union { int value; uint8_t bytes[4]; } data;
 	data.value = i;
 	for(UINT i = 0; i < sizeof(data.bytes); i++)

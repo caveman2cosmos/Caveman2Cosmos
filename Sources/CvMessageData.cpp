@@ -1,6 +1,3 @@
-
-#include "FProfiler.h"
-
 #include "CvGameCoreDLL.h"
 #include "CvBuildLists.h"
 #include "CvCity.h"
@@ -437,7 +434,6 @@ void CvNetUpdateCivics::Execute()
 
 void CvNetUpdateCivics::PutInBuffer(FDataStreamBase* pStream)
 {
-	PROFILE_EXTRA_FUNC();
 	pStream->Write(m_ePlayer);
 	for (int i = 0; i < GC.getNumCivicOptionInfos(); i++)
 	{
@@ -447,7 +443,6 @@ void CvNetUpdateCivics::PutInBuffer(FDataStreamBase* pStream)
 
 void CvNetUpdateCivics::SetFromBuffer(FDataStreamBase* pStream)
 {
-	PROFILE_EXTRA_FUNC();
 	pStream->Read((int*)&m_ePlayer);
 	for (int i = 0; i < GC.getNumCivicOptionInfos(); i++)
 	{
@@ -997,7 +992,6 @@ void CvNetDoCommand::Debug(char* szAddendum)
 
 void CvNetDoCommand::Execute()
 {
-	PROFILE_EXTRA_FUNC();
 	if (m_ePlayer != NO_PLAYER)
 	{
 		CvUnit* pUnit = GET_PLAYER(m_ePlayer).getUnit(m_iUnitID);

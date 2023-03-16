@@ -1,6 +1,3 @@
-
-#include "FProfiler.h"
-
 /**********************************************************************
  *
  * StackWalker.cpp
@@ -562,7 +559,6 @@ private:
 
   BOOL GetModuleListTH32(HANDLE hProcess, DWORD pid)
   {
-    PROFILE_EXTRA_FUNC();
     // CreateToolhelp32Snapshot()
     typedef HANDLE(__stdcall * tCT32S)(DWORD dwFlags, DWORD th32ProcessID);
     // Module32First()
@@ -633,7 +629,6 @@ private:
 
   BOOL GetModuleListPSAPI(HANDLE hProcess)
   {
-    PROFILE_EXTRA_FUNC();
     // EnumProcessModules()
     typedef BOOL(__stdcall * tEPM)(HANDLE hProcess, HMODULE * lphModule, DWORD cb,
                                    LPDWORD lpcbNeeded);
@@ -916,7 +911,6 @@ StackWalker::~StackWalker()
 
 BOOL StackWalker::LoadModules()
 {
-  PROFILE_EXTRA_FUNC();
   if (this->m_sw == NULL)
   {
     SetLastError(ERROR_DLL_INIT_FAILED);
@@ -1044,7 +1038,6 @@ BOOL StackWalker::ShowCallstack(HANDLE                    hThread,
                                 PReadProcessMemoryRoutine readMemoryFunction,
                                 LPVOID                    pUserData)
 {
-  PROFILE_EXTRA_FUNC();
   CONTEXT                                   c;
   CallstackEntry                            csEntry;
   IMAGEHLP_SYMBOL64*                        pSym = NULL;

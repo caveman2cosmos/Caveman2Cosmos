@@ -1,7 +1,4 @@
 
-
-#include "FProfiler.h"
-
 #include "CvGameCoreDLL.h"
 #include "CvDLLInterfaceIFaceBase.h"
 #include "CvGlobals.h"
@@ -209,7 +206,6 @@ int ToroidalDistanceSq (int x1, int y1, int x2, int y2, int w, int h)
 
 void CvPlotPaging::UpdatePaging()
 {
-	PROFILE_EXTRA_FUNC();
 	// Check if the paging setting changed
 	bool bPagingEnabled = getBugOptionBOOL("MainInterface__EnableGraphicalPaging", true);
 

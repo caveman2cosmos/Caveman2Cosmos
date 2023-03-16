@@ -1,8 +1,5 @@
 // fractal.cpp
 
-
-#include "FProfiler.h"
-
 #include "CvGameCoreDLL.h"
 #include "CvFractal.h"
 #include "CvRandom.h"
@@ -24,7 +21,6 @@ CvFractal::~CvFractal()
 
 void CvFractal::uninit()
 {
-	PROFILE_EXTRA_FUNC();
 	if (m_aaiFrac != NULL)
 	{
 		for (int iX = 0; iX < m_iFracX + 1; iX++)
@@ -369,7 +365,6 @@ int CvFractal::getHeightFromPercent(int iPercent)
 
 void CvFractal::tectonicAction(CvFractal* pRifts)  //  Assumes FRAC_WRAP_X is on.
 {
-	PROFILE_EXTRA_FUNC();
 	int iRift1x;
 	int iRift2x;
 	int iDeep;

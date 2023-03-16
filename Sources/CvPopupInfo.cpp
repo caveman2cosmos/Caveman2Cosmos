@@ -1,6 +1,3 @@
-
-#include "FProfiler.h"
-
 #include "CvGameCoreDLL.h"
 #include "CvPopupInfo.h"
 
@@ -193,7 +190,6 @@ int CvPopupInfo::getNumPythonButtons() const
 
 void CvPopupInfo::read(FDataStreamBase& stream)
 {
-	PROFILE_EXTRA_FUNC();
 	stream.Read(&m_iData1);
 	stream.Read(&m_iData2);
 	stream.Read(&m_iData3);
@@ -222,7 +218,6 @@ void CvPopupInfo::read(FDataStreamBase& stream)
 
 void CvPopupInfo::write(FDataStreamBase& stream) const
 {
-	PROFILE_EXTRA_FUNC();
 	stream.Write(m_iData1);
 	stream.Write(m_iData2);
 	stream.Write(m_iData3);
