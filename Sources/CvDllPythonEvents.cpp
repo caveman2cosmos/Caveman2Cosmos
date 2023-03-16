@@ -1,3 +1,6 @@
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
 #include "CvGameAI.h"
@@ -269,6 +272,7 @@ static const CvString gSessionID = create_session_id();
 
 bool postEvent(EventArgs eventData, const char* eventName)
 {
+	PROFILE_EXTRA_FUNC();
 	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "onEvent");
 
 	if (eventData.toJson)

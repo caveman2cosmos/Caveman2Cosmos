@@ -6,6 +6,9 @@
 //  PURPOSE: Generic properties for Civ4 classes
 //
 //------------------------------------------------------------------------------------------------
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
 #include "CvGame.h"
@@ -86,6 +89,7 @@ int CvProperties::getNumProperties() const
 
 int CvProperties::getPositionByProperty(PropertyTypes eProp) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (prop_value_const_iterator it = m_aiProperty.begin();it!=m_aiProperty.end(); ++it)
 	{
 		if (it->prop == eProp)
@@ -103,6 +107,7 @@ int CvProperties::getValueByProperty(PropertyTypes eProp) const
 
 int CvProperties::getChangeByProperty(PropertyTypes eProp) const
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(const PropertyValue& it, m_aiPropertyChange)
 	{
 		if (it.prop == eProp)
@@ -113,6 +118,7 @@ int CvProperties::getChangeByProperty(PropertyTypes eProp) const
 
 void CvProperties::setChangeByProperty(PropertyTypes eProp, int iVal)
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(PropertyValue& it, m_aiPropertyChange)
 	{
 		if (it.prop == eProp)
@@ -126,6 +132,7 @@ void CvProperties::setChangeByProperty(PropertyTypes eProp, int iVal)
 
 void CvProperties::changeChangeByProperty(PropertyTypes eProp, int iChange)
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(PropertyValue& it, m_aiPropertyChange)
 	{
 		if (it.prop == eProp)
@@ -222,6 +229,7 @@ void callChangeValueByProperty(const CvGameObject* pObject, PropertyTypes eProp,
 
 void CvProperties::propagateChange(PropertyTypes eProp, int iChange)
 {
+	PROFILE_EXTRA_FUNC();
 	const CvPropertyInfo& kInfo = GC.getPropertyInfo(eProp);
 	for (int iI = 0; iI < NUM_GAMEOBJECTS; iI++)
 	{
@@ -236,6 +244,7 @@ void CvProperties::propagateChange(PropertyTypes eProp, int iChange)
 
 void CvProperties::addProperties(const CvProperties* pProp)
 {
+	PROFILE_EXTRA_FUNC();
 	const int num = pProp->getNumProperties();
 	for (int index = 0; index < num; index++)
 	{
@@ -245,6 +254,7 @@ void CvProperties::addProperties(const CvProperties* pProp)
 
 void CvProperties::subtractProperties(const CvProperties* pProp)
 {
+	PROFILE_EXTRA_FUNC();
 	const int num = pProp->getNumProperties();
 	for (int index = 0; index < num; index++)
 	{
@@ -279,6 +289,7 @@ void CvProperties::clearForRecalculate()
 
 void CvProperties::read(FDataStreamBase *pStream)
 {
+	PROFILE_EXTRA_FUNC();
 	// This function replaces the current content if any so clear first
 	m_aiProperty.clear();
 	m_aiPropertyChange.clear();
@@ -299,6 +310,7 @@ void CvProperties::read(FDataStreamBase *pStream)
 void CvProperties::readWrapper(FDataStreamBase *pStream)
 {
 
+	PROFILE_EXTRA_FUNC();
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 	wrapper.AttachToStream(pStream);
 
@@ -333,6 +345,7 @@ void CvProperties::readWrapper(FDataStreamBase *pStream)
 
 void CvProperties::write(FDataStreamBase *pStream)
 {
+	PROFILE_EXTRA_FUNC();
 	const int iPropertyNum = getNumProperties();
 	pStream->Write(iPropertyNum);
 	for (int i = 0; i < iPropertyNum; i++)
@@ -344,6 +357,7 @@ void CvProperties::write(FDataStreamBase *pStream)
 
 void CvProperties::writeWrapper(FDataStreamBase *pStream)
 {
+	PROFILE_EXTRA_FUNC();
 	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 	wrapper.AttachToStream(pStream);
 
@@ -372,6 +386,7 @@ void CvProperties::writeWrapper(FDataStreamBase *pStream)
 
 bool CvProperties::read(CvXMLLoadUtility* pXML, const wchar_t* szTagName)
 {
+	PROFILE_EXTRA_FUNC();
 	if (pXML->TryMoveToXmlFirstChild(szTagName))
 	{
 		if (pXML->TryMoveToXmlFirstChild())
@@ -397,6 +412,7 @@ bool CvProperties::read(CvXMLLoadUtility* pXML, const wchar_t* szTagName)
 
 void CvProperties::copyNonDefaults(const CvProperties* pProp)
 {
+	PROFILE_EXTRA_FUNC();
 	const int num = pProp->getNumProperties();
 	for (int index = 0; index < num; index++)
 	{
@@ -473,6 +489,7 @@ bool CvProperties::operator!=(const CvProperties& prop) const
 
 void CvProperties::buildRequiresMinString(CvWStringBuffer& szBuffer, const CvProperties* pProp) const
 {
+	PROFILE_EXTRA_FUNC();
 	const int num = getNumProperties();
 	for (int index = 0; index < num; index++)
 	{
@@ -486,6 +503,7 @@ void CvProperties::buildRequiresMinString(CvWStringBuffer& szBuffer, const CvPro
 
 void CvProperties::buildRequiresMaxString(CvWStringBuffer& szBuffer, const CvProperties* pProp) const
 {
+	PROFILE_EXTRA_FUNC();
 	const int num = getNumProperties();
 	for (int index = 0; index < num; index++)
 	{
@@ -499,6 +517,7 @@ void CvProperties::buildRequiresMaxString(CvWStringBuffer& szBuffer, const CvPro
 
 void CvProperties::buildChangesString(CvWStringBuffer& szBuffer, CvWString* pszCity) const
 {
+	PROFILE_EXTRA_FUNC();
 	const int num = getNumProperties();
 	for (int iI = 0; iI < num; iI++)
 	{
@@ -516,6 +535,7 @@ void CvProperties::buildChangesString(CvWStringBuffer& szBuffer, CvWString* pszC
 
 void CvProperties::buildCompactChangesString(CvWStringBuffer& szBuffer) const
 {
+	PROFILE_EXTRA_FUNC();
 	const int num = getNumProperties();
 	for (int iI = 0; iI < num; iI++)
 	{
@@ -527,6 +547,7 @@ void CvProperties::buildCompactChangesString(CvWStringBuffer& szBuffer) const
 
 void CvProperties::buildChangesAllCitiesString(CvWStringBuffer& szBuffer) const
 {
+	PROFILE_EXTRA_FUNC();
 	const int num = getNumProperties();
 	for (int iI = 0; iI < num; iI++)
 	{
@@ -539,6 +560,7 @@ void CvProperties::buildChangesAllCitiesString(CvWStringBuffer& szBuffer) const
 
 void CvProperties::buildDisplayString(CvWStringBuffer& szBuffer) const
 {
+	PROFILE_EXTRA_FUNC();
 	const int num = getNumProperties();
 	for (int iI = 0; iI < num; iI++)
 	{

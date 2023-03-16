@@ -137,6 +137,7 @@ CvPath::CvPath()
 
 void CvPath::Set(CvPathNode* startNode)
 {
+	PROFILE_EXTRA_FUNC();
 	m_startNode = startNode;
 	m_endNode = m_startNode;
 
@@ -185,6 +186,7 @@ int	CvPath::cost() const
 
 bool	CvPath::containsEdge(const CvPlot* pFromPlot, const CvPlot* pToPlot) const
 {
+	PROFILE_EXTRA_FUNC();
 	CvPathNode*	pNode = m_startNode;
 
 	while( pNode != NULL && pNode->m_firstChild != NULL )
@@ -202,6 +204,7 @@ bool	CvPath::containsEdge(const CvPlot* pFromPlot, const CvPlot* pToPlot) const
 
 bool	CvPath::containsNode(const CvPlot* pPlot) const
 {
+	PROFILE_EXTRA_FUNC();
 	CvPathNode*	pNode = m_startNode;
 
 	while( pNode != NULL )
@@ -219,6 +222,7 @@ bool	CvPath::containsNode(const CvPlot* pPlot) const
 
 void	CvPath::trimBefore(const CvPlot* pPlot)
 {
+	PROFILE_EXTRA_FUNC();
 	CvPathNode*	pNode = m_startNode;
 
 	while( pNode != NULL )
@@ -408,6 +412,7 @@ void CvPathGenerator::Initialize(HeuristicCost HeuristicFunc, EdgeCost CostFunc,
 #ifdef DYNAMIC_PATH_STRUCTURE_VALIDATION
 bool CvPathGenerator::ValidateTreeInternal(CvPathNode* root, int& iValidationSeq, CvPathNode* unreferencedNode, CvPathNode* referencedNode, int& iQueuedCount)
 {
+	PROFILE_EXTRA_FUNC();
 	bool bResult = (referencedNode == NULL || root == referencedNode);
 	int	iStartSeq = iValidationSeq;
 
@@ -509,6 +514,7 @@ CvPathNode*	CvPathGenerator::allocatePathNode()
 
 bool CvPathGenerator::isDescendantOfReplacedNode(CvPathNode* node) const
 {
+	PROFILE_EXTRA_FUNC();
 	if ( m_pReplacedNonTerminalNode != NULL &&
 		 m_pReplacedNonTerminalNode->m_iPathTurns <= node->m_iPathTurns )
 	{
@@ -528,6 +534,7 @@ bool CvPathGenerator::isDescendantOfReplacedNode(CvPathNode* node) const
 
 void CvPathGenerator::AdjustChildTreeCosts(CvPathNode* node, int iAmount, bool bHasQueued)
 {
+	PROFILE_EXTRA_FUNC();
 	if ( iAmount != 0 )
 	{
 		node->m_iCostTo += iAmount;
@@ -600,6 +607,7 @@ void CvPathGenerator::AdjustChildTreeCosts(CvPathNode* node, int iAmount, bool b
 
 void CvPathGenerator::OrphanChildTree(CvPathNode* node)
 {
+	PROFILE_EXTRA_FUNC();
 	CvPathNode*	child;
 
 	node->m_parent = NULL;
@@ -612,6 +620,7 @@ void CvPathGenerator::OrphanChildTree(CvPathNode* node)
 
 void CvPathGenerator::DeleteChildTree(CvPathNode* node, bool bIsDeletionRoot)
 {
+	PROFILE_EXTRA_FUNC();
 	CvPathNode* child;
 
 	if ( !bIsDeletionRoot )
@@ -693,6 +702,7 @@ void CvPathGenerator::DeleteChildTree(CvPathNode* node, bool bIsDeletionRoot)
 
 bool CvPathGenerator::groupMatches(const CvSelectionGroup* pGroup, int iFlags, uint32_t& iGroupMembershipChecksum)
 {
+	PROFILE_EXTRA_FUNC();
 	iGroupMembershipChecksum = 0;
 
 	foreach_(const CvUnit* pLoopUnit, pGroup->units())

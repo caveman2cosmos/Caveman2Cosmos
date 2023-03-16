@@ -1,5 +1,8 @@
 // CvTaggedSaveFormatWrapper.cpp
 
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvBonusInfo.h"
 #include "CvBuildingInfo.h"
@@ -526,6 +529,7 @@ CvTaggedSaveFormatWrapper::~CvTaggedSaveFormatWrapper()
 void
 CvTaggedSaveFormatWrapper::reset(bool useTaggedFormat)
 {
+	PROFILE_EXTRA_FUNC();
 	usageSeq++;
 	lastIdMatch = -1;
 	m_idDictionary.clear();

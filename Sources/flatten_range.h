@@ -3,6 +3,8 @@
 #ifndef flatten_range_h__
 #define flatten_range_h__
 
+#include "FProfiler.h"
+
 #include <boost155/range/adaptors.hpp>
 #include <boost155/range/iterator_range.hpp>
 
@@ -82,6 +84,7 @@ public:
 private:
 	void advance_past_empty_inner_containers()
 	{
+		PROFILE_EXTRA_FUNC();
 		while (outer_it_ != outer_end_ && inner_it_ == outer_it_->end())
 		{
 			++outer_it_;

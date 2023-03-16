@@ -3,6 +3,8 @@
 #ifndef CvPathGenerator_h__
 #define CvPathGenerator_h__
 
+#include "FProfiler.h"
+
 //#define	DYNAMIC_PATH_STRUCTURE_VALIDATION
 
 class CvMap;
@@ -102,6 +104,7 @@ public:
 	}
 	~CvAllocationPool()
 	{
+		PROFILE_EXTRA_FUNC();
 		while(m_nextBucketToAllocate-- > 0)
 		{
 			SAFE_DELETE(m_pool[m_nextBucketToAllocate]);

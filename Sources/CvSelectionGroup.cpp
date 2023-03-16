@@ -1,5 +1,8 @@
 // selectionGroup.cpp
 
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
 #include "CvArtFileMgr.h"
@@ -120,6 +123,7 @@ void CvSelectionGroup::kill()
 
 bool CvSelectionGroup::sentryAlert() const
 {
+	PROFILE_EXTRA_FUNC();
 	CvUnit* unit = NULL;
 	int iMaxRange = 0;
 	foreach_(CvUnit* unitX, units())
@@ -154,6 +158,7 @@ bool CvSelectionGroup::sentryAlert() const
  */
 bool CvSelectionGroup::sentryAlertSameDomainType() const
 {
+	PROFILE_EXTRA_FUNC();
 	CvUnit* unit = NULL;
 	int iMaxRange = 0;
 
@@ -337,6 +342,7 @@ void CvSelectionGroup::resetHealing()
 
 bool CvSelectionGroup::showMoves() const
 {
+	PROFILE_EXTRA_FUNC();
 	if (GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS) || GC.getGame().isSimultaneousTeamTurns())
 	{
 		return false;
@@ -360,6 +366,7 @@ bool CvSelectionGroup::showMoves() const
 
 void CvSelectionGroup::updateTimers()
 {
+	PROFILE_EXTRA_FUNC();
 	FAssert(getOwner() != NO_PLAYER);
 
 	if (getNumUnits() > 0)
@@ -405,6 +412,7 @@ namespace {
 // Returns true if group was killed...
 bool CvSelectionGroup::doDelayedDeath()
 {
+	PROFILE_EXTRA_FUNC();
 	FAssert(getOwner() != NO_PLAYER);
 
 	if (isBusy())
@@ -575,6 +583,7 @@ void CvSelectionGroup::updateMission()
 
 CvPlot* CvSelectionGroup::lastMissionPlot() const
 {
+	PROFILE_EXTRA_FUNC();
 	CLLNode<MissionData>* pMissionNode = tailMissionQueueNode();
 
 	while (pMissionNode != NULL)
@@ -2331,6 +2340,7 @@ bool CvSelectionGroup::checkMoveSafety(int iX, int iY, int iFlags)
 
 void CvSelectionGroup::doCommand(CommandTypes eCommand, int iData1, int iData2)
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(CvUnit* unit, units())
 	{
 		unit->doCommand(eCommand, iData1, iData2);
@@ -2370,6 +2380,7 @@ bool CvSelectionGroup::canDoCommand(CommandTypes eCommand, int iData1, int iData
 
 bool CvSelectionGroup::canEverDoCommand(CommandTypes eCommand, int iData1, int iData2, bool bTestVisible, bool bUseCache) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (eCommand == COMMAND_LOAD)
 	{
 		return algo::any_of(plot()->units(), !CvUnit::fn::isFull());
@@ -2394,6 +2405,7 @@ bool CvSelectionGroup::canEverDoCommand(CommandTypes eCommand, int iData1, int i
 
 void CvSelectionGroup::setupActionCache()
 {
+	PROFILE_EXTRA_FUNC();
 	//cache busy calculation
 	m_bIsBusyCache = isBusy();
 
@@ -2626,6 +2638,7 @@ bool CvSelectionGroup::canDoInterfaceMode(InterfaceModeTypes eInterfaceMode)
 // Returns true if one of the units can execute the interface mode at the specified plot...
 bool CvSelectionGroup::canDoInterfaceModeAt(InterfaceModeTypes eInterfaceMode, CvPlot* pPlot)
 {
+	PROFILE_EXTRA_FUNC();
 	FAssertMsg(eInterfaceMode != NO_INTERFACEMODE, "InterfaceMode is not assigned a valid value");
 
 	foreach_(const CvUnit* pLoopUnit, units())
@@ -2727,6 +2740,7 @@ bool CvSelectionGroup::isBusy() const
 
 bool CvSelectionGroup::isCargoBusy() const
 {
+	PROFILE_EXTRA_FUNC();
 	const CvPlot* pPlot = plot();
 	foreach_(const CvUnit* pLoopUnit1, units() | filtered(CvUnit::fn::hasCargo()))
 	{
@@ -2745,6 +2759,7 @@ bool CvSelectionGroup::isCargoBusy() const
 
 int CvSelectionGroup::baseMoves() const
 {
+	PROFILE_EXTRA_FUNC();
 	int iBestValue = MAX_INT;
 
 	foreach_(const CvUnit* pLoopUnit, units())
@@ -2779,6 +2794,7 @@ bool CvSelectionGroup::isWaiting() const
 
 bool CvSelectionGroup::isFull() const
 {
+	PROFILE_EXTRA_FUNC();
 	// do two passes, the first pass, we ignore units with speical cargo
 	int iSpecialCargoCount = 0;
 	int iCargoCount = 0;
@@ -2836,6 +2852,7 @@ bool CvSelectionGroup::canAllMove() const
 
 bool CvSelectionGroup::canAllSelectedMove() const
 {
+	PROFILE_EXTRA_FUNC();
 	FAssert(isHuman());
 	if (!IsSelected()) return false;
 
@@ -2899,6 +2916,7 @@ bool CvSelectionGroup::canEnterPlot(const CvPlot* pPlot, bool bAttack) const
 
 bool CvSelectionGroup::canEnterOrAttackPlot(const CvPlot* pPlot, bool bDeclareWar) const
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(const CvUnit* unitX, units())
 	{
 		if (unitX->canEnterOrAttackPlot(pPlot, bDeclareWar))
@@ -2918,6 +2936,7 @@ bool CvSelectionGroup::canEnterOrAttackPlot(const CvPlot* pPlot, bool bDeclareWa
 
 bool CvSelectionGroup::canMoveThrough(const CvPlot* pPlot, bool bDeclareWar) const
 {
+	PROFILE_EXTRA_FUNC();
 #define	MAX_UNIQUE_UNIT_CATEGORIES_CONSIDERED	3
 	int	unitCharacteristics[MAX_UNIQUE_UNIT_CATEGORIES_CONSIDERED];
 	int numUniqueUnitCategories = 0;
@@ -2986,6 +3005,7 @@ bool CvSelectionGroup::hasCollateralDamage() const
 
 bool CvSelectionGroup::canBombard(const CvPlot* pPlot, bool bCheckCanReduceOnly) const
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(const CvUnit* pLoopUnit, units())
 	{
 		if (pLoopUnit->canBombard(pPlot, bCheckCanReduceOnly))
@@ -3014,6 +3034,7 @@ bool CvSelectionGroup::canBombardAtRanged(const CvPlot* pPlot, int iX, int iY) c
 
 int CvSelectionGroup::getMinimumRBombardDamageLimit() const
 {
+	PROFILE_EXTRA_FUNC();
 	int iLowest = MAX_INT;
 	foreach_(const CvUnit* pLoopUnit, units())
 	{
@@ -3029,6 +3050,7 @@ int CvSelectionGroup::getMinimumRBombardDamageLimit() const
 
 int CvSelectionGroup::getMinimumRBombardRange() const
 {
+	PROFILE_EXTRA_FUNC();
 	int iLowest = MAX_INT;
 	foreach_(const CvUnit* pLoopUnit, units())
 	{
@@ -3044,6 +3066,7 @@ int CvSelectionGroup::getMinimumRBombardRange() const
 
 int CvSelectionGroup::getRBombardDamageMaxUnits() const
 {
+	PROFILE_EXTRA_FUNC();
 	int iHighest = 0;
 	foreach_(const CvUnit* pLoopUnit, units())
 	{
@@ -3896,6 +3919,7 @@ bool CvSelectionGroup::groupRoadTo(int iX, int iY, int iFlags)
 // Returns true if build should continue...
 bool CvSelectionGroup::groupBuild(BuildTypes eBuild)
 {
+	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, MAX_PLAYERS, getOwner());
 	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBuild);
 
@@ -4023,6 +4047,7 @@ bool CvSelectionGroup::groupBuild(BuildTypes eBuild)
 
 void CvSelectionGroup::setTransportUnit(CvUnit* pTransportUnit, CvSelectionGroup** pOtherGroup)
 {
+	PROFILE_EXTRA_FUNC();
 	// if we are loading
 	if (pTransportUnit != NULL)
 	{
@@ -4128,6 +4153,7 @@ void CvSelectionGroup::setTransportUnit(CvUnit* pTransportUnit, CvSelectionGroup
 ///
 void CvSelectionGroup::setRemoteTransportUnit(CvUnit* pTransportUnit)
 {
+	PROFILE_EXTRA_FUNC();
 	// if we are loading
 	if (pTransportUnit != NULL)
 	{
@@ -4259,6 +4285,7 @@ bool CvSelectionGroup::isAmphibPlot(const CvPlot* pPlot) const
 // Returns true if attempted an amphib landing...
 bool CvSelectionGroup::groupAmphibMove(CvPlot* pPlot, int iFlags)
 {
+	PROFILE_EXTRA_FUNC();
 	FAssert(getOwner() != NO_PLAYER);
 
 	if (groupDeclareWar(pPlot))
@@ -4456,6 +4483,7 @@ ActivityTypes CvSelectionGroup::getActivityType() const
 
 void CvSelectionGroup::setActivityType(ActivityTypes eNewValue, MissionTypes eSleepType)
 {
+	PROFILE_EXTRA_FUNC();
 	FAssert(getOwner() != NO_PLAYER);
 
 	if (eNewValue == m_eActivityType)
@@ -4532,6 +4560,7 @@ bool CvSelectionGroup::isAutomated() const
 
 void CvSelectionGroup::setAutomateType(AutomateTypes eNewValue)
 {
+	PROFILE_EXTRA_FUNC();
 	FAssert(getOwner() != NO_PLAYER);
 
 	if (getAutomateType() != eNewValue)
@@ -4571,6 +4600,7 @@ FAStarNode* CvSelectionGroup::getPathLastNode() const
 
 CvPlot* CvSelectionGroup::getPathFirstPlot() const
 {
+	PROFILE_EXTRA_FUNC();
 #ifdef USE_OLD_PATH_GENERATOR
 	FAStarNode* pNode = getPathLastNode();
 
@@ -4612,6 +4642,7 @@ const CvPath& CvSelectionGroup::getPath() const
 
 CvPlot* CvSelectionGroup::getPathEndTurnPlot() const
 {
+	PROFILE_EXTRA_FUNC();
 #ifdef USE_OLD_PATH_GENERATOR
 	FAStarNode* pNode = getPathLastNode();
 
@@ -4917,6 +4948,7 @@ bool CvSelectionGroup::canPathDirectlyToInternal(const CvPlot* pFromPlot, const 
 
 int CvSelectionGroup::movesRemainingAfterMovingTo(int iStartMoves, const CvPlot* pFromPlot, const CvPlot* pToPlot) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iResult = MAX_INT;
 
 	foreach_(const CvUnit* pLoopUnit, units())
@@ -4933,6 +4965,7 @@ int CvSelectionGroup::movesRemainingAfterMovingTo(int iStartMoves, const CvPlot*
 
 int CvSelectionGroup::movesLeft() const
 {
+	PROFILE_EXTRA_FUNC();
 	int iResult = MAX_INT;
 
 	foreach_(const CvUnit* pLoopUnit, units())
@@ -4946,6 +4979,7 @@ int CvSelectionGroup::movesLeft() const
 
 void CvSelectionGroup::clearUnits()
 {
+	PROFILE_EXTRA_FUNC();
 	CLLNode<IDInfo>* pUnitNode = headUnitNode();
 
 	while (pUnitNode != NULL)
@@ -4961,6 +4995,7 @@ bool CvSelectionGroup::hasUnitOfAI(UnitAITypes eUnitAI) const
 
 int	CvSelectionGroup::getWorstDamagePercent(UnitCombatTypes eIgnoreUnitCombat) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iWorstDamage = 0;
 
 	foreach_(const CvUnit* pLoopUnit, units())
@@ -4980,6 +5015,7 @@ int	CvSelectionGroup::getWorstDamagePercent(UnitCombatTypes eIgnoreUnitCombat) c
 // Returns true if the unit is added...
 bool CvSelectionGroup::addUnit(CvUnit* pUnit, bool bMinimalChange)
 {
+	PROFILE_EXTRA_FUNC();
 	//PROFILE_FUNC();
 
 	CvUnit* pOldHeadUnit = getHeadUnit();
@@ -5052,6 +5088,7 @@ bool CvSelectionGroup::containsUnit(const CvUnit* pUnit) const
 
 void CvSelectionGroup::removeUnit(CvUnit* pUnit)
 {
+	PROFILE_EXTRA_FUNC();
 	CvUnit* pOldHeadUnit = getHeadUnit();
 
 	CLLNode<IDInfo>* pUnitNode = headUnitNode();
@@ -5130,6 +5167,7 @@ int CvSelectionGroup::getNumUnitCargoVolumeTotal() const
 
 int CvSelectionGroup::getLeastCargoVolume() const
 {
+	PROFILE_EXTRA_FUNC();
 	int iLowest = MAX_INT;
 	foreach_(const CvUnit* pLoopUnit, units())
 	{
@@ -5150,6 +5188,7 @@ bool CvSelectionGroup::meetsUnitSelectionCriteria(const CvUnitSelectionCriteria*
 
 void CvSelectionGroup::mergeIntoGroup(CvSelectionGroup* pSelectionGroup)
 {
+	PROFILE_EXTRA_FUNC();
 	CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
 
 	// merge groups, but make sure we do not change the head unit AI
@@ -5215,6 +5254,7 @@ namespace {
 // split up each unit AI type as evenly as possible, mirrors origninal group composition.
 CvSelectionGroup* CvSelectionGroup::splitGroup(int iSplitSize, CvUnit* pNewHeadUnit, CvSelectionGroup** ppOtherGroup)
 {
+	PROFILE_EXTRA_FUNC();
 	if (iSplitSize <= 0)
 	{
 		FErrorMsg("splitGroup size must be > 0");
@@ -5344,6 +5384,7 @@ CvSelectionGroup* CvSelectionGroup::splitGroup(int iSplitSize, CvUnit* pNewHeadU
 //------------------------------------------------------------------------------------------------
 /*DllExport*/ int CvSelectionGroup::getUnitIndex(CvUnit* pUnit, int maxIndex /* = -1 */) const
 {
+	PROFILE_EXTRA_FUNC();
 #ifdef _DEBUG
 	OutputDebugString("exe is asking for a units' index within this group\n");
 #endif
@@ -5380,6 +5421,7 @@ CvUnit* CvSelectionGroup::getHeadUnit() const
 
 CvUnit* CvSelectionGroup::getUnitAt(int index) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (index >= getNumUnits())
 	{
 		FErrorMsg("[Jason] Selectiongroup unit index out of bounds.");
@@ -5593,6 +5635,7 @@ CLLNode<MissionData>* CvSelectionGroup::tailMissionQueueNode() const
 
 int CvSelectionGroup::getMissionType(int iNode) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 	CLLNode<MissionData>* pMissionNode = headMissionQueueNode();
 
@@ -5612,6 +5655,7 @@ int CvSelectionGroup::getMissionType(int iNode) const
 
 int CvSelectionGroup::getMissionData1(int iNode) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 	CLLNode<MissionData>* pMissionNode = headMissionQueueNode();
 
@@ -5630,6 +5674,7 @@ int CvSelectionGroup::getMissionData1(int iNode) const
 
 int CvSelectionGroup::getMissionData2(int iNode) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 	CLLNode<MissionData>* pMissionNode = headMissionQueueNode();
 
@@ -5670,6 +5715,7 @@ bool CvSelectionGroup::isMoveMission(CLLNode<MissionData>* node) const
 
 void CvSelectionGroup::read(FDataStreamBase* pStream)
 {
+	PROFILE_EXTRA_FUNC();
 	// Init saved data
 	reset();
 
@@ -5820,6 +5866,7 @@ bool CvSelectionGroup::isLastPathPlotRevealed() const
 
 int CvSelectionGroup::defensiveModifierAtPlot(const CvPlot* pPlot) const
 {
+	PROFILE_EXTRA_FUNC();
 	const int iModifier = pPlot->defenseModifier(getTeam(), false);
 
 	int iBestStrength = 0;
@@ -5858,6 +5905,7 @@ int CvSelectionGroup::defensiveModifierAtPlot(const CvPlot* pPlot) const
 
 int CvSelectionGroup::getStrength() const
 {
+	PROFILE_EXTRA_FUNC();
 	int iStrength = 0;
 
 	foreach_(const CvUnit* pLoopUnit, units())
@@ -5875,6 +5923,7 @@ bool CvSelectionGroup::hasCommander() const
 
 void CvSelectionGroup::validateLocations(bool bFixup) const
 {
+	PROFILE_EXTRA_FUNC();
 	CvPlot* pPlot = NULL;
 	CvUnit* pTransportUnit;
 	bool bTransportUnitSet = false;
@@ -5920,6 +5969,7 @@ void CvSelectionGroup::validateLocations(bool bFixup) const
 
 bool CvSelectionGroup::findNewLeader(UnitAITypes eAIType)
 {
+	PROFILE_EXTRA_FUNC();
 	CvUnit* pBestUnit = NULL;
 	const CvPlayer& kPlayer = GET_PLAYER(getOwner());
 
@@ -5967,6 +6017,7 @@ namespace {
 // TB Notes: I'd like to add that a unit should only merge with units of the same AI to avoid problems here.
 bool CvSelectionGroup::doMergeCheck()
 {
+	PROFILE_EXTRA_FUNC();
 	bool anyMerged = false;
 
 	while (true)
@@ -5985,6 +6036,7 @@ bool CvSelectionGroup::doMergeCheck()
 
 int CvSelectionGroup::getCargoSpace() const
 {
+	PROFILE_EXTRA_FUNC();
 	FAssert(getNumUnits() > 0);
 
 	const UnitAITypes eUnitAI = getHeadUnitAI();
@@ -6002,6 +6054,7 @@ int CvSelectionGroup::getCargoSpace() const
 
 int CvSelectionGroup::getCargoSpaceAvailable(SpecialUnitTypes eSpecialCargo, DomainTypes eDomainCargo) const
 {
+	PROFILE_EXTRA_FUNC();
 	FAssert(getNumUnits() > 0);
 
 	const UnitAITypes eUnitAI = getHeadUnitAI();
@@ -6019,6 +6072,7 @@ int CvSelectionGroup::getCargoSpaceAvailable(SpecialUnitTypes eSpecialCargo, Dom
 
 int CvSelectionGroup::countSeeInvisibleActive(UnitAITypes eUnitAI, InvisibleTypes eInvisibleType) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 
 	foreach_(const CvUnit* pLoopUnit, units())
