@@ -6,6 +6,9 @@
 //  PURPOSE: Filter, group, sort and cache a unit list for a city or player
 //
 //------------------------------------------------------------------------------------------------
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
 #include "CvGlobals.h"
@@ -127,6 +130,7 @@ UnitTypes CvUnitList::getUnitListType(int iGroup, int iPos)
 
 void CvUnitList::doFilter()
 {
+	PROFILE_EXTRA_FUNC();
 	m_aiUnitList.clear();
 	for (int i = 0; i < GC.getNumUnitInfos(); i++)
 	{
@@ -139,6 +143,7 @@ void CvUnitList::doFilter()
 
 void CvUnitList::doGroup()
 {
+	PROFILE_EXTRA_FUNC();
 	if (!m_bFilteringValid)
 		doFilter();
 
@@ -171,6 +176,7 @@ void CvUnitList::doGroup()
 
 void CvUnitList::doSort()
 {
+	PROFILE_EXTRA_FUNC();
 	if (!m_bGroupingValid)
 		doGroup();
 
@@ -185,6 +191,7 @@ void CvUnitList::doSort()
 
 int CvUnitList::getSelectionRow()
 {
+	PROFILE_EXTRA_FUNC();
 	if (m_eSelectedUnit == NO_UNIT)
 		return 0;
 

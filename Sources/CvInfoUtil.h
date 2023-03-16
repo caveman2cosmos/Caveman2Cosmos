@@ -3,6 +3,8 @@
 #ifndef CvInfoUtil_h__
 #define CvInfoUtil_h__
 
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvGlobals.h"
 #include "CvInfoClassTraits.h"
@@ -25,36 +27,42 @@ struct CvInfoUtil
 
 	~CvInfoUtil()
 	{
+		PROFILE_EXTRA_FUNC();
 		foreach_(const WrappedVar* wrapper, m_wrappedVars)
 			delete wrapper;
 	}
 
 	void initDataMembers()
 	{
+		PROFILE_EXTRA_FUNC();
 		foreach_(WrappedVar* wrapper, m_wrappedVars)
 			wrapper->initVar();
 	}
 
 	void uninitDataMembers()
 	{
+		PROFILE_EXTRA_FUNC();
 		foreach_(WrappedVar* wrapper, m_wrappedVars)
 			wrapper->uninitVar();
 	}
 
 	void checkSum(uint32_t& iSum) const
 	{
+		PROFILE_EXTRA_FUNC();
 		foreach_(const WrappedVar* wrapper, m_wrappedVars)
 			wrapper->checkSum(iSum);
 	}
 
 	void readXml(CvXMLLoadUtility* pXML)
 	{
+		PROFILE_EXTRA_FUNC();
 		foreach_(WrappedVar* wrapper, m_wrappedVars)
 			wrapper->readXml(pXML);
 	}
 
 	void copyNonDefaults(const CvInfoUtil otherUtil)
 	{
+		PROFILE_EXTRA_FUNC();
 		for (uint32_t i = 0, num = m_wrappedVars.size(); i < num; i++)
 			m_wrappedVars[i]->copyNonDefaults(otherUtil.m_wrappedVars[i]);
 	}

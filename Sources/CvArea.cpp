@@ -1,5 +1,8 @@
 // area.cpp
 
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
 #include "CvBonusInfo.h"
@@ -18,6 +21,7 @@
 
 CvArea::CvArea()
 {
+	PROFILE_EXTRA_FUNC();
 	m_aiUnitsPerPlayer = new int[MAX_PLAYERS];
 	m_aiAnimalsPerPlayer = new int[MAX_PLAYERS];
 	m_aiCitiesPerPlayer = new int[MAX_PLAYERS];
@@ -105,6 +109,7 @@ void CvArea::uninit()
 // Initializes data members that are serialized.
 void CvArea::reset(int iID, bool bWater, bool bConstructorCall)
 {
+	PROFILE_EXTRA_FUNC();
 	uninit();
 
 	m_iID = iID;
@@ -183,6 +188,7 @@ void CvArea::reset(int iID, bool bWater, bool bConstructorCall)
 
 void CvArea::clearModifierTotals()
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		m_aiBuildingGoodHealth[iI] = 0;
@@ -207,6 +213,7 @@ void CvArea::clearModifierTotals()
 
 void CvArea::read(FDataStreamBase* pStream)
 {
+	PROFILE_EXTRA_FUNC();
 	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
@@ -294,6 +301,7 @@ void CvArea::read(FDataStreamBase* pStream)
 
 void CvArea::write(FDataStreamBase* pStream)
 {
+	PROFILE_EXTRA_FUNC();
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
@@ -388,6 +396,7 @@ void CvArea::setID(int iID)
 
 int CvArea::calculateTotalBestNatureYield() const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 
 	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
@@ -404,6 +413,7 @@ int CvArea::calculateTotalBestNatureYield() const
 
 int CvArea::countCoastalLand() const
 {
+	PROFILE_EXTRA_FUNC();
 	if (isWater())
 	{
 		return 0;
@@ -424,6 +434,7 @@ int CvArea::countCoastalLand() const
 
 int CvArea::countNumUniqueBonusTypes() const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 
 	for (int iI = GC.getNumMapBonuses() - 1; iI > -1; iI--)
@@ -439,6 +450,7 @@ int CvArea::countNumUniqueBonusTypes() const
 
 int CvArea::countHasReligion(ReligionTypes eReligion, PlayerTypes eOwner) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
@@ -459,6 +471,7 @@ int CvArea::countHasReligion(ReligionTypes eReligion, PlayerTypes eOwner) const
 
 int CvArea::countHasCorporation(CorporationTypes eCorporation, PlayerTypes eOwner) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
@@ -829,6 +842,7 @@ int CvArea::getNumUnrevealedTiles(TeamTypes eIndex) const
 
 int CvArea::getNumRevealedFeatureTiles(TeamTypes eTeam, FeatureTypes eFeature) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (m_iCachedTurnPlotTypeCounts != GC.getGame().getGameTurn() ||
 		m_eCachedTeamPlotTypeCounts != eTeam)
 	{
@@ -865,6 +879,7 @@ int CvArea::getNumRevealedFeatureTiles(TeamTypes eTeam, FeatureTypes eFeature) c
 
 int CvArea::getNumRevealedTerrainTiles(TeamTypes eTeam, TerrainTypes eTerrain) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (m_iCachedTurnPlotTypeCounts != GC.getGame().getGameTurn() ||
 		m_eCachedTeamPlotTypeCounts != eTeam)
 	{
@@ -1072,6 +1087,7 @@ int CvArea::getNumBonuses(BonusTypes eBonus) const
 
 int CvArea::getNumTotalBonuses() const
 {
+	PROFILE_EXTRA_FUNC();
 	int iTotal = 0;
 
 	for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
@@ -1108,6 +1124,7 @@ void CvArea::changeNumImprovements(ImprovementTypes eImprovement, int iChange)
 // Koshling - record rolling history of the last N turns of our combat losses and what we lost to
 void CvArea::recordCombatDeath(PlayerTypes ePlayer, UnitTypes lostUnitType, UnitTypes lostToUnitType)
 {
+	PROFILE_EXTRA_FUNC();
 	CombatResultRecord record;
 
 	record.eLoser = ePlayer;
@@ -1131,6 +1148,7 @@ void CvArea::recordCombatDeath(PlayerTypes ePlayer, UnitTypes lostUnitType, Unit
 // If eUnit is NO_UNIT all types will be tallied
 int	CvArea::getRecentCombatDeathRate(PlayerTypes ePlayer, UnitTypes eUnit) const
 {
+	PROFILE_EXTRA_FUNC();
 	int	totalDeaths = 0;
 
 	for (int i = 0; i < COMBAT_RECORD_LENGTH; i++)
@@ -1153,6 +1171,7 @@ int	CvArea::getRecentCombatDeathRate(PlayerTypes ePlayer, UnitTypes eUnit) const
 // If eUnit is NO_UNIT all types will be tallied
 int	CvArea::getRecentCombatDeathRate(PlayerTypes ePlayer, UnitAITypes eUnitAIType) const
 {
+	PROFILE_EXTRA_FUNC();
 	int	totalDeaths = 0;
 
 	for (int i = 0; i < COMBAT_RECORD_LENGTH; i++)
@@ -1175,6 +1194,7 @@ int	CvArea::getRecentCombatDeathRate(PlayerTypes ePlayer, UnitAITypes eUnitAITyp
 
 void CvArea::setNumValidPlotsbySpawn(SpawnTypes eSpawn, int iAmount)
 {
+	PROFILE_EXTRA_FUNC();
 	if (NULL == m_aiSpawnValidPlotCount)
 	{
 		m_aiSpawnValidPlotCount = new int[GC.getNumSpawnInfos()];

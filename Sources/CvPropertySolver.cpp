@@ -7,6 +7,9 @@
 //
 //------------------------------------------------------------------------------------------------
 
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
@@ -98,6 +101,7 @@ void PropertyInteractionContext::doCorrect(CvPropertySolver* pSolver)
 
 PropertyPropagatorContext::PropertyPropagatorContext(CvPropertyPropagator* pPropagator, const CvGameObject* pObject) : m_pPropagator(pPropagator), m_pObject(pObject)
 {
+	PROFILE_EXTRA_FUNC();
 	pPropagator->getTargetObjects(pObject, m_apTargetObjects);
 	const PropertyTypes eProperty = pPropagator->getProperty();
 
@@ -124,6 +128,7 @@ std::vector<const CvGameObject*>* PropertyPropagatorContext::getTargetObjects()
 
 void PropertyPropagatorContext::doPredict(CvPropertySolver* pSolver)
 {
+	PROFILE_EXTRA_FUNC();
 	std::vector<int>& aiPredict = pSolver->getCache1();
 	aiPredict.resize(m_aiCurrentAmount.size());
 	m_pPropagator->getPredict(m_aiCurrentAmount, aiPredict);
@@ -137,6 +142,7 @@ void PropertyPropagatorContext::doPredict(CvPropertySolver* pSolver)
 
 void PropertyPropagatorContext::doCorrect(CvPropertySolver* pSolver)
 {
+	PROFILE_EXTRA_FUNC();
 	const PropertyTypes eProperty = m_pPropagator->getProperty();
 	std::vector<int>& aiPredict = pSolver->getCache1();
 	for(int i=0; i<(int)m_apTargetObjects.size(); i++)
@@ -165,6 +171,7 @@ int PropertySolverMap::getPredictValue(const CvGameObject* pObject, PropertyType
 
 void PropertySolverMap::computePredictValues()
 {
+	PROFILE_EXTRA_FUNC();
 	for (PropertySolverMapType::iterator it = m_mapPropertyChanges.begin(); it != m_mapPropertyChanges.end(); ++it)
 	{
 		const CvGameObject* pObject = it->first;
@@ -183,6 +190,7 @@ void PropertySolverMap::computePredictValues()
 
 void PropertySolverMap::applyChanges()
 {
+	PROFILE_EXTRA_FUNC();
 	for(PropertySolverMapType::iterator it = m_mapPropertyChanges.begin(); it != m_mapPropertyChanges.end(); ++it)
 	{
 		CvProperties* pProp = it->first->getProperties();
@@ -237,6 +245,7 @@ void callInstantiatePropagator(const CvGameObject* pObject, CvPropertyPropagator
 
 void CvPropertySolver::instantiateManipulators(const CvGameObject* pObject, const CvPropertyManipulators* pMani)
 {
+	PROFILE_EXTRA_FUNC();
 	// Sources
 	foreach_(CvPropertySource* pSource, pMani->getSources())
 	{
@@ -280,6 +289,7 @@ void CvPropertySolver::instantiateManipulators(const CvGameObject* pObject, cons
 
 void CvPropertySolver::instantiateGlobalManipulators(const CvGameObject *pObject)
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(const CvPropertyManipulators* pMani, m_apGlobalManipulators)
 	{
 		instantiateManipulators(pObject, pMani);
@@ -294,12 +304,14 @@ void callInstantiateManipulators(const CvGameObject* pObject, const CvPropertyMa
 
 void callInstantiateGlobalManipulators(const CvGameObject* pObject, CvPropertySolver* pSolver)
 {
+	PROFILE_EXTRA_FUNC();
 	pSolver->instantiateGlobalManipulators(pObject);
 	pObject->foreachManipulator(bind(callInstantiateManipulators, pObject, _1, pSolver));
 }
 
 void CvPropertySolver::gatherActiveManipulators()
 {
+	PROFILE_EXTRA_FUNC();
 	for (int i=0; i<NUM_GAMEOBJECTS; i++)
 	{
 		GC.getGame().getGameObject()->foreach((GameObjectTypes)i, bind(callInstantiateGlobalManipulators, _1, this));
@@ -308,6 +320,7 @@ void CvPropertySolver::gatherActiveManipulators()
 
 void CvPropertySolver::predictSources()
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(PropertySourceContext& context, m_aSourceContexts)
 	{
 		context.doPredict(this);
@@ -316,6 +329,7 @@ void CvPropertySolver::predictSources()
 
 void CvPropertySolver::correctSources()
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(PropertySourceContext& context, m_aSourceContexts)
 	{
 		context.doCorrect(this);
@@ -324,6 +338,7 @@ void CvPropertySolver::correctSources()
 
 void CvPropertySolver::predictInteractions()
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(PropertyInteractionContext& context, m_aInteractionContexts)
 	{
 		context.doPredict(this);
@@ -332,6 +347,7 @@ void CvPropertySolver::predictInteractions()
 
 void CvPropertySolver::correctInteractions()
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(PropertyInteractionContext& context, m_aInteractionContexts)
 	{
 		context.doCorrect(this);
@@ -340,6 +356,7 @@ void CvPropertySolver::correctInteractions()
 
 void CvPropertySolver::predictPropagators()
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(PropertyPropagatorContext& context, m_aPropagatorContexts)
 	{
 		context.doPredict(this);
@@ -348,6 +365,7 @@ void CvPropertySolver::predictPropagators()
 
 void CvPropertySolver::correctPropagators()
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(PropertyPropagatorContext& context, m_aPropagatorContexts)
 	{
 		context.doCorrect(this);
@@ -382,6 +400,7 @@ void CvPropertySolver::addChange(const CvGameObject* pObject, PropertyTypes ePro
 
 void CvPropertySolver::resetPropertyChanges()
 {
+	PROFILE_EXTRA_FUNC();
 	for (int i=0; i<NUM_GAMEOBJECTS; i++)
 	{
 		GC.getGame().getGameObject()->foreach((GameObjectTypes)i, callResetPropertyChange);
@@ -390,6 +409,7 @@ void CvPropertySolver::resetPropertyChanges()
 
 void CvPropertySolver::gatherGlobalManipulators()
 {
+	PROFILE_EXTRA_FUNC();
 	// Global manipulators first
 	for (int i=0; i<GC.getNumPropertyInfos(); i++)
 	{

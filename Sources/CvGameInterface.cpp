@@ -1,3 +1,6 @@
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvBuildingInfo.h"
 #include "CvBugOptions.h"
@@ -946,6 +949,7 @@ void CvGame::cycleSelectionGroups(bool bClear, bool bForward, bool bWorkers, boo
 // Returns true if unit was cycled...
 bool CvGame::nextPlotUnit(const CvPlot* pPlot, bool bForward, bool bAuto, int iCount) const
 {
+	PROFILE_EXTRA_FUNC();
 	CLLNode<IDInfo>* pUnitNode;
 	CvUnit* pLoopUnit = NULL;
 
@@ -1058,6 +1062,7 @@ bool CvGame::nextPlotUnit(const CvPlot* pPlot, bool bForward, bool bAuto, int iC
 
 bool CvGame::selectCity(CvCity* pSelectCity, bool bCtrl, bool bAlt, bool bShift) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (!pSelectCity || !pSelectCity->canBeSelected())
 	{
 		return false;
@@ -1092,6 +1097,7 @@ bool CvGame::selectCity(CvCity* pSelectCity, bool bCtrl, bool bAlt, bool bShift)
 
 void CvGame::selectionListMove(CvPlot* pPlot, bool bAlt, bool bShift, bool bCtrl) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (!pPlot)
 	{
 		return;
@@ -1145,6 +1151,7 @@ void CvGame::selectionListGameNetMessage(int eMessage, int iData2, int iData3, i
 
 void CvGame::selectionListGameNetMessageInternal(int eMessage, int iData2, int iData3, int iData4, int iFlags, bool bAlt, bool bShift, bool bInViewportCoordinates) const
 {
+	PROFILE_EXTRA_FUNC();
 	CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 
 	if (!pHeadSelectedUnit || pHeadSelectedUnit->getOwner() != getActivePlayer())
@@ -1262,6 +1269,7 @@ void CvGame::selectionListGameNetMessageInternal(int eMessage, int iData2, int i
 
 void CvGame::selectedCitiesGameNetMessage(int eMessage, int iData2, int iData3, int iData4, bool bOption, bool bAlt, bool bShift, bool bCtrl) const
 {
+	PROFILE_EXTRA_FUNC();
 	CLLNode<IDInfo>* pSelectedCityNode = gDLL->getInterfaceIFace()->headSelectedCitiesNode();
 
 	while (pSelectedCityNode)
@@ -1645,6 +1653,7 @@ static void selectClosestCity(bool bAdd)
 
 void CvGame::doControl(ControlTypes eControl)
 {
+	PROFILE_EXTRA_FUNC();
 	if (!canDoControl(eControl))
 	{
 		return;
@@ -2193,6 +2202,7 @@ void CvGame::getGlobeLayers(std::vector<CvGlobeLayerData>& aLayers) const
 
 void CvGame::startFlyoutMenu(const CvPlot* pPlot, std::vector<CvFlyoutMenuData>& aFlyoutItems) const
 {
+	PROFILE_EXTRA_FUNC();
 	aFlyoutItems.clear();
 
 	bool bUnits = false;
@@ -2360,6 +2370,7 @@ void CvGame::startFlyoutMenu(const CvPlot* pPlot, std::vector<CvFlyoutMenuData>&
 
 void CvGame::applyFlyoutMenu(const CvFlyoutMenuData& kItem)
 {
+	PROFILE_EXTRA_FUNC();
 	CvPlot* pPlot = GC.getMap().plot(kItem.m_iX, kItem.m_iY);
 	if (!pPlot) return;
 
@@ -2530,6 +2541,7 @@ ColorTypes CvGame::getPlotHighlightColor(CvPlot* pPlot) const
 
 void CvGame::loadBuildQueue(const CvString& strItem) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
 		if (strItem == GC.getUnitInfo((UnitTypes) iI).getType())
@@ -2566,6 +2578,7 @@ void CvGame::loadBuildQueue(const CvString& strItem) const
 
 void CvGame::cheatSpaceship() const
 {
+	PROFILE_EXTRA_FUNC();
 	//add one space project that is still available
 	CvTeam& kTeam = GET_TEAM(getActiveTeam());
 	for (int i = 0; i < GC.getNumProjectInfos(); i++)
@@ -2622,6 +2635,7 @@ bool CvGame::isWaterBuilding(BuildingTypes eBuilding) const
 
 CivilopediaWidgetShowTypes CvGame::getWidgetShow(BonusTypes eBonus) const
 {
+	PROFILE_EXTRA_FUNC();
 	const CvBonusInfo& bonus = GC.getBonusInfo(eBonus);
 
 	// Don't show the widget if it's an abstract bonus that doesn't belong on the map.
@@ -2652,6 +2666,7 @@ CivilopediaWidgetShowTypes CvGame::getWidgetShow(ImprovementTypes eImprovement) 
 
 VictoryTypes CvGame::getSpaceVictory() const
 {
+	PROFILE_EXTRA_FUNC();
 	VictoryTypes eVictory = NO_VICTORY;
 	for (int i=0; i < GC.getNumProjectInfos(); i++)
 	{
@@ -2669,6 +2684,7 @@ VictoryTypes CvGame::getSpaceVictory() const
 
 void CvGame::nextActivePlayer(bool bForward)
 {
+	PROFILE_EXTRA_FUNC();
 	int iNewPlayer = getActivePlayer();
 	for (int i = 1; i < MAX_PC_PLAYERS; ++i)
 	{
@@ -2721,6 +2737,7 @@ bool CvGame::isSoundtrackOverride(CvString& strSoundtrack) const
 
 void CvGame::initSelection() const
 {
+	PROFILE_EXTRA_FUNC();
 	CvUnit* pSelectionUnit = NULL;
 
 	foreach_(CvUnit* pLoopUnit, GET_PLAYER(getActivePlayer()).units())

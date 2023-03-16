@@ -1,3 +1,6 @@
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvPlayerAI.h"
 #include "CvTeam.h"
@@ -190,6 +193,7 @@ bool CyTeam::isMinorCiv() const
 
 void CyTeam::setIsMinorCiv(bool bNewValue, bool bDoBarbCivCheck)
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).getTeam() == m_pTeam->getID() && GET_PLAYER((PlayerTypes)iI).getCivilizationType() < 0)

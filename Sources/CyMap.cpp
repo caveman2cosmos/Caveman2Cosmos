@@ -1,3 +1,6 @@
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
 #include "CvInitCore.h"
@@ -264,6 +267,7 @@ int CyMap::getNumBonusesOnLand(int /* BonusTypes */ eIndex)
 
 python::list CyMap::plots() const
 {
+	PROFILE_EXTRA_FUNC();
 	python::list list = python::list();
 
 	for (int i = 0, numPlots = m_pMap->numPlots(); i < numPlots; i++)
@@ -329,6 +333,7 @@ CyArea* CyMap::getArea(int iID)
 
 python::list CyMap::areas() const
 {
+	PROFILE_EXTRA_FUNC();
 	python::list list = python::list();
 
 	foreach_(CvArea* area, m_pMap->areas())
@@ -406,6 +411,7 @@ bool CyMap::generatePathForHypotheticalUnit(const CyPlot* pFrom, const CyPlot* p
 
 int CyMap::getLastPathStepNum() const
 {
+	PROFILE_EXTRA_FUNC();
 	// length of the path is not the number of steps so we have to count
 	CvPath::const_iterator it = CvSelectionGroup::getPathGenerator()->getLastPath().begin();
 	int i = 0;
@@ -419,6 +425,7 @@ int CyMap::getLastPathStepNum() const
 
 CyPlot* CyMap::getLastPathPlotByIndex(int index) const
 {
+	PROFILE_EXTRA_FUNC();
 	// we can only start from the beginning if we don't want to expose the iterator to Python
 	CvPath::const_iterator it = CvSelectionGroup::getPathGenerator()->getLastPath().begin();
 	for (int i = 0; i < index; i++)
