@@ -15986,7 +15986,7 @@ int CvPlayerAI::AI_espionageVal(PlayerTypes eTargetPlayer, EspionageMissionTypes
 		FAssert(pCity != NULL);
 		if (pCity != NULL)
 		{
-			const int iTempValue = pCity->getProduction();
+			const int iTempValue = pCity->getProductionProgress();
 			if (iTempValue > 0)
 			{
 				if (pCity->getProductionProject() != NO_PROJECT)

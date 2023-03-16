@@ -138,7 +138,7 @@ int BuildingSortCost::getBuildingValue(const CvPlayer* pPlayer, CvCity* pCity, B
 {
 	if (pCity)
 	{
-		return pCity->getProductionNeeded(eBuilding) - pCity->getBuildingProduction(eBuilding);
+		return pCity->getProductionNeeded(eBuilding) - pCity->getProgressOnBuilding(eBuilding);
 	}
 	else
 	{

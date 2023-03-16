@@ -3545,7 +3545,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_HIERACOSPHINX_BREEDER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MYTHICAL_BREEDER_PEDIA</Civilopedia>
-			<PrereqTech>TECH_MYTHOLOCIAL_BEASTIARY</PrereqTech>
+			<PrereqTech>TECH_MYTHOLOGICAL_BESTIARY</PrereqTech>
 			<iPrereqPopulation>12</iPrereqPopulation>
 			<Bonus>BONUS_ORGANIC_COMPUTERS</Bonus>
 			<PrereqInCityBuildings>
@@ -3887,7 +3887,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_JACKALOPE_BREEDER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MYTHICAL_BREEDER_PEDIA</Civilopedia>
-			<PrereqTech>TECH_MYTHOLOCIAL_BEASTIARY</PrereqTech>
+			<PrereqTech>TECH_MYTHOLOGICAL_BESTIARY</PrereqTech>
 			<iPrereqPopulation>12</iPrereqPopulation>
 			<Bonus>BONUS_ORGANIC_COMPUTERS</Bonus>
 			<PrereqInCityBuildings>
@@ -5760,7 +5760,7 @@
 			<Description>TXT_KEY_BUILDING_NOBLEGARDEN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NOBLEGARDEN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqTech>TECH_MYTHOLOCIAL_BEASTIARY</PrereqTech>
+			<PrereqTech>TECH_MYTHOLOGICAL_BESTIARY</PrereqTech>
 			<Bonus>BONUS_ANTI_GRAVITY_FIELD_GENERATORS</Bonus>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>12</iPrereqPopulation>
@@ -5939,7 +5939,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_PEGASUS_BREEDER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MYTHICAL_BREEDER_PEDIA</Civilopedia>
-			<PrereqTech>TECH_MYTHOLOCIAL_BEASTIARY</PrereqTech>
+			<PrereqTech>TECH_MYTHOLOGICAL_BESTIARY</PrereqTech>
 			<iPrereqPopulation>12</iPrereqPopulation>
 			<Bonus>BONUS_ORGANIC_COMPUTERS</Bonus>
 			<PrereqInCityBuildings>
@@ -5980,7 +5980,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_PHOENIX_BREEDER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MYTHICAL_BREEDER_PEDIA</Civilopedia>
-			<PrereqTech>TECH_MYTHOLOCIAL_BEASTIARY</PrereqTech>
+			<PrereqTech>TECH_MYTHOLOGICAL_BESTIARY</PrereqTech>
 			<iPrereqPopulation>12</iPrereqPopulation>
 			<Bonus>BONUS_ORGANIC_COMPUTERS</Bonus>
 			<PrereqInCityBuildings>
@@ -6153,7 +6153,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_QILIN_BREEDER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MYTHICAL_BREEDER_PEDIA</Civilopedia>
-			<PrereqTech>TECH_MYTHOLOCIAL_BEASTIARY</PrereqTech>
+			<PrereqTech>TECH_MYTHOLOGICAL_BESTIARY</PrereqTech>
 			<iPrereqPopulation>12</iPrereqPopulation>
 			<Bonus>BONUS_ORGANIC_COMPUTERS</Bonus>
 			<PrereqInCityBuildings>
@@ -6194,7 +6194,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_QUETZALCOATL_BREEDER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MYTHICAL_BREEDER_PEDIA</Civilopedia>
-			<PrereqTech>TECH_MYTHOLOCIAL_BEASTIARY</PrereqTech>
+			<PrereqTech>TECH_MYTHOLOGICAL_BESTIARY</PrereqTech>
 			<iPrereqPopulation>12</iPrereqPopulation>
 			<Bonus>BONUS_ORGANIC_COMPUTERS</Bonus>
 			<PrereqInCityBuildings>
@@ -6352,7 +6352,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_RAINBOW_SERPENT_BREEDER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MYTHICAL_BREEDER_PEDIA</Civilopedia>
-			<PrereqTech>TECH_MYTHOLOCIAL_BEASTIARY</PrereqTech>
+			<PrereqTech>TECH_MYTHOLOGICAL_BESTIARY</PrereqTech>
 			<iPrereqPopulation>12</iPrereqPopulation>
 			<Bonus>BONUS_ORGANIC_COMPUTERS</Bonus>
 			<PrereqInCityBuildings>

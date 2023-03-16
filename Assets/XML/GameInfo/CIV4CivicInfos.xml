@@ -32,13 +32,13 @@
 			<Upkeep>NONE</Upkeep>
 			<iAIWeight>0</iAIWeight>
 			<iCityLimit>2</iCityLimit>
-			<iCityOverLimitUnhappy>4</iCityOverLimitUnhappy>
+			<iCityOverLimitUnhappy>8</iCityOverLimitUnhappy>
 			<iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
 			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
-			<iDistanceMaintenanceModifier>25</iDistanceMaintenanceModifier>
-			<iNumCitiesMaintenanceModifier>25</iNumCitiesMaintenanceModifier>
+			<iDistanceMaintenanceModifier>35</iDistanceMaintenanceModifier>
+			<iNumCitiesMaintenanceModifier>35</iNumCitiesMaintenanceModifier>
 			<iHomeAreaMaintenanceModifier>0</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>0</iOtherAreaMaintenanceModifier>
 			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
@@ -77,7 +77,12 @@
 				<iYield>0</iYield>
 			</CapitalYieldModifiers>
 			<TradeYieldModifiers/>
-			<CommerceModifiers/>
+			<CommerceModifiers>
+				<iCommerce>-2</iCommerce>
+				<iCommerce>-2</iCommerce>
+				<iCommerce>-3</iCommerce>
+				<iCommerce>-3</iCommerce>
+			</CommerceModifiers>
 			<CapitalCommerceModifiers>
 				<iCommerce>-3</iCommerce>
 				<iCommerce>-2</iCommerce>
@@ -142,7 +147,7 @@
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_LOW</Upkeep>
 			<iCityLimit>5</iCityLimit>
-			<iCityOverLimitUnhappy>4</iCityOverLimitUnhappy>
+			<iCityOverLimitUnhappy>8</iCityOverLimitUnhappy>
 			<iAIWeight>0</iAIWeight>
 			<iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
@@ -150,7 +155,7 @@
 			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
 			<iDistanceMaintenanceModifier>25</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>25</iNumCitiesMaintenanceModifier>
-			<iHomeAreaMaintenanceModifier>4</iHomeAreaMaintenanceModifier>
+			<iHomeAreaMaintenanceModifier>1</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>2</iOtherAreaMaintenanceModifier>
 			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
 			<iExtraHealth>0</iExtraHealth>
@@ -158,9 +163,9 @@
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
 			<iImprovementUpgradeRateModifier>0</iImprovementUpgradeRateModifier>
 			<iMilitaryProductionModifier>0</iMilitaryProductionModifier>
-			<iFreeUnitUpkeepMilitaryPopPercent>15</iFreeUnitUpkeepMilitaryPopPercent>
+			<iFreeUnitUpkeepMilitaryPopPercent>10</iFreeUnitUpkeepMilitaryPopPercent>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
-			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
+			<bMilitaryFoodProduction>1</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
 			<bNoUnhealthyPopulation>0</bNoUnhealthyPopulation>
 			<iExpInBorderModifier>10</iExpInBorderModifier>
@@ -168,7 +173,7 @@
 			<iLargestCityHappiness>1</iLargestCityHappiness>
 			<iCivicHappiness>0</iCivicHappiness>
 			<bNoCapitalUnhappiness>0</bNoCapitalUnhappiness>
-			<iWarWearinessModifier>5</iWarWearinessModifier>
+			<iWarWearinessModifier>10</iWarWearinessModifier>
 			<iFreeSpecialist>0</iFreeSpecialist>
 			<iTradeRoutes>0</iTradeRoutes>
 			<bNoForeignTrade>0</bNoForeignTrade>
@@ -182,18 +187,31 @@
 			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
-			<YieldModifiers/>
+			<YieldModifiers>
+				<iYield>1</iYield>
+				<iYield>1</iYield>
+				<iYield>0</iYield>
+			</YieldModifiers>
 			<CapitalYieldModifiers>
 				<iYield>3</iYield>
-				<iYield>3</iYield>
+				<iYield>2</iYield>
 				<iYield>1</iYield>
 			</CapitalYieldModifiers>
-			<TradeYieldModifiers/>
-			<CommerceModifiers/>
+			<TradeYieldModifiers>
+				<iYield>1</iYield>
+				<iYield>1</iYield>
+				<iYield>0</iYield>
+			</TradeYieldModifiers>
+			<CommerceModifiers>
+				<iCommerce>-1</iCommerce>
+				<iCommerce>-1</iCommerce>
+				<iCommerce>-1</iCommerce>
+				<iCommerce>-1</iCommerce>
+			</CommerceModifiers>
 			<CapitalCommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>2</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>-1</iCommerce>
+				<iCommerce>-1</iCommerce>
+				<iCommerce>-1</iCommerce>
 				<iCommerce>-1</iCommerce>
 			</CapitalCommerceModifiers>
 			<SpecialistExtraCommerces/>
@@ -251,23 +269,23 @@
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_LOW</Upkeep>
 			<iCityLimit>8</iCityLimit>
-			<iCityOverLimitUnhappy>4</iCityOverLimitUnhappy>
+			<iCityOverLimitUnhappy>10</iCityOverLimitUnhappy>
 			<iAIWeight>0</iAIWeight>
 			<iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
-			<iGreatGeneralRateModifier>15</iGreatGeneralRateModifier>
-			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
+			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
+			<iDomesticGreatGeneralRateModifier>10</iDomesticGreatGeneralRateModifier>
 			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
 			<iDistanceMaintenanceModifier>25</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>20</iNumCitiesMaintenanceModifier>
-			<iHomeAreaMaintenanceModifier>5</iHomeAreaMaintenanceModifier>
-			<iOtherAreaMaintenanceModifier>3</iOtherAreaMaintenanceModifier>
+			<iHomeAreaMaintenanceModifier>3</iHomeAreaMaintenanceModifier>
+			<iOtherAreaMaintenanceModifier>2</iOtherAreaMaintenanceModifier>
 			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
 			<iExtraHealth>0</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
 			<iImprovementUpgradeRateModifier>0</iImprovementUpgradeRateModifier>
-			<iMilitaryProductionModifier>15</iMilitaryProductionModifier>
-			<iFreeUnitUpkeepMilitaryPopPercent>30</iFreeUnitUpkeepMilitaryPopPercent>
+			<iMilitaryProductionModifier>10</iMilitaryProductionModifier>
+			<iFreeUnitUpkeepMilitaryPopPercent>10</iFreeUnitUpkeepMilitaryPopPercent>
 			<iHappyPerMilitaryUnit>1</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -277,7 +295,7 @@
 			<iLargestCityHappiness>0</iLargestCityHappiness>
 			<iCivicHappiness>0</iCivicHappiness>
 			<bNoCapitalUnhappiness>0</bNoCapitalUnhappiness>
-			<iWarWearinessModifier>-6</iWarWearinessModifier>
+			<iWarWearinessModifier>-5</iWarWearinessModifier>
 			<iFreeSpecialist>0</iFreeSpecialist>
 			<iTradeRoutes>0</iTradeRoutes>
 			<bNoForeignTrade>0</bNoForeignTrade>
@@ -294,25 +312,25 @@
 			<YieldModifiers>
 				<iYield>3</iYield>
 				<iYield>2</iYield>
-				<iYield>0</iYield>
+				<iYield>1</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers>
-				<iYield>5</iYield>
-				<iYield>6</iYield>
+				<iYield>3</iYield>
+				<iYield>3</iYield>
 				<iYield>2</iYield>
 			</CapitalYieldModifiers>
 			<TradeYieldModifiers/>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>-3</iCommerce>
+				<iCommerce>-1</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
-				<iCommerce>-2</iCommerce>
+				<iCommerce>-1</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>3</iCommerce>
-				<iCommerce>3</iCommerce>
+				<iCommerce>1</iCommerce>
+				<iCommerce>1</iCommerce>
 			</CapitalCommerceModifiers>
 			<SpecialistExtraCommerces/>
 			<Hurrys/>
@@ -392,15 +410,15 @@
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_MEDIUM</Upkeep>
 			<iCityLimit>12</iCityLimit>
-			<iCityOverLimitUnhappy>3</iCityOverLimitUnhappy>
+			<iCityOverLimitUnhappy>12</iCityOverLimitUnhappy>
 			<iAIWeight>0</iAIWeight>
 			<iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
-			<iGreatGeneralRateModifier>20</iGreatGeneralRateModifier>
+			<iGreatGeneralRateModifier>10</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
 			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
 			<iDistanceMaintenanceModifier>20</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>20</iNumCitiesMaintenanceModifier>
-			<iHomeAreaMaintenanceModifier>6</iHomeAreaMaintenanceModifier>
+			<iHomeAreaMaintenanceModifier>5</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>4</iOtherAreaMaintenanceModifier>
 			<iCorporationMaintenanceModifier>5</iCorporationMaintenanceModifier>
 			<iExtraHealth>0</iExtraHealth>
@@ -408,7 +426,7 @@
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
 			<iImprovementUpgradeRateModifier>0</iImprovementUpgradeRateModifier>
 			<iMilitaryProductionModifier>10</iMilitaryProductionModifier>
-			<iFreeUnitUpkeepMilitaryPopPercent>30</iFreeUnitUpkeepMilitaryPopPercent>
+			<iFreeUnitUpkeepMilitaryPopPercent>15</iFreeUnitUpkeepMilitaryPopPercent>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>3</iMaxConscript>
@@ -508,27 +526,27 @@
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CASTLE</BuildingType>
-					<iProductionModifier>20</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_STAR_FORT</BuildingType>
-					<iProductionModifier>20</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_WALLS</BuildingType>
-					<iProductionModifier>20</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_HIGH_WALLS</BuildingType>
-					<iProductionModifier>20</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_BARRICADES</BuildingType>
-					<iProductionModifier>20</iProductionModifier>
+					<iProductionModifier>5</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CEMENT_BARRIER</BuildingType>
-					<iProductionModifier>20</iProductionModifier>
+					<iProductionModifier>5</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_METAMATERIAL_WALLS</BuildingType>
@@ -544,11 +562,11 @@
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_PALACE_GARDEN</BuildingType>
-					<iProductionModifier>20</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_RIDING_SCHOOL</BuildingType>
-					<iProductionModifier>20</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_PALACE_WALLS</BuildingType>
@@ -556,11 +574,11 @@
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_SERVANTS_QUARTERS</BuildingType>
-					<iProductionModifier>20</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_THRONE_ROOM</BuildingType>
-					<iProductionModifier>20</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_BALLROOM</BuildingType>
@@ -572,11 +590,11 @@
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CITADEL</BuildingType>
-					<iProductionModifier>20</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_MOAT</BuildingType>
-					<iProductionModifier>20</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_BALISTRARIA</BuildingType>
@@ -584,11 +602,11 @@
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_BALLISTA_TURRET</BuildingType>
-					<iProductionModifier>20</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CANNON_TURRET</BuildingType>
-					<iProductionModifier>20</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CASTLE_KEEP</BuildingType>
@@ -596,7 +614,7 @@
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CASTLE_GATEHOUSE</BuildingType>
-					<iProductionModifier>20</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_DUNGEON</BuildingType>
@@ -612,19 +630,19 @@
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_SHERIFFS_OFFICE</BuildingType>
-					<iProductionModifier>20</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_POLICE_STATION</BuildingType>
-					<iProductionModifier>20</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
-					<iProductionModifier>20</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_JAIL</BuildingType>
-					<iProductionModifier>20</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
@@ -632,7 +650,7 @@
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_HOLOGRAPHIC_SCHOOL</BuildingType>
-					<iProductionModifier>20</iProductionModifier>
+					<iProductionModifier>0</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<UnitProductionModifiers>
@@ -703,7 +721,7 @@
 			<iDistanceMaintenanceModifier>15</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>20</iNumCitiesMaintenanceModifier>
 			<iHomeAreaMaintenanceModifier>5</iHomeAreaMaintenanceModifier>
-			<iOtherAreaMaintenanceModifier>6</iOtherAreaMaintenanceModifier>
+			<iOtherAreaMaintenanceModifier>5</iOtherAreaMaintenanceModifier>
 			<iCorporationMaintenanceModifier>5</iCorporationMaintenanceModifier>
 			<iExtraHealth>0</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
@@ -754,7 +772,7 @@
 			<CapitalCommerceModifiers>
 				<iCommerce>3</iCommerce>
 				<iCommerce>2</iCommerce>
-				<iCommerce>4</iCommerce>
+				<iCommerce>3</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CapitalCommerceModifiers>
 			<SpecialistExtraCommerces>
@@ -891,7 +909,7 @@
 				<iCommerce>4</iCommerce>
 				<iCommerce>3</iCommerce>
 				<iCommerce>5</iCommerce>
-				<iCommerce>5</iCommerce>
+				<iCommerce>4</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
 				<iCommerce>4</iCommerce>
@@ -1228,19 +1246,19 @@
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_HIGH</Upkeep>
 			<iAIWeight>0</iAIWeight>
-			<iGreatPeopleRateModifier>25</iGreatPeopleRateModifier>
-			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
-			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
+			<iGreatPeopleRateModifier>20</iGreatPeopleRateModifier>
+			<iGreatGeneralRateModifier>10</iGreatGeneralRateModifier>
+			<iDomesticGreatGeneralRateModifier>10</iDomesticGreatGeneralRateModifier>
 			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
 			<iDistanceMaintenanceModifier>10</iDistanceMaintenanceModifier>
-			<iNumCitiesMaintenanceModifier>15</iNumCitiesMaintenanceModifier>
-			<iHomeAreaMaintenanceModifier>9</iHomeAreaMaintenanceModifier>
+			<iNumCitiesMaintenanceModifier>10</iNumCitiesMaintenanceModifier>
+			<iHomeAreaMaintenanceModifier>10</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>7</iOtherAreaMaintenanceModifier>
-			<iCorporationMaintenanceModifier>5</iCorporationMaintenanceModifier>
+			<iCorporationMaintenanceModifier>25</iCorporationMaintenanceModifier>
 			<iExtraHealth>0</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
 			<iWorkerSpeedModifier>15</iWorkerSpeedModifier>
-			<iImprovementUpgradeRateModifier>0</iImprovementUpgradeRateModifier>
+			<iImprovementUpgradeRateModifier>10</iImprovementUpgradeRateModifier>
 			<iMilitaryProductionModifier>0</iMilitaryProductionModifier>
 			<iMilitaryUnitUpkeepMod>10</iMilitaryUnitUpkeepMod>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
@@ -1251,13 +1269,13 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<iLargestCityHappiness>0</iLargestCityHappiness>
 			<iCivicHappiness>1</iCivicHappiness>
-			<iWarWearinessModifier>15</iWarWearinessModifier>
+			<iWarWearinessModifier>10</iWarWearinessModifier>
 			<iFreeSpecialist>0</iFreeSpecialist>
 			<iTradeRoutes>1</iTradeRoutes>
 			<bNoForeignTrade>0</bNoForeignTrade>
 			<bNoCorporations>0</bNoCorporations>
 			<bNoForeignCorporations>0</bNoForeignCorporations>
-			<iCivicPercentAnger>0</iCivicPercentAnger>
+			<iCivicPercentAnger>-5</iCivicPercentAnger>
 			<bStateReligion>0</bStateReligion>
 			<bNoNonStateReligionSpread>0</bNoNonStateReligionSpread>
 			<iStateReligionHappiness>0</iStateReligionHappiness>
@@ -1272,12 +1290,16 @@
 				<iYield>5</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
-			<TradeYieldModifiers/>
+			<TradeYieldModifiers>
+			<iYield>3</iYield>
+			<iYield>3</iYield>
+			<iYield>3</iYield>
+			</TradeYieldModifiers>
 			<CommerceModifiers>
 				<iCommerce>5</iCommerce>
 				<iCommerce>5</iCommerce>
 				<iCommerce>5</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>3</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
 				<iCommerce>5</iCommerce>
@@ -1297,7 +1319,7 @@
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
 					<BuildingType>BUILDING_INDEPENDENCE_HALL</BuildingType>
-					<iHappinessChange>2</iHappinessChange>
+					<iHappinessChange>5</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
 					<BuildingType>BUILDING_LYCEUM</BuildingType>
@@ -1309,11 +1331,15 @@
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
 					<BuildingType>BUILDING_HOLOGRAPHIC_SCHOOL</BuildingType>
-					<iHappinessChange>2</iHappinessChange>
+					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
 					<BuildingType>BUILDING_TELESCREEN</BuildingType>
 					<iHappinessChange>-4</iHappinessChange>
+				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDING_THE_PENTAGON</BuildingType>
+					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges/>
@@ -1390,12 +1416,12 @@
 			<iNumCitiesMaintenanceModifier>15</iNumCitiesMaintenanceModifier>
 			<iHomeAreaMaintenanceModifier>10</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>8</iOtherAreaMaintenanceModifier>
-			<iCorporationMaintenanceModifier>10</iCorporationMaintenanceModifier>
+			<iCorporationMaintenanceModifier>20</iCorporationMaintenanceModifier>
 			<iExtraHealth>0</iExtraHealth>
 			<iFreeExperience>2</iFreeExperience>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
 			<iImprovementUpgradeRateModifier>0</iImprovementUpgradeRateModifier>
-			<iMilitaryProductionModifier>15</iMilitaryProductionModifier>
+			<iMilitaryProductionModifier>20</iMilitaryProductionModifier>
 			<iPopulationgrowthratepercentage>0</iPopulationgrowthratepercentage>
 			<iFreeUnitUpkeepCivilianPopPercent>30</iFreeUnitUpkeepCivilianPopPercent>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
@@ -1478,10 +1504,6 @@
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
 					<BuildingType>BUILDING_MILITARY_SATELLITES</BuildingType>
-					<iHappinessChange>1</iHappinessChange>
-				</BuildingHappinessChange>
-				<BuildingHappinessChange>
-					<BuildingType>BUILDING_THE_PENTAGON</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -1569,7 +1591,7 @@
 			<iNumCitiesMaintenanceModifier>10</iNumCitiesMaintenanceModifier>
 			<iHomeAreaMaintenanceModifier>15</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>10</iOtherAreaMaintenanceModifier>
-			<iCorporationMaintenanceModifier>7</iCorporationMaintenanceModifier>
+			<iCorporationMaintenanceModifier>10</iCorporationMaintenanceModifier>
 			<iExtraHealth>0</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
@@ -1827,7 +1849,7 @@
 			<Upkeep>UPKEEP_HIGH</Upkeep>
 			<iAIWeight>0</iAIWeight>
 			<iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
-			<iGreatGeneralRateModifier>50</iGreatGeneralRateModifier>
+			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
 			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
 			<iDistanceMaintenanceModifier>25</iDistanceMaintenanceModifier>
@@ -1835,12 +1857,12 @@
 			<iHomeAreaMaintenanceModifier>10</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>10</iOtherAreaMaintenanceModifier>
 			<iCorporationMaintenanceModifier>10</iCorporationMaintenanceModifier>
-			<iExtraHealth>0</iExtraHealth>
+			<iExtraHealth>2</iExtraHealth>
 			<iFreeExperience>2</iFreeExperience>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
 			<iImprovementUpgradeRateModifier>0</iImprovementUpgradeRateModifier>
 			<iMilitaryProductionModifier>20</iMilitaryProductionModifier>
-			<iFreeUnitUpkeepMilitaryPopPercent>30</iFreeUnitUpkeepMilitaryPopPercent>
+			<iFreeUnitUpkeepMilitaryPopPercent>20</iFreeUnitUpkeepMilitaryPopPercent>
 			<iMilitaryUnitUpkeepMod>10</iMilitaryUnitUpkeepMod>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
@@ -1869,7 +1891,7 @@
 			<YieldModifiers>
 				<iYield>0</iYield>
 				<iYield>10</iYield>
-				<iYield>0</iYield>
+				<iYield>5</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
@@ -1882,7 +1904,7 @@
 			<SpecialistExtraCommerces>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>5</iCommerce>
 			</SpecialistExtraCommerces>
 			<Hurrys/>
 			<SpecialBuildingNotRequireds/>
@@ -1918,13 +1940,6 @@
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<bFixedBorders>0</bFixedBorders>
 			<WeLoveTheKing>TXT_KEY_CIVIC_WE_LOVE_MONARCH</WeLoveTheKing>
-			<!-- <CivicAttitudeChanges>
-				<CivicAttitudeChange>
-					<CivicType>CIVIC_MONARCHY</CivicType>
-					<iAttitudeChange>1</iAttitudeChange>
-					<Description>TXT_KEY_CIVIC_ATTITUDE_MONARCHY_TO_MONARCHY</Description>
-				</CivicAttitudeChange>
-			</CivicAttitudeChanges> -->
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
@@ -2234,7 +2249,7 @@
 			<Civilopedia>TXT_KEY_CIVIC_OBEDIENCE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_OBEDIENCE_STRATEGY</Strategy>
 			<Upkeep>NONE</Upkeep>
-			<iDistanceMaintenanceModifier>3</iDistanceMaintenanceModifier>
+			<iDistanceMaintenanceModifier>10</iDistanceMaintenanceModifier>
 			<CapitalCommerceModifiers>
 				<iCommerce>-2</iCommerce>
 				<iCommerce>-2</iCommerce>
@@ -2327,9 +2342,9 @@
 			<iStateReligionBuildingProductionModifier>5</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
-				<iYield>0</iYield>
-				<iYield>0</iYield>
-				<iYield>0</iYield>
+				<iYield>1</iYield>
+				<iYield>1</iYield>
+				<iYield>1</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers>
@@ -2339,7 +2354,7 @@
 			</TradeYieldModifiers>
 			<CommerceModifiers>
 				<iCommerce>2</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>2</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
@@ -2722,7 +2737,7 @@
 			<CapitalYieldModifiers>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
-				<iYield>5</iYield>
+				<iYield>3</iYield>
 			</CapitalYieldModifiers>
 			<TradeYieldModifiers>
 				<iYield>3</iYield>
@@ -3563,14 +3578,14 @@
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
 			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
-			<iDistanceMaintenanceModifier>0</iDistanceMaintenanceModifier>
-			<iNumCitiesMaintenanceModifier>0</iNumCitiesMaintenanceModifier>
-			<iHomeAreaMaintenanceModifier>3</iHomeAreaMaintenanceModifier>
-			<iOtherAreaMaintenanceModifier>4</iOtherAreaMaintenanceModifier>
+			<iDistanceMaintenanceModifier>10</iDistanceMaintenanceModifier>
+			<iNumCitiesMaintenanceModifier>10</iNumCitiesMaintenanceModifier>
+			<iHomeAreaMaintenanceModifier>10</iHomeAreaMaintenanceModifier>
+			<iOtherAreaMaintenanceModifier>15</iOtherAreaMaintenanceModifier>
 			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
 			<iExtraHealth>0</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
-			<iWorkerSpeedModifier>30</iWorkerSpeedModifier>
+			<iWorkerSpeedModifier>20</iWorkerSpeedModifier>
 			<iImprovementUpgradeRateModifier>0</iImprovementUpgradeRateModifier>
 			<iMilitaryProductionModifier>0</iMilitaryProductionModifier>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
@@ -3596,13 +3611,13 @@
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
-				<iYield>0</iYield>
+				<iYield>-5</iYield>
 				<iYield>10</iYield>
 				<iYield>0</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers>
 				<iYield>0</iYield>
-				<iYield>0</iYield>
+				<iYield>5</iYield>
 				<iYield>0</iYield>
 			</CapitalYieldModifiers>
 			<TradeYieldModifiers/>
@@ -3615,7 +3630,8 @@
 			<CapitalCommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>-5</iCommerce>
+				<iCommerce>10</iCommerce>
 			</CapitalCommerceModifiers>
 			<SpecialistExtraCommerces/>
 			<Hurrys/>
@@ -3753,7 +3769,7 @@
 			<BuildingHealthChanges>
 				<BuildingHealthChange>
 					<BuildingType>BUILDING_FACTORY_SOYLENT_GREEN</BuildingType>
-					<iHealthChange>-4</iHealthChange>
+					<iHealthChange>-5</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
 					<BuildingType>BUILDING_MATERIALIZATION_COMPLEX</BuildingType>
@@ -4036,9 +4052,9 @@
 			<iGreatGeneralRateModifier>5</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
 			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
-			<iDistanceMaintenanceModifier>0</iDistanceMaintenanceModifier>
+			<iDistanceMaintenanceModifier>5</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>5</iNumCitiesMaintenanceModifier>
-			<iHomeAreaMaintenanceModifier>1</iHomeAreaMaintenanceModifier>
+			<iHomeAreaMaintenanceModifier>2</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>2</iOtherAreaMaintenanceModifier>
 			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
 			<iExtraHealth>0</iExtraHealth>
@@ -4075,14 +4091,14 @@
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers>
+				<iYield>1</iYield>
 				<iYield>0</iYield>
-				<iYield>0</iYield>
-				<iYield>0</iYield>
+				<iYield>-2</iYield>
 			</TradeYieldModifiers>
 			<CommerceModifiers>
 				<iCommerce>-4</iCommerce>
 				<iCommerce>-3</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>-2</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
@@ -4206,7 +4222,7 @@
 			<CapitalCommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CapitalCommerceModifiers>
 			<SpecialistExtraCommerces/>
@@ -4305,7 +4321,7 @@
 			<CommerceModifiers>
 				<iCommerce>2</iCommerce>
 				<iCommerce>2</iCommerce>
-				<iCommerce>1</iCommerce>
+				<iCommerce>2</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
@@ -4376,7 +4392,7 @@
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
 			<iImprovementUpgradeRateModifier>0</iImprovementUpgradeRateModifier>
 			<iMilitaryProductionModifier>10</iMilitaryProductionModifier>
-			<iFreeUnitUpkeepMilitaryPopPercent>30</iFreeUnitUpkeepMilitaryPopPercent>
+			<iFreeUnitUpkeepMilitaryPopPercent>20</iFreeUnitUpkeepMilitaryPopPercent>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -4410,7 +4426,7 @@
 			<CapitalCommerceModifiers>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CapitalCommerceModifiers>
 			<SpecialistExtraCommerces/>
@@ -4841,7 +4857,11 @@
 			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
-			<YieldModifiers/>
+			<YieldModifiers>
+				<iYield>3</iYield>
+				<iYield>3</iYield>
+				<iYield>4</iYield>
+			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
 			<CommerceModifiers>
@@ -4935,7 +4955,7 @@
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
-				<iYield>2</iYield>
+				<iYield>1</iYield>
 				<iYield>2</iYield>
 				<iYield>2</iYield>
 			</YieldModifiers>
@@ -5093,7 +5113,7 @@
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_HIGH</Upkeep>
 			<iAIWeight>0</iAIWeight>
-			<iGreatPeopleRateModifier>25</iGreatPeopleRateModifier>
+			<iGreatPeopleRateModifier>20</iGreatPeopleRateModifier>
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
 			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
@@ -5136,8 +5156,8 @@
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>5</iCommerce>
 				<iCommerce>0</iCommerce>
+				<iCommerce>2</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
@@ -5225,7 +5245,7 @@
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
 				<iYield>0</iYield>
-				<iYield>15</iYield>
+				<iYield>10</iYield>
 				<iYield>0</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
@@ -5288,10 +5308,10 @@
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>5</iDomesticGreatGeneralRateModifier>
 			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
-			<iDistanceMaintenanceModifier>0</iDistanceMaintenanceModifier>
+			<iDistanceMaintenanceModifier>10</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>5</iNumCitiesMaintenanceModifier>
 			<iHomeAreaMaintenanceModifier>0</iHomeAreaMaintenanceModifier>
-			<iOtherAreaMaintenanceModifier>0</iOtherAreaMaintenanceModifier>
+			<iOtherAreaMaintenanceModifier>2</iOtherAreaMaintenanceModifier>
 			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
 			<iExtraHealth>0</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
@@ -5321,7 +5341,7 @@
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers/>
 			<CapitalYieldModifiers>
-				<iYield>0</iYield>
+				<iYield>-1</iYield>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
 			</CapitalYieldModifiers>
@@ -5329,13 +5349,13 @@
 			<CommerceModifiers>
 				<iCommerce>-2</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>-2</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
 				<iCommerce>-2</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>-2</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CapitalCommerceModifiers>
 			<SpecialistExtraCommerces/>
@@ -5413,7 +5433,7 @@
 			<iAIWeight>0</iAIWeight>
 			<iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
-			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
+			<iDomesticGreatGeneralRateModifier>5</iDomesticGreatGeneralRateModifier>
 			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
 			<iDistanceMaintenanceModifier>10</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>10</iNumCitiesMaintenanceModifier>
@@ -5424,7 +5444,7 @@
 			<iFreeExperience>1</iFreeExperience>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
 			<iImprovementUpgradeRateModifier>0</iImprovementUpgradeRateModifier>
-			<iMilitaryProductionModifier>0</iMilitaryProductionModifier>
+			<iMilitaryProductionModifier>5</iMilitaryProductionModifier>
 			<iFreeUnitUpkeepMilitary>5</iFreeUnitUpkeepMilitary>
 			<iFreeUnitUpkeepMilitaryPopPercent>15</iFreeUnitUpkeepMilitaryPopPercent>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
@@ -5434,7 +5454,7 @@
 			<iExpInBorderModifier>0</iExpInBorderModifier>
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<iLargestCityHappiness>0</iLargestCityHappiness>
-			<iCivicHappiness>0</iCivicHappiness>
+			<iCivicHappiness>-1</iCivicHappiness>
 			<iWarWearinessModifier>0</iWarWearinessModifier>
 			<iFreeSpecialist>0</iFreeSpecialist>
 			<iTradeRoutes>0</iTradeRoutes>
@@ -5457,15 +5477,15 @@
 			</CapitalYieldModifiers>
 			<TradeYieldModifiers/>
 			<CommerceModifiers>
-				<iCommerce>-3</iCommerce>
-				<iCommerce>-2</iCommerce>
-				<iCommerce>-3</iCommerce>
-				<iCommerce>2</iCommerce>
+				<iCommerce>-1</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>-1</iCommerce>
+				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
-				<iCommerce>-2</iCommerce>
+				<iCommerce>-1</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>-3</iCommerce>
+				<iCommerce>-2</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CapitalCommerceModifiers>
 			<BonusCommerceModifiers/>
@@ -5499,19 +5519,19 @@
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
 					<UnitType>UNIT_THIEF</UnitType>
-					<iProductionModifier>20</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</UnitProductionModifier>
 				<UnitProductionModifier>
 					<UnitType>UNIT_ROGUE</UnitType>
-					<iProductionModifier>20</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</UnitProductionModifier>
 				<UnitProductionModifier>
 					<UnitType>UNIT_AMBUSHER</UnitType>
-					<iProductionModifier>20</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</UnitProductionModifier>
 				<UnitProductionModifier>
 					<UnitType>UNIT_ASSASSIN</UnitType>
-					<iProductionModifier>20</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</UnitProductionModifier>
 			</UnitProductionModifiers>
 			<iAttitudeShareMod>1</iAttitudeShareMod>
@@ -5556,7 +5576,7 @@
 			<iImprovementUpgradeRateModifier>0</iImprovementUpgradeRateModifier>
 			<iMilitaryProductionModifier>0</iMilitaryProductionModifier>
 			<iFreeUnitUpkeepMilitary>7</iFreeUnitUpkeepMilitary>
-			<iFreeUnitUpkeepMilitaryPopPercent>15</iFreeUnitUpkeepMilitaryPopPercent>
+			<iFreeUnitUpkeepMilitaryPopPercent>10</iFreeUnitUpkeepMilitaryPopPercent>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -5587,7 +5607,7 @@
 			</CapitalYieldModifiers>
 			<TradeYieldModifiers/>
 			<CommerceModifiers>
-				<iCommerce>-2</iCommerce>
+				<iCommerce>-1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
@@ -5687,7 +5707,7 @@
 			<YieldModifiers/>
 			<CapitalYieldModifiers>
 				<iYield>0</iYield>
-				<iYield>5</iYield>
+				<iYield>3</iYield>
 				<iYield>0</iYield>
 			</CapitalYieldModifiers>
 			<TradeYieldModifiers/>
@@ -5695,12 +5715,13 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
 				<iCommerce>-2</iCommerce>
 				<iCommerce>2</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
 			</CapitalCommerceModifiers>
 			<SpecialistExtraCommerces/>
 			<Hurrys/>
@@ -5912,15 +5933,15 @@
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
 			<CommerceModifiers>
-				<iCommerce>5</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>3</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>5</iCommerce>
 				<iCommerce>-2</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
 				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>5</iCommerce>
+				<iCommerce>1</iCommerce>
+				<iCommerce>3</iCommerce>
 				<iCommerce>-5</iCommerce>
 			</CapitalCommerceModifiers>
 			<SpecialistExtraCommerces/>
@@ -5935,7 +5956,7 @@
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
 					<BuildingType>BUILDING_UNITED_NATIONS</BuildingType>
-					<iHappinessChange>2</iHappinessChange>
+					<iHappinessChange>0</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
 					<BuildingType>BUILDING_OLYMPIC_GAMES</BuildingType>
@@ -5967,7 +5988,7 @@
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
 					<BuildingType>BUILDING_MAJOR_LEAGUE_STADIUM</BuildingType>
-					<iHappinessChange>1</iHappinessChange>
+					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
 					<BuildingType>BUILDING_MINOR_LEAGUE_STADIUM</BuildingType>
@@ -6079,7 +6100,7 @@
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
 					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
-					<iHappinessChange>1</iHappinessChange>
+					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges/>
@@ -7108,7 +7129,7 @@
 			<iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
-			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
+			<iStateReligionGreatPeopleRateModifier>-5</iStateReligionGreatPeopleRateModifier>
 			<iDistanceMaintenanceModifier>0</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>0</iNumCitiesMaintenanceModifier>
 			<iHomeAreaMaintenanceModifier>0</iHomeAreaMaintenanceModifier>
@@ -7140,13 +7161,17 @@
 			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
-			<YieldModifiers/>
+			<YieldModifiers>
+				<iYield>0</iYield>
+				<iYield>-1</iYield>
+				<iYield>-1</iYield>
+			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
 			<CommerceModifiers>
 				<iCommerce>-1</iCommerce>
 				<iCommerce>-1</iCommerce>
-				<iCommerce>-1</iCommerce>
+				<iCommerce>-2</iCommerce>
 				<iCommerce>-1</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
@@ -7248,19 +7273,23 @@
 			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
-			<YieldModifiers/>
+			<YieldModifiers>
+				<iYield>1</iYield>
+				<iYield>1</iYield>
+				<iYield>0</iYield>
+			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>-1</iCommerce>
-				<iCommerce>-1</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
 				<iCommerce>0</iCommerce>
-				<iCommerce>-1</iCommerce>
-				<iCommerce>-1</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CapitalCommerceModifiers>
 			<SpecialistExtraCommerces/>
@@ -7416,10 +7445,10 @@
 			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
 			<iExtraHealth>0</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
-			<iWorkerSpeedModifier>10</iWorkerSpeedModifier>
+			<iWorkerSpeedModifier>5</iWorkerSpeedModifier>
 			<iImprovementUpgradeRateModifier>0</iImprovementUpgradeRateModifier>
 			<iMilitaryProductionModifier>0</iMilitaryProductionModifier>
-			<iFreeUnitUpkeepMilitary>6</iFreeUnitUpkeepMilitary>
+			<iFreeUnitUpkeepMilitary>5</iFreeUnitUpkeepMilitary>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -7442,17 +7471,21 @@
 			<iStateReligionUnitProductionModifier>10</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>10</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>1</iStateReligionFreeExperience>
-			<YieldModifiers/>
+			<YieldModifiers>
+				<iYield>2</iYield>
+				<iYield>3</iYield>
+				<iYield>1</iYield>
+			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
 			<CommerceModifiers>
-				<iCommerce>-1</iCommerce>
-				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>2</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
-				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 				<iCommerce>2</iCommerce>
@@ -7583,13 +7616,17 @@
 			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
-			<YieldModifiers/>
+			<YieldModifiers>
+				<iYield>2</iYield>
+				<iYield>1</iYield>
+				<iYield>1</iYield>
+			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>2</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
@@ -7693,7 +7730,11 @@
 			<iStateReligionUnitProductionModifier>5</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>15</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>1</iStateReligionFreeExperience>
-			<YieldModifiers/>
+			<YieldModifiers>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
 			<CommerceModifiers>
@@ -7838,7 +7879,7 @@
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
+						<iCommerce>15</iCommerce>
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
@@ -7846,7 +7887,7 @@
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
+						<iCommerce>15</iCommerce>
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
@@ -7894,7 +7935,7 @@
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>10</iCommerce>
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
@@ -7918,7 +7959,7 @@
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>10</iCommerce>
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
@@ -7958,7 +7999,7 @@
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>20</iCommerce>
+						<iCommerce>10</iCommerce>
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
@@ -8179,19 +8220,23 @@
 			<iStateReligionUnitProductionModifier>20</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>2</iStateReligionFreeExperience>
-			<YieldModifiers/>
+			<YieldModifiers>
+				<iYield>0</iYield>
+				<iYield>-3</iYield>
+				<iYield>0</iYield>
+			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>-2</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
 				<iCommerce>5</iCommerce>
 				<iCommerce>1</iCommerce>
-				<iCommerce>1</iCommerce>
+				<iCommerce>-1</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CapitalCommerceModifiers>
 			<SpecialistExtraCommerces/>
@@ -8257,7 +8302,7 @@
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_MEDIUM</Upkeep>
 			<iAIWeight>0</iAIWeight>
-			<iGreatPeopleRateModifier>10</iGreatPeopleRateModifier>
+			<iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
 			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
@@ -8265,7 +8310,7 @@
 			<iNumCitiesMaintenanceModifier>10</iNumCitiesMaintenanceModifier>
 			<iHomeAreaMaintenanceModifier>2</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>3</iOtherAreaMaintenanceModifier>
-			<iCorporationMaintenanceModifier>3</iCorporationMaintenanceModifier>
+			<iCorporationMaintenanceModifier>10</iCorporationMaintenanceModifier>
 			<iExtraHealth>0</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
@@ -8395,12 +8440,12 @@
 			<TradeYieldModifiers/>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
-				<iCommerce>3</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>-2</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
-				<iCommerce>-5</iCommerce>
-				<iCommerce>3</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>-2</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CapitalCommerceModifiers>
@@ -8516,9 +8561,9 @@
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
 			<CommerceModifiers>
-				<iCommerce>5</iCommerce>
-				<iCommerce>5</iCommerce>
-				<iCommerce>10</iCommerce>
+				<iCommerce>2</iCommerce>
+				<iCommerce>3</iCommerce>
+				<iCommerce>2</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
@@ -8582,7 +8627,7 @@
 			<iWorkerSpeedModifier>10</iWorkerSpeedModifier>
 			<iImprovementUpgradeRateModifier>0</iImprovementUpgradeRateModifier>
 			<iMilitaryProductionModifier>0</iMilitaryProductionModifier>
-			<iFreeUnitUpkeepMilitary>6</iFreeUnitUpkeepMilitary>
+			<iFreeUnitUpkeepMilitary>5</iFreeUnitUpkeepMilitary>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -8614,7 +8659,7 @@
 				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
-				<iCommerce>30</iCommerce>
+				<iCommerce>10</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CapitalCommerceModifiers>
@@ -8783,19 +8828,19 @@
 			</CapitalCommerceModifiers>
 			<iNationalCaptureProbabilityModifier>10</iNationalCaptureProbabilityModifier>
 			<iNationalCaptureResistanceModifier>-10</iNationalCaptureResistanceModifier>
-			<iPopulationgrowthratepercentage>33</iPopulationgrowthratepercentage>
+			<iPopulationgrowthratepercentage>10</iPopulationgrowthratepercentage>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
 					<BuildingType>BUILDING_WORLDVIEW_SLAVERY_ACTIVE</BuildingType>
-					<iHappinessChange>1</iHappinessChange>
+					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
 					<BuildingType>BUILDING_WORLDVIEW_CANNIBALISM_ACTIVE</BuildingType>
-					<iHappinessChange>1</iHappinessChange>
+					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
 					<BuildingType>BUILDING_EFFECT_EMANCIPATION_PROCLAMATION</BuildingType>
-					<iHappinessChange>-1</iHappinessChange>
+					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 			<Button>art/Interface/buttons/civics/sparth/society_primitive.dds</Button>
@@ -8856,7 +8901,7 @@
 			<iHomeAreaMaintenanceModifier>1</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>1</iOtherAreaMaintenanceModifier>
 			<iCorporationMaintenanceModifier>1</iCorporationMaintenanceModifier>
-			<iExtraHealth>-1</iExtraHealth>
+			<iExtraHealth>0</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
 			<iImprovementUpgradeRateModifier>0</iImprovementUpgradeRateModifier>
@@ -8892,14 +8937,14 @@
 			<TradeYieldModifiers/>
 			<CommerceModifiers>
 				<iCommerce>-1</iCommerce>
-				<iCommerce>-2</iCommerce>
+				<iCommerce>-1</iCommerce>
 				<iCommerce>-1</iCommerce>
 				<iCommerce>-1</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
 				<iCommerce>-2</iCommerce>
 				<iCommerce>-1</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>-1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CapitalCommerceModifiers>
 			<SpecialistExtraCommerces/>
@@ -8913,11 +8958,11 @@
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
 					<BuildingType>BUILDING_WORLDVIEW_CANNIBALISM_ACTIVE</BuildingType>
-					<iHappinessChange>1</iHappinessChange>
+					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
 					<BuildingType>BUILDING_EFFECT_EMANCIPATION_PROCLAMATION</BuildingType>
-					<iHappinessChange>-1</iHappinessChange>
+					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges/>
@@ -8950,8 +8995,8 @@
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_JUNGLE_CAMP</ImprovementType>
 					<ImprovementYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
+						<iYield>1</iYield>
+						<iYield>1</iYield>
 						<iYield>1</iYield>
 					</ImprovementYields>
 				</ImprovementYieldChange>
@@ -8959,7 +9004,7 @@
 					<ImprovementType>IMPROVEMENT_PASTURE</ImprovementType>
 					<ImprovementYields>
 						<iYield>1</iYield>
-						<iYield>0</iYield>
+						<iYield>1</iYield>
 						<iYield>0</iYield>
 					</ImprovementYields>
 				</ImprovementYieldChange>
@@ -8977,7 +9022,7 @@
 			<bFixedBorders>0</bFixedBorders>
 			<WeLoveTheKing/>
 			<Flavors/>
-			<iPopulationgrowthratepercentage>20</iPopulationgrowthratepercentage>
+			<iPopulationgrowthratepercentage>10</iPopulationgrowthratepercentage>
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
 					<UnitType>UNIT_TRIBE</UnitType>
@@ -9017,15 +9062,15 @@
 			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
 			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
 			<iDistanceMaintenanceModifier>15</iDistanceMaintenanceModifier>
-			<iNumCitiesMaintenanceModifier>20</iNumCitiesMaintenanceModifier>
-			<iHomeAreaMaintenanceModifier>2</iHomeAreaMaintenanceModifier>
+			<iNumCitiesMaintenanceModifier>15</iNumCitiesMaintenanceModifier>
+			<iHomeAreaMaintenanceModifier>3</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>2</iOtherAreaMaintenanceModifier>
-			<iCorporationMaintenanceModifier>1</iCorporationMaintenanceModifier>
+			<iCorporationMaintenanceModifier>10</iCorporationMaintenanceModifier>
 			<iExtraHealth>0</iExtraHealth>
 			<iFreeExperience>2</iFreeExperience>
 			<iWorkerSpeedModifier>5</iWorkerSpeedModifier>
 			<iImprovementUpgradeRateModifier>0</iImprovementUpgradeRateModifier>
-			<iMilitaryProductionModifier>0</iMilitaryProductionModifier>
+			<iMilitaryProductionModifier>5</iMilitaryProductionModifier>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -9056,13 +9101,14 @@
 			<TradeYieldModifiers/>
 			<CommerceModifiers>
 				<iCommerce>2</iCommerce>
-				<iCommerce>-1</iCommerce>
-				<iCommerce>-2</iCommerce>
+				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>2</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
+				<iCommerce>1</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>-2</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CapitalCommerceModifiers>
 			<SpecialistExtraCommerces>
@@ -9263,12 +9309,13 @@
 			<CommerceModifiers>
 				<iCommerce>3</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>5</iCommerce>
+				<iCommerce>3</iCommerce>
+				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
 				<iCommerce>3</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>5</iCommerce>
+				<iCommerce>1</iCommerce>
+				<iCommerce>3</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CapitalCommerceModifiers>
 			<SpecialistExtraCommerces/>
@@ -9825,13 +9872,13 @@
 			<iStateReligionBuildingProductionModifier>5</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
-				<iYield>5</iYield>
 				<iYield>3</iYield>
-				<iYield>2</iYield>
+				<iYield>3</iYield>
+				<iYield>1</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers>
-				<iYield>7</iYield>
-				<iYield>7</iYield>
+				<iYield>4</iYield>
+				<iYield>3</iYield>
 				<iYield>5</iYield>
 			</CapitalYieldModifiers>
 			<TradeYieldModifiers/>
@@ -9844,7 +9891,7 @@
 			<CapitalCommerceModifiers>
 				<iCommerce>4</iCommerce>
 				<iCommerce>-2</iCommerce>
-				<iCommerce>1</iCommerce>
+				<iCommerce>-1</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CapitalCommerceModifiers>
 			<SpecialistExtraCommerces/>
@@ -10010,9 +10057,9 @@
 				<iCommerce>-2</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
-				<iCommerce>-5</iCommerce>
-				<iCommerce>-2</iCommerce>
-				<iCommerce>5</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>2</iCommerce>
 				<iCommerce>-2</iCommerce>
 			</CapitalCommerceModifiers>
 			<SpecialistExtraCommerces/>
@@ -10227,16 +10274,16 @@
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
 			<CommerceModifiers>
-				<iCommerce>5</iCommerce>
-				<iCommerce>5</iCommerce>
-				<iCommerce>5</iCommerce>
-				<iCommerce>5</iCommerce>
+				<iCommerce>4</iCommerce>
+				<iCommerce>4</iCommerce>
+				<iCommerce>4</iCommerce>
+				<iCommerce>4</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
-				<iCommerce>5</iCommerce>
-				<iCommerce>5</iCommerce>
-				<iCommerce>5</iCommerce>
-				<iCommerce>5</iCommerce>
+				<iCommerce>3</iCommerce>
+				<iCommerce>4</iCommerce>
+				<iCommerce>4</iCommerce>
+				<iCommerce>4</iCommerce>
 			</CapitalCommerceModifiers>
 			<SpecialistExtraCommerces>
 				<iCommerce>0</iCommerce>
@@ -10398,16 +10445,16 @@
 				<iYield>2</iYield>
 			</TradeYieldModifiers>
 			<CommerceModifiers>
+				<iCommerce>-3</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>-5</iCommerce>
-				<iCommerce>2</iCommerce>
-				<iCommerce>-5</iCommerce>
-				<iCommerce>5</iCommerce>
+				<iCommerce>3</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
 				<iCommerce>2</iCommerce>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>5</iCommerce>
+				<iCommerce>4</iCommerce>
 			</CapitalCommerceModifiers>
 			<SpecialistExtraCommerces/>
 			<Hurrys/>
@@ -10531,24 +10578,24 @@
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
 				<iYield>2</iYield>
+				<iYield>1</iYield>
 				<iYield>2</iYield>
-				<iYield>3</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers>
 				<iYield>0</iYield>
-				<iYield>5</iYield>
+				<iYield>3</iYield>
 				<iYield>4</iYield>
 			</CapitalYieldModifiers>
 			<TradeYieldModifiers>
 				<iYield>3</iYield>
-				<iYield>4</iYield>
-				<iYield>4</iYield>
+				<iYield>3</iYield>
+				<iYield>3</iYield>
 			</TradeYieldModifiers>
 			<CommerceModifiers>
-				<iCommerce>5</iCommerce>
-				<iCommerce>5</iCommerce>
+				<iCommerce>3</iCommerce>
+				<iCommerce>2</iCommerce>
 				<iCommerce>-5</iCommerce>
-				<iCommerce>5</iCommerce>
+				<iCommerce>4</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
@@ -10648,15 +10695,16 @@
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
 				<iYield>5</iYield>
-				<iYield>20</iYield>
+				<iYield>5</iYield>
 				<iYield>5</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
 			<CommerceModifiers>
-				<iCommerce>10</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>3</iCommerce>
+				<iCommerce>2</iCommerce>
 				<iCommerce>-50</iCommerce>
+				<iCommerce>3</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces>
@@ -10836,7 +10884,7 @@
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
-				<iYield>10</iYield>
+				<iYield>5</iYield>
 				<iYield>0</iYield>
 				<iYield>5</iYield>
 			</YieldModifiers>
@@ -10942,13 +10990,13 @@
 			<CommerceModifiers>
 				<iCommerce>-5</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>-5</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
 				<iCommerce>-5</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>-5</iCommerce>
 			</CapitalCommerceModifiers>
 			<SpecialistExtraCommerces/>
@@ -11095,7 +11143,7 @@
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
-				<iYield>3</iYield>
+				<iYield>2</iYield>
 				<iYield>1</iYield>
 				<iYield>0</iYield>
 			</YieldModifiers>
@@ -11179,7 +11227,7 @@
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
-				<iYield>4</iYield>
+				<iYield>3</iYield>
 				<iYield>3</iYield>
 				<iYield>1</iYield>
 			</YieldModifiers>
@@ -11192,13 +11240,13 @@
 			<CommerceModifiers>
 				<iCommerce>1</iCommerce>
 				<iCommerce>2</iCommerce>
-				<iCommerce>3</iCommerce>
+				<iCommerce>2</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
 				<iCommerce>1</iCommerce>
 				<iCommerce>2</iCommerce>
-				<iCommerce>3</iCommerce>
+				<iCommerce>2</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CapitalCommerceModifiers>
 			<SpecialistExtraCommerces/>
@@ -11276,13 +11324,13 @@
 			</TradeYieldModifiers>
 			<CommerceModifiers>
 				<iCommerce>2</iCommerce>
-				<iCommerce>4</iCommerce>
+				<iCommerce>3</iCommerce>
 				<iCommerce>3</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
 				<iCommerce>2</iCommerce>
-				<iCommerce>4</iCommerce>
+				<iCommerce>3</iCommerce>
 				<iCommerce>3</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CapitalCommerceModifiers>
@@ -11387,7 +11435,7 @@
 			<CommerceModifiers>
 				<iCommerce>3</iCommerce>
 				<iCommerce>3</iCommerce>
-				<iCommerce>3</iCommerce>
+				<iCommerce>2</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
@@ -11628,12 +11676,12 @@
 			<YieldModifiers>
 				<iYield>3</iYield>
 				<iYield>3</iYield>
-				<iYield>5</iYield>
+				<iYield>4</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers>
-				<iYield>4</iYield>
-				<iYield>4</iYield>
+				<iYield>3</iYield>
+				<iYield>3</iYield>
 				<iYield>3</iYield>
 			</TradeYieldModifiers>
 			<CommerceModifiers>
@@ -11755,20 +11803,20 @@
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
-				<iYield>4</iYield>
-				<iYield>4</iYield>
-				<iYield>4</iYield>
+				<iYield>2</iYield>
+				<iYield>2</iYield>
+				<iYield>3</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers>
-				<iYield>4</iYield>
-				<iYield>4</iYield>
-				<iYield>5</iYield>
+				<iYield>2</iYield>
+				<iYield>2</iYield>
+				<iYield>3</iYield>
 			</TradeYieldModifiers>
 			<CommerceModifiers>
 				<iCommerce>4</iCommerce>
-				<iCommerce>3</iCommerce>
 				<iCommerce>2</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers/>
@@ -11865,20 +11913,21 @@
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
-				<iYield>10</iYield>
-				<iYield>20</iYield>
+				<iYield>5</iYield>
+				<iYield>5</iYield>
 				<iYield>5</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers>
-				<iYield>0</iYield>
-				<iYield>0</iYield>
-				<iYield>0</iYield>
+				<iYield>3</iYield>
+				<iYield>3</iYield>
+				<iYield>3</iYield>
 			</TradeYieldModifiers>
 			<CommerceModifiers>
-				<iCommerce>10</iCommerce>
+				<iCommerce>5</iCommerce>
+				<iCommerce>1</iCommerce>
+				<iCommerce>3</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>20</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
@@ -12019,15 +12068,15 @@
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
-				<iYield>5</iYield>
-				<iYield>10</iYield>
-				<iYield>10</iYield>
+				<iYield>2</iYield>
+				<iYield>3</iYield>
+				<iYield>2</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers>
 				<iYield>2</iYield>
 				<iYield>3</iYield>
-				<iYield>5</iYield>
+				<iYield>4</iYield>
 			</TradeYieldModifiers>
 			<CommerceModifiers/>
 			<CapitalCommerceModifiers/>
@@ -12145,17 +12194,17 @@
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
 			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
-			<iDistanceMaintenanceModifier>10</iDistanceMaintenanceModifier>
-			<iNumCitiesMaintenanceModifier>10</iNumCitiesMaintenanceModifier>
+			<iDistanceMaintenanceModifier>15</iDistanceMaintenanceModifier>
+			<iNumCitiesMaintenanceModifier>15</iNumCitiesMaintenanceModifier>
 			<iHomeAreaMaintenanceModifier>7</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>7</iOtherAreaMaintenanceModifier>
-			<iCorporationMaintenanceModifier>20</iCorporationMaintenanceModifier>
-			<iExtraHealth>3</iExtraHealth>
+			<iCorporationMaintenanceModifier>30</iCorporationMaintenanceModifier>
+			<iExtraHealth>2</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
-			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
+			<iWorkerSpeedModifier>-5</iWorkerSpeedModifier>
 			<iImprovementUpgradeRateModifier>0</iImprovementUpgradeRateModifier>
-			<iMilitaryProductionModifier>0</iMilitaryProductionModifier>
-			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
+			<iMilitaryProductionModifier>-5</iMilitaryProductionModifier>
+			<iHappyPerMilitaryUnit>-1</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
 			<bNoUnhealthyPopulation>0</bNoUnhealthyPopulation>
@@ -12178,15 +12227,15 @@
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
-				<iYield>7</iYield>
+				<iYield>3</iYield>
 				<iYield>0</iYield>
-				<iYield>0</iYield>
+				<iYield>-2</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers>
+				<iYield>1</iYield>
 				<iYield>0</iYield>
-				<iYield>-5</iYield>
-				<iYield>-5</iYield>
+				<iYield>0</iYield>
 			</TradeYieldModifiers>
 			<CommerceModifiers/>
 			<CapitalCommerceModifiers/>
@@ -12315,7 +12364,7 @@
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
 					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
 					<RelationType>RELATION_ASSOCIATED</RelationType>
-					<iAmountPerTurn>-20</iAmountPerTurn>
+					<iAmountPerTurn>-10</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -12391,7 +12440,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>-10</iCommerce>
+				<iCommerce>-5</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
@@ -12504,15 +12553,15 @@
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
-				<iYield>0</iYield>
+				<iYield>3</iYield>
 				<iYield>5</iYield>
-				<iYield>15</iYield>
+				<iYield>5</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers>
-				<iYield>20</iYield>
-				<iYield>20</iYield>
-				<iYield>20</iYield>
+				<iYield>5</iYield>
+				<iYield>5</iYield>
+				<iYield>5</iYield>
 			</TradeYieldModifiers>
 			<CommerceModifiers/>
 			<CapitalCommerceModifiers/>
@@ -12585,8 +12634,8 @@
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
 			<iImprovementUpgradeRateModifier>0</iImprovementUpgradeRateModifier>
 			<iMilitaryProductionModifier>10</iMilitaryProductionModifier>
-			<iFreeUnitUpkeepMilitary>1</iFreeUnitUpkeepMilitary>
-			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
+			<iFreeUnitUpkeepMilitary>2</iFreeUnitUpkeepMilitary>
+			<iHappyPerMilitaryUnit>1</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
 			<bNoUnhealthyPopulation>0</bNoUnhealthyPopulation>
@@ -12916,7 +12965,7 @@
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
 			<CommerceModifiers>
-				<iCommerce>-1</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceModifiers>
@@ -12981,7 +13030,7 @@
 				</BuildingHealthChange>
 				<BuildingHealthChange>
 					<BuildingType>BUILDING_HOUNFOR</BuildingType>
-					<iHealthChange>1</iHealthChange>
+					<iHealthChange>-1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
 					<BuildingType>BUILDING_SHAMANS_YURTA</BuildingType>
@@ -13005,7 +13054,7 @@
 				</BuildingHealthChange>
 				<BuildingHealthChange>
 					<BuildingType>BUILDING_IDOL</BuildingType>
-					<iHealthChange>1</iHealthChange>
+					<iHealthChange>-1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
 					<BuildingType>BUILDING_NGAI_BLESS</BuildingType>
@@ -13025,7 +13074,7 @@
 				</BuildingHealthChange>
 				<BuildingHealthChange>
 					<BuildingType>BUILDING_NATURE_CIRCLE_OF_POWER</BuildingType>
-					<iHealthChange>1</iHealthChange>
+					<iHealthChange>-1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
 					<BuildingType>BUILDING_CAO_DAI_MONASTERY</BuildingType>
@@ -13033,7 +13082,7 @@
 				</BuildingHealthChange>
 				<BuildingHealthChange>
 					<BuildingType>BUILDING_CANAANITE_MONASTERY</BuildingType>
-					<iHealthChange>1</iHealthChange>
+					<iHealthChange>-1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
 					<BuildingType>BUILDING_BAHAI_MONASTERY</BuildingType>
@@ -13123,14 +13172,15 @@
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
 			<CommerceModifiers>
-				<iCommerce>-3</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
 				<iCommerce>-3</iCommerce>
 				<iCommerce>2</iCommerce>
-				<iCommerce>2</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CapitalCommerceModifiers>
 			<SpecialistExtraCommerces/>
@@ -13311,7 +13361,7 @@
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
 			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>2</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceModifiers>
@@ -13505,16 +13555,16 @@
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
-				<iYield>3</iYield>
+				<iYield>2</iYield>
 				<iYield>2</iYield>
 				<iYield>0</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
 			<CommerceModifiers>
-				<iCommerce>-4</iCommerce>
-				<iCommerce>4</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>-3</iCommerce>
+				<iCommerce>1</iCommerce>
+				<iCommerce>1</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
@@ -13677,8 +13727,9 @@
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
 			<CommerceModifiers>
-				<iCommerce>-5</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
@@ -13762,12 +13813,12 @@
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
 			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
-			<iDistanceMaintenanceModifier>0</iDistanceMaintenanceModifier>
-			<iNumCitiesMaintenanceModifier>0</iNumCitiesMaintenanceModifier>
-			<iHomeAreaMaintenanceModifier>3</iHomeAreaMaintenanceModifier>
+			<iDistanceMaintenanceModifier>10</iDistanceMaintenanceModifier>
+			<iNumCitiesMaintenanceModifier>10</iNumCitiesMaintenanceModifier>
+			<iHomeAreaMaintenanceModifier>5</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>3</iOtherAreaMaintenanceModifier>
 			<iCorporationMaintenanceModifier>30</iCorporationMaintenanceModifier>
-			<iExtraHealth>1</iExtraHealth>
+			<iExtraHealth>0</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
 			<iImprovementUpgradeRateModifier>0</iImprovementUpgradeRateModifier>
@@ -13801,6 +13852,7 @@
 				<iCommerce>-4</iCommerce>
 				<iCommerce>2</iCommerce>
 				<iCommerce>-1</iCommerce>
+				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
@@ -13810,7 +13862,7 @@
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
 					<BuildingType>BUILDING_SOCIAL_JUSTICE_ORGANIZATION</BuildingType>
-					<iHappinessChange>1</iHappinessChange>
+					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
 					<BuildingType>BUILDING_RETIREMENT_HOME</BuildingType>
@@ -13836,7 +13888,7 @@
 				</BuildingHealthChange>
 				<BuildingHealthChange>
 					<BuildingType>BUILDING_CENTERS_FOR_DISEASE_CONTROL</BuildingType>
-					<iHealthChange>3</iHealthChange>
+					<iHealthChange>2</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
 					<BuildingType>BUILDING_MEDICAL_CLINIC</BuildingType>
@@ -13971,9 +14023,10 @@
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
 			<CommerceModifiers>
-				<iCommerce>-7</iCommerce>
-				<iCommerce>5</iCommerce>
-				<iCommerce>2</iCommerce>
+				<iCommerce>-5</iCommerce>
+				<iCommerce>1</iCommerce>
+				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
@@ -14103,14 +14156,14 @@
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
 				<iYield>0</iYield>
-				<iYield>20</iYield>
+				<iYield>10</iYield>
 				<iYield>0</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
 			<CommerceModifiers>
-				<iCommerce>-8</iCommerce>
-				<iCommerce>20</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>10</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers/>
@@ -14209,9 +14262,9 @@
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
 			<CommerceModifiers>
-				<iCommerce>20</iCommerce>
-				<iCommerce>20</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>10</iCommerce>
+				<iCommerce>10</iCommerce>
+				<iCommerce>3</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
@@ -14438,16 +14491,16 @@
 				<iYield>0</iYield>
 			</TradeYieldModifiers>
 			<CommerceModifiers>
+				<iCommerce>-2</iCommerce>
+				<iCommerce>-2</iCommerce>
+				<iCommerce>-2</iCommerce>
 				<iCommerce>-5</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
 				<iCommerce>-5</iCommerce>
 				<iCommerce>-5</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>-1</iCommerce>
+				<iCommerce>-5</iCommerce>
 			</CapitalCommerceModifiers>
 			<SpecialistExtraCommerces/>
 			<Hurrys/>
@@ -14548,19 +14601,19 @@
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers>
-				<iYield>0</iYield>
+				<iYield>1</iYield>
 				<iYield>0</iYield>
 				<iYield>2</iYield>
 			</TradeYieldModifiers>
 			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
 				<iCommerce>2</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>2</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CapitalCommerceModifiers>
@@ -14680,13 +14733,13 @@
 			<YieldModifiers/>
 			<CapitalYieldModifiers>
 				<iYield>2</iYield>
-				<iYield>5</iYield>
+				<iYield>2</iYield>
 				<iYield>5</iYield>
 			</CapitalYieldModifiers>
 			<CommerceModifiers>
 				<iCommerce>2</iCommerce>
 				<iCommerce>1</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
 				<iCommerce>3</iCommerce>
@@ -14740,7 +14793,7 @@
 				</Flavor>
 			</Flavors>
 			<iInflation>0</iInflation>
-			<iForeignTradeRouteModifier>-5</iForeignTradeRouteModifier>
+			<iForeignTradeRouteModifier>5</iForeignTradeRouteModifier>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_BAZAAR</BuildingType>
@@ -14814,21 +14867,21 @@
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
-				<iYield>0</iYield>
-				<iYield>5</iYield>
-				<iYield>5</iYield>
+				<iYield>1</iYield>
+				<iYield>3</iYield>
+				<iYield>3</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers>
-				<iYield>0</iYield>
-				<iYield>0</iYield>
-				<iYield>5</iYield>
+				<iYield>1</iYield>
+				<iYield>1</iYield>
+				<iYield>3</iYield>
 			</TradeYieldModifiers>
 			<CommerceModifiers>
-				<iCommerce>5</iCommerce>
+				<iCommerce>3</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
@@ -14916,21 +14969,21 @@
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
+				<iYield>1</iYield>
 				<iYield>0</iYield>
-				<iYield>0</iYield>
-				<iYield>5</iYield>
+				<iYield>4</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers>
+				<iYield>1</iYield>
 				<iYield>0</iYield>
-				<iYield>0</iYield>
-				<iYield>5</iYield>
+				<iYield>3</iYield>
 			</TradeYieldModifiers>
 			<CommerceModifiers>
 				<iCommerce>5</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
@@ -14975,9 +15028,9 @@
 				<BuildingCommerceModifier>
 					<BuildingType>BUILDING_BANK</BuildingType>
 					<CommerceModifiers>
-						<iCommerce>10</iCommerce>
+						<iCommerce>5</iCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
+						<iCommerce>-2</iCommerce>
 						<iCommerce>0</iCommerce>
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
@@ -14986,7 +15039,7 @@
 					<CommerceModifiers>
 						<iCommerce>10</iCommerce>
 						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
+						<iCommerce>-3</iCommerce>
 						<iCommerce>0</iCommerce>
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
@@ -15038,21 +15091,21 @@
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
-				<iYield>5</iYield>
-				<iYield>5</iYield>
+				<iYield>3</iYield>
+				<iYield>3</iYield>
 				<iYield>5</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers>
 				<iYield>5</iYield>
 				<iYield>5</iYield>
-				<iYield>10</iYield>
+				<iYield>5</iYield>
 			</TradeYieldModifiers>
 			<CommerceModifiers>
-				<iCommerce>10</iCommerce>
+				<iCommerce>7</iCommerce>
 				<iCommerce>5</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>2</iCommerce>
+				<iCommerce>1</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
@@ -15111,7 +15164,7 @@
 			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
 			<iDistanceMaintenanceModifier>10</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>10</iNumCitiesMaintenanceModifier>
-			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
+			<iCorporationMaintenanceModifier>10</iCorporationMaintenanceModifier>
 			<iExtraHealth>0</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
@@ -15140,19 +15193,19 @@
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
-				<iYield>5</iYield>
+				<iYield>0</iYield>
 				<iYield>5</iYield>
 				<iYield>5</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers>
-				<iYield>5</iYield>
-				<iYield>5</iYield>
-				<iYield>5</iYield>
+				<iYield>2</iYield>
+				<iYield>2</iYield>
+				<iYield>0</iYield>
 			</TradeYieldModifiers>
 			<CommerceModifiers>
 				<iCommerce>5</iCommerce>
-				<iCommerce>3</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
@@ -15243,17 +15296,17 @@
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
 				<iYield>0</iYield>
-				<iYield>5</iYield>
-				<iYield>5</iYield>
+				<iYield>2</iYield>
+				<iYield>2</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers>
 				<iYield>5</iYield>
-				<iYield>5</iYield>
-				<iYield>5</iYield>
+				<iYield>2</iYield>
+				<iYield>2</iYield>
 			</TradeYieldModifiers>
 			<CommerceModifiers>
-				<iCommerce>10</iCommerce>
+				<iCommerce>2</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -15368,9 +15421,9 @@
 				<iYield>0</iYield>
 			</TradeYieldModifiers>
 			<CommerceModifiers>
-				<iCommerce>10</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>-1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers/>
@@ -15471,7 +15524,7 @@
 			</TradeYieldModifiers>
 			<CommerceModifiers>
 				<iCommerce>-5</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>2</iCommerce>
 				<iCommerce>5</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
@@ -15576,13 +15629,13 @@
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers>
 				<iYield>0</iYield>
-				<iYield>0</iYield>
+				<iYield>3</iYield>
 				<iYield>0</iYield>
 			</TradeYieldModifiers>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers/>
@@ -15671,20 +15724,20 @@
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
-				<iYield>0</iYield>
-				<iYield>0</iYield>
+				<iYield>3</iYield>
+				<iYield>3</iYield>
 				<iYield>5</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers>
-				<iYield>0</iYield>
-				<iYield>0</iYield>
+				<iYield>2</iYield>
+				<iYield>2</iYield>
 				<iYield>5</iYield>
 			</TradeYieldModifiers>
 			<CommerceModifiers>
-				<iCommerce>10</iCommerce>
 				<iCommerce>5</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>5</iCommerce>
+				<iCommerce>3</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers/>
@@ -15740,8 +15793,11 @@
 			<YieldModifiers>
 				<iYield>-5</iYield>
 				<iYield>-5</iYield>
+				<iYield>-5</iYield>
 			</YieldModifiers>
 			<CommerceModifiers>
+				<iCommerce>-5</iCommerce>
+				<iCommerce>-5</iCommerce>
 				<iCommerce>-5</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
@@ -15817,7 +15873,7 @@
 			<iHomeAreaMaintenanceModifier>0</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>0</iOtherAreaMaintenanceModifier>
 			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
-			<iExtraHealth>0</iExtraHealth>
+			<iExtraHealth>1</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
 			<iWorkerSpeedModifier>5</iWorkerSpeedModifier>
 			<iImprovementUpgradeRateModifier>0</iImprovementUpgradeRateModifier>
@@ -15844,9 +15900,9 @@
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
-				<iYield>0</iYield>
-				<iYield>0</iYield>
 				<iYield>1</iYield>
+				<iYield>0</iYield>
+				<iYield>-3</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers>
@@ -15856,13 +15912,13 @@
 			</TradeYieldModifiers>
 			<CommerceModifiers>
 				<iCommerce>-2</iCommerce>
-				<iCommerce>2</iCommerce>
-				<iCommerce>2</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
 				<iCommerce>-2</iCommerce>
 				<iCommerce>-2</iCommerce>
-				<iCommerce>-1</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CapitalCommerceModifiers>
 			<SpecialistExtraCommerces/>
@@ -15956,9 +16012,9 @@
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
+				<iYield>2</iYield>
 				<iYield>3</iYield>
-				<iYield>3</iYield>
-				<iYield>3</iYield>
+				<iYield>2</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers>
@@ -16146,9 +16202,9 @@
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
-				<iYield>4</iYield>
-				<iYield>4</iYield>
 				<iYield>3</iYield>
+				<iYield>3</iYield>
+				<iYield>2</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers>
@@ -16158,7 +16214,7 @@
 			</TradeYieldModifiers>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
@@ -16252,7 +16308,7 @@
 			<iLargestCityHappiness>0</iLargestCityHappiness>
 			<iWarWearinessModifier>0</iWarWearinessModifier>
 			<iFreeSpecialist>1</iFreeSpecialist>
-			<iTradeRoutes>0</iTradeRoutes>
+			<iTradeRoutes>1</iTradeRoutes>
 			<bNoForeignTrade>0</bNoForeignTrade>
 			<bNoCorporations>0</bNoCorporations>
 			<bNoForeignCorporations>0</bNoForeignCorporations>
@@ -16265,8 +16321,8 @@
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
-				<iYield>5</iYield>
-				<iYield>5</iYield>
+				<iYield>4</iYield>
+				<iYield>4</iYield>
 				<iYield>4</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
@@ -16278,11 +16334,13 @@
 			<CommerceModifiers>
 				<iCommerce>3</iCommerce>
 				<iCommerce>2</iCommerce>
+				<iCommerce>2</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
 				<iCommerce>3</iCommerce>
 				<iCommerce>3</iCommerce>
+				<iCommerce>2</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CapitalCommerceModifiers>
 			<SpecialistCommercePercentChanges>
@@ -16329,11 +16387,11 @@
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
 					<BuildingType>BUILDING_WORLDVIEW_SLAVERY_ACTIVE</BuildingType>
-					<iHappinessChange>2</iHappinessChange>
+					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
 					<BuildingType>BUILDING_EFFECT_EMANCIPATION_PROCLAMATION</BuildingType>
-					<iHappinessChange>-1</iHappinessChange>
+					<iHappinessChange>3</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges/>
@@ -16414,22 +16472,22 @@
 			<YieldModifiers>
 				<iYield>2</iYield>
 				<iYield>2</iYield>
-				<iYield>5</iYield>
+				<iYield>1</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers>
 				<iYield>2</iYield>
 				<iYield>3</iYield>
-				<iYield>4</iYield>
+				<iYield>2</iYield>
 			</TradeYieldModifiers>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
 				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CapitalCommerceModifiers>
 			<SpecialistExtraCommerces/>
@@ -16525,18 +16583,18 @@
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
-				<iYield>0</iYield>
-				<iYield>5</iYield>
-				<iYield>5</iYield>
+				<iYield>1</iYield>
+				<iYield>4</iYield>
+				<iYield>3</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers>
-				<iYield>5</iYield>
-				<iYield>5</iYield>
+				<iYield>2</iYield>
+				<iYield>2</iYield>
 				<iYield>5</iYield>
 			</TradeYieldModifiers>
 			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
@@ -16637,9 +16695,9 @@
 			<YieldModifiers/>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers>
-				<iYield>0</iYield>
-				<iYield>0</iYield>
-				<iYield>0</iYield>
+				<iYield>1</iYield>
+				<iYield>2</iYield>
+				<iYield>1</iYield>
 			</TradeYieldModifiers>
 			<CommerceModifiers/>
 			<CapitalCommerceModifiers/>
@@ -16747,9 +16805,9 @@
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
-				<iYield>5</iYield>
-				<iYield>10</iYield>
-				<iYield>10</iYield>
+				<iYield>1</iYield>
+				<iYield>2</iYield>
+				<iYield>1</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers>
@@ -16868,7 +16926,7 @@
 			<YieldModifiers>
 				<iYield>5</iYield>
 				<iYield>5</iYield>
-				<iYield>0</iYield>
+				<iYield>3</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers>
@@ -16878,8 +16936,8 @@
 			</TradeYieldModifiers>
 			<CommerceModifiers>
 				<iCommerce>5</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>3</iCommerce>
+				<iCommerce>3</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces>
@@ -16946,7 +17004,7 @@
 				<iCommerce>-5</iCommerce>
 				<iCommerce>-5</iCommerce>
 				<iCommerce>-5</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>-5</iCommerce>
 			</CapitalCommerceModifiers>
 			<Button>art/Interface/buttons/civics/sparth/education_ignorance.dds</Button>
 			<Flavors>
@@ -17033,14 +17091,14 @@
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
 			<CommerceModifiers>
+				<iCommerce>-1</iCommerce>
+				<iCommerce>-1</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>-5</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
 				<iCommerce>-2</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>-1</iCommerce>
 				<iCommerce>-1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CapitalCommerceModifiers>
@@ -17143,7 +17201,11 @@
 			<iStateReligionUnitProductionModifier>0</iStateReligionUnitProductionModifier>
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
-			<YieldModifiers/>
+			<YieldModifiers>
+				<iYield>2</iYield>
+				<iYield>2</iYield>
+				<iYield>1</iYield>
+			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
 			<CommerceModifiers>
@@ -17570,7 +17632,7 @@
 			<CommerceModifiers>
 				<iCommerce>5</iCommerce>
 				<iCommerce>3</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
 				<iCommerce>5</iCommerce>
@@ -17667,15 +17729,15 @@
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
-				<iYield>0</iYield>
+				<iYield>3</iYield>
 				<iYield>5</iYield>
-				<iYield>10</iYield>
+				<iYield>5</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
 			<CommerceModifiers>
-				<iCommerce>10</iCommerce>
-				<iCommerce>5</iCommerce>
+				<iCommerce>4</iCommerce>
+				<iCommerce>3</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceModifiers>
@@ -17769,14 +17831,15 @@
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
 				<iYield>5</iYield>
-				<iYield>5</iYield>
-				<iYield>5</iYield>
+				<iYield>4</iYield>
+				<iYield>2</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
 			<CommerceModifiers>
 				<iCommerce>5</iCommerce>
-				<iCommerce>5</iCommerce>
+				<iCommerce>4</iCommerce>
+				<iCommerce>3</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers/>
@@ -17867,7 +17930,7 @@
 			<iExpInBorderModifier>0</iExpInBorderModifier>
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<iLargestCityHappiness>0</iLargestCityHappiness>
-			<iCivicHappiness>3</iCivicHappiness>
+			<iCivicHappiness>0</iCivicHappiness>
 			<iWarWearinessModifier>-10</iWarWearinessModifier>
 			<iFreeSpecialist>0</iFreeSpecialist>
 			<iTradeRoutes>0</iTradeRoutes>
@@ -17884,16 +17947,16 @@
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
 				<iYield>0</iYield>
-				<iYield>5</iYield>
-				<iYield>0</iYield>
+				<iYield>3</iYield>
+				<iYield>-1</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
-				<iCommerce>-5</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>20</iCommerce>
+				<iCommerce>-2</iCommerce>
+				<iCommerce>5</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
@@ -18017,8 +18080,8 @@
 			<TradeYieldModifiers/>
 			<CommerceModifiers>
 				<iCommerce>5</iCommerce>
-				<iCommerce>10</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>7</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>-5</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers/>
@@ -18136,8 +18199,8 @@
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
 			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>15</iCommerce>
+				<iCommerce>2</iCommerce>
+				<iCommerce>7</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers/>
@@ -18238,9 +18301,10 @@
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
 			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>25</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>3</iCommerce>
+				<iCommerce>12</iCommerce>
+				<iCommerce>2</iCommerce>
+				<iCommerce>3</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
@@ -18333,16 +18397,16 @@
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
+				<iYield>5</iYield>
+				<iYield>5</iYield>
 				<iYield>0</iYield>
-				<iYield>0</iYield>
-				<iYield>2</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
-				<iCommerce>35</iCommerce>
-				<iCommerce>10</iCommerce>
+				<iCommerce>25</iCommerce>
+				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
@@ -18426,9 +18490,9 @@
 			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
 			<iExtraHealth>-1</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
-			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
-			<iImprovementUpgradeRateModifier>0</iImprovementUpgradeRateModifier>
-			<iMilitaryProductionModifier>0</iMilitaryProductionModifier>
+			<iWorkerSpeedModifier>-5</iWorkerSpeedModifier>
+			<iImprovementUpgradeRateModifier>-5</iImprovementUpgradeRateModifier>
+			<iMilitaryProductionModifier>-10</iMilitaryProductionModifier>
 			<iHappyPerMilitaryUnit>0</iHappyPerMilitaryUnit>
 			<bMilitaryFoodProduction>0</bMilitaryFoodProduction>
 			<iMaxConscript>0</iMaxConscript>
@@ -19597,14 +19661,14 @@
 					<PropertyType>PROPERTY_CRIME</PropertyType>
 					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
 					<RelationType>RELATION_ASSOCIATED</RelationType>
-					<iAmountPerTurn>3</iAmountPerTurn>
+					<iAmountPerTurn>4</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_DISEASE</PropertyType>
 					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
 					<RelationType>RELATION_ASSOCIATED</RelationType>
-					<iAmountPerTurn>2</iAmountPerTurn>
+					<iAmountPerTurn>4</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAttitudeShareMod>0</iAttitudeShareMod>
@@ -19862,7 +19926,7 @@
 					<PropertyType>PROPERTY_CRIME</PropertyType>
 					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
 					<RelationType>RELATION_ASSOCIATED</RelationType>
-					<iAmountPerTurn>-3</iAmountPerTurn>
+					<iAmountPerTurn>-2</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -19973,7 +20037,7 @@
 					<PropertyType>PROPERTY_CRIME</PropertyType>
 					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
 					<RelationType>RELATION_ASSOCIATED</RelationType>
-					<iAmountPerTurn>-5</iAmountPerTurn>
+					<iAmountPerTurn>-3</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -20036,14 +20100,14 @@
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
 				<iYield>5</iYield>
-				<iYield>10</iYield>
+				<iYield>5</iYield>
 				<iYield>5</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers>
-				<iYield>10</iYield>
-				<iYield>10</iYield>
-				<iYield>10</iYield>
+				<iYield>5</iYield>
+				<iYield>5</iYield>
+				<iYield>5</iYield>
 			</TradeYieldModifiers>
 			<CommerceModifiers>
 				<iCommerce>5</iCommerce>
@@ -20155,7 +20219,7 @@
 			<YieldModifiers>
 				<iYield>0</iYield>
 				<iYield>5</iYield>
-				<iYield>5</iYield>
+				<iYield>0</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers>
@@ -20271,15 +20335,15 @@
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers>
-				<iYield>0</iYield>
-				<iYield>0</iYield>
-				<iYield>25</iYield>
+				<iYield>5</iYield>
+				<iYield>5</iYield>
+				<iYield>10</iYield>
 			</TradeYieldModifiers>
 			<CommerceModifiers>
 				<iCommerce>5</iCommerce>
 				<iCommerce>5</iCommerce>
 				<iCommerce>5</iCommerce>
-				<iCommerce>-10</iCommerce>
+				<iCommerce>-5</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
@@ -20379,7 +20443,7 @@
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
 				<iYield>5</iYield>
-				<iYield>10</iYield>
+				<iYield>7</iYield>
 				<iYield>5</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
@@ -20483,8 +20547,8 @@
 			<TradeYieldModifiers/>
 			<CommerceModifiers>
 				<iCommerce>-5</iCommerce>
-				<iCommerce>-5</iCommerce>
-				<iCommerce>-5</iCommerce>
+				<iCommerce>-3</iCommerce>
+				<iCommerce>-3</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers/>
@@ -20685,19 +20749,19 @@
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
+				<iYield>2</iYield>
+				<iYield>2</iYield>
 				<iYield>3</iYield>
-				<iYield>3</iYield>
-				<iYield>4</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers>
-				<iYield>5</iYield>
+				<iYield>3</iYield>
 				<iYield>2</iYield>
-				<iYield>5</iYield>
+				<iYield>4</iYield>
 			</TradeYieldModifiers>
 			<CommerceModifiers>
-				<iCommerce>5</iCommerce>
 				<iCommerce>3</iCommerce>
+				<iCommerce>2</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
@@ -20781,16 +20845,16 @@
 			<YieldModifiers>
 				<iYield>5</iYield>
 				<iYield>3</iYield>
-				<iYield>5</iYield>
+				<iYield>3</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers>
-				<iYield>7</iYield>
+				<iYield>5</iYield>
 				<iYield>5</iYield>
 				<iYield>5</iYield>
 			</TradeYieldModifiers>
 			<CommerceModifiers>
-				<iCommerce>5</iCommerce>
+				<iCommerce>4</iCommerce>
 				<iCommerce>3</iCommerce>
 				<iCommerce>3</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -20874,9 +20938,9 @@
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
-				<iYield>7</iYield>
+				<iYield>6</iYield>
 				<iYield>2</iYield>
-				<iYield>5</iYield>
+				<iYield>4</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers>
@@ -20887,7 +20951,7 @@
 			<CommerceModifiers>
 				<iCommerce>5</iCommerce>
 				<iCommerce>2</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers/>
@@ -20977,12 +21041,12 @@
 			<TradeYieldModifiers>
 				<iYield>7</iYield>
 				<iYield>3</iYield>
-				<iYield>10</iYield>
+				<iYield>5</iYield>
 			</TradeYieldModifiers>
 			<CommerceModifiers>
 				<iCommerce>6</iCommerce>
-				<iCommerce>3</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>2</iCommerce>
+				<iCommerce>-2</iCommerce>
 				<iCommerce>-1</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers/>
@@ -21097,20 +21161,20 @@
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
-				<iYield>6</iYield>
+				<iYield>2</iYield>
 				<iYield>2</iYield>
 				<iYield>2</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers>
-				<iYield>10</iYield>
+				<iYield>3</iYield>
 				<iYield>0</iYield>
 				<iYield>3</iYield>
 			</TradeYieldModifiers>
 			<CommerceModifiers>
 				<iCommerce>5</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>-1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers/>
@@ -21209,7 +21273,7 @@
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
-				<iYield>10</iYield>
+				<iYield>6</iYield>
 				<iYield>2</iYield>
 				<iYield>4</iYield>
 			</YieldModifiers>
@@ -21220,7 +21284,7 @@
 				<iYield>5</iYield>
 			</TradeYieldModifiers>
 			<CommerceModifiers>
-				<iCommerce>2</iCommerce>
+				<iCommerce>3</iCommerce>
 				<iCommerce>3</iCommerce>
 				<iCommerce>2</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -21320,20 +21384,20 @@
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
-				<iYield>10</iYield>
+				<iYield>5</iYield>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers>
-				<iYield>10</iYield>
+				<iYield>5</iYield>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
 			</TradeYieldModifiers>
 			<CommerceModifiers>
 				<iCommerce>3</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>-2</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers/>
@@ -21373,25 +21437,25 @@
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
 					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
 					<RelationType>RELATION_ASSOCIATED</RelationType>
-					<iAmountPerTurn>-20</iAmountPerTurn>
+					<iAmountPerTurn>-10</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
 					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
 					<RelationType>RELATION_ASSOCIATED</RelationType>
-					<iAmountPerTurn>-20</iAmountPerTurn>
+					<iAmountPerTurn>-10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<Flavors/>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
-					<iProductionModifier>20</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
-					<iProductionModifier>20</iProductionModifier>
+					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 		</CivicInfo>
@@ -21441,13 +21505,13 @@
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
-				<iYield>20</iYield>
+				<iYield>10</iYield>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers>
-				<iYield>15</iYield>
+				<iYield>7</iYield>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
 			</TradeYieldModifiers>
@@ -21537,8 +21601,8 @@
 			<iExpInBorderModifier>0</iExpInBorderModifier>
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<iLargestCityHappiness>0</iLargestCityHappiness>
-			<iCivicHappiness>0</iCivicHappiness>
-			<iWarWearinessModifier>0</iWarWearinessModifier>
+			<iCivicHappiness>-1</iCivicHappiness>
+			<iWarWearinessModifier>2</iWarWearinessModifier>
 			<iFreeSpecialist>0</iFreeSpecialist>
 			<iTradeRoutes>0</iTradeRoutes>
 			<bNoForeignTrade>0</bNoForeignTrade>
@@ -21642,7 +21706,7 @@
 			<iDistanceMaintenanceModifier>0</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>0</iNumCitiesMaintenanceModifier>
 			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
-			<iExtraHealth>-1</iExtraHealth>
+			<iExtraHealth>0</iExtraHealth>
 			<iFreeExperience>0</iFreeExperience>
 			<iWorkerSpeedModifier>0</iWorkerSpeedModifier>
 			<iImprovementUpgradeRateModifier>0</iImprovementUpgradeRateModifier>
@@ -22092,13 +22156,13 @@
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
 			<CommerceModifiers>
-				<iCommerce>10</iCommerce>
+				<iCommerce>7</iCommerce>
 				<iCommerce>2</iCommerce>
-				<iCommerce>-1</iCommerce>
-				<iCommerce>2</iCommerce>
+				<iCommerce>1</iCommerce>
+				<iCommerce>3</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
-				<iCommerce>5</iCommerce>
+				<iCommerce>4</iCommerce>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -22209,7 +22273,7 @@
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
-				<iYield>0</iYield>
+				<iYield>2</iYield>
 				<iYield>7</iYield>
 				<iYield>5</iYield>
 			</YieldModifiers>
@@ -22217,8 +22281,8 @@
 			<TradeYieldModifiers/>
 			<CommerceModifiers>
 				<iCommerce>7</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
+				<iCommerce>2</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers/>
@@ -22321,13 +22385,13 @@
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
 				<iYield>2</iYield>
-				<iYield>5</iYield>
+				<iYield>3</iYield>
 				<iYield>5</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
 			<CommerceModifiers>
-				<iCommerce>10</iCommerce>
+				<iCommerce>5</iCommerce>
 				<iCommerce>2</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>

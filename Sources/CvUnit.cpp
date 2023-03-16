@@ -9498,7 +9498,7 @@ int CvUnit::destroyCost(const CvPlot* pPlot) const
 	(
 		GC.getDefineINT("BASE_SPY_DESTROY_COST")
 		+
-		pCity->getProduction()
+		pCity->getProductionProgress()
 		*
 		(
 			bLimited
@@ -9553,7 +9553,7 @@ bool CvUnit::canDestroy(const CvPlot* pPlot, bool bTestVisible) const
 
 	const CvCity* pCity = pPlot->getPlotCity();
 
-	if (pCity == NULL || pCity->getProduction() == 0)
+	if (pCity == NULL || pCity->getProductionProgress() == 0)
 	{
 		return false;
 	}
@@ -9587,7 +9587,7 @@ bool CvUnit::destroy()
 
 	if (!bCaught)
 	{
-		pCity->setProduction(pCity->getProduction() / 2);
+		pCity->setProductionProgress(pCity->getProductionProgress() / 2);
 
 		finishMoves();
 
@@ -26524,7 +26524,7 @@ bool CvUnit::airBomb5(int iX, int iY)
 		if (GC.getGame().getSorenRandNum(100, "Airbomb") < 50)
 		{
 			bNoTarget = false;
-			pCity->setProduction(pCity->getProduction() / 2);
+			pCity->setProductionProgress(pCity->getProductionProgress() / 2);
 			bSuccess = true;
 			{
 
@@ -32918,10 +32918,7 @@ int CvUnit::withdrawVSOpponentProbTotal(const CvUnit* pOpponent, const CvPlot* p
 	{
 		return iTotal;
 	}
-
-	int iGrandTotal = getDiminishingReturn(iTotal);
-
-	return iGrandTotal;
+	return getDiminishingReturn(iTotal);
 }
 
 int CvUnit::pursuitVSOpponentProbTotal(const CvUnit* pOpponent) const
@@ -34138,47 +34135,6 @@ int CvUnit::getDiminishingReturn(int i) const
 	return 0;
 }
 
-int CvUnit::getApproaching0Return(int i) const
-{
-	if (i > 10)
-	{
-		return i;
-	}
-	if (i > 0)
-	{
-		return 9;
-	}
-	if (i > -10)
-	{
-		return 8;
-	}
-	if (i > -20)
-	{
-		return 7;
-	}
-	if (i > -40)
-	{
-		return 6;
-	}
-	if (i > -80)
-	{
-		return 5;
-	}
-	if (i > -160)
-	{
-		return 4;
-	}
-	if (i > -320)
-	{
-		return 3;
-	}
-	if (i > -640)
-	{
-		return 2;
-	}
-	return 1;
-}
-
 bool CvUnit::isPursuitPossible(const CvUnit* pOpponent) const
 {
 	bool bAnswer = true;
@@ -34894,11 +34850,6 @@ void CvUnit::changeExtraMaxHP(int iChange)
 	m_iExtraMaxHP += iChange;
 }
 
-void CvUnit::setExtraMaxHP(int iChange)
-{
-	m_iExtraMaxHP = iChange;
-}
-
 int CvUnit::getMaxHP() const
 {
 	int iMaxHP = 0;
@@ -34915,11 +34866,7 @@ int CvUnit::getMaxHP() const
 
 int CvUnit::HPValueTotalPreCheck() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
-	{
-		return std::max(1, m_pUnitInfo->getMaxHP() + getExtraMaxHP());
-	}
-	return getApproaching0Return(m_pUnitInfo->getMaxHP() + getExtraMaxHP());
+	return std::max(1, m_pUnitInfo->getMaxHP() + getExtraMaxHP());
 }
 
 int CvUnit::getSMHPValue() const
@@ -35702,61 +35649,6 @@ bool CvUnit::isRBombardDirect() const
 void CvUnit::changeBombardDirectCount(int iChange)
 {
 	m_iBombardDirectCount += iChange;
-}
-
-// Applies rank scaling to a value, with overflow protection.
-// rankMultiplier should be scaled up by 100 (e.g. 300 instead of 3).
-// rankChange can be positive or negative.
-// Equation demonstrated here: https://www.desmos.com/calculator/wivft5kfcc
-int CvUnit::applySMRank(int value, int rankChange, int rankMultiplier)
-{
-	FAssertMsg(rankMultiplier > 0, "rankMultiplier must be greater than 0");
-	int64_t lvalue = 100 * value;
-	if (rankChange > 0)
-	{
-		for (int iI = 0; iI < rankChange; iI++)
-		{
-			lvalue *= rankMultiplier;
-			lvalue /= 100;
-		}
-	}
-	else
-	{
-		for (int iI = 0; iI < -rankChange; iI++)
-		{
-			lvalue *= 100;
-			lvalue /= rankMultiplier;
-		}
-	}
-	return static_cast<int>(std::min<int64_t>(MAX_INT, lvalue / 100));
-}
-
-int64_t CvUnit::applySMRank64(int64_t value, int rankChange, int rankMultiplier, bool bScaleUp)
-{
-	FAssertMsg(rankMultiplier > 0, "rankMultiplier must be greater than 0");
-	if (bScaleUp) value *= 100;
-
-	if (rankChange > 0)
-	{
-		for (int iI = 0; iI < rankChange; iI++)
-		{
-			value *= rankMultiplier;
-			value /= 100;
-		}
-	}
-	else
-	{
-		for (int iI = 0; iI < -rankChange; iI++)
-		{
-			value *= 100;
-			value /= rankMultiplier;
-		}
-	}
-	if (bScaleUp)
-	{
-		return value / 100;
-	}
-	return value;
 }
 
 

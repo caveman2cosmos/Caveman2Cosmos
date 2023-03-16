@@ -15,7 +15,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_CORAL</Tag>
-		<English>Autobuild - Presence of Coral</English>
+		<English>Presence of Coral</English>
 		<German>
 			<Text>Präsenz von Korallen:Präsenz von Korallen:Präsenz von Korallen:Präsenz von Korallen</Text>
 			<Gender>Female</Gender>
@@ -25,7 +25,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_EARTH</Tag>
-		<English>Autobuild - Presence of Earth</English>
+		<English>Presence of Earth</English>
 		<German>
 			<Text>Präsenz der Erde:Präsenz der Erde:Präsenz der Erde:Präsenz der Erde</Text>
 			<Gender>Female</Gender>
@@ -35,7 +35,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_CRATER</Tag>
-		<English>Autobuild - Presence of Crater</English>
+		<English>Presence of Crater</English>
 		<German>
 			<Text>Präsenz von Kratern:Präsenz von Kratern:Präsenz von Kratern:Präsenz von Kratern</Text>
 			<Gender>Female</Gender>
@@ -45,7 +45,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_FIRE</Tag>
-		<English>Autobuild - Presence of Fire</English>
+		<English>Presence of Fire</English>
 		<German>
 			<Text>Präsenz des Feuers:Präsenz des Feuers:Präsenz des Feuers:Präsenz des Feuers</Text>
 			<Gender>Female</Gender>
@@ -55,7 +55,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_METAL</Tag>
-		<English>Autobuild - Presence of Metal</English>
+		<English>Presence of Metal</English>
 		<German>
 			<Text>Präsenz von Metall:Präsenz von Metall:Präsenz von Metall:Präsenz von Metall</Text>
 			<Gender>Female</Gender>
@@ -65,7 +65,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_OASIS</Tag>
-		<English>Autobuild - Presence of Oasis</English>
+		<English>Presence of Oasis</English>
 		<German>
 			<Text>Präsenz von Oasen:Präsenz von Oasen:Präsenz von Oasen:Präsenz von Oasen</Text>
 			<Gender>Female</Gender>
@@ -81,7 +81,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_LANDFORM</Tag>
-		<English>Autobuild - Presence of Landform</English>
+		<English>Presence of Landform</English>
 		<German>
 			<Text>Präsenz von Felsformationen:Präsenz von Felsformationen:Präsenz von Felsformationen:Präsenz von Felsformationen</Text>
 			<Gender>Female</Gender>
@@ -91,7 +91,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_REEF</Tag>
-		<English>Autobuild - Presence of Reef</English>
+		<English>Presence of Reef</English>
 		<German>
 			<Text>Präsenz von Riffen:Präsenz von Riffen:Präsenz von Riffen:Präsenz von Riffen</Text>
 			<Gender>Female</Gender>
@@ -101,7 +101,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_REQUIREMENT</Tag>
-		<English>Autobuild - Folklore Requirement</English>
+		<English>Folklore Requirement</English>
 		<German>
 			<Text>Folklore-Grundlagen:Folklore-Grundlagen:Folklore-Grundlagen:Folklore-Grundlagen</Text>
 			<Gender>Female</Gender>
@@ -117,7 +117,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_SEA</Tag>
-		<English>Autobuild - Presence of Sea</English>
+		<English>Presence of Sea</English>
 		<German>
 			<Text>Präsenz der See:Präsenz der See:Präsenz der See:Präsenz der See</Text>
 			<Gender>Female</Gender>
@@ -127,7 +127,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_VOLCANO</Tag>
-		<English>Autobuild - Presence of Volcano</English>
+		<English>Presence of Volcano</English>
 		<German>
 			<Text>Präsenz von Vulkanen:Präsenz von Vulkanen:Präsenz von Vulkanen:Präsenz von Vulkanen</Text>
 			<Gender>Female</Gender>
@@ -3288,7 +3288,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MASTER_HUNTER</Tag>
-		<English>Unit Reward - Master Hunter</English>
+		<English>Master Hunter</English>
 		<French>Cabane du Maître chasseur</French>
 		<Italian>Mastro cacciatore</Italian>
 		<Polish>Wybitny Łowca</Polish>
@@ -3306,7 +3306,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MASTER_SEA_HUNTER</Tag>
-		<English>Unit Reward - Master Sea Hunter</English>
+		<English>Master Sea Hunter</English>
 		<French>Maître Chasseur des mers</French>
 		<Italian>Mastro pescatore</Italian>
 		<Polish>Wybitny Morski Łowca</Polish>
@@ -3669,7 +3669,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WONDERS_OF_THE_DEEP</Tag>
-		<English>Unit Reward - Wonders of the Deep</English>
+		<English>Wonders of the Deep</English>
 		<French>Merveilles des profondeurs</French>
 		<Italian>Meraviglie degli abissi</Italian>
 		<Polish>Cuda Głębin</Polish>

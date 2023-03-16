@@ -10815,7 +10815,7 @@ void CvUnitAI::AI_InfiltratorMove()
 			}
 			//if inside a city, check to see if there's VERY good cause to sabotage production or steal plans.
 			//Apparently the AI never steals plans soooo... leave that one alone.
-			const int iProduction = plot()->getPlotCity()->getProduction();
+			const int iProduction = plot()->getPlotCity()->getProductionProgress();
 			if (iProduction > 0 && plot()->getPlotCity()->getProductionTurnsLeft() < 3)
 			{
 				// Only enact when it is a long build that has been heavily invested into already
@@ -14653,7 +14653,7 @@ bool CvUnitAI::AI_switchHurry()
 		{
 			if (pCity->canConstruct(eBuilding))
 			{
-				if (pCity->getBuildingProduction(eBuilding) == 0)
+				if (pCity->getProgressOnBuilding(eBuilding) == 0)
 				{
 					if (getMaxHurryProduction(pCity) >= pCity->getProductionNeeded(eBuilding))
 					{

@@ -15872,7 +15872,7 @@ int64_t CvPlayer::getEspionageMissionBaseCost(EspionageMissionTypes eMission, Pl
 		FAssert(NULL != pCity);
 		if (NULL != pCity)
 		{
-			iMissionCost = iBaseMissionCost + ((100 + kMission.getDestroyProductionCostFactor()) * pCity->getProduction()) / 100;
+			iMissionCost = iBaseMissionCost + ((100 + kMission.getDestroyProductionCostFactor()) * pCity->getProductionProgress()) / 100;
 		}
 	}
 	else if (kMission.getBuyUnitCostFactor() > 0)
@@ -16260,7 +16260,7 @@ bool CvPlayer::doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eT
 			// Destroy Production
 			if (kMission.getDestroyProductionCostFactor() > 0)
 			{
-				pCity->setProduction(0);
+				pCity->setProductionProgress(0);
 				bSomethingHappened = true;
 				bShowExplosion = true;
 				szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_PRODUCTION_DESTROYED_IN", pCity->getProductionName(), pCity->getNameKey());

@@ -276,8 +276,6 @@ m_iCombatModifierPerSizeMore(0),
 m_iCombatModifierPerSizeLess(0),
 m_iCombatModifierPerVolumeMore(0),
 m_iCombatModifierPerVolumeLess(0),
-//m_iBaseSMRankTotal(0),
-//m_iBaseSMVolumetricRankTotal(0),
 m_iSelfHealModifier(0),
 m_iNumHealSupport(0),
 m_iInsidiousness(0),
@@ -3761,8 +3759,6 @@ void CvUnitInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iCombatModifierPerSizeLess);
 	CheckSum(iSum, m_iCombatModifierPerVolumeMore);
 	CheckSum(iSum, m_iCombatModifierPerVolumeLess);
-//	CheckSum(iSum, m_iBaseSMRankTotal);
-//	CheckSum(iSum, m_iBaseSMVolumetricRankTotal);
 	CheckSum(iSum, m_iSelfHealModifier);
 	CheckSum(iSum, m_iNumHealSupport);
 	CheckSum(iSum, m_iInsidiousness);
@@ -5908,8 +5904,6 @@ void CvUnitInfo::doPostLoadCaching(uint32_t iThis)
 		m_iBaseGroupRank = 0;
 		m_iTotalCombatStrengthChangeBase = 0;
 		m_iTotalCombatStrengthModifierBase = 0;
-		//m_iBaseSMRankTotal = 0;
-		//m_iBaseSMVolumetricRankTotal = 0;
 
 		for (int iI = -1; iI < getNumSubCombatTypes(); iI++)
 		{
@@ -5928,17 +5922,12 @@ void CvUnitInfo::doPostLoadCaching(uint32_t iThis)
 			if (info.getQualityBase() > -10)
 			{
 				m_iTotalCombatStrengthModifierBase += info.getQualityBase() - 5;
-
-				//m_iBaseSMRankTotal += info.getQualityBase();
 			}
 			if (info.getSizeBase() > -10)
 			{
 				m_iTotalCombatStrengthModifierBase += info.getSizeBase() - 5;
 
 				iOffset += info.getSizeBase();
-
-				//m_iBaseSMRankTotal += info.getSizeBase();
-				//m_iBaseSMVolumetricRankTotal += info.getSizeBase();
 			}
 			if (info.getGroupBase() > -10)
 			{
@@ -5946,9 +5935,6 @@ void CvUnitInfo::doPostLoadCaching(uint32_t iThis)
 
 				iOffset += info.getGroupBase();
 				m_iBaseGroupRank += info.getGroupBase();
-
-				//m_iBaseSMRankTotal += info.getGroupBase();
-				//m_iBaseSMVolumetricRankTotal += info.getGroupBase();
 			}
 		}
 		const int iSMMultiplier = GC.getSIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER();
@@ -6026,85 +6012,21 @@ bool CvUnitInfo::hasUnitCombat(UnitCombatTypes eUnitCombat) const
 }
 
 
-/*
-int CvUnitInfo::getCombatStrengthModifier() const
+int CvUnitInfo::getTotalModifiedCombatStrength100(const bool bSizeMatters) const
 {
-	return m_iTotalCombatStrengthModifierBase;
-}
-*/
+	const int iStr = 100 * ((getDomainType() == DOMAIN_AIR ? m_iAirCombat : m_iCombat) + m_iTotalCombatStrengthChangeBase);
 
-int CvUnitInfo::getTotalModifiedCombatStrength100() const
-{
-	int iStr = m_iCombat + m_iTotalCombatStrengthChangeBase;
-	const int iSMMultiplier = GC.getSIZE_MATTERS_MOST_MULTIPLIER();
-	const bool bPositive = (m_iTotalCombatStrengthModifierBase > 0);
-	const int iIterator = ((bPositive) ? m_iTotalCombatStrengthModifierBase : (-1 * m_iTotalCombatStrengthModifierBase));
-	int iI = 0;
-
-	if (iStr < 0)
+	if (iStr < 1)
 	{
-		iStr = 0;
+		return 0;
 	}
-	if (iStr !=0)
+	if (!bSizeMatters || m_iTotalCombatStrengthModifierBase == 0)
 	{
-		iStr *= 100;
-		for (iI = 0; iI < iIterator; iI++)
-		{
-			if (bPositive)
-			{
-				iStr *= iSMMultiplier;
-				iStr /= 100;
-			}
-			else
-			{
-				iStr *= 100;
-				iStr /= iSMMultiplier;
-			}
-		}
+		return iStr;
 	}
-	return iStr;
+	return std::max(1, applySMRank(iStr, m_iTotalCombatStrengthModifierBase, GC.getSIZE_MATTERS_MOST_MULTIPLIER()));
 }
-int CvUnitInfo::getTotalModifiedAirCombatStrength100() const
-{
-	int iStr = m_iAirCombat + m_iTotalCombatStrengthChangeBase;
-	if (iStr < 0)
-	{
-		iStr = 0;
-	}
-	if (iStr !=0)
-	{
-		iStr *= 100;
-		int iStrEval = iStr;
-		iStrEval *= m_iTotalCombatStrengthModifierBase;
-		iStrEval /= 100;
-		iStrEval += iStr;
-		iStrEval = getApproaching0Return(iStrEval);
-		iStr = std::max(1, iStrEval);
-	}
-	return iStr;
-}
-int CvUnitInfo::getApproaching0Return(int i) const
-{
-	if (i > 10) return i;
 
-	if (i > 0) return 9;
-
-	if (i > -10) return 8;
-
-	if (i > -20) return 7;
-
-	if (i > -40) return 6;
-
-	if (i > -80) return 5;
-
-	if (i > -160) return 4;
-
-	if (i > -320) return 3;
-
-	if (i > -640) return 2;
-
-	return 1;
-}
 
 int CvUnitInfo::getBaseGroupRank() const
 {
@@ -6116,17 +6038,6 @@ int CvUnitInfo::getBaseCargoVolume() const
 	return m_iBaseCargoVolume;
 }
 
-/*
-int CvUnitInfo::getSMRankTotal() const
-{
-	return m_iBaseSMRankTotal;
-}
-
-int CvUnitInfo::getSMVolumetricRankTotal() const
-{
-	return m_iBaseSMVolumetricRankTotal;
-}
-*/
 
 bool CvUnitInfo::isQualifiedPromotionType(int i) const
 {
