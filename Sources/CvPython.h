@@ -3,6 +3,8 @@
 #ifndef CvPython_h__
 #define CvPython_h__
 
+#include "FProfiler.h"
+
 #include <boost155/type_traits.hpp>
 #include <boost155/utility/enable_if.hpp>
 
@@ -46,6 +48,7 @@ namespace Cy
 	template <class Item_>
 	const python::list makeList(const std::vector<Item_>& vector)
 	{
+		PROFILE_EXTRA_FUNC();
 		python::list list = python::list();
 		foreach_(const Item_& i, vector)
 			list.append((int)i);

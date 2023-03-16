@@ -1,6 +1,9 @@
 //
 // init/cleanup XML functions
 //
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvGlobals.h"
 #include "CvInfos.h"
@@ -15,6 +18,7 @@
 //------------------------------------------------------------------------------------------------------
 void CvXMLLoadUtility::InitImprovementBonusList(CvImprovementBonusInfo** ppImprovementBonus, int iListLen)
 {
+	PROFILE_EXTRA_FUNC();
 	FAssertMsg(*ppImprovementBonus == NULL,"memory leak?");
 	FAssertMsg((0 < iListLen),"list size to allocate is less than 1");
 	// allocate memory for the bonus type pointer based on the list length parameter

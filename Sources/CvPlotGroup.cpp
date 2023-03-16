@@ -1,5 +1,8 @@
 // plotGroup.cpp
 
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
 #include "CvGlobals.h"
@@ -142,22 +145,23 @@ void CvPlotGroup::removePlot(CvPlot* pPlot, bool bRecalculateBonuses)
 #ifdef _DEBUG
 void CvPlotGroup::Validate()
 {
-#if 0
-	CLLNode<XYCoords>* pPlotNode = headPlotsNode();
-
-	while (pPlotNode != NULL)
-	{
-		CvPlot* pPlot = GC.getMap().plotSorenINLINE(pPlotNode->m_data.iX, pPlotNode->m_data.iY);
-
-		FAssert(pPlot->getPlotGroup(m_eOwner) == this);
-		pPlotNode = nextPlotsNode(pPlotNode);
-	}
-#endif
+//#if 0
+//	CLLNode<XYCoords>* pPlotNode = headPlotsNode();
+//
+//	while (pPlotNode != NULL)
+//	{
+//		CvPlot* pPlot = GC.getMap().plotSorenINLINE(pPlotNode->m_data.iX, pPlotNode->m_data.iY);
+//
+//		FAssert(pPlot->getPlotGroup(m_eOwner) == this);
+//		pPlotNode = nextPlotsNode(pPlotNode);
+//	}
+//#endif
 }
 #endif
 
 CvPlot* CvPlotGroup::getRepresentativePlot() const
 {
+	PROFILE_EXTRA_FUNC();
 	CvPlot*	result = NULL;
 
 	if ( m_seedPlotX != -1 && m_seedPlotY != -1 )
@@ -650,6 +654,7 @@ int CvPlotGroup::getNumCities()
 
 void CvPlotGroup::read(FDataStreamBase* pStream)
 {
+	PROFILE_EXTRA_FUNC();
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);

@@ -3,6 +3,9 @@
 // Author - Mustafa Thamer
 //
 
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvBuildingInfo.h"
 #include "CvBonusInfo.h"
@@ -24,6 +27,7 @@ std::vector<CyMap>    g_cyMaps;
 
 void CyGlobalContext::initStatics()
 {
+	PROFILE_EXTRA_FUNC();
 	for (int i = 0; i < MAX_PLAYERS; i++)
 		g_cyPlayers.push_back(CyPlayer(&GET_PLAYER((PlayerTypes)i)));
 
@@ -112,6 +116,7 @@ const char* CyGlobalContext::getFlavorType(FlavorTypes e) const
 
 const python::list CyGlobalContext::getFlavorTypes() const
 {
+	PROFILE_EXTRA_FUNC();
 	python::list l = python::list();
 	const CvString*& flavorTypes = GC.getFlavorTypes();
 

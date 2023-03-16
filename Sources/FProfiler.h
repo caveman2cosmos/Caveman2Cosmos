@@ -8,10 +8,8 @@
 #ifndef	__PROFILE_H__
 #define __PROFILE_H__
 
+#include "CvGameCoreDLL.h"
 
-//#include "CvDLLEntityIFaceBase.h"
-#include "CvDLLUtilityIFaceBase.h"
-#include "CvGlobals.h"	// for gDLL
 
 #define	MAX_PROFILED_THREADS	8
 
@@ -77,29 +75,8 @@ class CProfileScope
 public:
 	// cppcheck-suppress uninitMemberVar
 	CProfileScope() { bValid= false;};
-	explicit CProfileScope(ProfileSample *pSample)
-	{
-		bValid = true;
-#ifdef USE_INTERNAL_PROFILER
-		m_linkage.sample = pSample;
-		IFPBeginSample(&m_linkage);
-#else
-		m_pSample = pSample;
-		gDLL->BeginSample(m_pSample);
-#endif
-	};
-	~CProfileScope()
-	{
-		if(bValid )
-		{
-#ifdef USE_INTERNAL_PROFILER
-			IFPEndSample(&m_linkage);
-#else
-			gDLL->EndSample(m_pSample);
-#endif
-			bValid = false;
-		}
-	};
+	explicit CProfileScope(ProfileSample *pSample);
+	~CProfileScope();
 
 private:
 	bool bValid;
@@ -113,6 +90,15 @@ private:
 //---------------------------------------------------------------------------------------------------------------------
 
 // Main Interface for Profile
+
+#ifdef FP_PROFILE_EXTRA_ENABLE
+#define PROFILE_EXTRA_FUNC() PROFILE_FUNC()
+#define FP_PROFILE_ENABLE
+#else
+#define PROFILE_EXTRA_FUNC()
+#endif
+
+
 #ifdef FP_PROFILE_ENABLE				// Turn Profiling On or Off ..
 #ifdef USE_INTERNAL_PROFILER
 #define PROFILE_THREAD(name)	\
@@ -149,14 +135,14 @@ private:
 	else\
 		{IFPCancelSample(&sample__linkage1);IFPEndSample(&sample__linkage2,true);}
 
-#if 0
-#define PROFILE_DEFINE_MULTI(name)\
-	static ProfileSample sample__##name##(#name);
-#define PROFILE_BEGIN_MULTI(name)\
-	IFPBeginSample(&sample__##name##);
-#define PROFILE_END_MULTI(name)\
-	IFPEndSample(&sample__##name##);
-#endif
+//#if 0
+//#define PROFILE_DEFINE_MULTI(name)\
+//	static ProfileSample sample__##name##(#name);
+//#define PROFILE_BEGIN_MULTI(name)\
+//	IFPBeginSample(&sample__##name##);
+//#define PROFILE_END_MULTI(name)\
+//	IFPEndSample(&sample__##name##);
+//#endif
 
 #define PROFILE_FUNC()\
 	static ProfileSample sample(__FUNCTION__);\

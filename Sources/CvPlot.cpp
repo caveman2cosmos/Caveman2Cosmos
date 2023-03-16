@@ -1,5 +1,8 @@
 // plot.cpp
 
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
 #include "CvArtFileMgr.h"
@@ -63,6 +66,7 @@ CvPlot::CvPlot()
 	, m_requiredVisibleGraphics(ECvPlotGraphics::NONE)
 	, m_pagingHandle(CvPlotPaging::INVALID_HANDLE)
 {
+	PROFILE_EXTRA_FUNC();
 	if ( m_resultHashMap == NULL )
 	{
 		m_resultHashMap = new stdext::hash_map<int,int>();
@@ -209,6 +213,7 @@ void CvPlot::uninit()
 // Initializes data members that are serialized.
 void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 {
+	PROFILE_EXTRA_FUNC();
 	//--------------------------------
 	// Uninit class
 	uninit();
@@ -301,6 +306,7 @@ void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 
 void CvPlot::clearModifierTotals()
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < NUM_YIELD_TYPES; ++iI)
 	{
 		m_baseYields[iI] = 0;
@@ -847,6 +853,7 @@ void CvPlot::doBonusDepletion()
 
 void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 {
+	PROFILE_EXTRA_FUNC();
 	const TeamTypes eTeam = GET_PLAYER(getOwner()).getTeam();
 
 	// Has the situation changed?
@@ -985,6 +992,7 @@ void CvPlot::updateCulture(bool bBumpUnits, bool bUpdatePlotGroups)
 
 void CvPlot::checkCityRevolt()
 {
+	PROFILE_EXTRA_FUNC();
 	// Check if city flips (revolts)
 	CvCity* pCity = getPlotCity();
 	if (!pCity || pCity->isOccupation())
@@ -1474,6 +1482,7 @@ void CvPlot::verifyUnitValidPlot()
 
 void CvPlot::nukeExplosion(int iRange, CvUnit* pNukeUnit)
 {
+	PROFILE_EXTRA_FUNC();
 	GC.getGame().changeNukesExploded(1);
 
 	foreach_(CvPlot* plotX, rect(iRange, iRange))
@@ -1855,6 +1864,7 @@ bool CvPlot::isPotentialIrrigation() const
 
 bool CvPlot::canHavePotentialIrrigation() const
 {
+	PROFILE_EXTRA_FUNC();
 	if (isCity())
 	{
 		return true;
@@ -1945,6 +1955,7 @@ bool CvPlot::isRiverCrossingFlowClockwise(DirectionTypes eDirection) const
 
 bool CvPlot::isRiverSide() const
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(const CvPlot* pLoopPlot, cardinalDirectionAdjacent())
 	{
 		if (isRiverCrossing(directionXY(this, pLoopPlot)))
@@ -2015,6 +2026,7 @@ bool CvPlot::isRiverConnection(DirectionTypes eDirection) const
 
 CvPlot* CvPlot::getNearestLandPlotInternal(int iDistance) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (iDistance > GC.getMap().getGridHeight() && iDistance > GC.getMap().getGridWidth())
 	{
 		return NULL;
@@ -2103,6 +2115,7 @@ int CvPlot::getTerrainElevation() const
 
 void CvPlot::changeAdjacentSight(TeamTypes eTeam, int iRange, bool bIncrement, CvUnit* pUnit, bool bUpdatePlotGroups)
 {
+	PROFILE_EXTRA_FUNC();
 	const bool bHideSeek = GC.getGame().isOption(GAMEOPTION_COMBAT_HIDE_SEEK);
 
 	int iUnitID = 0;
@@ -2525,6 +2538,7 @@ bool CvPlot::canHaveBonus(BonusTypes eBonus, bool bIgnoreLatitude) const
 
 bool CvPlot::canBuildImprovement(ImprovementTypes eImprovement, TeamTypes eTeam) const
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(const BuildTypes& eBuild, GC.getImprovementInfo(eImprovement).getBuildTypes())
 	{
 		if (GET_TEAM(eTeam).isHasTech(GC.getBuildInfo(eBuild).getTechPrereq()))
@@ -2540,6 +2554,7 @@ bool CvPlot::canBuildImprovement(ImprovementTypes eImprovement, TeamTypes eTeam)
 // Hmm... maybe a whole nother check that along with this one gets cached significantly?
 bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, bool bPotential, bool bUpgradeCheck) const
 {
+	PROFILE_EXTRA_FUNC();
 	FAssertMsg(getTerrainType() != NO_TERRAIN, "TerrainType is not assigned a valid value");
 
 	// Universal validator
@@ -2740,6 +2755,7 @@ int CvPlot::canBuildCacheReads = 0;
 
 void CvPlot::ClearCanBuildCache()
 {
+	PROFILE_EXTRA_FUNC();
 	if ( g_canBuildCache.currentUseCounter > 0 )
 	{
 		OutputDebugString(CvString::format("Clear can build cache  - usage: %d reads with %d hits\n",canBuildCacheReads,canBuildCacheHits).c_str());
@@ -2756,6 +2772,7 @@ void CvPlot::ClearCanBuildCache()
 
 bool CvPlot::hasCachedCanBuildEntry(int iX, int iY, BuildTypes eBuild, PlayerTypes ePlayer, struct canBuildCacheEntry*& entry)
 {
+	PROFILE_EXTRA_FUNC();
 	//	Check cache first
 	int worstLRU = 0x7FFFFFFF;
 
@@ -3091,6 +3108,7 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 
 int CvPlot::getBuildTime(BuildTypes eBuild) const
 {
+	PROFILE_EXTRA_FUNC();
 	const CvBuildInfo& kBuild = GC.getBuildInfo(eBuild);
 	int iTime = kBuild.getTime();
 
@@ -3158,6 +3176,7 @@ int CvPlot::getBuildTurnsLeft(BuildTypes eBuild, PlayerTypes ePlayer) const
 
 int CvPlot::getBuildTurnsLeft(BuildTypes eBuild, int iNowExtra, int iThenExtra, bool bIncludeUnits) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iNowBuildRate = iNowExtra;
 	int iThenBuildRate = iThenExtra;
 
@@ -3408,6 +3427,7 @@ CvUnit* CvPlot::getFirstDefender(EDefenderScore::flags flags, PlayerTypes eOwner
 
 CvUnit* CvPlot::getFirstDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer, const CvUnit* pAttacker, bool bTestAtWar, bool bTestPotentialEnemy, bool bTestCanMove) const
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(CvUnit* unitX, units())
 	{
 		if (getDefenderScore(unitX, eOwner, eAttackingPlayer, pAttacker, bTestAtWar, bTestPotentialEnemy, bTestCanMove, false, ECacheAccess::Write) > 0)
@@ -3421,6 +3441,7 @@ CvUnit* CvPlot::getFirstDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlaye
 // returns a sum of the strength (adjusted by firepower) of all the units on a plot
 int CvPlot::AI_sumStrength(PlayerTypes eOwner, PlayerTypes eAttackingPlayer, DomainTypes eDomainType, StrengthFlags::flags flags /*= StrengthFlags::DefensiveBonuses*/, int iRange) const
 {
+	PROFILE_EXTRA_FUNC();
 	const int COLLATERAL_COMBAT_DAMAGE = GC.getDefineINT("COLLATERAL_COMBAT_DAMAGE"); // K-Mod. (currently this number is "10")
 
 	const bool bTestAtWar = flags & StrengthFlags::TestAtWar;
@@ -3469,6 +3490,7 @@ int CvPlot::AI_sumStrength(PlayerTypes eOwner, PlayerTypes eAttackingPlayer, Dom
 
 CvUnit* CvPlot::getSelectedUnit() const
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(CvUnit* unit, units() | filtered(bind(CvUnit::IsSelected, _1)))
 	{
 		return unit;
@@ -3479,6 +3501,7 @@ CvUnit* CvPlot::getSelectedUnit() const
 
 int CvPlot::getUnitPower(PlayerTypes eOwner) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 
 	foreach_(const CvUnit* pLoopUnit, units())
@@ -3546,6 +3569,7 @@ void CvPlot::changeDefenseDamage(int iChange)
 
 void CvPlot::pushCultureFromImprovement(PlayerTypes ePlayer, int iChange, int iRange, bool bUpdate)
 {
+	PROFILE_EXTRA_FUNC();
 	// Pushes a little culture from improvements that generate it; used when improvement is newly placed or acquired
 	// to get potential nearby neutral plots. doImprovementCulture() gets regular culture.
 	// Removing culture on loss happens by natural decay or IDW
@@ -3583,6 +3607,7 @@ void CvPlot::pushCultureFromImprovement(PlayerTypes ePlayer, int iChange, int iR
 
 void CvPlot::doImprovementCulture(PlayerTypes ePlayer, const CvImprovementInfo& imp)
 {
+	PROFILE_EXTRA_FUNC();
 	if (imp.getCulture() < 1)
 	{
 		return;
@@ -3617,6 +3642,7 @@ int CvPlot::countRegionPlots(const CvPlot* pInvalidPlot) const
 
 int CvPlot::countAdjacentPassableSections(bool bWater) const
 {
+	PROFILE_EXTRA_FUNC();
 	CvPlot* pAdjacentPlot;
 	int iPassableSections = 0;
 	bool bInPassableSection = false;
@@ -3737,6 +3763,7 @@ void CvPlot::setCanalValue(int iNewValue)
 
 void CvPlot::calculateCanalValue()
 {
+	PROFILE_EXTRA_FUNC();
 	bool bInWaterSection;
 	CvPlot *pAdjacentPlot, *apPlotsToCheck[4];
 	int iWaterSections, iPlotsFound, iMaxDistance;
@@ -3827,6 +3854,7 @@ void CvPlot::setChokeValue(int iNewValue)
 
 void CvPlot::calculateChokeValue()
 {
+	PROFILE_EXTRA_FUNC();
 	bool bInPassableSection;
 	CvPlot *pAdjacentPlot, *apPlotsToCheck[4];
 	int iPassableSections, iPlotsFound, iMaxDistance;
@@ -4587,6 +4615,7 @@ int CvPlot::plotStrengthTimes100(UnitValueFlags eFlags, ConstPlotUnitFunc funcA,
 
 CvUnit* CvPlot::plotCheck(ConstPlotUnitFunc funcA, int iData1A, int iData2A, const CvUnit* pUnit, PlayerTypes eOwner, TeamTypes eTeam, ConstPlotUnitFunc funcB, int iData1B, int iData2B) const
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(CvUnit* unitX, units())
 	{
 		if (unitX->isDead()) continue;
@@ -4643,6 +4672,7 @@ bool CvPlot::isActiveVisible(bool bDebug) const
 
 bool CvPlot::isVisibleToCivTeam() const
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < MAX_PC_TEAMS; ++iI)
 	{
 		if (GET_TEAM((TeamTypes)iI).isAlive() && isVisible((TeamTypes)iI, false))
@@ -4656,6 +4686,7 @@ bool CvPlot::isVisibleToCivTeam() const
 
 bool CvPlot::isVisibleToWatchingHuman() const
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < MAX_PC_PLAYERS; ++iI)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive()
@@ -5422,6 +5453,7 @@ CvArea* CvPlot::area() const
 
 CvArea* CvPlot::waterArea(bool bNoImpassable) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (isWater())
 	{
 		return area();
@@ -5447,6 +5479,7 @@ CvArea* CvPlot::waterArea(bool bNoImpassable) const
 
 CvArea* CvPlot::secondWaterArea() const
 {
+	PROFILE_EXTRA_FUNC();
 	FAssert(!isWater());
 
 	const int iWaterArea = waterArea() != NULL ? waterArea()->getID() : FFreeList::INVALID_INDEX;
@@ -5616,6 +5649,7 @@ bool CvPlot::isNOfRiver() const
 
 void CvPlot::setNOfRiver(bool bNewValue, CardinalDirectionTypes eRiverDir)
 {
+	PROFILE_EXTRA_FUNC();
 	if (isNOfRiver() != bNewValue || eRiverDir != m_eRiverWEDirection)
 	{
 		if (isNOfRiver() != bNewValue)
@@ -5665,6 +5699,7 @@ bool CvPlot::isWOfRiver() const
 
 void CvPlot::setWOfRiver(bool bNewValue, CardinalDirectionTypes eRiverDir)
 {
+	PROFILE_EXTRA_FUNC();
 	if ((isWOfRiver() != bNewValue) || (eRiverDir != m_eRiverNSDirection))
 	{
 		if (isWOfRiver() != bNewValue)
@@ -5723,6 +5758,7 @@ CardinalDirectionTypes CvPlot::getRiverWEDirection() const
 
 CvPlot* CvPlot::getInlandCorner() const
 {
+	PROFILE_EXTRA_FUNC();
 	CvPlot* pRiverPlot = NULL; // will be a plot through whose SE corner we want the river to run
 	int aiShuffle[4];
 
@@ -5794,6 +5830,7 @@ bool CvPlot::isIrrigated() const
 
 void CvPlot::setIrrigated(bool bNewValue)
 {
+	PROFILE_EXTRA_FUNC();
 	if (isIrrigated() != bNewValue)
 	{
 		m_bIrrigated = bNewValue;
@@ -6224,6 +6261,7 @@ bool CvPlot::isAsPeak() const
 
 void CvPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGraphics)
 {
+	PROFILE_EXTRA_FUNC();
 	const PlotTypes eOldPlotType = getPlotType();
 
 	if (eOldPlotType == eNewValue)
@@ -6477,6 +6515,7 @@ TerrainTypes CvPlot::getTerrainType() const
 
 void CvPlot::setTerrainType(TerrainTypes eNewValue, bool bRecalculate, bool bRebuildGraphics)
 {
+	PROFILE_EXTRA_FUNC();
 	const TerrainTypes eOldTerrain = getTerrainType();
 
 	if (eOldTerrain != eNewValue)
@@ -6537,6 +6576,7 @@ FeatureTypes CvPlot::getFeatureType() const
 
 void CvPlot::setFeatureType(FeatureTypes eNewValue, int iVariety, bool bImprovementSet)
 {
+	PROFILE_EXTRA_FUNC();
 	FeatureTypes eOldFeature = getFeatureType();
 
 	if (eNewValue != NO_FEATURE)
@@ -6820,6 +6860,7 @@ void CvPlot::setBonusType(BonusTypes eNewValue)
 
 void CvPlot::setImprovementCurrentValue()
 {
+	PROFILE_EXTRA_FUNC();
 	ImprovementTypes eImprovement = getImprovementType();
 	TeamTypes eTeam = getTeam();
 	if (eImprovement != NO_IMPROVEMENT && eTeam != NO_TEAM)
@@ -6889,6 +6930,7 @@ bool CvPlot::isImprovementDestructible() const
 
 void CvPlot::setImprovementType(ImprovementTypes eNewImprovement)
 {
+	PROFILE_EXTRA_FUNC();
 	const ImprovementTypes eOldImprovement = getImprovementType();
 
 	if (eOldImprovement != eNewImprovement)
@@ -7086,6 +7128,7 @@ RouteTypes CvPlot::getRouteType() const
 
 void CvPlot::setRouteType(RouteTypes eNewValue, bool bUpdatePlotGroups)
 {
+	PROFILE_EXTRA_FUNC();
 	const RouteTypes eOldRoute = getRouteType();
 
 	if (eOldRoute == eNewValue)
@@ -7187,6 +7230,7 @@ CvCity* CvPlot::getPlotCity() const
 
 void CvPlot::setPlotCity(CvCity* pNewValue)
 {
+	PROFILE_EXTRA_FUNC();
 	if (getPlotCity() == pNewValue)
 	{
 		return;
@@ -7429,6 +7473,7 @@ int CvPlot::getRiverCrossingCount() const
 
 void CvPlot::changeRiverCrossingCount(int iChange)
 {
+	PROFILE_EXTRA_FUNC();
 	const bool bWasRiver = m_iRiverCrossingCount > 0;
 	m_iRiverCrossingCount += iChange;
 	FASSERT_NOT_NEGATIVE(m_iRiverCrossingCount);
@@ -7484,6 +7529,7 @@ int CvPlot::getBaseYield(const YieldTypes eIndex) const
 
 void CvPlot::changeBaseYield(const short* pYieldChange)
 {
+	PROFILE_EXTRA_FUNC();
 	CvCity* pWorkingCity = getWorkingCity();
 	const bool bWorked = pWorkingCity != NULL ? isBeingWorked() : false;
 	bool bChange = false;
@@ -7516,6 +7562,7 @@ void CvPlot::changeBaseYield(const short* pYieldChange)
 
 void CvPlot::recalculateBaseYield()
 {
+	PROFILE_EXTRA_FUNC();
 	const PlotTypes ePlot = getPlotType();
 	const TerrainTypes eTerrain = getTerrainType();
 	const FeatureTypes eFeature = getFeatureType();
@@ -7858,6 +7905,7 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 
 bool CvPlot::hasYield() const
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < NUM_YIELD_TYPES; ++iI)
 	{
 		if (getYield((YieldTypes)iI) > 0)
@@ -7871,6 +7919,7 @@ bool CvPlot::hasYield() const
 
 int CvPlot::getCulture(PlayerTypes eIndex) const
 {
+	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex);
 
 	for (std::vector<std::pair<PlayerTypes,int> >::const_iterator itr = m_aiCulture.begin(); itr != m_aiCulture.end(); ++itr)
@@ -7887,6 +7936,7 @@ int CvPlot::getCulture(PlayerTypes eIndex) const
 
 int CvPlot::countTotalCulture() const
 {
+	PROFILE_EXTRA_FUNC();
 	int iTotalCulture = 0;
 
 	for (int iI = 0; iI < MAX_PLAYERS; ++iI)
@@ -7902,6 +7952,7 @@ int CvPlot::countTotalCulture() const
 
 PlayerTypes CvPlot::findHighestCulturePlayer(const bool bCountLegacyCulture, const bool bCountLastTurn) const
 {
+	PROFILE_EXTRA_FUNC();
 	PlayerTypes eBestPlayer = NO_PLAYER;
 	int iBestValue = 0;
 
@@ -7954,6 +8005,7 @@ int CvPlot::calculateCulturePercent(PlayerTypes eIndex, int iExtraDigits) const
 
 int CvPlot::calculateTeamCulturePercent(TeamTypes eIndex) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iTeamCulturePercent = 0;
 
 	for (int iI = 0; iI < MAX_PLAYERS; ++iI)
@@ -8097,6 +8149,7 @@ int CvPlot::getFoundValue(PlayerTypes eIndex)
 
 bool CvPlot::isBestAdjacentFound(PlayerTypes eIndex)
 {
+	PROFILE_EXTRA_FUNC();
 	const int iPlotValue = GET_PLAYER(eIndex).AI_foundValue(getX(), getY());
 
 	if (iPlotValue == 0)
@@ -8118,6 +8171,7 @@ bool CvPlot::isBestAdjacentFound(PlayerTypes eIndex)
 
 void CvPlot::clearFoundValue(PlayerTypes eIndex)
 {
+	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex);
 
 	if (NULL == m_aiFoundValue)
@@ -8312,6 +8366,7 @@ void CvPlot::updatePlotGroup()
 
 void CalculateClosePlotGroupConnectSet(PlayerTypes ePlayer, const CvPlot* pSeedPlot, std::vector<const CvPlot*>& set, int iRange)
 {
+	PROFILE_EXTRA_FUNC();
 	if (!algo::any_of_equal(set, pSeedPlot))
 	{
 		set.push_back(pSeedPlot);
@@ -8359,17 +8414,17 @@ void CvPlot::updatePlotGroup(PlayerTypes ePlayer, bool bRecalculate, bool bRecal
 			if (isTradeNetwork(GET_PLAYER(ePlayer).getTeam()))
 			{
 				bConnected = true;
-#if 0
-				foreach_(const CvPlot* pAdjacentPlot, adjacent())
-				{
-					if (pAdjacentPlot->getPlotGroup(ePlayer) == pPlotGroup
-					&& !isTradeNetworkConnected(pAdjacentPlot, GET_PLAYER(ePlayer).getTeam()))
-					{
-						bConnected = false;
-						break;
-					}
-				}
-#endif
+//#if 0
+//				foreach_(const CvPlot* pAdjacentPlot, adjacent())
+//				{
+//					if (pAdjacentPlot->getPlotGroup(ePlayer) == pPlotGroup
+//					&& !isTradeNetworkConnected(pAdjacentPlot, GET_PLAYER(ePlayer).getTeam()))
+//					{
+//						bConnected = false;
+//						break;
+//					}
+//				}
+//#endif
 			}
 
 			if (!bConnected)
@@ -8481,6 +8536,7 @@ int CvPlot::getDangerCount(int /*PlayerTypes*/ ePlayer) const
 
 void CvPlot::setDangerCount(int /*PlayerTypes*/ ePlayer, int iNewCount)
 {
+	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, MAX_PLAYERS, ePlayer);
 
 	if (NULL == m_aiDangerCount)
@@ -8510,6 +8566,7 @@ int CvPlot::getLastVisibleTurn(TeamTypes eTeam) const
 
 void CvPlot::setLastVisibleTurn(TeamTypes eTeam, short turn)
 {
+	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam);
 
 	if (NULL == m_aiLastSeenTurn)
@@ -8526,6 +8583,7 @@ void CvPlot::setLastVisibleTurn(TeamTypes eTeam, short turn)
 
 void CvPlot::clearVisibilityCounts()
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < MAX_TEAMS; ++iI)
 	{
 		m_aiVisibilityCount[iI] = 0;
@@ -8567,6 +8625,7 @@ void CvPlot::clearVisibilityCounts()
 
 void CvPlot::changeVisibilityCount(TeamTypes eTeam, int iChange, InvisibleTypes eInvisible, bool bUpdatePlotGroups, int iIntensity, int iUnitID)
 {
+	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam);
 
 	if (iChange != 0)
@@ -8699,6 +8758,7 @@ void CvPlot::resetBlockadedCounts()
 
 void CvPlot::changeBlockadedCount(TeamTypes eTeam, int iChange)
 {
+	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam);
 
 	if (iChange != 0)
@@ -8766,6 +8826,7 @@ TeamTypes CvPlot::getRevealedTeam(TeamTypes eTeam, bool bDebug) const
 
 void CvPlot::setRevealedOwner(TeamTypes eTeam, PlayerTypes eNewValue)
 {
+	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam);
 
 	if (getRevealedOwner(eTeam, false) != eNewValue)
@@ -8973,6 +9034,7 @@ void CvPlot::updateRiverCrossing(DirectionTypes eIndex)
 
 void CvPlot::updateRiverCrossing()
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
 	{
 		updateRiverCrossing((DirectionTypes)iI);
@@ -8995,6 +9057,7 @@ bool CvPlot::isRevealed(TeamTypes eTeam, bool bDebug) const
 
 void CvPlot::setRevealed(const TeamTypes eTeam, const bool bNewValue, const bool bTerrainOnly, const TeamTypes eFromTeam, const bool bUpdatePlotGroup)
 {
+	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam);
 
 /*********************************/
@@ -9203,6 +9266,7 @@ ImprovementTypes CvPlot::getRevealedImprovementType(TeamTypes eTeam, bool bDebug
 
 void CvPlot::setRevealedImprovementType(TeamTypes eTeam, ImprovementTypes eNewValue)
 {
+	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam);
 
 	if (getRevealedImprovementType(eTeam, false) != eNewValue)
@@ -9248,6 +9312,7 @@ RouteTypes CvPlot::getRevealedRouteType(TeamTypes eTeam, bool bDebug) const
 
 void CvPlot::setRevealedRouteType(TeamTypes eTeam, RouteTypes eNewValue)
 {
+	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam);
 
 	if (getRevealedRouteType(eTeam, false) != eNewValue)
@@ -9281,6 +9346,7 @@ int CvPlot::getBuildProgress(BuildTypes eBuild) const
 // Returns true if build finished...
 bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam)
 {
+	PROFILE_EXTRA_FUNC();
 	CvCity* pCity = NULL;
 	int iProduction;
 
@@ -9683,6 +9749,7 @@ void CvPlot::updateRiverSymbol(bool bForce, bool bAdjacent)
 
 void CvPlot::updateRiverSymbolArt(bool bAdjacent)
 {
+	PROFILE_EXTRA_FUNC();
 	//this is used to update floodplain features
 	if ( !GC.viewportsEnabled() || isRevealed(GC.getGame().getActiveTeam(), true) )
 	{
@@ -9889,6 +9956,7 @@ bool CvPlot::isSpotterInSight(TeamTypes eTeam, InvisibleTypes eInvisible)	const
 
 void CvPlot::changeInvisibleVisibilityCount(TeamTypes eTeam, InvisibleTypes eInvisible, int iChange)
 {
+	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam);
 	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eInvisible);
 
@@ -9917,6 +9985,7 @@ void CvPlot::changeInvisibleVisibilityCount(TeamTypes eTeam, InvisibleTypes eInv
 
 void CvPlot::setSpotIntensity(TeamTypes eTeam, InvisibleTypes eInvisible, int iUnitID, int iIntensity)
 {
+	PROFILE_EXTRA_FUNC();
 	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_HIDE_SEEK))
 	{
 		return;
@@ -9972,6 +10041,7 @@ PlotTeamVisibilityIntensity& CvPlot::getPlotTeamVisibilityIntensity(int iIndex)
 
 int CvPlot::getHighestPlotTeamVisibilityIntensity(InvisibleTypes eInvisibility, TeamTypes eTeam) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iHighest = 0;
 	for (int iI = 0; iI < getNumPlotTeamVisibilityIntensity(); iI++)
 	{
@@ -10005,6 +10075,7 @@ CvUnit* CvPlot::getUnitByIndex(int iIndex) const
 
 void CvPlot::addUnit(CvUnit* pUnit, bool bUpdate)
 {
+	PROFILE_EXTRA_FUNC();
 	FAssertMsg(pUnit->at(getX(), getY()), "pUnit is expected to be at getX and getY");
 
 	//DEBUG attempt
@@ -10053,6 +10124,7 @@ void CvPlot::addUnit(CvUnit* pUnit, bool bUpdate)
 
 void CvPlot::removeUnit(CvUnit* pUnit, bool bUpdate)
 {
+	PROFILE_EXTRA_FUNC();
 	if (pUnit->isCommanderReady())
 	{
 		countCommander(false, pUnit);
@@ -10132,6 +10204,7 @@ void CvPlot::deleteSymbol(int iID)
 
 void CvPlot::deleteAllSymbols()
 {
+	PROFILE_EXTRA_FUNC();
 	for (int i = 0; i < getNumSymbols(); i++)
 	{
 		// ?? Need gDLL->getSymbolIFace()->Hide(pLoopSymbol, true);
@@ -10305,6 +10378,7 @@ void CvPlot::doCulture()
 
 void CvPlot::processArea(CvArea* pArea, int iChange)
 {
+	PROFILE_EXTRA_FUNC();
 	// XXX am not updating getBestFoundValue() or getAreaAIType()...
 
 	pArea->changeNumTiles(iChange);
@@ -10451,6 +10525,7 @@ ColorTypes CvPlot::plotMinimapColor() const
 //
 void CvPlot::read(FDataStreamBase* pStream)
 {
+	PROFILE_EXTRA_FUNC();
 	int iI;
 	bool bVal;
 	int iCount;
@@ -10938,6 +11013,7 @@ void CvPlot::read(FDataStreamBase* pStream)
 //
 void CvPlot::write(FDataStreamBase* pStream)
 {
+	PROFILE_EXTRA_FUNC();
 	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
@@ -11477,6 +11553,7 @@ int CvPlot::calculateMaxYield(YieldTypes eYield) const
 
 int CvPlot::getYieldWithBuild(BuildTypes eBuild, YieldTypes eYield, bool bWithUpgrade) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iYield = 0;
 
 	bool bIgnoreFeature = false;
@@ -11544,6 +11621,7 @@ int CvPlot::getYieldWithBuild(BuildTypes eBuild, YieldTypes eYield, bool bWithUp
 
 bool CvPlot::canTrigger(EventTriggerTypes eTrigger, PlayerTypes ePlayer) const
 {
+	PROFILE_EXTRA_FUNC();
 	FAssert(::isPlotEventTrigger(eTrigger));
 
 	const CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(eTrigger);
@@ -11764,6 +11842,7 @@ bool CvPlot::canApplyEvent(EventTypes eEvent) const
 
 void CvPlot::applyEvent(EventTypes eEvent)
 {
+	PROFILE_EXTRA_FUNC();
 	const CvEventInfo& kEvent = GC.getEventInfo(eEvent);
 
 	if (kEvent.getFeatureChange() > 0)
@@ -11925,6 +12004,7 @@ bool CvPlot::canTrain(UnitTypes eUnit, bool bTestVisible) const
 
 int CvPlot::countFriendlyCulture(TeamTypes eTeam) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iTotalCulture = 0;
 
 	for (int iPlayer = 0; iPlayer < MAX_PLAYERS; ++iPlayer)
@@ -11945,6 +12025,7 @@ int CvPlot::countFriendlyCulture(TeamTypes eTeam) const
 
 int CvPlot::countNumAirUnits(TeamTypes eTeam) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 
 	foreach_(const CvUnit* pLoopUnit, units())
@@ -11960,6 +12041,7 @@ int CvPlot::countNumAirUnits(TeamTypes eTeam) const
 
 int CvPlot::countNumAirUnitCargoVolume(TeamTypes eTeam) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 
 	foreach_(const CvUnit* pLoopUnit, units())
@@ -12015,6 +12097,7 @@ int CvPlot::airUnitSpaceAvailable(TeamTypes eTeam) const
 /********************************************************************************/
 int CvPlot::countAirInterceptorsActive(TeamTypes eTeam) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 
 	foreach_(const CvUnit* pLoopUnit, units())
@@ -12139,6 +12222,7 @@ bool CvPlot::shouldDisplayBridge(CvPlot* pToPlot, PlayerTypes ePlayer) const
 
 bool CvPlot::checkLateEra() const
 {
+	PROFILE_EXTRA_FUNC();
 	PlayerTypes ePlayer = getOwner();
 	if (ePlayer == NO_PLAYER)
 	{
@@ -12162,6 +12246,7 @@ bool CvPlot::checkLateEra() const
 // UncutDragon
 bool CvPlot::hasDefender(bool bCheckCanAttack, PlayerTypes eOwner, PlayerTypes eAttackingPlayer, const CvUnit* pAttacker, bool bTestAtWar, bool bTestPotentialEnemy, bool bTestCanMove, bool bTestCanFight) const
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(const CvUnit* pLoopUnit, units())
 	{
 		if (!pLoopUnit->isDead())
@@ -12203,6 +12288,7 @@ bool CvPlot::hasDefender(bool bCheckCanAttack, PlayerTypes eOwner, PlayerTypes e
 }
 bool CvPlot::hasStealthDefender(const CvUnit* pAttacker) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (pAttacker == NULL || !GC.getGame().isOption(GAMEOPTION_COMBAT_WITHOUT_WARNING))
 	{
 		return false;
@@ -12238,6 +12324,7 @@ bool CvPlot::hasStealthDefender(const CvUnit* pAttacker) const
 }
 void CvPlot::revealBestStealthDefender(const CvUnit* pAttacker)
 {
+	PROFILE_EXTRA_FUNC();
 	int iBestValue = 0;
 	CvUnit* pBestUnit = NULL;
 
@@ -12292,6 +12379,7 @@ void CvPlot::revealBestStealthDefender(const CvUnit* pAttacker)
 
 void CvPlot::doPreAttackTraps(CvUnit* pAttacker)
 {
+	PROFILE_EXTRA_FUNC();
 	//CvUnit* pTrap = NULL;
 
 	if (pAttacker == NULL)
@@ -12370,6 +12458,7 @@ int CvPlot::getRevoltProtection() const
 
 int CvPlot::getAverageEnemyStrength(TeamTypes eTeam) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iStrength = 0;
 	int iCount = 0;
 
@@ -12393,6 +12482,7 @@ int CvPlot::getAverageEnemyStrength(TeamTypes eTeam) const
 
 int CvPlot::getAverageEnemyDamage(TeamTypes eTeam) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iDamage = 0;
 	int iCount = 0;
 
@@ -12451,6 +12541,7 @@ void CvPlot::setCountedPlot(bool bNewVal)
 
 const CvPlot* CvPlot::isInFortControl(bool bIgnoreObstructions, PlayerTypes eDefendingPlayer, PlayerTypes eAttackingPlayer, const CvPlot* pFort) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (!bIgnoreObstructions)
 	{
 		if (getImprovementType() != NO_IMPROVEMENT)
@@ -12484,6 +12575,7 @@ const CvPlot* CvPlot::isInFortControl(bool bIgnoreObstructions, PlayerTypes eDef
 //Returns the first found player that controls an adjacent fort to this plot and is at war with the attackingTeam
 PlayerTypes CvPlot::controlsAdjacentZOCSource(TeamTypes eAttackingTeam) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (getImprovementType() != NO_IMPROVEMENT)
 	{
 		if (GC.getImprovementInfo(getImprovementType()).isZOCSource())
@@ -12518,6 +12610,7 @@ PlayerTypes CvPlot::controlsAdjacentZOCSource(TeamTypes eAttackingTeam) const
 
 bool CvPlot::isInCityZoneOfControl(PlayerTypes ePlayer) const
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(const CvPlot* pAdjacentPlot, adjacent()
 	| filtered(CvPlot::fn::isCity(false, NO_TEAM)))
 	{
@@ -12533,6 +12626,7 @@ bool CvPlot::isInCityZoneOfControl(PlayerTypes ePlayer) const
 
 int CvPlot::getTotalTurnDamage(const CvSelectionGroup* pGroup) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iMaxDamage = 0;
 
 	foreach_(const CvUnit* pLoopUnit, pGroup->units())
@@ -12613,6 +12707,7 @@ int CvPlot::getTotalTurnDamage(const CvUnit* pUnit) const
 
 CvUnit* CvPlot::getWorstDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer, const CvUnit* pAttacker, bool bTestAtWar, bool bTestPotentialEnemy, bool bTestCanMove) const
 {
+	PROFILE_EXTRA_FUNC();
 	CvUnit* pBestUnit = NULL;
 
 	foreach_(CvUnit* pLoopUnit, units())
@@ -12649,6 +12744,7 @@ CvUnit* CvPlot::getWorstDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlaye
 
 bool CvPlot::isInUnitZoneOfControl(PlayerTypes ePlayer) const
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(const CvPlot* pAdjacentPlot, adjacent())
 	{
 		foreach_(const CvUnit* pLoopUnit, pAdjacentPlot->units()
@@ -12662,6 +12758,7 @@ bool CvPlot::isInUnitZoneOfControl(PlayerTypes ePlayer) const
 
 bool CvPlot::isBorder(bool bIgnoreWater) const
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(const CvPlot* pAdjacentPlot, adjacent())
 	{
 		if (pAdjacentPlot->isWater() && !bIgnoreWater)
@@ -12682,6 +12779,7 @@ bool CvPlot::isBorder(bool bIgnoreWater) const
 
 int CvPlot::getNumVisibleAdjacentEnemyDefenders(const CvUnit* pUnit) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 	foreach_(const CvPlot* pAdjacentPlot, adjacent())
 	{
@@ -12702,6 +12800,7 @@ void CvPlot::removeSign(PlayerTypes ePlayer)
 
 void CvPlot::removeSignForAllPlayers()
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		removeSign((PlayerTypes)iI);
@@ -12710,6 +12809,7 @@ void CvPlot::removeSignForAllPlayers()
 
 void CvPlot::ToggleInPlotGroupsZobristContributors()
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI= 0; iI < MAX_PLAYERS; iI++)
 	{
 		CvPlotGroup* p_plotGroup = getPlotGroup((PlayerTypes)iI);
@@ -12729,6 +12829,7 @@ int CvPlot::getBorderPlotCount() const
 
 int CvPlot::getEnemyBorderPlotCount(PlayerTypes ePlayer) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 	foreach_(const CvPlot* pAdjacentPlot, adjacent())
 	{
@@ -12865,6 +12966,7 @@ bool CvPlot::bDeferPlotGroupRecalculation = false;
 
 void CvPlot::setDeferredPlotGroupRecalculationMode(bool bDefer)
 {
+	PROFILE_EXTRA_FUNC();
 	if ( bDeferPlotGroupRecalculation != bDefer )
 	{
 		bDeferPlotGroupRecalculation = bDefer;
@@ -12916,6 +13018,7 @@ void CvPlot::setImprovementUpgradeCache(const int iNewValue)
 
 int CvPlot::getInjuredUnitCombatsUnsupportedByHealer(PlayerTypes ePlayer, UnitCombatTypes eUnitCombat, DomainTypes eDomain) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = plotCount(PUF_isInjuredUnitCombatType, eUnitCombat, eDomain, NULL, ePlayer);
 
 	if (iCount > 0)
@@ -12933,6 +13036,7 @@ int CvPlot::getInjuredUnitCombatsUnsupportedByHealer(PlayerTypes ePlayer, UnitCo
 
 int CvPlot::getUnitCombatsUnsupportedByHealer(PlayerTypes ePlayer, UnitCombatTypes eUnitCombat, DomainTypes eDomain) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = plotCount(PUF_isHealUnitCombatType, eUnitCombat, eDomain, NULL, ePlayer);
 
 	int iHighestOffset = 2;
@@ -12957,6 +13061,7 @@ int CvPlot::getUnitCombatsUnsupportedByHealer(PlayerTypes ePlayer, UnitCombatTyp
 
 int CvPlot::getOverloadedUnitCombatsSupportedByHealer(PlayerTypes ePlayer, UnitCombatTypes eUnitCombat, DomainTypes eDomain) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iOverload = 0;
 
 	int iCount = plotCount(PUF_isHealUnitCombatType, eUnitCombat, eDomain, NULL, ePlayer);
@@ -12980,6 +13085,7 @@ int CvPlot::getOverloadedUnitCombatsSupportedByHealer(PlayerTypes ePlayer, UnitC
 
 void CvPlot::unitGameStateCorrections()
 {
+	PROFILE_EXTRA_FUNC();
 	bool bUpdate = false;
 
 	for (CLLNode<IDInfo>* pUnitNode = headUnitNode(); pUnitNode != NULL;)
@@ -13022,6 +13128,7 @@ const std::vector<MapCategoryTypes>& CvPlot::getMapCategories() const
 
 int CvPlot::countSeeInvisibleActive(PlayerTypes ePlayer, InvisibleTypes eVisible) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 
 	foreach_(const CvUnit* pLoopUnit, units())
@@ -13122,6 +13229,7 @@ CvPlot::adjacent_iterator::adjacent_iterator(int centerX, int centerY, int numPl
 
 void CvPlot::adjacent_iterator::increment()
 {
+	PROFILE_EXTRA_FUNC();
 	m_curr = nullptr;
 	while (m_curr == nullptr && m_idx < m_numPlots)
 	{
@@ -13160,6 +13268,7 @@ CvPlot::adjacent_range CvPlot::cardinalDirectionAdjacent() const
 
 void CvPlot::countCommander(bool bNewVal, const CvUnit* com)
 {
+	PROFILE_EXTRA_FUNC();
 	const short iRange = com->getCommanderComp()->getCommandRange();
 
 	const PlayerTypes eComOwner = com->getOwner();
@@ -13214,6 +13323,7 @@ bool CvPlot::inCommandField(const PlayerTypes ePlayer) const
 
 int CvPlot::getCultureRateThisTurn(const PlayerTypes ePlayer) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (std::vector< std::pair<PlayerTypes, int> >::const_iterator it = m_cultureRatesThisTurn.begin(); it != m_cultureRatesThisTurn.end(); ++it)
 	{
 		if ((*it).first == ePlayer)
@@ -13226,6 +13336,7 @@ int CvPlot::getCultureRateThisTurn(const PlayerTypes ePlayer) const
 
 int CvPlot::getCultureRateLastTurn(const PlayerTypes ePlayer) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (std::vector< std::pair<PlayerTypes, int> >::const_iterator it = m_cultureRatesLastTurn.begin(); it != m_cultureRatesLastTurn.end(); ++it)
 	{
 		if ((*it).first == ePlayer)

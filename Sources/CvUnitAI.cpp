@@ -1,5 +1,8 @@
 // unitAI.cpp
 
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
@@ -1115,40 +1118,40 @@ int CvUnitAI::AI_attackOddsAtPlotInternal(const CvPlot* pPlot, CvUnit* pDefender
 	int iBaseOdds = 100 - iTheirOdds / 10; // getDefenderCombatValues returns odds based on the combat die (which is 1000 sided)
 
 	//int iTheirFirepower;
-#if 0
-	iTheirStrength = pDefender->currCombatStr(pPlot, this);
-	iTheirFirepower = pDefender->currFirepower(pPlot, this);
-
-
-	FAssert((iOurStrength + iTheirStrength) > 0);
-	FAssert((iOurFirepower + iTheirFirepower) > 0);
-
-	iBaseOdds = (100 * iOurStrength) / (iOurStrength + iTheirStrength);
-#endif
+//#if 0
+//	iTheirStrength = pDefender->currCombatStr(pPlot, this);
+//	iTheirFirepower = pDefender->currFirepower(pPlot, this);
+//
+//
+//	FAssert((iOurStrength + iTheirStrength) > 0);
+//	FAssert((iOurFirepower + iTheirFirepower) > 0);
+//
+//	iBaseOdds = (100 * iOurStrength) / (iOurStrength + iTheirStrength);
+//#endif
 	if (iBaseOdds == 0)
 	{
 		return 1;
 	}
 
-#if 0
-	const int iStrengthFactor = (iOurFirepower + iTheirFirepower + 1) / 2;
-
-	//TB Combat Mods Begin
-	const int iUnmodifiedDefenderArmor = pDefender->armorTotal() - punctureTotal();
-	const int iUnmodifiedAttackerArmor = armorTotal() - pDefender->punctureTotal();
-
-	const int iModifiedDefenderArmorZero = iUnmodifiedDefenderArmor < 0 ? 0 : iUnmodifiedDefenderArmor;
-	const int iModifiedAttackerArmorZero = iUnmodifiedAttackerArmor < 0 ? 0 : iUnmodifiedAttackerArmor;
-
-	const int iModifiedDefenderArmor = (iModifiedDefenderArmorZero < 95 ? iModifiedDefenderArmorZero : 95);
-	const int iModifiedAttackerArmor = (iModifiedAttackerArmorZero < 95 ? iModifiedAttackerArmorZero : 95);
-
-	const int iDefenderArmor = (100 - iModifiedDefenderArmor);
-	const int iAttackerArmor = (100 - iModifiedAttackerArmor);
-
-	iDamageToUs = std::max(1, ((((GC.getCOMBAT_DAMAGE() * (iTheirFirepower + iStrengthFactor)) / (iOurFirepower + iStrengthFactor)) * iAttackerArmor) / 100));
-	iDamageToThem = std::max(1, ((((GC.getCOMBAT_DAMAGE() * (iOurFirepower + iStrengthFactor)) / (iTheirFirepower + iStrengthFactor)) * iDefenderArmor) / 100));
-#endif
+//#if 0
+//	const int iStrengthFactor = (iOurFirepower + iTheirFirepower + 1) / 2;
+//
+//	//TB Combat Mods Begin
+//	const int iUnmodifiedDefenderArmor = pDefender->armorTotal() - punctureTotal();
+//	const int iUnmodifiedAttackerArmor = armorTotal() - pDefender->punctureTotal();
+//
+//	const int iModifiedDefenderArmorZero = iUnmodifiedDefenderArmor < 0 ? 0 : iUnmodifiedDefenderArmor;
+//	const int iModifiedAttackerArmorZero = iUnmodifiedAttackerArmor < 0 ? 0 : iUnmodifiedAttackerArmor;
+//
+//	const int iModifiedDefenderArmor = (iModifiedDefenderArmorZero < 95 ? iModifiedDefenderArmorZero : 95);
+//	const int iModifiedAttackerArmor = (iModifiedAttackerArmorZero < 95 ? iModifiedAttackerArmorZero : 95);
+//
+//	const int iDefenderArmor = (100 - iModifiedDefenderArmor);
+//	const int iAttackerArmor = (100 - iModifiedAttackerArmor);
+//
+//	iDamageToUs = std::max(1, ((((GC.getCOMBAT_DAMAGE() * (iTheirFirepower + iStrengthFactor)) / (iOurFirepower + iStrengthFactor)) * iAttackerArmor) / 100));
+//	iDamageToThem = std::max(1, ((((GC.getCOMBAT_DAMAGE() * (iOurFirepower + iStrengthFactor)) / (iTheirFirepower + iStrengthFactor)) * iDefenderArmor) / 100));
+//#endif
 
 	if (getDomainType() != DOMAIN_AIR)
 	{
@@ -1199,22 +1202,22 @@ int CvUnitAI::AI_attackOddsAtPlotInternal(const CvPlot* pPlot, CvUnit* pDefender
 	int iNeededRoundsUs = (std::max(0, pDefender->getHP() - iHitLimitThem) + iDamageToThem - 1) / iDamageToThem;
 	int iNeededRoundsThem = (std::max(0, getHP()) + iDamageToUs - 1) / iDamageToUs;
 
-#if 0
-	if (getDomainType() != DOMAIN_AIR)
-	{
-		// From Mongoose SDK
-		if (!pDefender->immuneToFirstStrikes())
-		{
-			iNeededRoundsUs -= ((iBaseOdds * firstStrikes()) + ((iBaseOdds * chanceFirstStrikes()) / 2)) / 100;
-		}
-		if (!immuneToFirstStrikes())
-		{
-			iNeededRoundsThem -= (((100 - iBaseOdds) * pDefender->firstStrikes()) + (((100 - iBaseOdds) * pDefender->chanceFirstStrikes()) / 2)) / 100;
-		}
-		iNeededRoundsUs = std::max(1, iNeededRoundsUs);
-		iNeededRoundsThem = std::max(1, iNeededRoundsThem);
-	}
-#endif
+//#if 0
+//	if (getDomainType() != DOMAIN_AIR)
+//	{
+//		// From Mongoose SDK
+//		if (!pDefender->immuneToFirstStrikes())
+//		{
+//			iNeededRoundsUs -= ((iBaseOdds * firstStrikes()) + ((iBaseOdds * chanceFirstStrikes()) / 2)) / 100;
+//		}
+//		if (!immuneToFirstStrikes())
+//		{
+//			iNeededRoundsThem -= (((100 - iBaseOdds) * pDefender->firstStrikes()) + (((100 - iBaseOdds) * pDefender->chanceFirstStrikes()) / 2)) / 100;
+//		}
+//		iNeededRoundsUs = std::max(1, iNeededRoundsUs);
+//		iNeededRoundsThem = std::max(1, iNeededRoundsThem);
+//	}
+//#endif
 
 	const int iRoundsDiff = iNeededRoundsUs - iNeededRoundsThem;
 
@@ -1532,6 +1535,7 @@ void CvUnitAI::AI_setUnitAIType(UnitAITypes eNewValue)
 
 int CvUnitAI::AI_sacrificeValue(const CvPlot* pPlot) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (getDomainType() == DOMAIN_AIR)
 	{
 		int iValue = 128 * (100 + currInterceptionProbability());
@@ -1680,6 +1684,7 @@ void CvUnitAI::AI_animalMove()
 
 bool CvUnitAI::AI_SettleFirstCity()
 {
+	PROFILE_EXTRA_FUNC();
 	// Afforess & Fuyu - Check for Good City Sites Near Starting Location
 	const int iGameSpeedPercent = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 	const int iMaxFoundTurn = iGameSpeedPercent / 100;
@@ -11848,17 +11853,17 @@ bool CvUnitAI::AI_guardCity(bool bLeave, bool bSearch, int iMaxPath)
 				{
 					iExtra -= iPlotDanger2;
 				}
-#if 0
-				//	If THIS unit is not a city type, then count non-city types generally when evaluating defense
-				//	or else any number of them will still keep them all locked up thinking more defense is needed
-				if (!AI_isCityAIType())
-				{
-					int iPlotAllStrength = plot()->plotStrength(UNITVALUE_FLAGS_DEFENSIVE, PUF_canDefend, -1, -1, getOwner(), NO_TEAM, NULL, -1, -1, 2);
-					int iPlotCityAIStrength = plot()->plotStrength(UNITVALUE_FLAGS_DEFENSIVE, PUF_canDefend, -1, -1, getOwner(), NO_TEAM, PUF_isCityAIType, -1, -1, 2);
-
-					iExtra += (iPlotAllStrength - iPlotCityAIStrength);
-				}
-#endif
+//#if 0
+//				//	If THIS unit is not a city type, then count non-city types generally when evaluating defense
+//				//	or else any number of them will still keep them all locked up thinking more defense is needed
+//				if (!AI_isCityAIType())
+//				{
+//					int iPlotAllStrength = plot()->plotStrength(UNITVALUE_FLAGS_DEFENSIVE, PUF_canDefend, -1, -1, getOwner(), NO_TEAM, NULL, -1, -1, 2);
+//					int iPlotCityAIStrength = plot()->plotStrength(UNITVALUE_FLAGS_DEFENSIVE, PUF_canDefend, -1, -1, getOwner(), NO_TEAM, PUF_isCityAIType, -1, -1, 2);
+//
+//					iExtra += (iPlotAllStrength - iPlotCityAIStrength);
+//				}
+//#endif
 				bool bDefend = false;
 
 				//	Never remove the last unit
@@ -12327,6 +12332,7 @@ bool CvUnitAI::AI_guardBonus(int iMinValue)
 
 int CvUnitAI::AI_getPlotDefendersNeeded(const CvPlot* pPlot, int iExtra) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iNeeded = iExtra;
 	const BonusTypes eNonObsoleteBonus = pPlot->getNonObsoleteBonusType(getTeam());
 	if (eNonObsoleteBonus != NO_BONUS)
@@ -14158,6 +14164,7 @@ bool CvUnitAI::AI_scrapSubdued()
 
 bool CvUnitAI::AI_moveToOurTerritory(int maxMoves)
 {
+	PROFILE_EXTRA_FUNC();
 	const int iSearchRange = AI_searchRange(maxMoves);
 
 	foreach_(const CvPlot * pLoopPlot, plot()->rect(iSearchRange, iSearchRange))
@@ -16713,6 +16720,7 @@ bool CvUnitAI::AI_refreshExploreRange(int iRange, bool bIncludeVisibilityRefresh
 //	Return a pointer to the unit if so (NULL with a detected threat means multiple units)
 bool CvUnitAI::getThreateningUnit(const CvPlot* pPlot, CvUnit*& pThreateningUnit, const CvPlot* pAttackPlot, int& iIndex, bool bReturnWorstOfMultiple) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iOdds = 0;
 	int iWorstOdds = 0;
 	int iI = 0;
@@ -16766,6 +16774,7 @@ bool CvUnitAI::getThreateningUnit(const CvPlot* pPlot, CvUnit*& pThreateningUnit
 
 bool CvUnitAI::exposedToDanger(const CvPlot* pPlot, int acceptableOdds, bool bConsiderOnlyWorstThreat) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (GET_PLAYER(getOwner()).AI_getPlotDanger(pPlot, 1, false))
 	{
 		//	What would the odds be?
@@ -17559,79 +17568,79 @@ bool CvUnitAI::AI_bombardCity()
 
 	return false;
 
-#if 0
-	CvCity* pBombardCity;
-
-	if (canBombard(plot()))
-	{
-		pBombardCity = bombardTarget(plot());
-		FAssertMsg(pBombardCity != NULL, "BombardCity is not assigned a valid value");
-
-		// do not bombard cities with no defenders
-		int iDefenderStrength = pBombardCity->plot()->AI_sumStrength(NO_PLAYER, getOwner(), DOMAIN_LAND, /*bDefensiveBonuses*/ true, /*bTestAtWar*/ true, false);
-		if (iDefenderStrength == 0)
-		{
-			return false;
-		}
-
-		// do not bombard cities if we have overwelming odds
-		int iAttackOdds = getGroup()->AI_attackOdds(pBombardCity->plot(), /*bPotentialEnemy*/ true);
-		if ((iAttackOdds > 95))
-		{
-			return false;
-		}
-
-		// If we have reasonable odds, check for attacking without waiting for bombards
-		if ((iAttackOdds >= getBBAI_SKIP_BOMBARD_BEST_ATTACK_ODDS())
-		{
-			int iBase = GC.getBBAI_SKIP_BOMBARD_BASE_STACK_RATIO();
-				int iComparison = getGroup()->AI_compareStacks(pBombardCity->plot(), /*bPotentialEnemy*/ true, /*bCheckCanAttack*/ true, /*bCheckCanMove*/ true);
-
-				// Big troop advantage plus pretty good starting odds, don't wait to allow reinforcements
-				if (iComparison > (iBase - 4 * iAttackOdds))
-				{
-					if (gUnitLogLevel > 2) logBBAI("	  Stack skipping bombard of %S with compare %d and starting odds %d", pBombardCity->getName().GetCString(), iComparison, iAttackOdds);
-						return false;
-				}
-
-			int iMin = GC.getBBAI_SKIP_BOMBARD_MIN_STACK_RATIO();
-			bool bHasWaited = algo::any_of(getGroup()->units(), CvUnit::fn::getFortifyTurns() > 0)
-
-				// Bombard at least one turn to allow bombers/ships to get some shots in too
-				if (bHasWaited && (pBombardCity->getDefenseDamage() > 0))
-				{
-					int iBombardTurns = getGroup()->getBombardTurns(pBombardCity);
-					if (iComparison > std::max(iMin, iBase - 3 * iAttackOdds - 3 * iBombardTurns))
-					{
-						if (gUnitLogLevel > 2) logBBAI("	  Stack skipping bombard of %S with compare %d, starting odds %d, and bombard turns %d", pBombardCity->getName().GetCString(), iComparison, iAttackOdds, iBombardTurns);
-						return false;
-					}
-				}
-		}
-
-		//getGroup()->pushMission(MISSION_PILLAGE);
-		getGroup()->pushMission(MISSION_BOMBARD);
-		return true;
-		/************************************************************************************************/
-		/* REVOLUTIONDCM							05/24/08								Glider1	 */
-		/*																							  */
-		/*																							  */
-		/************************************************************************************************/
-				// RevolutionDCM - ranged bombard AI wraps standard bombard
-		if (!AI_RbombardCity(pBombardCity))
-		{
-			// vanilla behaviour
-			getGroup()->pushMission(MISSION_BOMBARD);
-			return true;
-		}
-		// RevolutionDCM - end
-/************************************************************************************************/
-/* REVOLUTIONDCM							END									 Glider1	 */
-/************************************************************************************************/
-	}
-
-	return false;
-#endif
+//#if 0
+//	CvCity* pBombardCity;
+//
+//	if (canBombard(plot()))
+//	{
+//		pBombardCity = bombardTarget(plot());
+//		FAssertMsg(pBombardCity != NULL, "BombardCity is not assigned a valid value");
+//
+//		// do not bombard cities with no defenders
+//		int iDefenderStrength = pBombardCity->plot()->AI_sumStrength(NO_PLAYER, getOwner(), DOMAIN_LAND, /*bDefensiveBonuses*/ true, /*bTestAtWar*/ true, false);
+//		if (iDefenderStrength == 0)
+//		{
+//			return false;
+//		}
+//
+//		// do not bombard cities if we have overwelming odds
+//		int iAttackOdds = getGroup()->AI_attackOdds(pBombardCity->plot(), /*bPotentialEnemy*/ true);
+//		if ((iAttackOdds > 95))
+//		{
+//			return false;
+//		}
+//
+//		// If we have reasonable odds, check for attacking without waiting for bombards
+//		if ((iAttackOdds >= getBBAI_SKIP_BOMBARD_BEST_ATTACK_ODDS())
+//		{
+//			int iBase = GC.getBBAI_SKIP_BOMBARD_BASE_STACK_RATIO();
+//				int iComparison = getGroup()->AI_compareStacks(pBombardCity->plot(), /*bPotentialEnemy*/ true, /*bCheckCanAttack*/ true, /*bCheckCanMove*/ true);
+//
+//				// Big troop advantage plus pretty good starting odds, don't wait to allow reinforcements
+//				if (iComparison > (iBase - 4 * iAttackOdds))
+//				{
+//					if (gUnitLogLevel > 2) logBBAI("	  Stack skipping bombard of %S with compare %d and starting odds %d", pBombardCity->getName().GetCString(), iComparison, iAttackOdds);
+//						return false;
+//				}
+//
+//			int iMin = GC.getBBAI_SKIP_BOMBARD_MIN_STACK_RATIO();
+//			bool bHasWaited = algo::any_of(getGroup()->units(), CvUnit::fn::getFortifyTurns() > 0)
+//
+//				// Bombard at least one turn to allow bombers/ships to get some shots in too
+//				if (bHasWaited && (pBombardCity->getDefenseDamage() > 0))
+//				{
+//					int iBombardTurns = getGroup()->getBombardTurns(pBombardCity);
+//					if (iComparison > std::max(iMin, iBase - 3 * iAttackOdds - 3 * iBombardTurns))
+//					{
+//						if (gUnitLogLevel > 2) logBBAI("	  Stack skipping bombard of %S with compare %d, starting odds %d, and bombard turns %d", pBombardCity->getName().GetCString(), iComparison, iAttackOdds, iBombardTurns);
+//						return false;
+//					}
+//				}
+//		}
+//
+//		//getGroup()->pushMission(MISSION_PILLAGE);
+//		getGroup()->pushMission(MISSION_BOMBARD);
+//		return true;
+//		/************************************************************************************************/
+//		/* REVOLUTIONDCM							05/24/08								Glider1	 */
+//		/*																							  */
+//		/*																							  */
+//		/************************************************************************************************/
+//				// RevolutionDCM - ranged bombard AI wraps standard bombard
+//		if (!AI_RbombardCity(pBombardCity))
+//		{
+//			// vanilla behaviour
+//			getGroup()->pushMission(MISSION_BOMBARD);
+//			return true;
+//		}
+//		// RevolutionDCM - end
+///************************************************************************************************/
+///* REVOLUTIONDCM							END									 Glider1	 */
+///************************************************************************************************/
+//	}
+//
+//	return false;
+//#endif
 }
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD					   END												  */
@@ -17924,6 +17933,7 @@ bool CvUnitAI::AI_rangeAttack(int iRange)
 
 bool CvUnitAI::AI_leaveAttack(int iRange, int iOddsThreshold, int iStrengthThreshold)
 {
+	PROFILE_EXTRA_FUNC();
 	int iPathTurns;
 
 	FAssert(canMove());
@@ -18672,6 +18682,7 @@ bool CvUnitAI::AI_pillage(int iBonusValueThreshold)
 
 bool CvUnitAI::AI_canPillage(const CvPlot& kPlot) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (isEnemy(kPlot.getTeam(), &kPlot))
 	{
 		return true;
@@ -20657,6 +20668,7 @@ bool CvUnitAI::AI_improveCity(CvCity* pCity)
 
 bool CvUnitAI::AI_improveLocalPlot(int iRange, const CvCity* pIgnoreCity)
 {
+	PROFILE_EXTRA_FUNC();
 	const CvPlayerAI& kOwner = GET_PLAYER(getOwner());
 	const ImprovementTypes eRuins = GC.getIMPROVEMENT_CITY_RUINS();
 	const bool bSafeAutomation = kOwner.isOption(PLAYEROPTION_SAFE_AUTOMATION);
@@ -22855,6 +22867,7 @@ bool CvUnitAI::AI_pickupStranded(UnitAITypes eUnitAI, int iMaxPath)
 // Returns true if a mission was pushed...
 bool CvUnitAI::AI_airOffensiveCity()
 {
+	PROFILE_EXTRA_FUNC();
 	//PROFILE_FUNC();
 
 	FAssert(canAirAttack() || nukeRange() >= 0);
@@ -22897,6 +22910,7 @@ bool CvUnitAI::AI_airOffensiveCity()
 // Function for ranking the value of a plot as a base for offensive air units
 int CvUnitAI::AI_airOffenseBaseValue(const CvPlot* pPlot) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (pPlot == NULL)
 	{
 		return 0;
@@ -23205,6 +23219,7 @@ int CvUnitAI::AI_airOffenseBaseValue(const CvPlot* pPlot) const
 // Returns true if a mission was pushed...
 bool CvUnitAI::AI_airDefensiveCity()
 {
+	PROFILE_EXTRA_FUNC();
 	//PROFILE_FUNC();
 
 	FAssert(getDomainType() == DOMAIN_AIR);
@@ -23307,6 +23322,7 @@ bool CvUnitAI::AI_airDefensiveCity()
 // Returns true if a mission was pushed...
 bool CvUnitAI::AI_airCarrier()
 {
+	PROFILE_EXTRA_FUNC();
 	//PROFILE_FUNC();
 
 	if (hasCargo())
@@ -23376,6 +23392,7 @@ bool CvUnitAI::AI_airCarrier()
 
 bool CvUnitAI::AI_missileLoad(UnitAITypes eTargetUnitAI, int iMaxOwnUnitAI, bool bStealthOnly)
 {
+	PROFILE_EXTRA_FUNC();
 	//PROFILE_FUNC();
 
 	CvUnit* pBestUnit = NULL;
@@ -23436,6 +23453,7 @@ bool CvUnitAI::AI_missileLoad(UnitAITypes eTargetUnitAI, int iMaxOwnUnitAI, bool
 // Returns true if a mission was pushed...
 bool CvUnitAI::AI_airStrike()
 {
+	PROFILE_EXTRA_FUNC();
 	//PROFILE_FUNC();
 
 	CvUnit* pDefender;
@@ -23700,6 +23718,7 @@ bool CvUnitAI::AI_defendBaseAirStrike()
 
 bool CvUnitAI::AI_airBombPlots()
 {
+	PROFILE_EXTRA_FUNC();
 	//PROFILE_FUNC();
 
 	const int iSearchRange = airRange();
@@ -23771,6 +23790,7 @@ bool CvUnitAI::AI_airBombPlots()
 
 bool CvUnitAI::AI_airBombDefenses()
 {
+	PROFILE_EXTRA_FUNC();
 	//PROFILE_FUNC();
 
 	const int iSearchRange = airRange();
@@ -24012,6 +24032,7 @@ bool CvUnitAI::AI_nuke()
 
 bool CvUnitAI::AI_nukeRange(int iRange)
 {
+	PROFILE_EXTRA_FUNC();
 	const CvPlot* pBestPlot = NULL;
 	int iBestValue = 0;
 	foreach_(const CvPlot * pLoopPlot, plot()->rect(iRange, iRange))
@@ -24109,6 +24130,7 @@ bool CvUnitAI::AI_nukeRange(int iRange)
 
 bool CvUnitAI::AI_trade(int iValueThreshold)
 {
+	PROFILE_EXTRA_FUNC();
 	int iPathTurns;
 	int iBestValue = 0;
 	const CvPlot* pBestPlot = NULL;
@@ -24898,6 +24920,7 @@ bool CvUnitAI::AI_airAttackDamagedSkip()
 // Returns true if a mission was pushed or we should wait for another unit to bombard...
 bool CvUnitAI::AI_followBombard()
 {
+	PROFILE_EXTRA_FUNC();
 	/************************************************************************************************/
 	/* REVOLUTIONDCM							05/24/08								Glider1	 */
 	/*																							  */
@@ -25030,6 +25053,7 @@ bool CvUnitAI::AI_defendPlot(const CvPlot* pPlot) const
 
 int CvUnitAI::AI_pillageValue(const CvPlot* pPlot, int iBonusValueThreshold) const
 {
+	PROFILE_EXTRA_FUNC();
 	FAssert(getGroup()->canPillage(pPlot) || canAirBombAt(plot(), pPlot->getX(), pPlot->getY()) || (getGroup()->getCargo() > 0));
 	//A count is all that's necessary here
 	if (!pPlot->isOwned())
@@ -25521,6 +25545,7 @@ bool CvUnitAI::AI_moveIntoNearestOwnedCity()
 //returns true if a mission is pushed.
 bool CvUnitAI::AI_artistCultureVictoryMove()
 {
+	PROFILE_EXTRA_FUNC();
 	if (!GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE1))
 	{
 		return false;
@@ -26714,6 +26739,7 @@ bool CvUnitAI::AI_hurryFood()
 
 bool CvUnitAI::AI_command()
 {
+	PROFILE_EXTRA_FUNC();
 	if (!GC.getGame().isOption(GAMEOPTION_UNIT_GREAT_COMMANDERS))
 	{
 		return false;
@@ -27794,6 +27820,7 @@ void CvUnitAI::AI_autoAirStrike()
 // Returns true if a mission was pushed...
 bool CvUnitAI::AI_airBombCities()
 {
+	PROFILE_EXTRA_FUNC();
 	//PROFILE_FUNC();
 
 	const int iSearchRange = airRange();
@@ -28784,6 +28811,7 @@ bool CvUnitAI::AI_cureAffliction(PromotionLineTypes eAfflictionLine)
 
 void unitSourcesValueToCity(const CvGameObject* pObject, const CvPropertyManipulators* pMani, const CvUnit* pUnit, const CvCityAI* pCity, int* iValue, PropertyTypes eProperty)
 {
+	PROFILE_EXTRA_FUNC();
 	if (pCity == NULL)
 	{
 		pCity = static_cast<CvCityAI*>(GET_PLAYER(pUnit->getOwner()).getCapitalCity());
@@ -28818,6 +28846,7 @@ void unitSourcesValueToCity(const CvGameObject* pObject, const CvPropertyManipul
 //	Find the total beneficial bnet value to a given city of this unit's property sources
 int CvUnitAI::AI_beneficialPropertyValueToCity(const CvCity* pCity, PropertyTypes eProperty) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iValue = 0;
 	//void unitSourcesValueToCity(CvGameObject * pObject, CvPropertyManipulators * pMani, const CvUnit * pUnit, const CvCityAI * pCity, int* iValue, PropertyTypes eProperty)
 
@@ -28838,6 +28867,7 @@ void CvUnitAI::AI_setLeaderPriority(int iPriority)	//	 -1 means reset to default
 
 bool CvUnitAI::AI_fulfillHealerNeed(const CvPlot* pPlot)
 {
+	PROFILE_EXTRA_FUNC();
 	const CvPlot* pBestPlot = NULL;
 	const CvPlot* endTurnPlot = NULL;
 	int iBestValue = 0;
@@ -28910,6 +28940,7 @@ bool CvUnitAI::AI_fulfillHealerNeed(const CvPlot* pPlot)
 
 bool CvUnitAI::AI_fulfillImmediateHealerNeed(const CvPlot* pPlot)
 {
+	PROFILE_EXTRA_FUNC();
 	const CvPlot* pBestPlot = NULL;
 	const CvPlot* endTurnPlot = NULL;
 	int iBestValue = 0;
@@ -29111,6 +29142,7 @@ namespace {
 
 bool CvUnitAI::AI_fulfillPropertyControlNeed()
 {
+	PROFILE_EXTRA_FUNC();
 	const CvPropertyManipulators* propertyManipulators = GC.getUnitInfo(getUnitType()).getPropertyManipulators();
 	// If it doesn't change properties then it can't fulfill control needs
 	if (propertyManipulators == nullptr)
@@ -29289,6 +29321,7 @@ bool CvUnitAI::AI_activateStatus(bool bStack, PromotionTypes eStatus, CvUnit* pU
 
 bool CvUnitAI::AI_selectStatus(bool bStack, CvUnit* pUnit)
 {
+	PROFILE_EXTRA_FUNC();
 	if (bStack)
 	{
 		if (getGroup() == NULL)
@@ -29717,6 +29750,7 @@ bool CvUnitAI::AI_selectStatus(bool bStack, CvUnit* pUnit)
 
 bool CvUnitAI::AI_groupSelectStatus()
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(CvUnit * pLoopUnit, getGroup()->units())
 	{
 		if (AI_selectStatus(false, pLoopUnit))
@@ -29729,6 +29763,7 @@ bool CvUnitAI::AI_groupSelectStatus()
 
 bool CvUnitAI::AI_InvestigatorFulfillment()
 {
+	PROFILE_EXTRA_FUNC();
 	const int iMinimumDedicated = 1;
 	const CvPlayerAI& player = GET_PLAYER(getOwner());
 
@@ -29815,6 +29850,7 @@ bool CvUnitAI::AI_InvestigatorFulfillment()
 //in progress
 bool CvUnitAI::AI_establishStackSeeInvisibleCoverage()
 {
+	PROFILE_EXTRA_FUNC();
 	if (isHuman())
 	{
 		return false;
@@ -29906,6 +29942,7 @@ bool CvUnitAI::generateSafePathforVulnerable(const CvPlot* pToPlot, int* piPathT
 
 void CvUnitAI::setToWaitOnUnitAI(UnitAITypes eUnitAI, bool bAdd)
 {
+	PROFILE_EXTRA_FUNC();
 	int iIndex = (int)eUnitAI;
 
 	if (bAdd)
@@ -29951,6 +29988,7 @@ bool CvUnitAI::isWaitingOnUnitAIAny() const
 
 void CvUnitAI::setWaitingOnUnitAIAny()
 {
+	PROFILE_EXTRA_FUNC();
 	m_bWaitingOnUnitAIAny = false;
 	if (isHuman())
 	{
@@ -29968,6 +30006,7 @@ void CvUnitAI::setWaitingOnUnitAIAny()
 
 bool CvUnitAI::AI_isNegativePropertyUnit() const
 {
+	PROFILE_EXTRA_FUNC();
 	const CvPropertyManipulators* propertyManipulators = GC.getUnitInfo(getUnitType()).getPropertyManipulators();
 	if (propertyManipulators != NULL)
 	{

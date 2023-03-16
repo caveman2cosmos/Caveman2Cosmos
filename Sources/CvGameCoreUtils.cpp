@@ -78,6 +78,7 @@ bool isCardinalDirection(DirectionTypes eDirection)
 
 DirectionTypes estimateDirection(int iDX, int iDY)
 {
+	PROFILE_EXTRA_FUNC();
 	const int displacementSize = 8;
 	static float sqrt2 = 1 / sqrt(2.0f);
 	//													N			NE			E			SE				S			SW				W			NW
@@ -257,6 +258,7 @@ int getWorldSizeMaxConscript(CivicTypes eCivic)
 
 bool isReligionTech(TechTypes eTech)
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
 	{
 		if (GC.getReligionInfo((ReligionTypes)iI).getTechPrereq() == eTech)
@@ -269,6 +271,7 @@ bool isReligionTech(TechTypes eTech)
 
 bool isCorporationTech(TechTypes eTech)
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < GC.getNumCorporationInfos(); iI++)
 	{
 		if (GC.getCorporationInfo((CorporationTypes)iI).getTechPrereq() == eTech)
@@ -427,6 +430,7 @@ bool isLimitedProject(ProjectTypes eProject)
 // Modified by Jason Winokur to keep the intermediate factorials small
 int64_t getBinomialCoefficient(int iN, int iK)
 {
+	PROFILE_EXTRA_FUNC();
 	int64_t iTemp = 1;
 	//take advantage of symmetry in combination, eg. 15C12 = 15C3
 	iK = std::min(iK, iN - iK);
@@ -444,6 +448,7 @@ int64_t getBinomialCoefficient(int iN, int iK)
 // Written by DeepO
 int getCombatOdds(const CvUnit* pAttacker, const CvUnit* pDefender)
 {
+	PROFILE_EXTRA_FUNC();
 	float fOddsEvent;
 	float fOddsAfterEvent;
 	int iAttackerStrength;
@@ -1898,16 +1903,16 @@ int pathValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointe
 	{
 		PROFILE("pathValid domain sea");
 
-#if 0
-		//	Optimisation short-circuit some invalid pathing choices quickly
-		if (!pToPlot->isWater() && !pSelectionGroup->canMoveAllTerrain() && !pToPlot->isCanMoveSeaUnits())
-		{
-			if (!pToPlot->isCity())
-			{
-				return FALSE;
-			}
-		}
-#endif
+//#if 0
+//		//	Optimisation short-circuit some invalid pathing choices quickly
+//		if (!pToPlot->isWater() && !pSelectionGroup->canMoveAllTerrain() && !pToPlot->isCanMoveSeaUnits())
+//		{
+//			if (!pToPlot->isCity())
+//			{
+//				return FALSE;
+//			}
+//		}
+//#endif
 		//	Can't cross diagonally across 'land'
 		if (pFromPlot->isWater() && pToPlot->isWater())
 		{
@@ -2006,16 +2011,16 @@ int pathAdd(FAStarNode* parent, FAStarNode* node, int data, const void* pointer,
 
 		iMoves = pSelectionGroup->movesRemainingAfterMovingTo((iStartMoves == 0 ? -1 : iStartMoves), pFromPlot, pToPlot);
 
-#if 0
-		if ( gDLL->getFAStarIFace()->GetDestX(finder) == pToPlot->getX() && gDLL->getFAStarIFace()->GetDestY(finder) == pToPlot->getY() )
-		{
-			if (!pSelectionGroup->AI_isControlled())
-			{
-				OutputDebugString("Force reset find at possible end of path\n");
-				gDLL->getFAStarIFace()->ForceReset(finder);
-			}
-		}
-#endif
+//#if 0
+//		if ( gDLL->getFAStarIFace()->GetDestX(finder) == pToPlot->getX() && gDLL->getFAStarIFace()->GetDestY(finder) == pToPlot->getY() )
+//		{
+//			if (!pSelectionGroup->AI_isControlled())
+//			{
+//				OutputDebugString("Force reset find at possible end of path\n");
+//				gDLL->getFAStarIFace()->ForceReset(finder);
+//			}
+//		}
+//#endif
 	}
 
 	FASSERT_NOT_NEGATIVE(iMoves);
@@ -2023,16 +2028,16 @@ int pathAdd(FAStarNode* parent, FAStarNode* node, int data, const void* pointer,
 	node->m_iData1 = iMoves;
 	node->m_iData2 = iTurns;
 
-#if 0
-	if ( parent != NULL )
-	{
-		OutputDebugString(CvString::format("PathAdd (%d,%d)->(%d,%d)\n", parent->m_iX, parent->m_iY, node->m_iX, node->m_iY).c_str());
-	}
-	else
-	{
-		OutputDebugString(CvString::format("PathAdd NULL->(%d,%d)\n", node->m_iX, node->m_iY).c_str());
-	}
-#endif
+//#if 0
+//	if ( parent != NULL )
+//	{
+//		OutputDebugString(CvString::format("PathAdd (%d,%d)->(%d,%d)\n", parent->m_iX, parent->m_iY, node->m_iX, node->m_iY).c_str());
+//	}
+//	else
+//	{
+//		OutputDebugString(CvString::format("PathAdd NULL->(%d,%d)\n", node->m_iX, node->m_iY).c_str());
+//	}
+//#endif
 
 	return 1;
 }
@@ -2170,27 +2175,27 @@ int pathCost(FAStarNode* parent, FAStarNode* node, int data, const void* pointer
 
 			if ( bEndsTurn )
 			{
-#if 0
-				PROFILE("pathCost.endTurnDetermined");
-
-				if ( bHaveEndTurnCachedEdgeValue )
-				{
-					PROFILE("pathCost.endTurnDetermined.Cached");
-				}
-#endif
+//#if 0
+//				PROFILE("pathCost.endTurnDetermined");
+//
+//				if ( bHaveEndTurnCachedEdgeValue )
+//				{
+//					PROFILE("pathCost.endTurnDetermined.Cached");
+//				}
+//#endif
 				bDoesntEndTurn = false;
 			}
-#if 0
-			else if ( bDoesntEndTurn )
-			{
-				PROFILE("pathCost.nonEndTurnDetermined");
-
-				if ( bHaveNonEndTurnCachedEdgeValue )
-				{
-					PROFILE("pathCost.NonEndTurnDetermined.Cached");
-				}
-			}
-#endif
+//#if 0
+//			else if ( bDoesntEndTurn )
+//			{
+//				PROFILE("pathCost.nonEndTurnDetermined");
+//
+//				if ( bHaveNonEndTurnCachedEdgeValue )
+//				{
+//					PROFILE("pathCost.NonEndTurnDetermined.Cached");
+//				}
+//			}
+//#endif
 		}
 		else
 		{
@@ -2612,6 +2617,7 @@ int pathCost(FAStarNode* parent, FAStarNode* node, int data, const void* pointer
 //	Heuristic cost
 int	NewPathHeuristicFunc(const CvSelectionGroup* pGroup, int iFromX, int iFromY, int iToX, int iToY, int& iLimitCost)
 {
+	PROFILE_EXTRA_FUNC();
 	//PROFILE_FUNC();
 
 	int iStepDistance = stepDistance(iFromX, iFromY, iToX, iToY);
@@ -2808,27 +2814,27 @@ int	NewPathCostFunc(const CvPathGeneratorBase* generator, const CvSelectionGroup
 
 			if ( bEndsTurn )
 			{
-#if 0
-				PROFILE("pathCost.endTurnDetermined");
-
-				if ( bHaveEndTurnCachedEdgeValue )
-				{
-					PROFILE("pathCost.endTurnDetermined.Cached");
-				}
-#endif
+//#if 0
+//				PROFILE("pathCost.endTurnDetermined");
+//
+//				if ( bHaveEndTurnCachedEdgeValue )
+//				{
+//					PROFILE("pathCost.endTurnDetermined.Cached");
+//				}
+//#endif
 				bDoesntEndTurn = false;
 			}
-#if 0
-			else if ( bDoesntEndTurn )
-			{
-				PROFILE("pathCost.nonEndTurnDetermined");
-
-				if ( bHaveNonEndTurnCachedEdgeValue )
-				{
-					PROFILE("pathCost.NonEndTurnDetermined.Cached");
-				}
-			}
-#endif
+//#if 0
+//			else if ( bDoesntEndTurn )
+//			{
+//				PROFILE("pathCost.nonEndTurnDetermined");
+//
+//				if ( bHaveNonEndTurnCachedEdgeValue )
+//				{
+//					PROFILE("pathCost.NonEndTurnDetermined.Cached");
+//				}
+//			}
+//#endif
 		}
 		else
 		{
@@ -3368,13 +3374,13 @@ bool ContextFreeNewPathValidFunc(const CvSelectionGroup* pSelectionGroup, int iF
 			{
 				{
 					PROFILE("pathValid domain sea");
-			#if 0
-					// Optimisation short-circuit some invalid pathing choices quickly
-					if (!pToPlot->isWater() && !pSelectionGroup->canMoveAllTerrain() && !pToPlot->isCanMoveSeaUnits() && !pToPlot->isCity())
-					{
-						return false;
-					}
-			#endif
+//			#if 0
+//					// Optimisation short-circuit some invalid pathing choices quickly
+//					if (!pToPlot->isWater() && !pSelectionGroup->canMoveAllTerrain() && !pToPlot->isCanMoveSeaUnits() && !pToPlot->isCity())
+//					{
+//						return false;
+//					}
+//			#endif
 					// Can't cross diagonally across 'land'
 					if (pFromPlot->isWater() && pToPlot->isWater()
 					&& !GC.getMap().plot(pFromPlot->getX(), pToPlot->getY())->isWater() && !GC.getMap().plot(pToPlot->getX(), pFromPlot->getY())->isWater()
@@ -3865,6 +3871,7 @@ int* shuffle(int iNum, CvRandom& rand)
 
 void shuffleArray(int* piShuffle, int iNum, CvRandom& rand)
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < iNum; iI++)
 	{
 		piShuffle[iI] = iI;
@@ -3874,6 +3881,7 @@ void shuffleArray(int* piShuffle, int iNum, CvRandom& rand)
 
 void shuffle(int* piShuffle, int iNum, CvRandom& rand)
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < iNum; iI++)
 	{
 		const int iJ = iI + rand.get(iNum - iI);
@@ -4282,6 +4290,7 @@ int calcBaseExpNeeded(const int iLevel, const PlayerTypes ePlayer)
  */
 int calculateLevel(const int iExperience, const PlayerTypes ePlayer)
 {
+	PROFILE_EXTRA_FUNC();
 	FAssertMsg(ePlayer != NO_PLAYER, "ePlayer must be a valid player");
 
 	if (iExperience <= 0)
@@ -4370,6 +4379,7 @@ int getTreatyLength()
 
 void CvChecksum::add(int i)
 {
+	PROFILE_EXTRA_FUNC();
 	union { int value; uint8_t bytes[4]; } data;
 	data.value = i;
 	for(UINT i = 0; i < sizeof(data.bytes); i++)

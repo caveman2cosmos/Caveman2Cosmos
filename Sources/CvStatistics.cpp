@@ -1,3 +1,6 @@
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvGlobals.h"
 #include "CvPlayerAI.h"
@@ -101,6 +104,7 @@ void CvPlayerRecord::uninit()
 
 void CvPlayerRecord::reset()
 {
+	PROFILE_EXTRA_FUNC();
 	uninit();
 
 	m_iID = -1;
@@ -333,6 +337,7 @@ void CvStatistics::init()
 }
 void CvStatistics::uninit()
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(const CvPlayerRecord* pRecord, m_PlayerRecords)
 	{
 		SAFE_DELETE(pRecord);
@@ -361,6 +366,7 @@ void CvStatistics::setEra(EraTypes eEra)
 //
 void CvStatistics::setVictory( TeamTypes eWinner, VictoryTypes eVictory )
 {
+	PROFILE_EXTRA_FUNC();
 	// Report a victory for all players on this team...
 	for (int i = 0; i < MAX_PC_PLAYERS; ++i)
 	{
@@ -425,6 +431,7 @@ void CvStatistics::goldenAge( PlayerTypes ePlayer )
 
 void CvStatistics::read(FDataStreamBase* pStream)
 {
+	PROFILE_EXTRA_FUNC();
 	// Read game data into record
 	m_GameRecord.read(pStream);
 
@@ -440,6 +447,7 @@ void CvStatistics::read(FDataStreamBase* pStream)
 
 void CvStatistics::write(FDataStreamBase* pStream)
 {
+	PROFILE_EXTRA_FUNC();
 	// Write game data into record
 	m_GameRecord.write(pStream);
 
