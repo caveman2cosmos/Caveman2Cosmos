@@ -3,8 +3,6 @@
 #ifndef FFreeListArray_h__
 #define FFreeListArray_h__
 
-#include "FProfiler.h"
-
 #include "FDataStreamBase.h"
 #include "FFreeListArrayBase.h"
 
@@ -477,7 +475,6 @@ inline void FFreeListArray< T >::Write( FDataStreamBase* pStream )
 template < class T >
 inline void ReadStreamableFFreeListArray( FFreeListArray< T >& flist, FDataStreamBase* pStream )
 {
-	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 	pStream->Read( &iCount );
 	flist.init( iCount );
@@ -499,7 +496,6 @@ inline void ReadStreamableFFreeListArray( FFreeListArray< T >& flist, FDataStrea
 template < class T >
 inline void WriteStreamableFFreeListArray( FFreeListArray< T >& flist, FDataStreamBase* pStream )
 {
-	PROFILE_EXTRA_FUNC();
 	int iCount = flist.getCount();
 	pStream->Write( iCount );
 

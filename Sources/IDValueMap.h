@@ -3,8 +3,6 @@
 #ifndef IDVALUEMAP_H
 #define IDVALUEMAP_H
 
-#include "FProfiler.h"
-
 //  $Header:
 //------------------------------------------------------------------------------------------------
 //
@@ -48,7 +46,6 @@ struct IDValueMap
 	template <DelayedResolutionTypes delayedRes_>
 	void _readPairedArrays(CvXMLLoadUtility* pXML, const wchar_t* szRootTagName, const wchar_t* firstChildTag, const wchar_t* secondChildTag)
 	{
-		PROFILE_EXTRA_FUNC();
 		FAssert(m_map.empty());
 
 		if (pXML->TryMoveToXmlFirstChild(szRootTagName))
@@ -75,7 +72,6 @@ struct IDValueMap
 
 	void read(CvXMLLoadUtility* pXML, const wchar_t* szRootTagName)
 	{
-		PROFILE_EXTRA_FUNC();
 		if (pXML->TryMoveToXmlFirstChild(szRootTagName))
 		{
 			m_map.clear();
@@ -101,7 +97,6 @@ struct IDValueMap
 
 	void readWithDelayedResolution(CvXMLLoadUtility* pXML, const wchar_t* szRootTagName)
 	{
-		PROFILE_EXTRA_FUNC();
 		if (pXML->TryMoveToXmlFirstChild(szRootTagName))
 		{
 			m_map.clear();
@@ -138,7 +133,6 @@ struct IDValueMap
 
 	void copyNonDefaults(const IDValueMap& other)
 	{
-		PROFILE_EXTRA_FUNC();
 		foreach_(const value_type& otherPair, other)
 		{
 			if (!hasValue(otherPair.first))
@@ -150,7 +144,7 @@ struct IDValueMap
 
 #define COPY(dst, src, typeName)						 \
 	{													 \
-		PROFILE_EXTRA_FUNC(); const int iNum = sizeof(src) / sizeof(typeName); \
+		const int iNum = sizeof(src) / sizeof(typeName); \
 		dst = new typeName[iNum];						 \
 		for (int i = 0; i < iNum; i++)					 \
 			dst[i] = src[i];							 \
@@ -158,7 +152,6 @@ struct IDValueMap
 
 	void copyNonDefaultPairedArrays(const IDValueMap& other)
 	{
-		PROFILE_EXTRA_FUNC();
 		foreach_(const value_type& otherPair, other)
 		{
 			if (!hasValue(otherPair.first))
@@ -170,7 +163,6 @@ struct IDValueMap
 
 	void copyNonDefaultDelayedResolution(const IDValueMap& other)
 	{
-		PROFILE_EXTRA_FUNC();
 		if (m_map.empty())
 		{
 			const std::vector<value_type>& otherVector = other.m_map;
@@ -186,14 +178,12 @@ struct IDValueMap
 
 	void removeDelayedResolution()
 	{
-		PROFILE_EXTRA_FUNC();
 		foreach_(const value_type& pair, m_map)
 			GC.removeDelayedResolution((int*)&pair.first);
 	}
 
 	Value_ getValue(ID_ id) const
 	{
-		PROFILE_EXTRA_FUNC();
 		foreach_(const value_type& pair, m_map)
 			if (pair.first == id)
 				return pair.second;
@@ -212,7 +202,6 @@ struct IDValueMap
 
 	const python::list makeList() const
 	{
-		PROFILE_EXTRA_FUNC();
 		python::list l = python::list();
 		foreach_(const value_type& pair, m_map)
 			l.append(std::make_pair((int)pair.first, pair.second));

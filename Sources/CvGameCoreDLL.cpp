@@ -115,7 +115,7 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 //	the debug stream (view with DbgView or a debugger)
 #define DETAILED_TRACE
 
-#define MAX_SAMPLES				20000
+#define MAX_SAMPLES				1200
 static __declspec( thread ) ProfileLinkageInfo* _currentSample = NULL;
 static __declspec(thread) bool bIsMainThread = false;
 static __declspec(thread) int iThreadSlot = -1;
@@ -712,4 +712,60 @@ int64_t getModifiedIntValue64(const int64_t iValue, const int iMod)
 const std::string getModDir()
 {
 	return modDir;
+}
+
+
+// Applies rank scaling to a value, with overflow protection.
+// rankMultiplier should be scaled up by 100 (e.g. 300 instead of 3).
+// rankChange can be positive or negative.
+// Equation demonstrated here: https://www.desmos.com/calculator/wivft5kfcc
+int applySMRank(int value, int rankChange, int rankMultiplier)
+{
+	FAssertMsg(rankMultiplier > 0, "rankMultiplier must be greater than 0");
+	int64_t lvalue = 100 * value;
+	if (rankChange > 0)
+	{
+		for (int iI = 0; iI < rankChange; iI++)
+		{
+			lvalue *= rankMultiplier;
+			lvalue /= 100;
+		}
+	}
+	else
+	{
+		for (int iI = 0; iI < -rankChange; iI++)
+		{
+			lvalue *= 100;
+			lvalue /= rankMultiplier;
+		}
+	}
+	return static_cast<int>(std::min<int64_t>(MAX_INT, lvalue / 100));
+}
+
+int64_t applySMRank64(int64_t value, int rankChange, int rankMultiplier, bool bScaleUp)
+{
+	FAssertMsg(rankMultiplier > 0, "rankMultiplier must be greater than 0");
+	if (bScaleUp) value *= 100;
+
+	if (rankChange > 0)
+	{
+		for (int iI = 0; iI < rankChange; iI++)
+		{
+			value *= rankMultiplier;
+			value /= 100;
+		}
+	}
+	else
+	{
+		for (int iI = 0; iI < -rankChange; iI++)
+		{
+			value *= 100;
+			value /= rankMultiplier;
+		}
+	}
+	if (bScaleUp)
+	{
+		return value / 100;
+	}
+	return value;
 }

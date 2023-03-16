@@ -6,9 +6,6 @@
 //  PURPOSE: Store build lists for a player
 //
 //------------------------------------------------------------------------------------------------
-
-#include "FProfiler.h"
-
 #include "CvGameCoreDLL.h"
 #include "CvBuildingInfo.h"
 #include "CvBuildLists.h"
@@ -18,7 +15,6 @@
 
 CvBuildLists::~CvBuildLists()
 {
-	PROFILE_EXTRA_FUNC();
 	for (int i=0; i<(int)m_Lists.size(); i++)
 	{
 		delete m_Lists[i];
@@ -73,7 +69,6 @@ void CvBuildLists::pushOrder(int iID, OrderTypes eOrder, int iData1, int iData2,
 
 void CvBuildLists::popOrder(int iID, int iNum)
 {
-	PROFILE_EXTRA_FUNC();
 	const int index = getIndexByID(iID);
 	if (index == -1)
 		return;
@@ -116,7 +111,6 @@ int CvBuildLists::getNumLists() const
 
 int CvBuildLists::getIndexByID(int iID) const
 {
-	PROFILE_EXTRA_FUNC();
 	for (int i=0; i<(int)m_Lists.size(); i++)
 		if (m_Lists[i]->iID == iID)
 			return i;
@@ -176,7 +170,6 @@ int CvBuildLists::addList(const CvString szName, int iID)
 
 void CvBuildLists::removeList(int iID)
 {
-	PROFILE_EXTRA_FUNC();
 	for (std::vector<BuildList*>::iterator it = m_Lists.begin(); it != m_Lists.end(); ++it)
 	{
 		if ((*it)->iID == iID)
@@ -211,7 +204,6 @@ void CvBuildLists::renameList(int iID, const CvString szName)
 
 void CvBuildLists::readFromFile()
 {
-	PROFILE_EXTRA_FUNC();
 	const CvString szFile = GC.getInitCore().getDLLPath() + "\\..\\UserSettings\\BuildLists.txt";
 	std::ifstream stream;
 	stream.open(szFile.c_str());
@@ -258,7 +250,6 @@ void CvBuildLists::readFromFile()
 
 void CvBuildLists::writeToFile()
 {
-	PROFILE_EXTRA_FUNC();
 	const CvString szFile = GC.getInitCore().getDLLPath() + "\\..\\UserSettings\\BuildLists.txt";
 	std::ofstream stream;
 	stream.open(szFile.c_str(), std::ios::trunc);
@@ -304,7 +295,6 @@ void CvBuildLists::writeToFile()
 
 void CvBuildLists::read(FDataStreamBase *pStream)
 {
-	PROFILE_EXTRA_FUNC();
 	int iNum = 0;
 	pStream->Read(&m_iMaxID);
 	pStream->Read(&iNum);
@@ -329,7 +319,6 @@ void CvBuildLists::read(FDataStreamBase *pStream)
 
 void CvBuildLists::write(FDataStreamBase *pStream)
 {
-	PROFILE_EXTRA_FUNC();
 	pStream->Write(m_iMaxID);
 	const int iNum = getNumLists();
 	pStream->Write(iNum);
@@ -343,7 +332,6 @@ void CvBuildLists::write(FDataStreamBase *pStream)
 
 void CvBuildLists::readSubset(FDataStreamBase *pStream)
 {
-	PROFILE_EXTRA_FUNC();
 	int iList = 0;
 	pStream->Read(&m_iMaxID);
 	pStream->Read(&iList);

@@ -2,9 +2,6 @@
 // XML Set functions
 //
 
-
-#include "FProfiler.h"
-
 #include "CvGameCoreDLL.h"
 #include "CvArtFileMgr.h"
 #include "CvBuildingInfo.h"
@@ -24,7 +21,6 @@
 
 bool CvXMLLoadUtility::ReadGlobalDefines(const char* szXMLFileName, CvCacheObject* cache)
 {
-	PROFILE_EXTRA_FUNC();
 #ifdef _DEBUG
 	OutputDebugString("Reading Global Defines: Start\n");
 #endif
@@ -142,7 +138,6 @@ bool CvXMLLoadUtility::ReadGlobalDefines(const char* szXMLFileName, CvCacheObjec
 // Initialize the variables located in globaldefines.cpp/h with the values in GlobalDefines.xml
 bool CvXMLLoadUtility::SetGlobalDefines()
 {
-	PROFILE_EXTRA_FUNC();
 	OutputDebugString("Setting Global Defines: Start\n");
 
 	UpdateProgressCB("GlobalDefines");
@@ -561,7 +556,6 @@ bool CvXMLLoadUtility::SetGlobalArtDefines()
 // Handles all Global Text Infos
 bool CvXMLLoadUtility::LoadGlobalText()
 {
-	PROFILE_EXTRA_FUNC();
 	OutputDebugString("Begin load global text\n");
 
 	// set language tag
@@ -690,7 +684,6 @@ inline bool cmpInfoByAlphabet(CvInfoBase* lhs, CvInfoBase* rhs) { return CvWStri
 //	instead try to load things in LoadPostMenuGlobals().
 bool CvXMLLoadUtility::LoadPreMenuGlobals()
 {
-	PROFILE_EXTRA_FUNC();
 	OutputDebugString("Loading PreMenu Infos: Start\n");
 
 	GC.registerNPCPlayers();
@@ -1001,7 +994,6 @@ bool CvXMLLoadUtility::LoadPostMenuGlobals()
 //	iNumVals with the total number of tags with the szTagName in the xml file.
 void CvXMLLoadUtility::SetGlobalStringArray(CvString **ppszString, wchar_t* szTagName, int* iNumVals, bool bUseEnum)
 {
-	PROFILE_EXTRA_FUNC();
 	logging::logMsgW("xml.log", L"SetGlobalStringArray %s\n", szTagName);
 
 	CvString* pszString = NULL; // null out the local string pointer so that it can be checked at the end of the function in an FAssert
@@ -1712,7 +1704,6 @@ void CvXMLLoadUtility::SetDiplomacyInfo(std::vector<CvDiplomacyInfo*>& DiploInfo
 template <class T>
 void CvXMLLoadUtility::LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* szFileRoot, const char* szFileDirectory, const wchar_t* szXmlPath, bool bTwoPass, CvInfoReplacements<T>* pReplacements)
 {
-	PROFILE_EXTRA_FUNC();
 	GC.addToInfosVectors(&aInfos, InfoClassTraits<T>::InfoClassEnum);
 
 	DEBUG_LOG("XmlCheckDoubleTypes.log", "\nEntering: %s\n", szFileRoot);
@@ -1826,7 +1817,6 @@ void CvXMLLoadUtility::LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* 
 
 void CvXMLLoadUtility::LoadDiplomacyInfo(std::vector<CvDiplomacyInfo*>& DiploInfos, const char* szFileRoot, const char* szFileDirectory, const wchar_t* szXmlPath, bool bUseCaching)
 {
-	PROFILE_EXTRA_FUNC();
 	if (LoadCivXml(CvString::format("xml\\%s/%s.xml", szFileDirectory, szFileRoot)))
 	{
 		SetDiplomacyInfo(DiploInfos, szXmlPath);
@@ -1872,7 +1862,6 @@ bool sortHotkeyPriority(const OrderIndex& orderIndex1, const OrderIndex& orderIn
 
 void CvXMLLoadUtility::orderHotkeyInfo(int** ppiSortedIndex, int* pHotkeyIndex, int iLength)
 {
-	PROFILE_EXTRA_FUNC();
 	std::vector<OrderIndex> viOrderPriority; viOrderPriority.resize(iLength);
 
 	int* piSortedIndex = *ppiSortedIndex;
@@ -1899,7 +1888,6 @@ void CvXMLLoadUtility::orderHotkeyInfo(int** ppiSortedIndex, int* pHotkeyIndex, 
 //	The current/last located node must be the first child of the yield changes node.
 int CvXMLLoadUtility::SetYields(int** ppiYield)
 {
-	PROFILE_EXTRA_FUNC();
 	int *piYield; // local pointer for the yield memory
 
 	// get the total number of children the current xml node has
@@ -1944,7 +1932,6 @@ int CvXMLLoadUtility::SetYields(int** ppiYield)
 // Allocate and set the feature struct variables for the CvBuildInfo class.
 void CvXMLLoadUtility::SetFeatureStruct(int** ppiFeatureTech, int** ppiFeatureTime, int** ppiFeatureProduction, bool** ppbFeatureRemove)
 {
-	PROFILE_EXTRA_FUNC();
 	char szTextVal[256]; // temporarily hold the text value of the current xml node
 	int* paiFeatureTech = NULL;
 	int* paiFeatureTime = NULL;
@@ -2007,7 +1994,6 @@ void CvXMLLoadUtility::SetFeatureStruct(int** ppiFeatureTech, int** ppiFeatureTi
 // Allocate memory for the improvement bonus pointer and fill it based on the values in the xml.
 void CvXMLLoadUtility::SetImprovementBonuses(CvImprovementBonusInfo** ppImprovementBonus)
 {
-	PROFILE_EXTRA_FUNC();
 	char szNodeVal[256];	// temporarily holds the string value of the current xml node
 	CvImprovementBonusInfo* paImprovementBonus;	// local pointer to the bonus type struct in memory
 
@@ -2071,7 +2057,6 @@ void CvXMLLoadUtility::SetImprovementBonuses(CvImprovementBonusInfo** ppImprovem
 // Allocate and initialize a list from a tag pair in the xml
 void CvXMLLoadUtility::SetVariableListTagPair(int **ppiList, const wchar_t* szRootTagName, int iInfoBaseLength, int iDefaultListVal)
 {
-	PROFILE_EXTRA_FUNC();
 	if (0 > iInfoBaseLength)
 	{
 		char szMessage[1024];
@@ -2128,7 +2113,6 @@ void CvXMLLoadUtility::SetVariableListTagPair(
 	int iInfoBaseLength, const wchar_t* szValueTagName,
 	int iValueInfoBaseLength, int iDefaultListVal)
 {
-	PROFILE_EXTRA_FUNC();
 	char szTextPosition[256];
 	char szTextVal[256];
 	int* piList = NULL;
@@ -2200,7 +2184,6 @@ void CvXMLLoadUtility::SetVariableListTagPair(
 // Allocate and initialize a list from a tag pair in the xml
 void CvXMLLoadUtility::SetVariableListTagPair(bool **ppbList, const wchar_t* szRootTagName, int iInfoBaseLength, bool bDefaultListVal)
 {
-	PROFILE_EXTRA_FUNC();
 	char szTextVal[256];
 	bool* pbList;
 
@@ -2254,7 +2237,6 @@ void CvXMLLoadUtility::SetVariableListTagPair(bool **ppbList, const wchar_t* szR
 // Allocate and initialize a list from a tag pair in the xml
 void CvXMLLoadUtility::SetVariableListTagPair(float **ppfList, const wchar_t* szRootTagName, int iInfoBaseLength, float fDefaultListVal)
 {
-	PROFILE_EXTRA_FUNC();
 	char szTextVal[256];
 	float* pfList;
 
@@ -2307,7 +2289,6 @@ void CvXMLLoadUtility::SetVariableListTagPair(float **ppfList, const wchar_t* sz
 // Allocate and initialize a list from a tag pair in the xml
 void CvXMLLoadUtility::SetVariableListTagPair(CvString **ppszList, const wchar_t* szRootTagName, int iInfoBaseLength, CvString szDefaultListVal)
 {
-	PROFILE_EXTRA_FUNC();
 	int i;
 	int iIndexVal;
 	int iNumSibs;
@@ -2370,7 +2351,6 @@ void CvXMLLoadUtility::SetVariableListTagPair(CvString **ppszList, const wchar_t
 // Allocate and initialize a list from a tag pair in the xml for audio scripts
 void CvXMLLoadUtility::SetVariableListTagPairForAudioScripts(int **ppiList, const wchar_t* szRootTagName, int iInfoBaseLength, int iDefaultListVal)
 {
-	PROFILE_EXTRA_FUNC();
 	char szTextVal[256];
 	int* piList;
 
@@ -2466,7 +2446,6 @@ void CvXMLLoadUtility::ModularLoadingControlXML()
 // In the next 2 methods we load the MLF classes
 bool CvXMLLoadUtility::LoadModLoadControlInfo(std::vector<CvModLoadControlInfo*>& aInfos)
 {
-	PROFILE_EXTRA_FUNC();
 	GC.addToInfosVectors(&aInfos, InfoClassTraits<CvModLoadControlInfo>::InfoClassEnum);
 	DEBUG_LOG("MLF.log", "Entering MLF");
 	DEBUG_LOG("XmlCheckDoubleTypes.log", "\nEntering: MLF_CIV4ModularLoadingControls\n");
@@ -2554,7 +2533,6 @@ bool CvXMLLoadUtility::LoadModLoadControlInfo(std::vector<CvModLoadControlInfo*>
 
 bool CvXMLLoadUtility::SetModLoadControlInfo(std::vector<CvModLoadControlInfo*>& aInfos, const wchar_t* szTagName, CvString szConfigString, CvString szDirDepth, int iDirDepth)
 {
-	PROFILE_EXTRA_FUNC();
 	OutputDebugString("Setting Mod Control Infos\n");
 
 	if ( TryMoveToXmlFirstMatchingElement(L"/Civ4ModularLoadControls/ConfigurationInfos/ConfigurationInfo"))
@@ -2602,7 +2580,6 @@ bool CvXMLLoadUtility::SetModLoadControlInfo(std::vector<CvModLoadControlInfo*>&
 
 void CvXMLLoadUtility::RemoveTGAFiller()
 {
-	PROFILE_EXTRA_FUNC();
 	std::vector<CvReligionInfo*>& aInfos1 = GC.m_paReligionInfo;
 	std::vector<CvCorporationInfo*>& aInfos2 = GC.m_paCorporationInfo;
 	if (aInfos1.size() && aInfos1.size() == GC.getGAMEFONT_TGA_RELIGIONS())

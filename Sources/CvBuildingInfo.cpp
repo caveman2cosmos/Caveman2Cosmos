@@ -8,9 +8,6 @@
 //------------------------------------------------------------------------------------------------
 //  Copyright (c) 2003 Firaxis Games, Inc. All rights reserved.
 //------------------------------------------------------------------------------------------------
-
-#include "FProfiler.h"
-
 #include "CvGameCoreDLL.h"
 #include "CvArtFileMgr.h"
 #include "CvBuildingInfo.h"
@@ -44,7 +41,6 @@ m_iFreeStartEra(NO_ERA),
 m_iMaxStartEra(NO_ERA),
 m_iObsoleteTech(NO_TECH),
 m_iPrereqAndTech(NO_TECH),
-m_iNoBonus(NO_BONUS),
 m_iPowerBonus(NO_BONUS),
 m_iFreeBuilding(NO_BUILDING),
 m_iFreeAreaBuilding(NO_BUILDING),
@@ -749,7 +745,6 @@ int* CvBuildingInfo::getBonusYieldModifierArray(int i) const
 
 int CvBuildingInfo::getGlobalBuildingCommerceChange(BuildingTypes eBuilding, CommerceTypes eCommerce) const
 {
-	PROFILE_EXTRA_FUNC();
 	foreach_(const BuildingCommerce& pair, m_aGlobalBuildingCommerceChanges)
 	{
 		if (pair.first == eBuilding)
@@ -762,7 +757,6 @@ int CvBuildingInfo::getGlobalBuildingCommerceChange(BuildingTypes eBuilding, Com
 
 const python::list CvBuildingInfo::cyGetGlobalBuildingCommerceChanges() const
 {
-	PROFILE_EXTRA_FUNC();
 	python::list pyList = python::list();
 
 	foreach_(const BuildingCommerce& pair, m_aGlobalBuildingCommerceChanges)
@@ -779,7 +773,6 @@ const python::list CvBuildingInfo::cyGetGlobalBuildingCommerceChanges() const
 
 const python::list CvBuildingInfo::cyGetTechYieldChanges100() const
 {
-	PROFILE_EXTRA_FUNC();
 	python::list pyList = python::list();
 
 	foreach_(const TechArray& pChange, m_techYieldChanges)
@@ -796,7 +789,6 @@ const python::list CvBuildingInfo::cyGetTechYieldChanges100() const
 
 const python::list CvBuildingInfo::cyGetTechYieldModifiers() const
 {
-	PROFILE_EXTRA_FUNC();
 	python::list pyList = python::list();
 
 	foreach_(const TechArray& pair, m_techYieldModifiers)
@@ -813,7 +805,6 @@ const python::list CvBuildingInfo::cyGetTechYieldModifiers() const
 
 const python::list CvBuildingInfo::cyGetTechCommerceChanges100() const
 {
-	PROFILE_EXTRA_FUNC();
 	python::list pyList = python::list();
 
 	foreach_(const TechCommerceArray& pChange, m_techCommerceChanges)
@@ -830,7 +821,6 @@ const python::list CvBuildingInfo::cyGetTechCommerceChanges100() const
 
 const python::list CvBuildingInfo::cyGetTechCommerceModifiers() const
 {
-	PROFILE_EXTRA_FUNC();
 	python::list pyList = python::list();
 
 	foreach_(const TechCommerceArray& pChange, m_techCommerceModifiers)
@@ -848,7 +838,6 @@ const python::list CvBuildingInfo::cyGetTechCommerceModifiers() const
 
 const python::list CvBuildingInfo::cyGetTerrainYieldChanges() const
 {
-	PROFILE_EXTRA_FUNC();
 	python::list pyList = python::list();
 
 	foreach_(const TerrainArray& pChange, m_aTerrainYieldChanges)
@@ -866,7 +855,6 @@ const python::list CvBuildingInfo::cyGetTerrainYieldChanges() const
 
 const python::list CvBuildingInfo::cyGetPlotYieldChanges() const
 {
-	PROFILE_EXTRA_FUNC();
 	python::list pyList = python::list();
 
 	foreach_(const PlotArray& pChange, m_aPlotYieldChanges)
@@ -883,7 +871,6 @@ const python::list CvBuildingInfo::cyGetPlotYieldChanges() const
 
 const python::list CvBuildingInfo::cyGetFreePromoTypes() const
 {
-	PROFILE_EXTRA_FUNC();
 	python::list pyList = python::list();
 	foreach_(const FreePromoTypes& pChange, m_aFreePromoTypes)
 		pyList.append(pChange);
@@ -1306,7 +1293,6 @@ int CvBuildingInfo::getNumUnitCombatRepelModifiers() const
 
 int CvBuildingInfo::getUnitCombatRepelModifier(int iUnitCombat, bool bForLoad) const
 {
-	PROFILE_EXTRA_FUNC();
 	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_COMBAT_HEART_OF_WAR))
 	{
 		return 0;
@@ -1329,7 +1315,6 @@ int CvBuildingInfo::getNumUnitCombatRepelAgainstModifiers() const
 
 int CvBuildingInfo::getUnitCombatRepelAgainstModifier(int iUnitCombat, bool bForLoad) const
 {
-	PROFILE_EXTRA_FUNC();
 	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_COMBAT_HEART_OF_WAR))
 	{
 		return 0;
@@ -1352,7 +1337,6 @@ int CvBuildingInfo::getNumUnitCombatDefenseAgainstModifiers() const
 
 int CvBuildingInfo::getUnitCombatDefenseAgainstModifier(int iUnitCombat) const
 {
-	PROFILE_EXTRA_FUNC();
 	for (UnitCombatModifierArray::const_iterator it = m_aUnitCombatDefenseAgainstModifiers.begin(); it != m_aUnitCombatDefenseAgainstModifiers.end(); ++it)
 	{
 		if ((*it).first == (UnitCombatTypes)iUnitCombat)
@@ -1371,7 +1355,6 @@ int CvBuildingInfo::getNumUnitCombatProdModifiers() const
 
 int CvBuildingInfo::getUnitCombatProdModifier(int iUnitCombat) const
 {
-	PROFILE_EXTRA_FUNC();
 	for (UnitCombatModifierArray::const_iterator it = m_aUnitCombatProdModifiers.begin(); it != m_aUnitCombatProdModifiers.end(); ++it)
 	{
 		if ((*it).first == (UnitCombatTypes)iUnitCombat)
@@ -1390,7 +1373,6 @@ int CvBuildingInfo::getNumAfflictionOutbreakLevelChanges() const
 
 int CvBuildingInfo::getAfflictionOutbreakLevelChange(int iAfflictionLine) const
 {
-	PROFILE_EXTRA_FUNC();
 	for (PromotionLineModifierArray::const_iterator it = m_aAfflictionOutbreakLevelChanges.begin(); it != m_aAfflictionOutbreakLevelChanges.end(); ++it)
 	{
 		if ((*it).first == (PromotionLineTypes)iAfflictionLine)
@@ -1409,7 +1391,6 @@ int CvBuildingInfo::getNumTechOutbreakLevelChanges() const
 
 int CvBuildingInfo::getTechOutbreakLevelChange(int iTech) const
 {
-	PROFILE_EXTRA_FUNC();
 	for (TechModifierArray::const_iterator it = m_aTechOutbreakLevelChanges.begin(); it != m_aTechOutbreakLevelChanges.end(); ++it)
 	{
 		if ((*it).first == (TechTypes)iTech)
@@ -1454,7 +1435,6 @@ namespace CvBuildingInternal
 {
 	bool calculateEnablesOtherBuildings(const CvBuildingInfo& kBuilding, BuildingTypes eBuilding)
 	{
-		PROFILE_EXTRA_FUNC();
 		// add the building and its bonuses to the query to see if they influence the construct condition of a building
 		std::vector<GOMQuery> queries;
 		GOMQuery query;
@@ -1493,7 +1473,6 @@ namespace CvBuildingInternal
 
 	bool calculateEnablesUnits(const CvBuildingInfo& kBuilding, BuildingTypes eBuilding)
 	{
-		PROFILE_EXTRA_FUNC();
 		// add the building and its bonuses to the query to see if they influence the construct condition of a building
 		std::vector<GOMQuery> queries;
 		GOMQuery query;
@@ -1550,7 +1529,6 @@ namespace CvBuildingInternal
 
 void CvBuildingInfo::doPostLoadCaching(uint32_t iThis)
 {
-	PROFILE_EXTRA_FUNC();
 	int iCount = getNumReplacementBuilding();
 	if (iCount > 0)
 	{
@@ -1584,7 +1562,6 @@ void CvBuildingInfo::doPostLoadCaching(uint32_t iThis)
 
 void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 {
-	PROFILE_EXTRA_FUNC();
 	CvInfoUtil(this).checkSum(iSum);
 
 	CheckSum(iSum, m_bNoLimit);
@@ -1592,7 +1569,6 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iFreeStartEra);
 	CheckSum(iSum, m_iMaxStartEra);
 	CheckSum(iSum, m_iPrereqAndTech);
-	CheckSum(iSum, m_iNoBonus);
 	CheckSum(iSum, m_iPowerBonus);
 	CheckSum(iSum, m_iFreeBuilding);
 	CheckSum(iSum, m_iFreeAreaBuilding);
@@ -2006,7 +1982,6 @@ void CvBuildingInfo::getDataMembers(CvInfoUtil& util)
 //
 bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 {
-	PROFILE_EXTRA_FUNC();
 	CvString szTextVal;
 
 	if (!CvHotkeyInfo::read(pXML))
@@ -2079,9 +2054,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	//Alberts2 PrereqBonuses
 	pXML->SetOptionalVector(&m_aePrereqOrBonuses, L"PrereqBonuses");
-
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"NoBonus");
-	m_iNoBonus = pXML->GetInfoClass(szTextVal);
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"PowerBonus");
 	m_iPowerBonus = pXML->GetInfoClass(szTextVal);
@@ -3227,7 +3199,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 bool CvBuildingInfo::readPass3()
 {
-	PROFILE_EXTRA_FUNC();
 	m_pbPrereqOrCivics = new bool[GC.getNumCivicInfos()];
 	for (int iI = 0; iI < GC.getNumCivicInfos(); iI++)
 	{
@@ -3282,7 +3253,6 @@ bool CvBuildingInfo::readPass3()
 
 void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 {
-	PROFILE_EXTRA_FUNC();
 	const bool bDefault = false;
 	const int iDefault = 0;
 	const int iTextDefault = -1;
@@ -3329,7 +3299,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 
 	if (getPrereqAndBonus() == NO_BONUS) m_iPrereqAndBonus = pClassInfo->getPrereqAndBonus();
 
-	if (getNoBonus() == iTextDefault) m_iNoBonus = pClassInfo->getNoBonus();
 	if (getPowerBonus() == iTextDefault) m_iPowerBonus = pClassInfo->getPowerBonus();
 	if (getCivicOption() == iTextDefault) m_iCivicOption = pClassInfo->getCivicOption();
 	if (getGreatPeopleUnitType() == iTextDefault) m_iGreatPeopleUnitType = pClassInfo->getGreatPeopleUnitType();

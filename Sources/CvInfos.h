@@ -13,8 +13,6 @@
 #ifndef CV_INFO_H
 #define CV_INFO_H
 
-#include "FProfiler.h"
-
 #include "CvProperties.h"
 #include "CvPropertySource.h"
 #include "CvPropertyInteraction.h"
@@ -558,7 +556,6 @@ public:
 	int getNumLeadsToTechs() const { return m_leadsTo.size(); }
 	int getLeadsToTech(const int iCount) const
 	{
-		PROFILE_EXTRA_FUNC();
 		std::set<TechTypes>::const_iterator itr = m_leadsTo.begin();
 		for (int i = 0; i < iCount; i++) itr++;
 		return *itr;
@@ -2128,14 +2125,9 @@ public:
 	bool isBuildWorkRateModifierType(int iBuild) const;
 
 	bool hasUnitCombat(UnitCombatTypes eUnitCombat) const;
-	//int getCombatStrengthModifier() const;
-	int getTotalModifiedCombatStrength100() const;
-	int getTotalModifiedAirCombatStrength100() const;
-	int getApproaching0Return(int i) const;
+	int getTotalModifiedCombatStrength100(const bool bSizeMatters) const;
 	int getBaseGroupRank() const;
 	int getBaseCargoVolume() const;
-	//int getSMRankTotal() const;
-	//int getSMVolumetricRankTotal() const;
 
 	bool isQualifiedPromotionType(int i) const;
 	bool setQualifiedPromotionType(const int iPromo, std::vector<int>& checklist);
@@ -2535,10 +2527,8 @@ private:
 	int m_iEndurance;
 	int m_iRoundStunProb;
 	int m_iPoisonProbabilityModifier;
-	//Team Project (3)
 	int m_iCaptureProbabilityModifier;
 	int m_iCaptureResistanceModifier;
-	//Team Project (4)
 	//WorkRateMod
 	int m_iHillsWorkModifier;
 	int m_iPeaksWorkModifier;
@@ -2559,8 +2549,6 @@ private:
 	int m_iCombatModifierPerSizeLess;
 	int m_iCombatModifierPerVolumeMore;
 	int m_iCombatModifierPerVolumeLess;
-	//int m_iBaseSMRankTotal;
-	//int m_iBaseSMVolumetricRankTotal;
 	int m_iSelfHealModifier;
 	int m_iNumHealSupport;
 	int m_iInsidiousness;

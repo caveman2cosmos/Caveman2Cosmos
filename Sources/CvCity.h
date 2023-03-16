@@ -236,7 +236,7 @@ public:
 	int getFirstProjectOrder(ProjectTypes eProject) const;
 	int getNumTrainUnitAI(UnitAITypes eUnitAI) const;
 
-	int getProduction() const;
+	int getProductionProgress() const;
 	int getProductionNeeded() const;
 	int getProductionNeeded(const OrderData& order) const;
 	int getProductionNeeded(UnitTypes eUnit) const;
@@ -252,7 +252,7 @@ public:
 	int getProductionTurnsLeft(ProjectTypes eProject, int iNum) const;
 	int getProductionTurnsLeft(int iProductionNeeded, int iProduction, int iFirstProductionDifference, int iProductionDifference) const;
 
-	void setProduction(int iNewValue);
+	void setProductionProgress(int iNewValue);
 	void changeProduction(int iChange);
 	int numQueuedUnits(UnitAITypes contractedAIType, const CvPlot* contractedPlot) const;
 
@@ -401,7 +401,6 @@ public:
 
 	int getExtraBonusAidModifier(BonusTypes eBonusType, PropertyTypes ePropertyType) const;
 	void changeExtraBonusAidModifier(BonusTypes eBonusType, PropertyTypes ePropertyType, int iChange);
-	void setExtraBonusAidModifier(BonusTypes eBonusType, PropertyTypes ePropertyType, int iChange);
 
 	int getExtraAfflictionOutbreakLevelChange(PromotionLineTypes ePromotionLine) const;
 	void changeExtraAfflictionOutbreakLevelChange(PromotionLineTypes ePromotionLine, int iChange);
@@ -455,7 +454,6 @@ public:
 
 	bool canEquip(const CvUnit* pUnit, PromotionTypes eEquipment) const;
 
-	bool assignPromotionChecked(PromotionTypes ePromotion, CvUnit* pUnit) const;
 	void assignPromotionsFromBuildingChecked(const CvBuildingInfo& kBuilding, CvUnit* pLoopUnit) const;
 
 	//TB Combat Mods (Buildings) end
@@ -1049,9 +1047,9 @@ public:
 	bool isActiveCorporation(CorporationTypes eCorporation) const;
 
 	// How many hammers already put into production of the building
-	int getBuildingProduction(BuildingTypes eIndex) const;
-	void setBuildingProduction(BuildingTypes eIndex, int iNewValue);
-	void changeBuildingProduction(BuildingTypes eIndex, int iChange);
+	int getProgressOnBuilding(const BuildingTypes eType) const;
+	void setProgressOnBuilding(const BuildingTypes eType, int iNewValue);
+	void changeProgressOnBuilding(const BuildingTypes eType, const int iChange);
 
 	int getBuildingProductionTime(BuildingTypes eIndex) const;
 	void setBuildingProductionTime(BuildingTypes eIndex, int iNewValue);
@@ -1069,9 +1067,9 @@ public:
 	int getBuildingOriginalTime(BuildingTypes eIndex) const;
 	void setBuildingOriginalTime(BuildingTypes eIndex, int iNewValue);
 
-	int getUnitProduction(UnitTypes eIndex) const;
-	void setUnitProduction(UnitTypes eIndex, int iNewValue);
-	void changeUnitProduction(UnitTypes eIndex, int iChange);
+	int getProgressOnUnit(const UnitTypes eUnit) const;
+	void setProgressOnUnit(const UnitTypes eUnit, int iNewValue);
+	void changeProgressOnUnit(const UnitTypes eUnit, const int iChange);
 
 	int getUnitProductionTime(UnitTypes eIndex) const;
 	void setUnitProductionTime(UnitTypes eIndex, int iNewValue);
@@ -1121,9 +1119,7 @@ public:
 	int getUnitCombatFreeExperience(UnitCombatTypes eIndex) const;
 	void changeUnitCombatFreeExperience(UnitCombatTypes eIndex, int iChange);
 
-	int getFreePromotionCount(PromotionTypes eIndex) const;
 	bool isFreePromotion(PromotionTypes eIndex) const;
-	void changeFreePromotionCount(PromotionTypes eIndex, int iChange);
 
 	int getSpecialistFreeExperience() const;
 	void changeSpecialistFreeExperience(int iChange);
@@ -1227,10 +1223,6 @@ public:
 
 	PlayerTypes getLiberationPlayer(bool bConquest) const;
 	void liberate(bool bConquest);
-
-	void changeNoBonusCount(BonusTypes eBonus, int iChange);
-	int getNoBonusCount(BonusTypes eBonus) const;
-	bool isNoBonus(BonusTypes eBonus) const;
 
 	DllExport int getMusicScriptId() const;
 	DllExport int getSoundscapeScriptId() const;
@@ -1772,13 +1764,9 @@ protected:
 	int m_iModifiedBuildingDefenseRecoverySpeedCap;
 	int m_iExtraCityDefenseRecoverySpeedModifier;
 
-	int** m_ppaaiTechSpecialistHappinessTypes;
-	int* m_paiTechSpecialistHappiness;
 	int m_iExtraTechSpecialistHappiness;
 	int m_iExtraBuildingHappinessFromTech;
 	int m_iExtraBuildingHealthFromTech;
-	int** m_ppaaiTechSpecialistHealthTypes;
-	int* m_paiTechSpecialistHealth;
 	int m_iExtraTechSpecialistHealth;
 	int** m_ppaaiLocalSpecialistExtraYield;
 	int** m_ppaaiLocalSpecialistExtraCommerce;
@@ -1827,12 +1815,10 @@ protected:
 	CvWString m_szName;
 	CvString m_szScriptData;
 
-	int* m_paiNoBonus;
 	int* m_paiFreeBonus;
 	int* m_paiNumBonuses;
 	int* m_paiNumCorpProducedBonuses;
 	int* m_paiProjectProduction;
-	int* m_paiBuildingProduction;
 	int* m_paiBuildingProductionTime;
 	int* m_paiBuildingOriginalOwner;
 	int* m_paiBuildingOriginalTime;
@@ -1849,7 +1835,6 @@ protected:
 	int* m_paiReligionInfluence;
 	int* m_paiStateReligionHappiness;
 	int* m_paiUnitCombatFreeExperience;
-	int* m_paiFreePromotionCount;
 	int* m_paiNumRealBuilding;
 
 	bool* m_pabWorkingPlot;
@@ -1871,6 +1856,8 @@ protected:
 	std::vector< std::pair < float, float> > m_kWallOverridePoints;
 	std::vector< std::pair<TechTypes, int> > m_buildingHappinessFromTech;
 	std::vector< std::pair<TechTypes, int> > m_buildingHealthFromTech;
+	std::vector< std::pair<BuildingTypes, int> > m_progressOnBuilding;
+	std::vector< std::pair<UnitTypes, int> > m_progressOnUnit;
 
 	std::vector<EventTypes> m_aEventsOccured;
 	std::vector<BuildingYieldChange> m_aBuildingYieldChange;
@@ -1935,20 +1922,13 @@ protected:
 	bool m_bMarkedForDestruction;
 
 public:
-	int getTechSpecialistHappinessTypes(TechTypes eTech, SpecialistTypes eSpecialist) const;
-
 	int localCitizenCaptureResistance() const;
-	int getTechSpecialistHappiness(TechTypes eTech) const;
 	int getExtraTechHappinessTotal() const;
-	int getTechSpecialistHealthTypes(TechTypes eTech, SpecialistTypes eSpecialist) const;
-	int getTechSpecialistHealth(TechTypes eTech) const;
 	int getExtraTechHealthTotal() const;
 	int getLocalSpecialistExtraYield(SpecialistTypes eSpecialist, YieldTypes eYield) const;
 	int getLocalSpecialistExtraCommerce(SpecialistTypes eSpecialist, CommerceTypes eCommerce) const;
 
 private:
-	void changeTechSpecialistHappinessTypes(TechTypes eTech, SpecialistTypes eSpecialist, int iChange);
-	void changeTechSpecialistHappiness(TechTypes eTech, int iChange);
 	void updateExtraTechSpecialistHappiness();
 
 	int getBuildingHappinessFromTech(const TechTypes eTech) const;
@@ -1957,8 +1937,6 @@ private:
 	void changeBuildingHealthFromTech(const TechTypes eTech, const int iChange);
 
 	void updateExtraTechHappiness();
-	void changeTechSpecialistHealthTypes(TechTypes eTech, SpecialistTypes eSpecialist, int iChange);
-	void changeTechSpecialistHealth(TechTypes eTech, int iChange);
 	void updateExtraTechSpecialistHealth();
 	int getExtraTechSpecialistHealth() const;
 	int getTechHealth(TechTypes eTech) const;

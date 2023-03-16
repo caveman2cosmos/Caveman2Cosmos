@@ -1,6 +1,3 @@
-
-#include "FProfiler.h"
-
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
 #include "CvGameAI.h"
@@ -1374,7 +1371,6 @@ std::wstring CyPlayer::getCityName(int iIndex) const
 
 python::list CyPlayer::cities() const
 {
-	PROFILE_EXTRA_FUNC();
 	python::list list = python::list();
 
 	foreach_(CvCity* city, m_pPlayer->cities())
@@ -1418,7 +1414,6 @@ CyCity* CyPlayer::getCity(int iID) const
 
 python::list CyPlayer::units() const
 {
-	PROFILE_EXTRA_FUNC();
 	python::list list = python::list();
 
 	foreach_(CvUnit* unit, m_pPlayer->units())
@@ -1462,7 +1457,6 @@ CyUnit* CyPlayer::getUnit(int iID) const
 
 python::list CyPlayer::groups() const
 {
-	PROFILE_EXTRA_FUNC();
 	python::list list = python::list();
 
 	foreach_(CvSelectionGroup* group, m_pPlayer->groups())

@@ -1,8 +1,5 @@
 // unitAI.cpp
 
-
-#include "FProfiler.h"
-
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
@@ -1535,7 +1532,6 @@ void CvUnitAI::AI_setUnitAIType(UnitAITypes eNewValue)
 
 int CvUnitAI::AI_sacrificeValue(const CvPlot* pPlot) const
 {
-	PROFILE_EXTRA_FUNC();
 	if (getDomainType() == DOMAIN_AIR)
 	{
 		int iValue = 128 * (100 + currInterceptionProbability());
@@ -1684,7 +1680,6 @@ void CvUnitAI::AI_animalMove()
 
 bool CvUnitAI::AI_SettleFirstCity()
 {
-	PROFILE_EXTRA_FUNC();
 	// Afforess & Fuyu - Check for Good City Sites Near Starting Location
 	const int iGameSpeedPercent = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 	const int iMaxFoundTurn = iGameSpeedPercent / 100;
@@ -10820,7 +10815,7 @@ void CvUnitAI::AI_InfiltratorMove()
 			}
 			//if inside a city, check to see if there's VERY good cause to sabotage production or steal plans.
 			//Apparently the AI never steals plans soooo... leave that one alone.
-			const int iProduction = plot()->getPlotCity()->getProduction();
+			const int iProduction = plot()->getPlotCity()->getProductionProgress();
 			if (iProduction > 0 && plot()->getPlotCity()->getProductionTurnsLeft() < 3)
 			{
 				// Only enact when it is a long build that has been heavily invested into already
@@ -12332,7 +12327,6 @@ bool CvUnitAI::AI_guardBonus(int iMinValue)
 
 int CvUnitAI::AI_getPlotDefendersNeeded(const CvPlot* pPlot, int iExtra) const
 {
-	PROFILE_EXTRA_FUNC();
 	int iNeeded = iExtra;
 	const BonusTypes eNonObsoleteBonus = pPlot->getNonObsoleteBonusType(getTeam());
 	if (eNonObsoleteBonus != NO_BONUS)
@@ -14164,7 +14158,6 @@ bool CvUnitAI::AI_scrapSubdued()
 
 bool CvUnitAI::AI_moveToOurTerritory(int maxMoves)
 {
-	PROFILE_EXTRA_FUNC();
 	const int iSearchRange = AI_searchRange(maxMoves);
 
 	foreach_(const CvPlot * pLoopPlot, plot()->rect(iSearchRange, iSearchRange))
@@ -14660,7 +14653,7 @@ bool CvUnitAI::AI_switchHurry()
 		{
 			if (pCity->canConstruct(eBuilding))
 			{
-				if (pCity->getBuildingProduction(eBuilding) == 0)
+				if (pCity->getProgressOnBuilding(eBuilding) == 0)
 				{
 					if (getMaxHurryProduction(pCity) >= pCity->getProductionNeeded(eBuilding))
 					{
@@ -16736,7 +16729,6 @@ bool CvUnitAI::AI_refreshExploreRange(int iRange, bool bIncludeVisibilityRefresh
 //	Return a pointer to the unit if so (NULL with a detected threat means multiple units)
 bool CvUnitAI::getThreateningUnit(const CvPlot* pPlot, CvUnit*& pThreateningUnit, const CvPlot* pAttackPlot, int& iIndex, bool bReturnWorstOfMultiple) const
 {
-	PROFILE_EXTRA_FUNC();
 	int iOdds = 0;
 	int iWorstOdds = 0;
 	int iI = 0;
@@ -16790,7 +16782,6 @@ bool CvUnitAI::getThreateningUnit(const CvPlot* pPlot, CvUnit*& pThreateningUnit
 
 bool CvUnitAI::exposedToDanger(const CvPlot* pPlot, int acceptableOdds, bool bConsiderOnlyWorstThreat) const
 {
-	PROFILE_EXTRA_FUNC();
 	if (GET_PLAYER(getOwner()).AI_getPlotDanger(pPlot, 1, false))
 	{
 		//	What would the odds be?
@@ -17949,7 +17940,6 @@ bool CvUnitAI::AI_rangeAttack(int iRange)
 
 bool CvUnitAI::AI_leaveAttack(int iRange, int iOddsThreshold, int iStrengthThreshold)
 {
-	PROFILE_EXTRA_FUNC();
 	int iPathTurns;
 
 	FAssert(canMove());
@@ -18698,7 +18688,6 @@ bool CvUnitAI::AI_pillage(int iBonusValueThreshold)
 
 bool CvUnitAI::AI_canPillage(const CvPlot& kPlot) const
 {
-	PROFILE_EXTRA_FUNC();
 	if (isEnemy(kPlot.getTeam(), &kPlot))
 	{
 		return true;
@@ -20684,7 +20673,6 @@ bool CvUnitAI::AI_improveCity(CvCity* pCity)
 
 bool CvUnitAI::AI_improveLocalPlot(int iRange, const CvCity* pIgnoreCity)
 {
-	PROFILE_EXTRA_FUNC();
 	const CvPlayerAI& kOwner = GET_PLAYER(getOwner());
 	const ImprovementTypes eRuins = GC.getIMPROVEMENT_CITY_RUINS();
 	const bool bSafeAutomation = kOwner.isOption(PLAYEROPTION_SAFE_AUTOMATION);
@@ -22883,7 +22871,6 @@ bool CvUnitAI::AI_pickupStranded(UnitAITypes eUnitAI, int iMaxPath)
 // Returns true if a mission was pushed...
 bool CvUnitAI::AI_airOffensiveCity()
 {
-	PROFILE_EXTRA_FUNC();
 	//PROFILE_FUNC();
 
 	FAssert(canAirAttack() || nukeRange() >= 0);
@@ -22926,7 +22913,6 @@ bool CvUnitAI::AI_airOffensiveCity()
 // Function for ranking the value of a plot as a base for offensive air units
 int CvUnitAI::AI_airOffenseBaseValue(const CvPlot* pPlot) const
 {
-	PROFILE_EXTRA_FUNC();
 	if (pPlot == NULL)
 	{
 		return 0;
@@ -23235,7 +23221,6 @@ int CvUnitAI::AI_airOffenseBaseValue(const CvPlot* pPlot) const
 // Returns true if a mission was pushed...
 bool CvUnitAI::AI_airDefensiveCity()
 {
-	PROFILE_EXTRA_FUNC();
 	//PROFILE_FUNC();
 
 	FAssert(getDomainType() == DOMAIN_AIR);
@@ -23338,7 +23323,6 @@ bool CvUnitAI::AI_airDefensiveCity()
 // Returns true if a mission was pushed...
 bool CvUnitAI::AI_airCarrier()
 {
-	PROFILE_EXTRA_FUNC();
 	//PROFILE_FUNC();
 
 	if (hasCargo())
@@ -23408,7 +23392,6 @@ bool CvUnitAI::AI_airCarrier()
 
 bool CvUnitAI::AI_missileLoad(UnitAITypes eTargetUnitAI, int iMaxOwnUnitAI, bool bStealthOnly)
 {
-	PROFILE_EXTRA_FUNC();
 	//PROFILE_FUNC();
 
 	CvUnit* pBestUnit = NULL;
@@ -23469,7 +23452,6 @@ bool CvUnitAI::AI_missileLoad(UnitAITypes eTargetUnitAI, int iMaxOwnUnitAI, bool
 // Returns true if a mission was pushed...
 bool CvUnitAI::AI_airStrike()
 {
-	PROFILE_EXTRA_FUNC();
 	//PROFILE_FUNC();
 
 	CvUnit* pDefender;
@@ -23734,7 +23716,6 @@ bool CvUnitAI::AI_defendBaseAirStrike()
 
 bool CvUnitAI::AI_airBombPlots()
 {
-	PROFILE_EXTRA_FUNC();
 	//PROFILE_FUNC();
 
 	const int iSearchRange = airRange();
@@ -23806,7 +23787,6 @@ bool CvUnitAI::AI_airBombPlots()
 
 bool CvUnitAI::AI_airBombDefenses()
 {
-	PROFILE_EXTRA_FUNC();
 	//PROFILE_FUNC();
 
 	const int iSearchRange = airRange();
@@ -24048,7 +24028,6 @@ bool CvUnitAI::AI_nuke()
 
 bool CvUnitAI::AI_nukeRange(int iRange)
 {
-	PROFILE_EXTRA_FUNC();
 	const CvPlot* pBestPlot = NULL;
 	int iBestValue = 0;
 	foreach_(const CvPlot * pLoopPlot, plot()->rect(iRange, iRange))
@@ -24146,7 +24125,6 @@ bool CvUnitAI::AI_nukeRange(int iRange)
 
 bool CvUnitAI::AI_trade(int iValueThreshold)
 {
-	PROFILE_EXTRA_FUNC();
 	int iPathTurns;
 	int iBestValue = 0;
 	const CvPlot* pBestPlot = NULL;
@@ -24936,7 +24914,6 @@ bool CvUnitAI::AI_airAttackDamagedSkip()
 // Returns true if a mission was pushed or we should wait for another unit to bombard...
 bool CvUnitAI::AI_followBombard()
 {
-	PROFILE_EXTRA_FUNC();
 	/************************************************************************************************/
 	/* REVOLUTIONDCM							05/24/08								Glider1	 */
 	/*																							  */
@@ -25069,7 +25046,6 @@ bool CvUnitAI::AI_defendPlot(const CvPlot* pPlot) const
 
 int CvUnitAI::AI_pillageValue(const CvPlot* pPlot, int iBonusValueThreshold) const
 {
-	PROFILE_EXTRA_FUNC();
 	FAssert(getGroup()->canPillage(pPlot) || canAirBombAt(plot(), pPlot->getX(), pPlot->getY()) || (getGroup()->getCargo() > 0));
 	//A count is all that's necessary here
 	if (!pPlot->isOwned())
@@ -25561,7 +25537,6 @@ bool CvUnitAI::AI_moveIntoNearestOwnedCity()
 //returns true if a mission is pushed.
 bool CvUnitAI::AI_artistCultureVictoryMove()
 {
-	PROFILE_EXTRA_FUNC();
 	if (!GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE1))
 	{
 		return false;
@@ -26755,7 +26730,6 @@ bool CvUnitAI::AI_hurryFood()
 
 bool CvUnitAI::AI_command()
 {
-	PROFILE_EXTRA_FUNC();
 	if (!GC.getGame().isOption(GAMEOPTION_UNIT_GREAT_COMMANDERS))
 	{
 		return false;
@@ -27836,7 +27810,6 @@ void CvUnitAI::AI_autoAirStrike()
 // Returns true if a mission was pushed...
 bool CvUnitAI::AI_airBombCities()
 {
-	PROFILE_EXTRA_FUNC();
 	//PROFILE_FUNC();
 
 	const int iSearchRange = airRange();
@@ -28827,7 +28800,6 @@ bool CvUnitAI::AI_cureAffliction(PromotionLineTypes eAfflictionLine)
 
 void unitSourcesValueToCity(const CvGameObject* pObject, const CvPropertyManipulators* pMani, const CvUnit* pUnit, const CvCityAI* pCity, int* iValue, PropertyTypes eProperty)
 {
-	PROFILE_EXTRA_FUNC();
 	if (pCity == NULL)
 	{
 		pCity = static_cast<CvCityAI*>(GET_PLAYER(pUnit->getOwner()).getCapitalCity());
@@ -28862,7 +28834,6 @@ void unitSourcesValueToCity(const CvGameObject* pObject, const CvPropertyManipul
 //	Find the total beneficial bnet value to a given city of this unit's property sources
 int CvUnitAI::AI_beneficialPropertyValueToCity(const CvCity* pCity, PropertyTypes eProperty) const
 {
-	PROFILE_EXTRA_FUNC();
 	int iValue = 0;
 	//void unitSourcesValueToCity(CvGameObject * pObject, CvPropertyManipulators * pMani, const CvUnit * pUnit, const CvCityAI * pCity, int* iValue, PropertyTypes eProperty)
 
@@ -28883,7 +28854,6 @@ void CvUnitAI::AI_setLeaderPriority(int iPriority)	//	 -1 means reset to default
 
 bool CvUnitAI::AI_fulfillHealerNeed(const CvPlot* pPlot)
 {
-	PROFILE_EXTRA_FUNC();
 	const CvPlot* pBestPlot = NULL;
 	const CvPlot* endTurnPlot = NULL;
 	int iBestValue = 0;
@@ -28956,7 +28926,6 @@ bool CvUnitAI::AI_fulfillHealerNeed(const CvPlot* pPlot)
 
 bool CvUnitAI::AI_fulfillImmediateHealerNeed(const CvPlot* pPlot)
 {
-	PROFILE_EXTRA_FUNC();
 	const CvPlot* pBestPlot = NULL;
 	const CvPlot* endTurnPlot = NULL;
 	int iBestValue = 0;
@@ -29158,7 +29127,6 @@ namespace {
 
 bool CvUnitAI::AI_fulfillPropertyControlNeed()
 {
-	PROFILE_EXTRA_FUNC();
 	const CvPropertyManipulators* propertyManipulators = GC.getUnitInfo(getUnitType()).getPropertyManipulators();
 	// If it doesn't change properties then it can't fulfill control needs
 	if (propertyManipulators == nullptr)
@@ -29337,7 +29305,6 @@ bool CvUnitAI::AI_activateStatus(bool bStack, PromotionTypes eStatus, CvUnit* pU
 
 bool CvUnitAI::AI_selectStatus(bool bStack, CvUnit* pUnit)
 {
-	PROFILE_EXTRA_FUNC();
 	if (bStack)
 	{
 		if (getGroup() == NULL)
@@ -29766,7 +29733,6 @@ bool CvUnitAI::AI_selectStatus(bool bStack, CvUnit* pUnit)
 
 bool CvUnitAI::AI_groupSelectStatus()
 {
-	PROFILE_EXTRA_FUNC();
 	foreach_(CvUnit * pLoopUnit, getGroup()->units())
 	{
 		if (AI_selectStatus(false, pLoopUnit))
@@ -29779,7 +29745,6 @@ bool CvUnitAI::AI_groupSelectStatus()
 
 bool CvUnitAI::AI_InvestigatorFulfillment()
 {
-	PROFILE_EXTRA_FUNC();
 	const int iMinimumDedicated = 1;
 	const CvPlayerAI& player = GET_PLAYER(getOwner());
 
@@ -29866,7 +29831,6 @@ bool CvUnitAI::AI_InvestigatorFulfillment()
 //in progress
 bool CvUnitAI::AI_establishStackSeeInvisibleCoverage()
 {
-	PROFILE_EXTRA_FUNC();
 	if (isHuman())
 	{
 		return false;
@@ -29958,7 +29922,6 @@ bool CvUnitAI::generateSafePathforVulnerable(const CvPlot* pToPlot, int* piPathT
 
 void CvUnitAI::setToWaitOnUnitAI(UnitAITypes eUnitAI, bool bAdd)
 {
-	PROFILE_EXTRA_FUNC();
 	int iIndex = (int)eUnitAI;
 
 	if (bAdd)
@@ -30004,7 +29967,6 @@ bool CvUnitAI::isWaitingOnUnitAIAny() const
 
 void CvUnitAI::setWaitingOnUnitAIAny()
 {
-	PROFILE_EXTRA_FUNC();
 	m_bWaitingOnUnitAIAny = false;
 	if (isHuman())
 	{
@@ -30022,7 +29984,6 @@ void CvUnitAI::setWaitingOnUnitAIAny()
 
 bool CvUnitAI::AI_isNegativePropertyUnit() const
 {
-	PROFILE_EXTRA_FUNC();
 	const CvPropertyManipulators* propertyManipulators = GC.getUnitInfo(getUnitType()).getPropertyManipulators();
 	if (propertyManipulators != NULL)
 	{

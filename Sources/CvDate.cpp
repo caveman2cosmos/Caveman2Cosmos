@@ -6,9 +6,6 @@
 //  PURPOSE: Class to keep a Civ4 date and methods related to the time/turn relationship
 //
 //------------------------------------------------------------------------------------------------
-
-#include "FProfiler.h"
-
 #include "CvGameCoreDLL.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
@@ -74,7 +71,6 @@ SeasonTypes CvDate::getSeason() const
 
 CvDateIncrement CvDate::getIncrement(GameSpeedTypes eGameSpeed) const
 {
-	PROFILE_EXTRA_FUNC();
 	GameSpeedTypes eActualGameSpeed = eGameSpeed;
 	if (eGameSpeed == NO_GAMESPEED)
 	{
@@ -106,7 +102,6 @@ void CvDate::increment(GameSpeedTypes eGameSpeed)
 
 void CvDate::increment(int iTurns, GameSpeedTypes eGameSpeed)
 {
-	PROFILE_EXTRA_FUNC();
 	for (int i = 0; i < iTurns; i++)
 	{
 		increment(eGameSpeed);
@@ -150,7 +145,6 @@ CvDate CvDate::getStartingDate()
 
 CvDate CvDate::getDate(int iTurn, GameSpeedTypes eGameSpeed)
 {
-	PROFILE_EXTRA_FUNC();
 	CvDate date;
 	int iRemainingTurns = 0;
 
@@ -195,7 +189,6 @@ CvDate CvDate::getDate(int iTurn, GameSpeedTypes eGameSpeed)
 
 void CvDate::calculateEndDates(GameSpeedTypes eGameSpeed)
 {
-	PROFILE_EXTRA_FUNC();
 	CvGameSpeedInfo& kInfo = GC.getGameSpeedInfo(eGameSpeed);
 	std::vector<CvDateIncrement>& aIncrements = kInfo.getIncrements();
 	kInfo.setEndDatesCalculated(true);

@@ -1,6 +1,3 @@
-
-#include "FProfiler.h"
-
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
@@ -1872,7 +1869,6 @@ void CvDLLWidgetData::parseMaintainHelp(CvWidgetDataStruct &widgetDataStruct, Cv
 
 void CvDLLWidgetData::parseHurryHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
-	PROFILE_EXTRA_FUNC();
 	CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
 
 	if (pHeadSelectedCity != NULL)
@@ -1978,7 +1974,6 @@ void CvDLLWidgetData::parseHurryHelp(CvWidgetDataStruct &widgetDataStruct, CvWSt
 
 void CvDLLWidgetData::parseConscriptHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
-	PROFILE_EXTRA_FUNC();
 	CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
 
 	if (pHeadSelectedCity != NULL)
@@ -2079,7 +2074,6 @@ void CvDLLWidgetData::parseConscriptHelp(CvWidgetDataStruct &widgetDataStruct, C
 
 void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
-	PROFILE_EXTRA_FUNC();
 	const bool bAlt = gDLL->altKey();
 	const bool bShift = gDLL->shiftKey();
 
@@ -3452,7 +3446,6 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 
 void CvDLLWidgetData::parseCitizenHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
-	PROFILE_EXTRA_FUNC();
 	CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
 
 	if (pHeadSelectedCity != NULL && widgetDataStruct.m_iData1 != NO_SPECIALIST)
@@ -3507,7 +3500,6 @@ void CvDLLWidgetData::parseFreeCitizenHelp(CvWidgetDataStruct &widgetDataStruct,
 
 void CvDLLWidgetData::parseDisabledCitizenHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
-	PROFILE_EXTRA_FUNC();
 	CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
 
 	if (pHeadSelectedCity != NULL && widgetDataStruct.m_iData1 != NO_SPECIALIST)
@@ -3647,7 +3639,6 @@ void CvDLLWidgetData::parseSetPercentHelp(CvWidgetDataStruct &widgetDataStruct, 
 
 void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
-	PROFILE_EXTRA_FUNC();
 	// do not execute if player is out of range
 	PlayerTypes ePlayer = (PlayerTypes) widgetDataStruct.m_iData1;
 	if (ePlayer >= MAX_PLAYERS)
@@ -5111,7 +5102,6 @@ void CvDLLWidgetData::parseHealthHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 
 void CvDLLWidgetData::parseNationalityHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
-	PROFILE_EXTRA_FUNC();
 	szBuffer.assign(gDLL->getText("TXT_KEY_MISC_CITY_NATIONALITY"));
 
 	CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
@@ -5186,7 +5176,7 @@ void CvDLLWidgetData::parseProductionHelp(CvWidgetDataStruct &widgetDataStruct, 
 		if (pHeadSelectedCity->getProductionNeeded() != MAX_INT)
 		{
 			CvWString szTemp;
-			szTemp.Format(L"%s: %d/%d %c", pHeadSelectedCity->getProductionName(), pHeadSelectedCity->getProduction(), pHeadSelectedCity->getProductionNeeded(), GC.getYieldInfo(YIELD_PRODUCTION).getChar());
+			szTemp.Format(L"%s: %d/%d %c", pHeadSelectedCity->getProductionName(), pHeadSelectedCity->getProductionProgress(), pHeadSelectedCity->getProductionNeeded(), GC.getYieldInfo(YIELD_PRODUCTION).getChar());
 			szBuffer.assign(szTemp);
 		}
 	}
@@ -5968,7 +5958,6 @@ void CvDLLWidgetData::parseDescriptionHelp(CvWidgetDataStruct &widgetDataStruct,
 
 void CvDLLWidgetData::parseKillDealHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
-PROFILE_EXTRA_FUNC();
 //	szBuffer = "Click to cancel";
 	CvWString szTemp;
 	szTemp = szBuffer.getCString();

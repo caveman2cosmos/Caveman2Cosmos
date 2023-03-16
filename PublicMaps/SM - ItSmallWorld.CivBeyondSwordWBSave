@@ -14,7 +14,7 @@ BeginMap
 EndMap
 BeginPlayer
 	LeaderType=LEADER_WASHINGTON
-	CivType=CIVILIZATION_UNITED_STATES
+	CivType=CIVILIZATION_AMERICA
 	StartingX=28, StartingY=20
 EndPlayer
 BeginPlot

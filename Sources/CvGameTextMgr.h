@@ -88,7 +88,6 @@ public:
 	);
 	void setBuildingActualEffects(CvWStringBuffer &szBuffer, const CvWString& szStart, BuildingTypes eBuilding, const CvCity* pCity, bool bNewLine = true);
 
-	void setProductionDecayHelp(CvWStringBuffer &szBuffer, int iTurnsLeft, int iThreshold, int iDecay, bool bProducing);
 	void setProjectHelp(CvWStringBuffer &szBuffer, ProjectTypes eProject, bool bCivilopediaText = false, CvCity* pCity = NULL);
 	void setProcessHelp(CvWStringBuffer &szBuffer, ProcessTypes eProcess);
 	void setGoodHealthHelp(CvWStringBuffer &szBuffer, CvCity& city);
