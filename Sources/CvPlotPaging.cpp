@@ -210,17 +210,14 @@ int ToroidalDistanceSq (int x1, int y1, int x2, int y2, int w, int h)
 void CvPlotPaging::UpdatePaging()
 {
 	PROFILE_EXTRA_FUNC();
-	// Check if the paging setting changed
-	bool bPagingEnabled = getBugOptionBOOL("MainInterface__EnableGraphicalPaging", true);
 
-	if(bPagingEnabled || (!bPagingEnabled && g_bWasGraphicsPagingEnabled))
+	if (GC.isGraphicalPaging())
 	{
 		const CvPlot* lookatPlot = gDLL->getInterfaceIFace()->getLookAtPlot();
-		if (lookatPlot == NULL)
+		if (!lookatPlot)
 		{
 			return;
 		}
-
 		const int centerX = lookatPlot->getX();
 		const int centerY = lookatPlot->getY();
 
@@ -231,81 +228,65 @@ void CvPlotPaging::UpdatePaging()
 		for (int i = 0; i < map.numPlots(); i++)
 		{
 			CvPlot* plot = map.plotByIndex(i);
-			if (plot != NULL)
+			if (plot)
 			{
 				plots.push_back(PlotDist(map.plotByIndex(i), ToroidalDistanceSq(centerX, centerY, plot->getX(), plot->getY(), map.getGridWidth(), map.getGridHeight())));
 			}
 		}
 		algo::sort(plots);
 
-		if (!bPagingEnabled && g_bWasGraphicsPagingEnabled)
+		// How far did the camera move since last frame?
+		const int moveDist2 = (centerX - g_iLastLookatX) * (centerX - g_iLastLookatX) + (centerY - g_iLastLookatY) * (centerY - g_iLastLookatY);
+
+		// How much time we can allow for paging this frame, it varies by how fast the camera is moving
+		const int pagingFrameTime = 10 + GC.getDefineINT("PAGING_FRAME_TIME_MS", 100) / (1 + 4*moveDist2);
+
+		win32::Stopwatch pageTimer;
+		pageTimer.Start();
+
+		// Evict graphics first, allowing at least 1/2 our time budget for it (we definitely want to make sure we don't run out of memory!)
+		while (NeedToFreeMemory() && pageTimer.ElapsedMilliseconds() < pagingFrameTime * 0.5)
 		{
-			// How much time we can allow for paging this frame, it varies by how fast the camera is moving
-			const int pagingFrameTime = 10 + GC.getDefineINT("PAGING_FRAME_TIME_MS", 100);
-
-			win32::Stopwatch pageTimer;
-			pageTimer.Start();
-
-			//const CvMap& map = GC.getMap();
-
-			bool timedout = false;
-			for (std::vector<PlotDist>::iterator itr = plots.begin(); !timedout && itr != plots.end(); ++itr)
+			if (!EvictGraphics())
 			{
-				itr->plot->disableGraphicsPaging();
-				timedout = pageTimer.ElapsedMilliseconds() > pagingFrameTime;
+				break; // we in trouble now!
 			}
-			// Keep paging flag off until we make it through all the tiles
-			g_bWasGraphicsPagingEnabled = timedout;
 		}
-		else if (bPagingEnabled)
+
+		// The min distance different plot graphics should be paged in at
+		const int pageInDistances[] = {
+			GC.getDefineINT("PAGE_IN_DIST_SYMBOLS", 100),
+			GC.getDefineINT("PAGE_IN_DIST_FEATURES", 7),
+			GC.getDefineINT("PAGE_IN_DIST_RIVER", 40),
+			GC.getDefineINT("PAGE_IN_DIST_ROUTE", 100),
+			GC.getDefineINT("PAGE_IN_DIST_UNIT", 15),
+			GC.getDefineINT("PAGE_IN_DIST_CITY", 5),
+		};
+
+		// Loop all plots in order from distance to the view center, toggling the appropriate plot graphics flags
+		for (std::vector<PlotDist>::iterator itr = plots.begin(); itr != plots.end() && pageTimer.ElapsedMilliseconds() < pagingFrameTime; ++itr)
 		{
-			// How far did the camera move since last frame?
-			const int moveDist2 = (centerX - g_iLastLookatX) * (centerX - g_iLastLookatX) + (centerY - g_iLastLookatY) * (centerY - g_iLastLookatY);
-
-			// How much time we can allow for paging this frame, it varies by how fast the camera is moving
-			const int pagingFrameTime = 10 + GC.getDefineINT("PAGING_FRAME_TIME_MS", 100) / (1 + moveDist2);
-
-			win32::Stopwatch pageTimer;
-			pageTimer.Start();
-
-			// Evict graphics first, allowing at least 1/2 our time budget for it (we definitely want to make sure we don't run out of memory!)
-			while (NeedToFreeMemory() && pageTimer.ElapsedMilliseconds() < pagingFrameTime * 0.5)
+			for (int graphicsType = 0; graphicsType < ECvPlotGraphics::NUM; ++graphicsType)
 			{
-				if (!EvictGraphics())
+				if (pageInDistances[graphicsType] != -1)
 				{
-					// we in trouble now!
-					break;
+					itr->plot->setRequireGraphicsVisible(ECvPlotGraphics::fromIndex(graphicsType), itr->dist2 < pageInDistances[graphicsType] * pageInDistances[graphicsType]);
 				}
 			}
-
-			// The min distance different plot graphics should be paged in at
-			const int pageInDistances[] = {
-				GC.getDefineINT("PAGE_IN_DIST_SYMBOLS", 100),
-				GC.getDefineINT("PAGE_IN_DIST_FEATURES", 7),
-				GC.getDefineINT("PAGE_IN_DIST_RIVER", 40),
-				GC.getDefineINT("PAGE_IN_DIST_ROUTE", 100),
-				GC.getDefineINT("PAGE_IN_DIST_UNIT", 15),
-				GC.getDefineINT("PAGE_IN_DIST_CITY", 5),
-			};
-
-
-			// Loop all plots in order from distance to the view center, toggling the appropriate plot graphics flags
-			for (std::vector<PlotDist>::iterator itr = plots.begin(); itr != plots.end() && pageTimer.ElapsedMilliseconds() < pagingFrameTime; ++itr)
-			{
-				for (int graphicsType = 0; graphicsType < ECvPlotGraphics::NUM; ++graphicsType)
-				{
-					if (pageInDistances[graphicsType] != -1)
-					{
-						itr->plot->setRequireGraphicsVisible(ECvPlotGraphics::fromIndex(graphicsType), itr->dist2 < pageInDistances[graphicsType] * pageInDistances[graphicsType]);
-					}
-				}
-			}
-
-			g_iLastLookatX = lookatPlot->getX();
-			g_iLastLookatY = lookatPlot->getY();
-
-			g_bWasGraphicsPagingEnabled = true;
 		}
+		g_iLastLookatX = centerX;
+		g_iLastLookatY = centerY;
+
+		g_bWasGraphicsPagingEnabled = true;
+	}
+	else if (g_bWasGraphicsPagingEnabled)
+	{
+		const CvMap& map = GC.getMap();
+		for (int i = 0; i < map.numPlots(); i++)
+		{
+			map.plotByIndex(i)->disableGraphicsPaging();
+		}
+		g_bWasGraphicsPagingEnabled = false;
 	}
 }
 

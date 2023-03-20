@@ -498,6 +498,8 @@ public:
 
 	CvInfoBase& getUnitAIInfo(UnitAITypes eUnitAINum) const;
 
+	bool isGraphicalPaging() const { return m_bGraphicalPaging; }
+
 	//	Koshling - added internal registration of supported UnitAI types, not reliant
 	//	on external definition in XML
 private:
@@ -788,6 +790,7 @@ protected:
 	bool m_bRandLogging;
 	bool m_bSynchLogging;
 	bool m_bOverwriteLogs;
+	bool m_bGraphicalPaging;
 
 	FMPIManager* m_pFMPMgr;
 

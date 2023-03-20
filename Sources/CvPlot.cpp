@@ -350,7 +350,6 @@ void CvPlot::setRequireGraphicsVisible(ECvPlotGraphics::type graphics, bool visi
 	{
 		m_requiredVisibleGraphics = m_requiredVisibleGraphics & ~graphics;
 	}
-
 	showRequiredGraphics();
 }
 
@@ -376,7 +375,7 @@ void CvPlot::showRequiredGraphics()
 
 void CvPlot::updateGraphics(ECvPlotGraphics::type toShow /*= ECvPlotGraphics::ALL*/)
 {
-	if (!isGraphicPagingEnabled())
+	if (!isGraphicPagingEnabled() && GC.isGraphicalPaging())
 	{
 		enableGraphicsPaging();
 	}
@@ -487,7 +486,7 @@ void CvPlot::enableGraphicsPaging()
 
 void CvPlot::disableGraphicsPaging()
 {
-	FAssertMsg(isGraphicPagingEnabled(), "Graphics paging is not enabled");
+	FAssertMsg(isGraphicPagingEnabled(), "Graphics paging is already disabled");
 	// Show all graphics, as we aren't paging any more
 	setRequireGraphicsVisible(ECvPlotGraphics::ALL, true);
 	// Disable paging
@@ -12994,10 +12993,9 @@ void CvPlot::enableCenterUnitRecalc(bool bEnable)
 {
 	m_bInhibitCenterUnitCalculation = !bEnable;
 
-	if ( bEnable )
+	if (bEnable)
 	{
-		hideGraphics(ECvPlotGraphics::UNIT);
-		// updateCenterUnit();
+		updateCenterUnit();
 	}
 }
 
