@@ -109,7 +109,7 @@ class EnhancedTechConquest:
 		if aList:
 
 			city = argsList[2]
-			iBasePercent += iTechsBehind
+			iBasePercent += 2*iTechsBehind
 			charBeaker = GC.getCommerceInfo(CommerceTypes.COMMERCE_RESEARCH).getChar()
 			iPopulation = city.getPopulation()
 			fForce = (1 + iTechsBehind/10.0) * iPopulation / (CyPlayerO.getTotalPopulation() + iPopulation)
