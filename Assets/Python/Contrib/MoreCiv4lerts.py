@@ -232,7 +232,7 @@ class MoreCiv4lertsEvent(AbstractMoreCiv4lertsEvent):
 				techsToTrade = set()
 				for i in xrange(CyTeam.getNumAdjacentResearch()):
 					iTechX = CyTeam.getAdjacentResearch(i)
-					if bCheck1 and CyPlayer.canResearch(iTechX, True):
+					if bCheck1 and CyPlayer.canResearch(iTechX, True, True):
 						researchTechs.add(iTechX)
 					tradeData.iData = iTechX
 					if CyPlayerX.canTradeItem(iPlayer, tradeData, False):

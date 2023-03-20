@@ -227,7 +227,7 @@ class CvForeignAdvisor:
 				if CyTeam.isHasTech(iTech):
 					if not CyTeam.isNoTradeTech(iTech):
 						techsToGive.append(iTech)
-				elif CyPlayer.canResearch(iTech, True):
+				elif CyPlayer.canResearch(iTech, True, True):
 					techsToTake.append(iTech)
 
 
@@ -1126,7 +1126,7 @@ class CvForeignAdvisor:
 			if not szNoTechTrade:
 
 				for iTech in techsToGive:
-					if not CyPlayerX.canResearch(iTech, True):
+					if not CyPlayerX.canResearch(iTech, True, True):
 						continue
 					if bHuman:
 						aList0.append(iTech)
