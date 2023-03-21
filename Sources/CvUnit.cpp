@@ -5149,34 +5149,19 @@ bool CvUnit::isActionRecommended(int iAction) const
 
 int CvUnit::defenderValue(const CvUnit* pAttacker) const
 {
-	bool bTargetOverride = false;
-
-	TeamTypes eAttackerTeam = NO_TEAM;
-	if (NULL != pAttacker)
+	if (pAttacker)
 	{
-		eAttackerTeam = pAttacker->getTeam();
-
-		CvPlot* pPlot = plot();
-		if (pPlot != NULL)
+		if (pAttacker->getDomainType() == DOMAIN_AIR)
 		{
-			if (canCoexistWithAttacker(*pAttacker))
+			// Does my current damage exceed the attackers damage limit?
+			if (getDamage() >= pAttacker->airCombatLimit(this))
 			{
 				return 0;
 			}
 		}
-		else if (canCoexistWithTeam(eAttackerTeam))
+		else if (canCoexistWithAttacker(*pAttacker) || !pAttacker->canAttack(*this))
 		{
 			return 0;
-		}
-
-		if (!pAttacker->canAttack(*this))
-		{
-			return 0;
-		}
-
-		if (isTargetOf(*pAttacker))
-		{
-			bTargetOverride = true;
 		}
 	}
 	if (!canDefend())
@@ -5238,11 +5223,10 @@ int CvUnit::defenderValue(const CvUnit* pAttacker) const
 	// It should be greater than 0 as this target is at least valid as per the checks above
 	iValue = std::max(1, iValue);
 
-	if (bTargetOverride)
+	if (pAttacker && isTargetOf(*pAttacker))
 	{
 		iValue += 1000000;
 	}
-
 	return iValue + 3;
 }
 
