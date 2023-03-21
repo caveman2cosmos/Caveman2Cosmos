@@ -102,8 +102,8 @@ public:
 
 	int getTypicalUnitValue(UnitAITypes eUnitAI) const;
 
-	int getResearchCost(TechTypes eTech) const;
-	int getResearchLeft(TechTypes eTech) const;
+	uint64_t getResearchCost(TechTypes eTech) const;
+	uint64_t getResearchLeft(TechTypes eTech) const;
 
 	bool hasHolyCity(ReligionTypes eReligion) const;
 	bool hasHeadquarters(CorporationTypes eCorporation) const;
@@ -374,10 +374,10 @@ public:
 	bool isObsoleteBuilding(BuildingTypes eIndex) const;
 	void changeObsoleteBuildingCount(BuildingTypes eIndex, int iChange);
 
-	int getResearchProgress(TechTypes eIndex) const;
-	void setResearchProgress(TechTypes eIndex, int iNewValue, PlayerTypes ePlayer);
-	void changeResearchProgress(TechTypes eIndex, int iChange, PlayerTypes ePlayer);
-	int changeResearchProgressPercent(TechTypes eIndex, int iPercent, PlayerTypes ePlayer);
+	uint64_t getResearchProgress(TechTypes eIndex) const;
+	void setResearchProgress(TechTypes eIndex, uint64_t iNewValue, PlayerTypes ePlayer);
+	void changeResearchProgress(TechTypes eIndex, uint64_t iChange, PlayerTypes ePlayer);
+	uint64_t changeResearchProgressPercent(TechTypes eIndex, int iPercent, PlayerTypes ePlayer);
 
 	int getTechCount(TechTypes eIndex) const;
 	int getBestKnownTechScorePercent() const;
@@ -568,7 +568,7 @@ protected:
 	int* m_paiProjectMaking;
 	int* m_paiBuildingCount;
 	int* m_paiObsoleteBuildingCount;
-	int* m_paiResearchProgress;
+	uint64_t* m_paiResearchProgress;
 	int* m_paiTechCount;
 	int* m_paiTerrainTradeCount;
 	int* m_aiVictoryCountdown;

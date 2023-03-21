@@ -169,7 +169,7 @@ bool CvOutcomeList::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, Unit
 	return false;
 }
 
-int CvOutcomeList::AI_getValueInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool bForTrade) const
+int64_t CvOutcomeList::AI_getValueInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool bForTrade) const
 {
 	PROFILE_EXTRA_FUNC();
 	std::vector<std::pair<const CvOutcome*, int> > apOutcome;
@@ -207,7 +207,7 @@ int CvOutcomeList::AI_getValueInPlot(const CvUnit& kUnit, const CvPlot& kPlot, b
 		iChanceSum = 100;
 	}
 
-	int iValue = 0;
+	int64_t iValue = 0;
 
 	for (int i=0; i<(int)apOutcome.size(); i++)
 	{

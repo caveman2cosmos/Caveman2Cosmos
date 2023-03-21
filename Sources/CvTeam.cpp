@@ -334,7 +334,7 @@ void CvTeam::reset(TeamTypes eID, bool bConstructorCall)
 		}
 
 		FAssertMsg(m_paiResearchProgress==NULL, "about to leak memory, CvPlayer::m_paiResearchProgress");
-		m_paiResearchProgress = new int [GC.getNumTechInfos()];
+		m_paiResearchProgress = new uint64_t[GC.getNumTechInfos()];
 		FAssertMsg(m_paiTechCount==NULL, "about to leak memory, CvPlayer::m_paiTechCount");
 		m_paiTechCount = new int [GC.getNumTechInfos()];
 		for (iI = 0; iI < GC.getNumTechInfos(); iI++)
@@ -1039,7 +1039,7 @@ void CvTeam::doTurn()
 				}
 				if (iCount > 0)
 				{
-					changeResearchProgress(eTechX, std::max(1, getResearchCost(eTechX) * GC.getBARBARIAN_FREE_TECH_PERCENT() * iCount / (100 * iPossibleCount)), getLeaderID());
+					changeResearchProgress(eTechX, std::max<uint64_t>(1, getResearchCost(eTechX) * GC.getBARBARIAN_FREE_TECH_PERCENT() * iCount / (100 * iPossibleCount)), getLeaderID());
 				}
 			}
 		}
@@ -2595,8 +2595,7 @@ int CvTeam::countEnemyDangerByArea(const CvArea* pArea, TeamTypes eEnemyTeam ) c
 }
 
 
-// This function needs to be converted to return an uint64_t.
-int CvTeam::getResearchCost(TechTypes eTech) const
+uint64_t CvTeam::getResearchCost(TechTypes eTech) const
 {
 	PROFILE_EXTRA_FUNC();
 	FAssertMsg(eTech != NO_TECH, "Tech is not assigned a valid value");
@@ -2678,13 +2677,13 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 	}
 	iCost /= 100;
 
-	return std::max(1, iCost < MAX_INT ? (int)iCost : MAX_INT);
+	return std::max<uint64_t>(1, iCost);
 }
 
 
-int CvTeam::getResearchLeft(TechTypes eTech) const
+uint64_t CvTeam::getResearchLeft(TechTypes eTech) const
 {
-	return std::max(0, getResearchCost(eTech) - getResearchProgress(eTech));
+	return std::max<uint64_t>(0, getResearchCost(eTech) - getResearchProgress(eTech));
 }
 
 
@@ -4796,17 +4795,13 @@ void CvTeam::changeObsoleteBuildingCount(BuildingTypes eIndex, int iChange)
 }
 
 
-int CvTeam::getResearchProgress(TechTypes eIndex) const
+uint64_t CvTeam::getResearchProgress(TechTypes eIndex) const
 {
-	if (eIndex != NO_TECH)
-	{
-		return m_paiResearchProgress[eIndex];
-	}
-	return 0;
+	return eIndex != NO_TECH ? m_paiResearchProgress[eIndex] : 0;
 }
 
 
-void CvTeam::setResearchProgress(TechTypes eIndex, int iNewValue, PlayerTypes ePlayer)
+void CvTeam::setResearchProgress(TechTypes eIndex, uint64_t iNewValue, PlayerTypes ePlayer)
 {
 	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eIndex);
 	FASSERT_BOUNDS(0, MAX_PLAYERS, ePlayer);
@@ -4842,24 +4837,24 @@ void CvTeam::setResearchProgress(TechTypes eIndex, int iNewValue, PlayerTypes eP
 }
 
 
-void CvTeam::changeResearchProgress(TechTypes eIndex, int iChange, PlayerTypes ePlayer)
+void CvTeam::changeResearchProgress(TechTypes eIndex, uint64_t iChange, PlayerTypes ePlayer)
 {
-	setResearchProgress(eIndex, std::max(0, getResearchProgress(eIndex) + iChange), ePlayer);
+	setResearchProgress(eIndex, std::max<uint64_t>(0, getResearchProgress(eIndex) + iChange), ePlayer);
 }
 
-int CvTeam::changeResearchProgressPercent(TechTypes eIndex, int iPercent, PlayerTypes ePlayer)
+uint64_t CvTeam::changeResearchProgressPercent(TechTypes eIndex, int iPercent, PlayerTypes ePlayer)
 {
-	int iBeakers = 0;
+	uint64_t iBeakers = 0;
 
 	if (0 != iPercent && !isHasTech(eIndex))
 	{
 		if (iPercent > 0)
 		{
-			iBeakers = std::min(getResearchLeft(eIndex), (getResearchCost(eIndex) * iPercent) / 100);
+			iBeakers = std::min<uint64_t>(getResearchLeft(eIndex), (getResearchCost(eIndex) * iPercent) / 100);
 		}
 		else
 		{
-			iBeakers = std::max(getResearchLeft(eIndex) - getResearchCost(eIndex), (getResearchCost(eIndex) * iPercent) / 100);
+			iBeakers = std::max<uint64_t>(getResearchLeft(eIndex) - getResearchCost(eIndex), (getResearchCost(eIndex) * iPercent) / 100);
 		}
 		changeResearchProgress(eIndex, iBeakers, ePlayer);
 	}
@@ -6631,7 +6626,7 @@ void CvTeam::read(FDataStreamBase* pStream)
 	for(int i=0;i<wrapper.getNumClassEnumValues(REMAPPED_CLASS_TYPE_PROJECTS);i++)
 	{
 		int temp;
-		ProjectTypes eNewProjectType = (ProjectTypes)wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_PROJECTS, i, true);
+		const ProjectTypes eNewProjectType = (ProjectTypes)wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_PROJECTS, i, true);
 		if ( eNewProjectType != -1 )
 		{
 			for(int j=0;j<m_paiProjectCount[eNewProjectType];j++)
@@ -6647,7 +6642,15 @@ void CvTeam::read(FDataStreamBase* pStream)
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_PROJECTS, GC.getNumProjectInfos(), m_paiProjectMaking);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingCount);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiObsoleteBuildingCount);
+	// @SAVEBREAK
+	int* m_paiResearchProgress = new int[GC.getNumTechInfos()];
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_paiResearchProgress);
+	for (int i = 0, num = GC.getNumTechInfos(); i < num; i++)
+	{
+		this->m_paiResearchProgress[i] = m_paiResearchProgress[i];
+	}
+	delete[] m_paiResearchProgress;
+	// @SAVEBREAK
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_paiTechCount);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_TERRAINS, GC.getNumTerrainInfos(), m_paiTerrainTradeCount);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_VICTORIES, GC.getNumVictoryInfos(), m_aiVictoryCountdown);
@@ -6655,7 +6658,7 @@ void CvTeam::read(FDataStreamBase* pStream)
 
 	for (int i = 0; i < wrapper.getNumClassEnumValues(REMAPPED_CLASS_TYPE_IMPROVEMENTS); ++i)
 	{
-		int	newIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_IMPROVEMENTS, i, true);
+		const int newIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_IMPROVEMENTS, i, true);
 
 		if ( newIndex != -1 )
 		{
@@ -6842,7 +6845,15 @@ void CvTeam::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_PROJECTS, GC.getNumProjectInfos(), m_paiProjectMaking);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingCount);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiObsoleteBuildingCount);
+	// @SAVEBREAK
+	int* m_paiResearchProgress = new int[GC.getNumTechInfos()];
+	for (int i = 0, num = GC.getNumTechInfos(); i < num; i++)
+	{
+		m_paiResearchProgress[i] = (int)std::min<int64_t>(this->m_paiResearchProgress[i], MAX_INT);
+	}
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_paiResearchProgress);
+	delete[] m_paiResearchProgress;
+	// @SAVEBREAK
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_paiTechCount);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_TERRAINS, GC.getNumTerrainInfos(), m_paiTerrainTradeCount);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_VICTORIES, GC.getNumVictoryInfos(), m_aiVictoryCountdown);

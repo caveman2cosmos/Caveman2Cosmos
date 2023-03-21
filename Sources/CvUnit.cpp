@@ -10365,7 +10365,7 @@ int CvUnit::getDiscoverResearch(const TechTypes eTech) const
 
 		if (eTech != NO_TECH)
 		{
-			return std::min(GET_TEAM(getTeam()).getResearchLeft(eTech), iResearch);
+			return (int)std::min<uint64_t>(GET_TEAM(getTeam()).getResearchLeft(eTech), iResearch);
 		}
 		return iResearch;
 	}

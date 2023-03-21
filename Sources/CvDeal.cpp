@@ -122,7 +122,7 @@ void CvDeal::addTrades(CLinkList<TradeData>* pFirstList, CLinkList<TradeData>* p
 	CLLNode<TradeData>* pNode;
 
 	//Afforess: Prevent humans from gifting AI's "negative" value deals
-	int iHumanValue = 0;
+	int64_t iHumanValue = 0;
 	if (pFirstList != NULL && bCheckAllowed)
 	{
 		for (pNode = pFirstList->head(); pNode; pNode = pFirstList->next(pNode))
@@ -764,7 +764,7 @@ bool CvDeal::TranslateTradeDataOnLoad(CvTaggedSaveFormatWrapper& wrapper, TradeD
 {
 	if (data.m_eItemType == TRADE_RESOURCES)
 	{
-		data.m_iData =  wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BONUSES, data.m_iData, true);
+		data.m_iData = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BONUSES, (int)data.m_iData, true);
 
 		return (data.m_iData != NO_BONUS);
 	}
@@ -824,7 +824,7 @@ bool CvDeal::startTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eT
 		}
 		case TRADE_CITIES:
 		{
-			CvCity* pCity = GET_PLAYER(eFromPlayer).getCity(trade.m_iData);
+			CvCity* pCity = GET_PLAYER(eFromPlayer).getCity((int)trade.m_iData);
 			if (pCity != NULL)
 			{
 				if (gTeamLogLevel >= 2)
@@ -841,7 +841,7 @@ bool CvDeal::startTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eT
 		{
 			if (GC.getGame().isOption(GAMEOPTION_ADVANCED_DIPLOMACY))
 			{
-				CvUnit* pUnit = GET_PLAYER(eFromPlayer).getUnit(trade.m_iData);
+				CvUnit* pUnit = GET_PLAYER(eFromPlayer).getUnit((int)trade.m_iData);
 				if (pUnit != NULL)
 				{
 					pUnit->tradeUnit(eToPlayer);
@@ -853,21 +853,25 @@ bool CvDeal::startTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eT
 		{
 			GET_PLAYER(eFromPlayer).changeGold(-(trade.m_iData));
 			GET_PLAYER(eToPlayer).changeGold(trade.m_iData);
-			GET_PLAYER(eFromPlayer).AI_changeGoldTradedTo(eToPlayer, trade.m_iData);
+			// Matt: Todo - AI_changeGoldTradedTo should take long long as second parameter?
+			FASSERT_BOUNDS(MIN_INT, MAX_INT, trade.m_iData);
+			GET_PLAYER(eFromPlayer).AI_changeGoldTradedTo(eToPlayer, (int)std::min<int64_t>(trade.m_iData, MAX_INT));
 
 			if (gTeamLogLevel >= 2)
 			{
 				logBBAI("    Player %d (%S) trades gold %d due to TRADE_GOLD with player %d (%S)",
 					eFromPlayer, GET_PLAYER(eFromPlayer).getCivilizationDescription(0), trade.m_iData, eToPlayer, GET_PLAYER(eToPlayer).getCivilizationDescription(0));
 			}
-			CvEventReporter::getInstance().playerGoldTrade(eFromPlayer, eToPlayer, trade.m_iData);
+			CvEventReporter::getInstance().playerGoldTrade(eFromPlayer, eToPlayer, (int)std::min<int64_t>(trade.m_iData, MAX_INT));
 			break;
 		}
 
 		case TRADE_GOLD_PER_TURN:
 		{
-			GET_PLAYER(eFromPlayer).changeGoldPerTurnByPlayer(eToPlayer, -(trade.m_iData));
-			GET_PLAYER(eToPlayer).changeGoldPerTurnByPlayer(eFromPlayer, trade.m_iData);
+			// Matt: Todo - changeGoldPerTurnByPlayer should take long long as second parameter?
+			FASSERT_BOUNDS(MIN_INT, MAX_INT, trade.m_iData);
+			GET_PLAYER(eFromPlayer).changeGoldPerTurnByPlayer(eToPlayer, -(int)std::min<int64_t>(trade.m_iData, MAX_INT));
+			GET_PLAYER(eToPlayer).changeGoldPerTurnByPlayer(eFromPlayer, (int)std::min<int64_t>(trade.m_iData, MAX_INT));
 
 			if (gTeamLogLevel >= 2)
 			{
@@ -1249,8 +1253,10 @@ void CvDeal::endTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eToP
 		}
 		case TRADE_GOLD_PER_TURN:
 		{
-			GET_PLAYER(eFromPlayer).changeGoldPerTurnByPlayer(eToPlayer, trade.m_iData);
-			GET_PLAYER(eToPlayer).changeGoldPerTurnByPlayer(eFromPlayer, -trade.m_iData);
+			// Matt: Todo - changeGoldPerTurnByPlayer should take long long as second parameter?
+			FASSERT_BOUNDS(MIN_INT, MAX_INT, trade.m_iData);
+			GET_PLAYER(eFromPlayer).changeGoldPerTurnByPlayer(eToPlayer, (int)std::min<int64_t>(trade.m_iData, MAX_INT));
+			GET_PLAYER(eToPlayer).changeGoldPerTurnByPlayer(eFromPlayer, -(int)std::min<int64_t>(trade.m_iData, MAX_INT));
 			break;
 		}
 		case TRADE_VASSAL:

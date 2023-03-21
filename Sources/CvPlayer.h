@@ -432,7 +432,7 @@ public:
 	int getAdvancedStartBuildingCost(BuildingTypes eBuilding, bool bAdd, const CvCity* pCity = NULL) const;
 	int getAdvancedStartImprovementCost(ImprovementTypes eImprovement, bool bAdd, const CvPlot* pPlot = NULL) const;
 	int getAdvancedStartRouteCost(RouteTypes eRoute, bool bAdd, const CvPlot* pPlot = NULL) const;
-	int getAdvancedStartTechCost(TechTypes eTech, bool bAdd) const;
+	int64_t getAdvancedStartTechCost(TechTypes eTech, bool bAdd) const;
 	int getAdvancedStartVisibilityCost(const CvPlot* pPlot = NULL) const;
 
 	int getGoldenAgeTurns() const;
@@ -621,8 +621,8 @@ public:
 	int getMaxConscript() const;
 	void changeMaxConscript(int iChange);
 
-	int getOverflowResearch() const;
-	void changeOverflowResearch(int iChange);
+	int64_t getOverflowResearch() const;
+	void changeOverflowResearch(int64_t iChange);
 
 	int getNoUnhealthyPopulationCount() const;
 	bool isNoUnhealthyPopulation() const;
@@ -1212,7 +1212,7 @@ public:
 	void applyEvent(EventTypes eEvent, int iTriggeredId, bool bUpdateTrigger = true);
 	bool canDoEvent(EventTypes eEvent, const EventTriggeredData& kTriggeredData) const;
 	TechTypes getBestEventTech(EventTypes eEvent, PlayerTypes eOtherPlayer) const;
-	int getEventCost(EventTypes eEvent, PlayerTypes eOtherPlayer, bool bRandom) const;
+	int64_t getEventCost(EventTypes eEvent, PlayerTypes eOtherPlayer, bool bRandom) const;
 	bool canTrigger(EventTriggerTypes eTrigger, PlayerTypes ePlayer, ReligionTypes eReligion) const;
 	const EventTriggeredData* getEventCountdown(EventTypes eEvent) const;
 	void setEventCountdown(EventTypes eEvent, const EventTriggeredData& kEventTriggered);
@@ -1379,7 +1379,7 @@ public:
 	int getEnslavementChance() const;
 	void changeEnslavementChance(int iChange);
 
-	int doMultipleResearch(int iOverflow);
+	uint64_t doMultipleResearch(int64_t iOverflow);
 
 	void acquireFort(CvPlot* pPlot);
 
@@ -1714,7 +1714,7 @@ public:
 	virtual int AI_getMemoryCount(PlayerTypes eIndex1, MemoryTypes eIndex2) const = 0;
 	virtual void AI_changeMemoryCount(PlayerTypes eIndex1, MemoryTypes eIndex2, int iChange) = 0;
 	virtual void AI_doCommerce() = 0;
-	virtual EventTypes AI_chooseEvent(int iTriggeredId, int* pValue = NULL) const = 0;
+	virtual EventTypes AI_chooseEvent(int iTriggeredId, int64_t* pValue = NULL) const = 0;
 	virtual void AI_launch(VictoryTypes eVictory) = 0;
 	virtual void AI_doAdvancedStart(bool bNoExit = false) = 0;
 	virtual void AI_updateBonusValue() = 0;
@@ -1796,7 +1796,7 @@ protected:
 	int m_iConscriptCount;
 	int m_iMaxConscript;
 	int m_iHighestUnitLevel;
-	int m_iOverflowResearch;
+	int64_t m_iOverflowResearch;
 	int m_iNoUnhealthyPopulationCount;
 	int m_iExpInBorderModifier;
 	int m_iBuildingOnlyHealthyCount;

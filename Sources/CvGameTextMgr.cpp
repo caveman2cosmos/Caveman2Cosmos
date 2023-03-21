@@ -17431,7 +17431,7 @@ void CvGameTextMgr::setTechHelp(CvWStringBuffer &szBuffer, TechTypes eTech, bool
 		}
 		else if (GET_TEAM(GC.getGame().getActiveTeam()).isHasTech(eTech))
 		{
-			szTempBuffer.Format(L"\n%d%c", GET_TEAM(GC.getGame().getActiveTeam()).getResearchCost(eTech), GC.getCommerceInfo(COMMERCE_RESEARCH).getChar());
+			szTempBuffer.Format(L"\n%llu%c", GET_TEAM(GC.getGame().getActiveTeam()).getResearchCost(eTech), GC.getCommerceInfo(COMMERCE_RESEARCH).getChar());
 			szBuffer.append(szTempBuffer);
 		}
 		else
@@ -17439,7 +17439,7 @@ void CvGameTextMgr::setTechHelp(CvWStringBuffer &szBuffer, TechTypes eTech, bool
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_NUM_TURNS", playerAct->getResearchTurnsLeft(eTech, (gDLL->ctrlKey() || !(gDLL->shiftKey())))));
 
-			szTempBuffer.Format(L" (%d/%d %c)", GET_TEAM(GC.getGame().getActiveTeam()).getResearchProgress(eTech), GET_TEAM(GC.getGame().getActiveTeam()).getResearchCost(eTech), GC.getCommerceInfo(COMMERCE_RESEARCH).getChar());
+			szTempBuffer.Format(L" (%llu/%llu %c)", GET_TEAM(GC.getGame().getActiveTeam()).getResearchProgress(eTech), GET_TEAM(GC.getGame().getActiveTeam()).getResearchCost(eTech), GC.getCommerceInfo(COMMERCE_RESEARCH).getChar());
 			szBuffer.append(szTempBuffer);
 		}
 	}
@@ -30243,7 +30243,7 @@ void CvGameTextMgr::getTradeString(CvWStringBuffer& szBuffer, const TradeData& t
 		szBuffer.assign(CvWString::format(L"%s", GC.getBonusInfo((BonusTypes)tradeData.m_iData).getDescription()));
 		break;
 	case TRADE_CITIES:
-		szBuffer.assign(CvWString::format(L"%s", GET_PLAYER(ePlayer1).getCity(tradeData.m_iData)->getName().GetCString()));
+		szBuffer.assign(CvWString::format(L"%s", GET_PLAYER(ePlayer1).getCity((int)tradeData.m_iData)->getName().GetCString()));
 		break;
 	case TRADE_PEACE:
 	case TRADE_WAR:
@@ -30259,7 +30259,7 @@ void CvGameTextMgr::getTradeString(CvWStringBuffer& szBuffer, const TradeData& t
 		break;
 	case TRADE_WORKER:
 	case TRADE_MILITARY_UNIT:
-		szBuffer.assign(CvWString::format(L"%s", GET_PLAYER(ePlayer1).getUnit(tradeData.m_iData)->getName().GetCString()));
+		szBuffer.assign(CvWString::format(L"%s", GET_PLAYER(ePlayer1).getUnit((int)tradeData.m_iData)->getName().GetCString()));
 		break;
 	case TRADE_EMBASSY:
 		szBuffer.append(gDLL->getText("TXT_KEY_MISC_EMBASSY"));
@@ -33409,15 +33409,15 @@ void CvGameTextMgr::eventTechHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, 
 		}
 		else if (0 != kEvent.getTechPercent())
 		{
-			CvTeam& kTeam = GET_TEAM(GET_PLAYER(eActivePlayer).getTeam());
-			int iBeakers = (kTeam.getResearchCost(eTech) * kEvent.getTechPercent()) / 100;
+			const CvTeam& kTeam = GET_TEAM(GET_PLAYER(eActivePlayer).getTeam());
+			int64_t iBeakers = (kTeam.getResearchCost(eTech) * kEvent.getTechPercent()) / 100;
 			if (kEvent.getTechPercent() > 0)
 			{
-				iBeakers = std::min(kTeam.getResearchLeft(eTech), iBeakers);
+				iBeakers = std::min<int64_t>(kTeam.getResearchLeft(eTech), iBeakers);
 			}
 			else if (kEvent.getTechPercent() < 0)
 			{
-				iBeakers = std::max(kTeam.getResearchLeft(eTech) - kTeam.getResearchCost(eTech), iBeakers);
+				iBeakers = std::max<int64_t>(kTeam.getResearchLeft(eTech) - kTeam.getResearchCost(eTech), iBeakers);
 			}
 
 			if (NO_PLAYER != eOtherPlayer)
@@ -33437,12 +33437,12 @@ void CvGameTextMgr::eventTechHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, 
 void CvGameTextMgr::eventGoldHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, PlayerTypes ePlayer, PlayerTypes eOtherPlayer) const
 {
 	const CvEventInfo& kEvent = GC.getEventInfo(eEvent);
-	CvPlayer& kPlayer = GET_PLAYER(ePlayer);
+	const CvPlayer& kPlayer = GET_PLAYER(ePlayer);
 
-	int iGold1 = kPlayer.getEventCost(eEvent, eOtherPlayer, false);
-	int iGold2 = kPlayer.getEventCost(eEvent, eOtherPlayer, true);
+	const int64_t iGold1 = kPlayer.getEventCost(eEvent, eOtherPlayer, false);
+	int64_t iGold2 = kPlayer.getEventCost(eEvent, eOtherPlayer, true);
 
-	if (iGold1 != iGold2) iGold2 = abs(iGold2);
+	if (iGold1 != iGold2) iGold2 = (int64_t)abs((double)iGold2);
 
 	if (0 != iGold1 || 0 != iGold2)
 	{

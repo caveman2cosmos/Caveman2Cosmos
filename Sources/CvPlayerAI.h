@@ -225,8 +225,8 @@ public:
 	int AI_maxGoldTrade(PlayerTypes ePlayer) const;
 	int AI_maxGoldPerTurnTrade(PlayerTypes ePlayer) const;
 
-	int AI_getGoldValue(const int iGold, const int iValuePercent) const;
-	int AI_getGoldFromValue(const int iValue, const int iValuePercent) const;
+	int64_t AI_getGoldValue(const int64_t iGold, const int iValuePercent) const;
+	int64_t AI_getGoldFromValue(const int64_t iValue, const int iValuePercent) const;
 
 	int AI_bonusVal(BonusTypes eBonus, int iChange = 1, bool bForTrade = false) const;
 	int AI_baseBonusVal(BonusTypes eBonus, bool bForTrade = false) const;
@@ -237,7 +237,7 @@ public:
 	int AI_cityTradeVal(CvCity* pCity) const;
 	DenialTypes AI_cityTrade(CvCity* pCity, PlayerTypes ePlayer) const;
 
-	int AI_stopTradingTradeVal(TeamTypes eTradeTeam, PlayerTypes ePlayer) const;
+	int64_t AI_stopTradingTradeVal(TeamTypes eTradeTeam, PlayerTypes ePlayer) const;
 	DenialTypes AI_stopTradingTrade(TeamTypes eTradeTeam, PlayerTypes ePlayer) const;
 
 	int AI_civicTradeVal(CivicTypes eCivic, PlayerTypes ePlayer) const;
@@ -370,7 +370,7 @@ public:
 
 	void AI_doCommerce();
 
-	EventTypes AI_chooseEvent(int iTriggeredId, int* pValue = NULL) const;
+	EventTypes AI_chooseEvent(int iTriggeredId, int64_t* pValue = NULL) const;
 	virtual void AI_launch(VictoryTypes eVictory);
 
 	int AI_getCultureVictoryStage() const;
@@ -486,7 +486,7 @@ public:
 	int countCityReligionRevolts() const;
 
 	int AI_workerTradeVal(const CvUnit* pUnit) const;
-	int AI_militaryUnitTradeVal(const CvUnit* pUnit) const;
+	int64_t AI_militaryUnitTradeVal(const CvUnit* pUnit) const;
 
 	void resetBonusClassTallyCache(const int iTurn = -1, const bool bFull = true);
 
@@ -642,7 +642,7 @@ protected:
 	int AI_getHealthWeight(int iHealth, int iExtraPop) const;
 
 	void AI_convertUnitAITypesForCrush();
-	int AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTriggeredData) const;
+	int64_t AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTriggeredData) const;
 
 	void AI_doEnemyUnitData();
 	void AI_invalidateCloseBordersAttitudeCache();
@@ -661,9 +661,9 @@ private:
 	static int plotDangerCacheReads;
 #endif
 
-	techPath* findBestPath(TechTypes eTech, int& valuePerUnitCost, bool bIgnoreCost, bool bAsync);
-	int	 techPathValuePerUnitCost(techPath* path, TechTypes eTech, bool bIgnoreCost, bool bAsync);
-	TechTypes findStartTech(techPath* path) const;
+	const techPath* findBestPath(TechTypes eTech, int& valuePerUnitCost, bool bIgnoreCost, bool bAsync);
+	int techPathValuePerUnitCost(const techPath* path, TechTypes eTech, bool bIgnoreCost, bool bAsync);
+	TechTypes findStartTech(const techPath* path) const;
 
 	typedef stdext::hash_map<TechTypes, int> TechTypesValueMap;
 	mutable TechTypesValueMap m_cachedTechValues;

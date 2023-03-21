@@ -667,9 +667,9 @@ int CyPlayer::getAdvancedStartRouteCost(int /*RouteTypes*/ eRoute, bool bAdd, co
 	return m_pPlayer->getAdvancedStartRouteCost((RouteTypes) eRoute, bAdd, NULL != pPlot ? pPlot->getPlot() : NULL);
 }
 
-int CyPlayer::getAdvancedStartTechCost(int /*TechTypes*/ eTech, bool bAdd) const
+int64_t CyPlayer::getAdvancedStartTechCost(TechTypes eTech, bool bAdd) const
 {
-	return m_pPlayer->getAdvancedStartTechCost((TechTypes) eTech, bAdd);
+	return m_pPlayer->getAdvancedStartTechCost(eTech, bAdd);
 }
 
 int CyPlayer::getAdvancedStartVisibilityCost(const CyPlot* pPlot) const
@@ -827,7 +827,7 @@ int CyPlayer::getNumMilitaryUnits() const
 	return m_pPlayer->getNumMilitaryUnits();
 }
 
-int CyPlayer::getOverflowResearch() const
+int64_t CyPlayer::getOverflowResearch() const
 {
 	return m_pPlayer->getOverflowResearch();
 }

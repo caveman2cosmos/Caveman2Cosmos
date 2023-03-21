@@ -1379,7 +1379,7 @@ int CvTeamAI::AI_getBarbarianCivWarVal(TeamTypes eTeam, int iMaxDistance) const
 }
 
 
-int CvTeamAI::AI_techTradeVal(TechTypes eTech, TeamTypes eTeam)
+int64_t CvTeamAI::AI_techTradeVal(TechTypes eTech, TeamTypes eTeam) const
 {
 	PROFILE_FUNC();
 	FAssert(eTeam != getID());
@@ -1392,7 +1392,7 @@ int CvTeamAI::AI_techTradeVal(TechTypes eTech, TeamTypes eTeam)
 	}
 	const int iCacheIndex = eTech * MAX_TEAMS + getID();
 
-	stdext::hash_map<int,int>::const_iterator itr = m_tradeTechValueCache.find(iCacheIndex);
+	stdext::hash_map<int, int64_t>::const_iterator itr = m_tradeTechValueCache.find(iCacheIndex);
 	if (itr != m_tradeTechValueCache.end())
 	{
 		return itr->second;
@@ -1427,10 +1427,10 @@ int CvTeamAI::AI_techTradeVal(TechTypes eTech, TeamTypes eTeam)
 		const float boost = (iOurActualTechValue - iAverageTechValue) / (iOurActualTechValue + iAverageTechValue);
 		const float sigma = 1.0f / (1.0f + exp(-boost));
 
-		int iCost = std::max(1, getResearchCost(eTech) - getResearchProgress(eTech));
-		iCost = (int)(iCost * (sigma * sigma * 3 + 0.25f));
+		uint64_t iCost = std::max<uint64_t>(1, getResearchCost(eTech) - getResearchProgress(eTech));
+		iCost = (int64_t)(iCost * (sigma * sigma * 3 + 0.25f));
 
-		int iValue = iCost * 3/2;
+		uint64_t iValue = iCost * 3/2;
 
 		int iKnownCount = 0;
 		int iPossibleKnownCount = 0;
@@ -1448,7 +1448,7 @@ int CvTeamAI::AI_techTradeVal(TechTypes eTech, TeamTypes eTeam)
 		}
 		iValue += iCost * (iPossibleKnownCount - iKnownCount) / (2*iPossibleKnownCount);
 
-		iValue = getModifiedIntValue(iValue, GC.getTechInfo(eTech).getAITradeModifier());
+		iValue = getModifiedIntValue64(iValue, GC.getTechInfo(eTech).getAITradeModifier());
 
 		m_tradeTechValueCache[iCacheIndex] = iValue;
 

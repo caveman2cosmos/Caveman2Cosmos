@@ -5226,7 +5226,7 @@ bool CvPlayer::canTradeItem(PlayerTypes eWhoTo, TradeData item, bool bTestDenial
 		}
 		case TRADE_CITIES:
 		{
-			CvCity* pCityTraded = getCity(item.m_iData);
+			CvCity* pCityTraded = getCity((int)item.m_iData);
 
 			if (NULL != pCityTraded && pCityTraded->getLiberationPlayer(false) == eWhoTo)
 			{
@@ -5247,7 +5247,7 @@ bool CvPlayer::canTradeItem(PlayerTypes eWhoTo, TradeData item, bool bTestDenial
 		}
 		case TRADE_WORKER:
 		{
-			CvUnit* pUnitTraded = getUnit(item.m_iData);
+			CvUnit* pUnitTraded = getUnit((int)item.m_iData);
 
 			if (pUnitTraded != NULL && GET_PLAYER(eWhoTo).getCapitalCity() != NULL
 			&& GC.getGame().isOption(GAMEOPTION_ADVANCED_DIPLOMACY)
@@ -5263,7 +5263,7 @@ bool CvPlayer::canTradeItem(PlayerTypes eWhoTo, TradeData item, bool bTestDenial
 		}
 		case TRADE_MILITARY_UNIT:
 		{
-			CvUnit* pUnitTraded = getUnit(item.m_iData);
+			CvUnit* pUnitTraded = getUnit((int)item.m_iData);
 			CvCity* pTheirCapitalCity = GET_PLAYER(eWhoTo).getCapitalCity();
 
 			if (pUnitTraded != NULL && pTheirCapitalCity != NULL && pUnitTraded->canMove()
@@ -5569,7 +5569,7 @@ DenialTypes CvPlayer::getTradeDenial(PlayerTypes eWhoTo, TradeData item) const
 
 		case TRADE_CITIES:
 		{
-			CvCity* pCity = getCity(item.m_iData);
+			CvCity* pCity = getCity((int)item.m_iData);
 			if (pCity != NULL)
 			{
 				return AI_cityTrade(pCity, eWhoTo);
@@ -5617,7 +5617,7 @@ DenialTypes CvPlayer::getTradeDenial(PlayerTypes eWhoTo, TradeData item) const
 
 		case TRADE_WORKER:
 		{
-			const CvUnit* pUnit = getUnit(item.m_iData);
+			const CvUnit* pUnit = getUnit((int)item.m_iData);
 			if (pUnit != NULL)
 			{
 				return AI_workerTrade(pUnit, eWhoTo);
@@ -5626,7 +5626,7 @@ DenialTypes CvPlayer::getTradeDenial(PlayerTypes eWhoTo, TradeData item) const
 		}
 		case TRADE_MILITARY_UNIT:
 		{
-			const CvUnit* pUnit = getUnit(item.m_iData);
+			const CvUnit* pUnit = getUnit((int)item.m_iData);
 			if (pUnit != NULL)
 			{
 				return AI_militaryUnitTrade(pUnit, eWhoTo);
@@ -6056,14 +6056,13 @@ void CvPlayer::receiveGoody(CvPlot* pPlot, GoodyTypes eGoody, CvUnit* pUnit)
 	int iResearch = GC.getGoodyInfo(eGoody).getResearch();
 	if (iResearch != 0)
 	{
-		int iTotalResearch = 0;
 		const TechTypes eTech = getCurrentResearch();
 
 		if (eTech != NO_TECH)
 		{
 			iResearch += GC.getGame().getSorenRandNum(GC.getGoodyInfo(eGoody).getGoldRand1(), "Goody Gold 1") + GC.getGame().getSorenRandNum(GC.getGoodyInfo(eGoody).getGoldRand2(), "Goody Gold 2");
 
-			iTotalResearch = GET_TEAM(getTeam()).getResearchCost(eTech) * iResearch / 100;
+			const uint64_t iTotalResearch = GET_TEAM(getTeam()).getResearchCost(eTech) * iResearch / 100;
 			GET_TEAM(getTeam()).changeResearchProgress(eTech, iTotalResearch, getID());
 
 			szBuffer += gDLL->getText("TXT_KEY_MISC_RECEIVED_RESEARCH", iTotalResearch, GC.getTechInfo(eTech).getTextKeyWide());
@@ -8315,7 +8314,7 @@ int CvPlayer::getResearchTurnsLeftTimes100(TechTypes eTech, bool bOverflow) cons
 {
 	PROFILE_EXTRA_FUNC();
 	int iResearchRate = 0;
-	int iOverflow = 0;
+	uint64_t iOverflow = 0;
 
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
@@ -8328,7 +8327,7 @@ int CvPlayer::getResearchTurnsLeftTimes100(TechTypes eTech, bool bOverflow) cons
 	}
 
 	// Mainly just so debug display shows sensible value
-	int iResearchLeft = GET_TEAM(getTeam()).getResearchLeft(eTech);
+	uint64_t iResearchLeft = GET_TEAM(getTeam()).getResearchLeft(eTech);
 
 	if (bOverflow)
 	{
@@ -8344,10 +8343,10 @@ int CvPlayer::getResearchTurnsLeftTimes100(TechTypes eTech, bool bOverflow) cons
 
 	if (iResearchRate == 0)
 	{
-		return iResearchLeft;
+		return static_cast<int>(iResearchLeft);
 	}
 
-	int iTurnsLeft = iResearchLeft / iResearchRate;
+	uint64_t iTurnsLeft = iResearchLeft / iResearchRate;
 
 	if (iTurnsLeft * iResearchRate < iResearchLeft)
 	{
@@ -8360,7 +8359,7 @@ int CvPlayer::getResearchTurnsLeftTimes100(TechTypes eTech, bool bOverflow) cons
 	}
 	else iTurnsLeft = MAX_INT;
 
-	return std::max(1, iTurnsLeft);
+	return std::max(1, (int)iTurnsLeft);
 }
 
 
@@ -10444,12 +10443,12 @@ void CvPlayer::changeConscriptCount(int iChange)
 }
 
 
-int CvPlayer::getOverflowResearch() const
+int64_t CvPlayer::getOverflowResearch() const
 {
 	return m_iOverflowResearch;
 }
 
-void CvPlayer::changeOverflowResearch(int iChange)
+void CvPlayer::changeOverflowResearch(int64_t iChange)
 {
 	m_iOverflowResearch += iChange;
 	FASSERT_NOT_NEGATIVE(m_iOverflowResearch);
@@ -15571,7 +15570,7 @@ void CvPlayer::doResearch()
 	}
 	else
 	{
-		const int iOverflow = getOverflowResearch();
+		const int64_t iOverflow = getOverflowResearch();
 		changeOverflowResearch(-iOverflow);
 		GET_TEAM(getTeam()).changeResearchProgress(eCurrentTech, calculateResearchRate(eCurrentTech) + iOverflow * calculateResearchModifier(eCurrentTech) / 100, getID());
 	}
@@ -15866,7 +15865,7 @@ int64_t CvPlayer::getEspionageMissionBaseCost(EspionageMissionTypes eMission, Pl
 	{
 		// Buy (Steal) Tech
 		TechTypes eTech = (TechTypes)iExtraData;
-		int iProdCost = MAX_INT;
+		int64_t iProdCost = ULLONG_MAX;
 
 		if (NO_TECH == eTech)
 		{
@@ -15874,7 +15873,7 @@ int64_t CvPlayer::getEspionageMissionBaseCost(EspionageMissionTypes eMission, Pl
 			{
 				if (canStealTech(eTargetPlayer, (TechTypes)iTech))
 				{
-					int iCost = GET_TEAM(getTeam()).getResearchCost((TechTypes)iTech);
+					int64_t iCost = GET_TEAM(getTeam()).getResearchCost((TechTypes)iTech);
 					if (iCost < iProdCost)
 					{
 						iProdCost = iCost;
@@ -17266,8 +17265,8 @@ void CvPlayer::doAdvancedStartAction(AdvancedStartActionTypes eAction, int iX, i
 		break;
 	case ADVANCEDSTARTACTION_TECH:
 		{
-			TechTypes eTech = (TechTypes) iData;
-			int iCost = getAdvancedStartTechCost(eTech, bAdd);
+			const TechTypes eTech = (TechTypes) iData;
+			const int64_t iCost = getAdvancedStartTechCost(eTech, bAdd);
 
 			if (iCost < 0)
 			{
@@ -17280,15 +17279,14 @@ void CvPlayer::doAdvancedStartAction(AdvancedStartActionTypes eAction, int iX, i
 				if (getAdvancedStartPoints() >= iCost)
 				{
 					GET_TEAM(getTeam()).setHasTech(eTech, true, getID(), false, false);
-					changeAdvancedStartPoints(-iCost);
+					changeAdvancedStartPoints(-(int)std::min<int64_t>(iCost, MAX_INT));
 				}
 			}
-
 			// Remove Tech from the Team
 			else
 			{
 				GET_TEAM(getTeam()).setHasTech(eTech, false, getID(), false, false);
-				changeAdvancedStartPoints(iCost);
+				changeAdvancedStartPoints((int)std::min<int64_t>(iCost, MAX_INT));
 			}
 
 			if (getID() == GC.getGame().getActivePlayer())
@@ -17302,7 +17300,7 @@ void CvPlayer::doAdvancedStartAction(AdvancedStartActionTypes eAction, int iX, i
 			if (pPlot == NULL)
 				return;
 
-			int iCost = getAdvancedStartVisibilityCost(pPlot);
+			const int iCost = getAdvancedStartVisibilityCost(pPlot);
 			if (iCost < 0)
 			{
 				return;
@@ -17833,7 +17831,7 @@ int CvPlayer::getAdvancedStartImprovementCost(ImprovementTypes eImprovement, boo
 // Adding or removing Tech
 /////////////////////////////////////////////////////////////////////////////////////////////
 
-int CvPlayer::getAdvancedStartTechCost(TechTypes eTech, bool bAdd) const
+int64_t CvPlayer::getAdvancedStartTechCost(TechTypes eTech, bool bAdd) const
 {
 	PROFILE_EXTRA_FUNC();
 	if (eTech == NO_TECH || 0 == getNumCities() || GC.getTechInfo(eTech).isGlobal())
@@ -17841,7 +17839,7 @@ int CvPlayer::getAdvancedStartTechCost(TechTypes eTech, bool bAdd) const
 		return -1;
 	}
 
-	int iCost = GET_TEAM(getTeam()).getResearchCost(eTech);
+	int64_t iCost = GET_TEAM(getTeam()).getResearchCost(eTech);
 	if (iCost < 0)
 	{
 		return -1;
@@ -21278,7 +21276,7 @@ bool CvPlayer::canDoEvent(EventTypes eEvent, const EventTriggeredData& kTriggere
 		}
 	}
 
-	int iGold = std::min(getEventCost(eEvent, kTriggeredData.m_eOtherPlayer, false), getEventCost(eEvent, kTriggeredData.m_eOtherPlayer, true));
+	const int64_t iGold = std::min<int64_t>(getEventCost(eEvent, kTriggeredData.m_eOtherPlayer, false), getEventCost(eEvent, kTriggeredData.m_eOtherPlayer, true));
 
 	if (iGold != 0)
 	{
@@ -21611,13 +21609,12 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 
 	if ( !adjustModifiersOnly )
 	{
-		int iGold = getEventCost(eEvent, pTriggeredData->m_eOtherPlayer, false);
-		int iRandomGold = getEventCost(eEvent, pTriggeredData->m_eOtherPlayer, true);
-
+		int64_t iGold = getEventCost(eEvent, pTriggeredData->m_eOtherPlayer, false);
+		int64_t iRandomGold = getEventCost(eEvent, pTriggeredData->m_eOtherPlayer, true);
 		if (iGold > 0)
-			iGold += GC.getGame().getSorenRandNum(iRandomGold - iGold + 1, "Event random gold");
+			iGold += GC.getGame().getSorenRandNum((int)std::min<int64_t>(iRandomGold - iGold + 1, MAX_INT), "Event random gold");
 		else if (iGold < 0)
-			iGold -= GC.getGame().getSorenRandNum(abs(iRandomGold - iGold - 1), "Event random gold");
+			iGold -= GC.getGame().getSorenRandNum(abs((int)std::min<int64_t>(iRandomGold - iGold - 1, MAX_INT)), "Event random gold");
 
 		if (iGold != 0)
 		{
@@ -21643,7 +21640,7 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 
 			if (eBestTech != NO_TECH)
 			{
-				const int iBeakers  = GET_TEAM(getTeam()).changeResearchProgressPercent(eBestTech, kEvent.getTechPercent(), getID());
+				const uint64_t iBeakers = GET_TEAM(getTeam()).changeResearchProgressPercent(eBestTech, kEvent.getTechPercent(), getID());
 
 				if (iBeakers > 0)
 				{
@@ -22416,11 +22413,11 @@ TechTypes CvPlayer::getBestEventTech(EventTypes eEvent, PlayerTypes eOtherPlayer
 	return eBestTech;
 }
 
-int CvPlayer::getEventCost(EventTypes eEvent, PlayerTypes eOtherPlayer, bool bRandom) const
+int64_t CvPlayer::getEventCost(EventTypes eEvent, PlayerTypes eOtherPlayer, bool bRandom) const
 {
 	const CvEventInfo& kEvent = GC.getEventInfo(eEvent);
 
-	int iGold = kEvent.getGold();
+	int64_t iGold = kEvent.getGold();
 	if (bRandom)
 	{
 		iGold += kEvent.getRandomGold();
@@ -24969,11 +24966,11 @@ bool CvPlayer::getItemTradeString(PlayerTypes eOtherPlayer, bool bOffer, bool bS
 			CvCity* pCity = NULL;
 			if (bOffer)
 			{
-				pCity = GET_PLAYER(eOtherPlayer).getCity(zTradeData.m_iData);
+				pCity = GET_PLAYER(eOtherPlayer).getCity((int)zTradeData.m_iData);
 			}
 			else
 			{
-				pCity = getCity(zTradeData.m_iData);
+				pCity = getCity((int)zTradeData.m_iData);
 			}
 			if (NULL != pCity)
 			{
@@ -25052,11 +25049,11 @@ bool CvPlayer::getItemTradeString(PlayerTypes eOtherPlayer, bool bOffer, bool bS
 			CvUnit* pUnit = NULL;
 			if (bOffer)
 			{
-				pUnit = GET_PLAYER(eOtherPlayer).getUnit(zTradeData.m_iData);
+				pUnit = GET_PLAYER(eOtherPlayer).getUnit((int)zTradeData.m_iData);
 			}
 			else
 			{
-				pUnit = getUnit(zTradeData.m_iData);
+				pUnit = getUnit((int)zTradeData.m_iData);
 			}
 			if (pUnit != NULL)
 			{
@@ -25071,11 +25068,11 @@ bool CvPlayer::getItemTradeString(PlayerTypes eOtherPlayer, bool bOffer, bool bS
 			CvUnit* pUnit = NULL;
 			if (bOffer)
 			{
-				pUnit = GET_PLAYER(eOtherPlayer).getUnit(zTradeData.m_iData);
+				pUnit = GET_PLAYER(eOtherPlayer).getUnit((int)zTradeData.m_iData);
 			}
 			else
 			{
-				pUnit = getUnit(zTradeData.m_iData);
+				pUnit = getUnit((int)zTradeData.m_iData);
 			}
 			if (pUnit != NULL)
 			{
@@ -26791,12 +26788,12 @@ void CvPlayer::changeTerrainYieldChange(TerrainTypes eIndex1, YieldTypes eIndex2
 	}
 }
 
-int CvPlayer::doMultipleResearch(int iOverflow)
+uint64_t CvPlayer::doMultipleResearch(int64_t iOverflow)
 {
 	PROFILE_EXTRA_FUNC();
 	TechTypes eCurrentTech = getCurrentResearch();
 
-	FAssertMsg(eCurrentTech < GC.getNumTechInfos(), "eCurrentTech is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(NO_TECH, GC.getNumTechInfos(), eCurrentTech);
 
 	if (eCurrentTech == NO_TECH || GET_TEAM(getTeam()).isHasTech(eCurrentTech))
 	{
@@ -26812,7 +26809,7 @@ int CvPlayer::doMultipleResearch(int iOverflow)
 	}
 
 	while (eCurrentTech != NO_TECH
-	&& 100 * (GET_TEAM(getTeam()).getResearchCost(eCurrentTech) - GET_TEAM(getTeam()).getResearchProgress(eCurrentTech)) / calculateResearchModifier(eCurrentTech) <= iOverflow)
+	&& static_cast<int64_t>(100 * (GET_TEAM(getTeam()).getResearchCost(eCurrentTech) - GET_TEAM(getTeam()).getResearchProgress(eCurrentTech)) / calculateResearchModifier(eCurrentTech)) <= iOverflow)
 	{
 		//The Future Tech can cause strange infinite loops
 		if (GC.getTechInfo(eCurrentTech).isRepeat()) break;
@@ -26830,7 +26827,7 @@ int CvPlayer::doMultipleResearch(int iOverflow)
 		}
 		eCurrentTech = getCurrentResearch();
 	}
-	return std::max(0, iOverflow);
+	return std::max<uint64_t>(0, iOverflow);
 }
 
 int CvPlayer::getCivilizationHealth() const

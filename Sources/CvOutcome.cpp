@@ -1333,7 +1333,7 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 	return true;
 }
 
-int CvOutcome::AI_getValueInPlot(const CvUnit &kUnit, const CvPlot &kPlot, bool bForTrade) const
+int64_t CvOutcome::AI_getValueInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool bForTrade) const
 {
 	PROFILE_EXTRA_FUNC();
 	if (!isPossibleInPlot(kUnit, kPlot, bForTrade))
@@ -1341,7 +1341,7 @@ int CvOutcome::AI_getValueInPlot(const CvUnit &kUnit, const CvPlot &kPlot, bool 
 		return 0;
 	}
 
-	int iValue = 0;
+	int64_t iValue = 0;
 
 	CvPlayerAI& kPlayer = GET_PLAYER(kUnit.getOwner());
 	const bool bToCoastalCity = GC.getOutcomeInfo(getType()).getToCoastalCity();
@@ -1354,7 +1354,6 @@ int CvOutcome::AI_getValueInPlot(const CvUnit &kUnit, const CvPlot &kPlot, bool 
 
 	if ( m_eEventTrigger != NO_EVENTTRIGGER )
 	{
-		int iTempValue;
 		EventTriggeredData* pTriggerData;
 
 		const CvEventTriggerInfo& kTriggerInfo = GC.getEventTriggerInfo(m_eEventTrigger);
@@ -1367,6 +1366,7 @@ int CvOutcome::AI_getValueInPlot(const CvUnit &kUnit, const CvPlot &kPlot, bool 
 			pTriggerData = kPlayer.initTriggeredData(m_eEventTrigger, false, -1, kPlot.getX(), kPlot.getY());
 		}
 
+		int64_t iTempValue;
 		if ( NO_EVENT != kPlayer.AI_chooseEvent(pTriggerData->getID(), &iTempValue) )
 		{
 			iValue += iTempValue;
