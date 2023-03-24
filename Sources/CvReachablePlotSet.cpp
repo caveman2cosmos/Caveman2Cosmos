@@ -18,6 +18,7 @@ CvReachablePlotSet::const_iterator::const_iterator(const CvReachablePlotSet* par
 
 CvReachablePlotSet::const_iterator& CvReachablePlotSet::const_iterator::operator++()
 {
+	PROFILE_EXTRA_FUNC();
 	do
 	{
 		++m_itr;

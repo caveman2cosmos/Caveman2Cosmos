@@ -34383,6 +34383,7 @@ int CvUnit::sizeRank() const
 // TBSPLIT
 bool CvUnit::canMerge(bool bAutocheck) const
 {
+	PROFILE_EXTRA_FUNC();
 	FAssertMsg(plot(), "canMerge expects unit plot to be valid");
 
 

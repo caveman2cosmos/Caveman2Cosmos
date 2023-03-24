@@ -423,6 +423,7 @@ void CvProperties::copyNonDefaults(const CvProperties* pProp)
 
 bool CvProperties::operator<(const CvProperties& prop) const
 {
+	PROFILE_EXTRA_FUNC();
 	const int num = prop.getNumProperties();
 	for (int index = 0; index < num; index++)
 	{
@@ -434,6 +435,7 @@ bool CvProperties::operator<(const CvProperties& prop) const
 
 bool CvProperties::operator<=(const CvProperties& prop) const
 {
+	PROFILE_EXTRA_FUNC();
 	const int num = prop.getNumProperties();
 	for (int index = 0; index < num; index++)
 	{
@@ -445,6 +447,7 @@ bool CvProperties::operator<=(const CvProperties& prop) const
 
 bool CvProperties::operator>(const CvProperties& prop) const
 {
+	PROFILE_EXTRA_FUNC();
 	const int num = prop.getNumProperties();
 	for (int index = 0; index < num; index++)
 	{
@@ -456,6 +459,7 @@ bool CvProperties::operator>(const CvProperties& prop) const
 
 bool CvProperties::operator>=(const CvProperties& prop) const
 {
+	PROFILE_EXTRA_FUNC();
 	const int num = prop.getNumProperties();
 	for (int index = 0; index < num; index++)
 	{
@@ -467,6 +471,7 @@ bool CvProperties::operator>=(const CvProperties& prop) const
 
 bool CvProperties::operator==(const CvProperties& prop) const
 {
+	PROFILE_EXTRA_FUNC();
 	const int num = prop.getNumProperties();
 	for (int index = 0; index < num; index++)
 	{
@@ -478,6 +483,7 @@ bool CvProperties::operator==(const CvProperties& prop) const
 
 bool CvProperties::operator!=(const CvProperties& prop) const
 {
+	PROFILE_EXTRA_FUNC();
 	const int num = prop.getNumProperties();
 	for (int index = 0; index < num; index++)
 	{

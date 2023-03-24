@@ -8,7 +8,7 @@
 # The script can be run from Visual Studio: Debug > Execute File in Python Interactive.
 #
 # Requirements:
-# * XiTools CppCrawler 0.1-alpha1 ( https://github.com/klara-zielinska/xitools.py.cppcrawler )
+# * XiTools CppCrawler 0.1-alpha2 ( https://github.com/klara-zielinska/xitools.py.cppcrawler )
 # * run DevExtras\setup.ps1
 #
 ###
@@ -220,10 +220,8 @@ def qualifyBlock(src, begin, prot, ln):
         warning(f"Pofile macros that cannot be qualified in: {prot} (SKIPPING)", src, ln)
         return False
 
-    methname = Syntax.extractMethProtId(prot)[0][-1]
-    if (   (match2 := src.findUnscoped(r"(?:\b(\w+)\s*->\s*)?"f"\b{methname}"r"\s*\(", bodyBegin, bodyEnd)) and
-            match2.group(1) == "this"):
-
+    methname = regex.escape(Syntax.extractMethProtId(prot)[0][-1])
+    if src.findUnscoped(r"(?:this\s*->\s*)?"f"\b{methname}"r"\s*\(", bodyBegin, bodyEnd):
         unprofiledMaybeRec.setdefault(src, []).append((ln, prot, code, begin))
         warning(f"Possibly recursive unprofiled method: {prot} (SKIPPING)", src, ln)
         return False
@@ -273,24 +271,28 @@ def qualify():
             
             for (match1, scopeTag) in src.findAll(methFinderPat, skipBlocks=True, scopeTag=True):
                 ln = match1.startLoc()[0]
-                match Syntax.parseMethPrototype(src.intCode(), match1.intStart()):
-                    case (prot, _, pos):
-                        pos = src.orgPos(pos)
-                        match scopeTag:
-                            case (_, name): prot = f"{name}::{prot}" # in this case the scope is a class
-                        match2 = src.matchUnscoped(methProtSuffixPat, pos)
-                        if not match2:
-                            unparsable1.setdefault(src, []).append((ln, prot))
-                            continue
-                        if match2.group("block"):
-                            if prot in excludedProts:
-                                warning(f"Prototype excluded: {prot}", src, ln)
-                                skippedDefs.setdefault(src, []).append((ln, prot))
+                try:
+                    match Syntax.parseMethProt(src.intCode(), match1.intStart(), prefixCheck='i'):
+                        case (prot, _, pos):
+                            pos = src.orgPos(pos)
+                            match scopeTag:
+                                case (_, name): prot = f"{name}::{prot}" # in this case the scope is a class
+                            match2 = src.matchUnscoped(methProtSuffixPat, pos)
+                            if not match2:
+                                unparsable1.setdefault(src, []).append((ln, prot))
                                 continue
-                            methBlockBegins.append((match2.start("block"), prot, ln))
+                            if match2.group("block"):
+                                if prot in excludedProts:
+                                    warning(f"Prototype excluded: {prot}", src, ln)
+                                    skippedDefs.setdefault(src, []).append((ln, prot))
+                                    continue
+                                methBlockBegins.append((match2.start("block"), prot, ln))
 
-                    case None:
-                        unparsable0.setdefault(src, []).append((ln, match1.group(0)))
+                        case None:
+                            unparsable0.setdefault(src, []).append((ln, match1.group(0)))
+                except ValueError as e:
+                    warning(f"Method prototype: {e} (SKIPPING)", src, ln)
+                    unparsable0.setdefault(src, []).append((ln, match1.group(0)))
 
             src.resetScopes()
                 

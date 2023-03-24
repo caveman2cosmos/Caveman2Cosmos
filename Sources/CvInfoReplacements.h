@@ -202,6 +202,7 @@ std::vector<std::pair<uint,CvString> > CvInfoReplacements<T>::s_IDmap;
 template <class T>
 uint CvInfoReplacements<T>::getReplacementIDForString(const char* szType)
 {
+	PROFILE_EXTRA_FUNC();
 	for (std::vector<std::pair<uint,CvString> >::iterator it = s_IDmap.begin(); it != s_IDmap.end(); ++it)
 	{
 		if (it->second.CompareNoCase(szType) == 0)

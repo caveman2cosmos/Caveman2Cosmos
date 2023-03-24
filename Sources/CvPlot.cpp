@@ -4390,6 +4390,7 @@ void CvPlot::invalidateIsTeamBorderCache() const
 //Alberts2: added eplayer parameter to only return the city if the owner == eplayer
 CvCity* CvPlot::getAdjacentCity(PlayerTypes ePlayer) const
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(const CvPlot* pLoopPlot, rect(1, 1))
 	{
 		CvCity* cityX = pLoopPlot->getPlotCity();

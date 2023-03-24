@@ -35403,6 +35403,7 @@ void CvGameTextMgr::buildCanRebaseAnywhereString(CvWStringBuffer &szBuffer, Tech
 */
 void CvGameTextMgr::getDefenseHelp(CvWStringBuffer &szBuffer, CvCity& city)
 {
+	PROFILE_EXTRA_FUNC();
 	FAssertMsg(NO_PLAYER != city.getOwner(), "City must have an owner");
 
 	CvWString szTempBuffer;

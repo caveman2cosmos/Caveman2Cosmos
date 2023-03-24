@@ -280,6 +280,7 @@ void CvMapGenerator::addRivers()
 //
 void CvMapGenerator::doRiver(CvPlot *pStartPlot, CardinalDirectionTypes eLastCardinalDirection, CardinalDirectionTypes eOriginalCardinalDirection, int iThisRiverID)
 {
+	PROFILE_EXTRA_FUNC();
 	if (iThisRiverID == -1)
 	{
 		iThisRiverID = GC.getMap().getNextRiverID();
@@ -427,6 +428,7 @@ void CvMapGenerator::doRiver(CvPlot *pStartPlot, CardinalDirectionTypes eLastCar
 //
 bool CvMapGenerator::addRiver(CvPlot* pFreshWaterPlot)
 {
+	PROFILE_EXTRA_FUNC();
 	FAssertMsg(pFreshWaterPlot != NULL, "NULL plot parameter");
 
 	// cannot have a river flow next to water
