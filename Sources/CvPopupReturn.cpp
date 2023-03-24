@@ -57,6 +57,7 @@ PopupReturn::PopupReturn(const PopupReturn &popupReturn)
 // Assignment operator
 PopupReturn &PopupReturn::operator=(const PopupReturn &source)
 {
+	PROFILE_EXTRA_FUNC();
 	int iI;
 
 	for (iI = 0; iI < source.getRadioButtonSize(); iI++)

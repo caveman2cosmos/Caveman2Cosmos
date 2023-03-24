@@ -22,6 +22,7 @@ CvPopupInfo::~CvPopupInfo()
 
 const CvPopupInfo& CvPopupInfo::operator=(const CvPopupInfo& other)
 {
+	PROFILE_EXTRA_FUNC();
 	setButtonPopupType(other.getButtonPopupType());
 	setData1(other.getData1());
 	setData2(other.getData2());

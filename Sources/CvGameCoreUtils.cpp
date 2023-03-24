@@ -780,6 +780,7 @@ int getCombatOdds(const CvUnit* pAttacker, const CvUnit* pDefender)
 //n_A = hits taken by attacker, n_D = hits taken by defender.
 float getCombatOddsSpecific(const CvUnit* pAttacker, const CvUnit* pDefender, int n_A, int n_D)
 {
+	PROFILE_EXTRA_FUNC();
 	int iAttackerStrength;
 	int iAttackerFirepower;
 	int iDefenderStrength;

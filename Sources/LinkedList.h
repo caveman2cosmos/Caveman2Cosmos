@@ -117,6 +117,7 @@ inline CLinkList<tVARTYPE>::~CLinkList()
 template <class tVARTYPE>
 inline void CLinkList<tVARTYPE>::clear()
 {
+	PROFILE_EXTRA_FUNC();
 	CLLNode<tVARTYPE>* pCurrNode;
 	CLLNode<tVARTYPE>* pNextNode;
 
@@ -333,6 +334,7 @@ inline CLLNode<tVARTYPE>* CLinkList<tVARTYPE>::prev(CLLNode<tVARTYPE>* pNode) co
 template <class tVARTYPE>
 inline CLLNode<tVARTYPE>* CLinkList<tVARTYPE>::nodeNum(int iNum) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 	CLLNode<tVARTYPE>* pNode = m_pHead;
 
@@ -356,6 +358,7 @@ inline CLLNode<tVARTYPE>* CLinkList<tVARTYPE>::nodeNum(int iNum) const
 template < class T >
 inline void CLinkList< T >::Read( FDataStreamBase* pStream )
 {
+	PROFILE_EXTRA_FUNC();
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
@@ -383,6 +386,7 @@ inline void CLinkList< T >::Read( FDataStreamBase* pStream )
 template < class T >
 inline void CLinkList< T >::Write( FDataStreamBase* pStream ) const
 {
+	PROFILE_EXTRA_FUNC();
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
@@ -407,6 +411,7 @@ inline void CLinkList< T >::Write( FDataStreamBase* pStream ) const
 template < class T >
 inline void CLinkList< T >::ReadNonWrapper( FDataStreamBase* pStream )
 {
+	PROFILE_EXTRA_FUNC();
 	int iLength;
 	pStream->Read( &iLength );
 	clear();
@@ -426,6 +431,7 @@ inline void CLinkList< T >::ReadNonWrapper( FDataStreamBase* pStream )
 template < class T >
 inline void CLinkList< T >::WriteNonWrapper( FDataStreamBase* pStream ) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iLength = getLength();
 	pStream->Write( iLength );
 	CLLNode< T >* pNode = head();
@@ -442,6 +448,7 @@ inline void CLinkList< T >::WriteNonWrapper( FDataStreamBase* pStream ) const
 template < class T >
 inline void CLinkList< T >::ReadNonWrapperSubset( FDataStreamBase* pStream)
 {
+	PROFILE_EXTRA_FUNC();
 	int iLength = getLength();
 	int index;
 	pStream->Read( &index );
@@ -464,6 +471,7 @@ inline void CLinkList< T >::ReadNonWrapperSubset( FDataStreamBase* pStream)
 template < class T >
 inline void CLinkList< T >::WriteNonWrapperSubset( FDataStreamBase* pStream, int index, int iNum ) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iLength = getLength();
 
 	// If iNum is too large, limit it to the length of the list
