@@ -48,7 +48,7 @@
 	-->
 	<Define>
 		<DefineName>MAX_PAGING_FRAME_TIME_MS</DefineName>
-		<iDefineIntVal>200</iDefineIntVal>
+		<iDefineIntVal>100</iDefineIntVal>
 	</Define>
 	<!-- Distance in tiles at which to page in different components -->
 	<Define>

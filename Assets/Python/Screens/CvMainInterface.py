@@ -2148,7 +2148,7 @@ class CvMainInterface:
 					iTechX = team.getAdjacentResearch(i)
 					# Toffer - canResearch can fail as adjacent research is cached even...
 					#	if special requirements like building requirements are not met.
-					if player.canResearch(iTechX, True):
+					if player.canResearch(iTechX, True, True):
 						szName = "WID|TECH|Selection" + str(iTechX)
 						if iTechX in aMap:
 							if not bCanFoundReligion or GAME.countKnownTechNumTeams(iTechX):

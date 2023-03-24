@@ -1972,7 +1972,7 @@ def canApplyClassicLiteratureDone2(argsList):
 	team = GC.getTeam(player.getTeam())
 	for i in xrange(team.getNumAdjacentResearch()):
 		iTechX = team.getAdjacentResearch(i)
-		if GC.getTechInfo(iTechX).getEra() == iEraAncient and player.canResearch(iTechX, True):
+		if GC.getTechInfo(iTechX).getEra() == iEraAncient and player.canResearch(iTechX, True, True):
 			return True
 	return False
 
@@ -1986,7 +1986,7 @@ def applyClassicLiteratureDone2(argsList):
 	team = GC.getTeam(player.getTeam())
 	for i in xrange(team.getNumAdjacentResearch()):
 		iTechX = team.getAdjacentResearch(i)
-		if GC.getTechInfo(iTechX).getEra() == iEraAncient and player.canResearch(iTechX, True):
+		if GC.getTechInfo(iTechX).getEra() == iEraAncient and player.canResearch(iTechX, True, True):
 			listTechs.append(iTechX)
 
 	if listTechs:
