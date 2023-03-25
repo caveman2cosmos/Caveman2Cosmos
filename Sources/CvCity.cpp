@@ -12521,16 +12521,19 @@ void CvCity::updateCorporation()
 void CvCity::updateCorporationBonus()
 {
 	PROFILE_EXTRA_FUNC();
-	std::vector<int> aiExtraCorpProducedBonuses;
-	std::vector<int> aiLastCorpProducedBonuses;
-	std::vector<bool> abHadBonuses;
 
-	for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
+	const int iNumBonuses = GC.getNumBonusInfos();
+
+	bool* abHadBonus = new bool[iNumBonuses];
+	int* aiLastCorpProducedBonus = new int[iNumBonuses];
+	int* aiExtraCorpProducedBonus = new int[iNumBonuses];
+
+	for (int iI = 0; iI < iNumBonuses; ++iI)
 	{
-		abHadBonuses.push_back(hasBonus((BonusTypes)iI));
 		m_paiNumCorpProducedBonuses[iI] = 0;
-		aiLastCorpProducedBonuses.push_back(getNumBonuses((BonusTypes)iI));
-		aiExtraCorpProducedBonuses.push_back(0);
+		abHadBonus[iI] = hasBonus((BonusTypes)iI);
+		aiLastCorpProducedBonus[iI] = getNumBonuses((BonusTypes)iI);
+		aiExtraCorpProducedBonus[iI] = 0;
 	}
 	for (int iIter = 0; iIter < GC.getNumCorporationInfos(); ++iIter)
 	{
@@ -12547,47 +12550,51 @@ void CvCity::updateCorporationBonus()
 
 				foreach_(const BonusTypes eBonusConsumed, GC.getCorporationInfo((CorporationTypes)iCorp).getPrereqBonuses())
 				{
-					bConsumes = true;
-					aiExtraCorpProducedBonuses[iBonusProduced] += aiLastCorpProducedBonuses[eBonusConsumed];
+					if (eBonusConsumed != iBonusProduced) // ignore circular xml definiton error.
+					{
+						bConsumes = true;
+						aiExtraCorpProducedBonus[iBonusProduced] += aiLastCorpProducedBonus[eBonusConsumed];
+					}
 				}
-				if (iIter == 0 && !bConsumes)
+				if (iIter == 0 && !bConsumes) // Only handle this conditionless production once.
 				{
-					aiExtraCorpProducedBonuses[iBonusProduced] += 1;
+					aiExtraCorpProducedBonus[iBonusProduced] += 1;
 				}
 			}
 		}
 
 		bool bChanged = false;
-
-		for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
+		for (int iI = 0; iI < iNumBonuses; ++iI)
 		{
-			if (aiExtraCorpProducedBonuses[iI] != 0)
+			if (aiExtraCorpProducedBonus[iI] != 0)
 			{
-				m_paiNumCorpProducedBonuses[iI] += aiExtraCorpProducedBonuses[iI];
-
-				bChanged = true;
+				m_paiNumCorpProducedBonuses[iI] += aiExtraCorpProducedBonus[iI];
+				bChanged = true; // The produced bonus might be consumed by another corp to produce another bonus,
+				//	which means we need to loop iIter to check for and handle that case.
 			}
-			aiLastCorpProducedBonuses[iI] = aiExtraCorpProducedBonuses[iI];
-			aiExtraCorpProducedBonuses[iI] = 0;
+			aiLastCorpProducedBonus[iI] = aiExtraCorpProducedBonus[iI];
+			aiExtraCorpProducedBonus[iI] = 0;
 		}
-
 		if (!bChanged)
 		{
 			break;
 		}
 	}
 
-	for (int iI = GC.getNumBonusInfos() - 1; iI > -1; iI--)
+	for (int iI = 0; iI < iNumBonuses; ++iI)
 	{
-		if (abHadBonuses[iI] != hasBonus((BonusTypes)iI))
+		if (abHadBonus[iI] != hasBonus((BonusTypes)iI))
 		{
-			if (abHadBonuses[iI])
+			if (abHadBonus[iI])
 			{
 				processBonus((BonusTypes)iI, -1);
 			}
 			else processBonus((BonusTypes)iI, 1);
 		}
 	}
+	SAFE_DELETE_ARRAY(abHadBonus);
+	SAFE_DELETE_ARRAY(aiLastCorpProducedBonus);
+	SAFE_DELETE_ARRAY(aiExtraCorpProducedBonus);
 }
 
 //TB NOTE: getCommerceRateModifier and changeCommerceRateModifier now only apply to events.  I'd rename them but it might get more confusing that way.
