@@ -23430,7 +23430,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 					szTempBuffer.Format(L" - %d/%d%c", pCity->getProgressOnBuilding(eBuilding), pCity->getProductionNeeded(eBuilding), GC.getYieldInfo(YIELD_PRODUCTION).getChar());
 					szBuffer.append(szTempBuffer);
 
-					if (pCity->getBuildingProductionTime(eBuilding) > 0)
+					if (pCity->getDelayOnBuilding(eBuilding) > 0)
 					{
 						szBuffer.append(NEWLINE);
 						const int iTurnsLeft = pCity->getBuildingProductionDecayTurns(eBuilding);

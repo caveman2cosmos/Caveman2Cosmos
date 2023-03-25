@@ -82,7 +82,7 @@ void CyCityPythonInterface2(python::class_<CyCity>& x)
 		.def("hasBonus", &CyCity::hasBonus, "bool - (BonusID) - is BonusID connected to the city?")
 		.def("getProgressOnBuilding", &CyCity::getProgressOnBuilding, "int (BuildingID) - current production towards BuildingID")
 		.def("setProgressOnBuilding", &CyCity::setProgressOnBuilding, "void (BuildingID, iNewValue) - set progress towards BuildingID as iNewValue")
-		.def("getBuildingProductionTime", &CyCity::getBuildingProductionTime, "int (int eIndex)")
+		.def("getDelayOnBuilding", &CyCity::getDelayOnBuilding, "int (int eIndex)")
 
 		.def("getGreatPeopleUnitProgress", &CyCity::getGreatPeopleUnitProgress, "int (int /*UnitTypes*/ iIndex)")
 		.def("setGreatPeopleUnitProgress", &CyCity::setGreatPeopleUnitProgress, "int (int /*UnitTypes*/ iIndex, int iNewValue)")

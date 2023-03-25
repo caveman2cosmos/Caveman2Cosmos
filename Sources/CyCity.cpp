@@ -1354,9 +1354,9 @@ void CyCity::setProgressOnBuilding(int /*BuildingTypes*/ iIndex, int iNewValue)
 	m_pCity->setProgressOnBuilding((BuildingTypes) iIndex, std::max(0, iNewValue));
 }
 
-int CyCity::getBuildingProductionTime(int /*BuildingTypes*/ eIndex) const
+int CyCity::getDelayOnBuilding(int /*BuildingTypes*/ eIndex) const
 {
-	return m_pCity->getBuildingProductionTime((BuildingTypes)eIndex);
+	return m_pCity->getDelayOnBuilding((BuildingTypes)eIndex);
 }
 
 bool CyCity::isBuildingProductionDecay(int /*BuildingTypes*/ eIndex) const

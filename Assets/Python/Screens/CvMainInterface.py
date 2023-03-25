@@ -3197,10 +3197,11 @@ class CvMainInterface:
 				szTxt2 = str(CyCity.getUnitProductionTurnsLeft(iType, iNode))
 				if CyCity.getProgressOnUnit(iType) > 0:
 
-					if CyCity.isUnitProductionDecay(iType):
-						szTxt1 = "<color=255,76,76,255><b>!! </b></color>"
-					elif CyCity.getUnitProductionTime(iType) > 0:
-						szTxt1 = "<color=255,255,0,255><b>! </b></color>"
+					if y > 0:
+						if CyCity.isUnitProductionDecay(iType):
+							szTxt1 = "<color=255,76,76,255><b>!! </b></color>"
+						elif CyCity.getUnitProductionTime(iType) > 0:
+							szTxt1 = "<color=255,255,0,255><b>! </b></color>"
 
 					szTxt2 = "<color=0,255,255,255>" + szTxt2 + "</color>"
 
@@ -3216,10 +3217,11 @@ class CvMainInterface:
 
 				if CyCity.getProgressOnBuilding(iType) > 0:
 
-					if CyCity.isBuildingProductionDecay(iType):
-						szTxt1 = "<color=255,76,76,255><b>!! </b></color>"
-					elif CyCity.getBuildingProductionTime(iType) > 0:
-						szTxt1 = "<color=255,255,0,255><b>! </b></color>"
+					if y > 0:
+						if CyCity.isBuildingProductionDecay(iType):
+							szTxt1 = "<color=255,76,76,255><b>!! </b></color>"
+						elif CyCity.getDelayOnBuilding(iType) > 0:
+							szTxt1 = "<color=255,255,0,255><b>! </b></color>"
 
 					szTxt2 = "<color=0,255,255,255>"
 

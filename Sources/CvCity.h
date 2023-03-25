@@ -1052,9 +1052,9 @@ public:
 	void setProgressOnBuilding(const BuildingTypes eType, int iNewValue);
 	void changeProgressOnBuilding(const BuildingTypes eType, const int iChange);
 
-	int getBuildingProductionTime(BuildingTypes eIndex) const;
-	void setBuildingProductionTime(BuildingTypes eIndex, int iNewValue);
-	void changeBuildingProductionTime(BuildingTypes eIndex, int iChange);
+	int getDelayOnBuilding(const BuildingTypes eType) const;
+	void endDelayOnBuilding(const BuildingTypes eType);
+	void tickDelayOnBuilding(const BuildingTypes eType, const bool bIncrement = true);
 
 	bool isBuildingProductionDecay(BuildingTypes eIndex) const;
 	int getBuildingProductionDecay(BuildingTypes eIndex) const;
@@ -1819,7 +1819,6 @@ protected:
 	int* m_paiFreeBonus;
 	int* m_paiNumBonuses;
 	int* m_paiProjectProduction;
-	int* m_paiBuildingProductionTime;
 	int* m_paiBuildingOriginalOwner;
 	int* m_paiBuildingOriginalTime;
 	int* m_paiUnitProduction;
@@ -1857,6 +1856,7 @@ protected:
 	std::vector< std::pair<TechTypes, int> > m_buildingHappinessFromTech;
 	std::vector< std::pair<TechTypes, int> > m_buildingHealthFromTech;
 	std::vector< std::pair<BuildingTypes, int> > m_progressOnBuilding;
+	std::vector< std::pair<BuildingTypes, int> > m_delayOnBuilding;
 	std::vector< std::pair<UnitTypes, int> > m_progressOnUnit;
 	std::vector< std::pair<BonusTypes, int> > m_corpBonusProduction;
 

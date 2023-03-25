@@ -81,7 +81,6 @@ CvCity::CvCity()
 	m_paiFreeBonus = NULL;
 	m_paiNumBonuses = NULL;
 	m_paiProjectProduction = NULL;
-	m_paiBuildingProductionTime = NULL;
 	m_paiBuildingOriginalOwner = NULL;
 	m_paiBuildingOriginalTime = NULL;
 	m_paiUnitProduction = NULL;
@@ -400,7 +399,6 @@ void CvCity::uninit()
 	SAFE_DELETE_ARRAY(m_paiFreeBonus);
 	SAFE_DELETE_ARRAY(m_paiNumBonuses);
 	SAFE_DELETE_ARRAY(m_paiProjectProduction);
-	SAFE_DELETE_ARRAY(m_paiBuildingProductionTime);
 	SAFE_DELETE_ARRAY(m_paiBuildingOriginalOwner);
 	SAFE_DELETE_ARRAY(m_paiBuildingOriginalTime);
 	SAFE_DELETE_ARRAY(m_paiUnitProduction);
@@ -722,6 +720,7 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	m_buildingHappinessFromTech.clear();
 	m_buildingHealthFromTech.clear();
 	m_progressOnBuilding.clear();
+	m_delayOnBuilding.clear();
 	m_progressOnUnit.clear();
 	m_corpBonusProduction.clear();
 
@@ -757,9 +756,8 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 		FAssertMsg(0 < GC.getNumBonusInfos(), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated in CvCity::reset");
 		m_paiFreeBonus = new int[GC.getNumBonusInfos()];
 		m_paiNumBonuses = new int[GC.getNumBonusInfos()];
-		//TB Combat Mods (Buildings) begin
 		m_ppaaiExtraBonusAidModifier = new int* [GC.getNumBonusInfos()];
-		//TB Combat Mods (Buildings) end
+
 		for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
 		{
 			m_ppaaiExtraBonusAidModifier[iI] = new int[GC.getNumPropertyInfos()];
@@ -784,7 +782,6 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 		}
 
 		FAssertMsg((0 < GC.getNumBuildingInfos()), "GC.getNumBuildingInfos() is not greater than zero but an array is being allocated in CvCity::reset");
-		m_paiBuildingProductionTime = new int[GC.getNumBuildingInfos()];
 		m_paiBuildingOriginalOwner = new int[GC.getNumBuildingInfos()];
 		m_paiBuildingOriginalTime = new int[GC.getNumBuildingInfos()];
 		m_paiNumRealBuilding = new int[GC.getNumBuildingInfos()];
@@ -792,7 +789,6 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 		m_paiBuildingCostPopulationCount = new int[GC.getNumBuildingInfos()];
 		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 		{
-			m_paiBuildingProductionTime[iI] = 0;
 			m_paiBuildingOriginalOwner[iI] = -1;
 			m_paiBuildingOriginalTime[iI] = MIN_INT;
 			m_paiNumRealBuilding[iI] = 0;
@@ -13363,7 +13359,7 @@ void CvCity::changeProgressOnBuilding(const BuildingTypes eType, const int iChan
 			if ((*it).second <= -iChange)
 			{
 				m_progressOnBuilding.erase(it);
-				setBuildingProductionTime(eType, 0);
+				endDelayOnBuilding(eType);
 			}
 			else
 			{
@@ -13376,58 +13372,98 @@ void CvCity::changeProgressOnBuilding(const BuildingTypes eType, const int iChan
 }
 
 
-int CvCity::getBuildingProductionTime(BuildingTypes eIndex)	const
+int CvCity::getDelayOnBuilding(const BuildingTypes eType)	const
 {
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex);
-	return m_paiBuildingProductionTime[eIndex];
+	PROFILE_EXTRA_FUNC();
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eType);
+
+	for (std::vector< std::pair<BuildingTypes, int> >::const_iterator it = m_delayOnBuilding.begin(); it != m_delayOnBuilding.end(); ++it)
+	{
+		if ((*it).first == eType)
+		{
+			return (*it).second;
+		}
+	}
+	return 0;
+}
+
+void CvCity::endDelayOnBuilding(const BuildingTypes eType)
+{
+	PROFILE_EXTRA_FUNC();
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eType);
+
+	for (std::vector< std::pair<BuildingTypes, int> >::iterator it = m_delayOnBuilding.begin(); it != m_delayOnBuilding.end(); ++it)
+	{
+		if ((*it).first == eType)
+		{
+			m_delayOnBuilding.erase(it);
+			return;
+		}
+	}
+}
+
+void CvCity::tickDelayOnBuilding(const BuildingTypes eType, const bool bIncrement)
+{
+	PROFILE_EXTRA_FUNC();
+	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eType);
+
+	for (std::vector< std::pair<BuildingTypes, int> >::iterator it = m_delayOnBuilding.begin(); it != m_delayOnBuilding.end(); ++it)
+	{
+		if ((*it).first == eType)
+		{
+			if (bIncrement)
+			{
+				(*it).second += 1;
+			}
+			else if ((*it).second == 1)
+			{
+				m_delayOnBuilding.erase(it);
+			}
+			else (*it).second -= 1;
+
+			return;
+		}
+	}
+	if (!bIncrement)
+	{
+		FErrorMsg("Trying to decrement past zero for a value where negatives makes no sense!");
+		return;
+	}
+	m_delayOnBuilding.push_back(std::make_pair(eType, 1));
 }
 
 
-void CvCity::setBuildingProductionTime(BuildingTypes eIndex, int iNewValue)
-{
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex);
-	m_paiBuildingProductionTime[eIndex] = iNewValue;
-	FASSERT_NOT_NEGATIVE(getBuildingProductionTime(eIndex));
-}
-
-
-void CvCity::changeBuildingProductionTime(BuildingTypes eIndex, int iChange)
-{
-	setBuildingProductionTime(eIndex, (getBuildingProductionTime(eIndex) + iChange));
-}
-
-
-// BUG - Production Decay - start
-/*
- * Returns true if the given building will decay this turn.
- */
+// Returns true if the given building will decay this turn.
 bool CvCity::isBuildingProductionDecay(BuildingTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex);
-	return isHuman() && getProductionBuilding() != eIndex && getProgressOnBuilding(eIndex) > 0
-		&& 100 * getBuildingProductionTime(eIndex) >= GC.getBUILDING_PRODUCTION_DECAY_TIME() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
+	return (
+		isHuman()
+		&& getProductionBuilding() != eIndex
+		&& getProgressOnBuilding(eIndex) > 0
+		&& (
+			100 * getDelayOnBuilding(eIndex)
+			>=
+			GC.getBUILDING_PRODUCTION_DECAY_TIME() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent()
+		)
+	);
 }
 
-/*
- * Returns the amount by which the given building will decay once it reaches the limit.
- * Ignores whether or not the building will actually decay this turn.
- */
+// Returns the amount by which the given building will decay once it reaches the limit.
+// Ignores whether or not the building will actually decay this turn.
 int CvCity::getBuildingProductionDecay(BuildingTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex);
 	const int iProduction = getProgressOnBuilding(eIndex);
-	return iProduction - ((iProduction * GC.getBUILDING_PRODUCTION_DECAY_PERCENT()) / 100);
+	return iProduction - iProduction * GC.getBUILDING_PRODUCTION_DECAY_PERCENT() / 100;
 }
 
-/*
- * Returns the number of turns left before the given building will decay.
- */
+// Returns the number of turns left before the given building will decay.
 int CvCity::getBuildingProductionDecayTurns(BuildingTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex);
-	return std::max(0, (GC.getBUILDING_PRODUCTION_DECAY_TIME() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() + 99) / 100 - getBuildingProductionTime(eIndex)) + 1;
+	return std::max(1, 1 + (GC.getBUILDING_PRODUCTION_DECAY_TIME() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() + 99) / 100 - getDelayOnBuilding(eIndex));
 }
-// BUG - Production Decay - end
 
 
 int CvCity::getProjectProduction(ProjectTypes eIndex) const
@@ -15686,7 +15722,6 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 					changeOverflowProduction(iOverflow);
 				}
 				changeProgressOnBuilding(eConstructBuilding, -iProgress);
-				setBuildingProductionTime(eConstructBuilding, 0);
 
 				m_iLostProductionModified = std::max(0, iRawOverflow - iMaxOverflow);
 				m_iGoldFromLostProduction = m_iLostProductionModified * GC.getMAXED_BUILDING_GOLD_PERCENT() / 100;
@@ -16361,10 +16396,10 @@ void CvCity::doDecay()
 
 			if (getProductionBuilding() != eTypeX)
 			{
-				changeBuildingProductionTime(eTypeX, 1);
+				tickDelayOnBuilding(eTypeX);
 
 				const int iGameSpeedPercent = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
-				if (100 * getBuildingProductionTime(eTypeX) > GC.getBUILDING_PRODUCTION_DECAY_TIME()* iGameSpeedPercent)
+				if (100 * getDelayOnBuilding(eTypeX) > GC.getBUILDING_PRODUCTION_DECAY_TIME()* iGameSpeedPercent)
 				{
 					decayBuilding.push_back(
 						std::make_pair(
@@ -16374,9 +16409,9 @@ void CvCity::doDecay()
 					);
 				}
 			}
-			else if (getBuildingProductionTime(eTypeX) > 0)
+			else if (getDelayOnBuilding(eTypeX) > 0)
 			{
-				changeBuildingProductionTime(eTypeX, -1);
+				tickDelayOnBuilding(eTypeX, false);
 			}
 		}
 		for (std::vector< std::pair<BuildingTypes, int> >::iterator it = decayBuilding.begin(); it != decayBuilding.end(); ++it)
@@ -16812,7 +16847,6 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiFreeBonus);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiNumBonuses);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_PROJECTS, GC.getNumProjectInfos(), m_paiProjectProduction);
-	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingProductionTime);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingOriginalOwner);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingOriginalTime);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiUnitProduction);
@@ -17222,6 +17256,19 @@ void CvCity::read(FDataStreamBase* pStream)
 				m_progressOnBuilding.push_back(std::make_pair(eBuilding, iValue));
 			}
 		}
+		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "DelayOnBuildingSize");
+		for (short i = 0; i < iSize; ++i)
+		{
+			int iValue = 0;
+			WRAPPER_READ_DECORATED(wrapper, "CvCity", &iType, "DelayOnBuildingType");
+			WRAPPER_READ_DECORATED(wrapper, "CvCity", &iValue, "DelayOnBuildingValue");
+			const BuildingTypes eBuilding = static_cast<BuildingTypes>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BUILDINGS, iType, true));
+
+			if (eBuilding != NO_BUILDING)
+			{
+				m_delayOnBuilding.push_back(std::make_pair(eBuilding, iValue));
+			}
+		}
 		// Units
 		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "UnitProgressSize");
 		for (short i = 0; i < iSize; ++i)
@@ -17484,7 +17531,6 @@ void CvCity::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiFreeBonus);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiNumBonuses);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_PROJECTS, GC.getNumProjectInfos(), m_paiProjectProduction);
-	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingProductionTime);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingOriginalOwner);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingOriginalTime);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiUnitProduction);
@@ -17734,6 +17780,12 @@ void CvCity::write(FDataStreamBase* pStream)
 		{
 			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", static_cast<short>((*it).first), "BuildingProgressType");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (*it).second, "BuildingProgressValue");
+		}
+		WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (short)m_delayOnBuilding.size(), "DelayOnBuildingSize");
+		for (std::vector< std::pair<BuildingTypes, int> >::iterator it = m_delayOnBuilding.begin(); it != m_delayOnBuilding.end(); ++it)
+		{
+			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", static_cast<short>((*it).first), "DelayOnBuildingType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (*it).second, "DelayOnBuildingValue");
 		}
 		// Units
 		WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (short)m_progressOnUnit.size(), "UnitProgressSize");
@@ -23959,15 +24011,7 @@ void CvCity::processTech(const TechTypes eTech, const int iChange)
 				m_iExtraBuildingHappinessFromTech += iBuildingHappinessFromTech * iChange;
 			}
 		}
-		{
-			const int iBuildingHealthFromTech = getBuildingHealthFromTech(eTech);
-
-			if (iBuildingHealthFromTech != 0)
-			{
-				FAssertMsg(false, CvString::format("processTech iChange=%d, oldValue=%d, newValue=%d, difference=%d", iChange, m_iExtraBuildingHealthFromTech, m_iExtraBuildingHealthFromTech + iBuildingHealthFromTech * iChange, iBuildingHealthFromTech * iChange).c_str());
-				m_iExtraBuildingHealthFromTech += iBuildingHealthFromTech * iChange;
-			}
-		}
+		m_iExtraBuildingHealthFromTech += getBuildingHealthFromTech(eTech) * iChange;
 	}
 }
 

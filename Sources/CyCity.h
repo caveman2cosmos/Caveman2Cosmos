@@ -350,7 +350,7 @@ public:
 
 	int getProgressOnBuilding(int /*BuildingTypes*/ iIndex) const;
 	void setProgressOnBuilding(int /*BuildingTypes*/ iIndex, int iNewValue);
-	int getBuildingProductionTime(int /*BuildingTypes*/ eIndex) const;
+	int getDelayOnBuilding(int /*BuildingTypes*/ eIndex) const;
 	bool isBuildingProductionDecay(int /*BuildingTypes*/ eIndex) const;
 	int getBuildingProductionDecayTurns(int /*BuildingTypes*/ eIndex) const;
 
