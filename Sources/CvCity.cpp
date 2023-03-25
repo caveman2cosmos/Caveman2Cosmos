@@ -12552,7 +12552,7 @@ void CvCity::updateCorporationBonus()
 				}
 				if (!bConsumes)
 				{
-					aiExtraCorpProducedBonuses[iBonusProduced] = 1;
+					aiExtraCorpProducedBonuses[iBonusProduced] += 1;
 				}
 			}
 		}
