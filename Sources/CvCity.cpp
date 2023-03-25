@@ -12550,7 +12550,7 @@ void CvCity::updateCorporationBonus()
 					bConsumes = true;
 					aiExtraCorpProducedBonuses[iBonusProduced] += aiLastCorpProducedBonuses[eBonusConsumed];
 				}
-				if (!bConsumes)
+				if (iIter == 0 && !bConsumes)
 				{
 					aiExtraCorpProducedBonuses[iBonusProduced] += 1;
 				}
