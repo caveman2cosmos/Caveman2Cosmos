@@ -80,7 +80,6 @@ CvCity::CvCity()
 
 	m_paiFreeBonus = NULL;
 	m_paiNumBonuses = NULL;
-	m_paiNumCorpProducedBonuses = NULL;
 	m_paiProjectProduction = NULL;
 	m_paiBuildingProductionTime = NULL;
 	m_paiBuildingOriginalOwner = NULL;
@@ -400,7 +399,6 @@ void CvCity::uninit()
 {
 	SAFE_DELETE_ARRAY(m_paiFreeBonus);
 	SAFE_DELETE_ARRAY(m_paiNumBonuses);
-	SAFE_DELETE_ARRAY(m_paiNumCorpProducedBonuses);
 	SAFE_DELETE_ARRAY(m_paiProjectProduction);
 	SAFE_DELETE_ARRAY(m_paiBuildingProductionTime);
 	SAFE_DELETE_ARRAY(m_paiBuildingOriginalOwner);
@@ -723,6 +721,9 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	m_plotYieldChanges.clear();
 	m_buildingHappinessFromTech.clear();
 	m_buildingHealthFromTech.clear();
+	m_progressOnBuilding.clear();
+	m_progressOnUnit.clear();
+	m_corpBonusProduction.clear();
 
 	m_szName.clear();
 	m_szScriptData = "";
@@ -756,7 +757,6 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 		FAssertMsg(0 < GC.getNumBonusInfos(), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated in CvCity::reset");
 		m_paiFreeBonus = new int[GC.getNumBonusInfos()];
 		m_paiNumBonuses = new int[GC.getNumBonusInfos()];
-		m_paiNumCorpProducedBonuses = new int[GC.getNumBonusInfos()];
 		//TB Combat Mods (Buildings) begin
 		m_ppaaiExtraBonusAidModifier = new int* [GC.getNumBonusInfos()];
 		//TB Combat Mods (Buildings) end
@@ -769,7 +769,6 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 			}
 			m_paiFreeBonus[iI] = 0;
 			m_paiNumBonuses[iI] = 0;
-			m_paiNumCorpProducedBonuses[iI] = 0;
 		}
 
 		m_paiProjectProduction = new int[GC.getNumProjectInfos()];
@@ -12522,19 +12521,19 @@ void CvCity::updateCorporationBonus()
 {
 	PROFILE_EXTRA_FUNC();
 
+	m_corpBonusProduction.clear();
 	const int iNumBonuses = GC.getNumBonusInfos();
-
 	bool* abHadBonus = new bool[iNumBonuses];
 	int* aiLastCorpProducedBonus = new int[iNumBonuses];
 	int* aiExtraCorpProducedBonus = new int[iNumBonuses];
 
 	for (int iI = 0; iI < iNumBonuses; ++iI)
 	{
-		m_paiNumCorpProducedBonuses[iI] = 0;
 		abHadBonus[iI] = hasBonus((BonusTypes)iI);
 		aiLastCorpProducedBonus[iI] = getNumBonuses((BonusTypes)iI);
 		aiExtraCorpProducedBonus[iI] = 0;
 	}
+
 	for (int iIter = 0; iIter < GC.getNumCorporationInfos(); ++iIter)
 	{
 		for (int iCorp = 0; iCorp < GC.getNumCorporationInfos(); ++iCorp)
@@ -12568,7 +12567,17 @@ void CvCity::updateCorporationBonus()
 		{
 			if (aiExtraCorpProducedBonus[iI] != 0)
 			{
-				m_paiNumCorpProducedBonuses[iI] += aiExtraCorpProducedBonus[iI];
+				bool bFirst = true;
+				for (std::vector< std::pair<BonusTypes, int> >::iterator it = m_corpBonusProduction.begin(); it != m_corpBonusProduction.end(); ++it)
+				{
+					if ((*it).first == iI)
+					{
+						(*it).second += aiExtraCorpProducedBonus[iI];
+						bFirst = false;
+					}
+				}
+				if (bFirst) m_corpBonusProduction.push_back(std::make_pair(static_cast<BonusTypes>(iI), aiExtraCorpProducedBonus[iI]));
+
 				bChanged = true; // The produced bonus might be consumed by another corp to produce another bonus,
 				//	which means we need to loop iIter to check for and handle that case.
 			}
@@ -13131,7 +13140,7 @@ int CvCity::getNumBonuses(BonusTypes eIndex) const
 	{
 		return 0;
 	}
-	return getNumBonusesFromBase(eIndex, m_paiNumBonuses[eIndex]) + m_paiNumCorpProducedBonuses[eIndex];
+	return getNumBonusesFromBase(eIndex, m_paiNumBonuses[eIndex]) + getCorpBonusProduction(eIndex);
 }
 
 
@@ -13218,10 +13227,24 @@ void CvCity::changeNumBonuses(BonusTypes eIndex, int iChange)
 	}
 }
 
-int CvCity::getNumCorpProducedBonuses(BonusTypes eIndex) const
+
+int CvCity::getCorpBonusProduction(const BonusTypes eBonus) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eIndex);
-	return m_paiNumCorpProducedBonuses[eIndex];
+	PROFILE_EXTRA_FUNC();
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eBonus)
+
+	for (std::vector< std::pair<BonusTypes, int> >::const_iterator it = m_corpBonusProduction.begin(); it != m_corpBonusProduction.end(); ++it)
+	{
+		if ((*it).first == eBonus)
+		{
+			return (*it).second;
+		}
+	}
+	return 0;
+}
+
+void CvCity::changeCorpBonusProduction(const BonusTypes eBonus, const int iChange)
+{
 }
 
 
@@ -16788,7 +16811,6 @@ void CvCity::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiFreeBonus);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiNumBonuses);
-	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiNumCorpProducedBonuses);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_PROJECTS, GC.getNumProjectInfos(), m_paiProjectProduction);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingProductionTime);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingOriginalOwner);
@@ -17221,6 +17243,20 @@ void CvCity::read(FDataStreamBase* pStream)
 			WRAPPER_READ_DECORATED(wrapper, "CvCity", &iUnitID, "WorkerUnitID");
 			m_workers.push_back(iUnitID);
 		}
+		// Bonuses
+		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "CorpBonusProductionSize");
+		for (short i = 0; i < iSize; ++i)
+		{
+			int iValue = 0;
+			WRAPPER_READ_DECORATED(wrapper, "CvCity", &iType, "CorpBonusProductionType");
+			WRAPPER_READ_DECORATED(wrapper, "CvCity", &iValue, "CorpBonusProductionValue");
+			const BonusTypes eBonus = static_cast<BonusTypes>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BONUSES, iType, true));
+
+			if (eBonus != NO_BONUS)
+			{
+				m_corpBonusProduction.push_back(std::make_pair(eBonus, iValue));
+			}
+		}
 	}
 	// Toffer - Read maps
 	{
@@ -17447,7 +17483,6 @@ void CvCity::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiFreeBonus);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiNumBonuses);
-	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiNumCorpProducedBonuses);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_PROJECTS, GC.getNumProjectInfos(), m_paiProjectProduction);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingProductionTime);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingOriginalOwner);
@@ -17711,6 +17746,13 @@ void CvCity::write(FDataStreamBase* pStream)
 		foreach_(const int iUnitID, m_workers)
 		{
 			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", iUnitID, "WorkerUnitID");
+		}
+		// Bonuses
+		WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (short)m_corpBonusProduction.size(), "CorpBonusProductionSize");
+		for (std::vector< std::pair<BonusTypes, int> >::iterator it = m_corpBonusProduction.begin(); it != m_corpBonusProduction.end(); ++it)
+		{
+			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", static_cast<short>((*it).first), "CorpBonusProductionType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (*it).second, "CorpBonusProductionValue");
 		}
 	}
 	// Toffer - Write Maps
@@ -21800,7 +21842,6 @@ void CvCity::clearModifierTotals()
 		}
 		m_paiFreeBonus[iI] = 0;
 		m_paiNumBonuses[iI] = 0;
-		m_paiNumCorpProducedBonuses[iI] = 0;
 	}
 
 	for (int iI = GC.getNumBuildingInfos() - 1; iI > -1; iI--)
@@ -21908,6 +21949,7 @@ void CvCity::clearModifierTotals()
 	m_bonusDefenseChanges.clear();
 	m_buildingHappinessFromTech.clear();
 	m_buildingHealthFromTech.clear();
+	m_corpBonusProduction.clear();
 
 	m_terrainYieldChanges.clear();
 	m_plotYieldChanges.clear();

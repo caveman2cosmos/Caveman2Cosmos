@@ -1042,7 +1042,8 @@ public:
 	bool hasBonus(BonusTypes eIndex) const;
 	void changeNumBonuses(BonusTypes eIndex, int iChange);
 
-	int getNumCorpProducedBonuses(BonusTypes eIndex) const;
+	int getCorpBonusProduction(const BonusTypes eBonus) const;
+	void changeCorpBonusProduction(const BonusTypes eBonus, const int iChange);
 	bool isCorporationBonus(BonusTypes eBonus) const;
 	bool isActiveCorporation(CorporationTypes eCorporation) const;
 
@@ -1817,7 +1818,6 @@ protected:
 
 	int* m_paiFreeBonus;
 	int* m_paiNumBonuses;
-	int* m_paiNumCorpProducedBonuses;
 	int* m_paiProjectProduction;
 	int* m_paiBuildingProductionTime;
 	int* m_paiBuildingOriginalOwner;
@@ -1858,6 +1858,7 @@ protected:
 	std::vector< std::pair<TechTypes, int> > m_buildingHealthFromTech;
 	std::vector< std::pair<BuildingTypes, int> > m_progressOnBuilding;
 	std::vector< std::pair<UnitTypes, int> > m_progressOnUnit;
+	std::vector< std::pair<BonusTypes, int> > m_corpBonusProduction;
 
 	std::vector<EventTypes> m_aEventsOccured;
 	std::vector<BuildingYieldChange> m_aBuildingYieldChange;
