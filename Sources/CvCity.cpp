@@ -12536,29 +12536,23 @@ void CvCity::updateCorporationBonus()
 	{
 		for (int iCorp = 0; iCorp < GC.getNumCorporationInfos(); ++iCorp)
 		{
-			int iBonusProduced = GC.getCorporationInfo((CorporationTypes)iCorp).getBonusProduced();
+			const int iBonusProduced = GC.getCorporationInfo((CorporationTypes)iCorp).getBonusProduced();
 
-			if (NO_BONUS != iBonusProduced)
+			if (-1 < iBonusProduced
+			&& !GET_TEAM(getTeam()).isBonusObsolete((BonusTypes)iBonusProduced)
+			&& GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBonusInfo((BonusTypes)iBonusProduced).getTechCityTrade())
+			&& isHasCorporation((CorporationTypes)iCorp) && GET_PLAYER(getOwner()).isActiveCorporation((CorporationTypes)iCorp))
 			{
-				if (!GET_TEAM(getTeam()).isBonusObsolete((BonusTypes)iBonusProduced))
-				{
-					if (GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getBonusInfo((BonusTypes)iBonusProduced).getTechCityTrade())))
-					{
-						if (isHasCorporation((CorporationTypes)iCorp) && GET_PLAYER(getOwner()).isActiveCorporation((CorporationTypes)iCorp))
-						{
-							bool bConsumes = false;
+				bool bConsumes = false;
 
-							foreach_(const BonusTypes eBonusConsumed, GC.getCorporationInfo((CorporationTypes)iCorp).getPrereqBonuses())
-							{
-								bConsumes = true;
-								aiExtraCorpProducedBonuses[iBonusProduced] += aiLastCorpProducedBonuses[eBonusConsumed];
-							}
-							if (!bConsumes && iBonusProduced != -1)
-							{
-								aiExtraCorpProducedBonuses[iBonusProduced] = 1;
-							}
-						}
-					}
+				foreach_(const BonusTypes eBonusConsumed, GC.getCorporationInfo((CorporationTypes)iCorp).getPrereqBonuses())
+				{
+					bConsumes = true;
+					aiExtraCorpProducedBonuses[iBonusProduced] += aiLastCorpProducedBonuses[eBonusConsumed];
+				}
+				if (!bConsumes)
+				{
+					aiExtraCorpProducedBonuses[iBonusProduced] = 1;
 				}
 			}
 		}
@@ -12573,7 +12567,6 @@ void CvCity::updateCorporationBonus()
 
 				bChanged = true;
 			}
-
 			aiLastCorpProducedBonuses[iI] = aiExtraCorpProducedBonuses[iI];
 			aiExtraCorpProducedBonuses[iI] = 0;
 		}
@@ -12582,22 +12575,17 @@ void CvCity::updateCorporationBonus()
 		{
 			break;
 		}
-
-		FAssertMsg(iIter < GC.getNumCorporationInfos() - 1, "Corporation cyclical resource dependency");
 	}
 
-	for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
+	for (int iI = GC.getNumBonusInfos() - 1; iI > -1; iI--)
 	{
 		if (abHadBonuses[iI] != hasBonus((BonusTypes)iI))
 		{
-			if (hasBonus((BonusTypes)iI))
-			{
-				processBonus((BonusTypes)iI, 1);
-			}
-			else
+			if (abHadBonuses[iI])
 			{
 				processBonus((BonusTypes)iI, -1);
 			}
+			else processBonus((BonusTypes)iI, 1);
 		}
 	}
 }
