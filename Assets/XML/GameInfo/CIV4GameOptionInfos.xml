@@ -18,6 +18,68 @@
 <!-- Match ordering of these options with CvEnums.h -->
 <Civ4GameOptionInfos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Schema\Caveman2Cosmos.xsd">
 	<GameOptionInfos>
+		<GameOptionInfo>
+			<!-- This one must always be the first option as the exe has hardcoded it as such -->
+			<Type>GAMEOPTION_ADVANCED_START</Type>
+			<Description>TXT_KEY_GAMEOPTION_ADVANCED_START</Description>
+			<Help>TXT_KEY_GAMEOPTION_ADVANCED_START_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<!-- Barbarian -->
+		<GameOptionInfo>
+			<Type>GAMEOPTION_BARBARIAN_NONE</Type>
+			<Description>TXT_KEY_GAMEOPTION_BARBARIAN_NONE</Description>
+			<Help>TXT_KEY_GAMEOPTION_BARBARIAN_NONE_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+			<EnforcesGameOptionOffTypes>
+				<GameOptionType>GAMEOPTION_BARBARIAN_WORLD</GameOptionType>
+			</EnforcesGameOptionOffTypes>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_BARBARIAN_ALWAYS_RAZE</Type>
+			<Description>TXT_KEY_GAMEOPTION_BARBARIAN_ALWAYS_RAZE</Description>
+			<Help>TXT_KEY_GAMEOPTION_BARBARIAN_ALWAYS_RAZE_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_BARBARIAN_CIV</Type>
+			<Description>TXT_KEY_GAMEOPTION_BARBARIAN_CIV</Description>
+			<Help>TXT_KEY_GAMEOPTION_BARBARIAN_CIV_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_BARBARIAN_WORLD</Type>
+			<Description>TXT_KEY_GAMEOPTION_BARBARIAN_WORLD</Description>
+			<Help>TXT_KEY_GAMEOPTION_BARBARIAN_WORLD_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_BARBARIAN_NEANDERTHAL_CITIES</Type>
+			<Description>TXT_KEY_GAMEOPTION_BARBARIAN_NEANDERTHAL_CITIES</Description>
+			<Help>TXT_KEY_GAMEOPTION_BARBARIAN_NEANDERTHAL_CITIES_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_BARBARIAN_RAGING</Type>
+			<Description>TXT_KEY_GAMEOPTION_BARBARIAN_RAGING</Description>
+			<Help>TXT_KEY_GAMEOPTION_BARBARIAN_RAGING_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<!-- This one must always be the eight option as the exe has hardcoded it as such -->
+			<Type>GAMEOPTION_LEAD_ANY_CIV</Type>
+			<Description>TXT_KEY_GAMEOPTION_LEAD_ANY_CIV</Description>
+			<Help>TXT_KEY_GAMEOPTION_LEAD_ANY_CIV_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
 		<!-- AI -->
 		<GameOptionInfo>
 			<Type>GAMEOPTION_AI_AGGRESSIVE</Type>
@@ -69,14 +131,6 @@
 			<Type>GAMEOPTION_LEADER_NO_NEGATIVE_TRAITS</Type>
 			<Description>TXT_KEY_GAMEOPTION_LEADER_NO_NEGATIVE_TRAITS</Description>
 			<Help>TXT_KEY_GAMEOPTION_LEADER_NO_NEGATIVE_TRAITS_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<!-- This one must always be the eight option as the exe has hardcoded it as such -->
-			<Type>GAMEOPTION_LEAD_ANY_CIV</Type>
-			<Description>TXT_KEY_GAMEOPTION_LEAD_ANY_CIV</Description>
-			<Help>TXT_KEY_GAMEOPTION_LEAD_ANY_CIV_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
@@ -420,52 +474,6 @@
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
-		<!-- Barbarian -->
-		<GameOptionInfo>
-			<Type>GAMEOPTION_BARBARIAN_NONE</Type>
-			<Description>TXT_KEY_GAMEOPTION_BARBARIAN_NONE</Description>
-			<Help>TXT_KEY_GAMEOPTION_BARBARIAN_NONE_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-			<EnforcesGameOptionOffTypes>
-				<GameOptionType>GAMEOPTION_BARBARIAN_WORLD</GameOptionType>
-			</EnforcesGameOptionOffTypes>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_BARBARIAN_ALWAYS_RAZE</Type>
-			<Description>TXT_KEY_GAMEOPTION_BARBARIAN_ALWAYS_RAZE</Description>
-			<Help>TXT_KEY_GAMEOPTION_BARBARIAN_ALWAYS_RAZE_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_BARBARIAN_CIV</Type>
-			<Description>TXT_KEY_GAMEOPTION_BARBARIAN_CIV</Description>
-			<Help>TXT_KEY_GAMEOPTION_BARBARIAN_CIV_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_BARBARIAN_WORLD</Type>
-			<Description>TXT_KEY_GAMEOPTION_BARBARIAN_WORLD</Description>
-			<Help>TXT_KEY_GAMEOPTION_BARBARIAN_WORLD_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_BARBARIAN_NEANDERTHAL_CITIES</Type>
-			<Description>TXT_KEY_GAMEOPTION_BARBARIAN_NEANDERTHAL_CITIES</Description>
-			<Help>TXT_KEY_GAMEOPTION_BARBARIAN_NEANDERTHAL_CITIES_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_BARBARIAN_RAGING</Type>
-			<Description>TXT_KEY_GAMEOPTION_BARBARIAN_RAGING</Description>
-			<Help>TXT_KEY_GAMEOPTION_BARBARIAN_RAGING_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
 		<!-- Combat -->
 		<GameOptionInfo>
 			<Type>GAMEOPTION_COMBAT_SIZE_MATTERS</Type>
@@ -680,13 +688,6 @@
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
 		<!-- Unsupported -->
-		<GameOptionInfo>
-			<Type>GAMEOPTION_UNSUPPORTED_ADVANCED_START</Type>
-			<Description>TXT_KEY_GAMEOPTION_UNSUPPORTED_ADVANCED_START</Description>
-			<Help>TXT_KEY_GAMEOPTION_UNSUPPORTED_ADVANCED_START_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_UNSUPPORTED_START_AS_MINORS</Type>
 			<Description>TXT_KEY_GAMEOPTION_UNSUPPORTED_START_AS_MINORS</Description>

@@ -1848,7 +1848,7 @@ void CvPlayer::initFreeUnits()
 	PROFILE_EXTRA_FUNC();
 	if (getStartingPlot() == NULL) return;
 
-	if (GC.getGame().isOption(GAMEOPTION_UNSUPPORTED_ADVANCED_START))
+	if (GC.getGame().isOption(GAMEOPTION_ADVANCED_START))
 	{
 		int iPoints = GC.getGame().getNumAdvancedStartPoints();
 

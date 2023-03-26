@@ -1096,7 +1096,7 @@ void CvGame::initDiplomacy()
 	}
 
 	// Forced peace at the beginning of Advanced starts
-	if (isOption(GAMEOPTION_UNSUPPORTED_ADVANCED_START))
+	if (isOption(GAMEOPTION_ADVANCED_START))
 	{
 		CLinkList<TradeData> player1List;
 		CLinkList<TradeData> player2List;
@@ -3485,7 +3485,7 @@ void CvGame::resetTurnTimer()
 {
 	// We should only use the turn timer if we are in multiplayer
 	if (isMPOption(MPOPTION_TURN_TIMER)
-	&& (getElapsedGameTurns() > 0 || !isOption(GAMEOPTION_UNSUPPORTED_ADVANCED_START)))
+	&& (getElapsedGameTurns() > 0 || !isOption(GAMEOPTION_ADVANCED_START)))
 	{
 		// Determine how much time we should allow
 		if (getElapsedGameTurns() == 0 && !isPitboss())
@@ -7184,7 +7184,7 @@ void CvGame::updateTurnTimer()
 	// Are we using a turn timer?
 	if (isMPOption(MPOPTION_TURN_TIMER))
 	{
-		if (getElapsedGameTurns() > 0 || !isOption(GAMEOPTION_UNSUPPORTED_ADVANCED_START))
+		if (getElapsedGameTurns() > 0 || !isOption(GAMEOPTION_ADVANCED_START))
 		{
 			// Has the turn expired?
 			if (getTurnSlice() > getCutoffSlice())

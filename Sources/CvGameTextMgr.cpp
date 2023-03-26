@@ -34783,7 +34783,7 @@ void CvGameTextMgr::getTurnTimerText(CvWString& strText)
 				}
 			}
 
-			if (GC.getGame().isOption(GAMEOPTION_UNSUPPORTED_ADVANCED_START) && GC.getGame().getElapsedGameTurns() <= getTreatyLength())
+			if (GC.getGame().isOption(GAMEOPTION_ADVANCED_START) && GC.getGame().getElapsedGameTurns() <= getTreatyLength())
 			{
 				if (!strText.empty())
 				{
