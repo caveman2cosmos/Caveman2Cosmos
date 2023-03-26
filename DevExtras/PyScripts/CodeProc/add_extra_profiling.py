@@ -8,7 +8,7 @@
 # The script can be run from Visual Studio: Debug > Execute File in Python Interactive.
 #
 # Requirements:
-# * XiTools CppCrawler 0.1-alpha2 ( https://github.com/klara-zielinska/xitools.py.cppcrawler )
+# * XiTools CppCrawler 0.1-alpha2 ( https://github.com/n47-bu1/xitools.py.cppcrawler )
 # * run DevExtras\setup.ps1
 #
 ###
