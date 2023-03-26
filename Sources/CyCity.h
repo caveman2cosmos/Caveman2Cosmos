@@ -360,7 +360,7 @@ public:
 
 	int getProgressOnUnit(int iIndex) const;
 	void setProgressOnUnit(int iIndex, int iNewValue);
-	int getUnitProductionTime(int /*UnitTypes*/ eIndex) const;
+	int getDelayOnUnit(int /*UnitTypes*/ eIndex) const;
 	bool isUnitProductionDecay(int /*UnitTypes*/ eIndex) const;
 	int getUnitProductionDecayTurns(int /*UnitTypes*/ eIndex) const;
 

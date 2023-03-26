@@ -1060,10 +1060,6 @@ public:
 	int getBuildingProductionDecay(BuildingTypes eIndex) const;
 	int getBuildingProductionDecayTurns(BuildingTypes eIndex) const;
 
-	int getProjectProduction(ProjectTypes eIndex) const;
-	void setProjectProduction(ProjectTypes eIndex, int iNewValue);
-	void changeProjectProduction(ProjectTypes eIndex, int iChange);
-
 	int getBuildingOriginalOwner(BuildingTypes eIndex) const;
 	int getBuildingOriginalTime(BuildingTypes eIndex) const;
 	void setBuildingOriginalTime(BuildingTypes eIndex, int iNewValue);
@@ -1072,13 +1068,17 @@ public:
 	void setProgressOnUnit(const UnitTypes eUnit, int iNewValue);
 	void changeProgressOnUnit(const UnitTypes eUnit, const int iChange);
 
-	int getUnitProductionTime(UnitTypes eIndex) const;
-	void setUnitProductionTime(UnitTypes eIndex, int iNewValue);
-	void changeUnitProductionTime(UnitTypes eIndex, int iChange);
+	int getDelayOnUnit(const UnitTypes eUnit) const;
+	void endDelayOnUnit(const UnitTypes eUnit);
+	void tickDelayOnUnit(const UnitTypes eUnit, const bool bIncrement = true);
 
 	bool isUnitProductionDecay(UnitTypes eIndex) const;
 	int getUnitProductionDecay(UnitTypes eIndex) const;
 	int getUnitProductionDecayTurns(UnitTypes eIndex) const;
+
+	int getProjectProduction(ProjectTypes eIndex) const;
+	void setProjectProduction(ProjectTypes eIndex, int iNewValue);
+	void changeProjectProduction(ProjectTypes eIndex, int iChange);
 
 	int getGreatPeopleUnitRate(UnitTypes eIndex) const;
 	void setGreatPeopleUnitRate(UnitTypes eIndex, int iNewValue);
@@ -1822,7 +1822,6 @@ protected:
 	int* m_paiBuildingOriginalOwner;
 	int* m_paiBuildingOriginalTime;
 	int* m_paiUnitProduction;
-	int* m_paiUnitProductionTime;
 	int* m_paiGreatPeopleUnitRate;
 	int* m_paiGreatPeopleUnitProgress;
 	int* m_paiSpecialistCount;
@@ -1858,6 +1857,7 @@ protected:
 	std::vector< std::pair<BuildingTypes, int> > m_progressOnBuilding;
 	std::vector< std::pair<BuildingTypes, int> > m_delayOnBuilding;
 	std::vector< std::pair<UnitTypes, int> > m_progressOnUnit;
+	std::vector< std::pair<UnitTypes, int> > m_delayOnUnit;
 	std::vector< std::pair<BonusTypes, int> > m_corpBonusProduction;
 
 	std::vector<EventTypes> m_aEventsOccured;

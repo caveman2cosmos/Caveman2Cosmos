@@ -84,7 +84,6 @@ CvCity::CvCity()
 	m_paiBuildingOriginalOwner = NULL;
 	m_paiBuildingOriginalTime = NULL;
 	m_paiUnitProduction = NULL;
-	m_paiUnitProductionTime = NULL;
 	m_paiGreatPeopleUnitRate = NULL;
 	m_paiGreatPeopleUnitProgress = NULL;
 	m_paiSpecialistCount = NULL;
@@ -402,7 +401,6 @@ void CvCity::uninit()
 	SAFE_DELETE_ARRAY(m_paiBuildingOriginalOwner);
 	SAFE_DELETE_ARRAY(m_paiBuildingOriginalTime);
 	SAFE_DELETE_ARRAY(m_paiUnitProduction);
-	SAFE_DELETE_ARRAY(m_paiUnitProductionTime);
 	SAFE_DELETE_ARRAY(m_paiGreatPeopleUnitRate);
 	SAFE_DELETE_ARRAY(m_paiGreatPeopleUnitProgress);
 	SAFE_DELETE_ARRAY(m_paiSpecialistCount);
@@ -722,6 +720,7 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	m_progressOnBuilding.clear();
 	m_delayOnBuilding.clear();
 	m_progressOnUnit.clear();
+	m_delayOnUnit.clear();
 	m_corpBonusProduction.clear();
 
 	m_szName.clear();
@@ -798,13 +797,11 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 
 		FAssertMsg((0 < GC.getNumUnitInfos()), "GC.getNumUnitInfos() is not greater than zero but an array is being allocated in CvCity::reset");
 		m_paiUnitProduction = new int[GC.getNumUnitInfos()];
-		m_paiUnitProductionTime = new int[GC.getNumUnitInfos()];
 		m_paiGreatPeopleUnitRate = new int[GC.getNumUnitInfos()];
 		m_paiGreatPeopleUnitProgress = new int[GC.getNumUnitInfos()];
 		for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 		{
 			m_paiUnitProduction[iI] = 0;
-			m_paiUnitProductionTime[iI] = 0;
 			m_paiGreatPeopleUnitRate[iI] = 0;
 			m_paiGreatPeopleUnitProgress[iI] = 0;
 		}
@@ -13472,7 +13469,6 @@ int CvCity::getProjectProduction(ProjectTypes eIndex) const
 	return m_paiProjectProduction[eIndex];
 }
 
-
 void CvCity::setProjectProduction(ProjectTypes eIndex, int iNewValue)
 {
 	FASSERT_BOUNDS(0, GC.getNumProjectInfos(), eIndex);
@@ -13493,7 +13489,6 @@ void CvCity::setProjectProduction(ProjectTypes eIndex, int iNewValue)
 		}
 	}
 }
-
 
 void CvCity::changeProjectProduction(ProjectTypes eIndex, int iChange)
 {
@@ -13575,7 +13570,7 @@ void CvCity::changeProgressOnUnit(const UnitTypes eUnit, const int iChange)
 			if ((*it).second <= -iChange)
 			{
 				m_progressOnUnit.erase(it);
-				setUnitProductionTime(eUnit, 0);
+				endDelayOnUnit(eUnit);
 			}
 			else
 			{
@@ -13588,42 +13583,85 @@ void CvCity::changeProgressOnUnit(const UnitTypes eUnit, const int iChange)
 }
 
 
-int CvCity::getUnitProductionTime(UnitTypes eIndex)	const
+int CvCity::getDelayOnUnit(const UnitTypes eUnit) const
 {
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex);
-	return m_paiUnitProductionTime[eIndex];
+	PROFILE_EXTRA_FUNC();
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit);
+
+	for (std::vector< std::pair<UnitTypes, int> >::const_iterator it = m_delayOnUnit.begin(); it != m_delayOnUnit.end(); ++it)
+	{
+		if ((*it).first == eUnit)
+		{
+			return (*it).second;
+		}
+	}
+	return 0;
+}
+
+void CvCity::endDelayOnUnit(const UnitTypes eUnit)
+{
+	PROFILE_EXTRA_FUNC();
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit);
+
+	for (std::vector< std::pair<UnitTypes, int> >::iterator it = m_delayOnUnit.begin(); it != m_delayOnUnit.end(); ++it)
+	{
+		if ((*it).first == eUnit)
+		{
+			m_delayOnUnit.erase(it);
+			return;
+		}
+	}
+}
+
+void CvCity::tickDelayOnUnit(const UnitTypes eUnit, const bool bIncrement)
+{
+	PROFILE_EXTRA_FUNC();
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit);
+
+	for (std::vector< std::pair<UnitTypes, int> >::iterator it = m_delayOnUnit.begin(); it != m_delayOnUnit.end(); ++it)
+	{
+		if ((*it).first == eUnit)
+		{
+			if (bIncrement)
+			{
+				(*it).second += 1;
+			}
+			else if ((*it).second == 1)
+			{
+				m_delayOnUnit.erase(it);
+			}
+			else (*it).second -= 1;
+
+			return;
+		}
+	}
+	if (!bIncrement)
+	{
+		FErrorMsg("Trying to decrement past zero for a value where negatives makes no sense!");
+		return;
+	}
+	m_delayOnUnit.push_back(std::make_pair(eUnit, 1));
 }
 
 
-void CvCity::setUnitProductionTime(UnitTypes eIndex, int iNewValue)
-{
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex);
-	m_paiUnitProductionTime[eIndex] = iNewValue;
-	FASSERT_NOT_NEGATIVE(getUnitProductionTime(eIndex));
-}
-
-
-void CvCity::changeUnitProductionTime(UnitTypes eIndex, int iChange)
-{
-	setUnitProductionTime(eIndex, (getUnitProductionTime(eIndex) + iChange));
-}
-
-
-// BUG - Production Decay - start
-/*
- * Returns true if the given unit will decay this turn.
- */
+// Returns true if the given unit will decay this turn.
 bool CvCity::isUnitProductionDecay(UnitTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex);
-	return isHuman() && getProductionUnit() != eIndex && getProgressOnUnit(eIndex) > 0
-		&& 100 * getUnitProductionTime(eIndex) >= GC.getUNIT_PRODUCTION_DECAY_TIME() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
+	return (
+		isHuman()
+		&& getProductionUnit() != eIndex
+		&& getProgressOnUnit(eIndex) > 0
+		&& (
+			100 * getDelayOnUnit(eIndex)
+			>=
+			GC.getUNIT_PRODUCTION_DECAY_TIME() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent()
+		)
+	);
 }
 
-/*
- * Returns the amount by which the given unit will decay once it reaches the limit.
- * Ignores whether or not the unit will actually decay this turn.
- */
+// Returns the amount by which the given unit will decay once it reaches the limit.
+// Ignores whether or not the unit will actually decay this turn.
 int CvCity::getUnitProductionDecay(UnitTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex);
@@ -13631,15 +13669,12 @@ int CvCity::getUnitProductionDecay(UnitTypes eIndex) const
 	return iProduction - iProduction * GC.getUNIT_PRODUCTION_DECAY_PERCENT() / 100;
 }
 
-/*
- * Returns the number of turns left before the given unit will decay.
- */
+// Returns the number of turns left before the given unit will decay.
 int CvCity::getUnitProductionDecayTurns(UnitTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex);
-	return std::max(0, (GC.getUNIT_PRODUCTION_DECAY_TIME() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() + 99) / 100 - getUnitProductionTime(eIndex)) + 1;
+	return std::max(1, 1 + (GC.getUNIT_PRODUCTION_DECAY_TIME() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() + 99) / 100 - getDelayOnUnit(eIndex));
 }
-// BUG - Production Decay - end
 
 
 int CvCity::getGreatPeopleUnitRate(UnitTypes eIndex) const
@@ -13650,7 +13685,6 @@ int CvCity::getGreatPeopleUnitRate(UnitTypes eIndex) const
 	iTotalGreatPeopleUnitRate += GET_PLAYER(getOwner()).getNationalGreatPeopleUnitRate(eIndex);
 	return std::max(0, iTotalGreatPeopleUnitRate);
 }
-
 
 void CvCity::setGreatPeopleUnitRate(UnitTypes eIndex, int iNewValue)
 {
@@ -16427,10 +16461,10 @@ void CvCity::doDecay()
 
 			if (getProductionUnit() != eUnitX)
 			{
-				changeUnitProductionTime(eUnitX, 1);
+				tickDelayOnUnit(eUnitX);
 
 				const int iGameSpeedPercent = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
-				if (100 * getUnitProductionTime(eUnitX) > GC.getUNIT_PRODUCTION_DECAY_TIME() * iGameSpeedPercent)
+				if (100 * getDelayOnUnit(eUnitX) > GC.getUNIT_PRODUCTION_DECAY_TIME() * iGameSpeedPercent)
 				{
 					decayUnit.push_back(
 						std::make_pair(
@@ -16440,9 +16474,9 @@ void CvCity::doDecay()
 					);
 				}
 			}
-			else if (getUnitProductionTime(eUnitX) > 0)
+			else if (getDelayOnUnit(eUnitX) > 0)
 			{
-				changeUnitProductionTime(eUnitX, -1);
+				tickDelayOnUnit(eUnitX, false);
 			}
 		}
 		for (std::vector< std::pair<UnitTypes, int> >::iterator it = decayUnit.begin(); it != decayUnit.end(); ++it)
@@ -16850,7 +16884,6 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingOriginalOwner);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingOriginalTime);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiUnitProduction);
-	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiUnitProductionTime);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiGreatPeopleUnitRate);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiGreatPeopleUnitProgress);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_SPECIALISTS, GC.getNumSpecialistInfos(), m_paiSpecialistCount);
@@ -17193,6 +17226,7 @@ void CvCity::read(FDataStreamBase* pStream)
 			}
 		}
 		short iSize;
+
 		// Techs
 		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "BuildingHappinessFromTechSize");
 		for (short i = 0; i < iSize; ++i)
@@ -17207,6 +17241,7 @@ void CvCity::read(FDataStreamBase* pStream)
 				m_buildingHappinessFromTech.push_back(std::make_pair(eTech, iValue));
 			}
 		}
+
 		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "BuildingHealthFromTechSize");
 		for (short i = 0; i < iSize; ++i)
 		{
@@ -17220,6 +17255,7 @@ void CvCity::read(FDataStreamBase* pStream)
 				m_buildingHealthFromTech.push_back(std::make_pair(eTech, iValue));
 			}
 		}
+
 		// Buildings
 		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "FreeBuildingsSize");
 		for (short i = 0; i < iSize; ++i)
@@ -17232,6 +17268,7 @@ void CvCity::read(FDataStreamBase* pStream)
 				m_vFreeBuildings.push_back(iType);
 			}
 		}
+
 		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "DisabledBuildingsSize");
 		for (short i = 0; i < iSize; ++i)
 		{
@@ -17243,6 +17280,7 @@ void CvCity::read(FDataStreamBase* pStream)
 				m_vDisabledBuildings.push_back(iType);
 			}
 		}
+
 		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "BuildingProgressSize");
 		for (short i = 0; i < iSize; ++i)
 		{
@@ -17256,6 +17294,7 @@ void CvCity::read(FDataStreamBase* pStream)
 				m_progressOnBuilding.push_back(std::make_pair(eBuilding, iValue));
 			}
 		}
+
 		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "DelayOnBuildingSize");
 		for (short i = 0; i < iSize; ++i)
 		{
@@ -17269,6 +17308,7 @@ void CvCity::read(FDataStreamBase* pStream)
 				m_delayOnBuilding.push_back(std::make_pair(eBuilding, iValue));
 			}
 		}
+
 		// Units
 		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "UnitProgressSize");
 		for (short i = 0; i < iSize; ++i)
@@ -17283,6 +17323,7 @@ void CvCity::read(FDataStreamBase* pStream)
 				m_progressOnUnit.push_back(std::make_pair(eUnit, iValue));
 			}
 		}
+
 		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "WorkersSize");
 		for (short i = 0; i < iSize; ++i)
 		{
@@ -17290,6 +17331,21 @@ void CvCity::read(FDataStreamBase* pStream)
 			WRAPPER_READ_DECORATED(wrapper, "CvCity", &iUnitID, "WorkerUnitID");
 			m_workers.push_back(iUnitID);
 		}
+
+		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "DelayOnUnitSize");
+		for (short i = 0; i < iSize; ++i)
+		{
+			int iValue = 0;
+			WRAPPER_READ_DECORATED(wrapper, "CvCity", &iType, "DelayOnUnitType");
+			WRAPPER_READ_DECORATED(wrapper, "CvCity", &iValue, "DelayOnUnitValue");
+			const UnitTypes eUnit = static_cast<UnitTypes>(wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_UNITS, iType, true));
+
+			if (eUnit != NO_UNIT)
+			{
+				m_delayOnUnit.push_back(std::make_pair(eUnit, iValue));
+			}
+		}
+
 		// Bonuses
 		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "CorpBonusProductionSize");
 		for (short i = 0; i < iSize; ++i)
@@ -17311,6 +17367,7 @@ void CvCity::read(FDataStreamBase* pStream)
 		short iType;
 		int iCount;
 		uint16_t sCountU;
+
 		// Bonus
 		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "BonusDefenseChangesSize");
 		while (iSize-- > 0)
@@ -17324,6 +17381,7 @@ void CvCity::read(FDataStreamBase* pStream)
 				m_bonusDefenseChanges.insert(std::make_pair(iType, iCount));
 			}
 		}
+
 		// Building
 		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "BuildingProductionModSize");
 		while (iSize-- > 0)
@@ -17350,6 +17408,7 @@ void CvCity::read(FDataStreamBase* pStream)
 				m_freeAreaBuildingCount.insert(std::make_pair(iType, sCountU));
 			}
 		}
+
 		// Unit
 		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "UnitProductionModSize");
 		while (iSize-- > 0)
@@ -17364,6 +17423,7 @@ void CvCity::read(FDataStreamBase* pStream)
 			}
 		}
 		YieldArray yields;
+
 		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "TerrainYieldChangesSize");
 		while (iSize-- > 0)
 		{
@@ -17534,7 +17594,6 @@ void CvCity::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingOriginalOwner);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingOriginalTime);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiUnitProduction);
-	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiUnitProductionTime);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiGreatPeopleUnitRate);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiGreatPeopleUnitProgress);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_SPECIALISTS, GC.getNumSpecialistInfos(), m_paiSpecialistCount);
@@ -17751,6 +17810,7 @@ void CvCity::write(FDataStreamBase* pStream)
 				}
 			}
 		}
+
 		// Techs
 		WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (short)m_buildingHappinessFromTech.size(), "BuildingHappinessFromTechSize");
 		for (std::vector< std::pair<TechTypes, int> >::iterator it = m_buildingHappinessFromTech.begin(); it != m_buildingHappinessFromTech.end(); ++it)
@@ -17758,35 +17818,41 @@ void CvCity::write(FDataStreamBase* pStream)
 			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", static_cast<short>((*it).first), "BuildingHappinessFromTechType");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (*it).second, "BuildingHappinessFromTechValue");
 		}
+
 		WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (short)m_buildingHealthFromTech.size(), "BuildingHealthFromTechSize");
 		for (std::vector< std::pair<TechTypes, int> >::iterator it = m_buildingHealthFromTech.begin(); it != m_buildingHealthFromTech.end(); ++it)
 		{
 			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", static_cast<short>((*it).first), "BuildingHealthFromTechType");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (*it).second, "BuildingHealthFromTechValue");
 		}
+
 		// Buildings
 		WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (short)m_vFreeBuildings.size(), "FreeBuildingsSize");
 		foreach_(const short building, m_vFreeBuildings)
 		{
 			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", building, "FreeBuildingsIndex");
 		}
+
 		WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (short)m_vDisabledBuildings.size(), "DisabledBuildingsSize");
 		foreach_(const short building, m_vDisabledBuildings)
 		{
 			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", building, "DisabledBuildingsIndex");
 		}
+
 		WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (short)m_progressOnBuilding.size(), "BuildingProgressSize");
 		for (std::vector< std::pair<BuildingTypes, int> >::iterator it = m_progressOnBuilding.begin(); it != m_progressOnBuilding.end(); ++it)
 		{
 			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", static_cast<short>((*it).first), "BuildingProgressType");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (*it).second, "BuildingProgressValue");
 		}
+
 		WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (short)m_delayOnBuilding.size(), "DelayOnBuildingSize");
 		for (std::vector< std::pair<BuildingTypes, int> >::iterator it = m_delayOnBuilding.begin(); it != m_delayOnBuilding.end(); ++it)
 		{
 			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", static_cast<short>((*it).first), "DelayOnBuildingType");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (*it).second, "DelayOnBuildingValue");
 		}
+
 		// Units
 		WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (short)m_progressOnUnit.size(), "UnitProgressSize");
 		for (std::vector< std::pair<UnitTypes, int> >::iterator it = m_progressOnUnit.begin(); it != m_progressOnUnit.end(); ++it)
@@ -17794,11 +17860,20 @@ void CvCity::write(FDataStreamBase* pStream)
 			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", static_cast<short>((*it).first), "UnitProgressType");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (*it).second, "UnitProgressValue");
 		}
+
 		WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (short)m_workers.size(), "WorkersSize");
 		foreach_(const int iUnitID, m_workers)
 		{
 			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", iUnitID, "WorkerUnitID");
 		}
+
+		WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (short)m_delayOnUnit.size(), "DelayOnUnitSize");
+		for (std::vector< std::pair<UnitTypes, int> >::iterator it = m_delayOnUnit.begin(); it != m_delayOnUnit.end(); ++it)
+		{
+			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", static_cast<short>((*it).first), "DelayOnUnitType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (*it).second, "DelayOnUnitValue");
+		}
+
 		// Bonuses
 		WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (short)m_corpBonusProduction.size(), "CorpBonusProductionSize");
 		for (std::vector< std::pair<BonusTypes, int> >::iterator it = m_corpBonusProduction.begin(); it != m_corpBonusProduction.end(); ++it)
@@ -17816,6 +17891,7 @@ void CvCity::write(FDataStreamBase* pStream)
 			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", it->first, "BonusDefenseChangesType");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", it->second, "BonusDefenseChanges");
 		}
+
 		// Building
 		WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (short)m_buildingProductionMod.size(), "BuildingProductionModSize");
 		for (std::map<short, int>::const_iterator it = m_buildingProductionMod.begin(), itEnd = m_buildingProductionMod.end(); it != itEnd; ++it)
@@ -17823,6 +17899,7 @@ void CvCity::write(FDataStreamBase* pStream)
 			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", it->first, "BuildingProductionModType");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", it->second, "BuildingProductionMod");
 		}
+
 		WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (short)m_freeAreaBuildingCount.size(), "FreeAreaBuildingCountSize");
 		for (std::map<short, uint16_t>::const_iterator it = m_freeAreaBuildingCount.begin(), itEnd = m_freeAreaBuildingCount.end(); it != itEnd; ++it)
 		{

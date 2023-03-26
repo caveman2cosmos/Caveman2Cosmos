@@ -20484,7 +20484,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit, bool
 					szTempBuffer.Format(L" - %d/%d%c", pCity->getProgressOnUnit(eUnit), pCity->getProductionNeeded(eUnit), GC.getYieldInfo(YIELD_PRODUCTION).getChar());
 					szBuffer.append(szTempBuffer);
 
-					if (pCity->getUnitProductionTime(eUnit) > 0)
+					if (pCity->getDelayOnUnit(eUnit) > 0)
 					{
 						szBuffer.append(NEWLINE);
 						const int iTurnsLeft = pCity->getUnitProductionDecayTurns(eUnit);

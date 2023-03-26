@@ -1394,9 +1394,9 @@ void CyCity::setProgressOnUnit(int iIndex, int iNewValue)
 	m_pCity->setProgressOnUnit((UnitTypes)iIndex, iNewValue);
 }
 
-int CyCity::getUnitProductionTime(int /*UnitTypes*/ eIndex) const
+int CyCity::getDelayOnUnit(int /*UnitTypes*/ eIndex) const
 {
-	return m_pCity->getUnitProductionTime((UnitTypes)eIndex);
+	return m_pCity->getDelayOnUnit((UnitTypes)eIndex);
 }
 
 bool CyCity::isUnitProductionDecay(int /*UnitTypes*/ eIndex) const

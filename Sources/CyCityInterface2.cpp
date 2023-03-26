@@ -166,7 +166,7 @@ void CyCityPythonInterface2(python::class_<CyCity>& x)
 
 		.def("getProgressOnUnit", &CyCity::getProgressOnUnit, "int (UnitID) - gets current production towards UnitID")
 		.def("setProgressOnUnit", &CyCity::setProgressOnUnit, "void (UnitID, iNewValue) - sets production towards UnitID as iNewValue")
-		.def("getUnitProductionTime", &CyCity::getUnitProductionTime, "int (int /*UnitTypes*/ eIndex)")
+		.def("getDelayOnUnit", &CyCity::getDelayOnUnit, "int (int /*UnitTypes*/ eIndex)")
 		.def("isUnitProductionDecay", &CyCity::isUnitProductionDecay, "bool (int /*UnitTypes*/ eIndex)")
 		.def("getUnitProductionDecayTurns", &CyCity::getUnitProductionDecayTurns, "int (int /*UnitTypes*/ eIndex)")
 

@@ -3200,7 +3200,7 @@ class CvMainInterface:
 					if y > 0:
 						if CyCity.isUnitProductionDecay(iType):
 							szTxt1 = "<color=255,76,76,255><b>!! </b></color>"
-						elif CyCity.getUnitProductionTime(iType) > 0:
+						elif CyCity.getDelayOnUnit(iType) > 0:
 							szTxt1 = "<color=255,255,0,255><b>! </b></color>"
 
 					szTxt2 = "<color=0,255,255,255>" + szTxt2 + "</color>"
