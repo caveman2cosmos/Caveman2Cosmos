@@ -20,9 +20,9 @@
 	<GameOptionInfos>
 		<GameOptionInfo>
 			<!-- This one must always be the first option as the exe has hardcoded it as such -->
-			<Type>GAMEOPTION_ADVANCED_START</Type>
-			<Description>TXT_KEY_GAMEOPTION_ADVANCED_START</Description>
-			<Help>TXT_KEY_GAMEOPTION_ADVANCED_START_HELP</Help>
+			<Type>GAMEOPTION_CORE_CUSTOM_START</Type>
+			<Description>TXT_KEY_GAMEOPTION_CORE_CUSTOM_START</Description>
+			<Help>TXT_KEY_GAMEOPTION_CORE_CUSTOM_START_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
@@ -74,34 +74,9 @@
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<!-- This one must always be the eight option as the exe has hardcoded it as such -->
-			<Type>GAMEOPTION_LEAD_ANY_CIV</Type>
-			<Description>TXT_KEY_GAMEOPTION_LEAD_ANY_CIV</Description>
-			<Help>TXT_KEY_GAMEOPTION_LEAD_ANY_CIV_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<!-- AI -->
-		<GameOptionInfo>
-			<Type>GAMEOPTION_AI_AGGRESSIVE</Type>
-			<Description>TXT_KEY_GAMEOPTION_AI_AGGRESSIVE</Description>
-			<Help>TXT_KEY_GAMEOPTION_AI_AGGRESSIVE_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_AI_RUTHLESS</Type>
-			<Description>TXT_KEY_GAMEOPTION_AI_RUTHLESS</Description>
-			<Help>TXT_KEY_GAMEOPTION_AI_RUTHLESS_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>1</bVisible>
-			<EnforcesGameOptionOnTypes>
-				<GameOptionType>GAMEOPTION_AI_AGGRESSIVE</GameOptionType>
-			</EnforcesGameOptionOnTypes>
-		</GameOptionInfo>
-		<GameOptionInfo>
-			<Type>GAMEOPTION_AI_RANDOM_PERSONALITIES</Type>
-			<Description>TXT_KEY_GAMEOPTION_AI_RANDOM_PERSONALITIES</Description>
-			<Help>TXT_KEY_GAMEOPTION_AI_RANDOM_PERSONALITIES_HELP</Help>
+			<Type>GAMEOPTION_LEADER_UNRESTRICTED</Type>
+			<Description>TXT_KEY_GAMEOPTION_LEADER_UNRESTRICTED</Description>
+			<Help>TXT_KEY_GAMEOPTION_LEADER_UNRESTRICTED_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
@@ -138,6 +113,31 @@
 			<Type>GAMEOPTION_LEADER_COMPLEX_TRAITS</Type>
 			<Description>TXT_KEY_GAMEOPTION_LEADER_COMPLEX_TRAITS</Description>
 			<Help>TXT_KEY_GAMEOPTION_LEADER_COMPLEX_TRAITS_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<!-- AI -->
+		<GameOptionInfo>
+			<Type>GAMEOPTION_AI_AGGRESSIVE</Type>
+			<Description>TXT_KEY_GAMEOPTION_AI_AGGRESSIVE</Description>
+			<Help>TXT_KEY_GAMEOPTION_AI_AGGRESSIVE_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_AI_RUTHLESS</Type>
+			<Description>TXT_KEY_GAMEOPTION_AI_RUTHLESS</Description>
+			<Help>TXT_KEY_GAMEOPTION_AI_RUTHLESS_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+			<EnforcesGameOptionOnTypes>
+				<GameOptionType>GAMEOPTION_AI_AGGRESSIVE</GameOptionType>
+			</EnforcesGameOptionOnTypes>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_AI_RANDOM_PERSONALITIES</Type>
+			<Description>TXT_KEY_GAMEOPTION_AI_RANDOM_PERSONALITIES</Description>
+			<Help>TXT_KEY_GAMEOPTION_AI_RANDOM_PERSONALITIES_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>

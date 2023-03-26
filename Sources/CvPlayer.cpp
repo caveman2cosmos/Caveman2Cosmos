@@ -1848,7 +1848,7 @@ void CvPlayer::initFreeUnits()
 	PROFILE_EXTRA_FUNC();
 	if (getStartingPlot() == NULL) return;
 
-	if (GC.getGame().isOption(GAMEOPTION_ADVANCED_START))
+	if (GC.getGame().isOption(GAMEOPTION_CORE_CUSTOM_START))
 	{
 		int iPoints = GC.getGame().getNumAdvancedStartPoints();
 
@@ -23191,7 +23191,7 @@ bool CvPlayer::getSplitEmpireLeaders(CivLeaderArray& aLeaders) const
 		{
 			for (int j = 0; j < GC.getNumLeaderHeadInfos(); ++j)
 			{
-				if (!GC.getCivilizationInfo((CivilizationTypes)i).isLeaders(j) && !GC.getGame().isOption(GAMEOPTION_LEAD_ANY_CIV))
+				if (!GC.getCivilizationInfo((CivilizationTypes)i).isLeaders(j) && !GC.getGame().isOption(GAMEOPTION_LEADER_UNRESTRICTED))
 				{
 					continue;
 				}

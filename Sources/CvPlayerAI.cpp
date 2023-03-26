@@ -2251,7 +2251,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 
 	if (bAdvancedStart)
 	{
-		FAssert(GC.getGame().isOption(GAMEOPTION_ADVANCED_START));
+		FAssert(GC.getGame().isOption(GAMEOPTION_CORE_CUSTOM_START));
 		if (bStartingLoc)
 		{
 			bAdvancedStart = false;

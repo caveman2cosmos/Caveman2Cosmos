@@ -262,7 +262,7 @@ class WBGameDataScreen:
 		if self.GAME.countCivPlayersEverAlive() == self.GC.getMAX_PC_PLAYERS():
 			return
 		GAME = self.GAME
-		bLeadAnyCiv = GAME.isOption(GameOptionTypes.GAMEOPTION_LEAD_ANY_CIV)
+		bLeadAnyCiv = GAME.isOption(GameOptionTypes.GAMEOPTION_LEADER_UNRESTRICTED)
 		szColorNay = self.szColorNay
 		szColorYay = self.szColorYay
 
@@ -334,7 +334,7 @@ class WBGameDataScreen:
 
 
 	def checkOptions(self, screen, iGameOption):
-		if iGameOption == GameOptionTypes.GAMEOPTION_LEAD_ANY_CIV:
+		if iGameOption == GameOptionTypes.GAMEOPTION_LEADER_UNRESTRICTED:
 			global iSelectedCiv, iSelectedLeader
 			iSelectedCiv = -1
 			iSelectedLeader = -1

@@ -981,7 +981,7 @@ class CvVictoryScreen:
 
 			screen.appendListBoxStringNoUpdate(szOptionsTable, szTxt, eWidGen, 1, 2, 1<<0)
 
-		if GAME.isOption(GameOptionTypes.GAMEOPTION_ADVANCED_START):
+		if GAME.isOption(GameOptionTypes.GAMEOPTION_CORE_CUSTOM_START):
 			szTxt = BULLET + ufont2 + u"%s %d" %(TRNSLTR.getText("TXT_KEY_ADVANCED_START_POINTS", ()), GAME.getNumAdvancedStartPoints()) + "\n"
 			screen.appendListBoxStringNoUpdate(szOptionsTable, szTxt, eWidGen, 1, 2, 1<<0)
 

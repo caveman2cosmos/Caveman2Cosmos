@@ -3799,7 +3799,7 @@ class Revolution:
 
 			leaderList = []
 			for leaderType in xrange(GC.getNumLeaderHeadInfos()):
-				if GC.getCivilizationInfo(newCivIdx).isLeaders(leaderType) or GAME.isOption(GameOptionTypes.GAMEOPTION_LEAD_ANY_CIV):
+				if GC.getCivilizationInfo(newCivIdx).isLeaders(leaderType) or GAME.isOption(GameOptionTypes.GAMEOPTION_LEADER_UNRESTRICTED):
 					for jdx in xrange(GC.getMAX_PC_PLAYERS()):
 						if GC.getPlayer(jdx).getLeaderType() == leaderType and not newPlayerIdx == jdx:
 							break
@@ -3869,7 +3869,7 @@ class Revolution:
 		count = 0
 		availLeader = []
 		for i in xrange(GC.getNumLeaderHeadInfos()):
-			if ownerCivInfo.isLeaders(i) or GAME.isOption(GameOptionTypes.GAMEOPTION_LEAD_ANY_CIV):
+			if ownerCivInfo.isLeaders(i) or GAME.isOption(GameOptionTypes.GAMEOPTION_LEADER_UNRESTRICTED):
 				for j in xrange(GC.getMAX_PC_PLAYERS()):
 					if GC.getPlayer(j).getLeaderType() == i:
 						break

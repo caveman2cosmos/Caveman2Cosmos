@@ -194,7 +194,7 @@ class BarbarianCiv:
 				iLeader = CyPlayerX.getLeaderType()
 				if iLeader > -1: aList.append(iLeader)
 
-		bLeadAnyCiv = GAME.isOption(GameOptionTypes.GAMEOPTION_LEAD_ANY_CIV)
+		bLeadAnyCiv = GAME.isOption(GameOptionTypes.GAMEOPTION_LEADER_UNRESTRICTED)
 		leaders = []
 		for iLeader in xrange(GC.getNumLeaderHeadInfos()):
 			if iLeader not in aList and not GC.getLeaderHeadInfo(iLeader).isNPC() and (bLeadAnyCiv or GC.getCivilizationInfo(iCivType).isLeaders(iLeader)):

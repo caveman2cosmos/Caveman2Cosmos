@@ -84,8 +84,8 @@
 		<Russian>Требуется больше технологий, для создания обычных дорог, а также дополнительные науки, позволяющие прокладывать дороги на сложной пересеченной местности. Основной замысел состоит в том, чтобы дать более реалистичное ощущение передвижения на более сложном рельефе местности на протяжении всей игры.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_START</Tag>
-		<English>Advanced Start</English>
+		<Tag>TXT_KEY_GAMEOPTION_CORE_CUSTOM_START</Tag>
+		<English>Core - Custom Start</English>
 		<French>Démarrage avancé</French>
 		<German>Fortgeschrittener Start</German>
 		<Italian>Avvio avanzato</Italian>
@@ -93,8 +93,8 @@
 		<Russian>Ïîçäíèé ñòàðò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_START_HELP</Tag>
-		<English>Allows players to "purchase" their choice of starting cities, units, technologies, etc. when game begins. This is not balanced or polished in any way as no C2C modder has ever bothered focusing on it.</English>
+		<Tag>TXT_KEY_GAMEOPTION_CORE_CUSTOM_START_HELP</Tag>
+		<English>Allows players to "purchase" their choice of starting cities, units, technologies, etc. when game begins.[NEWLINE]This is not balanced or polished in any way as no C2C modder has ever bothered focusing on it.</English>
 		<French>Permet aux joueurs "d'acheter" des villes, des unités, des technologies etc. en début de partie.</French>
 		<German>Ermöglicht den Spielern, bereits zu Spielbeginn Städte, Einheiten, Technologien etc. zu kaufen, die dann sofort zur Verfügung stehen.</German>
 		<Italian>Permette ai giocatori di "acquistare" città, unità, tecnologie, eccetera all'avvio del gioco.</Italian>
@@ -588,7 +588,7 @@
 		<Russian>Ïîëó÷àéòå äîïîëíèòåëüíûå õàðàêòåðèñòèêè ëèäåðîâ íà ïðîòÿæåíèè âñåé èãðû çà ñ÷åò ðàñøèðåíèÿ íàöèîíàëüíîé êóëüòóðû. (Íàõîäèòñÿ â ðàçðàáîòêå è ìîæåò ïðèâåñòè ê íåêîòîðîìó äèñáàëàíñó)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_LEAD_ANY_CIV</Tag>
+		<Tag>TXT_KEY_GAMEOPTION_LEADER_UNRESTRICTED</Tag>
 		<English>Leader - Unrestricted</English>
 		<French>Pas de restriction de dirigeants</French>
 		<German>Beliebige Staatsoberhäupter</German>
@@ -597,7 +597,7 @@
 		<Russian>Ëþáûå ëèäåðû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_LEAD_ANY_CIV_HELP</Tag>
+		<Tag>TXT_KEY_GAMEOPTION_LEADER_UNRESTRICTED_HELP</Tag>
 		<English>Players may lead any Civilization with any Leader.</English>
 		<French>Les joueurs peuvent diriger n'importe quelle civilisation avec n'importe quel chef.</French>
 		<German>Jeder Spieler kann eine beliebige Zivilisation als beliebiges Staatsoberhaupt anführen.</German>

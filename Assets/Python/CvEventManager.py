@@ -699,7 +699,7 @@ class CvEventManager:
 			szText = ""
 			if GC.getDefineINT("START_YEAR") != GAME.getGameTurnYear():
 				szText += "\n\n" + TRNSLTR.getText("TXT_KEY_MOD_GAMESTART_NOT_PREHISTORIC", ())
-			if GAME.isOption(GameOptionTypes.GAMEOPTION_ADVANCED_START):
+			if GAME.isOption(GameOptionTypes.GAMEOPTION_CORE_CUSTOM_START):
 				szText += "\n\n" + TRNSLTR.getText("TXT_KEY_MOD_GAMESTART_ADVANCED_START", ())
 			if szText:
 				szText = TRNSLTR.getText("TXT_KEY_MOD_HEADER", ()) + szText
