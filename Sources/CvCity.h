@@ -713,10 +713,9 @@ public:
 
 	int getFood() const;
 	void setFood(int iNewValue);
-	void changeFood(int iChange);
+	void changeFood(int iChange, const bool bHandleGrowth = false);
 
-	int getFoodKept() const;
-	void setFoodKept(int iNewValue);
+	inline int getFoodKept() const { return m_iFoodKept; }
 	void changeFoodKept(int iChange);
 
 	int getFoodKeptPercent() const;
@@ -1881,7 +1880,6 @@ protected:
 
 	mutable std::map<const CvPlot*,int> m_aCultureDistances;
 
-	void doGrowth();
 	void doCulture();
 	void doPlotCulture(PlayerTypes ePlayer, int iCultureRate);
 	static int cultureDistanceDropoff(int baseCultureGain, int rangeOfSource, int distanceFromSource);

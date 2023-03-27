@@ -17023,51 +17023,30 @@ void CvPlayer::doAdvancedStartAction(AdvancedStartActionTypes eAction, int iX, i
 		break;
 	case ADVANCEDSTARTACTION_POP:
 		{
-			if (pPlot == NULL)
-				return;
+			if (!pPlot) return;
 
 			CvCity* pCity = pPlot->getPlotCity();
 
-			if (pCity != NULL)
+			if (!pCity) return;
+
+			const int iCost = getAdvancedStartPopCost(bAdd, pCity);
+
+			if (iCost < 0) return;
+
+			if (bAdd)
 			{
-				int iCost = getAdvancedStartPopCost(bAdd, pCity);
-
-				if (iCost < 0)
+				if (getAdvancedStartPoints() >= iCost)
 				{
-					return;
-				}
-
-				bool bPopChanged = false;
-				if (bAdd)
-				{
-					if (getAdvancedStartPoints() >= iCost)
-					{
-						pCity->changePopulation(1);
-						changeAdvancedStartPoints(-iCost);
-						bPopChanged = true;
-					}
-				}
-				else
-				{
-					pCity->changePopulation(-1);
-					changeAdvancedStartPoints(iCost);
-					bPopChanged = true;
-				}
-
-				if (bPopChanged)
-				{
+					pCity->changePopulation(1);
+					changeAdvancedStartPoints(-iCost);
 					pCity->setHighestPopulation(pCity->getPopulation());
-					if (pCity->getPopulation() == 1)
-					{
-						pCity->setFood(0);
-						pCity->setFoodKept(0);
-					}
-					else if (pCity->getPopulation() > 1)
-					{
-						pCity->setFood(pCity->growthThreshold() / 2);
-						pCity->setFoodKept(pCity->getFood() * pCity->getFoodKeptPercent() / 100);
-					}
 				}
+			}
+			else if (pCity->getPopulation() > 1)
+			{
+				pCity->changePopulation(-1);
+				changeAdvancedStartPoints(iCost);
+				pCity->setHighestPopulation(pCity->getPopulation());
 			}
 		}
 		break;
@@ -17132,22 +17111,12 @@ void CvPlayer::doAdvancedStartAction(AdvancedStartActionTypes eAction, int iX, i
 					{
 						pCity->setNumRealBuilding(eBuilding, 1);
 						changeAdvancedStartPoints(-iCost);
-						if (GC.getBuildingInfo(eBuilding).getFoodKept() != 0)
-						{
-							pCity->setFoodKept(pCity->getFood() * pCity->getFoodKeptPercent() / 100);
-						}
 					}
 				}
-
-				// Remove Building from the map
-				else
+				else // Remove Building from the city
 				{
 					pCity->setNumRealBuilding(eBuilding, 0);
 					changeAdvancedStartPoints(iCost);
-					if (GC.getBuildingInfo(eBuilding).getFoodKept() != 0)
-					{
-						pCity->setFoodKept(pCity->getFood() * pCity->getFoodKeptPercent() / 100);
-					}
 				}
 			}
 

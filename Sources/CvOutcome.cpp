@@ -1107,7 +1107,7 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 			}
 			if (aiYield[YIELD_FOOD])
 			{
-				pCity->changeFood(aiYield[YIELD_FOOD]);
+				pCity->changeFood(aiYield[YIELD_FOOD], true);
 				CvWString szTemp;
 				szTemp.Format(L" %d%c", aiYield[YIELD_FOOD], GC.getYieldInfo(YIELD_FOOD).getChar());
 				szBuffer.append(szTemp);

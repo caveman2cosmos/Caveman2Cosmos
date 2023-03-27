@@ -14435,11 +14435,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_FOOD_THRESHOLD</Tag>
-		<English>Food: %d1_Num/%d2_Threshold [ICON_FOOD]</English>
-		<French>Nourriture : %d1_Num/%d2_Threshold [ICON_FOOD]</French>
-		<German>Nahrung: %d1_Num/%d2_Threshold [ICON_FOOD]</German>
-		<Italian>Cibo: %d1_Num/%d2_Threshold [ICON_FOOD]</Italian>
-		<Spanish>Alimentos: %d1_Num/%d2_Threshold [ICON_FOOD]</Spanish>
+		<English>Food: %d1/%d2 [ICON_FOOD][NEWLINE]* %d3 [ICON_FOOD] stored for the next growth cycle.</English>
+		<French>Nourriture : %d1_Num/%d2_Threshold [ICON_FOOD][NEWLINE]* %d3 [ICON_FOOD] stored for the next growth cycle.</French>
+		<German>Nahrung: %d1_Num/%d2_Threshold [ICON_FOOD][NEWLINE]* %d3 [ICON_FOOD] stored for the next growth cycle.</German>
+		<Italian>Cibo: %d1_Num/%d2_Threshold [ICON_FOOD][NEWLINE]* %d3 [ICON_FOOD] stored for the next growth cycle.</Italian>
+		<Spanish>Alimentos: %d1_Num/%d2_Threshold [ICON_FOOD][NEWLINE]* %d3 [ICON_FOOD] stored for the next growth cycle.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_FORCED_SPECIALIST</Tag>

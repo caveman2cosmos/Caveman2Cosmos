@@ -716,16 +716,6 @@ void CvDllPythonEvents::reportCultureExpansion( CvCity *pCity, PlayerTypes ePlay
 	postEvent(eventData, "cultureExpansion");
 }
 
-void CvDllPythonEvents::reportCityGrowth( CvCity *pCity, PlayerTypes ePlayer )
-{
-	EventArgs eventData;
-	eventData
-		.arg("event", "cityGrowth")
-		.arg("pCity", pCity)
-		.arg("ePlayer", ePlayer);
-	postEvent(eventData, "cityGrowth");
-}
-
 void CvDllPythonEvents::reportCityProduction( CvCity *pCity, PlayerTypes ePlayer )
 {
 	EventArgs eventData;

@@ -78,7 +78,6 @@ class CvEventManager:
 			'cityRazed'					: self.onCityRazed,
 			'cityLost'					: self.onCityLost,
 #			'cultureExpansion'			: self.onCultureExpansion,
-#			'cityGrowth'				: self.onCityGrowth,
 			'cityDoTurn'				: self.onCityDoTurn,
 #			'cityBuildingUnit'			: self.onCityBuildingUnit,
 #			'cityBuildingBuilding'		: self.onCityBuildingBuilding,
@@ -2692,12 +2691,6 @@ class CvEventManager:
 
 	'''
 	def onCultureExpansion(self, argsList):
-		pCity = argsList[0]
-		iPlayer = argsList[1]
-
-
-	def onCityGrowth(self, argsList):
-		'City Population Growth'
 		pCity = argsList[0]
 		iPlayer = argsList[1]
 	'''

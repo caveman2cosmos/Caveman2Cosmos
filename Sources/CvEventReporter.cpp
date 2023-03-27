@@ -332,11 +332,6 @@ void CvEventReporter::cultureExpansion( CvCity *pCity, PlayerTypes ePlayer )
 	m_kPythonEventMgr.reportCultureExpansion(pCity, ePlayer);
 }
 
-void CvEventReporter::cityGrowth(CvCity *pCity, PlayerTypes ePlayer)
-{
-	m_kPythonEventMgr.reportCityGrowth(pCity, ePlayer);
-}
-
 void CvEventReporter::cityDoTurn( CvCity *pCity, PlayerTypes ePlayer )
 {
 	m_kPythonEventMgr.reportCityProduction(pCity, ePlayer);

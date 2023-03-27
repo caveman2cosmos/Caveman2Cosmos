@@ -5699,14 +5699,34 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 					}
 				}
 
-				if (kBuilding.getGlobalPopulationChange() != 0)
+				if (kBuilding.getPopulationChange() != 0)
 				{
-					// "Food to grow" divided by "food per turn" (min 1 per turn)
-					const int iGrowthTurns = growthThreshold() / std::max(1, foodDifference(false));
-
-					const int iValueMultiplier = 20 * iNumCities * iGrowthTurns / GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
-
-					iValue += kBuilding.getGlobalPopulationChange() * iValueMultiplier;
+					if (kBuilding.getPopulationChange() > 0)
+					{
+						int iPop = getPopulation();
+						for (int iI = 0; iI < kBuilding.getPopulationChange(); iI++)
+						{
+							iValue += 20 + 5 * (iPop + iI);
+						}
+					}
+					else
+					{
+						int iPop = getPopulation();
+						// Toffer: iPop decrement before calc is intentional
+						//	as a pop 1 city should see the same value in gaining one pop as a pop 2 city negatively sees in losing one pop.
+						for (int iI = 0; iI < -kBuilding.getPopulationChange() && iPop-- > 1; iI++)
+						{
+							iValue -= 20 + 5 * iPop;
+						}
+					}
+				}
+				if (kBuilding.getGlobalPopulationChange() > 0)
+				{
+					const int iTotalPopulation = kOwner.getTotalPopulation();
+					for (int iI = 0; iI < kBuilding.getGlobalPopulationChange(); iI++)
+					{
+						iValue += 20 + 5 * ((iTotalPopulation + iNumCities * iI) / iNumCities);
+					}
 				}
 
 				iValue += kBuilding.getFreeTechs() * 80;

@@ -1318,7 +1318,7 @@ void CvCity::doTurn()
 
 	bool bAllowNoProduction = !doCheckProduction();
 
-	doGrowth();
+	changeFood(foodDifference(), true);
 
 	doCulture();
 
@@ -9752,7 +9752,7 @@ int CvCity::getFood() const
 
 void CvCity::setFood(int iNewValue)
 {
-	if (getFood() != iNewValue)
+	if (m_iFood != iNewValue)
 	{
 		m_iFood = iNewValue;
 
@@ -9764,41 +9764,83 @@ void CvCity::setFood(int iNewValue)
 }
 
 
-void CvCity::changeFood(int iChange)
+void CvCity::changeFood(int iChange, const bool bHandleGrowth)
 {
-	setFood(getFood() + iChange);
-
-#ifdef YIELD_VALUE_CACHING
 	if (iChange != 0)
 	{
+		m_iFood += iChange;
+
+		if (bHandleGrowth)
+		{
+			if (iChange > 0)
+			{
+				changeFoodKept(std::max(1, iChange * getFoodKeptPercent() / 100));
+			}
+			else // decay stored food, hardcoded rate for now.
+			{
+				changeFoodKept(std::min(-1, iChange / 2));
+			}
+
+			if (m_iFood < 0)
+			{
+				while (m_iFood < 0)
+				{
+					if (getPopulation() > 1)
+					{
+						changePopulation(-1);
+						m_iFood = m_iFood + growthThreshold();
+					}
+					else m_iFood = 0;
+				}
+			}
+			else
+			{
+				int iGrowthThreshold = growthThreshold();
+				if (m_iFood >= iGrowthThreshold)
+				{
+					if (isHuman() && AI_avoidGrowth() || AI_isEmphasizeAvoidGrowth())
+					{
+						m_iFood = iGrowthThreshold;
+					}
+					else
+					{
+						while (m_iFood >= iGrowthThreshold)
+						{
+							m_iFood -= iGrowthThreshold;
+
+							if (m_iFood < getFoodKept())
+							{
+								const int iDiff = getFoodKept() - m_iFood;
+								m_iFood += iDiff;
+								changeFoodKept(-iDiff);
+							}
+							changePopulation(1);
+							iGrowthThreshold = growthThreshold();
+						}
+					}
+				}
+			}
+		}
+#ifdef YIELD_VALUE_CACHING
 		//	Yield calculation depends on city food stores so invalidate cache
 		ClearYieldValueCache();
-	}
 #endif
-}
-
-
-int CvCity::getFoodKept() const
-{
-	return m_iFoodKept;
-}
-
-
-void CvCity::setFoodKept(int iNewValue)
-{
-	m_iFoodKept = iNewValue;
+	}
 }
 
 
 void CvCity::changeFoodKept(int iChange)
 {
-	setFoodKept(getFoodKept() + iChange);
+	if (iChange != 0)
+	{
+		m_iFoodKept = range(m_iFoodKept + iChange, 0, growthThreshold() * getFoodKeptPercent() / 100);
+	}
 }
 
 
 int CvCity::getFoodKeptPercent() const
 {
-	return range(m_iFoodKeptPercent, 0, 95);
+	return range(m_iFoodKeptPercent, 0, 99);
 }
 
 
@@ -14277,14 +14319,6 @@ void CvCity::setNumRealBuildingTimed(const BuildingTypes eBuilding, const bool b
 		if (bNewValue) // Building addition
 		{
 			processBuilding(eBuilding, 1, false, true);
-
-			// Toffer: Certain things should only apply when the building is built the very first time.
-			//	E.g. should not reapply when city change owner or during modifier recalc.
-			//	If this grow large, make a dedicated function for it.
-			if (bFirst)
-			{
-				changePopulation(kBuilding.getPopulationChange());
-			}
 		}
 		else // Building removal
 		{
@@ -14402,13 +14436,40 @@ void CvCity::setupBuilding(const CvBuildingInfo& kBuilding, const BuildingTypes 
 			}
 		}
 
+		if (bFirst)
+		{
+		}
 		if (kBuilding.isAllowsNukes())
 		{
 			GET_PLAYER(getOwner()).makeNukesValid(true);
 		}
 
+		// Toffer: Certain things should only apply when the building is built the very first time.
 		if (bFirst) // Not city copy on owner change, actually built.
 		{
+			{
+				const int iPopChange = kBuilding.getPopulationChange();
+				if (iPopChange != 0)
+				{
+					if (iPopChange > 0)
+					{
+						for (int iI = 0; iI < iPopChange; iI++)
+						{
+							changeFood(growthThreshold(), true);
+						}
+					}
+					else
+					{
+						for (int iI = 0; iI < -iPopChange; iI++)
+						{
+							changeFood(-std::max(growthThreshold(-1), getFood() + 1), true);
+						}
+					}
+					// Don't starve with the extra citizen working nothing
+					AI_updateAssignWork();
+				}
+			}
+
 			if (kBuilding.isCapital())
 			{
 				GET_PLAYER(getOwner()).setCapitalCity(this);
@@ -14432,7 +14493,7 @@ void CvCity::setupBuilding(const CvBuildingInfo& kBuilding, const BuildingTypes 
 					GET_PLAYER(getOwner()).changeGoldenAgeTurns(1 + GET_PLAYER(getOwner()).getGoldenAgeLength());
 				}
 
-				if (kBuilding.getGlobalPopulationChange() != 0)
+				if (kBuilding.getGlobalPopulationChange() > 0)
 				{
 					if (kBuilding.isTeamShare())
 					{
@@ -14442,7 +14503,10 @@ void CvCity::setupBuilding(const CvBuildingInfo& kBuilding, const BuildingTypes 
 							{
 								foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 								{
-									pLoopCity->setPopulation(std::max(1, pLoopCity->getPopulation() + kBuilding.getGlobalPopulationChange()));
+									for (int iI = kBuilding.getGlobalPopulationChange() - 1; iI > -1; iI--)
+									{
+										pLoopCity->changeFood(pLoopCity->growthThreshold());
+									}
 									// so subsequent cities don't starve with the extra citizen working nothing
 									pLoopCity->AI_updateAssignWork();
 								}
@@ -14453,7 +14517,10 @@ void CvCity::setupBuilding(const CvBuildingInfo& kBuilding, const BuildingTypes 
 					{
 						foreach_(CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
 						{
-							pLoopCity->setPopulation(std::max(1, pLoopCity->getPopulation() + kBuilding.getGlobalPopulationChange()));
+							for (int iI = kBuilding.getGlobalPopulationChange() - 1; iI > -1; iI--)
+							{
+								pLoopCity->changeFood(pLoopCity->growthThreshold());
+							}
 							// so subsequent cities don't starve with the extra citizen working nothing
 							pLoopCity->AI_updateAssignWork();
 						}
@@ -16065,39 +16132,6 @@ const std::vector< std::pair<float, float> >& CvCity::getWallOverridePoints() co
 }
 
 // Protected Functions...
-
-void CvCity::doGrowth()
-{
-	const int iDiff = foodDifference();
-	changeFood(iDiff);
-	changeFoodKept(iDiff);
-
-	setFoodKept(range(getFoodKept(), 0, growthThreshold() * getFoodKeptPercent() / 100));
-
-	if (getFood() >= growthThreshold())
-	{
-		if (isHuman() && AI_avoidGrowth() || AI_isEmphasizeAvoidGrowth())
-		{
-			setFood(growthThreshold());
-		}
-		else
-		{
-			changeFood(-std::max(0, growthThreshold() - getFoodKept()));
-			changePopulation(1);
-			CvEventReporter::getInstance().cityGrowth(this, getOwner());
-		}
-	}
-	else if (getFood() < 0)
-	{
-		changeFood(-getFood());
-
-		if (getPopulation() > 1)
-		{
-			changePopulation(-1);
-			changeFood(std::max(0, growthThreshold() * getFoodKeptPercent() / 100));
-		}
-	}
-}
 
 
 void CvCity::doCulture()

@@ -5170,9 +5170,9 @@ void CvDLLWidgetData::parsePopulationHelp(CvWidgetDataStruct &widgetDataStruct, 
 {
 	CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
 
-	if (pHeadSelectedCity != NULL)
+	if (pHeadSelectedCity)
 	{
-		szBuffer.assign(gDLL->getText("TXT_KEY_MISC_FOOD_THRESHOLD", pHeadSelectedCity->getFood(), pHeadSelectedCity->growthThreshold()));
+		szBuffer.assign(gDLL->getText("TXT_KEY_MISC_FOOD_THRESHOLD", pHeadSelectedCity->getFood(), pHeadSelectedCity->growthThreshold(), pHeadSelectedCity->getFoodKept()));
 	}
 }
 
