@@ -1,11 +1,3 @@
-## Sid Meier's Civilization 4
-## Copyright Firaxis Games 2005
-##
-## TechConquest by Bhruic
-## Updated by TheLopez
-## Updated by Dancing Hoskuld to allow language support
-##	see also EnhancedTechConquest game text xml file.
-##
 from CvPythonExtensions import *
 import CvUtil
 
@@ -13,60 +5,61 @@ GC = CyGlobalContext()
 GAME = GC.getGame()
 TRNSLTR = CyTranslator()
 
-# Change the value to True if the conquering civilization can receive
-# technology without the appropriate prerequisites or ignore their civilization technology restrictions.
-#g_bCheckPrereq = True
-
-# Increase or decrease the value to change the base technology transfer percentage amount.
-#g_iBasePercent = 0
-
-# Increase or decrease the value to change the percent amount per city
-# population that will be used to transfer technology to the new owners of the conquered city.
-#g_iPopPercent = 10
-
-# Significance of the number of techs you are behind on the calculation - Range(0, infinity)
-#g_iTechBehindPercent = 200
-
 def loadConfigurationData():
 	global g_bCheckPrereq
 	global g_iBasePercent
 	global g_iPopPercent
 	global g_iTechBehindPercent
+	global g_iFinalModifier
 
 	import SystemPaths
-	path = SystemPaths.modDir + "\Caveman2Cosmos Config.ini"
+	path = SystemPaths.modDir + "\\Assets\\Caveman2Cosmos Config.ini"
 	import ConfigParser
 	Config = ConfigParser.ConfigParser()
 	Config.read(path)
 
 	if Config:
+		# If this is set to False, then you can get beakers towards techs you don't have the prerequisites for.
 		g_bCheckPrereq = Config.get("Enhanced Tech Conquest", "Check Prereq")
 		if g_bCheckPrereq in ("False", "false", "0"):
 			g_bCheckPrereq = False
 		else:
 			g_bCheckPrereq = True
+
+		# Base percentage is an offset value that does not care about how many techs ahead or how big the city in question is.
 		g_iBasePercent = Config.get("Enhanced Tech Conquest", "Base Percent")
 		if g_iBasePercent.isdigit():
 			g_iBasePercent = int(g_iBasePercent)
 		else:
 			g_iBasePercent = 0
+
+		# Significance of city size on the final outcome - Range(1, 100)
 		g_iPopPercent = Config.get("Enhanced Tech Conquest", "Population Percent")
 		if g_iPopPercent.isdigit():
 			g_iPopPercent = int(g_iPopPercent)
 		else:
-			g_iPopPercent = 10
+			g_iPopPercent = 15
 
+		# Significance of the number of techs you are behind the player you conquer the city from on the final outcome.
 		g_iTechBehindPercent = Config.get("Enhanced Tech Conquest", "Techs Behind Percent")
 		if g_iTechBehindPercent.isdigit():
-			g_iTechBehindPercent = int(g_iPopPercent)
+			g_iTechBehindPercent = int(g_iTechBehindPercent)
 		else:
-			g_iTechBehindPercent = 200
+			g_iTechBehindPercent = 300
+
+		# Directly affects the final amount of beakers one get calculated from the two above factors.
+		g_iFinalModifier = Config.get("Enhanced Tech Conquest", "Final Modifier")
+		if g_iFinalModifier.isdigit():
+			g_iFinalModifier = int(g_iFinalModifier)
+		else:
+			g_iFinalModifier = 100
 
 	sprint  = "Enhanced Tech Conquest:\n"
 	sprint += "\tTechnology Transfer Ignore Prereq = %s\n" %str(g_bCheckPrereq)
 	sprint += "\tBase Technology Transfer Percent. = %d\n" %g_iBasePercent
-	sprint += "\tPercentage Per City Population... = %d" %g_iPopPercent
-	sprint += "\tPercentage Per Tech Behind... = %d" %g_iTechBehindPercent
+	sprint += "\tPercentage Per City Population... = %d\n" %g_iPopPercent
+	sprint += "\tPercentage Per Tech Behind... = %d\n" %g_iTechBehindPercent
+	sprint += "\tFinal Modifier... = %d" %g_iFinalModifier
 	print sprint
 
 class EnhancedTechConquest:
@@ -86,8 +79,6 @@ class EnhancedTechConquest:
 		iPopPercent = g_iPopPercent
 		if iPopPercent < 0:
 			iPopPercent = 0
-		elif iPopPercent > 100:
-			iPopPercent = 100
 
 		CyPlayerO = GC.getPlayer(argsList[0]) # old owner
 		CyTeamO = GC.getTeam(CyPlayerO.getTeam())
@@ -111,7 +102,7 @@ class EnhancedTechConquest:
 			# Append the technology to the possible technology list
 			iCost = CyTeamN.getResearchCost(iTech)
 			iProgress = CyTeamN.getResearchProgress(iTech)
-			iRemaining = iCost - iProgress - 1
+			iRemaining = iCost - iProgress
 			if not iRemaining:
 				continue
 			# Append the technology to the possible technology list
@@ -122,11 +113,10 @@ class EnhancedTechConquest:
 			city = argsList[2]
 			fBasePercent += iTechsBehind * g_iTechBehindPercent / 100.0
 			charBeaker = GC.getCommerceInfo(CommerceTypes.COMMERCE_RESEARCH).getChar()
-			iPopulation = city.getPopulation()
+			iPopulation = city.getPopulation() + 1
 			if iPopPercent:
-				fForce = (1 + iTechsBehind/10.0) * iPopulation / (CyPlayerO.getTotalPopulation() + iPopulation)
+				fForce = iPopPercent * (1 + city.isCapital()) * iPopulation / (100.0 * CyPlayerO.getTotalPopulation() + iPopulation)
 
-			iMax = (iPopulation * iPopPercent)
 			iCount = 0
 			iLen = len(aList)
 			szTxt = ""
@@ -135,17 +125,20 @@ class EnhancedTechConquest:
 				iLen -= 1
 				# Get the total number of technology points that will be transfered to the new city owner
 				if iPopPercent:
-					fTemp = 0
-					for i in xrange(iPopulation):
-						fTemp += 100 * (1.0 + GAME.getSorenRandNum(iPopPercent, "TechConquest")) / iMax
-
-					fPercent = fBasePercent + fTemp * fForce
+					fPercent = fBasePercent + fBasePercent * fForce
 					if fPercent <= 0: continue
 				else:
 					fPercent = fBasePercent
 					if fPercent <= 0: return
 
-				iBeakers = int(iCost * fPercent / (20 * (iCount + 5)))
+				fBeakers = iCost * fPercent / (20 * (iCount + 5))
+
+				if g_iFinalModifier > 0:
+					fBeakers = fBeakers * (100 + g_iFinalModifier) / 100
+				elif g_iFinalModifier < 0:
+					fBeakers = fBeakers * 100 / (100 - g_iFinalModifier)
+
+				iBeakers = int(fBeakers)
 
 				if iBeakers < 1: continue
 				if iBeakers > iRemaining:

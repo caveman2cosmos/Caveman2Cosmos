@@ -112,7 +112,6 @@ robocopy PublicMaps "%build_dir%\PublicMaps" %ROBOCOPY_FLAGS%
 robocopy Resource "%build_dir%\Resource" %ROBOCOPY_FLAGS%
 robocopy Docs "%build_dir%\Docs" %ROBOCOPY_FLAGS%
 xcopy "Caveman2Cosmos.ini" "%build_dir%" /R /Y
-xcopy "Caveman2Cosmos Config.ini" "%build_dir%" /R /Y
 xcopy "C2C1.ico" "%build_dir%" /R /Y
 xcopy "C2C2.ico" "%build_dir%" /R /Y
 xcopy "C2C3.ico" "%build_dir%" /R /Y
