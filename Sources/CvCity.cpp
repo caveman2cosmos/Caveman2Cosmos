@@ -131,7 +131,6 @@ CvCity::CvCity()
 	m_pabReligiouslyDisabledBuilding = NULL;
 	m_paiSpecialistBannedCount = NULL;
 	m_paiDamageAttackingUnitCombatCount = NULL;
-	m_paiBuildingCostPopulationCount = NULL;
 	m_paiHealUnitCombatTypeVolume = NULL;
 
 #ifdef CAN_TRAIN_CACHING
@@ -441,7 +440,6 @@ void CvCity::uninit()
 	SAFE_DELETE_ARRAY(m_paiStartDeferredSectionNumBonuses);
 	SAFE_DELETE_ARRAY(m_paiSpecialistBannedCount);
 	SAFE_DELETE_ARRAY(m_paiDamageAttackingUnitCombatCount);
-	SAFE_DELETE_ARRAY(m_paiBuildingCostPopulationCount);
 	SAFE_DELETE_ARRAY(m_paiHealUnitCombatTypeVolume);
 	SAFE_DELETE_ARRAY2(m_ppaaiLocalSpecialistExtraYield, GC.getNumSpecialistInfos());
 	SAFE_DELETE_ARRAY2(m_ppaaiLocalSpecialistExtraCommerce, GC.getNumSpecialistInfos());
@@ -785,14 +783,12 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 		m_paiBuildingOriginalTime = new int[GC.getNumBuildingInfos()];
 		m_paiNumRealBuilding = new int[GC.getNumBuildingInfos()];
 		m_pabReligiouslyDisabledBuilding = new bool[GC.getNumBuildingInfos()];
-		m_paiBuildingCostPopulationCount = new int[GC.getNumBuildingInfos()];
 		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 		{
 			m_paiBuildingOriginalOwner[iI] = -1;
 			m_paiBuildingOriginalTime[iI] = MIN_INT;
 			m_paiNumRealBuilding[iI] = 0;
 			m_pabReligiouslyDisabledBuilding[iI] = false;
-			m_paiBuildingCostPopulationCount[iI] = 0;
 		}
 
 		FAssertMsg((0 < GC.getNumUnitInfos()), "GC.getNumUnitInfos() is not greater than zero but an array is being allocated in CvCity::reset");
@@ -4746,16 +4742,6 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 		changeNoUnhappinessCount(kBuilding.isNoUnhappiness() ? iChange : 0);
 		changeNoUnhealthyPopulationCount(kBuilding.isNoUnhealthyPopulation() ? iChange : 0);
 		changeBuildingOnlyHealthyCount(kBuilding.isBuildingOnlyHealthy() ? iChange : 0);
-
-		if (iChange == 1)
-		{
-			changePopulation(kBuilding.getPopulationChange() * iChange);
-			if (canBuildingCostPopulation(eBuilding))
-			{
-				int iPopChange = getPopulation() * kBuilding.getOneTimePopulationPercentLoss() / 100;
-				changePopulation(-iPopChange);
-			}
-		}
 		changeRevIndexDistanceMod(kBuilding.getRevIdxDistanceModifier() * iChange);
 	}
 	for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
@@ -14291,6 +14277,14 @@ void CvCity::setNumRealBuildingTimed(const BuildingTypes eBuilding, const bool b
 		if (bNewValue) // Building addition
 		{
 			processBuilding(eBuilding, 1, false, true);
+
+			// Toffer: Certain things should only apply when the building is built the very first time.
+			//	E.g. should not reapply when city change owner or during modifier recalc.
+			//	If this grow large, make a dedicated function for it.
+			if (bFirst)
+			{
+				changePopulation(kBuilding.getPopulationChange());
+			}
 		}
 		else // Building removal
 		{
@@ -17167,7 +17161,6 @@ void CvCity::read(FDataStreamBase* pStream)
 		}
 	}
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_PROPERTIES, GC.getNumPropertyInfos(), m_paiAidRate);
-	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingCostPopulationCount);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_PROMOTIONLINES, GC.getNumPromotionLineInfos(), m_paiPromotionLineAfflictionAttackCommunicability);
 	WRAPPER_READ(wrapper, "CvCity", &m_iQuarantinedCount);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_pabHadRawVicinityBonus);
@@ -17767,8 +17760,6 @@ void CvCity::write(FDataStreamBase* pStream)
 	}
 
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_PROPERTIES, GC.getNumPropertyInfos(), m_paiAidRate);
-
-	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingCostPopulationCount);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_PROMOTIONLINES, GC.getNumPromotionLineInfos(), m_paiPromotionLineAfflictionAttackCommunicability);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iQuarantinedCount);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_pabHadRawVicinityBonus);
@@ -23353,30 +23344,6 @@ void CvCity::changeDamageAttackingUnitCombatCount(UnitCombatTypes eUnitCombat, i
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombat);
 
 	m_paiDamageAttackingUnitCombatCount[eUnitCombat] += iChange;
-}
-
-bool CvCity::canBuildingCostPopulation(BuildingTypes eBuilding) const
-{
-	return m_paiBuildingCostPopulationCount[eBuilding] < 1;
-}
-
-int CvCity::getBuildingCostPopulation(BuildingTypes eBuilding) const
-{
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding);
-
-	return m_paiBuildingCostPopulationCount[eBuilding];
-}
-
-void CvCity::setBuildingCostPopulation(BuildingTypes eBuilding, int iValue)
-{
-	m_paiBuildingCostPopulationCount[eBuilding] = iValue;
-}
-
-void CvCity::changeBuildingCostPopulationCount(BuildingTypes eBuilding, int iChange)
-{
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eBuilding);
-
-	m_paiBuildingCostPopulationCount[eBuilding] += iChange;
 }
 
 

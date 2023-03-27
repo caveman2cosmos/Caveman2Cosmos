@@ -1774,7 +1774,6 @@ protected:
 	int m_iPrioritySpecialist;
 	int* m_paiSpecialistBannedCount;
 	int* m_paiDamageAttackingUnitCombatCount;
-	int* m_paiBuildingCostPopulationCount;
 	int* m_paiHealUnitCombatTypeVolume;
 	int m_iExtraInsidiousness;
 	int m_iExtraInvestigation;
@@ -2009,11 +2008,6 @@ public:
 	int getDamageAttackingUnitCombatCount(UnitCombatTypes eUnitCombat) const;
 	void setDamageAttackingUnitCombatCount(UnitCombatTypes eUnitCombat, int iValue);
 	void changeDamageAttackingUnitCombatCount(UnitCombatTypes eUnitCombat, int iChange);
-
-	bool canBuildingCostPopulation(BuildingTypes eBuilding) const;
-	int getBuildingCostPopulation(BuildingTypes eBuilding) const;
-	void setBuildingCostPopulation(BuildingTypes eBuilding, int iValue);
-	void changeBuildingCostPopulationCount(BuildingTypes eBuilding, int iChange);
 
 	int cityDefenseRecoveryRate() const;
 	int getInvestigationTotal(bool bActual = false) const;

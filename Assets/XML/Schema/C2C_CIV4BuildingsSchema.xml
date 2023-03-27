@@ -37,7 +37,6 @@
 	<ElementType name="iOutbreakBase" content="textOnly" dt:type="int"/>
 	<ElementType name="iOvercomeBase" content="textOnly" dt:type="int"/>
 	<ElementType name="iPopulationChange" content="textOnly" dt:type="int"/>
-	<ElementType name="iOneTimePopulationPercentLoss" content="textOnly" dt:type="int"/>
 	<!-- Booleans -->
 	<ElementType name="bDamageToAttackerIgnoresArmor" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bDamageAllAttackers" content="textOnly" dt:type="boolean"/>
@@ -995,7 +994,6 @@
 		<element type="iOvercomeBase" minOccurs="0"/>
 		<element type="iTradeCommunicability" minOccurs="0"/>
 		<element type="iPopulationChange" minOccurs="0"/>
-		<element type="iOneTimePopulationPercentLoss" minOccurs="0"/>
 		<element type="iFrontSupportPercentModifier" minOccurs="0"/>
 		<element type="iShortRangeSupportPercentModifier" minOccurs="0"/>
 		<element type="iMediumRangeSupportPercentModifier" minOccurs="0"/>

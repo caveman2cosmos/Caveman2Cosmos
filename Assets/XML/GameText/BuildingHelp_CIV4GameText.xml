@@ -997,12 +997,6 @@
 		<Russian>[ICON_BULLET]Ãðàæäàíå áóäóò áóíòîâàòü ïðîòèâ âðàæåñêèõ îêêóïàíòîâ %d1% äîëüøå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDINGHELP_ONE_TIME_POPULATION_LOSS</Tag>
-		<English>[ICON_BULLET]When the city gets this building, for the first time ONLY, it loses %d1_amount population.</English>
-		<French>[ICON_BULLET]Lorsque la ville obtient ce bâtiment, pour la première fois SEULEMENT, elle perd %d1_amount population.</French>
-		<Russian>[ICON_BULLET]Когда в городе ВПЕРВЫЕ возводится это здание, он теряет %d1_amount населения.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_PER_CITY_WITH</Tag>
 		<English>[SPACE]per City with %F1_RelIcon</English>
 		<French>[SPACE]par ville avec : %F1_RelIcon</French>

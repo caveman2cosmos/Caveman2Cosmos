@@ -279,7 +279,6 @@ m_ppaiBonusYieldModifier(NULL)
 ,m_iInsidiousness(0)
 ,m_iInvestigation(0)
 ,m_iPopulationChange(0)
-,m_iOneTimePopulationPercentLoss(0)
 // booleans
 ,m_bDamageToAttackerIgnoresArmor(false)
 ,m_bDamageAllAttackers(false)
@@ -1198,11 +1197,6 @@ int CvBuildingInfo::getPopulationChange() const
 	return m_iPopulationChange;
 }
 
-int CvBuildingInfo::getOneTimePopulationPercentLoss() const
-{
-	return m_iOneTimePopulationPercentLoss;
-}
-
 //Booleans
 bool CvBuildingInfo::isDamageToAttackerIgnoresArmor() const
 {
@@ -1900,7 +1894,6 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iInsidiousness);
 	CheckSum(iSum, m_iInvestigation);
 	CheckSum(iSum, m_iPopulationChange);
-	CheckSum(iSum, m_iOneTimePopulationPercentLoss);
 	CheckSum(iSum, m_bDamageToAttackerIgnoresArmor);
 	CheckSum(iSum, m_bDamageAllAttackers);
 	CheckSum(iSum, m_bDamageAttackerCapable);
@@ -3029,7 +3022,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iInsidiousness, L"iInsidiousness");
 	pXML->GetOptionalChildXmlValByName(&m_iInvestigation, L"iInvestigation");
 	pXML->GetOptionalChildXmlValByName(&m_iPopulationChange, L"iPopulationChange");
-	pXML->GetOptionalChildXmlValByName(&m_iOneTimePopulationPercentLoss, L"iOneTimePopulationPercentLoss");
 	pXML->GetOptionalChildXmlValByName(&m_bDamageToAttackerIgnoresArmor, L"bDamageToAttackerIgnoresArmor");
 	pXML->GetOptionalChildXmlValByName(&m_bDamageAllAttackers, L"bDamageAllAttackers");
 	if (m_bDamageAllAttackers)
@@ -4093,7 +4085,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	if (getInsidiousness() == iDefault) m_iInsidiousness = pClassInfo->getInsidiousness();
 	if (getInvestigation() == iDefault) m_iInvestigation = pClassInfo->getInvestigation();
 	if (getPopulationChange() == iDefault) m_iPopulationChange = pClassInfo->getPopulationChange();
-	if (getOneTimePopulationPercentLoss() == iDefault) m_iOneTimePopulationPercentLoss = pClassInfo->getOneTimePopulationPercentLoss();
 	//Booleans
 	if (isDamageToAttackerIgnoresArmor() == bDefault) m_bDamageToAttackerIgnoresArmor = pClassInfo->isDamageToAttackerIgnoresArmor();
 	if (isDamageAllAttackers() == bDefault) m_bDamageAllAttackers = pClassInfo->isDamageAllAttackers();

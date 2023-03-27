@@ -221,7 +221,6 @@ public:
 	int getInsidiousness() const;
 	int getInvestigation() const;
 	int getPopulationChange() const;
-	int getOneTimePopulationPercentLoss() const;
 	int getMaxPopAllowed() const;
 
 	float getVisibilityPriority() const				{ return m_fVisibilityPriority; }
@@ -691,7 +690,6 @@ private:
 	int m_iInsidiousness;
 	int m_iInvestigation;
 	int m_iPopulationChange;
-	int m_iOneTimePopulationPercentLoss;
 	int m_iMaxPopAllowed;
 
 	float m_fVisibilityPriority;

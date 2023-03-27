@@ -21329,13 +21329,6 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 		szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_POPULATION_CHANGE", iPopChange));
 	}
 
-	int iPopLoss = kBuilding.getOneTimePopulationPercentLoss();
-	if (iPopLoss != 0)
-	{
-		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_ONE_TIME_POPULATION_LOSS", iPopLoss));
-	}
-
 	if (!bRelDisabled)
 	{
 		if (kBuilding.getNumPopulationEmployed() > 0)
