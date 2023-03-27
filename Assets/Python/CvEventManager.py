@@ -253,7 +253,6 @@ class CvEventManager:
 					"THE_MOTHERLAND_CALLS"	: GC.getInfoTypeForString("BUILDING_THE_MOTHERLAND_CALLS"),
 					"ISHTAR"				: GC.getInfoTypeForString('BUILDING_THE_ISHTAR_GATE'),
 					"GREAT_JAGUAR_TEMPLE"	: GC.getInfoTypeForString('BUILDING_TEMPLE_OF_AH_CACAO'),
-					"GREAT_BATH"			: GC.getInfoTypeForString('BUILDING_GREAT_BATH_OF_MOHENJO_DARO'),
 					"TOPKAPI_PALACE"		: GC.getInfoTypeForString("BUILDING_TOPKAPI_PALACE"),
 					"NEANDERTHAL_EMBASSY"	: GC.getInfoTypeForString("BUILDING_CULTURE_NEANDERTHAL")
 				}
@@ -572,11 +571,11 @@ class CvEventManager:
 		# Find special buildings built where by whom.
 		mapBuildingType = self.mapBuildingType
 		aList0 = [ # Only meant for world wonders
-			"CRUSADE",			"GREAT_ZIMBABWE",		"HELSINKI",				"ALAMO",
-			"LASCAUX",			"WORLD_BANK",			"TAIPEI_101",			"CYRUS_CYLINDER",
-			"FA_MEN_SI",		"WEMBLEY",				"PERGAMON",				"CYRUS_TOMB",			"TSUKIJI",
-			"BIODOME",			"NAZCA_LINES",			"THE_MOTHERLAND_CALLS",	"GREAT_JAGUAR_TEMPLE",	"GREAT_BATH",
-			"TOPKAPI_PALACE",
+			"CRUSADE",				"GREAT_ZIMBABWE",	"HELSINKI",		"ALAMO",
+			"LASCAUX",				"WORLD_BANK",		"TAIPEI_101",	"CYRUS_CYLINDER",
+			"FA_MEN_SI",			"WEMBLEY",			"PERGAMON",		"CYRUS_TOMB",
+			"TSUKIJI", 				"BIODOME",			"NAZCA_LINES",	"THE_MOTHERLAND_CALLS",
+			"GREAT_JAGUAR_TEMPLE",	"TOPKAPI_PALACE",
 		] # KEY
 		aList1 = [] # iBuilding
 		aList2 = [] # iTech (Obsolete)
@@ -2424,9 +2423,6 @@ class CvEventManager:
 		iPlayer = CyCity.getOwner()
 		# Give extra population to new cities
 		iPop = 0
-		aWonderTuple = self.aWonderTuple
-		if "GREAT_BATH" in aWonderTuple[0] and iPlayer == aWonderTuple[4][aWonderTuple[0].index("GREAT_BATH")]:
-			iPop += 1
 		if CyUnit:
 			iUnit = CyUnit.getUnitType()
 			if iUnit in self.mapSettlerPop:
