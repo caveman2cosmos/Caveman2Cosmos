@@ -36222,7 +36222,7 @@ void CvUnit::changeExtraBuildType(bool bChange, BuildTypes eBuild)
 
 			if (m_pUnitInfo->getNumBuilds() == 0 && m_worker->getExtraBuilds().size() == 0)
 			{
-				CvCity* city = owner.getCity(m_worker->getAssignedCity());
+				CvCity* city = GET_PLAYER(getOwner()).getCity(m_worker->getAssignedCity());
 				if (city)
 				{
 					OutputDebugString(CvString::format("Worker at (%d,%d) stopped being a worker with mission for city %S\n", getX(), getY(), city->getName().GetCString()).c_str());
