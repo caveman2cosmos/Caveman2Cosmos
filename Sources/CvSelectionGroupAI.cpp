@@ -1024,7 +1024,7 @@ void CvSelectionGroupAI::AI_setMissionAI(MissionAITypes eNewMissionAI, const CvP
 			{
 				foreach_(CvUnit* unitX, units())
 				{
-					if (unitX->AI_getUnitAIType() == UNITAI_WORKER)
+					if (unitX->isWorker())
 					{
 						if (gUnitLogLevel > 2)
 						{

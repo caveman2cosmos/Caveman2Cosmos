@@ -1575,6 +1575,16 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 			}
 		}
 
+		if (isWorker())
+		{
+			CvCity* city = owner.getCity(m_worker->getAssignedCity());
+			if (city)
+			{
+				OutputDebugString(CvString::format("Worker at (%d,%d) killed with mission for city %S\n", getX(), getY(), city->getName().GetCString()).c_str());
+				city->setWorkerHave(getID(), false);
+			}
+		}
+
 		if (bDelay)
 		{
 			m_bDeathDelay = true;
@@ -1680,15 +1690,6 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 		OutputDebugString(CvString::format("Unit %S of player %S killed\n", getName().GetCString(), owner.getCivilizationDescription(0)).c_str());
 
 		owner.AI_changeNumAIUnits(AI_getUnitAIType(), -1);
-		if (isWorker())
-		{
-			CvCity* city = owner.getCity(m_worker->getAssignedCity());
-			if (city)
-			{
-				OutputDebugString(CvString::format("Worker at (%d,%d) killed with mission for city %S\n", getX(), getY(), city->getName().GetCString()).c_str());
-				city->setWorkerHave(getID(), false);
-			}
-		}
 		AI_killed(); // Update AI counts for this unit
 
 		setCommander(false);
@@ -36445,6 +36446,12 @@ void CvUnit::changeExtraBuildType(bool bChange, BuildTypes eBuild)
 
 			if (m_pUnitInfo->getNumBuilds() == 0 && m_worker->getExtraBuilds().size() == 0)
 			{
+				CvCity* city = GET_PLAYER(getOwner()).getCity(m_worker->getAssignedCity());
+				if (city)
+				{
+					OutputDebugString(CvString::format("Worker at (%d,%d) stopped being a worker with mission for city %S\n", getX(), getY(), city->getName().GetCString()).c_str());
+					city->setWorkerHave(getID(), false);
+				}
 				delete m_worker;
 				m_worker = NULL;
 			}

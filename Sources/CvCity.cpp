@@ -24134,14 +24134,22 @@ void CvCity::setWorkerHave(const int iUnitID, const bool bNewValue)
 	}
 	else if (itr != m_workers.end())
 	{
-		UnitCompWorker* workerComp = GET_PLAYER(getOwner()).getUnit(iUnitID)->getWorkerComponent();
-		if (workerComp)
+		CvUnit* unitX = GET_PLAYER(getOwner()).getUnit(iUnitID);
+		if (unitX)
 		{
-			workerComp->setCityAssignment(-1);
+			UnitCompWorker* workerComp = unitX->getWorkerComponent();
+			if (workerComp)
+			{
+				workerComp->setCityAssignment(-1);
+			}
+			else
+			{
+				FErrorMsg("UnitCompWorker unexpectedly not initialized!");
+			}
 		}
 		else
 		{
-			FErrorMsg("UnitCompWorker unexpectedly not initialized");
+			FErrorMsg("m_workers contained an invalid unitID!")
 		}
 		m_workers.erase(itr);
 	}
