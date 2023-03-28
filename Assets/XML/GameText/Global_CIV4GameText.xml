@@ -6163,23 +6163,23 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ENHANCED_TECH_CONQUEST_FAIL</Tag>
-		<English>You find nothing worth learning from the inhabitants of</English>
-		<French>Vous n'avez rien pu obtenir d'utile de la part des habitants de</French>
-		<German>Es gibt nichts Lernenswertes zu finden bei den Einwohnern von</German>
-		<Italian>Non hai trovato niente che valesse la pena di imparare dagli abitanti di</Italian>
-		<Spanish>No has encontrado nada que aprender de los habitantes de</Spanish>
-		<Polish>Nie znalazłeś niczego wartego do nauczenia od mieszkańców</Polish>
-		<Russian>Âû òàê è íå íàøëè íè÷åãî ñòîÿùåãî äëÿ èçó÷åíèÿ ó òóçåìöåâ.</Russian>
+		<English>You find nothing worth learning from the inhabitants of %s</English>
+		<French>Vous n'avez rien pu obtenir d'utile de la part des habitants de %s</French>
+		<German>Es gibt nichts Lernenswertes zu finden bei den Einwohnern von %s</German>
+		<Italian>Non hai trovato niente che valesse la pena di imparare dagli abitanti di %s</Italian>
+		<Spanish>No has encontrado nada que aprender de los habitantes de %s</Spanish>
+		<Polish>Nie znalazłeś niczego wartego do nauczenia od mieszkańców %s</Polish>
+		<Russian>Âû òàê è íå íàøëè íè÷åãî ñòîÿùåãî äëÿ èçó÷åíèÿ ó òóçåìöåâ %s.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ENHANCED_TECH_CONQUEST_SUCESS</Tag>
-		<English>From the inhabitants of %s, you learn some of the secrets of: %s</English>
-		<French>En interrogeant les habitants de %s, vous avez découvert des secrets concernant %s</French>
-		<German>Bei der Befragung der Einwohner von %s, entdecken Sie die Geheimnisse der Technologie %s</German>
-		<Italian>Interrogando gli abitanti di %s, hai scoperto alcuni segreti della tecnologia %s</Italian>
-		<Spanish>De los habitantes de %s, has aprendido algunos de los secretos de la tecnología %s.</Spanish>
-		<Polish>Od mieszkańców %s nauczyłeś się sekretów: %s</Polish>
-		<Russian>От жителей %s вы узнаете некоторые секреты: %s</Russian>
+		<English>From the inhabitants of %s, you learn some of the secrets of:</English>
+		<French>En interrogeant les habitants de %s, vous avez découvert des secrets concernant</French>
+		<German>Bei der Befragung der Einwohner von %s, entdecken Sie die Geheimnisse der Technologie</German>
+		<Italian>Interrogando gli abitanti di %s, hai scoperto alcuni segreti della tecnologia</Italian>
+		<Spanish>De los habitantes de %s, has aprendido algunos de los secretos de la tecnología.</Spanish>
+		<Polish>Od mieszkańców %s nauczyłeś się sekretów:</Polish>
+		<Russian>От жителей %s вы узнаете некоторые секреты:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_ANCIENT</Tag>

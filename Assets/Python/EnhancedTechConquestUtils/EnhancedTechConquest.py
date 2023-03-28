@@ -7,7 +7,7 @@ TRNSLTR = CyTranslator()
 
 def loadConfigurationData():
 	global g_bCheckPrereq
-	global g_iBasePercent
+	global g_iBasePercentOffset
 	global g_iPopPercent
 	global g_iTechBehindPercent
 	global g_iFinalModifier
@@ -27,11 +27,11 @@ def loadConfigurationData():
 			g_bCheckPrereq = True
 
 		# Base percentage is an offset value that does not care about how many techs ahead or how big the city in question is.
-		g_iBasePercent = Config.get("Enhanced Tech Conquest", "Base Percent")
-		if g_iBasePercent.isdigit():
-			g_iBasePercent = int(g_iBasePercent)
+		g_iBasePercentOffset = Config.get("Enhanced Tech Conquest", "Base Percent Offset")
+		if g_iBasePercentOffset.isdigit():
+			g_iBasePercentOffset = int(g_iBasePercentOffset)
 		else:
-			g_iBasePercent = 0
+			g_iBasePercentOffset = 0
 
 		# Significance of city size on the final outcome - Range(1, 100)
 		g_iPopPercent = Config.get("Enhanced Tech Conquest", "Population Percent")
@@ -56,7 +56,7 @@ def loadConfigurationData():
 
 	sprint  = "Enhanced Tech Conquest:\n"
 	sprint += "\tTechnology Transfer Ignore Prereq = %s\n" %str(g_bCheckPrereq)
-	sprint += "\tBase Technology Transfer Percent. = %d\n" %g_iBasePercent
+	sprint += "\tBase Technology Transfer Percent. = %d\n" %g_iBasePercentOffset
 	sprint += "\tPercentage Per City Population... = %d\n" %g_iPopPercent
 	sprint += "\tPercentage Per Tech Behind... = %d\n" %g_iTechBehindPercent
 	sprint += "\tFinal Modifier... = %d" %g_iFinalModifier
@@ -69,7 +69,7 @@ class EnhancedTechConquest:
 		# if not bConquest
 		if not argsList[3]: return
 
-		fBasePercent = g_iBasePercent
+		fBasePercent = g_iBasePercentOffset
 		if fBasePercent < 1 and g_iTechBehindPercent < 1: return
 
 		iOwnerNew = argsList[1]
@@ -85,7 +85,8 @@ class EnhancedTechConquest:
 		CyTeamN = GC.getTeam(CyPlayerN.getTeam())
 
 		bCheckPrereq = g_bCheckPrereq
-		aList = []
+		aList0 = []
+		aList1 = []
 		iTechsBehind = 0
 		for iTech in range(GC.getNumTechInfos()):
 			# Continue if the conquering team does have the tech
@@ -97,69 +98,118 @@ class EnhancedTechConquest:
 				continue
 			iTechsBehind += 1
 			# Continue if the conquerer cannot research the technology
-			if bCheckPrereq and not CyPlayerN.canResearch(iTech, True, True):
+			bImmediateTech = CyPlayerN.canResearch(iTech, True, True);
+			if bCheckPrereq and not bImmediateTech:
 				continue
 			# Append the technology to the possible technology list
 			iCost = CyTeamN.getResearchCost(iTech)
-			iProgress = CyTeamN.getResearchProgress(iTech)
-			iRemaining = iCost - iProgress
-			if not iRemaining:
-				continue
+			iRemaining = iCost - CyTeamN.getResearchProgress(iTech)
 			# Append the technology to the possible technology list
-			aList.append((iTech, iCost, iRemaining))
+			if bImmediateTech:
+				aList0.append((iTech, iCost, iRemaining))
+			elif iRemaining > iCost *2/3:
+				aList1.append((iTech, iCost, iRemaining / 3))
+			elif iRemaining > iCost / 2:
+				aList1.append((iTech, iCost, iRemaining / 2))
+			elif iRemaining > iCost / 3:
+				aList1.append((iTech, iCost, iRemaining*2/3))
+			else:
+				aList1.append((iTech, iCost, iRemaining - 1))
 
-		if aList:
+		if not aList0: return
 
-			city = argsList[2]
-			fBasePercent += iTechsBehind * g_iTechBehindPercent / 100.0
-			charBeaker = GC.getCommerceInfo(CommerceTypes.COMMERCE_RESEARCH).getChar()
+		fBasePercent += iTechsBehind * g_iTechBehindPercent / 100.0
+		if fBasePercent < 1: return
+
+		city = argsList[2]
+		charBeaker = GC.getCommerceInfo(CommerceTypes.COMMERCE_RESEARCH).getChar()
+		if iPopPercent:
 			iPopulation = city.getPopulation() + 1
+			fForce = iPopPercent * (1 + city.isCapital()) * iPopulation / (100.0 * (CyPlayerO.getTotalPopulation() + iPopulation))
+
+		col = ColorTypes(GC.getInfoTypeForString("COLOR_GREEN"))
+		bHuman = CyPlayerN.isHuman()
+		iCount = 0
+		iLen0 = len(aList0)
+		iLen1 = len(aList1)
+		iTechs = iLen0 + iLen1
+		if iTechs > 1:
+			fBase = iTechs / 4.0
+			fAttenuation = 100.0 / fBase
+
+		aTxtList = []
+		bGotTech = False
+
+		while iLen0 or iLen1:
+
+			if iLen0:
+				iTech, iCost, iRemaining = aList0.pop(GAME.getSorenRandNum(iLen0, "random"))
+				iLen0 -= 1
+				bFirstList = True
+			else:
+				bFirstList = False
+				iTech, iCost, iRemaining = aList1.pop(GAME.getSorenRandNum(iLen1, "random"))
+				iLen1 -= 1
+				if bGotTech and CyPlayerN.canResearch(iTech, True, True):
+					iRemaining = iCost - CyTeamN.getResearchProgress(iTech)
+				else: iCost = iRemaining
+
+			# Get the total number of technology points that will be transfered to the new city owner
 			if iPopPercent:
-				fForce = iPopPercent * (1 + city.isCapital()) * iPopulation / (100.0 * CyPlayerO.getTotalPopulation() + iPopulation)
+				fPercent = fBasePercent + fBasePercent * fForce
+				if fPercent <= 0: continue
+			else:
+				fPercent = fBasePercent
+				if fPercent <= 0: return
 
-			iCount = 0
-			iLen = len(aList)
-			szTxt = ""
-			while iLen:
-				iTech, iCost, iRemaining = aList.pop(GAME.getSorenRandNum(iLen, "random"))
-				iLen -= 1
-				# Get the total number of technology points that will be transfered to the new city owner
-				if iPopPercent:
-					fPercent = fBasePercent + fBasePercent * fForce
-					if fPercent <= 0: continue
-				else:
-					fPercent = fBasePercent
-					if fPercent <= 0: return
+			if iTechs > 1:
+				fBeakers = iCost * fPercent / (20*(iTechs-1) + fAttenuation * (iCount + fBase))
+			else: fBeakers = iCost * fPercent / 100
 
-				fBeakers = iCost * fPercent / (20 * (iCount + 5))
+			if g_iFinalModifier > 0:
+				fBeakers = fBeakers * (100 + g_iFinalModifier) / 100
+			elif g_iFinalModifier < 0:
+				fBeakers = fBeakers * 100 / (100 - g_iFinalModifier)
 
-				if g_iFinalModifier > 0:
-					fBeakers = fBeakers * (100 + g_iFinalModifier) / 100
-				elif g_iFinalModifier < 0:
-					fBeakers = fBeakers * 100 / (100 - g_iFinalModifier)
+			iBeakers = int(fBeakers)
 
-				iBeakers = int(fBeakers)
+			if iBeakers < 1: continue
+			if iBeakers > iRemaining:
+				iBeakers = iRemaining
+				if bFirstList:
+					bGotTech = True
 
-				if iBeakers < 1: continue
-				if iBeakers > iRemaining:
-					iBeakers = iRemaining
+			# Increase the research progress for the new city owner
+			CyTeamN.changeResearchProgress(iTech, iBeakers, iOwnerNew)
 
-				# Increase the research progress for the new city owner
-				CyTeamN.changeResearchProgress(iTech, iBeakers, iOwnerNew)
+			if bHuman:
 
-				szTxt += "\n\t" + GC.getTechInfo(iTech).getDescription() + u" <-> %i%c" %(iBeakers, charBeaker)
-				iCount += 1
+				if not (iCount % 6):
+					if iCount:
+						aTxtList.append(szTxt)
+					szTxt = "\n\t* " + GC.getTechInfo(iTech).getDescription() + u" <-> %i%c" %(iBeakers, charBeaker)
+				else: szTxt += "\n\t* " + GC.getTechInfo(iTech).getDescription() + u" <-> %i%c" %(iBeakers, charBeaker)
 
-			if iOwnerNew == GAME.getActivePlayer():
+			iCount += 1
 
-				if iCount: # Inform the player they got some new technology points
-					szTxt = TRNSLTR.getText("TXT_KEY_ENHANCED_TECH_CONQUEST_SUCESS", ()) %(city.getName(), szTxt)
-				else: # Inform the player they didn't get any new technologies
-					szTxt = TRNSLTR.getText("TXT_KEY_ENHANCED_TECH_CONQUEST_FAIL", ()) + " %s" %(city.getName())
+		if bHuman: # Inform the player they didn't get any new technologies
+			if iCount:
+				if (iCount % 6):
+					aTxtList.append(szTxt)
 
-				CvUtil.sendMessage(
-					szTxt, iOwnerNew, 20,
-					GC.getCivilizationInfo(CyPlayerO.getCivilizationType()).getButton(),
-					ColorTypes(GC.getInfoTypeForString("COLOR_GREEN")),
-					city.getX(), city.getY(), True, True
-				)
+				bFirst = True
+				while aTxtList:
+					
+					if bFirst:
+						szTxt0 = aTxtList.pop(0)
+						bFirst = False
+					else: CvUtil.sendMessage(aTxtList.pop(), iOwnerNew, 20, "", col, city.getX(), city.getY(), True, True)
+
+				szTxt = TRNSLTR.getText("TXT_KEY_ENHANCED_TECH_CONQUEST_SUCESS", ()) % city.getName() + szTxt0
+			else: szTxt = TRNSLTR.getText("TXT_KEY_ENHANCED_TECH_CONQUEST_FAIL", ()) % city.getName()
+
+			CvUtil.sendMessage(
+				szTxt, iOwnerNew, 20,
+				GC.getCivilizationInfo(CyPlayerO.getCivilizationType()).getButton(),
+				col, city.getX(), city.getY(), True, True
+			)
