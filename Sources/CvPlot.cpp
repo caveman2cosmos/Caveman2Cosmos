@@ -10323,33 +10323,56 @@ void CvPlot::doCulture()
 	{
 		const int decayPermille = GC.getTILE_CULTURE_DECAY_PERCENT() * 1000 / GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 
+
+		// sp00n - Be aware of buffer overflows if the current plot culture is above 2 million (2,147,483)
+		//         Multiplying it by 1000 and then dividing by 1000 will trigger a buffer overflow
+		//         Conversely, dividing by 1000 first will drop any culture that is lower than 1000 to begin with
 		for (int i = 0; i < MAX_PLAYERS; i++)
 		{
 			const PlayerTypes ePlayerX = static_cast<PlayerTypes>(i);
+			const int iCurrentPlayerCulture = getCulture(ePlayerX);
 
-			if (getCulture(ePlayerX) > 0)
+			int iIsCultureOverOne = 0;	// We only need this for GAMEOPTION_CULTURE_EQUILIBRIUM
+			int iDecayFactor = 0; // Init as 0 to be able to determine if we actually want to decay
+
+
+			if (iCurrentPlayerCulture < 1)
 			{
-				if (GC.getGame().isOption(GAMEOPTION_CULTURE_EQUILIBRIUM))
-				{
-					// By limiting decay to avoid 2+ -> 0, we can ensure that putting 2 culture on a tile will always be above 1 turn decay
-					const int iIsOverOne = getCulture(ePlayerX) > 1;
-					if (isInCultureRangeOfCityByPlayer(ePlayerX))
-					{
-						setCulture(ePlayerX, std::max(iIsOverOne, getCulture(ePlayerX) * (1000 - decayPermille) / 1000), false, false, true);
-					}
-					// Decay 15x faster (to 45% at default speeds) if outside of city control in equilibrium, since we can't immediately set to unowned when negative
-					else
-					{
-						setCulture(ePlayerX, std::max(iIsOverOne, getCulture(ePlayerX) * (1000 - 15 * decayPermille) / 1000), false, false, true);
-					}
-				}
-				else if (getCultureRateThisTurn(ePlayerX) < 1 && (!getPlotCity() || getOwner() != ePlayerX))
-				{
-					setCulture(ePlayerX, std::max(0, getCulture(ePlayerX) * (1000 - decayPermille) / 1000), false, false, true);
-				}
+				continue;
+			}
+
+			if (GC.getGame().isOption(GAMEOPTION_CULTURE_EQUILIBRIUM))
+			{
+				// By limiting decay to avoid 2+ -> 0, we can ensure that putting 2 culture on a tile will always be above 1 turn decay
+				int iIsCultureOverOne = iCurrentPlayerCulture > 1 ? 1 : 0;
+
+				// Decay 15x faster (to 45% at default speeds) if outside of city control in equilibrium, since we can't immediately set to unowned when negative
+				iDecayFactor = !isInCultureRangeOfCityByPlayer(ePlayerX) ? 15 : 1;
+			}
+			else if (getCultureRateThisTurn(ePlayerX) < 1 && (!getPlotCity() || getOwner() != ePlayerX))
+			{
+				iDecayFactor = 1;
+			}
+			
+			if (iDecayFactor < 1)
+			{
+				continue;
+			}
+
+			
+			// Buffer overflow protection & low culture drop protection
+			// Use 1 million as the upper limit, it's under the critical value of 2,147,483 * 1000 and well above 1000 / 1000
+			if (iCurrentPlayerCulture > 1000000)
+			{
+				setCulture(ePlayerX, std::max(iIsCultureOverOne, iCurrentPlayerCulture / 1000 * (1000 - iDecayFactor * decayPermille)), false, false, true);
+			}
+			else
+			{
+				setCulture(ePlayerX, std::max(iIsCultureOverOne, iCurrentPlayerCulture * (1000 - iDecayFactor * decayPermille) / 1000), false, false, true);
 			}
 		}
 	}
+	
 	// Check if plot ownership should flip from culture
 	if (getPlotCity())
 	{
