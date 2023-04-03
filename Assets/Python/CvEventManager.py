@@ -511,7 +511,7 @@ class CvEventManager:
 				CyCity = CyPlayer.getCity(iData3)
 				# 903 Demolish Building || 904 Abandon City || 905/906 Abandon->Units
 				if ID == 903:
-					CyCity.setNumRealBuilding(iData4, 0)
+					CyCity.changeHasBuilding(iData4, False)
 					CyPlayer.changeGold(iData5)
 					CvScreensInterface.mainInterface.buildCityListLeft()
 					CyInterface().setDirty(InterfaceDirtyBits.SelectionButtons_DIRTY_BIT, True)
@@ -602,7 +602,7 @@ class CvEventManager:
 				if CyPlayer.hasBuilding(iBuilding):
 					aList4[k] = iPlayer
 					for CyCity in CyPlayer.cities():
-						if CyCity.getNumRealBuilding(iBuilding):
+						if CyCity.hasBuilding(iBuilding):
 							aList3[k] = CyCity.getID()
 							break
 		# Get rid of wonders that is lost when a city is razed.
@@ -1462,7 +1462,7 @@ class CvEventManager:
 				# Sort by descending culture
 				aList.sort(key=itemgetter(1), reverse=True)
 				for i, entry in enumerate(aList):
-					entry[0].setNumRealBuilding(iBuilding, 1)
+					entry[0].changeHasBuilding(iBuilding, True)
 					if i == 1: # Max. 2 other cities will get the needle for free
 						break
 		# NANITE DEFUSER - destroyes all nukes from all players
@@ -1662,7 +1662,7 @@ class CvEventManager:
 			if iThePath and MAP.generatePathForHypotheticalUnit(CyPlot, CyPlotDo, iPlayer, iUnit, PathingFlags.MOVE_SAFE_TERRITORY, 1000):
 				iBuilding = GC.getInfoTypeForString("BUILDING_ROUTE_66_TERMINUS")
 				if iBuilding > -1:
-					CyCityDo.setNumRealBuilding(iBuilding, 1)
+					CyCityDo.changeHasBuilding(iBuilding, True)
 				iRoute = GC.getInfoTypeForString("ROUTE_HIGHWAY")
 				if iRoute > -1:
 					for k in xrange(MAP.getLastPathStepNum()):
@@ -1896,7 +1896,7 @@ class CvEventManager:
 		elif iBuilding == mapBuildingType["NEANDERTHAL_EMBASSY"]:
 			iLocal = GC.getInfoTypeForString("BUILDING_C_L_NEANDERTHAL")
 			for cityX in CyPlayer.cities():
-				cityX.setNumRealBuilding(iLocal, 1)
+				cityX.changeHasBuilding(iLocal, True)
 
 
 	def onProjectBuilt(self, argsList):
@@ -2430,7 +2430,7 @@ class CvEventManager:
 			for iPromo, iBuilding, _ in self.aCultureList:
 				if -1 in (iPromo, iBuilding): continue
 				if CyUnit.isHasPromotion(iPromo):
-					CyCity.setNumRealBuilding(iBuilding, 1)
+					CyCity.changeHasBuilding(iBuilding, True)
 
 			# Give a free defender to the first city when it is built
 			if iUnit == self.UNIT_BAND:
@@ -2503,7 +2503,7 @@ class CvEventManager:
 					artPath = 'Art/Interface/Buttons/General/warning_popup.dds'
 
 					for iBuilding in xrange(GC.getNumBuildingInfos()):
-						if not CyCity.getNumRealBuilding(iBuilding): continue
+						if not CyCity.hasBuilding(iBuilding): continue
 						CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 						if CvBuildingInfo.getMaxGlobalInstances() == 1:
 
@@ -2585,7 +2585,7 @@ class CvEventManager:
 
 		# Ruin Arcology.
 		mapBuildingType = self.mapBuildingType
-		if CyCity.getNumRealBuilding(mapBuildingType["ARCOLOGY"]) or CyCity.getNumRealBuilding(mapBuildingType["ARCOLOGY_SHIELDING"]) or CyCity.getNumRealBuilding(mapBuildingType["ADVANCED_SHIELDING"]):
+		if CyCity.hasBuilding(mapBuildingType["ARCOLOGY"]) or CyCity.hasBuilding(mapBuildingType["ARCOLOGY_SHIELDING"]) or CyCity.hasBuilding(mapBuildingType["ADVANCED_SHIELDING"]):
 			self.iArcologyCityID = iCityID
 		else:
 			self.iArcologyCityID = -1
@@ -2677,7 +2677,7 @@ class CvEventManager:
 					iX = city.getX()
 					iY = city.getY()
 					for iBuilding in xrange(GC.getNumBuildingInfos()):
-						if city.getNumRealBuilding(iBuilding):
+						if city.hasBuilding(iBuilding):
 							CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 							if CvBuildingInfo.getMaxGlobalInstances() == 1:
 

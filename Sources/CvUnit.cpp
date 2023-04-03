@@ -10306,7 +10306,7 @@ bool CvUnit::canConstruct(const CvPlot* pPlot, BuildingTypes eBuilding, bool bTe
 		return false;
 	}
 
-	if (pCity->getNumRealBuilding(eBuilding) > 0)
+	if (pCity->hasBuilding(eBuilding))
 	{
 		return false;
 	}
@@ -10330,7 +10330,7 @@ bool CvUnit::construct(BuildingTypes eBuilding)
 
 	if (pCity)
 	{
-		pCity->setNumRealBuilding(eBuilding, 1);
+		pCity->changeHasBuilding(eBuilding, true);
 
 		CvEventReporter::getInstance().buildingBuilt(pCity, eBuilding);
 	}
@@ -25961,7 +25961,7 @@ bool CvUnit::airBomb2(int iX, int iY)
 				bNoTarget = false;
 				changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), maxXPValue(NULL, pCity->isHominid()), true, pCity->getOwner() == getOwner());
 
-				pCity->setNumRealBuilding((BuildingTypes)build, 0);
+				pCity->changeHasBuilding((BuildingTypes)build, false);
 				{
 
 					szBuffer = gDLL->getText("TXT_KEY_MISC_ENEMY_AIRBOMB2SUCCESS", GC.getBuildingInfo((BuildingTypes)build).getTextKeyWide(), pCity->getNameKey());
@@ -26195,7 +26195,7 @@ bool CvUnit::airBomb3(int iX, int iY)
 			}
 			if (pCity->getNumActiveBuilding((BuildingTypes)build) > 0)
 			{
-				pCity->setNumRealBuilding((BuildingTypes)build, 0);
+				pCity->changeHasBuilding((BuildingTypes)build, false);
 
 				changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), maxXPValue(NULL, pCity->isHominid()), true, pCity->getOwner() == getOwner());
 				{
@@ -27664,20 +27664,29 @@ bool CvUnit::performInquisition()
 				}
 			}
 			//Remove temples, monasteries, etc...
-			for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 			{
-				if (pCity->getNumRealBuilding((BuildingTypes)iI) > 0)
+				std::vector<BuildingTypes> temp;
+				std::map<BuildingTypes, BuiltBuildingData> ledger = pCity->getBuildingLedger();
+
+				for (std::map<BuildingTypes, BuiltBuildingData>::const_iterator itr = ledger.begin(); itr != ledger.end(); ++itr)
 				{
-					const CvBuildingInfo& kLoopBuilding = GC.getBuildingInfo((BuildingTypes)iI);
+					const CvBuildingInfo& buildingX = GC.getBuildingInfo(itr->first);
+					if (buildingX.getPrereqReligion() == NO_RELIGION)
+					{
+						continue;
+					}
 					for (int iJ = 0; iJ < GC.getNumReligionInfos(); iJ++)
 					{
-						if (GET_PLAYER(getOwner()).getStateReligion() != (ReligionTypes)iJ
-						&& kLoopBuilding.getPrereqReligion() == (ReligionTypes)iJ)
+						if (GET_PLAYER(getOwner()).getStateReligion() != iJ && buildingX.getPrereqReligion() == iJ)
 						{
-							pCity->setNumRealBuilding((BuildingTypes)iI, 0);
-							iCompensationGold += kLoopBuilding.getProductionCost() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent() / std::max(1, GC.getDefineINT("INQUISITION_BUILDING_GOLD_DIVISOR"));
+							temp.push_back(itr->first);
+							iCompensationGold += buildingX.getProductionCost() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent() / std::max(1, GC.getDefineINT("INQUISITION_BUILDING_GOLD_DIVISOR"));
 						}
 					}
+				}
+				foreach_(const BuildingTypes eType, temp)
+				{
+					pCity->changeHasBuilding(eType, false);
 				}
 			}
 			//Remove the Religion & Holy Cities

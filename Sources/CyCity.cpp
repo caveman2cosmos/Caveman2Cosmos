@@ -499,14 +499,14 @@ int CyCity::flatHurryAngerLength() const
 	return m_pCity->flatHurryAngerLength();
 }
 
-void CyCity::setNumRealBuilding(int /*BuildingTypes*/ iIndex, int iNewValue)
+void CyCity::changeHasBuilding(int /*BuildingTypes*/ iIndex, bool bNewValue)
 {
-	m_pCity->setNumRealBuilding((BuildingTypes) iIndex, iNewValue);
+	m_pCity->changeHasBuilding((BuildingTypes) iIndex, bNewValue);
 }
 
-int CyCity::getNumRealBuilding(int /*BuildingTypes*/ iIndex) const
+int CyCity::hasBuilding(int /*BuildingTypes*/ iIndex) const
 {
-	return m_pCity->getNumRealBuilding((BuildingTypes) iIndex);
+	return m_pCity->hasBuilding((BuildingTypes) iIndex);
 }
 
 int CyCity::getNumActiveBuilding(int /*BuildingTypes*/ iIndex) const
@@ -1377,11 +1377,6 @@ int CyCity::getBuildingOriginalOwner(int /*BuildingTypes*/ iIndex) const
 int CyCity::getBuildingOriginalTime(int /*BuildingTypes*/ iIndex) const
 {
 	return m_pCity->getBuildingOriginalTime((BuildingTypes) iIndex);
-}
-
-void CyCity::setBuildingOriginalTime(int iIndex, int iNewValue)
-{
-	m_pCity->setBuildingOriginalTime((BuildingTypes) iIndex, iNewValue);
 }
 
 int CyCity::getProgressOnUnit(int iIndex) const

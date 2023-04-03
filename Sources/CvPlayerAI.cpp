@@ -5816,7 +5816,7 @@ int CvPlayerAI::AI_techBuildingValue(TechTypes eTech, int iPathLength, bool& bEn
 					iExistingCultureBuildingCount++;
 				}
 
-				const int iNumExisting = algo::count_if(cities(), bind(&CvCity::getNumRealBuilding, _1, eLoopBuilding));
+				const int iNumExisting = algo::count_if(cities(), bind(&CvCity::hasBuilding, _1, eLoopBuilding));
 
 				if (iNumExisting > 0)
 				{
@@ -9700,21 +9700,22 @@ int CvPlayerAI::AI_cityTradeVal(CvCity* pCity) const
 
 	int iValue = 500;
 	//consider infrastructure
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		if (pCity->getNumRealBuilding((BuildingTypes)iI) > 0)
+		std::map<BuildingTypes, BuiltBuildingData> ledger = pCity->getBuildingLedger();
+
+		for (std::map<BuildingTypes, BuiltBuildingData>::const_iterator itr = ledger.begin(); itr != ledger.end(); ++itr)
 		{
-			if (isWorldWonder((BuildingTypes)iI))
+			if (isWorldWonder(itr->first))
 			{
-				iValue += GC.getBuildingInfo((BuildingTypes)iI).getProductionCost() / 3;
+				iValue += GC.getBuildingInfo(itr->first).getProductionCost() / 3;
 			}
-			else if (isLimitedWonder((BuildingTypes)iI))
+			else if (isLimitedWonder(itr->first))
 			{
-				iValue += GC.getBuildingInfo((BuildingTypes)iI).getProductionCost() / 5;
+				iValue += GC.getBuildingInfo(itr->first).getProductionCost() / 5;
 			}
 			else
 			{
-				iValue += GC.getBuildingInfo((BuildingTypes)iI).getProductionCost() / 10;
+				iValue += GC.getBuildingInfo(itr->first).getProductionCost() / 10;
 			}
 		}
 	}
@@ -9801,21 +9802,22 @@ int CvPlayerAI::AI_ourCityValue(CvCity* pCity) const
 	PROFILE_EXTRA_FUNC();
 	int iValue = 150;
 	//consider infrastructure
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
-		if (pCity->getNumRealBuilding((BuildingTypes)iI) > 0)
+		std::map<BuildingTypes, BuiltBuildingData> ledger = pCity->getBuildingLedger();
+
+		for (std::map<BuildingTypes, BuiltBuildingData>::const_iterator itr = ledger.begin(); itr != ledger.end(); ++itr)
 		{
-			if (isWorldWonder((BuildingTypes)iI))
+			if (isWorldWonder(itr->first))
 			{
-				iValue += GC.getBuildingInfo((BuildingTypes)iI).getProductionCost() / 3;
+				iValue += GC.getBuildingInfo(itr->first).getProductionCost() / 3;
 			}
-			else if (isLimitedWonder((BuildingTypes)iI))
+			else if (isLimitedWonder(itr->first))
 			{
-				iValue += GC.getBuildingInfo((BuildingTypes)iI).getProductionCost() / 5;
+				iValue += GC.getBuildingInfo(itr->first).getProductionCost() / 5;
 			}
 			else
 			{
-				iValue += GC.getBuildingInfo((BuildingTypes)iI).getProductionCost() / 8;
+				iValue += GC.getBuildingInfo(itr->first).getProductionCost() / 10;
 			}
 		}
 	}
@@ -26842,7 +26844,7 @@ int CvPlayerAI::AI_militaryUnitTradeVal(const CvUnit* pUnit) const
 				{
 					foreach_(CvCity * pLoopCity, cities())
 					{
-						if (pLoopCity->area() == pEvaluationCity->area() && pLoopCity->getNumRealBuilding(eBuilding) == 0)
+						if (pLoopCity->area() == pEvaluationCity->area() && !pLoopCity->hasBuilding(eBuilding))
 						{
 							const int iValue = pLoopCity->AI_buildingValue(eBuilding);
 
@@ -36809,7 +36811,7 @@ int	CvPlayerAI::AI_getNumBuildingsNeeded(BuildingTypes eBuilding, bool bCoastal)
 		foreach_(const CvCity * pLoopCity, cities())
 		{
 			if ((!bCoastal || pLoopCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()))
-			&& pLoopCity->getNumRealBuilding(eBuilding) == 0)
+			&& !pLoopCity->hasBuilding(eBuilding))
 			{
 				result++;
 			}

@@ -97,7 +97,7 @@ def applyBlessedSea2(argsList):
 	for loopCity in GC.getPlayer(data.ePlayer).cities():
 		if loopCity.getPopulation() >= 5:
 			if loopCity.canConstruct(iBuilding, False, False, True):
-				loopCity.setNumRealBuilding(iBuilding, 1)
+				loopCity.changeHasBuilding(iBuilding, True)
 
 
 def canApplyBlessedSea2(argsList):
@@ -422,7 +422,7 @@ def canApplyLooters3(argsList):
 	iTreshold = (100 + 20 * iEra * iEra) * GC.getGameSpeedInfo(GAME.getGameSpeedType()).getHammerCostPercent() / 100
 
 	for i in xrange(GC.getNumBuildingInfos()):
-		if isLimitedWonder(i) or CyCity.getNumRealBuilding(i) < 1:
+		if isLimitedWonder(i) or not CyCity.hasBuilding(i):
 			continue
 		info = GC.getBuildingInfo(i)
 		if info.isAutoBuild():
@@ -445,7 +445,7 @@ def applyLooters3(argsList):
 
 	aList = []
 	for i in xrange(GC.getNumBuildingInfos()):
-		if isLimitedWonder(i) or CyCity.getNumRealBuilding(i) < 1: continue
+		if isLimitedWonder(i) or not CyCity.hasBuilding(i): continue
 		info = GC.getBuildingInfo(i)
 		if info.isAutoBuild():
 			continue
@@ -459,7 +459,7 @@ def applyLooters3(argsList):
 		iBuilding = aList[GAME.getSorenRandNum(len(aList), "Looters event building destroyed")]
 		szBuffer = TRNSLTR.getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", (GC.getBuildingInfo(iBuilding).getTextKey(), ))
 		CyInterface().addMessage(data.eOtherPlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, GC.getBuildingInfo(iBuilding).getButton(), GC.getCOLOR_RED(), CyCity.getX(), CyCity.getY(), True, True)
-		CyCity.setNumRealBuilding(iBuilding, 0)
+		CyCity.changeHasBuilding(iBuilding, False)
 		aList.remove(iBuilding)
 		iCount += 1
 
@@ -534,7 +534,7 @@ def canApplyHurricane1(argsList):
 	CyCity = CyPlayer.getCity(data.iCityId)
 
 	for i in xrange(GC.getNumBuildingInfos()):
-		if isLimitedWonder(i) or CyCity.getNumRealBuilding(i) < 1 or CyCity.isFreeBuilding(i):
+		if isLimitedWonder(i) or not CyCity.hasBuilding(i) or CyCity.isFreeBuilding(i):
 			continue
 		info = GC.getBuildingInfo(i)
 		if info.isNukeImmune() or info.isAutoBuild() or info.getProductionCost() < 1:
@@ -555,7 +555,7 @@ def applyHurricane1(argsList):
 
 	aList = []
 	for i in xrange(GC.getNumBuildingInfos()):
-		if isLimitedWonder(i) or CyCity.getNumRealBuilding(i) < 1 or CyCity.isFreeBuilding(i):
+		if isLimitedWonder(i) or not CyCity.hasBuilding(i) or CyCity.isFreeBuilding(i):
 			continue
 		info = GC.getBuildingInfo(i)
 		if info.isNukeImmune() or info.isAutoBuild() or info.getProductionCost() < 1:
@@ -566,7 +566,7 @@ def applyHurricane1(argsList):
 		iBuilding = aList[GAME.getSorenRandNum(len(aList), "Hurricane")]
 		szBuffer = TRNSLTR.getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", (GC.getBuildingInfo(iBuilding).getTextKey(), ))
 		CyInterface().addMessage(data.ePlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, GC.getBuildingInfo(iBuilding).getButton(), GC.getCOLOR_RED(), CyCity.getX(), CyCity.getY(), True, True)
-		CyCity.setNumRealBuilding(iBuilding, 0)
+		CyCity.changeHasBuilding(iBuilding, False)
 
 
 ######## CYCLONE ###########
@@ -619,7 +619,7 @@ def applyTsunami2(argsList):
 
 	listBuildings = []
 	for i in xrange(GC.getNumBuildingInfos()):
-		if isLimitedWonder(i) or CyCity.getNumRealBuilding(i) < 1:
+		if isLimitedWonder(i) or not CyCity.hasBuilding(i):
 			continue
 		info = GC.getBuildingInfo(i)
 		if info.getProductionCost() > 0 and not info.isAutoBuild():
@@ -630,7 +630,7 @@ def applyTsunami2(argsList):
 			iBuilding = listBuildings[GAME.getSorenRandNum(len(listBuildings), "Tsunami event building destroyed")]
 			szBuffer = TRNSLTR.getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", (GC.getBuildingInfo(iBuilding).getTextKey(), ))
 			CyInterface().addMessage(data.ePlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, GC.getBuildingInfo(iBuilding).getButton(), GC.getCOLOR_RED(), CyCity.getX(), CyCity.getY(), True, True)
-			CyCity.setNumRealBuilding(iBuilding, 0)
+			CyCity.changeHasBuilding(iBuilding, False)
 			listBuildings.remove(iBuilding)
 
 
@@ -1997,7 +1997,7 @@ def getHelpClassicLiteratureDone3(argsList):
 
 	szCityName = ""
 	for city in GC.getPlayer(argsList[1].ePlayer).cities():
-		if city.getNumRealBuilding(iGreatLibrary):
+		if city.hasBuilding(iGreatLibrary):
 			szCityName = city.getNameKey()
 			break
 
@@ -2007,7 +2007,7 @@ def canApplyClassicLiteratureDone3(argsList):
 	iGreatLibrary = GC.getInfoTypeForString("BUILDING_THE_GREAT_LIBRARY")
 
 	for city in GC.getPlayer(argsList[1].ePlayer).cities():
-		if city.getNumRealBuilding(iGreatLibrary):
+		if city.hasBuilding(iGreatLibrary):
 			return True
 	return False
 
@@ -2015,7 +2015,7 @@ def applyClassicLiteratureDone3(argsList):
 	iGreatLibrary = GC.getInfoTypeForString("BUILDING_THE_GREAT_LIBRARY")
 
 	for city in GC.getPlayer(argsList[1].ePlayer).cities():
-		if city.getNumRealBuilding(iGreatLibrary):
+		if city.hasBuilding(iGreatLibrary):
 			city.changeFreeSpecialistCount(GC.getInfoTypeForString("SPECIALIST_SCIENTIST"), 1)
 			return
 
@@ -2147,7 +2147,7 @@ def canApplyBestDefenseDone3(argsList):
 	iGreatWall = GC.getInfoTypeForString("BUILDING_GREAT_WALL_OF_CHINA")
 
 	for city in GC.getPlayer(argsList[1].ePlayer).cities():
-		if city.getNumRealBuilding(iGreatWall):
+		if city.hasBuilding(iGreatWall):
 			return True
 	return False
 
@@ -2183,7 +2183,7 @@ def canApplySportsLeagueDone3(argsList):
 	iZeus = GC.getInfoTypeForString("BUILDING_CIRCUS_MAXIMUS")
 
 	for city in GC.getPlayer(argsList[1].ePlayer).cities():
-		if city.getNumRealBuilding(iZeus):
+		if city.hasBuilding(iZeus):
 			return True
 	return False
 
@@ -2278,7 +2278,7 @@ def canApplyCrusadeDone2(argsList):
 		return False
 	city = GAME.getHolyCity(data.eReligion)
 
-	if city is None or city.getNumRealBuilding(data.eBuilding):
+	if city is None or city.hasBuilding(data.eBuilding):
 		return False
 	return True
 
@@ -2286,7 +2286,7 @@ def applyCrusadeDone2(argsList):
   data = argsList[1]
 
   holyCity = GAME.getHolyCity(data.eReligion)
-  holyCity.setNumRealBuilding(data.eBuilding, 1)
+  holyCity.changeHasBuilding(data.eBuilding, True)
 
   if (not GAME.isNetworkMultiPlayer() and data.ePlayer == GAME.getActivePlayer()):
     popupInfo = CyPopupInfo()
@@ -2685,7 +2685,7 @@ def canTriggerNobleKnightsDone(argsList):
   iBuilding = GC.getInfoTypeForString("BUILDING_THE_ORACLE")
 
   for loopCity in player.cities():
-    if loopCity.getNumRealBuilding(iBuilding):
+    if loopCity.hasBuilding(iBuilding):
       kActualTriggeredDataObject.iPlotX = loopCity.getX()
       kActualTriggeredDataObject.iPlotY = loopCity.getY()
       kActualTriggeredDataObject.iCityId = loopCity.getID()
@@ -5527,7 +5527,7 @@ def TriggerHarryPotter2(argsList):
 	iStateReligion = CyPlayer.getStateReligion()
 	for CyCity in CyPlayer.cities():
 		if CyCity.canConstruct(iLibrary, False, False, True):
-			CyCity.setNumRealBuilding(iLibrary, 1)
+			CyCity.changeHasBuilding(iLibrary, True)
 
 		if CyCity.isHasReligion(iStateReligion):
 			CyCity.changeHurryAngerTimer(CyCity.flatHurryAngerLength())
@@ -5824,7 +5824,7 @@ def TriggerSuperVirus4(argsList):
   eventCity.changeOccupationTimer(iChangePopulation)
   eventCity.changeEventAnger(iChangePopulation)
 
-  eventCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_HOSPITAL"), 0)
+  eventCity.changeHasBuilding(GC.getInfoTypeForString("BUILDING_HOSPITAL"), False)
 
   eventCity.changePopulation(-iChangePopulation)
   szBuffer = TRNSLTR.getText("TXT_KEY_EVENT_SUPER_VIRUS_HIT_CITY", (iChangePopulation, eventCity.getNameKey()))
@@ -5946,18 +5946,18 @@ def triggerNewWorldCities(argsList):
 				iNumNeededDefenders -= 1
 
 		if iEvent == GC.getInfoTypeForString("EVENT_NEW_WORLD_2"):
-			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_WALLS"), 1)
-			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_GRANARY"), 1)
-			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_FORGE"), 1)
+			CyCity.changeHasBuilding(GC.getInfoTypeForString("BUILDING_WALLS"), True)
+			CyCity.changeHasBuilding(GC.getInfoTypeForString("BUILDING_GRANARY"), True)
+			CyCity.changeHasBuilding(GC.getInfoTypeForString("BUILDING_FORGE"), True)
 		else:
-			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_WALLS"), 1)
-			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_BARRACKS"), 1)
-			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_GRANARY"), 1)
-			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_FORGE"), 1)
-			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_MARKET"), 1)
-			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_HARBOR"), 1)
-			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_LIGHTHOUSE"), 1)
-			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_FISHERMANS_HUT"), 1)
+			CyCity.changeHasBuilding(GC.getInfoTypeForString("BUILDING_WALLS"), True)
+			CyCity.changeHasBuilding(GC.getInfoTypeForString("BUILDING_BARRACKS"), True)
+			CyCity.changeHasBuilding(GC.getInfoTypeForString("BUILDING_GRANARY"), True)
+			CyCity.changeHasBuilding(GC.getInfoTypeForString("BUILDING_FORGE"), True)
+			CyCity.changeHasBuilding(GC.getInfoTypeForString("BUILDING_MARKET"), True)
+			CyCity.changeHasBuilding(GC.getInfoTypeForString("BUILDING_HARBOR"), True)
+			CyCity.changeHasBuilding(GC.getInfoTypeForString("BUILDING_LIGHTHOUSE"), True)
+			CyCity.changeHasBuilding(GC.getInfoTypeForString("BUILDING_FISHERMANS_HUT"), True)
 		iNeededCities -= 1
 
 
@@ -6357,7 +6357,7 @@ def doMinorFire(argsList):
 	iBurnBuilding = -1
 	iHighFlamm = 0
 	for i in xrange(GC.getNumBuildingInfos()):
-		if isLimitedWonder(i) or CyCity.getNumRealBuilding(i) < 1 or CyCity.isFreeBuilding(i):
+		if isLimitedWonder(i) or not CyCity.hasBuilding(i) or CyCity.isFreeBuilding(i):
 			continue
 		info = GC.getBuildingInfo(i)
 		if info.getProductionCost() < 1 or info.isNukeImmune() or info.isAutoBuild():
@@ -6373,7 +6373,7 @@ def doMinorFire(argsList):
 	if iBurnBuilding != -1:
 		szBuffer = TRNSLTR.getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", (GC.getBuildingInfo(iBurnBuilding).getTextKey(), ))
 		CyInterface().addMessage(data.ePlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, GC.getBuildingInfo(iBurnBuilding).getButton(), GC.getCOLOR_RED(), CyCity.getX(), CyCity.getY(), True, True)
-		CyCity.setNumRealBuilding(iBurnBuilding, 0)
+		CyCity.changeHasBuilding(iBurnBuilding, False)
 
 
 def doMajorFire(argsList):
@@ -6394,7 +6394,7 @@ def doMajorFire(argsList):
 		if currFlamm <= iFlammEnd:
 			break
 		for j in xrange(GC.getNumBuildingInfos()):
-			if isLimitedWonder(j) or CyCity.getNumRealBuilding(j) < 1 or CyCity.isFreeBuilding(j):
+			if isLimitedWonder(j) or not CyCity.hasBuilding(j) or CyCity.isFreeBuilding(j):
 				continue
 			info = GC.getBuildingInfo(j)
 			if info.getProductionCost() < 1 or info.isNukeImmune() or info.isAutoBuild():
@@ -6414,7 +6414,7 @@ def doMajorFire(argsList):
 				"AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, GC.getBuildingInfo(iBurnBuilding).getButton(),
 				GC.getCOLOR_RED(), CyCity.getX(), CyCity.getY(), True, True
 			)
-			CyCity.setNumRealBuilding(iBurnBuilding, 0)
+			CyCity.changeHasBuilding(iBurnBuilding, False)
 
 def doCatastrophicFire(argsList):
 	data = argsList[1]
@@ -6446,7 +6446,7 @@ def doCatastrophicFire(argsList):
 		iHighFlamm = 0
 
 		for j in xrange(GC.getNumBuildingInfos()):
-			if isLimitedWonder(j) or CyCity.getNumRealBuilding(j) < 1 or CyCity.isFreeBuilding(j):
+			if isLimitedWonder(j) or not CyCity.hasBuilding(j) or CyCity.isFreeBuilding(j):
 				continue
 			info = GC.getBuildingInfo(j)
 			if info.getProductionCost() < 1 or info.isNukeImmune() or info.isAutoBuild():
@@ -6460,7 +6460,7 @@ def doCatastrophicFire(argsList):
 		if iBurnBuilding != -1:
 			szBuffer = TRNSLTR.getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", (GC.getBuildingInfo(iBurnBuilding).getTextKey(),))
 			CyInterface().addMessage(data.ePlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, GC.getBuildingInfo(iBurnBuilding).getButton(), GC.getCOLOR_RED(), CyCity.getX(), CyCity.getY(), True, True)
-			CyCity.setNumRealBuilding(iBurnBuilding, 0)
+			CyCity.changeHasBuilding(iBurnBuilding, False)
 
 
 def getHelpMinorFire(argsList):
@@ -6908,12 +6908,12 @@ def doEventLawyer(argsList):
 
 		# Removes buildings
 		for iBuildingLoop in xrange(GC.getNumBuildingInfos( )):
-			if pCity.getNumRealBuilding(iBuildingLoop):
+			if pCity.hasBuilding(iBuildingLoop):
 				pBuilding = GC.getBuildingInfo( iBuildingLoop )
 				iRequiredCorporation = pBuilding.getFoundsCorporation( )
 				for iCorpLoop in xrange(GC.getNumCorporationInfos()):
 					if iRequiredCorporation == iCorpLoop:
-						pCity.setNumRealBuilding ( iBuildingLoop,0 )
+						pCity.changeHasBuilding(iBuildingLoop, False)
 
 		# Loop through all corporations, remove them from the city
 		for iCorpLoop in xrange(GC.getNumCorporationInfos()):

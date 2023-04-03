@@ -5215,9 +5215,8 @@ class Revolution:
 						# Store building types in city
 						buildingList = []
 						for buildingType in xrange(GC.getNumBuildingInfos()) :
-							if( pCity.getNumRealBuilding(buildingType) > 0 ) :
-								buildingInfo = GC.getBuildingInfo(buildingType)
-								buildingList.append([buildingType,pCity.getNumRealBuilding(buildingType)])
+							if pCity.hasBuilding(buildingType):
+								buildingList.append(buildingType)
 
 #***********************************
 						# Acquire city
@@ -5254,12 +5253,11 @@ class Revolution:
 #*************************************
 
 						# Save most buildings - should some be destroyed?
-						for [buildingType,iNum] in buildingList :
-							if( pCity.getNumRealBuilding(buildingType) < iNum ) :
-								buildingInfo = GC.getBuildingInfo(buildingType)
-								if( not buildingInfo.isGovernmentCenter() ) :
-									if self.LOG_DEBUG: print "[REV] Revolt: Building %s saved" % buildingInfo.getDescription()
-									pCity.setNumRealBuilding( buildingType, iNum )
+						for buildingType in buildingList:
+							if not pCity.hasBuilding(buildingType) and not GC.getBuildingInfo(buildingType).isGovernmentCenter():
+								if self.LOG_DEBUG:
+									print "[REV] Revolt: Building %s saved" % GC.getBuildingInfo(buildingType).getDescription()
+								pCity.changeHasBuilding(buildingType, True)
 
 						#if self.LOG_DEBUG: print "[REV] Revolt: %s at %d, %d"%(pCity.getName(),pCity.getX(),pCity.getY())
 
@@ -6325,9 +6323,8 @@ class Revolution:
 				# Store building types in city
 				buildingList = []
 				for buildingType in xrange(GC.getNumBuildingInfos()):
-					if pCity.getNumRealBuilding(buildingType) > 0:
-						buildingInfo = GC.getBuildingInfo(buildingType)
-						buildingList.append([buildingType,pCity.getNumRealBuilding(buildingType)])
+					if pCity.hasBuilding(buildingType):
+						buildingList.append(buildingType)
 
 # ***************************************************************
 				# Acquire city by cultural conversion
@@ -6447,13 +6444,11 @@ class Revolution:
 						pRevPlayer.initUnit(iSpy, ix, iy, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 
 				# Should buildings stay or some destroyed?
-				for [buildingType,iNum] in buildingList:
-					if pCity.getNumRealBuilding(buildingType) < iNum:
-						buildingInfo = GC.getBuildingInfo(buildingType)
-						if not buildingInfo.isGovernmentCenter():
-							if self.LOG_DEBUG:
-								print "[REV] Revolt: Building %s saved" % buildingInfo.getDescription()
-							pCity.setNumRealBuilding(buildingType, iNum)
+				for buildingType in buildingList:
+					if not pCity.hasBuilding(buildingType) and not GC.getBuildingInfo(buildingType).isGovernmentCenter():
+						if self.LOG_DEBUG:
+							print "[REV] Revolt: Building %s saved" % GC.getBuildingInfo(buildingType).getDescription()
+						pCity.changeHasBuilding(buildingType, True)
 
 				# Reveal surrounding countryside
 				if not bGaveMap:

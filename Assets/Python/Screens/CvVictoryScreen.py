@@ -396,8 +396,8 @@ class CvVictoryScreen:
 					# WonderScores
 					iTeamWonderScore = self.getTeamWonderScore(iTeamAct)
 					iRivalWonderScore = self.getTeamWonderScore(iBestTeam)
-					iTotalWorldWondersBuilt = GC.getPlayer(0).getSevoWondersScore(1)
-					iTotalWorldWondersPossible = GC.getPlayer(0).getSevoWondersScore(2)
+					iTotalWorldWondersBuilt = CyPlayer.getSevoWondersScore(1)
+					iTotalWorldWondersPossible = CyPlayer.getSevoWondersScore(2)
 					if iTotalWorldWondersPossible == 0:
 						iTotalWorldWondersPossible = -1
 

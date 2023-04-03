@@ -1145,7 +1145,7 @@ class RevolutionWatchAdvisor:
 		# add National Wonders
 		for i in range(gc.getNumBuildingInfos()):
 			info = gc.getBuildingInfo(i)
-			if info.getMaxGlobalInstances() == -1 and info.getMaxPlayerInstances() == 1 and city.getNumRealBuilding(i) > 0 and not info.isCapital():
+			if info.getMaxGlobalInstances() == -1 and info.getMaxPlayerInstances() == 1 and city.hasBuilding(i) and not info.isCapital():
 				# Use bullets as markers for National Wonders
 				szReturn += self.bulletIcon
 

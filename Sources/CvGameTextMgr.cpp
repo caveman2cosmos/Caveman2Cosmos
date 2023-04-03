@@ -9942,41 +9942,33 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 
 	szString.append(CvWString::format(L" -%d.%02d %c", iMaintenance/100, iMaintenance%100, GC.getCommerceInfo(COMMERCE_GOLD).getChar()));
 
-	// BUG - Building Icons - start
-	// AIAndy: Changed to show only national and world wonders
-	if (getBugOptionBOOL("CityBar__BuildingIcons", true, "BUG_CITYBAR_BUILDING_ICONS"))
 	{
 		bFirst = true;
-		for (iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
+		std::map<BuildingTypes, BuiltBuildingData> ledger = pCity->getBuildingLedger();
+		const bool bBuildingIconBUG = getBugOptionBOOL("CityBar__BuildingIcons", true, "BUG_CITYBAR_BUILDING_ICONS");
+
+		for (std::map<BuildingTypes, BuiltBuildingData>::const_iterator itr = ledger.begin(); itr != ledger.end(); ++itr)
 		{
-			if ((isWorldWonder((BuildingTypes)iI) || isNationalWonder((BuildingTypes)iI))
-			&& pCity->getNumRealBuilding((BuildingTypes)iI) > 0)
+			if (isWorldWonder(itr->first) || isNationalWonder(itr->first))
 			{
-				if (bFirst)
+				if (bBuildingIconBUG)
 				{
-					szString.append(NEWLINE);
+					if (bFirst)
+					{
+						szString.append(NEWLINE);
+						bFirst = false;
+					}
+					szTempBuffer.Format(L"<img=%S size=24></img>", GC.getBuildingInfo(itr->first).getButton());
+					szString.append(szTempBuffer);
+				}
+				else
+				{
+					setListHelp(szString, NEWLINE, GC.getBuildingInfo(itr->first).getDescription(), L", ", bFirst);
 					bFirst = false;
 				}
-				szTempBuffer.Format(L"<img=%S size=24></img>", GC.getBuildingInfo((BuildingTypes)iI).getButton());
-				szString.append(szTempBuffer);
 			}
 		}
 	}
-	else
-	{
-		// unchanged
-		bFirst = true;
-		for (iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
-		{
-			if ((isWorldWonder((BuildingTypes)iI) || isNationalWonder((BuildingTypes)iI))
-			&& pCity->getNumRealBuilding((BuildingTypes)iI) > 0)
-			{
-				setListHelp(szString, NEWLINE, GC.getBuildingInfo((BuildingTypes)iI).getDescription(), L", ", bFirst);
-				bFirst = false;
-			}
-		}
-	}
-	// BUG - Building Icons - end
 
 	{
 		const int iThreshold = pCity->getCultureThreshold();
@@ -20700,7 +20692,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			bool bFirst = true;
 			for (int iI = 0; iI < kBuilding.getNumReplacementBuilding(); ++iI)
 			{
-				if (pCity->getNumRealBuilding((BuildingTypes)kBuilding.getReplacementBuilding(iI)) > 0)
+				if (pCity->hasBuilding((BuildingTypes)kBuilding.getReplacementBuilding(iI)))
 				{
 					if (bFirst)
 					{
@@ -23409,7 +23401,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 		}
 	}
 
-	if (!bCity || pCity->getNumRealBuilding(eBuilding) == 0)
+	if (!bCity || !pCity->hasBuilding(eBuilding))
 	{
 		if (!bCivilopediaText)
 		{
@@ -33004,24 +32996,55 @@ void CvGameTextMgr::setEventHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, i
 
 	if (kEvent.getNumBuildingYieldChanges() > 0)
 	{
-		for (int iBuilding = 0; iBuilding < GC.getNumBuildingInfos(); ++iBuilding)
+		if (pCity)
 		{
-			const BuildingTypes eBuilding = static_cast<BuildingTypes>(iBuilding);
-			if (!pCity || pCity->getNumRealBuilding(eBuilding) > 0)
+			std::map<BuildingTypes, BuiltBuildingData> ledger = pCity->getBuildingLedger();
+
+			for (std::map<BuildingTypes, BuiltBuildingData>::const_iterator itr = ledger.begin(); itr != ledger.end(); ++itr)
 			{
 				int aiYields[NUM_YIELD_TYPES];
 				for (int iYield = 0; iYield < NUM_YIELD_TYPES; ++iYield)
 				{
-					aiYields[iYield] = kEvent.getBuildingYieldChange(iBuilding, iYield);
+					aiYields[iYield] = kEvent.getBuildingYieldChange(itr->first, iYield);
 				}
-
 				CvWStringBuffer szYield;
 				szYield.clear();
 				setYieldChangeHelp(szYield, L"", L"", L"", aiYields, false, false);
 				if (!szYield.isEmpty())
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_EVENT_YIELD_CHANGE_BUILDING", GC.getBuildingInfo(eBuilding).getTextKeyWide(), szYield.getCString()));
+					szBuffer.append(
+						gDLL->getText(
+							"TXT_KEY_EVENT_YIELD_CHANGE_BUILDING",
+							GC.getBuildingInfo(itr->first).getTextKeyWide(),
+							szYield.getCString()
+						)
+					);
+				}
+			}
+		}
+		else
+		{
+			for (int i = GC.getNumBuildingInfos() - 1; i > -1; i--)
+			{
+				int aiYields[NUM_YIELD_TYPES];
+				for (int iYield = 0; iYield < NUM_YIELD_TYPES; ++iYield)
+				{
+					aiYields[iYield] = kEvent.getBuildingYieldChange(i, iYield);
+				}
+				CvWStringBuffer szYield;
+				szYield.clear();
+				setYieldChangeHelp(szYield, L"", L"", L"", aiYields, false, false);
+				if (!szYield.isEmpty())
+				{
+					szBuffer.append(NEWLINE);
+					szBuffer.append(
+						gDLL->getText(
+							"TXT_KEY_EVENT_YIELD_CHANGE_BUILDING",
+							GC.getBuildingInfo(static_cast<BuildingTypes>(i)).getTextKeyWide(),
+							szYield.getCString()
+						)
+					);
 				}
 			}
 		}
@@ -33032,7 +33055,7 @@ void CvGameTextMgr::setEventHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, i
 		for (int iBuilding = 0; iBuilding < GC.getNumBuildingInfos(); ++iBuilding)
 		{
 			const BuildingTypes eBuilding = static_cast<BuildingTypes>(iBuilding);
-			if (!pCity || pCity->getNumRealBuilding(eBuilding) > 0)
+			if (!pCity || pCity->hasBuilding(eBuilding))
 			{
 				int aiCommerces[NUM_COMMERCE_TYPES];
 				for (int iCommerce = 0; iCommerce < NUM_COMMERCE_TYPES; ++iCommerce)
@@ -33046,21 +33069,63 @@ void CvGameTextMgr::setEventHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, i
 
 	if (kEvent.getNumBuildingHappyChanges() > 0)
 	{
-		for (int iBuilding = 0; iBuilding < GC.getNumBuildingInfos(); ++iBuilding)
+		if (pCity)
 		{
-			const BuildingTypes eBuilding = static_cast<BuildingTypes>(iBuilding);
-			if (!pCity || pCity->getNumRealBuilding(eBuilding) > 0)
+			std::map<BuildingTypes, BuiltBuildingData> ledger = pCity->getBuildingLedger();
+
+			for (std::map<BuildingTypes, BuiltBuildingData>::const_iterator itr = ledger.begin(); itr != ledger.end(); ++itr)
 			{
-				const int iHappy = kEvent.getBuildingHappyChange(iBuilding);
+				const int iHappy = kEvent.getBuildingHappyChange(itr->first);
 				if (iHappy > 0)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_EVENT_HAPPY_BUILDING", GC.getBuildingInfo(eBuilding).getTextKeyWide(), iHappy, gDLL->getSymbolID(HAPPY_CHAR)));
+					szBuffer.append(
+						gDLL->getText(
+							"TXT_KEY_EVENT_HAPPY_BUILDING",
+							GC.getBuildingInfo(itr->first).getTextKeyWide(),
+							iHappy, gDLL->getSymbolID(HAPPY_CHAR)
+						)
+					);
 				}
 				else if (iHappy < 0)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_EVENT_HAPPY_BUILDING", GC.getBuildingInfo(eBuilding).getTextKeyWide(), -iHappy, gDLL->getSymbolID(UNHAPPY_CHAR)));
+					szBuffer.append(
+						gDLL->getText(
+							"TXT_KEY_EVENT_HAPPY_BUILDING",
+							GC.getBuildingInfo(itr->first).getTextKeyWide(),
+							-iHappy, gDLL->getSymbolID(UNHAPPY_CHAR)
+						)
+					);
+				}
+			}
+		}
+		else
+		{
+			for (int i = GC.getNumBuildingInfos() - 1; i > -1; i--)
+			{
+				const int iHappy = kEvent.getBuildingHappyChange(i);
+				if (iHappy > 0)
+				{
+					szBuffer.append(NEWLINE);
+					szBuffer.append(
+						gDLL->getText(
+							"TXT_KEY_EVENT_HAPPY_BUILDING",
+							GC.getBuildingInfo(static_cast<BuildingTypes>(i)).getTextKeyWide(),
+							iHappy, gDLL->getSymbolID(HAPPY_CHAR)
+						)
+					);
+				}
+				else if (iHappy < 0)
+				{
+					szBuffer.append(NEWLINE);
+					szBuffer.append(
+						gDLL->getText(
+							"TXT_KEY_EVENT_HAPPY_BUILDING",
+							GC.getBuildingInfo(static_cast<BuildingTypes>(i)).getTextKeyWide(),
+							-iHappy, gDLL->getSymbolID(UNHAPPY_CHAR)
+						)
+					);
 				}
 			}
 		}
@@ -33068,21 +33133,63 @@ void CvGameTextMgr::setEventHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, i
 
 	if (kEvent.getNumBuildingHealthChanges() > 0)
 	{
-		for (int iBuilding = 0; iBuilding < GC.getNumBuildingInfos(); ++iBuilding)
+		if (pCity)
 		{
-			const BuildingTypes eBuilding = static_cast<BuildingTypes>(iBuilding);
-			if (!pCity || pCity->getNumRealBuilding(eBuilding) > 0)
+			std::map<BuildingTypes, BuiltBuildingData> ledger = pCity->getBuildingLedger();
+
+			for (std::map<BuildingTypes, BuiltBuildingData>::const_iterator itr = ledger.begin(); itr != ledger.end(); ++itr)
 			{
-				const int iHealth = kEvent.getBuildingHealthChange(iBuilding);
+				const int iHealth = kEvent.getBuildingHealthChange(itr->first);
 				if (iHealth > 0)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_EVENT_HAPPY_BUILDING", GC.getBuildingInfo(eBuilding).getTextKeyWide(), iHealth, gDLL->getSymbolID(HEALTHY_CHAR)));
+					szBuffer.append(
+						gDLL->getText(
+							"TXT_KEY_EVENT_HAPPY_BUILDING",
+							GC.getBuildingInfo(itr->first).getTextKeyWide(),
+							iHealth, gDLL->getSymbolID(HEALTHY_CHAR)
+						)
+					);
 				}
 				else if (iHealth < 0)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_EVENT_HAPPY_BUILDING", GC.getBuildingInfo(eBuilding).getTextKeyWide(), -iHealth, gDLL->getSymbolID(UNHEALTHY_CHAR)));
+					szBuffer.append(
+						gDLL->getText(
+							"TXT_KEY_EVENT_HAPPY_BUILDING",
+							GC.getBuildingInfo(itr->first).getTextKeyWide(),
+							-iHealth, gDLL->getSymbolID(UNHEALTHY_CHAR)
+						)
+					);
+				}
+			}
+		}
+		else
+		{
+			for (int i = 0; i < GC.getNumBuildingInfos(); ++i)
+			{
+				const int iHealth = kEvent.getBuildingHealthChange(i);
+				if (iHealth > 0)
+				{
+					szBuffer.append(NEWLINE);
+					szBuffer.append(
+						gDLL->getText(
+							"TXT_KEY_EVENT_HAPPY_BUILDING",
+							GC.getBuildingInfo(static_cast<BuildingTypes>(i)).getTextKeyWide(),
+							iHealth, gDLL->getSymbolID(HEALTHY_CHAR)
+						)
+					);
+				}
+				else if (iHealth < 0)
+				{
+					szBuffer.append(NEWLINE);
+					szBuffer.append(
+						gDLL->getText(
+							"TXT_KEY_EVENT_HAPPY_BUILDING",
+							GC.getBuildingInfo(static_cast<BuildingTypes>(i)).getTextKeyWide(),
+							-iHealth, gDLL->getSymbolID(UNHEALTHY_CHAR)
+						)
+					);
 				}
 			}
 		}

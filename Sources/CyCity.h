@@ -138,8 +138,8 @@ public:
 	int hurryProduction(int /*HurryTypes*/ iHurry) const;
 	int flatHurryAngerLength() const;
 
-	void setNumRealBuilding(int /*BuildingTypes*/ iIndex, int iNewValue);
-	int getNumRealBuilding(int /*BuildingTypes*/ iIndex) const;
+	void changeHasBuilding(int /*BuildingTypes*/ iIndex, bool bNewValue);
+	int hasBuilding(int /*BuildingTypes*/ iIndex) const;
 	int getNumActiveBuilding(int /*BuildingTypes*/ iIndex) const;
 	bool isFreeBuilding(int /*BuildingTypes*/ iIndex) const;
 	int getID() const;
@@ -356,7 +356,6 @@ public:
 
 	int getBuildingOriginalOwner(int /*BuildingTypes*/ iIndex) const;
 	int getBuildingOriginalTime(int /*BuildingTypes*/ iIndex) const;
-	void setBuildingOriginalTime(int iBuildingType, int i);
 
 	int getProgressOnUnit(int iIndex) const;
 	void setProgressOnUnit(int iIndex, int iNewValue);

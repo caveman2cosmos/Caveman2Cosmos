@@ -279,9 +279,9 @@ class WorldBuilder:
 			if self.m_pCurrentPlot.isCity():
 				pCity = self.m_pCurrentPlot.getPlotCity()
 				bEffects = False
-				if bPython and pCity.getNumRealBuilding(self.iSelection) == 0:
+				if bPython and not pCity.hasBuilding(self.iSelection):
 					bEffects = True
-				pCity.setNumRealBuilding(self.iSelection, 1)
+				pCity.changeHasBuilding(self.iSelection, True)
 				if bEffects:
 					self.eventManager.onBuildingBuilt([pCity, self.iSelection])
 		elif self.iPlayerAddMode == "City":
@@ -368,7 +368,7 @@ class WorldBuilder:
 				return 1
 		elif self.iPlayerAddMode == "Buildings":
 			if self.m_pCurrentPlot.isCity():
-				self.m_pCurrentPlot.getPlotCity().setNumRealBuilding(self.iSelection, 0)
+				self.m_pCurrentPlot.getPlotCity().changeHasBuilding(self.iSelection, False)
 		elif self.iPlayerAddMode == "City":
 			if self.m_pCurrentPlot.isCity():
 				pCity = self.m_pCurrentPlot.getPlotCity()
@@ -1266,7 +1266,7 @@ class WorldBuilder:
 
 			if GC.getBuildingInfo(iBuilding).isCapital() and not bMove:
 				continue
-			pNewCity.setNumRealBuilding(iBuilding, pOldCity.getNumRealBuilding(iBuilding))
+			pNewCity.changeHasBuilding(iBuilding, pOldCity.hasBuilding(iBuilding))
 
 		for iPlayerX in xrange(GC.getMAX_PLAYERS()):
 			pNewCity.setCultureTimes100(iPlayerX, pOldCity.getCultureTimes100(iPlayerX), False)

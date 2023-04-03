@@ -107,8 +107,8 @@ void CyCityPythonInterface2(python::class_<CyCity>& x)
 		.def("getEspionageDefenseModifier", &CyCity::getEspionageDefenseModifier, "int ()")
 
 		.def("isWorkingPlot", &CyCity::isWorkingPlot, "bool (iIndex) - true if a worker is working this city's pPlot")
-		.def("setNumRealBuilding", &CyCity::setNumRealBuilding, "(BuildingID, iNum) - Sets number of buildings in this city of BuildingID type")
-		.def("getNumRealBuilding", &CyCity::getNumRealBuilding, "int (BuildingID) - get # Actual building count")
+		.def("changeHasBuilding", &CyCity::changeHasBuilding, "(BuildingID, bNewValue)")
+		.def("hasBuilding", &CyCity::hasBuilding, "bool (BuildingID)")
 		.def("getNumActiveBuilding", &CyCity::getNumActiveBuilding, "int (BuildingID) - get # Filters out disabled buildings")
 		.def("isHasReligion", &CyCity::isHasReligion, "bool (ReligionID) - does city have ReligionID?")
 		.def("setHasReligion", &CyCity::setHasReligion, "void (ReligionID, bool bNewValue, bool bAnnounce, bool bArrows) - religion begins to spread")
@@ -118,12 +118,6 @@ void CyCityPythonInterface2(python::class_<CyCity>& x)
 		.def("getTradeCity", &CyCity::getTradeCity, python::return_value_policy<python::manage_new_object>(), "CyCity (int iIndex) - remove SpecialistType[iIndex]")
 		.def("getTradeRoutes", &CyCity::getTradeRoutes, "int ()")
 
-
-		/********************************************************************************/
-		/**		REVOLUTION_MOD							03/29/09			jdog5000	*/
-		/**																				*/
-		/**		 																		*/
-		/********************************************************************************/
 		.def("getRevolutionIndex", &CyCity::getRevolutionIndex, "int ()")
 		.def("setRevolutionIndex", &CyCity::setRevolutionIndex, "void ( int iNewValue )")
 		.def("changeRevolutionIndex", &CyCity::changeRevolutionIndex, "void ( int iChange )" )
@@ -162,7 +156,6 @@ void CyCityPythonInterface2(python::class_<CyCity>& x)
 
 		.def("getBuildingOriginalOwner", &CyCity::getBuildingOriginalOwner, "int (BuildingType) - index of original building owner")
 		.def("getBuildingOriginalTime", &CyCity::getBuildingOriginalTime, "int (int BuildingType) - original build date")
-		.def("setBuildingOriginalTime", &CyCity::setBuildingOriginalTime, "void (int iBuildingType, int iNewValue) - original build date")
 
 		.def("getProgressOnUnit", &CyCity::getProgressOnUnit, "int (UnitID) - gets current production towards UnitID")
 		.def("setProgressOnUnit", &CyCity::setProgressOnUnit, "void (UnitID, iNewValue) - sets production towards UnitID as iNewValue")

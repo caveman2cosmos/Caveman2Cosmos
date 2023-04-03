@@ -4754,7 +4754,7 @@ int CvTeam::getObsoleteBuildingCount(BuildingTypes eIndex) const
 
 bool CvTeam::isObsoleteBuilding(BuildingTypes eIndex) const
 {
-	return (getObsoleteBuildingCount(eIndex) > 0);
+	return getObsoleteBuildingCount(eIndex) > 0;
 }
 
 
@@ -4772,20 +4772,30 @@ void CvTeam::changeObsoleteBuildingCount(BuildingTypes eIndex, int iChange)
 
 		if (!bWasObsolete && iChange > 0)
 		{
+			BuildingTypes eObsoletesToBuilding = GC.getBuildingInfo(eIndex).getObsoletesToBuilding();
+
+			while (eObsoletesToBuilding > NO_BUILDING)
+			{
+				if (GC.getBuildingInfo(eObsoletesToBuilding).getObsoleteTech() < 0
+				|| !isHasTech(GC.getBuildingInfo(eObsoletesToBuilding).getObsoleteTech()))
+				{
+					break;
+				}
+				eObsoletesToBuilding = GC.getBuildingInfo(eObsoletesToBuilding).getObsoletesToBuilding();
+			}
 			for (int iI = 0; iI < MAX_PLAYERS; iI++)
 			{
 				if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID()))
 				{
-					foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
+					foreach_(CvCity* cityX, GET_PLAYER((PlayerTypes)iI).cities())
 					{
-						if (pLoopCity->getNumRealBuilding(eIndex) > 0)
+						if (cityX->hasBuilding(eIndex))
 						{
-							pLoopCity->setNumRealBuilding(eIndex, 0);
+							cityX->changeHasBuilding(eIndex, false);
 
-							const BuildingTypes iObsoletesToBuilding = GC.getBuildingInfo(eIndex).getObsoletesToBuilding();
-							if (iObsoletesToBuilding != NO_BUILDING && pLoopCity->getNumRealBuilding(iObsoletesToBuilding) == 0)
+							if (eObsoletesToBuilding != NO_BUILDING && !cityX->hasBuilding(eObsoletesToBuilding))
 							{
-								pLoopCity->setNumRealBuilding(iObsoletesToBuilding, 1);
+								cityX->changeHasBuilding(eObsoletesToBuilding, true);
 							}
 						}
 					}
@@ -7266,7 +7276,7 @@ void CvTeam::ObsoleteCorporations(TechTypes eObsoleteTech)
 										|| GC.getBuildingInfo((BuildingTypes)iJ).getFoundsCorporation() == ((CorporationTypes)iI)
 										|| GC.getBuildingInfo((BuildingTypes)iJ).getPrereqCorporation() == ((CorporationTypes)iI))
 										{
-											pLoopCity->setNumRealBuilding((BuildingTypes)iJ, 0);
+											pLoopCity->changeHasBuilding((BuildingTypes)iJ, false);
 										}
 									}
 									GC.getGame().setHeadquarters((CorporationTypes)iI, NULL, false);

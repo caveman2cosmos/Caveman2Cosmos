@@ -5518,24 +5518,24 @@ void CvGame::setHeadquarters(CorporationTypes eIndex, CvCity* pNewValue, bool bA
 		CvCity* pHeadquarters = getHeadquarters(eIndex);
 
 		// Set and Replace Corporation HQ's
-		if (pOldValue != NULL)
+		if (pOldValue)
 		{
 			for (int i = 0; i < GC.getNumBuildingInfos(); i++)
 			{
 				if ((CorporationTypes)GC.getBuildingInfo((BuildingTypes)i).getGlobalCorporationCommerce() == eIndex)
 				{
-					pOldValue->setNumRealBuilding((BuildingTypes)i, 0);
+					pOldValue->changeHasBuilding((BuildingTypes)i, false);
 					break;
 				}
 			}
 		}
-		if (pNewValue != NULL)
+		if (pNewValue)
 		{
 			for (int i = 0; i < GC.getNumBuildingInfos(); i++)
 			{
 				if ((CorporationTypes)GC.getBuildingInfo((BuildingTypes)i).getGlobalCorporationCommerce() == eIndex)
 				{
-					pNewValue->setNumRealBuilding((BuildingTypes)i, 1);
+					pNewValue->changeHasBuilding((BuildingTypes)i, true);
 					break;
 				}
 			}

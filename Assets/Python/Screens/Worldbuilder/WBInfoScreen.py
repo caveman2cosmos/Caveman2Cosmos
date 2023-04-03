@@ -327,7 +327,7 @@ class WBInfoScreen:
 				if pPlayerX.isAlive():
 					for loopCity in pPlayerX.cities():
 						for iItemX in xrange(GC.getNumBuildingInfos()):
-							if loopCity.getNumRealBuilding(iItemX) > 0:
+							if loopCity.hasBuilding(iItemX):
 								if iPlayerX == iSelectedPlayer:
 									lItems[iItemX][1] += 1
 								lItems[iItemX][2] += 1

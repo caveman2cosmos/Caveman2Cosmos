@@ -2612,27 +2612,25 @@ bool CvDLLButtonPopup::invasionPopup(CvPopup* pPopup, CvPopupInfo &info)
 	PROFILE_EXTRA_FUNC();
 	const CvCity* pCity = GET_PLAYER(GC.getGame().getActivePlayer()).getCity(info.getData1());
 
-	if ( pCity )
+	if (pCity)
 	{
 		BuildingTypes eBuilding = NO_BUILDING;
+		std::map<BuildingTypes, BuiltBuildingData> ledger = pCity->getBuildingLedger();
 
-		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+		for (std::map<BuildingTypes, BuiltBuildingData>::const_iterator itr = ledger.begin(); itr != ledger.end(); ++itr)
 		{
-			if (pCity->getNumRealBuilding((BuildingTypes)iI) > 0 && GC.getBuildingInfo((BuildingTypes)iI).getInvasionChance() > 0)
+			if (GC.getBuildingInfo(itr->first).getInvasionChance() > 0)
 			{
-				eBuilding = (BuildingTypes)iI;
+				eBuilding = itr->first;
 				break;
 			}
 		}
-
 		if (eBuilding == NO_BUILDING)
 		{
 			FErrorMsg("No Invasion Building Found! Error in CvDLLButtonPopup::invasionPopup(...)!");
 			return false;
 		}
-
 		gDLL->getInterfaceIFace()->popupSetHeaderString(pPopup, gDLL->getText("TXT_KEY_POPUP_INVASION", pCity->getNameKey()), DLL_FONT_LEFT_JUSTIFY);
-
 		gDLL->getInterfaceIFace()->popupSetBodyString(pPopup, gDLL->getText("TXT_KEY_POPUP_INVADED_CITY", GC.getBuildingInfo(eBuilding).getDescription(), pCity->getNameKey()));
 		gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, gDLL->getText("TXT_KEY_POPUP_THATS_TERRIBLE"), NULL, 0, WIDGET_GENERAL);
 		gDLL->getInterfaceIFace()->popupLaunch(pPopup, false, POPUPSTATE_IMMEDIATE);

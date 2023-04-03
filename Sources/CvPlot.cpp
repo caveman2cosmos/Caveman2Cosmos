@@ -1488,7 +1488,7 @@ void CvPlot::nukeExplosion(int iRange, CvUnit* pNukeUnit)
 	{
 		CvCity* city = plotX->getPlotCity();
 
-		if (city == NULL && !plotX->isWater() && !plotX->isImpassable()
+		if (!city && !plotX->isWater() && !plotX->isImpassable()
 		&& (NO_FEATURE == plotX->getFeatureType() || !GC.getFeatureInfo(plotX->getFeatureType()).isNukeImmune())
 		&& GC.getGame().getSorenRandNum(100, "Nuke Fallout") < GC.getDefineINT("NUKE_FALLOUT_PROB"))
 		{
@@ -1506,7 +1506,7 @@ void CvPlot::nukeExplosion(int iRange, CvUnit* pNukeUnit)
 					+ GC.getGame().getSorenRandNum(GC.getDefineINT("NUKE_UNIT_DAMAGE_RAND_1"), "Nuke Damage 1")
 					+ GC.getGame().getSorenRandNum(GC.getDefineINT("NUKE_UNIT_DAMAGE_RAND_2"), "Nuke Damage 2")
 				);
-				if (city != NULL)
+				if (city)
 				{
 					iNukeDamage *= std::max(0, city->getNukeModifier() + 100);
 					iNukeDamage /= 100;
@@ -1514,16 +1514,16 @@ void CvPlot::nukeExplosion(int iRange, CvUnit* pNukeUnit)
 
 				if (pLoopUnit->canFight() || pLoopUnit->airBaseCombatStr() > 0)
 				{
-					pLoopUnit->changeDamage(iNukeDamage, ((pNukeUnit != NULL) ? pNukeUnit->getOwner() : NO_PLAYER));
+					pLoopUnit->changeDamage(iNukeDamage, pNukeUnit ? pNukeUnit->getOwner() : NO_PLAYER);
 				}
 				else if (iNukeDamage >= GC.getDefineINT("NUKE_NON_COMBAT_DEATH_THRESHOLD"))
 				{
-					pLoopUnit->kill(true, ((pNukeUnit != NULL) ? pNukeUnit->getOwner() : NO_PLAYER));
+					pLoopUnit->kill(true, pNukeUnit ? pNukeUnit->getOwner() : NO_PLAYER);
 				}
 			}
 		}
 
-		if (city != NULL)
+		if (city)
 		{
 			const int iPop = city->getPopulation();
 			if (iPop < 2 && plotX == this)
@@ -1532,12 +1532,21 @@ void CvPlot::nukeExplosion(int iRange, CvUnit* pNukeUnit)
 				city->kill(true);
 				continue;
 			}
-			for (int iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
 			{
-				if (city->getNumRealBuilding((BuildingTypes)iI) > 0 && !GC.getBuildingInfo((BuildingTypes)iI).isNukeImmune()
-				&& GC.getGame().getSorenRandNum(100, "Building Nuked") < GC.getDefineINT("NUKE_BUILDING_DESTRUCTION_PROB"))
+				std::vector<BuildingTypes> temp;
+				std::map<BuildingTypes, BuiltBuildingData> ledger = city->getBuildingLedger();
+
+				for (std::map<BuildingTypes, BuiltBuildingData>::const_iterator itr = ledger.begin(); itr != ledger.end(); ++itr)
 				{
-					city->setNumRealBuilding((BuildingTypes) iI, 0);
+					if (!GC.getBuildingInfo(itr->first).isNukeImmune()
+					&& GC.getGame().getSorenRandNum(100, "Building Nuked") < GC.getDefineINT("NUKE_BUILDING_DESTRUCTION_PROB"))
+					{
+						temp.push_back(itr->first);
+					}
+				}
+				foreach_(const BuildingTypes eType, temp)
+				{
+					city->changeHasBuilding(eType, false);
 				}
 			}
 			const int iNukedPopulation =
@@ -1575,7 +1584,7 @@ bool CvPlot::isConnectedToCapital(PlayerTypes ePlayer) const
 	{
 		const CvCity* pCapitalCity = GET_PLAYER(ePlayer).getCapitalCity();
 
-		if (pCapitalCity != NULL)
+		if (pCapitalCity)
 		{
 			return isConnectedTo(pCapitalCity);
 		}

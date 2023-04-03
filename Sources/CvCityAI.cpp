@@ -4083,9 +4083,9 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 
 		const CvBuildingInfo& buildingInfo = GC.getBuildingInfo(eBuilding);
 
-		if (getNumRealBuilding(eBuilding) < 1 // We are not exceeding max buildings
-			&&
-			(
+		if (
+			!hasBuilding(eBuilding)
+		&&	(
 				!isLimitedWonder(eBuilding) // Building is not a wonder
 				||
 				// Or production isn't automated or we aren't considering a wonder (we don't want automated production producing wonders)
@@ -4095,14 +4095,14 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 					iFocusFlags == 0
 					|| (iFocusFlags & BUILDINGFOCUS_WONDEROK)
 					|| (iFocusFlags & BUILDINGFOCUS_WORLDWONDER)
-					)
 				)
-			// adviser is not one we are ignoring
-			&& (eIgnoreAdvisor == NO_ADVISOR || buildingInfo.getAdvisorType() != eIgnoreAdvisor)
-			// We can actually build the building
-			&& canConstruct(eBuilding)
-			// Automated production doesn't look at buildings with prerequisites?
-			&& (!isProductionAutomated() || buildingInfo.getPrereqNumOfBuildings().empty()))
+			)
+		// adviser is not one we are ignoring
+		&&	(eIgnoreAdvisor == NO_ADVISOR || buildingInfo.getAdvisorType() != eIgnoreAdvisor)
+		// We can actually build the building
+		&&	canConstruct(eBuilding)
+		// Automated production doesn't look at buildings with prerequisites?
+		&&	(!isProductionAutomated() || buildingInfo.getPrereqNumOfBuildings().empty()))
 		{
 			int64_t iValue = 0;
 
@@ -4171,18 +4171,18 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 				// TODO OPT: convert the masks to vectors so this look is faster
 				for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 				{
+					if (hasBuilding((BuildingTypes)iI)) continue;
+
 					// check if this building enables the construct condition of another building
 					bool bEnablesCondition = false;
 					const BoolExpr* condition = GC.getBuildingInfo((BuildingTypes)iI).getConstructCondition();
-					if (condition != NULL)
+					if (condition && condition->evaluateChange(pObject, queries) == BOOLEXPR_CHANGE_BECOMES_TRUE)
 					{
-						if (condition->evaluateChange(pObject, queries) == BOOLEXPR_CHANGE_BECOMES_TRUE)
-						{
-							bEnablesCondition = true;
-						}
+						bEnablesCondition = true;
 					}
+
 					if ((bEnablesCondition || GC.getBuildingInfo((BuildingTypes)iI).isPrereqInCityBuilding(eBuilding) || GC.getBuildingInfo((BuildingTypes)iI).isPrereqOrBuilding(eBuilding))
-						&& getNumRealBuilding((BuildingTypes)iI) == 0 && canConstructInternal((BuildingTypes)iI, false, false, false, true, eBuilding))
+					&& canConstructInternal((BuildingTypes)iI, false, false, false, true, eBuilding))
 					{
 						PROFILE("AI_bestBuildingThreshold.Enablement");
 
@@ -4206,7 +4206,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 				// Scaled by the ratio of cities in the area / total, giving a guess as to how important this area is in general
 				weighting = (100 * weighting * area()->getCitiesPerPlayer(getOwner())) / player.getNumCities();
 				// If we have none of the free buildings at all then also increase the score weighting
-				if (getNumRealBuilding(eFreeAreaBuilding) == 0)
+				if (!hasBuilding(eFreeAreaBuilding))
 				{
 					weighting++;
 				}
@@ -5076,7 +5076,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 
 				foreach_(const BuildingModifier2 & pair, kBuilding.getBuildingHappinessChanges())
 				{
-					iValue += (pair.second * (kOwner.getBuildingCount(pair.first) - getNumRealBuilding(pair.first)) * 8);
+					iValue += (pair.second * (kOwner.getBuildingCount(pair.first) - hasBuilding(pair.first)) * 8);
 				}
 
 				if (GC.getGame().isOption(GAMEOPTION_UNSUPPORTED_REVOLUTION))
@@ -5873,9 +5873,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 
 						if (iModifier > -100)
 						{
-							const int iCount = count_if(kOwner.cities(),
-								CvCity::fn::getNumRealBuilding(eLoopBuilding) == 0
-							);
+							const int iCount = count_if(kOwner.cities(), !CvCity::fn::hasBuilding(eLoopBuilding));
 							const int iOriginalCost = getHurryCost(eLoopBuilding);
 							const int iNewCost = (iOriginalCost * (100 / (100 + iModifier)));
 							iValue += ((iOriginalCost - iNewCost) * iCount) / 10;
@@ -5916,9 +5914,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 							iNewCost = iOriginalCost * (100 + iPlayerMod) / 100;
 						}
 
-						const int iCount = count_if(kOwner.cities(),
-							CvCity::fn::getNumRealBuilding(eLoopBuilding) == 0
-						);
+						const int iCount = count_if(kOwner.cities(), !CvCity::fn::hasBuilding(eLoopBuilding));
 
 						iValue += (iOriginalCost - iNewCost) * iCount / 10;
 					}
@@ -6015,10 +6011,11 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 								{
 									const int iLoopBuildingsBuilt = kOwner.getBuildingCount(eLoopBuilding);
 
-									// if we have less than the number needed in culture cities
-									//		OR we are one of the top cities and we do not have the building
-									if (iLoopBuildingsBuilt < iCulturalVictoryNumCultureCities ||
-										(iCultureRank <= iCulturalVictoryNumCultureCities && 0 == getNumRealBuilding(eLoopBuilding)))
+									// If we have less than the number needed in culture cities
+									// OR we are one of the top cities AND we do not have the building
+									if (iLoopBuildingsBuilt < iCulturalVictoryNumCultureCities
+									|| iCultureRank <= iCulturalVictoryNumCultureCities
+									&& !hasBuilding(eLoopBuilding))
 									{
 										iValue += iLoopBuildingCultureModifier;
 
@@ -12515,7 +12512,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 				for (int iJ = 0; iJ < iNumBuildings; iJ++)
 				{
 					const BuildingTypes eType = static_cast<BuildingTypes>(iJ);
-					if (algo::none_of_equal(buildingsToCalculate, eType) && getNumRealBuilding(eType) == 0)
+					if (algo::none_of_equal(buildingsToCalculate, eType) && !hasBuilding(eType))
 					{
 						// check if this building enables the construct condition of another building
 						bool bEnablesCondition = GC.getBuildingInfo(eType).isPrereqInCityBuilding(iBuilding) || GC.getBuildingInfo(eType).isPrereqOrBuilding(iBuilding);
@@ -12841,7 +12838,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 				foreach_(const BuildingModifier2 & pair, kBuilding.getBuildingHappinessChanges())
 				{
-					iValue += (pair.second * (kOwner.getBuildingCount(pair.first) - getNumRealBuilding(pair.first)) * 8);
+					iValue += (pair.second * (kOwner.getBuildingCount(pair.first) - hasBuilding(pair.first)) * 8);
 				}
 
 				if (GC.getGame().isOption(GAMEOPTION_UNSUPPORTED_REVOLUTION))
@@ -13620,9 +13617,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 						if (iModifier > -100)
 						{
-							const int iCount = count_if(kOwner.cities(),
-								CvCity::fn::getNumRealBuilding(eLoopBuilding) == 0
-							);
+							const int iCount = count_if(kOwner.cities(), !CvCity::fn::hasBuilding(eLoopBuilding));
 							const int iNewCost = (iOriginalCost * (100 / (100 + iModifier)));
 							iValue += ((iOriginalCost - iNewCost) * iCount) / 10;
 						}
@@ -13662,9 +13657,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 							iNewCost = iOriginalCost * (100 + iPlayerMod) / 100;
 						}
 
-						const int iCount = count_if(kOwner.cities(),
-							CvCity::fn::getNumRealBuilding(eLoopBuilding) == 0
-						);
+						const int iCount = count_if(kOwner.cities(), !CvCity::fn::hasBuilding(eLoopBuilding));
 						iValue += (iOriginalCost - iNewCost) * iCount / 10;
 					}
 				}
@@ -13743,23 +13736,24 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 					// if we need some of us to build iI building, and we dont need more than we have cities
 					if (iPrereqBuildings > 0 && iPrereqBuildings <= iNumCities
-						// do we need more than what we are currently building?
-						&& iPrereqBuildings > kOwner.getBuildingCountPlusMaking(eBuilding))
+					// do we need more than what we are currently building?
+					&& iPrereqBuildings > kOwner.getBuildingCountPlusMaking(eBuilding))
 					{
 						iValue += 3 * iNumCities;
 
 						if (bCulturalVictory1)
 						{
 							const int iCultureModifier = GC.getBuildingInfo(eType).getCommerceModifier(COMMERCE_CULTURE);
-							if (iCultureModifier > 0
-								// If we have less than the number needed in culture cities
-								// OR we are one of the top cities and we do not have the building
-								&& (
+							if (
+								iCultureModifier > 0
+							&&	(
+									// If we have less than the number needed in culture cities
 									kOwner.getBuildingCount(eType) < iCulturalVictoryNumCultureCities
+									// OR we are one of the top cities AND we do not have the building
 									|| iCultureRank <= iCulturalVictoryNumCultureCities
-									&& 0 == getNumRealBuilding(eType)
-									)
-								) iValue += bCulturalVictory3 ? iCultureModifier * 3 : iCultureModifier;
+									&& !hasBuilding(eType)
+								)
+							) iValue += bCulturalVictory3 ? iCultureModifier * 3 : iCultureModifier;
 						}
 					}
 				}

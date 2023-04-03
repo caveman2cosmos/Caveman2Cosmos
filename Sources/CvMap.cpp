@@ -1634,47 +1634,46 @@ void CvMap::toggleUnitsDisplay()
 			//}
 			foreach_(const CvCity* pCity, kPlayer.cities())
 			{
-				for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+				std::map<BuildingTypes, BuiltBuildingData> ledger = pCity->getBuildingLedger();
+
+				for (std::map<BuildingTypes, BuiltBuildingData>::const_iterator itr = ledger.begin(); itr != ledger.end(); ++itr)
 				{
-					if (pCity->getNumRealBuilding((BuildingTypes)iI) > 0)
+					const int iBuiltTime = itr->second.iTimeBuilt;
+					if (iBuiltTime < paiFirstBuilt[itr->first])
 					{
-						int iBuiltTime = pCity->getBuildingOriginalTime((BuildingTypes)iI);
-						if (iBuiltTime < paiFirstBuilt[iI])
-						{
-							paiFirstBuilt[iI] = pCity->getBuildingOriginalTime((BuildingTypes)iI);
-						}
-						if (iBuiltTime < 0)
-						{
-							paiBuiltNum[iI][0]++;
-						}
-						else if (iBuiltTime < 200)
-						{
-							paiBuiltNum[iI][1]++;
-						}
-						else if (iBuiltTime < 400)
-						{
-							paiBuiltNum[iI][2]++;
-						}
-						else if (iBuiltTime < 600)
-						{
-							paiBuiltNum[iI][3]++;
-						}
-						else if (iBuiltTime < 800)
-						{
-							paiBuiltNum[iI][4]++;
-						}
-						else if (iBuiltTime < 1000)
-						{
-							paiBuiltNum[iI][5]++;
-						}
-						else if (iBuiltTime < 1200)
-						{
-							paiBuiltNum[iI][6]++;
-						}
-						else
-						{
-							paiBuiltNum[iI][7]++;
-						}
+						paiFirstBuilt[itr->first] = iBuiltTime;
+					}
+					if (iBuiltTime < 0)
+					{
+						paiBuiltNum[itr->first][0]++;
+					}
+					else if (iBuiltTime < 200)
+					{
+						paiBuiltNum[itr->first][1]++;
+					}
+					else if (iBuiltTime < 400)
+					{
+						paiBuiltNum[itr->first][2]++;
+					}
+					else if (iBuiltTime < 600)
+					{
+						paiBuiltNum[itr->first][3]++;
+					}
+					else if (iBuiltTime < 800)
+					{
+						paiBuiltNum[itr->first][4]++;
+					}
+					else if (iBuiltTime < 1000)
+					{
+						paiBuiltNum[itr->first][5]++;
+					}
+					else if (iBuiltTime < 1200)
+					{
+						paiBuiltNum[itr->first][6]++;
+					}
+					else
+					{
+						paiBuiltNum[itr->first][7]++;
 					}
 				}
 			}

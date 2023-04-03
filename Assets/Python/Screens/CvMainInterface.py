@@ -2989,7 +2989,7 @@ class CvMainInterface:
 		y = -2
 		for szName, i, CvBuildingInfo in aBuildingList:
 
-			if CyCity.getNumRealBuilding(i):
+			if CyCity.hasBuilding(i):
 				szStat = ""
 
 				if CyCity.getNumActiveBuilding(i) > 0:

@@ -1095,8 +1095,8 @@ bool CvDeal::startTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eT
 				{
 					if ((CorporationTypes)GC.getBuildingInfo((BuildingTypes)i).getGlobalCorporationCommerce() == (CorporationTypes)trade.m_iData)
 					{
-						pNewHQCity->setNumRealBuilding((BuildingTypes)i, 1);
-						pOldHeadquarters->setNumRealBuilding((BuildingTypes)i, 0);
+						pNewHQCity->changeHasBuilding((BuildingTypes)i, true);
+						pOldHeadquarters->changeHasBuilding((BuildingTypes)i, false);
 						break;
 					}
 				}
