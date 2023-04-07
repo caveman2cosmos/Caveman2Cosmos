@@ -2747,7 +2747,6 @@ void CvCityAI::AI_chooseProduction()
 
 	m_iTempBuildPriority--;
 
-	// Revamped logic for production for invasions
 	if (!bInhibitUnits && iUnitCostPercentage < (iMaxUnitSpending + 10))
 	{
 		bool bBuildAssault = bAssault;
@@ -4911,6 +4910,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 					{
 						iValue += kBuilding.getAdjacentDamagePercent() * 10;
 					}
+
 
 					iValue += kBuilding.isProtectedCulture() ? 50 : 0;
 					iValue += kBuilding.getOccupationTimeModifier() / 20;
