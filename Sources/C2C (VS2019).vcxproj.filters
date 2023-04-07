@@ -1271,9 +1271,6 @@
     <ClInclude Include="CounterSet.h">
       <Filter>Source\Tools</Filter>
     </ClInclude>
-    <ClInclude Include="CvCityInvasionComponent.h">
-      <Filter>Source\Base\City\Components</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="CvGameCoreDLL.rc">
