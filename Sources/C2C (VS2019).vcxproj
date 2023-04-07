@@ -317,7 +317,6 @@
     <ClCompile Include="CvUnitGrouping.cpp" />
     <ClCompile Include="CvUnitInfo.cpp" />
     <ClCompile Include="CvUnitList.cpp" />
-    <ClCompile Include="CvUnitSelectionCriteria.cpp" />
     <ClCompile Include="CvUnitSort.cpp" />
     <ClCompile Include="CvViewport.cpp" />
     <ClCompile Include="CvXMLLoadUtility.cpp" />

@@ -354,9 +354,6 @@
     <ClCompile Include="CvUnitList.cpp">
       <Filter>Source\UI\City\BuildMenu</Filter>
     </ClCompile>
-    <ClCompile Include="CvUnitSelectionCriteria.cpp">
-      <Filter>Source\UI\City\BuildMenu</Filter>
-    </ClCompile>
     <ClCompile Include="CvUnitSort.cpp">
       <Filter>Source\UI\City\BuildMenu</Filter>
     </ClCompile>
