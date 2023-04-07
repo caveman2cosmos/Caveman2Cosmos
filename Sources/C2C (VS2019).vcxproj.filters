@@ -429,9 +429,6 @@
     <ClCompile Include="CvInfoWater.cpp">
       <Filter>Source\Base\Infos</Filter>
     </ClCompile>
-    <ClCompile Include="CvPopupInfo.cpp">
-      <Filter>Source\Base\Infos</Filter>
-    </ClCompile>
     <ClCompile Include="CvUnitInfo.cpp">
       <Filter>Source\Base\Infos</Filter>
     </ClCompile>
@@ -749,6 +746,9 @@
     </ClCompile>
     <ClCompile Include="CyCityOutputHistoryInterface.cpp">
       <Filter>Source\UI\City</Filter>
+    </ClCompile>
+    <ClCompile Include="CvPopupInfo.cpp">
+      <Filter>Source\UI\Popup</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
