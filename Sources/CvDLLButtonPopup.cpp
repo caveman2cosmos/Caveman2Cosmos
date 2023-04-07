@@ -732,8 +732,6 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 			}
 		}
 		break;
-	case BUTTONPOPUP_INVASION:
-		break;
 	case BUTTONPOPUP_SELECT_UNIT:
 		if (pPopupReturn->getButtonClicked() != 0)
 		{
@@ -1087,10 +1085,6 @@ bool CvDLLButtonPopup::launchButtonPopup(CvPopup* pPopup, CvPopupInfo &info)
 		case BUTTONPOPUP_NAME_LIST:
 		{
 			return launchNameListPopup(pPopup, info);
-		}
-		case BUTTONPOPUP_INVASION:
-		{
-			return invasionPopup(pPopup, info);
 		}
 		case BUTTONPOPUP_SELECT_UNIT:
 		{
@@ -2602,40 +2596,6 @@ bool CvDLLButtonPopup::launchFoundReligionPopup(CvPopup* pPopup, CvPopupInfo &in
 	}
 
 	gDLL->getInterfaceIFace()->popupLaunch(pPopup, false, POPUPSTATE_IMMEDIATE);
-
-	return true;
-}
-
-
-bool CvDLLButtonPopup::invasionPopup(CvPopup* pPopup, CvPopupInfo &info)
-{
-	PROFILE_EXTRA_FUNC();
-	const CvCity* pCity = GET_PLAYER(GC.getGame().getActivePlayer()).getCity(info.getData1());
-
-	if (pCity)
-	{
-		BuildingTypes eBuilding = NO_BUILDING;
-		std::map<BuildingTypes, BuiltBuildingData> ledger = pCity->getBuildingLedger();
-
-		for (std::map<BuildingTypes, BuiltBuildingData>::const_iterator itr = ledger.begin(); itr != ledger.end(); ++itr)
-		{
-			if (GC.getBuildingInfo(itr->first).getInvasionChance() > 0)
-			{
-				eBuilding = itr->first;
-				break;
-			}
-		}
-		if (eBuilding == NO_BUILDING)
-		{
-			FErrorMsg("No Invasion Building Found! Error in CvDLLButtonPopup::invasionPopup(...)!");
-			return false;
-		}
-		gDLL->getInterfaceIFace()->popupSetHeaderString(pPopup, gDLL->getText("TXT_KEY_POPUP_INVASION", pCity->getNameKey()), DLL_FONT_LEFT_JUSTIFY);
-		gDLL->getInterfaceIFace()->popupSetBodyString(pPopup, gDLL->getText("TXT_KEY_POPUP_INVADED_CITY", GC.getBuildingInfo(eBuilding).getDescription(), pCity->getNameKey()));
-		gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, gDLL->getText("TXT_KEY_POPUP_THATS_TERRIBLE"), NULL, 0, WIDGET_GENERAL);
-		gDLL->getInterfaceIFace()->popupLaunch(pPopup, false, POPUPSTATE_IMMEDIATE);
-		gDLL->getInterfaceIFace()->playGeneralSound("AS2D_BUILD_BARRACKS");
-	}
 
 	return true;
 }

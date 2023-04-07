@@ -200,7 +200,6 @@ m_ppaiBonusYieldModifier(NULL)
 ,m_iWorldTradeRoutes(0)
 ,m_iLineOfSight(0)
 ,m_iInflationModifier(0)
-,m_iInvasionChance(0)
 ,m_iAdjacentDamagePercent(0)
 ,m_iProductionContinueBuilding(NO_BUILDING)
 ,m_iPrereqPopulation(0)
@@ -1780,7 +1779,6 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iWorldTradeRoutes);
 	CheckSum(iSum, m_iLineOfSight);
 	CheckSum(iSum, m_iInflationModifier);
-	CheckSum(iSum, m_iInvasionChance);
 	CheckSum(iSum, m_iAdjacentDamagePercent);
 	CheckSum(iSum, m_iProductionContinueBuilding);
 	CheckSum(iSum, m_iPrereqPopulation);
@@ -2616,7 +2614,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iPopulationgrowthratepercentage, L"iPopulationgrowthratepercentage");
 	pXML->GetOptionalChildXmlValByName(&m_iLineOfSight, L"iLineOfSight");
 	pXML->GetOptionalChildXmlValByName(&m_iInflationModifier, L"iInflationModifier");
-	pXML->GetOptionalChildXmlValByName(&m_iInvasionChance, L"iInvasionChance");
 	pXML->GetOptionalChildXmlValByName(&m_iAdjacentDamagePercent, L"iAdjacentDamagePercent");
 	pXML->GetOptionalChildXmlValByName(&m_iPrereqPopulation, L"iPrereqPopulation");
 	pXML->GetOptionalChildXmlValByName(&m_iWorkableRadius, L"iWorkableRadius");
@@ -3750,7 +3747,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	if (getPopulationgrowthratepercentage() == iDefault) m_iPopulationgrowthratepercentage = pClassInfo->getPopulationgrowthratepercentage();
 	if (getLineOfSight() == iDefault) m_iLineOfSight = pClassInfo->getLineOfSight();
 	if (getInflationModifier() == iDefault) m_iInflationModifier = pClassInfo->getInflationModifier();
-	if (getInvasionChance() == iDefault) m_iInvasionChance = pClassInfo->getInvasionChance();
 	if (getAdjacentDamagePercent() == iDefault) m_iAdjacentDamagePercent = pClassInfo->getAdjacentDamagePercent();
 	if (getPrereqPopulation() == iDefault) m_iPrereqPopulation = pClassInfo->getPrereqPopulation();
 	if (getPrereqCultureLevel() == NO_CULTURELEVEL) m_iPrereqCultureLevel = pClassInfo->getPrereqCultureLevel();

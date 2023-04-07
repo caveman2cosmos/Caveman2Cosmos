@@ -21170,12 +21170,6 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 		szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_DAMAGES_ENEMY_UNITS", kBuilding.getAdjacentDamagePercent()));
 	}
 
-	if (kBuilding.getInvasionChance() > 0)
-	{
-		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_INVASION", kBuilding.getInvasionChance()));
-	}
-
 	if (kBuilding.isProtectedCulture() && GC.getDefineINT("IDW_ENABLED"))
 	{
 		szBuffer.append(NEWLINE);

@@ -4912,8 +4912,6 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						iValue += kBuilding.getAdjacentDamagePercent() * 10;
 					}
 
-					iValue -= kBuilding.getInvasionChance() * 5;
-
 					iValue += kBuilding.isProtectedCulture() ? 50 : 0;
 					iValue += kBuilding.getOccupationTimeModifier() / 20;
 
@@ -12693,7 +12691,6 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 						iValue += kBuilding.getAdjacentDamagePercent() * 10;
 					}
 
-					iValue -= kBuilding.getInvasionChance() * 5;
 					iValue += kBuilding.isProtectedCulture() ? 50 : 0;
 					iValue += kBuilding.getOccupationTimeModifier() / 20;
 

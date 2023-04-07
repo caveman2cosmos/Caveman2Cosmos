@@ -178,7 +178,6 @@ public:
 	int getWorldTradeRoutes() const					{ return m_iWorldTradeRoutes; }
 	int getLineOfSight() const						{ return m_iLineOfSight; }
 	int getInflationModifier() const				{ return m_iInflationModifier; }
-	int getInvasionChance() const					{ return m_iInvasionChance; }
 	int getAdjacentDamagePercent() const			{ return m_iAdjacentDamagePercent; }
 	int getPrereqPopulation() const					{ return m_iPrereqPopulation; }
 	BuildingTypes getProductionContinueBuilding() const	{ return m_iProductionContinueBuilding; }
@@ -547,7 +546,6 @@ private:
 	int m_iLineOfSight;
 	int m_iInflationModifier;
 	int m_iPillageGoldModifier;
-	int m_iInvasionChance;
 	int m_iAdjacentDamagePercent;
 	int m_iPrereqPopulation;
 	int m_iPrereqCultureLevel;

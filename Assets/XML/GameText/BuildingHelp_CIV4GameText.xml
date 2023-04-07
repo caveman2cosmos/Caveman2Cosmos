@@ -764,16 +764,6 @@
 		<Russian>[ICON_BULLET]Увеличивает уровень беззакония в городе на %s1_amount%% (помогает преступникам избежать раскрытия)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDINGHELP_INVASION</Tag>
-		<English>[ICON_BULLET]%d1% Chance Per turn that adjacent enemy units will discover a secret passage into the city</English>
-		<French>[ICON_BULLET]%d1% de probabilité par tour, que les unités ennemies découvrent un passage vers la ville</French>
-		<German>[ICON_BULLET]%d1% Wahrscheinlichkeit pro Runde, dass eine benachbarte feindliche Einheit einen Geheimgang ins Innere der Stadt entdeckt</German>
-		<Italian>[ICON_BULLET]%d1% di Chance ogni turno che le unità nemiche adiacenti scoprano un passaggio segreto verso la città</Italian>
-		<Spanish>[ICON_BULLET]%d1% de probabilidad por turno de que las unidades enemigas descubran un pasaje secreto hacia la ciudad</Spanish>
-		<Polish>[ICON_BULLET]%d1% szansy na każdą turę że wróg odkryje tajemne przejście do Twojego miasta</Polish>
-		<Russian>[ICON_BULLET]%d1% Øàíñ, ÷òî ñìåæíûå âðàæåñêèå îòðÿäû îáíàðóæàò òàéíûé õîä â ãîðîä</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_INVESTIGATION</Tag>
 		<English>[ICON_BULLET]Increases local Investigation by %s1_amount%% (Helps Law Enforcement catch Criminals)</English>
 		<French>[ICON_BULLET]Donne à toutes les unités produites dans la ville %s1_amount%% d'Investigation.</French>
