@@ -272,7 +272,6 @@
     <ClCompile Include="CvGameObject.cpp" />
     <ClCompile Include="CvGameTextMgr.cpp" />
     <ClCompile Include="CvGlobals.cpp" />
-    <ClCompile Include="CvHallOfFameInfo.cpp" />
     <ClCompile Include="CvInfos.cpp" />
     <ClCompile Include="CvInfoWater.cpp" />
     <ClCompile Include="CvInitCore.cpp" />

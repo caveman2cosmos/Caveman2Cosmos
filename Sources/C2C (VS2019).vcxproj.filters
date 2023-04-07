@@ -420,9 +420,6 @@
     <ClCompile Include="CvBuildingInfo.cpp">
       <Filter>Source\Base\Infos</Filter>
     </ClCompile>
-    <ClCompile Include="CvHallOfFameInfo.cpp">
-      <Filter>Source\Base\Infos</Filter>
-    </ClCompile>
     <ClCompile Include="CvImprovementInfo.cpp">
       <Filter>Source\Base\Infos</Filter>
     </ClCompile>
