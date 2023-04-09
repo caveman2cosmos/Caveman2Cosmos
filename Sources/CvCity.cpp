@@ -6650,8 +6650,7 @@ int CvCity::netRevoltRisk(PlayerTypes cultureAttacker) const
 {
 	// Returns 100x % chance of revolt to eCultureAttacker when modified by defending units
 	// 100 = 1%, 10,000 = 100%
-	return std::max(0,
-		baseRevoltRisk(cultureAttacker) * (100 - cultureGarrison(cultureAttacker)));
+	return std::min(10000, std::max(0, baseRevoltRisk(cultureAttacker) * (100 - cultureGarrison(cultureAttacker))));
 }
 
 
