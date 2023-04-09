@@ -9410,7 +9410,7 @@ void CvPlayer::changeGoldenAgeTurns(int iChange)
 
 int CvPlayer::getGoldenAgeLength() const
 {
-	return getModifiedIntValue(GC.getGame().goldenAgeLength(), getGoldenAgeModifier());
+	return std::max(1, getModifiedIntValue(GC.getGame().goldenAgeLength100(), getGoldenAgeModifier()) / 100);
 }
 
 int CvPlayer::getNumUnitGoldenAges() const

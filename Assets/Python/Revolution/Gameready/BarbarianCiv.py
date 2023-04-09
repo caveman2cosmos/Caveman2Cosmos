@@ -726,7 +726,7 @@ class BarbarianCiv:
 
 			# Gold
 			CyPlayer.changeGold(2 * iFactorGS * (iEra + 1))
-			CyPlayer.changeGoldenAgeTurns(GAME.goldenAgeLength())
+			CyPlayer.changeGoldenAgeTurns(GAME.goldenAgeLength100()/100)
 		CyTeam.setIsMinorCiv(False, False)
 
 		civName = CyPlayer.getCivilizationShortDescription(0)

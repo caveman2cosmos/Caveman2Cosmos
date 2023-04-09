@@ -5197,7 +5197,7 @@ class Revolution:
 
 					if( not bIsBarbRev and (pRevPlayer.getNumCities() + pRevPlayer.getCitiesLost() < 4) and len(cityList) > 1 ) :
 						# Launch golden age for rebel player (helps with stability and being competitive)
-						pRevPlayer.changeGoldenAgeTurns( int(1.5*GAME.goldenAgeLength()) )
+						pRevPlayer.changeGoldenAgeTurns( int(1.5*GAME.goldenAgeLength100() / 100) )
 
 					# Since instigator is first in list, it will become capital if pRevPlayer has no others
 					for pCity in cityList :

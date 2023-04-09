@@ -155,7 +155,7 @@ public:
 	int countCorporationLevels(CorporationTypes eCorporation) const;
 	void replaceCorporation(CorporationTypes eCorporation1, CorporationTypes eCorporation2);
 
-	int goldenAgeLength() const;
+	int goldenAgeLength100() const;
 	int victoryDelay(VictoryTypes eVictory) const;
 	int getImprovementUpgradeTime(ImprovementTypes eImprovement) const;
 
