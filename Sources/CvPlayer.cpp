@@ -3629,6 +3629,9 @@ void CvPlayer::doTurn()
 {
 	PROFILE_FUNC();
 
+	// Only decrement the GA counter at the end of this function if GA started before this point, i.e last turn.
+	const bool bWasGoldenAgeLastTurn = getGoldenAgeTurns() > 0;
+
 #ifdef VALIDATION_FOR_PLOT_GROUPS
 	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
@@ -3742,10 +3745,12 @@ void CvPlayer::doTurn()
 
 	if (getGoldenAgeTurns() > 0)
 	{
-		changeGoldenAgeTurns(-1);
+		if (bWasGoldenAgeLastTurn)
+		{
+			changeGoldenAgeTurns(-1);
+		}
 	}
-
-	if (getAnarchyTurns() > 0)
+	else if (getAnarchyTurns() > 0)
 	{
 		m_iNumAnarchyTurns++; // Increment stat counter for turns we have spent in anarchy
 		changeAnarchyTurns(-1);
