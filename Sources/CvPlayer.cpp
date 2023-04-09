@@ -3774,6 +3774,8 @@ void CvPlayer::doTurn()
 
 	if (getGoldenAgeTurns() > 0)
 	{
+		FAssert(getAnarchyTurns() < 1);
+
 		if (bWasGoldenAgeLastTurn)
 		{
 			changeGoldenAgeTurns(-1);
