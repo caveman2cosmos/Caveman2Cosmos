@@ -6539,7 +6539,7 @@ int CvCity::netRevoltRisk100(PlayerTypes cultureAttacker) const
 {
 	// Returns 100x % chance of revolt to eCultureAttacker when modified by defending units
 	// 108 = 1.08%, 9,876 = 98.76%
-	return std::max(0, baseRevoltRisk100(cultureAttacker) * (unitRevoltRiskModifier(cultureAttacker))) / 100;
+	return std::min(10000, std::max(0, baseRevoltRisk100(cultureAttacker) * (unitRevoltRiskModifier(cultureAttacker))) / 100);
 }
 
 
@@ -10247,19 +10247,20 @@ int CvCity::getOccupationTimer() const
 
 bool CvCity::isOccupation() const
 {
-	return (getOccupationTimer() > 0);
+	return m_iOccupationTimer > 0;
 }
 
 
 void CvCity::setOccupationTimer(int iNewValue)
 {
-	if (getOccupationTimer() != iNewValue)
+	FASSERT_NOT_NEGATIVE(iNewValue);
+
+	if (m_iOccupationTimer != iNewValue)
 	{
-		const bool wasOccupation = isOccupation();
+		const bool wasOccupation = m_iOccupationTimer > 0;
 
 		m_iOccupationTimer = iNewValue;
-		FASSERT_NOT_NEGATIVE(getOccupationTimer());
-		// cppcheck-suppress knownConditionTrueFalse
+
 		if (wasOccupation != isOccupation())
 		{
 			updateCorporation();
@@ -10269,7 +10270,6 @@ void CvCity::setOccupationTimer(int iNewValue)
 
 			AI_setAssignWorkDirty(true);
 		}
-
 		setInfoDirty(true);
 	}
 }
@@ -10277,7 +10277,7 @@ void CvCity::setOccupationTimer(int iNewValue)
 
 void CvCity::changeOccupationTimer(int iChange)
 {
-	setOccupationTimer(getOccupationTimer() + iChange);
+	setOccupationTimer(m_iOccupationTimer + iChange);
 }
 
 
