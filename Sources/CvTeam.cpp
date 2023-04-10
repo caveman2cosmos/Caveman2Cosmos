@@ -4841,9 +4841,10 @@ void CvTeam::setResearchProgress(TechTypes eIndex, int iNewValue, PlayerTypes eP
 			{
 				GET_PLAYER(ePlayer).changeOverflowResearch(
 					GET_PLAYER(ePlayer).doMultipleResearch(
-						100 * (iNewValue - getResearchCost(eIndex))
-						/
-						GET_PLAYER(ePlayer).calculateResearchModifier(eIndex)
+						getModifiedIntValue(
+							(iNewValue - getResearchCost(eIndex)),
+							-GET_PLAYER(ePlayer).calculateResearchModifier(eIndex)
+						)
 					)
 				);
 			}

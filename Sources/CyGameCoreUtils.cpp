@@ -218,6 +218,12 @@ int64_t cyIntSqrt64(uint64_t iValue)
 	return intSqrt64(iValue);
 }
 
+int64_t cyGetModifiedIntValue64(uint64_t iValue, const int iMod)
+{
+	return getModifiedIntValue64(iValue, iMod);
+}
+
+
 void cyShufflePyList(python::list& pyList, CvRandom& rand)
 {
 	PROFILE_EXTRA_FUNC();
