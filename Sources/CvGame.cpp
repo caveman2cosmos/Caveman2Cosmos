@@ -11523,6 +11523,11 @@ int CvGame::getTopPopCount() const
 	return iBest;
 }
 
+int CvGame::getWinForLosingResearchModifier(const int iCities, const int iPop) const
+{
+	return 100 - (100 * iCities / getTopCityCount() + 100 * iPop / getTopPopCount()) / 2;
+}
+
 
 int CvGame::getImprovementCount(ImprovementTypes eIndex) const
 {

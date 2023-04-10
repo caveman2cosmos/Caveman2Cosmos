@@ -8044,15 +8044,14 @@ int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 	}
 	int iModifier = 100;
 
-	if (GC.getGame().isOption(GAMEOPTION_TECH_WIN_FOR_LOSING) && (!isHumanPlayer() || !GC.getGame().isOption(GAMEOPTION_TECH_NO_HANDICAPS_FOR_HUMANS)))
+	if (GC.getGame().isOption(GAMEOPTION_TECH_WIN_FOR_LOSING)
+	&& (!isHumanPlayer() || !GC.getGame().isOption(GAMEOPTION_TECH_NO_HANDICAPS_FOR_HUMANS)))
 	{
-		if ((int)getCurrentEra() > 0)
-		{
-			iModifier += GET_TEAM(getTeam()).getWinForLosingResearchModifier();
-		}
+		iModifier += GET_TEAM(getTeam()).getWinForLosingResearchModifier();
 	}
 
-	if(GC.getGame().isOption(GAMEOPTION_TECH_DIFFUSION) && (!isHumanPlayer() || !GC.getGame().isOption(GAMEOPTION_TECH_NO_HANDICAPS_FOR_HUMANS)))
+	if (GC.getGame().isOption(GAMEOPTION_TECH_DIFFUSION)
+	&& (!isHumanPlayer() || !GC.getGame().isOption(GAMEOPTION_TECH_NO_HANDICAPS_FOR_HUMANS)))
 	{
 		double knownExp = 0.0;
 		// Tech flows better through open borders

@@ -356,6 +356,7 @@ public:
 	void logOOSSpecial(int iLocID, int iVar, int iVar2 = 0, int iVar3 = 0);
 	int getTopCityCount() const;
 	int getTopPopCount() const;
+	int getWinForLosingResearchModifier(const int iCities, const int iPop) const;
 	int getImprovementCount(ImprovementTypes eIndex) const;
 	void changeImprovementCount(ImprovementTypes eIndex, int iChange);
 
