@@ -19726,12 +19726,9 @@ SpecialistTypes CvTraitInfo::getEraAdvanceFreeSpecialistType() const
 
 int CvTraitInfo::getGoldenAgeonBirthofGreatPeopleType() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
+	if (isNegativeTrait() && GC.getGame().isOption(GAMEOPTION_LEADER_PURE_TRAITS))
 	{
-		if (isNegativeTrait() && m_iGoldenAgeonBirthofGreatPeopleType != NO_UNIT)
-		{
-				return NO_UNIT;
-		}
+		return NO_UNIT;
 	}
 	return m_iGoldenAgeonBirthofGreatPeopleType;
 }
@@ -20710,11 +20707,6 @@ bool CvTraitInfo::isMilitaryFoodProduction() const
 		}
 	}
 	return m_bMilitaryFoodProduction;
-}
-
-bool CvTraitInfo::isNegativeTrait() const
-{
-	return m_bNegativeTrait;
 }
 
 bool CvTraitInfo::isImpurePropertyManipulators() const

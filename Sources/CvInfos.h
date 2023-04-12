@@ -5632,7 +5632,7 @@ public:
 
 	//Booleans
 	bool isMilitaryFoodProduction() const;
-	bool isNegativeTrait() const;
+	inline bool isNegativeTrait() const { return m_bNegativeTrait; }
 	bool isImpurePropertyManipulators() const;
 	bool isImpurePromotions() const;
 	bool isCivilizationTrait() const;

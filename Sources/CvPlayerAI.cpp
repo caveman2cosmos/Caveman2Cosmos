@@ -16754,7 +16754,7 @@ int CvPlayerAI::AI_calculateGoldenAgeValue() const
 			/ std::max(1, 1 + GC.getYieldInfo((YieldTypes)iI).getGoldenAgeYieldThreshold())
 		);
 	}
-	iValue *= getTotalPopulation() * GC.getGame().goldenAgeLength();
+	iValue *= getTotalPopulation() * getGoldenAgeLength();
 	iValue /= 100;
 
 	// Golden Ages Reduce Revolutions

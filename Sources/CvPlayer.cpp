@@ -3660,6 +3660,9 @@ void CvPlayer::doTurn()
 {
 	PROFILE_FUNC();
 
+	// Only decrement the GA counter at the end of this function if GA started before this point, i.e last turn.
+	const bool bWasGoldenAgeLastTurn = getGoldenAgeTurns() > 0; 
+
 #ifdef VALIDATION_FOR_PLOT_GROUPS
 	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
@@ -3760,7 +3763,6 @@ void CvPlayer::doTurn()
 		algo::for_each(cities_safe(), CvCity::fn::doTurn());
 	}
 
-	// Johny Smith 04/19/09
 	if (GC.isDCM_OPP_FIRE())
 	{
 		algo::for_each(units(), CvUnit::fn::doOpportunityFire());
@@ -3769,14 +3771,17 @@ void CvPlayer::doTurn()
 	{
 		algo::for_each(units(), CvUnit::fn::doActiveDefense());
 	}
-	// ! Johny Smith
 
 	if (getGoldenAgeTurns() > 0)
 	{
-		changeGoldenAgeTurns(-1);
-	}
+		FAssert(getAnarchyTurns() < 1);
 
-	if (getAnarchyTurns() > 0)
+		if (bWasGoldenAgeLastTurn)
+		{
+			changeGoldenAgeTurns(-1);
+		}
+	}
+	else if (getAnarchyTurns() > 0)
 	{
 		m_iNumAnarchyTurns++; // Increment stat counter for turns we have spent in anarchy
 		changeAnarchyTurns(-1);
@@ -8035,19 +8040,18 @@ int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 	PROFILE_EXTRA_FUNC();
 	if (NO_TECH == eTech)
 	{
-		return 100;
+		return 0;
 	}
-	int iModifier = 100;
+	int iModifier = 0;
 
-	if (GC.getGame().isOption(GAMEOPTION_TECH_WIN_FOR_LOSING) && (!isHumanPlayer() || !GC.getGame().isOption(GAMEOPTION_TECH_NO_HANDICAPS_FOR_HUMANS)))
+	if (GC.getGame().isOption(GAMEOPTION_TECH_WIN_FOR_LOSING)
+	&& (!isHumanPlayer() || !GC.getGame().isOption(GAMEOPTION_TECH_NO_HANDICAPS_FOR_HUMANS)))
 	{
-		if ((int)getCurrentEra() > 0)
-		{
-			iModifier += GET_TEAM(getTeam()).getWinForLosingResearchModifier();
-		}
+		iModifier += GET_TEAM(getTeam()).getWinForLosingResearchModifier();
 	}
 
-	if(GC.getGame().isOption(GAMEOPTION_TECH_DIFFUSION) && (!isHumanPlayer() || !GC.getGame().isOption(GAMEOPTION_TECH_NO_HANDICAPS_FOR_HUMANS)))
+	if (GC.getGame().isOption(GAMEOPTION_TECH_DIFFUSION)
+	&& (!isHumanPlayer() || !GC.getGame().isOption(GAMEOPTION_TECH_NO_HANDICAPS_FOR_HUMANS)))
 	{
 		double knownExp = 0.0;
 		// Tech flows better through open borders
@@ -8143,27 +8147,28 @@ int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 			}
 		}
 	}
-	return std::max(1, iModifier);
+	return iModifier;
 }
 
 int CvPlayer::calculateBaseNetResearch(TechTypes eTech) const
 {
-	TechTypes eResearchTech = NO_TECH;
+	if (eTech == NO_TECH)
+	{
+		eTech = getCurrentResearch();
 
-	if (eTech != NO_TECH)
-	{
-		eResearchTech = eTech;
+		if (eTech == NO_TECH)
+		{
+			return GC.getDefineINT("BASE_RESEARCH_RATE") + getCommerceRate(COMMERCE_RESEARCH);
+		}
 	}
-	else
-	{
-		eResearchTech = getCurrentResearch();
-	}
-	int iMult = 100;
-	if (eResearchTech != NO_TECH)
-	{
-		iMult = getNationalTechResearchModifier(eResearchTech) + calculateResearchModifier(eResearchTech);
-	}
-	return (GC.getDefineINT("BASE_RESEARCH_RATE") + getCommerceRate(COMMERCE_RESEARCH)) * iMult / 100;
+	return (
+		GC.getDefineINT("BASE_RESEARCH_RATE")
+		+
+		getModifiedIntValue(
+			getCommerceRate(COMMERCE_RESEARCH),
+			getNationalTechResearchModifier(eTech) + calculateResearchModifier(eTech)
+		)
+	);
 }
 
 
@@ -8331,7 +8336,7 @@ int CvPlayer::getResearchTurnsLeftTimes100(TechTypes eTech, bool bOverflow) cons
 		&& (iI == getID() || GET_PLAYER((PlayerTypes)iI).getCurrentResearch() == eTech))
 		{
 			iResearchRate += GET_PLAYER((PlayerTypes)iI).calculateResearchRate(eTech);
-			iOverflow += GET_PLAYER((PlayerTypes)iI).getOverflowResearch() * calculateResearchModifier(eTech) / 100;
+			iOverflow += getModifiedIntValue(GET_PLAYER((PlayerTypes)iI).getOverflowResearch(), calculateResearchModifier(eTech));
 		}
 	}
 
@@ -9335,7 +9340,7 @@ int CvPlayer::getGoldenAgeTurns() const
 
 bool CvPlayer::isGoldenAge() const
 {
-	return (getGoldenAgeTurns() > 0);
+	return m_iGoldenAgeTurns > 0;
 }
 
 void CvPlayer::changeGoldenAgeTurns(int iChange)
@@ -9343,31 +9348,30 @@ void CvPlayer::changeGoldenAgeTurns(int iChange)
 	PROFILE_EXTRA_FUNC();
 	if (iChange != 0)
 	{
-		const bool bOldGoldenAge = isGoldenAge();
+		const bool bWasGoldenAge = m_iGoldenAgeTurns > 0;
 
 		m_iGoldenAgeTurns += iChange;
-		FASSERT_NOT_NEGATIVE(getGoldenAgeTurns());
+		FASSERT_NOT_NEGATIVE(m_iGoldenAgeTurns);
 
-		if (bOldGoldenAge != isGoldenAge())
+		if (bWasGoldenAge != isGoldenAge())
 		{
-			if (isGoldenAge())
+			if (!bWasGoldenAge)
 			{
 				changeAnarchyTurns(-getAnarchyTurns());
 				((CvPlayerAI*)this)->AI_startGoldenAge();
 			}
-
 			updateYield();
 
-			if (isGoldenAge())
+			if (bWasGoldenAge)
+			{
+				CvEventReporter::getInstance().endGoldenAge(getID());
+			}
+			else
 			{
 				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_PLAYER_GOLDEN_AGE_BEGINS", getNameKey());
 				GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getID(), szBuffer, -1, -1, GC.getCOLOR_HIGHLIGHT_TEXT());
 
 				CvEventReporter::getInstance().goldenAge(getID());
-			}
-			else
-			{
-				CvEventReporter::getInstance().endGoldenAge(getID());
 			}
 
 			for (int iI = 0; iI < MAX_PLAYERS; iI++)
@@ -9376,16 +9380,21 @@ void CvPlayer::changeGoldenAgeTurns(int iChange)
 				{
 					if (GET_TEAM(getTeam()).isHasMet(GET_PLAYER((PlayerTypes)iI).getTeam()))
 					{
-
-						if (isGoldenAge())
+						if (bWasGoldenAge)
 						{
-							const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_PLAYER_GOLDEN_AGE_HAS_BEGUN", getNameKey());
-							AddDLLMessage((PlayerTypes)iI, ((PlayerTypes)iI == getID()), GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_GOLDAGESTART", MESSAGE_TYPE_MAJOR_EVENT, NULL, GC.getCOLOR_HIGHLIGHT_TEXT());
+							AddDLLMessage(
+								(PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(),
+								gDLL->getText("TXT_KEY_MISC_PLAYER_GOLDEN_AGE_ENDED", getNameKey()),
+								"AS2D_GOLDAGEEND", MESSAGE_TYPE_MINOR_EVENT, NULL, GC.getCOLOR_HIGHLIGHT_TEXT()
+							);
 						}
 						else
 						{
-							const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_PLAYER_GOLDEN_AGE_ENDED", getNameKey());
-							AddDLLMessage((PlayerTypes)iI, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_GOLDAGEEND", MESSAGE_TYPE_MINOR_EVENT, NULL, GC.getCOLOR_HIGHLIGHT_TEXT());
+							AddDLLMessage(
+								(PlayerTypes)iI, ((PlayerTypes)iI == getID()), GC.getEVENT_MESSAGE_TIME(),
+								gDLL->getText("TXT_KEY_MISC_PLAYER_GOLDEN_AGE_HAS_BEGUN", getNameKey()),
+								"AS2D_GOLDAGESTART", MESSAGE_TYPE_MAJOR_EVENT, NULL, GC.getCOLOR_HIGHLIGHT_TEXT()
+							);
 						}
 					}
 				}
@@ -9401,7 +9410,7 @@ void CvPlayer::changeGoldenAgeTurns(int iChange)
 
 int CvPlayer::getGoldenAgeLength() const
 {
-	return (GC.getGame().goldenAgeLength() * std::max(0, 100 + getGoldenAgeModifier())) / 100;
+	return std::max(1, getModifiedIntValue(GC.getGame().goldenAgeLength100(), getGoldenAgeModifier()) / 100);
 }
 
 int CvPlayer::getNumUnitGoldenAges() const
@@ -9461,12 +9470,10 @@ void CvPlayer::changeAnarchyTurns(int iChange, bool bHideMessages)
 
 			if (isAnarchy() && !bHideMessages)
 			{
-
 				AddDLLMessage(getID(), true, GC.getEVENT_MESSAGE_TIME(), gDLL->getText("TXT_KEY_MISC_REVOLUTION_HAS_BEGUN").GetCString(), "AS2D_REVOLTSTART", MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_WARNING_TEXT"));
 			}
 			else if (!bHideMessages)
 			{
-
 				AddDLLMessage(getID(), false, GC.getEVENT_MESSAGE_TIME(), gDLL->getText("TXT_KEY_MISC_REVOLUTION_OVER").GetCString(), "AS2D_REVOLTEND", MESSAGE_TYPE_MINOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_WARNING_TEXT"));
 			}
 
@@ -15575,13 +15582,13 @@ void CvPlayer::doResearch()
 	const TechTypes eCurrentTech = getCurrentResearch();
 	if (eCurrentTech == NO_TECH)
 	{
-		changeOverflowResearch(100 * calculateResearchRate() / calculateResearchModifier(eCurrentTech));
+		changeOverflowResearch(getModifiedIntValue(calculateResearchRate(), -calculateResearchModifier(eCurrentTech)));
 	}
 	else
 	{
 		const int iOverflow = getOverflowResearch();
 		changeOverflowResearch(-iOverflow);
-		GET_TEAM(getTeam()).changeResearchProgress(eCurrentTech, calculateResearchRate(eCurrentTech) + iOverflow * calculateResearchModifier(eCurrentTech) / 100, getID());
+		GET_TEAM(getTeam()).changeResearchProgress(eCurrentTech, calculateResearchRate(eCurrentTech) + getModifiedIntValue(iOverflow, calculateResearchModifier(eCurrentTech)), getID());
 	}
 
 	if (bForceResearchChoice)
@@ -20394,7 +20401,6 @@ void CvPlayer::createGreatPeople(UnitTypes eGreatPersonUnit, bool bIncrementThre
 		return;
 	}
 
-	//Team Project (6)
 	if (getGoldenAgeOnBirthOfGreatPersonCount(eGreatPersonUnit) > 0)
 	{
 		changeGoldenAgeTurns(getGoldenAgeLength());
@@ -26772,12 +26778,15 @@ int CvPlayer::doMultipleResearch(int iOverflow)
 	}
 
 	while (eCurrentTech != NO_TECH
-	&& 100 * (GET_TEAM(getTeam()).getResearchCost(eCurrentTech) - GET_TEAM(getTeam()).getResearchProgress(eCurrentTech)) / calculateResearchModifier(eCurrentTech) <= iOverflow)
+	&& getModifiedIntValue(GET_TEAM(getTeam()).getResearchCost(eCurrentTech) - GET_TEAM(getTeam()).getResearchProgress(eCurrentTech), -calculateResearchModifier(eCurrentTech)) <= iOverflow)
 	{
 		//The Future Tech can cause strange infinite loops
 		if (GC.getTechInfo(eCurrentTech).isRepeat()) break;
 
-		iOverflow -= 100 * (GET_TEAM(getTeam()).getResearchCost(eCurrentTech) - GET_TEAM(getTeam()).getResearchProgress(eCurrentTech)) / calculateResearchModifier(eCurrentTech);
+		iOverflow -= getModifiedIntValue(
+			GET_TEAM(getTeam()).getResearchCost(eCurrentTech) - GET_TEAM(getTeam()).getResearchProgress(eCurrentTech),
+			calculateResearchModifier(eCurrentTech)
+		);
 		GET_TEAM(getTeam()).setHasTech(eCurrentTech, true, getID(), true, true);
 
 		if (!GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS) && !GC.getGame().isOption(GAMEOPTION_NO_TECH_BROKERING))

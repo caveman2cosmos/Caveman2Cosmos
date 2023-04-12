@@ -167,9 +167,9 @@ int CyGame::calculateReligionPercent(ReligionTypes eReligion) const
 	return m_pGame.calculateReligionPercent(eReligion);
 }
 
-int CyGame::goldenAgeLength() const
+int CyGame::goldenAgeLength100() const
 {
-	return m_pGame.goldenAgeLength();
+	return m_pGame.goldenAgeLength100();
 }
 
 int CyGame::victoryDelay(VictoryTypes iVictory) const

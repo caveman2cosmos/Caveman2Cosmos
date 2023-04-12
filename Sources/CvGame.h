@@ -155,7 +155,7 @@ public:
 	int countCorporationLevels(CorporationTypes eCorporation) const;
 	void replaceCorporation(CorporationTypes eCorporation1, CorporationTypes eCorporation2);
 
-	int goldenAgeLength() const;
+	int goldenAgeLength100() const;
 	int victoryDelay(VictoryTypes eVictory) const;
 	int getImprovementUpgradeTime(ImprovementTypes eImprovement) const;
 
@@ -356,6 +356,7 @@ public:
 	void logOOSSpecial(int iLocID, int iVar, int iVar2 = 0, int iVar3 = 0);
 	int getTopCityCount() const;
 	int getTopPopCount() const;
+	int getWinForLosingResearchModifier(const int iCities, const int iPop) const;
 	int getImprovementCount(ImprovementTypes eIndex) const;
 	void changeImprovementCount(ImprovementTypes eIndex, int iChange);
 

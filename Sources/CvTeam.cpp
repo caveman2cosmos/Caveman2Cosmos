@@ -4841,9 +4841,10 @@ void CvTeam::setResearchProgress(TechTypes eIndex, int iNewValue, PlayerTypes eP
 			{
 				GET_PLAYER(ePlayer).changeOverflowResearch(
 					GET_PLAYER(ePlayer).doMultipleResearch(
-						100 * (iNewValue - getResearchCost(eIndex))
-						/
-						GET_PLAYER(ePlayer).calculateResearchModifier(eIndex)
+						getModifiedIntValue(
+							(iNewValue - getResearchCost(eIndex)),
+							-GET_PLAYER(ePlayer).calculateResearchModifier(eIndex)
+						)
 					)
 				);
 			}
@@ -7882,7 +7883,7 @@ void CvTeam::setLastRoundOfValidImprovementCacheUpdate()
 	m_iLastRoundOfValidImprovementCacheUpdate = GC.getGame().getGameTurn();
 }
 
-// K-Mod
+
 int CvTeam::getTypicalUnitValue(UnitAITypes eUnitAI) const
 {
 	PROFILE_EXTRA_FUNC();
@@ -7897,17 +7898,13 @@ int CvTeam::getTypicalUnitValue(UnitAITypes eUnitAI) const
 	return iMax;
 }
 
+
 int CvTeam::getWinForLosingResearchModifier() const
 {
-	const int iTopCityCount = GC.getGame().getTopCityCount();
-	const int iTopPopCount = GC.getGame().getTopPopCount();
-	const int iOurCityCount = getNumCities() * 100;
-	const int iOurPopCount = getTotalPopulation(false) * 100;
-	const int iCityPercent = iOurCityCount/std::max(1,iTopCityCount);
-	const int iPopPercent = iOurPopCount/std::max(1,iTopPopCount);
-	int iModifier = iCityPercent+iPopPercent;
-	iModifier /= 2;
-	const int iFinal = 100-iModifier;
-	return iFinal;
+	if (getNumCities() < 1)
+	{
+		return 0;
+	}
+	return GC.getGame().getWinForLosingResearchModifier(getNumCities(), getTotalPopulation(false));
 }
 

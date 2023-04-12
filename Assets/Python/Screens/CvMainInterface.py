@@ -2238,12 +2238,12 @@ class CvMainInterface:
 								commerceRate = CyPlayer.getCommerceRate(CommerceTypes(j))
 
 							elif bTDDisplayOption:
-								commerceRate = 100 * iResearchRate / iResearchMod
+								commerceRate = getModifiedIntValue(iResearchRate, -iResearchMod)
 								techDiffusionHelp = iResearchRate - commerceRate
 							else:
 								commerceRate = iResearchRate
 
-							if bTDDisplayOption and j == CommerceTypes.COMMERCE_RESEARCH and iResearchMod > 100:
+							if bTDDisplayOption and j == CommerceTypes.COMMERCE_RESEARCH and iResearchMod > 0:
 								szTxt = TRNSLTR.getText("TXT_KEY_MISC_POS_GOLD_PER_TURN_TD_WFL", (commerceRate, techDiffusionHelp))
 							else:
 								szTxt = TRNSLTR.getText("TXT_KEY_MISC_POS_GOLD_PER_TURN", (commerceRate,))
@@ -2301,7 +2301,7 @@ class CvMainInterface:
 
 						CyTeam = GC.getTeam(CyPlayer.getTeam())
 						researchProgress = CyTeam.getResearchProgress(iCurrentResearch)
-						iOverflow = CyPlayer.getOverflowResearch() * iResearchMod / 100
+						iOverflow = getModifiedIntValue(CyPlayer.getOverflowResearch(), iResearchMod)
 						researchCost = CyTeam.getResearchCost(iCurrentResearch)
 						iCurr = researchProgress + iOverflow
 

@@ -769,7 +769,7 @@ class AutoLogEvent(AbstractAutoLogEvent):
 				CyPlayer = GC.getPlayer(iPlayer)
 				CyTeam = GC.getTeam(CyPlayer.getTeam())
 				iProgress = CyTeam.getResearchProgress(CyPlayer.getCurrentResearch())
-				iOverflow = CyPlayer.getOverflowResearch() * CyPlayer.calculateResearchModifier(CyPlayer.getCurrentResearch())/100
+				iOverflow = getModifiedIntValue(CyPlayer.getOverflowResearch(), CyPlayer.calculateResearchModifier(CyPlayer.getCurrentResearch()))
 				iTechCost = CyTeam.getResearchCost(CyPlayer.getCurrentResearch())
 				iRate = CyPlayer.calculateResearchRate(-1)
 				if iRate == -1:

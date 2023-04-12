@@ -1055,8 +1055,13 @@ void CvPlot::checkCityRevolt()
 			else
 			{
 				pCity->changeNumRevolts(eCulturalOwner, 1);
-				pCity->changeOccupationTimer(GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() * 
-					(GC.getDefineINT("BASE_REVOLT_OCCUPATION_TURNS") + iCityStrength100 * GC.getDefineINT("REVOLT_OCCUPATION_TURNS_PERCENT") / 10000) / 100);
+				pCity->changeOccupationTimer(
+					GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent()
+					*
+					(GC.getDefineINT("BASE_REVOLT_OCCUPATION_TURNS") + iCityStrength100 * GC.getDefineINT("REVOLT_OCCUPATION_TURNS_PERCENT") / 10000)
+					/
+					100
+				);
 
 				// XXX announce for all seen cities?
 

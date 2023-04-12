@@ -62,7 +62,7 @@ public:
 	int calculateReligionPercent(ReligionTypes eReligion) const;
 	int countCorporationLevels(CorporationTypes eCorporation) const;
 
-	int goldenAgeLength() const;
+	int goldenAgeLength100() const;
 	int victoryDelay(VictoryTypes eVictory) const;
 	int getImprovementUpgradeTime(ImprovementTypes eImprovement) const;
 	bool canTrainNukes() const;
