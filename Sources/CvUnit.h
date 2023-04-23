@@ -364,7 +364,6 @@ class UnitCombatKeyedInfo
 public:
 	UnitCombatKeyedInfo() :		m_bHasUnitCombat(false),
 								m_iExtraUnitCombatModifier(0),
-								m_iOngoingTrainingCount(0),
 								m_iExtraFlankingStrengthbyUnitCombatType(0),
 								m_iExtraWithdrawVSUnitCombatType(0),
 								m_iExtraPursuitVSUnitCombatType(0),
@@ -391,7 +390,6 @@ public:
 	{
 		return (!m_bHasUnitCombat &&
 			m_iExtraUnitCombatModifier == 0 &&
-			m_iOngoingTrainingCount == 0 &&
 			m_iExtraFlankingStrengthbyUnitCombatType == 0 &&
 			m_iExtraWithdrawVSUnitCombatType == 0 &&
 			m_iExtraPursuitVSUnitCombatType == 0 &&
@@ -415,7 +413,6 @@ public:
 
 	bool m_bHasUnitCombat;
 	int	m_iExtraUnitCombatModifier;
-	int m_iOngoingTrainingCount;
 	int m_iExtraFlankingStrengthbyUnitCombatType;
 	int m_iExtraWithdrawVSUnitCombatType;
 	int m_iExtraPursuitVSUnitCombatType;
@@ -723,7 +720,7 @@ public:
 	bool paradrop(int iX, int iY);
 
 	bool canPillage(const CvPlot* pPlot) const;
-	bool pillage();
+	bool pillage(const bool bAutoPillage = false);
 
 	//TSHEEP Assassin Mission
 	bool canAssassin(const CvPlot* pPlot, bool bTestVisible) const;
@@ -1073,7 +1070,6 @@ public:
 	CvPlot* plot() const;
 	int getArea() const;
 	CvArea* area() const;
-	bool onMap() const;
 
 	int getLastMoveTurn() const;
 	void setLastMoveTurn(int iNewValue);
@@ -1706,7 +1702,6 @@ protected:
 
 	DomainTypes m_eNewDomainCargo;
 	SpecialUnitTypes m_eNewSpecialCargo;
-	SpecialUnitTypes m_eNewSMSpecialCargo;
 	SpecialUnitTypes m_eNewSMNotSpecialCargo;
 	SpecialUnitTypes m_eSpecialUnit;
 	MissionTypes m_eSleepType;
@@ -2263,10 +2258,6 @@ public:
 	void ClearSupports();
 #endif
 
-	int getOngoingTrainingCount(UnitCombatTypes eUnitCombatType) const;
-	void changeOngoingTrainingCount(UnitCombatTypes eUnitCombatType, int iChange);
-	void setOngoingTrainingCount(UnitCombatTypes eUnitCombatType, int iChange);
-
 	void checkPromotionObsoletion();
 	void processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial = false);
 
@@ -2479,7 +2470,6 @@ public:
 	void resolveBreakdownAttack(const CvPlot* pPlot, const int AdjustedRepel);
 
 	int getDiminishingReturn(int i) const;
-	int getApproaching0Return(int i) const;
 
 	bool isPursuitPossible(const CvUnit* pOpponent) const;
 
@@ -2543,7 +2533,6 @@ public:
 
 	int getExtraMaxHP() const;
 	void changeExtraMaxHP(int iChange);
-	void setExtraMaxHP(int iChange);
 	int getMaxHP() const;
 	int getHP() const;
 	int HPValueTotalPreCheck() const;
@@ -2608,9 +2597,8 @@ public:
 	int getRevoltProtection() const;
 	void changeRevoltProtection(int iChange);
 	int revoltProtectionTotal() const;
-	int revoltProtectionTotalPreCheck() const;
-	int getSMRevoltProtection() const;
-	void setSMRevoltProtection();
+	//int getSMRevoltProtection() const;
+	//void setSMRevoltProtection();
 
 	bool canPerformActionSM() const;
 	void setSMValues(bool bForLoad = false);
@@ -2646,9 +2634,6 @@ public:
 	void changeBaseDCMBombAccuracy(int iChange, bool bAdding, UnitCombatTypes eUnitCombat);
 	bool isRBombardDirect() const;
 	void changeBombardDirectCount(int iChange);
-
-	static int applySMRank(int value, int rankChange, int rankMultiplier);
-	static int64_t applySMRank64(int64_t value, int rankChange, int rankMultiplier, bool bScaleUp = true);
 
 	int getNoSelfHealCount() const;
 	bool hasNoSelfHeal() const;
@@ -2942,14 +2927,9 @@ private:
 	static int* g_paiTempDistanceAttackCommunicability;
 	static int* g_paiTempAfflictOnAttackTypeMeleeCount;
 	static int* g_paiTempAfflictOnAttackTypeDistanceCount;
-//Team Project (4)
-	//WorkRateMod
-	//ls612: Terrain Work Modifiers
-	static int* g_paiTempExtraBuildWorkPercent;
 	static int*	g_paiTempExtraUnitCombatModifier;
 	static bool* g_pabTempHasPromotion;
 	static bool* g_pabTempHasUnitCombat;
-	static int* g_paiTempOngoingTrainingCount;
 	static int* g_paiTempExtraFlankingStrengthbyUnitCombatType;
 	static int* g_paiTempExtraWithdrawVSUnitCombatType;
 	static int* g_paiTempExtraPursuitVSUnitCombatType;

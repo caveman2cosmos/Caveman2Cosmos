@@ -288,8 +288,8 @@ public:
 	void changeDefenseDamage(int iChange);
 
 	// Super Forts *culture*
-	void pushCultureFromFort(PlayerTypes ePlayer, int iChange, int iRange, bool bUpdate);
-	void doImprovementCulture();
+	void pushCultureFromImprovement(PlayerTypes ePlayer, int iChange, int iRange, bool bUpdate);
+	void doImprovementCulture(PlayerTypes ePlayer, const CvImprovementInfo& imp);
 
 	// Super Forts *canal* *choke*
 	int countRegionPlots(const CvPlot* pInvalidPlot = NULL) const;
@@ -374,6 +374,12 @@ public:
 	int getVisibleEnemyStrength(PlayerTypes ePlayer, int iRange = 0) const;
 	int getVisibleNonAllyStrength(PlayerTypes ePlayer) const;
 
+	int getCultureRateThisTurn(const PlayerTypes ePlayer) const;
+	int getCultureRateLastTurn(const PlayerTypes ePlayer) const;
+
+	void setInCultureRangeOfCityByPlayer(const PlayerTypes ePlayer);
+	bool isInCultureRangeOfCityByPlayer(const PlayerTypes ePlayer) const;
+
 protected:
 	CvGameObjectPlot m_GameObject;
 
@@ -385,9 +391,14 @@ protected:
 	bool m_bCounted;
 	static stdext::hash_map<int,int>* m_resultHashMap;
 
+	std::vector<std::pair<PlayerTypes, int> > m_cultureRatesThisTurn;
+	std::vector<std::pair<PlayerTypes, int> > m_cultureRatesLastTurn;
+	std::vector<PlayerTypes> m_influencedByCityByPlayerLastTurn;
+	std::vector<PlayerTypes> m_influencedByCityByPlayer;
+
 public:
-	PlayerTypes calculateCulturalOwner() const;
-	PlayerTypes getPlayerWithTerritorySurroundingThisPlotCardinally() const;
+	PlayerTypes calculateCulturalOwner(bool bCountLastTurn = true) const;
+	//PlayerTypes getPlayerWithTerritorySurroundingThisPlotCardinally() const;
 
 	void plotAction(PlotUnitFunc func, int iData1 = -1, int iData2 = -1, PlayerTypes eOwner = NO_PLAYER, TeamTypes eTeam = NO_TEAM);
 	int plotCount(ConstPlotUnitFunc funcA, int iData1A = -1, int iData2A = -1, const CvUnit* pUnit = NULL, PlayerTypes eOwner = NO_PLAYER, TeamTypes eTeam = NO_TEAM, ConstPlotUnitFunc funcB = NULL, int iData1B = -1, int iData2B = -1, int iRange = 0) const;
@@ -398,7 +409,6 @@ public:
 	bool isOwned() const;
 	bool isNPC() const;
 	bool isHominid() const;
-	bool isRevealedBarbarian() const;
 
 	DllExport bool isActiveVisible(bool bDebug) const;
 
@@ -722,11 +732,11 @@ public:
 	int getCulture(PlayerTypes eIndex) const;
 	int countTotalCulture() const;
 	int countFriendlyCulture(TeamTypes eTeam) const;
-	PlayerTypes findHighestCulturePlayer() const;
+	PlayerTypes findHighestCulturePlayer(const bool bCountLegacyCulture = true, const bool bCountLastTurn = true) const;
 	int calculateCulturePercent(PlayerTypes eIndex, int iExtraDigits = 0) const;
 	int calculateTeamCulturePercent(TeamTypes eIndex) const;
-	void setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bUpdatePlotGroups);
-	void changeCulture(PlayerTypes eIndex, int iChange, bool bUpdate, bool bDoMinAdjust = true);
+	void setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bUpdatePlotGroups, const bool bDecay = false);
+	void changeCulture(PlayerTypes eIndex, int iChange, bool bUpdate);
 	int countNumAirUnits(TeamTypes eTeam) const;
 	int countNumAirUnitCargoVolume(TeamTypes eTeam) const;
 	int airUnitSpaceAvailable(TeamTypes eTeam) const;
@@ -819,7 +829,8 @@ public:
 
 	DllExport CvUnit* getCenterUnit() const;
 	DllExport CvUnit* getDebugCenterUnit() const;
-	void setCenterUnit(CvUnit* pNewValue);
+
+	CvUnit* getCenterUnit(const bool bForced) const;
 
 	int getInvisibleVisibilityCount(TeamTypes eTeam, InvisibleTypes eInvisible) const;
 	bool isSpotterInSight(TeamTypes eTeam, InvisibleTypes eInvisible) const;
@@ -908,7 +919,6 @@ protected:
 	short m_iFeatureVariety;
 	short m_iOwnershipDuration;
 	short m_iUpgradeProgress;
-	short m_iForceUnownedTimer; // SAVEBREAK remove
 	short m_iCityRadiusCount;
 	int m_iRiverID;
 	short m_iMinOriginalStartDist;
@@ -1007,7 +1017,6 @@ protected:
 
 	CvPlotBuilder* m_pPlotBuilder; // builds bonuses and improvements
 
-	char** m_apaiCultureRangeCities; // SAVEBREAK remove
 	short** m_apaiInvisibleVisibilityCount;
 
 	/* Koshling - need to cache presence of mountain leaders in mountain plots so that CanMoveThrough calculations don't get bogged down searching unit stacks.
@@ -1023,7 +1032,6 @@ protected:
 
 	void doFeature();
 	void doCulture();
-	void decayCulture();
 
 	void processArea(CvArea* pArea, int iChange);
 	void doImprovementUpgrade(const ImprovementTypes eType);

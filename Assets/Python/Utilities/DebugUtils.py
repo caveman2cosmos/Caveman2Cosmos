@@ -317,13 +317,13 @@ def applyEditCity(iPlayer, userData, popupReturn):
 		if iBuilding == iNumBuildings + 1:
 			return 0
 		# Toggles buildings in cities
-		add = popupReturn.getSelectedPullDownValue(0) == 1
+		bAdd = popupReturn.getSelectedPullDownValue(0) == 1
 		if iBuilding != -1:
 			if iBuilding == iNumBuildings:
 				for i in range(iBuilding):
-					city.setNumRealBuilding(i, add)
+					city.changeHasBuilding(i, bAdd)
 			else:
-				city.setNumRealBuilding(iBuilding, add)
+				city.changeHasBuilding(iBuilding, bAdd)
 
 
 def putOneOfEveryUnit():

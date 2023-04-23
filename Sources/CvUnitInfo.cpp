@@ -8,6 +8,9 @@
 //------------------------------------------------------------------------------------------------
 //  Copyright (c) 2003 Firaxis Games, Inc. All rights reserved.
 //------------------------------------------------------------------------------------------------
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvArtFileMgr.h"
 #include "CvGameAI.h"
@@ -276,8 +279,6 @@ m_iCombatModifierPerSizeMore(0),
 m_iCombatModifierPerSizeLess(0),
 m_iCombatModifierPerVolumeMore(0),
 m_iCombatModifierPerVolumeLess(0),
-m_iBaseSMRankTotal(0),
-m_iBaseSMVolumetricRankTotal(0),
 m_iSelfHealModifier(0),
 m_iNumHealSupport(0),
 m_iInsidiousness(0),
@@ -331,6 +332,7 @@ m_bGatherHerd(false)
 //------------------------------------------------------------------------------------------------------
 CvUnitInfo::~CvUnitInfo()
 {
+	PROFILE_EXTRA_FUNC();
 	CvInfoUtil(this).uninitDataMembers();
 
 	SAFE_DELETE_ARRAY(m_pbPrereqOrCivics);
@@ -430,6 +432,7 @@ bool CvUnitInfo::isUnlimitedException() const
 // When NO_PLAYER - Any units requiring a civ specific building are considered civ units, all others are not.
 bool CvUnitInfo::isCivilizationUnit(const PlayerTypes ePlayer) const
 {
+	PROFILE_EXTRA_FUNC();
 	// Not the most elegant solution for exluding or including neanderthal units for starting unit selection,
 	// nor the best way to stop barbarians from spawning neanderthal units. But good enough for now.
 	const bool bCivUnit = ePlayer != NO_PLAYER;
@@ -669,7 +672,7 @@ int CvUnitInfo::getEvasionProbability() const
 
 int CvUnitInfo::getWithdrawalProbability() const
 {
-	return GC.getGame().isOption(GAMEOPTION_FIGHT_OR_FLIGHT) ? m_iWithdrawalProbability : m_iWithdrawalProbability / 2;
+	return GC.getGame().isOption(GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT) ? m_iWithdrawalProbability : m_iWithdrawalProbability / 2;
 }
 
 int CvUnitInfo::getCollateralDamage() const
@@ -1142,6 +1145,7 @@ const BoolExpr* CvUnitInfo::getTrainCondition() const
  */
 bool CvUnitInfo::canAcquireExperience() const
 {
+	PROFILE_EXTRA_FUNC();
 	if (m_iUnitCombatType != NO_UNITCOMBAT)
 	{
 		for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
@@ -1477,6 +1481,7 @@ const CvOutcomeList* CvUnitInfo::getActionOutcomeList(int index) const
 
 const CvOutcomeList* CvUnitInfo::getActionOutcomeListByMission(MissionTypes eMission) const
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(const CvOutcomeMission* outcomeMission, m_aOutcomeMissions)
 	{
 		if (outcomeMission->getMission() == eMission)
@@ -1826,72 +1831,9 @@ CvWString CvUnitInfo::getCivilizationNamesValuesVectorElement(int i) const		{ret
 
 //TB Combat Mods Start  TB SubCombat Mod begin
 //Functions
-void CvUnitInfo::setReligionSubCombat()
-{
-	foreach_(const UnitCombatTypes eSubCombat, getSubCombatTypes())
-	{
-		if (GC.getUnitCombatInfo(eSubCombat).getReligion() != NO_RELIGION)
-		{
-			return;
-		}
-	}
-	if (getReligionType() != NO_RELIGION)
-	{
-		for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-		{
-			if (GC.getUnitCombatInfo((UnitCombatTypes)iI).getReligion() == (ReligionTypes)getReligionType())
-			{
-				m_aiSubCombatTypes.push_back((UnitCombatTypes)iI);
-				break;
-			}
-		}
-	}
-	if (getStateReligion() != NO_RELIGION)
-	{
-		for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-		{
-			if (GC.getUnitCombatInfo((UnitCombatTypes)iI).getReligion() == (ReligionTypes)getStateReligion())
-			{
-				m_aiSubCombatTypes.push_back((UnitCombatTypes)iI);
-				break;
-			}
-		}
-	}
-	if (getPrereqReligion() != NO_RELIGION)
-	{
-		for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-		{
-			if (GC.getUnitCombatInfo((UnitCombatTypes)iI).getReligion() == (ReligionTypes)getPrereqReligion())
-			{
-				m_aiSubCombatTypes.push_back((UnitCombatTypes)iI);
-				break;
-			}
-		}
-	}
-}
-void CvUnitInfo::setCultureSubCombat()
-{
-	foreach_(const UnitCombatTypes eSubCombat, getSubCombatTypes())
-	{
-		if (GC.getUnitCombatInfo(eSubCombat).getCulture() != NO_BONUS)
-		{
-			return;
-		}
-	}
-	if (getPrereqAndBonus() != NO_BONUS && GC.getBonusInfo((BonusTypes)getPrereqAndBonus()).getBonusClassType() == GC.getInfoTypeForString("BONUSCLASS_CULTURE"))
-	{
-		for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-		{
-			if (GC.getUnitCombatInfo((UnitCombatTypes)iI).getCulture() == (BonusTypes)getPrereqAndBonus())
-			{
-				m_aiSubCombatTypes.push_back((UnitCombatTypes)iI);
-				break;
-			}
-		}
-	}
-}
 int CvUnitInfo::getEraInfo() const
 {
+	PROFILE_EXTRA_FUNC();
 	if (getPrereqAndTech() != NO_TECH)
 	{
 		return GC.getTechInfo((TechTypes)getPrereqAndTech()).getEra();
@@ -1911,28 +1853,7 @@ int CvUnitInfo::getEraInfo() const
 	}
 	return NO_ERA;
 }
-void CvUnitInfo::setEraSubCombat()
-{
-	if (getEraInfo() == NO_ERA)
-	{
-		return;
-	}
-	foreach_(const UnitCombatTypes eSubCombat, getSubCombatTypes())
-	{
-		if (GC.getUnitCombatInfo(eSubCombat).getEra() != NO_ERA)
-		{
-			return;
-		}
-	}
-	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if (GC.getUnitCombatInfo((UnitCombatTypes)iI).getEra() == getEraInfo())
-		{
-			m_aiSubCombatTypes.push_back((UnitCombatTypes)iI);
-			break;
-		}
-	}
-}
+
 //integers
 int CvUnitInfo::getAttackCombatModifier() const
 {
@@ -1946,7 +1867,7 @@ int CvUnitInfo::getDefenseCombatModifier() const
 
 int CvUnitInfo::getPursuit() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_FIGHT_OR_FLIGHT))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT))
 	{
 		return 0;
 	}
@@ -1955,7 +1876,7 @@ int CvUnitInfo::getPursuit() const
 
 int CvUnitInfo::getEarlyWithdraw() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_FIGHT_OR_FLIGHT))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT))
 	{
 		return 0;
 	}
@@ -1979,7 +1900,7 @@ int CvUnitInfo::getPuncture() const
 
 int CvUnitInfo::getOverrun() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -1988,7 +1909,7 @@ int CvUnitInfo::getOverrun() const
 
 int CvUnitInfo::getRepel() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -1997,7 +1918,7 @@ int CvUnitInfo::getRepel() const
 
 int CvUnitInfo::getFortRepel() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -2006,7 +1927,7 @@ int CvUnitInfo::getFortRepel() const
 
 int CvUnitInfo::getRepelRetries() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -2015,7 +1936,7 @@ int CvUnitInfo::getRepelRetries() const
 
 int CvUnitInfo::getUnyielding() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -2024,7 +1945,7 @@ int CvUnitInfo::getUnyielding() const
 
 int CvUnitInfo::getKnockback() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -2033,7 +1954,7 @@ int CvUnitInfo::getKnockback() const
 
 int CvUnitInfo::getKnockbackRetries() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -2043,7 +1964,7 @@ int CvUnitInfo::getKnockbackRetries() const
 #ifdef BATTLEWORN
 int CvUnitInfo::getStrAdjperRnd() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_BATTLEWORN))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_BATTLEWORN))
 	{
 		return 0;
 	}
@@ -2052,7 +1973,7 @@ int CvUnitInfo::getStrAdjperRnd() const
 
 int CvUnitInfo::getStrAdjperAtt() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_BATTLEWORN))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_BATTLEWORN))
 	{
 		return 0;
 	}
@@ -2061,7 +1982,7 @@ int CvUnitInfo::getStrAdjperAtt() const
 
 int CvUnitInfo::getStrAdjperDef() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_BATTLEWORN))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_BATTLEWORN))
 	{
 		return 0;
 	}
@@ -2070,7 +1991,7 @@ int CvUnitInfo::getStrAdjperDef() const
 
 int CvUnitInfo::getWithdrawAdjperAtt() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_BATTLEWORN))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_BATTLEWORN))
 	{
 		return 0;
 	}
@@ -2080,7 +2001,7 @@ int CvUnitInfo::getWithdrawAdjperAtt() const
 
 int CvUnitInfo::getUnnerve() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_SAD))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_SURROUND_DESTROY))
 	{
 		return 0;
 	}
@@ -2089,7 +2010,7 @@ int CvUnitInfo::getUnnerve() const
 
 int CvUnitInfo::getEnclose() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_SAD))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_SURROUND_DESTROY))
 	{
 		return 0;
 	}
@@ -2098,7 +2019,7 @@ int CvUnitInfo::getEnclose() const
 
 int CvUnitInfo::getLunge() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_SAD))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_SURROUND_DESTROY))
 	{
 		return 0;
 	}
@@ -2107,7 +2028,7 @@ int CvUnitInfo::getLunge() const
 
 int CvUnitInfo::getDynamicDefense() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_SAD))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_SURROUND_DESTROY))
 	{
 		return 0;
 	}
@@ -2117,7 +2038,7 @@ int CvUnitInfo::getDynamicDefense() const
 int CvUnitInfo::getFortitude() const
 {
 #ifdef OUTBREAKS_AND_AFFLICTIONS
-	if (!GC.getGame().isOption(GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_OUTBREAKS_AND_AFFLICTIONS))
 	{
 		return 0;
 	}
@@ -2128,7 +2049,7 @@ int CvUnitInfo::getFortitude() const
 #ifdef STRENGTH_IN_NUMBERS
 int CvUnitInfo::getFrontSupportPercent() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_STRENGTH_IN_NUMBERS))
 	{
 		return 0;
 	}
@@ -2137,7 +2058,7 @@ int CvUnitInfo::getFrontSupportPercent() const
 
 int CvUnitInfo::getShortRangeSupportPercent() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_STRENGTH_IN_NUMBERS))
 	{
 		return 0;
 	}
@@ -2146,7 +2067,7 @@ int CvUnitInfo::getShortRangeSupportPercent() const
 
 int CvUnitInfo::getMediumRangeSupportPercent() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_STRENGTH_IN_NUMBERS))
 	{
 		return 0;
 	}
@@ -2155,7 +2076,7 @@ int CvUnitInfo::getMediumRangeSupportPercent() const
 
 int CvUnitInfo::getLongRangeSupportPercent() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_STRENGTH_IN_NUMBERS))
 	{
 		return 0;
 	}
@@ -2164,7 +2085,7 @@ int CvUnitInfo::getLongRangeSupportPercent() const
 
 int CvUnitInfo::getFlankSupportPercent() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_STRENGTH_IN_NUMBERS))
 	{
 		return 0;
 	}
@@ -2259,7 +2180,7 @@ int CvUnitInfo::getBreakdownDamage() const
 
 int CvUnitInfo::getTaunt() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_FIGHT_OR_FLIGHT))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT))
 	{
 		return 0;
 	}
@@ -2268,7 +2189,7 @@ int CvUnitInfo::getTaunt() const
 
 int CvUnitInfo::getMaxHP(bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 	{
 		return 100;
 	}
@@ -2301,7 +2222,7 @@ int CvUnitInfo::getRBombardDamageMaxUnits() const
 
 int CvUnitInfo::getCombatModifierPerSizeMore() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 	{
 		return 0;
 	}
@@ -2310,7 +2231,7 @@ int CvUnitInfo::getCombatModifierPerSizeMore() const
 
 int CvUnitInfo::getCombatModifierPerSizeLess() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 	{
 		return 0;
 	}
@@ -2319,7 +2240,7 @@ int CvUnitInfo::getCombatModifierPerSizeLess() const
 
 int CvUnitInfo::getCombatModifierPerVolumeMore() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 	{
 		return 0;
 	}
@@ -2328,7 +2249,7 @@ int CvUnitInfo::getCombatModifierPerVolumeMore() const
 
 int CvUnitInfo::getCombatModifierPerVolumeLess() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 	{
 		return 0;
 	}
@@ -2357,7 +2278,7 @@ int CvUnitInfo::getInvestigation() const
 
 int CvUnitInfo::getStealthStrikes() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_WITHOUT_WARNING))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_WITHOUT_WARNING))
 	{
 		return 0;
 	}
@@ -2366,7 +2287,7 @@ int CvUnitInfo::getStealthStrikes() const
 
 int CvUnitInfo::getStealthCombatModifier() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_WITHOUT_WARNING))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_WITHOUT_WARNING))
 	{
 		return 0;
 	}
@@ -2496,7 +2417,7 @@ bool CvUnitInfo::isAssassin() const
 
 bool CvUnitInfo::isStealthDefense() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_WITHOUT_WARNING))
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_WITHOUT_WARNING))
 	{
 		return 0;
 	}
@@ -2601,18 +2522,6 @@ bool CvUnitInfo::isHealAsType(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), i);
 	return algo::any_of_equal(m_aiHealAsTypes, i);
-}
-
-void CvUnitInfo::setHealAsTypes()
-{
-	m_aiHealAsTypes.clear();
-	for ( int i = 0; i < GC.getNumUnitCombatInfos(); i++)
-	{
-		if ((getUnitCombatType() == i || isSubCombatType((UnitCombatTypes)i)) && GC.getUnitCombatInfo((UnitCombatTypes)i).isHealsAs())
-		{
-			m_aiHealAsTypes.push_back((UnitCombatTypes)i);
-		}
-	}
 }
 
 bool CvUnitInfo::isTerrainImpassableType(TerrainTypes e) const
@@ -2821,6 +2730,7 @@ int CvUnitInfo::getNumFlankingStrikesbyUnitCombatTypes() const
 
 int CvUnitInfo::getFlankingStrengthbyUnitCombatType(int iUnitCombat) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (UnitCombatModifierArray::const_iterator it = m_aFlankingStrengthbyUnitCombatType.begin(); it != m_aFlankingStrengthbyUnitCombatType.end(); ++it)
 	{
 		if ((*it).first == (UnitCombatTypes)iUnitCombat)
@@ -2833,6 +2743,7 @@ int CvUnitInfo::getFlankingStrengthbyUnitCombatType(int iUnitCombat) const
 
 bool CvUnitInfo::isFlankingStrikebyUnitCombatType(int iUnitCombat) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (UnitCombatModifierArray::const_iterator it = m_aFlankingStrengthbyUnitCombatType.begin(); it != m_aFlankingStrengthbyUnitCombatType.end(); ++it)
 	{
 		if ((*it).first == (UnitCombatTypes)iUnitCombat)
@@ -2850,6 +2761,7 @@ int CvUnitInfo::getNumWithdrawOnTerrainTypes() const
 
 int CvUnitInfo::getWithdrawOnTerrainType(int iTerrain) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (TerrainModifierArray::const_iterator it = m_aWithdrawOnTerrainTypes.begin(); it != m_aWithdrawOnTerrainTypes.end(); ++it)
 	{
 		if ((*it).first == (TerrainTypes)iTerrain)
@@ -2867,6 +2779,7 @@ int CvUnitInfo::getNumWithdrawOnFeatureTypes() const
 
 int CvUnitInfo::getWithdrawOnFeatureType(int iFeature) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (FeatureModifierArray::const_iterator it = m_aWithdrawOnFeatureTypes.begin(); it != m_aWithdrawOnFeatureTypes.end(); ++it)
 	{
 		if ((*it).first == (FeatureTypes)iFeature)
@@ -2884,6 +2797,7 @@ int CvUnitInfo::getNumWithdrawVSUnitCombatTypes() const
 
 int CvUnitInfo::getWithdrawVSUnitCombatType(int iUnitCombat) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (UnitCombatModifierArray::const_iterator it = m_aWithdrawVSUnitCombatTypes.begin(); it != m_aWithdrawVSUnitCombatTypes.end(); ++it)
 	{
 		if ((*it).first == (UnitCombatTypes)iUnitCombat)
@@ -2896,6 +2810,7 @@ int CvUnitInfo::getWithdrawVSUnitCombatType(int iUnitCombat) const
 
 bool CvUnitInfo::isWithdrawVSUnitCombatType(int iUnitCombat) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (UnitCombatModifierArray::const_iterator it = m_aWithdrawVSUnitCombatTypes.begin(); it != m_aWithdrawVSUnitCombatTypes.end(); ++it)
 	{
 		if ((*it).first == (UnitCombatTypes)iUnitCombat)
@@ -2918,7 +2833,8 @@ int CvUnitInfo::getNumPursuitVSUnitCombatTypes() const
 
 int CvUnitInfo::getPursuitVSUnitCombatType(int iUnitCombat, bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_FIGHT_OR_FLIGHT))
+	PROFILE_EXTRA_FUNC();
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT))
 	{
 		return 0;
 	}
@@ -2934,7 +2850,8 @@ int CvUnitInfo::getPursuitVSUnitCombatType(int iUnitCombat, bool bForLoad) const
 
 bool CvUnitInfo::isPursuitVSUnitCombatType(int iUnitCombat, bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_FIGHT_OR_FLIGHT))
+	PROFILE_EXTRA_FUNC();
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT))
 	{
 		return false;
 	}
@@ -2960,7 +2877,8 @@ int CvUnitInfo::getNumRepelVSUnitCombatTypes() const
 
 int CvUnitInfo::getRepelVSUnitCombatType(int iUnitCombat, bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
+	PROFILE_EXTRA_FUNC();
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_COMBAT_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -2976,7 +2894,8 @@ int CvUnitInfo::getRepelVSUnitCombatType(int iUnitCombat, bool bForLoad) const
 
 bool CvUnitInfo::isRepelVSUnitCombatType(int iUnitCombat, bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
+	PROFILE_EXTRA_FUNC();
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_COMBAT_HEART_OF_WAR))
 	{
 		return false;
 	}
@@ -3002,7 +2921,8 @@ int CvUnitInfo::getNumKnockbackVSUnitCombatTypes() const
 
 int CvUnitInfo::getKnockbackVSUnitCombatType(int iUnitCombat, bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
+	PROFILE_EXTRA_FUNC();
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_COMBAT_HEART_OF_WAR))
 	{
 		return 0;
 	}
@@ -3018,7 +2938,8 @@ int CvUnitInfo::getKnockbackVSUnitCombatType(int iUnitCombat, bool bForLoad) con
 
 bool CvUnitInfo::isKnockbackVSUnitCombatType(int iUnitCombat, bool bForLoad) const
 {
-	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_HEART_OF_WAR))
+	PROFILE_EXTRA_FUNC();
+	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_COMBAT_HEART_OF_WAR))
 	{
 		return false;
 	}
@@ -3044,6 +2965,7 @@ int CvUnitInfo::getNumPunctureVSUnitCombatTypes() const
 
 int CvUnitInfo::getPunctureVSUnitCombatType(int iUnitCombat) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (UnitCombatModifierArray::const_iterator it = m_aPunctureVSUnitCombatTypes.begin(); it != m_aPunctureVSUnitCombatTypes.end(); ++it)
 	{
 		if ((*it).first == (UnitCombatTypes)iUnitCombat)
@@ -3056,6 +2978,7 @@ int CvUnitInfo::getPunctureVSUnitCombatType(int iUnitCombat) const
 
 bool CvUnitInfo::isPunctureVSUnitCombatType(int iUnitCombat) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (UnitCombatModifierArray::const_iterator it = m_aPunctureVSUnitCombatTypes.begin(); it != m_aPunctureVSUnitCombatTypes.end(); ++it)
 	{
 		if ((*it).first == (UnitCombatTypes)iUnitCombat)
@@ -3078,6 +3001,7 @@ int CvUnitInfo::getNumArmorVSUnitCombatTypes() const
 
 int CvUnitInfo::getArmorVSUnitCombatType(int iUnitCombat) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (UnitCombatModifierArray::const_iterator it = m_aArmorVSUnitCombatTypes.begin(); it != m_aArmorVSUnitCombatTypes.end(); ++it)
 	{
 		if ((*it).first == (UnitCombatTypes)iUnitCombat)
@@ -3090,6 +3014,7 @@ int CvUnitInfo::getArmorVSUnitCombatType(int iUnitCombat) const
 
 bool CvUnitInfo::isArmorVSUnitCombatType(int iUnitCombat) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (UnitCombatModifierArray::const_iterator it = m_aArmorVSUnitCombatTypes.begin(); it != m_aArmorVSUnitCombatTypes.end(); ++it)
 	{
 		if ((*it).first == (UnitCombatTypes)iUnitCombat)
@@ -3112,6 +3037,7 @@ int CvUnitInfo::getNumDodgeVSUnitCombatTypes() const
 
 int CvUnitInfo::getDodgeVSUnitCombatType(int iUnitCombat) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (UnitCombatModifierArray::const_iterator it = m_aDodgeVSUnitCombatTypes.begin(); it != m_aDodgeVSUnitCombatTypes.end(); ++it)
 	{
 		if ((*it).first == (UnitCombatTypes)iUnitCombat)
@@ -3124,6 +3050,7 @@ int CvUnitInfo::getDodgeVSUnitCombatType(int iUnitCombat) const
 
 bool CvUnitInfo::isDodgeVSUnitCombatType(int iUnitCombat) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (UnitCombatModifierArray::const_iterator it = m_aDodgeVSUnitCombatTypes.begin(); it != m_aDodgeVSUnitCombatTypes.end(); ++it)
 	{
 		if ((*it).first == (UnitCombatTypes)iUnitCombat)
@@ -3146,6 +3073,7 @@ int CvUnitInfo::getNumPrecisionVSUnitCombatTypes() const
 
 int CvUnitInfo::getPrecisionVSUnitCombatType(int iUnitCombat) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (UnitCombatModifierArray::const_iterator it = m_aPrecisionVSUnitCombatTypes.begin(); it != m_aPrecisionVSUnitCombatTypes.end(); ++it)
 	{
 		if ((*it).first == (UnitCombatTypes)iUnitCombat)
@@ -3158,6 +3086,7 @@ int CvUnitInfo::getPrecisionVSUnitCombatType(int iUnitCombat) const
 
 bool CvUnitInfo::isPrecisionVSUnitCombatType(int iUnitCombat) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (UnitCombatModifierArray::const_iterator it = m_aPrecisionVSUnitCombatTypes.begin(); it != m_aPrecisionVSUnitCombatTypes.end(); ++it)
 	{
 		if ((*it).first == (UnitCombatTypes)iUnitCombat)
@@ -3180,6 +3109,7 @@ int CvUnitInfo::getNumCriticalVSUnitCombatTypes() const
 
 int CvUnitInfo::getCriticalVSUnitCombatType(int iUnitCombat) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (UnitCombatModifierArray::const_iterator it = m_aCriticalVSUnitCombatTypes.begin(); it != m_aCriticalVSUnitCombatTypes.end(); ++it)
 	{
 		if ((*it).first == (UnitCombatTypes)iUnitCombat)
@@ -3192,6 +3122,7 @@ int CvUnitInfo::getCriticalVSUnitCombatType(int iUnitCombat) const
 
 bool CvUnitInfo::isCriticalVSUnitCombatType(int iUnitCombat) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (UnitCombatModifierArray::const_iterator it = m_aCriticalVSUnitCombatTypes.begin(); it != m_aCriticalVSUnitCombatTypes.end(); ++it)
 	{
 		if ((*it).first == (UnitCombatTypes)iUnitCombat)
@@ -3214,6 +3145,7 @@ int CvUnitInfo::getNumRoundStunVSUnitCombatTypes() const
 
 int CvUnitInfo::getRoundStunVSUnitCombatType(int iUnitCombat) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (UnitCombatModifierArray::const_iterator it = m_aRoundStunVSUnitCombatTypes.begin(); it != m_aRoundStunVSUnitCombatTypes.end(); ++it)
 	{
 		if ((*it).first == (UnitCombatTypes)iUnitCombat)
@@ -3226,6 +3158,7 @@ int CvUnitInfo::getRoundStunVSUnitCombatType(int iUnitCombat) const
 
 bool CvUnitInfo::isRoundStunVSUnitCombatType(int iUnitCombat) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (UnitCombatModifierArray::const_iterator it = m_aRoundStunVSUnitCombatTypes.begin(); it != m_aRoundStunVSUnitCombatTypes.end(); ++it)
 	{
 		if ((*it).first == (UnitCombatTypes)iUnitCombat)
@@ -3248,6 +3181,7 @@ int CvUnitInfo::getNumTrapDisableUnitCombatTypes() const
 
 int CvUnitInfo::getTrapDisableUnitCombatType(int iUnitCombat) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (UnitCombatModifierArray::const_iterator it = m_aTrapDisableUnitCombatTypes.begin(); it != m_aTrapDisableUnitCombatTypes.end(); ++it)
 	{
 		if ((*it).first == (UnitCombatTypes)iUnitCombat)
@@ -3260,6 +3194,7 @@ int CvUnitInfo::getTrapDisableUnitCombatType(int iUnitCombat) const
 
 bool CvUnitInfo::isTrapDisableUnitCombatType(int iUnitCombat) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (UnitCombatModifierArray::const_iterator it = m_aTrapDisableUnitCombatTypes.begin(); it != m_aTrapDisableUnitCombatTypes.end(); ++it)
 	{
 		if ((*it).first == (UnitCombatTypes)iUnitCombat)
@@ -3282,6 +3217,7 @@ int CvUnitInfo::getNumTrapAvoidanceUnitCombatTypes() const
 
 int CvUnitInfo::getTrapAvoidanceUnitCombatType(int iUnitCombat) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (UnitCombatModifierArray::const_iterator it = m_aTrapAvoidanceUnitCombatTypes.begin(); it != m_aTrapAvoidanceUnitCombatTypes.end(); ++it)
 	{
 		if ((*it).first == (UnitCombatTypes)iUnitCombat)
@@ -3294,6 +3230,7 @@ int CvUnitInfo::getTrapAvoidanceUnitCombatType(int iUnitCombat) const
 
 bool CvUnitInfo::isTrapAvoidanceUnitCombatType(int iUnitCombat) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (UnitCombatModifierArray::const_iterator it = m_aTrapAvoidanceUnitCombatTypes.begin(); it != m_aTrapAvoidanceUnitCombatTypes.end(); ++it)
 	{
 		if ((*it).first == (UnitCombatTypes)iUnitCombat)
@@ -3316,6 +3253,7 @@ int CvUnitInfo::getNumTrapTriggerUnitCombatTypes() const
 
 int CvUnitInfo::getTrapTriggerUnitCombatType(int iUnitCombat) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (UnitCombatModifierArray::const_iterator it = m_aTrapTriggerUnitCombatTypes.begin(); it != m_aTrapTriggerUnitCombatTypes.end(); ++it)
 	{
 		if ((*it).first == (UnitCombatTypes)iUnitCombat)
@@ -3328,6 +3266,7 @@ int CvUnitInfo::getTrapTriggerUnitCombatType(int iUnitCombat) const
 
 bool CvUnitInfo::isTrapTriggerUnitCombatType(int iUnitCombat) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (UnitCombatModifierArray::const_iterator it = m_aTrapTriggerUnitCombatTypes.begin(); it != m_aTrapTriggerUnitCombatTypes.end(); ++it)
 	{
 		if ((*it).first == (UnitCombatTypes)iUnitCombat)
@@ -3350,6 +3289,7 @@ int CvUnitInfo::getNumVisibilityIntensityTypes() const
 
 int CvUnitInfo::getVisibilityIntensityType(int iInvisibility) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (InvisibilityArray::const_iterator it = m_aVisibilityIntensityTypes.begin(); it != m_aVisibilityIntensityTypes.end(); ++it)
 	{
 		if ((*it).first == (InvisibleTypes)iInvisibility)
@@ -3362,6 +3302,7 @@ int CvUnitInfo::getVisibilityIntensityType(int iInvisibility) const
 
 bool CvUnitInfo::isVisibilityIntensityType(int iInvisibility) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (InvisibilityArray::const_iterator it = m_aVisibilityIntensityTypes.begin(); it != m_aVisibilityIntensityTypes.end(); ++it)
 	{
 		if ((*it).first == (InvisibleTypes)iInvisibility)
@@ -3384,6 +3325,7 @@ int CvUnitInfo::getNumInvisibilityIntensityTypes() const
 
 int CvUnitInfo::getInvisibilityIntensityType(int iInvisibility) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (InvisibilityArray::const_iterator it = m_aInvisibilityIntensityTypes.begin(); it != m_aInvisibilityIntensityTypes.end(); ++it)
 	{
 		if ((*it).first == (InvisibleTypes)iInvisibility)
@@ -3396,6 +3338,7 @@ int CvUnitInfo::getInvisibilityIntensityType(int iInvisibility) const
 
 bool CvUnitInfo::isInvisibilityIntensityType(int iInvisibility) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (InvisibilityArray::const_iterator it = m_aInvisibilityIntensityTypes.begin(); it != m_aInvisibilityIntensityTypes.end(); ++it)
 	{
 		if ((*it).first == (InvisibleTypes)iInvisibility)
@@ -3418,6 +3361,7 @@ int CvUnitInfo::getNumVisibilityIntensityRangeTypes() const
 
 int CvUnitInfo::getVisibilityIntensityRangeType(int iInvisibility) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (InvisibilityArray::const_iterator it = m_aVisibilityIntensityRangeTypes.begin(); it != m_aVisibilityIntensityRangeTypes.end(); ++it)
 	{
 		if ((*it).first == (InvisibleTypes)iInvisibility)
@@ -3430,6 +3374,7 @@ int CvUnitInfo::getVisibilityIntensityRangeType(int iInvisibility) const
 
 bool CvUnitInfo::isVisibilityIntensityRangeType(int iInvisibility) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (InvisibilityArray::const_iterator it = m_aVisibilityIntensityRangeTypes.begin(); it != m_aVisibilityIntensityRangeTypes.end(); ++it)
 	{
 		if ((*it).first == (InvisibleTypes)iInvisibility)
@@ -3452,6 +3397,7 @@ int CvUnitInfo::getNumTerrainWorkRateModifierTypes() const
 
 int CvUnitInfo::getTerrainWorkRateModifierType(int iTerrain) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (TerrainModifierArray::const_iterator it = m_aTerrainWorkRateModifierTypes.begin(); it != m_aTerrainWorkRateModifierTypes.end(); ++it)
 	{
 		if ((*it).first == (TerrainTypes)iTerrain)
@@ -3464,6 +3410,7 @@ int CvUnitInfo::getTerrainWorkRateModifierType(int iTerrain) const
 
 bool CvUnitInfo::isTerrainWorkRateModifierType(int iTerrain) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (TerrainModifierArray::const_iterator it = m_aTerrainWorkRateModifierTypes.begin(); it != m_aTerrainWorkRateModifierTypes.end(); ++it)
 	{
 		if ((*it).first == (TerrainTypes)iTerrain)
@@ -3481,6 +3428,7 @@ int CvUnitInfo::getNumFeatureWorkRateModifierTypes() const
 
 int CvUnitInfo::getFeatureWorkRateModifierType(int iFeature) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (FeatureModifierArray::const_iterator it = m_aFeatureWorkRateModifierTypes.begin(); it != m_aFeatureWorkRateModifierTypes.end(); ++it)
 	{
 		if ((*it).first == (FeatureTypes)iFeature)
@@ -3493,6 +3441,7 @@ int CvUnitInfo::getFeatureWorkRateModifierType(int iFeature) const
 
 bool CvUnitInfo::isFeatureWorkRateModifierType(int iFeature) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (FeatureModifierArray::const_iterator it = m_aFeatureWorkRateModifierTypes.begin(); it != m_aFeatureWorkRateModifierTypes.end(); ++it)
 	{
 		if ((*it).first == (FeatureTypes)iFeature)
@@ -3510,6 +3459,7 @@ int CvUnitInfo::getNumBuildWorkRateModifierTypes() const
 
 int CvUnitInfo::getBuildWorkRateModifierType(int iBuild) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (BuildModifierArray::const_iterator it = m_aBuildWorkRateModifierTypes.begin(); it != m_aBuildWorkRateModifierTypes.end(); ++it)
 	{
 		if ((*it).first == (BuildTypes)iBuild)
@@ -3522,6 +3472,7 @@ int CvUnitInfo::getBuildWorkRateModifierType(int iBuild) const
 
 bool CvUnitInfo::isBuildWorkRateModifierType(int iBuild) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (BuildModifierArray::const_iterator it = m_aBuildWorkRateModifierTypes.begin(); it != m_aBuildWorkRateModifierTypes.end(); ++it)
 	{
 		if ((*it).first == (BuildTypes)iBuild)
@@ -3540,6 +3491,7 @@ int CvUnitInfo::getNumAidChanges() const
 
 int CvUnitInfo::getAidChange(int iProperty) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (AidArray::const_iterator it = m_aAidChanges.begin(); it != m_aAidChanges.end(); ++it)
 	{
 		if ((*it).first == (PropertyTypes)iProperty)
@@ -3552,6 +3504,7 @@ int CvUnitInfo::getAidChange(int iProperty) const
 
 bool CvUnitInfo::isAidChange(int iProperty) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (AidArray::const_iterator it = m_aAidChanges.begin(); it != m_aAidChanges.end(); ++it)
 	{
 		if ((*it).first == (PropertyTypes)iProperty)
@@ -3576,6 +3529,7 @@ void CvUnitInfo::getDataMembers(CvInfoUtil& util)
 
 void CvUnitInfo::getCheckSum(uint32_t& iSum) const
 {
+	PROFILE_EXTRA_FUNC();
 	CvInfoUtil(this).checkSum(iSum);
 
 	CheckSum(iSum, m_iMaxGlobalInstances);
@@ -3858,8 +3812,6 @@ void CvUnitInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iCombatModifierPerSizeLess);
 	CheckSum(iSum, m_iCombatModifierPerVolumeMore);
 	CheckSum(iSum, m_iCombatModifierPerVolumeLess);
-	CheckSum(iSum, m_iBaseSMRankTotal);
-	CheckSum(iSum, m_iBaseSMVolumetricRankTotal);
 	CheckSum(iSum, m_iSelfHealModifier);
 	CheckSum(iSum, m_iNumHealSupport);
 	CheckSum(iSum, m_iInsidiousness);
@@ -4060,6 +4012,7 @@ void CvUnitInfo::getCheckSum(uint32_t& iSum) const
 //
 bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 {
+	PROFILE_EXTRA_FUNC();
 	if (!CvHotkeyInfo::read(pXML))
 	{
 		return false;
@@ -5017,6 +4970,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 
 void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo)
 {
+	PROFILE_EXTRA_FUNC();
 	CvHotkeyInfo::copyNonDefaults(pClassInfo);
 
 	CvInfoUtil(this).copyNonDefaults(pClassInfo);
@@ -5810,7 +5764,6 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo)
 	}
 #endif
 	//TB Combat Mods End  TB SubCombat Mod end
-	//setTotalModifiedCombatStrengthDetails();
 
 	m_KillOutcomeList.copyNonDefaults(&pClassInfo->m_KillOutcomeList);
 
@@ -5892,6 +5845,7 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo)
 
 bool CvUnitInfo::readPass3()
 {
+	PROFILE_EXTRA_FUNC();
 	m_paszCivilizationNames = new CvWString[GC.getNumCivilizationInfos()];
 	for (int iI = 0; iI < GC.getNumCivilizationInfos(); iI++)
 	{
@@ -5913,12 +5867,191 @@ bool CvUnitInfo::readPass3()
 	return true;
 }
 
-void CvUnitInfo::doPostLoadCaching(uint32_t eThis)
+void CvUnitInfo::doPostLoadCaching(uint32_t iThis)
 {
+	PROFILE_EXTRA_FUNC();
+	const int iNumUnitCombatInfos = GC.getNumUnitCombatInfos();
+	{
+		bool bCheck = true;
+		foreach_(const UnitCombatTypes eSubCombat, getSubCombatTypes())
+		{
+			if (GC.getUnitCombatInfo(eSubCombat).getReligion() != NO_RELIGION)
+			{
+				bCheck = false;
+				break;
+			}
+		}
+		if (bCheck)
+		{
+			const int iReligion = getReligionType();
+			const int iReligionState = getStateReligion();
+			const int iReligionPrereq = getPrereqReligion();
+
+			if (iReligion > -1 || iReligionState > -1 || iReligionPrereq > -1)
+			{
+				for (int iI = 0; iI < iNumUnitCombatInfos; iI++)
+				{
+					const int iType = GC.getUnitCombatInfo((UnitCombatTypes)iI).getReligion();
+
+					if (iType > -1 && (iType == iReligion || iType == iReligionState || iType == iReligionPrereq))
+					{
+						m_aiSubCombatTypes.push_back((UnitCombatTypes)iI);
+						break;
+					}
+				}
+			}
+		}
+	}
+	{
+		bool bCheck = true;
+		foreach_(const UnitCombatTypes eSubCombat, getSubCombatTypes())
+		{
+			if (GC.getUnitCombatInfo(eSubCombat).getCulture() != NO_BONUS)
+			{
+				bCheck = false;
+				break;
+			}
+		}
+		if (bCheck)
+		{
+			const BonusTypes eBonus = (BonusTypes)getPrereqAndBonus();
+
+			if (eBonus != NO_BONUS && GC.getBonusInfo(eBonus).getBonusClassType() == GC.getInfoTypeForString("BONUSCLASS_CULTURE"))
+			{
+				for (int iI = 0; iI < iNumUnitCombatInfos; iI++)
+				{
+					if (GC.getUnitCombatInfo((UnitCombatTypes)iI).getCulture() == eBonus)
+					{
+						m_aiSubCombatTypes.push_back((UnitCombatTypes)iI);
+						break;
+					}
+				}
+			}
+		}
+	}
+	{
+		if (getEraInfo() != NO_ERA)
+		{
+			bool bCheck = true;
+			foreach_(const UnitCombatTypes eSubCombat, getSubCombatTypes())
+			{
+				if (GC.getUnitCombatInfo(eSubCombat).getEra() != NO_ERA)
+				{
+					bCheck = false;
+					break;
+				}
+			}
+			if (bCheck)
+			{
+				for (int iI = 0; iI < iNumUnitCombatInfos; iI++)
+				{
+					if (GC.getUnitCombatInfo((UnitCombatTypes)iI).getEra() == getEraInfo())
+					{
+						m_aiSubCombatTypes.push_back((UnitCombatTypes)iI);
+						break;
+					}
+				}
+			}
+		}
+	}
+
+	// Toffer - Size Matters
+	{
+		int iOffset = 0;
+		m_iBaseGroupRank = 0;
+		m_iTotalCombatStrengthChangeBase = 0;
+		m_iTotalCombatStrengthModifierBase = 0;
+
+		for (int iI = -1; iI < getNumSubCombatTypes(); iI++)
+		{
+			const UnitCombatTypes eUnitCombat = (
+				(UnitCombatTypes)
+				(
+					iI > -1 ? getSubCombatType(iI) : getUnitCombatType()
+				)
+			);
+			if (eUnitCombat == NO_UNITCOMBAT) continue;
+
+			const CvUnitCombatInfo& info = GC.getUnitCombatInfo(eUnitCombat);
+
+			m_iTotalCombatStrengthChangeBase += info.getStrengthChange();
+
+			if (info.getQualityBase() > -10)
+			{
+				m_iTotalCombatStrengthModifierBase += info.getQualityBase() - 5;
+			}
+			if (info.getSizeBase() > -10)
+			{
+				m_iTotalCombatStrengthModifierBase += info.getSizeBase() - 5;
+
+				iOffset += info.getSizeBase();
+			}
+			if (info.getGroupBase() > -10)
+			{
+				m_iTotalCombatStrengthModifierBase += info.getGroupBase() - 5;
+
+				iOffset += info.getGroupBase();
+				m_iBaseGroupRank += info.getGroupBase();
+			}
+		}
+		const int iSMMultiplier = GC.getSIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER();
+		int iBase = 10000;
+		if (iOffset > 0)
+		{
+			for (int iI = 0; iI < iOffset; iI++)
+			{
+				iBase = iBase * iSMMultiplier / 100;
+			}
+		}
+		else
+		{
+			for (int iI = 0; iI < -iOffset; iI++)
+			{
+				iBase = iBase * 100 / iSMMultiplier;
+			}
+		}
+		iBase /= 100;
+		m_iBaseCargoVolume = std::max(1, iBase);
+	}
+
+	m_aiHealAsTypes.clear();
+	for (int iI = 0; iI < iNumUnitCombatInfos; iI++)
+	{
+		if ((getUnitCombatType() == iI || isSubCombatType((UnitCombatTypes)iI)) && GC.getUnitCombatInfo((UnitCombatTypes)iI).isHealsAs())
+		{
+			m_aiHealAsTypes.push_back((UnitCombatTypes)iI);
+		}
+	}
+	// ! Size Matters
+	{
+		UnitTypes eUnit = static_cast<UnitTypes>(iThis);
+
+		std::vector<UnitTypes> aUpgradeUnits;
+		do
+		{
+			if (eUnit != NO_UNIT)
+			{
+				for (int iI = 0; iI < GC.getUnitInfo(eUnit).getNumUnitUpgrades(); iI++)
+				{
+					addUnitToUpgradeChain(GC.getUnitInfo(eUnit).getUnitUpgrade(iI));
+					aUpgradeUnits.push_back(static_cast<UnitTypes>(GC.getUnitInfo(eUnit).getUnitUpgrade(iI)));
+				}
+			}
+			if (aUpgradeUnits.empty())
+			{
+				break;
+			}
+			eUnit = aUpgradeUnits.front();
+			aUpgradeUnits.erase(aUpgradeUnits.begin());
+		}
+		while (true);
+	}
 }
+
 
 bool CvUnitInfo::hasUnitCombat(UnitCombatTypes eUnitCombat) const
 {
+	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombat);
 
 	if (m_abHasCombatType == NULL)
@@ -5936,178 +6069,26 @@ bool CvUnitInfo::hasUnitCombat(UnitCombatTypes eUnitCombat) const
 	return m_abHasCombatType[eUnitCombat];
 }
 
-void CvUnitInfo::setTotalModifiedCombatStrengthDetails()
+
+int CvUnitInfo::getTotalModifiedCombatStrength100(const bool bSizeMatters) const
 {
-	m_iTotalCombatStrengthChangeBase = 0;
-	m_iTotalCombatStrengthModifierBase = 0;
+	const int iStr = 100 * ((getDomainType() == DOMAIN_AIR ? m_iAirCombat : m_iCombat) + m_iTotalCombatStrengthChangeBase);
 
-	UnitCombatTypes eUnitCombat;
-
-	for (int iI = 0; iI < getNumSubCombatTypes(); iI++)
+	if (iStr < 1)
 	{
-		if (iI > -1)
-		{
-			eUnitCombat = (UnitCombatTypes)getSubCombatType(iI);
-		}
-		else
-		{
-			eUnitCombat = (UnitCombatTypes)getUnitCombatType();
-
-			if (eUnitCombat == NO_UNITCOMBAT) continue;
-		}
-		const CvUnitCombatInfo& info = GC.getUnitCombatInfo(eUnitCombat);
-
-		m_iTotalCombatStrengthChangeBase += info.getStrengthChange();
-
-		if (info.getQualityBase() > -10)
-		{
-			m_iTotalCombatStrengthModifierBase += info.getQualityBase() - 5;
-		}
-		if (info.getSizeBase() > -10)
-		{
-			m_iTotalCombatStrengthModifierBase += info.getSizeBase() - 5;
-		}
-		if (info.getGroupBase() > -10)
-		{
-			m_iTotalCombatStrengthModifierBase += info.getGroupBase() - 5;
-		}
+		return 0;
 	}
+	if (!bSizeMatters || m_iTotalCombatStrengthModifierBase == 0)
+	{
+		return iStr;
+	}
+	return std::max(1, applySMRank(iStr, m_iTotalCombatStrengthModifierBase, GC.getSIZE_MATTERS_MOST_MULTIPLIER()));
 }
 
-int CvUnitInfo::getCombatStrengthModifier() const
-{
-	return m_iTotalCombatStrengthModifierBase;
-}
-int CvUnitInfo::getTotalModifiedCombatStrength100() const
-{
-	int iStr = m_iCombat + m_iTotalCombatStrengthChangeBase;
-	const int iSMMultiplier = GC.getSIZE_MATTERS_MOST_MULTIPLIER();
-	const bool bPositive = (m_iTotalCombatStrengthModifierBase > 0);
-	const int iIterator = ((bPositive) ? m_iTotalCombatStrengthModifierBase : (-1 * m_iTotalCombatStrengthModifierBase));
-	int iI = 0;
-
-	if (iStr < 0)
-	{
-		iStr = 0;
-	}
-	if (iStr !=0)
-	{
-		iStr *= 100;
-		for (iI = 0; iI < iIterator; iI++)
-		{
-			if (bPositive)
-			{
-				iStr *= iSMMultiplier;
-				iStr /= 100;
-			}
-			else
-			{
-				iStr *= 100;
-				iStr /= iSMMultiplier;
-			}
-		}
-	}
-	return iStr;
-}
-int CvUnitInfo::getTotalModifiedAirCombatStrength100() const
-{
-	int iStr = m_iAirCombat + m_iTotalCombatStrengthChangeBase;
-	if (iStr < 0)
-	{
-		iStr = 0;
-	}
-	if (iStr !=0)
-	{
-		iStr *= 100;
-		int iStrEval = iStr;
-		iStrEval *= m_iTotalCombatStrengthModifierBase;
-		iStrEval /= 100;
-		iStrEval += iStr;
-		iStrEval = getApproaching0Return(iStrEval);
-		iStr = std::max(1, iStrEval);
-	}
-	return iStr;
-}
-int CvUnitInfo::getApproaching0Return(int i) const
-{
-	if (i > 10) return i;
-
-	if (i > 0) return 9;
-
-	if (i > -10) return 8;
-
-	if (i > -20) return 7;
-
-	if (i > -40) return 6;
-
-	if (i > -80) return 5;
-
-	if (i > -160) return 4;
-
-	if (i > -320) return 3;
-
-	if (i > -640) return 2;
-
-	return 1;
-}
 
 int CvUnitInfo::getBaseGroupRank() const
 {
 	return m_iBaseGroupRank;
-}
-
-void CvUnitInfo::setBaseCargoVolume()
-{
-	int iOffset = 0;
-	int iBaseGroup = 0;
-
-	UnitCombatTypes eUnitCombat;
-	for (int iI = -1; iI < getNumSubCombatTypes(); iI++)
-	{
-		if (iI > -1)
-		{
-			eUnitCombat = (UnitCombatTypes)getSubCombatType(iI);
-		}
-		else
-		{
-			eUnitCombat = (UnitCombatTypes)getUnitCombatType();
-
-			if (eUnitCombat == NO_UNITCOMBAT) continue;
-		}
-		if (GC.getUnitCombatInfo(eUnitCombat).getGroupBase() > -10)
-		{
-			iOffset += GC.getUnitCombatInfo(eUnitCombat).getGroupBase();
-			iBaseGroup += GC.getUnitCombatInfo(eUnitCombat).getGroupBase();
-		}
-		if (GC.getUnitCombatInfo(eUnitCombat).getSizeBase() > -10)
-		{
-			iOffset += GC.getUnitCombatInfo(eUnitCombat).getSizeBase();
-		}
-	}
-	m_iBaseGroupRank = iBaseGroup;
-
-	int iBase = 100;
-	const int iSMMultiplier = GC.getSIZE_MATTERS_MOST_VOLUMETRIC_MULTIPLIER();
-	const bool bPositive = ((iOffset > 0) ? true : false);
-	iBase *= 100;
-	if (bPositive)
-	{
-		for (int iI = 0; iI < iOffset; iI++)
-		{
-			iBase *= iSMMultiplier;
-			iBase /= 100;
-		}
-	}
-	else
-	{
-		for (int iI = 0; iI < -iOffset; iI++)
-		{
-			iBase *= 100;
-			iBase /= iSMMultiplier;
-		}
-	}
-	iBase /= 100;
-	m_iBaseCargoVolume = std::max(1, iBase);
 }
 
 int CvUnitInfo::getBaseCargoVolume() const
@@ -6115,63 +6096,6 @@ int CvUnitInfo::getBaseCargoVolume() const
 	return m_iBaseCargoVolume;
 }
 
-void CvUnitInfo::setBaseSizeMattersZeroPoints()
-{
-	int iFullTotal = 0;
-	int iVolumetricTotal = 0;
-
-	UnitCombatTypes eUnitCombat;
-	for (int iI = -1; iI < getNumSubCombatTypes(); iI++)
-	{
-		if (iI > -1)
-		{
-			eUnitCombat = (UnitCombatTypes)getSubCombatType(iI);
-		}
-		else
-		{
-			eUnitCombat = (UnitCombatTypes)getUnitCombatType();
-
-			if (eUnitCombat == NO_UNITCOMBAT) continue;
-		}
-		if (GC.getUnitCombatInfo(eUnitCombat).getGroupBase() > -10)
-		{
-			iFullTotal += GC.getUnitCombatInfo(eUnitCombat).getGroupBase();
-			iVolumetricTotal += GC.getUnitCombatInfo(eUnitCombat).getGroupBase();
-		}
-		if (GC.getUnitCombatInfo(eUnitCombat).getSizeBase() > -10)
-		{
-			iFullTotal += GC.getUnitCombatInfo(eUnitCombat).getSizeBase();
-			iVolumetricTotal += GC.getUnitCombatInfo(eUnitCombat).getSizeBase();
-		}
-		if (GC.getUnitCombatInfo(eUnitCombat).getQualityBase() > -10)
-		{
-			iFullTotal += GC.getUnitCombatInfo(eUnitCombat).getQualityBase();
-		}
-	}
-	m_iBaseSMRankTotal = iFullTotal;
-	m_iBaseSMVolumetricRankTotal = iVolumetricTotal;
-}
-
-int CvUnitInfo::getSMRankTotal() const
-{
-	return m_iBaseSMRankTotal;
-}
-
-int CvUnitInfo::getSMVolumetricRankTotal() const
-{
-	return m_iBaseSMVolumetricRankTotal;
-}
-
-
-void CvUnitInfo::setSM()
-{
-	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
-	{
-		setTotalModifiedCombatStrengthDetails();
-		setBaseCargoVolume();
-		setBaseSizeMattersZeroPoints();
-	}
-}
 
 bool CvUnitInfo::isQualifiedPromotionType(int i) const
 {
@@ -6181,6 +6105,7 @@ bool CvUnitInfo::isQualifiedPromotionType(int i) const
 
 bool CvUnitInfo::setQualifiedPromotionType(const int iPromo, std::vector<int>& checklist)
 {
+	PROFILE_EXTRA_FUNC();
 	if (iPromo == -1 || isQualifiedPromotionType(iPromo))
 	{
 		return true;
@@ -6241,6 +6166,7 @@ bool CvUnitInfo::setQualifiedPromotionType(const int iPromo, std::vector<int>& c
 }
 void CvUnitInfo::setQualifiedPromotionTypes()
 {
+	PROFILE_EXTRA_FUNC();
 	m_aiQualifiedPromotionTypes.clear();
 
 	for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
@@ -6254,6 +6180,7 @@ void CvUnitInfo::setQualifiedPromotionTypes()
 
 void CvUnitInfo::setCanAnimalIgnores()
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = getAnimalIgnoresBorders();
 
 	const UnitCombatTypes eUnitCombat = (UnitCombatTypes)getUnitCombatType();

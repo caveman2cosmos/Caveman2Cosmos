@@ -31,11 +31,7 @@
 	</TEXT-->
 	<TEXT>
 		<Tag>CHANGED_TXT_KEY_MAIN_MENU_WARLORS</Tag>
-		<English>Beyond the Sword Content</English>
-		<French>Contenu de Beyond the Sword</French>
-		<German>Beyond The Sword-Inhalte</German>
-		<Italian>Contenuti di Beyond the Sword</Italian>
-		<Spanish>Contenido de Beyond the Sword</Spanish>
+		<English>Space maps</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_BUDDY_LIST_PLAYING_LOC</Tag>
@@ -167,7 +163,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ADVANCED_START_POINTS</Tag>
-		<English>Advanced Start Base Points:</English>
+		<English>Custom Start Base Points:</English>
 		<French>Points de base du démarrage avancé :</French>
 		<German>Basispunkte für Fortgeschrittenen Start:</German>
 		<Italian>Punti iniziali avvio avanzato:</Italian>
@@ -1624,11 +1620,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_CUSTOM_GAME</Tag>
-		<English>Custom Game</English>
-		<French>Partie personnalisée</French>
-		<German>Eigenes Spiel</German>
-		<Italian>Partita personalizzata</Italian>
-		<Spanish>Personalizar partida</Spanish>
+		<English>Full Game</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_CUSTOM_SCENARIO</Tag>
@@ -2314,7 +2306,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_PLAY_NOW</Tag>
-		<English>Play Now!</English>
+		<English>Simple Game</English>
 		<French>Jouer</French>
 		<German>Jetzt spielen!</German>
 		<Italian>Gioca ora!</Italian>
@@ -2386,11 +2378,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_SCENARIO</Tag>
-		<English>Play a Scenario</English>
-		<French>Jouer un scénario</French>
-		<German>Szenario spielen</German>
-		<Italian>Gioca uno scenario</Italian>
-		<Spanish>Jugar un escenario</Spanish>
+		<English>Scenario</English>
+		<French>Scénario</French>
+		<German>Szenario</German>
+		<Spanish>Escenario</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_SELECT_A</Tag>
@@ -4254,7 +4245,7 @@
 		<English>Visit www.gamespyid.com to manage your account!</English>
 		<French>Visitez le site www.gamespyid.com pour g&#233;rer votre compte !</French>
 		<German>Besuchen Sie www.gamespyid.com, um Ihren Account zu verwalten.</German>
-		<Italian>Mostra informazioni dettagliate sul mondo di gioco (www.gamespyid.com).</Italian>
+		<Italian>Visita www.gamespyid.com per gestire il tuo account.</Italian>
 		<Spanish>Visita www.gamespyid.com para gestionar tu cuenta.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4347,7 +4338,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_AS_VISIBILITY</Tag>
-		<English>Visibility</English>
+		<English>Vision</English>
 		<French>Affichage</French>
 		<German>Sicht</German>
 		<Italian>Visibilità</Italian>

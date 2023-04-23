@@ -70,6 +70,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.countBonusProducers, "Building - list amount of bonus providers", "List how many buildings provide bonuses")
 		self.main.addTestCode(screen, self.checkTaxonomyBuildings, "Building - list potential Taxonomy requirements", "List taxonomy buildings, that doesn't have all potential base folklore requirements")
 		self.main.addTestCode(screen, self.listFlavors, "General - list and check flavors", "List flavors of traits, buildings, techs, civics, religions, units and report if conventionally unobtainable entry has flavor. Items with flavors can be viewed in CSV as table.")
+		self.main.addTestCode(screen, self.listTagsAndNames, "General - list and check ingame names and infotypes", "List names and infotypes of objects, useful to find out confusing names")
 
 	#Building requirements of buildings
 	def checkBuildingRequirements(self):
@@ -198,7 +199,7 @@ class TestCode:
 
 	#Building replacements of requirements
 	def checkBuildingRequirementReplacements(self):
-		aSpecialReplacementsList = ["BUILDING_POLLUTION_BLACKENEDSKIES", "BUILDING_GAMBLING_BAN", "BUILDING_ALCOCHOL_PROHIBITION", "BUILDING_DRUG_PROHIBITION", "BUILDING_PROSTITUTION_BAN", "BUILDING_EMANCIPATION_PROCLAMATION_EFFECT"]
+		aSpecialReplacementsList = ["BUILDING_POLLUTION_BLACKENED_SKIES", "BUILDING_ORDINANCE_GAMBLING_BAN", "BUILDING_ORDINANCE_ALCOHOL_PROHIBITION", "BUILDING_ORDINANCE_DRUG_PROHIBITION", "BUILDING_ORDINANCE_PROSTITUTION_BAN", "BUILDING_EFFECT_EMANCIPATION_PROCLAMATION"]
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 
@@ -502,7 +503,7 @@ class TestCode:
 
 	#Building replacements shouldn't obsolete too fast for sanity of beeliners, replacements also shouldn't obsolete at earlier point compared to base
 	def checkBuildingReplacementObsoletion(self):
-		aSpecialReplacementsList = [GC.getInfoTypeForString("BUILDING_POLLUTION_BLACKENEDSKIES"), GC.getInfoTypeForString("BUILDING_GAMBLING_BAN"), GC.getInfoTypeForString("BUILDING_ALCOCHOL_PROHIBITION"), GC.getInfoTypeForString("BUILDING_DRUG_PROHIBITION"), GC.getInfoTypeForString("BUILDING_PROSTITUTION_BAN")]
+		aSpecialReplacementsList = [GC.getInfoTypeForString("BUILDING_POLLUTION_BLACKENED_SKIES"), GC.getInfoTypeForString("BUILDING_ORDINANCE_GAMBLING_BAN"), GC.getInfoTypeForString("BUILDING_ORDINANCE_ALCOHOL_PROHIBITION"), GC.getInfoTypeForString("BUILDING_ORDINANCE_DRUG_PROHIBITION"), GC.getInfoTypeForString("BUILDING_ORDINANCE_PROSTITUTION_BAN")]
 		iEndOfTechTreeXGrid = GC.getTechInfo(GC.getInfoTypeForString("TECH_FUTURE_TECH")).getGridX()
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
@@ -515,7 +516,7 @@ class TestCode:
 			aBuildingReplacementList = []
 			for iReplacement in xrange(CvBuildingInfo.getNumReplacementBuilding()):
 				iBuildingReplacement = CvBuildingInfo.getReplacementBuilding(iReplacement)
-				if iBuildingReplacement not in aSpecialReplacementsList and GC.getBuildingInfo(iBuildingReplacement).getType().find("BUILDING_EQ_") == -1 and GC.getBuildingInfo(iBuildingReplacement).getType().find("BUILDING_KNOWLEDGE_BASE_") == -1:
+				if iBuildingReplacement not in aSpecialReplacementsList and GC.getBuildingInfo(iBuildingReplacement).getType().find("BUILDING_EDUCATION_") == -1:
 					aBuildingReplacementList.append(iBuildingReplacement)
 
 			#All replacements of replacements
@@ -544,7 +545,7 @@ class TestCode:
 					iImmediateReplacementTechLocID = max(self.HF.checkBuildingTechRequirements(CvBuildingImmediateReplacementInfo)[2])
 					iImmediateReplacementTechObs = self.HF.checkBuildingTechObsoletionLocation(CvBuildingImmediateReplacementInfo)[0]
 					iImmediateReplacementTechObsID = self.HF.checkBuildingTechObsoletionLocation(CvBuildingImmediateReplacementInfo)[1]
-					if iBuilding != GC.getInfoTypeForString("BUILDING_HOMELESS"):
+					if iBuilding != GC.getInfoTypeForString("BUILDING_HOUSING_HOMELESS"):
 						if iTechLoc >= iImmediateReplacementTechLoc:
 							self.log(CvBuildingInfo.getType()+" unlocks after or concurrently with unlock of "+CvBuildingImmediateReplacementInfo.getType()+" Base unlock/Replacement unlock "+str(iTechLoc)+"/"+str(iImmediateReplacementTechLoc))
 						if iTechObsLoc > iImmediateReplacementTechObs:
@@ -582,7 +583,7 @@ class TestCode:
 					for i in xrange(len(aImmediateReplacement2List)):
 						Cv2BuildingImmediateReplacementInfo = GC.getBuildingInfo(aImmediateReplacement2List[i])
 						iReplacement2TechID = max(self.HF.checkBuildingTechRequirements(Cv2BuildingImmediateReplacementInfo)[2])
-						if iTechObsID != iReplacement2TechID and iBuilding != GC.getInfoTypeForString("BUILDING_HOMELESS"):
+						if iTechObsID != iReplacement2TechID and iBuilding != GC.getInfoTypeForString("BUILDING_HOUSING_HOMELESS"):
 							self.log(CvBuildingInfo.getType()+" -> "+Cv2BuildingImmediateReplacementInfo.getType()+" Base Obsoletion should happen on Second Replacement Unlock: "+self.HF.getTechName(iTechObsID)+"/"+self.HF.getTechName(iReplacement2TechID))
 
 				if len(aImmediateReplacementList) == 1 and len(aImmediateReplacement2List) == 1 and CvBuildingInfo.getObsoletesToBuilding() != aImmediateReplacementList[0]:
@@ -688,7 +689,7 @@ class TestCode:
 
 	#Building - check if replacing building has better yields, commerces, and other stats
 	def checkBuildingReplacingQuality(self):
-		aSpecialBuildingsList = [GC.getInfoTypeForString("BUILDING_POLLUTION_BLACKENEDSKIES"), GC.getInfoTypeForString("BUILDING_GAMBLING_BAN"), GC.getInfoTypeForString("BUILDING_ALCOCHOL_PROHIBITION"), GC.getInfoTypeForString("BUILDING_DRUG_PROHIBITION"), GC.getInfoTypeForString("BUILDING_PROSTITUTION_BAN")]
+		aSpecialBuildingsList = [GC.getInfoTypeForString("BUILDING_POLLUTION_BLACKENED_SKIES"), GC.getInfoTypeForString("BUILDING_ORDINANCE_GAMBLING_BAN"), GC.getInfoTypeForString("BUILDING_ORDINANCE_ALCOHOL_PROHIBITION"), GC.getInfoTypeForString("BUILDING_ORDINANCE_DRUG_PROHIBITION"), GC.getInfoTypeForString("BUILDING_ORDINANCE_PROSTITUTION_BAN")]
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 			#Tech location would be good way to sort replacements, as later ones tend to replace more
@@ -696,7 +697,7 @@ class TestCode:
 			iTechBase = self.HF.checkBuildingTechRequirements(CvBuildingInfo)[0] #Tech level of building - most advanced tech XGrid
 
 			#Ignore Pollution, Bans and Education pseudobuildings
-			if iBuilding not in aSpecialBuildingsList and CvBuildingInfo.getNumReplacedBuilding() != 0 and CvBuildingInfo.getType().find("BUILDING_EQ_") == -1:
+			if iBuilding not in aSpecialBuildingsList and CvBuildingInfo.getNumReplacedBuilding() != 0 and CvBuildingInfo.getType().find("BUILDING_EDUCATION_") == -1:
 				#Get list of replaced buildings
 				aReplacedBuildings = []
 				for i in xrange(CvBuildingInfo.getNumReplacedBuilding()):
@@ -726,7 +727,7 @@ class TestCode:
 				MAIN_ARRAY_SIZE = 2
 
 				#===== 0D ENTRIES - INTEGERS ===========================================================================================================================#
-				#<bPower>, <bProvidesFreshWater>, <iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist>, <iMaintenanceModifier>, <iHappinessPercentPerPopulation>, <iHealthPercentPerPopulation>, <iWarWearinessModifier>, <iGlobalWarWearinessModifier>, <iEnemyWarWearinessModifier>, <iAllCityDefense>, <iBombardDefense>, <iBuildingDefenseRecoverySpeedModifier>, <iCityDefenseRecoverySpeedModifier>, <iDefense>, <iEspionageDefense>, <iLocalDynamicDefense>, <iMinDefense>, <iNoEntryDefenseLevel>, <iRiverDefensePenalty>, <iExperience>, <iGlobalExperience>, <iFoodKept> <iPopulationgrowthratepercentage>, <iAdjacentDamagePercent>, <iLineOfSight>, <iAirModifier>, <iAirUnitCapacity>, <iAirlift>, <iAnarchyModifier>, <iAreaHappiness>, <iAreaHealth>, <iDamageAttackerChance>, <iDamageToAttacker>, <iDistanceMaintenanceModifier>, <iDomesticGreatGeneralRateModifier>, <iGlobalGreatPeopleRateModifier>, <iGlobalHappiness>, <iGlobalHealth>, <iGlobalMaintenanceModifier>, <iGlobalSpaceProductionModifier>, <iGoldenAgeModifier>, <iGreatGeneralRateModifier>, <iHealRateChange>, <iInsidiousness>, <iInvasionChance>, <iInvestigation>, <iLocalRepel>, <iMilitaryProductionModifier>, <iNationalCaptureProbabilityModifier>, <iNationalCaptureResistanceModifier>, <iNukeModifier>, <iNumUnitFullHeal>, <iRevIdxLocal>, <iRevIdxNational>, <iSpaceProductionModifier>, <iStateReligionHappiness>, <iUnitUpgradePriceModifier>, <iWorkerSpeedModifier> - base
+				#<bPower>, <bProvidesFreshWater>, <iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist>, <iMaintenanceModifier>, <iHappinessPercentPerPopulation>, <iHealthPercentPerPopulation>, <iWarWearinessModifier>, <iGlobalWarWearinessModifier>, <iEnemyWarWearinessModifier>, <iAllCityDefense>, <iBombardDefense>, <iBuildingDefenseRecoverySpeedModifier>, <iCityDefenseRecoverySpeedModifier>, <iDefense>, <iEspionageDefense>, <iLocalDynamicDefense>, <iMinDefense>, <iNoEntryDefenseLevel>, <iRiverDefensePenalty>, <iExperience>, <iGlobalExperience>, <iFoodKept> <iPopulationgrowthratepercentage>, <iAdjacentDamagePercent>, <iLineOfSight>, <iAirModifier>, <iAirUnitCapacity>, <iAirlift>, <iAnarchyModifier>, <iAreaHappiness>, <iAreaHealth>, <iDamageAttackerChance>, <iDamageToAttacker>, <iDistanceMaintenanceModifier>, <iDomesticGreatGeneralRateModifier>, <iGlobalGreatPeopleRateModifier>, <iGlobalHappiness>, <iGlobalHealth>, <iGlobalMaintenanceModifier>, <iGlobalSpaceProductionModifier>, <iGoldenAgeModifier>, <iGreatGeneralRateModifier>, <iHealRateChange>, <iInsidiousness>, <iInvestigation>, <iLocalRepel>, <iMilitaryProductionModifier>, <iNationalCaptureProbabilityModifier>, <iNationalCaptureResistanceModifier>, <iNukeModifier>, <iNumUnitFullHeal>, <iRevIdxLocal>, <iRevIdxNational>, <iSpaceProductionModifier>, <iStateReligionHappiness>, <iUnitUpgradePriceModifier>, <iWorkerSpeedModifier> - base
 				aPower = [CvBuildingInfo.isPower(), 0]
 				aProvidesFreshWater = [CvBuildingInfo.isProvidesFreshWater(), 0]
 				aTradeRoutes = [CvBuildingInfo.getTradeRoutes(), 0]
@@ -782,7 +783,6 @@ class TestCode:
 				aGreatGeneralRateModifier = [CvBuildingInfo.getGreatGeneralRateModifier(), 0]
 				aHealRateChange = [CvBuildingInfo.getHealRateChange(), 0]
 				aInsidiousness = [CvBuildingInfo.getInsidiousness(), 0]
-				aInvasionChance = [CvBuildingInfo.getInvasionChance(), 0]
 				aInvestigation = [CvBuildingInfo.getInvestigation(), 0]
 				aLocalRepel = [CvBuildingInfo.getLocalRepel(), 0]
 				aMilitaryProductionModifier = [CvBuildingInfo.getMilitaryProductionModifier(), 0]
@@ -800,7 +800,7 @@ class TestCode:
 				#Analyze replacements by tag
 				for i in xrange(len(aImmediateReplacedList)):
 					CvReplacedBuildingInfo = GC.getBuildingInfo(aImmediateReplacedList[i])
-					#<bPower>, <bProvidesFreshWater>, <iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist>, <iMaintenanceModifier>, <iHappinessPercentPerPopulation>, <iHealthPercentPerPopulation>, <iWarWearinessModifier>, <iGlobalWarWearinessModifier>, <iEnemyWarWearinessModifier>, <iAllCityDefense>, <iBombardDefense>, <iBuildingDefenseRecoverySpeedModifier>, <iCityDefenseRecoverySpeedModifier>, <iDefense>, <iEspionageDefense>, <iLocalDynamicDefense>, <iMinDefense>, <iNoEntryDefenseLevel>, <iRiverDefensePenalty>, <iExperience>, <iGlobalExperience>, <iFoodKept> <iPopulationgrowthratepercentage>, <iAdjacentDamagePercent>, <iLineOfSight>, <iAirModifier>, <iAirUnitCapacity>, <iAirlift>, <iAnarchyModifier>, <iAreaHappiness>, <iAreaHealth>, <iDamageAttackerChance>, <iDamageToAttacker>, <iDistanceMaintenanceModifier>, <iDomesticGreatGeneralRateModifier>, <iGlobalGreatPeopleRateModifier>, <iGlobalHappiness>, <iGlobalHealth>, <iGlobalMaintenanceModifier>, <iGlobalSpaceProductionModifier>, <iGoldenAgeModifier>, <iGreatGeneralRateModifier>, <iHealRateChange>, <iInsidiousness>, <iInvasionChance>, <iInvestigation>, <iLocalRepel>, <iMilitaryProductionModifier>, <iNationalCaptureProbabilityModifier>, <iNationalCaptureResistanceModifier>, <iNukeModifier>, <iNumUnitFullHeal>, <iRevIdxLocal>, <iRevIdxNational>, <iSpaceProductionModifier>, <iStateReligionHappiness>, <iUnitUpgradePriceModifier>, <iWorkerSpeedModifier>
+					#<bPower>, <bProvidesFreshWater>, <iTradeRoutes>, <iCoastalTradeRoutes>, <iGlobalTradeRoutes>, <iTradeRouteModifier>, <iForeignTradeRouteModifier>, <iHappiness>, <iHealth>, <iGreatPeopleRateChange>, <iGreatPeopleRateModifier>, <iFreeSpecialist>, <iAreaFreeSpecialist>, <iGlobalFreeSpecialist>, <iMaintenanceModifier>, <iHappinessPercentPerPopulation>, <iHealthPercentPerPopulation>, <iWarWearinessModifier>, <iGlobalWarWearinessModifier>, <iEnemyWarWearinessModifier>, <iAllCityDefense>, <iBombardDefense>, <iBuildingDefenseRecoverySpeedModifier>, <iCityDefenseRecoverySpeedModifier>, <iDefense>, <iEspionageDefense>, <iLocalDynamicDefense>, <iMinDefense>, <iNoEntryDefenseLevel>, <iRiverDefensePenalty>, <iExperience>, <iGlobalExperience>, <iFoodKept> <iPopulationgrowthratepercentage>, <iAdjacentDamagePercent>, <iLineOfSight>, <iAirModifier>, <iAirUnitCapacity>, <iAirlift>, <iAnarchyModifier>, <iAreaHappiness>, <iAreaHealth>, <iDamageAttackerChance>, <iDamageToAttacker>, <iDistanceMaintenanceModifier>, <iDomesticGreatGeneralRateModifier>, <iGlobalGreatPeopleRateModifier>, <iGlobalHappiness>, <iGlobalHealth>, <iGlobalMaintenanceModifier>, <iGlobalSpaceProductionModifier>, <iGoldenAgeModifier>, <iGreatGeneralRateModifier>, <iHealRateChange>, <iInsidiousness>, <iInvestigation>, <iLocalRepel>, <iMilitaryProductionModifier>, <iNationalCaptureProbabilityModifier>, <iNationalCaptureResistanceModifier>, <iNukeModifier>, <iNumUnitFullHeal>, <iRevIdxLocal>, <iRevIdxNational>, <iSpaceProductionModifier>, <iStateReligionHappiness>, <iUnitUpgradePriceModifier>, <iWorkerSpeedModifier>
 					aPower[REPLACED] += CvReplacedBuildingInfo.isPower()
 					aProvidesFreshWater[REPLACED] += CvReplacedBuildingInfo.isProvidesFreshWater()
 					aTradeRoutes[REPLACED] += CvReplacedBuildingInfo.getTradeRoutes()
@@ -858,7 +858,6 @@ class TestCode:
 					aGreatGeneralRateModifier[REPLACED] += CvReplacedBuildingInfo.getGreatGeneralRateModifier()
 					aHealRateChange[REPLACED] += CvReplacedBuildingInfo.getHealRateChange()
 					aInsidiousness[REPLACED] += CvReplacedBuildingInfo.getInsidiousness()
-					aInvasionChance[REPLACED] += CvReplacedBuildingInfo.getInvasionChance()
 					aInvestigation[REPLACED] += CvReplacedBuildingInfo.getInvestigation()
 					aLocalRepel[REPLACED] += CvReplacedBuildingInfo.getLocalRepel()
 					aMilitaryProductionModifier[REPLACED] += CvReplacedBuildingInfo.getMilitaryProductionModifier()
@@ -984,8 +983,6 @@ class TestCode:
 					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Heal Rate Change "+str(aHealRateChange[BASE])+"/"+str(aHealRateChange[REPLACED]))
 				if aInsidiousness[BASE] > aInsidiousness[REPLACED]: #Lower iInsidiousness is better
 					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Insidiousness "+str(aInsidiousness[BASE])+"/"+str(aInsidiousness[REPLACED]))
-				if aInvasionChance[BASE] > aInvasionChance[REPLACED]: #Lower iInvasionChance is better
-					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Invasion Chance "+str(aInvasionChance[BASE])+"/"+str(aInvasionChance[REPLACED]))
 				if aInvestigation[BASE] < aInvestigation[REPLACED]:
 					self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have Investigation "+str(aInvestigation[BASE])+"/"+str(aInvestigation[REPLACED]))
 				if aLocalRepel[BASE] < aLocalRepel[REPLACED]:
@@ -1128,9 +1125,9 @@ class TestCode:
 				#Building shouldn't be worse than replaced one!
 				#Emancipation Proclamation removes worldview buildings, python is needed for it to actually erase all slave specialists
 				for iSpecialist in xrange(GC.getNumSpecialistInfos()):
-					if aSpecialistCounts[BASE][iSpecialist] < aSpecialistCounts[REPLACED][iSpecialist] and iBuilding != GC.getInfoTypeForString("BUILDING_EMANCIPATION_PROCLAMATION_EFFECT"):
+					if aSpecialistCounts[BASE][iSpecialist] < aSpecialistCounts[REPLACED][iSpecialist] and iBuilding != GC.getInfoTypeForString("BUILDING_EFFECT_EMANCIPATION_PROCLAMATION"):
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getSpecialistInfo(iSpecialist).getType()+" Specialists Count "+str(aSpecialistCounts[BASE][iSpecialist])+"/"+str(aSpecialistCounts[REPLACED][iSpecialist]))
-					if aFreeSpecialistCounts[BASE][iSpecialist] < aFreeSpecialistCounts[REPLACED][iSpecialist] and iBuilding != GC.getInfoTypeForString("BUILDING_EMANCIPATION_PROCLAMATION_EFFECT"):
+					if aFreeSpecialistCounts[BASE][iSpecialist] < aFreeSpecialistCounts[REPLACED][iSpecialist] and iBuilding != GC.getInfoTypeForString("BUILDING_EFFECT_EMANCIPATION_PROCLAMATION"):
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getSpecialistInfo(iSpecialist).getType()+" Free specialists Count "+str(aFreeSpecialistCounts[BASE][iSpecialist])+"/"+str(aFreeSpecialistCounts[REPLACED][iSpecialist]))
 
 				#=================================================================================================
@@ -1546,7 +1543,7 @@ class TestCode:
 							if aCommerceModifiers[BASE][iCommerce] < aCommerceModifiers[REPLACED][iCommerce]:
 								self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getCommerceInfo(iCommerce).getType()+" Commerce Modifiers (Early techs boost) "+str(aCommerceModifiers[BASE])+"/"+str(aCommerceModifiers[REPLACED]))
 						for iSpecialist in xrange(GC.getNumSpecialistInfos()):
-							if aFreeSpecialistCounts[BASE][iSpecialist] < aFreeSpecialistCounts[REPLACED][iSpecialist] and CvBuildingInfo.getType().find("BUILDING_EMANCIPATION_PROCLAMATION_EFFECT") == -1:
+							if aFreeSpecialistCounts[BASE][iSpecialist] < aFreeSpecialistCounts[REPLACED][iSpecialist] and CvBuildingInfo.getType().find("BUILDING_EFFECT_EMANCIPATION_PROCLAMATION") == -1:
 								self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getSpecialistInfo(iSpecialist).getType()+" Free specialists Count (Early techs boost) "+str(aFreeSpecialistCounts[BASE][iSpecialist])+"/"+str(aFreeSpecialistCounts[REPLACED][iSpecialist]))
 
 
@@ -1668,7 +1665,7 @@ class TestCode:
 
 	#Building - check if building replacements are present in tags affecting buildings
 	def checkBuildingReplacingAvailability(self):
-		aSpecialBuildingsList = [GC.getInfoTypeForString("BUILDING_POLLUTION_BLACKENEDSKIES"), GC.getInfoTypeForString("BUILDING_GAMBLING_BAN"), GC.getInfoTypeForString("BUILDING_ALCOCHOL_PROHIBITION"), GC.getInfoTypeForString("BUILDING_DRUG_PROHIBITION"), GC.getInfoTypeForString("BUILDING_PROSTITUTION_BAN")]
+		aSpecialBuildingsList = [GC.getInfoTypeForString("BUILDING_POLLUTION_BLACKENED_SKIES"), GC.getInfoTypeForString("BUILDING_ORDINANCE_GAMBLING_BAN"), GC.getInfoTypeForString("BUILDING_ORDINANCE_ALCOHOL_PROHIBITION"), GC.getInfoTypeForString("BUILDING_ORDINANCE_DRUG_PROHIBITION"), GC.getInfoTypeForString("BUILDING_ORDINANCE_PROSTITUTION_BAN")]
 		#Buildings referencing buildings
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
@@ -3026,7 +3023,7 @@ class TestCode:
 
 	#Unit - check building requirement replacements
 	def checkUnitRequirementsReplacements(self):
-		aSpecialBuildingsList = [GC.getInfoTypeForString("BUILDING_POLLUTION_BLACKENEDSKIES"), GC.getInfoTypeForString("BUILDING_GAMBLING_BAN"), GC.getInfoTypeForString("BUILDING_ALCOCHOL_PROHIBITION"), GC.getInfoTypeForString("BUILDING_DRUG_PROHIBITION"), GC.getInfoTypeForString("BUILDING_PROSTITUTION_BAN")]
+		aSpecialBuildingsList = [GC.getInfoTypeForString("BUILDING_POLLUTION_BLACKENED_SKIES"), GC.getInfoTypeForString("BUILDING_ORDINANCE_GAMBLING_BAN"), GC.getInfoTypeForString("BUILDING_ORDINANCE_ALCOHOL_PROHIBITION"), GC.getInfoTypeForString("BUILDING_ORDINANCE_DRUG_PROHIBITION"), GC.getInfoTypeForString("BUILDING_ORDINANCE_PROSTITUTION_BAN")]
 		for iUnit in xrange(GC.getNumUnitInfos()):
 			CvUnitInfo = GC.getUnitInfo(iUnit)
 
@@ -3598,7 +3595,7 @@ class TestCode:
 
 	#Building - list buildings, that are stand-alone
 	def listStandaloneBuildings(self):
-		aSpecialReplacementsList = ["BUILDING_POLLUTION_BLACKENEDSKIES", "BUILDING_GAMBLING_BAN", "BUILDING_ALCOCHOL_PROHIBITION", "BUILDING_DRUG_PROHIBITION", "BUILDING_PROSTITUTION_BAN"]
+		aSpecialReplacementsList = ["BUILDING_POLLUTION_BLACKENED_SKIES", "BUILDING_ORDINANCE_GAMBLING_BAN", "BUILDING_ORDINANCE_ALCOHOL_PROHIBITION", "BUILDING_ORDINANCE_DRUG_PROHIBITION", "BUILDING_ORDINANCE_PROSTITUTION_BAN"]
 		aSpecialBuildingList = [GC.getInfoTypeForString("SPECIALBUILDING_CORPORATION"), GC.getInfoTypeForString("SPECIALBUILDING_FOLKLORE_EXPLORATION")]
 		#We are excluding bans from valid replacements, and some special building classes must be standalone
 
@@ -3795,3 +3792,45 @@ class TestCode:
 					sBuffer += ","+sFlavorType+","+str(CvReligionInfo.getFlavorValue(iFlavor))
 			if sBuffer.find(",") != -1:
 				self.log(sBuffer)
+				
+	def listTagsAndNames(self):
+		for iBuilding in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+			self.log(CvBuildingInfo.getType()+" =BUILDING_ "+CvBuildingInfo.getDescription()+" ==")
+			
+		for iProject in xrange(GC.getNumProjectInfos()):
+			CvProjectInfo = GC.getProjectInfo(iProject)
+			self.log(CvProjectInfo.getType()+" =PROJECT_ "+CvProjectInfo.getDescription()+" ==")
+			
+		for iCivic in xrange(GC.getNumCivicInfos()):
+			CvCivicInfo = GC.getCivicInfo(iCivic)
+			self.log(CvCivicInfo.getType()+" =CIVIC_ "+CvCivicInfo.getDescription()+" ==")
+			
+		for iTech in xrange(GC.getNumTechInfos()):
+			CvTechInfo = GC.getTechInfo(iTech)
+			self.log(CvTechInfo.getType()+" =TECH_ "+CvTechInfo.getDescription()+" ==")
+			
+		for iTerrain in xrange(GC.getNumTerrainInfos()):
+			CvTerrainInfo = GC.getTerrainInfo(iTerrain)
+			self.log(CvTerrainInfo.getType()+" =TERRAIN_ "+CvTerrainInfo.getDescription()+" ==")
+			
+		for iFeature in xrange(GC.getNumFeatureInfos()):
+			CvFeatureInfo = GC.getFeatureInfo(iFeature)
+			self.log(CvFeatureInfo.getType()+" =FEATURE_ "+CvFeatureInfo.getDescription()+" ==")
+			
+		for iBonus in xrange(GC.getNumBonusInfos()):
+			CvBonusInfo = GC.getBonusInfo(iBonus)
+			self.log(CvBonusInfo.getType()+" =BONUS_ "+CvBonusInfo.getDescription()+" ==")
+			
+		for iImprovement in xrange(GC.getNumImprovementInfos()):
+			CvImprovementInfo = GC.getImprovementInfo(iImprovement)
+			self.log(CvImprovementInfo.getType()+" =IMPROVEMENT_ "+CvImprovementInfo.getDescription()+" ==")
+			
+		for iBuild in xrange(GC.getNumBuildInfos()):
+			CvBuildInfo = GC.getBuildInfo(iBuild)
+			self.log(CvBuildInfo.getType()+" =BUILD_ "+CvBuildInfo.getDescription()+" ==")
+			
+		for iRoute in xrange(GC.getNumRouteInfos()):
+			CvRouteInfo = GC.getRouteInfo(iRoute)
+			self.log(CvRouteInfo.getType()+" =ROUTE_ "+CvRouteInfo.getDescription()+" ==")	
+		

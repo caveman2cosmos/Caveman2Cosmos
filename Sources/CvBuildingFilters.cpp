@@ -6,6 +6,9 @@
 //  PURPOSE: Classes to filter buildings
 //
 //------------------------------------------------------------------------------------------------
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvBuildingFilters.h"
 #include "CvBuildingInfo.h"
@@ -92,6 +95,7 @@ BuildingFilterIsYield::BuildingFilterIsYield(YieldTypes eYield, bool bInvert) : 
 
 bool BuildingFilterIsYield::isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (pCity)
 	{
 		return pCity->getAdditionalYieldByBuilding(m_eYield, eBuilding, true) > 0;
@@ -122,6 +126,7 @@ bool BuildingFilterIsYield::isFilteredBuilding(const CvPlayer *pPlayer, CvCity *
 
 bool BuildingFilterIsHappiness::isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (pCity)
 	{
 		return pCity->getAdditionalHappinessByBuilding(eBuilding) > 0;
@@ -139,6 +144,7 @@ bool BuildingFilterIsHappiness::isFilteredBuilding(const CvPlayer *pPlayer, CvCi
 
 bool BuildingFilterIsHealth::isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (pCity)
 	{
 		return pCity->getAdditionalHealthByBuilding(eBuilding) > 0;
@@ -156,6 +162,7 @@ bool BuildingFilterIsHealth::isFilteredBuilding(const CvPlayer *pPlayer, CvCity 
 
 bool BuildingFilterIsUnhappiness::isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (pCity)
 	{
 		return pCity->getAdditionalHappinessByBuilding(eBuilding) < 0;
@@ -173,6 +180,7 @@ bool BuildingFilterIsUnhappiness::isFilteredBuilding(const CvPlayer *pPlayer, Cv
 
 bool BuildingFilterIsUnhealthiness::isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (pCity)
 	{
 		return pCity->getAdditionalHealthByBuilding(eBuilding) < 0;
@@ -196,7 +204,6 @@ bool BuildingFilterIsMilitary::isFilteredBuilding(const CvPlayer *pPlayer, CvCit
 		|| buildingInfo.getNumUnitCombatRetrainTypes() > 0
 		|| buildingInfo.getNumUnitCombatProdModifiers() > 0
 		|| !buildingInfo.getFreePromoTypes().empty()
-		|| buildingInfo.getNumUnitCombatOngoingTrainingDurations() > 0
 		|| !buildingInfo.getUnitCombatFreeExperience().empty()
 		|| buildingInfo.isAnyDomainFreeExperience();
 }
@@ -204,13 +211,13 @@ bool BuildingFilterIsMilitary::isFilteredBuilding(const CvPlayer *pPlayer, CvCit
 bool BuildingFilterIsCityDefense::isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const
 {
 	const CvBuildingInfo& buildingInfo = GC.getBuildingInfo(eBuilding);
-	if (GC.getGame().isOption(GAMEOPTION_SAD))
+	if (GC.getGame().isOption(GAMEOPTION_COMBAT_SURROUND_DESTROY))
 	{
 		if (buildingInfo.getLocalDynamicDefense() > 0)
 			return true;
 	}
 #ifdef STRENGTH_IN_NUMBERS
-	if (GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (GC.getGame().isOption(GAMEOPTION_COMBAT_STRENGTH_IN_NUMBERS))
 	{
 		if(buildingInfo.getFrontSupportPercentModifier() > 0
 		|| buildingInfo.getShortRangeSupportPercentModifier() > 0
@@ -241,6 +248,7 @@ bool BuildingFilterIsCityDefense::isFilteredBuilding(const CvPlayer *pPlayer, Cv
 
 bool BuildingFilterIsProperty::isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const
 {
+	PROFILE_EXTRA_FUNC();
 	const CvBuildingInfo& kInfo = GC.getBuildingInfo(eBuilding);
 	if ((kInfo.getProperties()->getValueByProperty(m_eProperty) != 0) || (kInfo.getPropertiesAllCities()->getValueByProperty(m_eProperty)))
 		return true;
@@ -271,6 +279,7 @@ bool BuildingFilterIsProperty::isFilteredBuilding(const CvPlayer *pPlayer, CvCit
 
 BuildingFilterList::BuildingFilterList(CvPlayer *pPlayer, CvCity *pCity)
 {
+	PROFILE_EXTRA_FUNC();
 	m_pPlayer = pPlayer;
 	m_pCity = pCity;
 
@@ -282,6 +291,7 @@ BuildingFilterList::BuildingFilterList(CvPlayer *pPlayer, CvCity *pCity)
 
 void BuildingFilterList::init()
 {
+	PROFILE_EXTRA_FUNC();
 	for (int i = 0; i < NUM_BUILDING_FILTERS; i++)
 	{
 		SAFE_DELETE(m_apBuildingFilters[i]);
@@ -319,6 +329,7 @@ void BuildingFilterList::init()
 
 BuildingFilterList::~BuildingFilterList()
 {
+	PROFILE_EXTRA_FUNC();
 	for (int i = 0; i < NUM_BUILDING_FILTERS; i++)
 	{
 		SAFE_DELETE(m_apBuildingFilters[i]);
@@ -349,6 +360,7 @@ bool BuildingFilterList::setFilterActive(BuildingFilterTypes i, bool bActive)
 
 bool BuildingFilterList::isFiltered(BuildingTypes eBuilding) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (int i = 0; i < NUM_BUILDING_FILTERS; i++)
 	{
 		if (!m_apBuildingFilters[i]->isFiltered(m_pPlayer, m_pCity, eBuilding))
@@ -359,6 +371,7 @@ bool BuildingFilterList::isFiltered(BuildingTypes eBuilding) const
 
 void BuildingFilterList::setFilterActiveAll(BuildingFilterTypes eFilter, bool bActive)
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < MAX_PC_PLAYERS; ++iI)
 	{
 		CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);

@@ -527,13 +527,13 @@ def checkRebelBonuses(argsList):
 
 				# Trigger golden age for rebel civ under certain circumstances
 				revTurn = RevData.revObjectGetVal(newOwner, 'RevolutionTurn')
-				if not revTurn == None and GAME.getGameTurn() - revTurn < 4*GAME.goldenAgeLength():
+				if not revTurn == None and GAME.getGameTurn() - revTurn < 4*GAME.goldenAgeLength100()/100:
 					if newOwner.getNumCities() == 3:
 						if not newOwner.getCitiesLost():
 							# By verifying they've never lost a city, gaurantee it doesn't happen multiple times
 							szTxt = TRNSLTR.getText("TXT_KEY_REV_MESS_GOLDEN_AGE",())
 							CvUtil.sendMessage(szTxt, iOwnerNew, iMsgTime, icon, ColorTypes(8), ix, iy, False, False, eMsgType, sound, False)
-							newOwner.changeGoldenAgeTurns( int(1.5*GAME.goldenAgeLength()) )
+							newOwner.changeGoldenAgeTurns( int(1.5*GAME.goldenAgeLength100() / 100) )
 
 			else: # Conqueror not considered a rebel, fewer benefits
 				# Culture

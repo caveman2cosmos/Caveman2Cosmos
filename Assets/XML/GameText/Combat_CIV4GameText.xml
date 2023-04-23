@@ -8685,6 +8685,10 @@
 		<Russian>Îãíåñòðåëüíûå þíèòû</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_GUNSHIP</Tag>
+		<English>Gunship</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_HEALS_AIRCRAFT</Tag>
 		<English>Heals (Aircraft)</English>
 		<French>(Soins) Avions</French>

@@ -72,9 +72,6 @@
 			<option id="LogCityFounded" key="City Founded" type="boolean" default="True" and="LoggingOn" get="isLogCityFounded" set="setLogCityFounded"
 				label="City Founded" help="When checked, will log when you found a city."/>
 
-			<option id="LogCityGrowth" key="City Growth" type="boolean" default="True" and="LoggingOn" get="isLogCityGrowth" set="setLogCityGrowth"
-				label="City Growth" help="When checked, will log when one of your cities grows in population."/>
-
 			<option id="LogCityBorders" key="City Borders" type="boolean" default="True" and="LoggingOn" get="isLogCityBorders" set="setLogCityBorders"
 				label="City Borders" help="When checked, will log when one of your city\'s borders expand."/>
 

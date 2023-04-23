@@ -6,6 +6,9 @@
 //  PURPOSE: A mission that has a cost and a result depending on an outcome list
 //
 //------------------------------------------------------------------------------------------------
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvGameObject.h"
 #include "CvGlobals.h"
@@ -72,6 +75,7 @@ void callSetPayer(const CvGameObject* pObject, const CvGameObject** ppPayer)
 
 bool CvOutcomeMission::isPossible(const CvUnit* pUnit, bool bTestVisible) const
 {
+	PROFILE_EXTRA_FUNC();
 	//if (!bTestVisible)
 	//{
 		if (m_iCost)
@@ -175,6 +179,7 @@ void CvOutcomeMission::buildDisplayString(CvWStringBuffer& szBuffer, const CvUni
 
 void CvOutcomeMission::execute(CvUnit* pUnit) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (m_iCost)
 	{
 		GET_PLAYER(pUnit->getOwner()).changeGold(-(m_iCost->evaluate(pUnit->getGameObject())));

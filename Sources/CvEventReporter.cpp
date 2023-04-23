@@ -1,3 +1,6 @@
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
 #include "CvEventReporter.h"
@@ -329,11 +332,6 @@ void CvEventReporter::cultureExpansion( CvCity *pCity, PlayerTypes ePlayer )
 	m_kPythonEventMgr.reportCultureExpansion(pCity, ePlayer);
 }
 
-void CvEventReporter::cityGrowth(CvCity *pCity, PlayerTypes ePlayer)
-{
-	m_kPythonEventMgr.reportCityGrowth(pCity, ePlayer);
-}
-
 void CvEventReporter::cityDoTurn( CvCity *pCity, PlayerTypes ePlayer )
 {
 	m_kPythonEventMgr.reportCityProduction(pCity, ePlayer);
@@ -410,9 +408,11 @@ void CvEventReporter::unitUpgraded(CvUnit *pOldUnit, CvUnit *pNewUnit, int iPric
 	m_kPythonEventMgr.reportUnitUpgraded(pOldUnit, pNewUnit, iPrice);
 }
 
-void CvEventReporter::unitSelected( CvUnit *pUnit)
+/*DllExport*/ void CvEventReporter::unitSelected( CvUnit *pUnit)
 {
-	m_kPythonEventMgr.reportUnitSelected(pUnit);
+#ifdef _DEBUG
+	OutputDebugString(CvString::format("exe says that unit %S (%d) at (%d,%d) has been selected\n", pUnit->getDescription().c_str(), pUnit->getID(), pUnit->getX(), pUnit->getY()).c_str());
+#endif
 }
 
 void CvEventReporter::unitRename(CvUnit* pUnit)
@@ -546,6 +546,7 @@ void CvEventReporter::chat(CvWString szString)
 
 void CvEventReporter::victory(TeamTypes eWinner, VictoryTypes eVictory)
 {
+	PROFILE_EXTRA_FUNC();
 	m_kPythonEventMgr.reportVictory(eWinner, eVictory);
 	m_kStatistics.setVictory(eWinner, eVictory);
 
@@ -592,6 +593,7 @@ void CvEventReporter::getGameStatistics(std::vector<CvStatBase*>& aStats)
 
 void CvEventReporter::getPlayerStatistics(PlayerTypes ePlayer, std::vector<CvStatBase*>& aStats)
 {
+	PROFILE_EXTRA_FUNC();
 	aStats.clear();
 	CvPlayerRecord* pRecord = m_kStatistics.getPlayerRecord(ePlayer);
 	if (pRecord != NULL)

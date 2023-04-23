@@ -5558,7 +5558,6 @@
 			<Era>C2C_ERA_ANCIENT</Era>
 			<iAsset>24</iAsset>
 			<bTrade>1</bTrade>
-			<bIrrigation>1</bIrrigation>
 			<iGridX>26</iGridX>
 			<iGridY>7</iGridY>
 			<Flavors>
@@ -9008,11 +9007,11 @@
 			</OrPreReqs>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_GATHERER_LAVA_ROCK</BuildingType>
+					<BuildingType>BUILDING_LAVA_ROCK_GATHERER</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
+					<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
@@ -11268,7 +11267,6 @@
 			<Sound>AS2D_TECH_CARTOGRAPHY</Sound>
 			<SoundMP>AS2D_TECH_CARTOGRAPHY</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/Mapmaking.dds</Button>
-			<bMoveFastPeaks>1</bMoveFastPeaks>
 		</TechInfo>
 		<TechInfo>
 			<Type>TECH_CHARTERS</Type>
@@ -12698,6 +12696,7 @@
 			<Sound>AS2D_TECH_COLONIALISM</Sound>
 			<SoundMP>AS2D_TECH_COLONIALISM</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/colonialism.dds</Button>
+			<bMoveFastPeaks>1</bMoveFastPeaks>
 		</TechInfo>
 		<TechInfo>
 			<Type>TECH_WEATHER_FORECASTING</Type>
@@ -12778,11 +12777,11 @@
 			</OrPreReqs>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_GLASSSMITH</BuildingType>
+					<BuildingType>BUILDING_GLASSBLOWERS_WORKSHOP</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_GLASS_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_GLASSWARE</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
@@ -22551,9 +22550,9 @@
 			<Button>Art/Interface/Buttons/TechTree/Gencyclopedia.dds</Button>
 		</TechInfo>
 		<TechInfo>
-			<Type>TECH_BIOMATHMATICS</Type>
-			<Description>TXT_KEY_TECH_BIOMATHMATICS</Description>
-			<Civilopedia>TXT_KEY_TECH_BIOMATHMATICS_PEDIA</Civilopedia>
+			<Type>TECH_BIOMATHEMATICS</Type>
+			<Description>TXT_KEY_TECH_BIOMATHEMATICS</Description>
+			<Civilopedia>TXT_KEY_TECH_BIOMATHEMATICS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iCost>23650</iCost>
 			<Era>C2C_ERA_INFORMATION</Era>
@@ -22586,9 +22585,9 @@
 			<OrPreReqs>
 				<PrereqTech>TECH_BIOINFORMATICS</PrereqTech>
 			</OrPreReqs>
-			<Quote>TXT_KEY_TECH_BIOMATHMATICS_QUOTE</Quote>
-			<Sound>AS2D_TECH_BIOMATHMATICS</Sound>
-			<SoundMP>AS2D_TECH_BIOMATHMATICS</SoundMP>
+			<Quote>TXT_KEY_TECH_BIOMATHEMATICS_QUOTE</Quote>
+			<Sound>AS2D_TECH_BIOMATHEMATICS</Sound>
+			<SoundMP>AS2D_TECH_BIOMATHEMATICS</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/Biomathmatics.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -23342,7 +23341,7 @@
 				</Flavor>
 			</Flavors>
 			<OrPreReqs>
-				<PrereqTech>TECH_BIOMATHMATICS</PrereqTech>
+				<PrereqTech>TECH_BIOMATHEMATICS</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
 				<PrereqTech>TECH_GENOMIC_ENCYCLOPEDIA</PrereqTech>
@@ -23471,7 +23470,7 @@
 				<PrereqTech>TECH_AUTONOMOUS_VEHICLES</PrereqTech>
 			</OrPreReqs>
 			<AndPreReqs>
-				<PrereqTech>TECH_BIOMATHMATICS</PrereqTech>
+				<PrereqTech>TECH_BIOMATHEMATICS</PrereqTech>
 				<PrereqTech>TECH_COMPUTATIONAL_SOCIOLOGY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_AFFECTIVE_ALGORITHMS_QUOTE</Quote>
@@ -29886,9 +29885,9 @@
 			<Button>Art/Interface/Buttons/TechTree/speculativephysiology.dds</Button>
 		</TechInfo>
 		<TechInfo>
-			<Type>TECH_MYTHOLOCIAL_BEASTIARY</Type>
-			<Description>TXT_KEY_TECH_MYTHOLOCIAL_BEASTIARY</Description>
-			<Civilopedia>TXT_KEY_TECH_MYTHOLOCIAL_BEASTIARY_PEDIA</Civilopedia>
+			<Type>TECH_MYTHOLOGICAL_BESTIARY</Type>
+			<Description>TXT_KEY_TECH_MYTHOLOGICAL_BESTIARY</Description>
+			<Civilopedia>TXT_KEY_TECH_MYTHOLOGICAL_BESTIARY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<iCost>75052</iCost>
 			<Era>C2C_ERA_TRANSHUMAN</Era>
@@ -29927,9 +29926,9 @@
 				<PrereqTech>TECH_ABYSS_COLONIZATION</PrereqTech>
 				<PrereqTech>TECH_COMPREHENSIVE_CYBERNETICS</PrereqTech>
 			</AndPreReqs>
-			<Quote>TXT_KEY_TECH_MYTHOLOCIAL_BEASTIARY_QUOTE</Quote>
-			<Sound>AS2D_TECH_MYTHOLOCIAL_BEASTIARY</Sound>
-			<SoundMP>AS2D_TECH_MYTHOLOCIAL_BEASTIARY</SoundMP>
+			<Quote>TXT_KEY_TECH_MYTHOLOGICAL_BESTIARY_QUOTE</Quote>
+			<Sound>AS2D_TECH_MYTHOLOGICAL_BESTIARY</Sound>
+			<SoundMP>AS2D_TECH_MYTHOLOGICAL_BESTIARY</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/mythologicalbeastiary.dds</Button>
 		</TechInfo>
 		<TechInfo>
@@ -30241,7 +30240,7 @@
 			</OrPreReqs>
 			<AndPreReqs>
 				<PrereqTech>TECH_SPECULATIVE_PHYSIOLOGY</PrereqTech>
-				<PrereqTech>TECH_MYTHOLOCIAL_BEASTIARY</PrereqTech>
+				<PrereqTech>TECH_MYTHOLOGICAL_BESTIARY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_HUMAN_TRANSMUTATION_QUOTE</Quote>
 			<Sound>AS2D_TECH_HUMAN_TRANSMUTATION</Sound>

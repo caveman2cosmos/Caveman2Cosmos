@@ -59,16 +59,6 @@ class BugCityScreenOptionsTab(BugOptionsTab.BugOptionsTab):
 		self.addCheckbox(screen, aRight, "MiscHover__BuildingAdditionalDefense")
 		self.addSpacer(screen, LEFT, "CityScreen3")
 
-		# Production Queue
-		aLeft, aCenter, aRight = self.addThreeColumnLayout(screen, LEFT, "ProductionDecay")
-		self.addLabel(screen, aLeft, "ProductionDecay", "Decay:")
-		self.addCheckbox(screen, aCenter, "CityScreen__ProductionDecayQueue")
-		self.addCheckbox(screen, aRight, "CityScreen__ProductionDecayHover")
-		self.addIntDropdown(screen, aLeft, aCenter, "CityScreen__ProductionDecayQueueUnitThreshold", True)
-		self.addIntDropdown(screen, aLeft, aCenter, "CityScreen__ProductionDecayQueueBuildingThreshold", True)
-		self.addIntDropdown(screen, None, aRight, "CityScreen__ProductionDecayHoverUnitThreshold")
-		self.addIntDropdown(screen, None, aRight, "CityScreen__ProductionDecayHoverBuildingThreshold")
-
 		#City Bar
 		self.addLabel(screen, RIGHT, "CitybarHover", "City Bar Hover:")
 		aLeft, aRight = self.addTwoColumnLayout(screen, RIGHT, "CityBarHover", False)

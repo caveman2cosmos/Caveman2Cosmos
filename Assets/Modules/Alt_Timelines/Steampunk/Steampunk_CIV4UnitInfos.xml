@@ -217,7 +217,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_NEMO_ACADEMY</BuildingType>
+				<BuildingType>BUILDING_NEMOS_NAVAL_ACADEMY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_STEAMPUNK</PrereqTech>
 			<BonusType>BONUS_COAL</BonusType>
@@ -315,7 +315,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_TR_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_TRACTION_ENGINE_WORKSHOP</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_STEAMPUNK</PrereqTech>
 			<BonusType>BONUS_COAL</BonusType>
@@ -417,7 +417,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_TR_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_TRACTION_ENGINE_WORKSHOP</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_STEAMPUNK</PrereqTech>
 			<BonusType>BONUS_COAL</BonusType>

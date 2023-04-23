@@ -1,5 +1,5 @@
 BeginMeta
-	Version=C2C_1
+	Version=C2C_2
 	Description= Giant Earth Map from ROM 2.7 with C2C resources and terrains (1-25-13)
 	ModPath=Mods\Caveman2Cosmos
 EndMeta
@@ -56,7 +56,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=0,y=3
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -87,7 +86,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=0,y=9
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -143,7 +141,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=0,y=20
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -214,7 +211,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=0,y=34
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -262,7 +258,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=0,y=43
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -378,7 +373,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=0,y=66
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -434,7 +428,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=0,y=77
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -450,7 +443,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=0,y=80
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -626,7 +618,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=1,y=24
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -780,7 +771,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=1,y=54
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -816,7 +806,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=1,y=61
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -847,7 +836,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=1,y=67
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -1126,7 +1114,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=2,y=32
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -1197,13 +1184,11 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=2,y=45
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=2,y=46
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -1329,7 +1314,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=2,y=71
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -1402,7 +1386,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=2,y=85
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_POLAR
 	PlotType=3
 EndPlot
@@ -1505,7 +1488,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=3,y=15
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -1666,7 +1648,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=3,y=45
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -1729,7 +1710,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=3,y=57
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -1760,7 +1740,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=3,y=63
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -1921,7 +1900,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=4,y=4
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -2295,7 +2273,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=4,y=77
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -2348,7 +2325,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=4,y=86
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_POLAR
 	PlotType=3
 EndPlot
@@ -2420,7 +2396,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=5,y=10
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -2476,7 +2451,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=5,y=21
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -2512,7 +2486,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=5,y=28
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -2538,7 +2511,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=5,y=33
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -3003,7 +2975,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=6,y=32
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -3324,7 +3295,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=7,y=2
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -3585,7 +3555,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=7,y=51
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -3664,7 +3633,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=7,y=64
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -3675,7 +3643,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=7,y=66
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -3744,7 +3711,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=7,y=78
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -3937,7 +3903,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=8,y=26
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -3958,7 +3923,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=8,y=30
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -4081,19 +4045,16 @@ EndPlot
 BeginPlot
 	x=8,y=50
 	BonusType=BONUS_CLAM
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=8,y=51
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=8,y=52
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -4155,7 +4116,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=8,y=61
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -4271,7 +4231,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=8,y=81
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -4287,7 +4246,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=8,y=84
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_POLAR
 	PlotType=3
 EndPlot
@@ -4974,7 +4932,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=10,y=30
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -5371,7 +5328,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=11,y=8
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -5397,7 +5353,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=11,y=13
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -6324,7 +6279,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=12,y=82
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -6507,7 +6461,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=13,y=28
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -6523,7 +6476,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=13,y=31
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -6862,7 +6814,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=13,y=85
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_POLAR
 	PlotType=3
 EndPlot
@@ -6985,7 +6936,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=14,y=19
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -7016,7 +6966,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=14,y=25
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -7346,7 +7295,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=14,y=80
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -7434,7 +7382,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=15,y=7
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -7545,7 +7492,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=15,y=29
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -8301,7 +8247,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=16,y=72
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -8312,7 +8257,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=16,y=74
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -8353,7 +8297,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=16,y=82
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -8410,7 +8353,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=17,y=3
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -8546,7 +8488,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=17,y=30
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -8688,7 +8629,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=17,y=54
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -8798,7 +8738,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=17,y=70
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -8848,7 +8787,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=17,y=79
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -8955,7 +8893,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=18,y=10
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -9391,7 +9328,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=18,y=86
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_POLAR
 	PlotType=3
 EndPlot
@@ -9528,7 +9464,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=19,y=23
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -9705,7 +9640,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=19,y=54
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -9716,7 +9650,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=19,y=56
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -9822,7 +9755,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=19,y=72
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -9906,7 +9838,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=19,y=87
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_POLAR
 	PlotType=3
 EndPlot
@@ -9993,7 +9924,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=20,y=14
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -10054,7 +9984,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=20,y=26
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -10065,7 +9994,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=20,y=28
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -10081,7 +10009,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=20,y=31
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -10919,7 +10846,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=21,y=85
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_POLAR
 	PlotType=3
 EndPlot
@@ -10956,7 +10882,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=22,y=2
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -10982,7 +10907,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=22,y=7
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -11043,7 +10967,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=22,y=19
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -11074,7 +10997,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=22,y=25
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -11588,7 +11510,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=23,y=24
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -12107,7 +12028,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=24,y=22
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -12264,7 +12184,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=24,y=51
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -12556,7 +12475,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=12
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -12617,7 +12535,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=24
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -13003,7 +12920,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=87
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_POLAR
 	PlotType=3
 EndPlot
@@ -13035,7 +12951,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=3
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -13061,7 +12976,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=8
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -14380,7 +14294,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=28,y=49
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -14513,7 +14426,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=28,y=71
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -14938,7 +14850,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=29,y=52
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -16215,7 +16126,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=31,y=78
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -16306,7 +16216,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=32,y=4
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -16317,13 +16226,11 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=32,y=6
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=32,y=7
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -16743,7 +16650,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=32,y=73
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -16846,7 +16752,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=33,y=2
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -17426,7 +17331,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=34,y=6
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -17755,7 +17659,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=34,y=57
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -17991,7 +17894,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=35,y=6
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -18538,7 +18440,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=36,y=2
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -18875,7 +18776,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=36,y=50
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -19729,7 +19629,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=2
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -20341,7 +20240,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=39,y=6
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -20617,7 +20515,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=39,y=50
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -20677,7 +20574,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=39,y=60
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -21182,7 +21078,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=40,y=53
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -22547,7 +22442,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=43,y=9
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -22722,7 +22616,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=43,y=39
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -22849,7 +22742,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=43,y=60
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -23055,7 +22947,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=44,y=6
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -23096,7 +22987,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=44,y=14
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -23637,7 +23527,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=45,y=18
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -24082,7 +23971,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=46,y=2
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -24128,7 +24016,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=46,y=11
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -24200,7 +24087,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=46,y=24
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -24737,7 +24623,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=47,y=25
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -26300,7 +26185,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=50,y=26
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -26734,7 +26618,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=51,y=8
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -26755,7 +26638,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=51,y=12
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -26807,7 +26689,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=51,y=22
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -26874,7 +26755,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=51,y=35
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -27361,7 +27241,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=52,y=28
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -27377,7 +27256,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=52,y=31
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -27749,7 +27627,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=2
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -27810,7 +27687,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=14
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -28337,7 +28213,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=54,y=17
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -28431,7 +28306,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=54,y=35
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -29302,7 +29176,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=56,y=10
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -29361,7 +29234,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=56,y=21
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -29409,7 +29281,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=56,y=30
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -29788,7 +29659,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57,y=7
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -29930,7 +29800,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57,y=35
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -30268,7 +30137,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=58,y=3
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -30371,7 +30239,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=58,y=23
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -30392,7 +30259,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=58,y=27
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -30775,7 +30641,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=59,y=7
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -31392,7 +31257,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=60,y=35
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -31438,7 +31302,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=60,y=44
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -31803,7 +31666,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=61,y=20
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -31829,7 +31691,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=61,y=25
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -31860,7 +31721,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=61,y=31
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -31901,7 +31761,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=61,y=39
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -31922,7 +31781,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=61,y=43
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -32386,7 +32244,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=62,y=36
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -32797,7 +32654,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=63,y=16
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -33423,7 +33279,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=64,y=38
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -33434,7 +33289,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=64,y=40
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -33893,7 +33747,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=65,y=28
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -33924,7 +33777,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=65,y=34
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -33940,7 +33792,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=65,y=37
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -33951,7 +33802,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=65,y=39
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -34324,7 +34174,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=66,y=10
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -34385,7 +34234,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=66,y=22
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -34436,7 +34284,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=66,y=32
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -34819,7 +34666,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=67,y=5
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -34920,7 +34766,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=67,y=25
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -34953,7 +34798,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=67,y=31
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -34974,7 +34818,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=67,y=35
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -35405,7 +35248,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=68,y=17
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -35446,7 +35288,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=68,y=25
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -35957,7 +35798,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=69,y=22
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -37085,7 +36925,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=71,y=26
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -37529,7 +37368,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=72,y=4
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -37555,7 +37393,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=72,y=9
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -37576,7 +37413,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=72,y=13
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -37657,7 +37493,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=72,y=29
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -38254,7 +38089,6 @@ EndPlot
 BeginPlot
 	x=73,y=36
 	BonusType=BONUS_CLAM
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -38687,7 +38521,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=74,y=20
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -39307,7 +39140,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=75,y=40
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -39639,7 +39471,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=76,y=1
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -39819,7 +39650,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=76,y=36
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -40278,7 +40108,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=77,y=26
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -40335,7 +40164,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=77,y=37
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -40356,7 +40184,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=77,y=41
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -40706,7 +40533,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=8
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -40742,7 +40568,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=15
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -40818,7 +40643,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=30
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -40849,7 +40673,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=36
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -40890,7 +40713,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=44
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -41243,7 +41065,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=79,y=11
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -41289,7 +41110,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=79,y=20
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -41305,7 +41125,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=79,y=23
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -41376,7 +41195,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=79,y=37
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -41402,7 +41220,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=79,y=42
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -41902,7 +41719,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=80,y=40
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -41918,7 +41734,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=80,y=43
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -42241,7 +42056,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=81,y=5
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -42342,7 +42156,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=81,y=25
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -42363,7 +42176,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=81,y=29
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -42890,7 +42702,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=82,y=31
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -43449,7 +43260,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=83,y=37
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -43861,7 +43671,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=84,y=17
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -44316,7 +44125,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=85,y=2
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -44357,7 +44165,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=85,y=10
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -44423,7 +44230,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=85,y=23
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -44485,7 +44291,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=85,y=34
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -44997,7 +44802,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=86,y=29
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -45531,7 +45335,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=87,y=26
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -45568,7 +45371,6 @@ EndPlot
 BeginPlot
 	x=87,y=32
 	BonusType=BONUS_FISH
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -46054,7 +45856,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=88,y=20
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -46145,7 +45946,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=88,y=35
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -46548,7 +46348,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=89,y=6
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -46589,7 +46388,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=89,y=14
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -46682,7 +46480,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=89,y=31
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -47231,7 +47028,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=90,y=30
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -48349,7 +48145,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=92,y=33
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -48877,7 +48672,6 @@ EndPlot
 BeginPlot
 	x=93,y=28
 	BonusType=BONUS_PEARLS
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -48888,7 +48682,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=93,y=30
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -49328,7 +49121,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=94,y=14
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -49344,7 +49136,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=94,y=17
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -49365,7 +49156,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=94,y=21
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -49438,7 +49228,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=94,y=34
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -49848,7 +49637,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=95,y=6
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -50023,7 +49811,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=95,y=38
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -50404,7 +50191,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=96,y=9
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -51029,13 +50815,11 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=97,y=21
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=97,y=22
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -51067,7 +50851,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=97,y=27
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -51133,7 +50916,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=97,y=37
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -51495,7 +51277,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=98,y=5
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -52230,7 +52011,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=99,y=36
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -52248,7 +52028,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=99,y=39
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -52259,7 +52038,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=99,y=41
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -52719,14 +52497,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=100,y=27
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=100,y=28
 	BonusType=BONUS_PEARLS
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -53150,7 +52926,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=101,y=8
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -53780,7 +53555,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=102,y=26
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -53819,7 +53593,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=102,y=33
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -53836,7 +53609,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=102,y=36
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -54208,7 +53980,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=103,y=5
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -54234,7 +54005,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=103,y=10
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -54747,7 +54517,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=104,y=9
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -54824,7 +54593,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=104,y=24
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -54996,7 +54764,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=104,y=53
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -55230,7 +54997,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=105,y=2
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -55352,13 +55118,11 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=105,y=26
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=105,y=27
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -55463,7 +55227,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=105,y=46
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -55765,7 +55528,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=106,y=5
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -55870,7 +55632,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=106,y=25
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -55891,7 +55652,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=106,y=29
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -55961,7 +55721,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=106,y=41
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -56430,7 +56189,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=107,y=31
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -56446,7 +56204,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=107,y=34
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -57423,7 +57180,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=109,y=27
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -57618,7 +57374,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=109,y=62
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -57629,7 +57384,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=109,y=64
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -57788,7 +57542,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=110,y=2
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -57804,7 +57557,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=110,y=5
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -57825,7 +57577,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=110,y=9
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -57912,7 +57663,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=110,y=25
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -57961,7 +57711,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=110,y=34
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -57990,7 +57739,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=110,y=39
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -58524,7 +58272,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=111,y=47
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -58535,7 +58282,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=111,y=49
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -58691,7 +58437,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=111,y=75
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -59013,7 +58758,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=112,y=43
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -59059,7 +58803,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=112,y=52
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -59429,7 +59172,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=113,y=25
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -59482,7 +59224,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=113,y=34
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -60050,7 +59791,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=114,y=43
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -60235,7 +59975,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=114,y=75
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -60331,7 +60070,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=115,y=2
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -60717,7 +60455,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=115,y=69
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -60733,7 +60470,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=115,y=72
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -60988,7 +60724,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=116,y=25
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -61057,7 +60792,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=116,y=38
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -61188,7 +60922,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=116,y=62
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -61493,7 +61226,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=117,y=23
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -61566,7 +61298,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=117,y=36
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -61790,7 +61521,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=117,y=76
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -62024,7 +61754,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=118,y=24
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -62164,7 +61893,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=118,y=49
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -62261,7 +61989,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=118,y=68
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -62710,7 +62437,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=119,y=57
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -62741,7 +62467,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=119,y=63
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -62910,7 +62635,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=120,y=3
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -63021,7 +62745,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=120,y=21
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -63099,7 +62822,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=120,y=35
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -63270,7 +62992,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=120,y=69
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -63397,7 +63118,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=121,y=1
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -63544,7 +63264,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=121,y=27
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -63636,7 +63355,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=121,y=44
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -63742,7 +63460,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=121,y=65
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -63773,7 +63490,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=121,y=71
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -64154,7 +63870,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=122,y=50
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -64180,7 +63895,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=122,y=55
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -64211,7 +63925,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=122,y=61
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -64247,7 +63960,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=122,y=68
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -64380,7 +64092,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=123,y=2
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -64469,7 +64180,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=123,y=18
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -64499,7 +64209,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=123,y=23
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -64515,7 +64224,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=123,y=26
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -64556,7 +64264,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=123,y=33
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -64774,7 +64481,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=123,y=75
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -65093,7 +64799,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=124,y=42
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -65145,7 +64850,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=124,y=52
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -65360,7 +65064,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=125,y=1
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -65702,7 +65405,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=125,y=65
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -65728,7 +65430,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=125,y=70
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -65894,7 +65595,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=126,y=9
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -66006,7 +65706,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=126,y=30
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -66055,7 +65754,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=126,y=39
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -66145,7 +65843,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=126,y=56
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -66236,7 +65933,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=126,y=74
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -66744,7 +66440,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=127,y=79
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_POLAR
 	PlotType=3
 EndPlot
@@ -66875,7 +66570,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=128,y=12
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -66906,7 +66600,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=128,y=18
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -66986,7 +66679,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=128,y=33
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -67138,7 +66830,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=128,y=62
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -67169,7 +66860,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=128,y=68
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -67215,7 +66905,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=128,y=77
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -67226,13 +66915,11 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=128,y=79
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_POLAR
 	PlotType=3
 EndPlot
 BeginPlot
 	x=128,y=80
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_POLAR
 	PlotType=3
 EndPlot
@@ -67461,7 +67148,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=129,y=31
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -67558,7 +67244,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=129,y=49
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -67710,19 +67395,16 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=129,y=79
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_POLAR
 	PlotType=3
 EndPlot
 BeginPlot
 	x=129,y=80
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_POLAR
 	PlotType=3
 EndPlot
 BeginPlot
 	x=129,y=81
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_POLAR
 	PlotType=3
 EndPlot
@@ -67922,7 +67604,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=130,y=27
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -68066,7 +67747,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=130,y=55
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -68092,7 +67772,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=130,y=60
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -68118,7 +67797,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=130,y=65
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -68149,7 +67827,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=130,y=71
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -68165,7 +67842,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=130,y=74
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -68191,19 +67867,16 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=130,y=79
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_POLAR
 	PlotType=3
 EndPlot
 BeginPlot
 	x=130,y=80
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_POLAR
 	PlotType=3
 EndPlot
 BeginPlot
 	x=130,y=81
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_POLAR
 	PlotType=3
 EndPlot
@@ -68663,7 +68336,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=131,y=79
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_POLAR
 	PlotType=3
 EndPlot
@@ -68835,7 +68507,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=132,y=22
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -68956,7 +68627,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=132,y=44
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -68997,7 +68667,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=132,y=52
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -69083,7 +68752,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=132,y=69
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -69124,7 +68792,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=132,y=77
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -69293,7 +68960,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=133,y=19
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -69343,7 +69009,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=133,y=28
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -69387,7 +69052,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=133,y=36
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -69403,7 +69067,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=133,y=39
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -69494,7 +69157,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=133,y=57
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -69570,13 +69232,11 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=133,y=72
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
 	x=133,y=73
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -69749,7 +69409,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=134,y=15
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -69975,7 +69634,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=134,y=58
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -70270,7 +69928,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=135,y=24
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -70364,7 +70021,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=135,y=42
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -70422,7 +70078,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=135,y=53
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -70463,7 +70118,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=135,y=61
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -70499,7 +70153,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=135,y=68
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -70779,7 +70432,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=136,y=30
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -70954,7 +70606,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=136,y=64
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -71010,7 +70661,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=136,y=75
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -71148,7 +70798,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=137,y=9
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -71169,7 +70818,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=137,y=13
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -71195,7 +70843,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=137,y=18
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -71288,7 +70935,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=137,y=35
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -71473,7 +71119,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=137,y=71
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -71782,7 +71427,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=138,y=39
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -71873,7 +71517,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=138,y=56
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -72392,7 +72035,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=139,y=66
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -72433,7 +72075,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=139,y=74
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -72575,7 +72216,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=140,y=9
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -72665,7 +72305,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=140,y=26
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -72686,7 +72325,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=140,y=30
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -72798,7 +72436,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=140,y=51
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -72849,7 +72486,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=140,y=61
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -72895,7 +72531,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=140,y=70
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -73088,7 +72723,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=141,y=16
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -73220,7 +72854,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=141,y=41
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -73596,7 +73229,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=142,y=24
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -73775,7 +73407,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=142,y=59
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -73841,7 +73472,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=142,y=72
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -74108,7 +73738,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=143,y=33
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -74134,7 +73763,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=143,y=38
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -74190,7 +73818,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=143,y=49
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -74261,7 +73888,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=143,y=63
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -74277,7 +73903,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=143,y=66
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -74952,7 +74577,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=145,y=15
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -75101,7 +74725,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=145,y=44
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -75122,7 +74745,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=145,y=48
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -75233,7 +74855,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=145,y=70
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -75455,7 +75076,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=146,y=20
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -75496,7 +75116,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=146,y=28
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -75622,7 +75241,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=146,y=53
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -75688,7 +75306,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=146,y=66
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -76111,7 +75728,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=147,y=57
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -76132,7 +75748,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=147,y=61
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -76415,7 +76030,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=148,y=24
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -76486,7 +76100,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=148,y=38
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -76507,7 +76120,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=148,y=42
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -77022,7 +76634,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=149,y=49
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -77058,7 +76669,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=149,y=56
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -77079,7 +76689,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=149,y=60
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -77416,7 +77025,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=150,y=31
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -77854,7 +77462,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=151,y=21
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -77978,7 +77585,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=151,y=45
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -78956,7 +78562,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=153,y=42
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -78982,7 +78587,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=153,y=47
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -79322,7 +78926,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=154,y=16
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -79368,7 +78971,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=154,y=25
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -79434,7 +79036,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=154,y=38
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -79460,7 +79061,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=154,y=43
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -80383,7 +79983,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=156,y=28
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -80409,7 +80008,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=156,y=33
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -80859,7 +80457,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=157,y=22
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -80935,7 +80532,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=157,y=37
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -81311,7 +80907,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=158,y=14
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -81455,7 +81050,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=158,y=42
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -82344,13 +81938,11 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=160,y=16
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=160,y=17
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -82381,7 +81973,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=160,y=23
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -82392,7 +81983,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=160,y=25
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -82929,7 +82519,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=161,y=30
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -83477,7 +83066,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=162,y=38
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -83923,7 +83511,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=163,y=24
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -83976,7 +83563,6 @@ EndPlot
 BeginPlot
 	x=163,y=34
 	BonusType=BONUS_HYDROTHERMAL_VENT
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -84461,7 +84047,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=164,y=31
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -85001,7 +84586,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=165,y=37
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -85424,7 +85008,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=166,y=22
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -85515,7 +85098,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=166,y=40
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -85569,7 +85151,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=166,y=50
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -85877,7 +85458,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=167,y=12
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -85898,7 +85478,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=167,y=16
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -86026,7 +85605,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=167,y=41
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -86077,7 +85655,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=167,y=50
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -86471,7 +86048,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=168,y=29
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -86590,13 +86166,11 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=168,y=51
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=168,y=52
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -87031,7 +86605,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=169,y=38
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -87109,13 +86682,11 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=169,y=51
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
 	x=169,y=52
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -87419,7 +86990,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=170,y=12
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -87520,7 +87090,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=170,y=32
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -87922,7 +87491,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=171,y=7
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -87953,7 +87521,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=171,y=13
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -87984,7 +87551,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=171,y=19
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -88055,7 +87621,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=171,y=33
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -88422,7 +87987,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=172,y=2
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -88538,7 +88102,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=172,y=25
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -89182,7 +88745,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=173,y=46
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 	=3,
@@ -89225,7 +88787,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=173,y=53
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -89499,7 +89060,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=174,y=10
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -89739,7 +89299,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=174,y=52
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -90005,7 +89564,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=175,y=5
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -90056,7 +89614,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=175,y=15
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -90077,7 +89634,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=175,y=19
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -90223,7 +89779,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=175,y=44
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -90735,7 +90290,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=176,y=42
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -91279,7 +90833,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=177,y=42
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -91567,7 +91120,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=178,y=1
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -92154,7 +91706,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=179,y=1
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -92165,7 +91716,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=179,y=3
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -92420,7 +91970,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=179,y=43
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -92701,19 +92250,16 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=180,y=0
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=180,y=1
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=180,y=2
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -93251,13 +92797,11 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=181,y=0
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=181,y=1
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -93819,13 +93363,11 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=182,y=0
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=182,y=1
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -93838,7 +93380,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=182,y=3
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -94380,13 +93921,11 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=183,y=0
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=183,y=1
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -94402,7 +93941,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=183,y=4
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -94705,7 +94243,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=183,y=52
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -94869,7 +94406,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=183,y=79
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -94930,13 +94466,11 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=184,y=0
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=184,y=1
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -94948,7 +94482,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=184,y=3
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -95270,7 +94803,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=184,y=54
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -95481,25 +95013,21 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=185,y=0
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=185,y=1
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=185,y=2
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=185,y=3
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -95520,7 +95048,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=185,y=7
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -95985,7 +95512,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=185,y=85
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_POLAR
 	PlotType=3
 EndPlot
@@ -95996,7 +95522,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=185,y=87
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST_POLAR
 	PlotType=3
 EndPlot
@@ -96018,7 +95543,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=186,y=1
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -96321,7 +95845,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=186,y=48
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -96895,7 +96418,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=187,y=57
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -97387,7 +96909,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=188,y=47
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -97569,7 +97090,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=188,y=80
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -97876,7 +97396,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=189,y=40
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -98157,7 +97676,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=190,y=1
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -98193,7 +97711,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=190,y=8
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -98451,7 +97968,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=190,y=48
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -98462,7 +97978,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=190,y=50
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -98483,7 +97998,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=190,y=54
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -98514,7 +98028,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=190,y=60
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -99078,7 +98591,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=191,y=70
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -99125,7 +98637,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=191,y=78
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -99205,7 +98716,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=192,y=3
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -99216,7 +98726,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=192,y=5
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -99247,7 +98756,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=192,y=11
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -99423,7 +98931,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=192,y=41
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -99939,7 +99446,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=193,y=44
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -100121,7 +99627,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=193,y=78
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -100506,7 +100011,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=194,y=58
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -100564,7 +100068,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=194,y=69
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -100605,7 +100108,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=194,y=76
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -100691,7 +100193,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=195,y=1
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -100732,7 +100233,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=195,y=9
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -100758,7 +100258,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=195,y=14
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -100903,7 +100402,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=195,y=40
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -101019,7 +100517,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=195,y=63
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -101451,7 +100948,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=196,y=50
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -101593,7 +101089,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=196,y=77
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -101696,7 +101191,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=197,y=6
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -101953,7 +101447,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=197,y=54
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -102152,7 +101645,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=198,y=1
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -102243,7 +101735,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=198,y=19
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -102479,7 +101970,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=198,y=62
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -102541,7 +102031,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=198,y=74
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -102636,7 +102125,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=199,y=1
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -102697,7 +102185,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=199,y=13
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -102871,7 +102358,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=199,y=44
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -102987,7 +102473,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=199,y=67
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -103485,7 +102970,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=200,y=73
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -103511,7 +102995,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=200,y=78
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -103783,7 +103266,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=201,y=40
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -103824,7 +103306,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=201,y=48
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -104065,13 +103546,11 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=202,y=5
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
 	x=202,y=6
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -104082,7 +103561,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=202,y=8
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -104367,7 +103845,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=202,y=64
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -104619,7 +104096,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=203,y=23
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -104688,7 +104164,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=203,y=36
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -104779,7 +104254,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=203,y=54
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -104795,7 +104269,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=203,y=57
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -104911,7 +104384,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=203,y=80
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -104987,7 +104459,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=204,y=4
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -105068,7 +104539,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=204,y=20
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -105124,7 +104594,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=204,y=31
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -105325,7 +104794,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=204,y=71
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -105346,7 +104814,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=204,y=75
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -105566,7 +105033,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=205,y=28
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -105647,7 +105113,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=205,y=44
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -105768,7 +105233,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=205,y=68
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -105950,13 +105414,11 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=206,y=13
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
 BeginPlot
 	x=206,y=14
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -106207,7 +105669,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=206,y=64
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -106508,7 +105969,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=207,y=33
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -106534,7 +105994,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=207,y=38
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -106600,7 +106059,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=207,y=51
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -106651,7 +106109,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=207,y=61
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -106697,7 +106154,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=207,y=70
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -106738,7 +106194,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=207,y=78
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -106828,7 +106283,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=208,y=5
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -107039,7 +106493,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=208,y=47
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
@@ -107160,7 +106613,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=208,y=71
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot
@@ -107677,7 +107129,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=209,y=83
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN
 	PlotType=3
 EndPlot

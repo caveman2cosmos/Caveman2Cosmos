@@ -116,7 +116,7 @@ class CvInfoScreen:
 			TRNSLTR.getText("TXT_WORD_CULTURE", ()),
 			TRNSLTR.getText("TXT_WORD_ESPIONAGE", ()),
 		]
-		if GAME.isOption(GameOptionTypes.GAMEOPTION_REVOLUTION):
+		if GAME.isOption(GameOptionTypes.GAMEOPTION_UNSUPPORTED_REVOLUTION):
 			sTemp1.append(TRNSLTR.getText("TXT_KEY_REVOLUTION_GRAPH_TITLE_SMALL", ()))
 			self.iNumGraphs = 8
 		else: self.iNumGraphs = 7
@@ -979,7 +979,7 @@ class CvInfoScreen:
 				# Loop through world wonders
 				for iWW in aWonderList:
 
-					if pCity.getNumRealBuilding(iWW) > 0:
+					if pCity.hasBuilding(iWW):
 
 						aiTempWondersList.append(iWW)
 						aiTopCitiesNumWonders[i] += 1
@@ -1086,12 +1086,12 @@ class CvInfoScreen:
 								and cityX.isRevealed(self.iTeam, False)):
 									aaWondersBeingBuilt.append([iBuildingLoop, playerX.getCivilizationShortDescription(0), cityX, iPlayerX])
 
-							if (cityX.getNumRealBuilding(iBuildingLoop) > 0):
-								if (iTeamX == self.iTeam or self.team.isHasMet(iTeamX)):
+							if cityX.hasBuilding(iBuildingLoop):
+
+								if iTeamX == self.iTeam or self.team.isHasMet(iTeamX):
 									aaWondersBuilt.append([cityX.getBuildingOriginalTime(iBuildingLoop),iBuildingLoop,True, playerX.getCivilizationShortDescription(0), cityX, iPlayerX])
 								else:
 									aaWondersBuilt.append([cityX.getBuildingOriginalTime(iBuildingLoop),iBuildingLoop,False,TRNSLTR.getText("TXT_KEY_UNKNOWN", ()), cityX, 18])
-
 								iNumWonders += 1
 
 						# National/Team Wonder Mode
@@ -1109,8 +1109,8 @@ class CvInfoScreen:
 									aaWondersBeingBuilt.append([iBuildingLoop, playerX.getCivilizationShortDescription(0), cityX, iPlayerX])
 
 							# Has this city built a wonder?
-							if (cityX.getNumRealBuilding(iBuildingLoop) > 0):
-								if (iTeamX == self.iTeam):
+							if cityX.hasBuilding(iBuildingLoop):
+								if iTeamX == self.iTeam:
 									aaWondersBuilt.append([cityX.getBuildingOriginalTime(iBuildingLoop),iBuildingLoop,True, playerX.getCivilizationShortDescription(0), cityX, iPlayerX])
 									iNumWonders += 1
 

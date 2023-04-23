@@ -18,6 +18,8 @@
 #ifndef		FASTARNODE_H
 #define		FASTARNODE_H
 
+#include "FProfiler.h"
+
 #define ASNL_ADDOPEN			0
 #define ASNL_STARTOPEN		1
 #define ASNL_DELETEOPEN		2
@@ -52,6 +54,7 @@ class FAStarNode
 public:
 	FAStarNode()
 	{
+		PROFILE_EXTRA_FUNC();
 		int i;
 
 		m_iX = -1;
@@ -80,6 +83,7 @@ public:
 
 	void clear()
 	{
+		PROFILE_EXTRA_FUNC();
 		int i;
 
 		m_iTotalCost = 0;

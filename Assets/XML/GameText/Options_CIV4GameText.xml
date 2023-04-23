@@ -1,6 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
+		<Tag>TXT_OPTION_CITY_FULL_CITY_SCREEN_BUILD_PROMPT</Tag>
+		<English>Full city screen on build prompt</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_OPTION_CITY_FULL_CITY_SCREEN_BUILD_PROMPT_HELP</Tag>
+		<English>Enter full city screen, rather than just select city, when the player is prompted on what to build next.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_OPTION_CITY_HIDE_UNCONSTRUCTABLE_BUILDINGS</Tag>
 		<English>Hide non-constructible buildings</English>
 		<French>Masquer les bâtiments non constructibles</French>

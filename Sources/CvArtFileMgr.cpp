@@ -11,6 +11,9 @@
 //---------------------------------------------------------------------------------------
 //  Copyright (c) 2004 Firaxis Games, Inc. All rights reserved.
 //---------------------------------------------------------------------------------------
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvArtFileMgr.h"
 #include "CvXMLLoadUtility.h"
@@ -18,7 +21,7 @@
 // Macro for Building Art Info Maps
 #define BUILD_INFO_MAP(map, infoArray, numInfos) \
 { \
-	for (int iI = 0; iI < numInfos; iI++) \
+	PROFILE_EXTRA_FUNC(); for (int iI = 0; iI < numInfos; iI++) \
 	{ \
 	(map)[infoArray(iI).getTag()] = &infoArray(iI); \
 	} \
@@ -62,7 +65,7 @@ CvArtInfo##name * CvArtFileMgr::get##name##ArtInfo( const char *szArtDefineTag )
 } \
 void Cv##name##ArtInfoItem::deInit() \
 { \
-	SAFE_DELETE(ARTFILEMGR.m_map##name##ArtInfos); \
+	PROFILE_EXTRA_FUNC(); SAFE_DELETE(ARTFILEMGR.m_map##name##ArtInfos); \
 	for (uint i = 0; i < ARTFILEMGR.m_pa##name##ArtInfo.size(); ++i) \
 	{ \
 		SAFE_DELETE(ARTFILEMGR.m_pa##name##ArtInfo[i]); \
@@ -129,6 +132,7 @@ CvArtFileMgr& CvArtFileMgr::GetInstance()
 //----------------------------------------------------------------------------
 void CvArtFileMgr::Init()
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(ArtInfoItem* item, m_artInfoItems)
 	{
 		item->init();
@@ -144,6 +148,7 @@ void CvArtFileMgr::Init()
 //----------------------------------------------------------------------------
 void CvArtFileMgr::DeInit()
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(ArtInfoItem* item, m_artInfoItems)
 	{
 		item->deInit();
@@ -175,6 +180,7 @@ void CvArtFileMgr::Reset()
 //----------------------------------------------------------------------------
 void CvArtFileMgr::buildArtFileInfoMaps()
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(ArtInfoItem* item, m_artInfoItems)
 	{
 		item->buildMap();

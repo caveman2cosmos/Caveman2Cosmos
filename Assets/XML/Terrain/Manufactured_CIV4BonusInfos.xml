@@ -1523,11 +1523,11 @@
 		</BonusInfo>
 		<!-- Nets -->
 		<BonusInfo>
-			<Type>BONUS_NETS</Type>
-			<Description>TXT_KEY_BONUS_NETS</Description>
-			<Civilopedia>TXT_KEY_BONUS_NETS_PEDIA</Civilopedia>
+			<Type>BONUS_FISHING_NETS</Type>
+			<Description>TXT_KEY_BONUS_FISHING_NETS</Description>
+			<Civilopedia>TXT_KEY_BONUS_FISHING_NETS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_NETS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_FISHING_NETS</ArtDefineTag>
 			<TechReveal>TECH_TRAP_FISHING</TechReveal>
 			<TechCityTrade>TECH_TRAP_FISHING</TechCityTrade>
 		</BonusInfo>
@@ -2689,8 +2689,8 @@
 			<Civilopedia>TXT_KEY_BONUS_HIERACOSPHINX_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HIERACOSPHINX</ArtDefineTag>
-			<TechReveal>TECH_MYTHOLOCIAL_BEASTIARY</TechReveal>
-			<TechCityTrade>TECH_MYTHOLOCIAL_BEASTIARY</TechCityTrade>
+			<TechReveal>TECH_MYTHOLOGICAL_BESTIARY</TechReveal>
+			<TechCityTrade>TECH_MYTHOLOGICAL_BESTIARY</TechCityTrade>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_JACKALOPE</Type>
@@ -2698,8 +2698,8 @@
 			<Civilopedia>TXT_KEY_BONUS_JACKALOPE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_JACKALOPE</ArtDefineTag>
-			<TechReveal>TECH_MYTHOLOCIAL_BEASTIARY</TechReveal>
-			<TechCityTrade>TECH_MYTHOLOCIAL_BEASTIARY</TechCityTrade>
+			<TechReveal>TECH_MYTHOLOGICAL_BESTIARY</TechReveal>
+			<TechCityTrade>TECH_MYTHOLOGICAL_BESTIARY</TechCityTrade>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_PEGASUS</Type>
@@ -2707,8 +2707,8 @@
 			<Civilopedia>TXT_KEY_BONUS_PEGASUS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_PEGASUS</ArtDefineTag>
-			<TechReveal>TECH_MYTHOLOCIAL_BEASTIARY</TechReveal>
-			<TechCityTrade>TECH_MYTHOLOCIAL_BEASTIARY</TechCityTrade>
+			<TechReveal>TECH_MYTHOLOGICAL_BESTIARY</TechReveal>
+			<TechCityTrade>TECH_MYTHOLOGICAL_BESTIARY</TechCityTrade>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_PHOENIX</Type>
@@ -2716,8 +2716,8 @@
 			<Civilopedia>TXT_KEY_BONUS_PHOENIX_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_PHOENIX</ArtDefineTag>
-			<TechReveal>TECH_MYTHOLOCIAL_BEASTIARY</TechReveal>
-			<TechCityTrade>TECH_MYTHOLOCIAL_BEASTIARY</TechCityTrade>
+			<TechReveal>TECH_MYTHOLOGICAL_BESTIARY</TechReveal>
+			<TechCityTrade>TECH_MYTHOLOGICAL_BESTIARY</TechCityTrade>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_QILIN</Type>
@@ -2725,8 +2725,8 @@
 			<Civilopedia>TXT_KEY_BONUS_QILIN_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_QILIN</ArtDefineTag>
-			<TechReveal>TECH_MYTHOLOCIAL_BEASTIARY</TechReveal>
-			<TechCityTrade>TECH_MYTHOLOCIAL_BEASTIARY</TechCityTrade>
+			<TechReveal>TECH_MYTHOLOGICAL_BESTIARY</TechReveal>
+			<TechCityTrade>TECH_MYTHOLOGICAL_BESTIARY</TechCityTrade>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_QUETZALCOATL</Type>
@@ -2734,8 +2734,8 @@
 			<Civilopedia>TXT_KEY_BONUS_QUETZALCOATL_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_QUETZALCOATL</ArtDefineTag>
-			<TechReveal>TECH_MYTHOLOCIAL_BEASTIARY</TechReveal>
-			<TechCityTrade>TECH_MYTHOLOCIAL_BEASTIARY</TechCityTrade>
+			<TechReveal>TECH_MYTHOLOGICAL_BESTIARY</TechReveal>
+			<TechCityTrade>TECH_MYTHOLOGICAL_BESTIARY</TechCityTrade>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_RAINBOW_SERPENT</Type>
@@ -2743,8 +2743,8 @@
 			<Civilopedia>TXT_KEY_BONUS_RAINBOW_SERPENT_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_WONDER</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_RAINBOW_SERPENT</ArtDefineTag>
-			<TechReveal>TECH_MYTHOLOCIAL_BEASTIARY</TechReveal>
-			<TechCityTrade>TECH_MYTHOLOCIAL_BEASTIARY</TechCityTrade>
+			<TechReveal>TECH_MYTHOLOGICAL_BESTIARY</TechReveal>
+			<TechCityTrade>TECH_MYTHOLOGICAL_BESTIARY</TechCityTrade>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_PUNCH_CARDS</Type>

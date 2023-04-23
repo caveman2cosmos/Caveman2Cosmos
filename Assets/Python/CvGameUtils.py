@@ -25,7 +25,7 @@ class CvGameUtils:
 		self.CAPTURE_GOLD_MAX_TURNS = GC.getDefineINT("CAPTURE_GOLD_MAX_TURNS")
 
 		self.iNationalMint = GC.getInfoTypeForString("BUILDING_NATIONAL_MINT")
-		self.iHimejiCastle = GC.getInfoTypeForString("BUILDING_HIMEJI_CASTLE")
+		self.iHimejiCastle = GC.getInfoTypeForString("BUILDING_HIMEJI_SAMURAI_CASTLE")
 
 	def canBuild(self, argsList):
 		iX, iY, iBuild, iPlayer = argsList
@@ -365,7 +365,7 @@ class CvGameUtils:
 					if pCity.isProduction():
 						sText += u"\n%s:" %(CyTranslator().getText("[ICON_PRODUCTION]", ()))
 						if not pCity.isProductionProcess():
-							sText += u" %d/%d" %(pCity.getProduction(), pCity.getProductionNeeded())
+							sText += u" %d/%d" %(pCity.getProductionProgress(), pCity.getProductionNeeded())
 							iProduction = pCity.getCurrentProductionDifference(False, True)
 							if iProduction != 0:
 								sText += u" %+d" %(iProduction)
@@ -402,7 +402,7 @@ class CvGameUtils:
 					lBuildings = []
 					lWonders = []
 					for i in xrange(GC.getNumBuildingInfos()):
-						if pCity.getNumRealBuilding(i):
+						if pCity.hasBuilding(i):
 							if isLimitedWonder(i):
 								lWonders.append(GC.getBuildingInfo(i).getDescription())
 							else:

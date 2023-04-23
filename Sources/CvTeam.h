@@ -195,12 +195,6 @@ public:
 	void changeCorporationMaintenanceModifier(int iChange);
 
 	int getTechExtraBuildingHappiness(BuildingTypes eIndex) const;
-	void changeTechExtraBuildingHappiness(BuildingTypes eIndex, int iChange);
-	void setTechExtraBuildingHappiness(BuildingTypes eIndex, int iNewValue);
-
-	int getTechExtraBuildingHealth(BuildingTypes eIndex) const;
-	void changeTechExtraBuildingHealth(BuildingTypes eIndex, int iChange);
-	void setTechExtraBuildingHealth(BuildingTypes eIndex, int iNewValue);
 
 	void ObsoletePromotions(TechTypes eObsoleteTech);
 	void ObsoleteCorporations(TechTypes eObsoleteTech);
@@ -371,8 +365,6 @@ public:
 
 	int getUnitCount(const UnitTypes eIndex) const;
 	void changeUnitCount(const UnitTypes eIndex, const int iChange);
-
-	bool isUnitMaxedOut(const UnitTypes eIndex, const int iExtra = 0) const;
 
 	int getBuildingCount(BuildingTypes eIndex) const;
 	bool isBuildingMaxedOut(BuildingTypes eIndex, int iExtra = 0) const;
@@ -580,8 +572,6 @@ protected:
 	int* m_paiTechCount;
 	int* m_paiTerrainTradeCount;
 	int* m_aiVictoryCountdown;
-	int* m_paiTechExtraBuildingHappiness;
-	int* m_paiTechExtraBuildingHealth;
 	int* m_aiEspionagePointsAgainstTeam;
 	int* m_aiCounterespionageTurnsLeftAgainstTeam;
 	int* m_aiCounterespionageModAgainstTeam;

@@ -10,6 +10,9 @@
 //------------------------------------------------------------------------------------------------
 //  Copyright (c) 2003 Firaxis Games, Inc. All rights reserved.
 //------------------------------------------------------------------------------------------------
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvGlobals.h"
 #include "CvInitCore.h"
@@ -38,6 +41,7 @@ namespace CvXMLLoadUtilityModTools
 							CvString **ppszListOld, int iNumOldListElements,
 							CvString szDefaultListVal)
 	{
+		PROFILE_EXTRA_FUNC();
 		CvString* pszListNew;
 		CvString* pszListOld;
 		pszListNew = *ppszListNew;

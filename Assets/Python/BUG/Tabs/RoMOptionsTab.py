@@ -52,10 +52,10 @@ class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 
 		self.addCheckbox(screen, center, "RoMSettings__HideUnavailableBuilds")
 
-		if GAME.isOption(GameOptionTypes.GAMEOPTION_REVOLUTION):
+		if GAME.isOption(GameOptionTypes.GAMEOPTION_UNSUPPORTED_REVOLUTION):
 			self.addCheckbox(screen, center, "RoMSettings__ShowRevCivics")
 
-		if GAME.isOption(GameOptionTypes.GAMEOPTION_PERSONALIZED_MAP):
+		if GAME.isOption(GameOptionTypes.GAMEOPTION_MAP_PERSONALIZED):
 			self.addCheckbox(screen, center, "RoMSettings__UseLandmarkNames")
 
 		self.addCheckbox(screen, center, "RoMSettings__EventImages")
@@ -82,7 +82,6 @@ class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__MercyRule"), bCanAdjustSettings)
 
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__RealisiticDiplomacy"), bCanAdjustSettings)
-		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__NoStorms"), bCanAdjustSettings)
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__ReligionDecay"), bCanAdjustSettings)
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__MultipleReligionSpread"), bCanAdjustSettings)
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__TelepathicReligion"), bCanAdjustSettings)
@@ -95,7 +94,7 @@ class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__Reforestation"), bCanAdjustSettings)
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__SeaTunnels"), bCanAdjustSettings)
 
-		if GAME.isOption(GameOptionTypes.GAMEOPTION_REALISTIC_CORPORATIONS):
+		if GAME.isOption(GameOptionTypes.GAMEOPTION_ADVANCED_REALISTIC_CORPORATIONS):
 			screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__NoAutoCorporationFounding"), bCanAdjustSettings)
 
 		if GAME.isNetworkMultiPlayer():

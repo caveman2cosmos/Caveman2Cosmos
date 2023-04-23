@@ -2397,7 +2397,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<TechTypes>
@@ -2520,7 +2520,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
 			<BonusType>BONUS_BERBER</BonusType>
@@ -2672,7 +2672,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
 			<BonusType>BONUS_MONGOLIAN</BonusType>
@@ -2815,7 +2815,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CAMEL_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_CAMEL</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<BonusType>BONUS_ARABIAN</BonusType>
@@ -2942,7 +2942,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<BonusType>BONUS_BYZANTINE</BonusType>
@@ -3099,7 +3099,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<BonusType>BONUS_SPANISH</BonusType>
@@ -3290,7 +3290,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
 			<BonusType>BONUS_RUSSIAN</BonusType>
@@ -3470,7 +3470,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_ELEPHANT_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_ELEPHANT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<BonusType>BONUS_SYRIAN</BonusType>
@@ -4614,7 +4614,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
 			<BonusType>BONUS_APACHE</BonusType>
@@ -4926,7 +4926,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
 			<BonusType>BONUS_MEXICAN</BonusType>
@@ -5188,7 +5188,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
 			<BonusType>BONUS_CANADIAN</BonusType>
@@ -6399,7 +6399,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
 			<BonusType>BONUS_CHEYENNE</BonusType>
@@ -6548,7 +6548,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
 			<BonusType>BONUS_COMANCHE</BonusType>
@@ -8013,7 +8013,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<BonusType>BONUS_ARMENIAN</BonusType>
@@ -8169,7 +8169,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_STIRRUP</PrereqTech>
 			<BonusType>BONUS_HAUSA</BonusType>
@@ -8419,7 +8419,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<BonusType>BONUS_POLISH</BonusType>
@@ -8660,7 +8660,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
 			<BonusType>BONUS_HUN</BonusType>
@@ -9124,7 +9124,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
 			<BonusType>BONUS_MANCHURIAN</BonusType>
@@ -9282,7 +9282,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_STEAM_POWER</PrereqTech>
 			<BonusType>BONUS_HUNGARIAN</BonusType>
@@ -9475,7 +9475,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_STEAM_POWER</PrereqTech>
 			<BonusType>BONUS_VENEZUELAN</BonusType>
@@ -9760,7 +9760,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<BonusType>BONUS_UIGHUR</BonusType>
@@ -11132,7 +11132,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CAMEL_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_CAMEL</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<TechTypes>
@@ -11285,7 +11285,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_STIRRUP</PrereqTech>
 			<BonusType>BONUS_FULANI</BonusType>
@@ -11798,7 +11798,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<BonusType>BONUS_ITALIAN</BonusType>
@@ -12433,7 +12433,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_STIRRUP</PrereqTech>
 			<BonusType>BONUS_MALINESE</BonusType>
@@ -12964,7 +12964,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<BonusType>BONUS_TURKMEN</BonusType>
@@ -13382,7 +13382,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CANOEBUILDERS_HUT</BuildingType>
+				<BuildingType>BUILDING_CANOE_BUILDER</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<BonusType>BONUS_CHUMASH</BonusType>
@@ -13495,7 +13495,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<BonusType>BONUS_PARTHIAN</BonusType>
@@ -13747,7 +13747,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_ELEPHANT_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_ELEPHANT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<BonusType>BONUS_BURMESE</BonusType>
@@ -13874,7 +13874,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_ELEPHANT_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_ELEPHANT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<BonusType>BONUS_CHAM</BonusType>
@@ -14000,7 +14000,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_ELEPHANT_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_ELEPHANT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<BonusType>BONUS_SIAMESE</BonusType>
@@ -14242,7 +14242,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_STEAM_POWER</PrereqTech>
 			<BonusType>BONUS_CUBAN</BonusType>
@@ -14439,7 +14439,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_STEAM_POWER</PrereqTech>
 			<BonusType>BONUS_SOUTH_AFRICAN</BonusType>
@@ -14975,7 +14975,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<BonusType>BONUS_CANTONESE</BonusType>
@@ -15439,7 +15439,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
 			<BonusType>BONUS_PRUSSIAN</BonusType>
@@ -15828,7 +15828,7 @@
 			</UnitAIs>
 			<ObsoleteTech>TECH_COMPASS</ObsoleteTech>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CANOEBUILDERS_HUT</BuildingType>
+				<BuildingType>BUILDING_CANOE_BUILDER</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<BonusType>BONUS_POLYNESIAN</BonusType>
@@ -17116,7 +17116,7 @@
 			</UnitAIs>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DOG_BREEDER</BuildingType>
-				<BuildingType>BUILDING_RE_PET_SHOP</BuildingType>
+				<BuildingType>BUILDING_REPET</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
 			<BonusType>BONUS_DENE</BonusType>
@@ -17357,7 +17357,7 @@
 			</UnitAIs>
 			<ObsoleteTech>TECH_OPTICS</ObsoleteTech>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CANOEBUILDERS_HUT</BuildingType>
+				<BuildingType>BUILDING_CANOE_BUILDER</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_HARPOON_MAKING</PrereqTech>
 			<BonusType>BONUS_HAIDA</BonusType>
@@ -18063,7 +18063,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<BonusType>BONUS_MASSAGETAE</BonusType>
@@ -18717,7 +18717,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<BonusType>BONUS_SASSANIAN</BonusType>
@@ -18865,7 +18865,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
 			<BonusType>BONUS_SCYTHIAN</BonusType>
@@ -19347,10 +19347,10 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_HEALERHUT</BuildingType>
-				<BuildingType>BUILDING_DOCTOR</BuildingType>
-				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
-				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+				<BuildingType>BUILDING_HEALERS_HUT</BuildingType>
+				<BuildingType>BUILDING_DOCTORS_OFFICE</BuildingType>
+				<BuildingType>BUILDING_SURGEONS_OFFICE</BuildingType>
+				<BuildingType>BUILDING_MEDICAL_CLINIC</BuildingType>
 				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
@@ -19660,7 +19660,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_SIEGE_WEAPONS_WORKSHOP</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ALCHEMY</PrereqTech>
 			<TrainCondition>
@@ -20569,7 +20569,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_HORSE_BREEDING</PrereqTech>
 			<BonusType>BONUS_KUSHAN</BonusType>
@@ -21155,7 +21155,7 @@
 			</TrainCondition>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_METH_LAB</BuildingType>
-				<BuildingType>BUILDING_CHEMICAL_CONGLOMERATE</BuildingType>
+				<BuildingType>BUILDING_MATERIALS_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_TECHNARCHIST</UnitType>
@@ -21533,7 +21533,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
 			<BonusType>BONUS_LITHUANIAN</BonusType>
@@ -22663,7 +22663,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CAMEL_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_CAMEL</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
 			<BonusType>BONUS_MAMELUK</BonusType>
@@ -22909,10 +22909,10 @@
 				<BonusType>BONUS_SOAP</BonusType>
 			</PrereqBonuses>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_HEALERHUT</BuildingType>
-				<BuildingType>BUILDING_DOCTOR</BuildingType>
-				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
-				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+				<BuildingType>BUILDING_HEALERS_HUT</BuildingType>
+				<BuildingType>BUILDING_DOCTORS_OFFICE</BuildingType>
+				<BuildingType>BUILDING_SURGEONS_OFFICE</BuildingType>
+				<BuildingType>BUILDING_MEDICAL_CLINIC</BuildingType>
 				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
@@ -23935,7 +23935,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_CAVALRY_TACTICS</PrereqTech>
 			<BonusType>BONUS_ARGENTINIAN</BonusType>
@@ -24628,8 +24628,8 @@
 				<BonusType>BONUS_DRUGS</BonusType>
 			</PrereqBonuses>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
-				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+				<BuildingType>BUILDING_SURGEONS_OFFICE</BuildingType>
+				<BuildingType>BUILDING_MEDICAL_CLINIC</BuildingType>
 				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
@@ -24767,7 +24767,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_ELEPHANT_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_ELEPHANT</BuildingType>
 				<BuildingType>BUILDING_CANNON_FORGE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_CAVALRY_TACTICS</PrereqTech>
@@ -25442,7 +25442,7 @@
 				<BuildingType>BUILDING_FIRE_DANCE</BuildingType>
 				<BuildingType>BUILDING_NATURE_DANCE</BuildingType>
 				<BuildingType>BUILDING_MOON_DANCE</BuildingType>
-				<BuildingType>BUILDING_FERTILTY_DANCE</BuildingType>
+				<BuildingType>BUILDING_FERTILITY_DANCE</BuildingType>
 				<BuildingType>BUILDING_BLOOD_DANCE</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_LINGUISTICS</PrereqTech>
@@ -25711,7 +25711,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_CAVALRY_TACTICS</PrereqTech>
 			<BonusType>BONUS_NIGERIAN</BonusType>
@@ -26179,7 +26179,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_INVENTION</PrereqTech>
 			<TechTypes>
@@ -26325,7 +26325,7 @@
 			</UnitAIs>
 			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
+				<BuildingType>BUILDING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
@@ -26941,7 +26941,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_TRENCH_WARFARE</PrereqTech>
 			<BonusType>BONUS_PAIUTE</BonusType>
@@ -27794,7 +27794,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
 			<BonusType>BONUS_PASHTUN</BonusType>
@@ -27973,7 +27973,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<BonusType>BONUS_PERUVIAN</BonusType>
@@ -28248,7 +28248,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
-			<BonusType>BONUS_PHILISTINE</BonusType>
+			<BonusType>BONUS_PHILISTINES</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_COPPER_WARES</BonusType>
 				<BonusType>BONUS_BRONZE_WARES</BonusType>
@@ -28398,7 +28398,6 @@
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
-			<PrereqGameOption>GAMEOPTION_ADVANCED_DIPLOMACY</PrereqGameOption>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_ARJOS</Type>
@@ -29646,7 +29645,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_STIRRUP</PrereqTech>
 			<BonusType>BONUS_AVARIC</BonusType>
@@ -30149,14 +30148,14 @@
 			<bStealPlans>1</bStealPlans>
 			<bUpgradeAnywhere>1</bUpgradeAnywhere>
 			<PrereqTech>TECH_LOCKS</PrereqTech>
-			<BonusType>BONUS_ROMANI</BonusType>
+			<BonusType>BONUS_ROMANE</BonusType>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_LOCKSMITH</BuildingType>
 				<BuildingType>BUILDING_ELECTRONIC_SECURITY_SYSTEM</BuildingType>
-				<BuildingType>BUILDING_BIOMETRIC_SECURITY</BuildingType>
+				<BuildingType>BUILDING_BIOMETRIC_SECURITY_SYSTEM</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_BANDITS_HIDEOUT</BuildingType>
+				<BuildingType>BUILDING_THIEVES_HIDEOUT</BuildingType>
 			</PrereqAndBuildings>
 			<ObsoleteTech>TECH_MATCHLOCK</ObsoleteTech>
 			<UnitUpgrades>
@@ -30305,7 +30304,7 @@
 				<BuildingType>BUILDING_FIRE_DANCE</BuildingType>
 				<BuildingType>BUILDING_NATURE_DANCE</BuildingType>
 				<BuildingType>BUILDING_MOON_DANCE</BuildingType>
-				<BuildingType>BUILDING_FERTILTY_DANCE</BuildingType>
+				<BuildingType>BUILDING_FERTILITY_DANCE</BuildingType>
 				<BuildingType>BUILDING_BLOOD_DANCE</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_LINGUISTICS</PrereqTech>
@@ -30561,7 +30560,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<TechTypes>
@@ -30830,7 +30829,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_STIRRUP</PrereqTech>
 			<BonusType>BONUS_SARMATIAN</BonusType>
@@ -31119,7 +31118,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_INVENTION</PrereqTech>
 			<TechTypes>
@@ -31532,7 +31531,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_INVENTION</PrereqTech>
 			<TechTypes>
@@ -32261,7 +32260,7 @@
 			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HIGHWAY_HIDEOUT</BuildingType>
+				<BuildingType>BUILDING_HIGHWAYMANS_HIDEOUT</BuildingType>
 			</PrereqAndBuildings>
 			<BonusType>BONUS_SLOVAKIAN</BonusType>
 			<PrereqBonuses>
@@ -32741,7 +32740,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
 			<BonusType>BONUS_SONGHAI</BonusType>
@@ -33449,7 +33448,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_COMPASS</PrereqTech>
 			<BonusType>BONUS_TAJIK</BonusType>
@@ -33499,7 +33498,6 @@
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
-			<PrereqGameOption>GAMEOPTION_ADVANCED_DIPLOMACY</PrereqGameOption>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_KATIPUNAN_CAVALRY</Type>
@@ -33577,7 +33575,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_TRENCH_WARFARE</PrereqTech>
 			<BonusType>BONUS_TAGALOG</BonusType>
@@ -34094,7 +34092,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_SIEGE_WEAPONS_WORKSHOP</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_INVENTION</PrereqTech>
 			<BonusType>BONUS_TANG</BonusType>
@@ -34776,7 +34774,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<BonusType>BONUS_TATAR</BonusType>
@@ -35361,7 +35359,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_INVENTION</PrereqTech>
 			<TechTypes>
@@ -35731,7 +35729,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CAMEL_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_CAMEL</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<TechTypes>
@@ -35884,7 +35882,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_CAVALRY_TACTICS</PrereqTech>
 			<BonusType>BONUS_TOBA</BonusType>
@@ -36766,7 +36764,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_CAVALRY_TACTICS</PrereqTech>
 			<BonusType>BONUS_UKRAINIAN</BonusType>
@@ -36968,7 +36966,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
 			<BonusType>BONUS_URUGUAYAN</BonusType>
@@ -37755,7 +37753,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_TRENCH_WARFARE</PrereqTech>
 			<BonusType>BONUS_SAUDI</BonusType>
@@ -38062,7 +38060,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_HORSE_BREEDING</PrereqTech>
 			<BonusType>BONUS_VANDAL</BonusType>
@@ -38234,7 +38232,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_STIRRUP</PrereqTech>
 			<BonusType>BONUS_WARAY</BonusType>
@@ -38394,7 +38392,7 @@
 			</UnitCombatDefenders>
 			<PrereqTech>TECH_DUALISM</PrereqTech>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_TOWNWATCH</BuildingType>
+				<BuildingType>BUILDING_TOWN_WATCH</BuildingType>
 				<BuildingType>BUILDING_TOWN_PATROL</BuildingType>
 				<BuildingType>BUILDING_GUARDHOUSE</BuildingType>
 				<BuildingType>BUILDING_GUARD_STATION</BuildingType>
@@ -38763,7 +38761,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
 			<BonusType>BONUS_WAYUU</BonusType>
@@ -39071,7 +39069,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<TechTypes>
@@ -39233,7 +39231,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ANCIENT_BALLISTICS</PrereqTech>
 			<TechTypes>
@@ -40024,7 +40022,7 @@
 				<BuildingType>BUILDING_FIRE_DANCE</BuildingType>
 				<BuildingType>BUILDING_NATURE_DANCE</BuildingType>
 				<BuildingType>BUILDING_MOON_DANCE</BuildingType>
-				<BuildingType>BUILDING_FERTILTY_DANCE</BuildingType>
+				<BuildingType>BUILDING_FERTILITY_DANCE</BuildingType>
 				<BuildingType>BUILDING_BLOOD_DANCE</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_LINGUISTICS</PrereqTech>
@@ -40155,7 +40153,7 @@
 			</NotUnitAIs>
 			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
+				<BuildingType>BUILDING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
@@ -40777,7 +40775,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_STIRRUP</PrereqTech>
 			<BonusType>BONUS_BAVARIAN</BonusType>
@@ -40939,7 +40937,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CAMEL_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_CAMEL</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
 			<BonusType>BONUS_BEDOUIN</BonusType>
@@ -41277,7 +41275,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
+				<BuildingType>BUILDING_FACTORY_AMMUNITION</BuildingType>
 				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_ADVANCED_ROCKETRY</PrereqTech>
@@ -41410,7 +41408,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
 			<BonusType>BONUS_BOLIVIAN</BonusType>
@@ -41563,7 +41561,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<BonusType>BONUS_BRETON</BonusType>
@@ -41842,7 +41840,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_STIRRUP</PrereqTech>
 			<BonusType>BONUS_BULGARIAN</BonusType>
@@ -42661,7 +42659,7 @@
 			</NotUnitAIs>
 			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
+				<BuildingType>BUILDING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
@@ -42971,7 +42969,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_LLAMA_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_LLAMA</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_CAMELID_DOMESTICATION</PrereqTech>
 			<BonusType>BONUS_CHAVIN</BonusType>
@@ -43565,7 +43563,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_INVENTION</PrereqTech>
 			<TechTypes>
@@ -44626,7 +44624,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
 			<BonusType>BONUS_DZUNGAR</BonusType>
@@ -45996,7 +45994,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
 			<BonusType>BONUS_GAUCHO</BonusType>
@@ -46192,7 +46190,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
 			<BonusType>BONUS_GEORGIAN</BonusType>
@@ -46650,7 +46648,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
 			<BonusType>BONUS_KIPCHAK</BonusType>
@@ -47117,10 +47115,10 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_LOCKSMITH</BuildingType>
 				<BuildingType>BUILDING_ELECTRONIC_SECURITY_SYSTEM</BuildingType>
-				<BuildingType>BUILDING_BIOMETRIC_SECURITY</BuildingType>
+				<BuildingType>BUILDING_BIOMETRIC_SECURITY_SYSTEM</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_BANDITS_HIDEOUT</BuildingType>
+				<BuildingType>BUILDING_THIEVES_HIDEOUT</BuildingType>
 			</PrereqAndBuildings>
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<UnitUpgrades>
@@ -47353,7 +47351,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<BonusType>BONUS_GUATEMALAN</BonusType>
@@ -47675,7 +47673,6 @@
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
-			<PrereqGameOption>GAMEOPTION_ADVANCED_DIPLOMACY</PrereqGameOption>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_HEMUDU_HUNTERS</Type>
@@ -48566,7 +48563,7 @@
 				<BuildingType>BUILDING_FIRE_DANCE</BuildingType>
 				<BuildingType>BUILDING_NATURE_DANCE</BuildingType>
 				<BuildingType>BUILDING_MOON_DANCE</BuildingType>
-				<BuildingType>BUILDING_FERTILTY_DANCE</BuildingType>
+				<BuildingType>BUILDING_FERTILITY_DANCE</BuildingType>
 				<BuildingType>BUILDING_BLOOD_DANCE</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_LINGUISTICS</PrereqTech>
@@ -49144,7 +49141,7 @@
 			</UnitCombatDefenders>
 			<PrereqTech>TECH_DUALISM</PrereqTech>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_TOWNWATCH</BuildingType>
+				<BuildingType>BUILDING_TOWN_WATCH</BuildingType>
 				<BuildingType>BUILDING_TOWN_PATROL</BuildingType>
 				<BuildingType>BUILDING_GUARDHOUSE</BuildingType>
 				<BuildingType>BUILDING_GUARD_STATION</BuildingType>
@@ -49741,7 +49738,7 @@
 			<BonusType>BONUS_JOMON</BonusType>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DOG_BREEDER</BuildingType>
-				<BuildingType>BUILDING_RE_PET_SHOP</BuildingType>
+				<BuildingType>BUILDING_REPET</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_WARDOG</UnitType>
@@ -50067,7 +50064,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_CAVALRY_TACTICS</PrereqTech>
 			<BonusType>BONUS_KAZAKH</BonusType>
@@ -50259,7 +50256,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_SIEGE_WORKSHOP</BuildingType>
+				<BuildingType>BUILDING_SIEGE_WEAPONS_WORKSHOP</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<BonusType>BONUS_KHAZAR</BonusType>
