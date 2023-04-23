@@ -13,6 +13,8 @@
 #ifndef CV_INFO_H
 #define CV_INFO_H
 
+#include "FProfiler.h"
+
 #include "CvProperties.h"
 #include "CvPropertySource.h"
 #include "CvPropertyInteraction.h"
@@ -556,6 +558,7 @@ public:
 	int getNumLeadsToTechs() const { return m_leadsTo.size(); }
 	int getLeadsToTech(const int iCount) const
 	{
+		PROFILE_EXTRA_FUNC();
 		std::set<TechTypes>::const_iterator itr = m_leadsTo.begin();
 		for (int i = 0; i < iCount; i++) itr++;
 		return *itr;
@@ -1835,10 +1838,7 @@ public:
 
 	//TB Combat Mod Begin  TB SubCombat Mod begin
 	//Functions
-	void setReligionSubCombat();
-	void setCultureSubCombat();
 	int getEraInfo() const;
-	void setEraSubCombat();
 
 	int getAttackCombatModifier() const;
 	int getDefenseCombatModifier() const;
@@ -1953,7 +1953,6 @@ public:
 	int getHealAsType(int i) const;
 	int getNumHealAsTypes() const;
 	bool isHealAsType(int i) const;
-	void setHealAsTypes();
 
 	bool isTerrainImpassableType(TerrainTypes e) const;
 	const std::vector<TerrainTypes>& getImpassableTerrains() const { return m_vTerrainImpassableTypes; }
@@ -2129,19 +2128,10 @@ public:
 	bool isBuildWorkRateModifierType(int iBuild) const;
 
 	bool hasUnitCombat(UnitCombatTypes eUnitCombat) const;
-	void setTotalModifiedCombatStrengthDetails();
-	int getCombatStrengthModifier() const;
-	int getTotalModifiedCombatStrength100() const;
-	int getTotalModifiedAirCombatStrength100() const;
-	int getApproaching0Return(int i) const;
+	int getTotalModifiedCombatStrength100(const bool bSizeMatters) const;
 	int getBaseGroupRank() const;
-	void setBaseCargoVolume();
 	int getBaseCargoVolume() const;
-	void setBaseSizeMattersZeroPoints();
-	int getSMRankTotal() const;
-	int getSMVolumetricRankTotal() const;
 
-	void setSM();
 	bool isQualifiedPromotionType(int i) const;
 	bool setQualifiedPromotionType(const int iPromo, std::vector<int>& checklist);
 	void setQualifiedPromotionTypes();
@@ -2295,7 +2285,7 @@ public:
 	bool readPass3();
 	void copyNonDefaults(CvUnitInfo* pClassInfo);
 	void getCheckSum(uint32_t& iSum) const;
-	void doPostLoadCaching(uint32_t eThis);
+	void doPostLoadCaching(uint32_t iThis);
 
 private:
 	CvPropertyManipulators m_PropertyManipulators;
@@ -2540,10 +2530,8 @@ private:
 	int m_iEndurance;
 	int m_iRoundStunProb;
 	int m_iPoisonProbabilityModifier;
-	//Team Project (3)
 	int m_iCaptureProbabilityModifier;
 	int m_iCaptureResistanceModifier;
-	//Team Project (4)
 	//WorkRateMod
 	int m_iHillsWorkModifier;
 	int m_iPeaksWorkModifier;
@@ -2564,8 +2552,6 @@ private:
 	int m_iCombatModifierPerSizeLess;
 	int m_iCombatModifierPerVolumeMore;
 	int m_iCombatModifierPerVolumeLess;
-	int m_iBaseSMRankTotal;
-	int m_iBaseSMVolumetricRankTotal;
 	int m_iSelfHealModifier;
 	int m_iNumHealSupport;
 	int m_iInsidiousness;
@@ -3925,7 +3911,7 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(const CvBuildInfo* pClassInfo);
 	void getCheckSum(uint32_t& iSum) const;
-	void doPostLoadCaching(uint32_t eThis);
+	void doPostLoadCaching(uint32_t iThis);
 
 	//----------------------PRIVATE MEMBER VARIABLES----------------------------
 
@@ -5646,7 +5632,7 @@ public:
 
 	//Booleans
 	bool isMilitaryFoodProduction() const;
-	bool isNegativeTrait() const;
+	inline bool isNegativeTrait() const { return m_bNegativeTrait; }
 	bool isImpurePropertyManipulators() const;
 	bool isImpurePromotions() const;
 	bool isCivilizationTrait() const;
@@ -8477,16 +8463,15 @@ public:
 	int getPromotion(int i) const;
 	int getNumPromotions() const;
 	bool isPromotion(int i) const;
-	void setPromotions();
 
 	int getBuilding(int i) const;
 	int getNumBuildings() const;
 	bool isBuilding(int i) const;
-	void setBuildings();
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(const CvPromotionLineInfo* pClassInfo);
 	void getCheckSum(uint32_t& iSum) const;
+	void doPostLoadCaching(uint32_t iThis);
 
 protected:
 	TechTypes m_ePrereqTech;

@@ -1,5 +1,8 @@
 // CvDeal.cpp
 
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvBuildingInfo.h"
 #include "CvBonusInfo.h"
@@ -67,6 +70,7 @@ void CvDeal::reset(int iID, PlayerTypes eFirstPlayer, PlayerTypes eSecondPlayer)
 
 void CvDeal::kill(bool bKillTeam)
 {
+	PROFILE_EXTRA_FUNC();
 	if (getLengthFirstTrades() > 0 || getLengthSecondTrades() > 0)
 	{
 		CvWString szString;
@@ -110,6 +114,7 @@ void CvDeal::kill(bool bKillTeam)
 
 void CvDeal::addTrades(CLinkList<TradeData>* pFirstList, CLinkList<TradeData>* pSecondList, bool bCheckAllowed)
 {
+	PROFILE_EXTRA_FUNC();
 	if (isVassalTrade(pFirstList) && isVassalTrade(pSecondList))
 	{
 		return;
@@ -126,7 +131,7 @@ void CvDeal::addTrades(CLinkList<TradeData>* pFirstList, CLinkList<TradeData>* p
 			{
 				return;
 			}
-			if (GET_PLAYER(getFirstPlayer()).isHuman())
+			if (GET_PLAYER(getFirstPlayer()).isHumanPlayer())
 			{
 				iHumanValue += GET_PLAYER(getSecondPlayer()).AI_dealVal(getFirstPlayer(), pFirstList, true, 0);
 			}
@@ -364,6 +369,7 @@ void CvDeal::doTurn()
 // XXX probably should have some sort of message for the user or something...
 void CvDeal::verify()
 {
+	PROFILE_EXTRA_FUNC();
 	bool bCancelDeal = false;
 
 	CvPlayer& kFirstPlayer = GET_PLAYER(getFirstPlayer());
@@ -416,6 +422,7 @@ void CvDeal::verify()
 
 bool CvDeal::isPeaceDeal() const
 {
+	PROFILE_EXTRA_FUNC();
 	CLLNode<TradeData>* pNode;
 
 	for (pNode = headFirstTradesNode(); (pNode != NULL); pNode = nextFirstTradesNode(pNode))
@@ -444,6 +451,7 @@ bool CvDeal::isVassalDeal() const
 
 bool CvDeal::isVassalTrade(const CLinkList<TradeData>* pList)
 {
+	PROFILE_EXTRA_FUNC();
 	if (pList)
 	{
 		for (CLLNode<TradeData>* pNode = pList->head(); pNode != NULL; pNode = pList->next(pNode))
@@ -461,6 +469,7 @@ bool CvDeal::isVassalTrade(const CLinkList<TradeData>* pList)
 
 bool CvDeal::isUncancelableVassalDeal(PlayerTypes eByPlayer, CvWString* pszReason) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (CLLNode<TradeData>* pNode = headFirstTradesNode(); pNode != NULL; pNode = nextFirstTradesNode(pNode))
 	{
 		if (isVassal(pNode->m_data.m_eItemType) && eByPlayer == getSecondPlayer())
@@ -523,6 +532,7 @@ bool CvDeal::isUncancelableVassalDeal(PlayerTypes eByPlayer, CvWString* pszReaso
 
 bool CvDeal::isVassalTributeDeal(const CLinkList<TradeData>* pList)
 {
+	PROFILE_EXTRA_FUNC();
 	for (CLLNode<TradeData>* pNode = pList->head(); pNode != NULL; pNode = pList->next(pNode))
 	{
 		if (pNode->m_data.m_eItemType != TRADE_RESOURCES)
@@ -535,6 +545,7 @@ bool CvDeal::isVassalTributeDeal(const CLinkList<TradeData>* pList)
 
 bool CvDeal::isPeaceDealBetweenOthers(CLinkList<TradeData>* pFirstList, CLinkList<TradeData>* pSecondList) const
 {
+	PROFILE_EXTRA_FUNC();
 	CLLNode<TradeData>* pNode;
 
 	if (pFirstList != NULL)
@@ -701,6 +712,7 @@ void CvDeal::write(FDataStreamBase* pStream)
 
 void CvDeal::read(FDataStreamBase* pStream)
 {
+	PROFILE_EXTRA_FUNC();
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
@@ -762,6 +774,7 @@ bool CvDeal::TranslateTradeDataOnLoad(CvTaggedSaveFormatWrapper& wrapper, TradeD
 // Returns true if the trade should be saved...
 bool CvDeal::startTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eToPlayer)
 {
+	PROFILE_EXTRA_FUNC();
 	bool bSave = false;
 
 	switch (trade.m_eItemType)
@@ -1082,8 +1095,8 @@ bool CvDeal::startTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eT
 				{
 					if ((CorporationTypes)GC.getBuildingInfo((BuildingTypes)i).getGlobalCorporationCommerce() == (CorporationTypes)trade.m_iData)
 					{
-						pNewHQCity->setNumRealBuilding((BuildingTypes)i, 1);
-						pOldHeadquarters->setNumRealBuilding((BuildingTypes)i, 0);
+						pNewHQCity->changeHasBuilding((BuildingTypes)i, true);
+						pOldHeadquarters->changeHasBuilding((BuildingTypes)i, false);
 						break;
 					}
 				}
@@ -1225,6 +1238,7 @@ bool CvDeal::startTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eT
 
 void CvDeal::endTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eToPlayer, bool bTeam)
 {
+	PROFILE_EXTRA_FUNC();
 	switch (trade.m_eItemType)
 	{
 		case TRADE_RESOURCES:
@@ -1369,6 +1383,7 @@ void CvDeal::endTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eToP
 
 void CvDeal::startTeamTrade(TradeableItems eItem, TeamTypes eFromTeam, TeamTypes eToTeam, bool bDual)
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(eFromTeam))
@@ -1395,6 +1410,7 @@ void CvDeal::startTeamTrade(TradeableItems eItem, TeamTypes eFromTeam, TeamTypes
 
 void CvDeal::endTeamTrade(TradeableItems eItem, TeamTypes eFromTeam, TeamTypes eToTeam)
 {
+	PROFILE_EXTRA_FUNC();
 	CLLNode<TradeData>* pNode;
 
 	foreach_(CvDeal& kLoopDeal, GC.getGame().deals())
@@ -1474,17 +1490,12 @@ bool CvDeal::isAnnual(TradeableItems eItem)
 	case TRADE_OPEN_BORDERS:
 	case TRADE_DEFENSIVE_PACT:
 	case TRADE_PERMANENT_ALLIANCE:
-/************************************************************************************************/
-/* Afforess	                  Start		 06/16/10                                               */
-/*                                                                                              */
-/* Advanced Diplomacy                                                                           */
-/************************************************************************************************/
+
+	// Advanced Diplomacy
 	case TRADE_RITE_OF_PASSAGE:
 	case TRADE_FREE_TRADE_ZONE:
 	case TRADE_EMBASSY:
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+	
 		return true;
 		break;
 	}
@@ -1500,17 +1511,12 @@ bool CvDeal::isDual(TradeableItems eItem, bool bExcludePeace)
 	case TRADE_OPEN_BORDERS:
 	case TRADE_DEFENSIVE_PACT:
 	case TRADE_PERMANENT_ALLIANCE:
-/************************************************************************************************/
-/* Afforess	                  Start		 06/16/10                                               */
-/*                                                                                              */
-/* Advanced Diplomacy                                                                           */
-/************************************************************************************************/
+
+	// Advanced Diplomacy
 	case TRADE_EMBASSY:
 	case TRADE_RITE_OF_PASSAGE:
 	case TRADE_FREE_TRADE_ZONE:
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 		return true;
 	case TRADE_PEACE_TREATY:
 		return (!bExcludePeace);
@@ -1522,11 +1528,7 @@ bool CvDeal::isDual(TradeableItems eItem, bool bExcludePeace)
 // static
 bool CvDeal::hasData(TradeableItems eItem)
 {
-/************************************************************************************************/
-/* Afforess	                  Start		 07/17/10                                               */
-/*                                                                                              */
-/* Advanced Diplomacy                                                                           */
-/************************************************************************************************/
+	// Advanced Diplomacy
 	if (GC.getGame().isOption(GAMEOPTION_ADVANCED_DIPLOMACY))
 	{
 		return (eItem != TRADE_MAPS &&
@@ -1538,9 +1540,6 @@ bool CvDeal::hasData(TradeableItems eItem)
 			eItem != TRADE_PEACE_TREATY &&
 			eItem != TRADE_EMBASSY);
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	return (eItem != TRADE_MAPS &&
 		eItem != TRADE_VASSAL &&
 		eItem != TRADE_SURRENDER &&
@@ -1599,6 +1598,7 @@ bool CvDeal::isSingleOption(TradeableItems eItem)
 
 bool CvDeal::isEmbassy() const
 {
+	PROFILE_EXTRA_FUNC();
 	CLLNode<TradeData>* pNode;
 
 	for (pNode = headFirstTradesNode(); (pNode != NULL); pNode = nextFirstTradesNode(pNode))

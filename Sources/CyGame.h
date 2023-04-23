@@ -62,7 +62,7 @@ public:
 	int calculateReligionPercent(ReligionTypes eReligion) const;
 	int countCorporationLevels(CorporationTypes eCorporation) const;
 
-	int goldenAgeLength() const;
+	int goldenAgeLength100() const;
 	int victoryDelay(VictoryTypes eVictory) const;
 	int getImprovementUpgradeTime(ImprovementTypes eImprovement) const;
 	bool canTrainNukes() const;
@@ -148,8 +148,6 @@ public:
 	void changeDiploVote(VoteSourceTypes eVoteSource, int iChange);
 	bool isDebugMode() const;
 	void toggleDebugMode();
-
-	int getChtLvl() const;
 
 	int getPitbossTurnTime() const;
 	void setPitbossTurnTime(int iHours);
@@ -304,6 +302,7 @@ public:
 	const char* getC2CVersion() const;
 
 	void assignStartingPlots(bool bScenario, bool bMapScript);
+	void exitWorldBuilder();
 
 protected:
 	CvGame& m_pGame;

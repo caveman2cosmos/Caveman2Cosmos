@@ -1,3 +1,6 @@
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 
 //////////////////////////////////////////////////////
@@ -44,6 +47,7 @@ void CyArgsList::add(const char* buf, int iLength)
 // add float list
 void CyArgsList::add(const float* buf, int iLength)
 {
+	PROFILE_EXTRA_FUNC();
 	PyObject* pList = PyList_New(iLength);	// new ref
 	FAssertMsg(pList, "failed creating PyList");
 	int i;
@@ -59,6 +63,7 @@ void CyArgsList::add(const float* buf, int iLength)
 // add byte list
 void CyArgsList::add(const uint8_t* buf, int iLength)
 {
+	PROFILE_EXTRA_FUNC();
 	PyObject* pList = PyList_New(iLength);	// new ref
 	FAssertMsg(pList, "failed creating PyList");
 	int i;
@@ -74,6 +79,7 @@ void CyArgsList::add(const uint8_t* buf, int iLength)
 // add int list
 void CyArgsList::add(const int* buf, int iLength)
 {
+	PROFILE_EXTRA_FUNC();
 	PyObject* pList = PyList_New(iLength);	// new ref
 	FAssertMsg(pList, "failed creating PyList");
 	int i;

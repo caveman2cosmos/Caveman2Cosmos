@@ -1,5 +1,5 @@
 BeginMeta
-	Version=C2C_1
+	Version=C2C_2
 	Description= C2C Large Earth Map with 21 Civs. By Harrier.
 	ModPath=Mods\Caveman2Cosmos
 EndMeta
@@ -94,7 +94,7 @@ BeginPlayer
 EndPlayer
 BeginPlayer
 	LeaderType=LEADER_SITTING_BULL
-	CivType=CIVILIZATION_NATIVE_AMERICA
+	CivType=CIVILIZATION_SIOUX
 	StartingX=17, StartingY=52
 EndPlayer
 BeginPlayer
@@ -10642,7 +10642,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=28,y=44
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_SEA
 	PlotType=3
 EndPlot
@@ -11051,7 +11050,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=29,y=43
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_SEA
 	PlotType=3
 EndPlot
@@ -11224,7 +11222,6 @@ EndPlot
 BeginPlot
 	x=30,y=7
 	BonusType=BONUS_FISH
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -11667,7 +11664,6 @@ EndPlot
 BeginPlot
 	x=31,y=9
 	BonusType=BONUS_CRAB
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -12056,7 +12052,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=32,y=7
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -12068,7 +12063,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=32,y=9
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot

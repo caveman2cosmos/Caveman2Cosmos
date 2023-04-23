@@ -721,6 +721,17 @@ struct PropertySpawns
 	void write(FDataStreamBase* pStream);
 };
 
+struct BuiltBuildingData
+{
+	PlayerTypes eBuiltBy;
+	int iTimeBuilt;
+
+	BuiltBuildingData()
+		: eBuiltBy(NO_PLAYER)
+		, iTimeBuilt(-1)
+	{}
+};
+
 const struct TechYieldChange
 {
 	TechYieldChange(TechTypes eTech, YieldTypes eYield, int iChange)

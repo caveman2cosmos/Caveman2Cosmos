@@ -3799,7 +3799,7 @@ class Revolution:
 
 			leaderList = []
 			for leaderType in xrange(GC.getNumLeaderHeadInfos()):
-				if GC.getCivilizationInfo(newCivIdx).isLeaders(leaderType) or GAME.isOption(GameOptionTypes.GAMEOPTION_LEAD_ANY_CIV):
+				if GC.getCivilizationInfo(newCivIdx).isLeaders(leaderType) or GAME.isOption(GameOptionTypes.GAMEOPTION_LEADER_UNRESTRICTED):
 					for jdx in xrange(GC.getMAX_PC_PLAYERS()):
 						if GC.getPlayer(jdx).getLeaderType() == leaderType and not newPlayerIdx == jdx:
 							break
@@ -3869,7 +3869,7 @@ class Revolution:
 		count = 0
 		availLeader = []
 		for i in xrange(GC.getNumLeaderHeadInfos()):
-			if ownerCivInfo.isLeaders(i) or GAME.isOption(GameOptionTypes.GAMEOPTION_LEAD_ANY_CIV):
+			if ownerCivInfo.isLeaders(i) or GAME.isOption(GameOptionTypes.GAMEOPTION_LEADER_UNRESTRICTED):
 				for j in xrange(GC.getMAX_PC_PLAYERS()):
 					if GC.getPlayer(j).getLeaderType() == i:
 						break
@@ -5197,7 +5197,7 @@ class Revolution:
 
 					if( not bIsBarbRev and (pRevPlayer.getNumCities() + pRevPlayer.getCitiesLost() < 4) and len(cityList) > 1 ) :
 						# Launch golden age for rebel player (helps with stability and being competitive)
-						pRevPlayer.changeGoldenAgeTurns( int(1.5*GAME.goldenAgeLength()) )
+						pRevPlayer.changeGoldenAgeTurns( int(1.5*GAME.goldenAgeLength100() / 100) )
 
 					# Since instigator is first in list, it will become capital if pRevPlayer has no others
 					for pCity in cityList :
@@ -5215,9 +5215,8 @@ class Revolution:
 						# Store building types in city
 						buildingList = []
 						for buildingType in xrange(GC.getNumBuildingInfos()) :
-							if( pCity.getNumRealBuilding(buildingType) > 0 ) :
-								buildingInfo = GC.getBuildingInfo(buildingType)
-								buildingList.append([buildingType,pCity.getNumRealBuilding(buildingType)])
+							if pCity.hasBuilding(buildingType):
+								buildingList.append(buildingType)
 
 #***********************************
 						# Acquire city
@@ -5254,12 +5253,11 @@ class Revolution:
 #*************************************
 
 						# Save most buildings - should some be destroyed?
-						for [buildingType,iNum] in buildingList :
-							if( pCity.getNumRealBuilding(buildingType) < iNum ) :
-								buildingInfo = GC.getBuildingInfo(buildingType)
-								if( not buildingInfo.isGovernmentCenter() ) :
-									if self.LOG_DEBUG: print "[REV] Revolt: Building %s saved" % buildingInfo.getDescription()
-									pCity.setNumRealBuilding( buildingType, iNum )
+						for buildingType in buildingList:
+							if not pCity.hasBuilding(buildingType) and not GC.getBuildingInfo(buildingType).isGovernmentCenter():
+								if self.LOG_DEBUG:
+									print "[REV] Revolt: Building %s saved" % GC.getBuildingInfo(buildingType).getDescription()
+								pCity.changeHasBuilding(buildingType, True)
 
 						#if self.LOG_DEBUG: print "[REV] Revolt: %s at %d, %d"%(pCity.getName(),pCity.getX(),pCity.getY())
 
@@ -5638,7 +5636,7 @@ class Revolution:
 					CyInterface().addMessage(iPlayer, False, GC.getEVENT_MESSAGE_TIME(), mess, None, InterfaceMessageTypes.MESSAGE_TYPE_MAJOR_EVENT, None, ColorTypes(79), -1, -1, False, False)
 
 			# Change personality type
-			if GAME.isOption(GameOptionTypes.GAMEOPTION_RANDOM_PERSONALITIES):
+			if GAME.isOption(GameOptionTypes.GAMEOPTION_AI_RANDOM_PERSONALITIES):
 				if self.LOG_DEBUG: print "[REV] Revolt: Giving new, random personality by game option"
 				RevUtils.changePersonality(pPlayer.getID())
 			elif newLeaderName == TextUtil.convertToStr(GC.getLeaderHeadInfo( newLeaderType ).getDescription()):
@@ -6325,9 +6323,8 @@ class Revolution:
 				# Store building types in city
 				buildingList = []
 				for buildingType in xrange(GC.getNumBuildingInfos()):
-					if pCity.getNumRealBuilding(buildingType) > 0:
-						buildingInfo = GC.getBuildingInfo(buildingType)
-						buildingList.append([buildingType,pCity.getNumRealBuilding(buildingType)])
+					if pCity.hasBuilding(buildingType):
+						buildingList.append(buildingType)
 
 # ***************************************************************
 				# Acquire city by cultural conversion
@@ -6447,13 +6444,11 @@ class Revolution:
 						pRevPlayer.initUnit(iSpy, ix, iy, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 
 				# Should buildings stay or some destroyed?
-				for [buildingType,iNum] in buildingList:
-					if pCity.getNumRealBuilding(buildingType) < iNum:
-						buildingInfo = GC.getBuildingInfo(buildingType)
-						if not buildingInfo.isGovernmentCenter():
-							if self.LOG_DEBUG:
-								print "[REV] Revolt: Building %s saved" % buildingInfo.getDescription()
-							pCity.setNumRealBuilding(buildingType, iNum)
+				for buildingType in buildingList:
+					if not pCity.hasBuilding(buildingType) and not GC.getBuildingInfo(buildingType).isGovernmentCenter():
+						if self.LOG_DEBUG:
+							print "[REV] Revolt: Building %s saved" % GC.getBuildingInfo(buildingType).getDescription()
+						pCity.changeHasBuilding(buildingType, True)
 
 				# Reveal surrounding countryside
 				if not bGaveMap:

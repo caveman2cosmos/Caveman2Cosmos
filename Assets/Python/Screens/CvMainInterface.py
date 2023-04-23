@@ -110,12 +110,12 @@ class CvMainInterface:
 		self.bNetworkMP		= GAME.isNetworkMultiPlayer()
 		self.bMultiPlayer	= GAME.isGameMultiPlayer()
 		# Cache Game Options
-		self.GO_REVOLUTION			= GAME.isOption(GameOptionTypes.GAMEOPTION_REVOLUTION)
-		self.GO_PICK_RELIGION		= GAME.isOption(GameOptionTypes.GAMEOPTION_PICK_RELIGION)
-		self.GO_SIZE_MATTERS		= GAME.isOption(GameOptionTypes.GAMEOPTION_SIZE_MATTERS)
-		self.GO_WIN_FOR_LOSING		= GAME.isOption(GameOptionTypes.GAMEOPTION_WIN_FOR_LOSING)
+		self.GO_REVOLUTION			= GAME.isOption(GameOptionTypes.GAMEOPTION_UNSUPPORTED_REVOLUTION)
+		self.GO_PICK_RELIGION		= GAME.isOption(GameOptionTypes.GAMEOPTION_RELIGION_PICK)
+		self.GO_SIZE_MATTERS		= GAME.isOption(GameOptionTypes.GAMEOPTION_COMBAT_SIZE_MATTERS)
+		self.GO_WIN_FOR_LOSING		= GAME.isOption(GameOptionTypes.GAMEOPTION_TECH_WIN_FOR_LOSING)
 		self.GO_TECH_DIFFUSION   	= GAME.isOption(GameOptionTypes.GAMEOPTION_TECH_DIFFUSION)
-		self.GO_ONE_CITY_CHALLENGE	= GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE)
+		self.GO_ONE_CITY_CHALLENGE	= GAME.isOption(GameOptionTypes.GAMEOPTION_CHALLENGE_ONE_CITY)
 		# First pass initialization.
 		if self.bInitialize:
 			import DebugUtils
@@ -2148,7 +2148,7 @@ class CvMainInterface:
 					iTechX = team.getAdjacentResearch(i)
 					# Toffer - canResearch can fail as adjacent research is cached even...
 					#	if special requirements like building requirements are not met.
-					if player.canResearch(iTechX, True):
+					if player.canResearch(iTechX, True, True):
 						szName = "WID|TECH|Selection" + str(iTechX)
 						if iTechX in aMap:
 							if not bCanFoundReligion or GAME.countKnownTechNumTeams(iTechX):
@@ -2238,12 +2238,12 @@ class CvMainInterface:
 								commerceRate = CyPlayer.getCommerceRate(CommerceTypes(j))
 
 							elif bTDDisplayOption:
-								commerceRate = 100 * iResearchRate / iResearchMod
+								commerceRate = getModifiedIntValue(iResearchRate, -iResearchMod)
 								techDiffusionHelp = iResearchRate - commerceRate
 							else:
 								commerceRate = iResearchRate
 
-							if bTDDisplayOption and j == CommerceTypes.COMMERCE_RESEARCH and iResearchMod > 100:
+							if bTDDisplayOption and j == CommerceTypes.COMMERCE_RESEARCH and iResearchMod > 0:
 								szTxt = TRNSLTR.getText("TXT_KEY_MISC_POS_GOLD_PER_TURN_TD_WFL", (commerceRate, techDiffusionHelp))
 							else:
 								szTxt = TRNSLTR.getText("TXT_KEY_MISC_POS_GOLD_PER_TURN", (commerceRate,))
@@ -2301,7 +2301,7 @@ class CvMainInterface:
 
 						CyTeam = GC.getTeam(CyPlayer.getTeam())
 						researchProgress = CyTeam.getResearchProgress(iCurrentResearch)
-						iOverflow = CyPlayer.getOverflowResearch() * iResearchMod / 100
+						iOverflow = getModifiedIntValue(CyPlayer.getOverflowResearch(), iResearchMod)
 						researchCost = CyTeam.getResearchCost(iCurrentResearch)
 						iCurr = researchProgress + iOverflow
 
@@ -2989,7 +2989,7 @@ class CvMainInterface:
 		y = -2
 		for szName, i, CvBuildingInfo in aBuildingList:
 
-			if CyCity.getNumRealBuilding(i):
+			if CyCity.hasBuilding(i):
 				szStat = ""
 
 				if CyCity.getNumActiveBuilding(i) > 0:
@@ -3195,37 +3195,39 @@ class CvMainInterface:
 			if iOrder == OrderTypes.ORDER_TRAIN:
 
 				szTxt2 = str(CyCity.getUnitProductionTurnsLeft(iType, iNode))
-				if CyCity.getUnitProduction(iType) > 0:
+				if CyCity.getProgressOnUnit(iType) > 0:
+
+					if y > 0:
+						if CyCity.isUnitProductionDecay(iType):
+							szTxt1 = "<color=255,76,76,255><b>!! </b></color>"
+						elif CyCity.getDelayOnUnit(iType) > 0:
+							szTxt1 = "<color=255,255,0,255><b>! </b></color>"
+
 					szTxt2 = "<color=0,255,255,255>" + szTxt2 + "</color>"
+
 				if bSave:
 					szTxt1 += "*"
 					szTxt2 += "*"
 				szTxt1 += GC.getUnitInfo(iType).getDescription()
-				# BUG - Production Decay
-				if CityOpt.isShowProductionDecayQueue():
-					if CyCity.getUnitProduction(iType) > 0:
-						if CyCity.isUnitProductionDecay(iType):
-							szTxt1 = TRNSLTR.getText("TXT_KEY_BUG_PRODUCTION_DECAY_THIS_TURN", (szTxt1,))
-						elif CyCity.getUnitProductionTime(iType) > 0:
-							iDecayTurns = CyCity.getUnitProductionDecayTurns(iType)
-							if iDecayTurns <= CityOpt.getProductionDecayQueueUnitThreshold():
-								szTxt1 = TRNSLTR.getText("TXT_KEY_BUG_PRODUCTION_DECAY_WARNING", (szTxt1,))
+
 				szName += "UNIT|"
 
 			elif iOrder == OrderTypes.ORDER_CONSTRUCT:
-				szTxt1 = GC.getBuildingInfo(iType).getDescription()
-				if CyCity.getBuildingProduction(iType) > 0:
-					szTxt2 = "<color=0,255,255,255>"
-				szTxt2 += str(CyCity.getBuildingProductionTurnsLeft(iType, iNode))
-				# BUG - Production Decay
-				if CityOpt.isShowProductionDecayQueue():
-					if CyCity.getBuildingProduction(iType) > 0:
+
+
+				if CyCity.getProgressOnBuilding(iType) > 0:
+
+					if y > 0:
 						if CyCity.isBuildingProductionDecay(iType):
-							szTxt1 = TRNSLTR.getText("TXT_KEY_BUG_PRODUCTION_DECAY_THIS_TURN", (szTxt1,))
-						elif CyCity.getBuildingProductionTime(iType) > 0:
-							iDecayTurns = CyCity.getBuildingProductionDecayTurns(iType)
-							if iDecayTurns <= CityOpt.getProductionDecayQueueBuildingThreshold():
-								szTxt1 = TRNSLTR.getText("TXT_KEY_BUG_PRODUCTION_DECAY_WARNING", (szTxt1,))
+							szTxt1 = "<color=255,76,76,255><b>!! </b></color>"
+						elif CyCity.getDelayOnBuilding(iType) > 0:
+							szTxt1 = "<color=255,255,0,255><b>! </b></color>"
+
+					szTxt2 = "<color=0,255,255,255>"
+
+				szTxt1 += GC.getBuildingInfo(iType).getDescription()
+				szTxt2 += str(CyCity.getBuildingProductionTurnsLeft(iType, iNode))
+
 				szName += "BUILDING|"
 
 			elif iOrder == OrderTypes.ORDER_CREATE:
@@ -3626,7 +3628,7 @@ class CvMainInterface:
 		screen.addScrollPanel(Pnl, "", x, y0, w, h, PanelStyles.PANEL_STYLE_MAIN)
 		screen.setStyle(Pnl, "ScrollPanel_Alt_Style")
 
-		if InCity.WorkQueue and not city.getProduction():
+		if InCity.WorkQueue and not city.getProductionProgress():
 			self.bFreshQueue = False
 		else: self.bFreshQueue = True
 
@@ -3962,7 +3964,6 @@ class CvMainInterface:
 	def isUnitMaxedOut(self, iType, InCity, iExtra=0):
 		return (
 			GAME.isUnitMaxedOut(iType, InCity.CyTeam.getUnitMaking(iType) + iExtra)
-			or InCity.CyTeam.isUnitMaxedOut(iType, InCity.CyTeam.getUnitMaking(iType) + iExtra)
 			or InCity.CyPlayer.isUnitMaxedOut(iType, InCity.CyPlayer.getUnitMaking(iType) + iExtra)
 		)
 
@@ -4020,11 +4021,11 @@ class CvMainInterface:
 					TYPE, iType, szRow, iNode, bAlt, x, szTxt = aList
 
 					if TYPE == "UNIT":
-						bPre = CyCity.getUnitProduction(iType) > 0
+						bPre = CyCity.getProgressOnUnit(iType) > 0
 						szTxt += str(CyCity.getUnitProductionTurnsLeft(iType, iNode))
 
 					elif TYPE == "BUILDING":
-						bPre = CyCity.getBuildingProduction(iType) > 0
+						bPre = CyCity.getProgressOnBuilding(iType) > 0
 						szTxt += str(CyCity.getBuildingProductionTurnsLeft(iType, iNode))
 
 					elif TYPE == "PROJECT":
@@ -4040,7 +4041,7 @@ class CvMainInterface:
 						szRow = aList[2]
 						bAlt = CyIF.getOrderNodeSave(0)
 						x = self.xMidL-146
-						bPre = CyCity.getProduction() > 0
+						bPre = CyCity.getProductionProgress() > 0
 						szTxt = self.aFontList[5] + str(CyCity.getGeneralProductionTurnsLeft())
 					else:
 						szTxt = ""
@@ -4356,7 +4357,7 @@ class CvMainInterface:
 			iProductionDiffNoFood = CyCity.getCurrentProductionDifference(True, True)
 			iProductionDiffJustFood = CyCity.getCurrentProductionDifference(False, True) - iProductionDiffNoFood
 			iNeeded = CyCity.getProductionNeeded()
-			iStored = CyCity.getProduction()
+			iStored = CyCity.getProductionProgress()
 			screen.setBarPercentage("ProductionBar", InfoBarTypes.INFOBAR_STORED, float(iStored) / iNeeded)
 			if iNeeded > iStored:
 				screen.setBarPercentage("ProductionBar", InfoBarTypes.INFOBAR_RATE, float(iProductionDiffNoFood) / (iNeeded - iStored))
@@ -5662,7 +5663,7 @@ class CvMainInterface:
 							if self.bInverseShiftQueue:
 								bShift = not bShift
 
-							if not bShift and CyCity.getProduction():
+							if not bShift and CyCity.getProductionProgress():
 								bCtrl = True
 
 						# Determine order type

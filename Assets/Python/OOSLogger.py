@@ -90,7 +90,7 @@ def writeLog():
 					pFile.write("Population: %d\n" % (pCity.getPopulation()))
 					iCount = 0
 					for iBuilding in xrange(GC.getNumBuildingInfos()):
-						iCount += pCity.getNumRealBuilding(iBuilding)
+						iCount += pCity.hasBuilding(iBuilding)
 					pFile.write("Buildings: %d\n" % iCount)
 					pFile.write("Improved Plots: %d\n" % (pCity.countNumImprovedPlots()))
 					pFile.write("Tiles Worked: %d, Specialists: %d\n" % (pCity.getWorkingPopulation(), pCity.getSpecialistPopulation()))

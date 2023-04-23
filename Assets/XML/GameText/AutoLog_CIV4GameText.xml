@@ -91,16 +91,6 @@
 		<Russian>Основан %s1</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_AUTOLOG_CITY_GROWS</Tag>
-		<English>%s1 grows to size %d2</English>
-		<French>%s1 atteint la taille de %d2</French>
-		<German>Die Bevölkerung von %s1 ist auf %d2 gewachsen</German>
-		<Italian>La popolazione di %s1 è cresciuta fino a %d2</Italian>
-		<Spanish>%s1 creció a tamaño %d2</Spanish>
-		<Polish>Miasto: %s1 wzrasta do wielkości: %d2</Polish>
-		<Russian>%s1 растет до размеров %d2</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_CITY_LOST</Tag>
 		<English>%s1 lost</English>
 		<French>%s1 perdue</French>

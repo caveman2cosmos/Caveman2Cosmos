@@ -3,6 +3,8 @@
 #ifndef FFreeListTrashArray_h__
 #define FFreeListTrashArray_h__
 
+#include "FProfiler.h"
+
 #include "FDataStreamBase.h"
 #include "CvTaggedSaveFormatWrapper.h"
 #include "FFreeListArrayBase.h"
@@ -184,6 +186,7 @@ FFreeListTrashArray<T>::~FFreeListTrashArray()
 template <class T>
 void FFreeListTrashArray<T>::init(int iNumSlots)
 {
+	PROFILE_EXTRA_FUNC();
 	FAssertMsg(iNumSlots >= 0, "FFreeListTrashArray::init - iNumSlots must be >= 0");
 
 	// make sure it's binary...
@@ -251,6 +254,7 @@ T* FFreeListTrashArray<T>::beginIter(int* pIterIdx) const
 template <class T>
 T* FFreeListTrashArray<T>::nextIter(int* pIterIdx) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (; (*pIterIdx) < getIndexAfterLast(); (*pIterIdx)++)
 	{
 		T* pObj = getAt((*pIterIdx));
@@ -275,6 +279,7 @@ T* FFreeListTrashArray<T>::endIter(int* pIterIdx) const
 template <class T>
 T* FFreeListTrashArray<T>::prevIter(int* pIterIdx) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (; (*pIterIdx) >= 0; (*pIterIdx)--)
 	{
 		T* pObj = getAt((*pIterIdx));
@@ -291,6 +296,7 @@ T* FFreeListTrashArray<T>::prevIter(int* pIterIdx) const
 template <class T>
 T* FFreeListTrashArray<T>::add()
 {
+	PROFILE_EXTRA_FUNC();
 	if (m_pArray == NULL)
 	{
 		init();
@@ -407,6 +413,7 @@ T* FFreeListTrashArray<T>::getAt(int iID) const
 template <class T>
 bool FFreeListTrashArray<T>::remove(const T* pData)
 {
+	PROFILE_EXTRA_FUNC();
 	FAssertMsg(m_pArray != NULL, "FFreeListTrashArray::remove - not initialized");
 
 	if (pData != NULL)
@@ -463,6 +470,7 @@ bool FFreeListTrashArray<T>::removeAt(int iID)
 template <class T>
 void FFreeListTrashArray<T>::removeAll()
 {
+	PROFILE_EXTRA_FUNC();
 	if (m_pArray == NULL)
 	{
 		return;
@@ -507,6 +515,7 @@ void FFreeListTrashArray<T>::load(T* pData)
 template <class T>
 void FFreeListTrashArray<T>::growArray()
 {
+	PROFILE_EXTRA_FUNC();
 	FAssertMsg(m_pArray != NULL, "FFreeListTrashArray::growArray - not initialized");
 
 	FFreeListTrashArrayNode* pOldArray = m_pArray;
@@ -541,6 +550,7 @@ void FFreeListTrashArray<T>::growArray()
 template < class T >
 inline void FFreeListTrashArray< T >::Read( FDataStreamBase* pStream )
 {
+	PROFILE_EXTRA_FUNC();
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
@@ -581,6 +591,7 @@ inline void FFreeListTrashArray< T >::Read( FDataStreamBase* pStream )
 template < class T >
 inline void FFreeListTrashArray< T >::Write( FDataStreamBase* pStream )
 {
+	PROFILE_EXTRA_FUNC();
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
@@ -623,6 +634,7 @@ inline void FFreeListTrashArray< T >::Write( FDataStreamBase* pStream )
 template < class T >
 inline void ReadStreamableFFreeListTrashArray( FFreeListTrashArray< T >& flist, FDataStreamBase* pStream )
 {
+	PROFILE_EXTRA_FUNC();
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
@@ -667,6 +679,7 @@ inline void ReadStreamableFFreeListTrashArray( FFreeListTrashArray< T >& flist, 
 template < class T >
 inline void WriteStreamableFFreeListTrashArray( FFreeListTrashArray< T >& flist, FDataStreamBase* pStream )
 {
+	PROFILE_EXTRA_FUNC();
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);

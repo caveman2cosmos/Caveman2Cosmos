@@ -7,6 +7,9 @@
 //
 //------------------------------------------------------------------------------------------------
 
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvGameTextMgr.h"
 #include "CvGlobals.h"
@@ -100,6 +103,7 @@ bool CvPropertyPropagator::isActive(const CvGameObject* pObject) const
 
 void CvPropertyPropagator::getTargetObjects(const CvGameObject* pObject, std::vector<const CvGameObject*>& apGameObjects) const
 {
+	PROFILE_EXTRA_FUNC();
 	apGameObjects.push_back(pObject);
 	if (m_eTargetObjectType != NO_GAMEOBJECT)
 	{
@@ -240,6 +244,7 @@ int CvPropertyPropagatorSpread::getPercent() const
 
 void CvPropertyPropagatorSpread::getPredict(const std::vector<int>& aiCurrentAmount, std::vector<int>& aiPredict) const
 {
+	PROFILE_EXTRA_FUNC();
 	const int iCurrentAmount = aiCurrentAmount[0];
 	aiPredict[0] = 0;
 	for(int iI=1; iI<(int)aiCurrentAmount.size(); iI++)
@@ -251,6 +256,7 @@ void CvPropertyPropagatorSpread::getPredict(const std::vector<int>& aiCurrentAmo
 
 void CvPropertyPropagatorSpread::getCorrect(const std::vector<int>& aiCurrentAmount, const std::vector<int>& aiPredictedAmount, std::vector<int>& aiCorrect) const
 {
+	PROFILE_EXTRA_FUNC();
 	const int iCurrentAmount = aiCurrentAmount[0];
 	aiCorrect[0] = 0;
 	for(int iI=1; iI<(int)aiCurrentAmount.size(); iI++)
@@ -335,6 +341,7 @@ int CvPropertyPropagatorGather::getAmountPerTurn() const
 
 void CvPropertyPropagatorGather::getPredict(const std::vector<int>& aiCurrentAmount, std::vector<int>& aiPredict) const
 {
+	PROFILE_EXTRA_FUNC();
 	aiPredict[0] = 0;
 	for(int iI=1; iI<(int)aiCurrentAmount.size(); iI++)
 	{
@@ -353,6 +360,7 @@ void CvPropertyPropagatorGather::getPredict(const std::vector<int>& aiCurrentAmo
 
 void CvPropertyPropagatorGather::getCorrect(const std::vector<int>& aiCurrentAmount, const std::vector<int>& aiPredictedAmount, std::vector<int>& aiCorrect) const
 {
+	PROFILE_EXTRA_FUNC();
 	aiCorrect[0] = 0;
 	for(int iI=1; iI<(int)aiCurrentAmount.size(); iI++)
 	{
@@ -447,6 +455,7 @@ int CvPropertyPropagatorDiffuse::getPercent() const
 
 void CvPropertyPropagatorDiffuse::getPredict(const std::vector<int>& aiCurrentAmount, std::vector<int>& aiPredict) const
 {
+	PROFILE_EXTRA_FUNC();
 	const int iCurrentAmount = aiCurrentAmount[0];
 	aiPredict[0] = 0;
 	for(int iI=1; iI<(int)aiCurrentAmount.size(); iI++)
@@ -460,6 +469,7 @@ void CvPropertyPropagatorDiffuse::getPredict(const std::vector<int>& aiCurrentAm
 
 void CvPropertyPropagatorDiffuse::getCorrect(const std::vector<int>& aiCurrentAmount, const std::vector<int>& aiPredictedAmount, std::vector<int>& aiCorrect) const
 {
+	PROFILE_EXTRA_FUNC();
 	const int iCurrentAmount = aiCurrentAmount[0];
 	const int iPredictedAmount = aiPredictedAmount[0];
 	int iPredictedSelf = 0;

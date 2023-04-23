@@ -182,7 +182,7 @@
 				<UnitType>UNIT_NEANDERTHAL_CANOE</UnitType>
 			</SupersedingUnits>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CANOEBUILDERS_HUT</BuildingType>
+				<BuildingType>BUILDING_CANOE_BUILDER</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_BOAT_BUILDING</PrereqTech>
 			<iCost>67</iCost>
@@ -1210,7 +1210,7 @@
 				<UnitType>UNIT_NEANDERTHAL_WAR_CANOE</UnitType>
 			</SupersedingUnits>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CANOEBUILDERS_HUT</BuildingType>
+				<BuildingType>BUILDING_CANOE_BUILDER</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_HARPOON_MAKING</PrereqTech>
 			<iCost>77</iCost>
@@ -3942,7 +3942,7 @@
 				<UnitType>UNIT_NEANDERTHAL_KAYAK</UnitType>
 			</SupersedingUnits>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CANOEBUILDERS_HUT</BuildingType>
+				<BuildingType>BUILDING_CANOE_BUILDER</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_BOAT_BUILDING</PrereqTech>
 			<PrereqBonuses>
@@ -4052,7 +4052,7 @@
 			</UnitAIs>
 			<ObsoleteTech>TECH_COMPASS</ObsoleteTech>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CANOEBUILDERS_HUT</BuildingType>
+				<BuildingType>BUILDING_CANOE_BUILDER</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<iCost>105</iCost>
@@ -5186,7 +5186,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_REMOTE_NAVAL</BuildingType>
+				<BuildingType>BUILDING_REMOTE_NAVAL_TRAINING_CENTER</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_DISASTER_ROBOTS</PrereqTech>
 			<BonusType>BONUS_URANIUM</BonusType>
@@ -6043,7 +6043,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_REMOTE_NAVAL</BuildingType>
+				<BuildingType>BUILDING_REMOTE_NAVAL_TRAINING_CENTER</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_DISASTER_ROBOTS</PrereqTech>
 			<BonusType>BONUS_NANOTUBES</BonusType>
@@ -8024,7 +8024,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_REMOTE_NAVAL</BuildingType>
+				<BuildingType>BUILDING_REMOTE_NAVAL_TRAINING_CENTER</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_DISASTER_ROBOTS</PrereqTech>
 			<BonusType>BONUS_URANIUM</BonusType>

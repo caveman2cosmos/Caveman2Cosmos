@@ -37,7 +37,6 @@
 	<ElementType name="iOutbreakBase" content="textOnly" dt:type="int"/>
 	<ElementType name="iOvercomeBase" content="textOnly" dt:type="int"/>
 	<ElementType name="iPopulationChange" content="textOnly" dt:type="int"/>
-	<ElementType name="iOneTimePopulationPercentLoss" content="textOnly" dt:type="int"/>
 	<!-- Booleans -->
 	<ElementType name="bDamageToAttackerIgnoresArmor" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bDamageAllAttackers" content="textOnly" dt:type="boolean"/>
@@ -110,15 +109,6 @@
 	</ElementType>
 	<ElementType name="UnitCombatProdModifiers" content="eltOnly">
 		<element type="UnitCombatProdModifier" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="UnitCombatOngoingTraining" content="textOnly"/>
-	<ElementType name="iUnitCombatOngoingTrainingDuration" content="textOnly" dt:type="int"/>
-	<ElementType name="UnitCombatOngoingTrainingDuration" content="eltOnly">
-		<element type="UnitCombatOngoingTraining" minOccurs="0" maxOccurs="*"/>
-		<element type="iUnitCombatOngoingTrainingDuration" minOccurs="0"/>
-	</ElementType>
-	<ElementType name="UnitCombatOngoingTrainingDurations" content="eltOnly">
-		<element type="UnitCombatOngoingTrainingDuration" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="iBonusAidModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="BonusAidModifier" content="eltOnly">
@@ -362,7 +352,6 @@
 	<ElementType name="PrereqBonuses" content="eltOnly">
 		<element type="Bonus" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="NoBonus" content="textOnly"/>
 	<ElementType name="PowerBonus" content="textOnly"/>
 	<ElementType name="FreeBonus" content="textOnly"/>
 	<ElementType name="iNumFreeBonuses" content="textOnly" dt:type="int"/>
@@ -491,7 +480,6 @@
 	<ElementType name="bZoneOfControl" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bProtectedCulture" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iAdjacentDamagePercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iInvasionChance" content="textOnly" dt:type="int"/>
 	<ElementType name="iNoEntryDefenseLevel" content="textOnly" dt:type="int"/>
 	<ElementType name="iNumUnitFullHeal" content="textOnly" dt:type="int"/>
 	<ElementType name="iOccupationTimeModifier" content="textOnly" dt:type="int"/>
@@ -781,7 +769,6 @@
 		<element type="Bonus" minOccurs="0"/>
 		<element type="PrereqBonuses" minOccurs="0"/>
 		<element type="EnabledCivilizationTypes" minOccurs="0"/>
-		<element type="NoBonus" minOccurs="0"/>
 		<element type="PowerBonus" minOccurs="0"/>
 		<element type="ExtraFreeBonuses" minOccurs="0"/>
 		<element type="FreeBuilding" minOccurs="0"/>
@@ -922,7 +909,6 @@
 		<element type="bZoneOfControl" minOccurs="0"/>
 		<element type="bProtectedCulture" minOccurs="0"/>
 		<element type="iAdjacentDamagePercent" minOccurs="0"/>
-		<element type="iInvasionChance" minOccurs="0"/>
 		<element type="iNoEntryDefenseLevel" minOccurs="0"/>
 		<element type="iNumUnitFullHeal" minOccurs="0"/>
 		<element type="iOccupationTimeModifier" minOccurs="0"/>
@@ -1006,7 +992,6 @@
 		<element type="iOvercomeBase" minOccurs="0"/>
 		<element type="iTradeCommunicability" minOccurs="0"/>
 		<element type="iPopulationChange" minOccurs="0"/>
-		<element type="iOneTimePopulationPercentLoss" minOccurs="0"/>
 		<element type="iFrontSupportPercentModifier" minOccurs="0"/>
 		<element type="iShortRangeSupportPercentModifier" minOccurs="0"/>
 		<element type="iMediumRangeSupportPercentModifier" minOccurs="0"/>
@@ -1034,7 +1019,6 @@
 		<element type="UnitCombatRepelAgainstModifiers" minOccurs="0"/>
 		<element type="UnitCombatDefenseAgainstModifiers" minOccurs="0"/>
 		<element type="UnitCombatProdModifiers" minOccurs="0"/>
-		<element type="UnitCombatOngoingTrainingDurations" minOccurs="0"/>
 		<element type="BonusAidModifiers" minOccurs="0"/>
 		<element type="AfflictionOutbreakLevelChanges" minOccurs="0"/>
 		<element type="TechOutbreakLevelChanges" minOccurs="0"/>

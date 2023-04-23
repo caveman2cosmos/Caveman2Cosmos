@@ -1,5 +1,8 @@
 // selectionGroup.cpp
 
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
 #include "CvArtFileMgr.h"
@@ -120,6 +123,7 @@ void CvSelectionGroup::kill()
 
 bool CvSelectionGroup::sentryAlert() const
 {
+	PROFILE_EXTRA_FUNC();
 	CvUnit* unit = NULL;
 	int iMaxRange = 0;
 	foreach_(CvUnit* unitX, units())
@@ -154,6 +158,7 @@ bool CvSelectionGroup::sentryAlert() const
  */
 bool CvSelectionGroup::sentryAlertSameDomainType() const
 {
+	PROFILE_EXTRA_FUNC();
 	CvUnit* unit = NULL;
 	int iMaxRange = 0;
 
@@ -337,6 +342,7 @@ void CvSelectionGroup::resetHealing()
 
 bool CvSelectionGroup::showMoves() const
 {
+	PROFILE_EXTRA_FUNC();
 	if (GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS) || GC.getGame().isSimultaneousTeamTurns())
 	{
 		return false;
@@ -345,7 +351,7 @@ bool CvSelectionGroup::showMoves() const
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		const CvPlayer& pPlayer = GET_PLAYER((PlayerTypes)iI);
-		if (pPlayer.isAlive() && pPlayer.isHuman())
+		if (pPlayer.isAlive() && pPlayer.isHumanPlayer())
 		{
 			const CvUnit* pHeadUnit = getHeadUnit();
 			if (pHeadUnit && (pHeadUnit->isEnemy(pPlayer.getTeam()) ? pPlayer.isOption(PLAYEROPTION_SHOW_ENEMY_MOVES) : pPlayer.isOption(PLAYEROPTION_SHOW_FRIENDLY_MOVES)))
@@ -360,6 +366,7 @@ bool CvSelectionGroup::showMoves() const
 
 void CvSelectionGroup::updateTimers()
 {
+	PROFILE_EXTRA_FUNC();
 	FAssert(getOwner() != NO_PLAYER);
 
 	if (getNumUnits() > 0)
@@ -405,6 +412,7 @@ namespace {
 // Returns true if group was killed...
 bool CvSelectionGroup::doDelayedDeath()
 {
+	PROFILE_EXTRA_FUNC();
 	FAssert(getOwner() != NO_PLAYER);
 
 	if (isBusy())
@@ -575,6 +583,7 @@ void CvSelectionGroup::updateMission()
 
 CvPlot* CvSelectionGroup::lastMissionPlot() const
 {
+	PROFILE_EXTRA_FUNC();
 	CLLNode<MissionData>* pMissionNode = tailMissionQueueNode();
 
 	while (pMissionNode != NULL)
@@ -615,235 +624,266 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 		return false;
 	}
 
-	if (pPlot == NULL)
+	if (!pPlot)
 	{
 		pPlot = plot();
 	}
 #ifdef NOMADIC_START
 	const TechTypes sedentaryLifestyle = GC.getTECH_SEDENTARY_LIFESTYLE();
 #endif
-	CvUnit* pTargetUnit;
-
 	foreach_(CvUnit* pLoopUnit, units())
 	{
 		switch (iMission)
 		{
 #ifdef _MOD_SENTRY
 			case MISSION_MOVE_TO_SENTRY:
+			{
 				if (!pLoopUnit->canSentry(NULL))
 				{
 					return false;
 				}
 				// fall through to next case
+			}
 #endif
 			case MISSION_MOVE_TO:
+			{
 				if (!pPlot->at(iData1, iData2))
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_ROUTE_TO:
-				if (!(pPlot->at(iData1, iData2)) || (getBestBuildRoute(pPlot) != NO_ROUTE))
+			{
+				if (!pPlot->at(iData1, iData2) || getBestBuildRoute(pPlot) != NO_ROUTE)
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_MOVE_TO_UNIT:
+			{
 				FAssertMsg(iData1 != NO_PLAYER, "iData1 should be a valid Player");
-				pTargetUnit = GET_PLAYER((PlayerTypes)iData1).getUnit(iData2);
-				if ((pTargetUnit != NULL) && !(pTargetUnit->atPlot(pPlot)))
+				CvUnit* pTargetUnit = GET_PLAYER((PlayerTypes)iData1).getUnit(iData2);
+				if (pTargetUnit && !pTargetUnit->atPlot(pPlot))
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_SKIP:
+			{
 				if (pLoopUnit->canHold())
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_SLEEP:
+			{
 				if (pLoopUnit->canSleep())
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_FORTIFY:
+			{
 				if (pLoopUnit->canFortify())
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_BUILDUP:
+			{
 				if (pLoopUnit->canBuildUp())
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_AUTO_BUILDUP:
+			{
 				if (pLoopUnit->canBuildUp() || pLoopUnit->canFortify() || pLoopUnit->canSleep())
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_HEAL_BUILDUP:
+			{
 				if (pLoopUnit->canHeal(pPlot) && pPlot->getTotalTurnDamage(this) <= 0)
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_AIRPATROL:
+			{
 				if (pLoopUnit->canAirPatrol(pPlot))
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_SEAPATROL:
+			{
 				if (pLoopUnit->canSeaPatrol(pPlot))
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_HEAL:
+			{
 				//ls612: Fix for Terrain damage, apparently that wasn't factored in anywhere else.
 				if (pLoopUnit->canHeal(pPlot) && pPlot->getTotalTurnDamage(this) <= 0)
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_SENTRY:
+			{
 				if (pLoopUnit->canSentry(pPlot))
 				{
 					return true;
 				}
 				break;
-
+			}
 #ifdef _MOD_SENTRY
 			case MISSION_SENTRY_WHILE_HEAL:
+			{
 				if ((pLoopUnit->canSentry(pPlot)) && (pLoopUnit->canHeal(pPlot)))
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_SENTRY_NAVAL_UNITS:
+			{
 				if ((getDomainType() == DOMAIN_SEA) && (pLoopUnit->canSentry(pPlot)))
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_SENTRY_LAND_UNITS:
+			{
 				if ((getDomainType() == DOMAIN_LAND) && (pLoopUnit->canSentry(pPlot)))
 				{
 					return true;
 				}
 				break;
+			}
 #endif
-
 			case MISSION_AIRLIFT:
+			{
 				if (pLoopUnit->canAirliftAt(pPlot, iData1, iData2))
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_NUKE:
+			{
 				if (pLoopUnit->canNukeAt(pPlot, iData1, iData2))
 				{
 					return true;
 				}
 				break;
+			}
 			case MISSION_RECON:
+			{
 				if (pLoopUnit->canReconAt(pPlot, iData1, iData2))
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_PARADROP:
+			{
 				if (pLoopUnit->canParadropAt(pPlot, iData1, iData2))
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_AIRBOMB:
+			{
 				if (pLoopUnit->canAirBombAt(pPlot, iData1, iData2))
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_BOMBARD:
+			{
 				if (pLoopUnit->canBombard(pPlot))
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_RBOMBARD:
+			{
 				if (GC.isDCM_RANGE_BOMBARD() && pLoopUnit->canBombardAtRanged(pPlot, iData1, iData2))
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_RANGE_ATTACK:
+			{
 				if (pLoopUnit->canRangeStrikeAt(pPlot, iData1, iData2))
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_PLUNDER:
+			{
 				if (pLoopUnit->canPlunder(pPlot, bTestVisible))
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_PILLAGE:
+			{
 				if (pLoopUnit->canPillage(pPlot))
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_SABOTAGE:
+			{
 				if (pLoopUnit->canSabotage(pPlot, bTestVisible))
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_DESTROY:
+			{
 				if (pLoopUnit->canDestroy(pPlot, bTestVisible))
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_STEAL_PLANS:
+			{
 				if (pLoopUnit->canStealPlans(pPlot, bTestVisible))
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_FOUND:
+			{
 #ifdef NOMADIC_START
 				if (!GET_TEAM(pLoopUnit->getTeam()).isHasTech(sedentaryLifestyle))
 				{
@@ -855,35 +895,39 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_SPREAD:
+			{
 				if (pLoopUnit->canSpread(pPlot, ((ReligionTypes)iData1), bTestVisible))
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_SPREAD_CORPORATION:
+			{
 				if (pLoopUnit->canSpreadCorporation(pPlot, ((CorporationTypes)iData1), bTestVisible))
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_JOIN:
+			{
 				if (pLoopUnit->canJoin(pPlot, ((SpecialistTypes)iData1)))
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_CONSTRUCT:
+			{
 				if (pLoopUnit->canConstruct(pPlot, ((BuildingTypes)iData1), bTestVisible))
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_DISCOVER:
 			{
 				if (pLoopUnit->canDiscover())
@@ -893,34 +937,39 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 				break;
 			}
 			case MISSION_HURRY:
+			{
 				if (pLoopUnit->canHurry(pPlot, bTestVisible))
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_TRADE:
+			{
 				if (pLoopUnit->canTrade(pPlot, bTestVisible))
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_GREAT_WORK:
+			{
 				if (pLoopUnit->canGreatWork(pPlot))
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_INFILTRATE:
+			{
 				if (pLoopUnit->canInfiltrate(pPlot, bTestVisible))
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_GOLDEN_AGE:
+			{
 				//this means to play the animation only
 				if (iData1 != -1)
 				{
@@ -932,7 +981,7 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_BUILD:
 			{
 				FASSERT_BOUNDS(0, GC.getNumBuildInfos(), iData1);
@@ -944,19 +993,21 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 				break;
 			}
 			case MISSION_LEAD:
+			{
 				if (pLoopUnit->canLead(pPlot, iData1))
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_ESPIONAGE:
+			{
 				if (pLoopUnit->canEspionage(pPlot, bTestVisible))
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_CURE:
 			{
 #ifdef OUTBREAKS_AND_AFFLICTIONS
@@ -982,84 +1033,102 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 			case MISSION_BEGIN_COMBAT:
 			case MISSION_END_COMBAT:
 			case MISSION_AIRSTRIKE:
+			{
 				if (pLoopUnit->canAirStrike(pPlot))
 				{
 					return true;
 				}
 				break;
+			}
 			case MISSION_SURRENDER:
 			case MISSION_IDLE:
 			case MISSION_DIE:
 			case MISSION_DAMAGE:
 			case MISSION_MULTI_SELECT:
 			case MISSION_MULTI_DESELECT:
+			{
 				break;
+			}
 			case MISSION_AIRBOMB1:
+			{
 				if (pLoopUnit->canAirBomb1At(pPlot, iData1, iData2))
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_AIRBOMB2:
+			{
 				if (pLoopUnit->canAirBomb2At(pPlot, iData1, iData2))
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_AIRBOMB3:
+			{
 				if (pLoopUnit->canAirBomb3At(pPlot, iData1, iData2))
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_AIRBOMB4:
+			{
 				if (pLoopUnit->canAirBomb4At(pPlot, iData1, iData2))
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_AIRBOMB5:
+			{
 				if (pLoopUnit->canAirBomb5At(pPlot, iData1, iData2))
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_FENGAGE:
+			{
 				if (pLoopUnit->canFEngageAt(pPlot, iData1, iData2))
 				{
 					return true;
 				}
 				break;
+			}
 			case MISSION_CLAIM_TERRITORY:
+			{
 				if (pLoopUnit->canClaimTerritory(pPlot))
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_HURRY_FOOD:
+			{
 				if (pLoopUnit->canHurryFood(pPlot))
 				{
 					return true;
 				}
 				break;
+			}
 			case MISSION_INQUISITION:
+			{
 				if (pLoopUnit->canPerformInquisition(pPlot))
 				{
 					return true;
 				}
 				break;
+			}
 			case MISSION_ESPIONAGE_SLEEP:
+			{
 				if (pLoopUnit->plot()->isCity() && pLoopUnit->canSleep() && pLoopUnit->canEspionage(pPlot, true) && pLoopUnit->getFortifyTurns() != GC.getMAX_FORTIFY_TURNS())
 				{
 					return true;
 				}
 				break;
+			}
 			case MISSION_SHADOW:
 			{
 				{
@@ -1080,7 +1149,7 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 			}
 			case MISSION_GREAT_COMMANDER:
 			{
-				if (GC.getGame().isOption(GAMEOPTION_GREAT_COMMANDERS) && pLoopUnit->getUnitInfo().isGreatGeneral() && !pLoopUnit->isCommander())
+				if (GC.getGame().isOption(GAMEOPTION_UNIT_GREAT_COMMANDERS) && pLoopUnit->getUnitInfo().isGreatGeneral() && !pLoopUnit->isCommander())
 				{
 					return true;
 				}
@@ -1158,7 +1227,7 @@ bool CvSelectionGroup::startMission()
 	}
 	else
 	{
-		FAssertMsg(GET_PLAYER(getOwner()).isTurnActive() || GET_PLAYER(getOwner()).isHuman(), "It's expected that either the turn is active for this player or the player is human");
+		FAssertMsg(GET_PLAYER(getOwner()).isTurnActive() || GET_PLAYER(getOwner()).isHumanPlayer(), "It's expected that either the turn is active for this player or the player is human");
 
 		switch (headMissionQueueNode()->m_data.eMissionType)
 		{
@@ -1757,7 +1826,7 @@ bool CvSelectionGroup::startMission()
 									{
 										if (iValidShadowUnits == 1)
 										{
-											pLoopUnit->setShadowUnit(pShadowPlot->getCenterUnit());
+											pLoopUnit->setShadowUnit(pShadowPlot->getCenterUnit(false));
 										}
 										else
 										{
@@ -1984,12 +2053,12 @@ bool CvSelectionGroup::continueMission(int iSteps)
 					break;
 				}
 				CvUnit* pTargetUnit = GET_PLAYER((PlayerTypes)missionNode->m_data.iData1).getUnit(missionNode->m_data.iData2);
-				if (pTargetUnit != NULL)
+				if (pTargetUnit)
 				{
 					// Handling for mission to retrieve a unit
 					if (AI_getMissionAIType() == MISSIONAI_PICKUP)
 					{
-						if (!pTargetUnit->getGroup()->isStranded() || isFull() || pTargetUnit->plot() == NULL)
+						if (!pTargetUnit->getGroup()->isStranded() || isFull() || !pTargetUnit->plot())
 						{
 							bDone = true;
 							bAction = false;
@@ -2142,7 +2211,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 				case MISSION_MOVE_TO_UNIT:
 				{
 					CvUnit* pTargetUnit = GET_PLAYER((PlayerTypes)missionNode->m_data.iData1).getUnit(missionNode->m_data.iData2);
-					if (pTargetUnit == NULL || atPlot(pTargetUnit->plot()))
+					if (!pTargetUnit || atPlot(pTargetUnit->plot()))
 					{
 						bDone = true;
 					}
@@ -2271,6 +2340,7 @@ bool CvSelectionGroup::checkMoveSafety(int iX, int iY, int iFlags)
 
 void CvSelectionGroup::doCommand(CommandTypes eCommand, int iData1, int iData2)
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(CvUnit* unit, units())
 	{
 		unit->doCommand(eCommand, iData1, iData2);
@@ -2310,6 +2380,7 @@ bool CvSelectionGroup::canDoCommand(CommandTypes eCommand, int iData1, int iData
 
 bool CvSelectionGroup::canEverDoCommand(CommandTypes eCommand, int iData1, int iData2, bool bTestVisible, bool bUseCache) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (eCommand == COMMAND_LOAD)
 	{
 		return algo::any_of(plot()->units(), !CvUnit::fn::isFull());
@@ -2334,6 +2405,7 @@ bool CvSelectionGroup::canEverDoCommand(CommandTypes eCommand, int iData1, int i
 
 void CvSelectionGroup::setupActionCache()
 {
+	PROFILE_EXTRA_FUNC();
 	//cache busy calculation
 	m_bIsBusyCache = isBusy();
 
@@ -2387,7 +2459,7 @@ bool CvSelectionGroup::canDoInterfaceMode(InterfaceModeTypes eInterfaceMode)
 #endif
 			case INTERFACEMODE_GO_TO:
 			{
-				if ((getDomainType() != DOMAIN_AIR) && (getDomainType() != DOMAIN_IMMOBILE))
+				if (getDomainType() != DOMAIN_AIR && getDomainType() != DOMAIN_IMMOBILE)
 				{
 					return true;
 				}
@@ -2395,7 +2467,7 @@ bool CvSelectionGroup::canDoInterfaceMode(InterfaceModeTypes eInterfaceMode)
 			}
 			case INTERFACEMODE_GO_TO_TYPE:
 			{
-				if ((getDomainType() != DOMAIN_AIR) && (getDomainType() != DOMAIN_IMMOBILE))
+				if (getDomainType() != DOMAIN_AIR && getDomainType() != DOMAIN_IMMOBILE)
 				{
 					if (pLoopUnit->plot()->plotCount(PUF_isUnitType, pLoopUnit->getUnitType(), -1, NULL, pLoopUnit->getOwner()) > 1)
 					{
@@ -2566,6 +2638,7 @@ bool CvSelectionGroup::canDoInterfaceMode(InterfaceModeTypes eInterfaceMode)
 // Returns true if one of the units can execute the interface mode at the specified plot...
 bool CvSelectionGroup::canDoInterfaceModeAt(InterfaceModeTypes eInterfaceMode, CvPlot* pPlot)
 {
+	PROFILE_EXTRA_FUNC();
 	FAssertMsg(eInterfaceMode != NO_INTERFACEMODE, "InterfaceMode is not assigned a valid value");
 
 	foreach_(const CvUnit* pLoopUnit, units())
@@ -2656,7 +2729,7 @@ bool CvSelectionGroup::canDoInterfaceModeAt(InterfaceModeTypes eInterfaceMode, C
 
 bool CvSelectionGroup::isHuman() const
 {
-	return (getOwner() != NO_PLAYER) ? GET_PLAYER(getOwner()).isHuman() : true;
+	return (getOwner() != NO_PLAYER) ? GET_PLAYER(getOwner()).isHumanPlayer() : true;
 }
 
 bool CvSelectionGroup::isBusy() const
@@ -2667,6 +2740,7 @@ bool CvSelectionGroup::isBusy() const
 
 bool CvSelectionGroup::isCargoBusy() const
 {
+	PROFILE_EXTRA_FUNC();
 	const CvPlot* pPlot = plot();
 	foreach_(const CvUnit* pLoopUnit1, units() | filtered(CvUnit::fn::hasCargo()))
 	{
@@ -2685,6 +2759,7 @@ bool CvSelectionGroup::isCargoBusy() const
 
 int CvSelectionGroup::baseMoves() const
 {
+	PROFILE_EXTRA_FUNC();
 	int iBestValue = MAX_INT;
 
 	foreach_(const CvUnit* pLoopUnit, units())
@@ -2719,6 +2794,7 @@ bool CvSelectionGroup::isWaiting() const
 
 bool CvSelectionGroup::isFull() const
 {
+	PROFILE_EXTRA_FUNC();
 	// do two passes, the first pass, we ignore units with speical cargo
 	int iSpecialCargoCount = 0;
 	int iCargoCount = 0;
@@ -2762,7 +2838,7 @@ bool CvSelectionGroup::hasCargo() const
 //Call for volume when you want the total cargo volume held by the group
 int CvSelectionGroup::getCargo(bool bVolume) const
 {
-	if (bVolume && GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+	if (bVolume && GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 	{
 		return algo::accumulate(units() | transformed(CvUnit::fn::SMgetCargo()), 0);
 	}
@@ -2776,6 +2852,7 @@ bool CvSelectionGroup::canAllMove() const
 
 bool CvSelectionGroup::canAllSelectedMove() const
 {
+	PROFILE_EXTRA_FUNC();
 	FAssert(isHuman());
 	if (!IsSelected()) return false;
 
@@ -2831,12 +2908,15 @@ bool CvSelectionGroup::canEnterPlot(const CvPlot* pPlot, bool bAttack) const
 }
 /*DllExport*/ bool CvSelectionGroup::canMoveInto(CvPlot* pPlot, bool bAttack)
 {
+#ifdef _DEBUG
 	OutputDebugString("exe is asking if group can move into a plot\n");
+#endif
 	return canEnterPlot(pPlot, bAttack);
 }
 
 bool CvSelectionGroup::canEnterOrAttackPlot(const CvPlot* pPlot, bool bDeclareWar) const
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(const CvUnit* unitX, units())
 	{
 		if (unitX->canEnterOrAttackPlot(pPlot, bDeclareWar))
@@ -2848,12 +2928,15 @@ bool CvSelectionGroup::canEnterOrAttackPlot(const CvPlot* pPlot, bool bDeclareWa
 }
 /*DllExport*/ bool CvSelectionGroup::canMoveOrAttackInto(CvPlot* pPlot, bool bDeclareWar)
 {
+#ifdef _DEBUG
 	OutputDebugString("exe is asking if group can move into or attack a plot\n");
+#endif
 	return canEnterOrAttackPlot(pPlot, bDeclareWar);
 }
 
 bool CvSelectionGroup::canMoveThrough(const CvPlot* pPlot, bool bDeclareWar) const
 {
+	PROFILE_EXTRA_FUNC();
 #define	MAX_UNIQUE_UNIT_CATEGORIES_CONSIDERED	3
 	int	unitCharacteristics[MAX_UNIQUE_UNIT_CATEGORIES_CONSIDERED];
 	int numUniqueUnitCategories = 0;
@@ -2922,6 +3005,7 @@ bool CvSelectionGroup::hasCollateralDamage() const
 
 bool CvSelectionGroup::canBombard(const CvPlot* pPlot, bool bCheckCanReduceOnly) const
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(const CvUnit* pLoopUnit, units())
 	{
 		if (pLoopUnit->canBombard(pPlot, bCheckCanReduceOnly))
@@ -2950,6 +3034,7 @@ bool CvSelectionGroup::canBombardAtRanged(const CvPlot* pPlot, int iX, int iY) c
 
 int CvSelectionGroup::getMinimumRBombardDamageLimit() const
 {
+	PROFILE_EXTRA_FUNC();
 	int iLowest = MAX_INT;
 	foreach_(const CvUnit* pLoopUnit, units())
 	{
@@ -2965,6 +3050,7 @@ int CvSelectionGroup::getMinimumRBombardDamageLimit() const
 
 int CvSelectionGroup::getMinimumRBombardRange() const
 {
+	PROFILE_EXTRA_FUNC();
 	int iLowest = MAX_INT;
 	foreach_(const CvUnit* pLoopUnit, units())
 	{
@@ -2980,6 +3066,7 @@ int CvSelectionGroup::getMinimumRBombardRange() const
 
 int CvSelectionGroup::getRBombardDamageMaxUnits() const
 {
+	PROFILE_EXTRA_FUNC();
 	int iHighest = 0;
 	foreach_(const CvUnit* pLoopUnit, units())
 	{
@@ -3319,11 +3406,15 @@ CvPlot* CvSelectionGroup::plot() const
 	return pHeadUnit ? pHeadUnit->plot() : NULL;
 }
 
-CvPlot* CvSelectionGroup::plotExternal() const
+
+/*DllExport*/ CvPlot* CvSelectionGroup::plotExternal() const
 {
+#ifdef _DEBUG
+	OutputDebugString("exe is asking for the plot of this group\n");
+#endif
 	CvPlot* pResult = plot();
 
-	FAssert(pResult == NULL || pResult->isInViewport());
+	FAssert(!pResult || pResult->isInViewport());
 
 	return pResult;
 }
@@ -3438,167 +3529,162 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 
 	bool bStack = isHuman() && (getDomainType() == DOMAIN_AIR || GET_PLAYER(getOwner()).isOption(PLAYEROPTION_STACK_ATTACK));
 
-	bool bAttack = false;
 	bFailedAlreadyFighting = false;
 	bool bStealthDefense = false;
 	bool bAffixFirstAttacker = false;
 	bool bAffixFirstDefender = false;
 
-	if (getNumUnits() > 0 && (getDomainType() == DOMAIN_AIR || stepDistance(getX(), getY(), pDestPlot->getX(), pDestPlot->getY()) <= 1)
-	&& ((iFlags & MOVE_DIRECT_ATTACK) || getDomainType() == DOMAIN_AIR || (iFlags & MOVE_THROUGH_ENEMY) || generatePath(plot(), pDestPlot, iFlags) && getPathFirstPlot() == pDestPlot))
+	if (getNumUnits() < 1
+	|| getDomainType() != DOMAIN_AIR && stepDistance(getX(), getY(), pDestPlot->getX(), pDestPlot->getY()) > 1
+	|| !(iFlags & MOVE_DIRECT_ATTACK) && getDomainType() != DOMAIN_AIR && !(iFlags & MOVE_THROUGH_ENEMY) && (!generatePath(plot(), pDestPlot, iFlags) || getPathFirstPlot() != pDestPlot))
 	{
-		int iAttackOdds = 0;
-		CvUnit* pBestAttackUnit = AI_getBestGroupAttacker(pDestPlot, true, iAttackOdds, bStealthDefense, false, 0, false, bStealthDefense);
-		if (pBestAttackUnit)
+		return false;
+	}
+	bool bAttack = false;
+	int iAttackOdds = 0;
+	CvUnit* pBestAttackUnit = AI_getBestGroupAttacker(pDestPlot, true, iAttackOdds, bStealthDefense, false, 0, false, bStealthDefense);
+	if (!pBestAttackUnit)
+	{
+		return false;
+	}
+	if (!pDestPlot->hasDefender(false, NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, true))
+	{
+		if (pDestPlot->hasStealthDefender(pBestAttackUnit) && !pDestPlot->isCity(false))
 		{
-			// if there are no defenders, do not attack
-			//TB Surprise Defense
-			// The battle must be set differently so that stealth combat factors apply. But only in battle with THIS defender...
-			if (!pDestPlot->hasDefender(false, NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, true))
+			//reveal!
+			pDestPlot->revealBestStealthDefender(pBestAttackUnit);
+			bStealthDefense = true;
+			bAffixFirstAttacker = true;
+		}
+	}
+
+	if (isHuman() && !isLastPathPlotVisible() && getDomainType() != DOMAIN_AIR)
+	{
+		return false;
+	}
+
+	CvUnit* pBestDefender = pDestPlot->getBestDefender(NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, false, bStealthDefense);
+	if (pBestDefender != NULL)
+	{
+		bAffixFirstDefender = true;
+	}
+
+	bool bNoBlitz = (!pBestAttackUnit->isBlitz() && pBestAttackUnit->isMadeAttack());
+
+	if (groupDeclareWar(pDestPlot))
+	{
+		return true;
+	}
+
+	if (!pBestDefender)
+	{
+		return false;
+	}
+
+	bool bStealth = false;
+	bool bBombardExhausted = false;
+	bool bLoopStealthDefense = false;
+	while (true)
+	{
+		PROFILE("CvSelectionGroup::groupAttack.StackLoop");
+		if (bLoopStealthDefense)
+		{
+			bStealthDefense = false;
+		}
+		if (bStealthDefense)
+		{
+			bLoopStealthDefense = true;
+		}
+		if (!bAffixFirstAttacker)
+		{
+			pBestAttackUnit = AI_getBestGroupAttacker(pDestPlot, false, iAttackOdds, bLoopStealthDefense, bNoBlitz, 0, false, bStealth);
+			if (!pBestAttackUnit)
 			{
-				if (pDestPlot->hasStealthDefender(pBestAttackUnit) && !pDestPlot->isCity(false))
+				break;
+			}
+		}
+		// if there are no defenders, do not attack
+		if (!bAffixFirstAttacker && !pDestPlot->hasDefender(false, NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, true))
+		{
+			if (pDestPlot->hasStealthDefender(pBestAttackUnit) && !pDestPlot->isCity(false))
+			{
+				pDestPlot->revealBestStealthDefender(pBestAttackUnit);
+				bStealth = true;
+			}
+		}
+		if (!bAffixFirstDefender)
+		{
+			pBestDefender = pDestPlot->getBestDefender(NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, false, true);
+		}
+		bAffixFirstAttacker = false;
+		bAffixFirstDefender = false;
+
+		if (iAttackOdds < 68 && !isHuman() && !bStealth)
+		{
+			if (bBombardExhausted)
+			{
+				CvUnit* pBestSacrifice = AI_getBestGroupSacrifice(pDestPlot, false, bNoBlitz);
+				if (pBestSacrifice
+				&& pBestSacrifice->canEnterPlot(pDestPlot, MoveCheck::Attack | (bStealthDefense? MoveCheck::Suprise : MoveCheck::None)))
 				{
-					//reveal!
-					pDestPlot->revealBestStealthDefender(pBestAttackUnit);
-					bStealthDefense = true;
-					bAffixFirstAttacker = true;
+					pBestAttackUnit = pBestSacrifice;
 				}
 			}
-
-			if (isHuman() && !isLastPathPlotVisible() && getDomainType() != DOMAIN_AIR)
+			else
 			{
-				return false;
-			}
+				bool bFoundBombard = false;
 
-			CvUnit* pBestDefender = pDestPlot->getBestDefender(NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, false, bStealthDefense);
-			if (pBestDefender != NULL)
+				OutputDebugString("Attempting to bombard tough plot\n");
+				foreach_(CvUnit* pLoopUnit, units())
+				{
+					if (pLoopUnit->canBombardAtRanged(plot(), pDestPlot->getX(), pDestPlot->getY()))
+					{
+						bFoundBombard = true;
+						pLoopUnit->bombardRanged(pDestPlot->getX(), pDestPlot->getY(), false);
+					}
+				}
+				bBombardExhausted = !bFoundBombard;
+				continue;
+			}
+		}
+
+		bAttack = true;
+
+		if (getNumUnits() < 2)
+		{
+			if (pBestDefender)
 			{
-				bAffixFirstDefender = true;
+				pBestAttackUnit->attack(pDestPlot, false, bLoopStealthDefense);
 			}
-// BUG - Safe Move - end
+			break;
+		}
 
-			bool bNoBlitz = (!pBestAttackUnit->isBlitz() && pBestAttackUnit->isMadeAttack());
-
-			if (groupDeclareWar(pDestPlot))
+		if (!bLoopStealthDefense && (pBestAttackUnit->plot()->isBattle() || pDestPlot->isBattle()))
+		{
+			bFailedAlreadyFighting = true;
+		}
+		else
+		{
+			if (!pBestDefender)
 			{
-				return true;
+				break;
 			}
+			const int iPlus = pDestPlot->hasStealthDefender(pBestAttackUnit);
+			const bool bMore = pDestPlot->getNumVisiblePotentialEnemyDefenders(pBestAttackUnit) + iPlus > 1;
+			const bool bQuick = (bStack || bMore || bLoopStealthDefense);
 
-			if (NULL == pBestDefender)//Not a part of groupStackAttack - unsure if this is necessary or performing a function.
+			pBestAttackUnit->attack(pDestPlot, bQuick, bLoopStealthDefense);
+		}
+
+		if (bFailedAlreadyFighting || !bStack)
+		{
+			// If this is AI stack, follow through with the attack to the end.
+			// Allow Automated Units to Stack Attack
+			if ((!isHuman() || isAutomated()) && getNumUnits() > 1)
 			{
-				return false;
+				AI_queueGroupAttack(iX, iY);
 			}
-
-			bool bStealth = false;
-			bool bBombardExhausted = false;
-			bool bLoopStealthDefense = false;
-			while (true)
-			{
-				PROFILE("CvSelectionGroup::groupAttack.StackLoop");
-				if (bLoopStealthDefense)
-				{
-					bStealthDefense = false;
-				}
-				if (bStealthDefense)
-				{
-					bLoopStealthDefense = true;
-				}
-				if (!bAffixFirstAttacker)
-				{
-					pBestAttackUnit = AI_getBestGroupAttacker(pDestPlot, false, iAttackOdds, bLoopStealthDefense, bNoBlitz, 0, false, bStealth);
-				}
-				if (pBestAttackUnit == NULL)
-				{
-					break;
-				}
-
-				// if there are no defenders, do not attack
-				if (!bAffixFirstAttacker && !pDestPlot->hasDefender(false, NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, true))
-				{
-					if (pDestPlot->hasStealthDefender(pBestAttackUnit) && !pDestPlot->isCity(false))
-					{
-						pDestPlot->revealBestStealthDefender(pBestAttackUnit);
-						bStealth = true;
-					}
-				}
-				if (!bAffixFirstDefender)
-				{
-					pBestDefender = pDestPlot->getBestDefender(NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, false, true);
-				}
-				bAffixFirstAttacker = false;
-				bAffixFirstDefender = false;
-
-				if (iAttackOdds < 68 && !isHuman() && !bStealth)
-				{
-					if (bBombardExhausted)
-					{
-						CvUnit* pBestSacrifice = AI_getBestGroupSacrifice(pDestPlot, false, bNoBlitz);
-						if (pBestSacrifice != NULL
-							&& pBestSacrifice->canEnterPlot(pDestPlot, MoveCheck::Attack | (bStealthDefense? MoveCheck::Suprise : MoveCheck::None)))
-						{
-							pBestAttackUnit = pBestSacrifice;
-						}
-					}
-					else
-					{
-						bool bFoundBombard = false;
-
-						OutputDebugString("Attempting to bombard tough plot\n");
-						foreach_(CvUnit* pLoopUnit, units())
-						{
-							if (pLoopUnit->canBombardAtRanged(plot(), pDestPlot->getX(), pDestPlot->getY()))
-							{
-								bFoundBombard = true;
-								pLoopUnit->bombardRanged(pDestPlot->getX(), pDestPlot->getY(), false);
-							}
-						}
-						bBombardExhausted = !bFoundBombard;
-						continue;
-					}
-				}
-
-				bAttack = true;
-
-				if (getNumUnits() < 2)
-				{
-					if (pBestDefender)
-					{
-						pBestAttackUnit->attack(pDestPlot, false, bLoopStealthDefense);
-					}
-					break;
-				}
-
-				if (!bLoopStealthDefense && (pBestAttackUnit->plot()->isBattle() || pDestPlot->isBattle()))
-				{
-					bFailedAlreadyFighting = true;
-				}
-				else if (!pBestDefender)
-				{
-					break;
-				}
-				else
-				{
-					int iPlus = 0;
-					if (pDestPlot->hasStealthDefender(pBestAttackUnit))
-					{
-						iPlus++;
-					}
-					const bool bMore = pDestPlot->getNumVisiblePotentialEnemyDefenders(pBestAttackUnit) + iPlus > 1;
-					const bool bQuick = (bStack || bMore || bLoopStealthDefense);
-					pBestAttackUnit->attack(pDestPlot, bQuick, bLoopStealthDefense);
-				}
-
-				if (bFailedAlreadyFighting || !bStack)
-				{
-					// If this is AI stack, follow through with the attack to the end.
-					// Allow Automated Units to Stack Attack
-					if ((!isHuman() || isAutomated()) && getNumUnits() > 1)
-					{
-						AI_queueGroupAttack(iX, iY);
-					}
-					break;
-				}
-			}
+			break;
 		}
 	}
 	return bAttack;
@@ -3720,10 +3806,10 @@ bool CvSelectionGroup::groupPathTo(int iX, int iY, int iFlags)
 
 	FAssert(!isBusy());
 	FAssert(getOwner() != NO_PLAYER);
-	FAssert(headMissionQueueNode() != NULL);
+	FAssert(headMissionQueueNode());
 
 	CvPlot* pDestPlot = GC.getMap().plot(iX, iY);
-	FAssertMsg(pDestPlot != NULL, "DestPlot is not assigned a valid value");
+	FAssertMsg(pDestPlot, "DestPlot is not assigned a valid value");
 
 	FAssertMsg(canAllMove(), "canAllMove is expected to be true");
 
@@ -3733,7 +3819,6 @@ bool CvSelectionGroup::groupPathTo(int iX, int iY, int iFlags)
 		{
 			return false;
 		}
-
 		pPathPlot = pDestPlot;
 	}
 	else
@@ -3834,6 +3919,7 @@ bool CvSelectionGroup::groupRoadTo(int iX, int iY, int iFlags)
 // Returns true if build should continue...
 bool CvSelectionGroup::groupBuild(BuildTypes eBuild)
 {
+	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, MAX_PLAYERS, getOwner());
 	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBuild);
 
@@ -3961,6 +4047,7 @@ bool CvSelectionGroup::groupBuild(BuildTypes eBuild)
 
 void CvSelectionGroup::setTransportUnit(CvUnit* pTransportUnit, CvSelectionGroup** pOtherGroup)
 {
+	PROFILE_EXTRA_FUNC();
 	// if we are loading
 	if (pTransportUnit != NULL)
 	{
@@ -3981,7 +4068,7 @@ void CvSelectionGroup::setTransportUnit(CvUnit* pTransportUnit, CvSelectionGroup
 
 		// if there is space, but not enough to fit whole group, then split us, and set on the new group
 		//Definitely only applicable in mechanism to non-sm
-		if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+		if (!GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 		{
 			if (iCargoSpaceAvailable < getNumUnits())
 			{
@@ -4029,7 +4116,7 @@ void CvSelectionGroup::setTransportUnit(CvUnit* pTransportUnit, CvSelectionGroup
 			FAssertMsg(pLoopUnit->getTransportUnit() != pTransportUnit, "Unit is already changed");
 
 			// if there is room, load the unit
-			if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+			if (GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 			{
 				if (pTransportUnit->cargoSpaceAvailable(pLoopUnit->getSpecialUnitType(), pLoopUnit->getDomainType()) >= pLoopUnit->SMCargoVolume())
 				{
@@ -4066,6 +4153,7 @@ void CvSelectionGroup::setTransportUnit(CvUnit* pTransportUnit, CvSelectionGroup
 ///
 void CvSelectionGroup::setRemoteTransportUnit(CvUnit* pTransportUnit)
 {
+	PROFILE_EXTRA_FUNC();
 	// if we are loading
 	if (pTransportUnit != NULL)
 	{
@@ -4085,7 +4173,7 @@ void CvSelectionGroup::setRemoteTransportUnit(CvUnit* pTransportUnit)
 		}
 
 		// if there is space, but not enough to fit whole group, then split us, and set on the new group
-		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+		if (GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 		{
 			if (iCargoSpaceAvailable < getNumUnitCargoVolumeTotal())
 			{
@@ -4130,7 +4218,7 @@ void CvSelectionGroup::setRemoteTransportUnit(CvUnit* pTransportUnit)
 				if (pLoopUnit->getTransportUnit() != pTransportUnit && pLoopUnit->getOwner() == pTransportUnit->getOwner())
 				{
 					bool bSpaceAvailable = false;
-					if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+					if (GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS))
 					{
 						bSpaceAvailable = pTransportUnit->cargoSpaceAvailable(pLoopUnit->getSpecialUnitType(), pLoopUnit->getDomainType()) > pLoopUnit->SMCargoVolume();
 					}
@@ -4197,6 +4285,7 @@ bool CvSelectionGroup::isAmphibPlot(const CvPlot* pPlot) const
 // Returns true if attempted an amphib landing...
 bool CvSelectionGroup::groupAmphibMove(CvPlot* pPlot, int iFlags)
 {
+	PROFILE_EXTRA_FUNC();
 	FAssert(getOwner() != NO_PLAYER);
 
 	if (groupDeclareWar(pPlot))
@@ -4333,7 +4422,7 @@ void CvSelectionGroup::updateMissionTimer(int iSteps)
 			{
 				CvUnit* pTargetUnit = GET_PLAYER((PlayerTypes)missionNode->m_data.iData1).getUnit(missionNode->m_data.iData2);
 
-				if (pTargetUnit != NULL)
+				if (pTargetUnit)
 				{
 					pTargetPlot = pTargetUnit->plot();
 				}
@@ -4394,6 +4483,7 @@ ActivityTypes CvSelectionGroup::getActivityType() const
 
 void CvSelectionGroup::setActivityType(ActivityTypes eNewValue, MissionTypes eSleepType)
 {
+	PROFILE_EXTRA_FUNC();
 	FAssert(getOwner() != NO_PLAYER);
 
 	if (eNewValue == m_eActivityType)
@@ -4470,6 +4560,7 @@ bool CvSelectionGroup::isAutomated() const
 
 void CvSelectionGroup::setAutomateType(AutomateTypes eNewValue)
 {
+	PROFILE_EXTRA_FUNC();
 	FAssert(getOwner() != NO_PLAYER);
 
 	if (getAutomateType() != eNewValue)
@@ -4509,6 +4600,7 @@ FAStarNode* CvSelectionGroup::getPathLastNode() const
 
 CvPlot* CvSelectionGroup::getPathFirstPlot() const
 {
+	PROFILE_EXTRA_FUNC();
 #ifdef USE_OLD_PATH_GENERATOR
 	FAStarNode* pNode = getPathLastNode();
 
@@ -4550,6 +4642,7 @@ const CvPath& CvSelectionGroup::getPath() const
 
 CvPlot* CvSelectionGroup::getPathEndTurnPlot() const
 {
+	PROFILE_EXTRA_FUNC();
 #ifdef USE_OLD_PATH_GENERATOR
 	FAStarNode* pNode = getPathLastNode();
 
@@ -4855,6 +4948,7 @@ bool CvSelectionGroup::canPathDirectlyToInternal(const CvPlot* pFromPlot, const 
 
 int CvSelectionGroup::movesRemainingAfterMovingTo(int iStartMoves, const CvPlot* pFromPlot, const CvPlot* pToPlot) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iResult = MAX_INT;
 
 	foreach_(const CvUnit* pLoopUnit, units())
@@ -4871,6 +4965,7 @@ int CvSelectionGroup::movesRemainingAfterMovingTo(int iStartMoves, const CvPlot*
 
 int CvSelectionGroup::movesLeft() const
 {
+	PROFILE_EXTRA_FUNC();
 	int iResult = MAX_INT;
 
 	foreach_(const CvUnit* pLoopUnit, units())
@@ -4884,6 +4979,7 @@ int CvSelectionGroup::movesLeft() const
 
 void CvSelectionGroup::clearUnits()
 {
+	PROFILE_EXTRA_FUNC();
 	CLLNode<IDInfo>* pUnitNode = headUnitNode();
 
 	while (pUnitNode != NULL)
@@ -4899,6 +4995,7 @@ bool CvSelectionGroup::hasUnitOfAI(UnitAITypes eUnitAI) const
 
 int	CvSelectionGroup::getWorstDamagePercent(UnitCombatTypes eIgnoreUnitCombat) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iWorstDamage = 0;
 
 	foreach_(const CvUnit* pLoopUnit, units())
@@ -4918,6 +5015,7 @@ int	CvSelectionGroup::getWorstDamagePercent(UnitCombatTypes eIgnoreUnitCombat) c
 // Returns true if the unit is added...
 bool CvSelectionGroup::addUnit(CvUnit* pUnit, bool bMinimalChange)
 {
+	PROFILE_EXTRA_FUNC();
 	//PROFILE_FUNC();
 
 	CvUnit* pOldHeadUnit = getHeadUnit();
@@ -4967,16 +5065,15 @@ bool CvSelectionGroup::addUnit(CvUnit* pUnit, bool bMinimalChange)
 
 	if (pOldHeadUnit != getHeadUnit() && GC.getENABLE_DYNAMIC_UNIT_ENTITIES())
 	{
-		if (pOldHeadUnit != NULL)
+		if (pOldHeadUnit)
 		{
 			pOldHeadUnit->reloadEntity();
 		}
-
 		getHeadUnit()->reloadEntity();
 	}
 
 #ifdef _DEBUG
-	if (pPlot != NULL)
+	if (pPlot)
 	{
 		validateLocations();
 	}
@@ -4991,29 +5088,29 @@ bool CvSelectionGroup::containsUnit(const CvUnit* pUnit) const
 
 void CvSelectionGroup::removeUnit(CvUnit* pUnit)
 {
+	PROFILE_EXTRA_FUNC();
 	CvUnit* pOldHeadUnit = getHeadUnit();
 
 	CLLNode<IDInfo>* pUnitNode = headUnitNode();
 
-	while (pUnitNode != NULL)
+	while (pUnitNode)
 	{
 		if (::getUnit(pUnitNode->m_data) == pUnit)
 		{
 			deleteUnitNode(pUnitNode);
 			break;
 		}
-
 		pUnitNode = nextUnitNode(pUnitNode);
 	}
 
-	if ( pOldHeadUnit != getHeadUnit() && GC.getENABLE_DYNAMIC_UNIT_ENTITIES() )
+	if (pOldHeadUnit != getHeadUnit() && GC.getENABLE_DYNAMIC_UNIT_ENTITIES())
 	{
-		if ( pOldHeadUnit != NULL )
+		if (pOldHeadUnit)
 		{
 			pOldHeadUnit->reloadEntity();
 		}
 
-		if ( getHeadUnit() != NULL )
+		if (getHeadUnit())
 		{
 			getHeadUnit()->reloadEntity();
 		}
@@ -5070,6 +5167,7 @@ int CvSelectionGroup::getNumUnitCargoVolumeTotal() const
 
 int CvSelectionGroup::getLeastCargoVolume() const
 {
+	PROFILE_EXTRA_FUNC();
 	int iLowest = MAX_INT;
 	foreach_(const CvUnit* pLoopUnit, units())
 	{
@@ -5090,6 +5188,7 @@ bool CvSelectionGroup::meetsUnitSelectionCriteria(const CvUnitSelectionCriteria*
 
 void CvSelectionGroup::mergeIntoGroup(CvSelectionGroup* pSelectionGroup)
 {
+	PROFILE_EXTRA_FUNC();
 	CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
 
 	// merge groups, but make sure we do not change the head unit AI
@@ -5155,6 +5254,7 @@ namespace {
 // split up each unit AI type as evenly as possible, mirrors origninal group composition.
 CvSelectionGroup* CvSelectionGroup::splitGroup(int iSplitSize, CvUnit* pNewHeadUnit, CvSelectionGroup** ppOtherGroup)
 {
+	PROFILE_EXTRA_FUNC();
 	if (iSplitSize <= 0)
 	{
 		FErrorMsg("splitGroup size must be > 0");
@@ -5284,6 +5384,10 @@ CvSelectionGroup* CvSelectionGroup::splitGroup(int iSplitSize, CvUnit* pNewHeadU
 //------------------------------------------------------------------------------------------------
 /*DllExport*/ int CvSelectionGroup::getUnitIndex(CvUnit* pUnit, int maxIndex /* = -1 */) const
 {
+	PROFILE_EXTRA_FUNC();
+#ifdef _DEBUG
+	OutputDebugString("exe is asking for a units' index within this group\n");
+#endif
 	FAssertMsg(this != NULL, "CTD incoming");
 	int iIndex = 0;
 
@@ -5317,6 +5421,7 @@ CvUnit* CvSelectionGroup::getHeadUnit() const
 
 CvUnit* CvSelectionGroup::getUnitAt(int index) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (index >= getNumUnits())
 	{
 		FErrorMsg("[Jason] Selectiongroup unit index out of bounds.");
@@ -5530,6 +5635,7 @@ CLLNode<MissionData>* CvSelectionGroup::tailMissionQueueNode() const
 
 int CvSelectionGroup::getMissionType(int iNode) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 	CLLNode<MissionData>* pMissionNode = headMissionQueueNode();
 
@@ -5549,6 +5655,7 @@ int CvSelectionGroup::getMissionType(int iNode) const
 
 int CvSelectionGroup::getMissionData1(int iNode) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 	CLLNode<MissionData>* pMissionNode = headMissionQueueNode();
 
@@ -5567,6 +5674,7 @@ int CvSelectionGroup::getMissionData1(int iNode) const
 
 int CvSelectionGroup::getMissionData2(int iNode) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 	CLLNode<MissionData>* pMissionNode = headMissionQueueNode();
 
@@ -5607,6 +5715,7 @@ bool CvSelectionGroup::isMoveMission(CLLNode<MissionData>* node) const
 
 void CvSelectionGroup::read(FDataStreamBase* pStream)
 {
+	PROFILE_EXTRA_FUNC();
 	// Init saved data
 	reset();
 
@@ -5711,149 +5820,6 @@ void CvSelectionGroup::deactivateHeadMission()
 }
 
 
-bool CvSelectionGroup::groupStackAttack(int iX, int iY, int iFlags, bool& bFailedAlreadyFighting, bool bStealth)
-{
-	CvPlot* pDestPlot = GC.getMap().plot(iX, iY);
-	CvPlot* pOrigPlot = plot();
-
-	if (pDestPlot != pOrigPlot && iFlags & MOVE_THROUGH_ENEMY)
-	{
-		if (generatePath(plot(), pDestPlot, iFlags))
-		{
-			pDestPlot = getPathFirstPlot();
-		}
-	}
-	FAssertMsg(pOrigPlot != NULL, "OrigPlot is not assigned a valid value");
-	FAssertMsg(pDestPlot != NULL, "DestPlot is not assigned a valid value");
-
-	bool bStack = isHuman();
-	bool bAttack = false;
-	bool bAction = false;
-	bFailedAlreadyFighting = false;
-	bool bAffixFirstAttacker = false;
-	bool bAffixFirstDefender = false;
-	if (getNumUnits() > 0)
-	{
-		if ((getDomainType() == DOMAIN_AIR) || (stepDistance(getX(), getY(), pDestPlot->getX(), pDestPlot->getY()) <= 1))
-		{
-			if ((iFlags & MOVE_DIRECT_ATTACK) || (getDomainType() == DOMAIN_AIR) || (iFlags & MOVE_THROUGH_ENEMY) || (generatePath(plot(), pDestPlot, iFlags) && (getPathFirstPlot() == pDestPlot) || bStealth))
-			{
-				int iAttackOdds;
-				CvUnit* pBestAttackUnit = AI_getBestGroupAttacker(pDestPlot, true, iAttackOdds);
-				if (pBestAttackUnit)
-				{
-					// if there are no defenders, do not attack
-					if (!pDestPlot->hasDefender(false, NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, true))
-					{
-						if (pDestPlot->hasStealthDefender(pBestAttackUnit) && !pDestPlot->isCity(false))
-						{
-							pDestPlot->revealBestStealthDefender(pBestAttackUnit);
-							bStealth = true;
-							bAffixFirstAttacker = true;
-						}
-					}
-
-					if (isHuman() && !isLastPathPlotVisible() && getDomainType() != DOMAIN_AIR)
-					{
-						return false;
-					}
-
-					CvUnit* pBestDefender = pDestPlot->getBestDefender(NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, false, bStealth);
-					if (pBestDefender != NULL)
-					{
-						bAffixFirstDefender = true;
-					}
-
-					bool bNoBlitz = (!pBestAttackUnit->isBlitz() && pBestAttackUnit->isMadeAttack() && !bStealth);
-
-					if (groupDeclareWar(pDestPlot))
-					{
-						return true;
-					}
-
-					bool bBombardExhausted = false;
-					while (true)
-					{
-						if (!bAffixFirstAttacker)
-						{
-							pBestAttackUnit = AI_getBestGroupAttacker(pDestPlot, false, iAttackOdds, false, bNoBlitz, 0, false, bStealth);
-						}
-						if (pBestAttackUnit == NULL)
-						{
-							break;
-						}
-						else
-						{
-							// if there are no defenders, do not attack
-							if (!bAffixFirstAttacker && !pDestPlot->hasDefender(false, NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, true))
-							{
-								if (pDestPlot->hasStealthDefender(pBestAttackUnit) && !pDestPlot->isCity(false))
-								{
-									pDestPlot->revealBestStealthDefender(pBestAttackUnit);
-									bStealth = true;
-								}
-							}
-							if (!bAffixFirstDefender)
-							{
-								pBestDefender = pDestPlot->getBestDefender(NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, false, true);
-							}
-							bAffixFirstAttacker = false;
-							bAffixFirstDefender = false;
-						}
-						if (iAttackOdds < 68 && !bStealth && !isHuman())
-						{
-							if (bBombardExhausted)
-							{
-								CvUnit* pBestSacrifice = AI_getBestGroupSacrifice(pDestPlot, false, bNoBlitz);
-								if (pBestSacrifice != NULL)
-								{
-									pBestAttackUnit = pBestSacrifice;
-								}
-							}
-							else
-							{
-								bool bFoundBombard = false;
-
-								OutputDebugString("Attempting to bombard tough plot\n");
-								if (pOrigPlot->getNumUnits() > 0)
-								{
-									foreach_(CvUnit* pLoopUnit, units())
-									{
-										if (pLoopUnit->canBombardAtRanged(plot(), pDestPlot->getX(), pDestPlot->getY()))
-										{
-											bFoundBombard = true;
-											pLoopUnit->bombardRanged(pDestPlot->getX(), pDestPlot->getY(), false);
-										}
-									}
-								}
-								bBombardExhausted = !bFoundBombard;
-
-								continue;
-							}
-						}
-						bAttack = true;
-
-						bool bQuick = (bStack || bStealth);
-						pBestAttackUnit->attack(pDestPlot, bQuick, bStealth);
-						if (bFailedAlreadyFighting || !bStack)
-						{
-							// if this is AI or automated stack, follow through with the attack to the end
-							if ((!isHuman() || isAutomated()) && getNumUnits() > 1)
-							{
-								AI_queueGroupAttack(iX, iY);
-							}
-							break;
-						}
-					}
-				}
-			}
-		}
-	}
-
-	return bAttack;
-}
-
-
 bool CvSelectionGroup::allMatch(UnitTypes eUnit) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit);
@@ -5900,6 +5866,7 @@ bool CvSelectionGroup::isLastPathPlotRevealed() const
 
 int CvSelectionGroup::defensiveModifierAtPlot(const CvPlot* pPlot) const
 {
+	PROFILE_EXTRA_FUNC();
 	const int iModifier = pPlot->defenseModifier(getTeam(), false);
 
 	int iBestStrength = 0;
@@ -5938,6 +5905,7 @@ int CvSelectionGroup::defensiveModifierAtPlot(const CvPlot* pPlot) const
 
 int CvSelectionGroup::getStrength() const
 {
+	PROFILE_EXTRA_FUNC();
 	int iStrength = 0;
 
 	foreach_(const CvUnit* pLoopUnit, units())
@@ -5955,6 +5923,7 @@ bool CvSelectionGroup::hasCommander() const
 
 void CvSelectionGroup::validateLocations(bool bFixup) const
 {
+	PROFILE_EXTRA_FUNC();
 	CvPlot* pPlot = NULL;
 	CvUnit* pTransportUnit;
 	bool bTransportUnitSet = false;
@@ -6000,6 +5969,7 @@ void CvSelectionGroup::validateLocations(bool bFixup) const
 
 bool CvSelectionGroup::findNewLeader(UnitAITypes eAIType)
 {
+	PROFILE_EXTRA_FUNC();
 	CvUnit* pBestUnit = NULL;
 	const CvPlayer& kPlayer = GET_PLAYER(getOwner());
 
@@ -6047,6 +6017,7 @@ namespace {
 // TB Notes: I'd like to add that a unit should only merge with units of the same AI to avoid problems here.
 bool CvSelectionGroup::doMergeCheck()
 {
+	PROFILE_EXTRA_FUNC();
 	bool anyMerged = false;
 
 	while (true)
@@ -6065,6 +6036,7 @@ bool CvSelectionGroup::doMergeCheck()
 
 int CvSelectionGroup::getCargoSpace() const
 {
+	PROFILE_EXTRA_FUNC();
 	FAssert(getNumUnits() > 0);
 
 	const UnitAITypes eUnitAI = getHeadUnitAI();
@@ -6082,6 +6054,7 @@ int CvSelectionGroup::getCargoSpace() const
 
 int CvSelectionGroup::getCargoSpaceAvailable(SpecialUnitTypes eSpecialCargo, DomainTypes eDomainCargo) const
 {
+	PROFILE_EXTRA_FUNC();
 	FAssert(getNumUnits() > 0);
 
 	const UnitAITypes eUnitAI = getHeadUnitAI();
@@ -6099,13 +6072,14 @@ int CvSelectionGroup::getCargoSpaceAvailable(SpecialUnitTypes eSpecialCargo, Dom
 
 int CvSelectionGroup::countSeeInvisibleActive(UnitAITypes eUnitAI, InvisibleTypes eInvisibleType) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 
 	foreach_(const CvUnit* pLoopUnit, units())
 	{
 		if (pLoopUnit->AI_getUnitAIType() == eUnitAI)
 		{
-			if (GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
+			if (GC.getGame().isOption(GAMEOPTION_COMBAT_HIDE_SEEK))
 			{
 				if (pLoopUnit->visibilityIntensityTotal(eInvisibleType) > 0)
 				{

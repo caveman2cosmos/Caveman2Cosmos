@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CANNIBALISM</Tag>
+		<Tag>TXT_KEY_BUILDING_WORLDVIEW_CANNIBALISM_ACTIVE</Tag>
 		<English>Worldview - Cannibalism active</English>
 		<French>
 			<Text>Vision du Monde - Cannibalisme actif</Text>
@@ -33,7 +33,7 @@
 		<Russian>Áîëåçíü (Êóðó)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WV_CANNIBALISM</Tag>
+		<Tag>TXT_KEY_BUILDING_WORLDVIEW_CANNIBALISM</Tag>
 		<English>Worldview - Cannibalism</English>
 		<French>
 			<Text>Vision du monde - Cannibalisme</Text>
@@ -49,7 +49,7 @@
 		<Russian>Êàííèáàëèçì</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WV_CANNIBALISM_HELP</Tag>
+		<Tag>TXT_KEY_BUILDING_WORLDVIEW_CANNIBALISM_HELP</Tag>
 		<English>[ICON_BULLET]Allows you to butcher human and Neanderthal captives for food.</English>
 		<French>vous permet de consommer les hommes et néanderthaliens - ils sont convertis en nourriture.</French>
 		<Italian>Ti permette di uccidere i prigionieri umani e Neanderthal per usarli come cibo.</Italian>
@@ -57,7 +57,7 @@
 		<Russian>Ïîçâîëÿåò óïîòðåáëÿòü ÷åëîâå÷åñêèõ è íåàíäåðòàëüñêèõ ïëåííèêîâ â êà÷åñòâå ïèùè.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WV_CANNIBALISM_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_WORLDVIEW_CANNIBALISM_PEDIA</Tag>
 		<English>Cannibalism...</English>
 		<French>Cannibalisme...</French>
 		<Italian>Cannibalismo...</Italian>

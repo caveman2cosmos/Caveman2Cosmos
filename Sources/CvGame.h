@@ -155,7 +155,7 @@ public:
 	int countCorporationLevels(CorporationTypes eCorporation) const;
 	void replaceCorporation(CorporationTypes eCorporation1, CorporationTypes eCorporation2);
 
-	int goldenAgeLength() const;
+	int goldenAgeLength100() const;
 	int victoryDelay(VictoryTypes eVictory) const;
 	int getImprovementUpgradeTime(ImprovementTypes eImprovement) const;
 
@@ -291,8 +291,6 @@ public:
 	void changeCutLosersCounter(int iChange);
 	int getHighToLowCounter() const;
 	void changeHighToLowCounter(int iChange);
-	int getIncreasingDifficultyCounter() const;
-	void changeIncreasingDifficultyCounter(int iChange);
 
 	void averageHandicaps();
 
@@ -358,6 +356,7 @@ public:
 	void logOOSSpecial(int iLocID, int iVar, int iVar2 = 0, int iVar3 = 0);
 	int getTopCityCount() const;
 	int getTopPopCount() const;
+	int getWinForLosingResearchModifier(const int iCities, const int iPop) const;
 	int getImprovementCount(ImprovementTypes eIndex) const;
 	void changeImprovementCount(ImprovementTypes eIndex, int iChange);
 
@@ -412,7 +411,6 @@ protected:
 	int m_iCurrentVoteID;
 	int m_iCutLosersCounter;
 	int m_iHighToLowCounter;
-	int m_iIncreasingDifficultyCounter;
 	int m_iMercyRuleCounter;
 
 	bool starshipLaunched[MAX_TEAMS]; 				//Ordered by team ID (both)
@@ -425,11 +423,11 @@ protected:
 	// < M.A.D. Nukes End   >
 	bool m_bScoreDirty;
 	bool m_bDebugMode;
-	bool m_bDebugModeCache;
 	bool m_bFinalInitialized;
 	bool m_bPbemTurnSent;
 	bool m_bHotPbemBetweenTurns;
 	bool m_bPlayerOptionsSent;
+	bool m_bWorldBuilder;
 	//TB Nukefix (reversal) Next line should be commented out
 	//bool m_bNukesValid;
 	TeamTypes m_circumnavigatingTeam;
@@ -553,7 +551,6 @@ protected:
 	CvPropertySolver m_PropertySolver;
 
 	int m_iChokePointCalculationVersion;
-	int m_iMinCultureOutput;
 
 
 public:
@@ -885,7 +882,7 @@ public:
 
 	bool isAutoRaze(const CvCity* city, const PlayerTypes eNewOwner, bool bConquest, bool bTrade, bool bRecapture) const;
 
-	int getMinCultureOutput() const { return m_iMinCultureOutput; }
+	void setWorldBuilder(const bool bNewValue);
 };
 
 #define CURRENT_MAP GC.getGame().getCurrentMap()

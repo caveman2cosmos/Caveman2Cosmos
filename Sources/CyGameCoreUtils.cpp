@@ -1,3 +1,6 @@
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvGameCoreUtils.h"
 #include "CvRandom.h"
@@ -115,11 +118,6 @@ CyUnit* cyGetUnit(const IDInfo unit)
 	return new CyUnit(getUnit(unit));
 }
 
-int cyGetTechScore(int /*TechTypes*/ eTech)
-{
-	return getTechScore((TechTypes)eTech);
-}
-
 int cyGetWonderScore(int /*BuildingTypes*/ eWonder)
 {
 	return getWonderScore((BuildingTypes)eWonder);
@@ -220,8 +218,15 @@ int64_t cyIntSqrt64(uint64_t iValue)
 	return intSqrt64(iValue);
 }
 
+int64_t cyGetModifiedIntValue64(uint64_t iValue, const int iMod)
+{
+	return getModifiedIntValue64(iValue, iMod);
+}
+
+
 void cyShufflePyList(python::list& pyList, CvRandom& rand)
 {
+	PROFILE_EXTRA_FUNC();
 	PyObject* pyObj = pyList.ptr();
 
 	for (int i = 0, size = PySequence_Length(pyObj); i < size; i++)

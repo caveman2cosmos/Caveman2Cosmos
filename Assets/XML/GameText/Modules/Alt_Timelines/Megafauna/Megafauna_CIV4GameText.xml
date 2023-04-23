@@ -1,33 +1,33 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_BEARS</Tag>
+		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_BEARS</Tag>
 		<English>Military Standard (Bears)</English>
 		<French>Standards Militaires (Ours)</French>
 		<Polish>Sztandar Wojskowy (Niedźwiedź)</Polish>
 		<Russian>Òîòåì «Ìåäâåäü»</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_BEAR_HELP</Tag>
+		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_BEAR_HELP</Tag>
 		<English>[ICON_BULLET]Build Bear buildings and units faster in this city.</English>
 		<French>Construit les bâtiments et unités Ours plus vite dans cette ville.</French>
 		<Russian>Óñîðÿåò òðåíèðîâêó ìåäâåäåé è ïîñòðîéêó â ãîðîäå çäàíèé äëÿ íèõ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_BISON</Tag>
+		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_BISON</Tag>
 		<English>Military Standard (Bison)</English>
 		<French>Standards Militaires (Bisons)</French>
 		<Polish>Sztandar Wojskowy (Bizon)</Polish>
 		<Russian>Òîòåì «Áèçîí»</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_BISON_HELP</Tag>
+		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_BISON_HELP</Tag>
 		<English>[ICON_BULLET]Build Bison buildings and units faster in this city.</English>
 		<French>Construit les bâtiments et unités bisons plus vite dans cette Ville.</French>
 		<Polish>Konstuuj budynki i werbuj jednostki bizonów szybciej w tym mieście.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_CATS</Tag>
+		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_BIG_CATS</Tag>
 		<English>Military Standard (Big Cats)</English>
 		<French>Standards Militaires (Félins)</French>
 		<Italian>
@@ -39,7 +39,7 @@
 		<Russian>Òîòåì «Êîøêà»</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_CATS_HELP</Tag>
+		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_BIG_CATS_HELP</Tag>
 		<English>[ICON_BULLET]Build Feline buildings and units faster in this city.</English>
 		<French>Construit les bâtiments et unités félines plus vite dans cette Ville.</French>
 		<Italian>Questo edificio ti permette di addestrare le unità feline più velocemente.</Italian>
@@ -47,55 +47,55 @@
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Подсказка: [COLOR_REVERT]стройте кошачьи питомники в городе, чтобы дрессировать ручных и сторожевых кошек.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_DEER</Tag>
+		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_DEER</Tag>
 		<English>Military Standard (Deer)</English>
 		<French>Standards Militaires (Cervidés)</French>
 		<Polish>Sztandar Wojskowy (Deer)</Polish>
 		<Russian>Òîòåì «Îëåíü»</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_DEER_HELP</Tag>
+		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_DEER_HELP</Tag>
 		<English>[ICON_BULLET]Build Deer buildings and units faster in this city.</English>
 		<French>[ICON_BULLET]Construit les bâtiments et unités cervidés plus vite dans cette Ville.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_GIRAFFE</Tag>
+		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_GIRAFFE</Tag>
 		<English>Military Standard (Giraffe)</English>
 		<French>Standards Militaires (Girafe)</French>
 		<Polish>Sztandar Wojskowy (Żyrafa)</Polish>
 		<Russian>Òîòåì «Æèðàô»</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_GIRAFFE_HELP</Tag>
+		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_GIRAFFE_HELP</Tag>
 		<English>[ICON_BULLET]Build Giraffe buildings and units faster in this city.</English>
 		<French>Construit les bâtiments et unités Girafes plus vite dans cette ville.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_RHINO</Tag>
+		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_RHINOCEROS</Tag>
 		<English>Military Standard (Rhinoceros)</English>
 		<French>Standards Militaires (Rhinocéros)</French>
 		<Polish>Sztandar Wojskowy (Nosorożec)</Polish>
 		<Russian>Òîòåì «Íîñîðîã»</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_RHINO_HELP</Tag>
+		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_RHINOCEROS_HELP</Tag>
 		<English>[ICON_BULLET]Build Rhinoceros buildings and units faster in this city.</English>
 		<French>Construit les bâtiments et unités Rhinos plus vite dans cette Ville.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_ZEBRA</Tag>
+		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_ZEBRA</Tag>
 		<English>Military Standard (Zebra)</English>
 		<French>Standards Militaires (Zèbres)</French>
 		<Polish>Sztandar Wojskowy (Zebra)</Polish>
 		<Russian>Òîòåì «Çåáðà»</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_ZEBRA_HELP</Tag>
+		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_ZEBRA_HELP</Tag>
 		<English>[ICON_BULLET]Build Zebra buildings and units faster in this city.</English>
 		<French>Construit les bâtiments et unités Zèbres plus vite dans cette ville.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BEAR_TRAINER</Tag>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_BEAR</Tag>
 		<English>Animal Trainer (Bear)</English>
 		<French>
 			<Text>Dresseur d'Ours</Text>
@@ -107,49 +107,49 @@
 		<Russian>Ïðèðó÷åíèå ìåäâåäåé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BEAR_TRAINER_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_EFFECT_HERITAGE_BEARS</Tag>
 		<English>Effect - Heritage - Bears</English>
 		<French>Effet - Patrimoine (Ours)</French>
 		<Polish>Efekt - Dziedzictwo - Niedźwiedź</Polish>
 		<Russian>Ïèòîìíèê ìåäâåäåé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BEAR_TRAINER_HERITAGE</Tag>
+		<Tag>TXT_KEY_BUILDING_HERITAGE_BEARS</Tag>
 		<English>Heritage - Bears</English>
 		<French>Patrimoine (Ours)</French>
 		<Polish>Dziedzictwo - Niedźwiedź</Polish>
 		<Russian>Ðàçâåäåíèå ìåäâåäåé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BEAR_TRAINER_HERITAGE_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_HERITAGE_BEARS_PEDIA</Tag>
 		<English>Instead of only being able to train Bear units in the city you built the wonder in this building allows them to be built in any of your cities. It can only be built in the ciy with the Bear Trainer World Wonder.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BEAR_TRAINER_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_BEAR_PEDIA</Tag>
 		<English>There is no evidence bears were ever trained for warfare. The [COLOR_BUILDING_TEXT]Bear Trainer[COLOR_REVERT] building is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<Italian>Non ci sono prove che gli orsi furono mai usati in guerra. L'[COLOR_BUILDING_TEXT]Allevatore di orsi[COLOR_REVERT] è un edificio parte delle [COLOR_HIGHLIGHT_TEXT]Tecnologie alternative[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BIG_CAT_TRAINER</Tag>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_BIG_CAT</Tag>
 		<English>Animal Trainer (Big Cat)</English>
 		<French>Entraineur de Félins</French>
 		<Polish>Treser Wielkich Kotów</Polish>
 		<Russian>Ïðèðó÷åíèå êîøåê</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BIG_CAT_TRAINER_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_EFFECT_HERITAGE_BIG_CATS</Tag>
 		<English>Effect - Heritage - Big Cats</English>
 		<French>Effet (Entraineur de Félins)</French>
 		<Polish>Efekt - Treser Wielkich Kotów</Polish>
 		<Russian>Ïèòîìíèê êîøåê</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BIG_CAT_TRAINER_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_BIG_CAT_PEDIA</Tag>
 		<English>Cat training is the process of modifying a wild cat's behavior for entertainment or companionship purposes. Training is commonly used to reduce unwanted or problematic behaviors in wild cats, to enhance interactions between humans and cats, and to allow them to coexist comfortably. There are various methods for training cats which employ different balances between reward and punishment.</English>
 		<Russian>Дрессировка кошки - это процесс изменения поведения дикой кошки в развлекательных или дружеских целях. Дрессировка обычно используется для уменьшения нежелательного или проблемного поведения у диких кошек, для улучшения взаимодействия между людьми и кошками и для того, чтобы позволить им комфортно сосуществовать. Существуют различные методы дрессировки кошек, в которых используется различный баланс между вознаграждением и наказанием.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BISON_TRAINER</Tag>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_BISON</Tag>
 		<English>Animal Trainer (Bison)</English>
 		<French>
 			<Text>Dresseur de Bisons</Text>
@@ -161,31 +161,31 @@
 		<Russian>Ïðèðó÷åíèå áèçîíîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BISON_TRAINER_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_EFFECT_HERITAGE_BISON</Tag>
 		<English>Effect - Heritage - Bison</English>
 		<French>Effet - Patrimoine (Bisons)</French>
 		<Polish>Efekt - Dziedzictwo - Bizon</Polish>
 		<Russian>Ïèòîìíèê áèçîíîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BISON_TRAINER_HERITAGE</Tag>
+		<Tag>TXT_KEY_BUILDING_HERITAGE_BISON</Tag>
 		<English>Heritage - Bison</English>
 		<French>Patrimoine (Bisons)</French>
 		<Polish>Dziedzictwo - Bizon</Polish>
 		<Russian>Ðàçâåäåíèå áèçîíîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BISON_TRAINER_HERITAGE_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_HERITAGE_BISON_PEDIA</Tag>
 		<English>Instead of only being able to train Bison units in the city you built the wonder in this building allows them to be built in any of your cities. It can only be built in the city with the Bison Trainer World Wonder.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BISON_TRAINER_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_BISON_PEDIA</Tag>
 		<English>There is no evidence bison were ever trained for warfare. The [COLOR_BUILDING_TEXT]Bison Trainer[COLOR_REVERT] building is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<Italian>Non ci sono prove che i bisonti siano mai stati usati in guerra. L'[COLOR_BUILDING_TEXT]Allevatore di bisonti[COLOR_REVERT] fa parte delle [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Tecnologie che potrebbero essere esistite. [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</Italian>
 		<Polish>Nie ma dowodów na istnienie tej jednostki, jest ona częścią tzw. [COLOR_HIGHLIGHT_TEXT]technologii alternatywnej ścieżki historycznej[COLOR_REVERT].</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DEER_TRAINER</Tag>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_DEER</Tag>
 		<English>Animal Trainer (Deer)</English>
 		<French>
 			<Text>Dresseur de Cerf</Text>
@@ -197,36 +197,36 @@
 		<Russian>Ïðèðó÷åíèå îëåíåé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DEER_TRAINER_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_EFFECT_HERITAGE_DEER</Tag>
 		<English>Effect - Heritage - Deer</English>
 		<French>Effet - Patrimoine (Cervidés)</French>
 		<Polish>Efekt - Dziedzictwo Tresera Jeleni</Polish>
 		<Russian>Ïèòîìíèê îëåíåé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DEER_TRAINER_EFFECT_HELP</Tag>
+		<Tag>TXT_KEY_BUILDING_EFFECT_HERITAGE_DEER_HELP</Tag>
 		<English>[ICON_BULLET]This free building is used to enable the building of the special deer units in all your cities.</English>
 		<French>Ce bâtiment permet l'entraînement d'unités cervidés dans toutes vos villes.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DEER_TRAINER_HERITAGE</Tag>
+		<Tag>TXT_KEY_BUILDING_HERITAGE_DEER</Tag>
 		<English>Heritage - Deer</English>
 		<French>Patrimoine (Cervidés)</French>
 		<Polish>Dziedzictwo - Jeleń</Polish>
 		<Russian>Ðàçâåäåíèå îëåíåé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DEER_TRAINER_HERITAGE_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_HERITAGE_DEER_PEDIA</Tag>
 		<English>The Heritage building upgrades the Training Wonder to allow the special units to be built in all your cities.</English>
 		<French>Le bâtiment du patrimoine améliore la merveille de la formation pour permettre la construction d'unités spéciales dans toutes vos villes.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DEER_TRAINER_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_DEER_PEDIA</Tag>
 		<English>There is no evidence deer were ever trained for warfare. The [COLOR_BUILDING_TEXT]Deer Trainer[COLOR_REVERT] building is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.[PARAGRAPH:2]Strongest base early withdrawal - even battle hardened deer can be skittish creatures that can be tough to KEEP in the battle for long but makes them GREAT at wearing down opponents. They'd be perhaps the best at this get in/get out type of strategy so long as they can do some damage during their short fights.</English>
 		<French>Il n'y a aucune preuve que les cerfs aient été formés pour la guerre. Le bâtiment [COLOR_BUILDING_TEXT] Dresseur de cerfs [COLOR_REVERT] fait partie des [COLOR_HIGHLIGHT_TEXT] technologies de chronologie alternatives [COLOR_REVERT]. Technologies qui auraient pu l'être.[PARAGRAPH:2]Retrait précoce de la base la plus forte - même les cerfs endurcis au combat peuvent être des créatures agiles qui peuvent être difficiles à GARDER dans la bataille pendant longtemps, mais les rendent EXCEPTIONNELS pour épuiser leurs adversaires. Ils seraient peut-être les meilleurs dans ce type de stratégie d'entrée / sortie tant qu'ils peuvent faire des dégâts pendant leurs combats courts.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GIRAFFE_TRAINER</Tag>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_GIRAFFE</Tag>
 		<English>Animal Trainer (Giraffe)</English>
 		<French>
 			<Text>Dresseur de Girafes</Text>
@@ -238,34 +238,34 @@
 		<Russian>Ïðèðó÷åíèå æèðàôîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GIRAFFE_TRAINER_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_EFFECT_HERITAGE_GIRAFFES</Tag>
 		<English>Effect - Heritage - Giraffes</English>
 		<French>Effet - Patrimoine (Girafes)</French>
 		<Polish>Efekt - Dziedzictwo - Żyrafa</Polish>
 		<Russian>Ïèòîìíèê æèðàôîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GIRAFFE_TRAINER_EFFECT_HELP</Tag>
+		<Tag>TXT_KEY_BUILDING_EFFECT_HERITAGE_GIRAFFES_HELP</Tag>
 		<English>[ICON_BULLET]This free building is used to enable the building of the special Giraffe units in all your cities.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GIRAFFE_TRAINER_HERITAGE</Tag>
+		<Tag>TXT_KEY_BUILDING_HERITAGE_GIRAFFE</Tag>
 		<English>Heritage - Giraffe</English>
 		<French>Patrimoine (Girafes)</French>
 		<Polish>Dziedzictwo - Żyrafa</Polish>
 		<Russian>Ðàçâåäåíèå æèðàôîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GIRAFFE_TRAINER_HERITAGE_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_HERITAGE_GIRAFFE_PEDIA</Tag>
 		<English>Giraffe units are good for combat in Savanna tiles and their increased Sight Range. Very good light mounted units with a generally strong skill at getting in and out quickly and doing some damage while there. Giraffes are not pushovers in a fight - those horns can straight knock a person out. There is no evidence giraffes were ever trained for warfare. The [COLOR_BUILDING_TEXT]Giraffe Trainer[COLOR_REVERT] building is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GIRAFFE_TRAINER_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_GIRAFFE_PEDIA</Tag>
 		<English>There is no evidence giraffe were ever trained for warfare. The [COLOR_BUILDING_TEXT]Giraffe Trainer[COLOR_REVERT] building is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<Italian>Non ci sono prove che le giraffe siano mai state usate in guerra. L'[COLOR_BUILDING_TEXT]Allevatore di giraffe[COLOR_REVERT] fa parte delle [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MAMMOTH_HERD</Tag>
+		<Tag>TXT_KEY_BUILDING_HERD_MAMMOTH</Tag>
 		<English>Herd (Mammoth)</English>
 		<French>
 			<Text>Troupeau de Mammouth</Text>
@@ -281,41 +281,41 @@
 		<Russian>Òàáóí ìàìîíòîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MAMMOTH_HERD_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_HERD_MAMMOTH_PEDIA</Tag>
 		<English>Only subdued mammoth can build the mammoth herd. It provides a mammoth resource. There can only be one per civ.</English>
 		<Italian>Solo i mammut addomesticati possono costruire il Branco - Mammut; fornisce una risorsa di mammut.</Italian>
 		<Polish>Mamut włochaty należał do ulubionej zwierzyny łownej człowieka w późnym plejstocenie, co znalazło swe odzwierciedlenie w zachowanych do dzisiaj licznych wyobrażeniach i malowidłach, pozostawionych głównie na ścianach jaskiń (np. w Rouffignac we Francji). Mamuty były źródłem pożywienia, ale dostarczały także materiałów do wyrobu okryć (skóry), sprzętów domowych, narzędzi i ozdób (kości, ciosy). Kości wykorzystywane były sporadycznie również do budowy paleolitycznych domostw, czego ślady odnaleziono w miejscowości Meziriczi na Ukrainie.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MAMMOTH_TRAINER</Tag>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_MAMMOTH</Tag>
 		<English>Animal Trainer (Mammoth)</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MAMMOTH_TRAINER_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_EFFECT_HERITAGE_MAMMOTHS</Tag>
 		<English>Effect - Heritage - Mammoths</English>
 		<French>Effet - Patrimoine (Mammouth)</French>
 		<Polish>Efekt - Dziedzictwo - Mamut</Polish>
 		<Russian>Ïèòîìíèê ìàìîíòîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MAMMOTH_TRAINER_HERITAGE</Tag>
+		<Tag>TXT_KEY_BUILDING_HERITAGE_MAMMOTH</Tag>
 		<English>Heritage - Mammoth</English>
 		<French>Patrimoine (Mammouth)</French>
 		<Polish>Dziedzictwo - Mamut</Polish>
 		<Russian>Ðàçâåäåíèå ìàìîíòîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MAMMOTH_TRAINER_HERITAGE_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_HERITAGE_MAMMOTH_PEDIA</Tag>
 		<English>Instead of only being able to train Mammoth units in the city you built the wonder in this building allows them to be built in any of your cities. It can only be built in the ciy with the Mammothr Trainer World Wonder.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MAMMOTH_TRAINER_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_MAMMOTH_PEDIA</Tag>
 		<English>The woolly mammoth was the last species of the genus. Most populations of the woolly mammoth in North America and Eurasia, as well all the Columbian mammoths in North America, died out around the time of the last glacial retreat, as part of a mass extinction of megafauna in northern Eurasia and the Americas.</English>
 		<Italian>Il mammut peloso fu l'ultima specie del suo genere. La maggior parte dei mammut pelosi del Nordamerica e dell'Eurasia morirono surante l'ultima era glaciale, facendo parte di un'estinzione di massa della megafauna nell'emisfero settentrionale.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAPINGUARI_COMPOUND</Tag>
-		<English>Unit Reward - Mapinguari Compound</English>
+		<English>Mapinguari Compound</English>
 		<French>
 			<Text>Enceinte Mapinguari</Text>
 			<Gender>Male</Gender>
@@ -329,28 +329,28 @@
 		<English>Mapinguari Compound is a place where subdued Ground Sloths and their handlers are trained as combat units.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MAPINGUARI_GUARD</Tag>
-		<English>Autobuild - Mapinguari Changing of the Guard Ceremony</English>
+		<Tag>TXT_KEY_BUILDING_MAPINGUARI_CHANGING_OF_THE_GUARD_CEREMONY</Tag>
+		<English>Mapinguari Changing of the Guard Ceremony</English>
 		<Polish>Strażnik Mapinguari</Polish>
 		<Russian>Êàðàóë ìàïèíãóàðè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MAPINGUARI_GUARD_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_MAPINGUARI_CHANGING_OF_THE_GUARD_CEREMONY_PEDIA</Tag>
 		<English>A fictional military ceremony.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_POLICE_CAT</Tag>
+		<Tag>TXT_KEY_BUILDING_POLICE_CAT_TRAINER</Tag>
 		<English>Police Cat Trainer</English>
 		<French>Entraineur de Félins Limiers</French>
 		<Polish>Treser Kotów Policyjnych</Polish>
 		<Russian>Ïîëèãîí äëÿ êîøåê</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_POLICE_CAT_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_POLICE_CAT_TRAINER_PEDIA</Tag>
 		<English>A F9 unit - cat version of police dog</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RHINO_TRAINER</Tag>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_RHINOCEROS</Tag>
 		<English>Animal Trainer (Rhinoceros)</English>
 		<French>
 			<Text>Dresseur de Rhinocéros</Text>
@@ -362,34 +362,34 @@
 		<Russian>Ïðèðó÷åíèå íîñîðîãîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RHINO_TRAINER_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_EFFECT_HERITAGE_RHINOS</Tag>
 		<English>Effect - Heritage - Rhinos</English>
 		<French>Effet - Patrimoine (Rhinocéros)</French>
 		<Polish>Efekt - Dziedzictwo - Nosorożec</Polish>
 		<Russian>Ïèòîìíèê íîñîðîãîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RHINO_TRAINER_EFFECT_HELP</Tag>
+		<Tag>TXT_KEY_BUILDING_EFFECT_HERITAGE_RHINOS_HELP</Tag>
 		<English>[ICON_BULLET]This free building is used to enable the building of the special Rhinoceros units in all your cities.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RHINO_TRAINER_HERITAGE</Tag>
+		<Tag>TXT_KEY_BUILDING_HERITAGE_RHINOCEROS</Tag>
 		<English>Heritage - Rhinoceros</English>
 		<French>Patrimoine (Rhinocéros)</French>
 		<Polish>Dziedzictwo - Nosorożec</Polish>
 		<Russian>Ðàçâåäåíèå íîñîðîãîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RHINO_TRAINER_HERITAGE_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_HERITAGE_RHINOCEROS_PEDIA</Tag>
 		<English>Rhinoceros units have the Stampede ability and at the moment they're the only unit with it and the only unit that can develop it. If made a little stronger to make them a bit more viable (and to let them represent better the kind of amazing destructive capacity these animals have in RL) they'll be given an amazingly powerful niche use throughout the early era, particularly as a powerful counter against the strategy of splitting up units to delay attack forces from taking a position.[PARAGRAPH:2]Rhinos also cause some collateral so if one can survive the first fight and the units in the stack they're attacking can still within range of being given further collateral damage, a rhino can uniquely inflict collateral to a stack more than once when it attacks.[PARAGRAPH:2]There is no evidence Rhinoceros were ever trained for warfare. The [COLOR_BUILDING_TEXT]Giraffe Trainer[COLOR_REVERT] building is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RHINO_TRAINER_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_RHINOCEROS_PEDIA</Tag>
 		<English>There is no evidence rhinoceros were ever trained for mounted warfare. The [COLOR_BUILDING_TEXT]Rhinoceros Trainer[COLOR_REVERT] building is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<Italian>Non ci sono prove che i rinoceronti siano mai stati addestrati per la guerra. L'[COLOR_BUILDING_TEXT]Allevatore di rinoceronti[COLOR_REVERT] fa parte delle [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ZEBRA_HERD</Tag>
+		<Tag>TXT_KEY_BUILDING_HERD_ZEBRA</Tag>
 		<English>Herd (Zebra)</English>
 		<French>
 			<Text>Troupeau - Zèbres</Text>
@@ -401,7 +401,7 @@
 		<Russian>Ñòàäî çåáð</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ZEBRA_TRAINER</Tag>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_ZEBRA</Tag>
 		<English>Animal Trainer (Zebra)</English>
 		<French>
 			<Text>Dresseur de Zèbres</Text>
@@ -413,30 +413,30 @@
 		<Russian>Ïðèðó÷åíèå çåáð</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ZEBRA_TRAINER_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_EFFECT_HERITAGE_ZEBRAS</Tag>
 		<English>Effect - Heritage - Zebras</English>
 		<French>Effet - Patrimoine (Zèbres)</French>
 		<Polish>Efekt - Dziedzictwo - Zebra</Polish>
 		<Russian>Ïèòîìíèê çåáð</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ZEBRA_TRAINER_HELP</Tag>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_ZEBRA_HELP</Tag>
 		<English>[ICON_BULLET]Allows the training of Zebra units.</English>
 		<French>Permet l'entraînement d'unités avec des zèbres.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ZEBRA_TRAINER_HERITAGE</Tag>
+		<Tag>TXT_KEY_BUILDING_HERITAGE_ZEBRA</Tag>
 		<English>Heritage - Zebra</English>
 		<French>Patrimoine (Zèbres)</French>
 		<Polish>Dziedzictwo - Zebra</Polish>
 		<Russian>Ðàçâåäåíèå çåáð</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ZEBRA_TRAINER_HERITAGE_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_HERITAGE_ZEBRA_PEDIA</Tag>
 		<English>Instead of only being able to train Zebra units in the city you built the wonder in this building allows them to be built in any of your cities. It can only be built in the ciy with the Zebra Trainer World Wonder.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ZEBRA_TRAINER_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_ZEBRA_PEDIA</Tag>
 		<English>There is no evidence Zebra were ever trained for warfare. The [COLOR_BUILDING_TEXT]Zebra Trainer[COLOR_REVERT] building is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<Italian>Non ci sono prove che le zebre siano mai state usate in guerra. L'[COLOR_BUILDING_TEXT]Allevatore di zebre[COLOR_REVERT] è un edificio parte delle [COLOR_HIGHLIGHT_TEXT]Tecnologie alternative[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
 	</TEXT>

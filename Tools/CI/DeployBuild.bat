@@ -108,10 +108,10 @@ echo Updating SVN working copy from git...
 set ROBOCOPY_FLAGS=/MIR /NFL /NDL /NJH /NJS /NS /NC
 robocopy Assets "%build_dir%\Assets" %ROBOCOPY_FLAGS%
 robocopy PrivateMaps "%build_dir%\PrivateMaps" %ROBOCOPY_FLAGS%
+robocopy PublicMaps "%build_dir%\PublicMaps" %ROBOCOPY_FLAGS%
 robocopy Resource "%build_dir%\Resource" %ROBOCOPY_FLAGS%
 robocopy Docs "%build_dir%\Docs" %ROBOCOPY_FLAGS%
 xcopy "Caveman2Cosmos.ini" "%build_dir%" /R /Y
-xcopy "Caveman2Cosmos Config.ini" "%build_dir%" /R /Y
 xcopy "C2C1.ico" "%build_dir%" /R /Y
 xcopy "C2C2.ico" "%build_dir%" /R /Y
 xcopy "C2C3.ico" "%build_dir%" /R /Y

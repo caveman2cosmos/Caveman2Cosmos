@@ -232,7 +232,7 @@ class CvDiplomacy:
 			team = GC.getTeam(player.getTeam())
 			for i in xrange(team.getNumAdjacentResearch()):
 				iTechX = team.getAdjacentResearch(i)
-				if player.canResearch(iTechX, True):
+				if player.canResearch(iTechX, True, True):
 					self.addUserComment("USER_DIPLOCOMMENT_RESEARCH_TECH", iTechX, -1, GC.getTechInfo(iTechX).getTextKey())
 
 			self.addUserComment("USER_DIPLOCOMMENT_SOMETHING_ELSE")

@@ -6,6 +6,9 @@
 //  PURPOSE: Grouping classes for units
 //
 //------------------------------------------------------------------------------------------------
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
 #include "CvGlobals.h"
@@ -39,6 +42,7 @@ int UnitGroupingDomain::getGroupUnit(const CvPlayer *pPlayer, const CvCity *pCit
 
 int UnitGroupingFilters::getGroupUnit(const CvPlayer *pPlayer, const CvCity *pCity, UnitTypes eUnit) const
 {
+	PROFILE_EXTRA_FUNC();
 	const int iSize = m_apFilters.size();
 	for (int i = 0; i < iSize; i++)
 		if (m_apFilters[i]->isFiltered(pPlayer, pCity, eUnit))
@@ -53,6 +57,7 @@ void UnitGroupingFilters::addGroupingFilter(UnitFilterBase *pFilter)
 
 UnitGroupingFilters::~UnitGroupingFilters()
 {
+	PROFILE_EXTRA_FUNC();
 	for (unsigned int i = 0; i < m_apFilters.size(); i++)
 		delete m_apFilters[i];
 }
@@ -72,6 +77,7 @@ UnitGroupingList::UnitGroupingList(const CvPlayer *pPlayer, const CvCity *pCity)
 
 UnitGroupingList::~UnitGroupingList()
 {
+	PROFILE_EXTRA_FUNC();
 	if (m_bInit)
 	{
 		for (int i = 0; i < NUM_UNIT_GROUPING; i++)

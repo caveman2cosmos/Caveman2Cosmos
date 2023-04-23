@@ -54,8 +54,8 @@
 			<Description>TXT_KEY_CIVICOPTION_IMMIGRATION</Description>
 		</CivicOptionInfo>
 		<CivicOptionInfo>
-			<Type>CIVICOPTION_AGICULTURE</Type>
-			<Description>TXT_KEY_CIVICOPTION_AGICULTURE</Description>
+			<Type>CIVICOPTION_AGRICULTURE</Type>
+			<Description>TXT_KEY_CIVICOPTION_AGRICULTURE</Description>
 		</CivicOptionInfo>
 		<CivicOptionInfo>
 			<Type>CIVICOPTION_GARBAGE</Type>

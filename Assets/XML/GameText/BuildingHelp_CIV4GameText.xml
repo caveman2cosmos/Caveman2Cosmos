@@ -764,16 +764,6 @@
 		<Russian>[ICON_BULLET]Увеличивает уровень беззакония в городе на %s1_amount%% (помогает преступникам избежать раскрытия)</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDINGHELP_INVASION</Tag>
-		<English>[ICON_BULLET]%d1% Chance Per turn that adjacent enemy units will discover a secret passage into the city</English>
-		<French>[ICON_BULLET]%d1% de probabilité par tour, que les unités ennemies découvrent un passage vers la ville</French>
-		<German>[ICON_BULLET]%d1% Wahrscheinlichkeit pro Runde, dass eine benachbarte feindliche Einheit einen Geheimgang ins Innere der Stadt entdeckt</German>
-		<Italian>[ICON_BULLET]%d1% di Chance ogni turno che le unità nemiche adiacenti scoprano un passaggio segreto verso la città</Italian>
-		<Spanish>[ICON_BULLET]%d1% de probabilidad por turno de que las unidades enemigas descubran un pasaje secreto hacia la ciudad</Spanish>
-		<Polish>[ICON_BULLET]%d1% szansy na każdą turę że wróg odkryje tajemne przejście do Twojego miasta</Polish>
-		<Russian>[ICON_BULLET]%d1% Øàíñ, ÷òî ñìåæíûå âðàæåñêèå îòðÿäû îáíàðóæàò òàéíûé õîä â ãîðîä</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_INVESTIGATION</Tag>
 		<English>[ICON_BULLET]Increases local Investigation by %s1_amount%% (Helps Law Enforcement catch Criminals)</English>
 		<French>[ICON_BULLET]Donne à toutes les unités produites dans la ville %s1_amount%% d'Investigation.</French>
@@ -995,12 +985,6 @@
 		<Spanish>[ICON_BULLET]Los ciudadanos se rebelarán contra los conquistadores enemigos un %d1% más de tiempo</Spanish>
 		<Polish>[ICON_BULLET]Mieszkańcy będą się buntować wobec wrogich zdobywców %d1% dłużej</Polish>
 		<Russian>[ICON_BULLET]Ãðàæäàíå áóäóò áóíòîâàòü ïðîòèâ âðàæåñêèõ îêêóïàíòîâ %d1% äîëüøå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDINGHELP_ONE_TIME_POPULATION_LOSS</Tag>
-		<English>[ICON_BULLET]When the city gets this building, for the first time ONLY, it loses %d1_amount population.</English>
-		<French>[ICON_BULLET]Lorsque la ville obtient ce bâtiment, pour la première fois SEULEMENT, elle perd %d1_amount population.</French>
-		<Russian>[ICON_BULLET]Когда в городе ВПЕРВЫЕ возводится это здание, он теряет %d1_amount населения.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_PER_CITY_WITH</Tag>
@@ -1477,14 +1461,6 @@
 		<Italian>[ICON_BULLET]Le unità che difendono una città ottengono %D1_Amount%% al combattimento contro %s2_Unit_Combat.</Italian>
 		<Polish>[ICON_BULLET]Jednostki broniące miasta otrzymują %D1_Amount%% dodatkowej wartości walki przeciwko atakującym jednostkom: %s2_Unit_Combat.</Polish>
 		<Russian>[ICON_BULLET]Îòðÿäû, îáîðîíÿþùèå ãîðîä, ïîëó÷àþò ìîäèôèêàòîð áîÿ %D1_Amount%% ïðîòèâ àòàêè %s2_Unit_Combat.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDINGHELP_UNIT_COMBAT_ONGOING_TRAINING_DURATION</Tag>
-		<English>[ICON_BULLET]Adds One Experience Point to the least trained %s1_UnitCombat Unit present in the city every %d1_Amount rounds.</English>
-		<French>[ICON_BULLET]Ajoute un point d'EXP à l'unité %s1_UnitCombat la moins entraînée présente dans la ville, tous les %d1_Amount rounds.</French>
-		<Italian>[ICON_BULLET]Aggiunge un punto esperienza all'unità addestrata di tipo %s1_UnitCombat presente in città ogni %d1_Amount turni.</Italian>
-		<Polish>[ICON_BULLET]Dodaje jeden punkt doświadczenia do szkolonych jednostek: %s1_UnitCombat w mieście w każdej turze przez %d1_Amount tur.</Polish>
-		<Russian>[ICON_BULLET]Äîáàâëÿåò îäíî î÷êî îïûòà äëÿ íàèìåíåå îáó÷åííîãî îòðÿäà %s1_UnitCombat íàõîäÿùåãîñÿ â ãîðîäå %d1_Amount õîäîâ.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_UNIT_COMBAT_PROD_NEGATIVE_MODIFIER</Tag>

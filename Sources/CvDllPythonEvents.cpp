@@ -1,3 +1,6 @@
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
 #include "CvGameAI.h"
@@ -269,6 +272,7 @@ static const CvString gSessionID = create_session_id();
 
 bool postEvent(EventArgs eventData, const char* eventName)
 {
+	PROFILE_EXTRA_FUNC();
 	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "onEvent");
 
 	if (eventData.toJson)
@@ -712,16 +716,6 @@ void CvDllPythonEvents::reportCultureExpansion( CvCity *pCity, PlayerTypes ePlay
 	postEvent(eventData, "cultureExpansion");
 }
 
-void CvDllPythonEvents::reportCityGrowth( CvCity *pCity, PlayerTypes ePlayer )
-{
-	EventArgs eventData;
-	eventData
-		.arg("event", "cityGrowth")
-		.arg("pCity", pCity)
-		.arg("ePlayer", ePlayer);
-	postEvent(eventData, "cityGrowth");
-}
-
 void CvDllPythonEvents::reportCityProduction( CvCity *pCity, PlayerTypes ePlayer )
 {
 	EventArgs eventData;
@@ -880,15 +874,6 @@ void CvDllPythonEvents::reportUnitUpgraded(CvUnit* pOldUnit, CvUnit* pNewUnit, i
 		.arg("pNewUnit", pNewUnit)
 		.arg("iPrice", iPrice);
 	postEvent(eventData, "unitUpgraded");
-}
-
-void CvDllPythonEvents::reportUnitSelected(CvUnit* pUnit)
-{
-	EventArgs eventData;
-	eventData
-		.arg("event", "unitSelected")
-		.arg("pUnit", pUnit);
-	postEvent(eventData, "unitSelected");
 }
 
 void CvDllPythonEvents::reportUnitRename(CvUnit *pUnit)

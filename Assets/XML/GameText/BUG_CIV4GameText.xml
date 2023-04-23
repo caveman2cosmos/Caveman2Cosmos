@@ -108,6 +108,10 @@
 		<Russian>[ICON_BULLET]Óäâîåíèå %s1_commerce_type çà %d2 ëåò</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUG_DOUBLE_COMMERCE_COMPLETE</Tag>
+		<English>[ICON_BULLET]%d1 years of history have doubled the %s2_commerce_type</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUG_FINANCIAL_ADVISOR_BUILDING_COUNT_AVERAGE</Tag>
 		<English>(%d1 × %s2[ICON_GOLD])</English>
 	</TEXT>
@@ -1258,15 +1262,6 @@
 		<German>Datei</German>
 		<Spanish>Archivo</Spanish>
 		<Russian>Ôàéë</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__FILEPATH_HOVER</Tag>
-		<English>Directory where log file resides (fully qualified path, i.e. C:\folder\subfolder or blank).</English>
-		<French>Le Répertoire ou le fichier de log sera sauvegardé (chemin complet, p.ex. C:\folder\subfolder ou vide).</French>
-		<German>Verzeichnis, in dem sich die Protokolldatei befindet (komplette Pfadangabe, d.h. C:\Ordner\Unterordner oder leer lassen)</German>
-		<Italian>Cartella dove è localizzato il file di registro (percorso completo (ad esempio C:\cartella\sottocartella) o vuoto).</Italian>
-		<Spanish>Directorio donde reside el archivo de registro (ruta completa, p. ej. C:\carpeta\subcarpeta o vacío).</Spanish>
-		<Russian>Êàòàëîã, â êîòîðîì ôàéë æóðíàëà ðàñïîëîæåí (ïîëíûé ïóòü, ò.å. C:\folder\subfolder èëè ïóñòî).</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__FILEPATH_TEXT</Tag>
@@ -3102,114 +3097,6 @@
 		<Italian>Solo Religioni Presenti</Italian>
 		<Spanish>Solo religiones presentes</Spanish>
 		<Russian>Òîëüêî èìåþùèåñÿ ðåëèãèè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__PRODUCTIONDECAYHOVERBUILDINGTHRESHOLD_HOVER</Tag>
-		<English>Select the number of turns before a building will decay at which time the decay information is first displayed.</English>
-		<French>Sélectionne le nombre de tours restants avant la perte d'avance de production, qui va déclencher l'information et l'avertissement pour les bâtiments.</French>
-		<German>Bestimmt die Anzahl der Runden, bevor der Produktionsfortschritt eines produzierten Gebäudes verfällt und ein gelbes Ausrufezeichen angezeigt wird</German>
-		<Italian>Inserisci il numero di turni prima che un Edificio in coda perda la produzione accumulata mancanti i quali verranno visualizzate per la prima volta le informazioni relative.</Italian>
-		<Spanish>Escoge el número de turnos antes de que la producción de un edificio en cola decaiga y se muestre el indicador por primera vez.</Spanish>
-		<Russian>Âûáåðèòå ÷èñëî õîäîâ äî òîãî êàê ñòðîåíèå óñòàðååò ïðè êîòîðîì èíôîðìàöèÿ óñòàðåâàíèÿ âïåðâûå îòîáðàæàåòñÿ.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__PRODUCTIONDECAYHOVERBUILDINGTHRESHOLD_TEXT</Tag>
-		<English>Building Warning</English>
-		<French>Avertissement Bâtiment</French>
-		<German>Gebäude-Warnung</German>
-		<Italian>Avviso per gli Edifici</Italian>
-		<Spanish>Aviso Edificios</Spanish>
-		<Russian>Äî ïðåäóïðåæäåíèÿ ñòðîåíèé</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__PRODUCTIONDECAYHOVERUNITTHRESHOLD_HOVER</Tag>
-		<English>Select the number of turns before a unit will decay at which time the decay information is first displayed.</English>
-		<French>Sélectionne le nombre de tours restants avant la perte d'avance de production, qui va déclencher l'information et l'avertissement pour les unités.</French>
-		<German>Bestimmt die Anzahl der Runden, bevor der Produktionsfortschritt einer produzierten Einheit verfällt und ein gelbes Ausrufezeichen angezeigt wird</German>
-		<Italian>Inserisci il numero di turni prima che una Unità in coda perda la produzione accumulata mancanti i quali verranno visualizzate per la prima volta le informazioni relative.</Italian>
-		<Spanish>Escoge el número de turnos antes de que la producción de una unidad en cola decaiga y se muestre el indicador por primera vez.</Spanish>
-		<Russian>Âûáåðèòå ÷èñëî õîäîâ äî òîãî êàê þíèò óñòàðååò ïðè êîòîðîì èíôîðìàöèÿ óñòàðåâàíèÿ âïåðâûå îòîáðàæàåòñÿ.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__PRODUCTIONDECAYHOVERUNITTHRESHOLD_TEXT</Tag>
-		<English>Unit Warning</English>
-		<French>Avertissement Unité</French>
-		<German>Einheiten-Warnung</German>
-		<Italian>Avviso per le Unità</Italian>
-		<Spanish>Aviso para unidades</Spanish>
-		<Russian>Äî ïðåäóïðåæäåíèÿ þíèòà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__PRODUCTIONDECAYHOVER_HOVER</Tag>
-		<English>When checked, displays the number of turns before and amount of decay in the hover text for units and buildings in the build queue.</English>
-		<French>Lorsque activé, affiche le nombre de tours avec la perte de l'avance de production dans les infobulles de la file de production des unités et bâtiments.</French>
-		<German>Zeigt im Tooltip von Einheiten und Gebäuden in der Produktionsliste die Anzahl der Runden an, bis ein Produktionsfortschritt verfällt und wie viele [ICON_PRODUCTION] dann verloren gehen</German>
-		<Italian>Quando è selezionato, mostra nel testo a comparsa delle Unità e degli Edifici in coda di produzione il numero di turni prima che perdano la produzione accumulata e l'ammontare di tale perdita.</Italian>
-		<Spanish>Cuando se activa, muestra el número de turnos que faltan para que decaiga un elemento en cola, y la cantidad que decrecerá, en el texto que se muestra al pasar el ratón sobre los elementos de la cola de producción.</Spanish>
-		<Russian>Êîãäà óñòàíîâëåí, ïîêàçûâàåò ÷èñëî õîäîâ äî è ðàçìåð óñòàðåâàíèÿ â òåêñòå îæèäàíèÿ äëÿ þíèòîâ è çäàíèé â î÷åðåäè ñòðîèòåëüñòâà.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__PRODUCTIONDECAYHOVER_TEXT</Tag>
-		<English>Hover</English>
-		<French>InfoBulle</French>
-		<German>Tooltip</German>
-		<Italian>Testo a comparsa</Italian>
-		<Spanish>Flotante</Spanish>
-		<Russian>Îæèäàíèå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__PRODUCTIONDECAYQUEUEBUILDINGTHRESHOLD_HOVER</Tag>
-		<English>Select the number of turns before a building will decay at which time a yellow exclamation mark is shown. Buildings decay after being in the queue without adding [ICON_PRODUCTION] for 50 turns. Projects never decay.</English>
-		<French>Sélectione le nombre de tours avant l'apparition de l'avertissement par les points d'exclamation. Les Unités perdent leur avance de production à partir de 50 tours sans production. Les Projets ne perdent jamais de leur avance de production</French>
-		<German>Bestimmt die Anzahl der Runden, bevor der Produktionsfortschritt eines produzierten Gebäudes verfällt und ein gelbes Ausrufezeichen angezeigt wird (Produktionsfortschritte bei Gebäuden verfallen, wenn sie 50 Runden in der Liste stehen, ohne dass weitere [ICON_PRODUCTION] auf sie verwendet wurden; bei Projekten geschieht dies nie)</German>
-		<Italian>Inserisci il numero di turni prima che un Edificio in coda perda la produzione accumulata mancanti i quali verrà visualizzato il punto esclamativo giallo di avvertimento. Gli Edifici perdono la produzione accumulata dopo essere state nella coda di produzione per 50 turni senza aggiunte di [ICON_PRODUCTION]; i Progetti invece non perdono mai la produzione accumulata.</Italian>
-		<Spanish>Escoge el número de turnos antes de que la producción de un edificio en cola decaiga, para que se muestre una exclamación amarilla. Los edificios decaerán después de estar 50 turnos en la cola sin que se añada ningún [ICON_PRODUCTION]. Los proyectos no decaen.</Spanish>
-		<Russian>Âûáåðèòå ÷èñëî õîäîâ äî òîãî êàê ñòðîåíèå óñòàðååò ïðè êîòîðîì ïîêàçûâàåòñÿ æåëòûé âîñêëèöàòåëüíûé çíàê. Ñòðîåíèå óñòàðååò áóäó÷è â î÷åðåäè áåç äîáàâëåíèÿ [ICON_PRODUCTION] çà 50 õîäîâ. Ïðîåêòû íèêîãäà íå óñòàðåâàþò.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__PRODUCTIONDECAYQUEUEBUILDINGTHRESHOLD_TEXT</Tag>
-		<English>Building Warning</English>
-		<French>Avertissement Bâtiments</French>
-		<German>Gebäude-Warnung</German>
-		<Italian>Avviso per gli Edifici</Italian>
-		<Spanish>Aviso para edificios</Spanish>
-		<Russian>Ïðåäóïðåæäåíèÿ ñòðîåíèé</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__PRODUCTIONDECAYQUEUEUNITTHRESHOLD_HOVER</Tag>
-		<English>Select the number of turns before a unit will decay at which time a yellow exclamation mark is shown. Units decay after being in the queue without adding [ICON_PRODUCTION] for 10 turns.</English>
-		<French>Sélectione le nombre de tours avant l'apparition de l'avertissement par les points d'exclamation. Les Unités perdent leur avance de production à partir de 10 tours sans production.</French>
-		<German>Bestimmt die Anzahl der Runden, bevor der Produktionsfortschritt einer produzierten Einheit verfällt und ein gelbes Ausrufezeichen angezeigt wird (Produktionsfortschritte bei Einheiten verfallen, wenn sie 10 Runden in der Liste stehen, ohne dass weitere [ICON_PRODUCTION] auf sie verwendet wurden)</German>
-		<Italian>Inserisci il numero di turni prima che una Unità in coda perda la produzione accumulata mancanti i quali verrà visualizzato il punto esclamativo giallo di avvertimento. Le Unità perdono la produzione accumulata dopo essere state nella coda di produzione per 10 turni senza aggiunte di [ICON_PRODUCTION].</Italian>
-		<Spanish>Escoge el número de turnos antes de que la producción de una unidad en cola decaiga, para que se muestre una exclamación amarilla. Las unidades decaerán después de estar 10 turnos en la cola sin que se añada ningún [ICON_PRODUCTION].</Spanish>
-		<Russian>Âûáåðèòå ÷èñëî õîäîâ äî òîãî êàê þíèò óñòàðååò ïðè êîòîðîì ïîêàçûâàåòñÿ æåëòûé âîñêëèöàòåëüíûé çíàê. Þíèò óñòàðååò áóäó÷è â î÷åðåäè áåç äîáàâëåíèÿ [ICON_PRODUCTION] çà 10 õîäîâ.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__PRODUCTIONDECAYQUEUEUNITTHRESHOLD_TEXT</Tag>
-		<English>Unit Warning</English>
-		<French>Avertissement des Unités</French>
-		<German>Einheiten-Warnung</German>
-		<Italian>Avviso per le Unità</Italian>
-		<Spanish>Aviso para unidades</Spanish>
-		<Russian>Ïðåäóïðåæäåíèÿ þíèòà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__PRODUCTIONDECAYQUEUE_HOVER</Tag>
-		<English>When checked, displays a yellow exclamation point (!) next to items in the build queue that are close to decaying from being left in the queue without adding [ICON_PRODUCTION] for too long. Two red exclamation points signify that the item will decay this turn if it is not first in the queue.</English>
-		<French>Lorsque activé, affiche un point d'exclamation jaune (!) devant les objets de la file de production qui vont perdre leur [ICON_PRODUCTION] déjà commencée depuis trop longtemps. Les deux points d'exclammation rouge signifieront que cette perte se fera au tour suivant si l'objet n'est pas en tête de liste.</French>
-		<German>Zeigt ein gelbes Ausrufezeichen (!) bei Projekten in der Produktionsliste an, deren Produktionsfortschritt demnächst verfällt, da sie zu lange in der Liste stehen, ohne dass weitere [ICON_PRODUCTION] auf sie verwendet wurden. Zwei rote Ausrufezeichen (!!) zeigen an, dass der Produktionsfortschritt eines Projekts in dieser Runde verfällt, falls es nicht weiter produziert wird</German>
-		<Italian>Quando è selezionato, mostra un punto esclamativo (!) giallo per gli oggetti nella coda di produzione che sono prossimi a perdere la produzione accumulata a causa della eccessiva permanenza nella coda senza ulteriore aggiunta di [ICON_PRODUCTION]. Due punti esclamativi rossi indicano che l'oggetto nella coda perderà la produzione accumulata nel turno in corso a meno che non venga posizionato in testa alla coda produttiva.</Italian>
-		<Spanish>Cuando se activa, muestra una exclamación amarilla (!) al lado de los elementos en la cola que están cerca de perder producción por ser dejados en la cola durante mucho tiempo sin añadir nuevos [ICON_PRODUCTION]. Dos exclamaciones rojas indicas que el elemento decaerá este turno si no se coloca el primero en la cola.</Spanish>
-		<Russian>Êîãäà óñòàíîâëåí, îòîáðàæàåò æåëòûé âîñêëèöàòåëüíûé çíàê (!) ñëåäîì çà ïðåäìåòàìè â î÷åðåäè ñòðîèòåëüñòâà êîòîðûå áëèçêè ê óñòàðåâàíèþ îò òîãî, ÷òî áûëè îñòàâëåíû â î÷åðåäè áåç äîáàâëåíèÿ [ICON_PRODUCTION] ñëèøêîì äîëãî. Äâà êðàñíûõ âîñêëèöàòåëüíûõ çíàêà îçíà÷àþò ÷òî ïðåäìåò óñòàðååò â ýòîò õîä åñëè îí íå ïåðâûé â î÷åðåäè.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__PRODUCTIONDECAYQUEUE_TEXT</Tag>
-		<English>Queue</English>
-		<French>File de Production</French>
-		<German>Produktionsliste</German>
-		<Italian>Coda</Italian>
-		<Spanish>Cola</Spanish>
-		<Russian>Î÷åðåäü</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__PRODUCTIONPOPUPTRAINCIVILIANUNITSFOREVER_HOVER</Tag>
@@ -6784,11 +6671,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__IMPROVEDXP_HOVER</Tag>
-		<English>Even without this option enabled, XP from combat is partially determined by victory chance. However, enabling this "Dynamic XP" game option will significantly magnify the effect, making it slower to train high-level units through low-risk combat (Minimum XP lowered to 0.01 from 1), but increasing further the XP gained by winning at lower odds (Maximum XP uncapped from 10). Additionally, many combat-adjacent actions such as pillaging, bombardment, etc. will give small amounts of XP.</English>
+		<English>Even without this option enabled, XP from combat is partially determined by victory chance. However, enabling this "Dynamic+ XP" game option will significantly magnify the effect, making it slower to train high-level units through low-risk combat (Minimum XP lowered to 0.01 from 1), but increasing further the XP gained by winning at lower odds (Maximum XP uncapped from 10). Additionally, many combat-adjacent actions such as pillaging, bombardment, etc. will give small amounts of XP.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__IMPROVEDXP_TEXT</Tag>
-		<English>Dynamic XP</English>
+		<English>Dynamic+ XP</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__INFRASTRUCTUREIGNORESIMPROVEMENTS_HOVER</Tag>
@@ -6945,24 +6832,6 @@
 		<Italian>Niente Popup della produzione</Italian>
 		<Spanish>No mostrar avisos emergentes de producción</Spanish>
 		<Russian>Îòêë. î÷åðåäü íà ñòðîèò-âî</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__NOSTORMS_HOVER</Tag>
-		<English>Storms will stop spawning, and dissipate over time.</English>
-		<French>Les Tempêtes vont arrêter d'apparaître, et se dissipent avec le temps.</French>
-		<German>Es werden keine neuen Stürme entstehen und bereits vorhandene lösen sich langsam auf.</German>
-		<Italian>I temporali non verranno più creati, e svaniranno con il tempo.</Italian>
-		<Spanish>Las tormentas dejarán de engendrarse, y se disiparán con el tiempo.</Spanish>
-		<Russian>Óðàãàíû ïðåêðàùàþò ïîÿâëÿòüñÿ íà êàðòå, à óæå ñóùåñòâóþùèå ïîñòåïåííî ðàñïàäàþòñÿ.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__NOSTORMS_TEXT</Tag>
-		<English>No Storms</English>
-		<French>Pas de Tempêtes</French>
-		<German>Keine Stürme</German>
-		<Italian>Niente temporali</Italian>
-		<Spanish>Sin tormentas</Spanish>
-		<Russian>Íåò øòîðìîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__PLAYERCOLOR_HOVER</Tag>
@@ -7997,14 +7866,6 @@ uno de s, A, a, p, g, n, o, r (véase archivo de ayuda)</Spanish>
 		<Italian>Sgombrando una casella di %s1_FeatName si è creerà %d2_Num [ICON_PRODUCTION] per %s3_CityName.</Italian>
 		<Spanish>Despejar [NUM1:el:la:los:las] %s1_FeatName generará %d2_Num [ICON_PRODUCTION] para %s3_CityName.</Spanish>
 		<Russian>Óäàëåíèå %s1_FeatName ñîçäàñò %d2_Num [ICON_PRODUCTION] äëÿ %s3_CityName.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_PRODUCTION_DECAY_THIS_TURN</Tag>
-		<English>[COLOR_WARNING_TEXT][BOLD]!![\BOLD][COLOR_REVERT] %s1</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_PRODUCTION_DECAY_WARNING</Tag>
-		<English>[COLOR_YELLOW][BOLD]![\BOLD][COLOR_REVERT] %s1</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_RELIGIOUS_CITY</Tag>

@@ -644,7 +644,7 @@ class CvReligionScreen:
 			self.drawCityInfo(self.iReligionSelected)
 
 	def calculateBuilding (self, city, bldg):
-		if city.getNumRealBuilding(bldg) > 0:
+		if city.hasBuilding(bldg):
 			return self.objectHave
 		if city.GetCy().getFirstBuildingOrder(bldg) != -1:
 			return self.objectUnderConstruction

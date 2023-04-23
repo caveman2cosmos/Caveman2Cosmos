@@ -15506,7 +15506,7 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>SND_TECH_BIOMATHMATICS</SoundID>
+			<SoundID>SND_TECH_BIOMATHEMATICS</SoundID>
 			<Filename>Sounds/Tech/08_Biomathematics</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
@@ -16780,7 +16780,7 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>SND_TECH_MYTHOLOCIAL_BEASTIARY</SoundID>
+			<SoundID>SND_TECH_MYTHOLOGICAL_BESTIARY</SoundID>
 			<Filename>Sounds/Tech/10_Mythological_Bestiary</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
