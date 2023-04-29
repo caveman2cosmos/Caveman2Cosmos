@@ -1,3 +1,6 @@
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
 #include "CvGlobals.h"
@@ -551,6 +554,7 @@ void CyPlot::changeInvisibleVisibilityCount(int iTeam, int iInvisible, int iChan
 
 python::list CyPlot::units() const
 {
+	PROFILE_EXTRA_FUNC();
 	python::list list = python::list();
 
 	if (m_pPlot)
@@ -600,6 +604,7 @@ CyPlot* CyPlot::cloneToViewport() const
 
 python::list CyPlot::adjacent() const
 {
+	PROFILE_EXTRA_FUNC();
 	python::list list = python::list();
 
 	if (m_pPlot)
@@ -614,6 +619,7 @@ python::list CyPlot::adjacent() const
 
 python::list CyPlot::rect(int halfWid, int halfHgt) const
 {
+	PROFILE_EXTRA_FUNC();
 	python::list list = python::list();
 
 	if (m_pPlot)

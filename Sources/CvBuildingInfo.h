@@ -79,7 +79,6 @@ public:
 	int getMaxStartEra() const						{ return m_iMaxStartEra; }
 	TechTypes getObsoleteTech() const				{ return m_iObsoleteTech; }
 	int getPrereqAndTech() const					{ return m_iPrereqAndTech; }
-	int getNoBonus() const							{ return m_iNoBonus; }
 	int getPowerBonus() const						{ return m_iPowerBonus; }
 	BuildingTypes getFreeBuilding() const			{ return m_iFreeBuilding; }
 	BuildingTypes getFreeAreaBuilding() const		{ return m_iFreeAreaBuilding; }
@@ -179,7 +178,6 @@ public:
 	int getWorldTradeRoutes() const					{ return m_iWorldTradeRoutes; }
 	int getLineOfSight() const						{ return m_iLineOfSight; }
 	int getInflationModifier() const				{ return m_iInflationModifier; }
-	int getInvasionChance() const					{ return m_iInvasionChance; }
 	int getAdjacentDamagePercent() const			{ return m_iAdjacentDamagePercent; }
 	int getPrereqPopulation() const					{ return m_iPrereqPopulation; }
 	BuildingTypes getProductionContinueBuilding() const	{ return m_iProductionContinueBuilding; }
@@ -222,7 +220,6 @@ public:
 	int getInsidiousness() const;
 	int getInvestigation() const;
 	int getPopulationChange() const;
-	int getOneTimePopulationPercentLoss() const;
 	int getMaxPopAllowed() const;
 
 	float getVisibilityPriority() const				{ return m_fVisibilityPriority; }
@@ -418,9 +415,6 @@ public:
 	int getNumUnitCombatProdModifiers() const;
 	int getUnitCombatProdModifier(int iUnitCombat) const;
 
-	int getNumUnitCombatOngoingTrainingDurations() const;
-	int getUnitCombatOngoingTrainingDuration(int iUnitCombat, bool bForLoad = false) const;
-
 	int getNumAfflictionOutbreakLevelChanges() const;
 	int getAfflictionOutbreakLevelChange(int iAfflictionLine) const;
 
@@ -552,7 +546,6 @@ private:
 	int m_iLineOfSight;
 	int m_iInflationModifier;
 	int m_iPillageGoldModifier;
-	int m_iInvasionChance;
 	int m_iAdjacentDamagePercent;
 	int m_iPrereqPopulation;
 	int m_iPrereqCultureLevel;
@@ -572,7 +565,6 @@ private:
 	int m_iMaxStartEra;
 	TechTypes m_iObsoleteTech;
 	int m_iPrereqAndTech;
-	int m_iNoBonus;
 	int m_iPowerBonus;
 	BuildingTypes m_iFreeBuilding;
 	BuildingTypes m_iFreeAreaBuilding;
@@ -696,7 +688,6 @@ private:
 	int m_iInsidiousness;
 	int m_iInvestigation;
 	int m_iPopulationChange;
-	int m_iOneTimePopulationPercentLoss;
 	int m_iMaxPopAllowed;
 
 	float m_fVisibilityPriority;
@@ -780,7 +771,6 @@ private:
 	UnitCombatModifierArray m_aUnitCombatRepelAgainstModifiers;
 	UnitCombatModifierArray m_aUnitCombatDefenseAgainstModifiers;
 	UnitCombatModifierArray m_aUnitCombatProdModifiers;
-	UnitCombatModifierArray m_aUnitCombatOngoingTrainingDurations;
 	PromotionLineModifierArray m_aAfflictionOutbreakLevelChanges;
 	TechModifierArray m_aTechOutbreakLevelChanges;
 	IDValueMap<BonusTypes, int> m_piBonusHealthChanges;

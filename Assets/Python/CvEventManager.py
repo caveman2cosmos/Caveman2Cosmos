@@ -78,7 +78,6 @@ class CvEventManager:
 			'cityRazed'					: self.onCityRazed,
 			'cityLost'					: self.onCityLost,
 #			'cultureExpansion'			: self.onCultureExpansion,
-#			'cityGrowth'				: self.onCityGrowth,
 			'cityDoTurn'				: self.onCityDoTurn,
 #			'cityBuildingUnit'			: self.onCityBuildingUnit,
 #			'cityBuildingBuilding'		: self.onCityBuildingBuilding,
@@ -220,42 +219,41 @@ class CvEventManager:
 				self.iArcologyCityID = -1
 				self.iOldCityID = -1
 				self.mapBuildingType = {
-					"ZIZKOV"				: GC.getInfoTypeForString("BUILDING_ZIZKOV"),
-					"HELSINKI"				: GC.getInfoTypeForString("BUILDING_HELSINKI"),
+					"ZIZKOV"				: GC.getInfoTypeForString("BUILDING_ZIZKOV_TELEVISION_TOWER"),
+					"HELSINKI"				: GC.getInfoTypeForString("BUILDING_HELSINKI_CATHEDRAL"),
 					"TAIPEI_101"			: GC.getInfoTypeForString('BUILDING_TAIPEI_101'),
 					"LOTUS_TEMPLE"			: GC.getInfoTypeForString('BUILDING_LOTUS_TEMPLE'),
 					"NANITE_DEFUSER"		: GC.getInfoTypeForString("BUILDING_NANITE_DEFUSER"),
-					"MARCO_POLO"			: GC.getInfoTypeForString('BUILDING_MARCO_POLO'),
-					"APPIAN_WAY"			: GC.getInfoTypeForString('BUILDING_APPIAN_WAY'),
+					"MARCO_POLO"			: GC.getInfoTypeForString('BUILDING_MARCO_POLOS_EMBASSY'),
+					"APPIAN_WAY"			: GC.getInfoTypeForString('BUILDING_VIA_APPIA'),
 					"GOLDEN_SPIKE"			: GC.getInfoTypeForString('BUILDING_GOLDEN_SPIKE'),
-					"FIELD_GOLD"			: GC.getInfoTypeForString('BUILDING_FIELD_GOLD'),
+					"FIELD_GOLD"			: GC.getInfoTypeForString('BUILDING_FIELD_OF_THE_CLOTH_OF_GOLD'),
 					"MACHU_PICCHU"			: GC.getInfoTypeForString("BUILDING_MACHU_PICCHU"),
-					"MAGINOTLINE"			: GC.getInfoTypeForString('BUILDING_MAGINOTLINE'),
+					"MAGINOTLINE"			: GC.getInfoTypeForString('BUILDING_MAGINOT_LINE'),
 					"ROUTE_66"				: GC.getInfoTypeForString('BUILDING_ROUTE_66'),
 					"SILK_ROAD"				: GC.getInfoTypeForString('BUILDING_SILK_ROAD'),
-					"CLEOPATRA_NEEDLE"		: GC.getInfoTypeForString("BUILDING_CLEOPATRA_NEEDLE"),
-					"FA_MEN_SI"				: GC.getInfoTypeForString("BUILDING_FA_MEN_SI"),
-					"LASCAUX"				: GC.getInfoTypeForString("BUILDING_LASCAUX"),
+					"CLEOPATRA_NEEDLE"		: GC.getInfoTypeForString("BUILDING_CLEOPATRAS_NEEDLE"),
+					"FA_MEN_SI"				: GC.getInfoTypeForString("BUILDING_FAMEN_TEMPLE"),
+					"LASCAUX"				: GC.getInfoTypeForString("BUILDING_LASCAUX_PAINTS"),
 					"ARCOLOGY"				: GC.getInfoTypeForString("BUILDING_ARCOLOGY"),
 					"ARCOLOGY_SHIELDING"	: GC.getInfoTypeForString("BUILDING_ARCOLOGY_SHIELDING"),
 					"ADVANCED_SHIELDING"	: GC.getInfoTypeForString("BUILDING_ADVANCED_SHIELDING"),
 					"GREAT_ZIMBABWE"		: GC.getInfoTypeForString("BUILDING_GREAT_ZIMBABWE"),
-					"CRUSADE"				: GC.getInfoTypeForString("BUILDING_CRUSADE"),
+					"CRUSADE"				: GC.getInfoTypeForString("BUILDING_KINGS_CRUSADE"),
 					"ALAMO"					: GC.getInfoTypeForString("BUILDING_ALAMO"),
 					"WORLD_BANK"			: GC.getInfoTypeForString("BUILDING_WORLD_BANK"),
 					"CYRUS_CYLINDER"		: GC.getInfoTypeForString("BUILDING_CYRUS_CYLINDER"),
-					"CYRUS_TOMB"			: GC.getInfoTypeForString("BUILDING_CYRUS_TOMB"),
-					"WEMBLEY"				: GC.getInfoTypeForString("BUILDING_WEMBLEY"),
-					"PERGAMON"				: GC.getInfoTypeForString("BUILDING_PERGAMON"),
-					"TSUKIJI"				: GC.getInfoTypeForString("BUILDING_TSUKIJI"),
-					"BIODOME"				: GC.getInfoTypeForString("BUILDING_BIODOME"),
+					"CYRUS_TOMB"			: GC.getInfoTypeForString("BUILDING_TOMB_OF_CYRUS"),
+					"WEMBLEY"				: GC.getInfoTypeForString("BUILDING_WEMBLEY_STADIUM"),
+					"PERGAMON"				: GC.getInfoTypeForString("BUILDING_PERGAMON_ALTAR"),
+					"TSUKIJI"				: GC.getInfoTypeForString("BUILDING_TSUKIJI_FISH_MARKET"),
+					"BIODOME"				: GC.getInfoTypeForString("BUILDING_MONTREAL_BIODOME"),
 					"NAZCA_LINES"			: GC.getInfoTypeForString("BUILDING_NAZCA_LINES"),
 					"THE_MOTHERLAND_CALLS"	: GC.getInfoTypeForString("BUILDING_THE_MOTHERLAND_CALLS"),
-					"ISHTAR"				: GC.getInfoTypeForString('BUILDING_ISHTAR'),
-					"GREAT_JAGUAR_TEMPLE"	: GC.getInfoTypeForString('BUILDING_GREAT_JAGUAR_TEMPLE'),
-					"GREAT_BATH"			: GC.getInfoTypeForString('BUILDING_GREAT_BATH'),
+					"ISHTAR"				: GC.getInfoTypeForString('BUILDING_THE_ISHTAR_GATE'),
+					"GREAT_JAGUAR_TEMPLE"	: GC.getInfoTypeForString('BUILDING_TEMPLE_OF_AH_CACAO'),
 					"TOPKAPI_PALACE"		: GC.getInfoTypeForString("BUILDING_TOPKAPI_PALACE"),
-					"NEANDERTHAL_EMBASSY"	: GC.getInfoTypeForString("BUILDING_NEANDERTHAL_EMBASSY")
+					"NEANDERTHAL_EMBASSY"	: GC.getInfoTypeForString("BUILDING_CULTURE_NEANDERTHAL")
 				}
 				self.mapUnitType = {
 					"MONK"		: GC.getInfoTypeForString("UNIT_MONK"),
@@ -309,14 +307,14 @@ class CvEventManager:
 				self.CIVIC_TECHNOCRACY	= GC.getInfoTypeForString('CIVIC_TECHNOCRACY')
 				# onCityBuilt
 				self.aCultureList = [
-					[GC.getInfoTypeForString('PROMOTION_CULTURE_AFRICAN'), GC.getInfoTypeForString('BUILDING_CULTURE_LOCAL_AFRICAN'), GC.getInfoTypeForString('BUILDING_CULTURE_NATIVE_AFRICAN')],
-					[GC.getInfoTypeForString('PROMOTION_CULTURE_ASIAN'), GC.getInfoTypeForString('BUILDING_CULTURE_LOCAL_ASIAN'), GC.getInfoTypeForString('BUILDING_CULTURE_NATIVE_ASIAN')],
-					[GC.getInfoTypeForString('PROMOTION_CULTURE_EUROPEAN'), GC.getInfoTypeForString('BUILDING_CULTURE_LOCAL_EUROPEAN'), GC.getInfoTypeForString('BUILDING_CULTURE_NATIVE_EUROPEAN')],
-					[GC.getInfoTypeForString('PROMOTION_CULTURE_MIDDLE_EASTERN'), GC.getInfoTypeForString('BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN'), GC.getInfoTypeForString('BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN')],
-					[GC.getInfoTypeForString('PROMOTION_CULTURE_NEANDERTHAL'), GC.getInfoTypeForString('BUILDING_CULTURE_LOCAL_NEANDERTHAL'), GC.getInfoTypeForString('BUILDING_CULTURE_NATIVE_NEANDERTHAL')],
-					[GC.getInfoTypeForString('PROMOTION_CULTURE_NORTH_AMERICAN'), GC.getInfoTypeForString('BUILDING_CULTURE_LOCAL_NORTH_AMERICAN'), GC.getInfoTypeForString('BUILDING_CULTURE_NATIVE_NORTH_AMERICAN')],
-					[GC.getInfoTypeForString('PROMOTION_CULTURE_OCEANIAN'), GC.getInfoTypeForString('BUILDING_CULTURE_LOCAL_OCEANIAN'), GC.getInfoTypeForString('BUILDING_CULTURE_NATIVE_OCEANIAN')],
-					[GC.getInfoTypeForString('PROMOTION_CULTURE_SOUTH_AMERICAN'), GC.getInfoTypeForString('BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN'), GC.getInfoTypeForString('BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN')]
+					[GC.getInfoTypeForString('PROMOTION_CULTURE_AFRICAN'), GC.getInfoTypeForString('BUILDING_C_L_AFRICAN'), GC.getInfoTypeForString('BUILDING_C_N_AFRICAN')],
+					[GC.getInfoTypeForString('PROMOTION_CULTURE_ASIAN'), GC.getInfoTypeForString('BUILDING_C_L_ASIAN'), GC.getInfoTypeForString('BUILDING_C_N_ASIAN')],
+					[GC.getInfoTypeForString('PROMOTION_CULTURE_EUROPEAN'), GC.getInfoTypeForString('BUILDING_C_L_EUROPEAN'), GC.getInfoTypeForString('BUILDING_C_N_EUROPEAN')],
+					[GC.getInfoTypeForString('PROMOTION_CULTURE_MIDDLE_EASTERN'), GC.getInfoTypeForString('BUILDING_C_L_MIDDLE_EASTERN'), GC.getInfoTypeForString('BUILDING_C_N_MIDDLE_EASTERN')],
+					[GC.getInfoTypeForString('PROMOTION_CULTURE_NEANDERTHAL'), GC.getInfoTypeForString('BUILDING_C_L_NEANDERTHAL'), GC.getInfoTypeForString('BUILDING_C_N_NEANDERTHAL')],
+					[GC.getInfoTypeForString('PROMOTION_CULTURE_NORTH_AMERICAN'), GC.getInfoTypeForString('BUILDING_C_L_NORTH_AMERICAN'), GC.getInfoTypeForString('BUILDING_C_N_NORTH_AMERICAN')],
+					[GC.getInfoTypeForString('PROMOTION_CULTURE_OCEANIAN'), GC.getInfoTypeForString('BUILDING_C_L_OCEANIAN'), GC.getInfoTypeForString('BUILDING_C_N_OCEANIAN')],
+					[GC.getInfoTypeForString('PROMOTION_CULTURE_SOUTH_AMERICAN'), GC.getInfoTypeForString('BUILDING_C_L_SOUTH_AMERICAN'), GC.getInfoTypeForString('BUILDING_C_N_SOUTH_AMERICAN')]
 				]
 				self.UNIT_BAND = GC.getInfoTypeForString("UNIT_BAND")
 
@@ -513,7 +511,7 @@ class CvEventManager:
 				CyCity = CyPlayer.getCity(iData3)
 				# 903 Demolish Building || 904 Abandon City || 905/906 Abandon->Units
 				if ID == 903:
-					CyCity.setNumRealBuilding(iData4, 0)
+					CyCity.changeHasBuilding(iData4, False)
 					CyPlayer.changeGold(iData5)
 					CvScreensInterface.mainInterface.buildCityListLeft()
 					CyInterface().setDirty(InterfaceDirtyBits.SelectionButtons_DIRTY_BIT, True)
@@ -555,10 +553,10 @@ class CvEventManager:
 
 		CvAdvisorUtils.resetNoLiberateCities()
 
-		self.GO_1_CITY_TILE_FOUNDING	= GAME.isOption(GameOptionTypes.GAMEOPTION_1_CITY_TILE_FOUNDING)
-		self.GO_START_AS_MINORS			= GAME.isOption(GameOptionTypes.GAMEOPTION_START_AS_MINORS)
+		self.GO_1_CITY_TILE_FOUNDING	= GAME.isOption(GameOptionTypes.GAMEOPTION_CULTURE_1_CITY_TILE_FOUNDING)
+		self.GO_START_AS_MINORS			= GAME.isOption(GameOptionTypes.GAMEOPTION_UNSUPPORTED_START_AS_MINORS)
 		self.GO_NO_CITY_RAZING			= GAME.isOption(GameOptionTypes.GAMEOPTION_NO_CITY_RAZING)
-		self.GO_ONE_CITY_CHALLENGE		= GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE)
+		self.GO_ONE_CITY_CHALLENGE		= GAME.isOption(GameOptionTypes.GAMEOPTION_CHALLENGE_ONE_CITY)
 
 		if bNewGame and self.GO_START_AS_MINORS:
 			for iTeam in xrange(GC.getMAX_PC_TEAMS()):
@@ -572,11 +570,11 @@ class CvEventManager:
 		# Find special buildings built where by whom.
 		mapBuildingType = self.mapBuildingType
 		aList0 = [ # Only meant for world wonders
-			"CRUSADE",			"GREAT_ZIMBABWE",		"HELSINKI",				"ALAMO",
-			"LASCAUX",			"WORLD_BANK",			"TAIPEI_101",			"CYRUS_CYLINDER",
-			"FA_MEN_SI",		"WEMBLEY",				"PERGAMON",				"CYRUS_TOMB",			"TSUKIJI",
-			"BIODOME",			"NAZCA_LINES",			"THE_MOTHERLAND_CALLS",	"GREAT_JAGUAR_TEMPLE",	"GREAT_BATH",
-			"TOPKAPI_PALACE",
+			"CRUSADE",				"GREAT_ZIMBABWE",	"HELSINKI",		"ALAMO",
+			"LASCAUX",				"WORLD_BANK",		"TAIPEI_101",	"CYRUS_CYLINDER",
+			"FA_MEN_SI",			"WEMBLEY",			"PERGAMON",		"CYRUS_TOMB",
+			"TSUKIJI", 				"BIODOME",			"NAZCA_LINES",	"THE_MOTHERLAND_CALLS",
+			"GREAT_JAGUAR_TEMPLE",	"TOPKAPI_PALACE",
 		] # KEY
 		aList1 = [] # iBuilding
 		aList2 = [] # iTech (Obsolete)
@@ -604,7 +602,7 @@ class CvEventManager:
 				if CyPlayer.hasBuilding(iBuilding):
 					aList4[k] = iPlayer
 					for CyCity in CyPlayer.cities():
-						if CyCity.getNumRealBuilding(iBuilding):
+						if CyCity.hasBuilding(iBuilding):
 							aList3[k] = CyCity.getID()
 							break
 		# Get rid of wonders that is lost when a city is razed.
@@ -699,7 +697,7 @@ class CvEventManager:
 			szText = ""
 			if GC.getDefineINT("START_YEAR") != GAME.getGameTurnYear():
 				szText += "\n\n" + TRNSLTR.getText("TXT_KEY_MOD_GAMESTART_NOT_PREHISTORIC", ())
-			if GAME.isOption(GameOptionTypes.GAMEOPTION_ADVANCED_START):
+			if GAME.isOption(GameOptionTypes.GAMEOPTION_CORE_CUSTOM_START):
 				szText += "\n\n" + TRNSLTR.getText("TXT_KEY_MOD_GAMESTART_ADVANCED_START", ())
 			if szText:
 				szText = TRNSLTR.getText("TXT_KEY_MOD_HEADER", ()) + szText
@@ -1464,7 +1462,7 @@ class CvEventManager:
 				# Sort by descending culture
 				aList.sort(key=itemgetter(1), reverse=True)
 				for i, entry in enumerate(aList):
-					entry[0].setNumRealBuilding(iBuilding, 1)
+					entry[0].changeHasBuilding(iBuilding, True)
 					if i == 1: # Max. 2 other cities will get the needle for free
 						break
 		# NANITE DEFUSER - destroyes all nukes from all players
@@ -1664,7 +1662,7 @@ class CvEventManager:
 			if iThePath and MAP.generatePathForHypotheticalUnit(CyPlot, CyPlotDo, iPlayer, iUnit, PathingFlags.MOVE_SAFE_TERRITORY, 1000):
 				iBuilding = GC.getInfoTypeForString("BUILDING_ROUTE_66_TERMINUS")
 				if iBuilding > -1:
-					CyCityDo.setNumRealBuilding(iBuilding, 1)
+					CyCityDo.changeHasBuilding(iBuilding, True)
 				iRoute = GC.getInfoTypeForString("ROUTE_HIGHWAY")
 				if iRoute > -1:
 					for k in xrange(MAP.getLastPathStepNum()):
@@ -1896,9 +1894,9 @@ class CvEventManager:
 				GC.getMap().resetRevealedPlots(iTeamX)
 			CvUtil.sendImmediateMessage(TRNSLTR.getText("TXT_KEY_MSG_ZIZKOV_JAM",()))
 		elif iBuilding == mapBuildingType["NEANDERTHAL_EMBASSY"]:
-			iLocal = GC.getInfoTypeForString("BUILDING_CULTURE_LOCAL_NEANDERTHAL")
+			iLocal = GC.getInfoTypeForString("BUILDING_C_L_NEANDERTHAL")
 			for cityX in CyPlayer.cities():
-				cityX.setNumRealBuilding(iLocal, 1)
+				cityX.changeHasBuilding(iLocal, True)
 
 
 	def onProjectBuilt(self, argsList):
@@ -1916,7 +1914,7 @@ class CvEventManager:
 			popupInfo.addPopup(iPlayer)
 
 		# Eden project
-		if iProject == GC.getInfoTypeForString("PROJECT_EDEN"):
+		if iProject == GC.getInfoTypeForString("PROJECT_EDEN_PROJECT"):
 
 			iTeam = GC.getPlayer(iPlayer).getTeam()
 			iX = CyCity.getX()
@@ -2424,9 +2422,6 @@ class CvEventManager:
 		iPlayer = CyCity.getOwner()
 		# Give extra population to new cities
 		iPop = 0
-		aWonderTuple = self.aWonderTuple
-		if "GREAT_BATH" in aWonderTuple[0] and iPlayer == aWonderTuple[4][aWonderTuple[0].index("GREAT_BATH")]:
-			iPop += 1
 		if CyUnit:
 			iUnit = CyUnit.getUnitType()
 			if iUnit in self.mapSettlerPop:
@@ -2435,7 +2430,7 @@ class CvEventManager:
 			for iPromo, iBuilding, _ in self.aCultureList:
 				if -1 in (iPromo, iBuilding): continue
 				if CyUnit.isHasPromotion(iPromo):
-					CyCity.setNumRealBuilding(iBuilding, 1)
+					CyCity.changeHasBuilding(iBuilding, True)
 
 			# Give a free defender to the first city when it is built
 			if iUnit == self.UNIT_BAND:
@@ -2508,7 +2503,7 @@ class CvEventManager:
 					artPath = 'Art/Interface/Buttons/General/warning_popup.dds'
 
 					for iBuilding in xrange(GC.getNumBuildingInfos()):
-						if not CyCity.getNumRealBuilding(iBuilding): continue
+						if not CyCity.hasBuilding(iBuilding): continue
 						CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 						if CvBuildingInfo.getMaxGlobalInstances() == 1:
 
@@ -2590,7 +2585,7 @@ class CvEventManager:
 
 		# Ruin Arcology.
 		mapBuildingType = self.mapBuildingType
-		if CyCity.getNumRealBuilding(mapBuildingType["ARCOLOGY"]) or CyCity.getNumRealBuilding(mapBuildingType["ARCOLOGY_SHIELDING"]) or CyCity.getNumRealBuilding(mapBuildingType["ADVANCED_SHIELDING"]):
+		if CyCity.hasBuilding(mapBuildingType["ARCOLOGY"]) or CyCity.hasBuilding(mapBuildingType["ARCOLOGY_SHIELDING"]) or CyCity.hasBuilding(mapBuildingType["ADVANCED_SHIELDING"]):
 			self.iArcologyCityID = iCityID
 		else:
 			self.iArcologyCityID = -1
@@ -2682,7 +2677,7 @@ class CvEventManager:
 					iX = city.getX()
 					iY = city.getY()
 					for iBuilding in xrange(GC.getNumBuildingInfos()):
-						if city.getNumRealBuilding(iBuilding):
+						if city.hasBuilding(iBuilding):
 							CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 							if CvBuildingInfo.getMaxGlobalInstances() == 1:
 
@@ -2696,12 +2691,6 @@ class CvEventManager:
 
 	'''
 	def onCultureExpansion(self, argsList):
-		pCity = argsList[0]
-		iPlayer = argsList[1]
-
-
-	def onCityGrowth(self, argsList):
-		'City Population Growth'
 		pCity = argsList[0]
 		iPlayer = argsList[1]
 	'''

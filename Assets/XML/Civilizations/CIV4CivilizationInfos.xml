@@ -2,13 +2,13 @@
 <Civ4CivilizationInfos xmlns="x-schema:../Schema/C2C_CIV4CivilizationsSchema.xml">
 	<CivilizationInfos>
 		<CivilizationInfo>
-			<Type>CIVILIZATION_UNITED_STATES</Type>
-			<Description>TXT_KEY_CIV_UNITED_STATES_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_UNITED_STATES_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_UNITED_STATES_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_AMERICA_PEDIA</Civilopedia>
+			<Type>CIVILIZATION_AMERICA</Type>
+			<Description>TXT_KEY_CIVILIZATION_AMERICA</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_AMERICA_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_AMERICA_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_AMERICA_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_BLUE</DefaultPlayerColor>
-			<ArtDefineTag>ART_DEF_CIVILIZATION_UNITED_STATES</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_AMERICA</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_ANGLO_AMERICA</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_AMERICAN</UnitArtStyleType>
 			<bPlayable>1</bPlayable>
@@ -78,8 +78,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_C_N_NORTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_NORTH_AMERICAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -117,10 +117,10 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_ARABIA</Type>
-			<Description>TXT_KEY_CIV_ARABIA_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_ARABIA_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_ARABIA_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_ARABIA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_ARABIA</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_ARABIA_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_ARABIA_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_ARABIA_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_LIGHT_GREEN</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_ARABIA</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_ARABIA</ArtStyleType>
@@ -183,8 +183,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_C_N_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_C_AC_MIDDLE_EASTERN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -222,10 +222,10 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_ASSYRIA</Type>
-			<Description>TXT_KEY_CIV_ASSYRIA_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_ASSYRIA_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_ASSYRIA_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_ASSYRIA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_ASSYRIA</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_ASSYRIA_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_ASSYRIA_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_ASSYRIA_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_ASSYRIA</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_ASSYRIA</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_CRESCENT</ArtStyleType>
@@ -285,8 +285,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_C_N_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_C_AC_MIDDLE_EASTERN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -321,10 +321,10 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_AZTEC</Type>
-			<Description>TXT_KEY_CIV_AZTEC_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_AZTEC_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_AZTEC_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_AZTEC_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_AZTEC</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_AZTEC_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_AZTEC_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_AZTEC_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_GREEN</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_AZTEC</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_MESO_AMERICA</ArtStyleType>
@@ -380,8 +380,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_C_N_NORTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_NORTH_AMERICAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -414,16 +414,16 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
-			<DerivativeCiv>CIVILIZATION_UNITED_STATES</DerivativeCiv>
+			<DerivativeCiv>CIVILIZATION_AMERICA</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_AZTEC_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_AZTEC_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_BABYLON</Type>
-			<Description>TXT_KEY_CIV_BABYLON_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_BABYLON_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_BABYLON_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_BABYLON_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_BABYLON</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_BABYLON_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_BABYLON_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_BABYLON_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_MIDDLE_PURPLE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_BABYLON</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_CRESCENT</ArtStyleType>
@@ -481,8 +481,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_C_N_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_C_AC_MIDDLE_EASTERN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -517,10 +517,10 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_BYZANTIUM</Type>
-			<Description>TXT_KEY_CIV_BYZANTIUM_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_BYZANTIUM_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_BYZANTIUM_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_BYZANTIUM_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_BYZANTIUM</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_BYZANTIUM_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_BYZANTIUM_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_BYZANTIUM_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_GRAY</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_BYZANTIUM</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_GRECO_ROMAN</ArtStyleType>
@@ -578,8 +578,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_C_N_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_C_AC_MIDDLE_EASTERN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -618,10 +618,10 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_CARTHAGE</Type>
-			<Description>TXT_KEY_CIV_CARTHAGE_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_CARTHAGE_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_CARTHAGE_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_CARTHAGE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_CARTHAGE</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_CARTHAGE_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_CARTHAGE_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_CARTHAGE_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_ORANGE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_CARTHAGE</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_GRECO_ROMAN</ArtStyleType>
@@ -684,8 +684,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_AFRICAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
+				<BuildingType>BUILDING_C_N_AFRICAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_AFRICAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -720,10 +720,10 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_CELT</Type>
-			<Description>TXT_KEY_CIV_CELT_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_CELT_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_CELT_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_CELT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_CELT</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_CELT_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_CELT_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_CELT_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_LIGHT_ORANGE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_CELTS</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_EUROPE</ArtStyleType>
@@ -793,8 +793,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -829,10 +829,10 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_CHINA</Type>
-			<Description>TXT_KEY_CIV_CHINA_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_CHINA_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_CHINA_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_CHINA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_CHINA</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_CHINA_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_CHINA_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_CHINA_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_PINK</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_CHINA</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_ASIA</ArtStyleType>
@@ -888,8 +888,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_ASIAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
+				<BuildingType>BUILDING_C_N_ASIAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_ASIAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -931,10 +931,10 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_EGYPT</Type>
-			<Description>TXT_KEY_CIV_EGYPT_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_EGYPT_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_EGYPT_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_EGYPT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_EGYPT</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_EGYPT_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_EGYPT_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_EGYPT_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_YELLOW</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_EGYPT</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_EGYPT</ArtStyleType>
@@ -999,8 +999,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_AFRICAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
+				<BuildingType>BUILDING_C_N_AFRICAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_AFRICAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -1042,10 +1042,10 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_ENGLAND</Type>
-			<Description>TXT_KEY_CIV_ENGLAND_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_ENGLAND_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_ENGLAND_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_ENGLAND_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_ENGLAND</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_ENGLAND_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_ENGLAND_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_ENGLAND_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_WHITE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_ENGLAND</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_ANGLO_AMERICA</ArtStyleType>
@@ -1106,8 +1106,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -1144,16 +1144,16 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
-			<DerivativeCiv>CIVILIZATION_UNITED_STATES</DerivativeCiv>
+			<DerivativeCiv>CIVILIZATION_AMERICA</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_ENGLAND_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_ENGLAND_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_ETHIOPIA</Type>
-			<Description>TXT_KEY_CIV_ETHIOPIA_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_ETHIOPIA_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_ETHIOPIA_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_ETHIOPIA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_ETHIOPIA</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_ETHIOPIA_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_ETHIOPIA_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_ETHIOPIA_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_MIDDLE_GREEN</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_ETHIOPIA</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_AFRICA</ArtStyleType>
@@ -1209,8 +1209,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_AFRICAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
+				<BuildingType>BUILDING_C_N_AFRICAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_AFRICAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -1248,10 +1248,10 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_FRANCE</Type>
-			<Description>TXT_KEY_CIV_FRANCE_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_FRANCE_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_FRANCE_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_FRANCE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_FRANCE</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_FRANCE_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_FRANCE_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_FRANCE_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_BLUE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_FRANCE</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_EUROPE</ArtStyleType>
@@ -1308,8 +1308,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -1350,16 +1350,16 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
-			<DerivativeCiv>CIVILIZATION_UNITED_STATES</DerivativeCiv>
+			<DerivativeCiv>CIVILIZATION_AMERICA</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_FRANCE_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_FRANCE_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_GERMANY</Type>
-			<Description>TXT_KEY_CIV_GERMANY_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_GERMANY_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_GERMANY_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_GERMANY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_GERMANY</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_GERMANY_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_GERMANY_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_GERMANY_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_GRAY</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_GERMANY</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_EUROPE</ArtStyleType>
@@ -1423,8 +1423,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -1462,10 +1462,10 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_GREECE</Type>
-			<Description>TXT_KEY_CIV_GREECE_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_GREECE_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_GREECE_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_GREECE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_GREECE</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_GREECE_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_GREECE_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_GREECE_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_LIGHT_BLUE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_GREECE</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_GRECO_ROMAN</ArtStyleType>
@@ -1535,8 +1535,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -1575,10 +1575,10 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_HITTITES</Type>
-			<Description>TXT_KEY_CIV_HITTITES_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_HITTITES_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_HITTITES_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_HITTITES_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_HITTITES</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_HITTITES_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_HITTITES_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_HITTITES_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_HITTITES</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_HITTITES</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_EGYPT</ArtStyleType>
@@ -1668,8 +1668,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_C_N_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_C_AC_MIDDLE_EASTERN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -1699,10 +1699,10 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_HOLY_ROMAN</Type>
-			<Description>TXT_KEY_CIV_HOLY_ROMAN_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_HOLY_ROMAN_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_HOLY_ROMAN_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_HOLY_ROMAN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_HOLY_ROMAN</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_HOLY_ROMAN_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_HOLY_ROMAN_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_HOLY_ROMAN_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_LEMON</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_HOLY_ROMAN</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_EUROPE</ArtStyleType>
@@ -1759,8 +1759,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -1795,10 +1795,10 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_INCA</Type>
-			<Description>TXT_KEY_CIV_INCA_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_INCA_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_INCA_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_INCA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_INCA</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_INCA_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_INCA_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_INCA_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_YELLOW</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_INCA</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_SOUTH_AMERICA</ArtStyleType>
@@ -1864,8 +1864,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_C_N_SOUTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_SOUTH_AMERICAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -1894,16 +1894,16 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
-			<DerivativeCiv>CIVILIZATION_UNITED_STATES</DerivativeCiv>
+			<DerivativeCiv>CIVILIZATION_AMERICA</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_INCA_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_INCA_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_INDIA</Type>
-			<Description>TXT_KEY_CIV_INDIA_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_INDIA_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_INDIA_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_INDIA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_INDIA</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_INDIA_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_INDIA_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_INDIA_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_PURPLE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_INDIA</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_INDIA</ArtStyleType>
@@ -2007,8 +2007,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_ASIAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
+				<BuildingType>BUILDING_C_N_ASIAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_ASIAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -2042,10 +2042,10 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_JAPAN</Type>
-			<Description>TXT_KEY_CIV_JAPAN_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_JAPAN_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_JAPAN_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_JAPAN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_JAPAN</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_JAPAN_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_JAPAN_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_JAPAN_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_RED</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_JAPAN</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_JAPAN</ArtStyleType>
@@ -2105,8 +2105,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_ASIAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
+				<BuildingType>BUILDING_C_N_ASIAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_ASIAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -2145,10 +2145,10 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_KHMER</Type>
-			<Description>TXT_KEY_CIV_KHMER_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_KHMER_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_KHMER_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_KHMER_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_KHMER</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_KHMER_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_KHMER_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_KHMER_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_MIDDLE_BLUE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_KHMER</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_SOUTH_EAST_ASIA</ArtStyleType>
@@ -2204,8 +2204,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_ASIAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
+				<BuildingType>BUILDING_C_N_ASIAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_ASIAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -2239,10 +2239,10 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_KOREA</Type>
-			<Description>TXT_KEY_CIV_KOREA_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_KOREA_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_KOREA_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_KOREA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_KOREA</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_KOREA_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_KOREA_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_KOREA_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_CYAN</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_KOREA</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_ASIA</ArtStyleType>
@@ -2298,8 +2298,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_ASIAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
+				<BuildingType>BUILDING_C_N_ASIAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_ASIAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -2338,10 +2338,10 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_MALI</Type>
-			<Description>TXT_KEY_CIV_MALI_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_MALI_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_MALI_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_MALI_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_MALI</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_MALI_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_MALI_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_MALI_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_PEACH</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_MALI</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_AFRICA</ArtStyleType>
@@ -2402,8 +2402,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_AFRICAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
+				<BuildingType>BUILDING_C_N_AFRICAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_AFRICAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -2433,10 +2433,10 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_MAYA</Type>
-			<Description>TXT_KEY_CIV_MAYA_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_MAYA_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_MAYA_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_MAYA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_MAYA</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_MAYA_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_MAYA_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_MAYA_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_MIDDLE_CYAN</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_MAYA</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_MESO_AMERICA</ArtStyleType>
@@ -2492,8 +2492,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_C_N_NORTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_NORTH_AMERICAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -2522,16 +2522,16 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
-			<DerivativeCiv>CIVILIZATION_UNITED_STATES</DerivativeCiv>
+			<DerivativeCiv>CIVILIZATION_AMERICA</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_MAYA_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_MAYA_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_MONGOL</Type>
-			<Description>TXT_KEY_CIV_MONGOL_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_MONGOL_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_MONGOL_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_MONGOL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_MONGOL</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_MONGOL_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_MONGOL_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_MONGOL_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_BROWN</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_MONGOL</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_MONGOLIA</ArtStyleType>
@@ -2591,8 +2591,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_ASIAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
+				<BuildingType>BUILDING_C_N_ASIAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_ASIAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -2626,13 +2626,13 @@
 			<CivilizationActionSound>AS3D_MONGOL_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
 		<CivilizationInfo>
-			<Type>CIVILIZATION_NATIVE_AMERICA</Type>
-			<Description>TXT_KEY_CIV_NATIVE_AMERICA_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_NATIVE_AMERICA_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_NATIVE_AMERICA_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_NATIVE_AMERICA_PEDIA</Civilopedia>
+			<Type>CIVILIZATION_SIOUX</Type>
+			<Description>TXT_KEY_CIVILIZATION_SIOUX</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_SIOUX_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_SIOUX_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_SIOUX_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_LIGHT_BROWN</DefaultPlayerColor>
-			<ArtDefineTag>ART_DEF_CIVILIZATION_NATIVE_AMERICA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_SIOUX</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_NATIVE_AMERICA</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_NATIVE_AMERICA</UnitArtStyleType>
 			<bPlayable>1</bPlayable>
@@ -2704,8 +2704,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_C_N_NORTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_NORTH_AMERICAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -2734,16 +2734,16 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
-			<DerivativeCiv>CIVILIZATION_UNITED_STATES</DerivativeCiv>
+			<DerivativeCiv>CIVILIZATION_AMERICA</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_NATIVE_AMERICA_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_NATIVE_AMERICA_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_NETHERLANDS</Type>
-			<Description>TXT_KEY_CIV_NETHERLANDS_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_NETHERLANDS_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_NETHERLANDS_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_NETHERLANDS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_NETHERLANDS</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_NETHERLANDS_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_NETHERLANDS_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_NETHERLANDS_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_ORANGE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_NETHERLANDS</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_EUROPE</ArtStyleType>
@@ -2799,8 +2799,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -2833,16 +2833,16 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
-			<DerivativeCiv>CIVILIZATION_UNITED_STATES</DerivativeCiv>
+			<DerivativeCiv>CIVILIZATION_AMERICA</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_NETHERLANDS_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_NETHERLANDS_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_OTTOMAN</Type>
-			<Description>TXT_KEY_CIV_OTTOMAN_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_OTTOMAN_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_OTTOMAN_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_OTTOMAN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_OTTOMAN</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_OTTOMAN_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_OTTOMAN_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_OTTOMAN_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_GREEN</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_OTTOMANS</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_CRESCENT</ArtStyleType>
@@ -2900,8 +2900,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_C_N_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_C_AC_MIDDLE_EASTERN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -2935,10 +2935,10 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_PERSIA</Type>
-			<Description>TXT_KEY_CIV_PERSIA_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_PERSIA_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_PERSIA_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_PERSIA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_PERSIA</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_PERSIA_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_PERSIA_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_PERSIA_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_CYAN</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_PERSIA</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_CRESCENT</ArtStyleType>
@@ -3009,8 +3009,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_C_N_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_C_AC_MIDDLE_EASTERN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -3045,10 +3045,10 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_PORTUGAL</Type>
-			<Description>TXT_KEY_CIV_PORTUGAL_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_PORTUGAL_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_PORTUGAL_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_PORTUGAL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_PORTUGAL</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_PORTUGAL_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_PORTUGAL_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_PORTUGAL_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_DARK_GREEN</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_PORTUGAL</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_IBERIA</ArtStyleType>
@@ -3108,8 +3108,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -3142,16 +3142,16 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
-			<DerivativeCiv>CIVILIZATION_UNITED_STATES</DerivativeCiv>
+			<DerivativeCiv>CIVILIZATION_AMERICA</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_PORTUGAL_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_PORTUGAL_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_ROME</Type>
-			<Description>TXT_KEY_CIV_ROME_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_ROME_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_ROME_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_ROME_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_ROME</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_ROME_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_ROME_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_ROME_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_PURPLE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_ROME</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_GRECO_ROMAN</ArtStyleType>
@@ -3225,8 +3225,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -3269,10 +3269,10 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_RUSSIA</Type>
-			<Description>TXT_KEY_CIV_RUSSIA_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_RUSSIA_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_RUSSIA_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_RUSSIA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_RUSSIA</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_RUSSIA_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_RUSSIA_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_RUSSIA_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_RED</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_RUSSIA</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_RUSSIA</ArtStyleType>
@@ -3328,8 +3328,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -3375,10 +3375,10 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_SIAM</Type>
-			<Description>TXT_KEY_CIV_SIAM_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_SIAM_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_SIAM_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_SIAM_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_SIAM</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_SIAM_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_SIAM_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_SIAM_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_RED_BLUE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_SIAM</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_SOUTH_EAST_ASIA</ArtStyleType>
@@ -3439,8 +3439,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_ASIAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
+				<BuildingType>BUILDING_C_N_ASIAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_ASIAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -3475,10 +3475,10 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_SPAIN</Type>
-			<Description>TXT_KEY_CIV_SPAIN_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_SPAIN_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_SPAIN_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_SPAIN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_SPAIN</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_SPAIN_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_SPAIN_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_SPAIN_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_PINK</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_SPAIN</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_IBERIA</ArtStyleType>
@@ -3497,13 +3497,12 @@
 				<City>TXT_KEY_CITY_NAME_VALENCIA</City>
 				<City>TXT_KEY_CITY_NAME_ZARAGOZA</City>
 				<City>TXT_KEY_CITY_NAME_PAMPLONA</City>
-				<City>TXT_KEY_CITY_NAME_VITORIA</City>
+				<City>TXT_KEY_CITY_NAME_VITORIA_GASTEIZ</City>
 				<City>TXT_KEY_CITY_NAME_SANTANDER</City>
 				<City>TXT_KEY_CITY_NAME_ASTURIAS</City>
 				<City>TXT_KEY_CITY_NAME_JAEN</City>
 				<City>TXT_KEY_CITY_NAME_LOGRONO</City>
 				<City>TXT_KEY_CITY_NAME_VALLADOLID</City>
-				<City>TXT_KEY_CITY_NAME_PALMA</City>
 				<City>TXT_KEY_CITY_NAME_TERUEL</City>
 				<City>TXT_KEY_CITY_NAME_ALMERIA</City>
 				<City>TXT_KEY_CITY_NAME_LEON</City>
@@ -3530,11 +3529,12 @@
 				<City>TXT_KEY_CITY_NAME_TOMELLOSO</City>
 				<City>TXT_KEY_CITY_NAME_PUERTOLLANO</City>
 				<City>TXT_KEY_CITY_NAME_OLIVA</City>
+				<City>TXT_KEY_CITY_NAME_PALMA_DE_MALLORCA</City>
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -3567,16 +3567,16 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
-			<DerivativeCiv>CIVILIZATION_UNITED_STATES</DerivativeCiv>
+			<DerivativeCiv>CIVILIZATION_AMERICA</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_SPAIN_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_SPAIN_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_SUMERIA</Type>
-			<Description>TXT_KEY_CIV_SUMERIA_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_SUMERIA_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_SUMERIA_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_SUMERIA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_SUMERIA</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_SUMERIA_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_SUMERIA_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_SUMERIA_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_INDIGO</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_SUMERIA</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_CRESCENT</ArtStyleType>
@@ -3634,8 +3634,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_C_N_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_C_AC_MIDDLE_EASTERN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -3665,13 +3665,13 @@
 			<CivilizationActionSound>AS3D_SUMERIA_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
 		<CivilizationInfo>
-			<Type>CIVILIZATION_VIKING</Type>
-			<Description>TXT_KEY_CIV_VIKING_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_VIKING_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_VIKING_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_VIKING_PEDIA</Civilopedia>
+			<Type>CIVILIZATION_SCANDINAVIA</Type>
+			<Description>TXT_KEY_CIVILIZATION_SCANDINAVIA</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_SCANDINAVIA_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_SCANDINAVIA_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_SCANDINAVIA_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_LIGHT_PURPLE</DefaultPlayerColor>
-			<ArtDefineTag>ART_DEF_CIVILIZATION_VIKINGS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_SCANDINAVIAS</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_NORSE</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_VIKING</UnitArtStyleType>
 			<bPlayable>1</bPlayable>
@@ -3680,9 +3680,10 @@
 				<City>TXT_KEY_CITY_NAME_UPPSALIR</City><!-- 500 -->
 				<City>TXT_KEY_CITY_NAME_BORG</City><!-- 500 -->
 				<City>TXT_KEY_CITY_NAME_RIPA</City><!-- 710 -->
+				<City>TXT_KEY_CITY_NAME_SKIRINGSSALR</City><!-- 740-760 -->
 				<City>TXT_KEY_CITY_NAME_BIRKA</City><!-- 750 -->
 				<City>TXT_KEY_CITY_NAME_HEITHABYR</City><!-- 770 -->
-				<City>TXT_KEY_CITY_NAME_AROS</City><!-- 775-800 -->
+				<City>TXT_KEY_CITY_NAME_AROSS</City><!-- 750-800 -->
 				<City>TXT_KEY_CITY_NAME_KAUPANG</City><!-- 780 -->
 				<City>TXT_KEY_CITY_NAME_THINGVOLLR</City><!-- 800 -->
 				<City>TXT_KEY_CITY_NAME_ARNKELL_LAG</City><!-- 801-827 -->
@@ -3690,7 +3691,6 @@
 				<City>TXT_KEY_CITY_NAME_TUNSBERG</City><!-- 801-871 -->
 				<City>TXT_KEY_CITY_NAME_VIKINGA_LO</City><!-- 840-860 -->
 				<City>TXT_KEY_CITY_NAME_REYKJAVIK</City><!-- 874 -->
-				<City>TXT_KEY_CITY_NAME_SKIRINGSSALR</City><!-- 801-900 -->
 				<City>TXT_KEY_CITY_NAME_STAFANGR</City><!-- 801-872 -->
 				<City>TXT_KEY_CITY_NAME_JALUNG</City><!-- 801-900 -->
 				<City>TXT_KEY_CITY_NAME_HLYMREKR</City><!-- 812 -->
@@ -3700,7 +3700,7 @@
 				<City>TXT_KEY_CITY_NAME_HOLMGARTHR</City><!-- 862 -->
 				<City>TXT_KEY_CITY_NAME_JORVIK</City><!-- 866 -->
 				<City>TXT_KEY_CITY_NAME_SMALESKJA</City><!-- 882 -->
-				<City>TXT_KEY_CITY_NAME_KAENUGARTHR</City><!-- 882 -->
+				<City>TXT_KEY_CITY_NAME_KOENUGARTHR</City><!-- 882 -->
 				<City>TXT_KEY_CITY_NAME_SYRNES</City><!-- 862-900 -->
 				<City>TXT_KEY_CITY_NAME_VISBY</City><!-- 900 -->
 				<City>TXT_KEY_CITY_NAME_VETHRAFJORTHR</City><!-- 914 -->
@@ -3708,6 +3708,7 @@
 				<City>TXT_KEY_CITY_NAME_THINGVELLIR</City><!-- 930 -->
 				<City>TXT_KEY_CITY_NAME_HROARSKELDA</City><!-- 900-980 -->
 				<City>TXT_KEY_CITY_NAME_JOMSBORG</City><!-- 960-969 -->
+				<City>TXT_KEY_CITY_NAME_SKARTHABORG</City><!-- 966 -->
 				<City>TXT_KEY_CITY_NAME_HERJOLFSNES</City><!-- 985 -->
 				<City>TXT_KEY_CITY_NAME_BRATTAHLID</City><!-- 985 -->
 				<City>TXT_KEY_CITY_NAME_BORGUNDKAUPANGR</City><!-- 900-1000 -->
@@ -3718,22 +3719,22 @@
 				<City>TXT_KEY_CITY_NAME_THJODHILDARSTATHIR</City><!-- 985-1000 -->
 				<City>TXT_KEY_CITY_NAME_VESTRA_AROS</City><!-- 990 -->
 				<City>TXT_KEY_CITY_NAME_LUND</City><!-- 990 -->
-				<City>TXT_KEY_CITY_NAME_NIDAROSS</City><!-- 997 -->
+				<City>TXT_KEY_CITY_NAME_NITHAROSS</City><!-- 997 -->
 				<City>TXT_KEY_CITY_NAME_KONUGAHELLA</City><!-- 1000 -->
 				<City>TXT_KEY_CITY_NAME_SKITHA</City><!-- 1000 -->
-				<City>TXT_KEY_CITY_NAME_LEIFSBUDIR</City><!-- 1001 -->
+				<City>TXT_KEY_CITY_NAME_LEIFSBUTHIR</City><!-- 1001 -->
 				<City>TXT_KEY_CITY_NAME_HAMARKAUPANGR</City><!-- 1000-1050 -->
 				<City>TXT_KEY_CITY_NAME_KIRKJUVAGR</City><!-- 1046 -->
 				<City>TXT_KEY_CITY_NAME_LIODHUSA</City><!-- 1050 -->
 				<City>TXT_KEY_CITY_NAME_BJORGVIN</City><!-- 1070 -->
 				<City>TXT_KEY_CITY_NAME_LIUNGA_KAUPING</City><!-- 1100 -->
 				<City>TXT_KEY_CITY_NAME_SKARA</City><!-- 1100 -->
-				<City>TXT_KEY_CITY_NAME_THRAELLBORG</City>
+				<City>TXT_KEY_CITY_NAME_THRAELLBORG</City><!-- 1257 -->
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -3758,16 +3759,16 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
-			<DerivativeCiv>CIVILIZATION_UNITED_STATES</DerivativeCiv>
+			<DerivativeCiv>CIVILIZATION_AMERICA</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_VIKING_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_VIKING_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_ZULU</Type>
-			<Description>TXT_KEY_CIV_ZULU_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_ZULU_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_ZULU_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_ZULU_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_ZULU</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_ZULU_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_ZULU_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_ZULU_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_LIGHT_YELLOW</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_ZULU</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_AFRICA</ArtStyleType>
@@ -3826,8 +3827,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_AFRICAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
+				<BuildingType>BUILDING_C_N_AFRICAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_AFRICAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -3861,10 +3862,10 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_AUSTRALIA</Type>
-			<Description>TXT_KEY_CIV_AUSTRALIA_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_AUSTRALIA_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_AUSTRALIA_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_AUSTRALIA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_AUSTRALIA</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_AUSTRALIA_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_AUSTRALIA_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_AUSTRALIA_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_AUSTRALIA</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_AUSTRALIA</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_SOUTH_PACIFIC</ArtStyleType>
@@ -3920,8 +3921,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_OCEANIAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
+				<BuildingType>BUILDING_C_N_OCEANIAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_OCEANIAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -3956,10 +3957,10 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_DENMARK</Type>
-			<Description>TXT_KEY_CIV_DENMARK_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_DENMARK_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_DENMARK_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_DENMARK_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_DENMARK</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_DENMARK_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_DENMARK_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_DENMARK_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_DENMARK</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_DENMARK</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_EUROPE</ArtStyleType>
@@ -4015,8 +4016,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -4049,16 +4050,16 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
-			<DerivativeCiv>CIVILIZATION_UNITED_STATES</DerivativeCiv>
+			<DerivativeCiv>CIVILIZATION_AMERICA</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_VIKING_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_VIKING_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_IROQUOIS</Type>
-			<Description>TXT_KEY_CIV_IROQUOIS_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_IROQUOIS_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_IROQUOIS_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_IROQUOIS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_IROQUOIS</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_IROQUOIS_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_IROQUOIS_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_IROQUOIS_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_IROQUOIS</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_IROQUOIS</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_NATIVE_AMERICA</ArtStyleType>
@@ -4127,8 +4128,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_C_N_NORTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_NORTH_AMERICAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -4165,13 +4166,13 @@
 			<CivilizationActionSound>AS3D_NATIVE_AMERICA_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
 		<CivilizationInfo>
-			<Type>CIVILIZATION_ANIMAL_PREDATOR</Type>
-			<Description>TXT_KEY_CIV_ANIMAL_PREDATOR_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_ANIMAL_PREDATOR_DESC_SHORT</ShortDescription>
-			<Adjective>TXT_KEY_CIV_ANIMAL_PREDATOR_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_ANIMAL_PREDATOR_PEDIA</Civilopedia>
+			<Type>CIVILIZATION_NPC_PREDATOR</Type>
+			<Description>TXT_KEY_CIVILIZATION_NPC_PREDATOR</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_NPC_PREDATOR_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_NPC_PREDATOR_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_NPC_PREDATOR_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_ANIMAL</DefaultPlayerColor>
-			<ArtDefineTag>ART_DEF_CIVILIZATION_ANIMAL_PREDATOR</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_NPC_PREDATOR</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_BARBARIAN</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_BARBARIAN</UnitArtStyleType>
 			<InitialCivics>
@@ -4202,13 +4203,13 @@
 			<iSpawnRateNPCPeaceModifier>30</iSpawnRateNPCPeaceModifier>
 		</CivilizationInfo>
 		<CivilizationInfo>
-			<Type>CIVILIZATION_ANIMAL_PREY</Type>
-			<Description>TXT_KEY_CIV_ANIMAL_PREY_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_ANIMAL_PREY_DESC_SHORT</ShortDescription>
-			<Adjective>TXT_KEY_CIV_ANIMAL_PREY_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_ANIMAL_PREY_PEDIA</Civilopedia>
+			<Type>CIVILIZATION_NPC_PREY</Type>
+			<Description>TXT_KEY_CIVILIZATION_NPC_PREY</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_NPC_PREY_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_NPC_PREY_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_NPC_PREY_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_ANIMAL</DefaultPlayerColor>
-			<ArtDefineTag>ART_DEF_CIVILIZATION_ANIMAL_PREY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_NPC_PREY</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_BARBARIAN</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_BARBARIAN</UnitArtStyleType>
 			<InitialCivics>
@@ -4239,13 +4240,13 @@
 			<iSpawnRateNPCPeaceModifier>60</iSpawnRateNPCPeaceModifier>
 		</CivilizationInfo>
 		<CivilizationInfo>
-			<Type>CIVILIZATION_ANIMAL_BEAST</Type>
-			<Description>TXT_KEY_CIV_ANIMAL_BEAST_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_ANIMAL_BEAST_DESC_SHORT</ShortDescription>
-			<Adjective>TXT_KEY_CIV_ANIMAL_BEAST_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_ANIMAL_BEAST_PEDIA</Civilopedia>
+			<Type>CIVILIZATION_NPC_BEAST</Type>
+			<Description>TXT_KEY_CIVILIZATION_NPC_BEAST</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_NPC_BEAST_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_NPC_BEAST_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_NPC_BEAST_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_ANIMAL</DefaultPlayerColor>
-			<ArtDefineTag>ART_DEF_CIVILIZATION_ANIMAL_BEAST</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_NPC_BEAST</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_BARBARIAN</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_BARBARIAN</UnitArtStyleType>
 			<InitialCivics>
@@ -4278,10 +4279,10 @@
 		<CivilizationInfo>
 			<Type>CIVILIZATION_NPC_NEANDERTHAL</Type>
 			<bStronglyRestricted>1</bStronglyRestricted>
-			<Description>TXT_KEY_CIV_NPC_NEANDERTHAL_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_NPC_NEANDERTHAL_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_NPC_NEANDERTHAL_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_NPC_NEANDERTHAL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_NPC_NEANDERTHAL</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_NPC_NEANDERTHAL_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_NPC_NEANDERTHAL_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_NPC_NEANDERTHAL_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_NEANDERTHAL</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_NEANDERTHAL</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_EUROPE</ArtStyleType>
@@ -4334,8 +4335,8 @@
 				<City>TXT_KEY_CITY_NAME_ZGA</City>
 			</Cities>
 			<FreeBuildings>
-				<BuildingType>BUILDING_CULTURE_NATIVE_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_N_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 			</FreeBuildings>
 			<FreeTechs>
 				<FreeTech>
@@ -4391,14 +4392,14 @@
 			<iSpawnRateNPCPeaceModifier>30</iSpawnRateNPCPeaceModifier>
 		</CivilizationInfo>
 		<CivilizationInfo>
-			<Type>CIVILIZATION_INSECTOID</Type>
+			<Type>CIVILIZATION_NPC_INSECTOID</Type>
 			<bStronglyRestricted>1</bStronglyRestricted>
-			<Description>TXT_KEY_CIV_INSECTOID_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_INSECTOID_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_INSECTOID_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_INSECTOID_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_NPC_INSECTOID</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_NPC_INSECTOID_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_NPC_INSECTOID_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_NPC_INSECTOID_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_BLACK</DefaultPlayerColor>
-			<ArtDefineTag>ART_DEF_CIVILIZATION_BARBARIAN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_NPC_BARBARIAN</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_BARBARIAN</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_BARBARIAN</UnitArtStyleType>
 			<InitialCivics>
@@ -4427,13 +4428,13 @@
 			<iSpawnRateNPCPeaceModifier>30</iSpawnRateNPCPeaceModifier>
 		</CivilizationInfo>
 		<CivilizationInfo>
-			<Type>CIVILIZATION_BARBARIAN</Type>
-			<Description>TXT_KEY_CIV_BARBARIAN_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_BARBARIAN_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_BARBARIAN_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_BARBARIAN_PEDIA</Civilopedia>
+			<Type>CIVILIZATION_NPC_BARBARIAN</Type>
+			<Description>TXT_KEY_CIVILIZATION_NPC_BARBARIAN</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_NPC_BARBARIAN_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_NPC_BARBARIAN_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_NPC_BARBARIAN_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_BLACK</DefaultPlayerColor>
-			<ArtDefineTag>ART_DEF_CIVILIZATION_BARBARIAN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_NPC_BARBARIAN</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_BARBARIAN</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_BARBARIAN</UnitArtStyleType>
 			<Cities>
@@ -4555,10 +4556,10 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_POLYNESIA</Type>
-			<Description>TXT_KEY_CIV_POLYNESIA_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_POLYNESIA_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_POLYNESIA_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_POLYNESIA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_POLYNESIA</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_POLYNESIA_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_POLYNESIA_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_POLYNESIA_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_POLYNESIA</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_POLYNESIA</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_SOUTH_EAST_ASIA</ArtStyleType>
@@ -4626,8 +4627,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_OCEANIAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
+				<BuildingType>BUILDING_C_N_OCEANIAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_OCEANIAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -4661,10 +4662,10 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_ABORIGINES</Type>
-			<Description>TXT_KEY_CIV_ABORIGINES_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_ABORIGINES_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_ABORIGINES_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_ABORIGINES_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_ABORIGINES</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_ABORIGINES_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_ABORIGINES_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_ABORIGINES_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_ABORIGINES</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_ABORIGINES</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_AFRICA</ArtStyleType>
@@ -4724,8 +4725,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_OCEANIAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
+				<BuildingType>BUILDING_C_N_OCEANIAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_OCEANIAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -4759,10 +4760,10 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_BRAZIL</Type>
-			<Description>TXT_KEY_CIV_BRAZIL_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_BRAZIL_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_BRAZIL_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_BRAZIL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_BRAZIL</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_BRAZIL_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_BRAZIL_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_BRAZIL_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_BRAZIL</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_BRAZIL</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_IBERIA</ArtStyleType>
@@ -4784,7 +4785,7 @@
 				<City>TXT_KEY_CITY_NAME_GOIANIA</City>
 				<City>TXT_KEY_CITY_NAME_MANAUS</City>
 				<City>TXT_KEY_CITY_NAME_SANTOS</City>
-				<City>TXT_KEY_CITY_NAME_VICTORIA</City>
+				<City>TXT_KEY_CITY_NAME_VITORIA</City>
 				<City>TXT_KEY_CITY_NAME_SAO_LUIS</City>
 				<City>TXT_KEY_CITY_NAME_NATAL</City>
 				<City>TXT_KEY_CITY_NAME_MACEIO</City>
@@ -4804,31 +4805,33 @@
 				<City>TXT_KEY_CITY_NAME_MARINGA</City>
 				<City>TXT_KEY_CITY_NAME_FEIRA_DE_SANTANA</City>
 				<City>TXT_KEY_CITY_NAME_JUIZ_DE_FORA</City>
-				<City>TXT_KEY_CITY_NAME_AMANINDEUA</City>
 				<City>TXT_KEY_CITY_NAME_ARACAJU</City>
-				<City>TXT_KEY_CITY_NAME_BELFORD_ROXO</City>
-				<City>TXT_KEY_CITY_NAME_SERRA</City>
-				<City>TXT_KEY_CITY_NAME_VILA_VELHA</City>
-				<City>TXT_KEY_CITY_NAME_SAO_VINCENTE</City>
+				<City>TXT_KEY_CITY_NAME_SAO_VICENTE</City>
 				<City>TXT_KEY_CITY_NAME_PIRACICABA</City>
 				<City>TXT_KEY_CITY_NAME_CAXIAS_DO_SUL</City>
-				<City>TXT_KEY_CITY_NAME_ANAPOLIS</City>
-				<City>TXT_KEY_CITY_NAME_CARAPICUIBA</City>
-				<City>TXT_KEY_CITY_NAME_DIADEMA</City>
 				<City>TXT_KEY_CITY_NAME_OLINDA</City>
 				<City>TXT_KEY_CITY_NAME_PELOTAS</City>
 				<City>TXT_KEY_CITY_NAME_CAMPINA_GRANDE</City>
 				<City>TXT_KEY_CITY_NAME_SANTAREM</City>
-				<City>TXT_KEY_CITY_NAME_BETIM</City>
 				<City>TXT_KEY_CITY_NAME_BAURU</City>
 				<City>TXT_KEY_CITY_NAME_PRESIDENTE_PRUDENTE</City>
-				<City>TXT_KEY_CITY_NAME_SAO_CAETANO</City>
 				<City>TXT_KEY_CITY_NAME_JUNDIAI</City>
+				<City>TXT_KEY_CITY_NAME_PETROLINA</City>
+				<City>TXT_KEY_CITY_NAME_PORTO_VELHO</City>
+				<City>TXT_KEY_CITY_NAME_MACAPA</City>
+				<City>TXT_KEY_CITY_NAME_BOA_VISTA</City>
+				<City>TXT_KEY_CITY_NAME_RIO_BRANCO</City>
+				<City>TXT_KEY_CITY_NAME_PETROPOLIS</City>
+				<City>TXT_KEY_CITY_NAME_PALMAS</City>
+				<City>TXT_KEY_CITY_NAME_FOZ_DO_IGUACU</City>
+				<City>TXT_KEY_CITY_NAME_SOBRAL</City>
+				<City>TXT_KEY_CITY_NAME_CHAPECO</City>
+				<City>TXT_KEY_CITY_NAME_ILHEUS</City>
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_C_N_SOUTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_SOUTH_AMERICAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -4858,10 +4861,10 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_ISRAEL</Type>
-			<Description>TXT_KEY_CIV_ISRAEL_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_ISRAEL_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_ISRAEL_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_ISRAEL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_ISRAEL</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_ISRAEL_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_ISRAEL_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_ISRAEL_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_ISRAEL</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_ISRAEL</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_EGYPT</ArtStyleType>
@@ -4922,8 +4925,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_C_N_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_C_AC_MIDDLE_EASTERN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -4962,10 +4965,10 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_JIVARO</Type>
-			<Description>TXT_KEY_CIV_JIVARO_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_JIVARO_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_JIVARO_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_JIVARO_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_JIVARO</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_JIVARO_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_JIVARO_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_JIVARO_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_JIVARO</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_JIVARO</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_SOUTH_AMERICA</ArtStyleType>
@@ -5017,8 +5020,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_C_N_SOUTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_SOUTH_AMERICAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -5048,10 +5051,10 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_MAORI</Type>
-			<Description>TXT_KEY_CIV_MAORI_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_MAORI_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_MAORI_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_MAORI_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_MAORI</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_MAORI_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_MAORI_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_MAORI_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_MAORI</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_MAORI</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_SOUTH_EAST_ASIA</ArtStyleType>
@@ -5107,8 +5110,8 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_OCEANIAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
+				<BuildingType>BUILDING_C_N_OCEANIAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_OCEANIAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -5138,10 +5141,10 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_NEANDERTHAL</Type>
-			<Description>TXT_KEY_CIV_NEANDERTHAL_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_NEANDERTHAL_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_NEANDERTHAL_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_NEANDERTHAL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_NEANDERTHAL</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_NEANDERTHAL_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_NEANDERTHAL_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_NEANDERTHAL_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_NEANDERTHAL_EMPIRE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_NEANDERTHAL_EMPIRE</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_NEANDERTHAL</ArtStyleType>
@@ -5197,10 +5200,10 @@
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_N_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_C_N_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
@@ -5230,10 +5233,10 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_TUPI</Type>
-			<Description>TXT_KEY_CIV_TUPI_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_TUPI_SHORT_DESC</ShortDescription>
-			<Adjective>TXT_KEY_CIV_TUPI_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIV_TUPI_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_TUPI</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_TUPI_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_TUPI_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_TUPI_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_TUPI</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_TUPI</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_MESO_AMERICA</ArtStyleType>
@@ -5281,15 +5284,15 @@
 				<City>TXT_KEY_CITY_NAME_CROATA</City>
 				<City>TXT_KEY_CITY_NAME_TOCANTIS</City>
 				<City>TXT_KEY_CITY_NAME_IMBIRUCU</City>
-				<City>TXT_KEY_CITY_NAME_MACAPA</City>
+				<City>TXT_KEY_CITY_NAME_MACAPABA</City>
 				<City>TXT_KEY_CITY_NAME_PAUI</City>
 				<City>TXT_KEY_CITY_NAME_ARRAIA</City>
 				<City>TXT_KEY_CITY_NAME_ANDORINHAS</City>
 			</Cities>
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
-				<BuildingType>BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN</BuildingType>
-				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_C_N_SOUTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_C_AC_SOUTH_AMERICAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>

@@ -69,7 +69,6 @@ private:
 	bool launchNameListPopup(CvPopup* pPopup, CvPopupInfo &info);
 	bool launchGoToCityPopup(CvPopup* pPopup, CvPopupInfo &info);
 
-	bool invasionPopup(CvPopup* pPopup, CvPopupInfo &info);
 	bool launchSelectShadowUnitPopup(CvPopup* pPopup, CvPopupInfo &info);
 	bool launchSelectDiscoveryTechPopup(CvPopup* pPopup, CvPopupInfo &info);
 

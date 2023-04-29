@@ -155,7 +155,7 @@ public:
 	int countCorporationLevels(CorporationTypes eCorporation) const;
 	void replaceCorporation(CorporationTypes eCorporation1, CorporationTypes eCorporation2);
 
-	int goldenAgeLength() const;
+	int goldenAgeLength100() const;
 	int victoryDelay(VictoryTypes eVictory) const;
 	int getImprovementUpgradeTime(ImprovementTypes eImprovement) const;
 
@@ -291,8 +291,6 @@ public:
 	void changeCutLosersCounter(int iChange);
 	int getHighToLowCounter() const;
 	void changeHighToLowCounter(int iChange);
-	int getIncreasingDifficultyCounter() const;
-	void changeIncreasingDifficultyCounter(int iChange);
 
 	void averageHandicaps();
 
@@ -358,6 +356,7 @@ public:
 	void logOOSSpecial(int iLocID, int iVar, int iVar2 = 0, int iVar3 = 0);
 	int getTopCityCount() const;
 	int getTopPopCount() const;
+	int getWinForLosingResearchModifier(const int iCities, const int iPop) const;
 	int getImprovementCount(ImprovementTypes eIndex) const;
 	void changeImprovementCount(ImprovementTypes eIndex, int iChange);
 
@@ -412,7 +411,6 @@ protected:
 	int m_iCurrentVoteID;
 	int m_iCutLosersCounter;
 	int m_iHighToLowCounter;
-	int m_iIncreasingDifficultyCounter;
 	int m_iMercyRuleCounter;
 
 	bool starshipLaunched[MAX_TEAMS]; 				//Ordered by team ID (both)

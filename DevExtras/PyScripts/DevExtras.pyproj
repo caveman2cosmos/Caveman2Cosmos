@@ -21,9 +21,12 @@
     <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="CodeProc\" />
     <Folder Include="Profiling\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CodeProc\add_extra_profiling.py" />
+    <Compile Include="CodeProc\comment_if0.py" />
     <Compile Include="Profiling\aggregate_c2c_profilelog.py" />
     <Compile Include="settings.py" />
   </ItemGroup>

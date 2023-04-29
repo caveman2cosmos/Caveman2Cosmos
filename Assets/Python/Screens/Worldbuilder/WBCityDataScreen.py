@@ -297,9 +297,8 @@ class WBCityDataScreen:
 		sText = CyTranslator().getText("[COLOR_SELECTED_TEXT]", ()) + "<font=4b>" + CyTranslator().getText("TXT_KEY_WB_CITY_ALL", ()) + " (+/-)</font></color>"
 		screen.setText("BonusAll", "Background", sText, 1<<1, iX + iWidth - 20, iY - 30, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
-		screen.addTableControlGFC( "WBBonus", 2, iX, self.iTable_Y, iWidth, iHeight, False, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD )
-		screen.setTableColumnHeader( "WBBonus", 0, "", 24)
-		screen.setTableColumnHeader( "WBBonus", 1, "", iWidth - 24)
+		screen.addTableControlGFC( "WBBonus", 1, iX, self.iTable_Y, iWidth, iHeight, False, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD )
+		screen.setTableColumnHeader( "WBBonus", 0, "", iWidth)
 
 		for item in lBonus:
 			iRow = screen.appendTableRow("WBBonus")
@@ -309,12 +308,7 @@ class WBCityDataScreen:
 			if iNum > 0:
 				sColor = CyTranslator().getText("[COLOR_POSITIVE_TEXT]", ())
 				sItem += " (" + str(iNum) + ")"
-			if pCity.isNoBonus(item[1]):
-				screen.setTableText("WBBonus", 0, iRow, "", CyArtFileMgr().getInterfaceArtInfo("INTERFACE_BUTTONS_CANCEL").getPath(), WidgetTypes.WIDGET_PYTHON, 1030, item[1], 1<<0)
-			else:
-				sText = "<font=4>" + CyTranslator().getText("[ICON_TRADE]", ()) + "</font>"
-				screen.setTableText("WBBonus", 0, iRow, sText, "", WidgetTypes.WIDGET_PYTHON, 1031, item[1], 1<<0)
-			screen.setTableText("WBBonus", 1, iRow, "<font=3>" + sColor + sItem + "</font></color>", GC.getBonusInfo(item[1]).getButton(), WidgetTypes.WIDGET_PYTHON, 7878, item[1], 1<<0 )
+			screen.setTableText("WBBonus", 0, iRow, "<font=3>" + sColor + sItem, GC.getBonusInfo(item[1]).getButton(), WidgetTypes.WIDGET_PYTHON, 7878, item[1], 1<<0 )
 
 	def handleInput(self, inputClass):
 		screen = CyGInterfaceScreen( "WBCityDataScreen", CvScreenEnums.WB_CITYDATA)
@@ -415,8 +409,6 @@ class WBCityDataScreen:
 		elif inputClass.getFunctionName() == "WBBonus":
 			if inputClass.getData1() == 7878:
 				self.editFreeBonus(inputClass.getData2())
-			else:
-				self.setNoBonusCB(inputClass.getData2())
 			self.placeBonus()
 
 		elif inputClass.getFunctionName() == "BuildingType":
@@ -456,12 +448,6 @@ class WBCityDataScreen:
 			iCount = - iChange
 			iCount = max(iCount, - pCity.getFreeBonus(item))
 		pCity.changeFreeBonus(item, iCount)
-
-	def setNoBonusCB(self, item):
-		if pCity.isNoBonus(item):
-			pCity.changeNoBonusCount(item, -1)
-		else:
-			pCity.changeNoBonusCount(item, 1)
 
 	def editGreatPeopleFlat(self, iCount):
 		if iCount < 0:

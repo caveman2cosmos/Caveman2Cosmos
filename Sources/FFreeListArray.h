@@ -3,6 +3,8 @@
 #ifndef FFreeListArray_h__
 #define FFreeListArray_h__
 
+#include "FProfiler.h"
+
 #include "FDataStreamBase.h"
 #include "FFreeListArrayBase.h"
 
@@ -94,6 +96,7 @@ FFreeListArray<T>::~FFreeListArray()
 template <class T>
 void FFreeListArray<T>::init(int iNumSlots)
 {
+	PROFILE_EXTRA_FUNC();
 	uninit();
 
 	m_iFreeListHead = FFreeList::FREE_LIST_INDEX;
@@ -140,6 +143,7 @@ T* FFreeListArray<T>::beginIter(int* pIterIdx) const
 template <class T>
 T* FFreeListArray<T>::nextIter(int* pIterIdx) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (; (*pIterIdx) < getIndexAfterLast(); (*pIterIdx)++)
 	{
 		T* pObj = getAt((*pIterIdx));
@@ -164,6 +168,7 @@ T* FFreeListArray<T>::endIter(int* pIterIdx) const
 template <class T>
 T* FFreeListArray<T>::prevIter(int* pIterIdx) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (; (*pIterIdx) >= 0; (*pIterIdx)--)
 	{
 		T* pObj = getAt((*pIterIdx));
@@ -212,6 +217,7 @@ void FFreeListArray<T>::insert(T data)
 template <class T>
 void FFreeListArray<T>::insertAt(T data, int iIndex)
 {
+	PROFILE_EXTRA_FUNC();
 	if (m_pArray == NULL)
 	{
 		init();
@@ -277,6 +283,7 @@ void FFreeListArray<T>::insertAt(T data, int iIndex)
 template <class T>
 void FFreeListArray<T>::insertFirst(T data)
 {
+	PROFILE_EXTRA_FUNC();
 	if (m_pArray == NULL)
 	{
 		init();
@@ -324,6 +331,7 @@ T* FFreeListArray<T>::getAt(int iIndex) const
 template <class T>
 int FFreeListArray<T>::getIndex(const T data) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (m_pArray == NULL)
 	{
 		return FFreeList::INVALID_INDEX;
@@ -347,6 +355,7 @@ int FFreeListArray<T>::getIndex(const T data) const
 template <class T>
 bool FFreeListArray<T>::remove(const T data)
 {
+	PROFILE_EXTRA_FUNC();
 	FAssert(m_pArray != NULL);
 
 	for (int iI = 0; iI <= m_iLastIndex; iI++)
@@ -388,6 +397,7 @@ bool FFreeListArray<T>::removeAt(int iIndex)
 template <class T>
 void FFreeListArray<T>::removeAll()
 {
+	PROFILE_EXTRA_FUNC();
 	if (m_pArray == NULL)
 	{
 		return;
@@ -408,6 +418,7 @@ void FFreeListArray<T>::removeAll()
 template <class T>
 void FFreeListArray<T>::growArray()
 {
+	PROFILE_EXTRA_FUNC();
 	DArrayNode* pOldArray = m_pArray;
 	int iOldNumSlots = m_iNumSlots;
 
@@ -435,6 +446,7 @@ void FFreeListArray<T>::growArray()
 template < class T >
 inline void FFreeListArray< T >::Read( FDataStreamBase* pStream )
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 	pStream->Read( &iCount );
 	init( iCount );
@@ -453,6 +465,7 @@ inline void FFreeListArray< T >::Read( FDataStreamBase* pStream )
 template < class T >
 inline void FFreeListArray< T >::Write( FDataStreamBase* pStream )
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = getCount();
 	pStream->Write( iCount );
 
@@ -475,6 +488,7 @@ inline void FFreeListArray< T >::Write( FDataStreamBase* pStream )
 template < class T >
 inline void ReadStreamableFFreeListArray( FFreeListArray< T >& flist, FDataStreamBase* pStream )
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 	pStream->Read( &iCount );
 	flist.init( iCount );
@@ -496,6 +510,7 @@ inline void ReadStreamableFFreeListArray( FFreeListArray< T >& flist, FDataStrea
 template < class T >
 inline void WriteStreamableFFreeListArray( FFreeListArray< T >& flist, FDataStreamBase* pStream )
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = flist.getCount();
 	pStream->Write( iCount );
 

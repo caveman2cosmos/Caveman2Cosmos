@@ -19,6 +19,8 @@ Global
 		FinalRelease|x86 = FinalRelease|x86
 		Profile|Any CPU = Profile|Any CPU
 		Profile|x86 = Profile|x86
+		ProfileExtra|Any CPU = ProfileExtra|Any CPU
+		ProfileExtra|x86 = ProfileExtra|x86
 		Release|Any CPU = Release|Any CPU
 		Release|x86 = Release|x86
 		Testing|Any CPU = Testing|Any CPU
@@ -37,6 +39,8 @@ Global
 		{37D4A3BE-6EDB-4A5F-A42A-B82ECF9D34FC}.Profile|Any CPU.ActiveCfg = Profile|Win32
 		{37D4A3BE-6EDB-4A5F-A42A-B82ECF9D34FC}.Profile|x86.ActiveCfg = Profile|Win32
 		{37D4A3BE-6EDB-4A5F-A42A-B82ECF9D34FC}.Profile|x86.Build.0 = Profile|Win32
+		{37D4A3BE-6EDB-4A5F-A42A-B82ECF9D34FC}.ProfileExtra|Any CPU.ActiveCfg = ProfileExtra|Win32
+		{37D4A3BE-6EDB-4A5F-A42A-B82ECF9D34FC}.ProfileExtra|x86.ActiveCfg = ProfileExtra|Win32
 		{37D4A3BE-6EDB-4A5F-A42A-B82ECF9D34FC}.Release|Any CPU.ActiveCfg = Release|Win32
 		{37D4A3BE-6EDB-4A5F-A42A-B82ECF9D34FC}.Release|x86.ActiveCfg = Release|Win32
 		{37D4A3BE-6EDB-4A5F-A42A-B82ECF9D34FC}.Release|x86.Build.0 = Release|Win32
@@ -51,6 +55,8 @@ Global
 		{17044446-585F-4E8C-AFA6-0B4B7101BBFB}.FinalRelease|x86.ActiveCfg = Release|Any CPU
 		{17044446-585F-4E8C-AFA6-0B4B7101BBFB}.Profile|Any CPU.ActiveCfg = Debug|Any CPU
 		{17044446-585F-4E8C-AFA6-0B4B7101BBFB}.Profile|x86.ActiveCfg = Debug|Any CPU
+		{17044446-585F-4E8C-AFA6-0B4B7101BBFB}.ProfileExtra|Any CPU.ActiveCfg = ProfileExtra|Any CPU
+		{17044446-585F-4E8C-AFA6-0B4B7101BBFB}.ProfileExtra|x86.ActiveCfg = ProfileExtra|Any CPU
 		{17044446-585F-4E8C-AFA6-0B4B7101BBFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17044446-585F-4E8C-AFA6-0B4B7101BBFB}.Release|x86.ActiveCfg = Release|Any CPU
 		{17044446-585F-4E8C-AFA6-0B4B7101BBFB}.Testing|Any CPU.ActiveCfg = Debug|Any CPU
@@ -63,6 +69,8 @@ Global
 		{92261573-A7AC-437C-8216-EAF1245B7DAC}.FinalRelease|x86.ActiveCfg = Release|Any CPU
 		{92261573-A7AC-437C-8216-EAF1245B7DAC}.Profile|Any CPU.ActiveCfg = Debug|Any CPU
 		{92261573-A7AC-437C-8216-EAF1245B7DAC}.Profile|x86.ActiveCfg = Debug|Any CPU
+		{92261573-A7AC-437C-8216-EAF1245B7DAC}.ProfileExtra|Any CPU.ActiveCfg = Release|Any CPU
+		{92261573-A7AC-437C-8216-EAF1245B7DAC}.ProfileExtra|x86.ActiveCfg = Release|Any CPU
 		{92261573-A7AC-437C-8216-EAF1245B7DAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92261573-A7AC-437C-8216-EAF1245B7DAC}.Release|x86.ActiveCfg = Release|Any CPU
 		{92261573-A7AC-437C-8216-EAF1245B7DAC}.Testing|Any CPU.ActiveCfg = Debug|Any CPU

@@ -2,6 +2,9 @@
  Simple tool when a small set of counters is needed.
  Set is not dynamically sized, and it is not optimal for large amount of counters.
 */
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CounterSet.h"
 
@@ -20,6 +23,7 @@ CounterSet::CounterSet(const int iNumCounters)
 
 void CounterSet::init(const int iNumCounters)
 {
+	PROFILE_EXTRA_FUNC();
 	iSize = safeCoercion(iNumCounters);
 	iNext = 0;
 	iArrCounters = new uint16_t[iSize];
@@ -34,6 +38,7 @@ void CounterSet::init(const int iNumCounters)
 
 uint16_t CounterSet::getCount(const int ID)
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < iSize; iI++)
 	{
 		if (iArrCurrentIDs[iI] == ID)
@@ -47,6 +52,7 @@ uint16_t CounterSet::getCount(const int ID)
 
 void CounterSet::setCount(const int ID, const int iValue)
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < iSize; iI++)
 	{
 		if (iArrCurrentIDs[iI] == ID)

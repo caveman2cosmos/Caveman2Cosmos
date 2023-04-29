@@ -172,7 +172,6 @@ class AutoLogEvent(AbstractAutoLogEvent):
 		eventManager.addEventHandler("cityAcquired", self.onCityAcquired)
 		eventManager.addEventHandler("cityLost", self.onCityLost)
 		eventManager.addEventHandler("cultureExpansion", self.onCultureExpansion)
-		eventManager.addEventHandler("cityGrowth", self.onCityGrowth)
 		eventManager.addEventHandler("cityBuildingUnit", self.onCityBuildingUnit)
 		eventManager.addEventHandler("cityBuildingBuilding", self.onCityBuildingBuilding)
 		eventManager.addEventHandler("improvementBuilt", self.onImprovementBuilt)
@@ -770,7 +769,7 @@ class AutoLogEvent(AbstractAutoLogEvent):
 				CyPlayer = GC.getPlayer(iPlayer)
 				CyTeam = GC.getTeam(CyPlayer.getTeam())
 				iProgress = CyTeam.getResearchProgress(CyPlayer.getCurrentResearch())
-				iOverflow = CyPlayer.getOverflowResearch() * CyPlayer.calculateResearchModifier(CyPlayer.getCurrentResearch())/100
+				iOverflow = getModifiedIntValue(CyPlayer.getOverflowResearch(), CyPlayer.calculateResearchModifier(CyPlayer.getCurrentResearch()))
 				iTechCost = CyTeam.getResearchCost(CyPlayer.getCurrentResearch())
 				iRate = CyPlayer.calculateResearchRate(-1)
 				if iRate == -1:
@@ -952,14 +951,6 @@ class AutoLogEvent(AbstractAutoLogEvent):
 			iPlayer = argsList[1]
 			if pCity.getOwner() == GAME.getActivePlayer():
 				message = TRNSLTR.getText("TXT_KEY_AUTOLOG_CITY_EXPANDED", (pCity.getName(), ))
-				Logger.writeLog(message, vColor="RoyalBlue")
-
-	def onCityGrowth(self, argsList):
-		if (AutologOpt.isLogCityGrowth()):
-			pCity = argsList[0]
-			iPlayer = argsList[1]
-			if pCity.getOwner() == GAME.getActivePlayer():
-				message = TRNSLTR.getText("TXT_KEY_AUTOLOG_CITY_GROWS", (pCity.getName(), pCity.getPopulation()))
 				Logger.writeLog(message, vColor="RoyalBlue")
 
 	def onCityBuildingUnit(self, argsList):

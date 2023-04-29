@@ -7,7 +7,7 @@ from CvPythonExtensions import *
 # If your mod changes some of these XML variables, you'll need to find an appropriate replacement
 
 # Civs
-sXMLBarbarian = 'CIVILIZATION_BARBARIAN'
+sXMLBarbarian = 'CIVILIZATION_NPC_BARBARIAN'
 
 # Units
 sXMLGeneral = 'UNIT_GREAT_GENERAL'

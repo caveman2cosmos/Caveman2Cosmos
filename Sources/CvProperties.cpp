@@ -6,6 +6,9 @@
 //  PURPOSE: Generic properties for Civ4 classes
 //
 //------------------------------------------------------------------------------------------------
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
 #include "CvGame.h"
@@ -86,6 +89,7 @@ int CvProperties::getNumProperties() const
 
 int CvProperties::getPositionByProperty(PropertyTypes eProp) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (prop_value_const_iterator it = m_aiProperty.begin();it!=m_aiProperty.end(); ++it)
 	{
 		if (it->prop == eProp)
@@ -103,6 +107,7 @@ int CvProperties::getValueByProperty(PropertyTypes eProp) const
 
 int CvProperties::getChangeByProperty(PropertyTypes eProp) const
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(const PropertyValue& it, m_aiPropertyChange)
 	{
 		if (it.prop == eProp)
@@ -113,6 +118,7 @@ int CvProperties::getChangeByProperty(PropertyTypes eProp) const
 
 void CvProperties::setChangeByProperty(PropertyTypes eProp, int iVal)
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(PropertyValue& it, m_aiPropertyChange)
 	{
 		if (it.prop == eProp)
@@ -126,6 +132,7 @@ void CvProperties::setChangeByProperty(PropertyTypes eProp, int iVal)
 
 void CvProperties::changeChangeByProperty(PropertyTypes eProp, int iChange)
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(PropertyValue& it, m_aiPropertyChange)
 	{
 		if (it.prop == eProp)
@@ -150,9 +157,6 @@ void CvProperties::setValue(int index, int iVal)
 		m_aiProperty[index].value = iVal;
 		if (m_pGameObject)
 			m_pGameObject->eventPropertyChanged(m_aiProperty[index].prop, iVal);
-		// If this sets the value to 0, remove the property
-		//if (iVal == 0)
-		//	m_aiProperty.erase(m_aiProperty.begin()+index);
 	}
 }
 
@@ -183,8 +187,7 @@ void CvProperties::setValueByProperty(PropertyTypes eProp, int iVal)
 
 void CvProperties::changeValue(int index, int iChange)
 {
-	if (iChange == 0)
-		return;
+	if (iChange == 0) return;
 
 	const PropertyTypes eProperty = getProperty(index);
 
@@ -202,8 +205,7 @@ void CvProperties::changeValueByProperty(PropertyTypes eProp, int iChange)
 	//CvString szBuffer;
 	//szBuffer.format("changeValueByProperty, eProp %i, iChange %i.", eProp, iChange);
 	//gDLL->logMsg("PropertyBuildingOOS.log", szBuffer.c_str(), false, false);
-	if (iChange == 0)
-		return;
+	if (iChange == 0) return;
 
 	const int index = getPositionByProperty(eProp);
 	if (index < 0)
@@ -216,8 +218,7 @@ void CvProperties::changeValueByProperty(PropertyTypes eProp, int iChange)
 			m_pGameObject->eventPropertyChanged(eProp, iChange);
 		}
 	}
-	else
-		changeValue(index, iChange);
+	else changeValue(index, iChange);
 }
 
 // helper function for propagating change
@@ -228,6 +229,7 @@ void callChangeValueByProperty(const CvGameObject* pObject, PropertyTypes eProp,
 
 void CvProperties::propagateChange(PropertyTypes eProp, int iChange)
 {
+	PROFILE_EXTRA_FUNC();
 	const CvPropertyInfo& kInfo = GC.getPropertyInfo(eProp);
 	for (int iI = 0; iI < NUM_GAMEOBJECTS; iI++)
 	{
@@ -242,6 +244,7 @@ void CvProperties::propagateChange(PropertyTypes eProp, int iChange)
 
 void CvProperties::addProperties(const CvProperties* pProp)
 {
+	PROFILE_EXTRA_FUNC();
 	const int num = pProp->getNumProperties();
 	for (int index = 0; index < num; index++)
 	{
@@ -251,6 +254,7 @@ void CvProperties::addProperties(const CvProperties* pProp)
 
 void CvProperties::subtractProperties(const CvProperties* pProp)
 {
+	PROFILE_EXTRA_FUNC();
 	const int num = pProp->getNumProperties();
 	for (int index = 0; index < num; index++)
 	{
@@ -285,83 +289,63 @@ void CvProperties::clearForRecalculate()
 
 void CvProperties::read(FDataStreamBase *pStream)
 {
-	int num;
-	int eProp;
-	int iVal;
-
+	PROFILE_EXTRA_FUNC();
 	// This function replaces the current content if any so clear first
 	m_aiProperty.clear();
 	m_aiPropertyChange.clear();
 
+	int num;
 	pStream->Read(&num);
 	for (int i = 0; i < num; i++)
 	{
+		int eProp;
+		int iVal;
 		pStream->Read(&eProp);
 		pStream->Read(&iVal);
 		// AIAndy: Changed to avoid usage of the methods that trigger property change events
-		//setValueByProperty(eProp, iVal);
-		if (eProp > -1)
-			m_aiProperty.push_back(PropertyValue(static_cast<PropertyTypes>(eProp), iVal));
+		if (eProp > -1) m_aiProperty.push_back(PropertyValue(static_cast<PropertyTypes>(eProp), iVal));
 	}
 }
 
 void CvProperties::readWrapper(FDataStreamBase *pStream)
 {
-	int iPropertyNum = 0;
-	int eProp;
-	int iVal;
 
+	PROFILE_EXTRA_FUNC();
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 	wrapper.AttachToStream(pStream);
-
-	//WRAPPER_READ_OBJECT_START(wrapper);
 
 	// This function replaces the current content if any so clear first
 	m_aiProperty.clear();
 	m_aiPropertyChange.clear();
 
+	int iPropertyNum = 0;
 	WRAPPER_READ(wrapper, "CvProperties",&iPropertyNum);
 	for (int i = 0; i < iPropertyNum; i++)
 	{
-		eProp = -1;
+		int eProp = -1;
+		int iVal;
 		WRAPPER_READ_CLASS_ENUM_ALLOW_MISSING(wrapper, "CvProperties", REMAPPED_CLASS_TYPE_PROPERTIES, &eProp);
-		if (eProp == -1)
-		{
-			// Handle old save game before property remapping
-			WRAPPER_READ(wrapper, "CvProperties", &eProp);
-			if (eProp == 0) // crime
-				eProp = (int)GC.getPROPERTY_CRIME();
-			else if (eProp == 1) // flammability
-				eProp = (int)GC.getPROPERTY_FLAMMABILITY();
-			if (eProp == -1) // removed property
-			{
-				WRAPPER_SKIP_ELEMENT(wrapper, "CvProperties", iVal, SAVE_VALUE_TYPE_INT);
-				continue;
-			}
-		}
 		WRAPPER_READ(wrapper, "CvProperties",&iVal);
 		// AIAndy: Changed to avoid usage of the methods that trigger property change events
-		//setValueByProperty(eProp, iVal);
-		if (eProp > -1)
-			m_aiProperty.push_back(PropertyValue(static_cast<PropertyTypes>(eProp), iVal));
+		if (eProp > -1) m_aiProperty.push_back(PropertyValue(static_cast<PropertyTypes>(eProp), iVal));
 	}
 
 	int iPropertyChangeNum = 0;
 	WRAPPER_READ(wrapper, "CvProperties",&iPropertyChangeNum);
 	for (int i = 0; i < iPropertyChangeNum; i++)
 	{
-		eProp = -1;
+		int eProp = -1;
+		int iVal;
 		WRAPPER_READ_CLASS_ENUM_ALLOW_MISSING(wrapper, "CvProperties", REMAPPED_CLASS_TYPE_PROPERTIES, &eProp);
 		WRAPPER_READ(wrapper, "CvProperties",&iVal);
-		if (eProp > -1)
-			m_aiPropertyChange.push_back(PropertyValue(static_cast<PropertyTypes>(eProp), iVal));
-	}
 
-	//WRAPPER_READ_OBJECT_END(wrapper);
+		if (eProp > -1) m_aiPropertyChange.push_back(PropertyValue(static_cast<PropertyTypes>(eProp), iVal));
+	}
 }
 
 void CvProperties::write(FDataStreamBase *pStream)
 {
+	PROFILE_EXTRA_FUNC();
 	const int iPropertyNum = getNumProperties();
 	pStream->Write(iPropertyNum);
 	for (int i = 0; i < iPropertyNum; i++)
@@ -373,14 +357,12 @@ void CvProperties::write(FDataStreamBase *pStream)
 
 void CvProperties::writeWrapper(FDataStreamBase *pStream)
 {
-	const int iPropertyNum = getNumProperties();
-
-	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
+	PROFILE_EXTRA_FUNC();
+	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 	wrapper.AttachToStream(pStream);
 
-	//WRAPPER_WRITE_OBJECT_START(wrapper);
-
-	WRAPPER_WRITE(wrapper, "CvProperties",iPropertyNum);
+	const int iPropertyNum = getNumProperties();
+	WRAPPER_WRITE(wrapper, "CvProperties", iPropertyNum);
 	for (int i = 0; i < iPropertyNum; i++)
 	{
 		const int eProp = getProperty(i);
@@ -400,17 +382,15 @@ void CvProperties::writeWrapper(FDataStreamBase *pStream)
 		WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvProperties", REMAPPED_CLASS_TYPE_PROPERTIES, eProp);
 		WRAPPER_WRITE(wrapper, "CvProperties",iVal);
 	}
-
-	//WRAPPER_WRITE_OBJECT_END(wrapper);
 }
 
 bool CvProperties::read(CvXMLLoadUtility* pXML, const wchar_t* szTagName)
 {
-	if(pXML->TryMoveToXmlFirstChild(szTagName))
+	PROFILE_EXTRA_FUNC();
+	if (pXML->TryMoveToXmlFirstChild(szTagName))
 	{
-		if(pXML->TryMoveToXmlFirstChild())
+		if (pXML->TryMoveToXmlFirstChild())
 		{
-
 			if (pXML->TryMoveToXmlFirstOfSiblings(L"Property"))
 			{
 				do
@@ -427,12 +407,12 @@ bool CvProperties::read(CvXMLLoadUtility* pXML, const wchar_t* szTagName)
 		}
 		pXML->MoveToXmlParent();
 	}
-
 	return true;
 }
 
 void CvProperties::copyNonDefaults(const CvProperties* pProp)
 {
+	PROFILE_EXTRA_FUNC();
 	const int num = pProp->getNumProperties();
 	for (int index = 0; index < num; index++)
 	{
@@ -443,6 +423,7 @@ void CvProperties::copyNonDefaults(const CvProperties* pProp)
 
 bool CvProperties::operator<(const CvProperties& prop) const
 {
+	PROFILE_EXTRA_FUNC();
 	const int num = prop.getNumProperties();
 	for (int index = 0; index < num; index++)
 	{
@@ -454,6 +435,7 @@ bool CvProperties::operator<(const CvProperties& prop) const
 
 bool CvProperties::operator<=(const CvProperties& prop) const
 {
+	PROFILE_EXTRA_FUNC();
 	const int num = prop.getNumProperties();
 	for (int index = 0; index < num; index++)
 	{
@@ -465,6 +447,7 @@ bool CvProperties::operator<=(const CvProperties& prop) const
 
 bool CvProperties::operator>(const CvProperties& prop) const
 {
+	PROFILE_EXTRA_FUNC();
 	const int num = prop.getNumProperties();
 	for (int index = 0; index < num; index++)
 	{
@@ -476,6 +459,7 @@ bool CvProperties::operator>(const CvProperties& prop) const
 
 bool CvProperties::operator>=(const CvProperties& prop) const
 {
+	PROFILE_EXTRA_FUNC();
 	const int num = prop.getNumProperties();
 	for (int index = 0; index < num; index++)
 	{
@@ -487,6 +471,7 @@ bool CvProperties::operator>=(const CvProperties& prop) const
 
 bool CvProperties::operator==(const CvProperties& prop) const
 {
+	PROFILE_EXTRA_FUNC();
 	const int num = prop.getNumProperties();
 	for (int index = 0; index < num; index++)
 	{
@@ -498,6 +483,7 @@ bool CvProperties::operator==(const CvProperties& prop) const
 
 bool CvProperties::operator!=(const CvProperties& prop) const
 {
+	PROFILE_EXTRA_FUNC();
 	const int num = prop.getNumProperties();
 	for (int index = 0; index < num; index++)
 	{
@@ -509,10 +495,11 @@ bool CvProperties::operator!=(const CvProperties& prop) const
 
 void CvProperties::buildRequiresMinString(CvWStringBuffer& szBuffer, const CvProperties* pProp) const
 {
+	PROFILE_EXTRA_FUNC();
 	const int num = getNumProperties();
 	for (int index = 0; index < num; index++)
 	{
-		if ((pProp == NULL) || (pProp->getValueByProperty(getProperty(index)) < getValue(index)))
+		if (!pProp || pProp->getValueByProperty(getProperty(index)) < getValue(index))
 		{
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText(GC.getPropertyInfo((PropertyTypes)getProperty(index)).getPrereqMinDisplayText(), getValue(index)));
@@ -522,10 +509,11 @@ void CvProperties::buildRequiresMinString(CvWStringBuffer& szBuffer, const CvPro
 
 void CvProperties::buildRequiresMaxString(CvWStringBuffer& szBuffer, const CvProperties* pProp) const
 {
+	PROFILE_EXTRA_FUNC();
 	const int num = getNumProperties();
 	for (int index = 0; index < num; index++)
 	{
-		if ((pProp == NULL) || (pProp->getValueByProperty(getProperty(index)) > getValue(index)))
+		if (!pProp || pProp->getValueByProperty(getProperty(index)) > getValue(index))
 		{
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText(GC.getPropertyInfo((PropertyTypes)getProperty(index)).getPrereqMaxDisplayText(), getValue(index)));
@@ -535,6 +523,7 @@ void CvProperties::buildRequiresMaxString(CvWStringBuffer& szBuffer, const CvPro
 
 void CvProperties::buildChangesString(CvWStringBuffer& szBuffer, CvWString* pszCity) const
 {
+	PROFILE_EXTRA_FUNC();
 	const int num = getNumProperties();
 	for (int iI = 0; iI < num; iI++)
 	{
@@ -547,12 +536,12 @@ void CvProperties::buildChangesString(CvWStringBuffer& szBuffer, CvWString* pszC
 		CvWString szTemp;
 		szTemp.Format(L"%c: %+d", GC.getPropertyInfo((PropertyTypes)getProperty(iI)).getChar(), getValue(iI));
 		szBuffer.append(szTemp);
-		//szBuffer.append(gDLL->getText(GC.getPropertyInfo((PropertyTypes)getProperty(iI)).getChangeDisplayText(), getValue(iI), GC.getPropertyInfo((PropertyTypes)getProperty(iI)).getChar()));
 	}
 }
 
 void CvProperties::buildCompactChangesString(CvWStringBuffer& szBuffer) const
 {
+	PROFILE_EXTRA_FUNC();
 	const int num = getNumProperties();
 	for (int iI = 0; iI < num; iI++)
 	{
@@ -564,6 +553,7 @@ void CvProperties::buildCompactChangesString(CvWStringBuffer& szBuffer) const
 
 void CvProperties::buildChangesAllCitiesString(CvWStringBuffer& szBuffer) const
 {
+	PROFILE_EXTRA_FUNC();
 	const int num = getNumProperties();
 	for (int iI = 0; iI < num; iI++)
 	{
@@ -571,12 +561,12 @@ void CvProperties::buildChangesAllCitiesString(CvWStringBuffer& szBuffer) const
 		CvWString szTemp;
 		szTemp.Format(L"%c (All Cities): %+d", GC.getPropertyInfo((PropertyTypes)getProperty(iI)).getChar(), getValue(iI));
 		szBuffer.append(szTemp);
-		//szBuffer.append(gDLL->getText(GC.getPropertyInfo((PropertyTypes)getProperty(iI)).getChangeAllCitiesDisplayText(), getValue(iI), GC.getPropertyInfo((PropertyTypes)getProperty(iI)).getChar()));
 	}
 }
 
 void CvProperties::buildDisplayString(CvWStringBuffer& szBuffer) const
 {
+	PROFILE_EXTRA_FUNC();
 	const int num = getNumProperties();
 	for (int iI = 0; iI < num; iI++)
 	{
@@ -584,7 +574,6 @@ void CvProperties::buildDisplayString(CvWStringBuffer& szBuffer) const
 		CvWString szTemp;
 		szTemp.Format(L"%c: %+d", GC.getPropertyInfo((PropertyTypes)getProperty(iI)).getChar(), getValue(iI));
 		szBuffer.append(szTemp);
-		//szBuffer.append(gDLL->getText(GC.getPropertyInfo((PropertyTypes)getProperty(iI)).getValueDisplayText(), getValue(iI), CvWString::format(L"%c", GC.getPropertyInfo((PropertyTypes) iI).getChar())));
 	}
 }
 

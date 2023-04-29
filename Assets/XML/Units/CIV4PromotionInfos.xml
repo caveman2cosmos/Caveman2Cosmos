@@ -1233,7 +1233,7 @@
 			<PromotionLine>PROMOTIONLINE_TRANSPORT_TROOPS</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iCargoChange>1</iCargoChange>
 			<iSMCargoChange>100</iSMCargoChange>
@@ -1248,7 +1248,7 @@
 			<PromotionLine>PROMOTIONLINE_TRANSPORT_TROOPS</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iCargoChange>1</iCargoChange>
 			<iSMCargoChange>100</iSMCargoChange>
@@ -1263,7 +1263,7 @@
 			<PromotionLine>PROMOTIONLINE_TRANSPORT_TROOPS</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iCargoChange>1</iCargoChange>
 			<iSMCargoChange>100</iSMCargoChange>
@@ -1320,7 +1320,7 @@
 			<PromotionLine>PROMOTIONLINE_TRANSPORT_PEOPLE</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iCargoChange>1</iCargoChange>
 			<iSMCargoChange>3</iSMCargoChange>
@@ -1335,7 +1335,7 @@
 			<PromotionLine>PROMOTIONLINE_TRANSPORT_PEOPLE</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iCargoChange>1</iCargoChange>
 			<iSMCargoChange>3</iSMCargoChange>
@@ -1350,7 +1350,7 @@
 			<PromotionLine>PROMOTIONLINE_TRANSPORT_PEOPLE</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iCargoChange>1</iCargoChange>
 			<iSMCargoChange>3</iSMCargoChange>
@@ -1403,7 +1403,7 @@
 			<PromotionLine>PROMOTIONLINE_TRANSPORT_MISSILES</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iCargoChange>1</iCargoChange>
 			<iSMCargoChange>3</iSMCargoChange>
@@ -1418,7 +1418,7 @@
 			<PromotionLine>PROMOTIONLINE_TRANSPORT_MISSILES</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iCargoChange>1</iCargoChange>
 			<iSMCargoChange>3</iSMCargoChange>
@@ -1433,7 +1433,7 @@
 			<PromotionLine>PROMOTIONLINE_TRANSPORT_MISSILES</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iCargoChange>1</iCargoChange>
 			<iSMCargoChange>3</iSMCargoChange>
@@ -1491,7 +1491,7 @@
 			<PromotionLine>PROMOTIONLINE_TRANSPORT_SEAPLANES</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iCargoChange>1</iCargoChange>
 			<iSMCargoChange>30</iSMCargoChange>
@@ -1506,7 +1506,7 @@
 			<PromotionLine>PROMOTIONLINE_TRANSPORT_SEAPLANES</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iCargoChange>1</iCargoChange>
 			<iSMCargoChange>30</iSMCargoChange>
@@ -1521,7 +1521,7 @@
 			<PromotionLine>PROMOTIONLINE_TRANSPORT_SEAPLANES</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iCargoChange>1</iCargoChange>
 			<iSMCargoChange>30</iSMCargoChange>
@@ -1579,7 +1579,7 @@
 			<PromotionLine>PROMOTIONLINE_TRANSPORT_FIGHTERS</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iCargoChange>1</iCargoChange>
 			<iSMCargoChange>30</iSMCargoChange>
@@ -1594,7 +1594,7 @@
 			<PromotionLine>PROMOTIONLINE_TRANSPORT_FIGHTERS</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iCargoChange>1</iCargoChange>
 			<iSMCargoChange>30</iSMCargoChange>
@@ -1609,7 +1609,7 @@
 			<PromotionLine>PROMOTIONLINE_TRANSPORT_FIGHTERS</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iCargoChange>1</iCargoChange>
 			<iSMCargoChange>30</iSMCargoChange>
@@ -1624,7 +1624,7 @@
 			<PromotionLine>PROMOTIONLINE_TRANSPORT</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<NotOnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</NotOnGameOptions>
 			<bCargoPrereq>1</bCargoPrereq>
 			<iCargoChange>1</iCargoChange>
@@ -1645,7 +1645,7 @@
 			<PromotionLine>PROMOTIONLINE_TRANSPORT</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<NotOnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</NotOnGameOptions>
 			<bCargoPrereq>1</bCargoPrereq>
 			<iCargoChange>1</iCargoChange>
@@ -1666,7 +1666,7 @@
 			<PromotionLine>PROMOTIONLINE_TRANSPORT</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<NotOnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</NotOnGameOptions>
 			<iMovesChange>-1</iMovesChange>
 			<iCargoChange>1</iCargoChange>
@@ -2516,7 +2516,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_WETLAND1</Type>
-			<Description>TXT_KEY_PROMOTION_WETLAND1_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_WETLAND1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_COMBAT1</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_WETLAND</PromotionLine>
@@ -2547,7 +2547,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_WETLAND2</Type>
-			<Description>TXT_KEY_PROMOTION_WETLAND2_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_WETLAND2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_WETLAND1</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_WETLAND</PromotionLine>
@@ -2578,7 +2578,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_WETLAND3</Type>
-			<Description>TXT_KEY_PROMOTION_WETLAND3_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_WETLAND3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_WETLAND2</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_WETLAND</PromotionLine>
@@ -2609,7 +2609,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_RUGGED1</Type>
-			<Description>TXT_KEY_PROMOTION_RUGGED1_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_RUGGED1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_COMBAT1</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_RUGGED</PromotionLine>
@@ -2640,7 +2640,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_RUGGED2</Type>
-			<Description>TXT_KEY_PROMOTION_RUGGED2_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_RUGGED2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_RUGGED1</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_RUGGED</PromotionLine>
@@ -2672,7 +2672,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_RUGGED3</Type>
-			<Description>TXT_KEY_PROMOTION_RUGGED3_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_RUGGED3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_RUGGED2</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_RUGGED</PromotionLine>
@@ -6186,7 +6186,7 @@
 			<PromotionLine>PROMOTIONLINE_STEALTH</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_WITHOUT_WARNING</GameOptionType>
 			</OnGameOptions>
 			<iStealthStrikesChange>1</iStealthStrikesChange>
 			<iStealthCombatModifierChange>10</iStealthCombatModifierChange>
@@ -6200,7 +6200,7 @@
 			<PromotionLine>PROMOTIONLINE_STEALTH</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_WITHOUT_WARNING</GameOptionType>
 			</OnGameOptions>
 			<iStealthStrikesChange>1</iStealthStrikesChange>
 			<iStealthCombatModifierChange>10</iStealthCombatModifierChange>
@@ -6214,7 +6214,7 @@
 			<PromotionLine>PROMOTIONLINE_STEALTH</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_WITHOUT_WARNING</GameOptionType>
 			</OnGameOptions>
 			<iStealthStrikesChange>1</iStealthStrikesChange>
 			<iStealthCombatModifierChange>10</iStealthCombatModifierChange>
@@ -7858,7 +7858,7 @@
 		<!-- RETINUE FOR HEROES -->
 		<PromotionInfo>
 			<Type>PROMOTION_RETINUE_ADVENTURER</Type>
-			<Description>TXT_KEY_PROMOTION_RETINUE_ADVENTURER_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_RETINUE_ADVENTURER</Description>
 			<Sound>AS2D_IF_GET_RETINUE</Sound>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_AIR</DomainType>
@@ -7896,7 +7896,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_RETINUE_BANDIT</Type>
-			<Description>TXT_KEY_PROMOTION_RETINUE_BANDIT_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_RETINUE_BANDIT</Description>
 			<Sound>AS2D_IF_GET_RETINUE</Sound>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_AIR</DomainType>
@@ -7969,7 +7969,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_RETINUE_BARD</Type>
-			<Description>TXT_KEY_PROMOTION_RETINUE_BARD_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_RETINUE_BARD</Description>
 			<Sound>AS2D_IF_GET_RETINUE</Sound>
 			<bImmuneToFirstStrikes>1</bImmuneToFirstStrikes>
 			<iEnemyHealChange>6</iEnemyHealChange>
@@ -7989,7 +7989,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_RETINUE_BODYGUARD</Type>
-			<Description>TXT_KEY_PROMOTION_RETINUE_BODYGUARD_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_RETINUE_BODYGUARD</Description>
 			<Sound>AS2D_IF_GET_RETINUE</Sound>
 			<iWithdrawalChange>10</iWithdrawalChange>
 			<iChanceFirstStrikesChange>1</iChanceFirstStrikesChange>
@@ -8005,7 +8005,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_RETINUE_BUILDER</Type>
-			<Description>TXT_KEY_PROMOTION_RETINUE_BUILDER_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_RETINUE_BUILDER</Description>
 			<Sound>AS2D_IF_GET_RETINUE</Sound>
 			<iWithdrawalChange>10</iWithdrawalChange>
 			<iCityAttack>33</iCityAttack>
@@ -8021,7 +8021,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_RETINUE_LIEUTENANT</Type>
-			<Description>TXT_KEY_PROMOTION_RETINUE_LIEUTENANT_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_RETINUE_LIEUTENANT</Description>
 			<Sound>AS2D_IF_GET_RETINUE</Sound>
 			<bBlitz>1</bBlitz>
 			<iWithdrawalChange>10</iWithdrawalChange>
@@ -8047,7 +8047,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_RETINUE_LOYAL_SERVANT</Type>
-			<Description>TXT_KEY_PROMOTION_RETINUE_LOYAL_SERVANT_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_RETINUE_LOYAL_SERVANT</Description>
 			<Sound>AS2D_IF_GET_RETINUE</Sound>
 			<iMovesChange>1</iMovesChange>
 			<iWithdrawalChange>25</iWithdrawalChange>
@@ -8062,7 +8062,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_RETINUE_MESSENGER</Type>
-			<Description>TXT_KEY_PROMOTION_RETINUE_MESSENGER_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_RETINUE_MESSENGER</Description>
 			<Help>TXT_KEY_PROMOTION_RETINUE_MESSENGER_HELP</Help>
 			<Sound>AS2D_IF_GET_RETINUE</Sound>
 			<iVisibilityChange>1</iVisibilityChange>
@@ -8080,7 +8080,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_RETINUE_PRIEST</Type>
-			<Description>TXT_KEY_PROMOTION_RETINUE_PRIEST_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_RETINUE_PRIEST</Description>
 			<Sound>AS2D_IF_GET_RETINUE</Sound>
 			<bAlwaysHeal>1</bAlwaysHeal>
 			<iEnemyHealChange>15</iEnemyHealChange>
@@ -8100,7 +8100,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_RETINUE_SCHOLAR</Type>
-			<Description>TXT_KEY_PROMOTION_RETINUE_SCHOLAR_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_RETINUE_SCHOLAR</Description>
 			<Sound>AS2D_IF_GET_RETINUE</Sound>
 			<iPillageChange>300</iPillageChange>
 			<UnitCombats>
@@ -8114,7 +8114,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_RETINUE_SPOUSE</Type>
-			<Description>TXT_KEY_PROMOTION_RETINUE_SPOUSE_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_RETINUE_SPOUSE</Description>
 			<Sound>AS2D_IF_GET_RETINUE</Sound>
 			<iSelfHealModifier>4</iSelfHealModifier>
 			<iExperiencePercent>10</iExperiencePercent>
@@ -8129,7 +8129,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_RETINUE_STRATEGIST</Type>
-			<Description>TXT_KEY_PROMOTION_RETINUE_STRATEGIST_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_RETINUE_STRATEGIST</Description>
 			<Sound>AS2D_IF_GET_RETINUE</Sound>
 			<bEnemyRoute>1</bEnemyRoute>
 			<iCombatPercent>5</iCombatPercent>
@@ -8158,7 +8158,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_RETINUE_WAR_VETERAN</Type>
-			<Description>TXT_KEY_PROMOTION_RETINUE_WAR_VETERAN_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_RETINUE_WAR_VETERAN</Description>
 			<Sound>AS2D_IF_GET_RETINUE</Sound>
 			<bAmphib>1</bAmphib>
 			<bRiver>1</bRiver>
@@ -8194,8 +8194,8 @@
 			<PromotionLine>PROMOTIONLINE_HUNTING_SIGHT</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<VisibilityIntensityChangeTypes>
 				<VisibilityIntensityChangeType>
@@ -8217,8 +8217,8 @@
 			<PromotionLine>PROMOTIONLINE_HUNTING_SIGHT</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<VisibilityIntensityChangeTypes>
 				<VisibilityIntensityChangeType>
@@ -11259,7 +11259,7 @@
 			<PromotionLine>PROMOTIONLINE_HUNT_DOWN</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
 			<iPursuitChange>15</iPursuitChange>
 			<Button>art/Buttons/Promotions/HuntDown1Promotion.dds</Button>
@@ -11273,7 +11273,7 @@
 			<PromotionLine>PROMOTIONLINE_HUNT_DOWN</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
 			<iPursuitChange>20</iPursuitChange>
 			<Button>art/Buttons/Promotions/HuntDown2Promotion.dds</Button>
@@ -11287,7 +11287,7 @@
 			<PromotionLine>PROMOTIONLINE_HUNT_DOWN</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
 			<iPursuitChange>25</iPursuitChange>
 			<Button>art/Buttons/Promotions/HuntDown3Promotion.dds</Button>
@@ -11301,7 +11301,7 @@
 			<PromotionLine>PROMOTIONLINE_HUNT_DOWN</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
 			<iPursuitChange>30</iPursuitChange>
 			<Button>art/Buttons/Promotions/HuntDown4Promotion.dds</Button>
@@ -11315,7 +11315,7 @@
 			<PromotionLine>PROMOTIONLINE_HUNT_DOWN</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
 			<iMovesChange>1</iMovesChange>
 			<iPursuitChange>35</iPursuitChange>
@@ -11328,7 +11328,7 @@
 			<PromotionLine>PROMOTIONLINE_CHASE</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
 			<iPursuitChange>5</iPursuitChange>
 			<Button>art/Buttons/Promotions/Chase1Promotion.dds</Button>
@@ -11342,7 +11342,7 @@
 			<PromotionLine>PROMOTIONLINE_CHASE</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
 			<iPursuitChange>10</iPursuitChange>
 			<Button>art/Buttons/Promotions/Chase2Promotion.dds</Button>
@@ -11356,7 +11356,7 @@
 			<PromotionLine>PROMOTIONLINE_CHASE</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
 			<iPursuitChange>15</iPursuitChange>
 			<Button>art/Buttons/Promotions/Chase3Promotion.dds</Button>
@@ -11370,7 +11370,7 @@
 			<PromotionLine>PROMOTIONLINE_CHASE</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
 			<iPursuitChange>20</iPursuitChange>
 			<Button>art/Buttons/Promotions/Chase4Promotion.dds</Button>
@@ -11384,7 +11384,7 @@
 			<PromotionLine>PROMOTIONLINE_CHASE</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
 			<iMovesChange>1</iMovesChange>
 			<iPursuitChange>25</iPursuitChange>
@@ -11454,7 +11454,7 @@
 				<SubCombatChangeType>UNITCOMBAT_PROMOTED_CAUTIOUS</SubCombatChangeType>
 			</SubCombatChangeTypes>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
 			<iWithdrawalChange>5</iWithdrawalChange>
 			<iEarlyWithdrawChange>10</iEarlyWithdrawChange>
@@ -11469,7 +11469,7 @@
 			<PromotionLine>PROMOTIONLINE_CAUTIOUS</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
 			<iWithdrawalChange>5</iWithdrawalChange>
 			<iEarlyWithdrawChange>10</iEarlyWithdrawChange>
@@ -11484,7 +11484,7 @@
 			<PromotionLine>PROMOTIONLINE_CAUTIOUS</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
 			<iWithdrawalChange>5</iWithdrawalChange>
 			<iEarlyWithdrawChange>15</iEarlyWithdrawChange>
@@ -11499,7 +11499,7 @@
 			<PromotionLine>PROMOTIONLINE_CAUTIOUS</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
 			<iWithdrawalChange>5</iWithdrawalChange>
 			<iEarlyWithdrawChange>15</iEarlyWithdrawChange>
@@ -11514,7 +11514,7 @@
 			<PromotionLine>PROMOTIONLINE_CAUTIOUS</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
 			<iWithdrawalChange>5</iWithdrawalChange>
 			<iEarlyWithdrawChange>20</iEarlyWithdrawChange>
@@ -11530,7 +11530,7 @@
 				<SubCombatChangeType>UNITCOMBAT_PROMOTED_STALL</SubCombatChangeType>
 			</SubCombatChangeTypes>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
 			<iWithdrawalChange>5</iWithdrawalChange>
 			<iEarlyWithdrawChange>-10</iEarlyWithdrawChange>
@@ -11545,7 +11545,7 @@
 			<PromotionLine>PROMOTIONLINE_STALL</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
 			<iWithdrawalChange>5</iWithdrawalChange>
 			<iEarlyWithdrawChange>-10</iEarlyWithdrawChange>
@@ -11560,7 +11560,7 @@
 			<PromotionLine>PROMOTIONLINE_STALL</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
 			<iWithdrawalChange>5</iWithdrawalChange>
 			<iEarlyWithdrawChange>-15</iEarlyWithdrawChange>
@@ -11575,7 +11575,7 @@
 			<PromotionLine>PROMOTIONLINE_STALL</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
 			<iWithdrawalChange>5</iWithdrawalChange>
 			<iEarlyWithdrawChange>-15</iEarlyWithdrawChange>
@@ -11590,7 +11590,7 @@
 			<PromotionLine>PROMOTIONLINE_STALL</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
 			<iWithdrawalChange>5</iWithdrawalChange>
 			<iEarlyWithdrawChange>-20</iEarlyWithdrawChange>
@@ -11605,7 +11605,7 @@
 			<PromotionLine>PROMOTIONLINE_STINGING_INSULTS</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
 			<iWithdrawalChange>5</iWithdrawalChange>
 			<iTauntChange>50</iTauntChange>
@@ -11620,7 +11620,7 @@
 			<PromotionLine>PROMOTIONLINE_STINGING_INSULTS</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
 			<iWithdrawalChange>10</iWithdrawalChange>
 			<iTauntChange>100</iTauntChange>
@@ -11635,7 +11635,7 @@
 			<PromotionLine>PROMOTIONLINE_STINGING_INSULTS</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
 			<iWithdrawalChange>15</iWithdrawalChange>
 			<iTauntChange>200</iTauntChange>
@@ -11679,7 +11679,7 @@
 			<Description>TXT_KEY_PROMOTION_BARELY_CAPABLE</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
@@ -11700,7 +11700,7 @@
 			<Description>TXT_KEY_PROMOTION_LEARNED_AGGRESSION</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
@@ -11722,7 +11722,7 @@
 			<Description>TXT_KEY_PROMOTION_EMERGING_COMPETENCE</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
@@ -11744,7 +11744,7 @@
 			<Description>TXT_KEY_PROMOTION_BETTER_SKILL</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
@@ -11766,7 +11766,7 @@
 			<Description>TXT_KEY_PROMOTION_NATURAL_TALENT</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
@@ -11788,7 +11788,7 @@
 			<Description>TXT_KEY_PROMOTION_ABSOLUTE_PROFICIENCY</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
@@ -11810,7 +11810,7 @@
 			<Description>TXT_KEY_PROMOTION_ASTONISHING_ACCUMEN</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
@@ -11832,7 +11832,7 @@
 			<Description>TXT_KEY_PROMOTION_UNBELIEVABLE_EXPERTISE</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
@@ -11854,7 +11854,7 @@
 			<Description>TXT_KEY_PROMOTION_LEGENDARY_PROWESS</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
@@ -11876,7 +11876,7 @@
 			<Description>TXT_KEY_PROMOTION_UNEARTHLY_ABILITY</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
@@ -11898,7 +11898,7 @@
 			<Description>TXT_KEY_PROMOTION_FALLEN_GRACE</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
@@ -11919,7 +11919,7 @@
 			<Description>TXT_KEY_PROMOTION_TARNISHED_SUPREMACY</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
@@ -11940,7 +11940,7 @@
 			<Description>TXT_KEY_PROMOTION_ERODED_SUPERIORITY</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
@@ -11961,7 +11961,7 @@
 			<Description>TXT_KEY_PROMOTION_ONCE_GREAT</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
@@ -11982,7 +11982,7 @@
 			<Description>TXT_KEY_PROMOTION_SIMPLY_AVERAGE</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
@@ -12003,7 +12003,7 @@
 			<Description>TXT_KEY_PROMOTION_SLIGHTLY_ENTROPIC</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
@@ -12024,7 +12024,7 @@
 			<Description>TXT_KEY_PROMOTION_JADED_DECADENCE</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
@@ -12045,7 +12045,7 @@
 			<Description>TXT_KEY_PROMOTION_PARALYTIC_PERSONALITY</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
@@ -12066,7 +12066,7 @@
 			<Description>TXT_KEY_PROMOTION_ABSOLUTE_ENFEEBLEMENT</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
@@ -12087,7 +12087,7 @@
 			<Description>TXT_KEY_PROMOTION_COMPLETELY_INCAPACITATED</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
@@ -12108,7 +12108,7 @@
 			<Description>TXT_KEY_PROMOTION_MERGED_INTO_PARTY</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<ReplacesUnitCombat>UNITCOMBAT_GROUP_SOLO</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
@@ -12126,7 +12126,7 @@
 			<Description>TXT_KEY_PROMOTION_MERGED_INTO_SQUAD</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<ReplacesUnitCombat>UNITCOMBAT_GROUP_PARTY</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
@@ -12144,7 +12144,7 @@
 			<Description>TXT_KEY_PROMOTION_MERGED_INTO_COMPANY</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<ReplacesUnitCombat>UNITCOMBAT_GROUP_SQUAD</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
@@ -12162,7 +12162,7 @@
 			<Description>TXT_KEY_PROMOTION_MERGED_INTO_BATTALION</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<ReplacesUnitCombat>UNITCOMBAT_GROUP_COMPANY</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
@@ -12180,7 +12180,7 @@
 			<Description>TXT_KEY_PROMOTION_MERGED_INTO_FORCES</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<ReplacesUnitCombat>UNITCOMBAT_GROUP_BATTALION</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
@@ -12198,7 +12198,7 @@
 			<Description>TXT_KEY_PROMOTION_MERGED_INTO_CLAN</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<ReplacesUnitCombat>UNITCOMBAT_GROUP_FORCES</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
@@ -12216,7 +12216,7 @@
 			<Description>TXT_KEY_PROMOTION_MERGED_INTO_HORDE</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<ReplacesUnitCombat>UNITCOMBAT_GROUP_CLAN</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
@@ -12234,7 +12234,7 @@
 			<Description>TXT_KEY_PROMOTION_MERGED_INTO_MULTITUDES</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<ReplacesUnitCombat>UNITCOMBAT_GROUP_HORDE</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
@@ -12252,7 +12252,7 @@
 			<Description>TXT_KEY_PROMOTION_MERGED_INTO_MILLIONS</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<ReplacesUnitCombat>UNITCOMBAT_GROUP_MULTITUDES</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
@@ -12270,7 +12270,7 @@
 			<Description>TXT_KEY_PROMOTION_MERGED_INTO_BILLIONS</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<ReplacesUnitCombat>UNITCOMBAT_GROUP_MILLIONS</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
@@ -12288,7 +12288,7 @@
 			<Description>TXT_KEY_PROMOTION_MERGED_INTO_TRILLIONS</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<ReplacesUnitCombat>UNITCOMBAT_GROUP_BILLIONS</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
@@ -12306,7 +12306,7 @@
 			<Description>TXT_KEY_PROMOTION_MERGED_INTO_COUNTLESS</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<ReplacesUnitCombat>UNITCOMBAT_GROUP_TRILLIONS</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
@@ -12324,7 +12324,7 @@
 			<Description>TXT_KEY_PROMOTION_SPLIT_INTO_TRILLIONS</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<ReplacesUnitCombat>UNITCOMBAT_GROUP_COUNTLESS</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
@@ -12342,7 +12342,7 @@
 			<Description>TXT_KEY_PROMOTION_SPLIT_INTO_BILLIONS</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<ReplacesUnitCombat>UNITCOMBAT_GROUP_TRILLIONS</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
@@ -12360,7 +12360,7 @@
 			<Description>TXT_KEY_PROMOTION_SPLIT_INTO_MILLIONS</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<ReplacesUnitCombat>UNITCOMBAT_GROUP_BILLIONS</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
@@ -12378,7 +12378,7 @@
 			<Description>TXT_KEY_PROMOTION_SPLIT_INTO_MULTITUDES</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<ReplacesUnitCombat>UNITCOMBAT_GROUP_MILLIONS</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
@@ -12396,7 +12396,7 @@
 			<Description>TXT_KEY_PROMOTION_SPLIT_INTO_HORDE</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<ReplacesUnitCombat>UNITCOMBAT_GROUP_MULTITUDES</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
@@ -12414,7 +12414,7 @@
 			<Description>TXT_KEY_PROMOTION_SPLIT_INTO_CLAN</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<ReplacesUnitCombat>UNITCOMBAT_GROUP_HORDE</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
@@ -12432,7 +12432,7 @@
 			<Description>TXT_KEY_PROMOTION_SPLIT_INTO_FORCES</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<ReplacesUnitCombat>UNITCOMBAT_GROUP_CLAN</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
@@ -12450,7 +12450,7 @@
 			<Description>TXT_KEY_PROMOTION_SPLIT_INTO_BATTALIONS</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<ReplacesUnitCombat>UNITCOMBAT_GROUP_FORCES</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
@@ -12468,7 +12468,7 @@
 			<Description>TXT_KEY_PROMOTION_SPLIT_INTO_COMPANIES</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<ReplacesUnitCombat>UNITCOMBAT_GROUP_BATTALION</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
@@ -12486,7 +12486,7 @@
 			<Description>TXT_KEY_PROMOTION_SPLIT_INTO_SQUADS</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<ReplacesUnitCombat>UNITCOMBAT_GROUP_COMPANY</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
@@ -12504,7 +12504,7 @@
 			<Description>TXT_KEY_PROMOTION_SPLIT_INTO_PARTIES</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<ReplacesUnitCombat>UNITCOMBAT_GROUP_SQUAD</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
@@ -12522,7 +12522,7 @@
 			<Description>TXT_KEY_PROMOTION_SPLIT_INTO_SOLOS</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<ReplacesUnitCombat>UNITCOMBAT_GROUP_PARTY</ReplacesUnitCombat>
 			<bForOffset>1</bForOffset>
@@ -13194,7 +13194,7 @@
 			<Description>TXT_KEY_PROMOTION_STING1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_STING</PromotionLine>
 			<iLinePriority>1</iLinePriority>
@@ -13206,7 +13206,7 @@
 			<Description>TXT_KEY_PROMOTION_STING2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<PromotionPrereq>PROMOTION_STING1</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_STING</PromotionLine>
@@ -13219,7 +13219,7 @@
 			<Description>TXT_KEY_PROMOTION_STING3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<PromotionPrereq>PROMOTION_STING2</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_STING</PromotionLine>
@@ -13232,7 +13232,7 @@
 			<Description>TXT_KEY_PROMOTION_STING4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<PromotionPrereq>PROMOTION_STING3</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_STING</PromotionLine>
@@ -13245,7 +13245,7 @@
 			<Description>TXT_KEY_PROMOTION_BULLY1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_BULLY</PromotionLine>
 			<iLinePriority>1</iLinePriority>
@@ -13257,7 +13257,7 @@
 			<Description>TXT_KEY_PROMOTION_BULLY2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<PromotionPrereq>PROMOTION_BULLY1</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_BULLY</PromotionLine>
@@ -13270,7 +13270,7 @@
 			<Description>TXT_KEY_PROMOTION_BULLY3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<PromotionPrereq>PROMOTION_BULLY2</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_BULLY</PromotionLine>
@@ -13283,7 +13283,7 @@
 			<Description>TXT_KEY_PROMOTION_BULLY4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<PromotionPrereq>PROMOTION_BULLY3</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_BULLY</PromotionLine>
@@ -13296,7 +13296,7 @@
 			<Description>TXT_KEY_PROMOTION_BOTTLENECK1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_BOTTLENECK</PromotionLine>
 			<iLinePriority>1</iLinePriority>
@@ -13308,7 +13308,7 @@
 			<Description>TXT_KEY_PROMOTION_BOTTLENECK2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<PromotionPrereq>PROMOTION_BOTTLENECK1</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_BOTTLENECK</PromotionLine>
@@ -13321,7 +13321,7 @@
 			<Description>TXT_KEY_PROMOTION_BOTTLENECK3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<PromotionPrereq>PROMOTION_BOTTLENECK2</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_BOTTLENECK</PromotionLine>
@@ -13334,7 +13334,7 @@
 			<Description>TXT_KEY_PROMOTION_BOTTLENECK4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<PromotionPrereq>PROMOTION_BOTTLENECK3</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_BOTTLENECK</PromotionLine>
@@ -13347,7 +13347,7 @@
 			<Description>TXT_KEY_PROMOTION_SWARM1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_SWARM</PromotionLine>
 			<iLinePriority>1</iLinePriority>
@@ -13359,7 +13359,7 @@
 			<Description>TXT_KEY_PROMOTION_SWARM2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_SWARM</PromotionLine>
 			<iLinePriority>2</iLinePriority>
@@ -13371,7 +13371,7 @@
 			<Description>TXT_KEY_PROMOTION_SWARM3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_SWARM</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -13383,7 +13383,7 @@
 			<Description>TXT_KEY_PROMOTION_SWARM4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_SWARM</PromotionLine>
 			<iLinePriority>4</iLinePriority>
@@ -15463,7 +15463,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_HUNTER1</PromotionPrereq>
 			<NotOnGameOptions>
-				<GameOptionType>GAMEOPTION_INFINITE_XP</GameOptionType>
+				<GameOptionType>GAMEOPTION_UNIT_INFINITE_XP</GameOptionType>
 			</NotOnGameOptions>
 			<UnitCombats>
 				<UnitCombat>
@@ -15484,7 +15484,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_HUNTER1</PromotionPrereq>
 			<NotOnGameOptions>
-				<GameOptionType>GAMEOPTION_INFINITE_XP</GameOptionType>
+				<GameOptionType>GAMEOPTION_UNIT_INFINITE_XP</GameOptionType>
 			</NotOnGameOptions>
 			<UnitCombats>
 				<UnitCombat>
@@ -15921,7 +15921,7 @@
 			<PromotionLine>PROMOTIONLINE_DARING_ESCAPE</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
 			<iWithdrawalChange>5</iWithdrawalChange>
 			<iCaptureResistanceModifierChange>20</iCaptureResistanceModifierChange>
@@ -15935,7 +15935,7 @@
 			<PromotionLine>PROMOTIONLINE_DARING_ESCAPE</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
 			<iWithdrawalChange>10</iWithdrawalChange>
 			<iCaptureResistanceModifierChange>25</iCaptureResistanceModifierChange>
@@ -15949,7 +15949,7 @@
 			<PromotionLine>PROMOTIONLINE_DARING_ESCAPE</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
 			<iWithdrawalChange>15</iWithdrawalChange>
 			<iCaptureResistanceModifierChange>30</iCaptureResistanceModifierChange>
@@ -16196,7 +16196,7 @@
 			<Description>TXT_KEY_PROMOTION_HIDE_IN_SHADOWS1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_HIDE_IN_SHADOWS</PromotionLine>
 			<iLinePriority>1</iLinePriority>
@@ -16213,7 +16213,7 @@
 			<Description>TXT_KEY_PROMOTION_HIDE_IN_SHADOWS2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_HIDE_IN_SHADOWS</PromotionLine>
 			<iLinePriority>2</iLinePriority>
@@ -16230,7 +16230,7 @@
 			<Description>TXT_KEY_PROMOTION_HIDE_IN_SHADOWS3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_HIDE_IN_SHADOWS</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -16247,7 +16247,7 @@
 			<Description>TXT_KEY_PROMOTION_FAKE_IDENTITY1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_FAKE_IDENTITY</PromotionLine>
 			<iLinePriority>1</iLinePriority>
@@ -16266,7 +16266,7 @@
 			<Description>TXT_KEY_PROMOTION_FAKE_IDENTITY2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_FAKE_IDENTITY</PromotionLine>
 			<iLinePriority>2</iLinePriority>
@@ -16285,7 +16285,7 @@
 			<Description>TXT_KEY_PROMOTION_FAKE_IDENTITY3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_FAKE_IDENTITY</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -16304,7 +16304,7 @@
 			<Description>TXT_KEY_PROMOTION_INNOCENT_MERCHANTS1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_INNOCENT_MERCHANTS</PromotionLine>
 			<iLinePriority>1</iLinePriority>
@@ -16321,7 +16321,7 @@
 			<Description>TXT_KEY_PROMOTION_INNOCENT_MERCHANTS2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_INNOCENT_MERCHANTS</PromotionLine>
 			<iLinePriority>2</iLinePriority>
@@ -16338,7 +16338,7 @@
 			<Description>TXT_KEY_PROMOTION_INNOCENT_MERCHANTS3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_INNOCENT_MERCHANTS</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -16355,7 +16355,7 @@
 			<Description>TXT_KEY_PROMOTION_KEEN_EARS1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_KEEN_EARS</PromotionLine>
 			<iLinePriority>1</iLinePriority>
@@ -16372,7 +16372,7 @@
 			<Description>TXT_KEY_PROMOTION_KEEN_EARS2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_KEEN_EARS</PromotionLine>
 			<iLinePriority>2</iLinePriority>
@@ -16389,7 +16389,7 @@
 			<Description>TXT_KEY_PROMOTION_KEEN_EARS3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_KEEN_EARS</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -16406,7 +16406,7 @@
 			<Description>TXT_KEY_PROMOTION_HAWK_EYES1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_HAWK_EYES</PromotionLine>
 			<iLinePriority>1</iLinePriority>
@@ -16423,7 +16423,7 @@
 			<Description>TXT_KEY_PROMOTION_HAWK_EYES2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_HAWK_EYES</PromotionLine>
 			<iLinePriority>2</iLinePriority>
@@ -16440,7 +16440,7 @@
 			<Description>TXT_KEY_PROMOTION_HAWK_EYES3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_HAWK_EYES</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -16457,7 +16457,7 @@
 			<Description>TXT_KEY_PROMOTION_CROWS_NEST1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_CROWS_NEST</PromotionLine>
 			<iLinePriority>1</iLinePriority>
@@ -16478,7 +16478,7 @@
 			<Description>TXT_KEY_PROMOTION_CROWS_NEST2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_CROWS_NEST</PromotionLine>
 			<iLinePriority>2</iLinePriority>
@@ -16499,7 +16499,7 @@
 			<Description>TXT_KEY_PROMOTION_CROWS_NEST3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_CROWS_NEST</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -16520,7 +16520,7 @@
 			<Description>TXT_KEY_PROMOTION_IDENTIFY1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_IDENTIFY</PromotionLine>
 			<iLinePriority>1</iLinePriority>
@@ -16538,7 +16538,7 @@
 			<Description>TXT_KEY_PROMOTION_IDENTIFY2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_IDENTIFY</PromotionLine>
 			<iLinePriority>2</iLinePriority>
@@ -16556,7 +16556,7 @@
 			<Description>TXT_KEY_PROMOTION_IDENTIFY3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_IDENTIFY</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -16577,7 +16577,7 @@
 			<PromotionLine>PROMOTIONLINE_COVERT_OPERATIONS</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<InvisibilityIntensityChangeTypes>
 				<InvisibilityIntensityChangeType>
@@ -16595,7 +16595,7 @@
 			<PromotionLine>PROMOTIONLINE_COVERT_OPERATIONS</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<InvisibilityIntensityChangeTypes>
 				<InvisibilityIntensityChangeType>
@@ -16613,7 +16613,7 @@
 			<PromotionLine>PROMOTIONLINE_COVERT_OPERATIONS</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<InvisibilityIntensityChangeTypes>
 				<InvisibilityIntensityChangeType>
@@ -16628,7 +16628,7 @@
 			<Description>TXT_KEY_PROMOTION_PROUD_PIRATE</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<UnitCombats>
 				<UnitCombat>
@@ -16655,7 +16655,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_COMBAT1</PromotionPrereq>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_WARRIORS_INTUITION</PromotionLine>
 			<iLinePriority>1</iLinePriority>
@@ -16673,7 +16673,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_COMBAT3</PromotionPrereq>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_WARRIORS_INTUITION</PromotionLine>
 			<iLinePriority>2</iLinePriority>
@@ -16691,7 +16691,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_COMBAT5</PromotionPrereq>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_WARRIORS_INTUITION</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -16708,8 +16708,8 @@
 			<Description>TXT_KEY_PROMOTION_LOW_PROFILE1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_LOW_PROFILE</PromotionLine>
 			<iLinePriority>1</iLinePriority>
@@ -16748,8 +16748,8 @@
 			<Description>TXT_KEY_PROMOTION_LOW_PROFILE2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_LOW_PROFILE</PromotionLine>
 			<iLinePriority>2</iLinePriority>
@@ -16780,8 +16780,8 @@
 			<Description>TXT_KEY_PROMOTION_LOW_PROFILE3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_LOW_PROFILE</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -16804,8 +16804,8 @@
 			<Description>TXT_KEY_PROMOTION_SPOT1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_SPOT</PromotionLine>
 			<iLinePriority>1</iLinePriority>
@@ -16848,8 +16848,8 @@
 			<Description>TXT_KEY_PROMOTION_SPOT2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_SPOT</PromotionLine>
 			<iLinePriority>2</iLinePriority>
@@ -16884,8 +16884,8 @@
 			<Description>TXT_KEY_PROMOTION_SPOT3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_SPOT</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -16913,7 +16913,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_LABOR_UNIONS</TechPrereq>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_RED_TAPE</PromotionLine>
 			<iLinePriority>1</iLinePriority>
@@ -16932,7 +16932,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_LABOR_UNIONS</TechPrereq>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_RED_TAPE</PromotionLine>
 			<iLinePriority>2</iLinePriority>
@@ -16951,7 +16951,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_LABOR_UNIONS</TechPrereq>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_RED_TAPE</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -16970,7 +16970,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_LABOR_UNIONS</TechPrereq>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_CLOUT</PromotionLine>
 			<iLinePriority>1</iLinePriority>
@@ -16989,7 +16989,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_LABOR_UNIONS</TechPrereq>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_CLOUT</PromotionLine>
 			<iLinePriority>2</iLinePriority>
@@ -17008,7 +17008,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_LABOR_UNIONS</TechPrereq>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_CLOUT</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -17209,7 +17209,7 @@
 			<PromotionLine>PROMOTIONLINE_BACKSTAB</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_WITHOUT_WARNING</GameOptionType>
 			</OnGameOptions>
 			<iStealthStrikesChange>1</iStealthStrikesChange>
 			<iStealthCombatModifierChange>10</iStealthCombatModifierChange>
@@ -17223,7 +17223,7 @@
 			<PromotionLine>PROMOTIONLINE_BACKSTAB</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_WITHOUT_WARNING</GameOptionType>
 			</OnGameOptions>
 			<iStealthStrikesChange>1</iStealthStrikesChange>
 			<iStealthCombatModifierChange>10</iStealthCombatModifierChange>
@@ -17237,7 +17237,7 @@
 			<PromotionLine>PROMOTIONLINE_BACKSTAB</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_WITHOUT_WARNING</GameOptionType>
 			</OnGameOptions>
 			<iStealthStrikesChange>1</iStealthStrikesChange>
 			<iStealthCombatModifierChange>10</iStealthCombatModifierChange>
@@ -17251,7 +17251,7 @@
 			<PromotionLine>PROMOTIONLINE_BACKSTAB</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_WITHOUT_WARNING</GameOptionType>
 			</OnGameOptions>
 			<iStealthStrikesChange>1</iStealthStrikesChange>
 			<iStealthCombatModifierChange>10</iStealthCombatModifierChange>
@@ -17265,7 +17265,7 @@
 			<PromotionLine>PROMOTIONLINE_BACKSTAB</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_WITHOUT_WARNING</GameOptionType>
 			</OnGameOptions>
 			<iStealthStrikesChange>1</iStealthStrikesChange>
 			<iStealthCombatModifierChange>10</iStealthCombatModifierChange>
@@ -17278,7 +17278,7 @@
 			<PromotionLine>PROMOTIONLINE_WAYLAY</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_WITHOUT_WARNING</GameOptionType>
 			</OnGameOptions>
 			<TechPrereq>TECH_DECEPTION</TechPrereq>
 			<bPrereqNormInvisible>1</bPrereqNormInvisible>
@@ -17299,7 +17299,7 @@
 			<PromotionLine>PROMOTIONLINE_WAYLAY</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_WITHOUT_WARNING</GameOptionType>
 			</OnGameOptions>
 			<bPrereqNormInvisible>1</bPrereqNormInvisible>
 			<iStealthStrikesChange>1</iStealthStrikesChange>
@@ -17320,7 +17320,7 @@
 			<PromotionLine>PROMOTIONLINE_WAYLAY</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_WITHOUT_WARNING</GameOptionType>
 			</OnGameOptions>
 			<bPrereqNormInvisible>1</bPrereqNormInvisible>
 			<iStealthCombatModifierChange>20</iStealthCombatModifierChange>
@@ -17340,7 +17340,7 @@
 			<PromotionLine>PROMOTIONLINE_WAYLAY</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_WITHOUT_WARNING</GameOptionType>
 			</OnGameOptions>
 			<iStealthStrikesChange>1</iStealthStrikesChange>
 			<iStealthCombatModifierChange>10</iStealthCombatModifierChange>
@@ -17354,7 +17354,7 @@
 			<PromotionLine>PROMOTIONLINE_WAYLAY</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_WITHOUT_WARNING</GameOptionType>
 			</OnGameOptions>
 			<iStealthCombatModifierChange>20</iStealthCombatModifierChange>
 			<Button>,Art/Buttons/Promotions/Waylay5Promotion.dds</Button>
@@ -17367,7 +17367,7 @@
 			<PromotionLine>PROMOTIONLINE_BUSHWHACK</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_WITHOUT_WARNING</GameOptionType>
 			</OnGameOptions>
 			<iStealthStrikesChange>1</iStealthStrikesChange>
 			<iStealthCombatModifierChange>10</iStealthCombatModifierChange>
@@ -17381,7 +17381,7 @@
 			<PromotionLine>PROMOTIONLINE_BUSHWHACK</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_WITHOUT_WARNING</GameOptionType>
 			</OnGameOptions>
 			<iStealthStrikesChange>2</iStealthStrikesChange>
 			<Button>,Art/Buttons/Promotions/Bushwhack2Promotion.dds</Button>
@@ -17394,7 +17394,7 @@
 			<PromotionLine>PROMOTIONLINE_BUSHWHACK</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_WITHOUT_WARNING</GameOptionType>
 			</OnGameOptions>
 			<iStealthStrikesChange>1</iStealthStrikesChange>
 			<iStealthCombatModifierChange>10</iStealthCombatModifierChange>
@@ -17408,7 +17408,7 @@
 			<PromotionLine>PROMOTIONLINE_BUSHWHACK</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_WITHOUT_WARNING</GameOptionType>
 			</OnGameOptions>
 			<iStealthStrikesChange>2</iStealthStrikesChange>
 			<Button>,Art/Buttons/Promotions/Bushwhack4Promotion.dds</Button>
@@ -17421,7 +17421,7 @@
 			<PromotionLine>PROMOTIONLINE_BUSHWHACK</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_WITHOUT_WARNING</GameOptionType>
 			</OnGameOptions>
 			<iStealthStrikesChange>1</iStealthStrikesChange>
 			<iStealthCombatModifierChange>10</iStealthCombatModifierChange>
@@ -17434,7 +17434,7 @@
 			<PromotionLine>PROMOTIONLINE_POUNCE</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_WITHOUT_WARNING</GameOptionType>
 			</OnGameOptions>
 			<iStealthStrikesChange>1</iStealthStrikesChange>
 			<iStealthCombatModifierChange>5</iStealthCombatModifierChange>
@@ -17448,7 +17448,7 @@
 			<PromotionLine>PROMOTIONLINE_POUNCE</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_WITHOUT_WARNING</GameOptionType>
 			</OnGameOptions>
 			<iStealthCombatModifierChange>10</iStealthCombatModifierChange>
 			<iLungeChange>15</iLungeChange>
@@ -17461,7 +17461,7 @@
 			<PromotionLine>PROMOTIONLINE_POUNCE</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_WITHOUT_WARNING</GameOptionType>
 			</OnGameOptions>
 			<iStealthStrikesChange>1</iStealthStrikesChange>
 			<iStealthCombatModifierChange>15</iStealthCombatModifierChange>
@@ -17475,7 +17475,7 @@
 			<PromotionLine>PROMOTIONLINE_POUNCE</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_WITHOUT_WARNING</GameOptionType>
 			</OnGameOptions>
 			<iStealthCombatModifierChange>20</iStealthCombatModifierChange>
 			<iLungeChange>25</iLungeChange>
@@ -17488,7 +17488,7 @@
 			<PromotionLine>PROMOTIONLINE_POUNCE</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_WITHOUT_WARNING</GameOptionType>
 			</OnGameOptions>
 			<iStealthStrikesChange>1</iStealthStrikesChange>
 			<iStealthCombatModifierChange>25</iStealthCombatModifierChange>
@@ -17503,7 +17503,7 @@
 			<PromotionLine>PROMOTIONLINE_CRACKDOWN</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_WITHOUT_WARNING</GameOptionType>
 			</OnGameOptions>
 			<iStealthStrikesChange>2</iStealthStrikesChange>
 			<Button>,Art/Buttons/Promotions/Crackdown1Promotion.dds</Button>
@@ -17516,7 +17516,7 @@
 			<PromotionLine>PROMOTIONLINE_CRACKDOWN</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_WITHOUT_WARNING</GameOptionType>
 			</OnGameOptions>
 			<iStealthStrikesChange>1</iStealthStrikesChange>
 			<iStealthCombatModifierChange>10</iStealthCombatModifierChange>
@@ -17530,7 +17530,7 @@
 			<PromotionLine>PROMOTIONLINE_CRACKDOWN</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_WITHOUT_WARNING</GameOptionType>
 			</OnGameOptions>
 			<iStealthCombatModifierChange>15</iStealthCombatModifierChange>
 			<Button>,Art/Buttons/Promotions/Crackdown3Promotion.dds</Button>
@@ -17543,7 +17543,7 @@
 			<PromotionLine>PROMOTIONLINE_CRACKDOWN</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_WITHOUT_WARNING</GameOptionType>
 			</OnGameOptions>
 			<iStealthCombatModifierChange>20</iStealthCombatModifierChange>
 			<Button>,Art/Buttons/Promotions/Crackdown4Promotion.dds</Button>
@@ -17556,7 +17556,7 @@
 			<PromotionLine>PROMOTIONLINE_CRACKDOWN</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_WITHOUT_WARNING</GameOptionType>
 			</OnGameOptions>
 			<iStealthCombatModifierChange>25</iStealthCombatModifierChange>
 			<Button>,Art/Buttons/Promotions/Crackdown5Promotion.dds</Button>
@@ -17938,7 +17938,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_POLICING1</Type>
-			<Description>TXT_KEY_PROMOTION_POLICING1_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_POLICING1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_CONDUCT</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_POLICING</PromotionLine>
@@ -17973,7 +17973,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_POLICING2</Type>
-			<Description>TXT_KEY_PROMOTION_POLICING2_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_POLICING2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_DUALISM</TechPrereq>
 			<MinEraType>C2C_ERA_ANCIENT</MinEraType>
@@ -18009,7 +18009,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_POLICING3</Type>
-			<Description>TXT_KEY_PROMOTION_POLICING3_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_POLICING3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_LAW_ENFORCEMENT</TechPrereq>
 			<MinEraType>C2C_ERA_CLASSICAL</MinEraType>
@@ -18045,7 +18045,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_POLICING4</Type>
-			<Description>TXT_KEY_PROMOTION_POLICING4_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_POLICING4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_WARRANTS_AND_DECREES</TechPrereq>
 			<MinEraType>C2C_ERA_MEDIEVAL</MinEraType>
@@ -18081,7 +18081,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_POLICING5</Type>
-			<Description>TXT_KEY_PROMOTION_POLICING5_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_POLICING5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_DEPUTIZATION</TechPrereq>
 			<MinEraType>C2C_ERA_INDUSTRIAL</MinEraType>
@@ -18117,7 +18117,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_POLICING6</Type>
-			<Description>TXT_KEY_PROMOTION_POLICING6_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_POLICING6</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_CRIMINOLOGY</TechPrereq>
 			<MinEraType>C2C_ERA_INDUSTRIAL</MinEraType>
@@ -18153,7 +18153,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_POLICING7</Type>
-			<Description>TXT_KEY_PROMOTION_POLICING7_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_POLICING7</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_VERTICAL_FLIGHT</TechPrereq>
 			<MinEraType>C2C_ERA_ATOMIC</MinEraType>
@@ -18189,7 +18189,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_POLICING8</Type>
-			<Description>TXT_KEY_PROMOTION_POLICING8_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_POLICING8</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_FORENSICS</TechPrereq>
 			<MinEraType>C2C_ERA_INFORMATION</MinEraType>
@@ -18225,7 +18225,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_POLICING9</Type>
-			<Description>TXT_KEY_PROMOTION_POLICING9_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_POLICING9</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_DISASTER_ROBOTS</TechPrereq>
 			<MinEraType>C2C_ERA_INFORMATION</MinEraType>
@@ -18261,7 +18261,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_POLICING10</Type>
-			<Description>TXT_KEY_PROMOTION_POLICING10_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_POLICING10</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_TERRA_COMPUTER</TechPrereq>
 			<MinEraType>C2C_ERA_TRANSHUMAN</MinEraType>
@@ -19483,7 +19483,7 @@
 			<PromotionLine>PROMOTIONLINE_HUNTING_STRIKE</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_WITHOUT_WARNING</GameOptionType>
 			</OnGameOptions>
 			<iStealthStrikesChange>1</iStealthStrikesChange>
 			<iStealthCombatModifierChange>15</iStealthCombatModifierChange>
@@ -19496,7 +19496,7 @@
 			<PromotionLine>PROMOTIONLINE_HUNTING_STRIKE</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_WITHOUT_WARNING</GameOptionType>
 			</OnGameOptions>
 			<iStealthCombatModifierChange>15</iStealthCombatModifierChange>
 			<Button>,Art/Buttons/Promotions/HuntingStrike2Promotion.dds</Button>
@@ -19508,7 +19508,7 @@
 			<PromotionLine>PROMOTIONLINE_HUNTING_STRIKE</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_WITHOUT_WARNING</GameOptionType>
 			</OnGameOptions>
 			<iStealthStrikesChange>1</iStealthStrikesChange>
 			<iStealthCombatModifierChange>15</iStealthCombatModifierChange>
@@ -19521,7 +19521,7 @@
 			<PromotionLine>PROMOTIONLINE_HUNTING_STRIKE</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_WITHOUT_WARNING</GameOptionType>
 			</OnGameOptions>
 			<iStealthCombatModifierChange>15</iStealthCombatModifierChange>
 			<Button>,Art/Buttons/Promotions/HuntingStrike4Promotion.dds</Button>
@@ -19533,7 +19533,7 @@
 			<PromotionLine>PROMOTIONLINE_HUNTING_STRIKE</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_WITHOUT_WARNING</GameOptionType>
 			</OnGameOptions>
 			<iStealthStrikesChange>1</iStealthStrikesChange>
 			<iStealthCombatModifierChange>15</iStealthCombatModifierChange>
@@ -19763,7 +19763,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_AN</Type>
-			<Description>TXT_KEY_PROMOTION_AN_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_AN</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<StateReligionPrereq>RELIGION_MESOPOTAMISM</StateReligionPrereq>
 			<iEnemyHealChange>7</iEnemyHealChange>
@@ -19804,7 +19804,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_ENKI</Type>
-			<Description>TXT_KEY_PROMOTION_ENKI_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_ENKI</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<StateReligionPrereq>RELIGION_MESOPOTAMISM</StateReligionPrereq>
 			<iWithdrawalChange>15</iWithdrawalChange>
@@ -19821,7 +19821,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_ENLIL</Type>
-			<Description>TXT_KEY_PROMOTION_ENLIL_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_ENLIL</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<StateReligionPrereq>RELIGION_MESOPOTAMISM</StateReligionPrereq>
 			<iFirstStrikesChange>1</iFirstStrikesChange>
@@ -19846,7 +19846,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_INANNA</Type>
-			<Description>TXT_KEY_PROMOTION_INANNA_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_INANNA</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<StateReligionPrereq>RELIGION_MESOPOTAMISM</StateReligionPrereq>
 			<iCityAttack>10</iCityAttack>
@@ -19862,7 +19862,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_KI</Type>
-			<Description>TXT_KEY_PROMOTION_KI_DESC</Description>
+			<Description>TXT_KEY_PROMOTION_KI</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<StateReligionPrereq>RELIGION_MESOPOTAMISM</StateReligionPrereq>
 			<bImmuneToFirstStrikes>1</bImmuneToFirstStrikes>
@@ -20107,7 +20107,7 @@
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_CHASE_PLANS</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
 			<iPursuitChange>4</iPursuitChange>
 			<Button>,Art/Buttons/Promotions/ChasePlans1BuildUp.dds</Button>
@@ -20119,7 +20119,7 @@
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_CHASE_PLANS</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
 			<iPursuitChange>4</iPursuitChange>
 			<Button>,Art/Buttons/Promotions/ChasePlans2BuildUp.dds</Button>
@@ -20131,7 +20131,7 @@
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_CHASE_PLANS</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
 			<iPursuitChange>4</iPursuitChange>
 			<Button>,Art/Buttons/Promotions/ChasePlans3BuildUp.dds</Button>
@@ -20143,7 +20143,7 @@
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_CHASE_PLANS</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
 			<iPursuitChange>4</iPursuitChange>
 			<Button>,Art/Buttons/Promotions/ChasePlans4BuildUp.dds</Button>
@@ -20155,7 +20155,7 @@
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_CHASE_PLANS</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_FIGHT_OR_FLIGHT</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT</GameOptionType>
 			</OnGameOptions>
 			<iPursuitChange>4</iPursuitChange>
 			<Button>,Art/Buttons/Promotions/ChasePlans5BuildUp.dds</Button>
@@ -21993,7 +21993,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_CONCEALMENT1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_CONCEALMENT</PromotionLine>
 			<iLinePriority>1</iLinePriority>
@@ -22010,7 +22010,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_CONCEALMENT2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_CONCEALMENT</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -22027,7 +22027,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_CONCEALMENT3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_CONCEALMENT</PromotionLine>
 			<iLinePriority>5</iLinePriority>
@@ -22044,7 +22044,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_BLEND_INTO_CROWD1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_BLEND_INTO_CROWD</PromotionLine>
 			<iLinePriority>1</iLinePriority>
@@ -22087,7 +22087,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_BLEND_INTO_CROWD2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_BLEND_INTO_CROWD</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -22130,7 +22130,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_BLEND_INTO_CROWD3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_BLEND_INTO_CROWD</PromotionLine>
 			<iLinePriority>5</iLinePriority>
@@ -22173,7 +22173,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_CHECKPOINTS1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_CHECKPOINTS</PromotionLine>
 			<iLinePriority>1</iLinePriority>
@@ -22190,7 +22190,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_CHECKPOINTS2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_CHECKPOINTS</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -22207,7 +22207,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_CHECKPOINTS3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_CHECKPOINTS</PromotionLine>
 			<iLinePriority>5</iLinePriority>
@@ -22224,7 +22224,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_TERRITORIAL_VIGILANCE1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_TERRITORIAL_VIGILANCE</PromotionLine>
 			<iLinePriority>1</iLinePriority>
@@ -22241,7 +22241,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_TERRITORIAL_VIGILANCE2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_TERRITORIAL_VIGILANCE</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -22258,7 +22258,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_TERRITORIAL_VIGILANCE3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_TERRITORIAL_VIGILANCE</PromotionLine>
 			<iLinePriority>5</iLinePriority>
@@ -22275,7 +22275,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_OBSERVATION1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_OBSERVATION</PromotionLine>
 			<iLinePriority>1</iLinePriority>
@@ -22292,7 +22292,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_OBSERVATION2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_OBSERVATION</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -22309,7 +22309,7 @@
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_OBSERVATION3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_OBSERVATION</PromotionLine>
 			<iLinePriority>5</iLinePriority>
@@ -22428,7 +22428,7 @@
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_LIE_IN_WAIT</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_WITHOUT_WARNING</GameOptionType>
 			</OnGameOptions>
 			<bPrereqNormInvisible>1</bPrereqNormInvisible>
 			<iStealthDefenseChange>1</iStealthDefenseChange>
@@ -22443,7 +22443,7 @@
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_LIE_IN_WAIT</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_WITHOUT_WARNING</GameOptionType>
 			</OnGameOptions>
 			<bPrereqNormInvisible>1</bPrereqNormInvisible>
 			<iStealthCombatModifierChange>5</iStealthCombatModifierChange>
@@ -22456,7 +22456,7 @@
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_LIE_IN_WAIT</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_WITHOUT_WARNING</GameOptionType>
 			</OnGameOptions>
 			<bPrereqNormInvisible>1</bPrereqNormInvisible>
 			<iStealthCombatModifierChange>5</iStealthCombatModifierChange>
@@ -22469,7 +22469,7 @@
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_LIE_IN_WAIT</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_WITHOUT_WARNING</GameOptionType>
 			</OnGameOptions>
 			<bPrereqNormInvisible>1</bPrereqNormInvisible>
 			<iStealthCombatModifierChange>5</iStealthCombatModifierChange>
@@ -22482,7 +22482,7 @@
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_LIE_IN_WAIT</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_WITHOUT_WARNING</GameOptionType>
 			</OnGameOptions>
 			<bPrereqNormInvisible>1</bPrereqNormInvisible>
 			<iStealthStrikesChange>1</iStealthStrikesChange>
@@ -22973,7 +22973,7 @@
 			<PromotionLine>PROMOTIONLINE_STANDOUT</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<NotOnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</NotOnGameOptions>
 			<iNoInvisibilityChange>10</iNoInvisibilityChange>
 			<Button>Art/Buttons/Promotions/StandOutStatus.dds</Button>
@@ -22988,10 +22988,10 @@
 			<PromotionLine>PROMOTIONLINE_STANDOUT</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<NotOnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</NotOnGameOptions>
 			<iNoInvisibilityChange>10</iNoInvisibilityChange>
 			<Button>Art/Buttons/Promotions/StandOutStatus.dds</Button>
@@ -23006,8 +23006,8 @@
 			<PromotionLine>PROMOTIONLINE_STANDOUT</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<iNoInvisibilityChange>10</iNoInvisibilityChange>
 			<Button>Art/Buttons/Promotions/StandOutStatus.dds</Button>
@@ -23047,7 +23047,7 @@
 			<iCombatPercent>-50</iCombatPercent>
 			<iSelfHealModifier>-20</iSelfHealModifier>
 			<NotOnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</NotOnGameOptions>
 			<PromotionLine>PROMOTIONLINE_ENHANCED_MARCH</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -23067,10 +23067,10 @@
 			<iCombatPercent>-50</iCombatPercent>
 			<iSelfHealModifier>-20</iSelfHealModifier>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<NotOnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</NotOnGameOptions>
 			<PromotionLine>PROMOTIONLINE_ENHANCED_MARCH</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -23092,8 +23092,8 @@
 			<PromotionLine>PROMOTIONLINE_ENHANCED_MARCH</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
 			<NegatesInvisibilityTypes>
 				<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
@@ -23122,7 +23122,7 @@
 			<iLinePriority>1</iLinePriority>
 			<bSetOnInvestigated>1</bSetOnInvestigated>
 			<NotOnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</NotOnGameOptions>
 			<iUpgradeAnywhereChange>-1</iUpgradeAnywhereChange>
 			<iAssassinChange>-1</iAssassinChange>
@@ -23142,7 +23142,7 @@
 			<PromotionLine>PROMOTIONLINE_WANTED_HS</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<iUpgradeAnywhereChange>-1</iUpgradeAnywhereChange>
 			<iAssassinChange>-1</iAssassinChange>
@@ -23176,7 +23176,7 @@
 			<PromotionLine>PROMOTIONLINE_WANTED_HS</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<iUpgradeAnywhereChange>-1</iUpgradeAnywhereChange>
 			<iAssassinChange>-1</iAssassinChange>
@@ -23214,7 +23214,7 @@
 			<PromotionLine>PROMOTIONLINE_WANTED_HS</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<iUpgradeAnywhereChange>-1</iUpgradeAnywhereChange>
 			<iAssassinChange>-1</iAssassinChange>
@@ -23256,7 +23256,7 @@
 			<PromotionLine>PROMOTIONLINE_WANTED_HS</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<iUpgradeAnywhereChange>-1</iUpgradeAnywhereChange>
 			<iAssassinChange>-1</iAssassinChange>
@@ -23298,7 +23298,7 @@
 			<PromotionLine>PROMOTIONLINE_WANTED_HS</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<iUpgradeAnywhereChange>-1</iUpgradeAnywhereChange>
 			<iAssassinChange>-1</iAssassinChange>
@@ -23340,7 +23340,7 @@
 			<PromotionLine>PROMOTIONLINE_WANTED_HS</PromotionLine>
 			<iLinePriority>6</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<iUpgradeAnywhereChange>-1</iUpgradeAnywhereChange>
 			<iAssassinChange>-1</iAssassinChange>
@@ -23382,7 +23382,7 @@
 			<PromotionLine>PROMOTIONLINE_WANTED_HS</PromotionLine>
 			<iLinePriority>7</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<iUpgradeAnywhereChange>-1</iUpgradeAnywhereChange>
 			<iAssassinChange>-1</iAssassinChange>
@@ -23424,7 +23424,7 @@
 			<PromotionLine>PROMOTIONLINE_WANTED_HS</PromotionLine>
 			<iLinePriority>8</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<iUpgradeAnywhereChange>-1</iUpgradeAnywhereChange>
 			<iAssassinChange>-1</iAssassinChange>
@@ -23466,7 +23466,7 @@
 			<PromotionLine>PROMOTIONLINE_WANTED_HS</PromotionLine>
 			<iLinePriority>9</iLinePriority>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_HIDE_AND_SEEK</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
 			<iUpgradeAnywhereChange>-1</iUpgradeAnywhereChange>
 			<iAssassinChange>-1</iAssassinChange>
@@ -23528,7 +23528,7 @@
 			<bStatus>1</bStatus>
 			<bQuick>1</bQuick>
 			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_WITHOUT_WARNING</GameOptionType>
+				<GameOptionType>GAMEOPTION_COMBAT_WITHOUT_WARNING</GameOptionType>
 			</OnGameOptions>
 			<iStealthDefenseChange>1</iStealthDefenseChange>
 			<bPrereqNormInvisible>1</bPrereqNormInvisible>

@@ -256,18 +256,6 @@ class DotMapLayer(StrategyLayer):
 		data = SdToolKit.sdGetGlobal("StrategyOverlay", "CityDataDict")
 		self.clearCityLayers()
 		if data:
-			# // @SAVEBREAK DELETE
-			bFormat = False
-			for iPlayer, cities in data.iteritems():
-				for point, city in cities.iteritems():
-					if not hasattr(city, "bAlt"):
-						bFormat = True
-					break
-			if bFormat:
-				for iPlayer, cities in data.iteritems():
-					for point, city in cities.iteritems():
-						city.bAlt = False
-			# // SAVEBREAK@
 			self.cities = data
 			self.dirty = False
 		else:

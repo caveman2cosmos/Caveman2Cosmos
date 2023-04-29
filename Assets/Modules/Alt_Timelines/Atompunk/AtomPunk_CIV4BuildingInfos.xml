@@ -2,14 +2,14 @@
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<Type>BUILDING_ATOMPUNK_EMBASSY</Type>
+			<Type>BUILDING_CULTURE_ATOMPUNK</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_ATOM</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_ATOMPUNK_EMBASSY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ATOMPUNK_EMBASSY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CULTURE_ATOMPUNK</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ATOMPUNK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ATOMPUNK_EMBASSY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_ATOMPUNK</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -45,11 +45,11 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HI_TECH_NUCLEAR_REACTOR</BuildingType>
 				<BuildingType>BUILDING_GENERATION_IV_REACTOR</BuildingType>
-				<BuildingType>BUILDING_FUSION_PLANT</BuildingType>
-				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
-				<BuildingType>BUILDING_COLD_FUSION_POWER_PLANT</BuildingType>
-				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
-				<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
+				<BuildingType>BUILDING_D_T_FUSION_POWER_PLANT</BuildingType>
+				<BuildingType>BUILDING_D_HE3_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_HE3_FUSION_POWER_PLANT</BuildingType>
+				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_VACUUM_POWER_PLANT</BuildingType>
 			</ReplacementBuildings>
 			<Bonus>BONUS_ATOMPUNK</Bonus>
 			<PrereqBonuses>
@@ -80,13 +80,13 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GOOD_ATOM</Type>
+			<Type>BUILDING_POWER_NUCLEAR</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_ATOM</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GOOD_ATOM</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GOOD_ATOM_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_POWER_NUCLEAR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_POWER_NUCLEAR_PEDIA</Civilopedia>
 			<PrereqTech>TECH_KNOWLEDGE_MANAGEMENT</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_SUPERCONDUCTORS</PrereqTech>
@@ -99,7 +99,7 @@
 				<iYield>0</iYield>
 				<iYield>200</iYield>
 			</YieldChanges>
-			<ArtDefineTag>ART_DEF_BUILDING_GOOD_ATOM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_POWER_NUCLEAR</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HIGH_ENERGY_LAB</Type>
@@ -178,11 +178,11 @@
 				<BuildingType>BUILDING_CLEAN_NUCLEAR_REACTOR</BuildingType>
 				<BuildingType>BUILDING_HI_TECH_NUCLEAR_REACTOR</BuildingType>
 				<BuildingType>BUILDING_GENERATION_IV_REACTOR</BuildingType>
-				<BuildingType>BUILDING_FUSION_PLANT</BuildingType>
-				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
-				<BuildingType>BUILDING_COLD_FUSION_POWER_PLANT</BuildingType>
-				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
-				<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
+				<BuildingType>BUILDING_D_T_FUSION_POWER_PLANT</BuildingType>
+				<BuildingType>BUILDING_D_HE3_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_HE3_FUSION_POWER_PLANT</BuildingType>
+				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_VACUUM_POWER_PLANT</BuildingType>
 			</PrereqOrBuildings>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -199,11 +199,11 @@
 			<ObsoletesToBuilding>BUILDING_GENERATION_IV_REACTOR</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GENERATION_IV_REACTOR</BuildingType>
-				<BuildingType>BUILDING_FUSION_PLANT</BuildingType>
-				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
-				<BuildingType>BUILDING_COLD_FUSION_POWER_PLANT</BuildingType>
-				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
-				<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
+				<BuildingType>BUILDING_D_T_FUSION_POWER_PLANT</BuildingType>
+				<BuildingType>BUILDING_D_HE3_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_HE3_FUSION_POWER_PLANT</BuildingType>
+				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_VACUUM_POWER_PLANT</BuildingType>
 			</ReplacementBuildings>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -229,12 +229,12 @@
 			<iPrereqPopulation>7</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MID_CLASS_SKYPAD_APARTMENTS</Type>
+			<Type>BUILDING_HOUSING_MID_CLASS_SKYPAD_APARTMENTS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_ATOM</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_MID_CLASS_SKYPAD_APARTMENTS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MID_CLASS_SKYPAD_APARTMENTS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_MID_CLASS_SKYPAD_APARTMENTS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_MID_CLASS_SKYPAD_APARTMENTS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MID_CLASS_SKYPAD_APARTMENTS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_MID_CLASS_SKYPAD_APARTMENTS</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -260,9 +260,9 @@
 				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
 			</PrereqOrBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HOUSE_ERA4_SDMW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_ARCOLOGY_SUBURBS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<bAutoBuild>1</bAutoBuild>
 			<iPrereqPopulation>13</iPrereqPopulation>
@@ -299,7 +299,7 @@
 					</Has>
 				</And>
 			</ConstructCondition>
-			<FreeBuilding>BUILDING_GOOD_ATOM</FreeBuilding>
+			<FreeBuilding>BUILDING_POWER_NUCLEAR</FreeBuilding>
 			<bRiver>1</bRiver>
 			<bPower>1</bPower>
 			<iCost>4010</iCost>
@@ -315,11 +315,11 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HI_TECH_NUCLEAR_REACTOR</BuildingType>
 				<BuildingType>BUILDING_GENERATION_IV_REACTOR</BuildingType>
-				<BuildingType>BUILDING_FUSION_PLANT</BuildingType>
-				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
-				<BuildingType>BUILDING_COLD_FUSION_POWER_PLANT</BuildingType>
-				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
-				<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
+				<BuildingType>BUILDING_D_T_FUSION_POWER_PLANT</BuildingType>
+				<BuildingType>BUILDING_D_HE3_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_HE3_FUSION_POWER_PLANT</BuildingType>
+				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_QUANTUM_VACUUM_POWER_PLANT</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>

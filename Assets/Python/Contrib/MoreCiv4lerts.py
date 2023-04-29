@@ -133,7 +133,7 @@ class MoreCiv4lertsEvent(AbstractMoreCiv4lertsEvent):
 						iGrowthCount += 1
 					if bCheck2 and cityX.getCultureThreshold() > 0:
 						if cityX.getCulture(iPlayerX) + cityX.getCommerceRate(CommerceTypes.COMMERCE_CULTURE) >= cityX.getCultureThreshold():
-							if GAME.isOption(GameOptionTypes.GAMEOPTION_REALISTIC_CULTURE_SPREAD):
+							if GAME.isOption(GameOptionTypes.GAMEOPTION_CULTURE_REALISTIC_SPREAD):
 								msg = TRNSLTR.getText("TXT_KEY_MORECIV4LERTS_CITY_TO_EXPAND_RCS",(cityX.getName(),))
 							else:
 								msg = TRNSLTR.getText("TXT_KEY_MORECIV4LERTS_CITY_TO_EXPAND",(cityX.getName(),))
@@ -232,7 +232,7 @@ class MoreCiv4lertsEvent(AbstractMoreCiv4lertsEvent):
 				techsToTrade = set()
 				for i in xrange(CyTeam.getNumAdjacentResearch()):
 					iTechX = CyTeam.getAdjacentResearch(i)
-					if bCheck1 and CyPlayer.canResearch(iTechX, True):
+					if bCheck1 and CyPlayer.canResearch(iTechX, True, True):
 						researchTechs.add(iTechX)
 					tradeData.iData = iTechX
 					if CyPlayerX.canTradeItem(iPlayer, tradeData, False):
@@ -352,7 +352,7 @@ def canSeeCityList(askedPlayer):
 	is not a vassal of a rival. They must be able to contact (trade with)
 	<player>, and OCC must be disabled. You can always see a teammate's cities.
 	"""
-	if GAME.isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE):
+	if GAME.isOption(GameOptionTypes.GAMEOPTION_CHALLENGE_ONE_CITY):
 		return False
 	iAskedTeam = askedPlayer.getTeam()
 	iAskingTeam = GAME.getActiveTeam()

@@ -9,7 +9,7 @@ Example!
 			<PromotionLine>PROMOTIONLINE_WARLIKE</PromotionLine>
 			<iLinePriority>0</iLinePriority>
 			<OnGameOptions>
-				<OnGameOption>GAMEOPTION_COMPLEX_TRAITS</OnGameOption>
+				<OnGameOption>GAMEOPTION_LEADER_COMPLEX_TRAITS</OnGameOption>
 			</OnGameOptions>
 			<PrereqTech>NONE</PrereqTech>
 			<TraitPrereq>NONE</TraitPrereq>
@@ -711,7 +711,7 @@ Example!
 			<ReplacementCondition>
 				<Has>
 					<GOMType>GOM_OPTION</GOMType>
-					<ID>GAMEOPTION_COMPLEX_TRAITS</ID>
+					<ID>GAMEOPTION_LEADER_COMPLEX_TRAITS</ID>
 				</Has>
 			</ReplacementCondition>
 		</TraitInfo>

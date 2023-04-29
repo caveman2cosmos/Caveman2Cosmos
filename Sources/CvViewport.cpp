@@ -1,3 +1,6 @@
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
 #include "CvDLLEngineIFaceBase.h"
@@ -282,6 +285,7 @@ void CvViewport::closeAdvisor(int advisorWidth, int iMinimapLeft, int iMinimapRi
 //	Process the current action state (which may include transitioning to another state)
 void CvViewport::processActionState()
 {
+	PROFILE_EXTRA_FUNC();
 	/*
 	if (m_countdown > 0)
 	{
@@ -433,15 +437,15 @@ void CvViewport::processActionState()
 				bringIntoView(pSelectedUnit->getX(), pSelectedUnit->getY(), pSelectedUnit, true);
 			}
 
-#if 0
-			//	The above should have set of a new sequence of state transitions,
-			//	but in case no unit was found to select default to a middle-of-map
-			//	viewport
-			if ( m_state == VIEWPORT_ACTION_STATE_NONE && m_state == VIEWPORT_MODE_UNINITIALIZED)
-			{
-				bringIntoView(m_pMap->getGridWidth()/2, m_pMap->getGridHeight()/2, NULL, true);
-			}
-#endif
+//#if 0
+//			//	The above should have set of a new sequence of state transitions,
+//			//	but in case no unit was found to select default to a middle-of-map
+//			//	viewport
+//			if ( m_state == VIEWPORT_ACTION_STATE_NONE && m_state == VIEWPORT_MODE_UNINITIALIZED)
+//			{
+//				bringIntoView(m_pMap->getGridWidth()/2, m_pMap->getGridHeight()/2, NULL, true);
+//			}
+//#endif
 		}
 		break;
 	case VIEWPORT_ACTION_STATE_SAVING:

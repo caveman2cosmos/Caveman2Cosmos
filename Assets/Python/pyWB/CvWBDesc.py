@@ -1065,7 +1065,7 @@ class CvCityDesc:
 			f.write("\t\tProductionProcess=%s\n" %(GC.getProcessInfo(city.getProductionProcess()).getType(),))
 
 		for iI in xrange(GC.getNumBuildingInfos()):
-			if city.getNumRealBuilding(iI) > 0:
+			if city.hasBuilding(iI):
 				f.write("\t\tBuildingType=%s, BuildDate=%d\n" %(GC.getBuildingInfo(iI).getType(), city.getBuildingOriginalTime(iI)))
 
 		for iI in xrange(GC.getNumReligionInfos()):
@@ -1373,9 +1373,7 @@ class CvCityDesc:
 		for key, date in self.bldgType:
 			iBuilding = GC.getInfoTypeForString(key)
 			if iBuilding > -1:
-				city.setNumRealBuilding(iBuilding, 1)
-				if not date is None:
-					city.setBuildingOriginalTime(iBuilding, int(date))
+				city.changeHasBuilding(iBuilding, True)
 
 		for key in self.religions:
 			iReligion = GC.getInfoTypeForString(key)

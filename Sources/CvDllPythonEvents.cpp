@@ -1,3 +1,6 @@
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
 #include "CvGameAI.h"
@@ -269,6 +272,7 @@ static const CvString gSessionID = create_session_id();
 
 bool postEvent(EventArgs eventData, const char* eventName)
 {
+	PROFILE_EXTRA_FUNC();
 	FPythonAssert(gDLL->getPythonIFace()->isInitialized(), "CvEventInterface", "onEvent");
 
 	if (eventData.toJson)
@@ -710,16 +714,6 @@ void CvDllPythonEvents::reportCultureExpansion( CvCity *pCity, PlayerTypes ePlay
 		.arg("pCity", pCity)
 		.arg("ePlayer", ePlayer);
 	postEvent(eventData, "cultureExpansion");
-}
-
-void CvDllPythonEvents::reportCityGrowth( CvCity *pCity, PlayerTypes ePlayer )
-{
-	EventArgs eventData;
-	eventData
-		.arg("event", "cityGrowth")
-		.arg("pCity", pCity)
-		.arg("ePlayer", ePlayer);
-	postEvent(eventData, "cityGrowth");
 }
 
 void CvDllPythonEvents::reportCityProduction( CvCity *pCity, PlayerTypes ePlayer )

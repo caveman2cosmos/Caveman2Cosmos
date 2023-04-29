@@ -1,3 +1,6 @@
+
+#include "FProfiler.h"
+
 #include "CvArtFileMgr.h"
 #include "CvDefines.h"
 #include "CvImprovementInfo.h"
@@ -540,6 +543,7 @@ void CvImprovementInfo::getDataMembers(CvInfoUtil& util)
 
 void CvImprovementInfo::getCheckSum(uint32_t& iSum) const
 {
+	PROFILE_EXTRA_FUNC();
 	CvInfoUtil(this).checkSum(iSum);
 
 	CheckSum(iSum, m_iAdvancedStartCost);
@@ -646,6 +650,7 @@ void CvImprovementInfo::getCheckSum(uint32_t& iSum) const
 
 bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 {
+	PROFILE_EXTRA_FUNC();
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
 	{
@@ -920,6 +925,7 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 
 void CvImprovementInfo::copyNonDefaults(const CvImprovementInfo* pClassInfo)
 {
+	PROFILE_EXTRA_FUNC();
 	const bool bDefault = false;
 	const int iDefault = 0;
 	const int iTextDefault = -1;  //all integers which are TEXT_KEYS in the xml are -1 by default
@@ -1153,6 +1159,7 @@ void CvImprovementInfo::copyNonDefaults(const CvImprovementInfo* pClassInfo)
 
 void CvImprovementInfo::doPostLoadCaching(uint32_t iThis)
 {
+	PROFILE_EXTRA_FUNC();
 	for (int i = 0, num = GC.getNumBuildInfos(); i < num; i++)
 	{
 		if (GC.getBuildInfo((BuildTypes)i).getImprovement() == iThis)

@@ -29,7 +29,7 @@
 			<option id="InverseShiftForQueueing" key="InverseShiftForQueueing" type="boolean" default="False" get="isInverseShiftForQueueing" dirtyBit="MiscButtons"/>
 
 			<!-- Enable graphical paging -->
-			<option id="EnableGraphicalPaging" key="EnableGraphicalPaging" type="boolean" default="True" get="isEnableGraphicalPaging" dirtyBit="MiscButtons"/>
+			<option id="EnableGraphicalPaging" key="EnableGraphicalPaging" type="boolean" default="True"/>
 
 			<!-- Enable viewports -->
 			<option id="EnableViewports" key="EnableViewports" type="boolean" default="False" dirtyBit="MiscButtons"/>

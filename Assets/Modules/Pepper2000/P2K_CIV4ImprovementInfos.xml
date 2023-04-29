@@ -3368,7 +3368,7 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_HELIUM3</BonusType>
+					<BonusType>BONUS_HELIUM_3</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>5000</iDiscoverRand>

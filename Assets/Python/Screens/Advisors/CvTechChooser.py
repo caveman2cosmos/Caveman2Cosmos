@@ -86,7 +86,7 @@ class CvTechChooser:
 	def getTechState(self, iTech):
 		if self.CyTeam.isHasTech(iTech):
 			return CIV_HAS_TECH
-		if not self.CyPlayer.canResearch(iTech, False):
+		if not self.CyPlayer.canResearch(iTech, False, True):
 			return CIV_NO_RESEARCH
 		if not self.CyPlayer.isResearchingTech(iTech):
 			return CIV_TECH_AVAILABLE
@@ -574,7 +574,7 @@ class CvTechChooser:
 				screen.hide("TC_Header")
 				iProgress = self.CyTeam.getResearchProgress(iNewCurrentResearch)
 				iCost = self.CyTeam.getResearchCost(iNewCurrentResearch)
-				iOverflow = self.CyPlayer.getOverflowResearch() * self.CyPlayer.calculateResearchModifier(iNewCurrentResearch) /100
+				iOverflow = getModifiedIntValue(self.CyPlayer.getOverflowResearch(), self.CyPlayer.calculateResearchModifier(iNewCurrentResearch))
 				stackBar = "progressBar"
 				screen.setBarPercentage(stackBar, InfoBarTypes.INFOBAR_STORED, iProgress * 1.0 / iCost)
 				if iCost > iProgress + iOverflow:
@@ -671,7 +671,7 @@ class CvTechChooser:
 			screen.show(barId)
 			iProgress = self.CyTeam.getResearchProgress(iTech)
 			iCost = self.CyTeam.getResearchCost(iTech)
-			iOverflow = self.CyPlayer.getOverflowResearch() * self.CyPlayer.calculateResearchModifier(iTech) / 100
+			iOverflow = getModifiedIntValue(self.CyPlayer.getOverflowResearch(), self.CyPlayer.calculateResearchModifier(iTech))
 			screen.setBarPercentage(barId, InfoBarTypes.INFOBAR_STORED, iProgress * 1.0 / iCost)
 			if iCost > iProgress + iOverflow:
 				screen.setBarPercentage(barId, InfoBarTypes.INFOBAR_RATE, self.CyPlayer.calculateResearchRate(iTech) * 1.0 / (iCost - iProgress - iOverflow))

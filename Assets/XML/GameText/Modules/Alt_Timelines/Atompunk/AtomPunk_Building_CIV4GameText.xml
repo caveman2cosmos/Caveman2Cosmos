@@ -1,14 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ATOMPUNK_EMBASSY</Tag>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ATOMPUNK</Tag>
 		<English>Culture (Atompunk)</English>
 		<Italian>Cultura (Atompunk)</Italian>
 		<Polish>Kultura (Atompunk)</Polish>
 		<Russian>Àòîìïàíê</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ATOMPUNK_EMBASSY_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ATOMPUNK_PEDIA</Tag>
 		<English>[COLOR_BUILDING_TEXT]Atompunk[COLOR_REVERT] is a subgenre of speculative fiction that relates to the 1945-1965 or pre-digital period, including mid-20th century Modernism, the Atomic Age and Space Age. Its aesthetic describes a retro-futuristic vision of the world, with its tendency toward Populuxe and Raygun Gothic, exaggerated concern towards Communism bordering on paranoia, Neo-Soviet styling, underground cinema, Googie architecture, the Sputnik programme, superhero fiction, the rise of the US military/industrial powers and the fall-out of Chernobyl.</English>
 		<Italian>L'[COLOR_BUILDING_TEXT]Atompunk[COLOR_REVERT] è un sottogenere della narrativa fantascientifica che si riferisce al periodo 1945-1965 o pre-digitale, compreso il Modernismo di metà XX secolo, l'Era atomica e l'Era spaziale. La sua estetica descrive una visione retro-futuristica del mondo, con la sua tendenza verso il Populuxe e il Raygun Gothic, la sua esagerata preoccupazione per il comunismo al limite della paranoia, lo stile neo-sovietico, il cinema underground, l'architettura Googie, il programma Sputnik, la narrativa sui supereroi, l'ascesa del complesso militare-industriale USA e l'incidente di Chernobyl.</Italian>
 		<Russian>Àòîìïàíê îòíîñèòñÿ ê äîöèôðîâîìó ïåðèîäó 1945-1965 ãîäîâ, âêëþ÷àåò â ñåáÿ âòîðóþ ïëîëîâèíó ñîâðåìåííîé ýðû, àòîìíóþ è êîñìè÷åñêóþ ýðû, êîììóíèçì è èíòåðåñ ê íåìó ïðåóâåëè÷åíû, ðàâíî êàê è ïàðàíîéÿ â ÑØÀ íàðÿäó ñ íåîñîâåòñêèì ñòèëåì, ïîäïîëüíûé êèíåìàòîãðàô, ãóãè-àðõèòåêòóðà, çàïóñê ñïóòíèêà, ñóïåðãåðîéñêàÿ ôàíòàñòèêà, ðàçâèòèå àìåðèêàíñêîãî âîåííîãî è ïðîìûøëåííîãî ãîñïîäñòâà è êàòàñòðîôà â ×åðíîáûëå. Åãî ýñòåòèêà äâèæåòñÿ ê ïîïóëþêñó è áëàñòåðíîé ãîòèêå, êîòîðûå îòðàæàþò ðåòðî-ôóòóðèñòè÷åñêèé âçãëÿä íà ìèð.</Russian>
@@ -27,14 +27,14 @@
 		<Russian>Ïîñëå èññëåäîâàíèé â îáëàñòè ÷èñòîé è áåçîïàñíîé ÿäåðíîé ýíåðãåòèêè, áûëî ïîñòðîåíî ìíîæåñòâî ðåàêòîðîâ äëÿ âûðàáîòêè íåâåðîÿòíîãî êîëè÷åñòâà ýíåðãèè.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GOOD_ATOM</Tag>
-		<English>Building Reward - Power (Nuclear)</English>
+		<Tag>TXT_KEY_BUILDING_POWER_NUCLEAR</Tag>
+		<English>Effect - Nuclear Powercomplex</English>
 		<French>Energie (Nucléaire)</French>
 		<Polish>Energia (Nuklearna)</Polish>
 		<Russian>ßäåðíûé ðåàêòîð</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GOOD_ATOM_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_POWER_NUCLEAR_PEDIA</Tag>
 		<English>With the discovery of clean and safe nuclear power and the development of large reactor complexes, energy becomes available in such a big amount, that energy-intensive facilities are no longer an issue.</English>
 		<Polish>Energetyka jądrowa - zespół zagadnień związanych z uzyskiwaniem na skalę przemysłową energii z rozszczepienia ciężkich jąder pierwiastków (głównie uranu 235).</Polish>
 		<Russian>Ñ îòêðûòèåì ÷èñòîé è áåçîïàñíîé ÿäåðíîé ýíåðãèè è ðàçâèòèÿ êðóïíûõ ðåàêòîðíûõ êîìïëåêñîâ, ýíåðãèÿ ñòàíîâèòñÿ äîñòóïíà â òàêîì êîëè÷åñòâå, ÷òî ýíåðãîåìêèå îáúåêòû áîëüøå íå ÿâëÿþòñÿ ïðîáëåìîé.</Russian>
@@ -66,14 +66,14 @@
 		<Russian>Ïîñëå èññëåäîâàíèé â îáëàñòè ÷èñòîé è áåçîïàñíîé ÿäåðíîé ýíåðãåòèêè, áûëî ïîñòðîåíî ìíîæåñòâî ðåàêòîðîâ äëÿ âûðàáîòêè íåâåðîÿòíîãî êîëè÷åñòâà ýíåðãèè.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MID_CLASS_SKYPAD_APARTMENTS</Tag>
+		<Tag>TXT_KEY_BUILDING_HOUSING_MID_CLASS_SKYPAD_APARTMENTS</Tag>
 		<English>Housing (Mid Class Skypad Apartments)</English>
 		<French>Habitations (Appartements à ciel ouvert)</French>
 		<Polish>Domostwa (Sredniej Klasy Apartamenty Podniebne)</Polish>
 		<Russian>Íåáåñíûå êâàðòèðû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MID_CLASS_SKYPAD_APARTMENTS_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_HOUSING_MID_CLASS_SKYPAD_APARTMENTS_PEDIA</Tag>
 		<English>Another architectural marvel from famed architect Mr. Elroy Jetson, these space age apartments rise into the clouds above all the muss and fuss and most of the weather of the world below. Convenient parking for your hovercars are found on the lowest level.</English>
 		<Polish>Jetsonowie żyją w odległej przyszłości. Według pierwotnego zamysłu producentów akcja miała się rozgrywać dokładnie 100 lat od premiery serialu, czyli w roku 2062.</Polish>
 		<Russian>Î÷åðåäíîå àðõèòåêòóðíîå ÷óäî çíàìåíèòîãî àðõèòåêòîðà Ýëðîÿ Äæåòñîíà. Ýòè àïàðòàìåíòû êîñìè÷åñêîãî âåêà ïîäíèìàþòñÿ â îáëàêà íàä âñåìè çàáîòàìè è ñóåòîé è áîëüøèíñòâîì ïîãîäíûõ íåâçãîä ìèðà ñíèçó. Óäîáíûå ïàðêîâêè äëÿ âàøåãî âîçäóøíîãî òðàíñïîðòà íàõîäÿòñÿ íà íèæíèõ óðîâíÿõ.</Russian>

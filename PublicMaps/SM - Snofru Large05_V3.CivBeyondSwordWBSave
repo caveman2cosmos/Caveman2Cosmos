@@ -8390,7 +8390,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=7,y=193
-	BonusType=BONUS_QUANTONIUM_CRYSTAL
+	BonusType=BONUS_QUANTONIUM_CRYSTALS
 	TerrainType=TERRAIN_DISTANT_COSMOS
 	PlotType=2
 EndPlot
@@ -16668,7 +16668,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=15,y=192
-	BonusType=BONUS_QUANTONIUM_CRYSTAL
+	BonusType=BONUS_QUANTONIUM_CRYSTALS
 	TerrainType=TERRAIN_DISTANT_COSMOS
 	PlotType=2
 EndPlot
@@ -33574,7 +33574,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=32,y=85
-	BonusType=BONUS_HELIUM3
+	BonusType=BONUS_HELIUM_3
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
 EndPlot
@@ -36634,7 +36634,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=35,y=78
-	BonusType=BONUS_HELIUM3
+	BonusType=BONUS_HELIUM_3
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
 EndPlot
@@ -63005,7 +63005,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=60,y=85
-	BonusType=BONUS_HELIUM3
+	BonusType=BONUS_HELIUM_3
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
 EndPlot
@@ -66656,7 +66656,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=63,y=193
-	BonusType=BONUS_QUANTONIUM_CRYSTAL
+	BonusType=BONUS_QUANTONIUM_CRYSTALS
 	TerrainType=TERRAIN_DISTANT_COSMOS
 	PlotType=2
 EndPlot
@@ -69198,7 +69198,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=66,y=78
-	BonusType=BONUS_HELIUM3
+	BonusType=BONUS_HELIUM_3
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
 EndPlot
@@ -81713,7 +81713,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=78
-	BonusType=BONUS_HELIUM3
+	BonusType=BONUS_HELIUM_3
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
 EndPlot
@@ -83882,7 +83882,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=80,y=85
-	BonusType=BONUS_HELIUM3
+	BonusType=BONUS_HELIUM_3
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
 EndPlot
@@ -94999,7 +94999,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=90,y=193
-	BonusType=BONUS_QUANTONIUM_CRYSTAL
+	BonusType=BONUS_QUANTONIUM_CRYSTALS
 	TerrainType=TERRAIN_DISTANT_COSMOS
 	PlotType=2
 EndPlot

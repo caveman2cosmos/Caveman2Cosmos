@@ -60,7 +60,7 @@
 				<BuildType>BUILD_MARTIAN_MINE</BuildType>
 			</Builds>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CISLUNAR_STATION</BuildingType>
+				<BuildingType>BUILDING_SPACE_COLONY_CISLUNAR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
@@ -126,7 +126,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_LAUNCH_SITE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_LUNAR_EXPLORATION</PrereqTech>
 			<BonusType>BONUS_AUTOMOBILES</BonusType>
@@ -275,7 +275,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
+				<BuildingType>BUILDING_CISLUNAR_FACTORY</BuildingType>
 				<BuildingType>BUILDING_SPACE_STATION</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
@@ -370,7 +370,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
+				<BuildingType>BUILDING_CISLUNAR_FACTORY</BuildingType>
 				<BuildingType>BUILDING_SPACE_STATION</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
@@ -472,7 +472,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
+				<BuildingType>BUILDING_CISLUNAR_FACTORY</BuildingType>
 				<BuildingType>BUILDING_SPACE_STATION</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_PLANETARY_COLONIZATION</PrereqTech>
@@ -680,7 +680,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_ORBITAL_SPACECRAFT_FACTORY</BuildingType>
+				<BuildingType>BUILDING_DEEP_SPACE_SPACECRAFT_FACTORY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_INTERSTELLAR_TRAVEL</PrereqTech>
 			<iCost>4850</iCost>
@@ -899,8 +899,8 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_WORMHOLE_TRADE</BuildingType>
-				<BuildingType>BUILDING_INTERGALACTIC_WORMHOLE</BuildingType>
+				<BuildingType>BUILDING_INTERSTELLAR_WORMHOLE_TRADING_POST</BuildingType>
+				<BuildingType>BUILDING_INTERGALACTIC_MORRIS_THORNE_WORMHOLE</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_SPACE_CREASING</PrereqTech>
 			<iCost>4850</iCost>
@@ -994,8 +994,8 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_INTERGALACTIC_WORMHOLE</BuildingType>
-				<BuildingType>BUILDING_HORIZON_PORT</BuildingType>
+				<BuildingType>BUILDING_INTERGALACTIC_MORRIS_THORNE_WORMHOLE</BuildingType>
+				<BuildingType>BUILDING_DISTANT_HORIZON_PORT</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_HORIZON_BREAKING</PrereqTech>
 			<iCost>4850</iCost>
@@ -1090,8 +1090,8 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_TEMPORAL_RIFT</BuildingType>
-				<BuildingType>BUILDING_INTERGALACTIC_HYPERPORT</BuildingType>
+				<BuildingType>BUILDING_INTERGALACTIC_TEMPORAL_RIFT</BuildingType>
+				<BuildingType>BUILDING_DISTANT_HYPERPORT</BuildingType>
 				<BuildingType>BUILDING_HYPERSPACE_EXPORTER</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_DUALFLUX_QUANTUM_TEMPORAL_RIFT</PrereqTech>
@@ -1179,7 +1179,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_ORBITAL_SPACECRAFT_FACTORY</BuildingType>
+				<BuildingType>BUILDING_DEEP_SPACE_SPACECRAFT_FACTORY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_FUSION_SPACECRAFT</PrereqTech>
 			<iCost>4850</iCost>
@@ -1232,7 +1232,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_ORBITAL_DRYDOCK</BuildingType>
+				<BuildingType>BUILDING_CISLUNAR_DRYDOCK</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_WARMACHINES</PrereqTech>
 			<iCost>4850</iCost>
@@ -1285,7 +1285,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_INTERSTELLAR_COLONY</BuildingType>
+				<BuildingType>BUILDING_SPACE_COLONY_INTERSTELLAR_MOTHERSHIP</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_WEAPONIZED_ANTIMATTER</PrereqTech>
 			<iCost>4850</iCost>
@@ -1405,7 +1405,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_ELECTROWEAK_STAR_BASE</BuildingType>
+				<BuildingType>BUILDING_INTERGALACTIC_ELECTROWEAK_STAR_BASE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_NEUTRONIUM</PrereqTech>
 			<BonusType>BONUS_NEUTRONIUM</BonusType>
@@ -1485,7 +1485,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
+				<BuildingType>BUILDING_CISLUNAR_FACTORY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ELECTRIC_ARC_WEAPONRY</PrereqTech>
 			<iCost>4850</iCost>
@@ -1653,7 +1653,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_INTERSTELLAR_COLONY</BuildingType>
+				<BuildingType>BUILDING_SPACE_COLONY_INTERSTELLAR_MOTHERSHIP</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_COLONY_GOVERNANCE</PrereqTech>
 			<iCost>4850</iCost>
@@ -1825,7 +1825,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_MARS_HITECH</BuildingType>
+				<BuildingType>BUILDING_MARTIAN_ELECTRONICS_FACTORY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ION_BEAMS</PrereqTech>
 			<iCost>4850</iCost>
@@ -1911,7 +1911,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
+				<BuildingType>BUILDING_SPACE_COLONY_VENUS</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ION_BEAMS</PrereqTech>
 			<iCost>4850</iCost>
@@ -2163,7 +2163,7 @@
 				<BuildType>BUILD_TERRAFORM_MARS</BuildType>
 			</Builds>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_MARS_FACTORY</BuildingType>
+				<BuildingType>BUILDING_MARTIAN_FACTORY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SUPERSONIC_RAILS</PrereqTech>
 			<iCost>1500</iCost>
@@ -2283,7 +2283,7 @@
 				<BuildType>BUILD_ORBITAL_TRAJECTORY</BuildType>
 			</Builds>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_DOCKING_BAY</BuildingType>
+				<BuildingType>BUILDING_CISLUNAR_DOCKING_BAY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<iCost>1000</iCost>
@@ -2346,7 +2346,7 @@
 				<BuildType>BUILD_SOLAR_TRAJECTORY</BuildType>
 			</Builds>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HOUSING_WORKING_CLASS</BuildingType>
+				<BuildingType>BUILDING_DEEP_SPACE_HOUSING_WORKERS</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ASTROGATION_CONSTELLATION</PrereqTech>
 			<iCost>2000</iCost>
@@ -2402,7 +2402,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_MARS_FACTORY</BuildingType>
+				<BuildingType>BUILDING_MARTIAN_FACTORY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_PLANETARY_MANUFACTURING</PrereqTech>
 			<iCost>4850</iCost>
@@ -2566,7 +2566,7 @@
 				</Action>
 			</Actions>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_LAUNCH_SITE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SOLAR_PROPULSION</PrereqTech>
 			<iCost>2506</iCost>
@@ -2688,8 +2688,8 @@
 				</Action>
 			</Actions>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
-				<BuildingType>BUILDING_DOCKING_BAY</BuildingType>
+				<BuildingType>BUILDING_EFFECT_LAUNCH_SITE</BuildingType>
+				<BuildingType>BUILDING_CISLUNAR_DOCKING_BAY</BuildingType>
 				<BuildingType>BUILDING_DEEP_SPACE_DOCKING_BAY</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_MAGNETIC_SAILS</PrereqTech>
@@ -2966,7 +2966,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_INTERSTELLAR_STARPORT</BuildingType>
 				<BuildingType>BUILDING_INTERGALACTIC_STARPORT</BuildingType>
-				<BuildingType>BUILDING_HORIZON_PORT</BuildingType>
+				<BuildingType>BUILDING_DISTANT_HORIZON_PORT</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_PHASING</PrereqTech>
 			<iCost>5000</iCost>
@@ -3067,7 +3067,7 @@
 				</TerrainPassableTech>
 			</TerrainPassableTechs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CHRONOTON</BuildingType>
+				<BuildingType>BUILDING_INTERGALACTIC_CHRONOTON_GENERATOR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_STABLE_TIME_LOOPS</PrereqTech>
 			<iCost>5000</iCost>
@@ -3192,7 +3192,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_MAGLEV_LAUNCH</BuildingType>
+				<BuildingType>BUILDING_MAGLEV_LAUNCHER</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_NEURON_ENGINEERING</PrereqTech>
 			<iCost>5500</iCost>
@@ -3399,7 +3399,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_INTERGALACTIC_PORT</BuildingType>
+				<BuildingType>BUILDING_GALACTIC_PORT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_GALACTIFORMING</PrereqTech>
 			<iCost>12342</iCost>
@@ -3470,7 +3470,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_INTERGALACTIC_PORT</BuildingType>
+				<BuildingType>BUILDING_GALACTIC_PORT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SHAPESHIFTING</PrereqTech>
 			<iCost>14817</iCost>
@@ -3544,7 +3544,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_MICROWORMHOLE_BUILDING</BuildingType>
+				<BuildingType>BUILDING_MICRO_WORMHOLE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_HYPERINTELLIGENCE</PrereqTech>
 			<iCost>18267</iCost>
@@ -3629,7 +3629,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_WORLDHOUSE</BuildingType>
+				<BuildingType>BUILDING_INTERSTELLAR_WORLDHOUSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_DIRECTED_PANSPERMIA</PrereqTech>
 			<iCost>7500</iCost>
@@ -3721,7 +3721,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CHIRAL_FLEXIBLE_LIFEFORMS</BuildingType>
+				<BuildingType>BUILDING_LIFE_CHIRAL_FLEXIBLE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_GRAND_UNIFICATION_BIOLOGY</PrereqTech>
 			<iCost>7500</iCost>
@@ -3919,7 +3919,7 @@
 				</Action>
 			</Actions>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_LAUNCH_SITE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SATELLITES</PrereqTech>
 			<iCost>1762</iCost>
@@ -3986,7 +3986,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_LAUNCH_SITE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPACE_STATIONS</PrereqTech>
 			<iCost>2106</iCost>
@@ -4720,7 +4720,7 @@
 				</Action>
 			</Actions>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_LAUNCH_SITE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_PLANETARY_EXPLORATION</PrereqTech>
 			<iCost>2306</iCost>
@@ -5083,7 +5083,7 @@
 				</Action>
 			</Actions>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_SELF_REPLICATING_FACTORY</BuildingType>
+				<BuildingType>BUILDING_INTERSTELLAR_SELF_REPLICATING_FACTORY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ACNP_PROPULSION</PrereqTech>
 			<iCost>5000</iCost>
@@ -5431,7 +5431,7 @@
 				</Action>
 			</Actions>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORIZON_PORT</BuildingType>
+				<BuildingType>BUILDING_DISTANT_HORIZON_PORT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ENDLESS_EXPLORATION</PrereqTech>
 			<iCost>5000</iCost>
@@ -5667,7 +5667,7 @@
 				<BuildingType>BUILDING_CAPTURED_ASTEROID</BuildingType>
 				<BuildingType>BUILDING_MARTIAN_AMMONIA_BOMBARDMENT</BuildingType>
 				<BuildingType>BUILDING_VENUS_HYDROGEN_BOMBARDMENT</BuildingType>
-				<BuildingType>BUILDING_MERCURY_COMET_BOMBARDMENT</BuildingType>
+				<BuildingType>BUILDING_MERCURY_COMETARY_BOMBARDMENT</BuildingType>
 				<BuildingType>BUILDING_MARTIAN_ASTEROID_MINE</BuildingType>
 			</Buildings>
 			<iBaseHurry>1000</iBaseHurry>
@@ -5675,7 +5675,7 @@
 			<iCost>2000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CERES_TRADING_POST</BuildingType>
+				<BuildingType>BUILDING_ASTEROID_CERES_TRADING_POST</BuildingType>
 			</PrereqAndBuildings>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -5742,7 +5742,7 @@
 				<BuildingType>BUILDING_CAPTURED_ASTEROID</BuildingType>
 				<BuildingType>BUILDING_MARTIAN_AMMONIA_BOMBARDMENT</BuildingType>
 				<BuildingType>BUILDING_VENUS_HYDROGEN_BOMBARDMENT</BuildingType>
-				<BuildingType>BUILDING_MERCURY_COMET_BOMBARDMENT</BuildingType>
+				<BuildingType>BUILDING_MERCURY_COMETARY_BOMBARDMENT</BuildingType>
 				<BuildingType>BUILDING_MARTIAN_ASTEROID_MINE</BuildingType>
 			</Buildings>
 			<iBaseHurry>1500</iBaseHurry>
@@ -5750,7 +5750,7 @@
 			<iCost>2000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_KBO_OUTPOST</BuildingType>
+				<BuildingType>BUILDING_KUIPER_BELT_OUTPOST</BuildingType>
 			</PrereqAndBuildings>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -5839,7 +5839,7 @@
 				<BuildType>BUILD_INTERSTELLAR_RESEARCH_BASE</BuildType>
 			</Builds>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
+				<BuildingType>BUILDING_INTERSTELLAR_PLANETARY_LANDING</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_INTERSTELLAR_TRADE</PrereqTech>
 			<iCost>5000</iCost>
@@ -5901,7 +5901,7 @@
 				<BuildingType>BUILDING_SPUTNIK</BuildingType>
 				<BuildingType>BUILDING_PROJECT_GEMINI</BuildingType>
 				<BuildingType>BUILDING_PROJECT_MERCURY</BuildingType>
-				<BuildingType>BUILDING_WMAP</BuildingType>
+				<BuildingType>BUILDING_WILKINSON_MICROWAVE_ANISOTROPY_PROBE</BuildingType>
 				<BuildingType>BUILDING_CLIMATE_SATELLITE</BuildingType>
 			</Buildings>
 			<Actions>
@@ -6051,7 +6051,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_MIR</BuildingType>
 				<BuildingType>BUILDING_SKYLAB</BuildingType>
-				<BuildingType>BUILDING_ISS_TOURISM</BuildingType>
+				<BuildingType>BUILDING_SPACE_STATION_TOURS</BuildingType>
 				<BuildingType>BUILDING_ORBITAL_HOTEL</BuildingType>
 			</Buildings>
 			<Actions>
@@ -6127,10 +6127,10 @@
 			<Buildings>
 				<BuildingType>BUILDING_MIR</BuildingType>
 				<BuildingType>BUILDING_SKYLAB</BuildingType>
-				<BuildingType>BUILDING_ISS_TOURISM</BuildingType>
+				<BuildingType>BUILDING_SPACE_STATION_TOURS</BuildingType>
 				<BuildingType>BUILDING_ORBITAL_HOTEL</BuildingType>
 				<BuildingType>BUILDING_ASTEROID_MINE</BuildingType>
-				<BuildingType>BUILDING_ASTEROID_RARE</BuildingType>
+				<BuildingType>BUILDING_ASTEROID_MINE_RARE_MINERALS</BuildingType>
 			</Buildings>
 			<Actions>
 				<Action>
@@ -6203,10 +6203,10 @@
 			</UnitAIs>
 			<PrereqTech>TECH_ION_PROPULSION</PrereqTech>
 			<Buildings>
-				<BuildingType>BUILDING_COMMERCIAL_SATELLITES</BuildingType>
-				<BuildingType>BUILDING_SOLAR_SATELLITE</BuildingType>
+				<BuildingType>BUILDING_COMMUNICATIONS_SATELLITE</BuildingType>
+				<BuildingType>BUILDING_SOLAR_POWER_SATELLITE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_SATELLITES</BuildingType>
-				<BuildingType>BUILDING_GPS</BuildingType>
+				<BuildingType>BUILDING_GLOBAL_POSITIONING_SYSTEM</BuildingType>
 				<BuildingType>BUILDING_PROPAGANDA_SATELLITES</BuildingType>
 				<BuildingType>BUILDING_DIGITAL_GLOBE</BuildingType>
 			</Buildings>
@@ -6285,7 +6285,7 @@
 				<BuildingType>BUILDING_LUNAR_XPRIZE</BuildingType>
 				<BuildingType>BUILDING_YUTU</BuildingType>
 				<BuildingType>BUILDING_MOON_ROCK_LAB</BuildingType>
-				<BuildingType>BUILDING_DEEP_SPACE_GATEWAY</BuildingType>
+				<BuildingType>BUILDING_LUNAR_ORBITAL_PLATFORM_GATEWAY</BuildingType>
 			</Buildings>
 			<Actions>
 				<Action>
@@ -6359,8 +6359,8 @@
 			<PrereqTech>TECH_SOLAR_PROPULSION</PrereqTech>
 			<Buildings>
 				<BuildingType>BUILDING_IKAROS</BuildingType>
-				<BuildingType>BUILDING_KEPLER</BuildingType>
-				<BuildingType>BUILDING_JAMESWEBB_TELESCOPE</BuildingType>
+				<BuildingType>BUILDING_KEPLER_SPACE_TELESCOPE</BuildingType>
+				<BuildingType>BUILDING_JAMES_WEBB_SPACE_TELESCOPE</BuildingType>
 				<BuildingType>BUILDING_ATLAST_SPACE_TELESCOPE</BuildingType>
 				<BuildingType>BUILDING_ASTEROID_DEFLECTION_SYSTEM</BuildingType>
 				<BuildingType>BUILDING_SENTINEL</BuildingType>
@@ -6750,7 +6750,7 @@
 			</UnitAIs>
 			<PrereqTech>TECH_FOLDING_SPACE</PrereqTech>
 			<Buildings>
-				<BuildingType>BUILDING_ANDROMEDA</BuildingType>
+				<BuildingType>BUILDING_VOYAGE_TO_ANDROMEDA</BuildingType>
 			</Buildings>
 			<Actions>
 				<Action>
@@ -6970,8 +6970,8 @@
 			</UnitAIs>
 			<PrereqTech>TECH_PLANETARY_EXPLORATION</PrereqTech>
 			<Buildings>
-				<BuildingType>BUILDING_MARS_SCIENCE_LAB</BuildingType>
-				<BuildingType>BUILDING_MISSION_MARS</BuildingType>
+				<BuildingType>BUILDING_MARS_SCIENCE_LABORATORY</BuildingType>
+				<BuildingType>BUILDING_MISSION_TO_MARS</BuildingType>
 			</Buildings>
 			<Actions>
 				<Action>
@@ -7411,7 +7411,7 @@
 			<PrereqTech>TECH_PLANETARY_EXPLORATION</PrereqTech>
 			<Buildings>
 				<BuildingType>BUILDING_VOYAGER_PROGRAM</BuildingType>
-				<BuildingType>BUILDING_URANUS_ATMOSPHERE_PROBE</BuildingType>
+				<BuildingType>BUILDING_URANUS_ATMOSPHERIC_PROBE</BuildingType>
 			</Buildings>
 			<Actions>
 				<Action>
@@ -7485,7 +7485,7 @@
 			<PrereqTech>TECH_PLANETARY_EXPLORATION</PrereqTech>
 			<Buildings>
 				<BuildingType>BUILDING_VOYAGER_PROGRAM</BuildingType>
-				<BuildingType>BUILDING_NEPTUNE_ATMOSPHERE_PROBE</BuildingType>
+				<BuildingType>BUILDING_NEPTUNE_ATMOSPHERIC_PROBE</BuildingType>
 			</Buildings>
 			<Actions>
 				<Action>
@@ -7558,7 +7558,7 @@
 			</UnitAIs>
 			<PrereqTech>TECH_ION_PROPULSION</PrereqTech>
 			<Buildings>
-				<BuildingType>BUILDING_ASTRONOMY_DATABASE</BuildingType>
+				<BuildingType>BUILDING_ASTRONOMICAL_DATABASE</BuildingType>
 				<BuildingType>BUILDING_NEW_HORIZONS</BuildingType>
 			</Buildings>
 			<Actions>
@@ -7634,7 +7634,7 @@
 			<PrereqTech>TECH_MAGNETIC_SAILS</PrereqTech>
 			<Buildings>
 				<BuildingType>BUILDING_SEDNA_PROBE</BuildingType>
-				<BuildingType>BUILDING_ASTRONOMY_DATABASE</BuildingType>
+				<BuildingType>BUILDING_ASTRONOMICAL_DATABASE</BuildingType>
 			</Buildings>
 			<Actions>
 				<Action>
@@ -8283,7 +8283,7 @@
 			</UnitAIs>
 			<PrereqTech>TECH_ANTIMATTER_ROCKETS</PrereqTech>
 			<Buildings>
-				<BuildingType>BUILDING_GALACTIC_CORE</BuildingType>
+				<BuildingType>BUILDING_MISSION_TO_THE_GALACTIC_CORE</BuildingType>
 			</Buildings>
 			<Actions>
 				<Action>

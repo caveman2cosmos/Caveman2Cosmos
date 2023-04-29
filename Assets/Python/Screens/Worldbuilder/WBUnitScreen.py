@@ -355,7 +355,7 @@ class WBUnitScreen:
 					iUnit = pCity.getProductionUnit()
 					screen.setTableText("MissionInput", 0, iRow, "<font=3>" + GC.getUnitInfo(iUnit).getDescription(), GC.getUnitInfo(iUnit).getButton(), WidgetTypes.WIDGET_PYTHON, 8202, iUnit, 1<<0)
 				iRow = screen.appendTableRow("MissionInput")
-				sText = u"%c %d / %d" %(GC.getYieldInfo(YieldTypes.YIELD_PRODUCTION).getChar(), pCity.getProduction(), pCity.getProductionNeeded())
+				sText = u"%c %d / %d" %(GC.getYieldInfo(YieldTypes.YIELD_PRODUCTION).getChar(), pCity.getProductionProgress(), pCity.getProductionNeeded())
 				screen.setTableText("MissionInput", 0, iRow, "<font=3>" + sText, "", WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
 				iRow = screen.appendTableRow("MissionInput")
 				sText = u"%c <color=128,255,28>%+d" %(GC.getYieldInfo(YieldTypes.YIELD_PRODUCTION).getChar(), self.currentUnit.getHurryProduction(self.currentPlot))
