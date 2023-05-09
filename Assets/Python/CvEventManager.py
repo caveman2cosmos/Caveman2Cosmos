@@ -2591,69 +2591,34 @@ class CvEventManager:
 			self.iArcologyCityID = -1
 
 
+	# This is the last function a city object call before being deleted.
 	def onCityLost(self, argsList):
 		CyCity, = argsList
 		self.iOldCityID = iCityID = CyCity.getID()
 		# Ruin Arcology.
-		if self.iArcologyCityID != -1:
-			if iCityID == self.iArcologyCityID:
-				CyCity.plot().setImprovementType(GC.getInfoTypeForString("IMPROVEMENT_CITY_RUINS_ARCOLOGY"))
-				self.iArcologyCityID = -1
+		if self.iArcologyCityID != -1 and iCityID == self.iArcologyCityID:
+			CyCity.plot().setImprovementType(GC.getInfoTypeForString("IMPROVEMENT_CITY_RUINS_ARCOLOGY"))
+			self.iArcologyCityID = -1
 
 
 	# This is before city has changed owner or been autorazed
 	def onCityAcquired(self, argsList):
 		iOwnerOld, iOwnerNew, city, bConquest, bTrade, bAutoRaze = argsList
-		iOldCityID = self.iOldCityID
-		iCityID = city.getID()
 		aWonderTuple = self.aWonderTuple
-		if bConquest:
-			if "HELSINKI" in aWonderTuple[0] and iOwnerNew == aWonderTuple[4][aWonderTuple[0].index("HELSINKI")]:
-				iX = city.getX()
-				iY = city.getY()
-				for x in xrange(iX - 1, iX + 2):
-					for y in xrange(iY - 1, iY + 2):
-						CyPlot = GC.getMap().plot(x, y)
-						iCulture = CyPlot.getCulture(iOwnerOld) / 10
-						CyPlot.changeCulture(iOwnerOld,-iCulture, True)
-						CyPlot.changeCulture(iOwnerNew, iCulture, True)
+		if (
+			bConquest
+		and "HELSINKI" in aWonderTuple[0]
+		and iOwnerNew == aWonderTuple[4][aWonderTuple[0].index("HELSINKI")]
+		):
+			iX = city.getX()
+			iY = city.getY()
+			for x in xrange(iX - 1, iX + 2):
+				for y in xrange(iY - 1, iY + 2):
+					CyPlot = GC.getMap().plot(x, y)
+					iCulture = CyPlot.getCulture(iOwnerOld) / 10
+					CyPlot.changeCulture(iOwnerOld,-iCulture, True)
+					CyPlot.changeCulture(iOwnerNew, iCulture, True)
 
-		if iOldCityID in aWonderTuple[3]:
-			iTeamN = GC.getPlayer(iOwnerNew).getTeam()
-			CyTeamN = GC.getTeam(iTeamN)
-			iTeamO = GC.getPlayer(iOwnerOld).getTeam()
-			CyTeamO = GC.getTeam(iTeamO)
-			temp = list(aWonderTuple[3])
-			for i, ID in enumerate(temp):
-				if ID != iOldCityID: continue
-				aWonderTuple[3][i] = iCityID
-				KEY = aWonderTuple[0][i]
-				iBuilding = aWonderTuple[1][i]
-
-				bObsolete = CyTeamN.isObsoleteBuilding(iBuilding)
-				if bObsolete:
-					del aWonderTuple[0][i], aWonderTuple[1][i], aWonderTuple[2][i], aWonderTuple[3][i], aWonderTuple[4][i]
-				else:
-					aWonderTuple[4][i] = iOwnerNew
-
-				if KEY == "TAIPEI_101":
-					for iPlayerX in xrange(self.MAX_PC_PLAYERS):
-						CyPlayerX = GC.getPlayer(iPlayerX)
-						if CyPlayerX.isHuman() or not CyPlayerX.isAlive():
-							continue
-						if not bObsolete and iPlayerX != iOwnerNew:
-							CyPlayerX.AI_changeAttitudeExtra(iTeamN, 2)
-						if iPlayerX != iOwnerOld:
-							CyPlayerX.AI_changeAttitudeExtra(iTeamO, -2)
-
-				elif KEY == "TSUKIJI":
-					IMP = GC.getInfoTypeForString('IMPROVEMENT_FISHING_BOATS')
-					CyTeamO.changeImprovementYieldChange(IMP, 0, -1)
-					CyTeamO.changeImprovementYieldChange(IMP, 2, -1)
-					if not bObsolete:
-						CyTeamN.changeImprovementYieldChange(IMP, 0, 1)
-						CyTeamN.changeImprovementYieldChange(IMP, 2, 1)
-			self.iOldCityID = None
 
 
 	def onCityAcquiredAndKept(self, argsList):
@@ -2687,6 +2652,49 @@ class CvEventManager:
 									szTxt = TRNSLTR.getText("TXT_KEY_MSG_WONDER_CAPTURED", (szPlayerName, CvBuildingInfo.getDescription()))
 
 								CvUtil.sendMessage(szTxt, iActivePlayer, 16, artPath, eColor, iX, iY, True, True, bForce = bActive)
+
+		aWonderTuple = self.aWonderTuple
+		iOldCityID = self.iOldCityID
+		if iOldCityID in aWonderTuple[3]:
+			iCityID = city.getID()
+			iTeamN = GC.getPlayer(iOwnerNew).getTeam()
+			CyTeamN = GC.getTeam(iTeamN)
+			iTeamO = GC.getPlayer(iOwnerOld).getTeam()
+			CyTeamO = GC.getTeam(iTeamO)
+			temp = list(aWonderTuple[3])
+			n = 0
+			for j, ID in enumerate(temp):
+				if ID != iOldCityID: continue
+				i = j - n
+				KEY = aWonderTuple[0][i]
+				iBuilding = aWonderTuple[1][i]
+
+				bObsolete = CyTeamN.isObsoleteBuilding(iBuilding)
+				if bObsolete:
+					del aWonderTuple[0][i], aWonderTuple[1][i], aWonderTuple[2][i], aWonderTuple[3][i], aWonderTuple[4][i]
+					n += 1
+				else:
+					aWonderTuple[3][i] = iCityID
+					aWonderTuple[4][i] = iOwnerNew
+
+				if KEY == "TAIPEI_101":
+					for iPlayerX in xrange(self.MAX_PC_PLAYERS):
+						CyPlayerX = GC.getPlayer(iPlayerX)
+						if CyPlayerX.isHuman() or not CyPlayerX.isAlive():
+							continue
+						if not bObsolete and iPlayerX != iOwnerNew:
+							CyPlayerX.AI_changeAttitudeExtra(iTeamN, 2)
+						if iPlayerX != iOwnerOld:
+							CyPlayerX.AI_changeAttitudeExtra(iTeamO, -2)
+
+				elif KEY == "TSUKIJI":
+					IMP = GC.getInfoTypeForString('IMPROVEMENT_FISHING_BOATS')
+					CyTeamO.changeImprovementYieldChange(IMP, 0, -1)
+					CyTeamO.changeImprovementYieldChange(IMP, 2, -1)
+					if not bObsolete:
+						CyTeamN.changeImprovementYieldChange(IMP, 0, 1)
+						CyTeamN.changeImprovementYieldChange(IMP, 2, 1)
+			self.iOldCityID = None
 
 
 	'''
