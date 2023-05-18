@@ -3896,6 +3896,8 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 
 			iValue += getProductionExperience(eUnitX);
 
+			/* Toffer - Super slow evaluation, needs smart caching to work.
+
 			// KOSHLING - this need rework to take actual promotion values. *** TODO ***
 			// May need some caching to do so at appropriate performance levels.
 			const int iCombatType = unit.getUnitCombatType();
@@ -3943,6 +3945,7 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 			}
 			iValue *= 100 + iPromotionValue;
 			iValue /= 100;
+			*/
 
 			if (!bNoRand)
 			{
