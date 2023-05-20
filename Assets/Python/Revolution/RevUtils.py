@@ -1124,7 +1124,7 @@ def getBuildingsRevIdxLocal(CyCity):
 	negList = []
 
 	for iBuilding in range(GC.getNumBuildingInfos()):
-		if CyCity.getNumActiveBuilding(iBuilding) > 0:
+		if CyCity.isActiveBuilding(iBuilding):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 			buildingEffect = CvBuildingInfo.getRevIdxLocal()
 			if buildingEffect > 0:

@@ -19764,7 +19764,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 
 					if (iExperience != 0)
 					{
-						if (pCity->getNumActiveBuilding((BuildingTypes)iI) < 1 && pCity->canConstruct((BuildingTypes)iI, false, true))
+						if (!pCity->isActiveBuilding((BuildingTypes)iI) && pCity->canConstruct((BuildingTypes)iI, false, true))
 						{
 							if (bFirst)
 							{
@@ -20310,7 +20310,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit, bool
 				for (int iI = 0; iI < GC.getUnitInfo(eUnit).getNumPrereqAndBuildings(); ++iI)
 				{
 					const BuildingTypes eBuildingX = (BuildingTypes)GC.getUnitInfo(eUnit).getPrereqAndBuilding(iI);
-					if (!pCity || !GET_TEAM(pCity->getTeam()).isObsoleteBuilding(eBuildingX) && pCity->getNumActiveBuilding(eBuildingX) < 1)
+					if (!pCity || !GET_TEAM(pCity->getTeam()).isObsoleteBuilding(eBuildingX) && !pCity->isActiveBuilding(eBuildingX))
 					{
 						szBuffer.append(NEWLINE);
 						szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_REQUIRES_STRING", GC.getBuildingInfo(eBuildingX).getTextKeyWide()));
@@ -20329,7 +20329,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit, bool
 						if (!GET_TEAM(pCity->getTeam()).isObsoleteBuilding(eBuildingX))
 						{
 							bNeeded = true;
-							if (pCity->getNumActiveBuilding(eBuildingX) > 0)
+							if (pCity->isActiveBuilding(eBuildingX))
 							{
 								bNeeded = false;
 								break;
@@ -20853,7 +20853,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 				{
 					aiCommerces[iI] = iBaseCommerceChange;
 				}
-				else if (pCity->getNumActiveBuilding(eBuilding) > 0)
+				else if (pCity->isActiveBuilding(eBuilding))
 				{
 					aiCommerces[iI] = pCity->getBuildingCommerceByBuilding((CommerceTypes)iI, eBuilding, true);
 				}
@@ -22925,7 +22925,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 	{
 		const BuildingTypes eBuildingX = static_cast<BuildingTypes>(kBuilding.getReplacedBuilding(iI));
 
-		if (!bCity || pCity->getNumActiveBuilding(eBuildingX) > 0 || pCity->canConstruct(eBuildingX, false, true))
+		if (!bCity || pCity->isActiveBuilding(eBuildingX) || pCity->canConstruct(eBuildingX, false, true))
 		{
 			szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDINGHELP_REPLACED_BY_BUILDING").c_str());
 			szTempBuffer.Format(SETCOLR L"<link=%s>%s</link>" ENDCOLR, TEXT_COLOR("COLOR_BUILDING_TEXT"), CvWString(GC.getBuildingInfo(eBuildingX).getType()).GetCString(), GC.getBuildingInfo(eBuildingX).getDescription());
@@ -23621,7 +23621,7 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 		}
 		for (int iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
 		{
-			if (kBuilding.isPrereqInCityBuilding(iI) && (!pCity || !GET_TEAM(pCity->getTeam()).isObsoleteBuilding((BuildingTypes)iI) && pCity->getNumActiveBuilding((BuildingTypes)iI) == 0))
+			if (kBuilding.isPrereqInCityBuilding(iI) && (!pCity || !GET_TEAM(pCity->getTeam()).isObsoleteBuilding((BuildingTypes)iI) && !pCity->isActiveBuilding((BuildingTypes)iI)))
 			{
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_REQUIRES_STRING", CvWString(GC.getBuildingInfo((BuildingTypes)iI).getType()).GetCString(), GC.getBuildingInfo((BuildingTypes)iI).getTextKeyWide()));
@@ -23893,7 +23893,7 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 				if (!GET_TEAM(pCity->getTeam()).isObsoleteBuilding((BuildingTypes)kBuilding.getPrereqOrBuilding(iI)))
 				{
 					bValid = false;
-					if (pCity->getNumActiveBuilding((BuildingTypes)kBuilding.getPrereqOrBuilding(iI)) > 0)
+					if (pCity->isActiveBuilding((BuildingTypes)kBuilding.getPrereqOrBuilding(iI)))
 					{
 						bValid = true;
 						break;
@@ -23919,7 +23919,7 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 		{
 			const BuildingTypes eBuildingX = static_cast<BuildingTypes>(kBuilding.getPrereqNotInCityBuilding(iI));
 
-			if (!pCity || pCity->getNumActiveBuilding(eBuildingX) > 0)
+			if (!pCity || pCity->isActiveBuilding(eBuildingX))
 			{
 				szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_BUILDINGHELP_NOT_REQUIRED_TO_BUILD").c_str());
 				szTempBuffer.Format(SETCOLR L"<link=%s>%s</link>" ENDCOLR, TEXT_COLOR("COLOR_BUILDING_TEXT"), CvWString(GC.getBuildingInfo(eBuildingX).getType()).GetCString(), GC.getBuildingInfo(eBuildingX).getDescription());
@@ -31785,7 +31785,7 @@ void CvGameTextMgr::setYieldHelp(CvWStringBuffer &szBuffer, CvCity& city, YieldT
 					{
 						foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iJ).cities())
 						{
-							if (pLoopCity->getNumActiveBuilding((BuildingTypes)iI) > 0)
+							if (pLoopCity->isActiveBuilding((BuildingTypes)iI))
 							{
 								const int iTemp = building.getGlobalYieldModifier(eYieldType);
 								if (iTemp != 0)
@@ -32158,7 +32158,7 @@ void CvGameTextMgr::parseGreatPeopleHelp(CvWStringBuffer &szBuffer, CvCity& city
 		iRate = 0;
 		for (int i = 0; i < GC.getNumBuildingInfos(); i++)
 		{
-			if (city.getNumActiveBuilding((BuildingTypes)i) > 0)
+			if (city.isActiveBuilding((BuildingTypes)i))
 			{
 				iRate += GC.getBuildingInfo((BuildingTypes)i).getGreatPeopleRateChange();
 			}
@@ -32206,7 +32206,7 @@ void CvGameTextMgr::parseGreatPeopleHelp(CvWStringBuffer &szBuffer, CvCity& city
 	for (int i = 0; i < GC.getNumBuildingInfos(); i++)
 	{
 		const CvBuildingInfo& building = GC.getBuildingInfo((BuildingTypes)i);
-		if (city.getNumActiveBuilding((BuildingTypes)i) > 0)
+		if (city.isActiveBuilding((BuildingTypes)i))
 		{
 			iBuildingMod += building.getGreatPeopleRateModifier();
 		}
@@ -32216,7 +32216,7 @@ void CvGameTextMgr::parseGreatPeopleHelp(CvWStringBuffer &szBuffer, CvCity& city
 			{
 				foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)j).cities())
 				{
-					if (pLoopCity->getNumActiveBuilding((BuildingTypes)i) > 0)
+					if (pLoopCity->isActiveBuilding((BuildingTypes)i))
 					{
 						iBuildingMod += building.getGlobalGreatPeopleRateModifier();
 					}
@@ -34604,7 +34604,7 @@ void CvGameTextMgr::getPlotHelp(CvPlot* pMouseOverPlot, CvCity* pCity, CvPlot* p
 					{
 						const BuildingTypes eType = static_cast<BuildingTypes>(iI);
 
-						if (pMouseOverPlot->getPlotCity()->getNumActiveBuilding(eType) > 0)
+						if (pMouseOverPlot->getPlotCity()->isActiveBuilding(eType))
 						{
 							const int iNoEntryDefense = GC.getBuildingInfo(eType).getNoEntryDefenseLevel();
 
@@ -35511,7 +35511,7 @@ void CvGameTextMgr::getDefenseHelp(CvWStringBuffer &szBuffer, CvCity& city)
 	{
 		const BuildingTypes eBuilding = static_cast<BuildingTypes>(iI);
 
-		if (city.getNumActiveBuilding(eBuilding) > 0)
+		if (city.isActiveBuilding(eBuilding))
 		{
 			const CvBuildingInfo& building = GC.getBuildingInfo(eBuilding);
 
@@ -35813,7 +35813,7 @@ void CvGameTextMgr::getDefenseHelp(CvWStringBuffer &szBuffer, CvCity& city)
 	for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
 	{
 		const BuildingTypes eBuilding = static_cast<BuildingTypes>(iJ);
-		if (city.getNumActiveBuilding(eBuilding) > 0)
+		if (city.isActiveBuilding(eBuilding))
 		{
 			continue;
 		}

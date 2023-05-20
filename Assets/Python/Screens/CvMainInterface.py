@@ -2992,7 +2992,7 @@ class CvMainInterface:
 			if CyCity.hasBuilding(i):
 				szStat = ""
 
-				if CyCity.getNumActiveBuilding(i) > 0:
+				if CyCity.isActiveBuilding(i):
 					iEmployed = CvBuildingInfo.getNumPopulationEmployed()
 					if iEmployed:
 						szStat += str(iEmployed) + iconCitizen

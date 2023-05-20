@@ -849,7 +849,7 @@ void CvTeam::shareItems(TeamTypes eTeam)
 			{
 				for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
 				{
-					if (pLoopCity->getNumActiveBuilding((BuildingTypes)iJ) > 0)
+					if (pLoopCity->isActiveBuilding((BuildingTypes)iJ))
 					{
 						if (GC.getBuildingInfo((BuildingTypes)iJ).isTeamShare())
 						{
@@ -7053,7 +7053,7 @@ void CvTeam::AI_setAssignWorkDirtyInEveryPlayerCityWithActiveBuilding(BuildingTy
 		if (GET_PLAYER((PlayerTypes)i).isAliveAndTeam(getID()))
 		{
 			algo::for_each(
-				GET_PLAYER((PlayerTypes)i).cities() | filtered(CvCity::fn::getNumActiveBuilding(eBuilding) > 0),
+				GET_PLAYER((PlayerTypes)i).cities() | filtered(CvCity::fn::isActiveBuilding(eBuilding)),
 				CvCity::fn::AI_setAssignWorkDirty(true)
 			);
 		}

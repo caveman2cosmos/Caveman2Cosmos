@@ -191,7 +191,7 @@ class CityDemolish:
 			iForeignPop = iPopulation - iOwnCulturePop
 
 			# Judge
-			if CyCity.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_COURTHOUSE")):
+			if CyCity.isActiveBuilding(GC.getInfoTypeForString("BUILDING_COURTHOUSE")):
 				CyMessageControl().sendModNetMessage(905, iPlayer, iCity, -1, GC.getInfoTypeForString("UNIT_JUDGE"))
 
 			# Tribal Guardian
@@ -233,7 +233,7 @@ class CityDemolish:
 					if bContinue: continue
 					# Building Prereq
 					for i in xrange(CvUnitInfo.getNumPrereqAndBuildings()):
-						if not CyCity.getNumActiveBuilding(CvUnitInfo.getPrereqAndBuilding(i)):
+						if not CyCity.isActiveBuilding(CvUnitInfo.getPrereqAndBuilding(i)):
 							continue
 					# Bonus Prereq
 					iBonus = CvUnitInfo.getPrereqAndBonus()

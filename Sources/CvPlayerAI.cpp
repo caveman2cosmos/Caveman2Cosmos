@@ -15538,13 +15538,13 @@ int CvPlayerAI::AI_religionValue(ReligionTypes eReligion) const
 			for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 			{
 				BuildingTypes eBuilding = (BuildingTypes)iI;
-				if (eBuilding != NO_BUILDING && pHolyCity->getNumActiveBuilding(eBuilding) > 0)
+				if (eBuilding != NO_BUILDING && pHolyCity->isActiveBuilding(eBuilding))
 				{
 					for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
 					{
 						if (GC.getBuildingInfo(eBuilding).getGlobalReligionCommerce() == eReligion)
 						{
-							iCommerceCount += GC.getReligionInfo(eReligion).getGlobalReligionCommerce((CommerceTypes)iJ) * pHolyCity->getNumActiveBuilding(eBuilding);
+							iCommerceCount += GC.getReligionInfo(eReligion).getGlobalReligionCommerce((CommerceTypes)iJ);
 						}
 					}
 				}
@@ -15759,7 +15759,7 @@ EspionageMissionTypes CvPlayerAI::AI_bestPlotEspionage(CvPlot* pSpyPlot, PlayerT
 								{
 									BuildingTypes eBuilding = (BuildingTypes)iBuilding;
 
-									if (pCity->getNumActiveBuilding(eBuilding) > 0)
+									if (pCity->isActiveBuilding(eBuilding))
 									{
 										int iValue = AI_espionageVal(pSpyPlot->getOwner(), (EspionageMissionTypes)iMission, pSpyPlot, iBuilding);
 
@@ -16007,7 +16007,7 @@ int CvPlayerAI::AI_espionageVal(PlayerTypes eTargetPlayer, EspionageMissionTypes
 	{
 		CvCity* pCity = pPlot->getPlotCity();
 
-		if (NULL != pCity && pCity->getNumActiveBuilding((BuildingTypes)iData) > 0)
+		if (pCity && pCity->isActiveBuilding((BuildingTypes)iData))
 		{
 			const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iData);
 			if (kBuilding.getProductionCost() > 1 && !isWorldWonder((BuildingTypes)iData))
@@ -16331,7 +16331,7 @@ int CvPlayerAI::AI_espionageVal(PlayerTypes eTargetPlayer, EspionageMissionTypes
 			int iTempValue = 0;
 			for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 			{
-				if (pCity->getNumActiveBuilding((BuildingTypes)iI) > 0)
+				if (pCity->isActiveBuilding((BuildingTypes)iI))
 				{
 					if (GC.getBuildingInfo((BuildingTypes)iI).isPrereqPower())
 					{
@@ -22820,7 +22820,7 @@ int CvPlayerAI::AI_getStrategyHash() const
 						{
 							if (GC.getBuildingInfo((BuildingTypes)iI).getGlobalReligionCommerce() == getStateReligion())
 							{
-								if (GC.getGame().getHolyCity(getStateReligion())->getNumActiveBuilding((BuildingTypes)iI) > 0)
+								if (GC.getGame().getHolyCity(getStateReligion())->isActiveBuilding((BuildingTypes)iI))
 								{
 									bHasHolyBuilding = true;
 									break;
@@ -26396,7 +26396,7 @@ void CvPlayerAI::AI_setPushReligiousVictory()
 			{
 				if (GC.getBuildingInfo((BuildingTypes)iI).getGlobalReligionCommerce() == getStateReligion())
 				{
-					if (GC.getGame().getHolyCity(getStateReligion())->getNumActiveBuilding((BuildingTypes)iI) > 0)
+					if (GC.getGame().getHolyCity(getStateReligion())->isActiveBuilding((BuildingTypes)iI))
 					{
 						bHasHolyBuilding = true;
 						break;

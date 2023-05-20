@@ -1461,7 +1461,7 @@ class RevolutionWatchAdvisor:
 		szReturn = u""
 
 		if szKey.find("BUILDING_") == 0:
-			if city.getNumActiveBuilding(self.BUILDING_DICT[szKey]) > 0 or city.getProductionName() == self.HEADER_DICT[szKey]:
+			if city.isActiveBuilding(self.BUILDING_DICT[szKey]) or city.getProductionName() == self.HEADER_DICT[szKey]:
 				# Start with the default icons, and those that never change.
 				szReturn += self.BUILDING_ICONS_DICT[szKey]
 

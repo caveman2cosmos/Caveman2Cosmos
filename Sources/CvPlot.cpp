@@ -10461,7 +10461,7 @@ void CvPlot::processArea(CvArea* pArea, int iChange)
 		for (int iI = 0; iI < iNumBuildingInfos; ++iI)
 		{
 			const BuildingTypes eBuildingX = static_cast<BuildingTypes>(iI);
-			if (pCity->getNumActiveBuilding(eBuildingX) > 0)
+			if (pCity->isActiveBuilding(eBuildingX))
 			{
 				const CvBuildingInfo& building = GC.getBuildingInfo(eBuildingX);
 
@@ -10471,19 +10471,19 @@ void CvPlot::processArea(CvArea* pArea, int iChange)
 				{
 					if (building.getAreaHealth() > 0)
 					{
-						pArea->changeBuildingGoodHealth(eOwner, building.getAreaHealth() * iChange * pCity->getNumActiveBuilding(eBuildingX));
+						pArea->changeBuildingGoodHealth(eOwner, building.getAreaHealth() * iChange);
 					}
-					else pArea->changeBuildingBadHealth(eOwner, building.getAreaHealth() * iChange * pCity->getNumActiveBuilding(eBuildingX));
+					else pArea->changeBuildingBadHealth(eOwner, building.getAreaHealth() * iChange);
 
-					pArea->changeBuildingHappiness(eOwner, building.getAreaHappiness() * iChange * pCity->getNumActiveBuilding(eBuildingX));
-					pArea->changeFreeSpecialist(eOwner, building.getAreaFreeSpecialist() * iChange * pCity->getNumActiveBuilding(eBuildingX));
+					pArea->changeBuildingHappiness(eOwner, building.getAreaHappiness() * iChange);
+					pArea->changeFreeSpecialist(eOwner, building.getAreaFreeSpecialist() * iChange);
 
 					for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 					{
 						pArea->changeYieldRateModifier(eOwner, (YieldTypes)iJ, building.getAreaYieldModifier(iJ) * iChange);
 					}
 				}
-				pArea->changeBorderObstacleCount(pCity->getTeam(), building.isAreaBorderObstacle() ? iChange * pCity->getNumActiveBuilding(eBuildingX) : 0);
+				pArea->changeBorderObstacleCount(pCity->getTeam(), iChange * building.isAreaBorderObstacle());
 			}
 		}
 

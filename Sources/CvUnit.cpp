@@ -8681,7 +8681,7 @@ bool CvUnit::airBomb(int iX, int iY)
 				int iCount = 0;
 				for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 				{
-					if (GC.getBuildingInfo((BuildingTypes)iI).getDCMAirbombMission() == 2 && pCity->getNumActiveBuilding((BuildingTypes)iI))
+					if (GC.getBuildingInfo((BuildingTypes)iI).getDCMAirbombMission() == 2 && pCity->isActiveBuilding((BuildingTypes)iI))
 					{
 						iCount++;
 					}
@@ -8694,7 +8694,7 @@ bool CvUnit::airBomb(int iX, int iY)
 				int iCount = 0;
 				for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 				{
-					if (GC.getBuildingInfo((BuildingTypes)iI).getDCMAirbombMission() == 3 && pCity->getNumActiveBuilding((BuildingTypes)iI) > 0)
+					if (GC.getBuildingInfo((BuildingTypes)iI).getDCMAirbombMission() == 3 && pCity->isActiveBuilding((BuildingTypes)iI))
 					{
 						iCount++;
 					}
@@ -19870,7 +19870,7 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 				{
 					if (plot()->isCity(false)
 
-					&& pPlot->getPlotCity()->getNumActiveBuilding((BuildingTypes)promo.getPrereqLocalBuildingType(iI)) > 0)
+					&& pPlot->getPlotCity()->isActiveBuilding((BuildingTypes)promo.getPrereqLocalBuildingType(iI)))
 					{
 						bValid = true;
 						break;
@@ -25930,7 +25930,7 @@ bool CvUnit::airBomb2(int iX, int iY)
 		{
 			iI = GC.getGame().getSorenRandNum(buildingList.getLength(), "Airbomb building");
 			build = buildingList.nodeNum(iI)->m_data;
-			if (pCity->getNumActiveBuilding((BuildingTypes)build) > 0)
+			if (pCity->isActiveBuilding((BuildingTypes)build))
 			{
 				bNoTarget = false;
 			}
@@ -25950,13 +25950,13 @@ bool CvUnit::airBomb2(int iX, int iY)
 					iAttempts++;
 					iI = GC.getGame().getSorenRandNum(buildingList.getLength(), "Airbomb building");
 					build = buildingList.nodeNum(iI)->m_data;
-					if (pCity->getNumActiveBuilding((BuildingTypes)build) > 0 || iAttempts > iMaxAttempts)
+					if (pCity->isActiveBuilding((BuildingTypes)build) || iAttempts > iMaxAttempts)
 					{
 						bNoTarget = false;
 					}
 				}
 			}
-			if (pCity->getNumActiveBuilding((BuildingTypes)build) > 0)
+			if (pCity->isActiveBuilding((BuildingTypes)build))
 			{
 				bNoTarget = false;
 				changeExperience(GC.getDefineINT("MIN_EXPERIENCE_PER_COMBAT"), maxXPValue(NULL, pCity->isHominid()), true, pCity->getOwner() == getOwner());
@@ -26167,7 +26167,7 @@ bool CvUnit::airBomb3(int iX, int iY)
 		{
 			iI = GC.getGame().getSorenRandNum(buildingList.getLength(), "Airbomb building");
 			build = buildingList.nodeNum(iI)->m_data;
-			if (pCity->getNumActiveBuilding((BuildingTypes)build) > 0)
+			if (pCity->isActiveBuilding((BuildingTypes)build))
 			{
 				bNoTarget = false;
 			}
@@ -26187,13 +26187,13 @@ bool CvUnit::airBomb3(int iX, int iY)
 					iAttempts++;
 					iI = GC.getGame().getSorenRandNum(buildingList.getLength(), "Airbomb building");
 					build = buildingList.nodeNum(iI)->m_data;
-					if (pCity->getNumActiveBuilding((BuildingTypes)build) > 0 || iAttempts > iMaxAttempts)
+					if (pCity->isActiveBuilding((BuildingTypes)build) || iAttempts > iMaxAttempts)
 					{
 						bNoTarget = false;
 					}
 				}
 			}
-			if (pCity->getNumActiveBuilding((BuildingTypes)build) > 0)
+			if (pCity->isActiveBuilding((BuildingTypes)build))
 			{
 				pCity->changeHasBuilding((BuildingTypes)build, false);
 
@@ -29209,7 +29209,7 @@ int CvUnit::getCityCommunicability(PromotionLineTypes eAfflictionLine) const
 		for (int iI = 0; iI < GC.getPromotionLineInfo(eAfflictionLine).getNumBuildings(); iI++)
 		{
 			BuildingTypes eAfflictionBuilding = (BuildingTypes)GC.getPromotionLineInfo(eAfflictionLine).getBuilding(iI);
-			if (pCity->getNumActiveBuilding(eAfflictionBuilding) > 0)
+			if (pCity->isActiveBuilding(eAfflictionBuilding))
 			{
 				iCommunicability += GC.getBuildingInfo(eAfflictionBuilding).getTradeCommunicability();
 			}
@@ -31903,7 +31903,7 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 					if (plot()->isCity(false))
 					{
 						const CvCity* pCity = plot()->getPlotCity();
-						if (pCity->getNumActiveBuilding((BuildingTypes)promo.getPrereqLocalBuildingType(iI)) > 0)
+						if (pCity->isActiveBuilding((BuildingTypes)promo.getPrereqLocalBuildingType(iI)))
 						{
 							bValid = true;
 							break;
@@ -34151,7 +34151,7 @@ void CvUnit::checkCityAttackDefensesDamage(CvCity* pCity, const std::vector<Unit
 
 				if (GC.getBuildingInfo(eBuilding).isMayDamageAttackingUnitCombatType(eUnitCombat) || GC.getBuildingInfo(eBuilding).isDamageAllAttackers())
 				{
-					if (pCity->getNumActiveBuilding(eBuilding) > 0)
+					if (pCity->isActiveBuilding(eBuilding))
 					{
 						//1st random generation to see if the building hits with its 'attack'.
 						iBuildingAttackRoll = GC.getGame().getSorenRandNum(100, "BuildingAttackRoll");

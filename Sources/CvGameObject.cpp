@@ -1275,8 +1275,7 @@ bool CvGameObjectCity::hasGOM(GOMTypes eType, int iID) const
 		case GOM_BUILDING:
 		{
 			// return true if the building is present and active
-			const BuildingTypes eBuilding = (BuildingTypes) iID;
-			return m_pCity->getNumActiveBuilding(eBuilding) > 0;
+			return m_pCity->isActiveBuilding((BuildingTypes) iID);
 		}
 
 		case GOM_PROMOTION:
@@ -1401,13 +1400,9 @@ bool CvGameObjectUnit::hasGOM(GOMTypes eType, int iID) const
 			const CvCity* pCity = m_pUnit->plot()->getPlotCity();
 			if (pCity)
 			{
-				const BuildingTypes eBuilding = (BuildingTypes) iID;
-				return pCity->getNumActiveBuilding(eBuilding) > 0;
+				return pCity->isActiveBuilding((BuildingTypes) iID);
 			}
-			else
-			{
-				return false;
-			}
+			return false;
 		}
 
 		case GOM_PROMOTION:
@@ -1529,7 +1524,7 @@ bool CvGameObjectPlot::hasGOM(GOMTypes eType, int iID) const
 		{
 			// return true if the building is present in the city on this plot and active
 			const CvCity* pCity = m_pPlot->getPlotCity();
-			return pCity && pCity->getNumActiveBuilding((BuildingTypes)iID) > 0;
+			return pCity && pCity->isActiveBuilding((BuildingTypes)iID);
 		}
 
 		case GOM_PROMOTION:

@@ -2426,7 +2426,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 		int iOccupationTimeModifier = 0;
 		for (int iI = 0; iI < iNumBuildingInfos; iI++)
 		{
-			if (pOldCity->getNumActiveBuilding((BuildingTypes)iI) > 0
+			if (pOldCity->isActiveBuilding((BuildingTypes)iI)
 			&& GC.getBuildingInfo((BuildingTypes)iI).getOccupationTimeModifier() != 0)
 			{
 				iOccupationTimeModifier += GC.getBuildingInfo((BuildingTypes)iI).getOccupationTimeModifier();
@@ -16018,7 +16018,7 @@ int64_t CvPlayer::getEspionageMissionBaseCost(EspionageMissionTypes eMission, Pl
 		{
 			for (int iBuilding = 0; iBuilding < GC.getNumBuildingInfos(); ++iBuilding)
 			{
-				if (pCity && pCity->getNumActiveBuilding((BuildingTypes)iBuilding) > 0
+				if (pCity && pCity->isActiveBuilding((BuildingTypes)iBuilding)
 				&& canSpyDestroyBuilding(eTargetPlayer, (BuildingTypes)iBuilding))
 				{
 					const int iValue = getProductionNeeded((BuildingTypes)iBuilding);
@@ -16035,7 +16035,7 @@ int64_t CvPlayer::getEspionageMissionBaseCost(EspionageMissionTypes eMission, Pl
 
 
 		if (NO_BUILDING != eBuilding && pCity
-		&& pCity->getNumActiveBuilding(eBuilding) > 0
+		&& pCity->isActiveBuilding(eBuilding)
 		&& canSpyDestroyBuilding(eTargetPlayer, eBuilding))
 		{
 			iMissionCost = iBaseMissionCost + ((100 + kMission.getDestroyBuildingCostFactor()) * iCost) / 100;
@@ -21003,21 +21003,17 @@ EventTriggeredData* CvPlayer::initTriggeredData(EventTriggerTypes eEventTrigger,
 			for (int i = 0; i < kTrigger.getNumBuildingsRequired(); ++i)
 			{
 				const BuildingTypes eTestBuilding = static_cast<BuildingTypes>(kTrigger.getBuildingRequired(i));
-				if (eTestBuilding != NO_BUILDING && pCity->getNumActiveBuilding(eTestBuilding) > 0)
+				if (eTestBuilding != NO_BUILDING && pCity->isActiveBuilding(eTestBuilding))
 				{
 					aeBuildings.push_back(eTestBuilding);
 				}
 			}
 
-			if (!aeBuildings.empty())
-			{
-				int iChosen = GC.getGame().getSorenRandNum(aeBuildings.size(), "Event pick building");
-				eBuilding = aeBuildings[iChosen];
-			}
-			else
+			if (aeBuildings.empty())
 			{
 				return NULL;
 			}
+			eBuilding = aeBuildings[GC.getGame().getSorenRandNum(aeBuildings.size(), "Event pick building")];
 		}
 	}
 
@@ -26547,7 +26543,7 @@ void CvPlayer::recalculatePopulationgrowthratepercentage()
 		{
 			foreach_(const CvCity* pLoopCity, cities())
 			{
-				if (pLoopCity->getNumActiveBuilding(eLoopBuilding) > 0)
+				if (pLoopCity->isActiveBuilding(eLoopBuilding))
 				{
 					changePopulationgrowthratepercentage(GC.getBuildingInfo(eLoopBuilding).getGlobalPopulationgrowthratepercentage(),true);
 				}
@@ -26966,7 +26962,7 @@ void CvPlayer::recalculateResourceConsumption(BonusTypes eBonus)
 		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 		{
 			const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
-			if (pLoopCity->getNumActiveBuilding(eLoopBuilding) > 0)
+			if (pLoopCity->isActiveBuilding(eLoopBuilding))
 			{
 				int iTempValue = 0;
 
@@ -28822,7 +28818,6 @@ typedef struct buildingCommerceStruct
 {
 	int				iMultiplier;
 	int				iGlobalMultiplier;
-	int				iCount;
 	float			fContribution;
 } buildingCommerceStruct;
 
@@ -28834,11 +28829,10 @@ void CvPlayer::validateCommerce() const
 	for(int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
 		const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iI);
-		buildingCommerceStruct	commerceStruct;
+		buildingCommerceStruct commerceStruct;
 
 		commerceStruct.iMultiplier = kBuilding.getCommerceModifier(COMMERCE_GOLD);
 		commerceStruct.iGlobalMultiplier = kBuilding.getGlobalCommerceModifier(COMMERCE_GOLD);
-		commerceStruct.iCount = 0;
 		commerceStruct.fContribution = 0;
 
 		multipliers.push_back(commerceStruct);
@@ -28864,7 +28858,7 @@ void CvPlayer::validateCommerce() const
 
 			for(int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 			{
-				if (pLoopCity->getNumActiveBuilding((BuildingTypes)iI) > 0)
+				if (pLoopCity->isActiveBuilding((BuildingTypes)iI))
 				{
 					const int iBuildingGold = pLoopCity->getBuildingCommerceByBuilding(COMMERCE_GOLD, (BuildingTypes)iI, true);
 					if ( iBuildingGold != 0)
@@ -28919,14 +28913,12 @@ void CvPlayer::validateCommerce() const
 			fBonusGoldModifierEffect += fCityTotal * (float)pLoopCity->getBonusCommerceRateModifier(COMMERCE_GOLD) / 100;
 
 			int iBuildingMod = 0;
-			for(int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+			for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 			{
-				int iCount = pLoopCity->getNumActiveBuilding((BuildingTypes)iI);
-				if ( iCount > 0 && multipliers[iI].iMultiplier != 0 )
+				if (pLoopCity->isActiveBuilding((BuildingTypes)iI) && multipliers[iI].iMultiplier != 0 )
 				{
 					iBuildingMod += multipliers[iI].iMultiplier;
-					multipliers[iI].iCount += iCount;
-					multipliers[iI].fContribution += (float)iCount * fCityTotal * (float)multipliers[iI].iMultiplier / 100;
+					multipliers[iI].fContribution += fCityTotal * (float)multipliers[iI].iMultiplier / 100;
 				}
 			}
 		}

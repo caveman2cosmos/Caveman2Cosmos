@@ -509,9 +509,9 @@ int CyCity::hasBuilding(int /*BuildingTypes*/ iIndex) const
 	return m_pCity->hasBuilding((BuildingTypes) iIndex);
 }
 
-int CyCity::getNumActiveBuilding(int /*BuildingTypes*/ iIndex) const
+bool CyCity::isActiveBuilding(int /*BuildingTypes*/ iIndex) const
 {
-	return m_pCity->getNumActiveBuilding((BuildingTypes) iIndex);
+	return m_pCity->isActiveBuilding((BuildingTypes) iIndex);
 }
 
 bool CyCity::isFreeBuilding(int /*BuildingTypes*/ iIndex) const

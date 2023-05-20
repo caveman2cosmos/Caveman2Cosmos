@@ -458,7 +458,7 @@ bool CvOutcome::isPossible(const CvUnit& kUnit) const
 
 		foreach_(const BuildingTypes ePrereq, kInfo.getPrereqBuildings())
 		{
-			if (pCity->getNumActiveBuilding(ePrereq) <= 0)
+			if (!pCity->isActiveBuilding(ePrereq))
 			{
 				return false;
 			}
@@ -784,7 +784,7 @@ bool CvOutcome::isPossibleInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool 
 
 		foreach_(const BuildingTypes ePrereq, kInfo.getPrereqBuildings())
 		{
-			if (pCity->getNumActiveBuilding(ePrereq) <= 0)
+			if (!pCity->isActiveBuilding(ePrereq))
 			{
 				return false;
 			}

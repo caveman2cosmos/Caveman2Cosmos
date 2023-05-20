@@ -194,7 +194,7 @@ class CvGameUtils:
 			if iTurns > 0 and iTurns < iMaxTurns:
 				gold *= 1.0 * iTurns / iMaxTurns
 
-		if CyCity.getNumActiveBuilding(self.iNationalMint):
+		if CyCity.isActiveBuilding(self.iNationalMint):
 			gold *= 10
 
 		return int(gold)

@@ -436,8 +436,7 @@ class CvFinanceAdvisor:
 				fCityHeadquarters = 0.0
 				fCityShrines = 0.0
 				for iType in range(GC.getNumBuildingInfos()):
-					iCount = CyCity.getNumActiveBuilding(iType)
-					if iCount > 0:
+					if CyCity.isActiveBuilding(iType):
 						iBuildingGold = CyCity.getBuildingCommerceByBuilding(eComGold, iType)
 						if iBuildingGold:
 							info = GC.getBuildingInfo(iType)
@@ -483,19 +482,16 @@ class CvFinanceAdvisor:
 				fBonusGoldModifierEffect += fCityTotal * CyCity.getBonusCommerceRateModifier(eComGold) / 100.0
 
 				for entry in multipliers:
-					iType, iMultiplier, _, _, _ = entry
-					iCount = CyCity.getNumActiveBuilding(iType)
-					if iCount > 0:
-						entry[3] += iCount
-						entry[4] += iCount * fCityTotal * iMultiplier / 100.0
+					if CyCity.isActiveBuilding(entry[0]):
+						entry[3] = True
+						entry[4] += fCityTotal * entry[1] / 100.0
 
 		iTotalMinusTaxes = int(fBuildings) + int(fHeadquarters) + int(fShrines) + int(fCorporations) + int(fSpecialists) + int(fWealth) + int(fPlayerGoldModifierEffect) + int(fBonusGoldModifierEffect)
 		for entry in multipliers:
-			iType, iMultiplier, iGlobalMultiplier, iCount, fGold = entry
-			if iCount > 0:
-				iTotalMinusTaxes += int(fGold)
-				if iGlobalMultiplier:
-					fAdjust = fUnmodifiedTotal * iGlobalMultiplier / 100.0
+			if entry[3]:
+				iTotalMinusTaxes += int(entry[4])
+				if entry[2]:
+					fAdjust = fUnmodifiedTotal * entry[2] / 100.0
 					entry[4] += fAdjust
 					fPlayerGoldModifierEffect -= fAdjust
 
@@ -566,8 +562,8 @@ class CvFinanceAdvisor:
 		screen.setLabelAt(aName(), Pnl, uFont2b + str(iIncome), 1<<1, x, y, 0, eGameFont, eWidGen, 1, 1)
 		y += 16
 
-		for iType, iMultiplier, iGlobalMultiplier, iCount, fGold in multipliers:
-			if iCount > 0 and fGold > 0:
+		for iType, iMultiplier, iGlobalMultiplier, bValid, fGold in multipliers:
+			if bValid and fGold > 0:
 				y += 20
 				fAverage = fGold / iCount
 				szText = GC.getBuildingInfo(iType).getDescription() + " "
@@ -578,8 +574,8 @@ class CvFinanceAdvisor:
 		# Expenses
 		Pnl = "FinAdv_Scroll_3"
 		y = self.yBuildingExpenses
-		for iType, iMultiplier, iGlobalMultiplier, iCount, fGold in multipliers:
-			if iCount > 0 and fGold < 0:
+		for iType, iMultiplier, iGlobalMultiplier, bValid, fGold in multipliers:
+			if bValid and fGold < 0:
 				y += 20
 				fAverage = fGold / iCount
 				szText = GC.getBuildingInfo(iType).getDescription() + " "
