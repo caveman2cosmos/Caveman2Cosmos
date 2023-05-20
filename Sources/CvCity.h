@@ -1665,6 +1665,7 @@ protected:
 	mutable bool* m_pabHasVicinityBonus;
 	mutable bool* m_pabHasRawVicinityBonus;
 
+	bool* m_hasBuildings;
 	bool* m_pabReligiouslyDisabledBuilding;
 	int* m_paiUnitCombatExtraStrength;
 	bool* m_pabAutomatedCanBuild;

@@ -78,6 +78,10 @@ CvCity::CvCity()
 	m_abRevealed = new bool[MAX_TEAMS];
 	m_abEspionageVisibility = new bool[MAX_TEAMS];
 
+	const int iNumBuildings = GC.getNumBuildingInfos();
+	m_hasBuildings = new bool[iNumBuildings];
+	m_pabReligiouslyDisabledBuilding = new bool[iNumBuildings];
+
 	m_paiFreeBonus = NULL;
 	m_paiNumBonuses = NULL;
 	m_paiProjectProduction = NULL;
@@ -125,7 +129,7 @@ CvCity::CvCity()
 	m_paiPromotionLineAfflictionAttackCommunicability = NULL;
 	m_ppaaiLocalSpecialistExtraYield = NULL;
 	m_ppaaiLocalSpecialistExtraCommerce = NULL;
-	m_pabReligiouslyDisabledBuilding = NULL;
+
 	m_paiSpecialistBannedCount = NULL;
 	m_paiDamageAttackingUnitCombatCount = NULL;
 	m_paiHealUnitCombatTypeVolume = NULL;
@@ -206,6 +210,9 @@ CvCity::~CvCity()
 	SAFE_DELETE_ARRAY(m_aiBonusCommerceRateModifier);
 	SAFE_DELETE_ARRAY(m_aiBonusCommercePercentChanges);
 	SAFE_DELETE_ARRAY(m_aiBuildingCommerceTechChange);
+
+	SAFE_DELETE_ARRAY(m_hasBuildings);
+	SAFE_DELETE_ARRAY(m_pabReligiouslyDisabledBuilding);
 }
 
 
@@ -430,7 +437,6 @@ void CvCity::uninit()
 	SAFE_DELETE_ARRAY(m_paiUnitCombatRepelAgainstModifier);
 	SAFE_DELETE_ARRAY(m_paiUnitCombatDefenseAgainstModifier);
 	SAFE_DELETE_ARRAY(m_paiPromotionLineAfflictionAttackCommunicability);
-	SAFE_DELETE_ARRAY(m_pabReligiouslyDisabledBuilding);
 	SAFE_DELETE_ARRAY(m_paiStartDeferredSectionNumBonuses);
 	SAFE_DELETE_ARRAY(m_paiSpecialistBannedCount);
 	SAFE_DELETE_ARRAY(m_paiDamageAttackingUnitCombatCount);
@@ -771,14 +777,12 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 			m_paiPromotionLineAfflictionAttackCommunicability[iI] = 0;
 		}
 
-		FAssertMsg((0 < GC.getNumBuildingInfos()), "GC.getNumBuildingInfos() is not greater than zero but an array is being allocated in CvCity::reset");
-		m_pabReligiouslyDisabledBuilding = new bool[GC.getNumBuildingInfos()];
-		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+		for (int iI = GC.getNumBuildingInfos() - 1; iI > -1; iI--)
 		{
+			m_hasBuildings[iI] = false;
 			m_pabReligiouslyDisabledBuilding[iI] = false;
 		}
 
-		FAssertMsg((0 < GC.getNumUnitInfos()), "GC.getNumUnitInfos() is not greater than zero but an array is being allocated in CvCity::reset");
 		m_paiUnitProduction = new int[GC.getNumUnitInfos()];
 		m_paiGreatPeopleUnitRate = new int[GC.getNumUnitInfos()];
 		m_paiGreatPeopleUnitProgress = new int[GC.getNumUnitInfos()];
@@ -14273,7 +14277,6 @@ void CvCity::setHasBuilding(const BuildingTypes eType, const bool bNewValue, con
 
 		if (bNewValue) // Building addition
 		{
-
 			processBuilding(eType, 1, false, true);
 		}
 		else // Building removal
@@ -17405,6 +17408,7 @@ void CvCity::read(FDataStreamBase* pStream)
 
 			if (eType != NO_BUILDING)
 			{
+				m_hasBuildings[eType] = true;
 				BuiltBuildingData data; 
 				data.eBuiltBy = (PlayerTypes)iPlayer;
 				data.iTimeBuilt = iTime;
@@ -24091,6 +24095,7 @@ void CvCity::alterBuildingLedger(const BuildingTypes eType, const bool bAdd, con
 	{
 		if (bAdd)
 		{
+			m_hasBuildings[eType] = true;
 			BuiltBuildingData data; 
 			data.eBuiltBy = eOwner;
 			data.iTimeBuilt = iTime;
@@ -24105,25 +24110,29 @@ void CvCity::alterBuildingLedger(const BuildingTypes eType, const bool bAdd, con
 	{
 		FErrorMsg("Trying to add a duplicate entry!");
 	}
-	else m_buildingLedger.erase(itr->first);
+	else 
+	{
+		m_hasBuildings[eType] = false;
+		m_buildingLedger.erase(itr->first);
+	}
 }
 
 bool CvCity::hasBuilding(const BuildingTypes eType) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eType);
-	return m_buildingLedger.find(eType) != m_buildingLedger.end();
+	return m_hasBuildings[eType];
 }
 
 int CvCity::getBuildingOriginalTime(const BuildingTypes eType) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eType);
-	std::map<BuildingTypes, BuiltBuildingData>::const_iterator itr = m_buildingLedger.find(eType);
-	return itr != m_buildingLedger.end() ? itr->second.iTimeBuilt : MIN_INT;
+	FAssert(m_hasBuildings[eType]);
+	return m_hasBuildings[eType] ? m_buildingLedger.find(eType)->second.iTimeBuilt : MIN_INT;
 }
 
 int CvCity::getBuildingOriginalOwner(const BuildingTypes eType) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eType);
-	std::map<BuildingTypes, BuiltBuildingData>::const_iterator itr = m_buildingLedger.find(eType);
-	return itr != m_buildingLedger.end() ? itr->second.eBuiltBy : NO_PLAYER;
+	FAssert(m_hasBuildings[eType]);
+	return m_hasBuildings[eType] ? m_buildingLedger.find(eType)->second.eBuiltBy : NO_PLAYER;
 }
