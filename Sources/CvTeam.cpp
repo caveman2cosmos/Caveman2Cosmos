@@ -845,24 +845,25 @@ void CvTeam::shareItems(TeamTypes eTeam)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(eTeam))
 		{
-			foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
+			foreach_(const CvCity* cityX, GET_PLAYER((PlayerTypes)iI).cities())
 			{
-				for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
+				foreach_(const BuildingTypes eTypeX, cityX->getHasBuildings())
 				{
-					if (pLoopCity->isActiveBuilding((BuildingTypes)iJ))
+					if (cityX->isDisabledBuilding(eTypeX))
 					{
-						if (GC.getBuildingInfo((BuildingTypes)iJ).isTeamShare())
+						continue;
+					}
+					if (GC.getBuildingInfo(eTypeX).isTeamShare())
+					{
+						for (int iK = 0; iK < MAX_PC_PLAYERS; iK++)
 						{
-							for (int iK = 0; iK < MAX_PC_PLAYERS; iK++)
+							if (GET_PLAYER((PlayerTypes)iK).isAliveAndTeam(getID()))
 							{
-								if (GET_PLAYER((PlayerTypes)iK).isAliveAndTeam(getID()))
-								{
-									GET_PLAYER((PlayerTypes)iK).processBuilding((BuildingTypes)iJ, 1, pLoopCity->area());
-								}
+								GET_PLAYER((PlayerTypes)iK).processBuilding(eTypeX, 1, cityX->area());
 							}
 						}
-						processBuilding((BuildingTypes)iJ, 1);
 					}
+					processBuilding(eTypeX, 1);
 				}
 			}
 		}

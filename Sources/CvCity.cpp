@@ -79,7 +79,7 @@ CvCity::CvCity()
 	m_abEspionageVisibility = new bool[MAX_TEAMS];
 
 	const int iNumBuildings = GC.getNumBuildingInfos();
-	m_hasBuildings = new bool[iNumBuildings];
+	m_bHasBuildings = new bool[iNumBuildings];
 	m_pabReligiouslyDisabledBuilding = new bool[iNumBuildings];
 
 	m_paiFreeBonus = NULL;
@@ -211,7 +211,7 @@ CvCity::~CvCity()
 	SAFE_DELETE_ARRAY(m_aiBonusCommercePercentChanges);
 	SAFE_DELETE_ARRAY(m_aiBuildingCommerceTechChange);
 
-	SAFE_DELETE_ARRAY(m_hasBuildings);
+	SAFE_DELETE_ARRAY(m_bHasBuildings);
 	SAFE_DELETE_ARRAY(m_pabReligiouslyDisabledBuilding);
 }
 
@@ -694,6 +694,7 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 		m_abEspionageVisibility[iI] = false;
 	}
 
+	m_hasBuildings.clear();
 	m_vDisabledBuildings.clear();
 	m_vFreeBuildings.clear();
 	m_freeAreaBuildingCount.clear();
@@ -779,7 +780,7 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 
 		for (int iI = GC.getNumBuildingInfos() - 1; iI > -1; iI--)
 		{
-			m_hasBuildings[iI] = false;
+			m_bHasBuildings[iI] = false;
 			m_pabReligiouslyDisabledBuilding[iI] = false;
 		}
 
@@ -1104,8 +1105,7 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 	setCultureLevel(NO_CULTURELEVEL, false);
 	clearCultureDistanceCache();
 
-	const int iNumBuildingInfos = GC.getNumBuildingInfos();
-	for (int iI = 0; iI < iNumBuildingInfos; iI++)
+	for (int iI = 0, iNum = GC.getNumBuildingInfos(); iI < iNum; iI++)
 	{
 		changeHasBuilding((BuildingTypes)iI, false);
 	}
@@ -3268,11 +3268,11 @@ void CvCity::addProductionExperience(CvUnit* pUnit, bool bConscript)
 		pUnit->changeExperience(getProductionExperience(pUnit->getUnitType()) / ((bConscript) ? 2 : 1));
 	}
 
-	for (int iI = GC.getNumBuildingInfos() -1; iI > -1; iI--)
+	foreach_(const BuildingTypes eType, getHasBuildings())
 	{
-		if (isActiveBuilding(static_cast<BuildingTypes>(iI)))
+		if (!isDisabledBuilding(eType))
 		{
-			assignPromotionsFromBuildingChecked(GC.getBuildingInfo(static_cast<BuildingTypes>(iI)), pUnit);
+			assignPromotionsFromBuildingChecked(GC.getBuildingInfo(eType), pUnit);
 		}
 	}
 }
@@ -4387,14 +4387,13 @@ void CvCity::conscript(bool bOnCapture)
 int CvCity::getBonusHealth(BonusTypes eBonus) const
 {
 	PROFILE_EXTRA_FUNC();
-	const int iNumBuildingInfos = GC.getNumBuildingInfos();
 	int iHealth = GC.getBonusInfo(eBonus).getHealth();
 
-	for (int iI = 0; iI < iNumBuildingInfos; iI++)
+	foreach_(const BuildingTypes eTypeX, getHasBuildings())
 	{
-		if (hasFullyActiveBuilding((BuildingTypes)iI))
+		if (!isReligiouslyLimitedBuilding(eTypeX) && !isDisabledBuilding(eTypeX))
 		{
-			iHealth += GC.getBuildingInfo((BuildingTypes)iI).getBonusHealthChanges().getValue(eBonus);
+			iHealth += GC.getBuildingInfo(eTypeX).getBonusHealthChanges().getValue(eBonus);
 		}
 	}
 	return iHealth;
@@ -4404,14 +4403,13 @@ int CvCity::getBonusHealth(BonusTypes eBonus) const
 int CvCity::getBonusHappiness(BonusTypes eBonus) const
 {
 	PROFILE_EXTRA_FUNC();
-	const int iNumBuildingInfos = GC.getNumBuildingInfos();
 	int iHappiness = GC.getBonusInfo(eBonus).getHappiness();
 
-	for (int iI = 0; iI < iNumBuildingInfos; iI++)
+	foreach_(const BuildingTypes eTypeX, getHasBuildings())
 	{
-		if (hasFullyActiveBuilding((BuildingTypes)iI))
+		if (!isReligiouslyLimitedBuilding(eTypeX) && !isDisabledBuilding(eTypeX))
 		{
-			iHappiness += GC.getBuildingInfo((BuildingTypes)iI).getBonusHappinessChanges().getValue(eBonus);
+			iHappiness += GC.getBuildingInfo(eTypeX).getBonusHappinessChanges().getValue(eBonus);
 		}
 	}
 	if (hasBonus(eBonus))
@@ -4437,12 +4435,13 @@ int CvCity::getBonusHappiness(BonusTypes eBonus) const
 int CvCity::getBonusPower(BonusTypes eBonus) const
 {
 	PROFILE_EXTRA_FUNC();
-	const int iNumBuildingInfos = GC.getNumBuildingInfos();
 
 	int iCount = 0;
-	for (int iI = 0; iI < iNumBuildingInfos; iI++)
+	foreach_(const BuildingTypes eTypeX, getHasBuildings())
 	{
-		if (hasFullyActiveBuilding((BuildingTypes)iI) && GC.getBuildingInfo((BuildingTypes)iI).getPowerBonus() == eBonus)
+		if (!isReligiouslyLimitedBuilding(eTypeX)
+		&& GC.getBuildingInfo(eTypeX).getPowerBonus() == eBonus
+		&& !isDisabledBuilding(eTypeX))
 		{
 			iCount++;
 		}
@@ -4454,14 +4453,13 @@ int CvCity::getBonusPower(BonusTypes eBonus) const
 int CvCity::getBonusYieldRateModifier(YieldTypes eIndex, BonusTypes eBonus) const
 {
 	PROFILE_EXTRA_FUNC();
-	const int iNumBuildingInfos = GC.getNumBuildingInfos();
 
 	int iModifier = 0;
-	for (int iI = 0; iI < iNumBuildingInfos; iI++)
+	foreach_(const BuildingTypes eTypeX, getHasBuildings())
 	{
-		if (hasFullyActiveBuilding((BuildingTypes)iI))
+		if (!isReligiouslyLimitedBuilding(eTypeX) && !isDisabledBuilding(eTypeX))
 		{
-			iModifier += GC.getBuildingInfo((BuildingTypes)iI).getBonusYieldModifier(eBonus, eIndex);
+			iModifier += GC.getBuildingInfo(eTypeX).getBonusYieldModifier(eBonus, eIndex);
 		}
 	}
 	return iModifier;
@@ -4470,17 +4468,16 @@ int CvCity::getBonusYieldRateModifier(YieldTypes eIndex, BonusTypes eBonus) cons
 void CvCity::processBonus(BonusTypes eBonus, int iChange)
 {
 	PROFILE_FUNC();
-	const int iNumBuildingInfos = GC.getNumBuildingInfos();
 	{
 		const int iBaseValue = GC.getBonusInfo(eBonus).getHealth();
 		int iGoodValue = std::max(0, iBaseValue);
 		int iBadValue = std::min(0, iBaseValue);
 
-		for (int iI = 0; iI < iNumBuildingInfos; iI++)
+		foreach_(const BuildingTypes eTypeX, getHasBuildings())
 		{
-			if (hasFullyActiveBuilding((BuildingTypes)iI))
+			if (!isReligiouslyLimitedBuilding(eTypeX) && !isDisabledBuilding(eTypeX))
 			{
-				const int iValue = GC.getBuildingInfo((BuildingTypes)iI).getBonusHealthChanges().getValue(eBonus);
+				const int iValue = GC.getBuildingInfo(eTypeX).getBonusHealthChanges().getValue(eBonus);
 
 				if (iValue >= 0)
 				{
@@ -4499,11 +4496,11 @@ void CvCity::processBonus(BonusTypes eBonus, int iChange)
 		int iGoodValue = std::max(0, iBaseValue);
 		int iBadValue = std::min(0, iBaseValue);
 
-		for (int iI = 0; iI < iNumBuildingInfos; iI++)
+		foreach_(const BuildingTypes eTypeX, getHasBuildings())
 		{
-			if (hasFullyActiveBuilding((BuildingTypes)iI))
+			if (!isReligiouslyLimitedBuilding(eTypeX) && !isDisabledBuilding(eTypeX))
 			{
-				const int iValue = GC.getBuildingInfo((BuildingTypes)iI).getBonusHappinessChanges().getValue(eBonus);
+				const int iValue = GC.getBuildingInfo(eTypeX).getBonusHappinessChanges().getValue(eBonus);
 
 				if (iValue >= 0)
 				{
@@ -4552,14 +4549,15 @@ void CvCity::processBonus(BonusTypes eBonus, int iChange)
 		changeBonusCommerceRateModifier(((CommerceTypes)iI), (getBonusCommerceRateModifier(((CommerceTypes)iI), eBonus) * iChange));
 		changeBonusCommercePercentChanges(((CommerceTypes)iI), (getBonusCommercePercentChanges(((CommerceTypes)iI), eBonus) * iChange));
 	}
-	for (int iI = 0; iI < iNumBuildingInfos; iI++)
+	foreach_(const BuildingTypes eTypeX, getHasBuildings())
 	{
-		if (hasFullyActiveBuilding((BuildingTypes)iI)
-		&& GC.getBuildingInfo((BuildingTypes)iI).getVicinityBonusYieldChanges(NO_BONUS, NO_YIELD) != 0)
+		if (!isReligiouslyLimitedBuilding(eTypeX)
+		&& GC.getBuildingInfo(eTypeX).getVicinityBonusYieldChanges(NO_BONUS, NO_YIELD) != 0
+		&& !isDisabledBuilding(eTypeX))
 		{
 			for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 			{
-				updateYieldRate((BuildingTypes)iI, (YieldTypes)iJ, getBuildingYieldChange((BuildingTypes)iI, (YieldTypes)iJ) + GC.getBuildingInfo((BuildingTypes)iI).getBonusYieldChanges(eBonus, iJ) * iChange);
+				updateYieldRate(eTypeX, (YieldTypes)iJ, getBuildingYieldChange(eTypeX, (YieldTypes)iJ) + GC.getBuildingInfo(eTypeX).getBonusYieldChanges(eBonus, iJ) * iChange);
 			}
 		}
 	}
@@ -4956,11 +4954,11 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 			{
 				int iNewMinDefenseLevel = 0;
 
-				for (int iJ = 0; iJ < GC.getNumBuildingInfos(); ++iJ)
+				foreach_(const BuildingTypes eTypeX, getHasBuildings())
 				{
-					if (isActiveBuilding((BuildingTypes)iJ))
+					if (!isDisabledBuilding(eTypeX))
 					{
-						const int iLevel = GC.getBuildingInfo((BuildingTypes)iJ).getNoEntryDefenseLevel();
+						const int iLevel = GC.getBuildingInfo(eTypeX).getNoEntryDefenseLevel();
 
 						if (iLevel > iNewMinDefenseLevel)
 						{
@@ -6633,9 +6631,9 @@ int CvCity::unitRevoltRiskModifier(PlayerTypes eCultureAttacker) const
 bool CvCity::hasActiveWorldWonder() const
 {
 	PROFILE_EXTRA_FUNC();
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	foreach_(const BuildingTypes eType, getHasBuildings())
 	{
-		if (isWorldWonder((BuildingTypes)iI) && isActiveBuilding((BuildingTypes)iI))
+		if (isWorldWonder(eType) && !isDisabledBuilding(eType))
 		{
 			return true;
 		}
@@ -6648,9 +6646,9 @@ int CvCity::getNumActiveWorldWonders() const
 {
 	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	foreach_(const BuildingTypes eType, getHasBuildings())
 	{
-		if (isWorldWonder((BuildingTypes)iI) && isActiveBuilding((BuildingTypes)iI))
+		if (isWorldWonder(eType) && !isDisabledBuilding(eType))
 		{
 			iCount++;
 		}
@@ -7903,12 +7901,13 @@ int CvCity::calculateBuildingMaintenanceTimes100() const
 	{
 		int iResult = 0;
 
-		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+		foreach_(const BuildingTypes eTypeX, getHasBuildings())
 		{
-			const BuildingTypes eBuilding = static_cast<BuildingTypes>(iI);
-			if (hasFullyActiveBuilding(eBuilding) && GC.getBuildingInfo(eBuilding).getCommerceChange(COMMERCE_GOLD) < 0)
+			if (GC.getBuildingInfo(eTypeX).getCommerceChange(COMMERCE_GOLD) < 0
+			&& !isReligiouslyLimitedBuilding(eTypeX)
+			&& !isDisabledBuilding(eTypeX))
 			{
-				iResult -= GC.getBuildingInfo(eBuilding).getCommerceChange(COMMERCE_GOLD);
+				iResult -= GC.getBuildingInfo(eTypeX).getCommerceChange(COMMERCE_GOLD);
 			}
 		}
 		// Rebels pay less maintenance
@@ -8549,11 +8548,11 @@ void CvCity::updateExtraBuildingHappiness(bool bLimited)
 	int iNewExtraBuildingGoodHappiness = 0;
 	int iNewExtraBuildingBadHappiness = 0;
 
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	foreach_(const BuildingTypes eTypeX, getHasBuildings())
 	{
-		if (hasFullyActiveBuilding((BuildingTypes)iI))
+		if (!isReligiouslyLimitedBuilding(eTypeX) && !isDisabledBuilding(eTypeX))
 		{
-			int iChange = GET_PLAYER(getOwner()).getExtraBuildingHappiness((BuildingTypes)iI);
+			int iChange = GET_PLAYER(getOwner()).getExtraBuildingHappiness(eTypeX);
 
 			if (iChange > 0)
 			{
@@ -8706,11 +8705,11 @@ int CvCity::getAdditionalHappinessByCivic(CivicTypes eCivic, bool bDifferenceToC
 	//#1.d: BuildingHappinessChanges
 	if (kCivic.isAnyBuildingHappinessChange())
 	{
-		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+		foreach_(const BuildingTypes eTypeX, getHasBuildings())
 		{
-			if (isActiveBuilding((BuildingTypes)iI))
+			if (!isDisabledBuilding(eTypeX))
 			{
-				iHappy += kCivic.getBuildingHappinessChanges(iI);
+				iHappy += kCivic.getBuildingHappinessChanges(eTypeX);
 			}
 		}
 	}
@@ -8842,11 +8841,11 @@ int CvCity::getAdditionalHealthByCivic(CivicTypes eCivic, int& iGood, int& iBad,
 	//#2.d: BuildingHealthChanges
 	if (kCivic.isAnyBuildingHealthChange())
 	{
-		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+		foreach_(const BuildingTypes eTypeX, getHasBuildings())
 		{
-			if (isActiveBuilding((BuildingTypes)iI))
+			if (!isDisabledBuilding(eTypeX))
 			{
-				int iTempHealth = kCivic.getBuildingHealthChanges(iI);
+				int iTempHealth = kCivic.getBuildingHealthChanges(eTypeX);
 
 				if (iTempHealth > 0)
 				{
@@ -9281,11 +9280,11 @@ void CvCity::updateExtraBuildingHealth(bool bLimited)
 	int iNewExtraBuildingGoodHealth = 0;
 	int iNewExtraBuildingBadHealth = 0;
 
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	foreach_(const BuildingTypes eTypeX, getHasBuildings())
 	{
-		if (hasFullyActiveBuilding((BuildingTypes)iI))
+		if (!isReligiouslyLimitedBuilding(eTypeX) && !isDisabledBuilding(eTypeX))
 		{
-			int iChange = GET_PLAYER(getOwner()).getExtraBuildingHealth((BuildingTypes)iI);
+			int iChange = GET_PLAYER(getOwner()).getExtraBuildingHealth(eTypeX);
 
 			if (iChange > 0)
 			{
@@ -11019,11 +11018,11 @@ int CvCity::getAdditionalBaseYieldModifierByBuilding(YieldTypes eYield, Building
 	}
 	else if (kBuilding.isPower() || (kBuilding.getPowerBonus() != NO_BONUS && hasBonus((BonusTypes)kBuilding.getPowerBonus())))
 	{
-		for (int i = 0; i < GC.getNumBuildingInfos(); i++)
+		foreach_(const BuildingTypes eTypeX, getHasBuildings())
 		{
-			if (isActiveBuilding((BuildingTypes)i))
+			if (!isDisabledBuilding(eTypeX))
 			{
-				iYieldMod += GC.getBuildingInfo((BuildingTypes)i).getPowerYieldModifier(eYield);
+				iYieldMod += GC.getBuildingInfo(eTypeX).getPowerYieldModifier(eYield);
 			}
 		}
 	}
@@ -12048,8 +12047,8 @@ int CvCity::getBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eB
 	}
 
 	if (GC.getBuildingInfo(eBuilding).getCommerceChangeDoubleTime(eIndex) != 0
-	&& getBuildingOriginalTime(eBuilding) != MIN_INT
-	&& GC.getGame().getGameTurnYear() - getBuildingOriginalTime(eBuilding) >= GC.getBuildingInfo(eBuilding).getCommerceChangeDoubleTime(eIndex))
+	&& getBuildingData(eBuilding).iTimeBuilt != MIN_INT
+	&& GC.getGame().getGameTurnYear() - getBuildingData(eBuilding).iTimeBuilt >= GC.getBuildingInfo(eBuilding).getCommerceChangeDoubleTime(eIndex))
 	{
 		iCommerce *= 2;
 	}
@@ -14058,20 +14057,19 @@ void CvCity::changeUnitCombatFreeExperience(UnitCombatTypes eIndex, int iChange)
 	m_paiUnitCombatFreeExperience[eIndex] += iChange;
 }
 
-bool CvCity::isFreePromotion(PromotionTypes eIndex) const
+bool CvCity::isFreePromotion(PromotionTypes ePromo) const
 {
 	PROFILE_EXTRA_FUNC();
-	for (int iI = GC.getNumBuildingInfos() - 1; iI > -1; iI--)
+	foreach_(const BuildingTypes eTypeX, getHasBuildings())
 	{
-		if (!isActiveBuilding(static_cast<BuildingTypes>(iI)))
+		if (isDisabledBuilding(eTypeX))
 		{
 			continue;
 		}
-		const CvBuildingInfo& building = GC.getBuildingInfo(static_cast<BuildingTypes>(iI));
 
-		foreach_(const FreePromoTypes& freePromoType, building.getFreePromoTypes())
+		foreach_(const FreePromoTypes& freePromoType, GC.getBuildingInfo(eTypeX).getFreePromoTypes())
 		{
-			if (eIndex == freePromoType.ePromotion)
+			if (ePromo == freePromoType.ePromotion)
 			{
 				// Toffer - This should be expanded to evaluate specific units and unitinfos
 				if (!freePromoType.m_pExprFreePromotionCondition)
@@ -14294,11 +14292,12 @@ void CvCity::setHasBuilding(const BuildingTypes eType, const bool bNewValue, con
 
 			//Remove any extensions of this building
 			std::vector<BuildingTypes> temp;
-			for (std::map<BuildingTypes, BuiltBuildingData>::const_iterator itr = m_buildingLedger.begin(); itr != m_buildingLedger.end(); ++itr)
+
+			foreach_(const BuildingTypes eTypeX, getHasBuildings())
 			{
-				if (GC.getBuildingInfo(itr->first).getExtendsBuilding() == eType)
+				if (GC.getBuildingInfo(eTypeX).getExtendsBuilding() == eType)
 				{
-					temp.push_back(itr->first);
+					temp.push_back(eTypeX);
 				}
 			}
 			foreach_(const BuildingTypes eType, temp)
@@ -14367,23 +14366,23 @@ void CvCity::handleBuildingCounts(const BuildingTypes eBuilding, const int iChan
 
 
 // Toffer - Function added only for readability reasons.
-void CvCity::setupBuilding(const CvBuildingInfo& kBuilding, const BuildingTypes eBuilding, const bool bNewValue, const bool bFirst)
+void CvCity::setupBuilding(const CvBuildingInfo& kBuilding, const BuildingTypes eType, const bool bNewValue, const bool bFirst)
 {
 	PROFILE_EXTRA_FUNC();
 	const int iChange = bNewValue ? 1 : -1;
 
-	handleBuildingCounts(eBuilding, iChange, isLimitedWonder(eBuilding) && !kBuilding.isNoLimit());
+	handleBuildingCounts(eType, iChange, isLimitedWonder(eType) && !kBuilding.isNoLimit());
 
 	if (!bNewValue) // Building removal
 	{
-		if (!isWorldWonder(eBuilding)) // World wonders can only be built once, so the count is essential to keep track of.
+		if (!isWorldWonder(eType)) // World wonders can only be built once, so the count is essential to keep track of.
 		{
-			GC.getGame().changeNumBuildings(eBuilding, iChange);
+			GC.getGame().changeNumBuildings(eType, iChange);
 		}
 	}
 	else // Building addition
 	{
-		GC.getGame().changeNumBuildings(eBuilding, iChange);
+		GC.getGame().changeNumBuildings(eType, iChange);
 
 		if (kBuilding.needStateReligionInCity() && kBuilding.getVoteSourceType() > -1)
 		{
@@ -14503,7 +14502,7 @@ void CvCity::setupBuilding(const CvBuildingInfo& kBuilding, const BuildingTypes 
 					}
 				}
 
-				if (isWorldWonder(eBuilding))
+				if (isWorldWonder(eType))
 				{
 					GC.getGame().addReplayMessage(
 						REPLAY_MESSAGE_MAJOR_EVENT, getOwner(),
@@ -14545,9 +14544,9 @@ void CvCity::setupBuilding(const CvBuildingInfo& kBuilding, const BuildingTypes 
 		if (kBuilding.isAreaBorderObstacle())
 		{
 			bool bHas = false;
-			for (int iI = GC.getNumBuildingInfos() - 1; iI > -1; iI--)
+			foreach_(const BuildingTypes eTypeX, getHasBuildings())
 			{
-				if (eBuilding != iI && GC.getBuildingInfo((BuildingTypes)iI).isAreaBorderObstacle() && isActiveBuilding((BuildingTypes)iI))
+				if (eType != eTypeX && GC.getBuildingInfo(eTypeX).isAreaBorderObstacle() && !isDisabledBuilding(eTypeX))
 				{
 					bHas = true;
 					break;
@@ -14590,9 +14589,9 @@ bool CvCity::processGreatWall(bool bIn, bool bForce, bool bSeeded)
 	bool bHasGreatWall = false;
 	if (bIn || !bSeeded)
 	{
-		for (int iI = GC.getNumBuildingInfos() - 1; iI > -1; iI++)
+		foreach_(const BuildingTypes eTypeX, getHasBuildings())
 		{
-			if (isActiveBuilding((BuildingTypes)iI) && GC.getBuildingInfo((BuildingTypes)iI).isAreaBorderObstacle())
+			if (GC.getBuildingInfo(eTypeX).isAreaBorderObstacle() && !isDisabledBuilding(eTypeX))
 			{
 				bHasGreatWall = true;
 				break;
@@ -14843,20 +14842,20 @@ void CvCity::checkReligiousDisabling(const BuildingTypes eBuilding, const CvPlay
 void CvCity::applyReligionModifiers(const ReligionTypes eIndex, const bool bValue)
 {
 	PROFILE_EXTRA_FUNC();
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	foreach_(const BuildingTypes eTypeX, getHasBuildings())
 	{
-		if (GC.getBuildingInfo((BuildingTypes)iI).getPrereqReligion() == eIndex)
+		if (GC.getBuildingInfo(eTypeX).getPrereqReligion() == eIndex)
 		{
 			if (bValue)
 			{
-				if (isDisabledBuilding((BuildingTypes)iI))
+				if (isDisabledBuilding(eTypeX))
 				{
-					setDisabledBuilding((BuildingTypes)iI, false);
+					setDisabledBuilding(eTypeX, false);
 				}
 			}
-			else if (isActiveBuilding((BuildingTypes)iI))
+			else if (!isDisabledBuilding(eTypeX))
 			{
-				setDisabledBuilding((BuildingTypes)iI, true);
+				setDisabledBuilding(eTypeX, true);
 			}
 		}
 	}
@@ -15048,20 +15047,20 @@ bool CvCity::isHasCorporation(CorporationTypes eIndex) const
 void CvCity::applyCorporationModifiers(CorporationTypes eIndex, bool bValue)
 {
 	PROFILE_EXTRA_FUNC();
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	foreach_(const BuildingTypes eTypeX, getHasBuildings())
 	{
-		if (GC.getBuildingInfo((BuildingTypes)iI).getPrereqCorporation() == eIndex)
+		if (GC.getBuildingInfo(eTypeX).getPrereqCorporation() == eIndex)
 		{
 			if (bValue)
 			{
-				if (isDisabledBuilding((BuildingTypes)iI))
+				if (isDisabledBuilding(eTypeX))
 				{
-					setDisabledBuilding((BuildingTypes)iI, false);
+					setDisabledBuilding(eTypeX, false);
 				}
 			}
-			else if (isActiveBuilding((BuildingTypes)iI))
+			else if (!isDisabledBuilding(eTypeX))
 			{
-				setDisabledBuilding((BuildingTypes)iI, true);
+				setDisabledBuilding(eTypeX, true);
 			}
 		}
 	}
@@ -16541,16 +16540,16 @@ void CvCity::doReligion()
 								setHasReligion(eReligionX, false, true, false);
 
 								std::vector<BuildingTypes> temp;
-								for (std::map<BuildingTypes, BuiltBuildingData>::const_iterator itr = m_buildingLedger.begin(); itr != m_buildingLedger.end(); ++itr)
+								foreach_(const BuildingTypes eTypeX, getHasBuildings())
 								{
-									if (GC.getBuildingInfo(itr->first).getPrereqReligion() == iReligionX)
+									if (GC.getBuildingInfo(eTypeX).getPrereqReligion() == iReligionX)
 									{
-										temp.push_back(itr->first);
+										temp.push_back(eTypeX);
 									}
 								}
-								foreach_(const BuildingTypes eType, temp)
+								foreach_(const BuildingTypes eTypeX, temp)
 								{
-									changeHasBuilding(eType, false);
+									changeHasBuilding(eTypeX, false);
 								}
 								break;
 							}
@@ -16687,15 +16686,18 @@ void CvCity::doGreatPeople()
 void CvCity::doMeltdown()
 {
 	PROFILE_EXTRA_FUNC();
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+
+	std::vector<BuildingTypes> temp;
+
+	foreach_(const BuildingTypes eType, getHasBuildings())
 	{
-		if (isActiveBuilding((BuildingTypes)iI))
+		if (!isDisabledBuilding(eType))
 		{
-			const int iOdds = GC.getBuildingInfo((BuildingTypes)iI).getNukeExplosionRand();
+			const int iOdds = GC.getBuildingInfo(eType).getNukeExplosionRand();
 
 			if (iOdds > 0 && GC.getGame().getSorenRandNum(10000, "Meltdown!!!") < iOdds)
 			{
-				changeHasBuilding((BuildingTypes)iI, false);
+				temp.push_back(eType);
 
 				plot()->nukeExplosion(1);
 				{
@@ -16706,6 +16708,10 @@ void CvCity::doMeltdown()
 				break;
 			}
 		}
+	}
+	foreach_(const BuildingTypes eType, temp)
+	{
+		changeHasBuilding(eType, false);
 	}
 }
 
@@ -17407,8 +17413,10 @@ void CvCity::read(FDataStreamBase* pStream)
 
 			if (eType != NO_BUILDING)
 			{
-				m_hasBuildings[eType] = true;
-				BuiltBuildingData data; 
+				m_bHasBuildings[eType] = true; // quick lookup
+				m_hasBuildings.push_back(eType); // quick iteration
+				// compressed data all buildings have
+				BuiltBuildingData data;
 				data.eBuiltBy = (PlayerTypes)iPlayer;
 				data.iTimeBuilt = iTime;
 				m_buildingLedger.insert(std::make_pair(eType, data));
@@ -17915,6 +17923,7 @@ void CvCity::write(FDataStreamBase* pStream)
 			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", it->second.eBuiltBy, "BuildingLedgerBuiltBy");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", it->second.iTimeBuilt, "BuildingLedgerTimeBuilt");
 		}
+
 		// Unit
 		WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (short)m_unitProductionMod.size(), "UnitProductionModSize");
 		for (std::map<short, int>::const_iterator it = m_unitProductionMod.begin(), itEnd = m_unitProductionMod.end(); it != itEnd; ++it)
@@ -17922,6 +17931,7 @@ void CvCity::write(FDataStreamBase* pStream)
 			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", it->first, "UnitProductionModType");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", it->second, "UnitProductionMod");
 		}
+
 		// Terrains
 		WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (short)m_terrainYieldChanges.size(), "TerrainYieldChangesSize");
 		for (std::map<short, YieldArray>::const_iterator it = m_terrainYieldChanges.begin(), itEnd = m_terrainYieldChanges.end(); it != itEnd; ++it)
@@ -17969,14 +17979,15 @@ void CvCity::getVisibleBuildings(std::list<BuildingTypes>& kChosenVisible, int& 
 
 	const int iShowFlags = GC.getSHOW_BUILDINGS_LEVEL();
 	std::vector<BuildingTypes> kVisible;
-	for (std::map<BuildingTypes, BuiltBuildingData>::const_iterator itr = m_buildingLedger.begin(); itr != m_buildingLedger.end(); ++itr)
+
+	foreach_(const BuildingTypes eType, getHasBuildings())
 	{
 		bool bValid = false;
-		const CvBuildingInfo& kBuilding = GC.getBuildingInfo(itr->first);
+		const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eType);
 
 		if (kBuilding.getNotShowInCity()) continue;
 
-		const bool bIsWonder = isLimitedWonder(itr->first);
+		const bool bIsWonder = isLimitedWonder(eType);
 		const bool bIsDefense = (kBuilding.getDefenseModifier() > 0);
 
 		if ((iShowFlags & SHOW_BUILDINGS_WONDERS) != 0)
@@ -17997,7 +18008,7 @@ void CvCity::getVisibleBuildings(std::list<BuildingTypes>& kChosenVisible, int& 
 
 		if (bValid)
 		{
-			kVisible.push_back(itr->first);
+			kVisible.push_back(eType);
 		}
 	}
 
@@ -19812,11 +19823,11 @@ int CvCity::getBonusCommerceRateModifier(CommerceTypes eIndex, BonusTypes eBonus
 {
 	PROFILE_EXTRA_FUNC();
 	int iModifier = 0;
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	foreach_(const BuildingTypes eTypeX, getHasBuildings())
 	{
-		if (hasFullyActiveBuilding((BuildingTypes)iI))
+		if (!isReligiouslyLimitedBuilding(eTypeX) && !isDisabledBuilding(eTypeX))
 		{
-			iModifier += GC.getBuildingInfo((BuildingTypes)iI).getBonusCommerceModifier(eBonus, eIndex);
+			iModifier += GC.getBuildingInfo(eTypeX).getBonusCommerceModifier(eBonus, eIndex);
 		}
 	}
 	return iModifier;
@@ -19844,11 +19855,11 @@ int CvCity::getBonusCommercePercentChanges(CommerceTypes eIndex, BonusTypes eBon
 {
 	PROFILE_EXTRA_FUNC();
 	int iPercentCommerce = 0;
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	foreach_(const BuildingTypes eTypeX, getHasBuildings())
 	{
-		if (hasFullyActiveBuilding((BuildingTypes)iI))
+		if (!isReligiouslyLimitedBuilding(eTypeX) && !isDisabledBuilding(eTypeX))
 		{
-			iPercentCommerce += GC.getBuildingInfo((BuildingTypes)iI).getBonusCommercePercentChanges(eBonus, eIndex);
+			iPercentCommerce += GC.getBuildingInfo(eTypeX).getBonusCommercePercentChanges(eBonus, eIndex);
 		}
 	}
 	return iPercentCommerce;
@@ -19896,11 +19907,11 @@ int CvCity::getBuildingCommerceTechChange(CommerceTypes eIndex, TechTypes eTech)
 {
 	PROFILE_EXTRA_FUNC();
 	int iCommerce100 = 0;
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	foreach_(const BuildingTypes eTypeX, getHasBuildings())
 	{
-		if (hasFullyActiveBuilding((BuildingTypes)iI))
+		if (!isReligiouslyLimitedBuilding(eTypeX) && !isDisabledBuilding(eTypeX))
 		{
-			foreach_(const TechCommerceArray& pair, GC.getBuildingInfo((BuildingTypes)iI).getTechCommerceChanges100())
+			foreach_(const TechCommerceArray& pair, GC.getBuildingInfo(eTypeX).getTechCommerceChanges100())
 			{
 				if (eTech == pair.first)
 				{
@@ -19917,11 +19928,11 @@ int CvCity::getBuildingCommerceTechModifier(CommerceTypes eYield, TechTypes eTec
 {
 	PROFILE_EXTRA_FUNC();
 	int iMod = 0;
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	foreach_(const BuildingTypes eTypeX, getHasBuildings())
 	{
-		if (hasFullyActiveBuilding((BuildingTypes)iI))
+		if (!isReligiouslyLimitedBuilding(eTypeX) && !isDisabledBuilding(eTypeX))
 		{
-			foreach_(const TechCommerceArray& pair, GC.getBuildingInfo((BuildingTypes)iI).getTechCommerceModifiers())
+			foreach_(const TechCommerceArray& pair, GC.getBuildingInfo(eTypeX).getTechCommerceModifiers())
 			{
 				if (eTech == pair.first)
 				{
@@ -19938,11 +19949,11 @@ int CvCity::getBuildingYieldTechChange(YieldTypes eYield, TechTypes eTech) const
 {
 	PROFILE_EXTRA_FUNC();
 	int iYield100 = 0;
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	foreach_(const BuildingTypes eTypeX, getHasBuildings())
 	{
-		if (hasFullyActiveBuilding((BuildingTypes)iI))
+		if (!isReligiouslyLimitedBuilding(eTypeX) && !isDisabledBuilding(eTypeX))
 		{
-			foreach_(const TechArray& pair, GC.getBuildingInfo((BuildingTypes)iI).getTechYieldChanges100())
+			foreach_(const TechArray& pair, GC.getBuildingInfo(eTypeX).getTechYieldChanges100())
 			{
 				if (eTech == pair.first)
 				{
@@ -19959,11 +19970,11 @@ int CvCity::getBuildingYieldTechModifier(YieldTypes eYield, TechTypes eTech) con
 {
 	PROFILE_EXTRA_FUNC();
 	int iMod = 0;
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	foreach_(const BuildingTypes eTypeX, getHasBuildings())
 	{
-		if (hasFullyActiveBuilding((BuildingTypes)iI))
+		if (!isReligiouslyLimitedBuilding(eTypeX) && !isDisabledBuilding(eTypeX))
 		{
-			foreach_(const TechArray& pair, GC.getBuildingInfo((BuildingTypes)iI).getTechYieldModifiers())
+			foreach_(const TechArray& pair, GC.getBuildingInfo(eTypeX).getTechYieldModifiers())
 			{
 				if (eTech == pair.first)
 				{
@@ -20414,7 +20425,7 @@ void CvCity::checkBuildings(bool bAlertOwner)
 		eStateReligion = player.getStateReligion();
 	}
 
-	for (std::map<BuildingTypes, BuiltBuildingData>::const_iterator itr = m_buildingLedger.begin(); itr != m_buildingLedger.end(); ++itr)
+	foreach_(const BuildingTypes eType, getHasBuildings())
 	{
 		bool bIsReplaced = false;
 		bool bDisableBuilding = false;
@@ -20428,7 +20439,7 @@ void CvCity::checkBuildings(bool bAlertOwner)
 		bool bPopulationTooHigh = false;
 		bool bReligionBanned = false;
 
-		const CvBuildingInfo& kBuilding = GC.getBuildingInfo(itr->first);
+		const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eType);
 
 		while (true) // This loop will never actually loop.
 		{
@@ -20565,7 +20576,7 @@ void CvCity::checkBuildings(bool bAlertOwner)
 			}
 
 			/* Check Civic Requirements */
-			if (kBuilding.isRequiresActiveCivics() && !player.hasValidCivics(itr->first))
+			if (kBuilding.isRequiresActiveCivics() && !player.hasValidCivics(eType))
 			{
 				bDisableBuilding = true;
 				bRequiresCivics = true;
@@ -20631,11 +20642,11 @@ void CvCity::checkBuildings(bool bAlertOwner)
 		}
 		if (bIsReplaced) continue; // Replacement disabling/enabling is handled in changeHasBuilding(...).
 
-		if (isDisabledBuilding(itr->first))
+		if (isDisabledBuilding(eType))
 		{
 			if (!bDisableBuilding)
 			{
-				setDisabledBuilding(itr->first, false);
+				setDisabledBuilding(eType, false);
 
 				if (bAlertOwner)
 				{
@@ -20649,7 +20660,7 @@ void CvCity::checkBuildings(bool bAlertOwner)
 		}
 		else if (bDisableBuilding)
 		{
-			setDisabledBuilding(itr->first, true);
+			setDisabledBuilding(eType, true);
 
 			if (bAlertOwner)
 			{
@@ -21041,7 +21052,7 @@ bool CvCity::isDisabledBuilding(const short iIndex) const
 }
 
 
-// SAVEBREAK - Toffer - Change m_pabReligiouslyDisabledBuilding to vector containing eIndex elements.
+// @SAVEBREAK - Toffer - Change m_pabReligiouslyDisabledBuilding to vector containing eIndex elements.
 bool CvCity::isReligiouslyLimitedBuilding(BuildingTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eIndex);
@@ -22157,9 +22168,9 @@ void CvCity::recalculateModifiers()
 	{
 		std::vector<BuildingTypes> newBuildings;
 
-		for (std::map<BuildingTypes, BuiltBuildingData>::const_iterator itr = m_buildingLedger.begin(); itr != m_buildingLedger.end(); ++itr)
+		foreach_(const BuildingTypes eTypeX, getHasBuildings())
 		{
-			const CvBuildingInfo& info = GC.getBuildingInfo(itr->first);
+			const CvBuildingInfo& info = GC.getBuildingInfo(eTypeX);
 
 			// Toffer - Xml changes may have invalidated a building the city have; hence bValid.
 			const bool bObsolete = info.getObsoleteTech() < 0 ? false : GET_TEAM(getTeam()).isHasTech(info.getObsoleteTech());
@@ -22171,7 +22182,7 @@ void CvCity::recalculateModifiers()
 			);
 			if (!bValid) // Forget it.
 			{
-				alterBuildingLedger(itr->first, false);
+				alterBuildingLedger(eTypeX, false);
 
 				if (bObsolete)
 				{
@@ -22199,21 +22210,21 @@ void CvCity::recalculateModifiers()
 				{
 					if (hasBuilding((BuildingTypes)info.getReplacementBuilding(iJ)))
 					{
-						setDisabledBuilding(itr->first, true, false);
+						setDisabledBuilding(eTypeX, true, false);
 						bValid = false;
 						break;
 					}
 				}
-				handleBuildingCounts(itr->first, 1, isLimitedWonder(itr->first) && !info.isNoLimit());
+				handleBuildingCounts(eTypeX, 1, isLimitedWonder(eTypeX) && !info.isNoLimit());
 				if (bValid)
 				{
-					processBuilding(itr->first, 1, false, true);
+					processBuilding(eTypeX, 1, false, true);
 				}
 			}
 		}
-		foreach_(const BuildingTypes eType, newBuildings)
+		foreach_(const BuildingTypes eTypeX, newBuildings)
 		{
-			changeHasBuilding(eType, true);
+			changeHasBuilding(eTypeX, true);
 		}
 	}
 
@@ -22428,11 +22439,11 @@ int CvCity::getTotalBuildingSourcedProperty(PropertyTypes eProperty) const
 	}
 	int	iValue = 0;
 
-	for (int iI = 0, num = GC.getNumBuildingInfos(); iI < num; iI++)
+	foreach_(const BuildingTypes eTypeX, getHasBuildings())
 	{
-		if (hasFullyActiveBuilding((BuildingTypes)iI))
+		if (!isReligiouslyLimitedBuilding(eTypeX) && !isDisabledBuilding(eTypeX))
 		{
-			foreach_(const CvPropertySource* pSource, GC.getBuildingInfo((BuildingTypes)iI).getPropertyManipulators()->getSources())
+			foreach_(const CvPropertySource* pSource, GC.getBuildingInfo(eTypeX).getPropertyManipulators()->getSources())
 			{
 				//	For now we're only interested in constant sources
 				//	TODO - expand this as buildings add other types
@@ -24091,7 +24102,8 @@ void CvCity::alterBuildingLedger(const BuildingTypes eType, const bool bAdd, con
 	{
 		if (bAdd)
 		{
-			m_hasBuildings[eType] = true;
+			m_bHasBuildings[eType] = true;
+			m_hasBuildings.push_back(eType);
 			BuiltBuildingData data; 
 			data.eBuiltBy = eOwner;
 			data.iTimeBuilt = iTime;
@@ -24108,7 +24120,8 @@ void CvCity::alterBuildingLedger(const BuildingTypes eType, const bool bAdd, con
 	}
 	else 
 	{
-		m_hasBuildings[eType] = false;
+		m_bHasBuildings[eType] = false;
+		m_hasBuildings.erase(find(m_hasBuildings.begin(), m_hasBuildings.end(), eType));
 		m_buildingLedger.erase(itr->first);
 	}
 }
@@ -24116,19 +24129,19 @@ void CvCity::alterBuildingLedger(const BuildingTypes eType, const bool bAdd, con
 bool CvCity::hasBuilding(const BuildingTypes eType) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eType);
-	return m_hasBuildings[eType];
+	return m_bHasBuildings[eType];
 }
 
-int CvCity::getBuildingOriginalTime(const BuildingTypes eType) const
+BuiltBuildingData CvCity::getBuildingData(const BuildingTypes eType) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eType);
-	FAssert(m_hasBuildings[eType]);
-	return m_hasBuildings[eType] ? m_buildingLedger.find(eType)->second.iTimeBuilt : MIN_INT;
-}
-
-int CvCity::getBuildingOriginalOwner(const BuildingTypes eType) const
-{
-	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eType);
-	FAssert(m_hasBuildings[eType]);
-	return m_hasBuildings[eType] ? m_buildingLedger.find(eType)->second.eBuiltBy : NO_PLAYER;
+	FAssert(m_bHasBuildings[eType]);
+	if (m_bHasBuildings[eType])
+	{
+		return m_buildingLedger.find(eType)->second;
+	}
+	BuiltBuildingData data; 
+	data.eBuiltBy = NO_PLAYER;
+	data.iTimeBuilt = MIN_INT;
+	return data;
 }

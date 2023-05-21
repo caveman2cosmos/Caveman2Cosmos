@@ -3518,7 +3518,7 @@ void CvDLLWidgetData::parseDisabledCitizenHelp(CvWidgetDataStruct &widgetDataStr
 		{
 			bool bFirst = true;
 
-			for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+			for (int iI = GC.getNumBuildingInfos() - 1; iI > -1; iI--)
 			{
 				const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
 

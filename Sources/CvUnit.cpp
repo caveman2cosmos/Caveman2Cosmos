@@ -8675,31 +8675,30 @@ bool CvUnit::airBomb(int iX, int iY)
 				}
 				iMis1 *= iCount * 2;
 			}
-			if (m_pUnitInfo->getDCMAirBomb2())
+
+			if (m_pUnitInfo->getDCMAirBomb2() || m_pUnitInfo->getDCMAirBomb3())
 			{
-				iMis2 = 10;
-				int iCount = 0;
-				for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+				const bool bAirBomb2 = m_pUnitInfo->getDCMAirBomb2();
+				const bool bAirBomb3 = m_pUnitInfo->getDCMAirBomb3();
+
+				foreach_(const BuildingTypes eType, pCity->getHasBuildings())
 				{
-					if (GC.getBuildingInfo((BuildingTypes)iI).getDCMAirbombMission() == 2 && pCity->isActiveBuilding((BuildingTypes)iI))
+					if (pCity->isDisabledBuilding(eType))
 					{
-						iCount++;
+						continue;
+					}
+					if (GC.getBuildingInfo(eType).getDCMAirbombMission() == 2)
+					{
+						if (bAirBomb2)
+						{
+							iMis2 += 10;
+						}
+					}
+					else if (bAirBomb3 && GC.getBuildingInfo(eType).getDCMAirbombMission() == 3)
+					{
+						iMis3 += 20;
 					}
 				}
-				iMis2 *= iCount;
-			}
-			if (m_pUnitInfo->getDCMAirBomb3())
-			{
-				iMis3 = 10;
-				int iCount = 0;
-				for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
-				{
-					if (GC.getBuildingInfo((BuildingTypes)iI).getDCMAirbombMission() == 3 && pCity->isActiveBuilding((BuildingTypes)iI))
-					{
-						iCount++;
-					}
-				}
-				iMis3 *= (iCount * 2);
 			}
 			const int iMis4 = m_pUnitInfo->getDCMAirBomb4() ? 40 * algo::count_if(pPlot->units(), CvUnit::fn::getDomainType() == DOMAIN_SEA) : 0;
 
@@ -27666,11 +27665,10 @@ bool CvUnit::performInquisition()
 			//Remove temples, monasteries, etc...
 			{
 				std::vector<BuildingTypes> temp;
-				std::map<BuildingTypes, BuiltBuildingData> ledger = pCity->getBuildingLedger();
 
-				for (std::map<BuildingTypes, BuiltBuildingData>::const_iterator itr = ledger.begin(); itr != ledger.end(); ++itr)
+				foreach_(const BuildingTypes eType, pCity->getHasBuildings())
 				{
-					const CvBuildingInfo& buildingX = GC.getBuildingInfo(itr->first);
+					const CvBuildingInfo& buildingX = GC.getBuildingInfo(eType);
 					if (buildingX.getPrereqReligion() == NO_RELIGION)
 					{
 						continue;
@@ -27679,8 +27677,9 @@ bool CvUnit::performInquisition()
 					{
 						if (GET_PLAYER(getOwner()).getStateReligion() != iJ && buildingX.getPrereqReligion() == iJ)
 						{
-							temp.push_back(itr->first);
+							temp.push_back(eType);
 							iCompensationGold += buildingX.getProductionCost() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent() / std::max(1, GC.getDefineINT("INQUISITION_BUILDING_GOLD_DIVISOR"));
+							break;
 						}
 					}
 				}
@@ -34130,68 +34129,68 @@ void CvUnit::checkCityAttackDefensesDamage(CvCity* pCity, const std::vector<Unit
 	//Here we cycle through each active building in the city that's triggering the fact that it can possibly damage the attacking unit here and make a check
 	//using the building's % chance to damage - Dodge.  Then if it hits, deals DamageToAttacker modified by the unit's Armor.
 	//Then battle would proceed as normal.
+	const int iUnitDodge = dodgeTotal() - 100;
+	const int iUnitArmor = armorTotal();
 
-	int iBuildingAttackRoll = 0;
-	int iBuildingAttackChanceBase = 0;
-	int iUnitDodge = dodgeTotal() - 100;
-	int iBuildingAttackChanceTotal = 0;
-	int iBuildingAttackDamageBase = 0;
-	int iUnitArmor = armorTotal();
-	int iBuildingAttackDamageTotal = 0;
-	CvWString szBuffer;
-
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	foreach_(const BuildingTypes eType, pCity->getHasBuildings())
 	{
-		const BuildingTypes eBuilding = (BuildingTypes)iI;
-		if (GC.getBuildingInfo(eBuilding).isDamageAttackerCapable())
+		if (pCity->isDisabledBuilding(eType))
 		{
-			for(unsigned int iJ = 0; iJ < kDamagableUnitCombatTypes.size(); iJ++)
+			continue;
+		}
+		const CvBuildingInfo& buildingX = GC.getBuildingInfo(eType);
+
+		if (!buildingX.isDamageAttackerCapable())
+		{
+			continue;
+		}
+		const bool bSpecific = !buildingX.isDamageAllAttackers();
+
+		for (uint16_t iJ = 0; iJ < kDamagableUnitCombatTypes.size(); iJ++)
+		{
+			if (bSpecific && !buildingX.isMayDamageAttackingUnitCombatType(kDamagableUnitCombatTypes[iJ]))
 			{
-				const UnitCombatTypes eUnitCombat = kDamagableUnitCombatTypes[iJ];
-
-				if (GC.getBuildingInfo(eBuilding).isMayDamageAttackingUnitCombatType(eUnitCombat) || GC.getBuildingInfo(eBuilding).isDamageAllAttackers())
+				continue;
+			}
+			if (GC.getGame().getSorenRandNum(100, "BuildingAttackRoll") < buildingX.getDamageAttackerChance() - iUnitDodge)
+			{
+				int iBuildingAttackDamageBase = buildingX.getDamageToAttacker();
+				if (!buildingX.isDamageToAttackerIgnoresArmor())
 				{
-					if (pCity->isActiveBuilding(eBuilding))
+					iBuildingAttackDamageBase -= iUnitArmor;
+				}
+
+				if (iBuildingAttackDamageBase > 0)
+				{
+					changeDamage(iBuildingAttackDamageBase, getOwner());
+
+					if (isHuman())
 					{
-						//1st random generation to see if the building hits with its 'attack'.
-						iBuildingAttackRoll = GC.getGame().getSorenRandNum(100, "BuildingAttackRoll");
-						iBuildingAttackChanceBase = GC.getBuildingInfo(eBuilding).getDamageAttackerChance();
-						iBuildingAttackChanceTotal = iBuildingAttackChanceBase - iUnitDodge;
-						if (iBuildingAttackRoll < iBuildingAttackChanceTotal)
-						{
-							iBuildingAttackDamageBase = GC.getBuildingInfo(eBuilding).getDamageToAttacker();
-							if (!GC.getBuildingInfo(eBuilding).isDamageToAttackerIgnoresArmor())
-							{
-								iBuildingAttackDamageBase -= iUnitArmor;
-							}
-							iBuildingAttackDamageTotal = std::max(0, iBuildingAttackDamageBase);
+						AddDLLMessage(
+							getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+							gDLL->getText(
+								"TXT_KEY_MISC_ATTACKER_SUFFERS_BUILDING_DAMAGE",
+								getNameKey(), pCity->getNameKey(), buildingX.getTextKeyWide(), iBuildingAttackDamageBase
+							),
+							"AS2D_COMBAT", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), pCity->getX(), pCity->getY()
+						);
+					}
 
-							if (iBuildingAttackDamageTotal > 0)
-							{
-								changeDamage(iBuildingAttackDamageTotal, getOwner());
-
-								if (isHuman())
-								{
-
-									szBuffer = gDLL->getText("TXT_KEY_MISC_ATTACKER_SUFFERS_BUILDING_DAMAGE", getNameKey(), pCity->getNameKey(), GC.getBuildingInfo(eBuilding).getTextKeyWide(), iBuildingAttackDamageTotal);
-									AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_COMBAT", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), pCity->getX(), pCity->getY());
-								}
-
-								if (GET_PLAYER(pCity->getOwner()).isHumanPlayer())
-								{
-
-									szBuffer = gDLL->getText("TXT_KEY_MISC_BUILDING_DAMAGED_ATTACKER", getNameKey(), pCity->getNameKey(), GC.getBuildingInfo(eBuilding).getTextKeyWide(), iBuildingAttackDamageTotal);
-									AddDLLMessage(pCity->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pCity->getX(), pCity->getY());
-								}
-
-								//	Don't continue over the other combat types for this building - any one building
-								//	can only do its damage once
-								break;
-							}
-						}
+					if (GET_PLAYER(pCity->getOwner()).isHumanPlayer())
+					{
+						AddDLLMessage(
+							pCity->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+							gDLL->getText(
+								"TXT_KEY_MISC_BUILDING_DAMAGED_ATTACKER",
+								getNameKey(), pCity->getNameKey(), buildingX.getTextKeyWide(), iBuildingAttackDamageBase
+							),
+							"AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), pCity->getX(), pCity->getY()
+						);
 					}
 				}
 			}
+			// Don't continue over the other combat types for this building.
+			break; // A building can only attack a specific unit once per turn.
 		}
 	}
 }

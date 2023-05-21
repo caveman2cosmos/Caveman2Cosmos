@@ -1369,14 +1369,14 @@ int CyCity::getBuildingProductionDecayTurns(int /*BuildingTypes*/ eIndex) const
 	return m_pCity->getBuildingProductionDecayTurns((BuildingTypes)eIndex);
 }
 
-int CyCity::getBuildingOriginalOwner(int /*BuildingTypes*/ iIndex) const
+int CyCity::getBuildingOriginalOwner(int /*BuildingTypes*/ iType) const
 {
-	return m_pCity->getBuildingOriginalOwner((BuildingTypes) iIndex);
+	return m_pCity->getBuildingData((BuildingTypes) iType).eBuiltBy;
 }
 
-int CyCity::getBuildingOriginalTime(int /*BuildingTypes*/ iIndex) const
+int CyCity::getBuildingOriginalTime(int /*BuildingTypes*/ iType) const
 {
-	return m_pCity->getBuildingOriginalTime((BuildingTypes) iIndex);
+	return m_pCity->getBuildingData((BuildingTypes) iType).iTimeBuilt;
 }
 
 int CyCity::getProgressOnUnit(int iIndex) const

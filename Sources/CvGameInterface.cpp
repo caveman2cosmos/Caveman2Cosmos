@@ -461,15 +461,12 @@ void CvGame::updateColoredPlots()
 		}
 		if (pHeadSelectedUnit->getGroup()->hasCommander() || pHeadSelectedUnit->getGroup()->canFight() && pPlot->inCommandField(eOwner))
 		{
-			const std::vector<CvPlot*> plots = GET_PLAYER(eOwner).getCommandFieldPlots();
-
 			NiColorA cField(GC.getColorInfo(GC.getCOLOR_RED()).getColor());
 			cField.a = 0.75f;
 
-			// Toffer - Don't replace with foreach_ macro, this is more performance friendly and is as readable if not more so.
-			for (int i = plots.size() - 1; i > -1; i--)
+			foreach_(const CvPlot* plotX, GET_PLAYER(eOwner).getCommandFieldPlots())
 			{
-				gDLL->getEngineIFace()->fillAreaBorderPlot(plots[i]->getX(), plots[i]->getY(), cField, AREA_BORDER_LAYER_COMMAND_FIELD);
+				gDLL->getEngineIFace()->fillAreaBorderPlot(plotX->getX(), plotX->getY(), cField, AREA_BORDER_LAYER_COMMAND_FIELD);
 			}
 		}
 
