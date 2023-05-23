@@ -7809,7 +7809,7 @@
 				</TerrainMakesValid>
 			</TerrainMakesValids>
 			<iCulture>10</iCulture>
-			<iCultureRange>1</iCultureRange>
+			<iCultureRange>0</iCultureRange>
 			<ImprovementPillage>IMPROVEMENT_HAMLET</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_TOWN</ImprovementUpgrade>
 			<TechYieldChanges>
