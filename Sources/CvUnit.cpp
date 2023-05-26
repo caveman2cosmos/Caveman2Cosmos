@@ -2509,6 +2509,28 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 		iAttackerHitChance = std::max(5, iAttackerOdds + ((iAttackerHitModifier * iAttackerOdds)/100));
 	}
 
+	//Leo no rng combat begin
+	bool bNoRngCombatRolls = GC.getDefineINT("NO_RNG_BATTLES", 0);
+	GC.getGame().mLog2 = log(2.0);
+	bool bLeoNoRngStartSideMinus = true; //since 50 vs 50 = atk wins first, lets then start with def advantage always // = (GC.getGameINLINE().getSorenRandNum(100, NULL) < 50);
+	int iINoRng = -1;
+	int iCountTotal = -1;
+	/*
+	//C2C: commented for now = we dont make more smaller rounds than original (gives better precision but not a priority):
+	int pDmgCoeff = std::min(iAttackerDamage, iDefenderDamage) / 2;
+	if (pDmgCoeff < 1)
+		pDmgCoeff = 1;
+	int pStepsCoeff = std::max(iAttackerDamage, iDefenderDamage) / 2;	//civCol WTP: could use pDmgCoeff but it would also means still high chances to evade when low atk vs high atk (which is opposite to logic) due to fight unresolved
+	if (pStepsCoeff < 1)
+		pStepsCoeff = 1;
+	iAttackerDamage = iAttackerDamage / pDmgCoeff;
+	iDefenderDamage = iDefenderDamage / pDmgCoeff;
+	int iAtkFirstStrikes = getCombatFirstStrikes() * pDmgCoeff;			
+	int iDefFirstStrikes = pDefender->getCombatFirstStrikes() * pDmgCoeff;
+	*/
+	int iMaxLoop = 16535; //could be more (about 2^31 I think) but will never need	// 7 * pStepsCoeff;
+	//Leo no rng combat end
+
 	while (true)
 	{
 		//TB Combat Mods (StrAdjperRnd) begin
@@ -2546,8 +2568,21 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 		iAttackerHitModifier = iAttackerPrecision - iDefenderDodge;
 		iDefenderHitModifier = iDefenderPrecision - iAttackerDodge;
 		iAttackerOdds = std::max((GC.getCOMBAT_DIE_SIDES() - iDefenderOdds), 0);
-		iDefenderCombatRoll = GC.getGame().getSorenRandNum(GC.getCOMBAT_DIE_SIDES(), "DefenderCombatRoll");
-		iAttackerCombatRoll = GC.getGame().getSorenRandNum(GC.getCOMBAT_DIE_SIDES(), "AttackerCombatRoll");
+		//Leo no rng combat begin
+		if (bNoRngCombatRolls)	
+		{
+			iINoRng++;			
+			iCountTotal++;	
+			if (iINoRng >= iMaxLoop) iINoRng = 0;
+			iDefenderCombatRoll = GC.getGame().getNoRandNumInSequ(GC.getCOMBAT_DIE_SIDES(), iINoRng, bLeoNoRngStartSideMinus, "DefenderCombatRoll");
+			iAttackerCombatRoll = GC.getGame().getNoRandNumInSequ(GC.getCOMBAT_DIE_SIDES(), iINoRng, bLeoNoRngStartSideMinus, "AttackerCombatRoll");	//which will give exact same sequence than iDefenderCombatRoll in fact
+		}
+		//Leo no rng combat end
+		else
+		{
+			iDefenderCombatRoll = GC.getGame().getSorenRandNum(GC.getCOMBAT_DIE_SIDES(), "DefenderCombatRoll");
+			iAttackerCombatRoll = GC.getGame().getSorenRandNum(GC.getCOMBAT_DIE_SIDES(), "AttackerCombatRoll");
+		}
 		WithdrawalRollResult = GC.getGame().getSorenRandNum(100, "Withdrawal");
 		DefenderWithdrawalRollResult = GC.getGame().getSorenRandNum(100, "DefenderWithdrawal");
 		RepelRollResult = GC.getGame().getSorenRandNum(100, "Repel");

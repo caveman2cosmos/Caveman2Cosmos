@@ -218,6 +218,7 @@ class CvEventManager:
 				self.MAX_PLAYERS	= GC.getMAX_PLAYERS()
 				self.MAX_PC_PLAYERS = GC.getMAX_PC_PLAYERS()
 				self.iWAR_PRIZES	= GC.getDefineINT("WAR_PRIZES")
+				self.iNO_RNG_BATTLES	= GC.getDefineINT("NO_RNG_BATTLES")
 				self.iArcologyCityID = -1
 				self.iOldCityID = -1
 				self.mapBuildingType = {

@@ -7870,6 +7870,76 @@ int CvGame::getSorenRandNum(int iNum, const char* pszLog)
 	return Result;
 }
 
+//Leo no rng combat begin
+void CvGame::logMsg(char* format, ...)	//debug
+{
+	return;
+	static char buf[2048];
+	_vsnprintf(buf, 2048 - 4, format, (char*)(&format + 1));
+	gDLL->logMsg("xml.log", buf);
+}
+
+int CvGame::getNoRandNum(int iNum, const char* pszLog, double pPct1)
+{
+	if (pPct1 > 0.9999) pPct1 = 0.9999;
+	else if (pPct1 < 0.0001) pPct1 = 0.0001;
+	return (int)(((double)iNum) * pPct1);
+}
+
+double CvGame::log2(double n)
+{
+	// log(n)/log(2) is log2.  
+	return log(n) / mLog2;
+}
+
+int CvGame::log2i(int n)
+{
+	return ((int)log2(double(n)));
+}
+
+void CvGame::intToBinary(int n, char* pOut)
+{
+	for (int i = 0; i < 32; i++)
+	{
+		pOut[31 - i] = 48 + ((n >> i) & 1);
+	}
+	pOut[32] = 0;
+}
+
+int CvGame::getNoRandNumInSequ(int iNum, int i, bool pStartWithMinus, const char* pszLog)	//, int pOutOf is deprecated (infinite is ok)
+{
+	double lPct = 0.5;
+	int lret;
+	//if (pOutOf > 1)
+	{
+		double lchange = 0.25;
+		bool lside;
+		int lmax = log2i(i + 1);	//log2()
+		char lbinStr[33];
+		intToBinary(i, lbinStr);
+		for (int iI = 0; iI < lmax; iI++)
+		{
+			lside = (lbinStr[31 - iI] == '1');
+
+			if (lside == pStartWithMinus) lPct -= lchange;
+			else lPct += lchange;
+			//logMsg(" H  #%d getNoRandNumInSequ = %d out of %d (i : %d out of %d) lchange %f -> %f (%d) %s\n", iI, iI, lmax, i, pOutOf, lchange, lPct, (int)lside, lbinStr);
+			lchange = lchange / 2.0;
+		}
+
+		lret = getNoRandNum(iNum, pszLog, lPct);
+		//	logMsg("getNoRandNumInSequ = %d -> %f -- max %d -> %d (%s)                %s\n", i, lPct, iNum, lret, pszLog, lbinStr);
+	}
+	//deprecated
+	/*	else
+		{
+			lret = getNoRandNum(iNum, pszLog, lPct);
+			//	logMsg("getNoRandNumInSequ = %d out of %d -> %f -- max %d -> %d (%s)\n", i, pOutOf, lPct, iNum, lret, pszLog);
+		}
+		*/
+	return lret;
+}
+//Leo no rng combat end
 
 int CvGame::calculateSyncChecksum()
 {

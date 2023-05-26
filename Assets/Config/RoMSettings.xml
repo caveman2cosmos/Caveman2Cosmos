@@ -162,6 +162,9 @@ values="Current Color|Black|Blue|Brown|Cyan|Dark Blue|Dark Cyan|Dark Green|Dark 
 			<option id="SeaTunnels" key="SeaTunnels" type="boolean" default="True" get="isSeaTunnels" set="setSeaTunnels">
 				<change module="ANewDawnSettings" function="changedSeaTunnels"/>
 			</option>
+			<option id="NoRngBattles" key="NoRngBattles" type="boolean" default="False" get="isNoRngBattles" set="setNoRngBattles">
+				<change module="ANewDawnSettings" function="changedNoRngBattles"/>
+			</option>
 			<option id="NoAutoCorporationFounding" key="NoAutoCorporationFounding" type="boolean" default="False" get="isNoAutoCorporationFounding" set="setNoAutoCorporationFounding">
 				<change module="ANewDawnSettings" function="changedNoAutoCorporationFounding"/>
 			</option>
