@@ -2012,6 +2012,25 @@ void CvUnit::resolveAirCombat(CvUnit* pInterceptor, CvPlot* pPlot, CvAirMissionD
 		iMaxRounds = GC.getDefineINT("INTERCEPTION_MAX_ROUNDS");
 	}
 
+	//Leo no rng combat begin
+	bool bNoRngCombatRolls = GC.getDefineINT("NO_RNG_BATTLES", 0);
+	GC.getGame().mLog2 = log(2.0);
+	bool bLeoNoRngStartSideMinus = true; //since 50 vs 50 = atk wins first, lets then start with def advantage always // = (GC.getGameINLINE().getSorenRandNum(100, NULL) < 50);
+	/*
+	//C2C: commented for now = we dont make more smaller rounds than original (gives better precision but not a priority):
+	int pDmgCoeff = std::min(iAttackerDamage, iDefenderDamage) / 2;
+	if (pDmgCoeff < 1)
+		pDmgCoeff = 1;
+	int pStepsCoeff = pDmgCoeff;	//for air this already has a set #of rounds to get if unresolved or not. We dont change this air combat behavior, we just make more smaller rounds to get more precise outcome
+	iAttackerDamage = iAttackerDamage / pDmgCoeff;
+	iDefenderDamage = iDefenderDamage / pDmgCoeff;
+	int iAtkFirstStrikes = getCombatFirstStrikes() * pDmgCoeff;
+	int iDefFirstStrikes = pDefender->getCombatFirstStrikes() * pDmgCoeff;
+	*/
+	int iMaxLoop = 16535; //could be more (about 2^31 I think) but will never need	// iMaxRounds * pStepsCoeff;
+	bool bWeHit;
+	//Leo no rng combat end
+
 	int iTheirDamage = 0;
 	int iOurDamage = 0;
 
@@ -2020,7 +2039,9 @@ void CvUnit::resolveAirCombat(CvUnit* pInterceptor, CvPlot* pPlot, CvAirMissionD
 /* 	BETTER_BTS_AI_MOD						END								*/
 /********************************************************************************/
 	{
-		if (GC.getGame().getSorenRandNum(100, "Air combat") < iOurOdds)
+		if (bNoRngCombatRolls) bWeHit = (GC.getGame().getNoRandNumInSequ(100, iRound, bLeoNoRngStartSideMinus, "Air Combat") < iOurOdds);	//Leo no rng combat
+		else bWeHit = (GC.getGame().getSorenRandNum(100, "Air combat") < iOurOdds);
+		if (bWeHit)
 		{
 			if (DOMAIN_AIR == pInterceptor->getDomainType())
 			{
