@@ -7118,12 +7118,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__NORNGBATTLES_HOVER</Tag>
-		<English>When activated, hit rolls in battles always do the average expected outcome (as shown per ALT). Withdraw chances and other mechanics still uses random rolls with odds. TODO: air battles.</English>
-		<French>Lorsque activé, les jets dans les combats produisent toujours le résultat moyen attendu (tel que montré par ALT). Les chances de retraite et autres mecaniques utilisent toujours des jets aléatoires. A FAIRE : combats aériens.</French>
-		<German>When activated, hit rolls in battles always do the average expected outcome (as shown per ALT). Withdraw chances and other mechanics still uses random rolls with odds. TODO: air battles</German>
-		<Italian>When activated, hit rolls in battles always do the average expected outcome (as shown per ALT). Withdraw chances and other mechanics still uses random rolls with odds. TODO: air battles</Italian>
-		<Spanish>When activated, hit rolls in battles always do the average expected outcome (as shown per ALT). Withdraw chances and other mechanics still uses random rolls with odds. TODO: air battles</Spanish>
-		<Russian>When activated, hit rolls in battles always do the average expected outcome (as shown per ALT). Withdraw chances and other mechanics still uses random rolls with odds. TODO: air battles</Russian>
+		<English>When activated, hit rolls in battles always do the average expected outcome (as shown per ALT). Withdraw chances and other mechanics still uses random rolls with odds.</English>
+		<French>Lorsque activé, les jets dans les combats produisent toujours le résultat moyen attendu (tel que montré par ALT). Les chances de retraite et autres mecaniques utilisent toujours des jets aléatoires.</French>
+		<German>When activated, hit rolls in battles always do the average expected outcome (as shown per ALT). Withdraw chances and other mechanics still uses random rolls with odds.</German>
+		<Italian>When activated, hit rolls in battles always do the average expected outcome (as shown per ALT). Withdraw chances and other mechanics still uses random rolls with odds.</Italian>
+		<Spanish>When activated, hit rolls in battles always do the average expected outcome (as shown per ALT). Withdraw chances and other mechanics still uses random rolls with odds.</Spanish>
+		<Russian>When activated, hit rolls in battles always do the average expected outcome (as shown per ALT). Withdraw chances and other mechanics still uses random rolls with odds.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__NORNGBATTLES_TEXT</Tag>
