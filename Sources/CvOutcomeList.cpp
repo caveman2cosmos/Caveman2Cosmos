@@ -151,24 +151,18 @@ bool CvOutcomeList::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, Unit
 		for (int i = 0; i < (int)apOutcome.size(); i++)
 		{
 			const CvOutcomeInfo& kOutcomeInfo = GC.getOutcomeInfo(apOutcome[i].first->getType());
-			logging::logMsgW("C2C.log", L"Outcome #%d / %d : OutcomeTypes:%d - chances: %d - For %s eDefeatedUnitType: %d .", i, (int)apOutcome.size(), apOutcome[i].first->getType(), apOutcome[i].second, kUnit.getNameKey(), eDefeatedUnitType);
-			//logging::logMsg("C2C.log", "     OutcomeTypes:%d : %s | %s | %s", apOutcome[i].first->getType(), apOutcome[i].first->getTypeStr().c_str(), apOutcome[i].first->getTypeStrb().c_str(), apOutcome[i].first->getTypeStrc().c_str());
-			//logging::logMsgW("C2C.log", L"     OutcomeTypes:%d : %s | %s | %s", apOutcome[i].first->getType(), kOutcomeInfo.getText(), kOutcomeInfo.pyGetTextKey().c_str(), kOutcomeInfo.getDescription());
-			logging::logMsgW("C2C.log", L"\tOutcomeTypes:%d : %s | %s | %s", apOutcome[i].first->getType(), kOutcomeInfo.pyGetText().c_str(), kOutcomeInfo.pyGetTextKey().c_str(), kOutcomeInfo.getMessageText().c_str());
-
+			//logging::logMsgW("C2C.log", L"Outcome #%d / %d : OutcomeTypes:%d - chances: %d - For %s eDefeatedUnitType: %d .", i, (int)apOutcome.size(), apOutcome[i].first->getType(), apOutcome[i].second, kUnit.getNameKey(), eDefeatedUnitType);
+			//logging::logMsgW("C2C.log", L"\tOutcomeTypes:%d : %s | %s | %s", apOutcome[i].first->getType(), kOutcomeInfo.pyGetText().c_str(), kOutcomeInfo.pyGetTextKey().c_str(), kOutcomeInfo.getMessageText().c_str());
 			if (kOutcomeInfo.isSubdue())
 			{
-				logging::logMsgW("C2C.log", L"\tDETECTED SUBDUE : OutcomeTypes:%d : %s. Subdue bonus is %d (chances here: %d)", apOutcome[i].first->getType(), kOutcomeInfo.pyGetTextKey().c_str(), kUnit.getNoRngSubdueBonus(), apOutcome[i].second);
 				if (kUnit.checkNoRngSubdueBonus(apOutcome[i].second))
 				{
-					logging::logMsgW("C2C.log", L"\t%s should succeed. New subdue bonus is %d", kOutcomeInfo.pyGetTextKey().c_str(), kUnit.getNoRngSubdueBonus());
 					apOutcome[i].first->execute(kUnit, eDefeatedUnitPlayer, eDefeatedUnitType);
 					return true;
 				}
 				else
 				{
 					//subdue failed, dont add another chance in rng roll! And remove it from chances to keep everything else with same outcome proportionnaly to each other.
-					logging::logMsgW("C2C.log", L"\t%s should fail. New subdue bonus is %d", kOutcomeInfo.pyGetTextKey().c_str(), kUnit.getNoRngSubdueBonus());
 					iChanceSum -= apOutcome[i].second;
 					apOutcome[i].second = 0;	
 				}
