@@ -220,6 +220,7 @@ class CvEventManager:
 				self.iWAR_PRIZES	= GC.getDefineINT("WAR_PRIZES")
 				self.iNO_RNG_BATTLES= GC.getDefineINT("NO_RNG_BATTLES")
 				self.iNO_RNG_SUBDUE	= GC.getDefineINT("NO_RNG_SUBDUE")
+				self.iNO_RNG_ESPIONAGE	= GC.getDefineINT("NO_RNG_ESPIONAGE")
 				self.iArcologyCityID = -1
 				self.iOldCityID = -1
 				self.mapBuildingType = {

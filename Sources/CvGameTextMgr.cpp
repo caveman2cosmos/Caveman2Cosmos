@@ -34258,7 +34258,21 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 
 			szBuffer.append(NEWLINE);
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_ESPIONAGE_CHANCE_OF_SUCCESS", std::min(100, std::max(0, 100 - iInterceptChance))));
+			int iEvadeChanceClamped = std::min(100, std::max(0, 100 - iInterceptChance));
+			szBuffer.append(gDLL->getText("TXT_KEY_ESPIONAGE_CHANCE_OF_SUCCESS", iEvadeChanceClamped));
+
+			//Leo no rng begin
+			bool bNoRngEspionage = GC.getDefineINT("NO_RNG_ESPIONAGE", 0);
+			if (bNoRngEspionage)
+			{
+				CvWString szTemp;
+				szTemp.Format(L"(+%d=", kPlayer.getNoRngEspionageEvadeBonus());
+				szBuffer.append(szTemp);
+				if (kPlayer.checkNoRngEspionageEvadeBonus(iEvadeChanceClamped, 100, false, false)) szBuffer.append(gDLL->getText("TXT_KEY_POPUP_YES"));
+				else szBuffer.append(gDLL->getText("TXT_KEY_POPUP_NO"));
+				szBuffer.append(L")");
+			}
+			//Leo no rng end
 		}
 	}
 }

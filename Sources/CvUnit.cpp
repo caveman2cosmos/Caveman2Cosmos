@@ -11120,12 +11120,16 @@ bool CvUnit::espionage(EspionageMissionTypes eMission, int iData)
 	}
 	else
 	{
-		if (testSpyIntercepted(eTargetPlayer, GC.getEspionageMissionInfo(eMission).getDifficultyMod()))
+		if (testSpyIntercepted(eTargetPlayer, GC.getEspionageMissionInfo(eMission).getDifficultyMod(), true))
 		{
 			return false;
 		}
 
-		const bool bCaught = testSpyIntercepted(eTargetPlayer, GC.getDefineINT("ESPIONAGE_SPY_MISSION_ESCAPE_MOD"));
+		bool bCaught = false;	//Leo no rng spy : debatable : in case of no-rng should we still reroll for caught or not when mission success? Let's say no for now
+		if (GC.getDefineINT("NO_RNG_ESPIONAGE", 0) == 0)	//Leo no rng spy : ofc with option disabled, keep it same as before
+		{
+			bCaught = testSpyIntercepted(eTargetPlayer, GC.getDefineINT("ESPIONAGE_SPY_MISSION_ESCAPE_MOD"));	
+		}
 
 		if (GET_PLAYER(getOwner()).doEspionageMission(eMission, eTargetPlayer, plot(), iData, this, (bCaught && !isAlwaysHeal())))
 		{
@@ -11174,7 +11178,7 @@ bool CvUnit::espionage(EspionageMissionTypes eMission, int iData)
 	return false;
 }
 
-bool CvUnit::testSpyIntercepted(PlayerTypes eTargetPlayer, int iModifier)
+bool CvUnit::testSpyIntercepted(PlayerTypes eTargetPlayer, int iModifier, bool bNoRngCompatible)
 {
 	CvPlayer& kTargetPlayer = GET_PLAYER(eTargetPlayer);
 
@@ -11183,9 +11187,24 @@ bool CvUnit::testSpyIntercepted(PlayerTypes eTargetPlayer, int iModifier)
 		return false;
 	}
 
-	if (GC.getGame().getSorenRandNum(10000, "Spy Interception") >= getSpyInterceptPercent(kTargetPlayer.getTeam()) * (100 + iModifier))
+	//Leo no rng begin
+	int iInterceptChance = getSpyInterceptPercent(kTargetPlayer.getTeam()) * (100 + iModifier);
+	if (bNoRngCompatible && GC.getDefineINT("NO_RNG_ESPIONAGE", 0))
 	{
-		return false;
+		int iEvadeChanceClamped = std::min(100, std::max(0, 100 - (iInterceptChance / 100)));
+		//logging::logMsgW("C2C.log", L"CvUnit::testSpyIntercepted %d => %d - bonus: %d - %s", iInterceptChance, iEvadeChanceClamped, GET_PLAYER(getOwner()).getNoRngEspionageEvadeBonus(), GET_PLAYER(getOwner()).getNameKey());
+		if (GET_PLAYER(getOwner()).checkNoRngEspionageEvadeBonus(iEvadeChanceClamped , 100))
+		{
+			return false;
+		}
+	}
+	//Leo no rng end
+	else
+	{
+		if (GC.getGame().getSorenRandNum(10000, "Spy Interception") >= iInterceptChance)
+		{
+			return false;
+		}
 	}
 
 	CvString szFormatNoReveal;
@@ -23316,7 +23335,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	//WRAPPER_READ_DECORATED(wrapper, "CvUnit", &bWorker, "bWorker");
 
 
-	WRAPPER_READ(wrapper, "CvUnit", &m_iNoRngSubdueBonus);
+	WRAPPER_READ(wrapper, "CvUnit", &m_iNoRngSubdueBonus);	//Leo no rng subdue
 
 	WRAPPER_READ_OBJECT_END(wrapper);
 
@@ -24195,7 +24214,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 
 	//WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", isWorker(), "bWorker");
 
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iNoRngSubdueBonus);
+	WRAPPER_WRITE(wrapper, "CvUnit", m_iNoRngSubdueBonus);	//Leo no rng subdue
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }

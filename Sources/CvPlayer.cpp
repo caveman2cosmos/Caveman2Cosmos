@@ -247,6 +247,8 @@ m_cachedBonusCount(NULL)
 	m_iMinTaxIncome = 0;
 	m_iMaxTaxIncome = 0;
 
+	m_iNoRngEspionageEvadeBonus = 50;	//Leo no rng spy
+
 	for (int i = 0; i < NUM_COMMERCE_TYPES; ++i)
 	{
 		m_cachedTotalCityBaseCommerceRate[i] = MAX_INT;
@@ -19645,6 +19647,8 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		}
 		//Example of how to skip element
 		//WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iPopulationgrowthratepercentage, SAVE_VALUE_ANY);
+
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iNoRngEspionageEvadeBonus); //Leo no rng spy
 	}
 	else
 	{
@@ -20453,6 +20457,8 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", fMinTaxIncome);
 		double fMaxTaxIncome = static_cast<double>(m_iMaxTaxIncome);
 		WRAPPER_WRITE(wrapper, "CvPlayer", fMaxTaxIncome);
+
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNoRngEspionageEvadeBonus);	//Leo no rng spy
 	}
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
@@ -30741,3 +30747,19 @@ void CvPlayer::setCommandFieldPlot(bool bNewValue, CvPlot* aPlot)
 	}
 	else FErrorMsg("Vector element to remove was missing!");
 }
+
+//Leo no rng spy begin
+int CvPlayer::getNoRngEspionageEvadeBonus() const
+{
+	return m_iNoRngEspionageEvadeBonus;
+}
+
+bool CvPlayer::checkNoRngEspionageEvadeBonus(int pChances, int pOutOf, bool pApplyChange, bool pResetOnSuccess) const
+{
+	pChances = (100 * pChances) / pOutOf;
+	bool bret = (m_iNoRngEspionageEvadeBonus + pChances >= 100);
+	if (pApplyChange) m_iNoRngEspionageEvadeBonus += pChances;
+	if (bret && pResetOnSuccess) m_iNoRngEspionageEvadeBonus -= 100;
+	return bret;
+}
+//Leo no rng spy end

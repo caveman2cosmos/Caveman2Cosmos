@@ -7137,6 +7137,16 @@
 		<French>Apprivoiser sans aléatoire</French>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__NORNGESPIONAGE_HOVER</Tag>
+		<English>When activated, result of espionage missions will be predictable. The success frequence will also be equal to average rolls. Look at a mission success rate to know next outcome.</English>
+		<French>Lorsque activé, le résultat des missions d'espionnage sera prédictible. La fréquence de réussite sera faite de manière équivalente à des jets moyens. Voir la probabilité de succès d'une mission pour connaître son issue.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__NORNGESPIONAGE_TEXT</Tag>
+		<English>No-rng Espionage</English>
+		<French>Espionnage sans aléatoire</French>
+	</TEXT>	
+	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__SHOWCIVTRAITS_HOVER</Tag>
 		<English>Shows your civilization's traits on the flag, when hovering over it. Recommended only for larger resolutions.</English>
 		<French>Affiche les Traits de votre Civilisation en infobulle sur le Drapeau. Recommandé uniquement pour les plus hautes résolutions.</French>

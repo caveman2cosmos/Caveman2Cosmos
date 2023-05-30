@@ -798,7 +798,7 @@ public:
 
 	bool canEspionage(const CvPlot* pPlot, bool bTestVisible = false) const;
 	bool espionage(EspionageMissionTypes eMission, int iData);
-	bool testSpyIntercepted(PlayerTypes eTargetPlayer, int iModifier = 0);
+	bool testSpyIntercepted(PlayerTypes eTargetPlayer, int iModifier = 0, bool bNoRngCompatible = false);
 	int getSpyInterceptPercent(TeamTypes eTargetTeam) const;
 	bool isIntruding() const;
 

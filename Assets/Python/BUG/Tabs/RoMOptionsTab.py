@@ -96,6 +96,7 @@ class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__SeaTunnels"), bCanAdjustSettings)
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__NoRngBattles"), bCanAdjustSettings)
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__NoRngSubdue"), bCanAdjustSettings)
+		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__NoRngEspionage"), bCanAdjustSettings)
 
 		if GAME.isOption(GameOptionTypes.GAMEOPTION_REALISTIC_CORPORATIONS):
 			screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__NoAutoCorporationFounding"), bCanAdjustSettings)
