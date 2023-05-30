@@ -165,6 +165,9 @@ values="Current Color|Black|Blue|Brown|Cyan|Dark Blue|Dark Cyan|Dark Green|Dark 
 			<option id="NoRngBattles" key="NoRngBattles" type="boolean" default="False" get="isNoRngBattles" set="setNoRngBattles">
 				<change module="ANewDawnSettings" function="changedNoRngBattles"/>
 			</option>
+			<option id="NoRngSubdue" key="NoRngSubdue" type="boolean" default="False" get="isNoRngSubdue" set="setNoRngSubdue">
+				<change module="ANewDawnSettings" function="changedNoRngSubdue"/>
+			</option>
 			<option id="NoAutoCorporationFounding" key="NoAutoCorporationFounding" type="boolean" default="False" get="isNoAutoCorporationFounding" set="setNoAutoCorporationFounding">
 				<change module="ANewDawnSettings" function="changedNoAutoCorporationFounding"/>
 			</option>

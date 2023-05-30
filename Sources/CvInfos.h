@@ -8356,6 +8356,7 @@ public:
 	bool getCity() const;
 	bool getNotCity() const;
 	bool isCapture() const;
+	bool isSubdue() const;	//Leo no rng
 	const std::vector<BuildingTypes>& getPrereqBuildings() const { return m_aePrereqBuildings; }
 	int getNumExtraChancePromotions() const;
 	PromotionTypes getExtraChancePromotion(int i) const;

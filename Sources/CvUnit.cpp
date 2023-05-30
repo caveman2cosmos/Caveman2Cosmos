@@ -121,6 +121,7 @@ m_Properties(this)
 	m_aExtraVisibleImprovementRanges.clear();
 
 	m_iMaxMoveCacheTurn = -1;
+	m_iNoRngSubdueBonus = 50;	//Leo no rng subdue
 
 	if (g_dummyUnit == NULL && !bIsDummy)
 	{
@@ -23314,6 +23315,9 @@ void CvUnit::read(FDataStreamBase* pStream)
 	//bool bWorker = false;
 	//WRAPPER_READ_DECORATED(wrapper, "CvUnit", &bWorker, "bWorker");
 
+
+	WRAPPER_READ(wrapper, "CvUnit", &m_iNoRngSubdueBonus);
+
 	WRAPPER_READ_OBJECT_END(wrapper);
 
 	// Toffer - Initialize Components
@@ -24190,6 +24194,8 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", (bWorker ? m_worker->getAssignedCity() : -1), "m_iAssignedCity");
 
 	//WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", isWorker(), "bWorker");
+
+	WRAPPER_WRITE(wrapper, "CvUnit", m_iNoRngSubdueBonus);
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
@@ -38669,3 +38675,18 @@ void CvUnit::forceInvalidCoordinates()
 	m_iX = INVALID_PLOT_COORD;
 	m_iY = INVALID_PLOT_COORD;
 }
+
+//Leo no rng subdue begin
+int CvUnit::getNoRngSubdueBonus() const
+{
+	return m_iNoRngSubdueBonus;
+}
+
+bool CvUnit::checkNoRngSubdueBonus(int pChances, bool pApplyChange, bool pResetOnSuccess) const
+{
+	bool bret = (m_iNoRngSubdueBonus + pChances >= 100);
+	if (pApplyChange) m_iNoRngSubdueBonus += pChances;
+	if (bret && pResetOnSuccess) m_iNoRngSubdueBonus -= 100;
+	return bret;
+}
+//Leo no rng subdue end

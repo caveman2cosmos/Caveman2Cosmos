@@ -31275,6 +31275,12 @@ bool CvOutcomeInfo::isCapture() const
 	return m_bCapture;
 }
 
+bool CvOutcomeInfo::isSubdue() const	//Leo no rng
+{
+	//didnt really find how to check that cleanly except refactoring more things, so lets do a "not clean but not intrusive way" :(
+	return (pyGetTextKey().find(L"OUTCOME_SUBDUE") != std::string::npos);
+}
+
 TechTypes CvOutcomeInfo::getObsoleteTech() const
 {
 	return m_eObsoleteTech;

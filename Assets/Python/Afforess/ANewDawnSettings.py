@@ -259,6 +259,9 @@ def changedSeaTunnels(option, value):
 
 def changedNoRngBattles(option, value):
 	GC.setDefineINT("NO_RNG_BATTLES", int(value))
+	
+def changedNoRngSubdue(option, value):
+	GC.setDefineINT("NO_RNG_SUBDUE", int(value))	
 
 def changedNoAutoCorporationFounding(option, value):
 	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_NO_AUTO_CORPORATION_FOUNDING, value)
@@ -312,6 +315,7 @@ def setXMLOptionsfromIniFile():
 	changedReforestation(ANewDawnOpt, ANewDawnOpt.isReforestation())
 	changedSeaTunnels(ANewDawnOpt, ANewDawnOpt.isSeaTunnels())
 	changedNoRngBattles(ANewDawnOpt, ANewDawnOpt.isNoRngBattles())
+	changedNoRngSubdue(ANewDawnOpt, ANewDawnOpt.isNoRngSubdue())
 	changedWarPrizes(ANewDawnOpt, ANewDawnOpt.isWarPrizes())
 	changedFlexibleDifficultyAI(ANewDawnOpt, ANewDawnOpt.isFlexibleDifficultyAI())
 	changedInfrastructureIgnoresImprovements(ANewDawnOpt, ANewDawnOpt.isInfrastructureIgnoresImprovements())

@@ -7120,19 +7120,21 @@
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__NORNGBATTLES_HOVER</Tag>
 		<English>When activated, hit rolls in battles always do the average expected outcome (as shown per ALT). Withdraw chances and other mechanics still uses random rolls with odds.</English>
 		<French>Lorsque activé, les jets dans les combats produisent toujours le résultat moyen attendu (tel que montré par ALT). Les chances de retraite et autres mecaniques utilisent toujours des jets aléatoires.</French>
-		<German>When activated, hit rolls in battles always do the average expected outcome (as shown per ALT). Withdraw chances and other mechanics still uses random rolls with odds.</German>
-		<Italian>When activated, hit rolls in battles always do the average expected outcome (as shown per ALT). Withdraw chances and other mechanics still uses random rolls with odds.</Italian>
-		<Spanish>When activated, hit rolls in battles always do the average expected outcome (as shown per ALT). Withdraw chances and other mechanics still uses random rolls with odds.</Spanish>
-		<Russian>When activated, hit rolls in battles always do the average expected outcome (as shown per ALT). Withdraw chances and other mechanics still uses random rolls with odds.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__NORNGBATTLES_TEXT</Tag>
 		<English>No-rng Battles</English>
 		<French>Combats sans aléatoire</French>
-		<German>No-rng Battles</German>
-		<Italian>No-rng Battles</Italian>
-		<Spanish>No-rng Battles</Spanish>
-		<Russian>No-rng Battles</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__NORNGSUBDUE_HOVER</Tag>
+		<English>When activated, subduing animals will be predictable for each capable hunting unit. The success frequence will also be equal to average rolls. Look at rollover on target to know outcome.</English>
+		<French>Lorsque activé, apprivoiser des animaux sera fait de manière prédictible pour chaque unité capable d'apprivoiser. La fréquence de réussite sera faite de manière équivalente à des jets moyens. Voir l'infobulle sur la cible pour la prédiction.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__NORNGSUBDUE_TEXT</Tag>
+		<English>No-rng Subdues</English>
+		<French>Apprivoiser sans aléatoire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__SHOWCIVTRAITS_HOVER</Tag>

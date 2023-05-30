@@ -1699,6 +1699,9 @@ public:
 	void deselect(const bool bQuick = false);
 	void forceInvalidCoordinates();
 
+	int getNoRngSubdueBonus() const;	//Leo no rng subdue
+	bool checkNoRngSubdueBonus(int pChances, bool pApplyChange = true, bool pResetOnSuccess = true) const;	//Leo no rng subdue
+
 protected:
 	int m_iDCMBombRange;
 	int m_iDCMBombAccuracy;
@@ -1990,6 +1993,8 @@ protected:
 	int m_iBaseCombat;
 	DirectionTypes m_eFacingDirection;
 	int m_iImmobileTimer;
+
+	mutable int m_iNoRngSubdueBonus;	//Leo no rng subdue , starts at 50 (so 51% = success on first and 49% no), must be saved in savegame
 
 	bool m_bCanRespawn;
 	bool m_bSurvivor;
