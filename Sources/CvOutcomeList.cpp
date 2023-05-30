@@ -144,12 +144,41 @@ bool CvOutcomeList::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, Unit
 		iChanceSum = 100;
 	}
 
-	const int iRoll = GC.getGame().getSorenRandNum( iChanceSum, "Outcome roll");
+	//Leo no rng begin
+	bool bNoRngSubdue = GC.getDefineINT("NO_RNG_SUBDUE", 0);
+	if (bNoRngSubdue)
+	{
+		for (int i = 0; i < (int)apOutcome.size(); i++)
+		{
+			const CvOutcomeInfo& kOutcomeInfo = GC.getOutcomeInfo(apOutcome[i].first->getType());
+			//logging::logMsgW("C2C.log", L"Outcome #%d / %d : OutcomeTypes:%d - chances: %d / %d - For %s eDefeatedUnitType: %d .", i, (int)apOutcome.size(), apOutcome[i].first->getType(), apOutcome[i].second, iChanceSum, kUnit.getNameKey(), eDefeatedUnitType);
+			//logging::logMsgW("C2C.log", L"\tOutcomeTypes:%d : %s | %s | %s", apOutcome[i].first->getType(), kOutcomeInfo.pyGetText().c_str(), kOutcomeInfo.pyGetTextKey().c_str(), kOutcomeInfo.getMessageText().c_str());
+			if (kOutcomeInfo.isSubdue())
+			{
+				//logging::logMsgW("C2C.log", L"\tisSubdue() detected, getNoRngSubdueBonus :%d", kUnit.getNoRngSubdueBonus());
+				if (kUnit.checkNoRngSubdueBonus(apOutcome[i].second, iChanceSum))
+				{
+					apOutcome[i].first->execute(kUnit, eDefeatedUnitPlayer, eDefeatedUnitType);
+					return true;
+				}
+				else
+				{
+					//subdue failed, dont add another chance in rng roll! And remove it from chances to keep everything else with same outcome proportionnaly to each other.
+					iChanceSum -= apOutcome[i].second;
+					apOutcome[i].second = 0;	
+				}
+			}
+		}
+	}
+	//Leo no rng end
+
+	const int iRoll = GC.getGame().getSorenRandNum(iChanceSum, "Outcome roll");
 	iChanceSum = 0;
 
 	for (int i=0; i<(int)apOutcome.size(); i++)
 	{
 		iChanceSum += apOutcome[i].second;
+		//logging::logMsg("C2C.log", "Outcome roll %d outcome #%d / %d : OutcomeTypes:%d - chances: +%d = %d - For %s eDefeatedUnitType: %d .", iRoll, i, (int)apOutcome.size(), apOutcome[i].first->getType(), apOutcome[i].second, iChanceSum, kUnit.getNameKey(), eDefeatedUnitType);
 		if (iRoll < iChanceSum)
 		{
 			apOutcome[i].first->execute(kUnit, eDefeatedUnitPlayer, eDefeatedUnitType);
@@ -295,8 +324,24 @@ void CvOutcomeList::buildDisplayString(CvWStringBuffer& szBuffer, const CvUnit& 
 	{
 		szBuffer.append(NEWLINE);
 		CvWString s;
-		s.Format(L"%d%%: ",(100 * apOutcome[i].second)/iChanceSum);
+		s.Format(L"%d",(100 * apOutcome[i].second)/iChanceSum);
 		szBuffer.append(s);
+
+		//Leo no rng begin
+		bool bNoRngSubdue = GC.getDefineINT("NO_RNG_SUBDUE", 0);
+		if (bNoRngSubdue && (GC.getOutcomeInfo(apOutcome[i].first->getType()).isSubdue()))
+		{
+			//logging::logMsgW("C2C.log", L"buildDisplayStringA %s %d => %d - bonus: %d - %s", GC.getOutcomeInfo(apOutcome[i].first->getType()).pyGetTextKey().c_str(), apOutcome[i].second, (100 * apOutcome[i].second) / iChanceSum, kUnit.getNoRngSubdueBonus(), szBuffer.getCString());
+			CvWString szTemp;
+			szTemp.Format(L"(+%d=", kUnit.getNoRngSubdueBonus());
+			szBuffer.append(szTemp);		
+			if (kUnit.checkNoRngSubdueBonus(apOutcome[i].second, iChanceSum, false, false)) szBuffer.append(gDLL->getText("TXT_KEY_POPUP_YES"));
+			else szBuffer.append(gDLL->getText("TXT_KEY_POPUP_NO"));
+			szBuffer.append(L")%: ");
+		}
+		//Leo no rng end
+		else szBuffer.append(L"%: ");
+
 		apOutcome[i].first->buildDisplayString(szBuffer, kUnit);
 	}
 }

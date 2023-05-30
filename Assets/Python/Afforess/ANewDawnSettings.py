@@ -257,6 +257,15 @@ def changedReforestation(option, value):
 def changedSeaTunnels(option, value):
 	CyMessageControl().sendModNetMessage(CANBUILD_EVENT_ID, GC.getGame().getActivePlayer(), GC.getInfoTypeForString("BUILD_TUNNEL"), not value, 0)
 
+def changedNoRngBattles(option, value):
+	GC.setDefineINT("NO_RNG_BATTLES", int(value))
+	
+def changedNoRngSubdue(option, value):
+	GC.setDefineINT("NO_RNG_SUBDUE", int(value))
+
+def changedNoRngEspionage(option, value):
+	GC.setDefineINT("NO_RNG_ESPIONAGE", int(value))
+
 def changedNoAutoCorporationFounding(option, value):
 	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_NO_AUTO_CORPORATION_FOUNDING, value)
 	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_NO_AUTO_CORPORATION_FOUNDING), int(value), 0)
@@ -308,6 +317,9 @@ def setXMLOptionsfromIniFile():
 	changedAllowTerraforming(ANewDawnOpt, ANewDawnOpt.isAllowTerraforming())
 	changedReforestation(ANewDawnOpt, ANewDawnOpt.isReforestation())
 	changedSeaTunnels(ANewDawnOpt, ANewDawnOpt.isSeaTunnels())
+	changedNoRngBattles(ANewDawnOpt, ANewDawnOpt.isNoRngBattles())
+	changedNoRngSubdue(ANewDawnOpt, ANewDawnOpt.isNoRngSubdue())
+	changedNoRngEspionage(ANewDawnOpt, ANewDawnOpt.isNoRngEspionage())
 	changedWarPrizes(ANewDawnOpt, ANewDawnOpt.isWarPrizes())
 	changedFlexibleDifficultyAI(ANewDawnOpt, ANewDawnOpt.isFlexibleDifficultyAI())
 	changedInfrastructureIgnoresImprovements(ANewDawnOpt, ANewDawnOpt.isInfrastructureIgnoresImprovements())

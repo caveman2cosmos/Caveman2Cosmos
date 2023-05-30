@@ -121,6 +121,7 @@ m_Properties(this)
 	m_aExtraVisibleImprovementRanges.clear();
 
 	m_iMaxMoveCacheTurn = -1;
+	m_iNoRngSubdueBonus = 50;	//Leo no rng subdue
 
 	if (g_dummyUnit == NULL && !bIsDummy)
 	{
@@ -2012,6 +2013,25 @@ void CvUnit::resolveAirCombat(CvUnit* pInterceptor, CvPlot* pPlot, CvAirMissionD
 		iMaxRounds = GC.getDefineINT("INTERCEPTION_MAX_ROUNDS");
 	}
 
+	//Leo no rng combat begin
+	bool bNoRngCombatRolls = GC.getDefineINT("NO_RNG_BATTLES", 0);
+	GC.getGame().mLog2 = log(2.0);
+	bool bLeoNoRngStartSideMinus = true; //since 50 vs 50 = atk wins first, lets then start with def advantage always // = (GC.getGameINLINE().getSorenRandNum(100, NULL) < 50);
+	/*
+	//C2C: commented for now = we dont make more smaller rounds than original (gives better precision but not a priority):
+	int pDmgCoeff = std::min(iAttackerDamage, iDefenderDamage) / 2;
+	if (pDmgCoeff < 1)
+		pDmgCoeff = 1;
+	int pStepsCoeff = pDmgCoeff;	//for air this already has a set #of rounds to get if unresolved or not. We dont change this air combat behavior, we just make more smaller rounds to get more precise outcome
+	iAttackerDamage = iAttackerDamage / pDmgCoeff;
+	iDefenderDamage = iDefenderDamage / pDmgCoeff;
+	int iAtkFirstStrikes = getCombatFirstStrikes() * pDmgCoeff;
+	int iDefFirstStrikes = pDefender->getCombatFirstStrikes() * pDmgCoeff;
+	*/
+	int iMaxLoop = 16535; //could be more (about 2^31 I think) but will never need	// iMaxRounds * pStepsCoeff;
+	bool bWeHit;
+	//Leo no rng combat end
+
 	int iTheirDamage = 0;
 	int iOurDamage = 0;
 
@@ -2020,7 +2040,9 @@ void CvUnit::resolveAirCombat(CvUnit* pInterceptor, CvPlot* pPlot, CvAirMissionD
 /* 	BETTER_BTS_AI_MOD						END								*/
 /********************************************************************************/
 	{
-		if (GC.getGame().getSorenRandNum(100, "Air combat") < iOurOdds)
+		if (bNoRngCombatRolls) bWeHit = (GC.getGame().getNoRandNumInSequ(100, iRound, bLeoNoRngStartSideMinus, "Air Combat") < iOurOdds);	//Leo no rng combat
+		else bWeHit = (GC.getGame().getSorenRandNum(100, "Air combat") < iOurOdds);
+		if (bWeHit)
 		{
 			if (DOMAIN_AIR == pInterceptor->getDomainType())
 			{
@@ -2509,6 +2531,28 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 		iAttackerHitChance = std::max(5, iAttackerOdds + ((iAttackerHitModifier * iAttackerOdds)/100));
 	}
 
+	//Leo no rng combat begin
+	bool bNoRngCombatRolls = GC.getDefineINT("NO_RNG_BATTLES", 0);
+	GC.getGame().mLog2 = log(2.0);
+	bool bLeoNoRngStartSideMinus = true; //since 50 vs 50 = atk wins first, lets then start with def advantage always // = (GC.getGameINLINE().getSorenRandNum(100, NULL) < 50);
+	int iINoRng = -1;
+	int iCountTotal = -1;
+	/*
+	//C2C: commented for now = we dont make more smaller rounds than original (gives better precision but not a priority):
+	int pDmgCoeff = std::min(iAttackerDamage, iDefenderDamage) / 2;
+	if (pDmgCoeff < 1)
+		pDmgCoeff = 1;
+	int pStepsCoeff = std::max(iAttackerDamage, iDefenderDamage) / 2;	//civCol WTP: could use pDmgCoeff but it would also means still high chances to evade when low atk vs high atk (which is opposite to logic) due to fight unresolved
+	if (pStepsCoeff < 1)
+		pStepsCoeff = 1;
+	iAttackerDamage = iAttackerDamage / pDmgCoeff;
+	iDefenderDamage = iDefenderDamage / pDmgCoeff;
+	int iAtkFirstStrikes = getCombatFirstStrikes() * pDmgCoeff;			
+	int iDefFirstStrikes = pDefender->getCombatFirstStrikes() * pDmgCoeff;
+	*/
+	int iMaxLoop = 16535; //could be more (about 2^31 I think) but will never need	// 7 * pStepsCoeff;
+	//Leo no rng combat end
+
 	while (true)
 	{
 		//TB Combat Mods (StrAdjperRnd) begin
@@ -2546,8 +2590,21 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 		iAttackerHitModifier = iAttackerPrecision - iDefenderDodge;
 		iDefenderHitModifier = iDefenderPrecision - iAttackerDodge;
 		iAttackerOdds = std::max((GC.getCOMBAT_DIE_SIDES() - iDefenderOdds), 0);
-		iDefenderCombatRoll = GC.getGame().getSorenRandNum(GC.getCOMBAT_DIE_SIDES(), "DefenderCombatRoll");
-		iAttackerCombatRoll = GC.getGame().getSorenRandNum(GC.getCOMBAT_DIE_SIDES(), "AttackerCombatRoll");
+		//Leo no rng combat begin
+		if (bNoRngCombatRolls)	
+		{
+			iINoRng++;			
+			iCountTotal++;	
+			if (iINoRng >= iMaxLoop) iINoRng = 0;
+			iDefenderCombatRoll = GC.getGame().getNoRandNumInSequ(GC.getCOMBAT_DIE_SIDES(), iINoRng, bLeoNoRngStartSideMinus, "DefenderCombatRoll");
+			iAttackerCombatRoll = GC.getGame().getNoRandNumInSequ(GC.getCOMBAT_DIE_SIDES(), iINoRng, bLeoNoRngStartSideMinus, "AttackerCombatRoll");	//which will give exact same sequence than iDefenderCombatRoll in fact
+		}
+		//Leo no rng combat end
+		else
+		{
+			iDefenderCombatRoll = GC.getGame().getSorenRandNum(GC.getCOMBAT_DIE_SIDES(), "DefenderCombatRoll");
+			iAttackerCombatRoll = GC.getGame().getSorenRandNum(GC.getCOMBAT_DIE_SIDES(), "AttackerCombatRoll");
+		}
 		WithdrawalRollResult = GC.getGame().getSorenRandNum(100, "Withdrawal");
 		DefenderWithdrawalRollResult = GC.getGame().getSorenRandNum(100, "DefenderWithdrawal");
 		RepelRollResult = GC.getGame().getSorenRandNum(100, "Repel");
@@ -11063,12 +11120,16 @@ bool CvUnit::espionage(EspionageMissionTypes eMission, int iData)
 	}
 	else
 	{
-		if (testSpyIntercepted(eTargetPlayer, GC.getEspionageMissionInfo(eMission).getDifficultyMod()))
+		if (testSpyIntercepted(eTargetPlayer, GC.getEspionageMissionInfo(eMission).getDifficultyMod(), true))
 		{
 			return false;
 		}
 
-		const bool bCaught = testSpyIntercepted(eTargetPlayer, GC.getDefineINT("ESPIONAGE_SPY_MISSION_ESCAPE_MOD"));
+		bool bCaught = false;	//Leo no rng spy : debatable : in case of no-rng should we still reroll for caught or not when mission success? Let's say no for now
+		if (GC.getDefineINT("NO_RNG_ESPIONAGE", 0) == 0)	//Leo no rng spy : ofc with option disabled, keep it same as before
+		{
+			bCaught = testSpyIntercepted(eTargetPlayer, GC.getDefineINT("ESPIONAGE_SPY_MISSION_ESCAPE_MOD"));	
+		}
 
 		if (GET_PLAYER(getOwner()).doEspionageMission(eMission, eTargetPlayer, plot(), iData, this, (bCaught && !isAlwaysHeal())))
 		{
@@ -11117,7 +11178,7 @@ bool CvUnit::espionage(EspionageMissionTypes eMission, int iData)
 	return false;
 }
 
-bool CvUnit::testSpyIntercepted(PlayerTypes eTargetPlayer, int iModifier)
+bool CvUnit::testSpyIntercepted(PlayerTypes eTargetPlayer, int iModifier, bool bNoRngCompatible)
 {
 	CvPlayer& kTargetPlayer = GET_PLAYER(eTargetPlayer);
 
@@ -11126,9 +11187,24 @@ bool CvUnit::testSpyIntercepted(PlayerTypes eTargetPlayer, int iModifier)
 		return false;
 	}
 
-	if (GC.getGame().getSorenRandNum(10000, "Spy Interception") >= getSpyInterceptPercent(kTargetPlayer.getTeam()) * (100 + iModifier))
+	//Leo no rng begin
+	int iInterceptChance = getSpyInterceptPercent(kTargetPlayer.getTeam()) * (100 + iModifier);
+	if (bNoRngCompatible && GC.getDefineINT("NO_RNG_ESPIONAGE", 0))
 	{
-		return false;
+		int iEvadeChanceClamped = std::min(100, std::max(0, 100 - (iInterceptChance / 100)));
+		//logging::logMsgW("C2C.log", L"CvUnit::testSpyIntercepted %d => %d - bonus: %d - %s", iInterceptChance, iEvadeChanceClamped, GET_PLAYER(getOwner()).getNoRngEspionageEvadeBonus(), GET_PLAYER(getOwner()).getNameKey());
+		if (GET_PLAYER(getOwner()).checkNoRngEspionageEvadeBonus(iEvadeChanceClamped , 100))
+		{
+			return false;
+		}
+	}
+	//Leo no rng end
+	else
+	{
+		if (GC.getGame().getSorenRandNum(10000, "Spy Interception") >= iInterceptChance)
+		{
+			return false;
+		}
 	}
 
 	CvString szFormatNoReveal;
@@ -23258,6 +23334,9 @@ void CvUnit::read(FDataStreamBase* pStream)
 	//bool bWorker = false;
 	//WRAPPER_READ_DECORATED(wrapper, "CvUnit", &bWorker, "bWorker");
 
+
+	WRAPPER_READ(wrapper, "CvUnit", &m_iNoRngSubdueBonus);	//Leo no rng subdue
+
 	WRAPPER_READ_OBJECT_END(wrapper);
 
 	// Toffer - Initialize Components
@@ -24134,6 +24213,8 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", (bWorker ? m_worker->getAssignedCity() : -1), "m_iAssignedCity");
 
 	//WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", isWorker(), "bWorker");
+
+	WRAPPER_WRITE(wrapper, "CvUnit", m_iNoRngSubdueBonus);	//Leo no rng subdue
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
@@ -38613,3 +38694,19 @@ void CvUnit::forceInvalidCoordinates()
 	m_iX = INVALID_PLOT_COORD;
 	m_iY = INVALID_PLOT_COORD;
 }
+
+//Leo no rng subdue begin
+int CvUnit::getNoRngSubdueBonus() const
+{
+	return m_iNoRngSubdueBonus;
+}
+
+bool CvUnit::checkNoRngSubdueBonus(int pChances, int pOutOf, bool pApplyChange, bool pResetOnSuccess) const
+{
+	pChances = (100 * pChances) / pOutOf;
+	bool bret = (m_iNoRngSubdueBonus + pChances >= 100);
+	if (pApplyChange) m_iNoRngSubdueBonus += pChances;
+	if (bret && pResetOnSuccess) m_iNoRngSubdueBonus -= 100;
+	return bret;
+}
+//Leo no rng subdue end

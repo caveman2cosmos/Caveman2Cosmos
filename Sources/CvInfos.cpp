@@ -31275,6 +31275,15 @@ bool CvOutcomeInfo::isCapture() const
 	return m_bCapture;
 }
 
+bool CvOutcomeInfo::isSubdue() const	//Leo no rng
+{
+	//didnt really find how to check that cleanly except refactoring more things, so lets do a "not clean but not intrusive way" :(
+	//first thought of doing 2 separate things for "tales" and "subdue" but then noticed that OUTCOME_SUBDUE_SEA_SMALL / LARGE replaces TALES in xml already. 
+	//So I suppose it's really ok to share the "luck" there
+	//pyGetTextKey() is missing subdue sometimes (sea) so using getMessageText() even if it doesnt look more logical
+	return ((getMessageText().find(L"OUTCOME_SUBDUE") != std::string::npos) || (getMessageText().find(L"OUTCOME_TALES") != std::string::npos));
+}
+
 TechTypes CvOutcomeInfo::getObsoleteTech() const
 {
 	return m_eObsoleteTech;

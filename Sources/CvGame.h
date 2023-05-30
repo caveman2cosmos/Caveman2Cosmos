@@ -763,6 +763,16 @@ public:
 
 	void logRandomResult(const wchar_t* szStreamName, const char* pszLog, int iMax, int iNum);
 
+	//Leo no rng combat begin
+	double mLog2; 	
+	double log2(double n);
+	int log2i(int n);
+	void intToBinary(int n, char* pOut);
+	void logMsg(char* format, ...);	
+	int getNoRandNum(int iNum, const char* pszLog, double pPct1 = 0.5);	
+	int getNoRandNumInSequ(int iNum, int i, bool pStartWithMinus, const char* pszLog);	//, int pOutOf is deprecated (infinite is ok)
+	//Leo no rng combat end
+
 	DllExport int calculateSyncChecksum();
 	DllExport int calculateOptionsChecksum();
 

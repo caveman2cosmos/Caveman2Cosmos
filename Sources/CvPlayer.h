@@ -2041,6 +2041,8 @@ protected:
 	void processTrait(TraitTypes eTrait, int iChange);
 	void recalculateUnitCounts();
 
+	mutable int m_iNoRngEspionageEvadeBonus;	//Leo no rng spy, starts at 50 (so 51% = success on first and 49% no), must be saved in savegame
+
 	//TB Traits begin
 public:
 	int getCivicAnarchyModifier() const;
@@ -2303,6 +2305,9 @@ public:
 	void changeExtraFreedomFighters(int iChange);
 
 	CvBuildLists* m_pBuildLists;
+
+	int getNoRngEspionageEvadeBonus() const;	//Leo no rng spy
+	bool checkNoRngEspionageEvadeBonus(int pChances, int pOutOf, bool pApplyChange = true, bool pResetOnSuccess = true) const;	//Leo no rng spy
 
 #ifdef _DEBUG
 	void ValidatePlotGroup(CvPlot* plot, CvPlotGroup* group);

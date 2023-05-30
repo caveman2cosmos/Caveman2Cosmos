@@ -7117,6 +7117,36 @@
 		<Russian>Ïîäâîäíûå òóííåëè</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__NORNGBATTLES_HOVER</Tag>
+		<English>When activated, hit rolls in battles always do the average expected outcome (as shown per ALT). Withdraw chances and other mechanics still uses random rolls with odds.</English>
+		<French>Lorsque activé, les jets dans les combats produisent toujours le résultat moyen attendu (tel que montré par ALT). Les chances de retraite et autres mecaniques utilisent toujours des jets aléatoires.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__NORNGBATTLES_TEXT</Tag>
+		<English>No-rng Battles</English>
+		<French>Combats sans aléatoire</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__NORNGSUBDUE_HOVER</Tag>
+		<English>When activated, subduing animals will be predictable for each capable hunting unit. The success frequence will also be equal to average rolls. Look at rollover on target to know outcome.</English>
+		<French>Lorsque activé, apprivoiser des animaux sera fait de manière prédictible pour chaque unité capable d'apprivoiser. La fréquence de réussite sera faite de manière équivalente à des jets moyens. Voir l'infobulle sur la cible pour la prédiction.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__NORNGSUBDUE_TEXT</Tag>
+		<English>No-rng Subdues</English>
+		<French>Apprivoiser sans aléatoire</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__NORNGESPIONAGE_HOVER</Tag>
+		<English>When activated, result of espionage missions will be predictable. The success frequence will also be equal to average rolls. Look at a mission success rate to know next outcome.</English>
+		<French>Lorsque activé, le résultat des missions d'espionnage sera prédictible. La fréquence de réussite sera faite de manière équivalente à des jets moyens. Voir la probabilité de succès d'une mission pour connaître son issue.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__NORNGESPIONAGE_TEXT</Tag>
+		<English>No-rng Espionage</English>
+		<French>Espionnage sans aléatoire</French>
+	</TEXT>	
+	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__SHOWCIVTRAITS_HOVER</Tag>
 		<English>Shows your civilization's traits on the flag, when hovering over it. Recommended only for larger resolutions.</English>
 		<French>Affiche les Traits de votre Civilisation en infobulle sur le Drapeau. Recommandé uniquement pour les plus hautes résolutions.</French>
