@@ -38682,8 +38682,9 @@ int CvUnit::getNoRngSubdueBonus() const
 	return m_iNoRngSubdueBonus;
 }
 
-bool CvUnit::checkNoRngSubdueBonus(int pChances, bool pApplyChange, bool pResetOnSuccess) const
+bool CvUnit::checkNoRngSubdueBonus(int pChances, int pOutOf, bool pApplyChange, bool pResetOnSuccess) const
 {
+	pChances = (100 * pChances) / pOutOf;
 	bool bret = (m_iNoRngSubdueBonus + pChances >= 100);
 	if (pApplyChange) m_iNoRngSubdueBonus += pChances;
 	if (bret && pResetOnSuccess) m_iNoRngSubdueBonus -= 100;

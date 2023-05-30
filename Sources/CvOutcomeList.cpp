@@ -151,11 +151,12 @@ bool CvOutcomeList::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, Unit
 		for (int i = 0; i < (int)apOutcome.size(); i++)
 		{
 			const CvOutcomeInfo& kOutcomeInfo = GC.getOutcomeInfo(apOutcome[i].first->getType());
-			//logging::logMsgW("C2C.log", L"Outcome #%d / %d : OutcomeTypes:%d - chances: %d - For %s eDefeatedUnitType: %d .", i, (int)apOutcome.size(), apOutcome[i].first->getType(), apOutcome[i].second, kUnit.getNameKey(), eDefeatedUnitType);
+			//logging::logMsgW("C2C.log", L"Outcome #%d / %d : OutcomeTypes:%d - chances: %d / %d - For %s eDefeatedUnitType: %d .", i, (int)apOutcome.size(), apOutcome[i].first->getType(), apOutcome[i].second, iChanceSum, kUnit.getNameKey(), eDefeatedUnitType);
 			//logging::logMsgW("C2C.log", L"\tOutcomeTypes:%d : %s | %s | %s", apOutcome[i].first->getType(), kOutcomeInfo.pyGetText().c_str(), kOutcomeInfo.pyGetTextKey().c_str(), kOutcomeInfo.getMessageText().c_str());
 			if (kOutcomeInfo.isSubdue())
 			{
-				if (kUnit.checkNoRngSubdueBonus(apOutcome[i].second))
+				//logging::logMsgW("C2C.log", L"\tisSubdue() detected, getNoRngSubdueBonus :%d", kUnit.getNoRngSubdueBonus());
+				if (kUnit.checkNoRngSubdueBonus(apOutcome[i].second, iChanceSum))
 				{
 					apOutcome[i].first->execute(kUnit, eDefeatedUnitPlayer, eDefeatedUnitType);
 					return true;
@@ -330,11 +331,11 @@ void CvOutcomeList::buildDisplayString(CvWStringBuffer& szBuffer, const CvUnit& 
 		bool bNoRngSubdue = GC.getDefineINT("NO_RNG_SUBDUE", 0);
 		if (bNoRngSubdue && (GC.getOutcomeInfo(apOutcome[i].first->getType()).isSubdue()))
 		{
-			//logging::logMsgW("C2C.log", L"buildDisplayStringA %s .", szBuffer.getCString());
+			//logging::logMsgW("C2C.log", L"buildDisplayStringA %s %d => %d - bonus: %d - %s", GC.getOutcomeInfo(apOutcome[i].first->getType()).pyGetTextKey().c_str(), apOutcome[i].second, (100 * apOutcome[i].second) / iChanceSum, kUnit.getNoRngSubdueBonus(), szBuffer.getCString());
 			CvWString szTemp;
 			szTemp.Format(L"(+%d=", kUnit.getNoRngSubdueBonus());
 			szBuffer.append(szTemp);		
-			if (kUnit.checkNoRngSubdueBonus(apOutcome[i].second, false, false)) szBuffer.append(gDLL->getText("TXT_KEY_POPUP_YES"));
+			if (kUnit.checkNoRngSubdueBonus(apOutcome[i].second, iChanceSum, false, false)) szBuffer.append(gDLL->getText("TXT_KEY_POPUP_YES"));
 			else szBuffer.append(gDLL->getText("TXT_KEY_POPUP_NO"));
 			szBuffer.append(L")%: ");
 		}

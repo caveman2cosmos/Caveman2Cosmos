@@ -1700,7 +1700,7 @@ public:
 	void forceInvalidCoordinates();
 
 	int getNoRngSubdueBonus() const;	//Leo no rng subdue
-	bool checkNoRngSubdueBonus(int pChances, bool pApplyChange = true, bool pResetOnSuccess = true) const;	//Leo no rng subdue
+	bool checkNoRngSubdueBonus(int pChances, int pOutOf, bool pApplyChange = true, bool pResetOnSuccess = true) const;	//Leo no rng subdue
 
 protected:
 	int m_iDCMBombRange;
