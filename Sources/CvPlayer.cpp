@@ -6981,9 +6981,6 @@ int64_t CvPlayer::getBaseUnitCost100(const UnitTypes eUnit) const
 		// We keep the 100 multiplier from the gamespeed modifier on purpose.
 		iBaseCost *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
 
-		iBaseCost *= GC.getHandicapInfo(getHandicapType()).getTrainPercent();
-		iBaseCost /= 100;
-
 		int iMod = 100;
 		if (!GC.getGame().isOption(GAMEOPTION_TECH_BEELINE_STINGS))
 		{
@@ -7074,9 +7071,6 @@ int CvPlayer::getProductionNeeded(BuildingTypes eBuilding) const
 	iProductionNeeded *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
 	iProductionNeeded /= 100;
 
-	iProductionNeeded *= GC.getHandicapInfo(getHandicapType()).getConstructPercent();
-	iProductionNeeded /= 100;
-
 	const EraTypes eEra = getCurrentEra();
 	iProductionNeeded *= GC.getEraInfo(eEra).getConstructPercent();
 	iProductionNeeded /= 100;
@@ -7132,10 +7126,6 @@ int CvPlayer::getProductionNeeded(ProjectTypes eProject) const
 	}
 	else iModifier = GC.getEraInfo(eEra).getCreatePercent();
 
-	iProductionNeeded *= iModifier;
-	iProductionNeeded /= 100;
-
-	iModifier = GC.getHandicapInfo(getHandicapType()).getConstructPercent();//SHOULD do a new tag for this (CreatePercent) maybe.
 	iProductionNeeded *= iModifier;
 	iProductionNeeded /= 100;
 
@@ -14710,59 +14700,50 @@ int CvPlayer::findPathLength(TechTypes eTech, bool bCost) const
 
 	if (eTech == NO_TECH || GET_TEAM(getTeam()).isHasTech(eTech))
 	{
-		//	We have this tech, no reason to add this to the pre-reqs
-		//	Base case return 0, we know it...
-		return 0;
+		// We have this tech, no reason to add this to the pre-reqs
+		return 0; // Base case return 0, we know it...
 	}
 
-	if ( (bCost ? m_aiCostPathLengthCache[eTech] : m_aiPathLengthCache[eTech]) == -1 )
+	if ((bCost ? m_aiCostPathLengthCache[eTech] : m_aiPathLengthCache[eTech]) == -1)
 	{
 		std::vector<techPath*> possiblePaths;
-		techPath*	initialSeed = new techPath();
+		techPath* initialSeed = new techPath();
 
 		possiblePaths.push_back(initialSeed);
 
 		constructTechPathSet(eTech, possiblePaths, *initialSeed);
 
-		//	Find the lowest cost of the possible paths
-		int	iValue;
-		int	iBestValue = MAX_INT;
-		//techPath* bestPath = NULL;
+		// Find the lowest cost of the possible paths
+		int iValue;
+		int iBestValue = MAX_INT;
 
 		foreach_(const techPath* path, possiblePaths)
 		{
-			if ( bCost )
+			if (bCost)
 			{
 				iValue = 0;
 
 				foreach_(const TechTypes& tech, *path)
 				{
-					iValue += GC.getTechInfo(tech).getResearchCost();
+					iValue += GET_TEAM(getTeam()).getResearchCost(eTech);
 				}
 			}
-			else
-			{
-				iValue = path->size();
-			}
+			else iValue = path->size();
 
-			if ( iValue < iBestValue )
+
+			if (iValue < iBestValue)
 			{
 				iBestValue = iValue;
 			}
-
 			delete path;
 		}
 
-		if ( bCost )
+		if (bCost)
 		{
 			m_aiCostPathLengthCache[eTech] = iBestValue;
 		}
-		else
-		{
-			m_aiPathLengthCache[eTech] = iBestValue;
-		}
+		else m_aiPathLengthCache[eTech] = iBestValue;
 	}
-
 	return bCost ? m_aiCostPathLengthCache[eTech] : m_aiPathLengthCache[eTech];
 }
 

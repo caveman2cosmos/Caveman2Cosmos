@@ -17266,25 +17266,12 @@ void CvPlayerAI::AI_doCommerce()
 	verifyGoldCommercePercent();
 }
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  07/19/09								jdog5000	  */
-/*																							  */
-/* Civic AI																					 */
-/************************************************************************************************/
+
 void CvPlayerAI::AI_doCivics()
 {
 	PROFILE_FUNC();
-
-	CivicTypes* paeBestCivic = NULL;
-	int* paeBestCivicValue = NULL;
-	int* paeBestNearFutureCivicValue = NULL;
-	int* paeCurCivicValue = NULL;
-	int* paiAvailableChoices = NULL;
-	int iCurCivicsValue = 0;
-	int iBestCivicsValue = 0;
-	int iI;
-
 	FAssertMsg(!isHumanPlayer(), "isHuman did not return false as expected");
+
 
 	m_turnsSinceLastRevolution++;
 	m_iCivicSwitchMinDeltaThreshold = (m_iCivicSwitchMinDeltaThreshold * 95) / 100;
@@ -17304,6 +17291,13 @@ void CvPlayerAI::AI_doCivics()
 	{
 		return;
 	}
+	CivicTypes* paeBestCivic = NULL;
+	int* paeBestCivicValue = NULL;
+	int* paeBestNearFutureCivicValue = NULL;
+	int* paeCurCivicValue = NULL;
+	int* paiAvailableChoices = NULL;
+	int iCurCivicsValue = 0;
+	int iBestCivicsValue = 0;
 
 	m_iCityGrowthValueBase = 0;
 	foreach_(const CvCity * pLoopCity, cities())
@@ -17374,24 +17368,21 @@ void CvPlayerAI::AI_doCivics()
 	paeBestNearFutureCivicValue = new int[GC.getNumCivicOptionInfos()];
 	paiAvailableChoices = new int[GC.getNumCivicOptionInfos()];
 
-	/********************************************************************************/
-	/* 	New Civic AI						19.08.2010				Fuyu			*/
-	/********************************************************************************/
 	bool bDoRevolution = false;
 	int iCurValue;
 	int iBestValue;
 
-	for (iI = 0; iI < GC.getNumCivicInfos() * 2; iI++)
+	for (int iI = 0; iI < GC.getNumCivicInfos() * 2; iI++)
 	{
 		m_aiCivicValueCache[iI] = MAX_INT;
 	}
 
-	for (iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
 	{
 		paiAvailableChoices[iI] = 0;
 	}
 
-	for (iI = 0; iI < GC.getNumCivicInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumCivicInfos(); iI++)
 	{
 		if (canDoCivics((CivicTypes)iI))
 		{
@@ -17408,12 +17399,12 @@ void CvPlayerAI::AI_doCivics()
 		//To use this, simply uncomment and replace any "iI" or "(CivicOptionTypes)iI" in the rest of this this function
 		// with "(paeShuffledCivicOptions[iI])"
 		CivicOptionTypes* paeShuffledCivicOptions = new Array[GC.getNumCivicOptionInfos()];
-		for (iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
 		{
 			paeShuffledCivicOptions[iI] = (CivicOptionTypes)iI;
 		}
 		int iNumPermutations = 1;
-		for (iI = GC.getNumCivicOptionInfos(); iI > 1; iI--)
+		for (int iI = GC.getNumCivicOptionInfos(); iI > 1; iI--)
 		{
 			iNumPermutations *= iI;
 		}
@@ -17421,7 +17412,7 @@ void CvPlayerAI::AI_doCivics()
 		//mapping each possible iPermutation to one possible permutation
 		int iPermutationWidth;
 		CivicOptionTypes eTempShuffleCivicOption;
-		for (iI = GC.getNumCivicOptionInfos(); (iI > 0 && iPermutation > 0); iI--)
+		for (int iI = GC.getNumCivicOptionInfos(); (iI > 0 && iPermutation > 0); iI--)
 		{
 			iPermutationWidth = iPermutation % iI;
 			iNumPermutations /= iI;
@@ -17437,13 +17428,13 @@ void CvPlayerAI::AI_doCivics()
 	*/
 
 	//initializing
-	for (iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
 	{
 		paeBestCivic[iI] = getCivics((CivicOptionTypes)iI);
 	}
 
 
-	for (iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
 	{
 		if (paiAvailableChoices[iI] > 1)
 		{
@@ -17491,7 +17482,7 @@ void CvPlayerAI::AI_doCivics()
 	int iPass = 0;
 	while (bChange && iPass < GC.getNumCivicOptionInfos())
 	{
-		for (iI = 0; iI < GC.getNumCivicInfos() * 2; iI++)
+		for (int iI = 0; iI < GC.getNumCivicInfos() * 2; iI++)
 		{
 			m_aiCivicValueCache[iI] = MAX_INT;
 		}
@@ -17504,7 +17495,7 @@ void CvPlayerAI::AI_doCivics()
 
 		CivicTypes eNewBestCivic;
 
-		for (iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
 		{
 			if (paiAvailableChoices[iI] > 1)
 			{
@@ -17565,7 +17556,7 @@ void CvPlayerAI::AI_doCivics()
 
 	//	Put back current civics
 	int iCivicChanges = 0;
-	for (iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
 	{
 		if (paiAvailableChoices[iI] > 1)
 		{
@@ -17598,10 +17589,10 @@ void CvPlayerAI::AI_doCivics()
 	{
 		FAssert(iBestCivicsValue >= iCurCivicsValue);
 
-		//	If we have no anarchy or if we're in a golden age that will still be going
+		// If we have no anarchy or if we're in a golden age that will still be going
 		//	next time we get an opportunity to change civs just do it (it's costless)
-		if (getMaxAnarchyTurns() != 0 &&
-			 (!isGoldenAge() || GC.getDefineINT("MIN_REVOLUTION_TURNS") >= getGoldenAgeTurns()))
+		if (getMaxAnarchyTurns() != 0
+		&& (!isGoldenAge() || GC.getDefineINT("MIN_REVOLUTION_TURNS") >= getGoldenAgeTurns()))
 		{
 			if (iBestCivicsValue - iCurCivicsValue < m_iCivicSwitchMinDeltaThreshold)
 			{
@@ -17611,21 +17602,17 @@ void CvPlayerAI::AI_doCivics()
 							iBestCivicsValue - iCurCivicsValue,
 							m_iCivicSwitchMinDeltaThreshold);
 				}
-
 				bDoRevolution = false;
 			}
-			else
+			else // Are we close to discovering new civic enablers?  If so should we wait for them?
 			{
-				//	Are we close to discovering new civic enablers?  If so should we wait for them?
-				int researchRate = calculateResearchRate();
-
 				bDoRevolution = false;
 				while (iCivicChanges > 0 && !bDoRevolution)
 				{
 					int	iNearFutureCivicsBestValue = iBestCivicsValue;
 					int iMaxHorizon = 20 * getCivicAnarchyLength(paeBestCivic);
 
-					for (iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
+					for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
 					{
 						paeBestNearFutureCivicValue[iI] = 0;
 					}
@@ -17634,94 +17621,73 @@ void CvPlayerAI::AI_doCivics()
 					{
 						bool bTestSwitched = false;
 
-						for (iI = 0; iI < GC.getNumCivicInfos(); iI++)
+						for (int iI = 0; iI < GC.getNumCivicInfos(); iI++)
 						{
-							if (GC.getCivicInfo((CivicTypes)iI).getCivicOptionType() == iOptionType && !canDoCivics((CivicTypes)iI))
+							const CivicTypes eCivic = static_cast<CivicTypes>(iI);
+
+							if (GC.getCivicInfo(eCivic).getCivicOptionType() != iOptionType || canDoCivics(eCivic))
 							{
-								const TechTypes eTech = GC.getCivicInfo((CivicTypes)iI).getTechPrereq();
+								continue;
+							}
+							const TechTypes eTech = GC.getCivicInfo(eCivic).getTechPrereq();
 
-								if (!GET_TEAM(getTeam()).isHasTech(eTech))
+							if (GET_TEAM(getTeam()).isHasTech(eTech) || GC.getTechInfo(eTech).getEra() > getCurrentEra() + 1)
+							{
+								continue;
+							}
+							// civic option vacuum
+							if (getCivics((CivicOptionTypes)iOptionType) != NO_CIVIC && !bTestSwitched)
+							{
+								processCivics(getCivics((CivicOptionTypes)iOptionType), -1, /* bLimited */ true);
+								bTestSwitched = true;
+							}
+							const int iNearFutureValue = AI_civicValue(eCivic, /* bCivicOptionVacuum */ true, paeBestCivic);
+
+							if (paeBestCivicValue[iOptionType] == -1)
+							{
+								// Not calculated yet - do so now
+								paeBestCivicValue[iOptionType] = AI_civicValue(paeBestCivic[iOptionType], /* bCivicOptionVacuum */ true, paeBestCivic);
+							}
+
+							if (gPlayerLogLevel > 1)
+							{
+								logBBAI("Near future civic %S has value %d, vs current %d for that civic option",
+										GC.getCivicInfo(eCivic).getDescription(),
+										iNearFutureValue,
+										paeBestCivicValue[iOptionType]);
+							}
+
+							if (iNearFutureValue > paeBestCivicValue[iOptionType])
+							{
+								const int iTurns = std::max(1, findPathLength(eTech, true) / std::max(1, calculateResearchRate()));
+
+								if (gPlayerLogLevel > 1)
 								{
-									const CvTechInfo& kTech = GC.getTechInfo(eTech);
+									logBBAI("Tech path len is %d vs horizon %d", iTurns, iMaxHorizon);
+								}
 
-									if (kTech.getEra() <= GC.getGame().getCurrentEra() + 1)
+								if (iTurns <= iMaxHorizon)
+								{
+									int weightedDelta = (iNearFutureValue - paeBestCivicValue[iOptionType]) * 20 / (20 + iTurns);
+
+									if (gPlayerLogLevel > 1)
 									{
-										//civic option vacuum
-										if (getCivics((CivicOptionTypes)iOptionType) != NO_CIVIC && !bTestSwitched)
+										logBBAI("weightedDelta is %d vs best %d", weightedDelta, paeBestNearFutureCivicValue[iOptionType]);
+									}
+
+									if (weightedDelta > paeBestNearFutureCivicValue[iOptionType])
+									{
+										iNearFutureCivicsBestValue -= paeBestNearFutureCivicValue[iOptionType];
+										iNearFutureCivicsBestValue += weightedDelta;
+
+										paeBestNearFutureCivicValue[iOptionType] = weightedDelta;
+
+										if (gPlayerLogLevel > 0)
 										{
-											processCivics(getCivics((CivicOptionTypes)iOptionType), -1, /* bLimited */ true);
-											bTestSwitched = true;
-										}
-
-										int iNearFutureValue = AI_civicValue((CivicTypes)iI, /* bCivicOptionVacuum */ true, paeBestCivic);
-
-										if (paeBestCivicValue[iOptionType] == -1)
-										{
-											//	Not calculated yet - do so now
-											paeBestCivicValue[iOptionType] = AI_civicValue(paeBestCivic[iOptionType], /* bCivicOptionVacuum */ true, paeBestCivic);
-										}
-
-										if (gPlayerLogLevel > 1)
-										{
-											logBBAI("Near future civic %S has value %d, vs current %d for that civic option",
-													GC.getCivicInfo((CivicTypes)iI).getDescription(),
-													iNearFutureValue,
-													paeBestCivicValue[iOptionType]);
-										}
-
-										if (iNearFutureValue > paeBestCivicValue[iOptionType])
-										{
-											int iTechPathLen = findPathLength(eTech, true);
-
-											iTechPathLen *= GC.getHandicapInfo(getHandicapType()).getResearchPercent();
-											iTechPathLen /= 100;
-
-											iTechPathLen *= GC.getWorldInfo(GC.getMap().getWorldSize()).getResearchPercent();
-											iTechPathLen /= 100;
-
-											iTechPathLen *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
-											iTechPathLen /= 100;
-
-											iTechPathLen *= GC.getEraInfo(GC.getGame().getStartEra()).getResearchPercent();
-											iTechPathLen /= 100;
-
-											iTechPathLen /= std::max(1, researchRate);
-
-											iTechPathLen = std::max(1, iTechPathLen);
-
-											if (gPlayerLogLevel > 1)
-											{
-												logBBAI("Tech path len is %d vs horizon %d",
-														iTechPathLen,
-														iMaxHorizon);
-											}
-
-											if (iTechPathLen <= iMaxHorizon)
-											{
-												int weightedDelta = (iNearFutureValue - paeBestCivicValue[iOptionType]) * 20 / (20 + iTechPathLen);
-
-												if (gPlayerLogLevel > 1)
-												{
-													logBBAI("weightedDelta is %d vs best %d",
-															weightedDelta,
-															paeBestNearFutureCivicValue[iOptionType]);
-												}
-
-												if (weightedDelta > paeBestNearFutureCivicValue[iOptionType])
-												{
-													iNearFutureCivicsBestValue -= paeBestNearFutureCivicValue[iOptionType];
-													iNearFutureCivicsBestValue += weightedDelta;
-
-													paeBestNearFutureCivicValue[iOptionType] = weightedDelta;
-
-													if (gPlayerLogLevel > 0)
-													{
-														logBBAI("Found near-future civic %S with value %d",
-																GC.getCivicInfo((CivicTypes)iI).getDescription(),
-																iNearFutureValue);
-													}
-												}
-											}
+											logBBAI(
+												"Found near-future civic %S with value %d",
+												GC.getCivicInfo(eCivic).getDescription(), iNearFutureValue
+											);
 										}
 									}
 								}
@@ -17786,7 +17752,7 @@ void CvPlayerAI::AI_doCivics()
 						int					iLowestEfficiency = MAX_INT;
 						CivicOptionTypes	eWorstOptionSwitch = NO_CIVICOPTION;
 
-						for (iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
+						for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
 						{
 							if (paeBestCivic[iI] != getCivics((CivicOptionTypes)iI))
 							{
@@ -17821,20 +17787,13 @@ void CvPlayerAI::AI_doCivics()
 				}
 			}
 		}
-		else
+		else if (gPlayerLogLevel > 0)
 		{
-			if (gPlayerLogLevel > 0)
-			{
-				logBBAI("No anarchy so switching");
-			}
+			logBBAI("No anarchy so switching");
 		}
 	}
 
-	// XXX AI skips revolution???
 	if (bDoRevolution && canRevolution(paeBestCivic))
-		/********************************************************************************/
-		/* 	New Civic AI												END 			*/
-		/********************************************************************************/
 	{
 		m_iCivicSwitchMinDeltaThreshold = (iBestCivicsValue - iCurCivicsValue) * 2;
 		revolution(paeBestCivic);
@@ -17842,8 +17801,8 @@ void CvPlayerAI::AI_doCivics()
 	}
 	else
 	{
-		//	AI will re-evaluate whenever it gets a tech anyway, but if it's in a long stagant
-		//	period have it do so periodically anyway (but not so often as to create a peformance overhead)
+		// AI will re-evaluate whenever it gets a tech anyway, but if it's in a long stagant
+		// period have it do so periodically anyway (but not so often as to create a peformance overhead)
 		AI_setCivicTimer(CIVIC_CHANGE_DELAY);
 	}
 
@@ -17855,9 +17814,6 @@ void CvPlayerAI::AI_doCivics()
 	SAFE_DELETE_ARRAY(paeCurCivicValue);
 	SAFE_DELETE_ARRAY(paiAvailableChoices);
 }
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
 
 
 void CvPlayerAI::AI_doReligion()

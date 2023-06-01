@@ -3640,9 +3640,6 @@ public:
 	int getAdvancedStartPointsMod() const;
 	int getStartingGold() const;
 	int getUnitUpkeepPercent() const;
-	int getTrainPercent() const;
-	int getConstructPercent() const;
-	int getResearchPercent() const;
 	int getDistanceMaintenancePercent() const;
 	int getNumCitiesMaintenancePercent() const;
 	int getColonyMaintenancePercent() const;
@@ -3714,9 +3711,6 @@ private:
 	int m_iAdvancedStartPointsMod;
 	int m_iStartingGold;
 	int m_iUnitUpkeepPercent;
-	int m_iTrainPercent;
-	int m_iConstructPercent;
-	int m_iResearchPercent;
 	int m_iDistanceMaintenancePercent;
 	int m_iNumCitiesMaintenancePercent;
 	int m_iColonyMaintenancePercent;

@@ -2646,9 +2646,6 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 	iCost *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 	iCost /= 100;
 
-	iCost *= GC.getHandicapInfo(getHandicapType()).getResearchPercent();
-	iCost /= 100;
-
 	iCost *= GC.getWorldInfo(GC.getMap().getWorldSize()).getResearchPercent();
 	iCost /= 100;
 
