@@ -2216,12 +2216,12 @@ void CvUnitAI::AI_workerMove()
 	{
 		pCity = plot()->getPlotCity(); //get city on plot
 
-		if (pCity == NULL) //if city is not on same plot
+		if (!pCity) //if city is not on same plot
 		{
 			pCity = plot()->getWorkingCity(); //get city that is owning this plot
 		}
 
-		if (pCity != NULL)
+		if (pCity)
 		{
 			if (CvWorkerService::ShouldImproveCity(pCity) && AI_improveCity(pCity))
 			{
@@ -2242,11 +2242,6 @@ void CvUnitAI::AI_workerMove()
 
 	// find bonuses within 4 moves to improve
 	if (CvWorkerService::ImproveBonus(this))
-	{
-		return;
-	}
-
-	if (bCanRoute && isNPC() && AI_connectCity())
 	{
 		return;
 	}
@@ -11086,12 +11081,7 @@ void CvUnitAI::AI_networkAutomated()
 		return;
 	}
 
-	if (AI_routeTerritory(true) || AI_connectBonus(false))
-	{
-		return;
-	}
-
-	if (AI_routeCity() || AI_routeTerritory())
+	if (AI_routeTerritory(true) || AI_routeCity())
 	{
 		return;
 	}
