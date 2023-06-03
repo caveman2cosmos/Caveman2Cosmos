@@ -1821,15 +1821,18 @@ bool CvDLLButtonPopup::launchDoEspionageTargetPopup(CvPopup* pPopup, CvPopupInfo
 	{
 		if (pCity)
 		{
-			for (int iBuilding = 0; iBuilding < GC.getNumBuildingInfos(); ++iBuilding)
+			foreach_(const BuildingTypes eType, pCity->getHasBuildings())
 			{
-				if (kPlayer.canDoEspionageMission(eMission, eTargetPlayer, pPlot, iBuilding, pUnit)
-				&& pCity->getNumActiveBuilding((BuildingTypes)iBuilding) > 0)
+				if (kPlayer.canDoEspionageMission(eMission, eTargetPlayer, pPlot, eType, pUnit) && !pCity->isDisabledBuilding(eType))
 				{
-					const CvBuildingInfo& kBuilding = GC.getBuildingInfo((BuildingTypes)iBuilding);
-					const int iCost = kPlayer.getEspionageMissionCost(eMission, eTargetPlayer, pPlot, iBuilding, pUnit);
-					CvWString szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_MISSION_COST", kBuilding.getDescription(), iCost);
-					gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, szBuffer, kBuilding.getButton(), iBuilding, WIDGET_HELP_ESPIONAGE_COST, eMission, iBuilding);
+					gDLL->getInterfaceIFace()->popupAddGenericButton(
+						pPopup, gDLL->getText(
+							"TXT_KEY_ESPIONAGE_MISSION_COST",
+							GC.getBuildingInfo(eType).getDescription(),
+							kPlayer.getEspionageMissionCost(eMission, eTargetPlayer, pPlot, eType, pUnit)
+						),
+						GC.getBuildingInfo(eType).getButton(), eType, WIDGET_HELP_ESPIONAGE_COST, eMission, eType
+					);
 				}
 			}
 		}

@@ -99,7 +99,6 @@ void CyCityPythonInterface1(python::class_<CyCity>& x)
 		.def("hurryProduction", &CyCity::hurryProduction, "int (HurryID)")
 		.def("flatHurryAngerLength", &CyCity::flatHurryAngerLength, "int ()")
 
-		.def("getNumActiveBuilding", &CyCity::getNumActiveBuilding, "bool (BuildingID) - is BuildingID active in the city (not disabled)?")
 		.def("isFreeBuilding", &CyCity::isFreeBuilding, "bool (BuildingID)")
 		.def("getID", &CyCity::getID, "int () - index ID # for the city - use with pPlayer.getCity(ID) to obtain city instance")
 		.def("getX", &CyCity::getX, "int () - X coordinate for the cities plot")

@@ -845,24 +845,25 @@ void CvTeam::shareItems(TeamTypes eTeam)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(eTeam))
 		{
-			foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
+			foreach_(const CvCity* cityX, GET_PLAYER((PlayerTypes)iI).cities())
 			{
-				for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
+				foreach_(const BuildingTypes eTypeX, cityX->getHasBuildings())
 				{
-					if (pLoopCity->getNumActiveBuilding((BuildingTypes)iJ) > 0)
+					if (cityX->isDisabledBuilding(eTypeX))
 					{
-						if (GC.getBuildingInfo((BuildingTypes)iJ).isTeamShare())
+						continue;
+					}
+					if (GC.getBuildingInfo(eTypeX).isTeamShare())
+					{
+						for (int iK = 0; iK < MAX_PC_PLAYERS; iK++)
 						{
-							for (int iK = 0; iK < MAX_PC_PLAYERS; iK++)
+							if (GET_PLAYER((PlayerTypes)iK).isAliveAndTeam(getID()))
 							{
-								if (GET_PLAYER((PlayerTypes)iK).isAliveAndTeam(getID()))
-								{
-									GET_PLAYER((PlayerTypes)iK).processBuilding((BuildingTypes)iJ, 1, pLoopCity->area());
-								}
+								GET_PLAYER((PlayerTypes)iK).processBuilding(eTypeX, 1, cityX->area());
 							}
 						}
-						processBuilding((BuildingTypes)iJ, 1);
 					}
+					processBuilding(eTypeX, 1);
 				}
 			}
 		}
@@ -2643,9 +2644,6 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 	iCost /= 100;
 
 	iCost *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
-	iCost /= 100;
-
-	iCost *= GC.getHandicapInfo(getHandicapType()).getResearchPercent();
 	iCost /= 100;
 
 	iCost *= GC.getWorldInfo(GC.getMap().getWorldSize()).getResearchPercent();
@@ -7053,7 +7051,7 @@ void CvTeam::AI_setAssignWorkDirtyInEveryPlayerCityWithActiveBuilding(BuildingTy
 		if (GET_PLAYER((PlayerTypes)i).isAliveAndTeam(getID()))
 		{
 			algo::for_each(
-				GET_PLAYER((PlayerTypes)i).cities() | filtered(CvCity::fn::getNumActiveBuilding(eBuilding) > 0),
+				GET_PLAYER((PlayerTypes)i).cities() | filtered(CvCity::fn::isActiveBuilding(eBuilding)),
 				CvCity::fn::AI_setAssignWorkDirty(true)
 			);
 		}

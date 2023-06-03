@@ -4138,7 +4138,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 					{
 						const BuildingTypes eBuildingX = static_cast<BuildingTypes>(buildingInfo.getReplacedBuilding(iI));
 
-						if (getNumActiveBuilding(eBuildingX) > 0)
+						if (isActiveBuilding(eBuildingX))
 						{
 							PROFILE("AI_bestBuildingThreshold.Replace");
 
@@ -4996,16 +4996,11 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 				iValue += kBuilding.getEspionageDefenseModifier() / 8;
 			}
 
-			//	If we're evaluating a building we already have (e.g. - for civic enabling/disabling)
+
+			if (((iFocusFlags & BUILDINGFOCUS_HAPPY) || iPass > 0)
+			// If we're evaluating a building we already have (e.g. - for civic enabling/disabling)
 			//	and it gives no unhealthy and that's the reason we have it, count it!
-			bool bCountHappy = !isNoUnhappiness();
-
-			if (getNumActiveBuilding(eBuilding) > 0 && kBuilding.isNoUnhappiness())
-			{
-				bCountHappy = true;
-			}
-
-			if (((iFocusFlags & BUILDINGFOCUS_HAPPY) || (iPass > 0)) && bCountHappy)
+			&& (!isNoUnhappiness() || isActiveBuilding(eBuilding) && kBuilding.isNoUnhappiness()))
 			{
 				PROFILE("CvCityAI::AI_buildingValueThresholdOriginal.Happy");
 
@@ -5116,16 +5111,10 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 				}
 			}
 
-			//	If we're evaluating a building we already have (e.g. - for civic enabling/disabling)
+			if (((iFocusFlags & BUILDINGFOCUS_HEALTHY) || iPass > 0)
+			// If we're evaluating a building we already have (e.g. - for civic enabling/disabling)
 			//	and it gives no unhealthy and that's the reason we have it, count it!
-			bool bCountHealth = !isNoUnhealthyPopulation();
-
-			if (getNumActiveBuilding(eBuilding) > 0 && kBuilding.isNoUnhealthyPopulation())
-			{
-				bCountHealth = true;
-			}
-
-			if (((iFocusFlags & BUILDINGFOCUS_HEALTHY) || iPass > 0) && bCountHealth)
+			&& (!isNoUnhealthyPopulation() || isActiveBuilding(eBuilding) && kBuilding.isNoUnhealthyPopulation()))
 			{
 				PROFILE("CvCityAI::AI_buildingValueThresholdOriginal.Healthy");
 
@@ -5240,7 +5229,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 								for (int iI = 0; iI < kUnit.getNumPrereqAndBuildings(); ++iI)
 								{
 									// Toffer - seems strange to use break here if only one of X "AND" requirements are met...
-									if (getNumActiveBuilding((BuildingTypes)kUnit.getPrereqAndBuilding(iI)) > 0)
+									if (isActiveBuilding((BuildingTypes)kUnit.getPrereqAndBuilding(iI)))
 									{
 										bUnitIsOtherwiseEnabled = true;
 										break;
@@ -13012,7 +13001,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 								for (int iI = 0; iI < kUnit.getNumPrereqAndBuildings(); ++iI)
 								{
 									// Toffer - seems strange to use break here if only one of X "AND" requirements are met...
-									if (getNumActiveBuilding((BuildingTypes)kUnit.getPrereqAndBuilding(iI)) > 0)
+									if (isActiveBuilding((BuildingTypes)kUnit.getPrereqAndBuilding(iI)))
 									{
 										bUnitIsOtherwiseEnabled = true;
 										break;

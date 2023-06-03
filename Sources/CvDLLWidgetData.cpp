@@ -3518,12 +3518,12 @@ void CvDLLWidgetData::parseDisabledCitizenHelp(CvWidgetDataStruct &widgetDataStr
 		{
 			bool bFirst = true;
 
-			for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+			for (int iI = GC.getNumBuildingInfos() - 1; iI > -1; iI--)
 			{
 				const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
 
 				if (GC.getBuildingInfo(eLoopBuilding).getSpecialistCount(widgetDataStruct.m_iData1) > 0
-				&& pHeadSelectedCity->getNumActiveBuilding(eLoopBuilding) <= 0 && !isLimitedWonder(eLoopBuilding)
+				&& !pHeadSelectedCity->isActiveBuilding(eLoopBuilding) && !isLimitedWonder(eLoopBuilding)
 				&& (GC.getBuildingInfo(eLoopBuilding).getSpecialBuilding() == NO_SPECIALBUILDING || pHeadSelectedCity->canConstruct(eLoopBuilding)))
 				{
 					setListHelp(szBuffer, gDLL->getText("TXT_KEY_REQUIRES"), GC.getBuildingInfo(eLoopBuilding).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
