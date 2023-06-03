@@ -93,6 +93,25 @@
 
 				<change module="ANewDawnSettings" function="changedFlexibleDifficultyMaximumDiff"/>
 			</list>
+
+			<list id="FlexibleDifficultyAIMinimumDiff" key="FlexibleDifficultyAIMinimumDiff" type="int" default="0" listType="string"
+				values="No Minimum|Settler|Chieftan|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare"
+				get="getFlexibleDifficultyAIMinimumDiff" set="setFlexibleDifficultyAIMinimumDiff">
+
+				<change module="ANewDawnSettings" function="changedFlexibleDifficultyAIMinimumDiff"/>
+			</list>
+			<list id="FlexibleDifficultyAIMaximumDiff" key="FlexibleDifficultyAIMaximumDiff" type="int" default="0" listType="string"
+				values="No Maximum|Settler|Chieftan|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare"
+				get="getFlexibleDifficultyAIMaximumDiff" set="setFlexibleDifficultyAIMaximumDiff">
+
+				<change module="ANewDawnSettings" function="changedFlexibleDifficultyAIMaximumDiff"/>
+			</list>
+			<list id="FlexibleDifficultyAITurnIncrements" key="FlexibleDifficultyAITurnIncrements" type="int" default="25"
+				values="250, 225, 200, 175, 150, 125, 100, 75, 50, 40, 30, 25, 20, 15, 10, 5, 1"
+				get="getFlexibleDifficultyAITurnIncrements" set="setFlexibleDifficultyAITurnIncrements">
+
+				<change module="ANewDawnSettings" function="changedFlexibleDifficultyTurnIncrements"/>
+			</list>
 			<list id="FlexibleDifficultyMaxRank" key="FlexibleDifficultyMaxRank" type="int" default="-1"
 				values="50, 49, 48, 47, 46, 45, 44, 43, 42, 41, 40, 39, 38, 37, 36, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25,
 						24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0, -1"

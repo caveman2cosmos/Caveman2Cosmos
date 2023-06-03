@@ -30,6 +30,9 @@ class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 		screen.setEnabled(self.addTextDropdown(screen, left, left, "RoMSettings__FlexibleDifficultyMaximumDiff", False, "LAYOUT_LEFT"), bCanAdjustSettings)
 		screen.setEnabled(self.addIntDropdown(screen, left, left, "RoMSettings__FlexibleDifficultyTurnIncrements", False, "LAYOUT_LEFT"), bCanAdjustSettings)
 		screen.setEnabled(self.addCheckbox(screen, left, "RoMSettings__FlexibleDifficultyAI"), bCanAdjustSettings)
+		screen.setEnabled(self.addTextDropdown(screen, left, left, "RoMSettings__FlexibleDifficultyAIMinimumDiff", False, "LAYOUT_LEFT"), bCanAdjustSettings)
+		screen.setEnabled(self.addTextDropdown(screen, left, left, "RoMSettings__FlexibleDifficultyAIMaximumDiff", False, "LAYOUT_LEFT"), bCanAdjustSettings)
+		screen.setEnabled(self.addIntDropdown(screen, left, left, "RoMSettings__FlexibleDifficultyAITurnIncrements", False, "LAYOUT_LEFT"), bCanAdjustSettings)
 		screen.setEnabled(self.addTextDropdown(screen, left, left, "RoMSettings__CurrentDifficulty", False, "LAYOUT_LEFT"), bCanAdjustSettings)
 
 		self.addTextDropdown(screen, left, left, "RoMSettings__PlayerColor", False, "LAYOUT_LEFT") # This might be OOS safe, but I'm not sure... Toffer.
