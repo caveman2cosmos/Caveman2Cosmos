@@ -21987,40 +21987,30 @@ BuildTypes CvUnitAI::AI_betterPlotBuild(const CvPlot* pPlot, BuildTypes eBuild) 
 bool CvUnitAI::AI_connectBonus(bool bTestTrade)
 {
 	PROFILE_FUNC();
+	const CvMap& map = GC.getMap();
+	const CvArea* pArea = area();
+	const TeamTypes eTeam = getTeam();
+	const PlayerTypes ePlayer = getOwner();
 
-	CvPlot* pLoopPlot;
-	BonusTypes eNonObsoleteBonus;
-	int iI;
-
-	// XXX how do we make sure that we can build roads???
-
-	for (iI = 0; iI < GC.getMap().numPlots(); iI++)
+	for (int iI = map.numPlots() - 1; iI > -1; iI--)
 	{
-		pLoopPlot = GC.getMap().plotByIndex(iI);
+		CvPlot* plotX = map.plotByIndex(iI);
 
-		if (pLoopPlot->getOwner() == getOwner()) // XXX team???
+		if (plotX->getOwner() == ePlayer
+		&& AI_plotValid(plotX)
+		&& plotX->area() == pArea
+		&& plotX->getNonObsoleteBonusType(eTeam) != NO_BONUS
+		&& !plotX->isConnectedToCapital()
+		&& (
+				!bTestTrade
+			||	plotX->getImprovementType() != NO_IMPROVEMENT
+			&&	GC.getImprovementInfo(plotX->getImprovementType()).isImprovementBonusTrade(plotX->getNonObsoleteBonusType(eTeam))
+		)
+		&& AI_connectPlot(plotX))
 		{
-			if (AI_plotValid(pLoopPlot) && pLoopPlot->area() == area())
-			{
-				eNonObsoleteBonus = pLoopPlot->getNonObsoleteBonusType(getTeam());
-
-				if (eNonObsoleteBonus != NO_BONUS)
-				{
-					if (!(pLoopPlot->isConnectedToCapital()))
-					{
-						if (!bTestTrade || ((pLoopPlot->getImprovementType() != NO_IMPROVEMENT) && (GC.getImprovementInfo(pLoopPlot->getImprovementType()).isImprovementBonusTrade(eNonObsoleteBonus))))
-						{
-							if (AI_connectPlot(pLoopPlot))
-							{
-								return true;
-							}
-						}
-					}
-				}
-			}
+			return true;
 		}
 	}
-
 	return false;
 }
 
@@ -22030,43 +22020,26 @@ bool CvUnitAI::AI_connectCity()
 {
 	PROFILE_FUNC();
 
-	// XXX how do we make sure that we can build roads???
-
-	CvCity* pLoopCity = plot()->getWorkingCity();
-	if (pLoopCity != NULL)
+	CvCity* cityX = plot()->getWorkingCity();
+	if (cityX
+	&& cityX->getNumWorkers() <= 2
+	&& AI_plotValid(cityX->plot())
+	&& !cityX->isConnectedToCapital()
+	&& AI_connectPlot(cityX->plot(), 1))
 	{
-		if (pLoopCity->getNumWorkers() <= 2)
-		{
-			if (AI_plotValid(pLoopCity->plot()))
-			{
-				if (!(pLoopCity->isConnectedToCapital()))
-				{
-					if (AI_connectPlot(pLoopCity->plot(), 1))
-					{
-						return true;
-					}
-				}
-			}
-		}
+		return true;
 	}
 
-	foreach_(const CvCity * pLoopCity, GET_PLAYER(getOwner()).cities())
+	foreach_(const CvCity * cityX, GET_PLAYER(getOwner()).cities())
 	{
-		if (pLoopCity->getNumWorkers() <= 2)
+		if (cityX->getNumWorkers() <= 2
+		&& AI_plotValid(cityX->plot())
+		&& !cityX->isConnectedToCapital()
+		&& AI_connectPlot(cityX->plot(), 1))
 		{
-			if (AI_plotValid(pLoopCity->plot()))
-			{
-				if (!(pLoopCity->isConnectedToCapital()))
-				{
-					if (AI_connectPlot(pLoopCity->plot(), 1))
-					{
-						return true;
-					}
-				}
-			}
+			return true;
 		}
 	}
-
 	return false;
 }
 
@@ -22075,61 +22048,46 @@ bool CvUnitAI::AI_connectCity()
 bool CvUnitAI::AI_routeCity()
 {
 	PROFILE_FUNC();
-
-	CvCity* pRouteToCity;
-	int iBasePathFlags = MOVE_SAFE_TERRITORY | MOVE_AVOID_ENEMY_UNITS | MOVE_OUR_TERRITORY | MOVE_RECONSIDER_ON_LEAVING_OWNED;
+	FAssert(canBuildRoute());
 
 	if (!canBuildRoute())
 	{
 		return false;
 	}
+	const int iBasePathFlags = MOVE_SAFE_TERRITORY | MOVE_AVOID_ENEMY_UNITS | MOVE_OUR_TERRITORY | MOVE_RECONSIDER_ON_LEAVING_OWNED;
+	const bool bCanMoveAllTerrain = getGroup()->canMoveAllTerrain();
+	const DomainTypes eDomain = getDomainType();
+	const CvArea* pArea = area();
+	const CvPlayerAI& player = GET_PLAYER(getOwner());
 
-	FAssert(canBuildRoute());
-
-	foreach_(const CvCity * pLoopCity, GET_PLAYER(getOwner()).cities())
+	foreach_(const CvCity * cityX, player.cities())
 	{
-		if (AI_plotValid(pLoopCity->plot()))
+		if (!AI_plotValid(cityX->plot())
+		|| eDomain == DOMAIN_LAND
+		&& cityX->area() != pArea
+		&& !bCanMoveAllTerrain)
 		{
-			/************************************************************************************************/
-			/* BETTER_BTS_AI_MOD					  02/22/10								jdog5000	  */
-			/*																							  */
-			/* Unit AI, Efficiency																		  */
-			/************************************************************************************************/
-						// BBAI efficiency: check area for land units before generating path
-			if ((getDomainType() == DOMAIN_LAND) && (pLoopCity->area() != area()) && !(getGroup()->canMoveAllTerrain()))
-			{
-				continue;
-			}
+			continue;
+		}
 
-			pRouteToCity = pLoopCity->AI_getRouteToCity();
+		CvCity* pRouteToCity = cityX->AI_getRouteToCity();
 
-			if (pRouteToCity != NULL)
-			{
-				if (!(pLoopCity->plot()->isVisibleEnemyUnit(this)))
-				{
-					if (!(pRouteToCity->plot()->isVisibleEnemyUnit(this)))
-					{
-						if (GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pRouteToCity->plot(), MISSIONAI_BUILD, getGroup()) == 0)
-						{
-							if (generatePath(pLoopCity->plot(), iBasePathFlags, true))
-							{
-								if (generatePath(pRouteToCity->plot(), iBasePathFlags, true))
-								{
-									if (getGroup()->pushMissionInternal(MISSION_ROUTE_TO, pLoopCity->getX(), pLoopCity->getY(), MOVE_SAFE_TERRITORY | MOVE_WITH_CAUTION, false, false, MISSIONAI_BUILD, pRouteToCity->plot()))
-									{
-										getGroup()->pushMission(MISSION_ROUTE_TO, pRouteToCity->getX(), pRouteToCity->getY(), MOVE_SAFE_TERRITORY | MOVE_WITH_CAUTION, (getGroup()->getLengthMissionQueue() > 0), false, MISSIONAI_BUILD, pRouteToCity->plot());
+		if (!pRouteToCity
+		|| cityX->plot()->isVisibleEnemyUnit(this)
+		|| pRouteToCity->plot()->isVisibleEnemyUnit(this)
+		|| player.AI_plotTargetMissionAIs(pRouteToCity->plot(), MISSIONAI_BUILD, getGroup()) != 0
+		|| !generatePath(cityX->plot(), iBasePathFlags, true)
+		|| !generatePath(pRouteToCity->plot(), iBasePathFlags, true))
+		{
+			continue;
+		}
+		if (getGroup()->pushMissionInternal(MISSION_ROUTE_TO, cityX->getX(), cityX->getY(), MOVE_SAFE_TERRITORY | MOVE_WITH_CAUTION, false, false, MISSIONAI_BUILD, pRouteToCity->plot()))
+		{
+			getGroup()->pushMission(MISSION_ROUTE_TO, pRouteToCity->getX(), pRouteToCity->getY(), MOVE_SAFE_TERRITORY | MOVE_WITH_CAUTION, (getGroup()->getLengthMissionQueue() > 0), false, MISSIONAI_BUILD, pRouteToCity->plot());
 
-										return true;
-									}
-								}
-							}
-						}
-					}
-				}
-			}
+			return true;
 		}
 	}
-
 	return false;
 }
 
@@ -22138,85 +22096,68 @@ bool CvUnitAI::AI_routeCity()
 bool CvUnitAI::AI_routeTerritory(bool bImprovementOnly)
 {
 	PROFILE_FUNC();
-
-	CvPlot* pLoopPlot;
-	CvPlot* pBestPlot;
-	ImprovementTypes eImprovement;
-	RouteTypes eBestRoute;
-	bool bValid;
-	int iPathTurns;
-	int iValue;
-	int iBestValue;
-	int iI, iJ;
-
 	FAssert(canBuildRoute());
 
-	iBestValue = 0;
-	pBestPlot = NULL;
+	int iPathTurns;
+	const CvMap& map = GC.getMap();
+	const CvArea* pArea = area();
+	const TeamTypes eTeam = getTeam();
+	const PlayerTypes ePlayer = getOwner();
 
-	for (iI = 0; iI < GC.getMap().numPlots(); iI++)
+	int iBestValue = 0;
+	CvPlot* pBestPlot = NULL;
+
+	for (int iI = map.numPlots() - 1; iI > -1; iI--)
 	{
-		pLoopPlot = GC.getMap().plotByIndex(iI);
+		CvPlot* plotX = map.plotByIndex(iI);
 
-		if (pLoopPlot->getOwner() == getOwner())
+		if (plotX->getOwner() != ePlayer
+		|| plotX->area() != pArea
+		|| !AI_plotValid(plotX))
 		{
-			if (pLoopPlot->area() == area() && AI_plotValid(pLoopPlot))
+			continue;
+		}
+		// Best route depends on Tech, Plot(Terrain/Feature, and Improvement in case of eRail v Highway)
+		RouteTypes eBestRoute = GET_PLAYER(ePlayer).getBestRoute(plotX, false, this);
+
+		if (eBestRoute == NO_ROUTE || eBestRoute == plotX->getRouteType())
+		{
+			continue;
+		}
+		bool bValid = !bImprovementOnly;
+
+		if (bImprovementOnly)
+		{
+			const ImprovementTypes eType = plotX->getImprovementType();
+
+			if (eType == NO_IMPROVEMENT)
 			{
-				// Best route depends on Tech, Plot(Terrain/Feature, and Improvement in case of eRail v Highway)
-				eBestRoute = GET_PLAYER(getOwner()).getBestRoute(pLoopPlot, false, this);
-
-				if (eBestRoute != NO_ROUTE)
+				continue;
+			}
+			for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
+			{
+				if (GC.getImprovementInfo(eType).getRouteYieldChanges(eBestRoute, iJ) > 0)
 				{
-					if (eBestRoute != pLoopPlot->getRouteType())
-					{
-						if (bImprovementOnly)
-						{
-							bValid = false;
-
-							eImprovement = pLoopPlot->getImprovementType();
-
-							if (eImprovement != NO_IMPROVEMENT)
-							{
-								for (iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
-								{
-									if (GC.getImprovementInfo(eImprovement).getRouteYieldChanges(eBestRoute, iJ) > 0)
-									{
-										bValid = true;
-										break;
-									}
-								}
-							}
-						}
-						else
-						{
-							bValid = true;
-						}
-
-						if (bValid)
-						{
-							if (GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pLoopPlot, MISSIONAI_BUILD, getGroup(), 1) == 0)
-							{
-								if (generateSafePathforVulnerable(pLoopPlot, &iPathTurns))
-								{
-									iValue = 10000;
-
-									iValue /= (iPathTurns + 1);
-
-									if (iValue > iBestValue)
-									{
-										iBestValue = iValue;
-										pBestPlot = pLoopPlot;
-									}
-								}
-							}
-						}
-					}
+					bValid = true;
+					break;
 				}
+			}
+		}
+		if (bValid
+		&& GET_PLAYER(ePlayer).AI_plotTargetMissionAIs(plotX, MISSIONAI_BUILD, getGroup(), 1) == 0
+		&& generateSafePathforVulnerable(plotX, &iPathTurns))
+		{
+			const int iValue = 10000 / (iPathTurns + 1);
+
+			if (iValue > iBestValue)
+			{
+				iBestValue = iValue;
+				pBestPlot = plotX;
 			}
 		}
 	}
 
-	if (pBestPlot != NULL)
+	if (pBestPlot)
 	{
 		if (!atPlot(pBestPlot))
 		{
@@ -22224,19 +22165,12 @@ bool CvUnitAI::AI_routeTerritory(bool bImprovementOnly)
 			{
 				return getGroup()->pushMissionInternal(MISSION_ROUTE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_BUILD, pBestPlot);
 			}
-			else
-			{
-				getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
-				return true;
-			}
-		}
-		else
-		{
-			getGroup()->pushMission(MISSION_ROUTE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_SAFE_TERRITORY, false, false, MISSIONAI_BUILD, pBestPlot);
+			getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
 			return true;
 		}
+		getGroup()->pushMission(MISSION_ROUTE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_SAFE_TERRITORY, false, false, MISSIONAI_BUILD, pBestPlot);
+		return true;
 	}
-
 	return false;
 }
 
