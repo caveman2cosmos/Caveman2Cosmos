@@ -6599,6 +6599,50 @@
 		<Russian>Ìèí. ñëîæíîñòü</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYAIMAXIMUMDIFF_HOVER</Tag>
+		<English>The maximum difficulty that AI can be raised to when playing with Flexible Difficulty</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYAIMAXIMUMDIFF_LIST</Tag>
+		<English>No Maximum|Settler|Chieftain|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare</English>
+		<French>Pas de Maximum|Colon|Chef|Seigneur|Régent|Prince|Monarque|Empereur|Immortel|Divinité|Nightmare</French>
+		<German>Kein Maximum|Siedler|Häuptling|Kriegsherr|Adliger|Prinz|König|Kaiser|Unsterblicher|Gottheit|Nightmare</German>
+		<Italian>No Massimo|Colono|Capitano|Guerriero|Nobile|Principe|Monarca|Imperatore|Immortale|Divinità|Nightmare</Italian>
+		<Spanish>Sin mínimo|Colono|Jefe|Caudillo|Noble|Príncipe|Monarca|Emperador|Immortal|Deidad|Nightmare</Spanish>
+		<Russian>Íåò Ìàêñèìóìà|Ïîñåëåíåö|Âîæäü|Ïîëêîâîäåö|Àðèñòîêðàò|Ïðèíö|Ìîíàðõ|Èìïåðàòîð|Áåññìåðòíûé|Áîæåñòâî</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYAIMAXIMUMDIFF_TEXT</Tag>
+		<English>Maximum AI Difficulty</English>
+		<French>Difficulté Maximum</French>
+		<German>Maximaler Schwierigkeitsgrad</German>
+		<Italian>Difficoltà massima</Italian>
+		<Spanish>Dificultad máxima</Spanish>
+		<Russian>Ìàêñ. ñëîæíîñòü</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYAIMINIMUMDIFF_HOVER</Tag>
+		<English>The minimum difficulty that AI can fall to when playing with Flexible Difficulty</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYAIMINIMUMDIFF_LIST</Tag>
+		<English>No Minimum|Settler|Chieftain|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare</English>
+		<French>Pas de Minimum|Colon|Chef|Seigneur|Régent|Prince|Monarque|Empereur|Immortel|Divinité|Nightmare</French>
+		<German>Kein Minimum|Siedler|Häuptling|Kriegsherr|Adliger|Prinz|König|Kaiser|Unsterblicher|Gottheit|Nightmare</German>
+		<Italian>No Minimo|Colono|Capitano|Guerriero|Nobile|Principe|Monarca|Imperatore|Immortale|Divinità|Nightmare</Italian>
+		<Spanish>Sin mínimo|Colono|Jefe|Caudillo|Noble|Príncipe|Monarca|Emperador|Immortal|Deidad|Nightmare</Spanish>
+		<Russian>Íåò Ìèíèìóìà|Ïîñåëåíåö|Âîæäü|Ïîëêîâîäåö|Àðèñòîêðàò|Ïðèíö|Ìîíàðõ|Èìïåðàòîð|Áåññìåðòíûé|Áîæåñòâî</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYAIMINIMUMDIFF_TEXT</Tag>
+		<English>Minimum AI Difficulty</English>
+		<French>Difficulté Minimum</French>
+		<German>Minimaler Schwierigkeitsgrad</German>
+		<Italian>Difficoltà minima</Italian>
+		<Spanish>Dificultad mínima</Spanish>
+		<Russian>Ìèí. ñëîæíîñòü</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYTURNINCREMENTS_HOVER</Tag>
 		<English>How often the game checks your difficulty level and adjusts it. Requires Flexible Difficulty to be enabled.</English>
 		<French>Détermine la fréquence à laquelle le jeu vérifie le niveau de difficulté et l'ajuste. l'option Difficulté Flexible doit être activée.</French>
@@ -6610,6 +6654,19 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYTURNINCREMENTS_TEXT</Tag>
 		<English>Turn Increments</English>
+		<French>Nb. de Tours</French>
+		<German>Rundenabstand</German>
+		<Italian>Numero di turni</Italian>
+		<Spanish>Número de turnos</Spanish>
+		<Russian>Ïðèðîñò ñëîæíîñòè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYAITURNINCREMENTS_HOVER</Tag>
+		<English>How often the game checks AI difficulty level and adjusts it. Requires Flexible Difficulty to be enabled.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYAITURNINCREMENTS_TEXT</Tag>
+		<English>AI Turn Increments</English>
 		<French>Nb. de Tours</French>
 		<German>Rundenabstand</German>
 		<Italian>Numero di turni</Italian>

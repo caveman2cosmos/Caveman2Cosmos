@@ -34,6 +34,7 @@
 #include "CvBuildingFilters.h"
 #include "CvUnitFilters.h"
 
+
 //	Koshling - save game compatibility between (most) builds
 //	UI flag values in game serialization.  These are bitwise combinable
 #define	GAME_SAVE_UI_FLAG_VALUE_AND_BASE		0x00000001
@@ -9875,7 +9876,8 @@ void CvGame::doFlexibleDifficulty()
 	const bool bFlexDiffForAI = isModderGameOption(MODDERGAMEOPTION_AI_USE_FLEXIBLE_DIFFICULTY);
 	const bool bIncreasingDifficulty = isOption(GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY);
 	bool bHumanHandicapChanged = false;
-
+	const int iMaxAIHandicap = getModderGameOption(MODDEROPTION_FLEXIBLE_DIFFICULTY_AI_MAX_DIFFICULTY);
+	const int iMinAIHandicap = getModderGameOption(MODDEROPTION_FLEXIBLE_DIFFICULTY_AI_MIN_DIFFICULTY);
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
 		const PlayerTypes ePlayer = static_cast<PlayerTypes>(iI);
@@ -9887,12 +9889,17 @@ void CvGame::doFlexibleDifficulty()
 			int iTimer = getFlexibleDifficultyTimer(ePlayer);
 			const bool bHuman = playerX.isHumanPlayer(true);
 
-			if (iTurns <= 0 || bFlexDiffForAI && !bHuman)
+			if (bFlexDiffForAI && !bHuman)
 			{
-				iTurns = GC.getDefineINT("DEFAULT_FLEXIBLE_DIFFICULTY_TURN_INCREMENTS", 25);
-				iTurns *= GC.getGameSpeedInfo(getGameSpeedType()).getSpeedPercent();
-				iTurns /= 100;
+				iTurns = getModderGameOption(MODDEROPTION_FLEXIBLE_DIFFICULTY_AI_TURN_INCREMENTS);
 			}
+
+			//if (iTurns <= 0 || bFlexDiffForAI && !bHuman)
+			//{
+			//	iTurns = getModderGameOption(MODDEROPTION_FLEXIBLE_DIFFICULTY_AI_TURN_INCREMENTS);
+			//	iTurns *= GC.getGameSpeedInfo(getGameSpeedType()).getSpeedPercent();
+			//	iTurns /= 100;
+			//}
 
 			logging::logMsg("C2C.log", "[Flexible Difficulty] (%d / %d) turns until next flexible difficulty check for Player: %S\n", iTimer, iTurns, playerX.getName());
 
@@ -9923,17 +9930,20 @@ void CvGame::doFlexibleDifficulty()
 
 			if (bFlexDiffForAI && !bHuman)
 			{
-				iMinHandicap = 0;
-				iMaxHandicap = GC.getNumHandicapInfos() - 1;
+				iMinHandicap = iMinAIHandicap;
+				iMaxHandicap = iMaxAIHandicap;
 			}
-			else if (iMaxHandicap < 0)
+			
+
+			if (iMaxHandicap < 0) //when no maximum
 			{
-				iMaxHandicap = MAX_INT;
+				iMaxHandicap = GC.getNumHandicapInfos() - 1;
 			}
 			//Reset counter
 			setFlexibleDifficultyTimer(ePlayer, 0);
 
 			int iBestScore = MIN_INT;
+			int iLowestScore = MAX_INT;
 			int iAliveCount = 0;
 			int iTotalScore = 0;
 			for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
@@ -9947,6 +9957,10 @@ void CvGame::doFlexibleDifficulty()
 					if (iScore > iBestScore)
 					{
 						iBestScore = iScore;
+					}
+					if (iScore < iLowestScore)
+					{
+						iLowestScore = iScore;
 					}
 				}
 			}
@@ -9968,6 +9982,9 @@ void CvGame::doFlexibleDifficulty()
 			const int stddev = intSqrt(10000 * iVariance / iAliveCount);
 
 			const int iCurrentScore = getPlayerScore(ePlayer);
+
+			
+
 			logging::logMsg("C2C.log",
 				"[Flexible Difficulty] Player: %S, Score: %d, Difficulty: %S, Avg Score: %d, Std Dev: %d/100\n",
 				playerX.getName(), iCurrentScore,
@@ -9988,8 +10005,37 @@ void CvGame::doFlexibleDifficulty()
 					playerX.getHandicapType()
 				)
 			);
+			int balanceHandicap = iNewHandicap-4; //offset handicap to noble as 0
+			int biasMaxCap = (iMaxHandicap > GC.getNumHandicapInfos() - 1 || iMaxHandicap < 0 ? GC.getNumHandicapInfos() - 1 : iMaxHandicap);
+			int biasMinCap = (iMinHandicap < 0 ? 0 : iMinHandicap);
+			//int biasStd = 
+			
+			
+			int basicMaxCap = GC.getNumHandicapInfos() - 1;
+			int multiplier = 3;
+			double default_difficult = ((double)biasMaxCap+(double)biasMinCap)*(1.0/3.0);
+			double diff = (std::max(biasMaxCap, biasMinCap)-std::min(biasMaxCap, biasMinCap) != 0 ? std::max(biasMaxCap, biasMinCap)-std::min(biasMaxCap, biasMinCap) : 1.0);
+			int stddevHandi = (stddev * (basicMaxCap/diff*100))/100;
+			int handicapBias = stddevHandi*((multiplier*playerX.getHandicapType())-(multiplier*default_difficult));
+
+			double normalized = 1.80*((double)(iCurrentScore-iLowestScore)/(double)(iBestScore-iLowestScore))-0.90;
+			double atanh2 = 2.0 * (std::log(1.0+normalized) - std::log(1.0-normalized))/2.0;
+
+			int increase1 = 100*(iCurrentScore+((int)((double)iCurrentScore*atanh2)))-handicapBias;
+			int increase2 = 100*iMeanScore +stddev;
+			int decrease1 = 100*(iCurrentScore+((int)((double)iCurrentScore*atanh2)))-handicapBias;
+			int decrease2 = 100*iMeanScore -stddev;
+			bool isChangeIncrease = std::abs(std::max(increase1, increase2)-std::min(increase1, increase2)) > stddev;
+    		bool isChangeDecrease = std::abs(std::max(decrease1, decrease2)-std::min(decrease1, decrease2)) > stddev;
+
+			logging::logMsg("C2C.log",
+				"[Flexible Difficulty DEBUG DATA] Player: %S, Score: %d, Total Score: %d, Alive Count: %d, iVariance: %d, Avg Score: %d, Handicap Bias: %d, atanh2: %f,Std Dev: %d\n",
+				playerX.getName(), iCurrentScore, iTotalScore, iAliveCount, iVariance,
+				iMeanScore, handicapBias, atanh2, stddev
+			);
+
 			//Increased Difficulty (player's score is > 1 std dev away)
-			if (100*iCurrentScore > 100*iMeanScore + stddev)
+			if (increase1>increase2 && isChangeIncrease)
 			{
 				logging::logMsg("C2C.log", "[Flexible Difficulty] Player: %S score is > 1 std dev above average.\n", playerX.getName());
 				if (iNewHandicap < (GC.getNumHandicapInfos() - 1) && iNewHandicap < iMaxHandicap)
@@ -10003,7 +10049,7 @@ void CvGame::doFlexibleDifficulty()
 					iNewHandicap++;
 				}
 			}
-			else if (100*iCurrentScore < 100*iMeanScore - stddev)
+			else if (decrease1<decrease2 && isChangeDecrease)
 			{
 				logging::logMsg("C2C.log", "[Flexible Difficulty] Player: %S score is > 1 std dev below average.\n", playerX.getName());
 				if (iNewHandicap > 0 && iNewHandicap > iMinHandicap)
@@ -10017,6 +10063,28 @@ void CvGame::doFlexibleDifficulty()
 					iNewHandicap--;
 				}
 			}
+
+			//range clamp
+			iNewHandicap =
+			(
+				iNewHandicap > GC.getNumHandicapInfos() - 1
+				?
+				GC.getNumHandicapInfos() - 1
+				:
+				(
+					iNewHandicap < 0
+					?
+					0
+					:
+					iNewHandicap
+				)
+			);
+			logging::logMsg("C2C.log",
+				"[Flexible Difficulty] Player: %S, New Handicap: %d, Current Difficult: %S, Min Handicap: %d, Max Handicap: %d\n",
+				playerX.getName(), iNewHandicap,
+				GC.getHandicapInfo((HandicapTypes)playerX.getHandicapType()).getDescription(),
+				iMinHandicap, iMaxHandicap
+			);
 			if (iNewHandicap != playerX.getHandicapType())
 			{
 				if (bHuman)
