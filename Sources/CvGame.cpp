@@ -9889,17 +9889,17 @@ void CvGame::doFlexibleDifficulty()
 			int iTimer = getFlexibleDifficultyTimer(ePlayer);
 			const bool bHuman = playerX.isHumanPlayer(true);
 
+			if (bFlexDiffForAI && !bHuman)
+			{
+				iTurns = getModderGameOption(MODDEROPTION_FLEXIBLE_DIFFICULTY_AI_TURN_INCREMENTS);
+			}
+
 			//if (iTurns <= 0 || bFlexDiffForAI && !bHuman)
 			//{
 			//	iTurns = getModderGameOption(MODDEROPTION_FLEXIBLE_DIFFICULTY_AI_TURN_INCREMENTS);
 			//	iTurns *= GC.getGameSpeedInfo(getGameSpeedType()).getSpeedPercent();
 			//	iTurns /= 100;
 			//}
-
-			if (bFlexDiffForAI && !bHuman)
-			{
-				iTurns = getModderGameOption(MODDEROPTION_FLEXIBLE_DIFFICULTY_AI_TURN_INCREMENTS);
-			}
 
 			logging::logMsg("C2C.log", "[Flexible Difficulty] (%d / %d) turns until next flexible difficulty check for Player: %S\n", iTimer, iTurns, playerX.getName());
 
