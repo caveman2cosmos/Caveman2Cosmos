@@ -224,19 +224,6 @@
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<!-- Miscellaneous Hovers -->
-	<!-- Production Decay (Buildings/Units) -->
-	<Define>
-		<DefineName>BUG_PRODUCTION_DECAY_HOVER</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>BUG_PRODUCTION_DECAY_HOVER_BUILDING_THRESHOLD</DefineName>
-		<iDefineIntVal>20</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>BUG_PRODUCTION_DECAY_HOVER_UNIT_THRESHOLD</DefineName>
-		<iDefineIntVal>5</iDefineIntVal>
-	</Define>
 	<!-- Leaderhead -->
 	<Define>
 		<DefineName>BUG_LEADERHEAD_HOVER_HIDDEN_ATTITUDE</DefineName>
@@ -515,7 +502,6 @@
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- Dynamic Civ Names NOTE turned off in C2C code-->
 		<DefineName>DYNAMIC_CIV_NAMES</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>

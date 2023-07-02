@@ -1,14 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CYBERPUNK_EMBASSY</Tag>
+		<Tag>TXT_KEY_BUILDING_CULTURE_CYBERPUNK</Tag>
 		<English>Culture (Cyberpunk)</English>
 		<Italian>Cultura (Cyberpunk)</Italian>
 		<Polish>Kultura (Cyberpunk)</Polish>
 		<Russian>Êèáåðïàíê</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CYBERPUNK_EMBASSY_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_CULTURE_CYBERPUNK_PEDIA</Tag>
 		<English>Cyberpunk is a postmodern science fiction genre noted for its focus on "high tech and low life." It features advanced science, such as information technology and cybernetics, coupled with a degree of breakdown or radical change in the social order. Cyberpunk plots often center on a conflict among hackers, artificial intelligences, and megacorporations, and tend to be set in a near-future Earth, rather than the far-future settings or galactic vistas found in novels such as Isaac Asimov's Foundation or Frank Herbert's Dune. The settings are usually post-industrial dystopias but tend to be marked by extraordinary cultural ferment and the use of technology in ways never anticipated by its creators ("the street finds its own uses for things"). Much of the genre's atmosphere echoes film noir, and written works in the genre often use techniques from detective fiction.</English>
 		<Polish>Cyberpunk - nurt w literaturze science-fiction oraz kinematografii, który skupia się na ludziach i otaczającej ich zaawansowanej technologii komputerowej i informacyjnej, niekiedy połączony z różnego rodzaju zamieszaniem w społeczeństwie (np. stan wojenny). Pojęcie cyberpunku można rozważać również pod kątem postawy życiowej, filozofii lub ideologii, w tym wypadku pojęcie cyberpunku jest rozważane bardziej pod kątem porównywania człowieka z maszyną (cybernetyka) i wynikających z tego pytań na temat duszy, Boga oraz świadomości.</Polish>
 		<Russian>Êèáåðïàíê - ýòî ïîñòìîäåðíèñòñêèé æàíð íàó÷íîé ôàíòàñòèêè, ñôîêóñèðîâàíííûé íà âûñîêèõ òåõíîëîãèÿõ ïðè íèçêîì óðîâíå æèçíè. Îáû÷íî ïðîèçâåäåíèÿ, îòíîñèìûå ê êèáåðïàíêó, îïèñûâàþò àíòèóòîïè÷åñêèé ìèð áóäóùåãî, â êîòîðîì âûñîêîå òåõíîëîãè÷åñêîå ðàçâèòèå, òàêîå êàê èíôîðìàöèîííûå òåõíîëîãèè è êèáåðíåòèêà, ñî÷åòàåòñÿ ñ ãëóáîêèì óïàäêîì èëè ðàäèêàëüíûìè ïåðåìåíàìè â ñîöèàëüíîì óñòðîéñòâå.[PARAGRAPH:2]Ñþæåòû êèáåðïàíêà ÷àñòî ïîñòðîåíû âîêðóã êîíôëèêòà ìåæäó õàêåðàìè, èñêóññòâåííûì èíòåëëåêòîì è ìåãàêîðïîðàöèÿìè, è òÿãîòåþò ê áëèæàéøåìó áóäóùåìó Çåìëè ÷àùå, ÷åì ê îáñòàíîâêå äàëåêîãî áóäóùåãî èëè ãàëàêòè÷åñêèõ ïåðñïåêòèâ, êîòîðûå ìîæíî íàéòè â òàêèõ ðîìàíàõ, êàê «Îñíîâàíèå» Àéçåêà Àçèìîâà èëè «Äþíà» Ôðýíêà Ãåðáåðòà. Ìèðû êèáåðïàíêà, êàê ïðàâèëî, ÿâëÿþòñÿ ïîñòèíäóñòðèàëüíûìè äèñòîïèÿìè, è îïèñûâàþò îáùåñòâî, íàõîäÿùååñÿ íà ïîðîãå áóðíûõ ñîöèàëüíûõ è êóëüòóðíûõ ïðåîáðàçîâàíèé, ãäå òåõíîëîãèè èñïîëüçóþòñÿ ñïîñîáàìè, íå ïðåäóñìîòðåííûìè èõ ñîçäàòåëÿìè ("óëèöà íàéä¸ò ñîáñòâåííîå ïðèìåíåíèå âåùàì"). ×àñòü àòìîñôåðû æàíðà ïåðåêëèêàåòñÿ ñî ñòèëåì "ôèëüìà-íóàð", à ëèòåðàòóðíûå ðàáîòû æàíðà ÷àñòî èñïîëüçóþò ïðèåìû äåòåêòèâà.</Russian>

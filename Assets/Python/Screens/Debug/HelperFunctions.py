@@ -91,7 +91,7 @@ class HelperFunctions:
 		iTechAnimalRow = 0
 		for iBuildingRequirement in xrange(CvBuildingInfo.getNumPrereqInCityBuildings()):
 			iPrereqBuilding = CvBuildingInfo.getPrereqInCityBuilding(iBuildingRequirement)
-			if iPrereqBuilding == GC.getInfoTypeForString("BUILDING_ANIMAL_FOLKLORE_REQUIRE"):
+			if iPrereqBuilding == GC.getInfoTypeForString("BUILDING_FOLKLORE_REQUIREMENT"):
 				iTechAnimalLoc = GC.getTechInfo(GC.getBuildingInfo(iPrereqBuilding).getPrereqAndTech()).getGridX()
 				iTechAnimalRow = GC.getTechInfo(GC.getBuildingInfo(iPrereqBuilding).getPrereqAndTech()).getGridY()
 				aTechList.append(GC.getTechInfo(GC.getBuildingInfo(iPrereqBuilding).getPrereqAndTech()).getType())
@@ -214,7 +214,7 @@ class HelperFunctions:
 
 		#Folklore handling - X Require tech requirement is treated as one of tech requirements of building, assuming X Require is main building requirement.
 		if CvBuildingInfo.getType().find("BUILDING_FOLKLORE_",0,18) != -1:
-			iPrereqBuilding = GC.getInfoTypeForString("BUILDING_ANIMAL_FOLKLORE_REQUIRE")
+			iPrereqBuilding = GC.getInfoTypeForString("BUILDING_FOLKLORE_REQUIREMENT")
 			if GC.getTechInfo(GC.getBuildingInfo(iPrereqBuilding).getPrereqAndTech()).getEra() > iEra:
 				iEra = GC.getTechInfo(GC.getBuildingInfo(iPrereqBuilding).getPrereqAndTech()).getEra()
 

@@ -9,9 +9,9 @@
 class UnitCompCommander
 {
 public:
-	UnitCompCommander();
+	UnitCompCommander(const CvUnit* unit, short iCP, short iCPL, short iCR);
+	UnitCompCommander(const CvUnit* unit, CvUnitInfo* unitInfo);
 	~UnitCompCommander();
-	UnitCompCommander(CvUnitInfo* unitInfo);
 
 	void changeControlPoints(const int iChange);
 	void changeControlPointsLeft(const int iChange);
@@ -19,13 +19,17 @@ public:
 	inline short getControlPointsLeft() const { return m_iControlPointsLeft; }
 	void restoreControlPoints();
 
+	inline bool isReady() const { return m_bReady; }
+
 	void changeCommandRange(const int iChange);
 	inline short getCommandRange() const { return m_iCommandRange; }
 
 private:
+	const CvUnit* m_unit;
 	short m_iControlPoints;
 	short m_iControlPointsLeft;
 	short m_iCommandRange;
+	bool m_bReady;
 };
 //------------------------------------------------------------------------------------------------------
 //  CLASS: UnitCompWorker
@@ -44,12 +48,14 @@ public:
 	inline short getHillsWorkModifier() const { return m_iHillsWorkModifier; }
 	inline short getPeaksWorkModifier() const { return m_iPeaksWorkModifier; }
 
-	void setExtraBuild(const BuildTypes eBuild, const bool bNewValue);
+	void setExtraBuild(const BuildTypes eBuild, const bool bNewValue = true);
 	bool hasExtraBuild(const BuildTypes eBuild) const;
 	const std::vector<BuildTypes>& getExtraBuilds() const { return m_extraBuilds; }
 
 	void changeExtraWorkModForBuild(const BuildTypes eBuild, const short iChange);
 	int getExtraWorkModForBuild(const BuildTypes eBuild) const;
+	std::map<BuildTypes, short>  getExtraWorkModForBuilds() const { return m_extraWorkModForBuilds; }
+
 	void setCityAssignment(const int iCityID) { m_iAssignedCity = iCityID; };
 	int getAssignedCity() const { return m_iAssignedCity; }
 
@@ -61,7 +67,7 @@ private:
 	int m_iAssignedCity;
 
 	std::vector<BuildTypes> m_extraBuilds;
-	std::map<BuildTypes, short> m_extraWorkModForBuild;
+	std::map<BuildTypes, short> m_extraWorkModForBuilds;
 };
 //------------------------------------------------------------------------------------------------------
 //  CLASS: X

@@ -509,11 +509,6 @@ def giveTechs(toPlayer, fromPlayer):
 						iMin = iCostX
 				iMinCostly = iMin
 
-	# Reset tech score, removing techs does not reduce tech score...
-	iTemp = toPlayer.getTechScore()
-	if iTemp:
-		toPlayer.changeTechScore(-iTemp)
-
 	# Simplify costly tech list
 	bestTechs = ()
 	for i in xrange(iNumCostly):
@@ -1129,7 +1124,7 @@ def getBuildingsRevIdxLocal(CyCity):
 	negList = []
 
 	for iBuilding in range(GC.getNumBuildingInfos()):
-		if CyCity.getNumActiveBuilding(iBuilding) > 0:
+		if CyCity.isActiveBuilding(iBuilding):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 			buildingEffect = CvBuildingInfo.getRevIdxLocal()
 			if buildingEffect > 0:

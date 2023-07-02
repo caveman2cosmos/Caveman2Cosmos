@@ -8,9 +8,6 @@
 			<iAdvancedStartPointsMod>160</iAdvancedStartPointsMod>
 			<iGold>32</iGold>
 			<iUnitUpkeepPercent>40</iUnitUpkeepPercent>
-			<iTrainPercent>40</iTrainPercent>
-			<iConstructPercent>40</iConstructPercent>
-			<iResearchPercent>40</iResearchPercent>
 			<iMaxColonyMaintenance>80</iMaxColonyMaintenance>
 			<iDistanceMaintenancePercent>40</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>40</iNumCitiesMaintenancePercent>
@@ -132,9 +129,6 @@
 			<iAdvancedStartPointsMod>140</iAdvancedStartPointsMod>
 			<iGold>28</iGold>
 			<iUnitUpkeepPercent>60</iUnitUpkeepPercent>
-			<iTrainPercent>60</iTrainPercent>
-			<iConstructPercent>60</iConstructPercent>
-			<iResearchPercent>60</iResearchPercent>
 			<iMaxColonyMaintenance>120</iMaxColonyMaintenance>
 			<iDistanceMaintenancePercent>60</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>60</iNumCitiesMaintenancePercent>
@@ -286,9 +280,6 @@
 			<iAdvancedStartPointsMod>120</iAdvancedStartPointsMod>
 			<iGold>24</iGold>
 			<iUnitUpkeepPercent>80</iUnitUpkeepPercent>
-			<iTrainPercent>80</iTrainPercent>
-			<iConstructPercent>80</iConstructPercent>
-			<iResearchPercent>80</iResearchPercent>
 			<iMaxColonyMaintenance>160</iMaxColonyMaintenance>
 			<iDistanceMaintenancePercent>80</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>80</iNumCitiesMaintenancePercent>
@@ -452,9 +443,6 @@
 			<iAdvancedStartPointsMod>100</iAdvancedStartPointsMod>
 			<iGold>20</iGold>
 			<iUnitUpkeepPercent>100</iUnitUpkeepPercent>
-			<iTrainPercent>100</iTrainPercent>
-			<iConstructPercent>100</iConstructPercent>
-			<iResearchPercent>100</iResearchPercent>
 			<iMaxColonyMaintenance>200</iMaxColonyMaintenance>
 			<iDistanceMaintenancePercent>100</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>100</iNumCitiesMaintenancePercent>
@@ -635,9 +623,6 @@
 			<iAdvancedStartPointsMod>100</iAdvancedStartPointsMod>
 			<iGold>16</iGold>
 			<iUnitUpkeepPercent>120</iUnitUpkeepPercent>
-			<iTrainPercent>100</iTrainPercent>
-			<iConstructPercent>100</iConstructPercent>
-			<iResearchPercent>100</iResearchPercent>
 			<iMaxColonyMaintenance>240</iMaxColonyMaintenance>
 			<iDistanceMaintenancePercent>120</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>120</iNumCitiesMaintenancePercent>
@@ -830,9 +815,6 @@
 				<!-- High Research -->
 				<GoodyType>GOODY_HIGH_RESEARCH</GoodyType>
 				<GoodyType>GOODY_HIGH_RESEARCH</GoodyType>
-				<!-- Tech -->
-				<GoodyType>GOODY_TECH</GoodyType>
-				<GoodyType>GOODY_TECH</GoodyType>
 			</Goodies>
 		</HandicapInfo>
 		<HandicapInfo>
@@ -842,9 +824,6 @@
 			<iAdvancedStartPointsMod>100</iAdvancedStartPointsMod>
 			<iGold>12</iGold>
 			<iUnitUpkeepPercent>140</iUnitUpkeepPercent>
-			<iTrainPercent>100</iTrainPercent>
-			<iConstructPercent>100</iConstructPercent>
-			<iResearchPercent>100</iResearchPercent>
 			<iMaxColonyMaintenance>280</iMaxColonyMaintenance>
 			<iDistanceMaintenancePercent>140</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>140</iNumCitiesMaintenancePercent>
@@ -1067,9 +1046,6 @@
 				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
 				<!-- High Research -->
 				<GoodyType>GOODY_HIGH_RESEARCH</GoodyType>
-				<!-- Tech -->
-				<GoodyType>GOODY_TECH</GoodyType>
-				<GoodyType>GOODY_TECH</GoodyType>
 			</Goodies>
 		</HandicapInfo>
 		<HandicapInfo>
@@ -1079,9 +1055,6 @@
 			<iAdvancedStartPointsMod>100</iAdvancedStartPointsMod>
 			<iGold>8</iGold>
 			<iUnitUpkeepPercent>160</iUnitUpkeepPercent>
-			<iTrainPercent>100</iTrainPercent>
-			<iConstructPercent>100</iConstructPercent>
-			<iResearchPercent>100</iResearchPercent>
 			<iMaxColonyMaintenance>320</iMaxColonyMaintenance>
 			<iDistanceMaintenancePercent>160</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>160</iNumCitiesMaintenancePercent>
@@ -1324,9 +1297,6 @@
 				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
 				<!-- High Research -->
 				<GoodyType>GOODY_HIGH_RESEARCH</GoodyType>
-				<!-- Tech -->
-				<GoodyType>GOODY_TECH</GoodyType>
-				<GoodyType>GOODY_TECH</GoodyType>
 			</Goodies>
 		</HandicapInfo>
 		<HandicapInfo>
@@ -1336,9 +1306,6 @@
 			<iAdvancedStartPointsMod>100</iAdvancedStartPointsMod>
 			<iGold>4</iGold>
 			<iUnitUpkeepPercent>180</iUnitUpkeepPercent>
-			<iTrainPercent>100</iTrainPercent>
-			<iConstructPercent>100</iConstructPercent>
-			<iResearchPercent>100</iResearchPercent>
 			<iMaxColonyMaintenance>360</iMaxColonyMaintenance>
 			<iDistanceMaintenancePercent>180</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>180</iNumCitiesMaintenancePercent>
@@ -1595,9 +1562,6 @@
 				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
 				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
 				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
-				<!-- Tech -->
-				<GoodyType>GOODY_TECH</GoodyType>
-				<GoodyType>GOODY_TECH</GoodyType>
 			</Goodies>
 		</HandicapInfo>
 		<HandicapInfo>
@@ -1606,9 +1570,6 @@
 			<Help>TXT_KEY_HANDICAP_DEITY_HELP</Help>
 			<iAdvancedStartPointsMod>100</iAdvancedStartPointsMod>
 			<iUnitUpkeepPercent>200</iUnitUpkeepPercent>
-			<iTrainPercent>100</iTrainPercent>
-			<iConstructPercent>100</iConstructPercent>
-			<iResearchPercent>100</iResearchPercent>
 			<iMaxColonyMaintenance>400</iMaxColonyMaintenance>
 			<iDistanceMaintenancePercent>200</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>200</iNumCitiesMaintenancePercent>
@@ -1881,9 +1842,6 @@
 				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
 				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
 				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
-				<!-- Tech -->
-				<GoodyType>GOODY_TECH</GoodyType>
-				<GoodyType>GOODY_TECH</GoodyType>
 			</Goodies>
 		</HandicapInfo>
 		<HandicapInfo>
@@ -1892,9 +1850,6 @@
 			<Help>TXT_KEY_HANDICAP_NIGHTMARE_HELP</Help>
 			<iAdvancedStartPointsMod>100</iAdvancedStartPointsMod>
 			<iUnitUpkeepPercent>240</iUnitUpkeepPercent>
-			<iTrainPercent>100</iTrainPercent>
-			<iConstructPercent>100</iConstructPercent>
-			<iResearchPercent>100</iResearchPercent>
 			<iMaxColonyMaintenance>480</iMaxColonyMaintenance>
 			<iDistanceMaintenancePercent>240</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>240</iNumCitiesMaintenancePercent>

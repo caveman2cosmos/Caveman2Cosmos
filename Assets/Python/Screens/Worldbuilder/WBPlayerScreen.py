@@ -190,7 +190,7 @@ class WBPlayerScreen:
 
 		for i in xrange(pTeam.getNumAdjacentResearch()):
 			iTechX = pTeam.getAdjacentResearch(i)
-			if pPlayer.canResearch(iTechX, True):
+			if pPlayer.canResearch(iTechX, True, True):
 				iColumn = iCount % nColumns
 				iRow = iCount /nColumns
 				if iRow > iMaxRows:

@@ -136,11 +136,11 @@ PUSHD ..
 echo 3. Making required links from '%cd%' Git directory to '%C2C_MOD_DIR%' ...
 mklink /J "%C2C_MOD_DIR%\Assets" Assets
 mklink /J "%C2C_MOD_DIR%\PrivateMaps" PrivateMaps
+mklink /J "%C2C_MOD_DIR%\PublicMaps" PublicMaps
 mklink /J "%C2C_MOD_DIR%\Resource" Resource
 
-echo 4. Copying config files ...
+echo 4. Copying config file ...
 copy "Caveman2Cosmos.ini" "%C2C_MOD_DIR%"
-copy "Caveman2Cosmos Config.ini" "%C2C_MOD_DIR%"
 
 :: Write a back pointer so we know where the Git repo is
 echo %cd%>"%C2C_MOD_DIR%\git_directory.txt"

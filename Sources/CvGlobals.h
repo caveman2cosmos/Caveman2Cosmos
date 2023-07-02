@@ -6,6 +6,8 @@
 #ifndef CIV4_GLOBALS_H
 #define CIV4_GLOBALS_H
 
+#include "FProfiler.h"
+
 //
 // 'global' vars for Civ IV.  singleton class.
 // All globals and global types should be contained in this class
@@ -260,6 +262,7 @@ public:
 	template<class T>
 	void removeDelayedResolutionVector(const std::vector<T>& vector)
 	{
+		PROFILE_EXTRA_FUNC();
 		foreach_(const T& type, vector)
 			removeDelayedResolution((int*)&type);
 	}
@@ -267,6 +270,7 @@ public:
 	template<class T>
 	void copyNonDefaultDelayedResolutionVector(std::vector<T>& aTarget, const std::vector<T>& aSource)
 	{
+		PROFILE_EXTRA_FUNC();
 		std::stack<CvString> aszTemp;
 		std::vector<T>::const_iterator it = aTarget.end(), it2 = aSource.begin();
 		while (it > aTarget.begin())
@@ -493,6 +497,8 @@ public:
 	CvIdeaInfo& getIdeaInfo(IdeaTypes e) const;
 
 	CvInfoBase& getUnitAIInfo(UnitAITypes eUnitAINum) const;
+
+	bool isGraphicalPaging() const { return m_bGraphicalPaging; }
 
 	//	Koshling - added internal registration of supported UnitAI types, not reliant
 	//	on external definition in XML
@@ -773,6 +779,8 @@ public:
 
 	void checkInitialCivics();
 
+	void cacheGameSpecificValues();
+
 protected:
 	void doPostLoadCaching();
 
@@ -782,6 +790,7 @@ protected:
 	bool m_bRandLogging;
 	bool m_bSynchLogging;
 	bool m_bOverwriteLogs;
+	bool m_bGraphicalPaging;
 
 	FMPIManager* m_pFMPMgr;
 

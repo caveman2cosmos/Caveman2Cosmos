@@ -57,7 +57,7 @@ def getGameData():
 	After reading a scenario file,
 	return game/player data as a tuple
 	'''
-	print "IF getGameData"
+	print "CvWBInterface.getGameData"
 	gameWB = WBDesc.gameDesc
 	t = ()
 	t += (
@@ -132,7 +132,7 @@ def applyMapDesc():
 	''' Called from exe
 	Applies game and map data
 	'''
-	print "IF applyMapDesc"
+	print "CvWBInterface.applyMapDesc"
 	return WBDesc.applyMap()
 
 def getAssignedStartingPlots():

@@ -29,7 +29,7 @@ class CvForeignAdvisor:
 		screen = self.getScreen()
 		if screen.isActive():
 			return
-		self.bRandomPers				 = GAME.isOption(GameOptionTypes.GAMEOPTION_RANDOM_PERSONALITIES)
+		self.bRandomPers				 = GAME.isOption(GameOptionTypes.GAMEOPTION_AI_RANDOM_PERSONALITIES)
 		self.bNoTechTrade = bNoTechTrade = GAME.isOption(GameOptionTypes.GAMEOPTION_NO_TECH_TRADING)
 		# Cache Bonus categories
 		BONUSCLASS_CULTURE = GC.getInfoTypeForString("BONUSCLASS_CULTURE")
@@ -227,7 +227,7 @@ class CvForeignAdvisor:
 				if CyTeam.isHasTech(iTech):
 					if not CyTeam.isNoTradeTech(iTech):
 						techsToGive.append(iTech)
-				elif CyPlayer.canResearch(iTech, True):
+				elif CyPlayer.canResearch(iTech, True, True):
 					techsToTake.append(iTech)
 
 
@@ -1126,7 +1126,7 @@ class CvForeignAdvisor:
 			if not szNoTechTrade:
 
 				for iTech in techsToGive:
-					if not CyPlayerX.canResearch(iTech, True):
+					if not CyPlayerX.canResearch(iTech, True, True):
 						continue
 					if bHuman:
 						aList0.append(iTech)

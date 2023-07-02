@@ -5,6 +5,8 @@
 #ifndef CIV4_GAMECORE_UTILS_H
 #define CIV4_GAMECORE_UTILS_H
 
+#include "FProfiler.h"
+
 #include "CvMap.h"
 #include "CvGlobals.h"
 
@@ -210,7 +212,7 @@ DllExport CvUnit* getUnit(IDInfo unit);
 
 bool isBeforeUnitCycle(const CvUnit* pFirstUnit, const CvUnit* pSecondUnit);
 
-int getTechScore(TechTypes eTech);
+int getScoreValueOfTech(TechTypes eTech);
 int getWonderScore(BuildingTypes eWonder);
 
 ImprovementTypes finalImprovementUpgrade(ImprovementTypes eImprovement, int iCount = 0);
@@ -286,7 +288,7 @@ bool PUF_canDefendPotentialEnemyAgainst(const CvUnit* pUnit, int iData1, int iDa
 bool PUF_canDefenselessPotentialEnemyAgainst(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis);
 bool PUF_canAirAttack( const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
 bool PUF_canAirDefend( const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
-bool PUF_isFighting( const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
+bool PUF_isInBattle( const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
 bool PUF_isAnimal( const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
 bool PUF_isMilitaryHappiness( const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
 bool PUF_isInvestigate( const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
@@ -390,6 +392,7 @@ void AddDLLMessage(PlayerTypes ePlayer, bool bForce, int iLength, CvWString szSt
 template <class T1, class T2>
 bool isMapCategory(const T1& source1, const T2& source2)
 {
+	PROFILE_EXTRA_FUNC();
 	const std::vector<MapCategoryTypes>& mapCategories1 = source1.getMapCategories();
 	if (mapCategories1.empty())
 	{

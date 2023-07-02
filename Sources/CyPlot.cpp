@@ -1,3 +1,6 @@
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
 #include "CvGlobals.h"
@@ -199,11 +202,6 @@ int CyPlot::getNumVisiblePotentialEnemyDefenders(const CyUnit& kUnit) const
 bool CyPlot::isVisibleEnemyUnit(int /*PlayerTypes*/ ePlayer) const
 {
 	return m_pPlot ? m_pPlot->isVisibleEnemyUnit((PlayerTypes) ePlayer) : false;
-}
-
-bool CyPlot::isFighting() const
-{
-	return m_pPlot ? m_pPlot->isFighting() : false;
 }
 
 bool CyPlot::canHaveFeature(int /*FeatureTypes*/ eFeature) const
@@ -556,6 +554,7 @@ void CyPlot::changeInvisibleVisibilityCount(int iTeam, int iInvisible, int iChan
 
 python::list CyPlot::units() const
 {
+	PROFILE_EXTRA_FUNC();
 	python::list list = python::list();
 
 	if (m_pPlot)
@@ -605,6 +604,7 @@ CyPlot* CyPlot::cloneToViewport() const
 
 python::list CyPlot::adjacent() const
 {
+	PROFILE_EXTRA_FUNC();
 	python::list list = python::list();
 
 	if (m_pPlot)
@@ -619,6 +619,7 @@ python::list CyPlot::adjacent() const
 
 python::list CyPlot::rect(int halfWid, int halfHgt) const
 {
+	PROFILE_EXTRA_FUNC();
 	python::list list = python::list();
 
 	if (m_pPlot)

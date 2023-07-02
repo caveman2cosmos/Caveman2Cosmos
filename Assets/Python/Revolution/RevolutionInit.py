@@ -91,7 +91,7 @@ class RevolutionInit:
 			if bChangePlayer:
 				RevInstances.ChangePlayerInst = ChangePlayer.ChangePlayer(self.customEM, RevOpt)
 
-			if GAME.isOption(GameOptionTypes.GAMEOPTION_REVOLUTION):
+			if GAME.isOption(GameOptionTypes.GAMEOPTION_UNSUPPORTED_REVOLUTION):
 				# RevEvents needs to service beginPlayerTurn events before Revolution
 				RevEvents.init(self.customEM, RevOpt)
 				RevInstances.RevolutionInst = Revolution.Revolution(self.customEM, RevOpt)
@@ -207,7 +207,7 @@ class RevolutionInit:
 		if RevDCMOpt.isDCM_FIGHTER_ENGAGE():
 			temp += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_REVDCM__DCM_FIGHTER_ENGAGE_TEXT",())
 
-		if GAME.isOption(GameOptionTypes.GAMEOPTION_INQUISITIONS) and RevDCMOpt.isOC_RESPAWN_HOLY_CITIES():
+		if GAME.isOption(GameOptionTypes.GAMEOPTION_RELIGION_INQUISITIONS) and RevDCMOpt.isOC_RESPAWN_HOLY_CITIES():
 			temp += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_REVDCM__OC_RESPAWN_HOLY_CITIES_TEXT",())
 
 		if temp:

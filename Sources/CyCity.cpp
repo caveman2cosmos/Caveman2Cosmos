@@ -246,9 +246,9 @@ int CyCity::getNumTrainUnitAI(int /*UnitAITypes*/ eUnitAI) const
 	return m_pCity->getNumTrainUnitAI((UnitAITypes) eUnitAI);
 }
 
-int CyCity::getProduction() const
+int CyCity::getProductionProgress() const
 {
-	return m_pCity->getProduction();
+	return m_pCity->getProductionProgress();
 }
 
 int CyCity::getProductionNeeded() const
@@ -276,9 +276,9 @@ int CyCity::getProjectProductionTurnsLeft(int /*ProjectTypes*/ eProject, int iNu
 	return m_pCity->getProductionTurnsLeft((ProjectTypes) eProject, iNum);
 }
 
-void CyCity::setProduction(int iNewValue)
+void CyCity::setProductionProgress(int iNewValue)
 {
-	m_pCity->setProduction(iNewValue);
+	m_pCity->setProductionProgress(iNewValue);
 }
 
 void CyCity::changeProduction(int iChange)
@@ -499,19 +499,19 @@ int CyCity::flatHurryAngerLength() const
 	return m_pCity->flatHurryAngerLength();
 }
 
-void CyCity::setNumRealBuilding(int /*BuildingTypes*/ iIndex, int iNewValue)
+void CyCity::changeHasBuilding(int /*BuildingTypes*/ iIndex, bool bNewValue)
 {
-	m_pCity->setNumRealBuilding((BuildingTypes) iIndex, iNewValue);
+	m_pCity->changeHasBuilding((BuildingTypes) iIndex, bNewValue);
 }
 
-int CyCity::getNumRealBuilding(int /*BuildingTypes*/ iIndex) const
+int CyCity::hasBuilding(int /*BuildingTypes*/ iIndex) const
 {
-	return m_pCity->getNumRealBuilding((BuildingTypes) iIndex);
+	return m_pCity->hasBuilding((BuildingTypes) iIndex);
 }
 
-int CyCity::getNumActiveBuilding(int /*BuildingTypes*/ iIndex) const
+bool CyCity::isActiveBuilding(int /*BuildingTypes*/ iIndex) const
 {
-	return m_pCity->getNumActiveBuilding((BuildingTypes) iIndex);
+	return m_pCity->isActiveBuilding((BuildingTypes) iIndex);
 }
 
 bool CyCity::isFreeBuilding(int /*BuildingTypes*/ iIndex) const
@@ -1324,16 +1324,6 @@ void CyCity::setName(std::wstring szNewValue, bool bFound)
 	m_pCity->setName((CvWString)szNewValue, bFound);
 }
 
-void CyCity::changeNoBonusCount(int /*BonusTypes*/ eBonus, int iChange)
-{
-	m_pCity->changeNoBonusCount((BonusTypes)eBonus, iChange);
-}
-
-bool CyCity::isNoBonus(int /*BonusTypes*/ eBonus) const
-{
-	return m_pCity->isNoBonus((BonusTypes)eBonus);
-}
-
 int CyCity::getFreeBonus(int /*BonusTypes*/ eIndex) const
 {
 	return m_pCity->getFreeBonus((BonusTypes)eIndex);
@@ -1354,19 +1344,19 @@ bool CyCity::hasBonus(int /*BonusTypes*/ iBonus) const
 	return m_pCity->hasBonus((BonusTypes) iBonus);
 }
 
-int CyCity::getBuildingProduction(int /*BuildingTypes*/ iIndex) const
+int CyCity::getProgressOnBuilding(int /*BuildingTypes*/ iIndex) const
 {
-	return m_pCity->getBuildingProduction((BuildingTypes) iIndex);
+	return m_pCity->getProgressOnBuilding((BuildingTypes) iIndex);
 }
 
-void CyCity::setBuildingProduction(int /*BuildingTypes*/ iIndex, int iNewValue)
+void CyCity::setProgressOnBuilding(int /*BuildingTypes*/ iIndex, int iNewValue)
 {
-	m_pCity->setBuildingProduction((BuildingTypes) iIndex, std::max(0, iNewValue));
+	m_pCity->setProgressOnBuilding((BuildingTypes) iIndex, std::max(0, iNewValue));
 }
 
-int CyCity::getBuildingProductionTime(int /*BuildingTypes*/ eIndex) const
+int CyCity::getDelayOnBuilding(int /*BuildingTypes*/ eIndex) const
 {
-	return m_pCity->getBuildingProductionTime((BuildingTypes)eIndex);
+	return m_pCity->getDelayOnBuilding((BuildingTypes)eIndex);
 }
 
 bool CyCity::isBuildingProductionDecay(int /*BuildingTypes*/ eIndex) const
@@ -1379,34 +1369,29 @@ int CyCity::getBuildingProductionDecayTurns(int /*BuildingTypes*/ eIndex) const
 	return m_pCity->getBuildingProductionDecayTurns((BuildingTypes)eIndex);
 }
 
-int CyCity::getBuildingOriginalOwner(int /*BuildingTypes*/ iIndex) const
+int CyCity::getBuildingOriginalOwner(int /*BuildingTypes*/ iType) const
 {
-	return m_pCity->getBuildingOriginalOwner((BuildingTypes) iIndex);
+	return m_pCity->getBuildingData((BuildingTypes) iType).eBuiltBy;
 }
 
-int CyCity::getBuildingOriginalTime(int /*BuildingTypes*/ iIndex) const
+int CyCity::getBuildingOriginalTime(int /*BuildingTypes*/ iType) const
 {
-	return m_pCity->getBuildingOriginalTime((BuildingTypes) iIndex);
+	return m_pCity->getBuildingData((BuildingTypes) iType).iTimeBuilt;
 }
 
-void CyCity::setBuildingOriginalTime(int iIndex, int iNewValue)
+int CyCity::getProgressOnUnit(int iIndex) const
 {
-	m_pCity->setBuildingOriginalTime((BuildingTypes) iIndex, iNewValue);
+	return m_pCity->getProgressOnUnit((UnitTypes) iIndex);
 }
 
-int CyCity::getUnitProduction(int iIndex) const
+void CyCity::setProgressOnUnit(int iIndex, int iNewValue)
 {
-	return m_pCity->getUnitProduction((UnitTypes) iIndex);
+	m_pCity->setProgressOnUnit((UnitTypes)iIndex, iNewValue);
 }
 
-void CyCity::setUnitProduction(int iIndex, int iNewValue)
+int CyCity::getDelayOnUnit(int /*UnitTypes*/ eIndex) const
 {
-	m_pCity->setUnitProduction((UnitTypes)iIndex, iNewValue);
-}
-
-int CyCity::getUnitProductionTime(int /*UnitTypes*/ eIndex) const
-{
-	return m_pCity->getUnitProductionTime((UnitTypes)eIndex);
+	return m_pCity->getDelayOnUnit((UnitTypes)eIndex);
 }
 
 bool CyCity::isUnitProductionDecay(int /*UnitTypes*/ eIndex) const

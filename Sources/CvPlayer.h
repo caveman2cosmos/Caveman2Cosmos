@@ -65,11 +65,16 @@ public:
 	bool isIdleCity(const int iCityID) const;
 	void resetIdleCities();
 
+	void processTech(const TechTypes eTech, const int iChange);
+
 protected:
 	CvGameObjectPlayer m_GameObject;
 	void baseInit(PlayerTypes eID);
 	void initMore(PlayerTypes eID, LeaderHeadTypes ePersonality, bool bSetAlive = true);
+
 	std::vector<int> m_idleCities;
+	std::vector<CvUnit*> m_commanders;
+	std::vector<CvPlot*> m_commandFieldPlots;
 
 public:
 
@@ -136,7 +141,8 @@ public:
 	bool hasTrait(TraitTypes eTrait) const;
 
 	void setHumanDisabled(bool newVal);
-	bool isHumanDisabled() const;
+	inline bool isHumanDisabled() const { return m_bDisableHuman; }
+	inline bool isHumanPlayer(const bool bCountDisabled = false) const { return m_bHuman || bCountDisabled && m_bDisableHuman; }
 	bool isNormalAI() const;
 
 	DllExport bool isHuman() const;
@@ -145,7 +151,6 @@ public:
 	bool isNPC() const;
 	bool isHominid() const;
 	bool isAnimal() const;
-	bool isInvasionCapablePlayer() const;
 
 	DllExport const wchar_t* getName(uint uiForm = 0) const;
 
@@ -187,7 +192,7 @@ public:
 
 	void updateYield();
 	void updateMaintenance() const;
-	inline void setMaintenanceDirty(bool bDirty) const { m_bMaintenanceDirty = bDirty; }
+	void setMaintenanceDirty(const bool bDirty, const bool bCities = true) const;
 
 	void updateFeatureHappiness(bool bLimited = false);
 	void updateReligionHappiness(bool bLimited = false);
@@ -311,7 +316,6 @@ public:
 
 	int calculateUnitSupply(int& iPaidUnits, int& iBaseSupplyCost) const;
 	int calculateUnitSupply() const;
-	int calculateInflationRate() const;
 	int64_t calculatePreInflatedCosts() const;
 	int getInflationMod10000() const;
 	int64_t getInflationCost() const;
@@ -581,7 +585,7 @@ public:
 	void changeCivilianUnitUpkeepMod(const int iChange);
 	void changeMilitaryUnitUpkeepMod(const int iChange);
 	void changeUnitUpkeep(const int iChange, const bool bMilitary);
-	void applyUnitUpkeepHandicap(int64_t& iUpkeep);
+	inline void setUnitUpkeepDirty() const { m_bUnitUpkeepDirty = true; }
 
 	int64_t getUnitUpkeepCivilian100() const;
 	int64_t getUnitUpkeepCivilian() const;
@@ -590,7 +594,7 @@ public:
 	int64_t getUnitUpkeepMilitary() const;
 	int64_t getUnitUpkeepMilitaryNet() const;
 	int64_t getUnitUpkeepNet(const bool bMilitary, const int iUnitUpkeep = MAX_INT) const;
-	int64_t calcFinalUnitUpkeep(const bool bReal=true);
+	int64_t calcFinalUnitUpkeep(const bool bReal=true) const;
 	int64_t getFinalUnitUpkeep() const;
 	int getFinalUnitUpkeepChange(const int iExtra, const bool bMilitary);
 	// ! Unit Upkeep
@@ -641,14 +645,20 @@ public:
 
 	void changeBuildingOnlyHealthyCount(int iChange, bool bLimited = false);
 
-	int getDistanceMaintenanceModifier() const;
-	void changeDistanceMaintenanceModifier(int iChange);
+	inline int getDistanceMaintenanceModifier() const { return m_iDistanceMaintenanceModifier; }
+	void changeDistanceMaintenanceModifier(const int iChange);
 
-	int getNumCitiesMaintenanceModifier() const;
-	void changeNumCitiesMaintenanceModifier(int iChange);
+	inline int getNumCitiesMaintenanceModifier() const { return m_iNumCitiesMaintenanceModifier; }
+	void changeNumCitiesMaintenanceModifier(const int iChange);
 
-	int getCorporationMaintenanceModifier() const;
-	void changeCorporationMaintenanceModifier(int iChange, bool bLimited = false);
+	inline int getCorporationMaintenanceModifier() const { return m_iCorporationMaintenanceModifier; }
+	void changeCorporationMaintenanceModifier(const int iChange, const bool bLimited = false);
+
+	inline int getHomeAreaMaintenanceModifier() const { return m_iHomeAreaMaintenanceModifier; }
+	void changeHomeAreaMaintenanceModifier(const int iChange);
+
+	inline int getOtherAreaMaintenanceModifier() const { return m_iOtherAreaMaintenanceModifier; }
+	void changeOtherAreaMaintenanceModifier(const int iChange);
 
 	int getTotalMaintenance() const;
 
@@ -659,7 +669,8 @@ public:
 	void changeLevelExperienceModifier(int iChange);
 
 	int getExtraHealth() const;
-	void changeExtraHealth(int iChange, bool bLimited = false);
+	void changeExtraHealth(int iChange);
+	void changeCivicHealth(const int iChange, const bool bLimited = false);
 
 	int getCivicHealth() const; // Included in getExtraHealth() but split off to aid hover text displays
 
@@ -1269,7 +1280,7 @@ public:
 	int getProjectHealth() const;
 	void changeProjectHealth(int iChange);
 
-	int getNoCapitalUnhappiness() const;
+	inline bool isNoCapitalUnhappiness() const { return m_iNoCapitalUnhappiness > 0; }
 	void changeNoCapitalUnhappiness(int iChange);
 
 	int getCivilizationHealth() const;
@@ -1376,7 +1387,11 @@ public:
 	void recalculateResourceConsumption(BonusTypes eBonus);
 	void recalculateAllResourceConsumption();
 
-	std::vector<CvUnit*> Commanders;
+	void listCommander(bool bAdd, CvUnit* unit);
+	std::vector<CvUnit*> getCommanders() const { return m_commanders; }
+
+	void setCommandFieldPlot(bool bNewValue, CvPlot* aPlot);
+	std::vector<CvPlot*> getCommandFieldPlots() const { return m_commandFieldPlots; }
 
 	int getFreeSpecialistCount(SpecialistTypes eIndex) const;
 	void setFreeSpecialistCount(SpecialistTypes eIndex, int iNewValue);
@@ -1411,7 +1426,7 @@ public:
 
 	void setColor(PlayerColorTypes eColor);
 
-	void setHandicap(int iNewVal);
+	void setHandicap(int iNewVal, bool bAdjustGameHandicap = false);
 
 	bool canBuild(const CvPlot* pPlot, ImprovementTypes eImprovement, bool bTestVisible) const;
 
@@ -1772,7 +1787,8 @@ protected:
 
 	int64_t m_iUnitUpkeepCivilian100;
 	int64_t m_iUnitUpkeepMilitary100;
-	int64_t m_iFinalUnitUpkeep;
+	mutable int64_t m_iFinalUnitUpkeep;
+	mutable bool m_bUnitUpkeepDirty;
 
 	int m_iNumMilitaryUnits;
 	int m_iHappyPerMilitaryUnit;
@@ -1791,10 +1807,14 @@ protected:
 	int m_iDistanceMaintenanceModifier;
 	int m_iNumCitiesMaintenanceModifier;
 	int m_iCorporationMaintenanceModifier;
+	int m_iHomeAreaMaintenanceModifier;
+	int m_iOtherAreaMaintenanceModifier;
 	mutable int m_iTotalMaintenance;
+
 	int m_iUpkeepModifier;
 	int m_iLevelExperienceModifier;
 	int m_iExtraHealth;
+	int m_iCivicHealth;
 	int m_iBuildingGoodHealth;
 	int m_iBuildingBadHealth;
 	int m_iExtraHappiness;
@@ -1847,7 +1867,6 @@ protected:
 	//TB Nukefix
 	bool m_bNukesValid;
 	bool m_bHuman;
-
 	bool m_bDisableHuman; // Set to true to disable isHuman() check
 
 	int m_iStabilityIndex;
@@ -2220,7 +2239,6 @@ public:
 	void setExtraNonStateReligionSpreadModifier(int iValue);
 	void changeExtraNonStateReligionSpreadModifier(int iChange);
 
-	void updateTechHappinessandHealth();
 	void checkReligiousDisablingAllBuildings();
 	//TB Traits end
 
@@ -2266,7 +2284,6 @@ public:
 	int getFocusPlotX() const;
 	int getFocusPlotY() const;
 
-public:
 	void RecalculatePlotGroupHashes();
 	CvContractBroker& getContractBroker();
 

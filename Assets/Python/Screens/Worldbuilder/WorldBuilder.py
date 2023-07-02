@@ -279,9 +279,9 @@ class WorldBuilder:
 			if self.m_pCurrentPlot.isCity():
 				pCity = self.m_pCurrentPlot.getPlotCity()
 				bEffects = False
-				if bPython and pCity.getNumRealBuilding(self.iSelection) == 0:
+				if bPython and not pCity.hasBuilding(self.iSelection):
 					bEffects = True
-				pCity.setNumRealBuilding(self.iSelection, 1)
+				pCity.changeHasBuilding(self.iSelection, True)
 				if bEffects:
 					self.eventManager.onBuildingBuilt([pCity, self.iSelection])
 		elif self.iPlayerAddMode == "City":
@@ -368,7 +368,7 @@ class WorldBuilder:
 				return 1
 		elif self.iPlayerAddMode == "Buildings":
 			if self.m_pCurrentPlot.isCity():
-				self.m_pCurrentPlot.getPlotCity().setNumRealBuilding(self.iSelection, 0)
+				self.m_pCurrentPlot.getPlotCity().changeHasBuilding(self.iSelection, False)
 		elif self.iPlayerAddMode == "City":
 			if self.m_pCurrentPlot.isCity():
 				pCity = self.m_pCurrentPlot.getPlotCity()
@@ -1117,7 +1117,7 @@ class WorldBuilder:
 
 	def RevealCurrentPlot(self, bReveal, pPlot):
 		if self.iPlayerAddMode == "Blockade": return
-		iType = GC.getInfoTypeForStringWithHiddenAssert(self.iPlayerAddMode)
+		iType = GC.getInfoTypeForString(self.iPlayerAddMode)
 		if iType == -1:
 			if bReveal or (not pPlot.isVisible(self.m_iCurrentTeam, False)):
 				pPlot.setRevealed(self.m_iCurrentTeam, bReveal, False, -1)
@@ -1256,7 +1256,7 @@ class WorldBuilder:
 		pNewCity.setPopulation(pOldCity.getPopulation())
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 
-			pNewCity.setBuildingProduction(iBuilding, pOldCity.getBuildingProduction(iBuilding))
+			pNewCity.setProgressOnBuilding(iBuilding, pOldCity.getProgressOnBuilding(iBuilding))
 
 			for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 				pNewCity.setBuildingCommerceChange(iBuilding, iCommerce, pOldCity.getBuildingCommerceChange(iBuilding, iCommerce))
@@ -1266,7 +1266,7 @@ class WorldBuilder:
 
 			if GC.getBuildingInfo(iBuilding).isCapital() and not bMove:
 				continue
-			pNewCity.setNumRealBuilding(iBuilding, pOldCity.getNumRealBuilding(iBuilding))
+			pNewCity.changeHasBuilding(iBuilding, pOldCity.hasBuilding(iBuilding))
 
 		for iPlayerX in xrange(GC.getMAX_PLAYERS()):
 			pNewCity.setCultureTimes100(iPlayerX, pOldCity.getCultureTimes100(iPlayerX), False)
@@ -1286,17 +1286,12 @@ class WorldBuilder:
 			pNewCity.setFreeSpecialistCount(iSpecialist, pOldCity.getFreeSpecialistCount(iSpecialist))
 			pNewCity.setForceSpecialistCount(iSpecialist, pOldCity.getForceSpecialistCount(iSpecialist))
 		for iUnit in xrange(GC.getNumUnitInfos()):
-			pNewCity.setUnitProduction(iUnit, pOldCity.getUnitProduction(iUnit))
+			pNewCity.setProgressOnUnit(iUnit, pOldCity.getProgressOnUnit(iUnit))
 			pNewCity.setGreatPeopleUnitProgress(iUnit, pOldCity.getGreatPeopleUnitProgress(iUnit))
 		for iCommerce in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 			pNewCity.changeSpecialistCommerce(iCommerce, pOldCity.getSpecialistCommerce(iCommerce) - pNewCity.getSpecialistCommerce(iCommerce))
 		for iBonus in xrange(GC.getNumBonusInfos()):
 			pNewCity.changeFreeBonus(iBonus, pOldCity.getFreeBonus(iBonus) - pNewCity.getFreeBonus(iBonus))
-			while pOldCity.isNoBonus(iBonus) != pNewCity.isNoBonus(iBonus):
-				if pOldCity.isNoBonus(iBonus):
-					pNewCity.changeNoBonusCount(iBonus, 1)
-				else:
-					pNewCity.changeNoBonusCount(iBonus, -1)
 		for iOrder in xrange(pOldCity.getOrderQueueLength()):
 			OrderData = pOldCity.getOrderFromQueue(iOrder)
 			pNewCity.pushOrder(OrderData.eOrderType, OrderData.iData1, OrderData.iData2, OrderData.bSave, False, True, False)
@@ -1323,7 +1318,7 @@ class WorldBuilder:
 		pNewCity.setOccupationTimer(pOldCity.getOccupationTimer())
 		pNewCity.setOverflowProduction(pOldCity.getOverflowProduction())
 		pNewCity.setPlundered(pOldCity.isPlundered())
-		pNewCity.setProduction(pOldCity.getProduction())
+		pNewCity.setProductionProgress(pOldCity.getProductionProgress())
 		pNewCity.setScriptData(pOldCity.getScriptData())
 		pNewCity.setWallOverride(pOldCity.isWallOverride())
 
@@ -1347,7 +1342,7 @@ class WorldBuilder:
 	def addComma(self, iValue):
 		sTemp = str(iValue)
 		sStart = ""
-		while len(sTemp) > 0:
+		while sTemp:
 			if sTemp[0].isdigit(): break
 			sStart += sTemp[0]
 			sTemp = sTemp[1:]

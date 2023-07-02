@@ -1,4 +1,7 @@
-﻿#include "CvWorkerService.h"
+
+#include "FProfiler.h"
+
+#include "CvWorkerService.h"
 #include "CvDefines.h"
 #include "CvInfos.h"
 #include "CvPlayerAI.h"
@@ -9,6 +12,7 @@
 
 bool CvWorkerService::ShouldImproveCity(CvCity* targetCity)
 {
+	PROFILE_EXTRA_FUNC();
 	if (targetCity == NULL) return false;
 	foreach_(const CvPlot * pLoopPlot, targetCity->plots())
 	{
@@ -31,13 +35,14 @@ bool CvWorkerService::ShouldImproveCity(CvCity* targetCity)
 
 bool CvWorkerService::ImproveBonus(CvUnitAI* unit, int allowedMovementTurns)
 {
+	PROFILE_EXTRA_FUNC();
 	const CvPlot* unitPlot = unit->plot();
 	const PlayerTypes unitOwner = unit->getOwner();
 	const CvPlayerAI& ownerReference = GET_PLAYER(unitOwner);
 	const int iBasePathFlags = MOVE_SAFE_TERRITORY | MOVE_AVOID_ENEMY_UNITS | MOVE_OUR_TERRITORY | MOVE_RECONSIDER_ON_LEAVING_OWNED;
 	const bool gameOptionLeaveForests = ownerReference.isOption(PLAYEROPTION_LEAVE_FORESTS);
 	const bool gameOptionSafeAutomation = ownerReference.isOption(PLAYEROPTION_SAFE_AUTOMATION);
-	const bool gameOptionZoneOfControl = GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL);
+	const bool gameOptionZoneOfControl = GC.getGame().isOption(GAMEOPTION_UNSUPPORTED_ZONE_OF_CONTROL);
 	const bool bCanRoute = unit->canBuildRoute();
 	const int maxDistanceFromBorder = unit->getGroup()->getNumUnits() > 1 && unit->getGroup()->canDefend() ? GC.getAI_WORKER_MAX_DISTANCE_FROM_CITY_OUT_BORDERS() / 2 + 1 : -1;
 	BuildTypes overallBestBuild = NO_BUILD;
@@ -162,6 +167,7 @@ bool CvWorkerService::IsPlotValid(CvUnit* unit, CvPlot* plot)
 
 BuildTypes CvWorkerService::GetFastestBuildForImprovementType(const CvPlayer& player, const ImprovementTypes improvementType, const CvPlot* plot, const CvUnitAI* unit, bool includeCurrentImprovement)
 {
+	PROFILE_EXTRA_FUNC();
 	int fastestTime = 10000;
 	BuildTypes fastestBuild = NO_BUILD;
 	const ImprovementTypes currentImprovementOnPlot = plot->getImprovementType();

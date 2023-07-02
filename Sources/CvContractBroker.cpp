@@ -1,5 +1,8 @@
 // unitAI.cpp
 
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
 #include "CvContractBroker.h"
@@ -92,6 +95,7 @@ void CvContractBroker::lookingForWork(const CvUnit* pUnit, int iMinPriority)
 //	Unit fulfilled its work and is no longer advertising as available
 void CvContractBroker::removeUnit(const CvUnit* pUnit)
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < (int)m_advertisingUnits.size(); iI++)
 	{
 		if ( m_advertisingUnits[iI].iUnitId == pUnit->getID() )
@@ -223,6 +227,7 @@ void CvContractBroker::advertiseTender(const CvCity* pCity, int iMinPriority)
 //	tenders all occurring at once
 int CvContractBroker::numRequestsOutstanding(UnitAITypes eUnitAI, bool bAtCityOnly, const CvPlot* pPlot) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 
 	for(int iI = 0; iI < (int)m_workRequests.size(); iI++)
@@ -304,13 +309,22 @@ void CvContractBroker::finalizeTenderContracts()
 					if (pCity != NULL && pDestPlot != NULL
 					&& (pCity->area() == pDestPlot->area() || pDestPlot->getPlotCity() != NULL && pCity->waterArea() == pDestPlot->getPlotCity()->waterArea()))
 					{
-						int	iTendersAlreadyInProcess = pCity->numQueuedUnits(m_workRequests[iI].eAIType, pDestPlot);
+						int	iTendersAlreadyInProcess = pCity->numQueuedUnits(m_workRequests[iI].eAIType, pTargetUnit == NULL ? pDestPlot : NULL);
 						int iTenderAllocationKey = 0;
 
 						CvChecksum xSum;
 
 						xSum.add(pCity->getID());
-						xSum.add(GC.getMap().plotNum(pDestPlot->getX(), pDestPlot->getY()));
+
+						if (pTargetUnit != NULL)
+						{
+							// Units move around, so can't use destination plot
+							xSum.add(pTargetUnit->getID());
+						}
+						else
+						{
+							xSum.add(GC.getMap().plotNum(m_workRequests[iI].iAtX, m_workRequests[iI].iAtY));
+						}
 						xSum.add((int)m_workRequests[iI].eAIType);
 
 						iTenderAllocationKey = xSum.get();
@@ -407,6 +421,7 @@ void CvContractBroker::finalizeTenderContracts()
 											iValue
 										);
 									}
+
 									if (iValue > iBestValue)
 									{
 										iBestValue = iValue;
@@ -769,6 +784,7 @@ UnitValueFlags CvContractBroker::unitCapabilities2UnitValueFlags(unitCapabilitie
 
 void CvContractBroker::postProcessUnitsLookingForWork()
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < (int)m_advertisingUnits.size(); iI++)
 	{
 		CvUnit* unitX = findUnit(m_advertisingUnits[iI].iUnitId);

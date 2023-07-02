@@ -1,3 +1,6 @@
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
@@ -1354,7 +1357,7 @@ void CvDLLWidgetData::doContactCiv(CvWidgetDataStruct &widgetDataStruct)
 
 	if (gDLL->shiftKey() && !gDLL->altKey())
 	{
-		if (GET_PLAYER((PlayerTypes)widgetDataStruct.m_iData1).isHuman()
+		if (GET_PLAYER((PlayerTypes)widgetDataStruct.m_iData1).isHumanPlayer()
 		&& widgetDataStruct.m_iData1 != GC.getGame().getActivePlayer())
 		{
 			gDLL->getInterfaceIFace()->showTurnLog((ChatTargetTypes)widgetDataStruct.m_iData1);
@@ -1869,6 +1872,7 @@ void CvDLLWidgetData::parseMaintainHelp(CvWidgetDataStruct &widgetDataStruct, Cv
 
 void CvDLLWidgetData::parseHurryHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
+	PROFILE_EXTRA_FUNC();
 	CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
 
 	if (pHeadSelectedCity != NULL)
@@ -1974,6 +1978,7 @@ void CvDLLWidgetData::parseHurryHelp(CvWidgetDataStruct &widgetDataStruct, CvWSt
 
 void CvDLLWidgetData::parseConscriptHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
+	PROFILE_EXTRA_FUNC();
 	CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
 
 	if (pHeadSelectedCity != NULL)
@@ -2074,6 +2079,7 @@ void CvDLLWidgetData::parseConscriptHelp(CvWidgetDataStruct &widgetDataStruct, C
 
 void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
+	PROFILE_EXTRA_FUNC();
 	const bool bAlt = gDLL->altKey();
 	const bool bShift = gDLL->shiftKey();
 
@@ -2731,21 +2737,25 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 				{
 					if (eImprovement != NO_IMPROVEMENT)
 					{
-						if (pMissionPlot->getTeam() != pHeadSelectedUnit->getTeam())
+						// Anywhere builds only fail in non-team/neutral territory
+						if (improvement->isOutsideBorders())
 						{
-							if (improvement->isOutsideBorders())
-							{
-								if (pMissionPlot->getTeam() != NO_TEAM)
-								{
-									szBuffer.append(NEWLINE);
-									szBuffer.append(gDLL->getText("TXT_KEY_ACTION_NEEDS_OUT_RIVAL_CULTURE_BORDER"));
-								}
-							}
-							else
+							if (pMissionPlot->getTeam() != pHeadSelectedUnit->getTeam() &&
+								pMissionPlot->getTeam() != NO_TEAM)
 							{
 								szBuffer.append(NEWLINE);
-								szBuffer.append(gDLL->getText("TXT_KEY_ACTION_NEEDS_CULTURE_BORDER"));
+								szBuffer.append(gDLL->getText("TXT_KEY_ACTION_NEEDS_OUT_RIVAL_CULTURE_BORDER"));
 							}
+						}
+						// Fail when on territory owned by non-teammate
+						// OR when outside influence of tile owner; this (should) enable building on valid territory of teammates.
+						// NOTE: This prevents workers removing forts when in territory influenced by teammate. Also does not allow
+						// 		building on a tile owned by teammate but only influenced by you (rare occurrance though for it not to be a fort tile)
+						else if (pMissionPlot->getTeam() != pHeadSelectedUnit->getTeam()
+							 || !pMissionPlot->isInCultureRangeOfCityByPlayer(pMissionPlot->getOwner()))
+						{
+							szBuffer.append(NEWLINE);
+							szBuffer.append(gDLL->getText("TXT_KEY_ACTION_NEEDS_CULTURE_BORDER"));
 						}
 
 						if ((ePlotBonus == NO_BONUS || !improvement->isImprovementBonusTrade(ePlotBonus))
@@ -3379,7 +3389,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 			// BUG - Delete All Action - start
 			else if (GC.getActionInfo(widgetDataStruct.m_iData1).getCommandType() == COMMAND_DELETE)
 			{
-				if (GC.getGame().isOption(GAMEOPTION_DOWNSIZING_IS_PROFITABLE))
+				if (GC.getGame().isOption(GAMEOPTION_UNIT_DOWNSIZING_IS_PROFITABLE))
 				{
 					const CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 
@@ -3442,6 +3452,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 
 void CvDLLWidgetData::parseCitizenHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
+	PROFILE_EXTRA_FUNC();
 	CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
 
 	if (pHeadSelectedCity != NULL && widgetDataStruct.m_iData1 != NO_SPECIALIST)
@@ -3496,6 +3507,7 @@ void CvDLLWidgetData::parseFreeCitizenHelp(CvWidgetDataStruct &widgetDataStruct,
 
 void CvDLLWidgetData::parseDisabledCitizenHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
+	PROFILE_EXTRA_FUNC();
 	CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
 
 	if (pHeadSelectedCity != NULL && widgetDataStruct.m_iData1 != NO_SPECIALIST)
@@ -3506,12 +3518,12 @@ void CvDLLWidgetData::parseDisabledCitizenHelp(CvWidgetDataStruct &widgetDataStr
 		{
 			bool bFirst = true;
 
-			for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+			for (int iI = GC.getNumBuildingInfos() - 1; iI > -1; iI--)
 			{
 				const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
 
 				if (GC.getBuildingInfo(eLoopBuilding).getSpecialistCount(widgetDataStruct.m_iData1) > 0
-				&& pHeadSelectedCity->getNumActiveBuilding(eLoopBuilding) <= 0 && !isLimitedWonder(eLoopBuilding)
+				&& !pHeadSelectedCity->isActiveBuilding(eLoopBuilding) && !isLimitedWonder(eLoopBuilding)
 				&& (GC.getBuildingInfo(eLoopBuilding).getSpecialBuilding() == NO_SPECIALBUILDING || pHeadSelectedCity->canConstruct(eLoopBuilding)))
 				{
 					setListHelp(szBuffer, gDLL->getText("TXT_KEY_REQUIRES"), GC.getBuildingInfo(eLoopBuilding).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
@@ -3635,6 +3647,7 @@ void CvDLLWidgetData::parseSetPercentHelp(CvWidgetDataStruct &widgetDataStruct, 
 
 void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
+	PROFILE_EXTRA_FUNC();
 	// do not execute if player is out of range
 	PlayerTypes ePlayer = (PlayerTypes) widgetDataStruct.m_iData1;
 	if (ePlayer >= MAX_PLAYERS)
@@ -3652,6 +3665,8 @@ void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, 
 	// make sure its empty to start
 	szBuffer.clear();
 
+	szBuffer.append(gDLL->getText("TXT_KEY_SETTINGS_DIFFICULTY_PLAYER", GC.getHandicapInfo(GET_PLAYER((PlayerTypes)widgetDataStruct.m_iData1).getHandicapType()).getTextKeyWide()));
+	szBuffer.append(NEWLINE);
 	if (kPlayer.isMinorCiv())
 	{
 		szBuffer.assign(gDLL->getText("TXT_KEY_REV_CONTACT_MINOR", kPlayer.getCivilizationDescription()));
@@ -3980,7 +3995,7 @@ void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, 
 
 		// calculate war percentages
 		float fOverallWarPercentage = 0;
-		bool bAggressive = GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI);
+		bool bAggressive = GC.getGame().isOption(GAMEOPTION_AI_AGGRESSIVE);
 
 		bool bIsAnyCapitalAreaAlone = kTeam.AI_isAnyCapitalAreaAlone();
 
@@ -4470,9 +4485,8 @@ void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, 
 		}
 	}
 
-
 	// Show score info instead if we are trying to contact ourselves...
-	if (eActivePlayer == ePlayer || gDLL->ctrlKey() && gDLL->getChtLvl() > 0)
+	if (eActivePlayer == ePlayer || gDLL->ctrlKey() && GC.getGame().isDebugMode())
 	{
 		parseScoreHelp(widgetDataStruct, szBuffer);
 		return;
@@ -4516,7 +4530,7 @@ void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, 
 
 		if (eTeam != eActiveTeam)
 		{
-			if (!kPlayer.isHuman())
+			if (!kPlayer.isHumanPlayer())
 			{
 				if (!kPlayer.AI_isWillingToTalk(eActivePlayer))
 				{
@@ -4555,7 +4569,7 @@ void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, 
 		}
 	}
 
-	if (kPlayer.isHuman())
+	if (kPlayer.isHumanPlayer())
 	{
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_MISC_SHIFT_SEND_CHAT"));
@@ -5097,6 +5111,7 @@ void CvDLLWidgetData::parseHealthHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 
 void CvDLLWidgetData::parseNationalityHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
+	PROFILE_EXTRA_FUNC();
 	szBuffer.assign(gDLL->getText("TXT_KEY_MISC_CITY_NATIONALITY"));
 
 	CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
@@ -5129,20 +5144,20 @@ void CvDLLWidgetData::parseNationalityHelp(CvWidgetDataStruct &widgetDataStruct,
 		{
 			if (GET_PLAYER(eCulturalOwner).getTeam() != pHeadSelectedCity->getTeam())
 			{
-				int iCityStrength = pHeadSelectedCity->netRevoltRisk(eCulturalOwner);
-				int iOriginal = pHeadSelectedCity->baseRevoltRisk(eCulturalOwner);
-				int iSpeedAdjustment = GC.getREVOLT_TEST_PROB() * 100 /
+				const int iNetRevoltRisk100 = pHeadSelectedCity->netRevoltRisk100(eCulturalOwner);
+				const int iOriginal100 = pHeadSelectedCity->baseRevoltRisk100(eCulturalOwner);
+				const int iSpeedAdjustment = GC.getREVOLT_TEST_PROB() * 100 /
 					GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
-				int iGarrison = pHeadSelectedCity->cultureGarrison(eCulturalOwner);
+				const int iGarrison = pHeadSelectedCity->unitRevoltRiskModifier(eCulturalOwner);
 
-				if (iCityStrength > 0)
+				if (iNetRevoltRisk100 > 0)
 				{
 					szBuffer.append(NEWLINE);
 					szBuffer.append(gDLL->getText("TXT_KEY_MISC_CHANCE_OF_REVOLT",
-						CvWString::format(L"" SETCOLR L"%.2f%%" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), ((float)iCityStrength*iSpeedAdjustment)/10000).GetCString(),
-						CvWString::format(L"" SETCOLR L"%d%%" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), iOriginal).GetCString(),
+						CvWString::format(L"" SETCOLR L"%.2f%%" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), ((float)iNetRevoltRisk100*iSpeedAdjustment)/10000).GetCString(),
+						CvWString::format(L"" SETCOLR L"%.1f%%" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), (float)iOriginal100/100).GetCString(),
 						CvWString::format(L"" SETCOLR L"%d%%" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), iSpeedAdjustment).GetCString(),
-						CvWString::format(L"" SETCOLR L"%d%%" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), (100-iGarrison)).GetCString()
+						CvWString::format(L"" SETCOLR L"%d%%" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), iGarrison).GetCString()
 					));
 				}
 			}
@@ -5155,9 +5170,9 @@ void CvDLLWidgetData::parsePopulationHelp(CvWidgetDataStruct &widgetDataStruct, 
 {
 	CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
 
-	if (pHeadSelectedCity != NULL)
+	if (pHeadSelectedCity)
 	{
-		szBuffer.assign(gDLL->getText("TXT_KEY_MISC_FOOD_THRESHOLD", pHeadSelectedCity->getFood(), pHeadSelectedCity->growthThreshold()));
+		szBuffer.assign(gDLL->getText("TXT_KEY_MISC_FOOD_THRESHOLD", pHeadSelectedCity->getFood(), pHeadSelectedCity->growthThreshold(), pHeadSelectedCity->getFoodKept()));
 	}
 }
 
@@ -5171,7 +5186,7 @@ void CvDLLWidgetData::parseProductionHelp(CvWidgetDataStruct &widgetDataStruct, 
 		if (pHeadSelectedCity->getProductionNeeded() != MAX_INT)
 		{
 			CvWString szTemp;
-			szTemp.Format(L"%s: %d/%d %c", pHeadSelectedCity->getProductionName(), pHeadSelectedCity->getProduction(), pHeadSelectedCity->getProductionNeeded(), GC.getYieldInfo(YIELD_PRODUCTION).getChar());
+			szTemp.Format(L"%s: %d/%d %c", pHeadSelectedCity->getProductionName(), pHeadSelectedCity->getProductionProgress(), pHeadSelectedCity->getProductionNeeded(), GC.getYieldInfo(YIELD_PRODUCTION).getChar());
 			szBuffer.assign(szTemp);
 		}
 	}
@@ -5182,23 +5197,28 @@ void CvDLLWidgetData::parseCultureHelp(CvWidgetDataStruct &widgetDataStruct, CvW
 {
 	CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
 
-	if (pHeadSelectedCity != NULL)
+	if (pHeadSelectedCity == NULL)
 	{
-		int iCultureTimes100 = pHeadSelectedCity->getCultureTimes100(pHeadSelectedCity->getOwner());
+		return;
+	}
+	const int iThreshold = pHeadSelectedCity->getCultureThreshold();
+	const int iCultureTimes100 = pHeadSelectedCity->getCultureTimes100(pHeadSelectedCity->getOwner());
+
+	if (iThreshold > 0)
+	{
 		if (iCultureTimes100%100 == 0)
 		{
-			szBuffer.assign(gDLL->getText("TXT_KEY_MISC_CULTURE", iCultureTimes100/100, pHeadSelectedCity->getCultureThreshold()));
+			szBuffer.assign(gDLL->getText("TXT_KEY_MISC_CULTURE", iCultureTimes100/100, iThreshold));
 		}
 		else
 		{
 			CvWString szCulture = CvWString::format(L"%d.%02d", iCultureTimes100/100, iCultureTimes100%100);
-			szBuffer.assign(gDLL->getText("TXT_KEY_MISC_CULTURE_FLOAT", szCulture.GetCString(), pHeadSelectedCity->getCultureThreshold()));
+			szBuffer.assign(gDLL->getText("TXT_KEY_MISC_CULTURE_FLOAT", szCulture.GetCString(), iThreshold));
 		}
-
 		int iCultureRateTimes100 = pHeadSelectedCity->getCommerceRateTimes100(COMMERCE_CULTURE);
 		if (iCultureRateTimes100 > 0)
 		{
-			int iCultureLeftTimes100 = 100 * pHeadSelectedCity->getCultureThreshold() - iCultureTimes100;
+			int iCultureLeftTimes100 = 100 * iThreshold - iCultureTimes100;
 
 			if (iCultureLeftTimes100 > 0)
 			{
@@ -5208,11 +5228,12 @@ void CvDLLWidgetData::parseCultureHelp(CvWidgetDataStruct &widgetDataStruct, CvW
 				szBuffer.append(gDLL->getText("INTERFACE_CITY_TURNS", std::max(1, iTurnsLeft)));
 			}
 		}
-
-
-		szBuffer.append(L"\n=======================\n");
-		GAMETEXT.setCommerceHelp(szBuffer, *pHeadSelectedCity, COMMERCE_CULTURE);
 	}
+	else szBuffer.assign(gDLL->getText("TXT_KEY_MISC_CULTURE_MAX", iCultureTimes100/100));
+
+	szBuffer.append(L"\n=======================\n");
+	GAMETEXT.setCommerceHelp(szBuffer, *pHeadSelectedCity, COMMERCE_CULTURE);
+
 }
 
 
@@ -5947,6 +5968,7 @@ void CvDLLWidgetData::parseDescriptionHelp(CvWidgetDataStruct &widgetDataStruct,
 
 void CvDLLWidgetData::parseKillDealHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
+PROFILE_EXTRA_FUNC();
 //	szBuffer = "Click to cancel";
 	CvWString szTemp;
 	szTemp = szBuffer.getCString();

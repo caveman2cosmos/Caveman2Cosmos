@@ -7,6 +7,9 @@
 //
 //------------------------------------------------------------------------------------------------
 
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvBonusInfo.h"
 #include "CvBuildingInfo.h"
@@ -526,26 +529,31 @@ void addToVector(const CvGameObject* pObject, std::vector<const CvGameObject*> *
 
 void CvGameObject::enumerate(std::vector<const CvGameObject*> &kEnum, GameObjectTypes eType) const
 {
+	PROFILE_EXTRA_FUNC();
 	foreach(eType, bind(addToVector, _1, &kEnum));
 }
 
 void CvGameObject::enumerateOn(std::vector<const CvGameObject*> &kEnum, GameObjectTypes eType) const
 {
+	PROFILE_EXTRA_FUNC();
 	foreachOn(eType, bind(addToVector, _1, &kEnum));
 }
 
 void CvGameObject::enumerateNear(std::vector<const CvGameObject*> &kEnum, GameObjectTypes eType, int iDistance) const
 {
+	PROFILE_EXTRA_FUNC();
 	foreachNear(eType, bind(addToVector, _1, &kEnum), iDistance);
 }
 
 void CvGameObject::enumerateRelated(std::vector<const CvGameObject*>& kEnum, GameObjectTypes eType, RelationTypes eRelation, int iData) const
 {
+	PROFILE_EXTRA_FUNC();
 	foreachRelated(eType, eRelation, bind(addToVector, _1, &kEnum), iData);
 }
 
 void CvGameObject::enumerateRelatedCond(std::vector<const CvGameObject*>& kEnum, GameObjectTypes eType, RelationTypes eRelation, const BoolExpr* pExpr, int iData) const
 {
+	PROFILE_EXTRA_FUNC();
 	foreachRelatedCond(eType, eRelation, bind(addToVector, _1, &kEnum), pExpr, iData);
 }
 
@@ -613,6 +621,7 @@ void CvGameObjectPlot::foreachRelated(GameObjectTypes eType, RelationTypes eRela
 
 void CvGameObjectPlayer::foreachManipulator(ManipCallbackFn func) const
 {
+	PROFILE_EXTRA_FUNC();
 	// Civics
 	for (int i=0; i<GC.getNumCivicOptionInfos(); i++)
 	{
@@ -642,12 +651,13 @@ void CvGameObjectPlayer::foreachManipulator(ManipCallbackFn func) const
 
 void CvGameObjectCity::foreachManipulator(ManipCallbackFn func) const
 {
+	PROFILE_EXTRA_FUNC();
 	// Building manipulators apply to cities
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	foreach_(const BuildingTypes eTypeX, m_pCity->getHasBuildings())
 	{
-		if (m_pCity->hasFullyActiveBuilding((BuildingTypes)iI))
+		if (!m_pCity->isReligiouslyLimitedBuilding(eTypeX) && !m_pCity->isDisabledBuilding(eTypeX))
 		{
-			func(GC.getBuildingInfo((BuildingTypes)iI).getPropertyManipulators());
+			func(GC.getBuildingInfo(eTypeX).getPropertyManipulators());
 		}
 	}
 
@@ -682,6 +692,7 @@ void CvGameObjectCity::foreachManipulator(ManipCallbackFn func) const
 
 void CvGameObjectUnit::foreachManipulator(ManipCallbackFn func) const
 {
+	PROFILE_EXTRA_FUNC();
 	// Unit Type
 	func(m_pUnit->getUnitInfo().getPropertyManipulators());
 
@@ -909,6 +920,7 @@ int CvGameObjectCity::getAttribute(AttributeTypes eAttribute) const
 
 int CvGameObjectGame::getAttribute(AttributeTypes eAttribute) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iCount = 0;
 
 	switch (eAttribute)
@@ -946,6 +958,7 @@ void aggregateHasGOM(const CvGameObject* pObject, GOMTypes eType, int iID, bool*
 
 bool CvGameObjectGame::hasGOM(GOMTypes eType, int iID) const
 {
+	PROFILE_EXTRA_FUNC();
 	switch (eType)
 	{
 		case GOM_BUILDING:
@@ -1046,6 +1059,7 @@ bool CvGameObjectGame::hasGOM(GOMTypes eType, int iID) const
 
 bool CvGameObjectTeam::hasGOM(GOMTypes eType, int iID) const
 {
+	PROFILE_EXTRA_FUNC();
 	switch (eType)
 	{
 		case GOM_BUILDING:
@@ -1255,13 +1269,13 @@ bool CvGameObjectPlayer::hasGOM(GOMTypes eType, int iID) const
 
 bool CvGameObjectCity::hasGOM(GOMTypes eType, int iID) const
 {
+	PROFILE_EXTRA_FUNC();
 	switch (eType)
 	{
 		case GOM_BUILDING:
 		{
 			// return true if the building is present and active
-			const BuildingTypes eBuilding = (BuildingTypes) iID;
-			return m_pCity->getNumActiveBuilding(eBuilding) > 0;
+			return m_pCity->isActiveBuilding((BuildingTypes) iID);
 		}
 
 		case GOM_PROMOTION:
@@ -1386,13 +1400,9 @@ bool CvGameObjectUnit::hasGOM(GOMTypes eType, int iID) const
 			const CvCity* pCity = m_pUnit->plot()->getPlotCity();
 			if (pCity)
 			{
-				const BuildingTypes eBuilding = (BuildingTypes) iID;
-				return pCity->getNumActiveBuilding(eBuilding) > 0;
+				return pCity->isActiveBuilding((BuildingTypes) iID);
 			}
-			else
-			{
-				return false;
-			}
+			return false;
 		}
 
 		case GOM_PROMOTION:
@@ -1507,13 +1517,14 @@ bool CvGameObjectUnit::hasGOM(GOMTypes eType, int iID) const
 
 bool CvGameObjectPlot::hasGOM(GOMTypes eType, int iID) const
 {
+	PROFILE_EXTRA_FUNC();
 	switch (eType)
 	{
 		case GOM_BUILDING:
 		{
 			// return true if the building is present in the city on this plot and active
 			const CvCity* pCity = m_pPlot->getPlotCity();
-			return pCity && pCity->getNumActiveBuilding((BuildingTypes)iID) > 0;
+			return pCity && pCity->isActiveBuilding((BuildingTypes)iID);
 		}
 
 		case GOM_PROMOTION:

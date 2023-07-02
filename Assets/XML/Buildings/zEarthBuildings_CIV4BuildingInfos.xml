@@ -3,13 +3,13 @@
 	<BuildingInfos>
 		<!-- Those buildings are overwitten by Pepper module, as those are meant to be compatible with Earth only stuff, while those in Pepper module may be given or requiring space content -->
 		<BuildingInfo>
-			<Type>BUILDING_ALIEN_HYBRID</Type>
+			<Type>BUILDING_HUMAN_MOD_ALIEN_HYBRID</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_ALIEN_HYBRID</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ALIEN_HYBRID_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_ALIEN_HYBRID</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_ALIEN_HYBRID_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ALIEN_HYBRID</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_ALIEN_HYBRID</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -69,13 +69,13 @@
 			</CommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ARCHAILECT</Type>
+			<Type>BUILDING_HUMAN_MOD_ARCHAILECT</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_ARCHAILECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ARCHAILECT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_ARCHAILECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_ARCHAILECT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ARCHAILECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_ARCHAILECT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -228,16 +228,16 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ASTEROID_MINING_COMPLEX_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_ASTEROID_MINING_COMPLEX_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ASTEROID_MINING_COMPLEX_EFFECT_PEDIA</Civilopedia>
+			<Type>BUILDING_EFFECT_ASTEROID_MINING_COMPLEX</Type>
+			<Description>TXT_KEY_BUILDING_EFFECT_ASTEROID_MINING_COMPLEX</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EFFECT_ASTEROID_MINING_COMPLEX_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ASTEROID_MINING_COMPLEX_EFFECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EFFECT_ASTEROID_MINING_COMPLEX</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
 			<iCost>4655</iCost>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_CISLUNAR_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_CISLUNAR_ECONOMY</BuildingType>
 			</PrereqInCityBuildings>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -248,11 +248,11 @@
 			</YieldChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ASTEROID_RARE</Type>
-			<Description>TXT_KEY_BUILDING_ASTEROID_RARE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ASTEROID_RARE_PEDIA</Civilopedia>
+			<Type>BUILDING_ASTEROID_MINE_RARE_MINERALS</Type>
+			<Description>TXT_KEY_BUILDING_ASTEROID_MINE_RARE_MINERALS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ASTEROID_MINE_RARE_MINERALS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ASTEROID_RARE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ASTEROID_MINE_RARE_MINERALS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -286,13 +286,13 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ATEMPORAL</Type>
+			<Type>BUILDING_HUMAN_MOD_ATEMPORAL</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_ATEMPORAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ATEMPORAL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_ATEMPORAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_ATEMPORAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ATEMPORAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_ATEMPORAL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -328,10 +328,10 @@
 			</CommerceChanges>
 			<FreeBuilding>BUILDING_PLANETARIUM</FreeBuilding>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ASTRONOMY_DATABASE</BuildingType>
+				<BuildingType>BUILDING_ASTRONOMICAL_DATABASE</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_POLLUTION_BLACKENEDSKIES</BuildingType>
+				<BuildingType>BUILDING_POLLUTION_BLACKENED_SKIES</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -415,7 +415,7 @@
 			</CommerceChanges>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_JPL</BuildingType>
+					<BuildingType>BUILDING_JET_PROPULSION_LABORATORY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -435,18 +435,18 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
 			<iCost>9310</iCost>
-			<FreeBuilding>BUILDING_CISLUNAR_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_EFFECT_CISLUNAR_ECONOMY</FreeBuilding>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 					<iNumBuildingNeeded>5</iNumBuildingNeeded>
 				</PrereqBuilding>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_MAGLEV_LAUNCH</BuildingType>
+					<BuildingType>BUILDING_MAGLEV_LAUNCHER</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
 				</PrereqBuilding>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_SOLAR_SATELLITE</BuildingType>
+					<BuildingType>BUILDING_SOLAR_POWER_SATELLITE</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 				<PrereqBuilding>
@@ -473,11 +473,11 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CISLUNAR_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_CISLUNAR_EFFECT</Description>
+			<Type>BUILDING_EFFECT_CISLUNAR_ECONOMY</Type>
+			<Description>TXT_KEY_BUILDING_EFFECT_CISLUNAR_ECONOMY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_ECONOMY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_EFFECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EFFECT_CISLUNAR_ECONOMY</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -514,13 +514,13 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_COGNITIVE_ENHANCEMENT</Type>
+			<Type>BUILDING_HUMAN_MOD_COGNITIVE_ENHANCEMENT</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_COGNITIVE_ENHANCEMENT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_COGNITIVE_ENHANCEMENT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_COGNITIVE_ENHANCEMENT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_COGNITIVE_ENHANCEMENT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_COGNITIVE_ENHANCEMENT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_COGNITIVE_ENHANCEMENT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -537,13 +537,13 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_COLD_TOLERANCE</Type>
+			<Type>BUILDING_HUMAN_MOD_COLD_TOLERANCE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_COLD_TOLERANCE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_COLD_TOLERANCE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_COLD_TOLERANCE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_COLD_TOLERANCE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_COLD_TOLERANCE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_COLD_TOLERANCE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -559,13 +559,13 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_COLLECTIVE_CONSCIOUSNESS</Type>
+			<Type>BUILDING_HUMAN_MOD_COLLECTIVE_CONSCIOUSNESS</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_COLLECTIVE_CONSCIOUSNESS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_COLLECTIVE_CONSCIOUSNESS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_COLLECTIVE_CONSCIOUSNESS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_COLLECTIVE_CONSCIOUSNESS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_COLLECTIVE_CONSCIOUSNESS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_COLLECTIVE_CONSCIOUSNESS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -589,13 +589,13 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_COSMIC_ECONOMY</Type>
+			<Type>BUILDING_MULTIVERSAL_ECONOMY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_COSMIC_ECONOMY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_COSMIC_ECONOMY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_MULTIVERSAL_ECONOMY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MULTIVERSAL_ECONOMY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_COSMIC_ECONOMY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MULTIVERSAL_ECONOMY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_COSMIC_ECONOMY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -603,18 +603,18 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_REALITY_REPROGRAMMING</PrereqTech>
 			<iCost>57510</iCost>
-			<FreeBuilding>BUILDING_COSMIC_ECONOMY_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_EFFECT_MULTIVERSAL_ECONOMY</FreeBuilding>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_UNIVERSAL_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_UNIVERSAL_ECONOMY</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_COSMIC_ECONOMY_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_COSMIC_ECONOMY_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_COSMIC_ECONOMY_PEDIA</Civilopedia>
+			<Type>BUILDING_EFFECT_MULTIVERSAL_ECONOMY</Type>
+			<Description>TXT_KEY_BUILDING_EFFECT_MULTIVERSAL_ECONOMY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MULTIVERSAL_ECONOMY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_COSMIC_ECONOMY_EFFECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EFFECT_MULTIVERSAL_ECONOMY</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -622,11 +622,11 @@
 			<PrereqTech>TECH_REALITY_REPROGRAMMING</PrereqTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_COSMIC_EXPANSION_POWER_PLANT_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_COSMIC_EXPANSION_POWER_PLANT_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_COSMIC_EXPANSION_POWER_PLANT_EFFECT_PEDIA</Civilopedia>
+			<Type>BUILDING_EFFECT_COSMIC_EXPANSION_POWER_PLANT</Type>
+			<Description>TXT_KEY_BUILDING_EFFECT_COSMIC_EXPANSION_POWER_PLANT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EFFECT_COSMIC_EXPANSION_POWER_PLANT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_COSMIC_EXPANSION_POWER_PLANT_EFFECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EFFECT_COSMIC_EXPANSION_POWER_PLANT</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -634,7 +634,7 @@
 			<PrereqTech>TECH_CONTROLLED_VACUUM_COLLAPSE</PrereqTech>
 			<iCost>22755</iCost>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_UNIVERSAL_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_UNIVERSAL_ECONOMY</BuildingType>
 			</PrereqInCityBuildings>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -671,19 +671,19 @@
 			</GlobalBuildingExtraCommerces>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_JPL</BuildingType>
+					<BuildingType>BUILDING_JET_PROPULSION_LABORATORY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DEEP_SPACE_GATEWAY</Type>
+			<Type>BUILDING_LUNAR_ORBITAL_PLATFORM_GATEWAY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_DEEP_SPACE_GATEWAY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DEEP_SPACE_GATEWAY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_LUNAR_ORBITAL_PLATFORM_GATEWAY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LUNAR_ORBITAL_PLATFORM_GATEWAY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DEEP_SPACE_GATEWAY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_LUNAR_ORBITAL_PLATFORM_GATEWAY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DEEP_SPACE_GATEWAY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -721,7 +721,7 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_GALACTIC_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_GALACTIC_ECONOMY</BuildingType>
 			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
@@ -732,13 +732,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DESIGNER_BABIES</Type>
+			<Type>BUILDING_HUMAN_MOD_DESIGNER_BABIES</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_DESIGNER_BABIES</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DESIGNER_BABIES_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_DESIGNER_BABIES</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_DESIGNER_BABIES_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DESIGNER_BABIES</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_DESIGNER_BABIES</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -754,13 +754,13 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DIGITAL_IDENTITY</Type>
+			<Type>BUILDING_HUMAN_MOD_DIGITAL_IDENTITY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_DIGITAL_IDENTITY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DIGITAL_IDENTITY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_DIGITAL_IDENTITY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_DIGITAL_IDENTITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DIGITAL_IDENTITY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_DIGITAL_IDENTITY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -781,13 +781,13 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DIGITAL_LIFESTYLE</Type>
+			<Type>BUILDING_HUMAN_MOD_DIGITAL_LIFESTYLE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_DIGITAL_LIFESTYLE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DIGITAL_LIFESTYLE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_DIGITAL_LIFESTYLE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_DIGITAL_LIFESTYLE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DIGITAL_LIFESTYLE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_DIGITAL_LIFESTYLE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -813,13 +813,13 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ENLIGHTENED</Type>
+			<Type>BUILDING_HUMAN_MOD_ENLIGHTENED</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_ENLIGHTENED</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ENLIGHTENED_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_ENLIGHTENED</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_ENLIGHTENED_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ENLIGHTENED</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_ENLIGHTENED</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -858,7 +858,7 @@
 			</CommerceChanges>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_JPL</BuildingType>
+					<BuildingType>BUILDING_JET_PROPULSION_LABORATORY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -884,7 +884,7 @@
 			</CommerceChanges>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+					<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -930,28 +930,28 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FOLDING_SPACE</PrereqTech>
 			<iCost>26310</iCost>
-			<FreeBuilding>BUILDING_GALACTIC_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_EFFECT_GALACTIC_ECONOMY</FreeBuilding>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_SOLAR_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_SOLAR_ECONOMY</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_SPACESCRAPER2</BuildingType>
+					<BuildingType>BUILDING_SPACESCRAPER</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+					<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GALACTIC_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_GALACTIC_EFFECT</Description>
+			<Type>BUILDING_EFFECT_GALACTIC_ECONOMY</Type>
+			<Description>TXT_KEY_BUILDING_EFFECT_GALACTIC_ECONOMY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GALACTIC_ECONOMY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GALACTIC_EFFECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EFFECT_GALACTIC_ECONOMY</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -980,19 +980,19 @@
 			</CommerceChanges>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_JPL</BuildingType>
+					<BuildingType>BUILDING_JET_PROPULSION_LABORATORY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GENE_EDITING</Type>
+			<Type>BUILDING_HUMAN_MOD_GENE_EDITING</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_GENE_EDITING</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GENE_EDITING_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_GENE_EDITING</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_GENE_EDITING_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GENE_EDITING</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_GENE_EDITING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1012,13 +1012,13 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GILLS</Type>
+			<Type>BUILDING_HUMAN_MOD_GILLS</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_GILLS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GILLS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_GILLS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_GILLS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GILLS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_GILLS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1034,13 +1034,13 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HEAT_TOLERANCE</Type>
+			<Type>BUILDING_HUMAN_MOD_HEAT_TOLERANCE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_HEAT_TOLERANCE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HEAT_TOLERANCE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_HEAT_TOLERANCE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_HEAT_TOLERANCE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_HEAT_TOLERANCE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_HEAT_TOLERANCE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1076,13 +1076,13 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HIGH_DIMENSIONAL</Type>
+			<Type>BUILDING_HUMAN_MOD_HIGH_DIMENSIONAL</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_HIGH_DIMENSIONAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HIGH_DIMENSIONAL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_HIGH_DIMENSIONAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_HIGH_DIMENSIONAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_HIGH_DIMENSIONAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_HIGH_DIMENSIONAL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1155,19 +1155,19 @@
 			</CommerceChanges>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_JPL</BuildingType>
+					<BuildingType>BUILDING_JET_PROPULSION_LABORATORY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_IMMORTAL</Type>
+			<Type>BUILDING_HUMAN_MOD_IMMORTAL</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_IMMORTAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_IMMORTAL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_IMMORTAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_IMMORTAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_IMMORTAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_IMMORTAL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1186,13 +1186,13 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_INDEFINITE_LIFESPAN</Type>
+			<Type>BUILDING_HUMAN_MOD_INDEFINITE_LIFESPAN</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_INDEFINITE_LIFESPAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_INDEFINITE_LIFESPAN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_INDEFINITE_LIFESPAN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_INDEFINITE_LIFESPAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_INDEFINITE_LIFESPAN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_INDEFINITE_LIFESPAN</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1213,13 +1213,13 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_INFORMATION_BASED</Type>
+			<Type>BUILDING_HUMAN_MOD_INFORMATION_BASED</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_INFORMATION_BASED</Description>
-			<Civilopedia>TXT_KEY_BUILDING_INFORMATION_BASED_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_INFORMATION_BASED</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_INFORMATION_BASED_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_INFORMATION_BASED</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_INFORMATION_BASED</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1264,7 +1264,7 @@
 				<iCommerce>30</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_INTERGALACTIC_PORT</BuildingType>
+				<BuildingType>BUILDING_GALACTIC_PORT</BuildingType>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
@@ -1315,11 +1315,11 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ISS_TOURISM</Type>
-			<Description>TXT_KEY_BUILDING_ISS_TOURISM</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ISS_TOURISM_PEDIA</Civilopedia>
+			<Type>BUILDING_SPACE_STATION_TOURS</Type>
+			<Description>TXT_KEY_BUILDING_SPACE_STATION_TOURS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SPACE_STATION_TOURS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ISS_TOURISM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_SPACE_STATION_TOURS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1334,17 +1334,17 @@
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_LAUNCH_SITE</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_JAMESWEBB_TELESCOPE</Type>
+			<Type>BUILDING_JAMES_WEBB_SPACE_TELESCOPE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_JAMESWEBB_TELESCOPE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_JAMESWEBB_TELESCOPE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_JAMES_WEBB_SPACE_TELESCOPE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_JAMES_WEBB_SPACE_TELESCOPE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_JAMESWEBB_TELESCOPE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_JAMES_WEBB_SPACE_TELESCOPE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_JAMESWEBB_TELESCOPE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -1359,7 +1359,7 @@
 			<FreeBuilding>BUILDING_OBSERVATORY</FreeBuilding>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_JPL</BuildingType>
+					<BuildingType>BUILDING_JET_PROPULSION_LABORATORY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -1367,7 +1367,7 @@
 				<BuildingType>BUILDING_OBSERVATORY</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_POLLUTION_BLACKENEDSKIES</BuildingType>
+				<BuildingType>BUILDING_POLLUTION_BLACKENED_SKIES</BuildingType>
 			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
@@ -1378,13 +1378,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_KEPLER</Type>
+			<Type>BUILDING_KEPLER_SPACE_TELESCOPE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_KEPLER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_KEPLER_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_KEPLER_SPACE_TELESCOPE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KEPLER_SPACE_TELESCOPE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_KEPLER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_KEPLER_SPACE_TELESCOPE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_KEPLER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -1398,7 +1398,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_JPL</BuildingType>
+					<BuildingType>BUILDING_JET_PROPULSION_LABORATORY</BuildingType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>5</iCommerce>
@@ -1407,7 +1407,7 @@
 			</GlobalBuildingExtraCommerces>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_JPL</BuildingType>
+					<BuildingType>BUILDING_JET_PROPULSION_LABORATORY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -1420,13 +1420,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_LUNARIS</Type>
+			<Type>BUILDING_HUMAN_MOD_LUNARIS</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_LUNARIS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LUNARIS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_LUNARIS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_LUNARIS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_LUNARIS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_LUNARIS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1483,11 +1483,11 @@
 			</CommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_LUNA_RING_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_LUNA_RING_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LUNA_RING_EFFECT_PEDIA</Civilopedia>
+			<Type>BUILDING_EFFECT_LUNA_RING</Type>
+			<Description>TXT_KEY_BUILDING_EFFECT_LUNA_RING</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EFFECT_LUNA_RING_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_LUNA_RING_EFFECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EFFECT_LUNA_RING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1495,7 +1495,7 @@
 			<PrereqTech>TECH_LUNAR_MEGASTRUCTURES</PrereqTech>
 			<iCost>7505</iCost>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_CISLUNAR_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_CISLUNAR_ECONOMY</BuildingType>
 			</PrereqInCityBuildings>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -1524,7 +1524,7 @@
 			</CommerceChanges>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_JPL</BuildingType>
+					<BuildingType>BUILDING_JET_PROPULSION_LABORATORY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -1553,13 +1553,13 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MARS_SCIENCE_LAB</Type>
+			<Type>BUILDING_MARS_SCIENCE_LABORATORY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_MARS_SCIENCE_LAB</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MARS_SCIENCE_LAB_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_MARS_SCIENCE_LABORATORY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MARS_SCIENCE_LABORATORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MARS_SCIENCE_LAB</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MARS_SCIENCE_LABORATORY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MARS_SCIENCE_LAB</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -1574,7 +1574,7 @@
 			</CommerceChanges>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_JPL</BuildingType>
+					<BuildingType>BUILDING_JET_PROPULSION_LABORATORY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -1587,13 +1587,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MARTIAN</Type>
+			<Type>BUILDING_HUMAN_MOD_MARTIAN</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_MARTIAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_MARTIAN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_MARTIAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_MARTIAN</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1610,13 +1610,13 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_METAPHYSICAL</Type>
+			<Type>BUILDING_HUMAN_MOD_METAPHYSICAL</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_METAPHYSICAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_METAPHYSICAL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_METAPHYSICAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_METAPHYSICAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_METAPHYSICAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_METAPHYSICAL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1635,7 +1635,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_HUMAN_MOD_NONSPATIAL</ID>
+						<ID>BONUS_HUMAN_MOD_NON_SPATIAL</ID>
 					</Has>
 				</And>
 			</ConstructCondition>
@@ -1647,11 +1647,11 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MICROSATELLITE_CONSTELLATION</Type>
-			<Description>TXT_KEY_BUILDING_MICROSATELLITE_CONSTELLATION</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MICROSATELLITE_CONSTELLATION_PEDIA</Civilopedia>
+			<Type>BUILDING_CISLUNAR_MICROSATELLITE_CONSTELLATION</Type>
+			<Description>TXT_KEY_BUILDING_CISLUNAR_MICROSATELLITE_CONSTELLATION</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_MICROSATELLITE_CONSTELLATION_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MICROSATELLITE_CONSTELLATION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_MICROSATELLITE_CONSTELLATION</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1663,11 +1663,11 @@
 				<Bonus>BONUS_NANOTUBES</Bonus>
 			</PrereqBonuses>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
+				<BuildingType>BUILDING_CISLUNAR_FACTORY</BuildingType>
 				<BuildingType>BUILDING_EPSILON_ASSEMBLER</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_COMMERCIAL_SATELLITES</BuildingType>
+				<BuildingType>BUILDING_COMMUNICATIONS_SATELLITE</BuildingType>
 				<BuildingType>BUILDING_PROPAGANDA_SATELLITES</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>3245</iCost>
@@ -1702,19 +1702,19 @@
 			</CommerceChanges>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_JPL</BuildingType>
+					<BuildingType>BUILDING_JET_PROPULSION_LABORATORY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MISSION_MARS</Type>
+			<Type>BUILDING_MISSION_TO_MARS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_MISSION_MARS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MISSION_MARS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_MISSION_TO_MARS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MISSION_TO_MARS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MISSION_MARS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MISSION_TO_MARS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MISSION_MARS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -1815,20 +1815,20 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NANOMORPHISM</Type>
+			<Type>BUILDING_HUMAN_MOD_NANOMORPHISM</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_NANOMORPHISM</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NANOMORPHISM_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_NANOMORPHISM</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_NANOMORPHISM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NANOMORPHISM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_NANOMORPHISM</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NANOMORPHIC_TROIDS</PrereqTech>
 			<iCost>19610</iCost>
-			<FreeBuilding>BUILDING_IMMATERIAL_CITY</FreeBuilding>
+			<FreeBuilding>BUILDING_CLAYTRONIC_CITY</FreeBuilding>
 			<ConstructCondition>
 				<And>
 					<Has>
@@ -1853,11 +1853,11 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NANOSATELLITE_CONSTELLATION</Type>
-			<Description>TXT_KEY_BUILDING_NANOSATELLITE_CONSTELLATION</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NANOSATELLITE_CONSTELLATION_PEDIA</Civilopedia>
+			<Type>BUILDING_CISLUNAR_NANOSATELLITE_CONSTELLATION</Type>
+			<Description>TXT_KEY_BUILDING_CISLUNAR_NANOSATELLITE_CONSTELLATION</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_NANOSATELLITE_CONSTELLATION_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NANOSATELLITE_CONSTELLATION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_NANOSATELLITE_CONSTELLATION</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1869,7 +1869,7 @@
 				<Bonus>BONUS_ORGANIC_PHOTONIC_CELLS</Bonus>
 			</PrereqBonuses>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MICROSATELLITE_CONSTELLATION</BuildingType>
+				<BuildingType>BUILDING_CISLUNAR_MICROSATELLITE_CONSTELLATION</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>5655</iCost>
 			<CommerceChanges>
@@ -1906,7 +1906,7 @@
 			</YieldChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_IMMATERIAL_CITY</BuildingType>
+					<BuildingType>BUILDING_CLAYTRONIC_CITY</BuildingType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>3</iCommerce>
@@ -1917,7 +1917,7 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_GREAT_PYRAMID</BuildingType>
+					<BuildingType>BUILDING_THE_GREAT_PYRAMID</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -1930,13 +1930,13 @@
 			<Bonus>BONUS_STARPUNK</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NEPTUNE_ATMOSPHERE_PROBE</Type>
+			<Type>BUILDING_NEPTUNE_ATMOSPHERIC_PROBE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_NEPTUNE_ATMOSPHERE_PROBE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NEPTUNE_ATMOSPHERE_PROBE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_NEPTUNE_ATMOSPHERIC_PROBE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NEPTUNE_ATMOSPHERIC_PROBE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NEPTUNE_ATMOSPHERE_PROBE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_NEPTUNE_ATMOSPHERIC_PROBE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NEPTUNE_ATMOSPHERE_PROBE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -1956,11 +1956,11 @@
 			</FreeSpecialistCounts>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NEUROIMPLANT_EXPORTER_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_NEUROIMPLANT_EXPORTER_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NEUROIMPLANT_EXPORTER_EFFECT_PEDIA</Civilopedia>
+			<Type>BUILDING_EFFECT_NEUROIMPLANT_EXPORTER</Type>
+			<Description>TXT_KEY_BUILDING_EFFECT_NEUROIMPLANT_EXPORTER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EFFECT_NEUROIMPLANT_EXPORTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NEUROIMPLANT_EXPORTER_EFFECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EFFECT_NEUROIMPLANT_EXPORTER</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1997,19 +1997,19 @@
 			</GlobalBuildingExtraCommerces>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_JPL</BuildingType>
+					<BuildingType>BUILDING_JET_PROPULSION_LABORATORY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NONSPATIAL</Type>
+			<Type>BUILDING_HUMAN_MOD_NON_SPATIAL</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_NONSPATIAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NONSPATIAL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_NON_SPATIAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_NON_SPATIAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NONSPATIAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_NON_SPATIAL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -2019,19 +2019,19 @@
 			<Bonus>BONUS_HUMAN_MOD_HIGH_DIMENSIONAL</Bonus>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_HUMAN_MOD_NONSPATIAL</FreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_NON_SPATIAL</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NOVEL_SENSES</Type>
+			<Type>BUILDING_HUMAN_MOD_NOVEL_SENSES</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_NOVEL_SENSES</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NOVEL_SENSES_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_NOVEL_SENSES</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_NOVEL_SENSES_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NOVEL_SENSES</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_NOVEL_SENSES</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -2050,11 +2050,11 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ORBITAL_DRYDOCK</Type>
-			<Description>TXT_KEY_BUILDING_ORBITAL_DRYDOCK</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ORBITAL_DRYDOCK_PEDIA</Civilopedia>
+			<Type>BUILDING_CISLUNAR_DRYDOCK</Type>
+			<Description>TXT_KEY_BUILDING_CISLUNAR_DRYDOCK</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_DRYDOCK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ORBITAL_DRYDOCK</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_DRYDOCK</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_DRYDOCK</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -2127,11 +2127,11 @@
 			<iConquestProb>75</iConquestProb>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ORBITAL_FACTORY</Type>
-			<Description>TXT_KEY_BUILDING_ORBITAL_FACTORY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ORBITAL_FACTORY_PEDIA</Civilopedia>
+			<Type>BUILDING_CISLUNAR_FACTORY</Type>
+			<Description>TXT_KEY_BUILDING_CISLUNAR_FACTORY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_FACTORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ORBITAL_FACTORY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_FACTORY</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_ORBITAL_FACTORY</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -2144,7 +2144,7 @@
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_LAUNCH_SITE</BuildingType>
 				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>3245</iCost>
@@ -2169,11 +2169,11 @@
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ORBITAL_LABS</Type>
-			<Description>TXT_KEY_BUILDING_ORBITAL_LABS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ORBITAL_LABS_PEDIA</Civilopedia>
+			<Type>BUILDING_CISLUNAR_LABS</Type>
+			<Description>TXT_KEY_BUILDING_CISLUNAR_LABS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_LABS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ORBITAL_LABS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_LABS</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_SPACEWAY</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -2182,7 +2182,7 @@
 			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_LAUNCH_SITE</BuildingType>
 				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_SPACEPORT</BuildingType>
 			</PrereqOrBuildings>
@@ -2274,7 +2274,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_LAUNCH_SITE</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2313,17 +2313,17 @@
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_LAUNCH_SITE</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PURE_ENERGY</Type>
+			<Type>BUILDING_HUMAN_MOD_PURE_ENERGY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_PURE_ENERGY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_PURE_ENERGY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_PURE_ENERGY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_PURE_ENERGY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PURE_ENERGY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_PURE_ENERGY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -2339,13 +2339,13 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_RADIATION_TOLERANCE</Type>
+			<Type>BUILDING_HUMAN_MOD_RADIATION_TOLERANCE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_RADIATION_TOLERANCE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_RADIATION_TOLERANCE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_RADIATION_TOLERANCE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_RADIATION_TOLERANCE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_RADIATION_TOLERANCE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_RADIATION_TOLERANCE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -2361,13 +2361,13 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ROBOTIC_BODY</Type>
+			<Type>BUILDING_HUMAN_MOD_ROBOTIC_BODY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_ROBOTIC_BODY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ROBOTIC_BODY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_ROBOTIC_BODY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_ROBOTIC_BODY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ROBOTIC_BODY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_ROBOTIC_BODY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -2447,7 +2447,7 @@
 			</GlobalBuildingProductionModifiers>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_JPL</BuildingType>
+					<BuildingType>BUILDING_JET_PROPULSION_LABORATORY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -2528,22 +2528,22 @@
 			</CommerceChanges>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_JPL</BuildingType>
+					<BuildingType>BUILDING_JET_PROPULSION_LABORATORY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SOLAR_DYSON_SPHERE_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_SOLAR_DYSON_SPHERE_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SOLAR_DYSON_SPHERE_EFFECT_PEDIA</Civilopedia>
+			<Type>BUILDING_EFFECT_SOLAR_DYSON_SPHERE</Type>
+			<Description>TXT_KEY_BUILDING_EFFECT_SOLAR_DYSON_SPHERE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EFFECT_SOLAR_DYSON_SPHERE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SOLAR_DYSON_SPHERE_EFFECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EFFECT_SOLAR_DYSON_SPHERE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ASTROENGINEERING</PrereqTech>
 			<iCost>11755</iCost>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_SOLAR_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_SOLAR_ECONOMY</BuildingType>
 			</PrereqInCityBuildings>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -2568,9 +2568,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PLANETARY_MEGASTRUCTURES</PrereqTech>
 			<iCost>15610</iCost>
-			<FreeBuilding>BUILDING_SOLAR_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_EFFECT_SOLAR_ECONOMY</FreeBuilding>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_CISLUNAR_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_CISLUNAR_ECONOMY</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -2585,11 +2585,11 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SOLAR_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_SOLAR_EFFECT</Description>
+			<Type>BUILDING_EFFECT_SOLAR_ECONOMY</Type>
+			<Description>TXT_KEY_BUILDING_EFFECT_SOLAR_ECONOMY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SOLAR_ECONOMY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SOLAR_EFFECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EFFECT_SOLAR_ECONOMY</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2651,13 +2651,13 @@
 			</PropertiesAllCities>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SPACESCRAPER</Type>
+			<Type>BUILDING_GRAND_SPACESCRAPER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_SPACESCRAPER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SPACESCRAPER_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_GRAND_SPACESCRAPER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GRAND_SPACESCRAPER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SPACESCRAPER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GRAND_SPACESCRAPER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SPACESCRAPER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -2672,7 +2672,7 @@
 			<YieldChanges>
 				<iYield>20</iYield>
 			</YieldChanges>
-			<FreeBuilding>BUILDING_SPACESCRAPER2</FreeBuilding>
+			<FreeBuilding>BUILDING_SPACESCRAPER</FreeBuilding>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_ECUMENOPOLIS_EARTH</BuildingType>
@@ -2680,7 +2680,7 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_SPACESCRAPER2</BuildingType>
+				<BuildingType>BUILDING_SPACESCRAPER</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
@@ -2707,14 +2707,14 @@
 			<iGlobalHappiness>1</iGlobalHappiness>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_COMMERCIAL_SATELLITES</BuildingType>
+					<BuildingType>BUILDING_COMMUNICATIONS_SATELLITE</BuildingType>
 					<CommerceChanges>
 						<iCommerce>3</iCommerce>
 					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_LAUNCH_SITE</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2738,19 +2738,19 @@
 			</CommerceChanges>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_JPL</BuildingType>
+					<BuildingType>BUILDING_JET_PROPULSION_LABORATORY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TRANSAPIENT</Type>
+			<Type>BUILDING_HUMAN_MOD_TRANSAPIENT</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_TRANSAPIENT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TRANSAPIENT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_TRANSAPIENT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_TRANSAPIENT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TRANSAPIENT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_TRANSAPIENT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -2810,9 +2810,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COSMIC_ENGINEERING</PrereqTech>
 			<iCost>39510</iCost>
-			<FreeBuilding>BUILDING_UNIVERSAL_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_EFFECT_UNIVERSAL_ECONOMY</FreeBuilding>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_GALACTIC_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_GALACTIC_ECONOMY</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -2820,18 +2820,18 @@
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
 				</PrereqBuilding>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
+					<BuildingType>BUILDING_QUANTUM_VACUUM_POWER_PLANT</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_UNIVERSAL_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_UNIVERSAL_EFFECT</Description>
+			<Type>BUILDING_EFFECT_UNIVERSAL_ECONOMY</Type>
+			<Description>TXT_KEY_BUILDING_EFFECT_UNIVERSAL_ECONOMY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_UNIVERSAL_ECONOMY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSAL_EFFECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EFFECT_UNIVERSAL_ECONOMY</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2839,13 +2839,13 @@
 			<PrereqTech>TECH_COSMIC_ENGINEERING</PrereqTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_URANUS_ATMOSPHERE_PROBE</Type>
+			<Type>BUILDING_URANUS_ATMOSPHERIC_PROBE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_URANUS_ATMOSPHERE_PROBE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_URANUS_ATMOSPHERE_PROBE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_URANUS_ATMOSPHERIC_PROBE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_URANUS_ATMOSPHERIC_PROBE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_URANUS_ATMOSPHERE_PROBE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_URANUS_ATMOSPHERIC_PROBE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_URANUS_ATMOSPHERE_PROBE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -2895,7 +2895,7 @@
 			</GlobalBuildingExtraCommerces>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_JPL</BuildingType>
+					<BuildingType>BUILDING_JET_PROPULSION_LABORATORY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -2908,13 +2908,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_WINGS</Type>
+			<Type>BUILDING_HUMAN_MOD_WINGS</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_WINGS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WINGS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_WINGS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_WINGS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_WINGS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_WINGS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -2930,13 +2930,13 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_WMAP</Type>
+			<Type>BUILDING_WILKINSON_MICROWAVE_ANISOTROPY_PROBE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_WMAP</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WMAP_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_WILKINSON_MICROWAVE_ANISOTROPY_PROBE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_WILKINSON_MICROWAVE_ANISOTROPY_PROBE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_WMAP</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_WILKINSON_MICROWAVE_ANISOTROPY_PROBE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_WMAP</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -2959,7 +2959,7 @@
 			</GlobalBuildingExtraCommerces>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_JPL</BuildingType>
+					<BuildingType>BUILDING_JET_PROPULSION_LABORATORY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -2991,11 +2991,11 @@
 			</FreeSpecialistCounts>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ZEROG_MEDICAL_LAB</Type>
-			<Description>TXT_KEY_BUILDING_ZEROG_MEDICAL_LAB</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ZEROG_MEDICAL_LAB_PEDIA</Civilopedia>
+			<Type>BUILDING_CISLUNAR_MEDICAL_LAB</Type>
+			<Description>TXT_KEY_BUILDING_CISLUNAR_MEDICAL_LAB</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_MEDICAL_LAB_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ZEROG_MEDICAL_LAB</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_MEDICAL_LAB</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_SPACEWAY</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -3008,7 +3008,7 @@
 				<Bonus>BONUS_ALUMINUM_WARES</Bonus>
 			</PrereqBonuses>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_LAUNCH_SITE</BuildingType>
 				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_SPACEPORT</BuildingType>
 			</PrereqOrBuildings>
@@ -3022,13 +3022,13 @@
 			<iAsset>6</iAsset>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ZERO_G_ADAPTATION</Type>
+			<Type>BUILDING_HUMAN_MOD_ZERO_G_ADAPTATION</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_ZERO_G_ADAPTATION</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ZERO_G_ADAPTATION_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_ZERO_G_ADAPTATION</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_ZERO_G_ADAPTATION_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ZERO_G_ADAPTATION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_ZERO_G_ADAPTATION</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -3037,7 +3037,7 @@
 			<iCost>12310</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
+					<BuildingType>BUILDING_CISLUNAR_FACTORY</BuildingType>
 					<CommerceChanges>
 						<iCommerce>5</iCommerce>
 					</CommerceChanges>
@@ -3052,11 +3052,11 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ZERO_G_SPORTS_ARENA</Type>
-			<Description>TXT_KEY_BUILDING_ZERO_G_SPORTS_ARENA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ZERO_G_SPORTS_ARENA_PEDIA</Civilopedia>
+			<Type>BUILDING_CISLUNAR_SPORTS_ARENA</Type>
+			<Description>TXT_KEY_BUILDING_CISLUNAR_SPORTS_ARENA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_SPORTS_ARENA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ZERO_G_SPORTS_ARENA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_SPORTS_ARENA</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_ARENA</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>

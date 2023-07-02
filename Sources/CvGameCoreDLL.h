@@ -153,14 +153,17 @@ namespace python = boost::python;
 //
 // Basic types
 //
-typedef unsigned int        uint;
-
-typedef long long           int64_t;
+typedef char               int8_t;
+typedef short              int16_t;
+typedef int                int32_t;
+typedef long long          int64_t;
 
 typedef unsigned char       uint8_t;
 typedef unsigned short      uint16_t;
 typedef unsigned int        uint32_t;
 typedef unsigned long long  uint64_t;
+
+typedef unsigned int        uint;
 
 //
 // Type traits
@@ -268,6 +271,9 @@ int64_t intPow64(const int64_t x, const int p);
 int getModifiedIntValue(const int iValue, const int iMod);
 int64_t getModifiedIntValue64(const int64_t iValue, const int iMod);
 // ! Toffer
+
+int applySMRank(int value, int rankChange, int rankMultiplier);
+int64_t applySMRank64(int64_t value, int rankChange, int rankMultiplier, bool bScaleUp = true);
 
 const std::string getModDir();
 

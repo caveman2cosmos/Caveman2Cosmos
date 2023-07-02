@@ -18,11 +18,11 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_BARBED_WIRE</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BASKETWEAVER</Type>
+			<Type>BUILDING_BASKETMAKER</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_GUILDS</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BASKETY_WORKSHOP</Type>
+			<Type>BUILDING_BASKET_MAKERS_WORKSHOP</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_ASSEMBLY_LINE</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -42,7 +42,7 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_HOLOGRAPHICS</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CRAFT_HUT</Type>
+			<Type>BUILDING_CRAFTS_HUT</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_CONSUMERISM</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -74,51 +74,51 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_ELECTRICITY</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GATHERER_AMBER</Type>
+			<Type>BUILDING_AMBER_GATHERER</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_ADVANCED_METALLURGY</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GATHERER_BARLEY</Type>
+			<Type>BUILDING_BARLEY_GATHERER</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_TRIBALISM</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GATHERER_CORN</Type>
+			<Type>BUILDING_CORN_GATHERER</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_TRIBALISM</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GATHERER_DRIFTWOOD</Type>
+			<Type>BUILDING_DRIFTWOOD_GATHERER</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_TRIBALISM</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GATHERER_GRASS</Type>
+			<Type>BUILDING_GRASS_GATHERER</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_TRIBALISM</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GATHERER_HENNA</Type>
+			<Type>BUILDING_HENNA_GATHERER</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_TRIBALISM</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GATHERER_INDIGO</Type>
+			<Type>BUILDING_INDIGO_GATHERER</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_FLORISTRY</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GATHERER_JADE</Type>
+			<Type>BUILDING_JADE_GATHERER</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_TRIBALISM</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GATHERER_RICE</Type>
+			<Type>BUILDING_RICE_GATHERER</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_TRIBALISM</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GATHERER_STRAW</Type>
+			<Type>BUILDING_STRAW_GATHERER</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_TRIBALISM</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GATHERER_WHEAT</Type>
+			<Type>BUILDING_WHEAT_GATHERER</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_TRIBALISM</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GOVENORS_MENAGERIE</Type>
+			<Type>BUILDING_GOVERNORS_MENAGERIE</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_ZOOLOGY</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -138,11 +138,11 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_ENGINEERING</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HAND_PUMP</Type>
+			<Type>BUILDING_HAND_WATER_PUMP</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_REPLACEABLE_PARTS</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HEALERHUT</Type>
+			<Type>BUILDING_HEALERS_HUT</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_ANATOMY</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -154,7 +154,7 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_CONSUMERISM</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MONGOL_GER</Type>
+			<Type>BUILDING_GER</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_STIRRUP</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -174,7 +174,7 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_ADVANCED_METALLURGY</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PLAYINGFIELDS</Type>
+			<Type>BUILDING_PLAYING_FIELDS</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_ATHLETICS</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -182,7 +182,7 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_PHOTOGRAPHY</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_POTTER</Type>
+			<Type>BUILDING_POTTERS_HUT</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_GUILDS</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -194,7 +194,7 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_PAVED_ROADS</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ROPE_WEAVER</Type>
+			<Type>BUILDING_ROPER</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_ASSEMBLY_LINE</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -202,7 +202,7 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_ASSEMBLY_LINE</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SEAMSTRESS_HUT</Type>
+			<Type>BUILDING_SEAMSTRESS</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_REPLACEABLE_PARTS</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -230,7 +230,7 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_OIL_LAMPS</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TOWNWATCH</Type>
+			<Type>BUILDING_TOWN_WATCH</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_MONARCHY</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -238,7 +238,7 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_INVENTION</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TOYCARVER</Type>
+			<Type>BUILDING_TOY_CARVER</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_GUILDS</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -246,7 +246,7 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_ROAD_BUILDING</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TTWATCH_TOWER</Type>
+			<Type>BUILDING_WATCH_TOWER</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_SIEGE_WARFARE</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -258,7 +258,7 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_SIEGE_WARFARE</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_WIND_PUMP</Type>
+			<Type>BUILDING_WIND_WATER_PUMP</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_SCREW_PROPELLER</ID></Has></NewCityFree>
 		</BuildingInfo>
 	</BuildingInfos>

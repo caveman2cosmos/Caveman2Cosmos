@@ -1,5 +1,5 @@
 BeginMeta
-	Version=C2C_1
+	Version=C2C_2
 	Description=Moon
 	ModPath=Mods\Caveman2Cosmos
 EndMeta
@@ -719,7 +719,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=2, y=44
-	BonusType=BONUS_HELIUM3
+	BonusType=BONUS_HELIUM_3
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
 EndPlot
@@ -755,7 +755,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=3, y=3
-	BonusType=BONUS_HELIUM3
+	BonusType=BONUS_HELIUM_3
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
 EndPlot
@@ -1803,7 +1803,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=7, y=20
-	BonusType=BONUS_HELIUM3
+	BonusType=BONUS_HELIUM_3
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -2170,7 +2170,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=8, y=45
-	BonusType=BONUS_HELIUM3
+	BonusType=BONUS_HELIUM_3
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
 EndPlot
@@ -2441,7 +2441,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=10, y=3
-	BonusType=BONUS_HELIUM3
+	BonusType=BONUS_HELIUM_3
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
 EndPlot
@@ -3853,7 +3853,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=15, y=43
-	BonusType=BONUS_HELIUM3
+	BonusType=BONUS_HELIUM_3
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
 EndPlot
@@ -3904,7 +3904,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=16, y=5
-	BonusType=BONUS_HELIUM3
+	BonusType=BONUS_HELIUM_3
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
 EndPlot
@@ -4828,7 +4828,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=19, y=45
-	BonusType=BONUS_HELIUM3
+	BonusType=BONUS_HELIUM_3
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
 EndPlot
@@ -5101,7 +5101,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=21, y=3
-	BonusType=BONUS_HELIUM3
+	BonusType=BONUS_HELIUM_3
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
 EndPlot
@@ -5545,7 +5545,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=22, y=43
-	BonusType=BONUS_HELIUM3
+	BonusType=BONUS_HELIUM_3
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
 EndPlot
@@ -6306,7 +6306,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26, y=2
-	BonusType=BONUS_HELIUM3
+	BonusType=BONUS_HELIUM_3
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
 EndPlot
@@ -7003,7 +7003,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=28, y=45
-	BonusType=BONUS_HELIUM3
+	BonusType=BONUS_HELIUM_3
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
 EndPlot
@@ -7039,7 +7039,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=29, y=4
-	BonusType=BONUS_HELIUM3
+	BonusType=BONUS_HELIUM_3
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
 EndPlot
@@ -7155,7 +7155,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=29, y=27
-	BonusType=BONUS_HELIUM3
+	BonusType=BONUS_HELIUM_3
 	TerrainType=TERRAIN_LUNAR_MARE
 	PlotType=2
 EndPlot
@@ -8244,7 +8244,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=34, y=4
-	BonusType=BONUS_HELIUM3
+	BonusType=BONUS_HELIUM_3
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
 EndPlot
@@ -8917,7 +8917,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=36, y=42
-	BonusType=BONUS_HELIUM3
+	BonusType=BONUS_HELIUM_3
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
 EndPlot
@@ -8958,7 +8958,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=37, y=2
-	BonusType=BONUS_HELIUM3
+	BonusType=BONUS_HELIUM_3
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
 EndPlot
@@ -9260,7 +9260,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38, y=14
-	BonusType=BONUS_HELIUM3
+	BonusType=BONUS_HELIUM_3
 	TerrainType=TERRAIN_LUNAR_MARE
 	PlotType=2
 EndPlot
@@ -10182,7 +10182,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=42, y=5
-	BonusType=BONUS_HELIUM3
+	BonusType=BONUS_HELIUM_3
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
 EndPlot
@@ -10618,7 +10618,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=43, y=43
-	BonusType=BONUS_HELIUM3
+	BonusType=BONUS_HELIUM_3
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
 EndPlot
@@ -11141,7 +11141,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=46, y=3
-	BonusType=BONUS_HELIUM3
+	BonusType=BONUS_HELIUM_3
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
 EndPlot
@@ -11484,7 +11484,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=47, y=23
-	BonusType=BONUS_HELIUM3
+	BonusType=BONUS_HELIUM_3
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -11868,7 +11868,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=49, y=3
-	BonusType=BONUS_HELIUM3
+	BonusType=BONUS_HELIUM_3
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
 EndPlot
@@ -12797,7 +12797,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=52, y=44
-	BonusType=BONUS_HELIUM3
+	BonusType=BONUS_HELIUM_3
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
 EndPlot
@@ -13795,7 +13795,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57, y=2
-	BonusType=BONUS_HELIUM3
+	BonusType=BONUS_HELIUM_3
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
 EndPlot
@@ -15215,7 +15215,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=62, y=45
-	BonusType=BONUS_HELIUM3
+	BonusType=BONUS_HELIUM_3
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
 EndPlot
@@ -16145,7 +16145,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=66, y=37
-	BonusType=BONUS_HELIUM3
+	BonusType=BONUS_HELIUM_3
 	TerrainType=TERRAIN_LUNAR_REGOLITH
 	PlotType=2
 EndPlot
@@ -16653,7 +16653,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=68, y=42
-	BonusType=BONUS_HELIUM3
+	BonusType=BONUS_HELIUM_3
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
 EndPlot
@@ -16704,7 +16704,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=69, y=4
-	BonusType=BONUS_HELIUM3
+	BonusType=BONUS_HELIUM_3
 	TerrainType=TERRAIN_LUNAR_RILLE
 	PlotType=2
 EndPlot

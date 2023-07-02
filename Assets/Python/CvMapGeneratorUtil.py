@@ -1,7 +1,6 @@
 ## Sid Meier's Civilization 4
 ## Copyright Firaxis Games 2005
 from CvPythonExtensions import *
-import CvUtil
 
 """
 NOTES ABOUT THE MAP UTILITIES
@@ -1560,7 +1559,7 @@ def placeC2CBonuses():
 	GAME = GC.getGame()
 	mapRand = GAME.getMapRand()
 
-	bGoodyHuts = not GAME.isOption(GameOptionTypes.GAMEOPTION_NO_GOODY_HUTS)
+	bGoodyHuts = not GAME.isOption(GameOptionTypes.GAMEOPTION_MAP_NO_GOODY_HUTS)
 
 	c2CMapReport("Before adjustment")
 

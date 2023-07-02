@@ -1,5 +1,8 @@
 // gameAI.cpp
 
+
+#include "FProfiler.h"
+
 #include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvGlobals.h"
@@ -47,6 +50,7 @@ void CvGameAI::AI_reset()
 
 void CvGameAI::AI_makeAssignWorkDirty()
 {
+	PROFILE_EXTRA_FUNC();
 	int iI;
 
 	for (iI = 0; iI < MAX_PLAYERS; iI++)
@@ -99,15 +103,9 @@ int CvGameAI::AI_combatValue(const UnitTypes eUnit) const
 		//iValue += (((100 * GC.getUnitInfo(eUnit).getDamageModifier())/100)/5);
 		//TB Combat Mods End
 
-		iValue *= ((((GC.getUnitInfo(eUnit).getFirstStrikes() * 2) + GC.getUnitInfo(eUnit).getChanceFirstStrikes()) * (GC.getCOMBAT_DAMAGE() / 5)) + 100);
+		iValue *= ((GC.getUnitInfo(eUnit).getFirstStrikes() * 2 + GC.getUnitInfo(eUnit).getChanceFirstStrikes()) * (GC.getCOMBAT_DAMAGE() / 5)) + 100;
 		iValue /= 100;
 	}
-	//  disabled this, need to test this function properly, just get a better handle on Size matters sizing
-	//  strongly suspect that the call evaluated size matters able units to be at default strength -1, and not at default strength
-	//if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
-	//{
-	//	iValue = CvUnit::applySMRank(iValue, GC.getUnitInfo(eUnit).getSMRankTotal() - 15, GC.getSIZE_MATTERS_MOST_MULTIPLIER());
-	//}
 
 	iValue /= getBestLandUnitCombat();
 

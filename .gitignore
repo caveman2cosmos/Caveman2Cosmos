@@ -70,3 +70,7 @@ UserSettings/
 /.idea
 /cmake-build-debug
 /CMakeLists.txt
+DevExtras/.vs/
+DevExtras/__pycache__/
+DevExtras/PyScripts/Profiling/Backup/
+DevExtras/PyScripts/Profiling/__pycache__/

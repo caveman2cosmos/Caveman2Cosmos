@@ -14,14 +14,14 @@
 		<Russian>Ñîçäàåò æèâîòíûõ ïðè ïîìîùè ãåíåòè÷åñêèõ ìàíèïóëÿöèé.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BIOPUNK_EMBASSY</Tag>
+		<Tag>TXT_KEY_BUILDING_CULTURE_BIOPUNK</Tag>
 		<English>Culture (Biopunk)</English>
 		<Italian>Cultura (Biopunk)</Italian>
 		<Polish>Kultura (Biopunk)</Polish>
 		<Russian>Áèîïàíê</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BIOPUNK_EMBASSY_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_CULTURE_BIOPUNK_PEDIA</Tag>
 		<English>[COLOR_BUILDING_TEXT]Biopunk[COLOR_REVERT] is a subgenre of speculative fiction, emerged during the 1990s and focusing on the near-future unintended consequences of the biotechnology revolution, following the discovery of recombinant DNA. Biopunk fiction typically describes the struggles of individuals or groups, often the product of ruthless human experimentation, against a backdrop of totalitarian governments or megacorporations which misuse biotechnologies as means of social control or profiteering.</English>
 		<Italian>Il [COLOR_BUILDING_TEXT]Biopunk[COLOR_REVERT] è un sottogenere della narrativa fantascientifica, emerso negli anni novanta del XX secolo e che si concentra sulle conseguenze indesiderate della imminente rivoluzione biotecnologica, dovuta alla scoperta del DNA ricombinante. La narrativa biopunk solitamente descrive le lotte di singoli individui o piccoli gruppi, spesso prodotti di sperimentazioni senza scrupoli sugli esseri umani, che combattono contro governi totalitari o megacorporazioni che usano impropriamente le biotecnologie come mezzi di controllo sociale o per ottenere profitti.</Italian>
 		<Russian>Áèîïàíê - ýòî ïðîãðåññèâíîå âûñîêîòåõíîëîãè÷íîå äâèæåíèå, â çàùèòó îòêðûòîãî äîñòóïà ê ãåíåòè÷åñêîé èíôîðìàöèè. Ñòîðîííèêè áèîïàíêà èëè áèîõàêåðû ýêñïåðèìåíòèðóþò ñ ÄÍÊ è äðóãèìè àñïåêòàìè ãåíåòèêè.</Russian>

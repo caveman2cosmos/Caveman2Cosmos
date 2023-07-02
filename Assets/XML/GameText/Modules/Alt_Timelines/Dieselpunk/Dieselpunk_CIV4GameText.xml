@@ -20,14 +20,14 @@
 		<Russian>Àýðîäðîì - çåìåëüíûé èëè âîäíûé ó÷àñòîê ñ âîçäóøíûì ïðîñòðàíñòâîì, ñîîðóæåíèÿìè è îáîðóäîâàíèåì, îáåñïå÷èâàþùèìè âçëåò, ïîñàäêó, ðóëåíèå, ðàçìåùåíèå è îáñëóæèâàíèå ñàìîëåòîâ, âåðòîëåòîâ è ïëàíåðîâ.[PARAGRAPH:2]Ðàçâèâàþùàÿñÿ èíäóñòðèÿ àâèàïåðåâîçîê íóæäàåòñÿ â ìåñòå äëÿ áàçèðîâàíèÿ äèðèæàáëåé è ãèäðîïëàíîâ, ÷òîáû îáåñïå÷èòü êîìôîðòíûå óñëîâèÿ äëÿ ïîñàäêè áîãàòûõ êëèåíòîâ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DIESELPUNK_EMBASSY</Tag>
+		<Tag>TXT_KEY_BUILDING_CULTURE_DIESELPUNK</Tag>
 		<English>Culture (Dieselpunk)</English>
 		<Italian>Cultura (Dieselpunk)</Italian>
 		<Polish>Kultura (Dieselpunk)</Polish>
 		<Russian>Äèçåëüïàíê</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DIESELPUNK_EMBASSY_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_CULTURE_DIESELPUNK_PEDIA</Tag>
 		<English>Dieselpunk is based on the aesthetics of the period between the end of the World War I and the beginning of World War II. This sub-genre is sometimes named Decopunk, referring to the Art Deco art style (including its Streamline Moderne variant). The genre combines the artistic and genre influences of the period (including pulp magazines, serial films, film noir, art deco, and wartime pin-ups) with postmodern technology and sensibilities.</English>
 		<Italian>Dieselpunk è basata sull'estetica nel periodo tra la fine della prima guerra mondiale e l'inizio della seconda. Questo sottogenere viene spesso chiamato Decopunk, in riferimento alla corrente artistica Art Deco (inclusa la sua variante moderna). Il genere combina le influenze artistiche di questo periodo (incluse riviste di tendenza, serie tv, film noir, art deco e pin-up) con la tecnologia e la sensibilità post-moderna.</Italian>
 		<Russian>Äèçåëüïàíê - ðàçâèâàþùèéñÿ æàíð ôàíòàñòèêè, ïðîèçâîäíûé îò êèáåðïàíêà, îïèñûâàþùèé ìèð, áàçèðóþùèéñÿ íà òåõíîëîãèÿõ óðîâíÿ 20-õ - 50-õ ãã. XX âåêà (ïåðèîä ñ Ïåðâîé ìèðîâîé âîéíû ïî Âòîðóþ ìèðîâóþ âîéíó), à òàêæå çàðîæäàþùàÿñÿ ñóáêóëüòóðà, ñî÷åòàþùàÿ â ñåáå ýñòåòèêó òîãî âðåìåíè ñ ïîñòìîäåðíèñòñêèìè òåõíîëîãèÿìè è ÷óâñòâàìè.[PARAGRAPH:2]Òåðìèí ïîÿâèëñÿ â 2001 ãîäó êàê ìàðêåòèíãîâûé õîä, êîòîðûé ïðèäóìàë èãðîâîé äèçàéíåð Ëüþèñ Ïîëëàê, ÷òîáû îïèñàòü åãî íàñòîëüíóþ ðîëåâóþ èãðó «Children of the Sun». Ïîñëå ýòîãî òåðìèí ïðèìåíÿëñÿ, ÷òîáû îïèñàòü îñîáûé ñòèëü èçîáðàçèòåëüíîãî èñêóññòâà, ìóçûêè, êèíî, õóäîæåñòâåííîé ëèòåðàòóðû, è ìîääèíãà òåõíèêè.[PARAGRAPH:1]Ñëîâî "äèçåëüïàíê" ÿâëÿåòñÿ ïðîèçâîäíûì îò íàçâàíèÿ æàíðà êèáåðïàíê, è èñïîëüçóåòñÿ äëÿ ïðåäñòàâëåíèÿ ïåðèîäà âðåìåíè, êîãäà äèçåëüíûé äâèãàòåëü áûë â îñíîâå ïåðåäâèæåíèÿ â çàïàäíîé êóëüòóðå è "ïàíê" - ñóôôèêñ, ñâÿçàííûé ñ æàíðàìè õóäîæåñòâåííûõ ïðîèçâåäåíèé, â êîòîðûõ îáùåñòâî íàõîäèòñÿ â ãëóáîêîì óïàäêå èëè íà ñòàäèè ðàäèêàëüíûõ ïåðåìåí â ñîöèàëüíîì óñòðîéñòâå. Òàêæå òåðìèí ññûëàåòñÿ íà ñòèìïàíê, äðóãóþ ïðîèçâîäíóþ êèáåðïàíêà, â êîòîðîì, êàê ïðàâèëî, îñíîâíîå âíèìàíèå îáðàùàåòñÿ íå íà ïðîáëåìû îáùåñòâà, à íà ýñòåòèêó âèêòîðèàíñêîé ýïîõè.</Russian>
@@ -52,7 +52,7 @@
 		<Russian>Ïåðâîíà÷àëüíî øïèëü Ýìïàéð-ñòåéò-áèëäèíã ïðåäïîëàãàëîñü èñïîëüçîâàòü â êà÷åñòâå ïðè÷àëüíîé ìà÷òû äëÿ äèðèæàáëåé. 102-é ýòàæ áûë ñïðîåêòèðîâàí òàêèì îáðàçîì, ÷òî ïðåêðàñíî ñïðàâèëñÿ áû ñ ðîëüþ ïðè÷àëüíîé ïëàòôîðìû ñî ñõîäíÿìè äëÿ ïîäúåìà íà äèðèæàáëü.[PARAGRAPH:1]Îäíàêî ñåðüåçíûì ïðåïÿòñòâèåì äëÿ âîïëîùåíèÿ ýòîé èäåè ïîñëóæèëè íåáëàãîïðèÿòíûå ïîãîäíûå óñëîâèÿ - äèðèæàáëü íå ìîã ïðè÷àëèòü ê øïèëþ çäàíèÿ èç-çà ñèëüíûõ è íåñòàáèëüíûõ âîçäóøíûõ ïîòîêîâ íà òàêîé âûñîòå. Ýòî ñòàëî ïîíÿòíî ïîñëå ïåðâîé æå ïîïûòêè öåïïåëèíà ïðèøâàðòîâàòüñÿ, è â 1952-ì ãîäó âëàäåëüöû çäàíèÿ îêîí÷àòåëüíî îòêàçàëèñü îò ýòîé èäåè.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FARNSWORTH_LAB</Tag>
+		<Tag>TXT_KEY_BUILDING_FARNSWORTH_ELECTRONICS_LAB</Tag>
 		<English>Farnsworth Electronics Lab</English>
 		<French>
 			<Text>Laboratoire d'Electronique de Farnsworth</Text>
@@ -64,7 +64,7 @@
 		<Russian>Ëàá. ýëåêòðîíèêè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FARNSWORTH_LAB_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_FARNSWORTH_ELECTRONICS_LAB_PEDIA</Tag>
 		<English>Farnsworth called his device an image dissector because it converted individual elements of the image into electricity one at a time. He replaced the spinning disks with cesium, an element that emits electrons when exposed to light.</English>
 		<Italian>Farnsworth chiamò il suo strumento dissettore di immagini, dato che convertiva gli elementi dell'immagine in impulsi elettrici. Sostituì i dischi girevoli con cesio, un elemento che emette elettroni quando esposto alla luce.</Italian>
 		<Polish>Philo Taylor Farnsworth (19 sierpnia 1906 - 11 marca 1971), amerykański wynalazca i pionier telewizji. Twórca wielu wynalazków, które miały kluczowe znaczenie dla wczesnego rozwoju elektronicznej telewizji. Najbardziej znany za wynalezienia pierwszego w pełni funkcjonalnego urządzenia dla elektronicznego obrazu (CRT), dysektora. Opracował również pierwszy w pełni funkcjonalny i kompletny elektroniczny system telewizyjny i jako pierwszy zaprezentował taki system społeczeństwu. Farnsworth opracował system telewizyjny wraz z odbiornikiem i kamerą, który był produkowany w firmie Farnsworth Television and Radio Corporation, od 1938 do 1951.</Polish>

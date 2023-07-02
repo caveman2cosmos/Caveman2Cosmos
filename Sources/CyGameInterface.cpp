@@ -56,7 +56,7 @@ void CyGamePythonInterface()
 		.def("calculateReligionPercent", &CyGame::calculateReligionPercent, "int (int eReligion)")
 		.def("countCorporationLevels", &CyGame::countCorporationLevels, "int (int eCorporation)")
 
-		.def("goldenAgeLength", &CyGame::goldenAgeLength, "int ()")
+		.def("goldenAgeLength100", &CyGame::goldenAgeLength100, "int ()")
 		.def("victoryDelay", &CyGame::victoryDelay, "int (int /*VictoryTypes*/ eVictory)")
 		.def("getImprovementUpgradeTime", &CyGame::getImprovementUpgradeTime, "int (int /*ImprovementTypes*/ eImprovement)")
 		.def("canTrainNukes", &CyGame::canTrainNukes, "bool ()")
@@ -138,7 +138,6 @@ void CyGamePythonInterface()
 		.def("changeDiploVote", &CyGame::changeDiploVote, "void (VoteSourceTypes, int)")
 		.def("isDebugMode", &CyGame::isDebugMode, "bool () - is the game in Debug Mode?")
 		.def("toggleDebugMode", &CyGame::toggleDebugMode)
-		.def("getChtLvl", &CyGame::getChtLvl, "int getChtLvl()")
 
 		.def("getPitbossTurnTime", &CyGame::getPitbossTurnTime, "int ()")
 		.def("setPitbossTurnTime", &CyGame::setPitbossTurnTime, "void (int)")
@@ -260,8 +259,6 @@ void CyGamePythonInterface()
 		.def("log", &CyGame::log)
 		.def("logw", &CyGame::logw, "void log(wstring str)")
 
-		.def("getCultureThreshold", &CyGame::getCultureThreshold, "int getCultureThreshold(CultureLevelTypes eLevel)")
-
 		.def("setPlotExtraYield", &CyGame::setPlotExtraYield, "void (int iX, int iY, int /*YieldTypes*/ eYield, int iExtraYield)")
 
 		.def("isCivEverActive", &CyGame::isCivEverActive, "bool (int /*CivilizationTypes*/ eCivilization)")
@@ -294,6 +291,8 @@ void CyGamePythonInterface()
 		.def("getC2CVersion", &CyGame::getC2CVersion, "const char* ()")
 
 		.def("assignStartingPlots", &CyGame::assignStartingPlots, "void (bool bScenario, bool bMapScript)")
+
+		.def("exitWorldBuilder", &CyGame::exitWorldBuilder, "void ()")
 	;
 
 

@@ -167,9 +167,9 @@ int CyGame::calculateReligionPercent(ReligionTypes eReligion) const
 	return m_pGame.calculateReligionPercent(eReligion);
 }
 
-int CyGame::goldenAgeLength() const
+int CyGame::goldenAgeLength100() const
 {
-	return m_pGame.goldenAgeLength();
+	return m_pGame.goldenAgeLength100();
 }
 
 int CyGame::victoryDelay(VictoryTypes iVictory) const
@@ -530,11 +530,6 @@ bool CyGame::isDebugMode() const
 void CyGame::toggleDebugMode()
 {
 	m_pGame.toggleDebugMode();
-}
-
-int CyGame::getChtLvl() const
-{
-	return gDLL->getChtLvl();
 }
 
 int CyGame::getPitbossTurnTime() const
@@ -1055,11 +1050,6 @@ void CyGame::log(const char* file, char* str)
 #endif
 }
 
-int CyGame::getCultureThreshold(CultureLevelTypes eLevel) const
-{
-	return m_pGame.getCultureThreshold(eLevel);
-}
-
 void CyGame::setPlotExtraYield(int iX, int iY, YieldTypes eYield, int iExtraYield)
 {
 	m_pGame.setPlotExtraYield(iX, iY, eYield, iExtraYield);
@@ -1167,4 +1157,9 @@ const char* CyGame::getC2CVersion() const
 void CyGame::assignStartingPlots(bool bScenario, bool bMapScript)
 {
 	m_pGame.assignStartingPlots(bScenario, bMapScript);
+}
+
+void CyGame::exitWorldBuilder()
+{
+	m_pGame.setWorldBuilder(false);
 }

@@ -65,7 +65,6 @@ public:
 	void reportCityAcquiredAndKept(PlayerTypes eOldOwner, PlayerTypes ePlayer, CvCity* city, bool bConquest, bool bTrade);
 	void reportCityLost(CvCity *pCity);
 	void reportCultureExpansion(CvCity *pCity, PlayerTypes ePlayer);
-	void reportCityGrowth(CvCity *pCity, PlayerTypes ePlayer);
 	void reportCityProduction(CvCity *pCity, PlayerTypes ePlayer);
 	void reportCityBuildingUnit(CvCity *pCity, UnitTypes eUnitType);
 	void reportCityBuildingBuilding(CvCity *pCity, BuildingTypes eBuildingType);
@@ -92,7 +91,6 @@ public:
 // BUG - Upgrade Unit Event - start
 	void reportUnitUpgraded(CvUnit* pOldUnit, CvUnit* pNewUnit, int iPrice);
 // BUG - Upgrade Unit Event - end
-	void reportUnitSelected(CvUnit *pUnit);
 	void reportUnitRename(CvUnit *pUnit);
 	void reportUnitPillage(CvUnit* pUnit, ImprovementTypes eImprovement, RouteTypes eRoute, PlayerTypes ePlayer);
 	void reportUnitSpreadReligionAttempt(CvUnit* pUnit, ReligionTypes eReligion, bool bSuccess);

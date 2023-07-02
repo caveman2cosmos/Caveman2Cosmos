@@ -1,5 +1,5 @@
 BeginMeta
-	Version=C2C_1
+	Version=C2C_2
 	Description= C2C 10% larger Standard Earth Map - no preset Civs. By Harrier.
 	ModPath=Mods\Caveman2Cosmos
 EndMeta
@@ -8721,7 +8721,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=29,y=1
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -9056,7 +9055,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=30,y=0
-	FeatureType=FEATURE_STORM, FeatureVariety=0
 	TerrainType=TERRAIN_OCEAN_POLAR
 	PlotType=3
 EndPlot

@@ -48,7 +48,6 @@ class BugMapOptionsTab(BugOptionsTab.BugOptionsTab):
 		screen.attachHSeparator(column, column + "Sep1")
 		left, center, right = self.addThreeColumnLayout(screen, column, "CityPlotsEnabled", True)
 		self.addLabel(screen, left, "CityPlots", "City Tiles:")
-		self.addCheckbox(screen, center, "CityBar__CityControlledPlots")
 		self.addCheckbox(screen, right, "CityBar__CityPlotStatus")
 
 		one, two, three, four, five = self.addMultiColumnLayout(screen, column, 5, "CityPlotsOptions")

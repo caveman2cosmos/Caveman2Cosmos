@@ -25,7 +25,7 @@ class CvGameUtils:
 		self.CAPTURE_GOLD_MAX_TURNS = GC.getDefineINT("CAPTURE_GOLD_MAX_TURNS")
 
 		self.iNationalMint = GC.getInfoTypeForString("BUILDING_NATIONAL_MINT")
-		self.iHimejiCastle = GC.getInfoTypeForString("BUILDING_HIMEJI_CASTLE")
+		self.iHimejiCastle = GC.getInfoTypeForString("BUILDING_HIMEJI_SAMURAI_CASTLE")
 
 	def canBuild(self, argsList):
 		iX, iY, iBuild, iPlayer = argsList
@@ -194,7 +194,7 @@ class CvGameUtils:
 			if iTurns > 0 and iTurns < iMaxTurns:
 				gold *= 1.0 * iTurns / iMaxTurns
 
-		if CyCity.getNumActiveBuilding(self.iNationalMint):
+		if CyCity.isActiveBuilding(self.iNationalMint):
 			gold *= 10
 
 		return int(gold)
@@ -365,7 +365,7 @@ class CvGameUtils:
 					if pCity.isProduction():
 						sText += u"\n%s:" %(CyTranslator().getText("[ICON_PRODUCTION]", ()))
 						if not pCity.isProductionProcess():
-							sText += u" %d/%d" %(pCity.getProduction(), pCity.getProductionNeeded())
+							sText += u" %d/%d" %(pCity.getProductionProgress(), pCity.getProductionNeeded())
 							iProduction = pCity.getCurrentProductionDifference(False, True)
 							if iProduction != 0:
 								sText += u" %+d" %(iProduction)
@@ -376,7 +376,10 @@ class CvGameUtils:
 					if iGPRate > 0 or iProgress > 0:
 						sText += u"\n%s: %d/%d %+d" %(CyTranslator().getText("[ICON_GREATPEOPLE]", ()), iProgress, pPlayer.greatPeopleThresholdNonMilitary(), iGPRate)
 
-					sText += u"\n%s: %d/%d (%s)" %(CyTranslator().getText("[ICON_CULTURE]", ()), pCity.getCulture(iPlayer), pCity.getCultureThreshold(), GC.getCultureLevelInfo(pCity.getCultureLevel()).getDescription())
+					if pCity.getCultureThreshold() > 0:
+						sText += u"\n%s: %d/%d (%s)" %(CyTranslator().getText("[ICON_CULTURE]", ()), pCity.getCulture(iPlayer), pCity.getCultureThreshold(), GC.getCultureLevelInfo(pCity.getCultureLevel()).getDescription())
+					else: sText += u"\n%s: %d (%s)" %(CyTranslator().getText("[ICON_CULTURE]", ()), pCity.getCulture(iPlayer), GC.getCultureLevelInfo(pCity.getCultureLevel()).getDescription())
+
 
 					lTemp = []
 					for i in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
@@ -399,7 +402,7 @@ class CvGameUtils:
 					lBuildings = []
 					lWonders = []
 					for i in xrange(GC.getNumBuildingInfos()):
-						if pCity.getNumRealBuilding(i):
+						if pCity.hasBuilding(i):
 							if isLimitedWonder(i):
 								lWonders.append(GC.getBuildingInfo(i).getDescription())
 							else:

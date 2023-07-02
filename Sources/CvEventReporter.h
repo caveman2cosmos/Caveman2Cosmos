@@ -75,7 +75,6 @@ public:
 	void cityAcquiredAndKept(PlayerTypes eOldOwner, PlayerTypes ePlayer, CvCity* pCity, bool bConquest, bool bTrade);
 	void cityLost(CvCity *pCity);
 	void cultureExpansion( CvCity *pCity, PlayerTypes ePlayer);
-	void cityGrowth(CvCity *pCity, PlayerTypes ePlayer);
 	void cityDoTurn(CvCity *pCity, PlayerTypes ePlayer);
 
 	void cityBuildingUnit(CvCity* pCity, UnitTypes eUnitType);
@@ -92,7 +91,6 @@ public:
 	void unitBuilt(CvCity *pCity, CvUnit *pUnit);
 	void unitKilled(CvUnit *pUnit, PlayerTypes eAttacker);
 	void unitCaptured(PlayerTypes eFromPlayer, UnitTypes eUnitType, CvUnit* pNewUnit);
-	void unitLost(CvUnit *pUnit);
 	void unitPromoted(CvUnit *pUnit, PromotionTypes ePromotion);
 	void unitUpgraded(CvUnit *pOldUnit, CvUnit *pNewUnit, int iPrice);
 

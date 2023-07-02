@@ -48,7 +48,7 @@
 	-->
 	<Define>
 		<DefineName>MAX_PAGING_FRAME_TIME_MS</DefineName>
-		<iDefineIntVal>200</iDefineIntVal>
+		<iDefineIntVal>100</iDefineIntVal>
 	</Define>
 	<!-- Distance in tiles at which to page in different components -->
 	<Define>
@@ -162,7 +162,7 @@
 	</Define>
 	<Define>
 		<DefineName>BARBARIAN_CIVILIZATION</DefineName>
-		<DefineTextVal>CIVILIZATION_BARBARIAN</DefineTextVal>
+		<DefineTextVal>CIVILIZATION_NPC_BARBARIAN</DefineTextVal>
 	</Define>
 	<Define>
 		<DefineName>BARBARIAN_LEADER</DefineName>
@@ -178,15 +178,15 @@
 	</Define>
 	<Define>
 		<DefineName>BEAST_CIVILIZATION</DefineName>
-		<DefineTextVal>CIVILIZATION_ANIMAL_BEAST</DefineTextVal>
+		<DefineTextVal>CIVILIZATION_NPC_BEAST</DefineTextVal>
 	</Define>
 	<Define>
 		<DefineName>PREDATOR_CIVILIZATION</DefineName>
-		<DefineTextVal>CIVILIZATION_ANIMAL_PREDATOR</DefineTextVal>
+		<DefineTextVal>CIVILIZATION_NPC_PREDATOR</DefineTextVal>
 	</Define>
 	<Define>
 		<DefineName>PREY_CIVILIZATION</DefineName>
-		<DefineTextVal>CIVILIZATION_ANIMAL_PREY</DefineTextVal>
+		<DefineTextVal>CIVILIZATION_NPC_PREY</DefineTextVal>
 	</Define>
 	<Define>
 		<DefineName>ANIMAL_LEADER</DefineName>
@@ -194,7 +194,7 @@
 	</Define>
 	<Define>
 		<DefineName>INSECT_CIVILIZATION</DefineName>
-		<DefineTextVal>CIVILIZATION_INSECTOID</DefineTextVal>
+		<DefineTextVal>CIVILIZATION_NPC_INSECTOID</DefineTextVal>
 	</Define>
 	<Define>
 		<DefineName>INSECT_LEADER</DefineName>
@@ -202,7 +202,7 @@
 	</Define>
 	<Define>
 		<DefineName>NPC4_CIVILIZATION</DefineName>
-		<DefineTextVal>CIVILIZATION_BARBARIAN</DefineTextVal>
+		<DefineTextVal>CIVILIZATION_NPC_BARBARIAN</DefineTextVal>
 	</Define>
 	<Define>
 		<DefineName>NPC4_LEADER</DefineName>
@@ -210,7 +210,7 @@
 	</Define>
 	<Define>
 		<DefineName>NPC3_CIVILIZATION</DefineName>
-		<DefineTextVal>CIVILIZATION_BARBARIAN</DefineTextVal>
+		<DefineTextVal>CIVILIZATION_NPC_BARBARIAN</DefineTextVal>
 	</Define>
 	<Define>
 		<DefineName>NPC3_LEADER</DefineName>
@@ -218,7 +218,7 @@
 	</Define>
 	<Define>
 		<DefineName>NPC2_CIVILIZATION</DefineName>
-		<DefineTextVal>CIVILIZATION_BARBARIAN</DefineTextVal>
+		<DefineTextVal>CIVILIZATION_NPC_BARBARIAN</DefineTextVal>
 	</Define>
 	<Define>
 		<DefineName>NPC2_LEADER</DefineName>
@@ -226,7 +226,7 @@
 	</Define>
 	<Define>
 		<DefineName>NPC1_CIVILIZATION</DefineName>
-		<DefineTextVal>CIVILIZATION_BARBARIAN</DefineTextVal>
+		<DefineTextVal>CIVILIZATION_NPC_BARBARIAN</DefineTextVal>
 	</Define>
 	<Define>
 		<DefineName>NPC1_LEADER</DefineName>
@@ -234,7 +234,7 @@
 	</Define>
 	<Define>
 		<DefineName>NPC0_CIVILIZATION</DefineName>
-		<DefineTextVal>CIVILIZATION_BARBARIAN</DefineTextVal>
+		<DefineTextVal>CIVILIZATION_NPC_BARBARIAN</DefineTextVal>
 	</Define>
 	<Define>
 		<DefineName>NPC0_LEADER</DefineName>
@@ -325,34 +325,30 @@
 	</Define>
 	<Define>
 		<!-- Goes from 0 to 100. At 0, a city will put equal culture on all tiles in its range.
-			At 100, it will put 1 culture (minimum) at max range tiles and 100% on city center. -->
+			At 100, it will put 1 culture (minimum) at max range tiles and 100% on city center.
+			Value of 75 means a city will flip other cities at max radius if its culture is 4x the lesser. -->
 		<DefineName>CITY_CULTURE_DENSITY_FACTOR</DefineName>
-		<iDefineIntVal>50</iDefineIntVal>
+		<iDefineIntVal>75</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- Each turn, culture on each plot will decay by this percent.
-			E.g. value of 10 means 50 culture loses 5, becomes 45.
-			Don't use 0 or 100, but between is alright. -->
+		<!-- Each turn, culture on each plot will decay by this percent in equilibrium game option,
+			or on tiles that a player is no longer putting culture of their own onto.
+			E.g. value of 5 means 100 culture loses 5, becomes 95. Sweet spot between 2 and 8.
+			Don't use 0 or 12+ (higher causes control issues at high speed), but between is alright. -->
 		<DefineName>TILE_CULTURE_DECAY_PERCENT</DefineName>
-		<iDefineIntVal>10</iDefineIntVal>
-	</Define>
-	<Define>
-		<!-- Each turn, culture on each plot will decay by this flat value,
-			after the percent decay. E.g. value of 1 means 45 becomes 44. -->
-		<DefineName>TILE_CULTURE_DECAY_CONSTANT</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
+		<iDefineIntVal>3</iDefineIntVal>
 	</Define>
 	<Define>
 		<!-- The relative percent of culture by which another player must surpass
 			a player with fixed borders before a tile is flipped from culture only.
-			EX: A tile owned by player with fixed borders civic has 40 culture.
-			200 (default) = Needs twice the owner's culture in order to flip (81).
+			EX: A tile owned by player with fixed borders civic has 20 culture.
+			400 (default) = Needs over 4x the owner's culture in order to flip (81).
 			100 = No effect from fixed borders on tile flipping; 41 culture will flip.
 			100000 = Effectively infinitely powerful fixed borders; 100x culture to flip (40001).
 			NOTE: Cultural flipping of tiles is the same mechanism by which cities revolt from culture,
 			so high values here will make cultural revolts in fixed border civilizations much harder to obtain. -->
 		<DefineName>FIXED_BORDERS_CULTURE_RATIO_PERCENT</DefineName>
-		<iDefineIntVal>200</iDefineIntVal>
+		<iDefineIntVal>400</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>GREAT_WORKS_CULTURE_TURNS</DefineName>
@@ -791,29 +787,28 @@
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
+		<!-- Occupation timers scale to this; 0% revolt multiplier at this culture value. Don't use 0. -->
 		<DefineName>OCCUPATION_CULTURE_PERCENT_THRESHOLD</DefineName>
 		<iDefineIntVal>75</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>BASE_OCCUPATION_TURNS</DefineName>
-		<iDefineIntVal>3</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>OCCUPATION_TURNS_POPULATION_PERCENT</DefineName>
-		<iDefineIntVal>50</iDefineIntVal>
+		<iDefineIntVal>5</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>BASE_REVOLT_OCCUPATION_TURNS</DefineName>
 		<iDefineIntVal>2</iDefineIntVal>
 	</Define>
 	<Define>
+		<!-- % of city revolt/turn chance added to revolt timer. E.g. if a city with 4% revolt chance/turn
+			 successfully revolts, 25 here means it adds 1 turn to revolt timer -->
 		<DefineName>REVOLT_OCCUPATION_TURNS_PERCENT</DefineName>
-		<iDefineIntVal>3</iDefineIntVal>
+		<iDefineIntVal>25</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- 0 no effect, 100 doubles effect of culture ratio on liklihood of culture revolt. -->
+		<!-- 50 halves effect of culture ratio on liklihood of culture revolt, 100 is baseline, 200 doubles. -->
 		<DefineName>REVOLT_TOTAL_CULTURE_MODIFIER</DefineName>
-		<iDefineIntVal>100</iDefineIntVal>
+		<iDefineIntVal>200</iDefineIntVal>
 	</Define>
 	<Define>
 		<!-- 0 no effect, 100 = double liklihood of revolt if cultural attacker has state religion -->
@@ -1015,7 +1010,7 @@
 	</Define>
 	<Define>
 		<DefineName>BUILDING_PRODUCTION_DECAY_TIME</DefineName>
-		<iDefineIntVal>50</iDefineIntVal>
+		<iDefineIntVal>8</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>BUILDING_PRODUCTION_DECAY_PERCENT</DefineName>
@@ -1023,7 +1018,7 @@
 	</Define>
 	<Define>
 		<DefineName>UNIT_PRODUCTION_DECAY_TIME</DefineName>
-		<iDefineIntVal>10</iDefineIntVal>
+		<iDefineIntVal>4</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>UNIT_PRODUCTION_DECAY_PERCENT</DefineName>
@@ -1382,7 +1377,7 @@
 	<Define>
 		<DefineName>MINIMAP_RENDER_SIZE</DefineName>
 		<!--Minimap size in pixels-->
-		<iDefineIntVal>512</iDefineIntVal>
+		<iDefineIntVal>1024</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>TURN_LOG_MAX_WIDTH</DefineName>

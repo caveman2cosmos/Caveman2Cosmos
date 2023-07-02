@@ -1,5 +1,5 @@
 BeginMeta
-	Version=C2C_1
+	Version=C2C_2
 	ModPath=Mods\Caveman2Cosmos
 EndMeta
 BeginMap
@@ -15,7 +15,7 @@ BeginMap
 EndMap
 BeginPlayer
 	LeaderType=LEADER_SITTING_BULL
-	CivType=CIVILIZATION_NATIVE_AMERICA
+	CivType=CIVILIZATION_SIOUX
 	StartingX=25, StartingY=9
 EndPlayer
 BeginPlayer

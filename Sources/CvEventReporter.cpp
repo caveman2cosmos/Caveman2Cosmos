@@ -1,3 +1,6 @@
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
 #include "CvEventReporter.h"
@@ -329,11 +332,6 @@ void CvEventReporter::cultureExpansion( CvCity *pCity, PlayerTypes ePlayer )
 	m_kPythonEventMgr.reportCultureExpansion(pCity, ePlayer);
 }
 
-void CvEventReporter::cityGrowth(CvCity *pCity, PlayerTypes ePlayer)
-{
-	m_kPythonEventMgr.reportCityGrowth(pCity, ePlayer);
-}
-
 void CvEventReporter::cityDoTurn( CvCity *pCity, PlayerTypes ePlayer )
 {
 	m_kPythonEventMgr.reportCityProduction(pCity, ePlayer);
@@ -395,16 +393,9 @@ void CvEventReporter::unitKilled(CvUnit *pUnit, PlayerTypes eAttacker )
 	m_kStatistics.unitKilled(pUnit, eAttacker);
 }
 
-// BUG - Unit Captured Event - start
 void CvEventReporter::unitCaptured(PlayerTypes eFromPlayer, UnitTypes eUnitType, CvUnit* pNewUnit)
 {
 	m_kPythonEventMgr.reportUnitCaptured(eFromPlayer, eUnitType, pNewUnit);
-}
-// BUG - Unit Captured Event - end
-
-void CvEventReporter::unitLost(CvUnit *pUnit)
-{
-	m_kPythonEventMgr.reportUnitLost(pUnit);
 }
 
 void CvEventReporter::unitPromoted(CvUnit *pUnit, PromotionTypes ePromotion)
@@ -412,16 +403,16 @@ void CvEventReporter::unitPromoted(CvUnit *pUnit, PromotionTypes ePromotion)
 	m_kPythonEventMgr.reportUnitPromoted(pUnit, ePromotion);
 }
 
-// BUG - Upgrade Unit Event - start
 void CvEventReporter::unitUpgraded(CvUnit *pOldUnit, CvUnit *pNewUnit, int iPrice)
 {
 	m_kPythonEventMgr.reportUnitUpgraded(pOldUnit, pNewUnit, iPrice);
 }
-// BUG - Upgrade Unit Event - end
 
-void CvEventReporter::unitSelected( CvUnit *pUnit)
+/*DllExport*/ void CvEventReporter::unitSelected( CvUnit *pUnit)
 {
-	m_kPythonEventMgr.reportUnitSelected(pUnit);
+#ifdef _DEBUG
+	OutputDebugString(CvString::format("exe says that unit %S (%d) at (%d,%d) has been selected\n", pUnit->getDescription().c_str(), pUnit->getID(), pUnit->getX(), pUnit->getY()).c_str());
+#endif
 }
 
 void CvEventReporter::unitRename(CvUnit* pUnit)
@@ -555,6 +546,7 @@ void CvEventReporter::chat(CvWString szString)
 
 void CvEventReporter::victory(TeamTypes eWinner, VictoryTypes eVictory)
 {
+	PROFILE_EXTRA_FUNC();
 	m_kPythonEventMgr.reportVictory(eWinner, eVictory);
 	m_kStatistics.setVictory(eWinner, eVictory);
 
@@ -601,6 +593,7 @@ void CvEventReporter::getGameStatistics(std::vector<CvStatBase*>& aStats)
 
 void CvEventReporter::getPlayerStatistics(PlayerTypes ePlayer, std::vector<CvStatBase*>& aStats)
 {
+	PROFILE_EXTRA_FUNC();
 	aStats.clear();
 	CvPlayerRecord* pRecord = m_kStatistics.getPlayerRecord(ePlayer);
 	if (pRecord != NULL)

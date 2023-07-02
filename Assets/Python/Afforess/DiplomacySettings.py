@@ -67,7 +67,7 @@ def changedCanTradeLimitedBorders(option, value):
 def changedCanTradeDefensivePact(option, value):
 	GC.setDefineINT("CAN_TRADE_DEFENSIVE_PACT", ANewDawnOpt.isCanTradeDefensivePact())
 def changedCanTradeAlliance(option, value):
-	GAME.setOption(GameOptionTypes.GAMEOPTION_PERMANENT_ALLIANCES, ANewDawnOpt.isCanTradeAlliance())
+	GAME.setOption(GameOptionTypes.GAMEOPTION_ENABLE_PERMANENT_ALLIANCES, ANewDawnOpt.isCanTradeAlliance())
 def changedAdvancedDiplomacy(option, value):
 	GAME.setOption(GameOptionTypes.GAMEOPTION_ADVANCED_DIPLOMACY, ANewDawnOpt.isAdvancedDiplomacy())
 
@@ -96,7 +96,7 @@ def setXMLOptionsfromIniFile():
 	GC.setDefineINT("CAN_TRADE_OPEN_BORDERS", ANewDawnOpt.isCanTradeOpenBorders())
 	GC.setDefineINT("CAN_TRADE_LIMITED_BORDERS", ANewDawnOpt.isCanTradeLimitedBorders())
 	GC.setDefineINT("CAN_TRADE_DEFENSIVE_PACT", ANewDawnOpt.isCanTradeDefensivePact())
-	ANewDawnOpt.setCanTradeAlliance(GAME.isOption(GameOptionTypes.GAMEOPTION_PERMANENT_ALLIANCES))
+	ANewDawnOpt.setCanTradeAlliance(GAME.isOption(GameOptionTypes.GAMEOPTION_ENABLE_PERMANENT_ALLIANCES))
 	ANewDawnOpt.setAdvancedDiplomacy(GAME.isOption(GameOptionTypes.GAMEOPTION_ADVANCED_DIPLOMACY))
 
 def resetOptions():

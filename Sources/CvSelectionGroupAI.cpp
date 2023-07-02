@@ -1,5 +1,8 @@
 // selectionGroupAI.cpp
 
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
 #include "CvGlobals.h"
@@ -529,30 +532,23 @@ static bool isClearlySuperior(CvUnit* pUnit, CvUnit* pOtherUnit, const CvPlot* p
 {
 	PROFILE_FUNC();
 
-	int	iValue = pUnit->currEffectiveStr(pPlot,pUnit);
-	int	iOtherValue = pOtherUnit->currEffectiveStr(pPlot,pOtherUnit);
+	if (pUnit->currEffectiveStr(pPlot, pUnit) < pOtherUnit->currEffectiveStr(pPlot, pOtherUnit)
+	// First strikes
+	|| pUnit->getCombatFirstStrikes() < pOtherUnit->getCombatFirstStrikes())
+	{
+		return false;
+	}
 	int	iTotalCombatMods = 0;
 	int	iOtherTotalCombatMods = 0;
-
-	if ( iValue < iOtherValue )
-	{
-		return false;
-	}
-
-	//	First strikes
-	if ( pUnit->getCombatFirstStrikes() < pOtherUnit->getCombatFirstStrikes() )
-	{
-		return false;
-	}
 
 	//	Unit combat modifiers
 	const CvUnitInfo& kUnit = pUnit->getUnitInfo();
 	const CvUnitInfo& kOtherUnit = pOtherUnit->getUnitInfo();
-	const int numUnitCombatInfos = GC.getNumUnitCombatInfos();
-	for(int iJ = 0; iJ < numUnitCombatInfos; iJ++)
+
+	for (int i = GC.getNumUnitCombatInfos() - 1; i > -1; i--)
 	{
-		iTotalCombatMods += kUnit.getUnitCombatModifier(iJ);
-		iOtherTotalCombatMods += kOtherUnit.getUnitCombatModifier(iJ);
+		iTotalCombatMods += kUnit.getUnitCombatModifier(i);
+		iOtherTotalCombatMods += kOtherUnit.getUnitCombatModifier(i);
 	}
 
 	for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = pUnit->getUnitCombatKeyedInfo().begin(), end = pUnit->getUnitCombatKeyedInfo().end(); it != end; ++it)
@@ -563,7 +559,7 @@ static bool isClearlySuperior(CvUnit* pUnit, CvUnit* pOtherUnit, const CvPlot* p
 	if (!pUnit->isCommander())
 	{
 		const CvUnit* pCommander = pUnit->getCommander();
-		if (pCommander != NULL)
+		if (pCommander)
 		{
 			for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = pCommander->getUnitCombatKeyedInfo().begin(), end = pCommander->getUnitCombatKeyedInfo().end(); it != end; ++it)
 			{
@@ -580,7 +576,7 @@ static bool isClearlySuperior(CvUnit* pUnit, CvUnit* pOtherUnit, const CvPlot* p
 	if (!pOtherUnit->isCommander())
 	{
 		const CvUnit* pOtherCommander = pOtherUnit->getCommander();
-		if (pOtherCommander != NULL)
+		if (pOtherCommander)
 		{
 			for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = pOtherCommander->getUnitCombatKeyedInfo().begin(), end = pOtherCommander->getUnitCombatKeyedInfo().end(); it != end; ++it)
 			{
@@ -589,7 +585,7 @@ static bool isClearlySuperior(CvUnit* pUnit, CvUnit* pOtherUnit, const CvPlot* p
 		}
 	}
 
-	return (iTotalCombatMods >= iOtherTotalCombatMods);
+	return iTotalCombatMods >= iOtherTotalCombatMods;
 }
 
 CvUnit* CvSelectionGroupAI::AI_getBestGroupAttacker(const CvPlot* pPlot, bool bPotentialEnemy, int& iUnitOdds, bool bForce, bool bNoBlitz, CvUnit** ppDefender, bool bAssassinate, bool bSuprise) const
@@ -670,6 +666,7 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupAttacker(const CvPlot* pPlot, bool bP
 
 CvUnit* CvSelectionGroupAI::AI_getBestGroupSacrifice(const CvPlot* pPlot, bool bForce, bool bNoBlitz) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iBestValue = 0;
 	CvUnit* pBestUnit = NULL;
 
@@ -761,6 +758,7 @@ int CvSelectionGroupAI::AI_compareStacks(const CvPlot* pPlot, StackCompare::flag
 
 int CvSelectionGroupAI::AI_sumStrength(const CvPlot* pAttackedPlot, DomainTypes eDomainType, StackCompare::flags flags /*= StackCompare::None*/) const
 {
+	PROFILE_EXTRA_FUNC();
 	if (getNumUnits() == 0)
 		return 0;
 
@@ -1031,7 +1029,7 @@ void CvSelectionGroupAI::AI_setMissionAI(MissionAITypes eNewMissionAI, const CvP
 			{
 				foreach_(CvUnit* unitX, units())
 				{
-					if (unitX->AI_getUnitAIType() == UNITAI_WORKER)
+					if (unitX->isWorker())
 					{
 						if (gUnitLogLevel > 2)
 						{
@@ -1069,6 +1067,7 @@ CvUnit* CvSelectionGroupAI::AI_getMissionAIUnit() const
 
 bool CvSelectionGroupAI::AI_isFull() const
 {
+	PROFILE_EXTRA_FUNC();
 	FAssert(getNumUnits() > 0);
 
 	const UnitAITypes eUnitAI = getHeadUnitAI();
@@ -1114,6 +1113,7 @@ bool CvSelectionGroupAI::AI_isFull() const
 
 int CvSelectionGroupAI::AI_getGenericValueTimes100(UnitValueFlags eFlags) const
 {
+	PROFILE_EXTRA_FUNC();
 	int iResult = 0;
 
 	foreach_(const CvUnit* pLoopUnit, units())
@@ -1126,6 +1126,7 @@ int CvSelectionGroupAI::AI_getGenericValueTimes100(UnitValueFlags eFlags) const
 
 bool CvSelectionGroupAI::AI_hasBeneficialPropertyEffectForCity(const CvCity* pCity) const
 {
+	PROFILE_EXTRA_FUNC();
 	foreach_(const CvUnit* pLoopUnit, units())
 	{
 		if (pLoopUnit->AI_beneficialPropertyValueToCity(pCity, NO_PROPERTY) > 0)
@@ -1139,6 +1140,7 @@ bool CvSelectionGroupAI::AI_hasBeneficialPropertyEffectForCity(const CvCity* pCi
 
 CvUnit* CvSelectionGroupAI::AI_ejectBestPropertyManipulator(const CvCity* pTargetCity)
 {
+	PROFILE_EXTRA_FUNC();
 	CvUnit* pBestUnit = NULL;
 	int iBestUnitValue = 0;
 
@@ -1163,6 +1165,7 @@ CvUnit* CvSelectionGroupAI::AI_ejectBestPropertyManipulator(const CvCity* pTarge
 
 CvUnit* CvSelectionGroupAI::AI_findBestDefender(const CvPlot* pDefendPlot, bool allowAllDefenders, bool bConsiderPropertyValues) const
 {
+	PROFILE_EXTRA_FUNC();
 	CvUnit* pBestUnit = NULL;
 	int iBestUnitValue = 0;
 

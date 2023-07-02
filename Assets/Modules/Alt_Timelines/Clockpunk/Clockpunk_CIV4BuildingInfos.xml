@@ -40,12 +40,12 @@
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CLOCKPUNK_AIRPORT</Type>
+			<Type>BUILDING_ORNITHOPTER_AERIE</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_CLOCK</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_CLOCKPUNK_AIRPORT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CLOCKPUNK_AIRPORT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ORNITHOPTER_AERIE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ORNITHOPTER_AERIE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CLOCKPUNK_AIRPORT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ORNITHOPTER_AERIE</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_EARLY_AIRPORT</ConstructSound>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -83,14 +83,14 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CLOCKPUNK_EMBASSY</Type>
+			<Type>BUILDING_CULTURE_CLOCKPUNK</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_CLOCK</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_CLOCKPUNK_EMBASSY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CLOCKPUNK_EMBASSY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CULTURE_CLOCKPUNK</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CULTURE_CLOCKPUNK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CLOCKPUNK_EMBASSY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_CLOCKPUNK</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -167,9 +167,9 @@
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ORCHESTRION_THEATER</ArtDefineTag>
 			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_HIGH_TECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+				<BuildingType>BUILDING_HIGH_TECH_CULTURAL_ENRICHMENT</BuildingType>
 			</ReplacementBuildings>
 			<PrereqTech>TECH_REALISM</PrereqTech>
 			<MapCategoryTypes>
@@ -203,12 +203,12 @@
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_STEPRECKONER_MANUFACTORY</Type>
+			<Type>BUILDING_STEP_RECKONER_MANUFACTURE</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_CLOCK</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_STEPRECKONER_MANUFACTORY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_STEPRECKONER_MANUFACTORY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_STEP_RECKONER_MANUFACTURE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_STEP_RECKONER_MANUFACTURE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_STEPRECKONER_MANUFACTORY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_STEP_RECKONER_MANUFACTURE</ArtDefineTag>
 			<ObsoleteTech>TECH_PERSONAL_COMPUTERS</ObsoleteTech>
 			<Bonus>BONUS_CLOCKPUNK</Bonus>
 			<PrereqBonuses>

@@ -1,3 +1,6 @@
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
 #include "CvBonusInfo.h"
@@ -68,7 +71,7 @@ bool CvMapGenerator::canPlaceBonusAt(BonusTypes eBonus, int iX, int iY, bool bIg
 	{
 		iRange0 += (GC.getMap().getWorldSize() + 1) / 2;
 
-		if (GC.getGame().isOption(GAMEOPTION_MORE_RESOURCES))
+		if (GC.getGame().isOption(GAMEOPTION_MAP_MORE_RESOURCES))
 		{
 			iRange0 /= 2;
 		}
@@ -101,7 +104,7 @@ bool CvMapGenerator::canPlaceBonusAt(BonusTypes eBonus, int iX, int iY, bool bIg
 	{
 		iRange1 += GC.getMap().getWorldSize();
 
-		if (GC.getGame().isOption(GAMEOPTION_MORE_RESOURCES))
+		if (GC.getGame().isOption(GAMEOPTION_MAP_MORE_RESOURCES))
 		{
 			iRange1 /= 2;
 		}
@@ -134,7 +137,7 @@ bool CvMapGenerator::canPlaceGoodyAt(ImprovementTypes eImprovement, int iX, int 
 	FAssertMsg(eImprovement != NO_IMPROVEMENT, "Improvement is not assigned a valid value");
 	FAssertMsg(GC.getImprovementInfo(eImprovement).isGoody(), "ImprovementType eImprovement is expected to be a goody");
 
-	if (GC.getGame().isOption(GAMEOPTION_NO_GOODY_HUTS))
+	if (GC.getGame().isOption(GAMEOPTION_MAP_NO_GOODY_HUTS))
 	{
 		return false;
 	}
@@ -230,17 +233,17 @@ void CvMapGenerator::addRivers()
 
 	for (int iPass = 0; iPass < 4; iPass++)
 	{
-		int iRiverSourceRange = iPass <= 1 || !GC.getGame().isOption(GAMEOPTION_MORE_RIVERS)
+		int iRiverSourceRange = iPass <= 1 || !GC.getGame().isOption(GAMEOPTION_MAP_MORE_RIVERS)
 			? GC.getDefineINT("RIVER_SOURCE_MIN_RIVER_RANGE")
 			: GC.getDefineINT("RIVER_SOURCE_MIN_RIVER_RANGE") / 2;
 
-		int iSeaWaterRange = iPass <= 1 || !GC.getGame().isOption(GAMEOPTION_MORE_RIVERS)
+		int iSeaWaterRange = iPass <= 1 || !GC.getGame().isOption(GAMEOPTION_MAP_MORE_RIVERS)
 			? GC.getDefineINT("RIVER_SOURCE_MIN_SEAWATER_RANGE")
 			: GC.getDefineINT("RIVER_SOURCE_MIN_SEAWATER_RANGE") / 2;
 
 		int iRand = 8;
 		int iPPRE = GC.getDefineINT("PLOTS_PER_RIVER_EDGE");
-		if (GC.getGame().isOption(GAMEOPTION_MORE_RIVERS))
+		if (GC.getGame().isOption(GAMEOPTION_MAP_MORE_RIVERS))
 		{
 			iRand = GC.getDefineINT("RIVER_RAND_ON_MORE_RIVERS");
 			iPPRE /= std::max(1, GC.getDefineINT("PLOTS_PER_RIVER_EDGE_DIVISOR"));
@@ -277,6 +280,7 @@ void CvMapGenerator::addRivers()
 //
 void CvMapGenerator::doRiver(CvPlot *pStartPlot, CardinalDirectionTypes eLastCardinalDirection, CardinalDirectionTypes eOriginalCardinalDirection, int iThisRiverID)
 {
+	PROFILE_EXTRA_FUNC();
 	if (iThisRiverID == -1)
 	{
 		iThisRiverID = GC.getMap().getNextRiverID();
@@ -424,6 +428,7 @@ void CvMapGenerator::doRiver(CvPlot *pStartPlot, CardinalDirectionTypes eLastCar
 //
 bool CvMapGenerator::addRiver(CvPlot* pFreshWaterPlot)
 {
+	PROFILE_EXTRA_FUNC();
 	FAssertMsg(pFreshWaterPlot != NULL, "NULL plot parameter");
 
 	// cannot have a river flow next to water
@@ -589,6 +594,7 @@ void CvMapGenerator::addBonuses()
 
 void CvMapGenerator::addUniqueBonusType(BonusTypes eBonus)
 {
+	PROFILE_EXTRA_FUNC();
 	int iBonusCount = calculateNumBonusesToAdd(eBonus);
 	if (iBonusCount == 0)
 	{
@@ -705,6 +711,7 @@ void CvMapGenerator::setBonusClusterValues(const CvBonusInfo& bonus, const int i
 
 void CvMapGenerator::placeBonusWithCluster(const BonusTypes eBonus, const int iGroupRange, const int iGroupRand, const int iMaxCluster, const bool bIgnoreLatitude, int& iBonusCount, const CvArea *pBestArea)
 {
+	PROFILE_EXTRA_FUNC();
 	int* piShuffle = shuffle(GC.getMap().numPlots(), GC.getGame().getMapRand());
 
 	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
@@ -801,6 +808,7 @@ void CvMapGenerator::addGoodies()
 
 void CvMapGenerator::eraseRivers()
 {
+	PROFILE_EXTRA_FUNC();
 	int i;
 
 	for (i = 0; i < GC.getMap().numPlots(); i++)
@@ -819,6 +827,7 @@ void CvMapGenerator::eraseRivers()
 
 void CvMapGenerator::eraseFeatures()
 {
+	PROFILE_EXTRA_FUNC();
 	int i;
 
 	for (i = 0; i < GC.getMap().numPlots(); i++)
@@ -830,6 +839,7 @@ void CvMapGenerator::eraseFeatures()
 
 void CvMapGenerator::eraseBonuses()
 {
+	PROFILE_EXTRA_FUNC();
 	int i;
 
 	for (i = 0; i < GC.getMap().numPlots(); i++)
@@ -841,6 +851,7 @@ void CvMapGenerator::eraseBonuses()
 
 void CvMapGenerator::eraseGoodies()
 {
+	PROFILE_EXTRA_FUNC();
 	int i;
 
 	for (i = 0; i < GC.getMap().numPlots(); i++)
@@ -920,6 +931,7 @@ void CvMapGenerator::afterGeneration()
 
 void CvMapGenerator::setPlotTypes(const std::vector<int>& plotTypes)
 {
+	PROFILE_EXTRA_FUNC();
 	const int iNumPlots = GC.getMap().numPlots();
 
 	for (int iI = 0; iI < iNumPlots; iI++)
@@ -953,6 +965,7 @@ void CvMapGenerator::setPlotTypes(const std::vector<int>& plotTypes)
 
 int CvMapGenerator::getRiverValueAtPlot(CvPlot* pPlot) const
 {
+	PROFILE_EXTRA_FUNC();
 	FAssert(pPlot != NULL);
 
 	long result = 0;
@@ -989,6 +1002,7 @@ int CvMapGenerator::getRiverValueAtPlot(CvPlot* pPlot) const
 
 int CvMapGenerator::calculateNumBonusesToAdd(BonusTypes eBonusType)
 {
+	PROFILE_EXTRA_FUNC();
 	const CvBonusInfo& pBonusInfo = GC.getBonusInfo(eBonusType);
 
 	int iBaseCount =
@@ -1018,7 +1032,7 @@ int CvMapGenerator::calculateNumBonusesToAdd(BonusTypes eBonusType)
 		iBaseCount += iNumPossible * 1000 / (pBonusInfo.getTilesPer() * (GC.getMap().getWorldSize() + 7)); // Density scaled by map size, less dense on large maps.
 	}
 
-	if (GC.getGame().isOption(GAMEOPTION_MORE_RESOURCES))
+	if (GC.getGame().isOption(GAMEOPTION_MAP_MORE_RESOURCES))
 	{
 		iBaseCount *= (GC.getDefineINT("BONUS_COUNT_PERCENTAGE_MODIFIER_ON_MORE_RESOURCES") + 100);
 		iBaseCount /= 100;

@@ -173,11 +173,12 @@ class WBBuildingScreen:
 			iRow = iCount % nRows
 			iColumn = iCount / nRows
 			ItemInfo = GC.getBuildingInfo(item[1])
-			sColor = CyTranslator().getText("[COLOR_WARNING_TEXT]", ())
-			if pCity.getNumRealBuilding(item[1]):
+
+			if pCity.hasBuilding(item[1]):
 				sColor = CyTranslator().getText("[COLOR_POSITIVE_TEXT]", ())
-			elif pCity.getNumRealBuilding(item[1]):
-				sColor = CyTranslator().getText("[COLOR_YELLOW]", ())
+			else:
+				sColor = CyTranslator().getText("[COLOR_WARNING_TEXT]", ())
+
 			screen.setTableText("WBBuilding", iColumn, iRow, "<font=3>" + sColor + item[0] + "</font></color>", ItemInfo.getButton(), WidgetTypes.WIDGET_HELP_BUILDING, item[1], 1, 1<<0 )
 
 	def placeWonders(self):
@@ -208,11 +209,12 @@ class WBBuildingScreen:
 			iRow = iCount % nRows
 			iColumn = iCount / nRows
 			ItemInfo = GC.getBuildingInfo(item[1])
-			sColor = CyTranslator().getText("[COLOR_WARNING_TEXT]", ())
-			if pCity.getNumRealBuilding(item[1]):
+
+			if pCity.hasBuilding(item[1]):
 				sColor = CyTranslator().getText("[COLOR_POSITIVE_TEXT]", ())
-			elif pCity.getNumRealBuilding(item[1]):
-				sColor = CyTranslator().getText("[COLOR_YELLOW]", ())
+			else:
+				sColor = CyTranslator().getText("[COLOR_WARNING_TEXT]", ())
+
 			screen.setTableText("WBWonders", iColumn, iRow, "<font=3>" + sColor + item[0] + "</font></color>", ItemInfo.getButton(), WidgetTypes.WIDGET_HELP_BUILDING, item[1], 1, 1<<0 )
 
 	def handleInput (self, inputClass):
@@ -353,7 +355,7 @@ class WBBuildingScreen:
 					if not cityX.canConstruct(item, True, False, True): bModify = False
 				if bModify:
 					if iChangeType == 2 and not bAvailable:
-						iType = not cityX.getNumRealBuilding(item)
+						iType = not cityX.hasBuilding(item)
 					self.doEffects(cityX, item, iType)
 		else:
 			if bAvailable:
@@ -362,7 +364,7 @@ class WBBuildingScreen:
 				if iHolyReligion > -1 and not pCity.isHolyCityByType(iHolyReligion): return
 				if not pCity.canConstruct(item, True, False, True): return
 			if iChangeType == 2 and not bAvailable:
-				iType = not pCity.getNumRealBuilding(item)
+				iType = not pCity.hasBuilding(item)
 			self.doEffects(pCity, item, iType)
 		iFreeBuilding = info.getFreeBuilding()
 		if iFreeBuilding > -1 and bWonder != isLimitedWonder(iFreeBuilding):
@@ -371,9 +373,9 @@ class WBBuildingScreen:
 
 	def doEffects(self, pCity, item, bAdd):
 		bEffects = False
-		if bAdd and WorldBuilder.bPython and pCity.getNumRealBuilding(item) == 0:
+		if bAdd and WorldBuilder.bPython and not pCity.hasBuilding(item):
 			bEffects = True
-		pCity.setNumRealBuilding(item, bAdd)
+		pCity.changeHasBuilding(item, bAdd)
 		if bEffects:
 			self.eventManager.onBuildingBuilt([pCity, item])
 

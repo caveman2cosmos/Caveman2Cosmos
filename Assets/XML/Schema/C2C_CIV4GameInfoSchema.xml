@@ -662,9 +662,6 @@
 		<element type="iAdvancedStartPointsMod" minOccurs="0"/>
 		<element type="iGold" minOccurs="0"/>
 		<element type="iUnitUpkeepPercent" minOccurs="0"/>
-		<element type="iTrainPercent" minOccurs="0"/>
-		<element type="iConstructPercent" minOccurs="0"/>
-		<element type="iResearchPercent" minOccurs="0"/>
 		<element type="iDistanceMaintenancePercent" minOccurs="0"/>
 		<element type="iNumCitiesMaintenancePercent" minOccurs="0"/>
 		<element type="iColonyMaintenancePercent" minOccurs="0"/>

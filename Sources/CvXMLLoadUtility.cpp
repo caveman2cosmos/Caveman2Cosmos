@@ -148,7 +148,7 @@ CvXMLLoadUtility::CvXMLLoadUtility()
 	, m_pCBFxn(NULL)
 	//m_pFXml(NULL)
 {
-	//OutputDebugString("Initializing XML Load Utility: Start");
+	//OutputDebugString("Initializing XML Load Utility: Start\n");
 	try
 	{
 		xercesc::XMLPlatformUtils::Initialize();
@@ -161,7 +161,7 @@ CvXMLLoadUtility::CvXMLLoadUtility()
 		gDLL->MessageBox(message, "Error");
 		xercesc::XMLString::release(&message);
 	}
-	//OutputDebugString("Initializing XML Load Utility: End");
+	//OutputDebugString("Initializing XML Load Utility: End\n");
 
 //	m_pSchemaCache = GETXML->CreateFXmlSchemaCache();
 //	m_pSchemaCache = NULL;
@@ -190,6 +190,7 @@ CvXMLLoadUtility::~CvXMLLoadUtility()
 //------------------------------------------------------------------------------------------------------
 void CvXMLLoadUtility::ResetLandscapeInfo()
 {
+	PROFILE_EXTRA_FUNC();
 	for (int i = 0; i < GC.getNumLandscapeInfos(); ++i)
 	{
 		SAFE_DELETE(GC.m_paLandscapeInfo[i]);
@@ -209,6 +210,7 @@ void CvXMLLoadUtility::ResetLandscapeInfo()
 //------------------------------------------------------------------------------------------------------
 void CvXMLLoadUtility::ResetGlobalEffectInfo()
 {
+	PROFILE_EXTRA_FUNC();
 	for (int i = 0; i < GC.getNumEffectInfos(); ++i)
 	{
 		SAFE_DELETE(GC.m_paEffectInfo[i]);
@@ -257,8 +259,9 @@ bool CvXMLLoadUtility::LoadCivXml(const char* szFilename)
 	char szLog[8192];
 	sprintf(szLog, "LoadCivXml (%s)", szFilename);
 	PROFILE(szLog);
-	OutputDebugString(szLog);
-	OutputDebugString("\n");
+#ifdef _DEBUG
+	OutputDebugString(strcat(szLog, "\n"));
+#endif
 	m_pParser->setValidationScheme(xercesc::XercesDOMParser::Val_Auto);
 
 	CvString szPath = szFilename;
@@ -267,30 +270,36 @@ bool CvXMLLoadUtility::LoadCivXml(const char* szFilename)
 
 	std::string szDir = gDLL->getModName();
 	szDir.append(szPath);
+#ifdef _DEBUG
 	OutputDebugString(szDir.c_str());
+	OutputDebugString("\n");
+#endif
 	FILE* f = fopen(szDir.c_str(), "r");
-	if (f == NULL)
+	if (!f)
 	{
 		// could not open file, try from current dir
 		m_pParser->setValidationScheme(xercesc::XercesDOMParser::Val_Never);
 		szDir = szPath;
 		OutputDebugString(szDir.c_str());
+		OutputDebugString("\n");
 		f = fopen(szDir.c_str(), "r");
-		if (f == NULL)
+		if (!f)
 		{
 			// could not open file, try Warlords dir
 			szDir = "..\\Warlords\\";
 			szDir.append(szPath);
 			OutputDebugString(szDir.c_str());
+			OutputDebugString("\n");
 			f = fopen(szDir.c_str(), "r");
-			if (f == NULL)
+			if (!f)
 			{
 				// could not open file, try from one further up
 				szDir = "..\\";
 				szDir.append(szPath);
 				OutputDebugString(szDir.c_str());
+				OutputDebugString("\n");
 				f = fopen(szDir.c_str(), "r");
-				if (f == NULL)
+				if (!f)
 				{
 					sprintf(szLog, "IO error: %s : File can't be found\n", szPath.c_str());
 					logging::logMsg("xml.log", szLog);
@@ -404,6 +413,7 @@ CvWString CvXMLLoadUtility::CreateHotKeyFromDescription(const char* pszHotKey, b
 
 bool CvXMLLoadUtility::SetStringList(CvString** ppszStringArray, int* piSize)
 {
+	PROFILE_EXTRA_FUNC();
 	int i;
 	CvString* pszStringArray;
 
@@ -581,7 +591,7 @@ CvWString CvXMLLoadUtility::CreateKeyStringFromKBCode(const char* pszHotKey)
 //
 void CvXMLLoadUtility::UpdateProgressCB(const char* szMessage)
 {
-	OutputDebugString("Updating ProgressCB: Start");
+	OutputDebugString("Updating ProgressCB: Start\n");
 	if (m_iCurProgressStep > GetNumProgressSteps())
 	{
 		m_iCurProgressStep = 1;	// wrap
@@ -592,7 +602,7 @@ void CvXMLLoadUtility::UpdateProgressCB(const char* szMessage)
 		m_pCBFxn(++m_iCurProgressStep, GetNumProgressSteps(), CvString::format("Reading XML %s",
 			szMessage ? szMessage : "").c_str());
 	}
-	OutputDebugString("Updating ProgressCB: End");
+	OutputDebugString("Updating ProgressCB: End\n");
 }
 
 //

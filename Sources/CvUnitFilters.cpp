@@ -6,10 +6,14 @@
 //  PURPOSE: Classes to filter units
 //
 //------------------------------------------------------------------------------------------------
+
+#include "FProfiler.h"
+
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
 #include "CvGlobals.h"
 #include "CvPlayerAI.h"
+#include "CvInfos.h"
 
 void UnitFilterBase::Activate()
 {
@@ -101,6 +105,7 @@ UnitFilterList::UnitFilterList(const CvPlayer *pPlayer, const CvCity *pCity)
 
 UnitFilterList::~UnitFilterList()
 {
+	PROFILE_EXTRA_FUNC();
 	if(m_bInit)
 	{
 		for (int i = 0; i < NUM_UNIT_FILTERS; i++)
@@ -178,6 +183,7 @@ bool UnitFilterList::setFilterActive(UnitFilterTypes i, bool bActive)
 
 bool UnitFilterList::isFiltered(UnitTypes eUnit) const
 {
+	PROFILE_EXTRA_FUNC();
 	for (int i = 0; i < NUM_UNIT_FILTERS; i++)
 	{
 		if (!m_apUnitFilters[i]->isFiltered(m_pPlayer, m_pCity, eUnit))
@@ -188,6 +194,7 @@ bool UnitFilterList::isFiltered(UnitTypes eUnit) const
 
 void UnitFilterList::setFilterActiveAll(UnitFilterTypes eFilter, bool bActive)
 {
+	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < MAX_PC_PLAYERS; ++iI)
 	{
 		CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iI);

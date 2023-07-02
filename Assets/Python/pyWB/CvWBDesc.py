@@ -3,7 +3,7 @@ import os
 
 GC = CyGlobalContext()
 GAME = GC.getGame()
-VERSION = "C2C_1"
+VERSION = "C2C_2"
 fEncode = "utf-8"
 
 ############
@@ -139,7 +139,7 @@ class CvGameDesc:
 		f.write("EndGame\n")
 
 	def read(self, f):
-		"read in game data"
+		print "CvGameDesc.read"
 		self.iStartYear = GC.getDefineINT("START_YEAR")
 		self.iStartEra = GC.getDefineINT("STANDARD_ERA")
 		self.iCalendarType = GC.getDefineINT("STANDARD_CALENDAR")
@@ -244,6 +244,7 @@ class CvGameDesc:
 
 
 	def apply(self):
+		print "CvGameDesc.apply"
 		GAME.setStartYear(self.iStartYear)
 		GAME.setGameTurn(self.iGameTurn)
 		if self.iCircumnavigatedTeam > -1:
@@ -770,37 +771,37 @@ class CvPlayerDesc:
 					continue
 
 				v = parser.findTokenValue(toks, "GoldenAge")
-				if v!=-1:
+				if v != -1:
 					self.iGoldenAge = max(0, int(v))
 					continue
 
 				v = parser.findTokenValue(toks, "Anarchy")
-				if v!=-1:
+				if v != -1:
 					self.iAnarchy = max(0, int(v))
 					continue
 
 				v = parser.findTokenValue(toks, "CombatXP_ThresholdMod")
-				if v!=-1:
+				if v != -1:
 					self.iCombatXP_ThresholdMod = int(v)
 					continue
 
 				v = parser.findTokenValue(toks, "CombatXP")
-				if v!=-1:
+				if v != -1:
 					self.iCombatXP = int(v)
 					continue
 
 				v = parser.findTokenValue(toks, "CoastalTradeRoute")
-				if v!=-1:
+				if v != -1:
 					self.iCoastalTradeRoute = int(v)
 					continue
 
 				v = parser.findTokenValue(toks, "StateReligionUnit")
-				if v!=-1:
+				if v != -1:
 					self.iStateReligionUnit = int(v)
 					continue
 
 				v = parser.findTokenValue(toks, "StateReligionBuilding")
-				if v!=-1:
+				if v != -1:
 					self.iStateReligionBuilding = int(v)
 					continue
 
@@ -1064,7 +1065,7 @@ class CvCityDesc:
 			f.write("\t\tProductionProcess=%s\n" %(GC.getProcessInfo(city.getProductionProcess()).getType(),))
 
 		for iI in xrange(GC.getNumBuildingInfos()):
-			if city.getNumRealBuilding(iI) > 0:
+			if city.hasBuilding(iI):
 				f.write("\t\tBuildingType=%s, BuildDate=%d\n" %(GC.getBuildingInfo(iI).getType(), city.getBuildingOriginalTime(iI)))
 
 		for iI in xrange(GC.getNumReligionInfos()):
@@ -1087,13 +1088,19 @@ class CvCityDesc:
 			f.write("\t\tScriptData=%s\n\t\t!ScriptData\n" % city.getScriptData())
 
 		# Player culture
+		bFound = False
 		for iPlayerX in xrange(GC.getMAX_PLAYERS()):
 			if GC.getPlayer(iPlayerX).isAlive():
 				name = GC.getPlayer(iPlayerX).getName().encode(fEncode)
-			else: name = ""
-			iPlayerCulture = city.getCulture(iPlayerX)
+			else: name = "Error"
+			iPlayerCulture = city.getCultureTimes100(iPlayerX)
 			if iPlayerCulture > 0:
-				f.write("\t\tPlayer%dCulture=%d, (%s)\n" %(iPlayerX, iPlayerCulture, name))
+				if not bFound:
+					f.write("\t\tCityCultures\n")
+					bFound = True
+				f.write("\t\t\tPlayer=|%d| Culture=|%d| (%s)\n" %(iPlayerX, iPlayerCulture, name))
+
+		if bFound: f.write("\t\t!CityCultures\n")
 
 		if city.getDefenseDamage() > 0:
 			f.write("\t\tDamage=%d\n" %(city.getDefenseDamage(),))
@@ -1122,6 +1129,7 @@ class CvCityDesc:
 
 	# read in city data - at this point the first line 'BeginCity' has already been read
 	def read(self, f, iX, iY):
+		print "CvCityDesc.read"
 		self.plotX = iX
 		self.plotY = iY
 		self.owner = None
@@ -1282,37 +1290,41 @@ class CvCityDesc:
 				continue
 
 			# Player Culture
-			for iPlayerX in xrange(GC.getMAX_PLAYERS()):
-				v = parser.findTokenValue(toks, "Player%dCulture" % iPlayerX)
-				if v != -1:
-					if int(v) > 0:
-						self.lCulture.append([iPlayerX, int(v)])
-					break
+			v = parser.findTokenValue(toks, "CityCultures")
 			if v != -1:
+				peek = f.readline()
+
+				while "!CityCultures" not in peek:
+					entry = peek.split("|")
+					if int(entry[1]) < GC.getMAX_PLAYERS():
+						self.lCulture.append([int(entry[1]), int(entry[3])])
+					peek = f.readline()
+
 				continue
 
+
 			v = parser.findTokenValue(toks, "Damage")
-			if v!=-1:
+			if v != -1:
 				self.iDamage = int(v)
 				continue
 
 			v = parser.findTokenValue(toks, "Occupation")
-			if v!=-1:
+			if v != -1:
 				self.iOccupation = int(v)
 				continue
 
 			v = parser.findTokenValue(toks, "ExtraHappiness")
-			if v!=-1:
+			if v != -1:
 				self.iExtraHappiness = int(v)
 				continue
 
 			v = parser.findTokenValue(toks, "ExtraHealth")
-			if v!=-1:
+			if v != -1:
 				self.iExtraHealth = int(v)
 				continue
 
 			v = parser.findTokenValue(toks, "ExtraTrade")
-			if v!=-1:
+			if v != -1:
 				self.iExtraTrade = int(v)
 				continue
 
@@ -1344,6 +1356,7 @@ class CvCityDesc:
 
 	# after reading, this will actually apply the data
 	def apply(self):
+		print "CvCityDesc.apply"
 		self.city = city = GC.getPlayer(self.owner).initCity(self.plotX, self.plotY)
 
 		if self.name != None:
@@ -1355,14 +1368,12 @@ class CvCityDesc:
 			city.setFood(self.iFood)
 
 		for item in self.lCulture:
-			city.setCulture(item[0], item[1], True)
+			city.setCultureTimes100(item[0], item[1], False)
 
 		for key, date in self.bldgType:
 			iBuilding = GC.getInfoTypeForString(key)
 			if iBuilding > -1:
-				city.setNumRealBuilding(iBuilding, 1)
-				if not date is None:
-					city.setBuildingOriginalTime(iBuilding, int(date))
+				city.changeHasBuilding(iBuilding, True)
 
 		for key in self.religions:
 			iReligion = GC.getInfoTypeForString(key)
@@ -1419,6 +1430,7 @@ class CvCityDesc:
 			city.setOccupationTimer(self.iOccupation)
 
 	def postApply(self):
+		print "CvCityDesc.postApply"
 		city = self.city
 		city.changeExtraHappiness(self.iExtraHappiness - city.getExtraHappiness())
 		city.changeExtraHealth(self.iExtraHealth - city.getExtraHealth())
@@ -1442,7 +1454,6 @@ class CvCityDesc:
 class CvPlotDesc:
 
 	def write(self, f, plot):
-		"save plot desc to a file"
 		f.write("BeginPlot\n")
 		f.write("\tx=%d, y=%d\n" %(plot.getX(), plot.getY()))
 
@@ -1494,18 +1505,25 @@ class CvPlotDesc:
 		if not bFirst:
 			f.write("\n") # terminate reveal line
 
+		# Player culture
+		bFound = False
 		for iPlayerX in xrange(GC.getMAX_PLAYERS()):
 			if GC.getPlayer(iPlayerX).isAlive():
 				name = GC.getPlayer(iPlayerX).getName().encode(fEncode)
-			else: name = ""
+			else: name = "Error"
 			iPlayerCulture = plot.getCulture(iPlayerX)
 			if iPlayerCulture > 0:
-				f.write("\tPlayer%dCulture=%d, (%s)\n" %(iPlayerX, iPlayerCulture, name))
+				if not bFound:
+					f.write("\t\tPlotCultures\n")
+					bFound = True
+				f.write("\t\t\tPlayer=|%d| Culture=|%d| (%s)\n" %(iPlayerX, iPlayerCulture, name))
+
+		if bFound: f.write("\t\t!PlotCultures\n")
 
 		f.write("EndPlot\n")
 
+
 	def read(self, f):
-		"read in a plot desc"
 		parser = CvWBParser()
 		if parser.findToken(f, "BeginPlot", "BeginSign"):
 
@@ -1642,13 +1660,17 @@ class CvPlotDesc:
 							self.abTeamPlotRevealed.append(int(teamLoop))
 					continue
 
-				for iPlayerX in xrange(GC.getMAX_PLAYERS()):
-					v = parser.findTokenValue(toks, "Player%dCulture" % iPlayerX)
-					if v != -1:
-						if int(v) > 0:
-							self.lCulture.append([iPlayerX, int(v)])
-						break
+				# Player Culture
+				v = parser.findTokenValue(toks, "PlotCultures")
 				if v != -1:
+					peek = f.readline()
+
+					while "!PlotCultures" not in peek:
+						entry = peek.split("|")
+						if int(entry[1]) < GC.getMAX_PLAYERS():
+							self.lCulture.append([int(entry[1]), int(entry[3])])
+						peek = f.readline()
+
 					continue
 
 				if parser.findTokenValue(toks, "EndPlot") != -1:
