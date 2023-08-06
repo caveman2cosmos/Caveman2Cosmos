@@ -6672,7 +6672,8 @@
 		<German>Rundenabstand</German>
 		<Italian>Numero di turni</Italian>
 		<Spanish>Número de turnos</Spanish>
-		<Russian>Ïðèðîñò ñëîæíîñòè</Russian>			
+		<Russian>Ïðèðîñò ñëîæíîñòè</Russian>
+	</TEXT>		
 	<TEXT>		
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYAITURNINCREMENTS_HOVER</Tag>
 		<English>How often the game checks AI difficulty level and adjusts it. Requires Flexible Difficulty to be enabled.</English>
