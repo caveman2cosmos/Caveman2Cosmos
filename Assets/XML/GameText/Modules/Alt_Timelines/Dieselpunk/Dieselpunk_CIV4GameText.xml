@@ -20,14 +20,14 @@
 		<Russian>Àýðîäðîì - çåìåëüíûé èëè âîäíûé ó÷àñòîê ñ âîçäóøíûì ïðîñòðàíñòâîì, ñîîðóæåíèÿìè è îáîðóäîâàíèåì, îáåñïå÷èâàþùèìè âçëåò, ïîñàäêó, ðóëåíèå, ðàçìåùåíèå è îáñëóæèâàíèå ñàìîëåòîâ, âåðòîëåòîâ è ïëàíåðîâ.[PARAGRAPH:2]Ðàçâèâàþùàÿñÿ èíäóñòðèÿ àâèàïåðåâîçîê íóæäàåòñÿ â ìåñòå äëÿ áàçèðîâàíèÿ äèðèæàáëåé è ãèäðîïëàíîâ, ÷òîáû îáåñïå÷èòü êîìôîðòíûå óñëîâèÿ äëÿ ïîñàäêè áîãàòûõ êëèåíòîâ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CULTURE_DIESELPUNK</Tag>
+		<Tag>TXT_KEY_BUILDING_DIESELPUNK_EMBASSY</Tag>
 		<English>Culture (Dieselpunk)</English>
-		<Italian>Cultura (Dieselpunk)</Italian>
 		<Polish>Kultura (Dieselpunk)</Polish>
 		<Russian>Äèçåëüïàíê</Russian>
+		<Italian>Dieselpunk (cultura alternativa)</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CULTURE_DIESELPUNK_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_DIESELPUNK_EMBASSY_PEDIA</Tag>
 		<English>Dieselpunk is based on the aesthetics of the period between the end of the World War I and the beginning of World War II. This sub-genre is sometimes named Decopunk, referring to the Art Deco art style (including its Streamline Moderne variant). The genre combines the artistic and genre influences of the period (including pulp magazines, serial films, film noir, art deco, and wartime pin-ups) with postmodern technology and sensibilities.</English>
 		<Italian>Dieselpunk è basata sull'estetica nel periodo tra la fine della prima guerra mondiale e l'inizio della seconda. Questo sottogenere viene spesso chiamato Decopunk, in riferimento alla corrente artistica Art Deco (inclusa la sua variante moderna). Il genere combina le influenze artistiche di questo periodo (incluse riviste di tendenza, serie tv, film noir, art deco e pin-up) con la tecnologia e la sensibilità post-moderna.</Italian>
 		<Russian>Äèçåëüïàíê - ðàçâèâàþùèéñÿ æàíð ôàíòàñòèêè, ïðîèçâîäíûé îò êèáåðïàíêà, îïèñûâàþùèé ìèð, áàçèðóþùèéñÿ íà òåõíîëîãèÿõ óðîâíÿ 20-õ - 50-õ ãã. XX âåêà (ïåðèîä ñ Ïåðâîé ìèðîâîé âîéíû ïî Âòîðóþ ìèðîâóþ âîéíó), à òàêæå çàðîæäàþùàÿñÿ ñóáêóëüòóðà, ñî÷åòàþùàÿ â ñåáå ýñòåòèêó òîãî âðåìåíè ñ ïîñòìîäåðíèñòñêèìè òåõíîëîãèÿìè è ÷óâñòâàìè.[PARAGRAPH:2]Òåðìèí ïîÿâèëñÿ â 2001 ãîäó êàê ìàðêåòèíãîâûé õîä, êîòîðûé ïðèäóìàë èãðîâîé äèçàéíåð Ëüþèñ Ïîëëàê, ÷òîáû îïèñàòü åãî íàñòîëüíóþ ðîëåâóþ èãðó «Children of the Sun». Ïîñëå ýòîãî òåðìèí ïðèìåíÿëñÿ, ÷òîáû îïèñàòü îñîáûé ñòèëü èçîáðàçèòåëüíîãî èñêóññòâà, ìóçûêè, êèíî, õóäîæåñòâåííîé ëèòåðàòóðû, è ìîääèíãà òåõíèêè.[PARAGRAPH:1]Ñëîâî "äèçåëüïàíê" ÿâëÿåòñÿ ïðîèçâîäíûì îò íàçâàíèÿ æàíðà êèáåðïàíê, è èñïîëüçóåòñÿ äëÿ ïðåäñòàâëåíèÿ ïåðèîäà âðåìåíè, êîãäà äèçåëüíûé äâèãàòåëü áûë â îñíîâå ïåðåäâèæåíèÿ â çàïàäíîé êóëüòóðå è "ïàíê" - ñóôôèêñ, ñâÿçàííûé ñ æàíðàìè õóäîæåñòâåííûõ ïðîèçâåäåíèé, â êîòîðûõ îáùåñòâî íàõîäèòñÿ â ãëóáîêîì óïàäêå èëè íà ñòàäèè ðàäèêàëüíûõ ïåðåìåí â ñîöèàëüíîì óñòðîéñòâå. Òàêæå òåðìèí ññûëàåòñÿ íà ñòèìïàíê, äðóãóþ ïðîèçâîäíóþ êèáåðïàíêà, â êîòîðîì, êàê ïðàâèëî, îñíîâíîå âíèìàíèå îáðàùàåòñÿ íå íà ïðîáëåìû îáùåñòâà, à íà ýñòåòèêó âèêòîðèàíñêîé ýïîõè.</Russian>
@@ -52,7 +52,7 @@
 		<Russian>Ïåðâîíà÷àëüíî øïèëü Ýìïàéð-ñòåéò-áèëäèíã ïðåäïîëàãàëîñü èñïîëüçîâàòü â êà÷åñòâå ïðè÷àëüíîé ìà÷òû äëÿ äèðèæàáëåé. 102-é ýòàæ áûë ñïðîåêòèðîâàí òàêèì îáðàçîì, ÷òî ïðåêðàñíî ñïðàâèëñÿ áû ñ ðîëüþ ïðè÷àëüíîé ïëàòôîðìû ñî ñõîäíÿìè äëÿ ïîäúåìà íà äèðèæàáëü.[PARAGRAPH:1]Îäíàêî ñåðüåçíûì ïðåïÿòñòâèåì äëÿ âîïëîùåíèÿ ýòîé èäåè ïîñëóæèëè íåáëàãîïðèÿòíûå ïîãîäíûå óñëîâèÿ - äèðèæàáëü íå ìîã ïðè÷àëèòü ê øïèëþ çäàíèÿ èç-çà ñèëüíûõ è íåñòàáèëüíûõ âîçäóøíûõ ïîòîêîâ íà òàêîé âûñîòå. Ýòî ñòàëî ïîíÿòíî ïîñëå ïåðâîé æå ïîïûòêè öåïïåëèíà ïðèøâàðòîâàòüñÿ, è â 1952-ì ãîäó âëàäåëüöû çäàíèÿ îêîí÷àòåëüíî îòêàçàëèñü îò ýòîé èäåè.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FARNSWORTH_ELECTRONICS_LAB</Tag>
+		<Tag>TXT_KEY_BUILDING_FARNSWORTH_LAB</Tag>
 		<English>Farnsworth Electronics Lab</English>
 		<French>
 			<Text>Laboratoire d'Electronique de Farnsworth</Text>
@@ -64,7 +64,7 @@
 		<Russian>Ëàá. ýëåêòðîíèêè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FARNSWORTH_ELECTRONICS_LAB_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_FARNSWORTH_LAB_PEDIA</Tag>
 		<English>Farnsworth called his device an image dissector because it converted individual elements of the image into electricity one at a time. He replaced the spinning disks with cesium, an element that emits electrons when exposed to light.</English>
 		<Italian>Farnsworth chiamò il suo strumento dissettore di immagini, dato che convertiva gli elementi dell'immagine in impulsi elettrici. Sostituì i dischi girevoli con cesio, un elemento che emette elettroni quando esposto alla luce.</Italian>
 		<Polish>Philo Taylor Farnsworth (19 sierpnia 1906 - 11 marca 1971), amerykański wynalazca i pionier telewizji. Twórca wielu wynalazków, które miały kluczowe znaczenie dla wczesnego rozwoju elektronicznej telewizji. Najbardziej znany za wynalezienia pierwszego w pełni funkcjonalnego urządzenia dla elektronicznego obrazu (CRT), dysektora. Opracował również pierwszy w pełni funkcjonalny i kompletny elektroniczny system telewizyjny i jako pierwszy zaprezentował taki system społeczeństwu. Farnsworth opracował system telewizyjny wraz z odbiornikiem i kamerą, który był produkowany w firmie Farnsworth Television and Radio Corporation, od 1938 do 1951.</Polish>
@@ -78,7 +78,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>Grande Aerodromo</Italian>
+		<Italian>Gran aerodromo</Italian>
 		<Polish>Wielki Aerodrom</Polish>
 		<Russian>Áîëüøîé àýðîäðîì</Russian>
 	</TEXT>
@@ -99,6 +99,7 @@
 		</French>
 		<Polish>Radiopleks</Polish>
 		<Russian>Ðàäèîïëåêñ</Russian>
+		<Italian>Teatro radiofonico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RADIOPLEX_PEDIA</Tag>
@@ -153,17 +154,20 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>Дизельпанк</Russian>
+		<Italian>Dieselpunk (cultura alternativa)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DIESELPUNK_PEDIA</Tag>
 		<English>[BOLD]Dieselpunk[\BOLD], A manipulation on an alternate version of a future 1950s from the developed technology and society of the 1930's, where the Great Depression never arrived and World War II is still being fought as a prolonged Cold War. In turn, Japan continues its progress towards technological modernization, developing the earliest computers and terminals. Nazi scientists continue experimenting by taking the route of biotechnology, sparking off a genetic revolution of bio-mods, clones, and organ harvesting. Whilst the Americans and British take both of these technologies to develop mind-control devices, spawning man-machine interfaces and sparking the atomic-powered machine age.</English>
 		<Russian>[BOLD]Дизельпанк[\BOLD] - манипуляция альтернативной версией будущего 1950-х годов из развитой технологии и общества 1930-х годов, когда Великая Депрессия так и не наступила, а Вторая мировая война все еще ведется как длительная холодная война. В свою очередь, Япония продолжает продвижение к технологической модернизации, разрабатывая самые ранние компьютеры и терминалы. Нацистские ученые продолжают экспериментировать, выбирая путь биотехнологии, инициируя генетическую революцию биомодов, клонов и извлечения органов. В то время как американцы и британцы используют обе эти технологии для разработки устройств контроля сознания, порождающих человеко-машинные интерфейсы и вызывающих атомную эру машинного века.</Russian>
+		<Italian>[BOLD]Dieselpunk[\BOLD], una manipolazione su una versione alternativa del futuro degli anni '50 dalla tecnologia sviluppata e dalla società degli anni '30, dove la grande depressione non è mai arrivata e la seconda guerra mondiale è ancora combattuta come una guerra fredda prolungata. A sua volta, il Giappone continua il suo progresso verso la modernizzazione tecnologica, sviluppando i primi computer e terminali. Gli scienziati nazisti continuano a sperimentare prendendo la strada della biotecnologia, innescando una rivoluzione genetica di bio-modificazioni, cloni e prelievo di organi. Mentre gli americani e gli inglesi utilizzano entrambe queste tecnologie per sviluppare dispositivi di controllo mentale, generando interfacce uomo-macchina e innescando l'era delle macchine a propulsione atomica.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_DIESELPUNK_QUOTE</Tag>
 		<English>"Progress has not followed a straight ascending line, but a spiral with rhythms of progress and retrogression, of evolution and dissolution." - Johann Wolfgang von Goethe</English>
 		<French>"Le Progrès n'évolue pas comme une ligne droite ascendante, mais plutôt comme une spirale, avec des périodes de progrès, d'autres de régression. De l'évolution et de la dissolution." - Johann Wolfgang von Goethe</French>
 		<Russian>«Прогресс идет не по прямой восходящей линии, а по спирали с ритмами прогресса и регресса, эволюции и распада». - Иоганн Вольфганг фон Гете</Russian>
+		<Italian>"Il progresso non ha seguito una linea retta ascendente, ma una spirale con ritmi di progresso e regresso, di evoluzione e dissoluzione." - Johann Wolfgang von Goethe</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BIG_BERTHA</Tag>
@@ -171,11 +175,12 @@
 		<French>Grosse Bertha</French>
 		<Polish>Wielka Berta</Polish>
 		<Russian>Áîëüøàÿ Áåðòà</Russian>
+		<Italian>Grande Berta</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BIG_BERTHA_PEDIA</Tag>
 		<English>The Big Bertha is a massive artillery unit, the companion unit to the Railroad Artillery. It sacrifices movement for firepower even more than normal siege units, meaning that it can be captured.</English>
-		<Italian>La Big Bertha è una potentissima unità di artiglieria. Sacrifica la mobilità in favore della potenza di fuoco, e per questo motivo può essere catturata.</Italian>
+		<Italian>La grande Berta è una potentissima unità di artiglieria. Sacrifica la mobilità in favore della potenza di fuoco, e per questo motivo può essere catturata.</Italian>
 		<Polish>M-Gerät, popularnie znana jako Dicke Bertha (pol. gruba berta) - ciężki moździerz oblężniczy kalibru 420 mm, produkowany przez zakłady Kruppa w Essen. Był to najcięższy moździerz I wojny światowej zdolny przebić stropy wszystkich fortów tamtego okresu o grubości 2,5 m oraz osłony pancerne o grubości do 300 mm. Istniała stacjonarna wersja działa oznaczona jako Gamma wz. 1913 i jej ciągniona wersja oznaczona typ M wz. 1914. Obydwie wersje powstały w firmie Krupp pod kierunkiem prof. Rausenbergera. Niemcy w chwili wybuchu I wojny światowej dysponowali 5 moździerzami stacjonarnymi i 2 ciągnionymi. Użyto je do burzenia fortów belgijskich (Liege, Namur) i francuskich (Manonvillers). Były również wykorzystane do ostrzeliwania twierdzy Modlin, którą broniła 105-tysięczna załoga rosyjska oraz ostatecznego rozbicia wzniesionej przez Austriaków, a następnie opanowanej przez Rosjan twierdzy Przemyśl.</Polish>
 		<Russian>Áîëüøàÿ Áåðòà - ýòî ìàññèâíûé àðòèëëåðèéñêèé þíèò, ñïóòíèê áðîíåïîåçäîâ. Îí æåðòâóåò ïîäâèæíîñòüþ â ïîëüçó îãíåâîé ìîùè â áîëüøåé ñòåïåíè, ÷åì îáû÷íûå îñàäíûå þíèòû, ýòî îçíà÷àåò, ÷òî îí ìîæåò áûòü çàõâà÷åí.</Russian>
 	</TEXT>
@@ -185,12 +190,14 @@
 		<French>Fusilier Chromium</French>
 		<Polish>Strzelec Chromium</Polish>
 		<Russian>Õðîìîâûé ñòðåëîê</Russian>
+		<Italian>Fuciliere di cromo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHROMIUM_GUNMAN_PEDIA</Tag>
 		<English>The Chromium Gunman is an internal-combustion-powered denizen of the Dieselpunk culture. He is an automaton born of Henry Ford's grand vision of assembly line mass production, and his polished but unpainted metal exterior is "so in right now" (in the 1920s and 30s that is).</English>
 		<Polish>Strzelec Chromium to prymitywny android napędzany przez silnik spalinowy Henriego Forda.</Polish>
 		<Russian>Õðîìîâûé ñòðåëîê - ýòî ïðåäñòàâèòåëü êóëüòóðû äèçåëüïàíêà ñ äâèãàòåëåì âíóòðåííåãî ñãîðàíèÿ. Îí ïðåäñòàâëÿåò ñîáîé àâòîìàòîí èç îòïîëèðîâàííîãî íåîêðàøåííîãî ìåòàëëà ðîæäåííûé âåëèêèì ïðîâèäöåì Ãåíðè Ôîðäîì íà êîíâååðíîé ëèíèè.</Russian>
+		<Italian>Il fuciliere di cromo, alimentato a combustione interna, è un rappresentante della cultura Dieselpunk. È un automa nato dalla visione di Henry Ford sulla produzione di massa in catena di montaggio. Il suo esterno in metallo è lucido ma non verniciato.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DOUBLE_BIPLANE</Tag>
@@ -241,14 +248,14 @@
 		<Tag>TXT_KEY_UNIT_RAILROAD_ARTILLERY</Tag>
 		<English>Railroad Artillery</English>
 		<French>Artillerie sur Train</French>
-		<Italian>Cannone ferroviario</Italian>
+		<Italian>Artiglieria ferroviaria</Italian>
 		<Polish>Artyleria Kolejowa</Polish>
 		<Russian>Áðîíåïîåçä</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RAILROAD_ARTILLERY_PEDIA</Tag>
 		<English>The Railroad Artillery is a massive artillery piece. It sacrifices movement for firepower even more than normal siege units, meaning that it can be captured.</English>
-		<Italian>Il cannone ferroviario è una potentissima unità di artiglieria. Sacrifica la mobilità in favore della potenza di fuoco, e per questo motivo può essere catturato.</Italian>
+		<Italian>L' artiglieria ferroviaria è una potentissima unità di artiglieria. Sacrifica la mobilità in favore della potenza di fuoco, e per questo motivo può essere catturato.</Italian>
 		<Polish>Artyleria kolejowa - artyleria wielkiej mocy składająca się z dział dalekonośnych, przewożonych na specjalnych wieloosiowych platformach kolejowych. Masa dział artylerii kolejowej wynosi od kilkudziesięciu do kilkuset ton. Pierwsze działa kolejowe użyte zostały w czasie I wojny światowej. Niewielka liczba dział kolejowych (o kalibrach nawet do 800 mm) była użyta podczas II wojny światowej, głównie przez Niemców, przede wszystkim do obrony wybrzeża. Po 1945 artyleria kolejowa wyparta została przez artylerię rakietową.</Polish>
 		<Russian>Áðîíåïîåçä - ýòî ìàññèâíûé àðòèëëåðèéñêèé þíèò. Îí æåðòâóåò ïîäâèæíîñòüþ â ïîëüçó îãíåâîé ìîùè â áîëüøåé ñòåïåíè, ÷åì îáû÷íûå îñàäíûå þíèòû, ýòî îçíà÷àåò, ÷òî îí ìîæåò áûòü çàõâà÷åí.</Russian>
 	</TEXT>
@@ -271,7 +278,7 @@
 		<Tag>TXT_KEY_UNIT_VERY_HEAVY_ARMOR</Tag>
 		<English>Very Heavy Tank</English>
 		<French>Tank Lourd Blindé</French>
-		<Italian>Carro blindato pesante</Italian>
+		<Italian>Carro armato pesante</Italian>
 		<Polish>Superciężki Czołg</Polish>
 		<Russian>Ñâåðõòÿæåëûé òàíê</Russian>
 	</TEXT>

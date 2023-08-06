@@ -41,7 +41,7 @@
 		<English>[ICON_BULLET]%s1[ICON_GOLD] per city with access to</English>
 		<French>[ICON_BULLET]%s1[ICON_GOLD] par ville ayant accès à</French>
 		<German>[ICON_BULLET]%s1[ICON_GOLD] pro Stadt mit Zugang zu</German>
-		<Italian>[ICON_BULLET]%s1[ICON_GOLD] per goni città con accesso a</Italian>
+		<Italian>[ICON_BULLET]%s1[ICON_GOLD] per ogni città con accesso a</Italian>
 		<Spanish>[ICON_BULLET]%s1[ICON_GOLD] por ciudad con acceso a</Spanish>
 		<Polish>[ICON_BULLET]%s1[ICON_GOLD] na miasto z dostępem do</Polish>
 		<Russian>[ICON_BULLET]%s1[ICON_GOLD] çà ãîðîä ñ äîñòóïîì ê </Russian>
@@ -101,7 +101,7 @@
 		<English>% Faster Construction of[SPACE]</English>
 		<French>% Construction plus rapide de[SPACE]</French>
 		<German>% schnellere Konstruktion von[SPACE]</German>
-		<Italian>% costruzione più veloce di[SPACE]</Italian>
+		<Italian>% di costruzione più veloce per[SPACE]</Italian>
 		<Spanish>% de aumento de velocidad de construcción de[SPACE]</Spanish>
 		<Polish>% szybciej:[SPACE]</Polish>
 		<Russian>% Ускоренное строительство[SPACE]</Russian>
@@ -487,7 +487,7 @@
 		<English>[ICON_BULLET]%d1 local stability bonus per turn in each city</English>
 		<French>[ICON_BULLET]%d1 de bonus par tour : Stabilité locale pour la ville</French>
 		<German>[ICON_BULLET]Stabilitätsbonus von %d1 pro Runde in jeder Stadt</German>
-		<Italian>[ICON_BULLET]Bonus Stabilità Locale: %d1/turno ogni città</Italian>
+		<Italian>[ICON_BULLET]Aumento [COLOR_GREEN]stabilità locale[COLOR_REVERT]: [COLOR_GREEN]%d1 a turno[COLOR_REVERT] in tutte le città</Italian>
 		<Spanish>[ICON_BULLET]Bonificación a la estabilidad local de %d1/turno en la ciudad</Spanish>
 		<Polish>[ICON_BULLET]%d1 do lokalnego bonusu stabilności na turę w każdym mieście</Polish>
 		<Russian>[ICON_BULLET]%D1 ìåñòíîé ñòàáèëüíîñòè â õîä, â êàæäîì èç ãîðîäîâ</Russian>
@@ -497,7 +497,7 @@
 		<English>[ICON_BULLET]%d1 local instability penalty per turn</English>
 		<French>[ICON_BULLET]%d1 de pénalité par tour : Instabilité locale pour la ville</French>
 		<German>[ICON_BULLET]Instabilitätsmalus von %d1 pro Runde in jeder Stadt</German>
-		<Italian>[ICON_BULLET]Penalità Instabilità Locale: %d1/turno ogni città</Italian>
+		<Italian>[ICON_BULLET]Penalità instabilità locale: %d1 a turno in tutte le città</Italian>
 		<Spanish>[ICON_BULLET]Penalización a la estabilidad local de %d1/turno en la ciudad</Spanish>
 		<Polish>[ICON_BULLET]%d1 do lokalnej kary niestabilności na turę w każdym mieście</Polish>
 		<Russian>[ICON_BULLET]%D1 ìåñòíîé íåñòàáèëüíîñòè â õîä, â êàæäîì èç ãîðîäîâ</Russian>
@@ -507,7 +507,7 @@
 		<English>[ICON_BULLET]%d1 national stability bonus per turn</English>
 		<French>[ICON_BULLET]%d1 de bonus par tour : Stabilité au niveau national</French>
 		<German>[ICON_BULLET]nationaler Stabilitätsbonus von %d1 pro Runde</German>
-		<Italian>[ICON_BULLET]Bonus Stabilità Nazionale: %d1/turno</Italian>
+		<Italian>[ICON_BULLET]Bonus stabilità nazionale: %d1 a turno</Italian>
 		<Spanish>[ICON_BULLET]Bonificación a la estabilidad nacional de %d1/turno</Spanish>
 		<Polish>[ICON_BULLET]%d1 narodowy bonus do stabilności na turę</Polish>
 		<Russian>[ICON_BULLET]%D1 íàöèîíàëüíîé ñòàáèëüíîñòè â õîä</Russian>
@@ -820,7 +820,7 @@
 		<Russian>Труд.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVICOPTION_AGRICULTURE</Tag>
+		<Tag>TXT_KEY_CIVICOPTION_AGICULTURE</Tag>
 		<English>Agriculture</English>
 		<French>Agriculture</French>
 		<German>
@@ -1503,11 +1503,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Sistema a caste</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Sistema a caste</Italian>
 		<Spanish>
 			<Text>Sistema de castas</Text>
 			<Gender>Male</Gender>

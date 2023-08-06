@@ -8,11 +8,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>
-			<Text>Orologio automatico</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Orologio con automi</Italian>
 		<Polish>
 			<Text>Automat Zegarowy</Text>
 			<Gender>Male</Gender>
@@ -27,18 +23,14 @@
 		<Russian>Àâòîìàòè÷åñêèå ÷àñû - ýòî òèï ÷àñîâ ñ àâòîìàòèçèðîâàííûì áîåì. Ýòè ÷àñû ñîçäàâàëèñü â Åâðîïå íà÷èíàÿ ñî ñðåäíåâåêîâüÿ è äî âèêòîðèàíñêîé ýïîõè. Òðàäèöèè èçîáðåòàòåëüñòâà äåëàþò èõ áîëåå ðàñïðîñòðàíåíûìè â íàøåé ñòðàíå, ÷åì â äðóãèõ. Àâòîìàò, êàê ïðàâèëî, óñòàíàâëèâàëè íà ÷àñ, ïîë÷àñà èëè ÷åòâåðòü ÷àñà, îáû÷íî ñ óäàðàìè êîëîêîëà.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ORNITHOPTER_AERIE</Tag>
+		<Tag>TXT_KEY_BUILDING_CLOCKPUNK_AIRPORT</Tag>
 		<English>Ornithopter Aerie</English>
 		<French>
 			<Text>Aire d'ornithoptères</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>
-			<Text>Nido per ornitotteri</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Nido degli ornitotteri</Italian>
 		<Polish>
 			<Text>Baza Ornitopterów</Text>
 			<Gender>Male</Gender>
@@ -47,21 +39,21 @@
 		<Russian>Îðíèòîïò. ïëîùàäêà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ORNITHOPTER_AERIE_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_CLOCKPUNK_AIRPORT_PEDIA</Tag>
 		<English>An [COLOR_BUILDING_TEXT]Ornithopter Aerie[COLOR_REVERT] is an early airport for [COLOR_UNIT_TEXT]ornithopters[COLOR_REVERT].</English>
 		<French>Un [COLOR_BUILDING_TEXT]aire d'ornithoptères[COLOR_REVERT] est un petit aérodrome, d'où peuvent décoller les [COLOR_UNIT_TEXT]ornithoptères[COLOR_REVERT].</French>
 		<Italian>Un [COLOR_BUILDING_TEXT]nido per ornitotteri[COLOR_REVERT] è un primitivo aeroporto, ideato per gli [COLOR_UNIT_TEXT]ornitotteri[COLOR_REVERT].</Italian>
 		<Russian>Îðíèòîïòåðíàÿ ïëîùàäêà - ýòî äðåâíèé àýðîïîðò äëÿ îðíèòîïòåðîâ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CULTURE_CLOCKPUNK</Tag>
+		<Tag>TXT_KEY_BUILDING_CLOCKPUNK_EMBASSY</Tag>
 		<English>Culture (Clockpunk)</English>
-		<Italian>Cultura (Clockpunk)</Italian>
 		<Polish>Kultura (Clockpunk)</Polish>
 		<Russian>Клокпанк</Russian>
+		<Italian>Clockpunk (cultura alternativa)</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CULTURE_CLOCKPUNK_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_CLOCKPUNK_EMBASSY_PEDIA</Tag>
 		<English>[COLOR_BUILDING_TEXT]Clockpunk[COLOR_REVERT] is a subgenre of speculative fiction which is similar to steampunk. It portrays advanced technologies based on springs and clockwork, instead of current technologies, despite keeping a pre-modern design. Clockpunk is based very intensively on the works of Leonardo da Vinci and, as such, it is typically set during the Renaissance or in a Renaissance-like era.</English>
 		<French>Le [COLOR_BUILDING_TEXT]Clockpunk[COLOR_REVERT] est un sous-genre de fiction spéculative similaire au steampunk. Il décrit des technologies avancées basées sur des ressorts et des horloges, au lieu des technologies actuelles, tout en conservant un design pré-moderne. Clockpunk est très intensément basé sur les œuvres de Léonard de Vinci et, en tant que tel, il se déroule généralement à la Renaissance ou à une époque similaire à la Renaissance.</French>
 		<Italian>Il [COLOR_BUILDING_TEXT]Clockpunk[COLOR_REVERT] è un sottogenere della letteratura fantascientifica simile allo steampunk. Ritrae tecnologie avanzate basate su molle e orologi, al contrario dei meccanismi attuali, pur mantenendo un design pre-moderno. Il Clockpunk si basa ampiamente sulle opere di Leonardo da Vinci e, pertanto, è tipicamente ambientato durante il Rinascimento o in uno scenario simile all'epoca rinascimentale.</Italian>
@@ -75,11 +67,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>
-			<Text>Laboratorio di orologeria</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Laboratorio di orologeria</Italian>
 		<Polish>
 			<Text>Warsztat Zegarmistrzowski</Text>
 			<Gender>Male</Gender>
@@ -101,11 +89,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>
-			<Text>Teatro-Orchestrion</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Teatro d'orchestrion</Italian>
 		<Polish>
 			<Text>Teatr Orchestrion</Text>
 			<Gender>Male</Gender>
@@ -120,18 +104,14 @@
 		<Russian>Îðêåñòðèîí - íàçâàíèå ðÿäà ìóçûêàëüíûõ èíñòðóìåíòîâ, ïðèñïîñîáëåííûõ äëÿ èìèòàöèè çâó÷àíèÿ îðêåñòðà.[PARAGRAPH:1]Èíñòðóìåíò èìåë âèä øêàôà, âíóòðè êîòîðîãî áûë ïîìåùåí ïðóæèííûé èëè ïíåâìàòè÷åñêèé ìåõàíèçì, êîòîðûé ïðè âáðàñûâàíèè ìîíåòû ïðèâîäèëñÿ â äåéñòâèå. Ðàñïîëîæåíèå ñòðóí èëè òðóá èíñòðóìåíòà áûëî ïîäîáðàíî òàêèì îáðàçîì, ÷òîáû ïðè ðàáîòå ìåõàíèçìà çâó÷àëè îïðåäåë¸ííûå ìóçûêàëüíûå ïðîèçâåäåíèÿ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_STEP_RECKONER_MANUFACTURE</Tag>
+		<Tag>TXT_KEY_BUILDING_STEPRECKONER_MANUFACTORY</Tag>
 		<English>Step Reckoner Manufacture</English>
 		<French>
 			<Text>Usine de calculateurs mécaniques</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>
-			<Text>Costruttore di calcolatori meccanici</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Produttore di calcolatori meccanici</Italian>
 		<Polish>
 			<Text>Fabryka Maszyn Liczących</Text>
 			<Gender>Male</Gender>
@@ -140,7 +120,7 @@
 		<Russian>Ôàáðèêà ñ÷åò. ìàøèí</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_STEP_RECKONER_MANUFACTURE_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_STEPRECKONER_MANUFACTORY_PEDIA</Tag>
 		<English>A [COLOR_BUILDING_TEXT]Step Reckoner[COLOR_REVERT] is a portable cranked mechanical calculator that can perform all four basic arithmetic operations (addition, subtraction, multiplication, and division). They're a real step up from the abacus, when it comes to calculating arithmetic.</English>
 		<Italian>Un [COLOR_BUILDING_TEXT]calcolatore meccanico[COLOR_REVERT] è uno strumento portatile in grado di effettuare le quattro operazioni aritmetiche di base (addizione, sottrazione, moltiplicazione e divisione). È un grande passo avanti rispetto all'abaco, per quanto riguarda i calcoli aritmetici.</Italian>
 		<Russian>Ñ÷åòíûå ìàøèíû - ýòî ïåðåíîñíûå ìåõàíè÷åñêèå êàëüêóëÿòîðû, êîòîðûå óìåþò âûïîëíÿòü ïðîñòåéøèå àðèôìåòè÷åñêèå îïåðàöèè.[PARAGRAPH:1]Ýòè ìåõàíèçìû - ñåðüåçíûé øàã âïåðåä, ïî ñðàâíåíèþ ñî ñ÷åòàìè. Äðóãèå, ìåíåå èçîáðåòàòåëüíûå ñòðàíû óòâåðæäàþò, ÷òî îíè ñëîæíû è íåíàäåæíû, íî ìû ñïðàâëÿåìñÿ ñ íèìè ïðîñòî îòëè÷íî.</Russian>
@@ -149,6 +129,7 @@
 		<Tag>TXT_KEY_TECH_CLOCKPUNK</Tag>
 		<English>Clockpunk</English>
 		<Russian>Клокпанк</Russian>
+		<Italian>Clockpunk (cultura alternativa)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CLOCKPUNK_PEDIA</Tag>
@@ -173,11 +154,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>
-			<Text>Golem meccanico</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Golem meccanico</Italian>
 		<Polish>
 			<Text>Mechaniczny Golem</Text>
 			<Gender>Male</Gender>
@@ -199,11 +176,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>
-			<Text>Carro di Leonardo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Carro armato di Leonardo</Italian>
 		<Polish>
 			<Text>Czołg Da Vinci</Text>
 			<Gender>Male</Gender>
@@ -214,7 +187,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DAVINCI_TANK_PEDIA</Tag>
 		<English>A [COLOR_UNIT_TEXT]Da Vinci Tank[COLOR_REVERT] is a prototype of modern tanks, designed by Leonardo da Vinci. It has a conical cover, inspired by a turtle's shell, made of wood and reinforced with metal plates that add to the thickness. Its slanting angles deflect enemy fire. The machine is powered by two large inside cranks, operated by four strong men. The vehicle is equipped with an array of light cannons, placed around the perimeter.</English>
-		<Italian>Un [COLOR_UNIT_TEXT]carro di Leonardo[COLOR_REVERT] è un prototipo dei moderni carri armati, progettato da Leonardo da Vinci. Ha una copertura conica, ispirata a un guscio di tartaruga, realizzata in legno e rinforzata con piastre metalliche che ne aumentano lo spessore. I suoi angoli obliqui deviano il fuoco nemico. La macchina è alimentata da due grandi pedivelle interne, azionate da quattro uomini forti. Il veicolo è dotato di una serie di cannoni leggeri, disposti attorno al perimetro.</Italian>
+		<Italian>Il [COLOR_UNIT_TEXT]carro armaro di Leonardo[COLOR_REVERT] è un prototipo dei moderni carri armati, progettato da Leonardo da Vinci. Ha una copertura conica, ispirata a un guscio di tartaruga, realizzata in legno e rinforzata con piastre metalliche che ne aumentano lo spessore. I suoi angoli obliqui deviano il fuoco nemico. La macchina è alimentata da due grandi pedivelle interne, azionate da quattro uomini forti. Il veicolo è dotato di una serie di cannoni leggeri, disposti attorno al perimetro.</Italian>
 		<Russian>Êîëåñíûé áðîíèðîâàííûé áîåâîé þíèò</Russian>
 	</TEXT>
 	<TEXT>
@@ -225,11 +198,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>
-			<Text>Ornitottero</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Ornitottero</Italian>
 		<Polish>
 			<Text>Ornitopter</Text>
 			<Gender>Male</Gender>
@@ -251,11 +220,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>
-			<Text>Balestriere a ripetizione</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Balestriere a ripetizione</Italian>
 		<Polish>
 			<Text>Kusza Samopowtarzlna</Text>
 			<Gender>Male</Gender>
@@ -266,17 +231,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_REPEATING_CROSSBOWMAN_PEDIA</Tag>
 		<English>A [COLOR_UNIT_TEXT]Repeating Crossbowman[COLOR_REVERT] is a clockpunk-style crossbowman equipped with an enhanced crossbow: the separate actions of stringing the bow, placing the bolt and shooting it can be accomplished with a simple one-handed movement, while keeping the crossbow stationary. This allows a higher rate of fire than a normal crossbow. There is a magazine containing a number of bolts on top of the bow, and the mechanism is worked by moving a rectangular lever forward and backward.</English>
-		<Italian>A [COLOR_UNIT_TEXT]balestriere a ripetizione[COLOR_REVERT] è un balestriere in stile clockpunk dotato di una balestra potenziata, con la quale è possibile tendere la corda, posizionare la freccia e lanciarla con un semplice movimento di una mano, mantenendo ferma la balestra. Questo consente una capacità di fuoco maggiore rispetto a una normale balestra. Sopra la corda, c'è un caricatore con un determinato numero di frecce, mentre il meccanismo viene azionato muovendo una leva rettangolare avanti e indietro.</Italian>
+		<Italian>Un [COLOR_UNIT_TEXT]balestriere a ripetizione[COLOR_REVERT] è un balestriere in stile clockpunk dotato di una balestra potenziata, con la quale è possibile tendere la corda, posizionare la freccia e lanciarla con un semplice movimento di una mano, mantenendo ferma la balestra. Questo consente una capacità di fuoco maggiore rispetto a una normale balestra. Sopra la corda, c'è un caricatore con un determinato numero di frecce, mentre il meccanismo viene azionato muovendo una leva rettangolare avanti e indietro.</Italian>
 		<Russian>Ñòðåëîìåò - ýòî ìíîãîçàðÿäíûé àðáàëåò. Â ýòîì àðáàëåòå äåéñòâèÿ ïî íàòÿæåíèþ òåòèâû, óêëàäêå ñíàðÿäà è ñïóñêó òåòèâû ïðîèçâîäÿòñÿ îäíèì äâèæåíèåì ðóêè. Áëàãîäàðÿ óñòàíàâëèâàåìûì íà îðóæèå ìàãàçèíàì ñ áîëòàìè ìíîãîçàðÿäíûé àðáàëåò ïîçâîëÿåò çíà÷èòåëüíî óâåëè÷èòü òåìï ñòðåëüáû ïî ñðàâíåíèþ ñ îáû÷íûì àðáàëåòîì.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZEPHYR</Tag>
 		<English>Zephyr</English>
-		<Italian>
-			<Text>Zefiro</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Zefiro</Italian>
 		<Polish>
 			<Text>Zefir</Text>
 			<Gender>Male</Gender>

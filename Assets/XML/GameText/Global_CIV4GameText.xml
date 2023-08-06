@@ -75,8 +75,8 @@
 		<English>%F1: %s2 (%D3/Turn)</English>
 		<French>%F1 : %s2 (%D3/tour)</French>
 		<German>%F1: %s2 (%D3/Runde)</German>
-		<Italian>%F1: %s2 (%D3/turno)</Italian>
-		<Spanish>%F1: %s2 (%D3/turno)</Spanish>
+		<Italian>%F1: %s2 %D3 a turno</Italian>
+		<Spanish>%F1: %s2 %D3 a turno</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_COMMERCE_RATE_FLOAT</Tag>
@@ -100,15 +100,15 @@
 		<English>%F1: (%D2/Turn)</English>
 		<French>%F1 : (%D2/tour)</French>
 		<German>%F1: (%D2/Runde)</German>
-		<Italian>%F1: (%D2/turno)</Italian>
-		<Spanish>%F1: (%D2/turno)</Spanish>
+		<Italian>%F1: %D2 a turno</Italian>
+		<Spanish>%F1: %D2 a turno</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_GROWING</Tag>
 		<English>Growing (%d1 [NUM1:Turn:Turns])</English>
 		<French>Croissance (%d1 [NUM1:tour:tours])</French>
 		<German>Wachstum (%d1 [NUM1:Runde:Runden])</German>
-		<Italian>Crescita (%d1 [NUM1:Turno:Turni])</Italian>
+		<Italian>Crescita città: %d1 [NUM1:turno:turni]</Italian>
 		<Spanish>Creciendo (%d1 [NUM1:turno:turnos])</Spanish>
 	</TEXT>
 	<TEXT>
@@ -162,7 +162,7 @@
 		<English>Maintenance:</English>
 		<French>Entretien :</French>
 		<German>Unterhalt:</German>
-		<Italian>Mantenimento:</Italian>
+		<Italian>Costi di mantenimento:</Italian>
 		<Spanish>Mantenimiento:</Spanish>
 	</TEXT>
 	<TEXT>
@@ -170,20 +170,23 @@
 		<English>%s1 (%d2 [NUM2:Turn:Turns])</English>
 		<French>%s1 (%d2 [NUM2:tour:tours])</French>
 		<German>%s1 (%d2 [NUM2:Runde:Runden])</German>
-		<Italian>%s1 (%d2 [NUM2:Turno:Turni])</Italian>
+		<Italian>%s1 %d2 [NUM2:turno:turni])</Italian>
 		<Spanish>%s1 (%d2 [NUM2:turno:turnos])</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_PRODUCTION_BUY</Tag>
 		<English>%s1 (%d2) -%d3[ICON_GOLD]</English>
+    <Italian>PROVA3</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_PRODUCTION_WHIP</Tag>
 		<English>%s1 (%d2) %d3[ICON_ANGRYPOP] %d4[ICON_PRODUCTION]</English>
+    <Italian>Edificio in costruzione: %s1 in %d2 turni - %d3 [ICON_ANGRYPOP] - %d4 [ICON_PRODUCTION]</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_PRODUCTION_WHIP_PLUS_GOLD</Tag>
 		<English>%s1 (%d2) %d3[ICON_ANGRYPOP] %d4[ICON_PRODUCTION] %d5[ICON_GOLD]</English>
+    <Italian>PROVA5</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_SHRINKING</Tag>
@@ -216,7 +219,7 @@
 		<English>(%d1 [NUM1:Turn:Turns])</English>
 		<French>(%d1 [NUM1:tour:tours])</French>
 		<German>(%d1 [NUM1:Runde:Runden])</German>
-		<Italian>(%d1 [NUM1:Turno:Turni])</Italian>
+		<Italian>(%d1 [NUM1:turno:turni])</Italian>
 		<Spanish>(%d1 [NUM1:turno:turnos])</Spanish>
 	</TEXT>
 	<TEXT>
@@ -311,11 +314,13 @@
 	<TEXT>
 		<Tag>INTERFACE_TAB_ADMIN</Tag>
 		<English>Admin Tab</English>
+		<Italian>Amministrazione</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_TAB_BUILDING</Tag>
 		<English>Building Tab</English>
 		<French>Bâtiments</French>
+		<Italian>Edifici</Italian>
 		<German>Gebäude bauen</German>
 		<Russian>Панель зданий</Russian>
 	</TEXT>
@@ -323,6 +328,7 @@
 		<Tag>INTERFACE_TAB_UNIT</Tag>
 		<English>Unit Tab</English>
 		<French>Unités</French>
+		<Italian>Unità</Italian>
 		<German>Einheiten bauen</German>
 		<Russian>Панель юнитов</Russian>
 	</TEXT>
@@ -330,6 +336,7 @@
 		<Tag>INTERFACE_TAB_WONDER</Tag>
 		<English>Wonder Tab</English>
 		<French>Merveilles</French>
+		<Italian>Meraviglie</Italian>
 		<German>Wunder bauen</German>
 		<Russian>Панель Чудес</Russian>
 	</TEXT>
@@ -536,6 +543,7 @@
 		<English>XP</English>
 		<French>EXP</French>
 		<German>EP</German>
+    <Italian>punti esperienza</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_ADVISOR_BRIBE</Tag>
@@ -632,13 +640,14 @@
 	<TEXT>
 		<Tag>TXT_BULLET_S1_COLON_SPACE</Tag>
 		<English>[ICON_BULLET]%s1:[SPACE]</English>
+    <Italian>Prova10</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_BULLET_S1_F2_FROM_S3</Tag>
 		<English>[ICON_BULLET]%s1 %F2 from %s3</English>
 		<French>[ICON_BULLET]%s1 %F2 en raison de %s3</French>
 		<German>[ICON_BULLET]%s1 %F2 durch %s3</German>
-		<Italian>[ICON_BULLET]%s1 %F2 [NUM3:da:dai] %s3</Italian>
+		<Italian>[ICON_BULLET]%s1 %F2 dagli %s3   prova11</Italian>
 		<Spanish>[ICON_BULLET]%s1 %F2 por %s3</Spanish>
 	</TEXT>
 	<TEXT>
@@ -751,7 +760,7 @@
 		<Tag>TXT_KEY_ACTION_AUTOMATEAIR_RECON_HELP</Tag>
 		<English>Will recon nearby enemy emplacements.</English>
 		<French>Effectue automatiquement des opérations de reconnaissance</French>
-		<Italian>Effettuerà operazioni di ricognizione aerea automatizzata.</Italian>
+		<Italian>[NEWLINE]L'unità effettua una ricognizione aerea automatizzata.</Italian>
 		<Spanish>Hará misiones de reconocimiento en los emplazamientos enemigos cercanos.</Spanish>
 		<Polish>Jednostki Powietrzne będą automatycznie rozpoznawać wroga.</Polish>
 		<Russian>Áóäåò ðàçâåäûâàòü ñîñåäíèå âðàæåñêèå îãíåâûå ïîçèöèè.</Russian>
@@ -760,7 +769,7 @@
 		<Tag>TXT_KEY_ACTION_AUTOMATE_AIRBOMB</Tag>
 		<English>Automate Airbomb</English>
 		<French>Bombardement Automatisé</French>
-		<Italian>Bombardamento aereo automatizzato</Italian>
+		<Italian>Bombardamento aereo automatico</Italian>
 		<Spanish>Bombardeo aéreo automatizado</Spanish>
 		<Polish>Automatyczne Bombardowanie z Powietrza</Polish>
 		<Russian>Àâòîìàòèçèðîâàòü àâèàáîìáàðäèðîâêè</Russian>
@@ -769,7 +778,7 @@
 		<Tag>TXT_KEY_ACTION_AUTOMATE_AIRBOMB_HELP</Tag>
 		<English>Send the unit to attack enemy fortifications, improvements, and cities wherevever possible.</English>
 		<French>Envoi l'unité attaquer les fortifications ennemies, les aménagement et les Villes dès que possible.</French>
-		<Italian>Manda l'unità ad attaccare fortificazioni, miglioramenti e città, ovunque sia possibile.</Italian>
+		<Italian>[NEWLINE]L'unità attacca fortificazioni, miglioramenti e città ovunque sia possibile.</Italian>
 		<Spanish>Envía a la unidad a atacar fortificaciones, mejoras y ciudades enemigas cuando sea posible.</Spanish>
 		<Polish>Wyślij jednostki powietrzne do zbombardowania wrogich fortyfikacji, ulepszeń oraz miast gdziekolwiek to możliwe.</Polish>
 		<Russian>Ïîñëàòü þíèò íàïàäàòü íà âðàæåñêèå óêðåïëåíèÿ, óñîâåðøåíñòâîâàíèÿ, è ãîðîäà ãäå òîëüêî âîçìîæíî.</Russian>
@@ -778,7 +787,7 @@
 		<Tag>TXT_KEY_ACTION_AUTOMATE_AIRSTRIKE</Tag>
 		<English>Automate Airstrike</English>
 		<French>Interception Automatisé</French>
-		<Italian>Attacco aereo automatizzato</Italian>
+		<Italian>Attacco aereo automatico</Italian>
 		<Spanish>Ataque aéreo automatizado</Spanish>
 		<Polish>Automatyczny Atak Lotnictwa</Polish>
 		<Russian>Àâòîìàòèçèðîâàòü àâèàóäàðû</Russian>
@@ -787,7 +796,7 @@
 		<Tag>TXT_KEY_ACTION_AUTOMATE_AIRSTRIKE_HELP</Tag>
 		<English>Send the unit to attack enemy units whereever possible.</English>
 		<French>Envoi l'unité attaquer les unités ennemies dès que possible.</French>
-		<Italian>Manda l'unità ad attaccare le unità nemiche, ovunque sia possibile.</Italian>
+		<Italian>[NEWLINE]L'unità attacca le unità nemiche ovunque sia possibile.</Italian>
 		<Spanish>Envía a la unidad a atacar a las unidades enemigas cuando sea posible.</Spanish>
 		<Polish>Wyślij jednostki powietrzne do ataku na wroga tam gdzie tylko to możliwe.</Polish>
 		<Russian>Ïîñëàòü þíèò àòàêîâàòü âðàæåñêèå þíèòû ãäå òîëüêî âîçìîæíî.</Russian>
@@ -796,7 +805,7 @@
 		<Tag>TXT_KEY_ACTION_AUTOMATE_AIR_RECON</Tag>
 		<English>Automate Air Recon</English>
 		<French>Reconnaissance aérienne Automatisée</French>
-		<Italian>Ricognizione aerea automatizzata</Italian>
+		<Italian>Ricognizione aerea automatica</Italian>
 		<Spanish>Reconocimiento aéreo automatizado</Spanish>
 		<Polish>Automatyczne Rozpoznawanie</Polish>
 		<Russian>Àâòîìàòèçèðîâàòü àâèàðàçâåäêó</Russian>
@@ -806,7 +815,7 @@
 		<English>Automate Border Patrol</English>
 		<French>Patrouille Automatisée</French>
 		<German>Grenzpatrouille (automatisiert)</German>
-		<Italian>Pattuglia dei confini automatizzata</Italian>
+		<Italian>Pattugliamento confini automatico</Italian>
 		<Spanish>Patrulla fronteriza automatizada</Spanish>
 		<Polish>Automatyczne Patrolowanie Granic</Polish>
 		<Russian>Àâòîìàòèçèðîâàòü ïîãðàíè÷íóþ ñëóæáó</Russian>
@@ -816,7 +825,7 @@
 		<English>Send the unit to patrol your civilization's borders and kill invading enemy units</English>
 		<French>Envoi l'unité patrouiller les frontières et tuer les envahisseurs ennemis.</French>
 		<German>Ausgewählte Einheit dauerhaft zur Patrouille an der Grenze der Zivilisation abstellen. Sie wird eindringende gegnerische Einheiten automatisch angreifen, wenn sie sie entdeckt.</German>
-		<Italian>Manda l'unità a pattugliare i confini della tua civiltà e a uccidere le unità nmecihe invasori.</Italian>
+		<Italian>[NEWLINE]L'unità pattuglia i confini della tua civiltà e a attacca unità nemiche invaditrici.</Italian>
 		<Spanish>Envía a la unidad a patrullar las fronteras de tu civilización y matar a los invasores enemigos.</Spanish>
 		<Polish>Wyślij jednostkę do patrolowania granic Twojego imperium i niszczenie wrogich jednostek</Polish>
 		<Russian>Ïîñëàòü þíèò ïàòðóëèðîâàòü ãðàíèöû âàøåé öèâèëèçàöèè è óáèâàòü âòîðãøèåñÿ âðàæåñêèå þíèòû</Russian>
@@ -826,7 +835,7 @@
 		<English>Build Improvements (Automated)</English>
 		<French>Construire aménagements (auto)</French>
 		<German>Umgebung ausbauen (automatisiert)</German>
-		<Italian>Costruire i miglioramenti (automaticamente)</Italian>
+		<Italian>Costruisci miglioramenti automaticamente</Italian>
 		<Spanish>Construir mejoras (automatizado)</Spanish>
 		<Russian>Строить улучшения (автоматич.)</Russian>
 	</TEXT>
@@ -835,7 +844,7 @@
 		<English>Automate all [COLOR_UNIT_TEXT]Worker[COLOR_REVERT] actions. The unit will continue working until you cancel its automation.</English>
 		<French>Automatise toutes les actions des [COLOR_UNIT_TEXT]ouvriers[COLOR_REVERT]. L'unité continue à travailler tant qu'elle reste automatisée.</French>
 		<German>Ausgewählte Einheit dauerhaft zum Anlegen von Landschaftsverbesserungen abstellen.</German>
-		<Italian>Automatizza tutte le azioni del [COLOR_UNIT_TEXT]lavoratore[COLOR_REVERT]. L'unità continuerà a lavorare finché non annullerai l'automazione.</Italian>
+		<Italian>[NEWLINE]Automatizza tutte le azioni del [COLOR_UNIT_TEXT]lavoratore[COLOR_REVERT]. L'unità continuerà a lavorare finché non annullerai l'automazione.</Italian>
 		<Spanish>Automatizar todas las acciones del [COLOR_UNIT_TEXT]Trabajador[COLOR_REVERT]. La unidad seguirá trabajando hasta que canceléis la automatización.</Spanish>
 		<Russian>Автоматизировать все задания [COLOR_UNIT_TEXT]рабочим[COLOR_REVERT]. Работник будет продолжать выполнять это действие до тех пор, пока вы не отмените автоматизацию.</Russian>
 	</TEXT>
@@ -853,7 +862,7 @@
 		<English>Cancels the Automate Promote Order</English>
 		<French>Annule les ordres de Promotions Automatisées</French>
 		<German>Abbruch der automatischen Beförderungen</German>
-		<Italian>Cancella l'ordine Promozioni automatizzate.</Italian>
+		<Italian>[NEWLINE]Cancella l'ordine di promozioni automatizzate.</Italian>
 		<Spanish>Cancela la acción 'Ascenso automatizado'.</Spanish>
 		<Polish>Anuluje rozkaz auto-promocji</Polish>
 		<Russian>Îòìåíèòü ïðèêàç àâòîóëó÷øåíèÿ</Russian>
@@ -863,7 +872,7 @@
 		<English>Cancel Automate Upgrade</English>
 		<French>Annuler les Améliorations automatisées</French>
 		<German>Keine automatische Modernisierung</German>
-		<Italian>Cancella ugrade automatizzati</Italian>
+		<Italian>Cancella modernizzazioni automatiche</Italian>
 		<Spanish>Cancelar Mejora automatizada</Spanish>
 		<Polish>Anuluj Automatyczny Upgrade</Polish>
 		<Russian>Îòìåíèòü àâòîìîäåðíèçàöèþ</Russian>
@@ -873,7 +882,7 @@
 		<English>Cancels the Automate Upgrade Order</English>
 		<French>Annule les ordres d'Améliorations automatisées</French>
 		<German>Abbruch der automatischen Modernisierungen</German>
-		<Italian>Cancella l'ordine Upgrade automatizzati</Italian>
+		<Italian>[NEWLINE]Cancella l'ordine modernizzazioni automatiche</Italian>
 		<Spanish>Cancela la acción 'Mejora automatizada'.</Spanish>
 		<Polish>Anuluje rozkaz automatycznego ulepszania jednostek</Polish>
 		<Russian>Îòìåíèòü ïðèêàç àâòîìîäåðíèçàöèè</Russian>
@@ -883,7 +892,7 @@
 		<English>Improve Nearest City (Automated)</English>
 		<French>Améliorer ville la plus proche (auto)</French>
 		<German>Umgebung der nächstgelegenen Stadt ausbauen (automatisiert)</German>
-		<Italian>Migliora la città più vicina (automaticamente)</Italian>
+		<Italian>Migliora la città più vicina automaticamente</Italian>
 		<Spanish>Mejorar ciudad más próxima (automatizado)</Spanish>
 		<Russian>Улучшение ближайшего города (автоматич.)</Russian>
 	</TEXT>
@@ -892,7 +901,7 @@
 		<English>Automate City Defense</English>
 		<French>Défense de Ville Automatisée</French>
 		<German>Stadtverteidigung (automatisiert)</German>
-		<Italian>Difesa cittadina automatizzata</Italian>
+		<Italian>Difesa cittadina automatica</Italian>
 		<Spanish>Defensa de ciudad automatizada</Spanish>
 		<Polish>Automatyczna Obrona Miasta</Polish>
 		<Russian>Àâòîìàòèçèðîâàòü çàùèòó ãîðîäîâ</Russian>
@@ -902,7 +911,7 @@
 		<English>Will protect the city from nearby attackers.</English>
 		<French>L'unité protège la Ville des attaquants à proximité.</French>
 		<German>Ausgewählte Einheit dauerhaft zur Verteidigung der Stadt gegen nahe Angreifer abstellen.</German>
-		<Italian>Proteggerà la città dagli attaccanti vicini.</Italian>
+		<Italian>[NEWLINE]L'unità proteggerà la città dagli attaccanti vicini.</Italian>
 		<Spanish>La unidad protegerá a la ciudad de los atacantes cercanos.</Spanish>
 		<Polish>Będzie broniła miasta przed agresorami.</Polish>
 		<Russian>Çàùèòèòü ãîðîä îò ñîñåäñêèõ íàïàäàþùèõ.</Russian>
@@ -912,7 +921,7 @@
 		<English>The unit will improve its closest city only. It will continue working until you cancel its automation.</English>
 		<French>L'unité n'aménage que le territoire de la ville la plus proche. Elle continue à travailler tant qu'elle reste automatisée.</French>
 		<German>Ausgewählte Einheit dauerhaft zum Anlegen von Landschaftsverbesserungen für die nächstgelegene Stadt abstellen.</German>
-		<Italian>L'unità migliorerà solamente la città più vicina e continuerà a lavorare finché non annullerai l'automazione.</Italian>
+		<Italian>[NEWLINE]L'unità migliorerà solamente la città più vicina e continuerà a lavorare finché non annullerai l'automazione.</Italian>
 		<Spanish>La unidad solo mejorará la ciudad que tenga más cerca. Seguirá trabajando hasta que canceléis la automatización.</Spanish>
 		<Russian>Работник будет улучшать только окрестности ближайшего города. Он продолжит работать, пока вы не отмените его автоматизацию.</Russian>
 	</TEXT>
@@ -921,7 +930,7 @@
 		<English>Explore (Automated)</English>
 		<French>Explorer (auto)</French>
 		<German>Erkunden (automatisch)</German>
-		<Italian>Esplora (automaticamente)</Italian>
+		<Italian>Esplorazione automatica</Italian>
 		<Spanish>Explorar (automatizado)</Spanish>
 	</TEXT>
 	<TEXT>
@@ -929,7 +938,7 @@
 		<English>This order tells the unit to explore the uncharted regions on the map. The unit will continue to move until it has run out of places to explore.</English>
 		<French>L'unité découvre les zones inconnues de la carte et continue à le faire jusqu'à ce qu'elle n'ait plus rien à explorer.</French>
 		<German>Ausgewählte Einheit dauerhaft zum Erforschen unbekannter Gebiete auf der Karte abstellen.</German>
-		<Italian>Questo ordine comanda all'unità di esplorare le regioni ancora inesplorate della mappa. L'unità continuerà a muoversi finché ci saranno luoghi da esplorare.</Italian>
+		<Italian>[NEWLINE]L'unità esplora le regioni ancora inesplorate della mappa finché ci saranno luoghi da esplorare.</Italian>
 		<Spanish>Con esta orden le decís a la unidad que explore las zonas del mapa que estén sin cartografiar. Seguirá moviéndose hasta que se quede sin lugares que explorar.</Spanish>
 		<Russian>Эта команда заставит отряд исследовать неразведанные области на карте. Он будет продолжать двигаться, пока не закончатся все затемненные области для исследования.</Russian>
 	</TEXT>
@@ -948,7 +957,7 @@
 		<English>Send the unit to hunt down and kill any enemy units it can find.</English>
 		<French>Envoi l'unité pour traquer et tuer toutes les unités ennemies.</French>
 		<German>Ausgewählte Einheit dauerhaft zur Jagd auf gegnerische Einheiten abstellen.</German>
-		<Italian>Manda l'unità a cacciare e uccidere ogni nemico che riesce a trovare.</Italian>
+		<Italian>[NEWLINE]L'unità caccia e uccide ogni unità nemica che riesce a trovare.</Italian>
 		<Spanish>Envía a la unidad a cazar: matará a todas las unidades enemigas que encuentre.</Spanish>
 		<Polish>Wyślij jednostkę do polowania oraz zniszczenia każdej jednostki którą znajdzie.</Polish>
 		<Russian>Ïîñëàòü þíèò âûñëåäèòü è óáèòü ëþáûå âðàæåñêèå þíèòû, êîòîðûå îí ñìîæåò íàéòè.</Russian>
@@ -957,7 +966,7 @@
 		<Tag>TXT_KEY_ACTION_AUTOMATE_HURRY</Tag>
 		<English>Automate Hurry</English>
 		<French>Accélération Automatisée</French>
-		<Italian>Produzione accelerata automatizzata</Italian>
+		<Italian>Produzione accelerata automatica</Italian>
 		<Spanish>Aceleración de producción automatizada</Spanish>
 		<Polish>Automatyczne Przyśpieszanie</Polish>
 		<Russian>Àâòîìàòèçèðîâàòü óñêîðåíèå</Russian>
@@ -966,7 +975,7 @@
 		<Tag>TXT_KEY_ACTION_AUTOMATE_HURRY_HELP</Tag>
 		<English>Send the unit to hurry the construction of a building in a nearby city.</English>
 		<French>Envoi l'unité pour accélérer la construction d'un bâtiment dans la ville la plus proche.</French>
-		<Italian>Manda l'unità ad accelerare la costruzione di un edificio in una città vicina.</Italian>
+		<Italian>[NEWLINE]L'unità va ad accelerare la costruzione di un edificio in una città vicina.</Italian>
 		<Spanish>Envía a la unidad a acelerar la producción de un edificio de una ciudad cercana.</Spanish>
 		<Polish>Wyślij jednostkę do przyśpieszenia konstrukcji w mieście.</Polish>
 		<Russian>Ïîñëàòü þíèò óñêîðèòü ñòðîèòåëüñòâî çäàíèÿ â ñîñåäíåì ãîðîäå.</Russian>
@@ -976,7 +985,7 @@
 		<English>Build Infrastructure (Automated)</English>
 		<French>Construire réseau commercial (auto)</French>
 		<German>Verkehrsnetz anlegen (automatisiert)</German>
-		<Italian>Costruire una rete commerciale (automaticamente)</Italian>
+		<Italian>Costruisci rete commerciale automaticamente</Italian>
 		<Spanish>Construir red comercial (automatizado)</Spanish>
 		<Polish>Buduj Infrastrukturę (Automatycznie)</Polish>
 		<Russian>Ñòðîèòü òîðãîâóþ ñåòü (àâòîìàòè÷åñêè)</Russian>
@@ -986,7 +995,7 @@
 		<English>The unit will create a trade network connecting all your cities and resources. It will continue working until you cancel its automation.</English>
 		<French>L'unité crée un réseau commercial déservant toutes vos villes et ressources. Elle continue à travailler tant qu'elle reste automatisée.</French>
 		<German>Ausgewählte Einheit dauerhaft zum Anlegen eines Verkehrsnetzes abstellen, mit dem die eigenen Städte und Ressourcen verbunden werden.</German>
-		<Italian>L'unità creerà una rete commerciale per collegare tutte le tue città e le risorse e continuerà a lavorare finché non annullerai l'automazione.</Italian>
+		<Italian>[NEWLINE]L'unità creerà una rete commerciale per collegare tutte le tue città e le risorse e continuerà a lavorare finché non annullerai l'automazione.</Italian>
 		<Spanish>La unidad creará una red comercial que comunicará todas vuestras ciudades y recursos. Seguirá trabajando hasta que canceléis la automatización.</Spanish>
 		<Polish>Jednostka będzie tworzyć sieć handlową łączącą twoje miasta i surowce, do czasu, aż tak akcja nie zostanie wstrzymana.</Polish>
 		<Russian>Þíèò ñîçäàñò òîðãîâóþ ñåòü, ñâÿçûâàþùóþ âàøè ãîðîäà è èñòî÷íèêè ðåñóðñîâ. Îí áóäåò ðàáîòàòü, ïîêà âû íå îòêëþ÷èòå àâòîìàòèçàöèþ.</Russian>
@@ -996,7 +1005,7 @@
 		<English>Automate Pillage</English>
 		<French>Pillage Automatisé</French>
 		<German>Brandschatzung (automatisiert)</German>
-		<Italian>Saccheggio automatizzato</Italian>
+		<Italian>Saccheggio automatico</Italian>
 		<Spanish>Saqueo automatizadoAutomate Pillage</Spanish>
 		<Polish>Automatyczne Plądrowanie</Polish>
 		<Russian>Àâòîìàòèçèðîâàòü ãðàáåæ</Russian>
@@ -1006,7 +1015,7 @@
 		<English>Send the unit to search and destroy enemy's improvements</English>
 		<French>Envoie l'unité pour rechercher et détruire les aménagements de terrain ennemis.</French>
 		<German>Ausgewählte Einheit dauerhaft zur Brandschatzung feindlicher Landschaftsverbesserungen abstellen.</German>
-		<Italian>Manda l'unità a ricercare e distruggere i miglioramenti nemici</Italian>
+		<Italian>[NEWLINE]L'unità ricerca e distrugge i miglioramenti nemici.</Italian>
 		<Spanish>Envía a la unidad a encontrar y destrozar mejoras de terreno enemigas.</Spanish>
 		<Polish>Wyślij jednostkę do wyszukania oraz zniszczenia wrogich ulepszeń</Polish>
 		<Russian>Ïîñëàòü þíèò èñêàòü è ðàçðóøàòü óñîâåðøåíñòâîâàíèÿ âðàãà</Russian>
@@ -1015,7 +1024,7 @@
 		<Tag>TXT_KEY_ACTION_AUTOMATE_PIRATE</Tag>
 		<English>Automate Piracy</English>
 		<French>Piratage Automatisé</French>
-		<Italian>Pirateria automatizzata</Italian>
+		<Italian>Pirateria automatica</Italian>
 		<Spanish>Piratería automatizada</Spanish>
 		<Polish>Automatyczne Piractwo</Polish>
 		<Russian>Àâòîìàòèçèðîâàòü ïèðàòñòâî</Russian>
@@ -1024,7 +1033,7 @@
 		<Tag>TXT_KEY_ACTION_AUTOMATE_PIRATE_HELP</Tag>
 		<English>Send the unit to plunder and raid nearby settlements, and sink weak or unprotected transports.</English>
 		<French>Envoi l'unité pour piller et couler les transports sans protections et les installations maritimes.</French>
-		<Italian>Manda l'unità a saccheggiare e razziare gli insediamenti vicini, ed affondare i trasporti deboli o non protetti.</Italian>
+		<Italian>[NEWLINE]L'unità saccheggia e razzia gli insediamenti vicini ed affonda le navi da trasporto deboli o non protette.</Italian>
 		<Spanish>Envía a la unidad a asaltar y saquear asentamientos cercanos. También hundirá los transportes débiles o desprotegidos.</Spanish>
 		<Polish>Wyślij jednostkę do plądrowania oraz atakowania osadników i słabych transportów.</Polish>
 		<Russian>Ïîñëàòü þíèò ðàçãðàáèòü è ñîâåðøèòü íàáåã íà ñîñåäíèå ïîñåëåíèÿ, è òîïèòü ñëàáûå èëè íåçàùèùåííûå òðàíñïîðòû.</Russian>
@@ -1034,7 +1043,7 @@
 		<English>Automate Promote</English>
 		<French>Promotions Automatisées</French>
 		<German>Beförderung (automatisiert)</German>
-		<Italian>Promozioni automatizzate</Italian>
+		<Italian>Promozioni automatiche</Italian>
 		<Spanish>Ascenso automatizado</Spanish>
 		<Polish>Automatyczne Promocje</Polish>
 		<Russian>Àâòîìàòèçèðîâàòü óëó÷øåíèÿ</Russian>
@@ -1044,7 +1053,7 @@
 		<English>Will auto-promote whenever the unit can gain a promotion</English>
 		<French>Attribue automatiquement une promotion lorsque l'unité peut en gagner</French>
 		<German>Beförderungen werden dieser Einheit automatisch zugewiesen, wenn sie verfügbar sind.</German>
-		<Italian>Si promuoverà automaticamente, ogni volta che l'unità può ottenere una promozione.</Italian>
+		<Italian>[NEWLINE]Ogni volta che l'unità può ottenere una promozione verrà effettuta automaticamente.</Italian>
 		<Spanish>La unidad será ascendida automáticamente en cuanto pueda obtener un ascenso.</Spanish>
 		<Polish>Będzie nadawał jednostce promocje automatycznie gdy tylko otrzyma awans</Polish>
 		<Russian>Àâòîóëó÷øèò âñÿêèé ðàç, êîãäà þíèò ìîæåò ïîëó÷èòü óëó÷øåíèå</Russian>
@@ -1054,7 +1063,7 @@
 		<English>Automate Protect</English>
 		<French>Protection Automatisée</French>
 		<German>Eskorte (automatisiert)</German>
-		<Italian>Protezione automatizzata</Italian>
+		<Italian>Protezione automatica</Italian>
 		<Spanish>Protección automatizada</Spanish>
 		<Polish>Automatyczna Ochrona</Polish>
 		<Russian>Àâòîìàòèçèðîâàòü çàùèòó</Russian>
@@ -1064,7 +1073,7 @@
 		<English>Allows selection of a unit to protect and escort.</English>
 		<French>Donne à la sélection d'unité la mission de protéger et escorter.</French>
 		<German>Ausgewählte Einheit dauerhaft zur Eskorte einer anderen Einheit abstellen.</German>
-		<Italian>Permette la selezione di un'unità da proteggere e scortare.</Italian>
+		<Italian>[NEWLINE]Permette la selezione di un'unità da proteggere e scortare.</Italian>
 		<Spanish>Permite seleccionar a una unidad a la que escoltar y proteger.</Spanish>
 		<Polish>Pozwala wybranym jednostką na ochronę oraz eskortę.</Polish>
 		<Russian>Ïîçâîëÿåò âûáðàííîìó þíèòó çàùèùàòü è ñîïðîâîæäàòü.</Russian>
@@ -1074,7 +1083,7 @@
 		<English>Spread Automatically</English>
 		<French>Répandre automatiquement</French>
 		<German>Automatisch verbreiten</German>
-		<Italian>Diffusione automatica.</Italian>
+		<Italian>Diffusione automatica</Italian>
 		<Spanish>Propagar automáticamente</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1082,7 +1091,7 @@
 		<English>Will order the unit to automatically spread its religion or corporation</English>
 		<French>Donner l'ordre à l'unité de répandre automatiquement sa religion ou sa société commerciale</French>
 		<German>Der Einheit wird angeordnet, ihre Religion oder Kapitalgesellschaft automatisch zu verbreiten.</German>
-		<Italian>Ordinerà all'unità di diffondere automaticamente la sua religione o corporazione.</Italian>
+		<Italian>[NEWLINE]L'unità diffonde automaticamente la sua religione o corporazione.</Italian>
 		<Spanish>Ordenará a la unidad que propague automáticamente su religión o corporación</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1090,7 +1099,7 @@
 		<English>Automate Upgrade</English>
 		<French>Améliorations automatisées</French>
 		<German>Modernisierung (automatisiert)</German>
-		<Italian>Upgrade automatizzati</Italian>
+		<Italian>Modernizzazione automatica</Italian>
 		<Spanish>Mejora automatizada</Spanish>
 		<Polish>Automatyczny Upgrade Jednostek</Polish>
 		<Russian>Àâòîìàòèçèðîâàòü ìîäåðíèçàöèþ</Russian>
@@ -1100,7 +1109,7 @@
 		<English>Will Upgrade to New Units whenever possible.</English>
 		<French>Améliore automatiquement les Unités lorsque c'est possible.</French>
 		<German>Einheit wird automatisch in eine modernere Einheit umgewandelt, sobald dies möglich ist.</German>
-		<Italian>Migliorerà verso unità più recenti, ogni volta che sia possibile.</Italian>
+		<Italian>[NEWLINE]Migliorerà automaticamente verso unità più recenti ogni volta che sia possibile.</Italian>
 		<Spanish>Mejorará la unidad cuando sea posible.</Spanish>
 		<Polish>Jednostki będą automatycznie ulepszane gdy tylko będzie to możliwe.</Polish>
 		<Russian>Ìîäåðíèçèðóåò â íîâûõ þíèòîâ êîãäà ñòàíîâèòñÿ âîçìîæíî.</Russian>
@@ -1118,7 +1127,7 @@
 		<English>Makes it easier to see the landscape</English>
 		<French>Facilite l'inspection du terrain</French>
 		<German>Erleichtert die Sicht auf die Landschaft.</German>
-		<Italian>Agevola la visione del panorama.</Italian>
+		<Italian>[NEWLINE]Agevola la visione del panorama.</Italian>
 		<Spanish>Hace que ver el paisaje sea más fácil</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1273,7 +1282,7 @@
 		<English>[ICON_BULLET]%D1%% Tile Defense</English>
 		<French>[ICON_BULLET]Défense de la case %D1%%</French>
 		<German>[ICON_BULLET]%D1%% Geländefeld-Verteidigung</German>
-		<Italian>[ICON_BULLET]%D1%% difensiva della casella</Italian>
+		<Italian>[ICON_BULLET]%D1%% di difesa sulla casella</Italian>
 		<Spanish>[ICON_BULLET]%D1%% a la defensa de la casilla</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1360,7 +1369,7 @@
 		<English>[ICON_BULLET]All Units Can Move %d1 Tiles/Turn</English>
 		<French>[ICON_BULLET]Toutes les unités peuvent se déplacer de %d1 cases par tour.</French>
 		<German>[ICON_BULLET]Alle Einheiten können sich %d1 Geländefelder/Runde fortbewegen</German>
-		<Italian>[ICON_BULLET]Tutte le unità possono muovere %d1 caselle/turno</Italian>
+		<Italian>[ICON_BULLET]Tutte le unità possono muovere %d1 caselle a turno</Italian>
 		<Spanish>[ICON_BULLET]Todas las unidades se pueden mover %d1 casillas/turno.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1392,7 +1401,7 @@
 		<English>Toggle Show Tiles</English>
 		<French>Afficher/masquer la grille</French>
 		<German>Geländefelder anzeigen ein/aus</German>
-		<Italian>Abilita/disabilita le caselle</Italian>
+		<Italian>Abilita/disabilita griglia</Italian>
 		<Spanish>Activar casillas</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1400,7 +1409,7 @@
 		<English>Toggle Gridlines On / Off</English>
 		<French>Afficher/masquer la grille</French>
 		<German>Rasterlinien ein-/ausblenden.</German>
-		<Italian>Attiva/disattiva la griglia</Italian>
+		<Italian>[NEWLINE] Attiva o disattiva la griglia</Italian>
 		<Spanish>Activar cuadrícula</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1416,7 +1425,7 @@
 		<English>Irrigated</English>
 		<French>Irrigation</French>
 		<German>Bewässert</German>
-		<Italian>Irrigato</Italian>
+		<Italian>con irrigazione</Italian>
 		<Spanish>Tiene riego</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1456,7 +1465,7 @@
 		<English>[COLOR_WARNING_TEXT]Requires %d1_Num More [ICON_GREATPEOPLE][COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Il faut %d1_Num [ICON_GREATPEOPLE] de plus[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]Erfordert %d1_Num weitere [ICON_GREATPEOPLE][COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]Richiede altri %d1_Num [ICON_GREATPEOPLE][COLOR_REVERT]</Italian>
+		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Richiede altri %d1_Num [ICON_GREATPEOPLE][COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Requiere %d1_Num [ICON_GREATPEOPLE] más.[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1472,16 +1481,16 @@
 		<English>[ICON_BULLET]Travel Costs 1/%d1 Movement Point</English>
 		<French>[ICON_BULLET]Le déplacement coûte 1/%d1 point(s) de mouvement.</French>
 		<German>[ICON_BULLET]Reisekosten 1/%d1 Fortbewegungspunkt</German>
-		<Italian>[ICON_BULLET]Il viaggio costa 1/%d1 punto movimento</Italian>
+		<Italian>[ICON_BULLET]Il viaggio costa 1/%d1 punti movimento</Italian>
 		<Spanish>[ICON_BULLET]Viajar cuesta 1/%d1 de los puntos de movimiento.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_NEEDS_CULTURE_BORDER</Tag>
-		<English>[COLOR_WARNING_TEXT]Must be within Cultural Borders owned by of one of our cities.[COLOR_REVERT]</English>
-		<!-- <French>[COLOR_WARNING_TEXT]Uniquement à l'intérieur de nos frontières culturelles.[COLOR_REVERT]</French> -->
-		<!-- <German>[COLOR_WARNING_TEXT]Muss sich innerhalb unserer kulturellen Grenzen befinden.[COLOR_REVERT]</German> -->
-		<!-- <Italian>[COLOR_WARNING_TEXT]Bisogna essere all'interno dei propri confini culturali.[COLOR_REVERT]</Italian> -->
-		<!-- <Spanish>[COLOR_WARNING_TEXT]Ha de estar dentro de las fronteras de nuestra cultura.[COLOR_REVERT]</Spanish> -->
+		<English>[COLOR_WARNING_TEXT]Must be within our Cultural Borders.[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Uniquement à l'intérieur de nos frontières culturelles.[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Muss sich innerhalb unserer kulturellen Grenzen befinden.[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Bisogna essere all'interno dei propri confini culturali.[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Ha de estar dentro de las fronteras de nuestra cultura.[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_NEEDS_OUT_RIVAL_CULTURE_BORDER</Tag>
@@ -1504,7 +1513,7 @@
 		<English>[COLOR_YELLOW]Will not receive any [ICON_PRODUCTION][COLOR_REVERT]</English>
 		<French>[COLOR_YELLOW]Ne reçoit aucune [ICON_PRODUCTION][COLOR_REVERT]</French>
 		<German>[COLOR_YELLOW]Erhält keine [ICON_PRODUCTION][COLOR_REVERT]</German>
-		<Italian>[COLOR_YELLOW]Non riceverà alcun [ICON_PRODUCTION][COLOR_REVERT]</Italian>
+		<Italian>[ICON_BULLET][COLOR_YELLOW]Nessuna produzione [ICON_PRODUCTION][COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_YELLOW]No recibirás ningún [ICON_PRODUCTION][COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_YELLOW]Nie otrzymasz żadnego [ICON_PRODUCTION][COLOR_REVERT]</Polish>
 		<Russian>[COLOR_YELLOW]Íå áóäåò ïîëó÷àòü íèêàêîé [ICON_PRODUCTION][COLOR_REVERT]</Russian>
@@ -1514,7 +1523,7 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]%d1_Num[COLOR_REVERT] [NUM1:Turn:Turns]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]%d1_Num[COLOR_REVERT] [NUM1:tour:tours]</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]%d1_Num[COLOR_REVERT] [NUM1:Runde:Runden]</German>
-		<Italian>[COLOR_HIGHLIGHT_TEXT]%d1_Num[COLOR_REVERT] [NUM1:Turno:Turni]</Italian>
+		<Italian>[ICON_BULLET]Tempo di costruzione: [COLOR_HIGHLIGHT_TEXT]%d1_Num[COLOR_REVERT] [NUM1:turno:turni]</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]%d1_Num[COLOR_REVERT] [NUM1:turno:turnos]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1523,7 +1532,7 @@
 		<English>[COLOR_WARNING_TEXT]Can only be Constructed in the %F1_RelIcon Holy City.[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Construction possible uniquement dans la ville sainte %F1_RelIcon.[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]Kann nur in der Heiligen Stadt der Religion %F1_RelIcon errichtet werden.[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]Può essere costruito solo nella %F1_RelIcon Città Santa.[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_WARNING_TEXT]Può essere costruito solo nella %F1_RelIcon città santa.[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Solo se puede erigir en la ciudad santa del %F1_RelIcon.[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1555,7 +1564,7 @@
 		<English>Ping a plot to bring it to the attention of your team mates</English>
 		<French>Désigner un terrain pour y attirer l'attention de vos coéquipiers</French>
 		<German>Pingen Sie ein Geländefeld an, um Ihre Mitstreiter darauf aufmerksam zu machen.</German>
-		<Italian>Segnala un punto per richiamare l'attenzione dei tuoi compagni di squadra.</Italian>
+		<Italian>[NEWLINE]Segnala un punto per richiamare l'attenzione dei tuoi compagni di squadra.</Italian>
 		<Spanish>Hacéis que destaque una casilla para llamar la atención sobre ella a vuestros compañeros de equipo.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1595,7 +1604,7 @@
 		<English>[ICON_BULLET]Provides [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Fournit: [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT]</French>
 		<German>[ICON_BULLET]liefert [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Fornisce [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT]</Italian>
+		<Italian>[ICON_BULLET]Fornisce la risorsa [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT]</Italian> <!--improvemnt that gives resourse present on the plot-->
 		<Spanish>[ICON_BULLET]Da [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT]</Spanish>
 		<Russian>[ICON_BULLET]Дает [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT]</Russian>
 	</TEXT>
@@ -1620,7 +1629,7 @@
 		<English>[COLOR_WARNING_TEXT]Will remove the %s1_FeatName[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Supprimera : %s1_FeatName[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]Entfernt die Geländeart %s1_FeatName[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]Per eliminare [NUM1:il:la:gli:le] %s1_FeatName[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_WARNING_TEXT]per l'eliminazione della caratterista %s1_FeatName[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Quitará [NUM1:el:la:los:las] %s1_FeatName.[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1628,7 +1637,7 @@
 		<English>Toggle Show All Resource Display</English>
 		<French>Afficher/masquer les ressources</French>
 		<German>Alle Ressourcen anzeigen ein/aus</German>
-		<Italian>Abilita/disabilita la finestra 'Mostra tutte le risorse'</Italian>
+		<Italian>Abilita/disabilita la visualizzazione di tutte le risorse</Italian>
 		<Spanish>Activar visor de todos los recursos</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1660,7 +1669,7 @@
 		<English>Select Capital</English>
 		<French>Sélectionner capitale</French>
 		<German>Hauptstadt wählen</German>
-		<Italian>Seleziona città</Italian>
+		<Italian>Seleziona capitale</Italian>
 		<Spanish>Seleccionar capital</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1684,7 +1693,7 @@
 		<English>Select All Units (Same Type)</English>
 		<French>Sélectionner toutes les unités (même type)</French>
 		<German>Alle Einheiten wählen (Gleicher Typ)</German>
-		<Italian>Seleziona tutte le unità (dello stesso tipo)</Italian>
+		<Italian>Seleziona tutte le unità dello stesso tipo</Italian>
 		<Spanish>Seleccionar todas las unidades (del mismo tipo)</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1692,7 +1701,7 @@
 		<English>Change Civics</English>
 		<French>Changer de doctrine</French>
 		<German>Staatsformen ändern</German>
-		<Italian>Cambia forme di governo</Italian>
+		<Italian>Cambia forma di governo</Italian>
 		<Spanish>Cambiar de principios</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1708,7 +1717,7 @@
 		<English>Convert Religion</English>
 		<French>Ecran de Religion</French>
 		<German>Religion wechseln</German>
-		<Italian>Conversione alla religione</Italian>
+		<Italian>Converti religione</Italian>
 		<Spanish>Convertirse a una religión</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1724,7 +1733,7 @@
 		<English>Adds a sign to a specific plot that you and your teammates can see.</English>
 		<French>Ajoutez un panneau à un endroit précis pour vous et vos coéquipiers.</French>
 		<German>Markieren Sie ein Geländefeld mit einem Zeichen, das nur Sie und Ihre Teammitglieder sehen können.</German>
-		<Italian>Aggiunge in una determinata casella un segnale visibile soltanto a te e ai tuoi alleati.</Italian>
+		<Italian>[NEWLINE]Aggiunge in una determinata casella un segnale visibile soltanto a te e ai tuoi alleati.</Italian>
 		<Spanish>Añade a una casilla concreta un letrero que podáis ver tus compañeros y tú.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1748,7 +1757,7 @@
 		<English>Toggle enemy units display</English>
 		<French>Afficher/masquer les unités ennemies</French>
 		<German>Feindanzeige ein-/ausblenden</German>
-		<Italian>Abilita/Disabilita la visualizzazione delle unità nemiche</Italian>
+		<Italian>Abilita o disabilita la visualizzazione delle unità nemiche</Italian>
 		<Spanish>Activar el visor de unidades enemigas</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1756,7 +1765,7 @@
 		<English>[COLOR_WARNING_TEXT]Will destroy the %s1_ImpName[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Détruira : %s1_ImpName[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]Wird die Modernisierung %s1_ImpName zerstören[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]Il miglioramento %s1_ImpName[COLOR_REVERT] verrà distrutto.</Italian>
+		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Il miglioramento %s1_ImpName[COLOR_REVERT] verrà distrutto.</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Destruirá [NUM1:el:la:los:las] %s1_ImpName[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1780,7 +1789,7 @@
 		<English>Toggle Food / Production / Commerce icon visibility</English>
 		<French>Alterner entre l'affichage des icônes Nourriture / Production / Commerce</French>
 		<German>Nahrungs-/Produktions-/Wirtschaftssymbole ein-/ausblenden.</German>
-		<Italian>Attiva/disattiva la visibilità delle icone Cibo/Produzione/Commercio.</Italian>
+		<Italian>[NEWLINE]Attiva/disattiva la visibilità delle icone cibo,produzione e commercio.</Italian>
 		<Spanish>Activa la visibilidad de iconos de alimentos / producción / comercio</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1788,7 +1797,7 @@
 		<English>Actual</English>
 		<French>Actuel</French>
 		<German>effektiv</German>
-		<Italian>Effettivo</Italian>
+		<Italian>Effetto attuale</Italian>
 		<Spanish>Real</Spanish>
 		<Polish>Bieżące</Polish>
 		<Russian>Îáùèé ýôôåêò</Russian>
@@ -2045,7 +2054,7 @@
 		<English>[SPACE]and[SPACE]</English>
 		<French>[SPACE]et[SPACE]</French>
 		<German>[SPACE]und[SPACE]</German>
-		<Italian>[SPACE]e[SPACE]</Italian>
+		<Italian>[SPACE][COLOR_REVERT]e[SPACE][COLOR_WARNING_TEXT]</Italian>
 		<Spanish>[SPACE]y[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2053,7 +2062,7 @@
 		<English>[SPACE]and[SPACE]</English>
 		<French>[SPACE]et[SPACE]</French>
 		<German>[SPACE]und[SPACE]</German>
-		<Italian>[SPACE]e[SPACE]</Italian>
+		<Italian>[SPACE][COLOR_REVERT]e[SPACE][COLOR_WARNING_TEXT]</Italian>
 		<Spanish>[SPACE]y[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2458,7 +2467,7 @@
 		<English>Base %s1: %s2%F3</English>
 		<French>Total partiel %s1: %s2%F3</French>
 		<German>Grundertrag %s1: %s2%F3</German>
-		<Italian>%s1 totale parziale: %s2%F3</Italian>
+		<Italian>%s1 parziale: %s2%F3</Italian>
 		<Spanish>Subtotal de %s1: %s2%F3</Spanish>
 		<Polish>Bazowo %s1: %s2%F3</Polish>
 		<Russian>Áàçà %s1: %s2%F3</Russian>
@@ -2468,12 +2477,13 @@
 		<English>[SPACE](%s2_player has %d1_num_bonus)[SPACE]</English>
 		<French>[SPACE](%s2_player a %d1_num_bonus)[SPACE]</French>
 		<German>[SPACE](%s2_player hat %d1_num_bonus)[SPACE]</German>
-		<Italian>[SPACE](%s2_player possiede %d1_num_bonus)[SPACE]</Italian>
+		<Italian>:[SPACE]%s2_player ne possiede [COLOR_HIGHLIGHT_TEXT]%d1_num_bonus[COLOR_REVERT][SPACE]</Italian>
 		<Spanish>[SPACE](%s2_player tiene %d1_num_bonus)[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUSHELP_AVAILABLE_PLAYER_1</Tag>
 		<English>[SPACE](Have %d1)[SPACE]</English>
+    <Italian>[SPACE]In possesso: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT][SPACE]</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUSHELP_HEALTHY</Tag>
@@ -2488,7 +2498,7 @@
 		<English>[ICON_BULLET]Revealed by [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Apparaît avec : [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT]</French>
 		<German>[ICON_BULLET]Durch die Technologie [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT] verfügbar</German>
-		<Italian>[ICON_BULLET]Una scoperta [NUM1:del:della:dei:delle] [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT]</Italian>
+		<Italian>[ICON_BULLET]Rilveta sulla mapppa grazie alla tecnologia: [NUM1:del:della:dei:delle] [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET]Se descubre gracias [NUM1:al:a la:a los:a las] [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2504,7 +2514,7 @@
 		<English>(with %s1_ImpName)</English>
 		<French>(avec %s1_ImpName)</French>
 		<German>(durch die Modernisierung %s1_ImpName)</German>
-		<Italian>(con [NUM1:il:la:gli:le] %s1_ImpName)</Italian>
+		<Italian>con il miglioramento %s1_ImpName</Italian>
 		<Spanish>(con %s1_ImpName)</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2544,7 +2554,7 @@
 		<English>Cost: %d1_cost [ICON_GOLD]</English>
 		<French>Coût : %d1_cost [ICON_GOLD]</French>
 		<German>Kosten: %d1_cost [ICON_GOLD]</German>
-		<Italian>Costo: %d1_cost [ICON_GOLD]</Italian>
+		<Italian>[ICON_BULLET]Costo: %d1_cost [ICON_GOLD]</Italian>
 		<Spanish>Coste: %d1_cost [ICON_GOLD]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2561,17 +2571,19 @@
 		<German>An welcher Beförderungsreihe [NUM1:soll euer:soll eure:soll euer:sollen eure:sollen eure:sollen eure] [COLOR_WARNING_TEXT]%s1_UnitName[COLOR_REVERT] arbeiten?</German>
 		<Polish>Wybierz Linię Promocji (Koncentracja) dla Twojego [COLOR_WARNING_TEXT]%s1_UnitName[COLOR_REVERT].</Polish>
 		<Russian>Âûáåðèòå ïðîêà÷êó Êâàëèôèêàöèè äëÿ âàøåãî [COLOR_WARNING_TEXT]%s1_UnitName[COLOR_REVERT].</Russian>
+    <Italian>Seleziona un allenamento per il tuo [NEWLINE][COLOR_WARNING_TEXT]%s1_UnitName[COLOR_REVERT]</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDUP_DISBAND</Tag>
 		<English>Disband current build-up!</English>
+    <Italian>[COLOR_BLACK]Interrompi allenamento attuale[COLOR_REVERT]</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BEACON_GREAT_BARRIER_REEF</Tag>
 		<English>Create [LINK=FEATURE_GREAT_BARRIER_REEF_BEACON]Beacon[\LINK] (Great Barrier Reef)</English>
 		<French>Placer une [LINK=FEATURE_GREAT_BARRIER_REEF_BEACON]Balise[\LINK] (Great Barrier Reef)</French>
 		<German>[LINK=FEATURE_GREAT_BARRIER_REEF_BEACON]Leuchtfeuer[\LINK] errichten (Great Barrier Reef)</German>
-		<Italian>Costruisci una [LINK=FEATURE_GREAT_BARRIER_REEF_BEACON]Torre di segnalazione[\LINK] (Great Barrier Reef)</Italian>
+		<Italian>[LINK=FEATURE_GREAT_BARRIER_REEF_BEACON]Segnalatore sulla grande barriera corallina[\LINK] (costruzione)</Italian>
 		<Spanish>Construir una [LINK=FEATURE_GREAT_BARRIER_REEF_BEACON]Baliza[\LINK] (Great Barrier Reef)</Spanish>
 		<Polish>Wybuduj [LINK=FEATURE_GREAT_BARRIER_REEF_BEACON]Boję[\LINK](Great Barrier Reef)</Polish>
 		<Russian>Óñòàíîâèòü [LINK=FEATURE_GREAT_BARRIER_REEF_BEACON]Áóé[\LINK] (Áîë. Áàðüåðíûé Ðèô)</Russian>
@@ -2581,7 +2593,7 @@
 		<English>Create [LINK=FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE]Lighthouse[\LINK] (Great Barrier Reef)</English>
 		<French>Placer un [LINK=FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE]Phare[\LINK](Great Barrier Reef)</French>
 		<German>[LINK=FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE]Leuchtturm[\LINK](Great Barrier Reef) bauen</German>
-		<Italian>Costruisci una [LINK=FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE]Faro[\LINK](Great Barrier Reef)</Italian>
+		<Italian>[LINK=FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE]Faro sulla grande barriera corallina[\LINK](costruzione)</Italian>
 		<Spanish>Construir una [LINK=FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE]Faro[\LINK](Great Barrier Reef)</Spanish>
 		<Polish>Wybuduj [LINK=FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE]Latarnię Morską[\LINK](Great Barrier Reef)</Polish>
 		<Russian>Ñòðîèòü [LINK=FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE]Ìàÿê[\LINK] (Áîë. Áàðüåðíûé Ðèô)</Russian>
@@ -2590,13 +2602,13 @@
 		<Tag>TXT_KEY_BUILD_MACHU_PICCHU</Tag>
 		<English>Build [LINK=IMPROVEMENT_MACHU_PICCHU]Machu Picchu[\LINK]</English>
 		<French>Placer le Machu Picchu</French>
-		<Italian>Posiziona Machu Picchu</Italian>
+		<Italian>[LINK=IMPROVEMENT_MACHU_PICCHU]Machu Picchu[\LINK] (costruzione)</Italian>
 		<Polish>Umieść Machu Picchu</Polish>
 		<Russian>Ïîñòðîèòü Ìà÷ó-Ïèê÷ó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BULLET</Tag>
-		<English>[ICON_BULLET]</English>
+		<English>[ICON_BULLET]</English><!--Aerial CT trait in the pedia-->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BULLET_STARTS_WITH</Tag>
@@ -2990,7 +3002,7 @@
 		<English>Air Unit Capacity: %d1/%d2</English>
 		<French>Capacité des unités aériennes : %d1/%d2</French>
 		<German>Kapazität für Lufteinheiten: %d1/%d2</German>
-		<Italian>Spazio di carico : %d1/%d2</Italian>
+		<Italian>Spazio di carico: %d1/%d2</Italian>
 		<Spanish>Capacidad de la unidad aérea: %d1/%d2</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2998,7 +3010,7 @@
 		<English>[NEWLINE]%d1 [ICON_PRODUCTION]/Turn</English>
 		<French>[NEWLINE]%d1 [ICON_PRODUCTION]/tour</French>
 		<German>[NEWLINE]%d1 [ICON_PRODUCTION]/Runde</German>
-		<Italian>[NEWLINE]%d1 [ICON_PRODUCTION]/Turno</Italian>
+		<Italian>[NEWLINE]%d1 [ICON_PRODUCTION]a turno</Italian>
 		<Spanish>[NEWLINE]%d1 [ICON_PRODUCTION]/turno</Spanish>
 		<Polish>[NEWLINE]%d1 [ICON_PRODUCTION]/turę</Polish>
 		<Russian>[NEWLINE]%d1 [ICON_PRODUCTION]/Õîä</Russian>
@@ -3008,8 +3020,8 @@
 		<English>[NEWLINE]%d1 [ICON_PRODUCTION] (%d2 [ICON_PRODUCTION]/Turn)</English>
 		<French>[NEWLINE]%d1 [ICON_PRODUCTION] (%d2 [ICON_PRODUCTION]/tour)</French>
 		<German>[NEWLINE]%d1 [ICON_PRODUCTION] (%d2 [ICON_PRODUCTION]/Runde)</German>
-		<Italian>[NEWLINE]%d1 [ICON_PRODUCTION] (%d2 [ICON_PRODUCTION]/Turno)</Italian>
-		<Spanish>[NEWLINE]%d1 [ICON_PRODUCTION] (%d2 [ICON_PRODUCTION]/turno)</Spanish>
+		<Italian>[NEWLINE]%d1 [ICON_PRODUCTION] (%d2 [ICON_PRODUCTION] a turno</Italian>
+		<Spanish>[NEWLINE]%d1 [ICON_PRODUCTION] (%d2 [ICON_PRODUCTION] a turno</Spanish>
 		<Polish>[NEWLINE]%d1 [ICON_PRODUCTION] (%d2 [ICON_PRODUCTION]/turę)</Polish>
 		<Russian>[NEWLINE]%d1 [ICON_PRODUCTION] (%d2 [ICON_PRODUCTION]/Õîä)</Russian>
 	</TEXT>
@@ -3062,8 +3074,8 @@
 		<English>[NEWLINE]%d1 [ICON_FOOD] + %d2 [ICON_PRODUCTION]/Turn (%d7 [ICON_PRODUCTION]/Turn)[NEWLINE]%s3: %d4/%d5 [ICON_PRODUCTION] (%d6 [NUM6:Turn:Turns])</English>
 		<French>[NEWLINE]%d1 [ICON_FOOD] + %d2 [ICON_PRODUCTION]/tour (%d7 [ICON_PRODUCTION]/tour)[NEWLINE]%s3: %d4/%d5 [ICON_PRODUCTION] (%d6 [NUM6:tour:tours])</French>
 		<German>[NEWLINE]%d1 [ICON_FOOD] + %d2 [ICON_PRODUCTION]/Runde (%d7 [ICON_PRODUCTION]/Runde)[NEWLINE]%s3: %d4/%d5 [ICON_PRODUCTION] (%d6 [NUM6:Runde:Runden])</German>
-		<Italian>[NEWLINE]%d1 [ICON_FOOD] + %d2 [ICON_PRODUCTION]/Turno (%d7 [ICON_PRODUCTION]/Turno)[NEWLINE]%s3: %d4/%d5 [ICON_PRODUCTION] (%d6 [NUM6:Turno:turni])</Italian>
-		<Spanish>[NEWLINE]%d1 [ICON_FOOD] + %d2 [ICON_PRODUCTION]/turno (%d7 [ICON_PRODUCTION]/turno)[NEWLINE]%s3: %d4/%d5 [ICON_PRODUCTION] (%d6 [NUM6:turno:turnos])</Spanish>
+		<Italian>[NEWLINE]%d1 [ICON_FOOD] + %d2 [ICON_PRODUCTION]/Turno (%d7 [ICON_PRODUCTION] a turno[NEWLINE]%s3: %d4/%d5 [ICON_PRODUCTION] (%d6 [NUM6:Turno:turni])</Italian>
+		<Spanish>[NEWLINE]%d1 [ICON_FOOD] + %d2 [ICON_PRODUCTION]/turno (%d7 [ICON_PRODUCTION] a turno[NEWLINE]%s3: %d4/%d5 [ICON_PRODUCTION] (%d6 [NUM6:turno:turnos])</Spanish>
 		<Polish>[NEWLINE]%d1 [ICON_FOOD] + %d2 [ICON_PRODUCTION]/turę (%d7 [ICON_PRODUCTION]/turę)[NEWLINE]%s3: %d4/%d5 [ICON_PRODUCTION] (%d6 [NUM6:tura:tur])</Polish>
 		<Russian>[NEWLINE]%d1 [ICON_FOOD] + %d2 [ICON_PRODUCTION]/Õîä (%d7 [ICON_PRODUCTION]/Õîä)[NEWLINE]%s3: %d4/%d5 [ICON_PRODUCTION] (%d6 [NUM6:Õîä:Õîäîâ])</Russian>
 	</TEXT>
@@ -3082,7 +3094,7 @@
 		<English>[NEWLINE]Stagnant: %d1/%d2 [ICON_FOOD]</English>
 		<French>[NEWLINE]Pas de croissance: %d1/%d2 [ICON_FOOD]</French>
 		<German>[NEWLINE]Stagnation: %d1/%d2 [ICON_FOOD]</German>
-		<Italian>[NEWLINE]Stagnante: %d1/%d2 [ICON_FOOD]</Italian>
+		<Italian>[NEWLINE]Stagnazione: %d1/%d2 [ICON_FOOD]</Italian>
 		<Spanish>[NEWLINE]Estancada: %d1/%d2 [ICON_FOOD]</Spanish>
 		<Polish>[NEWLINE]Stagnacja: %d1/%d2 [ICON_FOOD]</Polish>
 		<Russian>[NEWLINE]Ñòîÿ÷èé: %d1/%d2 [ICON_FOOD]</Russian>
@@ -3122,14 +3134,15 @@
 		<English>[NEWLINE]%d1 [ICON_PRODUCTION]/Turn (%d6 [ICON_PRODUCTION]/Turn)[NEWLINE]%s2: %d3/%d4 [ICON_PRODUCTION] (%d5 [NUM5:Turn:Turns])</English>
 		<French>[NEWLINE]%d1 [ICON_PRODUCTION]/tour (%d6 [ICON_PRODUCTION]/tour)[NEWLINE]%s2: %d3/%d4 [ICON_PRODUCTION] (%d5 [NUM5:tour:tours])</French>
 		<German>[NEWLINE]%d1 [ICON_PRODUCTION]/Runde (%d6 [ICON_PRODUCTION]/Runde)[NEWLINE]%s2: %d3/%d4 [ICON_PRODUCTION] (%d5 [NUM5:Runde:Runden])</German>
-		<Italian>[NEWLINE]%d1 [ICON_PRODUCTION]/Turno (%d6 [ICON_PRODUCTION]/Turno)[NEWLINE]%s2: %d3/%d4 [ICON_PRODUCTION] (%d5 [NUM5:Turno:turni])</Italian>
-		<Spanish>[NEWLINE]%d1 [ICON_PRODUCTION]/turno (%d6 [ICON_PRODUCTION]/turno)[NEWLINE]%s2: %d3/%d4 [ICON_PRODUCTION] (%d5 [NUM5:turno:turnos])</Spanish>
+		<Italian>[NEWLINE]%d1 [ICON_PRODUCTION]/Turno (%d6 [ICON_PRODUCTION] a turno[NEWLINE]%s2: %d3/%d4 [ICON_PRODUCTION] (%d5 [NUM5:Turno:turni])</Italian>
+		<Spanish>[NEWLINE]%d1 [ICON_PRODUCTION]/turno (%d6 [ICON_PRODUCTION] a turno[NEWLINE]%s2: %d3/%d4 [ICON_PRODUCTION] (%d5 [NUM5:turno:turnos])</Spanish>
 		<Polish>[NEWLINE]%d1 [ICON_PRODUCTION]/turę (%d6 [ICON_PRODUCTION]/turę)[NEWLINE]%s2: %d3/%d4 [ICON_PRODUCTION] (%d5 [NUM5:tura:tur])</Polish>
 		<Russian>[NEWLINE]%d1 [ICON_PRODUCTION]/Õîä (%d6 [ICON_PRODUCTION]/Õîä)[NEWLINE]%s2: %d3/%d4 [ICON_PRODUCTION] (%d5 [NUM5:Õîä:Õîäîâ])</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_PRODUCTION</Tag>
 		<English>[NEWLINE]%s1: %d2/%d3 [ICON_PRODUCTION]</English>
+    <Italian>[NEWLINE]%s1: [COLOR_HIGHLIGHT_TEXT]%d2[COLOR_REVERT]  / [COLOR_HIGHLIGHT_TEXT]%d3[COLOR_REVERT]  [ICON_PRODUCTION]</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_SELECT</Tag>
@@ -3193,7 +3206,7 @@
 		<English>Founded: %s1</English>
 		<French>Fondation de : %s1</French>
 		<German>Gegründet: %s1</German>
-		<Italian>Fondata: %s1</Italian>
+		<Italian>Fondata nel %s1</Italian>
 		<Spanish>Fundada: %s1</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3355,6 +3368,7 @@
 		<Tag>TXT_KEY_CITY_SCREEN_DEMOLISH</Tag>
 		<English>Demolish</English>
 		<French>Démolir</French>
+    <Italian>Demolisci edificio</Italian>
 		<German>Abreißen</German>
 		<Russian>Ñíîñ</Russian>
 	</TEXT>
@@ -3551,7 +3565,7 @@
 		<English>[COLOR_YIELD_COMMERCE]%s1 has %d2 gold per turn available for trade.[COLOR_REVERT]</English>
 		<French>[COLOR_YIELD_COMMERCE]%s1 a %d2 pièces d'or par tour disponible pour le commerce.[COLOR_REVERT]</French>
 		<German>[COLOR_YIELD_COMMERCE]%s1 hat %d2 Gold pro Runde zum Handeln.[COLOR_REVERT]</German>
-		<Italian>[COLOR_YIELD_COMMERCE]%s1 ha %d2 oro per turno [NUM2:disponibile:disponibili] per il commercio.[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_YIELD_COMMERCE]%s1 ha %d2 oro a turno [NUM2:disponibile:disponibili] per il commercio.[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_YIELD_COMMERCE]%s1 tiene %d2 de oro por turno disponible para comerciar.[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_YIELD_COMMERCE]%s1 posiada: %d2 złota/turę do wykorzystania w handlu.[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_YIELD_COMMERCE]%s1 èìååò %d2 çîëîòà çà õîä, äîñòóïíîãî äëÿ òîðãîâëè.[COLOR_REVERT]</Russian>
@@ -3669,7 +3683,7 @@
 		<English>[ICON_BULLET]%D1_Mod%% Maintenance Costs from Distance to Palace</English>
 		<French>[ICON_BULLET]Coût d'entretien %D1_Mod%% dû à l'éloignement du palais</French>
 		<German>[ICON_BULLET]%D1_Mod%% Unterhaltskosten wegen Entfernung zum Palast</German>
-		<Italian>[ICON_BULLET]%D1_Mod%% costi di mantenimento per la distanza dal palazzo</Italian>
+		<Italian>[ICON_BULLET]Costi di mantenimento per la distanza dal palazzo %D1_Mod%%</Italian><!--Aerial CT trait in the pedia-->
 		<Spanish>[ICON_BULLET]%D1_Mod%% a los costes de mantenimiento por lejanía con palacio</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3717,7 +3731,7 @@
 		<English>[ICON_BULLET]New Units Receive %D1_Change Experience Points</English>
 		<French>[ICON_BULLET]Les nouvelles unités reçoivent %D1_Change XP</French>
 		<German>[ICON_BULLET]Neue Einheiten erhalten %D1_Change Erfahrungspunkte</German>
-		<Italian>[ICON_BULLET]Le nuove unità ricevono %D1_Change punti esperienza</Italian>
+		<Italian>[ICON_BULLET]Le nuove unità ricevono %D1_Change [NUM2:punti esperienza:punto esperienza:punti esperienza]</Italian>
 		<Spanish>[ICON_BULLET]Las nuevas unidades reciben %D1_Change puntos de experiencia</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3741,7 +3755,7 @@
 		<English>[ICON_BULLET]%D1_Mod%%[ICON_GREATPEOPLE] Birth Rate</English>
 		<French>[ICON_BULLET]Taux de natalité %D1_Mod%%[ICON_GREATPEOPLE]</French>
 		<German>[ICON_BULLET]%D1_Mod%%[ICON_GREATPEOPLE] Geburtenrate</German>
-		<Italian>[ICON_BULLET]%D1_Mod%%[ICON_GREATPEOPLE] Tasso di natalità</Italian>
+		<Italian>[ICON_BULLET]%D1_Mod%%[ICON_GREATPEOPLE] tasso di natalità</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod%% a la tasa de natalidad de [ICON_GREATPEOPLE]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3769,7 +3783,7 @@
 		<English>[ICON_BULLET]%D1_Change%F2_Icon from[SPACE]</English>
 		<French>[ICON_BULLET]%D1_Change%F2_Icon :[SPACE]</French>
 		<German>[ICON_BULLET]%D1_Change%F2_Icon durch[SPACE]</German>
-		<Italian>[ICON_BULLET]%D1_Change%F2_Icon da[SPACE]</Italian>
+		<Italian>[ICON_BULLET]Oro %D1_Change %F2_Icon grazie ai miglioramenti:[SPACE]</Italian><!--Aerial CT trait in the pedia-->
 		<Spanish>[ICON_BULLET]%D1_Change %F2_Icon por[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3793,7 +3807,7 @@
 		<English>[ICON_BULLET]%D1_Change%F2_HappyOrUn in %d3_NumCities Largest Cities</English>
 		<French>[ICON_BULLET]%D1_Change%F2_HappyOrUn dans les %d3_NumCities plus grandes villes</French>
 		<German>[ICON_BULLET]%D1_Change%F2_HappyOrUn in den %d3_NumCities größten Städten</German>
-		<Italian>[ICON_BULLET]%D1_Change%F2_HappyOrUn nelle %d3_NumCities città più grandi</Italian>
+		<Italian>[ICON_BULLET]Nelle %d3_NumCities città più grandi: %D1_Change %F2_HappyOrUn</Italian><!--  -->
 		<Spanish>[ICON_BULLET]%D1_Change %F2_HappyOrUn en las %d3_NumCities mayores ciudades</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3889,7 +3903,7 @@
 		<English>[ICON_BULLET]%D1_Mod%% Maintenance Costs from Number of Cities</English>
 		<French>[ICON_BULLET]Coût d'entretien %D1_Mod%% dû au nombre de villes</French>
 		<German>[ICON_BULLET]%D1_Mod%% Unterhaltskosten von Anzahl der Städte</German>
-		<Italian>[ICON_BULLET]%D1_Mod%% costo di mantenimento per il numero di città</Italian>
+		<Italian>[ICON_BULLET]Costi di mantenimento per il numero di città %D1_Mod%%</Italian><!--Aerial CT trait in the pedia-->
 		<Spanish>[ICON_BULLET]%D1_Mod%% a los costes de mantenimiento por cantidad de ciudades</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3953,7 +3967,7 @@
 		<English>Upkeep: %d1[ICON_GOLD] per turn</English>
 		<French>Entretien : %d1[ICON_GOLD] par tour</French>
 		<German>Unterhalt: %d1[ICON_GOLD] pro Runde</German>
-		<Italian>Mantenimento: %d1[ICON_GOLD] per turno</Italian>
+		<Italian>Costi di mantenimento: %d1[ICON_GOLD] a turno</Italian>
 		<Spanish>Mantenimiento: %d1 [ICON_GOLD] por turno</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3977,7 +3991,7 @@
 		<English>[ICON_BULLET]%D1_Change Trade Routes ([ICON_TRADE]) per City</English>
 		<French>[ICON_BULLET]%D1_Change routes commerciales par ville</French>
 		<German>[ICON_BULLET]%D1_Change Handelswege ([ICON_TRADE]) pro Stadt</German>
-		<Italian>[ICON_BULLET]%D1_Change rotte commerciali ([ICON_TRADE]) per città</Italian>
+		<Italian>[ICON_BULLET]Numero rotte commerciali [ICON_TRADE] per città %D1_Change</Italian><!--Aerial CT trait in the pedia-->
 		<Spanish>[ICON_BULLET]%D1_Change rutas comerciales ([ICON_TRADE]) por ciudad</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4389,25 +4403,28 @@
 	<TEXT>
 		<Tag>TXT_KEY_COMMA</Tag>
 		<English>,</English>
+    <Italian>,[NEWLINE][ICON_BULLET]prova123</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_AMBUSH</Tag>
 		<English>Ambush (best to select one unit at a time for this)</English>
 		<French>Embuscade (sélectionner une seule unité pour cette action)</French>
 		<Russian>Засада (для этого лучше всего выбрать один отряд за раз)</Russian>
+    <Italian>Imboscata</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_ARREST</Tag>
 		<English>Arrest Criminal</English>
 		<French>Arrêter un Criminel</French>
 		<Russian>Арестовать преступника</Russian>
+    <Italian>Arresta criminale</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_AUTOMATE</Tag>
 		<English>Automate the Unit</English>
 		<French>Automatiser l'unité</French>
 		<German>Einheit automatisieren</German>
-		<Italian>Automatizza l'unità</Italian>
+		<Italian>Automatizza unità</Italian>
 		<Spanish>Automatizar la unidad</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4415,7 +4432,7 @@
 		<English>Cancel last Mission</English>
 		<French>Annuler la dernière mission</French>
 		<German>Letzte Mission abbrechen</German>
-		<Italian>Annulla l'ultima missione</Italian>
+		<Italian>Annulla ultima missione</Italian>
 		<Spanish>Cancelar última misión</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4431,7 +4448,7 @@
 		<English>This will cancel all queued orders for the currently selected unit.</English>
 		<French>Annuler tous les ordres en attente de l'unité sélectionnée.</French>
 		<German>Löschen Sie alle Befehle der aktuellen Einheit.</German>
-		<Italian>Per annullare tutti gli ordini in coda dell'unità selezionata.</Italian>
+		<Italian>[NEWLINE]Annulla tutti gli ordini.</Italian>
 		<Spanish>Esto cancelará todas las órdenes que haya en cola para la unidad que tengáis seleccionada.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4439,7 +4456,7 @@
 		<English>This will cancel the last order in the unit's mission queue. You will find this to be very useful if you accidentally queue the wrong order.</English>
 		<French>Annuler le dernier ordre de la liste d'attente. Cette option est très utile pour corriger une erreur.</French>
 		<German>Löschen Sie den letzten Befehl in der Befehlsliste der Einheit. Haben Sie dieser versehentlich einen falschen Befehl erteilt, ist diese Funktion sehr nützlich.</German>
-		<Italian>Questo comando annulla l'ultimo ordine nella coda delle azioni dell'unità. Estremamente utile se si sbaglia a impostare la coda degli ordini.</Italian>
+		<Italian>[NEWLINE]Annulla l'ultimo ordine.</Italian>
 		<Spanish>Esto cancelará la última orden en la cola de órdenes de la unidad. Es muy útil si ponéis sin querer una orden incorrecta en la cola.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4455,7 +4472,7 @@
 		<English>Click on this order to remove the unit from play.</English>
 		<French>Retirer l'unité de la partie.</French>
 		<German>Klicken Sie hier, um die Einheit aus dem Spiel zu entfernen.</German>
-		<Italian>Clicca su questo ordine per rimuovere l'unità dalla partita.</Italian>
+		<Italian>[NEWLINE]Rimuovi l'unità dalla partita.</Italian>
 		<Spanish>Hacer clic en esta orden para eliminar a la unidad de la partida.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4463,7 +4480,7 @@
 		<English>Gift the Unit</English>
 		<French>Offrir l'unité</French>
 		<German>Einheit schenken</German>
-		<Italian>Dona l'unità</Italian>
+		<Italian>Dona unità</Italian>
 		<Spanish>Regalar la unidad</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4471,19 +4488,20 @@
 		<English>This will give the currently selected unit to the player who controls the land the unit is standing on. To give the unit to a different player you must first move the unit into their territory.</English>
 		<French>Transférer l'unité sélectionnée au joueur contrôlant le terrain sur laquelle elle se trouve. Pour transférer une unité à un joueur, vous devez d'abord placer cette unité sur son territoire.</French>
 		<German>Übergeben Sie die aktuelle Einheit dem Spieler, der ihren Standort kontrolliert. Möchten Sie die Einheit einem anderen Spieler übergeben, müssen Sie sie zuerst in dessen Territorium verlegen.</German>
-		<Italian>Questo comando serve per consegnare l'unità attualmente selezionata al giocatore che controlla il territorio sul quale si trova l'unità. Per dare l'unità a un altro giocatore devi prima muovere l'unità nel territorio prescelto.</Italian>
+		<Italian>[NEWLINE]Consegna l'unità al proprietario del luogo dove si trova.</Italian>
 		<Spanish>Con esto le daréis la unidad seleccionada al jugador que controle la tierra en la que se encuentre dicha unidad. Para darle la unidad a otro jugador, antes tendréis que moverla a un territorio que le pertenezca.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_HOTKEY</Tag>
 		<English>Command Hotkey</English>
+    <Italian>Scelta rapida</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_HOTKEY_HELP</Tag>
 		<English>Allows you to assign a hot-key to this unit.</English>
 		<French>Assigner un raccourci-clavier à cette unité.</French>
 		<German>Weisen Sie dieser Einheit eine Schnelltaste zu.</German>
-		<Italian>Ti permette di assegnare un tasto di scelta rapida a questa unità.</Italian>
+		<Italian>[NEWLINE]Permette di assegnare un tasto di scelta rapida a questa unità.</Italian>
 		<Spanish>Permite asignarle una tecla de acceso a esta unidad.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4499,7 +4517,7 @@
 		<English>This will move the unit into a transport.</English>
 		<French>Embarquer l'unité à bord d'un transport.</French>
 		<German>Schicken Sie die Einheit in ein Transportschiff.</German>
-		<Italian>Per muovere un'unità a bordo di un trasporto.</Italian>
+		<Italian>[NEWLINE]Muovi l'unità sul trasporto.</Italian>
 		<Spanish>Con esto subiréis la unidad a un transporte.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4507,7 +4525,7 @@
 		<English>Load onto Unit</English>
 		<French>Charger sur unité</French>
 		<German>Einheit beladen</German>
-		<Italian>Carica sull'unità</Italian>
+		<Italian>Carica sul trasporto</Italian>
 		<Spanish>Embarcar la unidad</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4515,7 +4533,7 @@
 		<English>This will move the unit into a specified transport.</English>
 		<French>L'unité embarquera à bord du transport indiqué.</French>
 		<German>Die Einheit wird in die gewählte Transporteinheit geladen.</German>
-		<Italian>Per muovere un'unità sul trasporto specificato.</Italian>
+		<Italian>[NEWLINE]Muovi l'unità sul trasporto.</Italian>
 		<Spanish>Con esto, la unidad embarcará en el transporte especificado.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4525,6 +4543,7 @@
 		<German>Einheit mit zwei gleichen Einheiten auf demselben Feld zu einer stärkeren Einheit zusammenführen</German>
 		<Polish>Połącz dwie podobne jednostki by otrzymać jedną potężną!</Polish>
 		<Russian>Объединитесь с двумя одинаковыми юнитами на одной клетке, чтобы создать один, более мощный отряд</Russian>
+    <Italian>Unisci due unità simili sullo stessa casella</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_PROMOTION</Tag>
@@ -4538,7 +4557,7 @@
 		<Tag>TXT_KEY_COMMAND_REEQUIP</Tag>
 		<English>Replace Equipment for Unit (ends turn)</English>
 		<French>Remplacer l'Equipement de l'unité (termine le tour)</French>
-		<Italian>Sostituisci l'equipaggiamento dell'unità</Italian>
+		<Italian>Sostituisci equipaggiamento (fine turno)</Italian>
 		<Polish>Zamień Ekwipunek dla Jednostki</Polish>
 		<Russian>Сменить снаряжение отряду (завершает ход)</Russian>
 	</TEXT>
@@ -4549,6 +4568,7 @@
 		<German>Einheit in drei schwächere Einheiten aufteilen</German>
 		<Polish>Podziel tą jednostkę by otrzymać trzy słabsze.</Polish>
 		<Russian>Разделить отряд на три менее мощных</Russian>
+    <Italian>Dividi unità in tre</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_STATUS</Tag>
@@ -4556,13 +4576,14 @@
 		<French>Changer de Statut</French>
 		<German>Statusänderung</German>
 		<Russian>Установить статус</Russian>
+    <Italian>Imposta stato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_STOP_AUTOMATION</Tag>
 		<English>Stop Automation</English>
 		<French>Annuler l'automatisation</French>
 		<German>Automatisierung stoppen</German>
-		<Italian>Interrompi l'automazione</Italian>
+		<Italian>Interrompi automazione</Italian>
 		<Spanish>Detener la automatización</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4570,7 +4591,7 @@
 		<English>This will cancel the order for the unit to automate itself. It will then rely on you for all orders.</English>
 		<French>Annuler l'automatisation de l'unité. Vous pouvez ensuite lui donner de nouveaux ordres.</French>
 		<German>Widerrufen Sie den Automatisierungsbefehl der Einheit. Diese wartet anschließend auf weitere Befehle. </German>
-		<Italian>Per annullare l'ordine di automazione di un'unità e riprenderne completamente il controllo.</Italian>
+		<Italian>[NEWLINE]Annulla l'automazione e riprendi il controllo dell'unità.</Italian>
 		<Spanish>Sirve para cancelar la orden de automatizarse de la unidad. Ésta pasará a obedecer solo las órdenes que le deis.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4586,7 +4607,7 @@
 		<English>Unload All</English>
 		<French>Décharger tous</French>
 		<German>Alle entladen</German>
-		<Italian>Sbarca tutto</Italian>
+		<Italian>Sbarca tutti</Italian>
 		<Spanish>Desembarcar todas</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4594,7 +4615,7 @@
 		<English>This will unload all transported units.</English>
 		<French>Décharger toutes les unités transportées.</French>
 		<German>Entladen Sie alle transportierten Einheiten.</German>
-		<Italian>Per scaricare tutte le unità a bordo del trasporto.</Italian>
+		<Italian>[NEWLINE]Fa scendere tutte le unità a bordo.</Italian>
 		<Spanish>Con esto desembarcarán todas las unidades transportadas.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4602,7 +4623,7 @@
 		<English>This will unload a previously loaded unit from its transport.</English>
 		<French>Décharger une unité d'un transport.</French>
 		<German>Entladen Sie eine zuvor eingeladene Einheit.</German>
-		<Italian>Per scaricare un'unità precedentemente caricata su un trasporto.</Italian>
+		<Italian>[NEWLINE]Fa scendere l'unità a bordo.</Italian>
 		<Spanish>Con esto bajaréis del transporte a una unidad previamente embarcada en él.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4610,7 +4631,7 @@
 		<English>Upgrade Unit</English>
 		<French>Améliorer l'unité</French>
 		<German>Einheit modernisieren</German>
-		<Italian>Migliora unità</Italian>
+		<Italian>Modernizza unità</Italian>
 		<Spanish>Modernizar unidad</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4618,7 +4639,7 @@
 		<English>Wake the Unit</English>
 		<French>Réveiller l'unité</French>
 		<German>Einheit wecken</German>
-		<Italian>Sveglia l'unità</Italian>
+		<Italian>Sveglia unità</Italian>
 		<Spanish>Despertar a la unidad</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4626,7 +4647,7 @@
 		<English>This will wake the unit up so that it can be issued orders. Waking a unit does not remove its fortification bonus.</English>
 		<French>Réveiller l'unité pour lui donner des ordres. Cette action ne modifie pas le bonus de retranchement de l'unité.</French>
 		<German>Wecken Sie eine Einheit auf und erteilen Sie ihr Befehle. Die Einheit verliert dadurch nicht ihren Befestigungsbonus.</German>
-		<Italian>Questo comando sveglierà l'unità, in modo che possa ricevere ordini. Svegliando un'unità non si perde il bonus della sua fortificazione.</Italian>
+		<Italian>[NEWLINE]Sveglia l'unità senza perdere i bonus della fortificazione o allenamento.</Italian>
 		<Spanish>Esto despertará a la unidad para que se le puedan dar órdenes. Despertar a una unidad no elimina las bonificaciones que tenga por fortificación.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4708,7 +4729,7 @@
 		<English>%s1_BldgName has been built by the citizens of %s2_CityName</English>
 		<French>[NUM1:Un:Une:Des:Des] [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] [NUM1:a:a:ont:ont] été construi[NUM1:t:te:ts:tes] par les citoyens de %s2_CityName</French>
 		<German>Neuer automatischer Effekt in %s2_CityName: %s1_BldgName.</German>
-		<Italian>%s1_BldgName è stato costruito dagli abitanti di %s2_CityName</Italian>
+		<Italian>Gli abitanti di %s2_CityName hanno costruito l'edificio automatico %s1_BldgName!</Italian>
 		<Spanish>Los ciudadanos de %s2_CityName han construido [NUM1:un:una:unos:unas] %s1_BldgName.</Spanish>
 		<Polish>%s1_BldgName został wybudowany przez mieszkańców miasta %s2_CityName</Polish>
 		<Russian>%s1_BldgName была построена жителями города %s2_CityName</Russian>
@@ -4718,18 +4739,10 @@
 		<English>%s1_BldgName has been lost in %s2_CityName</English>
 		<French>[NUM1:Un:Une:Des:Des] [COLOR_YIELD_FOOD]%s1_BldgName[COLOR_REVERT] [NUM1:a:a:ont:ont] été perd[NUM1:u:ue:us:ues] par les citoyens de %s2_CityName</French>
 		<German>Neuer automatischer Effekt in %s2_CityName: %s1_BldgName.</German>
-		<Italian>%s1_BldgName è stato costruito dagli abitanti di %s2_CityName</Italian>
+		<Italian>Gli abitanti di %s2_CityName hanno costruito l'edifico %s1_BldgName!</Italian>
 		<Spanish>Los ciudadanos de %s2_CityName han construido [NUM1:un:una:unos:unas] %s1_BldgName.</Spanish>
 		<Polish>%s1_BldgName został wybudowany przez mieszkańców miasta %s2_CityName</Polish>
 		<Russian>%s1_BldgName была утрачена в городе %s2_CityName</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_NATURAL_WONDERS</Tag>
-		<English>1. Natural Wonders</English>
-		<French>1. Merveilles Naturelles</French>
-		<German>1. Naturwunder</German>
-		<Polish>1. Cuda Natury</Polish>
-		<Russian>1. ×óäî ïðèðîäû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_NATURAL_WONDERS_PEDIA</Tag>
@@ -4915,6 +4928,7 @@
 		<Tag>TXT_KEY_CULTURELEVEL_LEGENDARY</Tag>
 		<English>Legendary</English>
 		<French>Légendaire</French>
+    <Italian>Leggendario</Italian>
 		<German>Legendär</German>
 		<Spanish>Legendario</Spanish>
 		<Polish>Legendarna</Polish>
@@ -4923,6 +4937,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CULTURELEVEL_MONUMENTAL</Tag>
 		<English>Monumental</English>
+    <Italian>Monumentale</Italian>
 		<Polish>Monumentalna</Polish>
 		<Russian>Ìîíóìåíòàëüíûé</Russian>
 	</TEXT>
@@ -4938,6 +4953,7 @@
 		<Tag>TXT_KEY_CULTURELEVEL_PHENOMENAL</Tag>
 		<English>Phenomenal</English>
 		<French>Phénoménal</French>
+    <Italian>Fenomenale</Italian>
 		<German>Phänomenal</German>
 		<Spanish>Fenomenal</Spanish>
 		<Polish>Fenomenalna</Polish>
@@ -5342,11 +5358,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Unità aerea:Unità aeree</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Unità aerea</Italian>
 		<Spanish>
 			<Text>Unidad aérea:Unidades aéreas</Text>
 			<Gender>Female</Gender>
@@ -5414,11 +5426,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Unità navale:Unità navali</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Unità navale</Italian>
 		<Spanish>
 			<Text>Unidad acuática:Unidades acuáticas</Text>
 			<Gender>Female</Gender>
@@ -6037,7 +6045,7 @@
 		<English>Net Gold Per Turn</English>
 		<French>Or (net) par tour</French>
 		<German>Netto-Goldbetrag pro Runde</German>
-		<Italian>Oro netto per turno</Italian>
+		<Italian>Oro netto a turno</Italian>
 		<Spanish>Oro neto por turno</Spanish>
 	</TEXT>
 	<TEXT>
@@ -6163,23 +6171,23 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ENHANCED_TECH_CONQUEST_FAIL</Tag>
-		<English>You find nothing worth learning from the inhabitants of %s</English>
-		<French>Vous n'avez rien pu obtenir d'utile de la part des habitants de %s</French>
-		<German>Es gibt nichts Lernenswertes zu finden bei den Einwohnern von %s</German>
-		<Italian>Non hai trovato niente che valesse la pena di imparare dagli abitanti di %s</Italian>
-		<Spanish>No has encontrado nada que aprender de los habitantes de %s</Spanish>
-		<Polish>Nie znalazłeś niczego wartego do nauczenia od mieszkańców %s</Polish>
-		<Russian>Âû òàê è íå íàøëè íè÷åãî ñòîÿùåãî äëÿ èçó÷åíèÿ ó òóçåìöåâ %s.</Russian>
+		<English>You find nothing worth learning from the inhabitants of</English>
+		<French>Vous n'avez rien pu obtenir d'utile de la part des habitants de</French>
+		<German>Es gibt nichts Lernenswertes zu finden bei den Einwohnern von</German>
+		<Italian>Non hai trovato niente che valesse la pena di imparare dagli abitanti di</Italian>
+		<Spanish>No has encontrado nada que aprender de los habitantes de</Spanish>
+		<Polish>Nie znalazłeś niczego wartego do nauczenia od mieszkańców</Polish>
+		<Russian>Âû òàê è íå íàøëè íè÷åãî ñòîÿùåãî äëÿ èçó÷åíèÿ ó òóçåìöåâ.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ENHANCED_TECH_CONQUEST_SUCESS</Tag>
-		<English>From the inhabitants of %s, you learn some of the secrets of:</English>
-		<French>En interrogeant les habitants de %s, vous avez découvert des secrets concernant</French>
-		<German>Bei der Befragung der Einwohner von %s, entdecken Sie die Geheimnisse der Technologie</German>
-		<Italian>Interrogando gli abitanti di %s, hai scoperto alcuni segreti della tecnologia</Italian>
-		<Spanish>De los habitantes de %s, has aprendido algunos de los secretos de la tecnología.</Spanish>
-		<Polish>Od mieszkańców %s nauczyłeś się sekretów:</Polish>
-		<Russian>От жителей %s вы узнаете некоторые секреты:</Russian>
+		<English>From the inhabitants of %s, you learn some of the secrets of: %s</English>
+		<French>En interrogeant les habitants de %s, vous avez découvert des secrets concernant %s</French>
+		<German>Bei der Befragung der Einwohner von %s, entdecken Sie die Geheimnisse der Technologie %s</German>
+		<Italian>Interrogando gli abitanti di %s, hai scoperto alcuni segreti della tecnologia %s</Italian>
+		<Spanish>De los habitantes de %s, has aprendido algunos de los secretos de la tecnología %s.</Spanish>
+		<Polish>Od mieszkańców %s nauczyłeś się sekretów: %s</Polish>
+		<Russian>От жителей %s вы узнаете некоторые секреты: %s</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_ANCIENT</Tag>
@@ -6190,7 +6198,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>antica</Italian>
+		<Italian>Era antica</Italian>
 		<Spanish>Antigüedad</Spanish>
 		<Polish>Starożytna</Polish>
 		<Russian>Древний мир</Russian>
@@ -6210,7 +6218,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>atomica</Italian>
+		<Italian>Era atomica</Italian>
 		<Russian>Ядерная эра</Russian>
 	</TEXT>
 	<TEXT>
@@ -6227,7 +6235,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>classica</Italian>
+		<Italian>Era classica</Italian>
 		<Spanish>Época clásica</Spanish>
 		<Polish>Klasyczna</Polish>
 		<Russian>Античность</Russian>
@@ -6247,7 +6255,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>cosmica</Italian>
+		<Italian>Era cosmica</Italian>
 		<Russian>Космическая</Russian>
 	</TEXT>
 	<TEXT>
@@ -6269,7 +6277,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>Futuro</Italian>
+		<Italian>Era futura</Italian>
 		<Spanish>Futuro</Spanish>
 		<Polish>Przyszłość</Polish>
 		<Russian>Будущее</Russian>
@@ -6289,7 +6297,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>galattica</Italian>
+		<Italian>Era galattica</Italian>
 		<Spanish>Época galáctica</Spanish>
 		<Polish>Galaktyczna</Polish>
 		<Russian>Галактическая</Russian>
@@ -6309,7 +6317,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>industriale</Italian>
+		<Italian>Era industriale</Italian>
 		<Spanish>Época industrial</Spanish>
 		<Polish>Przemysłowa</Polish>
 		<Russian>Новое время</Russian>
@@ -6328,7 +6336,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>dell'informazione</Italian>
+		<Italian>Era dell'informazione</Italian>
 		<Russian>Информационная эра</Russian>
 	</TEXT>
 	<TEXT>
@@ -6346,7 +6354,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>medievale</Italian>
+		<Italian>Era medievale</Italian>
 		<Spanish>Edad media</Spanish>
 		<Polish>Średniowieczna</Polish>
 		<Russian>Средневековье</Russian>
@@ -6365,7 +6373,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>della nanotecnologia</Italian>
+		<Italian>Era nanotecnologica</Italian>
 		<Russian>Нанотех</Russian>
 	</TEXT>
 	<TEXT>
@@ -6383,7 +6391,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>Preistoria</Italian>
+		<Italian>Era preistorica</Italian>
 		<Spanish>Prehistoria</Spanish>
 		<Polish>Prehistoryczna</Polish>
 		<Russian>Каменный век</Russian>
@@ -6396,7 +6404,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_ERA_RENAISSANCE</Tag>
 		<English>Renaissance</English>
-		<Italian>rinascimentale</Italian>
+		<Italian>Era rinascimentale</Italian>
 		<Spanish>Renacimiento</Spanish>
 		<Polish>Renesansowa</Polish>
 		<Russian>Возрождение</Russian>
@@ -6412,7 +6420,7 @@
 		<English>You have entered the %s1_era era!</English>
 		<French>Vous venez d'entrer dans une nouvelle ère (%s1_era) !</French>
 		<German>Ihr habt das Zeitalter %s1 erreicht!</German>
-		<Italian>Sei entrato nell'era %s1_era!</Italian>
+		<Italian>Sei entrato nell'%s1_era!</Italian>
 		<Spanish>Habéis entrado en [NUM1:el:la:los:las] %s1_era.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -6424,7 +6432,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>della trascendenza</Italian>
+		<Italian>Era della trascendenza</Italian>
 		<Russian>Эра Трансцендентности</Russian>
 	</TEXT>
 	<TEXT>
@@ -6442,7 +6450,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>transumana</Italian>
+		<Italian>Era del transumanesimo</Italian>
 		<Spanish>Época transhumana</Spanish>
 		<Polish>Transhumanistyczna</Polish>
 		<Russian>Трансгуманизм</Russian>
@@ -6495,7 +6503,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_CITY_VISIBILITY</Tag>
-		<English>City Vision</English>
+		<English>City Visibility</English>
 		<French>Afficher la ville</French>
 		<German>Stadtsichtbarkeit</German>
 		<Italian>Visibilità città</Italian>
@@ -6895,6 +6903,7 @@
 		<Tag>TXT_KEY_EXPR_AND</Tag>
 		<English> And </English>
 		<French> et </French>
+    <Italian> [COLOR_REVERT]e [COLOR_WARNING_TEXT]</Italian>
 		<Russian> И </Russian>
 	</TEXT>
 	<TEXT>
@@ -6912,6 +6921,7 @@
 		<English>False</English>
 		<French>faux</French>
 		<Russian>Ëîæü</Russian>
+    <Italian>no</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EXPR_IF</Tag>
@@ -6972,6 +6982,7 @@
 		<Tag>TXT_KEY_EXPR_OR</Tag>
 		<English> Or </English>
 		<French> ou </French>
+    <Italian> [COLOR_REVERT]o [COLOR_WARNING_TEXT]</Italian>
 		<German> oder </German>
 		<Russian> или </Russian>
 	</TEXT>
@@ -6985,6 +6996,7 @@
 		<English>True</English>
 		<French>vrai</French>
 		<Russian>Èñòèíà</Russian>
+    <Italian>si</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EXTENDED_GAME_NO_DESKTOP</Tag>
@@ -7220,6 +7232,7 @@
 		</French>
 		<Polish>Wielka Rafa Koralowa</Polish>
 		<Russian>Áîë. Áàðüåðíûé ðèô</Russian>
+    <Italian>Grande barriera corallina</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_GREAT_BARRIER_PEDIA</Tag>
@@ -7236,6 +7249,7 @@
 		<German>Great Barrier Reef (Leuchtfeuer)</German>
 		<Polish>Wielka Rafa Koralowa (Boja)</Polish>
 		<Russian>Áàðüåðíûé ðèô (áóé)</Russian>
+    <Italian>Segnalatore sulla grande barriera corallina</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE</Tag>
@@ -7244,6 +7258,7 @@
 		<German>Great Barrier Reef (Leuchtturm)</German>
 		<Polish>Wielka Rafa Koralowa (Latarnia Morska)</Polish>
 		<Russian>Áàðüåðíûé ðèô (ìàÿê)</Russian>
+    <Italian>Faro sulla grande barriera corallina</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_KILIMANJARO</Tag>
@@ -7947,7 +7962,7 @@
 		<English>Treasury: %d1 [ICON_GOLD]</English>
 		<French>Trésor : %d1 [ICON_GOLD]</French>
 		<German>Schatzkammer: %d1 [ICON_GOLD]</German>
-		<Italian>Tesoro: %d1 [ICON_GOLD]</Italian>
+		<Italian>Tesoreria: %d1 [ICON_GOLD]</Italian>
 		<Spanish>Tesoro: %d1 [ICON_GOLD]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -8144,7 +8159,7 @@
 		<English>Will Trade</English>
 		<French>Echangera</French>
 		<German>Treibt Handel</German>
-		<Italian>Commercerà</Italian>
+		<Italian>Disponibile a commerciare</Italian>
 		<Spanish>Intercambia</Spanish>
 	</TEXT>
 	<TEXT>
@@ -8160,7 +8175,7 @@
 		<English>%d1 Gold Per Turn Available For Trade</English>
 		<French>%d1 or par tour disponible pour le commerce</French>
 		<German>%d1 Gold pro Runde zum Handel verfübar</German>
-		<Italian>%d1 Oro per turno disponibile per il commercio</Italian>
+		<Italian>%d1 Oro a turno disponibile per il commercio</Italian>
 		<Spanish>%d1 oro por turno disponible para intercambiar</Spanish>
 	</TEXT>
 	<TEXT>
@@ -8565,7 +8580,7 @@
 		<English>Makes finding resources easier</English>
 		<French>Faciliter la découverte des ressources.</French>
 		<German>Erleichtert das Auffinden von Ressourcenvorkommen</German>
-		<Italian>Facilita la scoperta delle risorse</Italian>
+		<Italian>[NEWLINE]Facilita la scoperta delle risorse</Italian>
 		<Spanish>Hace que sea más fácil encontrar recursos</Spanish>
 	</TEXT>
 	<TEXT>
@@ -8629,7 +8644,7 @@
 		<English>Toggles display of unit position and density information</English>
 		<French>Afficher/masquer la position des unités et des informations de densité.</French>
 		<German>Schaltet die Anzeige der Einheitenpositionen und -dichte ein/aus</German>
-		<Italian>Attiva/disattiva la visualizzazione della posizione e le informazioni sulla densità delle unità</Italian>
+		<Italian>[NEWLINE]Attiva o disattiva la visualizzazione della posizione e le informazioni sulla densità delle unità</Italian>
 		<Spanish>Activa el visor de la posición de las unidades y de la información de la densidad</Spanish>
 	</TEXT>
 	<TEXT>
@@ -8637,7 +8652,7 @@
 		<English>All Military</English>
 		<French>Toutes unités militaires</French>
 		<German>Alle Militäreinheiten</German>
-		<Italian>Tutti gli eserciti</Italian>
+		<Italian>Tutte le unità</Italian>
 		<Spanish>Todos los ejércitos</Spanish>
 	</TEXT>
 	<TEXT>
@@ -8653,7 +8668,7 @@
 		<English>Enemy Military</English>
 		<French>Unités militaires ennemies</French>
 		<German>Feindliche Militäreinheiten</German>
-		<Italian>Eserciti nemici</Italian>
+		<Italian>Unità nemiche</Italian>
 		<Spanish>Ejércitos enemigos</Spanish>
 	</TEXT>
 	<TEXT>
@@ -8661,7 +8676,7 @@
 		<English>Enemies in Territory</English>
 		<French>Ennemis sur le territoire</French>
 		<German>Feindliche Einheiten im Territorium</German>
-		<Italian>Nemici nel territorio</Italian>
+		<Italian>Unità nemiche nel tuo territorio</Italian>
 		<Spanish>Enemigos en territorio</Spanish>
 	</TEXT>
 	<TEXT>
@@ -8669,7 +8684,7 @@
 		<English>Team Military</English>
 		<French>Unités militaires de l'équipe</French>
 		<German>Team-Militäreinheiten</German>
-		<Italian>Eserciti della squadra</Italian>
+		<Italian>Unità dell'impero</Italian>
 		<Spanish>Ejércitos del equipo</Spanish>
 	</TEXT>
 	<TEXT>
@@ -8677,7 +8692,7 @@
 		<English>Globe View</English>
 		<French>Vue du globe</French>
 		<German>Globale Ansicht</German>
-		<Italian>Visuale del pianeta</Italian>
+		<Italian>Attiva/disattiva visuale del pianeta</Italian>
 		<Spanish>Vista global</Spanish>
 	</TEXT>
 	<TEXT>
@@ -9274,7 +9289,7 @@
 		<English>Trade Routes</English>
 		<French>Routes commerciales</French>
 		<German>Handelswege</German>
-		<Italian>Rotte commerciali</Italian>
+		<Italian>rotte commerciali</Italian>
 		<Spanish>Rutas comerciales</Spanish>
 	</TEXT>
 	<TEXT>
@@ -9424,7 +9439,7 @@
 		<English>[ICON_BULLET]%D1%% Tile Defense</English>
 		<French>[ICON_BULLET]Défense de la case %D1%%</French>
 		<German>[ICON_BULLET]%D1%% Geländefeld-Verteidigung</German>
-		<Italian>[ICON_BULLET]%D1%% difensiva della casella</Italian>
+		<Italian>[ICON_BULLET]%D1%% di difensa sulla casella</Italian>
 		<Spanish>[ICON_BULLET]%D1%% a la defensa de la casilla</Spanish>
 	</TEXT>
 	<TEXT>
@@ -9480,12 +9495,12 @@
 		<English>[ICON_BULLET]%D1_Change%F2_YieldIcon with [COLOR_TECH_TEXT]%s3_TechName[COLOR_REVERT]</English>
 		<French>[ICON_BULLET]%D1_Change%F2_YieldIcon avec : [COLOR_TECH_TEXT]%s3_TechName[COLOR_REVERT]</French>
 		<German>[ICON_BULLET]%D1_Change%F2_YieldIcon mit der Technologie [COLOR_TECH_TEXT]%s3_TechName[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]%D1_Change%F2_YieldIcon con [NUM3:il:la:gli:le] [COLOR_TECH_TEXT]%s3_TechName[COLOR_REVERT]</Italian>
+		<Italian>[ICON_BULLET]%D1_Change%F2_YieldIcon con la tecnologia [COLOR_TECH_TEXT]%s3_TechName[COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change %F2_YieldIcon con [NUM3:el:la:los:las] [COLOR_TECH_TEXT]%s3_TechName[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BEACON_GREAT_BARRIER_REEF</Tag>
-		<English>Beacon (Great Barrier Reef)</English>
+		<English>Beacon(Great Barrier Reef)</English>
 		<French>
 			<Text>Balise - Grande barrière de corails</Text>
 			<Gender>Female</Gender>
@@ -9503,7 +9518,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER_REEF</Tag>
-		<English>Lighthouse (Great Barrier Reef)</English>
+		<English>Lighthouse(Great Barrier Reef)</English>
 		<French>
 			<Text>Phare - Grande barrière de corails</Text>
 			<Gender>Male</Gender>
@@ -9661,7 +9676,7 @@
 		<English>Air Bomb Mode</English>
 		<French>Bombardement aérien</French>
 		<German>Luftbombardierungsmodus</German>
-		<Italian>Modalità 'Bombardamento aereo'</Italian>
+		<Italian>Bombardamento aereo</Italian>
 		<Spanish>Modo Bombardeo aéreo</Spanish>
 	</TEXT>
 	<TEXT>
@@ -9679,7 +9694,7 @@
 		<English>"Airbomb defenses" allows you to bombard plot improvements or city defense percentage.</English>
 		<French>"Bombardement des défenses" vous permet de bombarder des aménagements défensifs ou de réduire le pourcentage de défense de la Ville.</French>
 		<German>"Luftbombardierung Verteidigungen" ermöglicht die Bombardierungen von Geländemodernisierungen oder Stadtverteidigungsprozente</German>
-		<Italian>"Bombarda difese" consente di colpire caselle con miglioramenti o danneggiare difese cittadine.</Italian>
+		<Italian>[NEWLINE]Consente di colpire caselle con miglioramenti o danneggiare difese cittadine.</Italian>
 		<Spanish>"Bombardear defensas" te permite bombardear las mejoras de las casillas, o reducir el porcentaje de defensa de una ciudad.</Spanish>
 		<Polish>Bombardowanie umocnień pozwala bombardować pola z udoskonaleniami lub osłabiać obronę miasta.</Polish>
 		<Russian>Ïðè áîìáàðäèðîâêå óêðåïëåíèé åñòü øàíñ ðàçðóøèòü ãîðîäñêèå îáúåêòû èëè óìåíüøèòü ïðîöåíòíûé ïîêàçàòåëü çàùèòû ãîðîäà.</Russian>
@@ -9699,7 +9714,7 @@
 		<English>"Airbomb buildings" allows you to attempt to destroy one of the city's buildings.</English>
 		<French>"Bombardement des Bâtiments" vous permet d'essayer de bombarder un des bâtiments de la Ville.</French>
 		<German>"Luftbombardierung Gebäude" erlaubt den Versuch Gebäude in der Stadt zu zerstören.</German>
-		<Italian>"Bombarda edifici" consente di provare a distruggere uno degli edifici cittadini.</Italian>
+		<Italian>[NEWLINE]Consente di distruggere gli edifici cittadini.</Italian>
 		<Spanish>"Bombardear edificios" te permite intentar destruir uno de los edificios de la ciudad.</Spanish>
 		<Polish>Bombardowanie budynków pozwala zniszczyć jeden z budynków w mieście.</Polish>
 		<Russian>Ïðè áîìáàðäèðîâêå çäàíèé öåëüþ íàëåòà ÿâëÿþòñÿ ãîðîäñêèå çäàíèÿ.</Russian>
@@ -9719,7 +9734,7 @@
 		<English>"Airbomb Factories" allows you to attempt to destroy one of the city's production buildings.</English>
 		<French>"Bombardement des Usines" vous permet d'essayer de bombarder un des bâtiments de production de la Ville.</French>
 		<German>"Luftbombardierung Fabriken" erlaubt den Versuch ein Produktionsgebäude in der Stadt zu zerstören.</German>
-		<Italian>"Bombarda fabbriche" consente di provare a distruggere uno degli edifici produttivi della città.</Italian>
+		<Italian>[NEWLINE]Consente di distruggere gli edifici produttivi della città.</Italian>
 		<Spanish>"Bombardear fábricas" te permite intentar destruir uno de los edificios de producción de la ciudad.</Spanish>
 		<Polish>Bombardowanie fabryk pozwala zniszczyć jeden z budynków produkcyjnych w mieście.</Polish>
 		<Russian>Ïðè áîìáàðäèðîâêå çàâîäîâ öåëüþ ÿâëÿþòñÿ ïðîèçâîäñòâåííûå ñòðóêòóðû.</Russian>
@@ -9739,7 +9754,7 @@
 		<English>"Port airbomb" allows you to attempt to damage a ship in the port, with a chance to sink her.</English>
 		<French>"Bombardement du Port" vous permet d'essayer d'endommager un navire dans le port, dans l'espoir de le couler.</French>
 		<German>"Luftbombardierung Häfen" erlaubt den Versuch ein Schiff im Hafen, mit einer gewissen Wahrscheinlichkeit es zu versenken, zu beschädigen.</German>
-		<Italian>"Bombarda porto" consente di provare a distruggere una delle navi in porto, con la probabilità di affondarla.</Italian>
+		<Italian>[NEWLINE]Consente di distruggere una delle navi in porto, con una probabilità di affondarla.</Italian>
 		<Spanish>"Bombardear puerto" te permite intentar dañar (o incluso hundir) un barco varado en el puerto.</Spanish>
 		<Polish>Bombardowanie portu pozwala uszkodzić statek w porcie, lub go zatopić.</Polish>
 		<Russian>Ïðè áîìáàðäèðîâêå ïîðòà ìîæíî ïîâðåäèòü èëè äàæå ïîòîïèòü âðàæåñêèé êîðàáëü.</Russian>
@@ -9759,7 +9774,7 @@
 		<English>"Strategic Airbomb" allows you to attempt to damage the current production project of the city.</English>
 		<French>"Bombardement Stratégique" vous permet d'endommager le projet de construction actuel de la Ville.</French>
 		<German>"Strategische Luftbombardierung" erlaubt den Versuch, die gegenwärtige Produktion der Stadt zu beschädigen.</German>
-		<Italian>"Bombardamento strategico" consente di provare a danneggiare la produzione cittadina in corso.</Italian>
+		<Italian>[NEWLINE]Consente di danneggiare la produzione cittadina.</Italian>
 		<Spanish>"Bombardeo estratégico" te permite intentar dañar la producción en curso de la ciudad.</Spanish>
 		<Polish>Bombardowanie strategiczne pozwala uszkodzić aktualną produkcję w mieście.</Polish>
 		<Russian>Ïðè áîìáàðäèðîâêå ñòðàòåãè÷åñêèõ öåëåé ìîæåò áûòü óíè÷òîæåí òåêóùèé îáúåêò ïðîèçâîäñòâà â ãîðîäå.</Russian>
@@ -9769,7 +9784,7 @@
 		<English>Order the air unit to bomb the city or improvement in the selected tile</English>
 		<French>Ordonner à l'unité aérienne de bombarder la ville ou l'aménagement de la case sélectionnée.</French>
 		<German>Befehlen Sie der Lufteinheit, die Modernisierung des gewählten Geländefelds zu bombardieren.</German>
-		<Italian>Ordina all'unità aerea di bombardare la città o il miglioramento sulla casella selezionata</Italian>
+		<Italian>[NEWLINE]L'unità aerea bombarda la città o il miglioramento selezionati.</Italian>
 		<Spanish>Ordena a la unidad aérea que bombardee la ciudad o la mejora que haya en la casilla seleccionada.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -9777,7 +9792,7 @@
 		<English>Airlift Mode</English>
 		<French>Transport aérien</French>
 		<German>Lufttransportmodus</German>
-		<Italian>Modalità trasporto aereo</Italian>
+		<Italian>Trasporto aereo</Italian>
 		<Spanish>Modo Aerotransportar</Spanish>
 	</TEXT>
 	<TEXT>
@@ -9785,7 +9800,7 @@
 		<English>Order the unit airlifted to the selected tile</English>
 		<French>Ordonner le transport aérien de l'unité vers la case sélectionnée.</French>
 		<German>Fliegen Sie die Einheit zum gewählten Geländefeld.</German>
-		<Italian>Ordina il trasporto aereo dell'unità sulla casella selezionata</Italian>
+		<Italian>[NEWLINE]Trasporto aereo dell'unità sulla casella selezionata.</Italian>
 		<Spanish>Ordena a la unidad que se aerotransporte hasta la casilla seleccionada.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -9793,7 +9808,7 @@
 		<English>Air Strike Mode</English>
 		<French>Frappe aérienne</French>
 		<German>Luftangriffsmodus</German>
-		<Italian>Modalità 'Attacco aereo'</Italian>
+		<Italian>Attacco aereo</Italian>
 		<Spanish>Modo Ataque aéreo</Spanish>
 	</TEXT>
 	<TEXT>
@@ -9801,7 +9816,7 @@
 		<English>Order the air unit to attack enemy units in the selected tile</English>
 		<French>Ordonner à l'unité aérienne d'attaquer les unités ennemies sur la case sélectionnée.</French>
 		<German>Befehlen Sie der Lufteinheit, feindliche Einheiten auf dem gewählten Geländefeld zu bombardieren.</German>
-		<Italian>Ordina all'unità aerea di attaccare le unità nemiche sulla casella selezionata</Italian>
+		<Italian>[NEWLINE]L'unità aerea attacca le unità nemiche sulla casella selezionata</Italian>
 		<Spanish>Ordena a la unidad aérea que ataque a las unidades enemigas que haya en la casilla seleccionada.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -9811,14 +9826,17 @@
 		<Spanish>Cañoneo de alcance: selecciona la casilla a bombardear</Spanish>
 		<Polish>[H1]Bombardowanie na dystans[\H1][PARAGRAPH:2]Zaznaczając ikonę bombardowania możesz wybrać bombardowanie jednostek, ulepszeń terenu lub miast.[PARAGRAPH:2]Bombardowanie na dystans zadaje zwykłe Masowe Obrażenia znane z BTS. To czyni je bezużytecznym przeciwko pojedynczej jednostce jak i dużym stosom.[PARAGRAPH:2]Kiedy bombardujesz miasto, bombardowanie na dystans ma niewielką szanse uszkodzić obrońców nie tylko umocnienia. Bombardowanie z miast jest dużo mniej efektywne niż ze specjalistycznych konstrukcji takich jak forty.</Polish>
 		<Russian>[H1]Äàëüíÿÿ áîìáàðäèðîâêà[\H1][PARAGRAPH:2]Â ýòîì ñöåíàðèè îñàäíûå þíèòû ìîãóò áîìáàðäèðîâàòü íå òîëüêî ãîðîäà, íî è ïðîèçâîëüíûå êëåòêè ñ îáúåêòàìè è þíèòàìè. Äëÿ áîìáàðäèðîâêè íóæíî, êàê îáû÷íî, âûáðàòü çíà÷îê íà ïàíåëè óïðàâëåíèÿ. Îáû÷íàÿ àðòèëëåðèÿ áîìáàðäèðóåò òîëüêî ñîñåäíèå êëåòêè, à äàëüíîñòü äåéñòâèÿ òÿæåëîé àðòèëëåðèè äîõîäèò äî äâóõ êëåòîê.[PARAGRAPH:2]</Russian>
+    <Italian>[NEWLINE]Seleziona una casella da attaccare</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_DOTMAP</Tag>
 		<English>Dot map mode</English>
+    <Italian>Modalità Dotmap</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_DOTMAP_HELP</Tag>
 		<English>[ICON_BULLET]Resize: Shift+X</English>
+    <Italian>[ICON_BULLET]Cambia dimensione: Shift+X</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_FENGAGE</Tag>
@@ -9835,7 +9853,7 @@
 		<English>"Fighter Engagement" allows fighters to attack enemy fighters in the air or on the ground.</English>
 		<French>"Engagement Aérien" permet aux chasseurs d'attaquer les avions de chasse ennemis au sol ou en plein vol.</French>
 		<German>"Jägereinsatz" ermöglicht es Jägern, feindliche Jäger in der Luft oder am Boden anzugreifen.</German>
-		<Italian>"Ingaggio" consente alle unità aeree da caccia di attaccare i caccia nemici a terra o in volo.</Italian>
+		<Italian>[NEWLINE]Consente alle unità aeree da caccia di attaccare i caccia nemici a terra o in volo.</Italian>
 		<Spanish>"Combate" permite a los cazas atacar a otros cazas enemigos en aire o en tierra.</Spanish>
 		<Polish>Angażowanie myśliwców pozwala myśliwcom atakować wrogie myśliwce znajdujące się w powietrzu lub na ziemi.</Polish>
 		<Russian>Èñòðåáèòåëè îäíîé äåðæàâû ìîãóò àòàêîâàòü èñòðåáèòåëè äðóãîé äåðæàâû êàê â âîçäóõå, òàê è íà çåìëå</Russian>
@@ -9845,7 +9863,7 @@
 		<English>Globe Input Mode</English>
 		<French>Commandes Globe</French>
 		<German>Eingabemodus Weltkarte</German>
-		<Italian>Modalità 'Comandi globali'</Italian>
+		<Italian>Modalità Comandi globali</Italian>
 		<Spanish>Modo Datos globales</Spanish>
 	</TEXT>
 	<TEXT>
@@ -9853,7 +9871,7 @@
 		<English>Go To Mode</English>
 		<French>Aller à</French>
 		<German>Gehe-zu-Modus</German>
-		<Italian>Modalità 'Vai'</Italian>
+		<Italian>Muovi unità</Italian>
 		<Spanish>Modo Ir a</Spanish>
 	</TEXT>
 	<TEXT>
@@ -9861,7 +9879,7 @@
 		<English>Go To Mode (All Units)</English>
 		<French>Aller à (toutes unités)</French>
 		<German>Gehe-zu-Modus (Alle Einheiten)</German>
-		<Italian>Modalità 'Vai' (tutte le unità)</Italian>
+		<Italian>Muovi tutte le unità</Italian>
 		<Spanish>Modo Ir a (todas las unidades)</Spanish>
 	</TEXT>
 	<TEXT>
@@ -9869,7 +9887,7 @@
 		<English>Order all units on the currently selected unit's tile to move</English>
 		<French>Ordonner à toutes les unités sur la case de l'unité sélectionnée de se déplacer.</French>
 		<German>Erteilen Sie allen Einheiten auf dem Feld der gewählten Einheit den Marschbefehl.</German>
-		<Italian>Ordina a tutte le unità attualmente sulla casella selezionata di muoversi</Italian>
+		<Italian>[NEWLINE]Muovi tutte le unità sulla casella selezionata.</Italian>
 		<Spanish>Ordena moverse a todas las unidades de la casilla seleccionada actualmente.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -9877,7 +9895,7 @@
 		<English>Order the selected unit to move to a tile</English>
 		<French>Ordonner à l'unité sélectionnée de se déplacer vers une case.</French>
 		<German>Schicken Sie die gewählte Einheit auf ein bestimmtes Geländefeld.</German>
-		<Italian>Ordina all'unità selezionata di muoversi su una casella</Italian>
+		<Italian>[NEWLINE]Muovi l'unità su una casella specifica.</Italian>
 		<Spanish>Ordena a la unidad seleccionada que se mueva hasta una casilla.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -9885,17 +9903,17 @@
 		<English>Go To and Sentry Mode</English>
 		<French>Aller à (Surveillance)</French>
 		<German>Zielpunkt (Wache)</German>
-		<Italian>Modalità 'Vai a fare la sentinella'</Italian>
+		<Italian>Muovi e sentinella</Italian>
 		<Spanish>Modo Ir a y vigilar</Spanish>
 		<Polish>Idź do i Wartuj</Polish>
 		<Russian>Èäòè ê, â ðåæèìå ñòîðîæà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_GO_TO_SENTRY_HELP</Tag>
-		<English>Order the selected unit to move to a tile. The unit stops before reaching its destination if an enemy unit of the same type enters its vision range.</English>
+		<English>Order the selected unit to move to a tile. The unit stops before reaching its destination if an enemy unit of the same type enters its visibility range.</English>
 		<French>Ordonner à l'unité sélectionnée de se déplacer vers une case. L'unité s'arrête avant sa destination si une unité ennemie ne pénètre pas dans son champ de vision.</French>
 		<German>Ausgewählte Einheit zu einem Zielfeld beordern. Die Einheit unterbricht ihre Bewegung, wenn eine feindliche Einheit desselben Typs ihr Sichtfeld betritt.</German>
-		<Italian>Ordina all'unità selezionata di muoversi verso una casella. L'unità si ferma prima di raggiungere la sua destinazione se un'unità nemica dello stesso tipo entra nel suo raggio di visibilità.</Italian>
+		<Italian>[NEWLINE]L'unità si fermerà prima della destinazione se un'unità nemica dello stesso tipo entra nel suo raggio di visibilità.</Italian>
 		<Spanish>Ordena a la unidad seleccionada que se mueva hasta una casilla. La unidad parará antes de llegar a su destino si una unidad enemiga del mismo tipo se sitúa en su campo de visión.</Spanish>
 		<Polish>Wyznacz kratkę do ruchu dla jednostki. Jednostka będzie tak długo podążać aż nie spotka innej wrogiej jednostki</Polish>
 		<Russian>Ïðèêàçàòü âûáðàíûì ïîäðàçäåëåíèÿì èäòè â óêàçàííîå ìåñòî ìåñòî. Ïîäðàçäåëåíèå îñòàíîâèòñÿ íå äîñòèãíóâ òî÷êè íàçíà÷åíèÿ â ñëó÷àå, åñëè âðàæåñêèå âîéñêà âûáðàííîãî òèïà ïîÿâÿòñÿ â çîíå âèäèìîñòè. </Russian>
@@ -9905,7 +9923,7 @@
 		<English>Go To Mode (Same Unit Type)</English>
 		<French>Aller à (même type d'unité)</French>
 		<German>Gehe-zu-Modus (Gleiche Einheiten)</German>
-		<Italian>Modalità 'Vai' (unità dello stesso tipo)</Italian>
+		<Italian>Muovi unità dello stesso tipo</Italian>
 		<Spanish>Modo Ir a (mismo tipo de unidad)</Spanish>
 	</TEXT>
 	<TEXT>
@@ -9913,7 +9931,7 @@
 		<English>Orders all units of the currently selected unit's type to move</English>
 		<French>Ordonner à toutes les unités du type sélectionné de se déplacer.</French>
 		<German>Erteilen Sie allen Einheiten des gewählten Typs den Marschbefehl.</German>
-		<Italian>Ordina a tutte le unità dello stesso tipo di quella selezionata di muoversi</Italian>
+		<Italian>[NEWLINE]Muovi tutte le unità dello stesso tipo di quella selezionata.</Italian>
 		<Spanish>Ordena moverse a todas las unidades del tipo seleccionado actualmente.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -9929,7 +9947,7 @@
 		<English>Nuke Mode</English>
 		<French>Nucléaire</French>
 		<German>Atomraketenmodus</German>
-		<Italian>Modalità 'Bomba nucleare'</Italian>
+		<Italian>Bomba nucleare</Italian>
 		<Spanish>Modo Lanzar arma nuclear</Spanish>
 	</TEXT>
 	<TEXT>
@@ -9937,7 +9955,7 @@
 		<English>Order a nuclear missile strike on the selected tile</English>
 		<French>Ordonner une frappe nucléaire sur la case sélectionnée</French>
 		<German>Befehlen Sie einen Atomschlag auf das gewählte Geländefeld.</German>
-		<Italian>Ordina un attacco missilistico nucleare sulla casella selezionata</Italian>
+		<Italian>[NEWLINE]Attacco nucleare sulla casella selezionata.</Italian>
 		<Spanish>Ordena un ataque con misil nuclear a la casilla seleccionada.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -9945,7 +9963,7 @@
 		<English>Paradrop Mode</English>
 		<French>Mode parachute</French>
 		<German>Fallschirmsprung-Modus</German>
-		<Italian>Modalità Lancio col paracadute</Italian>
+		<Italian>Lancio col paracadute</Italian>
 		<Spanish>Modo Desembarco aéreo</Spanish>
 	</TEXT>
 	<TEXT>
@@ -9953,7 +9971,7 @@
 		<English>Order the unit to jump to a specified location.</English>
 		<French>Ordonner à l'unité de sauter à un endroit précis.</French>
 		<German>Die Einheit wird zur ausgewählten Stelle springen.</German>
-		<Italian>Ordina all'unità selezionata di paracadutarsi su una casella.</Italian>
+		<Italian>[NEWLINE]L'unità si paracaduta sulla casella selezionata.</Italian>
 		<Spanish>Ordenar a la unidad que salte en paracaídas al lugar especificado.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -9961,7 +9979,7 @@
 		<English>Ping Teammates</English>
 		<French>Placer balise pour équipe</French>
 		<German>Mitspieler anpingen</German>
-		<Italian>Lascia un segnale ai compagni di squadra</Italian>
+		<Italian>Ping ai compagni di squadra</Italian>
 		<Spanish>Señalar a los compañeros</Spanish>
 	</TEXT>
 	<TEXT>
@@ -9969,7 +9987,7 @@
 		<English>Ranged Attack Mode</English>
 		<French>Mode Attaque à distance</French>
 		<German>Fernkampf-Modus</German>
-		<Italian>Modalità Attacco da lontano</Italian>
+		<Italian>Attacco a distanza</Italian>
 		<Spanish>Modo Ataque a distancia</Spanish>
 	</TEXT>
 	<TEXT>
@@ -9977,7 +9995,7 @@
 		<English>Order the unit to remotely attack the selected tile</English>
 		<French>Ordonner à l'unité d'attaquer à distance les cases sélectionnées</French>
 		<German>Die Einheit greift das ausgewählte Geländefeld im Fernkampf an</German>
-		<Italian>Questo ordine fa in modo che l'unità attacchi da lontano la casella selezionata</Italian>
+		<Italian>[NEWLINE]L'unità attacchi dalla distnza la casella selezionata.</Italian>
 		<Spanish>Ordenar a la unidad que ataque desde lejos la casilla seleccionada.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -9985,7 +10003,7 @@
 		<English>Rebase Mode</English>
 		<French>Réaffecter</French>
 		<German>Stellungswechselmodus</German>
-		<Italian>Modalità 'Cambia base'</Italian>
+		<Italian>Cambia base</Italian>
 		<Spanish>Modo Cambiar de base</Spanish>
 	</TEXT>
 	<TEXT>
@@ -9993,7 +10011,7 @@
 		<English>Order the air unit to rebase to another city</English>
 		<French>Réaffecter un unité aérienne à une autre ville.</French>
 		<German>Befehlen Sie der Lufteinheit, in einer anderen Stadt zu landen.</German>
-		<Italian>Ordina all'unità aerea di tornare alla base in un'altra città</Italian>
+		<Italian>[NEWLINE]L'unità aerea cambia base in un'altra città.</Italian>
 		<Spanish>Ordena a la unidad aérea que cambie de base y se vaya a otra ciudad.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -10001,7 +10019,7 @@
 		<English>Recon Mode</English>
 		<French>Reconnaissance</French>
 		<German>Aufklärungsmodus</German>
-		<Italian>Modalità 'Ricognizione'</Italian>
+		<Italian>Ricognizione</Italian>
 		<Spanish>Modo Reconocer</Spanish>
 	</TEXT>
 	<TEXT>
@@ -10009,7 +10027,7 @@
 		<English>Order the air unit to perform a recon sweep on an area</English>
 		<French>Ordonner à l'unité aérienne d'effectuer une reconnaissance sur un secteur donné.</French>
 		<German>Schicken Sie die Lufteinheit zu einem Aufklärungsflug in das Zielgebiet.</German>
-		<Italian>Ordina all'unità aerea di eseguire un giro di ricognizione sulla zona</Italian>
+		<Italian>[NEWLINE]L'unità aerea esegue un giro di ricognizione sulla zona.</Italian>
 		<Spanish>Ordena a la unidad aérea que lleve a cabo un barrido de reconocimiento en un área.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -10017,7 +10035,7 @@
 		<English>Route To Mode</English>
 		<French>Route vers</French>
 		<German>Straße nach-Modus</German>
-		<Italian>Modalità 'Itinerario'</Italian>
+		<Italian>Costruisci percorso fino a</Italian>
 		<Spanish>Modo Ir en ruta a</Spanish>
 	</TEXT>
 	<TEXT>
@@ -10025,7 +10043,7 @@
 		<English>Order the unit to build roads or railroads to the selected tile</English>
 		<French>Ordonner à l'unité sélectionnée de construire des routes ou des voies ferrées vers la case sélectionnée.</French>
 		<German>Befehlen Sie der Einheit, Straßen oder Eisenbahnstrecken zum gewählten Geländefeld zu bauen.</German>
-		<Italian>Ordina all'unità di costruire strade e ferrovie sulla casella selezionata</Italian>
+		<Italian>[NEWLINE]L'unità costruisce percorsi fino alla casella selezionata.</Italian>
 		<Spanish>Ordena a la unidad que construya carreteras o ferrocarriles hasta la casilla seleccionada.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -10033,7 +10051,7 @@
 		<English>Selection Mode</English>
 		<French>Mode Sélection</French>
 		<German>Auswahlmodus</German>
-		<Italian>Modalità di selezione</Italian>
+		<Italian>Modalità selezione</Italian>
 		<Spanish>Modo Selección</Spanish>
 	</TEXT>
 	<TEXT>
@@ -10047,6 +10065,26 @@
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACE_CITY_BAR_SPECIALIST_ADDENDUM</Tag>
 		<English>(%d1)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INVASION_ENDED</Tag>
+		<English>We've managed to seal the entrance into %s1, and our fortifications are once again secure.</English>
+		<French>Nous avons réussi à condamner l'entrée de %s1, et nos fortifications sont à nouveau sûres.</French>
+		<German>Wir haben es geschafft, den Geheimeingang in die Stadt %s1 zu verschließen. Unsere Befestigungsanlagen sind nun wieder sicher.</German>
+		<Italian>Abbiamo sigillato gli accessi a %s1, e le nostre fortificazioni sono di nuovo sicure.</Italian>
+		<Spanish>Hemos logrado sellar la entrada a %s1, y nuestras fortificaciones vuelven a ser seguras.</Spanish>
+		<Polish>Udało nam się uszczelnić przejście w %s1. Nasze Fortyfikacje są znów bezpieczne.</Polish>
+		<Russian>Íàì óäàëîñü çàïå÷àòàòü âõîä â %s1, è íàøè óêðåïëåíèÿ ñíîâà áåçîïàñíû.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INVASION_SUCCESSFUL</Tag>
+		<English>Our troops have discovered a secret entrance into %s1!</English>
+		<French>Nos troupes ont découvert une entrée secrète dans %s1!</French>
+		<German>Unsere Einheiten haben einen geheimen Eingang in die Stadt %s1 entdeckt!</German>
+		<Italian>Le nostre truppe hanno trovato un'entrata segreta a %s1!</Italian>
+		<Spanish>¡Nuestras tropas han descubierto una entrada secreta hacia %s1!</Spanish>
+		<Polish>Nasi żołnierze odkryli tajne przejście w %s1!</Polish>
+		<Russian>Íàøè âîéñêà îáíàðóæèëè ñåêðåòíûé âõîä â %s1!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INVESTIGATION</Tag>
@@ -10180,7 +10218,7 @@
 		<English>[SPACE]In City Vicinity</English>
 		<French>[SPACE]dans le périmètre de la Ville</French>
 		<German>[SPACE]im Stadtbereich</German>
-		<Italian>[SPACE]nelle vicinanze della città</Italian>
+		<Italian>[SPACE][COLOR_REVERT]nelle vicinanze della città</Italian>
 		<Spanish>[SPACE]en el radio de la ciudad</Spanish>
 		<Polish>[SPACE]w zasięgu miasta</Polish>
 		<Russian>[SPACE]Â îêðåñòíîñòÿõ ãîðîäà</Russian>
@@ -12004,7 +12042,7 @@
 		<English>[COLOR_WARNING_TEXT]Can build at a maximum latitude of %d1 degrees[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Peut construire à une latitude maximale de %d1 degrés.[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]Kann bis zu einem Breitengrad von %d1 bauen[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]Può costruire alla latitudine massima di %d1 gradi[COLOR_REVERT]</Italian>
+		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Si può costruire a una latitudine massima di %d1 gradi[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Se puede construir a una latitud máxima de %d1 grados.[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -12465,7 +12503,7 @@
 		<English>[COLOR_WARNING_TEXT]Can build at a minimum latitude of %d1 degrees[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Peut construire à une latitude minimale de %d1 degrés.[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]Kann ab einem Breitengrad von %d1 bauen[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]Può costruire alla latitudine minima di %d1 gradi[COLOR_REVERT]</Italian>
+		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Richiede[COLOR_REVERT] una latitudine minima di [COLOR_WARNING_TEXT]%d1 gradi[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Se puede construir a una latitud mínima de %d1 grados.[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -13038,7 +13076,7 @@
 		<English>%D1_Change[ICON_UNHEALTHY] from Civics</English>
 		<French>%D1_Change[ICON_UNHEALTHY] (doctrines)</French>
 		<German>%D1_Change[ICON_UNHEALTHY] durch Gesellschaftsformen</German>
-		<Italian>%D1_Change[ICON_UNHEALTHY] dalle forme di governo</Italian>
+		<Italian>%D1_Change[ICON_UNHEALTHY] per la forma di governo</Italian>
 		<Spanish>%D1_Change[ICON_UNHEALTHY] por principios</Spanish>
 		<Polish>%D1_Change[ICON_UNHEALTHY] z doktryn</Polish>
 		<Russian>%D1_Change[ICON_UNHEALTHY] îò ïàðàäèãì</Russian>
@@ -13137,7 +13175,7 @@
 		<Tag>TXT_KEY_MISC_BUILDING_MAINT_FLOAT</Tag>
 		<English>%s1_MaintNum [ICON_GOLD]: Building maintenance</English>
 		<French>%s1_MaintNum [ICON_GOLD]: Entretien de Bâtiments</French>
-		<Italian>%s1_MaintNum [ICON_GOLD]: mantenimento dell'edificio</Italian>
+		<Italian>%s1_MaintNum [ICON_GOLD]: costo di mantenimento degli edifici</Italian>
 		<Spanish>%s1_MaintNum[ICON_GOLD]: mantenimiento de edificios</Spanish>
 		<Polish>%s1_MaintNum [ICON_GOLD]: Utrzymanie budynków</Polish>
 		<Russian>%s1_MaintNum [ICON_GOLD]: íà ñîäåðæàíèå çäàíèé</Russian>
@@ -13187,7 +13225,7 @@
 		<English>[ICON_BULLET]Can Build[SPACE]</English>
 		<French>[ICON_BULLET]Construction possible de :[SPACE]</French>
 		<German>[ICON_BULLET]Kann Folgendes errichten:[SPACE]</German>
-		<Italian>[ICON_BULLET]Può costruire[SPACE]</Italian>
+		<Italian>[ICON_BULLET]Permette la costruzione di[SPACE]</Italian>
 		<Spanish>[ICON_BULLET]Se puede construir[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -13195,7 +13233,7 @@
 		<English>[ICON_BULLET]Can [COLOR_HIGHLIGHT_TEXT]%s1_ImpName[COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Aménagement possible : [COLOR_HIGHLIGHT_TEXT]%s1_ImpName[COLOR_REVERT]</French>
 		<German>[ICON_BULLET]neuer Befehl: [COLOR_HIGHLIGHT_TEXT]%s1_ImpName[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Può [COLOR_HIGHLIGHT_TEXT]%s1_ImpName[COLOR_REVERT]</Italian>
+		<Italian>[ICON_BULLET]Permette la costruzione del miglioramento: [COLOR_HIGHLIGHT_TEXT]%s1_ImpName[COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET]Se puede [COLOR_HIGHLIGHT_TEXT]%s1:2_ImpName[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -13368,7 +13406,7 @@
 		<English>%d1%[ICON_DEFENSE] from Civics</English>
 		<French>%d1%[ICON_DEFENSE] des Doctrines</French>
 		<German>%d1%[ICON_DEFENSE] durch Gesellschaftsformen</German>
-		<Italian>%d1%[ICON_DEFENSE] dalle forme di governo</Italian>
+		<Italian>%d1%[ICON_DEFENSE] per la forma di governo</Italian>
 		<Spanish>%d1%[ICON_DEFENSE] por principios</Spanish>
 		<Polish>%d1%[ICON_DEFENSE] z doktryn</Polish>
 		<Russian>%d1%[ICON_DEFENSE] îò Ïàðàäèãì</Russian>
@@ -14014,7 +14052,7 @@
 		<English>[ICON_BULLET]Enables[SPACE]</English>
 		<French>[ICON_BULLET]Permet[SPACE]:[SPACE]</French>
 		<German>[ICON_BULLET]ermöglicht:[SPACE]</German>
-		<Italian>[ICON_BULLET]Permette[SPACE]</Italian>
+		<Italian>[ICON_BULLET]Permette di usare le promozioni:[SPACE]</Italian>
 		<Spanish>[ICON_BULLET]Permite[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -14314,7 +14352,7 @@
 		<English>[ICON_BULLET]%D1_Change Extra Moves for %s2_Name</English>
 		<French>[ICON_BULLET]%D1_Change mouvement supplémentaire pour : %s2_Name</French>
 		<German>[ICON_BULLET]%D1_Change zusätzliche Fortbewegung für Einheit %s2_Name</German>
-		<Italian>[ICON_BULLET]%D1_Change movimenti extra per le unità di %s2:2_Name</Italian>
+		<Italian>[ICON_BULLET]Movimenti extra per ogni %s2:2_Name: [COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] </Italian>
 		<Spanish>[ICON_BULLET]%D1_Change [NUM1:movimiento adicional:movimientos adicionales] para %s2_Name</Spanish>
 	</TEXT>
 	<TEXT>
@@ -14415,11 +14453,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_FOOD_THRESHOLD</Tag>
-		<English>Food: %d1/%d2 [ICON_FOOD][NEWLINE]* %d3 [ICON_FOOD] stored for the next growth cycle.</English>
-		<French>Nourriture : %d1_Num/%d2_Threshold [ICON_FOOD][NEWLINE]* %d3 [ICON_FOOD] stored for the next growth cycle.</French>
-		<German>Nahrung: %d1_Num/%d2_Threshold [ICON_FOOD][NEWLINE]* %d3 [ICON_FOOD] stored for the next growth cycle.</German>
-		<Italian>Cibo: %d1_Num/%d2_Threshold [ICON_FOOD][NEWLINE]* %d3 [ICON_FOOD] stored for the next growth cycle.</Italian>
-		<Spanish>Alimentos: %d1_Num/%d2_Threshold [ICON_FOOD][NEWLINE]* %d3 [ICON_FOOD] stored for the next growth cycle.</Spanish>
+		<English>Food: %d1_Num/%d2_Threshold [ICON_FOOD]</English>
+		<French>Nourriture : %d1_Num/%d2_Threshold [ICON_FOOD]</French>
+		<German>Nahrung: %d1_Num/%d2_Threshold [ICON_FOOD]</German>
+		<Italian>Cibo: [COLOR_HIGHLIGHT_TEXT]%d1_Num[COLOR_REVERT] / [COLOR_HIGHLIGHT_TEXT]%d2_Threshold[COLOR_REVERT]  [ICON_FOOD]</Italian>
+		<Spanish>Alimentos: %d1_Num/%d2_Threshold [ICON_FOOD]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_FORCED_SPECIALIST</Tag>
@@ -14460,7 +14498,7 @@
 		<English>from</English>
 		<French>des</French>
 		<German>von</German>
-		<Italian>da</Italian>
+		<Italian>grazie a</Italian><!--city screen, hover gold icon upper left  -->
 		<Spanish>por</Spanish>
 		<Polish>z</Polish>
 		<Russian>от</Russian>
@@ -14530,7 +14568,7 @@
 		<English>Gold Per Turn (%d1_Num)</English>
 		<French>Or par tour (%d1_Num)</French>
 		<German>Gold pro Runde (%d1_Num)</German>
-		<Italian>Oro per turno (%d1_Num)</Italian>
+		<Italian>Oro a turno (%d1_Num)</Italian>
 		<Spanish>Oro por turno (%d1_Num)</Spanish>
 	</TEXT>
 	<TEXT>
@@ -14563,7 +14601,7 @@
 		<English>%D1_Change[ICON_HEALTHY] from Civics</English>
 		<French>%D1_Change[ICON_HEALTHY] (doctrines)</French>
 		<German>%D1_Change[ICON_HEALTHY] durch Gesellschaftsformen</German>
-		<Italian>%D1_Change[ICON_HEALTHY] dalle forme di governo</Italian>
+		<Italian>%D1_Change[ICON_HEALTHY] per la forma di governo</Italian>
 		<Spanish>%D1_Change[ICON_HEALTHY] por principios</Spanish>
 		<Polish>%D1_Change[ICON_HEALTHY] z doktryn</Polish>
 		<Russian>%D1_Change[ICON_HEALTHY] îò ïàðàäèãì</Russian>
@@ -14637,7 +14675,7 @@
 		<English>%s1_GPName has been born in a far away land!</English>
 		<French>Naissance de %s1_GPName dans un pays lointain !</French>
 		<German>Die Große Persönlichkeit %s1_GPName wurde in einem fernen Land geboren!</German>
-		<Italian>%s1_GPName è [NUM1:nato:nata] in una terra lontana!</Italian>
+		<Italian>%s1_GPName è venuto al mondo in una terra lontana!</Italian>
 		<Spanish>%s1_GPName ha nacido en una tierra muy lejana.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -14811,7 +14849,7 @@
 		<English>[ICON_BULLET]%D1%%%F2 for %s3_trait leader</English>
 		<French>[ICON_BULLET]%D1%%%F2 pour un dirigeant %s3_trait</French>
 		<German>[ICON_BULLET]%D1%%%F2 für Staatsoberhäupter mit dem Charakterzug: %s3:2_trait</German>
-		<Italian>[ICON_BULLET]%D1%%%F2 per un leader %s3_trait</Italian>
+		<Italian>[ICON_BULLET]%D1%%%F2 perchè il leader è %s3_trait</Italian>
 		<Spanish>[ICON_BULLET]%D1%% %F2 por líder %s3_trait</Spanish>
 	</TEXT>
 	<TEXT>
@@ -14858,7 +14896,7 @@
 		<English>[ICON_BULLET]%D1%%[ICON_GREATPEOPLE] from Civics</English>
 		<French>[ICON_BULLET]%D1%%[ICON_GREATPEOPLE] de la doctrine</French>
 		<German>[ICON_BULLET]%D1%%[ICON_GREATPEOPLE] durch Staatsformen</German>
-		<Italian>[ICON_BULLET]%D1%%[ICON_GREATPEOPLE] dalle forme di governo</Italian>
+		<Italian>[ICON_BULLET]%D1%%[ICON_GREATPEOPLE] per la forma di governo</Italian>
 		<Spanish>[ICON_BULLET]%D1%% a [ICON_GREATPEOPLE] por principios</Spanish>
 	</TEXT>
 	<TEXT>
@@ -15037,7 +15075,7 @@
 		<English>[ICON_BULLET]%D1%%%F2 from Resources</English>
 		<French>[ICON_BULLET]%D1%%%F2 (ressources)</French>
 		<German>[ICON_BULLET]%D1%%%F2 durch Ressourcen</German>
-		<Italian>[ICON_BULLET]%D1%%%F2 dalle risorse</Italian>
+		<Italian>[ICON_BULLET]%D1%%%F2 per le risorse</Italian>
 		<Spanish>[ICON_BULLET]%D1%% %F2 por recursos</Spanish>
 	</TEXT>
 	<TEXT>
@@ -15045,7 +15083,7 @@
 		<English>[ICON_BULLET]%D1%%%F2 from Buildings</English>
 		<French>[ICON_BULLET]%D1%%%F2 (bâtiments)</French>
 		<German>[ICON_BULLET]%D1%%%F2 durch Gebäude und Effekte</German>
-		<Italian>[ICON_BULLET]%D1%%%F2 dagli edifici</Italian>
+		<Italian>[ICON_BULLET]%D1%%%F2 per gli edifici</Italian>
 		<Spanish>[ICON_BULLET]%D1%% %F2 por edificios</Spanish>
 		<Russian>[ICON_BULLET]%D1%%%F2 от зданий</Russian>
 	</TEXT>
@@ -15054,7 +15092,7 @@
 		<English>[ICON_BULLET]%D1%%%F2 for Capital</English>
 		<French>[ICON_BULLET]%D1%%%F2 (capitale)</French>
 		<German>[ICON_BULLET]%D1%%%F2 für Hauptstadt</German>
-		<Italian>[ICON_BULLET]%D1%%%F2 dalla capitale</Italian>
+		<Italian>[ICON_BULLET]%D1%%%F2 per essere la capitale</Italian>
 		<Spanish>[ICON_BULLET]%D1%% %F2 por capital</Spanish>
 	</TEXT>
 	<TEXT>
@@ -15062,7 +15100,7 @@
 		<English>[ICON_BULLET]%D1%%%F2 from Civics</English>
 		<French>[ICON_BULLET]%D1%%%F2 (doctrine)</French>
 		<German>[ICON_BULLET]%D1%%%F2 durch Staatsformen</German>
-		<Italian>[ICON_BULLET]%D1%%%F2 dalle forme di governo</Italian>
+		<Italian>[ICON_BULLET]%D1%%%F2 per la forma di governo</Italian>
 		<Spanish>[ICON_BULLET]%D1%% %F2 por principios</Spanish>
 	</TEXT>
 	<TEXT>
@@ -15281,7 +15319,7 @@
 		<English>Maintenance Represents the Total Cost of Governening this City.</English>
 		<French>Le coût d'entretien est le coût total de la gestion de cette ville</French>
 		<German>Der Unterhalt repräsentiert die Gesamtkosten für die Verwaltung dieser Stadt.</German>
-		<Italian>Il mantenimento rappresenta il costo totale necessario per governare questa città.</Italian>
+		<Italian>I costi di mantenimento indicano il totale di Oro necessario per governare questa città.</Italian>
 		<Spanish>El mantenimiento representa el coste total de gobernar esta ciudad.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -15329,7 +15367,7 @@
 		<English>[COLOR_WARNING_TEXT]Max: %d1_Num[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Maximum : %d1_Num[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]Max.: %d1_Num[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]Max: %d1_Num[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_WARNING_TEXT]Massimo: %d1_Num[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Máx.: %d1_Num[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -15466,7 +15504,7 @@
 		<English>%s1_MaintNum [ICON_GOLD]: Number of Cities</English>
 		<French>%s1_MaintNum [ICON_GOLD] : nombre de villes</French>
 		<German>%s1_MaintNum [ICON_GOLD]: Anzahl der Städte</German>
-		<Italian>%s1_MaintNum [ICON_GOLD]: numero di città</Italian>
+		<Italian>%s1_MaintNum [ICON_GOLD]: costo di mantenimento per il numero di città</Italian>
 		<Spanish>%s1_MaintNum [ICON_GOLD]: Cantidad de ciudades</Spanish>
 	</TEXT>
 	<TEXT>
@@ -15474,7 +15512,7 @@
 		<English>%s1_NumMaint [ICON_GOLD]:[SPACE]</English>
 		<French>%s1_NumMaint [ICON_GOLD] :[SPACE]</French>
 		<German>%s1_NumMaint [ICON_GOLD]:[SPACE]</German>
-		<Italian>%s1_NumMaint [ICON_GOLD]:[SPACE]</Italian>
+		<Italian>%s1_NumMaint [ICON_GOLD]:[SPACE]PROVA6</Italian>
 		<Spanish>%s1_NumMaint [ICON_GOLD]:[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -15680,7 +15718,7 @@
 		<English>%s1 to %s2 for %s3</English>
 		<French>%s1 à %s2 contre %s3</French>
 		<German>%s1 an %s2 für %s3</German>
-		<Italian>%s1 a %s2 per %s3</Italian>
+		<Italian>%s1 a %s2 in cambio di %s3</Italian>
 		<Spanish>%s1 a %s2 a cambio de %s3</Spanish>
 	</TEXT>
 	<TEXT>
@@ -15716,14 +15754,10 @@
 		<English>Owner</English>
 		<French>Appartenance</French>
 		<German>Besitzer</German>
-		<Italian>Affiliazione</Italian>
+		<Italian>Propietario</Italian>
 		<Spanish>Propietario</Spanish>
 		<Polish>Właściciel</Polish>
 		<Russian>Âëàäåëåö</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_NO_CITY_INFLUENCE</Tag>
-		<English>Not in %s1_CivAdj city influence.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PEACE_TREATY</Tag>
@@ -15790,7 +15824,7 @@
 		<English>%s1_PlyrName's Golden Age has begun!!!</English>
 		<French>L'âge d'or de %s1_PlyrName vient de commencer !</French>
 		<German>Für %s1_PlyrName hat ein Goldenes Zeitalter begonnen!!!</German>
-		<Italian>L'Età dell'Oro di %s1_PlyrName è iniziata!</Italian>
+		<Italian>L'età dell'oro di %s1_PlyrName è iniziata!</Italian>
 		<Spanish>Ha empezado la edad de oro de %s1_PlyrName.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -15884,8 +15918,8 @@
 		<English>[SPACE][COLOR_POSITIVE_TEXT](%D1_Change/Turn)[COLOR_REVERT]</English>
 		<French>[SPACE][COLOR_POSITIVE_TEXT](%D1_Change/tour)[COLOR_REVERT]</French>
 		<German>[SPACE][COLOR_POSITIVE_TEXT](%D1_Change/Runde)[COLOR_REVERT]</German>
-		<Italian>[SPACE][COLOR_POSITIVE_TEXT](%D1_Change/Turno)[COLOR_REVERT]</Italian>
-		<Spanish>[SPACE][COLOR_POSITIVE_TEXT](%D1_Change/turno)[COLOR_REVERT]</Spanish>
+		<Italian>[SPACE][COLOR_POSITIVE_TEXT]%D1_Change a turno[COLOR_REVERT]</Italian>
+		<Spanish>[SPACE][COLOR_POSITIVE_TEXT]%D1_Change a turno[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_POS_GOLD_PER_TURN_TD_WFL</Tag>
@@ -16074,7 +16108,7 @@
 		<English>%d1%[ICON_DEFENSE] from Resources</English>
 		<French>%d1%[ICON_DEFENSE] des Ressources</French>
 		<German>%d1%[ICON_DEFENSE] von Ressourcen</German>
-		<Italian>%d1%[ICON_DEFENSE] dalle risorse</Italian>
+		<Italian>%d1%[ICON_DEFENSE] per le risorse</Italian>
 		<Spanish>%d1%[ICON_DEFENSE] por recursos</Spanish>
 		<Polish>%d1%[ICON_DEFENSE] z surowców</Polish>
 		<Russian>%d1%[ICON_DEFENSE] îò Ðåñóðñîâ</Russian>
@@ -16094,7 +16128,7 @@
 		<English>[ICON_BULLET]Reveals[SPACE]</English>
 		<French>[ICON_BULLET]Révèle :[SPACE]</French>
 		<German>[ICON_BULLET]neue Ressourcen:[SPACE]</German>
-		<Italian>[ICON_BULLET]Rivela[SPACE]</Italian>
+		<Italian>[ICON_BULLET]Rivela le risorse di tipo:[SPACE]</Italian>
 		<Spanish>[ICON_BULLET]Revela[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -16443,7 +16477,7 @@
 		<English>%s1_Num [ICON_GOLD] Total Maintenance</English>
 		<French>%s1_Num [ICON_GOLD] : coût total d'entretien</French>
 		<German>%s1_Num [ICON_GOLD] Unterhalt gesamt</German>
-		<Italian>%s1_Num [ICON_GOLD] mantenimento totale</Italian>
+		<Italian>%s1_Num [ICON_GOLD] costi di mantenimento totali</Italian>
 		<Spanish>%s1_Num [ICON_GOLD] de mantenimiento total</Spanish>
 	</TEXT>
 	<TEXT>
@@ -16938,7 +16972,7 @@
 		<English>[SPACE]with [LINK=CONCEPT_IRRIGATION]Irrigation[\LINK]</English>
 		<French>[SPACE]avec [LINK=CONCEPT_IRRIGATION]Irrigation[\LINK]</French>
 		<German>[SPACE]mit [LINK=CONCEPT_IRRIGATION]Bewässerung[\LINK]</German>
-		<Italian>[SPACE]con [LINK=CONCEPT_IRRIGATION]irrigazione[\LINK]</Italian>
+		<Italian>[SPACE]con la tecnologia [LINK=CONCEPT_IRRIGATION]irrigazione[\LINK]</Italian>
 		<Spanish>[SPACE]con [LINK=CONCEPT_IRRIGATION]riego[\LINK]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -17227,7 +17261,7 @@
 		<English>You have discovered %s1_TechName!</English>
 		<French>Vous avez découvert : %s1_TechName !</French>
 		<German>Ihr habt die Technologie %s1_TechName entdeckt!</German>
-		<Italian>Hai scoperto [NUM1:lo:la:i:le] %s1_TechName!</Italian>
+		<Italian>Hai scoperto la tecnologia %s1_TechName!</Italian>
 		<Spanish>Habéis descubierto [NUM1:el:la:los:las] %s1_TechName.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -17559,7 +17593,7 @@
 		<English>Lead Troops as a Warlord</English>
 		<French>Diriger les troupes en tant que Seigneur de guerre</French>
 		<German>Truppen als Kriegsherr anführen</German>
-		<Italian>Guida le truppe come Guerriero</Italian>
+		<Italian>Guida le truppe come signore della guerra</Italian>
 		<Spanish>Liderar tropas como un Caudillo</Spanish>
 	</TEXT>
 	<TEXT>
@@ -18329,7 +18363,7 @@
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Luglio</Text>
+			<Text>Lug</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
@@ -18488,7 +18522,7 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]%s1 won't trade %s2[COLOR_REVERT]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]%s1 ne veut plus échanger: %s2[COLOR_REVERT]</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]%s1 hat Ressourcen vom Handel ausgeschlossen: %s2[COLOR_REVERT]</German>
-		<Italian>[COLOR_HIGHLIGHT_TEXT]%s1 non commercerà %s2[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_HIGHLIGHT_TEXT]%s1 non vuole più commerciare %s2[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]%s1 no intercambiará %s2[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]%s1 nie chce handlować %s2[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_HIGHLIGHT_TEXT]%s1 íå ìîæåò òîðãîâàòü %s2[COLOR_REVERT]</Russian>
@@ -18512,10 +18546,6 @@
 		<Spanish>%s1_Player ha fundado %s2_City en una tierra lejana.</Spanish>
 		<Polish>%s1_Player założył %s2_City w odległym kraju.</Polish>
 		<Russian>%s1_Player îñíîâàë %s2_City íà îòäàëåííîé çåìëå.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MORECIV4LERTS_CITY_TO_EXPAND_RCS</Tag>
-		<English>[COLOR_MAGENTA]The culture of %s1 is about to reach a new threshold.[COLOR_REVERT]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MORECIV4LERTS_CITY_TO_EXPAND</Tag>
@@ -18562,7 +18592,7 @@
 		<English>[COLOR_TECH_TEXT]Will Trade Map: %s1[COLOR_REVERT]</English>
 		<French>[COLOR_TECH_TEXT]%s1 est prêt à échanger des cartes.[COLOR_REVERT]</French>
 		<German>[COLOR_TECH_TEXT]Wird Karten handeln: %s1[COLOR_REVERT]</German>
-		<Italian>[COLOR_TECH_TEXT]Commercerà 'Mappa': %s1[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_TECH_TEXT]Disponibile a commerciare 'Mappa': %s1[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_TECH_TEXT]Intercambiarán su mapa: %s1[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_TECH_TEXT]Chce handlować mapami: %s1[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_TECH_TEXT]Ìîæåò òîðãîâàòü êàðòîé: %s1[COLOR_REVERT]</Russian>
@@ -18572,7 +18602,7 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]%s1 will trade %s2[COLOR_REVERT]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]%s1 est prêt à échanger: %s2[COLOR_REVERT]</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]%s1 hat Ressourcen zum Handeln: %s2[COLOR_REVERT]</German>
-		<Italian>[COLOR_HIGHLIGHT_TEXT]%s1 commercerà %s2[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_HIGHLIGHT_TEXT]%s1 è disponibile a commerciare %s2[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]%s1 intercambiará %s2[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]%s1 chce handlować %s2[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_HIGHLIGHT_TEXT]%s1 ìîæåò òîðãîâàòü %s2[COLOR_REVERT]</Russian>
@@ -18582,7 +18612,7 @@
 		<English>[COLOR_TECH_TEXT]%s1 will trade %s2[COLOR_REVERT]</English>
 		<French>[COLOR_TECH_TEXT]%s1 est prêt à échanger: %s2[COLOR_REVERT]</French>
 		<German>[COLOR_TECH_TEXT]%s1 hat neue Technologie(n) zum Handeln: %s2[COLOR_REVERT]</German>
-		<Italian>[COLOR_TECH_TEXT]%s1 commercerà %s2[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_TECH_TEXT]%s1 è disponibile a commerciare %s2[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_TECH_TEXT]%s1 intercambiará %s2[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_TECH_TEXT]%s1 chce handlować: %s2[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_TECH_TEXT]%s1 ìîæåò òîðãîâàòü %s2[COLOR_REVERT]</Russian>
@@ -18672,7 +18702,7 @@
 		<English>[COLOR_TECH_TEXT]%s1 won't trade %s2[COLOR_REVERT]</English>
 		<French>[COLOR_TECH_TEXT]%s1 ne veut plus échanger: %s2[COLOR_REVERT]</French>
 		<German>[COLOR_TECH_TEXT]%s1 hat Technologie(n) vom Handel ausgeschlossen: %s2[COLOR_REVERT]</German>
-		<Italian>[COLOR_TECH_TEXT]%s1 non commercerà %s2[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_TECH_TEXT]%s1 non è più disponibile a commerciare%s2[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_TECH_TEXT]%s1 no intercambiará %s2[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_TECH_TEXT]%s1 nie chce handlować: %s2[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_TECH_TEXT]%s1 íå ìîæåò òîðãîâàòü %s2[COLOR_REVERT]</Russian>
@@ -18843,16 +18873,25 @@
 		<English>[ICON_BULLET]Units have a %D1%% chance to avoid Capture.</English>
 		<French>[ICON_BULLET]Les Unités ont %D1%% de chances d'éviter d'être capturées.</French>
 		<German>[ICON_BULLET]Einheiten können der Gefangennahme mit %D1%% Wahrscheinlichkeit entgehen.</German>
-		<Italian>[ICON_BULLET]Le unità hanno il %D1%% di chance di sfuggire alla cattura.</Italian>
+		<Italian>[ICON_BULLET]Possibilità di sfuggire alla cattura: %D1%%</Italian><!--Aerial CT trait in the pedia-->
 		<Polish>[ICON_BULLET]Jednostki mają %D1%% szansy na uniknięcie Przejęcia.</Polish>
 		<Russian>[ICON_BULLET]%D1%% øàíñîâ èçáåæàòü çàõâàòà.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_NATURAL_WONDERS</Tag>
+		<English>Natural Wonders</English>
+		<French>Merveilles Naturelles</French>
+    <Italian>Meraviglie naturali</Italian>
+		<German>Naturwunder</German>
+		<Polish>Cuda Natury</Polish>
+		<Russian>×óäî ïðèðîäû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_NEVER_MIND</Tag>
 		<English>Never mind...</English>
 		<French>Laissez tomber...</French>
 		<German>Schon gut ...</German>
-		<Italian>Non importa...</Italian>
+    <Italian>[COLOR_BLACK]Annulla[COLOR_REVERT]</Italian>
 		<Spanish>No importa...</Spanish>
 	</TEXT>
 	<TEXT>
@@ -18907,7 +18946,7 @@
 		<English>None</English>
 		<French>Rien</French>
 		<German>Keine</German>
-		<Italian>Nessuno</Italian>
+		<Italian>[COLOR_GREEN]Nessuna[COLOR_REVERT]</Italian>
 		<Spanish>Ninguno</Spanish>
 		<Polish>Brak</Polish>
 	</TEXT>
@@ -18943,13 +18982,14 @@
 		<German>[COLOR_LIGHT_GREY]In einem fernen Land wurde das Naturwunder %s1 entdeckt!</German>
 		<Polish>[COLOR_LIGHT_GREY]%s1 został odkryty w odległej krainie![COLOR_REVERT]</Polish>
 		<Russian>[COLOR_LIGHT_GREY]%s1 áûë îáíàðóæåí â äàëåêèõ çåìëÿõ![COLOR_REVERT]</Russian>
+    <Italian>[COLOR_LIGHT_GREY]La meraviglia naturale %s1 è stata scoperta in una terra lontana![COLOR_REVERT]</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_NO_BUILDING_FREE_EXPERIENCE</Tag>
 		<English>[ICON_BULLET][COLOR_NEGATIVE_TEXT]%D1 with %s2_building[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_NEGATIVE_TEXT]%D1 avec %s2_building[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_NEGATIVE_TEXT]%D1 mit %s2_building[COLOR_REVERT]</German>
-		<Spanish>[ICON_BULLET][COLOR_NEGATIVE_TEXT]%D1 con %s2_building[COLOR_REVERT]</Spanish>
+		<Spanish>[ICON_BULLET][COLOR_NEGATIVE_TEXT]%D1 con l'edificio %s2_building[COLOR_REVERT]</Spanish>
 		<Polish>[ICON_BULLET][COLOR_NEGATIVE_TEXT]%D1 z %s2_building[COLOR_REVERT]</Polish>
 		<Russian>[ICON_BULLET][COLOR_NEGATIVE_TEXT]%D1 XP íà %s2_building[COLOR_REVERT]</Russian>
 	</TEXT>
@@ -18976,6 +19016,7 @@
 		<Tag>TXT_KEY_NO_NON_OWNED_CITY</Tag>
 		<English>[ICON_BULLET]This unit cannot enter a city that is not your own without attacking it.</English>
 		<French>[ICON_BULLET]Cette unité ne peut entrer dans une ville étrangère qu'en l'attaquant.</French>
+    <Italian>[ICON_BULLET]Non può entrare in una città straniera senza attaccare.</Italian>
 		<Russian>[ICON_BULLET]Этот отряд не может войти в город, не принадлежащий вам, не атакуя его.</Russian>
 	</TEXT>
 	<TEXT>
@@ -19410,7 +19451,7 @@
 		<English>[SPACE]or[SPACE]</English>
 		<French>[SPACE]ou[SPACE]</French>
 		<German>[SPACE]oder[SPACE]</German>
-		<Italian>[SPACE]o[SPACE]</Italian>
+		<Italian>[COLOR_REVERT][SPACE]o[SPACE][COLOR_WARNING_TEXT]</Italian>
 		<Spanish>[SPACE]o[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -19808,7 +19849,7 @@
 		<English>Traits</English>
 		<French>Traits de caractère</French>
 		<German>Charakterzüge</German>
-		<Italian>Punti di forza</Italian>
+		<Italian>Tratti</Italian>
 		<Spanish>Rasgos</Spanish>
 	</TEXT>
 	<TEXT>
@@ -19848,7 +19889,7 @@
 		<English>Yields</English>
 		<French>Produit</French>
 		<German>Erträge</German>
-		<Italian>Prodotti</Italian>
+		<Italian>Produce</Italian>
 		<Spanish>Rendim.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -19856,7 +19897,7 @@
 		<English>/City</English>
 		<French>/Ville</French>
 		<German>pro Stadt</German>
-		<Italian>/Città</Italian>
+		<Italian> per città</Italian><!--Alfonso I leader hover description-->
 		<Polish>/Miasto</Polish>
 		<Russian>/город</Russian>
 	</TEXT>
@@ -19893,6 +19934,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_FREE_EXPERIENCE</Tag>
 		<English>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 from Wonders, Civics and Traits[COLOR_REVERT]</English>
+		<Italian>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 per le Meraviglie e le politiche attive[COLOR_REVERT]</Italian>
 		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 des Merveilles et Doctrines[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 durch Wunder und Gesellschaftsform[COLOR_REVERT]</German>
 		<Spanish>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 por Maravillas y principios[COLOR_REVERT]</Spanish>
@@ -20384,7 +20426,7 @@
 		<English>Defense Bonus: %D1_Mod%%</English>
 		<French>Bonus de défense : %D1_Mod%%</French>
 		<German>Defensivbonus: %D1_Mod%%</German>
-		<Italian>Bonus difensivo: %D1_Mod%%</Italian>
+		<Italian>Bonus difensivo casella: %D1_Mod%%</Italian>
 		<Spanish>Bonificación de defensa: %D1_Mod%%</Spanish>
 	</TEXT>
 	<TEXT>
@@ -20392,7 +20434,7 @@
 		<English>Damage per Turn: %d1_Amt%%</English>
 		<French>Dégâts par tour : %d1_Amt%%</French>
 		<German>Schaden pro Runde: %d1_Amt%%</German>
-		<Italian>Danno per turno: %d1_Amt%%</Italian>
+		<Italian>Danno a turno: %d1_Amt%%</Italian>
 		<Spanish>Daño por turno: %d1_Amt%%</Spanish>
 	</TEXT>
 	<TEXT>
@@ -20456,7 +20498,7 @@
 		<English>[SPACE](Irrigated)</English>
 		<French>[SPACE](Irrigation)</French>
 		<German>[SPACE](Bewässert)</German>
-		<Italian>[SPACE](Irrigato)</Italian>
+		<Italian>[SPACE](con irrigazione)</Italian>
 		<Spanish>[SPACE](tiene riego)</Spanish>
 	</TEXT>
 	<TEXT>
@@ -20464,7 +20506,7 @@
 		<English>[SPACE](Not Irrigated)</English>
 		<French>[SPACE](non irrigué)</French>
 		<German>[SPACE](nicht bewässert)</German>
-		<Italian>[SPACE](Non irrigato)</Italian>
+		<Italian>[SPACE](senza irrigazione)</Italian>
 		<Spanish>[SPACE](no tiene riego)</Spanish>
 	</TEXT>
 	<TEXT>
@@ -20472,7 +20514,7 @@
 		<English>, Requires: [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</English>
 		<French>, Requiert : [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</French>
 		<German>, erfordert: [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</German>
-		<Italian>, Richiede: [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</Italian>
+		<Italian>, Richiede il terreno: [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</Italian>
 		<Spanish>, requiere: [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</Spanish>
 		<Russian>, Требует: [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</Russian>
 	</TEXT>
@@ -21198,6 +21240,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PREVIOUS_OUTPUT</Tag>
 		<English>Previous Output</English>
+    <Italian>Produzione precedente</Italian>
 		<German>Vorherige Aufträge</German>
 	</TEXT>
 	<TEXT>
@@ -21240,7 +21283,7 @@
 		<English>Idle</English>
 		<French>Oisif - Pas de production</French>
 		<German>Untätig</German>
-		<Italian>Ozioso</Italian>
+		<Italian>Nessuna produzione</Italian>
 		<Spanish>Parada</Spanish>
 		<Polish>Bezczynne</Polish>
 		<Russian>Îæèäàíèå</Russian>
@@ -21258,7 +21301,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>Cultura minore</Italian>
+		<Italian>Conversione in cultura</Italian>
 		<Spanish>Cultura (menor)</Spanish>
 		<Polish>Średnia Kultura</Polish>
 		<Russian>Ìàëàÿ êóëüòóðà</Russian>
@@ -21294,7 +21337,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>Ricchezza minore</Italian>
+		<Italian>Conversione in ricchezza</Italian>
 		<Spanish>Riqueza (menor)</Spanish>
 		<Polish>Średnie Bogactwo</Polish>
 		<Russian>Ìàëîå áëàãîñîñòîÿíèå</Russian>
@@ -21402,6 +21445,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Russian>Малый шпионаж</Russian>
+		<Italian>Conversione in spionaggio</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_SPY_MEAGER</Tag>
@@ -21450,6 +21494,16 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PRODUCTION_DECAY</Tag>
+		<English>[COLOR_NEGATIVE_TEXT]Will lose %d1[ICON_PRODUCTION] this turn[COLOR_REVERT]</English>
+		<French>[COLOR_NEGATIVE_TEXT]Va perdre %d1[ICON_PRODUCTION] ce tour[COLOR_REVERT]</French>
+		<German>[COLOR_NEGATIVE_TEXT]%d1[ICON_PRODUCTION] gehen in dieser Runde verloren[COLOR_REVERT]</German>
+		<Italian>[COLOR_NEGATIVE_TEXT]Perderà %d1[ICON_PRODUCTION] questo turno[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_NEGATIVE_TEXT]Perderá %d1[ICON_PRODUCTION] este turno[COLOR_REVERT]</Spanish>
+		<Polish>[COLOR_NEGATIVE_TEXT]Straci %d1[ICON_PRODUCTION] w tej turze[COLOR_REVERT]</Polish>
+		<Russian>[COLOR_NEGATIVE_TEXT]Áóäåò ïîòåðÿíî %d1[ICON_PRODUCTION] íà ýòîì õîäó[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PRODUCTION_DECAY_PRODUCING</Tag>
 		<English>[COLOR_WARNING_TEXT]Will lose %d1[ICON_PRODUCTION] if not produced this turn[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Va perdre %d1[ICON_PRODUCTION] si non utilisé ce tour[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]%d1[ICON_PRODUCTION] gehen verloren, falls nicht in dieser Runde produziert wird[COLOR_REVERT]</German>
@@ -21460,7 +21514,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PRODUCTION_DECAY_TURNS</Tag>
-		<English>[COLOR_NEGATIVE_TEXT]Will lose %d1[ICON_PRODUCTION] if delayed for %d2 [NUM2:turn:turns][COLOR_REVERT]</English>
+		<English>[COLOR_NEGATIVE_TEXT]Will lose %d1[ICON_PRODUCTION] in %d2 [NUM2:turn:turns][COLOR_REVERT]</English>
 		<French>[COLOR_NEGATIVE_TEXT]Va perdre %d1[ICON_PRODUCTION] en %d2 [NUM2:tour:tours][COLOR_REVERT]</French>
 		<German>[COLOR_NEGATIVE_TEXT]%d1[ICON_PRODUCTION] gehen in %d2 [NUM2:Runde:Runden] verloren[COLOR_REVERT]</German>
 		<Italian>[COLOR_NEGATIVE_TEXT]Perderà %d1[ICON_PRODUCTION] in %d2 [NUM2:Turno:turni][COLOR_REVERT]</Italian>
@@ -21469,11 +21523,21 @@
 		<Russian>[COLOR_NEGATIVE_TEXT]Áóäåò ïîòåðÿíî %d1[ICON_PRODUCTION] çà %d2 [NUM2:õîä:õîäîâ][COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PRODUCTION_DECAY_TURNS_PRODUCING</Tag>
+		<English>[COLOR_WARNING_TEXT]Will lose %d1[ICON_PRODUCTION] if not produced for %d2 [NUM2:turn:turns][COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Va perdre %d1[ICON_PRODUCTION] si non utilisé en %d2 [NUM2:tour:tours][COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]%d1[ICON_PRODUCTION] gehen verloren, falls für %d2 [NUM2:Runde:Runden] nicht produziert wird[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Perderà %d1[ICON_PRODUCTION] se non viene prodotto per %d2 [NUM2:Turno:turni][COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Perderá %d1[ICON_PRODUCTION] si no se sigue produciendo en %d2 [NUM2:turno:turnos][COLOR_REVERT]</Spanish>
+		<Polish>[COLOR_WARNING_TEXT]Straci %d1[ICON_PRODUCTION] jeśli nie wyprodukuje w ciągu %d2 [NUM2:tury:tur][COLOR_REVERT]</Polish>
+		<Russian>[COLOR_WARNING_TEXT]Áóäåò ïîòåðÿíî %d1[ICON_PRODUCTION] åñëè íå ïðîèçâåäåì çà %d2 [NUM2:õîä:õîäîâ][COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PRODUCTION_MODIFIER_TRAIT</Tag>
 		<English>[ICON_BULLET]%D1_change%% production speed for %s2_trait leaders</English>
 		<French>[ICON_BULLET]Vitesse de production de %D1_change%% pour les dirigeants avec le trait %s2_trait</French>
 		<German>[ICON_BULLET]%D1_change%% Produktionsgeschwindigkeit für Staatsoberhäupter mit dem Charakterzug: %s2:2_trait</German>
-		<Italian>[ICON_BULLET]%D1_change%% di velocità produttiva con un leader %s2_trait</Italian>
+    <Italian>[ICON_BULLET]Velocità produttiva: [COLOR_HIGHLIGHT_TEXT]%D1_change[COLOR_REVERT] con un leader [COLOR_HIGHLIGHT_TEXT]%s2_trait[COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET]%D1_change%% de velocidad de producción con líder %s2:1_trait</Spanish>
 	</TEXT>
 	<TEXT>
@@ -21659,7 +21723,7 @@
 		<English>Damage/Turn</English>
 		<French>Dégâts/tour</French>
 		<German>Schaden/Runde</German>
-		<Italian>Danno/turno</Italian>
+		<Italian>di danni curati a turno</Italian>
 		<Spanish>Daño/turno</Spanish>
 	</TEXT>
 	<TEXT>
@@ -21787,7 +21851,7 @@
 		<English>[ICON_BULLET]%d1_percent%% less [ICON_GOLD] to Upgrade</English>
 		<French>[ICON_BULLET]Coût de l'amélioration réduite de %d1_percent%% [ICON_GOLD]</French>
 		<German>[ICON_BULLET]%d1_percent%% weniger [ICON_GOLD] für Modernisierungen</German>
-		<Italian>[ICON_BULLET]%d1_percent%% [ICON_GOLD] in meno ai miglioramenti</Italian>
+		<Italian>[ICON_BULLET]%d1_percent%% [ICON_GOLD] in meno per gli aggiornamenti</Italian>
 		<Spanish>[ICON_BULLET]%d1_percent%% menos de [ICON_GOLD] para modernizar</Spanish>
 	</TEXT>
 	<TEXT>
@@ -22126,7 +22190,7 @@
 		<English>Date Founded:</English>
 		<French>Date de fondation :</French>
 		<German>Gründungsdatum:</German>
-		<Italian>Data di fondazione:</Italian>
+		<Italian>Fondata:</Italian>
 		<Spanish>Fecha de fundación:</Spanish>
 	</TEXT>
 	<TEXT>
@@ -22295,7 +22359,7 @@
 		<English>[NEWLINE][COLOR_WARNING_TEXT]Requires[SPACE]</English>
 		<French>[NEWLINE][COLOR_WARNING_TEXT]Requiert:[SPACE]</French>
 		<German>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]erforderlich:[SPACE]</German>
-		<Italian>[NEWLINE][COLOR_WARNING_TEXT]Richiede[SPACE]</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Richiede[COLOR_REVERT] per poter essere costruito:[NEWLINE][TAB][COLOR_WARNING_TEXT]</Italian>
 		<Spanish>[NEWLINE][COLOR_WARNING_TEXT]Requiere[SPACE]</Spanish>
 		<Polish>[NEWLINE][COLOR_WARNING_TEXT]Wymaga[SPACE]</Polish>
 		<Russian>[NEWLINE][COLOR_WARNING_TEXT]Òðåáóåòñÿ:[SPACE]</Russian>
@@ -22303,13 +22367,15 @@
 	<TEXT>
 		<Tag>TXT_KEY_REQUIRES_BONUS_RAWVICINITY</Tag>
 		<English>[COLOR_WARNING_TEXT]Requires [LINK=%s2]%s1_Text[\LINK] in City Vicinity, or manufactured locally (No need for improvement)[COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]Requiert [LINK=%s2]%s1_Text[\LINK] à proximité de la ville, ou fabriqué localement (Pas besoin d'aménagement)[COLOR_REVERT]</French>
+    <Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Richiede[COLOR_REVERT] le seguenti risorse (in città o nelle vicinanze o prodotta in loco anche senza miglioramenti):[NEWLINE][TAB][LINK=%s2]%s1_Text[\LINK][COLOR_REVERT]</Italian>
+    <French>[COLOR_WARNING_TEXT]Requiert [LINK=%s2]%s1_Text[\LINK] à proximité de la ville, ou fabriqué localement (Pas besoin d'aménagement)[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_WARNING_TEXT]benötigt [LINK=%s2]%s1_Text[\LINK] (hergestellt oder vorhanden im Stadtradius) (keine Ausbauten erforderlich)[COLOR_REVERT]</German>
 		<Russian>[COLOR_WARNING_TEXT]Требует [LINK=%s2]%s1_Text[\LINK] в городском радиусе или изготовлено на месте (нет необходимости в улучшении)[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REQUIRES_BONUS_RAWVICINITY_ONEOF</Tag>
 		<English>[COLOR_WARNING_TEXT]Bonus required in city vicinity, or manufactured locally (No need for improvement):[SPACE]</English>
+    <Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Richiede[COLOR_REVERT] le seguenti risorse unica (in città o nelle vicinanze o prodotta in loco anche senza miglioramenti):[NEWLINE][TAB]</Italian>
 		<French>[COLOR_WARNING_TEXT]Bonus requis dans les environs de la ville ou fabriqué localement (pas besoin d'amélioration):[SPACE]</French>
 		<German>[COLOR_WARNING_TEXT]benötigte Rohstoffe oder Güter im Stadtradius (keine Ausbauten erforderlich):[SPACE]</German>
 		<Russian>[COLOR_WARNING_TEXT]Бонус, расположенный в окрестностях города или произведенный на месте (не требует улучшения):[SPACE]</Russian>
@@ -22319,11 +22385,13 @@
 		<English>[COLOR_WARNING_TEXT]Requires [LINK=%s2]%s1_Text[\LINK] in city and in city vicinity, or manufactured locally.[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Requiert [LINK=%s2]%s1_Text[\LINK] en ville, à proximité de la ville, ou fabriqué localement.[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_WARNING_TEXT]benötigt [LINK=%s2]%s1_Text[\LINK] (hergestellt oder abgebaut im Stadtradius)[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Richiede[COLOR_REVERT] le seguenti risorse migliorata (in città o nelle vicinanze o prodotta in loco):[NEWLINE][TAB][LINK=%s2]%s1_Text[\LINK]</Italian>
 		<Russian>[COLOR_WARNING_TEXT]Òðåáóåò [LINK=%s2]%s1_Text[\LINK] в городском радиусе[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REQUIRES_BONUS_VICINITY_ONEOF</Tag>
 		<English>[COLOR_WARNING_TEXT]Bonus required in city and in city vicinity, or manufactured locally:[SPACE]</English>
+		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Richiede[COLOR_REVERT] le seguenti risorse unica migliorata (in città o nelle vicinanze o prodotta in loco):[COLOR_REVERT][NEWLINE][TAB]</Italian>
 		<French>[COLOR_WARNING_TEXT]Bonus requis dans la ville et ses environs, ou fabriqué localement:[SPACE]</French>
 		<German>[COLOR_WARNING_TEXT]benötigte Rohstoffe oder Güter im Stadtradius:[SPACE]</German>
 		<Russian>[COLOR_WARNING_TEXT]Íåîáõîäèì îõâàò ãîðîäñêîé ãðàíèöåé:[SPACE]</Russian>
@@ -22333,7 +22401,7 @@
 		<English>Requires[SPACE]</English>
 		<French>Requiert [SPACE]</French>
 		<German>[ICON_BULLET]erforderlich:[SPACE]</German>
-		<Italian>Richiede[SPACE]</Italian>
+		<Italian>[ICON_BULLET]Richiede la forma di governo[SPACE]</Italian>
 		<Spanish>Requiere[SPACE]</Spanish>
 		<Polish>Wymaga:[SPACE]</Polish>
 		<Russian>Òðåáóåòñÿ[SPACE]</Russian>
@@ -22428,7 +22496,7 @@
 		<Tag>TXT_KEY_ROUTE_MOVEMENT_COST</Tag>
 		<English>[ICON_BULLET]Movement Cost: %s1</English>
 		<French>[ICON_BULLET]Coût de déplacement: %s1</French>
-		<Italian>[ICON_BULLET]Costo di movimento: %s1</Italian>
+		<Italian>[ICON_BULLET]Costo di attraversamento: %s1</Italian>
 		<Polish>[ICON_BULLET]Koszt ruchu: %s1</Polish>
 		<Russian>[ICON_BULLET]Ñòîèìîñòü õîäà: %D1_Change</Russian>
 	</TEXT>
@@ -22494,7 +22562,7 @@
 		<Tag>TXT_KEY_ROUTE_REQUIRES_BONUS</Tag>
 		<English>[ICON_BULLET][COLOR_WARNING_TEXT]Requires %s1_Bonus[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Requiert %s1_Bonus[COLOR_REVERT]</French>
-		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Richiede %s1_Bonus[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_WARNING_TEXT][ICON_BULLET]Richiede la risorsa %s1_Bonus[COLOR_REVERT]</Italian>
 		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]Wymaga%s1_Bonus[COLOR_REVERT]</Polish>
 		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Òðåáóåòñÿ %s1_Bonus[COLOR_REVERT]</Russian>
 	</TEXT>
@@ -22502,7 +22570,7 @@
 		<Tag>TXT_KEY_ROUTE_REQUIRES_BONUS_OR</Tag>
 		<English>[COLOR_WARNING_TEXT] OR %s1_Bonus[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT] OU %s1_Bonus[COLOR_REVERT]</French>
-		<Italian>[COLOR_WARNING_TEXT] O %s1_Bonus[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_WARNING_TEXT] o %s1_Bonus[COLOR_REVERT]</Italian>
 		<Polish>[COLOR_WARNING_TEXT] LUB %s1_Bonus[COLOR_REVERT]</Polish>
 		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT] èëè %s1_Bonus[COLOR_REVERT]</Russian>
 	</TEXT>
@@ -22549,7 +22617,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>Sentiero</Italian>
+		<Italian>Cammino</Italian>
 		<Spanish>
 			<Text>Sendero</Text>
 			<Gender>Male</Gender>
@@ -22580,6 +22648,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_S1_COLON_SPACE</Tag>
 		<English>%s1:[SPACE]</English>
+    <Italian>prova12</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SAME_UNITS_TYPE</Tag>
@@ -22789,20 +22858,12 @@
 		<Spanish>Clima: %s1</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_SETTINGS_DIFFICULTY_GAME</Tag>
-		<English>Game difficulty: %s1 </English>
-		<French>Jeu difficulté : %s1</French>
-		<German>Spiel schwierigkeit: %s1</German>
-		<Italian>Difficoltà partita %s1</Italian>
-		<Spanish>Dificultad partida: %s1</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SETTINGS_DIFFICULTY_PLAYER</Tag>
-		<English>Player difficulty: %s1</English>
-		<French>Joueur difficulté : %s1</French>
-		<German>Spieler schwierigkeit: %s1</German>
-		<Italian>Difficoltà giocatore %s1</Italian>
-		<Spanish>Dificultad el jugador: %s1</Spanish>
+		<Tag>TXT_KEY_SETTINGS_DIFFICULTY</Tag>
+		<English>%s1 Difficulty</English>
+		<French>Difficulté : %s1</French>
+		<German>Schwierigkeit: %s1</German>
+		<Italian>Difficoltà %s1</Italian>
+		<Spanish>Dificultad: %s1</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SETTINGS_GAME_SPEED</Tag>
@@ -23566,8 +23627,10 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SHORTCUTS_MP</Tag>
-		<English>Multiplayer</English>
+		<English>Multi-Player</English>
 		<French>Multi-Joueur</French>
+		<German>Multiplayer</German>
+		<Italian>Multiplayer</Italian>
 		<Spanish>Multijugador</Spanish>
 		<Polish>Wieloosobowa</Polish>
 		<Russian>Ìóëüòèïëååð</Russian>
@@ -24037,7 +24100,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>[ICON_BULLET]%D1_ChangeRate[ICON_GREATPEOPLE] Tasso di natalità</Text>
+			<Text>[ICON_BULLET]%D1_ChangeRate[ICON_GREATPEOPLE] tasso di natalità</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
@@ -24128,7 +24191,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]%D1_Change Experience to %s2_UnitCombat type units trained in this city.</English>
 		<French>[ICON_BULLET]%D1_Change Experience pour les unités de type: %s2_UnitCombat entraînées dans cette Ville.</French>
 		<German>[ICON_BULLET]%D1_Change Erfahrung für %s2_UnitCombat, die in dieser Stadt ausgebildet werden.</German>
-		<Italian>[ICON_BULLET]%D1_Change XP a %s2_UnitCombat type addestrate in questa città.</Italian>
+		<Italian>[ICON_BULLET]%D1_Change XP alle %s2_UnitCombat addestrate in questa città.</Italian>
 		<Polish>[ICON_BULLET]%D1_Change Doświadczenia do jednostek: %s2_UnitCombat trenowanych w tym mieście.</Polish>
 		<Russian>[ICON_BULLET]%D1_Change опыта всем типам %s2_UnitCombat обученным в данном городе.</Russian>
 	</TEXT>
@@ -24382,11 +24445,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Gender>male:male:male:male:male:male:male:male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Grande Mercante:Grandi Mercanti</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Gran mercante</Italian>
 		<Spanish>
 			<Text>Gran mercader:Grandes mercaderes</Text>
 			<Gender>Male</Gender>
@@ -24408,11 +24467,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Gender>male:male:male:male:male:male:male:male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Grande istruttore militare:Grandi istruttori militari</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Gran istruttore militare</Italian>
 		<Spanish>
 			<Text>Gran instructor militar:Grandes instructores militares</Text>
 			<Gender>Male</Gender>
@@ -24995,7 +25050,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]Allows %s1 to upgrade to %s2.</English>
 		<French>[ICON_BULLET]Permet à %s1 d'être amélioré en %s2.</French>
 		<German>[ICON_BULLET]neue Modernisierung: %s1 -&gt; %s2</German>
-		<Italian>[ICON_BULLET]Permette a %s1 di migliorare in %s2.</Italian>
+		<Italian>[ICON_BULLET]Permette al miglioramento [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT] di diventare [COLOR_HIGHLIGHT_TEXT]%s2[COLOR_REVERT].</Italian>
 		<Spanish>[ICON_BULLET]Permite [NUM1:al:a la:a los:a las] %s1 mejorar a %s2</Spanish>
 		<Polish>[ICON_BULLET]Umożliwia ulepszenie %s1 do %s2.</Polish>
 		<Russian>[ICON_BULLET]Ïîçâîëÿåò %s1 ìîäåðíèçèðîâàòü äî %s2.</Russian>
@@ -25005,7 +25060,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]Can Construct[SPACE]</English>
 		<French>[ICON_BULLET]Peut construire :[SPACE]</French>
 		<German>[ICON_BULLET]Ermöglicht Bau von:[SPACE]</German>
-		<Italian>[ICON_BULLET]Può costruire[SPACE]</Italian>
+		<Italian>[ICON_BULLET]Permette la costruzione di:[SPACE]</Italian>
 		<Spanish>[ICON_BULLET]Puede erigir[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -25021,7 +25076,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]Can Train[SPACE]</English>
 		<French>[ICON_BULLET]Peut entraîner :[SPACE]</French>
 		<German>[ICON_BULLET]Ausbildung von:[SPACE]</German>
-		<Italian>[ICON_BULLET]Può addestrare[SPACE]</Italian>
+		<Italian>[ICON_BULLET]Permette l'addestramento di:[SPACE]</Italian>
 		<Spanish>[ICON_BULLET]Puede preparar[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -25373,7 +25428,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_TECH_CANAANISM</Tag>
 		<English>Canaanism</English>
 		<French>Canaanéisme</French>
-		<Italian>Canaanismo</Italian>
+		<Italian>Cananesimo</Italian>
 		<Polish>Kananeizm</Polish>
 		<Russian>Õàíààíèçì</Russian>
 	</TEXT>
@@ -25667,11 +25722,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Induismo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Induismo</Italian>
 		<Spanish>
 			<Text>Hinduismo</Text>
 			<Gender>Male</Gender>
@@ -25816,11 +25867,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Gender>Neuter</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Giudaismo:Giudaica</Text>
-			<Gender>Male:Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Ebraismo</Italian>
 		<Spanish>
 			<Text>Judaísmo</Text>
 			<Gender>Male</Gender>
@@ -25902,7 +25949,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_TECH_MESOPOTAMISM</Tag>
 		<English>Mesopotamism</English>
 		<French>Mésopotamisme</French>
-		<Italian>Mesopotamismo</Italian>
+		<Italian>Mesopotamesimo</Italian>
 		<Polish>Mezopotamizm</Polish>
 		<Russian>Ìåñîïîòàìèçì</Russian>
 	</TEXT>
@@ -26399,6 +26446,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Yoruba</English>
 		<Polish>Joruba</Polish>
 		<Russian>Éîðóáà</Russian>
+    <Italian>Yorubaismo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_YORUBA_ADJECTIVE</Tag>
@@ -27350,7 +27398,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>A Specified Amount of Gold Per Turn will be Deducted from the one Civ and Given to the Other.</English>
 		<French>Une somme définie d'or sera payée à chaque tour par une civilisation à l'autre.</French>
 		<German>Eine Zivilisation übergibt pro Runde einen bestimmten Goldbetrag an eine andere Zivilisation.</German>
-		<Italian>L'ammontare d'oro per turno indicato verrà sottratto da una civiltà e assegnato a un'altra.</Italian>
+		<Italian>L'ammontare d'oro a turno indicato verrà sottratto da una civiltà e assegnato a un'altra.</Italian>
 		<Spanish>A una civilización se le quitará una cantidad determinada de oro cada turno, que se entregará a la otra.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -27358,7 +27406,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Gold Per Turn (%d1_Num)</English>
 		<French>Or par tour (%d1_Num)</French>
 		<German>Gold pro Runde (%d1_Num)</German>
-		<Italian>Oro per turno (%d1_Num)</Italian>
+		<Italian>Oro a turno (%d1_Num)</Italian>
 		<Spanish>Oro por turno (%d1_Num)</Spanish>
 	</TEXT>
 	<TEXT>
@@ -27834,7 +27882,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Chm</English>
 		<French>Chm</French>
 		<German>Chm</German>
-		<Italian>Car</Italian>
+		<Italian>Carimastico</Italian>
 		<Spanish>Car</Spanish>
 	</TEXT>
 	<TEXT>
@@ -27842,7 +27890,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Imp</English>
 		<French>Imp</French>
 		<German>Imp</German>
-		<Italian>Imp</Italian>
+		<Italian>Imperialista</Italian>
 		<Spanish>Imp</Spanish>
 	</TEXT>
 	<TEXT>
@@ -27850,7 +27898,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Pro</English>
 		<French>Pro</French>
 		<German>Stz</German>
-		<Italian>Pro</Italian>
+		<Italian>Protettivo</Italian>
 		<Spanish>Pro</Spanish>
 	</TEXT>
 	<TEXT>
@@ -27863,7 +27911,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Turns</English>
 		<French>Tours</French>
 		<German>Runden</German>
-		<Italian>Turni</Italian>
+		<Italian>turni</Italian>
 		<Spanish>Turnos</Spanish>
 		<Polish>Tur</Polish>
 		<Russian>Õîäîâ</Russian>
@@ -28245,7 +28293,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]Can Construct[SPACE]</English>
 		<French>[ICON_BULLET]Peut construire :[SPACE]</French>
 		<German>[ICON_BULLET]Ermöglicht Bau von:[SPACE]</German>
-		<Italian>[ICON_BULLET]Può costruire[SPACE]</Italian>
+		<Italian>[ICON_BULLET]Permette la costruzione di:[SPACE]</Italian>
 		<Spanish>[ICON_BULLET]Puede erigir[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28445,7 +28493,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]Ignores Terrain Movement Costs</English>
 		<French>[ICON_BULLET]Ignore les pénalités de mouvement du terrain</French>
 		<German>[ICON_BULLET]ignoriert Fortbewegungskosten auf Gelände</German>
-		<Italian>[ICON_BULLET]Ignora i costi di movimento sul terreno</Italian>
+		<Italian>[ICON_BULLET]Ignora i costi di attraversamento del terreno</Italian>
 		<Spanish>[ICON_BULLET]No le afectan los costes de movimiento por terreno</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28567,7 +28615,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]Can be built by[SPACE]</English>
 		<French>[ICON_BULLET]Peut être construit par[SPACE]</French>
 		<German>[ICON_BULLET]kann errichtet werden von[SPACE]</German>
-		<Italian>[ICON_BULLET]L'unità può essere costruita da[SPACE]</Italian>
+		<Italian>[ICON_BULLET]Può essere costruito da:[NEWLINE][TAB]</Italian>
 		<Spanish>[ICON_BULLET]Construible por[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28584,7 +28632,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[COLOR_WARNING_TEXT]Requires %s1_Text[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Requiert : %s1_Text[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]erfordert: %s1_Text[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]Richiede %s1_Text[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_WARNING_TEXT][ICON_BULLET]Richiede %s1_Text[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Requiere %s1_Text[COLOR_REVERT]</Spanish>
 		<Russian>[COLOR_WARNING_TEXT]Требует %s1_Text[COLOR_REVERT]</Russian>
 	</TEXT>
@@ -28621,6 +28669,14 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>[ICON_BULLET]Teameinheit (%d1_Num zulässig)</German>
 		<Italian>[ICON_BULLET]Unità di squadra (%d1_Num [NUM1:permessa:permesse])</Italian>
 		<Spanish>[ICON_BULLET]Unidad de equipo (%d1_Num [NUM1:permitida:permitidas])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_TEAM_UNIT_LEFT</Tag>
+		<English>[SPACE]Team Unit: %d1_Num Left</English>
+		<French>[SPACE]Unité d'équipe : reste %d1_Num</French>
+		<German>[SPACE]Teameinheit: %d1_Num übrig</German>
+		<Italian>[SPACE]Unità di squadra: %d1_Num [NUM1:rimanente:rimanenti]</Italian>
+		<Spanish>[SPACE]Unidad de equipo: %d1_Num [NUM1:restante:restantes]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_TURNS</Tag>
@@ -29479,6 +29535,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_VICTORY_SCREEN_PERCENTAGE</Tag>
 		<English>Status</English>
 		<French>Statut</French>
+    <Italian>Stati</Italian>
 		<Spanish>Estado</Spanish>
 		<Russian>Ñòàòóñ</Russian>
 	</TEXT>
@@ -29992,7 +30049,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_GOLD]%d1_Num</English>
 		<French>[ICON_GOLD]%d1_Num</French>
 		<German>[ICON_GOLD]%d1_Num</German>
-		<Italian>[ICON_GOLD]%d1_Num</Italian>
+		<Italian>[ICON_GOLD]%d1_NumPROVA7</Italian>
 		<Spanish>[ICON_GOLD] %d1_Num</Spanish>
 	</TEXT>
 	<TEXT>
@@ -30252,7 +30309,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[SPACE]with[SPACE]</English>
 		<French>[SPACE]avec[SPACE]</French>
 		<German>[SPACE]durch[SPACE]</German>
-		<Italian>[SPACE]con[SPACE]</Italian>
+		<Italian>[SPACE]con la tecnologia[SPACE]</Italian>
 		<Spanish>[SPACE]con[SPACE]</Spanish>
 		<Polish>[SPACE]z[SPACE]</Polish>
 		<Russian>[SPACE]ñ[SPACE]</Russian>
@@ -30290,7 +30347,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Owner</English>
 		<French>Propriétaire</French>
 		<German>Besitzer</German>
-		<Italian>Proprietario</Italian>
+		<Italian>Proprietario casella</Italian>
 		<Spanish>Propietario</Spanish>
 		<Polish>Właściciel</Polish>
 		<Russian>Âëàäåëåö</Russian>
@@ -30524,7 +30581,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET][COLOR_YELLOW]You are Worst Enemy[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Vous êtes son pire ennemi[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_YELLOW]Euer Erzfeind[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET][COLOR_YELLOW]Tu sei peggiore ostile[COLOR_REVERT]</Italian>
+		<Italian>[ICON_BULLET][COLOR_YELLOW]Tu sei il peggiore nemico[COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET][COLOR_YELLOW]Eres su peor enemigo[COLOR_REVERT]</Spanish>
 		<Polish>[ICON_BULLET][COLOR_YELLOW]Jesteś najgorszym wrogiem[COLOR_REVERT]</Polish>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Âû çëåéøèé âðàã[COLOR_REVERT]</Russian>
@@ -30534,7 +30591,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET][COLOR_YELLOW]Worst Enemy of %s1_player[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_YELLOW]Pire ennemi de %s1_player[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_YELLOW]Erzfeind von %s1_player[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET][COLOR_YELLOW]Peggiore ostile di %s1_player[COLOR_REVERT]</Italian>
+		<Italian>[ICON_BULLET][COLOR_YELLOW]Peggiore nemico di %s1_player[COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET][COLOR_YELLOW]Peor enemigo de %s1_player[COLOR_REVERT]</Spanish>
 		<Polish>[ICON_BULLET][COLOR_YELLOW]Najgorszy wróg: %s1_player[COLOR_REVERT]</Polish>
 		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]%s1_player ñ÷èòàåò èõ çëåéøèìè âðàãàìè[COLOR_REVERT]</Russian>
@@ -30552,11 +30609,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Commercio</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Comm</Italian> <!--In the pedia path screen in alla caps-->
 		<Spanish>
 			<Text>Comercio</Text>
 			<Gender>Male</Gender>
@@ -30578,11 +30631,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Cibo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Cibo</Italian><!--In the pedia path screen in alla caps-->
 		<Spanish>
 			<Text>Alimentos</Text>
 			<Gender>Male</Gender>
@@ -30604,11 +30653,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Produzione</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Prod</Italian><!--In the pedia path screen in alla caps-->
 		<Spanish>
 			<Text>Producción</Text>
 			<Gender>Female</Gender>
@@ -30646,7 +30691,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Press ALT to view all Strength In Numbers Modifiers</English>
 		<French>Appuyer sur 'ALT' pour voir tous les modificateurs du Combat</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]&lt;ALT&gt;[COLOR_REVERT] für Gemeinsam-sind-wir-stark-Modifikatoren[COLOR_REVERT]</German>
-		<Italian>Premi ALT per vedere tutti i modificatori riguardanti La forza nei numeri</Italian>
+		<Italian>Premi ALT per vedere tutti i modificatori riguardanti La forza nel numero</Italian>
 		<Polish>Naciśnij ALT aby zobaczyć Modyfikatory Siły-w-Grupie</Polish>
 		<Russian>Нажмите ALT, чтобы просмотреть все модификаторы Силы в числах</Russian>
 	</TEXT>
@@ -30655,13 +30700,14 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]Press CTRL for Advanced Combat calculations.</English>
 		<French>[ICON_BULLET]Appuyer sur [BOLD]CTRL[\BOLD] pour les calculs du Combat Avancé.</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]&lt;STRG&gt;[COLOR_REVERT] für Berechnung erweiterter Siegchancen[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Premi [BOLD]CTRL[\BOLD] per i calcoli di Combattimento avanzato.</Italian>
+		<Italian>[ICON_BULLET]Premi [BOLD]CTRL[\BOLD] per i calcoli di combattimento avanzato.</Italian>
 		<Polish>[ICON_BULLET]Naciśnij [BOLD]CTRL[\BOLD] dla Zaawansowanych Obliczeń Walki.</Polish>
 		<Russian>[ICON_BULLET]Нажмите CTRL для расширенных расчетов боя.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_TB_UNIT_VIEW_1</Tag>
 		<English>Press CTRL to view Combat Modifiers</English>
+		<Italian>[ICON_BULLET]Premi CTRL per vedere i dati militari</Italian>
 		<French>Utiliser CTRL pour voir les modif. de Combat</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]&lt;STRG&gt;[COLOR_REVERT] für Anzeige der militärischen Daten</German>
 		<Polish>Naciśnij CTRL aby zobaczyć Modyfikatory Bojowe</Polish>
@@ -30670,6 +30716,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	<TEXT>
 		<Tag>TXT_TB_UNIT_VIEW_2</Tag>
 		<English>Press ALT to view Civil Information</English>
+		<Italian>[ICON_BULLET]Premi ALT per vedere i dati civili</Italian>
 		<French>Utiliser ALT pour voir les Informations Civiles</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]&lt;ALT&gt;[COLOR_REVERT] für Anzeige der zivilen Daten</German>
 		<Polish>Naciśnij ALT aby zobaczyć Informacje Nie-bojowe</Polish>
@@ -30678,9 +30725,11 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	<TEXT>
 		<Tag>TXT_TB_UNIT_VIEW_3</Tag>
 		<English>Press SHIFT to view Combat Classes</English>
+		<Italian>[ICON_BULLET]Premi SHIFT per vedere le classi di combattimento</Italian>
 		<French>Utiliser SHIFT pour voir les Classes de combat</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]&lt;UMSCHALT&gt;[COLOR_REVERT] für Anzeige der Kategorien</German>
 		<Polish>Naciśnij SHIFT aby zobaczyć Klasy Bojowe</Polish>
 		<Russian>Íàæìèòå SHIFT äëÿ ïðîñìîòðà áîåâûõ êëàññîâ</Russian>
 	</TEXT>
 </Civ4GameText>
+

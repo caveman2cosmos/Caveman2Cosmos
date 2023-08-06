@@ -6,6 +6,7 @@
 		<English>Cargo</English>
 		<German>Fracht</German>
 		<Spanish>Carga</Spanish>
+    <Italian>merce</Italian>
 		<Polish>Ładowność</Polish>
 		<Russian>Òðàíñïîðò</Russian>
 	</TEXT>
@@ -14,7 +15,7 @@
 		<English>City</English>
 		<French>Ville</French>
 		<German>Stadt</German>
-		<Italian>Città</Italian>
+		<Italian>in città</Italian><!--Aerial CT trait in the pedia-->
 		<Spanish>Ciudad</Spanish>
 		<Polish>Miasto</Polish>
 		<Russian>Ãîðîä</Russian>
@@ -24,7 +25,7 @@
 		<English>Cost</English>
 		<French>Coût</French>
 		<German>Kosten</German>
-		<Italian>Costo</Italian>
+		<Italian>costo</Italian>
 		<Spanish>Coste</Spanish>
 		<Polish>Koszt</Polish>
 		<Russian>Öåíà</Russian>
@@ -43,7 +44,7 @@
 		<English>Default</English>
 		<French>Standard</French>
 		<German>Standard</German>
-		<Italian>Predefinito</Italian>
+		<Italian>predefinito</Italian>
 		<Spanish>Predeterminado</Spanish>
 		<Russian>По умолчанию</Russian>
 	</TEXT>
@@ -107,7 +108,7 @@
 		<English>Peak</English>
 		<French>Montagne</French>
 		<German>Gipfel</German>
-		<Italian>Montagna</Italian>
+		<Italian>Picco</Italian>
 		<Spanish>Pico</Spanish>
 	</TEXT>
 	<TEXT>
@@ -115,7 +116,7 @@
 		<English>Player</English>
 		<French>Joueur</French>
 		<German>Spieler</German>
-		<Italian>Giocatore</Italian>
+		<Italian>giocatore</Italian>
 		<Spanish>Jugador</Spanish>
 		<Polish>Gracz</Polish>
 		<Russian>Èãðîê</Russian>
@@ -125,7 +126,7 @@
 		<English>Plot</English>
 		<French>Case</French>
 		<German>Feld</German>
-		<Italian>Casella</Italian>
+		<Italian>casella</Italian>
 		<Spanish>Casilla</Spanish>
 		<Polish>Pole</Polish>
 		<Russian>Ó÷àñòîê</Russian>
@@ -140,12 +141,13 @@
 		<Tag>TXT_WORD_SPOT</Tag>
 		<English>Spot</English>
 		<German>Sicht</German>
+    <Italian>punto</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_WORD_TEAM</Tag>
 		<English>Team</English>
 		<French>Equipe</French>
-		<Italian>Squadra</Italian>
+		<Italian>squadra</Italian>
 		<Spanish>Equipo</Spanish>
 		<Polish>Drużyna</Polish>
 		<Russian>Êîìàíäà</Russian>
@@ -155,7 +157,7 @@
 		<English>Unit</English>
 		<French>Unité</French>
 		<German>Einheit</German>
-		<Italian>Unità</Italian>
+		<Italian>unità</Italian>
 		<Spanish>Unidad</Spanish>
 		<Polish>Jednostka</Polish>
 		<Russian>Îòðÿä</Russian>
@@ -165,7 +167,7 @@
 		<English>With</English>
 		<French>Avec</French>
 		<German>durch</German>
-		<Italian>Con</Italian>
+		<Italian>Variazione ulteriore con</Italian>
 		<Spanish>Con</Spanish>
 		<Polish>Z</Polish>
 		<Russian>Ñ</Russian>

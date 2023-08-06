@@ -479,7 +479,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_HITLER_1</Tag>
-		<English>I am [OUR_NAME], Führer of the [OUR_CIV_ADJ] people. We will restore our betrayed nation to greatness. You will not stand in our way.</English>
+		<English>AAARRRRRGGGHHHH, its [OUR_NAME], tyrant of [OUR_CIV_ADJ] people. I consider you a second class "person". DONT CROSS ME OR TO CAMP WE WILL GO!!!</English>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_HTN_1</Tag>
@@ -1138,645 +1138,3592 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ALYAWARRE</Tag>
 		<English>Alyawarre</English>
+		<French>
+			<Text>Alyawarre</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Alyawarre</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Alyawarre</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Àëÿâàððå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_AMANINDEUA</Tag>
+		<English>Amanindeua</English>
+		<French>
+			<Text>Amanindeua</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Amanindeua</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Amanindeua</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Amanindeua</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Àìàíèíäåéà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ANAPOLIS</Tag>
+		<English>Anapolis</English>
+		<French>
+			<Text>Anapolis</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Anapolis</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Anapolis</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Anapolis</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Àíàïîëèñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ANMATYERRE</Tag>
 		<English>Anmatyerre</English>
+		<French>
+			<Text>Anmatyerre</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Anmatyerre</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Anmatyerre</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Àíìàòüåððå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ANTAKARINJA</Tag>
 		<English>Antakarinja</English>
+		<French>
+			<Text>Antakarinja</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Antakarinja</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Antakarinja</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Àíòàêàðèíüÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ARACAJU</Tag>
 		<English>Aracaju</English>
+		<French>
+			<Text>Aracaju</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Aracaju</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Aracaju</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Aracaju</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Àðàêàæó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ARRERNTE</Tag>
 		<English>Arrernte</English>
+		<French>
+			<Text>Arrernte</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Arrernte</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Arrernte</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Àððåíòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AWABAKAL</Tag>
 		<English>Awabakal</English>
+		<French>
+			<Text>Awabakal</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Awabakal</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Awabakal</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Àâàáàêàë</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BAURU</Tag>
 		<English>Bauru</English>
+		<French>
+			<Text>Bauru</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Bauru</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Bauru</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Bauru</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Áàóðó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BELEM</Tag>
+		<English>Belem</English>
+		<French>
+			<Text>Belem</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Belem</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Belem</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Belem</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Áåëåí</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BELFORD_ROXO</Tag>
+		<English>Belford Roxo</English>
+		<French>
+			<Text>Belford Roxo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Belford Roxo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Belford Roxo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Belford Roxo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Ïîðòó-Àëåãðè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BELO_HORIZONTE</Tag>
 		<English>Belo Horizonte</English>
+		<French>
+			<Text>Belo Horizonte</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Belo Horizonte</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Belo Horizonte</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Belo Horizonte</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Áåëó-Îðèçîíòè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BETIM</Tag>
+		<English>Betim</English>
+		<French>
+			<Text>Betim</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Betim</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Betim</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Betim</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Äóêè-äå-Êàøèàñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BLUMENAU</Tag>
 		<English>Blumenau</English>
+		<French>
+			<Text>Blumenau</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Blumenau</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Blumenau</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Blumenau</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íîâà-Èãóàñó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BRASILIA</Tag>
+		<English>Brasilia</English>
+		<French>
+			<Text>Brasilia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Brasilia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Brasilia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Brasilia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Áðàçèëèà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BUNURONG</Tag>
 		<English>Bunurong</English>
+		<French>
+			<Text>Bunurong</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Bunurong</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Bunurong</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Áóíóðîíã</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BURARRA</Tag>
 		<English>Burarra</English>
+		<French>
+			<Text>Burarra</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Burarra</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Burarra</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Áóðàððà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CAMPINAS</Tag>
 		<English>Campinas</English>
+		<French>
+			<Text>Campinas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Campinas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Campinas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Campinas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Êàìïèíàñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CAMPINA_GRANDE</Tag>
 		<English>Campina Grande</English>
+		<French>
+			<Text>Campina Grande</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Campina Grande</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Campina Grande</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Campina Grande</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Êàìïèíà-Ãðàíäè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CAMPO_GRANDE</Tag>
 		<English>Campo Grande</English>
+		<French>
+			<Text>Campo Grande</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Campo Grande</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Campo Grande</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Campo Grande</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Êàìïó-Ãðàíäè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CARAPICUIBA</Tag>
+		<English>Carapicuiba</English>
+		<French>
+			<Text>Carapicuiba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Carapicuiba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Carapicuiba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Carapicuiba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Êàðàïèñóèáà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CAXIAS_DO_SUL</Tag>
 		<English>Caxias Do Sul</English>
+		<French>
+			<Text>Caxias Do Sul</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Caxias Do Sul</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Caxias Do Sul</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Caxias Do Sul</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ñàíòó-Àíäðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_COCAMA</Tag>
 		<English>Cocama</English>
+		<French>
+			<Text>Cocama</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Cocama</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Cocama</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Cocama</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Êîñàìà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CUIABA</Tag>
+		<English>Cuiaba</English>
+		<French>
+			<Text>Cuiaba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Cuiaba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Cuiaba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Cuiaba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Êóÿáà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CURITIBA</Tag>
 		<English>Curitiba</English>
+		<French>
+			<Text>Curitiba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Curitiba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Curitiba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Curitiba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Êóðèòèáà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_DHARUG</Tag>
 		<English>Dharug</English>
+		<French>
+			<Text>Dharug</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Dharug</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Dharug</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Äõàðóã</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DIADEMA</Tag>
+		<English>Diadema</English>
+		<French>
+			<Text>Diadema</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Diadema</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Diadema</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Diadema</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Äèàäåìà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_DIERE</Tag>
 		<English>Diere</English>
+		<French>
+			<Text>Diere</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Diere</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Diere</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Äüåðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_EORA</Tag>
 		<English>Eora</English>
+		<French>
+			<Text>Eora</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Eora</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Eora</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ýîðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_FEIRA_DE_SANTANA</Tag>
 		<English>Feira de Santana</English>
+		<French>
+			<Text>Feira de Santana</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Feira de Santana</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Feira de Santana</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Feira de Santana</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ôåéðà-äè-Ñàíòàíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_FLORIANOPOLIS</Tag>
+		<English>Florianopolis</English>
+		<French>
+			<Text>Florianopolis</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Florianopolis</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Florianopolis</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Florianopolis</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Ôëîðèàíîïîëèñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_FORTALEZA</Tag>
 		<English>Fortaleza</English>
+		<French>
+			<Text>Fortaleza</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Fortaleza</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Fortaleza</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Fortaleza</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ôîðòàëåçà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GOIANIA</Tag>
+		<English>Goiana</English>
+		<French>
+			<Text>Goiana</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Goiana</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Goiana</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Goiana</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Ãîÿíèÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_GUAPORE</Tag>
 		<English>Guapore</English>
+		<French>
+			<Text>Guapore</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Guapore</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Guapore</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Guapore</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ãâàïîðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_GUBBI_GUBBI</Tag>
 		<English>Gubbi Gubbi</English>
+		<French>
+			<Text>Gubbi Gubbi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Gubbi Gubbi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Gubbi Gubbi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Êóïèãóááè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_GUNAI</Tag>
 		<English>Gunai</English>
+		<French>
+			<Text>Gunai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Kurnai</German>
+		<Italian>
+			<Text>Gunai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Gunai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ãóíàè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_GUNIVUGI</Tag>
 		<English>Gunivugi</English>
+		<French>
+			<Text>Gunivugi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Gunivugi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Gunivugi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ãóíèâóãè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_GURINDJI</Tag>
 		<English>Gurindji</English>
+		<French>
+			<Text>Gurindji</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Gurindji</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Gurindji</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ãóðèíäæè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_GUUGU_YIMITHIRR</Tag>
 		<English>Guugu Yimithirr</English>
+		<French>
+			<Text>Guugu Yimithirr</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Guugu Yimithirr</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Guugu Yimithirr</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ãóäè Éèìèòõèð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HAURAKI</Tag>
 		<English>Hauraki</English>
+		<French>
+			<Text>Hauraki</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Hauraki</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Hauraki</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Hauraki</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Õàóðàêè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_IPATINGA</Tag>
 		<English>Ipatinga</English>
+		<French>
+			<Text>Ipatinga</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ipatinga</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ipatinga</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ipatinga</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Èïàòèíãà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_IWAIDJA</Tag>
 		<English>Iwaidja</English>
+		<French>
+			<Text>Iwaidja</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Iwaidja</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Iwaidja</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Èâàéäúÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_JARU</Tag>
 		<English>Jaru</English>
+		<French>
+			<Text>Jaru</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Jaru</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Jaru</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>ßðó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_JOAO_PESSOA</Tag>
+		<English>Joao Pessoa</English>
+		<French>
+			<Text>Joao Pessoa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Joao Pessoa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Joao Pessoa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Joao Pessoa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Æóàí-Ïåñîà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_JOINVILLE</Tag>
 		<English>Joinville</English>
+		<French>
+			<Text>Joinville</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Joinville</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Joinville</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Joinville</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Æîèíâèëëè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_JUIZ_DE_FORA</Tag>
 		<English>Juiz de Fora</English>
+		<French>
+			<Text>Juiz de Fora</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Juiz de Fora</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Juiz de Fora</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Juiz de Fora</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Æóèñ-äè-Ôîðà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_JUNDIAI</Tag>
+		<English>Jundiai</English>
+		<French>
+			<Text>Jundiai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Jundiai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Jundiai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Jundiai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Æóíäèàè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KAYTEJ</Tag>
 		<English>Kaytej</English>
+		<French>
+			<Text>Kaytej</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Kaytej</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kaytej</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Êàéòåæ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KOKATHA</Tag>
 		<English>Kokatha</English>
+		<French>
+			<Text>Kokatha</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Kokatha</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kokatha</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Êîêàòõà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_KUKU_YALANII</Tag>
 		<English>Kuku-Yalanii</English>
+		<French>
+			<Text>Kuku-Yalanii</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Kuku Yalanji</German>
+		<Italian>
+			<Text>Kuku-Yalanii</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kuku-Yalanii</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Êóãó-ßëàíèé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LARRAKIA</Tag>
 		<English>Larrakia</English>
+		<French>
+			<Text>Larrakia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Larrakia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Larrakia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ëàððàêèÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LONDRINA</Tag>
 		<English>Londrina</English>
+		<French>
+			<Text>Londrina</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Londrina</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Londrina</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Londrina</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ëîíäðèíà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_LURITJA</Tag>
 		<English>Luritja</English>
+		<French>
+			<Text>Luritja</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Luritja</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Luritja</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ëóðèòúÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MACEIO</Tag>
+		<English>Maceio</English>
+		<French>
+			<Text>Maceio</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Maceio</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Maceio</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Maceio</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Ìàñåéî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MANAUS</Tag>
 		<English>Manaus</English>
+		<French>
+			<Text>Manaus</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Manaus</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Manaus</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Manaus</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ìàíàóñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MANDJI</Tag>
 		<English>Mandji</English>
+		<French>
+			<Text>Mandji</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Manji</German>
+		<Italian>
+			<Text>Mandji</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Mandji</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ìàíäæè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MARINGA</Tag>
+		<English>Maringa</English>
+		<French>
+			<Text>Maringa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Maringa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Maringa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Maringa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Ìàðèíãà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NAKAKO</Tag>
 		<English>Nakako</English>
+		<French>
+			<Text>Nakako</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Nakako</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Nakako</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íàêàãî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NATAL</Tag>
 		<English>Natal</English>
+		<French>
+			<Text>Natal</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Natal</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Natal</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Natal</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íàòàë</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGAITERANGI</Tag>
 		<English>Ngaiterangi</English>
+		<French>
+			<Text>Ngaiterangi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ngaiterangi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ngaiterangi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngaiterangi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãàòåðàíãè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGAI_TAHU</Tag>
 		<English>Ngai Tahu</English>
+		<French>
+			<Text>Ngai Tahu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ngai Tahu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ngai Tahu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngai Tahu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãàè Òàõó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGALEA</Tag>
 		<English>Ngalea</English>
+		<French>
+			<Text>Ngalea</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Ngalia</German>
+		<Italian>
+			<Text>Ngalea</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngalea</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãàëåÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGAPUHI</Tag>
 		<English>Ngapuhi</English>
+		<French>
+			<Text>Ngapuhi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ngapuhi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ngapuhi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngapuhi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãàïóõè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGARTI</Tag>
 		<English>Ngarti</English>
+		<French>
+			<Text>Ngarti</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Ngarti</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngarti</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãàðòè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGATATJARA</Tag>
 		<English>Ngatatjara</English>
+		<French>
+			<Text>Ngatatjara</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Ngatatjara</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngatatjara</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãàòàòüÿðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGATI_AWA</Tag>
 		<English>Ngati Awa</English>
+		<French>
+			<Text>Ngati Awa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ngati Awa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ngati Awa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngati Awa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãàòè Àâà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGATI_KAHU</Tag>
 		<English>Ngati Kahu</English>
+		<French>
+			<Text>Ngati Kahu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ngati Kahu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ngati Kahu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngati Kahu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãàòè Êàõó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGATI_KAHUNGUNU</Tag>
 		<English>Ngati Kahungunu</English>
+		<French>
+			<Text>Ngati Kahungunu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ngati Kahungunu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ngati Kahungunu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngati Kahungunu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãàòè Êàõóíãóíó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGATI_KURI</Tag>
 		<English>Ngati Kuri</English>
+		<French>
+			<Text>Ngati Kuri</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ngati Kuri</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ngati Kuri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngati Kuri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãàòè Êóðó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGATI_MANIAPOTO</Tag>
 		<English>Ngati Maniapoto</English>
+		<French>
+			<Text>Ngati Maniapoto</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ngati Maniapoto</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ngati Maniapoto</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngati Maniapoto</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãàòè Ìàíèàïîòî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGATI_PROU</Tag>
 		<English>Ngati Prou</English>
+		<French>
+			<Text>Ngati Prou</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ngati Prou</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ngati Prou</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngati Prou</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãàòè Ïðîó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGATI_RANGINUI</Tag>
 		<English>Ngati Ranginui</English>
+		<French>
+			<Text>Ngati Ranginui</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ngati Ranginui</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ngati Ranginui</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngati Ranginui</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãàòè Ðàíãèíóè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGATI_RAUKAWA</Tag>
 		<English>Ngati Raukawa</English>
+		<French>
+			<Text>Ngati Raukawa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ngati Raukawa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ngati Raukawa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngati Raukawa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãàòè Ðàóêàâà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGATI_RUANUI</Tag>
 		<English>Ngati Ruanui</English>
+		<French>
+			<Text>Ngati Ruanui</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ngati Ruanui</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ngati Ruanui</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngati Ruanui</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãàòè Ðóàíóè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGATI_TOA_RANGATIRA</Tag>
 		<English>Ngati Toa Rangatira</English>
+		<French>
+			<Text>Ngati Toa Rangatira</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ngati Toa Rangatira</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ngati Toa Rangatira</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngati Toa Rangatira</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãàòè-òîà-Ðàíãàòèðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGATI_TUWHARETOA</Tag>
 		<English>Ngati Tuwharetoa</English>
+		<French>
+			<Text>Ngati Tuwharetoa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ngati Tuwharetoa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ngati Tuwharetoa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngati Tuwharetoa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãàòè Òóâõàðåòîà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGATI_WAI</Tag>
 		<English>Ngati Wai</English>
+		<French>
+			<Text>Ngati Wai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ngati Wai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ngati Wai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngati Wai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãàòè Âàé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGATI_WHATUA</Tag>
 		<English>Ngati Whatua</English>
+		<French>
+			<Text>Ngati Whatua</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ngati Whatua</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ngati Whatua</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngati Whatua</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãàòè Âõàòóà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGA_RAURU</Tag>
 		<English>Nga Rauru</English>
+		<French>
+			<Text>Nga Rauru</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Nga Rauru</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Nga Rauru</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Nga Rauru</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãà Ðàóðó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGA_RUAHINE</Tag>
 		<English>Nga Ruahine</English>
+		<French>
+			<Text>Nga Ruahine</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Nga Ruahine</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Nga Ruahine</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Nga Ruahine</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãà Ðóàõèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGUNAWAL</Tag>
 		<English>Ngunawal</English>
+		<French>
+			<Text>Ngunawal</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Ngunnawal</German>
+		<Italian>
+			<Text>Ngunawal</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngunawal</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íãóíàâàëü</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NHEHGATU</Tag>
 		<English>Nhehgatu</English>
+		<French>
+			<Text>Nhehgatu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Nhehgatu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Nhehgatu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Nhehgatu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íõåõãàòó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NOONGAR</Tag>
 		<English>Noongar</English>
+		<French>
+			<Text>Noongar</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Noongar</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Noongar</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íóíãàð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NYANGANYATYARA</Tag>
 		<English>Nyanganyatyara</English>
+		<French>
+			<Text>Nyanganyatyara</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Nyanganyatyara</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Nyanganyatyara</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Íÿíãàíÿòéàðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_OLINDA</Tag>
 		<English>Olinda</English>
+		<French>
+			<Text>Olinda</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Olinda</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Olinda</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Olinda</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Îëèíäà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_OMAGUA</Tag>
 		<English>Omagua</English>
+		<French>
+			<Text>Omagua</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Omagua</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Omagua</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Omagua</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Îìàãóà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PARA</Tag>
 		<English>Para</English>
+		<French>
+			<Text>Para</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Para</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Para</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Para</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ïàðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PARAIBA</Tag>
 		<English>Paraiba</English>
+		<French>
+			<Text>Paraiba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Paraiba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Paraiba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Paraiba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ïàðàéáà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PARANA</Tag>
 		<English>Parana</English>
+		<French>
+			<Text>Parana</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Parana</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Parana</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Parana</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ïàðàíà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PEABIRU</Tag>
 		<English>Peabiru</English>
+		<French>
+			<Text>Peabiru</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Peabiru</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Peabiru</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Peabiru</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ïåàáèðó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PELOTAS</Tag>
 		<English>Pelotas</English>
+		<French>
+			<Text>Pelotas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Pelotas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Pelotas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Pelotas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ïåëîòàñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PERAMANGK</Tag>
 		<English>Peramangk</English>
+		<French>
+			<Text>Peramangk</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Peramangk</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Peramangk</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ïåðàìàíãê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PERNAMBUCO</Tag>
 		<English>Pernambuco</English>
+		<French>
+			<Text>Pernambuco</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Pernambuco</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Pernambuco</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Pernambuco</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ïåðíàìáóêó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PIABUYU</Tag>
 		<English>Piabuyu</English>
+		<French>
+			<Text>Piabuyu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Piabuyu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Piabuyu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Piabuyu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ïèàáóþ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PIAUY</Tag>
 		<English>Piauy</English>
+		<French>
+			<Text>Piauy</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Piauy</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Piauy</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Piauy</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ïèàó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PINTUPI</Tag>
 		<English>Pintupi</English>
+		<French>
+			<Text>Pintupi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Pintupi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Pintupi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ïèíòóïè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PIRACICABA</Tag>
 		<English>Piracicaba</English>
+		<French>
+			<Text>Piracicaba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Piracicaba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Piracicaba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Piracicaba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ïèðàñèêàáà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PITJANTJATJARA</Tag>
 		<English>Pitjantjatjara</English>
+		<French>
+			<Text>Pitjantjatjara</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Pitjantjatjara</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Pitjantjatjara</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ïèòúÿíòúÿåúÿðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PORTO_ALEGRE</Tag>
 		<English>Porto Alegre</English>
+		<French>
+			<Text>Porto Alegre</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Porto Alegre</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Porto Alegre</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Porto Alegre</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ïîðòó-Àëåãðè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_POTIGUARA</Tag>
 		<English>Potiguara</English>
+		<French>
+			<Text>Potiguara</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Potiguara</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Potiguara</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Potiguara</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ïîòèãóàðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_PRESIDENTE_PRUDENTE</Tag>
 		<English>Presidente Prudente</English>
+		<French>
+			<Text>Presidente Prudente</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Presidente Prudente</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Presidente Prudente</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Presidente Prudente</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ïðåçèäåíòè-Ýïèòàñèó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_RANGITANE</Tag>
 		<English>Rangitane</English>
+		<French>
+			<Text>Rangitane</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Rangitane</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Rangitane</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Rangitane</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ðàíãèòàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_RECIFE</Tag>
 		<English>Recife</English>
+		<French>
+			<Text>Recife</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Recife</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Recife</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Recife</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ðåñèôè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_RIBEIRAO_PRETO</Tag>
+		<English>Ribeirao Preto</English>
+		<French>
+			<Text>Ribeirao Preto</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ribeirao Preto</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ribeirao Preto</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ribeirao Preto</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Ðèáåéðàí-Ïðåòó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_RONGOWHAKAATA</Tag>
 		<English>Rongowhakaata</English>
+		<French>
+			<Text>Rongowhakaata</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Rongowhakaata</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Rongowhakaata</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Rongowhakaata</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ðîíãîâõàêààòà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SALVADOR</Tag>
 		<English>Salvador</English>
+		<French>
+			<Text>Salvador</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Salvador</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Salvador</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Salvador</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ñàëüâàäîð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SANTOS</Tag>
 		<English>Santos</English>
+		<French>
+			<Text>Santos</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Santos</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Santos</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Santos</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ñàíòóñ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAN_JOSE_DOS_CAMPOS</Tag>
+		<English>San Jose Dos Campos</English>
+		<French>
+			<Text>San Jose Dos Campos</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>San Jose Dos Campos</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>San Jose Dos Campos</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>San Jose Dos Campos</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Ñàí-Æîçå-äóñ-Êàìïóñ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAO_CAETANO</Tag>
+		<English>Sao Caetano</English>
+		<French>
+			<Text>Sao Caetano</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sao Caetano</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sao Caetano</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sao Caetano</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Âîëòà-Ðåäîíäà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAO_LUIS</Tag>
+		<English>Sao Luis</English>
+		<French>
+			<Text>Sao Luis</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sao Luis</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sao Luis</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sao Luis</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Ñàí-Ëóèñ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAO_PAULO</Tag>
+		<English>Sao Paulo</English>
+		<French>
+			<Text>Sao Paulo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sao Paulo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sao Paulo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sao Paulo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Ñàí Ïàóëó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAO_VINCENTE</Tag>
+		<English>Sao Vincente</English>
+		<French>
+			<Text>Sao Vincente</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sao Vincente</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sao Vincente</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sao Vincente</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Ñàí-Âèñåíòè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SERRA</Tag>
+		<English>Serra</English>
+		<French>
+			<Text>Serra</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Serra</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Serra</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Serra</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Ñåððà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SIRI_JIBE</Tag>
 		<English>Siri Jibe</English>
+		<French>
+			<Text>Siri Jibe</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Siri Jibe</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Siri Jibe</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Siri Jibe</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ñèðè-Æèáå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SOROCABA</Tag>
 		<English>Sorocaba</English>
+		<French>
+			<Text>Sorocaba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sorocaba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sorocaba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sorocaba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ñîðîêàáà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SY_ARA</Tag>
 		<English>Sy Ara</English>
+		<French>
+			<Text>Sy Ara</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sy Ara</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sy Ara</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sy Ara</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Ñó-Àðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TAMOYO</Tag>
 		<English>Tamoyo</English>
+		<French>
+			<Text>Tamoyo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tamoyo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tamoyo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tamoyo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Òàìîéî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TAPE_AVIRU</Tag>
 		<English>Tape Aviru</English>
+		<French>
+			<Text>Tape Aviru</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tape Aviru</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tape Aviru</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tape Aviru</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Òàïå-Àâèðó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TARANAKI</Tag>
 		<English>Taranaki</English>
+		<French>
+			<Text>Taranaki</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Taranaki</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Taranaki</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Taranaki</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Òàðàíàêè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TAUBATE</Tag>
 		<English>Taubate</English>
+		<French>
+			<Text>Taubate</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Taubate</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Taubate</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Taubate</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Òàâáàòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TAUNGURONG</Tag>
 		<English>Taungurong</English>
+		<French>
+			<Text>Taungurong</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Taungurong</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Taungurong</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Òàóíãóðîíã</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TERESINA</Tag>
 		<English>Teresina</English>
+		<French>
+			<Text>Teresina</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Teresina</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Teresina</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Teresina</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Òåðåçèíà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TE_AITANGA_A_MAHAKI</Tag>
 		<English>Te Aitanga a Mahaki</English>
+		<French>
+			<Text>Te Aitanga a Mahaki</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Te Aitanga a Mahaki</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Te Aitanga a Mahaki</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Te Aitanga a Mahaki</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Òå-Àéòàíãà-ÌÀÕàêè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TE_ARAWA</Tag>
 		<English>Te Arawa</English>
+		<French>
+			<Text>Te Arawa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Te Arawa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Te Arawa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Te Arawa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Òå Àðàâà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TE_ATIAWA</Tag>
 		<English>Te Atiawa</English>
+		<French>
+			<Text>Te Atiawa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Te Atiawa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Te Atiawa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Te Atiawa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Òå Àòèàâà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TE_ATIHAUNUI_A_PAPARANG</Tag>
 		<English>Te Atihaunui a Paparang</English>
+		<French>
+			<Text>Te Atihaunui a Paparang</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Te Atihaunui a Paparang</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Te Atihaunui a Paparang</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Te Atihaunui a Paparang</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Òå Àòèõàóíóè Ïàïàðàíã</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TE_AUPOURI</Tag>
 		<English>Te Aupouri</English>
+		<French>
+			<Text>Te Aupouri</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Te Aupouri</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Te Aupouri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Te Aupouri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Òå Àóïîóðè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TE_RARAWA</Tag>
 		<English>Te Rarawa</English>
+		<French>
+			<Text>Te Rarawa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Te Rarawa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Te Rarawa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Te Rarawa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Òå Ðàðàâà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TE_WHANAU_A_APANUI</Tag>
 		<English>Te Whanau a Apanui</English>
+		<French>
+			<Text>Te Whanau a Apanui</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Te Whanau a Apanui</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Te Whanau a Apanui</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Te Whanau a Apanui</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Òå Âõàíàó Àïàíóè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TOCANTINS</Tag>
 		<English>Tocantins</English>
+		<French>
+			<Text>Tocantins</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tocantins</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tocantins</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tocantins</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Òîêàíòèñ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TUHOE</Tag>
 		<English>Tuhoe</English>
+		<French>
+			<Text>Tuhoe</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tuhoe</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tuhoe</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tuhoe</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Òóõîý</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TUPINAMBA</Tag>
 		<English>Tupinamba</English>
+		<French>
+			<Text>Tupinamba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tupinamba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tupinamba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tupinamba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Òóïèíàìáà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TUPINIQUIM</Tag>
 		<English>Tupiniquim</English>
+		<French>
+			<Text>Tupiniquim</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tupiniquim</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tupiniquim</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tupiniquim</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Òóïèíèêóèì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_TURUWAL</Tag>
 		<English>Turuwal</English>
+		<French>
+			<Text>Turuwal</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Turuwal</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Turuwal</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Òóðóâàëü</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_UBERLANDIA</Tag>
+		<English>Uberlandia</English>
+		<French>
+			<Text>Uberlandia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Uberlandia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Uberlandia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Uberlandia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Óáåðëàíäèà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VICTORIA</Tag>
+		<English>Victoria</English>
+		<French>
+			<Text>Victoria</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Victoria</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Victoria</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Victoria</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Âèêòîðèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VILA_VELHA</Tag>
+		<English>Vila Velha</English>
+		<French>
+			<Text>Vila Velha</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Vila Velha</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Vila Velha</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Vila Velha</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Russian>Âèëà-Âèëüÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_WADIYGINI</Tag>
 		<English>Wadiygini</English>
+		<French>
+			<Text>Wadiygini</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Wadiygini</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Wadiygini</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Âàäèéãèíè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_WAIKATO</Tag>
 		<English>Waikato</English>
+		<French>
+			<Text>Waikato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Waikato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Waikato</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Waikato</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Âàéêàòî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_WAJUK</Tag>
 		<English>Wajuk</English>
+		<French>
+			<Text>Wajuk</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Wajuk</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Wajuk</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Âàþê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_WAKAYA</Tag>
 		<English>Wakaya</English>
+		<French>
+			<Text>Wakaya</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Wakaya</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Wakaya</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Âàêàéà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_WARIMANPA</Tag>
 		<English>Warlmanpa</English>
+		<French>
+			<Text>Warlmanpa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Warlmanpa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Warlmanpa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Âàðëìàíïà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_WARLPIRI</Tag>
 		<English>Warlpiri</English>
+		<French>
+			<Text>Warlpiri</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Warlpiri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Warlpiri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Âàðëïèðè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_WARUMUNGU</Tag>
 		<English>Warumungu</English>
+		<French>
+			<Text>Warumungu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Warumungu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Warumungu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Âàðóìóíãó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_WATHAURONG</Tag>
 		<English>Wathaurong</English>
+		<French>
+			<Text>Wathaurong</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Wathaurong</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Wathaurong</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Âàòõàóðîíã</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_WATJARRI</Tag>
 		<English>Watjarri</English>
+		<French>
+			<Text>Watjarri</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Wajarri</German>
+		<Italian>
+			<Text>Watjarri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Watjarri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Âàòúÿððè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_WHAKATOHEA</Tag>
 		<English>Whakatohea</English>
+		<French>
+			<Text>Whakatohea</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Whakatohea</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Whakatohea</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Whakatohea</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Âõàêàòîõåà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_WIRADJURI</Tag>
 		<English>Wiradjuri</English>
+		<French>
+			<Text>Wiradjuri</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Wiradjuri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Wiradjuri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Âèðàäúþðè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_WOOLNA</Tag>
 		<English>Woolna</English>
+		<French>
+			<Text>Woolna</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Wulna</German>
+		<Italian>
+			<Text>Woolna</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Woolna</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Âóëüíà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_WURUNDJERI</Tag>
 		<English>Wurundjeri</English>
+		<French>
+			<Text>Wurundjeri</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Wurundjeri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Wurundjeri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Âóðóíäúåðè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_YANKUNTJATJARA</Tag>
 		<English>Yankuntjatjara</English>
+		<French>
+			<Text>Yankuntjatjara</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Yankuntjatjara</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Yankuntjatjara</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>ßíêóíòéàòüÿðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_YOLNGU</Tag>
 		<English>Yolngu</English>
+		<French>
+			<Text>Yolngu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Yolngu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Yolngu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Éîëíãó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_YUGGERA</Tag>
 		<English>Yuggera</English>
+		<French>
+			<Text>Yuggera</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Yuggera</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Yuggera</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
 		<Russian>Þãåððà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_ABORIGINES_ADJECTIVE</Tag>
+		<Tag>TXT_KEY_CIV_ABORIGINES_ADJECTIVE</Tag>
 		<English>Aboriginal</English>
 		<French>Aborigène</French>
 		<German>aboriginisch</German>
@@ -1789,7 +4736,7 @@
 		<Russian>àáîðèãåíû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_ABORIGINES</Tag>
+		<Tag>TXT_KEY_CIV_ABORIGINES_DESC</Tag>
 		<English>Aboriginal Empire</English>
 		<French>Empire aborigène</French>
 		<German>Reich der Aborigenes</German>
@@ -1798,14 +4745,14 @@
 		<Russian>Ïëåìÿ àáîðèãåíîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_ABORIGINES_PEDIA</Tag>
+		<Tag>TXT_KEY_CIV_ABORIGINES_PEDIA</Tag>
 		<English>It is believed that first human migration to Australia was achieved when this landmass earlier formed part of the Sahul continent, connected to the island of New Guinea via a land bridge. It is also possible that people came by boat across the Timor Sea. The exact timing of the arrival of the ancestors of the Indigenous Australians has been a matter of dispute among archaeologists. The most conservative widely-accepted timeline for first arrival is between 40,000 - 50,000 years BP. This means there have been more than 1250 generations in Australia. A 48,000 BC date is based on a few sites in northern Australia dated using thermoluminescence. A large number of sites have been radiocarbon dated to around 38,000 BC, leading some researchers to doubt the accuracy of the thermoluminescence technique. Some estimates have been given as wide as from 30,000 to 68,000 BC.[PARAGRAPH:2]There is no clear or accepted racial origin of the indigenous people of Australia. Although they migrated to Australia through Southeast Asia they are not related to any known Asian population. Nor are they related to the nearby peoples of Melanesia or Polynesia. There is some speculation that they are related to some racial groups in India, based on mitochondrial DNA evidence. In view of the very long time they have been in Australia, almost entirely isolated from other human populations, it is unlikely that they will be found to be closely related to any identifiable racial group.[PARAGRAPH:2]The term "Indigenous Australians" encompasses a large number of diverse communities and societies, with notably different modes of subsistence, cultural practices, languages, technologies and inhabited environments. However, these peoples also share a larger set of traits, and are otherwise seen as being broadly related. A collective identity as Indigenous Australians is recognised and exists alongside the identity and membership of many local community and traditional groups. The Australian Aboriginal population is for the most part urbanised, but a substantial number live in settlements (often located on the site of former church missions) in what are considered remote areas. The health and economic difficulties facing both groups are substantial. Aboriginal people, particularly youths, are substantially more likely to be imprisoned than the general population, and the rate of suicides in police custody remains quite high. Rates of unemployment, health problems and poverty are likewise higher than the general population; and school retention rate and university attendance is lower. Before the British colonisation, there were a great many different Aboriginal groups, each with their own individual culture, belief structure, and language (approximately 300 different languages existed at the time of European settlement). These cultures overlapped to a greater or lesser extent, and evolved over time. Indigenous Australian Aboriginal communities are often called tribes, and there are several hundred in Australia, although the exact number is unknown, because in many parts of Australia, there are no clear tribes or nations. The word 'community' is often used to describe Aboriginal groups as a more acceptable word. Sometimes smaller communities are referred to as tribes, and other times many communities are included in the same 'tribe'. Sometimes the different language groups are called tribes, although it can be very difficult to distinguish between different languages and dialects of a single language. The situation is complicated by the fact that sometimes up to twenty or thirty different names (either spelled differently in English, or using a different word altogether) are used for the same tribe or community. The largest Aboriginal communities today are the Pitjantjatjara, the Arrernte, the Luritja and the Warlpiri, all from the Northern Territory.</English>
 		<German>Die Aborigines sind die Ureinwohner Australiens. Sie besiedelten vor etwa 40000 bis 60000 Jahren den Kontinent vom Norden ausgehend. Aborigines sind kein einheitliches Volk, sondern bestehen aus Stämmen oder Clans mit oft höchst unterschiedlichen Gebräuchen und Sprachen: Je nach Definition und Quelle gab es vor der Ankunft der Briten etwa 400 bis 700 verschiedene Stämme der Aborigines, die vorwiegend als Jäger und Sammler lebten.[PARAGRAPH:2]Das Wort Aborigine bedeutet im Englischen allgemein Ureinwohner; es war ursprünglich die Bezeichnung für die Ureinwohner im Latium, einer Landschaft im frühen Italien. Als Name speziell für die Ureinwohner Australiens wurde es erstmals 1803 schriftlich dokumentiert; inzwischen gilt Aborigines im Englischen als abwertend und wird durch Aboriginal ersetzt. Selbst bezeichnen sich Aborigines meist in ihren jeweiligen Sprachen, zum Beispiel Koori im Südosten Australiens oder Anangu im Zentrum. In englischer Sprache nennen sie sich "black fellas". Die deutsche Sprache benutzt weiterhin den Begriff Aborigine.[PARAGRAPH:2]Der Zeitpunkt, an dem die indigene Bevölkerung Australien erreichte, ist nicht geklärt. Mitochondriale DNA-Vergleiche (mtDNA) lassen darauf schließen, dass Aborigines Nachfahren von Menschen einer der ersten Emigrationswellen aus Afrika sind und ihre Vorfahren Afrika vor 100000 bis 130000 Jahren verlassen haben, um sich dann über Europa, Asien und entlang der Küste Südostasiens bis nach Australien auszubreiten. Australien war zu dieser Zeit Teil des Kontinents Sahul und mit Neuguinea über eine Landbrücke verbunden. Eine Landbrücke zum asiatischen Festland hat aber nie bestanden, so dass eine Besiedlung Groß-Australiens nicht ohne Überwindung des Wallacea-Meeres möglich gewesen wäre. Schwimmend wäre das nicht möglich gewesen, und da die Erfindung seetauglicher Boote vor über 60000 Jahren als sehr unwahrscheinlich gilt, wird eine sehr frühe Besiedlung Australiens überwiegend abgelehnt. Für die Ankunft der Aborigines wird am häufigsten ein Zeitraum zwischen 40000 und 50000 v.Chr. genannt. Das etwas präzisere Datum von 48000 v.Chr. basiert auf Messungen von Siedlungen in Nordaustralien mithilfe der Thermolumineszenzdatierung. Der Mungo Man, dessen Überreste 1974 in der Nähe des Lake Mungo in New South Wales gefunden wurden, ist der älteste bisher in Australien gefundene Mensch. Auch wenn sein exaktes Alter unter Wissenschaftlern umstritten ist, geht man von etwa 40000 Jahren aus. Nahebei wurde Mungo Lady aus demselben Zeitraum gefunden; bei ihr lässt sich ein komplexes Feuerbestattungs-Ritual nachweisen. Steinwerkzeuge, die am See gefunden wurden, konnten auf ein Alter von 50000 Jahren bestimmt werden. Da sich der Lake Mungo im Südosten Australiens befindet, gehen viele Archäologen davon aus, dass die ersten Menschen einige tausend Jahre früher in Nordwest-Australien angekommen sein müssen.[PARAGRAPH:2]Die britische Kolonisation Australiens begann 1788 mit der Ankunft der First Fleet in der Botany Bay. Die ersten Kontakte zwischen den Mitgliedern der ersten Flotte unter Arthur Phillip und den Aborigines sollen zunächst vorwiegend friedlich gewesen sein, da Phillip anwies, die Aborigines gut zu behandeln. Man betrieb Handel mit Lebensmitteln, weil die Kolonisten sich noch nicht selbst versorgen konnten. Bennelong, ein Mitglied der Eora, war ein Vermittler zwischen den beiden Kulturen, der Englisch lernte und seine Sprache lehrte und so zu einer Verständigung beitrug.[PARAGRAPH:1]Nach Schätzungen des Australian Bureau of Statistics sank die Bevölkerung der Aborigines von den ursprünglich 300.000 bis 1 Million bis 1920 auf 60000. Große Teile der Aborigines starben an eingeschleppten Krankheiten wie Influenza oder bei der Pockenepidemie von 1789, bei der unter anderem mehr als 50 % der Darug getötet wurden. Sterilität von Frauen nahm wegen Geschlechtskrankheiten zu, die sie sich vor allem durch Prostitution und Sex-Sklaverei zuzogen. Nach Schätzungen von Henry Reynolds starben bei gewaltsamen Auseinandersetzungen 3000 Siedler und 20000 Aborigines. Im 19. und frühen 20. Jahrhundert kam es zu vielen, zum Teil tödlichen Auseinandersetzungen und einer Welle von Massakern an Aborigines, wie zum Beispiel dem Myall-Creek-Massaker oder dem Cape-Grim-Massaker, an denen in einigen Fällen auch das Native-Police-Corps teilnahm, eine Polizeitruppe, die hauptsächlich aus Aborigines bestand. Auslöser von Konflikten war zumeist der Zugang zu Nahrungsquellen. Da Schafe und Rinder der Siedler Wasserlöcher und Grasland zerstörten, verloren Aborigines ihre Lebensgrundlage und begannen stattdessen, das Vieh der Siedler zu jagen, um sich zu ernähren. Hinzu kam, dass Aborigines etwas wie Landbesitz nicht kennen; sie verstehen sich vielmehr als Bewahrer des Landes, das sie pflegen und hüten, dem sie aber auch entnehmen können, was sie brauchen, solange es dadurch nicht gefährdet wird.[PARAGRAPH:1]In einem Versuch, die Konflikte zu entschärfen, wurden den Völkern der Aborigines in der Mitte des 19. Jahrhunderts von einem Komitee der britischen Regierung Protektorate zugewiesen. Dort sollten sie sich nach dem Vorbild der Kolonialisten Siedlungen errichten und Landwirtschaft betreiben. In Tasmanien wurden bereits in den 1830er Jahren im Black War mit der Black Line die Tasmanier zusammengetrieben und nach Flinders Island deportiert. Der Begriff Black Line geht darauf zurück, dass die Soldaten schwarz gekleidet waren und in einer Linie im Abstand von einigen Metern zum Nebenmann die Einheimischen vor sich hergetrieben haben. Zuletzt wurde in der Western Desert in den 1950ern und 1960ern durchgesetzt, dass Aborigines ihre traditionelle Lebensweise als nomadische Jäger und Sammler aufgeben und auf dem Gebiet von Maralinga Tjarutja Atomwaffentests durchgeführt werden sollten. Eine kleine Gruppe aus dem Volk der Pintupi, genannt die Pintupi Nine, lebte noch bis 1984 als Vollnomaden in traditioneller Lebensweise.[PARAGRAPH:1]Mit Beginn des 20. Jahrhunderts und bis in die 1970er Jahre wurden Kinder von Aborigines aus ihren Familien in den Reservaten systematisch zwangsweise entfernt und zur Adoption in weiße Familien oder in Missionen gegeben. Die Jungen wurden zu Farmhelfern ausgebildet, die Mädchen zu Haushaltshilfen. War das arbeitsfähige Alter erreicht, wurden sie an die umliegenden Farmen weitergeleitet. Diese Unmenschlichkeit ging mit dem Begriff Gestohlene Generationen in die australische und die Menschheitsgeschichte ein. Das hauptsächliche Ziel war es, insbesondere Aborigines mit teilweise weißen Vorfahren zu assimilieren und Teil der weißen Gesellschaft werden zu lassen. Es gab die Überzeugung, dass dadurch nach vier Generationen kein aboriginaler Genanteil mehr vorhanden ist. Betroffen waren je nach Region und Zeitraum etwa 1/3 bis 1/10 aller Kinder. Der Bericht Bringing them Home der Australian Human Rights Commission von 1997 setzte sich mit dem Thema der Gestohlenen Generationen auseinander und führte dazu, dass der National Sorry Day eingerichtet wurde.</German>
 		<Polish>Aborygeni (z łac. ab origine - "od początku", czyli "ci, którzy byli tu od początku") - rdzenni mieszkańcy Australii. Przybyli tam około 40-65 tys. lat temu prawdopodobnie z południowo-wschodniej Azji, przez pomost wyspowy dzisiejszej Indonezji i wyspę Nową Gwineę. Prowadzili koczowniczy tryb życia. Byli uzależnieni od otaczającego ich środowiska i bardzo z nim związani. Do ich podstawowych zajęć należały: łowiectwo i zbieractwo, a w rejonach nadbrzeżnych także rybołówstwo. W 1770 roku, gdy James Cook dotarł do Australii istniało od ponad 500 do 600 plemion aborygeńskich używających co najmniej 500 indywidualnych języków. Obecnie Aborygeni zamieszkują głównie słabo zaludnione i nieurodzajne obszary Australii Zachodniej, Queensland i Terytorium Północnego. Liczna populacja Aborygenów zamieszkuje także uboższe przedmieścia w wielkich australijskich miastach.</Polish>
 		<Russian>[NEWLINE][TAB]Считается, что первая миграция людей в Австралию была осуществлена, когда этот массив суши ранее составлял часть континента Сахул, соединенного с островом Новая Гвинея сухопутным мостом. Также возможно, что люди переправлялись на лодке через Тиморское море. Точное время прибытия предков коренных австралийцев было предметом споров среди археологов. Самый консервативный и общепринятый временной график для первого прибытия находится между 40 000 - 50 000 лет назад. Это означает, что в Австралии было более 1250 поколений. Дата 48000 до н.э. основана на нескольких памятниках на севере Австралии, датированных с помощью термолюминесценции. Большое количество участков было датировано радиоуглеродным методом примерно 38 000 лет до нашей эры, что заставляет некоторых исследователей сомневаться в точности метода термолюминесценции. По некоторым оценкам, диапазон от 30 000 до 68 000 лет до нашей эры.[PARAGRAPH:2]Нет четкого или общепринятого расового происхождения коренных жителей Австралии. Хотя они мигрировали в Австралию через Юго-Восточную Азию, они не связаны ни с одним известным азиатским населением. Они также не связаны с соседними народами Меланезии или Полинезии. Есть некоторые предположения, что они связаны с некоторыми расовыми группами в Индии, основываясь на данных митохондриальной ДНК. Ввиду того, что они очень долго находились в Австралии, почти полностью изолированные от других человеческих популяций, маловероятно, что они будут тесно связаны с какой-либо идентифицируемой расовой группой.[PARAGRAPH:2]Термин «коренные австралийцы» охватывает большое количество разнообразных сообществ и обществ с существенно разными способами существования, культурными обычаями, языками, технологиями и обитаемой средой. Однако эти народы также имеют более широкий набор черт, и в остальном рассматриваются как широко связанные. Коллективная идентичность коренных австралийцев признана и существует наряду с самобытностью и членством многих местных общин и традиционных групп. Австралийские аборигены по большей части урбанизированы, но значительная их часть проживает в поселениях (часто расположенных на месте бывших церковных миссий) в отдаленных районах. Обе группы сталкиваются с серьезными проблемами со здоровьем и экономическими проблемами. У аборигенов, особенно молодежи, вероятность попасть в тюрьму значительно выше, чем у населения в целом, и уровень самоубийств во время содержания под стражей в полиции остается довольно высоким. Уровень безработицы, проблем со здоровьем и бедности также выше, чем у населения в целом; и уровень удержания в школе и посещаемости университетов ниже. До британской колонизации существовало очень много различных групп аборигенов, каждая со своей собственной культурой, структурой верований и языком (во время европейского заселения существовало около 300 различных языков). Эти культуры пересекались в большей или меньшей степени и со временем эволюционировали. Коренные общины австралийских аборигенов часто называют племенами, и в Австралии их несколько сотен, хотя точное число неизвестно, потому что во многих частях Австралии нет явных племен или наций. Слово «сообщество» часто используется для описания групп аборигенов как более приемлемого слова. Иногда более мелкие сообщества называют племенами, а иногда многие сообщества входят в одно и то же «племя». Иногда разные языковые группы называют племенами, хотя бывает очень сложно различить разные языки и диалекты одного языка. Ситуация осложняется тем, что иногда для одного и того же племени или сообщества используется до двадцати или тридцати разных имен (либо написанных по-разному в английском языке, либо с использованием разных слов). Самыми крупными общинами аборигенов сегодня являются Питьянтьатьяра, Аррернте, Луритжа и Варлпири, все они происходят с Северной территории.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_ABORIGINES_SHORT</Tag>
+		<Tag>TXT_KEY_CIV_ABORIGINES_SHORT_DESC</Tag>
 		<English>Aborigines</English>
 		<French>Aborigènes</French>
 		<Italian>Aborigeni</Italian>
@@ -1813,7 +4760,7 @@
 		<Russian>Àáîðèãåíû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_BRAZIL_ADJECTIVE</Tag>
+		<Tag>TXT_KEY_CIV_BRAZIL_ADJECTIVE</Tag>
 		<English>Brazilian</English>
 		<French>Brésilien</French>
 		<Italian>
@@ -1825,7 +4772,7 @@
 		<Russian>áðàçèëüöû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_BRAZIL</Tag>
+		<Tag>TXT_KEY_CIV_BRAZIL_DESC</Tag>
 		<English>Brazilian Empire</English>
 		<French>Empire brésilien</French>
 		<Italian>Impero Brasiliano</Italian>
@@ -1833,13 +4780,13 @@
 		<Russian>Áðàçèëèÿ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_BRAZIL_PEDIA</Tag>
+		<Tag>TXT_KEY_CIV_BRAZIL_PEDIA</Tag>
 		<English>Brazil is thought to have been inhabited for at least 10,000 years by semi-nomadic populations before the first Portuguese explorers, led by Pedro Álvares Cabral, disembarked in 1500. Over the next three centuries, it was resettled by the Portuguese and exploited mainly for brazilwood (Pau-Brasil) at first, and later for sugarcane (Cana-de-Açúcar) agriculture, coffee beans and gold mining. The colony's source of manpower was initially on enslaved Amerindians, and after 1550, mainly African slaves. In 1808, Queen Maria I of Portugal and her son and regent, the future João VI of Portugal, fleeing from Napoleon, relocated to Brazil with the royal family, nobles and government.[PARAGRAPH:2]Salvador is Brazil's third city in population and was the country's capital until 1763.Though they returned to Portugal in 1821, the interlude led to the opening of commercial ports to the United Kingdom - at the time isolated from most European ports by Napoleon - and to the elevation of Brazil to the status of a united kingdom with Portugal's Crown. Then prince regent Dom Pedro I (later Pedro IV of Portugal) declared independence on 7 September 1822, establishing the independent Empire of Brazil. As the crown remained in the hands of the house of Bragança, this was more the severance of the Portuguese empire in two, than an independence movement as seen elsewhere in the Americas.[PARAGRAPH:2]The Brazilian Empire was theoretically a democracy in the British style, although in practice, the emperor-premier-parliament balance of power more closely resembled the autocratic Austrian Empire. Slavery was abolished in 1888, through the "Golden Law", created by Princess Isabel, and intensive European immigration created the basis for industrialization. Pedro I was succeeded by his son, Pedro II - who in old age was caught by a political dispute between the Army and the Cabinet, a crisis arising from the Paraguay War. In order to avoid a civil war between Army and Navy, Pedro II renounced the throne on 15 November 1889, when a federal republic (officially, the Republic of the United States of Brazil) was established by Field Marshal Deodoro da Fonseca.[PARAGRAPH:2]Dom Pedro I declaring independence from Portugal on September 7, 1822. In the late 19th and early 20th centuries, Brazil attracted over 5 million European and Japanese immigrants. That period also saw Brazil industrialize, further colonize, and develop its interior. Brazilian democracy was replaced by dictatorships three times - 1930-1934 and 1937-1945 under Getúlio Vargas, and 1964-1985, under a succession of generals appointed by the military. Since 1985, Brazil has been internationally considered a democracy, specifically a presidential democracy, which was kept after a plebiscite in 1993 where voters had to choose between a presidential or parliamentary system, whilst also choosing if Brazil should reinstate its constitutional monarchy.[PARAGRAPH:2]A key feature of democracy in contemporary Brazil is the existence of a vibrant and participatory civil society. NGOs and citizen organizations are at the forefront of the struggle for human rights, gender equality and economic justice.equality and economic justice.</English>
 		<Polish>Tereny dzisiejszej Brazylii były zasiedlone przez półkoczownicze plemiona Indian już przynajmniej 6 tys. lat przed odkryciem jej przez Portugalczyków w roku 1500. Przez następne 300 lat Brazylia została skolonizowana przez Portugalię i zamieniona w oparte na pracy niewolniczej dochodowe przedsięwzięcie. W kraju powszechne były rebelie niewolników a część zbiegów tworzyła na odległych od kolonialnej cywilizacji terenach własne osiedla zwane quilombos. Przeciw nim były organizowane wyprawy zbrojne. W roku 1808 książę Jan (późniejszy król Portugalii Jan VI) wraz z rodziną schronił się w Brazylii przed najazdem Napoleona Bonaparte na Portugalię. Na początku XIX wieku narastały tendencje separatystyczne i w roku 1822 książę-regent Pedro I ogłosił utworzenie samodzielnego Cesarstwa Brazylii. W roku 1889 jego następca Pedro II został obalony i została utworzona republika federacyjna. Pod koniec XIX i w 1. połowie XX wieku do Brazylii napłynęło ponad 5 milionów imigrantów z Europy i Azji. W tym okresie dynamicznie postępowała industrializacja kraju i ekspansja w głąb interioru. Rządy demokratyczne były zastępowane przez dyktatury: w latach 1930-1945 w praktyce rządził Getúlio Vargas. Vargas do władzy doszedł na skutek wojskowego puczu który następnie określono mianem rewolucji. Początkowo nowy rząd zobowiązał się do szybkiego oddania władzy lecz zamiast tego zlikwidował kongres, zawiesił konstytucję a gubernatorów zastąpił własnymi zwolennikami. W latach 30. doszło do trzech prób obalenia wojskowego rządu. W 1932 roku odbyło się powstanie konstytucjonalistów, w 1935 roku odbyła się antyrządowa rebelia zorganizowana przez komunistów która wykorzystana została do wprowadzenia przez Vargasa pełnej dyktatury i cenzury prasy. Ostatnią próbą zbrojnego obalenia rządu był pucz faszystowski w 1938 roku. Mimo faszyzacji kraju Brazylia w okresie hiszpańskiej wojny domowej wsparła stronę republikańską walcząca z nacjonalistami.W okresie II wojny światowej Brazylia początkowo pozostała neutralna a wojnę Niemcom i Włochom wypowiedziała w sierpniu 1942 roku. Pod wpływem wojny odrzucił wzorce faszyzujące i przyjął bardziej liberalną politykę. Po zwycięstwie aliantów w wojnie światowej, stał się kłopotliwy jako niedawny sojusznik światowych potęg i szybko został obalony w wojskowym puczu. Vargas na krótko powrócił do władzy w 1950 roku w wyniku wyborczego zwycięstwa utworzonej przez niego Brazylijskiej Partii Pracy. W pierwszej fazie prezydentury wprowadził szereg postępowych reform a swoje rządy oparł na środowiskach lewicy. Pod naciskiem narodowców i lewicy prowadził politykę uprzemysłowienia kraju, rozwiązał problem państwowego monopolu naftowego "Petrobras", ograniczył inwestycje obcego kapitału, wprowadził szereg prorobotniczych praw, zakończył działania rządu polegające na ingerencji w działanie związków zawodowych oraz przeprowadził rewizję pracy minimalnej. W 1952 roku zawarł układ militarny ze Stanami Zjednoczonymi Ameryki jednak zachował się neutralnie odmawiając wysłania wojsk brazylijskich do Korei. W ciągu drugiej kadencji kontynuował represje przeciwko ruchowi komunistycznemu. Stopniowo odchodził od postępowych reform tracąc poparcie społeczeństwa i lewicy zmuszony został do walki o wpływy w konserwatywnie nastawionym wojsku. Jego rządy napotkały na silną opozycję, pomimo starań Vargasa największą opozycję stanowiły kręgi wojskowe. Była to reakcja na szereg skandali, które wiązały się z członkami jego administracji. Cztery lata po objęciu władzy na skutek kryzysu politycznego i zmuszeniu go przez wojsko do oddania władzy popełnił samobójstwo.</Polish>
 		<Russian>[NEWLINE][TAB]Считается, что Бразилия была заселена полукочевым населением в течение как минимум 10 000 лет до того, как первые португальские исследователи во главе с Педро Альваресом Кабралом высадились на берег в 1500 году. В течение следующих трех столетий она была заселена португальцами и использовалась в основном для производства бразильской древесины (Pau-Brasil) сначала, а затем для выращивания сахарного тростника (Cana-de-Acucar), кофейных зерен и добычи золота. Первоначально источником рабочей силы колонии были порабощенные американские индейцы, а после 1550 года - в основном африканские рабы. В 1808 году королева Португалии Мария I и ее сын и регент, будущий Жуан VI Португальский, спасаясь от Наполеона, перебрались в Бразилию вместе с королевской семьей, дворянами и правительством.[PARAGRAPH:2]Сальвадор является третьим по численности населения городом Бразилии и был столицей колонии до 1763 года. Хотя члены правящей династии вернулись в Португалию в 1821 году, перерыв привел к открытию торговых портов в Соединенном Королевстве, которое в то время было изолировано от большинства европейских портов Наполеоном, и возвышение Бразилии до статуса Соединенного Королевства с короной Португалии. Затем принц-регент Дон Педро I (позже Педру IV Португальский) объявил независимость 7 сентября 1822 года, учредив независимую Бразильскую империю. Поскольку корона оставалась в руках дома Браганса, это было больше разделением Португальской империи надвое, чем движением за независимость, как это наблюдается в других частях Америки.[PARAGRAPH:2]Бразильская империя теоретически была демократией в британском стиле, хотя на практике соотношение сил император-премьер-парламент больше напоминало автократическую Австрийскую империю. Рабство было отменено в 1888 году «Золотым законом», созданным принцессой Изабель, а интенсивная иммиграция из Европы создала основу для индустриализации. Педру I наследовал его сын Педру II, который в преклонном возрасте стал разменной монетой в политическом споре между армией и кабинетом министров, ходе кризиса, возникшего в результате войны в Парагвае. Чтобы избежать гражданской войны между армией и флотом, Педру II отрекся от престола 15 ноября 1889 года, когда фельдмаршал Деодоро да Фонсека провозгласил федеративную республику (официально - Республика Соединенных Штатов Бразилии)[PARAGRAPH:2]Дон Педру I провозгласил независимость от Португалии 7 сентября 1822 года. В конце XIX - начале XX веков Бразилия привлекла более 5 миллионов иммигрантов из Европы и Японии. В тот период Бразилия также производила индустриализацию, продолжала колонизацию и развивала внутреннюю территорию. Бразильская демократия трижды сменялась диктатурой: в 1930-1934 и 1937-1945 годах при Гетулиу Варгасе и в 1964-1985 годах при смене генералов, назначенных военными. С 1985 года Бразилия на международном уровне считается демократией, в частности президентской демократией, которая сохранилась после плебисцита 1993 года, когда избиратели должны были выбирать между президентской или парламентской системой, а также выбирать, следует ли Бразилии восстановить свою конституционную монархию.[PARAGRAPH:2]Ключевой особенностью демократии в современной Бразилии является наличие активного гражданского общества с широким участием. НПО и общественные организации находятся на переднем крае борьбы за права человека, гендерное равенство и экономическую справедливость.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_BRAZIL_SHORT</Tag>
+		<Tag>TXT_KEY_CIV_BRAZIL_SHORT_DESC</Tag>
 		<English>Brazil</English>
 		<French>Brésil</French>
 		<Italian>Brasile</Italian>
@@ -1847,7 +4794,7 @@
 		<Russian>Áðàçèëüöû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_ISRAEL_ADJECTIVE</Tag>
+		<Tag>TXT_KEY_CIV_ISRAEL_ADJECTIVE</Tag>
 		<English>Israeli</English>
 		<French>Israelite</French>
 		<German>Israelischer</German>
@@ -1860,7 +4807,7 @@
 		<Russian>èçðàèëüòÿíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_ISRAEL</Tag>
+		<Tag>TXT_KEY_CIV_ISRAEL_DESC</Tag>
 		<English>Israeli Empire</English>
 		<French>Empire d'Israel</French>
 		<German>Israelischer Reich</German>
@@ -1869,24 +4816,24 @@
 		<Russian>Èçðàèëü</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_ISRAEL_PEDIA</Tag>
+		<Tag>TXT_KEY_CIV_ISRAEL_PEDIA</Tag>
 		<English>Israel is a small nation in the Middle East, located in Southwest Asia on the edge of the Mediterranean Sea. The State of Israel was established in 1948 as a refuge for Jews worldwide. The founders of the modern state of Israel sought to create a new country whose principles, customs, and way of life would be Jewish.[PARAGRAPH:1]Jewish kingdoms flourished in the region in ancient times, but before 1948, there had been no Jewish state for 2,000 years. The Jews were scattered all over the world after the Romans had driven them out in the first and second centuries AD. Despite all this oppression, the Jews never forgot the Land of Israel. The Jews are closely connected with the Land of Israel because of all of the religious events that occurred in Israel. There were also very important events in history in Israel, such as the destruction of the temple and the rise and fall of Jewish kingdoms. When Jews were persecuted in the Middle Ages, it was the hope of returning to Israel that kept them alive.[PARAGRAPH:1]The Exodus out of Egypt, lead by Moses, lead the Hebrews to the ancient Land of Israel. The Philistines forced the Hebrews to unite under a single leader, Saul, who lead the Hebrews to victory over the Philistines. Saul is usually regarded as the first Hebrew king. Saul was followed by King David. David was a hero from childhood, when he had slain the lion-beast Goliath. David declared Jerusalem the capital, and created a powerful military. David also brought the Ark of the Covenant to Jerusalem, which contained two stone tablets on which the Ten Commandments were written. Solomon followed David. Solomon was a master diplomat, who built roads, fortresses, and a royal palace. Most famous is Solomon's temple, known as the Temple of Solomon. The Temple of Solomon was the center of Jewish religion in that time[PARAGRAPH:1]High taxes in Israel lead to the division of the kingdom. The north, Israel, carried most of the population and territory. The small and southern portion became Judah. Israel survived for two centuries. It was destroyed internally, and was caught by rival empires. At 734 BC, the Assyrians invaded Israel. They killed many Israelites and exiled many more. Judah, had less violence than Israel. In 586 BC, Jerusalem fell to the Babylonians and the Temple of Solomon was destroyed. But the Judeans refused to forget there homeland of Judah. The Judeans came together in gatherings that were the forerunner for synogogues. They listened to their prophets. When Cyrus the Great of Persia took control of Palestinian lands, he allowed the Judeans to return to there land. For 600 years, there was another Jewish state.[PARAGRAPH:1]When the Judeans returned to Israel, the process of creating a new kingdom proved to be hard. There were religious troubles in Israel. Non-Jews were scorned in Judean society. New prophets had to teach that God was not only meant for the Jews, but all people. In the fourth century BC, Alexander the Great defeated the country. This brought in pagan customs to the land. Some youths even abandoned Jewish traditions. A later Greek ruler, Antiochus Epiphanes, persecuted the Jews and their traditions. Under Judah Maccabee and his brothers, a revolt flared. In 165, the Jewish state was independent once again.[PARAGRAPH:1]In the first century BC, Rome conquered the Jewish State. Rome's rule was tyrannical, and a Jewish revolt began in 66 AD. The Roman legions conquered Jerusalem after a long resistance in 70 AD. The Romans destroyed the temple, and all that remained was the wall. This wall became known as the Wailing Wall, and is the holiest place for prayer for the Jews today. In 73 AD, the Romans conquered Masada, and the Jewish state was destroyed. The Jewish people were in exile. For many years, the Jews faced horrible punishment for being Jews during the Middle Ages.[PARAGRAPH:1]In the 19th Century, waves of anti-Semitism spread across Eastern Europe, where many Jews lived. Many Jews emigrated to the United States and Europe. Some moved to Palestine, the location of the ancient Land of Israel. This idea of creating a new Jewish state is called Zionism. The Holocaust of World War II, when six million Jews were murdered, added to the intensity of the Zionist movement. The war also left many Jewish refugees in Europe. Many preferred to establish a new nation rather than move to new homes, or go back to their old country.[PARAGRAPH:1]The United Nations noticed the need for a Jewish homeland, and in 1947, it recommended that Palestine be turned into a Jewish state. On May 14, 1948, David Ben-Gurion, Israel's first prime minister, declared Israel's independence. Many Arab countries opposed this decision, and this sparked the years of Arab-Israeli conflict that would come. Israel since has developed into a modern democracy, and is one of the most powerful countries in the Middle East.</English>
 		<Russian>[NEWLINE][TAB]Израиль - небольшое государство на Ближнем Востоке, расположенное в Юго-Западной Азии на берегу Средиземного моря. Государство Израиль было создано в 1948 году как убежище для евреев всего мира. Основатели современного государства Израиль стремились создать новую страну, принципы, обычаи и образ жизни которой были бы еврейскими.[PARAGRAPH:1]Еврейские царства процветали в этом регионе в древние времена, но до 1948 года в течение 2000 лет не существовало еврейского государства. Евреи были рассеяны по всему миру после того, как римляне изгнали их в первом и втором веках нашей эры. Несмотря на все эти притеснения, евреи никогда не забывали Землю Израиля. Евреи тесно связаны с Землей Израиля из-за всех религиозных событий, которые произошли в Израиле. В истории Израиля были также очень важные события, такие как разрушение храма и взлет и падение еврейских царств. Когда евреи подвергались гонениям в Средние века, надежда на возвращение в Израиль поддерживала их жизнь.[PARAGRAPH:1]Исход из Египта, возглавляемый Моисеем, привел евреев в древнюю Землю Израиля. Филистимляне вынудили евреев объединиться под одним вождем, Саулом, который приведет евреев к победе над филистимлянами. Саул обычно считается первым иудейским царем. За Саулом последовал царь Давид. Давид был героем с детства, когда он убил льва-зверя Голиафа. Давид объявил Иерусалим столицей и создал мощную армию. Давид также принес в Иерусалим Ковчег Завета, который содержал две каменные скрижали, на которых были написаны Десять Заповедей. Соломон последовал за Давидом. Соломон был выдающимся дипломатом, построившим дороги, крепости и царский дворец. Самым известным является храм Соломона, известный как Храм Соломона. Храм Соломона был центром иудейской религии в то время.[PARAGRAPH:1]Высокие налоги в Израиле приводят к разделу царства. На север, Израиль, пришла большая часть населения и территории. Маленькая и южная часть стала Иудеей. Израиль просуществовал два столетия. Он был разрушен изнутри и захвачен соперничающими империями. В 734 году до нашей эры ассирийцы вторглись в Израиль. Они убили многих израильтян и многих сослали. В Иудее было меньше насилия, чем в Израиле. В 586 г. до н.э. Иерусалим пал перед вавилонянами, и Храм Соломона был разрушен. Но иудеи и в изгнании никогда не забывали свою родину, Иудею. Иудеи собирались на собраниях, которые были предшественниками синогог. Они слушали своих пророков. Когда Кир Великий из Персии взял под свой контроль палестинские земли, он позволил иудейцам вернуться на свои земли. 600 лет существовало еще одно еврейское государство.[PARAGRAPH:1]Когда иудеи вернулись в Израиль, процесс создания нового царства оказался трудным. В Израиле были религиозные проблемы. В иудейском обществе презирали гоев, неевреев. Новые пророки должны были учить, что Бог предназначен не только для евреев, но и для всех людей. В четвертом веке до нашей эры Александр Великий нанес поражение стране. Это принесло в страну языческие обычаи. Некоторые молодые люди даже отказались от еврейских традиций. Позже греческий правитель Антиох Эпифан преследовал евреев и их традиции. При Иуде Маккавеи и его братьях вспыхнуло восстание. В 165 г. еврейское государство снова стало независимым.[PARAGRAPH:1]В первом веке до нашей эры Рим завоевал еврейское государство. Правление Рима было тираническим, и еврейское восстание началось в 66 году нашей эры. Римские легионы захватили Иерусалим после длительного сопротивления в 70 году нашей эры. Римляне разрушили храм, и все, что осталось, это стена. Эта стена стала известна как Стена Плача и сегодня является самым священным местом для молитв евреев. В 73 году нашей эры римляне захватили Масаду, и еврейское государство было разрушено. Еврейский народ был в изгнании. Многие годы евреи подвергались ужасному наказанию за то, что они были евреями в Средние века.[PARAGRAPH:1]В XIX веке волны антисемитизма распространились по Восточной Европе, где проживало множетво евреев. Многие евреи эмигрировали в США и Европу. Некоторые переехали в Палестину, на место древней Земли Израиля. Эта идея создания нового еврейского государства называется сионизмом. Холокост во время Второй мировой войны, когда было убито шесть миллионов евреев, усилил сионистское движение. Война также оставила много еврейских беженцев в Европе. Многие предпочли основать новое национальное государство, а не переехать в новые дома или вернуться в свою старую страну.[PARAGRAPH:1]Организация Объединенных Наций обратила внимание на национальный еврейский вопрос и в 1947 году рекомендовала превратить Палестину в еврейское государство. 14 мая 1948 года Давид Бен-Гурион, первый премьер-министр Израиля, провозгласил независимость Израиля. Многие арабские страны выступили против этого решения, и это вызвало грядущие годы арабо-израильского конфликта. С тех пор Израиль превратился в парламентскую демократию и является одной из самых влиятельных стран Ближнего Востока.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_ISRAEL_SHORT</Tag>
+		<Tag>TXT_KEY_CIV_ISRAEL_SHORT_DESC</Tag>
 		<English>Israel</English>
 		<Italian>Israele</Italian>
 		<Russian>Èçðàèëüòÿíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_JIVARO_ADJECTIVE</Tag>
+		<Tag>TXT_KEY_CIV_JIVARO_ADJECTIVE</Tag>
 		<English>Jivaro</English>
 		<Polish>Jiwaro</Polish>
 		<Russian>õèâàðî</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_JIVARO</Tag>
+		<Tag>TXT_KEY_CIV_JIVARO_DESC</Tag>
 		<English>Jivaro Empire</English>
 		<French>Empire jivaro</French>
 		<Italian>Impero Jivaro</Italian>
@@ -1894,23 +4841,23 @@
 		<Russian>Ïëåìÿ õèâàðî</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_JIVARO_PEDIA</Tag>
+		<Tag>TXT_KEY_CIV_JIVARO_PEDIA</Tag>
 		<English>Although there were many headhunting cultures throughout the world, only one group was known for ancient practice of shrinking human heads (tsantsa). They were called the Jivaro clan who lived deep in the Ecuadorian, and neighboring Peruvian Amazon. The Jivaros are one of the most primitive societies that have caught the attention of the Western world because of their unusual customs.[PARAGRAPH:2]The Jivaroan tribes are comprised of four sub-tribes or dialect groups known to inhabit the tropical forest of the Ecuadorian and Peruvian Amazon. The AShuar, Aguaruna, Huambisa, and the Shuar. Of these, the Shuar, are most commonly referred to when speaking of the Jivaro Indians. The Shuar have achieved their notoriety through their customary practice of head-shrinking. The Jivaros are the only tribe known to have successfully revolted against the Spanish Empire and to have been able to thwart all subsequent attempts by the Spaniards to conquer them. They have withstood armies of gold-seeking Incas and defied the brovado of the early conquistadors. The Jivaro Indians are known to be an intensely warlike group, tremendously protective of their freedom and unwilling to subordinate themselves to other authorities. The Jivaro Indians have a reputation for their fierceness which distinguishes them from their counterparts based on the savageness directed toward their enemies. Early Spanish chronicles relate that in the year 1599, the Jivaros banded together and killed 25,000 white people in raids on two settlements. In particular, the massacre of the Logrono stands out as particularly ruthless. The attack was instigated over the natives being taxed in their gold-trade. After uncovering the unscrupulous practices of the visiting governor, molten gold was later poured down his throat until his bowels burst. Following his execution, the remaining Spaniards were killed along with the older women and children. The younger useful women were taken as prisoners to join the clan. The settlement itself was raided and burned to the ground. From this point onward, the Jivaro Indians remained unconquered despite the fact that they inhabited one of the richest regions in South America for gold deposits. The Jivaro's fierce fighting reputation and head-shrinking practice continued to discourage outsiders from entering their territories.[PARAGRAPH:2]Within the vast region of the Amazon a perpetual animosity existed between the neighboring tribes of the Jivaro. Once again, due to the fervent belief in witch craft and sorcery this was the primary cause of warfare between the tribes. A fundamental difference between wars enacted within the same tribe and against neighboring tribes is such that " wars between different tribes are in principle wars of extermination" A significant goal of these wars was geared toward the annihilation of the enemy tribe, including women and children. This was done in order to prevent them from seeking revenge against the victors in the future. There were however, many instances where the women and children were taken as prisoners and forced to become a part of the victors families. It is solely in these wars that trophies/tsantsa were taken. The Jivaros consistently engaged in this practice toward their mortal enemies.[PARAGRAPH:2]As wars between tribal cultures were not instigated with the hope of acquiring additional territory, as soon as fighting was over, the victorious tribesmen made a hasty retreat. Superstitious fear and contempt of the enemy compelled the Jivaros to abandon the area quickly where they believed that secret supernatural dangers would threaten them after they had conquered their natural enemies. Should blood revenge have continued at the extreme rate of the early 1900's, extermination was evident. Through the work of missionaries, the killing slowly subsided. Today, in a relatively calm existence, superstitions are still very strong, but the harm done to past ancestors is not forgotten.[PARAGRAPH:2]The Jivaro by nature are a highly superstitious and impulsive people, thereby giving rise to frequent disputes and wars between each other, as well as between neighboring tribes. Because witchcraft and sorcery can account for the majority of murders and natural deaths within a tribe, it is not surprising that the medicine men, or shamans, are most susceptible to attack as they are frequently accused of using their powers against others. Each tribe is thereby compelled to kill the opposing medicine man to free themselves of his evil magic. On the whole, the Jivaro Indians do subscribe to the notion of a natural death, but rather attributed each death to supernatural causes. Following each death a vicious cycle of retaliation ensues in which someone is always held accountable for the murder of another. As the Jivaro Indian is consumed with the notion of retaliation, his " desire for revenge is an expression of his sense of justice." This cycle of blood-revenge is perpetuated by religious reasons by which the soul of the victim requires that his relatives should avenge his death. If the surviving members do not retaliate against the slayer, the anger of the vengeful spirit may in fact turn against themselves. If blood-revenge cannot be directed to the actual slayer, it may be directed toward one of his relations. Once a murder has been avenged, blood-guilt or tumashi akerkama is atoned for and the offended family is satisfied Male children were taught at an early age about the concept of blood revenge. The father instructs the younger men, often as young as six years of age, to listen to the various crimes that had been committed against his people. A strong sense of family justice is instilled in the minds of the young, who are later expected to avenge previous injustices committed against their family members. Further incentive is encouraged by the notion of reward, including blessings, good luck, long life and many opportunities to kill one's enemy. It must be noted that trophies/ tsantsa were not taken during the disputes between blood-relatives.</English>
 		<Polish>Jiwaro - grupa plemion indiańskich żyjących w Ekwadorze (wschodnie skłony Andów - tzw. region Montańa) oraz północno-wschodnim Peru (na północ od rzeki Marańón). Zajmują się uprawą batatów i ryżu, zbieractwem, rybołówstwem i myślistwem. Bitni wojownicy - słynni łowcy głów, znani z techniki preparowania ich do rozmiarów owocu pomarańczy (tzw. tsantsa, których posiadanie daje zgodnie z wierzeniami Jiwaro nadnaturalną siłę). Preparowanie polega na wygotowaniu zdjętej uprzednio skóry, którą następnie wypełnia się gorącymi kamykami i piaskiem - po wychłodzeniu ulega ona silnemu skurczeniu. Populację Jiwaro szacuje się obecnie na około 20 tys.</Polish>
 		<Russian>[NEWLINE][TAB]Хотя во всем мире существовало много культур охоты за головами, только одна группа была известна древней практикой уменьшения человеческих голов (цанца). Их называли племенем хиваро, жившим в глубине Эквадора и соседней перуанской Амазонки. Хиваро - одно из самых примитивных обществ, которое привлекло внимание западного мира из-за своих необычных обычаев.[PARAGRAPH:2]Племена хиваро состоят из четырех подплемен или диалектных групп, населяющих тропические леса эквадорской и перуанской Амазонии: Ашуар, Агуаруна, Хуамбиса и Шуар. Из них чаще всего упоминаются шуары, когда говорят об индейцах дживаро. Шуар добились своей известности благодаря своей обычной практике уменьшения головы. Хиваро - единственное известное племя, которое успешно восстало против Испанской империи и сумело помешать всем последующим попыткам испанцев покорить их. Они противостояли армиям инков, ищущих золото, и бросили вызов броваду ранних конкистадоров. Индейцы хиваро известны как крайне воинственная группа, чрезвычайно защищающая свою свободу и не желающая подчиняться другим властям. Индейцы хиваро имеют репутацию свирепости, которая отличает их от своих собратьев, основанная на жестокости по отношению к своим врагам. Ранние испанские хроники рассказывают, что в 1599 году хиваро объединились и убили 25 000 белых людей в набегах на два поселения. В частности, резня в Логроньо выделяется как особо безжалостная. Нападение было спровоцировано тем, что туземцев облагали налогами при торговле золотом. После того, как он раскрыл недобросовестные действия посетившего его губернатора, расплавленное золото было позже вылито ему в горло, пока его кишечник не лопнул. После его казни оставшиеся испанцы были убиты вместе со старшими женщинами и детьми. Более молодые полезные женщины были взяты в плен и присоединились к клану. Само поселение подверглось нападению и сожжено дотла. С этого момента индейцы хиваро остались непокоренными, несмотря на то, что они населяли один из самых богатых месторождений золота в Южной Америке. Ожесточенная боевая репутация хиваро и его умопомрачительная практика продолжали удерживать посторонних от проникновения на их территории. [PARAGRAPH:2]В обширном регионе Амазонии между соседними племенами хиваро существовала вечная вражда. Еще раз, из-за горячей веры в колдовство и колдовство, это было основной причиной войны между племенами. Фундаментальное различие между войнами, разыгрываемыми внутри одного и того же племени, и войнами против соседних племен состоит в том, что «войны между различными племенами в принципе являются войнами на истребление». Важная цель этих войн была направлена ??на уничтожение вражеского племени, включая женщин и детей. Это было сделано для того, чтобы в будущем они не отомстили победителям. Однако было много случаев, когда женщин и детей брали в плен и заставляли становиться частью семей победителей. Только в этих войнах брали трофеи/цанца. Хиваро постоянно применяли эту практику по отношению к своим смертельным врагам.[PARAGRAPH:2]Поскольку войны между племенными культурами не разжигались с надеждой на захват дополнительных территорий, как только боевые действия заканчивались, победившие соплеменники поспешно отступали. Суеверный страх и презрение к врагу вынудили хиваро быстро покинуть местность, где, по их мнению, им угрожали тайные сверхъестественные опасности после того, как они победили своих естественных врагов. Если кровавая месть продолжалась с чрезвычайной скоростью начала 1900-х годов, истребление было очевидным. Благодаря работе миссионеров убийства постепенно утихли. Сегодня при относительно спокойном существовании суеверия все еще очень сильны, но не забыт вред, нанесенный прошлым предкам.[PARAGRAPH:2]Хиваро по своей природе очень суеверные и импульсивные люди, из-за чего часто возникают споры и войны между собой, а также между соседними племенами. Поскольку колдовство и колдовство могут быть причиной большинства убийств и естественных смертей в племени, неудивительно, что знахари или шаманы наиболее подвержены нападениям, поскольку их часто обвиняют в использовании своих сил против других. Таким образом, каждое племя вынуждено убить вражеского знахаря, чтобы освободиться от его злой магии. В целом индейцы хиваро придерживаются концепции естественной смерти, а скорее приписывают каждую смерть сверхъестественным причинам. После каждой смерти следует замкнутый круг возмездия, в котором кто-то всегда несет ответственность за убийство другого. Поскольку индеец хиваро поглощен идеей возмездия, его «желание мести является выражением его чувства справедливости». Этот цикл кровной мести увековечивается религиозными причинами, по которым душа жертвы требует, чтобы его родственники отомстили за его смерть. Если выжившие члены не предпримут ответных действий против убийцы, гнев мстительного духа может фактически обратиться против них самих. Если кровная месть не может быть направлена ??на настоящего убийцы, она может быть направлена ??на одного из его родственников. После отмщения за убийство искупается кровная вина или тумаси акеркама, и обиженная семья получает полное удовлетворение. Детей мужского пола с раннего возраста учили концепции кровной мести. Отец наставляет молодых людей, зачастую даже шестилетнего возраста, выслушать различные преступления, совершенные против его народа. В сознании молодых людей прививается сильное чувство семейной справедливости, от которых позже ожидается, что они отомстят за предыдущую несправедливость, совершенную в отношении членов их семей. Дополнительный стимул поощряется понятием награды, включающей благословения, удачу, долгую жизнь и множество возможностей убить врага. Следует отметить, что трофеи/цанцы не брались во время споров между кровными родственниками.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_JIVARO_SHORT</Tag>
+		<Tag>TXT_KEY_CIV_JIVARO_SHORT_DESC</Tag>
 		<English>Jivaro</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_MAORI_ADJECTIVE</Tag>
+		<Tag>TXT_KEY_CIV_MAORI_ADJECTIVE</Tag>
 		<English>Maori</English>
 		<Polish>Maoryski</Polish>
 		<Russian>Ìàîðè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_MAORI</Tag>
+		<Tag>TXT_KEY_CIV_MAORI_DESC</Tag>
 		<English>Maori Empire</English>
 		<French>Empire maori</French>
 		<Italian>Impero Maori</Italian>
@@ -1918,19 +4865,19 @@
 		<Russian>Ïëåìåíà ìàîðè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_MAORI_PEDIA</Tag>
+		<Tag>TXT_KEY_CIV_MAORI_PEDIA</Tag>
 		<English>New Zealand was one of the last areas of the planet to be settled. Archaeological and linguistic evidence suggests there were probably several waves of migration from Eastern Polynesia to New Zealand between 800 and 1300 AD. Maori origins therefore cannot be separated from those of their Polynesian ancestors (for more information see Polynesian culture). Maori oral history describes their arrival from Hawaiki (a mythical homeland in tropical Polynesia) by large ocean-going canoes (waka) - see Maori migration canoes. Migration accounts vary among Maori tribes or iwi, whose members can identify with different waka in their genealogies or whakapapa.[PARAGRAPH:2]There is no credible evidence of human settlement in New Zealand prior to the Maori voyagers; on the other hand, compelling evidence from archaeology, linguistics, and physical anthropology indicates that the first settlers were East Polynesians who became the Maori. The early European explorers, including Abel Tasman and James Cook, reported encounters with Maori. These early reports described the Maori as a fierce and proud warrior race. Inter-tribal warfare was a way of life, with the conquered being enslaved or in some cases eaten.[PARAGRAPH:2]From as early as the 1780s Maori had encounters with European sealers and whalers; some even crewed on their ships. There was also a continuous trickle of escaped convicts from Australia and deserters from visiting ships. By 1830 it was estimated that there were as many as 2,000 Pakeha living among the Maori, status varying from slaves through to high ranking advisors, from prisoners to those who abandoned European culture and identified themselves as Maori. Pakeha were valued for their ability to describe European skills and culture and their ability to obtain European items in trade, particularly weaponry. These Europeans were known as Pakeha Maori. When Pomare led a war party against Titore in 1838, among his warriors were 132 Pakeha mercenaries.[PARAGRAPH:2]In the 1860s, disputes over questionable land purchases and the attempts of Maori in the Waikato to establish what was perceived as a rival British-style system of royalty led to the New Zealand land wars. Although these resulted in relatively few deaths, large tracts of tribal land were confiscated by the colonial government as punishment for rebellion, in some cases without reference to whether the tribe whose land was confiscated actually participated in rebellion. Some tribes actively fought against the Crown, while others (known as kupapa) fought in support of the Crown. A passive esistance movement developed at the settlement of Parihaka in Taranaki, but was dispersed by the invasion of Crown troops in 1881.[PARAGRAPH:2]With the loss of much of their land, Maori went into a period of decline, and by the late 19th century it was believed that the Maori population would cease to exist as a separate race and be assimilated into the European population. The predicted decline of the Maori population did not occur, however, and levels recovered. Despite a high degree of marriage between the Maori and European populations, Maori were able to retain their cultural identity. The Government decided to exempt Maori from the conscription that applied to other citizens in World War II, but nonetheless Maori volunteered in large numbers, forming the "28th Maori Battalion", which performed creditably, notably in Crete, North Africa, and Italy. Altogether 17,000 Maori took part in WW2.[PARAGRAPH:2]Since the 1960s, Maoridom has undergone a cultural revival. Sympathetic governments and political activism have led to compensation for unjust confiscation of land and the violation of other property rights. A special court, the Waitangi Tribunal, was established to investigate and make recommendations on such issues. As a result of the compensation paid to many iwi (tribes), Maori now have significant interests in the fishing and forestry industries.</English>
 		<Polish>Maorysi - autochtoniczna grupa etniczna Nowej Zelandii, posługująca się językiem maoryskim. Według badań Maorysi są potomkami klanów Polinezyjczyków z wysp wschodniej części Oceanu Spokojnego (m.in. Tahiti), którzy jako pierwsi ludzie dotarli do brzegów Wyspy Południowej pomiędzy rokiem 925 a 1280 naszej ery. Jak głosi legenda przybyli na 7 olbrzymich łodziach żaglowych, każda z nich dała początek jednemu plemieniu. Dowódca najwcześniej przybyłej łodzi - Kupe uchodzi za odkrywcę Aotearoa (czyli "kraju białej chmury", jak Maorysi nazywają Nową Zelandię). Wykopaliska archeologiczne dowodzą jednak, że pierwsi Maorysi przybyli w kilku falach i osiedlili się na Wyspie Południowej. Stosunkowo szybko opanowali obydwie wyspy, zdecydowanie jednak preferując cieplejszą i bardziej gościnną Wyspę Północną. Maorysi zajmowali się uprawą roślin, hodowlą i rybołówstwem, praktykowali też kanibalizm; zasłynęli z wojowniczości i uzdolnień artystycznych w zakresie rzeźby, budownictwa i bardzo rozpowszechnionego tatuażu; po podboju przez Brytyjczyków (pocz. XIX w.) zaczęli przyjmować kulturę europejską.</Polish>
 		<Russian>[NEWLINE][TAB]Новая Зеландия была одним из последних населенных пунктов на планете. Археологические и лингвистические данные свидетельствуют о том, что, вероятно, было несколько волн миграции из Восточной Полинезии в Новую Зеландию между 800 и 1300 годами нашей эры. Следовательно, происхождение маори невозможно отделить от происхождения их полинезийских предков (для получения дополнительной информации см. Полинезийскую культуру). В устной истории маори описывается их прибытие из Хаваики (мифической родины в тропической Полинезии) на больших океанских каноэ (вака) - см. Каноэ миграции маори. Рассказы о миграции различаются между племенами маори или иви, члены которых могут идентифицировать себя с разными вака в своей генеалогии или вакапапа.[PARAGRAPH:2]Нет никаких достоверных свидетельств поселения людей в Новой Зеландии до путешествий маори; с другой стороны, убедительные доказательства из археологии, лингвистики и физической антропологии указывают на то, что первыми поселенцами были восточные полинезийцы, которые стали маори. Ранние европейские исследователи, в том числе Абель Тасман и Джеймс Кук, сообщали о встречах с маори. Эти ранние отчеты описывают маори как жестокую и гордую расу воинов. Межплеменная война была образом жизни, когда побежденных порабощали, а в некоторых случаях и поедали.[PARAGRAPH:2]Еще с 1780-х годов маори встречались с европейскими промысловиками и китобоями; некоторые даже работали на своих кораблях. Также непрерывно шел поток беглых осужденных из Австралии и дезертиров с посещающих кораблей. К 1830 году было подсчитано, что среди маори проживало около 2000 пакеха, статус варьировался от рабов до высокопоставленных советников, от заключенных до тех, кто отказался от европейской культуры и назвал себя маори. Пакеха ценились за их способность описывать европейские навыки и культуру, а также за их способность приобретать европейские товары в торговле, особенно оружие. Эти европейцы были известны как пакеха маори. Когда Помаре возглавил военный отряд против Титоре в 1838 году, среди его воинов было 132 наемника Пакеха.[PARAGRAPH:2]В 1860-х годах споры по поводу сомнительных покупок земли и попытки маори в Вайкато установить то, что воспринималось как конкурирующая система королевской власти в британском стиле, привели к земельным войнам в Новой Зеландии. Хотя это привело к относительно небольшому количеству смертей, большие участки племенных земель были конфискованы колониальным правительством в качестве наказания за восстание, в некоторых случаях без ссылки на то, действительно ли племя, чья земля была конфискована, участвовало в восстании. Некоторые племена активно боролись против короны, в то время как другие (известные как купапа) боролись за ее поддержку. Движение пассивного сопротивления развивалось в поселении Парихака в Таранаки, но было рассеяно вторжением войск Короны в 1881 году.[PARAGRAPH:2]С потерей большей части своей земли маори вошли в период упадка, и к концу XIX века считалось, что население маори перестанет существовать как отдельная раса и ассимилируется с европейским населением. Однако прогнозируемого сокращения численности маори не произошло, и уровни восстановились. Несмотря на высокую степень брака между маори и европейским населением, маори смогли сохранить свою культурную самобытность. Правительство решило освободить маори от призыва, который применялся к другим гражданам во время Второй мировой войны, но, тем не менее, маори в большом количестве добровольно вызвались добровольцами, сформировав «28-й батальон маори», который хорошо зарекомендовал себя, особенно на Крите, в Северной Африке и Италии. Всего во Второй мировой войне приняло участие 17 000 маори.[PARAGRAPH:2]С 1960-х годов маоридом переживает культурное возрождение. Сочувствующие правительства и политическая активность привели к компенсации за несправедливую конфискацию земли и нарушение других прав собственности. Для расследования таких вопросов и вынесения рекомендаций был создан специальный суд, Трибунал Вайтанги. В результате компенсации, выплаченной многим иви (племенам), маори теперь имеют значительные интересы в рыболовстве и лесном хозяйстве.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_MAORI_SHORT</Tag>
+		<Tag>TXT_KEY_CIV_MAORI_SHORT_DESC</Tag>
 		<English>Maori</English>
 		<Polish>Maorysi</Polish>
 		<Russian>ìàîðè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_NEANDERTHAL_ADJECTIVE</Tag>
+		<Tag>TXT_KEY_CIV_NEANDERTHAL_ADJECTIVE</Tag>
 		<English>Neanderthal</English>
 		<French>Néanderthal</French>
 		<Spanish>Neandertal</Spanish>
@@ -1938,7 +4885,7 @@
 		<Russian>Íåàíäåðòàëüöû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_NEANDERTHAL</Tag>
+		<Tag>TXT_KEY_CIV_NEANDERTHAL_DESC</Tag>
 		<English>Neanderthal Empire</English>
 		<French>Empire du Néanderthal</French>
 		<Spanish>Imperio Neandertal</Spanish>
@@ -1946,14 +4893,14 @@
 		<Russian>Íåàíäåðòàëüöû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_NEANDERTHAL_PEDIA</Tag>
+		<Tag>TXT_KEY_CIV_NEANDERTHAL_PEDIA</Tag>
 		<English>The Neanderthals or Neandertals are an extinct species of human in the genus Homo, possibly a subspecies of Homo sapiens. They are very closely related to modern humans, differing in DNA by only 0.3%, which however is twice that of the widest DNA gap found among contemporary humans. Remains left by Neanderthals include bones and stone tools, which are found from western Europe to central Asia. The species is named after Neandertal ("Neander Valley"), the location in Germany where it was first discovered.Neanderthals are generally classified by palaeontologists as the species Homo neanderthalensis, but a minority consider them to be a subspecies of Homo sapiens, (Homo sapiens neanderthalensis). The first humans with proto-Neanderthal traits are believed to have existed in Europe as early as 600,000–350,000 years ago.The exact date of their extinction is disputed. Fossils found in the Vindija Cave in Croatia have been dated to between 33,000 and 32,000 years old, and Neanderthal artifacts from Gorham's Cave in Gibraltar are believed to be less than 30,000 years old, but a recent study has redated fossils at two Spanish sites as 45,000 years old, 10,000 years older than previously thought, and may cast doubt on recent datings of other sites. Cro-Magnon (early-modern-human) skeletal remains showing some "Neanderthal traits" have been found in Lagar Velho (Portugal) and dated to 24,500 years ago, suggesting that there may have been an extensive admixture of the Cro-Magnon and Neanderthal populations in that region.Several cultural assemblages have been linked to the Neanderthals in Europe. The earliest, the Mousterian stone tool culture, dates to about 300,000 years ago. Late Mousterian artifacts were found in Gorham's Cave on the south-facing coast of Gibraltar. Other tool cultures associated with the Neanderthals include the Châtelperronian, the Aurignacian, and the Gravettian; their tool assemblages appear to have developed gradually within their populations, rather than being introduced by new population groups arriving in the region.With an average cranial capacity of 1600cc, Neanderthal's cranial capacity is known to be notably larger than the 1400cc average for all races of modern humans, indicating that their brain size was at least as large, if not larger. In 2008, a group of scientists produced a study using three-dimensional computer-assisted reconstructions of Neanderthal infants based on fossils found in Russia and Syria. The study indicated that Neanderthal and modern human brains were the same size at birth, but by adulthood, the Neanderthal brain was larger than the modern human brain. They were much stronger than modern humans, having particularly strong arms and hands. Males stood 164–168 cm (65–66 in) and females about 152–156 cm (60–61 in) tall.Genetic evidence published in 2010 suggests that Neanderthals contributed to the DNA of anatomically modern humans, probably through interbreeding between 80,000 and 50,000 years ago with the population of anatomically modern humans who had recently migrated from Africa. According to the study, by the time that population began dispersing across Eurasia, Neanderthals genes constituted as much as 1–4% of its genome (roughly equivalent to having one Neanderthal great-great-great-grandparent). Ötzi the iceman, Europe's oldest preserved mummy, was found to possess an even higher percentage of Neanderthal ancestry. Recent findings suggest there may be even more Neandarthal genes in human, non-African genes than previously expected, at about 20% of the human genome instead.In December 2013, researchers reported evidence that Neanderthals practiced burial behavior and intentionally buried their dead. In addition, scientists reported, for the first time, the entire genome of a Neanderthal. The genome was extracted from the toe bone of a 130,000-year-old Neanderthal found in a Siberian cave.</English>
 		<Spanish>El hombre de Neandertal (Homo neanderthalensis) es una especie extinta del género Homo que habitó Europa y partes de Asia occidental desde hace 230 000 hasta 28 000 años atrás, durante el Pleistoceno medio y superior y culturalmente integrada en el Paleolítico medio. En un periodo de aproximadamente 5000 años se cree convivió paralelamente en los mismos territorios europeos con el Hombre de Cro-Magnon, primeros hombres modernos en Europa. Esta convivencia se ha demostrado por fósiles hallados en las cuevas de Châtelperron.Sus características definidoras, a partir de los huesos fósiles descubiertos hasta ahora (unos 400 individuos), son: esqueleto robusto, pelvis ancha, extremidades cortas y robustas, tórax en barril, arcos supraorbitarios resaltados, frente baja e inclinada, faz prominente, mandíbulas sin mentón y gran capacidad craneal —1550 cm³—. Vivían en grupos sociales organizados, formados por alrededor de unos treinta miembros casi todos con parentesco (clanes), dominaban el fuego y podían fabricar herramientas rústicas que incluían huesos y piedras.Los neandertales fueron una especie bien adaptada al frío extremo congruente con la cuarta y última glaciación. Tenían un cráneo alargado y amplio, baja estatura y complexión robusta, y nariz amplia de aletas prominentes; rasgos que denotan adaptación a climas fríos, como se puede observar actualmente en las poblaciones del Ártico, y muy probablemente dueños de un olfato más desarrollado que el hombre moderno. Su cerebro era igual o incluso más grande que el de los hombres modernos.Un neandertal medio podía alcanzar unos 1,65 m, era de contextura pesada, dentadura prominente y musculatura robusta. Si bien su estructura ósea no los hacía corredores de largo aliento, sí podían hacer cortas y rápidas carreras persecutorias o escapistas; eran sobre todo caminantes de largas distancias. Estudios anatómicos han determinado que el neandertal podía articular una fonética limitada respecto a la que actualmente posee el hombre moderno, debido a la ubicación de la laringe, situada más arriba que la de este. Otros estudios recientes indican que los neandertales podían dar grandes mascadas a su alimento gracias a una mayor apertura bucal.3 La expectativa de vida de un miembro adulto en un medio ambiente tan extremo, riguroso y hostil no sobrepasaba los 40 años en los hombres y 30 en las mujeres.El estilo de herramientas líticas utilizadas en el Paleolítico medio por los neandertales se conoce como la cultura Musteriense, así llamada por haber sido encontradas por primera vez en el yacimiento arqueológico Le Moustier. La cultura musteriense está caracterizada por la utilización de la técnica de talla Levallois. Estas herramientas fueron producidas usando martillos de percusión blandos, de hueso o madera. En los últimos tiempos de los neandertales aparece en el registro arqueológico el estilo Châtelperroniense, considerado como más "avanzado" que el musteriense.</Spanish>
 		<Polish>Człowiek neandertalski, neandertalczyk - wymarły przedstawiciel rodzaju Homo (człowiek), znany z plejstocenu (ok. 400 000 do ok. 24 500 lat temu), w zależności od autorów klasyfikowany jako podgatunek człowieka rozumnego - Homo sapiens neanderthalensis - lub odrębny od niego gatunek - Homo neanderthalensis. Neandertalczyk prawdopodobnie ewoluował z Homo heidelbergensis lub formy z nim blisko spokrewnionej w środkowym plejstocenie. Pierwsze cechy neandertalskie pojawiły się u hominidów w Europie ok. 400 -350 tys. lat temu. Neandertalczycy rozprzestrzenili się po Europie (z wyjątkiem pokrytej lodowcem[potrzebne źródło] Skandynawii) i na Bliskim Wschodzie. W okresie dużych wahań klimatycznych wykazywali przystosowania do zimnego klimatu. Prawdopodobnie w tym czasie zaczęli używać odzieży (dla ochrony od zimna) oraz biżuterii. Nieliczne ślady wskazują na obecność podobnych form w południowej Syberii i północnej Afryce.</Polish>
 		<Russian>[NEWLINE][TAB]Неандертальцы - вымерший вид человека из рода Homo, возможно, подвид Homo sapiens. Они очень тесно связаны с современными людьми, различаясь по ДНК всего на 0,3%, что, однако, вдвое больше, чем самый большой разрыв в ДНК, обнаруженный среди современных людей. Останки, оставленные неандертальцами, включают кости и каменные орудия труда, которые находят от Западной Европы до Центральной Азии. Вид назван в честь неандертальца («Долина Неандера»), места в Германии, где он был впервые обнаружен. Палеонтологи обычно классифицируют неандертальцев как вид Homo neanderthalensis, но меньшинство считает их подвидом Homo sapiens (Homo sapiens neanderthalensis). Считается, что первые люди с прото-неандертальскими чертами существовали в Европе еще 600 000–350 000 лет назад. Точная дата их исчезновения оспаривается. Окаменелости, найденные в пещере Виндия в Хорватии, датируются возрастом от 33000 до 32000 лет, а артефакты неандертальцев из пещеры Горхэм в Гибралтаре, как полагают, имеют возраст менее 30 000 лет, но недавнее исследование переориентировало окаменелости на двух испанских участках как 45000. лет, на 10 000 лет старше, чем считалось ранее, и может поставить под сомнение недавние датировки других сайтов. Остатки скелетов кроманьонцев (раннего современного человека), демонстрирующие некоторые «черты неандертальцев», были обнаружены в Лагар-Велью (Португалия) и датированы 24 500 лет назад, что позволяет предположить, что здесь, возможно, была обширная примесь кроманьонцев и неандертальцев. Несколько культурных сообществ были связаны с неандертальцами в Европе. Самая ранняя, мустьерская культура каменных орудий, датируется примерно 300 000 лет назад. Артефакты позднего мустье были найдены в пещере Горхэм на южном побережье Гибралтара. Другие орудийные культуры, связанные с неандертальцами, включают шательперронский, ориньякский и граветтианский; их совокупности орудий труда, по-видимому, развивались постепенно внутри их популяций, а не вводились новыми группами населения, прибывающими в регион. Известно, что при средней емкости черепа 1600 куб. см объем черепа неандертальца заметно превышает средний объем черепа 1400 куб. см для всех рас. современных людей, что указывает на то, что размер их мозга был как минимум таким же, если не больше. В 2008 году группа ученых провела исследование с использованием трехмерных компьютерных реконструкций младенцев неандертальцев на основе окаменелостей, найденных в России и Сирии. Исследование показало, что мозг неандертальца и современного человека при рождении был одинакового размера, но к зрелому возрасту мозг неандертальца был больше, чем мозг современного человека. Они были намного сильнее современных людей, обладая особенно сильными руками. Рост мужчин составлял 164–168 см (65–66 дюймов), а рост женщин - около 152–156 см (60–61 дюйм). Генетические данные, опубликованные в 2010 году, предполагают, что неандертальцы внесли свой вклад в ДНК анатомически современных людей, вероятно, путем скрещивания между 80 000 и 50 000 лет назад с населением анатомически современных людей, которые недавно мигрировали из Африки. Согласно исследованию, к тому времени, когда эта популяция начала рассредоточиться по Евразии, гены неандертальцев составляли до 1–4% ее генома (примерно эквивалентно наличию одного прапрапрадеда неандертальца). Было обнаружено, что ледяной человек Эци, самая старая сохранившаяся мумия в Европе, имеет еще более высокий процент неандертальского происхождения. Недавние результаты предполагают, что в человеческих, неафриканских генах может быть даже больше неандартальских генов, чем предполагалось ранее, а это около 20% человеческого генома. В декабре 2013 года исследователи сообщили о доказательствах того, что неандертальцы практиковали погребение и намеренно хоронили своих мертвецов. Кроме того, ученые впервые сообщили о полном геноме неандертальца. Геном был извлечен из пальца ноги 130 000-летнего неандертальца, найденного в сибирской пещере.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_NEANDERTHAL_SHORT</Tag>
+		<Tag>TXT_KEY_CIV_NEANDERTHAL_SHORT_DESC</Tag>
 		<English>Neanderthal</English>
 		<French>Néanderthal</French>
 		<Spanish>Neandertal</Spanish>
@@ -1961,12 +4908,12 @@
 		<Russian>íåàíäåðòàëüöû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_TUPI_ADJECTIVE</Tag>
+		<Tag>TXT_KEY_CIV_TUPI_ADJECTIVE</Tag>
 		<English>Tupi</English>
 		<Russian>Òóïè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_TUPI</Tag>
+		<Tag>TXT_KEY_CIV_TUPI_DESC</Tag>
 		<English>Tupi Empire</English>
 		<French>Empire tupi</French>
 		<Italian>Impero Tupi</Italian>
@@ -1974,12 +4921,12 @@
 		<Russian>Ïëåìåíà òóïè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_TUPI_PEDIA</Tag>
+		<Tag>TXT_KEY_CIV_TUPI_PEDIA</Tag>
 		<English>The Tupi were the dominant people of the region that is today Brazil. They occupied vast tracts of territory, hugging the eastern coast of the South American continent, with settlements along the Amazon River and as far inland as modern Paraguay. Tupi society consisted of a series of culturally and religiously related tribal families, which migrated along the coasts and rainforests as their food needs required.[PARAGRAPH:2]While the Tupi economy benefited from brisk trade with other tribes, the Tupi were feared by many for their skills in combat. Armed with blowguns, bolas and all manner of bludgeoning instruments, Tupi warriors would often overwhelm their foes, taking captives to be cannibalized or to be used in religious rituals. Because of their practice of cannibalism, the Tupi were often confused with their neighbors, the Aimore, who practiced cannibalism as a form of sustenance. The Tupi, on the other hand, performed cannibalistic acts only as a form of revenge against those who had wronged members of their people.[PARAGRAPH:2]With the arrival of the Portuguese in 1500, it affected the Tupi way of life surprisingly little - at first. The Tupi found the Portuguese excellent trading partners. Unfortunately, the Tupi soon discovered that the Portuguese brought with them diseases they had never before experienced. In addition, in their search for gold on the continent, the Portuguese soon led raiding parties against Tupi settlements in order to acquire slaves to work in the mines.[PARAGRAPH:2]While some Tupi mounted a defense against Portuguese incursions, many chose to flee into the forest, where the dense foliage could protect them from the Europeans. They could not, however, escape the disease the Europeans brought with them and over the next century, the Tupi, once numbering in the millions, were nearly obliterated. Today, Tupi settlements can still be found nestled deep within the reaches of the Amazon, but their numbers barely reach a fraction of their former grandeur.</English>
 		<Russian>[NEWLINE][TAB]Тупи были доминирующим народом в регионе, который сегодня является Бразилией. Они занимали обширные территории, охватывая восточное побережье южноамериканского континента, с поселениями вдоль реки Амазонки и так далеко вглубь страны, как современный Парагвай. Община тупи состояла из ряда связанных в культурном и религиозном отношении племенных семей, которые мигрировали вдоль побережий и тропических лесов по мере необходимости в пище.[PARAGRAPH:2]В то время как экономика тупи извлекала выгоду из оживленной торговли с другими племенами, многие опасались тупи за их боевые навыки. Вооруженные духовыми трубками, боласами и всевозможными палицами, воины тупи часто подавляли своих врагов, беря пленников для поедания или использования в религиозных ритуалах. Из-за своей практики каннибализма тупи часто путали со своими соседями, айморами, которые практиковали каннибализм в качестве средства к существованию. Тупи, с другой стороны, совершали каннибалистические практики только в качестве формы мести тем, кто нанес обиду членам их народа.[PARAGRAPH:2]Прибытие португальцев в 1500 году на удивление поначалу мало повлияло на образ жизни тупи. Тупи нашли португальцев отличными торговыми партнерами. К сожалению, они вскоре обнаружили, что португальцы принесли с собой болезни, с которыми они никогда раньше не сталкивались. Кроме того, в поисках золота на континенте португальцы вскоре возглавили рейды против поселений тупи, чтобы заполучить рабов для работы в шахтах.[PARAGRAPH:2]В то время как некоторые тупи защищались от португальских вторжений, многие предпочли бежать в джунгли, где густая листва могла укрыть их от европейцев. Однако они не могли избежать болезней, занесенных европейцами, и в следующем столетии тупи, когда-то насчитывавшие миллионы, были почти полностью истреблены. Сегодня поселения тупи все еще можно найти в глубинах Амазонии, но их количество едва достигает и доли их былого величия.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_TUPI_SHORT</Tag>
+		<Tag>TXT_KEY_CIV_TUPI_SHORT_DESC</Tag>
 		<English>Tupi</English>
 		<Russian>òóïè</Russian>
 	</TEXT>

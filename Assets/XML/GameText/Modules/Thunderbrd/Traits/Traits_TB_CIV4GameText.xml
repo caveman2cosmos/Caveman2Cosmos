@@ -5,12 +5,14 @@
 		<English>Aerial CT</English>
 		<French>Aérien</French>
 		<Russian>Àâèàòîð</Russian>
+    <Italian>Aereo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AERIAL1</Tag>
 		<English>Aerial I</English>
 		<French>Aérien I</French>
 		<Russian>Àâèàòîð I</Russian>
+    <Italian>Aereo I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AERIAL1_PEDIA</Tag>
@@ -69,6 +71,7 @@ Penalties:
 		<English>Aerial II</English>
 		<French>Aérien II</French>
 		<Russian>Àâèàòîð II</Russian>
+    <Italian>Aereo II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AERIAL2_PEDIA</Tag>
@@ -144,6 +147,7 @@ Penalties:
 		<English>Aerial III</English>
 		<French>Aérien III</French>
 		<Russian>Àâèàòîð III</Russian>
+    <Italian>Aereo III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AERIAL3_PEDIA</Tag>
@@ -298,12 +302,14 @@ Penalties:
 		<English>Aloof CT</English>
 		<French>Distant</French>
 		<Russian>Áåçðàçëè÷íûé</Russian>
+    <Italian>Distante</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ALOOF1</Tag>
 		<English>Aloof I</English>
 		<French>Distant I</French>
 		<Russian>Áåçðàçëè÷íûé I</Russian>
+    <Italian>Distante I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ALOOF1_PEDIA</Tag>
@@ -335,6 +341,7 @@ Benefits:
 		<English>Aloof II</English>
 		<French>Distant II</French>
 		<Russian>Áåçðàçëè÷íûé II</Russian>
+    <Italian>Distante II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ALOOF2_PEDIA</Tag>
@@ -367,6 +374,7 @@ Benefits:
 		<English>Aloof III</English>
 		<French>Distant III</French>
 		<Russian>Áåçðàçëè÷íûé III</Russian>
+    <Italian>Distante III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ALOOF3_PEDIA</Tag>
@@ -430,12 +438,14 @@ Benefits:
 		<English>Bigot CT</English>
 		<French>Bigot</French>
 		<Russian>Ðåòðîãðàä</Russian>
+    <Italian>Bigotto</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BIGOT1</Tag>
 		<English>Bigot I</English>
 		<French>Bigot I</French>
 		<Russian>Ðåòðîãðàä I</Russian>
+    <Italian>Bigotto I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BIGOT1_PEDIA</Tag>
@@ -466,6 +476,7 @@ Benefits:
 		<English>Bigot II</English>
 		<French>Bigot II</French>
 		<Russian>Ðåòðîãðàä II</Russian>
+    <Italian>Bigotto II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BIGOT2_PEDIA</Tag>
@@ -497,6 +508,7 @@ Benefits:
 		<English>Bigot III</English>
 		<French>Bigot III</French>
 		<Russian>Ðåòðîãðàä III</Russian>
+    <Italian>Bigotto III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BIGOT3_PEDIA</Tag>
@@ -561,12 +573,14 @@ Benefits:
 		<English>Careless CT</English>
 		<French>Négligent</French>
 		<Russian>Áåñïå÷íûé</Russian>
+    <Italian>Superficiale</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CARELESS1</Tag>
 		<English>Careless I</English>
 		<French>Négligent I</French>
 		<Russian>Áåñïå÷íûé I</Russian>
+    <Italian>Superficiale I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CARELESS1_PEDIA</Tag>
@@ -596,6 +610,7 @@ Benefits:
 		<English>Careless II</English>
 		<French>Négligent II</French>
 		<Russian>Áåñïå÷íûé II</Russian>
+    <Italian>Superficiale II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CARELESS2_PEDIA</Tag>
@@ -625,6 +640,7 @@ Benefits:
 		<English>Careless III</English>
 		<French>Négligent III</French>
 		<Russian>Áåñïå÷íûé III</Russian>
+    <Italian>Superficiale III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CARELESS3_PEDIA</Tag>
@@ -683,12 +699,14 @@ Benefits:
 		<English>Civilized CT</English>
 		<French>Civilisé</French>
 		<Russian>Öèâèëèçîâàííûé</Russian>
+    <Italian>Civilizzato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CIVILIZED1</Tag>
 		<English>Civilized I</English>
 		<French>Civilisé I</French>
 		<Russian>Öèâèëèçîâàííûé I</Russian>
+    <Italian>Civilizzato I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CIVILIZED1_PEDIA</Tag>
@@ -722,6 +740,7 @@ Penalties:
 		<English>Civilized II</English>
 		<French>Civilisé II</French>
 		<Russian>Öèâèëèçîâàííûé II</Russian>
+    <Italian>Civilizzato II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CIVILIZED2_PEDIA</Tag>
@@ -755,6 +774,7 @@ Penalties:
 		<English>Civilized III</English>
 		<French>Civilisé III</French>
 		<Russian>Öèâèëèçîâàííûé III</Russian>
+    <Italian>Civilizzato III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CIVILIZED3_PEDIA</Tag>
@@ -822,6 +842,7 @@ Penalties:
 		<French>Agressif:Agressive:Agressifs:Agressives</French>
 		<German>Aggressiv</German>
 		<Russian>Àãðåññèâíûé</Russian>
+    <Italian>Aggressivo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE1</Tag>
@@ -829,6 +850,7 @@ Penalties:
 		<French>Agressif:Agressive:Agressifs:Agressives I</French>
 		<German>Aggressiv I</German>
 		<Russian>Àãðåññèâíûé I</Russian>
+    <Italian>Aggressivo I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE1_PEDIA</Tag>
@@ -887,6 +909,7 @@ Nachteile:
 		<French>Agressif:Agressive:Agressifs:Agressives II</French>
 		<German>Aggressiv II</German>
 		<Russian>Àãðåññèâíûé II</Russian>
+    <Italian>Aggressivo II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE2_PEDIA</Tag>
@@ -945,6 +968,7 @@ Nachteile:
 		<French>Agressif:Agressive:Agressifs:Agressives III</French>
 		<German>Aggressiv III</German>
 		<Russian>Àãðåññèâíûé III</Russian>
+    <Italian>Aggressivo III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGGRESSIVE3_PEDIA</Tag>
@@ -1060,12 +1084,14 @@ Nachteile:
 		<English>Agricultural CT</English>
 		<French>Agricole</French>
 		<Russian>Çåìëåäåëåö</Russian>
+    <Italian>Agricolo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL1</Tag>
 		<English>Agricultural I</English>
 		<French>Agricole I</French>
 		<Russian>Çåìëåäåëåö I</Russian>
+    <Italian>Agricolo I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL1_PEDIA</Tag>
@@ -1120,6 +1146,7 @@ Penalties:
 		<English>Agricultural II</English>
 		<French>Agricole II</French>
 		<Russian>Çåìëåäåëåö II</Russian>
+    <Italian>Agricolo II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL2_PEDIA</Tag>
@@ -1172,6 +1199,7 @@ Penalties:
 		<English>Agricultural III</English>
 		<French>Agricole III</French>
 		<Russian>Çåìëåäåëåö III</Russian>
+    <Italian>Agricolo III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL3_PEDIA</Tag>
@@ -1280,12 +1308,14 @@ Penalties:
 		<English>Anti-Clerical CT</English>
 		<French>Anti-Clérical</French>
 		<Russian>Àíòèêëåðèêàë</Russian>
+    <Italian>Antilclericale</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ANTI_CLERICAL1</Tag>
 		<English>Anti-Clerical I</English>
 		<French>Anti-Clérical I</French>
 		<Russian>Àíòèêëåðèêàë I</Russian>
+    <Italian>Antilclericale I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ANTI_CLERICAL1_PEDIA</Tag>
@@ -1321,6 +1351,7 @@ Benefits:
 		<English>Anti-Clerical II</English>
 		<French>Anti-Clérical II</French>
 		<Russian>Àíòèêëåðèêàë II</Russian>
+    <Italian>Antilclericale II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ANTI_CLERICAL2_PEDIA</Tag>
@@ -1356,6 +1387,7 @@ Benefits:
 		<English>Anti-Clerical III</English>
 		<French>Anti-Clérical III</French>
 		<Russian>Àíòèêëåðèêàë III</Russian>
+    <Italian>Antilclericale III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ANTI_CLERICAL3_PEDIA</Tag>
@@ -1429,12 +1461,14 @@ Benefits:
 		<English>Barbaric CT</English>
 		<French>Barbare</French>
 		<Russian>Âàðâàð</Russian>
+    <Italian>Barbaro</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_BARBARIC1</Tag>
 		<English>Barbaric I</English>
 		<French>Barbare I</French>
 		<Russian>Âàðâàð I</Russian>
+    <Italian>Barbaro I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_BARBARIC1_PEDIA</Tag>
@@ -1467,6 +1501,7 @@ Benefits:
 		<English>Barbaric II</English>
 		<French>Barbare II</French>
 		<Russian>Âàðâàð II</Russian>
+    <Italian>Barbaro II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_BARBARIC2_PEDIA</Tag>
@@ -1500,6 +1535,7 @@ Benefits:
 		<English>Barbaric III</English>
 		<French>Barbare III</French>
 		<Russian>Âàðâàð III</Russian>
+    <Italian>Barbaro III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_BARBARIC3_PEDIA</Tag>
@@ -1566,12 +1602,14 @@ Benefits:
 		<English>Charismatic CT</English>
 		<French>Charismatique</French>
 		<Russian>Âäîõíîâèòåëü</Russian>
+    <Italian>Carismatico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CHARISMATIC1</Tag>
 		<English>Charismatic I</English>
 		<French>Charismatique I</French>
 		<Russian>Âäîõíîâèòåëü I</Russian>
+    <Italian>Carismatico I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CHARISMATIC1_PEDIA</Tag>
@@ -1600,6 +1638,7 @@ Penalties:
 		<English>Charismatic II</English>
 		<French>Charismatique II</French>
 		<Russian>Âäîõíîâèòåëü II</Russian>
+    <Italian>Carismatico II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CHARISMATIC2_PEDIA</Tag>
@@ -1628,6 +1667,7 @@ Penalties:
 		<English>Charismatic III</English>
 		<French>Charismatique III</French>
 		<Russian>Âäîõíîâèòåëü III</Russian>
+    <Italian>Carismatico III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CHARISMATIC3_PEDIA</Tag>
@@ -1684,12 +1724,14 @@ Penalties:
 		<English>Creative CT</English>
 		<French>Créatif:Créative:Créatifs:Créatives</French>
 		<Russian>Òâîðåö</Russian>
+    <Italian>Creativo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CREATIVE1</Tag>
 		<English>Creative I</English>
 		<French>Créatif:Créative:Créatifs:Créatives I</French>
 		<Russian>Òâîðåö I</Russian>
+    <Italian>Creativo I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CREATIVE1_PEDIA</Tag>
@@ -1729,6 +1771,7 @@ Penalties:
 		<English>Creative II</English>
 		<French>Créatif:Créative:Créatifs:Créatives II</French>
 		<Russian>Òâîðåö II</Russian>
+    <Italian>Creativo II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CREATIVE2_PEDIA</Tag>
@@ -1768,6 +1811,7 @@ Penalties:
 		<English>Creative III</English>
 		<French>Créatif:Créative:Créatifs:Créatives III</French>
 		<Russian>Òâîðåö III</Russian>
+    <Italian>Creativo III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CREATIVE3_PEDIA</Tag>
@@ -1848,12 +1892,14 @@ Penalties:
 		<English>Cruel CT</English>
 		<French>Cruel</French>
 		<Russian>Æåñòîêèé</Russian>
+    <Italian>Crudele</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CRUEL1</Tag>
 		<English>Cruel I</English>
 		<French>Cruel I</French>
 		<Russian>Æåñòîêèé I</Russian>
+    <Italian>Crudele I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CRUEL1_PEDIA</Tag>
@@ -1889,6 +1935,7 @@ Benefits:
 		<English>Cruel II</English>
 		<French>Cruel II</French>
 		<Russian>Æåñòîêèél II</Russian>
+    <Italian>Crudele II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CRUEL2_PEDIA</Tag>
@@ -1924,6 +1971,7 @@ Benefits:
 		<English>Cruel III</English>
 		<French>Cruel III</French>
 		<Russian>Æåñòîêèé III</Russian>
+    <Italian>Crudele III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_CRUEL3_PEDIA</Tag>
@@ -1991,12 +2039,14 @@ Benefits:
 		<English>Deceiver CT</English>
 		<French>Sournois</French>
 		<Russian>Ëèöåäåé</Russian>
+    <Italian>Imbroglione</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_DECEIVER1</Tag>
 		<English>Deceiver I</English>
 		<French>Sournois I</French>
 		<Russian>Ëèöåäåé I</Russian>
+    <Italian>Imbroglione I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_DECEIVER1_PEDIA</Tag>
@@ -2030,6 +2080,7 @@ Penalties:
 		<English>Deceiver II</English>
 		<French>Sournois II</French>
 		<Russian>Ëèöåäåé II</Russian>
+    <Italian>Imbroglione II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_DECEIVER2_PEDIA</Tag>
@@ -2064,6 +2115,7 @@ Penalties:
 		<English>Deceiver III</English>
 		<French>Sournois III</French>
 		<Russian>Ëèöåäåé III</Russian>
+    <Italian>Imbroglione III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_DECEIVER3_PEDIA</Tag>
@@ -2135,12 +2187,14 @@ Penalties:
 		<English>Excessive CT</English>
 		<French>Excessif</French>
 		<Russian>Òðàíæèðà</Russian>
+    <Italian>Eccessivo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_EXCESSIVE1</Tag>
 		<English>Excessive I</English>
 		<French>Excessif I</French>
 		<Russian>Òðàíæèðà I</Russian>
+    <Italian>Eccessivo I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_EXCESSIVE1_PEDIA</Tag>
@@ -2195,6 +2249,7 @@ Benefits:
 		<English>Excessive II</English>
 		<French>Excessif II</French>
 		<Russian>Òðàíæèðà II</Russian>
+    <Italian>Eccessivo II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_EXCESSIVE2_PEDIA</Tag>
@@ -2251,6 +2306,7 @@ Benefits:
 		<English>Excessive III</English>
 		<French>Excessif III</French>
 		<Russian>Òðàíæèðà III</Russian>
+    <Italian>Eccessivo III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_EXCESSIVE3_PEDIA</Tag>
@@ -2363,12 +2419,14 @@ Benefits:
 		<English>Expansive CT</English>
 		<French>Accessible:Accessible:Accessibles:Accessibles</French>
 		<Russian>Ýêñïàíñèîíèñò</Russian>
+    <Italian>Espansionista</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_EXPANSIVE1</Tag>
 		<English>Expansive I</English>
 		<French>Accessible:Accessible:Accessibles:Accessibles I</French>
 		<Russian>Ýêñïàíñèîíèñò I</Russian>
+    <Italian>Espansionista I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_EXPANSIVE1_PEDIA</Tag>
@@ -2400,6 +2458,7 @@ Penalties:
 		<English>Expansive II</English>
 		<French>Accessible:Accessible:Accessibles:Accessibles II</French>
 		<Russian>Ýêñïàíñèîíèñò II</Russian>
+    <Italian>Espansionista II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_EXPANSIVE2_PEDIA</Tag>
@@ -2431,6 +2490,7 @@ Penalties:
 		<English>Expansive III</English>
 		<French>Accessible:Accessible:Accessibles:Accessibles III</French>
 		<Russian>Ýêñïàíñèîíèñò III</Russian>
+    <Italian>Espansionista III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_EXPANSIVE3_PEDIA</Tag>
@@ -2493,12 +2553,14 @@ Penalties:
 		<English>Financial CT</English>
 		<French>Financier:Financière:Financiers:Financières</French>
 		<Russian>Ôèíàíñèñò</Russian>
+    <Italian>Economista</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FINANCIAL1</Tag>
 		<English>Financial I</English>
 		<French>Financier:Financière:Financiers:Financières I</French>
 		<Russian>Ôèíàíñèñò I</Russian>
+    <Italian>Economista I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FINANCIAL1_PEDIA</Tag>
@@ -2537,6 +2599,7 @@ Penalties:
 		<English>Financial II</English>
 		<French>Financier:Financière:Financiers:Financières II</French>
 		<Russian>Ôèíàíñèñò II</Russian>
+    <Italian>Economista II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FINANCIAL2_PEDIA</Tag>
@@ -2575,6 +2638,7 @@ Penalties:
 		<English>Financial III</English>
 		<French>Financier:Financière:Financiers:Financières III</French>
 		<Russian>Ôèíàíñèñò III</Russian>
+    <Italian>Economista III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FINANCIAL3_PEDIA</Tag>
@@ -2652,12 +2716,14 @@ Penalties:
 		<English>Foreigner CT</English>
 		<French>Étranger</French>
 		<Russian>Êîñìîïîëèò</Russian>
+    <Italian>Straniero</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FOREIGN1</Tag>
 		<English>Foreigner I</English>
 		<French>Étranger I</French>
 		<Russian>Êîñìîïîëèò I</Russian>
+    <Italian>Straniero I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FOREIGN1_PEDIA</Tag>
@@ -2687,6 +2753,7 @@ Benefits:
 		<English>Foreigner II</English>
 		<French>Étranger II</French>
 		<Russian>Êîñìîïîëèò II</Russian>
+    <Italian>Straniero II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FOREIGN2_PEDIA</Tag>
@@ -2777,12 +2844,14 @@ Benefits:
 		<English>Humanitarian CT</English>
 		<French>Humanitaire</French>
 		<Russian>Ãóìàíèñò</Russian>
+    <Italian>Filantropo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_HUMANITARIAN1</Tag>
 		<English>Humanitarian I</English>
 		<French>Humanitaire I</French>
 		<Russian>Ãóìàíèñò I</Russian>
+    <Italian>Filantropo I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_HUMANITARIAN1_PEDIA</Tag>
@@ -2818,6 +2887,7 @@ Penalties:
 		<English>Humanitarian II</English>
 		<French>Humanitaire II</French>
 		<Russian>Ãóìàíèñò II</Russian>
+    <Italian>Filantropo II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_HUMANITARIAN2_PEDIA</Tag>
@@ -2853,6 +2923,7 @@ Penalties:
 		<English>Humanitarian III</English>
 		<French>Humanitaire III</French>
 		<Russian>Ãóìàíèñò III</Russian>
+    <Italian>Filantropo III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_HUMANITARIAN3_PEDIA</Tag>
@@ -2920,12 +2991,14 @@ Penalties:
 		<English>Hunter-Gatherer CT</English>
 		<French>Chasseur-Cueilleur</French>
 		<Russian>Îõîòíèê-ñîáèðàòåëü</Russian>
+    <Italian>Cacciatore-raccoglitore</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_HUNTER_GATHERER1</Tag>
 		<English>Hunter-Gatherer I</English>
 		<French>Chasseur-Cueilleur I</French>
 		<Russian>Îõîòíèê-ñîáèðàòåëü I</Russian>
+    <Italian>Cacciatore-raccoglitore I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_HUNTER_GATHERER1_PEDIA</Tag>
@@ -2953,6 +3026,7 @@ Benefits:
 		<English>Hunter-Gatherer II</English>
 		<French>Chasseur-Cueilleur II</French>
 		<Russian>Îõîòíèê-ñîáèðàòåëü II</Russian>
+    <Italian>Cacciatore-raccoglitore II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_HUNTER_GATHERER2_PEDIA</Tag>
@@ -2983,6 +3057,7 @@ Benefits:
 		<English>Hunter-Gatherer III</English>
 		<French>Chasseur-Cueilleur III</French>
 		<Russian>Îõîòíèê-ñîáèðàòåëü III</Russian>
+    <Italian>Cacciatore-raccoglitore III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_HUNTER_GATHERER3_PEDIA</Tag>
@@ -3040,12 +3115,14 @@ Benefits:
 		<English>Idealistic CT</English>
 		<French>Idéaliste</French>
 		<Russian>Èäåàëèñò</Russian>
+    <Italian>Idealista</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_IDEALISTIC1</Tag>
 		<English>Idealistic I</English>
 		<French>Idéaliste I</French>
 		<Russian>Èäåàëèñò I</Russian>
+    <Italian>Idealista I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_IDEALISTIC1_PEDIA</Tag>
@@ -3075,6 +3152,7 @@ Benefits:
 		<English>Idealistic II</English>
 		<French>Idéaliste II</French>
 		<Russian>Èäåàëèñò II</Russian>
+    <Italian>Idealista II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_IDEALISTIC2_PEDIA</Tag>
@@ -3104,6 +3182,7 @@ Benefits:
 		<English>Idealistic III</English>
 		<French>Idéaliste III</French>
 		<Russian>Èäåàëèñò III</Russian>
+    <Italian>Idealista III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_IDEALISTIC3_PEDIA</Tag>
@@ -3161,13 +3240,15 @@ Benefits:
 		<Tag>TXT_KEY_TRAIT_COMPLEX_IMPERIALIST</Tag>
 		<English>Imperialist CT</English>
 		<French>Impérialiste</French>
-		<Russian>Èìïåðèàëèñò</Russian>
+    <Russian>Èìïåðèàëèñò</Russian>
+    <Italian>Idealista</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_IMPERIALIST1</Tag>
 		<English>Imperialist I</English>
 		<French>Impérialiste I</French>
 		<Russian>Èìïåðèàëèñò I</Russian>
+    <Italian>Idealista I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_IMPERIALIST1_PEDIA</Tag>
@@ -3202,7 +3283,8 @@ Penalties:
 		<English>Imperialist II</English>
 		<French>Impérialiste II</French>
 		<Russian>Èìïåðèàëèñò II</Russian>
-	</TEXT>
+    <Italian>Idealista II</Italian>
+  </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_IMPERIALIST2_PEDIA</Tag>
 		<English>Positive Trait
@@ -3235,6 +3317,7 @@ Penalties:
 		<English>Imperialist III</English>
 		<French>Impérialiste III</French>
 		<Russian>Èìïåðèàëèñò III</Russian>
+    <Italian>Idealista III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_IMPERIALIST3_PEDIA</Tag>
@@ -3303,12 +3386,14 @@ Penalties:
 		<English>Industrious CT</English>
 		<French>Travailleur:Travailleuse:Travailleurs:Travailleuses</French>
 		<Russian>Òðóäîãîëèê</Russian>
+    <Italian>Industrioso</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_INDUSTRIOUS1</Tag>
 		<English>Industrious I</English>
 		<French>Travailleur:Travailleuse:Travailleurs:Travailleuses I</French>
 		<Russian>Òðóäîãîëèê I</Russian>
+    <Italian>Industrioso I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_INDUSTRIOUS1_PEDIA</Tag>
@@ -3338,6 +3423,7 @@ Penalties:
 		<English>Industrious II</English>
 		<French>Travailleur:Travailleuse:Travailleurs:Travailleuses II</French>
 		<Russian>Òðóäîãîëèê II</Russian>
+    <Italian>Industrioso II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_INDUSTRIOUS2_PEDIA</Tag>
@@ -3367,6 +3453,7 @@ Penalties:
 		<English>Industrious III</English>
 		<French>Travailleur:Travailleuse:Travailleurs:Travailleuses III</French>
 		<Russian>Òðóäîãîëèê III</Russian>
+    <Italian>Industrioso III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_INDUSTRIOUS3_PEDIA</Tag>
@@ -3426,12 +3513,14 @@ Penalties:
 		<English>Innovative CT</English>
 		<French>Innovant</French>
 		<Russian>Íîâàòîð</Russian>
+    <Italian>Innovativo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_INNOVATIVE1</Tag>
 		<English>Innovative I</English>
 		<French>Innovant I</French>
 		<Russian>Íîâàòîð I</Russian>
+    <Italian>Innovativo I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_INNOVATIVE1_PEDIA</Tag>
@@ -3461,6 +3550,7 @@ Penalties:
 		<English>Innovative II</English>
 		<French>Innovant II</French>
 		<Russian>Íîâàòîð II</Russian>
+    <Italian>Innovativo II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_INNOVATIVE2_PEDIA</Tag>
@@ -3492,6 +3582,7 @@ Penalties:
 		<English>Innovative III</English>
 		<French>Innovant III</French>
 		<Russian>Íîâàòîð III</Russian>
+    <Italian>Innovativo III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_INNOVATIVE3_PEDIA</Tag>
@@ -3555,12 +3646,14 @@ Penalties:
 		<English>Isolationist CT</English>
 		<French>Isolationiste</French>
 		<Russian>Èçîëÿöèîíèñò</Russian>
+    <Italian>Isolazionista</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ISOLATIONIST1</Tag>
 		<English>Isolationist I</English>
 		<French>Isolationiste I</French>
 		<Russian>Èçîëÿöèîíèñò I</Russian>
+    <Italian>Isolazionista I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ISOLATIONIST1_PEDIA</Tag>
@@ -3594,6 +3687,7 @@ Benefits:
 		<English>Isolationist II</English>
 		<French>Isolationiste II</French>
 		<Russian>Èçîëÿöèîíèñò II</Russian>
+    <Italian>Isolazionista II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ISOLATIONIST2_PEDIA</Tag>
@@ -3628,6 +3722,7 @@ Benefits:
 		<English>Isolationist III</English>
 		<French>Isolationiste III</French>
 		<Russian>Èçîëÿöèîíèñò III</Russian>
+    <Italian>Isolazionista III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ISOLATIONIST3_PEDIA</Tag>
@@ -3696,12 +3791,14 @@ Benefits:
 		<English>Megalomaniac CT</English>
 		<French>Mégalomaniaque</French>
 		<Russian>×åñòîëþáåö</Russian>
+    <Italian>Megalomane</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_MEGALOMANIAC1</Tag>
 		<English>Megalomaniac I</English>
 		<French>Mégalomaniaque I</French>
 		<Russian>×åñòîëþáåö I</Russian>
+    <Italian>Megalomane I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_MEGALOMANIAC1_PEDIA</Tag>
@@ -3732,6 +3829,7 @@ Benefits:
 		<English>Megalomaniac II</English>
 		<French>Mégalomaniaque II</French>
 		<Russian>×åñòîëþáåö II</Russian>
+    <Italian>Megalomane II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_MEGALOMANIAC2_PEDIA</Tag>
@@ -3763,6 +3861,7 @@ Benefits:
 		<English>Megalomaniac III</English>
 		<French>Mégalomaniaque III</French>
 		<Russian>×åñòîëþáåö III</Russian>
+    <Italian>Megalomane III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_MEGALOMANIAC3_PEDIA</Tag>
@@ -3825,12 +3924,14 @@ Benefits:
 		<English>Nomadic CT</English>
 		<French>Nomade</French>
 		<Russian>Êî÷åâíèê</Russian>
+    <Italian>Nomade</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_NOMADIC1</Tag>
 		<English>Nomadic I</English>
 		<French>Nomade I</French>
 		<Russian>Êî÷åâíèê I</Russian>
+    <Italian>Nomade I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_NOMADIC1_PEDIA</Tag>
@@ -3865,6 +3966,7 @@ Penalties:
 		<English>Nomadic II</English>
 		<French>Nomade II</French>
 		<Russian>Êî÷åâíèê II</Russian>
+    <Italian>Nomade II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_NOMADIC2_PEDIA</Tag>
@@ -3872,7 +3974,7 @@ Penalties:
 "Keep moving! Whether we are the cheetah or the gazelle, we run to survive. You can take whatever you want as long as you are faster than your opponent. Speed is key."
 Your leader's wanderlust has driven its way into every corner of society, making your people highly mobile and thriving when they can stay on the move, but suffering when they must settle. They are more in touch with the land and seasons and love tending to herds and hunting for food.
 Primary Benefits:
-	[ICON_BULLET]Free Nomadic II Promotion for Explorers, Animals, Mounted, Trade, and Wheeled units. Gives enhanced withdrawal and vision range.
+	[ICON_BULLET]Free Nomadic II Promotion for Explorers, Animals, Mounted, Trade, and Wheeled units. Gives enhanced withdrawal and visibility range.
 	[ICON_BULLET]All cities benefit from a higher Maximum cap on trade routes.
 Side Benefits:
 	[ICON_BULLET]Herding and hunting based buildings are faster to build.
@@ -3900,6 +4002,7 @@ Penalties:
 		<English>Nomadic III</English>
 		<French>Nomade III</French>
 		<Russian>Êî÷åâíèê III</Russian>
+    <Italian>Nomade III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_NOMADIC3_PEDIA</Tag>
@@ -3973,12 +4076,14 @@ Penalties:
 		<English>Organized CT</English>
 		<French>Organisé:Organisée:Organisés:Organisées</French>
 		<Russian>Îðãàíèçàòîð</Russian>
+    <Italian>Organizzato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ORGANIZED1</Tag>
 		<English>Organized I</English>
 		<French>Organisé:Organisée:Organisés:Organisées I</French>
 		<Russian>Îðãàíèçàòîð I</Russian>
+    <Italian>Organizzato I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ORGANIZED1_PEDIA</Tag>
@@ -4009,6 +4114,7 @@ Penalties:
 		<English>Organized II</English>
 		<French>Organisé:Organisée:Organisés:Organisées II</French>
 		<Russian>Îðãàíèçàòîð II</Russian>
+    <Italian>Organizzato II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ORGANIZED2_PEDIA</Tag>
@@ -4040,6 +4146,7 @@ Penalties:
 		<English>Organized III</English>
 		<French>Organisé:Organisée:Organisés:Organisées III</French>
 		<Russian>Îðãàíèçàòîð III</Russian>
+    <Italian>Organizzato III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ORGANIZED3_PEDIA</Tag>
@@ -4103,12 +4210,14 @@ Penalties:
 		<English>Philosophical CT</English>
 		<French>Philosophe:Philosophe:Philosophes:Philosophes</French>
 		<Russian>Ôèëîñîô</Russian>
+    <Italian>Filosofo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_PHILOSOPHICAL1</Tag>
 		<English>Philosophical I</English>
 		<French>Philosophe:Philosophe:Philosophes:Philosophes I</French>
 		<Russian>Ôèëîñîô I</Russian>
+    <Italian>Filosofo I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_PHILOSOPHICAL1_PEDIA</Tag>
@@ -4138,6 +4247,7 @@ Penalties:
 		<English>Philosophical II</English>
 		<French>Philosophe:Philosophe:Philosophes:Philosophes II</French>
 		<Russian>Ôèëîñîô II</Russian>
+    <Italian>Filosofo II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_PHILOSOPHICAL2_PEDIA</Tag>
@@ -4168,6 +4278,7 @@ Penalties:
 		<English>Philosophical III</English>
 		<French>Philosophe:Philosophe:Philosophes:Philosophes III</French>
 		<Russian>Ôèëîñîô III</Russian>
+    <Italian>Filosofo III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_PHILOSOPHICAL3_PEDIA</Tag>
@@ -4236,12 +4347,14 @@ Penalties:
 		<English>Politician CT</English>
 		<French>Politicien</French>
 		<Russian>Ïîëèòèê</Russian>
+    <Italian>Politico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POLITICIAN1</Tag>
 		<English>Politician I</English>
 		<French>Politicien I</French>
 		<Russian>Ïîëèòèê I</Russian>
+    <Italian>Politico I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POLITICIAN1_PEDIA</Tag>
@@ -4272,6 +4385,7 @@ Penalties:
 		<English>Politician II</English>
 		<French>Politicien II</French>
 		<Russian>Ïîëèòèê II</Russian>
+    <Italian>Politico II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POLITICIAN2_PEDIA</Tag>
@@ -4303,6 +4417,7 @@ Penalties:
 		<English>Politician III</English>
 		<French>Politicien III</French>
 		<Russian>Ïîëèòèê III</Russian>
+    <Italian>Politico III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POLITICIAN3_PEDIA</Tag>
@@ -4364,12 +4479,14 @@ Penalties:
 		<English>Populist CT</English>
 		<French>Populiste</French>
 		<Russian>Ïîïóëèñò</Russian>
+    <Italian>Populista</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POPULIST1</Tag>
 		<English>Populist I</English>
 		<French>Populiste I</French>
 		<Russian>Ïîïóëèñò I</Russian>
+    <Italian>Populista I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POPULIST1_PEDIA</Tag>
@@ -4400,6 +4517,7 @@ Benefits:
 		<English>Populist II</English>
 		<French>Populiste II</French>
 		<Russian>Ïîïóëèñò II</Russian>
+    <Italian>Populista II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POPULIST2_PEDIA</Tag>
@@ -4430,6 +4548,7 @@ Benefits:
 		<English>Populist III</English>
 		<French>Populiste III</French>
 		<Russian>Ïîïóëèñò III</Russian>
+    <Italian>Populista III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_POPULIST3_PEDIA</Tag>
@@ -4497,12 +4616,14 @@ Benefits:
 		<English>Protective CT</English>
 		<French>Protecteur</French>
 		<Russian>Ïîêðîâèòåëü</Russian>
+    <Italian>Protettivo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_PROTECTIVE1</Tag>
 		<English>Protective I</English>
 		<French>Protecteur I</French>
 		<Russian>Ïîêðîâèòåëü I</Russian>
+    <Italian>Protettivo I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_PROTECTIVE1_PEDIA</Tag>
@@ -4537,6 +4658,7 @@ Penalties:
 		<English>Protective II</English>
 		<French>Protecteur II</French>
 		<Russian>Ïîêðîâèòåëü II</Russian>
+    <Italian>Protettivo II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_PROTECTIVE2_PEDIA</Tag>
@@ -4571,6 +4693,7 @@ Penalties:
 		<English>Protective III</English>
 		<French>Protecteur III</French>
 		<Russian>Ïîêðîâèòåëü III</Russian>
+    <Italian>Protettivo III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_PROTECTIVE3_PEDIA</Tag>
@@ -4639,12 +4762,14 @@ Penalties:
 		<English>Revolutionary CT</English>
 		<French>Révolutionaire</French>
 		<Russian>Ðåâîëþöèîíåð</Russian>
-	</TEXT>
+    <Italian>Rivoluzionario</Italian>
+  </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_REVOLUTIONARY1</Tag>
 		<English>Revolutionary I</English>
 		<French>Révolutionaire I</French>
 		<Russian>Ðåâîëþöèîíåð I</Russian>
+    <Italian>Rivoluzionario I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_REVOLUTIONARY1_PEDIA</Tag>
@@ -4678,6 +4803,7 @@ Penalties:
 		<English>Revolutionary II</English>
 		<French>Révolutionaire II</French>
 		<Russian>Ðåâîëþöèîíåð II</Russian>
+    <Italian>Rivoluzionario II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_REVOLUTIONARY2_PEDIA</Tag>
@@ -4712,6 +4838,7 @@ Penalties:
 		<English>Revolutionary III</English>
 		<French>Révolutionaire III</French>
 		<Russian>Ðåâîëþöèîíåð III</Russian>
+    <Italian>Rivoluzionario III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_REVOLUTIONARY3_PEDIA</Tag>
@@ -4780,12 +4907,14 @@ Penalties:
 		<English>Scientific CT</English>
 		<French>Scientifique</French>
 		<Russian>Ó÷åíûé</Russian>
-	</TEXT>
+    <Italian>Scientifico</Italian>
+  </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SCIENTIFIC1</Tag>
 		<English>Scientific I</English>
 		<French>Scientifique I</French>
 		<Russian>Ó÷åíûé I</Russian>
+    <Italian>Scientifico I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SCIENTIFIC1_PEDIA</Tag>
@@ -4846,6 +4975,7 @@ Penalties:
 		<English>Scientific II</English>
 		<French>Scientifique II</French>
 		<Russian>Ó÷åíûé II</Russian>
+    <Italian>Scientifico II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SCIENTIFIC2_PEDIA</Tag>
@@ -4912,6 +5042,7 @@ Penalties:
 		<English>Scientific III</English>
 		<French>Scientifique III</French>
 		<Russian>Ó÷åíûé III</Russian>
+    <Italian>Scientifico III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SCIENTIFIC3_PEDIA</Tag>
@@ -5046,12 +5177,14 @@ Penalties:
 		<English>Seafaring CT</English>
 		<French>Marin</French>
 		<Russian>Ìîðåõîä</Russian>
+    <Italian>Marinaio</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SEAFARING1</Tag>
 		<English>Seafaring I</English>
 		<French>Marin I</French>
 		<Russian>Ìîðåõîä I</Russian>
+    <Italian>Marinaio I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SEAFARING1_PEDIA</Tag>
@@ -5088,6 +5221,7 @@ Penalties:
 		<English>Seafaring II</English>
 		<French>Marin II</French>
 		<Russian>Ìîðåõîä II</Russian>
+    <Italian>Marinaio II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SEAFARING2_PEDIA</Tag>
@@ -5123,6 +5257,7 @@ Penalties:
 		<English>Seafaring III</English>
 		<French>Marin III</French>
 		<Russian>Ìîðåõîä III</Russian>
+    <Italian>Marinaio III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SEAFARING3_PEDIA</Tag>
@@ -5196,12 +5331,14 @@ Penalties:
 		<English>Spiritual CT</English>
 		<French>Spirituel:Spirituelle:Spirituels:Spirituelles</French>
 		<Russian>Êëåðèêàë</Russian>
+    <Italian>Spirituale</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SPIRITUAL1</Tag>
 		<English>Spiritual I</English>
 		<French>Spirituel:Spirituelle:Spirituels:Spirituelles I</French>
 		<Russian>Êëåðèêàë I</Russian>
+    <Italian>Spirituale I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SPIRITUAL1_PEDIA</Tag>
@@ -5235,6 +5372,7 @@ Penalties:
 		<English>Spiritual II</English>
 		<French>Spirituel:Spirituelle:Spirituels:Spirituelles II</French>
 		<Russian>Êëåðèêàë II</Russian>
+    <Italian>Spirituale II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SPIRITUAL2_PEDIA</Tag>
@@ -5269,6 +5407,7 @@ Penalties:
 		<English>Spiritual III</English>
 		<French>Spirituel:Spirituelle:Spirituels:Spirituelles III</French>
 		<Russian>Êëåðèêàë III</Russian>
+    <Italian>Spirituale III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_SPIRITUAL3_PEDIA</Tag>
@@ -5336,12 +5475,14 @@ Penalties:
 		<English>Temperamental CT</English>
 		<French>Tempéré</French>
 		<Russian>Âñïûëü÷èâûé</Russian>
+    <Italian>Volubile</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_TEMPERAMENTAL1</Tag>
 		<English>Temperamental I</English>
 		<French>Tempéré I</French>
 		<Russian>Âñïûëü÷èâûé I</Russian>
+    <Italian>Volubile I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_TEMPERAMENTAL1_PEDIA</Tag>
@@ -5370,6 +5511,7 @@ Benefits:
 		<English>Temperamental II</English>
 		<French>Tempéré II</French>
 		<Russian>Âñïûëü÷èâûé II</Russian>
+    <Italian>Volubile II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_TEMPERAMENTAL2_PEDIA</Tag>
@@ -5398,6 +5540,7 @@ Benefits:
 		<English>Temperamental III</English>
 		<French>Tempéré III</French>
 		<Russian>Âñïûëü÷èâûé III</Russian>
+    <Italian>Volubile III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_TEMPERAMENTAL3_PEDIA</Tag>
@@ -5455,12 +5598,14 @@ Benefits:
 		<English>Covetous CT</English>
 		<French>Cupide</French>
 		<Russian>Êîðûñòíûé</Russian>
+    <Italian>Avaro</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COVETOUS1</Tag>
 		<English>Covetous I</English>
 		<French>Cupide I</French>
 		<Russian>Êîðûñòíûé I</Russian>
+    <Italian>Avaro I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COVETOUS1_PEDIA</Tag>
@@ -5492,6 +5637,7 @@ Benefits:
 		<English>Covetous II</English>
 		<French>Cupide II</French>
 		<Russian>Êîðûñòíûé II</Russian>
+    <Italian>Avaro II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COVETOUS2_PEDIA</Tag>
@@ -5524,6 +5670,7 @@ Benefits:
 		<English>Covetous III</English>
 		<French>Cupide III</French>
 		<Russian>Êîðûñòíûé III</Russian>
+    <Italian>Avaro III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COVETOUS3_PEDIA</Tag>
@@ -5589,13 +5736,15 @@ Benefits:
 		<French>Couard</French>
 		<German>Feige</German>
 		<Russian>Òðóñëèâûé</Russian>
-	</TEXT>
+    <Italian>Codardo</Italian>
+  </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COWARDLY1</Tag>
 		<English>Cowardly I</English>
 		<French>Couard I</French>
 		<German>Feige I</German>
 		<Russian>Òðóñëèâûé I</Russian>
+    <Italian>Codardo I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COWARDLY1_PEDIA</Tag>
@@ -5647,6 +5796,7 @@ Vorteile:
 		<French>Couard II</French>
 		<German>Feige II</German>
 		<Russian>Òðóñëèâûé II</Russian>
+    <Italian>Codardo II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COWARDLY2_PEDIA</Tag>
@@ -5701,6 +5851,7 @@ Vorteile:
 		<French>Couard III</French>
 		<German>Feige III</German>
 		<Russian>Òðóñëèâûé III</Russian>
+    <Italian>Codardo III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COWARDLY3_PEDIA</Tag>
@@ -5807,12 +5958,14 @@ Vorteile:
 		<English>Crooked CT</English>
 		<French>Cagneux</French>
 		<Russian>Öèíèê</Russian>
+    <Italian>Disonesto</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CROOKED1</Tag>
 		<English>Crooked I</English>
 		<French>Cagneux I</French>
 		<Russian>Öèíèê I</Russian>
+    <Italian>Disonesto I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CROOKED1_PEDIA</Tag>
@@ -5882,6 +6035,7 @@ Benefits:
 		<English>Crooked II</English>
 		<French>Cagneux II</French>
 		<Russian>Öèíèê II</Russian>
+    <Italian>Disonesto II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CROOKED2_PEDIA</Tag>
@@ -5955,6 +6109,7 @@ Benefits:
 		<English>Crooked III</English>
 		<French>Cagneux III</French>
 		<Russian>Öèíèê III</Russian>
+    <Italian>Disonesto III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CROOKED3_PEDIA</Tag>
@@ -6104,6 +6259,7 @@ Benefits:
 		<French>Défensif</French>
 		<German>Defensiv</German>
 		<Russian>Çàùèòíèê</Russian>
+    <Italian>Difensivo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DEFENSIVE1</Tag>
@@ -6111,6 +6267,7 @@ Benefits:
 		<French>Défensif I</French>
 		<German>Defensiv I</German>
 		<Russian>Çàùèòíèê I</Russian>
+    <Italian>Difensivo I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DEFENSIVE1_PEDIA</Tag>
@@ -6188,6 +6345,7 @@ Penalties:
 		<French>Défensif II</French>
 		<German>Defensiv II</German>
 		<Russian>Çàùèòíèê II</Russian>
+    <Italian>Difensivo II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DEFENSIVE2_PEDIA</Tag>
@@ -6265,6 +6423,7 @@ Penalties:
 		<French>Défensif III</French>
 		<German>Defensiv III</German>
 		<Russian>Çàùèòíèê III</Russian>
+    <Italian>Difensivo III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DEFENSIVE3_PEDIA</Tag>
@@ -6418,12 +6577,14 @@ Penalties:
 		<English>Dynamic CT</English>
 		<French>Dynamique</French>
 		<Russian>Äèíàìè÷íûé</Russian>
+    <Italian>Dinamico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DYNAMIC1</Tag>
 		<English>Dynamic I</English>
 		<French>Dynamique I</French>
 		<Russian>Äèíàìè÷íûé I</Russian>
+    <Italian>Dinamico I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DYNAMIC1_PEDIA</Tag>
@@ -6478,6 +6639,7 @@ Penalties:
 		<English>Dynamic II</English>
 		<French>Dynamique II</French>
 		<Russian>Äèíàìè÷íûé II</Russian>
+    <Italian>Dinamico II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DYNAMIC2_PEDIA</Tag>
@@ -6536,6 +6698,7 @@ Penalties:
 		<English>Dynamic III</English>
 		<French>Dynamique III</French>
 		<Russian>Äèíàìè÷íûé III</Russian>
+    <Italian>Dinamico III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DYNAMIC3_PEDIA</Tag>
@@ -6652,12 +6815,14 @@ Penalties:
 		<English>Efficient CT</English>
 		<French>Efficient</French>
 		<Russian>Ðà÷èòåëüíûé</Russian>
+    <Italian>Efficiente</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EFFICIENT1</Tag>
 		<English>Efficient I</English>
 		<French>Efficient I</French>
 		<Russian>Ðà÷èòåëüíûé I</Russian>
+    <Italian>Efficiente I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EFFICIENT1_PEDIA</Tag>
@@ -6706,6 +6871,7 @@ Penalties:
 		<English>Efficient II</English>
 		<French>Efficient II</French>
 		<Russian>Ðà÷èòåëüíûé II</Russian>
+    <Italian>Efficiente II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EFFICIENT2_PEDIA</Tag>
@@ -6756,6 +6922,7 @@ Penalties:
 		<English>Efficient III</English>
 		<French>Efficient III</French>
 		<Russian>Ðà÷èòåëüíûé III</Russian>
+    <Italian>Efficiente III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EFFICIENT3_PEDIA</Tag>
@@ -6854,12 +7021,14 @@ Penalties:
 		<English>Gloomy CT</English>
 		<French>Morne</French>
 		<Russian>Óãðþìûé</Russian>
+    <Italian>Pessimista</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLOOMY1</Tag>
 		<English>Gloomy I</English>
 		<French>Morne I</French>
 		<Russian>Óãðþìûé I</Russian>
+    <Italian>Pessimista I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLOOMY1_PEDIA</Tag>
@@ -6914,6 +7083,7 @@ Benefits:
 		<English>Gloomy II</English>
 		<French>Morne II</French>
 		<Russian>Óãðþìûé II</Russian>
+    <Italian>Pessimista II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLOOMY2_PEDIA</Tag>
@@ -6968,6 +7138,7 @@ Benefits:
 		<English>Gloomy III</English>
 		<French>Morne III</French>
 		<Russian>Óãðþìûé III</Russian>
+    <Italian>Pessimista III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLOOMY3_PEDIA</Tag>
@@ -7080,12 +7251,14 @@ Benefits:
 		<English>Glorious CT</English>
 		<French>Glorieux</French>
 		<Russian>Ñëàâíûé</Russian>
+    <Italian>Glorioso</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLORIOUS1</Tag>
 		<English>Glorious I</English>
 		<French>Glorieux I</French>
 		<Russian>Ñëàâíûé I</Russian>
+    <Italian>Glorioso I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLORIOUS1_PEDIA</Tag>
@@ -7136,6 +7309,7 @@ Penalties:
 		<English>Glorious II</English>
 		<French>Glorieux II</French>
 		<Russian>Ñëàâíûé II</Russian>
+    <Italian>Glorioso II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLORIOUS2_PEDIA</Tag>
@@ -7188,6 +7362,7 @@ Penalties:
 		<English>Glorious III</English>
 		<French>Glorieux III</French>
 		<Russian>Ñëàâíûé III</Russian>
+    <Italian>Glorioso III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLORIOUS3_PEDIA</Tag>
@@ -7296,12 +7471,14 @@ Penalties:
 		<English>Gluttonous CT</English>
 		<French>Glouton</French>
 		<Russian>×ðåâîóãîäíèê</Russian>
+    <Italian>Insaziabile</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLUTTONOUS1</Tag>
 		<English>Gluttonous I</English>
 		<French>Glouton I</French>
 		<Russian>×ðåâîóãîäíèê I</Russian>
+    <Italian>Insaziabile I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLUTTONOUS1_PEDIA</Tag>
@@ -7356,6 +7533,7 @@ Benefits:
 		<English>Gluttonous II</English>
 		<French>Glouton II</French>
 		<Russian>×ðåâîóãîäíèê II</Russian>
+    <Italian>Insaziabile II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLUTTONOUS2_PEDIA</Tag>
@@ -7410,6 +7588,7 @@ Benefits:
 		<English>Gluttonous III</English>
 		<French>Glouton III</French>
 		<Russian>×ðåâîóãîäíèê III</Russian>
+    <Italian>Insaziabile III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GLUTTONOUS3_PEDIA</Tag>
@@ -7524,12 +7703,14 @@ Benefits:
 		<English>Greedy CT</English>
 		<French>Avide</French>
 		<Russian>Ñêðÿãà</Russian>
+    <Italian>Avido</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GREEDY1</Tag>
 		<English>Greedy I</English>
 		<French>Avide I</French>
 		<Russian>Ñêðÿãà I</Russian>
+    <Italian>Avido I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GREEDY1_PEDIA</Tag>
@@ -7596,6 +7777,7 @@ Benefits:
 		<English>Greedy II</English>
 		<French>Avide II</French>
 		<Russian>Ñêðÿãà II</Russian>
+    <Italian>Avido II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GREEDY2_PEDIA</Tag>
@@ -7662,6 +7844,7 @@ Benefits:
 		<English>Greedy III</English>
 		<French>Avide III</French>
 		<Russian>Ñêðÿãà III</Russian>
+    <Italian>Avido III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GREEDY3_PEDIA</Tag>
@@ -7796,12 +7979,14 @@ Benefits:
 		<English>Grim CT</English>
 		<French>Sinistre</French>
 		<Russian>Ãðîçíûé</Russian>
+    <Italian>Severo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GRIM1</Tag>
 		<English>Grim I</English>
 		<French>Sinistre I</French>
 		<Russian>Ãðîçíûé I</Russian>
+    <Italian>Severo I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GRIM1_PEDIA</Tag>
@@ -7862,6 +8047,7 @@ Benefits:
 		<English>Grim II</English>
 		<French>Sinistre II</French>
 		<Russian>Ãðîçíûé II</Russian>
+    <Italian>Severo II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GRIM2_PEDIA</Tag>
@@ -7924,6 +8110,7 @@ Benefits:
 		<English>Grim III</English>
 		<French>Sinistre III</French>
 		<Russian>Ãðîçíûé III</Russian>
+    <Italian>Severo III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_GRIM3_PEDIA</Tag>
@@ -8048,12 +8235,14 @@ Benefits:
 		<English>Honest CT</English>
 		<French>Honnête</French>
 		<Russian>×åñòíûé</Russian>
+    <Italian>Onesto</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HONEST1</Tag>
 		<English>Honest I</English>
 		<French>Honnête I</French>
 		<Russian>×åñòíûé I</Russian>
+    <Italian>Onesto I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HONEST1_PEDIA</Tag>
@@ -8099,6 +8288,7 @@ Penalties:
 		<English>Honest II</English>
 		<French>Honnête II</French>
 		<Russian>×åñòíûé II</Russian>
+    <Italian>Onesto II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HONEST2_PEDIA</Tag>
@@ -8144,6 +8334,7 @@ Penalties:
 		<English>Honest III</English>
 		<French>Honnête III</French>
 		<Russian>×åñòíûé III</Russian>
+    <Italian>Onesto III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HONEST3_PEDIA</Tag>
@@ -8240,12 +8431,14 @@ Penalties:
 		<English>Humble CT</English>
 		<French>Humble</French>
 		<Russian>Ñêðîìíûé</Russian>
+    <Italian>Umile</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUMBLE1</Tag>
 		<English>Humble I</English>
 		<French>Humble I</French>
 		<Russian>Ñêðîìíûé I</Russian>
+    <Italian>Umile I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUMBLE1_PEDIA</Tag>
@@ -8298,6 +8491,7 @@ Penalties:
 		<English>Humble II</English>
 		<French>Humble II</French>
 		<Russian>Ñêðîìíûé II</Russian>
+    <Italian>Umile II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUMBLE2_PEDIA</Tag>
@@ -8352,6 +8546,7 @@ Penalties:
 		<English>Humble III</English>
 		<French>Humble III</French>
 		<Russian>Ñêðîìíûé III</Russian>
+    <Italian>Umile III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUMBLE3_PEDIA</Tag>
@@ -8460,12 +8655,14 @@ Penalties:
 		<English>Impulsive CT</English>
 		<French>Impulsif</French>
 		<Russian>Èìïóëüñèâíûé</Russian>
+    <Italian>Impulsivo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IMPULSIVE1</Tag>
 		<English>Impulsive I</English>
 		<French>Impulsif I</French>
 		<Russian>Èìïóëüñèâíûé I</Russian>
+    <Italian>Impulsivo I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IMPULSIVE1_PEDIA</Tag>
@@ -8518,6 +8715,7 @@ Benefits:
 		<English>Impulsive II</English>
 		<French>Impulsif II</French>
 		<Russian>Èìïóëüñèâíûé II</Russian>
+    <Italian>Impulsivo II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IMPULSIVE2_PEDIA</Tag>
@@ -8574,6 +8772,7 @@ Benefits:
 		<English>Impulsive III</English>
 		<French>Impulsif III</French>
 		<Russian>Èìïóëüñèâíûé III</Russian>
+    <Italian>Impulsivo III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IMPULSIVE3_PEDIA</Tag>
@@ -8686,12 +8885,14 @@ Benefits:
 		<English>Lawful CT</English>
 		<French>Légitime</French>
 		<Russian>Çàêîíîäàòåëü</Russian>
+    <Italian>Rispettoso della legge</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LAWFUL1</Tag>
 		<English>Lawful I</English>
 		<French>Légitime I</French>
 		<Russian>Çàêîíîäàòåëü I</Russian>
+    <Italian>Rispettoso della legge I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LAWFUL1_PEDIA</Tag>
@@ -8759,6 +8960,7 @@ Penalties:
 		<English>Lawful II</English>
 		<French>Légitime II</French>
 		<Russian>Çàêîíîäàòåëü II</Russian>
+    <Italian>Rispettoso della legge II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LAWFUL2_PEDIA</Tag>
@@ -8826,6 +9028,7 @@ Penalties:
 		<English>Lawful III</English>
 		<French>Légitime III</French>
 		<Russian>Çàêîíîäàòåëü III</Russian>
+    <Italian>Rispettoso della legge III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LAWFUL3_PEDIA</Tag>
@@ -8968,12 +9171,14 @@ Penalties:
 		<English>Lazy CT</English>
 		<French>Paresseux</French>
 		<Russian>Ïðàçäíûé</Russian>
+    <Italian>Pigro</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LAZY1</Tag>
 		<English>Lazy I</English>
 		<French>Paresseux I</French>
 		<Russian>Ïðàçäíûé I</Russian>
+    <Italian>Pigro I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LAZY1_PEDIA</Tag>
@@ -9024,6 +9229,7 @@ Benefits:
 		<English>Lazy II</English>
 		<French>Paresseux II</French>
 		<Russian>Ïðàçäíûé II</Russian>
+    <Italian>Pigro II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LAZY2_PEDIA</Tag>
@@ -9074,6 +9280,7 @@ Benefits:
 		<English>Lazy III</English>
 		<French>Paresseux III</French>
 		<Russian>Ïðàçäíûé III</Russian>
+    <Italian>Pigro III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LAZY3_PEDIA</Tag>
@@ -9176,12 +9383,14 @@ Benefits:
 		<English>Liar CT</English>
 		<French>Menteur</French>
 		<Russian>Ëæåö</Russian>
+    <Italian>Bugiardo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LIAR1</Tag>
 		<English>Liar I</English>
 		<French>Menteur I</French>
 		<Russian>Ëæåö I</Russian>
+    <Italian>Bugiardo I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LIAR1_PEDIA</Tag>
@@ -9227,6 +9436,7 @@ Benefits:
 		<English>Liar II</English>
 		<French>Menteur II</French>
 		<Russian>Ëæåö II</Russian>
+    <Italian>Bugiardo II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LIAR2_PEDIA</Tag>
@@ -9272,6 +9482,7 @@ Benefits:
 		<English>Liar III</English>
 		<French>Menteur III</French>
 		<Russian>Ëæåö III</Russian>
+    <Italian>Bugiardo III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_LIAR3_PEDIA</Tag>
@@ -9368,12 +9579,14 @@ Benefits:
 		<English>Medical CT</English>
 		<French>Médical</French>
 		<Russian>Ìåäèê</Russian>
+    <Italian>Medico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEDICAL1</Tag>
 		<English>Medical I</English>
 		<French>Médical I</French>
 		<Russian>Ìåäèê I</Russian>
+    <Italian>Medico I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEDICAL1_PEDIA</Tag>
@@ -9429,6 +9642,7 @@ Penalties:
 		<English>Medical II</English>
 		<French>Médical II</French>
 		<Russian>Ìåäèê II</Russian>
+    <Italian>Medico II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEDICAL2_PEDIA</Tag>
@@ -9486,6 +9700,7 @@ Penalties:
 		<English>Medical III</English>
 		<French>Médical III</French>
 		<Russian>Ìåäèê III</Russian>
+    <Italian>Medico III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEDICAL3_PEDIA</Tag>
@@ -9604,12 +9819,14 @@ Penalties:
 		<English>Meek CT</English>
 		<French>Docile</French>
 		<Russian>Ìÿãêîñåðäå÷íûé</Russian>
+    <Italian>Mite</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEEK1</Tag>
 		<English>Meek I</English>
 		<French>Docile I</French>
 		<Russian>Ìÿãêîñåðäå÷íûé I</Russian>
+    <Italian>Mite I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEEK1_PEDIA</Tag>
@@ -9669,6 +9886,7 @@ Benefits:
 		<English>Meek II</English>
 		<French>Docile II</French>
 		<Russian>Ìÿãêîñåðäå÷íûé II</Russian>
+    <Italian>Mite II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEEK2_PEDIA</Tag>
@@ -9728,6 +9946,7 @@ Benefits:
 		<English>Meek III</English>
 		<French>Docile III</French>
 		<Russian>Ìÿãêîñåðäå÷íûé III</Russian>
+    <Italian>Mite III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEEK3_PEDIA</Tag>
@@ -9848,12 +10067,14 @@ Benefits:
 		<English>Minimalist CT</English>
 		<French>Minimaliste</French>
 		<Russian>Ìèíèìàëèñò</Russian>
+    <Italian>Minimalista</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MINIMALIST1</Tag>
 		<English>Minimalist I</English>
 		<French>Minimaliste I</French>
 		<Russian>Ìèíèìàëèñò I</Russian>
+    <Italian>Minimalista I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MINIMALIST1_PEDIA</Tag>
@@ -9910,6 +10131,7 @@ Benefits:
 		<English>Minimalist II</English>
 		<French>Minimaliste II</French>
 		<Russian>Ìèíèìàëèñò II</Russian>
+    <Italian>Minimalista II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MINIMALIST2_PEDIA</Tag>
@@ -9966,6 +10188,7 @@ Benefits:
 		<English>Minimalist III</English>
 		<French>Minimaliste III</French>
 		<Russian>Ìèíèìàëèñò III</Russian>
+    <Italian>Minimalista III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MINIMALIST3_PEDIA</Tag>
@@ -10078,12 +10301,14 @@ Benefits:
 		<English>Naive CT</English>
 		<French>Naïf</French>
 		<Russian>Íàèâíûé</Russian>
+    <Italian>Ingenuo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NAIVE1</Tag>
 		<English>Naive I</English>
 		<French>Naïf I</French>
 		<Russian>Íàèâíûé I</Russian>
+    <Italian>Ingenuo I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NAIVE1_PEDIA</Tag>
@@ -10142,6 +10367,7 @@ Benefits:
 		<English>Naive II</English>
 		<French>Naïf II</French>
 		<Russian>Íàèâíûé II</Russian>
+    <Italian>Ingenuo II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NAIVE2_PEDIA</Tag>
@@ -10200,6 +10426,7 @@ Benefits:
 		<English>Naive III</English>
 		<French>Naïf III</French>
 		<Russian>Íàèâíûé III</Russian>
+    <Italian>Ingenuo III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NAIVE3_PEDIA</Tag>
@@ -10322,12 +10549,14 @@ Benefits:
 		<English>Naturalist CT</English>
 		<French>Naturaliste</French>
 		<Russian>Íàòóðàëèñò</Russian>
+    <Italian>Naturalista</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NATURALIST1</Tag>
 		<English>Naturalist I</English>
 		<French>Naturaliste I</French>
 		<Russian>Íàòóðàëèñò I</Russian>
+    <Italian>Naturalista I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NATURALIST1_PEDIA</Tag>
@@ -10387,6 +10616,7 @@ Penalties:
 		<English>Naturalist II</English>
 		<French>Naturaliste II</French>
 		<Russian>Íàòóðàëèñò II</Russian>
+    <Italian>Naturalista II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NATURALIST2_PEDIA</Tag>
@@ -10442,6 +10672,7 @@ Penalties:
 		<English>Naturalist III</English>
 		<French>Naturaliste III</French>
 		<Russian>Íàòóðàëèñò III</Russian>
+    <Italian>Naturalista III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NATURALIST3_PEDIA</Tag>
@@ -10558,12 +10789,14 @@ Penalties:
 		<English>Negligent CT</English>
 		<French>Négligent</French>
 		<Russian>Íåáðåæíûé</Russian>
+    <Italian>Negligente</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NEGLIGENT1</Tag>
 		<English>Negligent I</English>
 		<French>Négligent I</French>
 		<Russian>Íåáðåæíûé I</Russian>
+    <Italian>Negligente I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NEGLIGENT1_PEDIA</Tag>
@@ -10619,6 +10852,7 @@ Benefits:
 		<English>Negligent II</English>
 		<French>Négligent II</French>
 		<Russian>Íåáðåæíûé II</Russian>
+    <Italian>Negligente II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NEGLIGENT2_PEDIA</Tag>
@@ -10674,6 +10908,7 @@ Benefits:
 		<English>Negligent III</English>
 		<French>Négligent III</French>
 		<Russian>Íåáðåæíûé III</Russian>
+    <Italian>Negligente III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NEGLIGENT3_PEDIA</Tag>
@@ -10784,12 +11019,14 @@ Benefits:
 		<English>Negotiator CT</English>
 		<French>Négociateur</French>
 		<Russian>Íåãîöèàíò</Russian>
+    <Italian>Negoziatore</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NEGOTIATOR1</Tag>
 		<English>Negotiator I</English>
 		<French>Négociateur I</French>
 		<Russian>Íåãîöèàíò I</Russian>
+    <Italian>Negoziatore I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NEGOTIATOR1_PEDIA</Tag>
@@ -10848,6 +11085,7 @@ Penalties:
 		<English>Negotiator II</English>
 		<French>Négociateur II</French>
 		<Russian>Íåãîöèàíò II</Russian>
+    <Italian>Negoziatore II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NEGOTIATOR2_PEDIA</Tag>
@@ -10908,6 +11146,7 @@ Penalties:
 		<English>Negotiator III</English>
 		<French>Négociateur III</French>
 		<Russian>Íåãîöèàíò III</Russian>
+    <Italian>Negoziatore III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NEGOTIATOR3_PEDIA</Tag>
@@ -11029,6 +11268,7 @@ Penalties:
 		<French>Pacifiste</French>
 		<German>Pazifist</German>
 		<Russian>Ïàöèôèñò</Russian>
+    <Italian>Pacifista</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PACIFIST1</Tag>
@@ -11036,6 +11276,7 @@ Penalties:
 		<French>Pacifiste I</French>
 		<German>Pazifist I</German>
 		<Russian>Ïàöèôèñò I</Russian>
+    <Italian>Pacifista I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PACIFIST1_PEDIA</Tag>
@@ -11088,6 +11329,7 @@ Penalties:
 		<French>Pacifiste II</French>
 		<German>Pazifist II</German>
 		<Russian>Ïàöèôèñò II</Russian>
+    <Italian>Pacifista II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PACIFIST2_PEDIA</Tag>
@@ -11152,6 +11394,7 @@ Penalties:
 		<French>Pacifiste III</French>
 		<German>Pazifist III</German>
 		<Russian>Ïàöèôèñò III</Russian>
+    <Italian>Pacifista III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PACIFIST3_PEDIA</Tag>
@@ -11276,12 +11519,14 @@ Benefits:
 		<English>Pious CT</English>
 		<French>Pieux</French>
 		<Russian>Íàáîæíûé</Russian>
+    <Italian>Pio</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PIOUS1</Tag>
 		<English>Pious I</English>
 		<French>Pieux I</French>
 		<Russian>Íàáîæíûé I</Russian>
+    <Italian>Pio I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PIOUS1_PEDIA</Tag>
@@ -11348,6 +11593,7 @@ Penalties:
 		<English>Pious II</English>
 		<French>Pieux II</French>
 		<Russian>Íàáîæíûé II</Russian>
+    <Italian>Pio II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PIOUS2_PEDIA</Tag>
@@ -11412,6 +11658,7 @@ Penalties:
 		<English>Pious III</English>
 		<French>Pieux III</French>
 		<Russian>Íàáîæíûé III</Russian>
+    <Italian>Pio III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PIOUS3_PEDIA</Tag>
@@ -11542,12 +11789,14 @@ Penalties:
 		<English>Pragmatic CT</English>
 		<French>Pragmatique</French>
 		<Russian>Ïðàãìàòèê</Russian>
+    <Italian>Pragmatico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PRAGMATIC1</Tag>
 		<English>Pragmatic I</English>
 		<French>Pragmatique I</French>
 		<Russian>Ïðàãìàòèê I</Russian>
+    <Italian>Pragmatico I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PRAGMATIC1_PEDIA</Tag>
@@ -11598,6 +11847,7 @@ Penalties:
 		<English>Pragmatic II</English>
 		<French>Pragmatique II</French>
 		<Russian>Ïðàãìàòèê II</Russian>
+    <Italian>Pragmatico II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PRAGMATIC2_PEDIA</Tag>
@@ -11647,6 +11897,7 @@ Penalties:
 		<English>Pragmatic III</English>
 		<French>Pragmatique III</French>
 		<Russian>Ïðàãìàòèê III</Russian>
+    <Italian>Pragmatico III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PRAGMATIC3_PEDIA</Tag>
@@ -11746,12 +11997,14 @@ Penalties:
 		<English>Preeminent CT</English>
 		<French>Prééminent</French>
 		<Russian>Ïðåâîñõîäíûé</Russian>
+    <Italian>Centralista</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PREEMINENT1</Tag>
 		<English>Preeminent I</English>
 		<French>Prééminent I</French>
 		<Russian>Ïðåâîñõîäíûé I</Russian>
+    <Italian>Centralista I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PREEMINENT1_PEDIA</Tag>
@@ -11806,6 +12059,7 @@ Penalties:
 		<English>Preeminent II</English>
 		<French>Prééminent II</French>
 		<Russian>Ïðåâîñõîäíûé II</Russian>
+    <Italian>Centralista II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PREEMINENT2_PEDIA</Tag>
@@ -11862,6 +12116,7 @@ Penalties:
 		<English>Preeminent III</English>
 		<French>Prééminent III</French>
 		<Russian>Ïðåâîñõîäíûé III</Russian>
+    <Italian>Centralista III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PREEMINENT3_PEDIA</Tag>
@@ -11972,12 +12227,14 @@ Penalties:
 		<English>Progressive CT</English>
 		<French>Progressiste</French>
 		<Russian>Ïîçèòèâèñò</Russian>
+    <Italian>Progressista</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROGRESSIVE1</Tag>
 		<English>Progressive I</English>
 		<French>Progressiste I</French>
 		<Russian>Ïîçèòèâèñò I</Russian>
+    <Italian>Progressista I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROGRESSIVE1_PEDIA</Tag>
@@ -12025,6 +12282,7 @@ Penalties:
 		<English>Progressive II</English>
 		<French>Progressiste II</French>
 		<Russian>Ïîçèòèâèñò II</Russian>
+    <Italian>Progressista II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROGRESSIVE2_PEDIA</Tag>
@@ -12074,6 +12332,7 @@ Penalties:
 		<English>Progressive III</English>
 		<French>Progressiste III</French>
 		<Russian>Ïîçèòèâèñò III</Russian>
+    <Italian>Progressista III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROGRESSIVE3_PEDIA</Tag>
@@ -12170,12 +12429,14 @@ Penalties:
 		<English>Prolific CT</English>
 		<French>Prolifique</French>
 		<Russian>Ùåäðûé</Russian>
+    <Italian>Prolifico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROLIFIC1</Tag>
 		<English>Prolific I</English>
 		<French>Prolifique I</French>
 		<Russian>Ùåäðûé I</Russian>
+    <Italian>Prolifico I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROLIFIC1_PEDIA</Tag>
@@ -12218,6 +12479,7 @@ Penalties:
 		<English>Prolific II</English>
 		<French>Prolifique II</French>
 		<Russian>Ùåäðûé II</Russian>
+    <Italian>Prolifico II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROLIFIC2_PEDIA</Tag>
@@ -12266,6 +12528,7 @@ Penalties:
 		<English>Prolific III</English>
 		<French>Prolifique III</French>
 		<Russian>Ùåäðûé III</Russian>
+    <Italian>Prolifico III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROLIFIC3_PEDIA</Tag>
@@ -12358,12 +12621,14 @@ Penalties:
 		<English>Slob CT</English>
 		<French>Plouc</French>
 		<Russian>Çàãðÿçíèòåëü</Russian>
+    <Italian>Sciatto</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SLOB1</Tag>
 		<English>Slob I</English>
 		<French>Plouc I</French>
 		<Russian>Çàãðÿçíèòåëü I</Russian>
+    <Italian>Sciatto I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SLOB1_PEDIA</Tag>
@@ -12415,6 +12680,7 @@ Benefits:
 		<English>Slob II</English>
 		<French>Plouc II</French>
 		<Russian>Çàãðÿçíèòåëü II</Russian>
+    <Italian>Sciatto II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SLOB2_PEDIA</Tag>
@@ -12466,6 +12732,7 @@ Benefits:
 		<English>Slob III</English>
 		<French>Plouc III</French>
 		<Russian>Çàãðÿçíèòåëü III</Russian>
+    <Italian>Sciatto III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SLOB3_PEDIA</Tag>
@@ -12574,12 +12841,14 @@ Benefits:
 		<English>Strategist CT</English>
 		<French>Stratège</French>
 		<Russian>Ñòðàòåã</Russian>
+    <Italian>Stratega</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_STRATEGIST1</Tag>
 		<English>Strategist I</English>
 		<French>Stratège I</French>
 		<Russian>Ñòðàòåã I</Russian>
+    <Italian>Stratega I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_STRATEGIST1_PEDIA</Tag>
@@ -12635,6 +12904,7 @@ Penalties:
 		<English>Strategist II</English>
 		<French>Stratège II</French>
 		<Russian>Ñòðàòåã II</Russian>
+    <Italian>Stratega II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_STRATEGIST2_PEDIA</Tag>
@@ -12690,6 +12960,7 @@ Penalties:
 		<English>Strategist III</English>
 		<French>Stratège III</French>
 		<Russian>Ñòðàòåã III</Russian>
+    <Italian>Stratega III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_STRATEGIST3_PEDIA</Tag>
@@ -12800,12 +13071,14 @@ Penalties:
 		<English>Stubborn CT</English>
 		<French>Têtu</French>
 		<Russian>Óïðÿìûé</Russian>
+    <Italian>Testardo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_STUBBORN1</Tag>
 		<English>Stubborn I</English>
 		<French>Têtu I</French>
 		<Russian>Óïðÿìûé I</Russian>
+    <Italian>Testardo I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_STUBBORN1_PEDIA</Tag>
@@ -12858,6 +13131,7 @@ Benefits:
 		<English>Stubborn II</English>
 		<French>Têtu II</French>
 		<Russian>Óïðÿìûé II</Russian>
+    <Italian>Testardo II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_STUBBORN2_PEDIA</Tag>
@@ -12914,6 +13188,7 @@ Benefits:
 		<English>Stubborn III</English>
 		<French>Têtu III</French>
 		<Russian>Óïðÿìûé III</Russian>
+    <Italian>Testardo III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_STUBBORN3_PEDIA</Tag>
@@ -13027,6 +13302,7 @@ Benefits:
 		<French>Timide</French>
 		<German>Schüchtern</German>
 		<Russian>Ðîáêèé</Russian>
+    <Italian>Timido</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TIMID1</Tag>
@@ -13034,6 +13310,7 @@ Benefits:
 		<French>Timidee I</French>
 		<German>Schüchtern I</German>
 		<Russian>Ðîáêèé I</Russian>
+    <Italian>Timido I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TIMID1_PEDIA</Tag>
@@ -13114,6 +13391,7 @@ Benefits:
 		<French>Timidee II</French>
 		<German>Schüchtern II</German>
 		<Russian>Ðîáêèé II</Russian>
+    <Italian>Timido II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TIMID2_PEDIA</Tag>
@@ -13196,6 +13474,7 @@ Benefits:
 		<French>Timidee III</French>
 		<German>Schüchtern III</German>
 		<Russian>Ðîáêèé III</Russian>
+    <Italian>Timido III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TIMID3_PEDIA</Tag>
@@ -13356,12 +13635,14 @@ Benefits:
 		<English>Traditional CT</English>
 		<French>Traditionnel</French>
 		<Russian>Ðåàêöèîíåð</Russian>
+    <Italian>Tradizionalista</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TRADITIONAL1</Tag>
 		<English>Traditional I</English>
 		<French>Traditionnel I</French>
 		<Russian>Ðåàêöèîíåð I</Russian>
+    <Italian>Tradizionalista I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TRADITIONAL1_PEDIA</Tag>
@@ -13416,6 +13697,7 @@ Benefits:
 		<English>Traditional II</English>
 		<French>Traditionnel II</French>
 		<Russian>Ðåàêöèîíåð II</Russian>
+    <Italian>Tradizionalista II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TRADITIONAL2_PEDIA</Tag>
@@ -13472,6 +13754,7 @@ Benefits:
 		<English>Traditional III</English>
 		<French>Traditionnel III</French>
 		<Russian>Ðåàêöèîíåð III</Russian>
+    <Italian>Tradizionalista III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TRADITIONAL3_PEDIA</Tag>
@@ -13592,12 +13875,14 @@ Benefits:
 		<English>Unrefined CT</English>
 		<French>Non raffiné</French>
 		<Russian>Íåîòåñàííûé</Russian>
+    <Italian>Rozzo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNREFINED1</Tag>
 		<English>Unrefined I</English>
 		<French>Non raffiné I</French>
 		<Russian>Íåîòåñàííûé I</Russian>
+    <Italian>Rozzo I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNREFINED1_PEDIA</Tag>
@@ -13668,6 +13953,7 @@ Benefits:
 		<English>Unrefined II</English>
 		<French>Non raffiné II</French>
 		<Russian>Íåîòåñàííûé II</Russian>
+    <Italian>Rozzo II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNREFINED2_PEDIA</Tag>
@@ -13738,6 +14024,7 @@ Benefits:
 		<English>Unrefined III</English>
 		<French>Non raffiné III</French>
 		<Russian>Íåîòåñàííûé III</Russian>
+    <Italian>Rozzo III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNREFINED3_PEDIA</Tag>
@@ -13886,12 +14173,14 @@ Benefits:
 		<English>Unsanitary CT</English>
 		<French>Malsain</French>
 		<Russian>Íåðÿõà</Russian>
+    <Italian>Malsano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNSANITARY1</Tag>
 		<English>Unsanitary I</English>
 		<French>Malsain I</French>
 		<Russian>Íåðÿõà I</Russian>
+    <Italian>Malsano I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNSANITARY1_PEDIA</Tag>
@@ -13925,6 +14214,7 @@ Benefits:
 		<English>Unsanitary II</English>
 		<French>Malsain II</French>
 		<Russian>Íåðÿõà II</Russian>
+    <Italian>Malsano II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNSANITARY2_PEDIA</Tag>
@@ -13959,6 +14249,7 @@ Benefits:
 		<English>Unsanitary III</English>
 		<French>Malsain III</French>
 		<Russian>Íåðÿõà III</Russian>
+    <Italian>Malsano III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_UNSANITARY3_PEDIA</Tag>
@@ -14029,12 +14320,14 @@ Benefits:
 		<English>Usurper CT</English>
 		<French>Usurpateur</French>
 		<Russian>Óçóðïàòîð</Russian>
+    <Italian>Usurpatore</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_USURPER1</Tag>
 		<English>Usurper I</English>
 		<French>Usurpateur I</French>
 		<Russian>Óçóðïàòîð I</Russian>
+    <Italian>Usurpatore I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_USURPER1_PEDIA</Tag>
@@ -14063,6 +14356,7 @@ Benefits:
 		<English>Usurper II</English>
 		<French>Usurpateur II</French>
 		<Russian>Óçóðïàòîð II</Russian>
+    <Italian>Usurpatore II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_USURPER2_PEDIA</Tag>
@@ -14093,6 +14387,7 @@ Benefits:
 		<English>Usurper III</English>
 		<French>Usurpateur III</French>
 		<Russian>Óçóðïàòîð III</Russian>
+    <Italian>Usurpatore III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_USURPER3_PEDIA</Tag>
@@ -14155,6 +14450,7 @@ Benefits:
 		<French>Seigneur de Guerre</French>
 		<German>Kriegstreiber</German>
 		<Russian>Ïîäñòðåêàòåëü</Russian>
+    <Italian>Guerrafondaio</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_WARMONGER1</Tag>
@@ -14162,6 +14458,7 @@ Benefits:
 		<French>Seigneur de Guerre I</French>
 		<German>Kriegstreiber I</German>
 		<Russian>Ïîäñòðåêàòåëü I</Russian>
+    <Italian>Guerrafondaio I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_WARMONGER1_PEDIA</Tag>
@@ -14226,6 +14523,7 @@ Nachteile:
 		<French>Seigneur de Guerre II</French>
 		<German>Kriegstreiber II</German>
 		<Russian>Ïîäñòðåêàòåëü II</Russian>
+    <Italian>Guerrafondaio II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_WARMONGER2_PEDIA</Tag>
@@ -14291,6 +14589,7 @@ Nachteile:
 		<French>Seigneur de Guerre III</French>
 		<German>Kriegstreiber III</German>
 		<Russian>Ïîäñòðåêàòåëü III</Russian>
+    <Italian>Guerrafondaio III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_WARMONGER3_PEDIA</Tag>
@@ -14422,12 +14721,14 @@ Nachteile:
 		<English>Zealous CT</English>
 		<French>Zélé</French>
 		<Russian>Ôàíàòèê</Russian>
+    <Italian>Infervorato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ZEALOUS1</Tag>
 		<English>Zealous I</English>
 		<French>Zélé I</French>
 		<Russian>Ôàíàòèê I</Russian>
+    <Italian>Infervorato I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ZEALOUS1_PEDIA</Tag>
@@ -14460,6 +14761,7 @@ Benefits:
 		<English>Zealous II</English>
 		<French>Zélé II</French>
 		<Russian>Ôàíàòèê II</Russian>
+    <Italian>Infervorato II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ZEALOUS2_PEDIA</Tag>
@@ -14496,6 +14798,7 @@ Benefits:
 		<English>Zealous III</English>
 		<French>Zélé III</French>
 		<Russian>Ôàíàòèê III</Russian>
+    <Italian>Infervorato III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ZEALOUS3_PEDIA</Tag>

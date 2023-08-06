@@ -2,20 +2,22 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_MYTHS_LEGENDS_STORIES</Tag>
-		<English>1. Folklore</English>
+		<English>Folklore</English>
+    <Italian>Folklore</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_MYTHS_LEGENDS_STORIES_PEDIA</Tag>
 		<English>Folklore buildings represent oral traditions and have the main aim of simulating the neolithic burst in "scientific" discovery by providing science. Folklore give themselves to simulate their spread. Folklore provides education to represent the written tradition such as stories, fables, and commoner knowledge about environment or animal groups. There are Folklores about individual animals (e.g. Moon Bear), animal groups (e.g. Bears), natural elements (Earth, Sky, Sea, etc.), landscapes (a C2C extension to Platyping's Natural Wonders component) and mythical beasts.</English>
+    <Italian>Gli edifici folcloristici rappresentano tradizioni orali e hanno lo scopo principale di simulare l'esplosione neolitica nella scoperta "scientifica" fornendo Scienza. Il folklore simula la loro diffusione. Il folklore fornisce istruzione per rappresentare le tradizioni scritte come storie, favole e conoscenze più comuni sull'ambiente o sui gruppi di animali. Ci sono folclori su singoli animali (es. orso della luna), gruppi di animali (es. orsi), elementi naturali (terra, cielo, mare, ecc.), paesaggi (un'estensione di C2C delle meraviglie naturali) e bestie mitiche.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_SUBDUED_ANIMALS</Tag>
-		<English>1. Subdued animals</English>
-		<French>1. Animaux apprivoisés</French>
-		<German>1. Gefangene Tiere</German>
-		<Italian>1. Animali addomesticati</Italian>
-		<Polish>1. Poskromione zwierzęta</Polish>
-		<Russian>1. Ïðèðó÷åííûå æèâîòíûå</Russian>
+		<English>Subdued animals</English>
+		<French>Animaux apprivoisés</French>
+		<German>Gefangene Tiere</German>
+		<Italian>Animali addomesticati</Italian>
+		<Polish>Poskromione zwierzęta</Polish>
+		<Russian>Ïðèðó÷åííûå æèâîòíûå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Tag>
@@ -35,7 +37,7 @@
 		<Tag>TXT_KEY_CONCEPT_TALESOF_SEA_ANIMALS_PEDIA</Tag>
 		<English>Tales of sea animals are stories about sea animals defeated in combat.</English>
 		<French>Les histoires d'animaux marins sont des histoires d'animaux marins vaincus au combat.</French>
-		<Italian>Le storie di animali marini sono storie riguardanti creature marine sconfitte in combattimento.</Italian>
+		<Italian>Le storie di animali marini sono storie riguardanti creature marine sconfitte in battaglia.</Italian>
 		<Polish>Opowieści o morskich zwierzętach są opowieściami o zwierzętach pokonanych w walce.</Polish>
 		<Russian>Ðàññêàçû î ìîðñêèõ æèâîòíûõ - ýòî ðàññêàçû î ïîáåæäåííûõ â áîþ ìîðñêèõ ñóùåñòâàõ.</Russian>
 	</TEXT>
