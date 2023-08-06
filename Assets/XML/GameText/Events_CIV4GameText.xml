@@ -493,7 +493,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_COASTAL_REEF</Tag>
-		<English>One of our ships sank when caught in surprise by a treacherous coastal .</English>
+		<English>One of our ships sank when caught in surprise by a treacherous coastal reef.</English>
 		<French>Un de nos navires s'est échoué en essayant de naviguer à travers des récifs.</French>
 		<German>Eines unserer Schiffe sank beim Versuch ein tückisches Küstenriff zu umfahren.</German>
 		<Italian>Una delle nostre navi è affondata mentre stava navigando in acque costiere piuttosto insidiose.</Italian>
@@ -2401,7 +2401,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_STUCK_IN_SWAMP_1</Tag>
-		<English>A foolish unit of the %s1_civ_adjective empire got lost in vast swamplands. Its gonna take some time for them to recover.</English>
+		<English>A foolish unit of the %s1_civ_adjective empire got lost in vast swamplands. It's going to take some time for them to recover.</English>
 		<French>Une unité stupide de l'empire %s1_civ_adjective s'est perdue dans les marais. Il leur faudra un peu de temps pour récupérer.</French>
 		<Italian>Una sconsiderata unità dell'Impero %s1_civ_adjective si è persa nelle paludi. Ci vorrà del tempo per recuperarli.</Italian>
 		<Polish>Głupia jednostka %s1_civ_adjective zgubiła się na bagnach. Zajmie jej trochę czasu za nim się wydostanie.</Polish>
@@ -10909,6 +10909,10 @@
 		<German>Krabbenchips, die in unseren Städten hergestellt werden, sind in der Region sehr beliebt.</German>
 		<Italian>I tortini di granchio preparati nelle nostre città sono diventati incredibilmente popolari in tutta la regione.</Italian>
 		<Spanish>Las tartas de cangrejo preparadas en nuestras ciudades se han vuelto enormemente populares en toda la región.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_CRAB_CAKES_1</Tag>
+		<English>If everything evolves into crabs, what do crabs evolve into? Now we have our answer.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_CRISIS_IN_THE_SENATE_1</Tag>
