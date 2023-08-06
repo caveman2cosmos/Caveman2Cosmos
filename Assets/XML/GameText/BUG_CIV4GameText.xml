@@ -6615,7 +6615,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYAIMAXIMUMDIFF_HOVER</Tag>
 		<English>The maximum difficulty that AI can be raised to when playing with Flexible Difficulty</English>
-		<Italian>La massima difficoltà a cui l'IA può essere portata quando si gioca con la Difficoltà Flessibile<Italian>
+		<Italian>La massima difficoltà a cui l'IA può essere portata quando si gioca con la Difficoltà Flessibile</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYAIMAXIMUMDIFF_LIST</Tag>
@@ -6678,7 +6678,7 @@
 	<TEXT>		
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYAITURNINCREMENTS_HOVER</Tag>
 		<English>How often the game checks AI difficulty level and adjusts it. Requires Flexible Difficulty to be enabled.</English>
-		<Italian>Quanto spesso il sistema controlla la difficoltà dell'IA e la cambia. Difficoltà flessibile deve essere attiva.<Italian>
+		<Italian>Quanto spesso il sistema controlla la difficoltà dell'IA e la cambia. Difficoltà flessibile deve essere attiva.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYAITURNINCREMENTS_TEXT</Tag>
