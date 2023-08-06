@@ -6611,8 +6611,10 @@
 		<Italian>Difficoltà minima</Italian>
 		<Spanish>Dificultad mínima</Spanish>
 		<Russian>Ìèí. ñëîæíîñòü</Russian>
-				<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYAIMAXIMUMDIFF_HOVER</Tag>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYAIMAXIMUMDIFF_HOVER</Tag>
 		<English>The maximum difficulty that AI can be raised to when playing with Flexible Difficulty</English>
+		<Italian>La massima difficoltà a cui l'IA può essere portata quando si gioca con la Difficoltà Flessibile<Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYAIMAXIMUMDIFF_LIST</Tag>
