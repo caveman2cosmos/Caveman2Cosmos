@@ -76,7 +76,7 @@
 		<French>%F1 : %s2 (%D3/tour)</French>
 		<German>%F1: %s2 (%D3/Runde)</German>
 		<Italian>%F1: %s2 %D3 a turno</Italian>
-		<Spanish>%F1: %s2 %D3 a turno</Spanish>
+		<Spanish>%F1: %s2 (%D3/turno)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_COMMERCE_RATE_FLOAT</Tag>
@@ -101,7 +101,7 @@
 		<French>%F1 : (%D2/tour)</French>
 		<German>%F1: (%D2/Runde)</German>
 		<Italian>%F1: %D2 a turno</Italian>
-		<Spanish>%F1: %D2 a turno</Spanish>
+		<Spanish>%F1: (%D2/turno)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_GROWING</Tag>
@@ -1486,11 +1486,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_NEEDS_CULTURE_BORDER</Tag>
-		<English>[COLOR_WARNING_TEXT]Must be within our Cultural Borders.[COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]Uniquement à l'intérieur de nos frontières culturelles.[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Muss sich innerhalb unserer kulturellen Grenzen befinden.[COLOR_REVERT]</German>
+				<English>[COLOR_WARNING_TEXT]Must be within Cultural Borders owned by of one of our cities.[COLOR_REVERT]</English>
+		<!-- <French>[COLOR_WARNING_TEXT]Uniquement à l'intérieur de nos frontières culturelles.[COLOR_REVERT]</French> -->
+		<!-- <German>[COLOR_WARNING_TEXT]Muss sich innerhalb unserer kulturellen Grenzen befinden.[COLOR_REVERT]</German> -->
 		<Italian>[COLOR_WARNING_TEXT]Bisogna essere all'interno dei propri confini culturali.[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_WARNING_TEXT]Ha de estar dentro de las fronteras de nuestra cultura.[COLOR_REVERT]</Spanish>
+		<!-- <Spanish>[COLOR_WARNING_TEXT]Ha de estar dentro de las fronteras de nuestra cultura.[COLOR_REVERT]</Spanish> -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_NEEDS_OUT_RIVAL_CULTURE_BORDER</Tag>
@@ -3021,7 +3021,7 @@
 		<French>[NEWLINE]%d1 [ICON_PRODUCTION] (%d2 [ICON_PRODUCTION]/tour)</French>
 		<German>[NEWLINE]%d1 [ICON_PRODUCTION] (%d2 [ICON_PRODUCTION]/Runde)</German>
 		<Italian>[NEWLINE]%d1 [ICON_PRODUCTION] (%d2 [ICON_PRODUCTION] a turno</Italian>
-		<Spanish>[NEWLINE]%d1 [ICON_PRODUCTION] (%d2 [ICON_PRODUCTION] a turno</Spanish>
+		<Spanish>[NEWLINE]%d1 [ICON_PRODUCTION] (%d2 [ICON_PRODUCTION]/turno)</Spanish>
 		<Polish>[NEWLINE]%d1 [ICON_PRODUCTION] (%d2 [ICON_PRODUCTION]/turę)</Polish>
 		<Russian>[NEWLINE]%d1 [ICON_PRODUCTION] (%d2 [ICON_PRODUCTION]/Õîä)</Russian>
 	</TEXT>
@@ -3075,7 +3075,7 @@
 		<French>[NEWLINE]%d1 [ICON_FOOD] + %d2 [ICON_PRODUCTION]/tour (%d7 [ICON_PRODUCTION]/tour)[NEWLINE]%s3: %d4/%d5 [ICON_PRODUCTION] (%d6 [NUM6:tour:tours])</French>
 		<German>[NEWLINE]%d1 [ICON_FOOD] + %d2 [ICON_PRODUCTION]/Runde (%d7 [ICON_PRODUCTION]/Runde)[NEWLINE]%s3: %d4/%d5 [ICON_PRODUCTION] (%d6 [NUM6:Runde:Runden])</German>
 		<Italian>[NEWLINE]%d1 [ICON_FOOD] + %d2 [ICON_PRODUCTION]/Turno (%d7 [ICON_PRODUCTION] a turno[NEWLINE]%s3: %d4/%d5 [ICON_PRODUCTION] (%d6 [NUM6:Turno:turni])</Italian>
-		<Spanish>[NEWLINE]%d1 [ICON_FOOD] + %d2 [ICON_PRODUCTION]/turno (%d7 [ICON_PRODUCTION] a turno[NEWLINE]%s3: %d4/%d5 [ICON_PRODUCTION] (%d6 [NUM6:turno:turnos])</Spanish>
+		<Spanish>[NEWLINE]%d1 [ICON_FOOD] + %d2 [ICON_PRODUCTION]/turno (%d7 [ICON_PRODUCTION]/turno)[NEWLINE]%s3: %d4/%d5 [ICON_PRODUCTION] (%d6 [NUM6:turno:turnos])</Spanish>
 		<Polish>[NEWLINE]%d1 [ICON_FOOD] + %d2 [ICON_PRODUCTION]/turę (%d7 [ICON_PRODUCTION]/turę)[NEWLINE]%s3: %d4/%d5 [ICON_PRODUCTION] (%d6 [NUM6:tura:tur])</Polish>
 		<Russian>[NEWLINE]%d1 [ICON_FOOD] + %d2 [ICON_PRODUCTION]/Õîä (%d7 [ICON_PRODUCTION]/Õîä)[NEWLINE]%s3: %d4/%d5 [ICON_PRODUCTION] (%d6 [NUM6:Õîä:Õîäîâ])</Russian>
 	</TEXT>
@@ -3135,7 +3135,7 @@
 		<French>[NEWLINE]%d1 [ICON_PRODUCTION]/tour (%d6 [ICON_PRODUCTION]/tour)[NEWLINE]%s2: %d3/%d4 [ICON_PRODUCTION] (%d5 [NUM5:tour:tours])</French>
 		<German>[NEWLINE]%d1 [ICON_PRODUCTION]/Runde (%d6 [ICON_PRODUCTION]/Runde)[NEWLINE]%s2: %d3/%d4 [ICON_PRODUCTION] (%d5 [NUM5:Runde:Runden])</German>
 		<Italian>[NEWLINE]%d1 [ICON_PRODUCTION]/Turno (%d6 [ICON_PRODUCTION] a turno[NEWLINE]%s2: %d3/%d4 [ICON_PRODUCTION] (%d5 [NUM5:Turno:turni])</Italian>
-		<Spanish>[NEWLINE]%d1 [ICON_PRODUCTION]/turno (%d6 [ICON_PRODUCTION] a turno[NEWLINE]%s2: %d3/%d4 [ICON_PRODUCTION] (%d5 [NUM5:turno:turnos])</Spanish>
+		<Spanish>[NEWLINE]%d1 [ICON_PRODUCTION]/turno (%d6 [ICON_PRODUCTION]/turno)[NEWLINE]%s2: %d3/%d4 [ICON_PRODUCTION] (%d5 [NUM5:turno:turnos])</Spanish>
 		<Polish>[NEWLINE]%d1 [ICON_PRODUCTION]/turę (%d6 [ICON_PRODUCTION]/turę)[NEWLINE]%s2: %d3/%d4 [ICON_PRODUCTION] (%d5 [NUM5:tura:tur])</Polish>
 		<Russian>[NEWLINE]%d1 [ICON_PRODUCTION]/Õîä (%d6 [ICON_PRODUCTION]/Õîä)[NEWLINE]%s2: %d3/%d4 [ICON_PRODUCTION] (%d5 [NUM5:Õîä:Õîäîâ])</Russian>
 	</TEXT>
@@ -4744,6 +4744,15 @@
 		<Polish>%s1_BldgName został wybudowany przez mieszkańców miasta %s2_CityName</Polish>
 		<Russian>%s1_BldgName была утрачена в городе %s2_CityName</Russian>
 	</TEXT>
+  <TEXT>
+		<Tag>TXT_KEY_NATURAL_WONDERS</Tag>
+		<English>1. Natural Wonders</English>
+		<French>1. Merveilles Naturelles</French>
+		<German>1. Naturwunder</German>
+		<Polish>1. Cuda Natury</Polish>
+		<Russian>1. ×óäî ïðèðîäû</Russian>
+    <Italian>Meraviglie naturali</Italian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_NATURAL_WONDERS_PEDIA</Tag>
 		<English>[H1]Natural Wonders[\H1][PARAGRAPH:1]Natural Wonders include marvels that truly display the grand beauty of the natural world. Natural Wonders permanently increase happiness when seen by a civilization and grants Gold for the first civilization. Cities get a free specialist for each Natural Wonder nearby.</English>
@@ -6171,23 +6180,23 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ENHANCED_TECH_CONQUEST_FAIL</Tag>
-		<English>You find nothing worth learning from the inhabitants of</English>
-		<French>Vous n'avez rien pu obtenir d'utile de la part des habitants de</French>
-		<German>Es gibt nichts Lernenswertes zu finden bei den Einwohnern von</German>
-		<Italian>Non hai trovato niente che valesse la pena di imparare dagli abitanti di</Italian>
-		<Spanish>No has encontrado nada que aprender de los habitantes de</Spanish>
-		<Polish>Nie znalazłeś niczego wartego do nauczenia od mieszkańców</Polish>
-		<Russian>Âû òàê è íå íàøëè íè÷åãî ñòîÿùåãî äëÿ èçó÷åíèÿ ó òóçåìöåâ.</Russian>
+		<English>You find nothing worth learning from the inhabitants of %s</English>
+		<French>Vous n'avez rien pu obtenir d'utile de la part des habitants de %s</French>
+		<German>Es gibt nichts Lernenswertes zu finden bei den Einwohnern von %s</German>
+		<Italian>Non hai trovato niente che valesse la pena di imparare dagli abitanti di %s</Italian>
+		<Spanish>No has encontrado nada que aprender de los habitantes de %s</Spanish>
+		<Polish>Nie znalazłeś niczego wartego do nauczenia od mieszkańców %s</Polish>
+		<Russian>Âû òàê è íå íàøëè íè÷åãî ñòîÿùåãî äëÿ èçó÷åíèÿ ó òóçåìöåâ %s.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ENHANCED_TECH_CONQUEST_SUCESS</Tag>
-		<English>From the inhabitants of %s, you learn some of the secrets of: %s</English>
-		<French>En interrogeant les habitants de %s, vous avez découvert des secrets concernant %s</French>
-		<German>Bei der Befragung der Einwohner von %s, entdecken Sie die Geheimnisse der Technologie %s</German>
-		<Italian>Interrogando gli abitanti di %s, hai scoperto alcuni segreti della tecnologia %s</Italian>
-		<Spanish>De los habitantes de %s, has aprendido algunos de los secretos de la tecnología %s.</Spanish>
-		<Polish>Od mieszkańców %s nauczyłeś się sekretów: %s</Polish>
-		<Russian>От жителей %s вы узнаете некоторые секреты: %s</Russian>
+		<English>From the inhabitants of %s, you learn some of the secrets of:</English>
+		<French>En interrogeant les habitants de %s, vous avez découvert des secrets concernant</French>
+		<German>Bei der Befragung der Einwohner von %s, entdecken Sie die Geheimnisse der Technologie</German>
+		<Italian>Interrogando gli abitanti di %s, hai scoperto alcuni segreti della tecnologia</Italian>
+		<Spanish>De los habitantes de %s, has aprendido algunos de los secretos de la tecnología.</Spanish>
+		<Polish>Od mieszkańców %s nauczyłeś się sekretów:</Polish>
+		<Russian>От жителей %s вы узнаете некоторые секреты:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_ANCIENT</Tag>
@@ -9500,7 +9509,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BEACON_GREAT_BARRIER_REEF</Tag>
-		<English>Beacon(Great Barrier Reef)</English>
+		<English>Beacon (Great Barrier Reef)</English>
 		<French>
 			<Text>Balise - Grande barrière de corails</Text>
 			<Gender>Female</Gender>
@@ -9518,7 +9527,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER_REEF</Tag>
-		<English>Lighthouse(Great Barrier Reef)</English>
+		<English>Lighthouse (Great Barrier Reef)</English>
 		<French>
 			<Text>Phare - Grande barrière de corails</Text>
 			<Gender>Male</Gender>
@@ -10065,26 +10074,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACE_CITY_BAR_SPECIALIST_ADDENDUM</Tag>
 		<English>(%d1)</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_INVASION_ENDED</Tag>
-		<English>We've managed to seal the entrance into %s1, and our fortifications are once again secure.</English>
-		<French>Nous avons réussi à condamner l'entrée de %s1, et nos fortifications sont à nouveau sûres.</French>
-		<German>Wir haben es geschafft, den Geheimeingang in die Stadt %s1 zu verschließen. Unsere Befestigungsanlagen sind nun wieder sicher.</German>
-		<Italian>Abbiamo sigillato gli accessi a %s1, e le nostre fortificazioni sono di nuovo sicure.</Italian>
-		<Spanish>Hemos logrado sellar la entrada a %s1, y nuestras fortificaciones vuelven a ser seguras.</Spanish>
-		<Polish>Udało nam się uszczelnić przejście w %s1. Nasze Fortyfikacje są znów bezpieczne.</Polish>
-		<Russian>Íàì óäàëîñü çàïå÷àòàòü âõîä â %s1, è íàøè óêðåïëåíèÿ ñíîâà áåçîïàñíû.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_INVASION_SUCCESSFUL</Tag>
-		<English>Our troops have discovered a secret entrance into %s1!</English>
-		<French>Nos troupes ont découvert une entrée secrète dans %s1!</French>
-		<German>Unsere Einheiten haben einen geheimen Eingang in die Stadt %s1 entdeckt!</German>
-		<Italian>Le nostre truppe hanno trovato un'entrata segreta a %s1!</Italian>
-		<Spanish>¡Nuestras tropas han descubierto una entrada secreta hacia %s1!</Spanish>
-		<Polish>Nasi żołnierze odkryli tajne przejście w %s1!</Polish>
-		<Russian>Íàøè âîéñêà îáíàðóæèëè ñåêðåòíûé âõîä â %s1!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INVESTIGATION</Tag>
@@ -14451,14 +14440,14 @@
 		<Italian>La tua civiltà è la prima a scoprire la tecnologia [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT]! Scegli una tecnologia gratuita...</Italian>
 		<Spanish>Vuestra civilización ha sido la primera en descubrir [NUM1:el:la:los:las] [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT]. Elegid una tecnología gratis...</Spanish>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_FOOD_THRESHOLD</Tag>
-		<English>Food: %d1_Num/%d2_Threshold [ICON_FOOD]</English>
-		<French>Nourriture : %d1_Num/%d2_Threshold [ICON_FOOD]</French>
-		<German>Nahrung: %d1_Num/%d2_Threshold [ICON_FOOD]</German>
-		<Italian>Cibo: [COLOR_HIGHLIGHT_TEXT]%d1_Num[COLOR_REVERT] / [COLOR_HIGHLIGHT_TEXT]%d2_Threshold[COLOR_REVERT]  [ICON_FOOD]</Italian>
-		<Spanish>Alimentos: %d1_Num/%d2_Threshold [ICON_FOOD]</Spanish>
-	</TEXT>
+  <TEXT>
+    <Tag>TXT_KEY_MISC_FOOD_THRESHOLD</Tag>
+    <English>Food: %d1/%d2 [ICON_FOOD][NEWLINE]* %d3 [ICON_FOOD] stored for the next growth cycle.</English>
+    <French>Nourriture : %d1_Num/%d2_Threshold [ICON_FOOD][NEWLINE]* %d3 [ICON_FOOD] stored for the next growth cycle.</French>
+    <German>Nahrung: %d1_Num/%d2_Threshold [ICON_FOOD][NEWLINE]* %d3 [ICON_FOOD] stored for the next growth cycle.</German>
+    <Italian>Cibo: [COLOR_HIGHLIGHT_TEXT]%d1_Num[COLOR_REVERT] / [COLOR_HIGHLIGHT_TEXT]%d2_Threshold[COLOR_REVERT]  [ICON_FOOD]</Italian>
+    <Spanish>Alimentos: %d1_Num/%d2_Threshold [ICON_FOOD][NEWLINE]* %d3 [ICON_FOOD] stored for the next growth cycle.</Spanish>
+  </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_FORCED_SPECIALIST</Tag>
 		<English>(%d1_Num Forced)</English>
@@ -15759,6 +15748,11 @@
 		<Polish>Właściciel</Polish>
 		<Russian>Âëàäåëåö</Russian>
 	</TEXT>
+  <TEXT>
+		<Tag>TXT_KEY_MISC_NO_CITY_INFLUENCE</Tag>
+		<English>Not in %s1_CivAdj city influence.</English>
+		<Italian>Non è nell'influenza di una città %s1_CivAdj.</Italian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PEACE_TREATY</Tag>
 		<English>Peace Treaty (%d1_Num Turns)</English>
@@ -15919,7 +15913,7 @@
 		<French>[SPACE][COLOR_POSITIVE_TEXT](%D1_Change/tour)[COLOR_REVERT]</French>
 		<German>[SPACE][COLOR_POSITIVE_TEXT](%D1_Change/Runde)[COLOR_REVERT]</German>
 		<Italian>[SPACE][COLOR_POSITIVE_TEXT]%D1_Change a turno[COLOR_REVERT]</Italian>
-		<Spanish>[SPACE][COLOR_POSITIVE_TEXT]%D1_Change a turno[COLOR_REVERT]</Spanish>
+		<Spanish>[SPACE][COLOR_POSITIVE_TEXT](%D1_Change/turno)[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_POS_GOLD_PER_TURN_TD_WFL</Tag>
@@ -18547,6 +18541,11 @@
 		<Polish>%s1_Player założył %s2_City w odległym kraju.</Polish>
 		<Russian>%s1_Player îñíîâàë %s2_City íà îòäàëåííîé çåìëå.</Russian>
 	</TEXT>
+  	<TEXT>
+		<Tag>TXT_KEY_MORECIV4LERTS_CITY_TO_EXPAND_RCS</Tag>
+		<English>[COLOR_MAGENTA]The culture of %s1 is about to reach a new threshold.[COLOR_REVERT]</English>
+    <Italian>[COLOR_MAGENTA]La cultura della città di %s1 sta per raggiungere un nuovo livello.[COLOR_REVERT]</Italian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MORECIV4LERTS_CITY_TO_EXPAND</Tag>
 		<English>[COLOR_MAGENTA]The borders of %s1 are about to expand.[COLOR_REVERT]</English>
@@ -18876,15 +18875,6 @@
 		<Italian>[ICON_BULLET]Possibilità di sfuggire alla cattura: %D1%%</Italian><!--Aerial CT trait in the pedia-->
 		<Polish>[ICON_BULLET]Jednostki mają %D1%% szansy na uniknięcie Przejęcia.</Polish>
 		<Russian>[ICON_BULLET]%D1%% øàíñîâ èçáåæàòü çàõâàòà.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_NATURAL_WONDERS</Tag>
-		<English>Natural Wonders</English>
-		<French>Merveilles Naturelles</French>
-    <Italian>Meraviglie naturali</Italian>
-		<German>Naturwunder</German>
-		<Polish>Cuda Natury</Polish>
-		<Russian>×óäî ïðèðîäû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_NEVER_MIND</Tag>
@@ -21494,16 +21484,6 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PRODUCTION_DECAY</Tag>
-		<English>[COLOR_NEGATIVE_TEXT]Will lose %d1[ICON_PRODUCTION] this turn[COLOR_REVERT]</English>
-		<French>[COLOR_NEGATIVE_TEXT]Va perdre %d1[ICON_PRODUCTION] ce tour[COLOR_REVERT]</French>
-		<German>[COLOR_NEGATIVE_TEXT]%d1[ICON_PRODUCTION] gehen in dieser Runde verloren[COLOR_REVERT]</German>
-		<Italian>[COLOR_NEGATIVE_TEXT]Perderà %d1[ICON_PRODUCTION] questo turno[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_NEGATIVE_TEXT]Perderá %d1[ICON_PRODUCTION] este turno[COLOR_REVERT]</Spanish>
-		<Polish>[COLOR_NEGATIVE_TEXT]Straci %d1[ICON_PRODUCTION] w tej turze[COLOR_REVERT]</Polish>
-		<Russian>[COLOR_NEGATIVE_TEXT]Áóäåò ïîòåðÿíî %d1[ICON_PRODUCTION] íà ýòîì õîäó[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PRODUCTION_DECAY_PRODUCING</Tag>
 		<English>[COLOR_WARNING_TEXT]Will lose %d1[ICON_PRODUCTION] if not produced this turn[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Va perdre %d1[ICON_PRODUCTION] si non utilisé ce tour[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]%d1[ICON_PRODUCTION] gehen verloren, falls nicht in dieser Runde produziert wird[COLOR_REVERT]</German>
@@ -21514,23 +21494,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PRODUCTION_DECAY_TURNS</Tag>
-		<English>[COLOR_NEGATIVE_TEXT]Will lose %d1[ICON_PRODUCTION] in %d2 [NUM2:turn:turns][COLOR_REVERT]</English>
+		<English>[COLOR_NEGATIVE_TEXT]Will lose %d1[ICON_PRODUCTION] if delayed for %d2 [NUM2:turn:turns][COLOR_REVERT]</English>
 		<French>[COLOR_NEGATIVE_TEXT]Va perdre %d1[ICON_PRODUCTION] en %d2 [NUM2:tour:tours][COLOR_REVERT]</French>
 		<German>[COLOR_NEGATIVE_TEXT]%d1[ICON_PRODUCTION] gehen in %d2 [NUM2:Runde:Runden] verloren[COLOR_REVERT]</German>
 		<Italian>[COLOR_NEGATIVE_TEXT]Perderà %d1[ICON_PRODUCTION] in %d2 [NUM2:Turno:turni][COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_NEGATIVE_TEXT]Perderá %d1[ICON_PRODUCTION] en %d2 [NUM2:turno:turnos][COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_NEGATIVE_TEXT]Straci %d1[ICON_PRODUCTION] za %d2 [NUM2:turę:tur][COLOR_REVERT]</Polish>
 		<Russian>[COLOR_NEGATIVE_TEXT]Áóäåò ïîòåðÿíî %d1[ICON_PRODUCTION] çà %d2 [NUM2:õîä:õîäîâ][COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PRODUCTION_DECAY_TURNS_PRODUCING</Tag>
-		<English>[COLOR_WARNING_TEXT]Will lose %d1[ICON_PRODUCTION] if not produced for %d2 [NUM2:turn:turns][COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]Va perdre %d1[ICON_PRODUCTION] si non utilisé en %d2 [NUM2:tour:tours][COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]%d1[ICON_PRODUCTION] gehen verloren, falls für %d2 [NUM2:Runde:Runden] nicht produziert wird[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]Perderà %d1[ICON_PRODUCTION] se non viene prodotto per %d2 [NUM2:Turno:turni][COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_WARNING_TEXT]Perderá %d1[ICON_PRODUCTION] si no se sigue produciendo en %d2 [NUM2:turno:turnos][COLOR_REVERT]</Spanish>
-		<Polish>[COLOR_WARNING_TEXT]Straci %d1[ICON_PRODUCTION] jeśli nie wyprodukuje w ciągu %d2 [NUM2:tury:tur][COLOR_REVERT]</Polish>
-		<Russian>[COLOR_WARNING_TEXT]Áóäåò ïîòåðÿíî %d1[ICON_PRODUCTION] åñëè íå ïðîèçâåäåì çà %d2 [NUM2:õîä:õîäîâ][COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PRODUCTION_MODIFIER_TRAIT</Tag>
@@ -22857,6 +22827,22 @@
 		<Italian>Clima %s1</Italian>
 		<Spanish>Clima: %s1</Spanish>
 	</TEXT>
+  <TEXT>
+  	<Tag>TXT_KEY_SETTINGS_DIFFICULTY_GAME</Tag>
+		<English>Game difficulty: %s1 </English>
+		<French>Jeu difficulté : %s1</French>
+		<German>Spiel schwierigkeit: %s1</German>
+		<Italian>Difficoltà partita %s1</Italian>
+		<Spanish>Dificultad partida: %s1</Spanish>
+	</TEXT>
+  <TEXT>
+    <Tag>TXT_KEY_SETTINGS_DIFFICULTY_PLAYER</Tag>
+    <English>Player difficulty: %s1</English>
+    <French>Joueur difficulté : %s1</French>
+    <German>Spieler schwierigkeit: %s1</German>
+    <Italian>Difficoltà giocatore %s1</Italian>
+    <Spanish>Dificultad el jugador: %s1</Spanish>
+  </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SETTINGS_DIFFICULTY</Tag>
 		<English>%s1 Difficulty</English>
@@ -23627,9 +23613,8 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SHORTCUTS_MP</Tag>
-		<English>Multi-Player</English>
+		<English>Multiplayer</English>
 		<French>Multi-Joueur</French>
-		<German>Multiplayer</German>
 		<Italian>Multiplayer</Italian>
 		<Spanish>Multijugador</Spanish>
 		<Polish>Wieloosobowa</Polish>
@@ -24099,11 +24084,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>[ICON_BULLET]%D1_ChangeRate[ICON_GREATPEOPLE] tasso di natalità</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>[ICON_BULLET]%D1_ChangeRate[ICON_GREATPEOPLE] tasso di natalità</Italian>
 		<Spanish>
 			<Text>[ICON_BULLET]%D1_ChangeRate a la tasa de natalidad de [ICON_GREATPEOPLE]</Text>
 			<Gender>Female</Gender>
@@ -28669,14 +28650,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>[ICON_BULLET]Teameinheit (%d1_Num zulässig)</German>
 		<Italian>[ICON_BULLET]Unità di squadra (%d1_Num [NUM1:permessa:permesse])</Italian>
 		<Spanish>[ICON_BULLET]Unidad de equipo (%d1_Num [NUM1:permitida:permitidas])</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITHELP_TEAM_UNIT_LEFT</Tag>
-		<English>[SPACE]Team Unit: %d1_Num Left</English>
-		<French>[SPACE]Unité d'équipe : reste %d1_Num</French>
-		<German>[SPACE]Teameinheit: %d1_Num übrig</German>
-		<Italian>[SPACE]Unità di squadra: %d1_Num [NUM1:rimanente:rimanenti]</Italian>
-		<Spanish>[SPACE]Unidad de equipo: %d1_Num [NUM1:restante:restantes]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_TURNS</Tag>
