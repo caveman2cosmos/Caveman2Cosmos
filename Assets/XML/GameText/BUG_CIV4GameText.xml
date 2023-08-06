@@ -107,6 +107,7 @@
 		<Spanish>[ICON_BULLET]Doblará [NUM1:el:la:los:las] %s1_commerce_type en %d2 años</Spanish>
 		<Russian>[ICON_BULLET]Óäâîåíèå %s1_commerce_type çà %d2 ëåò</Russian>
 	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUG_DOUBLE_COMMERCE_COMPLETE</Tag>
 		<English>[ICON_BULLET]%d1 years of history have doubled the %s2_commerce_type</English>
 		<Italian>[ICON_BULLET]%d1 anni di storia hanno raddoppiato il %s2_commerce_type</Italian>
