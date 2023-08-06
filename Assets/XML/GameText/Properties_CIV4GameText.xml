@@ -329,8 +329,8 @@
 		<English>Constant building sources: %D1 / Turn</English>
 		<French>Sources bâtiments: %D1 / Tour</French>
 		<German>Einfluss von Gebäuden: %D1 pro Runde</German>
-		<Spanish>Incremento gradual por edificios: c</Spanish>
-		<Italian>Var. edifici: [COLOR_WARNING_TEXT]%D1[COLOR_REVERT] a turno</Italian>
+    <Spanish>Incremento gradual por edificios: %D1/turno</Spanish>
+    <Italian>Var. edifici: [COLOR_WARNING_TEXT]%D1[COLOR_REVERT] a turno</Italian>
 		<Russian>Ïîñòîÿííûå ñòðîèòåëüíûå èñòî÷íèêè: %D1 / õîä</Russian>
 	</TEXT>
 	<TEXT>

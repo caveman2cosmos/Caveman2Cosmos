@@ -6995,7 +6995,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CRUSADER_HELP</Tag>
-		<English>[ICON_BULLET]Spawned by [COLOR_BUILDING_TEXT][LINK=BUILDING_CRUSADE]King's Crusade[\LINK][COLOR_REVERT] every few turns</English>
+    <English>[ICON_BULLET]Spawned by [COLOR_BUILDING_TEXT][LINK=BUILDING_KINGS_CRUSADE]King's Crusade[\LINK][COLOR_REVERT] every few turns</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CRUSADER_PEDIA</Tag>
@@ -23628,11 +23628,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>Kampfhunde</German>
-		<Italian>
-      <Text>Cane da guerra</Text>
-      <Gender>Male</Gender>
-      <Plural>1</Plural>
-    </Italian>
+		<Italian>Cane da guerra</Italian>
 		<Spanish>
 			<Text>Perros de guerra</Text>
 			<Gender>Male</Gender>
@@ -23643,8 +23639,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARDOG_PEDIA</Tag>
-		<English>A is a dog trained for war. The dog has been used in wars since ancient times. Their jobs have varied over the years, from being trained to track with their acute sense of smell, to bringing down infantry or even horses by biting into the hamstrings of their targets. The history of war dogs is long and detailed, stretching up to conflicts as recent as Vietnam.[PARAGRAPH:2]In ancient times, they disrupted battle lines and frightened soldiers. Some ancient civilizations that used war dogs included the Egyptians, the Greeks, and the Romans. The Molossian 'Canis Molossus' dog of Epirus was the strongest known to the Romans, which were specifically trained for battle by the military. However, when fought against the broad-mouthed, powerful Mastiff called Pugnaces Britanniae found in Britannia, they were out matched. The Romans exported many of this breed of Mastiff to Rome and then disseminated them over the known world. Often war dogs would be sent into battle with large protective metal collars from which spikes and curved knives protruded at all angles and wearing coats of chain mail. Romans had attack formations made entirely of dogs. These proved to be effective machines of war at the time. They were not rendered useless as the ages drew on, however. Stubby, a war dog of World War I, was promoted to the rank of sergeant. Chips, a German Shepherd mix, and Smoky, a Yorkshire Terrier, were honored for service in World War II.[PARAGRAPH:3]Gifts of wardog breeding stock between European royalty were seen as suitable tokens for exchange throughout the Middle Ages. Wardogs were used by England against the Celts in Ireland and by many European forces, such as Spanish Conquistadors, in the New World. Later on, Frederick the Great used dogs as messengers during the Seven Years' War in Russia. Napoleon would also use dogs during his campaigns. Dogs were also used up until 1770 to guard naval installations in France.</English>
-		<Polish>Pies wojny to pies wyszkolony do wojny. Pies ten był używany w wojnach od czasów starożytnych. Ich miejsca pracy były różne na przestrzeni lat, od przeszkolenia do śledzenia dzięki ich ostremu węchowi. Historia psów wojennych jest długia i świeża bo sięga nawet wojny w Wietnamie.</Polish>
+    <English>A war dog is a dog trained for war. The dog has been used in wars since ancient times. Their jobs have varied over the years, from being trained to track with their acute sense of smell, to bringing down infantry or even horses by biting into the hamstrings of their targets. The history of war dogs is long and detailed, stretching up to conflicts as recent as Vietnam.[PARAGRAPH:2]In ancient times, they disrupted battle lines and frightened soldiers. Some ancient civilizations that used war dogs included the Egyptians, the Greeks, and the Romans. The Molossian 'Canis Molossus' dog of Epirus was the strongest known to the Romans, which were specifically trained for battle by the military. However, when fought against the broad-mouthed, powerful Mastiff called Pugnaces Britanniae found in Britannia, they were out matched. The Romans exported many of this breed of Mastiff to Rome and then disseminated them over the known world. Often war dogs would be sent into battle with large protective metal collars from which spikes and curved knives protruded at all angles and wearing coats of chain mail. Romans had attack formations made entirely of dogs. These proved to be effective machines of war at the time. They were not rendered useless as the ages drew on, however. Stubby, a war dog of World War I, was promoted to the rank of sergeant. Chips, a German Shepherd mix, and Smoky, a Yorkshire Terrier, were honored for service in World War II.[PARAGRAPH:3]Gifts of wardog breeding stock between European royalty were seen as suitable tokens for exchange throughout the Middle Ages. Wardogs were used by England against the Celts in Ireland and by many European forces, such as Spanish Conquistadors, in the New World. Later on, Frederick the Great used dogs as messengers during the Seven Years' War in Russia. Napoleon would also use dogs during his campaigns. Dogs were also used up until 1770 to guard naval installations in France.</English>
+    <Polish>Pies wojny to pies wyszkolony do wojny. Pies ten był używany w wojnach od czasów starożytnych. Ich miejsca pracy były różne na przestrzeni lat, od przeszkolenia do śledzenia dzięki ich ostremu węchowi. Historia psów wojennych jest długia i świeża bo sięga nawet wojny w Wietnamie.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARGALLEY</Tag>

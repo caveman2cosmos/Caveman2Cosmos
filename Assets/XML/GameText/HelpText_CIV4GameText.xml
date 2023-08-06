@@ -67,8 +67,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_MODIFIER_BASE</Tag>
 		<English>[ICON_BULLET]Base unit upkeep change: %d1%%</English>
+    <German>[ICON_BULLET]laufende Kosten (Grundwert): %d1%% </German>
     <Italian>[ICON_BULLET]Modifica ai costi di mantenimento base dell'unità: %d1%%</Italian>
-		<German>[ICON_BULLET]laufende Kosten (Grundwert): %d1%%</German>
 		<Russian>[ICON_BULLET]Измен. содерж. базового отряда: %d1%%</Russian>
 	</TEXT>
 	<TEXT>
