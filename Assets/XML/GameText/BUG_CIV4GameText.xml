@@ -115,7 +115,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_FINANCIAL_ADVISOR_BUILDING_COUNT_AVERAGE</Tag>
 		<English>(%d1 × %s2[ICON_GOLD])</English>
-    	<Italian>PROVAPROVA</Italian>
+		<Italian>PROVAPROVA</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_FINANCIAL_ADVISOR_COMMERCE</Tag>
@@ -6674,8 +6674,8 @@
 		<Italian>Numero di turni</Italian>
 		<Spanish>Número de turnos</Spanish>
 		<Russian>Ïðèðîñò ñëîæíîñòè</Russian>
-	</TEXT>		
-	<TEXT>		
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYAITURNINCREMENTS_HOVER</Tag>
 		<English>How often the game checks AI difficulty level and adjusts it. Requires Flexible Difficulty to be enabled.</English>
 		<Italian>Quanto spesso il sistema controlla la difficoltà dell'IA e la cambia. Difficoltà flessibile deve essere attiva.</Italian>
@@ -6744,11 +6744,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__IMPROVEDXP_HOVER</Tag>
-		<English>Even without this option enabled, XP from combat is partially determined by victory chance. However, enabling this "Dynamic XP" game option will significantly magnify the effect, making it slower to train high-level units through low-risk combat (Minimum XP lowered to 0.01 from 1), but increasing further the XP gained by winning at lower odds (Maximum XP uncapped from 10). Additionally, many combat-adjacent actions such as pillaging, bombardment, etc. will give small amounts of XP.</English>
+		<English>Even without this option enabled, XP from combat is partially determined by victory chance. However, enabling this "Dynamic+ XP" game option will significantly magnify the effect, making it slower to train high-level units through low-risk combat (Minimum XP lowered to 0.01 from 1), but increasing further the XP gained by winning at lower odds (Maximum XP uncapped from 10). Additionally, many combat-adjacent actions such as pillaging, bombardment, etc. will give small amounts of XP.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__IMPROVEDXP_TEXT</Tag>
-		<English>Dynamic XP</English>
+		<English>Dynamic+ XP</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__INFRASTRUCTUREIGNORESIMPROVEMENTS_HOVER</Tag>
