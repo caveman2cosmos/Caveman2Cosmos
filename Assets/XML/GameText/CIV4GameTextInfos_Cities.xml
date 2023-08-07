@@ -17,7 +17,8 @@
 		<Tag>TXT_KEY_CITY_NAME_AAKO</Tag>
 		<English>Aako</English>
 		<Russian>Акко</Russian>
-	</TEXT>
+    <Italian>Akō</Italian>
+  </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AALBORG</Tag>
 		<English>Aalborg</English>
@@ -27,7 +28,8 @@
 		<Tag>TXT_KEY_CITY_NAME_AANG_THONG</Tag>
 		<English>Aang Thong</English>
 		<Russian>Àíãòõîíã</Russian>
-	</TEXT>
+    <Italian>Ang Thong</Italian>
+  </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AARHUS</Tag>
 		<English>Aarhus</English>
@@ -65,6 +67,7 @@
 		<Tag>TXT_KEY_CITY_NAME_ABZU</Tag>
 		<English>Abzu</English>
 		<Russian>Абзу</Russian>
+    <Italian>Apsû</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ACEM</Tag>
@@ -79,7 +82,8 @@
 		<Tag>TXT_KEY_CITY_NAME_ACHRIDA</Tag>
 		<English>Achrida</English>
 		<Russian>Ахрида</Russian>
-	</TEXT>
+    <Italian>Ocrida</Italian>
+  </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ACHU</Tag>
 		<English>Achu</English>
@@ -107,6 +111,7 @@
 		<Tag>TXT_KEY_CITY_NAME_ACTIA_NICOPOLIS</Tag>
 		<English>Actia Nicopolis</English>
 		<Russian>Актиа Никополис</Russian>
+    <Italian>Nicopolis</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ACUERA</Tag>
@@ -196,7 +201,8 @@
 		<Tag>TXT_KEY_CITY_NAME_AD_DAR_AL_BAIDAA</Tag>
 		<English>ad-dar al-bayda'</English>
 		<Russian>Аддар-аль-Байда</Russian>
-	</TEXT>
+    <Italian>Dar al-Bayda</Italian>
+  </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AFOLA</Tag>
 		<English>Afola</English>
