@@ -5,14 +5,14 @@
 		<English>Cereal Mills</English>
 		<French>Les grands moulins céréaliers</French>
 		<German>Cerealien AG</German>
-		<Italian>Cereali del Mulino</Italian>
-		<Russian>Ïðîäóêòû èç çëàêîâ</Russian>
+    <Italian>Cereali del mulino</Italian>
+    <Russian>Ïðîäóêòû èç çëàêîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_CEREAL_MILLS</Tag>
 		<English>HQ - Cereal Mills</English>
-		<Italian>QG di Cereali del Mulino</Italian>
-		<Russian>Продукты из злаков</Russian>
+    <Italian>Quartier generale di Cereali del mulino</Italian>
+    <Russian>Продукты из злаков</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_1_PEDIA</Tag>
@@ -27,12 +27,13 @@
 		<Tag>TXT_KEY_BUILDING_CORPORATION_2</Tag>
 		<English>Sid's Sushi Co</English>
 		<Russian>Суши от Сида</Russian>
-	</TEXT>
+    <Italian>Sid Sushi Company</Italian>
+  </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_SIDS_SUSHI_CO</Tag>
 		<English>HQ - Sid's Sushi Co</English>
-		<Italian>QG di Sid's Sushi Co.</Italian>
-		<Russian>Суши от Сида</Russian>
+    <Italian>Quartier generale di Sid Sushi Company</Italian>
+    <Russian>Суши от Сида</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_2_PEDIA</Tag>
@@ -48,14 +49,14 @@
 		<English>Standard Ethanol</English>
 		<French>Ethanol Inc.</French>
 		<German>Ecokraftstoff AG</German>
-		<Italian>Ente Etanolo</Italian>
-		<Russian>Ýòàíîë-ñòàíäàðò</Russian>
+    <Italian>Etanolo energy spa</Italian>
+    <Russian>Ýòàíîë-ñòàíäàðò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_STANDARD_ETHANOL</Tag>
 		<English>HQ - Standard Ethanol</English>
-		<Italian>QG dell'Ente Etanolo</Italian>
-		<Russian>Этанол-стандарт</Russian>
+    <Italian>Quartier generale di Etanolo energy Spa</Italian>
+    <Russian>Этанол-стандарт</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_3_PEDIA</Tag>
@@ -71,15 +72,15 @@
 		<English>Creative Constructions</English>
 		<French>Constructions créatives</French>
 		<German>Kreativbau AG</German>
-		<Italian>Costruzioni Creative</Italian>
-		<Russian>Êðåàòèâñòðîé</Russian>
+    <Italian>Costruzioni creative</Italian>
+    <Russian>Êðåàòèâñòðîé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_CREATIVE_CONSTRUCTIONS</Tag>
 		<English>HQ - Creative Constructions</English>
-		<Italian>QG di Costruzioni Creative</Italian>
+    <Italian>Quartier generale di Costruzioni creative</Italian>
 		<Russian>Креативстрой</Russian>
-	</TEXT>
+  </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_4_PEDIA</Tag>
 		<English>The Great Pyramids, the Hagia Sophia and the Hoover Dam all started their famed existences in the same way - with a pile of stones and an ambitious engineer. In the past, grand projects were taken on by princes or heads of state, but today these works are built by corporations. Often employing both an architect and a construction team, modern construction companies both dream up and execute the shaping of a piece of land into a new edifice. Beyond simply erecting the building, it often falls upon the construction company to reign in the wild designs of upstart architects like Frank Lloyd Wright and Antoni Gaudi to ensure the completion of their works. Perhaps if a construction executive had been present during the designing of Gaudi's Sagrada Familia, it would already be complete and accepting donations for renovations.</English>
@@ -93,14 +94,14 @@
 		<Tag>TXT_KEY_BUILDING_CORPORATION_5</Tag>
 		<English>Mining Inc</English>
 		<German>Montan AG</German>
-		<Italian>Ente Estrazioni Minerarie</Italian>
-		<Russian>Ãîðíûå ðåñóðñû</Russian>
+    <Italian>Mineraria Srl</Italian>
+    <Russian>Ãîðíûå ðåñóðñû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_MINING_INC</Tag>
 		<English>HQ - Mining Inc</English>
-		<Italian>QG dell'Ente Estrazioni Minerarie</Italian>
-		<Russian>Горные ресурсы</Russian>
+    <Italian>Quartier generale di Mineraria Srl</Italian>
+    <Russian>Горные ресурсы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_5_PEDIA</Tag>
@@ -116,14 +117,14 @@
 		<English>Aluminum Co</English>
 		<French>Aluminium S.A.</French>
 		<German>Aluminiumwerke AG</German>
-		<Italian>Ente Alluminio</Italian>
-		<Russian>Ïðîìàëþìèíèé</Russian>
+    <Italian>Allumination</Italian>
+    <Russian>Ïðîìàëþìèíèé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_ALUMINUM_CO</Tag>
 		<English>HQ - Aluminum Co</English>
-		<Italian>QG dell'Ente Alluminio</Italian>
-		<Russian>Промалюминий</Russian>
+    <Italian>Quartier generale di Allumination</Italian>
+    <Russian>Промалюминий</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_6_PEDIA</Tag>
@@ -139,14 +140,14 @@
 		<English>Civilized Jewelers Inc</English>
 		<French>Bijoutiers associés</French>
 		<German>Kulturjuwelen AG</German>
-		<Italian>Gioiellieri Uniti</Italian>
-		<Russian>Ìèðîâûå þâåëèðû</Russian>
+    <Italian>Gioiellieri uniti</Italian>
+    <Russian>Ìèðîâûå þâåëèðû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_CIVILIZED_JEWELERS_INC</Tag>
 		<English>HQ - Civilized Jewelers Inc</English>
-		<Italian>QG di Gioiellieri Uniti</Italian>
-		<Russian>Мировые ювелиры</Russian>
+    <Italian>Quartier generale di Gioiellieri uniti</Italian>
+    <Russian>Мировые ювелиры</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_7_PEDIA</Tag>
@@ -160,15 +161,15 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_ADVENTURE</Tag>
 		<English>Adventure Tours</English>
-		<Italian>ViaggiAvventura</Italian>
-		<Russian>Àäâåí÷åð-òóð</Russian>
+    <Italian>Viaggi avventura</Italian>
+    <Russian>Àäâåí÷åð-òóð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ADVENTURE_TOURS_FRANCHISE</Tag>
 		<English>Adventure Tours Franchise</English>
 		<French>Filiale de Aventure Tours</French>
 		<German>Adventure-Tours-Filiale</German>
-		<Italian>Filiale di ViaggiAvventura</Italian>
+		<Italian>Filiale di Viaggi avventura</Italian>
 		<Spanish>Franquicia de Adventure Tours</Spanish>
 		<Russian>Ôèëèàë "ÀÒ"</Russian>
 	</TEXT>
@@ -176,7 +177,7 @@
 		<Tag>TXT_KEY_BUILDING_ADVENTURE_TOURS_FRANCHISE_PEDIA</Tag>
 		<English>Your local adventure franchise to get your adrenaline pumping!</English>
 		<German>Dein örtlicher Reiseanbieter für Abenteuerreisen, die dein Adrenalin in die Höhe schnellen lassen!</German>
-		<Italian>La tua agenzia locale di ViaggiAvventura, per darti una scarica di adrenalina!</Italian>
+		<Italian>La tua agenzia locale di Viaggi avventura, per darti una scarica di adrenalina!</Italian>
 		<Spanish>¡Tu franquicia local de aventuras, para darte tu dosis de adrenalina!</Spanish>
 		<Russian>Откройте свою особую местную приключенческую франшизу, чтобы подарить вашим клиентам заряд адреналина!</Russian>
 	</TEXT>
@@ -185,8 +186,8 @@
 		<English>HQ - Adventure Tours</English>
 		<French>Le Siège de Aventure Tours</French>
 		<German>Adventure-Tours-Zentrale</German>
-		<Italian>QG di ViaggiAvventura</Italian>
-		<Russian>Àäâåí÷åð-òóð</Russian>
+    <Italian>Quartier generale di Viaggi avventura</Italian>
+    <Russian>Àäâåí÷åð-òóð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_ADVENTURE_PEDIA</Tag>
@@ -200,15 +201,16 @@
 		<English>Bullseye</English>
 		<French>Gran'Frais</French>
 		<Russian>ßáëî÷êî</Russian>
-	</TEXT>
+    <Italian>Green perfection</Italian>
+  </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_BULLSEYE</Tag>
 		<English>HQ - Bullseye</English>
 		<French>Le Siège de Gran'Frais</French>
 		<German>Bullseye Zentrale</German>
-		<Italian>QG di Bullseye</Italian>
+    <Italian>Quartier generale di Green perfection</Italian>
 		<Russian>ßáëî÷êî</Russian>
-	</TEXT>
+  </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_BULLSEYE_PEDIA</Tag>
 		<English>Fruits and vegetables were often were the only other source of nutrition amongst the less well off members of a society and religious orders which abstain from consumption of proteins from animals. Most of the vegetables back then however were provided by farmer's markets and the source of vegetable farms themselves. The Babylonians are the first known civilization to be able to bring a piece of nature to the cities of Babylon with inventions such as the Archimedes Screw and thus able to sustain hydroponic agriculture in cities where fresh vegetables are less likely to appear. As time went by however, thanks to refrigeration and other transportation techniques produce are becoming fresher and more organic than ever before</English>
@@ -220,8 +222,8 @@
 		<English>Bullseye Store</English>
 		<French>Epicerie Gran'Frais</French>
 		<German>Bullseye-Laden</German>
-		<Italian>Negozio di Bullseye</Italian>
-		<Spanish>Tienda de Bullseye</Spanish>
+    <Italian>Negozio di Green perfection</Italian>
+    <Spanish>Tienda de Bullseye</Spanish>
 		<Russian>Ìàãàçèí "ßáëî÷êî"</Russian>
 	</TEXT>
 	<TEXT>
@@ -234,31 +236,31 @@
 		<Tag>TXT_KEY_BUILDING_CORPORATION_BURGERWORLD</Tag>
 		<English>Burgerworld</English>
 		<French>MondoBurger</French>
-		<Italian>MondoBurger</Italian>
-		<Russian>Ìèð áóðãåðîâ</Russian>
+    <Italian>Mondo burger</Italian>
+    <Russian>Ìèð áóðãåðîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_BURGERWORLD</Tag>
 		<English>HQ - Burgerworld</English>
 		<French>Le Siège de MondoBurger</French>
 		<German>Burgerworld-Zentrale</German>
-		<Italian>QG di MondoBurger</Italian>
-		<Spanish>Burgerworld</Spanish>
+    <Italian>Quartier generale di Mondo burger</Italian>
+    <Spanish>Burgerworld</Spanish>
 		<Russian>Ìèð áóðãåðîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_BURGERWORLD_PEDIA</Tag>
 		<English>Fast Food Restaurants are the lifeblood of these companies. Serving Burgers and Fries for lunch and Dinner and a Muffin Sandwich for breakfast for hungry customer, in foreign branches the same company not only makes Fast Food but also Pub/Diner Food available to the consumers there since smaller investments in foreign cities is risky and given the turnover rate of unsuccessful restaurants it will be a heavy risk to go in without major corporation backing. Hong Kongs Fast Food branches for example have implemented several Hong Kong Cuisine Classics to their menu and some places like Germany allow beer to be served in their restaurants.[PARAGRAPH:1]Built under a Bureaucratic factory System, food produced here is cheap, fast and filling which has been so effective that it has a social effect termed as "McDonaldization" where Efficiency, Calculability, Predictability and Control is what society needs.</English>
-		<Italian>I fast food sono il sangue vitale di queste compagnie. Servire hamburger e patatine per pranzo per cena e muffin per colazione a clienti affamati, in altri campi la stessa compagnia rende disponibili ai consumatori non solo i fast food, ma anche Pub e Diner Food dato che gli investimenti più piccoli in città straniere sono rischiosi, e dato il ritmo di chiusra dei ristoranti senza successo sarebbe un grande rischio aprire senza avere alle spalle una grande corporazione. Le catene di Fast Food di Hong Kongs hanno inserito molti classici della cucina di Hong Kong nei loro menù e alcuni paesi, come la Germania, permettono che la birra venga servita nei loro ristoranti.[PARAGRAPH:1]Cucinato in un sistema burocratico di fabbriche, il cibo prodotto qui è economico, veloce e saziante ed è diventato così efficiente che è diventato un effetto sociale chiamato "McDonaldizzazione" dove efficienza, calcolabilità, prevedibilità e controllo è ciò di cui la società ha bisogno.</Italian>
-		<Russian>Рестораны быстрого питания являются источником жизненной силы этих компаний. Подавая гамбургеры и картофель фри на обед и ужин, а также бутерброд с маффином на завтрак для голодных клиентов, в зарубежных филиалах одна и та же компания предоставляет потребителям не только фаст-фуд, но и паб/закусочную, поскольку меньшие инвестиции в зарубежных городах рискованы и оправданы из-за текучести кадров в убыточных ресторанах, в связи с чем создается большой риск войти в рынок без поддержки крупных корпораций. Например, отделения быстрого питания в Гонконге внедрили в свое меню несколько классических блюд гонконгской кухни, а в некоторых местах, таких как Германия, пиво можно подавать в своих ресторанах.[PARAGRAPH:1]Изготовленные в рамках бюрократической фабричной системы продукты питания дешевы и быстро в приготовлении, которое было настолько эффективным, что имело социальный эффект, называемый «макдональдизацией», где эффективность, вычислимость, предсказуемость и контроль - это то, что нужно обществу.</Russian>
+    <Italian>I fast food sono il sangue vitale di questa compagnia. Servire hamburger e patatine per pranzo per cena e muffin per colazione a clienti affamati, in altri campi la stessa compagnia rende disponibili ai consumatori non solo i fast food, ma anche Pub e Diner Food dato che gli investimenti più piccoli in città straniere sono rischiosi, e dato il ritmo di chiusra dei ristoranti senza successo sarebbe un grande rischio aprire senza avere alle spalle una grande corporazione. Le catene di Fast Food di Hong Kongs hanno inserito molti classici della cucina di Hong Kong nei loro menù e alcuni paesi, come la Germania, permettono che la birra venga servita nei loro ristoranti.[PARAGRAPH:1]Cucinato in un sistema burocratico di fabbriche, il cibo prodotto qui è economico, veloce e saziante ed è diventato così efficiente che è diventato un effetto sociale chiamato "McDonaldizzazione" dove efficienza, calcolabilità, prevedibilità e controllo è ciò di cui la società ha bisogno.</Italian>
+    <Russian>Рестораны быстрого питания являются источником жизненной силы этих компаний. Подавая гамбургеры и картофель фри на обед и ужин, а также бутерброд с маффином на завтрак для голодных клиентов, в зарубежных филиалах одна и та же компания предоставляет потребителям не только фаст-фуд, но и паб/закусочную, поскольку меньшие инвестиции в зарубежных городах рискованы и оправданы из-за текучести кадров в убыточных ресторанах, в связи с чем создается большой риск войти в рынок без поддержки крупных корпораций. Например, отделения быстрого питания в Гонконге внедрили в свое меню несколько классических блюд гонконгской кухни, а в некоторых местах, таких как Германия, пиво можно подавать в своих ресторанах.[PARAGRAPH:1]Изготовленные в рамках бюрократической фабричной системы продукты питания дешевы и быстро в приготовлении, которое было настолько эффективным, что имело социальный эффект, называемый «макдональдизацией», где эффективность, вычислимость, предсказуемость и контроль - это то, что нужно обществу.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BURGERWORLD_RESTAURANT</Tag>
 		<English>Burgerworld Restaurant</English>
 		<French>Restaurant MondoBurger</French>
 		<German>Burgerworld-Restaurant</German>
-		<Italian>Ristorante Burgerworld</Italian>
-		<Spanish>Restaurante Burgerworld</Spanish>
+    <Italian>Ristorante di Mondo burger</Italian>
+    <Spanish>Restaurante Burgerworld</Spanish>
 		<Russian>Ðåñòîðàí "ÌÁ"</Russian>
 	</TEXT>
 	<TEXT>
@@ -272,27 +274,28 @@
 		<Tag>TXT_KEY_BUILDING_CORPORATION_EMPCLOTH</Tag>
 		<English>Emperors Clothing</English>
 		<French>Habits Impériaux</French>
-		<Italian>I Vestiti dell'Imperatore</Italian>
-		<Russian>Îäåæäà èìïåðàòîðà</Russian>
+    <Italian>Abiti imperiali</Italian>
+    <Russian>Îäåæäà èìïåðàòîðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_EMPERORS_CLOTHING</Tag>
 		<English>HQ - Emperors Clothing</English>
 		<French>Siège des Habits Impériaux</French>
 		<German>Emperors-Clothing-Zentrale</German>
-		<Italian>QG de I Vestiti dell'Imperatore</Italian>
-		<Russian>Îäåæäà èìïåðàòîðà</Russian>
+    <Italian>Quartier generale di Abiti imperiali</Italian>
+    <Russian>Îäåæäà èìïåðàòîðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_EMPERORS_CLOTHING_PEDIA</Tag>
 		<English>Corporate headquarters is the part of a corporate structure that deals with important tasks such as strategic planning, corporate communications, taxes, law, marketing, finance, human resources, and information technology. Corporate headquarters takes responsibility for the overall success of the corporation, ensures Corporate Governance. It is sometimes referred to the head office, which is the location where the executives of a business work and where many of the key business decisions are made. Generally, corporate headquarters acts as a core when the business is operating.</English>
 		<Russian>Штаб-квартира корпорации является частью корпоративной структуры, которая занимается такими важными задачами, как стратегическое планирование, корпоративные коммуникации, налоги, право, маркетинг, финансы, кадровая политика и информационные технологии. Штаб-квартира корпорации берет на себя ответственность за общий успех корпорации, обеспечивает корпоративное управление. Иногда его называют головным офисом, где работают руководители компании и где принимаются многие ключевые бизнес-решения. Как правило, штаб-квартира компании выступает в качестве ядра при организации бизнеса.</Russian>
-	</TEXT>
+    <Italian>La sede aziendale è la parte di una struttura aziendale che si occupa di compiti importanti come la pianificazione strategica, le comunicazioni aziendali, le tasse, la legge, il marketing, la finanza, le risorse umane e la tecnologia dell'informazione. La sede centrale si assume la responsabilità del successo complessivo della società e garantisce la Corporate Governance. A volte si riferisce alla sede centrale, che è il luogo in cui lavorano i dirigenti di un'azienda e dove vengono prese molte delle decisioni aziendali chiave. Generalmente, la sede centrale dell'azienda funge da nucleo quando l'attività è operativa.</Italian>
+  </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_EMPCLOTH_PEDIA</Tag>
 		<English>See Fashion House for details. Emperors Clothing is a rival of Fashion House, and thus requires many of the same resources.</English>
-		<Italian>Per i dettagli, vedi Fashion House. I Vestiti dell'Imperatore è un rivale di Fashion House e perciò le due corporazioni hanno molte risorse in comune.</Italian>
-		<Spanish>Véase Fashion House para más detalles. Emperors Clothing es un rival directo de Fashion House, por ello ambas corporaciones consumen los mismos recursos.</Spanish>
+    <Italian>Per i dettagli, vedi Fashion House. Abiti imperiali è un rivale di Fashion House e perciò le due corporazioni hanno molte risorse in comune.</Italian>
+    <Spanish>Véase Fashion House para más detalles. Emperors Clothing es un rival directo de Fashion House, por ello ambas corporaciones consumen los mismos recursos.</Spanish>
 		<Russian>См. подробности в статье про «Дом Мод». «Одежда императора» - конкурент «Дома Мод», и поэтому требует тот же перечень ресурсов.</Russian>
 	</TEXT>
 	<TEXT>
@@ -300,8 +303,8 @@
 		<English>Emperors Clothing Store</English>
 		<French>Magasin d'Habits Impériaux</French>
 		<German>Emperors-Clothing-Laden</German>
-		<Italian>Negozio de I Vestiti dell'Imperatore</Italian>
-		<Spanish>Tienda de Emperors Clothing</Spanish>
+    <Italian>Negozio di Abiti imperiali</Italian>
+    <Spanish>Tienda de Emperors Clothing</Spanish>
 		<Russian>Àòåëüå "ÎÈ"</Russian>
 	</TEXT>
 	<TEXT>
@@ -315,28 +318,29 @@
 		<Tag>TXT_KEY_BUILDING_CORPORATION_EWTRADE</Tag>
 		<English>East West Traders</English>
 		<Russian>Âîñòîê-Çàïàä</Russian>
-	</TEXT>
+    <Italian>Commercio est-ovest</Italian>
+  </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_EAST_WEST_TRADERS</Tag>
 		<English>HQ - East West Traders</English>
 		<French>Le Siège de 'East West Traders'</French>
 		<German>East-West-Traders-Zentrale</German>
-		<Italian>QG di East West Traders</Italian>
-		<Russian>Âîñòîê-Çàïàä</Russian>
-	</TEXT>
+    <Italian>Quartier generale di Commercio est-ovest</Italian>
+		<Russian>Âîñòîê-Çàïàä</Russian>  
+  </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_EWTRADE_PEDIA</Tag>
 		<English>The East West Traders evolved from corporations such as Transatlantic Triangular Trade, that operated during the 17th, 18th, and early 19th centuries, carrying slaves, cash crops, and manufactured goods between West Africa, the Caribbean or American colonies and the European colonial powers, with the northern colonies of British North America, especially New England, sometimes taking over the role of Europe. They are now more benign.</English>
-		<Italian>La East West Traders si è evoluta dalle corporazioni del commercio triangolare transatlantico che operarono durante il XVII, XVIII e all'inizio del XIX secolo; queste compagnie trasportavano schiavi, prodotti agricoli e beni manifatturieri tra l'Africa occidentale, i Caraibi, le colonie americane e le potenze coloniali europee. Col tempo le colonie inglesi del Nord America, specialmente il New England, arrivarono a eguagliare il ruolo dell'Europa.</Italian>
-		<Russian>Коммерсанты из «Восток-Запад» произошли от таких корпораций, как «Transatlantic Triangular Trade», которые действовали в XVII, XVIII и начале XIX веков, перевозя рабов, изделия роскоши и промышленные товары между Западной Африкой, Карибскими или американскими колониями и европейскими метрополиями с северными колониями британской Северной Америки, особенно Новой Англии, иногда берущей на себя роль Европы. В настоящее время этот бизнес переориентировался в менее жесткие формы.</Russian>
+    <Italian>La Commercio est-ovest si è evoluta dalle corporazioni del commercio triangolare transatlantico che operarono durante il XVII, XVIII e all'inizio del XIX secolo; queste compagnie trasportavano schiavi, prodotti agricoli e beni manifatturieri tra l'Africa occidentale, i Caraibi, le colonie americane e le potenze coloniali europee. Col tempo le colonie inglesi del Nord America, specialmente il New England, arrivarono a eguagliare il ruolo dell'Europa.</Italian>
+    <Russian>Коммерсанты из «Восток-Запад» произошли от таких корпораций, как «Transatlantic Triangular Trade», которые действовали в XVII, XVIII и начале XIX веков, перевозя рабов, изделия роскоши и промышленные товары между Западной Африкой, Карибскими или американскими колониями и европейскими метрополиями с северными колониями британской Северной Америки, особенно Новой Англии, иногда берущей на себя роль Европы. В настоящее время этот бизнес переориентировался в менее жесткие формы.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EAST_WEST_TRADERS_STORE</Tag>
 		<English>East West Traders Store</English>
 		<French>Magasin 'East West Traders'</French>
 		<German>East-West-Traders-Laden</German>
-		<Italian>Negozio di East West Traders</Italian>
-		<Spanish>Tienda de East West Traders</Spanish>
+    <Italian>Negozio di Commercio est-ovest</Italian>
+    <Spanish>Tienda de East West Traders</Spanish>
 		<Russian>Ìàãàçèí "ÂÇ"</Russian>
 	</TEXT>
 	<TEXT>
@@ -350,20 +354,22 @@
 		<English>Fashion House</English>
 		<French>Maison de la Mode</French>
 		<Russian>Äîì Ìîä</Russian>
-	</TEXT>
+    <Italian>Casa della moda</Italian>
+  </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_FASHION_HOUSE</Tag>
 		<English>HQ - Fashion House</English>
 		<French>Le Siège de Maison de la Mode</French>
 		<German>Fashion-House-Zentrale</German>
-		<Italian>GQ di Fashion House</Italian>
-		<Russian>Äîì Ìîä</Russian>
+    <Italian>Quartier generale di Casa della moda</Italian>
+    <Russian>Äîì Ìîä</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_FASHION_HOUSE_PEDIA</Tag>
 		<English>Corporate headquarters is the part of a corporate structure that deals with important tasks such as strategic planning, corporate communications, taxes, law, marketing, finance, human resources, and information technology. Corporate headquarters takes responsibility for the overall success of the corporation, ensures Corporate Governance. It is sometimes referred to the head office, which is the location where the executives of a business work and where many of the key business decisions are made. Generally, corporate headquarters acts as a core when the business is operating.</English>
 		<Russian>Штаб-квартира корпорации является частью корпоративной структуры, которая занимается такими важными задачами, как стратегическое планирование, корпоративные коммуникации, налоги, право, маркетинг, финансы, кадровая политика и информационные технологии. Штаб-квартира корпорации берет на себя ответственность за общий успех корпорации, обеспечивает корпоративное управление. Иногда его называют головным офисом, где работают руководители компании и где принимаются многие ключевые бизнес-решения. Как правило, штаб-квартира компании выступает в качестве ядра при организации бизнеса.</Russian>
-	</TEXT>
+    <Italian>La sede aziendale è la parte di una struttura aziendale che si occupa di compiti importanti come la pianificazione strategica, le comunicazioni aziendali, le tasse, la legge, il marketing, la finanza, le risorse umane e la tecnologia dell'informazione. La sede centrale si assume la responsabilità del successo complessivo della società e garantisce la Corporate Governance. A volte si riferisce alla sede centrale, che è il luogo in cui lavorano i dirigenti di un'azienda e dove vengono prese molte delle decisioni aziendali chiave. Generalmente, la sede centrale dell'azienda funge da nucleo quando l'attività è operativa.</Italian>
+  </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_FASHION_PEDIA</Tag>
 		<English>The first fashion designer who was not merely a dressmaker was Charles Frederick Worth (1826-1895). Before the former draper set up his maison couture (fashion house) in Paris, clothing design and creation was handled by largely anonymous seamstresses, and high fashion descended from styles worn at royal courts. Worth's success was such that he was able to dictate to his customers what they should wear, instead of following their lead as earlier dressmakers had done. It was during this period that many design houses began to hire artists to sketch or paint designs for garments. The images alone could be presented to clients much more cheaply than by producing an actual sample garment in the workroom. If the client liked the design, they ordered it and the resulting garment made money for the house. Thus, the tradition of designers sketching out garment designs instead of presenting completed garments on models to customers began as an economy.</English>
@@ -375,8 +381,8 @@
 		<English>Fashion House Store</English>
 		<French>Magasin 'Maison de la Mode'</French>
 		<German>Fashion-House-Laden</German>
-		<Italian>Negozio di Fashion House</Italian>
-		<Spanish>Tienda de Fashion House</Spanish>
+    <Italian>Negozio di Casa della moda</Italian>
+    <Spanish>Tienda de Fashion House</Spanish>
 		<Russian>Àòåëüå "ÄÌ"</Russian>
 	</TEXT>
 	<TEXT>
@@ -391,14 +397,15 @@
 		<English>MallWart</English>
 		<French>Carouf'</French>
 		<Russian>Ìàëëâàðò</Russian>
-	</TEXT>
+    <Italian>BigMall</Italian>
+  </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_MALLWART</Tag>
 		<English>HQ - MallWart</English>
 		<French>Le Siège de Carouf'</French>
 		<German>MallWart-Zentrale</German>
-		<Italian>QG di MallWart</Italian>
-		<Russian>Ìàëëâàðò</Russian>
+    <Italian>Quartier generale di BigMall</Italian>
+    <Russian>Ìàëëâàðò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MALLWART_PEDIA</Tag>
@@ -413,8 +420,8 @@
 		<English>MallWart Store</English>
 		<French>Magasin Carouf'</French>
 		<German>MallWart-Laden</German>
-		<Italian>Negozio di MallWart</Italian>
-		<Spanish>Tienda de MallWart</Spanish>
+    <Italian>Negozio di BigMall</Italian>
+    <Spanish>Tienda de MallWart</Spanish>
 		<Russian>Ìàãàçèí "Ìàëëâàðò"</Russian>
 	</TEXT>
 	<TEXT>
@@ -434,14 +441,15 @@
 		<English>HQ - Mapster</English>
 		<French>Le Siège de Mapster</French>
 		<German>Mapster-Zentrale</German>
-		<Italian>QG di Mapster</Italian>
-		<Russian>Ìàïñòåð</Russian>
+    <Italian>Quartier generale di Mapster</Italian>
+    <Russian>Ìàïñòåð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_MAPSTER_PEDIA</Tag>
 		<English>Corporate headquarters is the part of a corporate structure that deals with important tasks such as strategic planning, corporate communications, taxes, law, marketing, finance, human resources, and information technology. Corporate headquarters takes responsibility for the overall success of the corporation, ensures Corporate Governance. It is sometimes referred to the head office, which is the location where the executives of a business work and where many of the key business decisions are made. Generally, corporate headquarters acts as a core when the business is operating.</English>
 		<Russian>Штаб-квартира корпорации является частью корпоративной структуры, которая занимается такими важными задачами, как стратегическое планирование, корпоративные коммуникации, налоги, право, маркетинг, финансы, кадровая политика и информационные технологии. Штаб-квартира корпорации берет на себя ответственность за общий успех корпорации, обеспечивает корпоративное управление. Иногда его называют головным офисом, где работают руководители компании и где принимаются многие ключевые бизнес-решения. Как правило, штаб-квартира компании выступает в качестве ядра при организации бизнеса.</Russian>
-	</TEXT>
+    <Italian>La sede aziendale è la parte di una struttura aziendale che si occupa di compiti importanti come la pianificazione strategica, le comunicazioni aziendali, le tasse, la legge, il marketing, la finanza, le risorse umane e la tecnologia dell'informazione. La sede centrale si assume la responsabilità del successo complessivo della società e garantisce la Corporate Governance. A volte si riferisce alla sede centrale, che è il luogo in cui lavorano i dirigenti di un'azienda e dove vengono prese molte delle decisioni aziendali chiave. Generalmente, la sede centrale dell'azienda funge da nucleo quando l'attività è operativa.</Italian>
+  </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MAPSTER_PEDIA</Tag>
 		<English>Mass media denotes a section of the media specifically designed to reach a large audience. The term was coined in the 1920s with the advent of nationwide radio networks, mass-circulation newspapers and magazines. However, some forms of mass media such as books and manuscripts had already been in use for centuries.[NEWLINE]Mass media includes Internet media (like blogs, message boards, podcasts, and video sharing) because individuals now have a means to exposure that is comparable in scale to that previously restricted to a select group of mass media producers. The communications audience has been viewed by some commentators as forming a mass society with special characteristics, notably atomization or lack of social connections, which render it especially susceptible to the influence of modern mass-media techniques such as advertising and propaganda. The term "MSM" or "mainstream media" has been widely used in the blogosphere in discussion of the mass media and media bias.</English>
@@ -452,14 +460,15 @@
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MCDOWELLS</Tag>
 		<English>Big McDowells</English>
 		<Russian>Áèã-Ìàêäàóýëë</Russian>
-	</TEXT>
+    <Italian>McDowells</Italian>
+  </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_BIG_MCDOWELLS</Tag>
 		<English>HQ - Big McDowells</English>
 		<French>Le Siège de Big McDowells</French>
 		<German>Big-McDowells-Zentrale</German>
-		<Italian>QG di Big McDowells</Italian>
-		<Russian>Áèã-Ìàêäàóýëë</Russian>
+    <Italian>Quartier generale di McDowells</Italian>
+    <Russian>Áèã-Ìàêäàóýëë</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MCDOWELLS_PEDIA</Tag>
@@ -472,8 +481,8 @@
 		<English>Big McDowells Restaurant</English>
 		<French>Restaurant Big McDowells</French>
 		<German>Big-McDowells-Restaurant</German>
-		<Italian>Ristorante Big McDowells</Italian>
-		<Spanish>Restaurante McDowells</Spanish>
+    <Italian>Ristorante McDowells</Italian>
+    <Spanish>Restaurante McDowells</Spanish>
 		<Russian>Ðåñòîðàí "ÁÌ"</Russian>
 	</TEXT>
 	<TEXT>
@@ -487,14 +496,15 @@
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MILEHIGH</Tag>
 		<English>MileHigh Travels International</English>
 		<Russian>Ìèëõàé Òðåâåë</Russian>
-	</TEXT>
+    <Italian>MileHigh viaggi</Italian>
+  </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILEHIGH_TRAVELS_INTERNATIONAL_FRANCHISE</Tag>
 		<English>MileHigh Travels International Franchise</English>
 		<French>Franchise 'MileHigh Voyages International'</French>
 		<German>MileHigh-Travels-International-Filiale</German>
-		<Italian>Filiale di MileHigh Travels International</Italian>
-		<Spanish>Franquicia de MileHigh Travels International</Spanish>
+    <Italian>Filiale di MileHigh viaggi</Italian>
+    <Spanish>Franquicia de MileHigh Travels International</Spanish>
 		<Russian>Ôèëèàë "ÌÒ"</Russian>
 	</TEXT>
 	<TEXT>
@@ -508,26 +518,28 @@
 		<English>HQ - MileHigh Travels International</English>
 		<French>Le Siège de 'MileHigh Voyages International'</French>
 		<German>MileHigh-Travels-International-Zentrale</German>
-		<Italian>QG di MileHigh Travels International</Italian>
-		<Russian>Ìèëõàé Òðåâåë</Russian>
+    <Italian>Quartier generale di MileHigh viaggi</Italian>
+    <Russian>Ìèëõàé Òðåâåë</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MILEHIGH_PEDIA</Tag>
 		<English>Your local choice for planning exotic vacations.</English>
 		<Russian>Выберите и спланируйте с нами свой экзотический отдых. </Russian>
-	</TEXT>
+    <Italian>La tua scelta locale per pianificare vacanze esotiche.</Italian>
+  </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MOBBY</Tag>
 		<English>Mobby Meats International</English>
 		<Russian>Ìÿñî Ìîááè</Russian>
-	</TEXT>
+    <Italian>Mobby carni international</Italian>
+  </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_MOBBY_MEATS_INTERNATIONAL</Tag>
 		<English>HQ - Mobby Meats International</English>
 		<French>Le Siège de 'Mobby Meats International'</French>
 		<German>Mobby-Meats-International-Zentrale</German>
-		<Italian>QG di Mobby Meats International</Italian>
-		<Russian>Ìÿñî Ìîááè</Russian>
+    <Italian>Quartier generale di Mobby carni international</Italian>
+    <Russian>Ìÿñî Ìîááè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MOBBY_PEDIA</Tag>
@@ -540,8 +552,8 @@
 		<English>Mobby Meats Store</English>
 		<French>Magasin de 'Mobby Meats'</French>
 		<German>Mobby-Meats-Laden</German>
-		<Italian>Negozio di Mobby Meats</Italian>
-		<Spanish>Tienda de Mobby Meats</Spanish>
+    <Italian>Negozio di Mobby carni international</Italian>
+    <Spanish>Tienda de Mobby Meats</Spanish>
 		<Russian>Ìàãàçèí "ÌÌ"</Russian>
 	</TEXT>
 	<TEXT>
@@ -556,14 +568,15 @@
 		<English>MoonBean Coffee</English>
 		<French>Cafés MoonBean</French>
 		<Russian>Ìóíáèí êàôå</Russian>
-	</TEXT>
+    <Italian>Caffè MoonBean</Italian>
+  </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_MOONBEAN_COFFEE</Tag>
 		<English>HQ - MoonBean Coffee</English>
 		<French>Siège des Cafés MoonBean</French>
 		<German>MoonBean-Coffee-Zentrale</German>
-		<Italian>QG di MoonBean Coffee</Italian>
-		<Russian>Ìóíáèí êàôå</Russian>
+    <Italian>Quartier generale di Caffè MoonBean</Italian>
+    <Russian>Ìóíáèí êàôå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_MOONBEAN_COFFEE_PEDIA</Tag>
@@ -575,8 +588,8 @@
 		<Tag>TXT_KEY_BUILDING_MOONBEAN_COFFEESHOP</Tag>
 		<English>MoonBean Coffeeshop</English>
 		<French>Café-Restau MoonBean</French>
-		<Italian>Cafè di MoonBean-Coffee</Italian>
-		<Spanish>Cafetería MoonBean</Spanish>
+    <Italian>Coffeeshop di Caffè MoonBean</Italian>
+    <Spanish>Cafetería MoonBean</Spanish>
 		<Russian>Ðåñòîðàí "ÌÊ"</Russian>
 	</TEXT>
 	<TEXT>
@@ -589,14 +602,15 @@
 		<Tag>TXT_KEY_BUILDING_CORPORATION_RED</Tag>
 		<English>Red Curtains</English>
 		<Russian>Êðàñíûå êóëèñû</Russian>
-	</TEXT>
+    <Italian>Red curtains entertainment</Italian>
+  </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_RED_CURTAINS</Tag>
 		<English>HQ - Red Curtains</English>
 		<French>Le Siège de Red Curtains</French>
 		<German>Red-Curtains-Zentrale</German>
-		<Italian>QG di Red Curtains</Italian>
-		<Russian>Êðàñíûå êóëèñû</Russian>
+    <Italian>Quartier generale di Red curtains entertainment</Italian>
+    <Russian>Êðàñíûå êóëèñû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_RED_PEDIA</Tag>
@@ -609,8 +623,8 @@
 		<English>Red Curtains Theatre</English>
 		<French>Théatre de Red Curtains</French>
 		<German>Red-Curtains-Theater</German>
-		<Italian>Teatro di Red Curtains</Italian>
-		<Spanish>Teatro de Red Curtains</Spanish>
+    <Italian>Teatro di Red curtains entertainment</Italian>
+    <Spanish>Teatro de Red Curtains</Spanish>
 		<Russian>Òåàòð "ÊÊ"</Russian>
 	</TEXT>
 	<TEXT>
@@ -624,14 +638,15 @@
 		<English>Safari Hunters</English>
 		<French>Chasseurs Safari</French>
 		<Russian>Îõîòíèêè ñàôàðè</Russian>
-	</TEXT>
+    <Italian>Cacciatori di safari</Italian>
+  </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SAFARI_HUNTERS_GUIDE</Tag>
 		<English>Safari Hunters Guide</English>
 		<French>Guide des Chasseurs Safari</French>
 		<German>Safari-Hunters-Führer</German>
-		<Italian>Guida di Safari Hunters</Italian>
-		<Spanish>Ruta de Safari Hunters</Spanish>
+    <Italian>Guida di Cacciatori di safari</Italian>
+    <Spanish>Ruta de Safari Hunters</Spanish>
 		<Russian>Ôèëèàë "ÎÑ"</Russian>
 	</TEXT>
 	<TEXT>
@@ -645,8 +660,8 @@
 		<English>HQ - Safari Hunters</English>
 		<French>Siège des Chasseurs Safari</French>
 		<German>Safari-Hunters-Zentrale</German>
-		<Italian>QG di Safari Hunters</Italian>
-		<Russian>Îõîòíèêè ñàôàðè</Russian>
+    <Italian>Quartier generale di Cacciatori di safari</Italian>
+    <Russian>Îõîòíèêè ñàôàðè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_SAFARI_PEDIA</Tag>
@@ -659,14 +674,15 @@
 		<English>Ultimate Soldiers</English>
 		<French>Soldats Ultimes</French>
 		<Russian>Óíèâåðñàëüíûå ñîëäàòû</Russian>
-	</TEXT>
+    <Italian>Ultimate soldiers accociation</Italian>
+  </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_ULTIMATE_SOLDIERS</Tag>
 		<English>HQ - Ultimate Soldiers</English>
 		<French>Le Siège de Soldats Ultimes</French>
 		<German>Ultimate Soldiers Zentrale</German>
-		<Italian>QG di Ultimate Soldiers</Italian>
-		<Russian>Óíèâåðñàëüíûå ñîëäàòû</Russian>
+    <Italian>Quartier generale di Ultimate soldiers accociation</Italian>
+    <Russian>Óíèâåðñàëüíûå ñîëäàòû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_ULTSOLDIER_PEDIA</Tag>
@@ -680,8 +696,8 @@
 		<English>Ultimate Soldiers Trainer</English>
 		<French>Entraîneur Soldats Ultimes</French>
 		<German>Ultimate Soldiers Ausbilder</German>
-		<Italian>Filiale di Ultimate Soldiersr</Italian>
-		<Spanish>Instrucción de Ultimate Soldiers</Spanish>
+    <Italian>Addestratore di Ultimate soldiers accociation</Italian>
+    <Spanish>Instrucción de Ultimate Soldiers</Spanish>
 		<Russian>Áàçà "ÓÑ"</Russian>
 	</TEXT>
 	<TEXT>
@@ -697,14 +713,15 @@
 		<French>Confiseries Wonka</French>
 		<German>Wonka Confiserie</German>
 		<Russian>Êîíäèòåðñêàÿ Âîíêà</Russian>
-	</TEXT>
+    <Italian>Wonka confetture</Italian>
+  </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_WONKA_CONFECTIONERIES</Tag>
 		<English>HQ - Wonka Confectioneries</English>
 		<French>Siège des Confiseries Wonka</French>
 		<German>Wonka Confiserie Zentrale</German>
-		<Italian>QG di Wonka Confectioneries</Italian>
-		<Spanish>Wonka Confectioneries</Spanish>
+    <Italian>Quartier generale di Wonka confetture</Italian>
+    <Spanish>Wonka Confectioneries</Spanish>
 		<Russian>Êîíäèòåðñêàÿ Âîíêà</Russian>
 	</TEXT>
 	<TEXT>
@@ -720,8 +737,8 @@
 		<English>Wonka Confectioneries Shop</English>
 		<French>Magasin des Confiseries Wonka</French>
 		<German>Wonka Confiserie Geschäftsstelle</German>
-		<Italian>Negozio di Wonka Confectioneries</Italian>
-		<Spanish>Tienda de Wonka Confectioneries</Spanish>
+    <Italian>Negozio di Wonka confetture</Italian>
+    <Spanish>Tienda de Wonka Confectioneries</Spanish>
 		<Russian>Ðåñòîðàí "ÊÂ"</Russian>
 	</TEXT>
 	<TEXT>
@@ -753,7 +770,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_CORPORATION_BONUS_CONSUMES</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT][LINK=%s1_BonusType]%s2_BonusName[\LINK][COLOR_REVERT] (%F3_BonusIcon)</English>
-	</TEXT>
+    <Italian>[COLOR_HIGHLIGHT_TEXT][LINK=%s1_BonusType]%s2_BonusName[\LINK][COLOR_REVERT] (%F3_BonusIcon)PROVA56</Italian>
+  </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CORPORATION_BONUS_GENERATES</Tag>
 		<English>[ICON_BULLET]Generates:</English>
