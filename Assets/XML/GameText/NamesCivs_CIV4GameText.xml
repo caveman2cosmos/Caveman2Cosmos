@@ -607,11 +607,7 @@
 			<Plural>0:0:1:1</Plural>
 		</French>
 		<German>keltisch</German>
-		<Italian>
-			<Text>celtico:celtica:celtici:celtiche</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Italian>
+    <Italian>celtica</Italian>
 		<Spanish>
 			<Text>celta:celta:celtas:celtas</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -1358,11 +1354,7 @@
 			<Plural>0:0:1:1</Plural>
 		</French>
 		<German>inkaisch</German>
-		<Italian>
-			<Text>Incaico:Incaica:Incaici:Incaiche</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Italian>
+    <Italian>inca</Italian>
 		<Spanish>
 			<Text>inca:inca:incas:incas</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -1534,11 +1526,7 @@
 			<Plural>0:0:1:1</Plural>
 		</French>
 		<German>irokesisch</German>
-		<Italian>
-			<Text>irochese:irochese:irochesi:irochesi</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Italian>
+    <Italian>irochese</Italian>
 		<Spanish>
 			<Text>iroqués:iroquesa:iroqueses:iroquesas</Text>
 			<Gender>Male:Female:Male:Female</Gender>
