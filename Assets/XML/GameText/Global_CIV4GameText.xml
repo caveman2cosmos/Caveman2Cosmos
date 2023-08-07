@@ -1486,11 +1486,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_NEEDS_CULTURE_BORDER</Tag>
-				<English>[COLOR_WARNING_TEXT]Must be within Cultural Borders owned by of one of our cities.[COLOR_REVERT]</English>
-		<!-- <French>[COLOR_WARNING_TEXT]Uniquement à l'intérieur de nos frontières culturelles.[COLOR_REVERT]</French> -->
-		<!-- <German>[COLOR_WARNING_TEXT]Muss sich innerhalb unserer kulturellen Grenzen befinden.[COLOR_REVERT]</German> -->
+		<English>[COLOR_WARNING_TEXT]Must be within Cultural Borders owned by of one of our cities.[COLOR_REVERT]</English>
 		<Italian>[COLOR_WARNING_TEXT]Bisogna essere all'interno dei propri confini culturali.[COLOR_REVERT]</Italian>
-		<!-- <Spanish>[COLOR_WARNING_TEXT]Ha de estar dentro de las fronteras de nuestra cultura.[COLOR_REVERT]</Spanish> -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_NEEDS_OUT_RIVAL_CULTURE_BORDER</Tag>
@@ -2608,7 +2605,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BULLET</Tag>
-		<English>[ICON_BULLET]</English><!--Aerial CT trait in the pedia-->
+		<English>[ICON_BULLET]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BULLET_STARTS_WITH</Tag>
@@ -6512,7 +6509,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_CITY_VISIBILITY</Tag>
-		<English>City Visibility</English>
+		<English>City Vision</English>
 		<French>Afficher la ville</French>
 		<German>Stadtsichtbarkeit</German>
 		<Italian>Visibilità città</Italian>
@@ -9919,7 +9916,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_GO_TO_SENTRY_HELP</Tag>
-		<English>Order the selected unit to move to a tile. The unit stops before reaching its destination if an enemy unit of the same type enters its visibility range.</English>
+		<English>Order the selected unit to move to a tile. The unit stops before reaching its destination if an enemy unit of the same type enters its vision range.</English>
 		<French>Ordonner à l'unité sélectionnée de se déplacer vers une case. L'unité s'arrête avant sa destination si une unité ennemie ne pénètre pas dans son champ de vision.</French>
 		<German>Ausgewählte Einheit zu einem Zielfeld beordern. Die Einheit unterbricht ihre Bewegung, wenn eine feindliche Einheit desselben Typs ihr Sichtfeld betritt.</German>
 		<Italian>[NEWLINE]L'unità si fermerà prima della destinazione se un'unità nemica dello stesso tipo entra nel suo raggio di visibilità.</Italian>
@@ -22842,14 +22839,6 @@
 		<German>Spieler schwierigkeit: %s1</German>
 		<Italian>Difficoltà giocatore %s1</Italian>
 		<Spanish>Dificultad el jugador: %s1</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SETTINGS_DIFFICULTY</Tag>
-		<English>%s1 Difficulty</English>
-		<French>Difficulté : %s1</French>
-		<German>Schwierigkeit: %s1</German>
-		<Italian>Difficoltà %s1</Italian>
-		<Spanish>Dificultad: %s1</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SETTINGS_GAME_SPEED</Tag>
