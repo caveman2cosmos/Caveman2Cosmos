@@ -45,7 +45,7 @@
 		<French>Installer l'animal domestique comme ressource sur la carte.</French>
 		<Polish>Osadź udomowione zwierzę na mapie jako surowiec.</Polish>
 		<Russian>Ïîñåëèòü ïðèðó÷åííîå æèâîòíîå êàê ðåñóðñ íà êàðòå</Russian>
-    <Italian>Posiziona l'animale domestico come risorsa sulla mappa.</Italian>
+		<Italian>Posiziona l'animale domestico come risorsa sulla mappa.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_BUILD_DOMESTICATED_HERD_HELP</Tag>
@@ -53,7 +53,7 @@
 		<French>L'animal dompté domestiqué peut devenir une ressource. Avec la bonne technologie, cela peut aussi devenir un pâturage.</French>
 		<Polish>Udomowione zwierzęta mogą zostać osadzone na mapie jako surowce. Z odpowiednią technologią mogą zostać w tym miejscu stworzone pastwiska.</Polish>
 		<Russian>Ïðèðó÷åííîå æèâîòíîå ìîæåò ñòàòü ðåñóðñîì. Ïðè ñîîòâåòñòâóþùåé òåõíîëîãèè òàêæå ìîæåò ñòàòü ïàñòáèùàìè.</Russian>
-    <Italian>[NEWLINE]L'animale può diventare una risorsa. Con la giusta tecnologia potrebbe diventare anche un pascolo.</Italian>
+		<Italian>[NEWLINE]L'animale può diventare una risorsa. Con la giusta tecnologia potrebbe diventare anche un pascolo.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_RECORD_TALE</Tag>
@@ -98,7 +98,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_ANIMAL_COMBAT4</Tag>
 		<English>Various animal performances, slightly more civilized. This will consume the unit providing a temporary happiness boost.</English>
-    <Italian>Varie esibizioni di animali, leggermente più civilizzate. Consumerà l'unità fornendo un aumento temporaneo di felicità.</Italian>
+		<Italian>Varie esibizioni di animali, leggermente più civilizzate. Consumerà l'unità fornendo un aumento temporaneo di felicità.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_ANIMAL_COMBAT_MESSAGE</Tag>
@@ -178,7 +178,7 @@
 		<French>Tenter d'installer l'animal apprivoisé et domestiqué dans une ressource de troupeau et de construire un pâturage.</French>
 		<Polish>Spróbuj zmienić oswojone zwierzę w stado (surowiec na mapie) i zbuduj pastwisko.</Polish>
 		<Russian>Ïîïûòüñÿ ïîäñåëèòü ïðèðó÷åííîå æèâîòíîå â ñòàäî ðåñóðñà è ïîñòðîèòü ïàñòáèùå.</Russian>
-    <Italian>Prova a insediare l'animale addomesticato in una mandria e costruire un pascolo.</Italian>
+		<Italian>Prova a insediare l'animale addomesticato in una mandria e costruire un pascolo.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_BUILD_DOMESTICATED_PASTURE_MESSAGE</Tag>
@@ -186,6 +186,6 @@
 		<French>Les animaux domestiques sont maintenant élevés sur cette case.</French>
 		<Polish>Od tego momentu stada zwierząt zasiedlają ten teren.</Polish>
 		<Russian>Îòíûíå íà ýòîì ó÷àñòêå ðàçâîäÿò îäîìàøíåííûõ æèâîòíûõ.</Russian>
-    <Italian>Gli animali addomesticati sono ora presenti su questa casella.</Italian>
+		<Italian>Gli animali addomesticati sono ora presenti su questa casella.</Italian>
 	</TEXT>
 </Civ4GameText>

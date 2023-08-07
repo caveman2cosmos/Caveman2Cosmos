@@ -176,17 +176,17 @@
 	<TEXT>
 		<Tag>INTERFACE_CITY_PRODUCTION_BUY</Tag>
 		<English>%s1 (%d2) -%d3[ICON_GOLD]</English>
-    <Italian>PROVA3</Italian>
+		<Italian>PROVA3</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_PRODUCTION_WHIP</Tag>
 		<English>%s1 (%d2) %d3[ICON_ANGRYPOP] %d4[ICON_PRODUCTION]</English>
-    <Italian>Edificio in costruzione: %s1 in %d2 turni - %d3 [ICON_ANGRYPOP] - %d4 [ICON_PRODUCTION]</Italian>
+		<Italian>Edificio in costruzione: %s1 in %d2 turni - %d3 [ICON_ANGRYPOP] - %d4 [ICON_PRODUCTION]</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_PRODUCTION_WHIP_PLUS_GOLD</Tag>
 		<English>%s1 (%d2) %d3[ICON_ANGRYPOP] %d4[ICON_PRODUCTION] %d5[ICON_GOLD]</English>
-    <Italian>PROVA5</Italian>
+		<Italian>PROVA5</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_SHRINKING</Tag>
@@ -543,7 +543,7 @@
 		<English>XP</English>
 		<French>EXP</French>
 		<German>EP</German>
-    <Italian>punti esperienza</Italian>
+		<Italian>punti esperienza</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_ADVISOR_BRIBE</Tag>
@@ -640,7 +640,7 @@
 	<TEXT>
 		<Tag>TXT_BULLET_S1_COLON_SPACE</Tag>
 		<English>[ICON_BULLET]%s1:[SPACE]</English>
-    <Italian>Prova10</Italian>
+		<Italian>Prova10</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_BULLET_S1_F2_FROM_S3</Tag>
@@ -2483,7 +2483,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUSHELP_AVAILABLE_PLAYER_1</Tag>
 		<English>[SPACE](Have %d1)[SPACE]</English>
-    <Italian>[SPACE]In possesso: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT][SPACE]</Italian>
+		<Italian>[SPACE]In possesso: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT][SPACE]</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUSHELP_HEALTHY</Tag>
@@ -2571,12 +2571,12 @@
 		<German>An welcher Beförderungsreihe [NUM1:soll euer:soll eure:soll euer:sollen eure:sollen eure:sollen eure] [COLOR_WARNING_TEXT]%s1_UnitName[COLOR_REVERT] arbeiten?</German>
 		<Polish>Wybierz Linię Promocji (Koncentracja) dla Twojego [COLOR_WARNING_TEXT]%s1_UnitName[COLOR_REVERT].</Polish>
 		<Russian>Âûáåðèòå ïðîêà÷êó Êâàëèôèêàöèè äëÿ âàøåãî [COLOR_WARNING_TEXT]%s1_UnitName[COLOR_REVERT].</Russian>
-    <Italian>Seleziona un allenamento per il tuo [NEWLINE][COLOR_WARNING_TEXT]%s1_UnitName[COLOR_REVERT]</Italian>
+		<Italian>Seleziona un allenamento per il tuo [NEWLINE][COLOR_WARNING_TEXT]%s1_UnitName[COLOR_REVERT]</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDUP_DISBAND</Tag>
 		<English>Disband current build-up!</English>
-    <Italian>[COLOR_BLACK]Interrompi allenamento attuale[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_BLACK]Interrompi allenamento attuale[COLOR_REVERT]</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BEACON_GREAT_BARRIER_REEF</Tag>
@@ -3142,7 +3142,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_PRODUCTION</Tag>
 		<English>[NEWLINE]%s1: %d2/%d3 [ICON_PRODUCTION]</English>
-    <Italian>[NEWLINE]%s1: [COLOR_HIGHLIGHT_TEXT]%d2[COLOR_REVERT]  / [COLOR_HIGHLIGHT_TEXT]%d3[COLOR_REVERT]  [ICON_PRODUCTION]</Italian>
+		<Italian>[NEWLINE]%s1: [COLOR_HIGHLIGHT_TEXT]%d2[COLOR_REVERT]  / [COLOR_HIGHLIGHT_TEXT]%d3[COLOR_REVERT]  [ICON_PRODUCTION]</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_SELECT</Tag>
@@ -3368,7 +3368,7 @@
 		<Tag>TXT_KEY_CITY_SCREEN_DEMOLISH</Tag>
 		<English>Demolish</English>
 		<French>Démolir</French>
-    <Italian>Demolisci edificio</Italian>
+		<Italian>Demolisci edificio</Italian>
 		<German>Abreißen</German>
 		<Russian>Ñíîñ</Russian>
 	</TEXT>
@@ -4403,21 +4403,21 @@
 	<TEXT>
 		<Tag>TXT_KEY_COMMA</Tag>
 		<English>,</English>
-    <Italian>,[NEWLINE][ICON_BULLET]prova123</Italian>
+		<Italian>,[NEWLINE][ICON_BULLET]prova123</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_AMBUSH</Tag>
 		<English>Ambush (best to select one unit at a time for this)</English>
 		<French>Embuscade (sélectionner une seule unité pour cette action)</French>
 		<Russian>Засада (для этого лучше всего выбрать один отряд за раз)</Russian>
-    <Italian>Imboscata</Italian>
+		<Italian>Imboscata</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_ARREST</Tag>
 		<English>Arrest Criminal</English>
 		<French>Arrêter un Criminel</French>
 		<Russian>Арестовать преступника</Russian>
-    <Italian>Arresta criminale</Italian>
+		<Italian>Arresta criminale</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_AUTOMATE</Tag>
@@ -4494,7 +4494,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_HOTKEY</Tag>
 		<English>Command Hotkey</English>
-    <Italian>Scelta rapida</Italian>
+		<Italian>Scelta rapida</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_HOTKEY_HELP</Tag>
@@ -4543,7 +4543,7 @@
 		<German>Einheit mit zwei gleichen Einheiten auf demselben Feld zu einer stärkeren Einheit zusammenführen</German>
 		<Polish>Połącz dwie podobne jednostki by otrzymać jedną potężną!</Polish>
 		<Russian>Объединитесь с двумя одинаковыми юнитами на одной клетке, чтобы создать один, более мощный отряд</Russian>
-    <Italian>Unisci due unità simili sullo stessa casella</Italian>
+		<Italian>Unisci due unità simili sullo stessa casella</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_PROMOTION</Tag>
@@ -4568,7 +4568,7 @@
 		<German>Einheit in drei schwächere Einheiten aufteilen</German>
 		<Polish>Podziel tą jednostkę by otrzymać trzy słabsze.</Polish>
 		<Russian>Разделить отряд на три менее мощных</Russian>
-    <Italian>Dividi unità in tre</Italian>
+		<Italian>Dividi unità in tre</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_STATUS</Tag>
@@ -4576,7 +4576,7 @@
 		<French>Changer de Statut</French>
 		<German>Statusänderung</German>
 		<Russian>Установить статус</Russian>
-    <Italian>Imposta stato</Italian>
+		<Italian>Imposta stato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_STOP_AUTOMATION</Tag>
@@ -4744,14 +4744,14 @@
 		<Polish>%s1_BldgName został wybudowany przez mieszkańców miasta %s2_CityName</Polish>
 		<Russian>%s1_BldgName была утрачена в городе %s2_CityName</Russian>
 	</TEXT>
-  <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_NATURAL_WONDERS</Tag>
 		<English>1. Natural Wonders</English>
 		<French>1. Merveilles Naturelles</French>
 		<German>1. Naturwunder</German>
 		<Polish>1. Cuda Natury</Polish>
 		<Russian>1. ×óäî ïðèðîäû</Russian>
-    <Italian>Meraviglie naturali</Italian>
+		<Italian>Meraviglie naturali</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_NATURAL_WONDERS_PEDIA</Tag>
@@ -4937,7 +4937,7 @@
 		<Tag>TXT_KEY_CULTURELEVEL_LEGENDARY</Tag>
 		<English>Legendary</English>
 		<French>Légendaire</French>
-    <Italian>Leggendario</Italian>
+		<Italian>Leggendario</Italian>
 		<German>Legendär</German>
 		<Spanish>Legendario</Spanish>
 		<Polish>Legendarna</Polish>
@@ -4946,7 +4946,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CULTURELEVEL_MONUMENTAL</Tag>
 		<English>Monumental</English>
-    <Italian>Monumentale</Italian>
+		<Italian>Monumentale</Italian>
 		<Polish>Monumentalna</Polish>
 		<Russian>Ìîíóìåíòàëüíûé</Russian>
 	</TEXT>
@@ -4962,7 +4962,7 @@
 		<Tag>TXT_KEY_CULTURELEVEL_PHENOMENAL</Tag>
 		<English>Phenomenal</English>
 		<French>Phénoménal</French>
-    <Italian>Fenomenale</Italian>
+		<Italian>Fenomenale</Italian>
 		<German>Phänomenal</German>
 		<Spanish>Fenomenal</Spanish>
 		<Polish>Fenomenalna</Polish>
@@ -6912,7 +6912,7 @@
 		<Tag>TXT_KEY_EXPR_AND</Tag>
 		<English> And </English>
 		<French> et </French>
-    <Italian> [COLOR_REVERT]e [COLOR_WARNING_TEXT]</Italian>
+		<Italian> [COLOR_REVERT]e [COLOR_WARNING_TEXT]</Italian>
 		<Russian> И </Russian>
 	</TEXT>
 	<TEXT>
@@ -6930,7 +6930,7 @@
 		<English>False</English>
 		<French>faux</French>
 		<Russian>Ëîæü</Russian>
-    <Italian>no</Italian>
+		<Italian>no</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EXPR_IF</Tag>
@@ -6991,7 +6991,7 @@
 		<Tag>TXT_KEY_EXPR_OR</Tag>
 		<English> Or </English>
 		<French> ou </French>
-    <Italian> [COLOR_REVERT]o [COLOR_WARNING_TEXT]</Italian>
+		<Italian> [COLOR_REVERT]o [COLOR_WARNING_TEXT]</Italian>
 		<German> oder </German>
 		<Russian> или </Russian>
 	</TEXT>
@@ -7005,7 +7005,7 @@
 		<English>True</English>
 		<French>vrai</French>
 		<Russian>Èñòèíà</Russian>
-    <Italian>si</Italian>
+		<Italian>si</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EXTENDED_GAME_NO_DESKTOP</Tag>
@@ -7241,7 +7241,7 @@
 		</French>
 		<Polish>Wielka Rafa Koralowa</Polish>
 		<Russian>Áîë. Áàðüåðíûé ðèô</Russian>
-    <Italian>Grande barriera corallina</Italian>
+		<Italian>Grande barriera corallina</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_GREAT_BARRIER_PEDIA</Tag>
@@ -7258,7 +7258,7 @@
 		<German>Great Barrier Reef (Leuchtfeuer)</German>
 		<Polish>Wielka Rafa Koralowa (Boja)</Polish>
 		<Russian>Áàðüåðíûé ðèô (áóé)</Russian>
-    <Italian>Segnalatore sulla grande barriera corallina</Italian>
+		<Italian>Segnalatore sulla grande barriera corallina</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE</Tag>
@@ -7267,7 +7267,7 @@
 		<German>Great Barrier Reef (Leuchtturm)</German>
 		<Polish>Wielka Rafa Koralowa (Latarnia Morska)</Polish>
 		<Russian>Áàðüåðíûé ðèô (ìàÿê)</Russian>
-    <Italian>Faro sulla grande barriera corallina</Italian>
+		<Italian>Faro sulla grande barriera corallina</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_KILIMANJARO</Tag>
@@ -9835,17 +9835,17 @@
 		<Spanish>Cañoneo de alcance: selecciona la casilla a bombardear</Spanish>
 		<Polish>[H1]Bombardowanie na dystans[\H1][PARAGRAPH:2]Zaznaczając ikonę bombardowania możesz wybrać bombardowanie jednostek, ulepszeń terenu lub miast.[PARAGRAPH:2]Bombardowanie na dystans zadaje zwykłe Masowe Obrażenia znane z BTS. To czyni je bezużytecznym przeciwko pojedynczej jednostce jak i dużym stosom.[PARAGRAPH:2]Kiedy bombardujesz miasto, bombardowanie na dystans ma niewielką szanse uszkodzić obrońców nie tylko umocnienia. Bombardowanie z miast jest dużo mniej efektywne niż ze specjalistycznych konstrukcji takich jak forty.</Polish>
 		<Russian>[H1]Äàëüíÿÿ áîìáàðäèðîâêà[\H1][PARAGRAPH:2]Â ýòîì ñöåíàðèè îñàäíûå þíèòû ìîãóò áîìáàðäèðîâàòü íå òîëüêî ãîðîäà, íî è ïðîèçâîëüíûå êëåòêè ñ îáúåêòàìè è þíèòàìè. Äëÿ áîìáàðäèðîâêè íóæíî, êàê îáû÷íî, âûáðàòü çíà÷îê íà ïàíåëè óïðàâëåíèÿ. Îáû÷íàÿ àðòèëëåðèÿ áîìáàðäèðóåò òîëüêî ñîñåäíèå êëåòêè, à äàëüíîñòü äåéñòâèÿ òÿæåëîé àðòèëëåðèè äîõîäèò äî äâóõ êëåòîê.[PARAGRAPH:2]</Russian>
-    <Italian>[NEWLINE]Seleziona una casella da attaccare</Italian>
+		<Italian>[NEWLINE]Seleziona una casella da attaccare</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_DOTMAP</Tag>
 		<English>Dot map mode</English>
-    <Italian>Modalità Dotmap</Italian>
+		<Italian>Modalità Dotmap</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_DOTMAP_HELP</Tag>
 		<English>[ICON_BULLET]Resize: Shift+X</English>
-    <Italian>[ICON_BULLET]Cambia dimensione: Shift+X</Italian>
+		<Italian>[ICON_BULLET]Cambia dimensione: Shift+X</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_FENGAGE</Tag>
@@ -14440,14 +14440,14 @@
 		<Italian>La tua civiltà è la prima a scoprire la tecnologia [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT]! Scegli una tecnologia gratuita...</Italian>
 		<Spanish>Vuestra civilización ha sido la primera en descubrir [NUM1:el:la:los:las] [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT]. Elegid una tecnología gratis...</Spanish>
 	</TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_MISC_FOOD_THRESHOLD</Tag>
-    <English>Food: %d1/%d2 [ICON_FOOD][NEWLINE]* %d3 [ICON_FOOD] stored for the next growth cycle.</English>
-    <French>Nourriture : %d1_Num/%d2_Threshold [ICON_FOOD][NEWLINE]* %d3 [ICON_FOOD] stored for the next growth cycle.</French>
-    <German>Nahrung: %d1_Num/%d2_Threshold [ICON_FOOD][NEWLINE]* %d3 [ICON_FOOD] stored for the next growth cycle.</German>
-    <Italian>Cibo: [COLOR_HIGHLIGHT_TEXT]%d1_Num[COLOR_REVERT] / [COLOR_HIGHLIGHT_TEXT]%d2_Threshold[COLOR_REVERT]  [ICON_FOOD]</Italian>
-    <Spanish>Alimentos: %d1_Num/%d2_Threshold [ICON_FOOD][NEWLINE]* %d3 [ICON_FOOD] stored for the next growth cycle.</Spanish>
-  </TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_FOOD_THRESHOLD</Tag>
+		<English>Food: %d1/%d2 [ICON_FOOD][NEWLINE]* %d3 [ICON_FOOD] stored for the next growth cycle.</English>
+		<French>Nourriture : %d1_Num/%d2_Threshold [ICON_FOOD][NEWLINE]* %d3 [ICON_FOOD] stored for the next growth cycle.</French>
+		<German>Nahrung: %d1_Num/%d2_Threshold [ICON_FOOD][NEWLINE]* %d3 [ICON_FOOD] stored for the next growth cycle.</German>
+		<Italian>Cibo: [COLOR_HIGHLIGHT_TEXT]%d1_Num[COLOR_REVERT] / [COLOR_HIGHLIGHT_TEXT]%d2_Threshold[COLOR_REVERT]  [ICON_FOOD]</Italian>
+		<Spanish>Alimentos: %d1_Num/%d2_Threshold [ICON_FOOD][NEWLINE]* %d3 [ICON_FOOD] stored for the next growth cycle.</Spanish>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_FORCED_SPECIALIST</Tag>
 		<English>(%d1_Num Forced)</English>
@@ -15748,7 +15748,7 @@
 		<Polish>Właściciel</Polish>
 		<Russian>Âëàäåëåö</Russian>
 	</TEXT>
-  <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MISC_NO_CITY_INFLUENCE</Tag>
 		<English>Not in %s1_CivAdj city influence.</English>
 		<Italian>Non è nell'influenza di una città %s1_CivAdj.</Italian>
@@ -18544,7 +18544,7 @@
   	<TEXT>
 		<Tag>TXT_KEY_MORECIV4LERTS_CITY_TO_EXPAND_RCS</Tag>
 		<English>[COLOR_MAGENTA]The culture of %s1 is about to reach a new threshold.[COLOR_REVERT]</English>
-    <Italian>[COLOR_MAGENTA]La cultura della città di %s1 sta per raggiungere un nuovo livello.[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_MAGENTA]La cultura della città di %s1 sta per raggiungere un nuovo livello.[COLOR_REVERT]</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MORECIV4LERTS_CITY_TO_EXPAND</Tag>
@@ -18881,7 +18881,7 @@
 		<English>Never mind...</English>
 		<French>Laissez tomber...</French>
 		<German>Schon gut ...</German>
-    <Italian>[COLOR_BLACK]Annulla[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_BLACK]Annulla[COLOR_REVERT]</Italian>
 		<Spanish>No importa...</Spanish>
 	</TEXT>
 	<TEXT>
@@ -18972,7 +18972,7 @@
 		<German>[COLOR_LIGHT_GREY]In einem fernen Land wurde das Naturwunder %s1 entdeckt!</German>
 		<Polish>[COLOR_LIGHT_GREY]%s1 został odkryty w odległej krainie![COLOR_REVERT]</Polish>
 		<Russian>[COLOR_LIGHT_GREY]%s1 áûë îáíàðóæåí â äàëåêèõ çåìëÿõ![COLOR_REVERT]</Russian>
-    <Italian>[COLOR_LIGHT_GREY]La meraviglia naturale %s1 è stata scoperta in una terra lontana![COLOR_REVERT]</Italian>
+		<Italian>[COLOR_LIGHT_GREY]La meraviglia naturale %s1 è stata scoperta in una terra lontana![COLOR_REVERT]</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_NO_BUILDING_FREE_EXPERIENCE</Tag>
@@ -19006,7 +19006,7 @@
 		<Tag>TXT_KEY_NO_NON_OWNED_CITY</Tag>
 		<English>[ICON_BULLET]This unit cannot enter a city that is not your own without attacking it.</English>
 		<French>[ICON_BULLET]Cette unité ne peut entrer dans une ville étrangère qu'en l'attaquant.</French>
-    <Italian>[ICON_BULLET]Non può entrare in una città straniera senza attaccare.</Italian>
+		<Italian>[ICON_BULLET]Non può entrare in una città straniera senza attaccare.</Italian>
 		<Russian>[ICON_BULLET]Этот отряд не может войти в город, не принадлежащий вам, не атакуя его.</Russian>
 	</TEXT>
 	<TEXT>
@@ -21230,7 +21230,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PREVIOUS_OUTPUT</Tag>
 		<English>Previous Output</English>
-    <Italian>Produzione precedente</Italian>
+		<Italian>Produzione precedente</Italian>
 		<German>Vorherige Aufträge</German>
 	</TEXT>
 	<TEXT>
@@ -21507,7 +21507,7 @@
 		<English>[ICON_BULLET]%D1_change%% production speed for %s2_trait leaders</English>
 		<French>[ICON_BULLET]Vitesse de production de %D1_change%% pour les dirigeants avec le trait %s2_trait</French>
 		<German>[ICON_BULLET]%D1_change%% Produktionsgeschwindigkeit für Staatsoberhäupter mit dem Charakterzug: %s2:2_trait</German>
-    <Italian>[ICON_BULLET]Velocità produttiva: [COLOR_HIGHLIGHT_TEXT]%D1_change[COLOR_REVERT] con un leader [COLOR_HIGHLIGHT_TEXT]%s2_trait[COLOR_REVERT]</Italian>
+		<Italian>[ICON_BULLET]Velocità produttiva: [COLOR_HIGHLIGHT_TEXT]%D1_change[COLOR_REVERT] con un leader [COLOR_HIGHLIGHT_TEXT]%s2_trait[COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET]%D1_change%% de velocidad de producción con líder %s2:1_trait</Spanish>
 	</TEXT>
 	<TEXT>
@@ -22337,15 +22337,15 @@
 	<TEXT>
 		<Tag>TXT_KEY_REQUIRES_BONUS_RAWVICINITY</Tag>
 		<English>[COLOR_WARNING_TEXT]Requires [LINK=%s2]%s1_Text[\LINK] in City Vicinity, or manufactured locally (No need for improvement)[COLOR_REVERT]</English>
-    <Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Richiede[COLOR_REVERT] le seguenti risorse (in città o nelle vicinanze o prodotta in loco anche senza miglioramenti):[NEWLINE][TAB][LINK=%s2]%s1_Text[\LINK][COLOR_REVERT]</Italian>
-    <French>[COLOR_WARNING_TEXT]Requiert [LINK=%s2]%s1_Text[\LINK] à proximité de la ville, ou fabriqué localement (Pas besoin d'aménagement)[COLOR_REVERT]</French>
+		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Richiede[COLOR_REVERT] le seguenti risorse (in città o nelle vicinanze o prodotta in loco anche senza miglioramenti):[NEWLINE][TAB][LINK=%s2]%s1_Text[\LINK][COLOR_REVERT]</Italian>
+		<French>[COLOR_WARNING_TEXT]Requiert [LINK=%s2]%s1_Text[\LINK] à proximité de la ville, ou fabriqué localement (Pas besoin d'aménagement)[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_WARNING_TEXT]benötigt [LINK=%s2]%s1_Text[\LINK] (hergestellt oder vorhanden im Stadtradius) (keine Ausbauten erforderlich)[COLOR_REVERT]</German>
 		<Russian>[COLOR_WARNING_TEXT]Требует [LINK=%s2]%s1_Text[\LINK] в городском радиусе или изготовлено на месте (нет необходимости в улучшении)[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REQUIRES_BONUS_RAWVICINITY_ONEOF</Tag>
 		<English>[COLOR_WARNING_TEXT]Bonus required in city vicinity, or manufactured locally (No need for improvement):[SPACE]</English>
-    <Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Richiede[COLOR_REVERT] le seguenti risorse unica (in città o nelle vicinanze o prodotta in loco anche senza miglioramenti):[NEWLINE][TAB]</Italian>
+		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Richiede[COLOR_REVERT] le seguenti risorse unica (in città o nelle vicinanze o prodotta in loco anche senza miglioramenti):[NEWLINE][TAB]</Italian>
 		<French>[COLOR_WARNING_TEXT]Bonus requis dans les environs de la ville ou fabriqué localement (pas besoin d'amélioration):[SPACE]</French>
 		<German>[COLOR_WARNING_TEXT]benötigte Rohstoffe oder Güter im Stadtradius (keine Ausbauten erforderlich):[SPACE]</German>
 		<Russian>[COLOR_WARNING_TEXT]Бонус, расположенный в окрестностях города или произведенный на месте (не требует улучшения):[SPACE]</Russian>
@@ -22618,7 +22618,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_S1_COLON_SPACE</Tag>
 		<English>%s1:[SPACE]</English>
-    <Italian>prova12</Italian>
+		<Italian>prova12</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SAME_UNITS_TYPE</Tag>
@@ -22827,7 +22827,7 @@
 		<Italian>Clima %s1</Italian>
 		<Spanish>Clima: %s1</Spanish>
 	</TEXT>
-  <TEXT>
+	<TEXT>
   	<Tag>TXT_KEY_SETTINGS_DIFFICULTY_GAME</Tag>
 		<English>Game difficulty: %s1 </English>
 		<French>Jeu difficulté : %s1</French>
@@ -22835,14 +22835,14 @@
 		<Italian>Difficoltà partita %s1</Italian>
 		<Spanish>Dificultad partida: %s1</Spanish>
 	</TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_SETTINGS_DIFFICULTY_PLAYER</Tag>
-    <English>Player difficulty: %s1</English>
-    <French>Joueur difficulté : %s1</French>
-    <German>Spieler schwierigkeit: %s1</German>
-    <Italian>Difficoltà giocatore %s1</Italian>
-    <Spanish>Dificultad el jugador: %s1</Spanish>
-  </TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SETTINGS_DIFFICULTY_PLAYER</Tag>
+		<English>Player difficulty: %s1</English>
+		<French>Joueur difficulté : %s1</French>
+		<German>Spieler schwierigkeit: %s1</German>
+		<Italian>Difficoltà giocatore %s1</Italian>
+		<Spanish>Dificultad el jugador: %s1</Spanish>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SETTINGS_DIFFICULTY</Tag>
 		<English>%s1 Difficulty</English>
@@ -26427,7 +26427,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Yoruba</English>
 		<Polish>Joruba</Polish>
 		<Russian>Éîðóáà</Russian>
-    <Italian>Yorubaismo</Italian>
+		<Italian>Yorubaismo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_YORUBA_ADJECTIVE</Tag>
@@ -29508,7 +29508,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_VICTORY_SCREEN_PERCENTAGE</Tag>
 		<English>Status</English>
 		<French>Statut</French>
-    <Italian>Stati</Italian>
+		<Italian>Stati</Italian>
 		<Spanish>Estado</Spanish>
 		<Russian>Ñòàòóñ</Russian>
 	</TEXT>

@@ -13,8 +13,8 @@
 		<Tag>TXT_KEY_MSG_FREED_SLAVES_AS</Tag>
 		<English>Slaves freed in %s1 - %s2: %d3 unit(s)</English>
 		<Russian>Рабы освобождены в %s1 - %s2: %d3 юнита(ов)</Russian>
-    <Italian>Schiavi liberati nelle unità %s1 - %s2: %d3</Italian>
-  </TEXT>
+		<Italian>Schiavi liberati nelle unità %s1 - %s2: %d3</Italian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_FREED_SLAVES_AS_IMMIGRANTS</Tag>
 		<English>Some (%d1) of your slaves in %s2 have become %d3 immigrants.</English>
@@ -30,24 +30,24 @@
 		<English>%s1_city welcomes the new immigrants with open arms.</English>
 		<French>%s1_city accueille les nouveaux immigrants à bras ouverts.</French>
 		<Russian>%s1_city приветствует новых иммигрантов с распростертыми объятиями.</Russian>
-    <Italian>La città di %s1_city accoglie i nuovi immigati a braccia aperte.</Italian>
-  </TEXT>
+		<Italian>La città di %s1_city accoglie i nuovi immigati a braccia aperte.</Italian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_INDUSTRYESPIONAGE</Tag>
 		<English>[COLOR_SELECTED_TEXT]%s1 has plundered %d2 [ICON_RESEARCH] from you![COLOR_REVERT]</English>
 		<French>[COLOR_SELECTED_TEXT]%s1 vous a volé %d2 [ICON_RESEARCH]![COLOR_REVERT]</French>
 		<Polish>[COLOR_SELECTED_TEXT]%s1 złupił %d2 [ICON_RESEARCH] z Twojego imperium![COLOR_REVERT]</Polish>
 		<Russian>[COLOR_SELECTED_TEXT]%s1 похитил у вас %d2 [ICON_RESEARCH]![COLOR_REVERT]</Russian>
-    <Italian>[COLOR_SELECTED_TEXT]%s1 ha saccheggiato %d2 [ICON_RESEARCH] dal tuo impero![COLOR_REVERT]</Italian>
-  </TEXT>
+		<Italian>[COLOR_SELECTED_TEXT]%s1 ha saccheggiato %d2 [ICON_RESEARCH] dal tuo impero![COLOR_REVERT]</Italian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_INDUSTRYESPIONAGE_YOU</Tag>
 		<English>[COLOR_SELECTED_TEXT]You have plundered %d2 [ICON_RESEARCH] from %s1![COLOR_REVERT]</English>
 		<French>[COLOR_SELECTED_TEXT]Vous avez pillé %d2 [ICON_RESEARCH] à %s1![COLOR_REVERT]</French>
 		<Polish>[COLOR_SELECTED_TEXT]Złupiłeś %d2 [ICON_RESEARCH] z Imperium %s1![COLOR_REVERT]</Polish>
 		<Russian>[COLOR_SELECTED_TEXT]Вы получили %d2 [ICON_RESEARCH] от %s1![COLOR_REVERT]</Russian>
-    <Italian>[COLOR_SELECTED_TEXT]Hai saccheggiato %d2 [ICON_RESEARCH] dall'impero di %s1![COLOR_REVERT]</Italian>
-  </TEXT>
+		<Italian>[COLOR_SELECTED_TEXT]Hai saccheggiato %d2 [ICON_RESEARCH] dall'impero di %s1![COLOR_REVERT]</Italian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_INQUISITION</Tag>
 		<English>An inquisition in %s1_city has successfully purged all non-state religions and gold was confiscated from the victims.</English>
@@ -71,12 +71,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_MSG_LITIGATION</Tag>
 		<English>Corporation was removed from city.</English>
-    <Italian>La corporazione è stata rimossa dalla città</Italian>
+		<Italian>La corporazione è stata rimossa dalla città</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_LITIGATION_FAIL</Tag>
 		<English>Corporation won and stays in city.</English>
-    <Italian>La corporazione ha vinto e rimarrà nella città</Italian>
+		<Italian>La corporazione ha vinto e rimarrà nella città</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_NAZCA_LINES</Tag>
@@ -84,14 +84,14 @@
 		<French>Les [COLOR_UNIT_TEXT]Lignes de Nazca[COLOR_SELECTED_TEXT] se sont développées![COLOR_REVERT]</French>
 		<Polish>[COLOR_UNIT_TEXT]Rysunki z Nazca[COLOR_SELECTED_TEXT] powiekszyly sie![COLOR_REVERT]</Polish>
 		<Russian>[COLOR_UNIT_TEXT]Геоглифы Наски[COLOR_SELECTED_TEXT] добавили нам очередной бонус![COLOR_REVERT]</Russian>
-    <Italian>[COLOR_UNIT_TEXT]Le linned di Nazca[COLOR_SELECTED_TEXT] si sono sviluppate![COLOR_REVERT]</Italian>
+		<Italian>[COLOR_UNIT_TEXT]Le linned di Nazca[COLOR_SELECTED_TEXT] si sono sviluppate![COLOR_REVERT]</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_SNEAK</Tag>
 		<English>[COLOR_SELECTED_TEXT]%s1 has plundered %d2 [ICON_ESPIONAGE] from you![COLOR_REVERT]</English>
 		<French>[COLOR_SELECTED_TEXT]%s1 vous a volé %d2 [ICON_ESPIONAGE]![COLOR_REVERT]</French>
 		<Russian>[COLOR_SELECTED_TEXT]%s1 похитил у вас %d2 [ICON_ESPIONAGE]![COLOR_REVERT]</Russian>
-    <Italian>[COLOR_SELECTED_TEXT]%s1 ha saccheggiato %d2 [ICON_ESPIONAGE] dal tuo impero![COLOR_REVERT]</Italian>
+		<Italian>[COLOR_SELECTED_TEXT]%s1 ha saccheggiato %d2 [ICON_ESPIONAGE] dal tuo impero![COLOR_REVERT]</Italian>
     
 	</TEXT>
 	<TEXT>
@@ -99,7 +99,7 @@
 		<English>[COLOR_SELECTED_TEXT]You have plundered %d2 [ICON_ESPIONAGE] from %s1![COLOR_REVERT]</English>
 		<French>[COLOR_SELECTED_TEXT]Vous avez pillé %d2 [ICON_ESPIONAGE] à %s1![COLOR_REVERT]</French>
 		<Russian>[COLOR_SELECTED_TEXT]Вы получили %d2 [ICON_ESPIONAGE] от %s1![COLOR_REVERT]</Russian>
-    <Italian>[COLOR_SELECTED_TEXT]Hai saccheggiato %d2 [ICON_ESPIONAGE] dall'impero di %s1![COLOR_REVERT]</Italian>
+		<Italian>[COLOR_SELECTED_TEXT]Hai saccheggiato %d2 [ICON_ESPIONAGE] dall'impero di %s1![COLOR_REVERT]</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_STARSIGN_BUILD</Tag>
@@ -108,7 +108,7 @@
 		<Spanish>¡Parece que los astros han favorecido a una unidad entrenada en %s1!</Spanish>
 		<Polish>Gwiazdy sprzyjają zwerbowanej jednostce w %s1!</Polish>
 		<Russian>Только что обученный отряд в городе %s1 родился под счастливой звездой!</Russian>
-    <Italian>Le stelle sorridono a un'unità prodotta in %s1!</Italian>
+		<Italian>Le stelle sorridono a un'unità prodotta in %s1!</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_STARSIGN_CREATE</Tag>
@@ -117,7 +117,7 @@
 		<Spanish>¡Parece que los astros han favorecido a una unidad recién entrenada!</Spanish>
 		<Polish>Gwiazdy sprzyjają nowo zwerbowanej jednostce!</Polish>
 		<Russian>Звезды благоволят вновь созданному отряду!</Russian>
-    <Italian>Le stelle sorridono a un'unità appena creata</Italian>
+		<Italian>Le stelle sorridono a un'unità appena creata</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_TSUKIJI</Tag>
@@ -125,7 +125,7 @@
 		<French>Le [COLOR_HIGHLIGHT_TEXT]Marché aux poissons de Tsukiji [COLOR_SELECTED_TEXT] donne accès ç une nouvelle source de [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_SELECTED_TEXT]![COLOR_REVERT]</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Targ rybny Tsukiji [COLOR_SELECTED_TEXT] odkryl nowe zródlo [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Polish>
 		<Russian>Завершение строительства [COLOR_HIGHLIGHT_TEXT]Рынка Цукидзи [COLOR_SELECTED_TEXT]привело к открытию нового источника [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Russian>
-    <Italian>[COLOR_HIGHLIGHT_TEXT]Il mercato del pesce di Tsukiji [COLOR_SELECTED_TEXT]ha trovato una nuova fonte di [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
+		<Italian>[COLOR_HIGHLIGHT_TEXT]Il mercato del pesce di Tsukiji [COLOR_SELECTED_TEXT]ha trovato una nuova fonte di [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_SELECTED_TEXT]![COLOR_REVERT]</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_WONDER_CAPTURED</Tag>
@@ -165,6 +165,6 @@
 		<French>La[COLOR_UNIT_TEXT]Tour de Télévision de Zizkov[COLOR_SELECTED_TEXT] a brouillé tous les signaux radio!</French>
 		<Polish>[COLOR_UNIT_TEXT]Wieza Telewizyjna Zizkov[COLOR_SELECTED_TEXT] zaklócila sygnaly radiowe na calym swiecie!</Polish>
 		<Russian>[COLOR_UNIT_TEXT]Жижковская телебашня[COLOR_SELECTED_TEXT] заблокировала радиосигналы по всему миру!</Russian>
-    <Italian>[COLOR_UNIT_TEXT]La torre televisiva Zizkov[COLOR_SELECTED_TEXT] ha bloccato i segnali radio in tutto il mondo!</Italian>
+		<Italian>[COLOR_UNIT_TEXT]La torre televisiva Zizkov[COLOR_SELECTED_TEXT] ha bloccato i segnali radio in tutto il mondo!</Italian>
 	</TEXT>
 </Civ4GameText>

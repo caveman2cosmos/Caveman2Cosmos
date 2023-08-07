@@ -5,14 +5,14 @@
 		<English>Aquatic Plot</English>
 		<German>Wasserfeld</German>
 		<French>Case aquatique</French>
-    <Italian>Casella acquatica</Italian>
+		<Italian>Casella acquatica</Italian>
 		<Russian>Морской участок</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAPCATEGORY_CISLUNAR</Tag>
 		<English>Cislunar Plot</English>
 		<French>Case Cislunaire</French>
-    <Italian>Casella cislunare</Italian>
+		<Italian>Casella cislunare</Italian>
 		<German>Weltraumfeld</German>
 		<Russian>Лунная орбита</Russian>
 	</TEXT>
@@ -20,7 +20,7 @@
 		<Tag>TXT_KEY_MAPCATEGORY_DISTANT</Tag>
 		<English>Distant Plot</English>
 		<French>Case Distante</French>
-    <Italian>Casella distante</Italian>
+		<Italian>Casella distante</Italian>
 		<Russian>Дальний сектор</Russian>
 	</TEXT>
 	<TEXT>
@@ -28,14 +28,14 @@
 		<English>Earth Plot</English>
 		<German>Erdfeld</German>
 		<French>Case terrienne</French>
-    <Italian>Casella terrestre</Italian>
+		<Italian>Casella terrestre</Italian>
 		<Russian>Земля</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAPCATEGORY_GALACTIC</Tag>
 		<English>Galactic Plot</English>
 		<German>Galaxiefeld</German>
-    <Italian>Casella galattica</Italian>
+		<Italian>Casella galattica</Italian>
 		<French>Case galactique</French>
 		<Russian>Сектор галактики</Russian>
 	</TEXT>
@@ -43,14 +43,14 @@
 		<Tag>TXT_KEY_MAPCATEGORY_HYPERSPACE</Tag>
 		<English>Hyperspace Plot</English>
 		<French>Case d'Hyperspace</French>
-    <Italian>Casella d'iperspazio</Italian>
+		<Italian>Casella d'iperspazio</Italian>
 		<Russian>Гиперкосмос</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAPCATEGORY_INTERSTELLAR</Tag>
 		<English>Interstellar Plot</English>
 		<French>Case Interstellaire</French>
-    <Italian>Casella interstellare</Italian>
+		<Italian>Casella interstellare</Italian>
 		<Russian>Межзвездное простр-во</Russian>
 	</TEXT>
 	<TEXT>
@@ -58,14 +58,14 @@
 		<English>Jovian Plot</English>
 		<German>Jupiterfeld</German>
 		<French>Case jovienne</French>
-    <Italian>Casella gioviana</Italian>
+		<Italian>Casella gioviana</Italian>
 		<Russian>Атмосфера Юпитера</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAPCATEGORY_LUNAR</Tag>
 		<English>Lunar Plot</English>
 		<German>Mondfeld</German>
-    <Italian>Casella lunare</Italian>
+		<Italian>Casella lunare</Italian>
 		<French>Case lunaire</French>
 		<Russian>Луна</Russian>
 	</TEXT>
@@ -73,21 +73,21 @@
 		<Tag>TXT_KEY_MAPCATEGORY_MARTIAN</Tag>
 		<English>Martian Plot</English>
 		<German>Marsfeld</German>
-    <Italian>Casella marziana</Italian>
+		<Italian>Casella marziana</Italian>
 		<French>Case martienne</French>
 		<Russian>Марс</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAPCATEGORY_MILKY_WAY</Tag>
 		<English>Milky Way Plot</English>
-    <Italian>Casella della via lattea</Italian>
+		<Italian>Casella della via lattea</Italian>
 		<French>Case de Voie lactée</French>
 		<Russian>Млечный Путь</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAPCATEGORY_PLASMA</Tag>
 		<English>Plasma Plot</English>
-    <Italian>Casella di plasma</Italian>
+		<Italian>Casella di plasma</Italian>
 		<German>Plasmafeld</German>
 		<French>Case de plasma</French>
 		<Russian>Плазма</Russian>
@@ -97,7 +97,7 @@
 		<English>Solar System Plot</English>
 		<German>Sonnensystemfeld</German>
 		<French>Case du système solaire</French>
-    <Italian>Casella del sistema solare</Italian>
+		<Italian>Casella del sistema solare</Italian>
 		<Russian>Солнечная система</Russian>
 	</TEXT>
 	<TEXT>
@@ -105,28 +105,28 @@
 		<English>Subterranean Plot</English>
 		<German>unterirdisches Feld</German>
 		<French>Case souterraine</French>
-    <Italian>Casella sotterranea</Italian>
+		<Italian>Casella sotterranea</Italian>
 		<Russian>Земные недра</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAPCATEGORY_TITANIC</Tag>
 		<English>Titanic Plot</English>
 		<French>Case de Titan</French>
-    <Italian>Casella di Titano</Italian>
+		<Italian>Casella di Titano</Italian>
 		<Russian>Титан</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAPCATEGORY_UNIVERSAL</Tag>
 		<English>Universal Plot</English>
 		<French>Case Universelle</French>
-    <Italian>Casella universale</Italian>
+		<Italian>Casella universale</Italian>
 		<Russian>Вселенная</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAPCATEGORY_VENUSIAN</Tag>
 		<English>Venusian Plot</English>
 		<German>Venusfeld</German>
-    <Italian>Casella venusiana</Italian>
+		<Italian>Casella venusiana</Italian>
 		<French>Case vénusienne</French>
 		<Russian>Венера</Russian>
 	</TEXT>

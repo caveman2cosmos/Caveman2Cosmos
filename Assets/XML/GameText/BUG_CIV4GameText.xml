@@ -156,7 +156,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_FINANCIAL_ADVISOR_SPECIALIST_GOLD</Tag>
 		<English>[NEWLINE]%s1[ICON_GOLD]: %s3 (%d2)</English>
-    <Italian>PROVA2</Italian>
+		<Italian>PROVA2</Italian>
 		<Russian>[NEWLINE]%d1[ICON_GOLD]: %s3 (%d2)</Russian>
 	</TEXT>
 	<TEXT>
@@ -5384,7 +5384,7 @@
 		<German>Jägerangriff</German>
 		<Spanish>Lucha de cazas</Spanish>
 		<Russian>Ïåðåõâàò èñòðåáèòåëÿìè</Russian>
-    <Italian>Ingaggio aereo</Italian>
+		<Italian>Ingaggio aereo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__DCM_OPP_FIRE_HOVER</Tag>
@@ -5417,7 +5417,7 @@
 		<German>Fernbombardierung</German>
 		<Spanish>Bombardeo a distancia</Spanish>
 		<Russian>Äèñò. îáñòðåë</Russian>
-    <Italian>Bombardamento a distanza</Italian>
+		<Italian>Bombardamento a distanza</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__DYNAMIC_CIV_NAMES_HOVER</Tag>
@@ -8111,7 +8111,7 @@ uno de s, A, a, p, g, n, o, r (véase archivo de ayuda)</Spanish>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_YEAR_BUILT</Tag>
 		<English>Built in %s1_year</English>
-    <Italian>[ICON_BULLET]Costruizione ultimata nel %s1_year</Italian>
+		<Italian>[ICON_BULLET]Costruizione ultimata nel %s1_year</Italian>
 		<French>Construit en %s1_year</French>
 		<German>existiert seit %s1_year</German>
 		<Spanish>Construido en %s1_year</Spanish>

@@ -166,7 +166,7 @@
 		<English>Ainu</English>
 		<French>Aïnou</French>
 		<Russian>Àéíû</Russian>
-    <Italian>Cittadino ainu</Italian>
+		<Italian>Cittadino ainu</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AIRCRAFT</Tag>
@@ -188,7 +188,7 @@
 		<Tag>TXT_KEY_BONUS_AKA</Tag>
 		<English>Aka</English>
 		<Russian>Àêà</Russian>
-    <Italian>Cittadino aka</Italian>
+		<Italian>Cittadino aka</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AKKADIAN</Tag>
@@ -208,7 +208,7 @@
 		<Tag>TXT_KEY_BONUS_ALACALUFE</Tag>
 		<English>Alacalufe</English>
 		<Russian>Àëàêàëóôû</Russian>
-    <Italian>Cittadino kaweshkar</Italian>
+		<Italian>Cittadino kaweshkar</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ALBANIAN</Tag>
@@ -345,7 +345,7 @@
 		<Tag>TXT_KEY_BONUS_AMIS</Tag>
 		<English>Amis</English>
 		<Russian>Àìè</Russian>
-    <Italian>Cittadino amis</Italian>
+		<Italian>Cittadino amis</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AMMUNITION</Tag>
@@ -446,7 +446,7 @@
 		<English>Apache</English>
 		<Polish>Apacze</Polish>
 		<Russian>Àïà÷è</Russian>
-    <Italian>Cittadino apache</Italian>
+		<Italian>Cittadino apache</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_APPLE</Tag>
@@ -482,13 +482,13 @@
 		<English>Aragonese</English>
 		<French>Aragone</French>
 		<Russian>Àðàãîíöû</Russian>
-    <Italian>Cittadino aragonese</Italian>
+		<Italian>Cittadino aragonese</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ARAWAK</Tag>
 		<English>Arawak</English>
 		<Russian>Àðàâàêè</Russian>
-    <Italian>Cittadino aruaco</Italian>
+		<Italian>Cittadino aruaco</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ARGENTINIAN</Tag>
@@ -531,7 +531,7 @@
 		<English>Ashanti</English>
 		<Polish>Aszanti</Polish>
 		<Russian>Àøàíòè</Russian>
-    <Italian>Cittadino ashanti</Italian>
+		<Italian>Cittadino ashanti</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ASSYRIAN</Tag>
@@ -566,7 +566,7 @@
 		<Tag>TXT_KEY_BONUS_ATOMPUNK</Tag>
 		<English>Atompunk</English>
 		<Russian>Àòîìïàíê</Russian>
-    <Italian>Atompunk (cultura alternativa)</Italian>
+		<Italian>Atompunk (cultura alternativa)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ATOMPUNK_PEDIA</Tag>
@@ -613,13 +613,13 @@
 		<Tag>TXT_KEY_BONUS_AYMARA</Tag>
 		<English>Aymara</English>
 		<Russian>Àéìàðà</Russian>
-    <Italian>Cittadino aymara</Italian>
+		<Italian>Cittadino aymara</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AZANDE</Tag>
 		<English>Azande</English>
 		<Russian>Çàíäå</Russian>
-    <Italian>Cittadino azande</Italian>
+		<Italian>Cittadino azande</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AZTEC</Tag>
@@ -696,7 +696,7 @@
 		<English>Bandanese</English>
 		<French>Bandanais</French>
 		<Russian>Áàíäàíåçöû</Russian>
-    <Italian>Cittadino bandanese</Italian>
+		<Italian>Cittadino bandanese</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BANGLADESHI</Tag>
@@ -792,7 +792,7 @@
 		<Tag>TXT_KEY_BONUS_BATEK</Tag>
 		<English>Batek</English>
 		<Russian>Áàòåêè</Russian>
-    <Italian>Cittadino batek</Italian>
+		<Italian>Cittadino batek</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BAUXITE_ORE</Tag>
@@ -885,7 +885,7 @@
 		<English>Beninese</English>
 		<French>Béninoise</French>
 		<Russian>Áåíèíöû</Russian>
-    <Italian>Cittadino beniniano</Italian>
+		<Italian>Cittadino beniniano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BERBER</Tag>
@@ -982,7 +982,7 @@
 		<Tag>TXT_KEY_BONUS_BIOPUNK</Tag>
 		<English>Biopunk</English>
 		<Russian>Áèîïàíê</Russian>
-    <Italian>Biopunk (cultura alternativa)</Italian>
+		<Italian>Biopunk (cultura alternativa)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BIOPUNK_PEDIA</Tag>
@@ -1198,7 +1198,7 @@
 		<Tag>TXT_KEY_BONUS_BULGARIAN</Tag>
 		<English>Bulgarian</English>
 		<French>Bulgare</French>
-    <Italian>Cittadino bulgaro</Italian>
+		<Italian>Cittadino bulgaro</Italian>
 		<Polish>Bułgarska</Polish>
 		<Russian>Áîëãàðû</Russian>
 	</TEXT>
@@ -1265,7 +1265,7 @@
 		<Tag>TXT_KEY_BONUS_CAMBEBA</Tag>
 		<English>Cambeba</English>
 		<Russian>Êàìáåáà</Russian>
-    <Italian>Cittadino kambeba</Italian>
+		<Italian>Cittadino kambeba</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CAMEL</Tag>
@@ -1300,7 +1300,7 @@
 		<Tag>TXT_KEY_BONUS_CANARI</Tag>
 		<English>Cañari</English>
 		<Russian>Êàíàðè</Russian>
-    <Italian>Cittadino cañari</Italian>
+		<Italian>Cittadino cañari</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CANDLES</Tag>
@@ -1350,19 +1350,19 @@
 		<French>Cantonais</French>
 		<Polish>Kantońska</Polish>
 		<Russian>Êàíòîíöû</Russian>
-    <Italian>Cittadino cantonese</Italian>
+		<Italian>Cittadino cantonese</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CAPAYAN</Tag>
 		<English>Capayán</English>
 		<Russian>Êàïàÿíû</Russian>
-    <Italian>Cittadino capayana</Italian>
+		<Italian>Cittadino capayana</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CARAL_SUPE</Tag>
 		<English>Caral Supe</English>
 		<Russian>Êàðàëüöû</Russian>
-    <Italian>Cittadino caral</Italian>
+		<Italian>Cittadino caral</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CARBON_DIOXIDE_ICE</Tag>
@@ -1396,7 +1396,7 @@
 		<Tag>TXT_KEY_BONUS_CARBYNE</Tag>
 		<English>Carbyne</English>
 		<Russian>Êàðáèí</Russian>
-    <Italian>Carbyne</Italian>
+		<Italian>Carbyne</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CARBYNE_PEDIA</Tag>
@@ -1578,7 +1578,7 @@
 		<Tag>TXT_KEY_BONUS_CHACHAPOYA</Tag>
 		<English>Chachapoya</English>
 		<Russian>×à÷àïîéöû</Russian>
-    <Italian>Cittadino chachapoya</Italian>
+		<Italian>Cittadino chachapoya</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHALK</Tag>
@@ -1598,13 +1598,13 @@
 		<Tag>TXT_KEY_BONUS_CHAM</Tag>
 		<English>Cham</English>
 		<Russian>×àìäî</Russian>
-    <Italian>Cittadino cham</Italian>
+		<Italian>Cittadino cham</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHAMORRAN</Tag>
 		<English>Chamorran</English>
 		<Russian>×àìîððî</Russian>
-    <Italian>Cittadino chamorro</Italian>
+		<Italian>Cittadino chamorro</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHAOS_WANDS</Tag>
@@ -1637,7 +1637,7 @@
 		<Tag>TXT_KEY_BONUS_CHAVIN</Tag>
 		<English>Chavín</English>
 		<Russian>×àâèíöû</Russian>
-    <Italian>Cittadino chavin</Italian>
+		<Italian>Cittadino chavin</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHECHEN</Tag>
@@ -1680,13 +1680,13 @@
 		<Tag>TXT_KEY_BONUS_CHEROKEE</Tag>
 		<English>Cherokee</English>
 		<Russian>×åðîêè</Russian>
-    <Italian>Cittadino cherokee</Italian>
-  </TEXT>
+		<Italian>Cittadino cherokee</Italian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHEYENNE</Tag>
 		<English>Cheyenne</English>
 		<Russian>Øàéåííû</Russian>
-    <Italian>Cittadino cheyenne</Italian>
+		<Italian>Cittadino cheyenne</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHILEAN</Tag>
@@ -1699,7 +1699,7 @@
 		<Tag>TXT_KEY_BONUS_CHIMU</Tag>
 		<English>Chimú</English>
 		<Russian>×èìó</Russian>
-    <Italian>Cittadino chimú</Italian>
+		<Italian>Cittadino chimú</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHINESE</Tag>
@@ -1713,7 +1713,7 @@
 		<Tag>TXT_KEY_BONUS_CHIPPEWA</Tag>
 		<English>Chippewa</English>
 		<Russian>×èïïåâà</Russian>
-    <Italian>Cittadino ojibway</Italian>
+		<Italian>Cittadino ojibway</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHOCOLATE</Tag>
@@ -1733,7 +1733,7 @@
 		<Tag>TXT_KEY_BONUS_CHOLA</Tag>
 		<English>Chola</English>
 		<Russian>×îëà</Russian>
-    <Italian>Cittadino chola</Italian>
+		<Italian>Cittadino chola</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHROMITE_ORE</Tag>
@@ -1765,7 +1765,7 @@
 		<Tag>TXT_KEY_BONUS_CHUMASH</Tag>
 		<English>Chumash</English>
 		<Russian>×óìàøè</Russian>
-    <Italian>Cittadino chumash</Italian>
+		<Italian>Cittadino chumash</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CINNABAR_ORE</Tag>
@@ -1834,7 +1834,7 @@
 		<Tag>TXT_KEY_BONUS_CLOCKPUNK</Tag>
 		<English>Clockpunk</English>
 		<Russian>Êëîêïàíê</Russian>
-    <Italian>Clockpunk (cultura alternativa)</Italian>
+		<Italian>Clockpunk (cultura alternativa)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CLOCKPUNK_PEDIA</Tag>
@@ -2001,7 +2001,7 @@
 		<Tag>TXT_KEY_BONUS_COMANCHE</Tag>
 		<English>Comanche</English>
 		<Russian>Êîìàí÷è</Russian>
-    <Italian>Cittadino comanche</Italian>
+		<Italian>Cittadino comanche</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_COMPUTERS</Tag>
@@ -2221,12 +2221,12 @@
 		<Tag>TXT_KEY_BONUS_CRYSTALPUNK</Tag>
 		<English>Crystalpunk</English>
 		<Russian>Êðèñòàëïàíê</Russian>
-    <Italian>Crystalpunk (cultura alternativa)</Italian>
+		<Italian>Crystalpunk (cultura alternativa)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CRYSTALPUNK_PEDIA</Tag>
 		<English>After passing the "big, shiny and sciencey!" period, a highly developed civilization can enter a stage where technology continues to advance, but becomes a lot sleeker and subtler. At the same time, society gets epic. Jumpsuits will start being replaced by togas, robes and such garments, bustling mega-cities by brilliant arcologies. There will be crystals. Lots and lots of crystals. This world of tomorrow may end up looking much like Ancient Greece or Rome (the theme-park Cecil B. de Mille version at least) while still enjoying ultratech comforts.</English>
-    <Italian>Dopo aver superato il periodo grande, lucido e scientifico!", una civiltà altamente sviluppata può entrare in una fase in cui la tecnologia continua ad avanzare, ma diventa molto più elegante e sottile. Allo stesso tempo, la società diventa epica. Le tute cominceranno ad essere sostituite da toghe, vesti e indumenti simili, animate megalopoli da brillanti arcologie. Ci saranno cristalli. Un sacco di cristalli. Questo mondo di domani potrebbe finire per assomigliare molto all'antica Grecia o a Roma (almeno la versione del parco a tema di Cecil B. de Mille) pur godendo di comfort ultratecnologici.</Italian>
+		<Italian>Dopo aver superato il periodo grande, lucido e scientifico!", una civiltà altamente sviluppata può entrare in una fase in cui la tecnologia continua ad avanzare, ma diventa molto più elegante e sottile. Allo stesso tempo, la società diventa epica. Le tute cominceranno ad essere sostituite da toghe, vesti e indumenti simili, animate megalopoli da brillanti arcologie. Ci saranno cristalli. Un sacco di cristalli. Questo mondo di domani potrebbe finire per assomigliare molto all'antica Grecia o a Roma (almeno la versione del parco a tema di Cecil B. de Mille) pur godendo di comfort ultratecnologici.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CRYSTAL_GLASSWARE</Tag>
@@ -2275,12 +2275,12 @@
 		<Tag>TXT_KEY_BONUS_CYBERPUNK</Tag>
 		<English>Cyberpunk</English>
 		<Russian>Êèáåðïàíê</Russian>
-    <Italian>Cyberpunk (cultura alternativa)</Italian>
+		<Italian>Cyberpunk (cultura alternativa)</Italian>
    </TEXT>
-  <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_CYBERPUNK_PEDIA</Tag>
 		<English>Cyberpunk is a subgenre of science fiction in a dystopian futuristic setting that tends to focus on a "combination of lowlife and high tech", featuring futuristic technological and scientific achievements, such as artificial intelligence and cybernetics, juxtaposed with societal collapse or decay. Much of cyberpunk is rooted in the New Wave science fiction movement of the 1960s and 1970s, when writers like Philip K. Dick, Michael Moorcock, Roger Zelazny, John Brunner, J. G. Ballard, Philip José Farmer and Harlan Ellison examined the impact of drug culture, technology, and the sexual revolution while avoiding the utopian tendencies of earlier science fiction. Comics exploring cyberpunk themes began appearing as early as Judge Dredd, first published in 1977. Released in 1984, William Gibson's influential debut novel Neuromancer helped solidify cyberpunk as a genre, drawing influence from punk subculture and early hacker culture. Other influential cyberpunk writers included Bruce Sterling and Rudy Rucker. The Japanese cyberpunk subgenre began in 1982 with the debut of Katsuhiro Otomo's manga series Akira, with its 1988 anime film adaptation (also directed by Otomo) later popularizing the subgenre.</English>
-    <Italian>Cyberpunk è un sottogenere della fantascienza in un'ambientazione futuristica distopica che tende a concentrarsi su una "combinazione di bassa vita e alta tecnologia", con risultati tecnologici e scientifici futuristici, come l'intelligenza artificiale e la cibernetica, giustapposti al collasso o al decadimento della società . Gran parte del cyberpunk è radicato nel movimento di fantascienza New Wave degli anni '60 e '70, quando scrittori come Philip K. Dick, Michael Moorcock, Roger Zelazny, John Brunner, J.G. Ballard, Philip José Farmer e Harlan Ellison esaminarono l'impatto della cultura della droga , la tecnologia e la rivoluzione sessuale evitando le tendenze utopistiche della precedente fantascienza. I fumetti che esplorano i temi del cyberpunk iniziarono ad apparire già con Judge Dredd, pubblicato per la prima volta nel 1977. Pubblicato nel 1984, l'influente romanzo d'esordio di William Gibson, Neuromante, aiutò a consolidare il cyberpunk come genere, traendo influenza dalla sottocultura punk e dalla prima cultura hacker. Altri influenti scrittori cyberpunk includevano Bruce Sterling e Rudy Rucker. Il sottogenere cyberpunk giapponese è iniziato nel 1982 con il debutto della serie manga Akira di Katsuhiro Otomo, con il suo adattamento cinematografico anime del 1988 (anch'esso diretto da Otomo) che in seguito ha reso popolare il sottogenere.</Italian>
+		<Italian>Cyberpunk è un sottogenere della fantascienza in un'ambientazione futuristica distopica che tende a concentrarsi su una "combinazione di bassa vita e alta tecnologia", con risultati tecnologici e scientifici futuristici, come l'intelligenza artificiale e la cibernetica, giustapposti al collasso o al decadimento della società . Gran parte del cyberpunk è radicato nel movimento di fantascienza New Wave degli anni '60 e '70, quando scrittori come Philip K. Dick, Michael Moorcock, Roger Zelazny, John Brunner, J.G. Ballard, Philip José Farmer e Harlan Ellison esaminarono l'impatto della cultura della droga , la tecnologia e la rivoluzione sessuale evitando le tendenze utopistiche della precedente fantascienza. I fumetti che esplorano i temi del cyberpunk iniziarono ad apparire già con Judge Dredd, pubblicato per la prima volta nel 1977. Pubblicato nel 1984, l'influente romanzo d'esordio di William Gibson, Neuromante, aiutò a consolidare il cyberpunk come genere, traendo influenza dalla sottocultura punk e dalla prima cultura hacker. Altri influenti scrittori cyberpunk includevano Bruce Sterling e Rudy Rucker. Il sottogenere cyberpunk giapponese è iniziato nel 1982 con il debutto della serie manga Akira di Katsuhiro Otomo, con il suo adattamento cinematografico anime del 1988 (anch'esso diretto da Otomo) che in seguito ha reso popolare il sottogenere.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CZECH</Tag>
@@ -2301,7 +2301,7 @@
 		<English>Dahomey</English>
 		<Polish>Dahomejska</Polish>
 		<Russian>Äàãîìåéöû</Russian>
-    <Italian>Cittadino dahomey</Italian>
+		<Italian>Cittadino dahomey</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_DANISH</Tag>
@@ -2349,8 +2349,8 @@
 		<Tag>TXT_KEY_BONUS_DAYAK</Tag>
 		<English>Dayak</English>
 		<Russian>Äàÿêè</Russian>
-    <Italian>Cittadino daiacco</Italian>
-  </TEXT>
+		<Italian>Cittadino daiacco</Italian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_DEEP_SPACE_LIFEFORMS</Tag>
 		<English>Deep Space Lifeforms</English>
@@ -2403,8 +2403,8 @@
 		<English>Dene</English>
 		<French>Déné</French>
 		<Russian>Äåíå</Russian>
-    <Italian>Cittadino dene</Italian>
-  </TEXT>
+		<Italian>Cittadino dene</Italian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_DIAMOND</Tag>
 		<English>Diamond</English>
@@ -2438,7 +2438,7 @@
 		<Tag>TXT_KEY_BONUS_DIESELPUNK</Tag>
 		<English>Dieselpunk</English>
 		<Russian>Äèçåëüïàíê</Russian>
-    <Italian>Dieselpunk (cultura alternativa)</Italian>
+		<Italian>Dieselpunk (cultura alternativa)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_DIESELPUNK_PEDIA</Tag>
@@ -3278,7 +3278,7 @@
 		<Tag>TXT_KEY_BONUS_FURAWI</Tag>
 		<English>Furawi</English>
 		<Russian>Ôîð</Russian>
-    <Italian>Cittadino fur</Italian>
+		<Italian>Cittadino fur</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_FURNITURE</Tag>
@@ -3314,7 +3314,7 @@
 		<Tag>TXT_KEY_BONUS_GAUCHO</Tag>
 		<English>Gaucho</English>
 		<Russian>Ãàó÷î</Russian>
-    <Italian>Cittadino gaucho</Italian>
+		<Italian>Cittadino gaucho</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_GEMSTONE</Tag>
@@ -3443,7 +3443,7 @@
 		<Tag>TXT_KEY_BONUS_GOKTURK</Tag>
 		<English>Göktürk</English>
 		<Russian>Òþðêè</Russian>
-    <Italian>Cittadino göktürk</Italian>
+		<Italian>Cittadino göktürk</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_GOLD_INGOTS</Tag>
@@ -3608,12 +3608,12 @@
 		<Tag>TXT_KEY_BONUS_GUARANI</Tag>
 		<English>Guaraní</English>
 		<Russian>Ãóàðàíè</Russian>
-    <Italian>Cittadino guaranese</Italian>
+		<Italian>Cittadino guaranese</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_GUATEMALAN</Tag>
 		<English>Guatemalan</English>
-    <Italian>Cittadino guatemalteco</Italian>
+		<Italian>Cittadino guatemalteco</Italian>
 		<Russian>Ãâàòåìàëüöû</Russian>
 	</TEXT>
 	<TEXT>
@@ -3684,7 +3684,7 @@
 		<English>Haida</English>
 		<French>Haïda</French>
 		<Russian>Õàéäà</Russian>
-    <Italian>Cittadino haida</Italian>
+		<Italian>Cittadino haida</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HAITIAN</Tag>
@@ -3713,7 +3713,7 @@
 		<English>Hausa</English>
 		<French>Haoussa</French>
 		<Russian>Õàóñà</Russian>
-    <Italian>Cittadino hausa</Italian>
+		<Italian>Cittadino hausa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HAWAIIAN</Tag>
@@ -3852,7 +3852,7 @@
 		<English>Herero</English>
 		<French>Héréro</French>
 		<Russian>Ãåðåðî</Russian>
-    <Italian>Cittadino herero</Italian>
+		<Italian>Cittadino herero</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HIDE</Tag>
@@ -4002,14 +4002,14 @@
 		<Tag>TXT_KEY_BONUS_HOPEWELL</Tag>
 		<English>Hopewell</English>
 		<Russian>Õîóïâåëëöû</Russian>
-    <Italian>Cittadino hopewell</Italian>
+		<Italian>Cittadino hopewell</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HOPI</Tag>
 		<English>Hopi</English>
 		<Russian>Õîïè</Russian>
-    <Italian>Cittadino hopi</Italian>
-  </TEXT>
+		<Italian>Cittadino hopi</Italian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HORSE</Tag>
 		<English>Horse</English>
@@ -4324,7 +4324,7 @@
 		<Tag>TXT_KEY_BONUS_HYKSOSI</Tag>
 		<English>Hyksosi</English>
 		<Russian>Ãèêñîñû</Russian>
-    <Italian>Cittadino hyksos</Italian>
+		<Italian>Cittadino hyksos</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HYPOSPRAYS</Tag>
@@ -4457,7 +4457,7 @@
 		<Tag>TXT_KEY_BONUS_INDUS</Tag>
 		<English>Indus</English>
 		<Russian>Èíäóñû</Russian>
-    <Italian>Cittadino indus</Italian>
+		<Italian>Cittadino indus</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_INGOTS_PEDIA</Tag>
@@ -4469,7 +4469,7 @@
 		<Tag>TXT_KEY_BONUS_INUIT</Tag>
 		<English>Inuit</English>
 		<Russian>Èíóèòû</Russian>
-    <Italian>Cittadino iniut</Italian>
+		<Italian>Cittadino iniut</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_IRANIAN</Tag>
@@ -4684,13 +4684,13 @@
 		<Tag>TXT_KEY_BONUS_JIVARO</Tag>
 		<English>Jivaro</English>
 		<Russian>Äæèâàðî</Russian>
-    <Italian>Cittadino jivaro</Italian>
+		<Italian>Cittadino jivaro</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_JOMON</Tag>
 		<English>Jomon</English>
 		<Russian>Äçåìîí</Russian>
-    <Italian>Cittadino jomon</Italian>
+		<Italian>Cittadino jomon</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_JORDANIAN</Tag>
@@ -4705,19 +4705,19 @@
 		<English>Joseon</English>
 		<French>Joséon</French>
 		<Russian>×îñîíöû</Russian>
-    <Italian>Cittadino joseon</Italian>
+		<Italian>Cittadino joseon</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_JUTE</Tag>
 		<English>Jute</English>
 		<Russian>Þòû</Russian>
-    <Italian>Cittadino juto</Italian>
+		<Italian>Cittadino juto</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KANEM_BORNU</Tag>
 		<English>Kanem-Bornu</English>
 		<Russian>Êàíåìöû</Russian>
-    <Italian>Cittadino kanem-bornu</Italian>
+		<Italian>Cittadino kanem-bornu</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KANGAROO</Tag>
@@ -4812,7 +4812,7 @@
 		<English>Khmer</English>
 		<Polish>Khmerska</Polish>
 		<Russian>Êõìåðû</Russian>
-    <Italian>Cittadino khmer</Italian>
+		<Italian>Cittadino khmer</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KHWARAZMIAN</Tag>
@@ -4824,13 +4824,13 @@
 		<Tag>TXT_KEY_BONUS_KILLKE</Tag>
 		<English>Killke</English>
 		<Russian>Êèëüêå</Russian>
-    <Italian>Cittadino killke</Italian>
+		<Italian>Cittadino killke</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KIPCHAK</Tag>
 		<English>Kipchak</English>
 		<Russian>Êûï÷àêè</Russian>
-    <Italian>Cittadino kipcako</Italian>
+		<Italian>Cittadino kipcako</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KITARAN</Tag>
@@ -4842,14 +4842,14 @@
 		<Tag>TXT_KEY_BONUS_KLAMATH</Tag>
 		<English>Klamath</English>
 		<Russian>Êëàìàòöû</Russian>
-    <Italian>Cittadino klamath</Italian>
-  </TEXT>
+		<Italian>Cittadino klamath</Italian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KOGI</Tag>
 		<English>Kogi</English>
 		<Russian>Êîãè</Russian>
-    <Italian>Cittadino coguo</Italian>
-  </TEXT>
+		<Italian>Cittadino coguo</Italian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KONGOLESE</Tag>
 		<English>Kongolese</English>
@@ -4863,7 +4863,7 @@
 		<English>Konjan</English>
 		<Italian>Cittadino konjo</Italian>
 		<Russian>Êîíúÿí</Russian>
-  </TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KOREAN</Tag>
 		<English>Korean</English>
@@ -4936,7 +4936,7 @@
 		<English>Lard is pig fat in both its rendered and unrendered forms. Lard was commonly used in many cuisines as a cooking fat or shortening, or as a spread similar to butter. Its use in contemporary cuisine has diminished; however, many contemporary cooks and bakers favor it over other fats for select uses. The culinary qualities of lard vary somewhat depending on the part of the pig from which the fat was taken and how the lard was processed.</English>
 		<Polish>Smalec - tłuszcz zwierzęcy wykorzystywany w sztuce kulinarnej do przyrządzania potraw, jak również bezpośredniego spożywania.</Polish>
 		<Russian>Ñàëî - ýòî ñâèíîé æèð ñ íàëè÷èåì èëè îòñóòñòâèåì ìÿñíûõ ïðîñëîåê. Ñâèíîå ñàëî øèðîêî èñïîëüçóåòñÿ â êóõíÿõ ìíîãèõ íàðîäîâ â êà÷åñòâå êóëèíàðíîãî æèðà èëè ìàñëà, ïîäîáíîãî ñëèâî÷íîìó. Åãî èñïîëüçîâàíèå â ñîâðåìåííîé êóõíå óìåíüøèëàñü; òåì íå ìåíåå, ìíîãèå ñîâðåìåííûå ïîâàðà è ïåêàðè îòìå÷àþò åãî ïîëüçó ïî ñðàâíåíèþ ñ äðóãèìè æèðàìè ïðè âûáîðå èíãðåäèåíòîâ. Êóëèíàðíûå êà÷åñòâà ñàëà íåñêîëüêî ðàçëè÷àþòñÿ â çàâèñèìîñòè îò ÷àñòåé ñâèíüè, èç êîòîðîé áûë èçâëå÷åí æèð è ñàëî, è êàêèì îáðàçîì îí áûë îáðàáîòàí.</Russian>
-    <Italian>Il lardo è grasso di maiale sia nella sua forma fusa che in quella non fusa. Il lardo era comunemente usato in molte cucine come grasso da cucina o accorciamento, o come crema da spalmare simile al burro. Il suo utilizzo nella cucina contemporanea è diminuito; tuttavia, molti cuochi e fornai contemporanei lo preferiscono ad altri grassi per usi selezionati. Le qualità culinarie del lardo variano leggermente a seconda della parte del maiale da cui è stato prelevato il grasso e di come è stato lavorato il lardo.</Italian>
+		<Italian>Il lardo è grasso di maiale sia nella sua forma fusa che in quella non fusa. Il lardo era comunemente usato in molte cucine come grasso da cucina o accorciamento, o come crema da spalmare simile al burro. Il suo utilizzo nella cucina contemporanea è diminuito; tuttavia, molti cuochi e fornai contemporanei lo preferiscono ad altri grassi per usi selezionati. Le qualità culinarie del lardo variano leggermente a seconda della parte del maiale da cui è stato prelevato il grasso e di come è stato lavorato il lardo.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LATVIAN</Tag>
@@ -4958,7 +4958,7 @@
 		<English>Lazulite is a blue, phosphate mineral containing magnesium, iron, and aluminium phosphate. Lazulite forms one endmember of a solid solution series with the darker iron rich scorzalite.</English>
 		<Polish>Lazulit - rzadki minerał z gromady fosforanów. Nazwa pochodzi od arab. azul = niebo; pers. lazhward = niebieski oraz łac. lazulum = błękit, połączonego z gr. lithos = kamień (skała), nawiązując do charakterystycznej barwy tego minerału.</Polish>
 		<Russian>Ëàçóðèò ÿâëÿåòñÿ ñèíèì ìèíåðàëîì, ñîäåðæàùèì ôîñôàò ìàãíèÿ, æåëåçà è ôîñôàò àëþìèíèÿ. Óçîðû ëàçóðèòà áîëüøå âñåãî íàïîìèíàþò áîãàòûå æåëåçîì ñ áîëåå òåìíûìè ïðîæèëêàìè ñêîðçàëèòû.</Russian>
-    <Italian>La lazulite è un minerale fosfato blu contenente magnesio, ferro e fosfato di alluminio. La lazulite forma un membro terminale di una serie di soluzioni solide con la scorzalite più scura ricca di ferro</Italian>
+		<Italian>La lazulite è un minerale fosfato blu contenente magnesio, ferro e fosfato di alluminio. La lazulite forma un membro terminale di una serie di soluzioni solide con la scorzalite più scura ricca di ferro</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LA_PLATAN</Tag>
@@ -5055,7 +5055,7 @@
 		<Tag>TXT_KEY_BONUS_LIANGZHU</Tag>
 		<English>Liangzhu</English>
 		<Russian>Ëÿíü÷æó</Russian>
-    <Italian>Cittadino liangzhu</Italian>
+		<Italian>Cittadino liangzhu</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LIANGZHU_JADES</Tag>
@@ -5180,19 +5180,19 @@
 		<Tag>TXT_KEY_BONUS_LUBA</Tag>
 		<English>Luba</English>
 		<Russian>Ëóáà</Russian>
-    <Italian>Cittadino baluba</Italian>
+		<Italian>Cittadino baluba</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LULE</Tag>
 		<English>Lule</English>
 		<Russian>Ëóëå</Russian>
-    <Italian>Cittadino lule</Italian>
+		<Italian>Cittadino lule</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LUNDA</Tag>
 		<English>Lunda</English>
 		<Russian>Ëóíäà</Russian>
-    <Italian>Cittadino lunda</Italian>
+		<Italian>Cittadino lunda</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LUSITANIAN</Tag>
@@ -5245,7 +5245,7 @@
 		<English>Madan</English>
 		<Polish>Madańska</Polish>
 		<Russian>Ìàäàíöû</Russian>
-    <Italian>Cittadino mandan</Italian>
+		<Italian>Cittadino mandan</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MAGNESIUM_ORE</Tag>
@@ -5294,7 +5294,7 @@
 		<French>Malinais</French>
 		<Polish>Malinezyjska</Polish>
 		<Russian>Ìàëèéöû</Russian>
-    <Italian>Cittadino maliano</Italian>
+		<Italian>Cittadino maliano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MAMELUK</Tag>
@@ -5366,20 +5366,20 @@
 		<Tag>TXT_KEY_BONUS_MANI</Tag>
 		<English>Mani</English>
 		<Russian>Ìàíè</Russian>
-    <Italian>Cittadino maniq</Italian>
-  </TEXT>
+		<Italian>Cittadino maniq</Italian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MAORI</Tag>
 		<English>Maori</English>
 		<Polish>Maoryska</Polish>
 		<Russian>Ìàîðè</Russian>
-    <Italian>Cittadino maori</Italian>
+		<Italian>Cittadino maori</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MAPUCHE</Tag>
 		<English>Mapuche</English>
 		<Russian>Ìàïó÷å</Russian>
-    <Italian>Cittadino mapuce</Italian>
+		<Italian>Cittadino mapuce</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARBLE</Tag>
@@ -5534,7 +5534,7 @@
 		<French>Masaï</French>
 		<Polish>Masajska</Polish>
 		<Russian>Ìàñàè</Russian>
-    <Italian>Cittadino masai</Italian>
+		<Italian>Cittadino masai</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MASCAGNITE</Tag>
@@ -5814,7 +5814,7 @@
 		<Tag>TXT_KEY_BONUS_MING</Tag>
 		<English>Ming</English>
 		<Russian>Ìèí</Russian>
-    <Italian>Cittadino ming</Italian>
+		<Italian>Cittadino ming</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MING_VASE</Tag>
@@ -5874,25 +5874,25 @@
 		<English>Moche</English>
 		<French>Mochica</French>
 		<Russian>Ìî÷å</Russian>
-    <Italian>Cittadino moche</Italian>
+		<Italian>Cittadino moche</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MOCOVI</Tag>
 		<English>Mocoví</English>
 		<Russian>Ìîêîâè</Russian>
-    <Italian>Cittadino mocovi</Italian>
+		<Italian>Cittadino mocovi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MOHAWK</Tag>
 		<English>Mohawk</English>
 		<Russian>Ìîõîêè</Russian>
-    <Italian>Cittadino mohawk</Italian>
+		<Italian>Cittadino mohawk</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MOLLO</Tag>
 		<English>Mollo</English>
 		<Russian>Ìîëüî</Russian>
-    <Italian>Cittadino mollo</Italian>
+		<Italian>Cittadino mollo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MONGOLIAN</Tag>
@@ -5931,13 +5931,13 @@
 		<French>Moghol</French>
 		<Polish>Mugali</Polish>
 		<Russian>Ìîãîëû</Russian>
-    <Italian>Cittadino mogul</Italian>
+		<Italian>Cittadino mogul</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MUISCA</Tag>
 		<English>Muisca</English>
 		<Russian>×èá÷à</Russian>
-    <Italian>Cittadino muisca</Italian>
+		<Italian>Cittadino muisca</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MUREX</Tag>
@@ -5976,7 +5976,7 @@
 		<Tag>TXT_KEY_BONUS_MUTAPA</Tag>
 		<English>Mutapa</English>
 		<Russian>Ìóòàïû</Russian>
-    <Italian>Cittadino monomotapa</Italian>
+		<Italian>Cittadino monomotapa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NABATEANS</Tag>
@@ -5989,13 +5989,13 @@
 		<Tag>TXT_KEY_BONUS_NAHUA</Tag>
 		<English>Nahua</English>
 		<Russian>Íàóà</Russian>
-    <Italian>Cittadino nahua</Italian>
-  </TEXT>
+		<Italian>Cittadino nahua</Italian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NAMA</Tag>
 		<English>Nama</English>
 		<Russian>Íàìà</Russian>
-    <Italian>Cittadino nama</Italian>
+		<Italian>Cittadino nama</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NANOACTUATORS</Tag>
@@ -6054,7 +6054,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NANOPUNK</Tag>
 		<English>Nanopunk</English>
-    <Italian>Nanopunk (cultura alternativa)</Italian>
+		<Italian>Nanopunk (cultura alternativa)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NANOPUNK_PEDIA</Tag>
@@ -6118,13 +6118,13 @@
 		<English>Navajo</English>
 		<Polish>Nawahowie</Polish>
 		<Russian>Íàâàõî</Russian>
-    <Italian>Cittadino navajo</Italian>
+		<Italian>Cittadino navajo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NAZCA</Tag>
 		<English>Nazca</English>
 		<Russian>Íàñêà</Russian>
-    <Italian>Cittadino nazca</Italian>
+		<Italian>Cittadino nazca</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NEPALESE</Tag>
@@ -6132,7 +6132,7 @@
 		<French>Nepalais</French>
 		<Polish>Nepalska</Polish>
 		<Russian>Íåïàëüöû</Russian>
-    <Italian>Cittadino nepalese</Italian>
+		<Italian>Cittadino nepalese</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NETS</Tag>
@@ -6221,7 +6221,7 @@
 		<Tag>TXT_KEY_BONUS_NOK</Tag>
 		<English>Nok</English>
 		<Russian>Íîê</Russian>
-    <Italian>Cittadino nok</Italian>
+		<Italian>Cittadino nok</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NOK_SCULPTURES</Tag>
@@ -6240,13 +6240,13 @@
 		<Tag>TXT_KEY_BONUS_NOONGAR</Tag>
 		<English>Noongar</English>
 		<Russian>Íóíãà</Russian>
-    <Italian>Cittadino noongar</Italian>
+		<Italian>Cittadino noongar</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NOOTKA</Tag>
 		<English>Nootka</English>
 		<Russian>Íóòêà</Russian>
-    <Italian>Cittadino nuu-chah-nulth</Italian>
+		<Italian>Cittadino nuu-chah-nulth</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NORMAN</Tag>
@@ -6353,7 +6353,7 @@
 		<Tag>TXT_KEY_BONUS_ODAWA</Tag>
 		<English>Odawa</English>
 		<Russian>Îäàâà</Russian>
-    <Italian>Cittadino odawa</Italian>
+		<Italian>Cittadino odawa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_OIL</Tag>
@@ -6481,9 +6481,9 @@
 		<Tag>TXT_KEY_BONUS_ORANG_ASLI</Tag>
 		<English>Orang Asli</English>
 		<Russian>Îðàíã-Àñëè</Russian>
-    <Italian>Cittadino orang asli</Italian>
+		<Italian>Cittadino orang asli</Italian>
 
-  </TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ORGANIC_COMPUTERS</Tag>
 		<English>Organic Computers</English>
@@ -6565,7 +6565,7 @@
 		<English>Paiute</English>
 		<French>Païute</French>
 		<Russian>Ïàéþòû</Russian>
-    <Italian>Cittadino paiute</Italian>
+		<Italian>Cittadino paiute</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PAKISTANI</Tag>
@@ -6704,7 +6704,7 @@
 		<English>Pashtun</English>
 		<French>Pashtoune</French>
 		<Russian>Ïóøòóíû</Russian>
-    <Italian>Cittadino pashtun</Italian>
+		<Italian>Cittadino pashtun</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PASTA</Tag>
@@ -7012,13 +7012,13 @@
 		<Tag>TXT_KEY_BONUS_PILAGA</Tag>
 		<English>Pilagá</English>
 		<Russian>Ïèëàãà</Russian>
-    <Italian>Cittadino pilaga</Italian>
+		<Italian>Cittadino pilaga</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PIMA</Tag>
 		<English>Pima</English>
 		<Russian>Ïèìà</Russian>
-    <Italian>Cittadino pima</Italian>
+		<Italian>Cittadino pima</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PISTACHIO</Tag>
@@ -7304,7 +7304,7 @@
 		<Tag>TXT_KEY_BONUS_POYA</Tag>
 		<English>Poya</English>
 		<Russian>Ïîéÿ</Russian>
-    <Italian>Cittadino poya</Italian>
+		<Italian>Cittadino poya</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PRICKLY_PEAR</Tag>
@@ -7359,7 +7359,7 @@
 		<Tag>TXT_KEY_BONUS_PUELCHE</Tag>
 		<English>Puelche</English>
 		<Russian>Ïóýëü÷å</Russian>
-    <Italian>Cittadino puelche</Italian>
+		<Italian>Cittadino puelche</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PUMICE_STONE</Tag>
@@ -7418,7 +7418,7 @@
 		<English>Puntic</English>
 		<Italian>Cittadino puntico</Italian>
 		<Russian>Ïóíò</Russian>
-  </TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PYRITE</Tag>
 		<English>Pyrite</English>
@@ -7436,7 +7436,7 @@
 		<Tag>TXT_KEY_BONUS_QIANG</Tag>
 		<English>Qiang</English>
 		<Russian>Öÿí</Russian>
-    <Italian>Cittadino qiang</Italian>
+		<Italian>Cittadino qiang</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_QILIN</Tag>
@@ -7455,13 +7455,13 @@
 		<Tag>TXT_KEY_BONUS_QIN</Tag>
 		<English>Qin</English>
 		<Russian>Öèíü</Russian>
-    <Italian>Cittadino qin</Italian>
+		<Italian>Cittadino qin</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_QING</Tag>
 		<English>Qing</English>
 		<Russian>Öèí</Russian>
-    <Italian>Cittadino qing</Italian>
+		<Italian>Cittadino qing</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_QUANTONIUM_CRYSTAL</Tag>
@@ -7503,13 +7503,13 @@
 		<English>Quechua</English>
 		<Polish>Keczua</Polish>
 		<Russian>Êå÷óà</Russian>
-    <Italian>Cittadino quechua</Italian>
+		<Italian>Cittadino quechua</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_QUERANDI</Tag>
 		<English>Querandi</English>
 		<Russian>Êåðàíäè</Russian>
-    <Italian>Cittadino querandi</Italian>
+		<Italian>Cittadino querandi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_QUETZALCOATL</Tag>
@@ -7526,8 +7526,8 @@
 		<Tag>TXT_KEY_BONUS_QULLA</Tag>
 		<English>Qulla</English>
 		<Russian>Êîëüà</Russian>
-    <Italian>Cittadino qulla</Italian>
-  </TEXT>
+		<Italian>Cittadino qulla</Italian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RABBIT</Tag>
 		<English>Rabbit</English>
@@ -7579,7 +7579,7 @@
 		<Tag>TXT_KEY_BONUS_RAPA_NUI</Tag>
 		<English>Rapa Nui</English>
 		<Russian>Ðàïàíóéöû</Russian>
-    <Italian>Cittadino rapa nui</Italian>
+		<Italian>Cittadino rapa nui</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RARE_EARTH_MINERALS</Tag>
@@ -7640,7 +7640,7 @@
 		<Tag>TXT_KEY_BONUS_RED_OCHER</Tag>
 		<English>Red Ocher</English>
 		<Russian>Êðàñíîêîæèå</Russian>
-    <Italian>Cittadino red orcher</Italian>
+		<Italian>Cittadino red orcher</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_REEDS</Tag>
@@ -7739,7 +7739,7 @@
 		<French>Rhodésien</French>
 		<Polish>Rodezyjska</Polish>
 		<Russian>Ðîäåçèéöû</Russian>
-    <Italian>Cittadino rhodesiano</Italian>
+		<Italian>Cittadino rhodesiano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RICE</Tag>
@@ -7804,7 +7804,7 @@
 		<Tag>TXT_KEY_BONUS_ROMANI</Tag>
 		<English>Romanì</English>
 		<Russian>Öûãàíå</Russian>
-    <Italian>Cittadino rom</Italian>
+		<Italian>Cittadino rom</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ROPE</Tag>
@@ -7899,7 +7899,7 @@
 		<Tag>TXT_KEY_BONUS_SAFAVID</Tag>
 		<English>Safavid</English>
 		<Russian>Ñåôåâèäû</Russian>
-    <Italian>Cittadino safavide</Italian>
+		<Italian>Cittadino safavide</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SAFFARID</Tag>
@@ -7926,7 +7926,7 @@
 		<Tag>TXT_KEY_BONUS_SAKA</Tag>
 		<English>Saka</English>
 		<Russian>Ñàêè</Russian>
-    <Italian>Cittadino saka</Italian>
+		<Italian>Cittadino saka</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SALT</Tag>
@@ -7948,7 +7948,7 @@
 		<Tag>TXT_KEY_BONUS_SAMI</Tag>
 		<English>Sami</English>
 		<Russian>Ñààìû</Russian>
-    <Italian>Cittadino sami</Italian>
+		<Italian>Cittadino sami</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SAMOAN</Tag>
@@ -8118,14 +8118,14 @@
 		<Tag>TXT_KEY_BONUS_SEMANG</Tag>
 		<English>Semang</English>
 		<Russian>Ñåìàíãè</Russian>
-    <Italian>Cittadino semang</Italian>
+		<Italian>Cittadino semang</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SEMINOLE</Tag>
 		<English>Seminole</English>
 		<Polish>Seminolska</Polish>
 		<Russian>Ñåìèíîëû</Russian>
-    <Italian>Cittadino seminole</Italian>
+		<Italian>Cittadino seminole</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SENEGALI</Tag>
@@ -8138,7 +8138,7 @@
 		<Tag>TXT_KEY_BONUS_SENNAR</Tag>
 		<English>Sennar</English>
 		<Russian>Ñåííàðöû</Russian>
-    <Italian>Cittadino sennar</Italian>
+		<Italian>Cittadino sennar</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SERBIAN</Tag>
@@ -8165,7 +8165,7 @@
 		<Tag>TXT_KEY_BONUS_SHANG</Tag>
 		<English>Shang</English>
 		<Russian>Øàí</Russian>
-    <Italian>Cittadino shang</Italian>
+		<Italian>Cittadino shang</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SHANG_JADE_RITUAL_ITEMS</Tag>
@@ -8269,7 +8269,7 @@
 		<French>Siamois</French>
 		<Polish>Syjamska</Polish>
 		<Russian>Ñèàìöû</Russian>
-    <Italian>Cittadino siamese</Italian>
+		<Italian>Cittadino siamese</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SIBERIAN</Tag>
@@ -8283,7 +8283,7 @@
 		<Tag>TXT_KEY_BONUS_SICAN</Tag>
 		<English>Sicán</English>
 		<Russian>Ñèêàíû</Russian>
-    <Italian>Cittadino sican</Italian>
+		<Italian>Cittadino sican</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SICILIAN</Tag>
@@ -8312,7 +8312,7 @@
 		<French>Fibres de soie</French>
 		<Polish>Włókna jedwabne</Polish>
 		<Russian>Øåëêîâîå âîëîêíî</Russian>
-    <Italian>Fibra di seta</Italian>
+		<Italian>Fibra di seta</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SILK_FIBERS_PEDIA</Tag>
@@ -8371,13 +8371,13 @@
 		<Tag>TXT_KEY_BONUS_SINTASHTA</Tag>
 		<English>Sintashta</English>
 		<Russian>Ñèíòàøòèíöû</Russian>
-    <Italian>Cittadino di sintashta</Italian>
+		<Italian>Cittadino di sintashta</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SIOUX</Tag>
 		<English>Sioux</English>
 		<Russian>Ñèó</Russian>
-    <Italian>Cittadino sioux</Italian>
+		<Italian>Cittadino sioux</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SKIS</Tag>
@@ -8465,7 +8465,7 @@
 		<Tag>TXT_KEY_BONUS_SONGHAI</Tag>
 		<English>Songhai</English>
 		<Russian>Ñîíãàé</Russian>
-    <Italian>Cittadino songhai</Italian>
+		<Italian>Cittadino songhai</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SOUTH_AFRICAN</Tag>
@@ -8501,7 +8501,7 @@
 		<Tag>TXT_KEY_BONUS_SPACEPUNK</Tag>
 		<English>Spacepunk</English>
 		<Russian>Êîñìîïàíê</Russian>
-    <Italian>Spacepunk (cultura alternativa)</Italian>
+		<Italian>Spacepunk (cultura alternativa)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SPACEPUNK_PEDIA</Tag>
@@ -8586,7 +8586,7 @@
 		<Tag>TXT_KEY_BONUS_STARPUNK</Tag>
 		<English>Starpunk</English>
 		<Russian>Ñòàðïàíê</Russian>
-    <Italian>Starmpunk (cultura alternativa)</Italian>
+		<Italian>Starmpunk (cultura alternativa)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_STARPUNK_PEDIA</Tag>
@@ -8596,7 +8596,7 @@
 		<Tag>TXT_KEY_BONUS_STEAMPUNK</Tag>
 		<English>Steampunk</English>
 		<Russian>Ñòèìïàíê</Russian>
-    <Italian>Steampunk (cultura alternativa)</Italian>
+		<Italian>Steampunk (cultura alternativa)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_STEAMPUNK_PEDIA</Tag>
@@ -8710,7 +8710,7 @@
 		<English>Sudanese</English>
 		<French>Soudanaise</French>
 		<Russian>Ñóäàíöû</Russian>
-    <Italian>Cittadino sudanese</Italian>
+		<Italian>Cittadino sudanese</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SUGAR</Tag>
@@ -8765,7 +8765,7 @@
 		<English>Sundanese</English>
 		<French>Sundanaise</French>
 		<Russian>Ñóíäû</Russian>
-    <Italian>Cittadino sundanese</Italian>
+		<Italian>Cittadino sundanese</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SUPERINTELLIGENT_COMPUTERS</Tag>
@@ -8810,19 +8810,19 @@
 		<Tag>TXT_KEY_BONUS_SURINAMESE</Tag>
 		<English>Surinamese</English>
 		<Russian>Ñóðèíàìöû</Russian>
-    <Italian>Cittadino surinamese</Italian>
+		<Italian>Cittadino surinamese</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SWAHILI</Tag>
 		<English>Swahili</English>
 		<Russian>Ñóàõèëè</Russian>
-    <Italian>Cittadino swahili</Italian>
+		<Italian>Cittadino swahili</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SWAZI</Tag>
 		<English>Swazi</English>
 		<Russian>Ñâàçè</Russian>
-    <Italian>Cittadino swazi</Italian>
+		<Italian>Cittadino swazi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SWEDISH</Tag>
@@ -8895,7 +8895,7 @@
 		<Tag>TXT_KEY_BONUS_TAGALOG</Tag>
 		<English>Tagalog</English>
 		<Russian>Òàãàëû</Russian>
-    <Italian>Cittadino tagalog</Italian>
+		<Italian>Cittadino tagalog</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TAHITIAN</Tag>
@@ -8909,7 +8909,7 @@
 		<Tag>TXT_KEY_BONUS_TAIRONA</Tag>
 		<English>Tairona</English>
 		<Russian>Òàéðîíû</Russian>
-    <Italian>Cittadino tairona</Italian>
+		<Italian>Cittadino tairona</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TAIWANESE</Tag>
@@ -8917,7 +8917,7 @@
 		<French>Taiwanais</French>
 		<Polish>Tajwańska</Polish>
 		<Russian>Òàéâàíüöû</Russian>
-    <Italian>Cittadino taiwanese</Italian>
+		<Italian>Cittadino taiwanese</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TAJIK</Tag>
@@ -8929,13 +8929,13 @@
 		<Tag>TXT_KEY_BONUS_TAMIL</Tag>
 		<English>Tamil</English>
 		<Russian>Òàìèëüöû</Russian>
-    <Italian>Cittadino tamil</Italian>
+		<Italian>Cittadino tamil</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TANG</Tag>
 		<English>Tang</English>
 		<Russian>Òàí</Russian>
-    <Italian>Cittadino tang</Italian>
+		<Italian>Cittadino tang</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TANKS</Tag>
@@ -9257,25 +9257,25 @@
 		<Tag>TXT_KEY_BONUS_TIWI</Tag>
 		<English>Tiwi</English>
 		<Russian>Òèâè</Russian>
-    <Italian>Cittadino tiwi</Italian>
+		<Italian>Cittadino tiwi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TLATILCO</Tag>
 		<English>Tlatilco</English>
 		<Russian>Òëàòèëüêî</Russian>
-    <Italian>Cittadino tlatilco</Italian>
+		<Italian>Cittadino tlatilco</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TLAXCALTEC</Tag>
 		<English>Tlaxcaltec</English>
 		<Russian>Òëàøêàëüòåêè</Russian>
-    <Italian>Cittadino tlaxcalteco</Italian>
+		<Italian>Cittadino tlaxcalteco</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TOBA</Tag>
 		<English>Toba</English>
 		<Russian>Òîáàñöû</Russian>
-    <Italian>Cittadino toba</Italian>
+		<Italian>Cittadino toba</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TOBACCO</Tag>
@@ -9395,13 +9395,13 @@
 		<English>Tuareg</English>
 		<French>Touareg</French>
 		<Russian>Òóàðåãè</Russian>
-    <Italian>Cittadino tuareg</Italian>
+		<Italian>Cittadino tuareg</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TUCANO</Tag>
 		<English>Tucano</English>
 		<Russian>Òóêàíî</Russian>
-    <Italian>Cittadino tucano</Italian>
+		<Italian>Cittadino tucano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TUNGSTEN</Tag>
@@ -9423,7 +9423,7 @@
 		<Tag>TXT_KEY_BONUS_TUNGUS</Tag>
 		<English>Tungus</English>
 		<Russian>Òóíãóñû</Russian>
-    <Italian>Cittadino tunguso</Italian>
+		<Italian>Cittadino tunguso</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TUNISIAN</Tag>
@@ -9436,7 +9436,7 @@
 		<Tag>TXT_KEY_BONUS_TUPI</Tag>
 		<English>Tupi</English>
 		<Russian>Òóïè</Russian>
-    <Italian>Cittadino tupi</Italian>
+		<Italian>Cittadino tupi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TURKISH</Tag>
@@ -9764,7 +9764,7 @@
 		<Tag>TXT_KEY_BONUS_WARAY</Tag>
 		<English>Waray</English>
 		<Russian>Âàðàéöû</Russian>
-    <Italian>Cittadino waray</Italian>
+		<Italian>Cittadino waray</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WARES_PEDIA</Tag>
@@ -9776,7 +9776,7 @@
 		<Tag>TXT_KEY_BONUS_WARI</Tag>
 		<English>Wari</English>
 		<Russian>Âàðè</Russian>
-    <Italian>Cittadino huari</Italian>
+		<Italian>Cittadino huari</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WARP_DRIVES</Tag>
@@ -9849,13 +9849,13 @@
 		<Tag>TXT_KEY_BONUS_WAYANA</Tag>
 		<English>Wayana</English>
 		<Russian>Âàÿíöû</Russian>
-    <Italian>Cittadino wayana</Italian>
+		<Italian>Cittadino wayana</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WAYUU</Tag>
 		<English>Wayuu</English>
 		<Russian>Âàéþ</Russian>
-    <Italian>Cittadino wayuu</Italian>
+		<Italian>Cittadino wayuu</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WELSH</Tag>
@@ -10028,43 +10028,43 @@
 		<Tag>TXT_KEY_BONUS_XIA</Tag>
 		<English>Xia</English>
 		<Russian>Ñèà</Russian>
-    <Italian>Cittadino xia</Italian>
+		<Italian>Cittadino xia</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_XIANBEI</Tag>
 		<English>Xianbei</English>
 		<Russian>Ñÿíüáèéöû</Russian>
-    <Italian>Cittadino xianbei</Italian>
+		<Italian>Cittadino xianbei</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_XIONGNU</Tag>
 		<English>Xiongnu</English>
 		<Russian>Õóííó</Russian>
-    <Italian>Cittadino xiongnu</Italian>
+		<Italian>Cittadino xiongnu</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_YAGHAN</Tag>
 		<English>Yaghan</English>
 		<Russian>ßãàíû</Russian>
-    <Italian>Cittadino yamano</Italian>
+		<Italian>Cittadino yamano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_YAGUA</Tag>
 		<English>Yagua</English>
 		<Russian>ßãóà</Russian>
-    <Italian>Cittadino yagua</Italian>
+		<Italian>Cittadino yagua</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_YAMATO</Tag>
 		<English>Yamato</English>
 		<Russian>ßìàòî</Russian>
-    <Italian>Cittadino yamato</Italian>
+		<Italian>Cittadino yamato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_YANOMAMI</Tag>
 		<English>Yanomami</English>
 		<Russian>ßíîìàìî</Russian>
-    <Italian>Cittadino yanomama</Italian>
+		<Italian>Cittadino yanomama</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_YEMENI</Tag>
@@ -10091,7 +10091,7 @@
 		<Tag>TXT_KEY_BONUS_YOLNGU</Tag>
 		<English>Yolngu</English>
 		<Russian>Éîëíãó</Russian>
-    <Italian>Cittadino yolngu</Italian>
+		<Italian>Cittadino yolngu</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ZANZIBARI</Tag>
@@ -10111,7 +10111,7 @@
 		<Tag>TXT_KEY_BONUS_ZENU</Tag>
 		<English>Zenú</English>
 		<Russian>Ñåíó</Russian>
-    <Italian>Cittadino sinù</Italian>
+		<Italian>Cittadino sinù</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ZIMBABWEAN</Tag>
@@ -10139,12 +10139,12 @@
 		<French>Zoulou</French>
 		<Polish>Zulusów</Polish>
 		<Russian>Çóëóñû</Russian>
-    <Italian>Cittadino zulu</Italian>
+		<Italian>Cittadino zulu</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ZUNI</Tag>
 		<English>Zuñi</English>
 		<Russian>Çóíè</Russian>
-    <Italian>Cittadino zuni</Italian>
+		<Italian>Cittadino zuni</Italian>
 	</TEXT>
 </Civ4GameText>

@@ -4,8 +4,8 @@
 		<Tag>TXT_KEY_BUILDING_ENCLOSURE_AMPHIBIAN_POND</Tag>
 		<English>Enclosure - Amphibian Pond</English>
 		<French>Enclos - Mare à amphibiens</French>
-    <Italian>Stagno per anfibi (recinzione)</Italian>
-    <Polish>Klatka - Płazy</Polish>
+		<Italian>Stagno per anfibi (recinzione)</Italian>
+		<Polish>Klatka - Płazy</Polish>
 		<Russian>Çàòîí äëÿ àìôèáèé</Russian>
 	</TEXT>
 	<TEXT>
@@ -21,8 +21,8 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Presenza del corallo (costruzione automatica)</Italian>
-  </TEXT>
+		<Italian>Presenza del corallo (costruzione automatica)</Italian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_EARTH</Tag>
 		<English>Presence of Earth</English>
@@ -31,8 +31,8 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Presenza della terra (costruzione automatica)</Italian>
-  </TEXT>
+		<Italian>Presenza della terra (costruzione automatica)</Italian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_CRATER</Tag>
 		<English>Presence of Crater</English>
@@ -41,8 +41,8 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Presenza del cratere (costruzione automatica)</Italian>
-  </TEXT>
+		<Italian>Presenza del cratere (costruzione automatica)</Italian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_FIRE</Tag>
 		<English>Presence of Fire</English>
@@ -51,8 +51,8 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Presenza del fuoco (costruzione automatica)</Italian>
-  </TEXT>
+		<Italian>Presenza del fuoco (costruzione automatica)</Italian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_METAL</Tag>
 		<English>Presence of Metal</English>
@@ -61,8 +61,8 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Presenza del metallo (costruzione automatica)</Italian>
-  </TEXT>
+		<Italian>Presenza del metallo (costruzione automatica)</Italian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_OASIS</Tag>
 		<English>Presence of Oasis</English>
@@ -71,14 +71,14 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Presenza dell'oasi (costruzione automatica)</Italian>
-  </TEXT>
+		<Italian>Presenza dell'oasi (costruzione automatica)</Italian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_ORIGIN_PEDIA</Tag>
 		<English>[COLOR_BUILDING_TEXT]Folklore Presence autobuildings[COLOR_REVERT] require some points of interest on map. Its purpose is having folklore related to features to be able to spread to all cities.</English>
 		<German>Es gibt verschiedene Präsenz-Effekte, die durch spezielle Geländemerkmale in der Umgebung deiner Städte automatisch aktiviert werden. Sie sind der Ursprung einer Reihe von Mythen, Sagen und Legenden, die im Spiel durch Folkloreeffekte repräsentiert werden.</German>
-    <Italian>Gli [COLOR_BUILDING_TEXT]edifici automatici presenza del folklore[COLOR_REVERT] si attivano automaticamente in base alle caratteristiche del terreno intorno alle tue città. Sono l'origine di una serie di miti, saghe e leggende, che poi si diffondono in tutte le città.</Italian>
-  </TEXT>
+		<Italian>Gli [COLOR_BUILDING_TEXT]edifici automatici presenza del folklore[COLOR_REVERT] si attivano automaticamente in base alle caratteristiche del terreno intorno alle tue città. Sono l'origine di una serie di miti, saghe e leggende, che poi si diffondono in tutte le città.</Italian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_LANDFORM</Tag>
 		<English>Presence of Landform</English>
@@ -87,8 +87,8 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Presenza della formazione geologica (costruzione automatica)</Italian>
-  </TEXT>
+		<Italian>Presenza della formazione geologica (costruzione automatica)</Italian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_REEF</Tag>
 		<English>Presence of Reef</English>
@@ -97,8 +97,8 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Presenza degli scogli (costruzione automatica)</Italian>
-  </TEXT>
+		<Italian>Presenza degli scogli (costruzione automatica)</Italian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_REQUIREMENT</Tag>
 		<English>Folklore Requirement</English>
@@ -107,14 +107,14 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</German>
-    <Italian>Requisito per il folklore (costruzione automatica)</Italian>
-  </TEXT>
+		<Italian>Requisito per il folklore (costruzione automatica)</Italian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_REQUIREMENT_PEDIA</Tag>
 		<English>[COLOR_BUILDING_TEXT]Folklore Requirements[COLOR_REVERT] autobuilding gives Language tech requirement for Folklore.[NEWLINE]In this way this tech doesn't have list of more than 200 Folklore pseudobuildings. Try catching all Folklore buildings!</English>
 		<German>Die [COLOR_BUILDING_TEXT]Folklore-Grundlagen[COLOR_REVERT] sind ein automatischer Effekt, der die Voraussetzung für verschiedene Folkloreeffekte legt. Diese mehr als 200 Pseudogebäude können mit dem Entdecken spezieller Tiere und Landschaftseigenarten errichtet werden. Versucht doch einmal, alle Folklore-"Gebäude" zu errichten!</German>
-    <Italian>L'edificio automatico [COLOR_BUILDING_TEXT]requisito per il folklore[COLOR_REVERT] richiede la tecnologia Linguaggio come prerequisito per il Folklore.[NEWLINE]Ci sono oltre 200 edifici automatici che possono essere costruiti, scoprendo animali o luoghi. Prova a costruirli tutti!</Italian>
-  </TEXT>
+		<Italian>L'edificio automatico [COLOR_BUILDING_TEXT]requisito per il folklore[COLOR_REVERT] richiede la tecnologia Linguaggio come prerequisito per il Folklore.[NEWLINE]Ci sono oltre 200 edifici automatici che possono essere costruiti, scoprendo animali o luoghi. Prova a costruirli tutti!</Italian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_SEA</Tag>
 		<English>Presence of Sea</English>
@@ -123,8 +123,8 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Presenza del mare (costruzione automatica)</Italian>
-  </TEXT>
+		<Italian>Presenza del mare (costruzione automatica)</Italian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PRESENCE_OF_VOLCANO</Tag>
 		<English>Presence of Volcano</English>
@@ -133,17 +133,17 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Presenza del vulcano (costruzione automatica)</Italian>
-  </TEXT>
-  <TEXT>
-    <Tag>TXT_KEY_BUILDING_ANIMAL_TAMER_COMPLEX</Tag>
-    <English>Animal Tamer Complex</English>
-    <French>Centre de Dressage d'animaux</French>
-    <Polish>Kompleks Tresury Zwierząt</Polish>
-    <Russian>Äðåññ. êîìïëåêñ</Russian>
-    <Italian>Centro di addestramento di animali</Italian>
-  </TEXT>
-  <TEXT>
+		<Italian>Presenza del vulcano (costruzione automatica)</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_TAMER_COMPLEX</Tag>
+		<English>Animal Tamer Complex</English>
+		<French>Centre de Dressage d'animaux</French>
+		<Polish>Kompleks Tresury Zwierząt</Polish>
+		<Russian>Äðåññ. êîìïëåêñ</Russian>
+		<Italian>Centro di addestramento di animali</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TAMER_PEDIA</Tag>
 		<English>Animal taming is not domestication. Tamed animals can be further trained.</English>
 		<Polish>Oswajanie zwierząt to nie udamawianie. Oswojone zwierzęta mogą być później tresowane.</Polish>
@@ -152,24 +152,24 @@
 		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</Tag>
 		<English>Military Standard (Animal mascot)</English>
 		<French>Mascotte de L'Armée de Terre</French>
-    <Italian>Mascotte animale (stendando militare)</Italian>
-    <Polish>Sztandar Wojskowy (Zwierzęca Maskotka)</Polish>
+		<Italian>Mascotte animale (stendando militare)</Italian>
+		<Polish>Sztandar Wojskowy (Zwierzęca Maskotka)</Polish>
 		<Russian>Çâåðèíûé òîòåì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_CANINES</Tag>
 		<English>Military Standard (Canines)</English>
 		<French>Standards Militaires (Canins)</French>
-    <Italian>Mascotte canina (stendando militare)</Italian>
-    <Polish>Sztandar Wojskowy (Wilki)</Polish>
+		<Italian>Mascotte canina (stendando militare)</Italian>
+		<Polish>Sztandar Wojskowy (Wilki)</Polish>
 		<Russian>Òîòåì «Ñîáàêà»</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_CANINES_HELP</Tag>
 		<English>[ICON_BULLET]Build Canine buildings and units faster in this city.</English>
 		<French>[ICON_BULLET]Construit les bâtiments et unités canines plus vite dans cette Ville.</French>
-    <Italian>[ICON_BULLET]Questo edificio ti permette di addestrare le unità canine più velocemente.</Italian>
-    <Polish>Szybciej buduj jedn. psów i budynki z nimi związane.</Polish>
+		<Italian>[ICON_BULLET]Questo edificio ti permette di addestrare le unità canine più velocemente.</Italian>
+		<Polish>Szybciej buduj jedn. psów i budynki z nimi związane.</Polish>
 		<Russian>Àâòîìàòè÷åñêè ñòðîèò âñå çäàíèÿ ñâÿçàííûå ñ ñîáàêàìè, óñêîðÿÿ èõ îáó÷åíèå â äàííîì ãîðîäå.</Russian>
 	</TEXT>
 	<TEXT>
@@ -182,8 +182,8 @@
 		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_WORKERS</Tag>
 		<English>Military Standard (Workers)</English>
 		<French>Standards Militaires (Ouvriers)</French>
-    <Italian>Lavoratori (stendando militare)</Italian>
-    <Polish>Sztandar Wojskowy (Robotnicy)</Polish>
+		<Italian>Lavoratori (stendando militare)</Italian>
+		<Polish>Sztandar Wojskowy (Robotnicy)</Polish>
 		<Russian>Òîòåì «Ðàáîòíèê»</Russian>
 	</TEXT>
 	<TEXT>
@@ -197,40 +197,40 @@
 		<Tag>TXT_KEY_BUILDING_ENCLOSURE_BAD_BOYS</Tag>
 		<English>Enclosure - Bad Boys</English>
 		<French>Enclos - Animaux nuisibles</French>
-    <Italian>Parassiti (recinzione)</Italian>
-    <Polish>Klatka - Groźne Zwierzęta</Polish>
+		<Italian>Parassiti (recinzione)</Italian>
+		<Polish>Klatka - Groźne Zwierzęta</Polish>
 		<Russian>Êëåòêè ñ õèùíèêàìè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENCLOSURE_BEAR</Tag>
 		<English>Enclosure - Bear</English>
 		<French>Enclos - Ours</French>
-    <Italian>Orso (recinzione)</Italian>
-    <Polish>Klatka - Niedźwiedź</Polish>
+		<Italian>Orso (recinzione)</Italian>
+		<Polish>Klatka - Niedźwiedź</Polish>
 		<Russian>Êëåòêè ñ ìåäâåäÿìè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENCLOSURE_BIG_CAT</Tag>
 		<English>Enclosure - Big Cat</English>
 		<French>Enclos - Félins</French>
-    <Italian>Grosso felino (recinzione)</Italian>
-    <Polish>Klatka - Wielki kot</Polish>
+		<Italian>Grosso felino (recinzione)</Italian>
+		<Polish>Klatka - Wielki kot</Polish>
 		<Russian>Êëåòêè ñ êîøà÷üèìè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENCLOSURE_BIRD</Tag>
 		<English>Enclosure - Bird</English>
 		<French>Enclos - Oiseaux</French>
-    <Italian>Uccello (recinzione)</Italian>
-    <Polish>Klatka - Ptaki</Polish>
+		<Italian>Uccello (recinzione)</Italian>
+		<Polish>Klatka - Ptaki</Polish>
 		<Russian>Êëåòêè ñ ïòèöàìè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DANCE_BIRD</Tag>
 		<English>Unit Reward - Dance (Bird)</English>
 		<French>Danse des Oiseaux</French>
-    <Italian>Danza degli uccelli (da unità)</Italian>
-    <Russian>Òàíåö ïòèöû</Russian>
+		<Italian>Danza degli uccelli (da unità)</Italian>
+		<Russian>Òàíåö ïòèöû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DANCE_BIRD_PEDIA</Tag>
@@ -256,8 +256,8 @@
 		<Tag>TXT_KEY_BUILDING_CARNIVAL_BOXING_KANGAROO</Tag>
 		<English>Unit Reward - Carnival (Boxing Kangaroo)</English>
 		<French>Kangourou Boxeur</French>
-    <Italian>Fiera del canguro combattente (da unità)</Italian>
-    <Polish>Mit Kangura</Polish>
+		<Italian>Fiera del canguro combattente (da unità)</Italian>
+		<Polish>Mit Kangura</Polish>
 		<Russian>Áîêñèðóþùèé êåíãóðó</Russian>
 	</TEXT>
 	<TEXT>
@@ -293,15 +293,15 @@
 		<Tag>TXT_KEY_BUILDING_HERD_CAMEL</Tag>
 		<English>Herd (Camel)</English>
 		<French>Troupeau de Chameaux</French>
-    <Italian>Mandria di cammelli</Italian>
-    <Polish>Stado - Wielbłądy</Polish>
+		<Italian>Mandria di cammelli</Italian>
+		<Polish>Stado - Wielbłądy</Polish>
 		<Russian>Ñòàäî âåðáëþäîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERD_CAMEL_PEDIA</Tag>
 		<English>Only domesticated camels can build the Herd - Camels; provides a resource of camels.</English>
-    <Italian>Solo i cammelli addomesticati possono costruire una mandria di cammelli; fornisce una risorsa di cammelli.</Italian>
-    <Polish>Wielbłąd (Camelus) rodzaj dużych ssaków z rodziny wielbłądowatych. Fizjologicznie przystosowane do życia w warunkach suchego i gorącego klimatu, są w wielu krajach wykorzystywane jako zwierzęta użytkowe.</Polish>
+		<Italian>Solo i cammelli addomesticati possono costruire una mandria di cammelli; fornisce una risorsa di cammelli.</Italian>
+		<Polish>Wielbłąd (Camelus) rodzaj dużych ssaków z rodziny wielbłądowatych. Fizjologicznie przystosowane do życia w warunkach suchego i gorącego klimatu, są w wielu krajach wykorzystywane jako zwierzęta użytkowe.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CARNIVAL</Tag>
@@ -330,15 +330,15 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</German>
-    <Italian>Leone delle caverne (resti)</Italian>
-    <Russian>Ïàìÿòü î ïåù. ëüâå</Russian>
+		<Italian>Leone delle caverne (resti)</Italian>
+		<Russian>Ïàìÿòü î ïåù. ëüâå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CENTER_FOR_CEPHALOPOD_STUDIES</Tag>
 		<English>Unit Reward - Center for Cephalopod Studies</English>
 		<French>Centre d'étude des Céphalopodes</French>
-    <Italian>Centro per gli studi sui cefalopodi (da unità)</Italian>
-    <Polish>Centrum Badań Głowonogów</Polish>
+		<Italian>Centro per gli studi sui cefalopodi (da unità)</Italian>
+		<Polish>Centrum Badań Głowonogów</Polish>
 		<Russian>Öåíòð èçó÷. êàëüìàðîâ</Russian>
 	</TEXT>
 	<TEXT>
@@ -351,8 +351,8 @@
 		<Tag>TXT_KEY_BUILDING_CENTER_FOR_WHALE_STUDIES</Tag>
 		<English>Unit Reward - Center for Whale Studies</English>
 		<French>Centre d'étude des Baleines</French>
-    <Italian>Centro per gli studi sulle balene (da unità)</Italian>
-    <Polish>Centrum Badań Wielorybów</Polish>
+		<Italian>Centro per gli studi sulle balene (da unità)</Italian>
+		<Polish>Centrum Badań Wielorybów</Polish>
 		<Russian>Öåíòð èçó÷. êèòîâ</Russian>
 	</TEXT>
 	<TEXT>
@@ -365,8 +365,8 @@
 		<Tag>TXT_KEY_BUILDING_COASTAL_FISH_FARM</Tag>
 		<English>Unit Reward - Coastal Fish Farm</English>
 		<French>Ferme à Poissons du Littoral</French>
-    <Italian>Allevamento costiero di pesci (da unità)</Italian>
-    <Polish>Farma Ryb Przybrzeżnych</Polish>
+		<Italian>Allevamento costiero di pesci (da unità)</Italian>
+		<Polish>Farma Ryb Przybrzeżnych</Polish>
 		<Russian>Ðûáíàÿ ôåðìà</Russian>
 	</TEXT>
 	<TEXT>
@@ -377,8 +377,8 @@
 		<Tag>TXT_KEY_BUILDING_HERD_COW</Tag>
 		<English>Herd (Cow)</English>
 		<French>Troupeau de Vaches</French>
-    <Italian>Mandria di mucche</Italian>
-    <Polish>Stado - Krowy</Polish>
+		<Italian>Mandria di mucche</Italian>
+		<Polish>Stado - Krowy</Polish>
 		<Russian>Ñòàäî êîðîâ</Russian>
 	</TEXT>
 	<TEXT>
@@ -391,8 +391,8 @@
 		<Tag>TXT_KEY_BUILDING_CRAB_NETS</Tag>
 		<English>Unit Reward - Crab Nets</English>
 		<French>Pièges à Crabes</French>
-    <Italian>Trappole per granchi (da unità)</Italian>
-    <Polish>Sieci na kraby</Polish>
+		<Italian>Trappole per granchi (da unità)</Italian>
+		<Polish>Sieci na kraby</Polish>
 		<Russian>Ñåòè íà êðàáîâ</Russian>
 	</TEXT>
 	<TEXT>
@@ -405,8 +405,8 @@
 		<English>Unit Reward - Carnival (Dancing Bear)</English>
 		<French>Carnaval - Ours Dansant</French>
 		<German>Jahrmarkt - Tanzbär</German>
-    <Italian>Fiera dell'orso ballerino (da unità)</Italian>
-    <Spanish>Carnival - Oso Pisador</Spanish>
+		<Italian>Fiera dell'orso ballerino (da unità)</Italian>
+		<Spanish>Carnival - Oso Pisador</Spanish>
 		<Polish>Karnawał - Tańczący Niedźwiedź</Polish>
 		<Russian>Òàíöóþùèé ìåäâåäü</Russian>
 	</TEXT>
@@ -423,8 +423,8 @@
 		<Tag>TXT_KEY_BUILDING_HERD_DEER</Tag>
 		<English>Herd (Deer)</English>
 		<French>Troupeau de Cerfs</French>
-    <Italian>Mandria di cervi</Italian>
-    <Polish>Stado - Jelenie</Polish>
+		<Italian>Mandria di cervi</Italian>
+		<Polish>Stado - Jelenie</Polish>
 		<Russian>Ñòàäî îëåíåé</Russian>
 	</TEXT>
 	<TEXT>
@@ -456,8 +456,8 @@
 		<Tag>TXT_KEY_BUILDING_HERD_DONKEY</Tag>
 		<English>Herd (Donkey)</English>
 		<French>Troupeau d'Ânes</French>
-    <Italian>Mandria di asini</Italian>
-    <Polish>Stado - Osły</Polish>
+		<Italian>Mandria di asini</Italian>
+		<Polish>Stado - Osły</Polish>
 		<Russian>Ñòàäî îñëîâ</Russian>
 	</TEXT>
 	<TEXT>
@@ -486,16 +486,16 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</German>
-    <Italian>Elasmotherium (resti)</Italian>
-    <Polish>Resztki - Elasmoterium</Polish>
+		<Italian>Elasmotherium (resti)</Italian>
+		<Polish>Resztki - Elasmoterium</Polish>
 		<Russian>Ïàìÿòü î ýëàñìîòåðèè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERD_ELEPHANT</Tag>
 		<English>Herd (Elephant)</English>
 		<French>Troupeau d'Eléphants</French>
-    <Italian>Mandria di elefanti</Italian>
-    <Polish>Stado - Słonie</Polish>
+		<Italian>Mandria di elefanti</Italian>
+		<Polish>Stado - Słonie</Polish>
 		<Russian>Ñòàäî ñëîíîâ</Russian>
 	</TEXT>
 	<TEXT>
@@ -508,8 +508,8 @@
 		<Tag>TXT_KEY_BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</Tag>
 		<English>Enclosure - Exotic Herbivore</English>
 		<French>Enclos - Herbivores exotiques</French>
-    <Italian>Erbivori esotici (recinzione)</Italian>
-    <Polish>Klatka - Egzotyczny roślinożerca</Polish>
+		<Italian>Erbivori esotici (recinzione)</Italian>
+		<Polish>Klatka - Egzotyczny roślinożerca</Polish>
 		<Russian>Êëåòêè ñ êîïûòíûìè</Russian>
 	</TEXT>
 	<TEXT>
@@ -523,8 +523,8 @@
 		<Tag>TXT_KEY_BUILDING_FEATHER_WORKER</Tag>
 		<English>Unit Reward - Feather Worker</English>
 		<French>Atelier de Plumes</French>
-    <Italian>Lavoratore di piume (da unità)</Italian>
-    <Polish>Pierzarz</Polish>
+		<Italian>Lavoratore di piume (da unità)</Italian>
+		<Polish>Pierzarz</Polish>
 		<Russian>Ìàñòåð ïåðüåâ</Russian>
 	</TEXT>
 	<TEXT>
@@ -537,15 +537,15 @@
 		<Tag>TXT_KEY_BUILDING_FISH_PENS</Tag>
 		<English>Unit Reward - Fish Pens</English>
 		<French>Enclos à Poissons</French>
-    <Italian>Vasca per pesci (da unità)</Italian>
-    <Polish>Zagroda Rybna</Polish>
+		<Italian>Vasca per pesci (da unità)</Italian>
+		<Polish>Zagroda Rybna</Polish>
 		<Russian>Çàòîí äëÿ ðûáû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FISH_PENS_PEDIA</Tag>
 		<English>Fish Pens were constructed by the rich to provide them with a ready source of some exotic or rare sea fish for their feasts.</English>
-    <Italian>I vasche per pesci venivano costruiti dalle persone ricche per avere una fonte di pesce raro ed esotico per le feste.</Italian>
-    <Polish>Sieci na ryby były konstruowane przez bogatych by dostarczać im ciągle świeżych i egzotycznych gatunków ryb na ich wykwintne uczty.</Polish>
+		<Italian>I vasche per pesci venivano costruiti dalle persone ricche per avere una fonte di pesce raro ed esotico per le feste.</Italian>
+		<Polish>Sieci na ryby były konstruowane przez bogatych by dostarczać im ciągle świeżych i egzotycznych gatunków ryb na ich wykwintne uczty.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_AARDVARK</Tag>
@@ -580,8 +580,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito degli anfibi</Italian>
-    <Polish>Mit (T) Płazów</Polish>
+		<Italian>Mito degli anfibi</Italian>
+		<Polish>Mit (T) Płazów</Polish>
 		<Russian>Ìèô îá àìôèáèè</Russian>
 	</TEXT>
 	<TEXT>
@@ -611,7 +611,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito dell'antilope</Italian>
+		<Italian>Mito dell'antilope</Italian>
 		<Polish>Mit (T) Antylopy</Polish>
 		<Russian>Ìèô îá àíòèëîïå</Russian>
 	</TEXT>
@@ -636,8 +636,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito dell'armadillo a nove fasce</Italian>
-    <Russian>Ìèô î áðîíåíîñöå</Russian>
+		<Italian>Mito dell'armadillo a nove fasce</Italian>
+		<Russian>Ìèô î áðîíåíîñöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ASIAN_ELEPHANT</Tag>
@@ -773,8 +773,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito degli uccelli</Italian>
-    <Polish>Mit (T) - Ptaki</Polish>
+		<Italian>Mito degli uccelli</Italian>
+		<Polish>Mit (T) - Ptaki</Polish>
 		<Russian>Ìèô î ïòèöå</Russian>
 	</TEXT>
 	<TEXT>
@@ -837,8 +837,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito del tapiro di pianura</Italian>
-    <Polish>Mit - Tapir</Polish>
+		<Italian>Mito del tapiro di pianura</Italian>
+		<Polish>Mit - Tapir</Polish>
 		<Russian>Ìèô î áðàç. òàïèðå</Russian>
 	</TEXT>
 	<TEXT>
@@ -862,8 +862,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito dell'insetto</Italian>
-    <Polish>Mit (T) - Ptaki morskie</Polish>
+		<Italian>Mito dell'insetto</Italian>
+		<Polish>Mit (T) - Ptaki morskie</Polish>
 		<Russian>Ìèô î æóêå</Russian>
 	</TEXT>
 	<TEXT>
@@ -1018,8 +1018,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito del coccodrillo</Italian>
-    <Polish>Mit - Krokodyl</Polish>
+		<Italian>Mito del coccodrillo</Italian>
+		<Polish>Mit - Krokodyl</Polish>
 		<Russian>Ìèô î êðîêîäèëå</Russian>
 	</TEXT>
 	<TEXT>
@@ -1092,8 +1092,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito del cuon rutilano</Italian>
-    <Russian>Ìèô î êðàñíîì âîëêå</Russian>
+		<Italian>Mito del cuon rutilano</Italian>
+		<Russian>Ìèô î êðàñíîì âîëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_DINGO</Tag>
@@ -1141,8 +1141,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito del dragone</Italian>
-    <Polish>Mit (E) Smoka</Polish>
+		<Italian>Mito del dragone</Italian>
+		<Polish>Mit (E) Smoka</Polish>
 		<Russian>Ìèô î äðàêîíå</Russian>
 	</TEXT>
 	<TEXT>
@@ -1191,8 +1191,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito della terra</Italian>
-    <Polish>Mit (E) Ziemi</Polish>
+		<Italian>Mito della terra</Italian>
+		<Polish>Mit (E) Ziemi</Polish>
 		<Russian>Ìèô î Çåìëå</Russian>
 	</TEXT>
 	<TEXT>
@@ -1204,8 +1204,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito dell'elasmotherium</Italian>
-    <Polish>Mit - Elasmoterium</Polish>
+		<Italian>Mito dell'elasmotherium</Italian>
+		<Polish>Mit - Elasmoterium</Polish>
 		<Russian>Ìèô îá ýëàñìîòåðèè</Russian>
 	</TEXT>
 	<TEXT>
@@ -1226,8 +1226,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito dell'elefante</Italian>
-    <Polish>Mit (T) Słonia</Polish>
+		<Italian>Mito dell'elefante</Italian>
+		<Polish>Mit (T) Słonia</Polish>
 		<Russian>Ìèô î ñëîíå</Russian>
 	</TEXT>
 	<TEXT>
@@ -1263,8 +1263,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito della volpe del deserto</Italian>
-    <Russian>Ìèô î ëèñèöå-ôåíåê</Russian>
+		<Italian>Mito della volpe del deserto</Italian>
+		<Russian>Ìèô î ëèñèöå-ôåíåê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_E_FIRE</Tag>
@@ -1275,8 +1275,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito del fuoco</Italian>
-    <Polish>Mit (E) - Ogień</Polish>
+		<Italian>Mito del fuoco</Italian>
+		<Polish>Mit (E) - Ogień</Polish>
 		<Russian>Ìèô îá îãíå</Russian>
 	</TEXT>
 	<TEXT>
@@ -1288,8 +1288,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito del pesce</Italian>
-    <Polish>Mit - Ryby</Polish>
+		<Italian>Mito del pesce</Italian>
+		<Polish>Mit - Ryby</Polish>
 		<Russian>Ìèô î ðûáå</Russian>
 	</TEXT>
 	<TEXT>
@@ -1313,8 +1313,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito degli uccelli che non volano</Italian>
-    <Polish>Mit (T) - Ptaki-Nieloty</Polish>
+		<Italian>Mito degli uccelli che non volano</Italian>
+		<Polish>Mit (T) - Ptaki-Nieloty</Polish>
 		<Russian>Ìèô î íåëåò. ïòèöå</Russian>
 	</TEXT>
 	<TEXT>
@@ -1400,8 +1400,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito dell'antilope giraffa</Italian>
-    <Russian>Ìèô î ãåðåíóêå</Russian>
+		<Italian>Mito dell'antilope giraffa</Italian>
+		<Russian>Ìèô î ãåðåíóêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_GHARIAL</Tag>
@@ -1437,8 +1437,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito del gliptodonte</Italian>
-    <Russian>Ìèô î ãëèïòîäîíå</Russian>
+		<Italian>Mito del gliptodonte</Italian>
+		<Russian>Ìèô î ãëèïòîäîíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_MOUFLON</Tag>
@@ -1449,8 +1449,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito del muflone</Italian>
-    <Polish>Mit Kóz</Polish>
+		<Italian>Mito del muflone</Italian>
+		<Polish>Mit Kóz</Polish>
 		<Russian>Ìèô î êîçëå</Russian>
 	</TEXT>
 	<TEXT>
@@ -1536,8 +1536,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito dell'ippopotamo gorgops</Italian>
-    <Russian>Ìèô î áåãåìîòå</Russian>
+		<Italian>Mito dell'ippopotamo gorgops</Italian>
+		<Russian>Ìèô î áåãåìîòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_GREAT_HORNED_OWL</Tag>
@@ -1732,8 +1732,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito del calamaro gigante</Italian>
-    <Polish>Mit Krakena</Polish>
+		<Italian>Mito del calamaro gigante</Italian>
+		<Polish>Mit Krakena</Polish>
 		<Russian>Ìèô î Êðàêåíå</Russian>
 	</TEXT>
 	<TEXT>
@@ -1741,8 +1741,8 @@
 		<English>Folklore associated with formations found in the landscape.</English>
 		<French>Les Mythes associés aux paysages et éléments trouvés dans la nature.</French>
 		<German>Mythen in Zusammenhang mit landschaftlichen Formationen</German>
-    <Italian>Folklore associato con le formazioni gelogiche presenti sul territorio.</Italian>
-    <Polish>Mity związane z formacjami terenu.</Polish>
+		<Italian>Folklore associato con le formazioni gelogiche presenti sul territorio.</Italian>
+		<Polish>Mity związane z formacjami terenu.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_RING_TAILED_LEMUR</Tag>
@@ -1802,8 +1802,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito del guanaco</Italian>
-    <Polish>Mit Lam</Polish>
+		<Italian>Mito del guanaco</Italian>
+		<Polish>Mit Lam</Polish>
 		<Russian>Ìèô î ëàìå</Russian>
 	</TEXT>
 	<TEXT>
@@ -1815,8 +1815,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito dei racconti di pesca</Italian>
-    <Polish>Mit (T) - Opowieści o Ryby</Polish>
+		<Italian>Mito dei racconti di pesca</Italian>
+		<Polish>Mit (T) - Opowieści o Ryby</Polish>
 		<Russian>Ìèô î ðûáå</Russian>
 	</TEXT>
 	<TEXT>
@@ -1913,8 +1913,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito del marsupiale</Italian>
-    <Polish>Mit (T) Torbacza</Polish>
+		<Italian>Mito del marsupiale</Italian>
+		<Polish>Mit (T) Torbacza</Polish>
 		<Russian>Ìèô î ñóì÷àòîì</Russian>
 	</TEXT>
 	<TEXT>
@@ -1926,8 +1926,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito della sirena</Italian>
-    <Polish>Mit (E) Syreny</Polish>
+		<Italian>Mito della sirena</Italian>
+		<Polish>Mit (E) Syreny</Polish>
 		<Russian>Ìèô î ðóñàëêå</Russian>
 	</TEXT>
 	<TEXT>
@@ -1939,8 +1939,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito del metallo</Italian>
-    <Polish>Mit (E) - Metal</Polish>
+		<Italian>Mito del metallo</Italian>
+		<Polish>Mit (E) - Metal</Polish>
 		<Russian>Ìèô î ìåòàëëå</Russian>
 	</TEXT>
 	<TEXT>
@@ -1965,8 +1965,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito dei monotremi</Italian>
-    <Russian>Ìèô î åõèäíå</Russian>
+		<Italian>Mito dei monotremi</Italian>
+		<Russian>Ìèô î åõèäíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_MOOSE</Tag>
@@ -2026,8 +2026,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito delle scimmie del nuovo mondo</Italian>
-    <Russian>Ìèô îá îáåçüÿíàõ Íîâîãî Ñâåòà</Russian>
+		<Italian>Mito delle scimmie del nuovo mondo</Italian>
+		<Russian>Ìèô îá îáåçüÿíàõ Íîâîãî Ñâåòà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_NILE_CROCODILE</Tag>
@@ -2087,8 +2087,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito del vecchio della foresta</Italian>
-    <Polish>Mit (T) Starego człowieka z lasu</Polish>
+		<Italian>Mito del vecchio della foresta</Italian>
+		<Polish>Mit (T) Starego człowieka z lasu</Polish>
 		<Russian>Ìèô î ëåøåì</Russian>
 	</TEXT>
 	<TEXT>
@@ -2099,8 +2099,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito delle scimmie del vecchio mondo</Italian>
-    <Russian>Ìèô îá îáåçüÿíàõ Ñòàðîãî Ñâåòà</Russian>
+		<Italian>Mito delle scimmie del vecchio mondo</Italian>
+		<Russian>Ìèô îá îáåçüÿíàõ Ñòàðîãî Ñâåòà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_OPOSSUM</Tag>
@@ -2123,8 +2123,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito dell'orango</Italian>
-    <Russian>Ìèô îá îðàíãóòàíå</Russian>
+		<Italian>Mito dell'orango</Italian>
+		<Russian>Ìèô îá îðàíãóòàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ORCA</Tag>
@@ -2148,8 +2148,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito del gufo</Italian>
-    <Polish>Folklore (T) - Sowy</Polish>
+		<Italian>Mito del gufo</Italian>
+		<Polish>Folklore (T) - Sowy</Polish>
 		<Russian>Ìèô î ñîâå</Russian>
 	</TEXT>
 	<TEXT>
@@ -2173,8 +2173,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito dell'uccello del paleolitico</Italian>
-    <Polish>Mit - Ptaki Kopalne</Polish>
+		<Italian>Mito dell'uccello del paleolitico</Italian>
+		<Polish>Mit - Ptaki Kopalne</Polish>
 		<Russian>Ìèô î äðåâíåé ïòèöå</Russian>
 	</TEXT>
 	<TEXT>
@@ -2186,8 +2186,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito del felino del paleolitico</Italian>
-    <Polish>Mit Lew Jaskiniowy</Polish>
+		<Italian>Mito del felino del paleolitico</Italian>
+		<Polish>Mit Lew Jaskiniowy</Polish>
 		<Russian>Ìèô î äðåâíåé êîøêå</Russian>
 	</TEXT>
 	<TEXT>
@@ -2199,8 +2199,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito dell'enocione</Italian>
-    <Russian>Ìèô î ëþòîâîëêå</Russian>
+		<Italian>Mito dell'enocione</Italian>
+		<Russian>Ìèô î ëþòîâîëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_GROUND_SLOTH</Tag>
@@ -2211,8 +2211,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito del bradipo gigante</Italian>
-    <Russian>Ìèô î ãèã. ëåíèâöå</Russian>
+		<Italian>Mito del bradipo gigante</Italian>
+		<Russian>Ìèô î ãèã. ëåíèâöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_MAMMOTH</Tag>
@@ -2273,8 +2273,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito del pinguino</Italian>
-    <Russian>Ìèô î ïèíãâèíå</Russian>
+		<Italian>Mito del pinguino</Italian>
+		<Russian>Ìèô î ïèíãâèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_PHEASANT</Tag>
@@ -2297,8 +2297,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito della fenice</Italian>
-    <Polish>Mit (E) Feniksa</Polish>
+		<Italian>Mito della fenice</Italian>
+		<Polish>Mit (E) Feniksa</Polish>
 		<Russian>Ìèô î Ôåíèêñå</Russian>
 	</TEXT>
 	<TEXT>
@@ -2406,8 +2406,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito dei rapaci</Italian>
-    <Polish>Mit (T) - Ptaki drapieżne</Polish>
+		<Italian>Mito dei rapaci</Italian>
+		<Polish>Mit (T) - Ptaki drapieżne</Polish>
 		<Russian>Ìèô î õèùí. ïòèöå</Russian>
 	</TEXT>
 	<TEXT>
@@ -2431,8 +2431,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito della razza</Italian>
-    <Polish>Mit (T) Manty</Polish>
+		<Italian>Mito della razza</Italian>
+		<Polish>Mit (T) Manty</Polish>
 		<Russian>Ìèô î ñêàòå</Russian>
 	</TEXT>
 	<TEXT>
@@ -2444,8 +2444,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito del miliobatide</Italian>
-    <Russian>Ìèô îá îðë. ñêàòå</Russian>
+		<Italian>Mito del miliobatide</Italian>
+		<Russian>Ìèô îá îðë. ñêàòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_MANTA_RAY</Tag>
@@ -2480,8 +2480,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito dello squalo del reef</Italian>
-    <Polish>Mit Rekina Rafowego</Polish>
+		<Italian>Mito dello squalo del reef</Italian>
+		<Polish>Mit Rekina Rafowego</Polish>
 		<Russian>Ìèô î ðèô. àêóëå</Russian>
 	</TEXT>
 	<TEXT>
@@ -2493,8 +2493,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito del rettile</Italian>
-    <Polish>Mit (T) Gadów</Polish>
+		<Italian>Mito del rettile</Italian>
+		<Polish>Mit (T) Gadów</Polish>
 		<Russian>Ìèô î ðåïòèëèè</Russian>
 	</TEXT>
 	<TEXT>
@@ -2506,8 +2506,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito dei rinoceronti</Italian>
-    <Polish>Mit (T) - Rhinoceroses</Polish>
+		<Italian>Mito dei rinoceronti</Italian>
+		<Polish>Mit (T) - Rhinoceroses</Polish>
 		<Russian>Ìèô î íîñîðîãå</Russian>
 	</TEXT>
 	<TEXT>
@@ -2553,8 +2553,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito del roditore</Italian>
-    <Polish>Mit (T) - Gryzonie</Polish>
+		<Italian>Mito del roditore</Italian>
+		<Polish>Mit (T) - Gryzonie</Polish>
 		<Russian>Ìèô î ãðûçóíå</Russian>
 	</TEXT>
 	<TEXT>
@@ -2591,8 +2591,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito del coccodrillo marino (piccolo)</Italian>
-  </TEXT>
+		<Italian>Mito del coccodrillo marino (piccolo)</Italian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_SALTWATER_CROCODILE_LARGE</Tag>
 		<English>Folklore - Saltwater Crocodile (Large)</English>
@@ -2602,8 +2602,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito del coccodrillo marino (grande)</Italian>
-  </TEXT>
+		<Italian>Mito del coccodrillo marino (grande)</Italian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_SCAVENGER</Tag>
 		<English>Folklore (T) - Scavenger</English>
@@ -2613,8 +2613,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito del saprofago</Italian>
-    <Polish>Mit (T) Padlinożerców</Polish>
+		<Italian>Mito del saprofago</Italian>
+		<Polish>Mit (T) Padlinożerców</Polish>
 		<Russian>Ìèô î ñòåðâÿòíèêå</Russian>
 	</TEXT>
 	<TEXT>
@@ -2626,8 +2626,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito del mare</Italian>
-    <Polish>Mit (E) Morza</Polish>
+		<Italian>Mito del mare</Italian>
+		<Polish>Mit (E) Morza</Polish>
 		<Russian>Ìèô î ìîðå</Russian>
 	</TEXT>
 	<TEXT>
@@ -2664,8 +2664,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito degli uccelli marini</Italian>
-    <Polish>Mit (T) - Ptaki morskie</Polish>
+		<Italian>Mito degli uccelli marini</Italian>
+		<Polish>Mit (T) - Ptaki morskie</Polish>
 		<Russian>Ìèô î ìîðñêîé ïòèöå</Russian>
 	</TEXT>
 	<TEXT>
@@ -2677,8 +2677,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito della lontra marina</Italian>
-    <Russian>Ìèô î êàëàíå</Russian>
+		<Italian>Mito della lontra marina</Italian>
+		<Russian>Ìèô î êàëàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_SHARKS</Tag>
@@ -2726,8 +2726,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito del cielo</Italian>
-    <Polish>Mit Nieba</Polish>
+		<Italian>Mito del cielo</Italian>
+		<Polish>Mit Nieba</Polish>
 		<Russian>Ìèô î íåáå</Russian>
 	</TEXT>
 	<TEXT>
@@ -2739,8 +2739,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito dei serpenti</Italian>
-    <Russian>Ìèô î çìåå</Russian>
+		<Italian>Mito dei serpenti</Italian>
+		<Russian>Ìèô î çìåå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_SNOW_LEOPARD</Tag>
@@ -2763,8 +2763,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito del gatto rugginoso</Italian>
-    <Polish>Mit Plamistego Kota</Polish>
+		<Italian>Mito del gatto rugginoso</Italian>
+		<Polish>Mit Plamistego Kota</Polish>
 		<Russian>Ìèô î ëåîïàðäå</Russian>
 	</TEXT>
 	<TEXT>
@@ -2776,8 +2776,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito della pietra</Italian>
-    <Polish>Mit (E) - Kamień</Polish>
+		<Italian>Mito della pietra</Italian>
+		<Polish>Mit (E) - Kamień</Polish>
 		<Russian>Ìèô î êàìíå</Russian>
 	</TEXT>
 	<TEXT>
@@ -2794,8 +2794,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito del tapiro</Italian>
-    <Polish>Mit (T) - Tapir</Polish>
+		<Italian>Mito del tapiro</Italian>
+		<Polish>Mit (T) - Tapir</Polish>
 		<Russian>Ìèô î òàïèðå</Russian>
 	</TEXT>
 	<TEXT>
@@ -2828,8 +2828,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito del diavolo della Tasmania</Italian>
-  </TEXT>
+		<Italian>Mito del diavolo della Tasmania</Italian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ARCTIC_TERN</Tag>
 		<English>Folklore - Arctic Tern</English>
@@ -2863,8 +2863,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito della tigre</Italian>
-    <Polish>Mit (T) Tygrysa</Polish>
+		<Italian>Mito della tigre</Italian>
+		<Polish>Mit (T) Tygrysa</Polish>
 		<Russian>Ìèô î òèãðå</Russian>
 	</TEXT>
 	<TEXT>
@@ -2913,8 +2913,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito del tacchino selvaggio</Italian>
-    <Russian>Ìèô îá èíäåéêå</Russian>
+		<Italian>Mito del tacchino selvaggio</Italian>
+		<Russian>Ìèô îá èíäåéêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_E_UNICORN</Tag>
@@ -2925,8 +2925,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito dell'unicorno</Italian>
-    <Polish>Mit Jednorożca</Polish>
+		<Italian>Mito dell'unicorno</Italian>
+		<Polish>Mit Jednorożca</Polish>
 		<Russian>Ìèô îá åäèíîðîãå</Russian>
 	</TEXT>
 	<TEXT>
@@ -3022,8 +3022,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito della donnola</Italian>
-    <Polish>Mit (T) Łasicy</Polish>
+		<Italian>Mito della donnola</Italian>
+		<Polish>Mit (T) Łasicy</Polish>
 		<Russian>Ìèô î õîðüêå</Russian>
 	</TEXT>
 	<TEXT>
@@ -3083,8 +3083,8 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-    <Italian>Mito del lupo</Italian>
-    <Polish>Mit (T) - Wilk</Polish>
+		<Italian>Mito del lupo</Italian>
+		<Polish>Mit (T) - Wilk</Polish>
 		<Russian>Ìèô î âîëêå</Russian>
 	</TEXT>
 	<TEXT>
@@ -3127,8 +3127,8 @@
 		<Tag>TXT_KEY_BUILDING_DANCE_FOX</Tag>
 		<English>Unit Reward - Dance (Fox)</English>
 		<French>Danse du Renard</French>
-    <Italian>Danza della volpe (da unità)</Italian>
-    <Russian>Òàíåö ëèñû</Russian>
+		<Italian>Danza della volpe (da unità)</Italian>
+		<Russian>Òàíåö ëèñû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DANCE_FOX_PEDIA</Tag>
@@ -3140,8 +3140,8 @@
 		<Tag>TXT_KEY_BUILDING_FUR_FARM</Tag>
 		<English>Unit Reward - Fur Farm</English>
 		<French>Ferme de Fourrures</French>
-    <Italian>Allevamento di animali da pelliccia (da unità)</Italian>
-    <Polish>Ferma Futer</Polish>
+		<Italian>Allevamento di animali da pelliccia (da unità)</Italian>
+		<Polish>Ferma Futer</Polish>
 		<Russian>Ìåõîâàÿ ôåðìà</Russian>
 	</TEXT>
 	<TEXT>
@@ -3159,15 +3159,15 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</German>
-    <Italian>Gliptodonte (resti)</Italian>
-    <Russian>Ïàìÿòü î ãëèïòîäîíå</Russian>
+		<Italian>Gliptodonte (resti)</Italian>
+		<Russian>Ïàìÿòü î ãëèïòîäîíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERD_GOAT</Tag>
 		<English>Herd (Goat)</English>
 		<French>Troupeau de Chèvres</French>
-    <Italian>Mandria di capre</Italian>
-    <Polish>Efekt Mitu - Koza</Polish>
+		<Italian>Mandria di capre</Italian>
+		<Polish>Efekt Mitu - Koza</Polish>
 		<Russian>Ñòàäî êîçëîâ</Russian>
 	</TEXT>
 	<TEXT>
@@ -3180,8 +3180,8 @@
 		<Tag>TXT_KEY_BUILDING_GOVERNORS_MENAGERIE</Tag>
 		<English>Unit Reward - Governor's Menagerie</English>
 		<French>Ménagerie du Gouverneur</French>
-    <Italian>Zoo del governatore (da unità)</Italian>
-    <Polish>Menażeria Gubernatora</Polish>
+		<Italian>Zoo del governatore (da unità)</Italian>
+		<Polish>Menażeria Gubernatora</Polish>
 		<Russian>Ãîðîäñêîé çâåðèíåö</Russian>
 	</TEXT>
 	<TEXT>
@@ -3195,8 +3195,8 @@
 		<Tag>TXT_KEY_BUILDING_GOVERNORS_PETS</Tag>
 		<English>Unit Reward - Governor's Pets</English>
 		<French>Animaux du Gouverneurs</French>
-    <Italian>Animali del governatore (da unità)</Italian>
-    <Polish>Maskotka Gubernatora</Polish>
+		<Italian>Animali del governatore (da unità)</Italian>
+		<Polish>Maskotka Gubernatora</Polish>
 		<Russian>Ãîðîäñêîé ïèòîìíèê</Russian>
 	</TEXT>
 	<TEXT>
@@ -3210,8 +3210,8 @@
 		<Tag>TXT_KEY_BUILDING_DANCE_HAKA</Tag>
 		<English>Dance - Haka</English>
 		<French>Danse - Haka</French>
-    <Italian>Ballo Haka</Italian>
-    <Russian>Òàíåö Õàêà</Russian>
+		<Italian>Ballo Haka</Italian>
+		<Russian>Òàíåö Õàêà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DANCE_HAKA_PEDIA</Tag>
@@ -3223,8 +3223,8 @@
 		<Tag>TXT_KEY_BUILDING_HAWKING_HUT</Tag>
 		<English>Unit Reward - Hawking Hut</English>
 		<French>Cabane du Fauconnier</French>
-    <Italian>Capanna del falconiere (da unità)</Italian>
-    <Polish>Chata Sokolnika</Polish>
+		<Italian>Capanna del falconiere (da unità)</Italian>
+		<Polish>Chata Sokolnika</Polish>
 		<Russian>Ñîêîëèíàÿ îõîòà</Russian>
 	</TEXT>
 	<TEXT>
@@ -3258,8 +3258,8 @@
 		<Tag>TXT_KEY_BUILDING_HERD_LLAMA</Tag>
 		<English>Herd (Llama)</English>
 		<French>Troupeau de Lama</French>
-    <Italian>Mandria di lama</Italian>
-    <Polish>Stado - Lam</Polish>
+		<Italian>Mandria di lama</Italian>
+		<Polish>Stado - Lam</Polish>
 		<Russian>Ñòàäî ëàì</Russian>
 	</TEXT>
 	<TEXT>
@@ -3270,7 +3270,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARINE_INSTITUTE</Tag>
 		<English>Unit Reward - Marine Institute</English>
-    <Italian>Istituto marino (da unità)</Italian>
+		<Italian>Istituto marino (da unità)</Italian>
 		<Polish>Instytut Morski</Polish>
 		<Russian>Ìîðñêîé èíñòèòóò</Russian>
 	</TEXT>
@@ -3282,16 +3282,16 @@
 		<Tag>TXT_KEY_BUILDING_ENCLOSURE_MARSUPIAL</Tag>
 		<English>Enclosure - Marsupial</English>
 		<French>Enclos - Marsupiaux</French>
-    <Italian>Marsupiale (recinzione)</Italian>
-    <Polish>Klatka - Torbacze</Polish>
+		<Italian>Marsupiale (recinzione)</Italian>
+		<Polish>Klatka - Torbacze</Polish>
 		<Russian>Êëåòêè ñ ñóì÷àòûìè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MASTER_HUNTER</Tag>
 		<English>Master Hunter</English>
 		<French>Cabane du Maître chasseur</French>
-    <Italian>Mastro cacciatore (da unità)</Italian>
-    <Polish>Wybitny Łowca</Polish>
+		<Italian>Mastro cacciatore (da unità)</Italian>
+		<Polish>Wybitny Łowca</Polish>
 		<Russian>Õèæèíà îõîòíèêà</Russian>
 	</TEXT>
 	<TEXT>
@@ -3308,8 +3308,8 @@
 		<Tag>TXT_KEY_BUILDING_MASTER_SEA_HUNTER</Tag>
 		<English>Master Sea Hunter</English>
 		<French>Maître Chasseur des mers</French>
-    <Italian>Mastro pescatore (da unità)</Italian>
-    <Polish>Wybitny Morski Łowca</Polish>
+		<Italian>Mastro pescatore (da unità)</Italian>
+		<Polish>Wybitny Morski Łowca</Polish>
 		<Russian>Øêîëà ðûáàëêè</Russian>
 	</TEXT>
 	<TEXT>
@@ -3329,15 +3329,15 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_DONKEY_PEDIA</Tag>
 		<English>The Mule Trainer is required to build Mule units.</English>
-    <Italian>L'addestramento muli è necessario per addestrare le unità di muli.</Italian>
-    <Polish>Muł mieszaniec międzygatunkowy klaczy konia domowego z ogierem osła, najbardziej znana hybryda. Najczęściej bezpłodny, tylko ok. 5% mulic jest płodnych. Zewnętrznie jest bardziej podobny do konia. Charakteryzuje się dużą głową, długimi uszami oraz krótką szyją ze stojącą grzywą i typowo końskim ogonem z długimi włosami. W kłębie osiąga wysokość do 180 cm.</Polish>
+		<Italian>L'addestramento muli è necessario per addestrare le unità di muli.</Italian>
+		<Polish>Muł mieszaniec międzygatunkowy klaczy konia domowego z ogierem osła, najbardziej znana hybryda. Najczęściej bezpłodny, tylko ok. 5% mulic jest płodnych. Zewnętrznie jest bardziej podobny do konia. Charakteryzuje się dużą głową, długimi uszami oraz krótką szyją ze stojącą grzywą i typowo końskim ogonem z długimi włosami. W kłębie osiąga wysokość do 180 cm.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERD_MUSKOX</Tag>
 		<English>Herd (Muskox)</English>
 		<French>Troupeau de Bœufs musqués</French>
-    <Italian>Mandria di buoi muschiati</Italian>
-    <Polish>Stado - Woły Piżmowe</Polish>
+		<Italian>Mandria di buoi muschiati</Italian>
+		<Polish>Stado - Woły Piżmowe</Polish>
 		<Russian>Ñòàäî îâöåáûêîâ</Russian>
 	</TEXT>
 	<TEXT>
@@ -3348,8 +3348,8 @@
 		<Tag>TXT_KEY_BUILDING_NAVAL_STANDARD_ANIMAL_MASCOT</Tag>
 		<English>Unit Reward - Naval Standard (Animal mascot)</English>
 		<French>Mascotte de la Marine</French>
-    <Italian>Mascotte animale della marina (stendando militare)</Italian>
-    <Polish>Bandera (Zwierzęca Maskotka)</Polish>
+		<Italian>Mascotte animale della marina (stendando militare)</Italian>
+		<Polish>Bandera (Zwierzęca Maskotka)</Polish>
 		<Russian>Ìîðñêîé øòàíäàðò</Russian>
 	</TEXT>
 	<TEXT>
@@ -3362,8 +3362,8 @@
 		<Tag>TXT_KEY_BUILDING_ENCLOSURE_NOCTURNAL</Tag>
 		<English>Enclosure - Nocturnal</English>
 		<French>Enclos - Animaux Nocturnes</French>
-    <Italian>Animale notturno (recinzione)</Italian>
-    <Polish>Klatka - Zwierzęta Nocne</Polish>
+		<Italian>Animale notturno (recinzione)</Italian>
+		<Polish>Klatka - Zwierzęta Nocne</Polish>
 		<Russian>Êëåòêè ñ íî÷íûìè</Russian>
 	</TEXT>
 	<TEXT>
@@ -3375,8 +3375,8 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</German>
-    <Italian>Enocione (resti)</Italian>
-    <Russian>Ïàìÿòü î ëþòîâîëêå</Russian>
+		<Italian>Enocione (resti)</Italian>
+		<Russian>Ïàìÿòü î ëþòîâîëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REMAINS_GROUND_SLOTH</Tag>
@@ -3387,21 +3387,21 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</German>
-    <Italian>Bradipo gigante (resti)</Italian>
-    <Russian>Ïàìÿòü î ãèã. ëåíèâöå</Russian>
+		<Italian>Bradipo gigante (resti)</Italian>
+		<Russian>Ïàìÿòü î ãèã. ëåíèâöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REMAINS_MAMMOTH</Tag>
 		<English>Remains - Mammoth</English>
 		<French>Restes de Mammouths</French>
-    <Italian>Mammut (resti)</Italian>
-    <Russian>Ïàìÿòü î ìàìîíòå</Russian>
+		<Italian>Mammut (resti)</Italian>
+		<Russian>Ïàìÿòü î ìàìîíòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLOCKS_OF_PEACOCK</Tag>
 		<English>Flocks of Peacock</English>
-    <Italian>Stormo di fagiani</Italian>
-    <Russian>Ñòàÿ ïàâëèíîâ</Russian>
+		<Italian>Stormo di fagiani</Italian>
+		<Russian>Ñòàÿ ïàâëèíîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLOCKS_OF_PEACOCK_PEDIA</Tag>
@@ -3425,8 +3425,8 @@
 		<Tag>TXT_KEY_BUILDING_HERD_POULTRY</Tag>
 		<English>Herd (Poultry)</English>
 		<French>Troupeau de Volailles</French>
-    <Italian>Stormo di polli</Italian>
-    <Polish>Stado - Drobiu</Polish>
+		<Italian>Stormo di polli</Italian>
+		<Polish>Stado - Drobiu</Polish>
 		<Russian>Ñòàÿ ïòèö</Russian>
 	</TEXT>
 	<TEXT>
@@ -3437,23 +3437,23 @@
 		<Tag>TXT_KEY_BUILDING_ENCLOSURE_PRIMATE</Tag>
 		<English>Enclosure - Primate</English>
 		<French>Enclos - Primates</French>
-    <Italian>Primate (recinzione)</Italian>
-    <Polish>Klatka - Małpa</Polish>
+		<Italian>Primate (recinzione)</Italian>
+		<Polish>Klatka - Małpa</Polish>
 		<Russian>Êëåòêè ñ ïðèìàòàìè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REMAINS_PROCOPTODON</Tag>
 		<English>Remains - Procoptodon</English>
 		<French>Remains - Procoptodon</French>
-    <Italian>Procoptodonte (resti)</Italian>
-    <Russian>Ïàìÿòü î ïðîêîïòîäîíå</Russian>
+		<Italian>Procoptodonte (resti)</Italian>
+		<Russian>Ïàìÿòü î ïðîêîïòîäîíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERD_RATITE</Tag>
 		<English>Herd (Ratite)</English>
 		<French>Troupeau d'Autruches</French>
-    <Italian>Stormo di ratiti</Italian>
-    <Polish>Stado - Strusi</Polish>
+		<Italian>Stormo di ratiti</Italian>
+		<Polish>Stado - Strusi</Polish>
 		<Russian>Ñòàÿ ñòðàóñîâ</Russian>
 	</TEXT>
 	<TEXT>
@@ -3466,24 +3466,24 @@
 		<Tag>TXT_KEY_BUILDING_ENCLOSURE_REPTILE</Tag>
 		<English>Enclosure - Reptile</English>
 		<French>Enclos - Reptiles</French>
-    <Italian>Rettile (recinzione)</Italian>
-    <Polish>Klatka - Gady</Polish>
+		<Italian>Rettile (recinzione)</Italian>
+		<Polish>Klatka - Gady</Polish>
 		<Russian>Òåððàðèóì</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENCLOSURE_RODENT</Tag>
 		<English>Enclosure - Rodent</English>
 		<French>Enclos - Rongeurs</French>
-    <Italian>Roditore (recinzione)</Italian>
-    <Polish>Klatka - Gryzonie</Polish>
+		<Italian>Roditore (recinzione)</Italian>
+		<Polish>Klatka - Gryzonie</Polish>
 		<Russian>Êëåòêè ñ ãðûçóíàìè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERD_KANGAROO</Tag>
 		<English>Herd (Kangaroo)</English>
 		<French>Troupeau de Kangourou</French>
-    <Italian>Folla di canguri</Italian>
-    <Polish>Stado - Kangurów</Polish>
+		<Italian>Folla di canguri</Italian>
+		<Polish>Stado - Kangurów</Polish>
 		<Russian>Ñòàäî êåíãóðó</Russian>
 	</TEXT>
 	<TEXT>
@@ -3499,8 +3499,8 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</German>
-    <Italian>Tigre dai denti a sciabola (resti)</Italian>
-    <Polish>Resztki - Tygrys Szablozębny</Polish>
+		<Italian>Tigre dai denti a sciabola (resti)</Italian>
+		<Polish>Resztki - Tygrys Szablozębny</Polish>
 		<Russian>Ïàìÿòü î ñàáë. òèãðå</Russian>
 	</TEXT>
 	<TEXT>
@@ -3521,8 +3521,8 @@
 		<Tag>TXT_KEY_BUILDING_ENCLOSURE_SEAL</Tag>
 		<English>Enclosure - Seal</English>
 		<French>Enclos - Phoques</French>
-    <Italian>Foca (recinzione)</Italian>
-    <Polish>Klatka - Foka</Polish>
+		<Italian>Foca (recinzione)</Italian>
+		<Polish>Klatka - Foka</Polish>
 		<Russian>Êëåòêè ñ òþëåíÿìè</Russian>
 	</TEXT>
 	<TEXT>
@@ -3540,8 +3540,8 @@
 		<Tag>TXT_KEY_BUILDING_SNAKE_CHARMER</Tag>
 		<English>Unit Reward - Snake Charmer</English>
 		<French>Charmeur de Serpents</French>
-    <Italian>Incantatore di serpenti (da unità)</Italian>
-    <Polish>Zaklinacz Węży</Polish>
+		<Italian>Incantatore di serpenti (da unità)</Italian>
+		<Polish>Zaklinacz Węży</Polish>
 		<Russian>Çàêëèíàòåëü çìåé</Russian>
 	</TEXT>
 	<TEXT>
@@ -3554,15 +3554,15 @@
 		<Tag>TXT_KEY_BUILDING_SNAKE_PIT</Tag>
 		<English>Unit Reward - Snake Pit</English>
 		<French>Fosse à Serpents</French>
-    <Italian>Fossa dei serpenti (da unità)</Italian>
-    <Polish>Dół z wężami</Polish>
+		<Italian>Fossa dei serpenti (da unità)</Italian>
+		<Polish>Dół z wężami</Polish>
 		<Russian>ßìà ñî çìåÿìè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SNAKE_PIT_PEDIA</Tag>
 		<English>[COLOR_BUILDING_TEXT]Snake Pits[COLOR_REVERT] are places of horror, torture and even death in European legends and fairy tales. The Viking warlord Ragnar Lodbrok is said to have been thrown into a snake pit and died there, after his army had been defeated in battle by King Aelle II of Northumbria. An older legend recorded in Atlakvioa and Oddrunargratr tells that Attila the Hun murdered Gunnarr, the King of Burgundy, in a snake pit. In a medieval German poem, Dietrich von Bern is thrown into a snake pit by the giant Sigenot - he is protected by a magical jewel that had been given to him earlier by a dwarf.[PARAGRAPH:2]Nothing however supports the assumption, that snake pits were ever actually maintained or used for torture or execution. The necessary effort and the risks would have been far too big for something the effect of which could hardly been foreseen or controlled with sufficient precision.</English>
-    <Italian>Le [COLOR_BUILDING_TEXT]fosse dei serpenti[COLOR_REVERT] sono descritte nelle leggende europee come posti di orrore, tortura e perfino morte. Si dice che il guerriero vichingo Ragnar Lodbrok sia stato gettato in una fossa piena di serpenti e sia morto lì, dopo che il suo esercito era stato sconfitto in battaglia da Re Aelle II di Northumbria. Un'antica leggenda tramandata a Atlakviða e Oddrúnargrátr narra che Attila uccise Gunnarr, Re di Burgundia, gettandolo in una fossa piena di serpenti velenosi. In un poema medievale tedesco, Dietrich von Bern viene gettato in una fossa piena di serpenti dal gigante Sigenot - anche se è protetto da un gioiello magico che gli era appena stato donato da un nano.[PARAGRAPH:2]Nulla invece sostiene l'ipotesi che le fosse di serpenti siano state effettivamente mantenute o utilizzate per torture o esecuzioni. Lo sforzo necessario e il rischio sarebbero stati troppo grandi per qualcosa il cui effetto sarebbe stato difficilmente previsto o controllato con sufficiente precisione.</Italian>
-    <Polish>[COLOR_BUILDING_TEXT]Dół z wężami[COLOR_REVERT] to miejsce do którego wrzuca się skazańców na tortury i śmierć przez pokąsanie przez węże i żmije.</Polish>
+		<Italian>Le [COLOR_BUILDING_TEXT]fosse dei serpenti[COLOR_REVERT] sono descritte nelle leggende europee come posti di orrore, tortura e perfino morte. Si dice che il guerriero vichingo Ragnar Lodbrok sia stato gettato in una fossa piena di serpenti e sia morto lì, dopo che il suo esercito era stato sconfitto in battaglia da Re Aelle II di Northumbria. Un'antica leggenda tramandata a Atlakviða e Oddrúnargrátr narra che Attila uccise Gunnarr, Re di Burgundia, gettandolo in una fossa piena di serpenti velenosi. In un poema medievale tedesco, Dietrich von Bern viene gettato in una fossa piena di serpenti dal gigante Sigenot - anche se è protetto da un gioiello magico che gli era appena stato donato da un nano.[PARAGRAPH:2]Nulla invece sostiene l'ipotesi che le fosse di serpenti siano state effettivamente mantenute o utilizzate per torture o esecuzioni. Lo sforzo necessario e il rischio sarebbero stati troppo grandi per qualcosa il cui effetto sarebbe stato difficilmente previsto o controllato con sufficiente precisione.</Italian>
+		<Polish>[COLOR_BUILDING_TEXT]Dół z wężami[COLOR_REVERT] to miejsce do którego wrzuca się skazańców na tortury i śmierć przez pokąsanie przez węże i żmije.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REMAINS_THYLACINE</Tag>
@@ -3573,15 +3573,15 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</German>
-    <Italian>Tilacino (resti)</Italian>
-    <Russian>Ïàìÿòü î ñóì÷. âîëêå</Russian>
+		<Italian>Tilacino (resti)</Italian>
+		<Russian>Ïàìÿòü î ñóì÷. âîëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SHELL_WORKERS_HUT</Tag>
 		<English>Unit Reward - Shell Worker's Hut</English>
 		<French>Cabane du sculpteur de carapaces</French>
-    <Italian>Intagliatore di conchiglie (da unità)</Italian>
-    <Polish>Chata Rzeźbiarza Muszli</Polish>
+		<Italian>Intagliatore di conchiglie (da unità)</Italian>
+		<Polish>Chata Rzeźbiarza Muszli</Polish>
 		<Russian>Ëîâåö óñòðèö</Russian>
 	</TEXT>
 	<TEXT>
@@ -3602,8 +3602,8 @@
 		<Tag>TXT_KEY_BUILDING_TRADITION_NAVAL_MASCOT</Tag>
 		<English>Tradition - Naval Mascot</English>
 		<French>Tradition - Mascotte Navale</French>
-    <Italian>Tradizione della mascotte navale</Italian>
-    <Polish>Tradycja - Bandera (Maskotka)</Polish>
+		<Italian>Tradizione della mascotte navale</Italian>
+		<Polish>Tradycja - Bandera (Maskotka)</Polish>
 		<Russian>Òðàäèöèè øòàíäàðòîâ</Russian>
 	</TEXT>
 	<TEXT>
@@ -3618,16 +3618,16 @@
 		<Tag>TXT_KEY_BUILDING_TRADITION_MILITARY_STANDARD_MASCOT</Tag>
 		<English>Tradition - Military Standard (Mascot)</English>
 		<French>Tradition - Standard militaire (Mascotte)</French>
-    <Italian>Tradizione dello stendardo militare con mascotte</Italian>
-    <Polish>Tradycja - Sztandar Wojskowy (Maskotka)</Polish>
+		<Italian>Tradizione dello stendardo militare con mascotte</Italian>
+		<Polish>Tradycja - Sztandar Wojskowy (Maskotka)</Polish>
 		<Russian>Òðàäèöèè òîòåìîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CARNIVAL_TRAINED_SEAL</Tag>
 		<English>Unit Reward - Carnival (Trained Seal)</English>
 		<French>Phoques dressés</French>
-    <Italian>Fiera delle foche ammaestrate (da unità)</Italian>
-    <Polish>Tresowana Foka</Polish>
+		<Italian>Fiera delle foche ammaestrate (da unità)</Italian>
+		<Polish>Tresowana Foka</Polish>
 		<Russian>Äðåññ. òþëåíåé</Russian>
 	</TEXT>
 	<TEXT>
@@ -3637,8 +3637,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLOCKS_OF_TURKEY</Tag>
 		<English>Flocks of Turkey</English>
-    <Italian>Trave di tacchini</Italian>
-    <Russian>Ñòàÿ èíäååê</Russian>
+		<Italian>Trave di tacchini</Italian>
+		<Russian>Ñòàÿ èíäååê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FLOCKS_OF_TURKEY_PEDIA</Tag>
@@ -3649,8 +3649,8 @@
 		<Tag>TXT_KEY_BUILDING_ENCLOSURE_WALRUS</Tag>
 		<English>Enclosure - Walrus</English>
 		<French>Enclos - Morses</French>
-    <Italian>Tricheco (recinzione)</Italian>
-    <Polish>Klatka - Mors</Polish>
+		<Italian>Tricheco (recinzione)</Italian>
+		<Polish>Klatka - Mors</Polish>
 		<Russian>Êëåòêè ñ ìîðæàìè</Russian>
 	</TEXT>
 	<TEXT>
@@ -3663,16 +3663,16 @@
 		<Tag>TXT_KEY_BUILDING_ENCLOSURE_WOLF</Tag>
 		<English>Enclosure - Wolf</English>
 		<French>Enclos - Loups</French>
-    <Italian>Lupo (recinzione)</Italian>
-    <Polish>Klatka - Wilk</Polish>
+		<Italian>Lupo (recinzione)</Italian>
+		<Polish>Klatka - Wilk</Polish>
 		<Russian>Êëåòêè ñ âîëêàìè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WONDERS_OF_THE_DEEP</Tag>
 		<English>Wonders of the Deep</English>
 		<French>Merveilles des profondeurs</French>
-    <Italian>Meraviglie degli abissi (da unità)</Italian>
-    <Polish>Cuda Głębin</Polish>
+		<Italian>Meraviglie degli abissi (da unità)</Italian>
+		<Polish>Cuda Głębin</Polish>
 		<Russian>×óäåñà ãëóáèí</Russian>
 	</TEXT>
 	<TEXT>

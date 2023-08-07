@@ -123,7 +123,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_AFFLICTION_PROMOTION</Tag>
 		<English>(P) Afflictions</English>
 		<French>(P) Afflictions</French>
-    <Italian>Alterazioni di stato</Italian>
+		<Italian>Alterazioni di stato</Italian>
 		<German>Beschwerden</German>
 		<Spanish>Alteraciones de estado</Spanish>
 		<Polish>Osłabienia</Polish>
@@ -133,7 +133,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_ALL_ERAS</Tag>
 		<English>All Eras</English>
 		<French>Toutes les Eres</French>
-    <Italian>Tutte le ere</Italian>
+		<Italian>Tutte le ere</Italian>
 		<German>Alle Zeitalter</German>
 		<Russian>Все эпохи</Russian>
 	</TEXT>
@@ -141,7 +141,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_ANIMALISTIC_BUILDINGS</Tag>
 		<English>Animalistic</English>
 		<French>Animalier</French>
-    <Italian>Edifici animalistici</Italian>
+		<Italian>Edifici animalistici</Italian>
 		<German>Tiere</German>
 		<Russian>Предания</Russian>
 	</TEXT>
@@ -149,7 +149,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_ANIMALS</Tag>
 		<English>Animals</English>
 		<French>Animaux</French>
-    <Italian>Animali</Italian>
+		<Italian>Animali</Italian>
 		<German>Tiere</German>
 		<Russian>Животные</Russian>
 	</TEXT>
@@ -175,7 +175,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_CULTURE</Tag>
 		<English>Culture Bonuses</English>
 		<French>Bonus de Culture</French>
-    <Italian>Risorse culturali</Italian>
+		<Italian>Risorse culturali</Italian>
 		<German>Kulturboni</German>
 		<Spanish>Recursos culturales</Spanish>
 		<Polish>Bonusy Kulturowe</Polish>
@@ -184,20 +184,20 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_GENMOD</Tag>
 		<English>Technocultural Bonuses</English>
-    <Italian>Risorse tecnologiche</Italian>
+		<Italian>Risorse tecnologiche</Italian>
 		<German>Technokulturboni</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_MANDFACTURED</Tag>
 		<English>Manufactured Bonuses</English>
-    <Italian>Risorse prodotte</Italian>
+		<Italian>Risorse prodotte</Italian>
 		<German>Güter</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_MAP</Tag>
 		<English>Map Bonuses</English>
 		<French>Bonus de Carte</French>
-    <Italian>Risorse della mappa</Italian>
+		<Italian>Risorse della mappa</Italian>
 		<German>Rohstoffe</German>
 		<Spanish>Recursos del mapa</Spanish>
 		<Polish>Bonusy Mapy</Polish>
@@ -206,14 +206,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_WONDER</Tag>
 		<English>Unique Bonuses</English>
-    <Italian>Risorse uniche</Italian>
+		<Italian>Risorse uniche</Italian>
 		<German>Spezialboni</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BUILDINGS_SPECIAL</Tag>
 		<English>Special</English>
 		<French>Spéciaux</French>
-    <Italian>Edifici speciali</Italian>
+		<Italian>Edifici speciali</Italian>
 		<German>Besonderheiten</German>
 		<Russian>Особые</Russian>
 	</TEXT>
@@ -240,7 +240,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_CHRONOLOGY</Tag>
 		<English>Chronology</English>
 		<French>Chronologie</French>
-    <Italian>Ordine cronologico</Italian>
+		<Italian>Ordine cronologico</Italian>
 		<German>Chronologisch</German>
 		<Russian>Хронология</Russian>
 	</TEXT>
@@ -312,7 +312,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_CULTURAL_UNITS</Tag>
 		<English>Cultural Units</English>
 		<French>Unités Culturelles</French>
-    <Italian>Unità culturali</Italian>
+		<Italian>Unità culturali</Italian>
 		<German>Kulturspezifisch</German>
 		<Russian>Культур. юниты</Russian>
 	</TEXT>
@@ -320,7 +320,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_EQUIPMENT_PROMOTION</Tag>
 		<English>(P) Equipments</English>
 		<French>(P) Equipements</French>
-    <Italian>Equipaggiamento</Italian>
+		<Italian>Equipaggiamento</Italian>
 		<German>Ausrüstung</German>
 		<Spanish>Equipamiento</Spanish>
 		<Polish>Ekwipunek</Polish>
@@ -330,7 +330,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_ERAS</Tag>
 		<English>Eras</English>
 		<French>Eres</French>
-    <Italian>Ere</Italian>
+		<Italian>Ere</Italian>
 		<German>Zeitalter</German>
 		<Russian>Эпохи</Russian>
 	</TEXT>
@@ -366,7 +366,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_GROUP_WONDERS</Tag>
 		<English>Group Wonders</English>
 		<French>Groupes de Merveilles</French>
-    <Italian>Meraviglie di gruppo</Italian>
+		<Italian>Meraviglie di gruppo</Italian>
 		<German>Gruppenwunder</German>
 		<Russian>Групп. Чудеса</Russian>
 	</TEXT>
@@ -420,7 +420,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_LANDSCAPE</Tag>
 		<English>Landscape</English>
 		<French>Paysage</French>
-    <Italian>Mappa</Italian>
+		<Italian>Mappa</Italian>
 		<German>Landschaft</German>
 		<Russian>Типы ландшафта</Russian>
 	</TEXT>
@@ -446,7 +446,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_LEADERSHIP</Tag>
 		<English>Leadership</English>
 		<French>Gouvernement</French>
-    <Italian>Leadership</Italian>
+		<Italian>Leadership</Italian>
 		<German>Regierung</German>
 		<Russian>Лидерство</Russian>
 	</TEXT>
@@ -454,7 +454,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_MISC_UNITS</Tag>
 		<English>Misc Units</English>
 		<French>Unités Diverses</French>
-    <Italian>Altre unità</Italian>
+		<Italian>Altre unità</Italian>
 		<German>Sonstige</German>
 		<Russian>Прочие юниты</Russian>
 	</TEXT>
@@ -536,7 +536,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_RELIGIOUS_BUILDINGS</Tag>
 		<English>Religious</English>
 		<French>Religieux</French>
-    <Italian>Edifici religiosi</Italian>
+		<Italian>Edifici religiosi</Italian>
 		<German>Religion</German>
 		<Russian>Культовые</Russian>
 	</TEXT>
@@ -544,7 +544,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_RESOURCES</Tag>
 		<English>Resources</English>
 		<French>Ressources</French>
-    <Italian>Risorse</Italian>
+		<Italian>Risorse</Italian>
 		<German>Ressourcen</German>
 		<Russian>Ресурсы</Russian>
 	</TEXT>
@@ -552,7 +552,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_ROUTES</Tag>
 		<English>Routes</English>
 		<French>Routes</French>
-    <Italian>Percorsi</Italian>
+		<Italian>Percorsi</Italian>
 		<German>Verkehr</German>
 		<Spanish>Caminos</Spanish>
 		<Polish>Drogi</Polish>
@@ -571,13 +571,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_SPACE_BUILDINGS</Tag>
 		<English>Space</English>
-    <Italian>Edifici spaziali</Italian>
+		<Italian>Edifici spaziali</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_SPECIAL</Tag>
 		<English>Special</English>
 		<French>Spéciaux</French>
-    <Italian>Speciali</Italian>
+		<Italian>Speciali</Italian>
 		<German>Weiteres</German>
 		<Russian>Особое</Russian>
 	</TEXT>
@@ -603,7 +603,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_SPECIAL_BUILDINGS</Tag>
 		<English>Special Buildings</English>
 		<French>Bâtiments Spéciaux</French>
-    <Italian>Edifici speciali</Italian>
+		<Italian>Edifici speciali</Italian>
 		<German>Spezialgebäude</German>
 		<Russian>Особые постройки</Russian>
 	</TEXT>
@@ -611,14 +611,14 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_SPECIAL_UNITS</Tag>
 		<English>Special Units</English>
 		<French>Unités Spéciales</French>
-    <Italian>Unità speciali</Italian>
+		<Italian>Unità speciali</Italian>
 		<German>Spezialeinheiten</German>
 		<Russian>Особые юниты</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_SPREAD_UNITS</Tag>
 		<English>Spreading Units</English>
-    <Italian>Unità di diffusione</Italian>
+		<Italian>Unità di diffusione</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_SUBCOMBAT_TYPE</Tag>
@@ -687,7 +687,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_UNIT_COMBAT</Tag>
 		<English>Combat Types</English>
-    <Italian>Categorie</Italian>
+		<Italian>Categorie</Italian>
 		<German>Kategorien</German>
 	</TEXT>
 	<TEXT>
@@ -704,7 +704,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_UPGRADE_TREES</Tag>
 		<English>Upgrade Trees</English>
 		<French>Arbre des Améliorations</French>
-    <Italian>Alberi dei miglioramenti</Italian>
+		<Italian>Alberi dei miglioramenti</Italian>
 		<German>Upgrades</German>
 		<Russian>Древо развития</Russian>
 	</TEXT>
@@ -712,7 +712,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_WORKER_BUILDS</Tag>
 		<English>Worker Builds</English>
 		<French>Constructions des Ouvriers</French>
-    <Italian>Compiti dei lavoratori</Italian>
+		<Italian>Compiti dei lavoratori</Italian>
 		<German>Arbeitsaufträge</German>
 		<Russian>Задания рабочим</Russian>
 	</TEXT>
@@ -876,7 +876,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_REQUIRES</Tag>
 		<English>Requires:</English>
-    <Italian>Richiede:</Italian>
+		<Italian>Richiede:</Italian>
 		<French>Requiert :</French>
 		<German>benötigt</German>
 		<Russian>Требуется:</Russian>
@@ -940,7 +940,7 @@
 		<Tag>TXT_KEY_PEDIA_STRATEGY</Tag>
 		<English>Strategy</English>
 		<French>Stratégie</French>
-    <Italian>Strategia</Italian>
+		<Italian>Strategia</Italian>
 		<German>Strategie</German>
 		<Spanish>Estrategia</Spanish>
 		<Polish>Strategia</Polish>

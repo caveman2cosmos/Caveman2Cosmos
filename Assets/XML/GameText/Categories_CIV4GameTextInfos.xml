@@ -3,52 +3,52 @@
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUPS</Tag>
 		<English>General Specialist Groups</English>
-    <Italian>Gruppi generali di specialisti</Italian>
+		<Italian>Gruppi generali di specialisti</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_ASSIGNABLE_SPECIALISTS</Tag>
 		<English>Assignable Specialists</English>
-    <Italian>Specialisti assegnabili</Italian>
+		<Italian>Specialisti assegnabili</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_CIVILIAN</Tag>
 		<English>Civilian Specialists</English>
-    <Italian>Specialisti civili</Italian>
+		<Italian>Specialisti civili</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_CAPTIVE</Tag>
 		<English>Captive Specialists</English>
-    <Italian>Specialisti prigionieri</Italian>
+		<Italian>Specialisti prigionieri</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_RELIGIOUS</Tag>
 		<English>Religious Specialists</English>
-    <Italian>Specialisti religiosi</Italian>
+		<Italian>Specialisti religiosi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_CULTURAL</Tag>
 		<English>Cultural Specialists</English>
-    <Italian>Specialisti culturali</Italian>
+		<Italian>Specialisti culturali</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_RESEARCH</Tag>
 		<English>Research Specialists</English>
-    <Italian>Specialisti ricercatori</Italian>
+		<Italian>Specialisti ricercatori</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_ECONOMIC</Tag>
 		<English>Economic Specialists</English>
-    <Italian>Specialisti economisti</Italian>
+		<Italian>Specialisti economisti</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_ARCHITECTURAL</Tag>
 		<English>Architectural Specialists</English>
-    <Italian>Specialisti di architettura</Italian>
+		<Italian>Specialisti di architettura</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_POLITICAL</Tag>
 		<English>Political Specialists</English>
-    <Italian>Specialisti politici</Italian>
+		<Italian>Specialisti politici</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_MEDICAL</Tag>
@@ -57,241 +57,241 @@
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_ESPIONAGE</Tag>
 		<English>Espionage Specialists</English>
-    <Italian>Specialisti di spionaggio</Italian>
+		<Italian>Specialisti di spionaggio</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_LEGAL</Tag>
 		<English>Legal Specialists</English>
-    <Italian>Specialisti legali</Italian>
+		<Italian>Specialisti legali</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_MILITARY</Tag>
 		<English>Military Specialists</English>
-    <Italian>Specialisti militari</Italian>
+		<Italian>Specialisti militari</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUPS</Tag>
 		<English>Unit Types</English>
-    <Italian>Tipo di unità</Italian>
+		<Italian>Tipo di unità</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_SIZE_MATTERS_RANK_GROUPS</Tag>
 		<English>Size Matters Rank Categories</English>
-    <Italian>Categorie per dimensione</Italian>
+		<Italian>Categorie per dimensione</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_EQUIPMENT_GROUPS</Tag>
 		<English>Equipment Option Activated Unit Capabilities</English>
-    <Italian>Capacità unità con opzione equipaggiamento attiva</Italian>
+		<Italian>Capacità unità con opzione equipaggiamento attiva</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_ANIMAL_GROUPS</Tag>
 		<English>Animal Designations</English>
-    <Italian>Denominazioni animali</Italian>
+		<Italian>Denominazioni animali</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_SIZE</Tag>
 		<English>Size of Individuals in Unit</English>
-    <Italian>Dimensione delle singole unità</Italian>
-  </TEXT>
+		<Italian>Dimensione delle singole unità</Italian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_VOLUME</Tag>
 		<English>Volume of Beings in Unit</English>
-    <Italian>Volume dei componenti dell' unità</Italian>
+		<Italian>Volume dei componenti dell' unità</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_QUALITY</Tag>
 		<English>Combat Quality of Unit</English>
-    <Italian>Qualità di combattimento dell'unità</Italian>
+		<Italian>Qualità di combattimento dell'unità</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_SPEED</Tag>
 		<English>Unit Speed Category</English>
-    <Italian>Categoria di velocità dell'unità</Italian>
-  </TEXT>
+		<Italian>Categoria di velocità dell'unità</Italian>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_ATTACK_FORM</Tag>
 		<English>Attack Form</English>
-    <Italian>Forma d'attacco</Italian>
+		<Italian>Forma d'attacco</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_WEAPON_METHOD</Tag>
 		<English>Weapon Method</English>
-    <Italian>Metodo dell'arma</Italian>
+		<Italian>Metodo dell'arma</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Tag>
 		<English>Armament Style</English>
-    <Italian>Stile di armamento</Italian>
+		<Italian>Stile di armamento</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_WEAPONS_H2H</Tag>
 		<English>Primary Hand to Hand Weapon</English>
-    <Italian>Arma primaria da corpo a corpo</Italian>
+		<Italian>Arma primaria da corpo a corpo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Tag>
 		<English>Sidearm Close Combat Weapon</English>
-    <Italian>Arma da combattimento ravvicinato</Italian>
+		<Italian>Arma da combattimento ravvicinato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_WEAPONS_DISTANCE</Tag>
 		<English>Primary Distance Weapon</English>
-    <Italian>Arma a distanza primaria</Italian>
+		<Italian>Arma a distanza primaria</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Tag>
 		<English>Backup Ranged Weapon</English>
-    <Italian>Arma a distanza di riserva</Italian>
+		<Italian>Arma a distanza di riserva</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_WEAPONS_DETONATE</Tag>
 		<English>Detonation Weapon</English>
-    <Italian>Arma di detonazione</Italian>
+		<Italian>Arma di detonazione</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_WEAPONS_AIR2GROUND</Tag>
 		<English>Air to Ground Weapon</English>
-    <Italian>Arma aria-terra</Italian>
+		<Italian>Arma aria-terra</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_ARMORS</Tag>
 		<English>Armor Category</English>
-    <Italian>Categoria armatura</Italian>
+		<Italian>Categoria armatura</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_SHIELDS</Tag>
 		<English>Shield Category</English>
-    <Italian>Categoria scudo</Italian>
+		<Italian>Categoria scudo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_NATURAL</Tag>
 		<English>Natural Ability</English>
-    <Italian>Abilità naturale</Italian>
+		<Italian>Abilità naturale</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_TAXONOMY</Tag>
 		<English>Taxonomical Category</English>
-    <Italian>Categoria tassonomica</Italian>
+		<Italian>Categoria tassonomica</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_INVERTEBRATE</Tag>
 		<English>Invertebrate Sub-Category</English>
-    <Italian>Sottocategoria invertebrati</Italian>
+		<Italian>Sottocategoria invertebrati</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_FISH</Tag>
 		<English>Fish Sub-Category</English>
-    <Italian>Sottocategoria pesce</Italian>
+		<Italian>Sottocategoria pesce</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_AMPHIBIAN</Tag>
 		<English>Amphibian Sub-Category</English>
-    <Italian>Sottocategoria anfibio</Italian>
+		<Italian>Sottocategoria anfibio</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_REPTILE</Tag>
 		<English>Reptile Sub-Category</English>
-    <Italian>Sottocategoria rettile</Italian>
+		<Italian>Sottocategoria rettile</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_BIRD</Tag>
 		<English>Bird Sub-Category</English>
-    <Italian>Sottocategoria uccello</Italian>
+		<Italian>Sottocategoria uccello</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_MAMMAL</Tag>
 		<English>Mammal Sub-Category</English>
-    <Italian>Sottocategoria mammifero</Italian>
+		<Italian>Sottocategoria mammifero</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_PRIMARY_ROLE</Tag>
 		<English>Primary Role</English>
-    <Italian>Ruolo principale</Italian>
+		<Italian>Ruolo principale</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_COMBAT</Tag>
 		<English>Combat Class</English>
-    <Italian>Classe di combattimento</Italian>
+		<Italian>Classe di combattimento</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_MOBILITY</Tag>
 		<English>Mobility Method</English>
-    <Italian>Metodo di movimento</Italian>
+		<Italian>Metodo di movimento</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_SIEGE_TYPES</Tag>
 		<English>Siege Type</English>
-    <Italian>Tipo di assedio</Italian>
+		<Italian>Tipo di assedio</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_SPECIES</Tag>
 		<English>Species Type</English>
-    <Italian>Tipo di specie</Italian>
+		<Italian>Tipo di specie</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_ERA</Tag>
 		<English>Era of Unit Access</English>
-    <Italian>Era della comparsa dell'unità</Italian>
+		<Italian>Era della comparsa dell'unità</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_MOUNT</Tag>
 		<English>Mount Animal</English>
-    <Italian>Animale da cavalcatura</Italian>
+		<Italian>Animale da cavalcatura</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_ANIMAL_ASSISTED</Tag>
 		<English>Assistance Animal</English>
-    <Italian>Animale da assistenza</Italian>
+		<Italian>Animale da assistenza</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_RELIGION</Tag>
 		<English>Dominant Religion</English>
-    <Italian>Religione dominante</Italian>
+		<Italian>Religione dominante</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_CULTURE</Tag>
 		<English>Dominant Culture</English>
-    <Italian>Cultura dominante</Italian>
+		<Italian>Cultura dominante</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_ARMOR_TYPES</Tag>
 		<English>Armor Type</English>
-    <Italian>Tipo di armatura</Italian>
+		<Italian>Tipo di armatura</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_ARMOR_MATERIAL</Tag>
 		<English>Armor Material</English>
-    <Italian>Materiale dell' armatura</Italian>
+		<Italian>Materiale dell' armatura</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_SHIELD_MATERIAL</Tag>
 		<English>Shield Material</English>
-    <Italian>Materiale dello scudo</Italian>
+		<Italian>Materiale dello scudo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_ABILITIES</Tag>
 		<English>Special Abilities</English>
-    <Italian>Caratteristiche</Italian>
+		<Italian>Caratteristiche</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_HEALING_GROUPS</Tag>
 		<English>Healing Categories</English>
-    <Italian>Categoria guaritore</Italian>
+		<Italian>Categoria guaritore</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_HEALS_AS</Tag>
 		<English>Heals As Type</English>
-    <Italian>Guaritura per tipo</Italian>
+		<Italian>Guaritura per tipo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_HEALER_TYPES</Tag>
 		<English>Assists in Healing</English>
-    <Italian>Assistenza di guaritura</Italian>
+		<Italian>Assistenza di guaritura</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_PROMOTED</Tag>
 		<English>As Promoted</English>
-    <Italian>Come promozione</Italian>
+		<Italian>Come promozione</Italian>
 	</TEXT>
 </Civ4GameText>

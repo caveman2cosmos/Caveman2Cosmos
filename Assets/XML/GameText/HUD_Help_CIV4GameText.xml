@@ -4,7 +4,7 @@
 		<Tag>TXT_KEY_HUD_BUTTON_ADVISOR_CIVICS</Tag>
 		<English>Civics Advisor</English>
 		<French>Conseiller des Doctrines</French>
-    <Italian>Consigliere di governo</Italian>
+		<Italian>Consigliere di governo</Italian>
 		<German>Gesellschaft</German>
 		<Russian>Парадигмы</Russian>
 	</TEXT>
@@ -12,14 +12,14 @@
 		<Tag>TXT_KEY_HUD_BUTTON_ADVISOR_CORPORATE</Tag>
 		<English>Corporate Advisor</English>
 		<French>Conseiller des Corporations</French>
-    <Italian>Consigliere delle corporazioni</Italian>
+		<Italian>Consigliere delle corporazioni</Italian>
 		<German>Kapitalgesellschaften</German>
 		<Russian>Корпорации</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HUD_BUTTON_ADVISOR_DOMESTIC</Tag>
 		<English>Domestic Advisor</English>
-    <Italian>Consigliere interno</Italian>
+		<Italian>Consigliere interno</Italian>
 		<French>Conseiller Interne</French>
 		<German>Inland</German>
 		<Russian>Главный советник</Russian>
@@ -27,7 +27,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HUD_BUTTON_ADVISOR_FINANCE</Tag>
 		<English>Finance Advisor</English>
-    <Italian>Consigliere finanziario</Italian>
+		<Italian>Consigliere finanziario</Italian>
 		<French>Conseiller Financier</French>
 		<German>Finanzen</German>
 		<Russian>Советник по финансам</Russian>
@@ -35,7 +35,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_HUD_BUTTON_ADVISOR_FOREIGN</Tag>
 		<English>Foreign Advisor</English>
-    <Italian>Consigliere degli affari esteri</Italian>
+		<Italian>Consigliere degli affari esteri</Italian>
 		<French>Conseiller des Affaires Etrangères</French>
 		<German>Ausland</German>
 		<Russian>Советник МИД</Russian>
@@ -44,7 +44,7 @@
 		<Tag>TXT_KEY_HUD_BUTTON_ADVISOR_INTELLIGENCE</Tag>
 		<English>Intelligence Advisor</English>
 		<French>Conseiller d'Espionnage</French>
-    <Italian>Consigliere dello spionaggio</Italian>
+		<Italian>Consigliere dello spionaggio</Italian>
 		<German>Geheimdienst</German>
 		<Russian>Советник по шпионажу</Russian>
 	</TEXT>
@@ -52,7 +52,7 @@
 		<Tag>TXT_KEY_HUD_BUTTON_ADVISOR_MILITARY</Tag>
 		<English>Military Advisor</English>
 		<French>Conseiller Militaire</French>
-    <Italian>Consigliere militare</Italian>
+		<Italian>Consigliere militare</Italian>
 		<German>Militär</German>
 		<Russian>Военный советник</Russian>
 	</TEXT>
@@ -60,7 +60,7 @@
 		<Tag>TXT_KEY_HUD_BUTTON_ADVISOR_PARTISAN</Tag>
 		<English>Partisan Advisor</English>
 		<French>Conseiller des Partis</French>
-    <Italian>Consigliere di partito</Italian>
+		<Italian>Consigliere di partito</Italian>
 		<German>Revolutionen</German>
 		<Russian>Революции</Russian>
 	</TEXT>
@@ -68,14 +68,14 @@
 		<Tag>TXT_KEY_HUD_BUTTON_ADVISOR_RELIGIOUS</Tag>
 		<English>Religious Advisor</English>
 		<French>Conseiller Religieux</French>
-    <Italian>Consigliere religioso</Italian>
+		<Italian>Consigliere religioso</Italian>
 		<German>Glaube</German>
 		<Russian>Советник по религиям</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HUD_BUTTON_ADVISOR_TECHNOLOGY</Tag>
 		<English>Technology Advisor</English>
-    <Italian>Consigliere tecnologico</Italian>
+		<Italian>Consigliere tecnologico</Italian>
 		<French>Conseiller Technologique</French>
 		<German>Technologien</German>
 		<Russian>Научный советник</Russian>
@@ -83,11 +83,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_HUD_BUTTON_TOGGLE_BARE_MAP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Toggle bare map [COLOR_GREEN_LIGHT]&lt;Ctrl+B&gt;[COLOR_REVERT][NEWLINE]Makes it easier to see the landscape.</English>
-    <Italian>[COLOR_HIGHLIGHT_TEXT]Attiva/disattiva mappa nuda [COLOR_GREEN_LIGHT]&lt;Ctrl+B&gt;[COLOR_REVERT][NEWLINE]Rende più semplice vedere le caratteristiche del terreno.</Italian>
+		<Italian>[COLOR_HIGHLIGHT_TEXT]Attiva/disattiva mappa nuda [COLOR_GREEN_LIGHT]&lt;Ctrl+B&gt;[COLOR_REVERT][NEWLINE]Rende più semplice vedere le caratteristiche del terreno.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HUD_BUTTON_TOGGLE_SCORE</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Toggle score list[COLOR_REVERT][NEWLINE]Click your own list entry to minimize score list.</English>
-    <Italian>[COLOR_HIGHLIGHT_TEXT]Attiva/disattiva l'elenco dei punteggi[COLOR_REVERT][NEWLINE]Fai clic sulla tua voce nell'elenco per ridurlo a icona.</Italian>
+		<Italian>[COLOR_HIGHLIGHT_TEXT]Attiva/disattiva l'elenco dei punteggi[COLOR_REVERT][NEWLINE]Fai clic sulla tua voce nell'elenco per ridurlo a icona.</Italian>
 	</TEXT>
 </Civ4GameText>

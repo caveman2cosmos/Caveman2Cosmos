@@ -18,7 +18,7 @@
 		<English>[ICON_BULLET]%D1_Modifier%% modifier to worker speeds when they [LINK=%s2_Build]%s3_Build[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Modifier%% modif. du temps de construction lors de %s2_Build</French>
 		<German>[ICON_BULLET]%D1_Modifier%% Arbeitsgeschwindigkeit bei [LINK=%s2_Build]%s3_Build[\LINK]</German>
-    <Italian>[ICON_BULLET]Velocità dei lavoratori %D1_Modifier%% nella costruzione di:[NEWLINE][TAB]%s2_Build</Italian><!--Aerial CT trait in the pedia appear with SPEED_MODIFIER_ADDITIONAL-->
+		<Italian>[ICON_BULLET]Velocità dei lavoratori %D1_Modifier%% nella costruzione di:[NEWLINE][TAB]%s2_Build</Italian><!--Aerial CT trait in the pedia appear with SPEED_MODIFIER_ADDITIONAL-->
 		<Polish>[ICON_BULLET]%D1_Modifier%% modyfikator szybkości Robotnika przy budowie %s2_Build</Polish>
 		<Russian>[ICON_BULLET]%D1_Modifier%% к скорости рабочим при возведении [LINK=%s2_Build]%s3_Build[\LINK]</Russian>
 	</TEXT>

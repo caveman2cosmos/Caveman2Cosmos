@@ -14,7 +14,7 @@
 		<Tag>TXT_KEY_IMPROVEMENTHELP_BONUS_CHANGE</Tag>
 		<English>[ICON_BULLET]When added to a plot, this improvement also adds a source of [COLOR_WARNING_TEXT]%s1_Bonus_Name[COLOR_REVERT] (if the resource is valid).</English>
 		<French>[ICON_BULLET]Lorsqu'installé sur une case, cet aménagement ajoute une source de [COLOR_WARNING_TEXT]%s1_Bonus_Name[COLOR_REVERT] (Si la ressource est valide).</French>
-    <Italian>[ICON_BULLET]Quando aggiunto a una casella, questo miglioramento aggiunge anche una fonte di [COLOR_WARNING_TEXT]%s1_Bonus_Name[COLOR_REVERT] (se la risorsa è valida).</Italian>
+		<Italian>[ICON_BULLET]Quando aggiunto a una casella, questo miglioramento aggiunge anche una fonte di [COLOR_WARNING_TEXT]%s1_Bonus_Name[COLOR_REVERT] (se la risorsa è valida).</Italian>
 		<Polish>[ICON_BULLET]Kiedy dodana do pola, ta infrastruktura zmienia także cechę terenu na [COLOR_WARNING_TEXT]%s1_Feature_Name[COLOR_REVERT] (jeśli cecha jest prawidłowa).</Polish>
 		<Russian>[ICON_BULLET]Ïðè äîáàâëåíèè íà ó÷àñòîê, äàííîå óëó÷øåíèå ñîçäàåò èñòî÷íèê [COLOR_WARNING_TEXT]%s1_Bonus_Name[COLOR_REVERT] (åñëè ðåñóðñ ÿâëÿåòñÿ äîñòóïíûì).</Russian>
 	</TEXT>
@@ -22,7 +22,7 @@
 		<Tag>TXT_KEY_IMPROVEMENTHELP_CHANGE_REMOVE</Tag>
 		<English>[ICON_BULLET]When added to a plot, this improvement immediately removes itself from the plot. (Useful for placing features and bonuses with upgrades, builds and razing.)</English>
 		<French>[ICON_BULLET]Lorsque construit sur une case, cet aménagement est enlevé (utile pour placer des fonctionnalités avec améliorations, constructions et destructions.)</French>
-    <Italian>[ICON_BULLET]Quando viene aggiunto a una casella, questo miglioramento rimuove immediatamente la risorsa dalla casella. (Utile per posizionare caratteristiche e bonus migiorati dopo aver distrutto i precedenti).</Italian>
+		<Italian>[ICON_BULLET]Quando viene aggiunto a una casella, questo miglioramento rimuove immediatamente la risorsa dalla casella. (Utile per posizionare caratteristiche e bonus migiorati dopo aver distrutto i precedenti).</Italian>
 		<Polish>[ICON_BULLET]Kiedy zostanie dodane do pola, to ulepszenie automatycznie usunie się z pola (użyteczne to umieszczania surowców i cech terenu z ulepszeniami).</Polish>
 		<Russian>[ICON_BULLET]После окончания строительства это улучшение немедленно удаляется с участка. (Полезно для размещения улучшений и построек, а также при их сносе.)</Russian>
 	</TEXT>
@@ -39,7 +39,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENTHELP_FEATURE_CHANGE</Tag>
 		<English>[ICON_BULLET]When added to a plot, this improvement also changes the feature on the plot to [COLOR_WARNING_TEXT]%s1_Feature_Name[COLOR_REVERT] (if feature is valid).</English>
-    <Italian>[ICON_BULLET]Quando viene aggiunto a una casella, questo miglioramento cambia anche la risorsa della casella in [COLOR_WARNING_TEXT]%s1_Feature_Name[COLOR_REVERT] (se la risorsa è valida).</Italian>
+		<Italian>[ICON_BULLET]Quando viene aggiunto a una casella, questo miglioramento cambia anche la risorsa della casella in [COLOR_WARNING_TEXT]%s1_Feature_Name[COLOR_REVERT] (se la risorsa è valida).</Italian>
      <Polish>[ICON_BULLET]Kiedy dodana do pola, ta infrastruktura zmienia także cechę terenu na [COLOR_WARNING_TEXT]%s1_Feature_Name[COLOR_REVERT] (jeśli cecha jest prawidłowa).</Polish>
 		<Russian>[ICON_BULLET]Ïðè äîáàâëåíèè íà ó÷àñòîê, äàííîå óëó÷øåíèå èçìåíÿåò îñîáåííîñòè ýòîé êëåòêè äî [COLOR_WARNING_TEXT]%s1_Feature_Name[COLOR_REVERT] (åñëè îñîáåííîñòü ÿâëÿåòñÿ äîñòóïíîé).</Russian>
 	</TEXT>
@@ -56,14 +56,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENTHELP_GLOBAL</Tag>
 		<English>[ICON_BULLET]May only be placed once in a game.</English>
-    <Italian>[ICON_BULLET]Può essere posizionato una sola volta per partita.</Italian>
+		<Italian>[ICON_BULLET]Può essere posizionato una sola volta per partita.</Italian>
 		<Russian>[ICON_BULLET]Может быть размещен только единожды за всю игру.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENTHELP_IS_CAN_MOVE_SEA_UNITS</Tag>
 		<English>[ICON_BULLET]Allows Naval Units on the plot</English>
 		<French>[ICON_BULLET]Autorise les unités navales sur la case</French>
-    <Italian>[ICON_BULLET]Consente alle unità navali di entrare nella casella</Italian>
+		<Italian>[ICON_BULLET]Consente alle unità navali di entrare nella casella</Italian>
 		<Polish>[ICON_BULLET]Pozwala okrętom poruszać się po tym terenie</Polish>
 		<Russian>[ICON_BULLET]Позволяет кораблям и судам находиться на данной клетке</Russian>
 	</TEXT>
@@ -71,7 +71,7 @@
 		<Tag>TXT_KEY_IMPROVEMENTHELP_IS_UNIVERSAL_BONUS_PROVIDER</Tag>
 		<English>[ICON_BULLET]Provides any tradable resource from the plot on which it is built</English>
 		<Spanish>[ICON_BULLET]Proporciona cualquier recurso intercambiable situado en la casilla donde se construya</Spanish>
-    <Italian>[ICON_BULLET]Fornisce qualsiasi risorsa commerciabile dalla casella su cui è costruito</Italian>
+		<Italian>[ICON_BULLET]Fornisce qualsiasi risorsa commerciabile dalla casella su cui è costruito</Italian>
 		<Polish>[ICON_BULLET]Dostarcza wszelkich surowców z pola na jakim został wybudowany.</Polish>
 		<Russian>[ICON_BULLET]Îáåñïå÷èâàåò ëþáîé òîðãóåìûé ðåñóðñ îò ó÷àñòêà, íà êîòîðîì îí ïîñòðîåí</Russian>
 	</TEXT>
@@ -80,14 +80,14 @@
 		<English>[ICON_BULLET]Provides a zone of control</English>
 		<French>[ICON_BULLET]Procure une zone de contrôle</French>
 		<Spanish>[ICON_BULLET]Proporciona una zona de control</Spanish>
-    <Italian>[ICON_BULLET]Fornisce una zona di controllo</Italian>
+		<Italian>[ICON_BULLET]Fornisce una zona di controllo</Italian>
 		<Polish>[ICON_BULLET]Wprowadza strefę kontroli</Polish>
 		<Russian>[ICON_BULLET]Èìååò çîíó êîíòðîëÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENTHELP_NATIONAL</Tag>
 		<English>[ICON_BULLET]May only be placed once by a given player.</English>
-    <Italian>[ICON_BULLET]Può essere posizionato solo una volta da un determinato giocatore.</Italian>
+		<Italian>[ICON_BULLET]Può essere posizionato solo una volta da un determinato giocatore.</Italian>
 		<Russian>[ICON_BULLET]Может быть размещен игроком только один раз.</Russian>
 	</TEXT>
 	<TEXT>
@@ -120,12 +120,12 @@
 		<Tag>TXT_KEY_IMPROVEMENTHELP_REQUIRES_PEAK</Tag>
 		<English>[ICON_BULLET]Requires peak</English>
 		<French>[ICON_BULLET]Requiert Montagnes</French>
-    <Italian>[ICON_BULLET]Richiede un picco</Italian>
+		<Italian>[ICON_BULLET]Richiede un picco</Italian>
 		<Russian>[ICON_BULLET]Требуется: Горная вершина</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENTHELP_SEE_FROM</Tag>
-    <English>[ICON_BULLET]%D1_Change Vision Height</English>
+		<English>[ICON_BULLET]%D1_Change Vision Height</English>
 		<French>[ICON_BULLET]%D1_Change en Hauteur de Visibilité</French>
 		<Italian>[ICON_BULLET]%D1_Change di altezza della visibilità</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change a la altura de la visibilidad</Spanish>
@@ -145,14 +145,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_BLOCKED</Tag>
 		<English>[COLOR_YELLOW] No upgrade available[COLOR_REVERT]</English>
-    <Italian> ([COLOR_YELLOW]nessun miglioramento disponibile[COLOR_REVERT])</Italian>
+		<Italian> ([COLOR_YELLOW]nessun miglioramento disponibile[COLOR_REVERT])</Italian>
 		<Russian>[COLOR_YELLOW] Нет доступных обновлений[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_DESTROYS_FEATURE</Tag>
 		<English>[COLOR_WARNING_TEXT]Will Destroy the %s1_Feature giving %D2_Amount production to %s3_CityName this round.[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Détruit %s1_Feature, donnant %D2_Amount production à %s3_CityName pour ce tour.[COLOR_REVERT]</French>
-    <Italian>[COLOR_WARNING_TEXT]Distruggerà %s1_Feature dando %D2_Amount di produzione a %s3_CityName in questo round.[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_WARNING_TEXT]Distruggerà %s1_Feature dando %D2_Amount di produzione a %s3_CityName in questo round.[COLOR_REVERT]</Italian>
 		<Polish>[COLOR_WARNING_TEXT]Zostanie zniszczone %s1_Feature przekazując %D2_Amount produkcji do %s3_CityName w tej turze.[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_WARNING_TEXT]Уничтожит %s1_Feature дав городу %s3_CityName %D2_Amount молотков на этом ходу.[COLOR_REVERT]</Russian>
 	</TEXT>
@@ -160,25 +160,25 @@
 		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_FROZEN</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT] Improvement upgrade frozen.[NEWLINE]Unfreeze by toggling city work here.[COLOR_REVERT]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT] Un Aménagement n'a pu être amélioré.[NEWLINE]Il est possible de tenter à nouveau en répétant l'opération.[COLOR_REVERT]</French>
-    <Italian>[COLOR_HIGHLIGHT_TEXT] Miglioramento bloccato.[NEWLINE]Sbloccalo attivando o disattivando il lavoro in città.[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_HIGHLIGHT_TEXT] Miglioramento bloccato.[NEWLINE]Sbloccalo attivando o disattivando il lavoro in città.[COLOR_REVERT]</Italian>
 		<Russian>[COLOR_HIGHLIGHT_TEXT]Улучшение объекта недоступно. Для снятия блокировки улучшения сделайте данную клетку нерабочей в окне города.[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_NEED_GARRISON</Tag>
 		<English>[SPACE]([COLOR_WARNING_TEXT]Need Garrison[COLOR_REVERT])</English>
-    <Italian>[SPACE][COLOR_WARNING_TEXT]Necessaria una guarnigione[COLOR_REVERT])</Italian>
+		<Italian>[SPACE][COLOR_WARNING_TEXT]Necessaria una guarnigione[COLOR_REVERT])</Italian>
 		<Russian>[SPACE]([COLOR_WARNING_TEXT]Нужен гарнизон[COLOR_REVERT])</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_NEED_WORK</Tag>
 		<English>[SPACE]([COLOR_WARNING_TEXT]Need Work[COLOR_REVERT])</English>
-    <Italian>[SPACE]([COLOR_WARNING_TEXT]Necessita di lavoro per il milgioramento[COLOR_REVERT])</Italian>
+		<Italian>[SPACE]([COLOR_WARNING_TEXT]Necessita di lavoro per il milgioramento[COLOR_REVERT])</Italian>
 		<Russian>[SPACE]([COLOR_WARNING_TEXT]Клетка должна обрабатываться[COLOR_REVERT])</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_NO</Tag>
 		<English>Bother me another time!</English>
-    <Italian>Nessun miglioramento disponibile</Italian>
+		<Italian>Nessun miglioramento disponibile</Italian>
 		<French>Pas d'amélioration possible (pas de tentative d'amélioration)</French>
 		<Polish>Nie ulepszaj (system nie będzie pytał się o to ponownie)</Polish>
 		<Russian>Не улучшать (не будут в дальнейшем попытки автоматического обновления.)</Russian>
@@ -187,7 +187,7 @@
 		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_OPTIONS</Tag>
 		<English>Your Improvement may upgrade. What upgrade would you like it to become?</English>
 		<French>Votre Aménagement peut être améliorée. Laquelle voulez-vous choisir?</French>
-    <Italian>Il tuo miglioramento può essere aggiornato. Quale miglioramento vorresti che diventasse?</Italian>
+		<Italian>Il tuo miglioramento può essere aggiornato. Quale miglioramento vorresti che diventasse?</Italian>
 		<Polish>Infrastruktura terenu może być ulepszona. Jakie ulepszenie pragniesz wybrać?</Polish>
 		<Russian>Ваше улучшение можно усовершенствовать. Какое обновление вы выберете?</Russian>
 	</TEXT>
@@ -202,12 +202,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_RATE_MODIFIER_ADDITIONAL</Tag>
 		<English>, [LINK=%s1_Improvement]%s2_Improvement[\LINK]</English>
-    <Italian>, [LINK=%s1_Improvement]%s2_Improvement[\LINK]PROVA20</Italian>
+		<Italian>, [LINK=%s1_Improvement]%s2_Improvement[\LINK]PROVA20</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_RATE_MODIFIER_END</Tag>
 		<English>Improvements</English>
-    <Italian> </Italian>
+		<Italian> </Italian>
 		<German>[COLOR_TECH_TEXT][COLOR_REVERT]</German>
 		<Russian> улучшения</Russian>
 	</TEXT>
@@ -223,7 +223,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_RETAINS_FEATURE</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Will Safely Retain the %s1_Feature on this plot.[COLOR_REVERT]</English>
-    <Italian>[COLOR_HIGHLIGHT_TEXT]%s1_Feature resterà su questa casella.[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_HIGHLIGHT_TEXT]%s1_Feature resterà su questa casella.[COLOR_REVERT]</Italian>
 		<French>[COLOR_HIGHLIGHT_TEXT]maintient en place %s1_Feature sur cette case.[COLOR_REVERT]</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]%s1_Feature bezpiecznie pozostanie na tym polu.[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_HIGHLIGHT_TEXT]Сохраняет %s1_Feature на этой клетке.[COLOR_REVERT]</Russian>
@@ -232,11 +232,11 @@
 		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_TURNS</Tag>
 		<English>[SPACE](Upgrade: %d1_Num [NUM1:Turn:Turns]</English>
 		<Russian>[SPACE](Улучшение: %d1_Num [NUM1:ход:ходов]</Russian>
-    <Italian>[SPACE] Miglioramento: %d1_Num [NUM1:turno:turni]</Italian>
+		<Italian>[SPACE] Miglioramento: %d1_Num [NUM1:turno:turni]</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENTHELP_VISIBILITY_RANGE</Tag>
-    <English>[ICON_BULLET]%D1_Change Vision Range</English>
+		<English>[ICON_BULLET]%D1_Change Vision Range</English>
 		<French>[ICON_BULLET]Champ de vision %D1_Change</French>
 		<German>[ICON_BULLET]%D1_Change Sichtweite</German>
 		<Italian>[ICON_BULLET]%D1_Change di aumento del raggio di visibilità</Italian>
@@ -363,7 +363,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-    <Italian>Segnalatore sui coralli</Italian>
+		<Italian>Segnalatore sui coralli</Italian>
 		<Spanish>
 			<Text>Baliza</Text>
 			<Gender>Female</Gender>
@@ -443,7 +443,7 @@
 		<English>Colony Habitat (Huge)</English>
 		<French>Colonie Habitations (Immenses)</French>
 		<German>Kolonie Lebensraum (Riesig)</German>
-    <Italian>Colonia con habitat enorme</Italian>
+		<Italian>Colonia con habitat enorme</Italian>
 		<Spanish>
 			<Text>Hábitat colonial enorme</Text>
 			<Gender>Male</Gender>
@@ -457,7 +457,7 @@
 		<English>Colony Habitat (Large)</English>
 		<French>Colonie Habitations (Grandes)</French>
 		<German>Kolonie Lebensraum (Gross)</German>
-    <Italian>Colonia con habitat grande</Italian>
+		<Italian>Colonia con habitat grande</Italian>
 		<Spanish>
 			<Text>Hábitat colonial grande</Text>
 			<Gender>Male</Gender>
@@ -471,7 +471,7 @@
 		<English>Colony Habitat (Medium)</English>
 		<French>Colonie Habitations (Moyennes)</French>
 		<German>Kolonie Lebensraum (Mittel)</German>
-    <Italian>Colonia con habitat medio</Italian>
+		<Italian>Colonia con habitat medio</Italian>
 		<Spanish>
 			<Text>Hábitat colonial mediano</Text>
 			<Gender>Male</Gender>
@@ -550,7 +550,7 @@
 		<Tag>TXT_KEY_IMPROVEMENT_COMMAND_BUNKER</Tag>
 		<English>Command Bunker</English>
 		<French>Bunker de Commandement</French>
-    <Italian>Bunker di comando</Italian>
+		<Italian>Bunker di comando</Italian>
 		<Spanish>
 			<Text>Refugio de mando</Text>
 			<Gender>Female</Gender>
@@ -592,7 +592,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-    <Italian>Miniera profonda</Italian>
+		<Italian>Miniera profonda</Italian>
 		<Spanish>
 			<Text>Mina profunda</Text>
 			<Gender>Female</Gender>
@@ -647,9 +647,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_EARLY_MOUNTAIN_MINE</Tag>
 		<English>Early Mountain Mine</English>
-    <French>Mine de montagne primitive</French>
+		<French>Mine de montagne primitive</French>
 		<Russian>Äðåâíèå êîïè</Russian>
-    <Italian>Miniera montana antica</Italian>
+		<Italian>Miniera montana antica</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_EARLY_MOUNTAIN_MINE_PEDIA</Tag>
@@ -661,7 +661,7 @@
 		<Tag>TXT_KEY_IMPROVEMENT_EARLY_QUARRY</Tag>
 		<English>Early Quarry</English>
 		<French>Carrière antique</French>
-    <Italian>Cava antica</Italian>
+		<Italian>Cava antica</Italian>
 		<Polish>Wczesny Kamieniołom</Polish>
 		<Russian>Ïðèèñê</Russian>
 	</TEXT>
@@ -1040,13 +1040,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_GROW_FOREST</Tag>
 		<English>Grow Forest</English>
-    <Italian>Foresta</Italian>
+		<Italian>Foresta</Italian>
 		<Russian>Роща</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_GROW_FOREST_PEDIA</Tag>
 		<English>Nurse a young forest into a mature one.</English>
-    <Italian>Fai crescere una giovane foresta in una matura.</Italian>
+		<Italian>Fai crescere una giovane foresta in una matura.</Italian>
 		<Russian>Выращивайте молодой лес до зрелого.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1372,8 +1372,8 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-    <Italian>Riserva naturale marina</Italian>
-    <Polish>Rezerwat Morski</Polish>
+		<Italian>Riserva naturale marina</Italian>
+		<Polish>Rezerwat Morski</Polish>
 		<Russian>Ìîðñêîé çàïîâåäíèê</Russian>
 	</TEXT>
 	<TEXT>
@@ -1435,7 +1435,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</Spanish>
-    <Italian>Statua Moai</Italian>
+		<Italian>Statua Moai</Italian>
 		<Russian>Ìîàè</Russian>
 	</TEXT>
 	<TEXT>
@@ -1567,7 +1567,7 @@
 		<Tag>TXT_KEY_IMPROVEMENT_NOMADIC_HERD_PEDIA</Tag>
 		<English>[COLOR_BUILDING_TEXT]Nomadic Herds[COLOR_REVERT] are more than just scavenging and hunting of herbavours...</English>
 		<Spanish>Los [COLOR_BUILDING_TEXT]Pastizales nómadas[COLOR_REVERT] son más que zonas de recolección y caza de herbívoros...</Spanish>
-    <Italian>I [COLOR_BUILDING_TEXT]pascoli nomadi[COLOR_REVERT] sono più che semplici zone di raccolta delle erbe aromatiche...</Italian>
+		<Italian>I [COLOR_BUILDING_TEXT]pascoli nomadi[COLOR_REVERT] sono più che semplici zone di raccolta delle erbe aromatiche...</Italian>
 		<Polish>[COLOR_BUILDING_TEXT]Koczownicza Trzoda[COLOR_REVERT] to coś więcej niż polowanie na roślinożerców...</Polish>
 		<Russian>[COLOR_BUILDING_TEXT]Кочевые стада[COLOR_REVERT] - уже более подвинутый способ для пропитания, чем собирательство и охота на дичь...</Russian>
 	</TEXT>
@@ -1659,7 +1659,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-    <Italian>Raccogliotre di torba</Italian>
+		<Italian>Raccogliotre di torba</Italian>
 		<Polish>Chata Zbieracza Torfu</Polish>
 		<Russian>Ñáîð òîðôà</Russian>
 	</TEXT>
@@ -1798,7 +1798,7 @@
 		<Tag>TXT_KEY_IMPROVEMENT_RADIO_TOWER</Tag>
 		<English>Radio Tower</English>
 		<French>Tour Radio</French>
-    <Italian>Torre radio</Italian>
+		<Italian>Torre radio</Italian>
 		<Polish>Wieża Radiowa</Polish>
 		<Russian>Ðàäèîâûøêà</Russian>
 	</TEXT>
@@ -1817,7 +1817,7 @@
 		<Tag>TXT_KEY_IMPROVEMENT_SALT_GATHERER</Tag>
 		<English>Salt Gatherer</English>
 		<French>Récolteur de Sel</French>
-    <Italian>Raccoglitore di sale</Italian>
+		<Italian>Raccoglitore di sale</Italian>
 		<Polish>Zbieracz Soli</Polish>
 		<Russian>Ñîëÿíîé êàðüåð</Russian>
 	</TEXT>
@@ -1878,7 +1878,7 @@
 		<Tag>TXT_KEY_IMPROVEMENT_SEA_MILL</Tag>
 		<English>Sea Mill</English>
 		<French>Moulin à eau</French>
-    <Italian>Pala eolica offshore</Italian>
+		<Italian>Pala eolica offshore</Italian>
 		<Spanish>
 			<Text>Molino marino</Text>
 			<Gender>Male</Gender>
@@ -2100,8 +2100,8 @@
 		<Tag>TXT_KEY_IMPROVEMENT_TAR_GATHERER</Tag>
 		<English>Tar Gatherer</English>
 		<French>Récolteur de goudron</French>
-    <Italian>Raccoglitore di pece</Italian>
-    <Spanish>
+		<Italian>Raccoglitore di pece</Italian>
+		<Spanish>
 			<Text>Recolector de alquitrán</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
@@ -2118,8 +2118,8 @@
 		<Tag>TXT_KEY_IMPROVEMENT_THATCH_CUTTER</Tag>
 		<English>Thatch Cutter</English>
 		<French>Récolteur de Chaume</French>
-    <Italian>Raccoglitore di paglia</Italian>
-    <Spanish>
+		<Italian>Raccoglitore di paglia</Italian>
+		<Spanish>
 			<Text>Recolector de paja</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
@@ -2142,7 +2142,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Gezeitenbaum</German>
-    <Italian>Centrale mareomotrice</Italian>
+		<Italian>Centrale mareomotrice</Italian>
 		<Spanish>
 			<Text>Presa de marea</Text>
 			<Gender>Female</Gender>
@@ -2285,7 +2285,7 @@
 		<English>Wetlands Camp</English>
 		<French>Camp de zones humides</French>
 		<German>Feuchtgebiete Feldlager</German>
-    <Italian>Campo della palude</Italian>
+		<Italian>Campo della palude</Italian>
 		<Spanish>
 			<Text>Campamento de humedal</Text>
 			<Gender>Male</Gender>
@@ -2299,7 +2299,7 @@
 		<English>Wetlands Camp</English>
 		<French>Camp de zones humides</French>
 		<German>Feuchtgebiete Feldlager</German>
-    <Italian>Campo nella zone umide</Italian>
+		<Italian>Campo nella zone umide</Italian>
 		<Spanish>Campamento de humedal</Spanish>
 		<Polish>Obóz na bagnach</Polish>
 	</TEXT>
@@ -2330,7 +2330,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>Walfangschiffe</German>
-    <Italian>Baleniere (navi)</Italian>
+		<Italian>Baleniere (navi)</Italian>
 		<Spanish>
 			<Text>Barco ballenero:Barcos balleneros</Text>
 			<Gender>Male</Gender>
@@ -2487,7 +2487,7 @@
 		<French>Ziggourat</French>
 		<German>Zikkurat</German>
 		<Spanish>Zigurat</Spanish>
-    <Italian>Ziqqurat</Italian>
+		<Italian>Ziqqurat</Italian>
 		<Russian>Çèêêóðàò</Russian>
 	</TEXT>
 </Civ4GameText>

@@ -1005,14 +1005,14 @@
 		<English>composite bowman</English>
 		<French>archer composite</French>
 		<Russian>композитный лучник</Russian>
-    <Italian>arciere composito</Italian>
+		<Italian>arciere composito</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_CRIMINALHOSTILES</Tag>
 		<English>criminal</English>
 		<French>criminel</French>
 		<Russian>преступник</Russian>
-    <Italian>criminale</Italian>
+		<Italian>criminale</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_GATHERER</Tag>
@@ -1022,14 +1022,14 @@
 		<Spanish>un Recolector</Spanish>
 		<Polish>zbiory</Polish>
 		<Russian>собиратель</Russian>
-    <Italian>raccoglitore</Italian>
+		<Italian>raccoglitore</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_HEALER</Tag>
 		<English>healer</English>
 		<French>guérisseur</French>
 		<Russian>лекарь</Russian>
-    <Italian>guaritore</Italian>
+		<Italian>guaritore</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_HEALING</Tag>
@@ -1046,28 +1046,28 @@
 		<English>heavy pikeman</English>
 		<French>Piquier lourd</French>
 		<Russian>тяжелый копейщик</Russian>
-    <Italian>picchiere pesante</Italian>
+		<Italian>picchiere pesante</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_HEAVYSWORDSMAN</Tag>
 		<English>heavy swordsman</English>
 		<French>Epéiste</French>
 		<Russian>тяжелый мечник</Russian>
-    <Italian>spadaccino pesante</Italian>
+		<Italian>spadaccino pesante</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_HUNTER</Tag>
 		<English>hunter</English>
 		<French>chasseur</French>
 		<Russian>охотник</Russian>
-    <Italian>cacciatore</Italian>
+		<Italian>cacciatore</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_INFANTRY</Tag>
 		<English>infantry</English>
 		<French>infanterie</French>
 		<Russian>пехотинец</Russian>
-    <Italian>fanteria</Italian>
+		<Italian>fanteria</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_LITTLEGOLD</Tag>
@@ -1084,14 +1084,14 @@
 		<English>a little research</English>
 		<French>un peu de recherche</French>
 		<Russian>небольшое исследование</Russian>
-    <Italian>ricevuta una piccola quantità di ricerca</Italian>
+		<Italian>ricevuta una piccola quantità di ricerca</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_LONGBOWMAN</Tag>
 		<English>longbowman</English>
 		<French>archer long</French>
 		<Russian>йомен</Russian>
-    <Italian>arciere cecchino</Italian>
+		<Italian>arciere cecchino</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_LOTSOFGOLD</Tag>
@@ -1108,14 +1108,14 @@
 		<English>lots of research</English>
 		<French>beaucoup de recherche</French>
 		<Russian>много исследований</Russian>
-    <Italian>ricevuta una grossa quantità di ricerca</Italian>
+		<Italian>ricevuta una grossa quantità di ricerca</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_MACEMAN</Tag>
 		<English>maceman</English>
 		<French>guerrier avec masse</French>
 		<Russian>булавоносец</Russian>
-    <Italian>guerriero con mazza</Italian>
+		<Italian>guerriero con mazza</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_MAP</Tag>
@@ -1132,21 +1132,21 @@
 		<English>assault mech</English>
 		<French>mech d'assaut</French>
 		<Russian>штурмовой механоид</Russian>
-    <Italian>mech d'assalto</Italian>
+		<Italian>mech d'assalto</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_NAVALSTRONGHOSTILES</Tag>
 		<English>naval strong hostiles</English>
 		<French>beaucoup de navires hostiles</French>
 		<Russian>сильный вражеский флот</Russian>
-    <Italian>forti unità navali ostili</Italian>
+		<Italian>forti unità navali ostili</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_NAVALWEAKHOSTILES</Tag>
 		<English>naval weak hostiles</English>
 		<French>navires hostiles</French>
 		<Russian>слабый вражеский флот</Russian>
-    <Italian>deboli unità navali ostili</Italian>
+		<Italian>deboli unità navali ostili</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_NOTHING</Tag>
@@ -1163,14 +1163,14 @@
 		<English>pikeman</English>
 		<French>piquier</French>
 		<Russian>копейщик</Russian>
-    <Italian>picchiere</Italian>
+		<Italian>picchiere</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_RIFLEMAN</Tag>
 		<English>rifleman</English>
 		<French>fusilier</French>
 		<Russian>стрелок</Russian>
-    <Italian>fuciliere</Italian>
+		<Italian>fuciliere</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_SCOUT</Tag>
@@ -1197,14 +1197,14 @@
 		<English>spearman</English>
 		<French>Lancier</French>
 		<Russian>копьеносец</Russian>
-    <Italian>lanciere</Italian>
+		<Italian>lanciere</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_STONEAXEMAN</Tag>
 		<English>stone axeman</English>
 		<French>guerrier avec hache de pierre</French>
 		<Russian>древний секироносец</Russian>
-    <Italian>Guerriero con ascia di pietra</Italian>
+		<Italian>Guerriero con ascia di pietra</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_STONESPEARMAN</Tag>
@@ -1218,7 +1218,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_STONETHROWER</Tag>
 		<English>stone thrower</English>
-    <Italian>lanciatore di pietre</Italian>
+		<Italian>lanciatore di pietre</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_STRONGHOSTILES</Tag>
@@ -1235,7 +1235,7 @@
 		<English>swordsman</English>
 		<French>guerrier avec épée</French>
 		<Russian>мечник</Russian>
-    <Italian>spadaccino</Italian>
+		<Italian>spadaccino</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_TECH</Tag>
@@ -1252,7 +1252,7 @@
 		<English>tesla infantry</English>
 		<French>infanterie tesla</French>
 		<Russian>пехота Тесла</Russian>
-    <Italian>fanteria tesla</Italian>
+		<Italian>fanteria tesla</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_TRIBE</Tag>
@@ -1261,7 +1261,7 @@
 		<Spanish>una Tribu</Spanish>
 		<Polish>plemię</Polish>
 		<Russian>племя</Russian>
-    <Italian>tribù</Italian>
+		<Italian>tribù</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_WARRIOR</Tag>
