@@ -3970,33 +3970,32 @@ Penalties:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_NOMADIC2_PEDIA</Tag>
-		<English>
-      Positive Trait
-      "Keep moving! Whether we are the cheetah or the gazelle, we run to survive. You can take whatever you want as long as you are faster than your opponent. Speed is key."
-      Your leader's wanderlust has driven its way into every corner of society, making your people highly mobile and thriving when they can stay on the move, but suffering when they must settle. They are more in touch with the land and seasons and love tending to herds and hunting for food.
-      Primary Benefits:
-      [ICON_BULLET]Free Nomadic II Promotion for Explorers, Animals, Mounted, Trade, and Wheeled units. Gives enhanced withdrawal and vision range.
-      [ICON_BULLET]All cities benefit from a higher Maximum cap on trade routes.
-      Side Benefits:
-      [ICON_BULLET]Herding and hunting based buildings are faster to build.
-      [ICON_BULLET]Camps, herding and hunting improvements are more valuable.
-      [ICON_BULLET]Animal qualifying improvements are much faster to upgrade if they can.
-      [ICON_BULLET]Animal qualifying improvements are faster for workers to build.
-      [ICON_BULLET]Great Hunter Specialists gain an additional Production yield.
-      [ICON_BULLET]Great Hunter Specialists gain two additional Espionage.
-      [ICON_BULLET]Techs that lead to Animal related or Speed related benefits are faster to discover.
-      [ICON_BULLET]Explorer, Animal, Mounted and Wheeled units gain extra experience points when trained.
-      [ICON_BULLET]Explorer, Animal, Mounted and Wheeled units are significantly faster to train.
-      [ICON_BULLET]Significantly less Distance to Capital upkeep. The speed at which your people travel reduces shipping costs.
-      [ICON_BULLET]All cities gain an additional trade route thanks to the speed and efficiency with which your people make trade journeys.
-      [ICON_BULLET]Great Hunters are birthed significantly faster.
-      Penalties:
-      [ICON_BULLET]Happiness penalty. It can be a hard life always being on the move and that gets to some at times.
-      [ICON_BULLET]Plots that produce 5 Food or more generate one less. There's not as much concentrated focus on perfecting obtaining benefit from a given territory in less sedentary people.
-      [ICON_BULLET]Techs that lead to more Sedentary specialized benefits like farming and mining are slower to discover.
-      [ICON_BULLET]Higher Maintenance costs from Number of Cities. The more places there are in your nation, the more the infrastructure between them is of paramount importance to maintain to a high degree.
-      [ICON_BULLET]The largest cities in your nation are less happy. Your people don't like being crowded into high density spaces.
-      [ICON_BULLET]Cities are harder to defend since people are more transient between them and don't place as much priority on local security measures.</English>
+		<English>Positive Trait
+"Keep moving! Whether we are the cheetah or the gazelle, we run to survive. You can take whatever you want as long as you are faster than your opponent. Speed is key."
+Your leader's wanderlust has driven its way into every corner of society, making your people highly mobile and thriving when they can stay on the move, but suffering when they must settle. They are more in touch with the land and seasons and love tending to herds and hunting for food.
+Primary Benefits:
+	[ICON_BULLET]Free Nomadic II Promotion for Explorers, Animals, Mounted, Trade, and Wheeled units. Gives enhanced withdrawal and vision range.
+	[ICON_BULLET]All cities benefit from a higher Maximum cap on trade routes.
+Side Benefits:
+	[ICON_BULLET]Herding and hunting based buildings are faster to build.
+	[ICON_BULLET]Camps, herding and hunting improvements are more valuable.
+	[ICON_BULLET]Animal qualifying improvements are much faster to upgrade if they can.
+	[ICON_BULLET]Animal qualifying improvements are faster for workers to build.
+	[ICON_BULLET]Great Hunter Specialists gain an additional Production yield.
+	[ICON_BULLET]Great Hunter Specialists gain two additional Espionage.
+	[ICON_BULLET]Techs that lead to Animal related or Speed related benefits are faster to discover.
+	[ICON_BULLET]Explorer, Animal, Mounted and Wheeled units gain extra experience points when trained.
+	[ICON_BULLET]Explorer, Animal, Mounted and Wheeled units are significantly faster to train.
+	[ICON_BULLET]Significantly less Distance to Capital upkeep. The speed at which your people travel reduces shipping costs.
+	[ICON_BULLET]All cities gain an additional trade route thanks to the speed and efficiency with which your people make trade journeys.
+	[ICON_BULLET]Great Hunters are birthed significantly faster.
+Penalties:
+	[ICON_BULLET]Happiness penalty. It can be a hard life always being on the move and that gets to some at times.
+	[ICON_BULLET]Plots that produce 5 Food or more generate one less. There's not as much concentrated focus on perfecting obtaining benefit from a given territory in less sedentary people.
+	[ICON_BULLET]Techs that lead to more Sedentary specialized benefits like farming and mining are slower to discover.
+	[ICON_BULLET]Higher Maintenance costs from Number of Cities. The more places there are in your nation, the more the infrastructure between them is of paramount importance to maintain to a high degree.
+	[ICON_BULLET]The largest cities in your nation are less happy. Your people don't like being crowded into high density spaces.
+	[ICON_BULLET]Cities are harder to defend since people are more transient between them and don't place as much priority on local security measures.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_NOMADIC3</Tag>
