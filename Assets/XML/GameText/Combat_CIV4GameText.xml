@@ -1727,9 +1727,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>
-			<Text>Unità arciere</Text>
-		</Italian>
+		<Italian>Unità arciere</Italian>
 		<Spanish>
 			<Text>Unidad con armas de proyectil:Unidades con armas de proyectil</Text>
 			<Gender>Female</Gender>
@@ -2494,9 +2492,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>
-			<Text>Unità mech d'assalto</Text>
-		</Italian>
+		<Italian>Unità mech d'assalto</Italian>
 		<Spanish>
 			<Text>Robot de combate:Robots de combate</Text>
 			<Gender>Female</Gender>
@@ -4340,9 +4336,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>
-			<Text>Unità di cloni</Text>
-		</Italian>
+		<Italian>Unità di cloni</Italian>
 		<Spanish>
 			<Text>Unidad clon:Unidades clon</Text>
 			<Gender>Female</Gender>
@@ -8055,9 +8049,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>
-			<Text>Unità Dreadnought</Text>
-		</Italian>
+		<Italian>Unità Dreadnought</Italian>
 		<Spanish>
 			<Text>Dreadnought:Dreadnought</Text>
 			<Gender>Male</Gender>
@@ -8850,9 +8842,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>
-			<Text>Unità elicottero</Text>
-		</Italian>
+		<Italian>Unità elicottero</Italian>
 		<Spanish>
 			<Text>Unidad de helicópteros:Unidades de helicópteros</Text>
 			<Gender>Female</Gender>
@@ -9468,9 +9458,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>
-			<Text>Unità da combattimento corpo a corpo</Text>
-		</Italian>
+		<Italian>Unità da combattimento corpo a corpo</Italian>
 		<Spanish>
 			<Text>Unidad de cuerpo a cuerpo:Unidades de cuerpo a cuerpo</Text>
 			<Gender>Female</Gender>
@@ -9681,9 +9669,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>
-			<Text>Unità da cavalcatura</Text>
-		</Italian>
+		<Italian>Unità da cavalcatura</Italian>
 		<Spanish>
 			<Text>Unidad montada:Unidades montadas</Text>
 			<Gender>Female</Gender>
