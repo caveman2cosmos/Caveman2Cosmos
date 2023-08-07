@@ -2356,7 +2356,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_TERRITORIAL_VIGILANCE_HELP</Tag>
-		<English>On the first rounds spent building up Observation, the unit gains 1 intensity of [COLOR_HIGHLIGHT_TEXT]Camouflage Vision[COLOR_REVERT]. On the third and fifth rounds, the unit gains 1 additional [COLOR_HIGHLIGHT_TEXT]Camouflage Vision Range[COLOR_REVERT], provided each promotion level is qualified for by the unit.</English>
+		<English>On the first, third and fifth rounds spent building up Territorial Vigilance, the unit gains 1 intensity of [COLOR_HIGHLIGHT_TEXT]Camouflage Vision[COLOR_REVERT] up to a maximum bonus of +3, provided each promotion level is qualified for by the unit.</English>
 		<French>Lors du premier, troisième et cinquième round passé en développement de la spécialisation Surveillance du territoire, L'unité gagne 1 en intensité de [COLOR_HIGHLIGHT_TEXT]détection du Camouflage [COLOR_REVERT] jusqu'à un bonus maximum de +3, reçu pour chaque niveau de promotion obtenu par l'unité.</French>
 		<Italian>[NEWLINE]Aumento di un livello dell'abilità [COLOR_HIGHLIGHT_TEXT]visibilità mimetica[COLOR_REVERT]. Max +3 (necessita delle rispettive promozioni, si attiva al 1°, 3° e 5° turno).</Italian>
 	</TEXT>
@@ -11988,7 +11988,7 @@
 		<Russian>Оперативник III</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_POLICING4_</Tag>
+		<Tag>TXT_KEY_PROMOTION_POLICING4</Tag>
 		<English>Policing IV</English>
 		<French>Maintien de l'ordre IV</French>
 		<German>Überwachung IV</German>
