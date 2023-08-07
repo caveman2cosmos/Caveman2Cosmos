@@ -679,7 +679,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_VISIBILITY</Tag>
-		<English>[ICON_BULLET]%D1_Change Visibility Range</English>
+		<English>[ICON_BULLET]%D1_Change Vision Range</English>
 		<French>[ICON_BULLET]Champ de vision %D1_Change</French>
 		<German>[ICON_BULLET]%D1_Change Sichtweite</German>
 		<Italian>[ICON_BULLET]%D1_Change aumento del raggio di visibilità</Italian>
