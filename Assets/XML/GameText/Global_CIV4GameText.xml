@@ -18541,7 +18541,7 @@
 		<Polish>%s1_Player założył %s2_City w odległym kraju.</Polish>
 		<Russian>%s1_Player îñíîâàë %s2_City íà îòäàëåííîé çåìëå.</Russian>
 	</TEXT>
-  	<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MORECIV4LERTS_CITY_TO_EXPAND_RCS</Tag>
 		<English>[COLOR_MAGENTA]The culture of %s1 is about to reach a new threshold.[COLOR_REVERT]</English>
 		<Italian>[COLOR_MAGENTA]La cultura della città di %s1 sta per raggiungere un nuovo livello.[COLOR_REVERT]</Italian>
@@ -22828,7 +22828,7 @@
 		<Spanish>Clima: %s1</Spanish>
 	</TEXT>
 	<TEXT>
-  	<Tag>TXT_KEY_SETTINGS_DIFFICULTY_GAME</Tag>
+		<Tag>TXT_KEY_SETTINGS_DIFFICULTY_GAME</Tag>
 		<English>Game difficulty: %s1 </English>
 		<French>Jeu difficulté : %s1</French>
 		<German>Spiel schwierigkeit: %s1</German>

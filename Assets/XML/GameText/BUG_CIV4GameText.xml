@@ -3102,15 +3102,6 @@
 		<Russian>Òîëüêî èìåþùèåñÿ ðåëèãèè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__PRODUCTIONDECAYHOVERBUILDINGTHRESHOLD_HOVER</Tag>
-		<English>Select the number of turns before a building will decay at which time the decay information is first displayed.</English>
-		<French>Sélectionne le nombre de tours restants avant la perte d'avance de production, qui va déclencher l'information et l'avertissement pour les bâtiments.</French>
-		<German>Bestimmt die Anzahl der Runden, bevor der Produktionsfortschritt eines produzierten Gebäudes verfällt und ein gelbes Ausrufezeichen angezeigt wird</German>
-		<Italian>Inserisci il numero di turni prima che un Edificio in coda perda la produzione accumulata mancanti i quali verranno visualizzate per la prima volta le informazioni relative.</Italian>
-		<Spanish>Escoge el número de turnos antes de que la producción de un edificio en cola decaiga y se muestre el indicador por primera vez.</Spanish>
-		<Russian>Âûáåðèòå ÷èñëî õîäîâ äî òîãî êàê ñòðîåíèå óñòàðååò ïðè êîòîðîì èíôîðìàöèÿ óñòàðåâàíèÿ âïåðâûå îòîáðàæàåòñÿ.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__PRODUCTIONPOPUPTRAINCIVILIANUNITSFOREVER_HOVER</Tag>
 		<English>When checked, selecting a civilian unit in the Choose Production popup sets the city to train that unit repeatedly.</English>
 		<French>Lorsque activé, les unités civiles placées dans la liste de production vont être produites à répétition sans fin.</French>

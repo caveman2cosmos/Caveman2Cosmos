@@ -92,7 +92,6 @@
 		<French>[COLOR_SELECTED_TEXT]%s1 vous a volé %d2 [ICON_ESPIONAGE]![COLOR_REVERT]</French>
 		<Russian>[COLOR_SELECTED_TEXT]%s1 похитил у вас %d2 [ICON_ESPIONAGE]![COLOR_REVERT]</Russian>
 		<Italian>[COLOR_SELECTED_TEXT]%s1 ha saccheggiato %d2 [ICON_ESPIONAGE] dal tuo impero![COLOR_REVERT]</Italian>
-    
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_SNEAK_YOU</Tag>

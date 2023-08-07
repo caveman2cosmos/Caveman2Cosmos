@@ -40,7 +40,7 @@
 		<Tag>TXT_KEY_IMPROVEMENTHELP_FEATURE_CHANGE</Tag>
 		<English>[ICON_BULLET]When added to a plot, this improvement also changes the feature on the plot to [COLOR_WARNING_TEXT]%s1_Feature_Name[COLOR_REVERT] (if feature is valid).</English>
 		<Italian>[ICON_BULLET]Quando viene aggiunto a una casella, questo miglioramento cambia anche la risorsa della casella in [COLOR_WARNING_TEXT]%s1_Feature_Name[COLOR_REVERT] (se la risorsa è valida).</Italian>
-     <Polish>[ICON_BULLET]Kiedy dodana do pola, ta infrastruktura zmienia także cechę terenu na [COLOR_WARNING_TEXT]%s1_Feature_Name[COLOR_REVERT] (jeśli cecha jest prawidłowa).</Polish>
+		<Polish>[ICON_BULLET]Kiedy dodana do pola, ta infrastruktura zmienia także cechę terenu na [COLOR_WARNING_TEXT]%s1_Feature_Name[COLOR_REVERT] (jeśli cecha jest prawidłowa).</Polish>
 		<Russian>[ICON_BULLET]Ïðè äîáàâëåíèè íà ó÷àñòîê, äàííîå óëó÷øåíèå èçìåíÿåò îñîáåííîñòè ýòîé êëåòêè äî [COLOR_WARNING_TEXT]%s1_Feature_Name[COLOR_REVERT] (åñëè îñîáåííîñòü ÿâëÿåòñÿ äîñòóïíîé).</Russian>
 	</TEXT>
 	<TEXT>
