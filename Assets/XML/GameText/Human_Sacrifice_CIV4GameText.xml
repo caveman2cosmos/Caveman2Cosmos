@@ -8,11 +8,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>
-			<Text>Concezione del mondo - Sacrifici umani attivi</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Sacrifici umani attivi (concezione del mondo)</Italian>
 		<Polish>Swiatopogląd - Ofiary z ludzi aktywne</Polish>
 		<Russian>Æåðòâû</Russian>
 	</TEXT>
@@ -48,11 +44,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>
-			<Text>Concezione del mondo - Sacrifici umani</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Sacrifici umani (concezione del mondo)</Italian>
 		<Polish>Swiatopogląd - Ofiary z ludzi</Polish>
 		<Russian>Æåðòâîïðèíîøåíèÿ</Russian>
 	</TEXT>
@@ -68,7 +60,7 @@
 		<Tag>TXT_KEY_BUILDING_WORLDVIEW_HUMAN_SACRIFICE_PEDIA</Tag>
 		<English>Human Sacrifice...</English>
 		<French>Sacrifice Humain...</French>
-		<Italian>Sacrifici umani...</Italian>
+		<Italian>I sacrifici umani furono praticati a lungo nella preistoria.</Italian>
 		<Polish>Ofiary z ludzi...</Polish>
 		<Russian>×åëîâå÷åñêèå æåðòâîïðèíîøåíèÿ....</Russian>
 	</TEXT>
@@ -83,10 +75,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SACRIFICE_CAPTIVE</Tag>
 		<English>Sacrifice a captive for Culture, Happiness.</English>
+		<Italian>Sacrifica prigioniero per cultura e felicità.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SACRIFICE_CAPTIVE_HELP</Tag>
 		<English>Increases the culture and happiness of the city. Unit is consumed.</English>
+		<Italian>[NEWLINE]Aumenta la cultura e la felicità della città. L'unità è consumata nel processo.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_NO_HUMAN_SACRIFICE</Tag>
@@ -116,7 +110,7 @@
 		<Tag>TXT_KEY_OUTCOME_SACRIFICE_CAPTIVE</Tag>
 		<English>The best results come with the best altars (Altar for Human Sacrifice or the better Sacrificial Alter). Better results occur with the Druid and MesoAmerican religions and their monastery and cathedrals. Some wonders also improve the outcome.</English>
 		<French>Les meilleurs résultats sont obtenus avec les plus importants autels. (Autel pour les Sacrifices humains ou mieux, Autel Sacrificiel)</French>
-		<Italian>I migliori risultati si ottengono con gli altari migliori (Altare per i sacrifici umani, oppure l'Altare sacrificale). Si ottengono migliori risultati se in città sono presenti le Tradizioni druidiche o il Nagualismo, con i relativi edifici religiosi; perfino alcune meraviglie migliorano i risultati.</Italian>
+		<Italian>I migliori risultati si ottengono con gli altari migliori (l'altare per i sacrifici umani oppure l'altare sacrificale). Si ottengono migliori risultati se in città sono presenti le tradizioni druidiche o le religioni mesoamericane, con i relativi edifici religiosi; perfino alcune meraviglie migliorano i risultati.</Italian>
 		<Polish>Najlepsze rezultaty osiąga się z najlepszych Ołarzy (Ołtarzy Ofiar z ludzi lub z Ofiarnych Ołtarzy). Jeszcze lepsze rezultaty osiągają wierzący w Druidyzm lub mezo-amerykańki Nagualizm (jeśli posiadają Katedry i Klasztory tych religii). Niektóre Cudy Swiata mają także wpływ na zyski z Ofiar.</Polish>
 		<Russian>Ëó÷øèå ðåçóëüòàòû ïðèõîäÿò ñ ëó÷øèìè æåðòâåííèêàìè (àëòàðü äëÿ ÷åëîâå÷åñêèõ æåðòâîïðèíîøåíèé èëè, ïðîùå ãîâîðÿ, Æåðòâåííèê). Ëó÷øèå ðåçóëüòàòû ïðîèñõîäÿò ñ Äðóèäèçìîì è Ìåçîàìåðèêàíñêèìè ðåëèãèÿìè è èõ ìîíàñòûðÿìè è ñîáîðàìè. Íåêîòîðûå ×óäåñà òàêæå ìîãóò óëó÷øèòü ðåçóëüòàò.</Russian>
 	</TEXT>
@@ -132,7 +126,7 @@
 		<Tag>TXT_KEY_OUTCOME_SACRIFICE_CAPTIVE_RELIGION</Tag>
 		<English>The best results come with the best altars (Altar for Human Sacrifice or the better Sacrificial Alter). Some wonders also improve the outcome.</English>
 		<French>Les meilleurs résultats sont obtenus avec les plus importants autels. (Autel pour les Sacrifices humains ou mieux, Autel Sacrificiel)</French>
-		<Italian>I migliori risultati si ottengono con gli altari migliori (Altare per i sacrifici umani, oppure l'Altare sacrificale). Si ottengono migliori risultati se in città sono presenti le Tradizioni druidiche o il Nagualismo, con i relativi edifici religiosi; perfino alcune meraviglie migliorano i risultati.</Italian>
+		<Italian>I migliori risultati si ottengono con gli altari migliori (l'altare per i sacrifici umani oppure l'altare sacrificale). Si ottengono migliori risultati se in città sono presenti le tradizioni druidiche o le religioni mesoamericane, con i relativi edifici religiosi; perfino alcune meraviglie migliorano i risultati.</Italian>
 		<Polish>Najlepsze rezultaty osiąga się z najlepszych Ołarzy (Ołtarzy Ofiar z ludzi lub z Ofiarnych Ołtarzy). Niektóre Cudy Swiata mają także wpływ na zyski z Ofiar.</Polish>
 		<Russian>Ëó÷øèå ðåçóëüòàòû ïðèõîäÿò ñ ëó÷øèìè æåðòâåííèêàìè (àëòàðü äëÿ ÷åëîâå÷åñêèõ æåðòâîïðèíîøåíèé èëè, ïðîùå ãîâîðÿ, Æåðòâåííèê). Íåêîòîðûå ×óäåñà òàêæå ñïîñîáíû óëó÷øèòü ðåçóëüòàò.</Russian>
 	</TEXT>

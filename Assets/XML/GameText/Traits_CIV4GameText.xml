@@ -11,7 +11,7 @@
 		<Tag>TXT_KEY_TRAITHELP_AIR_UNIT_CAPACITY</Tag>
 		<English>[ICON_BULLET]%D1_Amount Air Unit Capacity in all cities.</English>
 		<French>[ICON_BULLET]%D1_Amount de capacité d'accueil d'unité aériennes dans toutes les Villes.</French>
-		<Italian>[ICON_BULLET]%D1_Amount alla capacità aerea in tutte le città.</Italian>
+		<Italian>[ICON_BULLET]Spazio di carico %D1_Amount in tutte le città.</Italian><!--Aerial CT trait in the pedia-->
 		<Polish>[ICON_BULLET]%D1_Amount Ilości możliwych stacjonujących Jednostek Powietrznych we wszystkich miastach.</Polish>
 		<Russian>[ICON_BULLET]%D1_Amount воздушных отрядов во всех городах.</Russian>
 	</TEXT>
@@ -38,7 +38,7 @@
 		<English>[ICON_BULLET]%D1_Mod%% Damage to Defenses and Units from Bombardment and Ranged Assault in all cities</English>
 		<French>[ICON_BULLET]%D1_Mod%% de Protection des Bombardements dans toutes les villes</French>
 		<German>[ICON_BULLET]%D1_Mod%% Schaden an der Verteidigung durch Bombardierung in all cities</German>
-		<Italian>[ICON_BULLET]%D1_Mod%% di danni dal bombardamento in tutte le tue città</Italian>
+		<Italian>[ICON_BULLET]Danni da bombardamento in tutte le tue città %D1_Mod%%</Italian><!--Aerial CT trait in the pedia-->
 		<Polish>[ICON_BULLET]%D1_Mod%% Obrażeń do Obrony przed Bombardowaniem we wszystkich Miastach</Polish>
 		<Russian>[ICON_BULLET]%D1_Mod%% ущерба защитным сооружениям и отрядам от обстрела и дальнего боя во всех городах</Russian>
 	</TEXT>
@@ -46,16 +46,19 @@
 		<Tag>TXT_KEY_TRAITHELP_BONUS_HAPPINESS_CHANGE_ADDITIONAL</Tag>
 		<English>, [LINK=%s1_Bonus]%s2_Bonus[\LINK]</English>
 		<French>, [LINK=%s1_Bonus]%s2_Bonus[\LINK]</French>
+		<Italian>, [LINK=%s1_Bonus]%s2_Bonus[\LINK]</Italian><!--Aerial CT trait in the pedia, appears with  _CHANGE_END and CHANGE_FIRST-->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_BONUS_HAPPINESS_CHANGE_END</Tag>
 		<English>Resources</English>
+		<Italian> </Italian><!--Aerial CT trait in the pedia, appears with  _CHANGE_ADDITIONA and CHANGE_FIRST-->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_BONUS_HAPPINESS_CHANGE_FIRST</Tag>
 		<English>[ICON_BULLET]%D1_Change%F2_HappyOrHealth from access to [LINK=%s3_Bonus]%s4_Bonus[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Change%F2_HappyOrHealth de l'accès aux Ressources : [LINK=%s3_Bonus]%s4_Bonus[\LINK]</French>
 		<Russian>[ICON_BULLET]%D1_Change%F2_HappyOrHealth от доступа к [LINK=%s3_Bonus]%s4_Bonus[\LINK]</Russian>
+		<Italian>[ICON_BULLET]Felicità %D1_Change %F2_HappyOrHealth per l'accesso alle risorse: [LINK=%s3_Bonus]%s4_Bonus[\LINK]</Italian><!--Aerial CT trait in the pedia, appears with  _CHANGE_ADDITIONA and CHANGE_END-->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_BUILDING_HAPPINESS</Tag>
@@ -114,7 +117,7 @@
 		<English>[ICON_BULLET]%D1%% Civic Upkeep</English>
 		<French>[ICON_BULLET]%D1%% d'entretien doctrinal</French>
 		<German>[ICON_BULLET]%D1%% Unterhalt für Gesellschaftsform</German>
-		<Italian>[ICON_BULLET]%D1%% costo di mantenimento della civiltà</Italian>
+		<Italian>[ICON_BULLET]Costi di mantenimento della forma di governo %D1%%</Italian><!--Aerial CT trait in the pedia-->
 		<Spanish>[ICON_BULLET]%D1%% al mantenimiento de principios</Spanish>
 		<Polish>[ICON_BULLET]%D1%% do Utrzymania Doktryny</Polish>
 		<Russian>[ICON_BULLET]%D1%% для обслуживания Парадигм</Russian>
@@ -200,7 +203,7 @@
 		<English>[ICON_BULLET]+1%F1_yield on Plots with %d2%F3_yield</English>
 		<French>[ICON_BULLET]+1%F1_yield sur les cases avec: %d2%F3_yield</French>
 		<German>[ICON_BULLET]+1%F1_yield auf Geländefeldern mit %d2%F3_yield</German>
-		<Italian>[ICON_BULLET]+1%F1_yield su caselle con %d2%F3_yield</Italian>
+		<Italian>[ICON_BULLET]Cibo +1 %F1_yield su caselle con almeno %d2 %F3_yield</Italian><!--Alfonso I leader hover description-->
 		<Spanish>[ICON_BULLET]+1 %F1_yield en las casillas con %d2 %F3_yield</Spanish>
 		<Polish>[ICON_BULLET]+1%F1_yield na polach z: %d2%F3_yield</Polish>
 		<Russian>[ICON_BULLET]+1%F1_yield на участках с %d2%F3_yield</Russian>
@@ -209,7 +212,7 @@
 		<Tag>TXT_KEY_TRAITHELP_FLIGHT_RANGE</Tag>
 		<English>[ICON_BULLET]%D1_Amount Flight Operation Range for Air units.</English>
 		<French>[ICON_BULLET]%D1_Amount de portée opérationnelle pour les unités aériennes.</French>
-		<Italian>[ICON_BULLET]%D1_Amount al raggio d'azione per le unità aeree.</Italian>
+		<Italian>[ICON_BULLET]Raggio d'azione per le unità aeree %D1_Amount</Italian><!--Aerial CT trait in the pedia-->
 		<Polish>[ICON_BULLET]%D1_Amount Zasięgu Operacyjnego dla jednostek Powietrznych.</Polish>
 		<Russian>[ICON_BULLET]%D1_Amount дальности полета авиационных отрядов.</Russian>
 	</TEXT>
@@ -219,6 +222,7 @@
 		<French>[ICON_BULLET]Promotion [COLOR_BUILDING_TEXT][LINK=%s1_PromotionType]%s2_PromotionName[\LINK][COLOR_REVERT] gratuite pour[SPACE]</French>
 		<German>[ICON_BULLET]freie Beförderung [COLOR_BUILDING_TEXT][LINK=%s1_PromotionType]%s2_PromotionName[\LINK][COLOR_REVERT] für[SPACE]</German>
 		<Russian>[ICON_BULLET]Бесплатные Квалификации [COLOR_BUILDING_TEXT][LINK=%s1_PromotionType]%s2_PromotionName[\LINK][COLOR_REVERT] для[SPACE]</Russian>
+		<Italian>[ICON_BULLET]Promozione [COLOR_BUILDING_TEXT][LINK=%s1_PromotionType]%s2_PromotionName[\LINK][COLOR_REVERT] gratuita per le unità di tipo:[NEWLINE][TAB]</Italian><!--Aerial CT trait in the pedia-->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_FREE_SPEC_NW</Tag>
@@ -315,7 +319,7 @@
 		<Tag>TXT_KEY_TRAITHELP_MAX_TRADE_ROUTES</Tag>
 		<English>[ICON_BULLET]%D1_Change to Maximum possible Trade Routes ([ICON_TRADE]) per City</English>
 		<French>[ICON_BULLET]%D1_Change de nombre maximum de routes commerciales ([ICON_TRADE]) par ville</French>
-		<Italian>[ICON_BULLET]%D1_Change al numero massimo di rotte commerciali ([ICON_TRADE]) per città</Italian>
+		<Italian>[ICON_BULLET]Numero massimo di rotte commerciali [ICON_TRADE] per città %D1_Change</Italian><!--Aerial CT trait in the pedia-->
 		<Polish>[ICON_BULLET]%D1_Change do maksymalnej ilości Szlaków Handlowych ([ICON_TRADE]) na Miasto</Polish>
 		<Russian>[ICON_BULLET]%D1_Change максимально возможных торговых путей ([ICON_TRADE]) на город</Russian>
 	</TEXT>
@@ -332,7 +336,7 @@
 		<Tag>TXT_KEY_TRAITHELP_MISSILE_CARGO_SPACE</Tag>
 		<English>[ICON_BULLET]%D1_Amount Cargo Space for all Missile Carrying units.</English>
 		<French>[ICON_BULLET]%D1_Amount Espace de chargement pour toutes les unités de transport de missiles.</French>
-		<Italian>[ICON_BULLET]%D1_Amount allo spazio di trasporto per tutte le unità che trasportano missili.</Italian>
+		<Italian>[ICON_BULLET]Spazio di carico %D1_Amounto per tutte le unità di trasporto missili.</Italian><!--Aerial CT trait in the pedia-->
 		<Polish>[ICON_BULLET]%D1_Amount Miejsc dla Rakiet dla jednostek przewożących rakiety.</Polish>
 		<Russian>[ICON_BULLET]%D1_Amount к грузоподъемности для всех ракетоносцев.</Russian>
 	</TEXT>
@@ -341,6 +345,7 @@
 		<English>[ICON_BULLET]%D1_Amount Mission Operation Range for Missile units.</English>
 		<French>[ICON_BULLET]%D1_Amount Portée opérationnelle pour les unités de missiles.</French>
 		<Russian>[ICON_BULLET]%D1_Amount к радиусу действия для всех типов ракет.</Russian>
+		<Italian>[ICON_BULLET]Raggio di azione per le unità missilistiche %D1_Amount</Italian><!--Aerial CT trait in the pedia-->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_NATIONAL_WONDER_PRODUCTION_MODIFIER</Tag>
@@ -428,7 +433,7 @@
 		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Only active when the %s1_Option Game Option is in use[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]actif uniquement lorsque l'option %s1_Option est active[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]nur bei aktivierter Einstellung "%s1_Option" verfügbar[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Attivo solo se l'opzione %s1_Option è attivata[COLOR_REVERT]</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Tratto attivo solo se l'opzione %s1_Option è stata selezionata[COLOR_REVERT]</Italian>
 		<Polish>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Aktywna tylko gdy opcja: %s2_Option jest aktywna[COLOR_REVERT]</Polish>
 		<Russian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Активно только когда используется опция %s1_Option[COLOR_REVERT]</Russian>
 	</TEXT>
@@ -444,7 +449,7 @@
 		<Tag>TXT_KEY_TRAITHELP_PREREQ_BEGIN</Tag>
 		<English>[ICON_BULLET][COLOR_WARNING_TEXT]You currently require %s1_trait[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Il vous faut le trait %s1_trait[COLOR_REVERT]</French>
-		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Richiede %s1_trait[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_WARNING_TEXT][ICON_BULLET]Richiede %s1_trait[COLOR_REVERT]</Italian>
 		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]Wymaga %s1_trait[COLOR_REVERT]</Polish>
 		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Вам в настоящее время требуется %s1_trait[COLOR_REVERT]</Russian>
 	</TEXT>
@@ -461,7 +466,7 @@
 		<English>[NEWLINE][ICON_BULLET]%D1%% Production of[SPACE]</English>
 		<French>[NEWLINE][ICON_BULLET]Production %D1%% plus rapide de:[SPACE]</French>
 		<German>[NEWLINE][ICON_BULLET]%D1%% schnellere Produktion für:[SPACE]</German>
-		<Italian>[NEWLINE][ICON_BULLET]Produzione più veloce del %D1%% per[SPACE]</Italian>
+		<Italian>[NEWLINE][ICON_BULLET]Produzione più veloce del %D1%% per la costruzione di:[NEWLINE][TAB][SPACE]</Italian><!--Aerial CT trait in the pedia-->
 		<Spanish>[NEWLINE][ICON_BULLET]Acelera un %D1%% la producción de[SPACE]</Spanish>
 		<Polish>[NEWLINE][ICON_BULLET]%D1%% Szybszej Produkcji:[SPACE]</Polish>
 		<Russian>[NEWLINE][ICON_BULLET]%D1%% к производству[SPACE]</Russian>
@@ -493,7 +498,7 @@
 		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Требуется знание %s1_TechName[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_TECH_RESEARCH_MODIFIER_ADDITIONAL</Tag>
+		<Tag>TXT_KEY_TRAITHELP_TECH_RESEARCH_MODIFIER_ADDITIONAL</Tag><!--Aerial CT trait in the pedia, appears with RESEARCH_MODIFIER_END and _RESEARCH_MODIFIER_FIRST-->
 		<English>, [LINK=%s1_Tech]%s2_Tech[\LINK]</English>
 		<French>, [LINK=%s1_Tech]%s2_Tech[\LINK]</French>
 	</TEXT>
@@ -501,31 +506,34 @@
 		<Tag>TXT_KEY_TRAITHELP_TECH_RESEARCH_MODIFIER_END</Tag>
 		<English>Technologies</English>
 		<Russian>Технологии</Russian>
+		<Italian> </Italian><!--Aerial CT trait in the pedia, appears with RESEARCH_MODIFIER_ADDITIONAL and _RESEARCH_MODIFIER_FIRST-->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_TECH_RESEARCH_MODIFIER_FIRST</Tag>
 		<English>[ICON_BULLET]Research %D1_Change%% as fast as normal when researching [LINK=%s2_Tech]%s3_Tech[\LINK]</English>
 		<French>[ICON_BULLET]Recherche %D1_Change%% plus vite que la normale lors de la recherche de [LINK=%s2_Tech]%s3_Tech[\LINK]</French>
 		<Russian>[ICON_BULLET]Исследование [LINK=%s2_Tech]%s3_Tech[\LINK] на %D1_Change%% быстрее обычного</Russian>
+		<Italian>[ICON_BULLET]Velocità di ricerca %D1_Change%% ricercando le tecnologie:[NEWLINE][TAB][LINK=%s2_Tech]%s3_Tech[\LINK]</Italian><!--Aerial CT trait in the pedia, appears with RESEARCH_MODIFIER_ADDITIONAL and RESEARCH_MODIFIER_END-->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_TRADE_YIELD_MODIFIERS</Tag>
 		<English>[ICON_BULLET]%D1%% %F2_yield from [ICON_TRADE]</English>
 		<French>[ICON_BULLET]%D1%% %F2_yield avec: [ICON_TRADE]</French>
 		<German>[ICON_BULLET]%D1%% %F2_yield durch [ICON_TRADE]</German>
-		<Italian>[ICON_BULLET]%D1%% %F2_yield da [ICON_TRADE]</Italian>
+		<Italian>[ICON_BULLET]Per il commercio [ICON_TRADE]: %D1%% %F2_yield</Italian><!--Alfonso I leader hover description-->
 		<Spanish>[ICON_BULLET]%D1%% %F2_yield por [ICON_TRADE]</Spanish>
 		<Polish>[ICON_BULLET]%D1%% %F2_yield z: [ICON_TRADE]</Polish>
 		<Russian>[ICON_BULLET]%D1%% %F2_yield от [ICON_TRADE]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_UNIT_COMBAT_FREE_XP_ADDITIONAL</Tag>
+		<Tag>TXT_KEY_TRAITHELP_UNIT_COMBAT_FREE_XP_ADDITIONAL</Tag><!--Aerial CT trait in the pedia appears with FREE_XP_END and XP_FIRST-->
 		<English>, [LINK=%s1_CombatClass]%s2_CombatClass[\LINK]</English>
 		<French>, [LINK=%s1_CombatClass]%s2_CombatClass[\LINK]</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_UNIT_COMBAT_FREE_XP_END</Tag>
+		<Tag>TXT_KEY_TRAITHELP_UNIT_COMBAT_FREE_XP_END</Tag><!--Aerial CT trait in the pedia appears with _XP_ADDITIONAL and XP_FIRST-->
 		<English>Unit Types</English>
+		<Italian> </Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_UNIT_COMBAT_FREE_XP_FIRST</Tag>
@@ -533,21 +541,24 @@
 		<French>[ICON_BULLET]%D1 Expérience à tous les nouvelles unités formées de type : [LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</French>
 		<German>[ICON_BULLET]%D1 Erfahrungspunkte für alle neu ausgebildeten [LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</German>
 		<Russian>[ICON_BULLET]%D1 опыта всем недавно обученным [LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</Russian>
+		<Italian>[ICON_BULLET]Punti esperienza %D1 a tutte le nuove unità di tipo:[NEWLINE] [LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</Italian><!--Aerial CT trait in the pedia appears with _XP_ADDITIONAL and XP_END-->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_UNIT_PRODUCTION_ADDITIONAL</Tag>
-		<English>, [LINK=%s1_CombatClass]%s2_CombatClass[\LINK]</English>
+		<English>, [LINK=%s1_CombatClass]%s2_CombatClass[\LINK]</English><!--Aerial CT trait in the pedia appear with UNIT_PRODUCTION_END and PRODUCTION_FIRST-->
 		<French>, [LINK=%s1_CombatClass]%s2_CombatClass[\LINK]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_UNIT_PRODUCTION_END</Tag>
 		<English>Unit Types</English>
+		<Italian> </Italian><!--Aerial CT trait in the pedia appear with UNIT_PRODUCTION_ADDITIONAL and PRODUCTION_FIRST-->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_UNIT_PRODUCTION_FIRST</Tag>
 		<English>[ICON_BULLET]%D1%% Production speed when training [LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</English>
 		<French>[ICON_BULLET]%D1%% Vitesse de production lors de l'entraînement des unités de type : [LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</French>
 		<German>[ICON_BULLET]%D1%% Ausbildungsgeschwindigkeit von [LINK=%s2_CombatClass]%s3:3_CombatClass[\LINK]</German>
+		<Italian>[ICON_BULLET]Velocità %D1%% per l'allenamento delle unità di tipo:[NEWLINE][LINK=%s2_CombatClass]%s3_CombatClass[\LINK]</Italian><!--Aerial CT trait in the pedia appear with UNIT_PRODUCTION_ADDITIONAL and UNIT_PRODUCTION_END-->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_WONDER_PRODUCTION_MODIFIER</Tag>
@@ -563,7 +574,7 @@
 		<Tag>TXT_KEY_TRAITHELP_WORKER_SPEED_NEGATIVE</Tag>
 		<English>[ICON_BULLET]Workers build improvements with a %D1_Modifier%% speed penalty</English>
 		<French>[ICON_BULLET]Les Ouvriers construisent les aménagements avec un pénalité de %D1_Modifier%%</French>
-		<Italian>[ICON_BULLET]I lavoratori costruiscono i miglioramenti il %D1_Modifier%% più lentamente</Italian>
+		<Italian>[ICON_BULLET]I lavoratori costruiscono i miglioramenti con una velocità modificata del %D1_Modifier%%</Italian><!--Aerial CT trait in the pedia-->
 		<Polish>[ICON_BULLET]Robotnicy budują ulepszenia z prędkością: %D1_Modifier%%</Polish>
 		<Russian>[ICON_BULLET]Рабочие строят улучшения на %D1_Modifier%% медленнее</Russian>
 	</TEXT>
@@ -604,11 +615,7 @@
 			<Plural>0:0:1:1</Plural>
 		</French>
 		<German>Aggressiv</German>
-		<Italian>
-			<Text>Aggressivo:Aggressiva</Text>
-			<Gender>Male:Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Aggressivo</Italian>
 		<Spanish>
 			<Text>Agresivo:Agresiva</Text>
 			<Gender>Male:Female</Gender>
@@ -620,6 +627,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AGGRESSIVE0</Tag>
 		<English>Aggressive 0</English>
+		<Italian>Aggressivo 0</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AGGRESSIVE_PEDIA</Tag>
@@ -633,7 +641,7 @@
 		<English>Agg</English>
 		<French>Agr</French>
 		<German>Agg</German>
-		<Italian>Agg</Italian>
+		<Italian>Aggressivo</Italian>
 		<Spanish>Agr</Spanish>
 	</TEXT>
 	<TEXT>
@@ -653,6 +661,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AGRICULTURAL0</Tag>
 		<English>Agricultural 0</English>
+		<Italian>Agricolo 0</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AGRICULTURAL_PEDIA</Tag>
@@ -664,12 +673,14 @@
 		<French>Agr.</French>
 		<Polish>Rol.</Polish>
 		<Russian>Çåìë.</Russian>
+		<Italian>Agricolo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_CENTAUR</Tag>
 		<English>Ancient Way of the Centaur</English>
 		<French>Ancienne voie du centaure</French>
 		<Russian>«Путь Кентавра»</Russian>
+		<Italian>Antica tradizione del centauro</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_CENTAUR_PEDIA</Tag>
@@ -679,12 +690,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_CENTAUR_SHORT</Tag>
 		<English>AWotCentaur</English>
+		<Italian>Centauro</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_FEATHER</Tag>
 		<English>Ancient Way of the Feather</English>
 		<French>Ancienne Voie de la Plume</French>
 		<Russian>«Путь Пера»</Russian>
+		<Italian>Antica tradizione della piuma</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_FEATHER_PEDIA</Tag>
@@ -694,12 +707,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_FEATHER_SHORT</Tag>
 		<English>AWotFeather</English>
+		<Italian>Piuma</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_FIST</Tag>
 		<English>Ancient Way of the Fist</English>
 		<French>Ancienne voie du poing</French>
 		<Russian>«Путь кулака»</Russian>
+		<Italian>Antica tradizione del pugno</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_FIST_PEDIA</Tag>
@@ -709,12 +724,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_FIST_SHORT</Tag>
 		<English>AWotFist</English>
+		<Italian>Pugno</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_LEECH</Tag>
 		<English>Ancient Way of the Leech</English>
 		<French>Ancienne Voie de la Goule</French>
 		<Russian>«Путь пиявки»</Russian>
+		<Italian>Antica tradizione della sanguisuga</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_LEECH_PEDIA</Tag>
@@ -724,12 +741,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_LEECH_SHORT</Tag>
 		<English>AWotLeech</English>
+		<Italian>Sanguisuga</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_SHADOWS</Tag>
 		<English>Ancient Way of the Shadows</English>
 		<French>Ancienne Voie des Ombres</French>
 		<Russian>«Путь теней»</Russian>
+		<Italian>Antica tradizione dell'ombra</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_SHADOWS_PEDIA</Tag>
@@ -739,12 +758,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_SHADOWS_SHORT</Tag>
 		<English>AWotShadows</English>
+		<Italian>Ombra</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WARRIOR</Tag>
 		<English>Ancient Way of the Warrior</English>
 		<French>Ancienne Voie du Guerrier</French>
 		<Russian>«Путь воина»</Russian>
+		<Italian>Antica tradizione del guerriero</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WARRIOR_PEDIA</Tag>
@@ -754,12 +775,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WARRIOR_SHORT</Tag>
 		<English>AWotWarrior</English>
+		<Italian>Guerriero</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WAVES</Tag>
 		<English>Ancient Way of the Waves</English>
 		<French>Ancienne Voie des Vagues</French>
 		<Russian>«Путь волн»</Russian>
+		<Italian>Antica tradizione delle onde</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WAVES_PEDIA</Tag>
@@ -769,12 +792,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WAVES_SHORT</Tag>
 		<English>AWotWaves</English>
+		<Italian>Onde</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WILD</Tag>
 		<English>Ancient Way of the Wild</English>
 		<French>Ancienne Voie de la Nature Sauvage</French>
 		<Russian>«Путь дикости»</Russian>
+		<Italian>Antica tradizione della natura selavaggia</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WILD_PEDIA</Tag>
@@ -784,12 +809,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WILD_SHORT</Tag>
 		<English>AWotWild</English>
+		<Italian>Selvaggio</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WIND</Tag>
 		<English>Ancient Way of the Wind</English>
 		<French>Ancienne Voie du Vent</French>
 		<Russian>«Путь Ветра»</Russian>
+		<Italian>Antica tradizione del vento</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WIND_PEDIA</Tag>
@@ -799,12 +826,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WIND_SHORT</Tag>
 		<English>AWotWind</English>
+		<Italian>Vento</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WOLF</Tag>
 		<English>Ancient Way of the Wolf</English>
 		<French>Ancienne voie du Loup</French>
 		<Russian>«Путь Волка»</Russian>
+		<Italian>Antica tradizione del lupo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WOLF_PEDIA</Tag>
@@ -814,6 +843,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WOLF_SHORT</Tag>
 		<English>AWotWolf</English>
+		<Italian>Lupo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANTI_CLERICAL</Tag>
@@ -828,11 +858,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Anti Clericale</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Anticlericale</Italian>
 		<Spanish>
 			<Text>Ateo:Atea:Ateos:Ateas</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -844,6 +870,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANTI_CLERICAL0</Tag>
 		<English>Anti Clerical 0</English>
+		<Italian>Anticlericale 0</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANTI_CLERICAL_PEDIA</Tag>
@@ -864,11 +891,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>AnC</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Anticlericale</Italian>
 		<Spanish>
 			<Text>Ate</Text>
 			<Gender>Male</Gender>
@@ -880,10 +903,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_AQUARIUS</Tag>
 		<English>Astrological Influence of Aquarius</English>
+		<Italian>Influenza astrologica dell'acquario</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_AQUARIUS_SHORT</Tag>
 		<English>Aquarius</English>
+		<Italian>Acquario</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_AQUARIUS_PEDIA</Tag>
@@ -892,10 +917,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_ARIES</Tag>
 		<English>Astrological Influence of Aries</English>
+		<Italian>Influenza astrologica dell'ariete</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_ARIES_SHORT</Tag>
 		<English>Aries</English>
+		<Italian>Ariete</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_ARIES_PEDIA</Tag>
@@ -904,10 +931,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_CANCER</Tag>
 		<English>Astrological Influence of Cancer</English>
+		<Italian>Influenza astrologica del cancro</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_CANCER_SHORT</Tag>
 		<English>Cancer</English>
+		<Italian>Cancro</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_CANCER_PEDIA</Tag>
@@ -916,10 +945,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_CAPRICORN</Tag>
 		<English>Astrological Influence of Capricorn</English>
+		<Italian>Influenza astrologica del capricorno</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_CAPRICORN_SHORT</Tag>
 		<English>Capricorn</English>
+		<Italian>Capricorno</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_CAPRICORN_PEDIA</Tag>
@@ -928,10 +959,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_GEMINI</Tag>
 		<English>Astrological Influence of Gemini</English>
+		<Italian>Influenza astrologica dei gemelli</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_GEMINI_SHORT</Tag>
 		<English>Gemini</English>
+		<Italian>Gemelli</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_GEMINI_PEDIA</Tag>
@@ -940,10 +973,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_LEO</Tag>
 		<English>Astrological Influence of Leo</English>
+		<Italian>Influenza astrologica del leone</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_LEO_SHORT</Tag>
 		<English>Leo</English>
+		<Italian>Leone</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_LEO_PEDIA</Tag>
@@ -952,10 +987,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_LIBRA</Tag>
 		<English>Astrological Influence of Libra</English>
+		<Italian>Influenza astrologica della bilancia</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_LIBRA_SHORT</Tag>
 		<English>Libra</English>
+		<Italian>Bilancia</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_LIBRA_PEDIA</Tag>
@@ -964,10 +1001,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_PISCES</Tag>
 		<English>Astrological Influence of Pisces</English>
+		<Italian>Influenza astrologica dei pesci</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_PISCES_SHORT</Tag>
 		<English>Pisces</English>
+		<Italian>Pesci</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_PISCES_PEDIA</Tag>
@@ -976,10 +1015,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_SAGITTARIUS</Tag>
 		<English>Astrological Influence of Sagittarius</English>
+		<Italian>Influenza astrologica del sagittario</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_SAGITTARIUS_SHORT</Tag>
 		<English>Sagittarius</English>
+		<Italian>Sagittario</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_SAGITTARIUS_PEDIA</Tag>
@@ -988,10 +1029,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_SCORPIO</Tag>
 		<English>Astrological Influence of Scorpio</English>
+		<Italian>Influenza astrologica dello scorpione</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_SCORPIO_SHORT</Tag>
 		<English>Scorpio</English>
+		<Italian>Scorpione</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_SCORPIO_PEDIA</Tag>
@@ -1000,10 +1043,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_TAURUS</Tag>
 		<English>Astrological Influence of Taurus</English>
+		<Italian>Influenza astrologica del toro</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_TAURUS_SHORT</Tag>
 		<English>Taurus</English>
+		<Italian>Toro</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_TAURUS_PEDIA</Tag>
@@ -1012,10 +1057,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_VIRGO</Tag>
 		<English>Astrological Influence of Virgo</English>
+		<Italian>Influenza astrologica della vergine</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_VIRGO_SHORT</Tag>
 		<English>Virgo</English>
+		<Italian>Vergine</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_VIRGO_PEDIA</Tag>
@@ -1034,11 +1081,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Barbaro</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Incivile</Italian>
 		<Spanish>
 			<Text>Bárbaro:Bárbara:Bárbaros:Bárbaras</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -1065,11 +1108,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>BrB</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Incivile</Italian>
 		<Spanish>
 			<Text>Bar</Text>
 			<Gender>Male</Gender>
@@ -1092,7 +1131,7 @@
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Barbarico</Text>
+			<Text>Barbaro</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
@@ -1126,11 +1165,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Bar</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Barbaro</Italian>
 		<Spanish>
 			<Text>Bru</Text>
 			<Gender>Male</Gender>
@@ -1152,11 +1187,7 @@
 			<Gender>Male:Neuter</Gender>
 			<Plural>0:0</Plural>
 		</German>
-		<Italian>
-			<Text>Carismatico:Carismatica</Text>
-			<Gender>Male:Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Carismatico</Italian>
 		<Spanish>
 			<Text>Carismático:Carismática</Text>
 			<Gender>Male:Female</Gender>
@@ -1166,6 +1197,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CHARISMATIC0</Tag>
 		<English>Charismatic 0</English>
+		<Italian>Carismatico 0</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CHARISMATIC_PEDIA</Tag>
@@ -1182,11 +1214,7 @@
 			<Plural>0:0:1:1</Plural>
 		</French>
 		<German>Kreativ</German>
-		<Italian>
-			<Text>Creativo:Creativa</Text>
-			<Gender>Male:Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Creativo</Italian>
 		<Spanish>
 			<Text>Creativo:Creativa</Text>
 			<Gender>Male:Female</Gender>
@@ -1198,6 +1226,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CREATIVE0</Tag>
 		<English>Creative 0</English>
+		<Italian>Creativo 0</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CREATIVE_PEDIA</Tag>
@@ -1210,7 +1239,7 @@
 		<English>Cre</English>
 		<French>Cré</French>
 		<German>Kre</German>
-		<Italian>Cre</Italian>
+		<Italian>Creativo</Italian>
 		<Spanish>Cre</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1226,11 +1255,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Crudele</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Crudele</Italian>
 		<Spanish>
 			<Text>Cruel:Cruel:Crueles:Crueles</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -1242,6 +1267,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CRUEL0</Tag>
 		<English>Cruel 0</English>
+		<Italian>Crudele 0</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CRUEL_PEDIA</Tag>
@@ -1262,11 +1288,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Cru</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Crudele</Italian>
 		<Spanish>
 			<Text>Cru</Text>
 			<Gender>Male</Gender>
@@ -1280,7 +1302,7 @@
 		<English>Deceiver</English>
 		<French>Sournois</French>
 		<German>Betrüger</German>
-		<Italian>Traditore</Italian>
+		<Italian>Imbroglione</Italian>
 		<Spanish>
 			<Text>Traidor:Traidora:Traidores:Traidoras</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -1292,6 +1314,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DECEIVER0</Tag>
 		<English>Deceiver 0</English>
+		<Italian>Imbroglione 0</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DECEIVER_PEDIA</Tag>
@@ -1302,7 +1325,7 @@
 		<English>Dec</English>
 		<French>Sou.</French>
 		<German>Bet</German>
-		<Italian>Tra</Italian>
+		<Italian>Imbroglione</Italian>
 		<Spanish>Tra</Spanish>
 		<Polish>Kła</Polish>
 		<Russian>Èíòð.</Russian>
@@ -1320,11 +1343,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Eccessivo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Eccessivo</Italian>
 		<Spanish>
 			<Text>Exagerado:Exagerada:Exagerados:Exageradas</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -1336,6 +1355,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EXCESSIVE0</Tag>
 		<English>Excessive 0</English>
+		<Italian>Eccessivo 0</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EXCESSIVE_PEDIA</Tag>
@@ -1355,11 +1375,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Ecc</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Eccessivo</Italian>
 		<Spanish>
 			<Text>Exa</Text>
 			<Gender>Male</Gender>
@@ -1381,11 +1397,7 @@
 			<Gender>Male:Female</Gender>
 			<Plural>0:0</Plural>
 		</German>
-		<Italian>
-			<Text>Espansionista:Espansionista</Text>
-			<Gender>Male:Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Espansionista</Italian>
 		<Spanish>
 			<Text>Expansionista:Expansionista</Text>
 			<Gender>Male:Female</Gender>
@@ -1397,6 +1409,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EXPANSIVE0</Tag>
 		<English>Expansive 0</English>
+		<Italian>Espansionista</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EXPANSIVE_PEDIA</Tag>
@@ -1409,7 +1422,7 @@
 		<English>Exp</English>
 		<French>Acc</French>
 		<German>Exp</German>
-		<Italian>Esp</Italian>
+		<Italian>Espansionista</Italian>
 		<Spanish>Com</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1425,11 +1438,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Fanatico</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Fanatico</Italian>
 		<Spanish>
 			<Text>Fanático:Fanática:Fanáticos:Fanáticas</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -1441,6 +1450,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FANATICAL0</Tag>
 		<English>Fanatical 0</English>
+		<Italian>Fanatico 0</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FANATICAL_PEDIA</Tag>
@@ -1460,11 +1470,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Fan</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Fanatico</Italian>
 		<Spanish>
 			<Text>Fan</Text>
 			<Gender>Male</Gender>
@@ -1481,11 +1487,7 @@
 			<Plural>0:0:1:1</Plural>
 		</French>
 		<German>Kommerziell</German>
-		<Italian>
-			<Text>Economista:Economista</Text>
-			<Gender>Male:Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Economista</Italian>
 		<Spanish>
 			<Text>Financiero:Financiera</Text>
 			<Gender>Male:Female</Gender>
@@ -1497,6 +1499,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FINANCIAL0</Tag>
 		<English>Financial 0</English>
+		<Italian>Economista 0</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FINANCIAL_PEDIA</Tag>
@@ -1508,7 +1511,7 @@
 		<English>Fin</English>
 		<French>Fin</French>
 		<German>Fin</German>
-		<Italian>Eco</Italian>
+		<Italian>Economista</Italian>
 		<Spanish>Fin</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1524,11 +1527,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Straniero</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Straniero</Italian>
 		<Spanish>
 			<Text>Distante:Distante:Distantes:Distantes</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -1540,6 +1539,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FOREIGN0</Tag>
 		<English>Foreign 0</English>
+		<Italian>Straniero 0</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FOREIGN_PEDIA</Tag>
@@ -1559,11 +1559,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Str</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Straniero</Italian>
 		<Spanish>
 			<Text>Dis</Text>
 			<Gender>Male</Gender>
@@ -1577,7 +1573,7 @@
 		<English>Humanitarian</English>
 		<French>Humanitaire</French>
 		<German>Humanitär</German>
-		<Italian>Umanitario</Italian>
+		<Italian>Filantropo</Italian>
 		<Spanish>
 			<Text>Humanitario:Humanitaria:Humanitarios:Humanitarias</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -1589,6 +1585,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUMANITARIAN0</Tag>
 		<English>Humanitarian 0</English>
+		<Italian>Filantropo 0</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUMANITARIAN_PEDIA</Tag>
@@ -1598,7 +1595,7 @@
 		<Tag>TXT_KEY_TRAIT_HUMANITARIAN_SHORT</Tag>
 		<English>Hum</English>
 		<French>Hum</French>
-		<Italian>Uma</Italian>
+		<Italian>Filantropo</Italian>
 		<Russian>Ãóì.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1614,11 +1611,7 @@
 			<Gender>Male:Female</Gender>
 			<Plural>0:0</Plural>
 		</German>
-		<Italian>
-			<Text>Cacciatore-Raccoglitore</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Cacciatore-raccoglitore</Italian>
 		<Spanish>
 			<Text>Naturalista:Naturalista:Naturalistas:Naturalistas</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -1630,6 +1623,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUNTER_GATHERER0</Tag>
 		<English>Hunter-Gatherer 0</English>
+		<Italian>Cacciatore-raccoglitore 0</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUNTER_GATHERER_PEDIA</Tag>
@@ -1649,11 +1643,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>C-R</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Cacciatore-raccoglitore</Italian>
 		<Spanish>
 			<Text>Nat</Text>
 			<Gender>Male</Gender>
@@ -1675,11 +1665,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Idealista</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Idealista</Italian>
 		<Spanish>
 			<Text>Idealista:Idealista:Idealistas:Idealistas</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -1691,6 +1677,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IDEALISTIC0</Tag>
 		<English>Idealistic 0</English>
+		<Italian>Idealista 0</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IDEALISTIC_PEDIA</Tag>
@@ -1711,11 +1698,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Ide</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Idealista</Italian>
 		<Spanish>
 			<Text>Ide</Text>
 			<Gender>Male</Gender>
@@ -1739,6 +1722,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IMPERIALIST0</Tag>
 		<English>Imperialistic 0</English>
+		<Italian>Imperialista 0</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IMPERIALIST_PEDIA</Tag>
@@ -1754,11 +1738,7 @@
 			<Plural>0:0:1:1</Plural>
 		</French>
 		<German>Industriell</German>
-		<Italian>
-			<Text>Industrioso:Industriosa</Text>
-			<Gender>Male:Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Industrioso</Italian>
 		<Spanish>
 			<Text>Diligente:Diligente</Text>
 			<Gender>Male:Female</Gender>
@@ -1770,6 +1750,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_INDUSTRIOUS0</Tag>
 		<English>Industrious 0</English>
+		<Italian>Industrioso 0</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_INDUSTRIOUS_PEDIA</Tag>
@@ -1781,7 +1762,7 @@
 		<English>Ind</English>
 		<French>Tra</French>
 		<German>Ind</German>
-		<Italian>Ind</Italian>
+		<Italian>Industrioso</Italian>
 		<Spanish>Dil</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1797,11 +1778,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Isolazionista</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Isolazionista</Italian>
 		<Spanish>
 			<Text>Aislacionista:Aislacionista:Aislacionistas:Aislacionistas</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -1813,6 +1790,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ISOLATIONIST0</Tag>
 		<English>Isolationist 0</English>
+		<Italian>Isolazionista 0</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ISOLATIONIST_PEDIA</Tag>
@@ -1832,11 +1810,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Iso</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Isolazionista</Italian>
 		<Spanish>
 			<Text>Ais</Text>
 			<Gender>Male</Gender>
@@ -1858,11 +1832,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Megalomane</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Megalomane</Italian>
 		<Spanish>
 			<Text>Megalómano:Megalómana:Megalómanos:Megalómanas</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -1874,6 +1844,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEGALOMANIAC0</Tag>
 		<English>Megalomaniac 0</English>
+		<Italian>Megalomane 0</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEGALOMANIAC_PEDIA</Tag>
@@ -1893,11 +1864,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Meg</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Megalomane</Italian>
 		<Spanish>
 			<Text>Meg</Text>
 			<Gender>Male</Gender>
@@ -1922,6 +1889,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NOMAD0</Tag>
 		<English>Nomad 0</English>
+		<Italian>Nomade 0</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NOMAD_PEDIA</Tag>
@@ -1934,6 +1902,7 @@
 		<Spanish>Nóm</Spanish>
 		<Polish>Kcz</Polish>
 		<Russian>Êî÷.</Russian>
+		<Italian>Nomade</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ORGANIZED</Tag>
@@ -1944,11 +1913,7 @@
 			<Plural>0:0:1:1</Plural>
 		</French>
 		<German>Organisiert</German>
-		<Italian>
-			<Text>Organizzato:Organizzata</Text>
-			<Gender>Male:Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Organizzato</Italian>
 		<Spanish>
 			<Text>Organizado:Organizada</Text>
 			<Gender>Male:Female</Gender>
@@ -1960,6 +1925,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ORGANIZED0</Tag>
 		<English>Organized 0</English>
+		<Italian>Organizzato 0</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ORGANIZED_PEDIA</Tag>
@@ -1971,7 +1937,7 @@
 		<English>Org</English>
 		<French>Org</French>
 		<German>Org</German>
-		<Italian>Org</Italian>
+		<Italian>Organizzato</Italian>
 		<Spanish>Org</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1983,11 +1949,7 @@
 			<Plural>0:0:1:1</Plural>
 		</French>
 		<German>Philosophisch</German>
-		<Italian>
-			<Text>Filosofico:Filosofica</Text>
-			<Gender>Male:Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Filosofo</Italian>
 		<Spanish>
 			<Text>Filosófico:Filosófica</Text>
 			<Gender>Male:Female</Gender>
@@ -1999,6 +1961,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PHILOSOPHICAL0</Tag>
 		<English>Philosophical 0</English>
+		<Italian>Filosofo 0</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PHILOSOPHICAL_PEDIA</Tag>
@@ -2010,7 +1973,7 @@
 		<English>Phi</English>
 		<French>Phi</French>
 		<German>Phi</German>
-		<Italian>FIL</Italian>
+		<Italian>Filosofo</Italian>
 		<Spanish>Fil</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2026,11 +1989,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Politico</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Politico</Italian>
 		<Spanish>
 			<Text>Político:Política:Políticos:Políticas</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -2042,6 +2001,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_POLITICIAN0</Tag>
 		<English>Politician 0</English>
+		<Italian>Politico 0</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_POLITICIAN_PEDIA</Tag>
@@ -2062,11 +2022,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Pol</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Politico</Italian>
 		<Spanish>
 			<Text>Pol</Text>
 			<Gender>Male</Gender>
@@ -2087,11 +2043,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Populista</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Populista</Italian>
 		<Spanish>
 			<Text>Populista:Populista:Populistas:Populistas</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -2103,6 +2055,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_POPULIST0</Tag>
 		<English>Populist 0</English>
+		<Italian>Populista 0</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_POPULIST_PEDIA</Tag>
@@ -2122,11 +2075,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Pop</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Populista</Italian>
 		<Spanish>
 			<Text>Pop</Text>
 			<Gender>Male</Gender>
@@ -2147,11 +2096,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Progressista</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Progressista</Italian>
 		<Spanish>
 			<Text>Progresista:Progresista:Progresistas:Progresistas</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -2163,6 +2108,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROGRESSIST0</Tag>
 		<English>Progressist 0</English>
+		<Italian>Progressista 0</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROGRESSIST_PEDIA</Tag>
@@ -2183,11 +2129,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Prg</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Progressista</Italian>
 		<Spanish>
 			<Text>Pro</Text>
 			<Gender>Male</Gender>
@@ -2209,11 +2151,7 @@
 			<Gender>Male:Neuter</Gender>
 			<Plural>0:0</Plural>
 		</German>
-		<Italian>
-			<Text>Protettivo:Protettiva</Text>
-			<Gender>Male:Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Protettivo</Italian>
 		<Spanish>
 			<Text>Protector:Protectora</Text>
 			<Gender>Male:Female</Gender>
@@ -2223,6 +2161,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROTECTIVE0</Tag>
 		<English>Protective 0</English>
+		<Italian>Protettivo 0</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROTECTIVE_PEDIA</Tag>
@@ -2242,11 +2181,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Rivoluzionario</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Rivoluzionario</Italian>
 		<Spanish>
 			<Text>Revolucionario:Revolucionaria:Revolucionarios:Revolucionarias</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -2258,6 +2193,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_REVOLUTIONARY0</Tag>
 		<English>Revolutionary 0</English>
+		<Italian>Rivoluzionario 0</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_REVOLUTIONARY_PEDIA</Tag>
@@ -2277,11 +2213,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Riv</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Rivoluzionario</Italian>
 		<Spanish>
 			<Text>Rev</Text>
 			<Gender>Male</Gender>
@@ -2307,6 +2239,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SCIENTIFIC0</Tag>
 		<English>Scientific 0</English>
+		<Italian>Scientifico 0</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SCIENTIFIC_PEDIA</Tag>
@@ -2320,6 +2253,7 @@
 		<Spanish>Cie</Spanish>
 		<Polish>Nau</Polish>
 		<Russian>Ó÷.</Russian>
+		<Italian>Scientifico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SEAFARING</Tag>
@@ -2338,6 +2272,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SEAFARING0</Tag>
 		<English>Seafaring 0</English>
+		<Italian>Marinaio 0</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SEAFARING_PEDIA</Tag>
@@ -2348,7 +2283,7 @@
 		<English>Sea</English>
 		<French>Mar.</French>
 		<German>See</German>
-		<Italian>Mar</Italian>
+		<Italian>Marinaio</Italian>
 		<Spanish>Mar</Spanish>
 		<Polish>Żeg.</Polish>
 		<Russian>Ìîð.</Russian>
@@ -2362,11 +2297,7 @@
 			<Plural>0:0:1:1</Plural>
 		</French>
 		<German>Spirituell</German>
-		<Italian>
-			<Text>Spirituale:Spirituale</Text>
-			<Gender>Male:Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Spirituale</Italian>
 		<Spanish>
 			<Text>Espiritual:Espiritual</Text>
 			<Gender>Male:Female</Gender>
@@ -2378,6 +2309,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SPIRITUAL0</Tag>
 		<English>Spiritual 0</English>
+		<Italian>Spirituale 0</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SPIRITUAL_PEDIA</Tag>
@@ -2389,7 +2321,7 @@
 		<English>Spi</English>
 		<French>Spi</French>
 		<German>Spi</German>
-		<Italian>Spi</Italian>
+		<Italian>Spirituale</Italian>
 		<Spanish>Esp</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2405,11 +2337,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Temperamentale</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Volubile</Italian>
 		<Spanish>
 			<Text>Temperamental:Temperamental:Temperamentales:Temperamentales</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -2421,6 +2349,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TEMPERAMENTAL0</Tag>
 		<English>Temperamental 0</English>
+		<Italian>Volubile 0</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TEMPERAMENTAL_PEDIA</Tag>
@@ -2440,11 +2369,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Tem</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Volubile</Italian>
 		<Spanish>
 			<Text>Tem</Text>
 			<Gender>Male</Gender>

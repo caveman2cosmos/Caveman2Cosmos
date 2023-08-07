@@ -3,7 +3,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_CYBERPUNK</Tag>
 		<English>Culture (Cyberpunk)</English>
-		<Italian>Cultura (Cyberpunk)</Italian>
+		<Italian>Cyberpunk (cultura alternativa))</Italian>
 		<Polish>Kultura (Cyberpunk)</Polish>
 		<Russian>Êèáåðïàíê</Russian>
 	</TEXT>
@@ -19,6 +19,7 @@
 		<French>Laboratoire de Cyber-Insectes</French>
 		<Polish>Laboratorium Cyberowadów</Polish>
 		<Russian>Ëàá. êèáåðíàñåêîìûõ</Russian>
+		<Italian>Laboratorio di insetti cibernetici</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CYBER_INSECT_LAB_PEDIA</Tag>
@@ -32,6 +33,7 @@
 		<French>Artiste des rêves</French>
 		<Polish>Artysta Snu</Polish>
 		<Russian>Àðõèòåêòîð ãðåç</Russian>
+		<Italian>Artista dei sogni</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DREAM_ARTIST_PEDIA</Tag>
@@ -45,6 +47,7 @@
 		<French>Propagande des Rêves</French>
 		<Polish>Propaganda Snu</Polish>
 		<Russian>Ãåíåðàòîð ñíîâèäåíèé</Russian>
+		<Italian>Propaganda nei sogni</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DREAM_PROPAGANDA_PEDIA</Tag>
@@ -58,6 +61,7 @@
 		<French>Centre de Simulation de rêves</French>
 		<Polish>Centrum Symulacji Snu</Polish>
 		<Russian>Öåíòð ñíîâ</Russian>
+		<Italian>Centro di simulazione dei sogni</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DREAM_SIMULATION_CENTER_PEDIA</Tag>
@@ -71,6 +75,7 @@
 		<French>Laboratoire de Manipulation d'Insectes</French>
 		<Polish>Laboratorium Manipulacji Owadami</Polish>
 		<Russian>Ëàá. êèáåðêîíòðîëÿ</Russian>
+		<Italian>Laboratorio di manipolazione degli insetti</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INSECT_MANIPULATION_LAB_PEDIA</Tag>

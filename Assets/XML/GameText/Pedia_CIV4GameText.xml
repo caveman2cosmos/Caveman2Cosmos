@@ -6,6 +6,7 @@
 		<French>Contexte:[NEWLINE]</French>
 		<German>Hintergrund:[NEWLINE]</German>
 		<Russian>Описание:[PARAGRAPH:1]</Russian>
+		<Italian>Background: [NEWLINE]</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILOPEDIA_STRATEGY</Tag>
@@ -22,6 +23,7 @@
 		<French>et le temps de construction est :\n</French>
 		<German>[NEWLINE][ICON_BULLET]Dauer:</German>
 		<Russian> и строится</Russian>
+		<Italian>[NEWLINE][ICON_BULLET]Tempo di costruzione:</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_ATTITUDE</Tag>
@@ -31,6 +33,7 @@
 		<Spanish>Actitud: [BOLD]%d1%[\BOLD] (base) + [BOLD]%d2%[\BOLD] (estima bélica)[NEWLINE]</Spanish>
 		<Polish>Podstawa: [BOLD]%d1%%[\BOLD] (Baza) + [BOLD]%d2%[\BOLD] (Podżegacz Wojenny)[NEWLINE]</Polish>
 		<Russian>Îòíîøåíèå: [BOLD]%d1%[\BOLD] (áàçîâîå) + [BOLD]%d2%[\BOLD] (ìèëèòàðèçì)[NEWLINE]</Russian>
+		<Italian>Attitudine: [BOLD]%d1%[\BOLD] base + [BOLD]%d2%[\BOLD] stima per la guerra[NEWLINE]</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_AUTOBUILD</Tag>
@@ -38,13 +41,14 @@
 		<French>Auto-construction</French>
 		<German>automatisch</German>
 		<Russian>Автом. строительство</Russian>
+		<Italian>Edificio automatico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_BONUS_APPEARANCE</Tag>
 		<English>Reveal</English>
 		<French>Révélé par :</French>
 		<German>enthüllt</German>
-		<Italian>Rivela</Italian>
+		<Italian>Rivela la risorsa</Italian>
 		<Spanish>Revela</Spanish>
 		<Russian>Развернуть</Russian>
 	</TEXT>
@@ -56,6 +60,7 @@
 		<Spanish>Revelado y activado</Spanish>
 		<Polish>Odkryte i Włączone</Polish>
 		<Russian>Òðåáóåìàÿ òåõíîëîãèÿ</Russian>
+		<Italian>Rivela o rende disponibile</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_BONUS_LOCALLY</Tag>
@@ -63,6 +68,7 @@
 		<French>Local</French>
 		<German>lokal</German>
 		<Russian>(вблизи ресурса)</Russian>
+		<Italian>localmente</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_BONUS_NATIONWIDE</Tag>
@@ -70,6 +76,7 @@
 		<French>Au Niveau Nation</French>
 		<German>landesweit</German>
 		<Russian>доступная линейка</Russian>
+		<Italian>a livello nazionale</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_BONUS_OBSOLETE</Tag>
@@ -78,6 +85,7 @@
 		<German>veraltet</German>
 		<Polish>Przestarzałe</Polish>
 		<Russian>Óñòàðåâøèé</Russian>
+		<Italian>Decade</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_BONUS_TRADE</Tag>
@@ -94,12 +102,14 @@
 		<French>Est construit par :</French>
 		<German>gebaut durch</German>
 		<Russian>Здания:</Russian>
+		<Italian>Costruito:</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_BUILD_TIME</Tag>
 		<English>Build time is</English>
 		<French>Le temps de construction est :\n</French>
 		<Russian>Время строительства</Russian>
+		<Italian>Tempo di completamento:</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CAPABLE_UNITS</Tag>
@@ -107,11 +117,13 @@
 		<French>Unités compétentes:</French>
 		<German>kann ausgeführt werden von</German>
 		<Russian>Связанные юниты:</Russian>
+		<Italian>Unità utilizzabili:</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_AFFLICTION_PROMOTION</Tag>
 		<English>(P) Afflictions</English>
 		<French>(P) Afflictions</French>
+		<Italian>Alterazioni di stato</Italian>
 		<German>Beschwerden</German>
 		<Spanish>Alteraciones de estado</Spanish>
 		<Polish>Osłabienia</Polish>
@@ -121,6 +133,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_ALL_ERAS</Tag>
 		<English>All Eras</English>
 		<French>Toutes les Eres</French>
+		<Italian>Tutte le ere</Italian>
 		<German>Alle Zeitalter</German>
 		<Russian>Все эпохи</Russian>
 	</TEXT>
@@ -128,6 +141,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_ANIMALISTIC_BUILDINGS</Tag>
 		<English>Animalistic</English>
 		<French>Animalier</French>
+		<Italian>Edifici animalistici</Italian>
 		<German>Tiere</German>
 		<Russian>Предания</Russian>
 	</TEXT>
@@ -135,6 +149,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_ANIMALS</Tag>
 		<English>Animals</English>
 		<French>Animaux</French>
+		<Italian>Animali</Italian>
 		<German>Tiere</German>
 		<Russian>Животные</Russian>
 	</TEXT>
@@ -147,11 +162,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>Ressourcen</German>
-		<Italian>
-			<Text>Risorse</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Risorse</Italian>
 		<Spanish>
 			<Text>Recursos</Text>
 			<Gender>Male</Gender>
@@ -164,6 +175,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_CULTURE</Tag>
 		<English>Culture Bonuses</English>
 		<French>Bonus de Culture</French>
+		<Italian>Risorse culturali</Italian>
 		<German>Kulturboni</German>
 		<Spanish>Recursos culturales</Spanish>
 		<Polish>Bonusy Kulturowe</Polish>
@@ -172,17 +184,20 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_GENMOD</Tag>
 		<English>Technocultural Bonuses</English>
+		<Italian>Risorse tecnologiche</Italian>
 		<German>Technokulturboni</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_MANDFACTURED</Tag>
 		<English>Manufactured Bonuses</English>
+		<Italian>Risorse prodotte</Italian>
 		<German>Güter</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_MAP</Tag>
 		<English>Map Bonuses</English>
 		<French>Bonus de Carte</French>
+		<Italian>Risorse della mappa</Italian>
 		<German>Rohstoffe</German>
 		<Spanish>Recursos del mapa</Spanish>
 		<Polish>Bonusy Mapy</Polish>
@@ -191,12 +206,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BONUS_WONDER</Tag>
 		<English>Unique Bonuses</English>
+		<Italian>Risorse uniche</Italian>
 		<German>Spezialboni</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_BUILDINGS_SPECIAL</Tag>
 		<English>Special</English>
 		<French>Spéciaux</French>
+		<Italian>Edifici speciali</Italian>
 		<German>Besonderheiten</German>
 		<Russian>Особые</Russian>
 	</TEXT>
@@ -205,7 +222,7 @@
 		<English>Building Tree</English>
 		<French>Améliorations des Bâtiments</French>
 		<German>Gebäude</German>
-		<Italian>Miglioramenti degli edifici</Italian>
+		<Italian>Albero degli edifici</Italian>
 		<Spanish>Árbol de edificios</Spanish>
 		<Polish>Ulepszenia Budynków</Polish>
 		<Russian>Ðîñò æèëüÿ</Russian>
@@ -223,6 +240,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_CHRONOLOGY</Tag>
 		<English>Chronology</English>
 		<French>Chronologie</French>
+		<Italian>Ordine cronologico</Italian>
 		<German>Chronologisch</German>
 		<Russian>Хронология</Russian>
 	</TEXT>
@@ -235,11 +253,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>Zivilisationen</German>
-		<Italian>
-			<Text>Civiltà</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Civiltà</Italian>
 		<Spanish>
 			<Text>Civilizaciones</Text>
 			<Gender>Female</Gender>
@@ -257,11 +271,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Gesellschaft</German>
-		<Italian>
-			<Text>Forme di governo</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Forme di governo</Italian>
 		<Spanish>
 			<Text>Principios</Text>
 			<Gender>Male</Gender>
@@ -279,11 +289,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>Spielkonzepte</German>
-		<Italian>
-			<Text>Nozioni di gioco</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Concetti di gioco</Italian>
 		<Spanish>
 			<Text>Conceptos del juego</Text>
 			<Gender>Male</Gender>
@@ -306,6 +312,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_CULTURAL_UNITS</Tag>
 		<English>Cultural Units</English>
 		<French>Unités Culturelles</French>
+		<Italian>Unità culturali</Italian>
 		<German>Kulturspezifisch</German>
 		<Russian>Культур. юниты</Russian>
 	</TEXT>
@@ -313,6 +320,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_EQUIPMENT_PROMOTION</Tag>
 		<English>(P) Equipments</English>
 		<French>(P) Equipements</French>
+		<Italian>Equipaggiamento</Italian>
 		<German>Ausrüstung</German>
 		<Spanish>Equipamiento</Spanish>
 		<Polish>Ekwipunek</Polish>
@@ -322,6 +330,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_ERAS</Tag>
 		<English>Eras</English>
 		<French>Eres</French>
+		<Italian>Ere</Italian>
 		<German>Zeitalter</German>
 		<Russian>Эпохи</Russian>
 	</TEXT>
@@ -334,11 +343,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>Merkmale</German>
-		<Italian>
-			<Text>Caratteristiche del terreno</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Tipo di terreno</Italian>
 		<Spanish>
 			<Text>Características del terreno</Text>
 			<Gender>Male</Gender>
@@ -352,7 +357,7 @@
 		<English>Great Wonders</English>
 		<French>Merveilles Mondiales</French>
 		<German>Weltwunder</German>
-		<Italian>Grandi Merav.</Italian>
+		<Italian>Meraviglie mondiali</Italian>
 		<Spanish>Maravillas del mundo</Spanish>
 		<Polish>Wielkie Cuda</Polish>
 		<Russian>Âåëèêèå ÷óäåñà</Russian>
@@ -361,6 +366,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_GROUP_WONDERS</Tag>
 		<English>Group Wonders</English>
 		<French>Groupes de Merveilles</French>
+		<Italian>Meraviglie di gruppo</Italian>
 		<German>Gruppenwunder</German>
 		<Russian>Групп. Чудеса</Russian>
 	</TEXT>
@@ -383,11 +389,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>Tipps</German>
-		<Italian>
-			<Text>Suggerimenti</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Suggerimenti</Italian>
 		<Spanish>
 			<Text>Consejos</Text>
 			<Gender>Male</Gender>
@@ -405,11 +407,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>Verbesserungen</German>
-		<Italian>
-			<Text>Miglioramenti</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Miglioramenti</Italian>
 		<Spanish>
 			<Text>Mejoras</Text>
 			<Gender>Female</Gender>
@@ -422,6 +420,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_LANDSCAPE</Tag>
 		<English>Landscape</English>
 		<French>Paysage</French>
+		<Italian>Mappa</Italian>
 		<German>Landschaft</German>
 		<Russian>Типы ландшафта</Russian>
 	</TEXT>
@@ -434,11 +433,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>Oberhäupter</German>
-		<Italian>
-			<Text>Leader</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Leader</Italian>
 		<Spanish>
 			<Text>Líderes</Text>
 			<Gender>Male</Gender>
@@ -451,6 +446,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_LEADERSHIP</Tag>
 		<English>Leadership</English>
 		<French>Gouvernement</French>
+		<Italian>Leadership</Italian>
 		<German>Regierung</German>
 		<Russian>Лидерство</Russian>
 	</TEXT>
@@ -458,6 +454,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_MISC_UNITS</Tag>
 		<English>Misc Units</English>
 		<French>Unités Diverses</French>
+		<Italian>Altre unità</Italian>
 		<German>Sonstige</German>
 		<Russian>Прочие юниты</Russian>
 	</TEXT>
@@ -466,7 +463,7 @@
 		<English>National Wonders</English>
 		<French>Merveilles Nationales</French>
 		<German>Nationale Wunder</German>
-		<Italian>Merav. Naz.</Italian>
+		<Italian>Meravaglie nazionali</Italian>
 		<Spanish>Maravillas nacionales</Spanish>
 		<Polish>Cuda Narodowe</Polish>
 		<Russian>Íàö. ÷óäåñà</Russian>
@@ -480,11 +477,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>Projekte</German>
-		<Italian>
-			<Text>Progetti</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Progetti</Italian>
 		<Spanish>
 			<Text>Proyectos</Text>
 			<Gender>Male</Gender>
@@ -502,11 +495,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>Beförderungen</German>
-		<Italian>
-			<Text>Promozioni</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Promozioni</Italian>
 		<Spanish>
 			<Text>Ascensos</Text>
 			<Gender>Male</Gender>
@@ -520,7 +509,7 @@
 		<English>Promotion Tree</English>
 		<French>Arborescence des Promotions</French>
 		<German>Beförderungen</German>
-		<Italian>Albero Promoz.</Italian>
+		<Italian>Albero promozioni</Italian>
 		<Spanish>Árbol de ascensos</Spanish>
 		<Polish>Drzewko prom.</Polish>
 		<Russian>Ðàçâèòèå</Russian>
@@ -534,11 +523,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>Religionen</German>
-		<Italian>
-			<Text>Religioni</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Religioni</Italian>
 		<Spanish>
 			<Text>Religiones</Text>
 			<Gender>Female</Gender>
@@ -551,6 +536,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_RELIGIOUS_BUILDINGS</Tag>
 		<English>Religious</English>
 		<French>Religieux</French>
+		<Italian>Edifici religiosi</Italian>
 		<German>Religion</German>
 		<Russian>Культовые</Russian>
 	</TEXT>
@@ -558,6 +544,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_RESOURCES</Tag>
 		<English>Resources</English>
 		<French>Ressources</French>
+		<Italian>Risorse</Italian>
 		<German>Ressourcen</German>
 		<Russian>Ресурсы</Russian>
 	</TEXT>
@@ -565,6 +552,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_ROUTES</Tag>
 		<English>Routes</English>
 		<French>Routes</French>
+		<Italian>Percorsi</Italian>
 		<German>Verkehr</German>
 		<Spanish>Caminos</Spanish>
 		<Polish>Drogi</Polish>
@@ -583,11 +571,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_SPACE_BUILDINGS</Tag>
 		<English>Space</English>
+		<Italian>Edifici spaziali</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_SPECIAL</Tag>
 		<English>Special</English>
 		<French>Spéciaux</French>
+		<Italian>Speciali</Italian>
 		<German>Weiteres</German>
 		<Russian>Особое</Russian>
 	</TEXT>
@@ -600,11 +590,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>Spezialisten</German>
-		<Italian>
-			<Text>Specialisti</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Specialisti</Italian>
 		<Spanish>
 			<Text>Especialistas</Text>
 			<Gender>Male</Gender>
@@ -617,6 +603,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_SPECIAL_BUILDINGS</Tag>
 		<English>Special Buildings</English>
 		<French>Bâtiments Spéciaux</French>
+		<Italian>Edifici speciali</Italian>
 		<German>Spezialgebäude</German>
 		<Russian>Особые постройки</Russian>
 	</TEXT>
@@ -624,12 +611,14 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_SPECIAL_UNITS</Tag>
 		<English>Special Units</English>
 		<French>Unités Spéciales</French>
+		<Italian>Unità speciali</Italian>
 		<German>Spezialeinheiten</German>
 		<Russian>Особые юниты</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_SPREAD_UNITS</Tag>
 		<English>Spreading Units</English>
+		<Italian>Unità di diffusione</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_SUBCOMBAT_TYPE</Tag>
@@ -639,6 +628,7 @@
 		<Spanish>Subtipos de combate</Spanish>
 		<Polish>Typy Walki</Polish>
 		<Russian>Âèäû ñðàæåíèé</Russian>
+		<Italian>Sottotipo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_TECH</Tag>
@@ -649,11 +639,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>Technologien</German>
-		<Italian>
-			<Text>Tecnologie</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Tecnologie</Italian>
 		<Spanish>
 			<Text>Tecnologías</Text>
 			<Gender>Female</Gender>
@@ -671,11 +657,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Gelände</German>
-		<Italian>
-			<Text>Terreno base</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Terreno base</Italian>
 		<Spanish>
 			<Text>Terreno base</Text>
 			<Gender>Male</Gender>
@@ -693,11 +675,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>Einheiten</German>
-		<Italian>
-			<Text>Unità</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Unità</Italian>
 		<Spanish>
 			<Text>Unidades</Text>
 			<Gender>Female</Gender>
@@ -709,6 +687,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_UNIT_COMBAT</Tag>
 		<English>Combat Types</English>
+		<Italian>Categorie</Italian>
 		<German>Kategorien</German>
 	</TEXT>
 	<TEXT>
@@ -716,7 +695,7 @@
 		<English>Unit Upgrades</English>
 		<French>Améliorations des Unités</French>
 		<German>Einheiten</German>
-		<Italian>Avanzamenti</Italian>
+		<Italian>Albero delle unità</Italian>
 		<Spanish>Árbol de unidades</Spanish>
 		<Polish>Ulepszenia jedn.</Polish>
 		<Russian>Ðîñò þíèòîâ</Russian>
@@ -725,6 +704,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_UPGRADE_TREES</Tag>
 		<English>Upgrade Trees</English>
 		<French>Arbre des Améliorations</French>
+		<Italian>Alberi dei miglioramenti</Italian>
 		<German>Upgrades</German>
 		<Russian>Древо развития</Russian>
 	</TEXT>
@@ -732,6 +712,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_WORKER_BUILDS</Tag>
 		<English>Worker Builds</English>
 		<French>Constructions des Ouvriers</French>
+		<Italian>Compiti dei lavoratori</Italian>
 		<German>Arbeitsaufträge</German>
 		<Russian>Задания рабочим</Russian>
 	</TEXT>
@@ -741,6 +722,7 @@
 		<French>Construit :</French>
 		<German>Ergebnis</German>
 		<Russian>Результат:</Russian>
+		<Italian>Costruzione di:</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CONSUMES_WORKER</Tag>
@@ -748,6 +730,7 @@
 		<French>Détruit l'Ouvrier.</French>
 		<German>Arbeitstrupp wird zerstört</German>
 		<Russian>Тратит рабочих</Russian>
+		<Italian>[ICON_BULLET]L'unità lavoratore è consumata nel processo.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_COSTS</Tag>
@@ -755,6 +738,7 @@
 		<French>Coûte</French>
 		<German>Kosten:</German>
 		<Russian>Цена</Russian>
+		<Italian>[ICON_BULLET]Costo:</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_DOGPILE</Tag>
@@ -764,13 +748,14 @@
 		<Spanish>Guerra de pelotón: [BOLD]%d1[\BOLD]</Spanish>
 		<Polish>Wojna Totalna: [BOLD]%d1%%[\BOLD]</Polish>
 		<Russian>Грязная война: [BOLD]%d1[\BOLD]</Russian>
+		<Italian>Gestione della guerra: [BOLD]%d1[\BOLD]</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_FAV_CIVIC_AND_RELIGION</Tag>
 		<English>Favorite Civic and Religion</English>
 		<French>Doctrine et Religion Préférée</French>
 		<German>Bevorzugte Gesellschaftsform und Religion</German>
-		<Italian>Forme di governo e Religioni preferite</Italian>
+		<Italian>Forme di governo e religioni preferite</Italian>
 		<Spanish>Principio y religión favoritos</Spanish>
 		<Polish>Ulubione doktryny i religie</Polish>
 		<Russian>Ëþáèìûå ïàðàäèãìû è ðåëèãèè</Russian>
@@ -779,11 +764,13 @@
 		<Tag>TXT_KEY_PEDIA_FROM_GAME_SPEED</Tag>
 		<English>from game speed)</English>
 		<French>de la vitesse du jeu)</French>
+		<Italian>a causa della velocità di gioco</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_FROM_STARING_ERA</Tag>
 		<English>from staring era)</English>
 		<French>de l'ère)</French>
+		<Italian>a causa dell'era di partenza</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_FULL_WAR</Tag>
@@ -793,6 +780,7 @@
 		<Spanish>Guerra total: [BOLD]%d1[\BOLD] (Ratio cercano: %d2%%, ratio lejano: %d3%%, adyacente: %d4%%)[NEWLINE]</Spanish>
 		<Polish>Pełna Wojna: [BOLD]%d1[\BOLD] (%d2%% Stosunek Bliski, %d3%% Stosunek Daleki, %d4%% Sąsiadujące)[NEWLINE]</Polish>
 		<Russian>Полная война: [BOLD]%d1[\BOLD] (%d2%% прим. коэфф., %d3%% Отдал. коэфф., %d4%% - смежный)[NEWLINE]</Russian>
+		<Italian>Guerra completa: [BOLD]%d1[\BOLD] (%d2%% tasso vicino, %d3%% tasso lontano, %d4%% adiacente)[NEWLINE]</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_HISTORY</Tag>
@@ -809,7 +797,7 @@
 		<English>%% Air Defense</English>
 		<French>%% Défense aérienne</French>
 		<German>%% Luftverteidigung</German>
-		<Italian>%% di difesa anti-aerea</Italian>
+		<Italian>%% percentuale di difesa anti-aerea</Italian>
 		<Spanish>%% de defensa antiaérea</Spanish>
 		<Polish>%% Obrona Przeciwlotnicza</Polish>
 		<Russian>%% çàùèòû îò àâèàöèè</Russian>
@@ -830,6 +818,7 @@
 		<French>Existe en latitude:</French>
 		<German>Geografische Breite:</German>
 		<Russian>Ареал размещения:</Russian>
+		<Italian>Esiste alla latitudine di:</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_LIMITED_WAR</Tag>
@@ -839,6 +828,7 @@
 		<Spanish>Guerra limitada: [BOLD]%d1[\BOLD] (Ratio de poder del %d2%%)[NEWLINE]</Spanish>
 		<Polish>Limitowana Wojna: [BOLD]%d1[\BOLD] (%d2%% Stosunek sił)[NEWLINE]</Polish>
 		<Russian>Огранич. война: [BOLD]%d1[\BOLD] (%d2%% Коэффициент мощи)[NEWLINE]</Russian>
+		<Italian>Guerra limitata: [BOLD]%d1[\BOLD] (%d2%% tasso di potenza)[NEWLINE]</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_NO_PLOT_YIELD_CHANGE</Tag>
@@ -847,11 +837,13 @@
 		<Spanish>Sin cambios</Spanish>
 		<Polish>Bez zmian</Polish>
 		<Russian>Íå èçìåíÿòü</Russian>
+		<Italian>Nessun cambiamento</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_OWN</Tag>
 		<English>Own</English>
 		<German>im Besitz:</German>
+		<Italian>proprio</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_QUOTE</Tag>
@@ -861,6 +853,7 @@
 		<Spanish>Cita</Spanish>
 		<Polish>Wpis</Polish>
 		<Russian>Öèòàòû</Russian>
+		<Italian>Citazione</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_REPLACED_BY</Tag>
@@ -870,6 +863,7 @@
 		<Spanish>Reemplazado por</Spanish>
 		<Polish>Zastąpione przez</Polish>
 		<Russian>Çàìåíåí</Russian>
+		<Italian>Decade alla scoperte della tecnologia</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_REPLACEMENT_FOR</Tag>
@@ -877,10 +871,12 @@
 		<French>Remplacement de :</French>
 		<German>ersetzt</German>
 		<Russian>Заменяет:</Russian>
+		<Italian>Sostituisce:</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_REQUIRES</Tag>
 		<English>Requires:</English>
+		<Italian>Richiede:</Italian>
 		<French>Requiert :</French>
 		<German>benötigt</German>
 		<Russian>Требуется:</Russian>
@@ -893,6 +889,7 @@
 		<Spanish>Fuente del recurso</Spanish>
 		<Polish>Zródło surowca</Polish>
 		<Russian>Áîíóñ èñòî÷íèêà</Russian>
+		<Italian>Fonte della risorsa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_ROUTE_IMPROVEMENT_YIELD_CHANGE</Tag>
@@ -901,6 +898,7 @@
 		<Spanish>Cambios al rendimiento de la mejora</Spanish>
 		<Polish>Wydajność ulepszenia uległa zmianie</Polish>
 		<Russian>Ýôôåêò óëó÷øåíèÿ èçìåíåí</Russian>
+		<Italian>Cambiamento di rendita</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_SCREEN_BACK</Tag>
@@ -916,7 +914,7 @@
 		<English>Contents</English>
 		<French>Matières</French>
 		<German>Inhalt</German>
-		<Italian>Contenuto</Italian>
+		<Italian>Contenuti</Italian>
 		<Spanish>Contenido</Spanish>
 		<Polish>TreŚć</Polish>
 		<Russian>Ñîäåðæàíèå</Russian>
@@ -942,6 +940,7 @@
 		<Tag>TXT_KEY_PEDIA_STRATEGY</Tag>
 		<English>Strategy</English>
 		<French>Stratégie</French>
+		<Italian>Strategia</Italian>
 		<German>Strategie</German>
 		<Spanish>Estrategia</Spanish>
 		<Polish>Strategia</Polish>
@@ -953,12 +952,14 @@
 		<French>Synergie</French>
 		<German>beeinflusst von</German>
 		<Russian>Синергия</Russian>
+		<Italian>Sinergia</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_TECH_REQUIRED</Tag>
 		<English>Tech Required:</English>
 		<French>Tech Requise :</French>
 		<Russian>Технология:</Russian>
+		<Italian>Richiede la tecnologia:</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_TECH_WORKER_SPEED</Tag>
@@ -966,6 +967,7 @@
 		<French>% Vitesse des Ouvriers</French>
 		<German>% schnellere Arbeitstrupps</German>
 		<Russian>% скорость рабочего</Russian>
+		<Italian>% di aumento della velocità delle unità di tipo lavoratore</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_TURNS_FEATURE_BUILD_TIME</Tag>
@@ -973,13 +975,14 @@
 		<French>tours + temps de constr. de l'aménagement)</French>
 		<German> Runde(n) zusätzlich)</German>
 		<Russian>ходов + время строительства)</Russian>
+		<Italian>turni + il tempo di costruizione della risorsa)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_UNIT_CAN_BE_CAPTURED</Tag>
 		<English>[ICON_BULLET]Can be captured</English>
 		<French>[ICON_BULLET]Peut être capturé</French>
 		<German>[ICON_BULLET]kann gefangen werden</German>
-		<Italian>[ICON_BULLET]Può essere catturata</Italian>
+		<Italian>[ICON_BULLET]L'unità può essere catturata</Italian>
 		<Spanish>[ICON_BULLET]Se puede capturar</Spanish>
 		<Polish>[ICON_BULLET]Może zostać przejęty</Polish>
 		<Russian>[ICON_BULLET]Ìîæåò áûòü çàõâà÷åí</Russian>
@@ -989,7 +992,7 @@
 		<English>[ICON_BULLET]Can be drafted when requirements are met</English>
 		<French>[ICON_BULLET]Peut être recrutés lorsque les conditions sont réunies</French>
 		<German>[ICON_BULLET]Einheit kann rekrutiert werden, wenn die Bedingungen erfüllt sind</German>
-		<Italian>[ICON_BULLET]Può essere reclutata quando i requisiti sono soddisfatti</Italian>
+		<Italian>[ICON_BULLET]L'unità può essere reclutata quando i requisiti sono soddisfatti</Italian>
 		<Spanish>[ICON_BULLET]Se puede reclutar cuando se cumplan las condiciones</Spanish>
 		<Polish>[ICON_BULLET]Może zostać zwerbowany gdy są spełnione wymagania</Polish>
 		<Russian>[ICON_BULLET]Ïîäðàçäåëåíèå ìîæåò áûòü ïðèçâàíî, êîãäà âûïîëíåíû íåîáõîäèìûå óñëîâèÿ</Russian>
@@ -1009,7 +1012,7 @@
 		<English>«Who are we, who is each one of us, if not a combination of experiences, information, books we have read, things imagined? Each life is an encyclopedia, a library, an inventory of objects, a series of styles, and everything can be constantly shuffled and reordered in every way conceivable.» - Italo Calvino, Six Memos For the Next Millennium</English>
 		<French>« Qui sommes-nous, qu'est chacun de nous, sinon une combinaison d'expériences, d'informations, de lectures, de rêveries ? Chaque vie est une encyclopédie, une bibliothèque, un inventaire d'objets, un échantillonnage de styles, où tout peut se mêler et se réorganiser de toutes les manières possibles. » - Italo Calvino, Leçons américaines : Six propositions pour le prochain millénaire</French>
 		<German>„Wer sind wir denn, wer ist jeder von uns, wenn nicht eine Kombination von Erfahrungen, Informationen, Lektüren und Phantasien? Jedes Leben ist eine Enzyklopädie, eine Bibliothek, ein Inventar von Objekten, eine Musterkollektion von Stilen, worin alles jederzeit auf jede mögliche Weise neu gemischt und neu geordnet werden kann.“ - Italo Calvino, Sechs Vorschläge für das nächste Jahrtausend</German>
-		<Italian>«Chi siamo noi, chi è ciascuno di noi se non una combinatoria d'esperienza, d'informazioni, di letture, d'immaginazioni? Ogni vita è un'enciclopedia, una biblioteca, un inventario di oggetti, un campionario di stili, dove tutto può essere continuamente rimescolato e riordinato in tutti i modi possibili.» - Italo Calvino, Lezioni americane. Sei proposte per il prossimo millennio</Italian>
+		<Italian>«Chi siamo noi, chi è ciascuno di noi se non una combinazione d'esperienza, d'informazioni, di letture, d'immaginazioni? Ogni vita è un'enciclopedia, una biblioteca, un inventario di oggetti, un campionario di stili, dove tutto può essere continuamente rimescolato e riordinato in tutti i modi possibili.» - Italo Calvino, Lezioni americane. Sei proposte per il prossimo millennio</Italian>
 		<Russian>Кто мы, кто есть каждый из нас, если не сочетание опыта, информации, книг, которые мы прочли, вещей, которые мы воображали? Любая жизнь сродни энциклопедии, библиотеке, инвентарю предметов, ряду стилей. Все можно постоянно перетасовывать и переупорядочивать любыми доступными способами.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1020,6 +1023,7 @@
 		<Spanish>Construcción de maravillas: probabilidad del [BOLD]%d1%%[\BOLD][NEWLINE]</Spanish>
 		<Polish>Ukończenie Cudu: [BOLD]%d1%%[\BOLD] Szans[NEWLINE]</Polish>
 		<Russian>Ñòðîèòåëüñòâî ÷óäà: [BOLD]%d1%%[\BOLD] øàíñ[NEWLINE]</Russian>
+		<Italian>Costruzione della meraviglie: [BOLD]%d1%%[\BOLD] di possibilità[NEWLINE]</Italian><!--Leaders in the pedia-->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_WORKRATE</Tag>
@@ -1029,10 +1033,12 @@
 		<Spanish>Velocidad de trabajo: %d1</Spanish>
 		<Polish>Ocena pracy: %d1</Polish>
 		<Russian>Îöåíêà ðàáîòû: %d1</Russian>
+		<Italian>Tasso di lavoro: %d1</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_PEDIA_NON_COMBAT</Tag>
 		<English>Non-Combat</English>
 		<Russian>Небоевой</Russian>
+		<Italian>Unità non combattente</Italian>
 	</TEXT>
 </Civ4GameText>

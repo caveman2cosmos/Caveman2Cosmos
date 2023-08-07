@@ -21,7 +21,7 @@
 		<English>Can See Demographics</English>
 		<French>Voir données démographiques</French>
 		<German>Demografie sichtbar</German>
-		<Italian>Visione demografica</Italian>
+		<Italian>Puoi vedere la demografica</Italian>
 		<Spanish>Puede ver estadísticas</Spanish>
 	</TEXT>
 	<TEXT>
@@ -53,7 +53,7 @@
 		<English>Foment Unhappiness</English>
 		<French>Comploter du mécontentement</French>
 		<German>Unzufriedenheit schüren</German>
-		<Italian>Alimenta infelicità</Italian>
+		<Italian>Fomenta infelicità</Italian>
 		<Spanish>Fomentar la infelicidad</Spanish>
 	</TEXT>
 	<TEXT>
@@ -61,7 +61,7 @@
 		<English>The people of %s1 have boycotted %s2!!!</English>
 		<French>Le Peuple de %s1 boycotte %s2!!!</French>
 		<German>Die Einwohner von %s1 haben %s2 boykottiert!!!</German>
-		<Italian>Le persone di %s1 hanno boicottato %s2!!!</Italian>
+		<Italian>Le persone di %s1 hanno boicottato la corporazione %s2!!!</Italian>
 		<Spanish>¡La población de %s1 ha boicoteado %s2!</Spanish>
 		<Russian>Ëþäè %s1 áîéêîòèðîâàëè %s2!!!</Russian>
 	</TEXT>
@@ -145,7 +145,7 @@
 		<English>Will disable the power grid in %s1 for %d2 [NUM2:turn:turns].</English>
 		<French>Désactive l'approvisionnement en électricité dans %s1 pour %d2 [NUM2:turn:turns].</French>
 		<German>Unterbricht die Energieversorgung von %s1 für %d2 [NUM2:Runde:Runden].</German>
-		<Italian>Disabilita la rete elettrica %s1 per %d2 [NUM2:turno:turni].</Italian>
+		<Italian>Disabilita la rete elettrica nella città di %s1 per %d2 [NUM2:turno:turni].</Italian>
 		<Spanish>Cortará el suministro de electricidad en %s1 durante %d2 [NUM2:turno:turnos].</Spanish>
 		<Russian>Ïîâðåäèò ýíåðãîñèñòåìó â %s1 for %d2 [NUM2:turn:turns].</Russian>
 	</TEXT>
@@ -154,7 +154,7 @@
 		<English>Will remove %s1 from %s2.</English>
 		<French>Faire disparaître la religion %s1 de %s2.</French>
 		<German>Vernichtet den Glauben an die Religion %s1 in %s2.</German>
-		<Italian>Rimuoverà %s1 da %s2.</Italian>
+		<Italian>Rimuoverà la religione %s1 dalla città di %s2.</Italian>
 		<Spanish>Eliminará [NUM1:el:la:los:las] %s1 de %s2.</Spanish>
 		<Russian>Óäàëèò %s1 èç %s2.</Russian>
 	</TEXT>
@@ -172,7 +172,7 @@
 		<English>Will sabotage all of %s1's research in %s2</English>
 		<French>Saboter les recherches de %s2 à %s1</French>
 		<German>Vernichtet alle Forschungsergebnisse der %s1 im Bereich %s2</German>
-		<Italian>Sabota tutta la ricerca di %s1 verso %s2</Italian>
+		<Italian>Sabota tutta la ricerca di %s1 nella città di %s2</Italian>
 		<Spanish>Saboteará toda la investigación de %s1 en %s2</Spanish>
 		<Russian>Áóäåò ñàáîòèðîâàíî âñå %s1's èññëåäîâàíèå â %s2</Russian>
 	</TEXT>
@@ -181,7 +181,7 @@
 		<English>Will temporarily increase the war weariness in %s1 by %d2%.</English>
 		<French>Augmente temporairement le mécontentement lié à la guerre de %d2% dans la ville de %s1.</French>
 		<German>Steigert vorübergehend die Kriegsmüdigkeit in %s1 um %d2%.</German>
-		<Italian>Aumenta temporaneamente la stanchezza per la guerra %s1 del %d2%.</Italian>
+		<Italian>Aumenta temporaneamente la stanchezza di guerra nella città di %s1 del %d2%.</Italian>
 		<Spanish>Incrementará temporalmente el hastío bélico en %s1 en un %d2%.</Spanish>
 		<Russian>Âðåìåííî óâåëè÷èò âîåííóþ óñòàëîñòü â %s1 íà %d2%.</Russian>
 	</TEXT>
@@ -190,7 +190,7 @@
 		<English>Citizens in %s1 have begun rioting and looting after a notorious rebel faction killed the city governor in his mansion.</English>
 		<French>Les Citoyens de %s1 se soulèvent et pillent la ville à la suite de l'assassinat du Gouverneur par une faction rebelle.</French>
 		<German>Die Bürger von %s1 haben zu randalieren und zu plündern begonnen, nachdem eine berüchtigte Rebellengruppierung den Stadtverwalter in seiner Villa ermordet hat.</German>
-		<Italian>I cittadini di %s1 hanno cominciato rivolte e saccheggi dopo che un noto leader ribelle ha ucciso il governatore cittadino.</Italian>
+		<Italian>I cittadini di %s1 sono in rivolta e saccheggiano la città dopo che un noto leader ribelle ha ucciso il governatore cittadino.</Italian>
 		<Spanish>Los ciudadanos de %s1 han empezado a causar disturbios y saquear tras el asesinato del gobernador en su mansión por parte de una conocida organización rebelde.</Spanish>
 		<Russian>Ãðàæäàíå â %s1 íà÷àëè áóíòîâàòü è ãðàáèòü ïîñëå òîãî, êàê ïå÷àëüíî èçâåñòíàÿ ôðàêöèÿ ïîâñòàíöåâ óáèëà ãîðîäñêîãî ãóáåðíàòîðà â åãî îñîáíÿêå.</Russian>
 	</TEXT>
@@ -199,7 +199,7 @@
 		<English>Citizens in %s1 have begun rioting and looting after a spy from %s2 framed a notorious rebel faction for the death of the city governor.</English>
 		<French>Les Citoyens de %s1 se soulèvent et pillent la ville à la suite de l'accusation proférée par un espion de %s2 concernant la mort du Gouverneur, apparemment tué par une faction rebelle.</French>
 		<German>Die Bürger in %s1 haben zu randalieren und zu plündern begonnen, nachdem ein Spion aus %s2 eine berüchtigte Rebellengruppierung für den Tod des Stadtverwalters verantwortlich gemacht hat.</German>
-		<Italian>I cittadini di %s1 hanno iniziato rivolte e e saccheggi dopo che una spia di %s2 ha istigato una nota fazione ribelle,incitando alla morte del governatore cittadino.</Italian>
+		<Italian>I cittadini di %s1 sono in rivolta e saccheggiano la città dopo che una spia di %s2 ha incastrato una famigerata fazione ribelle per la morte del governatore della città.</Italian>
 		<Spanish>Los ciudadanos de %s1 han empezado a causar disturbios y saquear después de que un espía de %s2 instigara a una conocida organización rebelde a matar al gobernador.</Spanish>
 		<Russian>Ãðàæäàíå â %s1 íà÷àëè áóíòîâàòü è ãðàáèòü ïîñëå òîãî, êàê øïèîí îò %s2 ñîçäàë ïå÷àëüíî èçâåñòíóþ ôðàêöèþ ïîâñòàíöåâ äëÿ óáèéñòâà ãîðîäñêîãî ãóáåðíàòîðà.</Russian>
 	</TEXT>
@@ -209,6 +209,7 @@
 		<German>Missionen</German>
 		<Spanish>Misiones</Spanish>
 		<Russian>Ìèññèè</Russian>
+		<Italian>Missioni</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_NO_ACTIVE_MISSIONS</Tag>
@@ -231,7 +232,7 @@
 		<English>Remove Corporations</English>
 		<French>Démanteler les Corporations</French>
 		<German>Kapitalgesellschaften vertreiben</German>
-		<Italian>Rimuovi Corporazioni</Italian>
+		<Italian>Rimuovi corporazioni</Italian>
 		<Spanish>Eliminar corporaciones</Spanish>
 		<Russian>Óäàëèòü êîðïîðàöèè</Russian>
 	</TEXT>
@@ -285,7 +286,7 @@
 		<English>The people of %s1 have abandoned their faith in %s2!!!</English>
 		<French>Le Peuple de %s1 a abandonné leur croyance en la religion %s2!!!</French>
 		<German>Die Einwohner von %s1 haben ihren Glauben an die Religion %s2 aufgegeben!!!</German>
-		<Italian>Le persone di %s1 hanno abbandonato la loro fede in %s2!!!</Italian>
+		<Italian>Le persone della città di %s1 hanno abbandonato la loro fede nella religione %s2!!!</Italian>
 		<Spanish>¡La población de %s1 ha abandonado su fé en [NUM2:el:la:los:las] %s2!</Spanish>
 		<Russian>Ëþäè %s1 îêàçàëèñü îò èõ âåðû â %s2!!!</Russian>
 	</TEXT>
@@ -294,7 +295,7 @@
 		<English>The people of %s1 have been tricked by %s2 spies into abandoning their faith in %s3!</English>
 		<French>Le Peuple de %s1, incité par un espion %s2, est en train d'abandonner leur croyance en la religion %s3!</French>
 		<German>Die Einwohner von %s1 wurden von %s2 Spionen hinters Licht geführt und haben daraufhin ihren Glauben an die Religion %s3 aufgegeben!</German>
-		<Italian>Le persone di %s1 sono state convinte da spie %s2 ad abbandonare la loro fede in %s3!</Italian>
+		<Italian>Le persone della città di %s1 sono state convinte da spie %s2 ad abbandonare la loro fede nella religione %s3!</Italian>
 		<Spanish>¡La población de %s1 ha sido engañada por espías %s2:3 para que abandone su fé en [NUM3:el:la:los:las] %s3!</Spanish>
 		<Russian>Ëþäè %s1 áûëè îáìàíóòû %s2 øïèîíàìè â îòêàç îò èõ âåðû â %s3!</Russian>
 	</TEXT>
@@ -303,7 +304,7 @@
 		<English>All of our research in %s1 has been destroyed!</English>
 		<French>Tous nos travaux de recherche à %s1 ont été détruits!</French>
 		<German>Unsere gesamten Forschungsergebnisse im Bereich %s1 wurden vernichtet!</German>
-		<Italian>Tutta la nostra ricerca verso %s1 è stata distrutta!</Italian>
+		<Italian>Tutta la nostra ricerca nella città di %s1 è stata distrutta!</Italian>
 		<Spanish>¡Todas nuestras investigaciones en %s1 han sido destruidas!</Spanish>
 		<Russian>Âñå íàøå èññëåäîâàíèå â %s1 áûëî ðàçðóøåíî!</Russian>
 	</TEXT>
@@ -312,7 +313,7 @@
 		<English>All of our research in %s1 has been destroyed by a %s2 spy!</English>
 		<French>Tous nos travaux de recherche à %s1 ont été détruits par un espion %s2!</French>
 		<German>Unsere gesamten Forschungsergebnisse im Bereich %s1 wurden von einem %s2 Spion vernichtet!</German>
-		<Italian>Tutta la nostra ricerca verso %s1 è stata distrutta da una spia %s2!</Italian>
+		<Italian>Tutta la nostra ricerca nella città di %s1 è stata distrutta da una spia di %s2!</Italian>
 		<Spanish>¡Todas nuestras investigaciones en %s1 han sido destruidas por un espía %s2!</Spanish>
 		<Russian>Âñå íàøå èññëåäîâàíèå â %s1 áûëî ðàçðóøåíî øïèîíîì %s2!</Russian>
 	</TEXT>
@@ -321,7 +322,7 @@
 		<English>Can See Research</English>
 		<French>Peut voir l'état des recherches</French>
 		<German>Forschung sichtbar</German>
-		<Italian>Visione ricerche</Italian>
+		<Italian>Puoi vedere la ricerca in corso</Italian>
 		<Spanish>Puede ver investigación</Spanish>
 	</TEXT>
 	<TEXT>
@@ -331,13 +332,14 @@
 		<German>Gegenspionage</German>
 		<Spanish>Contraespionaje</Spanish>
 		<Russian>Øïèîí ïðîòèâ øïèîíà</Russian>
+		<Italian>Spia contro spia</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_SPY_SUCCESS</Tag>
 		<English>Upon completing the mission the %s1_unit has returned safely to %s2_city.</English>
 		<French>Après avoir complété la mission, [NUM1:votre:votre:vos:vos] %s1_unit [NUM1:est revenu sain et sauf:est revenue saine et sauve:sont revenus sains et saufs:sont revenues saines et sauves] à %s2_city.</French>
 		<German>Nach Beendigung der Mission [NUM1:ist:sind] [NUM1:der:die:das:die:die:die] %s1:1_unit sicher nach %s2_city zurückgekehrt.</German>
-		<Italian>Dopo aver completato la missione, l'unità %s1_unit è tornata sana e salva a %s2_city.</Italian>
+		<Italian>Dopo aver completato la missione, l'unità %s1_unit è tornata sana e salva alla città di %s2_city.</Italian>
 		<Spanish>Tras completar la misión, [NUM1:el:la:los:las] %s1_unit [NUM1:ha:ha:han:han] vuelto a salvo a %s2_city.</Spanish>
 		<Russian>Âûïîëíèâ ïîðó÷åíèå, %s1_unit áëàãîïîëó÷íî âåðíóëñÿ â ãîðîä %s2_city.</Russian>
 	</TEXT>
@@ -346,7 +348,7 @@
 		<English>Steal Treasury</English>
 		<French>Voler le trésor</French>
 		<German>Schatzkammer ausrauben</German>
-		<Italian>Ruba tesoro</Italian>
+		<Italian>Ruba tesoro nazionale nemico</Italian>
 		<Spanish>Robar tesoro</Spanish>
 	</TEXT>
 	<TEXT>
@@ -354,7 +356,7 @@
 		<English>Influence Civics</English>
 		<French>Influencer les civils</French>
 		<German>Staatsform beeinflussen</German>
-		<Italian>Influenza forme di governo</Italian>
+		<Italian>Influenza forma di governo</Italian>
 		<Spanish>Influir en principios</Spanish>
 	</TEXT>
 	<TEXT>
@@ -379,7 +381,7 @@
 		<English>A %s1_ThingName was assassinated by enemy infiltrators at %s2_CityName!</English>
 		<French>Un %s1_ThingName a été assassiné par des ennemis infiltrés à %s2_CityName!</French>
 		<German>Ein %s1_ThingName wurde von feindlichen Eindringlingen in %s2_CityName ermordet!</German>
-		<Italian>[NUM1:Un:Una] %s1_ThingName [NUM1:è stato assassinato:è stata assassinata] da infiltrati nemici vicino %s2_CityName!</Italian>
+		<Italian>[NUM1:Un:Una] %s1_ThingName [NUM1:è stato assassinato:è stata assassinata] da infiltrati nemici nella città di %s2_CityName!</Italian>
 		<Spanish>¡[NUM1:Un:Una:Unos:Unas] %s1_ThingName [NUM1:ha:ha:han:han] sido asesinad[NUM2:o:a:os:as] por infiltrados enemigos en %s2_CityName!</Spanish>
 		<Russian>A %s1_ThingName áûëî óíè÷òîæåíî âðàæåñêèìè øïèîíàìè â ãîðîäå %s2_CityName!</Russian>
 	</TEXT>
@@ -424,7 +426,7 @@
 		<English>A dirty bomb was used, radioactive fallout has covered the area!</English>
 		<French>Une bombe nucléaire a été utilisée, un nuage radioactif a recouvert la zone!</French>
 		<German>Eine niederträtige Bombe wurde benutzt, radioaktiver Niederschlag bedeckt hat das Gebiet!</German>
-		<Italian>È stata usata una "bomba sporca", l'area è ricoperta da scorie radioattive!</Italian>
+		<Italian>È stata usata una "bomba sporca", l'area è stata ricoperta da scorie radioattive!</Italian>
 		<Spanish>Una bomba sucia ha sido detonada, ¡recubriendo la zona de Lluvia radiactiva!</Spanish>
 		<Russian>Ãðÿçíàÿ áîìáà áûëà èñïîëüçîâàíà, ïîêðûâ îêðåñòíóþ òåððèòîðèþ çàãðÿçíåíèÿìè!</Russian>
 	</TEXT>
@@ -442,7 +444,7 @@
 		<English>Anti-War Rallies in %s1, incited by a %s2 spy, have been causing trouble for local officials.</English>
 		<French>Les Pacifistes se rassemblent dans %s1, incités par un espion %s2, et engendrent des troubles que les autorités locales peinent à contrôler.</French>
 		<German>Antikriegskundgebungen in %s1, ausgelöst von einem %s2 Spion, haben der Stadtverwaltung Probleme verursacht.</German>
-		<Italian>Le proteste pacifiste %s1, incitate da una spia %s2, hanno causato problemi alle autorità locali.</Italian>
+		<Italian>Le proteste pacifiste nella cittÀ di %s1, incitate da una spia di %s2, hanno causato problemi alle autorità locali.</Italian>
 		<Spanish>Unas protestas pacifistas en %s1, incitadas por un espía %s2, han estado causando problemas a las autoridades locales.</Spanish>
 		<Russian>Àíòèâîåííûå âûñòóïëåíèÿ â %s1, ïîäñòðåêàåìîì øïèîíîì %s2, äîñòàâëÿëè íåïðèÿòíîñòè ìåñòíûì ÷èíîâíèêàì.</Russian>
 	</TEXT>

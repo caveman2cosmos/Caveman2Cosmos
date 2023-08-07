@@ -3,13 +3,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_FEATUREHELP_NO_BONUS</Tag>
 		<English>[NEWLINE][ICON_BULLET]No bonus on plots with this feature.</English>
+		<Italian>[NEWLINE][ICON_BULLET]Nessun bonus su caselle con questo miglioramento.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATUREHELP_NO_IMPROVEMENT</Tag>
 		<English>[NEWLINE][ICON_BULLET]Cannot build any improvements on this terrain</English>
 		<French>[NEWLINE][ICON_BULLET]Impossible de construire d'aménagements sur ce terrain</French>
 		<German>[NEWLINE][ICON_BULLET]Landschaftsausbau in dieser Umgebung nicht möglich</German>
-		<Italian>[NEWLINE][ICON_BULLET]Non si possono realizzare miglioramenti su questo terreno</Italian>
+		<Italian>[NEWLINE][ICON_BULLET]Non si possono realizzare miglioramenti su questa casella</Italian>
 		<Spanish>[NEWLINE][ICON_BULLET]En este terreno no se pueden construir mejoras</Spanish>
 		<Polish>[NEWLINE][ICON_BULLET]Nie można wybudować żadnych ulepszeń terenu na tym polu.</Polish>
 		<Russian>[NEWLINE][ICON_BULLET]Íà ýòîì òèïå ìåñòíîñòè íåëüçÿ ñòðîèòü îáúåêòû.</Russian>
@@ -23,11 +24,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>Asteroiden</German>
-		<Italian>
-			<Text>Asteroidi</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Asteroidi</Italian>
 		<Spanish>
 			<Text>Asteroide:Asteroides</Text>
 			<Gender>Male</Gender>
@@ -46,6 +43,7 @@
 		<Tag>TXT_KEY_FEATURE_BAMBOO</Tag>
 		<English>Bamboo</English>
 		<French>Bambou</French>
+		<Italian>Bambù</Italian>
 		<German>Bambus</German>
 		<Spanish>
 			<Text>Bosque de bambú:Bosques de bambú</Text>
@@ -72,11 +70,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Schwarzes Loch</German>
-		<Italian>
-			<Text>Buco nero</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Buco nero</Italian>
 		<Spanish>
 			<Text>Agujero negro:Agujeros negros</Text>
 			<Gender>Male</Gender>
@@ -103,6 +97,7 @@
 		</Spanish>
 		<Polish>Kaktus</Polish>
 		<Russian>Êàêòóñû</Russian>
+		<Italian>Cactus</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_CACTUS_PEDIA</Tag>
@@ -156,6 +151,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<Italian>Segnalatore sulla barriera corallina</Italian>
 		<German>Korallenriff (Leuchtfeuer)</German>
 		<Spanish>
 			<Text>Arrecife de coral con baliza:Arrecifes de coral con baliza</Text>
@@ -173,6 +169,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<Italian>Faro sulla barriera corallina</Italian>
 		<German>Korallenriff (Leuchtturm)</German>
 		<Spanish>
 			<Text>Arrecife de coral con faro:Arrecifes de coral con faro</Text>
@@ -263,11 +260,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Kontamination</German>
-		<Italian>
-			<Text>Scoria radioattiva:Scorie radioattive</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Contaminazione</Italian>
 		<Spanish>
 			<Text>Lluvia radiactiva:Lluvia radiactiva</Text>
 			<Gender>Female</Gender>
@@ -292,11 +285,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>Schwemmland</German>
-		<Italian>
-			<Text>Terreno allagato:Terreni allagati</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Pianure alluvionali</Italian>
 		<Spanish>
 			<Text>Terreno de aluvión:Terrenos de aluvión</Text>
 			<Gender>Male</Gender>
@@ -322,11 +311,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Wald</German>
-		<Italian>
-			<Text>Foresta:Foreste</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Foresta</Italian>
 		<Spanish>
 			<Text>Bosque:Bosques</Text>
 			<Gender>Male</Gender>
@@ -351,6 +336,7 @@
 		</Spanish>
 		<Polish>Starożytny Las</Polish>
 		<Russian>Äðåâíèé ëåñ</Russian>
+		<Italian>Foresta antica</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_FOREST_BURNT</Tag>
@@ -368,6 +354,7 @@
 		</Spanish>
 		<Polish>Spalony Las</Polish>
 		<Russian>Ãîðåëûé ëåñ</Russian>
+		<Italian>Foresta bruciata</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_FOREST_PEDIA</Tag>
@@ -392,6 +379,7 @@
 		</Spanish>
 		<Polish>Nowy Las</Polish>
 		<Russian>Ìîëîäîé ëåñ</Russian>
+		<Italian>Foresta giovane</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_ICE</Tag>
@@ -406,11 +394,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Ghiaccio:Ghiacci</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Ghiaccio</Italian>
 		<Spanish>
 			<Text>Iceberg:Icebergs</Text>
 			<Gender>Male</Gender>
@@ -435,7 +419,7 @@
 			<Gender>Male:Male:Male:Male</Gender>
 			<Plural>0:0:0:0</Plural>
 		</German>
-		<Italian>Smog infetto</Italian>
+		<Italian>Smog infettivo</Italian>
 		<Spanish>
 			<Text>Niebla infecciosa</Text>
 			<Gender>Female</Gender>
@@ -467,11 +451,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Giungla:Giungle</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Giungla</Italian>
 		<Spanish>
 			<Text>Selva:Selvas</Text>
 			<Gender>Female</Gender>
@@ -500,6 +480,7 @@
 		</Spanish>
 		<Polish>Wodorosty</Polish>
 		<Russian>Âîäîðîñëè</Russian>
+		<Italian>Alghe</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_KELP_PEDIA</Tag>
@@ -520,6 +501,7 @@
 		</Spanish>
 		<Polish>Namorzyny</Polish>
 		<Russian>Ìàíãðîâûå äåðåâüÿ</Russian>
+		<Italian>Mangrovie</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_MANGROVE_PEDIA</Tag>
@@ -538,11 +520,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Oase</German>
-		<Italian>
-			<Text>Oasi:Oasi</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Oasi</Italian>
 		<Spanish>
 			<Text>Oasis:Oasis</Text>
 			<Gender>Male</Gender>
@@ -564,7 +542,7 @@
 		<English>Outcrop</English>
 		<French>Pics rocheux</French>
 		<German>Felsbogen</German>
-		<Italian>Arco roccioso</Italian>
+		<Italian>Sporgenza rocciosa</Italian>
 		<Spanish>
 			<Text>Arco de piedra:Arcos de piedra</Text>
 			<Gender>Male</Gender>
@@ -579,6 +557,7 @@
 		<French>Pics rocheux sombres</French>
 		<German>Dunkler Felsbogen</German>
 		<Russian>Останцы</Russian>
+		<Italian>Sporgenza scura</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_OUTCROP_PEDIA</Tag>
@@ -592,7 +571,7 @@
 		<English>Polar Outcrop</English>
 		<French>Pics rocheux polaires</French>
 		<German>Eisbogen</German>
-		<Italian>Arco roccioso polare</Italian>
+		<Italian>Sporgenza polare</Italian>
 		<Spanish>
 			<Text>Arco de piedra polar:Arcos de piedra polares</Text>
 			<Gender>Male</Gender>
@@ -655,11 +634,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Strahlenwolke</German>
-		<Italian>
-			<Text>Nube radioattiva</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Nube radioattiva</Italian>
 		<Spanish>
 			<Text>Nube radiactiva:Nubes radiactivas</Text>
 			<Gender>Female</Gender>
@@ -683,7 +658,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Riff</German>
-		<Italian>Corallo</Italian>
+		<Italian>Scogliera</Italian>
 		<Spanish>
 			<Text>Arrecife:Arrecifes</Text>
 			<Gender>Male</Gender>
@@ -700,6 +675,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<Italian>Segnalatore sugli scogli</Italian>
 		<German>Riff (Leuchtfeuer)</German>
 		<Spanish>
 			<Text>Arrecife con baliza:Arrecifes con baliza</Text>
@@ -725,6 +701,7 @@
 		</Spanish>
 		<Polish>Rafa (Latarnia Morska)</Polish>
 		<Russian>Ðèô (Ìàÿê)</Russian>
+		<Italian>Faro sugli scogli</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_REEF_PEDIA</Tag>
@@ -761,7 +738,7 @@
 		<English>Sea Grass</English>
 		<French>Herbe marine</French>
 		<German>Seegras</German>
-		<Italian>Erba marina</Italian>
+		<Italian>Prateria marina</Italian>
 		<Spanish>
 			<Text>Pradera marina:Praderas marinas</Text>
 			<Gender>Female</Gender>
@@ -788,7 +765,7 @@
 		</French>
 		<German>Sumpf</German>
 		<Italian>
-			<Text>Acquitrino</Text>
+			<Text>Palude</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Italian>
@@ -812,7 +789,7 @@
 		<Tag>TXT_KEY_FEATURE_TAR_PIT</Tag>
 		<English>Tar Pit</English>
 		<French>Fosse de Goudron</French>
-		<Italian>Pozza di catrame</Italian>
+		<Italian>Pozza di pece</Italian>
 		<Spanish>
 			<Text>Foso de alquitrán:Fosos de alquitrán</Text>
 			<Gender>Male</Gender>
@@ -833,7 +810,7 @@
 		<English>Very Tall Grass</English>
 		<French>Très Hautes Herbes</French>
 		<German>Hohes Gras</German>
-		<Italian>Erba alta</Italian>
+		<Italian>Erba molto alta</Italian>
 		<Spanish>
 			<Text>Hierba alta</Text>
 			<Gender>Female</Gender>
@@ -855,11 +832,7 @@
 		<English>Volcano - Active</English>
 		<French>Volcan - Actif</French>
 		<German>Vulkan (aktiv)</German>
-		<Italian>
-			<Text>Vulcano attivo:Vulcani attivi</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Vulcano attivo</Italian>
 		<Polish>Aktywny Wulkan</Polish>
 		<Spanish>
 			<Text>Volcán activo:Volcanes activos</Text>
@@ -873,11 +846,7 @@
 		<English>Volcano - Dormant</English>
 		<French>Volcan - Endormi</French>
 		<German>Vulkan (ruhend)</German>
-		<Italian>
-			<Text>Vulcano inattivo:Vulcani inattivi</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Vulcano inattivo</Italian>
 		<Polish>Uśpiony Wulkan</Polish>
 		<Spanish>
 			<Text>Volcán inactivo:Volcanes inactivos</Text>
