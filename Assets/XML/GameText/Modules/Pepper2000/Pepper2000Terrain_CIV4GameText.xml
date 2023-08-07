@@ -6,7 +6,7 @@
 		<French>Naine Bleue</French>
 		<Russian>Ãîëóáîé êàðëèê</Russian>
 		<Italian>Nana blu</Italian>
-  </TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_BLUE_DWARF_PEDIA</Tag>
 		<English>A blue dwarf star</English>
@@ -58,7 +58,7 @@
 		<French>Planète Chthonien</French>
 		<Russian>Õòîíè÷åñêàÿ ïëàíåòà</Russian>
 		<Italian>Pianeta ctonio</Italian>
-  </TEXT>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_CHTHONIAN_PLANET_PEDIA</Tag>
 		<English>A chthonian planet</English>

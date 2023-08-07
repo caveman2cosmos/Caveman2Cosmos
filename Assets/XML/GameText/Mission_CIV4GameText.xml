@@ -1025,7 +1025,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SENTRY_LAND_UNITS_HELP</Tag>
-		<English>The unit remains inactive until an enemy land unit enters its visibility range.</English>
+		<English>The unit remains inactive until an enemy land unit enters its vision range.</English>
 		<French>L'unité reste inactive tant qu'aucune unité terrestre ennemie ne pénètre pas dans son champ de vision.</French>
 		<German>Einheit in den Wachmodus versetzen. Die Einheit wird erst wieder aktiv, wenn eine feindliche Landeinheit ihr Sichtfeld betritt.</German>
 		<Italian>[NEWLINE]Unità inattiva finché un'unità terrestre nemica non entra nel suo raggio di visibilità.</Italian>
@@ -1045,7 +1045,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SENTRY_NAVAL_UNITS_HELP</Tag>
-		<English>The unit remains inactive until an enemy naval unit enters its visibility range.</English>
+		<English>The unit remains inactive until an enemy naval unit enters its vision range.</English>
 		<French>L'unité reste inactive tant qu'aucune unité navale ennemie ne pénètre pas dans son champ de vision.</French>
 		<German>Einheit in den Wachmodus versetzen. Die Einheit wird erst wieder aktiv, wenn eine feindliche Marineeinheit ihr Sichtfeld betritt.</German>
 		<Italian>[NEWLINE]Unità inattiva finché un'unità navale nemica non entra nel suo raggio di visibilità.</Italian>
@@ -1065,7 +1065,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SENTRY_WHILE_HEAL_HELP</Tag>
-		<English>The unit remains inactive until it reaches full strength or an enemy unit enters its visibility range.</English>
+		<English>The unit remains inactive until it reaches full strength or an enemy unit enters its vision range.</English>
 		<French>L'unité reste inactive jusqu'à ce qu'elle soit guérie, et tant qu'aucune unité ennemie ne pénètre pas dans son champ de vision.</French>
 		<German>Lässt eine Einheit inaktiv bleiben, bis sie vollständig geheilt ist oder sich eine feindliche Einheit nähert</German>
 		<Italian>[NEWLINE]L'unità rimane inattiva finché non ritorna a piena forza o un'unità nemica non entra nel suo raggio di visibilità.</Italian>

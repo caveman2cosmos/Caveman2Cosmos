@@ -164,7 +164,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ADVANCED_START_POINTS</Tag>
-    <English>Custom Start Base Points:</English>
+		<English>Custom Start Base Points:</English>
 		<French>Points de base du démarrage avancé :</French>
 		<German>Basispunkte für Fortgeschrittenen Start:</German>
 		<Italian>Punti base per l'avvio avanzato:</Italian>
@@ -1625,8 +1625,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_CUSTOM_GAME</Tag>
-    <English>Full Game</English>
-    <Italian>Gioco completo</Italian>
+		<English>Full Game</English>
+		<Italian>Gioco completo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_CUSTOM_SCENARIO</Tag>
@@ -2308,7 +2308,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_PLAY_NOW</Tag>
-    <English>Simple Game</English>
+		<English>Simple Game</English>
 		<French>Jouer</French>
 		<German>Jetzt spielen!</German>
 		<Italian>Partita veloce</Italian>
@@ -2380,10 +2380,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_SCENARIO</Tag>
-    <English>Scenario</English>
-    <French>Scénario</French>
-    <German>Szenario</German>
-    <Spanish>Escenario</Spanish>
+		<English>Scenario</English>
+		<French>Scénario</French>
+		<German>Szenario</German>
+		<Spanish>Escenario</Spanish>
 		<Italian>Gioca uno scenario</Italian>
 	</TEXT>
 	<TEXT>
@@ -4322,7 +4322,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_AS_VISIBILITY</Tag>
-    <English>Vision</English>
+		<English>Vision</English>
 		<French>Affichage</French>
 		<German>Sicht</German>
 		<Italian>Visibilità</Italian>
