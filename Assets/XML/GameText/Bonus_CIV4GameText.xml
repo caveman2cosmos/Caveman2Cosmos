@@ -3766,7 +3766,7 @@
 		<Russian>Âåðòîëåò - ðàçíîâèäíîñòü ðîòîðíûõ ëåòàòåëüíûõ àïïàðàòîâ, â êîòîðûõ ïîäúåì è è òÿãà îáåñïå÷åíû ëîïàñòÿìè. Ýòî ïîçâîëÿåò âåðòîëåòó âçëåòàòü è ñàäèòüñÿ âåðòèêàëüíî, çàâèñàòü è ëåòàòü è âïåðåä, è íàçàä è âáîê. Ýòè àòðèáóòû ïîçâîëÿþò âåðòîëåòàì èñïîëüçîâàòüñÿ â ïåðåíàñåëåííûõ èëè èçîëèðîâàííûõ ðàéîíàõ, ãäå ñàìîëåòàì íåäîñòàåò ìåñòà äëÿ âçëåòà èëè ïîñàäêè. Âîçìîæíîñòü ïàðèòü ýôôåêòèâíî â òå÷åíèå äëèòåëüíûõ ïåðèîäîâ âðåìåíè ïîçâîëÿåò âåðòîëåòó óñïåøíî âûïîëíÿòü çàäà÷è ñàìîëåòîâ è äðóãèõ âèäîâ ëåòàòåëüíûõ àïïàðàòîâ, íå ñïîñîáíûõ ê èõ èñïîëíåíèþ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HELIUM3</Tag>
+		<Tag>TXT_KEY_BONUS_HELIUM_3</Tag>
 		<English>Helium-3</English>
 		<French>Hélium 3</French>
 		<Italian>Elio-3</Italian>
@@ -3775,7 +3775,7 @@
 		<Russian>Ãåëèé-3</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HELIUM3_PEDIA</Tag>
+		<Tag>TXT_KEY_BONUS_HELIUM_3_PEDIA</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Helium-3[COLOR_REVERT] is a light, non-radioactive isotope of helium with two protons and one neutron discovered in 1939. Other than protium (ordinary hydrogen), Helium-3 is the only stable isotope of any element with more protons than neutrons. Much speculation has been made over the possibility of helium-3 as a future energy source: the fusion of helium-3 atoms releases large amounts of energy without causing the surrounding material to become radioactive, although the temperatures required are much higher than in traditional fusion reactions. The abundance of Helium-3 is greater on the Moon and, on a larger scale, on Jupiter and Saturn.</English>
 		<Italian>L'[COLOR_HIGHLIGHT_TEXT]elio-3[COLOR_REVERT] è un isotopo leggero e non radioattivo di elio con due protoni e un neutrone scoperto nel 1939. Oltre al protio (idrogeno ordinario), l'elio-3 è l'unico isotopo stabile di qualsiasi elemento con più protoni dei neutroni. Si è discusso molto sul rendere l'elio-3 come una futura fonte di energia: la fusione degli atomi di elio-3 libera grandi quantità di energia senza far diventare radioattivo il materiale circostante, sebbene le temperature richieste siano molto più elevate rispetto alla fusione tradizionale. L'abbondanza di elio-3 è maggiore sulla Luna e, su scala più ampia, su Giove e Saturno.</Italian>
 		<Russian>Гелий-3 - легкий, не радиоактивный изотоп гелия с двумя протонами и одним нейтроном, открытый в 1939 году. Помимо протия (обычного водорода), гелий-3 является единственным стабильным изотопом любого элемента, имеющего болеше протонов, чем нейтронов. Было сделано много предположений о возможности использования гелия-3 в качестве источника энергии в будущем: синтез атомов гелия-3 высвобождает большое количество энергии, не вызывая превращения окружающего материала в радиоактивный, хотя требуемые температуры намного выше, чем при традиционной реакции синтеза. Богатых месторождений гелия-3 особенно много на Луне и, в большем масштабе, на Юпитере и Сатурне.</Russian>
@@ -6135,7 +6135,7 @@
 		<Italian>Cittadino nepalese</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_NETS</Tag>
+		<Tag>TXT_KEY_BONUS_FISHING_NETS</Tag>
 		<English>Fishing Nets</English>
 		<French>Filets de pêche</French>
 		<Italian>Rete da pesca</Italian>
@@ -6143,7 +6143,7 @@
 		<Russian>Ñåòè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_NETS_PEDIA</Tag>
+		<Tag>TXT_KEY_BONUS_FISHING_NETS_PEDIA</Tag>
 		<English>A fishing net or fishnet is a net that is used for fishing. Fishing nets are meshes usually formed by knotting a relatively thin thread. Modern nets are usually made of artificial polyamides like nylon, although nets of organic polyamides such as wool or silk thread were common until recently and are still used.</English>
 		<Italian>Una rete da pesca è un dispositivo a maglie utilizzato per catturare i pesci; vengono realizzate legando in modo più o meno fitto i fili. Le reti moderne sono fatte in materiali sintetici come il nylon, anche se vengono ancora usate reti in lana o in seta.</Italian>
 		<Russian>Рыболовная сеть или невод - это сеть, которая используется для рыбной ловли. Рыболовные сети - это сетки, которые обычно образуются путем завязывания относительно тонкой нити. Современные сети обычно изготавливаются из искусственных полиамидов, таких как нейлон, хотя сети из органических полиамидов, таких как шерсть или шелковая нить, были распространены до недавнего времени и используются до сих пор.</Russian>
@@ -6482,7 +6482,6 @@
 		<English>Orang Asli</English>
 		<Russian>Îðàíã-Àñëè</Russian>
 		<Italian>Cittadino orang asli</Italian>
-
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ORGANIC_COMPUTERS</Tag>
@@ -6938,7 +6937,7 @@
 		<Russian>Ôàðìàöåâòè÷åñêèå ïðåïàðàòû, íàçûâàåìûå òàêæå â îáèõîäå ëåêàðñòâàìè, ìîæíî óñëîâíî îïðåäåëèòü êàê ëþáîå õèìè÷åñêîå âåùåñòâî èëè ïðîäóêò, âêëþ÷àþùèé òàêîâûå - ïðåäíàçíà÷åííûå äëÿ èñïîëüçîâàíèÿ â ìåäèöèíñêîé äèàãíîñòèêè, ëå÷åíèè, ïðîôèëàêòèêå èëè ïðåäîòâðàùåíèÿ áîëåçíè. Ñëîâî ôàðìàöåâòè÷åñêîé ïðîèñõîäèò îò ãðå÷åñêîãî ñëîâà Pharmakeia. Â ñîâðåìåííîé òðàíñëèòåðàöèè Pharmakeia - ýòî Ôàðìàöèÿ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_PHILISTINE</Tag>
+		<Tag>TXT_KEY_BONUS_PHILISTINES</Tag>
 		<English>Philistines</English>
 		<Italian>Cittadino filisteo</Italian>
 		<Russian>Ôèëèñòèìëÿíå</Russian>
@@ -7464,7 +7463,7 @@
 		<Italian>Cittadino qing</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_QUANTONIUM_CRYSTAL</Tag>
+		<Tag>TXT_KEY_BONUS_QUANTONIUM_CRYSTALS</Tag>
 		<English>Quantonium Crystals</English>
 		<French>Cristaux de quantonium</French>
 		<Italian>Cristallo di quantonio</Italian>
@@ -7473,7 +7472,7 @@
 		<Russian>Êâàíòîíèóì</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_QUANTONIUM_CRYSTAL_PEDIA</Tag>
+		<Tag>TXT_KEY_BONUS_QUANTONIUM_CRYSTALS_PEDIA</Tag>
 		<English>A quantonium crystal is a powerful radioactive energy crystal that can fuel spaceships. It also has the significant contraindication of turning humans into giants.</English>
 		<Italian>Un cristallo di quantonio è un potente cristallo di energia radioattiva che può alimentare astronavi. Ha anche la significativa controindicazione di trasformare gli umani in giganti.</Italian>
 		<Russian>Квантовый кристалл - уникальная кристаллическая структура делает этот ресурс бесценным для науки и промышленности.</Russian>
