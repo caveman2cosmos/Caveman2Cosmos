@@ -85,7 +85,7 @@
 		<German>veraltet</German>
 		<Polish>Przestarzałe</Polish>
 		<Russian>Óñòàðåâøèé</Russian>
-		<Italian>Decade</Italian>
+		<Italian>Inattívo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_BONUS_TRADE</Tag>
@@ -628,7 +628,7 @@
 		<Spanish>Subtipos de combate</Spanish>
 		<Polish>Typy Walki</Polish>
 		<Russian>Âèäû ñðàæåíèé</Russian>
-		<Italian>Sottotipo</Italian>
+		<Italian>Sottotipi di combattimento</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_TECH</Tag>
