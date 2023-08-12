@@ -752,7 +752,7 @@
 		<French>[ICON_BULLET]%s1_Change%% Incidiosité</French>
 		<German>[ICON_BULLET]Hinterlist: %s1_Change%%</German>
 		<Russian>[ICON_BULLET]%s1_Change%% к беззаконию</Russian>
-    	<Italian>[ICON_BULLET]Insidiosità %s1_Change%%</Italian>
+		<Italian>[ICON_BULLET]Insidiosità %s1_Change%%</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_INSTIGATE2_SPY</Tag>
@@ -806,7 +806,7 @@
 		<English>[ICON_BULLET]%s1_Change%% Investigation</English>
 		<German>[ICON_BULLET]%s1_Change%% Ermittlungen</German>
 		<Russian>[ICON_BULLET]%s1_Change%% к Расследованию</Russian>
-    	<Italian>[ICON_BULLET]Investigazione %s1_Change%%</Italian>
+		<Italian>[ICON_BULLET]Investigazione %s1_Change%%</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_KNOCKBACK</Tag>
@@ -1684,7 +1684,7 @@
 		<Spanish>[ICON_BULLET]+%d1_Change%% contro barbari non-animali</Spanish>
 		<Polish>[ICON_BULLET]%D1_Change%% przeciwko nie-zwierzęcym Barbarzyńcom</Polish>
 		<Russian>[ICON_BULLET]+%d1_Change%% против варваров</Russian>
-    	<Italian>[ICON_BULLET]Contro barbari non amimali +%d1_Change%%</Italian>
+		<Italian>[ICON_BULLET]Contro barbari non amimali +%d1_Change%%</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_WEAKEN</Tag>
