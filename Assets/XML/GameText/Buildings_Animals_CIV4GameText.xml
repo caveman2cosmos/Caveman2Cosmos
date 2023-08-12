@@ -449,7 +449,7 @@
 		<Tag>TXT_KEY_BUILDING_DONKEY_BREEDER</Tag>
 		<English>Donkey Breeder</English>
 		<French>Éleveur d'ânes</French>
-		<Italian>Allevatore di asini</Italian>
+		<Italian>Allevamento di asini</Italian>
 		<Russian>Îñëèíûé ïèòîìíèê</Russian>
 	</TEXT>
 	<TEXT>
@@ -3237,7 +3237,7 @@
 		<Tag>TXT_KEY_BUILDING_HORSE_BREEDER</Tag>
 		<English>Horse Breeder</English>
 		<French>Éleveur de chevaux</French>
-		<Italian>Allevatore di cavalli</Italian>
+		<Italian>Allevamento di cavalli</Italian>
 		<Russian>Ëîøàäèíûé ïèòîìíèê</Russian>
 	</TEXT>
 	<TEXT>
@@ -3322,7 +3322,7 @@
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_DONKEY</Tag>
 		<English>Animal Trainer (Donkey)</English>
 		<French>Elevage de Mules</French>
-		<Italian>Addestramento di muli</Italian>
+		<Italian>Addestratore di muli</Italian>
 		<Polish>Treser Mułów</Polish>
 		<Russian>Äðåññ. ìóëîâ</Russian>
 	</TEXT>

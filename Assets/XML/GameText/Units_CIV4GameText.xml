@@ -657,7 +657,7 @@
 		<English>[ICON_BULLET]%D1%% chance to Capture.</English>
 		<French>[ICON_BULLET]%D1%% de chances de capturer.</French>
 		<German>[ICON_BULLET]Gefangennahme: %D1%%</German>
-		<Italian>[ICON_BULLET]%D1%% chance di catturare.</Italian>
+		<Italian>[ICON_BULLET]Possibilità di catturare un'unità nemica %D1%%</Italian>
 		<Polish>[ICON_BULLET]%D1%% szansy na Przejęcie.</Polish>
 		<Russian>[ICON_BULLET]%D1%% øàíñîâ çàõâàòèòü.</Russian>
 	</TEXT>
@@ -666,7 +666,7 @@
 		<English>[ICON_BULLET]%D1%% chance to avoid Capture.</English>
 		<French>[ICON_BULLET]%D1%% de chances d'éviter la Capture.</French>
 		<German>[ICON_BULLET]Gefangennahme entgehen: %D1%%</German>
-		<Italian>[ICON_BULLET]%D1%% chance di sfuggire alla cattura.</Italian>
+		<Italian>[ICON_BULLET]%D1%% di possibilità di sfuggire alla cattura.</Italian>
 		<Polish>[ICON_BULLET]%D1%% szansy na uniknięcia Przejęcia.</Polish>
 		<Russian>[ICON_BULLET]%D1%% øàíñîâ èçáåæàòü çàõâàòà.</Russian>
 	</TEXT>
@@ -4379,6 +4379,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Ãðóïïà ëþäåé</Russian>
+		<Italian>Comitiva ancestrale</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BANDEIRANTE_PEDIA</Tag>

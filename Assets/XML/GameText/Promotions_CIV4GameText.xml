@@ -180,7 +180,7 @@
 		<English>[ICON_BULLET]%D1_Change%% modifier to Attack</English>
 		<French>[ICON_BULLET]%D1_Change%% Modif. en Attaque</French>
 		<German>[ICON_BULLET]%D1_Change%% Angriff</German>
-		<Italian>[ICON_BULLET]%D1_Change%% all'attacco</Italian>
+		<Italian>[ICON_BULLET]Attacco %D1_Change%%</Italian>
 		<Polish>[ICON_BULLET]%D1_Change%% do Modyfikatora Ataku</Polish>
 		<Russian>[ICON_BULLET]%D1_Change%% к атаке</Russian>
 	</TEXT>
@@ -401,7 +401,7 @@
 		<English>[ICON_BULLET]%D1_Change%% modifier to Defense</English>
 		<French>[ICON_BULLET]%D1_Change%% Modif. en Défense</French>
 		<German>[ICON_BULLET]%D1_Change%% Verteidigung</German>
-		<Italian>[ICON_BULLET]%D1_Change%% alla difesa</Italian>
+		<Italian>[ICON_BULLET]Difesa %D1_Change%%</Italian>
 		<Polish>[ICON_BULLET]%D1_Change%% do Modyfikatora Obrony</Polish>
 		<Russian>[ICON_BULLET]%D1_Change%% к защите</Russian>
 	</TEXT>
@@ -752,6 +752,7 @@
 		<French>[ICON_BULLET]%s1_Change%% Incidiosité</French>
 		<German>[ICON_BULLET]Hinterlist: %s1_Change%%</German>
 		<Russian>[ICON_BULLET]%s1_Change%% к беззаконию</Russian>
+		<Italian>[ICON_BULLET]Insidiosità %s1_Change%%</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_INSTIGATE2_SPY</Tag>
@@ -805,6 +806,7 @@
 		<English>[ICON_BULLET]%s1_Change%% Investigation</English>
 		<German>[ICON_BULLET]%s1_Change%% Ermittlungen</German>
 		<Russian>[ICON_BULLET]%s1_Change%% к Расследованию</Russian>
+		<Italian>[ICON_BULLET]Investigazione %s1_Change%%</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_KNOCKBACK</Tag>
@@ -1682,6 +1684,7 @@
 		<Spanish>[ICON_BULLET]+%d1_Change%% contro barbari non-animali</Spanish>
 		<Polish>[ICON_BULLET]%D1_Change%% przeciwko nie-zwierzęcym Barbarzyńcom</Polish>
 		<Russian>[ICON_BULLET]+%d1_Change%% против варваров</Russian>
+		<Italian>[ICON_BULLET]Contro barbari non amimali +%d1_Change%%</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_WEAKEN</Tag>
@@ -1718,7 +1721,7 @@
 		<English>[ICON_BULLET]%D1_Mod%% Withdraw when battle is on [LINK=%s2_Type]%s3_TypeName[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Mod%% de repli lors d'un combat sur: [LINK=%s2_Type]%s3_TypeName[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Mod%% Rückzugswahrscheinlichkeit ([LINK=%s2_Type]%s3_TypeName[\LINK])</German>
-		<Italian>[ICON_BULLET]%D1_Mod%% alla Ritirata quando la battaglia è [LINK=%s2_Type]%s3_TypeName[\LINK]</Italian>
+		<Italian>[ICON_BULLET]Ritirata su caselle [LINK=%s2_Type]%s3_TypeName[\LINK] %D1_Mod%%</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod%% Withdraw contra when battle is on [LINK=%s2_Type]%s3_TypeName[\LINK]</Spanish>
 		<Polish>[ICON_BULLET]%D1_Mod%% szansy uciekczki jeśli walka odbywa się na [LINK=%s2_Type]%s3_TypeName[\LINK]</Polish>
 		<Russian>[ICON_BULLET]%D1_Mod%% шанса отступить, если бой идет в [LINK=%s2_Type]%s3_TypeName[\LINK]</Russian>

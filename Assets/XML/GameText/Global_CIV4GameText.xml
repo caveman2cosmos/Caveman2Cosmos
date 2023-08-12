@@ -19482,7 +19482,7 @@
 		<English>Hunting Kill</English>
 		<French>Tuer la proie</French>
 		<German>Jagdbeute erlegen</German>
-		<Italian>Uccisione di caccia</Italian>
+		<Italian>uccisione nella caccia</Italian>
 		<Spanish>Presa de caza</Spanish>
 		<Polish>Zabij</Polish>
 		<Russian>Óáèéñòâî íà îõîòå</Russian>
@@ -19571,7 +19571,7 @@
 		<English>Subdue Animal</English>
 		<French>Apprivoiser l'Animal</French>
 		<German>Tier einfangen</German>
-		<Italian>Addomestica l'animale</Italian>
+		<Italian>addomesticazione animali</Italian>
 		<Spanish>Domar animal</Spanish>
 		<Polish>Oswój</Polish>
 		<Russian>Ïðèðó÷åííîå æèâîòíîå</Russian>
@@ -19852,7 +19852,7 @@
 		<English>Upgrades To</English>
 		<French>S'améliore en :</French>
 		<German>Verbessert sich zu</German>
-		<Italian>Migliora in</Italian>
+		<Italian>Si modernizza in</Italian>
 		<Spanish>Se moderniza a</Spanish>
 	</TEXT>
 	<TEXT>
@@ -21666,7 +21666,7 @@
 		<English>[ICON_BULLET]%D1_Bonus%% City Attack</English>
 		<French>[ICON_BULLET]Attaque de ville %D1_Bonus%%</French>
 		<German>[ICON_BULLET]%D1_Bonus%% Stadtangriff</German>
-		<Italian>[ICON_BULLET]%D1_Bonus%% di attacco verso le città</Italian>
+		<Italian>[ICON_BULLET]Attacco alle città %D1_Bonus%%</Italian> 
 		<Spanish>[ICON_BULLET]%D1_Bonus%% al atacar ciudades</Spanish>
 	</TEXT>
 	<TEXT>
@@ -21674,7 +21674,7 @@
 		<English>[ICON_BULLET]%D1_Bonus%% City Defense</English>
 		<French>[ICON_BULLET]Défense de ville %D1_Bonus%%</French>
 		<German>[ICON_BULLET]%D1_Bonus%% Stadtverteidigung</German>
-		<Italian>[ICON_BULLET]%D1_Bonus%% di difesa in città</Italian>
+		<Italian>[ICON_BULLET]Difesa città %D1_Bonus%%</Italian>
 		<Spanish>[ICON_BULLET]%D1_Bonus%% al defender ciudades</Spanish>
 	</TEXT>
 	<TEXT>
@@ -21706,7 +21706,7 @@
 		<English>[ICON_BULLET]Double Movement in %s1_TerrFeatType</English>
 		<French>[ICON_BULLET]Capacité de mouvement doublée sur : %s1_TerrFeatType</French>
 		<German>[ICON_BULLET]Doppelte Fortbewegung in folgendem Gelände: %s1_TerrFeatType</German>
-		<Italian>[ICON_BULLET]Movimento raddoppiato nelle caselle di %s1_TerrFeatType</Italian>
+		<Italian>[ICON_BULLET]Movimento raddoppiato nelle caselle %s1_TerrFeatType</Italian>
 		<Spanish>[ICON_BULLET]Movimiento doble en %s1:2_TerrFeatType</Spanish>
 	</TEXT>
 	<TEXT>
@@ -21754,7 +21754,7 @@
 		<English>[ICON_BULLET]%D1_Bonus%% Hills Defense</English>
 		<French>[ICON_BULLET]Défense de collines %D1_Bonus%%</French>
 		<German>[ICON_BULLET]%D1_Bonus%% Hügel-Verteidigung</German>
-		<Italian>[ICON_BULLET]%D1_Bonus%% di difesa in collina</Italian>
+		<Italian>[ICON_BULLET]Difesa in collina %D1_Bonus%%</Italian>
 		<Spanish>[ICON_BULLET]%D1_Bonus%% a defender colinas</Spanish>
 	</TEXT>
 	<TEXT>
@@ -26561,6 +26561,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>[ICON_BULLET]%d1_Change Schutz gegen kulturbedingte Revolten</German>
 		<Polish>[ICON_BULLET]%d1_Change obrona przed rewoltą</Polish>
 		<Russian>[ICON_BULLET]%d1_Change ñòàáèëüíîñòè</Russian>
+    <Italian>[ICON_BULLET]Protezione rivolta culturale: %d1_Change</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TEMP_WORK_RATE</Tag>
@@ -29148,10 +29149,12 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	<TEXT>
 		<Tag>TXT_KEY_VALID_FOR</Tag>
 		<English>Valid for:</English>
+    <Italian>Usata da:</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VALID_FOR_NOT</Tag>
 		<English>Invalid for:</English>
+    <Italian>Non usata da:</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VASSAL_DEMAND_TRIBUTE</Tag>
