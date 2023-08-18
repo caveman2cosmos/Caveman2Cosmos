@@ -53,6 +53,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_MEDICAL</Tag>
 		<English>Medical Specialists</English>
+		<Italian>Specialisti medici</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_ESPIONAGE</Tag>
@@ -97,7 +98,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_VOLUME</Tag>
 		<English>Volume of Beings in Unit</English>
-		<Italian>Volume dei componenti dell' unità</Italian>
+		<Italian>Volume dei componenti dell'unità</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_QUALITY</Tag>
@@ -262,7 +263,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_ARMOR_MATERIAL</Tag>
 		<English>Armor Material</English>
-		<Italian>Materiale dell' armatura</Italian>
+		<Italian>Materiale dell'armatura</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_SHIELD_MATERIAL</Tag>

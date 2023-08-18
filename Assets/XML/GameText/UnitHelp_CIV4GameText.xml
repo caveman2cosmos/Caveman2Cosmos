@@ -164,7 +164,7 @@
 		<French>[ICON_BULLET]Dégâts de %s1_UNITCOMBAT: %d2_Mod%%. [COLOR_WARNING_TEXT]Cannot heal here.[COLOR_REVERT]</French>
 		<Polish>[ICON_BULLET]Obrażenia otrzymane %s1_UNITCOMBAT: %d2_Mod%%. [COLOR_WARNING_TEXT]Cannot heal here.[COLOR_REVERT]</Polish>
 		<Russian>[ICON_BULLET]Урон %s1_UNITCOMBAT: %d2_Mod%%. [COLOR_WARNING_TEXT]Cannot heal here.[COLOR_REVERT]</Russian>
-		<Italian>[ICON_BULLET]Danno di %s1_UNITCOMBAT: %d2_Mod%%. Non è possible guarire qui.</Italian>
+		<Italian>[ICON_BULLET]Danno di %s1_UNITCOMBAT: %d2_Mod%%. Non è possibile guarire qui.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_FIRST_STRIKES</Tag>

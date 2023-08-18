@@ -287,7 +287,7 @@
 		<English>Multiple matches found</English>
 		<French>Plusieurs amis ont été trouvés</French>
 		<German>Mehrfache Übereinstimmungen gefunden</German>
-		<Italian>Trovate corrispodenze multiple</Italian>
+		<Italian>Trovate corrispondenze multiple</Italian>
 		<Spanish>Halladas varias coincidencias</Spanish>
 	</TEXT>
 	<TEXT>
@@ -639,7 +639,7 @@
 		<English>%s1_Name has been kicked from the game.</English>
 		<French>%s1_Name a été expulsé(e) de la partie.</French>
 		<German>%s1_Name wurde aus dem Spiel geworfen.</German>
-		<Italian>%s1_Name è stato espluso dalla partita.</Italian>
+		<Italian>%s1_Name è stato espulso dalla partita.</Italian>
 		<Spanish>%s1_Name ha sido expulsado de la partida.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -671,7 +671,7 @@
 		<English>Saving game and removing %s1_Names</English>
 		<French>Sauvegarde et suppression de %s1_Names</French>
 		<German>Spiel wird gespeichert und %s1_Names entfernt</German>
-		<Italian>Salvataggio della partita e esplusione di %s1_Names</Italian>
+		<Italian>Salvataggio della partita e espulsione di %s1_Names</Italian>
 		<Spanish>Guardando partida y eliminando a %s1_Names.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1626,7 +1626,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_CUSTOM_GAME</Tag>
 		<English>Full Game</English>
-		<Italian>Gioco completo</Italian>
+		<Italian>Personalizza partita</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_CUSTOM_SCENARIO</Tag>
@@ -1792,7 +1792,7 @@
 		<English>Failed to join game at </English>
 		<French>Impossible de rejoindre la partie :</French>
 		<German>Spielanschluss fehlgeschlagen bei</German>
-		<Italian>Impossibile unisi alla partita a:</Italian>
+		<Italian>Impossibile unirsi alla partita a:</Italian>
 		<Spanish>Imposible unirse a la partida en </Spanish>
 	</TEXT>
 	<TEXT>
@@ -2399,7 +2399,7 @@
 		<English>Select a Civilization</English>
 		<French>Choisissez une civilisation</French>
 		<German>Zivilisation wÄhlen</German>
-		<Italian>Seleziona una civiltà</Italian>
+		<Italian>SELEZIONA UNA CIVILTÀ</Italian>
 		<Spanish>Seleccionar una civilizaciÓn</Spanish>
 	</TEXT>
 	<TEXT>

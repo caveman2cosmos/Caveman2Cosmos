@@ -276,7 +276,7 @@
 		<Spanish>Elegibilidad garantizada</Spanish>
 		<Polish>Gwarantowane Uprawnienia</Polish>
 		<Russian>Ãàðàíòèðóåìàÿ ïðååìñòâåííîñòü</Russian>
-		<Italian>Eliggibilità garantita</Italian>
+		<Italian>Eleggibilità garantita</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_HIDDEN</Tag>
@@ -573,7 +573,7 @@
 		<Tag>TXT_KEY_WB_TARGET_SCORE</Tag>
 		<English>Target Score: </English>
 		<Russian>Рейтинг цели: </Russian>
-		<Italian>Pungeggio obiettivo</Italian>
+		<Italian>Punteggio obiettivo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_TEAM_DATA</Tag>

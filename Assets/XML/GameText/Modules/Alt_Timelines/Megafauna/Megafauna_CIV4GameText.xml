@@ -337,7 +337,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_MAMMOTH_PEDIA</Tag>
 		<English>The woolly mammoth was the last species of the genus. Most populations of the woolly mammoth in North America and Eurasia, as well all the Columbian mammoths in North America, died out around the time of the last glacial retreat, as part of a mass extinction of megafauna in northern Eurasia and the Americas.</English>
-		<Italian>Il mammut peloso fu l'ultima specie del suo genere. La maggior parte dei mammut pelosi del Nordamerica e dell'Eurasia morirono surante l'ultima era glaciale, facendo parte di un'estinzione di massa della megafauna nell'emisfero settentrionale.</Italian>
+		<Italian>Il mammut peloso fu l'ultima specie del suo genere. La maggior parte dei mammut pelosi del Nordamerica e dell'Eurasia morirono durante l'ultima era glaciale, facendo parte di un'estinzione di massa della megafauna nell'emisfero settentrionale.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAPINGUARI_COMPOUND</Tag>
@@ -404,7 +404,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EFFECT_HERITAGE_RHINOS_HELP</Tag>
 		<English>[ICON_BULLET]This free building is used to enable the building of the special Rhinoceros units in all your cities.</English>
-		<Italian>[ICON_BULLET]Questo edificio gratuito viene utilizzato per consentire la costruzione delle unità speciali rinocertonte in tutte le tue città.</Italian>
+		<Italian>[ICON_BULLET]Questo edificio gratuito viene utilizzato per consentire la costruzione delle unità speciali rinoceronte in tutte le tue città.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERITAGE_RHINOCEROS</Tag>
@@ -422,7 +422,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_RHINOCEROS_PEDIA</Tag>
 		<English>There is no evidence rhinoceros were ever trained for mounted warfare. The [COLOR_BUILDING_TEXT]Rhinoceros Trainer[COLOR_REVERT] building is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
-		<Italian>Non ci sono prove che i rinoceronti siano mai stati addestrati per la guerra. L'[COLOR_BUILDING_TEXT]Allevatore di rinoceronti[COLOR_REVERT] fa parte delle [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
+		<Italian>Non ci sono prove che i rinoceronti siano mai stati addestrati per la guerra. L'[COLOR_BUILDING_TEXT]Allevatore di rinoceronti[COLOR_REVERT] fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologie delle timeline alternative[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERD_ZEBRA</Tag>
@@ -495,7 +495,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BALLISTA_MAMMOTH_PEDIA</Tag>
 		<English>Great mammoths walk in northern tundras, some tribes hunt them for meat, skins and bones. But some hunt them them for beast of war. Capturing one alive and bending is no easy task, but if succeeded. Tribe have a warbeast that can crush down buildings and break a gates of strongholds. Mammoth can be used break down enemy troops.</English>
-		<Italian>I grandi mammut camminano nelle tundre settentrionali, alcune tribù li cacciano per carne, pelli e ossa. Ma alcuni li cacciano per usarli come bestie da guerra. Catturarne uno vivo e piegarlo non è un compito facile, ma se ci riesce la tribù ha una bestia da guerra che può abbattere edifici e rompere i cancelli delle roccaforti. Il mammoth può essere usato per abbattere le truppe nemiche.</Italian>
+		<Italian>I grandi mammut camminano nelle tundre settentrionali, alcune tribù li cacciano per carne, pelli e ossa. Ma alcuni li cacciano per usarli come bestie da guerra. Catturarne uno vivo e piegarlo non è un compito facile, ma se ci riesce la tribù ha una bestia da guerra che può abbattere edifici e rompere i cancelli delle roccaforti. Il mammut può essere usato per abbattere le truppe nemiche.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BEARKNIGHT</Tag>
@@ -512,7 +512,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BEARKNIGHT_PEDIA</Tag>
 		<English>There is no evidence this unit was ever used. It is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
-		<Italian>Non c'è alcuna prova che quest'unità sia mai stata usata in battaglia. Fa parte delle [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
+		<Italian>Non c'è alcuna prova che quest'unità sia mai stata usata in battaglia. Fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologie delle timeline alternative[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BEARRIDER</Tag>
@@ -529,7 +529,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BEARRIDER_PEDIA</Tag>
 		<English>There is no evidence this unit was ever used. It is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
-		<Italian>Non c'è alcuna prova che quest'unità sia mai stata usata in battaglia. Fa parte delle [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
+		<Italian>Non c'è alcuna prova che quest'unità sia mai stata usata in battaglia. Fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologie delle timeline alternative[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BISON_RIDER</Tag>
@@ -546,7 +546,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BISON_RIDER_PEDIA</Tag>
 		<English>There is no evidence this unit was ever used. It is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
-		<Italian>Non c'è alcuna prova che quest'unità sia mai stata usata in battaglia. Fa parte delle [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
+		<Italian>Non c'è alcuna prova che quest'unità sia mai stata usata in battaglia. Fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologie delle timeline alternative[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
 		<Polish>Nie ma dowodów na istnienie tej jednostki, jest ona częścią tzw. [COLOR_HIGHLIGHT_TEXT]technologii alternatywnej ścieżki historycznej[COLOR_REVERT].</Polish>
 	</TEXT>
 	<TEXT>
@@ -577,7 +577,7 @@
 		<Tag>TXT_KEY_UNIT_DEERRIDER_PEDIA</Tag>
 		<English>Equivalent in style to the Horse Rider units. Strongest base early withdrawal - even battle hardened deer can be skittish creatures that can be tough to KEEP in the battle for long but makes them GREAT at wearing down opponents. They'd be perhaps the best at this get in/get out type of strategy so long as they can do some damage during their short fights.[PARAGRAPH:2]There is no evidence this unit was ever used. It is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<French>Équivalent en style aux unités Chevaucheurs (à cheval). Retrait précoce de la base la plus forte - même les cerfs endurcis au combat peuvent être des créatures agiles qui peuvent être difficiles à GARDER dans la bataille pendant longtemps, mais les rendent EXCEPTIONNELS pour épuiser leurs adversaires. Ils seraient peut-être les meilleurs dans ce type de stratégie d'entrée / sortie tant qu'ils peuvent faire des dégâts pendant leurs combats courts.[PARAGRAPH:2]Il n'y a aucune preuve que cette unité ait jamais été utilisée. Il fait partie des [COLOR_HIGHLIGHT_TEXT] technologies de chronologie alternatives [COLOR_REVERT]. Technologies qui auraient pu l'être.</French>
-		<Italian>Equivalente nello stile alle unità cavaliere di cavalli. Ritiro anticipato di base più forte: anche i cervi temprati dalla battaglia possono essere creature ombrose che possono essere difficili da MANTENERE a lungo nella battaglia, ma questo li rende GRANDI nel logorare gli avversari. Sarebbero forse i migliori in questo tipo di strategia di entrata/uscita, purché riescano a fare qualche danno durante i loro brevi combattimenti.[PARAGRAPH:2]Non ci sono prove che questa unità sia mai stata usata. Fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologiealternative[COLOR_REVERT]. Tecnologie che avrebbero potuto essere.</Italian>
+		<Italian>Equivalente nello stile alle unità cavaliere di cavalli. Ritiro anticipato di base più forte: anche i cervi temprati dalla battaglia possono essere creature ombrose che possono essere difficili da MANTENERE a lungo nella battaglia, ma questo li rende GRANDI nel logorare gli avversari. Sarebbero forse i migliori in questo tipo di strategia di entrata/uscita, purché riescano a fare qualche danno durante i loro brevi combattimenti.[PARAGRAPH:2]Non ci sono prove che questa unità sia mai stata usata. Fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologie alternative[COLOR_REVERT]. Tecnologie che avrebbero potuto essere.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DEER_ARCHER</Tag>
@@ -595,7 +595,7 @@
 		<Tag>TXT_KEY_UNIT_DEER_ARCHER_PEDIA</Tag>
 		<English>Equivalent in style to the Horse Archer units. Strongest base early withdrawal - even battle hardened deer can be skittish creatures that can be tough to KEEP in the battle for long but makes them GREAT at wearing down opponents. They'd be perhaps the best at this get in/get out type of strategy so long as they can do some damage during their short fights.[PARAGRAPH:2]There is no evidence this unit was ever used. It is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<French>Équivalent en style aux unités Archers sur cheval. Retrait précoce de la base la plus forte - même les cerfs endurcis au combat peuvent être des créatures agiles qui peuvent être difficiles à GARDER dans la bataille pendant longtemps, mais les rendent EXCEPTIONNELS pour épuiser leurs adversaires. Ils seraient peut-être les meilleurs dans ce type de stratégie d'entrée / sortie tant qu'ils peuvent faire des dégâts pendant leurs combats courts.[PARAGRAPH:2]Il n'y a aucune preuve que cette unité ait jamais été utilisée. Il fait partie des [COLOR_HIGHLIGHT_TEXT]Technologies de chronologie alternatives[COLOR_REVERT]. Technologies qui auraient pu exister.</French>
-		<Italian>Equivalente nello stile alle unità arciere a cavallo. Ritiro anticipato di base più forte: anche i cervi temprati dalla battaglia possono essere creature ombrose che possono essere difficili da MANTENERE a lungo nella battaglia, ma questo li rende GRANDI nel logorare gli avversari. Sarebbero forse i migliori in questo tipo di strategia di entrata/uscita, purché riescano a fare qualche danno durante i loro brevi combattimenti.[PARAGRAPH:2]Non ci sono prove che questa unità sia mai stata usata. Fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologiealternative[COLOR_REVERT]. Tecnologie che avrebbero potuto essere.</Italian>
+		<Italian>Equivalente nello stile alle unità arciere a cavallo. Ritiro anticipato di base più forte: anche i cervi temprati dalla battaglia possono essere creature ombrose che possono essere difficili da MANTENERE a lungo nella battaglia, ma questo li rende GRANDI nel logorare gli avversari. Sarebbero forse i migliori in questo tipo di strategia di entrata/uscita, purché riescano a fare qualche danno durante i loro brevi combattimenti.[PARAGRAPH:2]Non ci sono prove che questa unità sia mai stata usata. Fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologie alternative[COLOR_REVERT]. Tecnologie che avrebbero potuto essere.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DEER_LIGHT</Tag>
@@ -609,7 +609,7 @@
 		<Tag>TXT_KEY_UNIT_DEER_LIGHT_PEDIA</Tag>
 		<English>Equivalent style to the Light Horse Cavalry units. Strongest base early withdrawal - even battle hardened deer can be skittish creatures that can be tough to KEEP in the battle for long but makes them GREAT at wearing down opponents. They'd be perhaps the best at this get in/get out type of strategy so long as they can do some damage during their short fights.[PARAGRAPH:2]There is no evidence this unit was ever used. It is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<French>Style équivalent aux unités de cavaliers légers à cheval. Retrait précoce de la base la plus forte - même les cerfs endurcis au combat peuvent être des créatures agiles qui peuvent être difficiles à GARDER dans la bataille pendant longtemps, mais les rendent EXCEPTIONNELS pour épuiser leurs adversaires. Ils seraient peut-être les meilleurs dans ce type de stratégie d'entrée / sortie tant qu'ils peuvent faire des dégâts pendant leurs combats courts.[PARAGRAPH:2]Il n'y a aucune preuve que cette unité ait jamais été utilisée. Il fait partie des [COLOR_HIGHLIGHT_TEXT]Technologies de chronologie alternatives[COLOR_REVERT]. Technologies qui auraient pu exister.</French>
-		<Italian>Equivalente nello stile alle unità di cavalleria leggera a cavallo. Ritiro anticipato di base più forte: anche i cervi temprati dalla battaglia possono essere creature ombrose che possono essere difficili da MANTENERE a lungo nella battaglia, ma questo li rende GRANDI nel logorare gli avversari. Sarebbero forse i migliori in questo tipo di strategia di entrata/uscita, purché riescano a fare qualche danno durante i loro brevi combattimenti.[PARAGRAPH:2]Non ci sono prove che questa unità sia mai stata usata. Fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologiealternative[COLOR_REVERT]. Tecnologie che avrebbero potuto essere.</Italian>
+		<Italian>Equivalente nello stile alle unità di cavalleria leggera a cavallo. Ritiro anticipato di base più forte: anche i cervi temprati dalla battaglia possono essere creature ombrose che possono essere difficili da MANTENERE a lungo nella battaglia, ma questo li rende GRANDI nel logorare gli avversari. Sarebbero forse i migliori in questo tipo di strategia di entrata/uscita, purché riescano a fare qualche danno durante i loro brevi combattimenti.[PARAGRAPH:2]Non ci sono prove che questa unità sia mai stata usata. Fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologie alternative[COLOR_REVERT]. Tecnologie che avrebbero potuto essere.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FELINE_SUPERIOR</Tag>
@@ -783,7 +783,7 @@
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_MAMMOTH_RIDER</Tag>
 		<English>Neanderthal Mammoth Rider</English>
 		<Russian>Íåàíä. ìàìîíò</Russian>
-		<Italian>Cavaliere di mammut neanderthal</Italian>
+		<Italian>Cavaliere di mammut Neanderthal</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_POLICE_CAT</Tag>

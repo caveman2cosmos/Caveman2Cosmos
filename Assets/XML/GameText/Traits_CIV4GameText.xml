@@ -336,7 +336,7 @@
 		<Tag>TXT_KEY_TRAITHELP_MISSILE_CARGO_SPACE</Tag>
 		<English>[ICON_BULLET]%D1_Amount Cargo Space for all Missile Carrying units.</English>
 		<French>[ICON_BULLET]%D1_Amount Espace de chargement pour toutes les unités de transport de missiles.</French>
-		<Italian>[ICON_BULLET]Spazio di carico %D1_Amounto per tutte le unità di trasporto missili.</Italian><!--Aerial CT trait in the pedia-->
+		<Italian>[ICON_BULLET]Spazio di carico %D1_Amount per tutte le unità di trasporto missili.</Italian><!--Aerial CT trait in the pedia-->
 		<Polish>[ICON_BULLET]%D1_Amount Miejsc dla Rakiet dla jednostek przewożących rakiety.</Polish>
 		<Russian>[ICON_BULLET]%D1_Amount к грузоподъемности для всех ракетоносцев.</Russian>
 	</TEXT>
@@ -799,7 +799,7 @@
 		<English>Ancient Way of the Wild</English>
 		<French>Ancienne Voie de la Nature Sauvage</French>
 		<Russian>«Путь дикости»</Russian>
-		<Italian>Antica tradizione della natura selavaggia</Italian>
+		<Italian>Antica tradizione della natura selvaggia</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WILD_PEDIA</Tag>

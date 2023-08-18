@@ -47,7 +47,7 @@
 		<English>Place [LINK=BONUS_CAMEL]Camel Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Wielbladów</Polish>
 		<Russian>Разводить стадо верблюдов</Russian>
-		<Italian>[LINK=BONUS_CAMEL]Camello[\LINK] (risorsa collocata)</Italian>
+		<Italian>[LINK=BONUS_CAMEL]Cammello[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_COCA</Tag>
@@ -268,7 +268,7 @@
 		<English>Place [LINK=BONUS_PAPAYA]Papaya Bonus[\LINK]</English>
 		<Polish>Zasadz Papaye</Polish>
 		<Russian>Посадить папайя</Russian>
-		<Italian>[LINK=BONUS_PAPAYA]Papaya[\LINK] (risorsa collocata)</Italian>
+		<Italian>[LINK=BONUS_PAPAYA]Papaia[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_PAPYRUS</Tag>
@@ -302,7 +302,7 @@
 		<English>Place [LINK=BONUS_PISTACHIO]Pistachio Bonus[\LINK]</English>
 		<Polish>Zasadz Pistacje</Polish>
 		<Russian>Посадить фисташки</Russian>
-		<Italian>[LINK=BONUS_PISTACHIO]Pistachio[\LINK] (risorsa collocata)</Italian>
+		<Italian>[LINK=BONUS_PISTACHIO]Pistacchio[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_POMEGRANATE</Tag>
@@ -322,7 +322,7 @@
 		<English>Place [LINK=BONUS_POULTRY]Poultry Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Drobiu</Polish>
 		<Russian>Разводить дом. птицу</Russian>
-		<Italian>[LINK=BONUS_POULTRY]Poultry Bonus[\LINK] (risorsa collocata)</Italian>
+		<Italian>[LINK=BONUS_POULTRY]Pollo[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_PRICKLY_PEAR</Tag>
@@ -525,7 +525,7 @@
 		<English>Bonus - Coffee</English>
 		<Polish>Bonus - Kawa</Polish>
 		<Russian>Кава</Russian>
-		<Italian>Caffé</Italian>
+		<Italian>Caffè</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_CORN</Tag>
@@ -718,7 +718,7 @@
 		<English>Bonus - Papaya</English>
 		<Polish>Bonus - Papaya</Polish>
 		<Russian>Папайя</Russian>
-		<Italian>Papaya</Italian>
+		<Italian>Papaia</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_PAPYRUS</Tag>
@@ -731,7 +731,7 @@
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_PARROTS</Tag>
 		<English>Bonus - Parrots</English>
 		<Russian>Попугаи</Russian>
-		<Italian>Parroccheto</Italian>
+		<Italian>Parrocchetto</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_PEYOTE</Tag>
