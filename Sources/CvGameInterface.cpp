@@ -892,7 +892,7 @@ void CvGame::cycleCities(bool bForward, bool bAdd) const
 
 void CvGame::cycleSelectionGroups(bool bClear, bool bForward, bool bWorkers, bool bSetCamera, bool bAllowViewportSwitch) const
 {
-	if (GET_PLAYER(getActivePlayer()).hasIdleCity())
+	if (GET_PLAYER(getActivePlayer()).hasIdleCity() && GET_PLAYER(getActivePlayer()).isForcedCityCycle())
 	{
 		return;
 	}
@@ -1513,10 +1513,31 @@ bool CvGame::canDoControl(ControlTypes eControl) const
 		}
 		case CONTROL_FORCEENDTURN:
 		{
-			if (!gDLL->getInterfaceIFace()->isFocused()
-			&&  !gDLL->getInterfaceIFace()->isInAdvancedStart()
-			&&  !gDLL->getInterfaceIFace()->isDiploOrPopupWaiting()
-			&& !GET_PLAYER(getActivePlayer()).hasIdleCity())
+			CvPlayerAI& playerAct = GET_PLAYER(getActivePlayer());
+			if (playerAct.hasIdleCity())
+			{
+				CvCity* city = playerAct.getIdleCity();
+				if (city)
+				{
+					playerAct.setForcedCityCycle(true);
+
+					if (!getBugOptionBOOL("CityScreen__FullCityScreenOnEmptyBuildQueue", false))
+					{
+						gDLL->getInterfaceIFace()->addSelectedCity(city, false);
+						GC.getCurrentViewport()->bringIntoView(city->getX(), city->getY());
+					}
+					else gDLL->getInterfaceIFace()->selectCity(city, true);
+				}
+				else
+				{
+					FErrorMsg("idleCity == NULL; fixing");
+					playerAct.resetIdleCities();
+				}
+			}
+			else if (
+				!gDLL->getInterfaceIFace()->isFocused()
+			&&	!gDLL->getInterfaceIFace()->isInAdvancedStart()
+			&&	!gDLL->getInterfaceIFace()->isDiploOrPopupWaiting())
 			{
 				return true;
 			}
@@ -1612,7 +1633,31 @@ bool CvGame::canDoControl(ControlTypes eControl) const
 		case CONTROL_ENDTURN:
 		case CONTROL_ENDTURN_ALT:
 		{
-			if (gDLL->getInterfaceIFace()->isEndTurnMessage() && !gDLL->getInterfaceIFace()->isFocused() && !gDLL->getInterfaceIFace()->isInAdvancedStart())
+			CvPlayerAI& playerAct = GET_PLAYER(getActivePlayer());
+			if (playerAct.hasIdleCity())
+			{
+				CvCity* city = playerAct.getIdleCity();
+				if (city)
+				{
+					playerAct.setForcedCityCycle(true);
+
+					if (!getBugOptionBOOL("CityScreen__FullCityScreenOnEmptyBuildQueue", false))
+					{
+						gDLL->getInterfaceIFace()->addSelectedCity(city, false);
+						GC.getCurrentViewport()->bringIntoView(city->getX(), city->getY());
+					}
+					else gDLL->getInterfaceIFace()->selectCity(city, true);
+				}
+				else
+				{
+					FErrorMsg("idleCity == NULL; fixing");
+					playerAct.resetIdleCities();
+				}
+			}
+			else if (
+				gDLL->getInterfaceIFace()->isEndTurnMessage()
+			&& !gDLL->getInterfaceIFace()->isFocused()
+			&& !gDLL->getInterfaceIFace()->isInAdvancedStart())
 			{
 				return true;
 			}

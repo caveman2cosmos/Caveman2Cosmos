@@ -822,6 +822,16 @@ bool CyPlayer::canFoundReligion() const
 	return m_pPlayer->canFoundReligion();
 }
 
+bool CyPlayer::hasIdleCity() const
+{
+	return m_pPlayer->hasIdleCity();
+}
+
+void CyPlayer::setForcedCityCycle(const bool bNewValue)
+{
+	return m_pPlayer->setForcedCityCycle(bNewValue);
+}
+
 int CyPlayer::getNumMilitaryUnits() const
 {
 	return m_pPlayer->getNumMilitaryUnits();
