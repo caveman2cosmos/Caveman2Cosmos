@@ -78,7 +78,7 @@
 		<English>DEAD</English>
 		<French>MORT</French>
 		<German>TOT</German>
-		<Italian>SCOMPARSA</Italian>
+		<Italian>Estinta</Italian>
 		<Spanish>MUERTO</Spanish>
 		<Russian>ÓÁÈÒ</Russian>
 	</TEXT>
@@ -110,10 +110,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_DOUBLE_COMMERCE_COMPLETE</Tag>
 		<English>[ICON_BULLET]%d1 years of history have doubled the %s2_commerce_type</English>
+		<Italian>[ICON_BULLET]%d1 anni di storia hanno raddoppiato il %s2_commerce_type</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_FINANCIAL_ADVISOR_BUILDING_COUNT_AVERAGE</Tag>
 		<English>(%d1 × %s2[ICON_GOLD])</English>
+		<Italian>PROVAPROVA</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_FINANCIAL_ADVISOR_COMMERCE</Tag>
@@ -154,6 +156,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_FINANCIAL_ADVISOR_SPECIALIST_GOLD</Tag>
 		<English>[NEWLINE]%s1[ICON_GOLD]: %s3 (%d2)</English>
+		<Italian>PROVA2</Italian>
 		<Russian>[NEWLINE]%d1[ICON_GOLD]: %s3 (%d2)</Russian>
 	</TEXT>
 	<TEXT>
@@ -3112,7 +3115,7 @@
 		<English>Train Civilian Units Forever</English>
 		<French>Unités Civiles sans fin</French>
 		<German>Unendliche Einheitenproduktion</German>
-		<Italian>Produzione continua Unità Civili</Italian>
+		<Italian>Produzione continua Unità civili</Italian>
 		<Spanish>Producir unidades civiles repetidamdente</Spanish>
 		<Russian>Ïîñòîÿííàÿ ïîäãîòîâêà ãðàæäàíñêèõ þíèòîâ</Russian>
 	</TEXT>
@@ -3474,7 +3477,7 @@
 		<English>Determines the threshold for gold per turn that will display an alert.</English>
 		<French>Détermine le seuil du tribut (en or par tour) qui donne lieu à un avertissement.</French>
 		<German>Bestimmt die Schwelle für die Menge Gold pro Runde, ab der eine Meldung ausgegeben wird</German>
-		<Italian>Determina la quantità d'oro per turno che costituisce il limite per la visualizzazione dell'avviso.</Italian>
+		<Italian>Determina la quantità d'oro a turno che costituisce il limite per la visualizzazione dell'avviso.</Italian>
 		<Spanish>Determina el umbral de la cantidad de oro por turno necesaria para emitir la alerta.</Spanish>
 		<Russian>Îïðåäåëÿåò ïîðîã äëÿ çîëîòà çà õîä êîòîðîå áóäåò îòîáðàæàòü ïðåäóïðåæäåíèå.</Russian>
 	</TEXT>
@@ -3492,7 +3495,7 @@
 		<English>When checked, displays an alert when a civilization can trade a specified amount of gold per turn.</English>
 		<French>Lorsque activé, un avertissement sera affiché quand une civilisation peut échanger ou payer un tribut en or par tour.</French>
 		<German>Lässt eine Warnung erscheinen, wenn eine Zivilisation eine bestimmte Menge Gold pro Runde zum Handeln zur Verfügung hat</German>
-		<Italian>Quando è selezionato, viene visualizzato un avviso quando una Civiltà è disponibile a commerciare un ammontare d'oro per turno predefinito.</Italian>
+		<Italian>Quando è selezionato, viene visualizzato un avviso quando una Civiltà è disponibile a commerciare un ammontare d'oro a turno predefinito.</Italian>
 		<Spanish>Cuando se activa, muestra una alerta cuando una civilización tenga una cierta cantidad de oro por turno disponible para comerciar.</Spanish>
 		<Russian>Êîãäà óñòàíîâëåí, îòîáðàæàåòñÿ ïðåäóïðåæäåíèå êîãäà öèâèëèçàöèÿ ìîæåò òîðãîâàòü îïðåäåëåííûì êîëè÷åñòâîì çîëîòà çà õîä.</Russian>
 	</TEXT>
@@ -3501,7 +3504,7 @@
 		<English>Gold Per Turn</English>
 		<French>Or Par Tour</French>
 		<German>Gold pro Runde</German>
-		<Italian>Oro per turno</Italian>
+		<Italian>Oro a turno</Italian>
 		<Spanish>Oro por turno</Spanish>
 		<Russian>Çîëîòà çà õîä</Russian>
 	</TEXT>
@@ -3861,7 +3864,7 @@
 		<English>Players Can Trade Gold Per Turn to other players.</English>
 		<French>Les Joueurs peuvent utiliser l'or par tour pour les échanges avec les autres joueurs.</French>
 		<German>Spieler können rundenmäßige Zahlungen vereinbaren.</German>
-		<Italian>I giocatori possono commerciare oro per turno con altri giocatori.</Italian>
+		<Italian>I giocatori possono commerciare oro a turno con altri giocatori.</Italian>
 		<Spanish>Los jugadores pueden utilizar su oro por turno sobrante para comerciar.</Spanish>
 		<Russian>Èãðîêè ìîãóò òîðãîâàòü çîëîòîì çà õîä.</Russian>
 	</TEXT>
@@ -3870,7 +3873,7 @@
 		<English>Can Trade Gold Per Turn</English>
 		<French>Peut échanger de l'or par Tour</French>
 		<German>Kann Gold pro Runde anbieten</German>
-		<Italian>Può commerciare oro per turno.</Italian>
+		<Italian>Può commerciare oro a turno.</Italian>
 		<Spanish>Puede enviar oro por turno</Spanish>
 		<Russian>Òîðãîâëÿ çîëîòîì çà õîä</Russian>
 	</TEXT>
@@ -4541,7 +4544,7 @@
 		<English>Maintenance</English>
 		<French>Entretien</French>
 		<German>Laufende Kosten</German>
-		<Italian>Mantenimento</Italian>
+		<Italian>Costi di mantenimento</Italian>
 		<Spanish>Mantenimiento</Spanish>
 		<Russian>Ñîäåðæàíèå</Russian>
 	</TEXT>
@@ -4582,7 +4585,7 @@
 		<English>When checked, displays the individual [ICON_GREATPEOPLE] rate per turn for each type in the hover.</English>
 		<French>Lorsque activé, Affiche dans l'infobulle les taux individuels par tour de [ICON_GREATPEOPLE] pour chaque type.</French>
 		<German>Zeigt im Tooltip die [ICON_GREATPEOPLE]/Runde für jede einzelne Art Große Persönlichkeit an</German>
-		<Italian>Quando è selezionato, nel testo a comparsa di ogni tipo di Grande Personaggio viene mostrato il tasso individuale di [ICON_GREATPEOPLE] per turno.</Italian>
+		<Italian>Quando è selezionato, nel testo a comparsa di ogni tipo di Grande Personaggio viene mostrato il tasso individuale di [ICON_GREATPEOPLE] a turno.</Italian>
 		<Spanish>Cuando se activa, muestra el incremento por turno de [ICON_GREATPEOPLE] para cada tipo cuando se pasa el ratón por encima de la barra de Gran personaje.</Spanish>
 		<Russian>Êîãäà óñòàíîâëåí, îòîáðàæàåò èíäèâèäóàëüíûé òåìï [ICON_GREATPEOPLE] çà õîä äëÿ êàæäîãî òèïà ïðè ïåðåìåùåíèè.</Russian>
 	</TEXT>
@@ -5372,6 +5375,7 @@
 		<German>Jägerangriff</German>
 		<Spanish>Lucha de cazas</Spanish>
 		<Russian>Ïåðåõâàò èñòðåáèòåëÿìè</Russian>
+		<Italian>Ingaggio aereo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__DCM_OPP_FIRE_HOVER</Tag>
@@ -5404,6 +5408,7 @@
 		<German>Fernbombardierung</German>
 		<Spanish>Bombardeo a distancia</Spanish>
 		<Russian>Äèñò. îáñòðåë</Russian>
+		<Italian>Bombardamento a distanza</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVDCM__DYNAMIC_CIV_NAMES_HOVER</Tag>
@@ -6601,6 +6606,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYAIMAXIMUMDIFF_HOVER</Tag>
 		<English>The maximum difficulty that AI can be raised to when playing with Flexible Difficulty</English>
+		<Italian>La massima difficoltà a cui l'IA può essere portata quando si gioca con la Difficoltà Flessibile</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYAIMAXIMUMDIFF_LIST</Tag>
@@ -6663,6 +6669,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYAITURNINCREMENTS_HOVER</Tag>
 		<English>How often the game checks AI difficulty level and adjusts it. Requires Flexible Difficulty to be enabled.</English>
+		<Italian>Quanto spesso il sistema controlla la difficoltà dell'IA e la cambia. Difficoltà flessibile deve essere attiva.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYAITURNINCREMENTS_TEXT</Tag>
@@ -7279,7 +7286,7 @@
 		<English>This determines the order in which the score columns appear.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]W[COLOR_REVERT] - You are at war or have a peace treaty with the civ.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]S[COLOR_REVERT] - The civ's score.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Z[COLOR_REVERT] - The change in the civ's score since previous turn.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]K[COLOR_REVERT] - The civ's rank based on their score.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Q[COLOR_REVERT] - The number of cities the civ owns.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]V[COLOR_REVERT] - The civ has at least one vassal.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]I[COLOR_REVERT] - The civ's player ID number.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]C[COLOR_REVERT] - The civ's/leader's/player's name.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]?[COLOR_REVERT] - You have not yet met the civ.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]E[COLOR_REVERT] - You have a positive espionage point ratio against the civ.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]P[COLOR_REVERT] - The civ's power ratio compared to you.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]T[COLOR_REVERT] - The tech the civ is researching (vassals, teammates and espionage).[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]U[COLOR_REVERT] - The number of research turns left.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]N[COLOR_REVERT] - The civ is connected to your trade network.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]B[COLOR_REVERT] - You have an open borders agreement with the civ.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]D[COLOR_REVERT] - You have a defensive pact with the civ.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]R[COLOR_REVERT] - The civ's state religion.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]A[COLOR_REVERT] - The civ's attitude toward you.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]H[COLOR_REVERT] - You are the civ's worst enemy.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]F[COLOR_REVERT] - The civ refuses to talk to you.[DLL=1][NEWLINE][DLLMSG][/DLL][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]M[COLOR_REVERT] - The civ is mobilizing for war (WHEOOH).[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]*[COLOR_REVERT] - This civ is waiting for you to finish your turn in multiplayer.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]L[COLOR_REVERT] - Civ's network stats (ping).[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]O[COLOR_REVERT] - The network player is out-of-sync.[NEWLINE][NEWLINE]You can place a number (positive or negative) between column codes to override the default spacing.</English>
 		<French>Ceci détermine l'ordre dans lequel les colonnes apparaissent.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]W[COLOR_REVERT] - Vous êtes en guerre contre cette civilisation.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]S[COLOR_REVERT] - Score de la civilisation.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Z[COLOR_REVERT] - Différence de score depuis le tour précédent.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]K[COLOR_REVERT] - Rang de la civilisation, basé sur son score.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Q[COLOR_REVERT] - Le nombre de Villes.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]V[COLOR_REVERT] - La civ a au moins un vassal.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]I[COLOR_REVERT] - l'ID de la civilisation.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]C[COLOR_REVERT] - Nom de la civilisation et/ou du dirigeant.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]?[COLOR_REVERT] - Si Vous n'avez pas encore rencontré cette civilisation.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]E[COLOR_REVERT] - Si Votre pro-rata d'espionnage avec cette civilisation est bon.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]P[COLOR_REVERT] - Pro-rata du pouvoir de cette civilisation comparé à vous.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]T[COLOR_REVERT] - La technologie que la civilisation recherche (vassaux, équipe et espionnage).[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]U[COLOR_REVERT] - Le nombre de tours qui restent pour la recherche.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]N[COLOR_REVERT] - Si Cette civilisation est connectée à votre réseau de commerce.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]B[COLOR_REVERT] - Si Vous avez une accord de frontières ouvertes avec cette civilisation.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]D[COLOR_REVERT] - Si Vous avez un pacte défensif avec cette civilisation.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]R[COLOR_REVERT] - La religion nationale de cette civilisation.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]A[COLOR_REVERT] - L'attitude de cette civilisation envers vous.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]H[COLOR_REVERT] - Si vous êtes le Pire Ennemi de cette civ.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]F[COLOR_REVERT] - Si le leader refuse de vous parler.[DLL=1][NEWLINE][DLLMSG][/DLL][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]M[COLOR_REVERT] - Si la civ. se mobilise pour la Guerre (WHEOOH).[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]*[COLOR_REVERT] - Vous attendez que cette civilisation finisse son tour.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]L[COLOR_REVERT] - Statistique de Réseau (ping).[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]O[COLOR_REVERT] - Le joueur est out-of-sync.[NEWLINE][NEWLINE]Vous pouvez placer un nombre (positif ou négatif) entre les codes de colonne pour définir un espacement personnalisé.</French>
 		<German>Bestimmt die Reihenfolge, in der die Spalten der Punkteanzeige angeordnet werden:[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]W[COLOR_REVERT] - Kriegszustand oder Friedensvertrag mit einer Zivilisation[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]S[COLOR_REVERT] - Wertung einer Zivilisation[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Z[COLOR_REVERT] - Veränderung der Wertung einer Zivilisation seit der letzten Runde[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]K[COLOR_REVERT] - Rang einer Zivilisation basierend auf ihrer Wertung[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Q[COLOR_REVERT] - Anzahl der Städte, über die eine Zivilisation verfügt[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]V[COLOR_REVERT] - Eine Zivilisation hat mindestens einen Vasallen[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]I[COLOR_REVERT] - Spieler-ID-Nummer einer Zivilisation[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]C[COLOR_REVERT] - Name einer Zivilisation/eines Oberhaupts/eines Spielers[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]?[COLOR_REVERT] - Zivilisation noch nicht kontaktiert[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]E[COLOR_REVERT] - Gutes Spionagepunktverhältnis gegenüber einer Zivilisation[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]P[COLOR_REVERT] - Machtverhältnis zwischen der eigenen und einer gegnerischen Zivilisation[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]T[COLOR_REVERT] - Derzeitiges Forschungsprojekt einer Zivilisation (bei Vasallen, Verbündeten und durch Spionage erlangt)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]U[COLOR_REVERT] - Anzahl verbleibender Runden bis zur Erforschung[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]N[COLOR_REVERT] - Handelsverbindungen mit einer Zivilisation[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]B[COLOR_REVERT] - Offene Grenzen mit einer Zivilisation[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]D[COLOR_REVERT] - Verteidigungsbündnis mit einer Zivilisation[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]R[COLOR_REVERT] - Staatsreligion einer Zivilisation[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]A[COLOR_REVERT] - Einstellung einer Zivilisation gegenüber der eigenen[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]H[COLOR_REVERT] - Erzfeind der eigenen Zivilisation[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]F[COLOR_REVERT] - Gesprächsverweigerung einer Zivilisation[DLL=1][NEWLINE][DLLMSG][/DLL][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]M[COLOR_REVERT] - Kriegsvorbereitungen einer Zivilisation[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]*[COLOR_REVERT] - Warten auf den Zug einer Zivilisation (im Multiplayer)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]L[COLOR_REVERT] - Netzwerkstatistik einer Zivilisation (Ping)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]O[COLOR_REVERT] - Verbundener Spieler ist "out-of-sync"[NEWLINE][NEWLINE]Zwischen den Codes für die Spalten können (positive oder negative) Zahlen gesetzt werden, die den eingestellten Standardabstand außer Kraft setzen.</German>
-		<Italian>Determina l'ordine in base al quale vengono visualizzate le colonne del Pannello del Punteggio:[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]W[COLOR_REVERT] - sei in guerra o hai un trattato di pace con la Civiltà;[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]S[COLOR_REVERT] - il Punteggio della Civiltà;[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Z[COLOR_REVERT] - la variazione nel punteggio rispetto al turno precedente;[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]K[COLOR_REVERT] - La posizione della Civiltà in base al punteggio.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Q[COLOR_REVERT] - Il numero delle città possedute.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]V[COLOR_REVERT] - mostra l'icona di una stella argentata se la Civiltà ha dei Vassalli;[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]I[COLOR_REVERT] - il numero di identificazione della Civiltà;[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]C[COLOR_REVERT] - il Nome della Civiltà/del Leader della Civiltà;[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]?[COLOR_REVERT] - non hai ancora incontrato questa Civiltà;[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]E[COLOR_REVERT] - hai un Rapporto di Spionaggio positivo verso la Civiltà;[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]P[COLOR_REVERT] - la Potenza della Civiltà rispetto alla tua (o viceversa);[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]T[COLOR_REVERT] - la Tecnologia che la Civiltà sta ricercando (nota per Vassalli e Alleati o mediante Spionaggio);[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]U[COLOR_REVERT] - il numero di Turni di Ricerca rimasti alla Civiltà;[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]N[COLOR_REVERT] - la Civiltà è connessa alla tua rete commerciale;[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]B[COLOR_REVERT] - hai un accordo di Libero Scambio con la Civiltà;[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]D[COLOR_REVERT] - hai un Patto Difensivo con la Civiltà;[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]R[COLOR_REVERT] - la Religione di Stato della Civiltà;[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]A[COLOR_REVERT] - l'atteggiamento della Civiltà verso di te;[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]H[COLOR_REVERT] - siete il Peggior Nemico della Civiltà;[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]F[COLOR_REVERT] - Il Leader della Civiltà rifiuta di parlarti.[DLL=1][NEWLINE][DLLMSG][/DLL][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]M[COLOR_REVERT] - la Civiltà si sta mobilitando per la guerra;[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]*[COLOR_REVERT] - sei in attesa che questa Civiltà finisca il suo turno;[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]L[COLOR_REVERT] - le statistiche di connessione del giocatore della Civiltà (ping);[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]O[COLOR_REVERT] - il giocatore di questa Civiltà è "out-of-sync".[NEWLINE][NEWLINE]Un numero definisce la spaziatura (in pixel) che deve seguire la colonna precedente (se visualizzata), prevalendo sulla spaziatura di default; un numero negativo comporta il ravvicinamento (ed al limite anche la sovrapposizione) fra le due colonne.[NEWLINE]Gli spazi vengono ignorati, per cui possono essere utilizzati per semplificare la lettura della stringa di codici.</Italian>
+		<Italian>Determina l'ordine in base al quale vengono visualizzate le colonne del Pannello del Punteggio:[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]W[COLOR_REVERT] - sei in guerra o hai un trattato di pace con la Civiltà;[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]S[COLOR_REVERT] - il Punteggio della Civiltà;[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Z[COLOR_REVERT] - la variazione nel punteggio rispetto al turno precedente;[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]K[COLOR_REVERT] - La posizione della Civiltà in base al punteggio.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Q[COLOR_REVERT] - Il numero delle città possedute.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]V[COLOR_REVERT] - mostra l'icona di una stella argentata se la Civiltà ha dei Vassalli;[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]I[COLOR_REVERT] - il numero di identificazione della Civiltà;[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]C[COLOR_REVERT] - il Nome della Civiltà/del Leader della Civiltà;[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]?[COLOR_REVERT] - non hai ancora incontrato questa Civiltà;[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]E[COLOR_REVERT] - hai un Rapporto di Spionaggio positivo verso la Civiltà;[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]P[COLOR_REVERT] - la Potenza della Civiltà rispetto alla tua (o viceversa);[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]T[COLOR_REVERT] - la Tecnologia che la Civiltà sta ricercando (nota per Vassalli e Alleati o mediante Spionaggio);[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]U[COLOR_REVERT] - il numero di turni di Ricerca rimasti alla Civiltà;[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]N[COLOR_REVERT] - la Civiltà è connessa alla tua rete commerciale;[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]B[COLOR_REVERT] - hai un accordo di Libero Scambio con la Civiltà;[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]D[COLOR_REVERT] - hai un Patto Difensivo con la Civiltà;[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]R[COLOR_REVERT] - la Religione di Stato della Civiltà;[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]A[COLOR_REVERT] - l'atteggiamento della Civiltà verso di te;[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]H[COLOR_REVERT] - siete il Peggior Nemico della Civiltà;[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]F[COLOR_REVERT] - Il Leader della Civiltà rifiuta di parlarti.[DLL=1][NEWLINE][DLLMSG][/DLL][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]M[COLOR_REVERT] - la Civiltà si sta mobilitando per la guerra;[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]*[COLOR_REVERT] - sei in attesa che questa Civiltà finisca il suo turno;[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]L[COLOR_REVERT] - le statistiche di connessione del giocatore della Civiltà (ping);[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]O[COLOR_REVERT] - il giocatore di questa Civiltà è "out-of-sync".[NEWLINE][NEWLINE]Un numero definisce la spaziatura (in pixel) che deve seguire la colonna precedente (se visualizzata), prevalendo sulla spaziatura di default; un numero negativo comporta il ravvicinamento (ed al limite anche la sovrapposizione) fra le due colonne.[NEWLINE]Gli spazi vengono ignorati, per cui possono essere utilizzati per semplificare la lettura della stringa di codici.</Italian>
 		<Spanish>Determina el orden en que se muestran las columnas de la tabla:[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]W[COLOR_REVERT] - En guerra o en paz con la civilización.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]S[COLOR_REVERT] - La puntuación de la civilización.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Z[COLOR_REVERT] - El cambio en la puntuación desde el último turno.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]K[COLOR_REVERT] - La posición de la civilización en base a su puntuacion.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Q[COLOR_REVERT] - El número de ciudades que la civilización posee.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]V[COLOR_REVERT] - La civilización tiene al menos un vasallo.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]I[COLOR_REVERT] - El ID del jugador.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]C[COLOR_REVERT] - El nombre del jugador/líder/civilización.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]?[COLOR_REVERT] - Aún no has encontrado a esta civilización.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]E[COLOR_REVERT] - Tienes un balance positivo en puntos de espionaje sobre esta civilización.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]P[COLOR_REVERT] - El poder militar de la civilización comparado contigo.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]T[COLOR_REVERT] - La tecnología que la civilización está investigando (vasallos, compañeros y espionaje).[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]U[COLOR_REVERT] - El numero de turnos restantes para obtener la tecnología.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]N[COLOR_REVERT] - La civilización está conectada a tu red comercial.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]B[COLOR_REVERT] - Tienes un pacto de apertura de fronteras con la civilización.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]D[COLOR_REVERT] - Tienes un Acuerdo de protección con la civilización.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]R[COLOR_REVERT] - La religión oficial de la civilización.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]A[COLOR_REVERT] - La actitud de la civilización hacia ti.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]H[COLOR_REVERT] - Eres el peor enemigo de la civilización.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]F[COLOR_REVERT] - La civilización se niega a hablar contigo.[DLL=1][NEWLINE][DLLMSG][/DLL][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]M[COLOR_REVERT] - La civilización se está movilizando para la guerra (WHEOOH).[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]*[COLOR_REVERT] - La civilización está esperando que acabes el turno en multijugador.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]L[COLOR_REVERT] - El estado de la red del jugador (ping).[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]O[COLOR_REVERT] - El jugador se ha desincronizado.[NEWLINE][NEWLINE]Puedes poner un numero (positivo o negativo) entre códigos de columna para sobrescribir el espaciado por defecto.</Spanish>
 		<Russian>Îïðåäåëÿåò ïîðÿäîê, â êîòîðîì ïîÿâëÿþòñÿ êîëîíêè ñ÷åòà.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]W[COLOR_REVERT] - Âû â ñîñòîÿíèè âîéíû èëè èìååòå ìèðíûé äîãîâîð ñ öèâ.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]S[COLOR_REVERT] - Ñ÷åò öèâ.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Z[COLOR_REVERT] - Èçìåíåíèå â ñ÷åòå öèâ. ñ ïðåäûäóùåãî õîäà.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]K[COLOR_REVERT] - Ïîðÿäîê öèâ. îñíîâàííûé íà èõ ñ÷åòå.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Q[COLOR_REVERT] - ×èñëî ãîðîäîâ, ïðèíàäëåæàùèõ öèâ.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]V[COLOR_REVERT] - Ó öèâ. åñòü õîòü îäèí âàññàë.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]I[COLOR_REVERT] - ID íîìåð èãðîêà öèâ.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]C[COLOR_REVERT] - Öèâ./ëèäåð/èìÿ èãðîêà.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]?[COLOR_REVERT] - Âû åùå íå âñòðåòèëè öèâ.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]E[COLOR_REVERT] - Âû èìååòå ïîëîæèòåëüíîå îòíîøåíèå î÷êîâ øïèîíàæà ïðîòèâ öèâ.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]P[COLOR_REVERT] - Îòíîøåíèå ìîùè öèâ. â ñðàâíåíèè ñ âàìè.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]T[COLOR_REVERT] - Òåõíîëîãèÿ èçó÷àåìàÿ öèâ. (âàññàëû, òîâàðèùè ïî êîìàíäå è øïèîíàæ).[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]U[COLOR_REVERT] - Îñòàâøååñÿ ÷èñëî õîäîâ èññëåäîâàíèÿ.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]N[COLOR_REVERT] - Öèâ. ñâÿçàííà ñ âàìè òîðãîâîé ñåòüþ.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]B[COLOR_REVERT] - Ó âàñ ñîãëàøåíèå îòêðûòûõ ãðàíèö ñ öèâ.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]D[COLOR_REVERT] - Ó âàñ ïàêò âçàèìîïîìîùè ñ öèâ.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]R[COLOR_REVERT] - Ãîñóäàðñòâåííàÿ ðåëèãèÿ öèâ.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]A[COLOR_REVERT] - Îòíîøåíèå öèâ. ê âàì.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]H[COLOR_REVERT] - Âû çëåéøèé âðàã öèâ.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]F[COLOR_REVERT] - Öèâ. îòêàçûâàåòñÿ ðàçãîâàðèâàòü ñ âàìè.[DLL=1][NEWLINE] [DLLMSG][/DLL][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]M[COLOR_REVERT] - Öèâ. ìîáèëèçîâàíà äëÿ âîéíû (ÌÈÄÍÐ).[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]*[COLOR_REVERT] - Öèâ. æäåò êîãäà âû çàêîí÷èòå âàø õîä â ìóëüòèïëååðå.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]L[COLOR_REVERT] - Ñåòåâîå ñîñòîÿíèå öèâ. (ping).[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]O[COLOR_REVERT] - Ñåòåâîé èãðîê ðàññèíõðîíèçèðîâàëñÿ.[NEWLINE][NEWLINE]Âû ìîæåòå ðàçìåñòèòü ÷èñëî (ïîëîæèòåëüíîå èëè îòðèöàòåëüíîå) ìåæäó êîëîíêàìè êîäà äëÿ èçìåíåíèÿ ðàññòîÿíèÿ ïî óìîë÷àíèþ.</Russian>
 	</TEXT>
@@ -8095,6 +8102,7 @@ uno de s, A, a, p, g, n, o, r (véase archivo de ayuda)</Spanish>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_YEAR_BUILT</Tag>
 		<English>Built in %s1_year</English>
+		<Italian>[ICON_BULLET]Costruizione ultimata nel %s1_year</Italian>
 		<French>Construit en %s1_year</French>
 		<German>existiert seit %s1_year</German>
 		<Spanish>Construido en %s1_year</Spanish>

@@ -6,6 +6,7 @@
 		<French>[NEWLINE][ICON_BULLET]Cette caractéristique est immédiatement détruite lorsqu'une ville est fondée sur le même terrain.</French>
 		<German>[NEWLINE][ICON_BULLET]Dieses Geländemerkmal wird sofort zerstört, wenn eine Stadt auf demselben Feld errichtet wird.</German>
 		<Russian>[NEWLINE][ICON_BULLET]Эта особенность немедленно разрушается, если будет заложен город на данном участке.</Russian>
+		<Italian>[NEWLINE][ICON_BULLET]Questa caratteristica viene immediatamente distrutta quando una città viene fondata sulla stessa casella.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATUREHELP_POP_DESTROYS</Tag>
@@ -13,6 +14,7 @@
 		<French>[NEWLINE][ICON_BULLET]Cette caractéristique est détruite par une ville fondée sur le même terrain dès que la ville atteint %d1_pop Population.</French>
 		<German>[NEWLINE][ICON_BULLET]Dieses Geländemerkmal wird zerstört, wenn eine Stadt auf demselben Feld auf Stufe %d1_pop anwächst.</German>
 		<Russian>[NEWLINE][ICON_BULLET]Эта особенность уничтожается городом, основанном на том же участке, как только население города достигнет %d1_pop.</Russian>
+		<Italian>[NEWLINE][ICON_BULLET]Questa caratteristica viene distrutta da una città fondata sulla stessa casella non appena la città raggiunge una popolazione di %d1_pop .</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATUREHELP_POP_NEVER_DESTROYED</Tag>
@@ -20,6 +22,7 @@
 		<French>[NEWLINE][ICON_BULLET]Cette caractéristique n'est jamais détruite par une ville.</French>
 		<German>[NEWLINE][ICON_BULLET]Dieses Geländemerkmal wird niemals durch eine Stadt zerstört.</German>
 		<Russian>[NEWLINE][ICON_BULLET]Эта особенность никогда не разрушается городом.</Russian>
+		<Italian>[NEWLINE][ICON_BULLET]Questa caratteristica non può esserei distrutta da una città.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLOT_FRESH_WATER</Tag>
@@ -35,6 +38,7 @@
 		<English>[NEWLINE]Movement Cost: %d1[ICON_MOVES]</English>
 		<German>[NEWLINE]Fortbewegungskosten: %d1[ICON_MOVES]</German>
 		<French>[NEWLINE]Coût de dépl.: %d1[ICON_MOVES]</French>
+		<Italian>[NEWLINE]Costo d'attrersamento: %d1 [ICON_MOVES]</Italian>
 		<Russian>[NEWLINE]Цена движения: %d1[ICON_MOVES]</Russian>
 	</TEXT>
 	<TEXT>
@@ -43,13 +47,14 @@
 		<French>[NEWLINE]Dépl. sur route : %s1(%s2)</French>
 		<German>[NEWLINE]Weg-Fortbewegung: %s1(%s2)</German>
 		<Russian>[NEWLINE]Очков движения: %s1(%s2)</Russian>
+		<Italian>[NEWLINE]Modificatore percorso: %s1(%s2)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAINHELP_BUILD_MODIFIER</Tag>
 		<English>[NEWLINE][ICON_BULLET]Improvements take %D1%% time to build</English>
 		<French>[NEWLINE][ICON_BULLET]La construction d'aménagements prend %D1%% tours</French>
 		<German>[NEWLINE][ICON_BULLET]erforderliche Zeit für Ausbau: %D1%%</German>
-		<Italian>[NEWLINE][ICON_BULLET]I miglioramenti impiegheranno %D1%% per essere realizzati</Italian>
+		<Italian>[NEWLINE][ICON_BULLET]I miglioramenti impiegheranno %D1%% turni per essere realizzati</Italian>
 		<Spanish>[NEWLINE][ICON_BULLET]Construir mejoras cuesta un %D1%% del tiempo</Spanish>
 		<Russian>[NEWLINE][ICON_BULLET]Улучшение будет строиться %D1%% ходов до завершения</Russian>
 	</TEXT>
@@ -68,6 +73,7 @@
 		<French>[NEWLINE][ICON_BULLET]Dégâts par Tour: %d1_Amt%%</French>
 		<German>[NEWLINE][ICON_BULLET]Schaden pro Runde: %d1_Amt%%</German>
 		<Russian>[NEWLINE][ICON_BULLET]Урона за ход: %d1_Amt%%</Russian>
+		<Italian>[NEWLINE][ICON_BULLET]Danno a turno: %d1_Amt%%</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_BADLAND</Tag>
@@ -75,13 +81,14 @@
 		<French>Désert Calcaire</French>
 		<German>Steinwüste</German>
 		<Russian>Морена</Russian>
+		<Italian>Deserto calcareo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_BARREN</Tag>
 		<English>Barren</English>
 		<French>Sol Stérile</French>
 		<German>Karge Vegetation</German>
-		<Italian>Suolo sterile</Italian>
+		<Italian>Terra sterile</Italian>
 		<Spanish>
 			<Text>Yermo:Yermos</Text>
 			<Gender>Male</Gender>
@@ -107,11 +114,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Küste</German>
-		<Italian>
-			<Text>Costa:Coste</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Costa</Italian>
 		<Spanish>
 			<Text>Costa:Costas</Text>
 			<Gender>Female</Gender>
@@ -126,6 +129,7 @@
 		<French>Falaise</French>
 		<German>Schelf</German>
 		<Russian>Ãëóáîêîå ïîáåðåæüå</Russian>
+		<Italian>Costa profonda</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_COAST_DEEP_PEDIA</Tag>
@@ -133,6 +137,7 @@
 		<French>Une Case au large et en profondeur.</French>
 		<German>Den randlichen Bereich eines Kontinents, der ständig von Meer bedeckt ist, nennt man Schelf, Kontinentalschelf oder Festlandssockel. Die Schelfplattform, also der Meeresgrund, kann bis zu 200 m unter dem Meeresspiegel liegen. Das Schelfmeer ist sehr reich an Tier- und Pflanzenarten, hier befindet sich auch die Kinderstube vieler Fischarten.</German>
 		<Russian>Более глубокая прибрежная клетка.</Russian>
+		<Italian>Una casella al largo e profonda.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_COAST_DEEP_POLAR</Tag>
@@ -140,6 +145,7 @@
 		<French>Plateau polaire</French>
 		<German>Polarschelf</German>
 		<Russian>Ãëóá. ïîë. ïîáåðåæüå</Russian>
+		<Italian>Costa polare profonda</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_COAST_DEEP_TROPICAL</Tag>
@@ -147,6 +153,7 @@
 		<French>Plateau Tropical</French>
 		<German>Tropenschelf</German>
 		<Russian>Ãëóá. òðîï. ïîáåðåæüå</Russian>
+		<Italian>Costa tropicale profonda</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_COAST_PEDIA</Tag>
@@ -200,11 +207,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Wüste</German>
-		<Italian>
-			<Text>Deserto:Deserti</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Deserto</Italian>
 		<Spanish>
 			<Text>Desierto:Desiertos</Text>
 			<Gender>Male</Gender>
@@ -251,12 +254,14 @@
 		<English>Freshwater Coast</English>
 		<German>Süßwasserküste</German>
 		<Russian>Ïðåñíîâîä. áåðåã</Russian>
+		<Italian>Costa con acqua dolce</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_FRESHWATER_SEA</Tag>
 		<English>Freshwater Sea</English>
 		<German>Süßwassermeer</German>
 		<Russian>Ïðåñíîâîä. ìîðå</Russian>
+		<Italian>Mare d'acqua dolce</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_GRASSLAND</Tag>
@@ -267,11 +272,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Grasland</German>
-		<Italian>
-			<Text>Prateria:Praterie</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Prateria</Italian>
 		<Spanish>
 			<Text>Pradera:Praderas</Text>
 			<Gender>Female</Gender>
@@ -296,11 +297,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Hügel</German>
-		<Italian>
-			<Text>Collina:Colline</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Collina</Italian>
 		<Spanish>
 			<Text>Colina:Colinas</Text>
 			<Gender>Female</Gender>
@@ -325,11 +322,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Eis</German>
-		<Italian>
-			<Text>Ghiaccio:Ghiacci</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Ghiaccio</Italian>
 		<Spanish>
 			<Text>Hielo:Hielos</Text>
 			<Gender>Male</Gender>
@@ -350,7 +343,7 @@
 		<English>Infected Water</English>
 		<French>Eau Infectée</French>
 		<German>Verkeimtes Wasser</German>
-		<Italian>Acqua infetta</Italian>
+		<Italian>Acqua contaminata</Italian>
 		<Spanish>Agua infectada</Spanish>
 		<Polish>Zanieczyszczona Woda</Polish>
 		<Russian>Çàðàæåííàÿ âîäà</Russian>
@@ -360,7 +353,7 @@
 		<English>This water plot has been infected by a biological 'nuke'.</English>
 		<French>Cette eau a été infectée par une bombe biologique.</French>
 		<German>Dieses Wasserfeld wurde durch einen biologischen Kampfstoff vergiftet.</German>
-		<Italian>Questa casella acquatica è stata infettata da una bomba biologica.</Italian>
+		<Italian>Questa casella acquatica è stata contaminata da una bomba biologica.</Italian>
 		<Spanish>Esta casilla acuática ha sido infectada por un arma biológica.</Spanish>
 		<Polish>To pole wody zostało zanieczyszczone przez biologiczną wersje rakiety</Polish>
 		<Russian>Этот участок воды был заражен «биооружием Судного дня».</Russian>
@@ -371,6 +364,7 @@
 		<French>Terrain escarpé</French>
 		<German>Gletscher</German>
 		<Russian>Гольцы</Russian>
+		<Italian>Deserto roccioso</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_LUNAR_DOME</Tag>
@@ -404,7 +398,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<Italian>Terreno roccioso lunare</Italian>
+		<Italian>Altopiano lunare</Italian>
 		<Spanish>
 			<Text>Talud lunar:Taludes lunares</Text>
 			<Gender>Male</Gender>
@@ -428,7 +422,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<Italian>Pianure lunari</Italian>
+		<Italian>Maria lunari</Italian>
 		<Spanish>
 			<Text>Llanura lunar:Llanuras lunares</Text>
 			<Gender>Female</Gender>
@@ -452,7 +446,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Mondregolith</German>
-		<Italian>Terreno sterile lunare</Italian>
+		<Italian>Regolite lunare</Italian>
 		<Spanish>
 			<Text>Yermo lunar:Yermos lunares</Text>
 			<Gender>Male</Gender>
@@ -500,7 +494,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Üppige Vegetation</German>
-		<Italian>Suolo lussureggiante</Italian>
+		<Italian>Foresta tropicale</Italian>
 		<Spanish>
 			<Text>Pradera fértil:Praderas fértiles</Text>
 			<Gender>Female</Gender>
@@ -527,11 +521,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Feuchtgebiet</German>
-		<Italian>
-			<Text>Palude</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Palude</Italian>
 		<Spanish>
 			<Text>Marisma:Marismas</Text>
 			<Gender>Female</Gender>
@@ -555,7 +545,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>Suolo arido marziano</Italian>
+		<Italian>Terra arida marziana</Italian>
 		<Spanish>
 			<Text>Yermo marciano:Yermos marcianos</Text>
 			<Gender>Male</Gender>
@@ -687,7 +677,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>Suolo roccioso marziano</Italian>
+		<Italian>Terra rocciosa marziana</Italian>
 		<Spanish>
 			<Text>Talud marciano:Taludes marcianos</Text>
 			<Gender>Male</Gender>
@@ -706,7 +696,7 @@
 		<English>Muddy</English>
 		<French>Sol boueux</French>
 		<German>Schlamm</German>
-		<Italian>Suolo fangoso</Italian>
+		<Italian>Terreno fangoso</Italian>
 		<Spanish>
 			<Text>Fangal:Fangales</Text>
 			<Gender>Male</Gender>
@@ -733,6 +723,7 @@
 		</Spanish>
 		<Polish>Pustka</Polish>
 		<Russian>Âàêóóì</Russian>
+		<Italian>Nessun terreno</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_NONE_PEDIA</Tag>
@@ -751,11 +742,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Ozean</German>
-		<Italian>
-			<Text>Oceano:Oceani</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Oceano</Italian>
 		<Spanish>
 			<Text>Océano:Océanos</Text>
 			<Gender>Male</Gender>
@@ -816,6 +803,7 @@
 		</Spanish>
 		<Polish>Orbita</Polish>
 		<Russian>Îðáèòà</Russian>
+		<Italian>Orbita terrestre bassa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_ORBIT_PEDIA</Tag>
@@ -832,11 +820,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Gebirge</German>
-		<Italian>
-			<Text>Montagna:Montagne</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Montagna</Italian>
 		<Spanish>
 			<Text>Pico:Picos</Text>
 			<Gender>Male</Gender>
@@ -878,7 +862,7 @@
 		<English>Plagued Water</English>
 		<French>Eau contaminée</French>
 		<German>Verseuchtes Wasser</German>
-		<Italian>Acqua contaminata</Italian>
+		<Italian>Acqua fortememente contaminata</Italian>
 		<Spanish>Agua contaminada</Spanish>
 		<Polish>Zarażona Woda</Polish>
 		<Russian>×óìíàÿ âîäà</Russian>
@@ -902,11 +886,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>Ebene</German>
-		<Italian>
-			<Text>Pianura:Pianure</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Pianura</Italian>
 		<Spanish>
 			<Text>Llanura:Llanuras</Text>
 			<Gender>Female</Gender>
@@ -927,7 +907,7 @@
 		<English>Rocky</English>
 		<French>Sol Rocheux</French>
 		<German>Gestein</German>
-		<Italian>Suolo roccioso</Italian>
+		<Italian>Terra rocciosa</Italian>
 		<Spanish>
 			<Text>Talud:Taludes</Text>
 			<Gender>Male</Gender>
@@ -952,7 +932,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>Salzwüste</German>
-		<Italian>Distese salate</Italian>
+		<Italian>Salina</Italian>
 		<Spanish>
 			<Text>Salar:Salares</Text>
 			<Gender>Male</Gender>
@@ -999,6 +979,7 @@
 		<French>Mer</French>
 		<German>Meer</German>
 		<Russian>Ìîðå</Russian>
+		<Italian>Mare</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_SEA_DEEP</Tag>
@@ -1006,6 +987,7 @@
 		<French>Mer profonde</French>
 		<German>Tiefsee</German>
 		<Russian>Ãëóáîêîå ìîðå</Russian>
+		<Italian>Mare profondo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_SEA_DEEP_PEDIA</Tag>
@@ -1020,6 +1002,7 @@
 		<French>Mer polaire profonde</French>
 		<German>Polartiefsee</German>
 		<Russian>Ãëóá. ïîë. ìîðå</Russian>
+		<Italian>Mare polare profondo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_SEA_DEEP_TROPICAL</Tag>
@@ -1027,6 +1010,7 @@
 		<French>Mer Tropicale profonde</French>
 		<German>Tropentiefsee</German>
 		<Russian>Ãëóá. òðîï. ìîðå</Russian>
+		<Italian>Mare tropicale profondo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_SEA_PEDIA</Tag>
@@ -1041,6 +1025,7 @@
 		<French>Mer polaire</French>
 		<German>Polarmeer</German>
 		<Russian>Ïîëÿðíîå ìîðå</Russian>
+		<Italian>Mare polare</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_SEA_TROPICAL</Tag>
@@ -1048,12 +1033,14 @@
 		<French>Mer tropicale</French>
 		<German>Tropenmeer</German>
 		<Russian>Òðîïè÷åñêîå ìîðå</Russian>
+		<Italian>Mare tropicale</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_TAIGA</Tag>
 		<English>Taiga</English>
 		<French>Taïga</French>
 		<Russian>Òàéãà</Russian>
+		<Italian>Taiga</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_TAIGA_PEDIA</Tag>
@@ -1067,6 +1054,7 @@
 		<French>Faille océanique</French>
 		<German>Tiefseegraben</German>
 		<Russian>Îêåàíñêàÿ âïàäèíà</Russian>
+		<Italian>Fossa oceanica</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_TRENCH_PEDIA</Tag>
@@ -1080,6 +1068,7 @@
 		<French>Fosse Polaire</French>
 		<German>Polargraben</German>
 		<Russian>Ïîëÿðíàÿ âïàäèíà</Russian>
+		<Italian>Fossa marina polare</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_TRENCH_TROPICAL</Tag>
@@ -1087,12 +1076,14 @@
 		<French>Fosse Tropicale</French>
 		<German>Tropengraben</German>
 		<Russian>Òðîïè÷åñêàÿ âïàäèíà</Russian>
+		<Italian>Fossa marina tropicale</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_TUNDRA</Tag>
 		<English>Tundra</English>
 		<French>Toundra</French>
 		<Russian>Òóíäðà</Russian>
+		<Italian>Tundra</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_TUNDRA_PEDIA</Tag>

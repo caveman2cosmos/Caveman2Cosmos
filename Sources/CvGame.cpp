@@ -2222,7 +2222,7 @@ void CvGame::update()
 	&& !gDLL->getInterfaceIFace()->getHeadSelectedCity()
 	&& !gDLL->GetWorldBuilderMode())
 	{
-		if (playerAct.hasIdleCity())
+		if (playerAct.hasIdleCity() && playerAct.isForcedCityCycle())
 		{
 			CvCity* city = playerAct.getIdleCity();
 			if (city)
@@ -7183,24 +7183,20 @@ void CvGame::updateTurnTimer()
 	PROFILE_FUNC();
 
 	// Are we using a turn timer?
-	if (isMPOption(MPOPTION_TURN_TIMER))
+	if (isMPOption(MPOPTION_TURN_TIMER)
+	&& (getElapsedGameTurns() > 0 || !isOption(GAMEOPTION_CORE_CUSTOM_START))
+	// Has the turn expired?
+	&& getTurnSlice() > getCutoffSlice())
 	{
-		if (getElapsedGameTurns() > 0 || !isOption(GAMEOPTION_CORE_CUSTOM_START))
+		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
-			// Has the turn expired?
-			if (getTurnSlice() > getCutoffSlice())
+			if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isTurnActive())
 			{
-				for (int iI = 0; iI < MAX_PLAYERS; iI++)
-				{
-					if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isTurnActive())
-					{
-						GET_PLAYER((PlayerTypes)iI).setEndTurn(true);
+				GET_PLAYER((PlayerTypes)iI).setEndTurn(true);
 
-						if (!isMPOption(MPOPTION_SIMULTANEOUS_TURNS) && !isSimultaneousTeamTurns())
-						{
-							break;
-						}
-					}
+				if (!isMPOption(MPOPTION_SIMULTANEOUS_TURNS) && !isSimultaneousTeamTurns())
+				{
+					break;
 				}
 			}
 		}
@@ -10015,8 +10011,8 @@ void CvGame::doFlexibleDifficulty()
 			int multiplier = 3;
 			double default_difficult = ((double)biasMaxCap+(double)biasMinCap)*(1.0/3.0);
 			double diff = (std::max(biasMaxCap, biasMinCap)-std::min(biasMaxCap, biasMinCap) != 0 ? std::max(biasMaxCap, biasMinCap)-std::min(biasMaxCap, biasMinCap) : 1.0);
-			int stddevHandi = (stddev * (basicMaxCap/diff*100))/100;
-			int handicapBias = stddevHandi*((multiplier*playerX.getHandicapType())-(multiplier*default_difficult));
+			int stddevHandi = static_cast<int>((stddev * (basicMaxCap/diff*100))/100);
+			int handicapBias = static_cast<int>(stddevHandi*((multiplier*playerX.getHandicapType())-(multiplier*default_difficult)));
 
 			double normalized = 1.80*((double)(iCurrentScore-iLowestScore)/(double)(iBestScore-iLowestScore))-0.90;
 			double atanh2 = 2.0 * (std::log(1.0+normalized) - std::log(1.0-normalized))/2.0;

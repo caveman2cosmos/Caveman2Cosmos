@@ -863,6 +863,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_bTurnActive = false;
 	m_bAutoMoves = false;
 	m_bEndTurn = false;
+	m_bForcedCityCycle = false;
 	m_bPbemNewTurn = false;
 	m_bExtendedGame = false;
 	m_bFoundedFirstCity = false;
@@ -12329,12 +12330,6 @@ void CvPlayer::setAutoMoves(bool bNewValue)
 }
 
 
-bool CvPlayer::isEndTurn() const
-{
-	return m_bEndTurn;
-}
-
-
 void CvPlayer::setEndTurn(bool bNewValue)
 {
 	PROFILE_EXTRA_FUNC();
@@ -12353,7 +12348,13 @@ void CvPlayer::setEndTurn(bool bNewValue)
 			}
 			setAutoMoves(true);
 		}
+		else m_bForcedCityCycle = false;
 	}
+}
+
+bool CvPlayer::isForcedCityCycle() const
+{
+	return m_bForcedCityCycle || !getBugOptionBOOL("CityScreen__DelayCityCycleToEndOfTurn", false);
 }
 
 bool CvPlayer::isTurnDone() const
@@ -30621,6 +30622,11 @@ void CvPlayer::setIdleCity(const int iCityID, const bool bNewValue)
 	else if (itr != m_idleCities.end())
 	{
 		m_idleCities.erase(itr);
+
+		if (m_idleCities.empty())
+		{
+			setForcedCityCycle(false);
+		}
 	}
 	else FErrorMsg("Vector element to remove was missing!");
 }
