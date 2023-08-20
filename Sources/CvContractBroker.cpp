@@ -43,15 +43,17 @@ void CvContractBroker::cleanup()
 {
 	int fulfilledContracts = 0;
 
-	logContractBroker(1, "Cleaning Up <%S> ContractBroker Contracted Units: %d Advertising Tenders: %d Advertising Units: %d Work Requests: %d",
+	logContractBroker(1, "Cleaning Up <%S> ContractBroker Contracted Units: %d Advertising Tenders: %d Advertising Units: %d",
 		GET_PLAYER(m_eOwner).getName(),
 		m_contractedUnits.size(),
-		m_advertisingUnits.size(),
-		m_workRequests.size());
+		m_advertisingUnits.size());
 
-	logContractBroker(1, "Work requests: %d", m_workRequests.size());
+	logContractBroker(1, "     <%S>Current Work requests: %d", m_ownerName, m_workRequests.size());
+	logContractBroker(1, "     <%S>Tenders posted last turn: %d", m_ownerName, m_advertisingTenders.size());
+
 
 	m_contractedUnits.clear();
+	m_advertisingTenders.clear();
 	m_iEmployedUnits = 0;
 	for (unsigned int iI = 0; iI < (int)m_workRequests.size(); iI++)
 	{
@@ -556,14 +558,16 @@ void CvContractBroker::finalizeTenderContracts()
 
 					if (pBestCity != NULL)
 					{
-						logContractBroker(1, "      City %S wins business for unitAI build %s (training %S)",
+						logContractBroker(1, "      <%S>City %S wins business for unitAI build %s (training %S)",
+								m_ownerName,
 								pBestCity->getName().GetCString(),
 								unitAIType.c_str(),
 								GC.getUnitInfo(eBestUnit).getDescription());
 					}
 					else
 					{
-						logContractBroker(1, "      Problem - no city wins business for unitAI build %s (training %S)",
+						logContractBroker(1, "      <%S>Problem - no city wins business for unitAI build %s (training %S)",
+								m_ownerName,
 								unitAIType.c_str(),
 								GC.getUnitInfo(eBestUnit).getDescription());
 					}
