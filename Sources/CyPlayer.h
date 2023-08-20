@@ -221,6 +221,10 @@ public:
 
 	bool canFoundReligion() const;
 
+	bool hasIdleCity() const;
+
+	void setForcedCityCycle(const bool bNewValue);
+
 	int getNumMilitaryUnits() const;
 
 	int getOverflowResearch() const;

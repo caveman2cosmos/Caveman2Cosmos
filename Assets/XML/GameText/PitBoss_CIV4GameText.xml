@@ -165,7 +165,7 @@
 		<English>It's your turn! (%s1_Name - %s2_Year)</English>
 		<French>C'est à vous ! (%s1_Name - %s2_Year)</French>
 		<German>Sie sind an der Reihe! (%s1_Name - %s2_Year)</German>
-		<Italian>È il tuo turno! (%s1_Name - %s2_Year)</Italian>
+		<Italian>È il tuo turno! %s1_Name - %s2_Year</Italian>
 		<Spanish>¡Es vuestro turno! (%s1_Name - %s2_Year)</Spanish>
 	</TEXT>
 	<TEXT>
@@ -213,7 +213,7 @@
 		<English>Exit</English>
 		<French>Quitter</French>
 		<German>Beenden</German>
-		<Italian>E&amp;sci</Italian>
+		<Italian>Esci</Italian>
 		<Spanish>Salir</Spanish>
 	</TEXT>
 	<TEXT>
@@ -318,7 +318,7 @@
 		<English>Double checking...</English>
 		<French>Vérification...</French>
 		<German>Überprüfe ...</German>
-		<Italian>Controllo doppio...</Italian>
+		<Italian>Verifica in corso...</Italian>
 		<Spanish>Comprobando...</Spanish>
 	</TEXT>
 	<TEXT>
@@ -374,7 +374,7 @@
 		<English>Login Failed - Check username and password</English>
 		<French>Echec de la connexion. Vérifiez le pseudo et le mot de passe</French>
 		<German>Login fehlgeschlagen - Benutzername und Kennwort prüfen</German>
-		<Italian>Login fallito - Verifica il nome utente e la password</Italian>
+		<Italian>Login fallito. Verifica il nome utente e la password</Italian>
 		<Spanish>Fallo al iniciar sesión: revisa el nombre de usuario y la contraseña</Spanish>
 	</TEXT>
 	<TEXT>
@@ -630,7 +630,7 @@
 		<English>Ping</English>
 		<French>Ping</French>
 		<German>Ping</German>
-		<Italian>Segnala</Italian>
+		<Italian>Ping</Italian>
 		<Spanish>Señalar</Spanish>
 	</TEXT>
 	<TEXT>
@@ -662,7 +662,7 @@
 		<English>Save</English>
 		<French>Sauvegarder</French>
 		<German>Speichern</German>
-		<Italian>&amp;Salva</Italian>
+		<Italian>Salva</Italian>
 		<Spanish>Guardar</Spanish>
 	</TEXT>
 	<TEXT>
@@ -719,7 +719,7 @@
 		<English>'%s1' successfully saved"</English>
 		<French>Sauvegarde de '%s1' réussie</French>
 		<German>'%s1' erfolgreich gespeichert"</German>
-		<Italian>'%s1' è stato salvato con successo"</Italian>
+		<Italian>'%s1' è stato salvato con successo.</Italian>
 		<Spanish>Se ha conseguido guardar "%s1"</Spanish>
 	</TEXT>
 	<TEXT>
@@ -775,7 +775,7 @@
 		<English>Select Init Type</English>
 		<French>Choix du type de lancement</French>
 		<German>Init Type wählen</German>
-		<Italian>Seleziona tipo di init</Italian>
+		<Italian>Seleziona tipo di lancio del gioco</Italian>
 		<Spanish>Seleccionar tipo de inicio</Spanish>
 	</TEXT>
 	<TEXT>
@@ -791,7 +791,7 @@
 		<English>Select Network</English>
 		<French>Choix du réseau</French>
 		<German>Netzwerk auswählen</German>
-		<Italian>Seleziona la rete</Italian>
+		<Italian>Seleziona rete</Italian>
 		<Spanish>Seleccionar red</Spanish>
 	</TEXT>
 	<TEXT>

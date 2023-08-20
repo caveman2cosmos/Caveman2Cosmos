@@ -375,7 +375,7 @@
 		<Tag>TXT_KEY_C2C_HINT_19</Tag>
 		<English>C2C: There are many types of Animal related buildings in C2C. They include such buildings as a Zoo, Aquarium, Pet Shop, Dog Breeder, Chicken Coop, Elephant Trainer and even a Parrot Aviary!</English>
 		<French>C2C: Il existe de nombreux types de bâtiments liés aux animaux dans C2C. cela comprend des bâtiments tels que zoo, aquarium, éleveurs de chiens, poulaillers, dresseurs d'éléphants et même volières de perroquets!</French>
-		<Italian>C2C: Ci sono molti edifici legati agli animali in C2C. Includono edifici come Zoo, Acquario, Negozio di animali, Allevatore di cani, Allevatore di polli, Addestratore di elefanti e perfino una voliera per pappagalli!</Italian>
+		<Italian>C2C: Ci sono molti edifici legati agli animali in C2C. Includono edifici come Zoo, Acquario, Negozio di animali, Allevamento di cani, Allevamento di polli, Addestratore elefanti e perfino una voliera per pappagalli!</Italian>
 		<Spanish>C2C: Existen diversos tipos de edificios relacionados con los animales en C2C, como el Parque zoológico, el Aquarium, la Tienda de mascotas, el Criador de perros, el Gallinero, el Domador de elefantes, ¡e incluso una Avícola de loros!</Spanish>
 		<Polish>C2C: Oferuje wiele budynków umożliwiających hodowlę zwierząt.</Polish>
 		<Russian>C2C: Ñóùåñòâóåò ìíîæåñòâî âèäîâ æèâîòíûõ, ñâÿçàííûõ çäàíèÿìè â Ñ2Ñ. Îíè âêëþ÷àþò â ñåáÿ òàêèå ïîñòðîéêè êàê Çîîïàðê, Àêâàðèóì, Çîîìàãàçèí, Âîëüåð äëÿ ñîáàê, Êóðÿòíèê, Ïîãîíùèê ñëîíîâ è äàæå Êëåòêà äëÿ ïîïóãàåâ!</Russian>
@@ -1183,7 +1183,7 @@
 		<English>Your Fighters can intercept multiple enemy planes per turn, but become less effective at it as they get damage, so take care to repair your defensive planes.</English>
 		<French>Vos chasseurs peuvent intercepter plusieurs avions ennemis par tour, mais sont moins efficaces quand ils sont endommagés. Pensez donc bien à réparer vos avions de défense.</French>
 		<German>Ihre Jäger können in jeder Runde mehrere feindliche Lufteinheiten abfangen, Ihre Schlagkraft sinkt allerdings, wenn sie beschädigt werden. Sie sollten Ihre defensiven Lufteinheiten daher stets reparieren.</German>
-		<Italian>I tuoi caccia possono intercettare più aerei per turno, ma diventano meno efficaci se subiscono danni, perciò premurati di riparare i tuoi velivoli difensivi.</Italian>
+		<Italian>I tuoi caccia possono intercettare più aerei a turno, ma diventano meno efficaci se subiscono danni, perciò premurati di riparare i tuoi velivoli difensivi.</Italian>
 		<Spanish>Tus cazas pueden interceptar varios aviones por turno, pero se vuelven menos eficaces a medida que sufren daños, por lo que debes preocuparte de reparar tus aviones defensivos.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2383,7 +2383,7 @@
 		<Tag>TXT_KEY_REVDCM_HINT_65</Tag>
 		<English>*Revolutions Mod Hint*: Revolutions games are more interesting and diverse than standard games. It is well worth writing down your game history turn by turn, in the autolog with the [ALT E] keystroke.</English>
 		<French>*Conseil Mod Revolution*: Les Parties de Revolutions sont plus intéressantes et diverses que les parties standard. C'est tout à fair intéressant d'écrire votre Histoire tout après tour, en utilisant les fonctions d'autolog - touches [ALT E].</French>
-		<Italian>*Suggerimento del MOD 'Revolutions'*: Le partite in 'Revolutions' sono più interessanti e varie rispetto al gioco standard. Vale la pena scrivere la storia della tua partita turno per turno: con l'autolog, utilizzando la combinazione [ALT+E].</Italian>
+		<Italian>*Suggerimento del MOD 'Revolutions'*: Le partite in 'Revolutions' sono più interessanti e varie rispetto al gioco standard. Vale la pena scrivere la storia della tua partita turno a turno: con l'autolog, utilizzando la combinazione [ALT+E].</Italian>
 		<Spanish>*Consejo de Revolution*: Las partidas de Revolution son mas interesantes y diversas que las partidas estándar. Vale la pena ir escribiendo la historia de la partida turno a turno mediante el registro automático, usando la combinación [ALT-E].</Spanish>
 		<Polish>*Podpowiedź do moda Rewolucje*: Rozgrywki w Rewolucjach są bardziej interesujące i urozmaicone niż standardowe rozgrywki. Warto pisać historie tura po turze, w autologu [ALT+E].</Polish>
 		<Russian>*Revolutions Mod Hint*: партии с сабмодом Revolution более интересны и разнообразны, чем стандартная игра. Стоит записывать историю своей игры по очереди в автологе с помощью нажатия клавиши [ALT+E].</Russian>

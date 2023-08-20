@@ -8,11 +8,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>
-			<Text>Concezione del mondo - Cannibalismo attivo</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Cannibalismo attivo (concezione del mondo)</Italian>
 		<Polish>Swiatopogląd - Kanibalizm aktywny</Polish>
 		<Russian>Ëþäîåäû</Russian>
 	</TEXT>
@@ -24,11 +20,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>
-			<Text>Malattia (Kuru)</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Kuru (malattia)</Italian>
 		<Polish>Choroba (Kuru)</Polish>
 		<Russian>Áîëåçíü (Êóðó)</Russian>
 	</TEXT>
@@ -40,11 +32,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>
-			<Text>Concezione del mondo - Cannibalismo</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Cannibalismo (concezione del mondo)</Italian>
 		<Polish>Swiatopogląd - Kanibalizm</Polish>
 		<Russian>Êàííèáàëèçì</Russian>
 	</TEXT>
@@ -68,7 +56,7 @@
 		<Tag>TXT_KEY_MISSION_BUTCHER_HUMAN</Tag>
 		<English>Butcher a captive for food.</English>
 		<French>Dépecer un prisonnier pour sa nourriture.</French>
-		<Italian>Uccidi un prigioniero per ricavarne cibo.</Italian>
+		<Italian>Uccidi prigioniero</Italian>
 		<Polish>Zarżnij jeńców i przeznacz ich mięso do zjedzenia.</Polish>
 		<Russian>Îñâåæåâàòü òóøó ïëåííèêà â êà÷åñòâå çàïàñîâ ïèùè.</Russian>
 	</TEXT>
@@ -76,7 +64,7 @@
 		<Tag>TXT_KEY_MISSION_BUTCHER_HUMAN_HELP</Tag>
 		<English>Butchering a captive adds food to your store.</English>
 		<French>Dépecer le prisonnier, pour ajouter de la nourriture à votre stock.</French>
-		<Italian>Uccidere un prigioniero aggiunge cibo alla tua riserva.</Italian>
+		<Italian>[NEWLINE]Uccidere un prigioniero aggiunge cibo alla tua riserva.</Italian>
 		<Polish>Mięso zarżniętych jeńców zostaje przekazani do zapasów żywności w mieście.</Polish>
 		<Russian>×àñòè òåëà ïëåííèêà äîáàâëåíû â àìáàð â êà÷åñòâå çàïàñîâ ïèùè.</Russian>
 	</TEXT>
@@ -84,7 +72,7 @@
 		<Tag>TXT_KEY_MISSION_REMOVE_WV_CANNIBALISM</Tag>
 		<English>Abandon Cannibalism World View</English>
 		<French>Abandonner la Vision du Monde Cannibalisme</French>
-		<Italian>Abbandona la Concezione del mondo - Cannibalismo</Italian>
+		<Italian>Abbandona il cannibalismo (concezione del mondo)</Italian>
 		<Polish>Porzuć Swiatopogląd - Kanibalizm</Polish>
 		<Russian>Îòêàçàòüñÿ îò òðàäèöèè êàííèáàëèçìà</Russian>
 	</TEXT>
@@ -108,7 +96,7 @@
 		<Tag>TXT_KEY_OUTCOME_BUTCHER_CAPTIVE_MESSAGE</Tag>
 		<English>Your people have butchered a captive.</English>
 		<French>Votre peuple a dépecé un prisonnier afin de le manger.</French>
-		<Italian>La tua gente ha ucciso e macellato un prigioniero.</Italian>
+		<Italian>La tua gente ha ucciso un prigioniero.</Italian>
 		<Polish>Twoi ludzie zabili i zjedli jeńców.</Polish>
 		<Russian>Âàøè ëþäè ðàçäåëàëè íà ìÿñî ïëåííèêà.</Russian>
 	</TEXT>
@@ -124,7 +112,7 @@
 		<Tag>TXT_KEY_OUTCOME_REMOVE_WV_CANNIBALISM_MESSAGE</Tag>
 		<English>Your nation has stopped eating people.</English>
 		<French>Votre nation a stopé de manger vos semblables.</French>
-		<Italian>Nella tua nazione la gente ha smesso di mangiare altre persone.</Italian>
+		<Italian>Nella tua nazione la gente ha smesso di mangiare persone.</Italian>
 		<Polish>Twój naród przestał zjadać innych ludzi.</Polish>
 		<Russian>Âàø íàðîä ïðåêðàòèë ïðàêòèêó êàííèáàëèçìà.</Russian>
 	</TEXT>

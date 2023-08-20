@@ -585,7 +585,7 @@
 		<Tag>TXT_KEY_UNITHELP_ARMOR_BASE</Tag>
 		<English>[ICON_BULLET]Reduces combat damaged suffered by %d1_Amount%% per round.</English>
 		<French>[ICON_BULLET]réduit les dégâts reçus au combat de %d1_Amount%% par coup.</French>
-		<Italian>[ICON_BULLET]Riduce il danno sofferto in combattimento del %d1_Amount%% per turno.</Italian>
+		<Italian>[ICON_BULLET]Riduce il danno sofferto in combattimento del %d1_Amount%% a turno.</Italian>
 		<Polish>[ICON_BULLET]Redukcja obrażeń o %d1_Amount%% na runde.</Polish>
 		<Russian>[ICON_BULLET]Уменьшает получаемый в бою урон на %d1_Amount%% за раунд.</Russian>
 	</TEXT>
@@ -657,7 +657,7 @@
 		<English>[ICON_BULLET]%D1%% chance to Capture.</English>
 		<French>[ICON_BULLET]%D1%% de chances de capturer.</French>
 		<German>[ICON_BULLET]Gefangennahme: %D1%%</German>
-		<Italian>[ICON_BULLET]%D1%% chance di catturare.</Italian>
+		<Italian>[ICON_BULLET]Possibilità di catturare un'unità nemica %D1%%</Italian>
 		<Polish>[ICON_BULLET]%D1%% szansy na Przejęcie.</Polish>
 		<Russian>[ICON_BULLET]%D1%% øàíñîâ çàõâàòèòü.</Russian>
 	</TEXT>
@@ -666,7 +666,7 @@
 		<English>[ICON_BULLET]%D1%% chance to avoid Capture.</English>
 		<French>[ICON_BULLET]%D1%% de chances d'éviter la Capture.</French>
 		<German>[ICON_BULLET]Gefangennahme entgehen: %D1%%</German>
-		<Italian>[ICON_BULLET]%D1%% chance di sfuggire alla cattura.</Italian>
+		<Italian>[ICON_BULLET]%D1%% di possibilità di sfuggire alla cattura.</Italian>
 		<Polish>[ICON_BULLET]%D1%% szansy na uniknięcia Przejęcia.</Polish>
 		<Russian>[ICON_BULLET]%D1%% øàíñîâ èçáåæàòü çàõâàòà.</Russian>
 	</TEXT>
@@ -689,7 +689,7 @@
 		<English>%[SPACE]Faster Training of[SPACE]</English>
 		<French>%[SPACE]Accélère l'entraînement de[SPACE]</French>
 		<German>%[SPACE]schnellere Ausbildung von[SPACE]</German>
-		<Italian>%[SPACE]costruzione più veloce di[SPACE]</Italian>
+		<Italian>%[SPACE]costruzione più veloce delle unità[SPACE]</Italian>
 		<Spanish>%[SPACE]de aumento de velocidad de entrenamiento de[SPACE]</Spanish>
 		<Polish>%[SPACE]szybciej:[SPACE]</Polish>
 		<Russian>%[SPACE]Áûñòðîå îáó÷åíèå[SPACE]</Russian>
@@ -1102,7 +1102,7 @@
 		<Tag>TXT_KEY_UNITHELP_FATIGUE</Tag>
 		<English>[ICON_BULLET]Fatigue: Loses %d1_Amount%% strength per round of battle during combat.</English>
 		<French>[ICON_BULLET]Fatigue: perd %d1_Amount%% de puissance par round durant le combat.</French>
-		<Italian>[ICON_BULLET]Fatica: perde %d1_Amount%% di forza per turno di battaglia durante i combattimenti.</Italian>
+		<Italian>[ICON_BULLET]Fatica: perde %d1_Amount%% di forza a turno di battaglia durante i combattimenti.</Italian>
 		<Polish>[ICON_BULLET]Zmęczenie: Zabiera %d1_Amount%% do Siły na rundę przez czas walki.</Polish>
 		<Russian>[ICON_BULLET]Истощение: потеря %d1_Amount%% силы за раунд битвы во время сражения.</Russian>
 	</TEXT>
@@ -1374,7 +1374,7 @@
 		<Tag>TXT_KEY_UNITHELP_KNOCKBACK</Tag>
 		<English>[ICON_BULLET]Knockback: %d1_Amount%% per round chance to force defenders to withdraw.</English>
 		<French>[ICON_BULLET]Ecrasement: %d1_Amount%% de chances par round de force le Défenseur à se retirer.</French>
-		<Italian>[ICON_BULLET]Sbaraglio: %d1_Amount%% di probabilità per turno di costringere i difensori a ritirarsi.</Italian>
+		<Italian>[ICON_BULLET]Sbaraglio: %d1_Amount%% di probabilità a turno di costringere i difensori a ritirarsi.</Italian>
 		<Polish>[ICON_BULLET]Odrzut: %d1_Amount%% szansy na rundę do zmuszenia obrońcy do ucieczki.</Polish>
 	</TEXT>
 	<TEXT>
@@ -1395,7 +1395,7 @@
 		<Tag>TXT_KEY_UNITHELP_KNOCKBACK_TOTAL_MODIFIER</Tag>
 		<English>[ICON_BULLET]Knockback: Force defender to withdraw, %d1_Amount%% chance/round.</English>
 		<French>[ICON_BULLET]Ecrasement: Force le défenseur à se retirer, %d1_Amount%% chance/round.</French>
-		<Italian>[ICON_BULLET]Sbaraglio: forza il difensore a ritirarsi, %d1_Amount%% di chance per turno.</Italian>
+		<Italian>[ICON_BULLET]Sbaraglio: forza il difensore a ritirarsi, %d1_Amount%% di chance a turno.</Italian>
 		<Polish>[ICON_BULLET]Odrzut: Zmusza obrońcę do ucieczki, %d1_Amount%% szansy/rundę.</Polish>
 	</TEXT>
 	<TEXT>
@@ -1960,7 +1960,7 @@
 		<Tag>TXT_KEY_UNITHELP_REPEL_TOTAL_MODIFIER</Tag>
 		<English>[ICON_BULLET]Repel: Repels attackers %d1_Amount%% chance/round.</English>
 		<French>[ICON_BULLET]Expulsion: Repousse les Attaquants %d1_Amount%% chances par round.</French>
-		<Italian>[ICON_BULLET]Respinta: %d1_Amount%% di chance per turno di respingere gli attaccanti.</Italian>
+		<Italian>[ICON_BULLET]Respinta: %d1_Amount%% di chance a turno di respingere gli attaccanti.</Italian>
 		<Polish>[ICON_BULLET]Odpychanie: Szansa na Odepchnięcie wroga: %d1_Amount%% na turę.</Polish>
 		<Russian>[ICON_BULLET]Отражение: отражает атаку противника %d1_Amount%% шанс/раунд.</Russian>
 	</TEXT>
@@ -2018,7 +2018,7 @@
 		<Tag>TXT_KEY_UNITHELP_ROUND_STUN_TOTAL_MODIFIER_SHORT</Tag>
 		<English>[ICON_BULLET]Round Stun: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Etourdissement: %d1_Amount%%</French>
-		<Italian>[ICON_BULLET]Stordimento per turno: %d1_Amount%%</Italian>
+		<Italian>[ICON_BULLET]Stordimento a turno: %d1_Amount%%</Italian>
 		<Polish>[ICON_BULLET]Oszołomienie: %d1_Amount%%</Polish>
 	</TEXT>
 	<TEXT>
@@ -4379,6 +4379,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Ãðóïïà ëþäåé</Russian>
+		<Italian>Comitiva ancestrale</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BANDEIRANTE_PEDIA</Tag>
@@ -6727,6 +6728,7 @@
 		<French>Archer Composite</French>
 		<Polish>Łucznik Kompozytowy</Polish>
 		<Russian>Êîìïîç. ëó÷íèê</Russian>
+		<Italian>Arciere composito</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CONFUCIAN_MISSIONARY</Tag>
@@ -9329,7 +9331,7 @@
 		<English>Although often used to designate the flintlock-armed formations of a number of European countries, the term "Musketeer" generally refers to the King's Guard under Louis XIII and Louis XIV of France, immortalized in Dumas' famous novel. As such, the Musketeers served as a training ground for the young nobility, intended to be the elite of the army. Training not only included mastery of all weapons, from epee to musket, but instruction in social skills and military etiquette as well. In peacetime, the Musketeers served as the King's personal escort.[PARAGRAPH:2]Monsieur Treville, one of the Louis XIII's advisors and ardent sponsor of the Musketeers, and Cardinal Richelieu, who maintained his own company of guards, were political adversaries until the banishment of Treville following a 1642 plot to assassinate the Cardinal. Following that, the prestige of the Musketeers declined. In the military reforms that followed the death of Louis XIV, the Musketeers were disbanded and absorbed into the ranks of the French army.</English>
 		<French>Bien que le terme "mousquetaire" soit souvent utilisé pour désigner les formations armées de fusils à silex de nombreux pays européens, il fait référence à la Garde Royale des rois de France Louis XIII et Louis XIV, immortalisée par Alexandre Dumas. Le corps des mousquetaires servait alors à former la jeune noblesse, destinée à devenir l'élite de l'armée. La formation militaire comprenait non seulement l'apprentissage des armes, de l'épée et du mousquet, mais aussi des règles de savoir-vivre et de l'étiquette militaire. En temps de paix, les mousquetaires formaient la garde personnelle du roi.[PARAGRAPH:2]Monsieur de Tréville, conseiller de Louis XIII et ardent défenseur des mousquetaires, et le Cardinal de Richelieu, qui possédait sa propre compagnie de gardes, se sont opposés politiquement jusqu'à ce que de Tréville soit banni, suite au complot de 1642 visant à assassiner le Cardinal. Ces événements ont précipité le déclin du prestige des mousquetaires. Le corps des mousquetaires fut supprimé lors des réformes militaires qui suivirent la mort de Louis XVI.</French>
 		<German>Zwar wird der Begriff "Musketier" häufig zur Beschreibung der mit Steinschlosspistolen bewaffneten Truppenformationen verschiedener europäischer Länder benutzt, allgemein ist damit allerdings die königliche Leibgarde unter Ludwig XIII. und Ludwig XIV. von Frankreich gemeint, die in dem berühmten Roman von Alexandre Dumas verewigt wurde. Als solche dienten die Musketiere als Ausbilder für junge Adlige, die den späteren Elitetruppen der Armee angehören sollten. Sie unterwiesen ihre Schützlinge dabei nicht nur im Umgang mit den verschiedenartigsten Waffen, vom Degen bis hin zur Muskete, sondern brachten ihnen auch soziale Umgangsformen und Militäretikette bei. In Friedenszeiten dienten die Musketiere als persönliche Eskorte des Königs.[PARAGRAPH:2]Monsieur Treville, einer der Berater König Ludwig des XIII., seines Zeichens ein leidenschaftlicher Fürsprecher der Musketiere, und Kardinal Richelieu, der seine eigene Garde unterhielt, waren politische Gegner. Nachdem Treville wegen eines geplanten Attentats gegen den Kardinal im Jahre 1642 in die Verbannung geschickt worden war, verloren die Musketiere zusehends an Ansehen und Bedeutung. Schließlich wurden sie im Rahmen der Militärreformen, die nach dem Tode Ludwigs XIV. in Kraft traten, aufgelöst und in die Reihen der französischen Armee eingegliedert.</German>
-		<Italian>Malgrado sia usato spesso per designare le formazioni con armi dotate di otturatore a pietra focaia appartenenti a diversi paesi europei, il termine "moschettiere", immortalato nel famoso romanzo di Dumas, si riferisce generalmente alla Guardia del Re sotto Luigi XIII e Luigi XIV di Francia. L'addestramento dei moschettieri non consisteva solamente nella padronanza di tutte le armi, dal moschetto alla spada, ma comprendeva anche il senso civico e la disciplina militare. In tempo di pace, i moschettieri erano la scorta personale del re.[PARAGRAPH:2]Monsieur Treville, uno dei consiglieri di Luigi XIII, nonché fervente sostenitore dei moschettieri, e il Cardinale Richelieu, che mantenne la sua compagnia di guardie, furono avversari politici fino a quando Treville non venne messo al bando, in seguito al complotto del 1642 per assassinare il Cardinale. Dopo questo evento, il prestigio dei moschettieri diminuì e, con le riforme militari che seguirono alla morte di Luigi XIV, queste unità furono congedate e integrate nei ranghi dell'esercito francese.</Italian>
+		<Italian>Malgrado sia usato spesso per designare le formazioni con armi dotate di otturatore a selce appartenenti a diversi paesi europei, il termine "moschettiere", immortalato nel famoso romanzo di Dumas, si riferisce generalmente alla Guardia del Re sotto Luigi XIII e Luigi XIV di Francia. L'addestramento dei moschettieri non consisteva solamente nella padronanza di tutte le armi, dal moschetto alla spada, ma comprendeva anche il senso civico e la disciplina militare. In tempo di pace, i moschettieri erano la scorta personale del re.[PARAGRAPH:2]Monsieur Treville, uno dei consiglieri di Luigi XIII, nonché fervente sostenitore dei moschettieri, e il Cardinale Richelieu, che mantenne la sua compagnia di guardie, furono avversari politici fino a quando Treville non venne messo al bando, in seguito al complotto del 1642 per assassinare il Cardinale. Dopo questo evento, il prestigio dei moschettieri diminuì e, con le riforme militari che seguirono alla morte di Luigi XIV, queste unità furono congedate e integrate nei ranghi dell'esercito francese.</Italian>
 		<Spanish>Aunque a menudo se usa para designar a los contingentes armados con mosquetes de varios estados europeos, el término "mosquetero" se suele referir a la guardia real de los reyes Luis XIII y Luis XIV de Francia, inmortalizada en la famosa novela de Dumas. Como tales, los mosqueteros sirvieron como base de entrenamiento para los jóvenes nobles, destinados a formar la elite del ejército. La instrucción no incluía solo el dominio de todas las armas, desde el florete al mosquete, sino también la educación social y la etiqueta militar. En tiempos de paz, componían la guardia real del monarca.[PARAGRAPH:2]Monsieur de Treville, consejero de Luis XIII y ardiente defensor de los mosqueteros, y el cardenal Richelieu, quien contaba con su propia guardia, fueron adversarios políticos hasta el exilio de Treville en 1642, como consecuencia de un complot para asesinar al cardenal. A partir de entonces, el prestigio de los mosqueteros entró en declive. Durante las reformas que siguieron a la muerte de Luis XIV, los mosqueteros fueron disueltos e integrados en las filas del ejército francés.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -10135,11 +10137,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Grande Generale:Grandi Generali</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Gran generale</Italian>
 		<Spanish>
 			<Text>Gran general:Grandes generales</Text>
 			<Gender>Male</Gender>
@@ -10968,11 +10966,7 @@
 		<English>Heavy Swordsman</English>
 		<French>Spadassin lourd</French>
 		<German>Schwerer Schwertkämpfer</German>
-		<Italian>
-			<Text>Spadaccino pesante:Spadaccini pesanti</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Spadaccino pesante</Italian>
 		<Spanish>
 			<Text>Soldado con espada pesada:Soldados con espada pesada</Text>
 			<Gender>Male</Gender>
@@ -11270,7 +11264,7 @@
 		<Tag>TXT_KEY_UNIT_HITECH_HOVERCRAFT</Tag>
 		<English>Hi-Tech Hovercraft</English>
 		<French>Aéroglisseur Hi-Tech</French>
-		<Italian>Hovercraft Hi-Tech</Italian>
+		<Italian>Hovercraft hi-tech</Italian>
 		<Polish>Nowoczesny Poduszkowiec</Polish>
 		<Russian>Ïðîäâ. ñóäíî íà â/ï</Russian>
 	</TEXT>
@@ -13976,11 +13970,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Arciere con arco lungo:Arcieri con arco lungo</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Arciere cecchino</Italian>
 		<Spanish>
 			<Text>Saetero:Saeteros</Text>
 			<Gender>Male</Gender>
@@ -15004,11 +14994,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Grande Mercante:Grandi Mercanti</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Gran mercante</Italian>
 		<Spanish>
 			<Text>Gran mercader:Grandes mercaderes</Text>
 			<Gender>Male</Gender>
@@ -15965,7 +15951,7 @@
 		<English>One of the most important developments in the history of warfare was the invention of firearms. Originally developed in the 14th century, firearms evolved quickly, and by the late 17th century flintlock muskets had become commonplace in battle. Musketmen, who were relatively inexpensive to equip and train, proved a deadly foe for the knights who had dominated the battlefield for so many years. Armies were often comprised of a combination of musketmen, cannon, and knights, each complementing the strengths and weaknesses of the others. Large forces of musketmen within a fortress or behind city walls proved an exceedingly difficult obstacle to an attacking army. Muskets were the primary firearms in use until they were replaced by repeating rifles in the mid-19th century.</English>
 		<French>L'invention des armes à feu fut l'une des évolutions les plus importantes de l'histoire de la guerre. Créées au XIVe siècle, celles-ci évoluèrent rapidement, et à la fin du XVIIe siècle, l'utilisation de mousquets à silex sur les champs de bataille s'était généralisée. Les arquebusiers coûtaient peu à former et à équiper, et étaient redoutablement efficaces face aux chevaliers, qui avaient pourtant dominé les champs de bataille pendant des siècles. Les armées étaient souvent composées d'arquebusiers, de canons et de chevaliers, et chacun de ces éléments compensait les faiblesses des autres. De plus, une forteresse ou une ville fortifiée défendue par un grand nombre d'arquebusiers devenait pratiquement inexpugnable. Les mousquets furent les principales armes à feu jusqu'à leur remplacement par les fusils à répétition, au milieu du XIXe siècle.</French>
 		<German>Eine der historisch wichtigsten kriegstechnischen Erfindungen waren Feuerwaffen. Die im 14. Jahrhundert begonnene Entwiclung schritt rasch voran, und im späten 17. Jahrhundert war der Einsatz von Steinschlossmusketen im Gefecht alltäglich geworden. Die Ausbildung und Ausrüstung der Musketiere war vergleichsweise kostengünstig und sie erwiesen sich für die Ritter, die so viele Jahre lang das Kampfgeschehen dominiert hatten, als tögliche Gegner. Häufig wurden Musketiere, Kanonen und Ritter, deren Stärken und Schwächen sich gut ergänzten, in einem Truppenverband zusammengeschlossen. Größere Musketiertruppen in einer Festung oder hinter Stadtmauern Posten stellten für angreifende Streitmächte ein nahezu unüberwindbares Hindernis dar. Lange Zeit waren Musketen die vorherrschenden Schusswaffen auf dem Schlachtfeld, bis sie Mitte des 19. Jahrhunderts von den Repetiergewehren abgelöst wurden.</German>
-		<Italian>Uno dei più importanti sviluppi nella storia bellica fu l'invenzione delle armi da fuoco. Originariamente sviluppate nel quattordicesimo secolo, le armi da fuoco progredirono rapidamente e verso la fine del diciassettesimo secolo i moschetti con otturatore a pietra focaia erano ormai comuni sul campo di battaglia. I moschettieri, che erano relativamente economici da equipaggiare e da addestrare, si rivelarono un nemico micidiale per i cavalieri, che avevano dominato il campo di battaglia per così tanti anni. Gli eserciti comprendevano spesso una parte di moschettieri, cannoni e cavalieri, ciascuno dei quali compensava i punti di forza e di debolezza degli altri. Le ampie formazioni di moschettieri all'interno di una fortezza o dietro le mura della città si rivelarono un ostacolo estremamente ostico per un esercito all'assalto. I moschetti erano la principale arma da fuoco in uso, fino a quando non furono sostituiti dai fucili a ripetizione, alla metà del diciannovesimo secolo.</Italian>
+		<Italian>Uno dei più importanti sviluppi nella storia bellica fu l'invenzione delle armi da fuoco. Originariamente sviluppate nel quattordicesimo secolo, le armi da fuoco progredirono rapidamente e verso la fine del diciassettesimo secolo i moschetti con otturatore a selce erano ormai comuni sul campo di battaglia. I moschettieri, che erano relativamente economici da equipaggiare e da addestrare, si rivelarono un nemico micidiale per i cavalieri, che avevano dominato il campo di battaglia per così tanti anni. Gli eserciti comprendevano spesso una parte di moschettieri, cannoni e cavalieri, ciascuno dei quali compensava i punti di forza e di debolezza degli altri. Le ampie formazioni di moschettieri all'interno di una fortezza o dietro le mura della città si rivelarono un ostacolo estremamente ostico per un esercito all'assalto. I moschetti erano la principale arma da fuoco in uso, fino a quando non furono sostituiti dai fucili a ripetizione, alla metà del diciannovesimo secolo.</Italian>
 		<Spanish>La invención de las armas de fuego fue uno de los descubrimientos más importantes en la historia de la guerra. Desarrolladas originalmente en el siglo XIV, las armas de fuego evolucionaron con rapidez, y a finales del siglo XVII, los mosquetes de chispa eran habituales en la batalla. Los soldados con mosquete, que eran relativamente baratos de equipar y entrenar, resultaron ser un enemigo mortal para los caballeros, que habían dominado el campo de batalla durante tantos años. Los ejércitos estaban a menudo compuestos por una combinación de mosqueteros, cañones y caballeros, cada uno complementando los puntos fuertes y débiles de los otros. Las fortalezas y las murallas, defendidas por grandes contingentes de soldados con mosquete, eran un tremendo obstáculo para los ejércitos atacantes. Los mosquetes fueron las armas principales de fuego hasta que fueron sustituidos por los rifles de repetición a mediados del siglo XIX.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -19026,11 +19012,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Fuciliere:Fucilieri</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Fuciliere</Italian>
 		<Spanish>
 			<Text>Fusilero:Fusileros</Text>
 			<Gender>Male</Gender>
@@ -21320,7 +21302,7 @@
 		<English>Stone Axeman</English>
 		<French>Guerrier avec hache de pierre</French>
 		<German>Steinaxtkämpfer</German>
-		<Italian>Guerriero con ascia in pietra</Italian>
+		<Italian>Guerriero con ascia di pietra</Italian>
 		<Spanish>
 			<Text>Guerrero con hacha de piedra</Text>
 			<Gender>Male</Gender>
@@ -21435,9 +21417,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
-			<Text>Sottomarino:Sottomarini</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
+			<Text>Sottomarino</Text>		
 		</Italian>
 		<Spanish>
 			<Text>Submarino:Submarinos</Text>
@@ -23649,7 +23629,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>Kampfhunde</German>
-		<Italian>Cani da guerra</Italian>
+		<Italian>Cane da guerra</Italian>
 		<Spanish>
 			<Text>Perros de guerra</Text>
 			<Gender>Male</Gender>

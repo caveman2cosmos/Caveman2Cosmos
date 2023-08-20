@@ -5,7 +5,7 @@
 		<English>[ICON_BULLET]Can be bombarded</English>
 		<French>[ICON_BULLET]Peut être bombardé</French>
 		<German>[ICON_BULLET]Beschossen werden kann</German>
-		<Italian>[ICON_BULLET]Può essere bombardati</Italian>
+		<Italian>[ICON_BULLET]Può essere bombardato</Italian>
 		<Spanish>[ICON_BULLET]Puede ser bombardeado</Spanish>
 		<Polish>[ICON_BULLET]Może być zbombardowany.</Polish>
 		<Russian>[ICON_BULLET]Ìîæåò áûòü îáñòðåëÿí</Russian>
@@ -14,6 +14,7 @@
 		<Tag>TXT_KEY_IMPROVEMENTHELP_BONUS_CHANGE</Tag>
 		<English>[ICON_BULLET]When added to a plot, this improvement also adds a source of [COLOR_WARNING_TEXT]%s1_Bonus_Name[COLOR_REVERT] (if the resource is valid).</English>
 		<French>[ICON_BULLET]Lorsqu'installé sur une case, cet aménagement ajoute une source de [COLOR_WARNING_TEXT]%s1_Bonus_Name[COLOR_REVERT] (Si la ressource est valide).</French>
+		<Italian>[ICON_BULLET]Quando aggiunto a una casella, questo miglioramento aggiunge anche una fonte di [COLOR_WARNING_TEXT]%s1_Bonus_Name[COLOR_REVERT] (se la risorsa è valida).</Italian>
 		<Polish>[ICON_BULLET]Kiedy dodana do pola, ta infrastruktura zmienia także cechę terenu na [COLOR_WARNING_TEXT]%s1_Feature_Name[COLOR_REVERT] (jeśli cecha jest prawidłowa).</Polish>
 		<Russian>[ICON_BULLET]Ïðè äîáàâëåíèè íà ó÷àñòîê, äàííîå óëó÷øåíèå ñîçäàåò èñòî÷íèê [COLOR_WARNING_TEXT]%s1_Bonus_Name[COLOR_REVERT] (åñëè ðåñóðñ ÿâëÿåòñÿ äîñòóïíûì).</Russian>
 	</TEXT>
@@ -21,6 +22,7 @@
 		<Tag>TXT_KEY_IMPROVEMENTHELP_CHANGE_REMOVE</Tag>
 		<English>[ICON_BULLET]When added to a plot, this improvement immediately removes itself from the plot. (Useful for placing features and bonuses with upgrades, builds and razing.)</English>
 		<French>[ICON_BULLET]Lorsque construit sur une case, cet aménagement est enlevé (utile pour placer des fonctionnalités avec améliorations, constructions et destructions.)</French>
+		<Italian>[ICON_BULLET]Quando viene aggiunto a una casella, questo miglioramento rimuove immediatamente la risorsa dalla casella. (Utile per posizionare caratteristiche e bonus migiorati dopo aver distrutto i precedenti).</Italian>
 		<Polish>[ICON_BULLET]Kiedy zostanie dodane do pola, to ulepszenie automatycznie usunie się z pola (użyteczne to umieszczania surowców i cech terenu z ulepszeniami).</Polish>
 		<Russian>[ICON_BULLET]После окончания строительства это улучшение немедленно удаляется с участка. (Полезно для размещения улучшений и построек, а также при их сносе.)</Russian>
 	</TEXT>
@@ -29,7 +31,7 @@
 		<English>[ICON_BULLET]Influences plots within a distance of %d1_Num</English>
 		<French>[ICON_BULLET]Influences des parcelles dans un rayon de %d1_Num</French>
 		<German>[ICON_BULLET]Einflüsse Plots innerhalb einer Entfernung von %d1_Num</German>
-		<Italian>[ICON_BULLET]Trame influenze entro una distanza di %d1_Num</Italian>
+		<Italian>[ICON_BULLET]Influenza le altre caselle fino a una distanza di %d1_Num</Italian>
 		<Spanish>[ICON_BULLET]Se propaga por las casillas situadas en un radio de %d1_Num</Spanish>
 		<Polish>[ICON_BULLET]Wpływa na teren o zasięgu %d1_Num pól</Polish>
 		<Russian>[ICON_BULLET]Ðàñøèðÿåò ó÷àñòêè â ïðåäåëàõ ðàññòîÿíèÿ %d1_Num</Russian>
@@ -37,6 +39,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENTHELP_FEATURE_CHANGE</Tag>
 		<English>[ICON_BULLET]When added to a plot, this improvement also changes the feature on the plot to [COLOR_WARNING_TEXT]%s1_Feature_Name[COLOR_REVERT] (if feature is valid).</English>
+		<Italian>[ICON_BULLET]Quando viene aggiunto a una casella, questo miglioramento cambia anche la risorsa della casella in [COLOR_WARNING_TEXT]%s1_Feature_Name[COLOR_REVERT] (se la risorsa è valida).</Italian>
 		<Polish>[ICON_BULLET]Kiedy dodana do pola, ta infrastruktura zmienia także cechę terenu na [COLOR_WARNING_TEXT]%s1_Feature_Name[COLOR_REVERT] (jeśli cecha jest prawidłowa).</Polish>
 		<Russian>[ICON_BULLET]Ïðè äîáàâëåíèè íà ó÷àñòîê, äàííîå óëó÷øåíèå èçìåíÿåò îñîáåííîñòè ýòîé êëåòêè äî [COLOR_WARNING_TEXT]%s1_Feature_Name[COLOR_REVERT] (åñëè îñîáåííîñòü ÿâëÿåòñÿ äîñòóïíîé).</Russian>
 	</TEXT>
@@ -45,7 +48,7 @@
 		<English>[ICON_BULLET]A unit must guard it to upgrade</English>
 		<French>[ICON_BULLET]Une unité doit la garder pour qu'elle évolue</French>
 		<German>[ICON_BULLET]Eine Unit muss stärken, um ein Upgrade</German>
-		<Italian>[ICON_BULLET]Una unità deve fortificare l'aggiornamento</Italian>
+		<Italian>[ICON_BULLET]Una unità deve fortificarsi per l'aggiornamento.</Italian>
 		<Spanish>[ICON_BULLET]Se debe fortificar una unidad aquí para mejorar</Spanish>
 		<Polish>[ICON_BULLET]Jednostka musi być trybie obronnym, aby została ulepszona.</Polish>
 		<Russian>[ICON_BULLET]Îòðÿä äîëæåí áûòü óêðåïëåí, äëÿ òîãî ÷òîáû åãî óëó÷øèòü</Russian>
@@ -53,12 +56,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENTHELP_GLOBAL</Tag>
 		<English>[ICON_BULLET]May only be placed once in a game.</English>
+		<Italian>[ICON_BULLET]Può essere posizionato una sola volta per partita.</Italian>
 		<Russian>[ICON_BULLET]Может быть размещен только единожды за всю игру.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENTHELP_IS_CAN_MOVE_SEA_UNITS</Tag>
 		<English>[ICON_BULLET]Allows Naval Units on the plot</English>
 		<French>[ICON_BULLET]Autorise les unités navales sur la case</French>
+		<Italian>[ICON_BULLET]Consente alle unità navali di entrare nella casella</Italian>
 		<Polish>[ICON_BULLET]Pozwala okrętom poruszać się po tym terenie</Polish>
 		<Russian>[ICON_BULLET]Позволяет кораблям и судам находиться на данной клетке</Russian>
 	</TEXT>
@@ -66,6 +71,7 @@
 		<Tag>TXT_KEY_IMPROVEMENTHELP_IS_UNIVERSAL_BONUS_PROVIDER</Tag>
 		<English>[ICON_BULLET]Provides any tradable resource from the plot on which it is built</English>
 		<Spanish>[ICON_BULLET]Proporciona cualquier recurso intercambiable situado en la casilla donde se construya</Spanish>
+		<Italian>[ICON_BULLET]Fornisce qualsiasi risorsa commerciabile dalla casella su cui è costruito</Italian>
 		<Polish>[ICON_BULLET]Dostarcza wszelkich surowców z pola na jakim został wybudowany.</Polish>
 		<Russian>[ICON_BULLET]Îáåñïå÷èâàåò ëþáîé òîðãóåìûé ðåñóðñ îò ó÷àñòêà, íà êîòîðîì îí ïîñòðîåí</Russian>
 	</TEXT>
@@ -74,12 +80,14 @@
 		<English>[ICON_BULLET]Provides a zone of control</English>
 		<French>[ICON_BULLET]Procure une zone de contrôle</French>
 		<Spanish>[ICON_BULLET]Proporciona una zona de control</Spanish>
+		<Italian>[ICON_BULLET]Fornisce una zona di controllo</Italian>
 		<Polish>[ICON_BULLET]Wprowadza strefę kontroli</Polish>
 		<Russian>[ICON_BULLET]Èìååò çîíó êîíòðîëÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENTHELP_NATIONAL</Tag>
 		<English>[ICON_BULLET]May only be placed once by a given player.</English>
+		<Italian>[ICON_BULLET]Può essere posizionato solo una volta da un determinato giocatore.</Italian>
 		<Russian>[ICON_BULLET]Может быть размещен игроком только один раз.</Russian>
 	</TEXT>
 	<TEXT>
@@ -93,7 +101,7 @@
 		<English>[ICON_BULLET]Pillage yields %d1_Num[ICON_GOLD] on average</English>
 		<French>[ICON_BULLET]Le pillage rapporte en moyenne %d1_Num[ICON_GOLD].</French>
 		<German>[ICON_BULLET]Plünderung bringt durchschnittlich %d1_Num[ICON_GOLD]</German>
-		<Italian>[ICON_BULLET]Saccheggia in media %d1_Num[ICON_GOLD] prodotti</Italian>
+		<Italian>[ICON_BULLET]Il saccheggio rende in media %d1_Num[ICON_GOLD]</Italian>
 		<Spanish>[ICON_BULLET]El saqueo reporta %d1_Num[ICON_GOLD] de media</Spanish>
 		<Polish>[ICON_BULLET]Splądrowanie daje %d1_Num[ICON_GOLD] złota.</Polish>
 		<Russian>[ICON_BULLET]Ãðàáåæ ïðèíîñèò â ñðåäíåì %d1_Num[ICON_GOLD] </Russian>
@@ -103,7 +111,7 @@
 		<English>[ICON_BULLET]%D1_Change[ICON_CULTURE] for owner in plot</English>
 		<French>[ICON_BULLET]%D1_Change[ICON_CULTURE] pour le propriétaire dans la parcelle</French>
 		<German>[ICON_BULLET]%D1_Change[ICON_CULTURE] für Besitzer in Plot</German>
-		<Italian>[ICON_BULLET]%D1_Change[ICON_CULTURE] per il proprietario di complotto</Italian>
+		<Italian>[ICON_BULLET]%D1_Change[ICON_CULTURE] per il proprietario della casella</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change[ICON_CULTURE] para el dueño en la casilla</Spanish>
 		<Polish>[ICON_BULLET]%D1_Change[ICON_CULTURE] dla wlaściciela pola.</Polish>
 		<Russian>[ICON_BULLET]%D1_Change[ICON_CULTURE] äëÿ âëàäåëüöà òåððèòîðèè</Russian>
@@ -112,13 +120,14 @@
 		<Tag>TXT_KEY_IMPROVEMENTHELP_REQUIRES_PEAK</Tag>
 		<English>[ICON_BULLET]Requires peak</English>
 		<French>[ICON_BULLET]Requiert Montagnes</French>
+		<Italian>[ICON_BULLET]Richiede un picco</Italian>
 		<Russian>[ICON_BULLET]Требуется: Горная вершина</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENTHELP_SEE_FROM</Tag>
 		<English>[ICON_BULLET]%D1_Change Vision Height</English>
 		<French>[ICON_BULLET]%D1_Change en Hauteur de Visibilité</French>
-		<Italian>[ICON_BULLET]%D1_Change visibilità Altezza</Italian>
+		<Italian>[ICON_BULLET]%D1_Change di altezza della visibilità</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change a la altura de la visibilidad</Spanish>
 		<Polish>[ICON_BULLET]%D1_Change Wysokość widzenia.</Polish>
 		<Russian>[ICON_BULLET]%D1_Change Âûñîòà âèäèìîñòè</Russian>
@@ -128,7 +137,7 @@
 		<English>[ICON_BULLET]Cannot build another within a distance of %d1_Num</English>
 		<French>[ICON_BULLET]Impossible de construire un autre aménagement à une distance de moins de %d1_Num</French>
 		<German>[ICON_BULLET]Kann nicht bauen ein anderer in einem Abstand von %d1_Num</German>
-		<Italian>[ICON_BULLET]Non è possibile costruire un altro ad una distanza di %d1_Num</Italian>
+		<Italian>[ICON_BULLET]Non è possibile costruirne un altro entro una distanza di %d1_Num</Italian>
 		<Spanish>[ICON_BULLET]No se puede construir otro en un radio de %d1_Num casillas</Spanish>
 		<Polish>[ICON_BULLET]Nie można postawić następnego ulepszenia terenu w zasięgu %d1_Num pól</Polish>
 		<Russian>[ICON_BULLET]Íåâîçìîæíî ñòðîèòü íà ðàññòîÿíèè îò %d1_Num</Russian>
@@ -136,12 +145,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_BLOCKED</Tag>
 		<English>[COLOR_YELLOW] No upgrade available[COLOR_REVERT]</English>
+		<Italian> ([COLOR_YELLOW]nessun miglioramento disponibile[COLOR_REVERT])</Italian>
 		<Russian>[COLOR_YELLOW] Нет доступных обновлений[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_DESTROYS_FEATURE</Tag>
 		<English>[COLOR_WARNING_TEXT]Will Destroy the %s1_Feature giving %D2_Amount production to %s3_CityName this round.[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Détruit %s1_Feature, donnant %D2_Amount production à %s3_CityName pour ce tour.[COLOR_REVERT]</French>
+		<Italian>[COLOR_WARNING_TEXT]Distruggerà %s1_Feature dando %D2_Amount di produzione a %s3_CityName in questo round.[COLOR_REVERT]</Italian>
 		<Polish>[COLOR_WARNING_TEXT]Zostanie zniszczone %s1_Feature przekazując %D2_Amount produkcji do %s3_CityName w tej turze.[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_WARNING_TEXT]Уничтожит %s1_Feature дав городу %s3_CityName %D2_Amount молотков на этом ходу.[COLOR_REVERT]</Russian>
 	</TEXT>
@@ -149,21 +160,25 @@
 		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_FROZEN</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT] Improvement upgrade frozen.[NEWLINE]Unfreeze by toggling city work here.[COLOR_REVERT]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT] Un Aménagement n'a pu être amélioré.[NEWLINE]Il est possible de tenter à nouveau en répétant l'opération.[COLOR_REVERT]</French>
+		<Italian>[COLOR_HIGHLIGHT_TEXT] Miglioramento bloccato.[NEWLINE]Sbloccalo attivando o disattivando il lavoro in città.[COLOR_REVERT]</Italian>
 		<Russian>[COLOR_HIGHLIGHT_TEXT]Улучшение объекта недоступно. Для снятия блокировки улучшения сделайте данную клетку нерабочей в окне города.[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_NEED_GARRISON</Tag>
 		<English>[SPACE]([COLOR_WARNING_TEXT]Need Garrison[COLOR_REVERT])</English>
+		<Italian>[SPACE][COLOR_WARNING_TEXT]Necessaria una guarnigione[COLOR_REVERT])</Italian>
 		<Russian>[SPACE]([COLOR_WARNING_TEXT]Нужен гарнизон[COLOR_REVERT])</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_NEED_WORK</Tag>
 		<English>[SPACE]([COLOR_WARNING_TEXT]Need Work[COLOR_REVERT])</English>
+		<Italian>[SPACE]([COLOR_WARNING_TEXT]Necessita di lavoro per il milgioramento[COLOR_REVERT])</Italian>
 		<Russian>[SPACE]([COLOR_WARNING_TEXT]Клетка должна обрабатываться[COLOR_REVERT])</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_NO</Tag>
 		<English>Bother me another time!</English>
+		<Italian>Nessun miglioramento disponibile</Italian>
 		<French>Pas d'amélioration possible (pas de tentative d'amélioration)</French>
 		<Polish>Nie ulepszaj (system nie będzie pytał się o to ponownie)</Polish>
 		<Russian>Не улучшать (не будут в дальнейшем попытки автоматического обновления.)</Russian>
@@ -172,6 +187,7 @@
 		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_OPTIONS</Tag>
 		<English>Your Improvement may upgrade. What upgrade would you like it to become?</English>
 		<French>Votre Aménagement peut être améliorée. Laquelle voulez-vous choisir?</French>
+		<Italian>Il tuo miglioramento può essere aggiornato. Quale miglioramento vorresti che diventasse?</Italian>
 		<Polish>Infrastruktura terenu może być ulepszona. Jakie ulepszenie pragniesz wybrać?</Polish>
 		<Russian>Ваше улучшение можно усовершенствовать. Какое обновление вы выберете?</Russian>
 	</TEXT>
@@ -179,17 +195,19 @@
 		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_RATE_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1_Modifier%% modifier to upgrade rate on all improvements</English>
 		<French>[ICON_BULLET]%D1_Modifier%% modif. pour l'amélioration des aménagements</French>
-		<Italian>[ICON_BULLET]%D1_Modifier%% al tasso di crescita di tutti i miglioramenti delle caselle</Italian>
+		<Italian>[ICON_BULLET]Velocità di miglioramento automatico di tutti i miglioramenti %D1_Modifier%%</Italian><!--Aerial CT trait in the pedia-->
 		<Polish>[ICON_BULLET]%D1_Modifier%% modyfikator do czasu trwania ulepszania wszystkich ulepszeń</Polish>
 		<Russian>[ICON_BULLET]%D1_Modifier%% к скорости обновления всех улучшений</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_RATE_MODIFIER_ADDITIONAL</Tag>
 		<English>, [LINK=%s1_Improvement]%s2_Improvement[\LINK]</English>
+		<Italian>, [LINK=%s1_Improvement]%s2_Improvement[\LINK]PROVA20</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_RATE_MODIFIER_END</Tag>
 		<English>Improvements</English>
+		<Italian> </Italian>
 		<German>[COLOR_TECH_TEXT][COLOR_REVERT]</German>
 		<Russian> улучшения</Russian>
 	</TEXT>
@@ -198,13 +216,14 @@
 		<English>[ICON_BULLET]%D1_Modifier%% modifier to upgrade rate for [LINK=%s2_Improvement]%s3_Improvement[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Modifier%% modif. pour l'amélioration de [LINK=%s2_Improvement]%s3_Improvement[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Modifier%% Modernisierungsgeschwindigkeit von [LINK=%s2_Improvement]%s3_Improvement[\LINK]</German>
-		<Italian>[ICON_BULLET]%D1_Modifier%% al tasso di crescita di [LINK=%s2_Improvement]%s3_Improvement[\LINK]</Italian>
+		<Italian>[ICON_BULLET]Velocità di miglioramento automatico %D1_Modifier%% di [LINK=%s2_Improvement]%s3_Improvement[\LINK]</Italian><!--Aerial CT trait in the pedia-->
 		<Polish>[ICON_BULLET]%D1_Modifier%% modyfikator czasu trwania ulepszania [LINK=%s2_Improvement]%s3_Improvement[\LINK]</Polish>
 		<Russian>[ICON_BULLET]%D1_Modifier%% к скорости обновления [LINK=%s2_Improvement]%s3_Improvement[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_RETAINS_FEATURE</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Will Safely Retain the %s1_Feature on this plot.[COLOR_REVERT]</English>
+		<Italian>[COLOR_HIGHLIGHT_TEXT]%s1_Feature resterà su questa casella.[COLOR_REVERT]</Italian>
 		<French>[COLOR_HIGHLIGHT_TEXT]maintient en place %s1_Feature sur cette case.[COLOR_REVERT]</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]%s1_Feature bezpiecznie pozostanie na tym polu.[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_HIGHLIGHT_TEXT]Сохраняет %s1_Feature на этой клетке.[COLOR_REVERT]</Russian>
@@ -213,13 +232,14 @@
 		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_TURNS</Tag>
 		<English>[SPACE](Upgrade: %d1_Num [NUM1:Turn:Turns]</English>
 		<Russian>[SPACE](Улучшение: %d1_Num [NUM1:ход:ходов]</Russian>
+		<Italian>[SPACE] Miglioramento: %d1_Num [NUM1:turno:turni]</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENTHELP_VISIBILITY_RANGE</Tag>
 		<English>[ICON_BULLET]%D1_Change Vision Range</English>
 		<French>[ICON_BULLET]Champ de vision %D1_Change</French>
 		<German>[ICON_BULLET]%D1_Change Sichtweite</German>
-		<Italian>[ICON_BULLET]%D1_Change raggio di visibilità</Italian>
+		<Italian>[ICON_BULLET]%D1_Change di aumento del raggio di visibilità</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change al alcance de la visibilidad</Spanish>
 		<Polish>[ICON_BULLET]%D1_Change Zasięg Widoczności</Polish>
 		<Russian>[ICON_BULLET]%D1_Change Ðàäèóñ îáíàðóæåíèÿ</Russian>
@@ -228,7 +248,7 @@
 		<Tag>TXT_KEY_IMPROVEMENT_ABATIS_THORN_HEDGE</Tag>
 		<English>Abatis (Thorn Hedge)</English>
 		<French>Abattis (Haies épineuses)</French>
-		<Italian>Abbattuta con siepe di spine</Italian>
+		<Italian>Abbattuta di spine</Italian>
 		<Spanish>Abatis con cerco espinoso</Spanish>
 		<Polish>Zasieki (Kolczasty żywopłot)</Polish>
 		<Russian>Êîëþ÷àÿ èçãîðîäü</Russian>
@@ -343,7 +363,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>Torre di segnalazione</Italian>
+		<Italian>Segnalatore sui coralli</Italian>
 		<Spanish>
 			<Text>Baliza</Text>
 			<Gender>Female</Gender>
@@ -360,7 +380,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>Torre di segnalazione</Italian>
+		<Italian>Segnalatore sugli scogli</Italian>
 		<Spanish>
 			<Text>Baliza</Text>
 			<Gender>Female</Gender>
@@ -384,11 +404,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>Ruinen</German>
-		<Italian>
-			<Text>Rovina cittadina:Rovine cittadine</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Rovina di città</Italian>
 		<Spanish>
 			<Text>Ruinas de ciudad</Text>
 			<Gender>Female</Gender>
@@ -408,7 +424,7 @@
 		<English>Colony Extraction Facility</English>
 		<French>Colonie Installation d'extraction</French>
 		<German>Kolonie Extraktionsanlage</German>
-		<Italian>Impianto di estrazione di Colonia</Italian>
+		<Italian>Colonia con impianto di estrazione</Italian>
 		<Spanish>
 			<Text>Plataforma de extracción colonial</Text>
 			<Gender>Female</Gender>
@@ -427,7 +443,7 @@
 		<English>Colony Habitat (Huge)</English>
 		<French>Colonie Habitations (Immenses)</French>
 		<German>Kolonie Lebensraum (Riesig)</German>
-		<Italian>Colonia Habitat (Enorme)</Italian>
+		<Italian>Colonia con habitat enorme</Italian>
 		<Spanish>
 			<Text>Hábitat colonial enorme</Text>
 			<Gender>Male</Gender>
@@ -441,7 +457,7 @@
 		<English>Colony Habitat (Large)</English>
 		<French>Colonie Habitations (Grandes)</French>
 		<German>Kolonie Lebensraum (Gross)</German>
-		<Italian>Colonia Habitat (Grande)</Italian>
+		<Italian>Colonia con habitat grande</Italian>
 		<Spanish>
 			<Text>Hábitat colonial grande</Text>
 			<Gender>Male</Gender>
@@ -455,7 +471,7 @@
 		<English>Colony Habitat (Medium)</English>
 		<French>Colonie Habitations (Moyennes)</French>
 		<German>Kolonie Lebensraum (Mittel)</German>
-		<Italian>Colonia Habitat (Medio)</Italian>
+		<Italian>Colonia con habitat medio</Italian>
 		<Spanish>
 			<Text>Hábitat colonial mediano</Text>
 			<Gender>Male</Gender>
@@ -469,7 +485,7 @@
 		<English>Colony Habitat (Small)</English>
 		<French>Colonie Habitations (Petites)</French>
 		<German>Kolonie Lebensraum (Klein)</German>
-		<Italian>Colonia Habitat (Piccolo)</Italian>
+		<Italian>Colonia con habitat piccolo</Italian>
 		<Spanish>
 			<Text>Hábitat colonial pequeño</Text>
 			<Gender>Male</Gender>
@@ -483,7 +499,7 @@
 		<English>Colony Hydroponics</English>
 		<French>Colonie Hydroponique</French>
 		<German>Kolonie Hydrokultur</German>
-		<Italian>Idroponica Colonia</Italian>
+		<Italian>Colonia idroponica</Italian>
 		<Spanish>
 			<Text>Hidrocultivo colonial</Text>
 			<Gender>Male</Gender>
@@ -502,7 +518,7 @@
 		<English>Colony Manufactory</English>
 		<French>Colonie Manufacture</French>
 		<German>Kolonie Manufaktur</German>
-		<Italian>Fabbrica Colonia</Italian>
+		<Italian>Colonia manufatturiera</Italian>
 		<Spanish>
 			<Text>Fábrica colonial</Text>
 			<Gender>Female</Gender>
@@ -521,7 +537,7 @@
 		<English>Colony Solar Array</English>
 		<French>Colonie Solaire Assemblée</French>
 		<German>Kolonie Solar Aufstellung</German>
-		<Italian>Solare Apparato di Colonia</Italian>
+		<Italian>Colonia a pannelli solari</Italian>
 		<Spanish>
 			<Text>Paneles solares coloniales</Text>
 			<Gender>Male</Gender>
@@ -534,6 +550,7 @@
 		<Tag>TXT_KEY_IMPROVEMENT_COMMAND_BUNKER</Tag>
 		<English>Command Bunker</English>
 		<French>Bunker de Commandement</French>
+		<Italian>Bunker di comando</Italian>
 		<Spanish>
 			<Text>Refugio de mando</Text>
 			<Gender>Female</Gender>
@@ -575,6 +592,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
+		<Italian>Miniera profonda</Italian>
 		<Spanish>
 			<Text>Mina profunda</Text>
 			<Gender>Female</Gender>
@@ -588,11 +606,7 @@
 		<English>Cottage</English>
 		<French>Cottage</French>
 		<German>Gehöft</German>
-		<Italian>
-			<Text>Villetta:Villette</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Cottage</Italian>
 		<Spanish>
 			<Text>Villa:Villas</Text>
 			<Gender>Female</Gender>
@@ -612,7 +626,7 @@
 		<English>Desert Camp</English>
 		<French>Camp de Desert</French>
 		<German>Wuste Feldlager</German>
-		<Italian>Campo nella deserto</Italian>
+		<Italian>Campo del deserto</Italian>
 		<Spanish>
 			<Text>Campamento de desierto</Text>
 			<Gender>Male</Gender>
@@ -626,7 +640,7 @@
 		<English>Desert Camp</English>
 		<French>Camp de Desert</French>
 		<German>Wuste Feldlager</German>
-		<Italian>Campo nella deserto</Italian>
+		<Italian>Campo del deserto</Italian>
 		<Spanish>Campamento de desierto</Spanish>
 		<Polish>Pustynny obóz</Polish>
 	</TEXT>
@@ -635,6 +649,7 @@
 		<English>Early Mountain Mine</English>
 		<French>Mine de montagne primitive</French>
 		<Russian>Äðåâíèå êîïè</Russian>
+		<Italian>Miniera montana antica</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_EARLY_MOUNTAIN_MINE_PEDIA</Tag>
@@ -646,6 +661,7 @@
 		<Tag>TXT_KEY_IMPROVEMENT_EARLY_QUARRY</Tag>
 		<English>Early Quarry</English>
 		<French>Carrière antique</French>
+		<Italian>Cava antica</Italian>
 		<Polish>Wczesny Kamieniołom</Polish>
 		<Russian>Ïðèèñê</Russian>
 	</TEXT>
@@ -690,11 +706,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Getreidefeld</German>
-		<Italian>
-			<Text>Fattoria:Fattorie</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Fattoria</Italian>
 		<Spanish>
 			<Text>Granja:Granjas</Text>
 			<Gender>Female</Gender>
@@ -725,11 +737,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Peschereccio:Pescherecci</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Peschereccio</Italian>
 		<Spanish>
 			<Text>Barco pesquero:Barcos pesqueros</Text>
 			<Gender>Male</Gender>
@@ -753,11 +761,7 @@
 			<Plural>0:1</Plural>
 		</French>
 		<German>Landschaftsschutzgebiet</German>
-		<Italian>
-			<Text>Riserva forestale:Riserve forestali</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Riserva forestale</Italian>
 		<Spanish>
 			<Text>Reserva forestal:Reservas forestales</Text>
 			<Gender>Female</Gender>
@@ -780,11 +784,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Fortezza:Fortezze</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Forte</Italian>
 		<Spanish>
 			<Text>Fuerte:Fuertes</Text>
 			<Gender>Male</Gender>
@@ -816,7 +816,7 @@
 		<Tag>TXT_KEY_IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE</Tag>
 		<English>Fortified Cave with Cache</English>
 		<French>Caverne fortifiée, avec cache</French>
-		<Italian>Grotta fortificata con nascondigli</Italian>
+		<Italian>Grotta fortificata con deposito</Italian>
 		<Spanish>
 			<Text>Caverna fortificada con escondrijo</Text>
 			<Gender>Female</Gender>
@@ -835,7 +835,7 @@
 		<English>Fossil Dig Site</English>
 		<French>Site de Fossiles Archéologiques</French>
 		<German>Fossile Ausgrabungsstätte</German>
-		<Italian>Scavo archeologico: fossili</Italian>
+		<Italian>Scavo archeologico di fossili</Italian>
 		<Spanish>
 			<Text>Excavación paleontológica</Text>
 			<Gender>Female</Gender>
@@ -858,7 +858,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>Campo di raccolta di frutti</Italian>
+		<Italian>Campo di raccolta frutti</Italian>
 		<Spanish>
 			<Text>Campo de cultivo de frutas</Text>
 			<Gender>Male</Gender>
@@ -882,7 +882,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>Campo di coltivazione di frutti</Italian>
+		<Italian>Campo di raccolta intensiva frutti</Italian>
 		<Spanish>
 			<Text>Campamento de recolección de frutas</Text>
 			<Gender>Male</Gender>
@@ -900,11 +900,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Geoglyph</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Geoglifo</Italian>
 		<Spanish>
 			<Text>Geoglifo</Text>
 			<Gender>Male</Gender>
@@ -918,7 +914,7 @@
 		<English>Geothermal Factory</English>
 		<French>Forage Géothermique</French>
 		<German>Geothermalfabrik</German>
-		<Italian>Impianto geotermico</Italian>
+		<Italian>Centrale geotermica</Italian>
 		<Spanish>
 			<Text>Planta geotérmica</Text>
 			<Gender>Female</Gender>
@@ -941,11 +937,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Villaggio tribale:Villaggi tribali</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Villaggio tribale</Italian>
 		<Spanish>
 			<Text>Aldea tribal:Aldeas tribales</Text>
 			<Gender>Female</Gender>
@@ -974,7 +966,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>unknown island</Italian>
+		<Italian>Isola inesplorata</Italian>
 		<Spanish>
 			<Text>Isla inexplorada</Text>
 			<Gender>Female</Gender>
@@ -1017,7 +1009,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>Campo di coltivazione di uva</Italian>
+		<Italian>Campo di raccolta intensiva di uva</Italian>
 		<Spanish>
 			<Text>Campamento de recolección de uvas</Text>
 			<Gender>Male</Gender>
@@ -1031,7 +1023,7 @@
 		<English>Groundwater Well</English>
 		<French>Puits Souterrain</French>
 		<German>Grundwasserbrunnen</German>
-		<Italian>Pozzo d'irrigazione</Italian>
+		<Italian>Pozzo sotterraneo</Italian>
 		<Spanish>
 			<Text>Pozo de agua subterránea</Text>
 			<Gender>Male</Gender>
@@ -1048,11 +1040,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_GROW_FOREST</Tag>
 		<English>Grow Forest</English>
+		<Italian>Foresta</Italian>
 		<Russian>Роща</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_GROW_FOREST_PEDIA</Tag>
 		<English>Nurse a young forest into a mature one.</English>
+		<Italian>Fai crescere una giovane foresta in una matura.</Italian>
 		<Russian>Выращивайте молодой лес до зрелого.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1064,11 +1058,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Casale:Casali</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Borgo</Italian>
 		<Spanish>
 			<Text>Caserío:Caseríos</Text>
 			<Gender>Male</Gender>
@@ -1088,7 +1078,7 @@
 		<English>Harvest Kelp</English>
 		<French>Récolter les Algues</French>
 		<German>Ernte Seetang</German>
-		<Italian>Raccogli Kelp</Italian>
+		<Italian>Raccoglitore di alghe</Italian>
 		<Spanish>
 			<Text>Recolectores de algas</Text>
 			<Gender>Male</Gender>
@@ -1110,11 +1100,7 @@
 		<English>Hunting Camp</English>
 		<French>Camp de Chasse</French>
 		<German>Jagdlager</German>
-		<Italian>
-			<Text>Caccia Campo:Caccia Campi</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Campo di caccia</Italian>
 		<Spanish>
 			<Text>Campamento de caza:Campamentos de caza</Text>
 			<Gender>Male</Gender>
@@ -1139,7 +1125,7 @@
 		<English>Hunting Preserve</English>
 		<French>Chasse gardée</French>
 		<German>Wildgehege</German>
-		<Italian>Riserva di caccia:Riserva di caccia</Italian>
+		<Italian>Riserva di caccia</Italian>
 		<Spanish>
 			<Text>Coto de caza</Text>
 			<Gender>Memale</Gender>
@@ -1176,11 +1162,7 @@
 		<English>Hydrocarbon Well</English>
 		<French>Puits d'Hydrocarbures</French>
 		<German>Bohrturm</German>
-		<Italian>
-			<Text>Idrocarburo Pozzo:Idrocarburo Pozzi</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Pozzo petrolifero</Italian>
 		<Spanish>
 			<Text>Pozo petrolífero:Pozos petrolíferos</Text>
 			<Gender>Male</Gender>
@@ -1200,7 +1182,7 @@
 		<English>Hydro Dam</English>
 		<French>Barrage Hydroélectrique</French>
 		<German>Wasserkraftwerk</German>
-		<Italian>Diga Idroelettrica</Italian>
+		<Italian>Diga idroelettrica</Italian>
 		<Spanish>
 			<Text>Presa</Text>
 			<Gender>Female</Gender>
@@ -1214,7 +1196,7 @@
 		<English>Hydro Plant</English>
 		<French>Barrage Hydroélectrique</French>
 		<German>Wasserkraftwerk</German>
-		<Italian>Diga Idroelettrica</Italian>
+		<Italian>Centrale idroelettrica</Italian>
 		<Spanish>Central hidroeléctrica</Spanish>
 		<Polish>Hydroelektrownia</Polish>
 		<Russian>Ãèäðîýëåêòðîñòàíöèÿ</Russian>
@@ -1248,7 +1230,7 @@
 		<English>Manufacturing Complex</English>
 		<French>Complexe Fabrication</French>
 		<German>Fabrikation Zentrum</German>
-		<Italian>Complesso Produzione</Italian>
+		<Italian>Complesso manifatturiero</Italian>
 		<Spanish>
 			<Text>Polígono industrial</Text>
 			<Gender>Male</Gender>
@@ -1262,7 +1244,7 @@
 		<English>Jungle Camp</English>
 		<French>Camp de Jungle</French>
 		<German>Dschungelcamp</German>
-		<Italian>Campo nella giungla</Italian>
+		<Italian>Campo della giungla</Italian>
 		<Spanish>
 			<Text>Campamento selvático</Text>
 			<Gender>Male</Gender>
@@ -1286,11 +1268,7 @@
 		<English>Land Worked</English>
 		<French>Terre aménagée</French>
 		<German>Genutztes Land</German>
-		<Italian>
-			<Text>Terreno bonificato:Terreni bonificati</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Terra lavorata</Italian>
 		<Spanish>
 			<Text>Tierra trabajada:Tierras trabajadas</Text>
 			<Gender>Female</Gender>
@@ -1310,7 +1288,7 @@
 		<English>Lighthouse (Coral)</English>
 		<French>Phare (Corail)</French>
 		<German>Ein Leuchtturm</German>
-		<Italian>Un Faro</Italian>
+		<Italian>Faro sui coralli</Italian>
 		<Spanish>
 			<Text>Un Faro</Text>
 			<Gender>Male</Gender>
@@ -1333,7 +1311,7 @@
 		<German>Ein Leuchtturm</German>
 		<Italian>Un Faro</Italian>
 		<Spanish>
-			<Text>Un Faro</Text>
+			<Text>Faro sugli scogli</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
@@ -1345,7 +1323,7 @@
 		<English>Lumberjack</English>
 		<French>Camp de bûcherons</French>
 		<German>Holzfällerlager</German>
-		<Italian>Campo di legname</Italian>
+		<Italian>Campo dei taglialegna</Italian>
 		<Spanish>
 			<Text>Campamento maderero</Text>
 			<Gender>Male</Gender>
@@ -1363,11 +1341,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Sägewerk</German>
-		<Italian>
-			<Text>Segheria:Segherie</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Segheria</Italian>
 		<Spanish>
 			<Text>Aserradero:Aserraderos</Text>
 			<Gender>Male</Gender>
@@ -1398,6 +1372,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Italian>Riserva naturale marina</Italian>
 		<Polish>Rezerwat Morski</Polish>
 		<Russian>Ìîðñêîé çàïîâåäíèê</Russian>
 	</TEXT>
@@ -1411,7 +1386,7 @@
 		<English>Mesoamerican Temple</English>
 		<French>Temple Mésoaméricain</French>
 		<German>Mesoamerikanischen Tempel</German>
-		<Italian>Temple Mesoamericana</Italian>
+		<Italian>Tempio mesoamericano</Italian>
 		<Spanish>
 			<Text>Templo mesoamericano</Text>
 			<Gender>Male</Gender>
@@ -1433,11 +1408,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Miniera:Miniere</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Miniera</Italian>
 		<Spanish>
 			<Text>Mina:Minas</Text>
 			<Gender>Female</Gender>
@@ -1464,6 +1435,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</Spanish>
+		<Italian>Statua Moai</Italian>
 		<Russian>Ìîàè</Russian>
 	</TEXT>
 	<TEXT>
@@ -1471,7 +1443,7 @@
 		<English>Modern Windmill</English>
 		<French>Moderne Moulin à vent</French>
 		<German>Modern-Windrad</German>
-		<Italian>Moderno Mulino a vento</Italian>
+		<Italian>Pala eolica</Italian>
 		<Spanish>
 			<Text>Aerogenerador</Text>
 			<Gender>Female</Gender>
@@ -1508,7 +1480,7 @@
 		<English>Mountain Mine</English>
 		<French>Mine de montagne</French>
 		<German>Mine des Berges</German>
-		<Italian>Miniera della montagna</Italian>
+		<Italian>Miniera montana</Italian>
 		<Spanish>
 			<Text>Mina de montaña</Text>
 			<Gender>Female</Gender>
@@ -1535,7 +1507,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>Funghi raccoglitori</Italian>
+		<Italian>Raccoglitore di funghi</Italian>
 		<Spanish>
 			<Text>Recolector de setas</Text>
 			<Gender>Male</Gender>
@@ -1595,13 +1567,14 @@
 		<Tag>TXT_KEY_IMPROVEMENT_NOMADIC_HERD_PEDIA</Tag>
 		<English>[COLOR_BUILDING_TEXT]Nomadic Herds[COLOR_REVERT] are more than just scavenging and hunting of herbavours...</English>
 		<Spanish>Los [COLOR_BUILDING_TEXT]Pastizales nómadas[COLOR_REVERT] son más que zonas de recolección y caza de herbívoros...</Spanish>
+		<Italian>I [COLOR_BUILDING_TEXT]pascoli nomadi[COLOR_REVERT] sono più che semplici zone di raccolta delle erbe aromatiche...</Italian>
 		<Polish>[COLOR_BUILDING_TEXT]Koczownicza Trzoda[COLOR_REVERT] to coś więcej niż polowanie na roślinożerców...</Polish>
 		<Russian>[COLOR_BUILDING_TEXT]Кочевые стада[COLOR_REVERT] - уже более подвинутый способ для пропитания, чем собирательство и охота на дичь...</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_OBSERVATION_POST_PEDIA</Tag>
 		<English>Observation posts are poorly defended but allow you to remove the fog of war.</English>
-		<Italian>Le torri d'osservazione sono difese in modo poco efficace, ma permettono di rimuovere la nebbia di guerra.</Italian>
+		<Italian>Le torri di guardia sono difese in modo poco efficace, ma permettono di rimuovere la nebbia di guerra.</Italian>
 		<Spanish>Los puestos de vigilancia proporcionan poca defensa, pero te permiten eliminar la niebla de guerra.</Spanish>
 		<Polish>Punkty obserwacyjne nie dostarczają obrony, ale pozwalają obserwować teren wokół nich.</Polish>
 		<Russian>Íàáëþäàòåëüíûå ïóíêòû ìàëîïðèãîäíû äëÿ îáîðîíû, íî ïîçâîëÿþò óáðàòü òóìàí âîéíû. Îíè åùå íå äîñòóïíû, òðåáóþùèå íåêîòîðûì èãðîêàì ÈÈ ðàáîòó äëÿ èõ èíòåãðèðàöèè è ïîëó÷åíèÿ âîçìîæíîñòè äëÿ ÈÈ èõ èñïîëüçîâàòü.</Russian>
@@ -1619,11 +1592,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Piattaforma petrolifera:Piattaforme petrolifere</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Piattaforma petrolifera</Italian>
 		<Spanish>
 			<Text>Plataforma petrolífera:Plataformas petrolíferas</Text>
 			<Gender>Female</Gender>
@@ -1664,11 +1633,7 @@
 		<English>Pasture</English>
 		<French>Pâturage</French>
 		<German>Gehege</German>
-		<Italian>
-			<Text>Pascolo:Pascoli</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Pascolo</Italian>
 		<Spanish>
 			<Text>Pastizal:Pastizales</Text>
 			<Gender>Male</Gender>
@@ -1694,6 +1659,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Italian>Raccogliotre di torba</Italian>
 		<Polish>Chata Zbieracza Torfu</Polish>
 		<Russian>Ñáîð òîðôà</Russian>
 	</TEXT>
@@ -1716,11 +1682,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Piantagione:Piantagioni</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Piantagione</Italian>
 		<Spanish>
 			<Text>Plantación:Plantaciones</Text>
 			<Gender>Female</Gender>
@@ -1767,7 +1729,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>Campo di coltivazione di piante</Italian>
+		<Italian>Campo di raccolta intensiva di piante</Italian>
 		<Spanish>
 			<Text>Campamento de recolección de plantas</Text>
 			<Gender>Male</Gender>
@@ -1803,11 +1765,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Cava:Cave</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Cava</Italian>
 		<Spanish>
 			<Text>Cantera:Canteras</Text>
 			<Gender>Female</Gender>
@@ -1840,6 +1798,7 @@
 		<Tag>TXT_KEY_IMPROVEMENT_RADIO_TOWER</Tag>
 		<English>Radio Tower</English>
 		<French>Tour Radio</French>
+		<Italian>Torre radio</Italian>
 		<Polish>Wieża Radiowa</Polish>
 		<Russian>Ðàäèîâûøêà</Russian>
 	</TEXT>
@@ -1858,6 +1817,7 @@
 		<Tag>TXT_KEY_IMPROVEMENT_SALT_GATHERER</Tag>
 		<English>Salt Gatherer</English>
 		<French>Récolteur de Sel</French>
+		<Italian>Raccoglitore di sale</Italian>
 		<Polish>Zbieracz Soli</Polish>
 		<Russian>Ñîëÿíîé êàðüåð</Russian>
 	</TEXT>
@@ -1872,7 +1832,7 @@
 		<English>Sanitizes an ocean or coast plot of its infection, restoring it to perfect health.</English>
 		<French>Assainit une case d'océan ou de côtes de ces infections, lui restaurant des conditions sanitaires parfaites.</French>
 		<German>Dadurch werden alle Viren und Keime aus dem Wasser entfernt.</German>
-		<Italian>Disinfetta una casella di costa o oceano, riportandola alla sua salute massima.</Italian>
+		<Italian>Purifica una casella di costa o oceano, riportandola alla sua salute massima.</Italian>
 		<Spanish>Desinfecta una casilla de costa u océano, restaurándola a un perfecto estado.</Spanish>
 		<Polish>Czyści pola oceanu i wybrzeży z infekcji przywracając perfekcyjną czystość.</Polish>
 		<Russian>Дезинфицирует участок океана или побережья от заражения, восстанавливая его до идеальной чистоты.</Russian>
@@ -1882,7 +1842,7 @@
 		<English>Sanitize Water</English>
 		<French>Assainir l'Eau</French>
 		<German>Wasser desinfizieren</German>
-		<Italian>Disinfetta l'acqua</Italian>
+		<Italian>Purifica l'acqua</Italian>
 		<Spanish>Desinfectar agua</Spanish>
 		<Polish>Wyczyść wodę</Polish>
 		<Russian>Äåçèíôåêòîð âîäû</Russian>
@@ -1896,7 +1856,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>Campo degli spazzini</Italian>
+		<Italian>Cercatore di carcasse</Italian>
 		<Spanish>
 			<Text>Campamento de recolección</Text>
 			<Gender>Male</Gender>
@@ -1909,7 +1869,7 @@
 		<Tag>TXT_KEY_IMPROVEMENT_SCAVENGING_CAMP_PEDIA</Tag>
 		<English>A Scavenging Camp provides extra food. If built on an animal resource (for example [COLOR_HIGHLIGHT_TEXT]cow[COLOR_REVERT]) it also provides the resource.</English>
 		<German>Bevor entsprechende Waffen und Jagdtechniken entwickelt wurden, waren die Menschen gezwungen, sich die tierischen Bestandteile ihrer Nahrung wie Fleisch und Knochenmark zusammenzusuchen. [COLOR_BUILDING_TEXT]Fleischsammler[COLOR_REVERT] gingen auf die Suche nach kleinen Tieren wie Ameisen und Würmern. Wenn sich die Möglichkeit bot, wurden aber auch verwertbare Stücke von toten Tieren eingesammelt. Hierbei musste behutsam vorgegangen werden, denn zu Beginn des Fäulnisprozesses ist das Fleisch für Menschen zwar noch essbar, bereits stärker verwestes Fleisch wird jedoch ungenießbar und führt zu Krankheit oder gar dem Tod. Dies liegt an den enthaltenen Bakterien und den von ihnen produzierten Abbauprodukten wie z.B. Botulinumtoxin, die für den Menschen stark toxisch sind.</German>
-		<Italian>Un campo dei recuperatori fornisce cibo extra. Se costruito su una risorsa di animali (ad esempio [COLOR_HIGHLIGHT_TEXT]Bovino[COLOR_REVERT]) fornisce anche la risorsa. Diventa, se lavorato, un pascolo nomade con la tecnologia [COLOR_TECH_TEXT]Addomesticazione della megafauna[COLOR_REVERT].</Italian>
+		<Italian>Un cercatore di carcasse fornisce cibo extra. Se costruito su una risorsa di animali (ad esempio [COLOR_HIGHLIGHT_TEXT]Bovino[COLOR_REVERT]) fornisce anche la risorsa. Diventa, se lavorato, un pascolo nomade con la tecnologia [COLOR_TECH_TEXT]Addomesticazione della megafauna[COLOR_REVERT].</Italian>
 		<Spanish>Un Campamento de recolección proporciona alimentos adicionales. Si se construye sobre un recurso animal (como las [COLOR_HIGHLIGHT_TEXT]Reses[COLOR_REVERT]) proporciona también dicho recurso. Mejora, si se trabaja la casilla, a un Pastizal nómada con la [COLOR_TECH_TEXT]Domesticación de mastodontes[COLOR_REVERT].</Spanish>
 		<Polish>Padlina - określenie zwierzęcych zwłok. Określenia tego nie używa się w stosunku do zwłok ludzkich. Padlina jest podstawowym pokarmem wielu drapieżników i zwierząt wszystkożernych, takich jak diabły tasmańskie, hieny, kondory i sępy. Padlina to także siedlisko występowania bezkręgowców zaliczanych do nekrofauny. Niektóre rośliny potrafią wytwarzać zapach rozkładającej się padliny, by zwabić zapylające je owady, takie jak muchy.</Polish>
 		<Russian>Лагерь свежевания обеспечивает ваш народ дополнительной пищей на ранних стадиях игры. Если он построен на животном ресурсе (например, на [COLOR_HIGHLIGHT_TEXT]коровах[COLOR_REVERT]) он также предоставит этот ресурс в город.</Russian>
@@ -1918,6 +1878,7 @@
 		<Tag>TXT_KEY_IMPROVEMENT_SEA_MILL</Tag>
 		<English>Sea Mill</English>
 		<French>Moulin à eau</French>
+		<Italian>Pala eolica offshore</Italian>
 		<Spanish>
 			<Text>Molino marino</Text>
 			<Gender>Male</Gender>
@@ -1956,7 +1917,7 @@
 		<English>Shaft Mine</English>
 		<French>Puits de mine</French>
 		<German>Schachtmine</German>
-		<Italian>Pozzo minerario</Italian>
+		<Italian>Miniera a pozzo</Italian>
 		<Spanish>
 			<Text>Pozo minero</Text>
 			<Gender>Female</Gender>
@@ -1979,7 +1940,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Seidenfarm</German>
-		<Italian>Coltura di bachi da seta</Italian>
+		<Italian>Allevamento di bachi da seta</Italian>
 		<Spanish>
 			<Text>Cultivo de seda</Text>
 			<Gender>Male</Gender>
@@ -2022,7 +1983,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>Torre d'osservazione in acciaio</Italian>
+		<Italian>Torre di osservazione in acciaio</Italian>
 		<Spanish>
 			<Text>Torre de vigilancia de acero</Text>
 			<Gender>Female</Gender>
@@ -2054,7 +2015,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>Raccoglitore di pietre</Italian>
+		<Italian>Officina di strumenti in pietra</Italian>
 		<Spanish>
 			<Text>Taller de herramientas de piedra</Text>
 			<Gender>Male</Gender>
@@ -2080,7 +2041,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>Torre d'osservazione in pietra</Italian>
+		<Italian>Torre di osservazione in pietra</Italian>
 		<Spanish>
 			<Text>Puesto de avanzada de piedra</Text>
 			<Gender>Female</Gender>
@@ -2121,7 +2082,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Vorstadt</German>
-		<Italian>Sobborghi</Italian>
+		<Italian>Sobborgo</Italian>
 		<Spanish>
 			<Text>Barrio</Text>
 			<Gender>Male</Gender>
@@ -2139,6 +2100,7 @@
 		<Tag>TXT_KEY_IMPROVEMENT_TAR_GATHERER</Tag>
 		<English>Tar Gatherer</English>
 		<French>Récolteur de goudron</French>
+		<Italian>Raccoglitore di pece</Italian>
 		<Spanish>
 			<Text>Recolector de alquitrán</Text>
 			<Gender>Male</Gender>
@@ -2156,6 +2118,7 @@
 		<Tag>TXT_KEY_IMPROVEMENT_THATCH_CUTTER</Tag>
 		<English>Thatch Cutter</English>
 		<French>Récolteur de Chaume</French>
+		<Italian>Raccoglitore di paglia</Italian>
 		<Spanish>
 			<Text>Recolector de paja</Text>
 			<Gender>Male</Gender>
@@ -2179,6 +2142,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Gezeitenbaum</German>
+		<Italian>Centrale mareomotrice</Italian>
 		<Spanish>
 			<Text>Presa de marea</Text>
 			<Gender>Female</Gender>
@@ -2200,11 +2164,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Kleinstadt</German>
-		<Italian>
-			<Text>Paese:Paesi</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Paese</Italian>
 		<Spanish>
 			<Text>Pueblo:Pueblos</Text>
 			<Gender>Male</Gender>
@@ -2247,7 +2207,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Vetikale Farm</German>
-		<Italian>Fattoria Verticale</Italian>
+		<Italian>Fattoria verticale</Italian>
 		<Spanish>
 			<Text>Granja vertical</Text>
 			<Gender>Female</Gender>
@@ -2264,11 +2224,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Villaggio:Villaggi</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Villaggio</Italian>
 		<Spanish>
 			<Text>Aldea:Aldeas</Text>
 			<Gender>Female</Gender>
@@ -2288,11 +2244,7 @@
 		<English>Watermill</English>
 		<French>Moulin à eau</French>
 		<German>Wassermühle</German>
-		<Italian>
-			<Text>Mulino ad acqua:Mulini ad acqua</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Mulino ad acqua</Italian>
 		<Spanish>
 			<Text>Molino de agua:Molinos de agua</Text>
 			<Gender>Male</Gender>
@@ -2313,11 +2265,7 @@
 		<English>Water Worked</English>
 		<French>Irrigué</French>
 		<German>Genutztes Gewässer</German>
-		<Italian>
-			<Text>Irrigazione:Irrigazioni</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Irrigazione</Italian>
 		<Spanish>
 			<Text>Agua faenada:Aguas faenadas</Text>
 			<Gender>Female</Gender>
@@ -2337,7 +2285,7 @@
 		<English>Wetlands Camp</English>
 		<French>Camp de zones humides</French>
 		<German>Feuchtgebiete Feldlager</German>
-		<Italian>Campo nella zone umide</Italian>
+		<Italian>Campo della palude</Italian>
 		<Spanish>
 			<Text>Campamento de humedal</Text>
 			<Gender>Male</Gender>
@@ -2351,7 +2299,7 @@
 		<English>Wetlands Camp</English>
 		<French>Camp de zones humides</French>
 		<German>Feuchtgebiete Feldlager</German>
-		<Italian>Campo nella zone imude</Italian>
+		<Italian>Campo nella zone umide</Italian>
 		<Spanish>Campamento de humedal</Spanish>
 		<Polish>Obóz na bagnach</Polish>
 	</TEXT>
@@ -2364,11 +2312,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>Walfänger</German>
-		<Italian>
-			<Text>Baleniera:Baleniere</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Baleniere (barche)</Italian>
 		<Spanish>
 			<Text>Bote ballenero:Botes balleneros</Text>
 			<Gender>Male</Gender>
@@ -2386,7 +2330,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>Walfangschiffe</German>
-		<Italian>Baleniere</Italian>
+		<Italian>Baleniere (navi)</Italian>
 		<Spanish>
 			<Text>Barco ballenero:Barcos balleneros</Text>
 			<Gender>Male</Gender>
@@ -2400,7 +2344,7 @@
 		<English>Wildlife Sanctuary</English>
 		<French>Sanctuaire de la faune</French>
 		<German>Naturschutzgebiet</German>
-		<Italian>Santuario della fauna selvatica</Italian>
+		<Italian>Riserva della fauna selvatica</Italian>
 		<Spanish>
 			<Text>Reserva salvaje</Text>
 			<Gender>Female</Gender>
@@ -2419,11 +2363,7 @@
 		<English>Windmill</English>
 		<French>Moulin à vent</French>
 		<German>Windmühle</German>
-		<Italian>
-			<Text>Mulino a vento:Mulini a vento</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Mulino a vento</Italian>
 		<Spanish>
 			<Text>Molino de viento:Molinos de viento</Text>
 			<Gender>Male</Gender>
@@ -2452,11 +2392,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Azienda vinicola:Aziende vinicole</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Vigneto</Italian>
 		<Spanish>
 			<Text>Viñedo:Viñedos</Text>
 			<Gender>Male</Gender>
@@ -2493,7 +2429,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>Torre d'osservazione in legno</Italian>
+		<Italian>Torre di osservazione in legno</Italian>
 		<Spanish>
 			<Text>Puesto de avanzada de madera</Text>
 			<Gender>Female</Gender>
@@ -2525,11 +2461,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Bottega:Botteghe</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Bottega</Italian>
 		<Spanish>
 			<Text>Taller:Talleres</Text>
 			<Gender>Male</Gender>
@@ -2555,6 +2487,7 @@
 		<French>Ziggourat</French>
 		<German>Zikkurat</German>
 		<Spanish>Zigurat</Spanish>
+		<Italian>Ziqqurat</Italian>
 		<Russian>Çèêêóðàò</Russian>
 	</TEXT>
 </Civ4GameText>

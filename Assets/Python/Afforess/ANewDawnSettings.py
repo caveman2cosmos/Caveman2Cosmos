@@ -106,6 +106,10 @@ def changedFlexibleDifficultyTurnIncrements(option, value):
 	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_FLEXIBLE_DIFFICULTY_TURN_INCREMENTS, value)
 	CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderOptionTypes.MODDEROPTION_FLEXIBLE_DIFFICULTY_TURN_INCREMENTS), int(value), 0)
 
+def changedFlexibleDifficultyAITurnIncrements(option, value):
+	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDEROPTION_FLEXIBLE_DIFFICULTY_AI_TURN_INCREMENTS, value)
+	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDEROPTION_FLEXIBLE_DIFFICULTY_AI_TURN_INCREMENTS), int(value), 0)
+
 def changedMaxBombardDefense(option, value):
 	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_MAX_BOMBARD_DEFENSE, value)
 	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_MAX_BOMBARD_DEFENSE), int(value), 0)
@@ -140,6 +144,14 @@ def changedFlexibleDifficultyMinimumDiff(option, value):
 def changedFlexibleDifficultyMaximumDiff(option, value):
 	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_FLEXIBLE_DIFFICULTY_MAX_DIFFICULTY, value - 1)
 	CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderOptionTypes.MODDEROPTION_FLEXIBLE_DIFFICULTY_MAX_DIFFICULTY), int(value - 1), 0)
+
+def changedFlexibleDifficultyAIMinimumDiff(option, value):
+	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDEROPTION_FLEXIBLE_DIFFICULTY_AI_MIN_DIFFICULTY, value - 1)
+	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDEROPTION_FLEXIBLE_DIFFICULTY_AI_MIN_DIFFICULTY), int(value - 1), 0)
+
+def changedFlexibleDifficultyAIMaximumDiff(option, value):
+	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDEROPTION_FLEXIBLE_DIFFICULTY_AI_MAX_DIFFICULTY, value - 1)
+	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDEROPTION_FLEXIBLE_DIFFICULTY_AI_MAX_DIFFICULTY), int(value - 1), 0)
 
 def changedFlexibleDifficultyMinRank(option, value):
 	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_FLEXIBLE_DIFFICULTY_MIN_RANK, value)
@@ -270,6 +282,7 @@ def setXMLOptionsfromIniFile():
 	changedDefenderWithdraw(ANewDawnOpt, ANewDawnOpt.isDefenderWithdraw())
 	changedMaxUnitsPerTile(ANewDawnOpt, ANewDawnOpt.getMaxUnitsPerTile())
 	changedFlexibleDifficultyTurnIncrements(ANewDawnOpt, ANewDawnOpt.getFlexibleDifficultyTurnIncrements())
+	changedFlexibleDifficultyAITurnIncrements(ANewDawnOpt, ANewDawnOpt.getFlexibleDifficultyAITurnIncrements())
 	changedMaxBombardDefense(ANewDawnOpt, ANewDawnOpt.getMaxBombardDefense())
 	changedCanNotClaimOcean(ANewDawnOpt, ANewDawnOpt.isCanNotClaimOcean())
 	changedShowCivTraits(ANewDawnOpt, ANewDawnOpt.isShowCivTraits(), GC.getGame().isHotSeat())
@@ -277,6 +290,8 @@ def setXMLOptionsfromIniFile():
 	changedEnableFlexibleDifficulty(ANewDawnOpt, ANewDawnOpt.isEnableFlexibleDifficulty())
 	changedFlexibleDifficultyMinimumDiff(ANewDawnOpt, ANewDawnOpt.getFlexibleDifficultyMinimumDiff())
 	changedFlexibleDifficultyMaximumDiff(ANewDawnOpt, ANewDawnOpt.getFlexibleDifficultyMaximumDiff())
+	changedFlexibleDifficultyAIMinimumDiff(ANewDawnOpt, ANewDawnOpt.getFlexibleDifficultyAIMinimumDiff())
+	changedFlexibleDifficultyAIMaximumDiff(ANewDawnOpt, ANewDawnOpt.getFlexibleDifficultyAIMaximumDiff())
 	changedFlexibleDifficultyMinRank(ANewDawnOpt, ANewDawnOpt.getFlexibleDifficultyMinRank())
 	changedFlexibleDifficultyMaxRank(ANewDawnOpt, ANewDawnOpt.getFlexibleDifficultyMaxRank())
 	changedDepletionMod(ANewDawnOpt, ANewDawnOpt.isDepletionMod())

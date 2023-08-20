@@ -807,8 +807,11 @@ public:
 	DllExport bool isPbemNewTurn() const;
 	DllExport void setPbemNewTurn(bool bNew);
 
-	bool isEndTurn() const;
+	bool isEndTurn() const { return m_bEndTurn; }
 	DllExport void setEndTurn(bool bNewValue);
+
+	bool isForcedCityCycle() const;
+	void setForcedCityCycle(const bool bNewValue) { m_bForcedCityCycle = bNewValue; }
 
 	DllExport bool isTurnDone() const;
 
@@ -1868,6 +1871,7 @@ protected:
 	bool m_bNukesValid;
 	bool m_bHuman;
 	bool m_bDisableHuman; // Set to true to disable isHuman() check
+	bool m_bForcedCityCycle;
 
 	int m_iStabilityIndex;
 	int m_iStabilityIndexAverage;

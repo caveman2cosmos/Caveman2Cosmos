@@ -61,6 +61,9 @@ void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 
 		.def("canFoundReligion", &CyPlayer::canFoundReligion, "bool ()")
 
+		.def("hasIdleCity", &CyPlayer::hasIdleCity, "bool ()")
+		.def("setForcedCityCycle", &CyPlayer::setForcedCityCycle, "void (bool bNewValue)")
+
 		.def("getNumMilitaryUnits", &CyPlayer::getNumMilitaryUnits, "int ()")
 
 		.def("getOverflowResearch", &CyPlayer::getOverflowResearch, "int ()")
