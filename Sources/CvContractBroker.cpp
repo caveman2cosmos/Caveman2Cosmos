@@ -25,6 +25,15 @@ CvContractBroker::~CvContractBroker()
 {
 }
 
+
+void CvContractBroker::log(int level, char* format, ...)
+{
+	static char logString[2048];
+	_vsnprintf(logString, 2048 - 4, format, (char*)(&format + 1));
+
+	logContractBroker(level, "<%S> - %S", m_ownerName, logString);
+}
+
 //	Delete all work requests and looking for work records
 void CvContractBroker::reset()
 {
@@ -65,7 +74,7 @@ void CvContractBroker::cleanup()
 		}
 
 	}
-	logContractBroker(1, "Fulfilled Contracts for <%S> last turn: %d", GET_PLAYER(m_eOwner).getName(), fulfilledContracts);
+	logContractBroker(1, "     <%S>Fulfilled Contracts last turn: %d", m_ownerName, fulfilledContracts);
 
 
 }
@@ -655,7 +664,7 @@ bool CvContractBroker::makeContract(CvUnit* pUnit, int& iAtX, int& iAtY, CvUnit*
 							//	Request is entirely fulfilled by this unit
 							m_workRequests[iI].bFulfilled = true;
 
-							logContractBroker(1, "     <%S>work request %d satisfied by unit %d (%d > %d)",m_ownerName, m_workRequests[iI].iWorkRequestId, suitableUnit->iUnitId, iUnitStrengthTimes100, m_workRequests[iI].iRequiredStrengthTimes100);
+							logContractBroker(1, "     <%S>work request %d satisfied by unit %d (%d > %d)", m_ownerName, m_workRequests[iI].iWorkRequestId, suitableUnit->iUnitId, iUnitStrengthTimes100, m_workRequests[iI].iRequiredStrengthTimes100);
 							OutputDebugString(CvString::format("work request %d satisfied by unit %d\n", m_workRequests[iI].iWorkRequestId, suitableUnit->iUnitId).c_str());
 						}
 						else
@@ -707,7 +716,11 @@ bool CvContractBroker::makeContract(CvUnit* pUnit, int& iAtX, int& iAtY, CvUnit*
 			if (-1 != iWorkRequest)
 			{
 				const workRequest* contractedRequest = findWorkRequest(iWorkRequest);
-
+				if(contractedRequest == NULL)
+				{
+					m_advertisingUnits[iI].iContractedWorkRequest = -1;
+					return false;
+				}
 				FAssert(NULL != contractedRequest);
 
 				iAtX = contractedRequest->iAtX;

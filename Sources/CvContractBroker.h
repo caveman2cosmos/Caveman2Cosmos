@@ -132,6 +132,7 @@ public:
 
 private:
 
+	void log(int level, char* format, ...);
 	void internalRemoveUnit(const int unitId);
 
 	const workRequest* findWorkRequest(int iWorkRequestId) const;
