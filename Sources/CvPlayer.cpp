@@ -12164,7 +12164,7 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 			{
 				PROFILE("CvPlayer::setTurnActive.SetActive.doTurn");
 
-				m_contractBroker.reset();
+				//m_contractBroker.reset();
 
 				if (isAlive() && !isHumanPlayer() && !isNPC() && getAdvancedStartPoints() >= 0)
 				{
