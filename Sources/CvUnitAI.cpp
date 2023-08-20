@@ -714,7 +714,8 @@ void CvUnitAI::AI_killed()
 			logBBAI("	Mission plot was (%d,%d)", pMissionPlot->getX(), pMissionPlot->getY());
 		}
 	}
-
+	logContractBroker(1, "%S's %S (%d) died, removing contract", GET_PLAYER(getOwner()).getCivilizationDescription(0), getName(0).GetCString(), m_iID);
+	contractFulfilled();
 	//	Increment the general danger count for this plot's vicinity
 	if (getGroup()->AI_getMissionAIType() != MISSIONAI_DELIBERATE_KILL)
 	{
@@ -1133,25 +1134,25 @@ int CvUnitAI::AI_attackOddsAtPlotInternal(const CvPlot* pPlot, CvUnit* pDefender
 		return 1;
 	}
 
-//#if 0
-//	const int iStrengthFactor = (iOurFirepower + iTheirFirepower + 1) / 2;
-//
-//	//TB Combat Mods Begin
-//	const int iUnmodifiedDefenderArmor = pDefender->armorTotal() - punctureTotal();
-//	const int iUnmodifiedAttackerArmor = armorTotal() - pDefender->punctureTotal();
-//
-//	const int iModifiedDefenderArmorZero = iUnmodifiedDefenderArmor < 0 ? 0 : iUnmodifiedDefenderArmor;
-//	const int iModifiedAttackerArmorZero = iUnmodifiedAttackerArmor < 0 ? 0 : iUnmodifiedAttackerArmor;
-//
-//	const int iModifiedDefenderArmor = (iModifiedDefenderArmorZero < 95 ? iModifiedDefenderArmorZero : 95);
-//	const int iModifiedAttackerArmor = (iModifiedAttackerArmorZero < 95 ? iModifiedAttackerArmorZero : 95);
-//
-//	const int iDefenderArmor = (100 - iModifiedDefenderArmor);
-//	const int iAttackerArmor = (100 - iModifiedAttackerArmor);
-//
-//	iDamageToUs = std::max(1, ((((GC.getCOMBAT_DAMAGE() * (iTheirFirepower + iStrengthFactor)) / (iOurFirepower + iStrengthFactor)) * iAttackerArmor) / 100));
-//	iDamageToThem = std::max(1, ((((GC.getCOMBAT_DAMAGE() * (iOurFirepower + iStrengthFactor)) / (iTheirFirepower + iStrengthFactor)) * iDefenderArmor) / 100));
-//#endif
+	//#if 0
+	//	const int iStrengthFactor = (iOurFirepower + iTheirFirepower + 1) / 2;
+	//
+	//	//TB Combat Mods Begin
+	//	const int iUnmodifiedDefenderArmor = pDefender->armorTotal() - punctureTotal();
+	//	const int iUnmodifiedAttackerArmor = armorTotal() - pDefender->punctureTotal();
+	//
+	//	const int iModifiedDefenderArmorZero = iUnmodifiedDefenderArmor < 0 ? 0 : iUnmodifiedDefenderArmor;
+	//	const int iModifiedAttackerArmorZero = iUnmodifiedAttackerArmor < 0 ? 0 : iUnmodifiedAttackerArmor;
+	//
+	//	const int iModifiedDefenderArmor = (iModifiedDefenderArmorZero < 95 ? iModifiedDefenderArmorZero : 95);
+	//	const int iModifiedAttackerArmor = (iModifiedAttackerArmorZero < 95 ? iModifiedAttackerArmorZero : 95);
+	//
+	//	const int iDefenderArmor = (100 - iModifiedDefenderArmor);
+	//	const int iAttackerArmor = (100 - iModifiedAttackerArmor);
+	//
+	//	iDamageToUs = std::max(1, ((((GC.getCOMBAT_DAMAGE() * (iTheirFirepower + iStrengthFactor)) / (iOurFirepower + iStrengthFactor)) * iAttackerArmor) / 100));
+	//	iDamageToThem = std::max(1, ((((GC.getCOMBAT_DAMAGE() * (iOurFirepower + iStrengthFactor)) / (iTheirFirepower + iStrengthFactor)) * iDefenderArmor) / 100));
+	//#endif
 
 	if (getDomainType() != DOMAIN_AIR)
 	{
@@ -1202,22 +1203,22 @@ int CvUnitAI::AI_attackOddsAtPlotInternal(const CvPlot* pPlot, CvUnit* pDefender
 	int iNeededRoundsUs = (std::max(0, pDefender->getHP() - iHitLimitThem) + iDamageToThem - 1) / iDamageToThem;
 	int iNeededRoundsThem = (std::max(0, getHP()) + iDamageToUs - 1) / iDamageToUs;
 
-//#if 0
-//	if (getDomainType() != DOMAIN_AIR)
-//	{
-//		// From Mongoose SDK
-//		if (!pDefender->immuneToFirstStrikes())
-//		{
-//			iNeededRoundsUs -= ((iBaseOdds * firstStrikes()) + ((iBaseOdds * chanceFirstStrikes()) / 2)) / 100;
-//		}
-//		if (!immuneToFirstStrikes())
-//		{
-//			iNeededRoundsThem -= (((100 - iBaseOdds) * pDefender->firstStrikes()) + (((100 - iBaseOdds) * pDefender->chanceFirstStrikes()) / 2)) / 100;
-//		}
-//		iNeededRoundsUs = std::max(1, iNeededRoundsUs);
-//		iNeededRoundsThem = std::max(1, iNeededRoundsThem);
-//	}
-//#endif
+	//#if 0
+	//	if (getDomainType() != DOMAIN_AIR)
+	//	{
+	//		// From Mongoose SDK
+	//		if (!pDefender->immuneToFirstStrikes())
+	//		{
+	//			iNeededRoundsUs -= ((iBaseOdds * firstStrikes()) + ((iBaseOdds * chanceFirstStrikes()) / 2)) / 100;
+	//		}
+	//		if (!immuneToFirstStrikes())
+	//		{
+	//			iNeededRoundsThem -= (((100 - iBaseOdds) * pDefender->firstStrikes()) + (((100 - iBaseOdds) * pDefender->chanceFirstStrikes()) / 2)) / 100;
+	//		}
+	//		iNeededRoundsUs = std::max(1, iNeededRoundsUs);
+	//		iNeededRoundsThem = std::max(1, iNeededRoundsThem);
+	//	}
+	//#endif
 
 	const int iRoundsDiff = iNeededRoundsUs - iNeededRoundsThem;
 
@@ -3150,9 +3151,7 @@ void CvUnitAI::AI_attackCityMove()
 
 			if (gUnitLogLevel > 2)
 			{
-				CvWString szString;
-				getUnitAIString(szString, AI_getUnitAIType());
-				logBBAI("	%S's %S at (%d,%d) requests initial city-capture-capable attacker for attack stack at priority %d", GET_PLAYER(getOwner()).getCivilizationDescription(0), getName(0).GetCString(), getX(), getY(), HIGH_PRIORITY_ESCORT_PRIORITY + 1);
+				logContractBroker(1, "	%S's %S at (%d,%d) requests initial city-capture-capable attacker for attack stack at priority %d", GET_PLAYER(getOwner()).getCivilizationDescription(0), getName(0).GetCString(), getX(), getY(), HIGH_PRIORITY_ESCORT_PRIORITY + 1);
 			}
 		}
 	}
@@ -6355,9 +6354,9 @@ void CvUnitAI::AI_subduedAnimalMove()
 		// Try to move to a nearby hunter unit if one is available to group with it
 		if (AI_groupMergeRange(UNITAI_HUNTER, 1, false, true, true)
 		// Try to move to a nearby hunter escort unit if one is available to group with it
-		||  AI_groupMergeRange(UNITAI_HUNTER_ESCORT, 1, false, true, true)
+		|| AI_groupMergeRange(UNITAI_HUNTER_ESCORT, 1, false, true, true)
 		// Try to move to a nearby explorer unit if one is available to group with it
-		||  AI_groupMergeRange(UNITAI_EXPLORE, 1, false, true, true))
+		|| AI_groupMergeRange(UNITAI_EXPLORE, 1, false, true, true))
 		{
 			return;
 		}
@@ -11843,17 +11842,17 @@ bool CvUnitAI::AI_guardCity(bool bLeave, bool bSearch, int iMaxPath)
 				{
 					iExtra -= iPlotDanger2;
 				}
-//#if 0
-//				//	If THIS unit is not a city type, then count non-city types generally when evaluating defense
-//				//	or else any number of them will still keep them all locked up thinking more defense is needed
-//				if (!AI_isCityAIType())
-//				{
-//					int iPlotAllStrength = plot()->plotStrength(UNITVALUE_FLAGS_DEFENSIVE, PUF_canDefend, -1, -1, getOwner(), NO_TEAM, NULL, -1, -1, 2);
-//					int iPlotCityAIStrength = plot()->plotStrength(UNITVALUE_FLAGS_DEFENSIVE, PUF_canDefend, -1, -1, getOwner(), NO_TEAM, PUF_isCityAIType, -1, -1, 2);
-//
-//					iExtra += (iPlotAllStrength - iPlotCityAIStrength);
-//				}
-//#endif
+				//#if 0
+				//				//	If THIS unit is not a city type, then count non-city types generally when evaluating defense
+				//				//	or else any number of them will still keep them all locked up thinking more defense is needed
+				//				if (!AI_isCityAIType())
+				//				{
+				//					int iPlotAllStrength = plot()->plotStrength(UNITVALUE_FLAGS_DEFENSIVE, PUF_canDefend, -1, -1, getOwner(), NO_TEAM, NULL, -1, -1, 2);
+				//					int iPlotCityAIStrength = plot()->plotStrength(UNITVALUE_FLAGS_DEFENSIVE, PUF_canDefend, -1, -1, getOwner(), NO_TEAM, PUF_isCityAIType, -1, -1, 2);
+				//
+				//					iExtra += (iPlotAllStrength - iPlotCityAIStrength);
+				//				}
+				//#endif
 				bool bDefend = false;
 
 				//	Never remove the last unit
@@ -14213,7 +14212,7 @@ bool CvUnitAI::checkSwitchToConstruct()
 	CvCity* pCapitalCity = GET_PLAYER(getOwner()).getCapitalCity();
 
 	if (eBestUnit != NO_UNIT && pCapitalCity != NULL
-	&& GET_PLAYER(getOwner()).AI_unitValue(eBestUnit, AI_getUnitAIType(), pCapitalCity->area()) > iMilitaryValue * 3/2)
+	&& GET_PLAYER(getOwner()).AI_unitValue(eBestUnit, AI_getUnitAIType(), pCapitalCity->area()) > iMilitaryValue * 3 / 2)
 	{
 		return AI_join();
 	}
@@ -15012,7 +15011,7 @@ namespace {
 					bind(scoreInquisitionTarget, unit, _1),
 					// final validation is that we can actually path to the city
 					bind(canSafePathToCity, unit, _1)
-					)
+				)
 			);
 		return bestCityScore.found ? bestCityScore.result.item : nullptr;
 	}
@@ -17574,79 +17573,79 @@ bool CvUnitAI::AI_bombardCity()
 
 	return false;
 
-//#if 0
-//	CvCity* pBombardCity;
-//
-//	if (canBombard(plot()))
-//	{
-//		pBombardCity = bombardTarget(plot());
-//		FAssertMsg(pBombardCity != NULL, "BombardCity is not assigned a valid value");
-//
-//		// do not bombard cities with no defenders
-//		int iDefenderStrength = pBombardCity->plot()->AI_sumStrength(NO_PLAYER, getOwner(), DOMAIN_LAND, /*bDefensiveBonuses*/ true, /*bTestAtWar*/ true, false);
-//		if (iDefenderStrength == 0)
-//		{
-//			return false;
-//		}
-//
-//		// do not bombard cities if we have overwelming odds
-//		int iAttackOdds = getGroup()->AI_attackOdds(pBombardCity->plot(), /*bPotentialEnemy*/ true);
-//		if ((iAttackOdds > 95))
-//		{
-//			return false;
-//		}
-//
-//		// If we have reasonable odds, check for attacking without waiting for bombards
-//		if ((iAttackOdds >= getBBAI_SKIP_BOMBARD_BEST_ATTACK_ODDS())
-//		{
-//			int iBase = GC.getBBAI_SKIP_BOMBARD_BASE_STACK_RATIO();
-//				int iComparison = getGroup()->AI_compareStacks(pBombardCity->plot(), /*bPotentialEnemy*/ true, /*bCheckCanAttack*/ true, /*bCheckCanMove*/ true);
-//
-//				// Big troop advantage plus pretty good starting odds, don't wait to allow reinforcements
-//				if (iComparison > (iBase - 4 * iAttackOdds))
-//				{
-//					if (gUnitLogLevel > 2) logBBAI("	  Stack skipping bombard of %S with compare %d and starting odds %d", pBombardCity->getName().GetCString(), iComparison, iAttackOdds);
-//						return false;
-//				}
-//
-//			int iMin = GC.getBBAI_SKIP_BOMBARD_MIN_STACK_RATIO();
-//			bool bHasWaited = algo::any_of(getGroup()->units(), CvUnit::fn::getFortifyTurns() > 0)
-//
-//				// Bombard at least one turn to allow bombers/ships to get some shots in too
-//				if (bHasWaited && (pBombardCity->getDefenseDamage() > 0))
-//				{
-//					int iBombardTurns = getGroup()->getBombardTurns(pBombardCity);
-//					if (iComparison > std::max(iMin, iBase - 3 * iAttackOdds - 3 * iBombardTurns))
-//					{
-//						if (gUnitLogLevel > 2) logBBAI("	  Stack skipping bombard of %S with compare %d, starting odds %d, and bombard turns %d", pBombardCity->getName().GetCString(), iComparison, iAttackOdds, iBombardTurns);
-//						return false;
-//					}
-//				}
-//		}
-//
-//		//getGroup()->pushMission(MISSION_PILLAGE);
-//		getGroup()->pushMission(MISSION_BOMBARD);
-//		return true;
-//		/************************************************************************************************/
-//		/* REVOLUTIONDCM							05/24/08								Glider1	 */
-//		/*																							  */
-//		/*																							  */
-//		/************************************************************************************************/
-//				// RevolutionDCM - ranged bombard AI wraps standard bombard
-//		if (!AI_RbombardCity(pBombardCity))
-//		{
-//			// vanilla behaviour
-//			getGroup()->pushMission(MISSION_BOMBARD);
-//			return true;
-//		}
-//		// RevolutionDCM - end
-///************************************************************************************************/
-///* REVOLUTIONDCM							END									 Glider1	 */
-///************************************************************************************************/
-//	}
-//
-//	return false;
-//#endif
+	//#if 0
+	//	CvCity* pBombardCity;
+	//
+	//	if (canBombard(plot()))
+	//	{
+	//		pBombardCity = bombardTarget(plot());
+	//		FAssertMsg(pBombardCity != NULL, "BombardCity is not assigned a valid value");
+	//
+	//		// do not bombard cities with no defenders
+	//		int iDefenderStrength = pBombardCity->plot()->AI_sumStrength(NO_PLAYER, getOwner(), DOMAIN_LAND, /*bDefensiveBonuses*/ true, /*bTestAtWar*/ true, false);
+	//		if (iDefenderStrength == 0)
+	//		{
+	//			return false;
+	//		}
+	//
+	//		// do not bombard cities if we have overwelming odds
+	//		int iAttackOdds = getGroup()->AI_attackOdds(pBombardCity->plot(), /*bPotentialEnemy*/ true);
+	//		if ((iAttackOdds > 95))
+	//		{
+	//			return false;
+	//		}
+	//
+	//		// If we have reasonable odds, check for attacking without waiting for bombards
+	//		if ((iAttackOdds >= getBBAI_SKIP_BOMBARD_BEST_ATTACK_ODDS())
+	//		{
+	//			int iBase = GC.getBBAI_SKIP_BOMBARD_BASE_STACK_RATIO();
+	//				int iComparison = getGroup()->AI_compareStacks(pBombardCity->plot(), /*bPotentialEnemy*/ true, /*bCheckCanAttack*/ true, /*bCheckCanMove*/ true);
+	//
+	//				// Big troop advantage plus pretty good starting odds, don't wait to allow reinforcements
+	//				if (iComparison > (iBase - 4 * iAttackOdds))
+	//				{
+	//					if (gUnitLogLevel > 2) logBBAI("	  Stack skipping bombard of %S with compare %d and starting odds %d", pBombardCity->getName().GetCString(), iComparison, iAttackOdds);
+	//						return false;
+	//				}
+	//
+	//			int iMin = GC.getBBAI_SKIP_BOMBARD_MIN_STACK_RATIO();
+	//			bool bHasWaited = algo::any_of(getGroup()->units(), CvUnit::fn::getFortifyTurns() > 0)
+	//
+	//				// Bombard at least one turn to allow bombers/ships to get some shots in too
+	//				if (bHasWaited && (pBombardCity->getDefenseDamage() > 0))
+	//				{
+	//					int iBombardTurns = getGroup()->getBombardTurns(pBombardCity);
+	//					if (iComparison > std::max(iMin, iBase - 3 * iAttackOdds - 3 * iBombardTurns))
+	//					{
+	//						if (gUnitLogLevel > 2) logBBAI("	  Stack skipping bombard of %S with compare %d, starting odds %d, and bombard turns %d", pBombardCity->getName().GetCString(), iComparison, iAttackOdds, iBombardTurns);
+	//						return false;
+	//					}
+	//				}
+	//		}
+	//
+	//		//getGroup()->pushMission(MISSION_PILLAGE);
+	//		getGroup()->pushMission(MISSION_BOMBARD);
+	//		return true;
+	//		/************************************************************************************************/
+	//		/* REVOLUTIONDCM							05/24/08								Glider1	 */
+	//		/*																							  */
+	//		/*																							  */
+	//		/************************************************************************************************/
+	//				// RevolutionDCM - ranged bombard AI wraps standard bombard
+	//		if (!AI_RbombardCity(pBombardCity))
+	//		{
+	//			// vanilla behaviour
+	//			getGroup()->pushMission(MISSION_BOMBARD);
+	//			return true;
+	//		}
+	//		// RevolutionDCM - end
+	///************************************************************************************************/
+	///* REVOLUTIONDCM							END									 Glider1	 */
+	///************************************************************************************************/
+	//	}
+	//
+	//	return false;
+	//#endif
 }
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD					   END												  */
@@ -18173,10 +18172,10 @@ bool CvUnitAI::AI_pirateBlockade()
 			foreach_(CvUnit * unitX, plotX->units())
 			{
 				if (isEnemy(unitX->getTeam(), unitX->plot(), unitX)
-				&&  unitX->getDomainType() == DOMAIN_SEA
+				&& unitX->getDomainType() == DOMAIN_SEA
 				&& !unitX->isInvisible(getTeam(), false)
-				&&  unitX->canAttack()
-				&&  unitX->currEffectiveStr(NULL, NULL, NULL) > currEffectiveStr(plotX, unitX, NULL))
+				&& unitX->canAttack()
+				&& unitX->currEffectiveStr(NULL, NULL, NULL) > currEffectiveStr(plotX, unitX, NULL))
 				{
 					//Fuyu: No (rail)roads on water, always movement cost 1. Rounding up of course
 					iBestHostileMoves = std::max(iBestHostileMoves, (unitX->getMoves() + GC.getMOVE_DENOMINATOR() - 1) / GC.getMOVE_DENOMINATOR());
@@ -21576,7 +21575,7 @@ bool CvUnitAI::processContracts(int iMinPriority)
 		m_contractualState = CONTRACTUAL_STATE_AWAITING_WORK;
 		if (gUnitLogLevel >= 3)
 		{
-			logBBAI("	Unit %S (%d) for player %d (%S) at (%d,%d) advertising for work\n",
+			logContractBroker(1, "	Unit %S (%d) for player %d (%S) at (%d,%d) advertising for work",
 					getUnitInfo().getDescription(),
 					getID(),
 					getOwner(),
@@ -21594,7 +21593,7 @@ bool CvUnitAI::processContracts(int iMinPriority)
 		// Work found
 		if (gUnitLogLevel >= 3)
 		{
-			logBBAI("	Unit %S (%d) for player %d (%S) at (%d,%d) found work at (%d,%d) [to join %d]\n",
+			logContractBroker(1, "	Unit %S (%d) for player %d (%S) at (%d,%d) found work at (%d,%d) [to join %d]\n",
 					getUnitInfo().getDescription(),
 					getID(),
 					getOwner(),
@@ -21659,7 +21658,7 @@ bool CvUnitAI::processContracts(int iMinPriority)
 			{
 				if (gUnitLogLevel >= 3)
 				{
-					logBBAI("	...already at target plot - merging into requesting unit's group.");
+					logContractBroker(1, "	...already at target plot - merging into requesting unit's group.");
 				}
 				getGroup()->setTransportUnit(NULL);
 				pJoinUnit->getGroup()->setTransportUnit(NULL);
@@ -21672,7 +21671,7 @@ bool CvUnitAI::processContracts(int iMinPriority)
 			{
 				if (gUnitLogLevel >= 3)
 				{
-					logBBAI("	...already at target plot.");
+					logContractBroker(1, "	...already at target plot.");
 				}
 				contractFulfilled();
 				getGroup()->pushMission(MISSION_SKIP);
@@ -21684,7 +21683,7 @@ bool CvUnitAI::processContracts(int iMinPriority)
 			{
 				if (gUnitLogLevel >= 3)
 				{
-					logBBAI("	...unexpectedly unable to enact the work!");
+					logContractBroker(1, "	...unexpectedly unable to enact the work!");
 				}
 				//	Handle as if we found no work this turn since we cannot safely path to it
 				m_contractualState = CONTRACTUAL_STATE_NO_WORK_FOUND;
@@ -21992,10 +21991,10 @@ bool CvUnitAI::AI_connectBonus(bool bTestTrade)
 		&& plotX->getNonObsoleteBonusType(eTeam) != NO_BONUS
 		&& !plotX->isConnectedToCapital()
 		&& (
-				!bTestTrade
-			||	plotX->getImprovementType() != NO_IMPROVEMENT
-			&&	GC.getImprovementInfo(plotX->getImprovementType()).isImprovementBonusTrade(plotX->getNonObsoleteBonusType(eTeam))
-		)
+			!bTestTrade
+			|| plotX->getImprovementType() != NO_IMPROVEMENT
+			&& GC.getImprovementInfo(plotX->getImprovementType()).isImprovementBonusTrade(plotX->getNonObsoleteBonusType(eTeam))
+			)
 		&& AI_connectPlot(plotX))
 		{
 			return true;
@@ -22363,7 +22362,7 @@ bool CvUnitAI::AI_retreatToCity(bool bPrimary, bool bAirlift, int iMaxPath)
 							iLoopDanger < iCurrentDanger
 							&& //Fuyu: try to avoid doomed cities
 							iLoopDanger < 2 * (cityX->plot()->getNumDefenders(getOwner()))
-						)
+							)
 					);
 				}
 				if (bCheck)
@@ -26911,7 +26910,7 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 		{
 			if (gUnitLogLevel >= 3 && m_contractualState == CONTRACTUAL_STATE_FOUND_WORK)
 			{
-				logBBAI("	Hunter for player %d (%S) at (%d,%d) found contractual work",
+				logContractBroker(1, "	Hunter for player %d (%S) at (%d,%d) found contractual work",
 					getOwner(),
 					GET_PLAYER(getOwner()).getCivilizationDescription(0),
 					getX(),
@@ -26921,7 +26920,7 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 		}
 		if (gUnitLogLevel >= 3)
 		{
-			logBBAI("	Hunter for player %d (%S) at (%d,%d) found no urgent contractual work",
+			logContractBroker(1, "	Hunter for player %d (%S) at (%d,%d) found no urgent contractual work",
 				getOwner(),
 				GET_PLAYER(getOwner()).getCivilizationDescription(0),
 				getX(),
