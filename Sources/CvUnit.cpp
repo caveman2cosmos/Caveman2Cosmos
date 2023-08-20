@@ -1730,6 +1730,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 				}
 			}
 		}
+
 		owner.deleteUnit(getID());
 	}
 }
