@@ -150,6 +150,7 @@ private:
 	std::map<int, bool>				m_contractedUnits;
 	int								m_iNextWorkRequestId;
 	int								m_iEmployedUnits;
+	bool							m_bIsInitialized;
 };
 
 #endif // CvContractBroker_h__

@@ -19,6 +19,7 @@
 CvContractBroker::CvContractBroker() : m_eOwner(NO_PLAYER)
 {
 	reset();
+	m_bIsInitialized = false;
 }
 
 CvContractBroker::~CvContractBroker()
@@ -50,6 +51,10 @@ void CvContractBroker::reset()
 
 void CvContractBroker::cleanup()
 {
+	if (!m_bIsInitialized && GET_PLAYER(m_eOwner).getName() == NULL) return;
+
+	m_ownerName = GET_PLAYER(m_eOwner).getName();
+
 	int fulfilledContracts = 0;
 
 	logContractBroker(1, "Cleaning Up <%S> ContractBroker Contracted Units: %d Advertising Tenders: %d Advertising Units: %d",
@@ -83,7 +88,8 @@ void CvContractBroker::cleanup()
 void CvContractBroker::init(PlayerTypes eOwner)
 {
 	m_eOwner = eOwner;
-	m_ownerName = GET_PLAYER(eOwner).getName();
+	m_bIsInitialized = true;
+
 }
 
 
