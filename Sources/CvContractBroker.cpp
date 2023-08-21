@@ -19,7 +19,6 @@
 CvContractBroker::CvContractBroker() : m_eOwner(NO_PLAYER)
 {
 	reset();
-	m_bIsInitialized = false;
 }
 
 CvContractBroker::~CvContractBroker()
@@ -51,7 +50,7 @@ void CvContractBroker::reset()
 
 void CvContractBroker::cleanup()
 {
-	if (!m_bIsInitialized || m_eOwner == NO_PLAYER || GET_PLAYER(m_eOwner).getName() == NULL) return;
+	if (m_eOwner == NO_PLAYER || GET_PLAYER(m_eOwner).getName() == NULL) return;
 
 	m_ownerName = GET_PLAYER(m_eOwner).getName();
 
