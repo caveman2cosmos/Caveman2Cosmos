@@ -589,6 +589,7 @@ void CvPlayer::initInGame(PlayerTypes eID, bool bSetAlive)
 		}
 	}
 	resetPlotAndCityData();
+	m_contractBroker.init(eID);
 	AI_init();
 }
 
