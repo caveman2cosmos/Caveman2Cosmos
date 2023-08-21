@@ -87,8 +87,6 @@ void CvContractBroker::cleanup()
 void CvContractBroker::init(PlayerTypes eOwner)
 {
 	m_eOwner = eOwner;
-	m_bIsInitialized = true;
-
 }
 
 
