@@ -345,7 +345,6 @@ void CvPlayer::baseInit(PlayerTypes eID)
 	// Init non-saved data
 	setupGraphical();
 
-	m_contractBroker.init(eID);
 	m_UnitList.init();
 
 	FAssert(getTeam() != NO_TEAM);
@@ -496,6 +495,7 @@ void CvPlayer::init(PlayerTypes eID)
 	{
 		setLeaderHeadLevel(0);
 	}
+	m_contractBroker.init(eID);
 	AI_init();
 }
 
