@@ -5688,7 +5688,7 @@ def TriggerSuperVirus1(argsList):
 def getHelpSuperVirus1(argsList):
 	data = argsList[1]
 
-	szCityName = TRNSLTR.getText(GC.getPlayer(data.ePlayer).getCity(data.iCityId).getNameKey(),())
+	szCityName = TRNSLTR.getText(str(GC.getPlayer(data.ePlayer).getCity(data.iCityId).getNameKey()), ())
 
 	return TRNSLTR.getText("TXT_KEY_EVENT_DOOMED_OPTION",()) + "\n" + TRNSLTR.getText("TXT_KEY_EVENT_CITY_UNREST", (3, szCityName))
 

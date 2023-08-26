@@ -114,8 +114,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_FINANCIAL_ADVISOR_BUILDING_COUNT_AVERAGE</Tag>
-		<English>(%d1 × %s2[ICON_GOLD])</English>
-		<Italian>PROVAPROVA</Italian>
+		<English>(%s2[ICON_GOLD])</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_FINANCIAL_ADVISOR_COMMERCE</Tag>
