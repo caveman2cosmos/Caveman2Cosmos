@@ -22,6 +22,20 @@ void logBBAI(char* format, ... )
 	strcat(buf, "\n");
 	OutputDebugString(buf);
 }
+void logContractBroker(int level, char* format, ...)
+{
+	if (level <= gPlayerLogLevel)
+	{
+		static char buf[2048];
+		_vsnprintf(buf, 2048 - 4, format, (char*)(&format + 1));
+		gDLL->logMsg("ContractBroker.log", buf);
+
+		// Echo to debugger
+		strcat(buf, "\n");
+		OutputDebugString(buf);
+	}
+
+}
 
 void logAIJson(CvWString type,CvWString identifier, CvWString squirrel, CvWString message)
 {

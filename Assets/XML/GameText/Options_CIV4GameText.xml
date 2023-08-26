@@ -11,6 +11,14 @@
 		<Italian>Entra nella schermata della città, invece di selezionare semplicemente la città, quando ti viene chiesto cosa costruire dopo.</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_OPTION_CITY_DELAY_CITY_CYCLE_To_END_OF_TURN</Tag>
+		<English>Delay city cycle to end of turn</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_OPTION_CITY_DELAY_CITY_CYCLE_To_END_OF_TURN_HELP</Tag>
+		<English>City cycle process will initiate when you try to end the turn</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_OPTION_CITY_HIDE_UNCONSTRUCTABLE_BUILDINGS</Tag>
 		<English>Hide non-constructible buildings</English>
 		<French>Masquer les bâtiments non constructibles</French>
