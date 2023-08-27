@@ -565,9 +565,8 @@ class CvFinanceAdvisor:
 		for iType, iMultiplier, iGlobalMultiplier, iCount, fGold in multipliers:
 			if iCount and fGold > 0:
 				y += 20
-				fAverage = fGold / iCount
 				szText = GC.getBuildingInfo(iType).getDescription() + " "
-				szText += TRNSLTR.getText("TXT_KEY_BUG_FINANCIAL_ADVISOR_BUILDING_COUNT_AVERAGE", (iCount, "%.2f" %fAverage))
+				szText += TRNSLTR.getText("TXT_KEY_BUG_FINANCIAL_ADVISOR_BUILDING_COUNT_AVERAGE", (iCount, "%.2f" %(fGold / iCount), "%.2f" %fGold))
 				screen.setLabelAt(aName(), Pnl, uFont2 + szText, 1<<0, 8, y, 0, eGameFont, eWidGen, 1, 1)
 				screen.setLabelAt(aName(), Pnl, uFont2 + str(int(fGold)), 1<<1, x, y, 0, eGameFont, eWidGen, 1, 1)
 
@@ -577,9 +576,8 @@ class CvFinanceAdvisor:
 		for iType, iMultiplier, iGlobalMultiplier, iCount, fGold in multipliers:
 			if iCount and fGold < 0:
 				y += 20
-				fAverage = fGold / iCount
 				szText = GC.getBuildingInfo(iType).getDescription() + " "
-				szText += TRNSLTR.getText("TXT_KEY_BUG_FINANCIAL_ADVISOR_BUILDING_COUNT_AVERAGE", (iCount, "%.2f" %fAverage))
+				szText += TRNSLTR.getText("TXT_KEY_BUG_FINANCIAL_ADVISOR_BUILDING_COUNT_AVERAGE", (iCount, "%.2f" %(fGold / iCount)))
 				screen.setLabelAt(aName(), Pnl, uFont2 + szText, 1<<0, 8, y, 0, eGameFont, eWidGen, 1, 1)
 				screen.setLabelAt(aName(), Pnl, uFont2 + str(int(fGold)), 1<<1, x, y, 0, eGameFont, eWidGen, 1, 1)
 
