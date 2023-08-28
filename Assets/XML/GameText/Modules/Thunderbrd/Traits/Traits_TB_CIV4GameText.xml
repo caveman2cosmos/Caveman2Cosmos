@@ -1308,14 +1308,14 @@ Penalties:
 		<English>Anti-Clerical CT</English>
 		<French>Anti-Clérical</French>
 		<Russian>Àíòèêëåðèêàë</Russian>
-		<Italian>Antilclericale</Italian>
+		<Italian>Anticlericale</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ANTI_CLERICAL1</Tag>
 		<English>Anti-Clerical I</English>
 		<French>Anti-Clérical I</French>
 		<Russian>Àíòèêëåðèêàë I</Russian>
-		<Italian>Antilclericale I</Italian>
+		<Italian>Anticlericale I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ANTI_CLERICAL1_PEDIA</Tag>
@@ -1351,7 +1351,7 @@ Benefits:
 		<English>Anti-Clerical II</English>
 		<French>Anti-Clérical II</French>
 		<Russian>Àíòèêëåðèêàë II</Russian>
-		<Italian>Antilclericale II</Italian>
+		<Italian>Anticlericale II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ANTI_CLERICAL2_PEDIA</Tag>
@@ -1387,7 +1387,7 @@ Benefits:
 		<English>Anti-Clerical III</English>
 		<French>Anti-Clérical III</French>
 		<Russian>Àíòèêëåðèêàë III</Russian>
-		<Italian>Antilclericale III</Italian>
+		<Italian>Anticlericale III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ANTI_CLERICAL3_PEDIA</Tag>

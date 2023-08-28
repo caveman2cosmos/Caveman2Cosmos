@@ -538,7 +538,7 @@
 		<English>[ICON_BULLET]%d1_percent%% Detection Evasion Bonus</English>
 		<French>[ICON_BULLET]%d1_percent%% Bonus pour échapper à la Détection</French>
 		<German>[ICON_BULLET]%d1_percent%% Bonus zum Entgehen einer Entdeckung</German>
-		<Italian>[ICON_BULLET]%d1_percent%% Bonus Anti-Intercettazione</Italian>
+		<Italian>[ICON_BULLET]%d1_percent%% Bonus antintercettazione</Italian>
 		<Spanish>[ICON_BULLET]Bonificación del %d1_percent%% a la evasión de la detección</Spanish>
 		<Polish>[ICON_BULLET]+%d1_percent%% do szansy na uniknięcie wykrycia</Polish>
 	</TEXT>
@@ -1684,7 +1684,7 @@
 		<Spanish>[ICON_BULLET]+%d1_Change%% contro barbari non-animali</Spanish>
 		<Polish>[ICON_BULLET]%D1_Change%% przeciwko nie-zwierzęcym Barbarzyńcom</Polish>
 		<Russian>[ICON_BULLET]+%d1_Change%% против варваров</Russian>
-		<Italian>[ICON_BULLET]Contro barbari non amimali +%d1_Change%%</Italian>
+		<Italian>[ICON_BULLET]Contro barbari non animali +%d1_Change%%</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_WEAKEN</Tag>
@@ -1822,7 +1822,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_ANTI_CLERICAL</Tag>
 		<English>Anti-Clerical Promotion Line</English>
 		<French>Spécialisation Anti-Clerical</French>
-		<Italian>Anti-clericale</Italian>
+		<Italian>Anticlericale</Italian>
 		<Polish>Linia Promocji: Anty-Klerykalny</Polish>
 		<Russian>Àíòèêëåðèêàë</Russian>
 	</TEXT>
@@ -1949,7 +1949,7 @@
 		<French>Spécialisation Défense Anti-Aérienne</French>
 		<Polish>Linia Promocji: Koncentracja (Przeciwlotnicze)</Polish>
 		<Russian>Ïðîòèâîâîçäóøíàÿ îáîðîíà</Russian>
-		<Italian>Allenamento sulla linea di promozione difesa anti-aerea</Italian>
+		<Italian>Allenamento sulla linea di promozione difesa antiaerea</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_ANTI_AIR_HELP</Tag>
@@ -2106,7 +2106,7 @@
 		<French>Spécialisation Échappatoire</French>
 		<Polish>Linia Promocji: Koncentracja (Plany ucieczki)</Polish>
 		<Russian>Ïëàíû ïîáåãà</Russian>
-		<Italian>Allenamento sulla linea di promozione paini di fuga</Italian>
+		<Italian>Allenamento sulla linea di promozione piani di fuga</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_ESCAPE_PLANS_HELP</Tag>
@@ -2334,7 +2334,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_SET_FOR_CHARGE_HELP</Tag>
 		<English>Each Round spent building up Set For Charge improves the unit's [COLOR_HIGHLIGHT_TEXT]Combat Modifier VS Mounted Units[COLOR_REVERT] when defending the tile they are on, up to a limit of 5 rounds for maximum bonus, provided each promotion level is qualified for by the unit.</English>
 		<French>A chaque tour la Spécialisation Préparation contre les attaques montées augmente [COLOR_HIGHLIGHT_TEXT]Modif. de Combat contre les unités montées[COLOR_REVERT] de l'unité, avec un bonus maximum au bout de 5 tours.</French>
-		<Italian>[NEWLINE]Migliora il modificatore di [COLOR_HIGHLIGHT_TEXT]combattimento cotro unità da cavalcatura[COLOR_REVERT] in difesa. Max 5 turni (necessita delle rispettive promozioni).</Italian>
+		<Italian>[NEWLINE]Migliora il modificatore di [COLOR_HIGHLIGHT_TEXT]combattimento contro unità da cavalcatura[COLOR_REVERT] in difesa. Max 5 turni (necessita delle rispettive promozioni).</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_TEACH</Tag>
@@ -2375,7 +2375,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_TRAP_HUNTING_HELP</Tag>
 		<English>Each Round spent building up Trap Hunting improves the unit's [COLOR_HIGHLIGHT_TEXT]Combat Modifier VS Animals[COLOR_REVERT] up to a limit of 5 rounds for maximum bonus, provided each promotion level is qualified for by the unit.</English>
 		<French>A chaque tour la Spécialisation pose de piège augmente [COLOR_HIGHLIGHT_TEXT]Modif. de Combat contre les Animaux[COLOR_REVERT] de l'unité, avec un bonus maximum au bout de 5 tours.</French>
-		<Italian>[NEWLINE]Migliora il modificaore di [COLOR_HIGHLIGHT_TEXT]comattimento contro animali[COLOR_REVERT]. Max 5 turni (necessita delle rispettive promozioni).</Italian>
+		<Italian>[NEWLINE]Migliora il modificatore di [COLOR_HIGHLIGHT_TEXT]combattimento contro animali[COLOR_REVERT]. Max 5 turni (necessita delle rispettive promozioni).</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BULLY</Tag>

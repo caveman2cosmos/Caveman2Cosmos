@@ -236,7 +236,7 @@
 		<English>Note that assimilating these rebels will cause a serious strain on your relations with %s, who may go so far as to declare war on you. Consider your decision carefully.</English>
 		<French>Notez qu'assimiler ces rebelles aura pour conséquence de durcir les relations avec %s, qui peut tout autant disparaître comme elle peut entraîner la guerre. Evaluez donc soigneusement toutes les options avant de prendre votre décision.</French>
 		<German>Beachten Sie, dass die Einverleibung dieser Rebellen zu einer ernsthaften Belastung unserer Beziehung zu %s führt, die Ihnen womöglich sogar den Krieg erklären werden. Bedenken Sie Ihre Entscheidung sorgfältig.</German>
-		<Italian>Nota che che assimilare questi ribelli provocherà una grande tensione nei rapporti con %s, fino a portarlo sul punto di dichiararti guerra. Rifletti bene sulla tua decisione.</Italian>
+		<Italian>Nota che assimilare questi ribelli provocherà una grande tensione nei rapporti con %s, fino a portarlo sul punto di dichiararti guerra. Rifletti bene sulla tua decisione.</Italian>
 		<Spanish>Ten en cuenta que asimilar a estos rebeldes causará serias tensiones en tus relaciones con %s, que podría incluso considerar el declararte la guerra. Estudia cuidadosamente tu decisión.</Spanish>
 		<Polish>Należy także pamiętać, że dołączenie tych rebeliantów do twojego imperium spowoduje pogorszenie się relacji z %s, który może posunąć się nawet do wypowiedzenia wojny. Dobrze zastanów się więc nad tą decyzją.</Polish>
 		<Russian>Ó÷òèòå, ÷òî àññèìèëÿöèÿ ýòèõ ñåïàðàòèñòîâ ñåðüåçíî óõóäøèò âàøè îòíîøåíèÿ ñ %s, ýòî ìîæåò äàæå ïðèâåñòè ê âîéíå. Ïðèíèìàéòå ðåøåíèå îñòðîæíî.</Russian>
@@ -634,7 +634,7 @@
 		<English>Demonstrators are rioting in the streets, demanding that you face an election against</English>
 		<French>Les Manifsetants s'ameutent dans les rues, exigeant que vous vous soumettiez à une élection contre</French>
 		<German>Demonstranten randalieren in den Straßen und verlangen, dass Sie sich einer Wahl stellen gegen</German>
-		<Italian>I dimostranti sono in rivolta nelle strade: richiedono una nuova consultazione elettorale, dove affonterai</Italian>
+		<Italian>I dimostranti sono in rivolta nelle strade: richiedono una nuova consultazione elettorale, dove affronterai</Italian>
 		<Spanish>Los manifestantes están causando disturbios en las calles, exigiendo que afrontes unas elecciones contra</Spanish>
 		<Polish>Demonstranci strajkują na ulicach, żądając abyś zmierzył się w wyborach z</Polish>
 		<Russian>Íà óëèöû âûøëè ïðîòåñòóþùèå, êîòîðûå òðåáóþò, ÷òîáû âû âñòðåòèëèñü íà âûáîðàõ ñ</Russian>
@@ -1064,7 +1064,7 @@
 		<English>requesting that you end your polluting ways and adopt</English>
 		<French>demandent que vous finissiez vos activités polluantes et adoptiez</French>
 		<German>fordern, dass Sie die Umweltverschmutzung einstellen und annehmen</German>
-		<Italian>chiedendo di porre fine ai comportamenti inquninanti, e di adottare</Italian>
+		<Italian>chiedendo di porre fine ai comportamenti inquinanti, e di adottare</Italian>
 		<Spanish>solicitando que acabes con tus contaminantes costumbres y adoptes</Spanish>
 		<Polish>domagają się zmiany polityki ekologicznej i przyjęcie</Polish>
 		<Russian>òðåáóþò, ÷òîáû âû ïðåêðàòèëè çàãðÿçíÿòü îêðóæàþùóþ ñðåäó è ïðèíÿëè</Russian>
@@ -1743,7 +1743,7 @@
 		<French>[NEWLINE]ALT-I = Masquer Interface!</French>
 		<Spanish>[NEWLINE]ALT-I = Ocultar interfaz</Spanish>
 		<Polish>[NEWLINE]ALT-I = Brak Interfejsu!</Polish>
-		<Italian>[NEWLINE]ALT-I = Nesuna interfaccia utente</Italian>
+		<Italian>[NEWLINE]ALT-I = Nessuna interfaccia utente</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_ALT_L_SHORTCUT</Tag>
@@ -1808,7 +1808,7 @@
 		<French>[NEWLINE]CTRL-I = Minimiser l'Interface!</French>
 		<Spanish>[NEWLINE]CTRL-I = Minimizar interfaz</Spanish>
 		<Polish>[NEWLINE]CTRL-I = Minimalizuj interfejs!</Polish>
-		<Italian>[NEWLINE]CTRL-I = Minimizza l'interfacccia utente</Italian>
+		<Italian>[NEWLINE]CTRL-I = Minimizza l'interfaccia utente</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_CTRL_L_ARROW_SHORTCUT</Tag>
@@ -1856,7 +1856,7 @@
 		<French>[NEWLINE]CTRL-X = Aff./Masquer 'dotmap'!</French>
 		<Spanish>[NEWLINE]CTRL-X = Mostrar/ocultar mapa de puntos</Spanish>
 		<Polish>[NEWLINE]CTRL-X = Pokaż/Ukryj kropki mapy!</Polish>
-		<Italian>[NEWLINE]CTRL-X = Mostrao nascondi dotmap</Italian>
+		<Italian>[NEWLINE]CTRL-X = Mostra o nascondi dotmap</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_EMERGENCY_DRAFT</Tag>
@@ -2014,7 +2014,7 @@
 		<English>While they have not yet begun preparations for war, if you deny their request they may soon become more fervent in their desire for change. Honoring their request is by far the quickest and easiest path to keeping them in your empire for the foreseeable future, but may lead to some discontent in other cities.[NEWLINE][NEWLINE]Alternatively, a large donation to the religious leaders would cause them to settle down.</English>
 		<French>Tandis qu'ils n'ont pas encore commencé de préparatifs pour la guerre, si vous ignorez leurs revendications, leur désir de changement pourrait devenir de plus en plus ardent. Honorer leurs demandes est de loin la voie la plus rapide et la plus facile pour les maintenir dans votre empire, mais peut entraîner également le mécontentement dans d'autres villes.[NEWLINE][NEWLINE]alternativement, une grande donation aux chefs religieux les ferait se calmer.</French>
 		<German>Obwohl sie noch keine Kriegsvorbereitungen begonnen haben, werden sie, wenn ihr Wunsch verweigert wird, noch eifriger in ihrem Wunsch nach Veränderung werden. Ihren Antrag zu beachten ist der bei weitem schnellste und einfachste Weg sie in absehbarer Zukunft in Ihrem Imperium zu halten, aber kann andererseits zu etwas Unzufriedenheit in anderen Städten führen.[NEWLINE][NEWLINE]Als Alternative kann eine großzügige Spende an die religiösen Führer sie beruhigen.</German>
-		<Italian>Per ora non hanno cominciato i preparativi per la guerra, ma se non accetti la loro richiesta, diventeranno presto più desiderosi di cambiamento. Accettare la loro richiesta èla scelta più rapida e più semplice per mantenerli nel tuo impero, per il prossimo futuro, ma può indurre un certo malcontento in altre città.[NEWLINE][NEWLINE]In alternativa, una notevole donazione ai capi religiosi li indurrebbe alla calma.</Italian>
+		<Italian>Per ora non hanno cominciato i preparativi per la guerra, ma se non accetti la loro richiesta, diventeranno presto più desiderosi di cambiamento. Accettare la loro richiesta è la scelta più rapida e più semplice per mantenerli nel tuo impero, per il prossimo futuro, ma può indurre un certo malcontento in altre città.[NEWLINE][NEWLINE]In alternativa, una notevole donazione ai capi religiosi li indurrebbe alla calma.</Italian>
 		<Spanish>Aunque aún no han comenzado sus preparativos para la guerra, si deniegas su petición puede que pronto se alcen más fervientes en su deseo de cambiar. Aceptar sus solicitudes es, de lejos, la opción más rápida y fácil para mantenerlos en tu imperio en el futuro próximo, pero puede llevar a cierto descontento en otras ciudades.[NEWLINE][NEWLINE]Alternativamente, una gran donación a los líderes religiosos puede motivarles a sentar la cabeza.</Spanish>
 		<Polish>Jeżeli odrzucisz teraz ich żądania, w czasie gdy nie rozpoczęli jeszcze przygotowań do zbrojnych działań, to mogą wkrótce stać się bardziej gorliwi w ich pragnieniu do zmian. Spełnienie ich żądań jest najszybszą i najłatwiejszą drogą do pokojowego utrzymania ich w imperium w niedalekiej przyszłości, ale może spowodować niezadowolenie w pozostałych miastach.[NEWLINE][NEWLINE]Jednakże, wysoki datek dla przywódców religijnych zmniejszy ich pragnienie do zmian.</Polish>
 		<Russian>Õîòÿ îíè è íå íà÷àëè ïîäãîòîâêó ê âîéíå, âûïîëíåíèå èõ òðåáîâàíèé î ðåôîðìàõ ïîçâîëèò ñîõðàíèòü ìÿòåæíûå ïðîâèíöèè â ïðåäåëàõ ñòðàíû. Îäíàêî, ýòî ìîæåò íåãàòèâíî ïîâëèÿòü íà áîëåå êîíñðåâàòèâíóþ ÷àñòü íàñåëåíèÿ.[NEWLINE][NEWLINE]Â ëþáîì ñëó÷àå, âîçìîæíî ïðîùå áóäåò ïðîñòî çàïëàòèòü ðåëèãèîçíûì ëèäåðàì ïîâñòàíöåâ.</Russian>

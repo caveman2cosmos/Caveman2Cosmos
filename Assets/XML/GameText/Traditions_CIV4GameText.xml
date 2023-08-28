@@ -5,7 +5,7 @@
 		<English>Tradition - Archery</English>
 		<French>Tradition - Archerie</French>
 		<German>Tradition - Bogenschießen</German>
-		<Italian>Tradizione - Tiro con l'arco</Italian>
+		<Italian>Tradizione del tiro con l'arco</Italian>
 		<Russian>Òðàäèöèè ëó÷íèêîâ</Russian>
 	</TEXT>
 	<TEXT>
@@ -13,7 +13,7 @@
 		<English>Effect - Tradition - Archery</English>
 		<French>Effect (Tradition - Archerie)</French>
 		<German>Effekt (Tradition - Bogenschießen)</German>
-		<Italian>Effetto (Tradizione - Tiro con l'arco)</Italian>
+		<Italian>Effetto della tradizione del tiro con l'arco</Italian>
 		<Russian>Øêîëà ëó÷íèêîâ</Russian>
 	</TEXT>
 	<TEXT>
@@ -37,7 +37,7 @@
 		<English>Tradition - Aesthetic Appreciation</English>
 		<French>Tradition (Appréciation esthétique)</French>
 		<German>Tradition - Ästhetische Würdigung</German>
-		<Italian>Tradizione - Apprezamento per l'estetica</Italian>
+		<Italian>Tradizione dell'apprezzamento estetico</Italian>
 		<Russian>Ýñòåòè÷åñêèå òðàäèöèè</Russian>
 	</TEXT>
 	<TEXT>
@@ -45,7 +45,7 @@
 		<English>Effect - Tradition - Aesthetic Appreciation</English>
 		<French>Effet - Tradition (Appréciation esthétique)</French>
 		<German>Effekt - Tradition - Ästhetische Würdigung</German>
-		<Italian>Effetto (Tradizione - Apprezamento per l'estetica)</Italian>
+		<Italian>Effetto della tradizione sull'apprezzamento estetico</Italian>
 		<Russian>Ýñòåòè÷åñêîå âîñïèòàíèå</Russian>
 	</TEXT>
 	<TEXT>
@@ -60,7 +60,7 @@
 		<English>Tradition - Work Ethic</English>
 		<French>Tradition - Éthique du Travail</French>
 		<German>Tradition - Arbeitsmoral</German>
-		<Italian>Tradizione - Etica del lavoro</Italian>
+		<Italian>Tradizione dell'etica del lavoro</Italian>
 		<Russian>Òðóäîâûå òðàäèöèè</Russian>
 	</TEXT>
 	<TEXT>
@@ -68,7 +68,7 @@
 		<English>Effect - Tradition - Work Ethic</English>
 		<French>Effet (Tradition - Éthique du Travail)</French>
 		<German>Effekt - Tradition - Arbeitsmoral</German>
-		<Italian>Effetto (Tradizione - Etica del lavoro)</Italian>
+		<Italian>Effetto della tradizione dell'etica del lavoro</Italian>
 		<Russian>Òðóäîâîå âîñïèòàíèå</Russian>
 	</TEXT>
 	<TEXT>
@@ -84,7 +84,7 @@
 		<English>Archer Tradition</English>
 		<French>Tradition des Archers</French>
 		<German>Tradition des Bogenschießens</German>
-		<Italian>Tradizione arcieri</Italian>
+		<Italian>Tiro con l'arco tradizionale</Italian>
 		<Russian>Îïûòíûé ëó÷íèê</Russian>
 	</TEXT>
 	<TEXT>

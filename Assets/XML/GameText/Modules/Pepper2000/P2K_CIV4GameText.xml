@@ -26,7 +26,7 @@
 		<English>Build [LINK=IMPROVEMENT_ASTEROID_MINE]Asteroid Mine[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_ASTEROID_MINE]Mine d'Astéroide[\LINK]</French>
 		<Russian>Ñòðîèòü àñòåð. øàõòó</Russian>
-		<Italian>[LINK=IMPROVEMENT_ASTEROID_MINE]Miniera su un asteroide[\LINK] (costruzione)</Italian>
+		<Italian>[LINK=IMPROVEMENT_ASTEROID_MINE]Miniera su asteroide[\LINK] (costruzione)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BIOTIC_GALAXY</Tag>
@@ -78,14 +78,14 @@
 		<English>Make [LINK=ROUTE_COMPACT_WORMHOLE]Compact Wormhole[\LINK]</English>
 		<French>Construire un [LINK=ROUTE_COMPACT_WORMHOLE]Compact Trou de Ver[\LINK]</French>
 		<Russian>Ñòðîèòü [LINK=ROUTE_COMPACT_WORMHOLE]Ìàëóþ ÷åðâîòî÷èíó[\LINK]</Russian>
-		<Italian>[LINK=ROUTE_COMPACT_WORMHOLE]Wormhole compatto[\LINK] (costruzione)</Italian>
+		<Italian>[LINK=ROUTE_COMPACT_WORMHOLE]Miniwormhole[\LINK] (costruzione)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_COSMIC_EXPANSION_NODE</Tag>
 		<English>Build [LINK=IMPROVEMENT_COSMIC_EXPANSION_NODE]Cosmic Expansion Node[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_COSMIC_EXPANSION_NODE]Nœud d'expansion cosmique[\LINK]</French>
 		<Russian>Ñòðîèòü ÓÏÐ</Russian>
-		<Italian>[LINK=IMPROVEMENT_COSMIC_EXPANSION_NODE]Nodo di expansione cosmica[\LINK] (costruzione)</Italian>
+		<Italian>[LINK=IMPROVEMENT_COSMIC_EXPANSION_NODE]Nodo di espansione cosmica[\LINK] (costruzione)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_DISTANT_FUTURE_CITY</Tag>
@@ -127,7 +127,7 @@
 		<English>Make [LINK=ROUTE_HYPERLANE]Hyperlane[\LINK]</English>
 		<French>Construire un [LINK=ROUTE_HYPERLANE]Hyperligne[\LINK]</French>
 		<Russian>Ïðîëîæèòü ãèïåðëàéí</Russian>
-		<Italian>[LINK=ROUTE_HYPERLANE]Hyperstrada[\LINK] (costruzione)</Italian>
+		<Italian>[LINK=ROUTE_HYPERLANE]Iperstrada[\LINK] (costruzione)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_HYPERSPACE_BUNKER</Tag>
@@ -303,14 +303,14 @@
 		<English>Build [LINK=IMPROVEMENT_MERCURY_SOLAR_ARRAY]Mercury Solar Array[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_MERCURY_SOLAR_ARRAY]Panneau Solaire sur Mercure[\LINK]</French>
 		<Russian>Ñòðîèòü ìåðê. ñîëí. áàò.</Russian>
-		<Italian>[LINK=IMPROVEMENT_MERCURY_SOLAR_ARRAY]Formazione di pannnelli solari di Mercurio[\LINK] (costruzione)</Italian>
+		<Italian>[LINK=IMPROVEMENT_MERCURY_SOLAR_ARRAY]Formazione di pannelli solari di Mercurio[\LINK] (costruzione)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_NEUTRON_STAR_COLONY</Tag>
 		<English>Build [LINK=IMPROVEMENT_NEUTRON_STAR_COLONY]Neutron Star Colony[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_NEUTRON_STAR_COLONY]Colonie d'Etoile à Neutron[\LINK]</French>
 		<Russian>Ñòðîèòü ÊÍÇ</Russian>
-		<Italian>[LINK=IMPROVEMENT_NEUTRON_STAR_COLONY]Colonia sulla stella a neutroni[\LINK] (costruzione)</Italian>
+		<Italian>[LINK=IMPROVEMENT_NEUTRON_STAR_COLONY]Colonia sulla stella di neutroni[\LINK] (costruzione)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_OBSERVABLE_UNIVERSE_COLONY</Tag>
@@ -354,7 +354,7 @@
 		<Tag>TXT_KEY_BUILD_PLANETARY_MAGLEV</Tag>
 		<English>Make [LINK=ROUTE_PLANETARY_MAGLEV]Planetary Maglev[\LINK]</English>
 		<Russian>Ñòðîèòü [LINK=ROUTE_PLANETARY_MAGLEV]Ìîíîðåëüñ[\LINK]</Russian>
-		<Italian>[LINK=ROUTE_PLANETARY_MAGLEV]Maglev planetario[\LINK] (costruzione)</Italian>
+		<Italian>[LINK=ROUTE_PLANETARY_MAGLEV]Ferrovia a levitazione magnetica planetaria[\LINK] (costruzione)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SATELLITE_STATION</Tag>
@@ -446,7 +446,7 @@
 		<English>Build [LINK=IMPROVEMENT_SUPERNOVA_MINE]Supernova Mine[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_SUPERNOVA_MINE]Mine de Supernova[\LINK]</French>
 		<Russian>Ñòðîèòü Çâåçäíûé êàðüåð</Russian>
-		<Italian>[LINK=IMPROVEMENT_SUPERNOVA_MINE]Miniera su una supernova[\LINK] (costruzione)</Italian>
+		<Italian>[LINK=IMPROVEMENT_SUPERNOVA_MINE]Miniera per supernova[\LINK] (costruzione)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_TERRAFORMED_PLANET</Tag>
@@ -836,7 +836,7 @@
 		<English>Jovian Floating City</English>
 		<French>Ville flottante Jovienne</French>
 		<Russian>Îáëà÷íîé ãîðîä</Russian>
-		<Italian>Città volante gioviana</Italian>
+		<Italian>Città gioviana volante</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_JOVIAN_FLOATING_CITY_PEDIA</Tag>
@@ -1101,7 +1101,7 @@
 		<English>Solar System Base</English>
 		<French>Base du Système Solaire</French>
 		<Russian>Ìåæïëàíåòíàÿ ñòàíöèÿ</Russian>
-		<Italian>Base militare solare</Italian>
+		<Italian>Base del sistema solare</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SOLAR_SYSTEM_BASE_PEDIA</Tag>
@@ -1225,7 +1225,7 @@
 		<English>Supernova Mine</English>
 		<French>Mine de Supernova</French>
 		<Russian>Çâåçäíûé êàðüåð</Russian>
-		<Italian>Miniera su una supernova</Italian>
+		<Italian>Miniera per supernova</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SUPERNOVA_MINE_PEDIA</Tag>
@@ -1839,7 +1839,7 @@
 		<English>Captured an Asteroid!</English>
 		<French>Asteroïde Capturé !</French>
 		<Russian>Àñòåðîèä çàõâà÷åí!</Russian>
-		<Italian>Hai carrutato un asteroide!</Italian>
+		<Italian>Hai catturato un asteroide!</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_ANCIENT_CIVILIZATION</Tag>
@@ -2245,7 +2245,7 @@
 		<English>Compact Wormhole</English>
 		<French>Compact Trou de Ver</French>
 		<Russian>Ìàëàÿ ÷åðâîòî÷èíà</Russian>
-		<Italian>Wormhole compatto</Italian>
+		<Italian>Miniwormhole</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROUTE_HYPERLANE</Tag>
@@ -2278,7 +2278,7 @@
 		<Tag>TXT_KEY_ROUTE_PLANETARY_MAGLEV</Tag>
 		<English>Planetary Maglev</English>
 		<Russian>Планетарный маглев</Russian>
-		<Italian>Maglev planetario</Italian>
+		<Italian>Ferrovia a levitazione magnetica planetaria</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROUTE_SOLAR_TRAJECTORY</Tag>
@@ -3212,7 +3212,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SOLAR_WORKER_HELP</Tag>
 		<English>[ICON_BULLET]This unit can build route on Orbit terrain enabling trade and resource flow between Earth and space colonies.</English>
-		<Italian>[ICON_BULLET]Questa unità può costruire percorsi sulle caselleo dell'orbita consentendo il commercio e il flusso di risorse tra la Terra e le colonie spaziali.</Italian>
+		<Italian>[ICON_BULLET]Questa unità può costruire percorsi sulle caselle dell'orbita consentendo il commercio e il flusso di risorse tra la Terra e le colonie spaziali.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SPACEUNIT_HELP</Tag>
@@ -3460,7 +3460,7 @@
 		<English>[ICON_BULLET]Can build cities in the Milky Way and Universe</English>
 		<French>[ICON_BULLET]Peut construire les Villes dans la Voie lactée, et tout l'Univers</French>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Ìîæåò ñòðîèòü ãîðîäà â îñòàëüíîé ÷àñòè Ìëå÷íîãî Ïóòè è ïðî÷èõ ãàëàêòèêàõ</Russian>
-		<Italian>[ICON_BULLET]Può fondare città nella via lattea e nel'universo</Italian>
+		<Italian>[ICON_BULLET]Può fondare città nella via lattea e nell'universo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WORLDSHIP4</Tag>
@@ -3474,7 +3474,7 @@
 		<English>[ICON_BULLET]Can build cities in the Universe and beyond</English>
 		<French>[ICON_BULLET]Peut construire les Villes dans l'Univers, et plus loin</French>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Ìîæíî ñòðîèòü ãîðîäà â ëþáîì ñåêòîðå Âñåëåííîé è çà åå ïðåäåëàìè</Russian>
-		<Italian>[ICON_BULLET]Può fondare città nel'universo e oltre</Italian>
+		<Italian>[ICON_BULLET]Può fondare città nell'universo e oltre</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WORLDSHIP_DEFENDER</Tag>
