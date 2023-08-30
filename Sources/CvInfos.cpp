@@ -8203,28 +8203,9 @@ bool CvCivicOptionInfo::read(CvXMLLoadUtility* pXML)
 
 void CvCivicOptionInfo::copyNonDefaults(const CvCivicOptionInfo* pClassInfo)
 {
-	const bool bDefault = false;
-//	int iDefault = 0;
-//	int iTextDefault = -1;  //all integers which are TEXT_KEYS in the xml are -1 by default
-//	int iAudioDefault = -1;  //all audio is default -1
-//	float fDefault = 0.0f;
-//	CvString cDefault = CvString::format("").GetCString();
-//	CvWString wDefault = CvWString::format(L"").GetCString();
-
 	CvInfoBase::copyNonDefaults(pClassInfo);
 
-	if (isPolicy() == bDefault) m_bPolicy = pClassInfo->isPolicy();
-	//for ( int i = 0; i < GC.getNumTraitInfos(); i++)
-	//{
-	//	if ( getTraitNoUpkeep(i) == bDefault && pClassInfo->getTraitNoUpkeep(i) != bDefault)
-	//	{
-	//		if ( NULL == m_pabTraitNoUpkeep )
-	//		{
-	//			CvXMLLoadUtility::InitList(&m_pabTraitNoUpkeep,GC.getNumTraitInfos(),bDefault);
-	//		}
-	//		m_pabTraitNoUpkeep[i] = pClassInfo->getTraitNoUpkeep(i);
-	//	}
-	//}
+	if (!isPolicy()) m_bPolicy = pClassInfo->isPolicy();
 }
 
 
@@ -11963,9 +11944,6 @@ m_iAnimalAttackProb(0),
 m_iAdvancedStartPointsMod(0),
 m_iStartingGold(0),
 m_iUnitUpkeepPercent(0),
-m_iTrainPercent(0),
-m_iConstructPercent(0),
-m_iResearchPercent(0),
 m_iDistanceMaintenancePercent(0),
 m_iNumCitiesMaintenancePercent(0),
 m_iColonyMaintenancePercent(0),
@@ -12050,21 +12028,6 @@ int CvHandicapInfo::getStartingGold() const
 int CvHandicapInfo::getUnitUpkeepPercent() const
 {
 	return m_iUnitUpkeepPercent;
-}
-
-int CvHandicapInfo::getTrainPercent() const
-{
-	return m_iTrainPercent;
-}
-
-int CvHandicapInfo::getConstructPercent() const
-{
-	return m_iConstructPercent;
-}
-
-int CvHandicapInfo::getResearchPercent() const
-{
-	return m_iResearchPercent;
 }
 
 int CvHandicapInfo::getDistanceMaintenancePercent() const
@@ -12321,9 +12284,6 @@ void CvHandicapInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iAdvancedStartPointsMod);
 	CheckSum(iSum, m_iStartingGold);
 	CheckSum(iSum, m_iUnitUpkeepPercent);
-	CheckSum(iSum, m_iTrainPercent);
-	CheckSum(iSum, m_iConstructPercent);
-	CheckSum(iSum, m_iResearchPercent);
 	CheckSum(iSum, m_iDistanceMaintenancePercent);
 	CheckSum(iSum, m_iNumCitiesMaintenancePercent);
 	CheckSum(iSum, m_iColonyMaintenancePercent);
@@ -12392,9 +12352,6 @@ bool CvHandicapInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iAdvancedStartPointsMod, L"iAdvancedStartPointsMod");
 	pXML->GetOptionalChildXmlValByName(&m_iStartingGold, L"iGold");
 	pXML->GetOptionalChildXmlValByName(&m_iUnitUpkeepPercent, L"iUnitUpkeepPercent");
-	pXML->GetOptionalChildXmlValByName(&m_iTrainPercent, L"iTrainPercent");
-	pXML->GetOptionalChildXmlValByName(&m_iConstructPercent, L"iConstructPercent");
-	pXML->GetOptionalChildXmlValByName(&m_iResearchPercent, L"iResearchPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iDistanceMaintenancePercent, L"iDistanceMaintenancePercent");
 	pXML->GetOptionalChildXmlValByName(&m_iNumCitiesMaintenancePercent, L"iNumCitiesMaintenancePercent");
 	pXML->GetOptionalChildXmlValByName(&m_iColonyMaintenancePercent, L"iColonyMaintenancePercent");
@@ -12465,9 +12422,6 @@ void CvHandicapInfo::copyNonDefaults(const CvHandicapInfo* pClassInfo)
 	if (getAdvancedStartPointsMod() == iDefault) m_iAdvancedStartPointsMod = pClassInfo->getAdvancedStartPointsMod();
 	if (getStartingGold() == iDefault) m_iStartingGold = pClassInfo->getStartingGold();
 	if (getUnitUpkeepPercent() == iDefault) m_iUnitUpkeepPercent = pClassInfo->getUnitUpkeepPercent();
-	if (getTrainPercent() == iDefault) m_iTrainPercent = pClassInfo->getTrainPercent();
-	if (getConstructPercent() == iDefault) m_iConstructPercent = pClassInfo->getConstructPercent();
-	if (getResearchPercent() == iDefault) m_iResearchPercent = pClassInfo->getResearchPercent();
 	if (getDistanceMaintenancePercent() == iDefault) m_iDistanceMaintenancePercent = pClassInfo->getDistanceMaintenancePercent();
 	if (getNumCitiesMaintenancePercent() == iDefault) m_iNumCitiesMaintenancePercent = pClassInfo->getNumCitiesMaintenancePercent();
 	if (getColonyMaintenancePercent() == iDefault) m_iColonyMaintenancePercent = pClassInfo->getColonyMaintenancePercent();
@@ -15289,19 +15243,11 @@ m_iNoTechTradeThreshold(0),
 m_iTechTradeKnownPercent(0),
 m_iMaxGoldTradePercent(0),
 m_iMaxGoldPerTurnTradePercent(0),
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  03/21/10								jdog5000	  */
-/*																							  */
-/* Victory Strategy AI																		  */
-/************************************************************************************************/
 m_iCultureVictoryWeight(0),
 m_iSpaceVictoryWeight(0),
 m_iConquestVictoryWeight(0),
 m_iDominationVictoryWeight(0),
 m_iDiplomacyVictoryWeight(0),
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
 m_iMaxWarRand(0),
 m_iMaxWarNearbyPowerRatio(0),
 m_iMaxWarDistantPowerRatio(0),
@@ -15474,11 +15420,6 @@ int CvLeaderHeadInfo::getMaxGoldPerTurnTradePercent() const
 	return m_iMaxGoldPerTurnTradePercent;
 }
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  03/21/10								jdog5000	  */
-/*																							  */
-/* Victory Strategy AI																		  */
-/************************************************************************************************/
 int CvLeaderHeadInfo::getCultureVictoryWeight() const
 {
 	return m_iCultureVictoryWeight;
@@ -15503,9 +15444,6 @@ int CvLeaderHeadInfo::getDiplomacyVictoryWeight() const
 {
 	return m_iDiplomacyVictoryWeight;
 }
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
 
 int CvLeaderHeadInfo::getMaxWarRand() const
 {
@@ -15839,25 +15777,25 @@ int CvLeaderHeadInfo::getFlavorValue(int i) const
 int CvLeaderHeadInfo::getContactRand(int i) const
 {
 	FASSERT_BOUNDS(0, NUM_CONTACT_TYPES, i);
-	return m_piContactRand ? m_piContactRand[i] : 0;
+	return m_piContactRand[i];
 }
 
 int CvLeaderHeadInfo::getContactDelay(int i) const
 {
 	FASSERT_BOUNDS(0, NUM_CONTACT_TYPES, i);
-	return m_piContactDelay ? m_piContactDelay[i] : 0;
+	return m_piContactDelay[i];
 }
 
 int CvLeaderHeadInfo::getMemoryDecayRand(int i) const
 {
 	FASSERT_BOUNDS(0, NUM_MEMORY_TYPES, i);
-	return m_piMemoryDecayRand ? m_piMemoryDecayRand[i] : 0;
+	return m_piMemoryDecayRand[i];
 }
 
 int CvLeaderHeadInfo::getMemoryAttitudePercent(int i) const
 {
 	FASSERT_BOUNDS(0, NUM_MEMORY_TYPES, i);
-	return m_piMemoryAttitudePercent ? m_piMemoryAttitudePercent[i] : 0;
+	return m_piMemoryAttitudePercent[i];
 }
 
 int CvLeaderHeadInfo::getNoWarAttitudeProb(int i) const
@@ -15904,16 +15842,7 @@ int CvLeaderHeadInfo::getDiploWarMusicScriptIds(int i) const
 
 const char* CvLeaderHeadInfo::getLeaderHead() const
 {
-	const CvArtInfoLeaderhead * pLeaderheadArtInfo;
-	pLeaderheadArtInfo = getArtInfo();
-	if (pLeaderheadArtInfo != NULL)
-	{
-		return pLeaderheadArtInfo->getNIF();
-	}
-	else
-	{
-		return NULL;
-	}
+	return getArtInfo() ? getArtInfo()->getNIF() : NULL;
 }
 
 int CvLeaderHeadInfo::getMilitaryUnitRefuseAttitudeThreshold() const
@@ -16111,12 +16040,18 @@ const CvArtInfoLeaderhead* CvLeaderHeadInfo::getArtInfo() const
 
 bool CvLeaderHeadInfo::read(CvXMLLoadUtility* pXML)
 {
-
-	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
 	{
 		return false;
 	}
+	if (!m_piMemoryDecayRand)
+	{
+		CvXMLLoadUtility::InitList(&m_piMemoryDecayRand, NUM_MEMORY_TYPES, 0);
+		CvXMLLoadUtility::InitList(&m_piMemoryAttitudePercent, NUM_MEMORY_TYPES, 0);
+		CvXMLLoadUtility::InitList(&m_piContactRand, NUM_CONTACT_TYPES, 0);
+		CvXMLLoadUtility::InitList(&m_piContactDelay, NUM_CONTACT_TYPES, 0);
+	}
+	CvString szTextVal;
 
 	pXML->GetOptionalChildXmlValByName(m_szArtDefineTag, L"ArtDefineTag");
 	pXML->GetOptionalChildXmlValByName(&m_bNPC, L"bNPC");
@@ -16131,19 +16066,11 @@ bool CvLeaderHeadInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iTechTradeKnownPercent, L"iTechTradeKnownPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iMaxGoldTradePercent, L"iMaxGoldTradePercent");
 	pXML->GetOptionalChildXmlValByName(&m_iMaxGoldPerTurnTradePercent, L"iMaxGoldPerTurnTradePercent");
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  03/21/10								jdog5000	  */
-/*																							  */
-/* Victory Strategy AI																		  */
-/************************************************************************************************/
 	pXML->GetOptionalChildXmlValByName(&m_iCultureVictoryWeight, L"iCultureVictoryWeight");
 	pXML->GetOptionalChildXmlValByName(&m_iSpaceVictoryWeight, L"iSpaceVictoryWeight");
 	pXML->GetOptionalChildXmlValByName(&m_iConquestVictoryWeight, L"iConquestVictoryWeight");
 	pXML->GetOptionalChildXmlValByName(&m_iDominationVictoryWeight, L"iDominationVictoryWeight");
 	pXML->GetOptionalChildXmlValByName(&m_iDiplomacyVictoryWeight, L"iDiplomacyVictoryWeight");
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
 	pXML->GetOptionalChildXmlValByName(&m_iMaxWarRand, L"iMaxWarRand");
 	pXML->GetOptionalChildXmlValByName(&m_iMaxWarNearbyPowerRatio, L"iMaxWarNearbyPowerRatio");
 	pXML->GetOptionalChildXmlValByName(&m_iMaxWarDistantPowerRatio, L"iMaxWarDistantPowerRatio");
@@ -16276,7 +16203,6 @@ bool CvLeaderHeadInfo::read(CvXMLLoadUtility* pXML)
 	pXML->SetOptionalVector(&m_aiDefaultTraits, L"DefaultTraits");
 	pXML->SetOptionalVector(&m_aiDefaultComplexTraits, L"DefaultComplexTraits");
 
-
 	setDefaultMemoryInfo();
 	setDefaultContactInfo();
 
@@ -16286,10 +16212,6 @@ bool CvLeaderHeadInfo::read(CvXMLLoadUtility* pXML)
 void CvLeaderHeadInfo::copyNonDefaults(const CvLeaderHeadInfo* pClassInfo)
 {
 	PROFILE_EXTRA_FUNC();
-	bool bDefault = false;
-	int iDefault = 0;
-	int iTextDefault = -1;
-	int iAudioDefault = -1;
 	CvString cDefault = CvString::format("").GetCString();
 
 	//Art files must be reread first!
@@ -16297,208 +16219,192 @@ void CvLeaderHeadInfo::copyNonDefaults(const CvLeaderHeadInfo* pClassInfo)
 
 	CvInfoBase::copyNonDefaults(pClassInfo);
 
-	if (isNPC() == bDefault) m_bNPC = pClassInfo->isNPC();
-	if (getWonderConstructRand() == iDefault) m_iWonderConstructRand = pClassInfo->getWonderConstructRand();
-	if (getBaseAttitude() == iDefault) m_iBaseAttitude = pClassInfo->getBaseAttitude();
-	if (getBasePeaceWeight() == iDefault) m_iBasePeaceWeight = pClassInfo->getBasePeaceWeight();
-	if (getPeaceWeightRand() == iDefault) m_iPeaceWeightRand = pClassInfo->getPeaceWeightRand();
-	if (getWarmongerRespect() == iDefault) m_iWarmongerRespect = pClassInfo->getWarmongerRespect();
-	if (getEspionageWeight() == iDefault) m_iEspionageWeight = pClassInfo->getEspionageWeight();
-	if (getRefuseToTalkWarThreshold() == iDefault) m_iRefuseToTalkWarThreshold = pClassInfo->getRefuseToTalkWarThreshold();
-	if (getNoTechTradeThreshold() == iDefault) m_iNoTechTradeThreshold = pClassInfo->getNoTechTradeThreshold();
-	if (getTechTradeKnownPercent() == iDefault) m_iTechTradeKnownPercent = pClassInfo->getTechTradeKnownPercent();
-	if (getMaxGoldTradePercent() == iDefault) m_iMaxGoldTradePercent = pClassInfo->getMaxGoldTradePercent();
-	if (getMaxGoldPerTurnTradePercent() == iDefault) m_iMaxGoldPerTurnTradePercent = pClassInfo->getMaxGoldPerTurnTradePercent();
-	if (getMaxWarRand() == iDefault) m_iMaxWarRand = pClassInfo->getMaxWarRand();
-	if (getMaxWarNearbyPowerRatio() == iDefault) m_iMaxWarNearbyPowerRatio = pClassInfo->getMaxWarNearbyPowerRatio();
-	if (getMaxWarDistantPowerRatio() == iDefault) m_iMaxWarDistantPowerRatio = pClassInfo->getMaxWarDistantPowerRatio();
-	if (getMaxWarMinAdjacentLandPercent() == iDefault) m_iMaxWarMinAdjacentLandPercent = pClassInfo->getMaxWarMinAdjacentLandPercent();
-	if (getLimitedWarRand() == iDefault) m_iLimitedWarRand = pClassInfo->getLimitedWarRand();
-	if (getLimitedWarPowerRatio() == iDefault) m_iLimitedWarPowerRatio = pClassInfo->getLimitedWarPowerRatio();
-	if (getDogpileWarRand() == iDefault) m_iDogpileWarRand = pClassInfo->getDogpileWarRand();
-	if (getMakePeaceRand() == iDefault) m_iMakePeaceRand = pClassInfo->getMakePeaceRand();
-	if (getDeclareWarTradeRand() == iDefault) m_iDeclareWarTradeRand = pClassInfo->getDeclareWarTradeRand();
-	if (getDemandRebukedSneakProb() == iDefault) m_iDemandRebukedSneakProb = pClassInfo->getDemandRebukedSneakProb();
-	if (getDemandRebukedWarProb() == iDefault) m_iDemandRebukedWarProb = pClassInfo->getDemandRebukedWarProb();
-	if (getRazeCityProb() == iDefault) m_iRazeCityProb = pClassInfo->getRazeCityProb();
-	if (getBuildUnitProb() == iDefault) m_iBuildUnitProb = pClassInfo->getBuildUnitProb();
-	if (getBaseAttackOddsChange() == iDefault) m_iBaseAttackOddsChange = pClassInfo->getBaseAttackOddsChange();
-	if (getAttackOddsChangeRand() == iDefault) m_iAttackOddsChangeRand = pClassInfo->getAttackOddsChangeRand();
-	if (getWorseRankDifferenceAttitudeChange() == iDefault) m_iWorseRankDifferenceAttitudeChange = pClassInfo->getWorseRankDifferenceAttitudeChange();
-	if (getBetterRankDifferenceAttitudeChange() == iDefault) m_iBetterRankDifferenceAttitudeChange = pClassInfo->getBetterRankDifferenceAttitudeChange();
-	if (getCloseBordersAttitudeChange() == iDefault) m_iCloseBordersAttitudeChange = pClassInfo->getCloseBordersAttitudeChange();
-	if (getLostWarAttitudeChange() == iDefault) m_iLostWarAttitudeChange = pClassInfo->getLostWarAttitudeChange();
-	if (getAtWarAttitudeDivisor() == iDefault) m_iAtWarAttitudeDivisor = pClassInfo->getAtWarAttitudeDivisor();
-	if (getAtWarAttitudeChangeLimit() == iDefault) m_iAtWarAttitudeChangeLimit = pClassInfo->getAtWarAttitudeChangeLimit();
-	if (getAtPeaceAttitudeDivisor() == iDefault) m_iAtPeaceAttitudeDivisor = pClassInfo->getAtPeaceAttitudeDivisor();
-	if (getAtPeaceAttitudeChangeLimit() == iDefault) m_iAtPeaceAttitudeChangeLimit = pClassInfo->getAtPeaceAttitudeChangeLimit();
-	if (getSameReligionAttitudeChange() == iDefault) m_iSameReligionAttitudeChange = pClassInfo->getSameReligionAttitudeChange();
-	if (getSameReligionAttitudeDivisor() == iDefault) m_iSameReligionAttitudeDivisor = pClassInfo->getSameReligionAttitudeDivisor();
-	if (getSameReligionAttitudeChangeLimit() == iDefault) m_iSameReligionAttitudeChangeLimit = pClassInfo->getSameReligionAttitudeChangeLimit();
-	if (getDifferentReligionAttitudeChange() == iDefault) m_iDifferentReligionAttitudeChange = pClassInfo->getDifferentReligionAttitudeChange();
-	if (getDifferentReligionAttitudeDivisor() == iDefault) m_iDifferentReligionAttitudeDivisor = pClassInfo->getDifferentReligionAttitudeDivisor();
-	if (getDifferentReligionAttitudeChangeLimit() == iDefault) m_iDifferentReligionAttitudeChangeLimit = pClassInfo->getDifferentReligionAttitudeChangeLimit();
-	if (getBonusTradeAttitudeDivisor() == iDefault) m_iBonusTradeAttitudeDivisor = pClassInfo->getBonusTradeAttitudeDivisor();
-	if (getBonusTradeAttitudeChangeLimit() == iDefault) m_iBonusTradeAttitudeChangeLimit = pClassInfo->getBonusTradeAttitudeChangeLimit();
-	if (getOpenBordersAttitudeDivisor() == iDefault) m_iOpenBordersAttitudeDivisor = pClassInfo->getOpenBordersAttitudeDivisor();
-	if (getOpenBordersAttitudeChangeLimit() == iDefault) m_iOpenBordersAttitudeChangeLimit = pClassInfo->getOpenBordersAttitudeChangeLimit();
-	if (getDefensivePactAttitudeDivisor() == iDefault) m_iDefensivePactAttitudeDivisor = pClassInfo->getDefensivePactAttitudeDivisor();
-	if (getDefensivePactAttitudeChangeLimit() == iDefault) m_iDefensivePactAttitudeChangeLimit = pClassInfo->getDefensivePactAttitudeChangeLimit();
-	if (getShareWarAttitudeChange() == iDefault) m_iShareWarAttitudeChange = pClassInfo->getShareWarAttitudeChange();
-	if (getShareWarAttitudeDivisor() == iDefault) m_iShareWarAttitudeDivisor = pClassInfo->getShareWarAttitudeDivisor();
-	if (getShareWarAttitudeChangeLimit() == iDefault) m_iShareWarAttitudeChangeLimit = pClassInfo->getShareWarAttitudeChangeLimit();
-	if (getFavoriteCivicAttitudeChange() == iDefault) m_iFavoriteCivicAttitudeChange = pClassInfo->getFavoriteCivicAttitudeChange();
-	if (getFavoriteCivicAttitudeDivisor() == iDefault) m_iFavoriteCivicAttitudeDivisor = pClassInfo->getFavoriteCivicAttitudeDivisor();
-	if (getFavoriteCivicAttitudeChangeLimit() == iDefault) m_iFavoriteCivicAttitudeChangeLimit = pClassInfo->getFavoriteCivicAttitudeChangeLimit();
-	if (getVassalPowerModifier() == iDefault) m_iVassalPowerModifier = pClassInfo->getVassalPowerModifier();
-	if (getFreedomAppreciation() == iDefault) m_iFreedomAppreciation = pClassInfo->getFreedomAppreciation();
+	if (!isNPC()) m_bNPC = pClassInfo->isNPC();
+	if (getWonderConstructRand() == 0) m_iWonderConstructRand = pClassInfo->getWonderConstructRand();
+	if (getBaseAttitude() == 0) m_iBaseAttitude = pClassInfo->getBaseAttitude();
+	if (getBasePeaceWeight() == 0) m_iBasePeaceWeight = pClassInfo->getBasePeaceWeight();
+	if (getPeaceWeightRand() == 0) m_iPeaceWeightRand = pClassInfo->getPeaceWeightRand();
+	if (getWarmongerRespect() == 0) m_iWarmongerRespect = pClassInfo->getWarmongerRespect();
+	if (getEspionageWeight() == 0) m_iEspionageWeight = pClassInfo->getEspionageWeight();
+	if (getRefuseToTalkWarThreshold() == 0) m_iRefuseToTalkWarThreshold = pClassInfo->getRefuseToTalkWarThreshold();
+	if (getNoTechTradeThreshold() == 0) m_iNoTechTradeThreshold = pClassInfo->getNoTechTradeThreshold();
+	if (getTechTradeKnownPercent() == 0) m_iTechTradeKnownPercent = pClassInfo->getTechTradeKnownPercent();
+	if (getMaxGoldTradePercent() == 0) m_iMaxGoldTradePercent = pClassInfo->getMaxGoldTradePercent();
+	if (getMaxGoldPerTurnTradePercent() == 0) m_iMaxGoldPerTurnTradePercent = pClassInfo->getMaxGoldPerTurnTradePercent();
+	if (getMaxWarRand() == 0) m_iMaxWarRand = pClassInfo->getMaxWarRand();
+	if (getMaxWarNearbyPowerRatio() == 0) m_iMaxWarNearbyPowerRatio = pClassInfo->getMaxWarNearbyPowerRatio();
+	if (getMaxWarDistantPowerRatio() == 0) m_iMaxWarDistantPowerRatio = pClassInfo->getMaxWarDistantPowerRatio();
+	if (getMaxWarMinAdjacentLandPercent() == 0) m_iMaxWarMinAdjacentLandPercent = pClassInfo->getMaxWarMinAdjacentLandPercent();
+	if (getLimitedWarRand() == 0) m_iLimitedWarRand = pClassInfo->getLimitedWarRand();
+	if (getLimitedWarPowerRatio() == 0) m_iLimitedWarPowerRatio = pClassInfo->getLimitedWarPowerRatio();
+	if (getDogpileWarRand() == 0) m_iDogpileWarRand = pClassInfo->getDogpileWarRand();
+	if (getMakePeaceRand() == 0) m_iMakePeaceRand = pClassInfo->getMakePeaceRand();
+	if (getDeclareWarTradeRand() == 0) m_iDeclareWarTradeRand = pClassInfo->getDeclareWarTradeRand();
+	if (getDemandRebukedSneakProb() == 0) m_iDemandRebukedSneakProb = pClassInfo->getDemandRebukedSneakProb();
+	if (getDemandRebukedWarProb() == 0) m_iDemandRebukedWarProb = pClassInfo->getDemandRebukedWarProb();
+	if (getRazeCityProb() == 0) m_iRazeCityProb = pClassInfo->getRazeCityProb();
+	if (getBuildUnitProb() == 0) m_iBuildUnitProb = pClassInfo->getBuildUnitProb();
+	if (getBaseAttackOddsChange() == 0) m_iBaseAttackOddsChange = pClassInfo->getBaseAttackOddsChange();
+	if (getAttackOddsChangeRand() == 0) m_iAttackOddsChangeRand = pClassInfo->getAttackOddsChangeRand();
+	if (getWorseRankDifferenceAttitudeChange() == 0) m_iWorseRankDifferenceAttitudeChange = pClassInfo->getWorseRankDifferenceAttitudeChange();
+	if (getBetterRankDifferenceAttitudeChange() == 0) m_iBetterRankDifferenceAttitudeChange = pClassInfo->getBetterRankDifferenceAttitudeChange();
+	if (getCloseBordersAttitudeChange() == 0) m_iCloseBordersAttitudeChange = pClassInfo->getCloseBordersAttitudeChange();
+	if (getLostWarAttitudeChange() == 0) m_iLostWarAttitudeChange = pClassInfo->getLostWarAttitudeChange();
+	if (getAtWarAttitudeDivisor() == 0) m_iAtWarAttitudeDivisor = pClassInfo->getAtWarAttitudeDivisor();
+	if (getAtWarAttitudeChangeLimit() == 0) m_iAtWarAttitudeChangeLimit = pClassInfo->getAtWarAttitudeChangeLimit();
+	if (getAtPeaceAttitudeDivisor() == 0) m_iAtPeaceAttitudeDivisor = pClassInfo->getAtPeaceAttitudeDivisor();
+	if (getAtPeaceAttitudeChangeLimit() == 0) m_iAtPeaceAttitudeChangeLimit = pClassInfo->getAtPeaceAttitudeChangeLimit();
+	if (getSameReligionAttitudeChange() == 0) m_iSameReligionAttitudeChange = pClassInfo->getSameReligionAttitudeChange();
+	if (getSameReligionAttitudeDivisor() == 0) m_iSameReligionAttitudeDivisor = pClassInfo->getSameReligionAttitudeDivisor();
+	if (getSameReligionAttitudeChangeLimit() == 0) m_iSameReligionAttitudeChangeLimit = pClassInfo->getSameReligionAttitudeChangeLimit();
+	if (getDifferentReligionAttitudeChange() == 0) m_iDifferentReligionAttitudeChange = pClassInfo->getDifferentReligionAttitudeChange();
+	if (getDifferentReligionAttitudeDivisor() == 0) m_iDifferentReligionAttitudeDivisor = pClassInfo->getDifferentReligionAttitudeDivisor();
+	if (getDifferentReligionAttitudeChangeLimit() == 0) m_iDifferentReligionAttitudeChangeLimit = pClassInfo->getDifferentReligionAttitudeChangeLimit();
+	if (getBonusTradeAttitudeDivisor() == 0) m_iBonusTradeAttitudeDivisor = pClassInfo->getBonusTradeAttitudeDivisor();
+	if (getBonusTradeAttitudeChangeLimit() == 0) m_iBonusTradeAttitudeChangeLimit = pClassInfo->getBonusTradeAttitudeChangeLimit();
+	if (getOpenBordersAttitudeDivisor() == 0) m_iOpenBordersAttitudeDivisor = pClassInfo->getOpenBordersAttitudeDivisor();
+	if (getOpenBordersAttitudeChangeLimit() == 0) m_iOpenBordersAttitudeChangeLimit = pClassInfo->getOpenBordersAttitudeChangeLimit();
+	if (getDefensivePactAttitudeDivisor() == 0) m_iDefensivePactAttitudeDivisor = pClassInfo->getDefensivePactAttitudeDivisor();
+	if (getDefensivePactAttitudeChangeLimit() == 0) m_iDefensivePactAttitudeChangeLimit = pClassInfo->getDefensivePactAttitudeChangeLimit();
+	if (getShareWarAttitudeChange() == 0) m_iShareWarAttitudeChange = pClassInfo->getShareWarAttitudeChange();
+	if (getShareWarAttitudeDivisor() == 0) m_iShareWarAttitudeDivisor = pClassInfo->getShareWarAttitudeDivisor();
+	if (getShareWarAttitudeChangeLimit() == 0) m_iShareWarAttitudeChangeLimit = pClassInfo->getShareWarAttitudeChangeLimit();
+	if (getFavoriteCivicAttitudeChange() == 0) m_iFavoriteCivicAttitudeChange = pClassInfo->getFavoriteCivicAttitudeChange();
+	if (getFavoriteCivicAttitudeDivisor() == 0) m_iFavoriteCivicAttitudeDivisor = pClassInfo->getFavoriteCivicAttitudeDivisor();
+	if (getFavoriteCivicAttitudeChangeLimit() == 0) m_iFavoriteCivicAttitudeChangeLimit = pClassInfo->getFavoriteCivicAttitudeChangeLimit();
+	if (getVassalPowerModifier() == 0) m_iVassalPowerModifier = pClassInfo->getVassalPowerModifier();
+	if (getFreedomAppreciation() == 0) m_iFreedomAppreciation = pClassInfo->getFreedomAppreciation();
 
-	if (getDemandTributeAttitudeThreshold() == iTextDefault) m_iDemandTributeAttitudeThreshold = pClassInfo->getDemandTributeAttitudeThreshold();
-	if (getNoGiveHelpAttitudeThreshold() == iTextDefault) m_iNoGiveHelpAttitudeThreshold = pClassInfo->getNoGiveHelpAttitudeThreshold();
-	if (getTechRefuseAttitudeThreshold() == iTextDefault) m_iTechRefuseAttitudeThreshold = pClassInfo->getTechRefuseAttitudeThreshold();
-	if (getStrategicBonusRefuseAttitudeThreshold() == iTextDefault) m_iStrategicBonusRefuseAttitudeThreshold = pClassInfo->getStrategicBonusRefuseAttitudeThreshold();
-	if (getHappinessBonusRefuseAttitudeThreshold() == iTextDefault) m_iHappinessBonusRefuseAttitudeThreshold = pClassInfo->getHappinessBonusRefuseAttitudeThreshold();
-	if (getHealthBonusRefuseAttitudeThreshold() == iTextDefault) m_iHealthBonusRefuseAttitudeThreshold = pClassInfo->getHealthBonusRefuseAttitudeThreshold();
-	if (getMapRefuseAttitudeThreshold() == iTextDefault) m_iMapRefuseAttitudeThreshold = pClassInfo->getMapRefuseAttitudeThreshold();
-	if (getDeclareWarRefuseAttitudeThreshold() == iTextDefault) m_iDeclareWarRefuseAttitudeThreshold = pClassInfo->getDeclareWarRefuseAttitudeThreshold();
-	if (getDeclareWarThemRefuseAttitudeThreshold() == iTextDefault) m_iDeclareWarThemRefuseAttitudeThreshold = pClassInfo->getDeclareWarThemRefuseAttitudeThreshold();
-	if (getStopTradingRefuseAttitudeThreshold() == iTextDefault) m_iStopTradingRefuseAttitudeThreshold = pClassInfo->getStopTradingRefuseAttitudeThreshold();
-	if (getStopTradingThemRefuseAttitudeThreshold() == iTextDefault) m_iStopTradingThemRefuseAttitudeThreshold = pClassInfo->getStopTradingThemRefuseAttitudeThreshold();
-	if (getAdoptCivicRefuseAttitudeThreshold() == iTextDefault) m_iAdoptCivicRefuseAttitudeThreshold = pClassInfo->getAdoptCivicRefuseAttitudeThreshold();
-	if (getConvertReligionRefuseAttitudeThreshold() == iTextDefault) m_iConvertReligionRefuseAttitudeThreshold = pClassInfo->getConvertReligionRefuseAttitudeThreshold();
-	if (getOpenBordersRefuseAttitudeThreshold() == iTextDefault) m_iOpenBordersRefuseAttitudeThreshold = pClassInfo->getOpenBordersRefuseAttitudeThreshold();
-	if (getDefensivePactRefuseAttitudeThreshold() == iTextDefault) m_iDefensivePactRefuseAttitudeThreshold = pClassInfo->getDefensivePactRefuseAttitudeThreshold();
-	if (getPermanentAllianceRefuseAttitudeThreshold() == iTextDefault) m_iPermanentAllianceRefuseAttitudeThreshold = pClassInfo->getPermanentAllianceRefuseAttitudeThreshold();
-	if (getVassalRefuseAttitudeThreshold() == iTextDefault) m_iVassalRefuseAttitudeThreshold = pClassInfo->getVassalRefuseAttitudeThreshold();
-	if (getFavoriteCivic() == iTextDefault) m_iFavoriteCivic = pClassInfo->getFavoriteCivic();
-	if (getFavoriteReligion() == iTextDefault) m_iFavoriteReligion = pClassInfo->getFavoriteReligion();
+	if (getDemandTributeAttitudeThreshold() == -1) m_iDemandTributeAttitudeThreshold = pClassInfo->getDemandTributeAttitudeThreshold();
+	if (getNoGiveHelpAttitudeThreshold() == -1) m_iNoGiveHelpAttitudeThreshold = pClassInfo->getNoGiveHelpAttitudeThreshold();
+	if (getTechRefuseAttitudeThreshold() == -1) m_iTechRefuseAttitudeThreshold = pClassInfo->getTechRefuseAttitudeThreshold();
+	if (getStrategicBonusRefuseAttitudeThreshold() == -1) m_iStrategicBonusRefuseAttitudeThreshold = pClassInfo->getStrategicBonusRefuseAttitudeThreshold();
+	if (getHappinessBonusRefuseAttitudeThreshold() == -1) m_iHappinessBonusRefuseAttitudeThreshold = pClassInfo->getHappinessBonusRefuseAttitudeThreshold();
+	if (getHealthBonusRefuseAttitudeThreshold() == -1) m_iHealthBonusRefuseAttitudeThreshold = pClassInfo->getHealthBonusRefuseAttitudeThreshold();
+	if (getMapRefuseAttitudeThreshold() == -1) m_iMapRefuseAttitudeThreshold = pClassInfo->getMapRefuseAttitudeThreshold();
+	if (getDeclareWarRefuseAttitudeThreshold() == -1) m_iDeclareWarRefuseAttitudeThreshold = pClassInfo->getDeclareWarRefuseAttitudeThreshold();
+	if (getDeclareWarThemRefuseAttitudeThreshold() == -1) m_iDeclareWarThemRefuseAttitudeThreshold = pClassInfo->getDeclareWarThemRefuseAttitudeThreshold();
+	if (getStopTradingRefuseAttitudeThreshold() == -1) m_iStopTradingRefuseAttitudeThreshold = pClassInfo->getStopTradingRefuseAttitudeThreshold();
+	if (getStopTradingThemRefuseAttitudeThreshold() == -1) m_iStopTradingThemRefuseAttitudeThreshold = pClassInfo->getStopTradingThemRefuseAttitudeThreshold();
+	if (getAdoptCivicRefuseAttitudeThreshold() == -1) m_iAdoptCivicRefuseAttitudeThreshold = pClassInfo->getAdoptCivicRefuseAttitudeThreshold();
+	if (getConvertReligionRefuseAttitudeThreshold() == -1) m_iConvertReligionRefuseAttitudeThreshold = pClassInfo->getConvertReligionRefuseAttitudeThreshold();
+	if (getOpenBordersRefuseAttitudeThreshold() == -1) m_iOpenBordersRefuseAttitudeThreshold = pClassInfo->getOpenBordersRefuseAttitudeThreshold();
+	if (getDefensivePactRefuseAttitudeThreshold() == -1) m_iDefensivePactRefuseAttitudeThreshold = pClassInfo->getDefensivePactRefuseAttitudeThreshold();
+	if (getPermanentAllianceRefuseAttitudeThreshold() == -1) m_iPermanentAllianceRefuseAttitudeThreshold = pClassInfo->getPermanentAllianceRefuseAttitudeThreshold();
+	if (getVassalRefuseAttitudeThreshold() == -1) m_iVassalRefuseAttitudeThreshold = pClassInfo->getVassalRefuseAttitudeThreshold();
+	if (getFavoriteCivic() == -1) m_iFavoriteCivic = pClassInfo->getFavoriteCivic();
+	if (getFavoriteReligion() == -1) m_iFavoriteReligion = pClassInfo->getFavoriteReligion();
 
-	for ( int j = 0; j < GC.getNumTraitInfos(); j++)
+	for (int j = 0; j < GC.getNumTraitInfos(); j++)
 	{
-		if ( hasTrait(j) == bDefault && pClassInfo->hasTrait(j) != bDefault)
+		if (!hasTrait(j) && pClassInfo->hasTrait(j))
 		{
-			if ( NULL == m_pbTraits )
+			if (!m_pbTraits)
 			{
-				CvXMLLoadUtility::InitList(&m_pbTraits,GC.getNumTraitInfos(),bDefault);
+				CvXMLLoadUtility::InitList(&m_pbTraits, GC.getNumTraitInfos(), false);
 			}
 			m_pbTraits[j] = pClassInfo->hasTrait(j);
 		}
 	}
 
-	for ( int j = 0; j < GC.getNumFlavorTypes(); j++)
+	for (int j = 0; j < GC.getNumFlavorTypes(); j++)
 	{
-		if ( getFlavorValue(j) == iDefault && pClassInfo->getFlavorValue(j) != iDefault)
+		if (getFlavorValue(j) == 0 && pClassInfo->getFlavorValue(j) != 0)
 		{
-			if ( NULL == m_piFlavorValue )
+			if (!m_piFlavorValue)
 			{
-				CvXMLLoadUtility::InitList(&m_piFlavorValue,GC.getNumFlavorTypes(),iDefault);
+				CvXMLLoadUtility::InitList(&m_piFlavorValue,GC.getNumFlavorTypes(),0);
 			}
 			m_piFlavorValue[j] = pClassInfo->getFlavorValue(j);
 		}
 	}
-	for ( int j = 0; j < NUM_CONTACT_TYPES; j++)
+	for (int j = 0; j < NUM_CONTACT_TYPES; j++)
 	{
-		if ( getContactRand(j) == iDefault && pClassInfo->getContactRand(j) != iDefault)
+		if (m_piContactRand[j] == 0 && pClassInfo->getContactRand(j) != 0)
 		{
-			if ( NULL == m_piContactRand )
-			{
-				CvXMLLoadUtility::InitList(&m_piContactRand,NUM_CONTACT_TYPES,iDefault);
-			}
 			m_piContactRand[j] = pClassInfo->getContactRand(j);
 		}
-		if ( getContactDelay(j) == iDefault && pClassInfo->getContactDelay(j) != iDefault)
+		if (m_piContactDelay[j] == 0 && pClassInfo->getContactDelay(j) != 0)
 		{
-			if ( NULL == m_piContactDelay )
-			{
-				CvXMLLoadUtility::InitList(&m_piContactDelay,NUM_CONTACT_TYPES,iDefault);
-			}
 			m_piContactDelay[j] = pClassInfo->getContactDelay(j);
 		}
 	}
-	for ( int j = 0; j < NUM_MEMORY_TYPES; j++)
+	for (int j = 0; j < NUM_MEMORY_TYPES; j++)
 	{
-		if ( getMemoryDecayRand(j) == iDefault && pClassInfo->getMemoryDecayRand(j) != iDefault)
+		if (m_piMemoryDecayRand[j] == 0 && pClassInfo->getMemoryDecayRand(j) != 0)
 		{
-			if ( NULL == m_piMemoryDecayRand )
-			{
-				CvXMLLoadUtility::InitList(&m_piMemoryDecayRand,NUM_MEMORY_TYPES,iDefault);
-			}
 			m_piMemoryDecayRand[j] = pClassInfo->getMemoryDecayRand(j);
 		}
-		if ( getMemoryAttitudePercent(j) == iDefault && pClassInfo->getMemoryAttitudePercent(j) != iDefault )
+		if (m_piMemoryAttitudePercent[j] == 0 && pClassInfo->getMemoryAttitudePercent(j) != 0)
 		{
-			if ( NULL == m_piMemoryAttitudePercent )
-			{
-				CvXMLLoadUtility::InitList(&m_piMemoryAttitudePercent,NUM_MEMORY_TYPES,iDefault);
-			}
 			m_piMemoryAttitudePercent[j] = pClassInfo->getMemoryAttitudePercent(j);
 		}
 	}
-	for ( int j = 0; j < NUM_ATTITUDE_TYPES; j++)
+	for (int j = 0; j < NUM_ATTITUDE_TYPES; j++)
 	{
-		if ( getNoWarAttitudeProb(j) == iDefault && pClassInfo->getNoWarAttitudeProb(j) != iDefault)
+		if (getNoWarAttitudeProb(j) == 0 && pClassInfo->getNoWarAttitudeProb(j) != 0)
 		{
-			if ( NULL == m_piNoWarAttitudeProb )
+			if (!m_piNoWarAttitudeProb)
 			{
-				CvXMLLoadUtility::InitList(&m_piNoWarAttitudeProb,NUM_ATTITUDE_TYPES,iDefault);
+				CvXMLLoadUtility::InitList(&m_piNoWarAttitudeProb,NUM_ATTITUDE_TYPES,0);
 			}
 			m_piNoWarAttitudeProb[j] = pClassInfo->getNoWarAttitudeProb(j);
 		}
 	}
-	for ( int j = 0; j < NUM_UNITAI_TYPES; j++)
+	for (int j = 0; j < NUM_UNITAI_TYPES; j++)
 	{
-		if ( getUnitAIWeightModifier(j) == iDefault && pClassInfo->getUnitAIWeightModifier(j) != iDefault)
+		if (getUnitAIWeightModifier(j) == 0 && pClassInfo->getUnitAIWeightModifier(j) != 0)
 		{
-			if ( NULL == m_piUnitAIWeightModifier )
+			if (!m_piUnitAIWeightModifier)
 			{
-				CvXMLLoadUtility::InitList(&m_piUnitAIWeightModifier,NUM_UNITAI_TYPES,iDefault);
+				CvXMLLoadUtility::InitList(&m_piUnitAIWeightModifier,NUM_UNITAI_TYPES,0);
 			}
 			m_piUnitAIWeightModifier[j] = pClassInfo->getUnitAIWeightModifier(j);
 		}
 	}
-	for ( int j = 0; j < GC.getNumImprovementInfos(); j++)
+	for (int j = 0; j < GC.getNumImprovementInfos(); j++)
 	{
-		if ( getImprovementWeightModifier(j) == iDefault && pClassInfo->getImprovementWeightModifier(j) != iDefault)
+		if (getImprovementWeightModifier(j) == 0 && pClassInfo->getImprovementWeightModifier(j) != 0)
 		{
-			if ( NULL == m_piImprovementWeightModifier )
+			if (!m_piImprovementWeightModifier)
 			{
-				CvXMLLoadUtility::InitList(&m_piImprovementWeightModifier, GC.getNumImprovementInfos(),iDefault);
+				CvXMLLoadUtility::InitList(&m_piImprovementWeightModifier, GC.getNumImprovementInfos(),0);
 			}
 			m_piImprovementWeightModifier[j] = pClassInfo->getImprovementWeightModifier(j);
 		}
 	}
 
-	for ( int j = 0; j < GC.getNumEraInfos(); j++)
+	for (int j = 0; j < GC.getNumEraInfos(); j++)
 	{
-		if ( getDiploPeaceIntroMusicScriptIds(j) == iAudioDefault && pClassInfo->getDiploPeaceIntroMusicScriptIds(j) != iAudioDefault)
+		if (getDiploPeaceIntroMusicScriptIds(j) == -1 && pClassInfo->getDiploPeaceIntroMusicScriptIds(j) != -1)
 		{
-			if ( NULL == m_piDiploPeaceIntroMusicScriptIds )
+			if (!m_piDiploPeaceIntroMusicScriptIds)
 			{
-				CvXMLLoadUtility::InitList(&m_piDiploPeaceIntroMusicScriptIds,GC.getNumEraInfos(),iAudioDefault);
+				CvXMLLoadUtility::InitList(&m_piDiploPeaceIntroMusicScriptIds, GC.getNumEraInfos(), -1);
 			}
 			m_piDiploPeaceIntroMusicScriptIds[j] = pClassInfo->getDiploPeaceIntroMusicScriptIds(j);
 		}
-		if ( getDiploPeaceMusicScriptIds(j) == iAudioDefault && pClassInfo->getDiploPeaceMusicScriptIds(j) != iAudioDefault)
+		if (getDiploPeaceMusicScriptIds(j) == -1 && pClassInfo->getDiploPeaceMusicScriptIds(j) != -1)
 		{
-			if ( NULL == m_piDiploPeaceMusicScriptIds )
+			if (!m_piDiploPeaceMusicScriptIds)
 			{
-				CvXMLLoadUtility::InitList(&m_piDiploPeaceMusicScriptIds,GC.getNumEraInfos(),iAudioDefault);
+				CvXMLLoadUtility::InitList(&m_piDiploPeaceMusicScriptIds, GC.getNumEraInfos(), -1);
 			}
 			m_piDiploPeaceMusicScriptIds[j] = pClassInfo->getDiploPeaceMusicScriptIds(j);
 		}
-		if ( getDiploWarIntroMusicScriptIds(j) == iAudioDefault && pClassInfo->getDiploWarIntroMusicScriptIds(j) != iAudioDefault)
+		if (getDiploWarIntroMusicScriptIds(j) == -1 && pClassInfo->getDiploWarIntroMusicScriptIds(j) != -1)
 		{
-			if ( NULL == m_piDiploWarIntroMusicScriptIds )
+			if (!m_piDiploWarIntroMusicScriptIds)
 			{
-				CvXMLLoadUtility::InitList(&m_piDiploWarIntroMusicScriptIds,GC.getNumEraInfos(),iAudioDefault);
+				CvXMLLoadUtility::InitList(&m_piDiploWarIntroMusicScriptIds, GC.getNumEraInfos(), -1);
 			}
 			m_piDiploWarIntroMusicScriptIds[j] = pClassInfo->getDiploWarIntroMusicScriptIds(j);
 		}
-		if ( getDiploWarMusicScriptIds(j) == iAudioDefault && pClassInfo->getDiploWarMusicScriptIds(j) != iAudioDefault)
+		if (getDiploWarMusicScriptIds(j) == -1 && pClassInfo->getDiploWarMusicScriptIds(j) != -1)
 		{
-			if ( NULL == m_piDiploWarMusicScriptIds )
+			if (!m_piDiploWarMusicScriptIds)
 			{
-				CvXMLLoadUtility::InitList(&m_piDiploWarMusicScriptIds,GC.getNumEraInfos(),iAudioDefault);
+				CvXMLLoadUtility::InitList(&m_piDiploWarMusicScriptIds, GC.getNumEraInfos(), -1);
 			}
 			m_piDiploWarMusicScriptIds[j] = pClassInfo->getDiploWarMusicScriptIds(j);
 		}
@@ -16514,104 +16420,86 @@ void CvLeaderHeadInfo::copyNonDefaults(const CvLeaderHeadInfo* pClassInfo)
 	if (getDominationVictoryWeight() == 0) m_iDominationVictoryWeight = pClassInfo->getDominationVictoryWeight();
 	if (getDiplomacyVictoryWeight() == 0) m_iDiplomacyVictoryWeight = pClassInfo->getDiplomacyVictoryWeight();
 
-
 	//Int list Vector without delayed resolution
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiDefaultTraits, pClassInfo->m_aiDefaultTraits);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiDefaultComplexTraits, pClassInfo->m_aiDefaultComplexTraits);
-
 }
+
 
 //I'm lazy, so sue me. The XML still overrides this, so no worries.
 void CvLeaderHeadInfo::setDefaultMemoryInfo()
 {
 	PROFILE_EXTRA_FUNC();
-	if ( NULL == m_piMemoryDecayRand )
-	{
-		CvXMLLoadUtility::InitList(&m_piMemoryDecayRand,NUM_MEMORY_TYPES,0);
-	}
-	if ( NULL == m_piMemoryAttitudePercent )
-	{
-		CvXMLLoadUtility::InitList(&m_piMemoryAttitudePercent,NUM_MEMORY_TYPES,0);
-	}
 
-	for (int iJ = 0; iJ < NUM_MEMORY_TYPES; iJ++)
+	for (int i = 0; i < NUM_MEMORY_TYPES; i++)
 	{
-		if (getMemoryDecayRand(iJ) == 0)
+		if (m_piMemoryDecayRand[i] == 0)
 		{
-			if (iJ == MEMORY_INQUISITION)
+			switch (i)
 			{
-				m_piMemoryDecayRand[iJ] = 75;
-			}
-			else if (iJ == MEMORY_RECALLED_AMBASSADOR)
-			{
-				m_piMemoryDecayRand[iJ] = 25;
-			}
-			else if (iJ == MEMORY_WARMONGER)
-			{
-				m_piMemoryDecayRand[iJ] = 1;
-			}
-			else if (iJ == MEMORY_MADE_PEACE)
-			{
-				m_piMemoryDecayRand[iJ] = 1;
-			}
-			else if (iJ == MEMORY_SACKED_CITY)
-			{
-				m_piMemoryDecayRand[iJ] = 125;
-			}
-			else if (iJ == MEMORY_SACKED_HOLY_CITY)
-			{
-				m_piMemoryDecayRand[iJ] = 200;
-			}
-			else if (iJ == MEMORY_ENSLAVED_CITIZENS)
-			{
-				m_piMemoryDecayRand[iJ] = 100;
-			}
-			else if (iJ == MEMORY_BACKSTAB)
-			{
-				m_piMemoryDecayRand[iJ] = 250;
-			}
-			else if (iJ == MEMORY_BACKSTAB_FRIEND)
-			{
-				m_piMemoryDecayRand[iJ] = 250;
+				case MEMORY_WARMONGER:
+				case MEMORY_MADE_PEACE:
+				{
+					m_piMemoryDecayRand[i] = 1;
+					break;
+				}
+				case MEMORY_RECALLED_AMBASSADOR:
+				{
+					m_piMemoryDecayRand[i] = 25;
+					break;
+				}
+				case MEMORY_INQUISITION:
+				{
+					m_piMemoryDecayRand[i] = 75;
+					break;
+				}
+				case MEMORY_ENSLAVED_CITIZENS:
+				{
+					m_piMemoryDecayRand[i] = 100;
+					break;
+				}
+				case MEMORY_SACKED_CITY:
+				{
+					m_piMemoryDecayRand[i] = 125;
+					break;
+				}
+				case MEMORY_SACKED_HOLY_CITY:
+				{
+					m_piMemoryDecayRand[i] = 200;
+					break;
+				}
+				case MEMORY_BACKSTAB:
+				case MEMORY_BACKSTAB_FRIEND:
+				{
+					m_piMemoryDecayRand[i] = 250;
+				}
 			}
 		}
-		if (getMemoryAttitudePercent(iJ) == 0)
+		if (m_piMemoryAttitudePercent[i] == 0)
 		{
-			if (iJ == MEMORY_INQUISITION)
+			switch (i)
 			{
-				m_piMemoryAttitudePercent[iJ] = -100;
-			}
-			else if (iJ == MEMORY_RECALLED_AMBASSADOR)
-			{
-				m_piMemoryAttitudePercent[iJ] = -0;
-			}
-			else if (iJ == MEMORY_WARMONGER)
-			{
-				m_piMemoryAttitudePercent[iJ] = 0;
-			}
-			else if (iJ == MEMORY_MADE_PEACE)
-			{
-				m_piMemoryAttitudePercent[iJ] = 0;
-			}
-			else if (iJ == MEMORY_SACKED_CITY)
-			{
-				m_piMemoryAttitudePercent[iJ] = -200;
-			}
-			else if (iJ == MEMORY_SACKED_HOLY_CITY)
-			{
-				m_piMemoryAttitudePercent[iJ] = -400;
-			}
-			else if (iJ == MEMORY_ENSLAVED_CITIZENS)
-			{
-				m_piMemoryAttitudePercent[iJ] = -200;
-			}
-			else if (iJ == MEMORY_BACKSTAB)
-			{
-				m_piMemoryAttitudePercent[iJ] = -400;
-			}
-			else if (iJ == MEMORY_BACKSTAB_FRIEND)
-			{
-				m_piMemoryAttitudePercent[iJ] = -150;
+				case MEMORY_INQUISITION:
+				{
+					m_piMemoryAttitudePercent[i] = -100;
+					break;
+				}
+				case MEMORY_BACKSTAB_FRIEND:
+				{
+					m_piMemoryAttitudePercent[i] = -150;
+					break;
+				}
+				case MEMORY_SACKED_CITY:
+				case MEMORY_ENSLAVED_CITIZENS:
+				{
+					m_piMemoryAttitudePercent[i] = -200;
+					break;
+				}
+				case MEMORY_SACKED_HOLY_CITY:
+				case MEMORY_BACKSTAB:
+				{
+					m_piMemoryAttitudePercent[i] = -400;
+				}
 			}
 		}
 	}
@@ -16620,102 +16508,81 @@ void CvLeaderHeadInfo::setDefaultMemoryInfo()
 void CvLeaderHeadInfo::setDefaultContactInfo()
 {
 	PROFILE_EXTRA_FUNC();
-	if ( NULL == m_piContactRand )
-	{
-		CvXMLLoadUtility::InitList(&m_piContactRand,NUM_CONTACT_TYPES,0);
-	}
 
-	if ( NULL == m_piContactDelay )
+	for (int i = 0; i < NUM_CONTACT_TYPES; i++)
 	{
-		CvXMLLoadUtility::InitList(&m_piContactDelay,NUM_CONTACT_TYPES,0);
-	}
-
-	for (int iJ = 0; iJ < NUM_CONTACT_TYPES; iJ++)
-	{
-		if (getContactRand(iJ) == 0)
+		if (m_piContactRand[i] == 0)
 		{
-			if (iJ == CONTACT_PEACE_PRESSURE)
+			switch (i)
 			{
-				m_piContactRand[iJ] = 50;
-			}
-			else if (iJ == CONTACT_EMBASSY)
-			{
-				m_piContactRand[iJ] = 25;
-			}
-			else if (iJ == CONTACT_TRADE_STOP_TRADING)
-			{
-				m_piContactRand[iJ] = 20;
-			}
-			else if (iJ == CONTACT_TRADE_JOIN_WAR)
-			{
-				m_piContactRand[iJ] = 10;
-			}
-			else if (iJ == CONTACT_SECRETARY_GENERAL_VOTE)
-			{
-				m_piContactRand[iJ] = 25;
-			}
-			else if (iJ == CONTACT_TRADE_MILITARY_UNITS)
-			{
-				m_piContactRand[iJ] = 20;
-			}
-			else if (iJ == CONTACT_TRADE_WORKERS)
-			{
-				m_piContactRand[iJ] = 25;
-			}
-			else if (iJ == CONTACT_TRADE_CONTACTS)
-			{
-				m_piContactRand[iJ] = 15;
-			}
-			else if (iJ == CONTACT_TRADE_CORPORATION)
-			{
-				m_piContactRand[iJ] = 35;
-			}
-			else if (iJ == CONTACT_TRADE_BUY_WAR)
-			{
-				m_piContactRand[iJ] = 10;
+				case CONTACT_TRADE_JOIN_WAR:
+				case CONTACT_TRADE_BUY_WAR:
+				{
+					m_piContactRand[i] = 10;
+					break;
+				}
+				case CONTACT_TRADE_CONTACTS:
+				{
+					m_piContactRand[i] = 15;
+					break;
+				}
+				case CONTACT_TRADE_STOP_TRADING:
+				case CONTACT_TRADE_MILITARY_UNITS:
+				{
+					m_piContactRand[i] = 20;
+					break;
+				}
+				case CONTACT_EMBASSY:
+				case CONTACT_SECRETARY_GENERAL_VOTE:
+				case CONTACT_TRADE_WORKERS:
+				{
+					m_piContactRand[i] = 25;
+					break;
+				}
+				case CONTACT_TRADE_CORPORATION:
+				{
+					m_piContactRand[i] = 35;
+					break;
+				}
+				case CONTACT_PEACE_PRESSURE:
+				{
+					m_piContactRand[i] = 50;
+				}
 			}
 		}
-		if (getContactDelay(iJ) == 0)
+		if (m_piContactDelay[i] == 0)
 		{
-			if (iJ == CONTACT_PEACE_PRESSURE)
+			switch (i)
 			{
-				m_piContactDelay[iJ] = 30;
-			}
-			else if (iJ == CONTACT_EMBASSY)
-			{
-				m_piContactDelay[iJ] = 20;
-			}
-			else if (iJ == CONTACT_TRADE_STOP_TRADING)
-			{
-				m_piContactDelay[iJ] = 20;
-			}
-			else if (iJ == CONTACT_TRADE_JOIN_WAR)
-			{
-				m_piContactDelay[iJ] = 20;
-			}
-			else if (iJ == CONTACT_SECRETARY_GENERAL_VOTE)
-			{
-				m_piContactDelay[iJ] = 25;
-			}
-			else if (iJ == CONTACT_TRADE_MILITARY_UNITS)
-			{
-				m_piContactDelay[iJ] = 25;
-			}
-			else if (iJ == CONTACT_TRADE_WORKERS)
-			{
-				m_piContactDelay[iJ] = 30;
-			}
-			else if (iJ == CONTACT_TRADE_CONTACTS)
-			{
-				m_piContactDelay[iJ] = 20;
-			}
-			else if (iJ == CONTACT_TRADE_CORPORATION)
-			{
-				m_piContactDelay[iJ] = 50;
-			}
-			else if (iJ == CONTACT_TRADE_BUY_WAR)
-			{
-				m_piContactDelay[iJ] = 10;
+				case CONTACT_TRADE_BUY_WAR:
+				{
+					m_piContactDelay[i] = 10;
+					break;
+				}
+				case CONTACT_EMBASSY:
+				case CONTACT_TRADE_JOIN_WAR:
+				case CONTACT_TRADE_CONTACTS:
+				case CONTACT_TRADE_STOP_TRADING:
+				{
+					m_piContactDelay[i] = 20;
+					break;
+				}
+				case CONTACT_SECRETARY_GENERAL_VOTE:
+				case CONTACT_TRADE_MILITARY_UNITS:
+				{
+					m_piContactDelay[i] = 25;
+					break;
+				}
+				case CONTACT_PEACE_PRESSURE:
+				case CONTACT_TRADE_WORKERS:
+				{
+					m_piContactDelay[i] = 30;
+					break;
+				}
+				case CONTACT_TRADE_CORPORATION:
+				{
+					m_piContactDelay[i] = 50;
+				}
 			}
 		}
 	}

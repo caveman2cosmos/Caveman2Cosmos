@@ -8,11 +8,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>
-			<Text>Balestriere urbano:Balestrieri urbani</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Balestriere urbano</Italian>
 		<Polish>Miejski Kusznik</Polish>
 		<Russian>Áîåö ñ ñàìîñòðåëîì</Russian>
 	</TEXT>
@@ -31,11 +27,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>
-			<Text>Guardia con piede di porco:Guardie con piede di porco</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Guardia con piede di porco</Italian>
 		<Polish>Strażnik z łomem</Polish>
 		<Russian>Áîåö ñ ãâîçäîäåðîì</Russian>
 	</TEXT>
@@ -47,11 +39,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>
-			<Text>Guerriero con accetta:Guerrieri con accetta</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Guerriero con accetta</Italian>
 		<Polish>Wojownik z siekierą</Polish>
 		<Russian>Áîåö ñ òåñàêîì</Russian>
 	</TEXT>
@@ -63,11 +51,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>
-			<Text>Guerriero con machete:Guerrieri con machete</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Guerriero con machete</Italian>
 		<Polish>Wojownik z maczetą</Polish>
 		<Russian>Áîåö ñ ìà÷åòå</Russian>
 	</TEXT>
@@ -79,11 +63,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>
-			<Text>Lanciatore di cocktail molotov:Lanciatori di cocktail molotov</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Lanciatore di cocktail molotov</Italian>
 		<Polish>Miotacz koktajli Mołotowa</Polish>
 		<Russian>Ïèðîìàí</Russian>
 	</TEXT>
@@ -98,11 +78,13 @@
 		</Spanish>
 		<Polish>Nowoczesna Konnica</Polish>
 		<Russian>Ãîðîäñêîé âñàäíèê</Russian>
+		<Italian>Cavaliere urbano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_URBAN_HORSEMAN_PEDIA</Tag>
 		<English>Urban horsemen have resorted to using horses instead of mechanized vehicles, because computerized vehicles are vulnerable to cyber attacks and are more easily located by tracking devices and scanning equipment. The horse is a low tech solution to a problem created by advanced technology. These mounted urban soldiers are propelled by their desparation and their hope that any change will be for the better.</English>
 		<Polish>Nowoczesna Konnica to jednostka, którą możesz zwerbowac jeśli z jakiś powodów nie masz dostępu do nowoczesnych pojazdów.</Polish>
+		<Italian>I cavalieri urbani ricorrono all'uso di cavalli invece che ai veicoli meccanizzati, perché i veicoli computerizzati sono vulnerabili agli attacchi informatici e sono più facilmente individuabili dai dispositivi di tracciamento e dalle apparecchiature di scansione. Il cavallo è una soluzione low tech a un problema creato dalla tecnologia avanzata. Questi soldati urbani a cavallo sono spinti dalla loro disperazione e dalla loro speranza che ogni cambiamento sarà per il meglio.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WRENCH_WARRIOR</Tag>
@@ -112,11 +94,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>
-			<Text>Guerriero con chiave inglese:Guerrieri con chiave inglese</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Guerriero con chiave inglese</Italian>
 		<Polish>Wojownik z kluczem fr.</Polish>
 		<Russian>Ñëåñàðü</Russian>
 	</TEXT>

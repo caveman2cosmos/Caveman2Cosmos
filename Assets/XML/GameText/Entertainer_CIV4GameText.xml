@@ -4,7 +4,7 @@
 		<Tag>TXT_KEY_MISSION_ENTERTAIN_CITY</Tag>
 		<English>Entertain the city.</English>
 		<French>Divertir la ville.</French>
-		<Italian>Intrattieni la città.</Italian>
+		<Italian>Intrattieni città</Italian>
 		<Polish>Rozbaw miasto.</Polish>
 		<Russian>Ðàçâëåêè ãîðîä.</Russian>
 	</TEXT>
@@ -12,7 +12,7 @@
 		<Tag>TXT_KEY_MISSION_ENTERTAIN_CITY_HELP</Tag>
 		<English>Spread your culture to the city and reduce anarchy length.</English>
 		<French>Répand votre culture dans la ville, et réduit la durée de l'anarchie.</French>
-		<Italian>Diffondi la tua cultura nella città per ridurre la durata del periodo di anarchia.</Italian>
+		<Italian>[NEWLINE]Diffonde la tua cultura nella città e riduce la durata del periodo di anarchia.</Italian>
 		<Polish>Rozszerz swoją kultur w mieście i zmniejsz czas trwania anarchii.</Polish>
 		<Russian>Ðàñïðîñòðàíÿÿ âàøó êóëüòóðó â ãîðîäå, âû ýòèì ñàìûì ñîêðàùàåòå ïðîäîëæèòåëüíîñòü àíàðõèè.</Russian>
 	</TEXT>
@@ -20,7 +20,7 @@
 		<Tag>TXT_KEY_OUTCOME_ENTERTAIN_CITY</Tag>
 		<English>Entertain the city.</English>
 		<French>Divertir la ville.</French>
-		<Italian>Hai intrattenuto la città.</Italian>
+		<Italian>Intrattieni città</Italian>
 		<Polish>Rozbaw miasto.</Polish>
 		<Russian>Ïîâåñåëè òîëïó.</Russian>
 	</TEXT>

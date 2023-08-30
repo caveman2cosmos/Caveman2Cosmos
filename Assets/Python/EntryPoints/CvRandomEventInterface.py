@@ -3035,9 +3035,7 @@ def getHelpNuclearProtest1(argsList):
 ######## Preaching Researcher #######
 
 def canTriggerPreachingResearcherCity(argsList):
-	if GC.getPlayer(argsList[1]).getCity(argsList[2]).getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_UNIVERSITY")):
-		return True
-	return False
+	return GC.getPlayer(argsList[1]).getCity(argsList[2]).isActiveBuilding(GC.getInfoTypeForString("BUILDING_UNIVERSITY"))
 
 ######## Dissident Priest (Egyptian event) #######
 
@@ -5690,7 +5688,7 @@ def TriggerSuperVirus1(argsList):
 def getHelpSuperVirus1(argsList):
 	data = argsList[1]
 
-	szCityName = TRNSLTR.getText(GC.getPlayer(data.ePlayer).getCity(data.iCityId).getNameKey(),())
+	szCityName = TRNSLTR.getText(str(GC.getPlayer(data.ePlayer).getCity(data.iCityId).getNameKey()), ())
 
 	return TRNSLTR.getText("TXT_KEY_EVENT_DOOMED_OPTION",()) + "\n" + TRNSLTR.getText("TXT_KEY_EVENT_CITY_UNREST", (3, szCityName))
 
@@ -6559,9 +6557,9 @@ def doGlobalWarming(argsList):
 
 		if plot.isCity():
 			city = plot.getPlotCity()
-			iGW += city.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_POLLUTION_MINOR_GLOBAL_WARMING")) * 100
-			iGW += city.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_POLLUTION_MODERATE_GLOBAL_WARMING")) * 10000
-			iGW += city.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_POLLUTION_MAJOR_GLOBAL_WARMING")) * 1000000
+			iGW += city.isActiveBuilding(GC.getInfoTypeForString("BUILDING_POLLUTION_MINOR_GLOBAL_WARMING")) * 100
+			iGW += city.isActiveBuilding(GC.getInfoTypeForString("BUILDING_POLLUTION_MODERATE_GLOBAL_WARMING")) * 10000
+			iGW += city.isActiveBuilding(GC.getInfoTypeForString("BUILDING_POLLUTION_MAJOR_GLOBAL_WARMING")) * 1000000
 
 	maxRand = GAME.getEstimateEndTurn() * iNumPlots
 	iIce = 2*iNumPlots / countIce

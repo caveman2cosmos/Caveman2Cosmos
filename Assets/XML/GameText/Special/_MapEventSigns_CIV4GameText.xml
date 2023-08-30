@@ -46,7 +46,7 @@
 		<English>Forest of %s1</English>
 		<French>Forêt de %s1</French>
 		<German>%s1-Wald</German>
-		<Italian>Foresta di %s1</Italian>
+		<Italian>Foresta di %s1</Italian> <!-- Bamboo forest Improvemnts, pedia-->
 		<Spanish>Bosque de %s1</Spanish>
 		<Polish>Las %s1</Polish>
 		<Russian>Ëåñ %s1</Russian>
@@ -156,7 +156,7 @@
 		<English>%s1 Mountain</English>
 		<French>Montagne %s1</French>
 		<German>%s1-Berg</German>
-		<Italian>Monte %s1</Italian>
+		<Italian>Montagna %s1</Italian>
 		<Spanish>Montaña %s1</Spanish>
 		<Polish>Góra %s1</Polish>
 		<Russian>%s1 ãîðà</Russian>
@@ -166,7 +166,7 @@
 		<English>apple trees</English>
 		<French>pommiers</French>
 		<German>Apfelbäume</German>
-		<Italian>meli</Italian>
+		<Italian>alberi di melo</Italian>
 		<Spanish>manzanos</Spanish>
 		<Polish>jabłonie</Polish>
 		<Russian>ÿáëî÷íûå äåðåâüÿ</Russian>
@@ -176,7 +176,7 @@
 		<English>banana blight</English>
 		<French>plaie à la banane</French>
 		<German>Bananen-F#228;ule</German>
-		<Italian>virus della banana</Italian>
+		<Italian>fusariosis della banana</Italian>
 		<Spanish>plaga de plátanos</Spanish>
 		<Polish>bananowa zaraza</Polish>
 	</TEXT>
@@ -225,7 +225,7 @@
 		<French>Enorme animal</French>
 		<German>riesiges Tier</German>
 		<Italian>grande animale</Italian>
-		<Spanish>gran bestia</Spanish>
+		<Spanish>bestia enorme</Spanish>
 		<Polish>wielka bestia</Polish>
 		<Russian>îãðîìíûé çâåðü</Russian>
 	</TEXT>
@@ -243,7 +243,7 @@
 		<English>medicine</English>
 		<French>médicament</French>
 		<German>Medizin</German>
-		<Italian>medicine</Italian>
+		<Italian>medicina</Italian>
 		<Spanish>medicina</Spanish>
 		<Polish>medycyna</Polish>
 		<Russian>ëåêàðñòâî</Russian>
@@ -253,7 +253,7 @@
 		<English>medicine</English>
 		<French>médicament</French>
 		<German>Medizin</German>
-		<Italian>medicine</Italian>
+		<Italian>medicina</Italian>
 		<Spanish>medicina</Spanish>
 		<Polish>medycyna</Polish>
 		<Russian>ëåêàðñòâî</Russian>
@@ -346,7 +346,7 @@
 		<English>sea turtles</English>
 		<French>tortues de mer</French>
 		<German>Meeresschildkröten</German>
-		<Italian>tartaruga di mare</Italian>
+		<Italian>tartarughe di mare</Italian>
 		<Spanish>tortugas marinas</Spanish>
 		<Polish>żółwie morskie</Polish>
 	</TEXT>

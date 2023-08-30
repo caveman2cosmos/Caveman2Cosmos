@@ -5,6 +5,7 @@
 		<English>Blue Dwarf</English>
 		<French>Naine Bleue</French>
 		<Russian>Ãîëóáîé êàðëèê</Russian>
+		<Italian>Nana blu</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_BLUE_DWARF_PEDIA</Tag>
@@ -17,6 +18,7 @@
 		<English>Blue Supergiant</English>
 		<French>Supergéante Bleue</French>
 		<Russian>Ãîëóáîé ñâåðõãèãàíò</Russian>
+		<Italian>Supergigante blu</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_BLUE_SUPERGIANT_PEDIA</Tag>
@@ -29,6 +31,7 @@
 		<English>Brown Dwarf</English>
 		<French>Naine Brune</French>
 		<Russian>Êîðè÷íåâûé êàðëèê</Russian>
+		<Italian>Nana bruna</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_BROWN_DWARF_PEDIA</Tag>
@@ -41,6 +44,7 @@
 		<English>Carbon Planet</English>
 		<French>Planète Carbone</French>
 		<Russian>Óãëåðîäíàÿ ïëàíåòà</Russian>
+		<Italian>Pianeta carbonico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_CARBON_PLANET_PEDIA</Tag>
@@ -53,6 +57,7 @@
 		<English>Chthonian Planet</English>
 		<French>Planète Chthonien</French>
 		<Russian>Õòîíè÷åñêàÿ ïëàíåòà</Russian>
+		<Italian>Pianeta ctonio</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_CHTHONIAN_PLANET_PEDIA</Tag>
@@ -65,6 +70,7 @@
 		<English>Desert Planet</English>
 		<French>Planète Désert</French>
 		<Russian>Ïóñòûííàÿ ïëàíåòà</Russian>
+		<Italian>Pianeta desertico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_DESERT_PLANET_PEDIA</Tag>
@@ -77,6 +83,7 @@
 		<English>Dwarf Galaxy</English>
 		<French>Galaxie Naine</French>
 		<Russian>Êàðëèêîâàÿ ãàëàêòèêà</Russian>
+		<Italian>Galassia nana</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_DWARF_GALAXY_PEDIA</Tag>
@@ -89,6 +96,7 @@
 		<English>Galaxy</English>
 		<French>Galaxie</French>
 		<Russian>Ãàëàêòèêà</Russian>
+		<Italian>Galassia</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_GALAXY_PEDIA</Tag>
@@ -101,6 +109,7 @@
 		<English>Hot Jupiter</English>
 		<French>Jupiter Chaude</French>
 		<Russian>Ãîðÿ÷èé Þïèòåð</Russian>
+		<Italian>Pianeta gioviano caldo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_HOT_JUPITER_PEDIA</Tag>
@@ -113,6 +122,7 @@
 		<English>Mini Neptune</English>
 		<French>Mini Neptune</French>
 		<Russian>Ìèíè-Íåïòóí</Russian>
+		<Italian>Mininettuno</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_MINI_NEPTUNE_PEDIA</Tag>
@@ -125,6 +135,7 @@
 		<English>Ocean Planet</English>
 		<French>Planète Océan</French>
 		<Russian>Ïëàíåòà-Îêåàí</Russian>
+		<Italian>Pianeta oceanico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_OCEAN_PLANET_PEDIA</Tag>
@@ -137,6 +148,7 @@
 		<English>Oort Cloud</English>
 		<French>Nuage d'Oort</French>
 		<Russian>Îáëàêî Îîðòà</Russian>
+		<Italian>Nube di Oort</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_OORT_CLOUD_PEDIA</Tag>
@@ -149,6 +161,7 @@
 		<English>Planetary Ring</English>
 		<French>Anneau Planétaire</French>
 		<Russian>Ïëàíåòàðíîå êîëüöî</Russian>
+		<Italian>Anello planetario</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_PLANETARY_RING_PEDIA</Tag>
@@ -161,6 +174,7 @@
 		<English>Quasar</English>
 		<French>Quasar</French>
 		<Russian>Êâàçàð</Russian>
+		<Italian>Quasar</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_QUASAR_PEDIA</Tag>
@@ -173,6 +187,7 @@
 		<English>Rogue Planet</English>
 		<French>Objet libre de masse planétaire</French>
 		<Russian>Áëóæäàþùàÿ ïëàíåòà</Russian>
+		<Italian>Pianeta interstellare</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_ROGUE_PLANET_PEDIA</Tag>
@@ -185,6 +200,7 @@
 		<English>Sednoid</English>
 		<French>Sednoïde</French>
 		<Russian>Ñåäíîèä</Russian>
+		<Italian>Sednoide</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_SEDNOID_PEDIA</Tag>
@@ -197,6 +213,7 @@
 		<English>Small Moon</English>
 		<French>Petite Lune</French>
 		<Russian>Ìàëàÿ ëóíà</Russian>
+		<Italian>Luna piccola</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_SMALL_MOON_PEDIA</Tag>
@@ -209,6 +226,7 @@
 		<English>Supermassive Black Hole</English>
 		<French>Trou Noir Supermassif</French>
 		<Russian>Ñâåðõìàññèâíàÿ ÷åðíàÿ äûðà</Russian>
+		<Italian>Buco nero supermassiccio</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_SUPERMASSIVE_BLACK_HOLE_PEDIA</Tag>
@@ -221,6 +239,7 @@
 		<English>Super Earth</English>
 		<French>Super Terre</French>
 		<Russian>Ñóïåðçåìëÿ</Russian>
+		<Italian>Super Terra</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_SUPER_EARTH_PEDIA</Tag>
@@ -233,6 +252,7 @@
 		<English>White Dwarf</English>
 		<French>Naine Blanche</French>
 		<Russian>Áåëûé êàðëèê</Russian>
+		<Italian>Nana bianca</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_WHITE_DWARF_PEDIA</Tag>
@@ -245,6 +265,7 @@
 		<English>Asteroid Surface</English>
 		<French>Surface d'Astéroïde</French>
 		<Russian>Ïîâåðõíîñòü àñòåðîèäà</Russian>
+		<Italian>Superficie d'asteroide</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_ASTEROID_SURFACE_PEDIA</Tag>
@@ -257,6 +278,7 @@
 		<English>Branespace</English>
 		<French>Espace de Brane</French>
 		<Russian>Áðàíà</Russian>
+		<Italian>Spazio brana</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_BRANESPACE_PEDIA</Tag>
@@ -269,6 +291,7 @@
 		<English>Callisto</English>
 		<French>Callisto</French>
 		<Russian>Çàñíåæ. ëóíà</Russian>
+		<Italian>Callisto</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_CALLISTO_PEDIA</Tag>
@@ -281,6 +304,7 @@
 		<English>Cislunar Space</English>
 		<French>Espace Cislunaire</French>
 		<Russian>Îêîëîëóííîå ïðîñòðàíñòâî</Russian>
+		<Italian>Spazio cislunare</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_CISLUNAR_SPACE_PEDIA</Tag>
@@ -292,6 +316,7 @@
 		<English>Distant Cosmos</English>
 		<French>Cosmos Lointain</French>
 		<Russian>Äàëüíèé êîñìîñ</Russian>
+		<Italian>Spazio oltre l'osservabile</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_DISTANT_COSMOS_PEDIA</Tag>
@@ -304,6 +329,7 @@
 		<English>Distant Future</English>
 		<French>Futur Distant</French>
 		<Russian>Äàëåêîå áóäóùåå</Russian>
+		<Italian>Futuro distante</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_DISTANT_FUTURE_PEDIA</Tag>
@@ -316,6 +342,7 @@
 		<English>Distant Past</English>
 		<French>Passé Distant</French>
 		<Russian>Äàëåêîå ïðîøëîå</Russian>
+		<Italian>Passato distante</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_DISTANT_PAST_PEDIA</Tag>
@@ -328,6 +355,7 @@
 		<English>Enceladus</English>
 		<French>Encelade</French>
 		<Russian>Ãåéçåðí. ëóíà</Russian>
+		<Italian>Encelado</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_ENCELADUS_PEDIA</Tag>
@@ -340,6 +368,7 @@
 		<English>Europa</English>
 		<French>Europe</French>
 		<Russian>Îêåàí. ëóíà</Russian>
+		<Italian>Europa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_EUROPA_PEDIA</Tag>
@@ -352,6 +381,7 @@
 		<English>Galactic Core</English>
 		<French>Coeur de la Galaxie</French>
 		<Russian>Ãàëàêòè÷åñêîå ßäðî</Russian>
+		<Italian>Centro della galassia</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_GALACTIC_CORE_PEDIA</Tag>
@@ -364,6 +394,7 @@
 		<English>Ganymede</English>
 		<French>Ganymède</French>
 		<Russian>Êðóïíàÿ ëóíà</Russian>
+		<Italian>Ganimede</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_GANYMEDE_PEDIA</Tag>
@@ -376,6 +407,7 @@
 		<English>Green Mars</English>
 		<French>Mars Verte</French>
 		<Russian>Çåëåíûé Ìàðñ</Russian>
+		<Italian>Marte verde</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_GREEN_MARS_PEDIA</Tag>
@@ -388,6 +420,7 @@
 		<English>Green Moon</English>
 		<French>Lune Verte</French>
 		<Russian>Çåëåíàÿ ëóíà</Russian>
+		<Italian>Luna verde</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_GREEN_MOON_PEDIA</Tag>
@@ -400,6 +433,7 @@
 		<English>Hyperspace</English>
 		<French>Hyperespace</French>
 		<Russian>Ãèïåðêîñìîñ</Russian>
+		<Italian>Iperspazio</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_HYPERSPACE_PEDIA</Tag>
@@ -412,6 +446,7 @@
 		<English>Inner Solar System</English>
 		<French>Intérieur du Système Solaire</French>
 		<Russian>Ïëàíåòû çåìíîé ãðóïïû</Russian>
+		<Italian>Sistema solare interno</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_INNER_SOLAR_SYSTEM_PEDIA</Tag>
@@ -424,6 +459,7 @@
 		<English>Intergalactic Void</English>
 		<French>Vide Intergalactique</French>
 		<Russian>Ìåæãàëàêòè÷åñêàÿ Ïóñòîòà</Russian>
+		<Italian>Vuoto intergalattico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_INTERGALACTIC_VOID_PEDIA</Tag>
@@ -436,6 +472,7 @@
 		<English>Io</English>
 		<French>Io</French>
 		<Russian>Âóëêàíè÷. ëóíà</Russian>
+		<Italian>Io</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_IO_PEDIA</Tag>
@@ -448,6 +485,7 @@
 		<English>Jupiter</English>
 		<French>Jupiter</French>
 		<Russian>Ãàçîâûé ãèãàíò</Russian>
+		<Italian>Giove</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_JUPITER_PEDIA</Tag>
@@ -460,6 +498,7 @@
 		<English>Kuiper Belt Object</English>
 		<French>Objet de la Ceinture de Kuiper</French>
 		<Russian>Îáúåêò ïîÿñà Êîéïåðà</Russian>
+		<Italian>Corpo celeste della fascia di Kuiper</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_KUIPER_BELT_OBJECT_PEDIA</Tag>
@@ -472,6 +511,7 @@
 		<English>Lava Ocean</English>
 		<French>Océan de Lave</French>
 		<Russian>Îêåàí ëàâû</Russian>
+		<Italian>Oceano di lava</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_LAVA_OCEAN_PEDIA</Tag>
@@ -484,6 +524,7 @@
 		<English>Local Group</English>
 		<French>Groupe Local</French>
 		<Russian>Ìåñòíàÿ ãðóïïà</Russian>
+		<Italian>Gruppo locale</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_LOCAL_GROUP_PEDIA</Tag>
@@ -496,6 +537,7 @@
 		<English>Mercury</English>
 		<French>Mercure</French>
 		<Russian>Ãîðÿ÷àÿ ýêçîïëàíåòà</Russian>
+		<Italian>Mercurio</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_MERCURY_PEDIA</Tag>
@@ -508,6 +550,7 @@
 		<English>Methane Ocean</English>
 		<French>Océan de Méthane</French>
 		<Russian>Îêåàí ìåòàíà</Russian>
+		<Italian>Oceano di metano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_METHANE_OCEAN_PEDIA</Tag>
@@ -520,6 +563,7 @@
 		<English>Milky Way</English>
 		<French>Voie Lactée</French>
 		<Russian>Ìëå÷íûé ïóòü</Russian>
+		<Italian>Via lattea</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_MILKY_WAY_PEDIA</Tag>
@@ -532,6 +576,7 @@
 		<English>Nebula</English>
 		<French>Nébuleuse</French>
 		<Russian>Òóìàííîñòü</Russian>
+		<Italian>Nebulosa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_NEBULA_PEDIA</Tag>
@@ -544,6 +589,7 @@
 		<English>Neptune</English>
 		<French>Neptune</French>
 		<Russian>Õîëîäíûé ãàç. ãèãàíò</Russian>
+		<Italian>Nettuno</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_NEPTUNE_PEDIA</Tag>
@@ -556,6 +602,7 @@
 		<English>Neutron Star</English>
 		<French>Etoile à Neutron</French>
 		<Russian>Íåéòðîííàÿ çâåçäà</Russian>
+		<Italian>Stella di neutroni</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_NEUTRON_STAR_PEDIA</Tag>
@@ -568,6 +615,7 @@
 		<English>Observable Universe</English>
 		<French>Univers Observable</French>
 		<Russian>Âèäèìàÿ Âñåëåííàÿ</Russian>
+		<Italian>Universo osservabile</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_OBSERVABLE_UNIVERSE_PEDIA</Tag>
@@ -580,6 +628,7 @@
 		<English>Orion Arm</English>
 		<French>Bras d'Orion</French>
 		<Russian>Ðóêàâ Îðèîíà</Russian>
+		<Italian>Braccio di Orione</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_ORION_ARM_PEDIA</Tag>
@@ -592,6 +641,7 @@
 		<English>Outer Solar System</English>
 		<French>Extérieur du Système Solaire</French>
 		<Russian>Âíåøíèå ïëàíåòû</Russian>
+		<Italian>Sistema solare esterno</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_OUTER_SOLAR_SYSTEM_PEDIA</Tag>
@@ -604,6 +654,7 @@
 		<English>Red Dwarf</English>
 		<French>Naine Rouge</French>
 		<Russian>Êðàñíûé êàðëèê</Russian>
+		<Italian>Nana rossa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_RED_DWARF_PEDIA</Tag>
@@ -616,6 +667,7 @@
 		<English>Red Giant</English>
 		<French>Géante Rouge</French>
 		<Russian>Êðàñíûé ãèãàíò</Russian>
+		<Italian>Gigante rossa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_RED_GIANT_PEDIA</Tag>
@@ -628,6 +680,7 @@
 		<English>Saturn</English>
 		<French>Saturn</French>
 		<Russian>Êîëüö. ãàçîâûé ãèãàíò</Russian>
+		<Italian>Saturno</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_SATURN_PEDIA</Tag>
@@ -640,6 +693,7 @@
 		<English>Star Cluster</English>
 		<French>Amas d'étoiles</French>
 		<Russian>Çâåçäíîå ñêîïëåíèå</Russian>
+		<Italian>Ammasso stellare</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_STAR_CLUSTER_PEDIA</Tag>
@@ -652,6 +706,7 @@
 		<English>Subsurface Ocean</English>
 		<French>Océan Sous-terrain</French>
 		<Russian>Ïîäëåäíûé îêåàí</Russian>
+		<Italian>Oceano sotto la superficie</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_SUBSURFACE_OCEAN_PEDIA</Tag>
@@ -664,12 +719,14 @@
 		<English>Sun</English>
 		<French>Soleil</French>
 		<Russian>Ñîëíöå</Russian>
+		<Italian>Sole</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_SUN_LIKE_STAR</Tag>
 		<English>Sun-Like Star</English>
 		<French>Etoile de type Soleil</French>
 		<Russian>Ñîëíöåïîäîáíàÿ çâåçäà</Russian>
+		<Italian>Stella di tipo solare</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_SUN_LIKE_STAR_PEDIA</Tag>
@@ -688,6 +745,7 @@
 		<English>Titan</English>
 		<French>Titan</French>
 		<Russian>Ìåòàíîâàÿ ëóíà</Russian>
+		<Italian>Titano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_TITAN_PEDIA</Tag>
@@ -700,6 +758,7 @@
 		<English>Transneptunian Space</English>
 		<French>Espace Transneptunien</French>
 		<Russian>Òðàíñíåïòóí. êîñìîñ</Russian>
+		<Italian>Spazio transnettuniano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_TRANSNEPTUNIAN_SPACE_PEDIA</Tag>
@@ -712,6 +771,7 @@
 		<English>Transtellar Space</English>
 		<French>Espace Transtellaire</French>
 		<Russian>Ìåæçâåçäíîå ïðîñòðàíñòâî</Russian>
+		<Italian>Spazio transtellare</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_TRANSTELLAR_SPACE_PEDIA</Tag>
@@ -724,6 +784,7 @@
 		<English>Triton</English>
 		<French>Triton</French>
 		<Russian>Ãèïîïñèõðîëóíà</Russian>
+		<Italian>Tritone</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_TRITON_PEDIA</Tag>
@@ -736,6 +797,7 @@
 		<English>Umbriel</English>
 		<French>Umbriel</French>
 		<Russian>Ëåäÿíàÿ ëóíà</Russian>
+		<Italian>Umbriel</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_UMBRIEL_PEDIA</Tag>
@@ -748,6 +810,7 @@
 		<English>Uranus</English>
 		<French>Uranus</French>
 		<Russian>Ëåäÿíîé ãèãàíò</Russian>
+		<Italian>Urano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_URANUS_PEDIA</Tag>
@@ -760,18 +823,21 @@
 		<English>Venus</English>
 		<French>Vénus</French>
 		<Russian>Âåíåðà</Russian>
+		<Italian>Venere</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_VENUS_HIGHLANDS</Tag>
 		<English>Venus Highlands</English>
 		<French>Hautes terres de Vénus</French>
 		<Russian>Ãîðû Âåíåðû</Russian>
+		<Italian>Altopiani di Venere</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_VENUS_LOWLANDS</Tag>
 		<English>Venus Lowlands</English>
 		<French>Basses terres de Vénus</French>
 		<Russian>Ðàâíèíû Âåíåðû</Russian>
+		<Italian>Bassopiani di Venere</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_VENUS_PEDIA</Tag>
@@ -784,6 +850,7 @@
 		<English>Virgo Supercluster</English>
 		<French>Superamas de la Vierge</French>
 		<Russian>Ñâåðõñêîïëåíèå Äåâû</Russian>
+		<Italian>Superammasso della Vergine</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_VIRGO_SUPERCLUSTER_PEDIA</Tag>

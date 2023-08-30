@@ -46,7 +46,7 @@
 		<English>Attacker to Hit Modifier/Round:</English>
 		<French>Modificateur d'Attaque/Round:</French>
 		<German>Angriffsmodifikator pro Runde:</German>
-		<Italian>Modificatore d'attacco per turno:</Italian>
+		<Italian>Modificatore d'attacco a turno:</Italian>
 		<Polish>Celność Atakującego / Runda:</Polish>
 	</TEXT>
 	<TEXT>
@@ -86,7 +86,7 @@
 		<English>Defender to Hit Modifier/Round:</English>
 		<French>Modificateur de Défense/Round:</French>
 		<German>Verteidigungsmodifikator pro Runde:</German>
-		<Italian>Modificatore di difesa per turno:</Italian>
+		<Italian>Modificatore di difesa a turno:</Italian>
 		<Polish>Celność Obrońcy / Runda:</Polish>
 	</TEXT>
 	<TEXT>
@@ -640,7 +640,7 @@
 		<Tag>TXT_KEY_COMBAT_ROUND_STUN_ATTACKER_GRAND_TOTAL</Tag>
 		<English>Total Attacker Chance for Round Stun:</English>
 		<French>Probabilité totale d'étourdissement par Round (Attaquant):</French>
-		<Italian>Probabilità totali di stordimento per turno (Attaccante):</Italian>
+		<Italian>Probabilità totali di stordimento a turno (Attaccante):</Italian>
 		<Polish>Całkowita Szansa Atakującego na Oszołomienie:</Polish>
 	</TEXT>
 	<TEXT>
@@ -654,7 +654,7 @@
 		<Tag>TXT_KEY_COMBAT_ROUND_STUN_DEFENDER_GRAND_TOTAL</Tag>
 		<English>Total Defender Chance for Round Stun:</English>
 		<French>Probabilité Totale d'Etourdissement du Défenseur:</French>
-		<Italian>Probabilità totali di stordimento per turno (Difensore):</Italian>
+		<Italian>Probabilità totali di stordimento a turno (Difensore):</Italian>
 		<Polish>Całkowita Szansa Obrońcy na Oszołomienie:</Polish>
 	</TEXT>
 	<TEXT>
@@ -816,19 +816,20 @@
 		<Tag>TXT_KEY_COMBAT_WITHDRAW_ODDS_PER_ROUND_ATTEMPTED</Tag>
 		<English>Withdraw Odds/rnd Attempted:</English>
 		<French>Tentatives de Retraite/round (Att.):</French>
-		<Italian>Probabilità di ritirata per turno effettiva:</Italian>
+		<Italian>Probabilità di ritirata a turno effettiva:</Italian>
 		<Polish>Szanse na próbę ucieczki / rundę:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_WITHDRAW_ODDS_WITHDRAW_PER_ROUND</Tag>
 		<English>Withdraw Odds/rnd Attempted:</English>
 		<French>Tentative de retraite/round (Def.):</French>
-		<Italian>Probabilità di ritirata per turno effettiva:</Italian>
+		<Italian>Probabilità di ritirata a turno effettiva:</Italian>
 		<Polish>Szansa na próbę ucieczki / runda:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_DOMAIN_FREE_EXPERIENCE</Tag>
 		<English>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 for being a %s2_DOMAIN type unit[COLOR_REVERT]</English>
+		<Italian>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 per essere di tipo %s2_DOMAIN[COLOR_REVERT]</Italian>
 		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 en étant une unité de type %s2_DOMAIN[COLOR_REVERT]</French>
 		<Russian>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 для всех отрядов %s2_DOMAIN[COLOR_REVERT]</Russian>
 	</TEXT>
@@ -872,6 +873,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBATHELP_FREE_EXPERIENCE</Tag>
 		<English>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 for being a %s2_UNITCOMBAT type unit[COLOR_REVERT]</English>
+		<Italian>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 per essere di tipo %s2_UNITCOMBAT[COLOR_REVERT]</Italian>
 		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 car unité de type %s2_UNITCOMBAT [COLOR_REVERT]</French>
 		<Polish>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 za bycie %s2_UNITCOMBAT rodzajem jednostki[COLOR_REVERT]</Polish>
 		<Russian>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 для всех отрядов %s2_UNITCOMBAT[COLOR_REVERT]</Russian>
@@ -884,6 +886,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<Italian>Unità amministratore</Italian>
 		<Spanish>
 			<Text>Administrador:Administradores</Text>
 			<Gender>Female</Gender>
@@ -900,7 +903,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>Unità di spionaggio</Italian>
+		<Italian>Unità da spionaggio aereo</Italian>
 		<Spanish>Unidades del espionaje</Spanish>
 		<Polish>Powietrzne Jednostki Rozpoznawcze</Polish>
 		<Russian>Âîçäóøíàÿ ðàçâåäêà</Russian>
@@ -942,7 +945,7 @@
 		<English>Animals</English>
 		<French>Unités animales</French>
 		<German>Tiereinheiten</German>
-		<Italian>Animali</Italian>
+		<Italian>Unità animale</Italian>
 		<Spanish>Animales</Spanish>
 		<Polish>Zwierzęta</Polish>
 		<Russian>Æèâîòíûå</Russian>
@@ -1686,6 +1689,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<Italian>Unità veicolo antigravità</Italian>
 		<Spanish>
 			<Text>Aeronave antigravedad:Aeronaves antigravedad</Text>
 			<Gender>Female</Gender>
@@ -1723,11 +1727,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>
-			<Text>Unità di arcieri:Unità di arcieri</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Unità arciere</Italian>
 		<Spanish>
 			<Text>Unidad con armas de proyectil:Unidades con armas de proyectil</Text>
 			<Gender>Female</Gender>
@@ -2492,11 +2492,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>
-			<Text>Unità di mech d'assalto:Unità di mech d'assalto</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Unità mech d'assalto</Italian>
 		<Spanish>
 			<Text>Robot de combate:Robots de combate</Text>
 			<Gender>Female</Gender>
@@ -3995,6 +3991,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<Italian>Unità dirigibile</Italian>
 		<Spanish>
 			<Text>Globo:Globos</Text>
 			<Gender>Female</Gender>
@@ -4237,7 +4234,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>Unità di bombardieri</Italian>
+		<Italian>Unità aerea bombardiere</Italian>
 		<Spanish>
 			<Text>Bombardero:Bombarderos</Text>
 			<Gender>Male</Gender>
@@ -4259,7 +4256,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>Unità canine</Italian>
+		<Italian>Unità canina</Italian>
 		<Spanish>
 			<Text>Unidad canina:Unidades caninas</Text>
 			<Gender>Female</Gender>
@@ -4276,6 +4273,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<Italian>Unità capitano</Italian>
 		<Spanish>
 			<Text>Unidad capitán:Unidades capitaneadoras</Text>
 			<Gender>Female</Gender>
@@ -4323,6 +4321,7 @@
 		</Spanish>
 		<Polish>Jednostki Cywilne</Polish>
 		<Russian>Ãðàæäàíñêèå</Russian>
+		<Italian>Unità civile</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CLONES</Tag>
@@ -4337,11 +4336,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>
-			<Text>Unità di cloni:Unità di cloni</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Unità di cloni</Italian>
 		<Spanish>
 			<Text>Unidad clon:Unidades clon</Text>
 			<Gender>Female</Gender>
@@ -4421,7 +4416,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>Unità di criminali</Italian>
+		<Italian>Unità criminale</Italian>
 		<Spanish>
 			<Text>Criminal:Criminales</Text>
 			<Gender>Male</Gender>
@@ -7990,7 +7985,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>Navi Diesel</Italian>
+		<Italian>Unità navale a diesel</Italian>
 		<Spanish>
 			<Text>Navío a gasolina:Navíos a gasolina</Text>
 			<Gender>Male</Gender>
@@ -8003,7 +7998,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_DIPLOMAT</Tag>
 		<English>Diplomats</English>
 		<French>Diplomates</French>
-		<Italian>Diplomatici</Italian>
+		<Italian>unità diplomatica</Italian>
 		<Spanish>
 			<Text>Diplomático:Diplomáticos</Text>
 			<Gender>Male</Gender>
@@ -8032,7 +8027,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>Unità da giorno-del-giudizio</Italian>
+		<Italian>Unità apocalittica</Italian>
 		<Spanish>
 			<Text>Arma de destrucción masiva:Armas de destrucción masiva</Text>
 			<Gender>Male</Gender>
@@ -8054,11 +8049,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>
-			<Text>Unità di Dreadnought:Unità di Dreadnought</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Unità Dreadnought</Italian>
 		<Spanish>
 			<Text>Dreadnought:Dreadnought</Text>
 			<Gender>Male</Gender>
@@ -8083,7 +8074,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>Unità di bombardieri base</Italian>
+		<Italian>Unità area bombardiere base</Italian>
 		<Spanish>
 			<Text>Bombardero antiguo:Bombarderos antiguos</Text>
 			<Gender>Male</Gender>
@@ -8101,7 +8092,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>Unità di caccia base</Italian>
+		<Italian>Unità aerea base</Italian>
 		<Spanish>
 			<Text>Caza antiguo:Cazas antiguos</Text>
 			<Gender>Male</Gender>
@@ -8118,6 +8109,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<Italian>Unità nave spaziale base</Italian>
 		<Spanish>
 			<Text>Nave espacial primitiva:Naves espaciales primitivas</Text>
 			<Gender>Female</Gender>
@@ -8134,6 +8126,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<Italian>Unità da intrattenimento</Italian>
 		<Spanish>
 			<Text>Artista:Artistas</Text>
 			<Gender>Male</Gender>
@@ -8373,7 +8366,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<Italian>Unità di felini</Italian>
+		<Italian>Unità felina</Italian>
 		<Spanish>
 			<Text>Unidad felina:Unidades felinas</Text>
 			<Gender>Female</Gender>
@@ -8672,10 +8665,7 @@
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Unità con armi da fuoco:Unità con armi da fuoco</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+			<Text>Unità con armi da fuoco</Text></Italian>
 		<Spanish>
 			<Text>Unidad con armas de pólvora:Unidades con armas de pólvora</Text>
 			<Gender>Female</Gender>
@@ -8723,6 +8713,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_HEALS_AS_ANIMALS</Tag>
 		<English>Heals As (Animals)</English>
+		<Italian>animali</Italian>
 		<French>(Type de Soins) Animaux</French>
 		<German>(Regeneration) Tiere</German>
 		<Polish>Leczy Asyst. (Zwierzęta)</Polish>
@@ -8755,6 +8746,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_HEALS_AS_PEOPLE</Tag>
 		<English>Heals As (People)</English>
+		<Italian>umane</Italian>
 		<French>(Type de Soins) Humains</French>
 		<German>(Regeneration) Menschen</German>
 		<Polish>Leczy Asyst. (Ludzi)</Polish>
@@ -8764,6 +8756,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_HEALS_AS_SPACECRAFT</Tag>
 		<English>Heals As (Spacecraft)</English>
 		<French>(Type de Répar.) Vaisseaux Spatiaux</French>
+		<Italian>Cura per le Unità nave spaziale</Italian>
 		<German>(Regeneration) Raumschiffe</German>
 		<Polish>Leczy Asyst. (Statki Kosmiczne)</Polish>
 		<Russian>×èíèìûå çâåçäîëåòû</Russian>
@@ -8828,6 +8821,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_HEALTH_CARE</Tag>
 		<English>Health Care Units</English>
 		<French>Unités de soins</French>
+		<Italian>Unità assistenza sanitaria</Italian>
 		<German>
 			<Text>Sanitäter:Sanitäter:Sanitäter:Sanitäter</Text>
 			<Gender>Male</Gender>
@@ -8848,11 +8842,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>
-			<Text>Elicottero:Elicotteri</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Unità elicottero</Italian>
 		<Spanish>
 			<Text>Unidad de helicópteros:Unidades de helicópteros</Text>
 			<Gender>Female</Gender>
@@ -8865,7 +8855,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_HERO</Tag>
 		<English>Heroic</English>
 		<French>Unités héroiques</French>
-		<Italian>Unità di eroi</Italian>
+		<Italian>Unità eroe</Italian>
 		<Spanish>
 			<Text>Unidad heroica:Unidades heroicas</Text>
 			<Gender>Male</Gender>
@@ -8887,7 +8877,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>Unità Hi-Tech</Italian>
+		<Italian>Unità hi-tech</Italian>
 		<Spanish>
 			<Text>Unidad de alta tecnología:Unidades de alta tecnología</Text>
 			<Gender>Female</Gender>
@@ -8911,6 +8901,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<Italian>Unità hovercraft</Italian>
 		<Spanish>
 			<Text>Aeronave aerodeslizante:Aeronaves aerodeslizantes</Text>
 			<Gender>Female</Gender>
@@ -8923,7 +8914,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_HUNTER</Tag>
 		<English>Hunters</English>
 		<French>Chasseurs</French>
-		<Italian>Cacciatori</Italian>
+		<Italian>Unità cacciatore</Italian>
 		<German>Jäger</German>
 		<Polish>Łowcy</Polish>
 		<Russian>Îõîòíèêè</Russian>
@@ -8991,7 +8982,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>Unità di caccia a reazione</Italian>
+		<Italian>Unità area a reazione</Italian>
 		<Spanish>
 			<Text>Caza a reacción:Cazas a reacción</Text>
 			<Gender>Male</Gender>
@@ -9015,6 +9006,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<Italian>Unità di polizia</Italian>
 		<German>
 			<Text>Polizeieinheiten:Polizeieinheiten:Polizeieinheiten:Polizeieinheiten</Text>
 			<Gender>Female</Gender>
@@ -9466,11 +9458,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>
-			<Text>Unità da combattimento ravvicinato:Unità da combattimento ravvicinato</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Unità da combattimento corpo a corpo</Italian>
 		<Spanish>
 			<Text>Unidad de cuerpo a cuerpo:Unidades de cuerpo a cuerpo</Text>
 			<Gender>Female</Gender>
@@ -9492,7 +9480,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>Unità di missili</Italian>
+		<Italian>Unità missilistica</Italian>
 		<Spanish>
 			<Text>Misil:Misiles</Text>
 			<Gender>Male</Gender>
@@ -9510,7 +9498,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>Missionari</Italian>
+		<Italian>Unità missionaria</Italian>
 		<Spanish>Misioneros</Spanish>
 		<Polish>Misjonarze</Polish>
 		<Russian>Ìèññèîíåðû</Russian>
@@ -9681,11 +9669,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>
-			<Text>Unità montata:Unità montate</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Unità da cavalcatura</Italian>
 		<Spanish>
 			<Text>Unidad montada:Unidades montadas</Text>
 			<Gender>Female</Gender>
@@ -9899,7 +9883,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>Unità di naniti</Italian>
+		<Italian>Unità a naniti</Italian>
 		<Spanish>
 			<Text>Unidad de nanoides:Unidades de nanoides</Text>
 			<Gender>Female</Gender>
@@ -9940,7 +9924,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>Navi ad energia nucleare</Italian>
+		<Italian>Unità navale nucleare</Italian>
 		<Spanish>
 			<Text>Navío nuclear:Navíos nucleares</Text>
 			<Gender>Male</Gender>
@@ -9957,6 +9941,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<Italian>Unità nave spaziale nucleare</Italian>
 		<Spanish>
 			<Text>Nave espacial nuclear:Naves espaciales nucleares</Text>
 			<Gender>Female</Gender>
@@ -9973,6 +9958,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<Italian>Unità aerea orbitale</Italian>
 		<Spanish>
 			<Text>Aeronave orbital:Aeronaves orbitales</Text>
 			<Gender>Female</Gender>
@@ -10005,6 +9991,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<Italian>Unità prodigio</Italian>
 		<Spanish>
 			<Text>Unidad prodigiosa:Unidades prodigiosas</Text>
 			<Gender>Female</Gender>
@@ -10361,11 +10348,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>
-			<Text>Unità di ricognizione:Unità di ricognizione</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Unità da ricognizione</Italian>
 		<Spanish>
 			<Text>Unidad de reconocimiento:Unidades de reconocimiento</Text>
 			<Gender>Female</Gender>
@@ -10851,7 +10834,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>Unità di robot</Italian>
+		<Italian>Unità robotica</Italian>
 		<Spanish>
 			<Text>Unidad robótica:Unidades robóticas</Text>
 			<Gender>Female</Gender>
@@ -10868,6 +10851,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<Italian>Unità lanciarazzi</Italian>
 		<Spanish>
 			<Text>Unidad lanzadera de cohetes:Unidades lanzaderas de cohetes</Text>
 			<Gender>Female</Gender>
@@ -10884,6 +10868,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
+		<Italian>Unità fuorilegge</Italian>
 		<German>
 			<Text>Gesetzlose:Gesetzlosen:Gesetzlosen:Gesetzlosen</Text>
 			<Gender>Male</Gender>
@@ -10902,7 +10887,7 @@
 		<English>Sea Animals</English>
 		<French>Unités animales marines</French>
 		<German>Meerestiereinheiten</German>
-		<Italian>Animali marini</Italian>
+		<Italian>Unità animali marini</Italian>
 		<Spanish>Animales</Spanish>
 		<Polish>Zwierzęta Morskie</Polish>
 		<Russian>Ðûáû</Russian>
@@ -10941,6 +10926,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_SEA_WORKER</Tag>
 		<English>Sea Workers</English>
 		<French>Ouvriers de mers</French>
+		<Italian>Unità lavoratore marino</Italian>
 		<Spanish>
 			<Text>Trabajador acuático:Trabajadores acuáticos</Text>
 			<Gender>Male</Gender>
@@ -10962,7 +10948,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>Unità di coloni</Italian>
+		<Italian>Unità colonizzatore</Italian>
 		<Spanish>
 			<Text>Unidad de colonización:Unidades de colonización</Text>
 			<Gender>Female</Gender>
@@ -11316,10 +11302,7 @@
 			<Plural>1</Plural>
 		</German>
 		<Italian>
-			<Text>Arma da assedio:Armi da assedio</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+			<Text>Unità da assedio</Text></Italian>
 		<Spanish>
 			<Text>Arma de asedio:Armas de asedio</Text>
 			<Gender>Female</Gender>
@@ -11636,6 +11619,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_SPACE_WORKER</Tag>
 		<English>Space Workers</English>
 		<French>Ouvriers Spatiaux</French>
+		<Italian>Unità lavoratore spaziale</Italian>
 		<Russian>Космические рабочие</Russian>
 	</TEXT>
 	<TEXT>
@@ -11749,7 +11733,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>Unità Spia</Italian>
+		<Italian>Unità spia</Italian>
 		<Spanish>
 			<Text>Espía:Espías</Text>
 			<Gender>Male</Gender>
@@ -11793,7 +11777,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>Navi a vapore</Italian>
+		<Italian>Unità navale a vapore</Italian>
 		<Spanish>
 			<Text>Navío a vapor:Navíos a vapor</Text>
 			<Gender>Male</Gender>
@@ -11810,6 +11794,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<Italian>Unità squadra d'assalto</Italian>
 		<German>
 			<Text>Eingreiftruppen:Eingreiftruppen:Eingreiftruppen:Eingreiftruppen</Text>
 			<Gender>Female</Gender>
@@ -11852,7 +11837,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>Sottomarino</Italian>
+		<Italian>Unità sottomarina</Italian>
 		<Spanish>
 			<Text>Submarino:Submarinos</Text>
 			<Gender>Male</Gender>
@@ -11874,7 +11859,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>Unità Supersoniche</Italian>
+		<Italian>Unità supersonica</Italian>
 		<Spanish>
 			<Text>Aeronave supersónica:Aeronaves supersónicas</Text>
 			<Gender>Female</Gender>
@@ -11930,6 +11915,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<Italian>Unità da lancio</Italian>
 		<German>
 			<Text>Wurfwaffeneinheiten:Wurfwaffeneinheiten:Wurfwaffeneinheiten:Wurfwaffeneinheiten</Text>
 			<Gender>Female</Gender>
@@ -11956,7 +11942,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>Unità cingolate</Italian>
+		<Italian>Unità cingolata</Italian>
 		<Spanish>
 			<Text>Tracción oruga:Unidades sobre tracción oruga</Text>
 			<Gender>Female</Gender>
@@ -11974,7 +11960,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>Commercio</Italian>
+		<Italian>Unità commerciale</Italian>
 		<Spanish>
 			<Text>Unidad comerciante:Unidades comerciantes</Text>
 			<Gender>Female</Gender>
@@ -15254,7 +15240,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>Navi in legno</Italian>
+		<Italian>Unità navale in legno</Italian>
 		<Spanish>
 			<Text>Navío de madera:Navíos de madera</Text>
 			<Gender>Male</Gender>
@@ -15276,7 +15262,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>Unità di lavoratori</Italian>
+		<Italian>Unità lavoratore</Italian>
 		<Spanish>
 			<Text>Trabajador:Trabajadores</Text>
 			<Gender>Male</Gender>
@@ -15293,6 +15279,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<Italian>Unità nave spaziale wormhole</Italian>
 		<Spanish>
 			<Text>Nave espacial para agujeros de gusano:Naves espaciales para agujeros de gusano</Text>
 			<Gender>Female</Gender>

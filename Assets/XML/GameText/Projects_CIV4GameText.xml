@@ -4,7 +4,7 @@
 		<Tag>TXT_KEY_PROJECTHELP_DISTANCE_MAINT_MOD</Tag>
 		<English>[ICON_BULLET]%D1_Mod%% Maintenance Costs from Distance to Palace</English>
 		<French>[ICON_BULLET]%D1_Mod%% de coûts d'entretien lié à la distance du Palais</French>
-		<Italian>[ICON_BULLET]%D1_Mod%% costi di manutenzione derivanti dalla distanza dal palazzo</Italian>
+		<Italian>[ICON_BULLET]%D1_Mod%% costi di manutenzione a causa della distanza dal palazzo</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod%% al coste de mantenimiento por distancia con la capital</Spanish>
 		<Polish>[ICON_BULLET]%D1_Mod%% do kosztów utrzymania za odległość od pałacu</Polish>
 		<Russian>[ICON_BULLET]%D1_Mod%% çàòðàòû íà îáñëóæèâàíèå çà ðàññòîÿíèÿ äî äâîðöà</Russian>
@@ -13,7 +13,7 @@
 		<Tag>TXT_KEY_PROJECTHELP_ENABLES_NUKES</Tag>
 		<English>Enables Nuclear Weapons for the Player that builds this</English>
 		<French>Permet au joueur l'ayant construit d'obtenir des armes Nucléaires</French>
-		<Italian>Attiva le bombe atomiche per il giocatore che completa questo progetto</Italian>
+		<Italian>Abilita le bombe atomiche per il giocatore che completa questo progetto</Italian>
 		<Polish>Pozwala budować Broń Nuklearną graczowi który to wybudował.</Polish>
 		<Russian>[ICON_BULLET]Îòêðûâàåò âîçìîæíîñòü ïðèìåíåíèÿ ÿäåðíîãî îðóæèÿ (äëÿ âñåõ èãðîêîâ)</Russian>
 	</TEXT>
@@ -50,7 +50,7 @@
 		<Tag>TXT_KEY_PROJECTHELP_NUM_CITIES_MAINT_MOD</Tag>
 		<English>[ICON_BULLET]%D1_Mod%% Maintenance Costs from Number of Cities</English>
 		<French>[ICON_BULLET]%D1_Mod%% de coûts d'entretien lié au nombre de Villes</French>
-		<Italian>[ICON_BULLET]%D1_Mod%% costi di manutenzione dal numero di città</Italian>
+		<Italian>[ICON_BULLET]%D1_Mod%% costi di manutenzione a causa del numero di città</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod%% al coste de mantenimiento por número de ciudades</Spanish>
 		<Polish>[ICON_BULLET]%D1_Mod%% do kosztów utrzymania za ilość miast</Polish>
 		<Russian>[ICON_BULLET]%D1_Mod%% çàòðàòû íà îáñëóæèâàíèå îò ÷èñëà ãîðîäîâ</Russian>
@@ -128,11 +128,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Programma Apollo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Programma Apollo</Italian>
 		<Spanish>
 			<Text>Programa Apolo</Text>
 			<Gender>Male</Gender>
@@ -243,7 +239,7 @@
 		<English>International Monetary Fund</English>
 		<French>Fond Monétaire International</French>
 		<German>Internationaler Währungsfonds</German>
-		<Italian>Fondo Monetario Internazionale</Italian>
+		<Italian>Fondo monetario internazionale</Italian>
 		<Spanish>
 			<Text>Fondo Monetario Internacional</Text>
 			<Gender>Male</Gender>
@@ -267,7 +263,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Internationale Raumstation</German>
-		<Italian>Stazione Spaziale Internazionale</Italian>
+		<Italian>Stazione spaziale internazionale</Italian>
 		<Spanish>
 			<Text>Estación Espacial Internacional</Text>
 			<Gender>Female</Gender>
@@ -310,7 +306,7 @@
 			<Gender>Female:Female:Female:Female</Gender>
 			<Plural>0:0:0:0</Plural>
 		</German>
-		<Italian>Difesa anti-missile</Italian>
+		<Italian>Difesa missilistica aria-aria</Italian>
 		<Spanish>
 			<Text>Defensas antimisiles</Text>
 			<Gender>Female</Gender>
@@ -353,7 +349,7 @@
 			<Gender>Female:Female:Female:Female</Gender>
 			<Plural>0:0:0:0</Plural>
 		</German>
-		<Italian>Cannone elettromagnetico anti-missile</Italian>
+		<Italian>Cannone a rotaia antimissile</Italian>
 		<Spanish>
 			<Text>Campo magnético antimisiles</Text>
 			<Gender>Male</Gender>
@@ -375,11 +371,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>SDI</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Strategic defence initiative</Italian>
 		<Spanish>
 			<Text>SDI</Text>
 			<Gender>Male</Gender>
@@ -409,11 +401,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Scafi dell'astronave</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Scafo per astronavi</Italian>
 		<Spanish>
 			<Text>Revestimiento para naves espaciales</Text>
 			<Gender>Male</Gender>
@@ -444,11 +432,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Abitacolo dell'astronave</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Cabina di pilotaggio per astronavi</Italian>
 		<Spanish>
 			<Text>Cabina para naves espaciales</Text>
 			<Gender>Female</Gender>
@@ -479,11 +463,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Modulo d'attracco dell'astronave</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Modulo d'attracco per astronavi</Italian>
 		<Spanish>
 			<Text>Muelle de acoplamiento para naves espaciales</Text>
 			<Gender>Male</Gender>
@@ -514,11 +494,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Motore dell'astronave</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Motore per astronavi</Italian>
 		<Spanish>
 			<Text>Motor para naves espaciales</Text>
 			<Gender>Male</Gender>
@@ -549,11 +525,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Sistema di supporto vitale dell'astronave</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Sistema di supporto vitale per astronavi</Italian>
 		<Spanish>
 			<Text>Soporte vital para naves espaciales</Text>
 			<Gender>Male</Gender>
@@ -584,11 +556,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Camera di stasi dell'astronave</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Camera di stasi per astronavi</Italian>
 		<Spanish>
 			<Text>Cámara criogénica para naves espaciales</Text>
 			<Gender>Female</Gender>
@@ -618,11 +586,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Propulsori dell'astronave</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Propulsori per astronavi</Italian>
 		<Spanish>
 			<Text>Propulsores para naves espaciales</Text>
 			<Gender>Male</Gender>
@@ -653,11 +617,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Internet</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Internet</Italian>
 		<Spanish>
 			<Text>Internet</Text>
 			<Gender>Female</Gender>

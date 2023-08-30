@@ -255,7 +255,7 @@
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HUMAN_MOD_NON_SPATIAL</Type>
-			<Description>TXT_KEY_BONUS_HUMAN_MOD_NON_SPATIAL</Description>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_NON_SPATIAL</Description>
 			<Civilopedia>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_NON_SPATIAL</ArtDefineTag>

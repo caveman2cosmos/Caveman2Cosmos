@@ -1539,14 +1539,13 @@ void CvPlot::nukeExplosion(int iRange, CvUnit* pNukeUnit)
 			}
 			{
 				std::vector<BuildingTypes> temp;
-				std::map<BuildingTypes, BuiltBuildingData> ledger = city->getBuildingLedger();
 
-				for (std::map<BuildingTypes, BuiltBuildingData>::const_iterator itr = ledger.begin(); itr != ledger.end(); ++itr)
+				foreach_(const BuildingTypes eType, city->getHasBuildings())
 				{
-					if (!GC.getBuildingInfo(itr->first).isNukeImmune()
+					if (!GC.getBuildingInfo(eType).isNukeImmune()
 					&& GC.getGame().getSorenRandNum(100, "Building Nuked") < GC.getDefineINT("NUKE_BUILDING_DESTRUCTION_PROB"))
 					{
-						temp.push_back(itr->first);
+						temp.push_back(eType);
 					}
 				}
 				foreach_(const BuildingTypes eType, temp)
@@ -10450,41 +10449,39 @@ void CvPlot::processArea(CvArea* pArea, int iChange)
 
 	CvCity* pCity = getPlotCity();
 
-	if (pCity != NULL)
+	if (pCity)
 	{
 		const PlayerTypes eOwner = pCity->getOwner();
 		pArea->changeCitiesPerPlayer(eOwner, iChange);
 		pArea->changePopulationPerPlayer(eOwner, (pCity->getPopulation() * iChange));
 
-		const int iNumBuildingInfos = GC.getNumBuildingInfos();
-
-		for (int iI = 0; iI < iNumBuildingInfos; ++iI)
+		foreach_(const BuildingTypes eTypeX, pCity->getHasBuildings())
 		{
-			const BuildingTypes eBuildingX = static_cast<BuildingTypes>(iI);
-			if (pCity->getNumActiveBuilding(eBuildingX) > 0)
+			if (pCity->isDisabledBuilding(eTypeX))
 			{
-				const CvBuildingInfo& building = GC.getBuildingInfo(eBuildingX);
-
-				pArea->changePower(eOwner, building.getPowerValue() * iChange);
-
-				if (!pCity->isReligiouslyLimitedBuilding(eBuildingX))
-				{
-					if (building.getAreaHealth() > 0)
-					{
-						pArea->changeBuildingGoodHealth(eOwner, building.getAreaHealth() * iChange * pCity->getNumActiveBuilding(eBuildingX));
-					}
-					else pArea->changeBuildingBadHealth(eOwner, building.getAreaHealth() * iChange * pCity->getNumActiveBuilding(eBuildingX));
-
-					pArea->changeBuildingHappiness(eOwner, building.getAreaHappiness() * iChange * pCity->getNumActiveBuilding(eBuildingX));
-					pArea->changeFreeSpecialist(eOwner, building.getAreaFreeSpecialist() * iChange * pCity->getNumActiveBuilding(eBuildingX));
-
-					for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
-					{
-						pArea->changeYieldRateModifier(eOwner, (YieldTypes)iJ, building.getAreaYieldModifier(iJ) * iChange);
-					}
-				}
-				pArea->changeBorderObstacleCount(pCity->getTeam(), building.isAreaBorderObstacle() ? iChange * pCity->getNumActiveBuilding(eBuildingX) : 0);
+				continue;
 			}
+			const CvBuildingInfo& building = GC.getBuildingInfo(eTypeX);
+
+			pArea->changePower(eOwner, building.getPowerValue() * iChange);
+
+			if (!pCity->isReligiouslyLimitedBuilding(eTypeX))
+			{
+				if (building.getAreaHealth() > 0)
+				{
+					pArea->changeBuildingGoodHealth(eOwner, building.getAreaHealth() * iChange);
+				}
+				else pArea->changeBuildingBadHealth(eOwner, building.getAreaHealth() * iChange);
+
+				pArea->changeBuildingHappiness(eOwner, building.getAreaHappiness() * iChange);
+				pArea->changeFreeSpecialist(eOwner, building.getAreaFreeSpecialist() * iChange);
+
+				for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
+				{
+					pArea->changeYieldRateModifier(eOwner, (YieldTypes)iJ, building.getAreaYieldModifier(iJ) * iChange);
+				}
+			}
+			pArea->changeBorderObstacleCount(pCity->getTeam(), iChange * building.isAreaBorderObstacle());
 		}
 
 		for (int iI = 0; iI < NUM_UNITAI_TYPES; ++iI)

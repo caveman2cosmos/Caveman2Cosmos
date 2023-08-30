@@ -32,13 +32,14 @@
 	<TEXT>
 		<Tag>CHANGED_TXT_KEY_MAIN_MENU_WARLORS</Tag>
 		<English>Space maps</English>
+		<Italian>Mappe dello spazio</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_BUDDY_LIST_PLAYING_LOC</Tag>
 		<English>Playing Game: "%s1_GameName"</English>
 		<French>En cours de partie : "%s1_GameName"</French>
 		<German>Spielt: "%s1_GameName"</German>
-		<Italian>Nella partita: "%s1_GameName"</Italian>
+		<Italian>Partita in corso: "%s1_GameName"</Italian>
 		<Spanish>Jugando a la partida: "%s1_GameName"</Spanish>
 	</TEXT>
 		<TEXT>
@@ -46,7 +47,7 @@
 		<English>In Staging Room: "%s1_GameName"</English>
 		<French>Dans le salon : "%s1_GameName"</French>
 		<German>Im Staging Room: "%s1_GameName"</German>
-		<Italian>Nella stanza d'allestimento: "%s1_GameName"</Italian>
+		<Italian>Nella stanza di comunicazione: "%s1_GameName"</Italian>
 		<Spanish>En la sala de comunicaciones: "%s1_GameName"</Spanish>
 	</TEXT>
 	<TEXT>
@@ -78,7 +79,7 @@
 		<English>BUDDY REQUEST</English>
 		<French>REQUETE D'AMI</French>
 		<German>FREUNDESANFRAGE</German>
-		<Italian>RICHIESTA AMICIZIA</Italian>
+		<Italian>RICHIESTA D'AMICIZIA</Italian>
 		<Spanish>SOLICITUD DE AMIGO</Spanish>
 	</TEXT>
 	<TEXT>
@@ -94,7 +95,7 @@
 		<English>Buddy Request</English>
 		<French>Requête d'ami</French>
 		<German>Freundesanfrage</German>
-		<Italian>Richiesta amicizia</Italian>
+		<Italian>Richiesta d'amicizia</Italian>
 		<Spanish>Solicitud de amigo</Spanish>
 	</TEXT>
 	<TEXT>
@@ -118,7 +119,7 @@
 		<English>Once you add a person to your buddy list, you can send them direct messages.</English>
 		<French>Si vous ajoutez un joueur à votre liste d'amis, vous pourrez lui envoyer directement des messages.</French>
 		<German>Nach dem Hinzufügen einer Person zu Ihrer Freundesliste können Sie sofort Nachrichten an sie versenden.</German>
-		<Italian>Quando aggiungi una persona alla lista amici, puoi inviare messaggi personali diretti.</Italian>
+		<Italian>Quando aggiungi una persona alla lista amici, puoi inviargli messaggi personali diretti.</Italian>
 		<Spanish>Cuando agregas a alguien a la lista de amigos, puedes enviarle mensajes directos.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -126,7 +127,7 @@
 		<English>ADD NEW BUDDY</English>
 		<French>AJOUTER NOUVEL AMI</French>
 		<German>NEUEN FREUND HINZUFÜGEN</German>
-		<Italian>AGGIUNGI NUOVO AMICO</Italian>
+		<Italian>AGGIUNGI UN NUOVO AMICO</Italian>
 		<Spanish>AGREGAR NUEVO AMIGO</Spanish>
 	</TEXT>
 	<TEXT>
@@ -142,7 +143,7 @@
 		<English>BUDDY REQUEST</English>
 		<French>REQUETE D'AMI</French>
 		<German>FREUNDESANFRAGE</German>
-		<Italian>RICHIESTA AMICIZIA</Italian>
+		<Italian>RICHIESTA D'AMICIZIA</Italian>
 		<Spanish>SOLICITUD DE AMIGO</Spanish>
 	</TEXT>
 	<TEXT>
@@ -158,7 +159,7 @@
 		<English>To directly chat with a member, they must first be added to your buddy list. Do you want to add %s1_Name as a buddy now?</English>
 		<French>Pour discuter directement avec un membre, vous devez d'abord l'ajouter à votre liste d'amis. Voulez-vous ajouter %s1_Name à votre liste d'amis ?</French>
 		<German>Wenn Sie direkt mit anderen Mitgliedern chatten wollen, müssen Sie diese in Ihre Freundesliste aufnehmen. Wollen Sie [COLOR_SELECTED_TEXT]%s1_Name[COLOR_REVERT] zu Ihrer Freundesliste hinzufügen?</German>
-		<Italian>Per chattare direttamente con qualcuno, prima devi aggiungerlo alla tua lista amici. Vuoi aggiungere %s1_Name come amico?</Italian>
+		<Italian>Per chattare direttamente con qualcuno, prima devi aggiungerlo alla tua lista amici. Vuoi aggiungere %s1_Name alla tua lista?</Italian>
 		<Spanish>Para charlar directamente con un miembro, primero debes agregarlo a tu lista de amigos. ¿Quieres agregar a %s1_Name como amigo?</Spanish>
 	</TEXT>
 	<TEXT>
@@ -166,7 +167,7 @@
 		<English>Custom Start Base Points:</English>
 		<French>Points de base du démarrage avancé :</French>
 		<German>Basispunkte für Fortgeschrittenen Start:</German>
-		<Italian>Punti iniziali avvio avanzato:</Italian>
+		<Italian>Punti base per l'avvio avanzato:</Italian>
 		<Spanish>Puntos base del Inicio avanzado:</Spanish>
 	</TEXT>
 	<TEXT>
@@ -190,7 +191,7 @@
 		<English>Already a buddy</English>
 		<French>Déjà un de vos amis</French>
 		<German>Freund existiert bereits</German>
-		<Italian>È già un amico</Italian>
+		<Italian>È già presente nella lista amici</Italian>
 		<Spanish>Ya es amigo</Spanish>
 	</TEXT>
 	<TEXT>
@@ -206,7 +207,7 @@
 		<English>The Username you entered is not valid.</English>
 		<French>Le nom d'utilisateur spécifié est incorrect.</French>
 		<German>Der angegebene Benutzername ist ungültig.</German>
-		<Italian>La username inserita non è valido.</Italian>
+		<Italian>L'username inserito non è valido.</Italian>
 		<Spanish>El nombre de usuario introducido no es válido.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -214,7 +215,7 @@
 		<English>Username not found</English>
 		<French>Nom d'utilisateur introuvable</French>
 		<German>Benutzername nicht gefunden</German>
-		<Italian>Username non trovata</Italian>
+		<Italian>Username non trovato</Italian>
 		<Spanish>No se ha encontrado nombre de usuario</Spanish>
 	</TEXT>
 	<TEXT>
@@ -222,7 +223,7 @@
 		<English>The password is incorrect for the provided E-Mail address.</English>
 		<French>Le mot de passe ne correspond pas à l'adresse e-mail fournie.</French>
 		<German>Das Passwort für die angegebene E-Mail-Adresse ist nicht korrekt.</German>
-		<Italian>La password per l'indirizzo e-mail fornito non è valida.</Italian>
+		<Italian>La password per l'indirizzo e-mail fornito è incorretta.</Italian>
 		<Spanish>La contraseña para la dirección de e-mail proporcionada no es correcta.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -230,7 +231,7 @@
 		<English>Bad Password</English>
 		<French>Mot de passe incorrect</French>
 		<German>Falsches Passwort</German>
-		<Italian>Password non valida</Italian>
+		<Italian>Password incorretta</Italian>
 		<Spanish>Contraseña errónea</Spanish>
 	</TEXT>
 	<TEXT>
@@ -278,7 +279,7 @@
 		<English>Multiple matching profiles were found. Please refine your search criteria.</English>
 		<French>Plusieurs profils correspondants ont été trouvés. Affinez vos critères de recherche.</French>
 		<German>Es wurden mehrere übereinstimmende Profile gefunden. Geben Sie bitte weitere Suchkriterien an.</German>
-		<Italian>Trovati più risultati. Modifica il tuo criterio di ricerca.</Italian>
+		<Italian>Trovati multipli profili corrispondenti. Affina il tuo criterio di ricerca.</Italian>
 		<Spanish>Se han encontrado varios perfiles que coinciden. Hay que reducir los criterios de búsqueda.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -286,7 +287,7 @@
 		<English>Multiple matches found</English>
 		<French>Plusieurs amis ont été trouvés</French>
 		<German>Mehrfache Übereinstimmungen gefunden</German>
-		<Italian>Trovati più risultati</Italian>
+		<Italian>Trovate corrispondenze multiple</Italian>
 		<Spanish>Halladas varias coincidencias</Spanish>
 	</TEXT>
 	<TEXT>
@@ -342,7 +343,7 @@
 		<English>Offline</English>
 		<French>Hors ligne</French>
 		<German>Offline</German>
-		<Italian>Non connesso</Italian>
+		<Italian>Offline</Italian>
 		<Spanish>Desconectado</Spanish>
 	</TEXT>
 	<TEXT>
@@ -358,7 +359,7 @@
 		<English>Staging</English>
 		<French>Dans le salon</French>
 		<German>Staging</German>
-		<Italian>In allestimento</Italian>
+		<Italian>In sala d'attesa</Italian>
 		<Spanish>En comunicaciones</Spanish>
 	</TEXT>
 	<TEXT>
@@ -374,7 +375,7 @@
 		<English>The buddy request could not be sent.</English>
 		<French>L'envoi de la requête d'ami est impossible.</French>
 		<German>Die Freundesanfrage konnte nicht gesendet werden.</German>
-		<Italian>La richiesta amico non è stata inviata.</Italian>
+		<Italian>La richiesta d'amicizia non è stata inviata.</Italian>
 		<Spanish>No se ha podido enviar la solicitud de amigo.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -382,7 +383,7 @@
 		<English>Buddy request failed</English>
 		<French>Echec de la requête d'ami</French>
 		<German>Freundesanfrage fehlgeschlagen</German>
-		<Italian>Richiesta amico fallita</Italian>
+		<Italian>Richiesta d'amicizia fallita</Italian>
 		<Spanish>Fallo en la solicitud de amigo</Spanish>
 	</TEXT>
 	<TEXT>
@@ -414,7 +415,7 @@
 		<English>This Civ has already been claimed.</English>
 		<French>Cette civilisation a déjà été choisie.</French>
 		<German>Diese Zivilisation ist bereits vergeben.</German>
-		<Italian>Questa civiltà è già stata assegnata.</Italian>
+		<Italian>Questa civiltà è già stata scelta.</Italian>
 		<Spanish>Alguien ha escogido ya esta civilización.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -606,7 +607,7 @@
 		<English>Contacting Established Peer "%s1_Name"</English>
 		<French>Contact avec le peer "%s1_Name"</French>
 		<German>Verbindungsaufbau mit etabliertem Peer "%s1_Name"</German>
-		<Italian>Connessione via peer con "%s1_Name"</Italian>
+		<Italian>Contattando il peer "%s1_Name"</Italian>
 		<Spanish>Contactando con el interlocutor establecido "%s1_Name"</Spanish>
 	</TEXT>
 	<TEXT>
@@ -638,7 +639,7 @@
 		<English>%s1_Name has been kicked from the game.</English>
 		<French>%s1_Name a été expulsé(e) de la partie.</French>
 		<German>%s1_Name wurde aus dem Spiel geworfen.</German>
-		<Italian>%s1_Name è stato cacciato dalla partita.</Italian>
+		<Italian>%s1_Name è stato espulso dalla partita.</Italian>
 		<Spanish>%s1_Name ha sido expulsado de la partida.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -670,7 +671,7 @@
 		<English>Saving game and removing %s1_Names</English>
 		<French>Sauvegarde et suppression de %s1_Names</French>
 		<German>Spiel wird gespeichert und %s1_Names entfernt</German>
-		<Italian>Salvataggio della partita e rimozione di %s1_Names</Italian>
+		<Italian>Salvataggio della partita e espulsione di %s1_Names</Italian>
 		<Spanish>Guardando partida y eliminando a %s1_Names.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -686,7 +687,7 @@
 		<English>CUSTOM GAME</English>
 		<French>PARTIE PERSONNALISEE</French>
 		<German>EIGENES SPIEL</German>
-		<Italian>PARTITA PERSONALIZZATA</Italian>
+		<Italian>PERSONALIZZA PARTITA</Italian>
 		<Spanish>PERSONALIZAR PARTIDA</Spanish>
 	</TEXT>
 	<TEXT>
@@ -694,7 +695,7 @@
 		<English>My Game</English>
 		<French>Ma partie</French>
 		<German>Mein Spiel</German>
-		<Italian>Mia partita</Italian>
+		<Italian>C2C Salvataggio standard</Italian>
 		<Spanish>Mi partida</Spanish>
 	</TEXT>
 	<TEXT>
@@ -766,7 +767,7 @@
 		<English>and %s1_Name</English>
 		<French>et %s1_Name</French>
 		<German>und %s1_Name</German>
-		<Italian>e %s1_Name</Italian>
+		<Italian>e %s1_NamePROVA30</Italian>
 		<Spanish>y %s1_Name</Spanish>
 	</TEXT>
 	<TEXT>
@@ -774,7 +775,7 @@
 		<English>, and %s1_Name</English>
 		<French>, et %s1_Name</French>
 		<German> und %s1_Name</German>
-		<Italian>, e %s1_Name</Italian>
+		<Italian>, e %s1_NamePROVA31</Italian>
 		<Spanish>, %s1_Name</Spanish>
 	</TEXT>
 	<TEXT>
@@ -798,7 +799,7 @@
 		<English>We are waiting for %s1_Names to reconnect to the game. If you would like to stop waiting, please vote on how to proceed.</English>
 		<French>Nous attendons que %s1_Names se reconnecte à la partie. Si vous voulez mettre fin à l'attente, demandez un vote sur la poursuite des opérations.</French>
 		<German>Warten auf erneute Spielverbindung von %s1_Names. Wählen Sie, wie Sie fortfahren wollen, wenn Sie nicht länger warten wollen.</German>
-		<Italian>Stiamo aspettando che %s1_Names si riconnettano alla partita. Se vuoi smettere di aspettare, vota su come procedere.</Italian>
+		<Italian>Stiamo aspettando che %s1_Names si riconnetta alla partita. Se vuoi smettere di aspettare, vota su come procedere.</Italian>
 		<Spanish>Esperando que se reanude la conexión a la partida de %s1_Names. Si no quieres seguir esperando, vota acerca de cómo proceder.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -822,7 +823,7 @@
 		<English>QUIT</English>
 		<French>QUITTER</French>
 		<German>ENDE</German>
-		<Italian>ELIMINA</Italian>
+		<Italian>ESCI</Italian>
 		<Spanish>SALIR</Spanish>
 	</TEXT>
 	<TEXT>
@@ -830,7 +831,7 @@
 		<English>The vote was tied.</English>
 		<French>Egalité des votes.</French>
 		<German>Das Abstimmungsergebnis war unentschieden.</German>
-		<Italian>La votazione è patta.</Italian>
+		<Italian>La votazione è pari.</Italian>
 		<Spanish>La votación ha acabado en empate.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -846,7 +847,7 @@
 		<English>(Undecided)</English>
 		<French>(non décidé)</French>
 		<German>(Unentschlossen)</German>
-		<Italian>(Indeciso)</Italian>
+		<Italian>Indeciso</Italian>
 		<Spanish>(Indeciso)</Spanish>
 	</TEXT>
 	<TEXT>
@@ -902,7 +903,7 @@
 		<English>Email required</English>
 		<French>E-mail requis</French>
 		<German>E-Mail-Adresse erforderlich</German>
-		<Italian>E-mail necessaria</Italian>
+		<Italian>E-mail richiesta</Italian>
 		<Spanish>Se requiere e-mail</Spanish>
 	</TEXT>
 	<TEXT>
@@ -966,7 +967,7 @@
 		<English>Enter your email address, desired user name, and password to create a new GameSpy account.</English>
 		<French>Saisissez votre adresse e-mail, votre nom d'utilisateur et votre mot de passe pour cr&#233;er un nouveau compte GameSpy.</French>
 		<German>Geben Sie zum Anlegen eines neuen GameSpy-Accounts Ihre E-Mail-Adresse, den gew&#252;nschten Benutzernamen und ein Kennwort ein.</German>
-		<Italian>Inserisci il tuo indirizzo e-mail, lo username desiderato e la password per creare un nuovo account di GameSpy.</Italian>
+		<Italian>Inserisci il tuo indirizzo e-mail, l'username desiderato e la password per creare un nuovo account di GameSpy.</Italian>
 		<Spanish>Introduce tu direcci&#243;n de e-mail, el nombre de usuario que desees y la contrase&#241;a para crear una nueva cuenta de GameSpy.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1006,7 +1007,7 @@
 		<English>Enter your existing GameSpy ID and password to login.</English>
 		<French>Saisissez votre identifiant et votre mot de passe GameSpy pour vous connecter.</French>
 		<German>Geben Sie Ihren vorhandenen GameSpy-Benutzernamen und Ihr Kennwort ein, um sich einzuloggen.</German>
-		<Italian>Inserisci il tuo GameSpy ID esistente e la password per effettuare il login.</Italian>
+		<Italian>Inserisci il tuo GameSpy ID e la password per effettuare il login.</Italian>
 		<Spanish>Introduce tu ID de GameSpy y tu contrase&#241;a para iniciar sesi&#243;n.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1062,7 +1063,7 @@
 		<English>Brings up detailed information about your game's world.</English>
 		<French>Informations détaillées sur le monde du jeu.</French>
 		<German>Zeigt detaillierte Informationen über Ihre Spielewelt.</German>
-		<Italian>Informazioni dettagliate sul mondo della partita.</Italian>
+		<Italian>[NEWLINE]Informazioni dettagliate sul mondo di gioco.</Italian>
 		<Spanish>Hace que aparezca información detallada sobre el mundo de la partida.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1094,7 +1095,7 @@
 		<English>Enter a password if you'd like to protect your game.[NEWLINE]Leave the password blank to waive protection.</English>
 		<French>Saisissez un mot de passe pour protéger votre partie.[NEWLINE]Ne saisissez aucun mot de passe si vous ne souhaitez aucune protection.</French>
 		<German>Geben Sie ein Kennwort ein, um Ihr Spiel vor unbefugtem Zugriff zu schützen.[NEWLINE]Oder lassen Sie die Kennworteingabe leer, wenn Sie kein Kennwort nutzen wollen.</German>
-		<Italian>Inserisci una password se vuoi proteggere la tua partita.[NEWLINE]Lascia lo spazio bianco per evitare protezioni.</Italian>
+		<Italian>Inserisci una password se vuoi proteggere la tua partita.[NEWLINE]Lascia la password in bianco per non avere protezioni.</Italian>
 		<Spanish>Introduce una contraseña si deseas proteger la partida.[NEWLINE]Déjala en blanco para descartar la protección.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1134,7 +1135,7 @@
 		<English>Finishing</English>
 		<French>Terminé</French>
 		<German>Fertig</German>
-		<Italian>Fatto</Italian>
+		<Italian>Caricamento completato</Italian>
 		<Spanish>Finalizado</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1142,7 +1143,7 @@
 		<English>Init Graphics</English>
 		<French>Initialisation des graphismes</French>
 		<German>Grafiken initialisieren</German>
-		<Italian>Iniz. grafica</Italian>
+		<Italian>Caricamento in corso...</Italian>
 		<Spanish>Inic. gráficos</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1150,7 +1151,7 @@
 		<English>Initializing</English>
 		<French>Initialisation</French>
 		<German>Wird initialisiert</German>
-		<Italian>Inizializzazione</Italian>
+		<Italian>Caricamento in corso...</Italian>
 		<Spanish>Iniciando</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1190,7 +1191,7 @@
 		<English>Setup Interface</English>
 		<French>Configuration de l'interface</French>
 		<German>Interface-Setup</German>
-		<Italian>Impostazione interfaccia</Italian>
+		<Italian>Impostazioni interfaccia</Italian>
 		<Spanish>Config. interfaz</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1198,7 +1199,7 @@
 		<English>Setup Map</English>
 		<French>Configuration de la carte</French>
 		<German>Karten-Setup</German>
-		<Italian>Impostazione mappa</Italian>
+		<Italian>Impostazioni mappa</Italian>
 		<Spanish>Config. mapa</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1206,7 +1207,7 @@
 		<English>Setup Players</English>
 		<French>Configuration des joueurs</French>
 		<German>Spieler-Setup</German>
-		<Italian>Impostazione giocatori</Italian>
+		<Italian>Impostazioni giocatori</Italian>
 		<Spanish>Config. jugadores</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1222,11 +1223,13 @@
 		<English>You have selected an unusable voice capture device. Voice capture disabled.
 		This message usually appears when game is freshly installed, or when INI file was corrupted or deleted.
 		To disable this message: Go to C:\Users\"your username"\Documents\My Games\Beyond the Sword, open CivilizationIV.ini, and change "enablevoice = 1" to "enablevoice = 0"</English>
+		<Italian>Hai selezionato un dispositivo di acquisizione vocale inutilizzabile. Acquisizione vocale disattivata. Questo messaggio di solito appare quando il gioco è stato appena installato o quando il file INI è stato danneggiato o cancellato. Per disabilitare questo messaggio: vai a C:\Users\"your username"\Documents\My Games\Beyond the Sword, apri CivilizationIV.ini e cambia "enablevoice = 1" in "enablevoice = 0"</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INVALID_CAPTURE_TITLE</Tag>
 		<English>Invalid Device</English>
 		<German>Unzulässiges Gerät</German>
+		<Italian>Dispositivo non valido</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INVALID_LOGIN_DESC</Tag>
@@ -1248,11 +1251,13 @@
 		<Tag>TXT_KEY_INVALID_PLAYBACK_DESC</Tag>
 		<English>You have selected an unusable voice playback device. Voice playback disabled.</English>
 		<German>Es wurde ein ungeeignetes Gerät zur Sprachwiedergabe ausgewählt. Die Sprachwiedergabe wurde deaktiviert.</German>
+		<Italian>Hai selezionato un dispositivo di riproduzione vocale inutilizzabile. Riproduzione vocale disattivata.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INVALID_PLAYBACK_TITLE</Tag>
 		<English>Invalid Device</English>
 		<German>Unzulässiges Gerät</German>
+		<Italian>Dispositivo non valido</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_JOIN_FAILURE_DESC</Tag>
@@ -1283,7 +1288,7 @@
 		<English>PASSWORD REQUIRED</English>
 		<French>MOT DE PASSE REQUIS</French>
 		<German>KENNWORTEINGABE ERFORDERLICH</German>
-		<Italian>PASSWORD NECESSARIA</Italian>
+		<Italian>PASSWORD RICHIESTA</Italian>
 		<Spanish>SE REQUIERE CONTRASEÑA</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1347,7 +1352,7 @@
 		<English>The save file you have selected is protected to ensure that the assets in your mod folder have not been changed.</English>
 		<French>Le fichier de sauvegarde sélectionné est protégé afin que les données de votre dossier Mod ne soient pas modifiées.</French>
 		<German>Der von Ihnen gewählte Spielstand ist schreibgeschützt, um sicherzustellen, dass die Daten in Ihrem Mod-Verzeichnis nicht verändert wurden.</German>
-		<Italian>Il file di salvataggio selezionato è protetto, in modo da assicurarsi che la cartella dei mod non venga modificata.</Italian>
+		<Italian>Il file di salvataggio selezionato è protetto, in modo da assicurarsi che gli assets nella cartella della mod non vengano modificati.</Italian>
 		<Spanish>El archivo guardado que has seleccionado está protegido para asegurar que no se modifiquen los parámetros de la carpeta mod.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1418,7 +1423,7 @@
 		<English>You must enter a Username.</English>
 		<French>Vous devez saisir un nom d'utilisateur.</French>
 		<German>Sie müssen einen Benutzernamen angeben.</German>
-		<Italian>Devi inserire uno username.</Italian>
+		<Italian>Devi inserire un'username.</Italian>
 		<Spanish>Hay que introducir un nombre de usuario.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1426,7 +1431,7 @@
 		<English>Username required</English>
 		<French>Nom d'utilisateur requis</French>
 		<German>Benutzername erforderlich</German>
-		<Italian>Username necessario</Italian>
+		<Italian>Username richiesto</Italian>
 		<Spanish>Se requiere nombre de usuario</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1474,7 +1479,7 @@
 		<English>Net Address required</English>
 		<French>Adresse Internet requise</French>
 		<German>Netzwerkadresse erforderlich</German>
-		<Italian>Indirizzo di rete necessario</Italian>
+		<Italian>Indirizzo di rete richiesto</Italian>
 		<Spanish>Se requiere dirección de red</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1525,7 +1530,7 @@
 		<English>Buddy List</English>
 		<French>Liste d'amis</French>
 		<German>Freundesliste</German>
-		<Italian>Lista amici</Italian>
+		<Italian>Lista d'amici</Italian>
 		<Spanish>Lista de amigos</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1549,7 +1554,7 @@
 		<English>Choose a game to load</English>
 		<French>Choisissez une partie à charger</French>
 		<German>Zu ladendes Spiel wählen!</German>
-		<Italian>Scegli una partita da caricare!</Italian>
+		<Italian>Scegli un file da caricare</Italian>
 		<Spanish>Elegir la partida a cargar</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1563,7 +1568,7 @@
 		<English>Please enter the required admin password for this game.</English>
 		<French>Saisissez le mot de passe administrateur requis pour cette partie.</French>
 		<German>Geben Sie bitte das Admin-Kennwort für dieses Spiel ein.</German>
-		<Italian>Inserire la password amministratore per partecipare a questa partita.</Italian>
+		<Italian>Inserire la password amministratore per questa partita.</Italian>
 		<Spanish>Introduce la contraseña del administrador necesaria para la partida.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1599,7 +1604,7 @@
 		<English>Connect</English>
 		<French>Connecter</French>
 		<German>Verbinden</German>
-		<Italian>Connetti</Italian>
+		<Italian>Connessione</Italian>
 		<Spanish>Conectar</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1621,13 +1626,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_CUSTOM_GAME</Tag>
 		<English>Full Game</English>
+		<Italian>Personalizza partita</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_CUSTOM_SCENARIO</Tag>
 		<English>Custom Scenario</English>
 		<French>Personnaliser scénario</French>
 		<German>Eigenes Szenario</German>
-		<Italian>Scenario personalizzato</Italian>
+		<Italian>Personalizza scenario</Italian>
 		<Spanish>Escenario personalizado</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1635,7 +1641,7 @@
 		<English>[default]</English>
 		<French>[par défaut]</French>
 		<German>[Standard]</German>
-		<Italian>[predefiniti]</Italian>
+		<Italian>[predefinito]</Italian>
 		<Spanish>[predeterm.]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1643,7 +1649,7 @@
 		<English>Password (if required)</English>
 		<French>Mot de passe (si nécessaire)</French>
 		<German>Kennwort (sofern erforderlich)</German>
-		<Italian>Password (se necessaria)</Italian>
+		<Italian>Password (se richiesta)</Italian>
 		<Spanish>Contraseña (si la hay)</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1651,7 +1657,7 @@
 		<English>Exit Game</English>
 		<French>Quitter le jeu</French>
 		<German>Spiel beenden</German>
-		<Italian>Esci dalla partita</Italian>
+		<Italian>Esci dal gioco</Italian>
 		<Spanish>Salir del juego</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1667,7 +1673,7 @@
 		<English>Transferring Files...</English>
 		<French>Transfert des fichiers...</French>
 		<German>Dateien werden übertragen ...</German>
-		<Italian>Trasferimento file...</Italian>
+		<Italian>Trasferimento dei file...</Italian>
 		<Spanish>Transfiriendo archivos...</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1699,7 +1705,7 @@
 		<English>Game name required</English>
 		<French>Nom de partie requis</French>
 		<German>Spielname erforderlich</German>
-		<Italian>Nome della partita necessario</Italian>
+		<Italian>Nome della partita richiesto</Italian>
 		<Spanish>Se requiere nombre de la partida</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1715,7 +1721,7 @@
 		<English>Go Back</English>
 		<French>Retour</French>
 		<German>Zurück</German>
-		<Italian>Torna indietro</Italian>
+		<Italian>Indietro</Italian>
 		<Spanish>Volver</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1723,7 +1729,7 @@
 		<English>View Hall of Fame</English>
 		<French>Voir le Panthéon</French>
 		<German>Ruhmeshalle betrachten</German>
-		<Italian>Categoria Dei Migliori</Italian>
+		<Italian>Guarda la Hall of fame</Italian>
 		<Spanish>Ver Salón de la Fama</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1754,7 +1760,7 @@
 		<Tag>TXT_KEY_MAIN_MENU_HOT_SEAT</Tag>
 		<English>Hot Seat</English>
 		<French>2 joueurs</French>
-		<Italian>Stesso computer</Italian>
+		<Italian>2 giocatori in locale</Italian>
 		<Spanish>De uno en uno</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1786,7 +1792,7 @@
 		<English>Failed to join game at </English>
 		<French>Impossible de rejoindre la partie :</French>
 		<German>Spielanschluss fehlgeschlagen bei</German>
-		<Italian>Impossibile partecipare alla partita</Italian>
+		<Italian>Impossibile unirsi alla partita a:</Italian>
 		<Spanish>Imposible unirse a la partida en </Spanish>
 	</TEXT>
 	<TEXT>
@@ -1794,7 +1800,7 @@
 		<English>Unable to join the game</English>
 		<French>Impossible de rejoindre la partie</French>
 		<German>Spielanschluss nicht möglich</German>
-		<Italian>Impossibile partecipare alla partita</Italian>
+		<Italian>Impossibile unirsi alla partita</Italian>
 		<Spanish>No es posible unirse a la partida</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1866,7 +1872,7 @@
 		<English>Folder</English>
 		<French>Répertoire</French>
 		<German>Ordner</German>
-		<Italian>Directory</Italian>
+		<Italian>Cartella</Italian>
 		<Spanish>Carpeta</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1938,7 +1944,7 @@
 		<English>Load a Mod</English>
 		<French>Charger un mod</French>
 		<German>Mod laden</German>
-		<Italian>Carica un mod</Italian>
+		<Italian>Carica una mod</Italian>
 		<Spanish>Cargar un mod</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1962,11 +1968,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Mappa</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Mappa</Italian>
 		<Spanish>
 			<Text>Mapa</Text>
 			<Gender>Male</Gender>
@@ -1978,7 +1980,7 @@
 		<English>Unable to find the chosen Map Script file.</English>
 		<French>Le fichier de script de la carte choisie est introuvable.</French>
 		<German>Die gewählte Kartenskriptdatei konnte nicht gefunden werden.</German>
-		<Italian>Impossibile trovare il file di script della mappa prescelto.</Italian>
+		<Italian>Impossibile trovare il file di script della mappa prescelta.</Italian>
 		<Spanish>No se ha podido encontrar el archivo escogido de secuencia de comandos del mapa.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1994,7 +1996,7 @@
 		<English>Mod Name:</English>
 		<French>Nom du mode :</French>
 		<German>Mod-Name:</German>
-		<Italian>Nome del mod</Italian>
+		<Italian>Nome della mod:</Italian>
 		<Spanish>Nombre del mod:</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2002,7 +2004,7 @@
 		<English>This scenario requires the "%s1_ModName" mod.[NEWLINE]The game must restart to load this mod.</English>
 		<French>Ce scénario requiert le mod "%s1_ModName".[NEWLINE]Vous devez relancer la partie pour charger ce mod.</French>
 		<German>Dieses Szenario erfordert das "%s1_ModName"-Mod.[NEWLINE]Das Spiel muss zum Laden dieses Mods neu gestartet werden.</German>
-		<Italian>Questo scenario necessita del mod "%s1_ModName".[NEWLINE]Per caricare questo mod il gioco deve essere riavviato.</Italian>
+		<Italian>Questo scenario necessita della mod "%s1_ModName".[NEWLINE]Per caricare questo mod il gioco deve essere riavviato.</Italian>
 		<Spanish>Este escenario requiere el mod "%s1_ModName".[NEWLINE]El juego debe reiniciarse para cargar este mod.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2042,7 +2044,7 @@
 		<English>Internet Games</English>
 		<French>Parties Internet</French>
 		<German>Internet-Spiele</German>
-		<Italian>Partite Internet</Italian>
+		<Italian>Partite via Internet</Italian>
 		<Spanish>Partidas en Internet</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2050,7 +2052,7 @@
 		<English>LAN Games</English>
 		<French>Parties réseau local</French>
 		<German>LAN-Spiele</German>
-		<Italian>Partite in LAN</Italian>
+		<Italian>Partite via LAN</Italian>
 		<Spanish>Partidas en red local</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2130,7 +2132,7 @@
 		<English>Duplicate Leader Names</English>
 		<French>Dupliquer noms de chefs</French>
 		<German>Doppelte Herrschernamen</German>
-		<Italian>Nomi leader doppi</Italian>
+		<Italian>Nomi leader duplicati</Italian>
 		<Spanish>Duplicar nombres de líderes</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2253,7 +2255,7 @@
 		<English> - Waiting for the PitBoss</English>
 		<French>En attente du Pitboss</French>
 		<German> - Warten auf den PitBoss</German>
-		<Italian>- In attesa del Pitboss</Italian>
+		<Italian> - In attesa del Pitboss</Italian>
 		<Spanish> - Esperando Pitboss</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2261,7 +2263,7 @@
 		<English>You must provide a player name.</English>
 		<French>Vous devez spécifier un nom de joueur.</French>
 		<German>Sie müssen einen Spielernamen angeben.</German>
-		<Italian>Devi inserire il nome del giocatore.</Italian>
+		<Italian>Devi specificare un nome di giocatore.</Italian>
 		<Spanish>Hay que facilitar el nombre del jugador.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2269,7 +2271,7 @@
 		<English>Player name required</English>
 		<French>Nom de joueur requis</French>
 		<German>Spielername erforderlich</German>
-		<Italian>Nome del giocatore necessario</Italian>
+		<Italian>Nome del giocatore richiesto</Italian>
 		<Spanish>Se requiere nombre del jugador</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2309,7 +2311,7 @@
 		<English>Simple Game</English>
 		<French>Jouer</French>
 		<German>Jetzt spielen!</German>
-		<Italian>Gioca ora!</Italian>
+		<Italian>Partita veloce</Italian>
 		<Spanish>Jugar ya</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2382,6 +2384,7 @@
 		<French>Scénario</French>
 		<German>Szenario</German>
 		<Spanish>Escenario</Spanish>
+		<Italian>Gioca uno scenario</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_SELECT_A</Tag>
@@ -2396,7 +2399,7 @@
 		<English>Select a Civilization</English>
 		<French>Choisissez une civilisation</French>
 		<German>Zivilisation wÄhlen</German>
-		<Italian>Seleziona una civiltÀ</Italian>
+		<Italian>SELEZIONA UNA CIVILTÀ</Italian>
 		<Spanish>Seleccionar una civilizaciÓn</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2476,7 +2479,7 @@
 		<English>An error has occurred with the staging room on the server.</English>
 		<French>Une erreur est survenue avec la salle de préparation sur le serveur.</French>
 		<German>Es ist ein Fehler im Staging Room auf dem Server aufgetreten.</German>
-		<Italian>Si è verificato un errore sul server della stanza d'allestimento.</Italian>
+		<Italian>Si è verificato un errore sul server della stanza di comunicazione.</Italian>
 		<Spanish>Se ha producido un error relacionado con la sala de comunicaciones del servidor.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2484,7 +2487,7 @@
 		<English>Staging Room Error</English>
 		<French>Erreur dans la salle de préparation</French>
 		<German>Staging Room-Fehler</German>
-		<Italian>Errore nella stanza d'allestimento</Italian>
+		<Italian>Errore nella stanza di comunicazione</Italian>
 		<Spanish>Error de la sala de comunicaciones</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2524,7 +2527,7 @@
 		<English>Staging Room</English>
 		<French>Salon</French>
 		<German>Staging Room</German>
-		<Italian>Stanza d'allestimento</Italian>
+		<Italian>Stanza di comunicazione</Italian>
 		<Spanish>Sala de comunicaciones</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2532,7 +2535,7 @@
 		<English>Unload Mod</English>
 		<French>Décharger un mod</French>
 		<German>Mod deaktivieren</German>
-		<Italian>Annulla Mod</Italian>
+		<Italian>Disattiva C2C</Italian>
 		<Spanish>Descargar mod</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2644,7 +2647,7 @@
 		<English>The username you entered is invalid.</English>
 		<French>Le nom d'utilisateur est incorrect.</French>
 		<German>Der angegebene Benutzername ist ungültig.</German>
-		<Italian>Lo username da te inserito non è valido.</Italian>
+		<Italian>L'username da te inserito non è valido.</Italian>
 		<Spanish>El nombre de usuario que has introducido no es válido.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2740,7 +2743,7 @@
 		<English>Add to Buddies</English>
 		<French>Ajouter à la liste d'amis</French>
 		<German>Zu Freundesliste hinzufügen</German>
-		<Italian>Aggiungi agli amici</Italian>
+		<Italian>Aggiungi alla lista amici</Italian>
 		<Spanish>Agregar a amigos</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2748,7 +2751,7 @@
 		<English>Ignore User</English>
 		<French>Ignorer l'utilisateur</French>
 		<German>Benutzer ignorieren</German>
-		<Italian>Ignora utente</Italian>
+		<Italian>Ignora l'utente</Italian>
 		<Spanish>Ignorar al usuario</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2756,7 +2759,7 @@
 		<English>Remove from Buddies</English>
 		<French>Supprimer de la liste d'amis</French>
 		<German>Aus Freundesliste entfernen</German>
-		<Italian>Elimina dagli amici</Italian>
+		<Italian>Elimina dalla lista amici</Italian>
 		<Spanish>Quitar de amigos</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2772,7 +2775,7 @@
 		<English>Stop Ignoring User</English>
 		<French>Cesser d'ignorer l'utilisateur</French>
 		<German>Benutzer nicht mehr ignorieren</German>
-		<Italian>Annulla ignora utente</Italian>
+		<Italian>Smetti di ignorare l'utente</Italian>
 		<Spanish>Dejar de ignorar al usuario</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2780,7 +2783,7 @@
 		<English>Using the MemorySaver option in your configuration does not allow device loss. Exiting program.</English>
 		<French>Le fait d'utiliser l'option MemorySaver dans votre configuration n'autorise aucune perte de performances graphiques. Programme en cours de fermeture.</French>
 		<German>Die Verwendung der MemorySaver-Option in Ihrer Konfiguration setzt exklusiven Zugriff auf die Grafikkarte voraus. Programm wird verlassen.</German>
-		<Italian>L'opzione di salvataggio della memoria video non permette il passaggio a un'altra applicazione che fa utilizzo della scheda video. Uscita dal programma in corso.</Italian>
+		<Italian>L'opzione di salvataggio della memoria video non permette aprire un'altra applicazione in secondo piano. Uscita dal programma in corso.</Italian>
 		<Spanish>Al usar la opción AhorroMemoria en tu configuración no se puede abrir otra aplicación en segundo plano. Saliendo.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2788,7 +2791,7 @@
 		<English>Civ Adjective:</English>
 		<French>Adjectif :</French>
 		<German>Ziv.-Adjektiv:</German>
-		<Italian>Aggettivo:</Italian>
+		<Italian>Aggettivo civiltà:</Italian>
 		<Spanish>Adjetivo:</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2796,7 +2799,7 @@
 		<English>Civ Description:</English>
 		<French>Desc. civilisation :</French>
 		<German>Ziv.-Beschreibung:</German>
-		<Italian>Descriz. civiltà:</Italian>
+		<Italian>Descrizione civiltà:</Italian>
 		<Spanish>Civilización:</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2812,7 +2815,7 @@
 		<English>Civ Password:</English>
 		<French>Mot de passe Civ :</French>
 		<German>Civ-Kennwort:</German>
-		<Italian>Password della civiltà:</Italian>
+		<Italian>Password civiltà:</Italian>
 		<Spanish>Contraseña de civilización:</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2820,7 +2823,7 @@
 		<English>Short Description:</English>
 		<French>Descript. rapide :</French>
 		<German>Kurzbeschreibung:</German>
-		<Italian>Br. descriz. civ.:</Italian>
+		<Italian>Descrizione breve:</Italian>
 		<Spanish>Descripción:</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2900,7 +2903,7 @@
 		<English>Size:</English>
 		<French>Taille :</French>
 		<German>Größe:</German>
-		<Italian>Dimensione:</Italian>
+		<Italian>Dimensioni:</Italian>
 		<Spanish>Tamaño:</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2916,7 +2919,7 @@
 		<English>Your Details:</English>
 		<French>Infos personnelles :</French>
 		<German>Euer Steckbrief:</German>
-		<Italian>I tuoi dettagli:</Italian>
+		<Italian>Dettagli:</Italian>
 		<Spanish>Detalles:</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2940,7 +2943,7 @@
 		<English>[SPACE]AM</English>
 		<French>[SPACE]AM</French>
 		<German>[SPACE]a.m.</German>
-		<Italian>[SPACE]AM</Italian>
+		<Italian>[SPACE]am</Italian>
 		<Spanish>[SPACE]AM</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2948,7 +2951,7 @@
 		<English>***** OUT OF SYNC! MY SYNC SEED = %d1_Sync : MY OPTIONS SEED = %d2_Options *****[NEWLINE]</English>
 		<French>***** MAUVAISE SYNCHRONISATION ! MA POSITION = %d1_Sync : MES OPTIONS = %d2_Options *****\n</French>
 		<German>***** NICHT SYNCHRON! MEIN RANDOM SEED = %d1_Num: MY OPTIONS SEED = %d2_Options *****[NEWLINE]</German>
-		<Italian>***** FUORI SINCRONIA! ESTRAZIONE CASUALE = %d1_Num: MY OPTIONS SEED = %d2_Options *****[NEWLINE]</Italian>
+		<Italian>***** FUORI SINCRONIA! MY SYNC SEED = %d1_Num: MY OPTIONS SEED = %d2_Options *****[NEWLINE]</Italian>
 		<Spanish>***** OUT OF SYNC! MY RANDOM SEED = %d1_Num: MY OPTIONS SEED = %d2_Options *****[NEWLINE]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2956,7 +2959,7 @@
 		<English>[SPACE]PM</English>
 		<French>[SPACE]PM</French>
 		<German>[SPACE]p.m.</German>
-		<Italian>[SPACE]PM</Italian>
+		<Italian>[SPACE]pm</Italian>
 		<Spanish>[SPACE]PM</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3012,7 +3015,7 @@
 		<English>Mod Folder: %s1_Modname</English>
 		<French>Répertoire mods : %s1_Modname</French>
 		<German>Mod-Verzeichnis: %s1_Modname</German>
-		<Italian>Cartella mod: %s1_Modname</Italian>
+		<Italian>Cartella della mod: %s1_Modname</Italian>
 		<Spanish>Carpeta del mod: %s1_Modname</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3020,7 +3023,7 @@
 		<English>The save file you have selected requires the following mod to be loaded:[NEWLINE][BOLD]%s1[\BOLD][NEWLINE]The application must restart, ok?</English>
 		<French>La sauvegardé sélectionnée nécessite le chargement du mod suivant : [NEWLINE][BOLD]%s1[\BOLD][NEWLINE] L'application doit être relancée. Confirmer ?</French>
 		<German>Für den von Ihnen gewählten Spielstand muss das folgende Mod geladen werden: [NEWLINE][BOLD]%s1[\BOLD][NEWLINE] Die Anwendung wird neu gestartet, okay? </German>
-		<Italian>Il salvataggio selezionato richiede il caricamento del seguente mod: [NEWLINE][BOLD]%s1[\BOLD][NEWLINE] Il gioco deve essere riavviato, continuare?</Italian>
+		<Italian>Il salvataggio selezionato richiede il caricamento della seguente mod: [NEWLINE][BOLD]%s1[\BOLD][NEWLINE] Il gioco deve essere riavviato, continuare?</Italian>
 		<Spanish>La partida guardada que has seleccionado requiere que se cargue el siguiente mod: [NEWLINE][BOLD]%s1[\BOLD][NEWLINE] La aplicación debe reiniciarse. ¿Aceptar? </Spanish>
 	</TEXT>
 	<TEXT>
@@ -3044,7 +3047,7 @@
 		<English>Offer trade</English>
 		<French>Proposer un échange</French>
 		<German>Handel anbieten</German>
-		<Italian>Offri commercio</Italian>
+		<Italian>Proponi uno scambio</Italian>
 		<Spanish>Ofrecer intercambio</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3060,7 +3063,7 @@
 		<English>Retract offer</English>
 		<French>Retirer l'offre</French>
 		<German>Angebot zurückziehen</German>
-		<Italian>Ritira offerta</Italian>
+		<Italian>Ritira l'offerta</Italian>
 		<Spanish>Retirar la oferta</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3123,7 +3126,7 @@
 		<English>The game has gone Out Of Sync.[NEWLINE]Please check OOS values (next to scores).[NEWLINE]The player with different values should reconnect in order to resync.</English>
 		<French>La partie n'est plus synchronisée.[NEWLINE]Veuillez vérifier vos valeurs hors synch. (à côté des scores).[NEWLINE]Le joueur ayant des valeurs différentes devrait se reconnecter pour resynchroniser la partie.</French>
 		<German>Das Spiel läuft nicht mehr synchron.[NEWLINE]Bitte überprüfen Sie die OOS-Werte (neben den Ergebnissen).[NEWLINE]Der Spieler mit anderen Werten sollte sich neu verbinden, um die Synchronität wiederherzustellen.</German>
-		<Italian>Il gioco non è in sincronia.[NEWLINE]Controlla i valori OOS (Out Of Synch) vicini ai punteggi.[NEWLINE]Il giocatore con i valori diversi dovrà riconnettersi per risincronizzarsi.</Italian>
+		<Italian>Il gioco non è sincronizzato.[NEWLINE]Controlla i valori OOS (Out Of Synch) vicini ai punteggi.[NEWLINE]Il giocatore con i valori diversi dovrà riconnettersi per risincronizzarsi.</Italian>
 		<Spanish>El juego se ha desincronizado.[NEWLINE]Consulta los valores OOS de falta de sincronización (junto a la puntuación).[NEWLINE]El jugador que tenga unos valores diferentes tendrá que volver a conectar para poder sincronizarse.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3146,7 +3149,7 @@
 		<English>Localized Output not found...</English>
 		<French>Données de sortie localisées non trouvées...</French>
 		<German>Kein lokalisierter Text vorhanden ...</German>
-		<Italian>Dati localizzati non trovati...</Italian>
+		<Italian>Uscita localizzati non trovata...</Italian>
 		<Spanish>No se ha encontrado salida localizada...</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3178,7 +3181,7 @@
 		<English>Password required</English>
 		<French>Mot de passe requis</French>
 		<German>Kennwort erforderlich</German>
-		<Italian>Password necessaria</Italian>
+		<Italian>Password richiesta</Italian>
 		<Spanish>Se requiere contraseña</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3202,7 +3205,7 @@
 		<English>An error occurred while trying to encrypt the patch data.</English>
 		<French>Une erreur s'est produite lors de la tentative d'encodage des données du patch.</French>
 		<German>Beim Versuch, die Patchdaten zu entschlüsseln, ist ein Fehler aufgetreten.</German>
-		<Italian>Si ì verificato un errore durante la criptazione dei dati dell'aggiornamento.</Italian>
+		<Italian>Si è verificato un errore durante la criptazione dei dati dell'aggiornamento.</Italian>
 		<Spanish>Se ha producido un error al intentar encriptar los datos del parche.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3226,7 +3229,7 @@
 		<English>An error was encountered while trying to write data to our disk.</English>
 		<French>Une erreur s'est produite lors de la tentative d'écriture de données sur notre disque.</French>
 		<German>Beim Versuch, Daten auf unsere Festplatte zu schreiben, ist ein Fehler aufgetreten.</German>
-		<Italian>Si è verificato un errore durante la scrittura dei dati su disco.</Italian>
+		<Italian>Si è verificato un errore durante la scrittura dei dati sul disco.</Italian>
 		<Spanish>Se ha producido un error al intentar escribir datos en el disco.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3234,7 +3237,7 @@
 		<English>The retrieval of the patch has been forbidden on this server.</English>
 		<French>La récupération du patch a été interdite sur ce serveur.</French>
 		<German>Auf diesem Server ist das Abrufen des Patchs nicht zugelassen.</German>
-		<Italian>Lo scaricamento dell'aggiornamento è stato vietato da questo server.</Italian>
+		<Italian>Lo scaricamento dell'aggiornamento è stato vietato su questo server.</Italian>
 		<Spanish>La recuperación del parche se ha prohibido en este servidor.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3266,7 +3269,7 @@
 		<English>Our computer could not handle the rate that the data was sent! Verify your network speed is correct in game options.</English>
 		<French>Notre ordinateur n'a pas pu tenir le rythme auquel les données ont été envoyées ! Vérifiez que votre vitesse réseau est correcte dans les options de jeu.</French>
 		<German>Unser Computer kam nicht mit der Datenübertragungsrate zurecht! Bitte die Netzwerkgeschwindigkeit in den Spieloptionen überprüfen.</German>
-		<Italian>Il nostro computer non potrebbe gestire la velocità di invio dei dati! Verifica la velocità di rete nelle opzioni del gioco.</Italian>
+		<Italian>Il computer non è riuscito a gestire la velocità a cui i dati sono stati inviati! Verifica la velocità di rete nelle opzioni del gioco.</Italian>
 		<Spanish>El ordenador no ha soportado la tasa a la que se enviaban los datos. Comprueba en las opciones de partida si la velocidad de red es correcta.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3282,7 +3285,7 @@
 		<English>Our request for the patch has been rejected by the server.</English>
 		<French>Notre demande de patch a été rejetée par le serveur.</French>
 		<German>Unsere Patchanfrage wurde vom Server abgelehnt.</German>
-		<Italian>La nostra richiesta dell'aggiornamento è stata respinta dal server.</Italian>
+		<Italian>La richiesta d'aggiornamento è stata respinta dal server.</Italian>
 		<Spanish>La solicitud del parche ha sido rechazada por el servidor.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3290,7 +3293,7 @@
 		<English>The server hosting the patch sent us a strange response.</English>
 		<French>Le serveur hébergeant ce patch nous a envoyé une étrange réponse.</French>
 		<German>Der Server, der den Patch anbietet, hat uns eine merkwürdige Antwort geschickt.</German>
-		<Italian>Il server host dell'aggiornamento ci ha inviato una risposta inattesa.</Italian>
+		<Italian>Il server host dell'aggiornamento ha inviato una risposta inattesa.</Italian>
 		<Spanish>El servidor que aloja el parche ha enviado una respuesta extraña.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3322,7 +3325,7 @@
 		<English>We are not authorized to access the patch.</English>
 		<French>Nous ne sommes pas autorisés à accéder au patch.</French>
 		<German>Wir haben keinen autorisierten Zugang zu diesem Patch.</German>
-		<Italian>Non siamo autorizzati ad accedere all'aggiornamento.</Italian>
+		<Italian>Autorizzazione assente per accedere all'aggiornamento.</Italian>
 		<Spanish>No se tiene autorización para acceder al parche.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3354,7 +3357,7 @@
 		<English>The patch failed to downloaded successfully.</English>
 		<French>Le téléchargement du patch a échoué.</French>
 		<German>Der Patch konnte nicht heruntergeladen werden.</German>
-		<Italian>Impossibile scaricare la patch.</Italian>
+		<Italian>La patch non è stata scaricata correttamente.</Italian>
 		<Spanish>El parche no se ha podido descargar con éxito.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3378,7 +3381,7 @@
 		<English>An update is available. Would you like to get it?</English>
 		<French>Une mise à jour est disponible. Voulez-vous la télécharger ?</French>
 		<German>Es ist ein Update verfügbar. Wollen Sie es herunterladen?</German>
-		<Italian>È disponibile una patch... vuoi scaricarla?</Italian>
+		<Italian>È disponibile una patch. Vuoi scaricarla?</Italian>
 		<Spanish>Hay disponible una actualización. ¿Quieres obtenerla?</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3402,7 +3405,7 @@
 		<English>Patch Download Complete</English>
 		<French>Chargement du patch terminé</French>
 		<German>Patch-Download abgeschlossen</German>
-		<Italian>Download patch completo</Italian>
+		<Italian>Download patch completato</Italian>
 		<Spanish>Descarga del parche completa</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3450,7 +3453,7 @@
 		<English>REQUIRED PATCH</English>
 		<French>PATCH REQUIS</French>
 		<German>PATCH ERFORDERLICH</German>
-		<Italian>PATCH NECESSARIA</Italian>
+		<Italian>PATCH RICHIESTA</Italian>
 		<Spanish>SE REQUIERE PARCHE</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3506,7 +3509,7 @@
 		<English>When trading for a peace treaty, only one player may offer items to another player. Only gifts may be offered as payment for ending war, no trades can be made.</English>
 		<French>Lors de la négociation d'un traité de paix, seul l'un des joueurs peut offrir quelque chose à l'autre. Pour faire la paix, seuls les présents sont possibles, aucun échange ne peut être conclu.</French>
 		<German>Beim Aushandeln eines Friedensvertrags bietet der anfragende Spieler dem anderen Spieler eine Gegenleistung an. Es findet kein beidseitiger Handel statt und es können ausschließlich Schenkungen angeboten werden.</German>
-		<Italian>Quando tratti la pace, solo un giocatore può offrirla a un altro. Come pagamento per il termine di una guerra, sono accettati solamente dei doni e non sono permesse azioni commerciali.</Italian>
+		<Italian>Quando tratti la pace, solo un giocatore può offrire oggetti a un altro. Come pagamento per il termine di una guerra, sono accettati solamente dei doni e non sono permesse azioni commerciali.</Italian>
 		<Spanish>Al realizar un intercambio para alcanzar un tratado de paz, solo uno de los jugadores puede ofrecerle cosas al otro. Solo se pueden ofrecer regalos como pago para poner fin a la guerra, no se pueden realizar intercambios.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3632,14 +3635,14 @@
 		<English>Choose a Folder to Play Music From</English>
 		<French>Choisissez le répertoire de lecture de la musique</French>
 		<German>Gewünschten Musikordner wählen</German>
-		<Italian>Scegli la cartella contenente la musica desiderata</Italian>
+		<Italian>Scegli la cartella da cui leggere la musica desiderata</Italian>
 		<Spanish>Escoge una carpeta desde donde reproducir la música</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_QUEST_MESSAGE_LOG</Tag>
 		<English>Quests</English>
 		<French>Quêtes</French>
-		<Italian>Imprese</Italian>
+		<Italian>Missioni</Italian>
 		<Spanish>Misiones</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3663,6 +3666,7 @@
 		<English>Your machine is below recommended specifications. The graphic settings were altered to accomodate this, however, you may experience performance issues.
 		This message usually appears when game is freshly installed, or when INI file was corrupted or deleted.
 		To disable this message: Go to C:\Users\"your username"\Documents\My Games\Beyond the Sword, open CivilizationIV.ini, and change "HideMinSpecWarning = 0" to "HideMinSpecWarning = 1"</English>
+		<Italian>Il tuo computer è al di sotto delle specifiche consigliate. Le impostazioni grafiche sono state modificate per far fronte a ciò, tuttavia, potresti riscontrare problemi di prestazioni. Questo messaggio di solito appare quando il gioco è stato appena installato o quando il file INI è stato danneggiato o cancellato. Per disabilitare questo messaggio: vai a C:\Users\"nome utente"\Documents\My Games\Beyond the Sword, apri CivilizationIV.ini e modifica "HideMinSpecWarning = 0" in "HideMinSpecWarning = 1"</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REJECT_FULL_DESC</Tag>
@@ -3685,7 +3689,7 @@
 		<English>Our connection has been rejected because we have provided invalid identification data.</English>
 		<French>Notre connexion a été refusée. Données d'identification incorrectes.</French>
 		<German>Die Verbindungsabfrage wurde wegen ungültiger Identifikationsdaten abgewiesen.</German>
-		<Italian>La nostra connessione è stata rifiutata perché abbiamo fornito dati di identificazione non validi.</Italian>
+		<Italian>La connessione è stata rifiutata perché i dati di identificazione forniti non sono validi.</Italian>
 		<Spanish>La conexión ha sido rechazada porque se han facilitado unos datos de identificación no válidos.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3733,7 +3737,7 @@
 		<English>REMOVE EXISTING BUDDY</English>
 		<French>SUPPRIMER AMI EXISTANT</French>
 		<German>VORHANDENEN FREUND ENTFERNEN</German>
-		<Italian>ELIMINA AMICO ESISTENTE</Italian>
+		<Italian>ELIMINA UN AMICO ESISTENTE</Italian>
 		<Spanish>ELIMINAR AMIGO EXISTENTE</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3805,7 +3809,7 @@
 		<English>The buddy request has been sent.</English>
 		<French>La requête d'ami a été envoyée.</French>
 		<German>Die Freundesanfrage wurde gesendet.</German>
-		<Italian>La richiesta amico è stata inviata.</Italian>
+		<Italian>La richiesta d'amicizia è stata inviata.</Italian>
 		<Spanish>Se ha enviado la solicitud de amigo.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3813,7 +3817,7 @@
 		<English>Buddy request sent</English>
 		<French>Requête d'ami envoyée</French>
 		<German>Freundesanfrage gesendet</German>
-		<Italian>Richiesta amico inviata</Italian>
+		<Italian>Richiesta d'amicizia inviata</Italian>
 		<Spanish>Enviada solicitud de amigo</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3829,7 +3833,7 @@
 		<English>Password for SMTP Secure Password Authentication (if required)</English>
 		<French>Mot de passe pour l'authentification SMTP (si nécessaire)</French>
 		<German>Kennwort für SMTP-Kennwortauthentifizierung (sofern erforderlich)</German>
-		<Italian>Username per l'SMTP (se necessaria)</Italian>
+		<Italian>Password per l'SMTP (se necessaria)</Italian>
 		<Spanish>Contraseña para autenticación segura de SMTP (si es necesaria)</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3861,7 +3865,7 @@
 		<English>The network socket encountered an error and was closed. Disconnected.</English>
 		<French>Erreur du socket réseau. Fermeture et déconnexion.</French>
 		<German>Es ist ein Fehler im Netzwerk-Socket aufgetreten. Das Socket wurde geschlossen und die Verbindung getrennt.</German>
-		<Italian>Il socket di rete ha rilevato un errore ed è stato chiuso. Disconnesso.</Italian>
+		<Italian>Il socket di rete ha rilevato un errore ed è stato chiuso. Disconnessione effettuata.</Italian>
 		<Spanish>El socket de red ha encontrado un problema y se ha cerrado. Desconectado.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3901,7 +3905,7 @@
 		<English>STAGING ROOM</English>
 		<French>SALLE DE PREPARATION</French>
 		<German>LAN SETUP</German>
-		<Italian>STANZA D'ALLESTIMENTO</Italian>
+		<Italian>STANZA DI COMUNICAZIONE</Italian>
 		<Spanish>SALA DE COMUNICAC.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3909,7 +3913,7 @@
 		<English>Play Game</English>
 		<French>Arrêter diaporama</French>
 		<German>Bildershow anhalten</German>
-		<Italian>Blocca le immagini</Italian>
+		<Italian>Blocca immagini</Italian>
 		<Spanish>Saltar</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3941,11 +3945,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>tutto</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>tutto</Italian>
 		<Spanish>
 			<Text>todos:todas</Text>
 			<Gender>Male:Female</Gender>
@@ -3957,7 +3957,7 @@
 		<English>Buddy Request</English>
 		<French>Requête d'ami</French>
 		<German>Freund-Anfrage</German>
-		<Italian>Richiesta amico</Italian>
+		<Italian>Richiesta d'amicizia</Italian>
 		<Spanish>Solicitud de amigo</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3989,7 +3989,7 @@
 		<English>Game Resumed by %s1_PlyrName</English>
 		<French>Jeu relancé par %s1_PlyrName</French>
 		<German>%s1_PlyrName hat das Spiel fortgesetzt</German>
-		<Italian>Partita ripresa da %s1_PlyrName</Italian>
+		<Italian>Partita continuata da %s1_PlyrName</Italian>
 		<Spanish>Partida reanudada por %s1_PlyrName</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4005,11 +4005,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>squadra</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>squadra</Italian>
 		<Spanish>
 			<Text>equipo</Text>
 			<Gender>Male</Gender>
@@ -4029,11 +4025,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>tu</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>tu</Italian>
 		<Spanish>
 			<Text>tú:vosotros</Text>
 			<Gender>Male</Gender>
@@ -4045,7 +4037,7 @@
 		<English>Civilization IV's matchmaking room is not available at this time.</English>
 		<French>La salle de recherche de Civilization IV n'est pas accessible pour l'instant.</French>
 		<German>Der Civilization IV-Matchmaking-Raum ist zurzeit nicht verfügbar.</German>
-		<Italian>La stanza per l'organizzazione d'incontri non è disponibile in questo momento.</Italian>
+		<Italian>La stanza per la ricerca di giocatori non è disponibile in questo momento.</Italian>
 		<Spanish>La sala de búsqueda de jugadores no está disponible en este momento.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4061,7 +4053,7 @@
 		<English>Tradeable Items</English>
 		<French>Objets échangeables</French>
 		<German>Handelsgüter</German>
-		<Italian>Oggetti commerciabili</Italian>
+		<Italian>Elementi commerciabili</Italian>
 		<Spanish>Elementos intercambiables</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4077,11 +4069,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Tregua</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Cessate il fuoco</Italian>
 		<Spanish>
 			<Text>Alto el fuego</Text>
 			<Gender>Male</Gender>
@@ -4157,11 +4145,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Oro</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Oro</Italian>
 		<Spanish>
 			<Text>Oro</Text>
 			<Gender>Male</Gender>
@@ -4197,7 +4181,7 @@
 		<English>Game Turn Limit:</English>
 		<French>Limite tours de jeu :</French>
 		<German>Limit Spielrunden:</German>
-		<Italian>Limite turni della partita:</Italian>
+		<Italian>Limite di turni della partita:</Italian>
 		<Spanish>Límite de turnos de la partida:</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4221,7 +4205,7 @@
 		<English>'s Game</English>
 		<French>Partie de</French>
 		<German>s Spiel</German>
-		<Italian>- partita</Italian>
+		<Italian>Partita di </Italian>
 		<Spanish>, partida de</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4237,7 +4221,7 @@
 		<English>Version Warning!</English>
 		<French>Alerte version !</French>
 		<German>Versionswarnung!</German>
-		<Italian>Avviso sulla versione dei file!</Italian>
+		<Italian>Avviso sulla versione!</Italian>
 		<Spanish>Aviso de versión diferente</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4293,7 +4277,7 @@
 		<English>Synchronizing Game State</English>
 		<French>Synchronisation de la partie</French>
 		<German>Spielstatus wird synchronisiert</German>
-		<Italian>Sincronizzazione dello stato della partita</Italian>
+		<Italian>Sincronizzazione della partita</Italian>
 		<Spanish>Sincronizando estado de la partida</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4349,7 +4333,7 @@
 		<English>Bonuses</English>
 		<French>Bonus</French>
 		<German>Boni</German>
-		<Italian>Bonus</Italian>
+		<Italian>Risorse</Italian>
 		<Spanish>Bonificaciones</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4366,7 +4350,7 @@
 		<English>Change All Plots</English>
 		<French>Changer toutes les cases</French>
 		<German>Alle Geländefelder ändern</German>
-		<Italian>Cambia tutti i terreni</Italian>
+		<Italian>Cambia tutte le caselle</Italian>
 		<Spanish>Cambiar todas las casillas</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4382,7 +4366,7 @@
 		<English>Edit City Mode</English>
 		<French>Mode édition des villes</French>
 		<German>Stadtmodus bearbeiten</German>
-		<Italian>Modifica modalità città</Italian>
+		<Italian>Modalità modifica città</Italian>
 		<Spanish>Modo Editar ciudad</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4390,7 +4374,7 @@
 		<English>Edit Unit Mode</English>
 		<French>Mode édition des unités</French>
 		<German>Einheitenmodus bearbeiten</German>
-		<Italian>Modifica modalità unità</Italian>
+		<Italian>Modalità modifica unità</Italian>
 		<Spanish>Modo Editar unidad</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4533,7 +4517,7 @@
 		<English>Unreveal All Tiles</English>
 		<French>Masquer toutes les cases</French>
 		<German>Alle Geländefelder ausblenden</German>
-		<Italian>Copri tutte le caselle</Italian>
+		<Italian>Nascondi tutte le caselle</Italian>
 		<Spanish>Ocultar todas las casillas</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4557,7 +4541,7 @@
 		<English>Collapse</English>
 		<French>Réduire</French>
 		<German>Ausblenden</German>
-		<Italian>Collassa</Italian>
+		<Italian>Riduci</Italian>
 		<Spanish>Derruir</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4581,7 +4565,7 @@
 		<English>Minimize</English>
 		<French>Diminuer</French>
 		<German>Minimieren</German>
-		<Italian>Riduci</Italian>
+		<Italian>Minimizza</Italian>
 		<Spanish>Minimizar</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4645,7 +4629,7 @@
 		<English>The password you entered was incorrect. Please try again.</English>
 		<French>Saisissez le mot de passe requis pour cette civilisation.</French>
 		<German>Geben Sie das für diese Zivilisation erforderliche Kennwort ein.</German>
-		<Italian>Inserisci la password necessaria per questa civiltà.</Italian>
+		<Italian>La password inserita non era corretta. Per favore riprova.</Italian>
 		<Spanish>Introduce la contraseña necesaria para esta civilización.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4661,7 +4645,7 @@
 		<English>Password Protection</English>
 		<French>Protection par mot de passe</French>
 		<German>Kennwortschutz</German>
-		<Italian>Protezione password</Italian>
+		<Italian>Protezione con password</Italian>
 		<Spanish>Protección con contraseña</Spanish>
 	</TEXT>
 	<TEXT>

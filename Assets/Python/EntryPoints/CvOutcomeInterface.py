@@ -60,11 +60,11 @@ def doRemoveWVSlavery(argsList):
 			iCityX = city.getX()
 			iCityY = city.getY()
 			# Remove the main slavery building
-			if city.getNumActiveBuilding(iWVSlavery) > 0:
+			if city.hasBuilding(iWVSlavery):
 				city.changeHasBuilding(iWVSlavery, False)
 
 			# Sell the Slave market if one exists
-			if city.getNumActiveBuilding(iSlaveMarket) > 0:
+			if city.hasBuilding(iSlaveMarket):
 
 				city.changeHasBuilding(iSlaveMarket, False)
 
@@ -76,7 +76,7 @@ def doRemoveWVSlavery(argsList):
 
 			# Remove all other Slavery Buildings if they exist
 			for ibuilding in aiSlaveBuildings:
-				if city.getNumActiveBuilding(ibuilding) > 0:
+				if city.hasBuilding(ibuilding):
 					city.changeHasBuilding(ibuilding, False)
 
 			iFreeSlaves = 0
@@ -167,7 +167,7 @@ def doRemoveWVHumanSacrifice(argsList):
 
 		for CyCity in CyPlayer.cities():
 			# Remove the main worldview building
-			if CyCity.getNumActiveBuilding(iWVSacrifice) > 0:
+			if CyCity.hasBuilding(iWVSacrifice):
 				CyCity.changeHasBuilding(iWVSacrifice, False)
 				CyAudioGame().Play2DSound("AS2D_DISCOVERBONUS")
 
@@ -177,7 +177,7 @@ def doRemoveWVHumanSacrifice(argsList):
 			CyCity.changeHasBuilding(iToken, False)
 
 			# Remove the human sacrifice altar
-			if CyCity.getNumActiveBuilding(iAltar) > 0:
+			if CyCity.hasBuilding(iAltar):
 				CyCity.changeHasBuilding(iAltar, False)
 
 def getNumNonSpecialistSlaves(argsList):

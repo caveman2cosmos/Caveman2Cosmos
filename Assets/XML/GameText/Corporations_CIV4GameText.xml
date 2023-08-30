@@ -5,13 +5,13 @@
 		<English>Cereal Mills</English>
 		<French>Les grands moulins céréaliers</French>
 		<German>Cerealien AG</German>
-		<Italian>Cereali del Mulino</Italian>
+		<Italian>Cereali del mulino</Italian>
 		<Russian>Ïðîäóêòû èç çëàêîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_CEREAL_MILLS</Tag>
 		<English>HQ - Cereal Mills</English>
-		<Italian>QG di Cereali del Mulino</Italian>
+		<Italian>Quartier generale di Cereali del mulino</Italian>
 		<Russian>Продукты из злаков</Russian>
 	</TEXT>
 	<TEXT>
@@ -27,11 +27,12 @@
 		<Tag>TXT_KEY_BUILDING_CORPORATION_2</Tag>
 		<English>Sid's Sushi Co</English>
 		<Russian>Суши от Сида</Russian>
+		<Italian>Sid Sushi Company</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_SIDS_SUSHI_CO</Tag>
 		<English>HQ - Sid's Sushi Co</English>
-		<Italian>QG di Sid's Sushi Co.</Italian>
+		<Italian>Quartier generale di Sid Sushi Company</Italian>
 		<Russian>Суши от Сида</Russian>
 	</TEXT>
 	<TEXT>
@@ -48,13 +49,13 @@
 		<English>Standard Ethanol</English>
 		<French>Ethanol Inc.</French>
 		<German>Ecokraftstoff AG</German>
-		<Italian>Ente Etanolo</Italian>
+		<Italian>Etanolo energy spa</Italian>
 		<Russian>Ýòàíîë-ñòàíäàðò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_STANDARD_ETHANOL</Tag>
 		<English>HQ - Standard Ethanol</English>
-		<Italian>QG dell'Ente Etanolo</Italian>
+		<Italian>Quartier generale di Etanolo energy Spa</Italian>
 		<Russian>Этанол-стандарт</Russian>
 	</TEXT>
 	<TEXT>
@@ -62,7 +63,7 @@
 		<English>As an energy source, few things can compare to fossil fuels. Yet, like most resources, the limited nature of fossil fuels has made an alternative energy source a necessary compliment to the world's power supply. Ethanol, which can be created from corn, beets and sweet potatoes, has become one of the leading candidates to wean consumers from their daily gasoline fix. Used as a fuel additive or a fuel itself, ethanol's renewable nature, as well as the increased availability of ethanol-powered vehicles, has made it the most widely used gasoline alternative in the world. But with an ever-increasing world population the use of fields to produce fuel instead of food has made the full-blown adoption of biofuels a difficult choice for those in positions of power.</English>
 		<French>Dans le domaine de l'énergie, peu de choses peuvent égaler les carburants fossiles. Pourtant, comme la plupart des ressources, leur quantité limitée a engendré le besoin de trouver d'autres sources d'énergie. L'éthanol, qui peut être créé à partir de maïs, de betteraves et de patates douces, est devenu l'un des candidats les plus sérieux au remplacement de l'essence. L'éthanol est utilisé comme additif ou comme carburant ; de par sa nature renouvelable et du fait de l'augmentation du nombre de véhicules fonctionnant à l'éthanol, il est devenu le carburant alternatif le plus utilisé dans le monde. Mais avec l'augmentation de la population mondiale, l'utilisation des champs pour produire du carburant plutôt que de la nourriture rend l'adoption massive des biocarburants relativement problématique pour la plupart des dirigeants.</French>
 		<German>Als Energiequelle können es nur wenige Dinge mit fossilen Brennstoffen aufnehmen. Aufgrund des - wie bei den meisten Ressourcen - eingeschränkten Vorkommens fossiler Brennstoffe, entwickelten sich andere Energiequellen zur notwendigen Ergänzung der weltweiten Energieversorgung. Ethanol, das aus Getreide, Rüben und Süßkartoffeln gewonnen wird, ist inzwischen einer der führenden Kandidaten, der zur Reduzierung des Treibstoffverbrauchs beitragen soll. Ethanol wird als Treibstoffzusatz bzw. reiner Treibstoff eingesetzt. Aufgrund seiner Erneuerbarkeit sowie der erhöhten Verfügbarkeit mit Ethanol betriebener Fahrzeuge, ist Ethanol inzwischen die meistgenutzte Treibstoffalternative weltweit. Angesichts der wachsenden Weltbevölkerung ist es für die Machthaber allerdings eine schwierige Entscheidung, aufgrund des Umstiegs auf Biotreibstoffe ihre Felder zur Produktion von Treibstoffen zu verwenden, anstatt dort Nahrungsmittel anzubauen.</German>
-		<Italian>Come fonte d'energia, poche cose possono essere paragonate ai carburanti fossili. Però, come molte risorse, il fatto che siano limitate ha reso necessaria una fonte di energia alternativa per la fornitura mondiale. L'etanolo, che può essere creato con il grano, le barbabietole e le patate dolci, è diventato uno dei candidati di punta per sottrarre consumatori alla benzina. Viene usato come additivo nel carburante o come carburante alternativo, e la sua natura rinnovabile, oltre alla crescente disponibilità di mezzi a etanolo, l'hanno reso l'alternativa al carburante normale più utilizzato al mondo. Ma con una popolazione mondiale in costante crescita l'uso dei campi per la produzione di carburante invece che di cibo ha reso l'adozione totale di bio-carburanti una scelta difficile, per coloro che occupano posizioni di potere.</Italian>
+		<Italian>Come fonte d'energia, poche cose possono essere paragonate ai carburanti fossili. Però, come molte risorse, il fatto che siano limitate ha reso necessaria una fonte di energia alternativa per la fornitura mondiale. L'etanolo, che può essere creato con il grano, le barbabietole e le patate dolci, è diventato uno dei candidati di punta per sottrarre consumatori alla benzina. Viene usato come additivo nel carburante o come carburante alternativo, e la sua natura rinnovabile, oltre alla crescente disponibilità di mezzi a etanolo, l'hanno reso l'alternativa al carburante normale più utilizzato al mondo. Ma con una popolazione mondiale in costante crescita l'uso dei campi per la produzione di carburante invece che di cibo ha reso l'adozione totale di biocarburanti una scelta difficile, per coloro che occupano posizioni di potere.</Italian>
 		<Spanish>Como fuente de energía, pocas cosas pueden compararse a los combustibles fósiles. Sin embargo, como ocurre con la mayoría de los recursos naturales, su escasez ha hecho que sea necesario encontrar alternativas para complementar la producción energética mundial. El etanol, que puede producirse a partir de maíz, remolacha azucarera y batata, se ha convertido en uno de los principales candidatos a reemplazar a la gasolina en el corazón de los consumidores. Usado como aditivo o como combustible en sí mismo, la naturaleza renovable del etanol, así como la cada vez mayor presencia de los vehículos que lo emplean, lo han convertido en el combustible alternativo más usado del mundo. Pero con un mundo en el que la población no deja de crecer, el uso de los campos para producir combustible en lugar de alimentos ha convertido la adopción generalizada de los bio-combustibles en una decisión políticamente complicada.</Spanish>
 		<Russian>Немногие источники энергии могут соперничать с ископаемым топливом. Однако запасы последнего ограничены, и это заставляет людей искать альтернативные решения. Этанол, который получают химическим путем из зерна, свеклы или сладкого картофеля - один из наиболее вероятных кандидатов на замену бензину. Его можно использовать как присадку к углеводородному топливу или в чистом виде, он является возобновляемым ресурсом, да и работающие на нем машины становятся все доступнее. Но с ростом мирового населения властям все труднее решиться на массовое выращивание биотоплива взамен продуктов питания.</Russian>
 	</TEXT>
@@ -71,13 +72,13 @@
 		<English>Creative Constructions</English>
 		<French>Constructions créatives</French>
 		<German>Kreativbau AG</German>
-		<Italian>Costruzioni Creative</Italian>
+		<Italian>Costruzioni creative</Italian>
 		<Russian>Êðåàòèâñòðîé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_CREATIVE_CONSTRUCTIONS</Tag>
 		<English>HQ - Creative Constructions</English>
-		<Italian>QG di Costruzioni Creative</Italian>
+		<Italian>Quartier generale di Costruzioni creative</Italian>
 		<Russian>Креативстрой</Russian>
 	</TEXT>
 	<TEXT>
@@ -93,13 +94,13 @@
 		<Tag>TXT_KEY_BUILDING_CORPORATION_5</Tag>
 		<English>Mining Inc</English>
 		<German>Montan AG</German>
-		<Italian>Ente Estrazioni Minerarie</Italian>
+		<Italian>Mineraria Srl</Italian>
 		<Russian>Ãîðíûå ðåñóðñû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_MINING_INC</Tag>
 		<English>HQ - Mining Inc</English>
-		<Italian>QG dell'Ente Estrazioni Minerarie</Italian>
+		<Italian>Quartier generale di Mineraria Srl</Italian>
 		<Russian>Горные ресурсы</Russian>
 	</TEXT>
 	<TEXT>
@@ -116,13 +117,13 @@
 		<English>Aluminum Co</English>
 		<French>Aluminium S.A.</French>
 		<German>Aluminiumwerke AG</German>
-		<Italian>Ente Alluminio</Italian>
+		<Italian>Allumination</Italian>
 		<Russian>Ïðîìàëþìèíèé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_ALUMINUM_CO</Tag>
 		<English>HQ - Aluminum Co</English>
-		<Italian>QG dell'Ente Alluminio</Italian>
+		<Italian>Quartier generale di Allumination</Italian>
 		<Russian>Промалюминий</Russian>
 	</TEXT>
 	<TEXT>
@@ -139,13 +140,13 @@
 		<English>Civilized Jewelers Inc</English>
 		<French>Bijoutiers associés</French>
 		<German>Kulturjuwelen AG</German>
-		<Italian>Gioiellieri Uniti</Italian>
+		<Italian>Gioiellieri uniti</Italian>
 		<Russian>Ìèðîâûå þâåëèðû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_CIVILIZED_JEWELERS_INC</Tag>
 		<English>HQ - Civilized Jewelers Inc</English>
-		<Italian>QG di Gioiellieri Uniti</Italian>
+		<Italian>Quartier generale di Gioiellieri uniti</Italian>
 		<Russian>Мировые ювелиры</Russian>
 	</TEXT>
 	<TEXT>
@@ -160,7 +161,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_ADVENTURE</Tag>
 		<English>Adventure Tours</English>
-		<Italian>ViaggiAvventura</Italian>
+		<Italian>Viaggi avventura</Italian>
 		<Russian>Àäâåí÷åð-òóð</Russian>
 	</TEXT>
 	<TEXT>
@@ -168,7 +169,7 @@
 		<English>Adventure Tours Franchise</English>
 		<French>Filiale de Aventure Tours</French>
 		<German>Adventure-Tours-Filiale</German>
-		<Italian>Filiale di ViaggiAvventura</Italian>
+		<Italian>Filiale di Viaggi avventura</Italian>
 		<Spanish>Franquicia de Adventure Tours</Spanish>
 		<Russian>Ôèëèàë "ÀÒ"</Russian>
 	</TEXT>
@@ -176,7 +177,7 @@
 		<Tag>TXT_KEY_BUILDING_ADVENTURE_TOURS_FRANCHISE_PEDIA</Tag>
 		<English>Your local adventure franchise to get your adrenaline pumping!</English>
 		<German>Dein örtlicher Reiseanbieter für Abenteuerreisen, die dein Adrenalin in die Höhe schnellen lassen!</German>
-		<Italian>La tua agenzia locale di ViaggiAvventura, per darti una scarica di adrenalina!</Italian>
+		<Italian>La tua agenzia locale di Viaggi avventura, per darti una scarica di adrenalina!</Italian>
 		<Spanish>¡Tu franquicia local de aventuras, para darte tu dosis de adrenalina!</Spanish>
 		<Russian>Откройте свою особую местную приключенческую франшизу, чтобы подарить вашим клиентам заряд адреналина!</Russian>
 	</TEXT>
@@ -185,7 +186,7 @@
 		<English>HQ - Adventure Tours</English>
 		<French>Le Siège de Aventure Tours</French>
 		<German>Adventure-Tours-Zentrale</German>
-		<Italian>QG di ViaggiAvventura</Italian>
+		<Italian>Quartier generale di Viaggi avventura</Italian>
 		<Russian>Àäâåí÷åð-òóð</Russian>
 	</TEXT>
 	<TEXT>
@@ -200,13 +201,14 @@
 		<English>Bullseye</English>
 		<French>Gran'Frais</French>
 		<Russian>ßáëî÷êî</Russian>
+		<Italian>Green perfection</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_BULLSEYE</Tag>
 		<English>HQ - Bullseye</English>
 		<French>Le Siège de Gran'Frais</French>
 		<German>Bullseye Zentrale</German>
-		<Italian>QG di Bullseye</Italian>
+		<Italian>Quartier generale di Green perfection</Italian>
 		<Russian>ßáëî÷êî</Russian>
 	</TEXT>
 	<TEXT>
@@ -220,7 +222,7 @@
 		<English>Bullseye Store</English>
 		<French>Epicerie Gran'Frais</French>
 		<German>Bullseye-Laden</German>
-		<Italian>Negozio di Bullseye</Italian>
+		<Italian>Negozio di Green perfection</Italian>
 		<Spanish>Tienda de Bullseye</Spanish>
 		<Russian>Ìàãàçèí "ßáëî÷êî"</Russian>
 	</TEXT>
@@ -234,7 +236,7 @@
 		<Tag>TXT_KEY_BUILDING_CORPORATION_BURGERWORLD</Tag>
 		<English>Burgerworld</English>
 		<French>MondoBurger</French>
-		<Italian>MondoBurger</Italian>
+		<Italian>Mondo burger</Italian>
 		<Russian>Ìèð áóðãåðîâ</Russian>
 	</TEXT>
 	<TEXT>
@@ -242,14 +244,14 @@
 		<English>HQ - Burgerworld</English>
 		<French>Le Siège de MondoBurger</French>
 		<German>Burgerworld-Zentrale</German>
-		<Italian>QG di MondoBurger</Italian>
+		<Italian>Quartier generale di Mondo burger</Italian>
 		<Spanish>Burgerworld</Spanish>
 		<Russian>Ìèð áóðãåðîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_BURGERWORLD_PEDIA</Tag>
 		<English>Fast Food Restaurants are the lifeblood of these companies. Serving Burgers and Fries for lunch and Dinner and a Muffin Sandwich for breakfast for hungry customer, in foreign branches the same company not only makes Fast Food but also Pub/Diner Food available to the consumers there since smaller investments in foreign cities is risky and given the turnover rate of unsuccessful restaurants it will be a heavy risk to go in without major corporation backing. Hong Kongs Fast Food branches for example have implemented several Hong Kong Cuisine Classics to their menu and some places like Germany allow beer to be served in their restaurants.[PARAGRAPH:1]Built under a Bureaucratic factory System, food produced here is cheap, fast and filling which has been so effective that it has a social effect termed as "McDonaldization" where Efficiency, Calculability, Predictability and Control is what society needs.</English>
-		<Italian>I fast food sono il sangue vitale di queste compagnie. Servire hamburger e patatine per pranzo per cena e muffin per colazione a clienti affamati, in altri campi la stessa compagnia rende disponibili ai consumatori non solo i fast food, ma anche Pub e Diner Food dato che gli investimenti più piccoli in città straniere sono rischiosi, e dato il ritmo di chiusra dei ristoranti senza successo sarebbe un grande rischio aprire senza avere alle spalle una grande corporazione. Le catene di Fast Food di Hong Kongs hanno inserito molti classici della cucina di Hong Kong nei loro menù e alcuni paesi, come la Germania, permettono che la birra venga servita nei loro ristoranti.[PARAGRAPH:1]Cucinato in un sistema burocratico di fabbriche, il cibo prodotto qui è economico, veloce e saziante ed è diventato così efficiente che è diventato un effetto sociale chiamato "McDonaldizzazione" dove efficienza, calcolabilità, prevedibilità e controllo è ciò di cui la società ha bisogno.</Italian>
+		<Italian>I fast food sono il sangue vitale di questa compagnia. Servire hamburger e patatine per pranzo per cena e muffin per colazione a clienti affamati, in altri campi la stessa compagnia rende disponibili ai consumatori non solo i fast food, ma anche Pub e Diner Food dato che gli investimenti più piccoli in città straniere sono rischiosi, e dato il ritmo di chiusura dei ristoranti senza successo sarebbe un grande rischio aprire senza avere alle spalle una grande corporazione. Le catene di Fast Food di Hong Kongs hanno inserito molti classici della cucina di Hong Kong nei loro menù e alcuni paesi, come la Germania, permettono che la birra venga servita nei loro ristoranti.[PARAGRAPH:1]Cucinato in un sistema burocratico di fabbriche, il cibo prodotto qui è economico, veloce e saziante ed è diventato così efficiente che è diventato un effetto sociale chiamato "McDonaldizzazione" dove efficienza, calcolabilità, prevedibilità e controllo è ciò di cui la società ha bisogno.</Italian>
 		<Russian>Рестораны быстрого питания являются источником жизненной силы этих компаний. Подавая гамбургеры и картофель фри на обед и ужин, а также бутерброд с маффином на завтрак для голодных клиентов, в зарубежных филиалах одна и та же компания предоставляет потребителям не только фаст-фуд, но и паб/закусочную, поскольку меньшие инвестиции в зарубежных городах рискованы и оправданы из-за текучести кадров в убыточных ресторанах, в связи с чем создается большой риск войти в рынок без поддержки крупных корпораций. Например, отделения быстрого питания в Гонконге внедрили в свое меню несколько классических блюд гонконгской кухни, а в некоторых местах, таких как Германия, пиво можно подавать в своих ресторанах.[PARAGRAPH:1]Изготовленные в рамках бюрократической фабричной системы продукты питания дешевы и быстро в приготовлении, которое было настолько эффективным, что имело социальный эффект, называемый «макдональдизацией», где эффективность, вычислимость, предсказуемость и контроль - это то, что нужно обществу.</Russian>
 	</TEXT>
 	<TEXT>
@@ -257,7 +259,7 @@
 		<English>Burgerworld Restaurant</English>
 		<French>Restaurant MondoBurger</French>
 		<German>Burgerworld-Restaurant</German>
-		<Italian>Ristorante Burgerworld</Italian>
+		<Italian>Ristorante di Mondo burger</Italian>
 		<Spanish>Restaurante Burgerworld</Spanish>
 		<Russian>Ðåñòîðàí "ÌÁ"</Russian>
 	</TEXT>
@@ -272,7 +274,7 @@
 		<Tag>TXT_KEY_BUILDING_CORPORATION_EMPCLOTH</Tag>
 		<English>Emperors Clothing</English>
 		<French>Habits Impériaux</French>
-		<Italian>I Vestiti dell'Imperatore</Italian>
+		<Italian>Abiti imperiali</Italian>
 		<Russian>Îäåæäà èìïåðàòîðà</Russian>
 	</TEXT>
 	<TEXT>
@@ -280,18 +282,19 @@
 		<English>HQ - Emperors Clothing</English>
 		<French>Siège des Habits Impériaux</French>
 		<German>Emperors-Clothing-Zentrale</German>
-		<Italian>QG de I Vestiti dell'Imperatore</Italian>
+		<Italian>Quartier generale di Abiti imperiali</Italian>
 		<Russian>Îäåæäà èìïåðàòîðà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_EMPERORS_CLOTHING_PEDIA</Tag>
 		<English>Corporate headquarters is the part of a corporate structure that deals with important tasks such as strategic planning, corporate communications, taxes, law, marketing, finance, human resources, and information technology. Corporate headquarters takes responsibility for the overall success of the corporation, ensures Corporate Governance. It is sometimes referred to the head office, which is the location where the executives of a business work and where many of the key business decisions are made. Generally, corporate headquarters acts as a core when the business is operating.</English>
 		<Russian>Штаб-квартира корпорации является частью корпоративной структуры, которая занимается такими важными задачами, как стратегическое планирование, корпоративные коммуникации, налоги, право, маркетинг, финансы, кадровая политика и информационные технологии. Штаб-квартира корпорации берет на себя ответственность за общий успех корпорации, обеспечивает корпоративное управление. Иногда его называют головным офисом, где работают руководители компании и где принимаются многие ключевые бизнес-решения. Как правило, штаб-квартира компании выступает в качестве ядра при организации бизнеса.</Russian>
+		<Italian>La sede aziendale è la parte di una struttura aziendale che si occupa di compiti importanti come la pianificazione strategica, le comunicazioni aziendali, le tasse, la legge, il marketing, la finanza, le risorse umane e la tecnologia dell'informazione. La sede centrale si assume la responsabilità del successo complessivo della società e garantisce la Corporate Governance. A volte si riferisce alla sede centrale, che è il luogo in cui lavorano i dirigenti di un'azienda e dove vengono prese molte delle decisioni aziendali chiave. Generalmente, la sede centrale dell'azienda funge da nucleo quando l'attività è operativa.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_EMPCLOTH_PEDIA</Tag>
 		<English>See Fashion House for details. Emperors Clothing is a rival of Fashion House, and thus requires many of the same resources.</English>
-		<Italian>Per i dettagli, vedi Fashion House. I Vestiti dell'Imperatore è un rivale di Fashion House e perciò le due corporazioni hanno molte risorse in comune.</Italian>
+		<Italian>Per i dettagli, vedi Fashion House. Abiti imperiali è un rivale di Fashion House e perciò le due corporazioni hanno molte risorse in comune.</Italian>
 		<Spanish>Véase Fashion House para más detalles. Emperors Clothing es un rival directo de Fashion House, por ello ambas corporaciones consumen los mismos recursos.</Spanish>
 		<Russian>См. подробности в статье про «Дом Мод». «Одежда императора» - конкурент «Дома Мод», и поэтому требует тот же перечень ресурсов.</Russian>
 	</TEXT>
@@ -300,7 +303,7 @@
 		<English>Emperors Clothing Store</English>
 		<French>Magasin d'Habits Impériaux</French>
 		<German>Emperors-Clothing-Laden</German>
-		<Italian>Negozio de I Vestiti dell'Imperatore</Italian>
+		<Italian>Negozio di Abiti imperiali</Italian>
 		<Spanish>Tienda de Emperors Clothing</Spanish>
 		<Russian>Àòåëüå "ÎÈ"</Russian>
 	</TEXT>
@@ -315,19 +318,20 @@
 		<Tag>TXT_KEY_BUILDING_CORPORATION_EWTRADE</Tag>
 		<English>East West Traders</English>
 		<Russian>Âîñòîê-Çàïàä</Russian>
+		<Italian>Commercio est-ovest</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_EAST_WEST_TRADERS</Tag>
 		<English>HQ - East West Traders</English>
 		<French>Le Siège de 'East West Traders'</French>
 		<German>East-West-Traders-Zentrale</German>
-		<Italian>QG di East West Traders</Italian>
-		<Russian>Âîñòîê-Çàïàä</Russian>
+		<Italian>Quartier generale di Commercio est-ovest</Italian>
+		<Russian>Âîñòîê-Çàïàä</Russian>  
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_EWTRADE_PEDIA</Tag>
 		<English>The East West Traders evolved from corporations such as Transatlantic Triangular Trade, that operated during the 17th, 18th, and early 19th centuries, carrying slaves, cash crops, and manufactured goods between West Africa, the Caribbean or American colonies and the European colonial powers, with the northern colonies of British North America, especially New England, sometimes taking over the role of Europe. They are now more benign.</English>
-		<Italian>La East West Traders si è evoluta dalle corporazioni del commercio triangolare transatlantico che operarono durante il XVII, XVIII e all'inizio del XIX secolo; queste compagnie trasportavano schiavi, prodotti agricoli e beni manifatturieri tra l'Africa occidentale, i Caraibi, le colonie americane e le potenze coloniali europee. Col tempo le colonie inglesi del Nord America, specialmente il New England, arrivarono a eguagliare il ruolo dell'Europa.</Italian>
+		<Italian>La Commercio est-ovest si è evoluta dalle corporazioni del commercio triangolare transatlantico che operarono durante il XVII, XVIII e all'inizio del XIX secolo; queste compagnie trasportavano schiavi, prodotti agricoli e beni manifatturieri tra l'Africa occidentale, i Caraibi, le colonie americane e le potenze coloniali europee. Col tempo le colonie inglesi del Nord America, specialmente il New England, arrivarono a eguagliare il ruolo dell'Europa.</Italian>
 		<Russian>Коммерсанты из «Восток-Запад» произошли от таких корпораций, как «Transatlantic Triangular Trade», которые действовали в XVII, XVIII и начале XIX веков, перевозя рабов, изделия роскоши и промышленные товары между Западной Африкой, Карибскими или американскими колониями и европейскими метрополиями с северными колониями британской Северной Америки, особенно Новой Англии, иногда берущей на себя роль Европы. В настоящее время этот бизнес переориентировался в менее жесткие формы.</Russian>
 	</TEXT>
 	<TEXT>
@@ -335,7 +339,7 @@
 		<English>East West Traders Store</English>
 		<French>Magasin 'East West Traders'</French>
 		<German>East-West-Traders-Laden</German>
-		<Italian>Negozio di East West Traders</Italian>
+		<Italian>Negozio di Commercio est-ovest</Italian>
 		<Spanish>Tienda de East West Traders</Spanish>
 		<Russian>Ìàãàçèí "ÂÇ"</Russian>
 	</TEXT>
@@ -350,19 +354,21 @@
 		<English>Fashion House</English>
 		<French>Maison de la Mode</French>
 		<Russian>Äîì Ìîä</Russian>
+		<Italian>Casa della moda</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_FASHION_HOUSE</Tag>
 		<English>HQ - Fashion House</English>
 		<French>Le Siège de Maison de la Mode</French>
 		<German>Fashion-House-Zentrale</German>
-		<Italian>GQ di Fashion House</Italian>
+		<Italian>Quartier generale di Casa della moda</Italian>
 		<Russian>Äîì Ìîä</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_FASHION_HOUSE_PEDIA</Tag>
 		<English>Corporate headquarters is the part of a corporate structure that deals with important tasks such as strategic planning, corporate communications, taxes, law, marketing, finance, human resources, and information technology. Corporate headquarters takes responsibility for the overall success of the corporation, ensures Corporate Governance. It is sometimes referred to the head office, which is the location where the executives of a business work and where many of the key business decisions are made. Generally, corporate headquarters acts as a core when the business is operating.</English>
 		<Russian>Штаб-квартира корпорации является частью корпоративной структуры, которая занимается такими важными задачами, как стратегическое планирование, корпоративные коммуникации, налоги, право, маркетинг, финансы, кадровая политика и информационные технологии. Штаб-квартира корпорации берет на себя ответственность за общий успех корпорации, обеспечивает корпоративное управление. Иногда его называют головным офисом, где работают руководители компании и где принимаются многие ключевые бизнес-решения. Как правило, штаб-квартира компании выступает в качестве ядра при организации бизнеса.</Russian>
+		<Italian>La sede aziendale è la parte di una struttura aziendale che si occupa di compiti importanti come la pianificazione strategica, le comunicazioni aziendali, le tasse, la legge, il marketing, la finanza, le risorse umane e la tecnologia dell'informazione. La sede centrale si assume la responsabilità del successo complessivo della società e garantisce la Corporate Governance. A volte si riferisce alla sede centrale, che è il luogo in cui lavorano i dirigenti di un'azienda e dove vengono prese molte delle decisioni aziendali chiave. Generalmente, la sede centrale dell'azienda funge da nucleo quando l'attività è operativa.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_FASHION_PEDIA</Tag>
@@ -375,7 +381,7 @@
 		<English>Fashion House Store</English>
 		<French>Magasin 'Maison de la Mode'</French>
 		<German>Fashion-House-Laden</German>
-		<Italian>Negozio di Fashion House</Italian>
+		<Italian>Negozio di Casa della moda</Italian>
 		<Spanish>Tienda de Fashion House</Spanish>
 		<Russian>Àòåëüå "ÄÌ"</Russian>
 	</TEXT>
@@ -391,13 +397,14 @@
 		<English>MallWart</English>
 		<French>Carouf'</French>
 		<Russian>Ìàëëâàðò</Russian>
+		<Italian>BigMall</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_MALLWART</Tag>
 		<English>HQ - MallWart</English>
 		<French>Le Siège de Carouf'</French>
 		<German>MallWart-Zentrale</German>
-		<Italian>QG di MallWart</Italian>
+		<Italian>Quartier generale di BigMall</Italian>
 		<Russian>Ìàëëâàðò</Russian>
 	</TEXT>
 	<TEXT>
@@ -413,7 +420,7 @@
 		<English>MallWart Store</English>
 		<French>Magasin Carouf'</French>
 		<German>MallWart-Laden</German>
-		<Italian>Negozio di MallWart</Italian>
+		<Italian>Negozio di BigMall</Italian>
 		<Spanish>Tienda de MallWart</Spanish>
 		<Russian>Ìàãàçèí "Ìàëëâàðò"</Russian>
 	</TEXT>
@@ -434,13 +441,14 @@
 		<English>HQ - Mapster</English>
 		<French>Le Siège de Mapster</French>
 		<German>Mapster-Zentrale</German>
-		<Italian>QG di Mapster</Italian>
+		<Italian>Quartier generale di Mapster</Italian>
 		<Russian>Ìàïñòåð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_MAPSTER_PEDIA</Tag>
 		<English>Corporate headquarters is the part of a corporate structure that deals with important tasks such as strategic planning, corporate communications, taxes, law, marketing, finance, human resources, and information technology. Corporate headquarters takes responsibility for the overall success of the corporation, ensures Corporate Governance. It is sometimes referred to the head office, which is the location where the executives of a business work and where many of the key business decisions are made. Generally, corporate headquarters acts as a core when the business is operating.</English>
 		<Russian>Штаб-квартира корпорации является частью корпоративной структуры, которая занимается такими важными задачами, как стратегическое планирование, корпоративные коммуникации, налоги, право, маркетинг, финансы, кадровая политика и информационные технологии. Штаб-квартира корпорации берет на себя ответственность за общий успех корпорации, обеспечивает корпоративное управление. Иногда его называют головным офисом, где работают руководители компании и где принимаются многие ключевые бизнес-решения. Как правило, штаб-квартира компании выступает в качестве ядра при организации бизнеса.</Russian>
+		<Italian>La sede aziendale è la parte di una struttura aziendale che si occupa di compiti importanti come la pianificazione strategica, le comunicazioni aziendali, le tasse, la legge, il marketing, la finanza, le risorse umane e la tecnologia dell'informazione. La sede centrale si assume la responsabilità del successo complessivo della società e garantisce la Corporate Governance. A volte si riferisce alla sede centrale, che è il luogo in cui lavorano i dirigenti di un'azienda e dove vengono prese molte delle decisioni aziendali chiave. Generalmente, la sede centrale dell'azienda funge da nucleo quando l'attività è operativa.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MAPSTER_PEDIA</Tag>
@@ -452,13 +460,14 @@
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MCDOWELLS</Tag>
 		<English>Big McDowells</English>
 		<Russian>Áèã-Ìàêäàóýëë</Russian>
+		<Italian>McDowells</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_BIG_MCDOWELLS</Tag>
 		<English>HQ - Big McDowells</English>
 		<French>Le Siège de Big McDowells</French>
 		<German>Big-McDowells-Zentrale</German>
-		<Italian>QG di Big McDowells</Italian>
+		<Italian>Quartier generale di McDowells</Italian>
 		<Russian>Áèã-Ìàêäàóýëë</Russian>
 	</TEXT>
 	<TEXT>
@@ -472,7 +481,7 @@
 		<English>Big McDowells Restaurant</English>
 		<French>Restaurant Big McDowells</French>
 		<German>Big-McDowells-Restaurant</German>
-		<Italian>Ristorante Big McDowells</Italian>
+		<Italian>Ristorante McDowells</Italian>
 		<Spanish>Restaurante McDowells</Spanish>
 		<Russian>Ðåñòîðàí "ÁÌ"</Russian>
 	</TEXT>
@@ -487,13 +496,14 @@
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MILEHIGH</Tag>
 		<English>MileHigh Travels International</English>
 		<Russian>Ìèëõàé Òðåâåë</Russian>
+		<Italian>MileHigh viaggi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILEHIGH_TRAVELS_INTERNATIONAL_FRANCHISE</Tag>
 		<English>MileHigh Travels International Franchise</English>
 		<French>Franchise 'MileHigh Voyages International'</French>
 		<German>MileHigh-Travels-International-Filiale</German>
-		<Italian>Filiale di MileHigh Travels International</Italian>
+		<Italian>Filiale di MileHigh viaggi</Italian>
 		<Spanish>Franquicia de MileHigh Travels International</Spanish>
 		<Russian>Ôèëèàë "ÌÒ"</Russian>
 	</TEXT>
@@ -508,31 +518,33 @@
 		<English>HQ - MileHigh Travels International</English>
 		<French>Le Siège de 'MileHigh Voyages International'</French>
 		<German>MileHigh-Travels-International-Zentrale</German>
-		<Italian>QG di MileHigh Travels International</Italian>
+		<Italian>Quartier generale di MileHigh viaggi</Italian>
 		<Russian>Ìèëõàé Òðåâåë</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MILEHIGH_PEDIA</Tag>
 		<English>Your local choice for planning exotic vacations.</English>
 		<Russian>Выберите и спланируйте с нами свой экзотический отдых. </Russian>
+		<Italian>La tua scelta locale per pianificare vacanze esotiche.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MOBBY</Tag>
 		<English>Mobby Meats International</English>
 		<Russian>Ìÿñî Ìîááè</Russian>
+		<Italian>Mobby carni international</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_MOBBY_MEATS_INTERNATIONAL</Tag>
 		<English>HQ - Mobby Meats International</English>
 		<French>Le Siège de 'Mobby Meats International'</French>
 		<German>Mobby-Meats-International-Zentrale</German>
-		<Italian>QG di Mobby Meats International</Italian>
+		<Italian>Quartier generale di Mobby carni international</Italian>
 		<Russian>Ìÿñî Ìîááè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MOBBY_PEDIA</Tag>
 		<English>A supermarket, also called a grocery store, is a self-service store offering a wide variety of food and household merchandise, organized into departments. It is larger in size and has a wider selection than a traditional grocery store and it is smaller than a hypermarket or superstore.[NEWLINE]The supermarket typically comprises meat, fresh produce, dairy, and baked goods departments along with shelf space reserved for canned and packaged goods as well as for various nonfood items such as household cleaners, pharmacy products, and pet supplies. Most supermarkets also sell a variety of other household products that are consumed regularly, such as alcohol (where permitted), household cleaning products, medicine, clothes, and some sell a much wider range of nonfood products.[NEWLINE]The traditional suburban supermarket occupies a large amount of floor space, usually on a single level, and is situated near a residential area in order to be convenient to consumers. Its basic appeal is the availability of a broad selection of goods under a single roof at relatively low prices. Other advantages include ease of parking and, frequently, the convenience of shopping hours that extend far into the evening or even 24 hours a day. Supermarkets usually make massive outlays of newspaper and other advertising and often present elaborate in-store displays of products. The stores often are part of a corporate chain that owns or controls (sometimes by franchise) other supermarkets located nearby? even transnationally thus increasing opportunities for economies of scale.[NEWLINE]Supermarkets typically are supplied by the distribution centers of its parent company, such as Loblaw Companies in Canada, which operates thousands of supermarkets across the nation. Loblaw operates a distribution center in every province usually in the largest city in the province.Supermarkets usually offer products at low prices by reducing their economic margins. Certain products (typically staple foods such as bread, milk and sugar) are occasionally sold as loss leaders, that is, with negative profit margins. To maintain a profit, supermarkets attempt to make up for the lower margins by a higher overall volume of sales, and with the sale of higher-margin items. Customers usually shop by placing their selected merchandise into shopping carts (trolleys) or baskets (self-service) and pay for the merchandise at the check-out. At present, many supermarket chains are attempting to further reduce labor costs by shifting to self-service check-out machines, where a single employee can oversee a group of four or five machines at once, assisting multiple customers at a time.[NEWLINE]A larger full-service supermarket combined with a department store is sometimes known as a hypermarket. Other services offered at some supermarkets may include those of banks, cafés, childcare centers/creches, photo processing, video rentals, pharmacies, and/or filling stations.</English>
-		<Italian>Un supermercato è un negozio self-service che offre una grande varietà di cibi e di prodotti per la casa, organizzato in reparti. Ha dimensioni più grandi e contiene una maggiore varietà di prodotti rispetto a un negozio locale, ma è più piccolo di un ipermercato.[NEWLINE]Il supermercato comprende reparti per la carne, i prodotti freschi, il formaggio e i beni di pasticceria, oltre agli scaffali riservati ai cibi confezionati e agli oggetti come prodotti di pulizia, farmaci e cibo per animali. La maggior parte dei supermercati vende anche una grande varietà di prodotti per la casa che vengono regolarmente consumati, come alcol (dove è permesso), prodotti per la pulizia della casa, medicine, vestiti e altri pROdotti.[NEWLINE]Il tradizionale supermercato suburbano occupa una vasta area, solitamente su un solo piano, ed è situato vicino alle aree residenziali per essere più conveniente per i consumatori. La sua attrattiva principale è la disponibilità di una vasta selezione di prodotti nello stesso posto, solitamente a basso prezzo; altri vantaggi includono la facilità di parcheggio e, frequentemente, gli orari di apertura che si estendono fino a mezzanotte (e spesso hanno un'apertura di 24 h). I supermercati usano moltissimi giornali promozionali ed altre offerte pubblicitarie, e presentano spesso complicate combinazioni di prodotti. I negozi fanno spesso parte di una catena di corporazioni che possiede o controlla altri supermercati nelle vicinanze, incrementando così le opportunità per un'economia in scala.[NEWLINE]I supermercati sono solitamente riforniti dai centri di distribuzione della corporazione, come le Loblaw companies in Canda, che riforniscono migliaia di supermercati in tutta la nazione. Loblaw possiede un centro di distribuzione in ogni provincia, solitamente nelle città principali. I supermercati offrono prodotti a basso costo riducendone i margini economici. certi prodotti (solitamente pane, latte e zucchero) vengono occasionalmente venduti con un margine di profitto negativo. Per mantenere un profitto i supermercati cercano di vendere un grande numero di oggetti, specialmente quelli con un alto margine di guadagno. I clienti solitamente mettono i beni che vogliono comprare in cestini e carrelli, e poi pagano alla cassa. Al giorno d'oggi, molti supermercati cercano di ridurre i costi introducendo le casse self-service, dove un singolo impiegato controlla 4 o 5 casse contemporaneamente, assistendo più di un cliente alla volta.[NEWLINE]Un supermercato più mercato, combinato con altri negozi, viene definito ipermercato. Altri servizi offerti in alcuni supermercati possono essere banche, centri di ristorazione, centri per bambini, fotografi, noleggi video, farmacie e stazioni di rifornimento.</Italian>
+		<Italian>Un supermercato è un negozio self-service che offre una grande varietà di cibi e di prodotti per la casa, organizzato in reparti. Ha dimensioni più grandi e contiene una maggiore varietà di prodotti rispetto a un negozio locale, ma è più piccolo di un ipermercato.[NEWLINE]Il supermercato comprende reparti per la carne, i prodotti freschi, il formaggio e i beni di pasticceria, oltre agli scaffali riservati ai cibi confezionati e agli oggetti come prodotti di pulizia, farmaci e cibo per animali. La maggior parte dei supermercati vende anche una grande varietà di prodotti per la casa che vengono regolarmente consumati, come alcol (dove è permesso), prodotti per la pulizia della casa, medicine, vestiti e altri prodotti.[NEWLINE]Il tradizionale supermercato suburbano occupa una vasta area, solitamente su un solo piano, ed è situato vicino alle aree residenziali per essere più conveniente per i consumatori. La sua attrattiva principale è la disponibilità di una vasta selezione di prodotti nello stesso posto, solitamente a basso prezzo; altri vantaggi includono la facilità di parcheggio e, frequentemente, gli orari di apertura che si estendono fino a mezzanotte (e spesso hanno un'apertura di 24 h). I supermercati usano moltissimi giornali promozionali ed altre offerte pubblicitarie, e presentano spesso complicate combinazioni di prodotti. I negozi fanno spesso parte di una catena di corporazioni che possiede o controlla altri supermercati nelle vicinanze, incrementando così le opportunità per un'economia in scala.[NEWLINE]I supermercati sono solitamente riforniti dai centri di distribuzione della corporazione, come le Loblaw companies in Canda, che riforniscono migliaia di supermercati in tutta la nazione. Loblaw possiede un centro di distribuzione in ogni provincia, solitamente nelle città principali. I supermercati offrono prodotti a basso costo riducendone i margini economici. certi prodotti (solitamente pane, latte e zucchero) vengono occasionalmente venduti con un margine di profitto negativo. Per mantenere un profitto i supermercati cercano di vendere un grande numero di oggetti, specialmente quelli con un alto margine di guadagno. I clienti solitamente mettono i beni che vogliono comprare in cestini e carrelli, e poi pagano alla cassa. Al giorno d'oggi, molti supermercati cercano di ridurre i costi introducendo le casse self-service, dove un singolo impiegato controlla 4 o 5 casse contemporaneamente, assistendo più di un cliente alla volta.[NEWLINE]Un supermercato più mercato, combinato con altri negozi, viene definito ipermercato. Altri servizi offerti in alcuni supermercati possono essere banche, centri di ristorazione, centri per bambini, fotografi, noleggi video, farmacie e stazioni di rifornimento.</Italian>
 		<Russian>Супермаркет, также называемый универмагом, представляет собой магазин самообслуживания, предлагающий широкий выбор продуктов питания и бытовых товаров, разделенных по разным отделам. Он больше по размеру и имеет более широкий выбор, чем традиционный продуктовый магазин, и меньше, чем гипермаркет.[NEWLINE]В супермаркете обычно есть отделы мяса, свежих продуктов, молочных продуктов и выпечки, а также место на полках, отведенное для консервов. и упакованные товары, а также различные непродовольственные товары, такие как бытовые чистящие средства, аптечные товары и товары для домашних животных. Большинство супермаркетов также продают множество других товаров для дома, которые потребляются регулярно, например алкоголь (где он разрешен к продаже), бытовые чистящие средства, лекарства, одежду, а некоторые продают гораздо более широкий ассортимент непродовольственных товаров.[NEWLINE]Традиционный загородный супермаркет занимает большую площадь, обычно на одном уровне, и расположен рядом с жилым районом для удобства потребителей. Его основная привлекательность - доступность широкого ассортимента товаров под одной крышей по относительно низким ценам. Другие преимущества включают в себя простоту парковки и, зачастую, удобство покупок, продолжающихся до вечера или даже 24 часа в сутки. Супермаркеты обычно тратят огромные средства на газетную и другую рекламу и часто представляют в магазине сложные витрины с товарами. Магазины часто являются частью корпоративной сети, которая владеет или контролирует (иногда по франшизе) другие супермаркеты, расположенные поблизости даже в транснациональном масштабе, таким образом увеличивая возможности для экономии за счет объема товарооборота.[NEWLINE]Супермаркеты обычно поставляются распределительными центрами материнской компании, например, Loblaw Companies в Канаде, которая управляет тысячами супермаркетов по всей стране. У Loblaw есть распределительные центры в каждой провинции, как правило, в крупнейшем городе провинции. Супермаркеты обычно предлагают товары по низким ценам за счет снижения своей экономической прибыли. Определенные продукты (обычно основные продукты питания, такие как хлеб, молоко и сахар) иногда продаются как лидеры убытков, то есть с отрицательной маржой прибыли. Чтобы поддерживать прибыль, супермаркеты пытаются компенсировать более низкую маржу за счет более высокого общего объема продаж и продажи товаров с более высокой маржой. Покупатели обычно делают покупки, помещая выбранный товар в тележки для покупок (тележки) или корзины (самообслуживание) и оплачивая товары при выезде. В настоящее время многие сети супермаркетов пытаются еще больше снизить затраты на рабочую силу за счет перехода на кассовые аппараты с самообслуживанием, где один сотрудник может контролировать группу из четырех или пяти автоматов одновременно, помогая нескольким покупателям одновременно.[NEWLINE]Более крупный супермаркет с полным спектром услуг в сочетании с универмагом иногда называют гипермаркетом. Другие услуги, предлагаемые в некоторых супермаркетах, могут включать в себя банковские кредиты, кафе, детские сады/ясли, обработку фотографий, аренду видеосалона, аптеки и/или заправочные станции.</Russian>
 	</TEXT>
 	<TEXT>
@@ -540,7 +552,7 @@
 		<English>Mobby Meats Store</English>
 		<French>Magasin de 'Mobby Meats'</French>
 		<German>Mobby-Meats-Laden</German>
-		<Italian>Negozio di Mobby Meats</Italian>
+		<Italian>Negozio di Mobby carni international</Italian>
 		<Spanish>Tienda de Mobby Meats</Spanish>
 		<Russian>Ìàãàçèí "ÌÌ"</Russian>
 	</TEXT>
@@ -556,13 +568,14 @@
 		<English>MoonBean Coffee</English>
 		<French>Cafés MoonBean</French>
 		<Russian>Ìóíáèí êàôå</Russian>
+		<Italian>Caffè MoonBean</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_MOONBEAN_COFFEE</Tag>
 		<English>HQ - MoonBean Coffee</English>
 		<French>Siège des Cafés MoonBean</French>
 		<German>MoonBean-Coffee-Zentrale</German>
-		<Italian>QG di MoonBean Coffee</Italian>
+		<Italian>Quartier generale di Caffè MoonBean</Italian>
 		<Russian>Ìóíáèí êàôå</Russian>
 	</TEXT>
 	<TEXT>
@@ -575,7 +588,7 @@
 		<Tag>TXT_KEY_BUILDING_MOONBEAN_COFFEESHOP</Tag>
 		<English>MoonBean Coffeeshop</English>
 		<French>Café-Restau MoonBean</French>
-		<Italian>Cafè di MoonBean-Coffee</Italian>
+		<Italian>Coffeeshop di Caffè MoonBean</Italian>
 		<Spanish>Cafetería MoonBean</Spanish>
 		<Russian>Ðåñòîðàí "ÌÊ"</Russian>
 	</TEXT>
@@ -589,19 +602,20 @@
 		<Tag>TXT_KEY_BUILDING_CORPORATION_RED</Tag>
 		<English>Red Curtains</English>
 		<Russian>Êðàñíûå êóëèñû</Russian>
+		<Italian>Red curtains entertainment</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_RED_CURTAINS</Tag>
 		<English>HQ - Red Curtains</English>
 		<French>Le Siège de Red Curtains</French>
 		<German>Red-Curtains-Zentrale</German>
-		<Italian>QG di Red Curtains</Italian>
+		<Italian>Quartier generale di Red curtains entertainment</Italian>
 		<Russian>Êðàñíûå êóëèñû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_RED_PEDIA</Tag>
 		<English>Entertainment always has been prominent in society despite today's sceptical perception that a doctor earns several times less than a famous celebrity for the amount of time invested. In Rome, gladiators were quite popular with housewives of both the plebeian and nobility alike. Actors in the Renaissance Europe enjoyed fame and at times immunity from some crimes and today's society of entertainment is no exception to the rule. In exchange for their pride and personal space and a very low career security, they could potentially live lavishly in cultural capitals such as Hollywood and New York being worshipped by people as entertainment icons. The Entertainment Moguls often take advantage of that by setting up contracts and hiring agents who get paid relative to the success of their star to be. While the benefits of becoming a celebrity these days can be great, so are the drawbacks. The paparazzi seeks any opportunity to pull a smear job on their target, the reviewers are often insatiable critics who at time hates certain stars on principle and the ever demanding agents puts them through a stressful schedule with little choice in what they do and a less than stable domestic life. Still with money being a source of happiness and entertainment a seemingly inexhaustible well of money, it is no wonder why the entertainment industry is so powerful especially in this time.</English>
-		<Italian>L'intrattenimento ha sempre avuto un aspetto importante nella società, nonostante la percezione attuale scettica che un dottore guadagni molto meno di una celebrità famosa, in rapporto al tempo investito. A roma i gladiatori erano molto popolari fra le donne sia delle famiglie povere, che di quelle ricche. Gli attori nell'Europe rinascimentale godevano di fama e, a volte, anche dell'immunità da alcuni crimini; la società attuale non fa eccezione alla regola. In cambio del loro orgoglio, del loro spazio personale e di una sicurezza molto bassa riguardo alla loro carriera, possono vivere spensieratamente nelle capitali culturali come Hollywood e New York, essendo ritenute dalle persone normali icone dell'intrattenimento. Entertainment Moguls traggono vantaggio da questo firmando contratti e assumendo agenti che vengono pagati in base al successo dei loro assistiti. Anche se essere una celebrità ha molti benefici, ci sono anche molti inconvenienti: i paparazzi cerano ogni opportunità per poter spiare il loro bersaglio, i critici sono spesso persone insaziabili che criticano le star per principio, e gli agenti troppo esigenti li costringono ad un'agenda stressante con una piccola scelta su cosa fare, e una vita domestica instabile. Dato che i soldi sono una fonte di felicità e l'intrattenimento è una fonte inesauribile di soldi, non è una novità che l'industria dell'intrattenimento sia così importante, specialmente in questo periodo.</Italian>
+		<Italian>L'intrattenimento ha sempre avuto un aspetto importante nella società, nonostante la percezione attuale scettica che un dottore guadagni molto meno di una celebrità famosa, in rapporto al tempo investito. A Roma i gladiatori erano molto popolari fra le donne sia delle famiglie povere, che di quelle ricche. Gli attori nell'Europa rinascimentale godevano di fama e, a volte, anche dell'immunità da alcuni crimini; la società attuale non fa eccezione alla regola. In cambio del loro orgoglio, del loro spazio personale e di una sicurezza molto bassa riguardo alla loro carriera, possono vivere spensieratamente nelle capitali culturali come Hollywood e New York, essendo ritenute dalle persone normali icone dell'intrattenimento. Entertainment Moguls traggono vantaggio da questo firmando contratti e assumendo agenti che vengono pagati in base al successo dei loro assistiti. Anche se essere una celebrità ha molti benefici, ci sono anche molti inconvenienti: i paparazzi cerano ogni opportunità per poter spiare il loro bersaglio, i critici sono spesso persone insaziabili che criticano le star per principio, e gli agenti troppo esigenti li costringono ad un'agenda stressante con una piccola scelta su cosa fare, e una vita domestica instabile. Dato che i soldi sono una fonte di felicità e l'intrattenimento è una fonte inesauribile di soldi, non è una novità che l'industria dell'intrattenimento sia così importante, specialmente in questo periodo.</Italian>
 		<Russian>Развлечения всегда занимали видное место в обществе, несмотря на сегодняшнее мнение ряда скептиков о том, что врач зарабатывает в несколько раз меньше, чем известная знаменитость с эстрады за свое рабочее время. Еще в Древнем Риме гладиаторы были весьма популярны у обывателей как среди плебеев, так и среди знати. Актеры в Европе эпохи Возрождения пользовались славой и временами иммунитетом от преследования за некоторые преступления, и нынешнее потребительское общество не является исключением из правила. В обмен на славу, личное пространство и очень низкую карьерную безопасность они потенциально могли бы щедро жить в культурных столицах, таких как Голливуд и Нью-Йорк, которым люди поклонялись как иконы развлечений. Капитаны индустрии развлечений часто пользуются этим, заключая контракты и нанимая агентов, которым платят в зависимости от успеха их звезды. В то время как преимущества стать знаменитостью в наши дни могут быть огромными, есть и недостатки. Папарацци ищут любую возможность очернить свою цель, рецензенты часто являются ненасытными критиками, которые иногда принципиально ненавидят определенных звезд, а постоянно требовательные агенты проводят их через напряженный график с небольшим выбором того, что они делают, и меньшим, чем стабильная семейная жизнь. Несмотря на то, что деньги являются источником счастья, а развлечения - неисчерпаемым источником денег, неудивительно, почему индустрия развлечений так сильна, особенно в наше время.</Russian>
 	</TEXT>
 	<TEXT>
@@ -609,14 +623,14 @@
 		<English>Red Curtains Theatre</English>
 		<French>Théatre de Red Curtains</French>
 		<German>Red-Curtains-Theater</German>
-		<Italian>Teatro di Red Curtains</Italian>
+		<Italian>Teatro di Red curtains entertainment</Italian>
 		<Spanish>Teatro de Red Curtains</Spanish>
 		<Russian>Òåàòð "ÊÊ"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RED_CURTAINS_THEATRE_PEDIA</Tag>
 		<English>Entertainment always has been prominent in society despite today's sceptical perception that a doctor earns several times less than a famous celebrity for the amount of time invested. In Rome, gladiators were quite popular with housewives of both the plebeian and nobility alike. Actors in the Renaissance Europe enjoyed fame and at times immunity from some crimes and today's society of entertainment is no exception to the rule. In exchange for their pride and personal space and a very low career security, they could potentially live lavishly in cultural capitals such as Hollywood and New York being worshipped by people as entertainment icons. The Entertainment Moguls often take advantage of that by setting up contracts and hiring agents who get paid relative to the success of their star to be. While the benefits of becoming a celebrity these days can be great, so are the drawbacks. The paparazzi seeks any opportunity to pull a smear job on their target, the reviewers are often insatiable critics who at time hates certain stars on principle and the ever demanding agents puts them through a stressful schedule with little choice in what they do and a less than stable domestic life. Still with money being a source of happiness and entertainment a seemingly inexhaustible well of money, it is no wonder why the entertainment industry is so powerful especially in this time.</English>
-		<Italian>L'intrattenimento ha sempre avuto un aspetto importante nella società, nonostante la percezione attuale scettica che un dottore guadagni molto meno di una celebrità famosa, in rapporto al tempo investito. A roma i gladiatori erano molto popolari fra le donne sia delle famiglie povere, che di quelle ricche. Gli attori nell'Europe rinascimentale godevano di fama e, a volte, anche dell'immunità da alcuni crimini; la società attuale non fa eccezione alla regola. In cambio del loro orgoglio, del loro spazio personale e di una sicurezza molto bassa riguardo alla loro carriera, possono vivere spensieratamente nelle capitali culturali come Hollywood e New York, essendo ritenute dalle persone normali icone dell'intrattenimento. Entertainment Moguls traggono vantaggio da questo firmando contratti e assumendo agenti che vengono pagati in base al successo dei loro assistiti. Anche se essere una celebrità ha molti benefici, ci sono anche molti inconvenienti: i paparazzi cerano ogni opportunità per poter spiare il loro bersaglio, i critici sono spesso persone insaziabili che criticano le star per principio, e gli agenti troppo esigenti li costringono ad un'agenda stressante con una piccola scelta su cosa fare, e una vita domestica instabile. Dato che i soldi sono una fonte di felicità e l'intrattenimento è una fonte inesauribile di soldi, non è una novità che l'industria dell'intrattenimento sia così importante, specialmente in questo periodo.</Italian>
+		<Italian>L'intrattenimento ha sempre avuto un aspetto importante nella società, nonostante la percezione attuale scettica che un dottore guadagni molto meno di una celebrità famosa, in rapporto al tempo investito. A Roma i gladiatori erano molto popolari fra le donne sia delle famiglie povere, che di quelle ricche. Gli attori nell'Europe rinascimentale godevano di fama e, a volte, anche dell'immunità da alcuni crimini; la società attuale non fa eccezione alla regola. In cambio del loro orgoglio, del loro spazio personale e di una sicurezza molto bassa riguardo alla loro carriera, possono vivere spensieratamente nelle capitali culturali come Hollywood e New York, essendo ritenute dalle persone normali icone dell'intrattenimento. Entertainment Moguls traggono vantaggio da questo firmando contratti e assumendo agenti che vengono pagati in base al successo dei loro assistiti. Anche se essere una celebrità ha molti benefici, ci sono anche molti inconvenienti: i paparazzi cerano ogni opportunità per poter spiare il loro bersaglio, i critici sono spesso persone insaziabili che criticano le star per principio, e gli agenti troppo esigenti li costringono ad un'agenda stressante con una piccola scelta su cosa fare, e una vita domestica instabile. Dato che i soldi sono una fonte di felicità e l'intrattenimento è una fonte inesauribile di soldi, non è una novità che l'industria dell'intrattenimento sia così importante, specialmente in questo periodo.</Italian>
 		<Russian>Развлечения всегда занимали видное место в обществе, несмотря на сегодняшнее мнение ряда скептиков о том, что врач зарабатывает в несколько раз меньше, чем известная знаменитость с эстрады за свое рабочее время. Еще в Древнем Риме гладиаторы были весьма популярны у обывателей как среди плебеев, так и среди знати. Актеры в Европе эпохи Возрождения пользовались славой и временами иммунитетом от преследования за некоторые преступления, и нынешнее потребительское общество не является исключением из правила. В обмен на славу, личное пространство и очень низкую карьерную безопасность они потенциально могли бы щедро жить в культурных столицах, таких как Голливуд и Нью-Йорк, которым люди поклонялись как иконы развлечений. Капитаны индустрии развлечений часто пользуются этим, заключая контракты и нанимая агентов, которым платят в зависимости от успеха их звезды. В то время как преимущества стать знаменитостью в наши дни могут быть огромными, есть и недостатки. Папарацци ищут любую возможность очернить свою цель, рецензенты часто являются ненасытными критиками, которые иногда принципиально ненавидят определенных звезд, а постоянно требовательные агенты проводят их через напряженный график с небольшим выбором того, что они делают, и меньшим, чем стабильная семейная жизнь. Несмотря на то, что деньги являются источником счастья, а развлечения - неисчерпаемым источником денег, неудивительно, почему индустрия развлечений так сильна, особенно в наше время.</Russian>
 	</TEXT>
 	<TEXT>
@@ -624,13 +638,14 @@
 		<English>Safari Hunters</English>
 		<French>Chasseurs Safari</French>
 		<Russian>Îõîòíèêè ñàôàðè</Russian>
+		<Italian>Cacciatori di safari</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SAFARI_HUNTERS_GUIDE</Tag>
 		<English>Safari Hunters Guide</English>
 		<French>Guide des Chasseurs Safari</French>
 		<German>Safari-Hunters-Führer</German>
-		<Italian>Guida di Safari Hunters</Italian>
+		<Italian>Guida di Cacciatori di safari</Italian>
 		<Spanish>Ruta de Safari Hunters</Spanish>
 		<Russian>Ôèëèàë "ÎÑ"</Russian>
 	</TEXT>
@@ -645,7 +660,7 @@
 		<English>HQ - Safari Hunters</English>
 		<French>Siège des Chasseurs Safari</French>
 		<German>Safari-Hunters-Zentrale</German>
-		<Italian>QG di Safari Hunters</Italian>
+		<Italian>Quartier generale di Cacciatori di safari</Italian>
 		<Russian>Îõîòíèêè ñàôàðè</Russian>
 	</TEXT>
 	<TEXT>
@@ -659,13 +674,14 @@
 		<English>Ultimate Soldiers</English>
 		<French>Soldats Ultimes</French>
 		<Russian>Óíèâåðñàëüíûå ñîëäàòû</Russian>
+		<Italian>Ultimate soldiers accociation</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_ULTIMATE_SOLDIERS</Tag>
 		<English>HQ - Ultimate Soldiers</English>
 		<French>Le Siège de Soldats Ultimes</French>
 		<German>Ultimate Soldiers Zentrale</German>
-		<Italian>QG di Ultimate Soldiers</Italian>
+		<Italian>Quartier generale di Ultimate soldiers accociation</Italian>
 		<Russian>Óíèâåðñàëüíûå ñîëäàòû</Russian>
 	</TEXT>
 	<TEXT>
@@ -680,7 +696,7 @@
 		<English>Ultimate Soldiers Trainer</English>
 		<French>Entraîneur Soldats Ultimes</French>
 		<German>Ultimate Soldiers Ausbilder</German>
-		<Italian>Filiale di Ultimate Soldiersr</Italian>
+		<Italian>Addestratore di Ultimate soldiers accociation</Italian>
 		<Spanish>Instrucción de Ultimate Soldiers</Spanish>
 		<Russian>Áàçà "ÓÑ"</Russian>
 	</TEXT>
@@ -697,13 +713,14 @@
 		<French>Confiseries Wonka</French>
 		<German>Wonka Confiserie</German>
 		<Russian>Êîíäèòåðñêàÿ Âîíêà</Russian>
+		<Italian>Wonka confetture</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HQ_WONKA_CONFECTIONERIES</Tag>
 		<English>HQ - Wonka Confectioneries</English>
 		<French>Siège des Confiseries Wonka</French>
 		<German>Wonka Confiserie Zentrale</German>
-		<Italian>QG di Wonka Confectioneries</Italian>
+		<Italian>Quartier generale di Wonka confetture</Italian>
 		<Spanish>Wonka Confectioneries</Spanish>
 		<Russian>Êîíäèòåðñêàÿ Âîíêà</Russian>
 	</TEXT>
@@ -720,7 +737,7 @@
 		<English>Wonka Confectioneries Shop</English>
 		<French>Magasin des Confiseries Wonka</French>
 		<German>Wonka Confiserie Geschäftsstelle</German>
-		<Italian>Negozio di Wonka Confectioneries</Italian>
+		<Italian>Negozio di Wonka confetture</Italian>
 		<Spanish>Tienda de Wonka Confectioneries</Spanish>
 		<Russian>Ðåñòîðàí "ÊÂ"</Russian>
 	</TEXT>
@@ -737,7 +754,7 @@
 		<English>[ICON_BULLET]%d1%% Income from Corporations</English>
 		<French>[ICON_BULLET]%d1%% de Revenus des Corporations</French>
 		<German>[ICON_BULLET]%d1%% Einkommen aus Kapitalgesellschaften</German>
-		<Italian>[ICON_BULLET]%d1%% di rendita dalle Corporazioni</Italian>
+		<Italian>[ICON_BULLET]Aumento di rendita dalle corporazioni [COLOR_HIGHLIGHT_TEXT]%d1%%[COLOR_REVERT]</Italian> <!--tech Stock Brokering-->
 		<Spanish>[ICON_BULLET]%d1%%[ICON_GOLD] por corporaciones</Spanish>
 		<Russian>[ICON_BULLET]%d1%% Äîõîä ñ êîðïîðàöèé</Russian>
 	</TEXT>
@@ -753,6 +770,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CORPORATION_BONUS_CONSUMES</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT][LINK=%s1_BonusType]%s2_BonusName[\LINK][COLOR_REVERT] (%F3_BonusIcon)</English>
+		<Italian>[COLOR_HIGHLIGHT_TEXT][LINK=%s1_BonusType]%s2_BonusName[\LINK][COLOR_REVERT] (%F3_BonusIcon)PROVA56</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CORPORATION_BONUS_GENERATES</Tag>

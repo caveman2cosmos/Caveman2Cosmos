@@ -377,7 +377,7 @@ public:
 	int getGlobalSourcedProperty(PropertyTypes eProperty) const;
 	int getTotalBuildingSourcedProperty(PropertyTypes eProperty) const;
 	int getTotalUnitSourcedProperty(PropertyTypes eProperty) const;
-	int getNumActiveBuilding(BuildingTypes eIndex) const;
+	bool isActiveBuilding(BuildingTypes eIndex) const;
 	bool hasActiveWorldWonder() const;
 
 	int getNumActiveWorldWonders() const;
@@ -1059,8 +1059,7 @@ public:
 	int getBuildingProductionDecay(BuildingTypes eIndex) const;
 	int getBuildingProductionDecayTurns(BuildingTypes eIndex) const;
 
-	int getBuildingOriginalOwner(BuildingTypes eIndex) const;
-	int getBuildingOriginalTime(BuildingTypes eIndex) const;
+	BuiltBuildingData getBuildingData(const BuildingTypes eType) const;
 
 	int getProgressOnUnit(const UnitTypes eUnit) const;
 	void setProgressOnUnit(const UnitTypes eUnit, int iNewValue);
@@ -1140,7 +1139,8 @@ public:
 	void handleBuildingCounts(const BuildingTypes eType, const int iChange, const bool bWonder);
 
 	void alterBuildingLedger(const BuildingTypes eType, const bool bAdd, const PlayerTypes eOwner = NO_PLAYER, const int iTime = MIN_INT);
-	std::map<BuildingTypes, BuiltBuildingData> getBuildingLedger() const { return m_buildingLedger;}
+	std::map<BuildingTypes, BuiltBuildingData> getBuildingLedger() const { return m_buildingLedger; }
+	std::vector<BuildingTypes> getHasBuildings() const { return m_hasBuildings; }
 
 	bool isValidBuildingLocation(BuildingTypes eType) const;
 
@@ -1665,11 +1665,13 @@ protected:
 	mutable bool* m_pabHasVicinityBonus;
 	mutable bool* m_pabHasRawVicinityBonus;
 
+	bool* m_bHasBuildings;
 	bool* m_pabReligiouslyDisabledBuilding;
 	int* m_paiUnitCombatExtraStrength;
 	bool* m_pabAutomatedCanBuild;
 
 	std::vector<PropertySpawns> m_aPropertySpawns;
+	std::vector<BuildingTypes> m_hasBuildings;
 
 	std::vector<short> m_vFreeBuildings;
 	std::vector<short> m_vDisabledBuildings;
@@ -2150,7 +2152,7 @@ public:
 		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, hasBonus, BonusTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, isCoastal, int);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, hasBuilding, BuildingTypes);
-		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getNumActiveBuilding, BuildingTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, bool, isActiveBuilding, BuildingTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getCommerceRateTimes100, CommerceTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getBaseCommerceRateTimes100, CommerceTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getCultureTimes100, PlayerTypes);

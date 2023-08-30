@@ -509,9 +509,9 @@ int CyCity::hasBuilding(int /*BuildingTypes*/ iIndex) const
 	return m_pCity->hasBuilding((BuildingTypes) iIndex);
 }
 
-int CyCity::getNumActiveBuilding(int /*BuildingTypes*/ iIndex) const
+bool CyCity::isActiveBuilding(int /*BuildingTypes*/ iIndex) const
 {
-	return m_pCity->getNumActiveBuilding((BuildingTypes) iIndex);
+	return m_pCity->isActiveBuilding((BuildingTypes) iIndex);
 }
 
 bool CyCity::isFreeBuilding(int /*BuildingTypes*/ iIndex) const
@@ -1369,14 +1369,14 @@ int CyCity::getBuildingProductionDecayTurns(int /*BuildingTypes*/ eIndex) const
 	return m_pCity->getBuildingProductionDecayTurns((BuildingTypes)eIndex);
 }
 
-int CyCity::getBuildingOriginalOwner(int /*BuildingTypes*/ iIndex) const
+int CyCity::getBuildingOriginalOwner(int /*BuildingTypes*/ iType) const
 {
-	return m_pCity->getBuildingOriginalOwner((BuildingTypes) iIndex);
+	return m_pCity->getBuildingData((BuildingTypes) iType).eBuiltBy;
 }
 
-int CyCity::getBuildingOriginalTime(int /*BuildingTypes*/ iIndex) const
+int CyCity::getBuildingOriginalTime(int /*BuildingTypes*/ iType) const
 {
-	return m_pCity->getBuildingOriginalTime((BuildingTypes) iIndex);
+	return m_pCity->getBuildingData((BuildingTypes) iType).iTimeBuilt;
 }
 
 int CyCity::getProgressOnUnit(int iIndex) const

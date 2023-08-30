@@ -31,7 +31,7 @@
 		<English>, %d1 Range</English>
 		<French>, portée %d1</French>
 		<German>, %d1 Reichweite</German>
-		<Italian>, Raggio d'azione %d1</Italian>
+		<Italian>, raggio d'azione %d1</Italian>
 		<Spanish>, %d1 de alcance</Spanish>
 		<Russian>, %d1 дальности</Russian>
 	</TEXT>
@@ -39,16 +39,19 @@
 		<Tag>TXT_KEY_UNITHELP_ALWAYS_VISIBLE</Tag>
 		<English>[ICON_BULLET]Always Visible</English>
 		<German>[ICON_BULLET]immer sichtbar</German>
+		<Italian>[ICON_BULLET]Sempre visibile</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_BRANCH_CIVILIAN</Tag>
 		<English>[ICON_BULLET]Civilian Branch</English>
 		<German>[ICON_BULLET]ziviler Zweig</German>
 		<Russian>[ICON_BULLET]Гражданские</Russian>
+		<Italian>[ICON_BULLET]Branca civile</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_BRANCH_MILITARY</Tag>
 		<English>[ICON_BULLET]Military Branch</English>
+		<Italian>[ICON_BULLET]Branca militare</Italian>
 		<German>[ICON_BULLET]militärischer Zweig</German>
 		<Russian>[ICON_BULLET]Комбатанты</Russian>
 	</TEXT>
@@ -56,7 +59,7 @@
 		<Tag>TXT_KEY_UNITHELP_BREAKDOWN_CHANCE</Tag>
 		<English>[ICON_BULLET]Breakdown Chance: %D1%%</English>
 		<French>[ICON_BULLET]%D1%% chance de démolir les défenses de la ville à chaque round d'attaque.</French>
-		<Italian>[ICON_BULLET]%D1%% chance di Abbattimento delle difese cittadine per ogni round di combattimento.</Italian>
+		<Italian>[ICON_BULLET]%D1%% chance di abbattimento delle difese cittadine per ogni round di combattimento.</Italian>
 		<Polish>[ICON_BULLET]%D1%% szansy do złamania obrony miasta w każdej rundzie.</Polish>
 		<Russian>[ICON_BULLET]Вероятность поломки: %D1%%</Russian>
 	</TEXT>
@@ -64,7 +67,7 @@
 		<Tag>TXT_KEY_UNITHELP_BREAKDOWN_DAMAGE</Tag>
 		<English>[ICON_BULLET]Breakdown Amount: %D1%%</English>
 		<French>[ICON_BULLET]%D1%% dégâts aux défenses de la ville en cas de tentative de démolition réussi.</French>
-		<Italian>[ICON_BULLET]%D1%% di danno alle difese cittadine quando Abbattimento ha successo.</Italian>
+		<Italian>[ICON_BULLET]%D1%% di danno alle difese cittadine quando l'abbattimento ha successo.</Italian>
 		<Polish>[ICON_BULLET]%D1%% obrażeń do obrony miasta przy udanym złamaniu obrony.</Polish>
 		<Russian>[ICON_BULLET]Повреждения: %D1%%</Russian>
 	</TEXT>
@@ -72,7 +75,7 @@
 		<Tag>TXT_KEY_UNITHELP_CAN_ALWAYS_ATTACK_CITIES</Tag>
 		<English>[ICON_BULLET]Can Always Attack Cities</English>
 		<French>[ICON_BULLET]Ignore la Défense Minimum d'une Ville</French>
-		<Italian>[ICON_BULLET]Ignora il livello minimo di difesa necessario per attaccare</Italian>
+		<Italian>[ICON_BULLET]Ignora le difese della città e può sempre attaccare</Italian>
 		<Polish>[ICON_BULLET]Ignoruje Minimalną Obronę wymaganą do ataku</Polish>
 		<Russian>[ICON_BULLET]Всегда может атаковать города</Russian>
 	</TEXT>
@@ -80,7 +83,7 @@
 		<Tag>TXT_KEY_UNITHELP_CAN_ONLY_ATTACK_CITIES</Tag>
 		<English>[ICON_BULLET]Can Only Attack Cities</English>
 		<French>[ICON_BULLET]Attaque uniquement les villes</French>
-		<Italian>[ICON_BULLET]Attacca solo città</Italian>
+		<Italian>[ICON_BULLET]Può attaccare solo città</Italian>
 		<Polish>[ICON_BULLET]Atakuje tylko miasta</Polish>
 		<Russian>[ICON_BULLET]Атакует только города</Russian>
 	</TEXT>
@@ -91,13 +94,14 @@
 		<German>[ICON_BULLET]Frachteinheiten: %d1</German>
 		<Polish>[ICON_BULLET]Objętość Jedn. Transportu: %d1</Polish>
 		<Russian>[ICON_BULLET]Тоннаж: %d1</Russian>
+		<Italian>[ICON_BULLET]Dimensione carico: %d1</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_CARGO_SPACE</Tag>
 		<English>Cargo Space: %d1/%d2</English>
 		<French>Capacité d'emport: %d1/%d2</French>
 		<German>Frachtraum: %d1/%d2</German>
-		<Italian>Spazio di carico: %d1/%d2</Italian>
+		<Italian>Massimo unità trasportabili: %d1/%d2</Italian>
 		<Spanish>Bodega: %d1/%d2</Spanish>
 		<Russian>Грузоподъемность: %d1/%d2</Russian>
 	</TEXT>
@@ -107,13 +111,14 @@
 		<French>[ICON_BULLET]Taille de soute (# estimé d'unités): %d1</French>
 		<Polish>[ICON_BULLET]Podstawowa Przestrzeń Transportowa (szacowana # jednostek): %d1</Polish>
 		<Russian>[ICON_BULLET]Базовая вместимость (около # отрядов): %d1</Russian>
+		<Italian>[ICON_BULLET]Dimensione di carico base (stimata): %d1</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_CARGO_SPACE_FOREIGN</Tag>
 		<English>[ICON_BULLET]Cargo Space: %d1</English>
 		<French>[ICON_BULLET]Capacité d'emport: %d1</French>
 		<German>[ICON_BULLET]Frachtraum: %d1</German>
-		<Italian>[ICON_BULLET]Spazio di carico: %d1</Italian>
+		<Italian>[ICON_BULLET]Massimo unità trasportabili: %d1</Italian>
 		<Spanish>[ICON_BULLET]Bodega: %d1</Spanish>
 		<Polish>[ICON_BULLET]Przestrzeń transportowa: %d1</Polish>
 		<Russian>[ICON_BULLET]Грузоподъемность: %d1</Russian>
@@ -123,7 +128,7 @@
 		<English>[SPACE](Carries %s1)</English>
 		<French>[SPACE](transporte : %s1)</French>
 		<German>[SPACE](Befördert %s1)</German>
-		<Italian>[SPACE](trasporta %s1)</Italian>
+		<Italian>[SPACE]sta trasportando %s1</Italian>
 		<Spanish>[SPACE](%s1)</Spanish>
 		<Russian>[SPACE](перевозит %s1)</Russian>
 	</TEXT>
@@ -132,7 +137,7 @@
 		<English>, CP: %d1/%d2</English>
 		<French>, Pts Contr: %d1/%d2</French>
 		<German>, Kontrollpunkte: %d1/%d2</German>
-		<Italian>, Punti di controllo: %d1/%d2</Italian>
+		<Italian>, punti di comando: %d1/%d2</Italian>
 		<Spanish>, PC: %d1/%d2</Spanish>
 		<Polish>, Punkty Kontroli: %d1/%d2</Polish>
 	</TEXT>
@@ -141,7 +146,7 @@
 		<English>, CR: %d1</English>
 		<French>, Port. Com.: %d1</French>
 		<German>, Kommandobereich: %d1</German>
-		<Italian>, Raggio di comando: %d1</Italian>
+		<Italian>, raggio di comando: %d1</Italian>
 		<Spanish>, Alcance: %d1</Spanish>
 		<Polish>, Ranga Dowódcy: %d1</Polish>
 	</TEXT>
@@ -151,6 +156,7 @@
 		<French>[ICON_BULLET]Dégâts de %s1_UNITCOMBAT: %d2_Mod%%. se soigne en %d3 Tours.</French>
 		<Polish>[ICON_BULLET]Obrażenia otrzymane %s1_UNITCOMBAT: %d2_Mod%%. Uleczone w %d3 tur.</Polish>
 		<Russian>[ICON_BULLET]Урон %s1_UNITCOMBAT: %d2_Mod%%. Лечит за %d3 ходов.</Russian>
+		<Italian>[ICON_BULLET]Danno di %s1_UNITCOMBAT: %d2_Mod%%. Guarisce in %d3 turno(i).</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_DAMAGE_BY_UNITCOMBAT_NOHEAL</Tag>
@@ -158,13 +164,14 @@
 		<French>[ICON_BULLET]Dégâts de %s1_UNITCOMBAT: %d2_Mod%%. [COLOR_WARNING_TEXT]Cannot heal here.[COLOR_REVERT]</French>
 		<Polish>[ICON_BULLET]Obrażenia otrzymane %s1_UNITCOMBAT: %d2_Mod%%. [COLOR_WARNING_TEXT]Cannot heal here.[COLOR_REVERT]</Polish>
 		<Russian>[ICON_BULLET]Урон %s1_UNITCOMBAT: %d2_Mod%%. [COLOR_WARNING_TEXT]Cannot heal here.[COLOR_REVERT]</Russian>
+		<Italian>[ICON_BULLET]Danno di %s1_UNITCOMBAT: %d2_Mod%%. Non è possibile guarire qui.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_FIRST_STRIKES</Tag>
 		<English>[ICON_BULLET]First Strikes: %d1</English>
 		<French>[ICON_BULLET]Premières attaques: %d1</French>
 		<German>[ICON_BULLET]Erstangriffe: %d1</German>
-		<Italian>[ICON_BULLET]Attacchi improvvisi: %d1</Italian>
+		<Italian>[ICON_BULLET]Primi attacchi: %d1</Italian>
 		<Spanish>[ICON_BULLET]Ataques de iniciativa: %d1</Spanish>
 		<Russian>[ICON_BULLET]Первый удар: %d1</Russian>
 	</TEXT>
@@ -173,7 +180,7 @@
 		<English>[ICON_BULLET]Immune to First Strikes</English>
 		<French>[ICON_BULLET]Immunité contre les premières attaques</French>
 		<German>[ICON_BULLET]Immun gegen Erstangriffe</German>
-		<Italian>[ICON_BULLET]Immune agli 'Attacchi improvvisi'</Italian>
+		<Italian>[ICON_BULLET]Immune ai primi attacchi</Italian>
 		<Spanish>[ICON_BULLET]Inmune a los ataques de iniciativa</Spanish>
 		<Russian>[ICON_BULLET]Игнорирует Первый удар</Russian>
 	</TEXT>
@@ -182,7 +189,7 @@
 		<English>[ICON_BULLET]First Strikes: %d1-%d2</English>
 		<French>[ICON_BULLET]Premières attaques: %d1-%d2</French>
 		<German>[ICON_BULLET]Erstangriffe: %d1-%d2</German>
-		<Italian>[ICON_BULLET]Attacchi improvvisi: %d1-%d2</Italian>
+		<Italian>[ICON_BULLET]Primi attacchi: %d1-%d2</Italian>
 		<Spanish>[ICON_BULLET]Ataques de iniciativa: %d1-%d2</Spanish>
 		<Russian>[ICON_BULLET]Первый удар: %d1-%d2</Russian>
 	</TEXT>
@@ -191,7 +198,7 @@
 		<English>[ICON_BULLET]Fortified: %d1%%</English>
 		<French>[ICON_BULLET]Bonus de retranchement : %d1%%</French>
 		<German>[ICON_BULLET]Verschanzungsbonus: %d1%%</German>
-		<Italian>[ICON_BULLET]Bonus per la fortificazione: %d1%%</Italian>
+		<Italian>[ICON_BULLET]Unità fortificata: %d1%%</Italian>
 		<Russian>[ICON_BULLET]Укрепленный: %d1%%</Russian>
 	</TEXT>
 	<TEXT>
@@ -199,7 +206,7 @@
 		<English>Cannot move (%d1)</English>
 		<French>Déplacement impossible (%d1)</French>
 		<German>Unbeweglich (%d1)</German>
-		<Italian>Impossibile muovere (%d1)</Italian>
+		<Italian>Impossibile muoversi (%d1)</Italian>
 		<Spanish>No se puede mover (%d1)</Spanish>
 		<Russian>Неподвижен (%d1)</Russian>
 	</TEXT>
@@ -209,6 +216,7 @@
 		<French>[ICON_BULLET]%D2_Change Portée étendue de Perception (%F2_Type) lorsque sur une case %s3_Plot</French>
 		<German>[ICON_BULLET]%s3_Plot: %D1_Change %F2_Type-Sichtweite</German>
 		<Russian>[ICON_BULLET]%D1_Change %F2_Type к зоркости на %s3_Plot</Russian>
+		<Italian>[ICON_BULLET]%D1_Change di possibilità di aumentare la percezione di %F2_Type su una casella %s3_Plot</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_INVISIBILITY_SPOT_PLOT_RANGE_VALUE_ADJ</Tag>
@@ -216,6 +224,7 @@
 		<French>[ICON_BULLET]%D2_Change Portée étendue de Perception (%F2_Type) lorsque sur une case %s3_Plot (inclus dans le total.)</French>
 		<German>[ICON_BULLET]%s3_Plot: %D1_Change %F2_Type-Sichtweite (in Gesamtwert bereits eingerechnet)</German>
 		<Russian>[ICON_BULLET]%D1_Change %F2_Type к зоркости на %s3_Plot (общее значение)</Russian>
+		<Italian>[ICON_BULLET]%D1_Change di possibilità di aumentare la percezione di %F2_Type su una casella %s3_Plot (incluso nel totale)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_INVISIBILITY_SPOT_PLOT_VALUE</Tag>
@@ -223,6 +232,7 @@
 		<French>[ICON_BULLET]%D1_Change Perception améliorée (%F2_Type) de lorsque sur une case %s3_Plot</French>
 		<German>[ICON_BULLET]%s3_Plot: %D1_Change %F2_Type-Sicht</German>
 		<Russian>[ICON_BULLET]%D1_Change %F2_Type к зоркости на %s3_Plot</Russian>
+		<Italian>[ICON_BULLET]%D1_Change di possibilità di rilevare %F2_Type su una casella %s3_Plot</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_INVISIBILITY_SPOT_RANGE_VALUE</Tag>
@@ -230,6 +240,7 @@
 		<French>[ICON_BULLET]%D1_Change Portée étendue de détection %F2_Type</French>
 		<German>[ICON_BULLET]%D1_Change %F2_Type-Sichtweite</German>
 		<Russian>[ICON_BULLET]%D1_Change %F2_Type к дальности обнаружения</Russian>
+		<Italian>[ICON_BULLET]%D1_Change di possibilità di rilevare %F2_Type</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_INVISIBILITY_SPOT_SAME_TILE_VALUE</Tag>
@@ -237,6 +248,7 @@
 		<French>[ICON_BULLET]Perception %D1_Change %F2_Type sur la même case</French>
 		<German>[ICON_BULLET]%D1_Change %F2_Type-Sicht in gleichem Gelände</German>
 		<Russian>[ICON_BULLET]%D1_Change %F2_Type к зоркости на этой клетке</Russian>
+		<Italian>[ICON_BULLET]%D1_Change di possibilità di rilevare %F2_Type sulla stessa casella</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_INVISIBILITY_SPOT_VALUE</Tag>
@@ -244,6 +256,7 @@
 		<French>[ICON_BULLET]%d1_Change %F2_Type Perception</French>
 		<German>[ICON_BULLET]%d1_Change %F2_Type-Sicht</German>
 		<Russian>[ICON_BULLET]%d1_Change %F2_Type зоркости</Russian>
+		<Italian>[ICON_BULLET]%d1_Change possibilità di rilevare %F2_Type</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_INVISIBILITY_VEIL_NEGATED</Tag>
@@ -251,6 +264,7 @@
 		<French>[ICON_BULLET]Tout le potentiel d'invisibilité de type [LINK=%s1_Type]%F2_TypeName[\LINK] est pour l'instant annulé</French>
 		<German>[ICON_BULLET]Jede [LINK=%s1_Type]%F2_TypeName[\LINK]-Unsichtbarkeit ist aufgehoben.</German>
 		<Russian>[ICON_BULLET]Все типы скрытности [LINK=%s1_Type]%F2_TypeName[\LINK] прекращают действовать</Russian>
+		<Italian>[ICON_BULLET]Invisibilità di [LINK=%s1_Type]%F2_TypeName[\LINK] è annullata</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_INVISIBILITY_VEIL_PLOT_VALUE</Tag>
@@ -258,6 +272,7 @@
 		<French>[ICON_BULLET]%D1_Change Invisibilité étendue (%F2_Type) de lorsque sur une case %s3_Plot</French>
 		<German>[ICON_BULLET]%s3_Plot: %D1_Change %F2_Type-Unsichtbarkeit</German>
 		<Russian>[ICON_BULLET]%D1_Change %F2_Type к скрытности на %s3_Plot</Russian>
+		<Italian>[ICON_BULLET]%D1_Change di possibilità di invisibilità di %F2_Type Veil sulla casella %s3_Plot</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_INVISIBILITY_VEIL_VALUE</Tag>
@@ -265,13 +280,14 @@
 		<French>[ICON_BULLET]%d1_Change Invisibilité %F2_Type</French>
 		<German>[ICON_BULLET]%d1_Change %F2_Type-Unsichtbarkeit</German>
 		<Russian>[ICON_BULLET]%d1_Change к скрытности для %F2_Type</Russian>
+		<Italian>[ICON_BULLET]%d1_Change di possibilità di invisibilità di %F2_Type</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_NO_ESPIONAGE</Tag>
 		<English>[COLOR_WARNING_TEXT]Cannot Perform Espionage[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Ne peut pas espionner[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]Kann keine Spionagemissionen ausführen[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]Impossibile eseguire lo spionaggio[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_WARNING_TEXT]Impossibile eseguire missioni di spionaggio[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]No se puede realizar espionaje[COLOR_REVERT]</Spanish>
 		<Russian>[COLOR_WARNING_TEXT]Невозможно выполнить шпионаж[COLOR_REVERT]</Russian>
 	</TEXT>
@@ -280,7 +296,7 @@
 		<English>[SPACE](Moved)</English>
 		<French>[SPACE](Déplacé)</French>
 		<German>[SPACE](Verschoben)</German>
-		<Italian>[SPACE](In movimento)</Italian>
+		<Italian>[SPACE] unità già mossa in questo turno</Italian>
 		<Spanish>[SPACE](Se ha trasladado)</Spanish>
 		<Russian>[SPACE](в движении)</Russian>
 	</TEXT>
@@ -289,7 +305,7 @@
 		<English>[SPACE](Visible by %s1_player)</English>
 		<French>[SPACE](Dans le champ de vision de %s1_player)</French>
 		<German>[SPACE](Sichtbar für %s1_player)</German>
-		<Italian>[SPACE](Visibile da %s1_player)</Italian>
+		<Italian>[SPACE] Unità visibile dal giocatore %s1_player)</Italian>
 		<Spanish>[SPACE](Visible por %s1_player)</Spanish>
 		<Russian>[SPACE](Видим %s1_player)</Russian>
 	</TEXT>
@@ -300,6 +316,7 @@
 		<German>[ICON_BULLET]Selbstheilung: %d1%%</German>
 		<Polish>[ICON_BULLET]Jednostka leczy się sama: %d1%%</Polish>
 		<Russian>[ICON_BULLET]Самолечение: %d1%%</Russian>
+		<Italian>[ICON_BULLET]Autoguarigione: %d1%%</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_SELF_HEAL_NONE</Tag>
@@ -307,6 +324,7 @@
 		<French>[ICON_BULLET]Cette unité ne peut se soigner sans Assistance</French>
 		<Polish>[ICON_BULLET]Ta jednostka może być tylko wyleczona/naprawiona przez lekarza/mechanika.</Polish>
 		<Russian>[ICON_BULLET]Этот отряд не может лечить без посторонней помощи</Russian>
+		<Italian>[ICON_BULLET]Questa unità non può guarire senza assistenza</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_STEALTH_DEFEND</Tag>
@@ -314,6 +332,7 @@
 		<French>[ICON_BULLET]Cette unité se défendra furtivement</French>
 		<German>[ICON_BULLET]Diese Einheit kann sich gegen Tarnangriffe verteidigen.</German>
 		<Russian>[ICON_BULLET]Этот отряд будет скрытно обороняться</Russian>
+		<Italian>[ICON_BULLET]Questa unita si difende dalle unità stealth</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_STEALTH_STRIKES</Tag>
@@ -321,16 +340,19 @@
 		<French>[ICON_BULLET]%d1_Change Assauts furtifs</French>
 		<German>[ICON_BULLET]%D1_Change [NUM1:Tarnangriff:Tarnangriffe]</German>
 		<Russian>[ICON_BULLET]%d1_Change к скрытной атаке</Russian>
+		<Italian>[ICON_BULLET]%d1_Change possibilità di assalto stealth</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_UPKEEP</Tag>
 		<English>[ICON_BULLET]Upkeep: %s1 [ICON_GOLD]</English>
+		<Italian>[ICON_BULLET]Costi di mantenimento: %s1 [ICON_GOLD]</Italian>
 		<German>[ICON_BULLET]laufende Kosten: %s1 [ICON_GOLD]</German>
 		<Russian>[ICON_BULLET]Ñîäåðæàíèå: %s1 [ICON_GOLD]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_UPKEEP_CHANGE</Tag>
 		<English>[ICON_BULLET]Upkeep change: %d1 [ICON_GOLD]</English>
+		<Italian>[ICON_BULLET]Variazione costi di mantenimento: %d1 [ICON_GOLD]</Italian>
 		<German>[ICON_BULLET]Anpassung laufende Kosten: %d1 [ICON_GOLD]</German>
 		<Russian>[ICON_BULLET]Изменение содержания: %d1 [ICON_GOLD]</Russian>
 	</TEXT>
@@ -339,28 +361,33 @@
 		<English>, XP: (%s1/%d2)</English>
 		<German>, Erfahrungspunkte: (%s1/%d2)</German>
 		<Spanish>, PX: (%s1/%d2)</Spanish>
+		<Italian>, punti esperienza: %s1/%d2</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_XP_MOD_CAPITAL</Tag>
 		<English>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% for being trained in a Capital or Government Center[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% pour avoir été entraîné dans la capitale, ou un Centre du gouvernement[COLOR_REVERT]</French>
 		<Polish>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% za bycie zwerbowanym w Stolicy[COLOR_REVERT]</Polish>
+		<Italian>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% per essere stato addestrato nella capitale o in un centro governativo[COLOR_REVERT]</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_XP_MOD_HOLY_CITY_NONSTATE_RELIGION</Tag>
 		<English>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% for being trained in a Holy City to a Non-State Religion[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% pour avoir été entraîné dans une Ville Sainte d'une Religion non officielle[COLOR_REVERT]</French>
 		<Polish>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% za bycie zwerbowanym w Świętym Mieście religii nie będącej religią państwową[COLOR_REVERT]</Polish>
+		<Italian>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% per essere stato addestrato in una città santa di una religione non di stato[COLOR_REVERT]</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_XP_MOD_HOLY_CITY_STATE_RELIGION</Tag>
 		<English>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% for being trained in your State Religion's Holy City[COLOR_REVERT]</English>
+		<Italian>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% per essere stato addestrato nella città santa della tua religione di stato[COLOR_REVERT]</Italian>
 		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% pour avoir été entraîné dans la Ville Sainte de la Religion d'Etat[COLOR_REVERT]</French>
 		<Polish>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% za bycie zwerbowanym w Św. Mieście religii państwowej[COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_XP_MOD_TOTAL</Tag>
 		<English>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% Total XP modifier[COLOR_REVERT]</English>
+		<Italian>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% aumento totale di punti esperienza[COLOR_REVERT]</Italian>
 		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% EXP Modif. Total[COLOR_REVERT]</French>
 		<Polish>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% Modyfikator całkowitej ilości XP[COLOR_REVERT]</Polish>
 		<Russian>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% к модификатору общего ХР[COLOR_REVERT]</Russian>
@@ -368,6 +395,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_XP_TOTAL</Tag>
 		<English>[ICON_BULLET][COLOR_POSITIVE_TEXT]%d1 Total XP.[COLOR_REVERT]</English>
+		<Italian>[ICON_BULLET][COLOR_POSITIVE_TEXT]%d1 punti esperienza totali[COLOR_REVERT]</Italian>
 		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]Total d'EXP : %d1[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_POSITIVE_TEXT]%d1 [NUM1:Erfahrungspunkt:Erfahrungspunkte][COLOR_REVERT]</German>
 		<Polish>[ICON_BULLET][COLOR_POSITIVE_TEXT]%d1 Całkowita ilość XP.[COLOR_REVERT]</Polish>

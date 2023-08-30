@@ -3,10 +3,20 @@
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_FULL_CITY_SCREEN_BUILD_PROMPT</Tag>
 		<English>Full city screen on build prompt</English>
+		<Italian>Schermata città per la scelta edificio</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_FULL_CITY_SCREEN_BUILD_PROMPT_HELP</Tag>
 		<English>Enter full city screen, rather than just select city, when the player is prompted on what to build next.</English>
+		<Italian>Entra nella schermata della città, invece di selezionare semplicemente la città, quando ti viene chiesto cosa costruire dopo.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_OPTION_CITY_DELAY_CITY_CYCLE_To_END_OF_TURN</Tag>
+		<English>Delay city cycle to end of turn</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_OPTION_CITY_DELAY_CITY_CYCLE_To_END_OF_TURN_HELP</Tag>
+		<English>City cycle process will initiate when you try to end the turn</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_HIDE_UNCONSTRUCTABLE_BUILDINGS</Tag>
@@ -20,7 +30,7 @@
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_HIDE_UNCONSTRUCTABLE_BUILDINGS_HELP</Tag>
 		<English>Hides all buildings that cannot be constructed. This is the default value used when loading a save or starting a new game. Toggling this option won't change the current filter selection for any of your cities.</English>
-		<Italian>Nasconde tutti gli edifici che non possono essere costruiti. Questo è il valore predefinito utilizzato durante il caricamento di un salvataggio o l'inizio di una nuova partita. L'attivazione di questa opzione non cambierà la selezione del filtro corrente per nessuna delle tue città.</Italian>
+		<Italian>Nasconde tutti gli edifici che non possono essere costruiti. Questa è l'impostazione predefinita utilizzata dopo il caricamento di un salvataggio o all'inizio di una nuova partita. L'attivazione di questa opzione non cambierà la selezione del filtro corrente per nessuna delle tue città.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_HIDE_UNTRAINABLE_UNITS</Tag>
@@ -34,16 +44,16 @@
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_HIDE_UNTRAINABLE_UNITS_HELP</Tag>
 		<English>Hides all units that cannot be trained. This is the default value used when loading a save or starting a new game. Toggling this option won't change the current filter selection for any of your cities.</English>
-		<Italian>Nasconde tutti le unità che non possono essere addestrate. Questo è il valore predefinito utilizzato durante il caricamento di un salvataggio o l'inizio di una nuova partita. L'attivazione di questa opzione non cambierà la selezione del filtro corrente per nessuna delle tue città.</Italian>
+		<Italian>Nasconde tutte le unità che non possono essere addestrate. Questa è l'impostazione predefinita utilizzata dopo il caricamento di un salvataggio o all'inizio di una nuova partita. L'attivazione di questa opzione non cambierà la selezione del filtro corrente per nessuna delle tue città.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_ICON_SIZE</Tag>
 		<English>Icon size: %d1 pixels</English>
-		<Italian>Grandezza dell'icona: %d1 pixel</Italian>
+		<Italian>Grandezza delle icone: %d1 pixel</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_ICON_SIZE_HELP</Tag>
 		<English>The size of the main city selection icons, and unit/building icons within the construction tabs.</English>
-		<Italian>La dimensione delle principali icone nelle schermate delle città e delle icone di unità/edifici nelle schermate di produzione.</Italian>
+		<Italian>Cambia la dimensione delle principali icone nelle schermate delle città e delle icone di unità e edifici nelle schermate di produzione.</Italian>
 	</TEXT>
 </Civ4GameText>
