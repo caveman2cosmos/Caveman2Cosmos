@@ -26,7 +26,7 @@
 		<Tag>TXT_KEY_BUILD_ABATIS_THORN_HEDGE_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_ABATIS_THORN_HEDGE]Abatis[\LINK] (Consumed)</English>
 		<French>Construire un [LINK=IMPROVEMENT_ABATIS_THORN_HEDGE]Abattis[\LINK]</French>
-		<Italian>[LINK=IMPROVEMENT_ABATIS_THORN_HEDGE]Abbattuta[\LINK] (costruzione con unità consumata)</Italian>
+		<Italian>[LINK=IMPROVEMENT_ABATIS_THORN_HEDGE]Abbattuta[\LINK] (costruzione da unità)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_ABATIS_THORN_HEDGE]Abatis con cerco espinoso[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_ABATIS_THORN_HEDGE]Zasieki[\LINK]</Polish>
 		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_ABATIS_THORN_HEDGE]Çàñåêó[\LINK] (Ñîáèðàòåëü)</Russian>
@@ -94,7 +94,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BREAK_ICE_KILL</Tag>
 		<English>Remove [LINK=FEATURE_ICE]Ice[\LINK] (Consumed)</English>
-		<Italian>[LINK=FEATURE_ICE]Ghiaccio[\LINK] (rimozione con unità consumata)</Italian>
+		<Italian>[LINK=FEATURE_ICE]Ghiaccio[\LINK] (rimozione da unità)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BURN_VEGETATION</Tag>
@@ -121,7 +121,7 @@
 		<English>Build [LINK=IMPROVEMENT_COLONY_HABITAT_HUGE]Colony Habitat (Huge)[\LINK]</English>
 		<French>Construire des [LINK=IMPROVEMENT_COLONY_HABITAT_HUGE]Habitations Coloniales (Immenses)[\LINK]</French>
 		<German>Bauen ein [LINK=IMPROVEMENT_COLONY_HABITAT_HUGE]Kolonie Lebensraum (Riesig)[\LINK]</German>
-		<Italian>[LINK=IMPROVEMENT_COLONY_HABITAT_HUGE]Colonia con habitat enorme (costruzione)[\LINK]</Italian>
+		<Italian>[LINK=IMPROVEMENT_COLONY_HABITAT_HUGE]Colonia con habitat enorme[\LINK] (costruzione)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_COLONY_HABITAT_HUGE]Hábitat colonial enorme[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_COLONY_HABITAT_HUGE]Siedlisko (Wielkie)[\LINK]</Polish>
 		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_COLONY_HABITAT_HUGE]Æèëóþ êîëîíèþ (Îãðîìíóþ)[\LINK]</Russian>
@@ -131,7 +131,7 @@
 		<English>Build [LINK=IMPROVEMENT_COLONY_HABITAT_LARGE]Colony Habitat (Large)[\LINK]</English>
 		<French>Construire des [LINK=IMPROVEMENT_COLONY_HABITAT_LARGE]Habitations Coloniales (Grandes)[\LINK]</French>
 		<German>Bauen ein [LINK=IMPROVEMENT_COLONY_HABITAT_LARGE]Kolonie Lebensraum (Gross)[\LINK]</German>
-		<Italian>[LINK=IMPROVEMENT_COLONY_HABITAT_LARGE]Colonia con habitat grande (costruzione)[\LINK]</Italian>
+		<Italian>[LINK=IMPROVEMENT_COLONY_HABITAT_LARGE]Colonia con habitat grande[\LINK] (costruzione)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_COLONY_HABITAT_LARGE]Hábitat colonial grande[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_COLONY_HABITAT_LARGE]Siedlisko (Duże)[\LINK]</Polish>
 		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_COLONY_HABITAT_LARGE]Æèëóþ êîëîíèþ (Áîëüøóþ)[\LINK]</Russian>
@@ -141,7 +141,7 @@
 		<English>Build [LINK=IMPROVEMENT_COLONY_HABITAT_MEDIUM]Colony Habitat (Medium)[\LINK]</English>
 		<French>Construire des [LINK=IMPROVEMENT_COLONY_HABITAT_MEDIUM]Habitations Coloniales (Moyennes)[\LINK]</French>
 		<German>Bauen ein [LINK=IMPROVEMENT_COLONY_HABITAT_MEDIUM]Kolonie Lebensraum (Mittel)[\LINK]</German>
-		<Italian>[LINK=IMPROVEMENT_COLONY_HABITAT_MEDIUM]Colonia con habitat medio (costruzione)[\LINK]</Italian>
+		<Italian>[LINK=IMPROVEMENT_COLONY_HABITAT_MEDIUM]Colonia con habitat medio[\LINK] (costruzione)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_COLONY_HABITAT_MEDIUM]Hábitat colonial mediano[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_COLONY_HABITAT_MEDIUM]Siedlisko (Średnie)[\LINK]</Polish>
 		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_COLONY_HABITAT_MEDIUM]Æèëóþ êîëîíèþ (Ñðåäíþþ)[\LINK]</Russian>
@@ -151,7 +151,7 @@
 		<English>Build [LINK=IMPROVEMENT_COLONY_HABITAT_SMALL]Colony Habitat (Small)[\LINK]</English>
 		<French>Construire des [LINK=IMPROVEMENT_COLONY_HABITAT_SMALL]Habitations Coloniales (Petites)[\LINK]</French>
 		<German>Bauen ein [LINK=IMPROVEMENT_COLONY_HABITAT_SMALL]Kolonie Lebensraum (Klein)[\LINK]</German>
-		<Italian>[LINK=IMPROVEMENT_COLONY_HABITAT_SMALL]Colonia con habitat piccolo (costruzione)[\LINK]</Italian>
+		<Italian>[LINK=IMPROVEMENT_COLONY_HABITAT_SMALL]Colonia con habitat piccolo[\LINK] (costruzione)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_COLONY_HABITAT_SMALL]Hábitat colonial pequeño[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_COLONY_HABITAT_SMALL]Siedlisko (Małe)[\LINK]</Polish>
 		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_COLONY_HABITAT_SMALL]Æèëóþ êîëîíèþ (Ìàëóþ)[\LINK]</Russian>
@@ -229,7 +229,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_COTTAGE_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_COTTAGE]Cottage[\LINK] (Consumed)</English>
-		<Italian>[LINK=IMPROVEMENT_COTTAGE]Cottage[\LINK] (costruzione con unità consumata)</Italian>
+		<Italian>[LINK=IMPROVEMENT_COTTAGE]Cottage[\LINK] (costruzione da unità)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_DESERT_CAMP</Tag>
@@ -246,7 +246,7 @@
 		<English>Build [LINK=IMPROVEMENT_DESERT_CAMP]Desert Camp[\LINK] (Consumed)</English>
 		<French>Construire un [LINK=IMPROVEMENT_DESERT_CAMP]Camp de Desert[\LINK] (Consommé)</French>
 		<German>Errichte [LINK=IMPROVEMENT_DESERT_CAMP]Wuste feldlager[\LINK] (Consumed)</German>
-		<Italian>[LINK=IMPROVEMENT_DESERT_CAMP]Campo del deserto[\LINK] (costruzione con unità consumata)</Italian>
+		<Italian>[LINK=IMPROVEMENT_DESERT_CAMP]Campo del deserto[\LINK] (costruzione da unità)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_DESERT_CAMP]Campamento de desierto[\LINK] (Consumed)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_DESERT_CAMP]Pustynny Obóz[\LINK] (Consumed)</Polish>
 		<Russian>Строить [LINK=IMPROVEMENT_DESERT_CAMP]Пустынный лагерь[\LINK] (Собиратель)</Russian>
@@ -345,7 +345,7 @@
 		<Tag>TXT_KEY_BUILD_FORTIFIED_CAVE_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_FORTIFIED_CAVE]Fortified Cave[\LINK] (Consumed)</English>
 		<French>Construire une [LINK=IMPROVEMENT_FORTIFIED_CAVE]Caverne fortifiée (Ouvrier Détruit)[\LINK]</French>
-		<Italian>[LINK=IMPROVEMENT_FORTIFIED_CAVE]Grotta fortificata[\LINK] (costruzione con unità consumata)</Italian>
+		<Italian>[LINK=IMPROVEMENT_FORTIFIED_CAVE]Grotta fortificata[\LINK] (costruzione da unità)</Italian>
 		<Spanish>Construir una [LINK=IMPROVEMENT_FORTIFIED_CAVE]Caverna fortificada[\LINK]</Spanish>
 		<Polish>Zbadaj [LINK=IMPROVEMENT_FORTIFIED_CAVE]Ufortyfikowaną Jaskinię[\LINK]</Polish>
 		<Russian>Óêðåïèòü [LINK=IMPROVEMENT_FORTIFIED_CAVE]Ïåùåðó[\LINK] (Ñîáèðàòåëü)</Russian>
@@ -462,7 +462,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_HARVEST_KELP_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_HARVEST_KELP]Kelp Harvester[\LINK] (Consumed)</English>
-		<Italian>[LINK=IMPROVEMENT_HARVEST_KELP]Campo di raccolta di alghe[\LINK] (costruzione con unità consumata)</Italian>
+		<Italian>[LINK=IMPROVEMENT_HARVEST_KELP]Campo di raccolta di alghe[\LINK] (costruzione da unità)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_HIGHWAY</Tag>
@@ -559,7 +559,7 @@
 		<English>Build [LINK=IMPROVEMENT_JUNGLE_CAMP]Jungle Camp[\LINK] (Consumed)</English>
 		<French>Construire un [LINK=IMPROVEMENT_JUNGLE_CAMP]Camp de Jungle[\LINK] (Détruit)</French>
 		<German>Errichte [LINK=IMPROVEMENT_JUNGLE_CAMP]dschungel feldlager[\LINK] (Consumed)</German>
-		<Italian>[LINK=IMPROVEMENT_JUNGLE_CAMP]Campo della giungla[\LINK] (costruzione con unità consumata)</Italian>
+		<Italian>[LINK=IMPROVEMENT_JUNGLE_CAMP]Campo della giungla[\LINK] (costruzione da unità)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_JUNGLE_CAMP]Campamento selvático[\LINK] (Consumed)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_JUNGLE_CAMP]Obóz w Dżungli[\LINK] (Consumed)</Polish>
 		<Russian>Строить [LINK=IMPROVEMENT_JUNGLE_CAMP]Стоянку в джунглях[\LINK] (Собиратель)</Russian>
@@ -682,7 +682,7 @@
 		<English>Build [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Mushroom Gatherer[\LINK] (Consumed)</English>
 		<French>Construire une [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Champignonnière[\LINK] (Détruit)</French>
 		<German>[LINK=IMPROVEMENT_MUSHROOM_GATHERER]Pilze sammeln[\LINK] (Verschleiß)</German>
-		<Italian>[LINK=IMPROVEMENT_MUSHROOM_GATHERER]Campo di raccolta di funghi[\LINK] (costruzione con unità consumata)</Italian>
+		<Italian>[LINK=IMPROVEMENT_MUSHROOM_GATHERER]Campo di raccolta di funghi[\LINK] (costruzione da unità)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Recolector de setas[\LINK] (Consumed)</Spanish>
 		<Polish>Zbudu [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Obóz Zbieraczy Grzybów[\LINK] (Consumed)</Polish>
 		<Russian>Строить [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Сбор грибов[\LINK] (Собиратель)</Russian>
@@ -794,7 +794,7 @@
 		<French>Construire un [LINK=IMPROVEMENT_PLANT_PICKING_CAMP]Camp de Cueillette[\LINK]</French>
 		<German>[LINK=IMPROVEMENT_PLANT_PICKING_CAMP]Nützliche Pflanzen pflücken[\LINK]</German>
 		<Russian>Строить [LINK=IMPROVEMENT_PLANT_PICKING_CAMP]Сбор растений[\LINK]</Russian>
-		<Italian>[LINK=IMPROVEMENT_PLANT_PICKING_CAMP]Campo di raccolta avanzata di piante[\LINK]</Italian>
+		<Italian>[LINK=IMPROVEMENT_PLANT_PICKING_CAMP]Campo di raccolta avanzata di piante[\LINK] (costruzione)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PLANT_SAVANNA</Tag>
@@ -860,7 +860,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SALT_GATHERER_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_SALT_GATHERER]Salt Gatherer[\LINK] (Consumed)</English>
-		<Italian>[LINK=IMPROVEMENT_SALT_GATHERER]Campo di raccolta di sale[\LINK] (costruzione con unità consumata)</Italian>
+		<Italian>[LINK=IMPROVEMENT_SALT_GATHERER]Campo di raccolta di sale[\LINK] (costruzione da unità)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SANITIZE</Tag>
@@ -877,7 +877,7 @@
 		<English>Build [LINK=IMPROVEMENT_SCAVENGING_CAMP]Scavenging Camp[\LINK] (Consumed)</English>
 		<French>Construire un [LINK=IMPROVEMENT_SCAVENGING_CAMP]Camp de Récupérateur[\LINK]</French>
 		<German>[LINK=IMPROVEMENT_SCAVENGING_CAMP]Fleisch sammeln[\LINK]</German>
-		<Italian>[LINK=IMPROVEMENT_SCAVENGING_CAMP]Campo dei cercatori di carcasse[\LINK] (costruzione con unità consumata)</Italian>
+		<Italian>[LINK=IMPROVEMENT_SCAVENGING_CAMP]Campo dei cercatori di carcasse[\LINK] (costruzione da unità)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_SCAVENGING_CAMP]Campamento de recolección[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_SCAVENGING_CAMP]Obóz Zbieraczy[\LINK]</Polish>
 		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_SCAVENGING_CAMP]Ëàãåðü ñâåæåâàíèÿ[\LINK] (Ñîáèðàòåëü)</Russian>
@@ -910,7 +910,7 @@
 		<Tag>TXT_KEY_BUILD_SEED_CAMP_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_SEED_CAMP]Seed Camp[\LINK] (Consumed)</English>
 		<German>[LINK=IMPROVEMENT_SEED_CAMP]Körner sammeln[\LINK] (Verschleiß)</German>
-		<Italian>[LINK=IMPROVEMENT_SEED_CAMP]Campo di raccolta di semi[\LINK] (costruzione con unità consumata)</Italian>
+		<Italian>[LINK=IMPROVEMENT_SEED_CAMP]Campo di raccolta di semi[\LINK] (costruzione da unità)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SHAFT_MINE</Tag>
@@ -966,7 +966,7 @@
 		<English>Build [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Stone Tools Workshop[\LINK] (Consumed)</English>
 		<French>Construire un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Atelier d'Outils en pierre [\LINK] (Détruit)</French>
 		<German>[LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Steine sammeln[\LINK]</German>
-		<Italian>[LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Officina di strumenti in pietra[\LINK] (costruzione con unità consumata)</Italian>
+		<Italian>[LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Officina di strumenti in pietra[\LINK] (costruzione da unità)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Taller de herramientas de piedra[\LINK] (Consumed)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Warsztat Kamiennych Narzędzi[\LINK] (Consumed)</Polish>
 		<Russian>Строить [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Мастерскую каменных орудий[\LINK] (Собиратель)</Russian>
@@ -1015,7 +1015,7 @@
 		<English>Build [LINK=IMPROVEMENT_TAR_GATHERER]Tar Gatherer[\LINK] (Consumed)</English>
 		<French>Construire un [LINK=IMPROVEMENT_TAR_GATHERER]Récolteur de goudron[\LINK] (Détruit)</French>
 		<German>Bauen a [LINK=IMPROVEMENT_TAR_GATHERER]Tar Gatherer[\LINK] (Consumed)</German>
-		<Italian>[LINK=IMPROVEMENT_TAR_GATHERER]Campo di raccolta di pece[\LINK] (costruzione con unità consumata)</Italian>
+		<Italian>[LINK=IMPROVEMENT_TAR_GATHERER]Campo di raccolta di pece[\LINK] (costruzione da unità)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_TAR_GATHERER]Recolector de alquitrán[\LINK] (Consumed)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_TAR_GATHERER]Chatę Zbieracza Smoły[\LINK] (Consumed)</Polish>
 		<Russian>Строить [LINK=IMPROVEMENT_TAR_GATHERER]Сбор смолы[\LINK] (Собиратель)</Russian>
@@ -1183,7 +1183,7 @@
 		<English>Build [LINK=IMPROVEMENT_WETLANDS_CAMP]Wetlands Camp[\LINK] (Consumed)</English>
 		<French>Construire un [LINK=IMPROVEMENT_WETLANDS_CAMP]Camp de zones humides[\LINK] (Détruit)</French>
 		<German>Errichte [LINK=IMPROVEMENT_WETLANDS_CAMP]feuchtgebiete feldlager[\LINK] (Consumed)</German>
-		<Italian>[LINK=IMPROVEMENT_WETLANDS_CAMP]Campo della palude[\LINK] (costruzione con unità consumata)</Italian>
+		<Italian>[LINK=IMPROVEMENT_WETLANDS_CAMP]Campo della palude[\LINK] (costruzione da unità)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_WETLANDS_CAMP]Campamento de humedal[\LINK] (Consumed)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_WETLANDS_CAMP]Obóz na bagnach[\LINK] (Consumed)</Polish>
 		<Russian>Строить [LINK=IMPROVEMENT_WETLANDS_CAMP]Болотный лагерь[\LINK] (Собиратель)</Russian>
@@ -1238,7 +1238,7 @@
 		<Tag>TXT_KEY_BUILD_WOODEN_PALISADE_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_WOODEN_PALISADE]Wooden Palisade[\LINK] (Consumed)</English>
 		<French>Construire une [LINK=IMPROVEMENT_WOODEN_PALISADE]Palissade en bois (Cueilleuse)[\LINK]</French>
-		<Italian>[LINK=IMPROVEMENT_WOODEN_PALISADE]Palizzata in legno[\LINK] (costruzione con unità consumata)</Italian>
+		<Italian>[LINK=IMPROVEMENT_WOODEN_PALISADE]Palizzata in legno[\LINK] (costruzione da unità)</Italian>
 		<Spanish>Construir una [LINK=IMPROVEMENT_WOODEN_PALISADE]Empalizada de madera[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_WOODEN_PALISADE]Drewnianą Palisadę[\LINK]</Polish>
 		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_WOODEN_PALISADE]×àñòîêîë[\LINK] (Ñîáèðàòåëü)</Russian>
@@ -1256,7 +1256,7 @@
 		<Tag>TXT_KEY_BUILD_WOODEN_WATCHTOWER_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Wooden Watchtower[\LINK] (Consumed)</English>
 		<French>Construire une [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Tour d'observation en bois[\LINK] (Cueilleuse)</French>
-		<Italian>[LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Torre d'osservazione in legno[\LINK] (costruzione con unità consumata)</Italian>
+		<Italian>[LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Torre d'osservazione in legno[\LINK] (costruzione da unità)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Puesto de avanzada de madera[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Drewnianą Wieżę Obserwacyjną[\LINK]</Polish>
 		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_WOODEN_WATCHTOWER]Ñòîðîæ. âûøêó[\LINK] (Ñîáèðàòåëü)</Russian>
@@ -1264,7 +1264,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WOOD_GATHERER_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_WOOD_GATHERER]Wood Gatherer[\LINK] (Consumed)</English>
-		<Italian>[LINK=IMPROVEMENT_WOOD_GATHERER]Campo di raccolta di legno[\LINK] (costruzione con unità consumata)</Italian>
+		<Italian>[LINK=IMPROVEMENT_WOOD_GATHERER]Campo di raccolta di legno[\LINK] (costruzione da unità)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WORKSHOP</Tag>

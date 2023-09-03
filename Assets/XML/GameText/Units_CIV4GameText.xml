@@ -535,7 +535,7 @@
 		<English>[ICON_BULLET]Can Attack without Declaring War</English>
 		<French>[ICON_BULLET]Peut attaquer sans déclaration de guerre</French>
 		<German>[ICON_BULLET]kann ohne Kriegserklärung angreifen</German>
-		<Italian>[ICON_BULLET]Può attaccare senza dichiarare guerra</Italian>
+		<Italian>[ICON_BULLET]Può attaccare senza [COLOR_HIGHLIGHT_TEXT]dichiarare guerra[COLOR_REVERT]</Italian> <!-- unit Ambusher -->
 		<Spanish>[ICON_BULLET]Puede atacar sin declarar la guerra</Spanish>
 		<Russian>[ICON_BULLET]Может атаковать без объявления войны</Russian>
 	</TEXT>
@@ -544,7 +544,7 @@
 		<English>[ICON_BULLET]%D1_Change%% vs. Wild Animals</English>
 		<French>[ICON_BULLET]%D1_Change%% contre: Animaux sauvages</French>
 		<German>[ICON_BULLET]%D1_Change%% gegen Raubtiere</German>
-		<Italian>[ICON_BULLET]%D1_Change%% contro Animali selvaggi</Italian>
+		<Italian>[ICON_BULLET]Modificatore contro le unità animale selvaggio [COLOR_HIGHLIGHT_TEXT]%D1_Change%%[COLOR_REVERT]</Italian> <!-- unit Pack Llama -->
 		<Spanish>[ICON_BULLET]%D1_Change%% contra animales salvajes</Spanish>
 		<Polish>[ICON_BULLET]%D1_Change%% do siły przeciwko: Dzikim Zwierzętom</Polish>
 		<Russian>[ICON_BULLET]%D1_Change%% ïðîòèâ õèùíèêîâ</Russian>
@@ -620,7 +620,7 @@
 		<English>[ICON_BULLET]%D1_Amount%% Attack Strength</English>
 		<French>[ICON_BULLET]%D1_Amount%% en Attaquant</French>
 		<German>[ICON_BULLET]%D1_Amount%% Angriff</German>
-		<Italian>[ICON_BULLET]%D1_Amount%% quando l'unità attacca</Italian>
+		<Italian>[ICON_BULLET]Modificatore d'attacco [COLOR_HIGHLIGHT_TEXT]%D1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Mapinguari (Obsidian Spearmen) -->
 		<Polish>[ICON_BULLET]%D1_Amount%% do Atkau</Polish>
 	</TEXT>
 	<TEXT>
@@ -628,7 +628,7 @@
 		<English>[ICON_BULLET]%d1_Amount%% Attack Strength</English>
 		<French>[ICON_BULLET]Modif. d'Attaque: %d1_Amount%%</French>
 		<German>[ICON_BULLET]%d1_Amount%% Angriff</German>
-		<Italian>[ICON_BULLET]Modificatore d'attacco: %d1_Amount%%</Italian>
+		<Italian>[ICON_BULLET]Modificatore d'attacco [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian>
 		<Polish>[ICON_BULLET]Modyfikator Ataku: %d1_Amount%%</Polish>
 		<Russian>[ICON_BULLET]Attack Modifier: %d1_Amount%%</Russian>
 	</TEXT>
@@ -637,7 +637,7 @@
 		<English>[ICON_BULLET]Cannot Capture Enemy Cities or Units</English>
 		<French>[ICON_BULLET]Ne peut pas capturer de villes ou d'unités ennemies.</French>
 		<German>[ICON_BULLET]kann feindliche Städte nicht einnehmen und feindliche Einheiten nicht gefangen nehmen</German>
-		<Italian>[ICON_BULLET]Non può conquistare città o unità nemiche</Italian>
+		<Italian>[ICON_BULLET]Non può [COLOR_HIGHLIGHT_TEXT]conquistare[COLOR_REVERT] città o [COLOR_HIGHLIGHT_TEXT]catturare[COLOR_REVERT] unità nemiche</Italian> <!-- unit trained dogs -->
 		<Spanish>[ICON_BULLET]No puede capturar ciudades o unidades enemigas</Spanish>
 		<Polish>[ICON_BULLET]Nie można zająć wrogiego miasta lub jednostki.</Polish>
 		<Russian>[ICON_BULLET]Íå ìîæåò çàõâàòûâàòü âðàæåñêèå ãîðîäà èëè þíèòû.</Russian>
@@ -647,7 +647,7 @@
 		<English>Can Not Traverse</English>
 		<French>Ne peut pas Traverser</French>
 		<German>Durchqueren unmöglich</German>
-		<Italian>Non può attraversare</Italian>
+		<Italian>[ICON_BULLET]Non può attraversare le caselle con la caratteristica</Italian> <!-- unit Workboat (Prehistoric) -->
 		<Spanish>No puede atravesar</Spanish>
 		<Polish>Nie można przebić</Polish>
 		<Russian>Íå ìîæåò ïåðåñå÷ü</Russian>
@@ -657,7 +657,7 @@
 		<English>[ICON_BULLET]%D1%% chance to Capture.</English>
 		<French>[ICON_BULLET]%D1%% de chances de capturer.</French>
 		<German>[ICON_BULLET]Gefangennahme: %D1%%</German>
-		<Italian>[ICON_BULLET]Possibilità di catturare un'unità nemica %D1%%</Italian>
+		<Italian>[ICON_BULLET]Probabilità di catturare un'unità nemica [COLOR_HIGHLIGHT_TEXT]%D1%%[COLOR_REVERT]</Italian> <!-- Subcombat type Wields (H2H Martial Arts) -->
 		<Polish>[ICON_BULLET]%D1%% szansy na Przejęcie.</Polish>
 		<Russian>[ICON_BULLET]%D1%% øàíñîâ çàõâàòèòü.</Russian>
 	</TEXT>
@@ -666,7 +666,7 @@
 		<English>[ICON_BULLET]%D1%% chance to avoid Capture.</English>
 		<French>[ICON_BULLET]%D1%% de chances d'éviter la Capture.</French>
 		<German>[ICON_BULLET]Gefangennahme entgehen: %D1%%</German>
-		<Italian>[ICON_BULLET]%D1%% di possibilità di sfuggire alla cattura.</Italian>
+		<Italian>[ICON_BULLET]Probabilità di sfuggire alla cattura [COLOR_HIGHLIGHT_TEXT]%D1%%[COLOR_REVERT]</Italian> <!-- Subcombat type Wields SiegeDesign (Gunpowder) -->
 		<Polish>[ICON_BULLET]%D1%% szansy na uniknięcia Przejęcia.</Polish>
 		<Russian>[ICON_BULLET]%D1%% øàíñîâ èçáåæàòü çàõâàòà.</Russian>
 	</TEXT>
@@ -734,7 +734,7 @@
 		<English>[ICON_BULLET]Up to %d1% Collateral to %d2 Unit(s)</English>
 		<French>[ICON_BULLET]Provoque des dommages collatéraux (Max %d1% pour %d2 Unités)</French>
 		<German>[ICON_BULLET]verursacht Kollateralschaden (max. %d1% bei %d2 [NUM2:Einheit:Einheiten])</German>
-		<Italian>[ICON_BULLET]Causano danni collaterali (Max da %d1% a %d2 Unità)</Italian>
+		<Italian>[ICON_BULLET]Infligge [COLOR_HIGHLIGHT_TEXT]danni collaterali[COLOR_REVERT] per un massimo del [COLOR_HIGHLIGHT_TEXT]%d1%[COLOR_REVERT] a [COLOR_HIGHLIGHT_TEXT]%d2[COLOR_REVERT] unità</Italian> <!-- unit Stone Thrower -->
 		<Spanish>[ICON_BULLET]Causa daños colaterales (máximo %d1% a %d2 [NUM2:unidad:unidades])</Spanish>
 		<Polish>[ICON_BULLET]Zadaje dodatkowe obrazenia (Maksymalnie %d1% dla %d2 jednostek)</Polish>
 		<Russian>[ICON_BULLET]%d1% сопутствующего урона %d2 отряду(ам)</Russian>
@@ -744,7 +744,7 @@
 		<English>[ICON_BULLET]%d1_Amount Strength [LINK=CONCEPT_FLANK_ATTACK]Flank attack[\LINK] against %s2_unitlist</English>
 		<French>[ICON_BULLET]%d1_Amount Force [LINK=CONCEPT_FLANK_ATTACK]Attaque de flanc[\LINK] contre %s2_unitlist</French>
 		<German>[ICON_BULLET]%d1_Amount Strength [LINK=CONCEPT_FLANK_ATTACK]Flankenangriff[\LINK] auf Einheit(en) %s2_unitlist</German>
-		<Italian>[ICON_BULLET]%d1_Amount di forza per [LINK=CONCEPT_FLANK_ATTACK]Attacco ai fianchi[\LINK] contro %s2_unitlist</Italian>
+		<Italian>[ICON_BULLET]Forza degli [LINK=CONCEPT_FLANK_ATTACK]attacchi ai fianchi[\LINK] contro unità di tipo [COLOR_HIGHLIGHT_TEXT]%s2_unitlist %d1_Amount[COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET]%d1_Amount Strength [LINK=CONCEPT_FLANK_ATTACK]Flanqueo[\LINK] contra %s2_unitlist</Spanish>
 		<Polish>[ICON_BULLET]%d1_Amount Siły [LINK=CONCEPT_FLANK_ATTACK]Atak Skrzydłowy[\LINK] przeciwko %s2_unitlist</Polish>
 	</TEXT>
@@ -754,6 +754,7 @@
 		<French>[ICON_BULLET]Modif. de Combat contre des unités plus petites: %D1_Amount%% par rang inférieur</French>
 		<German>[ICON_BULLET]%d1_Amount%% gegen kleinere Einheiten (pro Stufe Größenunterschied)</German>
 		<Polish>[ICON_BULLET]Modyfikator Walki kontra Mniejsze Jednostki: %D1_Amount%% na Poziom Wielkości mniej</Polish>
+		<Italian>[ICON_BULLET]Contro unità con una dimensione inferiore [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Hell's Mouth Dog unit with Size matters-->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_COMBAT_MOD_PER_SIZE_MORE</Tag>
@@ -761,6 +762,7 @@
 		<French>[ICON_BULLET]Modif. de Combat contre des unités plus grandes: %D1_Amount%% par rang supérieur</French>
 		<German>[ICON_BULLET]%d1_Amount%% gegen größere Einheiten (pro Stufe Größenunterschied)</German>
 		<Polish>[ICON_BULLET]Modyfikator Walki kontra Większe Jednostki: %D1_Amount%% na Poziom Wielkości więcej</Polish>
+		<Italian>[ICON_BULLET]Contro unità con una dimensione superiore [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Hell's Mouth Dog unit with Size matters-->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_COMBAT_MOD_PER_VOLUME_LESS</Tag>
@@ -768,6 +770,7 @@
 		<French>[ICON_BULLET]Modif. de Combat contre des groupes plus petits: %D1_Amount%% par Nb d'unités en moins</French>
 		<German>[ICON_BULLET]%d1_Amount%% gegen kleinere Gruppen (pro Stufe Größenunterschied)</German>
 		<Polish>[ICON_BULLET]Modyfikator Walki kontra Mniejsze Grupy: %D1_Amount%% na Poziom Wielkości mniej</Polish>
+		<Italian>[ICON_BULLET]Contro unità in un gruppo più piccolo [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Sharpshooter with Size matters-->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_COMBAT_MOD_PER_VOLUME_MORE</Tag>
@@ -775,6 +778,7 @@
 		<French>[ICON_BULLET]Modif. de Combat contre des groupes plus grands: %D1_Amount%% par Nb d'unités suppl.</French>
 		<German>[ICON_BULLET]%d1_Amount%% gegen größere Gruppen (pro Stufe Größenunterschied)</German>
 		<Polish>[ICON_BULLET]Modyfikator Walki kontra Większe Grupy: %D1_Amount%% na Poziom Wielkości więcej</Polish>
+		<Italian>[ICON_BULLET]Contro unità in un gruppo più grande [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Sharpshooter  with Size matters-->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_COST_MODIFIER_TOTAL_MODIFIER</Tag>
@@ -869,7 +873,7 @@
 		<English>[ICON_BULLET]%D1_Amount%% Defence Strength</English>
 		<French>[ICON_BULLET]%D1_Amount%% en Défendant</French>
 		<German>[ICON_BULLET]%D1_Amount%% Verteidigung</German>
-		<Italian>[ICON_BULLET]%D1_Amount%% quando l'unità difende</Italian>
+		<Italian>[ICON_BULLET]Modificatore di difesa [COLOR_HIGHLIGHT_TEXT]%D1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Mapinguari (Obsidian Spearmen) -->
 		<Polish>[ICON_BULLET]%D1_Amount%% do Obrony</Polish>
 	</TEXT>
 	<TEXT>
@@ -877,7 +881,7 @@
 		<English>[ICON_BULLET]%d1_Amount%% Defence Strength</English>
 		<French>[ICON_BULLET]Modif. de Défense: %d1_Amount%%</French>
 		<German>[ICON_BULLET]%d1_Amount%% Verteidigung</German>
-		<Italian>[ICON_BULLET]Modificatore di difesa: %d1_Amount%%</Italian>
+		<Italian>[ICON_BULLET]Modificatore di difesa [COLOR_HIGHLIGHT_TEXT]%D1_Amount%%[COLOR_REVERT]</Italian>
 		<Polish>[ICON_BULLET]Modyfikator Obrony: %d1_Amount%%</Polish>
 	</TEXT>
 	<TEXT>
@@ -960,7 +964,7 @@
 		<English>[ICON_BULLET]Dynamic Defense: Denies %d1_Amount%% Surround and Destroy Penalty when defending.</English>
 		<French>[ICON_BULLET]Défense Dynamique: Annule %d1_Amount%% des pénalités d'Encerclement lorsqu'il défend.</French>
 		<German>[ICON_BULLET]Dynamische Verteidigung: -%d1_Amount%% auf Einkesselungsstrafen in der Verteidigung</German>
-		<Italian>[ICON_BULLET]Difesa dinamica: toglie %d1_Amount%% alle penalità di Circonda e distruggi quando difende.</Italian>
+		<Italian>[ICON_BULLET]Penalità di circonda e distruggi annullata con la [COLOR_HIGHLIGHT_TEXT]difesa dinamica %d1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Trained Dog with Surround and Destroy -->
 		<Polish>[ICON_BULLET]Dynamiczna Obrona: Znosi %d1_Amount%% kar Otocz i Zniszcz przy obronie.</Polish>
 		<Russian>[ICON_BULLET]Динамич. защита: убирает %d1_Amount%% штраф от Окружения и уничтожения, когда обороняется.</Russian>
 	</TEXT>
@@ -987,7 +991,7 @@
 		<English>[ICON_BULLET]Starts Withdrawal at %d1_Amount%% HP</English>
 		<French>[ICON_BULLET]Vont commencer à se retirer du combat lorsque blessé de %d1_Amount%% PV, plutôt que de se battre jusqu'à la mort.</French>
 		<German>[ICON_BULLET]Rückzug bei %d1_Amount%% TP</German>
-		<Italian>[ICON_BULLET]Inizierà a tentare di ritirarsi una volta raggiunto il %d1_Amount%% dei PV piuttosto che restare a combattere fino alla morte.</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Soglia di punti vita[COLOR_REVERT] sotto la quale l'unità cercherà di ritirarsi [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Ambusher with Defender Withdraw -->
 		<Spanish>[ICON_BULLET]Will begin attempting Withdrawal each round once injured to %d1_Amount%% HP rather than maintaining combat until near-death.</Spanish>
 		<Polish>[ICON_BULLET]Będzie próbowała uciec w każdej rundzie gdy będzie posiadać %d1_Amount%% HP, zamiast utrzymywać walkę aż do bliskiej śmierci.</Polish>
 	</TEXT>
@@ -1013,7 +1017,7 @@
 		<English>[ICON_BULLET]Enclose: Adds +%d1_Amount%% to the maximum possible Surround and Destroy bonus when surrounding.</English>
 		<French>[ICON_BULLET]Encercler: Ajoute +%d1_Amount%% au Bonus maximum de l'option Encercler et détruire.</French>
 		<German>[ICON_BULLET]Umzingeln: +%d1_Amount%% auf den maximal möglichen Einkesselungsbonus</German>
-		<Italian>[ICON_BULLET]Accerchiamento: aggiunge +%d1_Amount%% al bonus massimo di Circonda e distruggi quando circonda il nemico.</Italian>
+		<Italian>[ICON_BULLET]Bonus massimo per l'[COLOR_HIGHLIGHT_TEXT]accerchiamento[COLOR_REVERT] di circonda e distruggi [COLOR_HIGHLIGHT_TEXT]+%d1_Amount%%[COLOR_REVERT]</Italian>  <!-- unit Trained Dog with Surround and Destroy -->
 		<Polish>[ICON_BULLET]Otoczenie: Dodaje +%d1_Amount%% do maksymalnego możliwego bonusu Otocz i Zniszcz przy poddawaniu.</Polish>
 		<Russian>[ICON_BULLET]Блокада: дает +%d1_Amount%% к максимально возможному радиусу окружения и снимает вражеские бонусы при окружении.</Russian>
 	</TEXT>
@@ -1075,7 +1079,7 @@
 		<English>[ICON_BULLET]Can Infiltrate another player's City (%D1_Change [ICON_ESPIONAGE])</English>
 		<French>[ICON_BULLET]Peut infiltrer la ville d'un autre joueur (%D1_Change [ICON_ESPIONAGE])</French>
 		<German>[ICON_BULLET]kann ausländische Städte infiltrieren (%D1_Change [ICON_ESPIONAGE])</German>
-		<Italian>[ICON_BULLET]Può infiltrarsi nella città di un altro giocatore (%D1_Change [ICON_ESPIONAGE])</Italian>
+		<Italian>[ICON_BULLET]Può [COLOR_HIGHLIGHT_TEXT]infiltrarsi[COLOR_REVERT] nelle città degli altri giocatori ([COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] [ICON_ESPIONAGE])</Italian> <!-- unit Exile -->
 		<Spanish>[ICON_BULLET]Se puede infiltrar en la ciudad de otro jugador (%D1_Change [ICON_ESPIONAGE])</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1093,7 +1097,7 @@
 		<English>[ICON_BULLET]Helps Thwart Rival Spies</English>
 		<French>[ICON_BULLET]Aide à neutraliser les espions rivaux.</French>
 		<German>[ICON_BULLET]kann feindliche Spione enttarnen</German>
-		<Italian>[ICON_BULLET]Aiuta a ostacolare le spie nemiche</Italian>
+		<Italian>[ICON_BULLET]Aiuta a [COLOR_HIGHLIGHT_TEXT]rivelare[COLOR_REVERT] le spie nemiche</Italian> <!-- unit Ambusher -->
 		<Spanish>[ICON_BULLET]Ayuda a desenmascarar a los espías rivales</Spanish>
 		<Polish>[ICON_BULLET]Pomaga w udaremnianiu działalności wrogich szpiegów</Polish>
 		<Russian>[ICON_BULLET]Ðàññòðàèâàåò ïëàíû øïèîíîâ ïðîòèâíèêà</Russian>
@@ -1292,7 +1296,7 @@
 		<English>[ICON_BULLET]Can Hurry Food (Adds Base: %d1)</English>
 		<French>[ICON_BULLET]Peut Créer un Surplus de Nourriture (Ajoute de Base: %d1)</French>
 		<German>[ICON_BULLET]Kann Nahrungsproduktion beschleunigen (Adds Base: %d1)</German>
-		<Italian>[ICON_BULLET]Può dare un surplus di cibo (Adds Base: %d1)</Italian>
+		<Italian>[ICON_BULLET]L'unità può portare un [COLOR_HIGHLIGHT_TEXT]surplus di cibo[COLOR_REVERT] a una città (aggiunta base: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT])</Italian> <!-- unit Food Merchant -->
 		<Spanish>[ICON_BULLET]Puede Enviar alimentos (Adds Base: %d1)</Spanish>
 		<Polish>[ICON_BULLET]Może przyśpieszyć prod. żywności (Adds Base: %d1)</Polish>
 		<Russian>[ICON_BULLET]Áûñòðàÿ åäà</Russian>
@@ -1302,7 +1306,7 @@
 		<English>[ICON_BULLET]Ignores Zones of Control</English>
 		<French>[ICON_BULLET]Ignore les Zones de Contrôle</French>
 		<German>[ICON_BULLET]ignoriert Kontrollzonen</German>
-		<Italian>[ICON_BULLET]Ignora le zone di controllo</Italian>
+		<Italian>[ICON_BULLET]Ignora le [COLOR_HIGHLIGHT_TEXT]zone di controllo[COLOR_REVERT]</Italian> <!-- unit Ambusher -->
 		<Polish>[ICON_BULLET]Ignoruje Stefę Kontroli</Polish>
 		<Russian>[ICON_BULLET]Игнорирует зону контроля</Russian>
 	</TEXT>
@@ -1355,7 +1359,7 @@
 		<English>[ICON_BULLET]May conduct Inquisition Mission</English>
 		<French>[ICON_BULLET]Peut réaliser des Missions d'Inquisition</French>
 		<German>[ICON_BULLET]Kann Inquisitionen durchführen</German>
-		<Italian>[ICON_BULLET]Può eseguire una 'Missione di Inquisizione'</Italian>
+		<Italian>[ICON_BULLET]L'unità può eseguire una [COLOR_HIGHLIGHT_TEXT]missione di inquisizione[COLOR_REVERT]</Italian> <!-- unit Inquisitor -->
 		<Spanish>[ICON_BULLET]Puede convocar un Tribunal de la Fé</Spanish>
 		<Polish>[ICON_BULLET]Przeprowadza misje inkwizycji</Polish>
 		<Russian>[ICON_BULLET]Ìîæåò ñîâåðøàòü èíêâèçèöèîííûå ìèññèè</Russian>
@@ -1443,7 +1447,7 @@
 		<English>[ICON_BULLET]Lunge: Gets +%d1_Amount%% Surround and Destroy Bonus when attacking.</English>
 		<French>[ICON_BULLET]Fente: Reçoit +%d1_Amount%% un bonus d'Encercler et Détruire Bonus en attaquant.</French>
 		<German>[ICON_BULLET]Ausfallschritt: Einheit erhält +%d1_Amount%% Einkesselungsbonus beim Angriff</German>
-		<Italian>[ICON_BULLET]Affondo: ottiene +%d1_Amount%% al bonus di Circonda e distruggi quando attacca.</Italian>
+		<Italian>[ICON_BULLET]Bonus [COLOR_HIGHLIGHT_TEXT]affondo[COLOR_REVERT] quando si attacca il nemico circondato [COLOR_HIGHLIGHT_TEXT]+%d1_Amount%% [COLOR_REVERT]</Italian> <!-- unit Ambusher with Surround and Destroy option -->
 		<Polish>[ICON_BULLET]Pchnięcie: Otrzymuje +%d1_Amount%% bonusu Otocz i Zniszcz przy ataku.</Polish>
 		<Russian>[ICON_BULLET]Выпад: получает +%d1_Amount%% к сопутствующему урону и бонусу от убийств при атаке.</Russian>
 	</TEXT>
@@ -1550,7 +1554,7 @@
 		<English>[ICON_BULLET]Better Results from Tribal Villages</English>
 		<French>[ICON_BULLET]Meilleurs résultats avec les villages tribaux</French>
 		<German>[ICON_BULLET]versteht sich gut mit Eingeborenen</German>
-		<Italian>[ICON_BULLET]Ottiene migliori risultati dai villaggi tribali</Italian>
+		<Italian>[ICON_BULLET]Ottiene migliori risultati da [COLOR_HIGHLIGHT_TEXT]villaggi[COLOR_REVERT] o [COLOR_HIGHLIGHT_TEXT]isole tribali[COLOR_REVERT]</Italian> <!-- unit Pack Llama, Outrigger-->
 		<Spanish>[ICON_BULLET]Mejores resultados de aldeas tribales</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1820,7 +1824,7 @@
 		<English>[ICON_BULLET]Pursuit Chance: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Poursuite: peut ignorer la capacité de retrait de l'Ennemi (%d1_Amount%% de Chances)</French>
 		<German>[ICON_BULLET]Verfolgungsjagd - kann den Rückzug des Gegners verhindern (%d1_Amount%%)</German>
-		<Italian>[ICON_BULLET]Inseguimento: può impedire al nemico di ritirarsi (%d1_Amount%% di chance)</Italian>
+		<Italian>[ICON_BULLET]Possibilità di [COLOR_HIGHLIGHT_TEXT]inseguimento[COLOR_REVERT] al nemico per impedirgli di ritirarsi [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Ambusher with Hide and Seek option active -->
 		<Polish>[ICON_BULLET]Pościg: Może zablokowć wrogą ucieczkę z pola walki (%d1_Amount%% Szans)</Polish>
 		<Russian>[ICON_BULLET]Ïåðåõâàò: âîçìîæíîñòü çàïðåòèòü ïðîòèâíèêó âûéòè èç áîÿ (øàíñ %d1_Amount%%)</Russian>
 	</TEXT>
@@ -1829,7 +1833,7 @@
 		<English>[ICON_BULLET]Pursuit Chance: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Poursuite: peut ignorer le retrait de %d1_Amount%%</French>
 		<German>[ICON_BULLET]Verfolgungsjagd (Rückzug verhindern): %d1_Amount%%</German>
-		<Italian>[ICON_BULLET]Inseguimento: può impedire la ritirata del %d1_Amount%%</Italian>
+		<Italian>[ICON_BULLET]Possibilità di [COLOR_HIGHLIGHT_TEXT]inseguimento[COLOR_REVERT] al nemico per impedirgli di ritirarsi [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Ambusher with Hide and Seek option active -->
 		<Polish>[ICON_BULLET]Pościg: może zablokować ucieczkę %d1_Amount%%</Polish>
 		<Russian>[ICON_BULLET]Ïåðåõâàò: çàïðåòèòü ïðîòèâíèêó âûõîäèòü èç áîÿ %d1_Amount%%</Russian>
 	</TEXT>
@@ -1847,7 +1851,7 @@
 		<English>[ICON_BULLET]%D1_Change%% Pursuit vs. [LINK=%s2_Type]%s3_TypeName[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Change%% de Poursuite contre: [LINK=%s2_Type]%s3_TypeName[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Change%% Verfolgung von [LINK=%s2_Type]%s3_TypeName[\LINK]</German>
-		<Italian>[ICON_BULLET]%D1_Change%% all'Inseguimento contro [LINK=%s2_Type]%s3_TypeName[\LINK]</Italian>
+		<Italian>[ICON_BULLET]Probabilità di riuscire in un [COLOR_HIGHLIGHT_TEXT]inseguimento[COLOR_REVERT] contro [LINK=%s2_Type]%s3_TypeName[\LINK] [COLOR_HIGHLIGHT_TEXT]%D1_Change%%[COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change%% Pursuit contra [LINK=%s2_Type]%s3_TypeName[\LINK]</Spanish>
 		<Polish>[ICON_BULLET]%D1_Change%% Pościg kontra [LINK=%s2_Type]%s3_TypeName[\LINK]</Polish>
 	</TEXT>
@@ -1995,7 +1999,7 @@
 		<English>[ICON_BULLET]State Religion must be present in city to train</English>
 		<French>[ICON_BULLET]La religion d'Etat doit être présente dans cette ville pour pouvoir former les Inquisiteurs.</French>
 		<German>[ICON_BULLET]Staatsreligion muss in der Stadt vorhanden sein um auszubilden</German>
-		<Italian>[ICON_BULLET]Deve essere presente la Religione di Stato in città per addestrare</Italian>
+		<Italian>[ICON_BULLET]Per poter addestrare l'unità in città deve essere presente la [COLOR_HIGHLIGHT_TEXT]religione di stato[COLOR_REVERT]</Italian> <!-- unit Inquisitor -->
 		<Spanish>[ICON_BULLET]La religión oficial ha de estar presente en la ciudad para poder entrenar</Spanish>
 		<Polish>[ICON_BULLET]Religia narodowa musi znajdować się w mieście by móc wytrenować</Polish>
 		<Russian>[ICON_BULLET]Ãîñóäàðñòâåííàÿ ðåëèãèÿ äîëæíà ïðèñóòñòâîâàòü â ãîðîäå</Russian>
@@ -2035,7 +2039,7 @@
 		<English>[ICON_BULLET]Can See %F1_Name</English>
 		<French>[ICON_BULLET]Peut voir: %F1_Name</French>
 		<German>[ICON_BULLET]sieht %s1:5_Name</German>
-		<Italian>[ICON_BULLET]Può vedere [NUM1:il:la:i:le] %F1_Name</Italian>
+		<Italian>[ICON_BULLET]È in grado di vedere le unità [COLOR_HIGHLIGHT_TEXT]invisibili[COLOR_REVERT] %F1_Name</Italian> <!-- unit Ambusher -->
 		<Spanish>[ICON_BULLET]Puede ver %F1_Name</Spanish>
 		<Russian>[ICON_BULLET]Может обнаружить %F1_Name</Russian>
 	</TEXT>
@@ -2156,13 +2160,14 @@
 		<English>[ICON_BULLET]Targets any %s1_unit_list first in combat. If Assassination is possible, these units are also the list of units that may be targeted for assassination.</English>
 		<French>[ICON_BULLET]Cible toutes les unités %s1_unit_list en premier au combat. Si l'assassinat est possible, ces unités sont également la liste des unités qui peuvent être ciblées pour l'assassinat.</French>
 		<German>[ICON_BULLET]greift Einheiten vom Typ %s1_unit_list im Kampf zuerst an (wenn ein Mordanschlag möglich ist, werden diese Einheiten ebenfalls bevorzugt als Ziele ausgewählt)</German>
+		<Italian>[ICON_BULLET]Attacca per [COLOR_HIGHLIGHT_TEXT]prima[COLOR_REVERT] ogni unità di tipo %s1_unit_list. [NEWLINE][ICON_BULLET]Le unità di cui sopra possono essere scelte come bersaglio di un [COLOR_HIGHLIGHT_TEXT]assassinio[COLOR_REVERT] (se possibile)</Italian> <!-- unit Ambusher -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_TAUNT</Tag>
 		<English>[ICON_BULLET]Taunt Chance: %D1%%</English>
 		<French>[ICON_BULLET]Provocation: %D1%% de prob. d'être attaqué dans un groupe.</French>
 		<German>[ICON_BULLET]Provokation: %D1%%</German>
-		<Italian>[ICON_BULLET]Esca: %D1%% di chance in più di essere attaccata in un gruppo.</Italian>
+		<Italian>[ICON_BULLET]Probabilità di provocazione [COLOR_HIGHLIGHT_TEXT]%D1%%[COLOR_REVERT]</Italian>  <!-- Subcombat type Nature (Warning) -->
 		<Polish>[ICON_BULLET]Prowokacja: %D1%% szansa na bycie zaatakowanym wewnątrz grupy jednostek.</Polish>
 		<Russian>[ICON_BULLET]Шанс провокации: %D1%%</Russian>
 	</TEXT>
@@ -2178,7 +2183,7 @@
 		<English>[ICON_BULLET]Can Conduct a Trade Mission (Base: %d1, Mult: x%d2)</English>
 		<French>[ICON_BULLET]Peut effectuer une mission commerciale (Base: %d1, Mult: x%d2)</French>
 		<German>[ICON_BULLET]kann eine Handelsmission ausführen (Basiswert: %d1, Mult.: x%d2)</German>
-		<Italian>[ICON_BULLET]Può eseguire una missione commerciale (Base: %d1, Mult: x%d2)</Italian>
+		<Italian>[ICON_BULLET]Può condurre una [COLOR_HIGHLIGHT_TEXT]missione commerciale[COLOR_REVERT] (base: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT], moltiplicatore: [COLOR_HIGHLIGHT_TEXT]x%d2[COLOR_REVERT])</Italian> <!-- unit Exile -->
 		<Spanish>[ICON_BULLET]Puede realizar una misión comercial (Base: %d1, Mult: x%d2)</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2233,7 +2238,7 @@
 		<English>[ICON_BULLET]Unnerve: Unit counts as +%d1_Amount%% strength when surrounding.</English>
 		<French>[ICON_BULLET]Sang froid : L'unité compte pour +%d1_Amount%% de force lorsqu'elle est encerclée.</French>
 		<German>[ICON_BULLET]Entnerven: Einheit erhält +%d1_Amount%% Stärke beim Einkesseln von Gegnern</German>
-		<Italian>[ICON_BULLET]Snervamento: l'unità riceve +%d1_Amount%% di forza quando circonda il nemico.</Italian>
+		<Italian>[ICON_BULLET]Quando circonda il nemico l'unità conta come un aumento di forza ([COLOR_HIGHLIGHT_TEXT]nervosismo[COLOR_REVERT]) [COLOR_HIGHLIGHT_TEXT]+%d1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Ambusher with Surround and Destroy option -->
 		<Polish>[ICON_BULLET]Załamanie: +%d1_Amount%% siły przy poddaniu.</Polish>
 		<Russian>[ICON_BULLET]Задира: отряд получает +%d1_Amount%% прибавку к силе, когда окружает.</Russian>
 	</TEXT>
@@ -2299,13 +2304,14 @@
 		<German>[ICON_BULLET]%d1_Amount%% gegen Barbaren</German>
 		<Spanish>[ICON_BULLET]%d1_Amount%% contro barbari non-animali.</Spanish>
 		<Polish>[ICON_BULLET]%d1_Amount%% przeciwko nie-zwierzęcym Barbarzyńcom</Polish>
+		<Italian>[ICON_BULLET]Contro le unità barbare non animali [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Brute -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_VSBARBS_MODIFIER</Tag>
 		<English>[ICON_BULLET]%d1_Amount%% VS Non-Animal Barbarians</English>
 		<French>[ICON_BULLET]%d1_Amount%% contre les unités barbares non-animales</French>
 		<German>[ICON_BULLET]%d1_Amount%% gegen Barbaren</German>
-		<Italian>[ICON_BULLET]contro i barbari non-animali: %d1_Amount%%</Italian>
+		<Italian>[ICON_BULLET]Modificatore contro le unità barbare non animali [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian>
 		<Polish>[ICON_BULLET]przeciwko nie-zwierzęcym Barbarzyńcom: %d1_Amount%%</Polish>
 	</TEXT>
 	<TEXT>
@@ -2320,7 +2326,7 @@
 		<English>[COLOR_YELLOW]Free Starting Experience:[COLOR_REVERT]</English>
 		<French>[COLOR_YELLOW]Expérience de départ:[COLOR_REVERT]</French>
 		<German>[COLOR_YELLOW]freie Erfahrungspunkte zu Beginn:[COLOR_REVERT]</German>
-		<Italian>[COLOR_YELLOW]XP iniziale gratis:[COLOR_REVERT]</Italian>
+		<Italian>[ICON_BULLET][COLOR_YELLOW]Esperienza iniziale gratuita:[COLOR_REVERT]</Italian> <!-- unit in construction hover -->
 		<Spanish>[COLOR_YELLOW]Experiencia gratuita:[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_YELLOW]Darmowe Doświadczenie:[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_YELLOW]áåñïëàòíûé ñòàðòîâûé îïûò:[COLOR_REVERT]</Russian>
@@ -2344,11 +2350,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Agente segreto</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Agente segreto</Italian>
 		<Spanish>
 			<Text>Agente Top</Text>
 			<Gender>Male</Gender>
@@ -2528,7 +2530,7 @@
 		<Tag>TXT_KEY_UNIT_ADZE_WARRIOR_PEDIA</Tag>
 		<English>Luban Unique Culture Unit.</English>
 		<French>Unité Culturelle Unique Luban.</French>
-		<Italian>Unità unica Lubana.</Italian>
+		<Italian>Unità unica Lubana</Italian>
 		<Polish>Jednostka kultury Luba.</Polish>
 	</TEXT>
 	<TEXT>
@@ -2626,11 +2628,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Agente</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Agente sotto copertura</Italian>
 		<Spanish>
 			<Text>Agente</Text>
 			<Gender>Male</Gender>
@@ -2741,11 +2739,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Dirigibile:Dirigibili</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Dirigibile moderno</Italian>
 		<Spanish>
 			<Text>Dirigible:Dirigibles</Text>
 			<Gender>Male</Gender>
@@ -2943,11 +2937,13 @@
 		<Tag>TXT_KEY_UNIT_AMBULANCE</Tag>
 		<English>Ambulance (WWI)</English>
 		<Russian>Ñàíèòàðíàÿ ìàøèíà</Russian>
+		<Italian>Ambulanza della prima guerra mondiale</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AMBULANCE_II</Tag>
 		<English>Ambulance (WWII)</English>
 		<Russian>Ïîëåâîé ãîñïèòàëü</Russian>
+		<Italian>Ambulanza della seconda guerra mondiale</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AMBUSHER</Tag>
@@ -3025,7 +3021,7 @@
 		<Tag>TXT_KEY_UNIT_ANCIENT_FLAMETHROWER</Tag>
 		<English>Ancient Flamethrower</English>
 		<French>Lance-Flammes Antique</French>
-		<Italian>Lancia-fiamme antico</Italian>
+		<Italian>Lanciafiamme medioevale</Italian>
 		<Spanish>
 			<Text>Guerrero con lanzallamas</Text>
 			<Gender>Male</Gender>
@@ -3046,7 +3042,7 @@
 		<Tag>TXT_KEY_UNIT_ANCIENT_HAND_CANNON</Tag>
 		<English>Ancient Hand Cannon</English>
 		<French>Canon à main antique</French>
-		<Italian>Cannone portatile antico</Italian>
+		<Italian>Schioppo antico</Italian>
 		<Spanish>
 			<Text>Cañón de mano</Text>
 			<Gender>Male</Gender>
@@ -3259,6 +3255,7 @@
 		<English>Apothecary</English>
 		<French>Apothicaire</French>
 		<Russian>Àïòåêàðü</Russian>
+		<Italian>Speziale</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_APOTHECARY_PEDIA</Tag>
@@ -3293,11 +3290,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Arciere su cammello:Arcieri su cammello</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Arciere arabo su cammello</Italian>
 		<Spanish>
 			<Text>Arquero a camello:Arqueros a camello</Text>
 			<Gender>Male</Gender>
@@ -3330,11 +3323,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Arciere:Arcieri</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Arciere</Italian>
 		<Spanish>
 			<Text>Arquero:Arqueros</Text>
 			<Gender>Male</Gender>
@@ -3469,7 +3458,7 @@
 		<Tag>TXT_KEY_UNIT_ARSONIST</Tag>
 		<English>Arsonist</English>
 		<French>Guerrier pyromane</French>
-		<Italian>Piromane</Italian>
+		<Italian>Lanciatore incendiario</Italian>
 		<Spanish>
 			<Text>Pirómano</Text>
 			<Gender>Male</Gender>
@@ -3784,7 +3773,7 @@
 		<Tag>TXT_KEY_UNIT_ATLATL</Tag>
 		<English>Atlatlist</English>
 		<French>Guerrier avec propulseur</French>
-		<Italian>Lanciatore di Atl-Atl</Italian>
+		<Italian>Lanciatore con propulsore</Italian>
 		<Spanish>
 			<Text>Lanzador de dardos</Text>
 			<Gender>Male</Gender>
@@ -4038,11 +4027,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Guerriero con ascia:Guerrieri con ascia</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Guerriero con ascia</Italian>
 		<Spanish>
 			<Text>Soldado con hacha:Soldados con hacha</Text>
 			<Gender>Male</Gender>
@@ -4303,11 +4288,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Elefante con balista:Elefanti con balista</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Balista su elefante</Italian>
 		<Spanish>
 			<Text>Elefante con balista:Elefantes con balista</Text>
 			<Gender>Male</Gender>
@@ -4341,6 +4322,7 @@
 		</Spanish>
 		<Polish>Balon na Ogrzane Powietrze</Polish>
 		<Russian>Âîçäóøíûé øàð</Russian>
+		<Italian>Mongolfiera</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BALLOON_PEDIA</Tag>
@@ -4390,11 +4372,7 @@
 		<Tag>TXT_KEY_UNIT_BANDIT_FOOTPAD</Tag>
 		<English>Bandit Footpad</English>
 		<French>Bandit à pied</French>
-		<Italian>
-			<Text>Bandito a piedi</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Brigante</Italian>
 		<Spanish>
 			<Text>Bandido</Text>
 			<Gender>Male</Gender>
@@ -4490,6 +4468,7 @@
 		<French>Corsaire Barbare</French>
 		<Polish>Berberyjski Korsarz</Polish>
 		<Russian>Êîðñàð</Russian>
+		<Italian>Corsari barbareschi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BARBARY_CORSAIR_PEDIA</Tag>
@@ -4560,6 +4539,7 @@
 		<English>Barud Warrior</English>
 		<French>Guerrier Barud</French>
 		<Russian>Âîèí-ïîäðûâíèê</Russian>
+		<Italian>Guerriero abbaside</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BARUD_WARRIOR_PEDIA</Tag>
@@ -4766,6 +4746,7 @@
 		<French>Archer avec Gastrophète</French>
 		<Polish>Kuszołucznik</Polish>
 		<Russian>Ãàñòðîôåò÷èê</Russian>
+		<Italian>Balestriere classico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BELUGA</Tag>
@@ -5022,6 +5003,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>Áîåâîé äèðèæàáëü</Russian>
+		<Italian>Dirigibile </Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BLIMP_PEDIA</Tag>
@@ -5398,12 +5380,14 @@
 		</Spanish>
 		<Polish>Buldożer</Polish>
 		<Russian>Áóëüäîçåð</Russian>
+		<Italian>Scavatrice</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BURGLAR</Tag>
 		<English>Burglar</English>
 		<French>Cambrioleur</French>
 		<Russian>Âçëîìùèê</Russian>
+		<Italian>Rapinatore</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BURHANUDDIN_RABBANI</Tag>
@@ -5513,6 +5497,7 @@
 		<English>Camel Cavalry</English>
 		<French>Cavalerie à dos de Chameau</French>
 		<Russian>Âåðáëþæüÿ êàâàëåðèÿ</Russian>
+		<Italian>Cavalleria su cammello</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAMEL_CAVALRY_PEDIA</Tag>
@@ -5525,6 +5510,7 @@
 		<English>Camel Cuirassier</English>
 		<French>Cuirassier à dos de Chameau</French>
 		<Russian>Áîåâîé âåðáëþä</Russian>
+		<Italian>Corazziere su cammello</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAMEL_CUIRASSIER_PEDIA</Tag>
@@ -5571,7 +5557,7 @@
 		<Tag>TXT_KEY_UNIT_CAMEL_RIDER</Tag>
 		<English>Camel Rider</English>
 		<French>Chamelier</French>
-		<Italian>Cavalcatore di cammelli</Italian>
+		<Italian>Cavaliere di cammelli</Italian>
 		<Spanish>
 			<Text>Jinete de camello</Text>
 			<Gender>Male</Gender>
@@ -5810,11 +5796,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Caravella:Caravelle</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Caravella</Italian>
 		<Spanish>
 			<Text>Carabela:Carabelas</Text>
 			<Gender>Female</Gender>
@@ -5887,6 +5869,7 @@
 		<French>Carraque Marchande</French>
 		<Polish>Handlowa Karaka</Polish>
 		<Russian>Êàððàê</Russian>
+		<Italian>Caracca mercantile</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CARRACK_MERCHANT_PEDIA</Tag>
@@ -5936,6 +5919,7 @@
 		<French>Carro-balliste</French>
 		<Polish>Carrobalista</Polish>
 		<Russian>Êàððîáàëëèñòà</Russian>
+		<Italian>Carrobalista </Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CARTHAGE_NUMIDIAN_CAVALRY</Tag>
@@ -5975,6 +5959,7 @@
 		<French>Charretier</French>
 		<Polish>Kołodziej</Polish>
 		<Russian>Êàðåòíûé ìàñòåð</Russian>
+		<Italian>Carradore</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CARTWRIGHT_PEDIA</Tag>
@@ -6042,11 +6027,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Cavalleria</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Cavalleria</Italian>
 		<Spanish>
 			<Text>Caballería:Caballería</Text>
 			<Gender>Female</Gender>
@@ -6192,11 +6173,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Biga:Bighe</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Carro</Italian>
 		<Spanish>
 			<Text>Carro:Carros</Text>
 			<Gender>Male</Gender>
@@ -6396,7 +6373,7 @@
 		<English>Mailed Knight</English>
 		<French>Chevalier en Cotte de Mailles</French>
 		<German>Gepanzerter Ritter</German>
-		<Italian>Cavaliere corazzato</Italian>
+		<Italian>Cavaliere con cotta di maglia</Italian>
 		<Spanish>
 			<Text>Caballero acorazado</Text>
 			<Gender>Male</Gender>
@@ -6513,7 +6490,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Stadtwache</German>
-		<Italian>Guardia cittadina</Italian>
+		<Italian>Sceriffo</Italian>
 		<Spanish>
 			<Text>Alguacil</Text>
 			<Gender>Male</Gender>
@@ -6535,6 +6512,7 @@
 		<French>Clipper Marchand</French>
 		<Polish>Kliper - smukły, bardzo szybki żaglowiec z ożaglowaniem typu fregata, noszący na każdym z trzech lub czterech wysokich masztów nawet do siedmiu żagli rejowych oraz dodatkowe żagle boczne, tzw. lizele, rozpinane na przedłużających reje wytykach, nie licząc sztaksli przednich i międzymasztowych. Nazwa pochodzi od angielskiego clip ((colloq, speed):(US) duża szybkość). Klipry narodziły się na pocz. XIX w. w USA i są bezpośrednimi przodkami współczesnych wielkich żaglowców. Osiągały rekordowe prędkości - dochodzące do 21 węzłów. Miały bardzo smukłe i stosunkowo wąskie kadłuby i ostre, mocno wysunięte na wysokości bukszprytu dzioby, przeciętnie ok. 1000 BRT pojemności, 50 m długości i 10 m szerokości. Były konstruowane specjalnie do jak najszybszego pokonywania tras. Pierwsze klipry były budowane z lekkich materiałów, a więc niezbyt wytrzymałe, za to podlegające olbrzymim naprężeniom mechanicznym z powodu swojej szybkości i do tego z powodu swojej smukłości mniej ładowne od innych żaglowców. Przeciętny okres eksploatacji tych jednostek z początku nie przekraczał nawet dziesięciu lat, a mimo to klipry zarabiały na siebie. Najbardziej sławne były brytyjskie "klipry herbaciane" z lat sześćdziesiątych o kształtach kadłubów zbliżonych niemalże do regatowych jachtów. Najbardziej znanym z nich jest Cutty Sark.</Polish>
 		<Russian>Êëèïåð</Russian>
+		<Italian>Clipper mercantile</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CLIPPER_MERCHANT_PEDIA</Tag>
@@ -6668,6 +6646,7 @@
 		</Spanish>
 		<Polish>Koga</Polish>
 		<Russian>Êîã</Russian>
+		<Italian>Cocca</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COG_MERCHANT</Tag>
@@ -6675,6 +6654,7 @@
 		<French>Cogue Marchande</French>
 		<Polish>Handlowa Koga</Polish>
 		<Russian>Òîðãîâûé êîðàáëü</Russian>
+		<Italian>Mercante con cocca</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COG_MERCHANT_PEDIA</Tag>
@@ -6728,7 +6708,7 @@
 		<French>Archer Composite</French>
 		<Polish>Łucznik Kompozytowy</Polish>
 		<Russian>Êîìïîç. ëó÷íèê</Russian>
-		<Italian>Arciere composito</Italian>
+		<Italian>Arciere con arco composito</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CONFUCIAN_MISSIONARY</Tag>
@@ -6901,11 +6881,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Balestriere:Balestrieri</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Balestriere</Italian>
 		<Spanish>
 			<Text>Ballestero:Ballesteros</Text>
 			<Gender>Male</Gender>
@@ -7032,11 +7008,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Corazziere:Corazzieri</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Corazziere</Italian>
 		<Spanish>
 			<Text>Coracero:Coraceros</Text>
 			<Gender>Male</Gender>
@@ -7080,6 +7052,7 @@
 		<English>Cutthroat</English>
 		<French>Coupe-gorge</French>
 		<Russian>Ãîëîâîðåç</Russian>
+		<Italian>Tagliagole</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CYAXARES</Tag>
@@ -7228,6 +7201,7 @@
 		</Spanish>
 		<Polish>Dekarema</Polish>
 		<Russian>Äåêàðåìà</Russian>
+		<Italian>Decireme</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DECAREME_PEDIA</Tag>
@@ -7506,6 +7480,7 @@
 		</German>
 		<French>Docteur en médecine</French>
 		<Russian>Äîêòîð</Russian>
+		<Italian>Dottore</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DRAGON_SHIP_PIRATE</Tag>
@@ -7513,6 +7488,7 @@
 		<French>Navire-Dragon Pirate</French>
 		<Polish>Smoczy Okręt Piracki</Polish>
 		<Russian>Ïèðàòñêèé êîðàáëü</Russian>
+		<Italian>Drakkar pirata</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DRAGON_SHIP_PIRATE_PEDIA</Tag>
@@ -7741,7 +7717,7 @@
 		<Tag>TXT_KEY_UNIT_EARLYCHARIOT</Tag>
 		<English>Early Chariot</English>
 		<French>Char antique</French>
-		<Italian>Carro primitivo</Italian>
+		<Italian>Carro antico</Italian>
 		<Spanish>
 			<Text>Carro antiguo</Text>
 			<Gender>Male</Gender>
@@ -7823,6 +7799,7 @@
 		<French>Marchand primitif de nourriture</French>
 		<Polish>Wczesny Handlarz Żywnością</Polish>
 		<Russian>Êóïåö</Russian>
+		<Italian>Mercante di cibo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EARLY_IMP_GUARD</Tag>
@@ -7832,7 +7809,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>Guardia imperiale</Italian>
+		<Italian>Guardia imperiale medioevale</Italian>
 		<Spanish>
 			<Text>Guardia imperial primitiva</Text>
 			<Gender>Female</Gender>
@@ -7887,7 +7864,7 @@
 		<Tag>TXT_KEY_UNIT_EARLY_MERCHANT</Tag>
 		<English>Supply Merchant</English>
 		<French>Marchand primitif</French>
-		<Italian>Mercante primitivo</Italian>
+		<Italian>Mercante di rifornimenti</Italian>
 		<Spanish>
 			<Text>Mercader primitivo</Text>
 			<Gender>Male</Gender>
@@ -7994,7 +7971,7 @@
 		<Tag>TXT_KEY_UNIT_ELEPHANT_GUNNER</Tag>
 		<English>Elephant Gunner</English>
 		<French>Tireur Eléphant</French>
-		<Italian>Artiglieria su elefante</Italian>
+		<Italian>Tiratore su elefante</Italian>
 		<Polish>Strzelec na słoniu</Polish>
 		<Russian>Ñòðåëîê íà ñëîíå</Russian>
 	</TEXT>
@@ -8009,7 +7986,7 @@
 		<English>Elephant Rider</English>
 		<French>Monteur d'Eléphant</French>
 		<German>Elefantenreiter</German>
-		<Italian>Uomo su elefante</Italian>
+		<Italian>Cavaliere di elefanti</Italian>
 		<Spanish>
 			<Text>Jinete de elefate</Text>
 			<Gender>Male</Gender>
@@ -8098,6 +8075,7 @@
 		<English>Enforcers</English>
 		<French>Forces de l'Ordre</French>
 		<Russian>Çàùèòíèê</Russian>
+		<Italian>Vigilante</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ENFORCERS_PEDIA</Tag>
@@ -8172,11 +8150,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Presentatore:Presentatori</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Intrattenitore</Italian>
 		<Spanish>
 			<Text>Humorista:Humoristas</Text>
 			<Gender>Male</Gender>
@@ -8440,7 +8414,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Funzionario di Adventute Tours</Italian>
+		<Italian>Funzionario di Adventure Tours</Italian>
 		<Spanish>
 			<Text>Ejecutivo de Adventure Tours</Text>
 			<Gender>Male</Gender>
@@ -8655,6 +8629,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Èçãîé</Russian>
+		<Italian>Esule</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EXILE_PEDIA</Tag>
@@ -8714,11 +8689,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Esploratore:Esploratori</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Esploratore</Italian>
 		<Spanish>
 			<Text>Explorador:Exploradores</Text>
 			<Gender>Male</Gender>
@@ -8909,7 +8880,7 @@
 		<English>Fanatic</English>
 		<French>Fanatique</French>
 		<German>Fanatiker</German>
-		<Italian>Fanatico</Italian>
+		<Italian>Fanatico religioso</Italian>
 		<Polish>Fanatyk</Polish>
 		<Russian>Ôàíàòèê</Russian>
 	</TEXT>
@@ -8918,7 +8889,7 @@
 		<English>[ICON_BULLET]Requires a state religion [ICON_BULLET]+2 XP from every non-state religion in the city [ICON_BULLET]Purges non-state religions when capturing a city (but no holy cities)</English>
 		<French>[ICON_BULLET]Requiert une religion d'Etat [ICON_BULLET]+2 XP pour chaque autre religion dans la ville. [ICON_BULLET]Purge les religions non étatiques lors de la capture d'une ville (mais pas les villes saintes)</French>
 		<German>[ICON_BULLET]Benötigt eine Staatsreligion [ICON_BULLET]+2 XP von jeder Nicht-Staatsreligion in der Staat [ICON_BULLET]Vernichtet alle Nicht-Staatsreligionen wenn er eine Stadt einnimmt (aber keine heiligen Städte)</German>
-		<Italian>[ICON_BULLET]Richiede una religione di stato [ICON_BULLET]+2 XP da ogni religione non di stato in una città [ICON_BULLET]Elimina le religioni non di stato quando cattura una città (ma non nelle Città Sante)</Italian>
+		<Italian>[ICON_BULLET]Richiede di aver fondato una [COLOR_HIGHLIGHT_TEXT]religione di stato[COLOR_REVERT][NEWLINE][ICON_BULLET]Punti esperienza per ogni religione non di stato in città [COLOR_HIGHLIGHT_TEXT]+2[COLOR_REVERT][NEWLINE][ICON_BULLET]L'unità [COLOR_HIGHLIGHT_TEXT]elimina le religioni[COLOR_REVERT] non di stato quando cattura una città (non nelle città sante)</Italian> <!-- unit Inquisitor -->
 		<Polish>[ICON_BULLET]Wymaga religii państwowej [ICON_BULLET]+2 XP za każdą religię nie-państwową w mieście [ICON_BULLET]Usuwa nie-państwową religię kiedy miasto zostaje podbite (oprócz Świetych Miast)</Polish>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Подсказка: [COLOR_REVERT]Требуется государственная религия [ICON_BULLET]+2 XP от каждой негосударственной религии в городе [ICON_BULLET]Удаляет все негосударственные религии при захвате города (кроме Священных городов)</Russian>
 	</TEXT>
@@ -8991,6 +8962,7 @@
 		<French>Vétérinaire de terrain</French>
 		<Polish>Mastalerz</Polish>
 		<Russian>Ïîëåâîé âåòåðèíàð</Russian>
+		<Italian>Veterinario da campo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FIELD_VET_PEDIA</Tag>
@@ -9059,7 +9031,7 @@
 		<Tag>TXT_KEY_UNIT_FLAILMAN</Tag>
 		<English>Flailman</English>
 		<French>Guerrier avec fléau</French>
-		<Italian>Guerriero con frusta</Italian>
+		<Italian>Guerriero con mazzafrusto</Italian>
 		<Spanish>
 			<Text>Soldado con mayal</Text>
 			<Gender>Male</Gender>
@@ -9130,6 +9102,7 @@
 		<French>Flèche de Feu</French>
 		<Polish>Ognista Strzała</Polish>
 		<Russian>Îãíåñòðåë</Russian>
+		<Italian>Freccia di fuoco</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FLAMING_ARROW_PEDIA</Tag>
@@ -9166,7 +9139,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>Nave da trasporto</Italian>
+		<Italian>Fluit</Italian>
 		<Spanish>
 			<Text>Filibote</Text>
 			<Gender>Male</Gender>
@@ -9186,6 +9159,7 @@
 		<French>Caravane Alimentaire</French>
 		<Polish>Karawana z żywnością</Polish>
 		<Russian>Ïðîä. êàðàâàí</Russian>
+		<Italian>Carovana di cibo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FOOD_FREIGHT</Tag>
@@ -9193,6 +9167,7 @@
 		<French>Transport de Nourriture</French>
 		<Polish>Cieżarówki z żywnością</Polish>
 		<Russian>Ïðîä. òðàíñïîðò</Russian>
+		<Italian>Camion di cibo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FOOD_SUPPLY_TRAIN</Tag>
@@ -9200,6 +9175,7 @@
 		<French>Convoi de nourriture</French>
 		<Polish>Wozy z żywnością</Polish>
 		<Russian>Ïðîä. îáîç</Russian>
+		<Italian>Convoglio di cibo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FOREST_GUARDIANS</Tag>
@@ -9291,11 +9267,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Camion da trasporto:Camion da trasporto</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Camion di rifornimenti</Italian>
 		<Spanish>
 			<Text>Camión de carga:Camiones de carga</Text>
 			<Gender>Male</Gender>
@@ -9347,11 +9319,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Fregata:Fregate</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Fregata</Italian>
 		<Spanish>
 			<Text>Fragata:Fragatas</Text>
 			<Gender>Female</Gender>
@@ -9668,11 +9636,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Galeazza:Galeazze</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Galeazza</Italian>
 		<Spanish>
 			<Text>Galeaza:Galeazas</Text>
 			<Gender>Female</Gender>
@@ -9698,11 +9662,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Galeone:Galeoni</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Galeone</Italian>
 		<Spanish>
 			<Text>Galeón:Galeones</Text>
 			<Gender>Male</Gender>
@@ -9732,11 +9692,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Galea:Galee</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Galea</Italian>
 		<Spanish>
 			<Text>Galera:Galeras</Text>
 			<Gender>Female</Gender>
@@ -9875,6 +9831,7 @@
 		<French>Réparateur d'engrenages</French>
 		<Polish>Rzemieślnik</Polish>
 		<Russian>Ðåìîíòíèê</Russian>
+		<Italian>Meccanico di ingranaggi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GEAR_MECHANIC_PEDIA</Tag>
@@ -10079,7 +10036,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>Grande bombarda</Italian>
+		<Italian>Cannone dei Dardanelli</Italian>
 		<Spanish>
 			<Text>Gran bombarda</Text>
 			<Gender>Female</Gender>
@@ -10256,11 +10213,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Granatiere:Granatieri</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Granatiere</Italian>
 		<Spanish>
 			<Text>Granadero:Granaderos</Text>
 			<Gender>Male</Gender>
@@ -10379,7 +10332,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>Wachhunde</German>
-		<Italian>Cani da guerra</Italian>
+		<Italian>Cane da guerra</Italian>
 		<Spanish>
 			<Text>Perros guardianes</Text>
 			<Gender>Male</Gender>
@@ -10443,6 +10396,7 @@
 		</Spanish>
 		<Polish>Przewodnik</Polish>
 		<Russian>Ãèä</Russian>
+		<Italian>Ricognitore</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GUIDED_MISSILE</Tag>
@@ -10519,6 +10473,7 @@
 		<English>Gunfighter</English>
 		<French>As de la gâchette</French>
 		<Russian>Âîëüíûé ñòðåëîê</Russian>
+		<Italian>Pistolero</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GUNSHIP</Tag>
@@ -10763,6 +10718,7 @@
 		<Tag>TXT_KEY_UNIT_HASHISHIN</Tag>
 		<English>Hashishin</English>
 		<Russian>Õàøèøèí</Russian>
+		<Italian>Guerriero hashishin</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HASHISHIN_PEDIA</Tag>
@@ -10835,6 +10791,7 @@
 		<English>Healer</English>
 		<French>Guérisseur</French>
 		<Russian>Õèëåð</Russian>
+		<Italian>Guaritore</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEALER_PEDIA</Tag>
@@ -10858,7 +10815,7 @@
 		<Tag>TXT_KEY_UNIT_HEAVY_AXEMAN</Tag>
 		<English>Heavy Axeman</English>
 		<French>Guerrier lourd avec Hache</French>
-		<Italian>Guerriero con ascia corazzato</Italian>
+		<Italian>Guerriero pesante con ascia</Italian>
 		<Spanish>
 			<Text>Soldado con hacha pesada</Text>
 			<Gender>Male</Gender>
@@ -10881,6 +10838,7 @@
 		<French>Balliste lourde</French>
 		<Polish>Ciężka Balista</Polish>
 		<Russian>Òÿæåëàÿ áàëëèñòà</Russian>
+		<Italian>Balista pesante</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEAVY_CANNON</Tag>
@@ -10888,6 +10846,7 @@
 		<French>Canon Lourd</French>
 		<Polish>Wielkie Działo</Polish>
 		<Russian>Îñàäíàÿ ïóøêà</Russian>
+		<Italian>Cannone pesante</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEAVY_CAVALRY</Tag>
@@ -10898,11 +10857,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Schwere Kavallerie</German>
-		<Italian>
-			<Text>Cavalleria pesante:Cavallerie pesanti</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Cavalleria pesante</Italian>
 		<Spanish>
 			<Text>Caballería pesada:Caballería pesada</Text>
 			<Gender>Female</Gender>
@@ -11197,11 +11152,7 @@
 		<Tag>TXT_KEY_UNIT_HIGHWAYMAN</Tag>
 		<English>Highwayman</English>
 		<French>Voleur de grands chemins</French>
-		<Italian>
-			<Text>Bandito:Banditi</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Brigante a cavallo</Italian>
 		<Spanish>
 			<Text>Salteador de caminos</Text>
 			<Gender>Male</Gender>
@@ -11370,7 +11321,7 @@
 		<English>Horseman</English>
 		<French>Cavalier</French>
 		<German>Reiter</German>
-		<Italian>Uomo a cavallo</Italian>
+		<Italian>Cavaliere con lancia</Italian>
 		<Spanish>
 			<Text>Jinete</Text>
 			<Gender>Male</Gender>
@@ -11394,11 +11345,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Arciere a cavallo:Arcieri a cavallo</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Arciere a cavallo</Italian>
 		<Spanish>
 			<Text>Arquero a caballo:Arqueros a caballo</Text>
 			<Gender>Male</Gender>
@@ -11432,7 +11379,6 @@
 		<Tag>TXT_KEY_UNIT_HORSE_CROSSBOWMAN_PEDIA</Tag>
 		<English>Mounted knights armed with lances proved ineffective against formations of pikemen combined with crossbowmen whose weapons could penetrate most knights' armor. The invention of pushlever and ratchet drawing mechanisms enabled the use of crossbows on horseback, leading to the development of new cavalry tactics. Knights and mercenaries deployed in triangular formations, with the most heavily armored knights at the front. Some of these riders would carry small, powerful all-metal crossbows of their own. Crossbows were eventually replaced in warfare by more powerful gunpowder weapons, although early guns had slower rates of fire and much worse accuracy than contemporary crossbows.</English>
 		<French>Arbalétrier monté</French>
-		<Italian>Balestriere a cavallo</Italian>
 		<Spanish>El Ballestero a caballo.</Spanish>
 		<Polish>Kusznik Konny</Polish>
 	</TEXT>
@@ -11441,6 +11387,7 @@
 		<English>Hospital Ship</English>
 		<French>Navire Hôpital</French>
 		<Russian>Ìåä. êàòåð</Russian>
+		<Italian>Nave ospedale</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HOSPITAL_SHIP_2</Tag>
@@ -11731,7 +11678,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HYPASPISTAI_PEDIA</Tag>
 		<English>Hail, Basileu! Before you stand your Hypaspistai: the elite of the elite and your personal guard. They are armed and armored in the finest equipment of the traditional hoplite: aspis, greaves, cuirass, helmet, spear, and sword. They are the best and richest of your men; far too worthy to risk in unwise actions. And yet they are without a doubt capable of multiplying the power of your army. Forming the right wing of the battle line or leading the assault on fortifications their heavy armor and weapons allow them to stand against even the hardiest of opponents and triumph with ease. They should be deployed where the fighting will be at its absolute thickest or nearby to fight with and to protect you.[NEWLINE]Historically, the Hypaspistai (shield-bearers) first appear with Alexandros at the beginning of his reign as his elite troops and bodyguard. He used them extensively throughout his anabasis for special missions, assault of fortifications, and in support of light troops in rough terrain; however, details of the unit seem to disappear by the time Alexandros reaches India and remain as such until appearing in various sources for the three remaining Diadochoi kingdoms in different forms and perhaps briefly in Epeiros with Pyrrhos. Such examples of their deployment count them as possibly numbering a fifth of the 10,000 Argyraspides corps of the Seleukid kings or as the military police and closest guard of the Makedonian kings. Yet, despite their prowess, the Hypaspistai were either forced to evolve past the antiquated hoplite model as in the east or vanish with the fall of their kingdom as in the west.</English>
-		<Italian>Storicamente gli Hypaspistai (portatori di scudi) comparvero all'inizio del regno di Alessandro Magno come truppe d'élite e guardie del corpo. Venivano usati molto in missioni speciali, assalti, fortificazioni e come supporto alle truppe leggere nei terreni più accidentati; tuttavia, scomparvero quasi del tutto quando Alessandro raggiunse l'India. Soldati simili esistevano con nomi diversi all'interno dei successivi regni ellenistici, forse anche in Epiro durante il regno di Pirro. Probabilmente costituivano circa un quinto dei 10000 Argiraspidi dei re Seleucidi, oltre alle forze di polizia e alle guardie del corpo dei re di Macedonia. Nonostante la loro forza, gli Hypaspistai furono costretti ad evolversi dall'antiquato modello di oplita o a scomparire con la caduta dei regni ellenistici.</Italian>
+		<Italian>Storicamente gli Hypaspistai (portatori di scudi) comparvero all'inizio del regno di Alessandro Magno come truppe d'élite e guardie del corpo. Venivano usati molto in missioni speciali, assalti, fortificazioni e come supporto alle truppe leggere nei terreni più accidentati; tuttavia, scomparvero quasi del tutto quando Alessandro raggiunse l'India. Soldati simili esistevano con nomi diversi all'interno dei successivi regni ellenistici, forse anche in Epiro durante il regno di Pirro. Probabilmente costituivano circa un quinto dei 10000 Argiraspidi dei re Seleucidi, oltre alle forze di polizia e alle guardie del corpo dei re di Macedonia. Nonostante la loro forza, gli Hypaspistai furono costretti ad evolversi dall'antiquato modello di oplite o a scomparire con la caduta dei regni ellenistici.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_IAN_SMITH</Tag>
@@ -11822,12 +11769,14 @@
 		<Tag>TXT_KEY_UNIT_IMMIGRANT</Tag>
 		<English>Immigrant</English>
 		<Russian>Èììèãðàíò</Russian>
+		<Italian>Immigrante</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_IMMIGRANT_HELP</Tag>
 		<English>[ICON_BULLET]Adds 1 population point when joined to a city.[NEWLINE]Decreases the population in the city where it is built by 2</English>
 		<French>[ICON_BULLET]Ajoute 1 de population lorsqu'il rejoint une ville.[NEWLINE]Diminue la population de la ville où elle est construite par 2</French>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Подсказка: [COLOR_REVERT]Добавляет 1 нового жителя при присоединении к городу.[NEWLINE]Уменьшает население в городе, где он создан, на 2 жителей</Russian>
+		<Italian>[ICON_BULLET]L'unità aggiunge [COLOR_HIGHLIGHT_TEXT]1 punto popolazione[COLOR_REVERT] se si unisce a una città[NEWLINE][ICON_BULLET]L'unità fa [COLOR_HIGHLIGHT_TEXT]diminuire di 2[COLOR_REVERT] la popolazione nella città in cui viene addestrata</Italian> <!-- unit Immigrant -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_IMMIGRANT_PEDIA</Tag>
@@ -11945,7 +11894,7 @@
 		<English>[ICON_BULLET]Requires active State Religion [ICON_BULLET]Intolerant civic must be active</English>
 		<French>[ICON_BULLET]Requiert une Religion d'Etat [ICON_BULLET]La doctrine 'Intolérance' doit être active</French>
 		<German>[ICON_BULLET]Benötigt eine aktive Staatsreligion [ICON_BULLET]Die Gesellschaftsform "Intolerant" muss aktiv sein</German>
-		<Italian>[ICON_BULLET]Richiede una Religione di stato [ICON_BULLET]La forma di governo Intollerante dev'essere attiva</Italian>
+		<Italian>[ICON_BULLET]Richiede di aver fondato una [COLOR_HIGHLIGHT_TEXT]religione di stato[COLOR_REVERT][NEWLINE][ICON_BULLET]La forma di governo [COLOR_HIGHLIGHT_TEXT]intolleranza[COLOR_REVERT] dev'essere attiva</Italian> <!-- unit Inquisitor -->
 		<Spanish>[ICON_BULLET]Requiere una religión oficial [ICON_BULLET]Requiere el principio Intolerancia activo</Spanish>
 		<Polish>[ICON_BULLET]Wymaga aktywnej Religii Narodowej [ICON_BULLET]Doktryna nietolerancja musi być aktywna</Polish>
 		<Russian>[ICON_BULLET] Òðåáóåò àêòèâíîé ãîñóäàðñòâåííîé ðåëèãèè [NEWLINE][ICON_BULLET] Èíñòèòèòóò âëàñòè "Íåòåðïèìîñòü" òîæå äîëæåí áûòü àêòèâåí</Russian>
@@ -12002,11 +11951,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Corazzata:Corazzate</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Nave corazzata</Italian>
 		<Spanish>
 			<Text>Buque blindado:Buques blindados</Text>
 			<Gender>Male</Gender>
@@ -12049,7 +11994,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Eisenfregatte</German>
-		<Italian>Fregata in ferro</Italian>
+		<Italian>Fregata di ferro</Italian>
 		<Spanish>
 			<Text>Fragata de hierro</Text>
 			<Gender>Female</Gender>
@@ -12360,7 +12305,7 @@
 		<English>Javelineer</English>
 		<French>Lanceur de Javelots</French>
 		<German>Speerwerfer</German>
-		<Italian>Giavellottiere</Italian>
+		<Italian>Lanciatore di giavellotti</Italian>
 		<Spanish>
 			<Text>Lanzador de jabalinas</Text>
 			<Gender>Male</Gender>
@@ -12634,6 +12579,7 @@
 		</Spanish>
 		<Polish>Sędzia</Polish>
 		<Russian>Ñóäüÿ</Russian>
+		<Italian>Giudice</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JUDGE_PEDIA</Tag>
@@ -13146,11 +13092,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Cavaliere:Cavalieri</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Cavaliere</Italian>
 		<Spanish>
 			<Text>Caballero:Caballeros</Text>
 			<Gender>Male</Gender>
@@ -13516,7 +13458,7 @@
 		<Tag>TXT_KEY_UNIT_LAWYER_REMOVE_CORPORATIONS_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Litigate[COLOR_REVERT][NEWLINE]Take legal action and drive all corporations from the city.</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]mettre en litige[COLOR_REVERT][NEWLINE]Prendre des mesures juridiques et conduire toutes les entreprises de la ville au procès.</French>
-		<Italian>[COLOR_HIGHLIGHT_TEXT]Denuncia[COLOR_REVERT][NEWLINE]Prendi azioni legali e rimuovi tutte le corporazioni dalla città.</Italian>
+		<Italian>[ICON_BULLET]L'unità può intraprendere azioni legali e [COLOR_HIGHLIGHT_TEXT]rimuovere[COLOR_REVERT] tutte le corporazioni dalla città (azione [COLOR_HIGHLIGHT_TEXT]querela[COLOR_REVERT])</Italian> <!-- unit Lawyer -->
 		<Spanish>[ICON_BULLET]Puede tomar acciones legales</Spanish>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Zaskarż[COLOR_REVERT][NEWLINE]Legalnym sposobem wypędź wszystkie korporacje ze swojego miasta.</Polish>
 	</TEXT>
@@ -13721,11 +13663,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Leichte Kavallerie</German>
-		<Italian>
-			<Text>Cavalleria leggera:Cavallerie leggere</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Cavalleria leggera</Italian>
 		<Spanish>
 			<Text>Caballería ligera:Caballería ligera</Text>
 			<Gender>Female</Gender>
@@ -13762,11 +13700,7 @@
 		<English>Light Swordsman</English>
 		<French>Spadassin léger</French>
 		<German>Leichter Schwertkämpfer</German>
-		<Italian>
-			<Text>Spadaccino leggero:Spadaccini leggeri</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Spadaccino leggero</Italian>
 		<Spanish>
 			<Text>Soldado con espada ligera:Soldados con espada ligera</Text>
 			<Gender>Male</Gender>
@@ -13955,6 +13889,7 @@
 		</Spanish>
 		<Polish>Taran Ręczny</Polish>
 		<Russian>Äðåâíèé òàðàí</Russian>
+		<Italian>Tronco ariete</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LOG_RAM_PEDIA</Tag>
@@ -14029,11 +13964,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Signorotto</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Lord</Italian>
 		<Spanish>
 			<Text>Barón</Text>
 			<Gender>Male</Gender>
@@ -14270,6 +14201,7 @@
 		<French>Machiniste</French>
 		<Polish>Maszynista</Polish>
 		<Russian>Ìàøèíèñò</Russian>
+		<Italian>Macchinista</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MACHINIST_PEDIA</Tag>
@@ -14533,6 +14465,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Russian>Ìàíãîíåë</Russian>
+		<Italian>Manganella</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MANGONEL_PEDIA</Tag>
@@ -14557,6 +14490,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>Ìàíîâàð</Russian>
+		<Italian>Man of war</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MANOWAR_PEDIA</Tag>
@@ -14827,6 +14761,7 @@
 		<French>Mécanicien</French>
 		<Polish>Mechanik</Polish>
 		<Russian>Ìåõàíèê</Russian>
+		<Italian>Meccanico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MECHANIC_PEDIA</Tag>
@@ -14890,7 +14825,7 @@
 		<English>Medic</English>
 		<French>Infirmière</French>
 		<German>Sanitäter</German>
-		<Italian>Medico</Italian>
+		<Italian>Infermiera</Italian>
 		<Spanish>
 			<Text>Enfermera</Text>
 			<Gender>Female</Gender>
@@ -14916,6 +14851,7 @@
 		<French>Médecin Vétérinaire</French>
 		<Polish>Współczesny Weterynarz</Polish>
 		<Russian>Âåòåðèíàðíûé âðà÷</Russian>
+		<Italian>Medico veterinario</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MEDICAL_VET_PEDIA</Tag>
@@ -14927,6 +14863,7 @@
 		<English>Medicine Man</English>
 		<French>Homme-médecine</French>
 		<Russian>Ëåêàðü</Russian>
+		<Italian>Sciamano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MEDICINE_MAN_PEDIA</Tag>
@@ -15022,6 +14959,7 @@
 		<French>[COLOR_WARNING_TEXT]Les Missions commerciales nécessitent l'ouverture des frontières[COLOR_REVERT]</French>
 		<Polish>[COLOR_WARNING_TEXT]Misje Handlowe wymagają Otwartych Granic[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_WARNING_TEXT]Торговая миссия требует открытых границ[COLOR_REVERT]</Russian>
+		<Italian>[ICON_BULLET]Per effettuare missioni commerciali l'accordo [COLOR_HIGHLIGHT_TEXT]confini aperti[COLOR_REVERT] deve essere in vigore</Italian> <!-- unit Cog Merchant -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MERLIN</Tag>
@@ -15323,7 +15261,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>Auto mafiosa di lusso</Italian>
+		<Italian>Automobile dei gangster</Italian>
 		<Spanish>
 			<Text>Coche de mafioso</Text>
 			<Gender>Male</Gender>
@@ -15650,7 +15588,7 @@
 		<English>[ICON_BULLET]Requires a state religion [ICON_BULLET]+2 XP from every building of the state religion [ICON_BULLET]+4 XP from shrine of the state religion [ICON_BULLET]+4 XP if player is full member of the Apostolic Palace [ICON_BULLET]If defends successfully in a city, spreads the state religion if not present</English>
 		<French>[ICON_BULLET]Requiert une religion d'Etat [ICON_BULLET]+2 EXP pour chaque bâtiment religieux [ICON_BULLET]+4 EXP pour chaque sanctuaire religieux [ICON_BULLET]+4 EXP si le joueur membre du Palais Apostolique [ICON_BULLET]Lors de la défense d'une ville, propage automatiquement sa religion</French>
 		<German>[ICON_BULLET]Benötigt eine Staatsreligion [ICON_BULLET]+2 XP von jedem Gebäude der Staatsreligion [ICON_BULLET]+4 XP vom Schrein der Staatsreligion [ICON_BULLET]+4 XP falls der Spieler Vollmitglied des Apostolischen Palastes ist [ICON_BULLET]Falls er in einer Stadt erfolgreich verteidigt, wird die Staatsreligion verbreitet, falls diese nicht bereits anwesend ist</German>
-		<Italian>[ICON_BULLET]Richiede una Religione di stato [ICON_BULLET]+2 XP da ogni edificio della religione di stato [ICON_BULLET]+4 XP dal santuario della religione di stato [ICON_BULLET]+4 XP se il giocatore è un membro del Palazzo Apostolico [ICON_BULLET]Se si difende con successo in una città, diffonde automaticamente la religione in quella città se non è presente</Italian>
+		<Italian>[ICON_BULLET]Richiede di aver fondato una [COLOR_HIGHLIGHT_TEXT]religione di stato[COLOR_REVERT] [NEWLINE][ICON_BULLET]Per ogni [COLOR_HIGHLIGHT_TEXT]edificio[COLOR_REVERT] della religione di stato punti esperienza [COLOR_HIGHLIGHT_TEXT]+2[COLOR_REVERT][NEWLINE][ICON_BULLET]Per ogni [COLOR_HIGHLIGHT_TEXT]santuario[COLOR_REVERT] della religione di stato punti esperienza [COLOR_HIGHLIGHT_TEXT]+4[COLOR_REVERT][NEWLINE][ICON_BULLET]Se si è membri del [COLOR_HIGHLIGHT_TEXT]Palazzo Apostolico[COLOR_REVERT] punti esperienza [COLOR_HIGHLIGHT_TEXT]+4[COLOR_REVERT][NEWLINE][ICON_BULLET]Se l'unità si [COLOR_HIGHLIGHT_TEXT]difende[COLOR_REVERT] con successo in una città, [COLOR_HIGHLIGHT_TEXT]diffonde automaticamente[COLOR_REVERT] la religione di stato se non è presente</Italian> <!-- unit Monk -->
 		<Russian>[ICON_BULLET]Òðåáóåòñÿ ãîñ. ðåëèãèÿ [ICON_BULLET]+2 îïûòà îò êàæäîé ïîñòðîéêè ãîñ. ðåëèãèè [ICON_BULLET]+4 îïûòà îò êàæäîé ñâÿòûíè ãîñ. ðåëèãèè [ICON_BULLET]+4 îïûòà, åñëè èãðîê ïîëíîïðàâíûé âëàäåëåö Àïîñòîëüñêîãî äâîðöà [ICON_BULLET]Åñëè óñïåøíî îáîðîíÿåò ãîðîä, ëèáî ðàñïðîñòðàíÿåò ãîñ. ðåëèãèþ</Russian>
 	</TEXT>
 	<TEXT>
@@ -15801,11 +15739,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Berittene Infanterie</German>
-		<Italian>
-			<Text>Fanteria a cavallo:Fanterie a cavallo</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Fanteria a cavallo</Italian>
 		<Spanish>
 			<Text>Infantería montada:Infantería montada</Text>
 			<Gender>Female</Gender>
@@ -15933,11 +15867,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Soldato con moschetto:Soldati con moschetto</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Moschettiere</Italian>
 		<Spanish>
 			<Text>Soldado con mosquete:Soldados con mosquete</Text>
 			<Gender>Male</Gender>
@@ -16239,6 +16169,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL</Tag>
 		<English>Neanderthal Clubman</English>
+		<Italian>Guerriero neanderthal con clava</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_BRUTE</Tag>
@@ -16250,24 +16181,28 @@
 		</French>
 		<German>Neandertaler-Schläger</German>
 		<Russian>Неанд. громила</Russian>
+		<Italian>Bruto neanderthal</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_CANOE</Tag>
 		<English>Neanderthal Canoe</English>
 		<French>Canoé de Néanderthal</French>
 		<Russian>Неанд. каноэ</Russian>
+		<Italian>Canoa neanderthal</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_CHASER</Tag>
 		<English>Neanderthal Chaser</English>
 		<French>Cavaleur de Néanderthal</French>
 		<Russian>Неанд. ловчий</Russian>
+		<Italian>Inseguitore neanderthal</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_ELEPHANT_RIDER</Tag>
 		<English>Neanderthal Elephant Rider</English>
 		<French>Chevaucheur d'Eléphant Néanderthal</French>
 		<Russian>Неанд. наездник слона</Russian>
+		<Italian>Cavaliere di elefanti neanderthal</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_ENFORCER</Tag>
@@ -16278,6 +16213,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Russian>Неанд. защитник</Russian>
+		<Italian>Vigilante neanderthal</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_GATHERER</Tag>
@@ -16289,54 +16225,63 @@
 		</French>
 		<German>Neandertaler-Sammler</German>
 		<Russian>Неанд. собиратель</Russian>
+		<Italian>Raccoglitore neanderthal</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_HEALER</Tag>
 		<English>Neanderthal Healer</English>
 		<French>Guérisseur Néanderthal</French>
 		<Russian>Неанд. лекарь</Russian>
+		<Italian>Guaritore neanderthal</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_HUNTER</Tag>
 		<English>Neanderthal Hunter</English>
 		<French>Chasseur Néanderthal</French>
 		<Russian>Неанд. охотник</Russian>
+		<Italian>Cacciatore neanderthal</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_KAYAK</Tag>
 		<English>Neanderthal Kayak</English>
 		<French>Kayak Néanderthal</French>
 		<Russian>Неанд. каяк</Russian>
+		<Italian>Kayak neanderthal</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_LOG_RAM</Tag>
 		<English>Neanderthal Log Ram</English>
 		<French>Tronc de siège de Néanderthal</French>
 		<Russian>Неанд. таран</Russian>
+		<Italian>Tronco ariete neanderthal</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_OBSIDIAN_AXEMAN</Tag>
 		<English>Neanderthal Obsidian Axeman</English>
 		<French>Guerrier avec Hache d'obsidienne Néanderthal</French>
 		<Russian>Неанд. обсид. секироносец</Russian>
+		<Italian>Guerriero neanderthal con ascia d'ossidiana</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_OBSIDIAN_MACEMAN</Tag>
 		<English>Neanderthal Obsidian Maceman</English>
 		<French>Guerrier avec Masse d'obsidienne Néanderthal</French>
 		<Russian>Неанд. обсид. булавоносец</Russian>
+		<Italian>Guerriero neanderthal con mazza d'ossidiana</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_OBSIDIAN_SPEARMAN</Tag>
 		<English>Neanderthal Obsidian Spearman</English>
 		<French>Guerrier avec Lance d'obsidienne Néanderthal</French>
 		<Russian>Неанд. обсид. копейщик</Russian>
+		<Italian>Guerriero neanderthal con lancia d'ossidiana</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_OBSIDIAN_SWORDSMAN</Tag>
 		<English>Neanderthal Obsidian Swordsman</English>
 		<French>Guerrier avec Epée d'obsidienne Néanderthal</French>
 		<Russian>Неанд. обсид. мечник</Russian>
+		<Italian>Guerriero neanderthal con spada d'ossidiana</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_PEDIA</Tag>
@@ -16349,42 +16294,49 @@
 		<English>Neanderthal Raft</English>
 		<French>Radeau Néanderthal</French>
 		<Russian>Неанд. плот</Russian>
+		<Italian>Zattera neanderthal</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_SCOUT</Tag>
 		<English>Neanderthal Scout</English>
 		<French>Eclaireur Néanderthal</French>
 		<Russian>Неанд. разведчик</Russian>
+		<Italian>Scout neanderthal</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_SHEPHERD</Tag>
 		<English>Neanderthal Shepherd</English>
 		<French>Berger Néanderthal</French>
 		<Russian>Неанд. пастух</Russian>
+		<Italian>Pastore neanderthal</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_SLINGER</Tag>
 		<English>Neanderthal Slinger</English>
 		<French>Guerrier avec fronde Néanderthal</French>
 		<Russian>Неанд. пращник</Russian>
+		<Italian>Fromboliere neanderthal</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_STONE_AGE_AXEMAN</Tag>
 		<English>Neanderthal Stone Axeman</English>
 		<French>Guerrier avec Hache de pierre Néanderthal</French>
 		<Russian>Неанд. древн. секироносец</Russian>
+		<Italian>Guerriero neanderthal con ascia di pietra</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_STONE_AGE_SPEARMAN</Tag>
 		<English>Neanderthal Stone Spearman</English>
 		<French>Guerrier avec Lance de pierre Néanderthal</French>
 		<Russian>Неанд. древн. копейщик</Russian>
+		<Italian>Guerriero neanderthal con lancia di pietra</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_STONE_MACEMAN</Tag>
 		<English>Neanderthal Stone Maceman</English>
 		<French>Guerrier avec Masse de pierre Néanderthal</French>
 		<Russian>Неанд. древн. булавоносец</Russian>
+		<Italian>Guerriero neanderthal con mazza di pietra</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_STONE_THROWER</Tag>
@@ -16396,18 +16348,21 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Íåàíä. ìåòàòåëü</Russian>
+		<Italian>Lanciatore di pietre neanderthal</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_TRACKER</Tag>
 		<English>Neanderthal Tracker</English>
 		<French>Pisteur Néanderthal</French>
 		<Russian>Неанд. следопыт</Russian>
+		<Italian>Cercatore di tracce neanderthal</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_TRAINED_DOG</Tag>
 		<English>Neanderthal Trained Dogs</English>
 		<French>Chien dressé de Néanderthal</French>
 		<Russian>Неанд. дресс. пес</Russian>
+		<Italian>Cane addestrato neanderthal</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_TRIBAL_GUARDIAN</Tag>
@@ -16425,10 +16380,12 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Неанд. скиталец</Russian>
+		<Italian>Nomade neanderthal</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_WARRIOR</Tag>
 		<English>Neanderthal Spiked Clubman</English>
+		<Italian>Guerriero neanderthal con clava con spuntoni</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_WARRIOR_PEDIA</Tag>
@@ -16441,6 +16398,7 @@
 		<English>Neanderthal War Canoe</English>
 		<French>Canoé de guerre de Néanderthal</French>
 		<Russian>Неанд. боевое каноэ</Russian>
+		<Italian>Canoa da guerra neanderthal</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_WATCHER</Tag>
@@ -16452,6 +16410,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Неанд. наблюдатель</Russian>
+		<Italian>Sorvegliante neanderthal</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_WISE_WOMAN</Tag>
@@ -16467,18 +16426,21 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Неанд. ведунья</Russian>
+		<Italian>Guaritrice primitiva neanderthal</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_WOODEN_SPEARMAN</Tag>
 		<English>Neanderthal Wood Spearman</English>
 		<French>Lancier de Néanderthal</French>
 		<Russian>Неанд. копьеносец</Russian>
+		<Italian>Guerriero neanderthal con lancia di legno</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_WORKBOAT</Tag>
 		<English>Neanderthal Workboat</English>
 		<French>Bateau-atelier de Néanderthal</French>
 		<Russian>Неанд. рабочая лодка</Russian>
+		<Italian>Barca da lavoro neanderthal</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEDBUCHADNEZZAR</Tag>
@@ -16608,11 +16570,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Nobile</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Nobiluomo</Italian>
 		<Spanish>
 			<Text>Noble</Text>
 			<Gender>Male</Gender>
@@ -16746,11 +16704,7 @@
 		<Tag>TXT_KEY_UNIT_OBSIDIAN_AXEMAN</Tag>
 		<English>Obsidian Axeman</English>
 		<French>Guerrier avec hache d'obsidienne</French>
-		<Italian>
-			<Text>Guerriero con ascia d'ossidiana:Guerrieri con ascia d'ossidiana</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Guerriero con ascia d'ossidiana</Italian>
 		<Polish>Obsydianowy Topornik</Polish>
 		<Russian>Îáñèä. ñåêèðîíîñåö</Russian>
 	</TEXT>
@@ -16764,11 +16718,7 @@
 		<Tag>TXT_KEY_UNIT_OBSIDIAN_MACEMAN</Tag>
 		<English>Obsidian Maceman</English>
 		<French>Guerrier avec masse d'obsidienne</French>
-		<Italian>
-			<Text>Guerriero con mazza d'ossidiana:Guerrieri con mazza d'ossidiana</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Guerriero con mazza d'ossidiana</Italian>
 		<Polish>Obsydianowy Pałkarz</Polish>
 		<Russian>Îáñèä. áóëàâîíîñåö</Russian>
 	</TEXT>
@@ -16782,11 +16732,7 @@
 		<Tag>TXT_KEY_UNIT_OBSIDIAN_SPEARMAN</Tag>
 		<English>Obsidian Spearman</English>
 		<French>Guerrier avec lance d'obsidienne</French>
-		<Italian>
-			<Text>Guerriero con lancia d'ossidiana:Guerrieri con lancia d'ossidiana</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Guerriero con lancia d'ossidiana</Italian>
 		<Polish>Obsydianowy Włócznik</Polish>
 		<Russian>Îáñèä. êîïåéùèê</Russian>
 	</TEXT>
@@ -16800,11 +16746,7 @@
 		<Tag>TXT_KEY_UNIT_OBSIDIAN_SWORDSMAN</Tag>
 		<English>Obsidian Swordsman</English>
 		<French>Guerrier avec épée d'obsidienne</French>
-		<Italian>
-			<Text>Guerriero con spada d'ossidiana:Guerrieri con spada d'ossidiana</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Guerriero con spada d'ossidiana</Italian>
 		<Polish>Obsydianowy Miecznik</Polish>
 		<Russian>Îáñèä. ìå÷íèê</Russian>
 	</TEXT>
@@ -17063,7 +17005,7 @@
 		<Tag>TXT_KEY_UNIT_ORGAN_GUN</Tag>
 		<English>Organ Gun</English>
 		<French>Canon orgue</French>
-		<Italian>Mitragliatrice a canna multipla</Italian>
+		<Italian>Organo</Italian>
 		<Spanish>
 			<Text>Cañón de órgano</Text>
 			<Gender>Male</Gender>
@@ -17200,7 +17142,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>Piroga con bilanciere</Italian>
+		<Italian>Canoa a bilanciere</Italian>
 		<Spanish>
 			<Text>Canoa con batanga</Text>
 			<Gender>Female</Gender>
@@ -17245,6 +17187,7 @@
 		<English>Oxybeles</English>
 		<French>Arbalète Oxybeles</French>
 		<Russian>Îêñèáåë</Russian>
+		<Italian>Oxybele</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OZOLUA</Tag>
@@ -17300,7 +17243,7 @@
 		<Tag>TXT_KEY_UNIT_PACKMULE</Tag>
 		<English>Pack Mule</English>
 		<French>Eclaireur avec Mule</French>
-		<Italian>Scout con mulo</Italian>
+		<Italian>Mulo da soma</Italian>
 		<Spanish>
 			<Text>Explorador a mula</Text>
 			<Gender>Male</Gender>
@@ -17313,7 +17256,7 @@
 		<Tag>TXT_KEY_UNIT_PACK_LLAMA</Tag>
 		<English>Pack Llama</English>
 		<French>Eclaireur avec Lama</French>
-		<Italian>Branco di lama</Italian>
+		<Italian>Lama da soma</Italian>
 		<Spanish>
 			<Text>Manada de llamas</Text>
 			<Gender>Female</Gender>
@@ -17331,7 +17274,7 @@
 		<Tag>TXT_KEY_UNIT_PADDLE_STEAMER</Tag>
 		<English>Paddle Steamer</English>
 		<French>Navire à roues à aubes</French>
-		<Italian>Piroscafo a vapore</Italian>
+		<Italian>Battello a ruota</Italian>
 		<Spanish>
 			<Text>Vapor de ruedas</Text>
 			<Gender>Male</Gender>
@@ -17571,6 +17514,7 @@
 		<English>Patrols</English>
 		<French>Patrouilles</French>
 		<Russian>Ïàòðóëü</Russian>
+		<Italian>Guardia di pattuglia</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PATROLS_PEDIA</Tag>
@@ -17914,6 +17858,7 @@
 		<English>[ICON_BULLET]Can Capture Merchant Ships [ICON_BULLET]Can Loot Gold From Merchant Ships</English>
 		<French>[ICON_BULLET]Peut capturer des navires marchands [ICON_BULLET]Peut piller de l'or sur des navires marchands</French>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Подсказка: [COLOR_REVERT]Может захватывать торговые суда [ICON_BULLET]Может грабить золото с торговых судов</Russian>
+		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]catturare[COLOR_REVERT] le navi mercantili [NEWLINE][ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]saccheggiare[COLOR_REVERT] le navi mercantili</Italian> <!-- unit Dragon Ship Pirate -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PIYE</Tag>
@@ -18087,7 +18032,7 @@
 		<Tag>TXT_KEY_UNIT_POLICE_CAR</Tag>
 		<English>Police Car</English>
 		<French>Véhicule de Police</French>
-		<Italian>Macchina della polizia</Italian>
+		<Italian>Automobile della polizia</Italian>
 		<Polish>Samochód Policyjny</Polish>
 		<Russian>Ïîëèö. àâòîìîáèëü</Russian>
 	</TEXT>
@@ -18295,6 +18240,7 @@
 		</Spanish>
 		<Polish>Wczesny Drednot</Polish>
 		<Russian>Ýñêàäðåííûé áðîíåíîñåö</Russian>
+		<Italian>Corazzata policalibro</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PRE_DREADNOUGHT_PEDIA</Tag>
@@ -18324,11 +18270,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Nave corsara:Navi corsare</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Nave corsara</Italian>
 		<Spanish>
 			<Text>Corsario:Corsarios</Text>
 			<Gender>Male</Gender>
@@ -18766,11 +18708,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>
-			<Text>Guerriero di Ra</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Guerriero di Ra</Italian>
 		<Russian>Êóëàê Ðà</Russian>
 	</TEXT>
 	<TEXT>
@@ -18909,7 +18847,7 @@
 		<Tag>TXT_KEY_UNIT_REN_IMP_GUARD</Tag>
 		<English>Renaissance Imperial Guard</English>
 		<French>Garde Impérial de la Renaissance</French>
-		<Italian>Guardie del corpo</Italian>
+		<Italian>Guardia imperiale rinascimentale</Italian>
 		<Spanish>
 			<Text>Guardia Real</Text>
 			<Gender>Female</Gender>
@@ -18997,6 +18935,7 @@
 		</Spanish>
 		<Polish>Kartaczownica Reffye</Polish>
 		<Russian>Ïèùàëüíàÿ áàòàðåÿ</Russian>
+		<Italian>Ribadocchino</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RIBAULDEQUIN_PEDIA</Tag>
@@ -19170,7 +19109,7 @@
 		<Tag>TXT_KEY_UNIT_ROGUE</Tag>
 		<English>Rogue</English>
 		<French>Brigand</French>
-		<Italian>Reietto</Italian>
+		<Italian>Canaglia</Italian>
 		<Spanish>
 			<Text>Pícaro</Text>
 			<Gender>Male</Gender>
@@ -19622,6 +19561,7 @@
 		<English>Scorpion</English>
 		<Polish>Skorpion</Polish>
 		<Russian>Ñêîðïèîí</Russian>
+		<Italian>Scorpione</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SCORTAMAREVA</Tag>
@@ -19637,6 +19577,7 @@
 		<English>Scoundrel</English>
 		<French>Scélérat</French>
 		<Russian>Ïîäëåö</Russian>
+		<Italian>Furfante</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SCOUT</Tag>
@@ -20137,6 +20078,7 @@
 		<French>Berger</French>
 		<Polish>Pasterz</Polish>
 		<Russian>Ïàñòóõ</Russian>
+		<Italian>Pastore</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHEPHERD_PEDIA</Tag>
@@ -20183,11 +20125,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Nave da prima linea:Navi da prima linea</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Vascello</Italian>
 		<Spanish>
 			<Text>Buque de guerra:Buques de guerra</Text>
 			<Gender>Male</Gender>
@@ -20322,6 +20260,7 @@
 		<French>Réparateur d'Engins de Siège</French>
 		<Polish>Inżynier Oblężniczy</Polish>
 		<Russian>Îñàäíûé èíæåíåð</Russian>
+		<Italian>Meccanico da assedio</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SIEGE_ENGINEER_PEDIA</Tag>
@@ -20334,6 +20273,7 @@
 		<French>Balliste Onager</French>
 		<Polish>Oblężniczy Onager</Polish>
 		<Russian>Îñàäíûé îíàãð</Russian>
+		<Italian>Onagro da assedio</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SIEGE_ONAGER_PEDIA</Tag>
@@ -20366,7 +20306,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Belagerungsturm</German>
-		<Italian>Torre da assedio</Italian>
+		<Italian>Torre d'assedio</Italian>
 		<Spanish>
 			<Text>Torre de asedio</Text>
 			<Gender>Female</Gender>
@@ -20384,7 +20324,7 @@
 		<Tag>TXT_KEY_UNIT_SIEGE_WAGON</Tag>
 		<English>Siege Wagon</English>
 		<French>Chariot de Siège</French>
-		<Italian>Vagone da assedio</Italian>
+		<Italian>Carro da assedio</Italian>
 		<Spanish>
 			<Text>Vagón de asedio</Text>
 			<Gender>Male</Gender>
@@ -20565,6 +20505,7 @@
 		<French>Cellule dormante</French>
 		<Polish>Uśpiona Komórka</Polish>
 		<Russian>Ðåçèäåíò</Russian>
+		<Italian>Cellula dormiente</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SLEEPER_PEDIA</Tag>
@@ -20617,7 +20558,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Kriegsschaluppe</German>
-		<Italian>Corvetta da guerra</Italian>
+		<Italian>Sloop of war</Italian>
 		<Spanish>
 			<Text>Balandra de guerra</Text>
 			<Gender>Female</Gender>
@@ -20857,11 +20798,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Lanciere:Lancieri</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Guerriero con lancia</Italian>
 		<Spanish>
 			<Text>Lancero:Lanceros</Text>
 			<Gender>Male</Gender>
@@ -20875,7 +20812,7 @@
 		<English>Though early man probably employed spears of fire-hardened wood, spearheads of knapped stone were used long before the emergence of any distinction between hunting and military weapons. Bronze spearheads closely followed the development of alloys hard enough to keep a cutting edge and represented, with the war ax, the earliest significant military application of bronze. Spearheads were also among the earliest militarily significant applications of iron, no doubt because existing patterns could be directly extrapolated from bronze to iron. Though the hafting is quite different, bronze Sumerian spearheads of the 3rd millennium BC differ only marginally in shape from the leaf-shaped spearheads of classical Greece. The spears of antiquity were relatively short, commonly less than the height of the warrior, and typically were wielded with one hand. As defensive armor and other weapons of shock combat (notably the sword and mounted troops) improved, spear shafts were made longer and the use of spearmen became increasingly specialized. The Greek hoplite's spear was about nine feet long; the Macedonian sarissa was twice that length in the period of Alexander's conquests. The Middle Ages would see the evolution of the spear into the pike and halberd.</English>
 		<French>Même si nos lointains ancêtres utilisaient vraisemblablement des lances en bois durcies à la flamme, les pointes de lance en pierre taillée furent utilisées bien avant qu'une distinction ne soit établie entre les armes de chasse et les armes de guerre. Les pointes de lance en bronze sont apparues peu de temps après la découverte d'alliages suffisamment durs pour qu'une lame reste durablement tranchante. Ces pointes, de même que les haches en bronze, furent l'une des premières applications militaires du bronze et, par la suite, du fer. La raison est probablement que les moules existants pour le bronze pouvaient facilement être utilisés pour le fer. Bien que possédant des manches différents, les lances sumériennes du 3e millénaire av. J.-C. étaient dotées de pointes en bronze fort semblables à celles en forme de feuille de la Grèce antique. Les lances de l'Antiquité étaient relativement courtes, généralement inférieures à la taille du guerrier, et se brandissaient le plus souvent d'une seule main. Les lances ont gagné en longueur au fur et à mesure que les armures et les armes de combat rapproché (notamment l'épée des cavaliers) étaient améliorées. Dans le même temps, l'utilisation de la lance se spécialisait. La lance de l'hoplite grec mesurait deux mètres de long. La sarisse macédonienne de l'époque d'Alexandre mesurait plus du double de cette longueur. Durant le Moyen Age, la lance évolua pour donner la pique et la hallebarde.</French>
 		<German>Neben den Speeren der Frühzeit, die vermutlich aus feuergehärtetem Holz gefertigt waren, wurden bereits lange vor der Unterscheidung von Jagd- und militärischen Waffen auch Speerspitzen aus behauenem Stein benutzt. Mit dem Aufkommen von Legierungen, die hart genug waren, dass eine Schneidkante herausgearbeitet werden konnte, wurden als erste wichtige militärische Errungenschaften die bronzenen Speerspitzen und das Kriegsbeil entwickelt. Speerspitzen gehörten außerdem zu den ersten aus Eisen gefertigten militärischen Waffenbestandteilen - zweifellos weil die bronzenen Vorlagen problemlos in die Eisenfertigung übertragen werden konnten. Wenngleich sie einen deutlich anderen Griff besaßen, unterschieden sich die bronzenen Speerspitzen der Sumerer aus dem 3. Jahrtausend vor Christus in ihrer Form nur wenig von den klassischen griechischen blattförmigen Speerspitzen. Die Lanzen des Altertums waren relativ kurz - normalerweise kleiner als die Krieger, die sie trugen - und wurden einhändig geführt. Mit der Weiterentwicklung der im Stoßkampf eingesetzten Rüstungen und Waffen, (allen voran das Schwert und die Ausrüstung berittener Truppen), wurden die Schäfte der Lanzen länger und die Lanzenkämpfer spezialisierten sich zunehmend. Die Lanze der griechischen Hopliten war über zweieinhalb Meter lang, die makedonische Sarissa war in der Zeit der Eroberungsfeldzüge Alexanders des Großen sogar etwa doppelt so lang. Im Mittelalter wurde die Lanze zur Pike und zur Hellebarde weiterentwickelt.</German>
-		<Italian>Malgrado nell'antichità gli uomini usassero probabilmente lance realizzate con del legno indurito dal fuoco, le punte di lancia in pietra furono utilizzate a lungo, prima della nascita della distinzione fra armi da caccia e armi per impiego militare. Le punte di bronzo seguirono rapidamente lo sviluppo di leghe sufficientemente dure per mantenere il taglio e rappresentarono, con l'ascia da guerra, la prima significativa applicazione militare del bronzo. Queste punte furono altresì fra le prime applicazioni significative in ambito militare del ferro, senza dubbio per la facilità dell'adattamento dei modelli di bronzo a quelli realizzati con questo metallo. Malgrado l'impugnatura fosse piuttosto differente, le punte di bronzo sumere del terzo millennio a. C. differivano solo leggermente nella forma da quelle sagomate a foglia della Grecia classica. Le lance dell'antichità erano relativamente corte, generalmente inferiori all'altezza di un guerriero e tipicamente venivano maneggiate con una sola mano. Quando le armature difensive e le altre armi da combattimento da urto (principalmente la spada e le truppe a cavallo) migliorarono, le aste delle lance divennero più lunghe e l'uso dei lancieri si specializzò sempre di più. La lancia dell'oplita Greco era lunga circa due metri e settanta centimetri, la sarissa Macedone era il doppio di quella lunghezza nel periodo delle conquiste di Alessandro. Il Medioevo vide la lancia evolversi in picca e alabarda.</Italian>
+		<Italian>Malgrado nell'antichità gli uomini usassero probabilmente lance realizzate con del legno indurito dal fuoco, le punte di lancia in pietra furono utilizzate a lungo, prima della nascita della distinzione fra armi da caccia e armi per impiego militare. Le punte di bronzo seguirono rapidamente lo sviluppo di leghe sufficientemente dure per mantenere il taglio e rappresentarono, con l'ascia da guerra, la prima significativa applicazione militare del bronzo. Queste punte furono altresì fra le prime applicazioni significative in ambito militare del ferro, senza dubbio per la facilità dell'adattamento dei modelli di bronzo a quelli realizzati con questo metallo. Malgrado l'impugnatura fosse piuttosto differente, le punte di bronzo sumere del terzo millennio a. C. differivano solo leggermente nella forma da quelle sagomate a foglia della Grecia classica. Le lance dell'antichità erano relativamente corte, generalmente inferiori all'altezza di un guerriero e tipicamente venivano maneggiate con una sola mano. Quando le armature difensive e le altre armi da combattimento da urto (principalmente la spada e le truppe a cavallo) migliorarono, le aste delle lance divennero più lunghe e l'uso dei lancieri si specializzò sempre di più. La lancia dell'oplite Greco era lunga circa due metri e settanta centimetri, la sarissa Macedone era il doppio di quella lunghezza nel periodo delle conquiste di Alessandro. Il Medioevo vide la lancia evolversi in picca e alabarda.</Italian>
 		<Spanish>Aunque el hombre primitivo usó probablemente lanzas de madera endurecida al fuego, las puntas de piedra tallada se empleaban mucho antes de que apareciese la distinción entre las armas de caza y de combate. Las puntas de lanza de bronce siguieron de cerca el desarrollo de aleaciones con la suficiente dureza para mantener un borde cortante, y representaron, junto con el hacha de guerra, la primera aplicación militar importante del bronce. Las puntas de lanza también fueron una de las primeras aplicaciones bélicas del hierro, sin duda porque los formatos existentes podían extrapolarse directamente del bronce a este metal. Aunque el mango es muy distinto, la forma de las puntas de lanza sumerias del año 3000 a. C. diferían mínimamente de las puntas con forma de hoja de la Grecia clásica.  Las lanzas de la antigüedad eran relativamente cortas; por lo general medían menos que la estatura del guerrero, y se solían manejar con una mano. A medida que mejoraba la armadura defensiva y las armas de choque (especialmente la espada y las tropas a caballo), las astas de lanza aumentaron su tamaño y el uso de lanceros se especializó cada vez más.  La lanza hoplita griega medía más de dos metros y medio de largo; la sarissa macedonia era el doble de larga en la época de las conquistas de Alejandro Magno. En la Edad Media la lanza evolucionó, dando paso a la pica y la alabarda.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -20968,7 +20905,7 @@
 		<Tag>TXT_KEY_UNIT_SPIKED_CLUBMAN</Tag>
 		<English>Spiked Clubman</English>
 		<French>Guerrier avec gourdin à pointes</French>
-		<Italian>Guerriero con clava appuntita</Italian>
+		<Italian>Guerriero con clava con spuntoni</Italian>
 		<Spanish>
 			<Text>Guerrero con garrote apuntillado</Text>
 			<Gender>Male</Gender>
@@ -20980,7 +20917,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SPIKED_CLUBMAN_PEDIA</Tag>
 		<English>The Spiked Clubman is superior to the Clubman for it's sharp stone spikes on the club.</English>
-		<Italian>Il guerriero con clava appuntita è superiore al normale guerriero con clava, principalmente per l'arma che usa.</Italian>
+		<Italian>Il guerriero con clava con spuntoni è superiore al normale guerriero con clava, principalmente per l'arma che usa.</Italian>
 		<Spanish>El Guerrero con garrote apuntillado es superior al Guerrero con garrote normal, por los clavos puntiagudos de su garrote.</Spanish>
 		<Polish>W mitologii greckiej maczuga była atrybutem herosa Heraklesa. Plemiona Indian zamieszkujących do początków XIX wieku lesiste obszary Ameryki Północnej używały maczug bojowych, które białym przybyszom przypominały kształtem drewniane łoża broni palnej, stąd anglojęzyczna ich nazwa gunstock clubs.</Polish>
 		<Russian>Âîèí, âîîðóæåííûé äóáèíêîé ñ øèïàìè, ÿâëÿåòñÿ áîëåå ïðîäâèíóòûì ïî ñðàâíåíèþ ñ Áóëàâîíîñöåì èç-çà îñòðûõ êàìåííûõ øèïîâ íà áóëàâå.</Russian>
@@ -21010,11 +20947,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Spia:Spie</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Spia</Italian>
 		<Spanish>
 			<Text>Espía:Espías</Text>
 			<Gender>Male</Gender>
@@ -21056,6 +20989,7 @@
 		<English>Stalkers</English>
 		<French>Harceleur</French>
 		<Russian>Ñòàëêåð</Russian>
+		<Italian>Persecutore</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STALKERS_PEDIA</Tag>
@@ -21192,7 +21126,7 @@
 		<English>Advanced Ironclad</English>
 		<French>Cuirassé à coque en fer avancé</French>
 		<German>Früher Zerstörer</German>
-		<Italian>Cacciatorpediniere base</Italian>
+		<Italian>Nave corazzata avanzata</Italian>
 		<Spanish>
 			<Text>Fragata de hierro avanzada</Text>
 			<Gender>Male</Gender>
@@ -21333,7 +21267,7 @@
 		<English>Stone Spearman</English>
 		<French>Guerrier avec lance en pierre</French>
 		<German>Steinspeerkämpfer</German>
-		<Italian>Guerriero con lancia in pietra</Italian>
+		<Italian>Guerriero con lancia di pietra</Italian>
 		<Spanish>
 			<Text>Guerrero con lanza de piedra</Text>
 			<Gender>Male</Gender>
@@ -21556,11 +21490,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Versorgungszug</German>
-		<Italian>
-			<Text>Carovana di supporto:Carovane di supporto</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Convoglio di rifornimenti</Italian>
 		<Spanish>
 			<Text>Caravana de suministros:Caravanas de suministros</Text>
 			<Gender>Female</Gender>
@@ -21574,6 +21504,7 @@
 		<English>Surgeon</English>
 		<French>Chirurgien</French>
 		<Russian>Õèðóðã</Russian>
+		<Italian>Chirurgo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SURGEON_PEDIA</Tag>
@@ -21670,11 +21601,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Spadaccino:Spadaccini</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Spadaccino</Italian>
 		<Spanish>
 			<Text>Soldado con espada:Soldados con espada</Text>
 			<Gender>Male</Gender>
@@ -22170,17 +22097,13 @@
 		<Tag>TXT_KEY_UNIT_THORAX_HOPLITE</Tag>
 		<English>Thorax Hoplite</English>
 		<French>Hoplite Thorax</French>
-		<Italian>
-			<Text>Oplita:Opliti</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Oplite</Italian>
 		<Russian>Ãîïëèò â òîðàêñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_THORAX_HOPLITE_PEDIA</Tag>
 		<English>The Hoplite was the heavy infantryman of Classical-era Greece. Thorax refers to the breastplate that the Athenian hoplite achieved a superiority by wearing later in the period.</English>
-		<Italian>L'oplita costituiva il fante pesante nella Grecia dell'era classica; indossava una corazza toracica che permise agli ateniesi di ottenere una superiorità militare in quel periodo.</Italian>
+		<Italian>L'oplite costituiva il fante pesante nella Grecia dell'era classica; indossava una corazza toracica che permise agli ateniesi di ottenere una superiorità militare in quel periodo.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_THRACIAN_PELTAST</Tag>
@@ -22196,6 +22119,7 @@
 		<Tag>TXT_KEY_UNIT_THUG</Tag>
 		<English>Thug</English>
 		<Russian>Áîåâèê</Russian>
+		<Italian>Criminale</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_THUTMOSE_III</Tag>
@@ -22399,6 +22323,7 @@
 		<French>Navire Torpédo</French>
 		<Polish>Torpedowiec</Polish>
 		<Russian>Òîðïåäíûé êàòåð</Russian>
+		<Italian>Torpediniera</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TORPEDO_BOAT_PEDIA</Tag>
@@ -22430,7 +22355,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Stadtwächter</German>
-		<Italian>Sentinella cittadina</Italian>
+		<Italian>Guardia cittadina</Italian>
 		<Spanish>
 			<Text>Vigilante</Text>
 			<Gender>Male</Gender>
@@ -22458,11 +22383,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Carovana Commerciale:Carovane Commerciali</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Carovana di rifornimenti</Italian>
 		<Spanish>
 			<Text>Caravana comercial:Caravanas comerciales</Text>
 			<Gender>Male</Gender>
@@ -22490,7 +22411,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>Trainierte Hunde</German>
-		<Italian>Cani addestrati</Italian>
+		<Italian>Cane addestrato</Italian>
 		<Spanish>
 			<Text>Perros adiestrados</Text>
 			<Gender>Male</Gender>
@@ -22507,11 +22428,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Trasporto:Trasporti</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Nave da trasporto</Italian>
 		<Spanish>
 			<Text>Transporte:Transportes</Text>
 			<Gender>Male</Gender>
@@ -22580,11 +22497,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Trabocco:Trabocchi</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Trabucco</Italian>
 		<Spanish>
 			<Text>Trabuquete:Trabuquetes</Text>
 			<Gender>Male</Gender>
@@ -22719,11 +22632,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Trireme</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Trireme</Italian>
 		<Spanish>
 			<Text>Trirreme:Trirremes</Text>
 			<Gender>Male</Gender>
@@ -23310,6 +23219,7 @@
 		<French>Vétérinaire</French>
 		<Polish>Lekarz Weterynarii</Polish>
 		<Russian>Âåòåðèíàð</Russian>
+		<Italian>Veterinario</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VET_PEDIA</Tag>
@@ -23325,7 +23235,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>Viceré</Italian>
+		<Italian>Governatore</Italian>
 		<Spanish>
 			<Text>Virrey</Text>
 			<Gender>Male</Gender>
@@ -23530,6 +23440,7 @@
 		</Spanish>
 		<Polish>Wędrowiec</Polish>
 		<Russian>Ñòðàííèê</Russian>
+		<Italian>Nomade</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WANDERER_PEDIA</Tag>
@@ -23599,7 +23510,7 @@
 		<Tag>TXT_KEY_UNIT_WARDEN</Tag>
 		<English>Warden</English>
 		<French>Garde-chasse</French>
-		<Italian>Guardia-caccia</Italian>
+		<Italian>Guardiacaccia</Italian>
 		<Spanish>
 			<Text>Guardián</Text>
 			<Gender>Male</Gender>
@@ -23667,11 +23578,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Capo di guerra</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Capo militare</Italian>
 		<Spanish>
 			<Text>Cabo insurgente</Text>
 			<Gender>Male</Gender>
@@ -23689,11 +23596,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Capitano di guerra</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Capitano militare</Italian>
 		<Spanish>
 			<Text>Capitán insurgente</Text>
 			<Gender>Male</Gender>
@@ -23711,11 +23614,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Caporale di guerra</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Caporale militare</Italian>
 		<Spanish>
 			<Text>Alférez insurgente</Text>
 			<Gender>Male</Gender>
@@ -23745,11 +23644,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Colonnello di guerra</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Colonnello militare</Italian>
 		<Spanish>
 			<Text>Coronel insurgente</Text>
 			<Gender>Male</Gender>
@@ -23771,11 +23666,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Comandante di guerra</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Comandante militare</Italian>
 		<Spanish>
 			<Text>Comandante insurgente</Text>
 			<Gender>Male</Gender>
@@ -23791,6 +23682,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORD_VASSAL</Tag>
 		<English>Aristocrat</English>
+		<Italian>Aristocratico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORD_VASSAL_PEDIA</Tag>
@@ -23856,11 +23748,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Elefante da guerra:Elefanti da guerra</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Elefante da guerra</Italian>
 		<Spanish>
 			<Text>Elefante de guerra:Elefantes de guerra</Text>
 			<Gender>Male</Gender>
@@ -23881,7 +23769,7 @@
 		<Tag>TXT_KEY_UNIT_WAR_WAGON</Tag>
 		<English>War Wagon</English>
 		<French>Chariot de Guerre</French>
-		<Italian>Vagone da guerra</Italian>
+		<Italian>Carro da guerra</Italian>
 		<Spanish>
 			<Text>Vagón de guerra</Text>
 			<Gender>Male</Gender>
@@ -23908,6 +23796,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Ñòîðîæ</Russian>
+		<Italian>Sorvegliante</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WATCHER_PEDIA</Tag>
@@ -24043,6 +23932,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Çíàõàðêà</Russian>
+		<Italian>Guaritrice primitiva</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WISE_WOMAN_PEDIA</Tag>
@@ -24104,7 +23994,7 @@
 		<Tag>TXT_KEY_UNIT_WOODEN_SPEARMAN</Tag>
 		<English>Wood Spearman</English>
 		<French>Guerrier avec lance de bois</French>
-		<Italian>Guerriero con lancia in legno</Italian>
+		<Italian>Guerriero con lancia di legno</Italian>
 		<Spanish>
 			<Text>Guerrero con lanza de madera</Text>
 			<Gender>Male</Gender>
@@ -24130,7 +24020,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Cane da lavoro</Italian>
+		<Italian>Lavoratore con cane</Italian>
 		<Spanish>
 			<Text>Perro de trabajo</Text>
 			<Gender>Male</Gender>
@@ -24148,7 +24038,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Chiatta (Antica)</Italian>
+		<Italian>Barca da lavoro preistorica</Italian>
 		<Spanish>
 			<Text>Barco faenero antiguo</Text>
 			<Gender>Male</Gender>
@@ -24161,7 +24051,7 @@
 		<Tag>TXT_KEY_UNIT_WORKBOAT_CLASSIC</Tag>
 		<English>Workboat (Ancient)</English>
 		<French>Bateau-atelier (Classique)</French>
-		<Italian>Chiatta (Classica)</Italian>
+		<Italian>Barca da lavoro classica</Italian>
 		<Spanish>
 			<Text>Barco faenero clásico</Text>
 			<Gender>Male</Gender>
@@ -24174,7 +24064,7 @@
 		<Tag>TXT_KEY_UNIT_WORKBOAT_MIDDLE</Tag>
 		<English>Workboat (Middle Ages)</English>
 		<French>Bateau-atelier (Moyen-Age)</French>
-		<Italian>Chiatta (Medioevo)</Italian>
+		<Italian>Barca da lavoro medioevale</Italian>
 		<Spanish>
 			<Text>Barco faenero medieval</Text>
 			<Gender>Male</Gender>
@@ -24188,7 +24078,7 @@
 		<English>Workboat (Modern)</English>
 		<French>Bateau-Atelier (Moderne)</French>
 		<German>Modernes Arbeitsboot</German>
-		<Italian>Chiatta moderna</Italian>
+		<Italian>Barca da lavoro moderna</Italian>
 		<Spanish>
 			<Text>Barco de trabajo moderno</Text>
 			<Gender>Male</Gender>
@@ -24211,7 +24101,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Bufalo da lavoro</Italian>
+		<Italian>Lavoratore con bufalo</Italian>
 		<Spanish>
 			<Text>Búfalo de trabajo</Text>
 			<Gender>Male</Gender>
@@ -24231,12 +24121,13 @@
 		</Spanish>
 		<Polish>Wielbłąd Robotnik</Polish>
 		<Russian>Ðàáî÷èé âåðáëþä</Russian>
+		<Italian>Lavoratore con cammello</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WORKELEPHANT</Tag>
 		<English>Elephant Worker</English>
 		<French>Ouvrier avec Eléphant</French>
-		<Italian>Elefante da lavoro</Italian>
+		<Italian>Lavoratore con elefante</Italian>
 		<Spanish>
 			<Text>Elefante de trabajo</Text>
 			<Gender>Male</Gender>
@@ -24285,7 +24176,7 @@
 		<Tag>TXT_KEY_UNIT_WORKER_INDUSTRIAL</Tag>
 		<English>Industrial Era Worker</English>
 		<French>Ouvrier Industriel</French>
-		<Italian>Lavoratore dell'era industriale</Italian>
+		<Italian>Lavoratore industriale</Italian>
 		<Spanish>
 			<Text>Obrero industrial</Text>
 			<Gender>Male</Gender>
@@ -24328,6 +24219,7 @@
 		</Spanish>
 		<Polish>Lama Robotnik</Polish>
 		<Russian>Ðàáî÷àÿ ëàìà</Russian>
+		<Italian>Lavoratore con lama</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WORKMAMMOTH</Tag>
@@ -24340,12 +24232,13 @@
 		</Spanish>
 		<Polish>Mamut Robotnik</Polish>
 		<Russian>Ðàáî÷èé ìàìîíò</Russian>
+		<Italian>Lavoratore con mammut</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WORKMULE</Tag>
 		<English>Work Mule</English>
 		<French>Ouvrier avec Mule</French>
-		<Italian>Mulo da lavoro</Italian>
+		<Italian>Lavoratore con mulo</Italian>
 		<Spanish>
 			<Text>Mula de trabajo</Text>
 			<Gender>Female</Gender>
