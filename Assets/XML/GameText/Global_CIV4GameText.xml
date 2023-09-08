@@ -22119,10 +22119,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_FOUNDED_FIRST</Tag>
 		<English>[ICON_BULLET]Founded by First to Discover [LINK=%s1]%s2[\LINK]</English>
-		<French>[ICON_BULLET]Religion fondée par le premier à découvrir : [COLOR_TECH_TEXT]%s2[COLOR_REVERT]</French>
-		<German>[ICON_BULLET]Durch den ersten Entdecker der Technologie [COLOR_TECH_TEXT]%s2[COLOR_REVERT] gegründet</German>
+		<French>[ICON_BULLET]Religion fondée par le premier à découvrir : [LINK=%s1]%s2[\LINK]</French>
+		<German>[ICON_BULLET]Durch den ersten Entdecker der Technologie [LINK=%s1]%s2[\LINK] gegründet</German>
 		<Italian>[ICON_BULLET]Fondata dalla prima civiltà che scopre la tecnologia [LINK=%s1]%s2[\LINK]</Italian> <!-- Perdia all entries of the tab Religion -->
-		<Spanish>[ICON_BULLET]Fundado por el primero en descubrir [NUM1:el:la:los:las] [COLOR_TECH_TEXT]%s2[COLOR_REVERT]</Spanish>
+		<Spanish>[ICON_BULLET]Fundado por el primero en descubrir [NUM1:el:la:los:las] [LINK=%s1]%s2[\LINK]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_FOUNDER_RECEIVES</Tag>
