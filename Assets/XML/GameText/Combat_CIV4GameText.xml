@@ -898,11 +898,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_AIR_RECON</Tag>
 		<English>Air Recon Units</English>
 		<French>Unités aériennes d'espionnage</French>
-		<German>
-			<Text>Luftaufklärungseinheiten:Luftaufklärungseinheiten:Luftaufklärungseinheiten:Luftaufklärungseinheiten</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Luftaufklärungseinheiten</German>
 		<Italian>Unità da spionaggio aereo</Italian>
 		<Spanish>Unidades del espionaje</Spanish>
 		<Polish>Powietrzne Jednostki Rozpoznawcze</Polish>
@@ -1768,11 +1764,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Bogenschützen:Bogenschützen:Bogenschützen:Bogenschützen</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Bogenschützen</German>
 		<Italian>Unità arciere</Italian>
 		<Spanish>
 			<Text>Unidad con armas de proyectil:Unidades con armas de proyectil</Text>
@@ -2579,11 +2571,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Angriffsroboter:Angriffsroboter:Angriffsrobotern:Angriffsroboter</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Angriffsroboter</German>
 		<Italian>Unità mech d'assalto</Italian>
 		<Spanish>
 			<Text>Robot de combate:Robots de combate</Text>
@@ -4211,11 +4199,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Biowaffen:Biowaffen:Biowaffen:Biowaffen</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Biowaffen</German>
 		<Italian>Unità per la guerra biologica</Italian>
 		<Spanish>
 			<Text>Unidad de guerra biológica:Unidades de guerra biológica</Text>
@@ -4427,11 +4411,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_BOMBERS</Tag>
 		<English>Bombers</English>
 		<French>Bombardiers</French>
-		<German>
-			<Text>Bomber:Bomber:Bombern:Bomber</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Bomber</German>
 		<Italian>Unità aerea bombardiere</Italian>
 		<Spanish>
 			<Text>Bombardero:Bombarderos</Text>
@@ -4449,11 +4429,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Hunde:Hunde:Hunden:Hunde</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Hunde</German>
 		<Italian>Unità canina</Italian>
 		<Spanish>
 			<Text>Unidad canina:Unidades caninas</Text>
@@ -4509,11 +4485,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_CIVILIAN</Tag>
 		<English>Civilians</English>
 		<French>Civils</French>
-		<German>
-			<Text>Zivilisten:Zivilisten:Zivilisten:Zivilisten</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Zivilisten</German>
 		<Spanish>
 			<Text>Unidad civil:Unidades civiles</Text>
 			<Gender>Female</Gender>
@@ -4531,11 +4503,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Klone:Klone:Klonen:Klone</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Klone</German>
 		<Italian>Unità clonata</Italian>
 		<Spanish>
 			<Text>Unidad clon:Unidades clon</Text>
@@ -4553,11 +4521,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Kämpfer:Kämpfer:Kämpfern:Kämpfer</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Kämpfer</German>
 		<Italian>Unità da combattimento</Italian>
 		<Spanish>
 			<Text>Unidad de combate:Unidades de combate</Text>
@@ -4584,11 +4548,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_COMMANDER</Tag>
 		<English>Commanders</English>
 		<French>Unités de Commandement</French>
-		<German>
-			<Text>Kommandeure:Kommandeure:Kommandeuren:Kommandeure</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Kommandeure</German>
 		<Spanish>
 			<Text>Comandante:Comandantes</Text>
 			<Gender>Male</Gender>
@@ -4613,11 +4573,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Straftäter:Straftäter:Straftätern:Straftäter</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Straftäter</German>
 		<Italian>Unità criminale</Italian>
 		<Spanish>
 			<Text>Criminal:Criminales</Text>
@@ -8529,11 +8485,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Dieselschiffe:Dieselschiffe:Dieselschiffen:Dieselschiffe</Text>
-			<Gender>Neuter</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Dieselschiffe</German>
 		<Italian>Unità navale a diesel</Italian>
 		<Spanish>
 			<Text>Navío a gasolina:Navíos a gasolina</Text>
@@ -8572,11 +8524,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Weltuntergangseinheiten:Weltuntergangseinheiten:Weltuntergangseinheiten:Weltuntergangseinheiten</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Weltuntergangseinheiten</German>
 		<Italian>Unità apocalittica</Italian>
 		<Spanish>
 			<Text>Arma de destrucción masiva:Armas de destrucción masiva</Text>
@@ -8594,11 +8542,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Dreadnoughts:Dreadnoughts:Dreadnoughts:Dreadnoughts</Text>
-			<Gender>Neuter</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Dreadnoughts</German>
 		<Italian>Unità carro armato</Italian>
 		<Spanish>
 			<Text>Dreadnought:Dreadnought</Text>
@@ -8620,11 +8564,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_EARLY_BOMBERS</Tag>
 		<English>Early Bombers</English>
 		<French>Bombardiers basiques</French>
-		<German>
-			<Text>Frühe Bomber:Frühe Bomber:Frühe Bombern:Frühe Bomber</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Frühe Bomber</German>
 		<Italian>Unità area bombardiere antico</Italian>
 		<Spanish>
 			<Text>Bombardero antiguo:Bombarderos antiguos</Text>
@@ -8638,11 +8578,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_EARLY_FIGHTERS</Tag>
 		<English>Early Fighters</English>
 		<French>Avions de Chasse basiques</French>
-		<German>
-			<Text>Frühe Jagdflugzeuge:Frühe Jagdflugzeuge:Frühe Jagdflugzeugen:Frühe Jagdflugzeuge</Text>
-			<Gender>Neuter</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Frühe Jagdflugzeuge</German>
 		<Italian>Unità aerea da combattimento antica</Italian>
 		<Spanish>
 			<Text>Caza antiguo:Cazas antiguos</Text>
@@ -8910,11 +8846,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Entdecker:Entdecker:Entdeckern:Entdecker</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Entdecker</German>
 		<Spanish>
 			<Text>Unidad de exploración:Unidades de exploración</Text>
 			<Gender>Female</Gender>
@@ -9242,11 +9174,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Feuerwaffeneinheiten</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Feuerwaffeneinheiten</German>
 		<Italian>Unità con arma da fuoco</Italian>
 		<Spanish>
 			<Text>Unidad con armas de pólvora:Unidades con armas de pólvora</Text>
@@ -9418,12 +9346,8 @@
 		<Tag>TXT_KEY_UNITCOMBAT_HEALTH_CARE</Tag>
 		<English>Health Care Units</English>
 		<French>Unités de soins</French>
+		<German>Sanitäter</German>
 		<Italian>Unità d'assistenza sanitaria</Italian>
-		<German>
-			<Text>Sanitäter:Sanitäter:Sanitäter:Sanitäter</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</German>
 		<Russian>Ìåäèêè</Russian>
 	</TEXT>
 	<TEXT>
@@ -9434,11 +9358,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Hubschrauber:Hubschrauber:Hubschraubern:Hubschrauber</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Hubschrauber</German>
 		<Italian>Unità elicottero</Italian>
 		<Spanish>
 			<Text>Unidad de helicópteros:Unidades de helicópteros</Text>
@@ -9469,11 +9389,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Hi-Tech-Einheiten:Hi-Tech-Einheiten:Hi-Tech-Einheiten:Hi-Tech-Einheiten</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Hi-Tech-Einheiten</German>
 		<Italian>Unità hi-tech</Italian>
 		<Spanish>
 			<Text>Unidad de alta tecnología:Unidades de alta tecnología</Text>
@@ -9579,11 +9495,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_JET_FIGHTERS</Tag>
 		<English>Jet Fighters</English>
 		<French>Chasseurs à Réaction</French>
-		<German>
-			<Text>Düsenjäger:Düsenjäger:Düsenjägern:Düsenjäger</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Düsenjäger</German>
 		<Italian>Unità area a reazione</Italian>
 		<Spanish>
 			<Text>Caza a reacción:Cazas a reacción</Text>
@@ -9609,12 +9521,8 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>Polizeieinheiten</German>
 		<Italian>Unità forza dell'ordine</Italian>
-		<German>
-			<Text>Polizeieinheiten:Polizeieinheiten:Polizeieinheiten:Polizeieinheiten</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</German>
 		<Spanish>
 			<Text>Unidad de policía:Unidades de policía</Text>
 			<Gender>Female</Gender>
@@ -10085,11 +9993,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Nahkampfeinheiten:Nahkampfeinheiten:Nahkampfeinheiten:Nahkampfeinheiten</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Nahkampfeinheiten</German>
 		<Italian>Unità da corpo a corpo</Italian>
 		<Spanish>
 			<Text>Unidad de cuerpo a cuerpo:Unidades de cuerpo a cuerpo</Text>
@@ -10107,11 +10011,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Raketen:Raketen:Raketen:Raketen</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Raketen</German>
 		<Italian>Unità missilistica</Italian>
 		<Spanish>
 			<Text>Misil:Misiles</Text>
@@ -10125,11 +10025,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_MISSIONARY</Tag>
 		<English>Missionaries</English>
 		<French>Missionnaires</French>
-		<German>
-			<Text>Missionare:Missionare:Missionaren:Missionare</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Missionare</German>
 		<Italian>Unità missionario</Italian>
 		<Spanish>Misioneros</Spanish>
 		<Polish>Misjonarze</Polish>
@@ -10305,11 +10201,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Berittene Einheiten:Berittene Einheiten:Berittene Einheiten:Berittene Einheiten</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Berittene Einheiten</German>
 		<Italian>Unità su cavalcatura</Italian>
 		<Spanish>
 			<Text>Unidad montada:Unidades montadas</Text>
@@ -10531,11 +10423,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Naniten:Naniten:Naniten:Naniten</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Naniten</German>
 		<Italian>Unità a naniti</Italian>
 		<Spanish>
 			<Text>Unidad de nanoides:Unidades de nanoides</Text>
@@ -10557,11 +10445,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_NAVAL_COMBATANT</Tag>
 		<English>Naval Combatant</English>
 		<French>Combattant naval</French>
-		<German>
-			<Text>Marineeinheiten:Marineeinheiten:Marineeinheiten:Marineeinheiten</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Marineeinheiten</German>
 		<Polish>Walka Morska</Polish>
 		<Russian>Ìîðñêèå áîéöû</Russian>
 		<Italian>Unità da combattimento navale</Italian>
@@ -10574,11 +10458,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Reaktorschiffe:Reaktorschiffe:Reaktorschiffen:Reaktorschiffe</Text>
-			<Gender>Neuter</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Reaktorschiffe</German>
 		<Italian>Unità navale nucleare</Italian>
 		<Spanish>
 			<Text>Navío nuclear:Navíos nucleares</Text>
@@ -10625,6 +10505,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_PACIFIST</Tag>
 		<English>Pacifist</English>
+		<German>Nichtkombattanten</German>
 		<Italian>Unità pacifista</Italian>
 	</TEXT>
 	<TEXT>
@@ -11021,11 +10902,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Aufklärungseinheiten:Aufklärungseinheiten:Aufklärungseinheiten:Aufklärungseinheiten</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Aufklärungseinheiten</German>
 		<Italian>Unità da ricognizione</Italian>
 		<Spanish>
 			<Text>Unidad de reconocimiento:Unidades de reconocimiento</Text>
@@ -11536,11 +11413,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Roboter:Roboter:Robotern:Roboter</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Roboter</German>
 		<Italian>Unità robotica da combattimento</Italian>
 		<Spanish>
 			<Text>Unidad robótica:Unidades robóticas</Text>
@@ -11576,11 +11449,7 @@
 			<Plural>1</Plural>
 		</French>
 		<Italian>Unità fuorilegge</Italian>
-		<German>
-			<Text>Gesetzlose:Gesetzlosen:Gesetzlosen:Gesetzlosen</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Gesetzlose</German>
 		<Spanish>
 			<Text>Rufián:Rufianes</Text>
 			<Gender>Male</Gender>
@@ -11650,11 +11519,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Siedler:Siedler:Siedlern:Siedler</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Siedler</German>
 		<Italian>Unità colonizzatore</Italian>
 		<Spanish>
 			<Text>Unidad de colonización:Unidades de colonización</Text>
@@ -12031,11 +11896,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Belagerungswaffen:Belagerungswaffen:Belagerungswaffen:Belagerungswaffen</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Belagerungswaffen</German>
 		<Italian>Unità da assedio</Italian>
 		<Spanish>
 			<Text>Arma de asedio:Armas de asedio</Text>
@@ -12487,11 +12348,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_SPY</Tag>
 		<English>Espionage</English>
 		<French>Unités d'Espionnage</French>
-		<German>
-			<Text>Spionageeinheiten:Spionageeinheiten:Spionageeinheiten:Spionageeinheiten</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Spionageeinheiten</German>
 		<Italian>Unità spia</Italian>
 		<Spanish>
 			<Text>Espía:Espías</Text>
@@ -12509,11 +12366,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Tarnkappeneinheiten:Tarnkappeneinheiten:Tarnkappeneinheiten:Tarnkappeneinheiten</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Tarnkappeneinheiten</German>
 		<Italian>Unità stealth</Italian>
 		<Spanish>
 			<Text>Unidad furtiva:Unidades furtivas</Text>
@@ -12531,11 +12384,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Dampfschiffe:Dampfschiffe:Dampfschiffen:Dampfschiffe</Text>
-			<Gender>Neuter</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Dampfschiffe</German>
 		<Italian>Unità navale a vapore</Italian>
 		<Spanish>
 			<Text>Navío a vapor:Navíos a vapor</Text>
@@ -12554,11 +12403,7 @@
 			<Plural>1</Plural>
 		</French>
 		<Italian>Unità squadra d'assalto</Italian>
-		<German>
-			<Text>Eingreiftruppen:Eingreiftruppen:Eingreiftruppen:Eingreiftruppen</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Eingreiftruppen</German>
 		<Spanish>
 			<Text>Fuerzas de asalto</Text>
 			<Gender>Female</Gender>
@@ -12574,11 +12419,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Gefangene Tiere:Gefangenen Tiere:Gefangenen Tieren:Gefangene Tiere</Text>
-			<Gender>Neuter</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Gefangene Tiere</German>
 		<Spanish>
 			<Text>Unidad domada:Unidades domadas</Text>
 			<Gender>Female</Gender>
@@ -12592,11 +12433,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_SUBMARINE</Tag>
 		<English>Submarines</English>
 		<French>Sous-marins</French>
-		<German>
-			<Text>U-Boote:U-Boote:U-Booten:U-Boote</Text>
-			<Gender>Neuter</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>U-Boote</German>
 		<Italian>Unità sottomarina</Italian>
 		<Spanish>
 			<Text>Submarino:Submarinos</Text>
@@ -12614,11 +12451,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Überschalleinheiten:Überschalleinheiten:Überschalleinheiten:Überschalleinheiten</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Überschalleinheiten</German>
 		<Italian>Unità aerea supersonica</Italian>
 		<Spanish>
 			<Text>Aeronave supersónica:Aeronaves supersónicas</Text>
@@ -12678,12 +12511,8 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>Wurfwaffeneinheiten</German>
 		<Italian>Unità da lancio</Italian>
-		<German>
-			<Text>Wurfwaffeneinheiten:Wurfwaffeneinheiten:Wurfwaffeneinheiten:Wurfwaffeneinheiten</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</German>
 		<Spanish>
 			<Text>Unidad lanzadora:Unidades lanzadoras</Text>
 			<Gender>Female</Gender>
@@ -12700,11 +12529,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Kettenfahrzeuge:Kettenfahrzeuge:Kettenfahrzeugen:Kettenfahrzeuge</Text>
-			<Gender>Neuter</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Kettenfahrzeuge</German>
 		<Italian>Unità cingolata</Italian>
 		<Spanish>
 			<Text>Tracción oruga:Unidades sobre tracción oruga</Text>
@@ -12718,11 +12543,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_TRADE</Tag>
 		<English>Traders</English>
 		<French>Commerciaux</French>
-		<German>
-			<Text>Händler:Händler:Händlern:Händler</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Händler</German>
 		<Italian>Unità commerciale</Italian>
 		<Spanish>
 			<Text>Unidad comerciante:Unidades comerciantes</Text>
@@ -16186,11 +16007,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Radeinheiten:Radeinheiten:Radeinheiten:Radeinheiten</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Radeinheiten</German>
 		<Italian>Unità su ruote</Italian>
 		<Spanish>
 			<Text>Sobre ruedas:Unidades sobre ruedas</Text>
@@ -16225,11 +16042,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Holzboote:Holzboote:Holzbooten:Holzboote</Text>
-			<Gender>Neuter</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Holzboote</German>
 		<Italian>Unità navale in legno</Italian>
 		<Spanish>
 			<Text>Navío de madera:Navíos de madera</Text>
@@ -16247,11 +16060,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>
-			<Text>Arbeitstrupps:Arbeitstrupps:Arbeitstrupps:Arbeitstrupps</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</German>
+		<German>Arbeitstrupps</German>
 		<Italian>Unità lavoratore</Italian>
 		<Spanish>
 			<Text>Trabajador:Trabajadores</Text>

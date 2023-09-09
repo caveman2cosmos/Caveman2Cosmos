@@ -4752,7 +4752,7 @@
 		<Tag>TXT_KEY_NATURAL_WONDERS</Tag>
 		<English>1. Natural Wonders</English>
 		<French>1. Merveilles Naturelles</French>
-		<German>1. Naturwunder</German>
+		<German>Naturwunder</German>
 		<Polish>1. Cuda Natury</Polish>
 		<Russian>1. ×óäî ïðèðîäû</Russian>
 		<Italian>Meraviglie naturali</Italian>
@@ -14283,6 +14283,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_ENEMY_TROOPS_SPOTTED</Tag>
 		<English>The enemy has been spotted near %s1_CityName!</English>
+		<German>Feinde wurden nahe %s1_CityName gesichtet!</German>
 		<Russian>Враг был замечен рядом с %s1_CityName!</Russian>
 	</TEXT>
 	<TEXT>
@@ -28395,7 +28396,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNITHELP_FOUND_CITY</Tag>
 		<English>[ICON_BULLET]Can Found a [LINK=CONCEPT_CITIES]New City[\LINK]</English>
 		<French>[ICON_BULLET]Peut fonder une [LINK=CONCEPT_CITIES]nouvelle ville[\LINK]</French>
-		<German>[ICON_BULLET]Kann eine [LINK=CONCEPT_CITIES]neue Stadt[\LINK] gründen</German>
+		<German>[ICON_BULLET]kann eine [LINK=CONCEPT_CITIES]neue Stadt[\LINK] gründen</German>
 		<Italian>[ICON_BULLET]Può fondare una [LINK=CONCEPT_CITIES]nuova città[\LINK]</Italian>
 		<Spanish>[ICON_BULLET]Puede fundar una [LINK=CONCEPT_CITIES]nueva ciudad[\LINK]</Spanish>
 	</TEXT>
