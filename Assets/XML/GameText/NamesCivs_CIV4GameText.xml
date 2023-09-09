@@ -484,7 +484,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Imperium Bizantyjskie</Polish>
-		<Russian>Âèçàíòèÿ</Russian>
+		<Russian>Византия</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_BYZANTIUM_PEDIA</Tag>
@@ -1219,7 +1219,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Grecja</Polish>
-		<Russian>Ãðåêè</Russian>
+		<Russian>Греки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_HITTITES_ADJECTIVE</Tag>
@@ -1241,7 +1241,7 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Hetykow</Polish>
-		<Russian>õåòòû</Russian>
+		<Russian>хетты</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_HITTITES</Tag>
@@ -1251,7 +1251,7 @@
 		<Italian>Impero ittita</Italian>
 		<Spanish>Imperio Hitita</Spanish>
 		<Polish>Imperium Hetyckie</Polish>
-		<Russian>Õåòòñêîå öàðñòâî</Russian>
+		<Russian>Хеттское царство</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_HITTITES_PEDIA</Tag>

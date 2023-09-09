@@ -69,6 +69,7 @@
 		<German>Anarchie!!! (%d1)</German>
 		<Italian>Anarchia! (%d1)</Italian>
 		<Spanish>¡Anarquía! (%d1)</Spanish>
+		<Russian>Анархия! (%d1)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_COMMERCE_RATE</Tag>
@@ -81,7 +82,7 @@
 	<TEXT>
 		<Tag>INTERFACE_CITY_COMMERCE_RATE_FLOAT</Tag>
 		<English>%F1: %s2</English>
-		<Russian>%F1: %s2 (%s3/õîä)</Russian>
+		<Russian>%F1: %s2 (%s3/ход)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_FOOD_GROW</Tag>
@@ -122,7 +123,7 @@
 		<Italian>Crescita!</Italian>
 		<Spanish>¡Crecerá!</Spanish>
 		<Polish>Wzrost!</Polish>
-		<Russian>Ðîñò!</Russian>
+		<Russian>Рост!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_HAPPY</Tag>
@@ -21879,7 +21880,7 @@
 		<French>Assistance de Enki</French>
 		<German>Enkis göttlicher Beistand</German>
 		<Italian>Assistenza di Enki</Italian>
-		<Russian>Ïîìîùü Ýíêè</Russian>
+		<Russian>Помощь Энки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ENLIL</Tag>
@@ -25356,7 +25357,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Buddyzm</Polish>
-		<Russian>Áóääèçì</Russian>
+		<Russian>Буддизм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BUDDHISM_ADJECTIVE</Tag>
@@ -29215,7 +29216,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Podbój</Polish>
-		<Russian>Çàâîåâàíèå</Russian>
+		<Russian>Завоевание</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_CULTURAL</Tag>
