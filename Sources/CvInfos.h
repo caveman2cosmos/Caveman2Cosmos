@@ -1940,6 +1940,7 @@ public:
 	bool canAnimalIgnoresCities() const;
 	bool isNoNonTypeProdMods() const;
 	bool isGatherHerd() const;
+	bool canMergeSplit() const { return m_bCanMergeSplit; }
 
 	UnitCombatTypes getSubCombatType(int i) const;
 	int getNumSubCombatTypes() const;
@@ -2592,6 +2593,7 @@ private:
 	bool m_bCanAnimalIgnoresCities;
 	bool m_bNoNonTypeProdMods;
 	bool m_bGatherHerd;
+	bool m_bCanMergeSplit;
 
 	std::vector<UnitCombatTypes> m_aiSubCombatTypes;
 	std::vector<int> m_aiCureAfflictionTypes;

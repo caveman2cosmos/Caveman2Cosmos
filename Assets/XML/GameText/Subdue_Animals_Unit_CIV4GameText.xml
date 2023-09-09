@@ -2523,6 +2523,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_GALAPAGOS_PENGUIN</Tag>
 		<English>Subdued Galapagos Penguin</English>
 		<French>Pingouin des Galapagos (App.)</French>
+		<German>
+			<Text>Gefangener Galápagos-Pinguin:Gefangenen Galápagos-Pinguins:Gefangenen Galápagos-Pinguin:Gefangenen Galápagos-Pinguin:Gefangene Galápagos-Pinguine:Gefangenen Galápagos-Pinguine:Gefangenen Galápagos-Pinguinen:Gefangenen Galápagos-Pinguine</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Polish>Poskromiony Pingwin Równikowy</Polish>
 		<Russian>Î÷êîâûé ïèíãâèí (ðó÷í.)</Russian>
 	</TEXT>

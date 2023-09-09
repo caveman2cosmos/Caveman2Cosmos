@@ -2231,7 +2231,7 @@
 		<Tag>TXT_KEY_EVENTTRIGGER_SETBACK_1</Tag>
 		<English>%s1_civ_adjective researchers are rumored to have suffered a major setback, slowing their progress.</English>
 		<French>Des chercheurs %s1:3_civ_adjective auraient subi un revers majeur qui ralentit leurs recherches.</French>
-		<German>Die %s1:2_civ_adjective Forscher sollen einen herben Rückschlag erlitten haben, der ihre Fortschritte verlangsamt.</German>
+		<German>Die %[s1_civ_adjective]en Forscher sollen einen herben Rückschlag erlitten haben, der ihre Fortschritte verlangsamt.</German>
 		<Italian>Pare che i ricercatori %s1:3_civ_adjective abbiano subito una battuta d'arresto, che ha rallentato il loro progresso.</Italian>
 		<Spanish>Se rumorea que los investigadores %s1:1_civ_adjective han sufrido un gran revés que ha frenado sus avances.</Spanish>
 	</TEXT>
@@ -2239,7 +2239,7 @@
 		<Tag>TXT_KEY_EVENTTRIGGER_SETBACK_2</Tag>
 		<English>%s1_civ_adjective discoveries have turned out to be false! This dead end result has slowed their current research project.</English>
 		<French>Les découvertes %s1:4_civ_adjective se sont avérées erronées ! Ce travail en pure perte a ralenti leur projet de recherches actuel.</French>
-		<German>Die %s1:2_civ_adjective Entdeckungen haben sich als falsch erwiesen. Dies bedeutet einen herben Rückschlag für ihr aktuelles Forschungsprojekt.</German>
+		<German>Die %[s1_civ_adjective]en Entdeckungen haben sich als falsch erwiesen. Dies bedeutet einen herben Rückschlag für ihr aktuelles Forschungsprojekt.</German>
 		<Italian>Le scoperte %s1:4_civ_adjective si sono rivelate sbagliate! Questo fallimento ha rallentato il progresso del loro attuale progetto di ricerca.</Italian>
 		<Spanish>¡Los descubrimientos %s1:3_civ_adjective han resultado ser falsos! Este callejón sin salida ha entorpecido mucho su proyecto de investigación.</Spanish>
 	</TEXT>
@@ -12853,6 +12853,7 @@
 		<Tag>TXT_KEY_EVENT_TRIGGER_VOLCANO_SLEEP</Tag>
 		<English>This volcano has not erupted in living memory, only old tales speak of it spewing lava.</English>
 		<French>Ce volcan n'a plus été vu en éruption de mémoire vivante, seuls les anciens parlent de quelques jets de lave.</French>
+		<German>Dieser Vulkan ist schon seit Ewigkeiten nicht mehr ausgebrochen. Nur aus alten Überlieferungen ist noch bekannt, dass er einst Asche und Lava spuckte.</German>
 		<Polish>Ten wulkan od dawien dawna nie wybuchał. Jedynie stare legendy wspominają o tym, że kiedyś buchał płomieniami i lawą.</Polish>
 		<Russian>Этот вулкан ни разу не извергался на памяти современников, и лишь в старых преданиях говорят об его прошлых извержениях.</Russian>
 	</TEXT>
@@ -13218,6 +13219,7 @@
 		<Tag>TXT_KEY_EVENT_VOLCANO_SLEEP</Tag>
 		<English>This volcano has quieted down.</English>
 		<French>L'activité de ce volcan semble se calmer.</French>
+		<German>Dieser Vulkan ist in eine längere Ruhephase eingetreten.</German>
 		<Polish>Wulkan ucichł.</Polish>
 		<Russian>Этот вулкан успокоился.</Russian>
 	</TEXT>
@@ -13225,6 +13227,7 @@
 		<Tag>TXT_KEY_EVENT_VOLCANO_SLEEP_HELP</Tag>
 		<English>The active volcano becomes dormant.</English>
 		<French>Le Volcan semble être en sommeil.</French>
+		<German>Aus dem aktiven wird ein schlafender Vulkan.</German>		
 		<Polish>Aktywny wulkan przechodzi w stan uśpienia.</Polish>
 		<Russian>Активный вулкан становится бездействующим.</Russian>
 	</TEXT>

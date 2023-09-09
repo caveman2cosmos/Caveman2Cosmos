@@ -316,7 +316,8 @@ m_bCanAnimalIgnoresBorders(false),
 m_bCanAnimalIgnoresImprovements(false),
 m_bCanAnimalIgnoresCities(false),
 m_bNoNonTypeProdMods(false),
-m_bGatherHerd(false)
+m_bGatherHerd(false),
+m_bCanMergeSplit(true)
 {
 	CvInfoUtil(this).initDataMembers();
 
@@ -2469,7 +2470,6 @@ bool CvUnitInfo::isGatherHerd() const
 	return m_bGatherHerd;
 }
 
-
 //boolean vectors without delayed resolution
 UnitCombatTypes CvUnitInfo::getSubCombatType(int i) const
 {
@@ -3848,6 +3848,7 @@ void CvUnitInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_bTriggerBeforeAttack);
 	CheckSum(iSum, m_bNoNonTypeProdMods);
 	CheckSum(iSum, m_bGatherHerd);
+	CheckSum(iSum, m_bCanMergeSplit);
 	//boolean vectors without delayed resolution
 	CheckSumC(iSum, m_aiSubCombatTypes);
 	CheckSumC(iSum, m_aiCureAfflictionTypes);
@@ -6017,9 +6018,17 @@ void CvUnitInfo::doPostLoadCaching(uint32_t iThis)
 	m_aiHealAsTypes.clear();
 	for (int iI = 0; iI < iNumUnitCombatInfos; iI++)
 	{
-		if ((getUnitCombatType() == iI || isSubCombatType((UnitCombatTypes)iI)) && GC.getUnitCombatInfo((UnitCombatTypes)iI).isHealsAs())
+		if (getUnitCombatType() == iI || isSubCombatType((UnitCombatTypes)iI))
 		{
-			m_aiHealAsTypes.push_back((UnitCombatTypes)iI);
+			if (GC.getUnitCombatInfo((UnitCombatTypes)iI).isHealsAs())
+			{
+				m_aiHealAsTypes.push_back((UnitCombatTypes)iI);
+			}
+
+			if (m_bCanMergeSplit && GC.getUnitCombatInfo((UnitCombatTypes)iI).isCannotMergeSplit())
+			{
+				m_bCanMergeSplit = false;
+			}
 		}
 	}
 	// ! Size Matters

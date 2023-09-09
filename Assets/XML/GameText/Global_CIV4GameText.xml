@@ -86,14 +86,17 @@
 	<TEXT>
 		<Tag>INTERFACE_CITY_FOOD_GROW</Tag>
 		<English>%d1[ICON_FOOD] - %d2[ICON_EATENFOOD] = +%d3[ICON_FOOD]</English>
+		<Italian>%d1 [ICON_FOOD] - %d2 [ICON_EATENFOOD] = +%d3 [ICON_FOOD]</Italian> <!-- city screen left of the food bar -->
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_FOOD_SHRINK</Tag>
 		<English>%d1[ICON_FOOD] - %d2[ICON_EATENFOOD] = [COLOR_WARNING_TEXT]%d3[COLOR_REVERT][ICON_BAD_FOOD]</English>
+		<Italian>%d1 [ICON_FOOD] - %d2 [ICON_EATENFOOD] = [COLOR_WARNING_TEXT]%d3[COLOR_REVERT] [ICON_BAD_FOOD]</Italian> <!-- city screen left of the food bar -->
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_FOOD_STAGNATE</Tag>
 		<English>%d1[ICON_FOOD] = %d2[ICON_EATENFOOD]</English>
+		<Italian>%d1 [ICON_FOOD] = %d2 [ICON_EATENFOOD]</Italian> <!-- city screen left of the food bar -->
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_GREATPEOPLE_RATE</Tag>
@@ -126,7 +129,7 @@
 		<English>%d1[ICON_HAPPY] &gt; %d2[ICON_UNHAPPY]</English>
 		<French>%d1[ICON_HAPPY] &gt; %d2[ICON_UNHAPPY]</French>
 		<German>%d1[ICON_HAPPY] &gt; %d2[ICON_UNHAPPY]</German>
-		<Italian>%d1[ICON_HAPPY] &gt; %d2[ICON_UNHAPPY]</Italian>
+		<Italian>%d1 [ICON_HAPPY] &gt; %d2 [ICON_UNHAPPY]</Italian> <!-- city screen right of the production bar -->
 		<Spanish>%d1 [ICON_HAPPY] &gt; %d2 [ICON_UNHAPPY]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -134,19 +137,20 @@
 		<English>%d1[ICON_HAPPY]</English>
 		<French>%d1[ICON_HAPPY]</French>
 		<German>%d1[ICON_HAPPY]</German>
-		<Italian>%d1[ICON_HAPPY]</Italian>
+		<Italian>%d1 [ICON_HAPPY]</Italian> <!-- city screen left of the food bar -->
 		<Spanish>%d1 [ICON_HAPPY]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_HEALTH_BAD</Tag>
 		<English>%d1[ICON_HEALTHY] &lt; %d2[ICON_UNHEALTHY] = [COLOR_WARNING_TEXT]%d3[COLOR_REVERT][ICON_EATENFOOD]</English>
+		<Italian>%d1 [ICON_HEALTHY] &lt; %d2 [ICON_UNHEALTHY] = [COLOR_WARNING_TEXT]%d3[COLOR_REVERT] [ICON_EATENFOOD]</Italian> <!-- city screen right of the food bar -->
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_HEALTH_GOOD</Tag>
 		<English>%d1[ICON_HEALTHY] &gt; %d2[ICON_UNHEALTHY]</English>
 		<French>%d1[ICON_HEALTHY] &gt; %d2[ICON_UNHEALTHY]</French>
 		<German>%d1[ICON_HEALTHY] &gt; %d2[ICON_UNHEALTHY]</German>
-		<Italian>%d1[ICON_HEALTHY] &gt; %d2[ICON_UNHEALTHY]</Italian>
+		<Italian>%d1 [ICON_HEALTHY] &gt; %d2 [ICON_UNHEALTHY]</Italian> <!-- city screen right of the food bar -->
 		<Spanish>%d1 [ICON_HEALTHY] &gt; %d2 [ICON_UNHEALTHY]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -154,7 +158,7 @@
 		<English>%d1[ICON_HEALTHY]</English>
 		<French>%d1[ICON_HEALTHY]</French>
 		<German>%d1[ICON_HEALTHY])</German>
-		<Italian>%d1[ICON_HEALTHY]</Italian>
+		<Italian>%d1 [ICON_HEALTHY]</Italian> <!-- city screen right of the food bar -->
 		<Spanish>%d1 [ICON_HEALTHY]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -162,7 +166,7 @@
 		<English>Maintenance:</English>
 		<French>Entretien :</French>
 		<German>Unterhalt:</German>
-		<Italian>Costi di mantenimento:</Italian>
+		<Italian>Costo di mantenimento:</Italian> <!-- hoover city -->
 		<Spanish>Mantenimiento:</Spanish>
 	</TEXT>
 	<TEXT>
@@ -170,7 +174,7 @@
 		<English>%s1 (%d2 [NUM2:Turn:Turns])</English>
 		<French>%s1 (%d2 [NUM2:tour:tours])</French>
 		<German>%s1 (%d2 [NUM2:Runde:Runden])</German>
-		<Italian>%s1 %d2 [NUM2:turno:turni])</Italian>
+		<Italian>Produzione: %s1 (%d2 [NUM2:turno:turni])</Italian> <!-- city screen, production bar -->
 		<Spanish>%s1 (%d2 [NUM2:turno:turnos])</Spanish>
 	</TEXT>
 	<TEXT>
@@ -203,7 +207,7 @@
 		<English>Stagnant</English>
 		<French>Pas de croissance</French>
 		<German>Stagnation</German>
-		<Italian>Stagnante</Italian>
+		<Italian>Stagnazione</Italian>
 		<Spanish>Estancada</Spanish>
 	</TEXT>
 	<TEXT>
@@ -219,12 +223,13 @@
 		<English>(%d1 [NUM1:Turn:Turns])</English>
 		<French>(%d1 [NUM1:tour:tours])</French>
 		<German>(%d1 [NUM1:Runde:Runden])</German>
-		<Italian>(%d1 [NUM1:turno:turni])</Italian>
+		<Italian>(%d1 [NUM1:turno:turni])</Italian> <!-- hover on city name -->
 		<Spanish>(%d1 [NUM1:turno:turnos])</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_UNHAPPY</Tag>
 		<English>%d1[ICON_HAPPY] &lt; %d2[ICON_UNHAPPY] = [COLOR_WARNING_TEXT]%d3[COLOR_REVERT][ICON_ANGRYPOP]</English>
+		<Italian>%d1 [ICON_HAPPY] &lt; %d2 [ICON_UNHAPPY] = [COLOR_WARNING_TEXT]%d3[COLOR_REVERT] [ICON_ANGRYPOP]</Italian> <!-- city screen right of the food bar -->
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CLOSE_TAB</Tag>
@@ -232,6 +237,7 @@
 		<French>Fermer l'Onglet</French>
 		<German>Menü verlassen</German>
 		<Russian>Закрыть панель</Russian>
+		<Italian>Chiudi tab attiva</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_GREAT_PERSON_CITY</Tag>
@@ -246,7 +252,7 @@
 		<English>%s1: None</English>
 		<French>%s1: Aucun</French>
 		<German>%s1: Keine</German>
-		<Italian>%s1: Nessuno</Italian>
+		<Italian>%s1 Nessun gran personaggio</Italian> <!-- city screen great people bar -->
 		<Spanish>%s1: ninguno</Spanish>
 		<Polish>%s1: Brak</Polish>
 		<Russian>%s1: Íåò</Russian>
@@ -314,7 +320,7 @@
 	<TEXT>
 		<Tag>INTERFACE_TAB_ADMIN</Tag>
 		<English>Admin Tab</English>
-		<Italian>Amministrazione</Italian>
+		<Italian>Gestione della città</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_TAB_BUILDING</Tag>
@@ -640,7 +646,7 @@
 	<TEXT>
 		<Tag>TXT_BULLET_S1_COLON_SPACE</Tag>
 		<English>[ICON_BULLET]%s1:[SPACE]</English>
-		<Italian>Prova10</Italian>
+		<Italian>[ICON_BULLET]%s1:[SPACE]</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_BULLET_S1_F2_FROM_S3</Tag>
@@ -882,7 +888,7 @@
 		<English>Cancels the Automate Upgrade Order</English>
 		<French>Annule les ordres d'Améliorations automatisées</French>
 		<German>Abbruch der automatischen Modernisierungen</German>
-		<Italian>[NEWLINE]Cancella l'ordine modernizzazioni automatiche</Italian>
+		<Italian>[NEWLINE]Cancella l'ordine di modernizzazioni automatiche</Italian>
 		<Spanish>Cancela la acción 'Mejora automatizada'.</Spanish>
 		<Polish>Anuluje rozkaz automatycznego ulepszania jednostek</Polish>
 		<Russian>Îòìåíèòü ïðèêàç àâòîìîäåðíèçàöèè</Russian>
@@ -2590,7 +2596,7 @@
 		<English>Create [LINK=FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE]Lighthouse[\LINK] (Great Barrier Reef)</English>
 		<French>Placer un [LINK=FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE]Phare[\LINK](Great Barrier Reef)</French>
 		<German>[LINK=FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE]Leuchtturm[\LINK](Great Barrier Reef) bauen</German>
-		<Italian>[LINK=FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE]Faro sulla grande barriera corallina[\LINK](costruzione)</Italian>
+		<Italian>[LINK=FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE]Faro sulla grande barriera corallina[\LINK] (costruzione)</Italian>
 		<Spanish>Construir una [LINK=FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE]Faro[\LINK](Great Barrier Reef)</Spanish>
 		<Polish>Wybuduj [LINK=FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE]Latarnię Morską[\LINK](Great Barrier Reef)</Polish>
 		<Russian>Ñòðîèòü [LINK=FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE]Ìàÿê[\LINK] (Áîë. Áàðüåðíûé Ðèô)</Russian>
@@ -2612,7 +2618,7 @@
 		<English>[ICON_BULLET]Starts with[SPACE]</English>
 		<French>[ICON_BULLET]Commence avec[SPACE]</French>
 		<German>[ICON_BULLET]beginnt mit[SPACE]</German>
-		<Italian>[ICON_BULLET]Inizia con[SPACE]</Italian>
+		<Italian>[ICON_BULLET]L'unità inizia con le promozioni[SPACE]</Italian> <!-- unit Ambusher -->
 		<Spanish>[ICON_BULLET]Empieza con[SPACE]</Spanish>
 		<Russian>[ICON_BULLET]Íà÷èíàåò ñ[SPACE]</Russian>
 	</TEXT>
@@ -3007,7 +3013,7 @@
 		<English>[NEWLINE]%d1 [ICON_PRODUCTION]/Turn</English>
 		<French>[NEWLINE]%d1 [ICON_PRODUCTION]/tour</French>
 		<German>[NEWLINE]%d1 [ICON_PRODUCTION]/Runde</German>
-		<Italian>[NEWLINE]%d1 [ICON_PRODUCTION]a turno</Italian>
+		<Italian>[NEWLINE]%d1 [ICON_PRODUCTION]a turno</Italian> <!-- city hover -->
 		<Spanish>[NEWLINE]%d1 [ICON_PRODUCTION]/turno</Spanish>
 		<Polish>[NEWLINE]%d1 [ICON_PRODUCTION]/turę</Polish>
 		<Russian>[NEWLINE]%d1 [ICON_PRODUCTION]/Õîä</Russian>
@@ -3017,7 +3023,7 @@
 		<English>[NEWLINE]%d1 [ICON_PRODUCTION] (%d2 [ICON_PRODUCTION]/Turn)</English>
 		<French>[NEWLINE]%d1 [ICON_PRODUCTION] (%d2 [ICON_PRODUCTION]/tour)</French>
 		<German>[NEWLINE]%d1 [ICON_PRODUCTION] (%d2 [ICON_PRODUCTION]/Runde)</German>
-		<Italian>[NEWLINE]%d1 [ICON_PRODUCTION] (%d2 [ICON_PRODUCTION] a turno</Italian>
+		<Italian>[NEWLINE]%d1 [ICON_PRODUCTION] (%d2 [ICON_PRODUCTION] a turno)</Italian>
 		<Spanish>[NEWLINE]%d1 [ICON_PRODUCTION] (%d2 [ICON_PRODUCTION]/turno)</Spanish>
 		<Polish>[NEWLINE]%d1 [ICON_PRODUCTION] (%d2 [ICON_PRODUCTION]/turę)</Polish>
 		<Russian>[NEWLINE]%d1 [ICON_PRODUCTION] (%d2 [ICON_PRODUCTION]/Õîä)</Russian>
@@ -3035,6 +3041,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_CULTURE</Tag>
 		<English>[NEWLINE][ICON_CULTURE]: %d1/%d2 (%s3: Lvl %d4)</English>
+		<Italian>[NEWLINE][ICON_CULTURE]: %d1 / %d2 livello culturale %d4: %s3</Italian> <!-- hoover city -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_CULTURE_MAX</Tag>
@@ -3123,7 +3130,7 @@
 		<English>[NEWLINE]%d1 [ICON_PRODUCTION]/Turn[NEWLINE]%s2: %d3/%d4 [ICON_PRODUCTION] (%d5 [NUM5:Turn:Turns])</English>
 		<French>[NEWLINE]%d1 [ICON_PRODUCTION]/tour[NEWLINE]%s2 : %d3/%d4 [ICON_PRODUCTION] (%d5 [NUM5:tour:tours])</French>
 		<German>[NEWLINE]%d1 [ICON_PRODUCTION]/Runde[NEWLINE]%s2: %d3/%d4 [ICON_PRODUCTION] (%d5 [NUM5:Runde:Runden])</German>
-		<Italian>[NEWLINE]%d1 [ICON_PRODUCTION]/Turno[NEWLINE]%s2: %d3/%d4 [ICON_PRODUCTION] (%d5 [NUM5:turno:turni])</Italian>
+		<Italian>[NEWLINE]%d1 [ICON_PRODUCTION] a turno[NEWLINE]%s2: %d3 / %d4 [ICON_PRODUCTION] (%d5 [NUM5:turno:turni])</Italian> <!-- hover city when a unit is being built-->
 		<Spanish>[NEWLINE]%d1 [ICON_PRODUCTION]/turno[NEWLINE]%s2: %d3/%d4 [ICON_PRODUCTION] (%d5 [NUM5:turno:turnos])</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4400,7 +4407,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_COMMA</Tag>
 		<English>,</English>
-		<Italian>,[NEWLINE][ICON_BULLET]</Italian> <!--Industrial Farms building-->
+		<Italian>,[NEWLINE]</Italian> <!--Industrial Farms building-->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_AMBUSH</Tag>
@@ -4745,7 +4752,7 @@
 		<Tag>TXT_KEY_NATURAL_WONDERS</Tag>
 		<English>1. Natural Wonders</English>
 		<French>1. Merveilles Naturelles</French>
-		<German>1. Naturwunder</German>
+		<German>Naturwunder</German>
 		<Polish>1. Cuda Natury</Polish>
 		<Russian>1. ×óäî ïðèðîäû</Russian>
 		<Italian>Meraviglie naturali</Italian>
@@ -10229,7 +10236,7 @@
 		<English>[ICON_BULLET]Can perform Ranged Attacks</English>
 		<French>[ICON_BULLET]Peut effectuer des Attaques à distance</French>
 		<German>[ICON_BULLET]Kann Fernangriffe durchführen</German>
-		<Italian>[ICON_BULLET]Puoi effettuare 'Bombardamento ad Area'</Italian>
+		<Italian>[ICON_BULLET]L'unità può effettuare il [COLOR_HIGHLIGHT_TEXT]bombardamento ad area[COLOR_REVERT]</Italian> <!-- Unit Assassin -->
 		<Spanish>[ICON_BULLET]Puede realizar Cañoneo de alcance</Spanish>
 		<Polish>[ICON_BULLET]Może: Atak dystansowy</Polish>
 		<Russian>[ICON_BULLET]Ìîæåò íàíîñèòü äèñòàíöèîííûå óäàðû</Russian>
@@ -10623,7 +10630,7 @@
 		<Tag>TXT_KEY_LISTSCREEN_BUTTON_ADD</Tag>
 		<English>ADD</English>
 		<French>AJOUTER</French>
-		<Italian>AGGIUNGI</Italian>
+		<Italian>LISTA</Italian>
 		<Spanish>AÑADIR</Spanish>
 		<Polish>DODAJ</Polish>
 		<Russian>ÄÎÁÀÂÈÒÜ</Russian>
@@ -14276,6 +14283,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_ENEMY_TROOPS_SPOTTED</Tag>
 		<English>The enemy has been spotted near %s1_CityName!</English>
+		<German>Feinde wurden nahe %s1_CityName gesichtet!</German>
 		<Russian>Враг был замечен рядом с %s1_CityName!</Russian>
 	</TEXT>
 	<TEXT>
@@ -14681,7 +14689,7 @@
 		<English>Great Person: %d1_Curr/%d2_Need [ICON_GREATPEOPLE]</English>
 		<French>Personnage illustre : %d1_Curr/%d2_Need [ICON_GREATPEOPLE]</French>
 		<German>Große Persönlichkeit: %d1_Curr/%d2_Need [ICON_GREATPEOPLE]</German>
-		<Italian>Grande Personaggio: %d1_Curr/%d2_Need [ICON_GREATPEOPLE]</Italian>
+		<Italian>Gran personaggio: %d1_Curr / %d2_Need [ICON_GREATPEOPLE]</Italian> <!-- city screen, hover great people bar -->
 		<Spanish>Grandes personajes: %d1_Curr/%d2_Need [ICON_GREATPEOPLE]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -15748,7 +15756,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_NO_CITY_INFLUENCE</Tag>
 		<English>Not in %s1_CivAdj city influence.</English>
-		<Italian>Non è nell'influenza di una città %s1_CivAdj.</Italian>
+		<Italian>La casella non è nell'influenza di una città %s1_CivAdj.</Italian> <!-- hoover plot the very first turn -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PEACE_TREATY</Tag>
@@ -15885,7 +15893,7 @@
 		<English>You have plundered %d1_Num[ICON_RESEARCH] from the enemy!</English>
 		<French>Vous avez pillé %d1_Num[ICON_RESEARCH] dans: enemy!</French>
 		<German>%s2_ImpName geplündert, Ihr erbeutet %d1_Num[ICON_RESEARCH]!</German>
-		<Italian>Hai saccheggiato %d1_Num[ICON_RESEARCH] da enemy!</Italian>
+		<Italian>Hai saccheggiato %d1_Num[ICON_RESEARCH] dal nemico!</Italian>
 		<Spanish>Habéis saqueado %d1_Num [ICON_RESEARCH] del enemigo.</Spanish>
 		<Polish>Splądrowałeś %d1_Num[ICON_RESEARCH] z wrogiego imperium!</Polish>
 		<Russian>Вы получаете %d1_Num[ICON_RESEARCH] обыскав тело врага!</Russian>
@@ -18866,7 +18874,7 @@
 		<English>[ICON_BULLET]Units have a %D1%% chance to avoid Capture.</English>
 		<French>[ICON_BULLET]Les Unités ont %D1%% de chances d'éviter d'être capturées.</French>
 		<German>[ICON_BULLET]Einheiten können der Gefangennahme mit %D1%% Wahrscheinlichkeit entgehen.</German>
-		<Italian>[ICON_BULLET]Possibilità di sfuggire alla cattura: %D1%%</Italian><!--Aerial CT trait in the pedia-->
+		<Italian>[ICON_BULLET]Probabilità di sfuggire alla cattura: %D1%%</Italian><!--Aerial CT trait in the pedia-->
 		<Polish>[ICON_BULLET]Jednostki mają %D1%% szansy na uniknięcie Przejęcia.</Polish>
 		<Russian>[ICON_BULLET]%D1%% øàíñîâ èçáåæàòü çàõâàòà.</Russian>
 	</TEXT>
@@ -19000,7 +19008,7 @@
 		<Tag>TXT_KEY_NO_NON_OWNED_CITY</Tag>
 		<English>[ICON_BULLET]This unit cannot enter a city that is not your own without attacking it.</English>
 		<French>[ICON_BULLET]Cette unité ne peut entrer dans une ville étrangère qu'en l'attaquant.</French>
-		<Italian>[ICON_BULLET]Non può entrare in una città straniera senza attaccare.</Italian>
+		<Italian>[ICON_BULLET]L'unità non può entrare in una città straniera [COLOR_HIGHLIGHT_TEXT]senza attaccarla[COLOR_REVERT]</Italian> <!-- unit Ambusher -->
 		<Russian>[ICON_BULLET]Этот отряд не может войти в город, не принадлежащий вам, не атакуя его.</Russian>
 	</TEXT>
 	<TEXT>
@@ -19008,6 +19016,7 @@
 		<English>[ICON_BULLET]Does not get unit production modifers while training, except for those specifically for this unit type.</English>
 		<French>[ICON_BULLET]N'obtient pas de modificateurs de production d'unité pendant la formation, à l'exception de ceux spécifiquement pour ce type d'unité.</French>
 		<Russian>[ICON_BULLET]Не получает модификаторы к производству отрядов во время обучения, за исключением тех, которые специально предусмотрены для этого типа юнитов.</Russian>
+		<Italian>[ICON_BULLET]Non riceve aumenti alla propria [COLOR_HIGHLIGHT_TEXT]velocità di produzione[COLOR_REVERT] a meno che non siano specifici per questa unità</Italian> <!-- unit Food Merchant -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_NO_STATE_RELIGION_FREE_EXPERIENCE</Tag>
@@ -19435,7 +19444,7 @@
 		<English>[SPACE]or[SPACE]</English>
 		<French>[SPACE]ou[SPACE]</French>
 		<German>[SPACE]oder[SPACE]</German>
-		<Italian>[COLOR_REVERT][SPACE]o[SPACE][COLOR_WARNING_TEXT]</Italian>
+		<Italian>[COLOR_REVERT][SPACE]o[SPACE][COLOR_HIGHLIGHT_TEXT]</Italian>
 		<Spanish>[SPACE]o[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -19719,6 +19728,7 @@
 		<French>[ICON_BULLET]Cette unité peut entrer à l'intérieur des frontières lorsqu'il existe un droit de passage ou un Accord de frontières ouvertes</French>
 		<German>[ICON_BULLET]kann Gebiete von Nationen betreten, mit denen eine Durchreiseerlaubnis oder offene Grenzen vereinbart wurden</German>
 		<Russian>[ICON_BULLET]Этот отряд может входить на территории, с владельцами которых у вас есть право на проход или соглашение об открытых границах.</Russian>
+		<Italian>[ICON_BULLET]Questa unità [COLOR_HIGHLIGHT_TEXT]può entrare[COLOR_REVERT] nei territori con cui hai un accordo di diritto di passaggio o di frontiere aperte</Italian> <!-- unit Trained Dogs -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEACE_TREATY_WITH</Tag>
@@ -19896,7 +19906,7 @@
 		<English>/Turn</English>
 		<French>/tour</French>
 		<German>/Runde</German>
-		<Italian>/Turno</Italian>
+		<Italian> a turno</Italian> <!-- hoover city -->
 		<Spanish>/turno</Spanish>
 	</TEXT>
 	<TEXT>
@@ -19918,7 +19928,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_FREE_EXPERIENCE</Tag>
 		<English>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 from Wonders, Civics and Traits[COLOR_REVERT]</English>
-		<Italian>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 per le Meraviglie e le politiche attive[COLOR_REVERT]</Italian>
+		<Italian>[TAB][COLOR_POSITIVE_TEXT]%D1[COLOR_REVERT] dalle meraviglie, forme di governo e tratti del leader </Italian> <!-- unit in construction hover -->
 		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 des Merveilles et Doctrines[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 durch Wunder und Gesellschaftsform[COLOR_REVERT]</German>
 		<Spanish>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1 por Maravillas y principios[COLOR_REVERT]</Spanish>
@@ -21501,7 +21511,7 @@
 		<English>[ICON_BULLET]%D1_change%% production speed for %s2_trait leaders</English>
 		<French>[ICON_BULLET]Vitesse de production de %D1_change%% pour les dirigeants avec le trait %s2_trait</French>
 		<German>[ICON_BULLET]%D1_change%% Produktionsgeschwindigkeit für Staatsoberhäupter mit dem Charakterzug: %s2:2_trait</German>
-		<Italian>[ICON_BULLET]Velocità produttiva: [COLOR_HIGHLIGHT_TEXT]%D1_change[COLOR_REVERT] con un leader [COLOR_HIGHLIGHT_TEXT]%s2_trait[COLOR_REVERT]</Italian>
+		<Italian>[ICON_BULLET]Con un leader con il tratto [COLOR_HIGHLIGHT_TEXT]%s2_trait[COLOR_REVERT] velocità d'addestramento [COLOR_HIGHLIGHT_TEXT]%D1_change[COLOR_REVERT]</Italian> <!-- unit Woirkboat (Prehistoric) -->
 		<Spanish>[ICON_BULLET]%D1_change%% de velocidad de producción con líder %s2:1_trait</Spanish>
 	</TEXT>
 	<TEXT>
@@ -21663,7 +21673,7 @@
 		<English>[ICON_BULLET]%D1_Bonus%% City Attack</English>
 		<French>[ICON_BULLET]Attaque de ville %D1_Bonus%%</French>
 		<German>[ICON_BULLET]%D1_Bonus%% Stadtangriff</German>
-		<Italian>[ICON_BULLET]Attacco alle città %D1_Bonus%%</Italian> 
+		<Italian>[ICON_BULLET]Attacco alle città [COLOR_HIGHLIGHT_TEXT]%D1_Bonus%%[COLOR_REVERT]</Italian> <!-- Subcombat type Siege (Gatecrasher) -->
 		<Spanish>[ICON_BULLET]%D1_Bonus%% al atacar ciudades</Spanish>
 	</TEXT>
 	<TEXT>
@@ -21671,7 +21681,7 @@
 		<English>[ICON_BULLET]%D1_Bonus%% City Defense</English>
 		<French>[ICON_BULLET]Défense de ville %D1_Bonus%%</French>
 		<German>[ICON_BULLET]%D1_Bonus%% Stadtverteidigung</German>
-		<Italian>[ICON_BULLET]Difesa città %D1_Bonus%%</Italian>
+		<Italian>[ICON_BULLET]Difesa delle città [COLOR_HIGHLIGHT_TEXT]%D1_Bonus%%[COLOR_REVERT]</Italian> <!-- Subcombat type Strike Team -->
 		<Spanish>[ICON_BULLET]%D1_Bonus%% al defender ciudades</Spanish>
 	</TEXT>
 	<TEXT>
@@ -21679,7 +21689,7 @@
 		<English>[ICON_BULLET]Suffers %d1_percent%% less Collateral Damage</English>
 		<French>[ICON_BULLET]Dommages collatéraux réduits de %d1_percent%%</French>
 		<German>[ICON_BULLET]%d1_percent%% weniger Kollateralschäden</German>
-		<Italian>[ICON_BULLET]Subisce %d1_percent%% in meno di danni collaterali</Italian>
+		<Italian>[ICON_BULLET]Danni collaterali subiti [COLOR_HIGHLIGHT_TEXT]-%d1_percent%%[COLOR_REVERT]</Italian> <!-- unit Noble -->
 		<Spanish>[ICON_BULLET]Sufre un %d1_percent%% menos de daños colaterales</Spanish>
 	</TEXT>
 	<TEXT>
@@ -21687,7 +21697,7 @@
 		<English>Damage/Turn</English>
 		<French>Dégâts/tour</French>
 		<German>Schaden/Runde</German>
-		<Italian>di danni curati a turno</Italian>
+		<Italian>di danni curati a turno</Italian> <!-- unit Healer -->
 		<Spanish>Daño/turno</Spanish>
 	</TEXT>
 	<TEXT>
@@ -21727,7 +21737,7 @@
 		<English>[ICON_BULLET]Gains %D1_percent%% Experience from Combat</English>
 		<French>[ICON_BULLET]Octroie %D1_percent%% expérience au combat</French>
 		<German>[ICON_BULLET]%D1_percent%% mehr Erfahrungspunkte durch Kampf</German>
-		<Italian>[ICON_BULLET]Acquisisce %D1_percent%% di esperienza da combattimento</Italian>
+		<Italian>[ICON_BULLET]Esperienza guadagnata in combattimento [COLOR_HIGHLIGHT_TEXT]%D1_percent%%[COLOR_REVERT]</Italian>   <!-- Subcombat type Group (Trillions (1tril+) -->
 		<Spanish>[ICON_BULLET]Gana un %D1_percent%% de experiencia por combate</Spanish>
 	</TEXT>
 	<TEXT>
@@ -21751,7 +21761,7 @@
 		<English>[ICON_BULLET]%D1_Bonus%% Hills Defense</English>
 		<French>[ICON_BULLET]Défense de collines %D1_Bonus%%</French>
 		<German>[ICON_BULLET]%D1_Bonus%% Hügel-Verteidigung</German>
-		<Italian>[ICON_BULLET]Difesa in collina %D1_Bonus%%</Italian>
+		<Italian>[ICON_BULLET]Difesa sulle caselle [COLOR_HIGHLIGHT_TEXT]collina %D1_Bonus%%[COLOR_REVERT]</Italian>  <!-- Subcombat type Ruffian -->
 		<Spanish>[ICON_BULLET]%D1_Bonus%% a defender colinas</Spanish>
 	</TEXT>
 	<TEXT>
@@ -21767,7 +21777,7 @@
 		<English>[ICON_BULLET]Immune to First Strikes</English>
 		<French>[ICON_BULLET]Insensible aux premières attaques</French>
 		<German>[ICON_BULLET]Immun gegen Erstangriffe</German>
-		<Italian>[ICON_BULLET]Immune agli 'Attacchi improvvisi'</Italian>
+		<Italian>[ICON_BULLET]Unità immune ai [COLOR_HIGHLIGHT_TEXT]primi attacchi[COLOR_REVERT]</Italian> <!-- Subcombat type Strike Team -->
 		<Spanish>[ICON_BULLET]Inmune a los ataques de iniciativa</Spanish>
 	</TEXT>
 	<TEXT>
@@ -21831,7 +21841,7 @@
 		<English>When attached to a unit:</English>
 		<French>Quand rattaché à une unité :</French>
 		<German>Wenn im Gefolge einer Einheit:</German>
-		<Italian>Quando legato a un'unità:</Italian>
+		<Italian>Quando sta [COLOR_HIGHLIGHT_TEXT]conducendo[COLOR_REVERT] un'unità:</Italian> <!-- unit Noble -->
 		<Spanish>Cuando se agrega a una unidad:</Spanish>
 	</TEXT>
 	<TEXT>
@@ -22110,10 +22120,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_FOUNDED_FIRST</Tag>
 		<English>[ICON_BULLET]Founded by First to Discover [LINK=%s1]%s2[\LINK]</English>
-		<French>[ICON_BULLET]Religion fondée par le premier à découvrir : [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT]</French>
-		<German>[ICON_BULLET]Durch den ersten Entdecker der Technologie [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT] gegründet</German>
-		<Italian>[ICON_BULLET]Fondato dalla prima civiltà che scopre [NUM1:il:la:i:le] [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT]</Italian>
-		<Spanish>[ICON_BULLET]Fundado por el primero en descubrir [NUM1:el:la:los:las] [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT]</Spanish>
+		<French>[ICON_BULLET]Religion fondée par le premier à découvrir : [LINK=%s1]%s2[\LINK]</French>
+		<German>[ICON_BULLET]Durch den ersten Entdecker der Technologie [LINK=%s1]%s2[\LINK] gegründet</German>
+		<Italian>[ICON_BULLET]Fondata dalla prima civiltà che scopre la tecnologia [LINK=%s1]%s2[\LINK]</Italian> <!-- Perdia all entries of the tab Religion -->
+		<Spanish>[ICON_BULLET]Fundado por el primero en descubrir [NUM1:el:la:los:las] [LINK=%s1]%s2[\LINK]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_FOUNDER_RECEIVES</Tag>
@@ -22323,7 +22333,7 @@
 		<English>[NEWLINE][COLOR_WARNING_TEXT]Requires[SPACE]</English>
 		<French>[NEWLINE][COLOR_WARNING_TEXT]Requiert:[SPACE]</French>
 		<German>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]erforderlich:[SPACE]</German>
-		<Italian>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Richiede[COLOR_REVERT] per poter essere costruito:[COLOR_WARNING_TEXT] </Italian> <!-- tech Waterproof Cement-->
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Richiede[COLOR_REVERT] per la realizzazione:[COLOR_HIGHLIGHT_TEXT] </Italian> <!-- tech Waterproof Cement, unit Cartwright, building-->
 		<Spanish>[NEWLINE][COLOR_WARNING_TEXT]Requiere[SPACE]</Spanish>
 		<Polish>[NEWLINE][COLOR_WARNING_TEXT]Wymaga[SPACE]</Polish>
 		<Russian>[NEWLINE][COLOR_WARNING_TEXT]Òðåáóåòñÿ:[SPACE]</Russian>
@@ -24712,6 +24722,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>1</Plural>
 		</German>
 		<Russian>Пленник</Russian>
+		<Italian>Prigionieri</Italian> <!-- unit Bandit Footpad -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALUNIT_FIGHTER</Tag>
@@ -24722,11 +24733,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>1</Plural>
 		</French>
 		<German>Jagdflugzeuge</German>
-		<Italian>
-			<Text>Caccia:Caccia</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Da combattimento</Italian>
 		<Spanish>
 			<Text>Caza:Cazas</Text>
 			<Gender>Male</Gender>
@@ -24748,11 +24755,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>
-			<Text>Missile:Missili</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Missilistico</Italian>
 		<Spanish>
 			<Text>Misil:Misiles</Text>
 			<Gender>Male</Gender>
@@ -24774,11 +24777,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Scout, Esploratore, Missionario, Spia, Grande Personaggio:Scout, Esploratori, Missionari, Spie, Grandi Personaggi</Text>
-			<Gender>Male:Male:Male:Female:Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Scout, Esploratore, Missionario, Spia, Gran personaggio</Italian>
 		<Spanish>
 			<Text>Batidor, Explorador, Misionero, Espía, Gran personaje:Batidores, Exploradores, Misioneros, Espías, Grandes personajes</Text>
 			<Gender>Male</Gender>
@@ -24810,7 +24809,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>1</Plural>
 		</French>
 		<German>Truppen</German>
-		<Italian>Truppe</Italian>
+		<Italian>Truppa</Italian>
 		<Spanish>
 			<Text>Tropas</Text>
 			<Gender>Female</Gender>
@@ -24825,6 +24824,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<French>ADAV(aéronef à décollage et atterrissage verticaux)</French>
 		<Polish>VTOL(Pionowe lądowanie i start)</Polish>
 		<Russian>ÑÂÏÏ</Russian>
+		<Italian>Decollo e atterraggio verticale</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIAL_BUILDING_VALID</Tag>
@@ -25138,7 +25138,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]Can be researched by a [COLOR_UNIT_TEXT]%s1_great_person[COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Peut être recherchée par un [COLOR_UNIT_TEXT]%s1_great_person[COLOR_REVERT].</French>
 		<German>[ICON_BULLET]kann von der Persönlichkeit [COLOR_UNIT_TEXT]%s1_great_person[COLOR_REVERT] erforscht werden</German>
-		<Italian>[ICON_BULLET]Può essere ricercata da un [COLOR_UNIT_TEXT]%s1_great_person[COLOR_REVERT].</Italian>
+		<Italian>[ICON_BULLET]Questa tecnologia può essere ricercata da un [COLOR_UNIT_TEXT]%s1_great_person[COLOR_REVERT]</Italian> <!-- tech Scavenging -->
 		<Spanish>[ICON_BULLET]Esta tecnología puede investigarla un [COLOR_UNIT_TEXT]%s1_great_person[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -26161,11 +26161,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Gender>Neuter:Neuter:Neuter</Gender>
 			<Plural>0:0:0</Plural>
 		</German>
-		<Italian>
-			<Text>sciamanistico:sciamanistica:sciamanistici:sciamanistiche</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Italian>
+		<Italian>sciamanico</Italian>
 		<Spanish>
 			<Text>Shamanistic</Text>
 			<Gender>Male</Gender>
@@ -26556,7 +26552,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>[ICON_BULLET]%d1_Change Schutz gegen kulturbedingte Revolten</German>
 		<Polish>[ICON_BULLET]%d1_Change obrona przed rewoltą</Polish>
 		<Russian>[ICON_BULLET]%d1_Change ñòàáèëüíîñòè</Russian>
-    <Italian>[ICON_BULLET]Protezione rivolta culturale: %d1_Change</Italian>
+		<Italian>[ICON_BULLET]Protezione dalle rivoluzioni culturali [COLOR_HIGHLIGHT_TEXT]%d1_Change[COLOR_REVERT]</Italian>  <!-- Subcombat type Administrator -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TEMP_WORK_RATE</Tag>
@@ -27156,7 +27152,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]This Unit is Tradable</English>
 		<French>[ICON_BULLET]Cette unité peut être vendue</French>
 		<German>[ICON_BULLET]mit dieser Einheit kann gehandelt werden</German>
-		<Italian>[ICON_BULLET]Quest'unità è commerciabile.</Italian>
+		<Italian>[ICON_BULLET]Quest'unità può essere [COLOR_HIGHLIGHT_TEXT]scambiata[COLOR_REVERT] tramite il commercio</Italian> <!-- unit Trained Dogs -->
 		<Spanish>[ICON_BULLET]Esta unidad se puede intercambiar</Spanish>
 		<Polish>[ICON_BULLET]Tą jednostką można handlować</Polish>
 		<Russian>[ICON_BULLET]Ýòîò îòäðÿä ìîæíî ïðîäàòü</Russian>
@@ -28154,6 +28150,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		</Spanish>
 		<Polish>Religia (Andeanizm)</Polish>
 		<Russian>Ðåëèãèÿ(Àíäåíàèçì)</Russian>
+		<Italian>Religione andina</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_RELIGION_ASATRU</Tag>
@@ -28170,6 +28167,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		</Spanish>
 		<Polish>Religia (Asatru)</Polish>
 		<Russian>Ðåëèãèÿ(Àñàòðó)</Russian>
+		<Italian>Religione asatru</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_RELIGION_BAHAI</Tag>
@@ -28186,6 +28184,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		</Spanish>
 		<Polish>Religia (Baha'i)</Polish>
 		<Russian>Ðåëèãèÿ(Áàõàé)</Russian>
+		<Italian>Religione bahai</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_AIRRANGE</Tag>
@@ -28200,13 +28199,14 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]This unit can initiate Assassinations against units on the same tile.</English>
 		<French>[ICON_BULLET]Cette unité peut réaliser des assassinats d'unités présentes sur la même case.</French>
 		<Russian>[ICON_BULLET]Этот юнит может совершить убийство выбранного отряда на одной с ним клетке.</Russian>
+		<Italian>[ICON_BULLET]Questa unità può provare a effettuare un [COLOR_HIGHLIGHT_TEXT]assassinio[COLOR_REVERT] contro unità sulla stessa casella</Italian> <!-- unit Hunter -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_ATTACK</Tag>
 		<English>[ICON_BULLET]%D1_Change%% %s2_TerrOrFeat Attack</English>
 		<French>[ICON_BULLET]%D1_Change%% %s2_TerrOrFeat Attaque</French>
 		<German>[ICON_BULLET]%D1_Change%% %s2_TerrOrFeat-Angriff</German>
-		<Italian>[ICON_BULLET]%D1_Change%% all'attacco in %s2_TerrOrFeat</Italian>
+		<Italian>[ICON_BULLET]Attacco su una casella con [COLOR_HIGHLIGHT_TEXT]%s2_TerrOrFeat %D1_Change%%[COLOR_REVERT]</Italian> <!-- Subcombat type Canines -->
 		<Spanish>[ICON_BULLET]%D1_Change%% a ataque a %s2:2_TerrOrFeat</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28222,6 +28222,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]At peace with humanoid NPC's.</English>
 		<French>[ICON_BULLET]En paix avec les PNJ humanoides.</French>
 		<Russian>[ICON_BULLET]В мире с гуманоидными отрядами.</Russian>
+		<Italian>[ICON_BULLET]L'unità non è ostile verso gli [COLOR_HIGHLIGHT_TEXT]NPC umanoidi[COLOR_REVERT]</Italian> <!-- unit Bandit Footpad -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_BLEND_INTO_CITY</Tag>
@@ -28229,6 +28230,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<French>[ICON_BULLET]Entre dans les Villes de manière pacifique.</French>
 		<German>[ICON_BULLET]kann beliebige Städte ohne Angriff betreten</German>
 		<Russian>[ICON_BULLET]Входит мирно во все города.</Russian>
+		<Italian>[ICON_BULLET]Può [COLOR_HIGHLIGHT_TEXT]entrare pacificamente[COLOR_REVERT] in tutte le città</Italian> <!-- unit Exile -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_BOMBARD_RATE_SHORT</Tag>
@@ -28243,7 +28245,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]Can[SPACE]</English>
 		<French>[ICON_BULLET]Peut[SPACE]</French>
 		<German>[ICON_BULLET]Kann[SPACE]</German>
-		<Italian>[ICON_BULLET]Può[SPACE]</Italian>
+		<Italian>[ICON_BULLET]Può effettuare l'azione </Italian> <!-- unit Workboat (Prehistoric) -->
 		<Spanish>[ICON_BULLET]Puede[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28251,7 +28253,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]Cannot Enter</English>
 		<French>[ICON_BULLET]Ne peut entrer dans :</French>
 		<German>[ICON_BULLET]Keine Fortbewegung auf</German>
-		<Italian>[ICON_BULLET]Non può entrare nell'</Italian>
+		<Italian>[ICON_BULLET]Non può [COLOR_HIGHLIGHT_TEXT]passare[COLOR_REVERT] nelle caselle di tipo</Italian> <!-- unit Canoe -->
 		<Spanish>[ICON_BULLET]No puede entrar en</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28259,7 +28261,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]Can Construct[SPACE]</English>
 		<French>[ICON_BULLET]Peut construire :[SPACE]</French>
 		<German>[ICON_BULLET]Ermöglicht Bau von:[SPACE]</German>
-		<Italian>[ICON_BULLET]Permette la costruzione di:[SPACE]</Italian>
+		<Italian>[ICON_BULLET]Permette la costruzione di:[SPACE]</Italian> <!-- unit Storyteller -->
 		<Spanish>[ICON_BULLET]Puede erigir[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28283,7 +28285,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]Can Move through Impassable Terrain</English>
 		<French>[ICON_BULLET]Peut se déplacer sur des terrains infranchissables.</French>
 		<German>[ICON_BULLET]Kann sich durch unpassierbares Gelände bewegen</German>
-		<Italian>[ICON_BULLET]Può attraversare il terreno invalicabile</Italian>
+		<Italian>[ICON_BULLET]L'unità può attraversare il [COLOR_HIGHLIGHT_TEXT]terreno invalicabile[COLOR_REVERT]</Italian> <!-- unit Workboat (modern) -->
 		<Spanish>[ICON_BULLET]Puede moverse por terreno infranqueable</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28307,7 +28309,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]%D1_Change%% City Attack</English>
 		<French>[ICON_BULLET]Attaque de ville %D1_Change%%</French>
 		<German>[ICON_BULLET]%D1_Change%% Stadtangriff</German>
-		<Italian>[ICON_BULLET]%D1_Change%% quando si attacca una città</Italian>
+		<Italian>[ICON_BULLET]Attacco alle città [COLOR_HIGHLIGHT_TEXT]%D1_Change%%[COLOR_REVERT]</Italian> <!-- unit Ambusher -->
 		<Spanish>[ICON_BULLET]%D1_Change%% al atacar ciudades</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28315,7 +28317,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]%D1_Change%% City Defense</English>
 		<French>[ICON_BULLET]Défense de ville %D1_Change%%</French>
 		<German>[ICON_BULLET]%D1_Change%% Stadtverteidigung</German>
-		<Italian>[ICON_BULLET]%D1_Change%% di difesa della città</Italian>
+		<Italian>[ICON_BULLET]Difesa delle città [COLOR_HIGHLIGHT_TEXT]%D1_Change%%[COLOR_REVERT]</Italian> <!-- unit Stone Thrower -->
 		<Spanish>[ICON_BULLET]%D1_Change%% al defender ciudades</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28323,7 +28325,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]%D1_Change%% City Strength</English>
 		<French>[ICON_BULLET]Puissance de la ville %D1_Change%%</French>
 		<German>[ICON_BULLET]%D1_Change%% Stadtstärke</German>
-		<Italian>[ICON_BULLET]%D1_Change%% alla forza della città</Italian>
+		<Italian>[ICON_BULLET]Aumenta la forza della città del [COLOR_HIGHLIGHT_TEXT]%D1_Change%%[COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change%% a la fuerza de la ciudad</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28339,7 +28341,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]Maximum %d1%% damage to enemy on attack</English>
 		<French>[ICON_BULLET]Dégâts de %d1%% maximum infligés à l'ennemi lors d'une attaque</French>
 		<German>[ICON_BULLET]Maximal %d1%% Angriffsschaden auf Gegner</German>
-		<Italian>[ICON_BULLET]Al massimo %d1%% di danni al nemico per attacco</Italian>
+		<Italian>[ICON_BULLET]Massimo di [COLOR_HIGHLIGHT_TEXT]danni infliggibili[COLOR_REVERT] al nemico per attacco [COLOR_HIGHLIGHT_TEXT]%d1%%[COLOR_REVERT]</Italian> <!-- unit Log Ram with Realistic Siege -->
 		<Spanish>[ICON_BULLET]Daño máximo de %d1%% al enemigo en ataque</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28347,7 +28349,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]Defends first against %s1_unit_list</English>
 		<French>[ICON_BULLET]Défend d'abord contre %s1_unit_list</French>
 		<German>[ICON_BULLET]verteidigt im Kampf vorrangig gegen: %s1_unit_list</German>
-		<Italian>[ICON_BULLET]Difende primariamente contro %s1_unit_list</Italian>
+		<Italian>[ICON_BULLET]Il suo primo compito è la [COLOR_HIGHLIGHT_TEXT]difesa[COLOR_REVERT] contro le unità di tipo %s1_unit_list</Italian> <!-- unit Enforcers -->
 		<Spanish>[ICON_BULLET]Defiende primero contra %s1_unit_list</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28355,7 +28357,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]%D1_Change%% %s2_TerrOrFeat Defense</English>
 		<French>[ICON_BULLET]%D1_Change%% en défense sur des cases de %s2_TerrOrFeat</French>
 		<German>[ICON_BULLET]%D1_Change%% Verteidigung für %s2_TerrOrFeat</German>
-		<Italian>[ICON_BULLET]%D1_Change%% di difesa nella %s2:2_TerrOrFeat</Italian>
+		<Italian>[ICON_BULLET]Difesa su una casella con [COLOR_HIGHLIGHT_TEXT]%s2_TerrOrFeat %D1_Change%%[COLOR_REVERT]</Italian>  <!-- Subcombat type Traders -->
 		<Spanish>[ICON_BULLET]%D1_Change%% a defender %s2:2_TerrOrFeat</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28371,7 +28373,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]Can Explore Rival Territory</English>
 		<French>[ICON_BULLET]Peut explorer le territoire ennemi</French>
 		<German>[ICON_BULLET]Kann gegnerisches Territorium erkunden</German>
-		<Italian>[ICON_BULLET]Può esplorare il territorio rivale</Italian>
+		<Italian>[ICON_BULLET]Può [COLOR_HIGHLIGHT_TEXT]esplorare[COLOR_REVERT] il territorio rivale</Italian> <!-- unit Storyteller -->
 		<Spanish>[ICON_BULLET]Puede explorar el territorio enemigo</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28394,7 +28396,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNITHELP_FOUND_CITY</Tag>
 		<English>[ICON_BULLET]Can Found a [LINK=CONCEPT_CITIES]New City[\LINK]</English>
 		<French>[ICON_BULLET]Peut fonder une [LINK=CONCEPT_CITIES]nouvelle ville[\LINK]</French>
-		<German>[ICON_BULLET]Kann eine [LINK=CONCEPT_CITIES]neue Stadt[\LINK] gründen</German>
+		<German>[ICON_BULLET]kann eine [LINK=CONCEPT_CITIES]neue Stadt[\LINK] gründen</German>
 		<Italian>[ICON_BULLET]Può fondare una [LINK=CONCEPT_CITIES]nuova città[\LINK]</Italian>
 		<Spanish>[ICON_BULLET]Puede fundar una [LINK=CONCEPT_CITIES]nueva ciudad[\LINK]</Spanish>
 	</TEXT>
@@ -28419,7 +28421,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]Hidden Nationality</English>
 		<French>[ICON_BULLET]Nationalité cachée</French>
 		<German>[ICON_BULLET]versteckte Nationalität</German>
-		<Italian>[ICON_BULLET]Nazionalità nascosta</Italian>
+		<Italian>[ICON_BULLET]La nazionalità di questa unità è [COLOR_HIGHLIGHT_TEXT]nascosta[COLOR_REVERT]</Italian> <!-- unit Ambusher -->
 		<Spanish>[ICON_BULLET]Nacionalidad oculta</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28427,7 +28429,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]%D1_Change%% Hills Attack</English>
 		<French>[ICON_BULLET]Attaque sur des collines %D1_Change%%</French>
 		<German>[ICON_BULLET]%D1_Change%% Angriff auf Hügeln</German>
-		<Italian>[ICON_BULLET]%D1_Change%% all'attacco in collina</Italian>
+		<Italian>[ICON_BULLET]Attacco sulle caselle [COLOR_HIGHLIGHT_TEXT]collina %D1_Change%%[COLOR_REVERT]</Italian> <!-- Subcombat type Canines -->
 		<Spanish>[ICON_BULLET]%D1_Change%% a atacar colinas</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28435,7 +28437,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]%D1_Change%% Hills Defense</English>
 		<French>[ICON_BULLET]Défense des collines %D1_Change%%</French>
 		<German>[ICON_BULLET]%D1_Change%% Hügel-Verteidigung</German>
-		<Italian>[ICON_BULLET]%D1_Change%% di difesa in collina</Italian>
+		<Italian>[ICON_BULLET]Difesa sulle caselle [COLOR_HIGHLIGHT_TEXT]collina %D1_Change%%[COLOR_REVERT]</Italian> <!-- unit Stone Thrower -->
 		<Spanish>[ICON_BULLET]%D1_Change%% a defender colinas</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28459,7 +28461,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]Ignores Terrain Movement Costs</English>
 		<French>[ICON_BULLET]Ignore les pénalités de mouvement du terrain</French>
 		<German>[ICON_BULLET]ignoriert Fortbewegungskosten auf Gelände</German>
-		<Italian>[ICON_BULLET]Ignora i costi di attraversamento del terreno</Italian>
+		<Italian>[ICON_BULLET]Ignora i [COLOR_HIGHLIGHT_TEXT]costi di attraversamento[COLOR_REVERT] del terreno</Italian> <!-- unit Ambusher -->
 		<Spanish>[ICON_BULLET]No le afectan los costes de movimiento por terreno</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28467,7 +28469,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]Can Improve Tiles</English>
 		<French>[ICON_BULLET]Peut aménager les cases</French>
 		<German>[ICON_BULLET]Kann Geländefelder modernisieren</German>
-		<Italian>[ICON_BULLET]Può migliorare le caselle</Italian>
+		<Italian>[ICON_BULLET]L'unità può costruire i [COLOR_HIGHLIGHT_TEXT]miglioramenti[COLOR_REVERT] sulle caselle</Italian> <!-- unit Entranced Workers -->
 		<Spanish>[ICON_BULLET]Puede mejorar casillas</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28475,7 +28477,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Each Unit in Play Increases Base Cost by %d1%%</English>
 		<French>Chaque unité en jeu augmente le coût de base de %d1%%</French>
 		<German>Für jede Einheit im Spiel steigen die Basiskosten um %d1%%</German>
-		<Italian>Ogni unità in gioco aumenta il costo base di %d1%%</Italian>
+		<Italian>[ICON_BULLET]Aumento del costo base per ogni unità di questo tipo in gioco [COLOR_HIGHLIGHT_TEXT]%d1%%[COLOR_REVERT]</Italian> <!-- unit Mapinguari (Obsidian Spearmen) -->
 		<Spanish>Cada unidad en juego aumenta el coste base en un %d1%%</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28483,7 +28485,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]Invisible to All Units</English>
 		<French>[ICON_BULLET]Invisible pour toutes les unités</French>
 		<German>[ICON_BULLET]Für alle Einheiten unsichtbar</German>
-		<Italian>[ICON_BULLET]Invisibile a tutte le unità</Italian>
+		<Italian>[ICON_BULLET]Unità [COLOR_HIGHLIGHT_TEXT]invisibile[COLOR_REVERT] a tutti</Italian>  <!-- Subcombat type Idea -->
 		<Spanish>[ICON_BULLET]Invisible para todas las unidades</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28491,7 +28493,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]Invisible to Most Units</English>
 		<French>[ICON_BULLET]Invisible pour la plupart des unités</French>
 		<German>[ICON_BULLET]für die meisten Einheiten unsichtbar</German>
-		<Italian>[ICON_BULLET]Invisibile alla maggior parte delle unità</Italian>
+		<Italian>[ICON_BULLET]L'unità è [COLOR_HIGHLIGHT_TEXT]invisibile[COLOR_REVERT] per la maggior parte delle altre unità</Italian> <!-- unit Ambusher -->
 		<Spanish>[ICON_BULLET]Invisible para la mayoría de las unidades</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28499,7 +28501,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]Can Provide %d1_Num Experience to Units in the Same Tile</English>
 		<French>[ICON_BULLET]Peut octroyer %d1_Num expérience aux unités dans la même case</French>
 		<German>[ICON_BULLET]Kann %d1_Num Erfahrungspunkte auf Einheiten auf demselben Geländefeld übertragen</German>
-		<Italian>[ICON_BULLET]Può dare %d1_Num di esperienza alle unità presenti nella stessa casella</Italian>
+		<Italian>[ICON_BULLET]L'unità può fornire [COLOR_HIGHLIGHT_TEXT]%d1_Num punti di esperienza[COLOR_REVERT] alle unità nella stessa casella</Italian> <!-- unit Noble -->
 		<Spanish>[ICON_BULLET]Puede dar un total de %d1_Num de experiencia a las unidades en la misma casilla</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28523,7 +28525,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]National Unit (%d1_Num Allowed)</English>
 		<French>[ICON_BULLET]Unité nationale (limite : %d1_Num)</French>
 		<German>[ICON_BULLET]Nationale Einheit (%d1_Num zulässig)</German>
-		<Italian>[ICON_BULLET]Unità nazionale (%d1_Num [NUM1:permessa:permesse])</Italian>
+		<Italian>[ICON_BULLET]Unità nazionale (numero massimo permesso [COLOR_HIGHLIGHT_TEXT]%d1_Num[COLOR_REVERT])</Italian> <!-- unit Ambusher -->
 		<Spanish>[ICON_BULLET]Unidad nacional (%d1_Num [NUM1:permitida:permitidas])</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28539,7 +28541,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]Doesn't Receive Defensive Bonuses</English>
 		<French>[ICON_BULLET]Ne bénéficie d'aucun bonus de défense</French>
 		<German>[ICON_BULLET]Erhält keine Verteidigungsboni</German>
-		<Italian>[ICON_BULLET]Non riceve bonus difensivi</Italian>
+		<Italian>[ICON_BULLET]Non riceve [COLOR_HIGHLIGHT_TEXT]nessun bonus difensivo[COLOR_REVERT]</Italian> <!-- unit trained dogs -->
 		<Spanish>[ICON_BULLET]No recibe bonificaciones defensivas</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28565,7 +28567,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]Can Only Defend</English>
 		<French>[ICON_BULLET]Ne peut que se défendre</French>
 		<German>[ICON_BULLET]kann nur verteidigen</German>
-		<Italian>[ICON_BULLET]Può solo difendere</Italian>
+		<Italian>[ICON_BULLET]L'unità può solo [COLOR_HIGHLIGHT_TEXT]difendersi[COLOR_REVERT]</Italian> <!-- unit Pack Lllama -->
 		<Spanish>[ICON_BULLET]Sólo puede defender</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28812,11 +28814,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNIT_HELLSMOUTH_DOG</Tag>
 		<English>Hell's Mouth Dog</English>
 		<French>Chien Gueule de l'enfer</French>
-		<Italian>
-			<Text>Cane dell'Inferno</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Cane infernale</Italian>
 		<Polish>Pies z Bram Piekieł</Polish>
 		<Russian>Àäñêàÿ ïàñòü</Russian>
 	</TEXT>
@@ -28836,11 +28834,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Inquisitore:Inquisitori</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Inquisitore</Italian>
 		<Spanish>
 			<Text>Inquisidor</Text>
 			<Gender>Male</Gender>
@@ -28908,6 +28902,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<French>Poing de Loki</French>
 		<Polish>Pięść Lokiego</Polish>
 		<Russian>Âîèí Ëîêè</Russian>
+		<Italian>Guerriero di Loki</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MESO_MISSIONARY</Tag>
@@ -28978,11 +28973,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Shamanistic Missionary</English>
 		<French>Missionnaire Shamaniste</French>
 		<German>Schamanistischer Missionar</German>
-		<Italian>
-			<Text>Missionario sciamanistico</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Missionario sciamanico</Italian>
 		<Polish>Szaman</Polish>
 		<Russian>Øàì. æðåö</Russian>
 	</TEXT>
@@ -29044,7 +29035,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Entranced Worker</English>
 		<French>Ouvrier en trance</French>
 		<Italian>
-			<Text>Lavoratore in trance</Text>
+			<Text>Lavoratore zombi</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
@@ -29107,6 +29098,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<French>[ICON_BULLET]Peut être amélioré presque partout.</French>
 		<German>[ICON_BULLET]kann nahezu überall modernisiert werden</German>
 		<Russian>[ICON_BULLET]Можно улучшить практически где угодно.</Russian>
+		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]modernizzarsi[COLOR_REVERT] quasi ovunque</Italian> <!-- unit Thief -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UPKEEP_EXTREME</Tag>
@@ -30685,7 +30677,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	<TEXT>
 		<Tag>TXT_TB_UNIT_VIEW_3</Tag>
 		<English>Press SHIFT to view Combat Classes</English>
-		<Italian>[ICON_BULLET]Premi SHIFT per vedere le classi di combattimento</Italian>
+		<Italian>[ICON_BULLET]Premi SHIFT per vedere i sottotipi di combattimento</Italian>
 		<French>Utiliser SHIFT pour voir les Classes de combat</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]&lt;UMSCHALT&gt;[COLOR_REVERT] für Anzeige der Kategorien</German>
 		<Polish>Naciśnij SHIFT aby zobaczyć Klasy Bojowe</Polish>

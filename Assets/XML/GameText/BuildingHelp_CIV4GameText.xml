@@ -1223,7 +1223,7 @@
 		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_RIVER</Tag>
 		<English>[COLOR_WARNING_TEXT]Requires River Access[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Requiert un accès à une rivière[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Benötigt Flusszugang[COLOR_REVERT]</German>
+		<German>[COLOR_WARNING_TEXT][ICON_BULLET]benötigt Flusszugang[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Richiede[COLOR_REVERT] accesso a un fiume</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Requiere acceso a un río[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_WARNING_TEXT]Wymaga dostępu do rzeki[COLOR_REVERT]</Polish>
@@ -1233,7 +1233,7 @@
 		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_RIVER_OR_COAST</Tag>
 		<English>[COLOR_WARNING_TEXT]Requires River or Coastal Access[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Requiert un accès à une Rivière ou une zone côtière[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Benötigt Fluss- oder Küstenzugang[COLOR_REVERT]</German>
+		<German>[COLOR_WARNING_TEXT][ICON_BULLET]benötigt Fluss- oder Küstenzugang[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Richiede[COLOR_REVERT] accesso a un fiume o alla costa</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Requiere acceso a un río o a una costa[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_WARNING_TEXT]Wymaga dostępu do rzeki lub wybrzeża[COLOR_REVERT]</Polish>
