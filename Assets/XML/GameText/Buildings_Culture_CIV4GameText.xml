@@ -3629,6 +3629,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_NEANDERTHAL_HELP</Tag>
 		<English>[COLOR_WARNING_TEXT]WARNING:[COLOR_REVERT] This world wonder gives you Neanderthal units, but you can't build criminal units in Prehistoric era</English>
+		<German>[COLOR_WARNING_TEXT]ACHTUNG![COLOR_REVERT] Dieses Weltwunder ermöglicht die Ausbildung von Neandertaler-Einheiten, verhindert aber gleichzeitig die Ausbildung von Straftätern in der gesamten Vorgeschichte.</German>
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Attenzione:[COLOR_REVERT] Questa meraviglia mondiale conferisce  le unità Neanderthal, ma non sarà possibile addestrare [COLOR_WARNING_TEXT]Unità criminali[COLOR_REVERT] durante l'Era preistorica</Italian>
 	</TEXT>
 	<TEXT>
