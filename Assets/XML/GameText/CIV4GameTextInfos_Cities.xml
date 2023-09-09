@@ -11,7 +11,7 @@
 		<French>Aix-la-Chapelle</French>
 		<Italian>Aquisgrana</Italian>
 		<Spanish>Aquisgrán</Spanish>
-		<Russian>Ààõåí</Russian>
+		<Russian>Аахен</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AAKO</Tag>
@@ -22,12 +22,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AALBORG</Tag>
 		<English>Aalborg</English>
-		<Russian>Îëüáîðã</Russian>
+		<Russian>Ольборг</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AANG_THONG</Tag>
 		<English>Aang Thong</English>
-		<Russian>Àíãòõîíã</Russian>
+		<Russian>Ангтхонг</Russian>
 		<Italian>Ang Thong</Italian>
 	</TEXT>
 	<TEXT>
@@ -101,6 +101,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ACIGOL</Tag>
 		<English>Acigol</English>
+		<Russian>Аджыгёль</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ACOMA</Tag>
@@ -142,10 +143,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ADDI_GALAMO</Tag>
 		<English>Addi Galamo</English>
+		<Russian>Адди Галамо</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ADELAIDE</Tag>
 		<English>Adelaide</English>
+		<Russian>Аделаида</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ADEN</Tag>
@@ -155,15 +158,17 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ADI_UGRI</Tag>
 		<English>Adi Ugri</English>
+		<Russian>Адди-Угри</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ADJOUQUAY</Tag>
 		<English>Adjouquay</English>
+		<Russian>Ажуке</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ADRAMYTTIUM</Tag>
 		<English>Adramyttium</English>
-		<Russian>Àäðàìèòòèé</Russian>
+		<Russian>Адрамиттий</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ADRIA</Tag>
@@ -8090,14 +8095,17 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NORO</Tag>
 		<English>Noro</English>
+		<Russian>Норо</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NORSHUNTEPE</Tag>
 		<English>Norshuntepe</English>
+		<Russian>Норшунтепе</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NORTHAM</Tag>
 		<English>Northam</English>
+		<Russian>Нортам</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NORWICH</Tag>
@@ -8112,12 +8120,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NOUMEA</Tag>
 		<English>Noumea</English>
-		<Russian>Íîóìåà</Russian>
+		<Russian>Ноумеа</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NOVA_JUSTINIANA</Tag>
 		<English>Nova Justiniana</English>
-		<Russian>Äîðîñòîë</Russian>
+		<Russian>Доростол</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NOVGOROD</Tag>
