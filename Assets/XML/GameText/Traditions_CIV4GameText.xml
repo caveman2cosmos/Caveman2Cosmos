@@ -6,7 +6,7 @@
 		<French>Tradition - Archerie</French>
 		<German>Tradition - Bogenschießen</German>
 		<Italian>Tradizione del tiro con l'arco</Italian>
-		<Russian>Òðàäèöèè ëó÷íèêîâ</Russian>
+		<Russian>Традиция - Лучники</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EFFECT_TRADITION_ARCHERY</Tag>
@@ -14,7 +14,7 @@
 		<French>Effect (Tradition - Archerie)</French>
 		<German>Effekt (Tradition - Bogenschießen)</German>
 		<Italian>Effetto della tradizione del tiro con l'arco</Italian>
-		<Russian>Øêîëà ëó÷íèêîâ</Russian>
+		<Russian>Эффект - Традиция - Лучники</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EFFECT_TRADITION_ARCHERY_PEDIA</Tag>
@@ -22,7 +22,7 @@
 		<French>Les Archers sont améliorés.</French>
 		<German>Bogenschützen sind verbessert.</German>
 		<Italian>Le unità arciere sono state migliorate.</Italian>
-		<Russian>Улучшены лучники.</Russian>
+		<Russian>Лучники улучшены.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRADITION_ARCHERY_PEDIA</Tag>
@@ -30,7 +30,7 @@
 		<French>L'Archerie est encouragée dans votre nation.</French>
 		<German>Bogenschießen wird im Land gefördert.</German>
 		<Italian>Il tiro con l'arco è incoraggiato nella tua nazione.</Italian>
-		<Russian>В вашей стране поощряется стрельба из лука.</Russian>
+		<Russian>Стрельба из лука поощряется в вашей стране.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRADITION_AESTHETIC_APPRECIATION</Tag>
@@ -38,7 +38,7 @@
 		<French>Tradition (Appréciation esthétique)</French>
 		<German>Tradition - Ästhetische Würdigung</German>
 		<Italian>Tradizione dell'apprezzamento estetico</Italian>
-		<Russian>Ýñòåòè÷åñêèå òðàäèöèè</Russian>
+		<Russian>Традиция - Эстетическая Оценка</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EFFECT_TRADITION_AESTHETIC_APPRECIATION</Tag>
@@ -46,14 +46,14 @@
 		<French>Effet - Tradition (Appréciation esthétique)</French>
 		<German>Effekt - Tradition - Ästhetische Würdigung</German>
 		<Italian>Effetto della tradizione sull'apprezzamento estetico</Italian>
-		<Russian>Ýñòåòè÷åñêîå âîñïèòàíèå</Russian>
+		<Russian>Эффект - Традиция - Эстетическая Оценка</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRADITION_AESTHETIC_APPRECIATION_PEDIA</Tag>
 		<English>Aesthetic appreciation is commonly referred to as the appreciation of beauty and excellence, defined by Peterson and Seligman as the ability to find, recognize, and take pleasure in goodness in the physical and social worlds.</English>
 		<German>Ästhetische Würdigung ist die allgemeine Wertschätzung von Schönheit und Perfektion. Peterson und Seligman definieren sie als Fähigkeit, Ästhetik zu finden, zu erkennen und sich an ihr zu erfreuen, sowohl im physischen wie im sozialen Umfeld.</German>
 		<Italian>L'apprezzamento estetico è comunemente indicato come l'apprezzamento della bellezza e dell'eccellenza, definito da Peterson e Seligman come la capacità di trovare, riconoscere e trarre piacere dalla bellezza nel mondo fisico e sociale.</Italian>
-		<Russian>Эстетическое воспитание обычно упоминается как оценка красоты и совершенства, определяемая Петерсоном и Селигманом как способность находить, распознавать и получать удовольствие от добра в физическом и социальном мирах.</Russian>
+		<Russian>Эстетическая оценка обычно называется оценкой красоты и совершенства, определяемой Петерсоном и Селигманом как способность находить, распознавать и получать удовольствие от добра в физическом и социальном мирах.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRADITION_WORK_ETHIC</Tag>
@@ -61,7 +61,7 @@
 		<French>Tradition - Éthique du Travail</French>
 		<German>Tradition - Arbeitsmoral</German>
 		<Italian>Tradizione dell'etica del lavoro</Italian>
-		<Russian>Òðóäîâûå òðàäèöèè</Russian>
+		<Russian>Традиция - Трудовая Этика</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EFFECT_TRADITION_WORK_ETHIC</Tag>
@@ -69,7 +69,7 @@
 		<French>Effet (Tradition - Éthique du Travail)</French>
 		<German>Effekt - Tradition - Arbeitsmoral</German>
 		<Italian>Effetto della tradizione dell'etica del lavoro</Italian>
-		<Russian>Òðóäîâîå âîñïèòàíèå</Russian>
+		<Russian>Эффект - Традиция - Трудовая Этика</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRADITION_WORK_ETHIC_PEDIA</Tag>
@@ -77,7 +77,7 @@
 		<French>L'Éthique du travail est une valeur basée sur la diligence et le labeur.</French>
 		<German>Arbeitsmoral basiert auf Fleiß und harter Arbeit.</German>
 		<Italian>L'etica del lavoro è un valore basato sul duro lavoro e sulla diligenza.</Italian>
-		<Russian>Трудовая этика - это ценность, основанная на тяжелом труде и прилежании.</Russian>
+		<Russian>Трудовая этика - ценность, основанная на тяжелом труде и прилежании.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ARCHER_TRADITION</Tag>
@@ -85,7 +85,7 @@
 		<French>Tradition des Archers</French>
 		<German>Tradition des Bogenschießens</German>
 		<Italian>Tiro con l'arco tradizionale</Italian>
-		<Russian>Îïûòíûé ëó÷íèê</Russian>
+		<Russian>Опытный лучник</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TRADITION_ASTHETIC_APPRECIATION</Tag>
@@ -93,7 +93,7 @@
 		<French>Appréciation esthétique</French>
 		<German>Ästhetische Würdigung</German>
 		<Italian>Apprezzamento estetico</Italian>
-		<Russian>Ýñòåòèçì</Russian>
+		<Russian>Эстетическая Оценка</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TRADITION_WORK_ETHIC</Tag>
@@ -101,6 +101,6 @@
 		<French>Éthique du Travail</French>
 		<German>Arbeitsmoral</German>
 		<Italian>Etica del lavoro</Italian>
-		<Russian>Òðóäîâàÿ ýòèêà</Russian>
+		<Russian>Трудовая Этика</Russian>
 	</TEXT>
 </Civ4GameText>
