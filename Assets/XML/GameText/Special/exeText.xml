@@ -33,6 +33,7 @@
 		<Tag>CHANGED_TXT_KEY_MAIN_MENU_WARLORS</Tag>
 		<English>Space maps</English>
 		<Italian>Mappe dello spazio</Italian>
+		<Russian>Космические карты</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_BUDDY_LIST_PLAYING_LOC</Tag>
@@ -41,6 +42,7 @@
 		<German>Spielt: "%s1_GameName"</German>
 		<Italian>Partita in corso: "%s1_GameName"</Italian>
 		<Spanish>Jugando a la partida: "%s1_GameName"</Spanish>
+		<Russian>Сейчас играет: "%s1_GameName"</Russian>
 	</TEXT>
 		<TEXT>
 		<Tag>TXT_BUDDY_LIST_STAGING_LOC</Tag>
@@ -49,6 +51,7 @@
 		<German>Im Staging Room: "%s1_GameName"</German>
 		<Italian>Nella stanza di comunicazione: "%s1_GameName"</Italian>
 		<Spanish>En la sala de comunicaciones: "%s1_GameName"</Spanish>
+		<Russian>В комнате: "%s1_GameName"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_LOAD</Tag>
@@ -57,6 +60,7 @@
 		<German>Laden</German>
 		<Italian>Carica</Italian>
 		<Spanish>Embarcar</Spanish>
+		<Russian>Загрузить</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_LOAD_GAME</Tag>
@@ -65,6 +69,7 @@
 		<German>Spiel laden</German>
 		<Italian>Carica partita</Italian>
 		<Spanish>Cargar partida</Spanish>
+		<Russian>Загрузить игру</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_SAVE</Tag>
@@ -73,6 +78,7 @@
 		<German>Speichern</German>
 		<Italian>Salva</Italian>
 		<Spanish>Guardar</Spanish>
+		<Russian>Сохранить</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ADDED_BUDDY_IMAGE_TEXT</Tag>
@@ -81,6 +87,7 @@
 		<German>FREUNDESANFRAGE</German>
 		<Italian>RICHIESTA D'AMICIZIA</Italian>
 		<Spanish>SOLICITUD DE AMIGO</Spanish>
+		<Russian>ЗАПРОС В ДРУЗЬЯ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ADDED_BUDDY_PROMPT</Tag>
@@ -89,6 +96,7 @@
 		<German>Wollen Sie zur Freundesliste von [COLOR_SELECTED_TEXT]%s1_BuddyName[COLOR_SELECTED_TEXT] hinzugefügt werden?</German>
 		<Italian>Vuoi che %s1_BuddyName ti aggiunga alla sua lista amici?</Italian>
 		<Spanish>¿Quieres que se te agregue a la lista de amigos de %s1_BuddyName?</Spanish>
+		<Russian>Хотите ли вы быть в списке друзей %s1_BuddyName's?</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ADDED_BUDDY_TITLE</Tag>
@@ -97,6 +105,7 @@
 		<German>Freundesanfrage</German>
 		<Italian>Richiesta d'amicizia</Italian>
 		<Spanish>Solicitud de amigo</Spanish>
+		<Russian>Запрос в друзья</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ADDRESS_REQUIRED_DESC</Tag>
@@ -105,6 +114,7 @@
 		<German>Es ist eine gültige Internetadresse erforderlich.</German>
 		<Italian>È necessario un indirizzo Internet valido.</Italian>
 		<Spanish>Se necesita una dirección válida de Internet.</Spanish>
+		<Russian>Требуется действующий интернет-адрес.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ADDRESS_REQUIRED_TITLE</Tag>
@@ -113,6 +123,7 @@
 		<German>Fehlende Adresse</German>
 		<Italian>Indirizzo mancante</Italian>
 		<Spanish>Falta dirección</Spanish>
+		<Russian>Адрес отсутствует</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ADD_BUDDY_HELP_TEXT</Tag>
@@ -121,6 +132,7 @@
 		<German>Nach dem Hinzufügen einer Person zu Ihrer Freundesliste können Sie sofort Nachrichten an sie versenden.</German>
 		<Italian>Quando aggiungi una persona alla lista amici, puoi inviargli messaggi personali diretti.</Italian>
 		<Spanish>Cuando agregas a alguien a la lista de amigos, puedes enviarle mensajes directos.</Spanish>
+		<Russian>Отправлять пользователю прямые сообщения можно после добавления его в список друзей.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ADD_BUDDY_IMAGE_TEXT</Tag>
@@ -129,6 +141,7 @@
 		<German>NEUEN FREUND HINZUFÜGEN</German>
 		<Italian>AGGIUNGI UN NUOVO AMICO</Italian>
 		<Spanish>AGREGAR NUEVO AMIGO</Spanish>
+		<Russian>ДОБАВИТЬ НОВОГО ДРУГА</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ADD_BUDDY_NAME_TITLE</Tag>
@@ -137,6 +150,7 @@
 		<German>Einen Freund hinzufügen</German>
 		<Italian>Aggiungi un amico</Italian>
 		<Spanish>Agregar a un amigo</Spanish>
+		<Russian>Добавить друга</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ADD_BUDDY_REQ_TITLE</Tag>
@@ -145,6 +159,7 @@
 		<German>FREUNDESANFRAGE</German>
 		<Italian>RICHIESTA D'AMICIZIA</Italian>
 		<Spanish>SOLICITUD DE AMIGO</Spanish>
+		<Russian>ЗАПРОС В ДРУЗЬЯ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ADD_BUDDY_TAG</Tag>
@@ -153,6 +168,7 @@
 		<German>Freund hinzufügen</German>
 		<Italian>Aggiungi amico</Italian>
 		<Spanish>Agregar amigo</Spanish>
+		<Russian>Добавить друга</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ADD_MEMBER_AS_BUDDYHELP</Tag>
@@ -161,6 +177,7 @@
 		<German>Wenn Sie direkt mit anderen Mitgliedern chatten wollen, müssen Sie diese in Ihre Freundesliste aufnehmen. Wollen Sie [COLOR_SELECTED_TEXT]%s1_Name[COLOR_REVERT] zu Ihrer Freundesliste hinzufügen?</German>
 		<Italian>Per chattare direttamente con qualcuno, prima devi aggiungerlo alla tua lista amici. Vuoi aggiungere %s1_Name alla tua lista?</Italian>
 		<Spanish>Para charlar directamente con un miembro, primero debes agregarlo a tu lista de amigos. ¿Quieres agregar a %s1_Name como amigo?</Spanish>
+		<Russian>Чтобы напрямую общаться с пользователем %s1_Name, сперва необходимо добавить его в список друзей. Сделаете это сейчас?</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ADVANCED_START_POINTS</Tag>
@@ -169,6 +186,7 @@
 		<German>Basispunkte für Fortgeschrittenen Start:</German>
 		<Italian>Punti base per l'avvio avanzato:</Italian>
 		<Spanish>Puntos base del Inicio avanzado:</Spanish>
+		<Russian>Базовые очки для настраиваемого старта:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ADVANCED_START_POINTS_HELP</Tag>
@@ -177,6 +195,7 @@
 		<German>Gold, das Sie am Anfang erhalten, um Städte, Einheiten und Modernisierungen zu kaufen.</German>
 		<Italian>L'oro che ricevi a inizio gioco per acquistare città, unità e miglioramenti.</Italian>
 		<Spanish>El oro que recibes al inicio para comprar ciudades, unidades y mejoras.</Spanish>
+		<Russian>Золото, получаемое в начале игры для покупки городов, единиц и улучшений.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ALREADY_BUDDY_DESC</Tag>
@@ -185,6 +204,7 @@
 		<German>Sie haben versucht, einen Freund hinzuzufügen, der bereits existiert.</German>
 		<Italian>Hai provato ad aggiungere un amico esistente.</Italian>
 		<Spanish>Se ha intentado agregar a un amigo ya existente.</Spanish>
+		<Russian>Вы попытались добавить пользователя, уже являющегося вашим другом.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ALREADY_BUDDY_TITLE</Tag>
@@ -193,6 +213,7 @@
 		<German>Freund existiert bereits</German>
 		<Italian>È già presente nella lista amici</Italian>
 		<Spanish>Ya es amigo</Spanish>
+		<Russian>Это уже ваш друг</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOSAVING</Tag>
@@ -201,6 +222,7 @@
 		<German>Automatisches Speichern ...</German>
 		<Italian>Salvataggio automatico...</Italian>
 		<Spanish>Guardado automático...</Spanish>
+		<Russian>Автосохранение...</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BAD_LOGIN_DESC</Tag>
@@ -209,6 +231,7 @@
 		<German>Der angegebene Benutzername ist ungültig.</German>
 		<Italian>L'username inserito non è valido.</Italian>
 		<Spanish>El nombre de usuario introducido no es válido.</Spanish>
+		<Russian>Введённое имя пользователя недействительно.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BAD_LOGIN_TITLE</Tag>
@@ -217,6 +240,7 @@
 		<German>Benutzername nicht gefunden</German>
 		<Italian>Username non trovato</Italian>
 		<Spanish>No se ha encontrado nombre de usuario</Spanish>
+		<Russian>Пользователь не найден</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BAD_NEW_PASSWORD_DESC</Tag>
@@ -225,6 +249,7 @@
 		<German>Das Passwort für die angegebene E-Mail-Adresse ist nicht korrekt.</German>
 		<Italian>La password per l'indirizzo e-mail fornito è incorretta.</Italian>
 		<Spanish>La contraseña para la dirección de e-mail proporcionada no es correcta.</Spanish>
+		<Russian>Пароль неверен для указанной электронной почты.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BAD_NEW_PASSWORD_TITLE</Tag>
@@ -233,6 +258,7 @@
 		<German>Falsches Passwort</German>
 		<Italian>Password incorretta</Italian>
 		<Spanish>Contraseña errónea</Spanish>
+		<Russian>Неприемлемый пароль</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BAD_PASSWORD_DESC</Tag>
@@ -241,6 +267,7 @@
 		<German>Das angegebene Kennwort ist falsch.</German>
 		<Italian>La password inserita è sbagliata.</Italian>
 		<Spanish>La contraseña introducida es incorrecta.</Spanish>
+		<Russian>Вы ввели неверный пароль</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BAD_PASSWORD_TITLE</Tag>
@@ -249,6 +276,7 @@
 		<German>Falsches Kennwort</German>
 		<Italian>Password sbagliata</Italian>
 		<Spanish>Contraseña incorrecta</Spanish>
+		<Russian>Неправильный пароль</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BELOW_MIN_SPECS_MESSAGE</Tag>
@@ -257,6 +285,7 @@
 		<German>Ihr Computer erfüllt nicht die Mindestanforderungen. Civ4 wird mit diesem Hardware-Setup nicht laufen.</German>
 		<Italian>Il tuo computer non raggiunge i requisiti minimi. Civ4 non può funzionare su questa configurazione hardware.</Italian>
 		<Spanish>El ordenador no cumple los requisitos mínimos. Civilization 4 no puede funcionar con esta configuración de hardware.</Spanish>
+		<Russian>Характеристики вашего компьютера ниже минимальных. "Цивилизация 4" не будет работать на данном оборудовании.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUDDYLIST_EMPTY_NAME_DESC</Tag>
@@ -265,6 +294,7 @@
 		<German>Sie müssen einen Freund-Namen angeben.</German>
 		<Italian>Devi inserire il nome di un amico.</Italian>
 		<Spanish>Hay que facilitar un nombre de amigo.</Spanish>
+		<Russian>Вы должны указать имя друга.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUDDYLIST_EMPTY_NAME_TITLE</Tag>
@@ -273,6 +303,7 @@
 		<German>Freund-Name erforderlich</German>
 		<Italian>Nome amico necessario</Italian>
 		<Spanish>Se requiere nombre de amigo</Spanish>
+		<Russian>Требуется имя друга</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUDDYLIST_MULTIPLE_PROFILES_DESC</Tag>
@@ -281,6 +312,7 @@
 		<German>Es wurden mehrere übereinstimmende Profile gefunden. Geben Sie bitte weitere Suchkriterien an.</German>
 		<Italian>Trovati multipli profili corrispondenti. Affina il tuo criterio di ricerca.</Italian>
 		<Spanish>Se han encontrado varios perfiles que coinciden. Hay que reducir los criterios de búsqueda.</Spanish>
+		<Russian>Обнаружены несколько подходящих профилей. Пожалуйста, уточните критерии поиска.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUDDYLIST_MULTIPLE_PROFILES_TITLE</Tag>
@@ -289,6 +321,7 @@
 		<German>Mehrfache Übereinstimmungen gefunden</German>
 		<Italian>Trovate corrispondenze multiple</Italian>
 		<Spanish>Halladas varias coincidencias</Spanish>
+		<Russian>Найдено множество совпадений</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUDDYLIST_NO_PROFILE_DESC</Tag>
@@ -297,6 +330,7 @@
 		<German>Es wurden keine Freundesprofile gefunden.</German>
 		<Italian>Nessun profilo amico trovato.</Italian>
 		<Spanish>No se ha encontrado ningún perfil de amigo que coincida.</Spanish>
+		<Russian>Подходящий профиль друга не обнаружен.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUDDYLIST_NO_PROFILE_TITLE</Tag>
@@ -305,6 +339,7 @@
 		<German>Kein Freund gefunden</German>
 		<Italian>Nessun amico trovato</Italian>
 		<Spanish>Amigo no encontrado</Spanish>
+		<Russian>Друг не найден</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUDDYLIST_SERVER_ERROR_DESC</Tag>
@@ -313,6 +348,7 @@
 		<German>Auf dem Freundeslisten-Server ist ein Fehler aufgetreten.</German>
 		<Italian>Errore sul server della lista amici.</Italian>
 		<Spanish>Se ha producido un error en la lista de amigos del servidor.</Spanish>
+		<Russian>На сервере списка друзей произошла ошибка.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUDDYLIST_SERVER_ERROR_TITLE</Tag>
@@ -321,6 +357,7 @@
 		<German>Serverfehler</German>
 		<Italian>Errore del server</Italian>
 		<Spanish>Error del servidor</Spanish>
+		<Russian>Ошибка сервера</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUDDY_LIST_STATUS_LOBBY</Tag>
@@ -329,6 +366,7 @@
 		<German>Lobby</German>
 		<Italian>Sala d'attesa</Italian>
 		<Spanish>Sala</Spanish>
+		<Russian>Лобби</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUDDY_LIST_STATUS_NA</Tag>
@@ -337,6 +375,7 @@
 		<German>Nicht verfügbar</German>
 		<Italian>Non disponibile</Italian>
 		<Spanish>No disponible</Spanish>
+		<Russian>Недоступен</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUDDY_LIST_STATUS_OFFLINE</Tag>
@@ -345,6 +384,7 @@
 		<German>Offline</German>
 		<Italian>Offline</Italian>
 		<Spanish>Desconectado</Spanish>
+		<Russian>Офлайн</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUDDY_LIST_STATUS_PLAYING</Tag>
@@ -353,6 +393,7 @@
 		<German>Spielt</German>
 		<Italian>In gioco</Italian>
 		<Spanish>Jugando</Spanish>
+		<Russian>В игре</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUDDY_LIST_STATUS_STAGING</Tag>
@@ -361,6 +402,7 @@
 		<German>Staging</German>
 		<Italian>In sala d'attesa</Italian>
 		<Spanish>En comunicaciones</Spanish>
+		<Russian>В ожидании</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUDDY_NAME_TAG</Tag>
@@ -369,6 +411,7 @@
 		<German>Freund-Name: </German>
 		<Italian>Nome amico:</Italian>
 		<Spanish>Nombre de amigo: </Spanish>
+		<Russian>Имя друга: </Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUDDY_REQUEST_FAILED_DESC</Tag>
@@ -377,6 +420,7 @@
 		<German>Die Freundesanfrage konnte nicht gesendet werden.</German>
 		<Italian>La richiesta d'amicizia non è stata inviata.</Italian>
 		<Spanish>No se ha podido enviar la solicitud de amigo.</Spanish>
+		<Russian>Запрос в друзья не может быть отправлен.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUDDY_REQUEST_FAILED_TITLE</Tag>
@@ -385,6 +429,7 @@
 		<German>Freundesanfrage fehlgeschlagen</German>
 		<Italian>Richiesta d'amicizia fallita</Italian>
 		<Spanish>Fallo en la solicitud de amigo</Spanish>
+		<Russian>Запрос в друзья не удался</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUDDY_ROOT_NAME</Tag>
@@ -393,6 +438,7 @@
 		<German>Freunde</German>
 		<Italian>Amici</Italian>
 		<Spanish>Amigos</Spanish>
+		<Russian>Друзья</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CHAT_LOG</Tag>
@@ -401,6 +447,7 @@
 		<German>Chat-Log</German>
 		<Italian>Registro chat</Italian>
 		<Spanish>Historial del chat</Spanish>
+		<Russian>Журнал чата</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_ELIM_TAG</Tag>
@@ -409,6 +456,7 @@
 		<German>Limit Stadt-Eliminierung:</German>
 		<Italian>Limite eliminazione città:</Italian>
 		<Spanish>Límite de eliminación de ciudades:</Spanish>
+		<Russian>Лимит уничтожения города:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_RESPONSE_TAKEN_DESC</Tag>
@@ -417,6 +465,7 @@
 		<German>Diese Zivilisation ist bereits vergeben.</German>
 		<Italian>Questa civiltà è già stata scelta.</Italian>
 		<Spanish>Alguien ha escogido ya esta civilización.</Spanish>
+		<Russian>Данная цивилизация уже занята.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_RESPONSE_TAKEN_TITLE</Tag>
@@ -425,6 +474,7 @@
 		<German>Wählen Sie Ihre Zivilisation</German>
 		<Italian>Scegli la tua civiltà</Italian>
 		<Spanish>Elige una civilización</Spanish>
+		<Russian>Выберите цивилизацию</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_SELECT_RANDOM_CIV</Tag>
@@ -433,6 +483,7 @@
 		<German>Zivilisation und Staatsoberhaupt werden zufällig ausgewählt.</German>
 		<Italian>Leader e civiltà verranno scelti casualmente.</Italian>
 		<Spanish>La civilización y el líder se elegirán al azar.</Spanish>
+		<Russian>Цивилизация и предводитель будут выбраны случайно.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_SELECT_RANDOM_LEADER</Tag>
@@ -441,6 +492,7 @@
 		<German>Das Staatsoberhaupt wird zufällig ausgewählt.</German>
 		<Italian>Il leader verrà scelto casualmente.</Italian>
 		<Spanish>El líder se elegirá al azar.</Spanish>
+		<Russian>Предводитель будет выбран случайно.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_MESSAGE_LOG</Tag>
@@ -449,6 +501,7 @@
 		<German>Kampf-Log</German>
 		<Italian>Registro combattimenti</Italian>
 		<Spanish>Historial del combate</Spanish>
+		<Russian>Журнал сражений</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMPRESS_FAILED</Tag>
@@ -457,6 +510,7 @@
 		<German>Die Spieldaten konnten nicht komprimiert werden</German>
 		<Italian>Impossibile comprimere i dati di gioco</Italian>
 		<Spanish>No se han podido comprimir los datos del juego.</Spanish>
+		<Russian>Не удалось сжать данные игры</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONNECT_ALREADY_CONNECTED_DESC</Tag>
@@ -465,6 +519,7 @@
 		<German>Es besteht bereits eine Verbindung zu diesem Host.</German>
 		<Italian>Siamo già connessi a questo host.</Italian>
 		<Spanish>Ya existe una conexión con el anfitrión.</Spanish>
+		<Russian>Мы уже подключены к данному хосту.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONNECT_ALREADY_CONNECTED_TITLE</Tag>
