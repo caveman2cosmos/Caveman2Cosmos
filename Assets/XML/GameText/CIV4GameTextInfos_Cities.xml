@@ -4614,6 +4614,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HILO</Tag>
 		<English>Hilo</English>
+		<Russian>Хило</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HIPPO</Tag>
@@ -4643,11 +4644,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HIT</Tag>
 		<English>Hit</English>
-		<Russian>Õèò</Russian>
+		<Russian>Хит</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HITCHITI</Tag>
 		<English>Hitchiti</English>
+		<Russian>Хитчити</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HITTITE</Tag>
@@ -4659,7 +4661,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HLATIKULU</Tag>
 		<English>Hlatikulu</English>
-		<Russian>Õëàòèêóëó</Russian>
+		<Russian>Хлатикулу</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HLOBANE</Tag>
@@ -4669,16 +4671,17 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HLUHLUWE</Tag>
 		<English>Hluhluwe</English>
-		<Russian>Õëóõëóâå</Russian>
+		<Russian>Хлухлуве</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HLYMREKR</Tag>
 		<English>Hlymrekr</English>
+		<Russian>Лимерик</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HOBART</Tag>
 		<English>Hobart</English>
-		<Russian>Õîáàðò</Russian>
+		<Russian>Хобарт</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HOD_HASHRON</Tag>
@@ -4688,6 +4691,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HOI_CHAN</Tag>
 		<English>Hoi Chan</English>
+		<Russian>Хой Чан</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HOLETA</Tag>
