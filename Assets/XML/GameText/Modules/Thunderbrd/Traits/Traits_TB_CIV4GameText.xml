@@ -1308,14 +1308,14 @@ Penalties:
 		<English>Anti-Clerical CT</English>
 		<French>Anti-Clérical</French>
 		<Russian>Àíòèêëåðèêàë</Russian>
-		<Italian>Antilclericale</Italian>
+		<Italian>Anticlericale</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ANTI_CLERICAL1</Tag>
 		<English>Anti-Clerical I</English>
 		<French>Anti-Clérical I</French>
 		<Russian>Àíòèêëåðèêàë I</Russian>
-		<Italian>Antilclericale I</Italian>
+		<Italian>Anticlericale I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ANTI_CLERICAL1_PEDIA</Tag>
@@ -1351,7 +1351,7 @@ Benefits:
 		<English>Anti-Clerical II</English>
 		<French>Anti-Clérical II</French>
 		<Russian>Àíòèêëåðèêàë II</Russian>
-		<Italian>Antilclericale II</Italian>
+		<Italian>Anticlericale II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ANTI_CLERICAL2_PEDIA</Tag>
@@ -1387,7 +1387,7 @@ Benefits:
 		<English>Anti-Clerical III</English>
 		<French>Anti-Clérical III</French>
 		<Russian>Àíòèêëåðèêàë III</Russian>
-		<Italian>Antilclericale III</Italian>
+		<Italian>Anticlericale III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ANTI_CLERICAL3_PEDIA</Tag>
@@ -9578,6 +9578,7 @@ Benefits:
 		<Tag>TXT_KEY_TRAIT_MEDICAL</Tag>
 		<English>Medical CT</English>
 		<French>Médical</French>
+		<German>Medizinisch CT</German>
 		<Russian>Ìåäèê</Russian>
 		<Italian>Medico</Italian>
 	</TEXT>
@@ -9585,6 +9586,7 @@ Benefits:
 		<Tag>TXT_KEY_TRAIT_MEDICAL1</Tag>
 		<English>Medical I</English>
 		<French>Médical I</French>
+		<German>Medizinisch I</German>
 		<Russian>Ìåäèê I</Russian>
 		<Italian>Medico I</Italian>
 	</TEXT>
@@ -9641,6 +9643,7 @@ Penalties:
 		<Tag>TXT_KEY_TRAIT_MEDICAL2</Tag>
 		<English>Medical II</English>
 		<French>Médical II</French>
+		<German>Medizinisch II</German>
 		<Russian>Ìåäèê II</Russian>
 		<Italian>Medico II</Italian>
 	</TEXT>
@@ -9699,6 +9702,7 @@ Penalties:
 		<Tag>TXT_KEY_TRAIT_MEDICAL3</Tag>
 		<English>Medical III</English>
 		<French>Médical III</French>
+		<German>Medizinisch III</German>
 		<Russian>Ìåäèê III</Russian>
 		<Italian>Medico III</Italian>
 	</TEXT>
@@ -14172,6 +14176,7 @@ Benefits:
 		<Tag>TXT_KEY_TRAIT_UNSANITARY</Tag>
 		<English>Unsanitary CT</English>
 		<French>Malsain</French>
+		<German>Ungesund CT</German>
 		<Russian>Íåðÿõà</Russian>
 		<Italian>Malsano</Italian>
 	</TEXT>
@@ -14179,6 +14184,7 @@ Benefits:
 		<Tag>TXT_KEY_TRAIT_UNSANITARY1</Tag>
 		<English>Unsanitary I</English>
 		<French>Malsain I</French>
+		<German>Ungesund I</German>
 		<Russian>Íåðÿõà I</Russian>
 		<Italian>Malsano I</Italian>
 	</TEXT>
@@ -14213,6 +14219,7 @@ Benefits:
 		<Tag>TXT_KEY_TRAIT_UNSANITARY2</Tag>
 		<English>Unsanitary II</English>
 		<French>Malsain II</French>
+		<German>Ungesund II</German>
 		<Russian>Íåðÿõà II</Russian>
 		<Italian>Malsano II</Italian>
 	</TEXT>
@@ -14248,6 +14255,7 @@ Benefits:
 		<Tag>TXT_KEY_TRAIT_UNSANITARY3</Tag>
 		<English>Unsanitary III</English>
 		<French>Malsain III</French>
+		<German>Ungesund III</German>
 		<Russian>Íåðÿõà III</Russian>
 		<Italian>Malsano III</Italian>
 	</TEXT>

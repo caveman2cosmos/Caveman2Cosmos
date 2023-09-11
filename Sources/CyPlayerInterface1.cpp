@@ -17,7 +17,6 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 	x
 		.def("changeLeader", &CyPlayer::changeLeader, "void (int /*LeaderHeadTypes*/ eNewLeader) - change leader of player")
 		.def("changeCiv", &CyPlayer::changeCiv, "void (int /*CivilizationTypes*/ eNewCiv) - change civilization of player")
-		.def("setIsHuman", &CyPlayer::setIsHuman, "void (bool bNewValue) - set whether player is human")
 		.def("setIsRebel", &CyPlayer::setIsRebel, "void (bool bNewValue) - set whether the player is considered a rebel")
 		.def("isRebel", &CyPlayer::isRebel, "bool () - true if player is a rebel")
 

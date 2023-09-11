@@ -30,7 +30,7 @@
 		<English>%s1_city welcomes the new immigrants with open arms.</English>
 		<French>%s1_city accueille les nouveaux immigrants à bras ouverts.</French>
 		<Russian>%s1_city приветствует новых иммигрантов с распростертыми объятиями.</Russian>
-		<Italian>La città di %s1_city accoglie i nuovi immigati a braccia aperte.</Italian>
+		<Italian>La città di %s1_city accoglie i nuovi immigrati a braccia aperte.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_INDUSTRYESPIONAGE</Tag>
@@ -84,7 +84,7 @@
 		<French>Les [COLOR_UNIT_TEXT]Lignes de Nazca[COLOR_SELECTED_TEXT] se sont développées![COLOR_REVERT]</French>
 		<Polish>[COLOR_UNIT_TEXT]Rysunki z Nazca[COLOR_SELECTED_TEXT] powiekszyly sie![COLOR_REVERT]</Polish>
 		<Russian>[COLOR_UNIT_TEXT]Геоглифы Наски[COLOR_SELECTED_TEXT] добавили нам очередной бонус![COLOR_REVERT]</Russian>
-		<Italian>[COLOR_UNIT_TEXT]Le linned di Nazca[COLOR_SELECTED_TEXT] si sono sviluppate![COLOR_REVERT]</Italian>
+		<Italian>[COLOR_UNIT_TEXT]Le linee di Nazca[COLOR_SELECTED_TEXT] si sono sviluppate![COLOR_REVERT]</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_SNEAK</Tag>

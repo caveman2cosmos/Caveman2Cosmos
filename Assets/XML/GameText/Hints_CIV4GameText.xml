@@ -321,7 +321,7 @@
 		<Tag>TXT_KEY_C2C_HINT_13</Tag>
 		<English>C2C: There are many types of towers and walls in C2C. Each upgrade to a more advanced version as you progress through the tech tree.</English>
 		<French>C2C: Il existe plusieurs types de tours et de murs défensifs dans C2C. Chaque type est une version plus avancée, à mesure que vous progressez à travers l'arbre technologique.</French>
-		<Italian>C2C: Ci sono molti tipi di torri e mura in C2C. Ongi miglioramento è una versione sempre più avanzata, procedendo lungo l'albero delle tecnologie.</Italian>
+		<Italian>C2C: Ci sono molti tipi di torri e mura in C2C. Ogni miglioramento è una versione sempre più avanzata, procedendo lungo l'albero delle tecnologie.</Italian>
 		<Spanish>C2C: Existen muchos tipos de torretas y murallas en C2C. Cada uno de ellos mejora a versiones más avanzadas según progresas en el árbol de tecnologías.</Spanish>
 		<Polish>C2C: W C2C znajdziemy wiele typów murów czy strażnic. Każda ulepszana wraz z wynajdowaniem nowych technologii.</Polish>
 		<Russian>C2C: Â ìîäå Ñ2Ñ ñóùåñòâóåò ìíîæåñòâî âèäîâ áàøåí è ñòåí. Êàæäîå îáíîâëåíèå äî áîëåå ïðîäâèíóòîé âåðñèè ìîæíî ïðîñìîòðåòü ÷åðåç äåðåâî òåõíîëîãèé.</Russian>
@@ -2742,7 +2742,7 @@
 		<Tag>TXT_KEY_ROM_HINT_13</Tag>
 		<English>Caveman2Cosmos: Naval units from the Industrial era start to require Steel resource. Build Steel Mills to produce Steel from Coal and Iron. If you don't have access to those resources, build Ironworks national wonder. It gives Steel without those other resources.</English>
 		<French>Caveman2Cosmos: Il vous faudra de l'Acier pour construire Les Unités Navales à partir de l'Ere industrielle. Construisez des Aciéries pour en produire à partir du charbon et du fer. Si vous ne possédez pas ces ressources, Construisez L'Usine sidérurgique (projet National) qui vous permettra d'obtenir de l'acier sans conditions.</French>
-		<Italian>Caveman2Cosmos: Le unità navali dell'era industriale richiedono la risorsa Acciaio. Costruisci le Acciaierie per produrre Acciaio, partendo da Ferro e Carbone. Se no hai accesso a queste risorse, costruisci la Meravoglia Nazionale Ferriera. Produce Acciaio senza il bisogno di queste risorse.</Italian>
+		<Italian>Caveman2Cosmos: Le unità navali dell'era industriale richiedono la risorsa Acciaio. Costruisci le Acciaierie per produrre Acciaio, partendo da Ferro e Carbone. Se no hai accesso a queste risorse, costruisci la meraviglia nazionale Ferriera. Produce Acciaio senza il bisogno di queste risorse.</Italian>
 		<Spanish>Caveman2Cosmos: Las unidades navales comienzan a requerir el recurso del Acero a partir de la Época industrial. Construye Acerías para producir Acero a partir del Carbón y el Hierro. Si no tienes acceso a estos recursos, construye la maravilla nacional de la Metalurgia. Proporciona Acero sin necesidad de estos otros recursos.</Spanish>
 		<Polish>Caveman2Cosmos: Jednostki morskie z ery Przemysłowej wymagają teraz Stali. Zbuduj Hutę Stali, aby produkować Stal z Węgla i Żelaza. Jeśli nie masz dostępu do tych zasobów, zbuduj Hutę Żelaza. Daje ona dostęp do Stali bez wymaganych zasobów.</Polish>
 		<Russian>Caveman2Cosmos: военные корабли Промышленной эпохи начинают требовать ресурс стали. Стройте сталелитейные заводы для производства стали из угля и железа. Если у вас нет доступа к этим ресурсам, постройте Национальное чудо Обработка железа. Он даст вам сталь без этих базовых ресурсов.</Russian>
@@ -2770,7 +2770,7 @@
 		<Tag>TXT_KEY_ROM_HINT_16</Tag>
 		<English>Caveman2Cosmos: Game start year has been set to 200 000 BC.[NEWLINE]All game speeds have more turns than in normal BtS game.</English>
 		<French>Caveman2Cosmos: L'année de Démarrage du Jeu est de 200 000 av. J-C. Il y a donc plus de tours que dans le jeu normal, quelle que soit la vitesse de jeu.</French>
-		<Italian>Caveman2Cosmos: Il gioco inizia nel 200 000 a.C; tutte le velocità di gioco hanno più turni rispetto al normale BtS.</Italian>
+		<Italian>Caveman2Cosmos: Il gioco inizia nel 200 000 a.C.e tutte le velocità di gioco hanno più turni rispetto al normale BtS.</Italian>
 		<Spanish>Caveman2Cosmos: Se ha establecido el año de comienzo de la partida en el 200 000 a.C. Todas las velocidades de juego duran más turnos que en una partida estándar de Beyond the Sword.</Spanish>
 		<Polish>Caveman2Cosmos: Gra rozpoczyna się teraz w roku 200 000 P.N.E. Wszystkie szybkości gry mają teraz większą liczbę tur niż w normalnej grze BtS.</Polish>
 		<Russian>Caveman2Cosmos: Äàòà íà÷àëà èãðû óñòàíîâëåíà íà 50000 ãîä äî í.ý. Âñå ñêîðîñòè èãðû èìåþò áîëüøåå êîëè÷åñòâî õîäîâ, ÷åì â îáû÷íîé èãðå BtS.</Russian>
@@ -2900,7 +2900,7 @@
 		<Tag>TXT_KEY_ROM_HINT_3</Tag>
 		<English>Caveman2Cosmos: Civics have new categories and new options have been added to original categories. All civics have been changed with new effects.</English>
 		<French>Caveman2Cosmos: Les Doctrines sont réparties avec nouvelles catégories et de nouvelles options et combinaisons ont été ajoutées. Tous les effets des doctrines ont été modifiés.</French>
-		<Italian>Caveman2Cosmos: Le forme di governo hanno nuove categorie, ognuna con nuove opzioni. Tutte le forme di governo sono satte cambiate, fornendo nuovi bonus e malus.</Italian>
+		<Italian>Caveman2Cosmos: Le forme di governo hanno nuove categorie, ognuna con nuove opzioni. Tutte le forme di governo sono state cambiate, fornendo nuovi bonus e malus.</Italian>
 		<Spanish>Caveman2Cosmos: Hay nuevas categorías de principios, y se han añadido nuevas opciones a las categorías originales. Todos los principios han sufrido cambios en sus efectos.</Spanish>
 		<Polish>Caveman2Cosmos: Doktryny mają 2 nowe kategorie, a do poprzednich zostały dodane nowe opcje. Wszystkie doktryny zostały zmienione i posiadają nowe efekty.</Polish>
 		<Russian>Caveman2Cosmos: Òåïåðü Ïàðàäèãìû èìåþò íîâûå êàòåãîðèè è íîâûå âîçìîæíîñòè â ñðàâíåíèè ñ èçíà÷àëüíûìè êàòåãîðèÿìè. Âñå Ïàðàäèãìû áûëè èçìåíåíû ñ äîáàâëåíèåì íîâûõ ýôôåêòîâ.</Russian>

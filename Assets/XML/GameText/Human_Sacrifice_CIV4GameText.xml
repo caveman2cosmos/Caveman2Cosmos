@@ -20,11 +20,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>
-			<Text>Altare per sacrifici umani</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Altare per sacrifici umani</Italian>
 		<Polish>Ołtarz Ofiar z ludzi</Polish>
 		<Russian>Æåðòâåííûé àëòàðü</Russian>
 	</TEXT>

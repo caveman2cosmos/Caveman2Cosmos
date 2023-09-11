@@ -82,7 +82,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_ROUTES_HELP</Tag>
 		<English>Requires more technology than the minimum normal route qualifying techs to construct routes on more difficult terrain/feature plots. Intended to give a more realistic feel to tougher terrains throughout the game.</English>
-		<Italian>Richiede più tecnologia rispetto alle normlai tecnologie minime per i percorsi da costruire su terreni o caratteristiche più difficili. Pensato per dare una sensazione più realistica ai terreni più difficili in gioco.</Italian>
+		<Italian>Richiede più tecnologia rispetto alle normali tecnologie minime per i percorsi da costruire su terreni o caratteristiche più difficili. Pensato per dare una sensazione più realistica ai terreni più difficili in gioco.</Italian>
 		<Russian>Требуется больше технологий, для создания обычных дорог, а также дополнительные науки, позволяющие прокладывать дороги на сложной пересеченной местности. Основной замысел состоит в том, чтобы дать более реалистичное ощущение передвижения на более сложном рельефе местности на протяжении всей игры.</Russian>
 	</TEXT>
 	<TEXT>
@@ -188,7 +188,7 @@
 		<English>When enabled: New civilizations may emerge from barbarian cities as minor civs. If you play with "Start as Minor Civ" then this option will change the rules for becoming a major civ. Achievements and randomness thereof decides when you become a major civ.</English>
 		<French>Lorsque activé : de nouvelles civilizations peuvent émerger des villes barbares, en tant que Civ mineures. Si vous jouez avec "Civs Mineures au départ", cette option changera les règles pour devenir une civilisation majeure. Les réalisations et leur caractère aléatoire décident quand vous devenez une civilisation majeure.</French>
 		<Russian>С подключением этой опции, варварские города со временем могут образовать новые малые цивилизации. Если вы играете с опцией «Начать за малую цивилизацию», то это изменит правила перехода в основную цивилизацию. Достижения и их случайность определяет, когда вы сделаетесь главной цивилизацией.</Russian>
-		<Italian>Se abilitata nuove civiltà possono emergere dalle città barbariche come civiltà minori. Se giochi con l'opzione "inizia come civiltà minore" attiva, questa opzione cambierà le regole per diventare una civiltà maggiore. I risultati ragginuti e il caso decideranno quando diventerai una civiltà principale.</Italian>
+		<Italian>Se abilitata nuove civiltà possono emergere dalle città barbariche come civiltà minori. Se giochi con l'opzione "inizia come civiltà minore" attiva, questa opzione cambierà le regole per diventare una civiltà maggiore. I risultati raggiunti e il caso decideranno quando diventerai una civiltà principale.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_BARBARIAN_WORLD</Tag>
@@ -448,7 +448,7 @@
 		<Tag>TXT_KEY_GAMEOPTION_CULTURE_FIXED_BORDERS</Tag>
 		<English>Culture - Fixed borders</English>
 		<French>Frontières fixes</French>
-		<German>Festen Grenzen</German>
+		<German>Feste Grenzen</German>
 		<Italian>Confini fissi</Italian>
 		<Spanish>Fronteras fijables</Spanish>
 		<Polish>Stałych Granic</Polish>
@@ -518,7 +518,7 @@
 		<German>Diese Mod ermöglicht das Zurückdrängen und Niederwerfen von Einheiten, bietet aber im Gegenzug auch Effekte und Fähigkeiten, die Einheiten Standhaftigkeit verleihen. Eventuell wird auch ein Moral-System integriert.</German>
 		<Polish>Pozwala na Odpieranie, Odrzucanie i Ustępowanie w ogniu walki. Docelowo będzie zawierać system Morale.</Polish>
 		<Russian>Включает способности и эффекты Отражения, Оглушения и Стойкости, а также систему боевого духа отрядов.</Russian>
-		<Italian>Introudce le abilità respingimento, contraccolpo e inflessibile e i loro effetti. Includerà un sistema morale.</Italian>
+		<Italian>Introduce le abilità respingimento, contraccolpo e inflessibile e i loro effetti. Includerà un sistema morale.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_COMBAT_HIDE_SEEK</Tag>
@@ -965,6 +965,7 @@
 		<English>Keeps Win For Losing and Tech Diffusion benefits from being delivered to Human players while continuing to enable them for AI players.</English>
 		<French>Les avantages de la Diffusion des Technologies ne sont pas appliqués aux joueurs humains, tout en continuant à être actifs pour les joueurs IA.</French>
 		<Russian>Отключает правила «Поощрение отстающим» и «Утечка технологий» для живых игроков, продолжая использовать их для игроков ИИ.</Russian>
+		<Italian>Mantiene i vantaggi della ricerca aggiuntiva alle civiltà in svantaggio e della diffusione tecnologica per i giocatori IA ma li disabilita per i giocatori umani.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_TECH_TRADING</Tag>
@@ -1359,7 +1360,7 @@
 		<English>Not recommended.[NEWLINE]All players start as minor civs, meaning they are at war with everyone. Your civ will settle into a full civ and you'll be able to conduct diplomacy after you discover Writing.[NEWLINE]The AI performs badly in such a scenario!!</English>
 		<French>Not recommended.[NEWLINE]Tous les joueurs commencent en tant que civilisations mineures, et sont automatique en guerre contre tous les autres. Votre civilisation sortira de la barbarie et pourra conduire des actions diplomatiques après la découverte de l'écriture.[NEWLINE]The AI performs badly in such a scenario!!</French>
 		<German>Not recommended.[NEWLINE]Alle Spieler befinden sich zu Beginn des Spiels mit allen anderen Zivilisationen im permanenten Kriegszustand. Erst mit der Entdeckung der Schrift wird Diplomatie ermöglicht und die jeweilige Nation steigt zu einer vollwertigen Zivilisation auf.[NEWLINE]The AI performs badly in such a scenario!!</German>
-		<Italian>Non consigliato.NEWLINE]Tutti i giocatori cominciano come civiltà minori, il che significa che sono in guerra con tutti. Diventerà una vera civiltà e sarai in grado di condurre la diplomazia dopo che scoprirai la scrittura.[NEWLINE]L'intelligenza artificiale si comporta male in uno scenario del genere!!</Italian>
+		<Italian>Non consigliato.[NEWLINE]Tutti i giocatori cominciano come civiltà minori, il che significa che sono in guerra con tutti. Diventerà una vera civiltà e sarai in grado di condurre la diplomazia dopo che scoprirai la scrittura.[NEWLINE]L'intelligenza artificiale si comporta male in uno scenario del genere!!</Italian>
 		<Spanish>Not recommended.[NEWLINE]Todos los jugadores empiezan como civilizaciones menores, lo que significa que están en guerra con todos los demás. Tu civilización podrá convertirse en una civilización completa y usar la diplomacia después del descubrimiento de la escritura.[NEWLINE]The AI performs badly in such a scenario!!</Spanish>
 		<Polish>Not recommended.[NEWLINE]Wszyscy gracze rozpoczynają jako podrzędne cywilizacje i są w stanie wojny z pozostałymi. Twoja cywilizacja stanie się główną cywilizacją mogącą zawierać stosunki dyplomatyczne dopiero po odkryciu Pisma.[NEWLINE]The AI performs badly in such a scenario!!</Polish>
 		<Russian>Не рекомендуется.[NEWLINE] Все игроки стартуют как мелкие цивилизации, то есть все воюют со всеми. Ваша цивилизация станет полноценной, и вы сможете вести дипломатию, когда откроете для себя письменность.[NEWLINE] !! ИИ в таких условиях плохо работает!!</Russian>

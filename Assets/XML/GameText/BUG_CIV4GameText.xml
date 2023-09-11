@@ -114,7 +114,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_FINANCIAL_ADVISOR_BUILDING_COUNT_AVERAGE</Tag>
-		<English>(%s1[ICON_GOLD])</English>
+		<English>(%d1 × %s2[ICON_GOLD] = %s3[ICON_GOLD])</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_FINANCIAL_ADVISOR_COMMERCE</Tag>
@@ -3566,7 +3566,7 @@
 		<English>When checked, displays an alert when a civilization's worst enemy changes.</English>
 		<French>Lorsque activé, un avertissement sera affiché quand le pire ennemi d'une civilisation change.</French>
 		<German>Lässt eine Warnung erscheinen, wenn der Erzfeind einer Zivilisation wechselt</German>
-		<Italian>Quando è selezionato, viene visualizzato un avviso quando cambia il perccgio nemico di una Civiltà.</Italian>
+		<Italian>Quando è selezionato, viene visualizzato un avviso quando cambia il peggior nemico di una Civiltà.</Italian>
 		<Spanish>Cuando se activa, muestra una alerta si cambia el peor enemigo de una civilización.</Spanish>
 		<Russian>Êîãäà óñòàíîâëåí, îòîáðàæàåòñÿ ïðåäóïðåæäåíèå êîãäà ó öèâèëèçàöèè èçìåíÿåòñÿ çëåéøèé âðàã.</Russian>
 	</TEXT>
@@ -6408,7 +6408,7 @@
 		<English>Changes Air Interception to be Multiplicitive, making it more useful to have more than one air defender for each city.</English>
 		<French>Modifie l'Interception aérienne et la rend Multiplicative, rendant le fait d'avoir plus d'une unité de défense aérienne dans chaque Ville plus utile.</French>
 		<German>Verbessert das Abfangen feindlicher Flugzeuge dergestalt, dass nun die komplette vorhandene Flugabwehr einbezogen wird. Dadurch lohnt es sich nun wirklich, mehr als eine Flugabwehreinheit pro Stadt zu stationieren.</German>
-		<Italian>Modifica l'intercettazione aerea rendendola moltiplicativa, rendendo più utile avere più di un'unità di difesa aerea per goni città.</Italian>
+		<Italian>Modifica l'intercettazione aerea rendendola moltiplicativa, rendendo più utile avere più di un'unità di difesa aerea per ogni città.</Italian>
 		<Spanish>Convierte la intervención aérea en multiplicativa, haciendo más util el tener más de un defensor aéreo en cada ciudad.</Spanish>
 		<Russian>Èçìåíåíÿåò ìåõàíèçì âîçäóøíîãî ïåðåõâàòà äëÿ çâåíà, äåëàÿ åãî áîëåå ïîëåçíûì, ÷òîáû èìåòü áîëüøå îäíîãî çàùèòíèêà äëÿ êàæäîãî ãîðîäà.</Russian>
 	</TEXT>
@@ -6883,7 +6883,7 @@
 		<English>Zooms the city when the production queue is empty instead of opening a popup (best combined with the minimize popups option). The popup shows limited selection of units and buildings for performance reasons.</English>
 		<French>Affiche automatiquement l'écran de ville lorsqu'il n'y a plus de constructions dans la liste, plutôt que d'afficher l'information sous forme de popup (à combiner avec l'option popus minimisés).</French>
 		<German>Das Spiel wechselt automatisch in den Stadtbildschirm, wenn die Bauliste leer ist, anstatt ein Popup-Fenster einzublenden (funktioniert am besten in Verbindung mit der Option Popups minimieren).</German>
-		<Italian>Zoomma sulla città quando la coda di protezione è vuota invece di aprire un popup (meglio se combinato con l'opzione minimizza popup).</Italian>
+		<Italian>Fai zoom sulla città quando la coda di protezione è vuota invece di aprire un popup (meglio se combinato con l'opzione minimizza popup).</Italian>
 		<Spanish>Pasa a la vista de ciudad cuando la cola de producción está vacía, en lugar de abrir una ventana emergente (mejor resultado con la opción "Minimizar avisos emergentes").</Spanish>
 		<Russian>Åñëè âêëþ÷åíî, òî âìåñòî îòêðûòèÿ âñïëûâàþùåãî îêíà, ïðèáëèæàåò ýêðàí ãîðîäà (ëó÷øå âñåãî ñî÷åòàåòñÿ ñ îïöèåé ìèíèìèçàöèè âñïëûâàþùèõ îêîí).</Russian>
 	</TEXT>
@@ -6910,7 +6910,7 @@
 		<English>Current Color|Black|Blue|Brown|Cyan|Dark Blue|Dark Cyan|Dark Green|Dark Pink|Dark Purple|Dark Red|Dark Yellow|Grey|Green|Orange|Peach|Pink|Purple|Red|White|Yellow|Light Green|Light Blue|Light Yellow|Light Purple|Light Orange|Golden Purple|Dark Grey|Cyan Green|Dark Lemon|Navy Blue|Maroon|Light Brown|Dark Orange|Forest Green|Dark Indigo|Red - Gold|Gold - Black|Green - Black</English>
 		<French>Couleur actuelle|Noir|Bleu|Brun|Cyan|Bleu foncé|Cyan foncé|Vert foncé|Rose foncé|Violet foncé|Rouge foncé|Jaune foncé|Gris|Vert|Orange|Pêche|Rose|Violet|Rouge|Blanc|Jaune|Vert Clair|Bleu Clair|Jaune Clair|Violet Clair|Orange Clair|Pourpre doré|Gris foncé|Bleu-Vert|Citron-Foncé|Bleu Marine|Marron|Brun clair|Orange foncé|Vert Forêt|Indigo foncé|Rouge - Or|Or - Noir|Vert - Noir</French>
 		<German>Aktuelle Farbe|Schwarz|Blau|Braun|Zyan|Dunkelblau|Dunkles Zyan|Dunkelgrün|Dunkelrosa|Dunkelviolett|Dunkelrot|Dunkelgelb|Grau|Grün|Orange|Pfirsich|Rosa|Violett|Rot|Weiß|Gelb|Hellgrün|Hellblau|Hellgelb|Hellviolett|Hellorange|Gold-Violett|Dunkelgrau|Zyangrün|Dunkelzitron|Marineblau|Rotbraun|Hellbraun|Dunkelorange|Blattgrün|Dunkles Indigo|Rot - Gold|Gold - Schwarz|Grün - Schwarz</German>
-		<Italian>Colore corrente|Nero|Blu|Marrone|Ciano|Blu scuro|Ciano scuro|Verde scuro|Rosa scuro|Viola scuro|Rosso scuro|Giallo scuro|Grigio|Verde|Arancione|Pesca|Rosa|Viola|Rosso|Bianco|Giallo|Verde chiaro|Azzurro|Giallo Chiaro|Viola chairo|Arancione chiaro|Viola oro|Grigio Scuro|Verde ciano|Limone scuro|Blu marina|Marrone|Marrone chiaro|Arancione scuro|Verde foresta|Indaco scuro|Rosso-Oro|Oro-Nero|Verde-Nero</Italian>
+		<Italian>Colore corrente|Nero|Blu|Marrone|Ciano|Blu scuro|Ciano scuro|Verde scuro|Rosa scuro|Viola scuro|Rosso scuro|Giallo scuro|Grigio|Verde|Arancione|Pesca|Rosa|Viola|Rosso|Bianco|Giallo|Verde chiaro|Azzurro|Giallo Chiaro|Viola chiaro|Arancione chiaro|Viola oro|Grigio Scuro|Verde ciano|Limone scuro|Blu marina|Marrone|Marrone chiaro|Arancione scuro|Verde foresta|Indaco scuro|Rosso-Oro|Oro-Nero|Verde-Nero</Italian>
 		<Spanish>Color actual|Negro|Azul|Marrón|Turquesa|Azul oscuro|Turquesa oscuro|Verde oscuro|Rosa oscuro|Violeta oscuro|Rojo oscuro|Amarillo oscuro|Gris|Verde|Naranja|Rosado|Rosa|Violeta|Rojo|Blanco|Amarillo|Verde claro|Azul claro|Amarillo claro|Violeta claro|Naranja claro|Violeta dorado|Gris oscuro|Verde azulado|Limón oscuro|Azul marino|Carmesí|Marrón claro|Naranja oscuro|Verde boscoso|Añil oscuro|Rojo-Oro|Oro-Negro|Verde-Negro</Spanish>
 		<Russian>Òåêóùèé Öâåò|×åðíûé|Ñèíèé|Êîðè÷íåâûé|Ãîëóáîé|Òåìíî-Ñèíèé|Òåìíî-Ãîëóáîé|Òåìíî-Çåëåíûé|Òåìíî-Ðîçîâûé|Òåìíî-Ôèîëåòîâûé|Òåìíî-Êðàñíûé|Òåìíî-Æåëòûé|Ñåðûé|Çåëåíûé|Îðàíæåâûé|Ïåðñèê|Ðîçîâûé|Ôèîëåòîâûé|Êðàñíûé|Áåëûé|Æåëòûé|Ñâåòëî-Çåëåíûé|Ñâåòëî-Ãîëóáîé|Ñâåòëî-Æåëòûé|Ñâåòëî-Ôèîëåòîâûé|Ñâåòëî-Îðàíæåâûé|Çîëîòèñòî-Ôèîëåòîâûé|Òåìíî-Ñåðûé|Ñèíå-Çåëåíûé|Òåìíî-Ëèìîííûé|Òåìíî-Ñèíèé|Òåìíî-Áîðäîâûé|Ñâåòëî-Êîðè÷íåâûé|Òåìíî-Îðàíæåâûé|Òåìíî-Çåëåíûé|Òåìíûé Èíäèãî|Êðàñíî - Çîëîòîé|Çîëîòî - ×åðíûé|Çåëåíûé - ×åðíûé</Russian>
 	</TEXT>
@@ -7151,7 +7151,7 @@
 		<English>When enemy ships are attacked, there is a chance that they will be captured instead of being sunk. If the ship that is captured is a transport, there is also a chance gold will be recovered from the enemy ship.</English>
 		<French>Lorsque les bateaux ennemis sont attaqués, il y a une probabilité qu'ils soient capturés plutôt que d'être coulés. Si le navire capturé est un transporteur, Il y a une probabilité qu'un butin en or soit également récupéré.</French>
 		<German>Schiffe sinken nicht automatisch nach einem Kampf. Stattdessen können sie mit etwas Glück gekapert und übernommen werden. Gekaperte Transporter führen außerdem manchmal Gold mit sich, das geplündert werden kann.</German>
-		<Italian>Quando le navi nemiche vengono attaccate, c'è una chance che vengano catturate invece che affondate. Se la nave catturata è un trasporto, c'è una certà probabilità di ricavarne una certa quantità di oro.</Italian>
+		<Italian>Quando le navi nemiche vengono attaccate, c'è una chance che vengano catturate invece che affondate. Se la nave catturata è un trasporto, c'è una probabilità di ricavarne una certa quantità di oro.</Italian>
 		<Spanish>Cuando se derroten barcos enemigos, habrá posibilidades de que sean capturados en vez de hundirse siempre. Si el barco capturado es un transporte, también habrá posibilidades de obtener oro del barco enemigo.</Spanish>
 		<Russian>Êîãäà âðàæåñêèå êîðàáëè àòàêîâàíû, òî åñòü øàíñ, ÷òî îíè áóäóò çàõâà÷åíû âìåñòî òîãî, ÷òîáû áûòü ïîòîïëåííûìè. Åñëè ýòî ñóäíî îêàæåòñÿ òðàíñïîðòîì, ñóùåñòâóåò òàêæå øàíñ íà ïîëó÷åíèå çîëîòà ñ âðàæåñêîãî êîðàáëÿ.</Russian>
 	</TEXT>
@@ -7259,7 +7259,7 @@
 		<English>Determines how civilizations are labeled on the scoreboard.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Leader[COLOR_REVERT] - Name of the leader or player (Victoria or EmperorFool).[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Civilization[COLOR_REVERT] - Name of the civilization (England).[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Description[COLOR_REVERT] - Descriptive name of the civilization (English Empire).</English>
 		<French>Détermine comment les civilisations sont affichées sur le panneau des scores.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Leader[COLOR_REVERT] - Nom du leader ou du Joueur (Victoria or EmperorFool).[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Civilisation[COLOR_REVERT] - Nom de la civilisation (England).[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Description[COLOR_REVERT] - Nome Descriptif de la civilisation (English Empire).</French>
 		<German>Bestimmt den Namen, mit dem Zivilisationen in der Punkteanzeige angezeigt werden:[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Oberhaupt[COLOR_REVERT] - Name des Oberhaupts oder Spielers (Victoria oder EmperorFool)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Zivilisation (Ziv)[COLOR_REVERT] - Name der Zivilisation (England)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Ziv-Beschreibung[COLOR_REVERT] - Beschreibender Name der Zivilisation (Reich der Engländer)</German>
-		<Italian>Determina come le Civiltà vengono identificate nel Pannello del Punteggio.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Leader[COLOR_REVERT] - Nome del leader o giocatore (Victoria o EmperorFool).[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]CCiviltà[COLOR_REVERT] - Nome della civiltà (Inghilterra).[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Descrizione[COLOR_REVERT] - Nome descrittivo della civiltà (Impero Inglese).</Italian>
+		<Italian>Determina come le Civiltà vengono identificate nel Pannello del Punteggio.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Leader[COLOR_REVERT] - Nome del leader o giocatore (Victoria o EmperorFool).[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Civiltà[COLOR_REVERT] - Nome della civiltà (Inghilterra).[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Descrizione[COLOR_REVERT] - Nome descrittivo della civiltà (Impero Inglese).</Italian>
 		<Spanish>Determina cómo son etiquetadas las civilizaciones en el panel de clasificación.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Líder[COLOR_REVERT] - Nombre del líder o jugador (Victoria o EmperorFool).[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Civilización[COLOR_REVERT] - Nombre de la civilización (Inglaterra).[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Descripción[COLOR_REVERT] - Nombre descriptivo de la civilización (Imperio Inglés).</Spanish>
 		<Russian>Îïðåäåëÿåò êàê öèâèëèçàöèè îòìå÷àþòñÿ â òàáëèöå.[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Ëèäåð[COLOR_REVERT] - èìÿ ëèäåðà èëè èãðîêà (Âèêòîðèÿ èëè ÄóðàêÈìïåðàòîð).[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Öèâèëèçàöèÿ[COLOR_REVERT] - Íàçâàíèå öèâèëèçàöèè (Àíãëèÿ).[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Îïèñàíèå[COLOR_REVERT] - îïèñàíèå èìåíè öèâèëèçàöèè (Àíãëèéñêàÿ èìïåðèÿ).</Russian>
 	</TEXT>
@@ -8101,7 +8101,7 @@ uno de s, A, a, p, g, n, o, r (véase archivo de ayuda)</Spanish>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_YEAR_BUILT</Tag>
 		<English>Built in %s1_year</English>
-		<Italian>[ICON_BULLET]Costruizione ultimata nel %s1_year</Italian>
+		<Italian>[ICON_BULLET]Costruzione ultimata nel %s1_year</Italian>
 		<French>Construit en %s1_year</French>
 		<German>existiert seit %s1_year</German>
 		<Spanish>Construido en %s1_year</Spanish>

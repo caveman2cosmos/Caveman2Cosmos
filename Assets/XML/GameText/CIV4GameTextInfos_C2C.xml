@@ -53,7 +53,7 @@
 		<English>[ICON_BULLET]%D1_Change Free [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT]</English>
 		<French>[ICON_BULLET]%D1_Change Donne un [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT] gratuit</French>
 		<German>[ICON_BULLET]%D1_Change freien Spezialisten [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Fornisce gratuitamente lo specialista: %D1_Change [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT]</Italian>
+		<Italian>[ICON_BULLET]Fornisce [COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] [NUM2:specialista:specialisti] di tipo [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT]</Italian> <!-- tech Derivates -->
 		<Spanish>[ICON_BULLET]%D1_Change [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT] gratis</Spanish>
 		<Russian>[ICON_BULLET]%D1_Change бесплатного [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT]</Russian>
 	</TEXT>
@@ -107,7 +107,7 @@
 		<English>[ICON_BULLET]Provides %d1_Num [COLOR_HIGHLIGHT_TEXT][LINK=%s2_BonusType]%s3_BonusName[\LINK][COLOR_REVERT] (%F4_BonusIcon)</English>
 		<French>[ICON_BULLET]Fournit %d1_Num [COLOR_HIGHLIGHT_TEXT][LINK=%s2_BonusType]%s3_BonusName[\LINK][COLOR_REVERT] (%F4_BonusIcon)</French>
 		<German>[ICON_BULLET]stellt das Bonusgut [COLOR_HIGHLIGHT_TEXT][LINK=%s2_BonusType]%s3_BonusName[\LINK][COLOR_REVERT] (%F4_BonusIcon) zur Verfügung (%d1_Num Einheit)</German>
-		<Italian>[ICON_BULLET]Fornisce %d1_Num risorse/a di tipo [COLOR_HIGHLIGHT_TEXT][LINK=%s2_BonusType]%s3_BonusName[\LINK][COLOR_REVERT] %F4_BonusIcon</Italian>
+		<Italian>[ICON_BULLET]Fornisce [COLOR_HIGHLIGHT_TEXT]%d1_Num[COLOR_REVERT] [NUM1:risorsa:risorse] di tipo [COLOR_HIGHLIGHT_TEXT][LINK=%s2_BonusType]%s3_BonusName[\LINK][COLOR_REVERT] %F4_BonusIcon</Italian>
 		<Spanish>[ICON_BULLET]Da %d1_Num de [COLOR_HIGHLIGHT_TEXT][LINK=%s2_BonusType]%s3_BonusName[\LINK][COLOR_REVERT] (%F4_BonusIcon)</Spanish>
 		<Russian>[ICON_BULLET]Дает %d1_Num [COLOR_HIGHLIGHT_TEXT][LINK=%s2_BonusType]%s3_BonusName[\LINK][COLOR_REVERT] (%F4_BonusIcon)</Russian>
 	</TEXT>
@@ -266,7 +266,7 @@
 		<Tag>TXT_KEY_GOODY_SCOUT</Tag>
 		<English>A scout type unit joins your civilization.</English>
 		<German>Im Dorf konntet Ihr ein paar Späher rekrutieren.</German>
-		<Italian>Un'unità di tipo espoloratore si unisce alla tua civiltà</Italian>
+		<Italian>Un'unità di tipo esploratore si unisce alla tua civiltà</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_TECH</Tag>
@@ -298,6 +298,7 @@
 		<Tag>TXT_KEY_GOODY_HUNTER</Tag>
 		<English>A hunter type unit joins your civilization.</English>
 		<German>Im Dorf konntet Ihr ein paar Jäger rekrutieren.</German>
+		<Italian>Un'unità di tipo cacciatore si unisce alla tua civiltà.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_CATEGORY_PREREQUISITE</Tag>
@@ -386,7 +387,7 @@
 		<English>You have pillaged %d1_Num [ICON_GOLD] from the capture of %s2_CityName!!!</English>
 		<French>Vous avez pillé %d1_Num [ICON_GOLD] en capturant %s2_CityName !</French>
 		<German>Ihr habt durch die Eroberung von %s2_CityName %d1_Num [ICON_GOLD] erbeutet!!!</German>
-		<Italian>Hai saccheggiato %d1_Num [ICON_GOLD] dalla conquista della citta di %s2_CityName!!!</Italian>
+		<Italian>Hai saccheggiato %d1_Num [ICON_GOLD] dalla conquista della città di %s2_CityName!!!</Italian>
 		<Spanish>Habéis saqueado %d1_Num [ICON_GOLD] con la captura de %s2_CityName.</Spanish>
 		<Russian>Вы получили %d1_Num [ICON_GOLD] после захвата %s2_CityName!!!</Russian>
 	</TEXT>
@@ -592,7 +593,7 @@
 		<English>[ICON_BULLET]%d1_Num Extra First Strike</English>
 		<French>[ICON_BULLET]%d1_Num première attaque supplémentaire</French>
 		<German>[ICON_BULLET]%d1_Num [NUM1:Extra-Erstschlag:Extra-Erstschläge]</German>
-		<Italian>[ICON_BULLET]%d1 primo colpo agginto</Italian>
+		<Italian>[ICON_BULLET]%d1 primo colpo aggiunto</Italian>
 		<Spanish>[ICON_BULLET]%d1_Num [NUM1:ataque de iniciativa adicional:ataques de iniciativa adicionales]</Spanish>
 		<Russian>[ICON_BULLET]%d1_Num äîï. Ïåðâûé óäàð</Russian>
 	</TEXT>
@@ -746,7 +747,7 @@
 		<English>[ICON_BULLET]First to Discover receives a [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Faire cette découverte avant les autres octroie 1 [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</French>
 		<German>[ICON_BULLET]Der erste Entdecker erhält eine Einheit: [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Il primo che scopre questa tecnologia riceverà un'unità di tipo [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</Italian>
+		<Italian>[ICON_BULLET]Il primo che scopre questa tecnologia riceverà un'unità di tipo [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</Italian> <!--tech Gathering in the Pedia -->
 		<Spanish>[ICON_BULLET]Quien haga primero su descubrimiento recibirá [NUM1:un:una:unos:unas] [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</Spanish>
 		<Polish>[ICON_BULLET]Nagroda za pierwsze odkrycie: [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</Polish>
 		<Russian>[ICON_BULLET]Ïåðâîîòêðûâàòåëþ äîñòàåòñÿ [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</Russian>
@@ -756,7 +757,7 @@
 		<English>[COLOR_WARNING_TEXT]Obsoletes [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Rend la technologie "[LINK=%s1_TechType]%s2_TechName[\LINK]" obsolète[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]Veraltet: [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Rende [COLOR_WARNING_TEXT]obsoleto[COLOR_REVERT]: [LINK=%s1_TechType]%s2_TechName[\LINK]</Italian>
+		<Italian>[ICON_BULLET]Rende [COLOR_WARNING_TEXT]obsoleto[COLOR_REVERT]: [LINK=%s1_TechType]%s2_TechName[\LINK]</Italian> <!--tech Bark Working, Mountaineering -->
 		<Spanish>[COLOR_WARNING_TEXT]Deja [NUM1:obsoleto:obsoleta:obsoletos:obsoletas] [LINK=%s1_TechType]%s2:2_TechName[\LINK][COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_WARNING_TEXT]Przestarzały: [LINK=%s1_TechType]%s2:2_TechName[\LINK][COLOR_REVERT]</Polish>
 		<Russian>[COLOR_WARNING_TEXT]Óñòàðåâàåò: [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</Russian>
@@ -793,7 +794,7 @@
 		<English>[ICON_BULLET]%D1_Change%% Attack vs. [LINK=%s2_ClassType]%s3_Class[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Change%% en attaque contre [LINK=%s2_ClassType]%s3_Class[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Change%% Angriff gegen Einheit [LINK=%s2_ClassType]%s3_Class[\LINK]</German>
-		<Italian>[ICON_BULLET]%D1_Change%% di percentiale di attacco contro [LINK=%s2_ClassType]%s3:2_Class[\LINK]</Italian>
+		<Italian>[ICON_BULLET]%D1_Change%% di percentuale di attacco contro [LINK=%s2_ClassType]%s3:2_Class[\LINK]</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change%% al ataque contra [LINK=%s2_ClassType]%s3:2_Class[\LINK]</Spanish>
 		<Russian>[ICON_BULLET]%D1_Change%% в бою с [LINK=%s2_ClassType]%s3_Class[\LINK]</Russian>
 	</TEXT>
@@ -883,7 +884,7 @@
 		<English>[ICON_BULLET]%D1_Change%% vs. %s2_Type</English>
 		<French>[ICON_BULLET]%D1_Change%% contre : %s2_Type</French>
 		<German>[ICON_BULLET]%D1_Change%% gegen %s2_Type</German>
-		<Italian>[ICON_BULLET]Danno contro le unità di tpo %s2:2_Type %D1_Change%%</Italian>
+		<Italian>[ICON_BULLET]Danno contro le unità di tipo %s2:2_Type %D1_Change%%</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change%% contra %s2:2_Type</Spanish>
 	</TEXT>
 	<TEXT>
@@ -916,7 +917,7 @@
 		<English>[ICON_BULLET]Upgrade time: %d1 [NUM1:Turn:Turns]</English>
 		<German>[ICON_BULLET]Zeit bis zum Upgrade: %d1 [NUM1:Runde:Runden]</German>
 		<Russian>[ICON_BULLET]Время улучшения: %d1 [NUM1:ход:ходов]</Russian>
-		<Italian>[ICON_BULLET]Tempo di promozione: %d1 turno/i</Italian>
+		<Italian>[ICON_BULLET]Tempo di modernizzazione: %d1 [NUM1:turno:turni]</Italian> <!-- Whaling Boats improvement in pedia -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_YIELD_CHANGE_DESCRIP</Tag>

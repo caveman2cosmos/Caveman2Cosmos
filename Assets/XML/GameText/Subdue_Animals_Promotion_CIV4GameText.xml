@@ -5,14 +5,14 @@
 		<English>Shock and Awe - Cacophony</English>
 		<French>Choc et stupeur - Cacophonie</French>
 		<Italian>Shock e stupore - Cacofonia</Italian>
-		<Russian>Øîê è òðåïåò - êàêîôîíèÿ</Russian>
+		<Russian>Шок и трепет - Какофония</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_HAKA</Tag>
 		<English>Shock and Awe - Haka</English>
 		<French>Choc et stupeur - Haka</French>
 		<Italian>Shock e stupore - Haka</Italian>
-		<Russian>Øîê è òðåïåò - Õàêà</Russian>
+		<Russian>Шок и трепет - Хака</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_HUNTING_SIGHT</Tag>
@@ -21,7 +21,7 @@
 		<German>Jägerweitsicht I</German>
 		<Italian>Occhio del cacciatore I</Italian>
 		<Polish>Wzrok Łowcy I</Polish>
-		<Russian>Ïðèöåë I</Russian>
+		<Russian>Прицел I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_HUNTING_SIGHT2</Tag>
@@ -30,13 +30,13 @@
 		<German>Jägerweitsicht II</German>
 		<Italian>Occhio del cacciatore II</Italian>
 		<Polish>Wzrok Łowcy II</Polish>
-		<Russian>Ïðèöåë II</Russian>
+		<Russian>Прицел II</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAR_CRY</Tag>
 		<English>Shock and Awe - War Cry</English>
 		<French>Choc et stupeur - Cri de guerre</French>
 		<Italian>Shock e stupore - Urlo di guerra</Italian>
-		<Russian>Øîê è òðåïåò - Áîåâîé êëè÷</Russian>
+		<Russian>Шок и трепет - Боевой клич</Russian>
 	</TEXT>
 </Civ4GameText>

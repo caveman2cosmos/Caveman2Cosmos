@@ -119,7 +119,7 @@
 		<English>[ICON_BULLET]%D1_Mod%% Less Damage to Defenses (Not vs. high explosives)</English>
 		<French>[ICON_BULLET]%D1_Mod%% de Protection des Bombardements (Sauf contre les Unités possédant des explosifs)</French>
 		<German>[ICON_BULLET]%D1_Mod%% Verteidigungsschäden durch Bombardierungen (außer gegen Sprengstoffeinheiten)</German>
-		<Italian>[ICON_BULLET]%D1_Mod%% di protezione dal bombardamento (eccetto vs. unità con esplosivi)</Italian>
+		<Italian>[ICON_BULLET]%D1_Mod%% di protezione dal bombardamento (eccetto contro unità con esplosivi)</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod%% de daño a la defensa contra el bombardeo (excepto contra unidades con explosivos)</Spanish>
 		<Polish>[ICON_BULLET]%D1_Mod%% obrażeń od bombardowania obrony miasta (nie działa przeciwko jednostkom z eksplodującymi pociskami)</Polish>
 		<Russian>[ICON_BULLET]%D1_Mod%% ê ïîâðåæäåíèÿì óêðåïëåíèé ïðè áîìáàðäèðîâêå</Russian>
@@ -276,7 +276,7 @@
 		<English>[ICON_BULLET]%d1_Mod%% Defense (Not vs. high explosives)</English>
 		<French>[ICON_BULLET]%d1_Mod%% de Défense (Sauf contre les Unités possédant des explosifs)</French>
 		<German>[ICON_BULLET]%d1_Mod%% Verteidigung (außer gegen Sprengstoffeinheiten)</German>
-		<Italian>[ICON_BULLET]Aumento del [COLOR_GREEN]%d1_Mod%% della difesa[COLOR_REVERT] della città (eccetto vs. unità con esplosivi)</Italian>
+		<Italian>[ICON_BULLET]Aumento del [COLOR_GREEN]%d1_Mod%% della difesa[COLOR_REVERT] della città (eccetto contro unità con esplosivi)</Italian>
 		<Spanish>[ICON_BULLET]%d1_Mod%% a la defensa (excepto contra unidades con explosivos)</Spanish>
 		<Polish>[ICON_BULLET]%d1_Mod%% do obrony (nie działa przeciwko jednostkom z eksplodującymi pociskami)</Polish>
 		<Russian>[ICON_BULLET]%d1_Mod%% ê îáîðîíå</Russian>
@@ -432,7 +432,7 @@
 		<English>[ICON_BULLET]%D1_Change Free Specialists in All Cities</English>
 		<French>[ICON_BULLET]%D1_Change spécialistes gratuits dans toutes les villes</French>
 		<German>[ICON_BULLET]%D1_Change freie Spezialisten in allen Städten</German>
-		<Italian>[ICON_BULLET]%D1_Change specialisti gratuiti in tutt le città</Italian>
+		<Italian>[ICON_BULLET]%D1_Change specialisti gratuiti in tutte le città</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change especialistas gratis en todas las ciudades</Spanish>
 	</TEXT>
 	<TEXT>
@@ -506,7 +506,7 @@
 		<English>[ICON_BULLET]New Units Receive %D1_Change Experience Points</English>
 		<French>[ICON_BULLET]Les nouvelles unités bénéficient de %D1_Change EXP</French>
 		<German>[ICON_BULLET]Neue Einheiten erhalten %D1_Change Erfahrungspunkte</German>
-		<Italian>[ICON_BULLET]Le nuove unità ricevono %D1_Change [NUM2:punti esperienza:punto esperienza:punti esperienza]</Italian>
+		<Italian>[ICON_BULLET]Le nuove unità ricevono %D1_Change [NUM1:punto esperienza:punti esperienza]</Italian>
 		<Spanish>[ICON_BULLET]Las nuevas unidades reciben %D1_Change [NUM1:punto de experiencia:puntos de experiencia]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -563,7 +563,7 @@
 		<English>[SPACE]in all cities</English>
 		<French>[SPACE]Dans toutes les Villes</French>
 		<German>[SPACE]in allen Städten</German>
-		<Italian>[SPACE]in tutte le città</Italian>
+		<Italian>[SPACE]in tutte le città</Italian> <!--tech Cave Dwelling pedia -->
 		<Spanish>[SPACE]en todas las ciudades</Spanish>
 		<Polish>[SPACE]we wszystkich miastach</Polish>
 		<Russian>[SPACE]Âî âñåõ ãîðîäàõ</Russian>
@@ -1095,7 +1095,7 @@
 		<English>[COLOR_WARNING_TEXT]Replaces[COLOR_REVERT][SPACE]</English>
 		<French>[COLOR_WARNING_TEXT]Remplace[COLOR_REVERT][SPACE]</French>
 		<German>[ICON_BULLET][COLOR_WARNING_TEXT]ersetzt[COLOR_REVERT][SPACE]</German>
-		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Sostituisce[COLOR_REVERT] l'edificio:</Italian>
+		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Sostituisce[COLOR_REVERT] l'edificio: </Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Reemplaza[COLOR_REVERT][SPACE]</Spanish>
 		<Polish>[COLOR_WARNING_TEXT]Zastępuje:[COLOR_REVERT][SPACE]</Polish>
 		<Russian>[COLOR_WARNING_TEXT]Çàìåíÿåò[COLOR_REVERT][SPACE]</Russian>
@@ -1223,7 +1223,7 @@
 		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_RIVER</Tag>
 		<English>[COLOR_WARNING_TEXT]Requires River Access[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Requiert un accès à une rivière[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Benötigt Flusszugang[COLOR_REVERT]</German>
+		<German>[COLOR_WARNING_TEXT][ICON_BULLET]benötigt Flusszugang[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Richiede[COLOR_REVERT] accesso a un fiume</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Requiere acceso a un río[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_WARNING_TEXT]Wymaga dostępu do rzeki[COLOR_REVERT]</Polish>
@@ -1233,7 +1233,7 @@
 		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_RIVER_OR_COAST</Tag>
 		<English>[COLOR_WARNING_TEXT]Requires River or Coastal Access[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Requiert un accès à une Rivière ou une zone côtière[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Benötigt Fluss- oder Küstenzugang[COLOR_REVERT]</German>
+		<German>[COLOR_WARNING_TEXT][ICON_BULLET]benötigt Fluss- oder Küstenzugang[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Richiede[COLOR_REVERT] accesso a un fiume o alla costa</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Requiere acceso a un río o a una costa[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_WARNING_TEXT]Wymaga dostępu do rzeki lub wybrzeża[COLOR_REVERT]</Polish>
@@ -1446,7 +1446,7 @@
 		<English>Can turn 1 Citizen into [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT]</English>
 		<French>Peut transformer un citoyen en [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT]</French>
 		<German>Kann 1 Bürger in einen Spezialisten des Typs [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT] verwandeln</German>
-		<Italian>Può trasformare un cittadino in [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT]</Italian>
+		<Italian>può convertire un cittadino in uno specialista di tipo [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT]</Italian> <!--tech Cultural identity pedia -->
 		<Spanish>Puede convertir a un ciudadano en [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT]</Spanish>
 		<Polish>Możesz zamienić jednego obywatela do [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT]</Polish>
 		<Russian>Ìîæåò ñäåëàòü 1 ãîðîæàíèíà â [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT]</Russian>
