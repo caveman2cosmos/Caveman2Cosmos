@@ -465,10 +465,6 @@ void CvPlayer::init(PlayerTypes eID)
 
 	if (GC.getInitCore().getSlotStatus(getID()) == SS_TAKEN || GC.getInitCore().getSlotStatus(getID()) == SS_COMPUTER)
 	{
-		if (eID == BARBARIAN_PLAYER)
-		{
-			GC.getGame().averageHandicaps();
-		}
 		initMore(eID, getLeaderType());
 
 		updateMaxAnarchyTurns();

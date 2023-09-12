@@ -25,7 +25,6 @@ public:
 
 	void changeLeader(int /*LeaderHeadTypes*/ eNewLeader);
 	void changeCiv(int /*CivilizationTypes*/ eNewCiv);
-	void setIsHuman(bool bNewValue);
 	void setIsRebel(bool bNewValue);
 	bool isRebel() const;
 
