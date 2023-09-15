@@ -528,6 +528,7 @@
 		<German>Bereits verbunden</German>
 		<Italian>Già connesso</Italian>
 		<Spanish>Ya conectado</Spanish>
+		<Russian>Уже подключены</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONNECT_INVALID_ADDRESS_DESC</Tag>
@@ -536,6 +537,7 @@
 		<German>Die angefragte Adresse ist ungültig.</German>
 		<Italian>L'indirizzo inserito non è valido.</Italian>
 		<Spanish>La dirección probada no era válida.</Spanish>
+		<Russian>Запрашиваемый адрес недействителен.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONNECT_INVALID_ADDRESS_TITLE</Tag>
@@ -544,6 +546,7 @@
 		<German>Verbindungsanfrage abgewiesen</German>
 		<Italian>Tentativo di connessione rifiutato</Italian>
 		<Spanish>Intento de conexión rechazado</Spanish>
+		<Russian>Попытка подключения отклонена</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONNECT_NAT_ERROR_DESC</Tag>
@@ -552,6 +555,7 @@
 		<German>Es konnte kein Verbindungsaufbau mit der Firewall des Hosts ausgehandelt werden.</German>
 		<Italian>Impossibile negoziare con il firewall dell'host.</Italian>
 		<Spanish>No se ha podido negociar con el firewall/servidor de seguridad del anfitrión.</Spanish>
+		<Russian>Не удалось установить соединение с брандмауэром хоста.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONNECT_NAT_ERROR_TITLE</Tag>
@@ -560,6 +564,7 @@
 		<German>Verbindungsversuch gescheitert</German>
 		<Italian>Tentativo di connessione fallito</Italian>
 		<Spanish>Ha fallado el intento de conexión</Spanish>
+		<Russian>Неудачная попытка подключения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONNECT_NETWORK_ERROR_DESC</Tag>
@@ -568,6 +573,7 @@
 		<German>Der Verbindungsversuch ist wegen eines unbekannten Netzwerkfehlers gescheitert.</German>
 		<Italian>Il nostro tentativo di connessione è fallito a causa di un errore di rete non specificato.</Italian>
 		<Spanish>El intento de conexión ha fallado debido a un error de red no especificado.</Spanish>
+		<Russian>Не удалось подключиться из-за неопределённой ошибки сети.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONNECT_NETWORK_ERROR_TITLE</Tag>
@@ -576,6 +582,7 @@
 		<German>Verbindungsversuch fehlgeschlagen</German>
 		<Italian>Tentativo di connessione fallito</Italian>
 		<Spanish>Ha fallado el intento de conexión</Spanish>
+		<Russian>Неудачная попытка подключения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONNECT_OUT_OF_MEMORY_DESC</Tag>
@@ -584,6 +591,7 @@
 		<German>Zu wenig verfügbarer Speicher. Der Verbindungsversuch ist gescheitert.</German>
 		<Italian>Il nostro tentativo di connessione è fallito a causa della mancanza di memoria disponibile.</Italian>
 		<Spanish>El intento de conexión ha fallado debido a la falta de disponibilidad de memoria.</Spanish>
+		<Russian>Не удалось подключиться из-за недостатка доступной памяти.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONNECT_OUT_OF_MEMORY_TITLE</Tag>
@@ -592,6 +600,7 @@
 		<German>Verbindungsversuch gescheitert</German>
 		<Italian>Tentativo di connessione fallito</Italian>
 		<Spanish>Ha fallado el intento de conexión</Spanish>
+		<Russian>Неудачная попытка подключения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONNECT_REJECTED_DESC</Tag>
@@ -600,6 +609,7 @@
 		<German>Der Host dieses Spiels hat die Verbindungsanfrage abgewiesen.</German>
 		<Italian>L'host di questa partita ha rifiutato il tuo tentativo di connessione.</Italian>
 		<Spanish>El anfitrión de la partida ha rechazado el intento de conexión.</Spanish>
+		<Russian>Хост данной игры отклонил наше подключение.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONNECT_REJECTED_TITLE</Tag>
@@ -608,6 +618,7 @@
 		<German>Verbindungsanfrage abgewiesen</German>
 		<Italian>Tentativo di connessione rifiutato</Italian>
 		<Spanish>Intento de conexión rechazado</Spanish>
+		<Russian>В подключении отказано</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONNECT_TIMEOUT_DESC</Tag>
@@ -616,6 +627,7 @@
 		<German>Die Wartezeit für den Verbindungsaufbau zum Host ist abgelaufen.</German>
 		<Italian>Time out durante il tentativo di connessione all'host.</Italian>
 		<Spanish>Se ha agotado el tiempo de espera del intento de conexión con el anfitrión.</Spanish>
+		<Russian>Время на попытку подключения к хосту истекло.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONNECT_TIMEOUT_TITLE</Tag>
@@ -624,6 +636,7 @@
 		<German>Wartezeit für Verbindungsaufbau abgelaufen</German>
 		<Italian>Time out della connessione</Italian>
 		<Spanish>Agotado el tiempo de espera de la conexión</Spanish>
+		<Russian>Подключение прервано по таймеру</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONNECT_UNSPECIFIED_ERROR_DESC</Tag>
@@ -632,6 +645,7 @@
 		<German>Der Verbindungsversuch ist wegen eines unbekannten Fehlers gescheitert.</German>
 		<Italian>Il tentativo di connessione è fallito a causa di un errore non specificato.</Italian>
 		<Spanish>El intento de conexión ha fallado debido a un error no especificado.</Spanish>
+		<Russian>Подключение не удалось из-за неопределённой ошибки.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONNECT_UNSPECIFIED_ERROR_TITLE</Tag>
@@ -640,6 +654,7 @@
 		<German>Verbindungsversuch gescheitert</German>
 		<Italian>Tentativo di connessione fallito</Italian>
 		<Spanish>Ha fallado el intento de conexión</Spanish>
+		<Russian>Неудачная попытка подключения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONNECT_UPDATE_HOST_ATTEMPT</Tag>
