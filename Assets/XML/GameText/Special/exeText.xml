@@ -519,7 +519,7 @@
 		<German>Es besteht bereits eine Verbindung zu diesem Host.</German>
 		<Italian>Siamo già connessi a questo host.</Italian>
 		<Spanish>Ya existe una conexión con el anfitrión.</Spanish>
-		<Russian>Мы уже подключены к данному хосту.</Russian>
+		<Russian>Уже подключено к данному хосту</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONNECT_ALREADY_CONNECTED_TITLE</Tag>
@@ -528,7 +528,7 @@
 		<German>Bereits verbunden</German>
 		<Italian>Già connesso</Italian>
 		<Spanish>Ya conectado</Spanish>
-		<Russian>Уже подключены</Russian>
+		<Russian>Уже подключено</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONNECT_INVALID_ADDRESS_DESC</Tag>
@@ -1423,6 +1423,7 @@
 		<German>Wir konnten keine Verbindung zum Spieler "%s1_Name" aufbauen.[NEWLINE]Der Spieler hat seine Firewall-Umgebung eventuell nicht korrekt konfiguriert.</German>
 		<Italian>Impossibile connettersi al giocatore "%s1_Name".[NEWLINE]Il giocatore potrebbe non aver impostato correttamente il firewall.</Italian>
 		<Spanish>Ha sido imposible conectar con el jugador "%s1_Name".[NEWLINE]Puede que ese jugador no tenga configurado correctamente su entorno de firewall/servidor de seguridad.</Spanish>
+		<Russian>Не получилось подключиться к игроку "%s1_Name".[NEWLINE]Возможно, его брандмауэр настроен неправильно.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_JOIN_FAILURE_TITLE</Tag>
@@ -1431,6 +1432,7 @@
 		<German>Peer-Verbindungsfehler!</German>
 		<Italian>Errore di connessione al peer!</Italian>
 		<Spanish>Fallo al conectar con interlocutor</Spanish>
+		<Russian>Ошибка подключения к узлу!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_JOIN_GAME_PASSWORD_DESC</Tag>
@@ -1439,6 +1441,7 @@
 		<German>Geben Sie bitte das Kennwort für dieses Spiel ein.</German>
 		<Italian>Inserire una password per partecipare a questa partita.</Italian>
 		<Spanish>Introduce la contraseña necesaria para la partida.</Spanish>
+		<Russian>Пожалуйста, введите необходимый для этой игры пароль.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_JOIN_GAME_PASSWORD_TITLE</Tag>
@@ -1447,6 +1450,7 @@
 		<German>KENNWORTEINGABE ERFORDERLICH</German>
 		<Italian>PASSWORD RICHIESTA</Italian>
 		<Spanish>SE REQUIERE CONTRASEÑA</Spanish>
+		<Russian>ТРЕБУЕТСЯ ПАРОЛЬ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_JOIN_GAME_PASSWORD_TITLEBAR</Tag>
@@ -1455,6 +1459,7 @@
 		<German>Spielkennwort</German>
 		<Italian>Password partita</Italian>
 		<Spanish>Contraseña de la partida</Spanish>
+		<Russian>Пароль игры</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LAN_LOBBY_TITLE</Tag>
@@ -1463,6 +1468,7 @@
 		<German>LAN-LOBBY</German>
 		<Italian>SALA D'ATTESA LAN</Italian>
 		<Spanish>SALA DE RED LOCAL</Spanish>
+		<Russian>Лобби локальной сети</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_DESC_GENERIC</Tag>
@@ -1471,6 +1477,7 @@
 		<German>Beschreibung Staatsoberhaupt</German>
 		<Italian>Descrizione del leader</Italian>
 		<Spanish>Descripción del líder</Spanish>
+		<Russian>Описание предводителя</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LOADSAVE_ALL_FILES</Tag>
@@ -1479,6 +1486,7 @@
 		<German>Alle Dateien (*.*)</German>
 		<Italian>Tutti i file (*.*)</Italian>
 		<Spanish>Todos los archivos (*.*)</Spanish>
+		<Russian>Все файлы (*.*)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LOADSAVE_FILE_CANT_CREATE</Tag>
@@ -1487,6 +1495,7 @@
 		<German>Fehler beim Erstellen der Datei %s1</German>
 		<Italian>Errore nella creazione del file %s1</Italian>
 		<Spanish>Error al crear el archivo %s1.</Spanish>
+		<Russian>Ошибка при создании файла %s1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LOADSAVE_FILE_CANT_OPEN</Tag>
@@ -1495,6 +1504,7 @@
 		<German>Fehler beim Öffnen der Datei %s1</German>
 		<Italian>Errore nell'apertura del file %s1</Italian>
 		<Spanish>Error al abrir el archivo %s1.</Spanish>
+		<Russian>Ошибка при открытии файла %s1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LOADSAVE_FILE_NOT_EXIST</Tag>
@@ -1503,6 +1513,7 @@
 		<German>Die angegebene Datei existiert nicht.[NEWLINE]Bitte wählen Sie einen gültigen Dateinamen.</German>
 		<Italian>Il file specificato non esiste.[NEWLINE]Seleziona un nome di file valido.</Italian>
 		<Spanish>El archivo indicado no existe.[NEWLINE]Selecciona un nombre de archivo válido.</Spanish>
+		<Russian>Указанный файл не существует.[NEWLINE]Пожалуйста, выберите корректное имя файла.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LOADSAVE_FILE_PROTECTED</Tag>
@@ -1511,6 +1522,7 @@
 		<German>Der von Ihnen gewählte Spielstand ist schreibgeschützt, um sicherzustellen, dass die Daten in Ihrem Mod-Verzeichnis nicht verändert wurden.</German>
 		<Italian>Il file di salvataggio selezionato è protetto, in modo da assicurarsi che gli assets nella cartella della mod non vengano modificati.</Italian>
 		<Spanish>El archivo guardado que has seleccionado está protegido para asegurar que no se modifiquen los parámetros de la carpeta mod.</Spanish>
+		<Russian>Выбранный файл сохранения защищён для предотвращений изменения игровых ресурсов в папке модов.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LOAD_ERROR</Tag>
@@ -1519,6 +1531,7 @@
 		<German>Ladefehler</German>
 		<Italian>Errore di caricamento</Italian>
 		<Spanish>Error de carga.</Spanish>
+		<Russian>Ошибка загрузки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LOAD_FILE</Tag>
@@ -1527,6 +1540,7 @@
 		<German>Datei laden</German>
 		<Italian>Carica file</Italian>
 		<Spanish>Cargar archivo</Spanish>
+		<Russian>Загрузка файла</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LOBBY_PROFILE_TAG</Tag>
@@ -1534,6 +1548,7 @@
 		<French>Nom :</French>
 		<Italian>Nome:</Italian>
 		<Spanish>Nombre:</Spanish>
+		<Russian>Имя:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LOGGING_WARNING_DESC</Tag>
@@ -1542,6 +1557,7 @@
 		<German>Spieler %d1_ID: LoggingEnabled=1.[NEWLINE]Stellen Sie sicher, dass er vertrauenswürdig ist.</German>
 		<Italian>Giocatore %d1_ID: LoggingEnabled=1.[NEWLINE]Assicurati che il giocatore sia affidabile.</Italian>
 		<Spanish>Jugador %d1_ID: LoggingEnabled=1.[NEWLINE]Comprueba si se trata de un jugador de confianza.</Spanish>
+		<Russian>Включено ведение журнала игрока %d1_ID.[NEWLINE]Убедитесь, что этому игроку можно доверять.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LOGIN_ERROR_DESC</Tag>
@@ -1550,6 +1566,7 @@
 		<German>Der Login-Versuch ist fehlgeschlagen.</German>
 		<Italian>Il tentativo di login è fallito.</Italian>
 		<Spanish>El intento de inicio de sesión ha fallado.</Spanish>
+		<Russian>Попытка авторизации завершилась неудачо.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LOGIN_ERROR_TITLE</Tag>
@@ -1558,6 +1575,7 @@
 		<German>Login gescheitert</German>
 		<Italian>Login fallito</Italian>
 		<Spanish>Fallo al iniciar sesión</Spanish>
+		<Russian>Авторизация не удалась</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LOGIN_IN_USE_DESC</Tag>
@@ -1566,6 +1584,7 @@
 		<German>Dieser Account wird zurzeit benutzt.</German>
 		<Italian>Questo account è attualmente in uso.</Italian>
 		<Spanish>Esa cuenta ya se encuentra en uso.</Spanish>
+		<Russian>Этот аккаунт уже используется</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LOGIN_IN_USE_TITLE</Tag>
@@ -1574,6 +1593,7 @@
 		<German>Account in Benutzung</German>
 		<Italian>Account in uso</Italian>
 		<Spanish>Cuenta en uso</Spanish>
+		<Russian>Аккаунт занят</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LOGIN_REQUIRED_DESC</Tag>
@@ -1582,6 +1602,7 @@
 		<German>Sie müssen einen Benutzernamen angeben.</German>
 		<Italian>Devi inserire un'username.</Italian>
 		<Spanish>Hay que introducir un nombre de usuario.</Spanish>
+		<Russian>Вы должны ввести имя пользователя.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LOGIN_REQUIRED_TITLE</Tag>
@@ -1590,6 +1611,7 @@
 		<German>Benutzername erforderlich</German>
 		<Italian>Username richiesto</Italian>
 		<Spanish>Se requiere nombre de usuario</Spanish>
+		<Russian>Требуется имя пользователя</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LOGIN_TIMEOUT_DESC</Tag>
@@ -1598,6 +1620,7 @@
 		<German>Bei unserem Login-Versuch ist die Zeit abgelaufen. Der Authentifizierungsserver ist vielleicht nicht erreichbar.</German>
 		<Italian>Tentativo di login scaduto. Il server di autenticazione potrebbe essere disattivato.</Italian>
 		<Spanish>Agotado el tiempo de inicio de sesión. Puede que el servidor de autenticación no esté disponible.</Spanish>
+		<Russian>Вышло время на попытку входа. Вероятно, сервер аутентификации не работает.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LOGIN_TIMEOUT_TITLE</Tag>
@@ -1606,6 +1629,7 @@
 		<German>Login-Fehler</German>
 		<Italian>Errore di login</Italian>
 		<Spanish>Error de inicio de sesión</Spanish>
+		<Russian>Ошибка авторизации</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_ABOUT_CIV4</Tag>
@@ -1614,6 +1638,7 @@
 		<German>Über Civ 4</German>
 		<Italian>Informazioni su Civ 4</Italian>
 		<Spanish>Acerca de Civilization IV</Spanish>
+		<Russian>Об игре "Цивилизация IV"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_ABOUT_THIS_BUILD</Tag>
@@ -1622,6 +1647,7 @@
 		<German>Über diese Version</German>
 		<Italian>Informazioni su questa build</Italian>
 		<Spanish>Acerca de esta build</Spanish>
+		<Russian>О данной сборке</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_ADDRESS_MISSING_DESC</Tag>
@@ -1630,6 +1656,7 @@
 		<German>Sie müssen eine gültige Netzwerkadresse angeben.</German>
 		<Italian>Devi inserire un indirizzo di rete valido.</Italian>
 		<Spanish>Hay que facilitar una dirección de red válida.</Spanish>
+		<Russian>Необходим действующий сетевой адрес.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_ADDRESS_MISSING_TITLE</Tag>
@@ -1638,6 +1665,7 @@
 		<German>Netzwerkadresse erforderlich</German>
 		<Italian>Indirizzo di rete richiesto</Italian>
 		<Spanish>Se requiere dirección de red</Spanish>
+		<Russian>Требуется сетевой адрес</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_ADVANCED</Tag>
@@ -1646,6 +1674,7 @@
 		<German>ERWEITERT</German>
 		<Italian>IMPOSTAZIONI AVANZATE</Italian>
 		<Spanish>AVANZADO</Spanish>
+		<Russian>РАСШИРЕННЫЕ НАСТРОЙКИ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_AI</Tag>
@@ -1654,6 +1683,7 @@
 		<German>KI</German>
 		<Italian>IA</Italian>
 		<Spanish>IA</Spanish>
+		<Russian>ИИ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_ALREADY_PATCHING_DESC</Tag>
@@ -1662,6 +1692,7 @@
 		<German>Es läuft bereits ein Patch-Update.</German>
 		<Italian>Aggiornamento già in esecuzione.</Italian>
 		<Spanish>El parche de actualización ya se está aplicando.</Spanish>
+		<Russian>Уже идёт обновление.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_ALREADY_PATCHING_TITLE</Tag>
@@ -1670,10 +1701,12 @@
 		<German>Patch läuft bereits</German>
 		<Italian>Patch già in esecuzione</Italian>
 		<Spanish>Ya se está aplicando el parche</Spanish>
+		<Russian>Патч уже установлен</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_BTS_MOD</Tag>
 		<English>Mod</English>
+		<Russian>Модификация</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_BTS_SCENARIO</Tag>
@@ -1681,6 +1714,7 @@
 		<French>Scénario</French>
 		<German>Szenario</German>
 		<Spanish>Escenario</Spanish>
+		<Russian>Сценарий</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_BUDDY_LIST_TAB</Tag>
@@ -1689,6 +1723,7 @@
 		<German>Freundesliste</German>
 		<Italian>Lista d'amici</Italian>
 		<Spanish>Lista de amigos</Spanish>
+		<Russian>Список друзей</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_BUILD_DATE</Tag>
@@ -1697,6 +1732,7 @@
 		<German>Versionsdatum:</German>
 		<Italian>Data della build:</Italian>
 		<Spanish>Fecha de la build:</Spanish>
+		<Russian>Время сборки:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_BUILD_VERSION</Tag>
@@ -1705,6 +1741,7 @@
 		<German>Version:</German>
 		<Italian>Versione della build:</Italian>
 		<Spanish>Versión de la build:</Spanish>
+		<Russian>Версия сборки:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_CHOOSE_GAME_LOAD</Tag>
@@ -1713,12 +1750,13 @@
 		<German>Zu ladendes Spiel wählen!</German>
 		<Italian>Scegli un file da caricare</Italian>
 		<Spanish>Elegir la partida a cargar</Spanish>
+		<Russian>Выберите игру для загрузки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_CIVILOPEDIA</Tag>
 		<English>Pedia</English>
 		<French>Pédia</French>
-		<Russian>ЦИВИЛОПЕДИЯ</Russian>
+		<Russian>Цивилопедия</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_CIV_ADMINPWD_DESC</Tag>
@@ -1727,6 +1765,7 @@
 		<German>Geben Sie bitte das Admin-Kennwort für dieses Spiel ein.</German>
 		<Italian>Inserire la password amministratore per questa partita.</Italian>
 		<Spanish>Introduce la contraseña del administrador necesaria para la partida.</Spanish>
+		<Russian>Пожалуйста, введите пароль администратора для этой игры.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_CIV_ADMINPWD_TITLE</Tag>
@@ -1735,6 +1774,7 @@
 		<German>ADMIN-KENNWORT</German>
 		<Italian>PASSWORD AMMINISTRATORE</Italian>
 		<Spanish>CONTRASEÑA DEL ADMINISTRADOR</Spanish>
+		<Russian>ПАРОЛЬ АДМИНИСТРАТОРА</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_CIV_VERSION</Tag>
@@ -1743,6 +1783,7 @@
 		<German>Civ-Version:</German>
 		<Italian>Versione di Civ:</Italian>
 		<Spanish>Versión de Civilization:</Spanish>
+		<Russian>Версия Цивилизации:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_CLOSED</Tag>
@@ -1751,10 +1792,12 @@
 		<German>Geschlossen</German>
 		<Italian>Chiuso</Italian>
 		<Spanish>Cerrado</Spanish>
+		<Russian>Закрыто</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_COLUMN_PITBOSS</Tag>
 		<English>PB</English>
+		<Russian>ПБ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_CONNECT</Tag>
@@ -1763,6 +1806,7 @@
 		<German>Verbinden</German>
 		<Italian>Connessione</Italian>
 		<Spanish>Conectar</Spanish>
+		<Russian>Соединение</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_CREATE_A_GAME</Tag>
@@ -1771,6 +1815,7 @@
 		<German>Ein Spiel erstellen!</German>
 		<Italian>Crea una partita!</Italian>
 		<Spanish>Crear una partida</Spanish>
+		<Russian>Создать игру!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_CREDITS</Tag>
@@ -1779,11 +1824,13 @@
 		<German>CREDITS</German>
 		<Italian>RICONOSCIMENTI</Italian>
 		<Spanish>CRÉDITOS</Spanish>
+		<Russian>ТИТРЫ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_CUSTOM_GAME</Tag>
 		<English>Full Game</English>
 		<Italian>Personalizza partita</Italian>
+		<Russian>Настраиваемая игра</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_CUSTOM_SCENARIO</Tag>
@@ -1792,6 +1839,7 @@
 		<German>Eigenes Szenario</German>
 		<Italian>Personalizza scenario</Italian>
 		<Spanish>Escenario personalizado</Spanish>
+		<Russian>Настраиваемый сценарий</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_DETAILS_DEFAULT</Tag>
@@ -1800,6 +1848,7 @@
 		<German>[Standard]</German>
 		<Italian>[predefinito]</Italian>
 		<Spanish>[predeterm.]</Spanish>
+		<Russian>[по-умолчанию]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_DIRECTIP_PASSWORD</Tag>
@@ -1808,6 +1857,7 @@
 		<German>Kennwort (sofern erforderlich)</German>
 		<Italian>Password (se richiesta)</Italian>
 		<Spanish>Contraseña (si la hay)</Spanish>
+		<Russian>Пароль (если требуется)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_EXIT_GAME</Tag>
@@ -1816,6 +1866,7 @@
 		<German>Spiel beenden</German>
 		<Italian>Esci dal gioco</Italian>
 		<Spanish>Salir del juego</Spanish>
+		<Russian>Покинуть игру</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_FILETRANSFER_INPROGRESS_DESC</Tag>
@@ -1824,6 +1875,7 @@
 		<German>Bitte warten. Spieldaten werden übertragen.</German>
 		<Italian>Attendere, trasferimento dei dati di gioco in corso.</Italian>
 		<Spanish>Un momento. Hay en curso transferencias de datos de la partida.</Spanish>
+		<Russian>Пожалуйста, подождите. Идет передача игровых данных.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_FILETRANSFER_INPROGRESS_TITLE</Tag>
@@ -1832,6 +1884,7 @@
 		<German>Dateien werden übertragen ...</German>
 		<Italian>Trasferimento dei file...</Italian>
 		<Spanish>Transfiriendo archivos...</Spanish>
+		<Russian>Передача файлов...</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_FORCED_DISCONNECT_DESC</Tag>
@@ -1840,6 +1893,7 @@
 		<German>Es ist bereits jemand auf diesem Account eingeloggt.</German>
 		<Italian>Qualcun altro ha effettuato il login usando questo account.</Italian>
 		<Spanish>Otra persona ha iniciado sesión con esta cuenta.</Spanish>
+		<Russian>Кто-то другой авторизировался под данным аккаунтом.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_FORCED_DISCONNECT_TITLE</Tag>
@@ -1848,6 +1902,7 @@
 		<German>Account-Verletzung</German>
 		<Italian>Violazione dell'account</Italian>
 		<Spanish>Violación de cuenta</Spanish>
+		<Russian>Нарушение авторизации</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_GAMENAME_MISSING_DESC</Tag>
@@ -1856,6 +1911,7 @@
 		<German>Sie müssen einen Spielnamen angeben.</German>
 		<Italian>Devi inserire il nome di una partita.</Italian>
 		<Spanish>Hay que facilitar el nombre de la partida.</Spanish>
+		<Russian>Вы должны указать название игры.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_GAMENAME_MISSING_TITLE</Tag>
@@ -1864,6 +1920,7 @@
 		<German>Spielname erforderlich</German>
 		<Italian>Nome della partita richiesto</Italian>
 		<Spanish>Se requiere nombre de la partida</Spanish>
+		<Russian>Требуется название игры</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_GAME_NAME</Tag>
@@ -1872,6 +1929,7 @@
 		<German>Spielname:</German>
 		<Italian>Nome della partita</Italian>
 		<Spanish>Nombre de la partida</Spanish>
+		<Russian>Название игры.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_GO_BACK</Tag>
@@ -1880,6 +1938,7 @@
 		<German>Zurück</German>
 		<Italian>Indietro</Italian>
 		<Spanish>Volver</Spanish>
+		<Russian>Вернуться</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_HALL_OF_FAME</Tag>
@@ -1888,6 +1947,7 @@
 		<German>Ruhmeshalle betrachten</German>
 		<Italian>Guarda la Hall of fame</Italian>
 		<Spanish>Ver Salón de la Fama</Spanish>
+		<Russian>Посмотреть Зал славы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_HOST_DISCONNECT_DESC</Tag>
@@ -1896,6 +1956,7 @@
 		<German>Die Verbindung zum Host ist abgebrochen.</German>
 		<Italian>Abbiamo perso la connessione all'host.</Italian>
 		<Spanish>Se ha perdido la conexión con el anfitrión.</Spanish>
+		<Russian>Потеряно соединение с хостом.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_HOST_DISCONNECT_TITLE</Tag>
@@ -1904,6 +1965,7 @@
 		<German>Verbindungsfehler</German>
 		<Italian>Errore durante la connessione</Italian>
 		<Spanish>Fallo en la conexión</Spanish>
+		<Russian>Сбой соединения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_HOST_PING</Tag>
@@ -1912,6 +1974,7 @@
 		<German>Host anpingen</German>
 		<Italian>Ping dell'host</Italian>
 		<Spanish>Señalar (anfitrión)</Spanish>
+		<Russian>Пинг хоста</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_HOT_SEAT</Tag>
@@ -1919,6 +1982,7 @@
 		<French>2 joueurs</French>
 		<Italian>2 giocatori in locale</Italian>
 		<Spanish>De uno en uno</Spanish>
+		<Russian>Горячий стул</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_HUMAN</Tag>
@@ -1927,6 +1991,7 @@
 		<German>Menschlich</German>
 		<Italian>Umano</Italian>
 		<Spanish>Humano</Spanish>
+		<Russian>Человек</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_INVALID_HOST_DESC</Tag>
@@ -1935,6 +2000,7 @@
 		<German>Der gewählte Host ist nicht mehr gültig.</German>
 		<Italian>L'host selezionato non è più valido.</Italian>
 		<Spanish>El anfitrión seleccionado ya no es válido.</Spanish>
+		<Russian>Выбранный хост больше не действителен.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_INVALID_HOST_TITLE</Tag>
@@ -1943,6 +2009,7 @@
 		<German>Ungültiger Host</German>
 		<Italian>Host non valido</Italian>
 		<Spanish>Anfitrión no válido</Spanish>
+		<Russian>Некорректный хост</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_JOIN_FAILED</Tag>
@@ -1951,6 +2018,7 @@
 		<German>Spielanschluss fehlgeschlagen bei</German>
 		<Italian>Impossibile unirsi alla partita a:</Italian>
 		<Spanish>Imposible unirse a la partida en </Spanish>
+		<Russian>Не удалось присоединиться к игре на </Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_JOIN_FAILED_DESC</Tag>
@@ -1959,6 +2027,7 @@
 		<German>Spielanschluss nicht möglich</German>
 		<Italian>Impossibile unirsi alla partita</Italian>
 		<Spanish>No es posible unirse a la partida</Spanish>
+		<Russian>Нельзя присоединиться к игре</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_JOIN_FAILED_TITLE</Tag>
@@ -1967,6 +2036,7 @@
 		<German>Spielanschluss gescheitert</German>
 		<Italian>Partecipazione fallita</Italian>
 		<Spanish>Fallo al intentar unirse</Spanish>
+		<Russian>Присоединиться не удалось</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_JOIN_GAME</Tag>
@@ -1975,6 +2045,7 @@
 		<German>Am Spiel teilnehmen</German>
 		<Italian>Partecipa alla partita</Italian>
 		<Spanish>Unirse a partida</Spanish>
+		<Russian>Присоединиться к игре</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_LAUNCH</Tag>
@@ -1983,6 +2054,7 @@
 		<German>Start!</German>
 		<Italian>Avvia!</Italian>
 		<Spanish>Iniciar</Spanish>
+		<Russian>Старт!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_LEADERS_TITLE</Tag>
@@ -1991,6 +2063,7 @@
 		<German>STAATSOBERHÄUPTER</German>
 		<Italian>LEADER</Italian>
 		<Spanish>LÍDERES</Spanish>
+		<Russian>ПРЕДВОДИТЕЛИ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_LOADSAVE_CANCEL</Tag>
@@ -1999,6 +2072,7 @@
 		<German>Abbrechen</German>
 		<Italian>Annulla</Italian>
 		<Spanish>Cancelar</Spanish>
+		<Russian>Отмена</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_LOADSAVE_CREATE</Tag>
@@ -2007,6 +2081,7 @@
 		<German>Erstellen</German>
 		<Italian>Crea</Italian>
 		<Spanish>Crear</Spanish>
+		<Russian>Создать</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_LOADSAVE_FILETYPE</Tag>
@@ -2015,6 +2090,7 @@
 		<German>Dateityp</German>
 		<Italian>Tipo di file</Italian>
 		<Spanish>Tipo de archivo</Spanish>
+		<Russian>Тип файла</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_LOADSAVE_FILE_NAME</Tag>
@@ -2023,6 +2099,7 @@
 		<German>Dateiname</German>
 		<Italian>Nome del file</Italian>
 		<Spanish>Nombre del archivo</Spanish>
+		<Russian>Имя файла</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_LOADSAVE_GAME_FOLDER</Tag>
@@ -2031,6 +2108,7 @@
 		<German>Ordner</German>
 		<Italian>Cartella</Italian>
 		<Spanish>Carpeta</Spanish>
+		<Russian>Папка</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_LOADSAVE_MODIFIED</Tag>
@@ -2039,6 +2117,7 @@
 		<German>Modifiziert</German>
 		<Italian>Modificato</Italian>
 		<Spanish>Modificada</Spanish>
+		<Russian>Изменён</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_LOADSAVE_NEW_FOLDER</Tag>
@@ -2047,6 +2126,7 @@
 		<German>Neuer Ordner</German>
 		<Italian>Nuova cartella</Italian>
 		<Spanish>Nueva carpeta</Spanish>
+		<Russian>Новая папка</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_LOADSAVE_SELECT_FOLDER</Tag>
@@ -2055,6 +2135,7 @@
 		<German>Ordner auswählen</German>
 		<Italian>Seleziona una cartella</Italian>
 		<Spanish>Escoge una carpeta</Spanish>
+		<Russian>Пожалуйста, выберите папку</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_LOADSAVE_SIZE</Tag>
@@ -2063,6 +2144,7 @@
 		<German>Größe</German>
 		<Italian>Dimensione</Italian>
 		<Spanish>Tamaño</Spanish>
+		<Russian>Размер</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_LOAD_FAILED</Tag>
@@ -2071,6 +2153,7 @@
 		<German>Ladevorgang gescheitert.</German>
 		<Italian>Caricamento fallito.</Italian>
 		<Spanish>Fallo al cargar</Spanish>
+		<Russian>Загрузка не удалась</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_LOAD_GAME</Tag>
@@ -2079,6 +2162,7 @@
 		<German>Spiel laden</German>
 		<Italian>Carica partita</Italian>
 		<Spanish>Cargar partida</Spanish>
+		<Russian>Загрузить игру</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_LOAD_INIT_FAILED_DESC</Tag>
@@ -2087,6 +2171,7 @@
 		<German>Ursprüngliche Spieldaten konnten nicht geladen werden.</German>
 		<Italian>Impossibile caricare i dati iniziali di gioco.</Italian>
 		<Spanish>No se han podido cargar los datos iniciales del juego.</Spanish>
+		<Russian>Не удалось загрузить исходные данные игры.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_LOAD_INIT_FAILED_TITLE</Tag>
@@ -2095,6 +2180,7 @@
 		<German>Ladevorgang fehlgeschlagen</German>
 		<Italian>Caricamento fallito</Italian>
 		<Spanish>Fallo al cargar</Spanish>
+		<Russian>Сбой загрузки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_LOAD_MOD</Tag>
@@ -2103,6 +2189,7 @@
 		<German>Mod laden</German>
 		<Italian>Carica una mod</Italian>
 		<Spanish>Cargar un mod</Spanish>
+		<Russian>Включить мод</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_LOBBY_NAME</Tag>
@@ -2111,6 +2198,7 @@
 		<German>Lobby-Chat</German>
 		<Italian>Chat sala d'attesa</Italian>
 		<Spanish>Chat de la sala</Spanish>
+		<Russian>Чат лобби</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_MAP</Tag>
@@ -2131,6 +2219,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Карта</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_MAP_SCRIPT_NOT_FOUND_DESC</Tag>
@@ -2139,6 +2228,7 @@
 		<German>Die gewählte Kartenskriptdatei konnte nicht gefunden werden.</German>
 		<Italian>Impossibile trovare il file di script della mappa prescelta.</Italian>
 		<Spanish>No se ha podido encontrar el archivo escogido de secuencia de comandos del mapa.</Spanish>
+		<Russian>Не получается найти выбранный файл скриптов карты.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_MAP_SCRIPT_NOT_FOUND_TITLE</Tag>
@@ -2147,6 +2237,7 @@
 		<German>Kartenskript nicht gefunden</German>
 		<Italian>Script di mappa non trovato</Italian>
 		<Spanish>No se ha encontrado la secuencia de comandos del mapa</Spanish>
+		<Russian>Скрипты карты не найдены</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_MOD_NAME</Tag>
@@ -2155,6 +2246,7 @@
 		<German>Mod-Name:</German>
 		<Italian>Nome della mod:</Italian>
 		<Spanish>Nombre del mod:</Spanish>
+		<Russian>Название мода:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_MOD_RESTART</Tag>
@@ -2163,6 +2255,7 @@
 		<German>Dieses Szenario erfordert das "%s1_ModName"-Mod.[NEWLINE]Das Spiel muss zum Laden dieses Mods neu gestartet werden.</German>
 		<Italian>Questo scenario necessita della mod "%s1_ModName".[NEWLINE]Per caricare questo mod il gioco deve essere riavviato.</Italian>
 		<Spanish>Este escenario requiere el mod "%s1_ModName".[NEWLINE]El juego debe reiniciarse para cargar este mod.</Spanish>
+		<Russian>Данному сценарию требуется мод "%s1_ModName".[NEWLINE]Для его включения требуется перезапуск игры.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_MPINIT_FAILED_DESC</Tag>
@@ -2171,6 +2264,7 @@
 		<German>Messaging Engine kann nicht gestartet werden.</German>
 		<Italian>Impossibile avviare l'engine di messaggistica.</Italian>
 		<Spanish>No se ha podido iniciar el motor de mensajería.</Spanish>
+		<Russian>Невозможно запустить движок обмена сообщениями.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_MPINIT_FAILED_TITLE</Tag>
@@ -2179,6 +2273,7 @@
 		<German>Fehler</German>
 		<Italian>Errore</Italian>
 		<Spanish>Error</Spanish>
+		<Russian>Ошибка</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_MULTIPLAYER</Tag>
@@ -2187,6 +2282,7 @@
 		<German>Multiplayer</German>
 		<Italian>Multigiocatore</Italian>
 		<Spanish>Multijugador</Spanish>
+		<Russian>Мультиплеер</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_MULTIPLAYER_DIRECTIP</Tag>
@@ -2195,6 +2291,7 @@
 		<German>Direkte IP-Verbindung</German>
 		<Italian>Connessione diretta IP</Italian>
 		<Spanish>Conexión directa con IP</Spanish>
+		<Russian>Прямое IP-соединение</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_MULTIPLAYER_INTERNET_GAMES</Tag>
@@ -2203,6 +2300,7 @@
 		<German>Internet-Spiele</German>
 		<Italian>Partite via Internet</Italian>
 		<Spanish>Partidas en Internet</Spanish>
+		<Russian>Игра через Интернет</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_MULTIPLAYER_LAN</Tag>
@@ -2211,6 +2309,7 @@
 		<German>LAN-Spiele</German>
 		<Italian>Partite via LAN</Italian>
 		<Spanish>Partidas en red local</Spanish>
+		<Russian>Игра по локальной сети</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_NETWORK_ADDRESS</Tag>
@@ -2219,6 +2318,7 @@
 		<German>Netzwerkadresse</German>
 		<Italian>Indirizzo di rete</Italian>
 		<Spanish>Dirección de red</Spanish>
+		<Russian>Сетевой адрес</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_NET_HOST_FAILED</Tag>
@@ -2227,6 +2327,7 @@
 		<German>Spiel-Hosting fehlgeschlagen. Prüfen Sie die Netzwerkverbindungen.</German>
 		<Italian>Host della partita fallito. Controlla le connessione di rete.</Italian>
 		<Spanish>No se ha podido alojar la partida. Comprueba la conexión de red.</Spanish>
+		<Russian>Хостинг игры не удался; проверьте сетевые подключения.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_NEW</Tag>
@@ -2235,6 +2336,7 @@
 		<German>Neu</German>
 		<Italian>Nuovo</Italian>
 		<Spanish>Nueva</Spanish>
+		<Russian>Новая</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_NEW_GAME</Tag>
@@ -2243,6 +2345,7 @@
 		<German>Neues Spiel</German>
 		<Italian>Nuova partita</Italian>
 		<Spanish>Nueva partida</Spanish>
+		<Russian>Новая игра</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_NEW_SCENARIO</Tag>
@@ -2251,6 +2354,7 @@
 		<German>Neues Szenario</German>
 		<Italian>Nuovo scenario</Italian>
 		<Spanish>Nuevo escenario</Spanish>
+		<Russian>Новый сценарий</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_NONE</Tag>
@@ -2259,6 +2363,7 @@
 		<German>Leer</German>
 		<Italian>Nessuna</Italian>
 		<Spanish>No</Spanish>
+		<Russian>Нет</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_NOT_READY_DESC</Tag>
@@ -2267,6 +2372,7 @@
 		<German>Das Spiel kann erst gestartet werden, wenn alle Spieler bereit sind.</German>
 		<Italian>Impossibile avviare la partita finché tutti i giocatori non pronti.</Italian>
 		<Spanish>No se puede iniciar la partida hasta que estén listos todos los jugadores.</Spanish>
+		<Russian>Невозможно запустить игру, пока все игроки не будут готовы.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_NOT_READY_TITLE</Tag>
@@ -2275,6 +2381,7 @@
 		<German>Nicht bereit</German>
 		<Italian>Non pronto</Italian>
 		<Spanish>No está listo</Spanish>
+		<Russian>Не готов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_NOT_UNIQUE_DESC</Tag>
@@ -2283,6 +2390,7 @@
 		<German>%s1_leader wurde von mehr als einem Spieler gewählt. Im anonymen Spielmodus müssen alle Spieler einen einzigartigen Herrscher wählen.</German>
 		<Italian>%s1_leader è stato scelto da più di un giocatore. Tutti i giocatori devono scegliere un unico leader per giocare anonimamente.</Italian>
 		<Spanish>%s1_leader ha sido elegido por más de un jugador. Se deben escoger nombres únicos de líderes para permanecer en el anonimato.</Spanish>
+		<Russian>%s1_leader выбран более чем одним игроком. Всем необходимо взять уникального предводителя для анонимной игры.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_NOT_UNIQUE_TITLE</Tag>
@@ -2291,6 +2399,7 @@
 		<German>Doppelte Herrschernamen</German>
 		<Italian>Nomi leader duplicati</Italian>
 		<Spanish>Duplicar nombres de líderes</Spanish>
+		<Russian>Имя предводителя дублируется</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_NO_AVAILABLE_CIV_DESC</Tag>
@@ -2299,6 +2408,7 @@
 		<German>Es sind keine Zivs zur Auswahl verfügbar.</German>
 		<Italian>Non ci sono civiltà disponibili da scegliere.</Italian>
 		<Spanish>No hay civilizaciones disponibles entre las que escoger.</Spanish>
+		<Russian>Нет цивилизаций, доступных для выбора.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_NO_AVAILABLE_CIV_TITLE</Tag>
@@ -2307,6 +2417,7 @@
 		<German>Keine Zivs!</German>
 		<Italian>Nessuna civiltà!</Italian>
 		<Spanish>No hay civilizaciones</Spanish>
+		<Russian>Никаких цивилизаций!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_NO_MAPS_FOUND_DESC</Tag>
@@ -2315,6 +2426,7 @@
 		<German>Keine Kartenskripte gefunden!</German>
 		<Italian>Impossibile trovare script della mappa!</Italian>
 		<Spanish>No se han encontrado secuencias de comandos de mapa.</Spanish>
+		<Russian>Скрипты карты не найдены!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_NO_MAPS_FOUND_TITLE</Tag>
@@ -2323,11 +2435,13 @@
 		<German>Fehler im Kartenskript</German>
 		<Italian>Errore nello script della mappa</Italian>
 		<Spanish>Error de secuencia de comandos del mapa</Spanish>
+		<Russian>Ошибка скриптов карты</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_OK</Tag>
 		<English>OK</English>
 		<Spanish>Aceptar</Spanish>
+		<Russian>ОК</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_OPEN</Tag>
@@ -2336,6 +2450,7 @@
 		<German>Offen</German>
 		<Italian>Aperto</Italian>
 		<Spanish>Abierto</Spanish>
+		<Russian>Открыть</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_OPTIONS</Tag>
@@ -2344,6 +2459,7 @@
 		<German>Optionen</German>
 		<Italian>Opzioni</Italian>
 		<Spanish>Opciones</Spanish>
+		<Russian>Опции</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_PASSWORD</Tag>
@@ -2352,6 +2468,7 @@
 		<German>Kennwort</German>
 		<Italian>Password</Italian>
 		<Spanish>Contraseña</Spanish>
+		<Russian>Пароль</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_PATCH_CHECK_ERROR_DESC</Tag>
@@ -2360,6 +2477,7 @@
 		<German>Bei der Update-Überprüfung ist ein Fehler aufgetreten.</German>
 		<Italian>Durante la verifica degli aggiornamenti si è rilevato un errore.</Italian>
 		<Spanish>Se ha producido un error al comprobar las actualizaciones.</Spanish>
+		<Russian>При проверке обновлений произошла ошибка.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_PATCH_CHECK_ERROR_TITLE</Tag>
@@ -2368,6 +2486,7 @@
 		<German>Update-Fehler</German>
 		<Italian>Errore di aggiornamento</Italian>
 		<Spanish>Error de actualización</Spanish>
+		<Russian>Ошибка обновления</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_PATCH_IN_PROGRESS_DESC</Tag>
@@ -2376,6 +2495,7 @@
 		<German>Sie können erst nach Abschluss des Patching-Vorgangs fortfahren.</German>
 		<Italian>Non puoi continuare finché il processo di patch non è terminato.</Italian>
 		<Spanish>No puedes continuar hasta que se haya aplicado el parche.</Spanish>
+		<Russian>Вы не сможете продолжить до завершения обновления.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_PATCH_IN_PROGRESS_TITLE</Tag>
@@ -2384,6 +2504,7 @@
 		<German>Patch läuft!</German>
 		<Italian>Patch in corso!</Italian>
 		<Spanish>Parche aplicándose</Spanish>
+		<Russian>Идёт обновление!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_PATCH_OK_DESC</Tag>
@@ -2392,12 +2513,14 @@
 		<German>Es sind zurzeit keine Updates verfügbar.</German>
 		<Italian>In questo momento non ci sono aggiornamenti disponibili.</Italian>
 		<Spanish>En este momento no hay disponible ninguna actualización.</Spanish>
+		<Russian>Нет обновлений на данный момент.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_PATCH_OK_TITLE</Tag>
 		<English>Version OK!</English>
 		<Italian>Versione OK!</Italian>
 		<Spanish>Versión correcta</Spanish>
+		<Russian>Версия корректна</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_PBEM</Tag>
@@ -2406,6 +2529,7 @@
 		<German>Per E-Mail spielen</German>
 		<Italian>Gioca tramite e-mail</Italian>
 		<Spanish>Juego por e-mail</Spanish>
+		<Russian>Играть по электронной почте</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_PITBOSS_WAIT</Tag>
