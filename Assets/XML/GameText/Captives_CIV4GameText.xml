@@ -6,7 +6,7 @@
 		<French>Convertir le Prisonnier en Archer.</French>
 		<Italian>Converti prigioniero in un arciere.</Italian>
 		<Polish>Ulepsz Jeńca do Łucznika.</Polish>
-		<Russian>Óëó÷øèòü ïëåííèêà äî Ëó÷íèêà.</Russian>
+		<Russian>Улучшить пленника до лучника.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_AXEMAN</Tag>
@@ -14,7 +14,7 @@
 		<French>Convertir le Prisonnier en Guerrier avec hache.</French>
 		<Italian>Converti prigioniero in un guerriero con ascia.</Italian>
 		<Polish>Ulepsz Jeńca do Topornika.</Polish>
-		<Russian>Óëó÷øèòü ïëåííèêà äî Ñåêèðîíîñöà.</Russian>
+		<Russian>Улучшить пленника до секироносца.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_GATHERER</Tag>
@@ -23,7 +23,7 @@
 		<French>Convertir en Cueilleuse</French>
 		<Italian>Converti prigioniero in un raccoglitore.</Italian>
 		<Polish>Ulepsz do Zbieracza.</Polish>
-		<Russian>Улучшить до собирателя</Russian>
+		<Russian>Улучшить до собирателя.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_IMMIGRANT</Tag>
@@ -31,21 +31,21 @@
 		<French>Convertir en Immigrant</French>
 		<Italian>Converti prigioniero in un immigrante.</Italian>
 		<Polish>Ulepsz do Immigranta.</Polish>
-		<Russian>Óëó÷øèòü äî Èììèãðàíòà.</Russian>
+		<Russian>Улучшить до Иммигранта.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_GATHERER</Tag>
 		<English>Upgrade a Captive to a Neanderthal Gatherer.</English>
 		<French>Convertit une Prisonnière en une Cueilleuse Néanderthal.</French>
 		<Italian>Converti prigioniero in un raccoglitore neanderthal.</Italian>
-		<Russian>Улучшить пленника до неанд. собирателя</Russian>
+		<Russian>Улучшить пленника до неандертальского собирателя.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_TRACKER</Tag>
 		<English>Upgrade a Captive to a Neanderthal Tracker.</English>
 		<French>Améliorez un prisonnier en un Pisteur néandertalien.</French>
 		<Italian>Converti prigioniero in un inseguitore neanderthal.</Italian>
-		<Russian>Улучшить пленника до охотника-неандертальца</Russian>
+		<Russian>Улучшить пленника до неандертальского охотника.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_WARRIOR</Tag>
@@ -53,7 +53,7 @@
 		<French>Convertir le Prisonnier en Guerrier Néanderthal.</French>
 		<Italian>Converti prigioniero in un guerriero neanderthal.</Italian>
 		<Polish>Ulepsz Jeńca do Wojownika Neandertalczyków.</Polish>
-		<Russian>Óëó÷øèòü ïëåííèêà äî âîèíà-íåàíäåðòàëüöà.</Russian>
+		<Russian>Улучшить пленника до неандертальского воина.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_SETTLER</Tag>
@@ -61,7 +61,7 @@
 		<French>Convertir en Colon</French>
 		<Italian>Converti prigioniero in un colonizzatore.</Italian>
 		<Polish>Ulepsz do Osadnika.</Polish>
-		<Russian>Óëó÷øèòü äî Ïîñåëåíöà.</Russian>
+		<Russian>Улучшить до поселенца.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_SPEARMAN</Tag>
@@ -69,7 +69,7 @@
 		<French>Convertir le Prisonnier en Guerrier avec lance.</French>
 		<Italian>Converti prigioniero in un guerriero con lancia.</Italian>
 		<Polish>Ulepsz Jeńca do Włócznika.</Polish>
-		<Russian>Óëó÷øèòü ïëåííèêà äî Êîïüåíîñöà.</Russian>
+		<Russian>Улучшить пленника до копейщика.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_STONE_THROWER</Tag>
@@ -78,7 +78,7 @@
 		<German>Bilde einen Gefangenen zum Steinewerfer aus</German>
 		<Italian>Converti prigioniero in un lanciatore di pietre.</Italian>
 		<Polish>Ulepsz Jeńca do Kamieniarza.</Polish>
-		<Russian>Óëó÷øèòü ïëåííèêà äî Ïðàùíèêà.</Russian>
+		<Russian>Улучшить пленника до пращника.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_WORKER</Tag>
@@ -87,7 +87,7 @@
 		<German>Bilde einen Gefangenen zu einem beliebigen Arbeitstrupp aus</German>
 		<Italian>Converti prigioniero in un lavoratore.</Italian>
 		<Polish>Ulepsz Jeńca do Robotnika.</Polish>
-		<Russian>Óëó÷øèòü äî ðàáîòíèêà.</Russian>
+		<Russian>Улучшить до работника.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_FREE_CAPTIVE</Tag>
@@ -95,7 +95,7 @@
 		<French>Libérer un Prisonnier.</French>
 		<Italian>Libera prigioniero.</Italian>
 		<Polish>Uwolnij jeńca.</Polish>
-		<Russian>Ïîìåñòèòü ïëåííîãî.</Russian>
+		<Russian>Освободить пленника.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_FREE_CAPTIVE_HELP</Tag>
@@ -103,7 +103,7 @@
 		<French>Le fait de libérer un esclave augmente le stock de nourriture (dans Civ4, la nourriture représente l'accroissement de la population).</French>
 		<Italian>[NEWLINE]Aggiunge cibo alle riserve cittadine.</Italian>
 		<Polish>Uwolnienie jeńca dodaje dostarcza miastu odrobinę żywności, która w CIV4 reprezentuje wzrost populację.</Polish>
-		<Russian>Ïîìåùàåò áåñïëàòíîãî ïëåííèêà â ãîðîä, äîáàâëÿÿ ïèùè â àìáàð, óñêîðÿÿ ïðèðîñò íàñåëåíèÿ.</Russian>
+		<Russian>Освобождение пленника увеличивает городские запасы еды, которая в Цивилизации IV отвечает за рост населения.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_JOIN_CITY_FREED_SLAVE</Tag>
@@ -111,7 +111,7 @@
 		<French>Rejoindre la Ville. Augmente d'autant la population.</French>
 		<Italian>[NEWLINE]Unisci alla città (aumento popolazione)</Italian>
 		<Polish>Dołącz do miasta. (Częściowy wzrost punktów populacji)</Polish>
-		<Russian>Ïîñåëèòüñÿ â ãîðîäå (÷àñò. ïðèðîñò íàñåëåíèÿ)</Russian>
+		<Russian>Поселиться в городе (частичный прирост населения)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_JOIN_CITY_POPULATION</Tag>
@@ -119,7 +119,7 @@
 		<French>Rejoindre la Ville</French>
 		<Italian>Unisci alla città</Italian>
 		<Polish>Dołącz do miasta</Polish>
-		<Russian>Ïîäñåëèòü â ãîðîä</Russian>
+		<Russian>Поселить в городе</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_JOIN_CITY_POPULATION_HELP</Tag>
@@ -127,7 +127,7 @@
 		<French>Augmente de 1 la population. L'unité est détruite.</French>
 		<Italian>[NEWLINE]Incrementa la popolazione cittadina di uno. L'unità viene consumata.</Italian>
 		<Polish>Zwiększa populację miasta o 1. Jednostka zostaje usunięta z gry.</Polish>
-		<Russian>Íàñåëåíèå ãîðîäà óâåëè÷èâàåòñÿ íà îäíîãî æèòåëÿ. Îòðÿä èñ÷åçàåò.</Russian>
+		<Russian>Население города увеличивается на одного жителя. Единица исчезает.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_CITY_HAD_ARTISTS</Tag>
