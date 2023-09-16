@@ -111,7 +111,7 @@
 		<French>Rejoindre la Ville. Augmente d'autant la population.</French>
 		<Italian>[NEWLINE]Unisci alla città (aumento popolazione)</Italian>
 		<Polish>Dołącz do miasta. (Częściowy wzrost punktów populacji)</Polish>
-		<Russian>Поселиться в городе (частичный прирост населения)</Russian>
+		<Russian>Поселиться в городе (частично увеличить баллы населения)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_JOIN_CITY_POPULATION</Tag>
@@ -119,7 +119,7 @@
 		<French>Rejoindre la Ville</French>
 		<Italian>Unisci alla città</Italian>
 		<Polish>Dołącz do miasta</Polish>
-		<Russian>Поселить в городе</Russian>
+		<Russian>Поселиться в городе</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_JOIN_CITY_POPULATION_HELP</Tag>
