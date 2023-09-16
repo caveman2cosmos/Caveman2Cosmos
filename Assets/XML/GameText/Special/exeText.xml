@@ -555,7 +555,7 @@
 		<German>Es konnte kein Verbindungsaufbau mit der Firewall des Hosts ausgehandelt werden.</German>
 		<Italian>Impossibile negoziare con il firewall dell'host.</Italian>
 		<Spanish>No se ha podido negociar con el firewall/servidor de seguridad del anfitrión.</Spanish>
-		<Russian>Не удалось установить соединение с брандмауэром хоста.</Russian>
+		<Russian>Невозможно установить соединение с брандмауэром хоста.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONNECT_NAT_ERROR_TITLE</Tag>
@@ -1041,6 +1041,7 @@
 		<German>Ereignis-Log</German>
 		<Italian>Registro degli eventi</Italian>
 		<Spanish>Historial de sucesos</Spanish>
+		<Russian>Журнал ошибок</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FATAL_ERROR</Tag>
@@ -1049,6 +1050,7 @@
 		<German>Fataler Fehler</German>
 		<Italian>Errore critico</Italian>
 		<Spanish>Error crítico</Spanish>
+		<Russian>Критическая ошибка</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FILE_TRANSFER_ERROR_DESC</Tag>
@@ -1057,6 +1059,7 @@
 		<German>Bei der Übertragung der Datei ist ein Fehler aufgetreten.</German>
 		<Italian>Errore critico durante il trasferimento dei file.</Italian>
 		<Spanish>Se ha producido un error crítico al transferir el archivo.</Spanish>
+		<Russian>При передаче файла произошла критическая ошибка.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FILE_TRANSFER_ERROR_TITLE</Tag>
@@ -1065,6 +1068,7 @@
 		<German>Dateiübertragungsfehler</German>
 		<Italian>Errore di trasferimento file</Italian>
 		<Spanish>Error de transferencia de archivo</Spanish>
+		<Russian>Ошибка передачи файла</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPY_CREATE_ACCOUNT</Tag>
@@ -1073,6 +1077,7 @@
 		<German>Account anlegen</German>
 		<Italian>Crea account</Italian>
 		<Spanish>Crear cuenta</Spanish>
+		<Russian>Создать учётную запись</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPY_CREATE_ACCOUNT_HELP</Tag>
@@ -1081,6 +1086,7 @@
 		<German>Geben Sie zum Anlegen eines neuen GameSpy-Accounts Ihre E-Mail-Adresse, den gew&#252;nschten Benutzernamen und ein Kennwort ein.</German>
 		<Italian>Inserisci il tuo indirizzo e-mail, l'username desiderato e la password per creare un nuovo account di GameSpy.</Italian>
 		<Spanish>Introduce tu direcci&#243;n de e-mail, el nombre de usuario que desees y la contrase&#241;a para crear una nueva cuenta de GameSpy.</Spanish>
+		<Russian>Введите свой адрес электронной почты, желаемое имя пользователя и пароль для создания новой учётной записи GameSpy.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPY_CREATE_ACCOUNT_TITLE</Tag>
@@ -1089,6 +1095,7 @@
 		<German>NEUEN ACCOUNT ANLEGEN</German>
 		<Italian>CREA NUOVO ACCOUNT</Italian>
 		<Spanish>CREAR NUEVA CUENTA</Spanish>
+		<Russian>СОЗДАТЬ НОВУЮ УЧЁТНУЮ ЗАПИСЬ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPY_EMAIL_ADDRESS</Tag>
@@ -1097,6 +1104,7 @@
 		<German>E-Mail-Adresse</German>
 		<Italian>Indirizzo E-Mail</Italian>
 		<Spanish>Dirección de e-mail</Spanish>
+		<Russian>Адрес электронной почты</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPY_LOGIN</Tag>
@@ -1105,6 +1113,7 @@
 		<German>Login</German>
 		<Italian>Login</Italian>
 		<Spanish>Iniciar sesión</Spanish>
+		<Russian>Авторизироваться</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPY_LOGIN_BUTTON</Tag>
@@ -1113,6 +1122,7 @@
 		<German>LOGIN</German>
 		<Italian>LOGIN</Italian>
 		<Spanish>INICIAR SESIÓN</Spanish>
+		<Russian>АВТОРИЗИРОВАТЬСЯ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPY_LOGIN_DESC</Tag>
@@ -1121,6 +1131,7 @@
 		<German>Geben Sie Ihren vorhandenen GameSpy-Benutzernamen und Ihr Kennwort ein, um sich einzuloggen.</German>
 		<Italian>Inserisci il tuo GameSpy ID e la password per effettuare il login.</Italian>
 		<Spanish>Introduce tu ID de GameSpy y tu contrase&#241;a para iniciar sesi&#243;n.</Spanish>
+		<Russian>Введите существующее имя пользователя GameSpy и пароль для авторизации.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPY_LOGIN_TITLE</Tag>
@@ -1129,6 +1140,7 @@
 		<German>Login mit bestehendem Account</German>
 		<Italian>Login con un account già esistente</Italian>
 		<Spanish>Identificarse con una cuenta existente</Spanish>
+		<Russian>Авторизироваться с существующей учётной записью</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPY_LOGIN_TITLEBAR</Tag>
@@ -1137,6 +1149,7 @@
 		<German>Login</German>
 		<Italian>Login</Italian>
 		<Spanish>Iniciar sesión</Spanish>
+		<Russian>Авторизироваться</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPY_NEW_ACCOUNT</Tag>
@@ -1145,6 +1158,7 @@
 		<German>Neuen Account anlegen</German>
 		<Italian>Crea nuovo account</Italian>
 		<Spanish>Crear nueva cuenta</Spanish>
+		<Russian>Создать новую учётную запись</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAME_LIST_UNKNOWN_PING</Tag>
@@ -1153,6 +1167,7 @@
 		<German>[Unbekannt]</German>
 		<Italian>[Sconosciuto]</Italian>
 		<Spanish>[Desconocido]</Spanish>
+		<Russian>[Неизвестно]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAME_OPTION_ADVANCED_START</Tag>
@@ -1161,6 +1176,7 @@
 		<German>Fortgeschrittener Start</German>
 		<Italian>Avvio avanzato</Italian>
 		<Spanish>Inicio avanzado</Spanish>
+		<Russian>Расширенный старт</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GLOBELAYER_STRATEGY</Tag>
@@ -1169,6 +1185,7 @@
 		<German>Blendet die Strategieanzeige ein</German>
 		<Italian>Mostra il filtro strategico</Italian>
 		<Spanish>Muestra la capa de estrategia</Spanish>
+		<Russian>Отображать стратегический слой</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GLOBEVIEW_TOGGLE</Tag>
@@ -1177,6 +1194,7 @@
 		<German>Zeigt detaillierte Informationen über Ihre Spielewelt.</German>
 		<Italian>[NEWLINE]Informazioni dettagliate sul mondo di gioco.</Italian>
 		<Spanish>Hace que aparezca información detallada sobre el mundo de la partida.</Spanish>
+		<Russian>Выводить подробную информацию о мире вашей игры.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HOST_CONNECT_FAILURE_DESC</Tag>
@@ -1185,6 +1203,7 @@
 		<German>Der Spiele-Host ist nicht erreichbar.</German>
 		<Italian>Impossibile connettersi all'host della partita.</Italian>
 		<Spanish>No se ha podido acceder al anfitrión de la partida.</Spanish>
+		<Russian>Не удалось связаться с хостом игры.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HOST_CONNECT_FAILURE_TITLE</Tag>
@@ -1193,6 +1212,7 @@
 		<German>Host nicht erreichbar</German>
 		<Italian>Host irraggiungibile</Italian>
 		<Spanish>No se puede acceder al anfitrión</Spanish>
+		<Russian>Хост недоступен</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HOST_GAME</Tag>
@@ -1201,6 +1221,7 @@
 		<German>Spiel erstellen</German>
 		<Italian>Ospita partita</Italian>
 		<Spanish>Alojar partida</Spanish>
+		<Russian>Создать игру</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HOST_GAME_PASSWORD_DESC</Tag>
@@ -1209,6 +1230,7 @@
 		<German>Geben Sie ein Kennwort ein, um Ihr Spiel vor unbefugtem Zugriff zu schützen.[NEWLINE]Oder lassen Sie die Kennworteingabe leer, wenn Sie kein Kennwort nutzen wollen.</German>
 		<Italian>Inserisci una password se vuoi proteggere la tua partita.[NEWLINE]Lascia la password in bianco per non avere protezioni.</Italian>
 		<Spanish>Introduce una contraseña si deseas proteger la partida.[NEWLINE]Déjala en blanco para descartar la protección.</Spanish>
+		<Russian>Введите пароль, если хотите защитить игру от несанкционированного доступа.[NEWLINE]Оставьте поле пустым, если вам это не требуется.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HOST_GAME_PASSWORD_TITLE</Tag>
@@ -1217,6 +1239,7 @@
 		<German>SCHÜTZEN SIE IHR SPIEL</German>
 		<Italian>PROTEGGI LA TUA PARTITA</Italian>
 		<Spanish>PROTEGE LA PARTIDA</Spanish>
+		<Russian>ЗАЩИТИТЬ СВОЮ ИГРУ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HOST_GAME_PASSWORD_TITLEBAR</Tag>
@@ -1225,6 +1248,7 @@
 		<German>Spielkennwort</German>
 		<Italian>Password partita</Italian>
 		<Spanish>Contraseña de la partida</Spanish>
+		<Russian>Пароль игры</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HOST_NAT_ERROR_DESC</Tag>
@@ -1233,6 +1257,7 @@
 		<German>Es konnte kein Verbindungsaufbau mit der Firewall des Hosts ausgehandelt werden.</German>
 		<Italian>Impossibile negoziare con il firewall dell'host.</Italian>
 		<Spanish>No se ha podido negociar con el firewall/servidor de seguridad del anfitrión.</Spanish>
+		<Russian>Не удалось связаться с брандмауэром хоста</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HOST_NAT_ERROR_TITLE</Tag>
@@ -1241,6 +1266,7 @@
 		<German>Host nicht erreichbar</German>
 		<Italian>Host irraggiungibile</Italian>
 		<Spanish>No se puede acceder al anfitrión</Spanish>
+		<Russian>Хост недоступен</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INIT_ELAPSED_TIME</Tag>
@@ -1249,6 +1275,7 @@
 		<German>Fertig</German>
 		<Italian>Caricamento completato</Italian>
 		<Spanish>Finalizado</Spanish>
+		<Russian>Завершение</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INIT_GRAPHICS</Tag>
@@ -1257,6 +1284,7 @@
 		<German>Grafiken initialisieren</German>
 		<Italian>Caricamento in corso...</Italian>
 		<Spanish>Inic. gráficos</Spanish>
+		<Russian>Инициализация графики</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INIT_INITIALIZING</Tag>
@@ -1265,6 +1293,7 @@
 		<German>Wird initialisiert</German>
 		<Italian>Caricamento in corso...</Italian>
 		<Spanish>Iniciando</Spanish>
+		<Russian>Инициализация</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INIT_MAP_TRANSFER_ERROR_DESC</Tag>
@@ -1273,6 +1302,7 @@
 		<German>Die Kartendatei konnte nicht übertragen werden.</German>
 		<Italian>Impossibile inizializzare il trasferimento della mappa.</Italian>
 		<Spanish>No se ha podido iniciar la transferencia del mapa.</Spanish>
+		<Russian>Не удалось инициализировать передачу карты.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INIT_MAP_TRANSFER_ERROR_TITLE</Tag>
@@ -1281,6 +1311,7 @@
 		<German>Dateiübertragungsfehler</German>
 		<Italian>Errore di trasferimento file</Italian>
 		<Spanish>Error de transferencia de archivo</Spanish>
+		<Russian>Ошибка передачи файла</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INIT_SAVE_TRANSFER_ERROR_DESC</Tag>
@@ -1289,6 +1320,7 @@
 		<German>Die Spieldatendatei konnte nicht übertragen werden.</German>
 		<Italian>Impossibile inizializzare il trasferimento dei file dati di gioco.</Italian>
 		<Spanish>No se ha podido iniciar la transferencia del archivo de datos de la partida.</Spanish>
+		<Russian>Не удалось инициализировать передачу файла игровых данных.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INIT_SAVE_TRANSFER_ERROR_TITLE</Tag>
@@ -1297,6 +1329,7 @@
 		<German>Dateiübertragungsfehler</German>
 		<Italian>Errore di trasferimento file</Italian>
 		<Spanish>Error de transferencia de archivo</Spanish>
+		<Russian>Ошибка передачи файла</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INIT_SETUP_INTERFACE</Tag>
@@ -1305,6 +1338,7 @@
 		<German>Interface-Setup</German>
 		<Italian>Impostazioni interfaccia</Italian>
 		<Spanish>Config. interfaz</Spanish>
+		<Russian>Настройка интерфейса</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INIT_SETUP_MAP</Tag>
@@ -1313,6 +1347,7 @@
 		<German>Karten-Setup</German>
 		<Italian>Impostazioni mappa</Italian>
 		<Spanish>Config. mapa</Spanish>
+		<Russian>Настройка карты</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INIT_SETUP_PLAYERS</Tag>
@@ -1321,6 +1356,7 @@
 		<German>Spieler-Setup</German>
 		<Italian>Impostazioni giocatori</Italian>
 		<Spanish>Config. jugadores</Spanish>
+		<Russian>Настройка игроков</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERNET_LOBBY_TITLE</Tag>
@@ -1329,6 +1365,7 @@
 		<German>INTERNET-LOBBY</German>
 		<Italian>SALA D'ATTESA INTERNET</Italian>
 		<Spanish>SALA DE INTERNET</Spanish>
+		<Russian>ИНТЕРНЕТ-ЛОББИ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INVALID_CAPTURE_DESC</Tag>
@@ -1336,12 +1373,16 @@
 		This message usually appears when game is freshly installed, or when INI file was corrupted or deleted.
 		To disable this message: Go to C:\Users\"your username"\Documents\My Games\Beyond the Sword, open CivilizationIV.ini, and change "enablevoice = 1" to "enablevoice = 0"</English>
 		<Italian>Hai selezionato un dispositivo di acquisizione vocale inutilizzabile. Acquisizione vocale disattivata. Questo messaggio di solito appare quando il gioco è stato appena installato o quando il file INI è stato danneggiato o cancellato. Per disabilitare questo messaggio: vai a C:\Users\"your username"\Documents\My Games\Beyond the Sword, apri CivilizationIV.ini e cambia "enablevoice = 1" in "enablevoice = 0"</Italian>
+		<Russian>Неверное звукозаписывающее устройство. Запись звука невозможна.
+		Данное сообщение появляется после установки игры, либо когда файл конфигурации повреждён или удалён.
+		Чтобы его отключить перейдите по C:\Users\"ваше имя пользователя"\Documents\My Games\Beyond the Sword, откройте с помощью блокнота "CivilizationIV.ini", и замените строчку "enablevoice = 1" на "enablevoice = 0"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INVALID_CAPTURE_TITLE</Tag>
 		<English>Invalid Device</English>
 		<German>Unzulässiges Gerät</German>
 		<Italian>Dispositivo non valido</Italian>
+		<Russian>Недопустимое устройство</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INVALID_LOGIN_DESC</Tag>
@@ -1350,6 +1391,7 @@
 		<German>Nicknames dürfen nicht mit einer Zahl oder den Zeichen '$', '#', '%%', '&amp;' und '@' beginnen</German>
 		<Italian>Il nickname non può iniziare con un numero, '$', '#', '%%', '&amp;', o '@'</Italian>
 		<Spanish>Los apodos no pueden empezar por un número, "$", "#", "%%", "&amp;" o "@".</Spanish>
+		<Russian>Имена пользователей не могут начинаться с цифры и знаков: '$', '#', '%%', '&amp;', or '@'</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INVALID_LOGIN_TITLE</Tag>
@@ -1358,18 +1400,21 @@
 		<German>Ungültiger Login-Name</German>
 		<Italian>Nome di login non valido</Italian>
 		<Spanish>Nombre de inicio de sesión no válido</Spanish>
+		<Russian>Недопустимое имя учётной записи</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INVALID_PLAYBACK_DESC</Tag>
 		<English>You have selected an unusable voice playback device. Voice playback disabled.</English>
 		<German>Es wurde ein ungeeignetes Gerät zur Sprachwiedergabe ausgewählt. Die Sprachwiedergabe wurde deaktiviert.</German>
 		<Italian>Hai selezionato un dispositivo di riproduzione vocale inutilizzabile. Riproduzione vocale disattivata.</Italian>
+		<Russian>Неверное устройство проигрывания звука. Воспроизведение звука отключено.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INVALID_PLAYBACK_TITLE</Tag>
 		<English>Invalid Device</English>
 		<German>Unzulässiges Gerät</German>
 		<Italian>Dispositivo non valido</Italian>
+		<Russian>Недопустимое устройство</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_JOIN_FAILURE_DESC</Tag>
