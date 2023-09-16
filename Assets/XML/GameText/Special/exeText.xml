@@ -2189,7 +2189,7 @@
 		<German>Mod laden</German>
 		<Italian>Carica una mod</Italian>
 		<Spanish>Cargar un mod</Spanish>
-		<Russian>Включить мод</Russian>
+		<Russian>Включить модификацию</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_LOBBY_NAME</Tag>
@@ -2246,7 +2246,7 @@
 		<German>Mod-Name:</German>
 		<Italian>Nome della mod:</Italian>
 		<Spanish>Nombre del mod:</Spanish>
-		<Russian>Название мода:</Russian>
+		<Russian>Название модификации:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_MOD_RESTART</Tag>
@@ -2255,7 +2255,7 @@
 		<German>Dieses Szenario erfordert das "%s1_ModName"-Mod.[NEWLINE]Das Spiel muss zum Laden dieses Mods neu gestartet werden.</German>
 		<Italian>Questo scenario necessita della mod "%s1_ModName".[NEWLINE]Per caricare questo mod il gioco deve essere riavviato.</Italian>
 		<Spanish>Este escenario requiere el mod "%s1_ModName".[NEWLINE]El juego debe reiniciarse para cargar este mod.</Spanish>
-		<Russian>Данному сценарию требуется мод "%s1_ModName".[NEWLINE]Для его включения требуется перезапуск игры.</Russian>
+		<Russian>Данному сценарию требуется модификация "%s1_ModName".[NEWLINE]Для её включения необходим перезапуск игры.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_MPINIT_FAILED_DESC</Tag>
@@ -2538,6 +2538,7 @@
 		<German> - Warten auf den PitBoss</German>
 		<Italian> - In attesa del Pitboss</Italian>
 		<Spanish> - Esperando Pitboss</Spanish>
+		<Russian> - В ожидании ПитБосса</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_PLAYERNAME_MISSING_DESC</Tag>
@@ -2546,6 +2547,7 @@
 		<German>Sie müssen einen Spielernamen angeben.</German>
 		<Italian>Devi specificare un nome di giocatore.</Italian>
 		<Spanish>Hay que facilitar el nombre del jugador.</Spanish>
+		<Russian>Необходимо указать имя игрока.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_PLAYERNAME_MISSING_TITLE</Tag>
@@ -2554,6 +2556,7 @@
 		<German>Spielername erforderlich</German>
 		<Italian>Nome del giocatore richiesto</Italian>
 		<Spanish>Se requiere nombre del jugador</Spanish>
+		<Russian>Требуется имя игрока</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_PLAYERS</Tag>
@@ -2562,6 +2565,7 @@
 		<German>Spieler</German>
 		<Italian>Giocatori</Italian>
 		<Spanish>Jugadores</Spanish>
+		<Russian>Игроки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_PLAYER_DETAILS_TITLE</Tag>
@@ -2570,6 +2574,7 @@
 		<German>SPIELERDETAILS</German>
 		<Italian>DETTAGLI GIOCATORE</Italian>
 		<Spanish>DETALLES DEL JUGADOR</Spanish>
+		<Russian>СВЕДЕНИЯ ОБ ИГРОКЕ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_PLAYER_NAME</Tag>
@@ -2578,6 +2583,7 @@
 		<German>Spielername</German>
 		<Italian>Nome giocatore</Italian>
 		<Spanish>Nombre del jugador</Spanish>
+		<Russian>Имя игрока</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_PLAYER_WAIT</Tag>
@@ -2586,6 +2592,7 @@
 		<German> - Warten auf </German>
 		<Italian> - In attesa di</Italian>
 		<Spanish> - Esperando a </Spanish>
+		<Russian> - В ожидании </Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_PLAY_NOW</Tag>
@@ -2594,6 +2601,7 @@
 		<German>Jetzt spielen!</German>
 		<Italian>Partita veloce</Italian>
 		<Spanish>Jugar ya</Spanish>
+		<Russian>Быстрая игра</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_RANDOM</Tag>
@@ -2602,6 +2610,7 @@
 		<German>Zufällig</German>
 		<Italian>Casuale</Italian>
 		<Spanish>Al azar</Spanish>
+		<Russian>Случайный</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_RANDOM_DESC</Tag>
@@ -2610,6 +2619,7 @@
 		<German>Das Staatsoberhaupt wird zufällig ausgewählt.</German>
 		<Italian>Il tuo leader verrà scelto casualmente.</Italian>
 		<Spanish>Tu líder se elegirá al azar.</Spanish>
+		<Russian>Предводитель будет выбран случайным образом.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_RANDOM_TOOLTIP</Tag>
@@ -2618,6 +2628,7 @@
 		<German>Es wird eine zufällige Wahl getroffen. Diese Option eignet sich nur für echte Draufgänger!</German>
 		<Italian>Verrà eseguita una scelta casuale. Scegliendo questa opzione, dimostri di essere un duro.</Italian>
 		<Spanish>La elección se realizará al azar. Con esta decisión se demuestra tu dureza.</Spanish>
+		<Russian>Выбор будет отдан на волю случая. Такой вариант продемонстрирует вашу силу.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_REFRESH_LIST</Tag>
@@ -2626,6 +2637,7 @@
 		<German>Liste aktualisieren </German>
 		<Italian>Aggiorna elenco</Italian>
 		<Spanish>Actualizar lista</Spanish>
+		<Russian>Обновить лист</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_REPEAT_PASSWORD</Tag>
@@ -2634,6 +2646,7 @@
 		<German>Wiederholen</German>
 		<Italian>Ripeti</Italian>
 		<Spanish>Repetir</Spanish>
+		<Russian>Повторить</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_ROOM_MEMBERS_TAB</Tag>
@@ -2642,6 +2655,7 @@
 		<German>Lobby-Mitglieder</German>
 		<Italian>Membri della sala d'attesa</Italian>
 		<Spanish>Miembros en la sala</Spanish>
+		<Russian>Члены лобби</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_SAVE_GAME_TITLE</Tag>
@@ -2650,6 +2664,7 @@
 		<German>Spiel speichern</German>
 		<Italian>Salva partita</Italian>
 		<Spanish>Guardar partida</Spanish>
+		<Russian>Сохранить игру</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_SAVE_VERSION</Tag>
@@ -2658,6 +2673,7 @@
 		<German>Spielstandversion:</German>
 		<Italian>Versione del salvataggio:</Italian>
 		<Spanish>Guardar versión:</Spanish>
+		<Russian>Версия сохранения:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_SCENARIO</Tag>
@@ -2666,6 +2682,7 @@
 		<German>Szenario</German>
 		<Spanish>Escenario</Spanish>
 		<Italian>Gioca uno scenario</Italian>
+		<Russian>Сценарий</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_SELECT_A</Tag>
@@ -2674,6 +2691,7 @@
 		<German>WÄhlen[SPACE]</German>
 		<Italian>Seleziona [SPACE]</Italian>
 		<Spanish>Seleccionar [SPACE]</Spanish>
+		<Russian>Выберите[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_SELECT_A_CIV</Tag>
@@ -2682,6 +2700,7 @@
 		<German>Zivilisation wÄhlen</German>
 		<Italian>SELEZIONA UNA CIVILTÀ</Italian>
 		<Spanish>Seleccionar una civilizaciÓn</Spanish>
+		<Russian>Выберите цивилизацию</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_SELECT_A_DIFFICULTY</Tag>
@@ -2690,6 +2709,7 @@
 		<German>Schwierigkeitsgrad wählen</German>
 		<Italian>Seleziona la difficoltà</Italian>
 		<Spanish>Seleccionar una dificultad</Spanish>
+		<Russian>Выберите сложность</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_SELECT_A_MAP</Tag>
@@ -2698,6 +2718,7 @@
 		<German>Karte wÄhlen</German>
 		<Italian>Seleziona una mappa</Italian>
 		<Spanish>Seleccionar un mapa</Spanish>
+		<Russian>Выберите карту</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_SELECT_CLIMATE_TITLE</Tag>
@@ -2706,6 +2727,7 @@
 		<German>KLIMA</German>
 		<Italian>CLIMA</Italian>
 		<Spanish>CLIMA</Spanish>
+		<Russian>КЛИМАТ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_SELECT_DIFFICULTY_TITLE</Tag>
@@ -2714,6 +2736,7 @@
 		<German>SCHWIERIGKEIT</German>
 		<Italian>DIFFICOLTÀ</Italian>
 		<Spanish>DIFICULTAD</Spanish>
+		<Russian>СЛОЖНОСТЬ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_SELECT_GAME_SPEED</Tag>
@@ -2722,6 +2745,7 @@
 		<German>Wie schnell soll das Spiel laufen?</German>
 		<Italian>Quanto veloce deve essere il gioco?</Italian>
 		<Spanish>¿A qué velocidad ha de ir el juego?</Spanish>
+		<Russian>Какая длительность должна быть у игры?</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_SELECT_GAME_SPEED_TITLE</Tag>
@@ -2730,6 +2754,7 @@
 		<German>SPIELGESCHWINDIGKEIT</German>
 		<Italian>VELOCITÀ DI GIOCO</Italian>
 		<Spanish>VELOCIDAD DE JUEGO</Spanish>
+		<Russian>СКОРОСТЬ ИГРЫ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_SELECT_SEALEVEL_TITLE</Tag>
@@ -2738,6 +2763,7 @@
 		<German>MEERESSPIEGEL</German>
 		<Italian>LIVELLO DEL MARE</Italian>
 		<Spanish>NIVEL DEL MAR</Spanish>
+		<Russian>УРОВЕНЬ МОРЯ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_SELECT_WORLD_SETUP</Tag>
@@ -2746,6 +2772,7 @@
 		<German>WELTGRÖSSE</German>
 		<Italian>DIMENSIONI DEL MONDO</Italian>
 		<Spanish>TAMAÑO DEL MUNDO</Spanish>
+		<Russian>РАЗМЕР МИРА</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_SELECT_WORLD_SIZE_TITLE</Tag>
@@ -2754,6 +2781,7 @@
 		<German>WELTGRÖSSE</German>
 		<Italian>DIMENSIONI DEL MONDO</Italian>
 		<Spanish>TAMAÑO DEL MUNDO</Spanish>
+		<Russian>РАЗМЕР МИРА</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_SERVER_STAGING_ERROR_DESC</Tag>
@@ -2762,6 +2790,7 @@
 		<German>Es ist ein Fehler im Staging Room auf dem Server aufgetreten.</German>
 		<Italian>Si è verificato un errore sul server della stanza di comunicazione.</Italian>
 		<Spanish>Se ha producido un error relacionado con la sala de comunicaciones del servidor.</Spanish>
+		<Russian>С комнатой на сервере произошла ошибка.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_SERVER_STAGING_ERROR_TITLE</Tag>
@@ -2770,6 +2799,7 @@
 		<German>Staging Room-Fehler</German>
 		<Italian>Errore nella stanza di comunicazione</Italian>
 		<Spanish>Error de la sala de comunicaciones</Spanish>
+		<Russian>Ошибка комнаты</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_SETTINGS</Tag>
@@ -2778,6 +2808,7 @@
 		<German>Einstellungen</German>
 		<Italian>Impostazioni</Italian>
 		<Spanish>Configuración</Spanish>
+		<Russian>Настройки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_SHORT_NICK_ERROR_DESC</Tag>
@@ -2786,6 +2817,7 @@
 		<German>Benutzernamen müssen mindestens 3 Zeichen lang sein.</German>
 		<Italian>Gli username devono essere lunghi almeno tre caratteri.</Italian>
 		<Spanish>Los nombres de usuario deben tener una longitud de al menos 3 caracteres.</Spanish>
+		<Russian>Длина имени пользователя должна составлять не менее 3 символов.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_SHORT_NICK_ERROR_TITLE</Tag>
@@ -2794,6 +2826,7 @@
 		<German>Fehler beim Benutzernamen</German>
 		<Italian>Errore di username</Italian>
 		<Spanish>Error de nombre de usuario</Spanish>
+		<Russian>Ошибка в имени пользователя</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_SINGLE_PLAYER</Tag>
@@ -2802,6 +2835,7 @@
 		<German>Einzelspieler</German>
 		<Italian>Giocatore singolo</Italian>
 		<Spanish>Un jugador</Spanish>
+		<Russian>Одиночная игра</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_STAGING_NAME</Tag>
@@ -2810,6 +2844,7 @@
 		<German>Staging Room</German>
 		<Italian>Stanza di comunicazione</Italian>
 		<Spanish>Sala de comunicaciones</Spanish>
+		<Russian>Комната</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_UNLOAD_MOD</Tag>
@@ -2818,6 +2853,7 @@
 		<German>Mod deaktivieren</German>
 		<Italian>Disattiva C2C</Italian>
 		<Spanish>Descargar mod</Spanish>
+		<Russian>Отключить модификацию</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_UPDATES</Tag>
@@ -2826,6 +2862,7 @@
 		<German>Auf Updates prüfen</German>
 		<Italian>Verifica aggiornamenti</Italian>
 		<Spanish>Comprobar actualizaciones</Spanish>
+		<Russian>Проверить обновления</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_VERSION_MISMATCH_ERROR_DESC</Tag>
