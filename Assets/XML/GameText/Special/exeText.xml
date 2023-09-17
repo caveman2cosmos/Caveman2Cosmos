@@ -2871,6 +2871,7 @@
 		<German>Ihre Kern-Spieldateien entsprechen nicht der auf dem Host verwendeten Version.[NEWLINE]Spielanschluss nicht möglich!</German>
 		<Italian>La versione dei nostri file critici è differente da quella dell'host.[NEWLINE]Impossibile partecipare alla partita!</Italian>
 		<Spanish>Aviso: la versión de los archivos críticos de la partida no coincide con la del anfitrión.[NEWLINE]No es posible unirse a la partida</Spanish>
+		<Russian>Версия критически важных файлов игры не совпадает с версией файлов хоста.[NEWLINE]К игре нельзя присоединиться!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_VERSION_MISMATCH_ERROR_TITLE</Tag>
@@ -2879,6 +2880,7 @@
 		<German>Versionskonflikt</German>
 		<Italian>Versione incompatibile</Italian>
 		<Spanish>Versión incompatible</Spanish>
+		<Russian>Несоответствие версий</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_VERSION_MISMATCH_WARNING_DESC</Tag>
@@ -2887,6 +2889,7 @@
 		<German>Achtung: Ihre Spieldaten entsprechen nicht der vom Host verwendeten Version.</German>
 		<Italian>Attenzione: la versione dei file del nostro gioco è differente da quella dell'host.</Italian>
 		<Spanish>Aviso: la versión de los archivos de la partida no coincide con la del anfitrión.</Spanish>
+		<Russian>Внимание: версия файлов игры не совпадает с версией файлов хоста.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_VERSION_MISMATCH_WARNING_TITLE</Tag>
@@ -2895,6 +2898,7 @@
 		<German>Versionskonflikt</German>
 		<Italian>Versione incompatibile</Italian>
 		<Spanish>Versión incompatible</Spanish>
+		<Russian>Несоответствие версий</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_VICTORIES</Tag>
@@ -2903,6 +2907,7 @@
 		<German>Siege</German>
 		<Italian>Vittorie</Italian>
 		<Spanish>Victorias</Spanish>
+		<Russian>Победы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_WAITING_FOR_CIVS</Tag>
@@ -2911,6 +2916,7 @@
 		<German>Warten auf Ziv-Auswahl ...</German>
 		<Italian>In attesa delle scelte delle civiltà...</Italian>
 		<Spanish>Esperando elección de civilizaciones...</Spanish>
+		<Russian>Ожидание выбора цивилизаций...</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_NAME_TAG</Tag>
@@ -2919,6 +2925,7 @@
 		<German>Kartenname: %s1_Name</German>
 		<Italian>Nome mappa: %s1_Name</Italian>
 		<Spanish>Nombre del mapa: %s1_Name</Spanish>
+		<Russian>Название карты: %s1_Name</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_UPDATE_RECV</Tag>
@@ -2927,6 +2934,7 @@
 		<German>KARTE WIRD ERHALTEN ...</German>
 		<Italian>RICEZIONE MAPPA IN CORSO...</Italian>
 		<Spanish>RECIBIENDO MAPA...</Spanish>
+		<Russian>ПОЛУЧЕНИЕ КАРТЫ...</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_UPDATE_SEND</Tag>
@@ -2935,6 +2943,7 @@
 		<German>KARTE WIRD GESENDET ...</German>
 		<Italian>INVIO MAPPA IN CORSO...</Italian>
 		<Spanish>ENVIANDO MAPA...</Spanish>
+		<Russian>ОТПРАВКА КАРТЫ...</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_UPDATE_TITLE</Tag>
@@ -2943,6 +2952,7 @@
 		<German>Kartentransfer</German>
 		<Italian>Trasferimento mappa</Italian>
 		<Spanish>Transferencia de mapa</Spanish>
+		<Russian>Передача карты</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MASTER_CONNECT_FAILURE_DESC</Tag>
@@ -2951,6 +2961,7 @@
 		<German>Der Verbindungsaufbau zum Spieleserver ist fehlgeschlagen.</German>
 		<Italian>La connessione al server per la ricerca di partite è fallita.</Italian>
 		<Spanish>Ha fallado la conexión con el servidor de búsqueda de partidas.</Spanish>
+		<Russian>Не удалось установить соединение с сервером просмотра игр.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MASTER_CONNECT_FAILURE_TITLE</Tag>
@@ -2959,6 +2970,7 @@
 		<German>Server nicht erreichbar</German>
 		<Italian>Server irraggiungibile</Italian>
 		<Spanish>No se puede acceder al servidor</Spanish>
+		<Russian>Сервер недоступен</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MASTER_CONNECT_INVALID_LOGIN_DESC</Tag>
@@ -2967,6 +2979,7 @@
 		<German>Der angegebene Benutzername ist ungültig.</German>
 		<Italian>L'username da te inserito non è valido.</Italian>
 		<Spanish>El nombre de usuario que has introducido no es válido.</Spanish>
+		<Russian>Вы ввели неверное имя пользователя.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MASTER_CONNECT_INVALID_LOGIN_TITLE</Tag>
@@ -2975,6 +2988,7 @@
 		<German>Ungültiger Login-Name</German>
 		<Italian>Nome di login non valido</Italian>
 		<Spanish>Nombre de inicio de sesión no válido</Spanish>
+		<Russian>Неверное имя</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MASTER_NAT_ERROR_DESC</Tag>
@@ -2983,6 +2997,7 @@
 		<German>Aufgrund der eingestellten Firewall-Regeln konnten keine Internetspiele gefunden werden.</German>
 		<Italian>Impossibile cercare partite Internet a causa di problemi con il firewall.</Italian>
 		<Spanish>No se han podido encontrar partidas en Internet debido a problemas con el firewall/servidor de seguridad.</Spanish>
+		<Russian>Невозможно найти игры через Интернет из-за проблем с брандмауэром.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MASTER_NAT_ERROR_TITLE</Tag>
@@ -2991,6 +3006,7 @@
 		<German>Server nicht erreichbar</German>
 		<Italian>Server irraggiungibile</Italian>
 		<Spanish>No se puede acceder al servidor</Spanish>
+		<Russian>Сервер недоступен</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MASTER_SERVER_ERROR_DESC</Tag>
@@ -2999,6 +3015,7 @@
 		<German>Der Spieleserver antwortet nicht.</German>
 		<Italian>Il server per la ricerca di partite non risponde.</Italian>
 		<Spanish>El servidor de búsqueda de partidas no responde.</Spanish>
+		<Russian>Сервер просмотра игр не отвечает.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MASTER_SERVER_ERROR_TITLE</Tag>
@@ -3007,6 +3024,7 @@
 		<German>Server nicht erreichbar</German>
 		<Italian>Server irraggiungibile</Italian>
 		<Spanish>No se puede acceder al servidor</Spanish>
+		<Russian>Сервер недоступен</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MASTER_SOCKET_ERROR_DESC</Tag>
@@ -3015,6 +3033,7 @@
 		<German>Es ist ein Fehler im Netzwerk-Socket aufgetreten. Die Verbindung zum Spieleserver wurde getrennt.</German>
 		<Italian>Il socket di rete ha rilevato un errore. Disconnesso dal server per la ricerca delle partite.</Italian>
 		<Spanish>El socket de red ha encontrado un error. Desconectado del servidor de búsqueda de partidas.</Spanish>
+		<Russian>Сетевой сокет столкнулся с ошибкой. Отключние от сервера просмотра игр.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MASTER_SOCKET_ERROR_TITLE</Tag>
@@ -3023,6 +3042,7 @@
 		<German>Netzwerkfehler</German>
 		<Italian>Errore di rete</Italian>
 		<Spanish>Error de red</Spanish>
+		<Russian>Ошибка сети</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MASTER_UNAVAILABLE_DESC</Tag>
@@ -3031,6 +3051,7 @@
 		<German>Der Spieleserver ist nicht verfügbar.</German>
 		<Italian>Il server Internet per la ricerca delle partite non è disponibile.</Italian>
 		<Spanish>El servidor de búsqueda de partidas en Internet no está disponible.</Spanish>
+		<Russian>Сервер просмотра игр через Интернет недоступен.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MASTER_UNAVAILABLE_TITLE</Tag>
