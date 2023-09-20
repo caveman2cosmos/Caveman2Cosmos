@@ -544,7 +544,7 @@
 		<English>[ICON_BULLET]%D1_Change%% vs. Wild Animals</English>
 		<French>[ICON_BULLET]%D1_Change%% contre: Animaux sauvages</French>
 		<German>[ICON_BULLET]%D1_Change%% gegen Raubtiere</German>
-		<Italian>[ICON_BULLET]Modificatore contro le unità animale selvaggio [COLOR_HIGHLIGHT_TEXT]%D1_Change%%[COLOR_REVERT]</Italian> <!-- unit Pack Llama -->
+		<Italian>[ICON_BULLET]Modificatore contro le unità [COLOR_HIGHLIGHT_TEXT]animale selvaggio[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%D1_Change%%[COLOR_REVERT]</Italian> <!-- unit Pack Llama -->
 		<Spanish>[ICON_BULLET]%D1_Change%% contra animales salvajes</Spanish>
 		<Polish>[ICON_BULLET]%D1_Change%% do siły przeciwko: Dzikim Zwierzętom</Polish>
 		<Russian>[ICON_BULLET]%D1_Change%% ïðîòèâ õèùíèêîâ</Russian>
@@ -620,7 +620,7 @@
 		<English>[ICON_BULLET]%D1_Amount%% Attack Strength</English>
 		<French>[ICON_BULLET]%D1_Amount%% en Attaquant</French>
 		<German>[ICON_BULLET]%D1_Amount%% Angriff</German>
-		<Italian>[ICON_BULLET]Modificatore d'attacco [COLOR_HIGHLIGHT_TEXT]%D1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Mapinguari (Obsidian Spearmen) -->
+		<Italian>[ICON_BULLET]Modificatore d'[COLOR_HIGHLIGHT_TEXT]attacco[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%D1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Mapinguari (Obsidian Spearmen) -->
 		<Polish>[ICON_BULLET]%D1_Amount%% do Atkau</Polish>
 	</TEXT>
 	<TEXT>
@@ -628,7 +628,7 @@
 		<English>[ICON_BULLET]%d1_Amount%% Attack Strength</English>
 		<French>[ICON_BULLET]Modif. d'Attaque: %d1_Amount%%</French>
 		<German>[ICON_BULLET]%d1_Amount%% Angriff</German>
-		<Italian>[ICON_BULLET]Modificatore d'attacco [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian>
+		<Italian>[ICON_BULLET]Modificatore d'[COLOR_HIGHLIGHT_TEXT]attacco[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian>
 		<Polish>[ICON_BULLET]Modyfikator Ataku: %d1_Amount%%</Polish>
 		<Russian>[ICON_BULLET]Attack Modifier: %d1_Amount%%</Russian>
 	</TEXT>
@@ -647,7 +647,7 @@
 		<English>Can Not Traverse</English>
 		<French>Ne peut pas Traverser</French>
 		<German>Durchqueren unmöglich</German>
-		<Italian>[ICON_BULLET]Non può attraversare le caselle con la caratteristica</Italian> <!-- unit Workboat (Prehistoric) -->
+		<Italian>[ICON_BULLET]Non può [COLOR_HIGHLIGHT_TEXT]attraversare[COLOR_REVERT] le caselle con la caratteristica</Italian> <!-- unit Workboat (Prehistoric) -->
 		<Spanish>No puede atravesar</Spanish>
 		<Polish>Nie można przebić</Polish>
 		<Russian>Íå ìîæåò ïåðåñå÷ü</Russian>
@@ -657,7 +657,7 @@
 		<English>[ICON_BULLET]%D1%% chance to Capture.</English>
 		<French>[ICON_BULLET]%D1%% de chances de capturer.</French>
 		<German>[ICON_BULLET]Gefangennahme: %D1%%</German>
-		<Italian>[ICON_BULLET]Probabilità di catturare un'unità nemica [COLOR_HIGHLIGHT_TEXT]%D1%%[COLOR_REVERT]</Italian> <!-- Subcombat type Wields (H2H Martial Arts) -->
+		<Italian>[ICON_BULLET]Probabilità di [COLOR_HIGHLIGHT_TEXT]catturare[COLOR_REVERT] un'unità nemica: [COLOR_HIGHLIGHT_TEXT]%D1%%[COLOR_REVERT]</Italian> <!-- Subcombat type Wields (H2H Martial Arts) -->
 		<Polish>[ICON_BULLET]%D1%% szansy na Przejęcie.</Polish>
 		<Russian>[ICON_BULLET]%D1%% øàíñîâ çàõâàòèòü.</Russian>
 	</TEXT>
@@ -666,7 +666,7 @@
 		<English>[ICON_BULLET]%D1%% chance to avoid Capture.</English>
 		<French>[ICON_BULLET]%D1%% de chances d'éviter la Capture.</French>
 		<German>[ICON_BULLET]Gefangennahme entgehen: %D1%%</German>
-		<Italian>[ICON_BULLET]Probabilità di sfuggire alla cattura [COLOR_HIGHLIGHT_TEXT]%D1%%[COLOR_REVERT]</Italian> <!-- Subcombat type Wields SiegeDesign (Gunpowder) -->
+		<Italian>[ICON_BULLET]Probabilità di [COLOR_HIGHLIGHT_TEXT]sfuggire[COLOR_REVERT] alla cattura: [COLOR_HIGHLIGHT_TEXT]%D1%%[COLOR_REVERT]</Italian> <!-- Subcombat type Wields SiegeDesign (Gunpowder) -->
 		<Polish>[ICON_BULLET]%D1%% szansy na uniknięcia Przejęcia.</Polish>
 		<Russian>[ICON_BULLET]%D1%% øàíñîâ èçáåæàòü çàõâàòà.</Russian>
 	</TEXT>
@@ -744,7 +744,7 @@
 		<English>[ICON_BULLET]%d1_Amount Strength [LINK=CONCEPT_FLANK_ATTACK]Flank attack[\LINK] against %s2_unitlist</English>
 		<French>[ICON_BULLET]%d1_Amount Force [LINK=CONCEPT_FLANK_ATTACK]Attaque de flanc[\LINK] contre %s2_unitlist</French>
 		<German>[ICON_BULLET]%d1_Amount Strength [LINK=CONCEPT_FLANK_ATTACK]Flankenangriff[\LINK] auf Einheit(en) %s2_unitlist</German>
-		<Italian>[ICON_BULLET]Forza degli [LINK=CONCEPT_FLANK_ATTACK]attacchi ai fianchi[\LINK] contro unità di tipo [COLOR_HIGHLIGHT_TEXT]%s2_unitlist %d1_Amount[COLOR_REVERT]</Italian>
+		<Italian>[NEWLINE][ICON_BULLET]Forza degli [LINK=CONCEPT_FLANK_ATTACK]attacchi ai fianchi[\LINK] contro unità di tipo [COLOR_HIGHLIGHT_TEXT]%s2_unitlist[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%d1_Amount[COLOR_REVERT]</Italian> <!-- unit Hybrid Gunship -->
 		<Spanish>[ICON_BULLET]%d1_Amount Strength [LINK=CONCEPT_FLANK_ATTACK]Flanqueo[\LINK] contra %s2_unitlist</Spanish>
 		<Polish>[ICON_BULLET]%d1_Amount Siły [LINK=CONCEPT_FLANK_ATTACK]Atak Skrzydłowy[\LINK] przeciwko %s2_unitlist</Polish>
 	</TEXT>
@@ -754,7 +754,7 @@
 		<French>[ICON_BULLET]Modif. de Combat contre des unités plus petites: %D1_Amount%% par rang inférieur</French>
 		<German>[ICON_BULLET]%d1_Amount%% gegen kleinere Einheiten (pro Stufe Größenunterschied)</German>
 		<Polish>[ICON_BULLET]Modyfikator Walki kontra Mniejsze Jednostki: %D1_Amount%% na Poziom Wielkości mniej</Polish>
-		<Italian>[ICON_BULLET]Contro unità con una dimensione inferiore [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Hell's Mouth Dog unit with Size matters-->
+		<Italian>[ICON_BULLET]Contro unità con una [COLOR_HIGHLIGHT_TEXT]dimensione inferiore[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Hell's Mouth Dog unit with Size matters-->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_COMBAT_MOD_PER_SIZE_MORE</Tag>
@@ -762,7 +762,7 @@
 		<French>[ICON_BULLET]Modif. de Combat contre des unités plus grandes: %D1_Amount%% par rang supérieur</French>
 		<German>[ICON_BULLET]%d1_Amount%% gegen größere Einheiten (pro Stufe Größenunterschied)</German>
 		<Polish>[ICON_BULLET]Modyfikator Walki kontra Większe Jednostki: %D1_Amount%% na Poziom Wielkości więcej</Polish>
-		<Italian>[ICON_BULLET]Contro unità con una dimensione superiore [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Hell's Mouth Dog unit with Size matters-->
+		<Italian>[ICON_BULLET]Contro unità con una [COLOR_HIGHLIGHT_TEXT]dimensione superiore[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Hell's Mouth Dog unit with Size matters-->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_COMBAT_MOD_PER_VOLUME_LESS</Tag>
@@ -770,7 +770,7 @@
 		<French>[ICON_BULLET]Modif. de Combat contre des groupes plus petits: %D1_Amount%% par Nb d'unités en moins</French>
 		<German>[ICON_BULLET]%d1_Amount%% gegen kleinere Gruppen (pro Stufe Größenunterschied)</German>
 		<Polish>[ICON_BULLET]Modyfikator Walki kontra Mniejsze Grupy: %D1_Amount%% na Poziom Wielkości mniej</Polish>
-		<Italian>[ICON_BULLET]Contro unità in un gruppo più piccolo [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Sharpshooter with Size matters-->
+		<Italian>[ICON_BULLET]Contro unità in un [COLOR_HIGHLIGHT_TEXT]gruppo più piccolo[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Sharpshooter with Size matters-->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_COMBAT_MOD_PER_VOLUME_MORE</Tag>
@@ -778,7 +778,7 @@
 		<French>[ICON_BULLET]Modif. de Combat contre des groupes plus grands: %D1_Amount%% par Nb d'unités suppl.</French>
 		<German>[ICON_BULLET]%d1_Amount%% gegen größere Gruppen (pro Stufe Größenunterschied)</German>
 		<Polish>[ICON_BULLET]Modyfikator Walki kontra Większe Grupy: %D1_Amount%% na Poziom Wielkości więcej</Polish>
-		<Italian>[ICON_BULLET]Contro unità in un gruppo più grande [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Sharpshooter  with Size matters-->
+		<Italian>[ICON_BULLET]Contro unità in un [COLOR_HIGHLIGHT_TEXT]gruppo più grande[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Sharpshooter  with Size matters-->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_COST_MODIFIER_TOTAL_MODIFIER</Tag>
@@ -873,7 +873,7 @@
 		<English>[ICON_BULLET]%D1_Amount%% Defence Strength</English>
 		<French>[ICON_BULLET]%D1_Amount%% en Défendant</French>
 		<German>[ICON_BULLET]%D1_Amount%% Verteidigung</German>
-		<Italian>[ICON_BULLET]Modificatore di difesa [COLOR_HIGHLIGHT_TEXT]%D1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Mapinguari (Obsidian Spearmen) -->
+		<Italian>[ICON_BULLET]Modificatore di [COLOR_HIGHLIGHT_TEXT]difesa[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%D1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Mapinguari (Obsidian Spearmen) -->
 		<Polish>[ICON_BULLET]%D1_Amount%% do Obrony</Polish>
 	</TEXT>
 	<TEXT>
@@ -881,7 +881,7 @@
 		<English>[ICON_BULLET]%d1_Amount%% Defence Strength</English>
 		<French>[ICON_BULLET]Modif. de Défense: %d1_Amount%%</French>
 		<German>[ICON_BULLET]%d1_Amount%% Verteidigung</German>
-		<Italian>[ICON_BULLET]Modificatore di difesa [COLOR_HIGHLIGHT_TEXT]%D1_Amount%%[COLOR_REVERT]</Italian>
+		<Italian>[ICON_BULLET]Modificatore di [COLOR_HIGHLIGHT_TEXT]difesa[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%D1_Amount%%[COLOR_REVERT]</Italian>
 		<Polish>[ICON_BULLET]Modyfikator Obrony: %d1_Amount%%</Polish>
 	</TEXT>
 	<TEXT>
@@ -964,7 +964,7 @@
 		<English>[ICON_BULLET]Dynamic Defense: Denies %d1_Amount%% Surround and Destroy Penalty when defending.</English>
 		<French>[ICON_BULLET]Défense Dynamique: Annule %d1_Amount%% des pénalités d'Encerclement lorsqu'il défend.</French>
 		<German>[ICON_BULLET]Dynamische Verteidigung: -%d1_Amount%% auf Einkesselungsstrafen in der Verteidigung</German>
-		<Italian>[ICON_BULLET]Penalità di circonda e distruggi annullata con la [COLOR_HIGHLIGHT_TEXT]difesa dinamica %d1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Trained Dog with Surround and Destroy -->
+		<Italian>[ICON_BULLET]Penalità di circonda e distruggi [COLOR_HIGHLIGHT_TEXT]annullata[COLOR_REVERT] con la [COLOR_HIGHLIGHT_TEXT]difesa dinamica[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Trained Dog with Surround and Destroy -->
 		<Polish>[ICON_BULLET]Dynamiczna Obrona: Znosi %d1_Amount%% kar Otocz i Zniszcz przy obronie.</Polish>
 		<Russian>[ICON_BULLET]Динамич. защита: убирает %d1_Amount%% штраф от Окружения и уничтожения, когда обороняется.</Russian>
 	</TEXT>
@@ -991,7 +991,7 @@
 		<English>[ICON_BULLET]Starts Withdrawal at %d1_Amount%% HP</English>
 		<French>[ICON_BULLET]Vont commencer à se retirer du combat lorsque blessé de %d1_Amount%% PV, plutôt que de se battre jusqu'à la mort.</French>
 		<German>[ICON_BULLET]Rückzug bei %d1_Amount%% TP</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Soglia di punti vita[COLOR_REVERT] sotto la quale l'unità cercherà di ritirarsi [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Ambusher with Defender Withdraw -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Soglia di punti vita[COLOR_REVERT] sotto la quale l'unità cercherà di ritirarsi: [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Ambusher with Defender Withdraw -->
 		<Spanish>[ICON_BULLET]Will begin attempting Withdrawal each round once injured to %d1_Amount%% HP rather than maintaining combat until near-death.</Spanish>
 		<Polish>[ICON_BULLET]Będzie próbowała uciec w każdej rundzie gdy będzie posiadać %d1_Amount%% HP, zamiast utrzymywać walkę aż do bliskiej śmierci.</Polish>
 	</TEXT>
@@ -1017,7 +1017,7 @@
 		<English>[ICON_BULLET]Enclose: Adds +%d1_Amount%% to the maximum possible Surround and Destroy bonus when surrounding.</English>
 		<French>[ICON_BULLET]Encercler: Ajoute +%d1_Amount%% au Bonus maximum de l'option Encercler et détruire.</French>
 		<German>[ICON_BULLET]Umzingeln: +%d1_Amount%% auf den maximal möglichen Einkesselungsbonus</German>
-		<Italian>[ICON_BULLET]Bonus massimo per l'[COLOR_HIGHLIGHT_TEXT]accerchiamento[COLOR_REVERT] di circonda e distruggi [COLOR_HIGHLIGHT_TEXT]+%d1_Amount%%[COLOR_REVERT]</Italian>  <!-- unit Trained Dog with Surround and Destroy -->
+		<Italian>[ICON_BULLET]Bonus massimo per l'[COLOR_HIGHLIGHT_TEXT]accerchiamento[COLOR_REVERT] di circonda e distruggi: [COLOR_HIGHLIGHT_TEXT]+%d1_Amount%%[COLOR_REVERT]</Italian>  <!-- unit Trained Dog with Surround and Destroy -->
 		<Polish>[ICON_BULLET]Otoczenie: Dodaje +%d1_Amount%% do maksymalnego możliwego bonusu Otocz i Zniszcz przy poddawaniu.</Polish>
 		<Russian>[ICON_BULLET]Блокада: дает +%d1_Amount%% к максимально возможному радиусу окружения и снимает вражеские бонусы при окружении.</Russian>
 	</TEXT>
@@ -1447,7 +1447,7 @@
 		<English>[ICON_BULLET]Lunge: Gets +%d1_Amount%% Surround and Destroy Bonus when attacking.</English>
 		<French>[ICON_BULLET]Fente: Reçoit +%d1_Amount%% un bonus d'Encercler et Détruire Bonus en attaquant.</French>
 		<German>[ICON_BULLET]Ausfallschritt: Einheit erhält +%d1_Amount%% Einkesselungsbonus beim Angriff</German>
-		<Italian>[ICON_BULLET]Bonus [COLOR_HIGHLIGHT_TEXT]affondo[COLOR_REVERT] quando si attacca il nemico circondato [COLOR_HIGHLIGHT_TEXT]+%d1_Amount%% [COLOR_REVERT]</Italian> <!-- unit Ambusher with Surround and Destroy option -->
+		<Italian>[ICON_BULLET]Bonus [COLOR_HIGHLIGHT_TEXT]affondo[COLOR_REVERT] quando si attacca il nemico circondato: [COLOR_HIGHLIGHT_TEXT]+%d1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Ambusher with Surround and Destroy option -->
 		<Polish>[ICON_BULLET]Pchnięcie: Otrzymuje +%d1_Amount%% bonusu Otocz i Zniszcz przy ataku.</Polish>
 		<Russian>[ICON_BULLET]Выпад: получает +%d1_Amount%% к сопутствующему урону и бонусу от убийств при атаке.</Russian>
 	</TEXT>
@@ -1824,7 +1824,7 @@
 		<English>[ICON_BULLET]Pursuit Chance: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Poursuite: peut ignorer la capacité de retrait de l'Ennemi (%d1_Amount%% de Chances)</French>
 		<German>[ICON_BULLET]Verfolgungsjagd - kann den Rückzug des Gegners verhindern (%d1_Amount%%)</German>
-		<Italian>[ICON_BULLET]Possibilità di [COLOR_HIGHLIGHT_TEXT]inseguimento[COLOR_REVERT] al nemico per impedirgli di ritirarsi [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Ambusher with Hide and Seek option active -->
+		<Italian>[ICON_BULLET]Probabilità di [COLOR_HIGHLIGHT_TEXT]inseguimento[COLOR_REVERT] al nemico per impedirgli di ritirarsi: [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Ambusher with Hide and Seek option active -->
 		<Polish>[ICON_BULLET]Pościg: Może zablokowć wrogą ucieczkę z pola walki (%d1_Amount%% Szans)</Polish>
 		<Russian>[ICON_BULLET]Ïåðåõâàò: âîçìîæíîñòü çàïðåòèòü ïðîòèâíèêó âûéòè èç áîÿ (øàíñ %d1_Amount%%)</Russian>
 	</TEXT>
@@ -1833,7 +1833,7 @@
 		<English>[ICON_BULLET]Pursuit Chance: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Poursuite: peut ignorer le retrait de %d1_Amount%%</French>
 		<German>[ICON_BULLET]Verfolgungsjagd (Rückzug verhindern): %d1_Amount%%</German>
-		<Italian>[ICON_BULLET]Possibilità di [COLOR_HIGHLIGHT_TEXT]inseguimento[COLOR_REVERT] al nemico per impedirgli di ritirarsi [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Ambusher with Hide and Seek option active -->
+		<Italian>[ICON_BULLET]Probabilità di [COLOR_HIGHLIGHT_TEXT]inseguimento[COLOR_REVERT] al nemico per impedirgli di ritirarsi: [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Ambusher with Hide and Seek option active -->
 		<Polish>[ICON_BULLET]Pościg: może zablokować ucieczkę %d1_Amount%%</Polish>
 		<Russian>[ICON_BULLET]Ïåðåõâàò: çàïðåòèòü ïðîòèâíèêó âûõîäèòü èç áîÿ %d1_Amount%%</Russian>
 	</TEXT>
@@ -1851,7 +1851,7 @@
 		<English>[ICON_BULLET]%D1_Change%% Pursuit vs. [LINK=%s2_Type]%s3_TypeName[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Change%% de Poursuite contre: [LINK=%s2_Type]%s3_TypeName[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Change%% Verfolgung von [LINK=%s2_Type]%s3_TypeName[\LINK]</German>
-		<Italian>[ICON_BULLET]Probabilità di riuscire in un [COLOR_HIGHLIGHT_TEXT]inseguimento[COLOR_REVERT] contro [LINK=%s2_Type]%s3_TypeName[\LINK] [COLOR_HIGHLIGHT_TEXT]%D1_Change%%[COLOR_REVERT]</Italian>
+		<Italian>[ICON_BULLET]Probabilità di riuscire in un [COLOR_HIGHLIGHT_TEXT]inseguimento[COLOR_REVERT] contro unità di tipo [LINK=%s2_Type]%s3_TypeName[\LINK]: [COLOR_HIGHLIGHT_TEXT]%D1_Change%%[COLOR_REVERT]</Italian> <!-- unit Fusion Submarine -->
 		<Spanish>[ICON_BULLET]%D1_Change%% Pursuit contra [LINK=%s2_Type]%s3_TypeName[\LINK]</Spanish>
 		<Polish>[ICON_BULLET]%D1_Change%% Pościg kontra [LINK=%s2_Type]%s3_TypeName[\LINK]</Polish>
 	</TEXT>
@@ -1999,7 +1999,7 @@
 		<English>[ICON_BULLET]State Religion must be present in city to train</English>
 		<French>[ICON_BULLET]La religion d'Etat doit être présente dans cette ville pour pouvoir former les Inquisiteurs.</French>
 		<German>[ICON_BULLET]Staatsreligion muss in der Stadt vorhanden sein um auszubilden</German>
-		<Italian>[ICON_BULLET]Per poter addestrare l'unità in città deve essere presente la [COLOR_HIGHLIGHT_TEXT]religione di stato[COLOR_REVERT]</Italian> <!-- unit Inquisitor -->
+		<Italian>[ICON_BULLET]Per poter [COLOR_HIGHLIGHT_TEXT]addestrare l'unità[COLOR_REVERT] in città deve essere presente la [COLOR_HIGHLIGHT_TEXT]religione di stato[COLOR_REVERT]</Italian> <!-- unit Inquisitor -->
 		<Spanish>[ICON_BULLET]La religión oficial ha de estar presente en la ciudad para poder entrenar</Spanish>
 		<Polish>[ICON_BULLET]Religia narodowa musi znajdować się w mieście by móc wytrenować</Polish>
 		<Russian>[ICON_BULLET]Ãîñóäàðñòâåííàÿ ðåëèãèÿ äîëæíà ïðèñóòñòâîâàòü â ãîðîäå</Russian>
@@ -2039,7 +2039,7 @@
 		<English>[ICON_BULLET]Can See %F1_Name</English>
 		<French>[ICON_BULLET]Peut voir: %F1_Name</French>
 		<German>[ICON_BULLET]sieht %s1:5_Name</German>
-		<Italian>[ICON_BULLET]È in grado di vedere le unità [COLOR_HIGHLIGHT_TEXT]invisibili[COLOR_REVERT] %F1_Name</Italian> <!-- unit Ambusher -->
+		<Italian>[ICON_BULLET]È in grado di vedere le [COLOR_HIGHLIGHT_TEXT]unità invisibili[COLOR_REVERT] %F1_Name</Italian> <!-- unit Ambusher -->
 		<Spanish>[ICON_BULLET]Puede ver %F1_Name</Spanish>
 		<Russian>[ICON_BULLET]Может обнаружить %F1_Name</Russian>
 	</TEXT>
@@ -2138,21 +2138,21 @@
 		<Tag>TXT_KEY_UNITHELP_STAMPEDE</Tag>
 		<English>[ICON_BULLET]Stampede: Will continue attacking until all defenders in the attacked plot are dead.</English>
 		<French>[ICON_BULLET]Suicidaire: Continue d'attaque jusqu'à ce que tous les défenseurs de la case soient morts.</French>
-		<Italian>[ICON_BULLET]Suicidio: continuerà ad attaccare fino alla morte di tutti i difensori della casella attaccata.</Italian>
+		<Italian>[ICON_BULLET]Caratteristica [COLOR_HIGHLIGHT_TEXT]calpestamento[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]continuerà ad attaccare[COLOR_REVERT] fino alla morte di tutti i difensori della casella attaccata o la propria</Italian> <!--unit War Rhyno -->
 		<Polish>[ICON_BULLET]Popłoch: Kontynuuje atak dopóki wszyscy obrońcy na atakowanym polu nie będą martwi.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_STAMPEDE_LONG</Tag>
 		<English>[ICON_BULLET]Stampede: Continues attacking until victory or death.</English>
 		<French>[ICON_BULLET]Suicidaire: Continue d'attaquer jusqu'à la victoire ou la mort.</French>
-		<Italian>[ICON_BULLET]Suicidio: continua ad attaccare, fino alla vittoria o alla morte.</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Calpestamento[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]continua ad attaccare[COLOR_REVERT] fino alla vittoria o alla morte</Italian>
 		<Polish>[ICON_BULLET]Pęd: Kontynuuje atak do wygranej lub śmierci.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_STAMPEDE_SHORT</Tag>
 		<English>[ICON_BULLET]Stampede: Fights to the death</English>
 		<French>[ICON_BULLET]Suicidaire: Combat à mort</French>
-		<Italian>[ICON_BULLET]Suicidio: combatte fino alla morte.</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Calpestamento[COLOR_REVERT]: combatte alla morte</Italian>
 		<Polish>[ICON_BULLET]Pęd: Walczy do śmierci</Polish>
 	</TEXT>
 	<TEXT>
@@ -2160,14 +2160,14 @@
 		<English>[ICON_BULLET]Targets any %s1_unit_list first in combat. If Assassination is possible, these units are also the list of units that may be targeted for assassination.</English>
 		<French>[ICON_BULLET]Cible toutes les unités %s1_unit_list en premier au combat. Si l'assassinat est possible, ces unités sont également la liste des unités qui peuvent être ciblées pour l'assassinat.</French>
 		<German>[ICON_BULLET]greift Einheiten vom Typ %s1_unit_list im Kampf zuerst an (wenn ein Mordanschlag möglich ist, werden diese Einheiten ebenfalls bevorzugt als Ziele ausgewählt)</German>
-		<Italian>[ICON_BULLET]Attacca per [COLOR_HIGHLIGHT_TEXT]prima[COLOR_REVERT] ogni unità di tipo %s1_unit_list. [NEWLINE][ICON_BULLET]Le unità di cui sopra possono essere scelte come bersaglio di un [COLOR_HIGHLIGHT_TEXT]assassinio[COLOR_REVERT] (se possibile)</Italian> <!-- unit Ambusher -->
+		<Italian>[ICON_BULLET]L'unità [COLOR_HIGHLIGHT_TEXT]attacca prima[COLOR_REVERT] le unità di tipo: %s1_unit_list[NEWLINE][ICON_BULLET]Le unità di cui sopra possono essere scelte come bersaglio di un [COLOR_HIGHLIGHT_TEXT]assassinio[COLOR_REVERT] (se possibile)</Italian> <!-- unit Ambusher -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_TAUNT</Tag>
 		<English>[ICON_BULLET]Taunt Chance: %D1%%</English>
 		<French>[ICON_BULLET]Provocation: %D1%% de prob. d'être attaqué dans un groupe.</French>
 		<German>[ICON_BULLET]Provokation: %D1%%</German>
-		<Italian>[ICON_BULLET]Probabilità di provocazione [COLOR_HIGHLIGHT_TEXT]%D1%%[COLOR_REVERT]</Italian>  <!-- Subcombat type Nature (Warning) -->
+		<Italian>[ICON_BULLET]Probabilità di [COLOR_HIGHLIGHT_TEXT]provocazione[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%D1%%[COLOR_REVERT]</Italian>  <!-- Subcombat type Nature (Warning) -->
 		<Polish>[ICON_BULLET]Prowokacja: %D1%% szansa na bycie zaatakowanym wewnątrz grupy jednostek.</Polish>
 		<Russian>[ICON_BULLET]Шанс провокации: %D1%%</Russian>
 	</TEXT>
@@ -2238,7 +2238,7 @@
 		<English>[ICON_BULLET]Unnerve: Unit counts as +%d1_Amount%% strength when surrounding.</English>
 		<French>[ICON_BULLET]Sang froid : L'unité compte pour +%d1_Amount%% de force lorsqu'elle est encerclée.</French>
 		<German>[ICON_BULLET]Entnerven: Einheit erhält +%d1_Amount%% Stärke beim Einkesseln von Gegnern</German>
-		<Italian>[ICON_BULLET]Quando circonda il nemico l'unità conta come un aumento di forza ([COLOR_HIGHLIGHT_TEXT]nervosismo[COLOR_REVERT]) [COLOR_HIGHLIGHT_TEXT]+%d1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Ambusher with Surround and Destroy option -->
+		<Italian>[ICON_BULLET]Quando circonda il nemico l'unità conta come un [COLOR_HIGHLIGHT_TEXT]aumento di forza[COLOR_REVERT] ([COLOR_HIGHLIGHT_TEXT]nervosismo[COLOR_REVERT]): [COLOR_HIGHLIGHT_TEXT]+%d1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Ambusher with Surround and Destroy option -->
 		<Polish>[ICON_BULLET]Załamanie: +%d1_Amount%% siły przy poddaniu.</Polish>
 		<Russian>[ICON_BULLET]Задира: отряд получает +%d1_Amount%% прибавку к силе, когда окружает.</Russian>
 	</TEXT>
@@ -2304,7 +2304,7 @@
 		<German>[ICON_BULLET]%d1_Amount%% gegen Barbaren</German>
 		<Spanish>[ICON_BULLET]%d1_Amount%% contro barbari non-animali.</Spanish>
 		<Polish>[ICON_BULLET]%d1_Amount%% przeciwko nie-zwierzęcym Barbarzyńcom</Polish>
-		<Italian>[ICON_BULLET]Contro le unità barbare non animali [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Brute -->
+		<Italian>[ICON_BULLET]Contro le [COLOR_HIGHLIGHT_TEXT]unità barbare[COLOR_REVERT] non animali: [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Brute -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_VSBARBS_MODIFIER</Tag>
@@ -2336,7 +2336,7 @@
 		<English>[ICON_BULLET]%D1_Change%% Withdraw vs. [LINK=%s2_Type]%s3_TypeName[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Change%% de Repli contre: [LINK=%s2_Type]%s3_TypeName[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Change%% Withdraw gegen [LINK=%s2_Type]%s3_TypeName[\LINK]</German>
-		<Italian>[ICON_BULLET]%D1_Change%% alla Ritirata contro [LINK=%s2_Type]%s3_TypeName[\LINK]</Italian>
+		<Italian>[ICON_BULLET]Probabilità di [COLOR_HIGHLIGHT_TEXT]ritirata[COLOR_REVERT] affrontando unità di tipo [LINK=%s2_Type]%s3_TypeName[\LINK]: [COLOR_HIGHLIGHT_TEXT]%D1_Change%%[COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change%% Withdraw contra [LINK=%s2_Type]%s3_TypeName[\LINK]</Spanish>
 		<Polish>[ICON_BULLET]%D1_Change%% do Wycofania się vs: [LINK=%s2_Type]%s3_TypeName[\LINK]</Polish>
 		<Russian>[ICON_BULLET]%D1_Change%% шанса отступить в бою с [LINK=%s2_Type]%s3_TypeName[\LINK]</Russian>
@@ -2469,6 +2469,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>ÁÒÐ</Russian>
+		<Italian>Veicolo da combattimento anfibio</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ACVSAM</Tag>
@@ -2480,6 +2481,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>ÇÐÊ</Russian>
+		<Italian>Veicolo da combattimento anfibio con missili terra-aria</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ACVSAM_PEDIA</Tag>
@@ -2542,11 +2544,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Incrociatore Aegis:Incrociatori Aegis</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Incrociatore antimissili Aegis</Italian>
 		<Spanish>
 			<Text>Crucero AEGIS:Cruceros AEGIS</Text>
 			<Gender>Male</Gender>
@@ -2681,7 +2679,7 @@
 		<Tag>TXT_KEY_UNIT_AH64_GUNSHIP</Tag>
 		<English>Helicopter Gunship</English>
 		<French>Helicoptère d'Assaut</French>
-		<Italian>Elicottero AH64</Italian>
+		<Italian>Elicottero da guerra</Italian>
 		<Spanish>
 			<Text>Helicóptero artillado</Text>
 			<Gender>Male</Gender>
@@ -3099,6 +3097,7 @@
 		</Spanish>
 		<Polish>Piechota Androidów</Polish>
 		<Russian>Áîåâîé àíäðîèä</Russian>
+		<Italian>Fanteria androide</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ANDROID_INFANTRY_PEDIA</Tag>
@@ -3128,6 +3127,7 @@
 		<French>Nuage de Nano-Animas de réparation</French>
 		<Polish>NanoChmura Naprawcza</Polish>
 		<Russian>Ðîé ðåìîíòíûõ íàíèòîâ</Russian>
+		<Italian>Nuvola di riparazione anima</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ANIMA_REPAIR_CLOUD_PEDIA</Tag>
@@ -3174,6 +3174,7 @@
 		</Spanish>
 		<Polish>Piechota Antroidów</Polish>
 		<Russian>Ïåõîòà àíòðîèäîâ</Russian>
+		<Italian>Fanteria antroide</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ANTHROID_INFANTRY_PEDIA</Tag>
@@ -3377,7 +3378,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Panzerwagen</German>
-		<Italian>Veicolo blindato</Italian>
+		<Italian>Automobile blindata</Italian>
 		<Spanish>
 			<Text>Vehículo blindado</Text>
 			<Gender>Male</Gender>
@@ -3397,7 +3398,7 @@
 		<English>Main Battle Tank</English>
 		<French>Char de Combat</French>
 		<German>M60-Panzer</German>
-		<Italian>Carro armato da battaglia</Italian>
+		<Italian>Carro armato da combattimento</Italian>
 		<Spanish>
 			<Text>Carro de combate de vanguardia</Text>
 			<Gender>Male</Gender>
@@ -3519,11 +3520,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Artiglieria:Artiglierie</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Artiglieria</Italian>
 		<Spanish>
 			<Text>Artillería:Artillería</Text>
 			<Gender>Female</Gender>
@@ -3661,7 +3658,7 @@
 		<English>Assault Droid</English>
 		<French>Droïde d'Assaut</French>
 		<German>Angriffsdroide</German>
-		<Italian>Droide da assalto</Italian>
+		<Italian>Drone da assalto</Italian>
 		<Spanish>
 			<Text>Droide de asalto</Text>
 			<Gender>Male</Gender>
@@ -3684,11 +3681,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Mech d'assalto:Mech d'assalto</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Mech d'assalto</Italian>
 		<Spanish>
 			<Text>Mecha de asalto:Mechas de asalto</Text>
 			<Gender>Male</Gender>
@@ -3713,6 +3706,7 @@
 		<French>Navire d'Assaut</French>
 		<Polish>Okręt Szturmowy</Polish>
 		<Russian>Øòóðìîâîå ñóäíî</Russian>
+		<Italian>Nave motosilurante</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ASSAULT_SHIP_PEDIA</Tag>
@@ -3745,6 +3739,7 @@
 		<French>Technicien Astronaute</French>
 		<Polish>Technik-Astronauta</Polish>
 		<Russian>Àñòðîòåõíèê</Russian>
+		<Italian>Tecnico astronautico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ASTRONAUTIC_TECHNICIAN_PEDIA</Tag>
@@ -3800,11 +3795,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Bomba Atomica:Bombe Atomiche</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Bomba nucleare</Italian>
 		<Spanish>
 			<Text>Bomba A</Text>
 			<Gender>Female</Gender>
@@ -3826,11 +3817,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Sottomarino d'attacco:Sottomarini d'attacco</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Sottomarino d'attacco</Italian>
 		<Spanish>
 			<Text>Cazasubmarinos:Cazasubmarinos</Text>
 			<Gender>Male</Gender>
@@ -3856,11 +3843,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Fanteria anticarro:Fanterie anticarro</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Fanteria anticarro</Italian>
 		<Spanish>
 			<Text>Infantería antitanque:Infanterías antitanque</Text>
 			<Gender>Female</Gender>
@@ -3948,11 +3931,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Automa:Automi</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Clone automa</Italian>
 		<Spanish>
 			<Text>Autómata:Autómatas</Text>
 			<Gender>Male</Gender>
@@ -3986,6 +3965,7 @@
 		</Spanish>
 		<Polish>Automatyczna Piechota</Polish>
 		<Russian>Àâòîïåõîòà</Russian>
+		<Italian>Fanteria autonoma</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AUTOM_INFANTRY_PEDIA</Tag>
@@ -3999,6 +3979,7 @@
 		<French>Electricien Automobile</French>
 		<Polish>Elektryk Samochodowy</Polish>
 		<Russian>Àâòîìåõàíèê</Russian>
+		<Italian>Elettrauto</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AUTO_ELECTRICIAN_PEDIA</Tag>
@@ -4012,6 +3993,7 @@
 		<French>Technicien en Aviation</French>
 		<Polish>Technik Awiacji</Polish>
 		<Russian>Àâèàòåõíèê</Russian>
+		<Italian>Tecnico aeronautico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AVIATION_TECHNICIAN_PEDIA</Tag>
@@ -4117,6 +4099,7 @@
 		<French>Bombardier Supersonique</French>
 		<Polish>Naddźwiękowy Bombowiec</Polish>
 		<Russian>B-1 «Ëàíñåð»</Russian>
+		<Italian>Bombardiere supersonico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_B1_LANCER_PEDIA</Tag>
@@ -4129,6 +4112,7 @@
 		<French>Bombardier à réaction</French>
 		<Polish>Bombowiec Odrzutowy</Polish>
 		<Russian>B-52 «Ñòðàòîôîðòðåññ»</Russian>
+		<Italian>Bombardiere a reazione</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_B52_BOMBER_PEDIA</Tag>
@@ -4517,6 +4501,7 @@
 		</Spanish>
 		<Polish>Balon Zaporowy</Polish>
 		<Russian>Áîåâîé àýðîñòàò</Russian>
+		<Italian>Dirigibile di sbarramento</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BARREDOWL</Tag>
@@ -4628,7 +4613,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Nave da guerra moderna</Italian>
+		<Italian>Corazzata moderna</Italian>
 		<Spanish>
 			<Text>Buque de línea moderno</Text>
 			<Gender>Male</Gender>
@@ -4688,6 +4673,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>Áàçóêà</Russian>
+		<Italian>Fanteria con bazooka</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BAZOOKA_PEDIA</Tag>
@@ -4852,6 +4838,7 @@
 		<English>Biker Gang</English>
 		<French>Gang de Bikers</French>
 		<Russian>Áàéêåð</Russian>
+		<Italian>Gang di motociclisti</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BIKER_GANG_PEDIA</Tag>
@@ -4891,11 +4878,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Missile biologico:Missili biologici</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Missile biologico</Italian>
 		<Spanish>
 			<Text>Misil biológico:Misiles biológicos</Text>
 			<Gender>Male</Gender>
@@ -4978,7 +4961,7 @@
 		<English>Genetic Soldier</English>
 		<French>Soldat Génétique</French>
 		<German>Genetischer Soldat</German>
-		<Italian>Soldato geneticamente modificato</Italian>
+		<Italian>Soldato genetico</Italian>
 		<Spanish>
 			<Text>Soldado genético</Text>
 			<Gender>Male</Gender>
@@ -5003,7 +4986,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>Áîåâîé äèðèæàáëü</Russian>
-		<Italian>Dirigibile </Italian>
+		<Italian>Dirigibile</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BLIMP_PEDIA</Tag>
@@ -5100,11 +5083,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Propeller Bomber</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Bombardiere ad elica</Italian>
 		<Spanish>
 			<Text>Bombardero a hélice:Bombarderos a hélice</Text>
 			<Gender>Male</Gender>
@@ -5305,7 +5284,7 @@
 		<Tag>TXT_KEY_UNIT_BTR80</Tag>
 		<English>Amphibious APC</English>
 		<French>Blindé APC Amphibie</French>
-		<Italian>APC anfibio</Italian>
+		<Italian>Veicolo trasporto truppe anfibio</Italian>
 		<Spanish>
 			<Text>APC anfibio</Text>
 			<Gender>Male</Gender>
@@ -5387,7 +5366,7 @@
 		<English>Burglar</English>
 		<French>Cambrioleur</French>
 		<Russian>Âçëîìùèê</Russian>
-		<Italian>Rapinatore</Italian>
+		<Italian>Scippatore</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BURHANUDDIN_RABBANI</Tag>
@@ -5576,6 +5555,7 @@
 		<English>Camel Trench Cavalry</English>
 		<French>Cavalerie Camélidée des Tranchées</French>
 		<Russian>Ñòðåëîê íà âåðáëþäå</Russian>
+		<Italian>Cavalleria da trincea su cammello</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAMEL_TRENCH_CAVALRY_PEDIA</Tag>
@@ -5639,6 +5619,7 @@
 		</Spanish>
 		<Polish>Pies Tropiący</Polish>
 		<Russian>Ñóïåðïåñ</Russian>
+		<Italian>Canis superior</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CANIS_SUPERIOR_PEDIA</Tag>
@@ -5819,6 +5800,7 @@
 		<French>Navire-Cargo Marchand</French>
 		<Polish>Frachtowiec</Polish>
 		<Russian>Ãðóçîâîå ñóäíî</Russian>
+		<Italian>Nave cargo mercantile</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CARGO_SHIP_PEDIA</Tag>
@@ -5885,11 +5867,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Portaerei:Portaerei</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Portaerei moderna</Italian>
 		<Spanish>
 			<Text>Portaaviones:Portaaviones</Text>
 			<Gender>Male</Gender>
@@ -5904,6 +5882,7 @@
 		<French>[ICON_BULLET]Peut réaliser du transport de troupes</French>
 		<Polish>[ICON_BULLET]Może wykonywać misje Lotniskowców</Polish>
 		<Russian>[ICON_BULLET]Может выполнять воздушные миссии с авианосца</Russian>
+		<Italian>[ICON_BULLET]L'unità può effettuare operazioni di [COLOR_HIGHLIGHT_TEXT]trasporto[COLOR_REVERT]</Italian> <!-- unit F14 Tomcat -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CARRIER_PEDIA</Tag>
@@ -5919,7 +5898,7 @@
 		<French>Carro-balliste</French>
 		<Polish>Carrobalista</Polish>
 		<Russian>Êàððîáàëëèñòà</Russian>
-		<Italian>Carrobalista </Italian>
+		<Italian>Carrobalista</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CARTHAGE_NUMIDIAN_CAVALRY</Tag>
@@ -6124,6 +6103,7 @@
 		<French>Cotre de Gardes-côtes</French>
 		<Polish>Kuter Straży Przybrzeżnej</Polish>
 		<Russian>Áåðåãîâàÿ îõðàíà</Russian>
+		<Italian>Motovedetta della guardia costiera</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CG_CUTTER_PEDIA</Tag>
@@ -6423,6 +6403,7 @@
 		<English>Chrome Infantry</English>
 		<French>Infanterie Chrome</French>
 		<Russian>Õðîìîâàÿ ïåõîòà</Russian>
+		<Italian>Fanteria cromo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHROME_INFANTRY_PEDIA</Tag>
@@ -6532,11 +6513,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Clone:Cloni</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Clone</Italian>
 		<Spanish>
 			<Text>Clon:Clones</Text>
 			<Gender>Male</Gender>
@@ -6560,6 +6537,7 @@
 		<English>Clone Infantry</English>
 		<French>Infanterie Clonée</French>
 		<Russian>Ïåõîòà êëîíîâ</Russian>
+		<Italian>Fanteria di cloni</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CLONE_INFANTRY_PEDIA</Tag>
@@ -6654,7 +6632,7 @@
 		<French>Cogue Marchande</French>
 		<Polish>Handlowa Koga</Polish>
 		<Russian>Òîðãîâûé êîðàáëü</Russian>
-		<Italian>Mercante con cocca</Italian>
+		<Italian>Cocca mercantile</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COG_MERCHANT_PEDIA</Tag>
@@ -7071,11 +7049,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Cyborg:Cyborg</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Cyborg</Italian>
 		<Spanish>
 			<Text>Ciborg:Ciborgs</Text>
 			<Gender>Male</Gender>
@@ -7523,11 +7497,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Dreadnought corazzato:Dreadnought corazzati</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Carro armato corazzato</Italian>
 		<Spanish>
 			<Text>Blindado Dreadnought:Blindados Dreadnought</Text>
 			<Gender>Male</Gender>
@@ -7557,6 +7527,7 @@
 		</Spanish>
 		<Polish>Drednot</Polish>
 		<Russian>Äðåäíîóò</Russian>
+		<Italian>Corazzata monocalibro</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DREADNOUGHT_SHIP_PEDIA</Tag>
@@ -7569,6 +7540,7 @@
 		<English>Droid Helicopter</English>
 		<French>Hélicoptère Droïde</French>
 		<Russian>Ðîáîêîïòåð</Russian>
+		<Italian>Elicottero drone</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DROID_HELICOPTER_PEDIA</Tag>
@@ -7586,6 +7558,7 @@
 		</Spanish>
 		<Polish>Droid-Piechota</Polish>
 		<Russian>Áîåâîé äðîèä</Russian>
+		<Italian>Fanteria drone</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DROID_INFANTRY_PEDIA</Tag>
@@ -7604,6 +7577,7 @@
 		</Spanish>
 		<Polish>Droid-Czołg</Polish>
 		<Russian>Äðîíî-òàíê</Russian>
+		<Italian>Carro armato drone</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DROID_TANK_PEDIA</Tag>
@@ -7634,7 +7608,7 @@
 		<Tag>TXT_KEY_UNIT_DRONE</Tag>
 		<English>Recon Drone</English>
 		<French>Drone de surveillance</French>
-		<Italian>Drone di sorveglianza</Italian>
+		<Italian>Drone da ricognizione</Italian>
 		<Spanish>
 			<Text>Avión no tripulado de reconocimiento</Text>
 			<Gender>Male</Gender>
@@ -7659,6 +7633,7 @@
 		</Spanish>
 		<Polish>Śmigłowiec Desantowy</Polish>
 		<Russian>Âåðòîëåò «Êàðàòåëü»</Russian>
+		<Italian>Navetta</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DROPSHIP_PEDIA</Tag>
@@ -7738,7 +7713,7 @@
 		<Tag>TXT_KEY_UNIT_EARLYJET</Tag>
 		<English>Early Jet Fighter</English>
 		<French>Chasseur à réaction basique</French>
-		<Italian>Caccia a reazione base</Italian>
+		<Italian>Caccia a reazione</Italian>
 		<Spanish>
 			<Text>Caza a reacción antiguo</Text>
 			<Gender>Male</Gender>
@@ -7751,7 +7726,7 @@
 		<Tag>TXT_KEY_UNIT_EARLYSTEALTH</Tag>
 		<English>Early Stealth Bomber</English>
 		<French>Bombardier furtif basique</French>
-		<Italian>Bombardiere stealth base</Italian>
+		<Italian>Bombardiere stealth</Italian>
 		<Spanish>
 			<Text>Bombardero invisible antiguo</Text>
 			<Gender>Male</Gender>
@@ -7765,7 +7740,7 @@
 		<English>Early Carrier</English>
 		<French>Porte-avions basique</French>
 		<German>Früher Flugzeugträger</German>
-		<Italian>Portaerei base</Italian>
+		<Italian>Portaerei</Italian>
 		<Spanish>
 			<Text>Portaaviones antiguo</Text>
 			<Gender>Male</Gender>
@@ -7779,7 +7754,7 @@
 		<English>Early Fighter</English>
 		<French>Avion de Chasse basique</French>
 		<German>Früher Jäger</German>
-		<Italian>Caccia base</Italian>
+		<Italian>Caccia</Italian>
 		<Spanish>
 			<Text>Caza antiguo</Text>
 			<Gender>Male</Gender>
@@ -7878,7 +7853,7 @@
 		<English>Early Tank</English>
 		<French>Tank basique</French>
 		<German>Früher Panzer</German>
-		<Italian>Carro armato base</Italian>
+		<Italian>Carro armato</Italian>
 		<Spanish>
 			<Text>Tanque antiguo</Text>
 			<Gender>Male</Gender>
@@ -8671,6 +8646,7 @@
 		</Spanish>
 		<Polish>Rozjemca</Polish>
 		<Russian>Ìèðîòâîðåö</Russian>
+		<Italian>Missile pacificatore</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EXPERIMENTAL_PEDIA</Tag>
@@ -8715,7 +8691,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Extraktions-Anlage</German>
-		<Italian>Impianto di estrazione</Italian>
+		<Italian>Installatore di piattaforme d'estrazione</Italian>
 		<Spanish>
 			<Text>Instalador de plataforma de extracción</Text>
 			<Gender>Male</Gender>
@@ -8751,6 +8727,7 @@
 		<French>Intercepteur à réaction</French>
 		<Polish>Odrzutowiec Przechwytujący</Polish>
 		<Russian>F-104 «Ñòàðôàéòåð»</Russian>
+		<Italian>Caccia intercettore a reazione</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_F104_STARFIGHTER_PEDIA</Tag>
@@ -8763,6 +8740,7 @@
 		<French>Chasseur à réaction</French>
 		<Polish>Myśliwiec Odrzutowy</Polish>
 		<Russian>F-111 «Òðóáêîçóá»</Russian>
+		<Italian>Caccia a reazione moderno</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_F111_AARDVARK_PEDIA</Tag>
@@ -8773,6 +8751,7 @@
 		<Tag>TXT_KEY_UNIT_F14_TOMCAT</Tag>
 		<English>F14 Tomcat</English>
 		<Russian>F-14 «Òîìêýò»</Russian>
+		<Italian>Grumman F-14 Tomcat</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_F14_TOMCAT_PEDIA</Tag>
@@ -8784,7 +8763,7 @@
 		<English>Modern Naval Fighter</English>
 		<French>Chasseur moderne Naval</French>
 		<German>F18 Hornet</German>
-		<Italian>F18 Hornet</Italian>
+		<Italian>F/A-18 Hornet</Italian>
 		<Spanish>F18 Hornet</Spanish>
 		<Polish>Współczesny Myśliwiec Pokładowy</Polish>
 		<Russian>F-18 «Õîðíåò»</Russian>
@@ -8802,6 +8781,7 @@
 		<French>Intercepteur furtif</French>
 		<Polish>Niewykrywalny Myśliwiec Przechwytujący</Polish>
 		<Russian>F-22 «Ðàïòîð»</Russian>
+		<Italian>Caccia intercettore stealth</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_F22_RAPTOR_PEDIA</Tag>
@@ -8814,7 +8794,7 @@
 		<English>Jet Naval Fighter</English>
 		<French>Chasseur naval à réaction</French>
 		<German>F4 Phantom</German>
-		<Italian>F4 Phantom</Italian>
+		<Italian>F-4 Phantom II</Italian>
 		<Spanish>F4 Phantom</Spanish>
 		<Polish>Pokładowy Myśliwiec Odrzutowy</Polish>
 		<Russian>F-4 «Ôàíòîì» II</Russian>
@@ -8889,7 +8869,7 @@
 		<English>[ICON_BULLET]Requires a state religion [ICON_BULLET]+2 XP from every non-state religion in the city [ICON_BULLET]Purges non-state religions when capturing a city (but no holy cities)</English>
 		<French>[ICON_BULLET]Requiert une religion d'Etat [ICON_BULLET]+2 XP pour chaque autre religion dans la ville. [ICON_BULLET]Purge les religions non étatiques lors de la capture d'une ville (mais pas les villes saintes)</French>
 		<German>[ICON_BULLET]Benötigt eine Staatsreligion [ICON_BULLET]+2 XP von jeder Nicht-Staatsreligion in der Staat [ICON_BULLET]Vernichtet alle Nicht-Staatsreligionen wenn er eine Stadt einnimmt (aber keine heiligen Städte)</German>
-		<Italian>[ICON_BULLET]Richiede di aver fondato una [COLOR_HIGHLIGHT_TEXT]religione di stato[COLOR_REVERT][NEWLINE][ICON_BULLET]Punti esperienza per ogni religione non di stato in città [COLOR_HIGHLIGHT_TEXT]+2[COLOR_REVERT][NEWLINE][ICON_BULLET]L'unità [COLOR_HIGHLIGHT_TEXT]elimina le religioni[COLOR_REVERT] non di stato quando cattura una città (non nelle città sante)</Italian> <!-- unit Inquisitor -->
+		<Italian>[ICON_BULLET]Richiede di aver fondato una [COLOR_HIGHLIGHT_TEXT]religione di stato[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Punti esperienza[COLOR_REVERT] per ogni religione non di stato in città [COLOR_HIGHLIGHT_TEXT]+2[COLOR_REVERT][NEWLINE][ICON_BULLET]L'unità [COLOR_HIGHLIGHT_TEXT]elimina le religioni[COLOR_REVERT] non di stato quando cattura una città (non nelle città sante)</Italian> <!-- unit Inquisitor -->
 		<Polish>[ICON_BULLET]Wymaga religii państwowej [ICON_BULLET]+2 XP za każdą religię nie-państwową w mieście [ICON_BULLET]Usuwa nie-państwową religię kiedy miasto zostaje podbite (oprócz Świetych Miast)</Polish>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Подсказка: [COLOR_REVERT]Требуется государственная религия [ICON_BULLET]+2 XP от каждой негосударственной религии в городе [ICON_BULLET]Удаляет все негосударственные религии при захвате города (кроме Священных городов)</Russian>
 	</TEXT>
@@ -8914,7 +8894,7 @@
 		<English>Super Soldier</English>
 		<French>Super Soldat</French>
 		<German>Supersoldat</German>
-		<Italian>Supersoldato</Italian>
+		<Italian>Soldato superiore</Italian>
 		<Spanish>
 			<Text>Súpersoldado</Text>
 			<Gender>Male</Gender>
@@ -8978,11 +8958,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Propeller Naval Fighter</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Caccia navale ad elica</Italian>
 		<Spanish>
 			<Text>Caza naval a hélice:Cazas navales a hélice</Text>
 			<Gender>Male</Gender>
@@ -9060,7 +9036,7 @@
 		<English>Flamethrower</English>
 		<French>Lance-Flammes</French>
 		<German>Flammenwerfer</German>
-		<Italian>Soldato con lanciafiamme</Italian>
+		<Italian>Lanciafiamme</Italian>
 		<Spanish>
 			<Text>Soldado con lanzallamas</Text>
 			<Gender>Male</Gender>
@@ -9114,6 +9090,7 @@
 		<French>Technicien en Aéronautique</French>
 		<Polish>Technik Lotniczy</Polish>
 		<Russian>Ëåòíûé òåõíèê</Russian>
+		<Italian>Tecnico di volo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FLIGHT_TECHNICIAN_PEDIA</Tag>
@@ -9376,7 +9353,7 @@
 		<English>Fusion Battleship</English>
 		<French>Navire de Guerre à Fusion</French>
 		<German>Fusionsschlachtschiff</German>
-		<Italian>Nave da guerra a fusione</Italian>
+		<Italian>Corazzata a fusione</Italian>
 		<Spanish>
 			<Text>Buque de línea a fusión</Text>
 			<Gender>Male</Gender>
@@ -9514,7 +9491,7 @@
 		<English>Fusion Transport</English>
 		<French>Transport à Fusion</French>
 		<German>Fusions-Transportschiff</German>
-		<Italian>Trasporto a fusione</Italian>
+		<Italian>Nave da trasporto a fusione</Italian>
 		<Spanish>
 			<Text>Transporte a fusión</Text>
 			<Gender>Male</Gender>
@@ -9532,7 +9509,7 @@
 		<Tag>TXT_KEY_UNIT_FUTURE_APC</Tag>
 		<English>Hi-Tech APC</English>
 		<French>Blindé APC Hi-Tech</French>
-		<Italian>APC hi-tech</Italian>
+		<Italian>Veicolo trasporto truppe hi-tech</Italian>
 		<Spanish>
 			<Text>APC de alta tecnología</Text>
 			<Gender>Male</Gender>
@@ -9552,7 +9529,7 @@
 		<English>Heavy Levitation Tank</English>
 		<French>Char Lourd Anti-grav</French>
 		<German>Schwebepanzer</German>
-		<Italian>Carro armato a levitazione</Italian>
+		<Italian>Carro armato pesante a levitazione</Italian>
 		<Spanish>
 			<Text>Blindado a levitación</Text>
 			<Gender>Male</Gender>
@@ -10417,11 +10394,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Missile teleguidato:Missili teleguidati</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Missile teleguidato</Italian>
 		<Spanish>
 			<Text>Misil guiado:Misiles guiados</Text>
 			<Gender>Male</Gender>
@@ -10490,11 +10463,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Elicottero da guerra:Elicotteri da guerra</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Elicottero d'attacco</Italian>
 		<Spanish>
 			<Text>Helicóptero de combate:Helicópteros de combate</Text>
 			<Gender>Male</Gender>
@@ -10645,7 +10614,7 @@
 		<English>Anti-Air Halftrack</English>
 		<French>Véhicule Anti-Aérien</French>
 		<German>Luftabwehr-Halbkettenfahrzeug</German>
-		<Italian>Veicolo con armi antiaeree</Italian>
+		<Italian>Semovente antiaereo</Italian>
 		<Spanish>
 			<Text>Vehículo antiaéreo</Text>
 			<Gender>Male</Gender>
@@ -10808,7 +10777,7 @@
 		<Tag>TXT_KEY_UNIT_HEAVY_ARMOR</Tag>
 		<English>Thermobaric Tank</English>
 		<French>Char Thermobarique</French>
-		<Italian>Carro armato termobarico</Italian>
+		<Italian>Carro armato super blindato</Italian>
 		<Spanish>
 			<Text>Blindado termobárico</Text>
 			<Gender>Male</Gender>
@@ -11221,7 +11190,7 @@
 		<Tag>TXT_KEY_UNIT_HITECH_HOVERCRAFT</Tag>
 		<English>Hi-Tech Hovercraft</English>
 		<French>Aéroglisseur Hi-Tech</French>
-		<Italian>Hovercraft hi-tech</Italian>
+		<Italian>Aeroscafo hi-tech</Italian>
 		<Polish>Nowoczesny Poduszkowiec</Polish>
 		<Russian>Ïðîäâ. ñóäíî íà â/ï</Russian>
 	</TEXT>
@@ -11252,7 +11221,7 @@
 		<English>Hi-Tech Robot</English>
 		<French>Robot Hi-Tech</French>
 		<German>Hi-Tech-Roboter</German>
-		<Italian>Robot Hi-Tech</Italian>
+		<Italian>Robot IX-6</Italian>
 		<Spanish>
 			<Text>Robot de alta tecnología</Text>
 			<Gender>Male</Gender>
@@ -11400,6 +11369,7 @@
 		<English>Hospital Ship II</English>
 		<French>Navire Hôpital II</French>
 		<Russian>Ìåä. êîðàáëü</Russian>
+		<Italian>Nave ospedale moderna</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HOSPITAL_SHIP_PEDIA</Tag>
@@ -11413,6 +11383,7 @@
 		<French>Aéroglisseur</French>
 		<Polish>Poduszkowiec</Polish>
 		<Russian>Ñóäíî íà â/ï</Russian>
+		<Italian>Aeroscafo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HOVERCRAFT_PEDIA</Tag>
@@ -11424,14 +11395,14 @@
 		<Tag>TXT_KEY_UNIT_HOVER_ARTILLERY</Tag>
 		<English>Hover Artillery</English>
 		<French>Aéroglisseur Artillerie</French>
-		<Italian>Artiglieria a levitazione</Italian>
+		<Italian>Aeroscafo da artiglieria</Italian>
 		<Polish>Artyleria-Poduszkowiec</Polish>
 		<Russian>Ãàóáèöà íà â/ï</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HOVER_ARTILLERY_PEDIA</Tag>
 		<English>The Hover Artillery is an artillery unit that can cross oceans. It is held up by use of liquid metals controlled by magnetic fields powered by a small fusion core.</English>
-		<Italian>L'artiglieria a levitazione può attraversare gli oceani; rimane sospesa sull'acqua grazie a un insieme di metalli liquidi controllati da campi magnetici creati da un piccolo nucleo a fusione.</Italian>
+		<Italian>L'aeroscafo da artiglieria può attraversare gli oceani; rimane sospesa sull'acqua grazie a un insieme di metalli liquidi controllati da campi magnetici creati da un piccolo nucleo a fusione.</Italian>
 		<Polish>Poduszkowiec (ang. hovercraft) - pojazd poruszający się na poduszce powietrznej. Poduszka ta powstaje gdy wentylator zasysa powietrze z otoczenia i wtłacza je pod spód pojazdu. Powietrze sprężane jest wewnątrz komory powstałej pomiędzy dnem maszyny, gruntem i elastycznym fartuchem. Gdy komora wypełni się powietrzem i poduszkowiec uniesie się na odpowiednią wysokość, nadmiar powietrza wydostaje się na zewnątrz. Wentylator musi mieć wystarczającą wydajność aby uzupełniał ubytek powietrza. Dzięki temu wysokość poduszki powietrznej pozostaje stała.</Polish>
 		<Russian>САУ на воздушной подушке - это артиллерийский расчет, способный пересекать океаны. Он поддерживается за счет использования жидких металлов, контролируемых магнитными полями, питаемыми компактным термоядерным реактором.</Russian>
 	</TEXT>
@@ -11614,7 +11585,7 @@
 		<English>Hybrid Gunship</English>
 		<French>Hélicoptère Hybride</French>
 		<German>Hybrides Gunship</German>
-		<Italian>Gunship ibrida</Italian>
+		<Italian>Elicottero da guerra ibrido</Italian>
 		<Spanish>
 			<Text>Helicóptero híbrido</Text>
 			<Gender>Male</Gender>
@@ -11641,7 +11612,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Bomba All'Idrogeno</Italian>
+		<Italian>Bomba all'idrogeno</Italian>
 		<Spanish>
 			<Text>Bomba de hidrógeno</Text>
 			<Gender>Female</Gender>
@@ -11704,11 +11675,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>ICBM:ICBM</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Missile balistico intercontinentale</Italian>
 		<Spanish>
 			<Text>ICBM:ICBM</Text>
 			<Gender>Male</Gender>
@@ -11853,11 +11820,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Fanteria:Fanterie</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Fanteria</Italian>
 		<Spanish>
 			<Text>Infantería:Infantería</Text>
 			<Gender>Female</Gender>
@@ -11947,6 +11910,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>ÌÐÑÄ "Òîð"</Russian>
+		<Italian>Missile balistico a raggio intermedio</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_IRONCLAD</Tag>
@@ -12370,6 +12334,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>Äæèï</Russian>
+		<Italian>Fuoristrada</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JEEP_PEDIA</Tag>
@@ -12385,11 +12350,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Modern Fighter</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Caccia moderno</Italian>
 		<Spanish>
 			<Text>Caza moderno:Cazas modernos</Text>
 			<Gender>Male</Gender>
@@ -12412,6 +12373,7 @@
 		<French>Technicien de l'Armée de l'air</French>
 		<Polish>Mechanik Odrzutowców</Polish>
 		<Russian>Áîðòìåõàíèê</Russian>
+		<Italian>Tecnico di aerei a reazione</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JET_TECHNICIAN_PEDIA</Tag>
@@ -13428,7 +13390,7 @@
 		<English>Landing Ship Tank</English>
 		<French>Char Amphibie</French>
 		<German>Panzer-Landeschiff</German>
-		<Italian>Mezzo da sbarco anfibio</Italian>
+		<Italian>Tank landing ship</Italian>
 		<Spanish>
 			<Text>Buque-blindado de desembarco</Text>
 			<Gender>Male</Gender>
@@ -13564,14 +13526,14 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>Artiglieria antigravità</Italian>
+		<Italian>Artiglieria a levitazione</Italian>
 		<Polish>Lewitująca Artyleria</Polish>
 		<Russian>Àíòèãðàâ. ãàóáèöà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LEVITATION_ARTILLERY_PEDIA</Tag>
 		<English>The Levitation Artillery is an artillery unit that can cross oceans. It is held up by by antigravity technology, and can theoretically pass through space.</English>
-		<Italian>L'artiglieria antigravità può attraversare gli oceani; rimane sospesa grazie a una tecnologia antigravità, e teoricamente può attraversare la materia.</Italian>
+		<Italian>L'artiglieria a levitazione può attraversare gli oceani; rimane sospesa grazie a una tecnologia antigravità, e teoricamente può attraversare la materia.</Italian>
 		<Polish>Antygrawitacja - hipotetyczne i nigdy niezaobserwowane w sposób potwierdzony naukowo oddziaływanie fizyczne. Temat najczęściej jest wykorzystywany w science fiction. Oddziaływanie to miałoby być analogiczne do grawitacji, lecz powodujące odpychanie zamiast przyciągania mas. Według teorii inflacyjnej w czasie swego powstawania Wszechświat przez pewien czas znajdował się w stanie fałszywej próżni posiadającej ujemne ciśnienie, który to stan zasadniczo różni się od efektu antygrawitacji, jako że źródłem odpychających sił jest przestrzeń, a nie rozkład masy.</Polish>
 		<Russian>Антигравитационная гаубица - это артиллерийское подразделение, способное пересекать океаны. Оно поддерживается антигравитационными технологиями и теоретически может проходить через космические клетки.</Russian>
 	</TEXT>
@@ -13581,6 +13543,7 @@
 		<French>Cargo-Marchand Liberty</French>
 		<Polish>Frachtowiec Liberty</Polish>
 		<Russian>Ëèáåðòè</Russian>
+		<Italian>Nave mercantile liberty</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LIBERTY_MERCHANT_PEDIA</Tag>
@@ -14180,11 +14143,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Mitragliatore:Mitragliatori</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Mitragliatrice</Italian>
 		<Spanish>
 			<Text>Ametralladora:Ametralladoras</Text>
 			<Gender>Female</Gender>
@@ -14559,11 +14518,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Marine:Marine</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Marine</Italian>
 		<Spanish>
 			<Text>Marine:Marines</Text>
 			<Gender>Male</Gender>
@@ -14787,11 +14742,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Fanteria meccanizzata:Fanterie meccanizzate</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Veicolo trasporto truppe moderno</Italian>
 		<Spanish>
 			<Text>Infantería mecanizada:Infantería mecanizada</Text>
 			<Gender>Female</Gender>
@@ -14812,7 +14763,7 @@
 		<Tag>TXT_KEY_UNIT_MEDEVAC_DROPSHIP</Tag>
 		<English>Medevac Dropship</English>
 		<French>SAMU Aérien</French>
-		<Italian>Dropship ospedale</Italian>
+		<Italian>Navetta ospedale</Italian>
 		<Polish>Dropship Ratunkowy</Polish>
 		<Russian>Ëåòàþùèé ãîñïèòàëü</Russian>
 	</TEXT>
@@ -14845,6 +14796,7 @@
 		<English>Medical Lab Technician</English>
 		<French>Technicien de Laboratoire</French>
 		<Russian>Ìåä. òåõíèê</Russian>
+		<Italian>Tecnico di laboratorio medico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MEDICAL_LAB_TECH_PEDIA</Tag>
@@ -14965,7 +14917,7 @@
 		<French>[COLOR_WARNING_TEXT]Les Missions commerciales nécessitent l'ouverture des frontières[COLOR_REVERT]</French>
 		<Polish>[COLOR_WARNING_TEXT]Misje Handlowe wymagają Otwartych Granic[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_WARNING_TEXT]Торговая миссия требует открытых границ[COLOR_REVERT]</Russian>
-		<Italian>[ICON_BULLET]Per effettuare missioni commerciali l'accordo [COLOR_HIGHLIGHT_TEXT]confini aperti[COLOR_REVERT] deve essere in vigore</Italian> <!-- unit Cog Merchant -->
+		<Italian>[ICON_BULLET]Per effettuare [COLOR_HIGHLIGHT_TEXT]missioni commerciali[COLOR_REVERT] l'accordo [COLOR_HIGHLIGHT_TEXT]confini aperti[COLOR_REVERT] deve essere in vigore</Italian> <!-- unit Cog Merchant -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MERLIN</Tag>
@@ -15144,11 +15096,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Incrociatore lanciamissili:Incrociatori lanciamissili</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Incrociatore lanciasiluri</Italian>
 		<Spanish>
 			<Text>Crucero portamisiles:Cruceros portamisiles</Text>
 			<Gender>Male</Gender>
@@ -15194,11 +15142,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Artiglieria mobile:Artiglierie mobili</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Artiglieria mobile</Italian>
 		<Spanish>
 			<Text>Pieza de artillería autopropulsada:Piezas de artillería autopropulsada</Text>
 			<Gender>Female</Gender>
@@ -15228,11 +15172,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>SAM mobile:SAM mobili</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Unità mobile con missili terra-aria</Italian>
 		<Spanish>
 			<Text>Misil tierra-aire móvil:Misiles tierra-aire móviles</Text>
 			<Gender>Male</Gender>
@@ -15302,11 +15242,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Unità corazzata:Unità corazzate</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Carro armato blindato</Italian>
 		<Spanish>
 			<Text>Blindado moderno:Blindados modernos</Text>
 			<Gender>Male</Gender>
@@ -15328,7 +15264,7 @@
 		<English>Stealth Fighter</English>
 		<French>Chasseur à réaction F35</French>
 		<German>Moderner Jäger F35</German>
-		<Italian>Velivolo stealth</Italian>
+		<Italian>Caccia stealth</Italian>
 		<Spanish>
 			<Text>Caza furtivo</Text>
 			<Gender>Male</Gender>
@@ -15347,7 +15283,7 @@
 		<Tag>TXT_KEY_UNIT_MODERN_FLAMETHROWER</Tag>
 		<English>Modern Flamethrower</English>
 		<French>Lance-Flammes Moderne</French>
-		<Italian>Lancia-fiamme moderno</Italian>
+		<Italian>Lanciafiamme moderno</Italian>
 		<Polish>Współczesny Miotacz Ognia</Polish>
 		<Russian>Ñîâð. îãíåìåò÷èê</Russian>
 	</TEXT>
@@ -15394,7 +15330,7 @@
 		<Tag>TXT_KEY_UNIT_MODERN_HOVERCRAFT</Tag>
 		<English>Modern Hovercraft</English>
 		<French>Aéroglisseur Moderne</French>
-		<Italian>Hovercraft moderno</Italian>
+		<Italian>Aeroscafo moderno</Italian>
 		<Polish>Współczesny Poduszkowiec</Polish>
 		<Russian>Ñîâð. ñóäíî íà â/ï</Russian>
 	</TEXT>
@@ -15462,6 +15398,7 @@
 		</French>
 		<Polish>Współczesny Karabin Maszynowy</Polish>
 		<Russian>Ñîâð. ïóëåìåò÷èê</Russian>
+		<Italian>Mitragliatrice moderna</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MODERN_MACHINE_GUN_PEDIA</Tag>
@@ -15594,7 +15531,7 @@
 		<English>[ICON_BULLET]Requires a state religion [ICON_BULLET]+2 XP from every building of the state religion [ICON_BULLET]+4 XP from shrine of the state religion [ICON_BULLET]+4 XP if player is full member of the Apostolic Palace [ICON_BULLET]If defends successfully in a city, spreads the state religion if not present</English>
 		<French>[ICON_BULLET]Requiert une religion d'Etat [ICON_BULLET]+2 EXP pour chaque bâtiment religieux [ICON_BULLET]+4 EXP pour chaque sanctuaire religieux [ICON_BULLET]+4 EXP si le joueur membre du Palais Apostolique [ICON_BULLET]Lors de la défense d'une ville, propage automatiquement sa religion</French>
 		<German>[ICON_BULLET]Benötigt eine Staatsreligion [ICON_BULLET]+2 XP von jedem Gebäude der Staatsreligion [ICON_BULLET]+4 XP vom Schrein der Staatsreligion [ICON_BULLET]+4 XP falls der Spieler Vollmitglied des Apostolischen Palastes ist [ICON_BULLET]Falls er in einer Stadt erfolgreich verteidigt, wird die Staatsreligion verbreitet, falls diese nicht bereits anwesend ist</German>
-		<Italian>[ICON_BULLET]Richiede di aver fondato una [COLOR_HIGHLIGHT_TEXT]religione di stato[COLOR_REVERT] [NEWLINE][ICON_BULLET]Per ogni [COLOR_HIGHLIGHT_TEXT]edificio[COLOR_REVERT] della religione di stato punti esperienza [COLOR_HIGHLIGHT_TEXT]+2[COLOR_REVERT][NEWLINE][ICON_BULLET]Per ogni [COLOR_HIGHLIGHT_TEXT]santuario[COLOR_REVERT] della religione di stato punti esperienza [COLOR_HIGHLIGHT_TEXT]+4[COLOR_REVERT][NEWLINE][ICON_BULLET]Se si è membri del [COLOR_HIGHLIGHT_TEXT]Palazzo Apostolico[COLOR_REVERT] punti esperienza [COLOR_HIGHLIGHT_TEXT]+4[COLOR_REVERT][NEWLINE][ICON_BULLET]Se l'unità si [COLOR_HIGHLIGHT_TEXT]difende[COLOR_REVERT] con successo in una città, [COLOR_HIGHLIGHT_TEXT]diffonde automaticamente[COLOR_REVERT] la religione di stato se non è presente</Italian> <!-- unit Monk -->
+		<Italian>[ICON_BULLET]Richiede di aver fondato una [COLOR_HIGHLIGHT_TEXT]religione di stato[COLOR_REVERT] [NEWLINE][ICON_BULLET]Per ogni [COLOR_HIGHLIGHT_TEXT]edificio[COLOR_REVERT] della religione di stato [COLOR_HIGHLIGHT_TEXT]punti esperienza[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]+2[COLOR_REVERT][NEWLINE][ICON_BULLET]Per ogni [COLOR_HIGHLIGHT_TEXT]santuario[COLOR_REVERT] della religione di stato [COLOR_HIGHLIGHT_TEXT]punti esperienza[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]+4[COLOR_REVERT][NEWLINE][ICON_BULLET]Se si è membri del [COLOR_HIGHLIGHT_TEXT]Palazzo Apostolico[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]punti esperienza[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]+4[COLOR_REVERT][NEWLINE][ICON_BULLET]Se l'unità si [COLOR_HIGHLIGHT_TEXT]difende[COLOR_REVERT] con successo in una città, [COLOR_HIGHLIGHT_TEXT]diffonde automaticamente[COLOR_REVERT] la religione di stato se non è presente</Italian> <!-- unit Monk -->
 		<Russian>[ICON_BULLET]Òðåáóåòñÿ ãîñ. ðåëèãèÿ [ICON_BULLET]+2 îïûòà îò êàæäîé ïîñòðîéêè ãîñ. ðåëèãèè [ICON_BULLET]+4 îïûòà îò êàæäîé ñâÿòûíè ãîñ. ðåëèãèè [ICON_BULLET]+4 îïûòà, åñëè èãðîê ïîëíîïðàâíûé âëàäåëåö Àïîñòîëüñêîãî äâîðöà [ICON_BULLET]Åñëè óñïåøíî îáîðîíÿåò ãîðîä, ëèáî ðàñïðîñòðàíÿåò ãîñ. ðåëèãèþ</Russian>
 	</TEXT>
 	<TEXT>
@@ -15679,6 +15616,7 @@
 		<French>Dépanneur</French>
 		<Polish>Mobilny Warsztat</Polish>
 		<Russian>Ðåìîíòíûé òðàíñïîðò</Russian>
+		<Italian>Unità supporto veicoli</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MOTORPOOL_PEDIA</Tag>
@@ -15768,6 +15706,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>ÌÐÑÄ</Russian>
+		<Italian>Missile balistico a medio raggio</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MSNIPER</Tag>
@@ -16008,6 +15947,7 @@
 		<French>Nuage de Nanites de Réparation</French>
 		<Polish>Naprawczy Rój Nanitów</Polish>
 		<Russian>Ðåìîíòíûå íàíèòû</Russian>
+		<Italian>Nuvola di riparazione a naniti</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NANITE_REPAIR_CLOUD_PEDIA</Tag>
@@ -16020,7 +15960,7 @@
 		<English>Nanite Spy</English>
 		<French>Espion Nanite</French>
 		<German>Nanitenspion</German>
-		<Italian>Naniti-spia</Italian>
+		<Italian>Sciame di naniti spia</Italian>
 		<Spanish>
 			<Text>Espía nanoide</Text>
 			<Gender>Male</Gender>
@@ -16034,7 +15974,7 @@
 		<English>Nanite Swarm</English>
 		<French>Essaim de Nanites</French>
 		<German>Nanitenschwarm</German>
-		<Italian>Nuvola di naniti</Italian>
+		<Italian>Sciame di naniti</Italian>
 		<Spanish>
 			<Text>Enjambre de nanoides</Text>
 			<Gender>Male</Gender>
@@ -16554,7 +16494,7 @@
 		<English>NLOS Cannon</English>
 		<French>Canon HLV</French>
 		<German>NLOS-Kanone</German>
-		<Italian>Cannone NLOS</Italian>
+		<Italian>NLOS-C</Italian>
 		<Spanish>
 			<Text>Cañón NLOS</Text>
 			<Gender>Male</Gender>
@@ -16645,7 +16585,7 @@
 		<English>Modern Carrier</English>
 		<French>Porte-avions Moderne</French>
 		<German>Moderner Flugzeugträger</German>
-		<Italian>Portaerei moderna</Italian>
+		<Italian>Portaerei avanzata</Italian>
 		<Spanish>
 			<Text>Portaaviones moderno</Text>
 			<Gender>Male</Gender>
@@ -17211,6 +17151,7 @@
 		<French>Chasseur à Hélices</French>
 		<Polish>Myśliwiec Śmigłowy</Polish>
 		<Russian>P-51 «Ìóñòàíã»</Russian>
+		<Italian>Caccia ad elica</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_P51_MUSTANG_PEDIA</Tag>
@@ -17404,11 +17345,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Paracadutista:Paracadutisti</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Paracadutista</Italian>
 		<Spanish>
 			<Text>Paracaidista:Paracaidistas</Text>
 			<Gender>Male</Gender>
@@ -17898,14 +17835,14 @@
 		<Tag>TXT_KEY_UNIT_PLASMA_THROWER</Tag>
 		<English>Plasmathrower</English>
 		<French>Lance-Plasma</French>
-		<Italian>Lancia-plasma</Italian>
+		<Italian>Lanciaplasma</Italian>
 		<Polish>Miotacz Plazmy</Polish>
 		<Russian>Ïëàçìàìåò÷èê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PLASMA_THROWER_PEDIA</Tag>
 		<English>The Plasma thrower is an infantry unit that roasts its enemies with plasma, or superheated chemicals that have lost one or more of their electrons.</English>
-		<Italian>Il lancia-plasma è un'unità di fanteria equipaggiata con armi al plasma o prodotti chimici sovrariscaldati, che hanno perso uno o più dei loro elettroni.</Italian>
+		<Italian>Il lanciaplasma è un'unità di fanteria equipaggiata con armi al plasma o prodotti chimici sovrariscaldati, che hanno perso uno o più dei loro elettroni.</Italian>
 		<Polish>Miotacz plazmy (karabin plazmowy) - prototypowa broń, skonstruowana dla UNATCO i MJ12. Wykorzystuje pociski z plastiku domieszkowanego substancjami magnetycznymi, podgrzewanego do uzyskania plazmy. Jest ona potem kierowana przy pomocy elektromagnesów do wyjścia lufy.</Polish>
 		<Russian>Плазмометчики - это пехотный отряд, поджигающий своих противников плазмой или перегретыми химическими веществами, потерявшими один или несколько своих электронов.</Russian>
 	</TEXT>
@@ -17959,7 +17896,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Missile appestatore</Italian>
+		<Italian>Missile contaminatore virale</Italian>
 		<Spanish>
 			<Text>Inductor de plaga</Text>
 			<Gender>Male</Gender>
@@ -17984,7 +17921,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Missile biologico</Italian>
+		<Italian>Missile biologico balistico</Italian>
 		<Spanish>
 			<Text>Bomba biológica</Text>
 			<Gender>Male</Gender>
@@ -18023,7 +17960,7 @@
 		<Tag>TXT_KEY_UNIT_POLICE_APC</Tag>
 		<English>Police APC</English>
 		<French>Blindé APC de Police</French>
-		<Italian>APC della polizia</Italian>
+		<Italian>Veicolo trasporto truppe della polizia</Italian>
 		<Polish>Policyjny Transporter</Polish>
 		<Russian>Ïîëèö. áðîíåìàøèíà</Russian>
 	</TEXT>
@@ -18073,6 +18010,7 @@
 		<English>Police Helicopter</English>
 		<French>Hélicoptère Police</French>
 		<Russian>Ïîëèö. âåðòîëåò</Russian>
+		<Italian>Elicottero della polizia</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_POLICE_HELICOPTER_PEDIA</Tag>
@@ -18321,6 +18259,7 @@
 		<French>Programmeur</French>
 		<Polish>Programista</Polish>
 		<Russian>Ïðîãðàììèñò</Russian>
+		<Italian>Programmatore</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PROGRAMMER_PEDIA</Tag>
@@ -18424,6 +18363,7 @@
 		<French>Navire-Piège</French>
 		<Polish>Okręt-Pułapka</Polish>
 		<Russian>Ñóäíî-ëîâóøêà</Russian>
+		<Italian>Nave esca</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_QSHIP_PEDIA</Tag>
@@ -18876,6 +18816,7 @@
 		<French>Mécano-Réplicateur</French>
 		<Polish>Mechanik Replikacji</Polish>
 		<Russian>Ìåõàíèê-ðåïëèêàòîð</Russian>
+		<Italian>Meccanicao replicatore</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_REPLICATION_MECHANIC_PEDIA</Tag>
@@ -19018,6 +18959,7 @@
 		<English>Robber</English>
 		<French>Voleur</French>
 		<Russian>Íàëåò÷èê</Russian>
+		<Italian>Rapinatore</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ROBBER_PEDIA</Tag>
@@ -19047,7 +18989,7 @@
 		<Tag>TXT_KEY_UNIT_ROBOT_IMP_GUARD</Tag>
 		<English>Robotic Imperial Guard</English>
 		<French>Garde Impériale Robotisée</French>
-		<Italian>Guardia imperiale robotizzata</Italian>
+		<Italian>Guardia imperiale robotica</Italian>
 		<Spanish>
 			<Text>Guardia imperial robótica</Text>
 			<Gender>Female</Gender>
@@ -19072,7 +19014,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Raketenartillerie</German>
-		<Italian>Artiglieria con razzi</Italian>
+		<Italian>Artiglieria con lanciarazzi</Italian>
 		<Spanish>
 			<Text>Artillería lanzacohetes</Text>
 			<Gender>Female</Gender>
@@ -19395,11 +19337,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Fanteria con missili terra-aria:Fanterie con missili terra-aria</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Fanteria con missili terra-aria</Italian>
 		<Spanish>
 			<Text>Infantería con misiles tierra-aire:Infantería con misiles tierra-aire</Text>
 			<Gender>Female</Gender>
@@ -19618,6 +19556,7 @@
 		</Spanish>
 		<Polish>Mech Zwiadowczy</Polish>
 		<Russian>Ðîáîò-ðàçâåä÷èê</Russian>
+		<Italian>Robot scout</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SCOUT_MECH_PEDIA</Tag>
@@ -19775,7 +19714,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>Sentinella</Italian>
+		<Italian>Sentinella robotica IA</Italian>
 		<Spanish>
 			<Text>Centinela</Text>
 			<Gender>Male</Gender>
@@ -19803,6 +19742,7 @@
 		</Spanish>
 		<Polish>Piechota Sentroidów</Polish>
 		<Russian>Ïåõîòà ñåíòðîèäîâ</Russian>
+		<Italian>Fanteria sentroide</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SENTROID_INFANTRY_PEDIA</Tag>
@@ -19848,6 +19788,7 @@
 		<French>Mécanodroïde</French>
 		<Polish>Droid-Mechanik</Polish>
 		<Russian>Ðåìîíòíûé äðîèä</Russian>
+		<Italian>Elicottero drone di servizio</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SERVICE_DROID_PEDIA</Tag>
@@ -20153,6 +20094,7 @@
 		<English>Shockwave APC</English>
 		<French>Blindé APC à ondes de choc</French>
 		<Russian>Ðåëüñîòðîííàÿ ÁÌÏ</Russian>
+		<Italian>Veicolo trasporto truppe a onda d'urto</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHOCKWAVE_APC_PEDIA</Tag>
@@ -20235,7 +20177,7 @@
 		<English>Siege Droid</English>
 		<French>Droïde de Siège</French>
 		<German>Belagerungsdroide</German>
-		<Italian>Droide da assedio</Italian>
+		<Italian>Drone da assedio</Italian>
 		<Spanish>
 			<Text>Droide de asedio</Text>
 			<Gender>Male</Gender>
@@ -20645,6 +20587,7 @@
 		<French>Développeur de Logiciels</French>
 		<Polish>Deweloper Oprogramowania</Polish>
 		<Russian>Ðàçðàáîò÷èê</Russian>
+		<Italian>Sviluppatore di software</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SOFTWARE_DEVELOPER_PEDIA</Tag>
@@ -20712,7 +20655,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>EMP SAM Infanterie</German>
-		<Italian>Fanteria SAM con EMP</Italian>
+		<Italian>Fanteria con missili terra-aria a impulsi elettromagnetici</Italian>
 		<Spanish>
 			<Text>Infantería SAM con EMP</Text>
 			<Gender>Male</Gender>
@@ -20830,11 +20773,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</German>
-		<Italian>
-			<Text>Agente speciale</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Agente speciale</Italian>
 		<Spanish>
 			<Text>Agente especial</Text>
 			<Gender>Male</Gender>
@@ -20848,7 +20787,7 @@
 		<English>Special Forces</English>
 		<French>Commando des Forces Spéciales</French>
 		<German>Spezialeinheit</German>
-		<Italian>Forze speciali</Italian>
+		<Italian>Commando delle forze speciali</Italian>
 		<Spanish>
 			<Text>Fuerzas especiales</Text>
 			<Gender>Female</Gender>
@@ -20871,7 +20810,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Spezialinfanterie</German>
-		<Italian>Fanteria specializzata</Italian>
+		<Italian>Fanteria speciale</Italian>
 		<Spanish>
 			<Text>Infantería especializada</Text>
 			<Gender>Female</Gender>
@@ -21043,7 +20982,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Bombardiere stealth</Italian>
+		<Italian>Bombardiere stealth moderno</Italian>
 		<Spanish>
 			<Text>Bombardero invisible:Bombarderos invisibles</Text>
 			<Gender>Male</Gender>
@@ -21106,6 +21045,7 @@
 		</Spanish>
 		<Polish>Niewykrywalny Śmigłowiec</Polish>
 		<Russian>Ñòåëñ-âåðòîëåò</Russian>
+		<Italian>Elicottero d'attacco stealth</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STEALTH_SUBMARINE</Tag>
@@ -21200,7 +21140,7 @@
 		<English>Stiletto Boat</English>
 		<French>Navire 'Stiletto'</French>
 		<German>Stilettoboot</German>
-		<Italian>Barca Stiletto</Italian>
+		<Italian>M80 Stiletto</Italian>
 		<Spanish>
 			<Text>Torpedero Stiletto</Text>
 			<Gender>Male</Gender>
@@ -21315,6 +21255,7 @@
 		<English>Street Gang</English>
 		<French>Gang des rues</French>
 		<Russian>Áàíäèò</Russian>
+		<Italian>Gang di strada</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STREET_GANG_PEDIA</Tag>
@@ -21325,7 +21266,7 @@
 		<English>Modern Interceptor</English>
 		<French>Intercepteur moderne</French>
 		<German>Kampfjäger F15</German>
-		<Italian>Intercettore moderno</Italian>
+		<Italian>Caccia intercettore moderno</Italian>
 		<Spanish>
 			<Text>Interceptor moderno</Text>
 			<Gender>Male</Gender>
@@ -21348,9 +21289,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Sottomarino</Text>		
-		</Italian>
+		<Italian>Sottomarino</Italian>
 		<Spanish>
 			<Text>Submarino:Submarinos</Text>
 			<Gender>Male</Gender>
@@ -21376,7 +21315,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Unterwasserstadt-Modul</German>
-		<Italian>Piattaforma abitabile sommergibile</Italian>
+		<Italian>Piattaforma cittadina sommersa</Italian>
 		<Spanish>
 			<Text>Plataforma habitable sumergible</Text>
 			<Gender>Female</Gender>
@@ -21559,6 +21498,7 @@
 		<English>SWAT Team</English>
 		<French>Equipe du SWAT</French>
 		<Russian>Ïîëèö. ñïåöíàç</Russian>
+		<Italian>Squadra SWAT</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SWAT_TEAM_PEDIA</Tag>
@@ -21630,6 +21570,7 @@
 		<French>Analyste Système</French>
 		<Polish>Analityk Systemów</Polish>
 		<Russian>Ñèñòåìíûé àíàëèòèê</Russian>
+		<Italian>Analista di sistemi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SYSTEMS_ANALYST_PEDIA</Tag>
@@ -21650,11 +21591,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Bomba nucleare tattica:Bombe nucleari tattiche</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Bomba nucleare tattica</Italian>
 		<Spanish>
 			<Text>Arma nuclear táctica:Armas nucleares tácticas</Text>
 			<Gender>Female</Gender>
@@ -21734,11 +21671,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Carro armato:Carri armati</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Carro armato medio</Italian>
 		<Spanish>
 			<Text>Tanque:Tanques</Text>
 			<Gender>Male</Gender>
@@ -21858,6 +21791,7 @@
 		<English>Technarchist</English>
 		<French>Technarchiste</French>
 		<Russian>Òåõíàðõèñò</Russian>
+		<Italian>Anarchico tecnologico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TECHNARCHIST_PEDIA</Tag>
@@ -21963,7 +21897,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Tesla-Infanterie</German>
-		<Italian>Fanteria Tesla</Italian>
+		<Italian>Fanteria tesla</Italian>
 		<Spanish>
 			<Text>Infantería Tesla</Text>
 			<Gender>Female</Gender>
@@ -22033,7 +21967,7 @@
 		<English>Electric Tank</English>
 		<French>Char Electrique</French>
 		<German>Thermobarischer Panzer</German>
-		<Italian>Carro armato elettrico</Italian>
+		<Italian>Carro armato con cannone di Gauss</Italian>
 		<Spanish>
 			<Text>Carro blindado eléctrico</Text>
 			<Gender>Female</Gender>
@@ -22568,11 +22502,11 @@
 		</French>
 		<Polish>Okopowy Karabin Maszynowy</Polish>
 		<Russian>Îêîïíûé ïóëåìåò÷èê</Russian>
+		<Italian>Mitragliatrice da trincea</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRENCH_MACHINE_GUN_PEDIA</Tag>
 		<English>In the late 19th century, Gatling guns and other externally powered types such as the Nordenfelt were often made in a variety of calibers, such as 0.5-inch and 1-inch. Due to their multiple barrels, overheating was not so much of an issue, but they were also quite heavy. When Maxim developed his recoil-powered machine gun using a single barrel, his first main design weighed a modest 26 pounds (11.8 kg) and fired a 0.45-inch rifle-caliber bullet from a 24-inch barrel. A famous photo of Maxim showed him picking it up by its 15-pound tripod (6.8 kg) with one arm. It was similar to present-day medium machine guns, but it could not be fired for extended periods due to overheating. As a result, Maxim created a water jacket cooling system to enable it to fire for extended periods. However, this added significant weight, as did the change to more powerful rifle cartridges.</English>
-		<Italian>Unità antisommossa.</Italian>
 		<Polish>Okopowy Karabin Maszynowy - rodzina karabinów maszynowych, której pierwowzorem był ciężki karabin maszynowy Hirama Maxima skonstruowany w 1883 roku. Była to broń skomplikowana, droga w produkcji i wymagająca dobrze wyszkolonej obsługi, ale przewyższająca pod każdym względem używane wcześniej kartaczownice.</Polish>
 	</TEXT>
 	<TEXT>
@@ -22898,6 +22832,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>Çàõâàò÷èê</Russian>
+		<Italian>Missile a controllo mentale</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TURN_PEDIA</Tag>
@@ -22953,7 +22888,7 @@
 		<English>Drone Tactical Bomber</English>
 		<French>Drone Bombardier tactique</French>
 		<German>Ferngesteuerte Bomber</German>
-		<Italian>Drone da bombardamento tattico</Italian>
+		<Italian>Bombardiere drone tattico</Italian>
 		<Spanish>
 			<Text>Bombardero táctico no tripulado</Text>
 			<Gender>Male</Gender>
@@ -22973,6 +22908,7 @@
 		<French>U-Boat</French>
 		<Polish>U-Boat</Polish>
 		<Russian>Ñóáìàðèíà</Russian>
+		<Italian>U-Boot</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_UBOAT_PEDIA</Tag>
@@ -23052,7 +22988,7 @@
 		<Tag>TXT_KEY_UNIT_UNMANNED_DESTROYER</Tag>
 		<English>Unmanned Destroyer</English>
 		<French>Contre-torpilleur sans équipage</French>
-		<Italian>Cacciatorpediniere senza equipaggio</Italian>
+		<Italian>Cacciatorpediniere autonomo</Italian>
 		<Polish>Bezzałogowy Niszczyciel</Polish>
 		<Russian>Áåñï. ýñìèíåö</Russian>
 	</TEXT>
@@ -23067,6 +23003,7 @@
 		<English>Drone Helicopter</English>
 		<French>Drone Hélicoptère</French>
 		<Russian>Áåñï. âåðòîëåò</Russian>
+		<Italian>Elicottero drone</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_UNMANNED_HELICOPTER_PEDIA</Tag>
@@ -23083,6 +23020,7 @@
 		</French>
 		<Polish>Zdalny Karabin Maszynowy</Polish>
 		<Russian>Àâòîòóðåëü</Russian>
+		<Italian>Mitragliatrice autonoma</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_UNMANNED_MACHINE_GUN_PEDIA</Tag>
@@ -23093,7 +23031,7 @@
 		<Tag>TXT_KEY_UNIT_UNMANNED_PIRATE_SKIFF</Tag>
 		<English>Unmanned Pirate Skiff</English>
 		<French>Esquif Pirate sans équipage</French>
-		<Italian>Motoscafo pirata senza equipaggio</Italian>
+		<Italian>Skiff pirata autonomo</Italian>
 		<Polish>Bezzałogowy Piracki Skiff</Polish>
 		<Russian>Áåñï. ïèðàò</Russian>
 	</TEXT>
@@ -23107,7 +23045,7 @@
 		<Tag>TXT_KEY_UNIT_UNMANNED_SUBMARINE</Tag>
 		<English>Unmanned Submarine</English>
 		<French>Sous-marin sans équipage</French>
-		<Italian>Sottomarino senza equipaggio</Italian>
+		<Italian>Sottomarino autonomo</Italian>
 		<Polish>Bezzałogowy Okręt Podwodny</Polish>
 		<Russian>Áåñï. ñóáìàðèíà</Russian>
 	</TEXT>
@@ -23122,6 +23060,7 @@
 		<English>Unmanned Trike</English>
 		<French>Trike sans pilote</French>
 		<Russian>Áåñï. òðèöèêë</Russian>
+		<Italian>Veicolo autonomo a tre ruote</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_UNMANNED_TRIKE_PEDIA</Tag>
@@ -23157,7 +23096,7 @@
 		<English>V1 Missile</English>
 		<French>Missile V1</French>
 		<German>V1-Rakete</German>
-		<Italian>Missile V1</Italian>
+		<Italian>V1</Italian>
 		<Spanish>
 			<Text>Misil V1</Text>
 			<Gender>Male</Gender>
@@ -23357,7 +23296,7 @@
 		<English>Walker Robot</English>
 		<French>Droïde Marcheur</French>
 		<German>Laufdroide</German>
-		<Italian>Droide semovente</Italian>
+		<Italian>Robot deambulante</Italian>
 		<Spanish>
 			<Text>Droide marchante</Text>
 			<Gender>Male</Gender>
@@ -23370,7 +23309,7 @@
 		<Tag>TXT_KEY_UNIT_WALKER_ARTILLERY</Tag>
 		<English>Walker Artillery</English>
 		<French>Marcheur Artillerie</French>
-		<Italian>Artiglieria semovente</Italian>
+		<Italian>Artiglieria deambulante</Italian>
 		<Polish>Ulepszony Mech</Polish>
 		<Russian>Õîäÿ÷àÿ ãàóáèöà</Russian>
 	</TEXT>
@@ -23390,7 +23329,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Mech bipede</Italian>
+		<Italian>Mech deambulante</Italian>
 		<Spanish>
 			<Text>Mecha bípedo</Text>
 			<Gender>Male</Gender>
@@ -23505,6 +23444,7 @@
 		</Spanish>
 		<Polish>Bojowe Boty Piechoty</Polish>
 		<Russian>Áîåâîé ðîáîò</Russian>
+		<Italian>Fanteria robotica</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARBOT_INFANTRY_PEDIA</Tag>
@@ -24057,7 +23997,7 @@
 		<Tag>TXT_KEY_UNIT_WORKBOAT_CLASSIC</Tag>
 		<English>Workboat (Ancient)</English>
 		<French>Bateau-atelier (Classique)</French>
-		<Italian>Barca da lavoro classica</Italian>
+		<Italian>Barca da lavoro antica</Italian>
 		<Spanish>
 			<Text>Barco faenero clásico</Text>
 			<Gender>Male</Gender>
@@ -24169,7 +24109,7 @@
 		<English>Android Servitor</English>
 		<French>Androïde</French>
 		<German>Androide</German>
-		<Italian>Androide</Italian>
+		<Italian>Lavoratore androide</Italian>
 		<Spanish>
 			<Text>Androide</Text>
 			<Gender>Male</Gender>
@@ -24277,7 +24217,7 @@
 		<English>Battleship</English>
 		<French>Croiseur de Bataille</French>
 		<German>Schlachtschiff</German>
-		<Italian>Nave da guerra</Italian>
+		<Italian>Corazzata</Italian>
 		<Spanish>
 			<Text>Buque de línea</Text>
 			<Gender>Male</Gender>
