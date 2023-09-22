@@ -3060,6 +3060,7 @@
 		<German>Server nicht verfügbar</German>
 		<Italian>Server non disponibile</Italian>
 		<Spanish>Servidor no disponible</Spanish>
+		<Russian>Сервер недоступен</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MASTER_UNSPECIFIED_ERROR_DESC</Tag>
@@ -3068,6 +3069,7 @@
 		<German>Der Spieleserver ist wegen eines unbekannten Fehlers nicht erreichbar.</German>
 		<Italian>Impossibile connettersi al server per la ricerca delle partite a causa di un problema non specificato.</Italian>
 		<Spanish>No se ha podido acceder al servidor de búsqueda de partidas debido a un problema sin especificar.</Spanish>
+		<Russian>Не получается связаться с сервером просмотра игр из-за неустановленной проблемы.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MASTER_UNSPECIFIED_ERROR_TITLE</Tag>
@@ -3076,6 +3078,7 @@
 		<German>Server nicht erreichbar</German>
 		<Italian>Server irraggiungibile</Italian>
 		<Spanish>No se puede acceder al servidor</Spanish>
+		<Russian>Сервер недоступен</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MEMBERS_ADD_BUDDY</Tag>
@@ -3084,6 +3087,7 @@
 		<German>Zu Freundesliste hinzufügen</German>
 		<Italian>Aggiungi alla lista amici</Italian>
 		<Spanish>Agregar a amigos</Spanish>
+		<Russian>Добавить в друзья</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MEMBERS_IGNORE_MEMBER</Tag>
@@ -3092,6 +3096,7 @@
 		<German>Benutzer ignorieren</German>
 		<Italian>Ignora l'utente</Italian>
 		<Spanish>Ignorar al usuario</Spanish>
+		<Russian>Игнорировать пользователя</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MEMBERS_REMOVE_BUDDY</Tag>
@@ -3100,6 +3105,7 @@
 		<German>Aus Freundesliste entfernen</German>
 		<Italian>Elimina dalla lista amici</Italian>
 		<Spanish>Quitar de amigos</Spanish>
+		<Russian>Убрать из друзей</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MEMBERS_SEND_MESSAGE</Tag>
@@ -3108,6 +3114,7 @@
 		<German>Nachricht senden</German>
 		<Italian>Invia messaggio</Italian>
 		<Spanish>Enviar mensaje</Spanish>
+		<Russian>Отправить сообщение</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MEMBERS_UNIGNORE_MEMBER</Tag>
@@ -3116,6 +3123,7 @@
 		<German>Benutzer nicht mehr ignorieren</German>
 		<Italian>Smetti di ignorare l'utente</Italian>
 		<Spanish>Dejar de ignorar al usuario</Spanish>
+		<Russian>Прекратить игнорировать пользователя</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MEMORY_SAVER_ERROR</Tag>
@@ -3124,6 +3132,7 @@
 		<German>Die Verwendung der MemorySaver-Option in Ihrer Konfiguration setzt exklusiven Zugriff auf die Grafikkarte voraus. Programm wird verlassen.</German>
 		<Italian>L'opzione di salvataggio della memoria video non permette aprire un'altra applicazione in secondo piano. Uscita dal programma in corso.</Italian>
 		<Spanish>Al usar la opción AhorroMemoria en tu configuración no se puede abrir otra aplicación en segundo plano. Saliendo.</Spanish>
+		<Russian>Использование опции MemorySaver в конфигурационном файле не допускает потери устройства. Выход из программы.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MENU_CIV_ADJ</Tag>
@@ -3132,6 +3141,7 @@
 		<German>Ziv.-Adjektiv:</German>
 		<Italian>Aggettivo civiltà:</Italian>
 		<Spanish>Adjetivo:</Spanish>
+		<Russian>Прилагательное цивилизации:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MENU_CIV_DESC</Tag>
@@ -3140,6 +3150,7 @@
 		<German>Ziv.-Beschreibung:</German>
 		<Italian>Descrizione civiltà:</Italian>
 		<Spanish>Civilización:</Spanish>
+		<Russian>Описание цивилизации:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MENU_CIV_EMAIL</Tag>
@@ -3148,6 +3159,7 @@
 		<German>E-Mail-Adresse:</German>
 		<Italian>Indirizzo e-mail:</Italian>
 		<Spanish>Dirección de e-mail:</Spanish>
+		<Russian>Адрес электронной почты:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MENU_CIV_PASSWORD</Tag>
@@ -3156,6 +3168,7 @@
 		<German>Civ-Kennwort:</German>
 		<Italian>Password civiltà:</Italian>
 		<Spanish>Contraseña de civilización:</Spanish>
+		<Russian>Пароль цивилизации:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MENU_CIV_SHORT_DESC</Tag>
@@ -3164,6 +3177,7 @@
 		<German>Kurzbeschreibung:</German>
 		<Italian>Descrizione breve:</Italian>
 		<Spanish>Descripción:</Spanish>
+		<Russian>Краткое описание:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MENU_CIV_SMTP</Tag>
@@ -3172,6 +3186,7 @@
 		<German>SMTP-Server:</German>
 		<Italian>Server SMTP:</Italian>
 		<Spanish>Servidor SMTP:</Spanish>
+		<Russian>SMTP-сервер:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MENU_CIV_TYPE</Tag>
@@ -3180,6 +3195,7 @@
 		<German>Zivilisation:</German>
 		<Italian>Tipo di civiltà:</Italian>
 		<Spanish>Tipo de civilización:</Spanish>
+		<Russian>Тип цивилизации:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MENU_CLIMATE</Tag>
@@ -3188,6 +3204,7 @@
 		<German>Klima:</German>
 		<Italian>Clima:</Italian>
 		<Spanish>Clima:</Spanish>
+		<Russian>Климат:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MENU_ERA</Tag>
@@ -3196,6 +3213,7 @@
 		<German>Zeitalter:</German>
 		<Italian>Era:</Italian>
 		<Spanish>Época:</Spanish>
+		<Russian>Эпоха:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MENU_FINAL_SETUP</Tag>
@@ -3204,6 +3222,7 @@
 		<German>SPIEL-SCHNAPPSCHUSS</German>
 		<Italian>RIASSUNTO PARTITA</Italian>
 		<Spanish>FOTO DE LA PARTIDA</Spanish>
+		<Russian>СНИМОК ИГРЫ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MENU_LEADER_NAME</Tag>
@@ -3212,6 +3231,7 @@
 		<German>Staatsoberhauptes:</German>
 		<Italian>Nome leader:</Italian>
 		<Spanish>Nombre del líder:</Spanish>
+		<Russian>Имя предводителя:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MENU_LEADER_TYPE</Tag>
@@ -3220,6 +3240,7 @@
 		<German>Staatsoberhaupt:</German>
 		<Italian>Tipo di leader:</Italian>
 		<Spanish>Tipo de líder:</Spanish>
+		<Russian>Тип предводителя:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MENU_MAP</Tag>
@@ -3228,6 +3249,7 @@
 		<German>Karte:</German>
 		<Italian>Mappa:</Italian>
 		<Spanish>Mapa:</Spanish>
+		<Russian>Карта:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MENU_SEALEVEL</Tag>
@@ -3236,6 +3258,7 @@
 		<German>Meeresspiegel:</German>
 		<Italian>Livello del mare:</Italian>
 		<Spanish>Nivel del mar:</Spanish>
+		<Russian>Уровень моря:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MENU_SIZE</Tag>
@@ -3244,6 +3267,7 @@
 		<German>Größe:</German>
 		<Italian>Dimensioni:</Italian>
 		<Spanish>Tamaño:</Spanish>
+		<Russian>Размер:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MENU_SPEED</Tag>
@@ -3252,6 +3276,7 @@
 		<German>Geschwindigkeit:</German>
 		<Italian>Velocità:</Italian>
 		<Spanish>Velocidad:</Spanish>
+		<Russian>Скорость:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MENU_YOUR_DETAILS</Tag>
@@ -3260,6 +3285,7 @@
 		<German>Euer Steckbrief:</German>
 		<Italian>Dettagli:</Italian>
 		<Spanish>Detalles:</Spanish>
+		<Russian>Информация о вас:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_ALARM_GOES_OFF</Tag>
@@ -3268,6 +3294,7 @@
 		<German>RIIIIIIIIING! Es ist jetzt %s1_TimeStr.</German>
 		<Italian>DRIIIIIIIIIN! Sono le %s1_TimeStr.</Italian>
 		<Spanish>¡RIIIIIIIIING! Hora: %s1_TimeStr.</Spanish>
+		<Russian>ВНИМАНИЕ! Настало %s1_TimeStr.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_ALARM_WILL_GO_OFF</Tag>
@@ -3276,6 +3303,7 @@
 		<German>Der Alarm wird um %s1_TimeStr ausgelöst.</German>
 		<Italian>L'allarme suonerà tra %s1_TimeStr.</Italian>
 		<Spanish>La alarma se apagará a la/s %s1_TimeStr.</Spanish>
+		<Russian>Будильник сработает в %s1_TimeStr.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_AM_MORNING</Tag>
@@ -3284,6 +3312,7 @@
 		<German>[SPACE]a.m.</German>
 		<Italian>[SPACE]am</Italian>
 		<Spanish>[SPACE]AM</Spanish>
+		<Russian>[SPACE]a.m.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_OUT_OF_SYNC</Tag>
@@ -3292,6 +3321,7 @@
 		<German>***** NICHT SYNCHRON! MEIN RANDOM SEED = %d1_Num: MY OPTIONS SEED = %d2_Options *****[NEWLINE]</German>
 		<Italian>***** FUORI SINCRONIA! MY SYNC SEED = %d1_Num: MY OPTIONS SEED = %d2_Options *****[NEWLINE]</Italian>
 		<Spanish>***** OUT OF SYNC! MY RANDOM SEED = %d1_Num: MY OPTIONS SEED = %d2_Options *****[NEWLINE]</Spanish>
+		<Russian>***** РАССИНХРОНИЗАЦИЯ! МОЁ ЗЕРНО СИНХРОНИЗАЦИИ = %d1_Sync : ЗЕРНО МОИХ ОПЦИЙ = %d2_Options *****[NEWLINE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PM_AFTERNOON</Tag>
@@ -3300,6 +3330,7 @@
 		<German>[SPACE]p.m.</German>
 		<Italian>[SPACE]pm</Italian>
 		<Spanish>[SPACE]PM</Spanish>
+		<Russian>[SPACE]p.m.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_SAY_TO_ALL</Tag>
@@ -3308,6 +3339,7 @@
 		<German>Alle ansprechen:[SPACE]</German>
 		<Italian>Parla a tutti:[SPACE]</Italian>
 		<Spanish>Decirles a todos:[SPACE]</Spanish>
+		<Russian>Сообщение всем:[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_SAY_TO_PLAYER</Tag>
@@ -3316,6 +3348,7 @@
 		<German>%s1_PlyrName ansprechen</German>
 		<Italian>Parla a %s1_PlyrName</Italian>
 		<Spanish>Decirle a %s1_PlyrName</Spanish>
+		<Russian>Сообщение для %s1_PlyrName</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_SAY_TO_TEAM</Tag>
@@ -3324,6 +3357,7 @@
 		<German>Team ansprechen:[SPACE]</German>
 		<Italian>Parla alla squadra:[SPACE]</Italian>
 		<Spanish>Decirle al equipo:[SPACE]</Spanish>
+		<Russian>Сообщение команде:[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_SEND</Tag>
@@ -3332,6 +3366,7 @@
 		<German>Senden</German>
 		<Italian>Invia</Italian>
 		<Spanish>Enviar</Spanish>
+		<Russian>Отправить</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_TRYING_TO_CONTACT</Tag>
@@ -3340,6 +3375,7 @@
 		<German>%s1_PlyrName versucht Euch zu kontaktieren!</German>
 		<Italian>%s1_PlyrName sta cercando di contattarti!</Italian>
 		<Spanish>%s1_PlyrName quiere contactar contigo</Spanish>
+		<Russian>%s1_PlyrName пытается связаться с вами!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_WARNING</Tag>
@@ -3348,6 +3384,7 @@
 		<German>Warnung!</German>
 		<Italian>Attenzione!</Italian>
 		<Spanish>¡Aviso!</Spanish>
+		<Russian>Внимание!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MOD_FOLDER_TAG</Tag>
@@ -3356,6 +3393,7 @@
 		<German>Mod-Verzeichnis: %s1_Modname</German>
 		<Italian>Cartella della mod: %s1_Modname</Italian>
 		<Spanish>Carpeta del mod: %s1_Modname</Spanish>
+		<Russian>Папка мода: %s1_Modname</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MOD_REQUIRED</Tag>
