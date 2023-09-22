@@ -2282,7 +2282,7 @@
 		<German>Multiplayer</German>
 		<Italian>Multigiocatore</Italian>
 		<Spanish>Multijugador</Spanish>
-		<Russian>Мультиплеер</Russian>
+		<Russian>Многопользовательская игра</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_MULTIPLAYER_DIRECTIP</Tag>
@@ -3402,6 +3402,7 @@
 		<German>Für den von Ihnen gewählten Spielstand muss das folgende Mod geladen werden: [NEWLINE][BOLD]%s1[\BOLD][NEWLINE] Die Anwendung wird neu gestartet, okay? </German>
 		<Italian>Il salvataggio selezionato richiede il caricamento della seguente mod: [NEWLINE][BOLD]%s1[\BOLD][NEWLINE] Il gioco deve essere riavviato, continuare?</Italian>
 		<Spanish>La partida guardada que has seleccionado requiere que se cargue el siguiente mod: [NEWLINE][BOLD]%s1[\BOLD][NEWLINE] La aplicación debe reiniciarse. ¿Aceptar? </Spanish>
+		<Russian>Выбранное сохранение требует мод:[NEWLINE][BOLD]%s1[\BOLD][NEWLINE]Вы согласны на перезапуск игры?</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MP_DIPLO_CANCEL_CURRENT_DEALS</Tag>
@@ -3410,6 +3411,7 @@
 		<German>Aktuelle Handelsvereinbarungen annullieren ...</German>
 		<Italian>Annulla gli accordi attuali...</Italian>
 		<Spanish>Cancelar los tratos actuales...</Spanish>
+		<Russian>Отмена текущих сделок...</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MP_DIPLO_EXIT</Tag>
@@ -3418,6 +3420,7 @@
 		<German>Diplomatie beenden</German>
 		<Italian>Esci dalla diplomazia</Italian>
 		<Spanish>Salir de la diplomacia</Spanish>
+		<Russian>Закрыть дипломатию</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MP_OFFER_TRADE</Tag>
@@ -3426,6 +3429,7 @@
 		<German>Handel anbieten</German>
 		<Italian>Proponi uno scambio</Italian>
 		<Spanish>Ofrecer intercambio</Spanish>
+		<Russian>Предложение торговли</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MP_RENEGOTIATE</Tag>
@@ -3434,6 +3438,7 @@
 		<German>Systemmeldung: Die Neuverhandlungen für Handelsabkommen haben begonnen.</German>
 		<Italian>Messaggio di sistema: la rinegoziazione commerciale è iniziata.</Italian>
 		<Spanish>Mensaje del sistema: iniciada la renegociación del intercambio.</Spanish>
+		<Russian>Системное сообщение: начались торговые переговоры.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MP_RETRACT_OFFER</Tag>
@@ -3442,6 +3447,7 @@
 		<German>Angebot zurückziehen</German>
 		<Italian>Ritira l'offerta</Italian>
 		<Spanish>Retirar la oferta</Spanish>
+		<Russian>Отклонить предложение</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MP_THEY_ACCEPT</Tag>
@@ -3450,6 +3456,7 @@
 		<German>Sie akzeptieren</German>
 		<Italian>Accettano</Italian>
 		<Spanish>Aceptan</Spanish>
+		<Russian>Они согласны</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MP_THEY_NO_ACCEPT</Tag>
@@ -3458,6 +3465,7 @@
 		<German>Sie lehnen ab</German>
 		<Italian>Non accettano</Italian>
 		<Spanish>No aceptan</Spanish>
+		<Russian>Они не согласны</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MULTIPLAYER_TAB_NAME</Tag>
@@ -3465,6 +3473,7 @@
 		<French>Multijoueur</French>
 		<Italian>Multigiocatore</Italian>
 		<Spanish>Multijugador</Spanish>
+		<Russian>Многопользовательская игра</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_NAT_CONTACT_FAILURE_DESC</Tag>
@@ -3473,6 +3482,7 @@
 		<German>Es konnte keine Verbindung zum NAT Negotiation Server hergestellt werden.</German>
 		<Italian>Impossibile connettersi al server di negoziazione NAT.</Italian>
 		<Spanish>No se ha podido conectar con el servidor de negociación NAT.</Spanish>
+		<Russian>Не удалось подключиться к серверу NAT Negotiation.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_NAT_CONTACT_FAILURE_TITLE</Tag>
@@ -3481,6 +3491,7 @@
 		<German>NAT-Server nicht verfügbar</German>
 		<Italian>Server NAT non disponibile</Italian>
 		<Spanish>Servidor NAT no disponible</Spanish>
+		<Russian>NAT сервер недоступен</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_NICKNAME_INUSE_DESC</Tag>
@@ -3489,6 +3500,7 @@
 		<German>Dieser Login-Name wird bereits von einem anderen Account verwendet.</German>
 		<Italian>Questo nome di login è già stato registrato da un altro account.</Italian>
 		<Spanish>Este nombre de inicio de sesión ya se está utilizando con otra cuenta.</Spanish>
+		<Russian>Это имя пользователя уже занято.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_NICKNAME_INUSE_TITLE</Tag>
@@ -3497,6 +3509,7 @@
 		<German>Falscher Login</German>
 		<Italian>Login non valido</Italian>
 		<Spanish>Inicio de sesión erróneo</Spanish>
+		<Russian>Неподходящее имя</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OOS_TITLE</Tag>
@@ -3505,6 +3518,7 @@
 		<German>Das Spiel läuft nicht mehr synchron.[NEWLINE]Bitte überprüfen Sie die OOS-Werte (neben den Ergebnissen).[NEWLINE]Der Spieler mit anderen Werten sollte sich neu verbinden, um die Synchronität wiederherzustellen.</German>
 		<Italian>Il gioco non è sincronizzato.[NEWLINE]Controlla i valori OOS (Out Of Synch) vicini ai punteggi.[NEWLINE]Il giocatore con i valori diversi dovrà riconnettersi per risincronizzarsi.</Italian>
 		<Spanish>El juego se ha desincronizado.[NEWLINE]Consulta los valores OOS de falta de sincronización (junto a la puntuación).[NEWLINE]El jugador que tenga unos valores diferentes tendrá que volver a conectar para poder sincronizarse.</Spanish>
+		<Russian>Игра рассинхронизирована.[NEWLINE]Проверьте значения OOS (следующие за очками).[NEWLINE]Игроки с разными значениями должны переподключиться для восстановления синхронизации.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_CONFIRM_RESOLUTION</Tag>
@@ -3513,6 +3527,7 @@
 		<German>Wollen Sie diese Auflösung beibehalten?</German>
 		<Italian>Vuoi mantenere questa risoluzione?</Italian>
 		<Spanish>¿Quieres conservar esta resolución?</Spanish>
+		<Russian>Желаете оставить данное разрешение?</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OPTIONS_TITLE</Tag>
@@ -3520,6 +3535,7 @@
 		<German>Optionen</German>
 		<Italian>Opzioni</Italian>
 		<Spanish>Opciones</Spanish>
+		<Russian>Опции</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTPUT_NOT_FOUND</Tag>
@@ -3528,6 +3544,7 @@
 		<German>Kein lokalisierter Text vorhanden ...</German>
 		<Italian>Uscita localizzati non trovata...</Italian>
 		<Spanish>No se ha encontrado salida localizada...</Spanish>
+		<Russian>Локализованные выходные данные не найдены...</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUT_OF_VRAM</Tag>
@@ -3536,6 +3553,7 @@
 		<German>Grafikspeicher konnte nicht zugewiesen werden. Bitte reduzieren Sie Ihre Grafikeinstellungen.</German>
 		<Italian>Impossibile assegnare la memoria video. Prova a ridurre le impostazioni grafiche.</Italian>
 		<Spanish>No se pudo asignar la memoria de video. Intente reducir los ajustes de los gráficos.</Spanish>
+		<Russian>Не удалось выделить видеопамять. Попробуйте уменьшить настройки графики.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OVERWRITE_FILE</Tag>
