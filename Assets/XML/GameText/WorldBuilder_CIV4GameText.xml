@@ -3,25 +3,26 @@
 	<TEXT>
 		<Tag>TXT_KEY_REVEAL_PLOT</Tag>
 		<English>Reveal Plot</English>
-		<Russian>Ïîêàçàòü ó÷àñòîê</Russian>
+		<Russian>Показать участок</Russian>
 		<Italian>Rivela casella</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVEAL_STEALTH</Tag>
 		<English>Reveal Stealth</English>
-		<Russian>Ïîêàçàòü ñêðûòîå</Russian>
+		<Russian>Показать скрытое</Russian>
 		<Italian>Rivela stealth</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVEAL_SUBMARINE</Tag>
 		<English>Reveal Submarine</English>
-		<Russian>Ïîêàçàòü ñóáìàðèíû</Russian>
+		<Russian>Показать субмарины</Russian>
 		<Italian>Rivela sottomarino</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_ACTIVITY</Tag>
 		<English>Activity</English>
 		<Italian>Attività</Italian>
+		<Russian>Активность</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_ADD_NEW_PLAYER</Tag>
@@ -30,36 +31,36 @@
 		<Italian>Aggiungi nuovo giocatore</Italian>
 		<Spanish>Añadir nuevo jugador</Spanish>
 		<Polish>Dodaj Nowego Gracza</Polish>
-		<Russian>Äîáàâèòü íîâîãî èãðîêà</Russian>
+		<Russian>Добавить нового игрока</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_ADD_UNITS</Tag>
 		<English>Add Units</English>
-		<Russian>Äîáàâèòü þíèòîâ ïî êàòåãîðèÿì</Russian>
+		<Russian>Добавить подразделение</Russian>
 		<Italian>Aggiungi unità</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_ALL_PLAYERS</Tag>
 		<English>All players</English>
-		<Russian>Âñå èãðîêè</Russian>
+		<Russian>Все игроки</Russian>
 		<Italian>Tutti i giocatori</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_ALL_PLOTS</Tag>
 		<English>All plots</English>
-		<Russian>Âñå ó÷àñòêè</Russian>
+		<Russian>Все участки</Russian>
 		<Italian>Tutte le caselle</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_ALL_TECHS</Tag>
 		<English>All techs</English>
-		<Russian>Âñå òåõíîëîãèè</Russian>
+		<Russian>Все технологии</Russian>
 		<Italian>Tutte le tecnologie</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_ANARCHY</Tag>
 		<English>Anarchy: %d1</English>
-		<Russian>Àíàðõèÿ: %d1</Russian>
+		<Russian>Анархия: %d1</Russian>
 		<Italian>Lunghezza dell'anarchia: %d1</Italian>
 	</TEXT>
 	<TEXT>
@@ -77,13 +78,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_WB_ATTITUDE</Tag>
 		<English>Attitude</English>
-		<Russian>Îòíîøåíèå</Russian>
+		<Russian>Отношение</Russian>
 		<Italian>Attitudine</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_BASE_RATE</Tag>
 		<English>Base Rate: %d1</English>
-		<Russian>Осн. коэффициент: %d1</Russian>
+		<Russian>Основной коэффициент: %d1</Russian>
 		<Italian>Tasso base: %d1</Italian>
 	</TEXT>
 	<TEXT>
@@ -95,13 +96,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_WB_BRIDGE_BUILDING</Tag>
 		<English>Bridge Building</English>
-		<Russian>Ñòðîèòåëüñòâî ìîñòîâ</Russian>
+		<Russian>Строительство мостов</Russian>
 		<Italian>Costruzione di ponti</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_CIRCUMNAVIGATED_GLOBE</Tag>
 		<English>Circumnavigated globe: team </English>
 		<Italian>Globo circumnavigato: squadra </Italian>
+		<Russian>Совершили кругосветное путешествие: команда </Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_CITY_DATA2</Tag>
@@ -112,7 +114,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_WB_COASTAL_TRADE</Tag>
 		<English>Coastal [ICON_TRADE]: %d1</English>
-		<Russian>Ïðèáðåæíàÿ [ICON_TRADE]: %d1</Russian>
+		<Russian>Прибрежная [ICON_TRADE]: %d1</Russian>
 		<Italian>Commercio costiero [ICON_TRADE]: %d1</Italian>
 	</TEXT>
 	<TEXT>
@@ -124,20 +126,20 @@
 	<TEXT>
 		<Tag>TXT_KEY_WB_COPY_ALL</Tag>
 		<English>Apply to All %s1</English>
-		<Russian>Ïðèìåíèòü äëÿ âñåõ ãîðîäîâ</Russian>
+		<Russian>Применить для всех %s1</Russian>
 		<Italian>Applica a tutti %s1</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_COUNTER_ESPIONAGE</Tag>
 		<English>Counter Espionage</English>
 		<German>Spionageabwehr</German>
-		<Russian>Ñ÷åò÷èê øïèîíàæà</Russian>
+		<Russian>Счётчик шпионажа</Russian>
 		<Italian>Controspionaggio</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_CVASSAL</Tag>
 		<English>Capitulated</English>
-		<Russian>Êàïèòóëèðîâàâøèé</Russian>
+		<Russian>Капитулировавший</Russian>
 		<Italian>Capitolato</Italian>
 	</TEXT>
 	<TEXT>
@@ -659,7 +661,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_WB_XLEVEL</Tag>
 		<English>Level</English>
-		<Russian>Óðîâåíü</Russian>
+		<Russian>Уровень</Russian>
 		<Italian>Livello</Italian>
 	</TEXT>
 </Civ4GameText>
