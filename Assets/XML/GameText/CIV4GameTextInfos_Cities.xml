@@ -908,22 +908,22 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AROSS</Tag>
 		<English>Áróss</English>
-		<Russian>Àðîñ</Russian>
+		<Russian>Арос</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ARPAD</Tag>
 		<English>Arpad</English>
-		<Russian>Àðïàä</Russian>
+		<Russian>Арпад</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ARPINUM</Tag>
 		<English>Arpinum</English>
-		<Russian>Àðïèíóì</Russian>
+		<Russian>Арпинум</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ARRAIA</Tag>
 		<English>Arraia</English>
-		<Russian>Àððàéÿ</Russian>
+		<Russian>Аррайя</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ARRAPKHA</Tag>
@@ -932,17 +932,17 @@
 		<German>Arrapcha</German>
 		<Italian>Arrapha</Italian>
 		<Spanish>Arrapḫa</Spanish>
-		<Russian>Àððàïõà</Russian>
+		<Russian>Аррапха</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ARRETIUM</Tag>
 		<English>Arretium</English>
-		<Russian>Àððåòèé</Russian>
+		<Russian>Арретий</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ARSHADA</Tag>
 		<English>Arshada</English>
-		<Russian>Àðøàäà</Russian>
+		<Russian>Аршада</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ARSLANTEPE</Tag>
@@ -951,7 +951,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ARTAKOANA</Tag>
 		<English>Artakoana</English>
-		<Russian>Àðòàêîàíà</Russian>
+		<Russian>Артакоана</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ARTAXATA</Tag>
@@ -4614,6 +4614,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HILO</Tag>
 		<English>Hilo</English>
+		<Russian>Хило</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HIPPO</Tag>
@@ -4643,11 +4644,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HIT</Tag>
 		<English>Hit</English>
-		<Russian>Õèò</Russian>
+		<Russian>Хит</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HITCHITI</Tag>
 		<English>Hitchiti</English>
+		<Russian>Хитчити</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HITTITE</Tag>
@@ -4659,7 +4661,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HLATIKULU</Tag>
 		<English>Hlatikulu</English>
-		<Russian>Õëàòèêóëó</Russian>
+		<Russian>Хлатикулу</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HLOBANE</Tag>
@@ -4669,16 +4671,17 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HLUHLUWE</Tag>
 		<English>Hluhluwe</English>
-		<Russian>Õëóõëóâå</Russian>
+		<Russian>Хлухлуве</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HLYMREKR</Tag>
 		<English>Hlymrekr</English>
+		<Russian>Лимерик</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HOBART</Tag>
 		<English>Hobart</English>
-		<Russian>Õîáàðò</Russian>
+		<Russian>Хобарт</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HOD_HASHRON</Tag>
@@ -4688,6 +4691,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HOI_CHAN</Tag>
 		<English>Hoi Chan</English>
+		<Russian>Хой Чан</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HOLETA</Tag>

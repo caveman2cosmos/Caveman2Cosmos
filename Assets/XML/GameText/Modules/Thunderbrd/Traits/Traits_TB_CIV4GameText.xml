@@ -4,14 +4,14 @@
 		<Tag>TXT_KEY_TRAIT_AERIAL</Tag>
 		<English>Aerial CT</English>
 		<French>Aérien</French>
-		<Russian>Àâèàòîð</Russian>
+		<Russian>Авиатор</Russian>
 		<Italian>Aereo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AERIAL1</Tag>
 		<English>Aerial I</English>
 		<French>Aérien I</French>
-		<Russian>Àâèàòîð I</Russian>
+		<Russian>Авиатор I</Russian>
 		<Italian>Aereo I</Italian>
 	</TEXT>
 	<TEXT>
@@ -70,7 +70,7 @@ Penalties:
 		<Tag>TXT_KEY_TRAIT_AERIAL2</Tag>
 		<English>Aerial II</English>
 		<French>Aérien II</French>
-		<Russian>Àâèàòîð II</Russian>
+		<Russian>Авиатор II</Russian>
 		<Italian>Aereo II</Italian>
 	</TEXT>
 	<TEXT>
@@ -146,7 +146,7 @@ Penalties:
 		<Tag>TXT_KEY_TRAIT_AERIAL3</Tag>
 		<English>Aerial III</English>
 		<French>Aérien III</French>
-		<Russian>Àâèàòîð III</Russian>
+		<Russian>Авиатор III</Russian>
 		<Italian>Aereo III</Italian>
 	</TEXT>
 	<TEXT>
