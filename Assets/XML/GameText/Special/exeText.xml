@@ -3402,7 +3402,7 @@
 		<German>Für den von Ihnen gewählten Spielstand muss das folgende Mod geladen werden: [NEWLINE][BOLD]%s1[\BOLD][NEWLINE] Die Anwendung wird neu gestartet, okay? </German>
 		<Italian>Il salvataggio selezionato richiede il caricamento della seguente mod: [NEWLINE][BOLD]%s1[\BOLD][NEWLINE] Il gioco deve essere riavviato, continuare?</Italian>
 		<Spanish>La partida guardada que has seleccionado requiere que se cargue el siguiente mod: [NEWLINE][BOLD]%s1[\BOLD][NEWLINE] La aplicación debe reiniciarse. ¿Aceptar? </Spanish>
-		<Russian>Выбранное сохранение требует мод:[NEWLINE][BOLD]%s1[\BOLD][NEWLINE]Вы согласны на перезапуск игры?</Russian>
+		<Russian>Выбранному сохранению требуется мод:[NEWLINE][BOLD]%s1[\BOLD][NEWLINE]Вы согласны на перезапуск игры?</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MP_DIPLO_CANCEL_CURRENT_DEALS</Tag>
@@ -3562,6 +3562,7 @@
 		<German>Die Datei %s1 besteht bereits.[NEWLINE]Wählen Sie OK, um fortzufahren und die Datei zu überschreiben.</German>
 		<Italian>File di salvataggio di Civilization IV %s1 già esistente.[NEWLINE]Premi OK per continuare e sovrascrivere il file.</Italian>
 		<Spanish>Ya existe el archivo %s1.[NEWLINE]Pulsa 'Aceptar' para continuar y sobrescribirlo.</Spanish>
+		<Russian>Файл %s1 уже существует.[NEWLINE]Нажмите OK чтобы перезаписать файл.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PASSWORD_REQUIRED_DESC</Tag>
@@ -3570,6 +3571,7 @@
 		<German>Sie müssen ein Kennwort angeben.</German>
 		<Italian>Devi inserire una password.</Italian>
 		<Spanish>Hay que introducir una contraseña.</Spanish>
+		<Russian>Вы должны ввести пароль.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PASSWORD_REQUIRED_TITLE</Tag>
@@ -3578,6 +3580,7 @@
 		<German>Kennwort erforderlich</German>
 		<Italian>Password richiesta</Italian>
 		<Spanish>Se requiere contraseña</Spanish>
+		<Russian>Треуется пароль</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCHCOMPLETE_CANCELLED_DESC</Tag>
@@ -3586,6 +3589,7 @@
 		<German>Der Patch-Download wurde abgebrochen.</German>
 		<Italian>Lo scaricamento dell'aggiornamento è stato annullato.</Italian>
 		<Spanish>Se ha cancelado la descarga del parche.</Spanish>
+		<Russian>Загрузка патча отменена.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCHCOMPLETE_CONNECT_DESC</Tag>
@@ -3594,6 +3598,7 @@
 		<German>Wir konnten keine Verbindung zum Server herstellen, der den Patch anbietet.</German>
 		<Italian>Non siamo riusciti a connetterci al server host dell'aggiornamento.</Italian>
 		<Spanish>No se ha podido conectar con el servidor que aloja el parche.</Spanish>
+		<Russian>Не удалось подключиться к серверу, где размещён патч.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCHCOMPLETE_ENCRYPTION_DESC</Tag>
@@ -3602,6 +3607,7 @@
 		<German>Beim Versuch, die Patchdaten zu entschlüsseln, ist ein Fehler aufgetreten.</German>
 		<Italian>Si è verificato un errore durante la criptazione dei dati dell'aggiornamento.</Italian>
 		<Spanish>Se ha producido un error al intentar encriptar los datos del parche.</Spanish>
+		<Russian>При попытке зашифровать данные патча произошла ошибка.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCHCOMPLETE_FILENOTFOUND_DESC</Tag>
@@ -3610,6 +3616,7 @@
 		<German>Die angegebene Patchdatei konnte nicht auf dem Server gefunden werden.</German>
 		<Italian>Il file specificato per questo aggiornamento non è stato trovato sul server.</Italian>
 		<Spanish>El archivo indicado para el parche no se ha encontrado en el servidor.</Spanish>
+		<Russian>При попытке зашифровать данные патча произошла ошибка.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCHCOMPLETE_FILEREAD_DESC</Tag>
@@ -3618,6 +3625,7 @@
 		<German>Beim Versuch, Daten von unserer Festplatte zu lesen, ist ein Fehler aufgetreten.</German>
 		<Italian>Si è verificato un errore durante la lettura dei dati dal disco.</Italian>
 		<Spanish>Se ha producido un error al intentar leer datos del disco.</Spanish>
+		<Russian>При попытке чтения данных с диска произошла ошибка.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCHCOMPLETE_FILEWRITE_DESC</Tag>
@@ -3626,6 +3634,7 @@
 		<German>Beim Versuch, Daten auf unsere Festplatte zu schreiben, ist ein Fehler aufgetreten.</German>
 		<Italian>Si è verificato un errore durante la scrittura dei dati sul disco.</Italian>
 		<Spanish>Se ha producido un error al intentar escribir datos en el disco.</Spanish>
+		<Russian>При попытке записи данных на диск произошла ошибка.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCHCOMPLETE_FORBIDDEN_DESC</Tag>
@@ -3634,6 +3643,7 @@
 		<German>Auf diesem Server ist das Abrufen des Patchs nicht zugelassen.</German>
 		<Italian>Lo scaricamento dell'aggiornamento è stato vietato su questo server.</Italian>
 		<Spanish>La recuperación del parche se ha prohibido en este servidor.</Spanish>
+		<Russian>Получение патча запрещено на этом сервере.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCHCOMPLETE_HOSTNAME_DESC</Tag>
@@ -3642,6 +3652,7 @@
 		<German>Der für diesen Patch angegebene Hostname ist ungültig.</German>
 		<Italian>Il nome dell'host specificato per l'aggiornamento non è valido.</Italian>
 		<Spanish>El nombre de anfitrión indicado para el parche no es válido.</Spanish>
+		<Russian>Имя хоста, указанное для этого патча, недействительно.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCHCOMPLETE_INCOMPLETE_DESC</Tag>
@@ -3650,6 +3661,7 @@
 		<German>Der Patch-Download wurde unterbrochen.</German>
 		<Italian>Lo scaricamento dell'aggiornamento è stato interrotto.</Italian>
 		<Spanish>Se ha interrumpido la descarga del parche.</Spanish>
+		<Russian>Загрузка патча была прервана.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCHCOMPLETE_MEMORY_DESC</Tag>
@@ -3658,6 +3670,7 @@
 		<German>Beim Patch-Download ist ein Speicherfehler aufgetreten.</German>
 		<Italian>Si è verificato un errore di memoria durante lo scaricamento dell'aggiornamento.</Italian>
 		<Spanish>Se ha producido un error de memoria al descargar el parche.</Spanish>
+		<Russian>Во время загрузки патча произошла ошибка памяти.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCHCOMPLETE_OVERFLOW_DESC</Tag>
@@ -3666,6 +3679,7 @@
 		<German>Unser Computer kam nicht mit der Datenübertragungsrate zurecht! Bitte die Netzwerkgeschwindigkeit in den Spieloptionen überprüfen.</German>
 		<Italian>Il computer non è riuscito a gestire la velocità a cui i dati sono stati inviati! Verifica la velocità di rete nelle opzioni del gioco.</Italian>
 		<Spanish>El ordenador no ha soportado la tasa a la que se enviaban los datos. Comprueba en las opciones de partida si la velocidad de red es correcta.</Spanish>
+		<Russian>Ваш компьютер не справился со скоростью передачи данных! Убедитесь, что в настройках игры выставлена правильная скорость сети.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCHCOMPLETE_PARSE_DESC</Tag>
@@ -3674,6 +3688,7 @@
 		<German>Die für diesen Patch angegebene URL ist ungültig.</German>
 		<Italian>L'indirizzo URL specificato per l'aggiornamento non è valido.</Italian>
 		<Spanish>La URL indicada para el parche no es válida.</Spanish>
+		<Russian>URL, указанный для этого патча, недействителен.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCHCOMPLETE_REJECTED_DESC</Tag>
@@ -3682,6 +3697,7 @@
 		<German>Unsere Patchanfrage wurde vom Server abgelehnt.</German>
 		<Italian>La richiesta d'aggiornamento è stata respinta dal server.</Italian>
 		<Spanish>La solicitud del parche ha sido rechazada por el servidor.</Spanish>
+		<Russian>Ваш запрос на патч отклонён сервером.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCHCOMPLETE_RESPONSE_DESC</Tag>
@@ -3690,6 +3706,7 @@
 		<German>Der Server, der den Patch anbietet, hat uns eine merkwürdige Antwort geschickt.</German>
 		<Italian>Il server host dell'aggiornamento ha inviato una risposta inattesa.</Italian>
 		<Spanish>El servidor que aloja el parche ha enviado una respuesta extraña.</Spanish>
+		<Russian>Сервер, где размещён патч, отправил странный ответ.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCHCOMPLETE_SERVER_DESC</Tag>
@@ -3698,6 +3715,7 @@
 		<German>Der Server, der den Patch anbietet, hat einen internen Fehler.</German>
 		<Italian>Si è verificato un errore interno sul server host dell'aggiornamento.</Italian>
 		<Spanish>Se ha producido un error interno en el servidor que aloja el parche.</Spanish>
+		<Russian>На сервере, где размещён патч, произошла ошибка.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCHCOMPLETE_SOCKET_DESC</Tag>
@@ -3706,6 +3724,7 @@
 		<German>Beim Patch-Download ist ein Netzwerkressourcenfehler aufgetreten.</German>
 		<Italian>Si è verificato un errore di risorse di rete durante lo scaricamento dell'aggiornamento.</Italian>
 		<Spanish>Ha habido un error de recursos de red durante la descarga del parche.</Spanish>
+		<Russian>При загрузке патча произошла ошибка сетевого ресурса.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCHCOMPLETE_TOOBIG_DESC</Tag>
@@ -3714,6 +3733,7 @@
 		<German>Die Patch-Datei ist zu groß für den Download.</German>
 		<Italian>Il file dell'aggiornamento è troppo grosso per essere scaricato.</Italian>
 		<Spanish>El archivo del parche es demasiado voluminoso para descargarlo.</Spanish>
+		<Russian>Файл патча слишком велик для загрузки.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCHCOMPLETE_UNAUTHORIZED_DESC</Tag>
@@ -3722,6 +3742,7 @@
 		<German>Wir haben keinen autorisierten Zugang zu diesem Patch.</German>
 		<Italian>Autorizzazione assente per accedere all'aggiornamento.</Italian>
 		<Spanish>No se tiene autorización para acceder al parche.</Spanish>
+		<Russian>Вы не авторизованы для доступа к патчу.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCHCOMPLETE_UNKNOWN_DESC</Tag>
@@ -3730,6 +3751,7 @@
 		<German>Beim Patch-Download ist ein unbekannter Fehler aufgetreten.</German>
 		<Italian>Si è verificato un errore sconosciuto durante lo scaricamento dell'aggiornamento.</Italian>
 		<Spanish>Se ha producido un error desconocido al descargar el parche.</Spanish>
+		<Russian>При загрузке патча произошла неизвестная ошибка.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCHING_COMPLETE_DESC</Tag>
@@ -3738,6 +3760,7 @@
 		<German>Der Patch wurde erfolgreich heruntergeladen. Klicken Sie auf OK, um das Spiel zu beenden und den Patch zu installieren.</German>
 		<Italian>La patch è stata scaricata con successo. Premi OK per chiudere il gioco e installare la patch.</Italian>
 		<Spanish>El parche se ha descargado con éxito. Pulsa "Aceptar" para elegir la partida e instalar el parche.</Spanish>
+		<Russian>Патч успешно загружен. Нажмите OK, чтобы закрыть игру и установить его.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCHING_COMPLETE_TITLE</Tag>
@@ -3746,6 +3769,7 @@
 		<German>DOWNLOAD ABGESCHLOSSEN</German>
 		<Italian>DOWNLOAD COMPLETATO</Italian>
 		<Spanish>DESCARGA COMPLETA</Spanish>
+		<Russian>ЗАГРУЗКА ЗАВЕРШЕНА</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCHING_FAILED_DESC</Tag>
@@ -3754,6 +3778,7 @@
 		<German>Der Patch konnte nicht heruntergeladen werden.</German>
 		<Italian>La patch non è stata scaricata correttamente.</Italian>
 		<Spanish>El parche no se ha podido descargar con éxito.</Spanish>
+		<Russian>Не удалось загрузить патч.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCHING_FAILED_TITLE</Tag>
@@ -3762,6 +3787,7 @@
 		<German>DOWNLOAD FEHLGESCHLAGEN</German>
 		<Italian>DOWNLOAD FALLITO</Italian>
 		<Spanish>FALLO AL DESCARGAR</Spanish>
+		<Russian>ЗАГРУЗКА НЕ УДАЛАСЬ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCHING_WEBSITE_INFO</Tag>
@@ -3770,6 +3796,7 @@
 		<German>Die neuesten Patchinfos erhalten Sie unter www.2kgames.de/civ.</German>
 		<Italian>Visita il sito Internet www.CivIV.com per le ultime informazioni sugli aggiornamenti.</Italian>
 		<Spanish>Visita www.CivIV.com para obtener la última información acerca de los parches.</Spanish>
+		<Russian>Посетите www.CivIV.com для последней информации об исправлениях.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCH_AVAILABLE_INFO</Tag>
@@ -3778,6 +3805,7 @@
 		<German>Es ist ein Update verfügbar. Wollen Sie es herunterladen?</German>
 		<Italian>È disponibile una patch. Vuoi scaricarla?</Italian>
 		<Spanish>Hay disponible una actualización. ¿Quieres obtenerla?</Spanish>
+		<Russian>Доступно обновление. Хотите загрузить его?</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCH_AVAILABLE_TITLEBAR</Tag>
@@ -3786,6 +3814,7 @@
 		<German>NEUER PATCH VERFÜGBAR</German>
 		<Italian>NUOVA PATCH DISPONIBILE</Italian>
 		<Spanish>NUEVO PARCHE DISPONIBLE</Spanish>
+		<Russian>НОВЫЙ ПАТЧ ДОСТУПЕН</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCH_COMPLETE_DESC</Tag>
