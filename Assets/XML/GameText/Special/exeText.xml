@@ -195,7 +195,7 @@
 		<German>Gold, das Sie am Anfang erhalten, um Städte, Einheiten und Modernisierungen zu kaufen.</German>
 		<Italian>L'oro che ricevi a inizio gioco per acquistare città, unità e miglioramenti.</Italian>
 		<Spanish>El oro que recibes al inicio para comprar ciudades, unidades y mejoras.</Spanish>
-		<Russian>Золото, получаемое в начале игры для покупки городов, единиц и улучшений.</Russian>
+		<Russian>Золото, получаемое в начале игры для покупки городов, подразделений и улучшений.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ALREADY_BUDDY_DESC</Tag>
@@ -4607,6 +4607,7 @@
 		<German>Wie viel Gold möchtet Ihr bieten?</German>
 		<Italian>Quanto oro vuoi offrire?</Italian>
 		<Spanish>¿Cuánto oro queréis ofrecer?</Spanish>
+		<Russian>Сколько золота вы хотите предложить?</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRADE_GPT_FROM_THEM</Tag>
@@ -4615,6 +4616,7 @@
 		<German>Wie viel Gold pro Runde fordert Ihr von ihnen?</German>
 		<Italian>Quanto oro per turno vuoi richiedere?</Italian>
 		<Spanish>¿Cuánto oro por turno queréis que os den?</Spanish>
+		<Russian>Сколько золота в ход вы хотите от них?</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRADE_GPT_TO_OFFER</Tag>
@@ -4623,6 +4625,7 @@
 		<German>Wie viel Gold pro Runde möchtet Ihr bieten?</German>
 		<Italian>Quanto oro per turno vuoi offrire?</Italian>
 		<Spanish>¿Cuánto oro por turno queréis ofrecer?</Spanish>
+		<Russian>Сколько золота в ход вы хотите предложить?</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRADE_PLAYER_HAS</Tag>
@@ -4631,6 +4634,7 @@
 		<German>%s1_PlName HAT</German>
 		<Italian>%s1_PlName HA</Italian>
 		<Spanish>%s1_PlName TIENE</Spanish>
+		<Russian>%s1_PlName ВЛАДЕЕТ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRADE_PLAYER_OFFERS</Tag>
@@ -4639,6 +4643,7 @@
 		<German>%s1_PlName BIETET</German>
 		<Italian>%s1_PlName OFFRE</Italian>
 		<Spanish>%s1_PlName OFRECE</Spanish>
+		<Russian>%s1_PlName ПРЕДЛАГАЕТ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRADE_TITLE_GOLD</Tag>
@@ -4659,6 +4664,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>ЗОЛОТО</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRADE_YOU_HAVE</Tag>
@@ -4667,6 +4673,7 @@
 		<German>IHR HABT</German>
 		<Italian>TU HAI</Italian>
 		<Spanish>TENÉIS</Spanish>
+		<Russian>У ВАС ЕСТЬ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRADE_YOU_OFFER</Tag>
@@ -4675,6 +4682,7 @@
 		<German>IHR BIETET</German>
 		<Italian>TU OFFRI</Italian>
 		<Spanish>OFRECÉIS</Spanish>
+		<Russian>ВЫ ПРЕДЛАГАЕТЕ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRANSFER_GAME_DATA_TITLE</Tag>
@@ -4683,6 +4691,7 @@
 		<German>Spieldaten werden übertragen an</German>
 		<Italian>Trasferimento dati a</Italian>
 		<Spanish>Transfiriendo datos de la partida a </Spanish>
+		<Russian>Перенести данные игры в </Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TURN_LIMIT_TAG</Tag>
@@ -4691,6 +4700,7 @@
 		<German>Limit Spielrunden:</German>
 		<Italian>Limite di turni della partita:</Italian>
 		<Spanish>Límite de turnos de la partida:</Spanish>
+		<Russian>Лимит ходов игры:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNCOMPRESS_FAILED</Tag>
@@ -4699,6 +4709,7 @@
 		<German>Die Spieldaten konnten nicht dekomprimiert werden</German>
 		<Italian>Impossibile decomprimere i dati di gioco</Italian>
 		<Spanish>No se han podido descomprimir los datos del juego.</Spanish>
+		<Russian>Не удалось распаковать игровые данные</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNKNOWN</Tag>
@@ -4707,6 +4718,7 @@
 		<German>Unbekannt</German>
 		<Italian>Sconosciuto</Italian>
 		<Spanish>Desconocido</Spanish>
+		<Russian>Неизвестно</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_USER_GAMENAME</Tag>
@@ -4715,6 +4727,7 @@
 		<German>s Spiel</German>
 		<Italian>Partita di </Italian>
 		<Spanish>, partida de</Spanish>
+		<Russian>игра</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VERSION_WARNING_DESC</Tag>
@@ -4723,6 +4736,7 @@
 		<German>Spieler %d1_ID hat eine andere Version einiger Spieldateien.[NEWLINE]Stellen Sie sicher, dass er vertrauenswürdig ist.</German>
 		<Italian>Il giocatore %d1_ID possiede una versione differente di alcuni file.[NEWLINE]Assicurati che il giocatore sia affidabile.</Italian>
 		<Spanish>El jugador %d1_ID tiene versiones diferentes de algunos archivos de la partida.[NEWLINE]Comprueba si se trata de un jugador de confianza.</Spanish>
+		<Russian>У игрока %d1_ID иная версия некоторых файлов игры.[NEWLINE]Убедитесь, что ему можно доверять.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VERSION_WARNING_TITLE</Tag>
@@ -4731,6 +4745,7 @@
 		<German>Versionswarnung!</German>
 		<Italian>Avviso sulla versione!</Italian>
 		<Spanish>Aviso de versión diferente</Spanish>
+		<Russian>Предупреждение о версиях!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VISIT_GAMESPYID</Tag>
@@ -4739,6 +4754,7 @@
 		<German>Besuchen Sie www.gamespyid.com, um Ihren Account zu verwalten.</German>
 		<Italian>Visita www.gamespyid.com per gestire il tuo account.</Italian>
 		<Spanish>Visita www.gamespyid.com para gestionar tu cuenta.</Spanish>
+		<Russian>Посетите www.gamespyid.com для управления своим аккаунтом!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VOTE_SCREEN_EXIT_NOW</Tag>
@@ -4747,6 +4763,7 @@
 		<German>Jetzt beenden</German>
 		<Italian>Esci ora</Italian>
 		<Spanish>Salir ya</Spanish>
+		<Russian>Выйти сейчас</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VOTE_SCREEN_SAVE_NAME</Tag>
@@ -4755,6 +4772,7 @@
 		<German>Speichername</German>
 		<Italian>Nome del salvataggio</Italian>
 		<Spanish>Guardar nombre de la partida</Spanish>
+		<Russian>Название сохранения игры</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VOTE_SCREEN_SAVE_NOW</Tag>
@@ -4763,6 +4781,7 @@
 		<German>Jetzt speichern</German>
 		<Italian>Salva ora</Italian>
 		<Spanish>Guardar ya</Spanish>
+		<Russian>Сохранить сейчас</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WAIT_PLAYERSTATE_AUTH</Tag>
@@ -4771,6 +4790,7 @@
 		<German>Warten auf Spielerauthentifizierung</German>
 		<Italian>In attesa dell'autenticazione del giocatore</Italian>
 		<Spanish>Esperando autenticación de jugadores</Spanish>
+		<Russian>Ожидание аутентификации игрока</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WAIT_PLAYERSTATE_MAP</Tag>
@@ -4779,6 +4799,7 @@
 		<German>Kartenskript wird bestätigt</German>
 		<Italian>Conferma dello script della mappa</Italian>
 		<Spanish>Confirmando secuencia de comandos del mapa</Spanish>
+		<Russian>Подтверждение скрипта карты</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WAIT_PLAYERSTATE_SYNC</Tag>
@@ -4787,6 +4808,7 @@
 		<German>Spielstatus wird synchronisiert</German>
 		<Italian>Sincronizzazione della partita</Italian>
 		<Spanish>Sincronizando estado de la partida</Spanish>
+		<Russian>Синхронизация состояния игры</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WBREAD_FAILURE</Tag>
@@ -4795,6 +4817,7 @@
 		<German>Weltenbauer-Datei "%s1_WBName" konnte nicht gelesen werden</German>
 		<Italian>Impossibile leggere il file dell'editor "%1_WBName"</Italian>
 		<Spanish>No se ha podido leer el archivo "%s1_WBName" del Creador de mundos</Spanish>
+		<Russian>Не удалось прочитать файл миростроителя "%s1_WBName"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_AS_CITIES</Tag>
@@ -4803,6 +4826,7 @@
 		<German>Städte</German>
 		<Italian>Città</Italian>
 		<Spanish>Ciudades</Spanish>
+		<Russian>Города</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_AS_IMPROVEMENTS</Tag>
@@ -4811,6 +4835,7 @@
 		<German>Modernisierungen</German>
 		<Italian>Miglioramenti</Italian>
 		<Spanish>Mejoras</Spanish>
+		<Russian>Улучшения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_AS_TECH</Tag>
@@ -4819,6 +4844,7 @@
 		<German>Technologien</German>
 		<Italian>Tecnologie</Italian>
 		<Spanish>Tecnologías</Spanish>
+		<Russian>Технологии</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_AS_UNITS</Tag>
@@ -4827,6 +4853,7 @@
 		<German>Einheiten</German>
 		<Italian>Unità</Italian>
 		<Spanish>Unidades</Spanish>
+		<Russian>Подразделения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_AS_VISIBILITY</Tag>
@@ -4835,6 +4862,7 @@
 		<German>Sicht</German>
 		<Italian>Visibilità</Italian>
 		<Spanish>Visibilidad</Spanish>
+		<Russian>Видимость</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_BONUSES</Tag>
@@ -4843,6 +4871,7 @@
 		<German>Boni</German>
 		<Italian>Risorse</Italian>
 		<Spanish>Bonificaciones</Spanish>
+		<Russian>Бонусы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_BUILDINGS</Tag>
@@ -4851,7 +4880,7 @@
 		<German>Gebäude</German>
 		<Italian>Edifici</Italian>
 		<Spanish>Edificios</Spanish>
-		<Russian>Çäàíèÿ</Russian>
+		<Russian>Здания</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_CHANGE_ALL_PLOTS</Tag>
@@ -4860,6 +4889,7 @@
 		<German>Alle Geländefelder ändern</German>
 		<Italian>Cambia tutte le caselle</Italian>
 		<Spanish>Cambiar todas las casillas</Spanish>
+		<Russian>Изменить все участки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_DIPLOMACY</Tag>
@@ -4868,6 +4898,7 @@
 		<German>Diplomatiemodus</German>
 		<Italian>Modalità diplomatica</Italian>
 		<Spanish>Modo Diplomacia</Spanish>
+		<Russian>Режим дипломатии</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_EDIT_CITY</Tag>
@@ -4876,6 +4907,7 @@
 		<German>Stadtmodus bearbeiten</German>
 		<Italian>Modalità modifica città</Italian>
 		<Spanish>Modo Editar ciudad</Spanish>
+		<Russian>Режим редактирования города</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_EDIT_UNIT</Tag>
@@ -4884,6 +4916,7 @@
 		<German>Einheitenmodus bearbeiten</German>
 		<Italian>Modalità modifica unità</Italian>
 		<Spanish>Modo Editar unidad</Spanish>
+		<Russian>Режим редактирования подразделения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_ERASE_PLOTS</Tag>
@@ -4892,6 +4925,7 @@
 		<German>Löschmodus starten</German>
 		<Italian>Modalità elimina</Italian>
 		<Spanish>Activar modo "Borrar"</Spanish>
+		<Russian>Войти в режим очистки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_EXIT</Tag>
@@ -4900,6 +4934,7 @@
 		<German>Weltenbauer beenden</German>
 		<Italian>Esci dall'editor</Italian>
 		<Spanish>Salir del Creador de mundos</Spanish>
+		<Russian>Закрыть миростроитель</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_IMPROVEMENTS</Tag>
@@ -4908,6 +4943,7 @@
 		<German>Modernisierungen</German>
 		<Italian>Miglioramenti</Italian>
 		<Spanish>Mejoras</Spanish>
+		<Russian>Улучшения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_LANDMARK_PLOTS</Tag>
@@ -4916,6 +4952,7 @@
 		<German>Wahrzeichenmodus starten</German>
 		<Italian>Modalità punto di riferimento</Italian>
 		<Spanish>Activar modo "Lugar de referencia"</Spanish>
+		<Russian>Войти в режим ориентира</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_MAP_MODE</Tag>
@@ -4924,6 +4961,7 @@
 		<German>Kartenmodus</German>
 		<Italian>Modalità mappa</Italian>
 		<Spanish>Modo Mapa</Spanish>
+		<Russian>Режим карты</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_NORMAL_MAP</Tag>
@@ -4932,6 +4970,7 @@
 		<German>Kartenmodus</German>
 		<Italian>Modalità mappa</Italian>
 		<Spanish>Modo Mapa</Spanish>
+		<Russian>Режим карты</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_NORMAL_PLAYER</Tag>
@@ -4940,6 +4979,7 @@
 		<German>Spielermodus</German>
 		<Italian>Modalità giocatore</Italian>
 		<Spanish>Modo Jugador</Spanish>
+		<Russian>Режим игрока</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_PLAYER_MODE</Tag>
@@ -4948,6 +4988,7 @@
 		<German>Spielermodus</German>
 		<Italian>Modalità giocatore</Italian>
 		<Spanish>Modo Jugador</Spanish>
+		<Russian>Режим игрока</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_PROMOTIONS</Tag>
@@ -4955,6 +4996,7 @@
 		<German>Beförderungen</German>
 		<Italian>Promozioni</Italian>
 		<Spanish>Ascensos</Spanish>
+		<Russian>Повышения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_REGENERATE_MAP</Tag>
@@ -4963,6 +5005,7 @@
 		<German>Karte auf Basis des aktuellen Kartenskripts neu generieren</German>
 		<Italian>Rigenera la mappa utilizzando l'attuale script</Italian>
 		<Spanish>Regenerar mapa empleando la actual secuencia de comandos de mapa</Spanish>
+		<Russian>Пересоздать карту, используя текущий скрипт</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_REVEAL_ALL</Tag>
@@ -4971,6 +5014,7 @@
 		<German>Alle Geländefelder einblenden</German>
 		<Italian>Rivela tutte le caselle</Italian>
 		<Spanish>Mostrar todas las casillas</Spanish>
+		<Russian>Показать все клетки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_REVEAL_TILE</Tag>
@@ -4979,6 +5023,7 @@
 		<German>Geländefelder-einblenden-Modus</German>
 		<Italian>Modalità scopri caselle</Italian>
 		<Spanish>Modo Mostrar casilla</Spanish>
+		<Russian>Режим открытия клеток</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_SIZE_TAG</Tag>
@@ -4987,6 +5032,7 @@
 		<German>Kartengröße: %s1_size</German>
 		<Italian>Dimensioni mappa: %s1_size</Italian>
 		<Spanish>Tamaño: %s1_size</Spanish>
+		<Russian>Размер карты: %s1_size</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_TECHNOLOGIES</Tag>
@@ -4995,6 +5041,7 @@
 		<German>Technologien</German>
 		<Italian>Tecnologie</Italian>
 		<Spanish>Tecnologías</Spanish>
+		<Russian>Технологии</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_TERRAINS</Tag>
@@ -5003,6 +5050,7 @@
 		<German>Gelände</German>
 		<Italian>Terreni</Italian>
 		<Spanish>Terrenos</Spanish>
+		<Russian>Рельефы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_TERRITORY</Tag>
@@ -5011,6 +5059,7 @@
 		<German>Territorium</German>
 		<Italian>Territorio</Italian>
 		<Spanish>Territorio</Spanish>
+		<Russian>Территория</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_UNITS</Tag>
@@ -5019,6 +5068,7 @@
 		<German>Einheiten</German>
 		<Italian>Unità</Italian>
 		<Spanish>Unidades</Spanish>
+		<Russian>Подразделения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_UNREVEAL_ALL</Tag>
@@ -5027,6 +5077,7 @@
 		<German>Alle Geländefelder ausblenden</German>
 		<Italian>Nascondi tutte le caselle</Italian>
 		<Spanish>Ocultar todas las casillas</Spanish>
+		<Russian>Скрыть все клетки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_WORLD_BUILDER_EDIT_CONTROL</Tag>
@@ -5035,6 +5086,7 @@
 		<German>Weltenbauer-Bearbeitungssteuerung</German>
 		<Italian>Comandi dell'editor</Italian>
 		<Spanish>Control de edición del Creador de mundos</Spanish>
+		<Russian>Контроль редактирования миростроителя</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WINDOW_CLOSE</Tag>
@@ -5043,6 +5095,7 @@
 		<German>Schließen</German>
 		<Italian>Chiudi</Italian>
 		<Spanish>Close</Spanish>
+		<Russian>Закрыть</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WINDOW_COLLAPSE</Tag>
@@ -5051,6 +5104,7 @@
 		<German>Ausblenden</German>
 		<Italian>Riduci</Italian>
 		<Spanish>Derruir</Spanish>
+		<Russian>Оставить строку заголовка</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WINDOW_EXPAND</Tag>
@@ -5059,6 +5113,7 @@
 		<German>Einblenden</German>
 		<Italian>Espandi</Italian>
 		<Spanish>Expandir</Spanish>
+		<Russian>Развернуть</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WINDOW_MAXIMIZE</Tag>
@@ -5067,6 +5122,7 @@
 		<German>Maximieren</German>
 		<Italian>Ingrandisci</Italian>
 		<Spanish>Maximizar</Spanish>
+		<Russian>На весь экран</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WINDOW_MINIMIZE</Tag>
@@ -5075,6 +5131,7 @@
 		<German>Minimieren</German>
 		<Italian>Minimizza</Italian>
 		<Spanish>Minimizar</Spanish>
+		<Russian>Свернуть</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WINDOW_POPUP_MOVE</Tag>
@@ -5083,6 +5140,7 @@
 		<German>Verschieben</German>
 		<Italian>Muovi</Italian>
 		<Spanish>Mover</Spanish>
+		<Russian>Переместить</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WINDOW_POPUP_RESIZE</Tag>
@@ -5091,6 +5149,7 @@
 		<German>Größe ändern</German>
 		<Italian>Dimensioni</Italian>
 		<Spanish>Tamaño</Spanish>
+		<Russian>Размер</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WINDOW_RESTORE</Tag>
@@ -5099,6 +5158,7 @@
 		<German>Wiederherstellen</German>
 		<Italian>Ripristina</Italian>
 		<Spanish>Restaurar</Spanish>
+		<Russian>Востановить</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WINDOW_RESTORE_DOWN</Tag>
@@ -5107,6 +5167,7 @@
 		<German>Verkleinern</German>
 		<Italian>Ripristino in basso</Italian>
 		<Spanish>Restaurar (baja)</Spanish>
+		<Russian>Востановить внизу</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WINDOW_RESTORE_UP</Tag>
@@ -5115,6 +5176,7 @@
 		<German>Vergrößern</German>
 		<Italian>Ripristino in alto</Italian>
 		<Spanish>Restaurar (alza)</Spanish>
+		<Russian>Востановить вверху</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WRONG_VERSION</Tag>
@@ -5123,6 +5185,7 @@
 		<German>Version %d1 kann nicht geladen werden, es wurde Version %d2 oder eine frührere Version erwartet.</German>
 		<Italian>Impossibile caricare la versione %d1, prevista la versione %d2 o inferiore</Italian>
 		<Spanish>No se puede cargar la versión %d1. Es necesaria la %d2 o inferior.</Spanish>
+		<Russian>Невозможно загрузить версию %d1, ожидаемая версия %d2 или ниже</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_MAIN_MENU_CIV_PASSWORD_DESC</Tag>
@@ -5131,6 +5194,7 @@
 		<German>Geben Sie das für diese Zivilisation erforderliche Kennwort ein.</German>
 		<Italian>Inserisci la password necessaria per questa civiltà.</Italian>
 		<Spanish>Introduce la contraseña necesaria para esta civilización.</Spanish>
+		<Russian>Пожалуйства введите пароль, требуемый для этой цивилизации.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_MAIN_MENU_CIV_PASSWORD_RETRY_DESC</Tag>
@@ -5139,6 +5203,7 @@
 		<German>Geben Sie das für diese Zivilisation erforderliche Kennwort ein.</German>
 		<Italian>La password inserita non era corretta. Per favore riprova.</Italian>
 		<Spanish>Introduce la contraseña necesaria para esta civilización.</Spanish>
+		<Russian>Вы ввели неправильный пароль. Попробуйте ещё раз.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_MAIN_MENU_CIV_PASSWORD_TITLE</Tag>
@@ -5147,6 +5212,7 @@
 		<German>ZIVILISATIONSKENNWORT EINGEBEN</German>
 		<Italian>INSERISCI LA PASSWORD DELLA CIVILTÀ</Italian>
 		<Spanish>CONTRASEÑA DE LA CIVILIZACIÓN</Spanish>
+		<Russian>ВВОД ПАРОЛЯ ЦИВИЛИЗАЦИИ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_MAIN_MENU_CIV_PASSWORD_TITLEBAR</Tag>
@@ -5155,6 +5221,7 @@
 		<German>Kennwortschutz</German>
 		<Italian>Protezione con password</Italian>
 		<Spanish>Protección con contraseña</Spanish>
+		<Russian>Защита паролем</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_MAIN_MENU_CIV_PROTECT_DESC</Tag>
@@ -5163,6 +5230,7 @@
 		<German>Geben Sie ein Kennwort ein, um Ihre Zivilisation vor unbefugtem Zugriff zu schützen.[NEWLINE]Oder lassen Sie die Kennworteingabe leer, wenn Sie kein Kennwort nutzen wollen.</German>
 		<Italian>Inserisci una password per proteggere la tua civiltà, oppure lascia lo spazio bianco per evitare protezioni.</Italian>
 		<Spanish>Introduce una contraseña para proteger tu civilización, o déjala en blanco para descartar la protección mediante contraseña.</Spanish>
+		<Russian>Введите пароль для защиты вашей цивилизации или оставьте поле пустым, чтобы не ставить защиту.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_MAIN_MENU_CIV_PROTECT_TITLE</Tag>
@@ -5171,5 +5239,6 @@
 		<German>SCHÜTZEN SIE IHRE ZIVILISATION</German>
 		<Italian>PROTEGGI LA TUA CIVILTÀ</Italian>
 		<Spanish>PROTEGE TU CIVILIZACIÓN</Spanish>
+		<Russian>ЗАЩИТИТЕ СВОЮ ЦИВИЛИЗАЦИЮ</Russian>
 	</TEXT>
 </Civ4GameText>
