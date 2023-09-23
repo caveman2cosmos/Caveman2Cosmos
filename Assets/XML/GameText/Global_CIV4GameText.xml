@@ -8292,8 +8292,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FOREST_FIRE_UNIT_LOST</Tag>
-		<English>%s perished in the fire!</English>
-		<Russian>%s погиб в огне!</Russian>
+		<English>%s1 perished in the fire!</English>
+		<Russian>%s1 погиб в огне!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FOUNDED_RELIGION</Tag>
