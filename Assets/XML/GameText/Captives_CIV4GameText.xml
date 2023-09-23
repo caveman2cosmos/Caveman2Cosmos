@@ -127,7 +127,7 @@
 		<French>Augmente de 1 la population. L'unité est détruite.</French>
 		<Italian>[NEWLINE]Incrementa la popolazione cittadina di uno. L'unità viene consumata.</Italian>
 		<Polish>Zwiększa populację miasta o 1. Jednostka zostaje usunięta z gry.</Polish>
-		<Russian>Население города увеличивается на одного жителя. Единица исчезает.</Russian>
+		<Russian>Население города увеличивается на одного жителя. Подразделение исчезнет.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_CITY_HAD_ARTISTS</Tag>
@@ -196,7 +196,7 @@
 		<English>You have captured %d1 civilian unit(s) (Captive - Civilian).</English>
 		<French>Vous avez capturé %d1 unité civile (Prisonnier - Civil).</French>
 		<Italian>Hai catturato %d1 unità civile(i).</Italian>
-		<Russian>Вы захватили гражданские единицы в количестве %d1 (Пленник - гражданский).</Russian>
+		<Russian>Вы захватили гражданские подразделения в количестве %d1 (Пленник - гражданский).</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_MILITARY_CAPTIVE</Tag>
@@ -204,7 +204,7 @@
 		<French>Vous avez capturé une unité militaire (Prisonnier de Guerre).</French>
 		<Italian>Hai catturato un'unità militare.</Italian>
 		<Polish>Pojmałeś jednostkę wojskową (Jeniec Wojenny).</Polish>
-		<Russian>Вы захватили военную единицу (Пленник - военный).</Russian>
+		<Russian>Вы захватили военное подразделение (Пленник - военный).</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_NEANDERTHAL_CAPTIVE</Tag>
@@ -212,7 +212,7 @@
 		<French>Vous avez capturé une unité de Néanderthal (Prisonnier - Neanderthal).</French>
 		<Italian>Hai catturato un'unità Neanderthal.</Italian>
 		<Polish>Pojmałeś Neandertalczyków (Jeniec - Neandertalczyk).</Polish>
-		<Russian>Вы захватили неандертальскую единицу (Пленник - неандерталец).</Russian>
+		<Russian>Вы захватили неандертальское подразделение (Пленник - неандерталец).</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_JOIN_CITY_FREED_SLAVE</Tag>
@@ -457,7 +457,7 @@
 		<English>Civilian units captured in battle or from raiding cities.</English>
 		<French>Unités civiles capturées au combat ou lors des attaques dans les villes.</French>
 		<Italian>Unità civili catturate in battaglia o da razzie di città.</Italian>
-		<Russian>Гражданские единицы, захваченные в бою или при набеге на города.</Russian>
+		<Russian>Гражданские подразделения, захваченные в бою или при набеге на города.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAPTIVE_IMMIGRANT</Tag>
@@ -478,7 +478,7 @@
 		<English>[ICON_BULLET]Upgrade to Military or Worker unit. Force build [COLOR_UNIT_TEXT]Building[COLOR_REVERT]. Sacrifice or join city.</English>
 		<French>[ICON_BULLET]Peut être converti en unité militaire ou ouvrière. Peut construire de manière forcée un [COLOR_UNIT_TEXT]aménagement[COLOR_REVERT] ou [COLOR_UNIT_TEXT]Bâtiment[COLOR_REVERT]. Peut être Sacrifié ou rejoindre une ville.</French>
 		<Italian>[ICON_BULLET]Può essere convertito in un unità lavoratore o in un'unità militare. Può essere costretto a realizzare [COLOR_UNIT_TEXT]edifici[COLOR_REVERT]. Può essere sacrificato o essere aggiunto alla città.</Italian>
-		<Russian>[ICON_BULLET]Можно улучшить в военную или рабочую единицу, заставить ускорить строительство [COLOR_UNIT_TEXT]зданий[COLOR_REVERT], принести в жертву или поселить в городе.</Russian>
+		<Russian>[ICON_BULLET]Можно улучшить в военное или рабочее подразделение, заставить ускорить строительство [COLOR_UNIT_TEXT]зданий[COLOR_REVERT], принести в жертву или поселить в городе.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAPTIVE_MILITARY_PEDIA</Tag>
