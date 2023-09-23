@@ -3823,6 +3823,7 @@
 		<German>Der Patch wurde erfolgreich heruntergeladen.[NEWLINE]Klicken Sie auf OK, um das Spiel zu beenden und den Patch zu installieren.</German>
 		<Italian>La patch è stata scaricata con successo.[NEWLINE]Premi OK per chiudere il gioco e installare la patch.</Italian>
 		<Spanish>El parche se ha descargado con éxito.[NEWLINE]Pulsa "Aceptar" para elegir la partida e instalar el parche.</Spanish>
+		<Russian>Патч успешно загружен.[NEWLINE]Нажмите OK, чтобы закрыть игру и установить его.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCH_COMPLETE_TITLE</Tag>
@@ -3831,6 +3832,7 @@
 		<German>Patch-Download abgeschlossen</German>
 		<Italian>Download patch completato</Italian>
 		<Spanish>Descarga del parche completa</Spanish>
+		<Russian>Загрузка патча завершена</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCH_DOWNLOADING_DESC</Tag>
@@ -3839,6 +3841,7 @@
 		<German>Während des Patch-Downloads sind keine weiteren Aktivitäten möglich.</German>
 		<Italian>Impossibile durante il download della patch.</Italian>
 		<Spanish>No se pueden llevar a cabo otras acciones mientras se descarga el parche.</Spanish>
+		<Russian>Нельзя действовать при загрузке патча.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCH_DOWNLOADING_TITLE</Tag>
@@ -3847,6 +3850,7 @@
 		<German>Patch wird heruntergeladen</German>
 		<Italian>Download della patch in corso</Italian>
 		<Spanish>Descargando parche</Spanish>
+		<Russian>Загружается патч</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCH_FAILED_TITLE</Tag>
@@ -3855,6 +3859,7 @@
 		<German>Patch-Download gescheitert</German>
 		<Italian>Download patch fallito</Italian>
 		<Spanish>Ha fallado la descarga del parche</Spanish>
+		<Russian>Не удалось загрузить патч</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCH_NAME_TAG</Tag>
@@ -3863,6 +3868,7 @@
 		<German>Patch-Name: %s1_Name</German>
 		<Italian>Nome patch: %s1_Name</Italian>
 		<Spanish>Nombre del parche: %s1_Name</Spanish>
+		<Russian>Название патча: %s1_Name</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCH_REQUIRED_INFO</Tag>
@@ -3871,6 +3877,7 @@
 		<German>Sie müssen Ihr Spiel aktualisieren, bevor Sie fortfahren können.</German>
 		<Italian>Prima di procedere devi aggiornare il gioco.</Italian>
 		<Spanish>Debes actualizar la partida antes de continuar.</Spanish>
+		<Russian>Необходимо обновить игру прежде чем продолжить.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCH_REQUIRED_TITLEBAR</Tag>
@@ -3879,6 +3886,7 @@
 		<German>PATCH ERFORDERLICH</German>
 		<Italian>PATCH RICHIESTA</Italian>
 		<Spanish>SE REQUIERE PARCHE</Spanish>
+		<Russian>ТРЕБУЕТСЯ ПАТЧ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCH_UPDATE_TITLE</Tag>
@@ -3887,6 +3895,7 @@
 		<German>Patch-Installation läuft ...</German>
 		<Italian>Patch in corso...</Italian>
 		<Spanish>Aplicando parche...</Spanish>
+		<Russian>Установка патча...</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PBEM_DONT_SEND</Tag>
@@ -3895,6 +3904,7 @@
 		<German>Nicht senden</German>
 		<Italian>Non spedire</Italian>
 		<Spanish>No enviar</Spanish>
+		<Russian>Не отправлять</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PBEM_ENTER_ADDRESS</Tag>
@@ -3903,6 +3913,7 @@
 		<German>E-Mail-Adresse für %s1_player eingeben:</German>
 		<Italian>Inserisci l'indirizzo e-mail di %s1_player:</Italian>
 		<Spanish>Escribe la dirección de e-mail de %s1_player:</Spanish>
+		<Russian>Введите адрес электронной почты %s1_player:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PBEM_ENTER_PASSWORD</Tag>
@@ -3911,6 +3922,7 @@
 		<German>Kennwort für %s1_leader eingeben</German>
 		<Italian>Inserisci una password per %s1_leader</Italian>
 		<Spanish>Introduce la contraseña de %s1_leader</Spanish>
+		<Russian>Введите пароль %s1_leader</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PBEM_NEXT_PLAYER</Tag>
@@ -3919,6 +3931,7 @@
 		<German>Ihr seid dran, %s1_leader!</German>
 		<Italian>%s1_leader, è il tuo turno!</Italian>
 		<Spanish>¡Es vuestro turno, %s1_leader!</Spanish>
+		<Russian>%s1_leader, ваш ход!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PBEM_NOT_SENDING</Tag>
@@ -3927,6 +3940,7 @@
 		<German>Der Spielstand wurde in Ihrem PBEM-Verzeichnis abgelegt. Senden Sie ihn bitte an %s1_leader.[NEWLINE] Wenn Sie Ihre E-Mail-Adresse und den SMTP-Server einstellen, können Spielstand-Dateien aus dem Spiel heraus versendet werden.</German>
 		<Italian>Il salvataggio è stato effettuato nella cartella PBEM. Spediscilo a %s1_leader.[NEWLINE] Se imposti il tuo indirizzo e-mail e il server SMTP, i salvataggi possono essere spediti dal gioco.</Italian>
 		<Spanish>La partida guardada se ha colocado en tu carpeta PBEM. Envíasela a %s1_leader.[NEWLINE] Si fijas una dirección de e-mail y un servidor SMTP, las partidas guardadas podrán enviarse desde el juego.</Spanish>
+		<Russian>Сохранение помещено в вашу PBEM папку. Пожалуйста, отправьте его %s1_leader.[NEWLINE] Если вы задали свои адрес электронной почты и SMTP-сервер, сохранения можно отправить напрямую из игры.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEACE_ERROR</Tag>
@@ -3935,6 +3949,7 @@
 		<German>Beim Aushandeln eines Friedensvertrags bietet der anfragende Spieler dem anderen Spieler eine Gegenleistung an. Es findet kein beidseitiger Handel statt und es können ausschließlich Schenkungen angeboten werden.</German>
 		<Italian>Quando tratti la pace, solo un giocatore può offrire oggetti a un altro. Come pagamento per il termine di una guerra, sono accettati solamente dei doni e non sono permesse azioni commerciali.</Italian>
 		<Spanish>Al realizar un intercambio para alcanzar un tratado de paz, solo uno de los jugadores puede ofrecerle cosas al otro. Solo se pueden ofrecer regalos como pago para poner fin a la guerra, no se pueden realizar intercambios.</Spanish>
+		<Russian>На переговорах о заключении мира, только одному игроку разрешено предлагать предметы другому. Платой за прекращение войны могут быть только подарки, любые обмены запрещены.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEER_CONNECT_FAILURE_DESC</Tag>
@@ -3943,6 +3958,7 @@
 		<German>Wir konnten keine Verbindung zu einem anderen einsteigenden Spieler aufbauen.[NEWLINE]Der Spieler hat seine Firewall-Umgebung eventuell nicht korrekt konfiguriert.</German>
 		<Italian>Impossibile connettersi al giocatore.[NEWLINE]Il giocatore potrebbe non aver impostato correttamente il firewall.</Italian>
 		<Spanish>Ha sido imposible conectar con otro jugador que intentaba unirse.[NEWLINE]Puede que ese jugador no tenga configurado correctamente su entorno de firewall/servidor de seguridad.</Spanish>
+		<Russian>Не удалось подключиться к другому присоединившемуся игроку.[NEWLINE]Возможно, его брандмауэр настроен неправильно.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEER_CONNECT_FAILURE_TITLE</Tag>
@@ -3951,6 +3967,7 @@
 		<German>Peer-Verbindungsfehler!</German>
 		<Italian>Errore di connessione al peer!</Italian>
 		<Spanish>Fallo al conectar con interlocutor</Spanish>
+		<Russian>Сбой подключения к узлу!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEER_FAILURE_DESC</Tag>
@@ -3959,6 +3976,7 @@
 		<German>Ein einsteigender Spieler konnte keine Verbindung zu Ihnen herstellen und kann dem Spiel nicht beitreten.[NEWLINE]Bitte stellen Sie sicher, dass Ihre Firewall eingehende Verbindungen für Civilization IV erlaubt.</German>
 		<Italian>Un altro giocatore non è riuscito a connettersi al tuo sistema e non può partecipare alla partita.[NEWLINE]Controlla che le impostazioni del tuo firewall permettano il passaggio delle connessioni in arrivo a Civilization IV.</Italian>
 		<Spanish>El jugador entrante no ha conseguido conectarse y no puede unirse a la partida.[NEWLINE]Comprueba si tu firewall/servidor de seguridad permite las conexiones entrantes de Civilization IV.</Spanish>
+		<Russian>Входящий игрок не смог соединиться с вами и не может присоединиться к игре.[NEWLINE]Убедитесь, что ваш брандмауэр разрешает входящие соединения для Цивилизации IV.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEER_FAILURE_TITLE</Tag>
@@ -3967,6 +3985,7 @@
 		<German>Verbindungsfehler!</German>
 		<Italian>Errore durante la connessione!</Italian>
 		<Spanish>Fallo en la conexión</Spanish>
+		<Russian>Сбой подключения!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PING_RECEIVED</Tag>
@@ -3975,6 +3994,7 @@
 		<German>Ping von Spieler %s1_player erhalten.</German>
 		<Italian>Ping ricevuto da %s1_player.</Italian>
 		<Spanish>Ping recibido de %s1_player.</Spanish>
+		<Russian>Пинг, полученный от %s1_player.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_PLAYER</Tag>
@@ -3983,6 +4003,7 @@
 		<German>Spieler %d1</German>
 		<Italian>Giocatore %d1</Italian>
 		<Spanish>Jugador %d1</Spanish>
+		<Russian>Игрок %d1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PITBOSS_TEAM</Tag>
@@ -3991,6 +4012,7 @@
 		<German>Team</German>
 		<Italian>Squadra</Italian>
 		<Spanish>Equipo</Spanish>
+		<Russian>Команда</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_VOTE_DESC</Tag>
@@ -3999,6 +4021,7 @@
 		<German>Abstimmung von %s1_Name:</German>
 		<Italian>Il voto di %s1_Name:</Italian>
 		<Spanish>Voto de %s1_Name:</Spanish>
+		<Russian>%s1_Name голос:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_ADMIN_PASSWORD</Tag>
@@ -4007,6 +4030,7 @@
 		<German>Admin-Kennwort:</German>
 		<Italian>Password amministratore:</Italian>
 		<Spanish>Contraseña del administrador:</Spanish>
+		<Russian>Пароль администратора:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_CANCEL</Tag>
@@ -4015,6 +4039,7 @@
 		<German>Abbrechen</German>
 		<Italian>Annulla</Italian>
 		<Spanish>Cancelar</Spanish>
+		<Russian>Отмена</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_CANNOT_CANCEL_DEAL</Tag>
@@ -4023,6 +4048,7 @@
 		<German>Dieser Handel kann zurzeit nicht aufgekündigt werden.</German>
 		<Italian>L'accordo non può essere annullato in questo momento.</Italian>
 		<Spanish>Este trato no puede cancelarse ahora mismo.</Spanish>
+		<Russian>Сейчас эту сделку отменить нельзя.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_DETAILS_SMTP</Tag>
@@ -4031,6 +4057,7 @@
 		<German>SMTP-Server</German>
 		<Italian>Server SMTP</Italian>
 		<Spanish>Servidor SMTP</Spanish>
+		<Russian>SMTP-сервер</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_INSTALL</Tag>
@@ -4039,12 +4066,14 @@
 		<German>Installieren</German>
 		<Italian>Installa</Italian>
 		<Spanish>Instalar</Spanish>
+		<Russian>Установить</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_NO</Tag>
 		<English>No</English>
 		<French>Non</French>
 		<German>Nein</German>
+		<Russian>Нет</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_YES</Tag>
@@ -4053,6 +4082,7 @@
 		<German>Ja</German>
 		<Italian>Sì</Italian>
 		<Spanish>Sí</Spanish>
+		<Russian>Да</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROFILES_SELECT_MUSIC_PATH</Tag>
@@ -4061,6 +4091,7 @@
 		<German>Gewünschten Musikordner wählen</German>
 		<Italian>Scegli la cartella da cui leggere la musica desiderata</Italian>
 		<Spanish>Escoge una carpeta desde donde reproducir la música</Spanish>
+		<Russian>Выберите папку с музыкой</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_QUEST_MESSAGE_LOG</Tag>
@@ -4068,6 +4099,7 @@
 		<French>Quêtes</French>
 		<Italian>Missioni</Italian>
 		<Spanish>Misiones</Spanish>
+		<Russian>Задания</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_QUICK_SAVING</Tag>
@@ -4076,6 +4108,7 @@
 		<German>Schnellspeichern ...</German>
 		<Italian>Salvataggio rapido in corso...</Italian>
 		<Spanish>Guardado rápido...</Spanish>
+		<Russian>Быстрое сохранение...</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RECIP_BUDDY_PROMPT</Tag>
@@ -4084,6 +4117,7 @@
 		<German>[COLOR_SELECTED_TEXT]%s1_Name[COLOR_REVERT] muss ein Freund sein, um Nachrichten von Ihnen empfangen zu können.[NEWLINE][NEWLINE]Wollen Sie [COLOR_SELECTED_TEXT]%s2_Name[COLOR_REVERT] zu Ihrer Freundesliste hinzufügen?</German>
 		<Italian>[COLOR_SELECTED_TEXT]%s1_Name[COLOR_REVERT] deve essere un amico per ricevere il tuo messaggio.[NEWLINE][NEWLINE]Vuoi aggiungere [COLOR_SELECTED_TEXT]%s2_Name[COLOR_REVERT] alla tua lista amici?</Italian>
 		<Spanish>[COLOR_SELECTED_TEXT]%s1_Name[COLOR_REVERT] debe ser un amigo para poder recibir tus mensajes.[NEWLINE][NEWLINE]¿Quieres agregar a [COLOR_SELECTED_TEXT]%s2_Name[COLOR_REVERT] a tu lista de amigos?</Spanish>
+		<Russian>[COLOR_SELECTED_TEXT]%s1_Name[COLOR_REVERT] должен быть в друзьях, чтобы получать от вас сообщения.[NEWLINE][NEWLINE]Желаете добавить [COLOR_SELECTED_TEXT]%s2_Name[COLOR_REVERT] в список друзей?</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RECOMMENDED_SPECS_MESSAGE</Tag>
@@ -4091,6 +4125,9 @@
 		This message usually appears when game is freshly installed, or when INI file was corrupted or deleted.
 		To disable this message: Go to C:\Users\"your username"\Documents\My Games\Beyond the Sword, open CivilizationIV.ini, and change "HideMinSpecWarning = 0" to "HideMinSpecWarning = 1"</English>
 		<Italian>Il tuo computer è al di sotto delle specifiche consigliate. Le impostazioni grafiche sono state modificate per far fronte a ciò, tuttavia, potresti riscontrare problemi di prestazioni. Questo messaggio di solito appare quando il gioco è stato appena installato o quando il file INI è stato danneggiato o cancellato. Per disabilitare questo messaggio: vai a C:\Users\"nome utente"\Documents\My Games\Beyond the Sword, apri CivilizationIV.ini e modifica "HideMinSpecWarning = 0" in "HideMinSpecWarning = 1"</Italian>
+		<Russian>Характеристики вашего компьютера ниже рекомендуемых. Настройки графики были изменены с учётом этого, однако могут возникнуть проблемы с производительностью.
+		Данное сообщение появляется после устнановки игры, или когда файл конфигурации повреждён или удалён.
+		Чтобы отключить это сообщение, перейдите в папку "C:\Users\"ваше имя пользователя"\Documents\My Games\Beyond the Sword", откройте Блокнотом "CivilizationIV.ini", и замените "HideMinSpecWarning = 0" на "HideMinSpecWarning = 1"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REJECT_FULL_DESC</Tag>
@@ -4099,6 +4136,7 @@
 		<German>Das gewählte Spiel ist belegt.</German>
 		<Italian>La partita scelta è al completo.</Italian>
 		<Spanish>La partida elegida está completa.</Spanish>
+		<Russian>Выбранная игра заполнена.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REJECT_FULL_TITLE</Tag>
@@ -4107,6 +4145,7 @@
 		<German>Verbindungsanfrage abgewiesen.</German>
 		<Italian>Connessione rifiutata.</Italian>
 		<Spanish>Conexión rechazada</Spanish>
+		<Russian>Подключение отклонено.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REJECT_INVALID_DATA_DESC</Tag>
@@ -4115,6 +4154,7 @@
 		<German>Die Verbindungsabfrage wurde wegen ungültiger Identifikationsdaten abgewiesen.</German>
 		<Italian>La connessione è stata rifiutata perché i dati di identificazione forniti non sono validi.</Italian>
 		<Spanish>La conexión ha sido rechazada porque se han facilitado unos datos de identificación no válidos.</Spanish>
+		<Russian>Ваше подключение отклонено из-за неверных данных вашей идентификации.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REJECT_INVALID_DATA_TITLE</Tag>
@@ -4123,6 +4163,7 @@
 		<German>Verbindungsanfrage abgewiesen.</German>
 		<Italian>Connessione rifiutata.</Italian>
 		<Spanish>Conexión rechazada</Spanish>
+		<Russian>Подключение отклонено.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REJECT_LAUNCHING_DESC</Tag>
@@ -4131,6 +4172,7 @@
 		<German>Das gewählte Spiel wird zurzeit gestartet. Ein Verbindungsaufbau ist gegenwärtig nicht möglich.</German>
 		<Italian>La partita scelta è in avvio. Impossibile connettersi in questo momento.</Italian>
 		<Spanish>La partida elegida se está iniciando. No es posible conectarse en este momento.</Spanish>
+		<Russian>Выбранная игра запускается. В этот момент подключение невозможно.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REJECT_LAUNCHING_TITLE</Tag>
@@ -4139,6 +4181,7 @@
 		<German>Verbindungsanfrage abgewiesen.</German>
 		<Italian>Connessione rifiutata.</Italian>
 		<Spanish>Conexión rechazada</Spanish>
+		<Russian>Подключение отклонено.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REMOVE_BUDDY_NAME_TITLE</Tag>
@@ -4147,6 +4190,7 @@
 		<German>Einen Freund entfernen</German>
 		<Italian>Elimina un amico</Italian>
 		<Spanish>Quitar a un amigo</Spanish>
+		<Russian>Убрать из друзей</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REMOVE_BUDDY_TAG</Tag>
@@ -4155,6 +4199,7 @@
 		<German>Freund entfernen</German>
 		<Italian>Elimina amico</Italian>
 		<Spanish>Quitar amigo</Spanish>
+		<Russian>Убрать из друзей</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REMOVE_BUDDY_TITLE</Tag>
@@ -4163,6 +4208,7 @@
 		<German>VORHANDENEN FREUND ENTFERNEN</German>
 		<Italian>ELIMINA UN AMICO ESISTENTE</Italian>
 		<Spanish>ELIMINAR AMIGO EXISTENTE</Spanish>
+		<Russian>УДАЛИТЬ СУЩЕСТВУЮЩЕГО ДРУГА</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REMOVE_BUDDY_VERIFY</Tag>
@@ -4171,6 +4217,7 @@
 		<German>Soll dieser Freund wirklich aus der Liste entfernt werden?</German>
 		<Italian>Sei sicuro di voler eliminare questo amico?</Italian>
 		<Spanish>¿Seguro que quieres quitar a este amigo?</Spanish>
+		<Russian>Вы уверены, что хотите убрать этого друга?</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SAVE_ERROR</Tag>
@@ -4179,6 +4226,7 @@
 		<German>Speicherfehler</German>
 		<Italian>Errore di salvataggio</Italian>
 		<Spanish>Error de guardado.</Spanish>
+		<Russian>Ошибка сохранения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SAVE_EXTENSION_DESC</Tag>
@@ -4187,6 +4235,7 @@
 		<German>Spielstand-Dateien</German>
 		<Italian>Salvataggi</Italian>
 		<Spanish>Partidas guardadas</Spanish>
+		<Russian>Сохранения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SAVE_FILE</Tag>
@@ -4195,6 +4244,7 @@
 		<German>Datei speichern</German>
 		<Italian>Salva file</Italian>
 		<Spanish>Guardar archivo</Spanish>
+		<Russian>Файл сохранения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SAVE_FILE_CORRUPT</Tag>
@@ -4203,6 +4253,7 @@
 		<German>Sie versuchen, einen fehlerhaften Spielstand zu laden. Das Spiel wird nun verlassen.</German>
 		<Italian>Stai cercando di caricare un file di salvataggio corrotto. Il gioco verrà chiuso automaticamente.</Italian>
 		<Spanish>Estás intentando cargar un archivo guardado corrupto. Se va a proceder a salir del juego.</Spanish>
+		<Russian>Вы пытаетесь загрузить поврежденный файл сохранения. Игра сейчас закроется.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SAVING_GAME</Tag>
@@ -4211,6 +4262,7 @@
 		<German>Speichervorgang ...</German>
 		<Italian>Salvataggio in corso...</Italian>
 		<Spanish>Guardando la partida...</Spanish>
+		<Russian>Сохранение игры...</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SCREEN_CANCEL</Tag>
@@ -4219,6 +4271,7 @@
 		<German>Abbrechen</German>
 		<Italian>Annulla</Italian>
 		<Spanish>Cancelar</Spanish>
+		<Russian>Отмена</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SEND_MAP_WAIT</Tag>
@@ -4227,6 +4280,7 @@
 		<German>Karte wird an Clients gesendet. Bitte warten ...</German>
 		<Italian>Invio della mappa ai client in corso. Attendere...</Italian>
 		<Spanish>Enviando el mapa a los clientes. Un momento...</Spanish>
+		<Russian>Отправка карты клиентам. Пожалуйста, подождите...</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SENT_BUDDY_REQUEST_DESC</Tag>
@@ -4235,6 +4289,7 @@
 		<German>Die Freundesanfrage wurde gesendet.</German>
 		<Italian>La richiesta d'amicizia è stata inviata.</Italian>
 		<Spanish>Se ha enviado la solicitud de amigo.</Spanish>
+		<Russian>Запрос в друзья отправлен.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SENT_BUDDY_REQUEST_TITLE</Tag>
@@ -4243,6 +4298,7 @@
 		<German>Freundesanfrage gesendet</German>
 		<Italian>Richiesta d'amicizia inviata</Italian>
 		<Spanish>Enviada solicitud de amigo</Spanish>
+		<Russian>Отправлен запрос в друзья</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SIGN_ENTER_CAPTION</Tag>
@@ -4251,6 +4307,7 @@
 		<German>Titel eingeben</German>
 		<Italian>Inserisci didascalia</Italian>
 		<Spanish>Escribir un encabezamiento</Spanish>
+		<Russian>Введите надпись</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SMTP_PASSWORD</Tag>
@@ -4259,6 +4316,7 @@
 		<German>Kennwort für SMTP-Kennwortauthentifizierung (sofern erforderlich)</German>
 		<Italian>Password per l'SMTP (se necessaria)</Italian>
 		<Spanish>Contraseña para autenticación segura de SMTP (si es necesaria)</Spanish>
+		<Russian>Пароль для SMTP Secure Password Authentication (если требуется)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SMTP_USERNAME</Tag>
@@ -4267,6 +4325,7 @@
 		<German>Benutzername für SMTP-Kennwortauthentifizierung (sofern erforderlich)</German>
 		<Italian>Username per l'SMTP (se necessario)</Italian>
 		<Spanish>Nombre de usuario para autenticación segura de SMTP (si es necesario)</Spanish>
+		<Russian>Имя пользователя для SMTP Secure Password Authentication (если требуется)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SOCKET_CREATE_FAILURE_DESC</Tag>
@@ -4275,6 +4334,7 @@
 		<German>Das Netzwerk-Socket konnte nicht erstellt werden.</German>
 		<Italian>Impossibile creare il socket di rete.</Italian>
 		<Spanish>No se ha podido crear el socket de red.</Spanish>
+		<Russian>Невозможно создать сетевой сокет.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SOCKET_CREATE_FAILURE_TITLE</Tag>
@@ -4283,6 +4343,7 @@
 		<German>Netzwerkfehler</German>
 		<Italian>Errore di rete</Italian>
 		<Spanish>Error de red</Spanish>
+		<Russian>Ошибка сети</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SOCKET_ERROR_DESC</Tag>
@@ -4291,6 +4352,7 @@
 		<German>Es ist ein Fehler im Netzwerk-Socket aufgetreten. Das Socket wurde geschlossen und die Verbindung getrennt.</German>
 		<Italian>Il socket di rete ha rilevato un errore ed è stato chiuso. Disconnessione effettuata.</Italian>
 		<Spanish>El socket de red ha encontrado un problema y se ha cerrado. Desconectado.</Spanish>
+		<Russian>Сетевой сокет столкнулся с ошибкой и был закрыт. Соединение разорвано.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SOCKET_ERROR_TITLE</Tag>
@@ -4299,6 +4361,7 @@
 		<German>Verbindung getrennt</German>
 		<Italian>Disconnesso</Italian>
 		<Spanish>Desconectado</Spanish>
+		<Russian>Разъединено</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SP_LOAD_ERROR_DESC</Tag>
@@ -4307,6 +4370,7 @@
 		<German>Im Einzelspieler-Modus können keine Multiplayer-Spiele geladen werden!</German>
 		<Italian>Non ti è permesso caricare partite multigiocatore in modalità giocatore singolo!</Italian>
 		<Spanish>No se permite cargar partidas multijugador en modo un jugador.</Spanish>
+		<Russian>Вам не разрешено загружать многопользовательские игры в однопользовательском режиме!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SP_LOAD_ERROR_TITLE</Tag>
@@ -4315,6 +4379,7 @@
 		<German>Nur Einzelspieler-Modus!</German>
 		<Italian>Solo modalità giocatore singolo!</Italian>
 		<Spanish>¡Solo hay un jugador!</Spanish>
+		<Russian>Только одиночная игра!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STAGING_ROOM_READY</Tag>
@@ -4323,6 +4388,7 @@
 		<German>Bereit</German>
 		<Italian>Pronto</Italian>
 		<Spanish>Listo</Spanish>
+		<Russian>Готов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STAGING_ROOM_TITLE</Tag>
@@ -4331,6 +4397,7 @@
 		<German>LAN SETUP</German>
 		<Italian>STANZA DI COMUNICAZIONE</Italian>
 		<Spanish>SALA DE COMUNICAC.</Spanish>
+		<Russian>КОМНАТА</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STOP_SLIDESHOW</Tag>
@@ -4339,6 +4406,7 @@
 		<German>Bildershow anhalten</German>
 		<Italian>Blocca immagini</Italian>
 		<Spanish>Saltar</Spanish>
+		<Russian>Играть</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SUBMIT_VOTE</Tag>
@@ -4347,6 +4415,7 @@
 		<German>Stimme abgeben</German>
 		<Italian>Invia votazione</Italian>
 		<Spanish>Enviar voto</Spanish>
+		<Russian>Проголосовать</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SYSTEM_ADD_BUDDY</Tag>
@@ -4355,6 +4424,7 @@
 		<German>%s1_Name möchte Euch als Freund aufnehmen</German>
 		<Italian>%s1_Name vorrebbe aggiungerti come amico</Italian>
 		<Spanish>A %s1_Name le gustaría agregarte como amigo</Spanish>
+		<Russian>%s1_Name хочет добавить вас в друзья</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SYSTEM_ALL</Tag>
@@ -4375,6 +4445,7 @@
 			<Gender>Male:Female</Gender>
 			<Plural>1:1</Plural>
 		</Spanish>
+		<Russian>все</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SYSTEM_BUDDY_REQUEST_TITLE</Tag>
@@ -4383,6 +4454,7 @@
 		<German>Freund-Anfrage</German>
 		<Italian>Richiesta d'amicizia</Italian>
 		<Spanish>Solicitud de amigo</Spanish>
+		<Russian>Запрос в друзья</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SYSTEM_CHAT_STRING</Tag>
@@ -4391,6 +4463,7 @@
 		<German>[%s1_Plyr1 an %s2_Plyr2]: %s3_ChatMsg</German>
 		<Italian>[%s1_Plyr1 a %s2_Plyr2]: %s3_ChatMsg</Italian>
 		<Spanish>[%s1_Plyr1 a %s2_Plyr2]: %s3_ChatMsg</Spanish>
+		<Russian>[%s1_Plyr1 для %s2_Plyr2]: %s3_ChatMsg</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SYSTEM_ERROR_PASSWORD_MISMATCH</Tag>
@@ -4399,6 +4472,7 @@
 		<German>Die Kennwörter müssen übereinstimmen!</German>
 		<Italian>Le password devono essere uguali!</Italian>
 		<Spanish>Las contraseñas tienen que coincidir.</Spanish>
+		<Russian>Пароли должны совпадать!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SYSTEM_ERROR_PASSWORD_MISMATCH_TITLE</Tag>
@@ -4407,6 +4481,7 @@
 		<German>Kennwortfehler</German>
 		<Italian>Errore di password</Italian>
 		<Spanish>Error de contraseña</Spanish>
+		<Russian>Ошибка пароля</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SYSTEM_GAME_RESUMED</Tag>
@@ -4415,6 +4490,7 @@
 		<German>%s1_PlyrName hat das Spiel fortgesetzt</German>
 		<Italian>Partita continuata da %s1_PlyrName</Italian>
 		<Spanish>Partida reanudada por %s1_PlyrName</Spanish>
+		<Russian>%s1_PlyrName возобновил игру</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SYSTEM_TEAM</Tag>
@@ -4435,6 +4511,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>команда</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SYSTEM_YOU</Tag>
@@ -4455,6 +4532,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
+		<Russian>вы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TITLE_CONNECT_FAILURE_DESC</Tag>
@@ -4463,6 +4541,7 @@
 		<German>Der Civilization IV-Matchmaking-Raum ist zurzeit nicht verfügbar.</German>
 		<Italian>La stanza per la ricerca di giocatori non è disponibile in questo momento.</Italian>
 		<Spanish>La sala de búsqueda de jugadores no está disponible en este momento.</Spanish>
+		<Russian>Комната поиска матчей в Цивилизации IV сейчас недоступна.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TITLE_CONNECT_FAILURE_TITLE</Tag>
@@ -4471,6 +4550,7 @@
 		<German>Server nicht erreichbar</German>
 		<Italian>Server irraggiungibile</Italian>
 		<Spanish>No se puede acceder al servidor</Spanish>
+		<Russian>Сервер недоступен</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRADEABLE_ITEMS</Tag>
@@ -4479,6 +4559,7 @@
 		<German>Handelsgüter</German>
 		<Italian>Elementi commerciabili</Italian>
 		<Spanish>Elementos intercambiables</Spanish>
+		<Russian>Предметы, доступные для обмена</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRADE_CEASE_FIRE_STRING</Tag>
@@ -4499,6 +4580,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Прекращение огня</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRADE_CLEAR_TABLE</Tag>
@@ -4507,6 +4589,7 @@
 		<German>VERHANDLUNGSTISCH LEEREN</German>
 		<Italian>PULISCI TABELLA</Italian>
 		<Spanish>LIMPIAR TABLA</Spanish>
+		<Russian>ОЧИСТИТЬ СТОЛ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRADE_GOLD_FROM_THEM</Tag>
@@ -4515,6 +4598,7 @@
 		<German>Wie viel Gold fordert Ihr von ihnen?</German>
 		<Italian>Quanto oro vuoi richiedere?</Italian>
 		<Spanish>¿Cuánto oro queréis que os den?</Spanish>
+		<Russian>Сколько золота вы хотите от них?</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRADE_GOLD_TO_OFFER</Tag>
