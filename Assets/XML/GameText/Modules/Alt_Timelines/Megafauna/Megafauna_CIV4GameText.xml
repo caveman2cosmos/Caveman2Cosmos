@@ -5,14 +5,14 @@
 		<English>Military Standard (Bears)</English>
 		<French>Standards Militaires (Ours)</French>
 		<Polish>Sztandar Wojskowy (Niedźwiedź)</Polish>
-		<Russian>Òîòåì «Ìåäâåäü»</Russian>
+		<Russian>Тотем «Медведь»</Russian>
 		<Italian>Stendardo militare dell'orso</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_BEAR_HELP</Tag>
 		<English>[ICON_BULLET]Build Bear buildings and units faster in this city.</English>
 		<French>Construit les bâtiments et unités Ours plus vite dans cette ville.</French>
-		<Russian>Óñîðÿåò òðåíèðîâêó ìåäâåäåé è ïîñòðîéêó â ãîðîäå çäàíèé äëÿ íèõ.</Russian>
+		<Russian>Усоряет тренировку медведей и постройку в городе зданий для них.</Russian>
 		<Italian>[ICON_BULLET]Costruisci edifici e unità relazionati agli orsi più velocemente in questa città.</Italian>
 	</TEXT>
 	<TEXT>
@@ -20,7 +20,7 @@
 		<English>Military Standard (Bison)</English>
 		<French>Standards Militaires (Bisons)</French>
 		<Polish>Sztandar Wojskowy (Bizon)</Polish>
-		<Russian>Òîòåì «Áèçîí»</Russian>
+		<Russian>Тотем «Бизон»</Russian>
 		<Italian>Stendardo militare del bisonte</Italian>
 	</TEXT>
 	<TEXT>
@@ -36,7 +36,7 @@
 		<French>Standards Militaires (Félins)</French>
 		<Italian>Stendardo militare del gran felino</Italian>
 		<Polish>Sztandar Wojskowy (Wielkie Koty)</Polish>
-		<Russian>Òîòåì «Êîøêà»</Russian>
+		<Russian>Тотем «Кошка»</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_BIG_CATS_HELP</Tag>

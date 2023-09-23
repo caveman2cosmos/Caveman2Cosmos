@@ -4,7 +4,7 @@
 		<Tag>TXT_KEY_BUILD_BONUS_ALMONDS</Tag>
 		<English>Place [LINK=BONUS_ALMONDS]Almonds Bonus[\LINK]</English>
 		<Polish>Zasadz Migdalowca</Polish>
-		<Russian>Посадить Миндаль</Russian>
+		<Russian>Посадить миндаль</Russian>
 		<Italian>[LINK=BONUS_ALMONDS]Mandorla[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
 	<TEXT>
@@ -39,14 +39,14 @@
 		<Tag>TXT_KEY_BUILD_BONUS_BISON</Tag>
 		<English>Place [LINK=BONUS_BISON]Bison Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Bizonów</Polish>
-		<Russian>Разводить стадо бизонов</Russian>
+		<Russian>Разводить бизонов</Russian>
 		<Italian>[LINK=BONUS_BISON]Bisonte[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_CAMEL</Tag>
 		<English>Place [LINK=BONUS_CAMEL]Camel Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Wielbladów</Polish>
-		<Russian>Разводить стадо верблюдов</Russian>
+		<Russian>Разводить верблюдов</Russian>
 		<Italian>[LINK=BONUS_CAMEL]Cammello[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
 	<TEXT>
@@ -95,7 +95,7 @@
 		<Tag>TXT_KEY_BUILD_BONUS_COW</Tag>
 		<English>Place [LINK=BONUS_COW]Cow Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Krów</Polish>
-		<Russian>Разводить стадо коров</Russian>
+		<Russian>Разводить коров</Russian>
 		<Italian>[LINK=BONUS_COW]Mucca[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
 	<TEXT>
@@ -109,35 +109,35 @@
 		<Tag>TXT_KEY_BUILD_BONUS_DEER</Tag>
 		<English>Place [LINK=BONUS_DEER]Deer Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Jeleni</Polish>
-		<Russian>Разводить стадо оленей</Russian>
+		<Russian>Разводить оленей</Russian>
 		<Italian>[LINK=BONUS_DEER]Cervo[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_DONKEY</Tag>
 		<English>Place [LINK=BONUS_DONKEY]Donkey Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Oslów</Polish>
-		<Russian>Разводить стадо ослов</Russian>
+		<Russian>Разводить ослов</Russian>
 		<Italian>[LINK=BONUS_DONKEY]Asino[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_ELEPHANTS</Tag>
 		<English>Place [LINK=BONUS_ELEPHANTS]Elephants Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Sloni</Polish>
-		<Russian>Разводить стадо слонов</Russian>
+		<Russian>Разводить слонов</Russian>
 		<Italian>[LINK=BONUS_ELEPHANTS]Elefante[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_FIG</Tag>
 		<English>Place [LINK=BONUS_FIG]Figs Bonus[\LINK]</English>
 		<Polish>Zasadz Figowce</Polish>
-		<Russian>Посадить фиги</Russian>
+		<Russian>Посадить инжир</Russian>
 		<Italian>[LINK=BONUS_FIG]Fico[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_FLAX</Tag>
 		<English>Place [LINK=BONUS_FLAX]Flax Bonus[\LINK]</English>
 		<Polish>Zasiej Len</Polish>
-		<Russian>Посадить лен</Russian>
+		<Russian>Посадить лён</Russian>
 		<Italian>[LINK=BONUS_FLAX]Lino[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
 	<TEXT>
@@ -177,14 +177,14 @@
 		<Tag>TXT_KEY_BUILD_BONUS_HORSE</Tag>
 		<English>Place [LINK=BONUS_HORSE]Horse Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Koni</Polish>
-		<Russian>Разводить табун лошадей</Russian>
+		<Russian>Разводить лошадей</Russian>
 		<Italian>[LINK=BONUS_HORSE]Cavallo[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_INCENSE</Tag>
 		<English>Place [LINK=BONUS_INCENSE]Incense Bonus[\LINK]</English>
 		<Polish>Zasadz Kadzidlo</Polish>
-		<Russian>Посадить фимиам</Russian>
+		<Russian>Производить благовония</Russian>
 		<Italian>[LINK=BONUS_INCENSE]Incenso[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
 	<TEXT>
@@ -198,13 +198,13 @@
 		<Tag>TXT_KEY_BUILD_BONUS_KANGAROO</Tag>
 		<English>Place [LINK=BONUS_KANGAROO]Kangaroo Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Kangurów</Polish>
-		<Russian>Разводить стадо кенгуру</Russian>
+		<Russian>Разводить кенгуру</Russian>
 		<Italian>[LINK=BONUS_KANGAROO]Canguro[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_KAVA</Tag>
 		<English>Place [LINK=BONUS_KAVA]Kava Bonus[\LINK]</English>
-		<Russian>Посадить кава</Russian>
+		<Russian>Посадить каву</Russian>
 		<Italian>[LINK=BONUS_KAVA]Kava[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
 	<TEXT>
@@ -218,14 +218,14 @@
 		<Tag>TXT_KEY_BUILD_BONUS_LLAMA</Tag>
 		<English>Place [LINK=BONUS_LLAMA]Llama Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Lam</Polish>
-		<Russian>Разводить стадо лам</Russian>
+		<Russian>Разводить лам</Russian>
 		<Italian>[LINK=BONUS_LLAMA]Lama[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_MAMMOTH</Tag>
 		<English>Place [LINK=BONUS_MAMMOTH]Mammoth Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Mamutów</Polish>
-		<Russian>Разводить стадо мамонтов</Russian>
+		<Russian>Разводить мамонтов</Russian>
 		<Italian>[LINK=BONUS_MAMMOTH]Mammut[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
 	<TEXT>
@@ -239,7 +239,7 @@
 		<Tag>TXT_KEY_BUILD_BONUS_MELONS</Tag>
 		<English>Place [LINK=BONUS_MELONS]Melons Bonus[\LINK]</English>
 		<Polish>Zasiej Melony</Polish>
-		<Russian>Посадить арбузы</Russian>
+		<Russian>Посадить дыни</Russian>
 		<Italian>[LINK=BONUS_MELONS]Melone[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
 	<TEXT>
@@ -267,7 +267,7 @@
 		<Tag>TXT_KEY_BUILD_BONUS_PAPAYA</Tag>
 		<English>Place [LINK=BONUS_PAPAYA]Papaya Bonus[\LINK]</English>
 		<Polish>Zasadz Papaye</Polish>
-		<Russian>Посадить папайя</Russian>
+		<Russian>Посадить папайю</Russian>
 		<Italian>[LINK=BONUS_PAPAYA]Papaia[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
 	<TEXT>
@@ -294,7 +294,7 @@
 		<Tag>TXT_KEY_BUILD_BONUS_PIG</Tag>
 		<English>Place [LINK=BONUS_PIG]Pig Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Swin</Polish>
-		<Russian>Разводить стадо свиней</Russian>
+		<Russian>Разводить свиней</Russian>
 		<Italian>[LINK=BONUS_PIG]Maiale[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
 	<TEXT>
@@ -321,7 +321,7 @@
 		<Tag>TXT_KEY_BUILD_BONUS_POULTRY</Tag>
 		<English>Place [LINK=BONUS_POULTRY]Poultry Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Drobiu</Polish>
-		<Russian>Разводить дом. птицу</Russian>
+		<Russian>Разводить домашних птиц</Russian>
 		<Italian>[LINK=BONUS_POULTRY]Pollo[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
 	<TEXT>
@@ -335,7 +335,7 @@
 		<Tag>TXT_KEY_BUILD_BONUS_PRIME_TIMBER</Tag>
 		<English>Place [LINK=BONUS_PRIME_TIMBER]Prime Timber Bonus[\LINK]</English>
 		<Polish>Zasadz Drzewa Wysokiej Jakosci</Polish>
-		<Russian>Посадить строевой лес</Russian>
+		<Russian>Выращивать первосортную древесину</Russian>
 		<Italian>[LINK=BONUS_PRIME_TIMBER]Legno pregiato[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
 	<TEXT>
@@ -349,14 +349,14 @@
 		<Tag>TXT_KEY_BUILD_BONUS_RABBIT</Tag>
 		<English>Place [LINK=BONUS_RABBIT]Rabbit Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Królików</Polish>
-		<Russian>Разводить стадо кроликов</Russian>
+		<Russian>Разводить кроликов</Russian>
 		<Italian>[LINK=BONUS_RABBIT]Coniglio[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_RESIN</Tag>
 		<English>Place [LINK=BONUS_RESIN]Resin Bonus[\LINK]</English>
 		<Polish>Zasadz Drzewa Zywiczne</Polish>
-		<Russian>Посадить смоляной лес</Russian>
+		<Russian>Производить смолу</Russian>
 		<Italian>[LINK=BONUS_RESIN]Resina[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
 	<TEXT>
@@ -377,28 +377,28 @@
 		<Tag>TXT_KEY_BUILD_BONUS_SEA_LION_AND_SEAL</Tag>
 		<English>Place [LINK=BONUS_SEA_LION_AND_SEAL]Sea Lion and Seal Bonus[\LINK]</English>
 		<Polish>Umiesc Kolonie Lwów Morskich</Polish>
-		<Russian>Разводить тюленей</Russian>
+		<Russian>Разводить тюленей и морских львов</Russian>
 		<Italian>[LINK=BONUS_SEA_LION_AND_SEAL]Leone marino e foca[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_SHEEP</Tag>
 		<English>Place [LINK=BONUS_SHEEP]Sheep Bonus[\LINK]</English>
 		<Polish>Umiesc Stado Owiec</Polish>
-		<Russian>Разводить стадо овец</Russian>
+		<Russian>Разводить овец</Russian>
 		<Italian>[LINK=BONUS_SHEEP]Pecora[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_SILK</Tag>
 		<English>Place [LINK=BONUS_SILK]Silk Bonus[\LINK]</English>
 		<Polish>Stwórz Kolonie Jedwabników</Polish>
-		<Russian>Разводить тутового шелкопряда</Russian>
+		<Russian>Производить шёлк</Russian>
 		<Italian>[LINK=BONUS_SILK]Seta[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_SPICES</Tag>
 		<English>Place [LINK=BONUS_SPICES]Spices Bonus[\LINK]</English>
 		<Polish>Zasiej Przyprawy</Polish>
-		<Russian>Посадить специи</Russian>
+		<Russian>Производить специи</Russian>
 		<Italian>[LINK=BONUS_SPICES]Spezie[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
 	<TEXT>
@@ -412,21 +412,21 @@
 		<Tag>TXT_KEY_BUILD_BONUS_SUGAR</Tag>
 		<English>Place [LINK=BONUS_SUGAR]Sugar Bonus[\LINK]</English>
 		<Polish>Zasiej Trzcine Cukrowa</Polish>
-		<Russian>Посадить сахарный тростник</Russian>
+		<Russian>Производить сахар</Russian>
 		<Italian>[LINK=BONUS_SUGAR]Zucchero[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_TEA</Tag>
 		<English>Place [LINK=BONUS_TEA]Tea Bonus[\LINK]</English>
 		<Polish>Zasiej Herbate</Polish>
-		<Russian>Посадить чай</Russian>
+		<Russian>Производить чай</Russian>
 		<Italian>[LINK=BONUS_TEA]Tè[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_TOBACCO</Tag>
 		<English>Place [LINK=BONUS_TOBACCO]Tobacco Bonus[\LINK]</English>
 		<Polish>Zasiej Tyton</Polish>
-		<Russian>Посадить тобак</Russian>
+		<Russian>Производить табак</Russian>
 		<Italian>[LINK=BONUS_TOBACCO]Tabacco[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
 	<TEXT>
@@ -524,7 +524,7 @@
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_COFFEE</Tag>
 		<English>Bonus - Coffee</English>
 		<Polish>Bonus - Kawa</Polish>
-		<Russian>Кава</Russian>
+		<Russian>Кофе</Russian>
 		<Italian>Caffè</Italian>
 	</TEXT>
 	<TEXT>
@@ -580,14 +580,14 @@
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_FIG</Tag>
 		<English>Bonus - Fig</English>
 		<Polish>Bonus - Figi</Polish>
-		<Russian>Фиги</Russian>
+		<Russian>Инжир</Russian>
 		<Italian>Fico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_FLAX</Tag>
 		<English>Bonus - Flax</English>
 		<Polish>Bonus - Len</Polish>
-		<Russian>Лен</Russian>
+		<Russian>Лён</Russian>
 		<Italian>Lino</Italian>
 	</TEXT>
 	<TEXT>
@@ -634,7 +634,7 @@
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_INCENSE</Tag>
 		<English>Bonus - Incense</English>
 		<Polish>Bonus - Kadzidlo</Polish>
-		<Russian>Фимиам</Russian>
+		<Russian>Благовония</Russian>
 		<Italian>Incenso</Italian>
 	</TEXT>
 	<TEXT>
@@ -689,7 +689,7 @@
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_MELONS</Tag>
 		<English>Bonus - Melons</English>
 		<Polish>Bonus - Morsy</Polish>
-		<Russian>Арбузы</Russian>
+		<Russian>Дыни</Russian>
 		<Italian>Melone</Italian>
 	</TEXT>
 	<TEXT>
@@ -771,7 +771,7 @@
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_POULTRY</Tag>
 		<English>Bonus - Poultry</English>
 		<Polish>Bonus - Drób</Polish>
-		<Russian>Птица</Russian>
+		<Russian>Домашние птицы</Russian>
 		<Italian>Carne di pollo</Italian>
 	</TEXT>
 	<TEXT>
@@ -785,7 +785,7 @@
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_PRIME_TIMBER</Tag>
 		<English>Bonus - Prime Timber</English>
 		<Polish>Bonus - Drewno Wysokiej Jakosci</Polish>
-		<Russian>Строевой лес</Russian>
+		<Russian>Первосортная древесина</Russian>
 		<Italian>Legno pregiato</Italian>
 	</TEXT>
 	<TEXT>
@@ -806,7 +806,7 @@
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_RESIN</Tag>
 		<English>Bonus - Resin</English>
 		<Polish>Bonus - Zywica</Polish>
-		<Russian>Тыквы</Russian>
+		<Russian>Смола</Russian>
 		<Italian>Resina</Italian>
 	</TEXT>
 	<TEXT>
@@ -827,7 +827,7 @@
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_SEA_LION_AND_SEAL</Tag>
 		<English>Bonus - Sea Lion and Seal</English>
 		<Polish>Bonus - Lwy Morskie</Polish>
-		<Russian>Тюлени</Russian>
+		<Russian>Тюлени и морские львы</Russian>
 		<Italian>Leone marino e foca</Italian>
 	</TEXT>
 	<TEXT>
@@ -841,7 +841,7 @@
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_SILK</Tag>
 		<English>Bonus - Silk</English>
 		<Polish>Bonus - Jedwab</Polish>
-		<Russian>Шелк</Russian>
+		<Russian>Шёлк</Russian>
 		<Italian>Seta</Italian>
 	</TEXT>
 	<TEXT>
@@ -862,7 +862,7 @@
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_SUGAR</Tag>
 		<English>Bonus - Sugar</English>
 		<Polish>Bonus - Cukier</Polish>
-		<Russian>Сахарный тростник</Russian>
+		<Russian>Сахар</Russian>
 		<Italian>Zucchero</Italian>
 	</TEXT>
 	<TEXT>
@@ -876,7 +876,7 @@
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_TOBACCO</Tag>
 		<English>Bonus - Tobacco</English>
 		<Polish>Bonus - Tyton</Polish>
-		<Russian>Тобак</Russian>
+		<Russian>Табак</Russian>
 		<Italian>Tabacco</Italian>
 	</TEXT>
 	<TEXT>

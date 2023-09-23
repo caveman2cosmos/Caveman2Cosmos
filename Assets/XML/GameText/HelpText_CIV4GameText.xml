@@ -32,35 +32,35 @@
 		<English>[ICON_BULLET]Extra unit upkeep: %s1 [ICON_GOLD]</English>
 		<Italian>[ICON_BULLET]Costi extra di manutenzione unità: %s1 [ICON_GOLD]</Italian>
 		<German>[ICON_BULLET]Zusätzliche laufende Kosten: %s1 [ICON_GOLD]</German>
-		<Russian>[ICON_BULLET]Содержание дополнительных единиц: %s1 [ICON_GOLD]</Russian>
+		<Russian>[ICON_BULLET]Содержание дополнительных подразделений: %s1 [ICON_GOLD]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_CIVILIAN</Tag>
 		<English>[ICON_BULLET]Free civilian unit upkeep: %d1 [ICON_GOLD]</English>
 		<Italian>[ICON_BULLET]Costi di manutenzione gratuiti dell'unità civile: %d1 [ICON_GOLD]</Italian>
 		<German>[ICON_BULLET]Kostenübernahme für zivile Einheiten: %d1 [ICON_GOLD]</German>
-		<Russian>[ICON_BULLET]Поддержка бесплатных гражданских единиц: %d1 [ICON_GOLD]</Russian>
+		<Russian>[ICON_BULLET]Поддержка бесплатных гражданских подразделений: %d1 [ICON_GOLD]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_CIVILIAN_PER_POP</Tag>
 		<English>[ICON_BULLET]%d1%% free civilian unit upkeep per population.</English>
 		<Italian>[ICON_BULLET]%d1%% di costi di mantenimento gratuiti per le unità civili per popolazione.</Italian>
 		<German>[ICON_BULLET]freie zivile Einheiten ohne laufende Kosten: %d1%%</German>
-		<Russian>[ICON_BULLET]%d1%% бесплатных гражданских единиц на население.</Russian>
+		<Russian>[ICON_BULLET]%d1%% бесплатных гражданских подразделений на население.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_MILITARY</Tag>
 		<English>[ICON_BULLET]Free military unit upkeep: %d1 [ICON_GOLD]</English>
 		<Italian>[ICON_BULLET]Costi di mantenimento gratuiti per l'unità militare: %d1 [ICON_GOLD]</Italian>
 		<German>[ICON_BULLET]Kostenübernahme für militärische Einheiten: %d1 [ICON_GOLD]</German>
-		<Russian>[ICON_BULLET]Поддержка бесплатных военных единиц: %d1 [ICON_GOLD]</Russian>
+		<Russian>[ICON_BULLET]Поддержка бесплатных военных подразделений: %d1 [ICON_GOLD]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_MILITARY_PER_POP</Tag>
 		<English>[ICON_BULLET]%d1%% free military unit upkeep per population.</English>
 		<Italian>[ICON_BULLET]%d1%% di costi di mantenimento gratuiti per le unità militari per popolazione.</Italian>
 		<German>[ICON_BULLET]freie Militäreinheiten ohne laufende Kosten: %d1%%</German>
-		<Russian>[ICON_BULLET]%d1%% бесплатных военных единиц на население.</Russian>
+		<Russian>[ICON_BULLET]%d1%% бесплатных военных подразделений на население.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_PER_POP</Tag>
@@ -73,20 +73,20 @@
 		<English>[ICON_BULLET]Base unit upkeep change: %d1%%</English>
 		<German>[ICON_BULLET]laufende Kosten (Grundwert): %d1%% </German>
 		<Italian>[ICON_BULLET]Modifica ai costi di mantenimento base dell'unità: %d1%%</Italian>
-		<Russian>[ICON_BULLET]Изменение содержания базовой единицы: %d1%%</Russian>
+		<Russian>[ICON_BULLET]Изменение содержания базового подразделения: %d1%%</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_MOD_CIVILIAN</Tag>
 		<English>[ICON_BULLET]%d1%% civilian unit upkeep cost</English>
 		<Italian>[ICON_BULLET]%d1%% dei costi di mantenimento per l'unità civile</Italian>
 		<German>[ICON_BULLET]%d1%% laufende Kosten für zivile Einheiten</German>
-		<Russian>[ICON_BULLET]%d1%% стоимость гражданской единицы</Russian>
+		<Russian>[ICON_BULLET]%d1%% стоимость гражданского подразделения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_MOD_MILITARY</Tag>
 		<English>[ICON_BULLET]%d1%% military unit upkeep cost</English>
 		<Italian>[ICON_BULLET]%d1%% dei costi di mantenimento per l'unità militare</Italian>
 		<German>[ICON_BULLET]%d1%% laufende Kosten für militärische Einheiten</German>
-		<Russian>[ICON_BULLET]%d1%% стоимость военной единицы</Russian>
+		<Russian>[ICON_BULLET]%d1%% стоимость военного подразделения</Russian>
 	</TEXT>
 </Civ4GameText>
