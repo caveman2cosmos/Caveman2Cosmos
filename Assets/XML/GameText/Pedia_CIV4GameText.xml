@@ -926,7 +926,7 @@
 		<Italian>Contenuti</Italian>
 		<Spanish>Contenido</Spanish>
 		<Polish>TreŚć</Polish>
-		<Russian>Ñîäåðæàíèå</Russian>
+		<Russian>Содержание</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_SCREEN_FORWARD</Tag>
@@ -943,7 +943,7 @@
 		<Italian>[SPACE][SPACE][SPACE][SPACE][SPACE]Indice</Italian>
 		<Spanish>Índice</Spanish>
 		<Polish>Indeks</Polish>
-		<Russian>Èíäåêñ</Russian>
+		<Russian>Индекс</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_STRATEGY</Tag>
@@ -953,7 +953,7 @@
 		<German>Strategie</German>
 		<Spanish>Estrategia</Spanish>
 		<Polish>Strategia</Polish>
-		<Russian>Ñòðàòåãèÿ</Russian>
+		<Russian>Стратегия</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_SYNERGY</Tag>
@@ -967,7 +967,7 @@
 		<Tag>TXT_KEY_PEDIA_TECH_REQUIRED</Tag>
 		<English>Tech Required:</English>
 		<French>Tech Requise :</French>
-		<Russian>Технология:</Russian>
+		<Russian>Необходимая технология:</Russian>
 		<Italian>Richiede la tecnologia:</Italian>
 	</TEXT>
 	<TEXT>
@@ -975,7 +975,7 @@
 		<English>% Worker Speed</English>
 		<French>% Vitesse des Ouvriers</French>
 		<German>% schnellere Arbeitstrupps</German>
-		<Russian>% скорость рабочего</Russian>
+		<Russian>% скорость рабочих</Russian>
 		<Italian>% di aumento della velocità delle unità di tipo lavoratore</Italian> <!--tech Tool Making pedia-->
 	</TEXT>
 	<TEXT>
@@ -983,7 +983,7 @@
 		<English>turns + feature build time)</English>
 		<French>tours + temps de constr. de l'aménagement)</French>
 		<German> Runde(n) zusätzlich)</German>
-		<Russian>ходов + время строительства)</Russian>
+		<Russian>ходов + время строительства особенности)</Russian>
 		<Italian>turni + il tempo di costruzione della risorsa)</Italian>
 	</TEXT>
 	<TEXT>
@@ -994,7 +994,7 @@
 		<Italian>[ICON_BULLET]L'unità può essere catturata</Italian>
 		<Spanish>[ICON_BULLET]Se puede capturar</Spanish>
 		<Polish>[ICON_BULLET]Może zostać przejęty</Polish>
-		<Russian>[ICON_BULLET]Ìîæåò áûòü çàõâà÷åí</Russian>
+		<Russian>[ICON_BULLET]Можно захватить</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_UNIT_DRAFTABLE</Tag>
@@ -1004,7 +1004,7 @@
 		<Italian>[ICON_BULLET]L'unità può essere reclutata quando i requisiti sono soddisfatti</Italian>
 		<Spanish>[ICON_BULLET]Se puede reclutar cuando se cumplan las condiciones</Spanish>
 		<Polish>[ICON_BULLET]Może zostać zwerbowany gdy są spełnione wymagania</Polish>
-		<Russian>[ICON_BULLET]Ïîäðàçäåëåíèå ìîæåò áûòü ïðèçâàíî, êîãäà âûïîëíåíû íåîáõîäèìûå óñëîâèÿ</Russian>
+		<Russian>[ICON_BULLET]Можно подготовить при выполнении условий</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_UNIT_IGNORES_BUILDING_DEFENSE</Tag>
@@ -1014,7 +1014,7 @@
 		<Italian>[ICON_BULLET]Ignora le difese degli edifici</Italian>
 		<Spanish>[ICON_BULLET]Ignora la defensa por edificios</Spanish>
 		<Polish>[ICON_BULLET]Ignoruje Obronę Budynku</Polish>
-		<Russian>[ICON_BULLET]Èãíîðèðóåò çàùèòó çäàíèé</Russian>
+		<Russian>[ICON_BULLET]Игнорирует защиту зданий</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_WELCOME_MESSAGE</Tag>
@@ -1022,7 +1022,7 @@
 		<French>« Qui sommes-nous, qu'est chacun de nous, sinon une combinaison d'expériences, d'informations, de lectures, de rêveries ? Chaque vie est une encyclopédie, une bibliothèque, un inventaire d'objets, un échantillonnage de styles, où tout peut se mêler et se réorganiser de toutes les manières possibles. » - Italo Calvino, Leçons américaines : Six propositions pour le prochain millénaire</French>
 		<German>„Wer sind wir denn, wer ist jeder von uns, wenn nicht eine Kombination von Erfahrungen, Informationen, Lektüren und Phantasien? Jedes Leben ist eine Enzyklopädie, eine Bibliothek, ein Inventar von Objekten, eine Musterkollektion von Stilen, worin alles jederzeit auf jede mögliche Weise neu gemischt und neu geordnet werden kann.“ - Italo Calvino, Sechs Vorschläge für das nächste Jahrtausend</German>
 		<Italian>«Chi siamo noi, chi è ciascuno di noi se non una combinazione d'esperienza, d'informazioni, di letture, d'immaginazioni? Ogni vita è un'enciclopedia, una biblioteca, un inventario di oggetti, un campionario di stili, dove tutto può essere continuamente rimescolato e riordinato in tutti i modi possibili.» - Italo Calvino, Lezioni americane. Sei proposte per il prossimo millennio</Italian>
-		<Russian>Кто мы, кто есть каждый из нас, если не сочетание опыта, информации, книг, которые мы прочли, вещей, которые мы воображали? Любая жизнь сродни энциклопедии, библиотеке, инвентарю предметов, ряду стилей. Все можно постоянно перетасовывать и переупорядочивать любыми доступными способами.</Russian>
+		<Russian>"Кто мы, если не сочетание переживаний, сведений, прочитанных книг, фантазий? Каждая жизнь — это энциклопедия, библиотека, реестр вещей, собрание стилей, где содержимое постоянно перемешивается и реорганизовывается всевозможными способами" - Итало Кальвино, Шесть заметок для будущего тысячелетия</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_WONDER</Tag>
@@ -1031,7 +1031,7 @@
 		<German>Weltwunder: [BOLD]%d1%%[\BOLD] Wahrscheinlichkeit[NEWLINE]</German>
 		<Spanish>Construcción de maravillas: probabilidad del [BOLD]%d1%%[\BOLD][NEWLINE]</Spanish>
 		<Polish>Ukończenie Cudu: [BOLD]%d1%%[\BOLD] Szans[NEWLINE]</Polish>
-		<Russian>Ñòðîèòåëüñòâî ÷óäà: [BOLD]%d1%%[\BOLD] øàíñ[NEWLINE]</Russian>
+		<Russian>Строительство чуда: [BOLD]%d1%%[\BOLD] шанс[NEWLINE]</Russian>
 		<Italian>Costruzione della meraviglie: [BOLD]%d1%%[\BOLD] di possibilità[NEWLINE]</Italian><!--Leaders in the pedia-->
 	</TEXT>
 	<TEXT>
@@ -1041,13 +1041,13 @@
 		<German>Arbeitstempo: %d1</German>
 		<Spanish>Velocidad de trabajo: %d1</Spanish>
 		<Polish>Ocena pracy: %d1</Polish>
-		<Russian>Îöåíêà ðàáîòû: %d1</Russian>
+		<Russian>Скорость работы: %d1</Russian>
 		<Italian>Tasso di lavoro: %d1</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_PEDIA_NON_COMBAT</Tag>
 		<English>Non-Combat</English>
-		<Russian>Небоевой</Russian>
+		<Russian>Небоевое</Russian>
 		<Italian>Unità non combattente</Italian>
 	</TEXT>
 </Civ4GameText>
