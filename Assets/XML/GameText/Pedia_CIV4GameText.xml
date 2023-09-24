@@ -40,7 +40,7 @@
 		<English>Auto-Build</English>
 		<French>Auto-construction</French>
 		<German>automatisch</German>
-		<Russian>Автоматическое строительство</Russian>
+		<Russian>Строится автоматически</Russian>
 		<Italian>Edificio automatico</Italian>
 	</TEXT>
 	<TEXT>
@@ -935,7 +935,7 @@
 		<German>Vor</German>
 		<Italian>Successivo</Italian>
 		<Spanish>Siguiente</Spanish>
-		<Russian>Далее</Russian>
+		<Russian>Вперед</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_SCREEN_INDEX</Tag>

@@ -5,14 +5,14 @@
 		<English>Military Standard (Bears)</English>
 		<French>Standards Militaires (Ours)</French>
 		<Polish>Sztandar Wojskowy (Niedźwiedź)</Polish>
-		<Russian>Военный штандарт (Медведи)</Russian>
+		<Russian>Военный штандарт (Медведь)</Russian>
 		<Italian>Stendardo militare dell'orso</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_BEAR_HELP</Tag>
 		<English>[ICON_BULLET]Build Bear buildings and units faster in this city.</English>
 		<French>Construit les bâtiments et unités Ours plus vite dans cette ville.</French>
-		<Russian>[ICON_BULLET]Здания и подразделения медведей в этом городе создаются быстрее.</Russian>
+		<Russian>[ICON_BULLET]Медвежьи здания и подразделения в этом городе создаются быстрее.</Russian>
 		<Italian>[ICON_BULLET]Costruisci edifici e unità relazionati agli orsi più velocemente in questa città.</Italian>
 	</TEXT>
 	<TEXT>
@@ -29,7 +29,7 @@
 		<French>Construit les bâtiments et unités bisons plus vite dans cette Ville.</French>
 		<Polish>Konstuuj budynki i werbuj jednostki bizonów szybciej w tym mieście.</Polish>
 		<Italian>[ICON_BULLET]Costruisci edifici e unità relazionati ai bisonti più velocemente in questa città.</Italian>
-		<Russian>[ICON_BULLET]Здания и подразделения бизона в этом городе создаются быстрее.</Russian>
+		<Russian>[ICON_BULLET]Бизоньи здания и подразделения в этом городе создаются быстрее.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_BIG_CATS</Tag>
@@ -37,7 +37,7 @@
 		<French>Standards Militaires (Félins)</French>
 		<Italian>Stendardo militare del gran felino</Italian>
 		<Polish>Sztandar Wojskowy (Wielkie Koty)</Polish>
-		<Russian>Военный штандарт (Большие кошки)</Russian>
+		<Russian>Военный штандарт (Большая кошка)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_BIG_CATS_HELP</Tag>
@@ -45,14 +45,14 @@
 		<French>Construit les bâtiments et unités félines plus vite dans cette Ville.</French>
 		<Italian>[ICON_BULLET]Costruisci edifici e unità relazionati ai felini più velocemente in questa città.</Italian>
 		<Polish>Buduj budynki i jednostki Wielkich Kotów szybciej w Twoim mieście.</Polish>
-		<Russian>[ICON_BULLET]Здания и подразделения кошачьих в этом городе создаются быстрее.</Russian>
+		<Russian>[ICON_BULLET]Кошачьи здания и подразделения в этом городе создаются быстрее.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_DEER</Tag>
 		<English>Military Standard (Deer)</English>
 		<French>Standards Militaires (Cervidés)</French>
 		<Polish>Sztandar Wojskowy (Deer)</Polish>
-		<Russian>Òîòåì «Îëåíü»</Russian>
+		<Russian>Военный штандарт (Олень)</Russian>
 		<Italian>Stendardo militare del cervo</Italian>
 	</TEXT>
 	<TEXT>
@@ -60,13 +60,14 @@
 		<English>[ICON_BULLET]Build Deer buildings and units faster in this city.</English>
 		<French>[ICON_BULLET]Construit les bâtiments et unités cervidés plus vite dans cette Ville.</French>
 		<Italian>[ICON_BULLET]Costruisci edifici e unità relazionati ai cervi più velocemente in questa città.</Italian>
+		<Russian>[ICON_BULLET]Оленьи здания и подразделения в этом городе создаются быстрее.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_GIRAFFE</Tag>
 		<English>Military Standard (Giraffe)</English>
 		<French>Standards Militaires (Girafe)</French>
 		<Polish>Sztandar Wojskowy (Żyrafa)</Polish>
-		<Russian>Òîòåì «Æèðàô»</Russian>
+		<Russian>Военный штандарт (Жираф)</Russian>
 		<Italian>Stendardo militare della giraffa</Italian>
 	</TEXT>
 	<TEXT>
@@ -74,13 +75,14 @@
 		<English>[ICON_BULLET]Build Giraffe buildings and units faster in this city.</English>
 		<French>Construit les bâtiments et unités Girafes plus vite dans cette ville.</French>
 		<Italian>[ICON_BULLET]Costruisci edifici e unità relazionati alle giraffe più velocemente in questa città.</Italian>
+		<Russian>[ICON_BULLET]Жирафьи здания и подразделения в этом городе создаются быстрее.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_RHINOCEROS</Tag>
 		<English>Military Standard (Rhinoceros)</English>
 		<French>Standards Militaires (Rhinocéros)</French>
 		<Polish>Sztandar Wojskowy (Nosorożec)</Polish>
-		<Russian>Òîòåì «Íîñîðîã»</Russian>
+		<Russian>Военный штандарт (Носорог)</Russian>
 		<Italian>Stendardo militare del rinoceronte</Italian>
 	</TEXT>
 	<TEXT>
@@ -88,13 +90,14 @@
 		<English>[ICON_BULLET]Build Rhinoceros buildings and units faster in this city.</English>
 		<French>Construit les bâtiments et unités Rhinos plus vite dans cette Ville.</French>
 		<Italian>[ICON_BULLET]Costruisci edifici e unità relazionati ai rinoceronti più velocemente in questa città.</Italian>
+		<Russian>[ICON_BULLET]Носорожьи здания и подразделения в этом городе создаются быстрее.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_ZEBRA</Tag>
 		<English>Military Standard (Zebra)</English>
 		<French>Standards Militaires (Zèbres)</French>
 		<Polish>Sztandar Wojskowy (Zebra)</Polish>
-		<Russian>Òîòåì «Çåáðà»</Russian>
+		<Russian>Военный штандарт (Зебра)</Russian>
 		<Italian>Stendardo militare della zebra</Italian>
 	</TEXT>
 	<TEXT>
@@ -102,6 +105,7 @@
 		<English>[ICON_BULLET]Build Zebra buildings and units faster in this city.</English>
 		<French>Construit les bâtiments et unités Zèbres plus vite dans cette ville.</French>
 		<Italian>[ICON_BULLET]Costruisci edifici e unità relazionati alle zebre più velocemente in questa città.</Italian>
+		<Russian>[ICON_BULLET]Зебровые здания и подразделения в этом городе создаются быстрее.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_BEAR</Tag>
@@ -113,14 +117,14 @@
 		</French>
 		<Italian>Addestratore orsi</Italian>
 		<Polish>Treser Niedźwiedzi</Polish>
-		<Russian>Ïðèðó÷åíèå ìåäâåäåé</Russian>
+		<Russian>Дрессировщик медведей</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EFFECT_HERITAGE_BEARS</Tag>
 		<English>Effect - Heritage - Bears</English>
 		<French>Effet - Patrimoine (Ours)</French>
 		<Polish>Efekt - Dziedzictwo - Niedźwiedź</Polish>
-		<Russian>Ïèòîìíèê ìåäâåäåé</Russian>
+		<Russian>Эффект - Наследие - Медведи</Russian>
 		<Italian>Effetto dell'eredità culturale degli orsi</Italian>
 	</TEXT>
 	<TEXT>
@@ -128,25 +132,27 @@
 		<English>Heritage - Bears</English>
 		<French>Patrimoine (Ours)</French>
 		<Polish>Dziedzictwo - Niedźwiedź</Polish>
-		<Russian>Ðàçâåäåíèå ìåäâåäåé</Russian>
+		<Russian>Наследие - Медведи</Russian>
 		<Italian>Eredità culturale degli orsi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERITAGE_BEARS_PEDIA</Tag>
 		<English>Instead of only being able to train Bear units in the city you built the wonder in this building allows them to be built in any of your cities. It can only be built in the ciy with the Bear Trainer World Wonder.</English>
 		<Italian>Invece di poter addestrare le unità orso solo nella città in cui hai costruito la meraviglia, questo edificio permette di costruirle in qualsiasi tua città. Può essere costruito solo in una città con la meraviglia mondiale addestramento orsi.</Italian>
+		<Russian>Можно возвести исключительно в городе с мировым чудом "Дрессировщик медведей". Позволяет создавать медвежьи подразделения в любом вашем поселении, а не только в том, где стоит вышеупомянутое чудо. </Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_BEAR_PEDIA</Tag>
 		<English>There is no evidence bears were ever trained for warfare. The [COLOR_BUILDING_TEXT]Bear Trainer[COLOR_REVERT] building is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<Italian>Non ci sono prove che gli orsi furono mai usati in guerra. L'[COLOR_BUILDING_TEXT]addestramento orsi[COLOR_REVERT] è un edificio parte delle [COLOR_HIGHLIGHT_TEXT]tecnologie alternative[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
+		<Russian>Не существует доказательств того, что медведей когда-либо использовали для ведения войны. [COLOR_BUILDING_TEXT]Дрессировщик медведей[COLOR_REVERT] - часть [COLOR_HIGHLIGHT_TEXT]технологий альтернативной временной линии[COLOR_REVERT]. Технологий, которые могли бы быть.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_BIG_CAT</Tag>
 		<English>Animal Trainer (Big Cat)</English>
 		<French>Entraineur de Félins</French>
 		<Polish>Treser Wielkich Kotów</Polish>
-		<Russian>Ïðèðó÷åíèå êîøåê</Russian>
+		<Russian>Дрессировщик больших кошек</Russian>
 		<Italian>Addestratore grossi felini</Italian>
 	</TEXT>
 	<TEXT>
@@ -154,13 +160,13 @@
 		<English>Effect - Heritage - Big Cats</English>
 		<French>Effet (Entraineur de Félins)</French>
 		<Polish>Efekt - Treser Wielkich Kotów</Polish>
-		<Russian>Ïèòîìíèê êîøåê</Russian>
+		<Russian>Эффект - Наследие - Большие кошки</Russian>
 		<Italian>Effetto dell'eredità culturale dei grossi felini</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_BIG_CAT_PEDIA</Tag>
 		<English>Cat training is the process of modifying a wild cat's behavior for entertainment or companionship purposes. Training is commonly used to reduce unwanted or problematic behaviors in wild cats, to enhance interactions between humans and cats, and to allow them to coexist comfortably. There are various methods for training cats which employ different balances between reward and punishment.</English>
-		<Russian>Дрессировка кошки - это процесс изменения поведения дикой кошки в развлекательных или дружеских целях. Дрессировка обычно используется для уменьшения нежелательного или проблемного поведения у диких кошек, для улучшения взаимодействия между людьми и кошками и для того, чтобы позволить им комфортно сосуществовать. Существуют различные методы дрессировки кошек, в которых используется различный баланс между вознаграждением и наказанием.</Russian>
+		<Russian>Дрессировка кошки - процесс изменения поведения дикой кошки в развлекательных или дружеских целях. Дрессировка обычно используется для уменьшения нежелательного или проблемного поведения диких кошек, улучшения взаимодействия между людьми и кошками и создания комфортных условий их сосуществования. Есть разные методы дрессировки кошек, использующие различный баланс между вознаграждением и наказанием.</Russian>
 		<Italian>L'addestramento del gatto è il processo di modifica del comportamento di un gatto selvatico per scopi di intrattenimento o compagnia. L'addestramento è comunemente utilizzato per ridurre i comportamenti indesiderati o problematici nei gatti selvatici, per migliorare le interazioni tra uomo e gatto e per consentire loro di coesistere comodamente. Esistono vari metodi per addestrare i gatti che impiegano diversi equilibri tra ricompensa e punizione.</Italian>
 	</TEXT>
 	<TEXT>
