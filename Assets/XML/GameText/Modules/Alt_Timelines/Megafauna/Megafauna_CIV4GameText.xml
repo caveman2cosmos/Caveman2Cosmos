@@ -5,14 +5,14 @@
 		<English>Military Standard (Bears)</English>
 		<French>Standards Militaires (Ours)</French>
 		<Polish>Sztandar Wojskowy (Niedźwiedź)</Polish>
-		<Russian>Тотем «Медведь»</Russian>
+		<Russian>Военный штандарт (Медведи)</Russian>
 		<Italian>Stendardo militare dell'orso</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_BEAR_HELP</Tag>
 		<English>[ICON_BULLET]Build Bear buildings and units faster in this city.</English>
 		<French>Construit les bâtiments et unités Ours plus vite dans cette ville.</French>
-		<Russian>Усоряет тренировку медведей и постройку в городе зданий для них.</Russian>
+		<Russian>[ICON_BULLET]Здания и подразделения медведей в этом городе создаются быстрее.</Russian>
 		<Italian>[ICON_BULLET]Costruisci edifici e unità relazionati agli orsi più velocemente in questa città.</Italian>
 	</TEXT>
 	<TEXT>
@@ -20,7 +20,7 @@
 		<English>Military Standard (Bison)</English>
 		<French>Standards Militaires (Bisons)</French>
 		<Polish>Sztandar Wojskowy (Bizon)</Polish>
-		<Russian>Тотем «Бизон»</Russian>
+		<Russian>Военный штандарт (Бизоны)</Russian>
 		<Italian>Stendardo militare del bisonte</Italian>
 	</TEXT>
 	<TEXT>
@@ -29,6 +29,7 @@
 		<French>Construit les bâtiments et unités bisons plus vite dans cette Ville.</French>
 		<Polish>Konstuuj budynki i werbuj jednostki bizonów szybciej w tym mieście.</Polish>
 		<Italian>[ICON_BULLET]Costruisci edifici e unità relazionati ai bisonti più velocemente in questa città.</Italian>
+		<Russian>[ICON_BULLET]Здания и подразделения бизонов в этом городе создаются быстрее.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_BIG_CATS</Tag>
@@ -36,7 +37,7 @@
 		<French>Standards Militaires (Félins)</French>
 		<Italian>Stendardo militare del gran felino</Italian>
 		<Polish>Sztandar Wojskowy (Wielkie Koty)</Polish>
-		<Russian>Тотем «Кошка»</Russian>
+		<Russian>Военный штандарт (Большие кошки)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_BIG_CATS_HELP</Tag>
@@ -44,7 +45,7 @@
 		<French>Construit les bâtiments et unités félines plus vite dans cette Ville.</French>
 		<Italian>[ICON_BULLET]Costruisci edifici e unità relazionati ai felini più velocemente in questa città.</Italian>
 		<Polish>Buduj budynki i jednostki Wielkich Kotów szybciej w Twoim mieście.</Polish>
-		<Russian>[ICON_BULLET][COLOR_YELLOW]Подсказка: [COLOR_REVERT]стройте кошачьи питомники в городе, чтобы дрессировать ручных и сторожевых кошек.</Russian>
+		<Russian>[ICON_BULLET]Здания и подразделения кошачьих в этом городе создаются быстрее.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_DEER</Tag>
