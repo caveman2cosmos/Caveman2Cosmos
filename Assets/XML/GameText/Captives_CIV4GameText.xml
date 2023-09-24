@@ -127,7 +127,7 @@
 		<French>Augmente de 1 la population. L'unité est détruite.</French>
 		<Italian>[NEWLINE]Incrementa la popolazione cittadina di uno. L'unità viene consumata.</Italian>
 		<Polish>Zwiększa populację miasta o 1. Jednostka zostaje usunięta z gry.</Polish>
-		<Russian>Население города увеличивается на одного жителя. Подразделение исчезнет.</Russian>
+		<Russian>Население города увеличится на одного жителя. Подразделение исчезнет.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_CITY_HAD_ARTISTS</Tag>
