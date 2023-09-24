@@ -20,7 +20,7 @@
 		<English>Military Standard (Bison)</English>
 		<French>Standards Militaires (Bisons)</French>
 		<Polish>Sztandar Wojskowy (Bizon)</Polish>
-		<Russian>Военный штандарт (Бизоны)</Russian>
+		<Russian>Военный штандарт (Бизон)</Russian>
 		<Italian>Stendardo militare del bisonte</Italian>
 	</TEXT>
 	<TEXT>
@@ -29,7 +29,7 @@
 		<French>Construit les bâtiments et unités bisons plus vite dans cette Ville.</French>
 		<Polish>Konstuuj budynki i werbuj jednostki bizonów szybciej w tym mieście.</Polish>
 		<Italian>[ICON_BULLET]Costruisci edifici e unità relazionati ai bisonti più velocemente in questa città.</Italian>
-		<Russian>[ICON_BULLET]Здания и подразделения бизонов в этом городе создаются быстрее.</Russian>
+		<Russian>[ICON_BULLET]Здания и подразделения бизона в этом городе создаются быстрее.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_BIG_CATS</Tag>
