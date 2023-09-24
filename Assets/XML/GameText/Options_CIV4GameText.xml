@@ -20,7 +20,7 @@
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_DELAY_CITY_CYCLE_To_END_OF_TURN_HELP</Tag>
 		<English>City cycle process will initiate when you try to end the turn</English>
-		<Russian>Процесс городского цикла начнётся, когда вы попытаетесь завершить ход</Russian>
+		<Russian>Процесс городского цикла начнется, когда вы попытаетесь завершить ход</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_HIDE_UNCONSTRUCTABLE_BUILDINGS</Tag>

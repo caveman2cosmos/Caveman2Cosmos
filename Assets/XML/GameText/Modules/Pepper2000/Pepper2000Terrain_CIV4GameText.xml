@@ -37,7 +37,7 @@
 		<Tag>TXT_KEY_FEATURE_BROWN_DWARF_PEDIA</Tag>
 		<English>A brown dwarf</English>
 		<French>Une naine brune</French>
-		<Russian>Карликовый субзвёздный объект</Russian>
+		<Russian>Карликовый субзвездный объект</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_CARBON_PLANET</Tag>
@@ -76,7 +76,7 @@
 		<Tag>TXT_KEY_FEATURE_DESERT_PLANET_PEDIA</Tag>
 		<English>A rocky planet almost entirely devoid of water.</English>
 		<French>Une planète rocheuse presque entièrement dépourvue d'eau.</French>
-		<Russian>Каменистая планета почти полностью лишённая воды.</Russian>
+		<Russian>Каменистая планета почти полностью лишенная воды.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_DWARF_GALAXY</Tag>
