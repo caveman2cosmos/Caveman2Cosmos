@@ -1674,7 +1674,7 @@
 		<German>ERWEITERT</German>
 		<Italian>IMPOSTAZIONI AVANZATE</Italian>
 		<Spanish>AVANZADO</Spanish>
-		<Russian>РАСШИРЕННЫЕ НАСТРОЙКИ</Russian>
+		<Russian>Дополнительно</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_AI</Tag>
@@ -1824,7 +1824,7 @@
 		<German>CREDITS</German>
 		<Italian>RICONOSCIMENTI</Italian>
 		<Spanish>CRÉDITOS</Spanish>
-		<Russian>ТИТРЫ</Russian>
+		<Russian>Титры</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_CUSTOM_GAME</Tag>
@@ -1947,7 +1947,7 @@
 		<German>Ruhmeshalle betrachten</German>
 		<Italian>Guarda la Hall of fame</Italian>
 		<Spanish>Ver Salón de la Fama</Spanish>
-		<Russian>Посмотреть Зал славы</Russian>
+		<Russian>Зал славы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_HOST_DISCONNECT_DESC</Tag>
