@@ -124,7 +124,7 @@
 		<English>Effect - Heritage - Bears</English>
 		<French>Effet - Patrimoine (Ours)</French>
 		<Polish>Efekt - Dziedzictwo - Niedźwiedź</Polish>
-		<Russian>Эффект - Наследие - Медведи</Russian>
+		<Russian>Эффект - Культурное наследие - Медведи</Russian>
 		<Italian>Effetto dell'eredità culturale degli orsi</Italian>
 	</TEXT>
 	<TEXT>
@@ -132,7 +132,7 @@
 		<English>Heritage - Bears</English>
 		<French>Patrimoine (Ours)</French>
 		<Polish>Dziedzictwo - Niedźwiedź</Polish>
-		<Russian>Наследие - Медведи</Russian>
+		<Russian>Культурное наследие - Медведи</Russian>
 		<Italian>Eredità culturale degli orsi</Italian>
 	</TEXT>
 	<TEXT>
@@ -145,7 +145,7 @@
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_BEAR_PEDIA</Tag>
 		<English>There is no evidence bears were ever trained for warfare. The [COLOR_BUILDING_TEXT]Bear Trainer[COLOR_REVERT] building is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<Italian>Non ci sono prove che gli orsi furono mai usati in guerra. L'[COLOR_BUILDING_TEXT]addestramento orsi[COLOR_REVERT] è un edificio parte delle [COLOR_HIGHLIGHT_TEXT]tecnologie alternative[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
-		<Russian>Не существует доказательств того, что медведей когда-либо использовали для ведения войны. [COLOR_BUILDING_TEXT]Дрессировщик медведей[COLOR_REVERT] - часть [COLOR_HIGHLIGHT_TEXT]технологий альтернативной временной линии[COLOR_REVERT]. Технологий, которые могли бы быть.</Russian>
+		<Russian>Не существует доказательств того, что медведей когда-либо использовали для ведения войны. [COLOR_BUILDING_TEXT]Дрессировка медведей[COLOR_REVERT] - часть [COLOR_HIGHLIGHT_TEXT]технологий альтернативной временной линии[COLOR_REVERT]. Технологий, которые могли бы быть.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_BIG_CAT</Tag>
@@ -160,7 +160,7 @@
 		<English>Effect - Heritage - Big Cats</English>
 		<French>Effet (Entraineur de Félins)</French>
 		<Polish>Efekt - Treser Wielkich Kotów</Polish>
-		<Russian>Эффект - Наследие - Большие кошки</Russian>
+		<Russian>Эффект - Культурное наследие - Большие кошки</Russian>
 		<Italian>Effetto dell'eredità culturale dei grossi felini</Italian>
 	</TEXT>
 	<TEXT>
@@ -186,7 +186,7 @@
 		<English>Effect - Heritage - Bison</English>
 		<French>Effet - Patrimoine (Bisons)</French>
 		<Polish>Efekt - Dziedzictwo - Bizon</Polish>
-		<Russian>Эффект - Наследие - Бизоны</Russian>
+		<Russian>Эффект - Культурное наследие - Бизоны</Russian>
 		<Italian>Effetto dell'eredità culturale dei bisonti</Italian>
 	</TEXT>
 	<TEXT>
@@ -194,7 +194,7 @@
 		<English>Heritage - Bison</English>
 		<French>Patrimoine (Bisons)</French>
 		<Polish>Dziedzictwo - Bizon</Polish>
-		<Russian>Наследие - Бизоны</Russian>
+		<Russian>Культурное наследие - Бизоны</Russian>
 		<Italian>Eredità culturale dei bisonti</Italian>
 	</TEXT>
 	<TEXT>
@@ -208,6 +208,7 @@
 		<English>There is no evidence bison were ever trained for warfare. The [COLOR_BUILDING_TEXT]Bison Trainer[COLOR_REVERT] building is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<Italian>Non ci sono prove che i bisonti siano mai stati usati in guerra. L'[COLOR_BUILDING_TEXT]addestramento bisonti[COLOR_REVERT] fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologie alternative[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
 		<Polish>Nie ma dowodów na istnienie tej jednostki, jest ona częścią tzw. [COLOR_HIGHLIGHT_TEXT]technologii alternatywnej ścieżki historycznej[COLOR_REVERT].</Polish>
+		<Russian>Не существует доказательств того, что бизонов когда-либо использовали для ведения войны. [COLOR_BUILDING_TEXT]Дрессировка бизонов[COLOR_REVERT] - часть [COLOR_HIGHLIGHT_TEXT]технологий альтернативной временной линии[COLOR_REVERT]. Технологий, которые могли бы быть.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_DEER</Tag>
@@ -219,14 +220,14 @@
 		</French>
 		<Italian>Addestratore cervi</Italian>
 		<Polish>Treser Jeleni</Polish>
-		<Russian>Ïðèðó÷åíèå îëåíåé</Russian>
+		<Russian>Дрессировка оленей</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EFFECT_HERITAGE_DEER</Tag>
 		<English>Effect - Heritage - Deer</English>
 		<French>Effet - Patrimoine (Cervidés)</French>
 		<Polish>Efekt - Dziedzictwo Tresera Jeleni</Polish>
-		<Russian>Ïèòîìíèê îëåíåé</Russian>
+		<Russian>Эффект - Культурное наследие - Олени</Russian>
 		<Italian>Effetto dell'eredità culturale dei cervi</Italian>
 	</TEXT>
 	<TEXT>
@@ -234,13 +235,14 @@
 		<English>[ICON_BULLET]This free building is used to enable the building of the special deer units in all your cities.</English>
 		<French>Ce bâtiment permet l'entraînement d'unités cervidés dans toutes vos villes.</French>
 		<Italian>[ICON_BULLET]Questo edificio gratuito viene utilizzato per consentire la costruzione delle unità speciali cervo in tutte le tue città.</Italian>
+		<Russian>[ICON_BULLET]Бесплатное здание для найма особых оленьих подразделений во всех ваших городах.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERITAGE_DEER</Tag>
 		<English>Heritage - Deer</English>
 		<French>Patrimoine (Cervidés)</French>
 		<Polish>Dziedzictwo - Jeleń</Polish>
-		<Russian>Ðàçâåäåíèå îëåíåé</Russian>
+		<Russian>Культурное наследие - Олени</Russian>
 		<Italian>Eredità culturale dei cervi</Italian>
 	</TEXT>
 	<TEXT>
@@ -248,12 +250,14 @@
 		<English>The Heritage building upgrades the Training Wonder to allow the special units to be built in all your cities.</English>
 		<French>Le bâtiment du patrimoine améliore la merveille de la formation pour permettre la construction d'unités spéciales dans toutes vos villes.</French>
 		<Italian>Invece di poter addestrare le unità cervo solo nella città in cui hai costruito la meraviglia, questo edificio permette di costruirle in qualsiasi tua città. Può essere costruito solo in una città con la meraviglia mondiale addestramento cervi.</Italian>
+		<Russian>Оленье "Культурное наследие" улучшает их дрессировку, позволяя нанимать особые оленьи подразделения сразу во всех ваших городах.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_DEER_PEDIA</Tag>
 		<English>There is no evidence deer were ever trained for warfare. The [COLOR_BUILDING_TEXT]Deer Trainer[COLOR_REVERT] building is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.[PARAGRAPH:2]Strongest base early withdrawal - even battle hardened deer can be skittish creatures that can be tough to KEEP in the battle for long but makes them GREAT at wearing down opponents. They'd be perhaps the best at this get in/get out type of strategy so long as they can do some damage during their short fights.</English>
 		<French>Il n'y a aucune preuve que les cerfs aient été formés pour la guerre. Le bâtiment [COLOR_BUILDING_TEXT] Dresseur de cerfs [COLOR_REVERT] fait partie des [COLOR_HIGHLIGHT_TEXT] technologies de chronologie alternatives [COLOR_REVERT]. Technologies qui auraient pu l'être.[PARAGRAPH:2]Retrait précoce de la base la plus forte - même les cerfs endurcis au combat peuvent être des créatures agiles qui peuvent être difficiles à GARDER dans la bataille pendant longtemps, mais les rendent EXCEPTIONNELS pour épuiser leurs adversaires. Ils seraient peut-être les meilleurs dans ce type de stratégie d'entrée / sortie tant qu'ils peuvent faire des dégâts pendant leurs combats courts.</French>
 		<Italian>Non ci sono prove che i cervi siano mai stati usati in guerra. L'[COLOR_BUILDING_TEXT]addestramento cervi[COLOR_REVERT] fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologie alternative[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
+		<Russian>Не существует доказательств того, что оленей когда-либо использовали для ведения войны. [COLOR_BUILDING_TEXT]Дрессировка оленей[COLOR_REVERT] - часть [COLOR_HIGHLIGHT_TEXT]технологий альтернативной временной линии[COLOR_REVERT]. Технологий, которые могли бы быть.[PARAGRAPH:2]Самое главное - ранний отход. Даже привыкшие к сражениям олени могут оставаться пугливыми и трудноконтролируемыми в длительном бою. Зато они отлично справляются с изматыванием противника. Возможно, они станут лучшими по тактике "Ударил-убежал", если успеют нанести урон во время коротких боев.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_GIRAFFE</Tag>
@@ -265,38 +269,41 @@
 		</French>
 		<Italian>Addestratore giraffe</Italian>
 		<Polish>Treser Żyraf</Polish>
-		<Russian>Ïðèðó÷åíèå æèðàôîâ</Russian>
+		<Russian>Дрессировка жирафов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EFFECT_HERITAGE_GIRAFFES</Tag>
 		<English>Effect - Heritage - Giraffes</English>
 		<French>Effet - Patrimoine (Girafes)</French>
 		<Polish>Efekt - Dziedzictwo - Żyrafa</Polish>
-		<Russian>Ïèòîìíèê æèðàôîâ</Russian>
+		<Russian>Эффект - Культурное наследие - Жирафы</Russian>
 		<Italian>Effetto dell'eredità culturale delle giraffe</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EFFECT_HERITAGE_GIRAFFES_HELP</Tag>
 		<English>[ICON_BULLET]This free building is used to enable the building of the special Giraffe units in all your cities.</English>
 		<Italian>[ICON_BULLET]Questo edificio gratuito viene utilizzato per consentire la costruzione delle unità speciali giraffa in tutte le tue città.</Italian>
+		<Russian>[ICON_BULLET]Бесплатное здание для найма особых жирафьих подразделений во всех ваших городах.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERITAGE_GIRAFFE</Tag>
 		<English>Heritage - Giraffe</English>
 		<French>Patrimoine (Girafes)</French>
 		<Polish>Dziedzictwo - Żyrafa</Polish>
-		<Russian>Ðàçâåäåíèå æèðàôîâ</Russian>
+		<Russian>Культурное наследие - Жирафы</Russian>
 		<Italian>Eredità culturale delle giraffe</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERITAGE_GIRAFFE_PEDIA</Tag>
 		<English>Giraffe units are good for combat in Savanna tiles and their increased Sight Range. Very good light mounted units with a generally strong skill at getting in and out quickly and doing some damage while there. Giraffes are not pushovers in a fight - those horns can straight knock a person out. There is no evidence giraffes were ever trained for warfare. The [COLOR_BUILDING_TEXT]Giraffe Trainer[COLOR_REVERT] building is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<Italian>Le unità giraffa sono ottime per il combattimento nelle caselle della savana e hanno un raggio visivo maggiore. Ottime unità montate leggere con un'abilità generalmente buona nell'entrare e uscire rapidamente dalla battaglia e fare qualche danno nel frattempo. Le giraffe non sono dei pushover in un combattimento: quelle corna possono mettere fuori gioco una persona. Non ci sono prove che le giraffe siano mai state addestrate per la guerra. L'edificio [COLOR_BUILDING_TEXT]addestramento giraffe[COLOR_REVERT] fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologie alternative[COLOR_REVERT]. Tecnologie che avrebbero potuto essere.</Italian>
+		<Russian>Жирафьи подразделения хороши для сражений в саванне и обладают увеличенной дальностью видимости. Это отличная легкая кавалерия, сильная в приеме "Ударил-убежал". В схвате жирафы не слабаки - их рога могут легко сбить человека с ног. Не существует доказательств того, что жирафов когда-либо использовали для ведения войны. [COLOR_BUILDING_TEXT]Дрессировка жирафов[COLOR_REVERT] - часть [COLOR_HIGHLIGHT_TEXT]технологий альтернативной временной линии[COLOR_REVERT]. Технологий, которые могли бы быть.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_GIRAFFE_PEDIA</Tag>
 		<English>There is no evidence giraffe were ever trained for warfare. The [COLOR_BUILDING_TEXT]Giraffe Trainer[COLOR_REVERT] building is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<Italian>Non ci sono prove che le giraffe siano mai state usate in guerra. L'[COLOR_BUILDING_TEXT]addestramento giraffe[COLOR_REVERT] fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologie alternative[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
+		<Russian>Не существует доказательств того, что жирафов когда-либо использовали для ведения войны. [COLOR_BUILDING_TEXT]Дрессировка жирафов[COLOR_REVERT] - часть [COLOR_HIGHLIGHT_TEXT]технологий альтернативной временной линии[COLOR_REVERT]. Технологий, которые могли бы быть.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERD_MAMMOTH</Tag>
@@ -308,25 +315,27 @@
 		</French>
 		<Italian>Branco di mammut</Italian>
 		<Polish>Stado - Mamuty</Polish>
-		<Russian>Òàáóí ìàìîíòîâ</Russian>
+		<Russian>Стадо мамонтов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERD_MAMMOTH_PEDIA</Tag>
 		<English>Only subdued mammoth can build the mammoth herd. It provides a mammoth resource. There can only be one per civ.</English>
 		<Italian>Solo i mammut addomesticati possono costruire un branco di mammut. Fornisce una risorsa di mammut e solo una risorsa di questo tipo può essere costruita per civiltà.</Italian>
 		<Polish>Mamut włochaty należał do ulubionej zwierzyny łownej człowieka w późnym plejstocenie, co znalazło swe odzwierciedlenie w zachowanych do dzisiaj licznych wyobrażeniach i malowidłach, pozostawionych głównie na ścianach jaskiń (np. w Rouffignac we Francji). Mamuty były źródłem pożywienia, ale dostarczały także materiałów do wyrobu okryć (skóry), sprzętów domowych, narzędzi i ozdób (kości, ciosy). Kości wykorzystywane były sporadycznie również do budowy paleolitycznych domostw, czego ślady odnaleziono w miejscowości Meziriczi na Ukrainie.</Polish>
+		<Russian>Только используя прирученного мамонта можно создать их стадо. Оно предоставляет соответсвующий ресурс и может быть лишь одно на всю цивилизацию.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_MAMMOTH</Tag>
 		<English>Animal Trainer (Mammoth)</English>
 		<Italian>Addestratore mammut</Italian>
+		<Russian>Дрессировка мамонтов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EFFECT_HERITAGE_MAMMOTHS</Tag>
 		<English>Effect - Heritage - Mammoths</English>
 		<French>Effet - Patrimoine (Mammouth)</French>
 		<Polish>Efekt - Dziedzictwo - Mamut</Polish>
-		<Russian>Ïèòîìíèê ìàìîíòîâ</Russian>
+		<Russian>Эффект - Культурное наследие - Мамонты</Russian>
 		<Italian>Effetto dell'eredità culturale dei mammut</Italian>
 	</TEXT>
 	<TEXT>
@@ -334,18 +343,20 @@
 		<English>Heritage - Mammoth</English>
 		<French>Patrimoine (Mammouth)</French>
 		<Polish>Dziedzictwo - Mamut</Polish>
-		<Russian>Ðàçâåäåíèå ìàìîíòîâ</Russian>
+		<Russian>Культурное наследие - Мамонты</Russian>
 		<Italian>Eredità culturale dei mammut</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERITAGE_MAMMOTH_PEDIA</Tag>
 		<English>Instead of only being able to train Mammoth units in the city you built the wonder in this building allows them to be built in any of your cities. It can only be built in the ciy with the Mammothr Trainer World Wonder.</English>
 		<Italian>Invece di poter addestrare le unità mammut solo nella città in cui hai costruito la meraviglia, questo edificio permette di costruirle in qualsiasi tua città. Può essere costruito solo in una città con la meraviglia mondiale addestramento mammut.</Italian>
+		<Russian>Можно возвести исключительно в городе с мировым чудом "Дрессировка мамонтов". Позволяет создавать мамонтовые подразделения в любом вашем поселении, а не только в том, где стоит вышеупомянутое чудо.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_MAMMOTH_PEDIA</Tag>
 		<English>The woolly mammoth was the last species of the genus. Most populations of the woolly mammoth in North America and Eurasia, as well all the Columbian mammoths in North America, died out around the time of the last glacial retreat, as part of a mass extinction of megafauna in northern Eurasia and the Americas.</English>
 		<Italian>Il mammut peloso fu l'ultima specie del suo genere. La maggior parte dei mammut pelosi del Nordamerica e dell'Eurasia morirono durante l'ultima era glaciale, facendo parte di un'estinzione di massa della megafauna nell'emisfero settentrionale.</Italian>
+		<Russian>Последним представителем рода Mammuthus был шерстистый мамонт. Большинство их популяций в Северной Америке и Евразии, а также все мамонты Колумба, в рамках массового вымирания мегафауны, исчезли приблизительно во время голоценового отступления ледников.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAPINGUARI_COMPOUND</Tag>
@@ -356,38 +367,41 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Leże Mapinguari</Polish>
-		<Russian>Îáùèíà ìàïèíãóàðè</Russian>
+		<Russian>Комплекс мапингуари</Russian>
 		<Italian>Addestratore mapinguari (da unità)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAPINGUARI_COMPOUND_PEDIA</Tag>
 		<English>Mapinguari Compound is a place where subdued Ground Sloths and their handlers are trained as combat units.</English>
 		<Italian>L'addestramento mapinguari è un luogo in cui i bradipi di terra sottomessi e i loro addestratori vengono addestrati come unità combattenti.</Italian>
+		<Russian>Комплекс мапингуари - место, где прирученные гигантские ленивцы и их дрессировщики обучаются как боевые единицы.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAPINGUARI_CHANGING_OF_THE_GUARD_CEREMONY</Tag>
 		<English>Mapinguari Changing of the Guard Ceremony</English>
 		<Polish>Strażnik Mapinguari</Polish>
-		<Russian>Êàðàóë ìàïèíãóàðè</Russian>
+		<Russian>Церемония смены караула мапингуари</Russian>
 		<Italian>Cerimonia del cambio della guardia mapinguari (costruzione automatica)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAPINGUARI_CHANGING_OF_THE_GUARD_CEREMONY_PEDIA</Tag>
 		<English>A fictional military ceremony.</English>
 		<Italian>Una cerimonia militare immaginaria.</Italian>
+		<Russian>Вымышленная военная церемония.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_POLICE_CAT_TRAINER</Tag>
 		<English>Police Cat Trainer</English>
 		<French>Entraineur de Félins Limiers</French>
 		<Polish>Treser Kotów Policyjnych</Polish>
-		<Russian>Ïîëèãîí äëÿ êîøåê</Russian>
+		<Russian>Тренер полицейских кошек</Russian>
 		<Italian>Addestratore gatti poliziotto</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_POLICE_CAT_TRAINER_PEDIA</Tag>
 		<English>A F9 unit - cat version of police dog</English>
 		<Italian>Versione con gatti del cane poliziotto</Italian>
+		<Russian>Подразделение Ф9 - кошачья версия полицейской собаки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_RHINOCEROS</Tag>
@@ -399,27 +413,28 @@
 		</French>
 		<Italian>Addestratore rinoceronti</Italian>
 		<Polish>Treser Nosorożców</Polish>
-		<Russian>Ïðèðó÷åíèå íîñîðîãîâ</Russian>
+		<Russian>Дрессировка носорогов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EFFECT_HERITAGE_RHINOS</Tag>
 		<English>Effect - Heritage - Rhinos</English>
 		<French>Effet - Patrimoine (Rhinocéros)</French>
 		<Polish>Efekt - Dziedzictwo - Nosorożec</Polish>
-		<Russian>Ïèòîìíèê íîñîðîãîâ</Russian>
+		<Russian>Эффект - Культурное наследие - Носороги</Russian>
 		<Italian>Effetto dell'eredità culturale dei rinoceronti</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EFFECT_HERITAGE_RHINOS_HELP</Tag>
 		<English>[ICON_BULLET]This free building is used to enable the building of the special Rhinoceros units in all your cities.</English>
 		<Italian>[ICON_BULLET]Questo edificio gratuito viene utilizzato per consentire la costruzione delle unità speciali rinoceronte in tutte le tue città.</Italian>
+		<Russian>[ICON_BULLET]Бесплатное здание для найма особых носорожьих подразделений во всех ваших городах.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERITAGE_RHINOCEROS</Tag>
 		<English>Heritage - Rhinoceros</English>
 		<French>Patrimoine (Rhinocéros)</French>
 		<Polish>Dziedzictwo - Nosorożec</Polish>
-		<Russian>Ðàçâåäåíèå íîñîðîãîâ</Russian>
+		<Russian>Культурное наследие - Носороги</Russian>
 		<Italian>Eredità culturale dei rinoceronti</Italian>
 	</TEXT>
 	<TEXT>
