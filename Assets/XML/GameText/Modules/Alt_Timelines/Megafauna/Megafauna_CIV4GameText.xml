@@ -117,7 +117,7 @@
 		</French>
 		<Italian>Addestratore orsi</Italian>
 		<Polish>Treser Niedźwiedzi</Polish>
-		<Russian>Дрессировщик медведей</Russian>
+		<Russian>Дрессировка медведей</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EFFECT_HERITAGE_BEARS</Tag>
@@ -139,7 +139,7 @@
 		<Tag>TXT_KEY_BUILDING_HERITAGE_BEARS_PEDIA</Tag>
 		<English>Instead of only being able to train Bear units in the city you built the wonder in this building allows them to be built in any of your cities. It can only be built in the ciy with the Bear Trainer World Wonder.</English>
 		<Italian>Invece di poter addestrare le unità orso solo nella città in cui hai costruito la meraviglia, questo edificio permette di costruirle in qualsiasi tua città. Può essere costruito solo in una città con la meraviglia mondiale addestramento orsi.</Italian>
-		<Russian>Можно возвести исключительно в городе с мировым чудом "Дрессировщик медведей". Позволяет создавать медвежьи подразделения в любом вашем поселении, а не только в том, где стоит вышеупомянутое чудо. </Russian>
+		<Russian>Можно возвести исключительно в городе с мировым чудом "Дрессировка медведей". Позволяет создавать медвежьи подразделения в любом вашем поселении, а не только в том, где стоит вышеупомянутое чудо.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_BEAR_PEDIA</Tag>
@@ -152,7 +152,7 @@
 		<English>Animal Trainer (Big Cat)</English>
 		<French>Entraineur de Félins</French>
 		<Polish>Treser Wielkich Kotów</Polish>
-		<Russian>Дрессировщик больших кошек</Russian>
+		<Russian>Дрессировка больших кошек</Russian>
 		<Italian>Addestratore grossi felini</Italian>
 	</TEXT>
 	<TEXT>
@@ -166,7 +166,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_BIG_CAT_PEDIA</Tag>
 		<English>Cat training is the process of modifying a wild cat's behavior for entertainment or companionship purposes. Training is commonly used to reduce unwanted or problematic behaviors in wild cats, to enhance interactions between humans and cats, and to allow them to coexist comfortably. There are various methods for training cats which employ different balances between reward and punishment.</English>
-		<Russian>Дрессировка кошки - процесс изменения поведения дикой кошки в развлекательных или дружеских целях. Дрессировка обычно используется для уменьшения нежелательного или проблемного поведения диких кошек, улучшения взаимодействия между людьми и кошками и создания комфортных условий их сосуществования. Есть разные методы дрессировки кошек, использующие различный баланс между вознаграждением и наказанием.</Russian>
+		<Russian>Дрессировка кошки - процесс изменения поведения дикой кошки в развлекательных или общительных целях. Дрессировка обычно используется для уменьшения нежелательного или проблемного поведения диких кошек, улучшения взаимодействия между людьми и кошками и создания комфортных условий их сосуществования. Есть разные методы дрессировки кошек, использующие различный баланс между вознаграждением и наказанием.</Russian>
 		<Italian>L'addestramento del gatto è il processo di modifica del comportamento di un gatto selvatico per scopi di intrattenimento o compagnia. L'addestramento è comunemente utilizzato per ridurre i comportamenti indesiderati o problematici nei gatti selvatici, per migliorare le interazioni tra uomo e gatto e per consentire loro di coesistere comodamente. Esistono vari metodi per addestrare i gatti che impiegano diversi equilibri tra ricompensa e punizione.</Italian>
 	</TEXT>
 	<TEXT>
@@ -179,14 +179,14 @@
 		</French>
 		<Italian>Addestratore bisonti</Italian>
 		<Polish>Treser Bizonów</Polish>
-		<Russian>Ïðèðó÷åíèå áèçîíîâ</Russian>
+		<Russian>Дрессировка бизонов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EFFECT_HERITAGE_BISON</Tag>
 		<English>Effect - Heritage - Bison</English>
 		<French>Effet - Patrimoine (Bisons)</French>
 		<Polish>Efekt - Dziedzictwo - Bizon</Polish>
-		<Russian>Ïèòîìíèê áèçîíîâ</Russian>
+		<Russian>Эффект - Наследие - Бизоны</Russian>
 		<Italian>Effetto dell'eredità culturale dei bisonti</Italian>
 	</TEXT>
 	<TEXT>
@@ -194,13 +194,14 @@
 		<English>Heritage - Bison</English>
 		<French>Patrimoine (Bisons)</French>
 		<Polish>Dziedzictwo - Bizon</Polish>
-		<Russian>Ðàçâåäåíèå áèçîíîâ</Russian>
+		<Russian>Наследие - Бизоны</Russian>
 		<Italian>Eredità culturale dei bisonti</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERITAGE_BISON_PEDIA</Tag>
 		<English>Instead of only being able to train Bison units in the city you built the wonder in this building allows them to be built in any of your cities. It can only be built in the city with the Bison Trainer World Wonder.</English>
 		<Italian>Invece di poter addestrare le unità bisonte solo nella città in cui hai costruito la meraviglia, questo edificio permette di costruirle in qualsiasi tua città. Può essere costruito solo in una città con la meraviglia mondiale addestramento bisonti.</Italian>
+		<Russian>Можно возвести исключительно в городе с мировым чудом "Дрессировка бизонов". Позволяет создавать бизоньи подразделения в любом вашем поселении, а не только в том, где стоит вышеупомянутое чудо.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_BISON_PEDIA</Tag>
