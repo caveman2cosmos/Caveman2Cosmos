@@ -21,6 +21,7 @@
 		<French>Promot. Auto</French>
 		<Spanish>Asciende automáticamente</Spanish>
 		<Russian>Àâòîêâàëèôèêàöèÿ</Russian>
+		<Italian>Promozione automatizzata</Italian> <!-- infoscreen Military -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITGROUPER_AUTO_UPGRADE_GROUPING</Tag>
@@ -29,13 +30,14 @@
 		<Spanish>Mejora automáticamente</Spanish>
 		<Polish>Automatyczna Promocja</Polish>
 		<Russian>Àâòîìàòè÷åñêèå óëó÷øåíèÿ</Russian>
+		<Italian>Modernizzazione automatizzata</Italian> <!-- infoscreen Military -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITGROUPER_COMBAT_GROUPING</Tag>
 		<English>Combat Type</English>
 		<French>Classe de Combat</French>
 		<German>Einheitenklasse</German>
-		<Italian>Tipo Combattimento</Italian>
+		<Italian>Tipo combattimento</Italian> <!-- infoscreen Military -->
 		<Spanish>Tipo de combate</Spanish>
 		<Polish>Typ walki</Polish>
 		<Russian>Òèï áîÿ</Russian>
@@ -45,7 +47,7 @@
 		<English>None</English>
 		<French>Aucun</French>
 		<German>Keine</German>
-		<Italian>Nessuno</Italian>
+		<Italian>Nessuna unità</Italian> <!-- infoscreen Military -->
 		<Spanish>Ninguno</Spanish>
 		<Polish>Automatyczne Ulepszenia</Polish>
 		<Russian>Íåò</Russian>
@@ -55,7 +57,7 @@
 		<English>Level %s1</English>
 		<French>Niveau %s1</French>
 		<German>Stufe %s1</German>
-		<Italian>Livello %s1</Italian>
+		<Italian>Livello %s1</Italian> <!-- infoscreen Military -->
 		<Spanish>Nivel %s1</Spanish>
 		<Polish>Poziom %s1</Polish>
 		<Russian>Óðîâåíü %s1</Russian>
@@ -65,7 +67,7 @@
 		<English>Level</English>
 		<French>Niveau</French>
 		<German>Stufe</German>
-		<Italian>Livello</Italian>
+		<Italian>Livello</Italian> <!-- infoscreen Military -->
 		<Spanish>Nivel</Spanish>
 		<Polish>Poziom</Polish>
 		<Russian>Óðîâåíü</Russian>
@@ -75,7 +77,7 @@
 		<English>Location</English>
 		<French>Emplacement</French>
 		<German>Standort</German>
-		<Italian>Luogo</Italian>
+		<Italian>Posizione</Italian> <!-- infoscreen Military -->
 		<Spanish>Ubicación</Spanish>
 		<Polish>Miejsce</Polish>
 		<Russian>Ðàñïîëîæåíèå</Russian>
@@ -85,7 +87,7 @@
 		<English>Barbarian Territory</English>
 		<French>Territoire Barbare</French>
 		<German>Barbarisches Gebiet</German>
-		<Italian>Territorio barbaro</Italian>
+		<Italian>Territorio barbaro</Italian> <!-- infoscreen Military -->
 		<Spanish>Territorio bárbaro</Spanish>
 		<Polish>Terytorium Barbarzyńców</Polish>
 		<Russian>Âàðâàðñêàÿ òåððèòîðèÿ</Russian>
@@ -95,7 +97,7 @@
 		<English>Domestic City</English>
 		<French>Ville</French>
 		<German>Eigene Stadt</German>
-		<Italian>Città propria</Italian>
+		<Italian>Città giocatore</Italian> <!-- infoscreen Military -->
 		<Spanish>Ciudad propia</Spanish>
 		<Polish>Własne Miasto</Polish>
 		<Russian>Ñâîé ãîðîä</Russian>
@@ -105,7 +107,7 @@
 		<English>Domestic Territory</English>
 		<French>Territoire</French>
 		<German>Eigenes Gebiet</German>
-		<Italian>Territorio proprio</Italian>
+		<Italian>Territorio giocatore</Italian> <!-- infoscreen Military -->
 		<Spanish>Territorio proprio</Spanish>
 		<Polish>Własne Terytorium</Polish>
 		<Russian>Ñâîÿ òåððèòîðèÿ</Russian>
@@ -115,7 +117,7 @@
 		<English>Enemy Territory</English>
 		<French>Territoire Ennemi</French>
 		<German>Feindliches Gebiet</German>
-		<Italian>Territorio nemico</Italian>
+		<Italian>Territorio nemico</Italian> <!-- infoscreen Military -->
 		<Spanish>Territorio enemigo</Spanish>
 		<Polish>Terytorium Wroga</Polish>
 		<Russian>Âðàæåñêàÿ òåððèòîðèÿ</Russian>
@@ -125,7 +127,7 @@
 		<English>Friendly City</English>
 		<French>Ville amie</French>
 		<German>Befreundete Stadt</German>
-		<Italian>Città amica</Italian>
+		<Italian>Città amica</Italian> <!-- infoscreen Military -->
 		<Spanish>Ciudad aliada</Spanish>
 		<Polish>Miasto Sojusznika</Polish>
 		<Russian>Äðóæåñêèé ãîðîä</Russian>
@@ -135,7 +137,7 @@
 		<English>Friendly Territory</English>
 		<French>Territoire ami</French>
 		<German>Befreundetes Gebiet</German>
-		<Italian>Territorio amico</Italian>
+		<Italian>Territorio amico</Italian> <!-- infoscreen Military -->
 		<Spanish>Territorio aliado</Spanish>
 		<Polish>Terytorium Sojusznika</Polish>
 		<Russian>Äðóæåñêàÿ òåððèòîðèÿ</Russian>
@@ -145,7 +147,7 @@
 		<English>Neutral Territory</English>
 		<French>Territoire Neutre</French>
 		<German>Neutrales Gebiet</German>
-		<Italian>Territorio neutrale</Italian>
+		<Italian>Territorio neutrale</Italian> <!-- infoscreen Military -->
 		<Spanish>Territorio neutral</Spanish>
 		<Polish>Terytorium Neutralne</Polish>
 		<Russian>Íåéòðàëüíàÿ òåððèòîðèÿ</Russian>
@@ -155,7 +157,7 @@
 		<English>Team City</English>
 		<French>Ville du Groupe</French>
 		<German>Verbündete Stadt</German>
-		<Italian>Città alleata</Italian>
+		<Italian>Città alleata</Italian> <!-- infoscreen Military -->
 		<Spanish>Ciudad del equipo</Spanish>
 		<Polish>Miasto Drużyny</Polish>
 		<Russian>Ãîðîä êîìàíäû</Russian>
@@ -165,7 +167,7 @@
 		<English>Team Territory</English>
 		<French>Territoire du Groupe</French>
 		<German>Verbündetes Gebiet</German>
-		<Italian>Territorio alleato</Italian>
+		<Italian>Territorio alleato</Italian> <!-- infoscreen Military -->
 		<Spanish>Territorio del equipo</Spanish>
 		<Polish>Terytorium Drużyny</Polish>
 		<Russian>Òåððèòîðèÿ êîìàíäû</Russian>
@@ -175,7 +177,7 @@
 		<English>Orders</English>
 		<French>Ordres</French>
 		<German>Befehle</German>
-		<Italian>Ordini</Italian>
+		<Italian>Ordine</Italian> <!-- infoscreen Military -->
 		<Spanish>Òrdenes</Spanish>
 		<Polish>Rozkazy</Polish>
 		<Russian>Ïðèêàçû</Russian>
@@ -187,6 +189,7 @@
 		<Spanish>Bombardeo aéreo automatizado</Spanish>
 		<Polish>Automatyczne Bombardowanie</Polish>
 		<Russian>Àâòîìàòè÷åñêàÿ áîìáàðäèðîâêà</Russian>
+		<Italian>Bombardamento aereo automatizzato</Italian> <!-- infoscreen Military -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_AIRSTRIKESETTINGS</Tag>
@@ -195,6 +198,7 @@
 		<Spanish>Ataque aéreo automatizado</Spanish>
 		<Polish>Automatyczny Atak z Powietrza</Polish>
 		<Russian>Àâòîìàòè÷åñêèå íàëåòû</Russian>
+		<Italian>Attacco aereo automatizzato</Italian> <!-- infoscreen Military -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_AIRUNITCANDEFEND</Tag>
@@ -203,13 +207,14 @@
 		<Spanish>Patrulla aérea automatizada</Spanish>
 		<Polish>Automatyczna Obrona Miasta - Powietrze</Polish>
 		<Russian>Àâòîìàòè÷åñêèé ïåðåõâàò</Russian>
+		<Italian>Sentinella aerea automatizzata</Italian> <!-- infoscreen Military -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_AUTO_BUILD</Tag>
 		<English>Auto Build Improvements</English>
 		<French>Construire Auto. les Améliorations</French>
 		<German>Modernisierungen errichten (automatisch)</German>
-		<Italian>Miglioramenti automatici</Italian>
+		<Italian>Miglioramenti automatizzati</Italian> <!-- infoscreen Military -->
 		<Spanish>Construir mejoras (automatizado)</Spanish>
 		<Polish>Automatycznie Buduj Udoskonalenia</Polish>
 		<Russian>Àâòîìàòè÷åñêè ñòðîèòü óëó÷øåíèÿ</Russian>
@@ -219,7 +224,7 @@
 		<English>Auto Improve City</English>
 		<French>Améliorer Auto. la ville</French>
 		<German>Nächste Stadt modernisieren (automatisch)</German>
-		<Italian>Miglioramenti cittadini automatici</Italian>
+		<Italian>Miglioramenti automatizzati della città</Italian> <!-- infoscreen Military -->
 		<Spanish>Construir mejoras en la ciudad (automatizado)</Spanish>
 		<Polish>Automatycznie Udoskonalaj Miasto</Polish>
 		<Russian>Àâòîìàòè÷åñêè óëó÷øàòü ãîðîä</Russian>
@@ -229,7 +234,7 @@
 		<English>Auto Trade Network</English>
 		<French>Construire Auto. Réseaux Comm.</French>
 		<German>Handelsnetz errichten (automatisch)</German>
-		<Italian>Rete stradale automatica</Italian>
+		<Italian>Rete di percorsi automatizzata</Italian> <!-- infoscreen Military -->
 		<Spanish>Construir red comercial (automatizado)</Spanish>
 		<Polish>Automatycznie Twórz Szlaki Handlowe</Polish>
 		<Russian>Àâòîìàòè÷åñêè ñòðîèòü òîðãîâûå ïóòè</Russian>
@@ -239,7 +244,7 @@
 		<English>Spread Religion/Corporation</English>
 		<French>Propager Religion/Corporation</French>
 		<German>Religion/Kapitalgesellschaft verbreiten</German>
-		<Italian>Diffondere religioni/corporazioni</Italian>
+		<Italian>Diffusione religione o corporazione</Italian> <!-- infoscreen Military -->
 		<Spanish>Propagar religión/corporación</Spanish>
 		<Polish>Rozprzestrzeniaj Religię/Korporację</Polish>
 		<Russian>Ðàñïðîñòðàíåíèå ðåëèãèè/êîðïîðàöèè</Russian>
@@ -249,7 +254,7 @@
 		<English>Build Improvement</English>
 		<French>Construire Amélioration</French>
 		<German>Modernisierung errichten</German>
-		<Italian>Costruire miglioramenti</Italian>
+		<Italian>Costruzione miglioramenti</Italian> <!-- infoscreen Military -->
 		<Spanish>Construir mejora</Spanish>
 		<Polish>Zbuduj Udoskonalenie</Polish>
 		<Russian>Ïîñòðîéêà óëó÷øåíèé</Russian>
@@ -259,7 +264,7 @@
 		<English>Construct Building</English>
 		<French>Construire Bâtiment</French>
 		<German>Gebäude errichten</German>
-		<Italian>Edificare</Italian>
+		<Italian>Costruzione edifici</Italian> <!-- infoscreen Military -->
 		<Spanish>Construir edificio</Spanish>
 		<Polish>Konstruuj Budynek</Polish>
 		<Russian>Ïîñòðîéêà ñòðîåíèé</Russian>
@@ -271,13 +276,14 @@
 		<Spanish>Defensa de ciudad automatizada</Spanish>
 		<Polish>Automatyczna Obrona Miasta</Polish>
 		<Russian>Àâòîçàùèòà ãîðîäà</Russian>
+		<Italian>Difesa città automatizzata</Italian> <!-- infoscreen Military -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_EXPLORE</Tag>
 		<English>Explore</English>
 		<French>Explorer</French>
 		<German>Erkunden</German>
-		<Italian>Esplorare</Italian>
+		<Italian>Esplorazione</Italian> <!-- infoscreen Military -->
 		<Spanish>Explorar</Spanish>
 		<Polish>Odkrywaj</Polish>
 		<Russian>Èññëåäîâàòü</Russian>
@@ -287,7 +293,7 @@
 		<English>Fortify</English>
 		<French>Se Fortifier</French>
 		<German>Verschanzen</German>
-		<Italian>Fortificarsi</Italian>
+		<Italian>Fortificazione</Italian> <!-- infoscreen Military -->
 		<Spanish>Fortificarse</Spanish>
 		<Polish>Fortyfikuj</Polish>
 		<Russian>Óêðåïèòüñÿ</Russian>
@@ -297,7 +303,7 @@
 		<English>Go To</English>
 		<French>Aller à</French>
 		<German>Gehe zu</German>
-		<Italian>Andare</Italian>
+		<Italian>In movimento</Italian> <!-- infoscreen Military -->
 		<Spanish>Ir a</Spanish>
 		<Polish>Idź do</Polish>
 		<Russian>Èäòè ê</Russian>
@@ -307,7 +313,7 @@
 		<English>Heal</English>
 		<French>Guérison</French>
 		<German>Heilen</German>
-		<Italian>Curarsi</Italian>
+		<Italian>Guarigione</Italian> <!-- infoscreen Military -->
 		<Spanish>Curar</Spanish>
 		<Polish>Wylecz</Polish>
 		<Russian>Ëå÷åíèå</Russian>
@@ -319,13 +325,14 @@
 		<Spanish>Caza automatizada</Spanish>
 		<Polish>Autotomatyczne Polowanie</Polish>
 		<Russian>Àâòî-îõîòà</Russian>
+		<Italian>Caccia automatizzata</Italian> <!-- infoscreen Military -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_INTERCEPT</Tag>
 		<English>Intercept</English>
 		<French>Intercepter</French>
 		<German>Abfangen</German>
-		<Italian>Intercettare</Italian>
+		<Italian>Intercettazione</Italian> <!-- infoscreen Military -->
 		<Spanish>Interceptar</Spanish>
 		<Polish>Przechwyć</Polish>
 		<Russian>Ïåðåõâàò</Russian>
@@ -335,7 +342,7 @@
 		<English>None</English>
 		<French>Aucun</French>
 		<German>Keine</German>
-		<Italian>Nessuno</Italian>
+		<Italian>Nessun ordine</Italian> <!-- infoscreen Military -->
 		<Spanish>Ninguno</Spanish>
 		<Polish>Brak</Polish>
 		<Russian>Íåò</Russian>
@@ -345,7 +352,7 @@
 		<English>Other</English>
 		<French>Autre</French>
 		<German>Andere</German>
-		<Italian>Altri</Italian>
+		<Italian>Altri ordini</Italian> <!-- infoscreen Military -->
 		<Spanish>Otro</Spanish>
 		<Polish>Inne</Polish>
 		<Russian>Äðóãîå</Russian>
@@ -355,7 +362,7 @@
 		<English>Patrol</English>
 		<French>Patrouiller</French>
 		<German>Patrouille</German>
-		<Italian>Pattugliare</Italian>
+		<Italian>Pattugliamento</Italian> <!-- infoscreen Military -->
 		<Spanish>Patrullar</Spanish>
 		<Polish>Patroluj</Polish>
 		<Russian>Ïàòðóëü</Russian>
@@ -367,6 +374,7 @@
 		<Spanish>Patrulla automatizada</Spanish>
 		<Polish>Automatyczny Patrol</Polish>
 		<Russian>Àâòîìàòè÷åñêîå ïàòðóëèðîâàíèå</Russian>
+		<Italian>Pattugliamento automatizzato</Italian> <!-- infoscreen Military -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_PILLAGESETTINGS</Tag>
@@ -375,6 +383,7 @@
 		<Spanish>Saqueo automatizado</Spanish>
 		<Polish>Automatyczne Plądrowanie</Polish>
 		<Russian>Àâòîìàòè÷åñêèé ãðàáåæ</Russian>
+		<Italian>Saccheggio automatizzato</Italian> <!-- infoscreen Military -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_PIRATESETTINGS</Tag>
@@ -383,6 +392,7 @@
 		<Spanish>Piratería automatizada</Spanish>
 		<Polish>Automatyczne Piractwo</Polish>
 		<Russian>Àâòîìàòè÷åñêîå ïèðàòñòâî</Russian>
+		<Italian>Pirateria automatizzata</Italian> <!-- infoscreen Military -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_PLUNDER</Tag>
@@ -399,6 +409,7 @@
 		<French>Promotions Auto</French>
 		<Spanish>Ascenso automatizado</Spanish>
 		<Polish>Automatyczna Promocja</Polish>
+		<Italian>Promozione automatizzata</Italian> <!-- infoscreen Military -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_PROTECTSETTINGS</Tag>
@@ -406,13 +417,14 @@
 		<Spanish>Protección automatizada</Spanish>
 		<Polish>Automatyczna Ochrona</Polish>
 		<Russian>Àâòîìàòè÷åñêàÿ îõðàíà</Russian>
+		<Italian>Protezione automatizzata</Italian> <!-- infoscreen Military -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITGROUPER_ORDER_GROUP_SENTRY</Tag>
 		<English>Sentry</English>
 		<French>Surveillance</French>
 		<German>Wache</German>
-		<Italian>Sentinella</Italian>
+		<Italian>Sentinella</Italian> <!-- infoscreen Military -->
 		<Spanish>Vigilar</Spanish>
 		<Polish>Warta</Polish>
 		<Russian>Äîçîð</Russian>
@@ -422,7 +434,7 @@
 		<English>Skip</English>
 		<French>Passe son tour</French>
 		<German>Runde überspringen</German>
-		<Italian>Passa</Italian>
+		<Italian>Turno saltato</Italian> <!-- infoscreen Military -->
 		<Spanish>Pasar</Spanish>
 		<Polish>Pomiń</Polish>
 		<Russian>Ïðîïóñê õîäà</Russian>
@@ -432,7 +444,7 @@
 		<English>Sleep</English>
 		<French>Dormir</French>
 		<German>Ausruhen</German>
-		<Italian>A riposo</Italian>
+		<Italian>A riposo</Italian> <!-- infoscreen Military -->
 		<Spanish>Reposar</Spanish>
 		<Polish>Uśpij</Polish>
 		<Russian>Ñïàòü</Russian>
@@ -444,12 +456,13 @@
 		<Spanish>Mejora automatizada</Spanish>
 		<Polish>Autotematyczne Ulepszenie</Polish>
 		<Russian>Àâòîóëó÷øåíèå</Russian>
+		<Italian>Modernizzazione automatizzata</Italian> <!-- infoscreen Military -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITGROUPER_PROMOTION_GROUPING</Tag>
 		<English>Promotions</English>
 		<German>Beförderungen</German>
-		<Italian>Promozioni</Italian>
+		<Italian>Promozione</Italian> <!-- infoscreen Military -->
 		<Spanish>Ascensos</Spanish>
 		<Polish>Promocje</Polish>
 		<Russian>Óëó÷øåíèÿ</Russian>
@@ -459,7 +472,7 @@
 		<English>None</English>
 		<French>Aucun</French>
 		<German>Keine</German>
-		<Italian>Nessuno</Italian>
+		<Italian>Nessuno</Italian> <!-- infoscreen Military -->
 		<Spanish>Ninguno</Spanish>
 		<Polish>Brak</Polish>
 		<Russian>Íåò</Russian>
@@ -469,7 +482,7 @@
 		<English>Unit Type</English>
 		<French>Type d'Unité</French>
 		<German>Einheitentyp</German>
-		<Italian>Tipo Unità</Italian>
+		<Italian>Tipo unità</Italian> <!-- infoscreen Military -->
 		<Spanish>Tipo de unidad</Spanish>
 		<Polish>Typ Jednostki</Polish>
 		<Russian>Òèï þíèòà</Russian>
@@ -1266,7 +1279,7 @@
 		<Tag>TXT_KEY_UNITHELP_GROUPING_COMBAT</Tag>
 		<English>Combat</English>
 		<German>Kampfart</German>
-		<Italian>Combattimento</Italian>
+		<Italian>Battaglia</Italian> <!-- building list infoscreen -->
 		<Spanish>Combate</Spanish>
 		<Polish>Walka</Polish>
 		<Russian>Áîé</Russian>
@@ -1276,7 +1289,7 @@
 		<English>Hero</English>
 		<French>Héros</French>
 		<German>Held</German>
-		<Italian>Eroi</Italian>
+		<Italian>Eroi</Italian> <!-- building list infoscreen -->
 		<Spanish>Héroe</Spanish>
 		<Polish>Bohater</Polish>
 		<Russian>Ãåðîé</Russian>
@@ -1286,7 +1299,7 @@
 		<English>None</English>
 		<French>Aucun</French>
 		<German>Keine</German>
-		<Italian>Nessuno</Italian>
+		<Italian>Nessuna</Italian> <!-- building list infoscreen -->
 		<Spanish>Ninguno</Spanish>
 		<Polish>Brak</Polish>
 		<Russian>Íåò</Russian>
@@ -1474,7 +1487,7 @@
 		<English>[ICON_BULLET]Max HP: %d1 (usually 100.)</English>
 		<French>[ICON_BULLET]PV Max: %d1 (ref. 100.)</French>
 		<German>[ICON_BULLET]TP-Maximum: %d1 (i.d.R. 100)</German>
-		<Italian>[ICON_BULLET]HP massima: %d1 (solitamente 100)</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Punti vita[COLOR_REVERT] massimi: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] (standard [COLOR_HIGHLIGHT_TEXT]100[COLOR_REVERT])</Italian> <!-- unit stonethrower hover on the icon on the map -->
 		<Polish>[ICON_BULLET]Max XP: %d1 (zwykle 100.)</Polish>
 		<Russian>[ICON_BULLET]Макс. HP: %d1 (обычно 100.)</Russian>
 	</TEXT>
@@ -2069,7 +2082,7 @@
 		<English>Bombard</English>
 		<French>Bombardement</French>
 		<German>Beschuss</German>
-		<Italian>Bombardamento</Italian>
+		<Italian>Bombe</Italian> <!--infoscreen building list-->
 		<Spanish>Bombardeo</Spanish>
 		<Polish>Oblężenie</Polish>
 		<Russian>Áîìáàðä.</Russian>
@@ -2079,7 +2092,7 @@
 		<English>Collateral</English>
 		<French>Dégats Collatéraux</French>
 		<German>Kollateralschaden</German>
-		<Italian>Danni collaterali</Italian>
+		<Italian>Collater</Italian> <!--infoscreen building list-->
 		<Spanish>Daños colaterales</Spanish>
 		<Polish>Dodatkowe</Polish>
 		<Russian>Ïîáî÷íûé</Russian>
@@ -2089,7 +2102,7 @@
 		<English>Move</English>
 		<French>Déplacement</French>
 		<German>Bewegung</German>
-		<Italian>Movimento</Italian>
+		<Italian>Caselle</Italian> <!--infoscreen building list-->
 		<Spanish>Movimiento</Spanish>
 		<Polish>Ruchy</Polish>
 		<Russian>Äâèæ.</Russian>
@@ -2099,7 +2112,7 @@
 		<English>Power</English>
 		<French>Puissance</French>
 		<German>Macht</German>
-		<Italian>Potenza</Italian>
+		<Italian>Potenza</Italian> <!--infoscreen building list-->
 		<Spanish>Poder</Spanish>
 		<Polish>Moc</Polish>
 		<Russian>Ýíåðãèÿ</Russian>
@@ -2109,7 +2122,7 @@
 		<English>Range</English>
 		<French>Portée</French>
 		<German>Reichweite</German>
-		<Italian>Raggio d'attacco</Italian>
+		<Italian>Raggio</Italian> <!--infoscreen building list-->
 		<Spanish>Alcance</Spanish>
 		<Polish>Zasięg</Polish>
 		<Russian>Äèñò.</Russian>
@@ -2119,7 +2132,7 @@
 		<English>Strength</English>
 		<French>Force</French>
 		<German>Stärke</German>
-		<Italian>Forza</Italian>
+		<Italian>Forza</Italian> <!--infoscreen building list-->
 		<Spanish>Fuerza</Spanish>
 		<Polish>Siła</Polish>
 		<Russian>Ñèëà</Russian>
@@ -2129,7 +2142,7 @@
 		<English>Withdrawal</English>
 		<French>Retrait</French>
 		<German>Rückzug</German>
-		<Italian>Ritirata</Italian>
+		<Italian>Ritirata</Italian> <!--infoscreen building list-->
 		<Spanish>Retirada</Spanish>
 		<Polish>Odwrót</Polish>
 		<Russian>Ìîáèë.</Russian>
@@ -3546,11 +3559,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Grande Artista:Grandi Artisti</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Gran artista</Italian>
 		<Spanish>
 			<Text>Gran artista:Grandes artistas</Text>
 			<Gender>Male</Gender>
@@ -8652,7 +8661,7 @@
 		<Tag>TXT_KEY_UNIT_EXPERIMENTAL_PEDIA</Tag>
 		<English>Instructions: 1. Select the hemisphere you want to get rid of. 2. Declare war on everyone on that hemisphere. 3. Target at the Equator in selected hemisphere and watch as you turn whole continents to nuclear waste land. Caution: Use in extreme emergency only. Don't use on smaller planets.</English>
 		<German>Anleitung: 1. Hemisphäre aussuchen, die ausgelöscht werden soll. 2. Allen Bewohnern dieser Hemisphäre Krieg erklären. 3. Mitte der Hemisphäre anvisieren und dabei zusehen, wie ganze Kontinente nuklear verseucht werden. ACHTUNG: Nur in extremen Notfällen und niemals auf kleineren Planeten anwenden!</German>
-		<Italian>Instructions: 1. Seleziona l'emisfero di cui ti vuoi liberare. 2. Dichiara guerra a chiunque su quell'emisfero. 3. Mira all'equatore e guarda mentre trasformi interi continenti in terra nuclearmente contaminata. Attenzione: Usare solo in estrema emergenza. Non usare su piccoli pianeti.</Italian>
+		<Italian>Istruzioni: 1. Seleziona l'emisfero di cui ti vuoi liberare. 2. Dichiara guerra a chiunque su quell'emisfero. 3. Mira all'equatore e guarda mentre trasformi interi continenti in terra nuclearmente contaminata. Attenzione: Usare solo in estrema emergenza. Non usare su piccoli pianeti.</Italian>
 		<Polish>Instrukcja: 1. Wybierz półkulę którą chcesz dostać.2. Wywołaj wojnę komukolwiek z tej półkuli. 3. Wyceluj w równik tej półkuli i patrz jak zamienia się w nieużytki nuklearne. Uwaga: Używaj TYLKO w ekstremalnych sytuacjach. Nie używaj na małych planetach.</Polish>
 		<Russian>Èíñòðóêöèè: 1. Âûáåðèòå ïîëóøàðèå, êîòîðîå âû æåëàåòå îïóñòîøèòü; 2. Îáúÿâèòå âîéíó âñåì íà ýòîì ïîëóøàðèè; 3. Íàöåëüòåñü íà ýêâàòîð â âûáðàííîì ïîëóøàðèè è íàáëþäàéòå, êàê âû ïðåâðàùàåòå öåëûå êîíòèíåíòû â ñâàëêó ÿäåðíûõ îòõîäîâ. [COLOR_WARNING_TEXT]Âíèìàíèå:[COLOR_TECH_TEXT] èñïîëüçóéòå òîëüêî â êðàéíèõ ñëó÷àÿõ. Íå ïðèìåíÿéòå íà íåáîëüøèõ êàðòàõ.</Russian>
 	</TEXT>
@@ -10049,11 +10058,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Grande Ingegnere:Grandi Ingegneri</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Gran ingegnere</Italian>
 		<Spanish>
 			<Text>Gran ingeniero:Grandes ingenieros</Text>
 			<Gender>Male</Gender>
@@ -10089,11 +10094,7 @@
 		<Tag>TXT_KEY_UNIT_GREAT_HUNTER</Tag>
 		<English>Great Hunter</English>
 		<French>Chasseur Illustre</French>
-		<Italian>
-			<Text>Grande cacciatore</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Gran cacciatore</Italian>
 		<Spanish>
 			<Text>Gran cazador</Text>
 			<Gender>Male</Gender>
@@ -10124,11 +10125,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Grande Spia:Grandi Spie</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Gran spia</Italian>
 		<Spanish>
 			<Text>Gran espía:Grandes espías</Text>
 			<Gender>Male</Gender>
@@ -10146,11 +10143,7 @@
 			<Gender>male:male:male:male:male:male:male:male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Grande uomo di stato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Gran uomo di stato</Italian>
 		<Polish>Wielki Ustawodawca</Polish>
 		<Russian>Âåëèêèé ïîëèòèê</Russian>
 	</TEXT>
@@ -13214,7 +13207,7 @@
 		<English>The hwacha was an anti-personnel weapon developed by the Koreans, and it is believed to have been one of the first gunpowder-based anti-personnel weapons ever created. The hwacha was a platform constructed to launch large numbers of fire arrows (or "Shin Ki Chon") at enemy targets. Hwachas were mounted on carts and wheelbarrows. A typical hwacha platform held seven or more rows of fifteen arrows and could fire from 150 to 200 fire arrows at once. The fire arrows had hollow tips and the shafts were fitted with narrow pipes. The tips and pipes were filled with gunpowder and each was equipped with a fuse. [PARAGRAPH:2]When lit, the fire arrows' fuses would first ignite the powder in the pipes, causing the arrows to shoot off like rockets. The fuses would continue to burn until they reached the gunpowder in the arrows' heads, which would then explode - with luck, somewhere near enemy soldiers. However, the weapons were extremely inaccurate and the Koreans had to fire off huge volleys to ensure significant damage to their targets. [PARAGRAPH:2]The Shin Ki Chon fire arrows were first developed in Korea and China around 1400 AD, and the hwacha dates from shortly after this period. The fire arrows could travel as far as one kilometer, an amazing range for artillery weapons at that time. Given their famous inaccuracy, the hwacha was best used against massed enemy formations at medium range: even if not precisely on target when they exploded, shrapnel from the fire arrows could still significantly hurt the enemy. Hwacha also were useful shock weapons, due to the noise and light produced by the rocket-like exploding arrows, and even seasoned troops could break and run the first time they encountered the strange new weapon. [PARAGRAPH:2]The best-known use of hwacha historically was during the Japanese invasion of Korea in 1592-98. The Japanese samurai typically advanced in dense groups - easy targets for the hwacha. At the Battle of Haengju, 3400 Koreans were able to defeat 30,000 Japanese with the help of 40 hwacha. [PARAGRAPH:2]The hwacha eventually became obsolete when more efficient metal projectiles (like bullets and artillery shells) replaced the fire arrows. [PARAGRAPH:2]</English>
 		<French>Le Hwacha est une arme antipersonnel développée par les Coréens. On suppose qu'il est l'une des premières armes antipersonnel à poudre. Le Hwacha est un plateau construit pour lancer de nombreuses flèches de feu (ou "Shin Ki Chon") sur des cibles ennemies. Il est monté sur des chariots et des brouettes. Un plateau Hwacha classique contient au moins sept rangées de quinze flèches et peut tirer de 150 à 200 flèches simultanément. Les flèches de feu se composent de pointes creuses et les tiges sont faites avec d'étroits tubes. Les pointes et les tiges sont remplies de poudre et comportent toutes deux une mèche. [PARAGRAPH:2]Une fois allumées, les mèches des flèches de feu vont d'abord enflammer la poudre des tiges, faisant partir les flèches telles des fusées. Les mèches continuent ensuite à brûler jusqu'à ce qu'elles atteignent la poudre des pointes des flèches, qui explosent alors, de préférence près des soldats ennemis. Cependant, ces armes ne sont pas du tout précises et les Coréens doivent envoyer énormément de flèches pour être certains d'endommager suffisamment leurs cibles. [PARAGRAPH:2]Les flèches de feu Shin Ki Chon sont d'abord développées en Corée et en Chine vers 1400 ap. J.-C. et le Hwacha est créé peu de temps après. Les flèches de feu peuvent parcourir jusqu'à un kilomètre, ce qui est une distance incroyable pour les armes d'artillerie de l'époque. En raison de son célèbre manque de précision, le Hwacha est surtout utilisé contre les formations ennemies de masse situées à moyenne distance : même si les flèches n'explosent pas précisément sur la cible, leurs éclats peuvent blesser sévèrement l'ennemi. Le Hwacha est aussi une arme choc très utile en raison du bruit et de l'éclat produits par les flèches explosant comme des fusées. Même des troupes aguerries peuvent se disperser et prendre la fuite la première fois qu'elles sont confrontées à cette nouvelle arme étrange. [PARAGRAPH:2]L'utilisation la plus connue du Hwacha remonte à l'invasion japonaise de la Corée de 1592 à 1598. Les samouraïs japonais avancent généralement en groupes denses, et représentent des cibles faciles pour le Hwacha. Lors de la bataille de Haengju, 3400 Coréens parviennent à vaincre 30 000 Japonais à l'aide de 40 Hwacha. [PARAGRAPH:2]Le Hwacha finit par devenir obsolète lorsque des projectiles métalliques plus efficaces, tels que les balles et les obus d'artillerie, remplacent les flèches de feu. [PARAGRAPH:2]</French>
 		<German>Die Hwach'a war eine von den Koreanern entwickelte Anti-Personen-Waffe, die vermutlich erste Schwarzpulver-basierte Waffe überhaupt. Sie besaß einen Aufbau, der es ermöglichte, eine große Anzahl Brandpfeile ("Shin Ki Chon") auf feindliche Ziele abzufeuern. Hwach'as waren auf Wagen oder Schubkarren montiert. Eine herkömmliche Hwach'a enthielt sieben oder mehr Halterungsreihen für je fünfzehn Pfeile und konnte somit zwischen 150 und 200 Brandpfeile auf einmal abschießen. Die Pfeile besaßen Hohlspitzen und ihre Schäfte waren im Innern mit schmalen Röhrchen bestückt. Die Spitzen und Röhrchen wurden mit Schwarzpulver gefüllt und jeder einzelne Pfeil wurde mit einer Lunte versehen. [PARAGRAPH:2]Nach dem Anzünden setzten die Lunten zunächst das Schießpulver in den Röhrchen in Brand, was dazu führte, dass die Pfeile wie Raketen losschossen. Dann brannten die Lunten weiter, bis sie das Schießpulver in den Pfeilspitzen erreichten und diese zur Explosion brachten - mit etwas Gück in der Nähe feindlicher Soldaten. Der Nachteil dieser Waffe war allerdings, dass sie sehr ungenau war, daher mussten die Koreaner enorme Salven abfeuern, um eine maßgebliche Auswirkung auf die Zielobjekte sicherzustellen. [PARAGRAPH:2]Die "Shin Ki Chon"-Brandpfeile wurden erstmals um 1400 nach Christus in Korea und China entwickelt, die Hwach'a folgte kurz darauf. Ein Brandpfeil konnte eine Entfernung von bis zu einem Kilometer überwinden - eine bemerkenswerte Reichweite für die Artilleriewaffen dieser Zeit. Wegen ihrer Ungenauigkeit ließ sich die Hwach'a am besten gegen konzentrierte feindliche Formationen in mittlerer Entfernung einsetzen, denn selbst wenn die Pfeile ihr Ziel nicht unmittelbar erreichten, konnten die bei der Explosion freigesetzten Splitter dem Gegner immer noch erheblichen Schaden zufügen. Abgesehen davon eigneten sich die Hwach'as wegen der Geräusche und Lichteffekte der raketenähnlichen, explodierenden Pfeile auch als Schockwaffen und konnten selbst erfahrene Truppen dazu bringen, die Flucht zu ergreifen, wenn sie es zum allerersten Mal mit dieser merkwürdigen neuen Waffengattung zu tun bekamen. [PARAGRAPH:2]Das bekannteste geschichtliche Ereignis, bei dem Hwach'as zum Einsatz kamen, war die japanische Invasion in Korea in der Zeit von 1592-1598. Die japanischen Samurai rückten üblicherweise in dicht gedrängten Gruppen vor - leichte Beute für die Hwach'a: In der Schlacht bei Haengju gelang es einer zahlenmäßig eindeutig unterlegenen Streitmacht von 3.400 Koreanern mithilfe von 40 Hwach'as, eine Armee von 30.000 Japanern zu besiegen. [PARAGRAPH:2]Mit der Verfügbarkeit leistungsfähigerer Metallprojektile (wie Kugeln und Artilleriegranaten), welche die Brandpfeile ersetzten, waren die Hwach'as schließlich überholt und wurden allgemein ausgemustert. [PARAGRAPH:2]</German>
-		<Italian>La hwacha era un'arma antiuomo sviluppata dai Coreani e si ritiene che sia stata una delle prime armi antiuomo a utilizzare la polvere da sparo. La hwacha era costituita da una piattaforma progettata per scagliare numerose frecce incendiarie (o "Shin Ki Chon") contro i bersagli nemici. Le hwacha erano montate su carri o carriole. Una tipica piattaforma hwacha conteneva sette o più file di quindici frecce e poteva sparare da 150 a 200 frecce incendiarie alla volta. Le frecce avevano le punte cave e le aste erano riempite di piccoli tubi. Le punte e i tubi erano a loro volta pieni di polvere da sparo collegata a una miccia. [PARAGRAPH:2]Una volta accesa la miccia, si sarebbe incendiata dapprima la polvere da sparo nei tubicini, facendo partire via le frecce come razzi. La miccia nel frattempo avrebbe continuato a bruciare fino a raggiungere la punta della freccia, che con un po' di fortuna sarebbe esplosa vicino ai soldati nemici. Si trattava comunque di un'arma poco precisa e bisognava scagliare intere piattaforme per provocare danni significativi. [PARAGRAPH:2]Le frecce incendiarie Shin Ki Chon furono prodotte in Corea e in Cina nel 1400 d.C., mentre la hwacha risale a poco dopo. Le frecce potevano percorrere anche un chilometro, una portata eccezionale per l'artiglieria del tempo. Considerata la loro famigerata imprecisione, le hwacha erano utilizzate contro larghe formazioni nemiche a media distanza: anche se quando esplodevano non colpivano direttamente un bersaglio, i frammenti delle frecce potevano infliggere danni significativi. Le hwacha erano utili anche per scioccare il nemico con il rumore e le luci provocati dalla detonazione delle frecce-razzo. Persino truppe esperte potevano vacillare e rompere la formazione la prima volta che incontravano questa strana arma. [PARAGRAPH:2]L'utilizzo più efficace della hwacha si ebbe storicamente nell'invasione Giapponese della Corea del 1592-98. I samurai giapponesi di solito avanzavano in gruppi compatti: il bersaglio ideale di una hwacha. Nella battaglia di Haengju, 3.400 Coreani sconfissero 30.000 Giapponesi grazie a 40 hwacha. [PARAGRAPH:2]La hwacha divenne obsoleta con l'introduzione dei più precisi proiettili metallici (come le pallottole e i proiettili d'artiglieria), che rimpiazzarono le frecce incendiarie. [PARAGRAPH:2]</Italian>
+		<Italian>La hwacha era un'arma antiuomo sviluppata dai Coreani e si ritiene che sia stata una delle prime armi antiuomo a utilizzare la polvere da sparo. La hwacha era costituita da una piattaforma progettata per scagliare numerose frecce incendiarie (o "Shin Ki Chon") contro i bersagli nemici. Le hwacha erano montate su carri o carriole. Una tipica piattaforma hwacha conteneva sette o più file di quindici frecce e poteva sparare da 150 a 200 frecce incendiarie alla volta. Le frecce avevano le punte cave e le aste erano riempite di piccoli tubi. Le punte e i tubi erano a loro volta pieni di polvere da sparo collegata a una miccia. [PARAGRAPH:2]Una volta accesa la miccia, si sarebbe incendiata dapprima la polvere da sparo nei tubicini, facendo partire via le frecce come razzi. La miccia nel frattempo avrebbe continuato a bruciare fino a raggiungere la punta della freccia, che con un po' di fortuna sarebbe esplosa vicino ai soldati nemici. Si trattava comunque di un'arma poco precisa e bisognava scagliare intere piattaforme per provocare danni significativi. [PARAGRAPH:2]Le frecce incendiarie Shin Ki Chon furono prodotte in Corea e in Cina nel 1400 d.C. mentre la hwacha risale a poco dopo. Le frecce potevano percorrere anche un chilometro, una portata eccezionale per l'artiglieria del tempo. Considerata la loro famigerata imprecisione, le hwacha erano utilizzate contro larghe formazioni nemiche a media distanza: anche se quando esplodevano non colpivano direttamente un bersaglio, i frammenti delle frecce potevano infliggere danni significativi. Le hwacha erano utili anche per scioccare il nemico con il rumore e le luci provocati dalla detonazione delle frecce-razzo. Persino truppe esperte potevano vacillare e rompere la formazione la prima volta che incontravano questa strana arma. [PARAGRAPH:2]L'utilizzo più efficace della hwacha si ebbe storicamente nell'invasione Giapponese della Corea del 1592-98. I samurai giapponesi di solito avanzavano in gruppi compatti: il bersaglio ideale di una hwacha. Nella battaglia di Haengju, 3.400 Coreani sconfissero 30.000 Giapponesi grazie a 40 hwacha. [PARAGRAPH:2]La hwacha divenne obsoleta con l'introduzione dei più precisi proiettili metallici (come le pallottole e i proiettili d'artiglieria), che rimpiazzarono le frecce incendiarie. [PARAGRAPH:2]</Italian>
 		<Spanish>La hwacha, un arma antipersonal desarrollada por los coreanos, puede que fuera una de las primeras armas de pólvora usadas contra soldados en toda la historia. Se trataba de una plataforma construida para lanzar gran cantidad de flechas de fuego (o "shin ki chon") contra objetivos enemigos. Estas armas se montaban en carros o carretillas. Una plataforma de hwacha típica tenía siete o más filas de quince flechas y podía disparar entre ciento cincuenta y doscientas flechas a la vez. Las flechas de fuego tenían la punta hueca y los astiles tenían un fino tubo al final. La punta y los tubos se rellenaban de pólvora y a la flecha se le ponía una mecha. [PARAGRAPH:2]Cuando se encendían, las mechas inflamaban la pólvora de los tubitos y las flechas salían disparadas como cohetes. Las mechas seguían ardiendo hasta llegar a la pólvora de la punta, que entonces explotaba... con un poco de suerte, cerca de los soldados enemigos. Sin embargo, estas armas eran sumamente imprecisas y los coreanos tenían que lanzarlas en grandes cantidades para asegurarse de que hacían daño significativo a sus enemigos. [PARAGRAPH:2]Las flechas de fuego (shin ki chon) se inventaron en Corea y China alrededor del año 1400 a. C. y la hwacha data de poco después. Las flechas podían alcanzar distancias de hasta un kilómetro, un alcance asombroso para la artillería de la época. Habida cuenta de su famosa falta de precisión, las hwachas se usaban contra formaciones enemigas masivas a media distancia: aunque no explotasen sobre sus objetivos, la metralla de las explosiones podía causar daños significativos. También eran útiles como armas de choque debido al ruido y la luz producidos por la explosión de las flechas, e incluso unas tropas experimentadas podían darse a la fuga la primera vez que se encontraban con este arma extraña y nueva. [PARAGRAPH:2]El uso más famoso de las hwachas se produjo durante la invasión japonesa de Corea (1592-98). Normalmente, los samuráis japoneses avanzaban en formaciones cerradas: objetivos fáciles para las hwachas. En la batalla de Haengju, tres mil cuatrocientos coreanos pudieron vencer a treinta mil japoneses con la ayuda de cuarenta hwachas. [PARAGRAPH:2]Este arma quedaría obsoleta cuando los proyectiles metálicos, más eficaces (como las balas y los obuses), reemplazaron a las flechas. [PARAGRAPH:2]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -14889,7 +14882,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Gran mercante</Italian>
+		<Italian>Gran mercante</Italian> <!-- info screen Corporation, Pedia special units -->
 		<Spanish>
 			<Text>Gran mercader:Grandes mercaderes</Text>
 			<Gender>Male</Gender>
@@ -16826,7 +16819,7 @@
 		<English>Olmec Eagle Warrior</English>
 		<French>Guerrier-Aigle Olmec</French>
 		<Italian>
-			<Text>Guerriero aquila olmec</Text>
+			<Text>Guerriero aquila olmeco</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
@@ -16850,7 +16843,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Orangotango</Italian>
+		<Italian>Orango tango</Italian>
 		<Spanish>
 			<Text>Orangután</Text>
 			<Gender>Male</Gender>
@@ -17056,7 +17049,7 @@
 		<English>The Janissaries were an elite fighting force of infantry raised by the Ottoman sultans. They formed the sultan's household troops and bodyguard, eventually rising to a position of enormous influence before being disbanded in the nineteenth century. Murad I founded the Janissary corps around 1330; the troops were made up of non-Muslim boys who were captured in battle or bought as slaves and brought up as warriors. This was very similar to the Mameluk slave soldiers of Egypt, who may have been the inspiration for the Janissaries. Janissaries became the first infantry units in the Ottoman military forces, because at the time no free man would consent to fighting on foot.[PARAGRAPH:2]After 1380 the system for recruiting new soldiers into the Janissaries became standardized through a process called the "devshirmeh:" this was basically a "human tax" where each community had to contribute a certain number of young boys to the state. In practice these were almost always Christian slaves.[PARAGRAPH:2]The boys were sequestered in special barracks, where they would be converted to Islam and trained to become elite soldiers (a process very similar to that practiced by the Spartans of ancient Greece). Although slaves, the Janissaries received special privileges, including the right to bear weapons and higher pay than other soldiers. Although the Janissaries began their existence as a small bodyguard for the sultan, in time they came to comprise much of the Ottoman army, topping out at over 200,000 men at some points.[PARAGRAPH:2]The Janissaries originally were trained to be expert archers, but once firearms were invented they quickly adopted the new weapons, becoming fiercely proficient with muskets. They usually used axes or sabres for melee combat. Janissaries were present at all of the major battles in the early history of the Ottoman Empire, including the Siege of Constantinople in 1453.[PARAGRAPH:2]The very success of the Janissaries would eventually destroy them. Realizing their importance, they began demanding higher pay, threatening rebellion if their demands were refused. Their first rebellion took place in 1449, and it was followed by many more. By the eighteenth century, the Janissaries dominated the government. Through frequent palace coups they changed sultans as they wished, and they blocked much-needed modernization reforms in the Ottoman army. Many of the Janissaries became corrupted, no longer training for battle but instead pursuing commercial ventures or political office, and the weakness of the Ottomans in the face of Russian and Austrian expansion soon became obvious to all. Desperate to regain control of their country, the Ottoman rulers made determined efforts to eradicate them.[PARAGRAPH:2]Finally, in 1826 Mahmud II was able to form a non-Janissary army strong enough to challenge the Janissaries. The Janissaries did not go down peacefully, and Mahmud II had to use artillery to shell the Janissaries' barracks and batter them into submission. This event - known as the "Auspicious Incident," ended the Janissaries. Their characteristic marching music is the only trace of them that remains today.</English>
 		<French>Les janissaires sont les soldats d'une infanterie d'élite créée par les sultans ottomans. Ils forment les troupes et les gardes du corps du sultan et finissent par disposer d'une forte influence, avant d'être démantelés au XIXe siècle. Vers 1330, Murad Ier fonde le corps des janissaires, qui se compose de garçons non-musulmans capturés au combat ou achetés comme esclaves et élevés comme guerriers. Ce corps ressemble fortement aux soldats esclaves que sont les mamelouks d'Egypte, qui ont peut-être influencé les janissaires. Ceux-ci deviennent les premières unités d'infanterie des forces militaires ottomanes car à cette époque, aucun homme libre n'accepte de se battre à pied.[PARAGRAPH:2]Après 1380, le recrutement de nouveaux soldats dans le corps des janissaires est normalisé dans un système appelé "devchirmé": il s'agit en fait d'un "impôt sur le sang" selon lequel toute communauté doit fournir un certain nombre de jeunes garçons à l'Etat. En pratique, il s'agit presque toujours d'esclaves chrétiens.[PARAGRAPH:2]Ces garçons sont séquestrés dans des casernes spéciales, où ils sont convertis à l'islam et formés pour devenir des soldats d'élite. Cette pratique s'apparente à celle utilisée par les Spartiates dans la Grèce antique. Bien qu'ils soient esclaves, les janissaires bénéficient de privilèges spéciaux, notamment du droit de porter des armes et d'être mieux rémunérés que les autres soldats. Si les janissaires sont au départ de simples gardes du corps du sultan, ils finissent par constituer une grande partie de l'armée ottomane ; ils seront jusqu'à 200 000 hommes.[PARAGRAPH:2]Les janissaires sont initialement formés pour être des archers hors pair mais après l'invention des armes à feu, qu'ils adoptent rapidement, ils deviennent extrêmement doués pour le maniement du mousquet. Ils utilisent généralement des haches ou des sabres dans les mêlées. Les janissaires participent aux principales batailles du début de l'histoire de l'Empire ottoman, y compris le siège de Constantinople en 1453.[PARAGRAPH:2]Les janissaires sont finalement victimes de leur succès. Conscients de leur importance, ils commencent à exiger de meilleurs salaires, menaçant de se rebeller si leurs demandes ne sont pas satisfaites. La première rébellion a lieu en 1449 et elle est suivie de nombreuses autres. Au XVIIIe siècle, les janissaires contrôlent le gouvernement. Ils organisent fréquemment des coups d'Etat pour remplacer les sultans à leur gré et ils empêchent la mise en place de réformes nécessaires à la modernisation l'armée. De nombreux janissaires sont corrompus, ne s'entraînant plus au combat mais se lançant dans des aventures commerciales ou visant une fonction politique. La faiblesse des Ottomans face à l'expansion russe et autrichienne devient rapidement évidente pour tous. Déterminés à reprendre le contrôle de leur pays, les dirigeants ottomans font d'immenses efforts pour éradiquer les janissaires.[PARAGRAPH:2]En 1826, Mahmud II finit par réussir à former une armée sans janissaires suffisamment puissante pour mettre ces derniers au défi. Les janissaires ne se rendent pas sans se battre et Mahmud II doit utiliser l'artillerie pour pilonner leurs casernes et les contraindre à se soumettre, abolissant ainsi le corps d'armée tout entier. La musique militaire ottomane, dite janissaire, est la seule trace qu'il nous reste d'eux.</French>
 		<German>Die Janitscharen waren die Elitekampftruppen in der Infanterie der osmanischen Sultane. Als Gardetruppen und Leibwache des Sultans erlangten sie enormen Einfluss, bevor sie im 19. Jahrhundert aufgelöst wurden. Gegründet wurde das Janitschar-Corps um 1330 von Murat I. Die Truppen bestanden aus nicht muslimischen jungen Männern, die während Kampfhandlungen gefangen genommen oder als Sklaven gekauft und als Krieger aufgezogen wurden - ähnlich wie die Mameluken (Militärsklaven) in Ägypten, die möglicherweise als Vorbild für die Janitscharen dienten. Die Janitscharen wurden die ersten Infanterieeinheiten der osmanischen Militärstreitkräfte, denn zu dieser Zeit wäre kein freier Mann bereit gewesen, sich als Fußsoldat zu verdingen.[PARAGRAPH:2]Nach 1380 wurde mit der "Devschirme" (Knabenlese) ein standardisiertes System zur Zwangsrekrutierung neuer Soldaten eingeführt, die zu Janitscharen ausgebildet wurden. Hierbei handelte es sich im Wesentlichen um eine Art "menschliche Steuer", wobei jedes zum Osmanischen Reich gehörige Gebiet dem Staat eine bestimmte Anzahl junger Männer überlassen musste, die fast immer christlicher Abstammung waren.[PARAGRAPH:2]Die Jungen wurden in gesonderten Kasernen abgeschottet, wo sie zum Islam umerzogen und zu Elitesoldaten ausgebildet wurden (ein ähnliches Verfahren war in der Antike auch von den Spartanern in Griechenland praktiziert worden). Trotz der Tatsache, dass sie Sklaven waren, genossen die Janitscharen gewisse Privilegien, einschließlich der Berechtigung zum Tragen von Waffen und einer höheren Besoldung als andere Soldaten. Anfangs waren sie lediglich kleine Leibwächter des Sultans, aber im Laufe der Zeit stellten sie einen Großteil der osmanischen Armee, manchmal mehr als 200000 Mann.[PARAGRAPH:2]Ursprünglich waren die Janitscharen zu hervorragenden Bogenschützen ausgebildet worden, nach dem Aufkommen der Feuerwaffen spezialisierten sie sich jedoch schnell auf den Umgang mit Musketen. Im Nahkampf verwendeten sie üblicherweise Beile oder Säbel. In der frühen Geschichte des Osmanenreiches waren die Janitscharen an allen bedeutenden Gefechten beteiligt, einschließlich der Belagerung von Konstantinopel im Jahr 1453.[PARAGRAPH:2]Doch ihr Erfolg sollte ihnen schließlich auch zum Verhängnis werden. Als sie ihre Bedeutung für die osmanischen Streitkräfte erkannten, verlangten sie eine höhere Besoldung und drohten mit einem Aufstand, falls ihre Forderungen nicht erfüllt werden sollten. Ihre erste Rebellion fand 1449 statt und es sollten noch viele weitere folgen. Bis zum 18. Jahrhundert hatten die Janitscharen die Regierung fest im Griff. Mithilfe häufiger Palastrevolten setzten sie nach Belieben alte Sultane ab und neue ein. Darüber hinaus blockierten sie auch die dringend notwendigen Reformen zur Modernisierung der osmanischen Armee. Weil viele Janitscharen korrupt wurden und nicht mehr für den Kampf trainierten, sondern vielmehr wirtschaftliche oder politische Interessen verfolgten, wurde die Schwäche der Osmanen angesichts der russischen und österreichischen Expansionsbestrebungen bald nur allzu offensichtlich. In dem verzweifelten Versuch, die Kontrolle über ihr Reich zurückzugewinnen, griffen die osmanischen Herrscher zu entschiedenen Maßnahmen, um die Janitscharen auszuschalten.[PARAGRAPH:2]Schließlich gelang es Mahmut II. im Jahr 1826, eine Streitmacht ohne Janitscharen-Beteiligung aufzustellen, die stark genug war, um es mit den Elitetruppen aufzunehmen. Natürlich gaben diese sich nicht kampflos geschlagen und so musste Mahmut II. Artilleriegeschütze einsetzen und ihre Quartiere unter Beschuss nehmen, um sie endgültig zur Aufgabe zu zwingen. Dieses Ereignis - das sogenannte "Wohltätige Ereignis" - beendete die Ära der Janitscharen. Das Einzige, was heute noch an sie erinnert, ist ihre charakteristische Marschmusik.</German>
-		<Italian>I giannizzeri erano una forza d'élite di fanteria creata dai sultani ottomani e impiegati nella protezione della loro dimora e della persona, tanto da giungere ad avere su di loro un'enorme influenza prima di essere sciolta nel diciannovesimo secolo. Murad I fondò il corpo dei giannizzeri nel 1330; le truppe erano formate da ragazzi non musulmani catturati in battaglia o acquistati come schiavi e addestrati al combattimento, così come gli schiavi-soldato mamelucchi d'Egitto, che potrebbero anche aver ispirato la formazione dei giannizzeri. I giannizzeri furono la prima forza di fanteria dell'esercito ottomano: a quel tempo nessun uomo libero si sarebbe abbassato a combattere a piedi.[PARAGRAPH:2]Dopo il 1380, il sistema di reclutamento dei giannizzeri si standardizzò secondo la procedura del "devshirmeh": si trattava in sostanza di una "tassa umana" secondo la quale ogni comunità avrebbe dovuto pagare un dato numero di ragazzi allo stato. Nella pratica, si trattava quasi sempre di schiavi cristiani.[PARAGRAPH:2]I ragazzi venivano segregati in speciali caserme, dove venivano convertiti all'Islam e addestrati per diventare soldati d'elite (secondo modalità simili a quelle impiegate dagli Spartani dell'antica Grecia). Anche se schiavi, ai giannizzeri erano riservati dei privilegi speciali, come il diritto a portare armi e una paga superiore rispetto a quella degli altri soldati. Se inizialmente erano destinati alla guardia del corpo del sultano, col tempo costituirono il grosso dell'esercito ottomano, raggiungendo anche le 200.000 unità in certi periodi.[PARAGRAPH:2]I giannizzeri originariamente venivano addestrati come arcieri, ma quando furono introdotte le armi da fuoco, adottarono subito le nuove armi nell'uso delle quali diventarono molto esperti. Per il combattimento in mischia usavano asce o sciabole. I giannizzeri parteciparono a tutte le più importanti battaglie del primo periodo dell'Impero ottomano, compreso l'assedio di Costantinopoli del 1453.[PARAGRAPH:2]Fu proprio il loro successo a decretare la fine dei giannizzeri. Intuendo la propria importanza, cominciarono a esigere paghe sempre più alte e a minacciare rivolte in caso di mancata concessione. La loro prima ribellione avvenne nel 1449 e a essa ne seguirono molte altre. Nel diciottesimo secolo, in questo modo i giannizzeri tenevano il governo in ostaggio: con i loro colpi di stato facevano diventare sultano chi volevano e inoltre ostacolarono la necessaria modernizzazione dell'esercito ottomano. Molti di loro erano corrotti e non si addestravano più al combattimento ma perseguivano imprese commerciali o carriere politiche, finché la fragilità dell'Impero ottomano di fronte all'espansionismo di Austria e Russia divenne evidente a tutti. Nel tentativo disperato di riassumere il controllo del proprio impero, i sultani compirono ogni sforzo per liberarsene.[PARAGRAPH:2]Alla fine, nel 1826, Mahmud II fu in grado di radunare un esercito di non giannizzeri forte abbastanza da scontrarsi con essi. I giannizzeri non si arresero senza lottare e Mahmud II dovette usare l'artiglieria per bombardare le loro caserme e costringerli alla sottomissione. Questo evento, noto come "l'incidente propizio" segnò la fine dei giannizzeri. L'unica traccia che rimane oggi di loro è la musica della loro marcia.</Italian>
+		<Italian>I giannizzeri erano una forza d'élite di fanteria creata dai sultani ottomani e impiegati nella protezione della loro dimora e della persona, tanto da giungere ad avere su di loro un'enorme influenza prima di essere sciolta nel diciannovesimo secolo. Murad I fondò il corpo dei giannizzeri nel 1330; le truppe erano formate da ragazzi non musulmani catturati in battaglia o acquistati come schiavi e addestrati al combattimento, così come gli schiavi-soldato mamelucchi d'Egitto, che potrebbero anche aver ispirato la formazione dei giannizzeri. I giannizzeri furono la prima forza di fanteria dell'esercito ottomano: a quel tempo nessun uomo libero si sarebbe abbassato a combattere a piedi.[PARAGRAPH:2]Dopo il 1380, il sistema di reclutamento dei giannizzeri si standardizzò secondo la procedura del "devshirmeh": si trattava in sostanza di una "tassa umana" secondo la quale ogni comunità avrebbe dovuto pagare un dato numero di ragazzi allo stato. Nella pratica, si trattava quasi sempre di schiavi cristiani.[PARAGRAPH:2]I ragazzi venivano segregati in speciali caserme, dove venivano convertiti all'Islam e addestrati per diventare soldati d'élite (secondo modalità simili a quelle impiegate dagli Spartani dell'antica Grecia). Anche se schiavi, ai giannizzeri erano riservati dei privilegi speciali, come il diritto a portare armi e una paga superiore rispetto a quella degli altri soldati. Se inizialmente erano destinati alla guardia del corpo del sultano, col tempo costituirono il grosso dell'esercito ottomano, raggiungendo anche le 200.000 unità in certi periodi.[PARAGRAPH:2]I giannizzeri originariamente venivano addestrati come arcieri, ma quando furono introdotte le armi da fuoco, adottarono subito le nuove armi nell'uso delle quali diventarono molto esperti. Per il combattimento in mischia usavano asce o sciabole. I giannizzeri parteciparono a tutte le più importanti battaglie del primo periodo dell'Impero ottomano, compreso l'assedio di Costantinopoli del 1453.[PARAGRAPH:2]Fu proprio il loro successo a decretare la fine dei giannizzeri. Intuendo la propria importanza, cominciarono a esigere paghe sempre più alte e a minacciare rivolte in caso di mancata concessione. La loro prima ribellione avvenne nel 1449 e a essa ne seguirono molte altre. Nel diciottesimo secolo, in questo modo i giannizzeri tenevano il governo in ostaggio: con i loro colpi di stato facevano diventare sultano chi volevano e inoltre ostacolarono la necessaria modernizzazione dell'esercito ottomano. Molti di loro erano corrotti e non si addestravano più al combattimento ma perseguivano imprese commerciali o carriere politiche, finché la fragilità dell'Impero ottomano di fronte all'espansionismo di Austria e Russia divenne evidente a tutti. Nel tentativo disperato di riassumere il controllo del proprio impero, i sultani compirono ogni sforzo per liberarsene.[PARAGRAPH:2]Alla fine, nel 1826, Mahmud II fu in grado di radunare un esercito di non giannizzeri forte abbastanza da scontrarsi con essi. I giannizzeri non si arresero senza lottare e Mahmud II dovette usare l'artiglieria per bombardare le loro caserme e costringerli alla sottomissione. Questo evento, noto come "l'incidente propizio" segnò la fine dei giannizzeri. L'unica traccia che rimane oggi di loro è la musica della loro marcia.</Italian>
 		<Spanish>Los jenízaros eran un cuerpo de infantería de élite empleado por los sultanes otomanos. Formaban las tropas de la casa del sultán y sus guardaespaldas, y llegaron a alcanzar una posición de enorme influencia antes de desaparecer, en el siglo XIX. Murad I fundó el cuerpo de los jenízaros en 1330. Las tropas estaban formadas por niños no musulmanes que eran capturados en las batallas o comprados en los mercados de esclavos y criados como guerreros. En este sentido se parecían mucho a los soldados esclavos de los mamelucos de Egipto, que tal vez sirvieran de inspiración. Los jenízaros fueron la primera unidad de infantería de las fuerzas otomanas, porque en aquel tiempo a los hombres libres no se les permitía luchar a pie.[PARAGRAPH:2]A partir de 1380, el sistema de reclutamiento de nuevos jenízaros se estandarizó mediante un proceso denominado el "devshirmeh". Básicamente, se trataba de un "impuesto humano", por el que cada comunidad tenía que contribuir con cierto número de niños para el estado. En la práctica, se trataba casi siempre de esclavos cristianos.[PARAGRAPH:2]Los niños quedaban confinados en cuarteles especiales, donde se los convertía al Islam y recibían entrenamiento como soldados de élite (un proceso muy similar al practicado por los espartanos de la antigua Grecia). Aunque eran esclavos, los jenízaros recibían privilegios especiales, incluido el derecho a portar armas y una paga superior a la de los demás soldados. Empezaron siendo un pequeño contingente de guardaespaldas para el sultán, pero acabaron por formar la mayor parte del ejército otomano, superando la cifra de los doscientos mil hombres en algunas ocasiones.[PARAGRAPH:2]Inicialmente se entrenaban para convertirse en expertos arqueros, pero cuando se inventaron las armas de fuego las adoptaron muy pronto y se convirtieron en auténticos expertos con el mosquete. En el cuerpo a cuerpo solían utilizar hachas o sables. Los jenízaros estuvieron presentes en todas las batallas importantes de la historia inicial del Imperio Otomano, incluido el asedio de Constantinopla en 1453.[PARAGRAPH:2]Su mismo éxito sería lo que los destruyese. Al comprender su importancia, empezaron a exigir mayor paga y a amenazar con revueltas si no se les concedían sus exigencias. Su primera rebelión se produjo en 1449, y fue seguida por muchas otras. En el siglo XVIII ya dominaban el gobierno. Por medio de frecuentes intrigas palaciegas, cambiaban los sultanes a su antojo y bloqueaban las reformas que tanto necesitaba el ejército otomano para modernizarse. Muchos de ellos cayeron en la corrupción, abandonaron la instrucción militar y se dedicaron a los negocios o a la vida política, y la debilidad de los otomanos frente al expansionismo ruso y austríaco no tardó en hacerse evidente. Desesperados por recuperar el control de su país, los gobernantes otomanos hicieron decididos esfuerzos por librarse de ellos.[PARAGRAPH:2]Finalmente, en 1826, Murad II pudo formar un ejército regular lo bastante fuerte como para enfrentarse a los jenízaros. Pero estos no se sometieron sin luchar, y Mahmud II tuvo que bombardear sus cuarteles con artillería para someterlos. Este acontecimiento, conocido como el "feliz incidente", significó el fin de los jenízaros. Su característica música de marcha es lo único que queda de ellos hoy en día.</Spanish>
 		<Polish>W 1329 roku sułtan Orhan wydał edykt o zorganizowaniu elitarnych oddziałów piechoty. Postanowił wtedy, że co piąty chłopiec chrześcijański pochwycony do niewoli w czasie wypraw wojennych, a także wzięty przymusowo z ziem podbitych przez Turków, będzie oddawany na wychowanie muzułmanom, którzy mieli obowiązek ukształtować w nim takie cechy, jak fanatyzm religijny, ślepe posłuszeństwo i przywiązanie do Turcji. Przymusowo przechodzili również na islam. Byli oni hartowani fizycznie i uczeni sztuki wojennej. Z biegiem czasu, w miarę rozrastania się imperium i potrzebą rozbudowy armii wprowadzono specjalny podatek od wszystkich chrześcijańskich rodzin je zamieszkujących. Co 7 lat odbywała się branka, w czasie której każdrodzina miała oddać w niewolę sułtanowi jednego syna. Jedynie rodziny posiadające jednego męskiego potomka zwolnione były z tego obowiązku. Wcielano chłopców w wieku od 10 do 18 lat, którzy stawali się niewolnikami władcy, żołnierzami korpusu janczarów. Najlepsi wyłonieni w czasie ćwiczeń kierowani byli do gwardii przybocznej sułtana. Kwaterowali w koszarach odizolowani od społeczeństwa, poświęcając się cały czas ćwiczeniom wojskowym. Ci, którzy dożyli, w wieku 45 lat przechodzili na odpoczynek. Począwszy od XV wieku szeregi janczarów stale rosły, pod koniec tego wieku było ich 40 tysięcy, w 1691 roku już 100 tysięcy. Cały korpus janczarów dzielił się na 196 ort, czyli wspólnot wojskowych. Orty miały wspólny kocioł i wyłącznie między siebie dzieliły zdobycze wojenne. Uzbrojeni byli w różnorodne gatunki broni, lecz zawsze posiadali krótką szablę (jatagan), dzidę, sztylet (kindżał), i początkowo łuk, zamieniony później w pistolet a od 1566 roku w muszkiet. Szturmowali przy akompaniamencie własnych orkiestr. Zgodnie z zasadami Koranu, jeżeli pierwszy atak się nie powiódł powtarzali go trzykrotnie. Walnie przyczynili się do zwycięstwa sułtana w bitwach pod Warną oraz w czasie oblężenia Konstantynopola. W późniejszych wiekach, gdy zaczęło brakować chrześcijańskich brańców do oddziałów janczarskich zaczęto wcielać ludność muzułmańską tureckiego pochodzenia. Spowodowało to, że oddziały te z fanatycznych jednostek wojskowych, całkowicie oddanych władcy stały się jedną z głównych sił destabilizujących państwo. Wynosili na tron i obalali sułtanów. W 1826 roku sułtan Mahmud II postanowił rozwiązać korpus janczarski, który zbuntował się na wieść o edykcie władcy. Przeciwko janczarom wysłano wówczas artylerię i odziały jazdy. Większość janczarów zginęła, pozostali przy życiu zostali publicznie straceni.</Polish>
 		<Russian>Âîèíû-ÿíû÷àðû ñëóæèëè â ýëèòíûõ ïåõîòíûõ ÷àñòÿõ îñìàíñêèõ ñóëòàíîâ. Îõðàíÿÿ ïðàâèòåëåé, îíè ïðèîáðåëè ïî÷òè íåîãðàíè÷åííîå âëèÿíèå, è òîëüêî â XIX â. èõ ïîäðàçäåëåíèÿ áûëè óïðàçäíåíû. Ìóðàä I ñôîðìèðîâàë ðåãóëÿðíûå ÿíû÷àðñêèå âîéñêà ïðèìåðíî â 1330 ã., â íèõ ïðèíèìàëè þíîøåé íåìóñóëüìàíñêîãî ïðîèñõîæäåíèÿ, âçÿòûõ â ïëåí â áîþ èëè êóïëåííûõ êàê ðàáîâ. ßíû÷àðû - àíàëîã ìàìåëþêîâ, âîèíîâ-ðàáîâ â Åãèïòå; âîçìîæíî, ÿíû÷àðñêèå ïîëêè áûëè ñîçäàíû ïî îáðàçöó åãèïåòñêèõ âîéñê. ßíû÷àðû ñòàëè ïåðâûìè ïåõîòèíöàìè â îñìàíñêîé àðìèè, ïîñêîëüêó â òî âðåìÿ íè îäèí ñâîáîäíûé ÷åëîâåê íå ñîãëàñèëñÿ áû ñðàæàòüñÿ ïåøèì. [PARAGRAPH:2]Ñ 1380 ã. íàáîð â ÿíû÷àðñêèå ïîëêè ñòàë óïîðÿäî÷åííûì è ïîëó÷èë íàçâàíèå "äåâøèðìå". Êàæäàÿ îáùèíà äîëæíà áûëà óïëàòèòü ãîñóäàðñòâó "íàëîã" â âèäå íåñêîëüêèõ êðåïêèõ ìàëü÷èêîâ, îáû÷íî ðàáîâ-õðèñòèàí. [PARAGRAPH:2]Þíîøåé ñåëèëè â îñîáûõ êàçàðìàõ, ãäå èõ îáðàùàëè â èñëàì è ãîòîâèëè ê âîåííîé ñëóæáå ìåòîäàìè, ñõîæèìè ñî ñïàðòàíñêèìè. Íåñìîòðÿ íà ñòàòóñ ðàáîâ, ÿíû÷àðû ïîëó÷àëè âûñîêîå æàëîâàíüå è ïîëüçîâàëèñü íåêîòîðûìè ïðèâèëåãèÿìè, íàïðèìåð ïðàâîì íîøåíèÿ îðóæèÿ. Â íà÷àëå ñâîåãî ñóùåñòâîâàíèÿ ÿíû÷àðñêèé êîðïóñ çàíèìàëñÿ òîëüêî ëè÷íîé îõðàíîé ñóëòàíà, íî ñî âðåìåíåì ðàçðîññÿ, ñîñòàâèâ áîëüøóþ ÷àñòü îñìàíñêîé àðìèè. Áûë ïåðèîä, êîãäà ÷èñëåííîñòü ÿíû÷àð äîñòèãàëà 200 òûñÿ÷ ÷åëîâåê. [PARAGRAPH:2]ßíû÷àð îáó÷àëè ñòðåëüáå èç ëóêà, à ïîñëå èçîáðåòåíèÿ îãíåñòðåëüíîãî îðóæèÿ - ñòðåëüáå èç ìóøêåòîâ. Â áëèæíåì áîþ ÿíû÷àðû ïîëüçîâàëèñü ñåêèðàìè èëè ÿòàãàíàìè. Îíè ó÷àñòâîâàëè âî âñåõ êðóïíûõ ñðàæåíèÿõ ðàííèõ ïåðèîäîâ èñòîðèè Îñìàíñêîé èìïåðèè, â òîì ÷èñëå â îñàäå Êîíñòàíòèíîïîëÿ â 1453 ã. [PARAGRAPH:2]ßíû÷àð ïîãóáèëà èõ àìáèöèîçíîñòü. Îñîçíàâàÿ ñîáñòâåííóþ çíà÷èìîñòü, îíè ïîñòîÿííî òðåáîâàëè ïðèáàâêè ê æàëîâàíüþ, à â ñëó÷àå îòêàçà óãðîæàëè áóíòîì. Ïåðâûå âîññòàíèÿ ÿíû÷àð ïðîøëè â 1449 ã., çà íèìè âñêîðå ïîñëåäîâàëè íîâûå. Ê XVIII â. ÿíû÷àðû îêàçûâàëè ñóùåñòâåííîå âëèÿíèå íà ïðàâèòåëüñòâî. Â õîäå ÷àñòûõ äâîðöîâûõ ïåðåâîðîòîâ îíè âîçâîäèëè íà òðîí è ñâåðãàëè ñóëòàíîâ, à òàêæå ïðåïÿòñòâîâàëè æèçíåííî íåîáõîäèìûì ðåôîðìàì îñìàíñêîé àðìèè. Ñðåäè ÿíû÷àð ïðîöâåòàëà êîððóïöèÿ, ìíîãèå ïðåäïî÷èòàëè çàíèìàòüñÿ íå áîåâûìè èñêóññòâàìè, à òîðãîâëåé èëè ïîëèòèêîé, è ñëàáîñòü Îñìàíñêîé èìïåðèè íà ôîíå ýêñïàíñèè Ðîññèè è Àâñòðèè âñêîðå ñòàëà î÷åâèäíîé. Ñòðåìÿñü ñîõðàíèòü ñâîè âëàäåíèÿ, îñìàíñêèå ïðàâèòåëè ïûòàëèñü èçáàâèòüñÿ îò ñàìèõ ÿíû÷àð è èõ âëèÿíèÿ. [PARAGRAPH:2]Íàêîíåö â 1826 ã. Ìàõìóä II ñóìåë ñîáðàòü àðìèþ áåç ÿíû÷àð - äîñòàòî÷íî ñèëüíóþ, ÷òîáû ïðîòèâîñòîÿòü èì. ßíû÷àðû íå ïîæåëàëè ñäàâàòüñÿ áåç áîÿ, è Ìàõìóä îòäàë àðòèëëåðèè ïðèêàç ðàññòðåëÿòü ÿíû÷àðñêèå êàçàðìû, ÷òîáû ïîäàâèòü ñîïðîòèâëåíèå. Ýòî ñîáûòèå, èçâåñòíîå ïîä íàçâàíèåì "áëàãîïðèÿòíîé âîçìîæíîñòè", ïîëîæèëî êîíåö ãîñïîäñòâó ÿíû÷àð. Ñåé÷àñ î íèõ íàïîìèíàþò òîëüêî çâóêè ìàðøåé, ïîä êîòîðûå ÿíû÷àðû ïåðâûìè ñòàëè õîäèòü â àòàêó. [PARAGRAPH:2]</Russian>
@@ -18275,11 +18268,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Grande Profeta:Grandi Profeti</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Gran profeta</Italian>
 		<Spanish>
 			<Text>Gran profeta:Grandes profetas</Text>
 			<Gender>Male</Gender>
@@ -18816,7 +18805,7 @@
 		<French>Mécano-Réplicateur</French>
 		<Polish>Mechanik Replikacji</Polish>
 		<Russian>Ìåõàíèê-ðåïëèêàòîð</Russian>
-		<Italian>Meccanicao replicatore</Italian>
+		<Italian>Meccanico replicatore</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_REPLICATION_MECHANIC_PEDIA</Tag>
@@ -19469,11 +19458,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Grande Scienziato:Grandi Scienziati</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Gran scienziato</Italian>
 		<Spanish>
 			<Text>Gran científico:Grandes científicos</Text>
 			<Gender>Male</Gender>

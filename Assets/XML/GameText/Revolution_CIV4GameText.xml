@@ -5,7 +5,7 @@
 		<English>Air force Options:</English>
 		<French>Options de l'armée de l'air:</French>
 		<German>Luftwaffen-Optionen:</German>
-		<Italian>Opzioni dell'aeronautica militare:</Italian>
+		<Italian>Opzioni aeronautica:</Italian>
 		<Spanish>Opciones de fuerza aérea:</Spanish>
 		<Polish>Opcje Lotnictwa:</Polish>
 		<Russian>Îïöèè âîçä. áîÿ:</Russian>
@@ -15,7 +15,7 @@
 		<English>BarbCiv Options:</English>
 		<French>Options BarbCiv:</French>
 		<German>BarbCiv-Optionen:</German>
-		<Italian>Opzioni delle civiltà barbare:</Italian>
+		<Italian>Opzioni civiltà barbare:</Italian>
 		<Spanish>Opciones de BarbCiv:</Spanish>
 		<Polish>Opcje BarbCiv:</Polish>
 		<Russian>Îïöèè âàðâàðñêèõ öèâ.:</Russian>
@@ -25,7 +25,7 @@
 		<English>BarbCiv Strength Settings:</English>
 		<French>Réglages force BarbCiv:</French>
 		<German>BarbCiv-Stärke-Einstellungen:</German>
-		<Italian>Impostazioni forza delle civiltà barbare:</Italian>
+		<Italian>Forza civiltà barbare:</Italian>
 		<Spanish>Configuración de fuerza de BarbCiv:</Spanish>
 		<Polish>Ustawienia Siły BarbCiv:</Polish>
 		<Russian>Ïàðàìåòðû ìîùè âàðâàðîâ</Russian>
@@ -45,7 +45,7 @@
 		<English>Influence Options:</English>
 		<French>Options Influence:</French>
 		<German>Einfluss-Optionen:</German>
-		<Italian>Opzioni d'influenza:</Italian>
+		<Italian>Opzioni influenza culturale:</Italian>
 		<Spanish>Opciones de influencia:</Spanish>
 		<Polish>Opcje Wpływu:</Polish>
 		<Russian>Îïöèè êóëüò. âëèÿíèÿ:</Russian>
@@ -65,7 +65,7 @@
 		<English>New World Options:</English>
 		<French>Options Nouveau Monde:</French>
 		<German>Neue-Welt-Optionen:</German>
-		<Italian>Opzioni nuovo mondo:</Italian>
+		<Italian>Opzioni mod New World:</Italian>
 		<Spanish>Opciones de Nuevo Mundo:</Spanish>
 		<Polish>Opcje Nowego świata:</Polish>
 		<Russian>Опции New World:</Russian>
@@ -85,7 +85,7 @@
 		<English>Reset Defaults:</English>
 		<French>Réinitialiser par défaut:</French>
 		<German>Standard wiederherstellen:</German>
-		<Italian>Ripristina impostazioni predefinite:</Italian>
+		<Italian>Ripristina opzioni predefinite:</Italian>
 		<Spanish>Restablecer valores predeterminados:</Spanish>
 		<Polish>Resetuj do Domyślnych:</Polish>
 		<Russian>Ñáðîñ íàñòðîåê ïî óìîë÷àíèþ:</Russian>
@@ -304,7 +304,7 @@
 		<English>There is no need to bribe %s, the local situation is favorable for now.</English>
 		<French>Il n'y a aucun besoin de corrompre %s, la situation locale vous est favorable pour l'instant.</French>
 		<German>Es ist nicht notwendig %s zu bestechen, die örtlichen Verhältnisse sind derzeit günstig.</German>
-		<Italian>Non serve corrompere %s, la situazione locale è favorevole, per ora.</Italian>
+		<Italian>[H2]La situazione della città è [COLOR_HIGHLIGHT_TEXT]favorevole[COLOR_REVERT] al momento quindi non serve cercare di [COLOR_HIGHLIGHT_TEXT]corrompere %s[COLOR_REVERT][\H2]</Italian> <!-- city screen, press on the revolt bar -->
 		<Spanish>No es necesario sobornar %s, la situación local es favorable por ahora.</Spanish>
 		<Polish>Nie ma potrzeby przekupywania miasta %s, gdyż sytuacja w nim jest dobra.</Polish>
 		<Russian>Íåò íåîáõîäèìîñòè çàäàáðèâàòü æèòåëåé %s, ò.ê. ñèòóàöèÿ â ãîðîäå ÿâëÿåòñÿ ñòàáèëüíîé.</Russian>
@@ -1682,7 +1682,7 @@
 		<English>[NEWLINE][SPACE]BarbarianCiv will stop at %d1 Civs</English>
 		<French>[NEWLINE][SPACE]BarbarianCiv se limitera à %d1 Civs</French>
 		<German>[NEWLINE][SPACE]BarbarianCiv wird beendet bei %d1 Zivilisationen</German>
-		<Italian>[NEWLINE][SPACE]La mod "Civiltà barbare" terminerà con %d1 civiltà</Italian>
+		<Italian>[NEWLINE]La mod [COLOR_HIGHLIGHT_TEXT]civiltà barbare[COLOR_REVERT] si [COLOR_HIGHLIGHT_TEXT]disattiverà con %d1 civiltà[COLOR_REVERT]</Italian>
 		<Spanish>[NEWLINE][SPACE]BarbarianCiv se detendrá al llegar a %d1 civilizaciones</Spanish>
 		<Polish>[NEWLINE][SPACE]Mod BarbarianCiv zatrzyma się przy %d1 Cywilizacjach</Polish>
 		<Russian>[NEWLINE][SPACE]BarbarianCiv áóäåò îñòàíîâëåí íà %d1 öèâèëèçàöèÿõ</Russian>
@@ -1692,7 +1692,7 @@
 		<English>[NEWLINE]Default num players: %d1</English>
 		<French>[NEWLINE]Nombre de Joueurs par défaut: %d1</French>
 		<German>[NEWLINE]Voreingestellte Anzahl der Spieler: %d1</German>
-		<Italian>[NEWLINE]Numero predefinito di giocatori: %d1</Italian>
+		<Italian>[NEWLINE]Numero predefinito di giocatori: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT][\H2]</Italian>
 		<Spanish>[NEWLINE]Numero de jugadores por defecto: %d1</Spanish>
 		<Polish>[NEWLINE]Domyślna ilość graczy: %d1</Polish>
 		<Russian>[NEWLINE]Êîëè÷åñòâî èãðîêîâ ïî óìîë÷àíèþ: %d1</Russian>
@@ -1702,7 +1702,7 @@
 		<English>[NEWLINE]CTRL-SHIFT-X = AI Autoplay</English>
 		<French>[NEWLINE]CTRL-SHIFT-X = Jeu automatique par l'IA pour x Tours</French>
 		<German>[NEWLINE]STRG-UMSCHALT-X = KI Autoplay</German>
-		<Italian>[NEWLINE]CTRL-SHIFT-X = Gioco automatico IA</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]CTRL-SHIFT-X[COLOR_REVERT] = Gioco automatico IA</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 		<Spanish>[NEWLINE]CTRL-SHIFT-X = Juego automático de la IA</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1711,7 +1711,7 @@
 		<French>[NEWLINE]ALT-B = Log des Stats de combat!</French>
 		<Spanish>[NEWLINE]ALT-B = Registrar estadísticas de batalla</Spanish>
 		<Polish>[NEWLINE]ALT-B = loguj statystyki bitwy!</Polish>
-		<Italian>[NEWLINE]ALT-B = Registro statistiche di battaglia</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ALT-B[COLOR_REVERT] = Registra statistiche di battaglia</Italian>  <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_ALT_CTRL_N_ARROW_SHORTCUT</Tag>
@@ -1719,7 +1719,7 @@
 		<French>[NEWLINE]ALT-CTRL-N ARROW = Test Nom Unités!</French>
 		<Spanish>[NEWLINE]ALT-CTRL-FLECHA ARR = Probar nombrado de unidad</Spanish>
 		<Polish>[NEWLINE]ALT-CTRL-N ARROW = Testuj Nazewnictwo jednostek!</Polish>
-		<Italian>[NEWLINE]ALT-CTRL-N ARROW = Test di denominazione delle unità</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ALT-CTRL-N ARROW[COLOR_REVERT] = Test di denominazione delle unità</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_ALT_E_SHORTCUT</Tag>
@@ -1727,7 +1727,7 @@
 		<French>[NEWLINE]ALT-E = Créer une Entrée log!</French>
 		<Spanish>[NEWLINE]ALT-E = Crear entrada del registro</Spanish>
 		<Polish>[NEWLINE]ALT-E = Stwórz wpis do logu!</Polish>
-		<Italian>[NEWLINE]ALT-E = Crea voce del registro</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ALT-E[COLOR_REVERT] = Crea voce sul registro automatico</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_ALT_F_SHORTCUT</Tag>
@@ -1735,7 +1735,7 @@
 		<French>[NEWLINE]ALT-F = Vue Satellite!</French>
 		<Spanish>[NEWLINE]ALT-F = Vista global</Spanish>
 		<Polish>[NEWLINE]ALT-F = Widok satelitarny!</Polish>
-		<Italian>[NEWLINE]ALT-F = Visione satellitare</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ALT-F[COLOR_REVERT] = Visione satellitare</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_ALT_I_SHORTCUT</Tag>
@@ -1743,7 +1743,7 @@
 		<French>[NEWLINE]ALT-I = Masquer Interface!</French>
 		<Spanish>[NEWLINE]ALT-I = Ocultar interfaz</Spanish>
 		<Polish>[NEWLINE]ALT-I = Brak Interfejsu!</Polish>
-		<Italian>[NEWLINE]ALT-I = Nessuna interfaccia utente</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ALT-I[COLOR_REVERT] = Nessuna interfaccia utente</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_ALT_L_SHORTCUT</Tag>
@@ -1751,7 +1751,7 @@
 		<French>[NEWLINE]ALT-L = Démarrer/Arrêter les logs! (si Autolog activé.)</French>
 		<Spanish>[NEWLINE]ALT-L = Activar/desactivar registro (con Autolog activo)</Spanish>
 		<Polish>[NEWLINE]ALT-L = Strat/Stop logowanie (Autologowanie musi być włączone.)</Polish>
-		<Italian>[NEWLINE]ALT-L = Avvia o arresta il log automatico! (autolog deve essere attivo)</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ALT-L[COLOR_REVERT] = Avvia o arresta il registro automatico</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_ALT_M_SHORTCUT</Tag>
@@ -1759,7 +1759,7 @@
 		<French>[NEWLINE]ALT-M, ALT-CTRL-R = Créer un Rappel!</French>
 		<Spanish>[NEWLINE]ALT-M, ALT-CTRL-R = Crear notificación</Spanish>
 		<Polish>[NEWLINE]ALT-M, ALT-CTRL-R = Stwórz przypomnienie!</Polish>
-		<Italian>[NEWLINE]ALT-M, ALT-CTRL-R = Crea promemoria</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ALT-M[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]ALT-CTRL-R[COLOR_REVERT] = Crea promemoria</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_ALT_O_SHORTCUT</Tag>
@@ -1767,7 +1767,7 @@
 		<French>[NEWLINE]ALT-O = Changer la perspective!</French>
 		<Spanish>[NEWLINE]ALT-O = Cambiar perspectiva</Spanish>
 		<Polish>[NEWLINE]ALT-O = Zmień perspektywę!</Polish>
-		<Italian>[NEWLINE]ALT-O = Cambia prospettiva della mappa</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ALT-O[COLOR_REVERT] = Cambia prospettiva della mappa</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_ALT_S_SHORTCUT</Tag>
@@ -1775,7 +1775,7 @@
 		<French>[NEWLINE]ALT-S = Ajouter Panneau!</French>
 		<Spanish>[NEWLINE]ALT-S = Añadir marcador</Spanish>
 		<Polish>[NEWLINE]ALT-S = Dodaj znak!</Polish>
-		<Italian>[NEWLINE]ALT-S = Aggiungi segnale sulla mappa</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ALT-S[COLOR_REVERT] = Aggiungi segnale sulla mappa</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_ALT_X_SHORTCUT</Tag>
@@ -1783,14 +1783,14 @@
 		<French>[NEWLINE]ALT-X = Editer 'dotmap'!</French>
 		<Spanish>[NEWLINE]ALT-X = Editar mapa de puntos</Spanish>
 		<Polish>[NEWLINE]ALT-X = Edytuj kropki mapy!</Polish>
-		<Italian>[NEWLINE]ALT-X = Modifica dotmap</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ALT-X[COLOR_REVERT] = Modifica dotmap</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_BUG_OPTIONS_SHORTCUT</Tag>
 		<English>[NEWLINE]CTRL-ALT-O = Game Options</English>
 		<French>[NEWLINE]CTRL-ALT-O = Options du Jeu</French>
 		<German>[NEWLINE]CTRL-ALT-O = Spieloptionen</German>
-		<Italian>[NEWLINE]CTRL-ALT-O = Opzioni di gioco</Italian>
+		<Italian>[NEWLINE][H2][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]CTRL-ALT-O[COLOR_REVERT] = Opzioni di gioco</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 		<Spanish>[NEWLINE]CTRL-ALT-O = Opciones de juego</Spanish>
 		<Polish>[NEWLINE]CTRL-ALT-O = Opcje Gry</Polish>
 	</TEXT>
@@ -1800,7 +1800,7 @@
 		<French>[NEWLINE]CTRL-A = Abandonner Ville ou Démolir des Bâtiments!</French>
 		<Spanish>[NEWLINE]CTRL-A = Abandonar ciudad o demoler edificios</Spanish>
 		<Polish>[NEWLINE]CTRL-A = Opuść miasto lub zniszcz budynek!</Polish>
-		<Italian>[NEWLINE]CTRL-A = Abbandona città o demolisci edifici</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]CTRL-A[COLOR_REVERT] = Abbandona città o demolisci edifici</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_CTRL_I_SHORTCUT</Tag>
@@ -1808,7 +1808,7 @@
 		<French>[NEWLINE]CTRL-I = Minimiser l'Interface!</French>
 		<Spanish>[NEWLINE]CTRL-I = Minimizar interfaz</Spanish>
 		<Polish>[NEWLINE]CTRL-I = Minimalizuj interfejs!</Polish>
-		<Italian>[NEWLINE]CTRL-I = Minimizza l'interfaccia utente</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]CTRL-I[COLOR_REVERT] = Minimizza l'interfaccia utente</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_CTRL_L_ARROW_SHORTCUT</Tag>
@@ -1816,7 +1816,7 @@
 		<French>[NEWLINE]CTRL-FLECHE G = Angle 45 D!</French>
 		<Spanish>[NEWLINE]CTRL-FLECHA IZQ = Ángulo 45º a la derecha</Spanish>
 		<Polish>[NEWLINE]CTRL-Strzałka w lewo = obróć o 45 stopni w lewo!</Polish>
-		<Italian>[NEWLINE]CTRL-L ARROW = Ruota mappa di 45° in senso orario</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]CTRL-L ARROW[COLOR_REVERT] = Ruota mappa di 45° in senso orario</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_CTRL_R_ARROW_SHORTCUT</Tag>
@@ -1824,7 +1824,7 @@
 		<French>[NEWLINE]CTRL-FLECHE D = Angle 45 G!</French>
 		<Spanish>[NEWLINE]CTRL-FLECHA DER = Ángulo 45º a la izquierda</Spanish>
 		<Polish>[NEWLINE]CTRL-Strzałka w prawo = obróć o 45 stopni w prawo!</Polish>
-		<Italian>[NEWLINE]CTRL-R ARROW = Ruota mappa di 45° in senso antiorario</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]CTRL-R ARROW[COLOR_REVERT] = Ruota mappa di 45° in senso antiorario</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_CTRL_SHIFT_L_SHORTCUT</Tag>
@@ -1832,7 +1832,7 @@
 		<French>[NEWLINE]CTRL-SHIFT-L = Nouveau leader!</French>
 		<Spanish>[NEWLINE]CTRL-SHIFT-L = Nuevo líder</Spanish>
 		<Polish>[NEWLINE]CTRL-SHIFT-L = Nowy Przywódca!</Polish>
-		<Italian>[NEWLINE]CTRL-SHIFT-L = Nuovo leader</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]CTRL-SHIFT-L[COLOR_REVERT] = Nuovo leader</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_CTRL_SHIFT_M_SHORTCUT</Tag>
@@ -1840,7 +1840,7 @@
 		<French>[NEWLINE]CTRL-SHIFT-M = Ce Tour joué par l'IA!</French>
 		<Spanish>[NEWLINE]CTRL-SHIFT-M = Turno jugado por la IA</Spanish>
 		<Polish>[NEWLINE]CTRL-SHIFT-M = Tura rozgrywana przez AI!</Polish>
-		<Italian>[NEWLINE]CTRL-SHIFT-M = Turno giocato dall'IA</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]CTRL-SHIFT-M[COLOR_REVERT] = Fai giocare il turno all'IA</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_CTRL_SHIFT_P_SHORTCUT</Tag>
@@ -1848,7 +1848,7 @@
 		<French>[NEWLINE]CTRL-SHIFT-P = Nouvelle Civ!</French>
 		<Spanish>[NEWLINE]CTRL-SHIFT-P = Nueva civilización</Spanish>
 		<Polish>[NEWLINE]CTRL-SHIFT-P = Nowa Cywilizacja!</Polish>
-		<Italian>[NEWLINE]CTRL-SHIFT-P = Nuova civiltà!</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]CTRL-SHIFT-P[COLOR_REVERT] = Nuova civiltà</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_CTRL_X_SHORTCUT</Tag>
@@ -1856,7 +1856,7 @@
 		<French>[NEWLINE]CTRL-X = Aff./Masquer 'dotmap'!</French>
 		<Spanish>[NEWLINE]CTRL-X = Mostrar/ocultar mapa de puntos</Spanish>
 		<Polish>[NEWLINE]CTRL-X = Pokaż/Ukryj kropki mapy!</Polish>
-		<Italian>[NEWLINE]CTRL-X = Mostra o nascondi dotmap</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]CTRL-X [COLOR_REVERT]= Mostra o nascondi dotmap</Italian>  <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_EMERGENCY_DRAFT</Tag>
@@ -1872,7 +1872,7 @@
 		<English>[NEWLINE]In Game Shortcuts:</English>
 		<French>[NEWLINE]Raccourcis Clavier dans le Jeu:</French>
 		<German>[NEWLINE]Tastaturkürzel im Spiel:</German>
-		<Italian>[NEWLINE]Scorciatoie di gioco:</Italian>
+		<Italian>[NEWLINE]Scorciatoie di gioco:[NEWLINE]</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 		<Spanish>[NEWLINE]Atajos de teclado:</Spanish>
 		<Polish>[NEWLINE]Skróty w Grze:</Polish>
 	</TEXT>
@@ -1881,7 +1881,7 @@
 		<English>Ctrl+Shift+Q = This popup</English>
 		<French>Ctrl+Shift+Q = Cette Fenêtre</French>
 		<German>Strg-Umschalt+Q = Dieses Fenster</German>
-		<Italian>Ctrl+Shift+Q = Apri questo popup</Italian>
+		<Italian>[NEWLINE]Per aprire questo popup: Ctrl+Shift+Q[NEWLINE]</Italian>  <!-- Bug mod recap screen Ctrl+Shift+Q -->
 		<Spanish>Ctrl+Shift+Q = Este cuadro</Spanish>
 		<Polish>Ctrl+Shift+Q = To Okienko</Polish>
 	</TEXT>
@@ -1890,7 +1890,7 @@
 		<English>[NEWLINE]Inquisitions Enabled</English>
 		<French>[NEWLINE]Inquisition activée</French>
 		<German>[NEWLINE]Inquisitionen Aktiviert</German>
-		<Italian>[NEWLINE]Opzione "inquisizioni" attivata</Italian>
+		<Italian>[NEWLINE]Opzione inquisizione attivata</Italian>
 		<Spanish>[NEWLINE]Inquisición activada</Spanish>
 		<Polish>[NEWLINE]Włączona Inkwizycja</Polish>
 	</TEXT>
@@ -1909,7 +1909,7 @@
 		<French>[NEWLINE]SHIFT-F5 = Sauvegarde Rapide!</French>
 		<Spanish>[NEWLINE]SHIFT-F5 = Guardado rápido</Spanish>
 		<Polish>[NEWLINE]SHIFT-F5 = Szybki Zapis!</Polish>
-		<Italian>[NEWLINE]SHIFT-F5 = Salvataggio rapido</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]SHIFT-F5[COLOR_REVERT] = Salvataggio rapido</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_SHIFT_F8_SHORTCUT</Tag>
@@ -1917,14 +1917,14 @@
 		<French>[NEWLINE]SHIFT-F8 = Chargement Rapide!</French>
 		<Spanish>[NEWLINE]SHIFT-F8 = Carga rápida</Spanish>
 		<Polish>[NEWLINE]SHIFT-F8 = Szybkie Wczytywanie!</Polish>
-		<Italian>[NEWLINE]SHIFT-F8 = Caricamento rapido!</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]SHIFT-F8[COLOR_REVERT] = Caricamento rapido</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_MAX_CIVS_IN_DLL</Tag>
 		<English>[NEWLINE][NEWLINE]Max civs in DLL: %d1</English>
 		<French>[NEWLINE][NEWLINE]Max Nb de civs pour la DLL: %d1</French>
 		<German>[NEWLINE][NEWLINE]Maximale Anzahl Zivilisationen in DLL: %d1</German>
-		<Italian>[NEWLINE][NEWLINE]Numero massimo civiltà (DLL): %d1</Italian>
+		<Italian>[NEWLINE][NEWLINE][COLOR_HIGHLIGHT_TEXT]Numero massimo[COLOR_REVERT] civiltà (dal file DLL): %d1</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 		<Spanish>[NEWLINE][NEWLINE]Máximo de civilizaciones de la DLL: %d1</Spanish>
 		<Polish>[NEWLINE][NEWLINE]Maks ilość cywilizacji w DLL: %d1</Polish>
 		<Russian>[NEWLINE][NEWLINE]Ìàêñèìàëüíîå êîëè÷åñòâî öèâèëèçàöèé â DLL: %d1</Russian>
@@ -1934,7 +1934,7 @@
 		<English>[NEWLINE][SPACE]Revolution will stop at %d1 Civs</English>
 		<French>[NEWLINE][SPACE]Revolution se limitera à %d1 Civs</French>
 		<German>[NEWLINE][SPACE]Revolution wird beendet bei %d1 Zivilisationen</German>
-		<Italian>[NEWLINE][SPACE]L'opzione "rivoluzioni" si interromperà con %d1 civiltà</Italian>
+		<Italian>[NEWLINE]L'opzione [COLOR_HIGHLIGHT_TEXT]rivoluzioni[COLOR_REVERT] si [COLOR_HIGHLIGHT_TEXT]interromperà con %d1 civiltà[COLOR_REVERT]</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 		<Spanish>[NEWLINE][SPACE]Revolution se detendrá al llegar a %d1 civilizaciones</Spanish>
 		<Polish>[NEWLINE][SPACE]Rewolucje zatrzymają się przy %d1 Cywilizacjach</Polish>
 		<Russian>[NEWLINE][SPACE]Revolution ìîä áóäåò îñòàíîâëåí íà %d1 öèâèëèçàöèÿõ.</Russian>
@@ -1944,7 +1944,7 @@
 		<English>[NEWLINE]Turns in game: %d1</English>
 		<French>[NEWLINE]Tours de Jeu: %d1</French>
 		<German>[NEWLINE]Runden im Spiel: %d1</German>
-		<Italian>[NEWLINE]Turni della partita: %d1</Italian>
+		<Italian>[NEWLINE]Turni della partita: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT]</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 		<Spanish>[NEWLINE]Turnos de la partida: %d1</Spanish>
 		<Polish>[NEWLINE]Tur w grze: %d1</Polish>
 		<Russian>[NEWLINE]Õîäîâ â èãðå: %d1</Russian>
@@ -2193,7 +2193,7 @@
 		<English>Revolt Status</English>
 		<French>Statut de révolte</French>
 		<German>Aufruhr-Status</German>
-		<Italian>Stato della rivolta</Italian>
+		<Italian>Stabilità città</Italian> <!-- city screen revolt bar -->
 		<Spanish>Estabilidad</Spanish>
 		<Polish>Status rewolucji</Polish>
 		<Russian>Íàïðÿæåííîñòü</Russian>
@@ -2705,7 +2705,7 @@
 		<English>Safe</English>
 		<French>Sûr</French>
 		<German>Sicher</German>
-		<Italian>Sicuro</Italian>
+		<Italian>Sicura</Italian> <!-- city screen revolt bar -->
 		<Spanish>Segura</Spanish>
 		<Polish>Bezpieczne</Polish>
 		<Russian>Ñïîêîéíî</Russian>

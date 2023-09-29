@@ -11,7 +11,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CULTURE_1_CITY_TILE_FOUNDING_HELP</Tag>
 		<English>All city founding starts with the main city tile only. A small amount of generated culture is required to acquire the adjacent tiles, after which culture progresses normally. Scaled for Game Speeds.[NEWLINE]This option will partially override "Minimum City Borders"; if MCB is also enabled, founded cities will not immediately have all adjacent 8 tiles, but nor will they be lost when acquired.</English>
-		<Italian>Tutte le nuove città iniziano solo con la casella della città principale. È necessario generare una piccola quantità di cultura per acquisire le caselle adiacenti, dopodiché la cultura progredisce normalmente. Scalato rispetto alla velocità di gioco.[NEWLINE]Questa opzione sostituirà parzialmente "Confini minimi della città"; se anche MCB è abilitato, le città fondate non avranno immediatamente tutte le 8 caselle adiacenti, ma non andranno perse una volta acquisite.</Italian>
+		<Italian>Tutte le nuove città iniziano solo con la casella della città principale, è necessario generare una piccola quantità di cultura per acquisire le caselle adiacenti, dopodiché la cultura progredisce normalmente (scalato rispetto alla velocità di gioco)[NEWLINE][NEWLINE]Sostituirà parzialmente l'opzione confini minimi della città se anche è abilitata (le città fondate non avranno immediatamente tutte le 8 caselle adiacenti, ma non andranno perse una volta acquisite)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_DIPLOMACY</Tag>
@@ -28,7 +28,7 @@
 		<English>Advanced Diplomacy adds new diplomatic trading options, from embassies to trading military and worker units.</English>
 		<French>Ajoute de nouvelles options diplomatiques, de l'ambassade aux échange d'unités militaires et civiles.</French>
 		<German>Verbesserte Diplomatie bietet zusätzliche Diplomatie-Optionen, von Botschaften bis zum Handel mit Militäreinheiten und Bautrupps.</German>
-		<Italian>Diplomazia avanzata offre nuove opportunità di commercio, dalle ambasciate al commercio di lavoratori e unità militari.</Italian>
+		<Italian>Diplomazia avanzata offre nuove opportunità di commercio, dalle ambasciate al commercio di lavoratori e unità militari</Italian>
 		<Spanish>Diplomacia avanzada añade nuevas opciones diplomáticas, desde embajadas hasta comercio de unidades militares y trabajadores.</Spanish>
 		<Polish>Zaawansowana dyplomacja dodaje nowe opcje handlowe. Dodaje ambasady by handlować jednostkami i robotnikami.</Polish>
 		<Russian>Óëó÷øåííàÿ äèïëîìàòèÿ äîáàâëÿåò íîâûå äèïëîìàòè÷åñêèå âîçìîæíîñòè, îò ïîñîëüñòâ äî òîðãîâëè âîåííûìè è ðàáî÷èìè þíèòàìè.</Russian>
@@ -48,7 +48,7 @@
 		<English>Allows for powerful espionage attacks, including nuclear sabotage, aiding rebel factions, and causing empire-wide anarchy. Also, espionage effects, like poisoning water, will correctly scale for gamespeeds.</English>
 		<French>Permet des actes offensifs importants pour les espions, comme le sabotage nucléaire, le soutien aux factions rebelles, pouvant mener à un désordre au niveau de l'Empire. Les effets de l'espionnage sont également revus pour s'adapter à la vitesse du Jeu.</French>
 		<German>Erlaubt mächtige Spionageattacken wie die nukleare Sabotage, die Unterstützung von Rebellengruppierungen und die Auslösung von Unruhen. Außerdem werden Spionageeffekte wie das Vergiften des Trinkwassers korrekt an die Spielgeschwindigkeit angepasst.</German>
-		<Italian>Permette potenti attacchi con lo spionaggio, inclusi sabotaggio nucleare, aiuti a fazioni ribelli e anarchia diffusa in tutto l'impero. Inoltre, gli effetti dello spionaggio, come l'avvelenamento dell'acqua, sono correlati alla velocità di gioco.</Italian>
+		<Italian>Permette potenti attacchi con lo spionaggio, inclusi sabotaggio nucleare, aiuti a fazioni ribelli e anarchia diffusa in tutto l'impero [NEWLINE][NEWLINE]Gli effetti dello spionaggio, come l'avvelenamento dell'acqua, sono correlati alla velocità di gioco</Italian>
 		<Spanish>Permite poderosos actos ofensivos para los espías, como sabotaje nuclear, ayuda a organizaciones rebeldes, incluso provocar la anarquía de todo el imperio. Además, los efectos de otras misiones de espionaje, como envenenar el agua, estarán correctamente escalados según la velocidad de la partida.</Spanish>
 		<Polish>Pozwala na mocniejsze ataki szpiegów, nawet na sabotaż nuklearny, pomoc rebelii, oraz doprowadzenia do anarchii. Efekty czasowe takie jak zatrucie źródeł jest dostosowane do prędkości gry.</Polish>
 		<Russian>Óñèëèâàåò øïèîíñêèå íàïàäåíèÿ, âêëþ÷àÿ ÿäåðíûé ñàáîòàæ, ïîìîãàÿ ôðàêöèÿì ïîâñòàíöåâ, è âûçûâàÿ àíàðõèþ âî âñåé èìïåðèè. Êðîìå òîãî ñêîðîñòü, øïèîíñêèõ ýôôåêòîâ, òàêèõ êàê îòðàâëåíèå âîäû, èçìåðÿåòñÿ ïðàâèëüíî.</Russian>
@@ -68,7 +68,7 @@
 		<English>Enables more advanced variations of Nuclear Weapons for your arsenal.</English>
 		<French>Permet des variantes plus avancées d'armes nucléaires pour votre arsenal.</French>
 		<German>Stellt verbesserte Varianten von Nuklearwaffen für Euer Arsenal zur Verfügung.</German>
-		<Italian>Consente varianti più avanzate di armi nucleari per il tuo arsenale.</Italian>
+		<Italian>Consente varianti più avanzate di armi nucleari per il tuo arsenale</Italian>
 		<Spanish>Activa nuevas variantes más avanzadas de armas nucleares para tu arsenal.</Spanish>
 		<Polish>Udostępnia więcej typów broni nuklearnej do Twojego Arsenału.</Polish>
 		<Russian>Ïîçâîëÿåò èñïîëüçîâàòü áîëåå ïåðåäîâûå èçìåíåíèÿ ÿäåðíîãî îðóæèÿ äëÿ âàøåãî àðñåíàëà.</Russian>
@@ -82,7 +82,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_ROUTES_HELP</Tag>
 		<English>Requires more technology than the minimum normal route qualifying techs to construct routes on more difficult terrain/feature plots. Intended to give a more realistic feel to tougher terrains throughout the game.</English>
-		<Italian>Richiede più tecnologia rispetto alle normali tecnologie minime per i percorsi da costruire su terreni o caratteristiche più difficili. Pensato per dare una sensazione più realistica ai terreni più difficili in gioco.</Italian>
+		<Italian>Richiede più tecnologia rispetto alle normali tecnologie minime per i percorsi da costruire su terreni o caratteristiche più difficili (pensato per dare una sensazione più realistica ai terreni più difficili in gioco)</Italian>
 		<Russian>Требуется больше технологий, для создания обычных дорог, а также дополнительные науки, позволяющие прокладывать дороги на сложной пересеченной местности. Основной замысел состоит в том, чтобы дать более реалистичное ощущение передвижения на более сложном рельефе местности на протяжении всей игры.</Russian>
 	</TEXT>
 	<TEXT>
@@ -99,7 +99,7 @@
 		<English>Allows players to "purchase" their choice of starting cities, units, technologies, etc. when game begins.[NEWLINE]This is not balanced or polished in any way as no C2C modder has ever bothered focusing on it.</English>
 		<French>Permet aux joueurs "d'acheter" des villes, des unités, des technologies etc. en début de partie.</French>
 		<German>Ermöglicht den Spielern, bereits zu Spielbeginn Städte, Einheiten, Technologien etc. zu kaufen, die dann sofort zur Verfügung stehen.</German>
-		<Italian>Permette ai giocatori di "acquistare" città, unità, tecnologie, eccetera all'avvio del gioco.</Italian>
+		<Italian>Permette ai giocatori di acquistare città, unità, tecnologie, eccetera all'avvio del gioco</Italian>
 		<Spanish>Permite a los jugadores "comprar" su selección inicial de ciudades, unidades, tecnologías, etc. cuando empieza la partida.</Spanish>
 		<Russian>Ïåðåä íà÷àëîì èãðû êàæäûé ó÷àñòíèê "ïîêóïàåò" ñåáå ãîðîäà, þíèòû, òåõíîëîãèè è ò.ä.</Russian>
 	</TEXT>
@@ -117,7 +117,7 @@
 		<English>AI leaders favor war over diplomacy.[NEWLINE]This option is required for, and will thus be forced ON, if Ruthless AI is used!</English>
 		<French>Les héros gérés par l'IA préfèrent la guerre à la diplomatie.</French>
 		<German>KI-Staatsoberhäupter bevorzugen den Krieg gegenüber der Diplomatie.</German>
-		<Italian>I leader IA preferiscono la guerra alla diplomazia.</Italian>
+		<Italian>I leader IA preferiscono la guerra alla diplomazia</Italian>
 		<Spanish>Los líderes de la IA prefieren la guerra a la diplomacia.</Spanish>
 		<Russian>Êîìïüþòåðíûå ëèäåðû ïðåäïî÷èòàþò âîéíó äèïëîìàòèè.</Russian>
 	</TEXT>
@@ -135,7 +135,7 @@
 		<French>Rend impossible pour les unités avec Nationalité cachée d'attaquer les unités obéissantes aux règles du droit de passage, à l'intérieur de votre territoire</French>
 		<German>Lokale Einheiten mit versteckter Nationalität wie Kriminelle sind nicht mehr in der Lage, Einheiten anzugreifen, die sich mit Durchreiseerlaubnis auf eigenem Terrain bewegen.</German>
 		<Russian>Äåëàåò íåâîçìîæíûì äëÿ âàøèõ þíèòîâ ñî ñêðûòîé íàöèîíàëüíîñòüþ àòàêó þíèòîâ íà âàøåé òåððèòîðèè, åñëè îíè âîøëè ïî ïðàâó îáðÿäà ïåðåõîäà.</Russian>
-		<Italian>Rende impossibile per le tue unità con nazionalità nascosta attaccare sul tuo territorio altre unità che sono potute entrare in base alle regole per il diritto di passaggio.</Italian>
+		<Italian>Rende impossibile per le unità del giocatore con nazionalità nascosta attaccare sul suo territorio altre unità che sono potute entrare in base alle regole per il diritto di passaggio</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ANIMAL_STAY_OUT</Tag>
@@ -151,7 +151,7 @@
 		<French>Maintient la règle de jeu d'origine selon laquelle les animaux sauvages ne peuvent jamais entrer dans les frontières nationales d'une civilisation.[NEWLINE]Cette option sera désactivée si l'option 'Faune dangereuse' est sélectionnée.</French>
 		<German>Wilde Tiere können niemals die kulturellen Grenzen einer Nation überschreiten.</German>
 		<Russian>Ñîõðàíåíèå îðèãèíàëüíîãî ïðàâèëà èãðû, ïî êîòîðîìó äèêèå æèâîòíûå íå ìîãóò íàõîäèòüñÿ â ãðàíèöàõ öèâèëèçàöèè.</Russian>
-		<Italian>Mantiene la regola del gioco originale secondo cui gli animali selvatici non possono mai entrare nei confini nazionali di una civiltà.[NEWLINE]Questa opzione verrà disattivata se viene selezionata l'opzione "fauna selvatica pericolosa".</Italian>
+		<Italian>Mantiene la regola del gioco originale secondo cui gli animali selvatici non possono mai entrare nei confini nazionali di una civiltà[NEWLINE][NEWLINE]Questa opzione verrà disattivata se viene selezionata l'opzione fauna selvatica pericolosa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_BARBARIAN_ALWAYS_RAZE</Tag>
@@ -168,7 +168,7 @@
 		<English>Barbarians can not keep captured cities, and will always raze them.</English>
 		<French>Les Barbares ne gardent pas les ville capturées, mais les pillent et les rasent systématiquement.</French>
 		<German>Die Barbaren können eroberte Städte nicht behalten und werden sie deshalb immer dem Erdboden gleichmachen.</German>
-		<Italian>I barbari non possono gestire le città conquistate e le raderanno sempre al suolo.</Italian>
+		<Italian>I barbari non possono gestire le città conquistate e le raderanno sempre al suolo</Italian>
 		<Spanish>Los bárbaros no se podrán quedar con las ciudades capturadas, y siempre las destruirán.</Spanish>
 		<Polish>Barbarzyńcy nie mogą przejąć miasta więc za każdym razem je burzą.</Polish>
 		<Russian>Âàðâàðû íå ìîãóò çàõâàòûâàòü ãîðîäà è âñåãäà èõ ðàçðóøàþò.</Russian>
@@ -188,7 +188,7 @@
 		<English>When enabled: New civilizations may emerge from barbarian cities as minor civs. If you play with "Start as Minor Civ" then this option will change the rules for becoming a major civ. Achievements and randomness thereof decides when you become a major civ.</English>
 		<French>Lorsque activé : de nouvelles civilizations peuvent émerger des villes barbares, en tant que Civ mineures. Si vous jouez avec "Civs Mineures au départ", cette option changera les règles pour devenir une civilisation majeure. Les réalisations et leur caractère aléatoire décident quand vous devenez une civilisation majeure.</French>
 		<Russian>С подключением этой опции, варварские города со временем могут образовать новые малые цивилизации. Если вы играете с опцией «Начать за малую цивилизацию», то это изменит правила перехода в основную цивилизацию. Достижения и их случайность определяет, когда вы сделаетесь главной цивилизацией.</Russian>
-		<Italian>Se abilitata nuove civiltà possono emergere dalle città barbariche come civiltà minori. Se giochi con l'opzione "inizia come civiltà minore" attiva, questa opzione cambierà le regole per diventare una civiltà maggiore. I risultati raggiunti e il caso decideranno quando diventerai una civiltà principale.</Italian>
+		<Italian>Nuove civiltà possono emergere dalle città barbariche come civiltà minori (se giochi con l'opzione inizia come civiltà minore attiva, questa opzione cambierà i requisiti per diventare una civiltà maggiore, i risultati raggiunti e il caso decideranno quando diventerai una civiltà principale)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_BARBARIAN_WORLD</Tag>
@@ -205,7 +205,7 @@
 		<English>The barbarians start with a free city for every civilization in the game, and the max barb/neander city limit (relative to the number of regular civ cities) is much higher.</English>
 		<French>Les barbares commencent avec une ville libre pour chaque civilisation du jeu, et la limite maximale de ville barb / neander (par rapport au nombre de villes régulières) est beaucoup plus élevée.</French>
 		<German>Die Barbaren beginnen mit einer freien Stadt für jede Zivilisation im Spiel, und die maximale Grenze für Barb / Neander-Städte (im Verhältnis zur Anzahl der regulären Städte) ist viel höher.</German>
-		<Italian>I barbari iniziano con una città per ogni civiltà nel gioco e il limite massimo di città barbare o neanderthal (relativo al numero di città di civiltà regolari) è molto più alto.</Italian>
+		<Italian>I barbari iniziano con una città per ogni civiltà nel gioco e il limite massimo di città barbare o neanderthal (relativo al numero di città di civiltà regolari) è molto più alto</Italian>
 		<Spanish>Los bárbaros comienzan con una ciudad libre para cada civilización del juego, y el límite máximo de ciudades con púas / neander (en relación con el número de ciudades normales) es mucho mayor.</Spanish>
 		<Polish>Barbarzyńcy rozpoczynają od wolnego miasta dla każdej cywilizacji w grze, and the max barb/neander city limit (relative to the number of regular civ cities) is much higher.</Polish>
 		<Russian>Âàðâàðû ñòàðòóþò ñî ñâîáîäíûì ãîðîäîì äëÿ êàæäîé öèâèëèçàöèè â èãðå.</Russian>
@@ -226,7 +226,7 @@
 		<German>Einheiten erleiden nun Schwäche und Erschöpfung im Kampf, können aber auch von Wut und Entschlossenheit profitieren.</German>
 		<Polish>Jednostki męczą się i tracą wigor do walki.</Polish>
 		<Russian>Þíèòû ñòðàäàþò îò óñòàëîñòè è èñòîùåíèÿ è èçâëåêàþò ïîëüçó èç ãíåâà è ðåøèìîñòè.</Russian>
-		<Italian>Le unità soffrono di stanchezza e sfinimento e beneficiano di rabbia e determinazione.</Italian>
+		<Italian>Le unità soffrono di stanchezza e sfinimento e beneficiano di rabbia e determinazione</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_TECH_BEELINE_STINGS</Tag>
@@ -242,7 +242,7 @@
 		<German>Beim Erreichen einer neuen Ära werden alle noch nicht erforschten Techniken der vorherigen Ära teurer in der Erforschung.</German>
 		<French>Lorsque vous entrez dans une nouvelle ère, les technologies que vous n'avez pas encore étudiées des époques précédentes deviennent plus coûteuses à rechercher.</French>
 		<Russian>Когда вы вступаете в новую эру, технологии, которые вы еще не исследовали из предыдущих эпох, становятся более дорогостоящими для изучения.</Russian>
-		<Italian>Quando entri in una nuova era, le tecnologie che non hai ancora ricercato dalle ere precedenti diventano più costose da ricercare.</Italian>
+		<Italian>Quando si entra in una nuova era, le tecnologie che non sono state ancora ancora ricercato dalle ere precedenti diventano più costose da ricercare</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CHALLENGE_CUT_LOSERS</Tag>
@@ -259,7 +259,7 @@
 		<English>Every 50 turns (on Normal Speed) the player with the lowest score is removed from the game until only 5 players remain. Not meant for use with BarbarianCiv or Revolutions!</English>
 		<French>Tous les 50 tours (vitesse Normale) Le Joueur avec le plus petit score est retiré du jeu, jusqu'à ce qu'il ne reste que 5 Joueurs. Ne pas utiliser avec les Mods 'BarbarianCiv' ou 'Revolutions'!</French>
 		<German>Alle 50 Runden (bei normaler Spielgeschwindigkeit) wird der Spieler mit dem niedrigsten Punktestand entfernt bis nur noch 5 Spieler übrigbleiben. Sollte nicht in Kombination mit den Optionen "Barbarische Zivilisationen" oder "Revolutionen" verwendet werden!</German>
-		<Italian>Ogni 50 turni (a velocità normale) il giocatore con il punteggio più basso viene rimosso dal gioco finché rimangono solo 5 giocatori. Non pensato per l'uso con le opzioni "civiltà barbare" e "rivoluzioni!".</Italian>
+		<Italian>Ogni 50 turni (a velocità normale) il giocatore con il punteggio più basso viene rimosso dal gioco finché rimangono solo 5 giocatori (non pensato per l'uso con le opzioni civiltà barbare e rivoluzioni)</Italian>
 		<Spanish>Cada 50 turnos (a velocidad Normal) el jugador con la puntuación más baja será eliminado de la partida hasta que solo queden 5 jugadores. ¡No está pensado para su uso con las opciones BarbarianCiv y Revolution activadas!</Spanish>
 		<Polish>Na każde 50 tur (na normalnej prędkości) usuwany jest najsłabszy gracz do momentu pozostania 5 graczy w grze. Nie polecany do użycia razem z Cywilizacją barbarzyńców oraz Rewolucjami!</Polish>
 		<Russian>Êàæäûå 50 õîäîâ (íà íîðìàëüíîé ñêîðîñòè) èãðîê ñ íàèìåíüøèì êîëè÷åñòâîì î÷êîâ èñêëþ÷àåòñÿ èç èãðû äî òåõ ïîð, ïîêà â èãðå íå îñòàíåòñÿ 5 öèâèëèçàöèé. Íå ïðåäíàçíà÷åíî äëÿ èñïîëüçîâàíèÿ ñ âàðâàðñêèìè öèâèëèçàöèÿìè è ðåâîëþöèÿìè!</Russian>
@@ -279,7 +279,7 @@
 		<English>Become the player with the highest score, then you switch to controlling the civilization with the lowest score. Raise that civilization to have the highest score and you will be switched again to civilization with the lowest score. That third civilization will be the one you have to win the game with. Single player only.</English>
 		<French>Par deux fois, le fait d'être le Joueur avec le plus grand score vous fait changer de civilisation pour contrôler celle possédant le score le plus bas. La troisième civilisation sera celle avec laquelle il vous faudra gagner le jeu. Uniquement en mode Solo.</French>
 		<German>Ziel ist es, die Zivilisation mit dem höchsten Punktestand zu kontrollieren. Hat ein Spieler dies erreicht, wird ihm automatisch die Kontrolle über die Zivilisation mit den wenigsten Punkten übertragen, die er wieder an die Spitze der Punkteliste bringen muss. Ist dies vollbracht, wird ihm erneut die Zivilisation mit den niedrigsten Punkten übergeben. Diese dritte Zivilisation ist dann die, mit der das Spiel gewonnen werden muss. Nur im Einzelspielermodus möglich.</German>
-		<Italian>Diventa il giocatore con il punteggio più alto, quindi ottieni il controllo della civiltà con il punteggio più basso. Eleva quella civiltà al punteggio più alto e prenderai il controllo della civiltà con il punteggio più basso. La terza civiltà è quella con cui dovrai vincere la partita. Solo per giocatore singolo.</Italian>
+		<Italian>Il giocatore con il punteggio più alto ottiene il controllo della civiltà con il punteggio più basso[NEWLINE][NEWLINE]Dopo aver portato quella al punteggio più alto si prenderà di nuovo il controllo della civiltà con il punteggio più basso[NEWLINE][NEWLINE]La terza civiltà è quella con cui si dovrà vincere la partita (solo per giocatore singolo)</Italian>
 		<Spanish>Conviértete en el jugador con mayor puntuación, en ese momento pasarás a controlar la civilización con la puntuación más baja. Expande esa civilización hasta tener la puntuación más alta y pasarás a controlar nuevamente la civilización con la peor puntuación. Con esta tercera civilización tendrás que ganar la partida.</Spanish>
 		<Polish>Kiedy gracz ma najwyższy wynik, wtedy będziesz mógł się przełączyć na grę cywilizacją o niższym wyniku. Ulepsz tą cywilizację do najlepszego wyniku i będziesz mógł znów przełączyć się na słabszą. Tą trzecią cywilizacją będziesz musiał wygrać grę. Tylko dla trybu Jednego Gracza.</Polish>
 		<Russian>Ñòàâ èãðîêîì ñ íàèáîëüøèì êîëè÷åñòâîì î÷êîâ, âû ïåðåêëþ÷àåòåñü íà óïðàâëåíèå öèâèëèçàöèåé ñ ñàìûì íèçêèì ðåéòèíãîì. Äîâåäèòå åå äî âåðøèíû ðåéòèíãà âû ñíîâà ïåðåêëþ÷èòåñü íà ñàìóþ ñëàáóþ öèâèëèçàöèþ. Ýòîé òðåòüåé öèâèëèçàöèåé âû è áóäåòå óïðàâëÿòü â äàëüíåéøåì. Òîëüêî äëÿ îäèíî÷íîé èãðû.</Russian>
@@ -299,7 +299,7 @@
 		<English>Every 100 turns (on Normal Speed) the games difficulty is increased by 1 until it reaches Nightmare.</English>
 		<French>Chaque 100 tours (vitesse normale) la difficulté du jeu est augmentées d'un niveau jusqu'à atteindre 'Nightmare'.</French>
 		<German>Alle 100 Runden (bei normaler Spielgeschwindigkeit) wird der Schwierigkeitsgrad um eine Stufe erhöht, bis "Gottheit" erreicht ist. Es gibt eine BUG-Option, die hierfür eine feinere Einstellung ermöglicht Nightmare.</German>
-		<Italian>Ogni 100 turni (a velocità normale) la difficoltà del gioco aumenta di 1 livello finché non raggiunge il livello "Incubo".</Italian>
+		<Italian>Ogni 100 turni (a velocità normale) la difficoltà del gioco aumenta di 1 livello finché non raggiunge il livello incubo</Italian>
 		<Spanish>Cada 100 turnos (a velocidad Normal) la dificultad de la partida subirá un nivel hasta alcanzar "Nightmare".</Spanish>
 		<Polish>Na każde 100 tur ( normalna prędkość gry ) gra podnosi poziom o jeden poziom do momentu osiągnięcia poziomu Nightmare.</Polish>
 		<Russian>Êàæäûå 50 õîäîâ (íà íîðìàëüíîé ñêîðîñòè) ñëîæíîñòü èãðû óâåëè÷èâàåòñÿ íà åäèíèöó, ïîêà âû íå äîñòèãíåòå óðîâíÿ áîæåñòâà.</Russian>
@@ -318,7 +318,7 @@
 		<English>Must kill all cities AND units to wipe out an enemy civilization.</English>
 		<French>Vous devez éliminer toutes les villes ET toutes les unités pour anéantir une civilisation ennemie.</French>
 		<German>Um eine feindliche Zivilisation auszuschalten, müssen alle Städte UND Einheiten zerstört werden.</German>
-		<Italian>Devi togliere di mezzo tutte le città e tutte le unità per poter dichiarare una civiltà nemica sconfitta.</Italian>
+		<Italian>Si devono togliere di mezzo tutte le città e tutte le unità per poter dichiarare una civiltà nemica sconfitta</Italian>
 		<Spanish>Es necesario destruir todas las ciudades y a todas las unidades para eliminar a una civilización enemiga.</Spanish>
 		<Russian>Âû äîëæíû óíè÷òîæèòü âñå ãîðîäà è þíèòû äëÿ ëèêâèäàöèè âðàæåñêîé öèâèëèçàöèè.</Russian>
 	</TEXT>
@@ -336,7 +336,7 @@
 		<English>Adds new traits and deepens and strengthens existing traits.</English>
 		<French>Ajoute de nouveaux Traits, et rend les existants plus profonds et marqués</French>
 		<German>Die bereits existierenden Charakterzüge für Staatsoberhäupter werden vertieft und um vollkommen neue ergänzt.</German>
-		<Italian>Aggiunge nuove caratteristiche per i leader, approfondendo e rafforzando le caratteristiche esistenti.</Italian>
+		<Italian>Aggiunge nuove caratteristiche per i leader, approfondendo e rafforzando le caratteristiche esistenti</Italian>
 		<Polish>Dodaje nowe cechy oraz pogłębia i wzmacnia istniejące</Polish>
 		<Russian>Äîáàâëÿåò íîâûå è óãëóáëÿåò è óñèëèâàåò ñóùåñòâóþùèå õàðàêòåðèñòèêè.</Russian>
 	</TEXT>
@@ -355,7 +355,7 @@
 		<English>Reassigns all starting locations according to the distances between civilizations on earth.</English>
 		<French>Réassigne toutes les positions de départ en fonction de la distance entre les civilisation sur Terre.</French>
 		<German>Richtet die Startpositionen aller Spieler anhand der Lage der Zivilisationen auf der Erde aus.</German>
-		<Italian>Riassegna tutte le posizioni iniziali sulla mappa secondo le distanze reali tra le civiltà sulla Terra.</Italian>
+		<Italian>Riassegna tutte le posizioni iniziali sulla mappa secondo le distanze reali tra le civiltà sulla Terra</Italian>
 		<Spanish>Reasigna todos los emplazamientos iniciales según la distancia real entre civilizaciones en la Tierra.</Spanish>
 		<Polish>Rozdziela wszystkim startowe lokalizacje w zależności od odległości pomiędzy cywilizacjami na Ziemi.</Polish>
 		<Russian>Ïåðåíàçíà÷àåò âñå ñòàðòîâûå ïîçèöèè ñîãëàñíî ðàññòîÿíèÿì ìåæäó öèâèëèçàöèÿìè íà Çåìëå.</Russian>
@@ -372,7 +372,7 @@
 		<English>All animals can spawn not only within borders, but on improved tiles too.[NEWLINE]Your civilians are tasty - protect them even within your borders.[NEWLINE]This option is polar opposite of "Keep Animals Out" - Dangerous Wildlife disables it.</English>
 		<French>Tous les animaux peuvent apparaître non seulement à l'intérieur des frontières, mais aussi sur des cases aménagées.[NEWLINE]Vos civils sont savoureux - protégez-les également à l'intérieur de vos frontières.[NEWLINE]Cette option est à l'opposé de "Animaux restent dehors" - Faune dangereuse la désactive.</French>
 		<Russian>Все животные могут появляться не только в пределах границ, но и на улучшенных клетках.[NEWLINE] Ваши мирные жители - отныне желанное лакомство, защищайте их и в своих границах.[NEWLINE] Этот параметр полярно противоположен «Keep Animals Out» - Dangerous Wildlife отключает его.</Russian>
-		<Italian>Tutti gli animali possono essere generati non solo all'interno dei confini, ma anche su caselle migliorate.[NEWLINE]I tuoi civili sono in pericolo: proteggili anche all'interno dei tuoi confini.[NEWLINE]Questa opzione è l'esatto opposto di "animali fuori", "fauna selvatica pericolosa" la disabilita.</Italian>
+		<Italian>Tutti gli animali possono essere generati non solo all'interno dei confini, ma anche su caselle migliorate[NEWLINE][NEWLINE]I tuoi civili sono in pericolo: proteggili anche all'interno dei tuoi confini (questa opzione è l'esatto opposto di animali fuori e quindi la disabilita)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_RELIGION_DIVINE_PROPHETS</Tag>
@@ -389,7 +389,7 @@
 		<English>First to research a religious tech receives a great prophet, which they may use to place a valid religious holy city in a location of their choice.</English>
 		<French>Utilise des Prophète pour fonder les Religions</French>
 		<German>Religionen entstehen nicht mehr automatisch. Sie müssen stattdessen von Großen Propheten begründet werden.</German>
-		<Italian>Il primo di ricercare una tecnologia religiosa riceve un gran profeta, che può utilizzare per collocare una valida città santa in una città a sua scelta.</Italian>
+		<Italian>La prima civiltà a ricercare una tecnologia religiosa riceve un gran profeta, che può utilizzare per collocare una valida città santa in una città a sua scelta</Italian>
 		<Spanish>Las religiones se podrán fundar mediante el uso de Sumos sacerdotes.</Spanish>
 		<Polish>Używaj Wielkich Proroków do odkrywania religii.</Polish>
 		<Russian>Èñïîëüçóéòå ïðîðîêîâ äëÿ îòêðûòèÿ ðåëèãèé.</Russian>
@@ -406,7 +406,7 @@
 		<English>Get gold from disbanding units.</English>
 		<French>Obtenez de l'or des unités dissoutes.</French>
 		<Russian>Дает золото за любой распущенный отряд</Russian>
-		<Italian>Ottieni oro dallo scioglimento delle unità.</Italian>
+		<Italian>Si ottiene oro dallo scioglimento delle unità</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_COMBAT_EQUIPMENT</Tag>
@@ -424,7 +424,7 @@
 		<German>Einheiten erhalten über Beförderungen Waffen und Ausrüstung, die sie im Kampf verwenden können.</German>
 		<Polish>Jednostki otrzymują i używają promocje wyposażenia.</Polish>
 		<Russian>Þíèòû ïîëó÷àþò è èñïîëüçóþò ýêèïèðîâêó â êâàëèôèêàöèÿõ.</Russian>
-		<Italian>Le unità guadagnano e usano promozioni sotto forma di equipaggiamento.</Italian>
+		<Italian>Le unità guadagnano e usano promozioni sotto forma di equipaggiamento</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT</Tag>
@@ -440,7 +440,7 @@
 		<English>Enables greater depth of strategy and unit abilities regarding pursuit functions (Early Withdraw/Pursuit/Speed CCs).</English>
 		<French>Permet une Stratégie plus avancée, avec des capacités supplémentaires des unités (Repli/Poursuite/Vitesse...).</French>
 		<German>Einheiten haben bessere Rückzugsmöglichkeiten, aber auch die Chance, fliehende Gegner zu verfolgen.</German>
-		<Italian>Abilita un nuovo grado di strategia e abilità delle unità legate alla funzione di inseguimento (ritirata rapida / inseguimento/ velocità).</Italian>
+		<Italian>Abilita un nuovo grado di strategia e abilità delle unità legate alla funzione di inseguimento (ritirata rapida, inseguimento e velocità)</Italian>
 		<Polish>Zwiększa głębię strategiczną i możliwości jednostek do pościgu (Wczesna Ucieczka/Pościg/Szybkość w Walce Wręcz).</Polish>
 		<Russian>Îáåñïå÷èâàåò áîëüøóþ ãëóáèíó ñòðàòåãèè è ñïîñîáíîñòåé þíèòîâ îòíîñèòåëüíî ôóíêöèé ïðåñëåäîâàíèÿ. (Early Withdraw/Pursuit/Speed CCs)</Russian>
 	</TEXT>
@@ -459,7 +459,7 @@
 		<English>With this option on, some civics will enable Fixed Borders, which causes the civilization's owned tiles to be far more influenced by military might than culture.</English>
 		<French>Mécanisme de frontières fixes, provenant des doctrines ou d'autres origines</French>
 		<German>Es können festen Landesgrenzen festgelegt werden, durch Gesellschaftsformen oder auf anderem Weg.</German>
-		<Italian>Alcune civiltà abiliteranno i Confini fissi il che farà sì che le caselle possedute dalla civiltà siano molto più influenzate dalla potenza militare che dalla cultura.</Italian>
+		<Italian>Consente ad alcune civiltà di abilitare i confini fissi il che farà sì che le caselle possedute dalla civiltà siano molto più influenzate dalla potenza militare che dalla cultura</Italian>
 		<Spanish>No se usará la mecánica de fronteras fijables, ni por principios ni por cualquier otro origen.</Spanish>
 		<Polish>Wyłącza mechanizm stałych granic.</Polish>
 		<Russian>Включает игровую механику с фиксированными границами</Russian>
@@ -478,7 +478,7 @@
 		<English>Cities which have been captured via conquest can convert peacefully back to a previous owner.</English>
 		<French>Les villes capturées par la conquête peuvent basculer à nouveau pacifiquement vers leur ancienne civilisation.</French>
 		<German>Städte, die während einer Eroberung eingenommen wurden, können entscheiden, welcher Kultur sie sich zukünftig anschließen wollen.</German>
-		<Italian>Le città acquisite tramite conquista possono riconvertirsi pacificamente al precedente possessore.</Italian>
+		<Italian>Le città acquisite tramite conquista possono riconvertirsi pacificamente al precedente possessore</Italian>
 		<Spanish>Las ciudades que hayan sido capturadas mediante conquista podrán convertirse pacíficamente a su dueño anterior.</Spanish>
 		<Russian>Ðàçðåøèòü âîçâðàò îòâîåâàííûõ ãîðîäîâ ïóòåì êóëüòóðíîé àííåêñèè.</Russian>
 	</TEXT>
@@ -497,7 +497,7 @@
 		<English>Great Commanders give Great Generals many bonuses for leading troops into battle, instead of just attaching to a squad of existing troops.</English>
 		<French>Les Commandants Illustres donne aux Généraux Illustres de nombreux bonus au combat, au lieu de ne faire que s'associer à une unité.</French>
 		<German>Die Option Große Anführer eröffnet Großen Generälen viele neue Boni für die Führung von Truppenverbänden im Kampf, anstatt ihnen lediglich die Möglichkeit zu bieten, sich einer Truppe anzuschließen.</German>
-		<Italian>I gran comandanti danno ai gran generali molti bonus nel condurre truppe in battaglia, invece di unirsi solamente a un'unità esistente.</Italian>
+		<Italian>I gran comandanti danno ai gran generali molti bonus nel condurre truppe in battaglia, invece di unirsi solamente a un'unità esistente</Italian>
 		<Spanish>Los Grandes comandantes aportan muchas de las bonificaciones de los Grandes generales por liderar a las tropas en la batalla, en lugar de unirse a una unidad existente.</Spanish>
 		<Polish>Wielcy Dowódcy dają Wielkim Generałom wiele premii dla oddziałów prowadzonych do walki, a nie tylko jednemu oddziałowi.</Polish>
 		<Russian>Âåëèêèå ïîëêîâîäöû äàþò âåëèêèõ ãåíåðàëîâ, êîòîðûå ïðåäîñòàâëÿþò ìíîãî áîíóñîâ âîéñêàì ÷òî îíè âåäóò â áîé, âìåñòî ïðîñòîãî ïðèñîåäèíåíèÿ ê ñîñòàâó äåéñòâóþùèõ âîéñê.</Russian>
@@ -518,7 +518,7 @@
 		<German>Diese Mod ermöglicht das Zurückdrängen und Niederwerfen von Einheiten, bietet aber im Gegenzug auch Effekte und Fähigkeiten, die Einheiten Standhaftigkeit verleihen. Eventuell wird auch ein Moral-System integriert.</German>
 		<Polish>Pozwala na Odpieranie, Odrzucanie i Ustępowanie w ogniu walki. Docelowo będzie zawierać system Morale.</Polish>
 		<Russian>Включает способности и эффекты Отражения, Оглушения и Стойкости, а также систему боевого духа отрядов.</Russian>
-		<Italian>Introduce le abilità respingimento, contraccolpo e inflessibile e i loro effetti. Includerà un sistema morale.</Italian>
+		<Italian>Introduce le abilità respingimento, contraccolpo e inflessibile e i loro effetti[NEWLINE][NEWLINE]Includerà un sistema morale</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_COMBAT_HIDE_SEEK</Tag>
@@ -526,7 +526,7 @@
 		<French>Mode de Combat C2C - Cache-cache</French>
 		<German>C2C-Kampfmod - Versteckspiel</German>
 		<Russian>C2C Combat Mod - Ïðÿòêè</Russian>
-		<Italian>Nascondino (mod di combattimento per C2C)</Italian>
+		<Italian>Sistema di invisibilità migliorato (mod di combattimento per C2C)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_COMBAT_HIDE_SEEK_HELP</Tag>
@@ -534,7 +534,7 @@
 		<French>Ajoute plusieurs types d'invisibilité. Les unités peuvent avoir plusieurs niveaux et types d'invisibilité, et il est nécessaire d'avoir un mode de détection compatible pour les repérer.</French>
 		<German>Statt simpler Standardunsichtbarkeit und entsprechenden Abwehrmechanismen gibt es nun feinere Unterteilungen. Mehrere Typen und Stärken von Unsichtbarkeit sorgen dafür, dass versteckte Einheiten nur entdeckt werden können, wenn der Gegner entsprechend geschulte Einheiten besitzt. (Die Mod Ohne Vorwarnung muss ebenfalls aktiviert sein.)</German>
 		<Russian>Äîáàâëÿåò íîâûå óðîâíè íåâèäèìîñòè. Отряды могут иметь несколько степеней невидимости (а также несколько типов и уровней видимости), и для этого требуется, чтобы противник имел видимость всех типов и очки хода на участке, для обнаружения отряда (Оповещение сил ВКЛ)</Russian>
-		<Italian>Aggiunge nuovi livelli di invisibilità. Le unità possono adesso averne più di un tipo e di una certa intensità (e possono anche avere più tipi con diverse intensità). L'avversario deve avere visibilità corrispondente e intensità sufficiente su una casella per vedere l'unità. (forza senza avviso ON)</Italian>
+		<Italian>Aggiunge nuovi livelli di invisibilità, le unità possono adesso averne più di un tipo e di una certa intensità (e possono anche avere più tipi con diverse intensità)[NEWLINE][NEWLINE]L'avversario deve avere visibilità corrispondente e intensità sufficiente su una casella per vedere l'unità (forza senza avviso ON)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UNIT_INFINITE_XP</Tag>
@@ -550,7 +550,7 @@
 		<English>No loss of experience when upgrading troops.</English>
 		<French>Pas de perte d'expérience lors de l'amélioration des unités</French>
 		<German>Bei der Modernisierung von Einheiten gehen keine Erfahrungspunkte mehr verloren.</German>
-		<Italian>Nessuna perdita di punti esperienza quando si promuovono le unità.</Italian>
+		<Italian>Nessuna perdita di punti esperienza quando si promuovono le unità</Italian>
 		<Polish>Brak straty XP przy ulepszaniu jednostek</Polish>
 		<Russian>Íåò ïîòåðè îïûòà ïðè ìîäåðíèçàöèè âîéñê.</Russian>
 	</TEXT>
@@ -569,7 +569,7 @@
 		<English>Enables Inquisitions. Inquisitors may be trained and non-state religions may be purged in order to reduce the threat of rebellion.</English>
 		<French>Active les Inquisitions. Les Inquisiteurs peuvent être recrutés et peuvent éradiquer les religions non-officielles dans un ville, pour en améliorer la stabilité.</French>
 		<Russian>Включает инквизицию. Вы можете обучать инквизиторов, очищая города от негосударственных религий для снижения угрозы восстания.</Russian>
-		<Italian>Abilita l'inquisizione. Gli inquisitori possono essere addestrati e le religioni non statali possono essere epurate per ridurre la minaccia di ribellione.</Italian>
+		<Italian>Abilita l'inquisizione, gli inquisitori possono essere addestrati e le religioni non statali possono essere epurate per ridurre la minaccia di ribellione</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_EXP_LARGER_CITIES</Tag>
@@ -586,7 +586,7 @@
 		<English>Cities will be able to expand from a size two radius to a size three radius after achieving the cultural distinction of "Influential" without needing the much-later available Metropolitan Administration.</English>
 		<French>Les Villes seront capables d'étendre leur champ d'action de deux à trois cases, après avoir atteint le niveau culturel "Influent" sans la Tech. 'Administration de Métropole'</French>
 		<German>Städte können ihr Einzugsgebiet auf einen dritten Ring von Feldern ausdehnen, wenn sie die Kulturstufe "einflussreich" erreichen, ohne dabei eine Stadtverwaltung (Gebäude) zu benötigen.</German>
-		<Italian>Le città si espanderanno dal raggio 2 a 3 raggiungendo il livello culturale "influente", senza il bisogno dell'edificio amministrazione metropolitana.</Italian>
+		<Italian>Le città si espanderanno dal raggio 2 a 3 raggiungendo il livello culturale influente, senza il bisogno dell'edificio amministrazione metropolitana</Italian>
 		<Spanish>Las ciudades expandirán su radio de acción de 2 a 3 casillas al alcanzar el nivel cultural "Influyente", sin necesitar una Administración metropolitana.</Spanish>
 		<Polish>Miasta będą się rozwijać z zasięgu dwóch pól na zasięg trzech zaraz po osiągnięciu poziomu kulturowego: "Wpływowy" nie wymaga Administracji Metropolii</Polish>
 		<Russian>Ãîðîäà áóäóò èìåòü âîçìîæíîñòü ðàñøèðèòüñÿ ñ ðàäèóñà â äâå êëåòêè äî ðàäèóñà â òðè ïîñëå òîãî, êàê äîñòèãíóò âëèÿòåëüíîãî óðîâíÿ êóëüòóðû áåç íåîáõîäèìîñòè ñòðîèòåëüñòâà ñòîëè÷íîé àäìèíèñòðàöèè.</Russian>
@@ -605,7 +605,7 @@
 		<English>Leaders Gain additional Trait selections throughout the game due to expanding National Culture values. (Beta development so may present some imbalances.)</English>
 		<French>Les Leaders gagnent des Traits supplémentaires durant le Jeu, en fonction de l'expansion Culturelle. (En développement Beta, peut donc présenter des déséquilibres du gameplay.)</French>
 		<German>Staatsoberhäupter können während des Spiels zusätzliche Charakterzüge erhalten, wenn ihre Kultur sich entsprechend etabliert hat. (Noch im Betastadium, kann also noch Balanceprobleme aufweisen.)</German>
-		<Italian>I leader ottengono tratti supplementari durante il gioco grazie all'espansione della cultura nazionale. (Caratteristica ancora in fase di Beta quindi possono esserci alcuni sbilanciamenti).</Italian>
+		<Italian>I leader ottengono tratti supplementari durante il gioco grazie all'espansione della cultura nazionale (caratteristica ancora in fase di Beta quindi possono esserci alcuni sbilanciamenti)</Italian>
 		<Polish>Przywódcy otrzymują dodatkowe cechy do wyboru wraz z rozwojem kultury. (W fazie beta możliwy brak balansu.)</Polish>
 		<Russian>Ïîëó÷àéòå äîïîëíèòåëüíûå õàðàêòåðèñòèêè ëèäåðîâ íà ïðîòÿæåíèè âñåé èãðû çà ñ÷åò ðàñøèðåíèÿ íàöèîíàëüíîé êóëüòóðû. (Íàõîäèòñÿ â ðàçðàáîòêå è ìîæåò ïðèâåñòè ê íåêîòîðîìó äèñáàëàíñó)</Russian>
 	</TEXT>
@@ -623,7 +623,7 @@
 		<English>Players may lead any Civilization with any Leader.</English>
 		<French>Les joueurs peuvent diriger n'importe quelle civilisation avec n'importe quel chef.</French>
 		<German>Jeder Spieler kann eine beliebige Zivilisation als beliebiges Staatsoberhaupt anführen.</German>
-		<Italian>I giocatori possono condurre una civiltà qualsiasi con un qualsiasi leader.</Italian>
+		<Italian>I giocatori possono condurre una civiltà qualsiasi con un qualsiasi leader</Italian>
 		<Spanish>Los jugadores pueden dirigir cualquier civilización con cualquier líder.</Spanish>
 		<Russian>Èãðîêè ìîãóò ïðàâèòü ëþáîé äåðæàâîé ñ ëþáûì ëèäåðîì.</Russian>
 	</TEXT>
@@ -642,7 +642,7 @@
 		<English>Civilizations can not found a new religion when controlling a Holy City.</English>
 		<French>Les Civilizations ne peuvent plus fonder de nouvelle religion lorsqu'elles possèdent déjà une Ville Sainte.</French>
 		<German>Eine Zivilisation kann keine neuen Religionen mehr begründen, wenn sie bereits eine Heilige Stadt kontrolliert.</German>
-		<Italian>Le civiltà non possono fondare una nuova religione quando controllano una città santa.</Italian>
+		<Italian>Le civiltà non possono fondare una nuova religione quando controllano una città santa</Italian>
 		<Spanish>Las civilizaciones no podrán fundar una nueva religión si ya controlan una Ciudad Santa.</Spanish>
 		<Polish>Cywilizacje nie mogą zakładać nowych religii, gdy kontrolują już Swięte Miasto</Polish>
 		<Russian>Öèâèëèçàöèÿ íå ìîæåò îñíîâàòü íîâóþ ðåëèãèþ, åñëè îíà óæå èìååò ñâÿùåííûé ãîðîä. Òàêèì îáðàçîì ÷èñëî ðåëèãèé â èãðå ñòàíîâèòñÿ îãðàíè÷åíî êîëè÷åñòâîì èãðîêîâ.</Russian>
@@ -660,7 +660,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_WORLDBUILDER_HELP</Tag>
 		<English>Sets a random admin password so that debug tools cannot be used, and the game assets cannot be modified. Only for single-player games.</English>
-		<Italian>Imposta una password amministratore casuale in modo che il debug non possa essere utilizzato e gli assets del gioco non possano essere modificate. Solo per giocatore singolo.</Italian>
+		<Italian>Impostazione di una password amministratore casuale in modo che il debug non possa essere utilizzato e gli assets del gioco non possano essere modificate (solo per giocatore singolo)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_EXP_MAXIMUM_POPULATION</Tag>
@@ -678,7 +678,7 @@
 		<German>Städte müssen Beschränkungen beim Bevölkerungswachstum überwinden.</German>
 		<Polish>Miasta muszą pokonać limity w swoim rozwoju.</Polish>
 		<Russian>Ãîðîäà äîëæíû ïðåîäîëåâàòü îãðàíè÷åíèÿ íà ðîñò ÷èñëåííîñòè íàñåëåíèÿ.</Russian>
-		<Italian>Le città devono superare limiti alla crescita della popolazione.</Italian>
+		<Italian>Le città devono superare limitazioni alla crescita della popolazione</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CULTURE_MIN_CITY_BORDER</Tag>
@@ -698,7 +698,7 @@
 		<Spanish>No se podrán conquistar las 8 casillas alrededor de una ciudad mediante la influencia cultural.</Spanish>
 		<Polish>8 pól wokół miasta jest nienaruszalne przez granice kulturalne wroga.</Polish>
 		<Russian>8 êëåòîê âîêðóã ëþáîãî ãîðîäà íèêîãäà íå ìîãóò áûòü çàõâà÷åíû ÷åðåç êóëüòóðíîå âëèÿíèå.</Russian>
-		<Italian>Le 8 caselle attorno a qualsiasi città non possono mai essere conquistate tramite l'influenza culturale.[NEWLINE]Questa opzione è disabilitata dall'opzione "le città iniziano con una sola casella.</Italian>
+		<Italian>Le 8 caselle attorno a qualsiasi città non possono mai essere conquistate tramite l'influenza culturale (questa opzione è disabilitata dall'opzione le città iniziano con una sola casella)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_MAP_MORE_RESOURCES</Tag>
@@ -716,7 +716,7 @@
 		<German>Auf Karten mit Standardeinstellungen für Ressourcen werden mehr Ressourcen verteilt.</German>
 		<Polish>Mapy używające standardowych ustawień wygenerują więcej zasobów.</Polish>
 		<Russian>Êàðòû, êîòîðûå èñïîëüçóþò íàñòðîéêè ïî óìîë÷àíèþ, ãåíåðèðóþò áîëüøå ðåñóðñîâ.</Russian>
-		<Italian>Le mappe che utilizzano le impostazioni predefinite di spawn delle risorse ne genereranno di più. Non ha effetto su questi mapscript:[SPACE][SPACE] * PerfectWorld, PerfectMongoose e World. Ha effetto solo su SmartMap quando "Bonus Placement = Standard".</Italian>
+		<Italian>Le mappe che utilizzano le impostazioni predefinite di spawn delle risorse ne genereranno di più (non ha effetto su questi mapscript: * PerfectWorld, PerfectMongoose e World, ha effetto solo su SmartMap quando Bonus Placement = Standard)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_MAP_MORE_RIVERS</Tag>
@@ -734,7 +734,7 @@
 		<German>Auf Karten mit Standardeinstellungen für Flüsse werden mehr Flüsse verteilt.</German>
 		<Polish>Mapy używające standardowych ustawień wygenerują więcej rzek.</Polish>
 		<Russian>Êàðòû, êîòîðûå èñïîëüçóþò íàñòðîéêè ïî óìîë÷àíèþ, ãåíåðèðóþò áîëüøå ðåê.</Russian>
-		<Italian>Le mappe che utilizzano le impostazioni predefinite per la generazione dei fiumi ne genereranno di più. Non ha effetto su questi mapscript:[SPACE][SPACE] * PerfectWorld, PerfectMongoose e World. Ha effetto solo su SmartMap se le opzioni del terreno sono: [SPACE][SPACE] * Standard, grandi pianure o oasi.</Italian>
+		<Italian>Le mappe che utilizzano le impostazioni predefinite per la generazione dei fiumi ne genereranno di più (non ha effetto su questi mapscript: * PerfectWorld, PerfectMongoose e World, ha effetto solo su SmartMap se le opzioni del terreno sono: [SPACE][SPACE] * Standard, grandi pianure o oasi)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UNIT_MORE_XP_TO_LEVEL</Tag>
@@ -752,7 +752,7 @@
 		<German>Einheiten benötigen doppelt so viele Erfahrungspunkte, um eine Beförderung zu erhalten.</German>
 		<Polish>Jednostki potrzebują dwa razy więcej XP na poziom.</Polish>
 		<Russian>Þíèòàì òðåáóåòñÿ â äâà ðàçà áîëüøå î÷êîâ îïûòà, ÷òîáû ïîëó÷èòü óðîâåíü. (Ðåãóëèðóåòñÿ â ôàéëå Assets/XML/GlobalDefines.xml)</Russian>
-		<Italian>Le unità richiedono il doppio dei punti esperienza per salire di livello. (Regolabile nel file Assets/XML/GlobalDefines.xml)</Italian>
+		<Italian>Le unità richiedono il doppio dei punti esperienza per salire di livello (regolabile nel file Assets/XML/GlobalDefines.xml)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_BARBARIAN_NEANDERTHAL_CITIES</Tag>
@@ -768,7 +768,7 @@
 		<French>Des Villes Neanderthal apparaissent durant l'Ere Préhistorique.</French>
 		<German>Neandertaler werden bei eingeschalteter Option in der vorgeschichtlichen Ära Städte erbauen.</German>
 		<Russian>Ãîðîäà íåàíäåðòàëüöåâ áóäóò ïîÿâëÿòüñÿ â äîèñòîðè÷åñêîé ýðå.</Russian>
-		<Italian>Delle città neanderthal appaiono durante l'era preistorica.</Italian>
+		<Italian>Delle città neanderthal appaiono durante l'era preistorica</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_COMBAT_NEW_RANDOM_SEED</Tag>
@@ -784,7 +784,7 @@
 		<English>A new random seed is generated every time the game is reloaded - which, for example, will lead to different combat results.</English>
 		<French>Un nouveau classement aléatoire est généré chaque fois que le jeu est rechargé, ce qui peut entraîner différents résultats de combat, par exemple.</French>
 		<German>Jedes Mal, wenn das Spiel neu geladen wird, wird ein neuer Startwert für den Zufallszahlengenerator erstellt, was zum Beispiel zu unterschiedlichen Kampfausgängen führen kann.</German>
-		<Italian>Ogni volta che ricaricherai il gioco verrà generata un nuovo seme casuale che porterà, per esempio, a diversi risultati di combattimento.</Italian>
+		<Italian>Ogni volta che si ricaricherà il gioco verrà generata un nuovo seme casuale che porterà, per esempio, a diversi risultati di combattimento</Italian>
 		<Spanish>En cada partida se genera una nueva "seed" al azar que, por ejemplo, arrojará resultados diferentes en el combate.</Spanish>
 		<Russian>Ïðè êàæäîé ïåðåçàãðóçêå èãðû ñëó÷àéíûì îáðàçîì ãåíåðèðóåòñÿ íîâîå ñåìÿ êàðòû, ÷òî ìîæåò ïðèâåñòè ê ðàçíûì èñõîäàì áîÿ.</Russian>
 	</TEXT>
@@ -801,7 +801,7 @@
 		<English>No Barbarians will appear.</English>
 		<French>Aucun barbare n'apparaîtra sur la carte.</French>
 		<German>Es erscheinen keine Barbaren und Neandertaler. Tiere werden trotzdem weiterhin auftauchen.</German>
-		<Italian>Non appariranno i barbari.</Italian>
+		<Italian>Non appariranno i barbari</Italian>
 		<Spanish>No aparecerán bárbaros en esta partida.</Spanish>
 		<Polish>Brak Barbarzyńców</Polish>
 		<Russian>Èãðà áåç âàðâàðîâ è äèêèõ çâåðåé.</Russian>
@@ -820,7 +820,7 @@
 		<English>Cities cannot convert peacefully from culture.</English>
 		<French>Les villes ne peuvent pas être converties pacifiquement par la culture.</French>
 		<German>Städte können sich nicht friedlich anderen Kulturen anschließen, außerdem sind keine kulturellen Revolten mehr möglich.</German>
-		<Italian>Le città non possono essere convertite pacificamente dalla cultura.</Italian>
+		<Italian>Le città non possono essere convertite pacificamente dalla cultura</Italian>
 		<Spanish>Las ciudades no pueden cambiar de cultura pacíficamente.</Spanish>
 		<Russian>Îòêëþ÷èòü ôóíêöèþ êóëüòóðíîé àííåêñèè ãîðîäîâ.</Russian>
 	</TEXT>
@@ -838,7 +838,7 @@
 		<English>Cities cannot be razed after capture.</English>
 		<French>Les villes ne peuvent pas être rasées après leur capture.</French>
 		<German>Städte können nach der Einnahme nicht vernichtet werden.</German>
-		<Italian>Le città non possono essere rase al suolo dopo la conquista.</Italian>
+		<Italian>Le città non possono essere rase al suolo dopo la conquista</Italian>
 		<Spanish>Las ciudades no se pueden arrasar tras capturarlas.</Spanish>
 		<Russian>Çàõâà÷åííûå ãîðîäà íåëüçÿ óíè÷òîæàòü.</Russian>
 	</TEXT>
@@ -856,7 +856,7 @@
 		<English>Random Events do not occur.[NEWLINE]ALERT: DO enable this option for multiplayer games to increase game stability.[NEWLINE]WARNING: Events are currently unsupported - may be buggy and/or unbalanced.</English>
 		<French>Les événements aléatoires ne se produisent pas</French>
 		<German>Es finden keine Zufallsereignisse statt.</German>
-		<Italian>Non si verificano eventi casuali.</Italian>
+		<Italian>Non si verificano eventi casuali</Italian>
 		<Spanish>No ocurren sucesos al azar</Spanish>
 		<Russian>Ñëó÷àéíûå ñîáûòèÿ îòêëþ÷åíû.</Russian>
 	</TEXT>
@@ -875,7 +875,7 @@
 		<English>ALERT: Future era units, techs and concepts are not fully implemented. Use this if you want a more polished experience.[NEWLINE]Future and Transhuman Eras are disabled. The game ends at the end of the Modern Era.</English>
 		<French>Les Eres Futuriste et Transhumaine sont désactivées. Le Jeu se termine à la fin de l'Ere moderne.</French>
 		<German>Alle zukünftigen Zeitalter sind deaktiviert. Das Spiel endet mit dem Abschluss der Moderne.</German>
-		<Italian>L'era futura e transumana vengono disattivate. Il gioco termina alla fine dell'era moderna.</Italian>
+		<Italian>L'era futura e transumana vengono disattivate (il gioco termina alla fine dell'era moderna)</Italian>
 		<Spanish>Se desactivarán la Época transhumana y posteriores. La partida finaliza al acabar la Edad Contemporánea.</Spanish>
 		<Polish>Przyszłość oraz Transhumanizm będą wyłączone. Gra kończy się na Współczesności.</Polish>
 		<Russian>Áóäóùåå è ñâåðõ÷åëîâå÷åñêàÿ ýðà îòêëþ÷åíû. Èãðà çàêàí÷èâàåòñÿ ñ êîíöîì ñîâðåìåííîé ýðû.</Russian>
@@ -894,7 +894,7 @@
 		<English>Random map generator does not place any tribal villages ("goody huts") on the map.</English>
 		<French>Le générateur de carte aléatoire ne place pas de villages tribaux ("huttes à cadeaux") sur la carte</French>
 		<German>Der Zufallskartengenerator platziert keine Stammesdörfer ("Bonusdörfer") auf der Karte.</German>
-		<Italian>Il generatore di mappe casuali non collocherà alcun villaggio tribale sulla mappa.</Italian>
+		<Italian>Il generatore di mappe casuali non collocherà alcun villaggio tribale sulla mappa</Italian>
 		<Spanish>El generador aleatorio de mapas no pone en ellos aldeas tribales (con sus típicas "golosinas").</Spanish>
 		<Russian>Ãåíåðàòîð êàðòû íå ðàçìåùàåò ïëåìåííûå äåðåâíè ("èçáóøêè ñ ïîäàðêàìè").</Russian>
 	</TEXT>
@@ -912,7 +912,7 @@
 		<English>Turns off all Negative Traits.</English>
 		<French>Désactive tous les Traits négatifs.</French>
 		<German>Alle negativen Charakterzüge werden entfernt.</German>
-		<Italian>Disabilita tutti i tratti negativi.</Italian>
+		<Italian>Disabilita tutti i tratti negativi</Italian>
 		<Polish>Wyłącza wszystkie Negatywne Cechy.</Polish>
 		<Russian>Óäàëÿåò âñå íåãàòèâíûå õàðàêòåðèñòèêè.</Russian>
 	</TEXT>
@@ -930,7 +930,7 @@
 		<English>Disables ALL Nuclear Weaponry.</English>
 		<French>Désactive TOUTES les armes nucléaires.</French>
 		<German>ALLE Nuklearwaffen werden deaktiviert.</German>
-		<Italian>Disattiva le bombe atomiche.</Italian>
+		<Italian>Disattiva le bombe atomiche</Italian>
 		<Polish>Wyłącza CAŁA Broń Nuklearną</Polish>
 		<Russian>Îòêëþ÷àåò âñå ÿäåðíîå îðóæèå.</Russian>
 	</TEXT>
@@ -948,7 +948,7 @@
 		<English>Players cannot trade technologies that they have not researched themselves.</English>
 		<French>Les joueurs ne peuvent pas échanger des technologies qu'ils ne peuvent pas rechercher eux-mêmes.</French>
 		<German>Spieler können nicht mit Technologien handeln, die sie nicht selbst erforscht haben.</German>
-		<Italian>I giocatori non possono commerciare tecnologie che non hanno scoperto autonomamente.</Italian>
+		<Italian>I giocatori non possono commerciare tecnologie che non hanno scoperto autonomamente</Italian>
 		<Spanish>Los jugadores no pueden comerciar con tecnologías que no hayan investigado por sí mismos</Spanish>
 		<Polish>Gracze nie mogą handlować technologiami, których sami nie wynaleźli.</Polish>
 		<Russian>Èãðîêè íå ìîãóò òîðãîâàòü òåõíîëîãèÿìè, êîòîðûå ñàìè íå èññëåäîâàëè.</Russian>
@@ -965,7 +965,7 @@
 		<English>Keeps Win For Losing and Tech Diffusion benefits from being delivered to Human players while continuing to enable them for AI players.</English>
 		<French>Les avantages de la Diffusion des Technologies ne sont pas appliqués aux joueurs humains, tout en continuant à être actifs pour les joueurs IA.</French>
 		<Russian>Отключает правила «Поощрение отстающим» и «Утечка технологий» для живых игроков, продолжая использовать их для игроков ИИ.</Russian>
-		<Italian>Mantiene i vantaggi della ricerca aggiuntiva alle civiltà in svantaggio e della diffusione tecnologica per i giocatori IA ma li disabilita per i giocatori umani.</Italian>
+		<Italian>Mantiene i vantaggi della ricerca aggiuntiva alle civiltà in svantaggio e della diffusione tecnologica per i giocatori IA ma li disabilita per i giocatori umani</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NO_TECH_TRADING</Tag>
@@ -981,7 +981,7 @@
 		<English>Technologies cannot be traded via diplomacy.</English>
 		<French>Il est impossible d'échanger des technologies par voie diplomatique.</French>
 		<German>Der Technologiehandel auf diplomatischem Weg ist komplett deaktiviert.</German>
-		<Italian>Le tecnologie non possono essere commerciate attraverso la diplomazia.</Italian>
+		<Italian>Le tecnologie non possono essere commerciate attraverso la diplomazia</Italian>
 		<Spanish>No se pueden intercambiar tecnologías mediante la diplomacia.</Spanish>
 		<Russian>Â äèïëîìàòè÷åñêîì ðåæèìå íåäîñòóïíà òîðãîâëÿ òåõíîëîãèÿìè.</Russian>
 	</TEXT>
@@ -999,7 +999,7 @@
 		<English>Disable Vassal State Treaties, which ensure a weaker civilization protection against a stronger rival.</English>
 		<French>Désactive les traités d'états vassaux. Une civilisation sera moins bien protégée face à une rivale plus forte</French>
 		<German>Deaktiviert vasallenstaatliche Abkommen, die den Schutz einer schwächeren Zivilisation gegenüber einem stärkeren Gegner vorsehen.</German>
-		<Italian>Disabilita i trattati di vassallaggio che forniscono alle civiltà più deboli protezione contro le rivali più forti.</Italian>
+		<Italian>Disabilita i trattati di vassallaggio che forniscono alle civiltà più deboli protezione contro le rivali più forti</Italian>
 		<Spanish>Desactiva los tratados de estados vasallos, lo cual asegura protección a una civilización contra un rival más fuerte.</Spanish>
 		<Russian>Çàïðåò äîãîâîðîâ âàññàëèòåòà, çàùèùàþùèõ ñëàáóþ öèâèëèçàöèþ îò áîëåå ñèëüíîãî ñîïåðíèêà.</Russian>
 	</TEXT>
@@ -1017,7 +1017,7 @@
 		<English>The human player can never control more than one city.</English>
 		<French>Le joueur humain ne peut jamais contrôler plus d'une ville à la fois.</French>
 		<German>Jeder menschliche Spieler kann maximal eine Stadt kontrollieren.</German>
-		<Italian>Il giocatore umano non può controllare più di una città.</Italian>
+		<Italian>Il giocatore umano non può controllare più di una città</Italian>
 		<Spanish>El jugador humano nunca podrá controlar más de una ciudad.</Spanish>
 		<Russian>Èãðîê-÷åëîâåê ìîæåò åäèíîâðåìåííî êîíòðîëèðîâàòü òîëüêî îäèí ãîðîä.</Russian>
 	</TEXT>
@@ -1035,7 +1035,7 @@
 		<French>Un système plus avancé d'émergence et de guérison des maladies et des délits. Les unités peuvent être porteuses de maladies et de mentalités criminelles et déteindre sur les villes locales et d'autres unités, parfois même transférées au combat. Les éclosions de maladies et les vagues de criminalité ne sont pas automatiques à certains niveaux de maladie ou de criminalité, mais deviennent plus probables et plus difficiles à surmonter, plus ces propriétés s'aggravent. Il existe des niveaux de gravité pour chaque type de vague de maladie et de crime. Elle peut généralement s'aggraver et parfois elle doit avant de s'améliorer. Les villes peuvent devenir résistantes à des maladies déjà connues. L'objectif est un système dynamique qui émule de plus près les transferts réels de ces expériences d'une communauté à l'autre. (EN DÉVELOPPEMENT - UNIQUEMENT PARTIELLEMENT MIS EN ŒUVRE)</French>
 		<German>Hierbei handelt es sich um ein ausgeklügelteres System der Entstehung und Eindämmung von Krankheiten und Straftaten. Einheiten können Krankheiten und kriminelles Gedankengut mitbringen und auf die eigenen Städte und andere Einheiten übertragen, manchmal sogar während der Schlacht. Krankheitsausbrüche und Verbrechenswellen entstehen nicht automatisch auf bestimmten Stufen, aber sie werden je nach Krankheits- und Kriminalitätsrate immer wahrscheinlicher und können immer schwerer überwunden werden. Es gibt Schweregrade für jeden Typ von Seuchenzug oder Verbrechenswelle. Außerdem können Städte nun resistent gegen bereits überstandene Krankheiten werden. Das Ziel ist ein dynamisches System, das die Übertragung von einer Gesellschaft zur anderen besser nachbildet. (NOCH IN DER ENTWICKLUNG UND NUR TEILWEISE IMPLEMENTIERT)</German>
 		<Russian>Включает более продвинутую система проявления и восстановления после болезней и преступлений. Отряды могут заносить болезни и беззаконие, распространяя их на окрестные города и другие отряды, иногда передаваясь во время битвы. Вспышки болезней и волны преступности не возникают автоматически при определенных заболеваниях или преступлениях, но становятся более вероятными, и их труднее преодолеть при их усугублении. Существуют уровни опасности для каждого типа болезни и волны преступности. Обычно они могут ухудшаться, а иногда и учащаться до окончания кризиса. Города могут стать устойчивее к уже перенесенным эпидемиям. Цель - динамическая система, более точно имитирующая реальную передачу этого опыта от одного пункта к другому. (НАХОДИТСЯ В РАЗРАБОТКЕ: работает лишь отчасти)</Russian>
-		<Italian>Un sistema più avanzato di emergenza e recupero da malattie e reati. Le unità possono portare malattie e mentalità criminale e contagiare città locali e altre unità, a volte anche trasmettendole durante la battaglia. Le epidemie di malattie e le ondate di criminalità non sono automatiche a determinati livelli di malattia o criminalità, ma diventano più probabili e più difficili da superare quanto più peggiorano le proprietà. Ci sono livelli di gravità per ogni malattia e tipo di ondata criminale. Le città possono diventare resistenti alle malattie sperimentate in precedenza. L'obiettivo è un sistema dinamico che emuli più da vicino i trasferimenti reali di queste esperienze da una comunità all'altra. (IN SVILUPPO - SOLO PARZIALMENTE IMPLEMENTATO)</Italian>
+		<Italian>Un sistema più avanzato di emergenza e recupero da malattie e reati, le unità possono portare malattie e mentalità criminale e contagiare città locali e altre unità, a volte anche trasmettendole durante la battaglia[NEWLINE][NEWLINE]Le epidemie di malattie e le ondate di criminalità non sono automatiche a determinati livelli di malattia o criminalità, ma diventano più probabili e più difficili da superare quanto più peggiorano le proprietà[NEWLINE][NEWLINE]Ci sono livelli di gravità per ogni malattia e tipo di ondata criminale. Le città possono diventare resistenti alle malattie sperimentate in precedenza (l'obiettivo è un sistema dinamico che emuli più da vicino i trasferimenti reali di queste esperienze da una comunità all'altra)[NEWLINE][NEWLINE](IN SVILUPPO - SOLO PARZIALMENTE IMPLEMENTATO)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_EXP_OVEREXPANSION_PENALTIES</Tag>
@@ -1049,7 +1049,7 @@
 		<English>Cities will get unhappiness from overexpansion, scaled by map size. Unhappiness penalties depend on civics.</English>
 		<French>Les populations des villes seront mécontentes à cause de la surexpansion, à l'échelle de la taille de la carte. Les pénalités de mécontentement dépendent de la doctrine.</French>
 		<Russian>С этой опцией чрезмерная экспансия приводит к росту недовольства в городах в зависимости от размера карты. Штрафы к счастью граждан зависят от действующих парадигм.</Russian>
-		<Italian>Le città soffriranno di infelicità a causa dell'eccessiva espansione secondo le dimensioni della mappa. Le sanzioni per l'infelicità dipendono dalla forma di governo.</Italian>
+		<Italian>Le città soffriranno di infelicità a causa dell'eccessiva espansione secondo le dimensioni della mappa[NEWLINE]Le sanzioni per l'infelicità dipendono dalla forma di governo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ANIMAL_PEACE_AMONG_NPCS</Tag>
@@ -1065,7 +1065,7 @@
 		<German>Diese Option verhindert, dass sich Computergegner in einem ewigen Kriegszustand miteinander befinden. Dadurch attackieren Barbaren keine Tiere und Tiere keine Barbaren mehr, usw.</German>
 		<French>Empêche les joueurs PNJ d'être dans un état éternel de «guerre» entre eux. Ainsi, les barbares n'attaquent pas les animaux. Les animaux de l'équipe "bêtes" n'attaquent pas les animaux de l'équipe "Créature". Etc.</French>
 		<Russian>Óäåðæèâàåò êîìïüþòåðíûõ èãðîêîâ îò âå÷íîãî ñîñòîÿíèÿ âîéíû äðóã ñ äðóãîì. Òàêèì îáðàçîì, âàðâàðû íå íàïàäàþò íà æèâîòíûõ. Õèùíèêè íå íàïàäàþò íà òðàâîÿäíûõ. È òàê äàëåå.</Russian>
-		<Italian>Evita che i giocatori IA si trovino in un eterno stato di guerra tra loro. Quindi i barbari non attaccano gli animali. Gli animali (bestie) non attaccano gli animali (creature). E così via.</Italian>
+		<Italian>Evita che i giocatori IA si trovino in un eterno stato di guerra tra loro, quindi i barbari non attaccano gli animali, gli animali (bestie) non attaccano gli animali (creature) e così via</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ENABLE_PERMANENT_ALLIANCES</Tag>
@@ -1081,7 +1081,7 @@
 		<English>Two civilizations can form a Permanent Alliance which lasts the rest of the game.</English>
 		<French>Deux civilisations peuvent former une alliance permanente qui dure jusqu'à la fin du jeu.</French>
 		<German>Zwei Zivilisationen können eine Allianz schließen, die die restliche Spielzeit überdauert.</German>
-		<Italian>Due civiltà possono formare una alleanza permanente che duri fino alla fine della partita.</Italian>
+		<Italian>Due civiltà possono formare una alleanza permanente che duri fino alla fine della partita</Italian>
 		<Spanish>Dos civilizaciones pueden formar una alianza permanente que dure hasta que acabe la partida.</Spanish>
 		<Russian>Äåðæàâû ìîãóò çàêëþ÷èòü ïîñòîÿííûé ñîþç, äëÿùèéñÿ äî êîíöà èãðû.</Russian>
 	</TEXT>
@@ -1100,7 +1100,7 @@
 		<English>Names key map locations (mountain ranges, deserts, forests, jungles, etc.) on the game loadup.</English>
 		<French>Attribue des noms aux emplacements-clés de la carte (chaînes de montage, déserts, forêts, jungles...) au chargement du Jeu.</French>
 		<German>Vergibt beim Laden des Spiels Namen für Schlüsselorte auf der Landkarte wie Gebirgszüge, Wüsten, Wälder, Dschungel usw.</German>
-		<Italian>Denomina le posizioni chiave della mappa (catene montuose, deserti, foreste, giungle...) durante il caricamento del gioco.</Italian>
+		<Italian>Denomina le posizioni chiave della mappa (catene montuose, deserti, foreste, giungle...) durante il caricamento del gioco</Italian>
 		<Spanish>Se nombran puntos importantes del mapa (cordilleras, desiertos, bosques, junglas, etc.) durante la carga de la partida.</Spanish>
 		<Polish>Nazwy kluczowych miejsc mapy (pasm górskich, pustyń, lasów, dżungli, itp.) zostaną załadowane w grze.</Polish>
 		<Russian>Äàþòñÿ èìåíà ðàçëè÷íûì ãîðíûì õðåáòàì, ïóñòûíÿì, ëåñàì, äæóíãëÿì è ò.ä... Ýòî äîáàâëÿåò àòìîñôåðíîñòè, íî ïåðåíàñûùàåò êàðòó îáèëèåì äåòàëåé.</Russian>
@@ -1119,7 +1119,7 @@
 		<English>Players are prompted to pick a religion when they are about to found one.</English>
 		<French>Les joueurs doivent choisir une religion quand ils sont sur le point d'en fonder une.</French>
 		<German>Bei der Begründung einer Religion kann statt der erforschten eine beliebige noch unbekannte Religion ausgewählt werden.</German>
-		<Italian>Ai giocatori viene chiesto di scegliere una religione quando stanno per fondarne una.</Italian>
+		<Italian>Ai giocatori viene chiesto di scegliere una religione quando stanno per fondarne una</Italian>
 		<Spanish>A los jugadores se les pide que elijan una religión cuando están a punto de fundar una.</Spanish>
 		<Russian>Èãðîêè ìîãóò âûáðàòü, êàêóþ ðåëèãèþ îòêðûòü.</Russian>
 	</TEXT>
@@ -1137,7 +1137,7 @@
 		<English>Removes Negative penalties from Positive Traits and Positive Bonuses from Negative Traits.</English>
 		<French>Enlève les pénalités aux traits positifs, et les bonus aux traits négatifs.</French>
 		<German>Entfernt negative Elemente von positiven Charakterzügen und positive Elemente von negativen Charakterzügen.</German>
-		<Italian>Rimuove le penalità negative dai tratti positivi e i bonus positivi dai tratti negativi.</Italian>
+		<Italian>Rimuove le penalità negative dai tratti positivi e i bonus positivi dai tratti negativi</Italian>
 		<Polish>Usuwa Negatywne działania z Pozytywnych Cech i Pozytywne działania z Negatywnych Cech.</Polish>
 		<Russian>Óäàëÿåò êàê øòðàôû äëÿ ïîëîæèòåëüíûõ õàðàêòåðèñòèê, òàê è ïîëîæèòåëüíûå áîíóñû îòðèöàòåëüíûõ.</Russian>
 	</TEXT>
@@ -1155,7 +1155,7 @@
 		<English>Increased Barbarian activity and aggressiveness - AI performance may suffer.</English>
 		<French>Activité et agressivités des barbares accrues.</French>
 		<German>Erhöhte Barbarenaktivität und -aggressivität (gilt nicht für Tiere).</German>
-		<Italian>Aumenta le attività e l'aggressività dei barbari (le prestazioni dell'IA potrebbero risentirne).</Italian>
+		<Italian>Aumenta le attività e l'aggressività dei barbari (le prestazioni dell'IA potrebbero risentirne)</Italian>
 		<Spanish>Aumenta la actividad y agresividad de los bárbaros.</Spanish>
 		<Russian>Ïîâûøåííàÿ àãðåññèâíîñòü âàðâàðîâ.</Russian>
 	</TEXT>
@@ -1173,7 +1173,7 @@
 		<English>Each AI leader's personality is determined randomly at game start.</English>
 		<French>La personnalité des héros gérés par l'IA est déterminée aléatoirement au début du jeu.</French>
 		<German>Die Persönlichkeitsmerkmale aller KI-Staatsoberhäupter werden beim Spielstart zufällig ausgewählt.</German>
-		<Italian>La personalità dei leader IA viene determinata casualmente all'inizio della partita.</Italian>
+		<Italian>La personalità dei leader IA viene determinata casualmente all'inizio della partita</Italian>
 		<Spanish>La personalidad de cada líder se determinará al azar al comienzo de la partida.</Spanish>
 		<Russian>Õàðàêòåðèñòèêè êîìïüþòåðíûõ ëèäåðîâ ðàñïðåäåëÿþòñÿ â íà÷àëå èãðû ñëó÷àéíûì îáðàçîì.</Russian>
 	</TEXT>
@@ -1192,7 +1192,7 @@
 		<English>Corporations will expand and grow dynamically, without player involvement, behaving more like real world Corporations, and not tied to central governments. Corporations can be taxed for a profit, or be subsidized by your nation to help it expand faster. It reduces the tedious micromanagement of corporations, and gives corporate policies real value and meaning.[NEWLINE]ALERT: This game option needs multiple players to meet requirements for corporations to spawn. Both you and AIs must be in Industrial era, as corporation requirements are unlocked in this era. If you are ahead of AI, then you should sell techs to AI, so corporations would spawn.</English>
 		<French>Les Corporations s'étendent et se développement sans l'intervention du joueur, se comportement de manière plus réaliste par rapport au mont réel, sans influence des gouvernements. Les Corporations peuvent être taxées, ou subventionnées par notre nation pour accroître son expansion.</French>
 		<German>Kapitalgesellschaften wachsen und expandieren dynamisch ohne Einwirken der Spieler. Sie sind nicht mehr an Regierungen gebunden und verhalten sich damit mehr wie reale Kapitalgesellschaften. Vom Staat kann maximal eine Unternehmenssteuer erhoben werden, um Profit zu machen, oder es können Subventionen vergeben werden, die dafür sorgen, dass sich Kapitalgesellschaften schneller im eigenen Gebiet ausbreiten. Dadurch wird das ermüdende Mikromanagement abgeschafft und Unternehmenspolitik erhält echte Bedeutung.</German>
-		<Italian>Le corporazioni si espanderanno dinamicamente, senza intervento del giocatore e si comporteranno più come corporazioni del mondo reale, slegate dai governi centrali. Le corporazioni possono essere tassate per profitto o ricevere sussidi per un'espansione più veloce. Riduce la tediosa microgestione delle corporazioni e da un vero valore alle forme di governo legate alle corporazioni. [NEWLINE]Questa opzione di gioco richiede più giocatori per soddisfare i requisiti per la generazione delle corporazioni. Sia tu che le IA dovete essere nell'era industriale, poiché i requisiti delle corporazioni sono sbloccati in questa era. Se sei in anticipo rispetto all'IA, allora dovresti vendere tecnologia all'IA, in modo che le corporazioni si generino.</Italian>
+		<Italian>Le corporazioni si espanderanno dinamicamente, senza intervento del giocatore e si comporteranno più come corporazioni del mondo reale, slegate dai governi centrali[NEWLINE][NEWLINE]Le corporazioni possono essere tassate per profitto o ricevere sussidi per un'espansione più veloce (riduce la tediosa microgestione delle corporazioni e da un vero valore alle forme di governo legate alle corporazioni)[NEWLINE][NEWLINE]Questa opzione di gioco richiede più giocatori per soddisfare i requisiti per la generazione delle corporazioni, sia il giocatore che le IA dovranno essere nell'era industriale, poiché i requisiti delle corporazioni sono sbloccati in questa era (se sei in anticipo rispetto all'IA, allora dovresti vendere tecnologia all'IA, in modo che le corporazioni si generino)</Italian>
 		<Spanish>Las corporaciones crecerán y se expandirán dinámicamente, sin intervención del jugador, comportándose de forma más parecida a las corporaciones del mundo real, sin estar ligadas a los gobiernos centrales. Se las puede gravar con impuestos para obtener beneficios, o bien se las puede subvencionar para ayudar a acelerar su expansión por tu nación. Reduce la tediosa microgestión de las corporaciones, y da sentido e importancia a las políticas corporativistas.</Spanish>
 		<Polish>Korporacje będą się rozprzestrzeniały i rosły dynamicznie bez interwencji gracza, tak jak w korporacje w prawdziwym świecie i nie związane z rządem. Korporacje mogą płacić podatki dla zysku lub otrzymywać dotacje dla szybszej ekspansji. Zmniejsza mikro zarządzanie korporacjami i daje korporacją realną wartość oraz znaczenie.</Polish>
 		<Russian>Корпорации будут расширяться и расти динамично, без участия игрока, больше напоминая реальные транснациональные корпорации, и не привязаны к центральным правительствам. Корпорации могут облагаться налогом на прибыль, или быть субсидированы из казны для ускоренного роста. Это сокращает утомительное микроуправление корпорациями, и придает корпоративной политике реальную ценность и смысл.</Russian>
@@ -1212,7 +1212,7 @@
 		<English>Culture spreads from cities in a more realistic fashion, over low lying areas more quickly than peaks, hills, or jungles. Further, the city may only claim up to the adjacent 4 tiles rather than all 8 on placement; together, this drastically reduces the rate of border growth of cities.[NEWLINE]NOTE: When enabled along with "Minimum City Borders" ON and "City starts with 1 tile" OFF, the rate of border growth will be less harsh, falling roughly halfway between vanilla and RCS proper. Use this combination of settings if you find RCS too inhibiting.</English>
 		<French>L'expansion de Culture des Villes s'opère de manière plus réaliste, de manière régulière, et sur les zones accessibles plus rapidement que sur les collines ou les Jungles.</French>
 		<German>Die eigene Kultur breitet sich von Städten nun realistischer aus, schneller im Flachland, langsamer in Bergen, Hügeln oder im Dschungel.</German>
-		<Italian>La cultura si espande dalle città in modo più realistico, più velocemente sulle aree pianeggianti rispetto a colline, picchi e giungle. [NEWLINE]Se abilitata insieme all'opzione "le città iniziano con una sola casella", la prima espansione acquisirà solo le 4 caselle che condividono un bordo con la città invece di tutte le 8 caselle adiacenti.</Italian>
+		<Italian>La cultura si espande dalle città in modo più realistico, più velocemente sulle aree pianeggianti rispetto a colline, picchi e giungle[NEWLINE][NEWLINE]Se abilitata insieme all'opzione le città iniziano con una sola casella, la prima espansione acquisirà solo le 4 caselle che condividono un bordo con la città invece di tutte le 8 caselle adiacenti</Italian>
 		<Spanish>La cultura de las ciudades se expande de forma más realista, más rápido en zonas más accesibles y de baja altitud que en montañas, colinas o selvas.</Spanish>
 		<Polish>Rozprzestrzenianie kultury wokół miast ma dzięki tej opcji lepszy wygląd, puste przestrzenie są przejmowane szybciej niż np. góry, wzgórza lub dżungle.</Polish>
 		<Russian>Êóëüòóðà ðàñïðîñòðàíÿåòñÿ èç ãîðîäîâ â áîëåå ïðèâëåêàòåëüíûå äëÿ æèçíåäåÿòåëüíîñòè ðàéîíû íà êàðòå, áîëåå áûñòðî â íèçèíàõ, ÷åì íà õîëìàõ, ãîðàõ èëè äæóíãëÿõ.</Russian>
@@ -1231,7 +1231,7 @@
 		<German>Die Stadtverteidigung aus Schutzeinrichtungen wie Stadtmauern lässt sich nicht mehr komplett zerstören. Viele Schutzeinrichtungen sorgen außerdem dafür, dass die Stadtverteidigung zunächst auf einen bestimmten Wert reduziert werden muss, bevor die Stadt direkt angegriffen werden kann.</German>
 		<French>Les avantages de la défense de la ville de nombreux bâtiments défensifs, tels que les murs, ne peuvent pas être entièrement supprimés. De nombreux bâtiments défensifs imposent que le niveau de défense de la ville soit réduit à un niveau particulier avant que la ville puisse être attaquée. Plus de développements à venir.</French>
 		<Russian>Îáîðîíà ãîðîäà çàâèñèò îò ìíîæåñòâà îáîðîíèòåëüíûõ ñîîðóæåíèé, òàêèõ êàê ñòåíû, êîòîðûå íå ìîãóò áûòü ïîëíîñòüþ ðàçðóøåíû. Ìíîæåñòâî îáîðîíèòåëüíûõ ñîîðóæåíèé óñèëèâàþò óðîâåíü çàùèòû, êîòîðûé äîëæåí áûòü óìåíüøåí äî îïðåäåëåííîãî óðîâíÿ, ïðåæäå ÷åì ãîðîä ìîæåò ïîäâåðãíóòüñÿ íàïàäåíèþ. Áîëüøå ðàçâèòèÿ â áóäóùåì.</Russian>
-		<Italian>La difesa della città beneficia di molti edifici difensivi, come le mura, che non possono essere completamente rimossi. Molti edifici difensivi impongono che il livello di difesa della città debba essere ridotto a un livello particolare prima che la città possa essere attaccata. Altri sviluppi in arrivo.</Italian>
+		<Italian>La difesa della città beneficia di molti edifici difensivi, come le mura, che non possono essere completamente rimossi[NEWLINE][NEWLINE]Molti edifici difensivi impongono che il livello di difesa della città debba essere ridotto a un livello particolare prima che la città possa essere attaccata. Altri sviluppi in arrivo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ANIMAL_RECKLESS</Tag>
@@ -1247,7 +1247,7 @@
 		<German>Schaltet die verbesserte Tierintelligenz aus und lässt Tiere wieder wesentlich öfter angreifen.</German>
 		<French>Rend les animaux beaucoup plus susceptibles d'attaquer sans égard aux cotes ou à la personnalité animale.</French>
 		<Russian>Óâåëè÷èâàåò âåðîÿòíîñòü àòàêè æèâîòíîãî áåçîòíîñèòåëüíî øàíñîâ íà ïîáåäó èëè åãî âèäà.</Russian>
-		<Italian>Rende gli animali molto più propensi ad attaccare indipendentemente dalle probabilità o dalla loro personalità.</Italian>
+		<Italian>Rende gli animali molto più propensi ad attaccare indipendentemente dalle probabilità o dalla loro personalità</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_RELIGION_DISABLING</Tag>
@@ -1263,7 +1263,7 @@
 		<English>Religious buildings of non-state religion go mostly inactive by default but effect may be avoided by strategic decisions. WARNING: Option in Beta Testing phase and under further ongoing development.</English>
 		<French>Les Bâtiments religieux d'une religion qui n'est pas la Religion d'Etat sont inactifs par défaut. Mais cet effet peut être annulé par des décisions stratégiques. ATTENTION: Option en Beta Test et nécessitant un développement futur.</French>
 		<German>Bei Staatsreligionen werden die Gebäude anderer Religionen standardmäßig deaktiviert, aber dieser Effekt kann durch strategische Entscheidungen umgangen werden. ACHTUNG! Diese Option befindet sich in der Betaphase.</German>
-		<Italian>Gli edifici religiosi di una religione non di stato diventano per lo più inattivi per impostazione predefinita, ma l'effetto può essere evitato con decisioni strategiche. ATTENZIONE: opzione in fase di beta testing e di ulteriore sviluppo.</Italian>
+		<Italian>Gli edifici religiosi di una religione non di stato diventano per lo più inattivi per impostazione predefinita, ma l'effetto può essere evitato con decisioni strategiche (ATTENZIONE: opzione in fase di beta testing e di ulteriore sviluppo)</Italian>
 		<Polish>Budynki Religijne religii nienarodowej są w większości wyłączone, ale skutków tego można uniknąć poprzez strategiczne decyzje. Opcja w fazie Beta.</Polish>
 		<Russian>Ðåëèãèîçíûå çäàíèÿ íåãîñóäàðñòâåííîé ðåëèãèè ïî óìîë÷àíèþ â îñíîâíîì íåàêòèâíû, íî ýòîãî ìîæíî èçáåæàòü ïóòåì ïðèíÿòèÿ ñòðàòåãè÷åñêèõ ðåøåíèé. ÂÍÈÌÀÍÈÅ: Îïöèÿ â ñòàäèè òåñòèðîâàíèÿ è äàëüíåéøåãî ðàçâèòèÿ.</Russian>
 	</TEXT>
@@ -1282,7 +1282,7 @@
 		<English>Enables the Revolution mod component: New rebel civs will attempt to breakaway from an empire if their needs are not being met. WARNING: This option makes AI less challenging. Revolution mod hasn't been properly maintained and updated in C2C.</English>
 		<French>Active le composant de mod de révolution : Des rebelles peuvent tenter de se révolter et devenir indépendants d'un empire si leurs besoins ne sont pas satisfaits. AVERTISSEMENT : cette option rend l'IA moins difficile. Le mod Revolution n'a pas été correctement entretenu et mis à jour dans C2C.</French>
 		<German>Deaktiviert die Revolution-Mod: Es wird keine Rebellionen und Abspaltungsbestrebungen geben, wenn die Bedürfnisse der Bevölkerung nicht beachtet werden.</German>
-		<Italian>Nuove civiltà ribelli possono tentare la secessione da un impero se i loro bisogni non vengono soddisfatti. ATTENZIONE: questa opzione rende l'IA meno competitiva. La mod rivoluzioni non è stata adeguatamente mantenuta e aggiornata in C2C.</Italian>
+		<Italian>Nuove civiltà ribelli possono tentare la secessione da un impero se i loro bisogni non vengono soddisfatti (ATTENZIONE: questa opzione rende l'IA meno competitiva, la mod rivoluzioni non è stata adeguatamente mantenuta e aggiornata in C2C)</Italian>
 		<Spanish>Se desactiva el componente Revolution: no habrá civilizaciones rebeldes que intenten independizarse de un imperio si sus necesidades no son satisfechas.</Spanish>
 		<Polish>Wyłącza mod Rewolucje: nowe cywilizacje nie będą się odłączać od cywilizacji macierzystej.</Polish>
 		<Russian>Включает сабмод «Revolution»: новые мятежные фракции будут пытаться отколоться от державы, если не будут удовлетворены их требования. ВНИМАНИЕ: эта опция делает ИИ менее сложным. Мод «Revolution» не поддерживался и не обновлялся должным образом в C2C.</Russian>
@@ -1302,7 +1302,7 @@
 		<English>Ruthless AI is a step up from Aggressive AI. The AI will be more backstabbing, less predictable, more ready to declare war on everyone, less likely to forgive past slights, and will trade with your worst enemies, just to spite you. Expect no mercy, for you shall receive none![NEWLINE]This option requires, and thus will force, Aggressive AI to be ON!</English>
 		<French>IA Sans merci est le niveau au-dessus de l'IA Aggressive. L'IA est plus sournoise, moins prévisible, prête à déclarer la Guerre à tout moment, ne pardonne pas, et va commercer avec vos pires ennemis, juste pour vous déstabiliser. N'attendez aucune pitié, vous n'en recevrez pas!</French>
 		<German>Skrupellose KI geht einen Schritt weiter als Aggressive KI. Die KI wird hinterhältiger sein, schlechter berechenbar, schneller Kriege erklären, frühere Vergehen weniger schnell vergessen und mit Euren schlimmsten Feinden handeln, nur aus Boshaftigkeit Euch gegenüber. Erwartet keine Gnade, es wird keine geben!</German>
-		<Italian>IA spietata è un passo in più rispetto all'opzione "IA aggressiva". L'intelligenza artificiale sarà più traditrice, meno prevedibile, più pronta a dichiarare guerra a tutti, meno propensa a perdonare le offese passate e farà affari con i tuoi peggiori nemici, solo per farti dispetto. Non aspettarti pietà, perché non ne riceverai!</Italian>
+		<Italian>IA spietata è un passo in più rispetto all'opzione IA aggressiva, l'intelligenza artificiale sarà più traditrice, meno prevedibile, più pronta a dichiarare guerra a tutti, meno propensa a perdonare le offese passate e farà affari con i peggiori nemici del giocatore, solo per fargli dispetto[NEWLINE][NEWLINE]Nessuna pietà!</Italian>
 		<Spanish>"IA despiadada" es el siguiente nivel de "IA agresiva". La IA será más traicionera, menos predecible, más propensa a declarar la guerra a otros, menos proclive a olvidar conflictos pasados, y comerciará con tus peores enemigos simplemente por despecho. ¡No esperes clemencia, pues no la recibirás!</Spanish>
 		<Polish>Bezlitosne AI jest stopień wyżej niż Agresywne AI. AI będzie bardziej przebiegłe, mniej przewidywalne, bardziej skłonne do wojny z każdym oraz będzie handlować z Twoimi największymi wrogami by Cię zdenerwować. Nie licz na litość wobec Ciebie!</Polish>
 		<Russian>Áåñïîùàäíûé ÈÈ - ýòî ñâåðõàãðåññèâíîå ïîâåäåíèå ïðîòèâíèêîâ. ÈÈ áóäåò áîëåå ñêëîíåí ê ïðåäàòåëüñòâó, ìåíåå ïðåäñêàçóåì, áîëåå ãîòîâ îáúÿâèòü âîéíó, ìåíåå ñêëîíåí ïðîñòèòü ïðîøëûå îáèäû è áóäåò òîðãîâàòü ñ õóäøèì èç ñâîèõ âðàãîâ, òîëüêî äëÿ òîãî, ÷òîáû äîñàäèòü âàì.</Russian>
@@ -1312,7 +1312,7 @@
 		<English>Combat - Surround and Destroy</English>
 		<French>Encercler et Détruire</French>
 		<German>Einkesselung</German>
-		<Italian>Circonda e distruggi</Italian>
+		<Italian>Circonda e distruggi (mod di combattimento per C2C)</Italian>
 		<Spanish>Rodea y destruye</Spanish>
 		<Polish>Otocz i zniszcz</Polish>
 		<Russian>Îêðóæèòü è óíè÷òîæèòü</Russian>
@@ -1322,7 +1322,7 @@
 		<English>WARNING: AI underutilizes this option, consider it a crutch for the player.[NEWLINE]Surround and Destroy adds military bonuses for surrounding enemy troops and cities, simulating real world land ambushes.</English>
 		<French>Ajoute un bonus militaire pour l'encerclement des troupes ou villes ennemies, simulant les embuscades du monde réel.</French>
 		<German>Ihr erhaltet einen militärischen Bonus, wenn feindliche Truppen und Städte eingekesselt werden. Dies simuliert die großen Kesselschlachten der Weltgeschichte.</German>
-		<Italian>L'opzione circonda e distruggi aggiunge bonus militari per aver circondato città e truppe nemiche, simulando le imboscate come nel mondo reale.</Italian>
+		<Italian>L'opzione circonda e distruggi aggiunge bonus militari per aver circondato città e truppe nemiche, simulando le imboscate come nel mondo reale</Italian>
 		<Spanish>Rodea y destruye añade bonificaciones militares por rodear a las tropas y ciudades enemigas, simulando las emboscadas del mundo real.</Spanish>
 		<Polish>Otocz i zniszcz dodaje militarnych bonusów przeciw otaczaniu wrogich jednostek i miast, symulują prawdziwe zasadzki</Polish>
 		<Russian>Äîáàâëÿåò áîíóñû äëÿ îêðóæàþùèõ âðàæåñêèå ãîðîäà âîéñê, èìèòèðóÿ ðåàëüíóþ îñàäó.</Russian>
@@ -1341,7 +1341,7 @@
 		<English>Units are modified by their Sizes, Volumes, and Combat Qualities (Note: AI under development.)</English>
 		<French>Les Unités possèdent une taille variable et des qualités différentes au combat (Note: L'IA s'adaptant à ce mode est encore en développement.)</French>
 		<German>Mit dieser Modifikation werden alle Einheiten neben ihren normalen Werten auch durch ihre Größe, Gruppenstärke und Kampfqualität definiert. (Hinweis: Die KI ist noch nicht ausgereift.)</German>
-		<Italian>Le unità vengono differenziate in base alla loro stazza, al loro volume e alle qualità in combattimento (Nota: AI in sviluppo.)</Italian>
+		<Italian>Le unità vengono differenziate in base alla loro stazza, al loro volume e alle qualità in combattimento (Nota: AI in sviluppo)</Italian>
 		<Polish>Jednostki sa modyfikowane przez ich Wielkość, Rozmiar i Waleczność (Informacja: AI w trakcie implementacji)</Polish>
 		<Russian>Þíèòû èçìåíåíû â ðàçìåðàõ, êîëè÷åñòâå, è áîåâûõ êà÷åñòâàõ. (Ïðèìå÷àíèå: ÈÈ â ñòàäèè ðàçðàáîòêè)</Russian>
 	</TEXT>
@@ -1360,7 +1360,7 @@
 		<English>Not recommended.[NEWLINE]All players start as minor civs, meaning they are at war with everyone. Your civ will settle into a full civ and you'll be able to conduct diplomacy after you discover Writing.[NEWLINE]The AI performs badly in such a scenario!!</English>
 		<French>Not recommended.[NEWLINE]Tous les joueurs commencent en tant que civilisations mineures, et sont automatique en guerre contre tous les autres. Votre civilisation sortira de la barbarie et pourra conduire des actions diplomatiques après la découverte de l'écriture.[NEWLINE]The AI performs badly in such a scenario!!</French>
 		<German>Not recommended.[NEWLINE]Alle Spieler befinden sich zu Beginn des Spiels mit allen anderen Zivilisationen im permanenten Kriegszustand. Erst mit der Entdeckung der Schrift wird Diplomatie ermöglicht und die jeweilige Nation steigt zu einer vollwertigen Zivilisation auf.[NEWLINE]The AI performs badly in such a scenario!!</German>
-		<Italian>Non consigliato.[NEWLINE]Tutti i giocatori cominciano come civiltà minori, il che significa che sono in guerra con tutti. Diventerà una vera civiltà e sarai in grado di condurre la diplomazia dopo che scoprirai la scrittura.[NEWLINE]L'intelligenza artificiale si comporta male in uno scenario del genere!!</Italian>
+		<Italian>Tutti i giocatori cominciano come civiltà minori, il che significa che sono in guerra con tutti, diventeranno una vera civiltà e saranno in grado di condurre la diplomazia dopo che scopriranno la scrittura (L'IA si comporta male in uno scenario del genere)</Italian>
 		<Spanish>Not recommended.[NEWLINE]Todos los jugadores empiezan como civilizaciones menores, lo que significa que están en guerra con todos los demás. Tu civilización podrá convertirse en una civilización completa y usar la diplomacia después del descubrimiento de la escritura.[NEWLINE]The AI performs badly in such a scenario!!</Spanish>
 		<Polish>Not recommended.[NEWLINE]Wszyscy gracze rozpoczynają jako podrzędne cywilizacje i są w stanie wojny z pozostałymi. Twoja cywilizacja stanie się główną cywilizacją mogącą zawierać stosunki dyplomatyczne dopiero po odkryciu Pisma.[NEWLINE]The AI performs badly in such a scenario!!</Polish>
 		<Russian>Не рекомендуется.[NEWLINE] Все игроки стартуют как мелкие цивилизации, то есть все воюют со всеми. Ваша цивилизация станет полноценной, и вы сможете вести дипломатию, когда откроете для себя письменность.[NEWLINE] !! ИИ в таких условиях плохо работает!!</Russian>
@@ -1379,7 +1379,7 @@
 		<English>Leaders begin the game with no Positive Traits. (This also disables the first Negative Trait and the first selections are awarded sooner on the Developing Leaders Option.)</English>
 		<French>Les Leaders commencent sans aucun trait positif. (Désactive le premier trait négatif: le premier choix apparaît plus tôt dans les Options de développement des Leaders.)</French>
 		<German>Alle Staatsoberhäupter starten im Spiel ohne positive Charakterzüge. (Der erste negative Charakterzug wird ebenfalls deaktiviert, dafür werden bei aktivierter Führungskräfteentwicklung die ersten Auswahlmöglichkeiten früher angeboten.)</German>
-		<Italian>I leader cominciano la partita senza tratti positivi; quest'opzione disabilita anche il primo tratto negativo, e le scelte dovute alla personalità in sviluppo sono disponibili prima per l'opzione "sviluppo dei leader".</Italian>
+		<Italian>I leader cominciano la partita senza tratti positivi, quest'opzione disabilita anche il primo tratto negativo e le scelte della personalità sono disponibili prima grazie all'opzione sviluppo dei leader</Italian>
 		<Polish>Przywódcy rozpoczynają bez Pozytywnych Cech. (Wyłącza także pierwszą negatywną cechę i pierwszy wybór pojawia się szybciej na Opcji Ulepszania Przywódców)</Polish>
 		<Russian>Ëèäåðû íà÷èíàþò èãðó áåç êàêèõ-ëèáî ïîëîæèòåëüíûõ õàðàêòåðèñòèê. (This also disables the first Negative Trait and the first selections are awarded sooner on the Developing Leaders Option)</Russian>
 	</TEXT>
@@ -1397,7 +1397,7 @@
 		<English>Units support each other in their stacks.</English>
 		<French>Les Unités se soutiennent mutuellement dans les Groupes d'unités.</French>
 		<German>Die Einheiten in einer Gruppe unterstützen sich gegenseitig.</German>
-		<Italian>Le unità si supportano a vicenda all'interno di un gruppo sulla stessa casella.</Italian>
+		<Italian>Le unità si supportano a vicenda all'interno di un gruppo sulla stessa casella</Italian>
 		<Polish>Jednostki wspomagają się nawzajem w grupie.</Polish>
 		<Russian>Þíèòû ïîääåðæèâàþò äðóã äðóãà â ñâîèõ ñòåêàõ.</Russian>
 	</TEXT>
@@ -1416,7 +1416,7 @@
 		<English>Tech knowledge will slowly diffuse to civs that are behind.</English>
 		<French>Diffusion des Techs: La Connaissance des Technologies sera lentement diffusée aux autres civilisations.</French>
 		<German>Langsame Verbreitung von technologischem Wissen an Zivilisationen, die noch nicht so weit entwickelt sind.</German>
-		<Italian>Le tecnologie si diffonderanno lentamente alle civiltà più arretrate.</Italian>
+		<Italian>Le tecnologie si diffonderanno lentamente alle civiltà più arretrate</Italian>
 		<Spanish>Componente TechDiffusion: el conocimiento no se difundirá lentamente hacia las civilizaciones más atrasadas.</Spanish>
 		<Polish>dyfuzję technologii: poznane technologie nie będą powoli dyfuzjowały do cywilizacji które są z tyłu.</Polish>
 		<Russian>Утечка технологий: технические знания более развитых игроков будут постепенно распространяться среди отстающих цивилизаций.</Russian>
@@ -1435,7 +1435,7 @@
 		<French>Avec cette option, les Animaux apprivoisés sont automatiquement téléportés dans la ville la plus proche. Sans l'option, la téléportation ne sera effective qu'à partir de la technologie 'Vie sédentaire'.</French>
 		<German>Bei eingeschalteter Option werden im Kampf eingefangene Tiere immer in die nächstgelegene Stadt teleportiert. Im normalen Spiel passiert das erst, wenn die betreffende Zivilisation die Sesshaftigkeit entdeckt hat.</German>
 		<Russian>Ñ ïîìîùüþ ýòîé îïöèè, ïðèðó÷åííûå æèâîòíûå âñåãäà òåëåïîðòèðóþòñÿ â áëèæàéøèé ãîðîä. Áåç ýòîãî, îíè, êàê ïðàâèëî, ìîãóò ñäåëàòü ýòî, òîëüêî êîãäà âàøà öèâèëèçàöèÿ èçó÷èëà òåõíîëîãèþ îñåäëîãî îáðàçà æèçíè.</Russian>
-		<Italian>Con questa opzione, gli animali sottomessi vengono sempre teletrasportati nella città più vicina. Senza di essa, generalmente lo faranno solo dopo che la tua civiltà avrà appreso la tecnologia "stile di vita sedentario".</Italian>
+		<Italian>Gli animali sottomessi vengono sempre teletrasportati nella città più vicina (senza di essa, generalmente lo faranno solo dopo che la tua civiltà avrà appreso la tecnologia stile di vita sedentario)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ENABLE_UNITED_NATIONS</Tag>
@@ -1452,7 +1452,7 @@
 		<English>The United Nations and Apostolic Palace can still be built, even when diplomatic victory is not enabled. Players will be able to hold UN elections, but can not win by becoming the Secretary General.</English>
 		<French>Les Nations Unies et le Palais Apostolique peuvent être construit même si la victoire diplomatique n'est pas activée. Les Joueurs peuvent conduire des Elections, mais ne gagneront pas en étant élu Secrétaire général.</French>
 		<German>Die Vereinten Nationen und der Apostolische Palast können auch dann gebaut werden, wenn der diplomatische Sieg nicht ausgewählt wurde. Spieler werden auch weiterhin in der Lage sein, UN-Wahlen abzuhalten, aber sie können nicht dadurch gewinnen, dass sie zum Generalsekretär gewählt werden.</German>
-		<Italian>Le nazioni unite e il palazzo apostolico possono essere costruiti lo stesso anche quando la vittoria diplomatica non è abilitata. I giocatori potranno tenere le elezioni delle nazioni unite, ma non potranno vincere diventando il segretario generale.</Italian>
+		<Italian>Le nazioni unite e il palazzo apostolico possono essere costruiti lo stesso anche quando la vittoria diplomatica non è abilitata (i giocatori potranno tenere le elezioni delle nazioni unite, ma non potranno vincere diventando il segretario generale)</Italian>
 		<Spanish>Las Naciones Unidas y el Palacio Apostólico podrán ser construidos aunque la victoria diplomática esté desactivada. Los jugadores podrán celebrar votaciones, pero no podrán ganar convirtiéndose en Secretario General.</Spanish>
 		<Polish>Projekty Narodów Zjednoczonych i Pałacu Apostolskiego mogą zostać zbudowane nawet wtedy, gdy zwycięstwo dyplomatyczne jest wyłączone. Gracze będą mogli przeprowadzić wybory ONZ, ale nie mogą wygrać, stając się Sekretarzem Generalnym.</Polish>
 		<Russian>Îðãàíèçàöèÿ Îáúåäèíåííûõ Íàöèé è Àïîñòîëüñêèé Äâîðåö ìîãóò âñå åùå áûòü ïîñòðîåíû, äàæå êîãäà äèïëîìàòè÷åñêàÿ ïîáåäà íå ïîçâîëåíà. Èãðîêè áóäóò â ñîñòîÿíèè ïðîâåñòè âûáîðû ÎÎÍ, íî íå ìîãóò ïîáåäèòü, ñòàíîâÿñü Ãåíåðàëüíûì ñåêðåòàðåì.</Russian>
@@ -1471,7 +1471,7 @@
 		<English>Removes the limits on the amount of National Units a player or team may train and maintain.</English>
 		<French>Supprime les limitations du nombre d'Unités Nationales par joueur ou équipe</French>
 		<German>Entfernt die Begrenzung bei der Anzahl an Nationaleinheiten, die ein Spieler oder Team unterhalten können.</German>
-		<Italian>Rimuove i limiti sul numero delle unità nazionali che un giocatore può addestrare e mantenere.</Italian>
+		<Italian>Rimuove i limiti sul numero delle unità nazionali che un giocatore può addestrare e mantenere</Italian>
 		<Polish>Usuwa ograniczenie ilościowe na narodowe jednostki.</Polish>
 		<Russian>Ñíèìàåò îãðàíè÷åíèå íà êîëè÷åñòâî íàöèîíàëüíûõ åäèíèö èãðîêà èëè êîìàíäû, êîòîðûå ìîæíî òðåíèðîâàòü è ñîäåðæàòü.</Russian>
 	</TEXT>
@@ -1490,7 +1490,7 @@
 		<English>Removes the restriction on the number of wonders that can be built in one city.</English>
 		<French>Enlève la restriction du nombre de Merveilles que peut construire une Ville</French>
 		<German>Entfernt die Begrenzung bei der Anzahl an Wundern, die in einer Stadt gebaut werden können.</German>
-		<Italian>Rimuove la restrizione sul numero delle meraviglie che possono essere costruite in una città.</Italian>
+		<Italian>Rimuove la restrizione sul numero delle meraviglie che possono essere costruite in una città</Italian>
 		<Spanish>Quita la restricción en el número de maravillas realizables en una ciudad.</Spanish>
 		<Polish>Usuwa ograniczenie budowy ilości cudów na miasto</Polish>
 		<Russian>Óäàëÿåò îãðàíè÷åíèå íà ÷èñëî ÷óäåñ, êîòîðûå ìîãóò áûòü ïîñòðîåíû â îäíîì ãîðîäå.</Russian>
@@ -1511,7 +1511,7 @@
 		<German>Erweiterte Erstschlagmöglichkeiten und bessere Differenzierung zwischen Fern- und Nahkampf bei den Fähigkeiten der einzelnen Einheiten.</German>
 		<Polish>Zaawansowane walka wręcz i dystansowa i poprawiony atak z zaskoczenia.</Polish>
 		<Russian>Усилены Первый удар и разница между дистанционным и рукопашным боем среди способностей отряда.</Russian>
-		<Italian>Primo attacco avanzato e differenziazione tra combattimento a distanza e corpo a corpo tra le abilità delle unità.</Italian>
+		<Italian>Primo attacco avanzato e differenziazione tra combattimento a distanza e corpo a corpo tra le abilità delle unità</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_EXP_UPSCALED_BUILDING_AND_UNIT_COSTS</Tag>
@@ -1527,7 +1527,7 @@
 		<English>Building and unit costs, as well as worker actions time, have all been increased by 40%. This generally puts more emphasis and importance on the choices you make, particularly in relation to what a city chooses to build. Pair it with upscaled research costs to have overall longer gameplay.</English>
 		<French>Les coûts des unités et des bâtiments sont augmentés de 40%, ainsi que le coût des actions des ouvriers. Cette option donne plus d'importance au choix dans la construction de vos villes.</French>
 		<German>Die Bau-/Trainingskosten für Gebäude und Einheiten sind um 40 % erhöht, ebenso wie die Arbeitszeit von Bautrupps etc. Mit dieser Option sollte man jegliche Bauentscheidungen wirklich genau abwägen.</German>
-		<Italian>Il costo di unità ed edifici, oltre alla lunghezza delle azioni dei lavoratori, è stato incrementato approssimativamente del 40%. Questo pone più enfasi ed importanza sulle scelte che fai, in particolar modo riguardo a cosa la tua città decide di costruire. Abbinalo all'opzione "costi di ricerca aumentati" per avere un gameplay complessivamente più lungo.</Italian>
+		<Italian>Il costo di unità ed edifici, oltre alla lunghezza delle azioni dei lavoratori, è stato incrementato approssimativamente del 40%[NEWLINE][NEWLINE]Questo pone più enfasi ed importanza sulle scelte, in particolar modo riguardo a cosa tua città decide di costruire (abbinalo all'opzione costi di ricerca aumentati per avere un gameplay complessivamente più lungo)</Italian>
 		<Polish>Budynki i jednostki kosztują więcej o 40%. Generalnie zwiększa znaczenie Twoich wyborów w mieście.</Polish>
 		<Russian>Öåíà çäàíèé è þíèòîâ, êàê è ñòîèìîñòü ðàáîò óâåëè÷åíû ïðèìåðíî íà 35%. Ýòî ïðàâèëî äåëàåò áîëüøèé àêöåíò íà âàøåì âûáîðå, îñîáåííî òîãî, ÷òî ïîñòðîèòü â ãîðîäå.</Russian>
 	</TEXT>
@@ -1543,7 +1543,7 @@
 		<English>Technology costs have been increased by 40%. Use it if you're an experienced player and want calendar to keep up with you. This option alone will result in overall relaxed game. Pair it with upscaled building and unit costs to have overall longer gameplay.</English>
 		<French>Les coûts technologiques ont augmenté de 40%. Utilisez-le si vous êtes un joueur expérimenté et que vous souhaitez que le calendrier vous suive. Cette option à elle seule entraînera un jeu globalement détendu. Associez-le à des coûts de construction et unitaires améliorés pour un gameplay globalement plus long.</French>
 		<Russian>Затраты на технологию были увеличены на 40%. Используйте его, если вы опытный игрок и хотите, чтобы календарь не отставал от вас. Одна только эта опция приведет к общей расслабленной игре. Сопоставьте это с повышенными затратами на строительство и единицу, чтобы иметь более длительный игровой процесс.</Russian>
-		<Italian>I costi della ricerca di tecnologie sono stati aumentati del 40%. Usalo se sei un giocatore esperto e vuoi avere più tempo tra le ricerche. Questa opzione da sola si tradurrà in un gioco complessivamente rilassato. Abbinalo all'opzione "costi di produzione aumentati" per avere un gameplay complessivamente più lungo.</Italian>
+		<Italian>I costi della ricerca di tecnologie sono stati aumentati del 40%, per i giocatori esperti che vogliono avere più tempo tra le ricerche[NEWLINE][NEWLINE]Questa opzione da sola si tradurrà in un gioco complessivamente rilassato, abbinata a "costi di produzione aumentati" produrrà un gameplay complessivamente più lungo)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_COMBAT_VANILLA_ENGINE</Tag>
@@ -1559,7 +1559,7 @@
 		<French>Cette option ramène le système de combat à un niveau beaucoup plus proche de l'original. En combat C2C, les unités recalculent leur force à chaque round en fonction des dégâts qu'elles peuvent avoir subis lors du dernier round de combat. De plus, ce n'est pas seulement une unité qui frappe à chaque tour, mais les deux peuvent frapper et les deux peuvent manquer. La différence change certains aspects et la sensation du combat et ce que vous pouvez attendre des résultats du combat. Par exemple, les premières frappes deviennent beaucoup plus puissantes qu'elles ne l'étaient sur Vanilla BtS parce que les frappes prises avant que vous ne puissiez même contre-attaquer rendront toutes les attaques suivantes que vous rendez beaucoup plus faibles. Essentiellement, cela signifie qu'un nombre écrasant d'unités ont de meilleures chances d'user des unités plus fortes, tandis que les règles C2C supposées permettent aux unités de qualité supérieure d'être beaucoup plus puissantes contre des unités adverses moins importantes.</French>
 		<German>Diese Einstellung setzt die durch C2C vorgenommenen Änderungen am Kampfsystem zurück, so dass es wieder viel näher am Original-BtS-Kampfsystem ist.</German>
 		<Russian>Ýòà îïöèÿ âîçâðàùàåò áîåâóþ ñèñòåìó áëèæå ê îðèãèíàëüíîé. В сражении отряды пересчитывают свою силу каждый раунд на основе урона, который они могли получить в последнем раунде боя. Более того, за каждый раунд может поснести урон не только один отряд, но и оба одновременно, как и промахнуться. Разница действительно меняет некоторые аспекты и ощущение боя, а также то, что вы можете ожидать от результатов битвы. Например, первые удары становятся намного более мощными, чем они были в оригинальной BtS, поскольку удары, полученные до того, как вы сможете даже контратаковать, сделают намного слабее все ваши последующие атаки. По сути, это означает, что подавляющее количество отрядов имеет больше шансов измотать более сильные юниты, тогда как принятые правила в C2C позволяют элитным отрядам быть намного более мощными против слабейших юнитов противника.</Russian>
-		<Italian>Questa opzione riporta il sistema di combattimento a uno molto più vicino all'originale. Nel combattimento C2C, le unità ricalcolano la loro forza in ogni round in base ai danni che hanno subito nel turno precedente. Inoltre, non è solo un'unità che colpisce a ogni round, ma entrambe possono colpire ed entrambe possono mancare il bersaglio. La differenza cambia alcuni aspetti e la sensazione del combattimento e ciò che puoi aspettarti dai risultati del combattimento. Ad esempio, i primi colpi diventano molto più potenti di quanto non fossero nel gioco originale perché i colpi presi prima ancora che tu possa contrattaccare renderanno tutti gli attacchi successivi molto più deboli. In sostanza, ciò significherà che un numero enorme di unità avrà maggiori possibilità di indebolire le unità più forti, mentre le regole C2C consentono alle unità di qualità superiore di essere molto più potenti contro le unità avversarie inferiori.</Italian>
+		<Italian>Questa opzione riporta il sistema di combattimento a uno molto più vicino all'originale[NEWLINE][NEWLINE]Nel combattimento C2C, le unità ricalcolano la loro forza in ogni round in base ai danni che hanno subito nel turno precedente[NEWLINE][NEWLINE]Inoltre, non è solo un'unità che colpisce a ogni round, ma entrambe possono colpire ed entrambe possono mancare il bersaglio[NEWLINE][NEWLINE]La differenza cambia alcuni aspetti e la sensazione del combattimento e ciò che si può aspettare dai risultati del combattimento (ad esempio, i primi colpi diventano molto più potenti di quanto non fossero nel gioco originale perché i colpi presi prima ancora che tu possa contrattaccare renderanno tutti gli attacchi successivi molto più deboli)[NEWLINE][NEWLINE]In sostanza, ciò significherà che un numero enorme di unità avrà maggiori probabilità di indebolire le unità più forti, mentre le regole C2C consentono alle unità di qualità superiore di essere molto più potenti contro le unità avversarie inferiori</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_TECH_WIN_FOR_LOSING</Tag>
@@ -1575,7 +1575,7 @@
 		<German>Nationen mit weniger Städten und einer geringeren Bevölkerungsdichte erhalten Forschungsboni, die sich direkt aus dem Abstand zur größten Nation auf der Karte errechnen.</German>
 		<French>Les plus petits pays, par nombre de villes et par population, reçoivent des primes de recherche directement proportionnelles à leur taille par rapport aux plus grands pays joueurs sur la carte. L'influence commence une fois que le joueur entre dans l'ère antique et au-delà.</French>
 		<Russian>Малые по количеству городов и населению нации получают бонусы за исследования в прямой зависимости от того, насколько они меньше держав у крупнейших игроков на карте. Влияние начинается, когда игрок вступает в Античную эпоху и далее.</Russian>
-		<Italian>Le civiltà più piccole, per numero di città e popolazione, ricevono bonus di ricerca in proporzione diretta rispetto a quanto sono più piccole delle nazioni più grandi sulla mappa. L'effetto inizia quando il giocatore entra nell'era antica e continua nelle ere successive.</Italian>
+		<Italian>Le civiltà più piccole, per numero di città e popolazione, ricevono bonus di ricerca in proporzione diretta rispetto a quanto sono più piccole delle nazioni più grandi sulla mappa (l'effetto inizia quando il giocatore entra nell'era antica e continua nelle ere successive)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_COMBAT_WITHOUT_WARNING</Tag>
@@ -1583,7 +1583,7 @@
 		<German>C2C-Kampfmod - Ohne Vorwarnung</German>
 		<French>Mod de Combat C2C - Sans Avert.</French>
 		<Russian>C2C Combat Mod - Áåç ïðåäóïðåæäåíèÿ</Russian>
-		<Italian>Senza avvertimento (mod di combattimento per C2C)</Italian>
+		<Italian>Combattimento stealth (mod di combattimento per C2C)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_COMBAT_WITHOUT_WARNING_HELP</Tag>
@@ -1591,7 +1591,7 @@
 		<German>Diese Mod aktiviert Hinterhalte, Attentate und Modifikatoren durch Tarnung, die dann eine Rolle spielen, wenn eine unsichtbare Einheit angreift.</German>
 		<French>Active les attaques d'embuscade et d'assassinat et les facteurs de combat furtif (frappes furtives et modificateurs de combat furtif) qui entrent en jeu lorsqu'une unité invisible attaque ou lorsqu'une unité en attaque une autre sur la même tuile, ce que les commandes d'embuscade et d'assassinat permettent.</French>
 		<Russian>Включает атаки «Засада» и «Убийство» и факторы «Стелс-битва» («Удары невидимкой» и «Модификаторы стелс-боя»), которые вступают в игру, когда скрытый отряд атакует или когда один отряд атакует другой на той же клетке, что позволяют команды «Засада» и «Убийство».</Russian>
-		<Italian>Abilita le imboscate e gli assassini e fattori per il combattimento furtivo (attacchi furtivi e modificatori di combattimento furtivo) che entrano in gioco quando un'unità invisibile attacca o quando un'unità ne attacca un'altra sulla stessa casella, cose che i comandi di imboscata e assassinio consentono.</Italian>
+		<Italian>Abilita le imboscate e gli assassini e fattori per il combattimento furtivo (attacchi furtivi e modificatori di combattimento furtivo) che entrano in gioco quando un'unità invisibile attacca o quando un'unità ne attacca un'altra sulla stessa casella, cose che le azioni di imboscata e assassinio consentono</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UNIT_XP_FROM_SPECIALISTS</Tag>
@@ -1609,7 +1609,7 @@
 		<German>Spezialisten aus der Stadtbevölkerung sorgen bei passenden produzierten Einheiten in der Stadt für zusätzliche Erfahrungspunkte. So fördern Doktoren z.B. ausgebildete Heilereinheiten.</German>
 		<Polish>Specjaliści przypisani z populacji w mieście bedą generować XP dla jednostek wybudowanych w tym mieście.</Polish>
 		<Russian>Ñïåöèàëèñòû, íàçíà÷åííûå îò íàñåëåíèÿ â ãîðîäå áóäåò ïðåäîñòàâëÿòü íåêîòîðîå êîëè÷åñòâî îïûòà äëÿ íåêîòîðûõ âîåííûõ þíèòîâ, ïðîèçâåäåííûõ â ãîðîäå.</Russian>
-		<Italian>Gli specialisti assegnati dalla popolazione della città offriranno alcuni punti esperienza alle unità prodotte nella città di tipo specificatamente definito.</Italian>
+		<Italian>Gli specialisti assegnati dalla popolazione della città offriranno alcuni punti esperienza alle unità prodotte nella città di tipo specificatamente definito</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UNSUPPORTED_ZONE_OF_CONTROL</Tag>
@@ -1618,14 +1618,14 @@
 		<German>Kontrollzonen</German>
 		<Polish>Strefy Kontroli</Polish>
 		<Russian>Çîíà êîíòðîëÿ</Russian>
-		<Italian>Zona di controllo</Italian>
+		<Italian>Zone di controllo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UNSUPPORTED_ZONE_OF_CONTROL_HELP</Tag>
 		<English>Zone of Control (ZoC) hinders enemy units from walking around manned forts or cities with moats, the effect has a one tile range. A unit that is inside an enemy ZoC cannot move to another plot within the ZoC, but must exit the ZoC before being able to reach other ZoC plots.	Not recommended at the moment as there is a known bug it creates for pathing and some players may find it terribly frustrating with the current forts. The author of this option also believes that it does not represent a fair combat scenario in many cases where you'd prefer to take the hit they threaten and would like to eventually make a form of ZoC that instead generates a free Ranged Assault on the offending unit rather than keeping it from moving at all (as that's the concept behind the effect anyhow.)</English>
 		<French>La zone de contrôle (ZoC) empêche les unités ennemies de marcher autour des forts habités ou des villes avec des douves, l'effet a une portée d'une case. Une unité qui se trouve à l'intérieur d'un ZoC ennemi ne peut pas se déplacer vers une autre parcelle dans le ZoC, mais doit quitter le ZoC avant de pouvoir atteindre d'autres parcelles ZoC. Non recommandé pour le moment car il existe un bug connu qu'il crée pour calcul des chemins et certains joueurs peuvent le trouver terriblement frustrant avec les forts actuels. L'auteur de cette option estime également que cela ne représente pas un scénario de combat équitable dans de nombreux cas où vous préféreriez prendre le coup qu'ils menacent et souhaitez éventuellement créer une forme de ZoC qui génère à la place un assaut à distance gratuit contre le délinquant. l'unité plutôt que de l'empêcher de bouger (comme c'est le concept derrière l'effet de toute façon.)</French>
 		<Russian>Зона контроля (ЗК) мешает вражеским отрядам ходить по фортам с гарнизоном или городам со рвами. Данный эффект действует в радиусе одной клетки. Отряд, оказавшийся внутри вражеской ЗК, не может перейти на другую клетку в пределах ЗК, но должен выйти из ЗК, прежде чем сможет достичь других участков ЗК. Не рекомендуется на данный момент, так как есть известная ошибка, которую он создает для путей, и некоторые игроки могут скверно застраивать текущие форты. Автор этого варианта также считает, что данный сабмод оставляет мало места для честного боя во многих случаях, когда вы предпочитаете принимать удар на угрожаемом участке и хотели бы в конечном итоге создать полосу ЗК, генерирующую вместо этого дармовую дальнюю атаку против агрессора, вместо того, чтобы удерживать его от движения вообще (так как в любом случае это концепция, лежащая в основе эффекта).</Russian>
-		<Italian>La zona di controllo impedisce alle unità nemiche di aggirare forti presidiati o città con fossati, l'effetto ha un raggio di una casella. Un'unità che si trova all'interno di una zona di controllo nemica non può spostarsi su un'altra casella all'interno della zona di controllo, ma deve uscire dalla zona di controllo prima di poter raggiungere altre caselle della zona di controllo. Non raccomandato al momento in quanto c'è un bug e alcuni giocatori potrebbero trovarlo terribilmente frustrante con i forti attuali. L'autore di questa opzione ritiene inoltre che non rappresenti uno scenario di combattimento equo in molti casi in cui preferiresti subire il colpo e vorresti eventualmente creare una forma di zona di controllo che invece genera un assalto a distanza gratuito sull'offensore unità nemica piuttosto che impedirle di muoversi (poiché questo è comunque il concetto alla base dell'effetto).</Italian>
+		<Italian>Le zone di controllo impediscono alle unità nemiche di aggirare forti presidiati o città con fossati, l'effetto ha un raggio di una casella[NEWLINE][NEWLINE]Un'unità che si trova all'interno di una zona di controllo nemica non può spostarsi su un'altra casella all'interno della zona di controllo, ma deve uscire dalla zona di controllo prima di poter raggiungere altre caselle della zona di controllo[NEWLINE][NEWLINE]Non raccomandato al momento in quanto c'è un bug e alcuni giocatori potrebbero trovarlo terribilmente frustrante con i forti attuali, l'autore di questa opzione ritiene inoltre che non rappresenti uno scenario di combattimento equo in molti casi in cui preferiresti subire il colpo e vorresti eventualmente creare una forma di zona di controllo che invece genera un assalto a distanza gratuito sull'offensore unità nemica piuttosto che impedirle di muoversi (poiché questo è comunque il concetto alla base dell'effetto)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_EXP_ALWAYS_RAZE_CITIES</Tag>
@@ -1635,7 +1635,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_EXP_ALWAYS_RAZE_CITIES_HELP</Tag>
 		<English>Cities will be auto-razed when they would normally change owner.[NEWLINE]Exceptions are made for the Barbarian civ option and revolution option, city ownership change can occur from these options. Cities won't be auto-razed when barbs conquer a city because of this option since there's an option called "Barbarian Always Raze".</English>
-		<Italian>Le città verranno rase al suolo automaticamente quando normalmente cambierebbero proprietario. [NEWLINE]Esistono eccezioni per l'opzione "civiltà barbare" e "rivoluzioni", con queste opzioni può verificarsi un cambio di proprietà della città. Le città non verranno rase al suolo automaticamente quando i barbari conquistano una città a causa di questa opzione poiché esiste un'opzione chiamata "i barbari radono sempre al suolo.</Italian>
+		<Italian>Le città verranno rase al suolo automaticamente quando normalmente cambierebbero proprietario (esistono eccezioni se le opzioni civiltà barbare e rivoluzioni sono attivate può verificarsi un cambio di proprietà della città)[NEWLINE][NEWLINE]Le città non verranno rase al suolo automaticamente quando i barbari conquistano una città a causa di questa opzione poiché esiste un'opzione chiamata i barbari radono sempre al suolo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CULTURE_EQUILIBRIUM</Tag>
@@ -1645,7 +1645,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_CULTURE_EQUILIBRIUM_HELP</Tag>
 		<English>Culture decays on all tiles, not just unowned. This means culture wars are dependent on the last ~100 turns of culture output (adjusted for gamespeed) rather than all culture ever produced by a city. Tiles that lose cultural input lose control via decay instead of immediately.</English>
-		<Italian>La cultura decade su tutte le caselle, non solo su quelle senza possesso. Ciò significa che le guerre culturali dipendono dagli ultimi ~ 100 turni di produzione culturale (adattati alla velocità di gioco) piuttosto che da tutta la cultura mai prodotta da una città. Le caselle che perdono l'input culturale perdono il controllo tramite il decadimento invece che immediatamente.</Italian>
+		<Italian>La cultura decade su tutte le caselle, non solo su quelle senza possesso (ciò significa che le guerre culturali dipendono dagli ultimi circa 100 turni di produzione culturale adattati alla velocità di gioco piuttosto che da tutta la cultura mai prodotta da una città e che le caselle che perdono l'input culturale perdono il controllo tramite il decadimento invece che immediatamente)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_EXP_STRICT_VICINITY</Tag>
@@ -1655,6 +1655,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_EXP_STRICT_VICINITY_HELP</Tag>
 		<English>Buildings and wonders that require a terrain type, feature, or improvement in city vicinity also require that tile to be culturally owned instead of possibly in neutral terrain. Works best when combined with Culture options of 1 Tile Start and/or Realistic Spread.</English>
-		<Italian>Gli edifici e le meraviglie che richiedono un tipo di terreno, una caratteristica o un miglioramento nelle vicinanze della città richiedono anche che quella casella sia di proprietà culturale invece che su un terreno neutrale. Funziona meglio se combinato con le opzioni le città iniziano con una sola casella e/o diffusione culturale realistica.</Italian>
+		<Italian>Gli edifici e le meraviglie che richiedono un tipo di terreno, una caratteristica o un miglioramento nelle vicinanze della città richiedono anche che quella casella sia di proprietà culturale invece che su un terreno neutrale (funziona meglio se combinato con le opzioni le città iniziano con una sola casella e/o diffusione culturale realistica)</Italian>
 	</TEXT>
 </Civ4GameText>
