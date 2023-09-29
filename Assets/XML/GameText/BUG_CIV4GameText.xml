@@ -222,7 +222,7 @@
 		<German>Luftschlag- und Bombardierungsautomatisierung:</German>
 		<Spanish>Opciones de Ataque aéreo y Bombardeo aéreo automatizados:</Spanish>
 		<Russian>Îïöèè àâòî-àâèàíàëåòà è áîìáàðäèðîâîê:</Russian>
-		<Italian>[ICON_BULLET]Attacco aereo e bombardamento:</Italian>
+		<Italian>Attacco aereo e bombardamento:</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPTLABEL_AUTOMATEDSETTINGS__AUTOMATEDSETTINGS</Tag>
@@ -231,7 +231,7 @@
 		<German>Erweiterte Automatisierungseinstellungen:</German>
 		<Spanish>Configuración avanzada de automatización:</Spanish>
 		<Russian>Ðàñøèðåííûå íàñòðîéêè àâòîìàòèçàöèè:</Russian>
-		<Italian>[ICON_BULLET]Impostazioni avanzate:</Italian>
+		<Italian>Impostazioni avanzate:</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPTLABEL_AUTOMATEDSETTINGS__CARAVANSETTINGS</Tag>
@@ -240,7 +240,7 @@
 		<German>Transportautomatisierung:</German>
 		<Spanish>Opciones de Caravana automatizada:</Spanish>
 		<Russian>Îïöèè àâòî-êîíâîÿ:</Russian>
-		<Italian>[ICON_BULLET]Carovane:</Italian>
+		<Italian>Carovane:</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPTLABEL_AUTOMATEDSETTINGS__DEFENSESETTINGS</Tag>
@@ -249,7 +249,7 @@
 		<German>Stadtverteidigungsautomatisierung:</German>
 		<Spanish>Opciones de Defensa de ciudad automatizada:</Spanish>
 		<Russian>Îïöèè àâòî-çàùèòû ãîðîäà:</Russian>
-		<Italian>[ICON_BULLET]Difesa della città:</Italian>
+		<Italian>Difesa della città:</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPTLABEL_AUTOMATEDSETTINGS__EXPLORESETTINGS</Tag>
@@ -258,7 +258,7 @@
 		<German>Erkundungsautomatisierung:</German>
 		<Spanish>Opciones de Exploración automatizada:</Spanish>
 		<Russian>Îïöèè àâòî-ðàçâåäêè:</Russian>
-		<Italian>[ICON_BULLET]Esplorazione:</Italian>
+		<Italian>Esplorazione:</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPTLABEL_AUTOMATEDSETTINGS__HUNTSETTINGS</Tag>
@@ -267,7 +267,7 @@
 		<German>Jagdautomatisierung:</German>
 		<Spanish>Opciones de Caza automatizada:</Spanish>
 		<Russian>Îïöèè àâòî-îõîòû:</Russian>
-		<Italian>[ICON_BULLET]Caccia:</Italian>
+		<Italian>Caccia:</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPTLABEL_AUTOMATEDSETTINGS__NATIONALWORKERSETTINGS</Tag>
@@ -276,7 +276,7 @@
 		<German>Nationsweite Bautruppautomatisierung:</German>
 		<Spanish>Opciones nacionales de Trabajadores automatizados:</Spanish>
 		<Russian>Îïöèè íàöèîíàëüíûõ àâòî-ðàáîòíèêîâ:</Russian>
-		<Italian>[ICON_BULLET]Tutti i lavoratori:</Italian>
+		<Italian>Tutti i lavoratori:</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPTLABEL_AUTOMATEDSETTINGS__NATIONALWORKERSETTINGSHOVER</Tag>
@@ -285,7 +285,7 @@
 		<German>(Das Deaktivieren einer Einstellung überschreibt nationsweit alle Stadteinstellungen!)</German>
 		<Spanish>(¡Las opciones que desactive aquí tendrán prioridad sobre la configuración particular de cada ciudad!)</Spanish>
 		<Russian>(Îòêëþ÷åíèå äàííûõ îïöèé ìîæåò ïðèâåñòè ê ïåðåçàãðóçêå ëþáûõ íàñòðîåê ãîðîäà!)</Russian>
-		<Italian>[ICON_BULLET]Le opzioni disattivate in questo menu avranno priorità sulle impostazioni della città</Italian>
+		<Italian>Le opzioni disattivate in questo menu avranno priorità sulle impostazioni della città</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPTLABEL_AUTOMATEDSETTINGS__PATROLSETTINGS</Tag>
@@ -294,7 +294,7 @@
 		<German>Patrouillenautomatisierung:</German>
 		<Spanish>Opciones de Patrulla automatizada:</Spanish>
 		<Russian>Îïöèè àâòî-ïàòðóëÿ:</Russian>
-		<Italian>[ICON_BULLET]Pattuglia:</Italian>
+		<Italian>Pattuglia:</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPTLABEL_AUTOMATEDSETTINGS__PILLAGESETTINGS</Tag>
@@ -303,7 +303,7 @@
 		<German>Plünderungsautomatisierung:</German>
 		<Spanish>Opciones de Saqueo automatizado:</Spanish>
 		<Russian>Îïöèè àâòî-ãðàáåæà:</Russian>
-		<Italian>[ICON_BULLET]Saccheggio:</Italian>
+		<Italian>Saccheggio:</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPTLABEL_AUTOMATEDSETTINGS__PIRATESETTINGS</Tag>
@@ -312,7 +312,7 @@
 		<German>Piraterieautomatisierung:</German>
 		<Spanish>Opciones de Piratería automatizada:</Spanish>
 		<Russian>Îïöèè àâòî-ïèðàòñòâà:</Russian>
-		<Italian>[ICON_BULLET]Pirateria:</Italian>
+		<Italian>Pirateria:</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPTLABEL_AUTOMATEDSETTINGS__PROMOTESETTINGS</Tag>
@@ -321,7 +321,7 @@
 		<German>Beförderungsautomatisierung:</German>
 		<Spanish>Opciones de Ascenso automatizado:</Spanish>
 		<Russian>Îïöèè àâòî-ïðîêà÷êè:</Russian>
-		<Italian>[ICON_BULLET]Promozioni:</Italian>
+		<Italian>Promozioni:</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPTLABEL_AUTOMATEDSETTINGS__PROTECTSETTINGS</Tag>
@@ -330,7 +330,7 @@
 		<German>Verteidigungsautomatisierung:</German>
 		<Spanish>Opciones de Protección automatizada:</Spanish>
 		<Russian>Îïöèè àâòî-çàùèòû:</Russian>
-		<Italian>[ICON_BULLET]Protezione:</Italian>
+		<Italian>Protezione:</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPTLABEL_AUTOMATEDSETTINGS__SPREADSETTINGS</Tag>
@@ -339,7 +339,7 @@
 		<German>Expandierungsautomatisierung:</German>
 		<Spanish>Opciones de Expansión automatizada:</Spanish>
 		<Russian>Îïöèè àâòî-ýêñïàíñèè:</Russian>
-		<Italian>[ICON_BULLET]Diffusione:</Italian>
+		<Italian>Diffusione:</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPTLABEL_AUTOMATEDSETTINGS__UPGRADINGSETTINGS</Tag>
@@ -348,7 +348,7 @@
 		<German>Upgradeautomatisierung:</German>
 		<Spanish>Opciones de Mejora automatizada:</Spanish>
 		<Russian>Îïöèè àâòî-îáíîâëåíèÿ:</Russian>
-		<Italian>[ICON_BULLET]Modernizzazione:</Italian>
+		<Italian>Modernizzazione:</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPTLABEL_AUTOMATEDSETTINGS__WORKERSETTINGS</Tag>
@@ -357,14 +357,14 @@
 		<German>Bautruppautomatisierung:</German>
 		<Spanish>Opciones de Trabajador automatizado:</Spanish>
 		<Russian>Îïöèè àâòî-ðàáîòíèêà:</Russian>
-		<Italian>[ICON_BULLET]Impostazioni lavoratori:</Italian>
+		<Italian>Impostazioni lavoratori:</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPTLABEL_DIPLOMACYSETTINGS__ADVANCEDDIPLOMACY</Tag>
 		<English>Advanced Diplomacy Settings:</English>
 		<French>Paramètres de Diplomatie Avancée:</French>
 		<German>Diplomatieeinstellungen (Verbesserte Diplomatie):</German>
-		<Italian>[ICON_BULLET]Diplomazia avanzata:</Italian>
+		<Italian>Diplomazia avanzata:</Italian>
 		<Spanish>Parámetros de la diplomacia avanzada:</Spanish>
 		<Russian>Íàñòðîéêè óëó÷øåííîé äèïëîìàòèè:</Russian>
 	</TEXT>
@@ -373,7 +373,7 @@
 		<English>Standard Diplomacy Settings:</English>
 		<French>Paramètres de Diplomatie Standard:</French>
 		<German>Diplomatieeinstellungen (Standard):</German>
-		<Italian>[ICON_BULLET]Diplomazia standard:</Italian>
+		<Italian>Diplomazia standard:</Italian>
 		<Spanish>Parámetros de la diplomacia normal:</Spanish>
 		<Russian>Ñòàíäàðòíûå íàñòðîéêè äèïëîìàòèè:</Russian>
 	</TEXT>
@@ -382,7 +382,7 @@
 		<English>City Management:</English>
 		<French>Gestion de la ville:</French>
 		<German>Stadtverwaltung:</German>
-		<Italian>[ICON_BULLET]Gestione città:</Italian>
+		<Italian>Gestione città:</Italian>
 		<Spanish>Gestión de la ciudad:</Spanish>
 		<Russian>Óïðàâëåíèå ãîðîäîì:</Russian>
 	</TEXT>
@@ -391,7 +391,7 @@
 		<English>Empire Management:</English>
 		<French>Gestion de l'Empire:</French>
 		<German>Imperiumsverwaltung:</German>
-		<Italian>[ICON_BULLET]Gestione dell'impero:</Italian>
+		<Italian>Gestione dell'impero:</Italian>
 		<Spanish>Gestión del imperio:</Spanish>
 		<Russian>Óïðàâëåíèå èìïåðèåé:</Russian>
 	</TEXT>
@@ -400,7 +400,7 @@
 		<English>Flexible Difficulty:</English>
 		<French>Difficulté Flexible:</French>
 		<German>Flexibler Schwierigkeitsgrad:</German>
-		<Italian>[ICON_BULLET]Difficoltà flessibile:</Italian>
+		<Italian>Difficoltà flessibile:</Italian>
 		<Spanish>Dificultad flexible:</Spanish>
 		<Russian>Ãèáêèé óðîâ. ñëîæíîñòè:</Russian>
 	</TEXT>
@@ -409,7 +409,7 @@
 		<English>Game Settings:</English>
 		<French>Paramètres du Jeu:</French>
 		<German>Spieleinstellungen:</German>
-		<Italian>[ICON_BULLET]Impostazioni di gioco:</Italian>
+		<Italian>Impostazioni di gioco:</Italian>
 		<Spanish>Opciones de juego:</Spanish>
 		<Russian>Èãðîâûå íàñòðîéêè:</Russian>
 	</TEXT>
@@ -613,7 +613,7 @@
 		<English>Attacker Health Bars</English>
 		<French>Barres de Santé de l'Attaquant</French>
 		<German>Gesundheitsbalken des Angreifers</German>
-		<Italian>[ICON_BULLET]Barre punti vita dell'attaccante</Italian>
+		<Italian>Barre punti vita dell'attaccante</Italian>
 		<Spanish>Barra de salud del atacante</Spanish>
 		<Russian>Ïîëîñû çäîðîâüÿ àòàêóþùåãî</Russian>
 	</TEXT>
@@ -631,7 +631,7 @@
 		<English>Attacker Info</English>
 		<French>Info de l'Attaquant</French>
 		<German>Angreifer-Info</German>
-		<Italian>[ICON_BULLET]Informazioni attaccante</Italian>
+		<Italian>Informazioni attaccante</Italian>
 		<Spanish>Información del atacante</Spanish>
 		<Russian>Èíôîðìàöèÿ àòàêóþùåãî</Russian>
 	</TEXT>
@@ -649,7 +649,7 @@
 		<English>Average Health</English>
 		<French>Moyenne de Santé</French>
 		<German>Erwartete Gesundheit</German>
-		<Italian>[ICON_BULLET]Punti vita medi rimasti</Italian>
+		<Italian>Punti vita medi rimasti</Italian>
 		<Spanish>Salud media</Spanish>
 		<Russian>Ñðåäíåå çäîðîâüå</Russian>
 	</TEXT>
@@ -676,7 +676,7 @@
 		<English>Basic Info</English>
 		<French>Infos de base</French>
 		<German>Basis-Info</German>
-		<Italian>[ICON_BULLET]Informazioni base</Italian>
+		<Italian>Informazioni base</Italian>
 		<Spanish>Información básica</Spanish>
 		<Russian>Áàçîâàÿ èíôîðìàöèÿ</Russian>
 	</TEXT>
@@ -693,7 +693,7 @@
 		<English>Defender Health Bars</English>
 		<French>Barres de Santé du Défenseur</French>
 		<German>Gesundheitsbalken des Verteidigers</German>
-		<Italian>[ICON_BULLET]Barre punti vita del difensore</Italian>
+		<Italian>Barre punti vita del difensore</Italian>
 		<Spanish>Barra de salud del defensor</Spanish>
 	</TEXT>
 	<TEXT>
@@ -710,7 +710,7 @@
 		<English>Defender Info</English>
 		<French>Info du Défenseur</French>
 		<German>Verteidiger-Info</German>
-		<Italian>[ICON_BULLET]Informazioni difensore</Italian>
+		<Italian>Informazioni difensore</Italian>
 		<Spanish>Información del defensor</Spanish>
 		<Russian>Èíôîðìàöèÿ çàùèòíèêà</Russian>
 	</TEXT>
@@ -728,7 +728,7 @@
 		<English>Defense Modifiers</English>
 		<French>Modificateurs de Défense</French>
 		<German>Verteidigungsmodifikatoren</German>
-		<Italian>[ICON_BULLET]Modificatori difensivi</Italian>
+		<Italian>Modificatori difensivi</Italian>
 		<Spanish>Modificadores defensivos</Spanish>
 		<Russian>Ìîäèôèêàòîðû çàùèòíèêà</Russian>
 	</TEXT>
@@ -746,7 +746,7 @@
 		<English>XP Range</English>
 		<French>Étendue d'EXP</French>
 		<German>EP-Spanne</German>
-		<Italian>[ICON_BULLET]Intervallo punti esperienza</Italian>
+		<Italian>Intervallo punti esperienza</Italian>
 		<Spanish>Intervalo de PX</Spanish>
 		<Russian>XP äèàïàçîí</Russian>
 	</TEXT>
@@ -782,7 +782,7 @@
 		<English>[SHIFT] Instructions</English>
 		<French>Conseil [SHIFT]</French>
 		<German>[SHIFT]-Hinweis</German>
-		<Italian>[ICON_BULLET]Istruzioni tasto [SHIFT]</Italian>
+		<Italian>Istruzioni tasto [SHIFT]</Italian>
 		<Spanish>[SHIFT] Instrucciones</Spanish>
 		<Russian>[SHIFT] Èíñòðóêöèè</Russian>
 	</TEXT>
@@ -800,7 +800,7 @@
 		<English>Survival Odds</English>
 		<French>Prob. de Survie</French>
 		<German>Überlebenschance</German>
-		<Italian>[ICON_BULLET]Probabilità di sopravvivenza</Italian>
+		<Italian>Probabilità di sopravvivenza</Italian>
 		<Spanish>Probabilidad de supervivencia</Spanish>
 		<Russian>Øàíñû âûæèâàíèÿ</Russian>
 	</TEXT>
@@ -817,7 +817,7 @@
 		<Tag>TXT_KEY_BUG_OPT_ACO__SHOWTOTALDEFENSEMODIFIER_TEXT</Tag>
 		<English>Total Defense Modifier</English>
 		<German>Absoluter Verteidigungsmodifikator</German>
-		<Italian>[ICON_BULLET]Modificatori difensivi totali</Italian>
+		<Italian>Modificatori difensivi totali</Italian>
 		<Spanish>Modificador defensivo total</Spanish>
 		<Russian>Ïîëíûå ìîäèôèêàòîðû çàùèòíèêà</Russian>
 	</TEXT>
@@ -835,7 +835,7 @@
 		<English>Unharmed Odds</English>
 		<French>Prob. indemne</French>
 		<German>Chance auf Unversehrtheit</German>
-		<Italian>[ICON_BULLET]Probabilità d'incolumità</Italian>
+		<Italian>Probabilità d'incolumità</Italian>
 		<Spanish>Probabilidad de salir ileso</Spanish>
 		<Russian>Øàíñû óöåëåòü</Russian>
 	</TEXT>
@@ -853,7 +853,7 @@
 		<English>Unrounded XP</English>
 		<French>EXP brute</French>
 		<German>Ungerundete EP</German>
-		<Italian>[ICON_BULLET]Punti esperienza non arrotondati</Italian>
+		<Italian>Punti esperienza non arrotondati</Italian>
 		<Spanish>PX sin redondear</Spanish>
 		<Russian>Íåîêðóãëåííûå XP</Russian>
 	</TEXT>
@@ -1176,7 +1176,7 @@
 		<English>Show Religions</English>
 		<French>Voir les Religions</French>
 		<German>Anzeige</German>
-		<Italian>[ICON_BULLET]Scegli religioni visualizzate</Italian>
+		<Italian>Scegli religioni visualizzate</Italian>
 		<Spanish>Mostrar religiones</Spanish>
 		<Russian>Ïîêàçûâàòü ðåëèãèè</Russian>
 	</TEXT>
@@ -1286,14 +1286,14 @@
 		<German>Datei</German>
 		<Spanish>Archivo</Spanish>
 		<Russian>Ôàéë</Russian>
-		<Italian>[ICON_BULLET]Nome file</Italian>
+		<Italian>Nome file</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__FILEPATH_TEXT</Tag>
 		<English>Path</English>
 		<French>Chemin</French>
 		<German>Pfad</German>
-		<Italian>[ICON_BULLET]Percorso file</Italian>
+		<Italian>Percorso file</Italian>
 		<Spanish>Ruta</Spanish>
 		<Russian>Ïóòü</Russian>
 	</TEXT>
@@ -1315,7 +1315,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGLEVELCITYBBAI_TEXT</Tag>
 		<English>City log</English>
-		<Italian>[ICON_BULLET]Registro città</Italian>
+		<Italian>Registro città</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGLEVELPLAYERBBAI_HOVER</Tag>
@@ -1326,7 +1326,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGLEVELPLAYERBBAI_TEXT</Tag>
 		<English>Player log</English>
-		<Italian>[ICON_BULLET]Registro giocatore</Italian>
+		<Italian>Registro giocatore</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGLEVELTEAMBBAI_HOVER</Tag>
@@ -1337,7 +1337,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGLEVELTEAMBBAI_TEXT</Tag>
 		<English>Team log</English>
-		<Italian>[ICON_BULLET]Registro squadra</Italian>
+		<Italian>Registro squadra</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGLEVELUNITBBAI_HOVER</Tag>
@@ -1348,7 +1348,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGLEVELUNITBBAI_TEXT</Tag>
 		<English>Unit log</English>
-		<Italian>[ICON_BULLET]Registro unità</Italian>
+		<Italian>Registro unità</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__MISCLOGGING_TEXT</Tag>
@@ -1374,7 +1374,7 @@
 		<English>Format Style</English>
 		<French>Formatage</French>
 		<German>Ausgabeformat</German>
-		<Italian>[ICON_BULLET]Stile di formattazione</Italian>
+		<Italian>Stile di formattazione</Italian>
 		<Spanish>Formato</Spanish>
 		<Russian>Ñòèëü ôîðìàòà</Russian>
 	</TEXT>
@@ -1943,7 +1943,7 @@
 		<English>Custom Entry Prefix</English>
 		<French>Préfixe</French>
 		<German>Präfix</German>
-		<Italian>[ICON_BULLET]Prefisso personalizzato</Italian>
+		<Italian>Prefisso personalizzato</Italian>
 		<Spanish>Prefijo personalizado</Spanish>
 		<Russian>Ïðåôèêñ íàñòðàèâàåìîé çàïèñè</Russian>
 	</TEXT>
@@ -1979,7 +1979,7 @@
 		<English>200 000 BC is Turn</English>
 		<French>200 000 av. J.C. est le Tour</French>
 		<German>200000 n.Chr. ist Runde</German>
-		<Italian>[ICON_BULLET]Il 200000 a.C. è il turno</Italian>
+		<Italian>Il 200000 a.C. è il turno</Italian>
 		<Spanish>200 000 a.C. es el turno</Spanish>
 		<Russian>200 000BC ýòî õîä</Russian>
 	</TEXT>
@@ -2071,7 +2071,7 @@
 		<German>Minimale Siegchancen für Angriff:</German>
 		<Spanish>Probabilidad mínima de victoria:</Spanish>
 		<Russian>Ìèí. øàíñ íà àòàêó:</Russian>
-		<Italian>[ICON_BULLET]Probabilità di vittoria minima</Italian>
+		<Italian>Probabilità di vittoria minima</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__AUTOHUNTMINIMUMATTACKODDS_HOVER</Tag>
@@ -2089,7 +2089,7 @@
 		<German>Minimale Siegchancen für Angriff:</German>
 		<Spanish>Probabilidad mínima de victoria:</Spanish>
 		<Russian>Ìèí. øàíñ íà àòàêó:</Russian>
-		<Italian>[ICON_BULLET]Probabilità di vittoria minima</Italian>
+		<Italian>Probabilità di vittoria minima</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__AUTOHUNTRETURNFORUPGRADES_HOVER</Tag>
@@ -2125,7 +2125,7 @@
 		<German>Minimale Siegchancen für Angriff:</German>
 		<Spanish>Probabilidad mínima de victoria:</Spanish>
 		<Russian>Ìèí. øàíñ íà àòàêó:</Russian>
-		<Italian>[ICON_BULLET]Probabilità di vittoria minima</Italian>
+		<Italian>Probabilità di vittoria minima</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__AUTOPIRATEMINIMUMATTACKODDS_HOVER</Tag>
@@ -2143,7 +2143,7 @@
 		<German>Minimale Siegchancen für Angriff:</German>
 		<Spanish>Probabilidad mínima de victoria:</Spanish>
 		<Russian>Ìèí. øàíñ íà àòàêó:</Russian>
-		<Italian>[ICON_BULLET]Probabilità di vittoria minima</Italian>
+		<Italian>Probabilità di vittoria minima</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOMATEDSETTINGS__AVOIDBARBARIANCITIES_HOVER</Tag>
@@ -2608,7 +2608,7 @@
 		<Tag>TXT_KEY_BUG_OPT_AUTOSAVE__INTERVAL_TEXT</Tag>
 		<English>Interval</English>
 		<Russian>Интервал</Russian>
-		<Italian>[ICON_BULLET]Intervallo</Italian>
+		<Italian>Intervallo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOSAVE__USEPLAYERNAME_HOVER</Tag>
@@ -3150,7 +3150,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__BASEWEIGHTFOOD_TEXT</Tag>
 		<English>Food</English>
-		<Italian>[ICON_BULLET]Cibo</Italian>
+		<Italian>Cibo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__BASEWEIGHTHAMMER_HOVER</Tag>
@@ -3160,7 +3160,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__BASEWEIGHTHAMMER_TEXT</Tag>
 		<English>Hammer</English>
-		<Italian>[ICON_BULLET]Produzione</Italian>
+		<Italian>Produzione</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__BASEWEIGHTCOMMERCE_HOVER</Tag>
@@ -3170,7 +3170,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__BASEWEIGHTCOMMERCE_TEXT</Tag>
 		<English>Commerce</English>
-		<Italian>[ICON_BULLET]Commercio</Italian>
+		<Italian>Commercio</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__GREATPERSONINFO_HOVER</Tag>
@@ -3287,7 +3287,7 @@
 		<German>Ertragsberechnung</German>
 		<Spanish>Casillas contadas</Spanish>
 		<Russian>×èñëî êëåòîê</Russian>
-		<Italian>[ICON_BULLET]Tipo di caselle</Italian>
+		<Italian>Tipo di caselle</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__RAWYIELDSVIEW_HOVER</Tag>
@@ -3312,7 +3312,7 @@
 		<English>Default View</English>
 		<French>Vue par défaut</French>
 		<German>Standardanzeige</German>
-		<Italian>[ICON_BULLET]Vista predefinita</Italian>
+		<Italian>Vista predefinita</Italian>
 		<Spanish>Vista por defecto</Spanish>
 		<Russian>Âèä ïî óìîë÷àíèþ</Russian>
 	</TEXT>
@@ -3739,7 +3739,7 @@
 		<English>File Logging Level</English>
 		<French>Niveaux des Logs du fichier</French>
 		<German>Protokollierungsstufe (Datei)</German>
-		<Italian>[ICON_BULLET]Livello registro su file</Italian>
+		<Italian>Livello registro su file</Italian>
 		<Spanish>Nivel de registro en archivo</Spanish>
 		<Russian>Óðîâåíü ðåãèñòðàöèè ôàéëà</Russian>
 	</TEXT>
@@ -3784,7 +3784,7 @@
 		<English>Screen Logging Level</English>
 		<French>Niveaux de Logs affichés</French>
 		<German>Protokollierungsstufe (Bildschirm)</German>
-		<Italian>[ICON_BULLET]Livello registro video</Italian>
+		<Italian>Livello registro video</Italian>
 		<Spanish>Nivel de registro en pantalla</Spanish>
 		<Russian>Óðîâåíü ðåãèñòðàöèè ýêðàíà</Russian>
 	</TEXT>
@@ -3811,7 +3811,7 @@
 		<English>Production Grouping</English>
 		<French>Regroupement Production</French>
 		<German>Produktgruppen</German>
-		<Italian>[ICON_BULLET]Visualizzazione produzione</Italian>
+		<Italian>Visualizzazione produzione</Italian>
 		<Spanish>Agrupar producción</Spanish>
 		<Russian>Ãðóïïèðîâêà ïðîäóêöèè</Russian>
 	</TEXT>
@@ -4271,7 +4271,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__AUTOENDTURNDELAY_TEXT</Tag>
 		<English>Auto-end turn delay</English>
-		<Italian>[ICON_BULLET]Ritardo fine turno</Italian>
+		<Italian>Ritardo fine turno</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__CYCLEDELAYMIN_HOVER</Tag>
@@ -4281,7 +4281,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__CYCLEDELAYMIN_TEXT</Tag>
 		<English>Min cycle delay</English>
-		<Italian>[ICON_BULLET]Ritardo minimo ciclo unità</Italian>
+		<Italian>Ritardo minimo ciclo unità</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__CYCLEDELAYMOVE_HOVER</Tag>
@@ -4291,7 +4291,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__CYCLEDELAYMOVE_TEXT</Tag>
 		<English>Move cycle delay</English>
-		<Italian>[ICON_BULLET]Ritardo ciclo unità</Italian>
+		<Italian>Ritardo ciclo unità</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__ENABLEGRAPHICALPAGING_HOVER</Tag>
@@ -4434,7 +4434,7 @@
 		<German>Größe der Befehlssymbole</German>
 		<Spanish>Tamaño de iconos de Acción</Spanish>
 		<Russian>Размер значка действия</Russian>
-		<Italian>[ICON_BULLET]Icone azioni unità</Italian>
+		<Italian>Icone azioni unità</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__USEAIPATHING_HOVER</Tag>
@@ -4466,7 +4466,7 @@
 		<French>centrage de la fenêtre avec le bord de la sélection</French>
 		<Spanish>Límite para el centrado por selección de la vista</Spanish>
 		<Russian>Öåíòðèðîâàíèå ýêðàíà</Russian>
-		<Italian>[ICON_BULLET]Limite per il centramento:</Italian>
+		<Italian>Limite per il centramento:</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__VIEWPORTAUTOSWITCHBORDER_HOVER</Tag>
@@ -4482,7 +4482,7 @@
 		<French>limite pour l'auto-switch des fenêtres</French>
 		<Spanish>Límite para el cambio automático de la vista</Spanish>
 		<Russian>Àâòîïåðåêëþ÷åíèå ãðàíèö</Russian>
-		<Italian>[ICON_BULLET]Limite per il cambio di finestra:</Italian>
+		<Italian>Limite per il cambio di finestra:</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__VIEWPORTX_HOVER</Tag>
@@ -4498,7 +4498,7 @@
 		<French>Taille (horizontal) de la fenêtre</French>
 		<Spanish>Tamaño horizontal de la vista</Spanish>
 		<Russian>Øèðèíà âèäîâîãî ýêðàíà</Russian>
-		<Italian>[ICON_BULLET]Dimensione orizzontale:</Italian>
+		<Italian>Dimensione orizzontale:</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__VIEWPORTY_HOVER</Tag>
@@ -4514,7 +4514,7 @@
 		<French>Taille (vertical) de la fenêtre</French>
 		<Spanish>Tamaño vertical de la vista</Spanish>
 		<Russian>Âûñîòà âèäîâîãî ýêðàíà</Russian>
-		<Italian>[ICON_BULLET]Dimensione verticale:</Italian>
+		<Italian>Dimensione verticale:</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MISCHOVER__BASECOMMERCE_HOVER</Tag>
@@ -5311,7 +5311,7 @@
 		<English>Period (in seconds)</English>
 		<French>Période (en secondes)</French>
 		<German>Intervall (in Sekunden)</German>
-		<Italian>[ICON_BULLET]Intervallo (in secondi)</Italian>
+		<Italian>Intervallo (in secondi)</Italian>
 		<Spanish>Periodo (en segundos)</Spanish>
 		<Russian>Ïåðèîä (â ñåêóíäàõ)</Russian>
 	</TEXT>
@@ -5494,7 +5494,7 @@
 		<English>Display Method</English>
 		<French>Méthode d'affichage</French>
 		<German>Anzeigemethode</German>
-		<Italian>[ICON_BULLET]Visualizzazione</Italian>
+		<Italian>Visualizzazione</Italian>
 		<Spanish>Modo de visualización</Spanish>
 		<Russian>Ìåòîä îòîáðàæåíèÿ</Russian>
 	</TEXT>
@@ -5962,7 +5962,7 @@
 		<German>Maximale BarbCivs</German>
 		<Spanish>Máximo de civilizaciones bárbaras</Spanish>
 		<Russian>Ìàêñèìóì BarbCivs</Russian>
-		<Italian>[ICON_BULLET]Numero max civiltà barbare</Italian>
+		<Italian>Numero max civiltà barbare</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__BARBTECHPERCENT_HOVER</Tag>
@@ -5979,7 +5979,7 @@
 		<German>BarbTech-Anteil</German>
 		<Spanish>Fracción de tecnología bárbara</Spanish>
 		<Russian>Òåõíîëîãèè âàðâàðîâ</Russian>
-		<Italian>[ICON_BULLET]Percentuale tecnologia</Italian>
+		<Italian>Percentuale tecnologia</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__BASEREINFORCEMENTTURNS_HOVER</Tag>
@@ -6104,7 +6104,7 @@
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__CLOSEDIST_TEXT</Tag>
 		<English>Neighbour distance</English>
 		<Russian>Расстояние до соседа</Russian>
-		<Italian>[ICON_BULLET]Distanza tra civiltà</Italian>
+		<Italian>Distanza tra civiltà</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__CLOSERADIUS_HOVER</Tag>
@@ -6204,7 +6204,7 @@
 		<German>Modifikator zur Enstehung kleiner Civs</German>
 		<Spanish>Modificador de formación de civilización menor</Spanish>
 		<Russian>Модиф. малых наций</Russian>
-		<Italian>[ICON_BULLET]Modificatore civiltà minore</Italian>
+		<Italian>Modificatore civiltà minore</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__GARRISONMODIFIER_HOVER</Tag>
@@ -6360,7 +6360,7 @@
 		<German>Faktor für Bonuseinheiten</German>
 		<Spanish>Multiplicador de unidades de bonificación</Spanish>
 		<Russian>Множитель бонусных отрядов</Russian>
-		<Italian>[ICON_BULLET]Moltiplicatore unità barbare</Italian>
+		<Italian>Moltiplicatore unità barbare</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__MINPOPULATION_HOVER</Tag>
@@ -6377,7 +6377,7 @@
 		<German>Minimale Stadtbevölkerung</German>
 		<Spanish>Población mínima</Spanish>
 		<Russian>Мин. население</Russian>
-		<Italian>[ICON_BULLET]Popolazione minima</Italian>
+		<Italian>Popolazione minima</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__MINREINFORCEMENTTURNS_HOVER</Tag>
@@ -6412,7 +6412,7 @@
 		<German>Zurückliegende Zeitalter in Neuer Welt</German>
 		<Spanish>Atraso de era en Nuevo Mundo</Spanish>
 		<Russian>После эры NewWorld</Russian>
-		<Italian>[ICON_BULLET]Ere necessarie</Italian>
+		<Italian>Ere necessarie</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__NEWWORLDPOLICY_HOVER</Tag>
@@ -6435,7 +6435,7 @@
 		<German>Neue-Welt-Regeln</German>
 		<Spanish>Política en Nuevo Mundo</Spanish>
 		<Russian>Механика Нового Света</Russian>
-		<Italian>[ICON_BULLET]Politica</Italian>
+		<Italian>Politica</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_REVOLUTION__OFFERDEFECTTOREVS_HOVER</Tag>
@@ -6701,7 +6701,7 @@
 		<English>Current Difficulty</English>
 		<French>Difficulté actuelle</French>
 		<German>Aktueller Schwierigkeitsgrad</German>
-		<Italian>[ICON_BULLET]Difficoltà attuale</Italian>
+		<Italian>Difficoltà attuale</Italian>
 		<Spanish>Dificultad actual</Spanish>
 		<Russian>Òåêóùàÿ ñëîæíîñòü</Russian>
 	</TEXT>
@@ -6812,7 +6812,7 @@
 		<English>Maximum Difficulty</English>
 		<French>Difficulté Maximum</French>
 		<German>Maximaler Schwierigkeitsgrad</German>
-		<Italian>[ICON_BULLET]Massima</Italian>
+		<Italian>Massima</Italian>
 		<Spanish>Dificultad máxima</Spanish>
 		<Russian>Ìàêñ. ñëîæíîñòü</Russian>
 	</TEXT>
@@ -6839,7 +6839,7 @@
 		<English>Minimum Difficulty</English>
 		<French>Difficulté Minimum</French>
 		<German>Minimaler Schwierigkeitsgrad</German>
-		<Italian>[ICON_BULLET]Minima</Italian>
+		<Italian>Minima</Italian>
 		<Spanish>Dificultad mínima</Spanish>
 		<Russian>Ìèí. ñëîæíîñòü</Russian>
 	</TEXT>
@@ -6862,7 +6862,7 @@
 		<English>Maximum AI Difficulty</English>
 		<French>Difficulté Maximum</French>
 		<German>Maximaler Schwierigkeitsgrad</German>
-		<Italian>[ICON_BULLET]Massima</Italian>
+		<Italian>Massima</Italian>
 		<Spanish>Dificultad máxima</Spanish>
 		<Russian>Ìàêñ. ñëîæíîñòü</Russian>
 	</TEXT>
@@ -6885,7 +6885,7 @@
 		<English>Minimum AI Difficulty</English>
 		<French>Difficulté Minimum</French>
 		<German>Minimaler Schwierigkeitsgrad</German>
-		<Italian>[ICON_BULLET]Minima</Italian>
+		<Italian>Minima</Italian>
 		<Spanish>Dificultad mínima</Spanish>
 		<Russian>Ìèí. ñëîæíîñòü</Russian>
 	</TEXT>
@@ -6903,7 +6903,7 @@
 		<English>Turn Increments</English>
 		<French>Nb. de Tours</French>
 		<German>Rundenabstand</German>
-		<Italian>[ICON_BULLET]Intervallo controllo</Italian>
+		<Italian>Intervallo controllo</Italian>
 		<Spanish>Número de turnos</Spanish>
 		<Russian>Ïðèðîñò ñëîæíîñòè</Russian>
 	</TEXT>
@@ -6917,7 +6917,7 @@
 		<English>AI Turn Increments</English>
 		<French>Nb. de Tours</French>
 		<German>Rundenabstand</German>
-		<Italian>[ICON_BULLET]Intervallo controllo</Italian>
+		<Italian>Intervallo controllo</Italian>
 		<Spanish>Número de turnos</Spanish>
 		<Russian>Ïðèðîñò ñëîæíîñòè</Russian>
 	</TEXT>
@@ -7012,7 +7012,7 @@
 		<English>Maximum Bombard Defense</English>
 		<French>Défense Max. contre les Bombardements</French>
 		<German>Maximale Bombardierungsverteidigung</German>
-		<Italian>[ICON_BULLET]Difesa dal bombardamento</Italian>
+		<Italian>Difesa dal bombardamento</Italian>
 		<Spanish>Máximo de defensa contra bombardeo</Spanish>
 		<Russian>Ìàêñ. çàù. îò îáñòðåëîâ</Russian>
 	</TEXT>
@@ -7030,7 +7030,7 @@
 		<English>Rebase Range</English>
 		<French>Portée de la Réaffectation</French>
 		<German>Umstationierungsreichweite</German>
-		<Italian>[ICON_BULLET]Raggio di cambiamento base</Italian>
+		<Italian>Raggio di cambiamento base</Italian>
 		<Spanish>Rango de traslado</Spanish>
 		<Russian>Äèàïàçîí ïåðåáàçèðîâêè</Russian>
 	</TEXT>
@@ -7048,7 +7048,7 @@
 		<English>Max Units Per Tile</English>
 		<French>Nb. d'Unités Max pas Case</French>
 		<German>Maximum an Einheiten pro Feld</German>
-		<Italian>[ICON_BULLET]Massimo di unità per casella</Italian>
+		<Italian>Massimo di unità per casella</Italian>
 		<Spanish>Máximo de unidades por casilla</Spanish>
 		<Russian>Ìàêñ. îòðÿäîâ íà êëåòêå</Russian>
 	</TEXT>
@@ -7165,7 +7165,7 @@
 		<English>Player Color</English>
 		<French>Couleur du Joueur</French>
 		<German>Spielerfarbe</German>
-		<Italian>[ICON_BULLET]Colore giocatore</Italian>
+		<Italian>Colore giocatore</Italian>
 		<Spanish>Color del jugador</Spanish>
 		<Russian>Öâåò èãðîêà</Russian>
 	</TEXT>
@@ -7462,7 +7462,7 @@
 		<English>Default Spacing</English>
 		<French>Espacement par défaut</French>
 		<German>Standardabstand</German>
-		<Italian>[ICON_BULLET]Spaziatura predefinita</Italian>
+		<Italian>Spaziatura predefinita</Italian>
 		<Spanish>Espaciado por defecto</Spanish>
 		<Russian>Èíòåðâàë ïî óìîë÷àíèþ</Russian>
 	</TEXT>
@@ -7524,7 +7524,7 @@
 		<English>Display Name</English>
 		<French>Affichage des Noms</French>
 		<German>Angezeigter Name</German>
-		<Italian>[ICON_BULLET]Identifica con</Italian>
+		<Italian>Identifica con</Italian>
 		<Spanish>Mostrar nombre</Spanish>
 		<Russian>Ïîêàçàòü èìÿ</Russian>
 	</TEXT>
@@ -7542,7 +7542,7 @@
 		<English>Column Order:</English>
 		<French>Ordre des Colonnes:</French>
 		<German>Spaltenreihenfolge:</German>
-		<Italian>[ICON_BULLET]Ordine delle colonne:</Italian>
+		<Italian>Ordine delle colonne:</Italian>
 		<Spanish>Orden de las columnas:</Spanish>
 		<Russian>Ïîðÿäîê êîëîíîê:</Russian>
 	</TEXT>
@@ -7614,7 +7614,7 @@
 		<English>Line Height</English>
 		<French>Hauteur de Ligne</French>
 		<German>Zeilenhöhe</German>
-		<Italian>[ICON_BULLET]Altezza riga</Italian>
+		<Italian>Altezza riga</Italian>
 		<Spanish>Alto de línea</Spanish>
 		<Russian>Äëèíà ñòðîêè</Russian>
 	</TEXT>
@@ -7632,7 +7632,7 @@
 		<English>Maximum Civilizations</English>
 		<French>Maximum de Civ.</French>
 		<German>Anzahl Zivilisationen</German>
-		<Italian>[ICON_BULLET]Numero massimo civiltà</Italian>
+		<Italian>Numero massimo civiltà</Italian>
 		<Spanish>Máximo de civilizaciones</Spanish>
 		<Russian>Ìàêñèìóì öèâèëèçàöèé</Russian>
 	</TEXT>
@@ -7650,7 +7650,7 @@
 		<English>Default Color</English>
 		<French>Couleur par Défaut</French>
 		<German>Standardfarbe</German>
-		<Italian>[ICON_BULLET]Colore standard</Italian>
+		<Italian>Colore standard</Italian>
 		<Spanish>Color por defecto</Spanish>
 		<Russian>Öâåò ïî óìîë÷àíèþ</Russian>
 	</TEXT>
@@ -7668,7 +7668,7 @@
 		<English>Ratio Decimal Places</English>
 		<French>Nb Décimales</French>
 		<German>Nachkommastellen</German>
-		<Italian>[ICON_BULLET]Cifre decimali</Italian>
+		<Italian>Cifre decimali</Italian>
 		<Spanish>Cifras decimales</Spanish>
 		<Russian>Îòíîøåíèÿ äåñÿòè÷íûõ ìåñò</Russian>
 	</TEXT>
@@ -7713,7 +7713,7 @@
 		<English>High Color</English>
 		<French>Couleur Pouvoir élevé</French>
 		<German>Farbe (hoch)</German>
-		<Italian>[ICON_BULLET]Colore rapporto alto</Italian>
+		<Italian>Colore rapporto alto</Italian>
 		<Spanish>Color de puntuación superior</Spanish>
 		<Russian>Öâåò ïðåâûøåíèÿ</Russian>
 	</TEXT>
@@ -7731,7 +7731,7 @@
 		<English>High Ratio Cutoff</English>
 		<French>Limite Pouvoir élevé</French>
 		<German>Grenze für hohe Machtverhältnisse</German>
-		<Italian>[ICON_BULLET]Livello rapporto alto</Italian>
+		<Italian>Livello rapporto alto</Italian>
 		<Spanish>Franja de puntuación superior</Spanish>
 		<Russian>Âåðõíèé óðîâåíü ìîùè</Russian>
 	</TEXT>
@@ -7749,7 +7749,7 @@
 		<English>Low Color</English>
 		<French>Couleur faible Pouvoir</French>
 		<German>Farbe (niedrig)</German>
-		<Italian>[ICON_BULLET]Colore rapporto basso</Italian>
+		<Italian>Colore rapporto basso</Italian>
 		<Spanish>Color de puntuación inferior</Spanish>
 		<Russian>Öâåò ïîíèæåíèÿ</Russian>
 	</TEXT>
@@ -7767,7 +7767,7 @@
 		<English>Low Ratio Cutoff</English>
 		<French>Limite faible Pouvoir</French>
 		<German>Grenze für niedrige Machtverhältnisse</German>
-		<Italian>[ICON_BULLET]Livello rapporto basso</Italian>
+		<Italian>Livello rapporto basso</Italian>
 		<Spanish>Franja de puntuación inferior</Spanish>
 		<Russian>Íèæíèé óðîâåíü ìîùè</Russian>
 	</TEXT>
@@ -7803,7 +7803,7 @@
 		<English>Size</English>
 		<French>Taille</French>
 		<German>Größe</German>
-		<Italian>[ICON_BULLET]Dimensioni icone ricerca</Italian>
+		<Italian>Dimensioni icone ricerca</Italian>
 		<Spanish>Tamaño</Spanish>
 		<Russian>Ðàçìåð</Russian>
 	</TEXT>
@@ -7929,7 +7929,7 @@
 		<English>Brightness</English>
 		<French>Transparence</French>
 		<German>Transparenz</German>
-		<Italian>[ICON_BULLET]Trasparenza</Italian>
+		<Italian>Trasparenza</Italian>
 		<Spanish>Transparencia</Spanish>
 		<Russian>ßðêîñòü</Russian>
 	</TEXT>
@@ -7965,7 +7965,7 @@
 		<English>Highlight Brightness</English>
 		<French>Transparence de la Sélection</French>
 		<German>Transparenz beim Platzieren</German>
-		<Italian>[ICON_BULLET]Trasparenza selezione</Italian>
+		<Italian>Trasparenza selezione</Italian>
 		<Spanish>Transparencia de la selección</Spanish>
 		<Russian>ßðêîñòü ïîäñâåòêè</Russian>
 	</TEXT>
@@ -8111,7 +8111,7 @@ uno de s, A, a, p, g, n, o, r (véase archivo de ayuda)</Spanish>
 		<English>Naming Convention: DEFAULT</English>
 		<French>Convention des Noms: DEFAUT</French>
 		<German>Benennungsregel: DEFAULT</German>
-		<Italian>[ICON_BULLET]Regole di denominazione personalizzate</Italian>
+		<Italian>Regole di denominazione personalizzate</Italian>
 		<Spanish>Nomenclatura: DEFAULT</Spanish>
 		<Russian>Ñîãëàøåíèÿ íàèìåíîâàíèÿ: ÏÎ ÓÌÎË×ÀÍÈÞ</Russian>
 	</TEXT>
