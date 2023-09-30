@@ -604,7 +604,7 @@
 		<English>Select when to show the probability bars of each possible ending health for the attacker.</English>
 		<French>Sélectionner dans quelle condition afficher les différentes barres de probabilité correspondantes à la santé de l'attaquant à l'issue du Combat.</French>
 		<German>Bestimmt, wann die Wahrscheinlichkeitsbalken für die jeweils erwartete Gesundheit des Angreifers nach dem Kampf angezeigt werden</German>
-		<Italian>[BOLD]Imposta se e quando visualizzare le [COLOR_HIGHLIGHT_TEXT]barre di probabilità per ogni possibile valore finale[COLOR_REVERT] di punti vita dell'unità in attacco nel pannello delle probabilità di combattimento (visuale normale o alternativa)[\BOLD]</Italian>			
+		<Italian>[BOLD]Imposta se e quando visualizzare le [COLOR_HIGHLIGHT_TEXT]barre di probabilità per ogni possibile valore finale[COLOR_REVERT] di punti vita dell'unità in attacco nel pannello delle probabilità di combattimento (visuale normale o alternativa)[\BOLD]</Italian>
 		<Spanish>Indica cuándo mostrar las barras de probabilidad de cada posible salud final del atacante.</Spanish>
 		<Russian>Âûáåðèòå, ÷òîáû ïîêàçàòü ïîëîñû âåðîÿòíîñòè êàæäîãî âîçìîæíîãî îêîí÷àòåëüíîãî çäîðîâüÿ äëÿ àòàêóþùåãî.</Russian>
 	</TEXT>
@@ -622,7 +622,7 @@
 		<English>Select when to show the attacking unit's information.</English>
 		<French>Sélectionner dans quelle condition afficher les informations de l'unité attaquante.</French>
 		<German>Bestimmt, wann die Informationen über die angereifende Einheit angezeigt werden</German>
-		<Italian>[BOLD]Imposta se e quando visualizzare le [COLOR_HIGHLIGHT_TEXT]informazioni dell'unità in attacco[COLOR_REVERT] nel pannello delle probabilità di combattimento (visuale normale o alternativa)[\BOLD]</Italian>		
+		<Italian>[BOLD]Imposta se e quando visualizzare le [COLOR_HIGHLIGHT_TEXT]informazioni dell'unità in attacco[COLOR_REVERT] nel pannello delle probabilità di combattimento (visuale normale o alternativa)[\BOLD]</Italian>
 		<Spanish>Indica cuándo mostrar la información sobre la unidad atacante.</Spanish>
 		<Russian>Âûáåðèòå, ÷òîáû ïîêàçàòü èíôîðìàöèþ àòàêóþùåãî þíèòà.</Russian>
 	</TEXT>
@@ -640,7 +640,7 @@
 		<English>Select when to show the average (expected) health each unit will have after the battle.</English>
 		<French>Sélectionner dans quelle condition afficher la santé moyenne probable que chaque unité aura à l'issue du combat.</French>
 		<German>Bestimmt, wann die durchschnittliche (erwartete) Gesundheit jeder Einheit nach dem Kampf angezeigt wird</German>
-		<Italian>[BOLD]Imposta se e quando visualizzare il [COLOR_HIGHLIGHT_TEXT]valore medio previsto di punti vita[COLOR_REVERT] che ciascuna unità avrà al termine della battaglia nel pannello delle probabilità di combattimento (visuale normale o alternativa)[\BOLD]</Italian>			
+		<Italian>[BOLD]Imposta se e quando visualizzare il [COLOR_HIGHLIGHT_TEXT]valore medio previsto di punti vita[COLOR_REVERT] che ciascuna unità avrà al termine della battaglia nel pannello delle probabilità di combattimento (visuale normale o alternativa)[\BOLD]</Italian>	
 		<Spanish>Indica cuándo mostrar la salud media (estimada) que tendrá cada unidad después del combate.</Spanish>
 		<Russian>Âûáåðèòå, ÷òîáû ïîêàçàòü ñðåäíåå (îæèäàåìîå) çäîðîâüå äëÿ êàæäîãî þíèòà ïîñëå áèòâû.</Russian>
 	</TEXT>
@@ -685,7 +685,7 @@
 		<English>Select when to show the probability bars of each possible ending health for the defender.</English>
 		<French>Sélectionner dans quelle condition afficher les différentes barres de probabilité correpondantes à la santé du Défenseur à l'issue du Combat.</French>
 		<German>Bestimmt, wann die Wahrscheinlichkeitsbalken für die jeweils erwartete Gesundheit des Verteidigers nach dem Kampf angezeigt werden</German>
-		<Italian>[BOLD]Imposta se e quando visualizzare le [COLOR_HIGHLIGHT_TEXT]barre di probabilità per ogni possibile valore finale[COLOR_REVERT] di punti vita dell'unità in difesa nel pannello delle probabilità di combattimento (visuale normale o alternativa)[\BOLD]</Italian>			
+		<Italian>[BOLD]Imposta se e quando visualizzare le [COLOR_HIGHLIGHT_TEXT]barre di probabilità per ogni possibile valore finale[COLOR_REVERT] di punti vita dell'unità in difesa nel pannello delle probabilità di combattimento (visuale normale o alternativa)[\BOLD]</Italian>
 		<Spanish>Indica cuándo mostrar las barras de probabilidad de cada posible salud final del defensor.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -701,7 +701,7 @@
 		<English>Select when to show the defending unit's information.</English>
 		<French>Sélectionner dans quelle condition afficher les informations de l'unité défendant.</French>
 		<German>Bestimmt, wann die Informationen über die verteidigende Einheit angezeigt werden</German>
-		<Italian>[BOLD]Imposta se e quando visualizzare le [COLOR_HIGHLIGHT_TEXT]informazioni dell'unità in difesa[COLOR_REVERT] nel pannello delle probabilità di combattimento (visuale normale o alternativa)[\BOLD]</Italian>		
+		<Italian>[BOLD]Imposta se e quando visualizzare le [COLOR_HIGHLIGHT_TEXT]informazioni dell'unità in difesa[COLOR_REVERT] nel pannello delle probabilità di combattimento (visuale normale o alternativa)[\BOLD]</Italian>
 		<Spanish>Indica cuándo mostrar la información sobre la unidad defensora.</Spanish>
 		<Russian>Âûáåðèòå, ÷òîáû ïîêàçàòü èíôîðìàöèþ çàùèùàþùåãîñÿ þíèòà.</Russian>
 	</TEXT>
@@ -719,7 +719,7 @@
 		<English>Select when to show the defense modifiers.</English>
 		<French>Sélectionner dans quelle condition afficher les modificateurs de défense (terrain...).</French>
 		<German>Bestimmt, wann die Verteidigungsmodifikatoren angezeigt werden</German>
-		<Italian>[BOLD]Imposta se e quando visualizzare i [COLOR_HIGHLIGHT_TEXT]modificatori difensivi[COLOR_REVERT] nel pannello delle probabilità di combattimento (visuale normale o alternativa)[\BOLD]</Italian>		
+		<Italian>[BOLD]Imposta se e quando visualizzare i [COLOR_HIGHLIGHT_TEXT]modificatori difensivi[COLOR_REVERT] nel pannello delle probabilità di combattimento (visuale normale o alternativa)[\BOLD]</Italian>
 		<Spanish>Indica cuándo mostrar los modificadores defensivos.</Spanish>
 		<Russian>Âûáåðèòå, ÷òîáû ïîêàçàòü ìîäèôèêàòîðû çàùèòíèêà.</Russian>
 	</TEXT>
@@ -737,7 +737,7 @@
 		<English>Select when to show the R values on either side of the actual value that will produce +/- 1 XP.</English>
 		<French>Sélectionner dans quelle condition afficher les valeurs de R, de chaque côté de la valeur actuelle, qui va générer +/- 1 EXP.</French>
 		<German>Bestimmt, wann die R-Werte, die +/- 1 EP ausmachen können, auf beiden Seiten des tatsächlichen Wertes angezeigt werden</German>
-		<Italian>[BOLD]Imposta se e quando visualizzare i [COLOR_HIGHLIGHT_TEXT]valori di intervallo[COLOR_REVERT]  ai lati del valore effettivo che determina una variazione di un punto esperienza nel pannello delle probabilità di combattimento (visuale normale o alternativa)[\BOLD]</Italian>		
+		<Italian>[BOLD]Imposta se e quando visualizzare i [COLOR_HIGHLIGHT_TEXT]valori di intervallo[COLOR_REVERT]  ai lati del valore effettivo che determina una variazione di un punto esperienza nel pannello delle probabilità di combattimento (visuale normale o alternativa)[\BOLD]</Italian>
 		<Spanish>Indica cuándo mostrar los valores del rango a los lados del valor estimado que podría generar +/-1 PX.</Spanish>
 		<Russian>Âûáåðèòå, ÷òîáû ïîêàçàòü çíà÷åíèÿ R äëÿ ëþáîé ñòîðîíû ïðîèçâîäÿùåé äåéñòâèòåëüíûå çíà÷åíèÿ +/- 1 XP.</Russian>
 	</TEXT>
@@ -773,7 +773,7 @@
 		<English>Select when to show the instructions for pressing [SHIFT] to see the alternate view.</English>
 		<French>Sélectionner dans quelle condition afficher le conseil concernant la touche [SHIFT] qui permet d'afficher la vue alternative.</French>
 		<German>Bestimmt, wann der Hinweis zum Drücken der [SHIFT]-Taste für den Wechsel zur alternativen Ansicht angezeigt wird</German>
-		<Italian>[BOLD]Imposta se e quando visualizzare le [COLOR_HIGHLIGHT_TEXT]istruzioni per premere [SHIFT][COLOR_REVERT] per usare l'altra visuale (visuale normale o alternativa)[\BOLD]</Italian>		
+		<Italian>[BOLD]Imposta se e quando visualizzare le [COLOR_HIGHLIGHT_TEXT]istruzioni per premere [SHIFT][COLOR_REVERT] per usare l'altra visuale (visuale normale o alternativa)[\BOLD]</Italian>
 		<Spanish>Indica cuándo mostrar las instrucciones para presionar [SHIFT] para ver la vista alternativa.</Spanish>
 		<Russian>Âûáåðèòå, ÷òîáû ïîêàçàòü èíñòðóêöèè íàæàòèåì [SHIFT] äëÿ ïðîñìîòðà àëüòåðíàòèâíûõ âèäîâ.</Russian>
 	</TEXT>
@@ -791,7 +791,7 @@
 		<English>Select when to show the odds that each unit will survive.</English>
 		<French>Sélectionner dans quelle condition afficher les informations concernant la probabilité de Survie de chaque unité</French>
 		<German>Bestimmt, wann die Überlebenschancen für jede Einheit angezeigt werden</German>
-		<Italian>[BOLD]Imposta se e quando visualizzare le [COLOR_HIGHLIGHT_TEXT]probabilità che ciascuna unità sopravviva[COLOR_REVERT] nel pannello delle probabilità di combattimento (visuale normale o alternativa)[\BOLD]</Italian>		
+		<Italian>[BOLD]Imposta se e quando visualizzare le [COLOR_HIGHLIGHT_TEXT]probabilità che ciascuna unità sopravviva[COLOR_REVERT] nel pannello delle probabilità di combattimento (visuale normale o alternativa)[\BOLD]</Italian>
 		<Spanish>Indica cuándo mostrar las probabilidades de supervivencia de las unidades.</Spanish>
 		<Russian>Âûáåðèòå, ÷òîáû ïîêàçàòü øàíñû âûæèâàíèÿ äëÿ êàæäîãî þíèòà.</Russian>
 	</TEXT>
@@ -809,7 +809,7 @@
 		<English>Select when to show the total defense modifiers (includes attacker's non-combat modifiers that apply to the defender).</English>
 		<French>Sélectionner dans quelle condition afficher la totalité des modificateurs de défense (en incluant les modificateurs des unités non combattantes, qui s'appliquent au défenseur).</French>
 		<German>Bestimmt, wann der absolute Verteidigungsmodifikator angezeigt wird (beinhaltet die nicht kampfrelevanten Modifikatoren des Angreifers, die auf den Verteidiger angewendet werden)</German>
-		<Italian>[BOLD]Imposta se e quando visualizzare i [COLOR_HIGHLIGHT_TEXT]modificatori difensivi totali[COLOR_REVERT] (comprendenti i modificatori non di combattimento dell'attaccante che si applicano al difensore) nel pannello delle probabilità di combattimento (visuale normale o alternativa)[\BOLD]</Italian>				
+		<Italian>[BOLD]Imposta se e quando visualizzare i [COLOR_HIGHLIGHT_TEXT]modificatori difensivi totali[COLOR_REVERT] (comprendenti i modificatori non di combattimento dell'attaccante che si applicano al difensore) nel pannello delle probabilità di combattimento (visuale normale o alternativa)[\BOLD]</Italian>
 		<Spanish>Indica cuándo mostrar el modificador defensivo total (incluidos los modificadores que no sean de combate del atacante que se apliquen al defensor).</Spanish>
 		<Russian>Âûáåðèòå, ÷òîáû ïîêàçàòü ïîëíûå ìîäèôèêàòîðû çàùèòíèêà (âêëþ÷àÿ íåáîåâûå ìîäèôèêàòîðû àòàêóþùåãî, ïðèëîæåííûå ê çàùèòíèêó).</Russian>
 	</TEXT>
@@ -826,7 +826,7 @@
 		<English>Select when to show the odds that each unit will survive without taking any damage.</English>
 		<French>Sélectionner dans quelle condition afficher les probabilités de chaque unité de sortir indemne du combat.</French>
 		<German>Bestimmt, wann für jede Einheit die Wahrscheinlichkeit, den Kampf unbeschadet zu überleben, angezeigt wird</German>
-		<Italian>[BOLD]Imposta se e quando visualizzare le [COLOR_HIGHLIGHT_TEXT]probabilità che ciascuna unità superi lo scontro senza alcun danno[COLOR_REVERT] nel pannello delle probabilità di combattimento (visuale normale o alternativa)[\BOLD]</Italian>			
+		<Italian>[BOLD]Imposta se e quando visualizzare le [COLOR_HIGHLIGHT_TEXT]probabilità che ciascuna unità superi lo scontro senza alcun danno[COLOR_REVERT] nel pannello delle probabilità di combattimento (visuale normale o alternativa)[\BOLD]</Italian>
 		<Spanish>Indica cuándo mostrar las probabilidades de que las unidades salgan ilesas del combate.</Spanish>
 		<Russian>Âûáåðèòå, ÷òîáû ïîêàçàòü øàíñû âûæèâàíèÿ áåç ïîâðåæäåíèé äëÿ êàæäîãî þíèòà.</Russian>
 	</TEXT>
@@ -844,7 +844,7 @@
 		<English>Select when to show the unrounded XP values in addition to the actual rounded values the units will gain.</English>
 		<French>Sélectionner dans quelle condition afficher les Valeurs brutes non arrondies - en plus des valeurs standards arrondies - que les unités vont gagner.</French>
 		<German>Bestimmt, wann die ungerundeten Erfahrungspunkte zusätzlich zu den tatsächlichen (gerundeten) Erfahrungspunkten, die die Einheiten erhalten werden, angezeigt werden</German>
-		<Italian>[BOLD]Imposta se e quando visualizzare i [COLOR_HIGHLIGHT_TEXT]punti esperienza non arrotondati[COLOR_REVERT]  oltre a quelli effettivi arrotondati che guadagneranno le unità nel pannello delle probabilità di combattimento (visuale normale o alternativa)[\BOLD]</Italian>		
+		<Italian>[BOLD]Imposta se e quando visualizzare i [COLOR_HIGHLIGHT_TEXT]punti esperienza non arrotondati[COLOR_REVERT]  oltre a quelli effettivi arrotondati che guadagneranno le unità nel pannello delle probabilità di combattimento (visuale normale o alternativa)[\BOLD]</Italian>
 		<Spanish>Indica cuándo mostrar los puntos de experiencia sin redondear, además de los valores redondeados que ganarían las unidades.</Spanish>
 		<Russian>Âûáåðèòå, ÷òîáû ïîêàçàòü íåîêðóãëåííûå çíà÷åíèÿ XP â äîïîëíåíèå ê ôàêòè÷åñêèì îêðóãëåííûì çíà÷åíèÿì âûèãðûøà.</Russian>
 	</TEXT>
@@ -1275,7 +1275,7 @@
 		<English>Name of log file. If there is no file of this name in the directory above, one will be created.</English>
 		<French>Nom du fichier de log. Si un fichier de ce nom n'existe pas dans le répertoire spécifié ci-dessus, il sera créé.</French>
 		<German>Falls sich keine Datei mit diesem Namen im obigen Verzeichnis befindet, wird eine erstellt</German>
-		<Italian>[BOLD]Definisce il [COLOR_HIGHLIGHT_TEXT]nome del file[COLOR_REVERT] del registro automatico (se non è presente alcun file con questo nome nella cartella indicata nel campo sopra questo ne verrà creato uno)[\BOLD]</Italian>	
+		<Italian>[BOLD]Definisce il [COLOR_HIGHLIGHT_TEXT]nome del file[COLOR_REVERT] del registro automatico (se non è presente alcun file con questo nome nella cartella indicata nel campo sopra questo ne verrà creato uno)[\BOLD]</Italian>
 		<Spanish>Nombre del archivo de registro. Si no existe un archivo con este nombre en el directorio, se creará.</Spanish>
 		<Russian>Èìÿ ôàéëà æóðíàëà. Åñëè íåò ôàéëà ñ òàêèì èìåíåì â êàòàëîãå (âûøå), îí áóäåò ñîçäàí.</Russian>
 	</TEXT>
@@ -7417,7 +7417,7 @@
 		<English>When checked, shows faces depicting each AI's attitude toward you.</English>
 		<French>Lorsque activé, utilise des Smileys pour indiquer l'attitude des IA envers vous.</French>
 		<German>Zeigt die Einstellung jeder Zivilisation gegenüber der eigenen mit Smilies an</German>
-		<Italian>[BOLD]Nel [COLOR_HIGHLIGHT_TEXT]pannello punteggio[COLOR_REVERT] vengono mostrate delle [COLOR_HIGHLIGHT_TEXT]icone[COLOR_REVERT] che rappresentano l'[COLOR_HIGHLIGHT_TEXT]atteggiamento[COLOR_REVERT] delle altre civiltà verso il giocatore[\BOLD]</Italian>	
+		<Italian>[BOLD]Nel [COLOR_HIGHLIGHT_TEXT]pannello punteggio[COLOR_REVERT] vengono mostrate delle [COLOR_HIGHLIGHT_TEXT]icone[COLOR_REVERT] che rappresentano l'[COLOR_HIGHLIGHT_TEXT]atteggiamento[COLOR_REVERT] delle altre civiltà verso il giocatore[\BOLD]</Italian>
 		<Spanish>Cuando se activa, muestra emoticonos indicando la actitud de cada IA respecto a ti.</Spanish>
 		<Russian>Êîãäà âêëþ÷åí, ïîêàçûâàåò èçîáðàæåíèå ëèöà îòíîøåíèÿ ÈÈ ê âàì.</Russian>
 	</TEXT>
