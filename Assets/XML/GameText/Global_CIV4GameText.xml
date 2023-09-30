@@ -8662,7 +8662,7 @@
 		<English>All Military</English>
 		<French>Toutes unités militaires</French>
 		<German>Alle Militäreinheiten</German>
-		<Italian>Tutte le unità9999</Italian> <!-- infoscreen Military -->
+		<Italian>Tutte le unità militari</Italian> <!-- infoscreen Military -->
 		<Spanish>Todos los ejércitos</Spanish>
 	</TEXT>
 	<TEXT>
@@ -8670,7 +8670,7 @@
 		<English>Domestics</English>
 		<French>Domestiques</French>
 		<German>Einheimische</German>
-		<Italian>Unità locali</Italian> 
+		<Italian>Unità locali</Italian>
 		<Spanish>Unidades nacionales</Spanish>
 	</TEXT>
 	<TEXT>
@@ -8678,7 +8678,7 @@
 		<English>Enemy Military</English>
 		<French>Unités militaires ennemies</French>
 		<German>Feindliche Militäreinheiten</German>
-		<Italian>Unità nemiche</Italian> 
+		<Italian>Unità nemiche</Italian>
 		<Spanish>Ejércitos enemigos</Spanish>
 	</TEXT>
 	<TEXT>
@@ -15019,7 +15019,7 @@
 		<English>[ICON_BULLET]%D1[ICON_EATENFOOD] for Health</English>
 		<French>[ICON_BULLET]%D1[ICON_EATENFOOD] pour la santé</French>
 		<German>[ICON_BULLET]%D1[ICON_EATENFOOD] für Gesundheit</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1[COLOR_REVERT] [ICON_EATENFOOD] per la bassa salute</Italian>  <!-- city screen research, food panel hover -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1[COLOR_REVERT] [ICON_EATENFOOD] per la bassa salute</Italian> <!-- city screen research, food panel hover -->
 		<Spanish>[ICON_BULLET]%D1[ICON_EATENFOOD] por Salud</Spanish>
 		<Polish>[ICON_BULLET]%D1[ICON_EATENFOOD] ze Zdrowia</Polish>
 		<Russian>[ICON_BULLET]%D1[ICON_EATENFOOD] äëÿ çäîðîâüÿ</Russian>
@@ -15374,7 +15374,7 @@
 		<English>[COLOR_WARNING_TEXT]Requires a Population of %d1[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Il faut une population de %d1[COLOR_REVERT].</French>
 		<German>[COLOR_WARNING_TEXT]Erfordert eine Bevölkerungsgröße von %d1[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]Richiede[COLOR_REVERT] una popolazione di almeno [COLOR_WARNING_TEXT]%d1[COLOR_REVERT]</Italian> 
+		<Italian>[COLOR_WARNING_TEXT]Richiede[COLOR_REVERT] una popolazione di almeno [COLOR_WARNING_TEXT]%d1[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Requiere %d1 de población[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
