@@ -166,7 +166,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_BIG_CAT_PEDIA</Tag>
 		<English>Cat training is the process of modifying a wild cat's behavior for entertainment or companionship purposes. Training is commonly used to reduce unwanted or problematic behaviors in wild cats, to enhance interactions between humans and cats, and to allow them to coexist comfortably. There are various methods for training cats which employ different balances between reward and punishment.</English>
-		<Russian>Дрессировка кошки - процесс изменения поведения дикой кошки в развлекательных или общительных целях. Дрессировка обычно используется для уменьшения нежелательного или проблемного поведения диких кошек, улучшения взаимодействия между людьми и кошками и создания комфортных условий их сосуществования. Есть разные методы дрессировки кошек, использующие различный баланс между вознаграждением и наказанием.</Russian>
+		<Russian>Дрессировка кошки - процесс изменения поведения дикой кошки в развлекательных или общительных целях. Обычно используется для уменьшения нежелательного или проблемного поведения диких кошек, улучшения взаимодействия между людьми и кошками и создания комфортных условий их сосуществования. Есть разные методы дрессировки кошек, использующие различный баланс между вознаграждением и наказанием.</Russian>
 		<Italian>L'addestramento del gatto è il processo di modifica del comportamento di un gatto selvatico per scopi di intrattenimento o compagnia. L'addestramento è comunemente utilizzato per ridurre i comportamenti indesiderati o problematici nei gatti selvatici, per migliorare le interazioni tra uomo e gatto e per consentire loro di coesistere comodamente. Esistono vari metodi per addestrare i gatti che impiegano diversi equilibri tra ricompensa e punizione.</Italian>
 	</TEXT>
 	<TEXT>
@@ -441,7 +441,7 @@
 		<Tag>TXT_KEY_BUILDING_HERITAGE_RHINOCEROS_PEDIA</Tag>
 		<English>Rhinoceros units have the Stampede ability and at the moment they're the only unit with it and the only unit that can develop it. If made a little stronger to make them a bit more viable (and to let them represent better the kind of amazing destructive capacity these animals have in RL) they'll be given an amazingly powerful niche use throughout the early era, particularly as a powerful counter against the strategy of splitting up units to delay attack forces from taking a position.[PARAGRAPH:2]Rhinos also cause some collateral so if one can survive the first fight and the units in the stack they're attacking can still within range of being given further collateral damage, a rhino can uniquely inflict collateral to a stack more than once when it attacks.[PARAGRAPH:2]There is no evidence Rhinoceros were ever trained for warfare. The [COLOR_BUILDING_TEXT]Giraffe Trainer[COLOR_REVERT] building is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<Italian>Le unità rinoceronte hanno l'abilità Stampede e al momento sono l'unica unità che può svilupparla. Se resi un po' più forti per renderli un po' più utilizzabili (e per permettere loro di rappresentare meglio il tipo di incredibile capacità distruttiva che questi animali hanno nella vita reale) riceveranno un uso di nicchia incredibilmente potente per tutta la prima era, in particolare un potente contrasto alla strategia di dividere le unità per ritardare la presa di posizione delle forze d'attacco.[PARAGRAPH:2]I rinoceronti causano anche dei danni collaterali, quindi se un'unità sopravvive al primo combattimento e le unità nel gruppo che sta attaccando si trovano nel raggio riceveranno ulteriori danni collaterali, un rinoceronte può infliggere danni collaterali a una pila più di una volta quando attacca.[PARAGRAPH:2]Non ci sono prove che i rinoceronti siano mai stati addestrati per la guerra. L'edificio [COLOR_BUILDING_TEXT]Addestratore di rinoceronti[COLOR_REVERT] fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologie alternative[COLOR_REVERT]. Tecnologie che avrebbero potuto essere</Italian>
-		<Russian>Носорожьи подразделения, на данный момент, единственные, кто владеет и может развивать способность к паническому бегству. Если увеличить их живучесть (чтобы лучше демонстрировать удивительный разрушительный потенциал носорогов), то они обретут мощное нишевое применение в ранней эпохе, особенно как сильное противодействие стратегии разделения отрядов для задержки атакующих сил от захвата позиции.[PARAGRAPH:2]Носороги также наносят некоторый побочный ущерб, поэтому если один из них выживает в первом бою, а атакуемые им подразделения все еще находятся в пределах досягаемости для получения дальнейшего побочного ущерба, носорог может уникальным образом нанести побочный ущерб стеку более одного раза, когда он атакует.[PARAGRAPH:2]Не существует доказательств того, что носорогов когда-либо использовали для ведения войны. [COLOR_BUILDING_TEXT]Дрессировка носорогов[COLOR_REVERT] - часть [COLOR_HIGHLIGHT_TEXT]технологий альтернативной временной линии[COLOR_REVERT]. Технологий, которые могли бы быть.</Russian>
+		<Russian>Носорожьи подразделения, на данный момент, единственные, кто владеет и может развивать способность к паническому бегству. Если увеличить их живучесть (для лучшей демонстрации удивительного разрушительного потенциал носорогов), то они обретут мощное нишевое применение в ранней эпохе, особенно как сильное противодействие стратегии разделения отрядов для задержки атакующих сил от захвата позиции.[PARAGRAPH:2]Носороги также наносят некоторый побочный ущерб, поэтому если один из них выживает в первом бою, а атакуемые им подразделения все еще находятся в пределах досягаемости для получения дальнейшего побочного ущерба, носорог может уникальным образом нанести побочный ущерб стеку более одного раза, когда он атакует.[PARAGRAPH:2]Не существует доказательств того, что носорогов когда-либо использовали для ведения войны. [COLOR_BUILDING_TEXT]Дрессировка носорогов[COLOR_REVERT] - часть [COLOR_HIGHLIGHT_TEXT]технологий альтернативной временной линии[COLOR_REVERT]. Технологий, которые могли бы быть.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_RHINOCEROS_PEDIA</Tag>
@@ -459,7 +459,7 @@
 		</French>
 		<Italian>Branco di zebre</Italian>
 		<Polish>Stado - Zebra</Polish>
-		<Russian>Ñòàäî çåáð</Russian>
+		<Russian>Стадо зебр</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_ZEBRA</Tag>
@@ -471,14 +471,14 @@
 		</French>
 		<Italian>Addestratore zebre</Italian>
 		<Polish>Treser Zebr</Polish>
-		<Russian>Ïðèðó÷åíèå çåáð</Russian>
+		<Russian>Дрессировка зебр</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EFFECT_HERITAGE_ZEBRAS</Tag>
 		<English>Effect - Heritage - Zebras</English>
 		<French>Effet - Patrimoine (Zèbres)</French>
 		<Polish>Efekt - Dziedzictwo - Zebra</Polish>
-		<Russian>Ïèòîìíèê çåáð</Russian>
+		<Russian>Эффект - Культурное наследие - Зебры</Russian>
 		<Italian>Effetto dell'eredità culturale delle zebre</Italian>
 	</TEXT>
 	<TEXT>
@@ -486,24 +486,27 @@
 		<English>[ICON_BULLET]Allows the training of Zebra units.</English>
 		<French>Permet l'entraînement d'unités avec des zèbres.</French>
 		<Italian>[ICON_BULLET]Consente l'addestramento delle unità zebra.</Italian>
+		<Russian>[ICON_BULLET]Разрешает найм зебровых подразделений.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERITAGE_ZEBRA</Tag>
 		<English>Heritage - Zebra</English>
 		<French>Patrimoine (Zèbres)</French>
 		<Polish>Dziedzictwo - Zebra</Polish>
-		<Russian>Ðàçâåäåíèå çåáð</Russian>
+		<Russian>Культурное наследие - Зебры</Russian>
 		<Italian>Eredità culturale delle zebre</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERITAGE_ZEBRA_PEDIA</Tag>
 		<English>Instead of only being able to train Zebra units in the city you built the wonder in this building allows them to be built in any of your cities. It can only be built in the ciy with the Zebra Trainer World Wonder.</English>
 		<Italian>Invece di poter addestrare le unità zebra solo nella città in cui hai costruito la meraviglia, questo edificio permette di costruirle in qualsiasi tua città. Può essere costruito solo in una città con la meraviglia mondiale addestramento zebre.</Italian>
+		<Russian>Можно возвести исключительно в городе с мировым чудом "Дрессировка зебр". Позволяет создавать зебровые подразделения в любом вашем поселении, а не только в том, где стоит вышеупомянутое чудо.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_ZEBRA_PEDIA</Tag>
 		<English>There is no evidence Zebra were ever trained for warfare. The [COLOR_BUILDING_TEXT]Zebra Trainer[COLOR_REVERT] building is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<Italian>Non ci sono prove che le zebre siano mai state usate in guerra. L'[COLOR_BUILDING_TEXT]Allevatore di zebre[COLOR_REVERT] è un edificio parte delle [COLOR_HIGHLIGHT_TEXT]Tecnologie alternative[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
+		<Russian>Не существует доказательств того, что зебр когда-либо использовали для ведения войны. [COLOR_BUILDING_TEXT]Дрессировка зебр[COLOR_REVERT] - часть [COLOR_HIGHLIGHT_TEXT]технологий альтернативной временной линии[COLOR_REVERT]. Технологий, которые могли бы быть.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BALLISTA_MAMMOTH</Tag>
@@ -515,12 +518,13 @@
 		</French>
 		<Italian>Mammut con ballista</Italian>
 		<Polish>Mamut-Ballista</Polish>
-		<Russian>Ìàìîíò ñ áàëëèñòîé</Russian>
+		<Russian>Баллиста на мамонте</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BALLISTA_MAMMOTH_PEDIA</Tag>
 		<English>Great mammoths walk in northern tundras, some tribes hunt them for meat, skins and bones. But some hunt them them for beast of war. Capturing one alive and bending is no easy task, but if succeeded. Tribe have a warbeast that can crush down buildings and break a gates of strongholds. Mammoth can be used break down enemy troops.</English>
 		<Italian>I grandi mammut camminano nelle tundre settentrionali, alcune tribù li cacciano per carne, pelli e ossa. Ma alcuni li cacciano per usarli come bestie da guerra. Catturarne uno vivo e piegarlo non è un compito facile, ma se ci riesce la tribù ha una bestia da guerra che può abbattere edifici e rompere i cancelli delle roccaforti. Il mammut può essere usato per abbattere le truppe nemiche.</Italian>
+		<Russian>По северным тундрам ходят огромные мамонты. Некоторые племена охотятся на них ради мяса, шкур и костей. Но другие ловят их, чтобы использовать в бою. Поймать и приручить живого мамонта - нелегкая задача. Но в случае успеха, племя обретает боевого зверя, способного сокрушать здания, ломать ворота крепостей и уничтожать вражеских солдат.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BEARKNIGHT</Tag>
@@ -532,12 +536,13 @@
 		</French>
 		<Italian>Cavaliere di orsi</Italian>
 		<Polish>Rycerz (Niedźwiedź)</Polish>
-		<Russian>Ðûöàðü íà ìåäâåäå</Russian>
+		<Russian>Рыцарь на медведе</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BEARKNIGHT_PEDIA</Tag>
 		<English>There is no evidence this unit was ever used. It is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<Italian>Non c'è alcuna prova che quest'unità sia mai stata usata in battaglia. Fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologie delle timeline alternative[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
+		<Russian>Не существует доказательств того, что такие подразделения когда-либо существовали. Они - порождение [COLOR_HIGHLIGHT_TEXT]технологий альтернативной временной линии[COLOR_REVERT]. Технологий, которые могли бы быть.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BEARRIDER</Tag>
@@ -549,12 +554,13 @@
 		</French>
 		<Italian>Cavalcatore di orsi</Italian>
 		<Polish>Jeździec (Niedźwiedź)</Polish>
-		<Russian>Íàåçäíèê íà ìåäâåäå</Russian>
+		<Russian>Всадник на медведе</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BEARRIDER_PEDIA</Tag>
 		<English>There is no evidence this unit was ever used. It is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<Italian>Non c'è alcuna prova che quest'unità sia mai stata usata in battaglia. Fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologie delle timeline alternative[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
+		<Russian>Не существует доказательств того, что такие подразделения когда-либо существовали. Они - порождение [COLOR_HIGHLIGHT_TEXT]технологий альтернативной временной линии[COLOR_REVERT]. Технологий, которые могли бы быть.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BISON_RIDER</Tag>
@@ -566,13 +572,14 @@
 		</French>
 		<Italian>Cavaliere di bisonti</Italian>
 		<Polish>Jeździec (Bizon)</Polish>
-		<Russian>Íàåçäíèê íà áèçîíå</Russian>
+		<Russian>Всадник на бизоне</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BISON_RIDER_PEDIA</Tag>
 		<English>There is no evidence this unit was ever used. It is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<Italian>Non c'è alcuna prova che quest'unità sia mai stata usata in battaglia. Fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologie delle timeline alternative[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
 		<Polish>Nie ma dowodów na istnienie tej jednostki, jest ona częścią tzw. [COLOR_HIGHLIGHT_TEXT]technologii alternatywnej ścieżki historycznej[COLOR_REVERT].</Polish>
+		<Russian>Не существует доказательств того, что такие подразделения когда-либо существовали. Они - порождение [COLOR_HIGHLIGHT_TEXT]технологий альтернативной временной линии[COLOR_REVERT]. Технологий, которые могли бы быть.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BOMBARD_MAMMOTH</Tag>
@@ -584,7 +591,7 @@
 		</French>
 		<Italian>Mammut da bombardamento</Italian>
 		<Polish>Mamut-Bombard</Polish>
-		<Russian>Ìàìîíò ñ ïóøêîé</Russian>
+		<Russian>Бомбарда на мамонте</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DEERRIDER</Tag>
