@@ -14317,6 +14317,7 @@
 		<French>[NUM1:Votre:Votre:Vos:Vos] %s1_UnitName [NUM1:a:a:ont:ont] réussi à éviter d'être piétiné par l'unité %s2_EnUName ennemie, qui se précipitait sur vos forces !</French>
 		<Italian>La tua unità %s1_UnitName è riuscita a scampare alla furia dell'unità nemica %s2_EnUName mentre procede verso le tue forze!</Italian>
 		<Polish>Wroga jednostka: %s1_EnUName uciekła przed przewagą naszej jednostki: %s2_UnitName!</Polish>
+		<Russian>Ваше подразделение %s1_UnitName избежало растаптывания в пыль вражеским %s2_EnUName, когда оно неслось через ваши войска!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_EXPERIENCE</Tag>
