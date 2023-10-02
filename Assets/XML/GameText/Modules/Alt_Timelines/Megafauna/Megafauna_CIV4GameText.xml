@@ -257,7 +257,7 @@
 		<English>There is no evidence deer were ever trained for warfare. The [COLOR_BUILDING_TEXT]Deer Trainer[COLOR_REVERT] building is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.[PARAGRAPH:2]Strongest base early withdrawal - even battle hardened deer can be skittish creatures that can be tough to KEEP in the battle for long but makes them GREAT at wearing down opponents. They'd be perhaps the best at this get in/get out type of strategy so long as they can do some damage during their short fights.</English>
 		<French>Il n'y a aucune preuve que les cerfs aient été formés pour la guerre. Le bâtiment [COLOR_BUILDING_TEXT] Dresseur de cerfs [COLOR_REVERT] fait partie des [COLOR_HIGHLIGHT_TEXT] technologies de chronologie alternatives [COLOR_REVERT]. Technologies qui auraient pu l'être.[PARAGRAPH:2]Retrait précoce de la base la plus forte - même les cerfs endurcis au combat peuvent être des créatures agiles qui peuvent être difficiles à GARDER dans la bataille pendant longtemps, mais les rendent EXCEPTIONNELS pour épuiser leurs adversaires. Ils seraient peut-être les meilleurs dans ce type de stratégie d'entrée / sortie tant qu'ils peuvent faire des dégâts pendant leurs combats courts.</French>
 		<Italian>Non ci sono prove che i cervi siano mai stati usati in guerra. L'[COLOR_BUILDING_TEXT]addestramento cervi[COLOR_REVERT] fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologie alternative[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
-		<Russian>Не существует доказательств того, что оленей когда-либо использовали для ведения войны. [COLOR_BUILDING_TEXT]Дрессировка оленей[COLOR_REVERT] - часть [COLOR_HIGHLIGHT_TEXT]технологий альтернативной временной линии[COLOR_REVERT]. Технологий, которые могли бы быть.[PARAGRAPH:2]Самое главное - ранний отход. Даже привыкшие к сражениям олени могут оставаться пугливыми и трудноконтролируемыми в длительном бою. Зато они отлично справляются с изматыванием противника. Возможно, они станут лучшими по тактике "Ударил-убежал", если успеют нанести урон во время коротких боев.</Russian>
+		<Russian>Не существует доказательств того, что оленей когда-либо использовали для ведения войны. [COLOR_BUILDING_TEXT]Дрессировка оленей[COLOR_REVERT] - часть [COLOR_HIGHLIGHT_TEXT]технологий альтернативной временной линии[COLOR_REVERT]. Технологий, которые могли бы быть.[PARAGRAPH:2]Самое главное - ранний отход. Даже привыкшие к сражениям олени могут оставаться пугливыми и трудноконтролируемыми в длительном бою. Зато они отлично справляются с изматыванием противника. Возможно, они станут лучшими по тактике "Ударил-убежал", если успеют нанести урон в непродолжительном бою.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_GIRAFFE</Tag>
@@ -603,13 +603,14 @@
 		</French>
 		<Italian>Cavaliere di cervi</Italian>
 		<Polish>Jeździec (Jeleń)</Polish>
-		<Russian>Íàåçäíèê íà îëåíå</Russian>
+		<Russian>Всадник на олене</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DEERRIDER_PEDIA</Tag>
 		<English>Equivalent in style to the Horse Rider units. Strongest base early withdrawal - even battle hardened deer can be skittish creatures that can be tough to KEEP in the battle for long but makes them GREAT at wearing down opponents. They'd be perhaps the best at this get in/get out type of strategy so long as they can do some damage during their short fights.[PARAGRAPH:2]There is no evidence this unit was ever used. It is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<French>Équivalent en style aux unités Chevaucheurs (à cheval). Retrait précoce de la base la plus forte - même les cerfs endurcis au combat peuvent être des créatures agiles qui peuvent être difficiles à GARDER dans la bataille pendant longtemps, mais les rendent EXCEPTIONNELS pour épuiser leurs adversaires. Ils seraient peut-être les meilleurs dans ce type de stratégie d'entrée / sortie tant qu'ils peuvent faire des dégâts pendant leurs combats courts.[PARAGRAPH:2]Il n'y a aucune preuve que cette unité ait jamais été utilisée. Il fait partie des [COLOR_HIGHLIGHT_TEXT] technologies de chronologie alternatives [COLOR_REVERT]. Technologies qui auraient pu l'être.</French>
 		<Italian>Equivalente nello stile alle unità cavaliere di cavalli. Ritiro anticipato di base più forte: anche i cervi temprati dalla battaglia possono essere creature ombrose che possono essere difficili da MANTENERE a lungo nella battaglia, ma questo li rende GRANDI nel logorare gli avversari. Sarebbero forse i migliori in questo tipo di strategia di entrata/uscita, purché riescano a fare qualche danno durante i loro brevi combattimenti.[PARAGRAPH:2]Non ci sono prove che questa unità sia mai stata usata. Fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologie alternative[COLOR_REVERT]. Tecnologie che avrebbero potuto essere.</Italian>
+		<Russian>Эквивалентны по стилю всадникам на лошадях. Самое главное - ранний отход. Даже привыкшие к сражениям олени могут оставаться пугливыми и трудноконтролируемыми в длительном бою. Зато они отлично справляются с изматыванием противника. Возможно, они станут лучшими по тактике "Ударил-убежал", если успеют нанести урон в непродолжительном бою.[PARAGRAPH:2]Не существует доказательств того, что такие подразделения когда-либо существовали. Они - порождение [COLOR_HIGHLIGHT_TEXT]технологий альтернативной временной линии[COLOR_REVERT]. Технологий, которые могли бы быть.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DEER_ARCHER</Tag>
@@ -621,7 +622,7 @@
 		</French>
 		<Italian>Arciere su cervo</Italian>
 		<Polish>Jeleni Łucznik</Polish>
-		<Russian>Ëó÷íèê íà îëåíå</Russian>
+		<Russian>Лучник на олене</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DEER_ARCHER_PEDIA</Tag>
