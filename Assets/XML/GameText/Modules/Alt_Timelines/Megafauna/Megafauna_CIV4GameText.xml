@@ -166,7 +166,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_BIG_CAT_PEDIA</Tag>
 		<English>Cat training is the process of modifying a wild cat's behavior for entertainment or companionship purposes. Training is commonly used to reduce unwanted or problematic behaviors in wild cats, to enhance interactions between humans and cats, and to allow them to coexist comfortably. There are various methods for training cats which employ different balances between reward and punishment.</English>
-		<Russian>Дрессировка кошки - процесс изменения поведения дикой кошки в развлекательных или общительных целях. Обычно используется для уменьшения нежелательного или проблемного поведения диких кошек, улучшения взаимодействия между людьми и кошками и создания комфортных условий их сосуществования. Есть разные методы дрессировки кошек, использующие различный баланс между вознаграждением и наказанием.</Russian>
+		<Russian>Дрессировка кошки - это процесс изменения поведения дикой кошки в развлекательных или дружеских целях. Дрессировка обычно используется для уменьшения нежелательного или проблемного поведения у диких кошек, для улучшения взаимодействия между людьми и кошками и для того, чтобы позволить им комфортно сосуществовать. Существуют различные методы дрессировки кошек, в которых используется различный баланс между вознаграждением и наказанием.</Russian>
 		<Italian>L'addestramento del gatto è il processo di modifica del comportamento di un gatto selvatico per scopi di intrattenimento o compagnia. L'addestramento è comunemente utilizzato per ridurre i comportamenti indesiderati o problematici nei gatti selvatici, per migliorare le interazioni tra uomo e gatto e per consentire loro di coesistere comodamente. Esistono vari metodi per addestrare i gatti che impiegano diversi equilibri tra ricompensa e punizione.</Italian>
 	</TEXT>
 	<TEXT>
@@ -629,7 +629,7 @@
 		<English>Equivalent in style to the Horse Archer units. Strongest base early withdrawal - even battle hardened deer can be skittish creatures that can be tough to KEEP in the battle for long but makes them GREAT at wearing down opponents. They'd be perhaps the best at this get in/get out type of strategy so long as they can do some damage during their short fights.[PARAGRAPH:2]There is no evidence this unit was ever used. It is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<French>Équivalent en style aux unités Archers sur cheval. Retrait précoce de la base la plus forte - même les cerfs endurcis au combat peuvent être des créatures agiles qui peuvent être difficiles à GARDER dans la bataille pendant longtemps, mais les rendent EXCEPTIONNELS pour épuiser leurs adversaires. Ils seraient peut-être les meilleurs dans ce type de stratégie d'entrée / sortie tant qu'ils peuvent faire des dégâts pendant leurs combats courts.[PARAGRAPH:2]Il n'y a aucune preuve que cette unité ait jamais été utilisée. Il fait partie des [COLOR_HIGHLIGHT_TEXT]Technologies de chronologie alternatives[COLOR_REVERT]. Technologies qui auraient pu exister.</French>
 		<Italian>Equivalente nello stile alle unità arciere a cavallo. Ritiro anticipato di base più forte: anche i cervi temprati dalla battaglia possono essere creature ombrose che possono essere difficili da MANTENERE a lungo nella battaglia, ma questo li rende GRANDI nel logorare gli avversari. Sarebbero forse i migliori in questo tipo di strategia di entrata/uscita, purché riescano a fare qualche danno durante i loro brevi combattimenti.[PARAGRAPH:2]Non ci sono prove che questa unità sia mai stata usata. Fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologie alternative[COLOR_REVERT]. Tecnologie che avrebbero potuto essere.</Italian>
-		<Russian>Эквивалентны по стилю лучникам на лошадях. Самое главное - ранний отход. Даже привыкшие к сражениям олени могут оставаться пугливыми и трудноконтролируемыми в длительном бою. Зато они отлично справляются с изматыванием противника. Возможно, они станут лучшими по тактике "Ударил-убежал", если успеют нанести урон в непродолжительном бою.[PARAGRAPH:2]Не существует доказательств того, что такие подразделения когда-либо существовали. Они - порождение [COLOR_HIGHLIGHT_TEXT]технологий альтернативной временной линии[COLOR_REVERT]. Технологий, которые могли бы быть.</Russian>
+		<Russian>Эквивалентны по стилю конным лучникам. Самое главное - ранний отход. Даже привыкшие к сражениям олени могут оставаться пугливыми и трудноконтролируемыми в длительном бою. Зато они отлично справляются с изматыванием противника. Возможно, они станут лучшими по тактике "Ударил-убежал", если успеют нанести урон в непродолжительном бою.[PARAGRAPH:2]Не существует доказательств того, что такие подразделения когда-либо существовали. Они - порождение [COLOR_HIGHLIGHT_TEXT]технологий альтернативной временной линии[COLOR_REVERT]. Технологий, которые могли бы быть.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DEER_LIGHT</Tag>
@@ -663,47 +663,48 @@
 		</French>
 		<Italian>Arciere su giraffa</Italian>
 		<Polish>Żyrafi Łucznik</Polish>
-		<Russian>Ëó÷íèê íà æèðàôå</Russian>
+		<Russian>Лучник на жирафе</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GIRAFFE_ARCHER_PEDIA</Tag>
 		<English>There is no evidence this unit was ever used. It is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<Italian>Non c'è alcuna prova che quest'unità sia mai stata usata in battaglia. Fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologie alternative[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
+		<Russian>Не существует доказательств того, что такие подразделения когда-либо существовали. Они - порождение [COLOR_HIGHLIGHT_TEXT]технологий альтернативной временной линии[COLOR_REVERT]. Технологий, которые могли бы быть.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GIRAFFE_CARABINIER</Tag>
 		<English>Giraffe Carabinier</English>
-		<Russian>Êàðàáèíåð íà æèðàôå</Russian>
+		<Russian>Карабинер на жирафе</Russian>
 		<Italian>Carabiniere su giraffa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GIRAFFE_CAVALRY</Tag>
 		<English>Giraffe Cavalry</English>
-		<Russian>Êàâàëåðèÿ íà æèðàôàõ</Russian>
+		<Russian>Жирафья кавалерия</Russian>
 		<Italian>Cavalleria su giraffa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GIRAFFE_CROSSBOW</Tag>
 		<English>Giraffe Crossbow</English>
-		<Russian>Àðáàëåò÷èê íà æèðàôå</Russian>
+		<Russian>Арбалетчик на жирафе</Russian>
 		<Italian>Balestriere su giraffa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GIRAFFE_CUIRASSIER</Tag>
 		<English>Giraffe Cuirassier</English>
-		<Russian>Êèðàñèð íà æèðàôå</Russian>
+		<Russian>Кирасир на жирафе</Russian>
 		<Italian>Corazziere su giraffa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GIRAFFE_DRAGOON</Tag>
 		<English>Giraffe Dragoon</English>
-		<Russian>Äðàãóí íà æèðàôå</Russian>
+		<Russian>Драгун на жирафе</Russian>
 		<Italian>Dragone su giraffa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GIRAFFE_TRENCH_CAVALRY</Tag>
 		<English>Giraffe Trench Cavalry</English>
-		<Russian>Îêîïíûé æèðàô</Russian>
+		<Russian>Жирафья окопная кавалерия</Russian>
 		<Italian>Cavalleria di trincea su giraffa</Italian>
 	</TEXT>
 	<TEXT>
@@ -711,7 +712,7 @@
 		<English>Guard Cat</English>
 		<French>Félin de surveillance</French>
 		<Polish>Kot Stróżujący</Polish>
-		<Russian>Ñòîðîæåâàÿ êîøêà</Russian>
+		<Russian>Сторожевая кошка</Russian>
 		<Italian>Gatto da guardia</Italian>
 	</TEXT>
 	<TEXT>
@@ -724,12 +725,13 @@
 		</French>
 		<Italian>Arciere su lama</Italian>
 		<Polish>Llami Łucznik</Polish>
-		<Russian>Ëó÷íèê íà ëàìå</Russian>
+		<Russian>Лучник на ламе</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LLAMA_ARCHER_PEDIA</Tag>
 		<English>[COLOR_UNIT_TEXT]Llama Archer[COLOR_REVERT] is weaker version of [COLOR_UNIT_TEXT]Horse Archer[COLOR_REVERT]. This unit can move through mountain tiles.</English>
 		<Italian>L'[COLOR_UNIT_TEXT]arciere su lama[COLOR_REVERT] è una versione più debole dell'[COLOR_UNIT_TEXT]arciere a cavallo[COLOR_REVERT]. Questa unità può muoversi attraverso le caselle di montagna</Italian>
+		<Russian>[COLOR_UNIT_TEXT]Лучник на ламе[COLOR_REVERT] - более слабый вариант [COLOR_UNIT_TEXT]конного лучника[COLOR_REVERT]. Может проходить через горы.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LLAMA_RIDER</Tag>
@@ -741,12 +743,13 @@
 		</French>
 		<Italian>Cavaliere di lama</Italian>
 		<Polish>Jeździec (Llama)</Polish>
-		<Russian>Íàåçäíèê íà ëàìå</Russian>
+		<Russian>Всадник на ламе</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LLAMA_RIDER_PEDIA</Tag>
 		<English>The Llama Rider is a rider on a llama, which is a furry animal native to South America. The Inca used these animals in their empire before the Spanish conquered them.</English>
 		<Italian>Il cavaliere di lama è un uomo che cavalca un lama, un animale peloso nativo del Sudamerica. Gli Inca usavano questi animali nel loro impero prima della conquista da parte degli Spagnoli.</Italian>
+		<Russian>Человек едущий на ламе, пушистом животном из Южной Америки. Этих зверей использовали в империи инков до завоевания испанцами.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAPINGUARI</Tag>
@@ -757,7 +760,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Mapinguari (Włócznik)</Polish>
-		<Russian>Ìàïèíãóàðè-êîïåéùèê</Russian>
+		<Russian>Мапингуари с копьем</Russian>
 		<Italian>Mapinguari con lancia</Italian>
 	</TEXT>
 	<TEXT>
@@ -769,13 +772,13 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Mapinguari (Włócznik - Obsydian)</Polish>
-		<Russian>Ìàïèíãóàðè ñ îáñ. êîïüåì</Russian>
+		<Russian>Мапингуари с обсидиановым копьем</Russian>
 		<Italian>Mapinguari con lancia d'ossidiana</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAPINGUARI_PEDIA</Tag>
 		<English>The Mapinguari is a South American legend although some suggest it may still exist. Here we are giving the name to a unit consisting of a Giant Sloth and two spearman handlers as suggested by Boonkie on the C2C forum.</English>
-		<Russian>Ëåãåíäû èíäåéöåâ ðàññêàçûâàþò î ñóùåñòâå Ìàïèíãóàðè, êîòîðîå ïî îïèñàíèþ ñîâïàäàåò ñ îãðîìíûì ëåíèâöåì. Çàèíòðèãîâàííûå ýòèìè ëåãåíäàìè êðèïòîçîîëîãè ïûòàëèñü íàéòè âûæèâøèå îñîáè â áàññåéíå Àìàçîíêè, îäíàêî èì ýòî íå óäàëîñü.</Russian>
+		<Russian>Мапингуари - существо из легенд Южной Америки, по мнению некоторых, все еще существующее. Отряд из гигантского ленивца (один из вероятных прообразов) и двух дрессировщиков с копьями назван в его честь.</Russian>
 		<Italian>Il Mapinguari è una leggenda sudamericana anche se alcuni suggeriscono che possa ancora esistere. Qui stiamo dando il nome a un'unità composta da un bradipo gigante e due addestratori lancieri come suggerito da Boonkie sul forum C2C.</Italian>
 	</TEXT>
 	<TEXT>
@@ -787,7 +790,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Mapinguari (Pikimen)</Polish>
-		<Russian>Ìàïèíãóàðè-ïèêèíåð</Russian>
+		<Russian>Мапингуари-пикинер</Russian>
 		<Italian>Mapinguari picchiere</Italian>
 	</TEXT>
 	<TEXT>
@@ -799,7 +802,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Mapinguari (Włócznik - Kamień)</Polish>
-		<Russian>Ìàïèíãóàðè ñ êð. êîïüåì</Russian>
+		<Russian>Мапингуари с каменным копьем</Russian>
 		<Italian>Mapinguari con lancia di pietra</Italian>
 	</TEXT>
 	<TEXT>
@@ -811,13 +814,13 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Mapinguari (Włócznik - Drewno)</Polish>
-		<Russian>Ìàïèíãóàðè ñ äåð. êîïüåì</Russian>
+		<Russian>Мапингуари с деревянным копьем</Russian>
 		<Italian>Mapinguari con lancia di legno</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_MAMMOTH_RIDER</Tag>
 		<English>Neanderthal Mammoth Rider</English>
-		<Russian>Íåàíä. ìàìîíò</Russian>
+		<Russian>Неандертальский всадник на мамонте</Russian>
 		<Italian>Cavaliere di mammut Neanderthal</Italian>
 	</TEXT>
 	<TEXT>
@@ -838,19 +841,20 @@
 		</French>
 		<Italian>Cavaliere di rinoceronti</Italian>
 		<Polish>Jeździec (Nosorożec)</Polish>
-		<Russian>Íàåçäíèê íà íîñîðîãå</Russian>
+		<Russian>Всадник на носороге</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RHINO_SWORDSMAN_PEDIA</Tag>
 		<English>There is no evidence this unit was ever used. It is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<Italian>Non c'è alcuna prova che quest'unità sia mai stata usata in battaglia. Fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologie alternative[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
+		<Russian>Не существует доказательств того, что такие подразделения когда-либо существовали. Они - порождение [COLOR_HIGHLIGHT_TEXT]технологий альтернативной временной линии[COLOR_REVERT]. Технологий, которые могли бы быть.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRAINEDCAT</Tag>
 		<English>Trained Cat</English>
 		<French>Félin dressé</French>
 		<Polish>Tresowany Kot</Polish>
-		<Russian>Äîìàøíÿÿ êîøêà</Russian>
+		<Russian>Боевая кошка</Russian>
 		<Italian>Gatto addestrato</Italian>
 	</TEXT>
 	<TEXT>
@@ -875,11 +879,12 @@
 		<Tag>TXT_KEY_UNIT_TRAINED_MAMMOTH_PEDIA</Tag>
 		<English>You raised your own mammoth pup, broke it to the saddle and trained it for war. You might ride your massive mount on raids but your primary duty is to hunt down marauding raiders in your own clan's lands. Few will stand and face a 10' war-mammoth. Fewer will face that mammoth with a warrior on its back.</English>
 		<Italian>Hai allevato il tuo cucciolo di mammut, gli hai messo una sella e l'hai addestrato alla guerra. Potresti cavalcare la tua enorme cavalcatura durante le incursioni, ma il tuo compito principale è dare la caccia ai predoni nelle terre del tuo clan. Pochi resisteranno e affronteranno un mammut da guerra di 10 piedi. Meno ancora affronteranno quel mammut con un guerriero sulla schiena.</Italian>
+		<Russian>Вы вырастили собственного детеныша мамонта, приучили к седлу и выдрессировали для войны. Вы можете участвовать в набегах на таком огромном скакуне, но главная задача - выслеживание налетчиков на землях своей цивилизации. Немногие выстоят против трехметрового боевого мамонта. А еще меньше тех, кто одолеет воина, сидящего на его спине.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_URBAN_GIRAFFEMAN</Tag>
 		<English>Post-apocalyptic Giraffe Urban Rider</English>
-		<Russian>Ðåéäåð íà æèðàôå</Russian>
+		<Russian>Постапокалиптический городской всадник на жирафе</Russian>
 		<Italian>Cavaliere urbano di giraffe</Italian>
 	</TEXT>
 	<TEXT>
@@ -887,7 +892,7 @@
 		<English>War Cat</English>
 		<French>Félin de combat</French>
 		<Polish>Kot Bojowy</Polish>
-		<Russian>Áîåâàÿ êîøêà</Russian>
+		<Russian>Боевая кошка</Russian>
 		<Italian>Gatto da guerra</Italian>
 	</TEXT>
 	<TEXT>
@@ -929,6 +934,7 @@
 		<Tag>TXT_KEY_UNIT_WAR_RHINO_PEDIA</Tag>
 		<English>There is some evidence that [COLOR_UNIT_TEXT]Asiatic War Rhinoceros[COLOR_REVERT] were used. It is just not [COLOR_HIGHLIGHT_TEXT]good[COLOR_REVERT] evidence. They were used as shock "troops", charging into the enemy army doing some damage but mostly causing panic. Thus making the enemy easier to defeat.</English>
 		<Italian>Ci sono alcune prove che il [COLOR_UNIT_TEXT]rinoceronte asiatico da guerra[COLOR_REVERT] venne utilizzato in battaglia. Semplicemente, queste prove non sono [COLOR_HIGHLIGHT_TEXT]certe[COLOR_REVERT]. Erano usate come truppe d'assalto, caricando contro i nemici, causando alcuni danni ma soprattutto panico, rendendo così i nemici più facili da sconfiggere.</Italian>
+		<Russian>Существуют доказательства того, что [COLOR_UNIT_TEXT]азиатских боевых носорогом[COLOR_REVERT] использовали в бою. Просто это недостаточно [COLOR_HIGHLIGHT_TEXT]хорошие[COLOR_REVERT] доказательства. Носороги были "штурмовиками" - врывались в армию противника и наносили некоторый урон, но по большей части вызывали панику. Благодаря чему врага было легче победить.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZEBRA_ARCHER</Tag>
@@ -952,7 +958,7 @@
 		</French>
 		<Italian>Cavalleria su zebra</Italian>
 		<Polish>Kawaleria (Zebra)</Polish>
-		<Russian>Êàâàëåðèñò íà çåáðå</Russian>
+		<Russian>Зебровая кавалерия</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZEBRA_CHARIOT</Tag>
@@ -964,7 +970,7 @@
 		</French>
 		<Italian>Cocchio con zebre</Italian>
 		<Polish>Rydwan (Zebra)</Polish>
-		<Russian>Êîëåñíèöà ñ çåáðàìè</Russian>
+		<Russian>Колесница с зеброй</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZEBRA_CUIRASSIER</Tag>
@@ -976,7 +982,7 @@
 		</French>
 		<Italian>Corazziere su zebra</Italian>
 		<Polish>Kirasjer (Zebra)</Polish>
-		<Russian>Êèðàñèð íà çåáðå</Russian>
+		<Russian>Кирасир на зебре</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZEBRA_KNIGHT</Tag>
