@@ -636,7 +636,7 @@
 		<English>Light Deer Cavalry</English>
 		<French>Cavalier léger cervidé</French>
 		<Polish>Lekka Kawaleria (Jeleń)</Polish>
-		<Russian>Êàâàëåðèñò íà îëåíå</Russian>
+		<Russian>Легкая оленья кавалерия</Russian>
 		<Italian>Cavalleria leggera di cervi</Italian>
 	</TEXT>
 	<TEXT>
@@ -644,12 +644,13 @@
 		<English>Equivalent style to the Light Horse Cavalry units. Strongest base early withdrawal - even battle hardened deer can be skittish creatures that can be tough to KEEP in the battle for long but makes them GREAT at wearing down opponents. They'd be perhaps the best at this get in/get out type of strategy so long as they can do some damage during their short fights.[PARAGRAPH:2]There is no evidence this unit was ever used. It is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<French>Style équivalent aux unités de cavaliers légers à cheval. Retrait précoce de la base la plus forte - même les cerfs endurcis au combat peuvent être des créatures agiles qui peuvent être difficiles à GARDER dans la bataille pendant longtemps, mais les rendent EXCEPTIONNELS pour épuiser leurs adversaires. Ils seraient peut-être les meilleurs dans ce type de stratégie d'entrée / sortie tant qu'ils peuvent faire des dégâts pendant leurs combats courts.[PARAGRAPH:2]Il n'y a aucune preuve que cette unité ait jamais été utilisée. Il fait partie des [COLOR_HIGHLIGHT_TEXT]Technologies de chronologie alternatives[COLOR_REVERT]. Technologies qui auraient pu exister.</French>
 		<Italian>Equivalente nello stile alle unità di cavalleria leggera a cavallo. Ritiro anticipato di base più forte: anche i cervi temprati dalla battaglia possono essere creature ombrose che possono essere difficili da MANTENERE a lungo nella battaglia, ma questo li rende GRANDI nel logorare gli avversari. Sarebbero forse i migliori in questo tipo di strategia di entrata/uscita, purché riescano a fare qualche danno durante i loro brevi combattimenti.[PARAGRAPH:2]Non ci sono prove che questa unità sia mai stata usata. Fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologie alternative[COLOR_REVERT]. Tecnologie che avrebbero potuto essere.</Italian>
+		<Russian>Эквивалентны по стилю легкой коннице. Самое главное - ранний отход. Даже привыкшие к сражениям олени могут оставаться пугливыми и трудноконтролируемыми в длительном бою. Зато они отлично справляются с изматыванием противника. Возможно, они станут лучшими по тактике "Ударил-убежал", если успеют нанести урон в непродолжительном бою.[PARAGRAPH:2]Не существует доказательств того, что такие подразделения когда-либо существовали. Они - порождение [COLOR_HIGHLIGHT_TEXT]технологий альтернативной временной линии[COLOR_REVERT]. Технологий, которые могли бы быть.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FELINE_SUPERIOR</Tag>
 		<English>Felis Superior</English>
 		<French>Félin Cybernétique</French>
-		<Russian>Ñóïåðêîøêà</Russian>
+		<Russian>Суперкошка</Russian>
 		<Italian>Felino cibernetico</Italian>
 	</TEXT>
 	<TEXT>
