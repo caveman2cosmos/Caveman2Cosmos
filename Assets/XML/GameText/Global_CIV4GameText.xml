@@ -15692,7 +15692,7 @@
 		<German>Bürgerautomatisierung</German>
 		<Italian>Disattiva l'automazione dei cittadini</Italian>
 		<Spanish>Desactivar la automatización de los ciudadanos</Spanish>
-		<Russian>Откл. автоматиз. горожан</Russian>
+		<Russian>Отключить автоматизацию горожан</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_OFF_PROD_AUTO</Tag>
@@ -15701,7 +15701,7 @@
 		<German>Produktionsautomatisierung</German>
 		<Italian>Disattiva la produzione automatica</Italian>
 		<Spanish>Desactivar la automatización de la producción</Spanish>
-		<Russian>Откл. автоматизацию производства</Russian>
+		<Russian>Отключить автоматизацию производства</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_ON_CITIZEN_AUTO</Tag>

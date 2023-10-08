@@ -1449,7 +1449,7 @@
 		<Italian>può convertire un cittadino in uno specialista di tipo [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT]</Italian> <!--tech Cultural identity pedia -->
 		<Spanish>Puede convertir a un ciudadano en [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT]</Spanish>
 		<Polish>Możesz zamienić jednego obywatela do [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT]</Polish>
-		<Russian>Ìîæåò ñäåëàòü 1 ãîðîæàíèíà â [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT]</Russian>
+		<Russian>Может превратить 1 горожанина в [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_UNITCOMBAT_EXTRA_STRENGTH</Tag>
@@ -1459,7 +1459,7 @@
 		<Italian>% Forza difensiva[SPACE]</Italian>
 		<Spanish>% de fuerza defensiva[SPACE]</Spanish>
 		<Polish>% do siły obrony dla[SPACE]</Polish>
-		<Russian>%[SPACE]Ñèëà â çàùèòå[SPACE]</Russian>
+		<Russian>% сила в защите[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_UNIT_COMBAT_DEFENSE_AGAINST_MODIFIER</Tag>
@@ -1467,7 +1467,7 @@
 		<French>[ICON_BULLET]Les Unités défendant la ville gagnent un bonus de %D1_Amount%% contre des attaquants %s2_Unit_Combat.</French>
 		<Italian>[ICON_BULLET]Le unità che difendono una città ottengono %D1_Amount%% al combattimento contro %s2_Unit_Combat.</Italian>
 		<Polish>[ICON_BULLET]Jednostki broniące miasta otrzymują %D1_Amount%% dodatkowej wartości walki przeciwko atakującym jednostkom: %s2_Unit_Combat.</Polish>
-		<Russian>[ICON_BULLET]Îòðÿäû, îáîðîíÿþùèå ãîðîä, ïîëó÷àþò ìîäèôèêàòîð áîÿ %D1_Amount%% ïðîòèâ àòàêè %s2_Unit_Combat.</Russian>
+		<Russian>[ICON_BULLET]Подразделения, защищающие город, получают %D1_Amount%% боевого модификатора против атаки %s2_Unit_Combat.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_UNIT_COMBAT_PROD_NEGATIVE_MODIFIER</Tag>
@@ -1475,7 +1475,7 @@
 		<French>[ICON_BULLET]Construit %s1_Unit_Combat %d2_Amount%% fois plus lentement</French>
 		<Italian>[ICON_BULLET]Costruisce %s1_Unit_Combat %d2_Amount%% più lentamente</Italian>
 		<Polish>[ICON_BULLET]Buduje %s1_Unit_Combat o %d2_Amount%% Wolniej</Polish>
-		<Russian>[ICON_BULLET]Äàåò ìåäëåííûé ïðèðîñò %s1_Unit_Combat %d2_Amount%%</Russian>
+		<Russian>[ICON_BULLET]Создает %s1_Unit_Combat на %d2_Amount%% медленее</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_UNIT_COMBAT_PROD_POSITIVE_MODIFIER</Tag>
@@ -1483,7 +1483,7 @@
 		<French>[ICON_BULLET]Construit %s1_Unit_Combat %d2_Amount%% fois plus rapidement</French>
 		<Italian>[ICON_BULLET]Costruisce %s1_Unit_Combat %d2_Amount%% più velocemente</Italian>
 		<Polish>[ICON_BULLET]Buduje: %s1_Unit_Combat o: %d2_Amount%% Szybciej</Polish>
-		<Russian>[ICON_BULLET]Äàåò áûñòðûé ïðèðîñò %s1_Unit_Combat %d2_Amount%%</Russian>
+		<Russian>[ICON_BULLET]Создает %s1_Unit_Combat на %d2_Amount%% быстрее</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_UNIT_COMBAT_REPEL_AGAINST_MODIFIER</Tag>
@@ -1491,7 +1491,7 @@
 		<French>[ICON_BULLET]Les Unités défendant la ville gagnent un bonus de %D1_Amount%% en expulsion contre des attaquants %s2_Unit_Combat.</French>
 		<Italian>[ICON_BULLET]Le unità che difendono una città ottengono %D1_Amount%% al valore di Respinta contro %s2_Unit_Combat.</Italian>
 		<Polish>[ICON_BULLET]Jednostki broniące miasta otrzymują %D1_Amount%% dodatkowej wartości odepchnięcia przeciwko atakującym jednostkom: %s2_Unit_Combat.</Polish>
-		<Russian>[ICON_BULLET]Îòðÿäû, îáîðîíÿþùèå ãîðîä, ïîëó÷àþò äîï. áîíóñ %D1_Amount%% ê ñîïðîòèâëåíèþ îò àòàêè %s2_Unit_Combat.</Russian>
+		<Russian>[ICON_BULLET]Подразделения, защищающие город, получают %D1_Amount%% дополнительного отбрасывания против атаки %s2_Unit_Combat.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_UNIT_COMBAT_REPEL_MODIFIER</Tag>
@@ -1499,7 +1499,7 @@
 		<French>[ICON_BULLET]%d1_Amount%% de Répulsion supplémentaire à l'unité %s2_Unit_Combat se défendant.</French>
 		<Italian>[ICON_BULLET]%d1_Amount%% di Respinta supplementare a %s2_Unit_Combat che difendono.</Italian>
 		<Polish>[ICON_BULLET]%d1_Amount%% dodatkowej wartości na odepchnięcie do lokalnie broniących jednostek: %s2_Unit_Combat.</Polish>
-		<Russian>[ICON_BULLET]%d1_Amount%% ê ñîïðîòèâëåíèþ îò àòàêè %s2_Unit_Combat.</Russian>
+		<Russian>[ICON_BULLET]%d1_Amount%% дополнительного отбрасывания при обороне здесь от %s2_Unit_Combat.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_UNIT_UPGRADE_COST_MOD</Tag>
@@ -1509,7 +1509,7 @@
 		<Italian>[ICON_BULLET]%D1_Mod%% [ICON_GOLD] per Aggiornare la/le Unità</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod%%[ICON_GOLD] para mejorar unidades</Spanish>
 		<Polish>[ICON_BULLET]%D1_Mod%% [ICON_GOLD] do ulepszenia jednostek</Polish>
-		<Russian>[ICON_BULLET]%D1_Mod%% [ICON_GOLD] äëÿ óëó÷øåíèÿ þíèòîâ</Russian>
+		<Russian>[ICON_BULLET]%D1_Mod%% [ICON_GOLD] для улучшения подразделений</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_WAR_WEAR_MOD</Tag>
@@ -1518,6 +1518,7 @@
 		<German>[ICON_BULLET]%D1_Mod%% [ICON_UNHAPPY] wegen Krieg</German>
 		<Italian>[ICON_BULLET]%D1_Mod%% [ICON_UNHAPPY] per la guerra</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod%% al [ICON_UNHAPPY] bélico</Spanish>
+		<Russian>[ICON_BULLET]%D1_Mod%% войны [ICON_UNHAPPY]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_WAR_WEAR_MOD_ALL_CITIES</Tag>
@@ -1526,6 +1527,7 @@
 		<German>[ICON_BULLET]%D1_Mod%% [ICON_UNHAPPY] wegen Krieg in allen Städten</German>
 		<Italian>[ICON_BULLET]%D1_Mod%% [ICON_UNHAPPY] per la guerra in tutte le città</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod%% al [ICON_UNHAPPY] bélico en todas las ciudades</Spanish>
+		<Russian>[ICON_BULLET]%D1_Mod%% войны [ICON_UNHAPPY] во всех городах</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_WATER_PLOTS_ALL_CITIES</Tag>
@@ -1534,6 +1536,7 @@
 		<German>Alle Städte auf Wasser-Geländefeldern</German>
 		<Italian>Caselle d'acqua di tutte le città</Italian>
 		<Spanish>Todas las casillas de agua de ciudades</Spanish>
+		<Russian>Водные клетки всех городов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_WITH_POWER</Tag>
@@ -1542,6 +1545,7 @@
 		<German>[SPACE]mit Energie ([ICON_POWER])</German>
 		<Italian>[SPACE]con l'energia ([ICON_POWER])</Italian>
 		<Spanish>[SPACE]con energía ([ICON_POWER])</Spanish>
+		<Russian>[SPACE]с мощностью ([ICON_POWER])</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_WORKER_MOD</Tag>
@@ -1550,10 +1554,12 @@
 		<German>[ICON_BULLET]Arbeitstrupps errichten Modernisierungen %D1_Mod%% schneller</German>
 		<Italian>[ICON_BULLET]I lavoratori costruiscono i miglioramenti il %D1_Mod%% più rapidamente</Italian>
 		<Spanish>[ICON_BULLET]Los trabajadores construyen mejoras un %D1_Mod%% más rápido</Spanish>
+		<Russian>[ICON_BULLET]Рабочие строят улучшения на %D1_Mod%% быстрее</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_WORLD_WONDERS_PER_CITY</Tag>
 		<English>[COLOR_WARNING_TEXT]This city's current culture level can only support %d1_Num World Wonders.[COLOR_REVERT]</English>
+		<Russian>[COLOR_WARNING_TEXT]Текущий уровень культуры этого города может поддерживать только %d1_Num мировых чудес.[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_WORLD_WONDER_ALLOWED</Tag>
@@ -1562,6 +1568,7 @@
 		<German>[ICON_BULLET]Weltwunder (%d1_Num zulässig)</German>
 		<Italian>[ICON_BULLET]Grande Meraviglia (%d1_Num [NUM1:permessa:permesse])</Italian>
 		<Spanish>[ICON_BULLET]Maravilla del mundo (%d1_Num [NUM1:permitida:permitidas])</Spanish>
+		<Russian>[ICON_BULLET]Мировое чудо (может быть только %d1_Num)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_WORLD_WONDER_LEFT</Tag>
@@ -1570,6 +1577,7 @@
 		<German>[SPACE](Weltwunder: %d1_Num übrig)</German>
 		<Italian>[SPACE](Grande Meraviglia: %d1_Num [NUM1:rimasta:rimaste])</Italian>
 		<Spanish>[SPACE](Maravilla del mundo: %d1_Num [NUM1:restante:restantes])</Spanish>
+		<Russian>[SPACE](Мировое чудо: %d1_Num осталось)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_ZONE_OF_CONTROL</Tag>
@@ -1579,6 +1587,6 @@
 		<Italian>[ICON_BULLET]Stabilisce una zona di controllo su tutte le caselle adiacenti</Italian>
 		<Spanish>[ICON_BULLET]Ejerce una Zona de control en las casillas adyacentes</Spanish>
 		<Polish>[ICON_BULLET]Tworzy strefę kontroli która zmusza wrogie jednostki do ataku lub odwrotu.</Polish>
-		<Russian>[ICON_BULLET]Ïðîÿâëÿåò Çîíó Êîíòðîëÿ íàä âñåìè ñìåæíûìè êëåòêàìè</Russian>
+		<Russian>[ICON_BULLET]Создает зону контроля на всех прилегающих клетках</Russian>
 	</TEXT>
 </Civ4GameText>
