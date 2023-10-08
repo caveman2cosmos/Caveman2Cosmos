@@ -1154,7 +1154,7 @@
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Richiede[COLOR_REVERT] una zona di costa nelle vicinanze</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Requiere Costa[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_WARNING_TEXT]Wymaga dostępu do wybrzeża[COLOR_REVERT]</Polish>
-		<Russian>[COLOR_WARNING_TEXT]Требуется побережье[COLOR_REVERT]</Russian>
+		<Russian>[COLOR_WARNING_TEXT]Требуется доступ к побережью[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_CULTURE</Tag>
