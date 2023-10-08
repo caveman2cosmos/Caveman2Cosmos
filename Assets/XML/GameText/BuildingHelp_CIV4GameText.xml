@@ -1249,7 +1249,7 @@
 		<German>[COLOR_WARNING_TEXT]Erfordert eine Einheit mit Erfahrungsstufe %d1_Num[COLOR_REVERT]</German>
 		<Italian>[COLOR_WARNING_TEXT]Richiede un'unità di livello d'esperienza %d1_Num[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Requiere una unidad de nivel %d1_Num de experiencia[COLOR_REVERT]</Spanish>
-		<Russian>[COLOR_WARNING_TEXT]Требуется подразделение %d1_Num уровня опыта[COLOR_REVERT]</Russian>
+		<Russian>[COLOR_WARNING_TEXT]Требуется подразделение %d1_Num уровня[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_VICTORY</Tag>
@@ -1259,7 +1259,7 @@
 		<German>[ICON_BULLET]Erfordert Siegvariante %s1_Name</German>
 		<Italian>[ICON_BULLET]Richiede la vittoria %s1_Name</Italian>
 		<Spanish>[ICON_BULLET]Requiere una victoria %s1_Name</Spanish>
-		<Russian>[ICON_BULLET]%s1_Name победа должна быть разрешена</Russian>
+		<Russian>[ICON_BULLET]Должен быть включен тип победы "%s1_Name"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_WARTIME</Tag>

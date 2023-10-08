@@ -21594,6 +21594,7 @@
 		<German>[ICON_BULLET]Erfordert Siegvariante %s1_Name</German>
 		<Italian>[ICON_BULLET]Richiede la vittoria %s1_Name</Italian>
 		<Spanish>[ICON_BULLET]Requiere una victoria %s1_Name</Spanish>
+		<Russian>[[ICON_BULLET]Должен быть включен тип победы "%s1_Name"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECTHELP_TEAM_NUM_ALLOWED</Tag>
