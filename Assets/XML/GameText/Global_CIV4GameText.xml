@@ -129,7 +129,7 @@
 		<Italian>Crescita!</Italian>
 		<Spanish>¡Crecerá!</Spanish>
 		<Polish>Wzrost!</Polish>
-		<Russian>Рост!</Russian>
+		<Russian>Прирост!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_HAPPY</Tag>
@@ -1874,6 +1874,7 @@
 		<German>Wachstum</German>
 		<Italian>Crescita</Italian>
 		<Spanish>Crecimiento</Spanish>
+		<Russian>Прирост</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ADVISOR_MILITARY</Tag>
@@ -6153,6 +6154,7 @@
 		<German>Wachstum vermeiden</German>
 		<Italian>Evita la crescita</Italian>
 		<Spanish>Evitar crecimiento</Spanish>
+		<Russian>Избегать прироста</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EMPHASIZE_AVOID_UNHEALTHY_CITIZENS</Tag>
@@ -8884,12 +8886,13 @@
 		<Italian>Fattore di smoothing %d1_Num</Italian>
 		<Spanish>Factor de suavizado %d1_Num</Spanish>
 		<Polish>Współczynnik Wygładzania %d1_Num</Polish>
-		<Russian>Ôàêòîð ñãëàæèâàíèÿ %d1_Num</Russian>
+		<Russian>Коэффициент плавности %d1_Num</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROWTH</Tag>
 		<English>Growth</English>
 		<French>Croissance</French>
+		<Russian>Прирост</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HALL_OF_FAME_SCREEN_TITLE</Tag>
