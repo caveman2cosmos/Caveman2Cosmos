@@ -15,12 +15,12 @@
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_DELAY_CITY_CYCLE_To_END_OF_TURN</Tag>
 		<English>Delay city cycle to end of turn</English>
-		<Russian>Задержать городской цикл до конца хода</Russian>
+		<Russian>Задержать цикл города до конца хода</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_DELAY_CITY_CYCLE_To_END_OF_TURN_HELP</Tag>
 		<English>City cycle process will initiate when you try to end the turn</English>
-		<Russian>Городской цикл начнется, когда вы завершите ход</Russian>
+		<Russian>Цикл города начнется, когда вы завершите ход</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_HIDE_UNCONSTRUCTABLE_BUILDINGS</Tag>

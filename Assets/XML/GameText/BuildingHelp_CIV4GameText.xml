@@ -269,7 +269,7 @@
 		<Italian>[ICON_BULLET]Diminuisce il campo visivo della città.</Italian>
 		<Spanish>[ICON_BULLET]Disminuye la línea de visión de la ciudad</Spanish>
 		<Polish>[ICON_BULLET]Zmniejsza zasięg miasta</Polish>
-		<Russian>[ICON_BULLET]Уменьшает городской угол обзора</Russian>
+		<Russian>[ICON_BULLET]Уменьшает угол обзора города</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_DEFENSE_MOD</Tag>
