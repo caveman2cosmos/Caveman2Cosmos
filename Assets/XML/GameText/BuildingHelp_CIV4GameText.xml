@@ -1144,7 +1144,7 @@
 		<Italian>[COLOR_WARNING_TEXT]Richiede che un giocatore abbia costruito %s1[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Requiere que se haya construido %s1[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_WARNING_TEXT]Wymagane by ktokolwiek zbudował: %s1[COLOR_REVERT]</Polish>
-		<Russian>[COLOR_WARNING_TEXT]Òðåáóåò, ÷òîáû êòî-íèáóäü ïîñòðîèë %s1[COLOR_REVERT]</Russian>
+		<Russian>[COLOR_WARNING_TEXT]Требуется, чтобы кто-нибудь построил %s1[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_COAST</Tag>
