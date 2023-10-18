@@ -1279,7 +1279,7 @@
 		<Tag>TXT_KEY_UNITHELP_GROUPING_COMBAT</Tag>
 		<English>Combat</English>
 		<German>Kampfart</German>
-		<Italian>Battaglia</Italian> <!-- building list infoscreen -->
+		<Italian>Guerra</Italian> <!-- building list infoscreen -->
 		<Spanish>Combate</Spanish>
 		<Polish>Walka</Polish>
 		<Russian>Áîé</Russian>
@@ -1289,7 +1289,7 @@
 		<English>Hero</English>
 		<French>Héros</French>
 		<German>Held</German>
-		<Italian>Eroi</Italian> <!-- building list infoscreen -->
+		<Italian>Eroe</Italian> <!-- building list infoscreen -->
 		<Spanish>Héroe</Spanish>
 		<Polish>Bohater</Polish>
 		<Russian>Ãåðîé</Russian>
@@ -1299,7 +1299,7 @@
 		<English>None</English>
 		<French>Aucun</French>
 		<German>Keine</German>
-		<Italian>Nessuna</Italian> <!-- building list infoscreen -->
+		<Italian>No filtro</Italian> <!-- building list infoscreen -->
 		<Spanish>Ninguno</Spanish>
 		<Polish>Brak</Polish>
 		<Russian>Íåò</Russian>
@@ -2082,7 +2082,7 @@
 		<English>Bombard</English>
 		<French>Bombardement</French>
 		<German>Beschuss</German>
-		<Italian>Bombe</Italian> <!--infoscreen building list-->
+		<Italian>Bombardare</Italian> <!--infoscreen building list-->
 		<Spanish>Bombardeo</Spanish>
 		<Polish>Oblężenie</Polish>
 		<Russian>Áîìáàðä.</Russian>
@@ -2092,7 +2092,7 @@
 		<English>Collateral</English>
 		<French>Dégats Collatéraux</French>
 		<German>Kollateralschaden</German>
-		<Italian>Collater</Italian> <!--infoscreen building list-->
+		<Italian>Collaterali</Italian> <!--infoscreen building list-->
 		<Spanish>Daños colaterales</Spanish>
 		<Polish>Dodatkowe</Polish>
 		<Russian>Ïîáî÷íûé</Russian>
@@ -2102,7 +2102,7 @@
 		<English>Move</English>
 		<French>Déplacement</French>
 		<German>Bewegung</German>
-		<Italian>Caselle</Italian> <!--infoscreen building list-->
+		<Italian>Movimento</Italian> <!--infoscreen building list-->
 		<Spanish>Movimiento</Spanish>
 		<Polish>Ruchy</Polish>
 		<Russian>Äâèæ.</Russian>

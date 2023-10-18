@@ -2184,7 +2184,7 @@
 		<English>+%d1_Change[ICON_UNHAPPY]: "You refused to grant our request!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY]: " Vous avez refusé de répondre favorablement à notre demande! "</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: " Sie haben unsere Forderung abgelehnt! "</German>
-		<Italian>+%d1_Change[ICON_UNHAPPY]: " Hai rifiutato di accogliere la nostra richiesta! "</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY] Il leader ha rifiutato di accogliere la nostra richiesta!</Italian> <!-- city screen health panel -->
 		<Spanish>+%d1_Change[ICON_UNHAPPY]: "¡Rechazaste atender nuestras demandas!"</Spanish>
 		<Russian>+%d1_Change[ICON_UNHAPPY]: "Âû îòêàçàëèñü èñïîëíèòü íàøó ïðîñüáó!"</Russian>
 	</TEXT>
@@ -2203,7 +2203,7 @@
 		<English>- click to offer bribe to city[NEWLINE]==========================</English>
 		<French>- Cliquer pour soudoyer et corrompre les dirigeants de la ville[NEWLINE]==========================</French>
 		<German>- Klicken, um der Stadt Bestechungsgeld anzubieten.[NEWLINE]==========================</German>
-		<Italian>- clicca per corrompere la città[NEWLINE]==========================</Italian>
+		<Italian>[SPACE]Clicca sulla barra per corrompere la città[NEWLINE]==========================</Italian> <!-- city screen revolution panel -->
 		<Spanish>- clic para ofrecer soborno a la ciudad[NEWLINE]==========================</Spanish>
 		<Polish>- kliknij, aby zaoferować łapówkę temu miastu[NEWLINE]==========================</Polish>
 		<Russian>- êëèêíèòå ÷òîáû çàäîáðèòü æèòåëåé[NEWLINE]==========================</Russian>
@@ -2213,7 +2213,7 @@
 		<English>+%d1_Change[ICON_HAPPY]: "Our rebellion has been successful"</English>
 		<French>+%d1_Change[ICON_HAPPY]: "Notre rébellion a été couronnée de succès"</French>
 		<German>+%d1_Change[ICON_HAPPY]: "Unser Aufstand war erfolgreich"</German>
-		<Italian>+%d1_Change[ICON_HAPPY]: "La nostra ribellione ha avuto successo"</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_HAPPY]: La nostra ribellione ha avuto successo</Italian> <!-- city screen health panel -->
 		<Spanish>+%d1_Change[ICON_HAPPY]: "¡Nuestra rebelión ha sido un éxito!"</Spanish>
 		<Russian>+%d1_Change[ICON_HAPPY]: "Íàøå âîññòàíèå äîñòèãëî óñïåõà"</Russian>
 	</TEXT>
@@ -2250,7 +2250,7 @@
 		<English>A revolution is brewing!</English>
 		<French>Une révolution est en marche!</French>
 		<German>Eine Revolution braut sich zusammen!</German>
-		<Italian>Una rivolta sta per scoppiare!</Italian>
+		<Italian>Una rivoluzione sta per iniziare!</Italian>
 		<Spanish>¡Se está gestando una revolución!</Spanish>
 		<Polish>Rewolucja wisi na włosku!</Polish>
 		<Russian>Êèïèò ðåâîëþöèÿ!</Russian>
@@ -2360,7 +2360,7 @@
 		<English>Anarchy</English>
 		<French>Anarchie</French>
 		<German>Unruhen</German>
-		<Italian>Anarchia</Italian>
+		<Italian>Anarchia</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Anarquía</Spanish>
 		<Polish>Anarchia</Polish>
 		<Russian>Àíàðõèÿ</Russian>
@@ -2390,7 +2390,7 @@
 		<English>Empire stability:</English>
 		<French>Stabilité de l'Empire:</French>
 		<German>Imperiumweite Stabilität:</German>
-		<Italian>Stabilità nazionale:</Italian>
+		<Italian>Stabilità nazionale:</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Estabilidad nacional:</Spanish>
 		<Polish>Stabilność imperium:</Polish>
 		<Russian>Óð. ñòàáèëüíîñòè ñòðàíû:</Russian>
@@ -2400,7 +2400,7 @@
 		<English>Colony</English>
 		<French>Colonie</French>
 		<German>Kolonie</German>
-		<Italian>Colonia</Italian>
+		<Italian>Colonia</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Colonia</Spanish>
 		<Polish>Kolonia</Polish>
 		<Russian>Êîëîíèÿ</Russian>
@@ -2410,7 +2410,7 @@
 		<English>Cult. rate</English>
 		<French>Culte. taux</French>
 		<German>Kulturrate</German>
-		<Italian>Tasso culturale</Italian>
+		<Italian>Livello culturale</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Nivel cultural</Spanish>
 		<Polish>Poziom kultury</Polish>
 		<Russian>Óð. êóëüòóðû</Russian>
@@ -2420,7 +2420,7 @@
 		<English>Cult. spending</English>
 		<French>Dépense Cult.</French>
 		<German>Kulturausgaben</German>
-		<Italian>Spesa per la cultura</Italian>
+		<Italian>Spesa per la cultura</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Gastos culturales</Spanish>
 		<Polish>Rozprzestrzenione kultury</Polish>
 		<Russian>Çàòðàòû íà êóëüòóðó</Russian>
@@ -2439,7 +2439,7 @@
 		<English>Dangerously Unstable:</English>
 		<French>Dangereusement instable:</French>
 		<German>Gefährlich instabil:</German>
-		<Italian>Pericolosamente instabile</Italian>
+		<Italian>Pericolosamente instabile</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Peligrosamente inestable:</Spanish>
 		<Polish>Bardzo niestabilne:</Polish>
 		<Russian>Î÷åíü íèçêèé</Russian>
@@ -2449,7 +2449,7 @@
 		<English>(Note: Specific numbers will not add up to total in many circumstances)</English>
 		<French>(Note: Les nombres spécifiques ne s'ajouteront pas au total dans beaucoup de circonstances)</French>
 		<German>(Anmerkung: Einzelne Zahlen lassen sich in vielen Fällen nicht zum Ganzen addieren)</German>
-		<Italian>(Nota: In molti casi, i numeri specifici non si sommano al totale)</Italian>
+		<Italian>(Nota: In molti casi, la somma dei numeri specifici non fa il totale)</Italian>
 		<Spanish>(Nota: En diversas circunstancias, los números específicos no se sumarán al total)</Spanish>
 		<Polish>(Uwaga: Konkretne liczby nie będą dodawane do całkowitej sumy w wielu sytuacjach)</Polish>
 		<Russian>(Ïðèìå÷àíèå: Îïðåäåëåííûå ÷èñëà íå áóäóò ñîñòàâëÿòü â öåëîì îáùåå êîëè÷åñòâî ïðè ìíîãèõ îáñòîÿòåëüñòâàõ)</Russian>
@@ -2459,7 +2459,7 @@
 		<English>Detail View</English>
 		<French>Vue de détail</French>
 		<German>Detailansicht</German>
-		<Italian>Vista dettagliata</Italian>
+		<Italian>Dettagli</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Ver detalles</Spanish>
 		<Polish>Widok Szczegółowy</Polish>
 		<Russian>Äåòàëüíûé îáçîð</Russian>
@@ -2469,7 +2469,7 @@
 		<English>Disorder</English>
 		<French>Désordre</French>
 		<German>Unruhe</German>
-		<Italian>Disordine</Italian>
+		<Italian>Disordini</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Desorden</Spanish>
 		<Polish>Nieporządek</Polish>
 		<Russian>Áåñïîðÿäêè</Russian>
@@ -2479,7 +2479,7 @@
 		<English>Distant Location</English>
 		<French>Endroit éloigné</French>
 		<German>Entfernte Lage</German>
-		<Italian>Posizione distante</Italian>
+		<Italian>Distante dalla capitale</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Ubicación distante</Spanish>
 		<Polish>Duża odległość</Polish>
 		<Russian>Îòäàëåííûé ðåãèîí</Russian>
@@ -2489,7 +2489,7 @@
 		<English>Financial trouble</English>
 		<French>Ennui financier</French>
 		<German>Finanzprobleme</German>
-		<Italian>Difficoltà finanziaria</Italian>
+		<Italian>Difficoltà finanziaria</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Problemas financieros</Spanish>
 		<Polish>Problemy finansowe</Polish>
 		<Russian>Ôèíàíñîâàÿ ïðîáëåìà</Russian>
@@ -2499,7 +2499,7 @@
 		<English>Financial stability</English>
 		<French>Stabilité financière</French>
 		<German>Finanzielle Stabilitat</German>
-		<Italian>Stabilità finanziaria</Italian>
+		<Italian>Stabilità finanziaria</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Estabilidad financiera</Spanish>
 		<Polish>Stabilność finansowa</Polish>
 		<Russian>Ôèíàíñîâàÿ ñòàáèëüíîñòü</Russian>
@@ -2509,7 +2509,7 @@
 		<English>(Flat)</English>
 		<French>(Constant)</French>
 		<German>(gleichbleibend)</German>
-		<Italian>(base)</Italian>
+		<Italian>(valore base)</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>(sin cambios)</Spanish>
 		<Polish>(Brak zmian)</Polish>
 		<Russian>(Áåç èçìåíåíèé)</Russian>
@@ -2519,7 +2519,7 @@
 		<English>Garrison</English>
 		<French>Garnison</French>
 		<German>Garnison</German>
-		<Italian>Guarnigione</Italian>
+		<Italian>Presenza di una guarnigione</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Guarnición</Spanish>
 		<Polish>Garnizon</Polish>
 		<Russian>Ãàðíèçîí</Russian>
@@ -2529,7 +2529,7 @@
 		<English>Golden Age</English>
 		<French>Âge d'or</French>
 		<German>Goldenes Zeitalter</German>
-		<Italian>Età dell'oro</Italian>
+		<Italian>Età dell'oro</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Edad de Oro</Spanish>
 		<Polish>Złoty wiek</Polish>
 		<Russian>Çîëîòîé Âåê</Russian>
@@ -2539,7 +2539,7 @@
 		<English>Happiness</English>
 		<French>Bonheur</French>
 		<German>Zufriedenheit</German>
-		<Italian>Felicità</Italian>
+		<Italian>Felicità alta</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Felicidad</Spanish>
 		<Polish>Zadowolenie</Polish>
 		<Russian>Ñ÷àñòüå</Russian>
@@ -2549,7 +2549,7 @@
 		<English>Holy city owned by heathens</English>
 		<French>Ville Sainte possédée par des infidèles</French>
 		<German>Heilige Stadt im Besitz von Heiden</German>
-		<Italian>Città santa posseduta da infedeli</Italian>
+		<Italian>Città santa posseduta da infedeli</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Ciudad Santa poseida por infieles</Spanish>
 		<Polish>Swięte miasto w rękach pogan</Polish>
 		<Russian>Ñâ. ãîðîä â ðóêàõ ÿçû÷íèêîâ</Russian>
@@ -2559,7 +2559,7 @@
 		<English>Holy city</English>
 		<French>Ville Sainte</French>
 		<German>Heilige Stadt</German>
-		<Italian>Città santa</Italian>
+		<Italian>Presenza della città santa</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Ciudad Santa</Spanish>
 		<Polish>Swięte miasto</Polish>
 		<Russian>Ñâ. ãîðîä</Russian>
@@ -2569,7 +2569,7 @@
 		<English>Huge Empire</English>
 		<French>Empire énorme</French>
 		<German>Sehr großes Imperium</German>
-		<Italian>Impero enorme</Italian>
+		<Italian>Civiltà enorme</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Imperio enorme</Spanish>
 		<Polish>Ogromne imperium</Polish>
 		<Russian>Îãðîìíàÿ Èìïåðèÿ</Russian>
@@ -2579,7 +2579,7 @@
 		<English>(Improving)</English>
 		<French>(Amélioration)</French>
 		<German>(verbessernd)</German>
-		<Italian>(miglioramento in corso)</Italian>
+		<Italian>(in miglioramento)</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>(mejorando)</Spanish>
 		<Polish>(Poprawa)</Polish>
 		<Russian>(Óëó÷øàåòñÿ)</Russian>
@@ -2589,7 +2589,7 @@
 		<English>Revolution Watch &lt;Ctrl+Shift+G&gt;</English>
 		<French>Surveillance de révolution &lt;Ctrl+Shift+G&gt;</French>
 		<German>Revolutions-Überwachung &lt;Ctrl+Shift+G&gt;</German>
-		<Italian>Rapporto sul rischio di rivoluzione &lt;Ctrl+Shift+G&gt;</Italian>
+		<Italian>Informazioni rivoluzione &lt;Ctrl+Shift+G&gt;</Italian>
 		<Spanish>Consejero de Revolución &lt;Ctrl+Shift+W&gt;</Spanish>
 		<Polish>Doradca ds. Rewolucji (Ctrl+Shift+G)</Polish>
 		<Russian>Ñîâåòíèê ïî âíóòðåííåé áåçîïàñíîñòè &lt;Ctrl+Shift+G&gt;</Russian>
@@ -2599,7 +2599,7 @@
 		<English>Large Empire</English>
 		<French>Grand Empire</French>
 		<German>Großes Imperium</German>
-		<Italian>Impero grande</Italian>
+		<Italian>Civiltà grande</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Gran imperio</Spanish>
 		<Polish>Duże imperium</Polish>
 		<Russian>Áîëüøàÿ Èìïåðèÿ</Russian>
@@ -2609,7 +2609,7 @@
 		<English>Med. Empire</English>
 		<French>Empire Moyen</French>
 		<German>Mittleres Imperium</German>
-		<Italian>Impero medio</Italian>
+		<Italian>Civiltà media</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Imperio mediano</Spanish>
 		<Polish>Srednie imperium</Polish>
 		<Russian>Ñðåäíÿÿ Èìïåðèÿ</Russian>
@@ -2619,7 +2619,7 @@
 		<English>Oversize military</English>
 		<French>Armée surdimensionnés</French>
 		<German>Übergroßes Militär</German>
-		<Italian>Esercito sovradimensionato</Italian>
+		<Italian>Esercito sovradimensionato</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Ejército sobredimensionado</Spanish>
 		<Polish>Przewaga militarna</Polish>
 		<Russian>×ðåçìåðíûå âîéñêà</Russian>
@@ -2639,7 +2639,7 @@
 		<English>Bad:</English>
 		<French>Mauvais:</French>
 		<German>Schlecht:</German>
-		<Italian>Fattori negativi:</Italian>
+		<Italian>Fattori negativi:</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Desfavorable:</Spanish>
 		<Polish>Nagatywne:</Polish>
 		<Russian>Îòðèöàò.:</Russian>
@@ -2648,7 +2648,7 @@
 		<Tag>TXT_KEY_REV_WATCH_NEUTRAL</Tag>
 		<English>Neutral</English>
 		<French>Neutre</French>
-		<Italian>Neutro</Italian>
+		<Italian>Media</Italian> <!-- city screen hover revolution bar -->
 		<Polish>Neutralne</Polish>
 		<Russian>Ñðåäíèé</Russian>
 	</TEXT>
@@ -2657,7 +2657,7 @@
 		<English>Non-state Religion</English>
 		<French>Religion non-officielle</French>
 		<German>Nicht-staatliche Religion</German>
-		<Italian>Religione 'non di stato'</Italian>
+		<Italian>Religione non di stato</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Religión no oficial</Spanish>
 		<Polish>Religia niepaństwowa</Polish>
 		<Russian>Íå ãîñ. ðåëèãèÿ</Russian>
@@ -2667,7 +2667,7 @@
 		<English>Not connected to capital</English>
 		<French>Non relié à la Capitale</French>
 		<German>Nicht an Hauptstadt angeschlossen</German>
-		<Italian>Non collegata alla capitale</Italian>
+		<Italian>Non collegata alla capitale</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>No conectada a la capital</Spanish>
 		<Polish>Nie połączone ze stolicą</Polish>
 		<Russian>Íå ñîåä. ñî ñòîëèöåé</Russian>
@@ -2677,7 +2677,7 @@
 		<English>No cities</English>
 		<French>Aucune villes</French>
 		<German>Keine Städte</German>
-		<Italian>Nessuna città</Italian>
+		<Italian>Nessuna città</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Sin ciudades</Spanish>
 		<Polish>Brak miast</Polish>
 		<Russian>Íåò ãîðîäîâ</Russian>
@@ -2687,7 +2687,7 @@
 		<English>Good:</English>
 		<French>Bon:</French>
 		<German>Gut:</German>
-		<Italian>Fattori positivi:</Italian>
+		<Italian>[NEWLINE]Fattori positivi:</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Favorable:</Spanish>
 		<Polish>Pozytywne:</Polish>
 		<Russian>Ïîëîæèò.:</Russian>
@@ -2695,7 +2695,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_REV_WATCH_RELIGION</Tag>
 		<English>Religion</English>
-		<Italian>Religione</Italian>
+		<Italian>Religione</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Religión</Spanish>
 		<Polish>Religia</Polish>
 		<Russian>Ðåëèãèÿ</Russian>
@@ -2715,7 +2715,7 @@
 		<English>Small City</English>
 		<French>Petite Ville</French>
 		<German>Kleine Stadt</German>
-		<Italian>Piccola città</Italian>
+		<Italian>Città troppo piccola</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Ciudad pequeña</Spanish>
 		<Polish>Małe miasto</Polish>
 		<Russian>Íåáîëüøîé ãîðîä</Russian>
@@ -2725,7 +2725,7 @@
 		<English>Small Empire</English>
 		<French>Petit Empire</French>
 		<German>Kleines Imperium</German>
-		<Italian>Impero piccolo</Italian>
+		<Italian>Civiltà troppo piccola</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Imperio pequeño</Spanish>
 		<Polish>Małe imperium</Polish>
 		<Russian>Íåáîëüøàÿ Èìïåðèÿ</Russian>
@@ -2735,7 +2735,7 @@
 		<English>Rebellious Spirit</English>
 		<French>Esprit rebelle</French>
 		<German>Rebellischer Geist</German>
-		<Italian>Spirito ribelle</Italian>
+		<Italian>Spirito rivoluzionario</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Espíritu revolucionario</Spanish>
 		<Polish>Duch rebelii</Polish>
 		<Russian>Ìÿòåæíûé äóõ</Russian>
@@ -2754,7 +2754,7 @@
 		<English>Starvation</English>
 		<French>Famine</French>
 		<German>Hunger</German>
-		<Italian>Carestia</Italian>
+		<Italian>Carestia</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Hambruna</Spanish>
 		<Polish>Głód</Polish>
 		<Russian>Ãîëîä</Russian>
@@ -2764,7 +2764,7 @@
 		<English>State Religion</English>
 		<French>Religion d'état</French>
 		<German>Staatsreligion</German>
-		<Italian>Religione di stato</Italian>
+		<Italian>Religione di stato</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Religión oficial</Spanish>
 		<Polish>Religia państwowa</Polish>
 		<Russian>Ãîñ. ðåëèãèÿ</Russian>
@@ -2774,7 +2774,7 @@
 		<English>Revolution Watch</English>
 		<French>Suivi de révolution</French>
 		<German>Revolutionsüberwachung</German>
-		<Italian>Rapporto sul rischio di rivoluzione</Italian>
+		<Italian>Informazioni rivoluzione</Italian>
 		<Spanish>Consejero de Revolución</Spanish>
 		<Polish>Szczegóły Rewolucji</Polish>
 		<Russian>Ñîâåòíèê ïî âíóòðåííåé áåçîïàñíîñòè</Russian>
@@ -2793,7 +2793,7 @@
 		<English>Unhealthy</English>
 		<French>Insalubre</French>
 		<German>Ungesund</German>
-		<Italian>Insalubre</Italian>
+		<Italian>Insalubrità</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Insalubridad</Spanish>
 		<Polish>Choroby</Polish>
 		<Russian>Â ãîðîäå ãðÿçíî</Russian>
@@ -2833,7 +2833,7 @@
 		<English>(Worsening)</English>
 		<French>(Détérioration)</French>
 		<German>(verschlechternd)</German>
-		<Italian>(in peggioramento)</Italian>
+		<Italian>(in peggioramento)</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>(empeorando)</Spanish>
 		<Polish>(Spadek)</Polish>
 		<Russian>(Óõóäøàåòñÿ)</Russian>
