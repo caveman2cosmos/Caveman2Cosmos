@@ -23969,7 +23969,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Mission Success: %d1%%</English>
 		<French>Réussite de la mission : %d1%%</French>
 		<German>Erfolg der Mission: %d1%%</German>
-		<Italian>Successo in missione: %d1%%</Italian>
+		<Italian>Successo della missione: %d1%%</Italian> <!-- Victory screen, spaceship detail screen -->
 		<Spanish>Éxito de la misión: %d1%%</Spanish>
 	</TEXT>
 	<TEXT>
@@ -23977,7 +23977,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Welcome to Alpha Centauri!</English>
 		<French>Bienvenue sur Alpha du Centaure !</French>
 		<German>Willkommen auf Alpha Centauri!</German>
-		<Italian>Benvenuto su Alfa Centauri!</Italian>
+		<Italian>Benvenuto su Alfa Centauri!</Italian> <!-- Victory screen, spaceship detail screen -->
 		<Spanish>Bienvenido a Alpha Centauri.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -23985,7 +23985,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Add</English>
 		<French>Ajouter</French>
 		<German>Hinzufügen</German>
-		<Italian>Aggiungi</Italian>
+		<Italian>Aggiungi</Italian> <!-- Victory screen, spaceship detail screen -->
 		<Spanish>Añadir</Spanish>
 	</TEXT>
 	<TEXT>
@@ -23993,7 +23993,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Please add it to your spaceship</English>
 		<French>Veuillez l'ajouter à votre vaisseau spatial</French>
 		<German>Bitte zum Raumschiff hinzufügen</German>
-		<Italian>Aggiungilo all'astronave</Italian>
+		<Italian>Aggiungi all'astronave</Italian> <!-- Victory screen, spaceship detail screen -->
 		<Spanish>Añadid este componente a vuestra nave espacial</Spanish>
 	</TEXT>
 	<TEXT>
@@ -24001,7 +24001,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Estimated arrival</English>
 		<French>Arrivée prévue</French>
 		<German>Voraussichtliche Ankunft</German>
-		<Italian>Arrivo previsto</Italian>
+		<Italian>Arrivo previsto</Italian> <!-- Victory screen, spaceship detail screen -->
 		<Spanish>Llegada estimada</Spanish>
 	</TEXT>
 	<TEXT>
@@ -24009,7 +24009,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Completed: %d1 of %d2</English>
 		<French>Avancement des travaux : %d1 sur %d2</French>
 		<German>Fertig gestellt: %d1 von %d2</German>
-		<Italian>Completati: %d1 su %d2</Italian>
+		<Italian>Completati: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] di [COLOR_HIGHLIGHT_TEXT]%d2[COLOR_REVERT]</Italian> <!-- Victory screen, spaceship detail screen -->
 		<Spanish>Completado: %d1 de %d2</Spanish>
 	</TEXT>
 	<TEXT>
@@ -24017,7 +24017,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>In Production: %d1</English>
 		<French>En production : %d1</French>
 		<German>In Produktion: %d1</German>
-		<Italian>In produzione: %d1</Italian>
+		<Italian>In produzione: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT]</Italian> <!-- Victory screen, spaceship detail screen -->
 		<Spanish>En producción: %d1</Spanish>
 	</TEXT>
 	<TEXT>
@@ -24025,7 +24025,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Launch</English>
 		<French>Lancer</French>
 		<German>Start</German>
-		<Italian>Lancia</Italian>
+		<Italian>Lancio!</Italian> <!-- Victory screen, spaceship detail screen -->
 		<Spanish>Lanzar</Spanish>
 	</TEXT>
 	<TEXT>
@@ -24033,7 +24033,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Required: %d1</English>
 		<French>Requis : %d1</French>
 		<German>Benötigt: %d1</German>
-		<Italian>Necessari: %d1</Italian>
+		<Italian>Necessari: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT]</Italian> <!-- Victory screen, spaceship detail screen -->
 		<Spanish>Se necesita: %d1</Spanish>
 	</TEXT>
 	<TEXT>
@@ -24041,7 +24041,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Estimated Travel Time: %d1 turns</English>
 		<French>Temps de trajet estimé : %d1 tours</French>
 		<German>Voraussichtliche Reisezeit: %d1 Runden</German>
-		<Italian>Durata prevista del viaggio: %d1 turni</Italian>
+		<Italian>Durata prevista del viaggio: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] turni</Italian> <!-- Victory screen, spaceship detail screen -->
 		<Spanish>Tiempo estimado de viaje: %d1 [NUM1:turno:turnos]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -24049,7 +24049,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Type</English>
 		<French>Type</French>
 		<German>Typ</German>
-		<Italian>Tipo</Italian>
+		<Italian>Tipo</Italian> <!-- Victory screen, spaceship detail screen -->
 		<Spanish>Tipo</Spanish>
 	</TEXT>
 	<TEXT>
@@ -24057,7 +24057,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Welcome to your spaceship</English>
 		<French>Bienvenue dans votre vaisseau spatial</French>
 		<German>Willkommen an Bord Eures Raumschiffs</German>
-		<Italian>Benvenuto sull'astronave</Italian>
+		<Italian>Benvenuto all'astronave</Italian>
 		<Spanish>Ésta es vuestra nave espacial</Spanish>
 	</TEXT>
 	<TEXT>
@@ -24065,7 +24065,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Zoom</English>
 		<French>Zoom</French>
 		<German>Zoom</German>
-		<Italian>Zoom</Italian>
+		<Italian>Zoom</Italian> <!-- Victory screen, spaceship detail screen -->
 		<Spanish>Acercar</Spanish>
 	</TEXT>
 	<TEXT>
