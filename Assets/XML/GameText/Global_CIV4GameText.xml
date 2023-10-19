@@ -2175,7 +2175,7 @@
 		<English>+%d1_Change[ICON_UNHAPPY]: "We're just being difficult!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY] : "Nous voulons simplement vous embêter !"</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: "Wir sind halt einfach schwierig!"</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Voglio solo fare un po' il difficile!</Italian>  <!-- city screen hover happiness panel upper right -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Voglio solo fare un po' il difficile!</Italian>  <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change [ICON_UNHAPPY]: "¡Es solo para ponéoslo difícil"</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2183,7 +2183,7 @@
 		<English>+%d1_Change[ICON_UNHAPPY]: "The military presence makes us nervous!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY] : "La présence des militaires nous rend nerveux !"</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: "Die Militärpräsenz macht uns nervös!"</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: L'occupazione militare mi rende nervoso!</Italian>  <!-- city screen hover happiness panel upper right -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: L'occupazione militare mi rende nervoso!</Italian>  <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change [ICON_UNHAPPY]: "¡La presencia militar nos pone nerviosos!"</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2191,21 +2191,21 @@
 		<English>+%d1_Change[ICON_UNHAPPY]: "We fear for our safety. We demand military protection!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY] : "Nous craignons pour notre sécurité. Nous exigeons une protection militaire !"</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: "Wir fühlen uns hier nicht sicher. Wir verlangen Schutz durch das Militär!"</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Temo per la nostra incolumità, ci vuole più protezione militare!</Italian>  <!-- city screen hover happiness panel upper right -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Temo per la nostra incolumità, ci vuole più protezione militare!</Italian>  <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change [ICON_UNHAPPY]: "Tememos por nuestra seguridad. ¡Solicitamos protección militar!"</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ANGER_MISC</Tag>
 		<English>+%d1_Change[ICON_UNHAPPY]: "Misc."</English>
 		<Russian>+%d1_Change[ICON_UNHAPPY]: "Ïðî÷åå."</Russian>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Motivi vari</Italian>  <!-- city screen hover happiness panel upper right -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Motivi vari</Italian>  <!-- city screen hover happiness panel upper right -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ANGER_OCCUPIED</Tag>
 		<English>+%d1_Change[ICON_UNHAPPY]: "We yearn to join our Motherland!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY] : "Nous avons hâte de rejoindre notre patrie !"</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: "Wir sehnen uns nach unserer Heimat!"</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Desidero tornare con la nostra patria!</Italian>  <!-- city screen hover happiness panel upper right -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Desidero tornare con la nostra patria!</Italian>  <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change [ICON_UNHAPPY]: "¡Anhelamos volver a nuestra patria!"</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2213,7 +2213,7 @@
 		<English>+%d1_Change[ICON_UNHAPPY]: "We cannot forget your cruel oppression!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY] : "Nous n'oublierons jamais votre oppression cruelle !"</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: "Wir können Eure grausame Tyrannei nicht ertragen!"</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Non posso dimenticare la crudele oppressione del nostro leader!</Italian>  <!-- city screen hover happiness panel upper right -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Non posso dimenticare la crudele oppressione del nostro leader!</Italian>  <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change [ICON_UNHAPPY]: "¡No olvidaremos vuestra cruel opresión!"</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2221,7 +2221,7 @@
 		<English>+%d1_Change[ICON_UNHAPPY]: "It's too crowded!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY] : "Il y a trop de monde !"</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: "Es ist hier einfach zu übervölkert!"</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: La città è troppo affollata!</Italian>  <!-- city screen hover happiness panel upper right -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: La città è troppo affollata!</Italian>  <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change [ICON_UNHAPPY]: "¡Esto está abarrotado!"</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2229,7 +2229,7 @@
 		<English>+%d1_Change[ICON_UNHAPPY]: "We will not fight with our brothers and sisters in the Faith!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY] : "Nous ne nous battrons pas contre les frères et soeurs qui partagent notre foi !"</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: "Wir werden nicht gegen unsere Glaubensbrüder und -schwestern kämpfen!"</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Non combatterò contro i nostri fratelli e le nostre sorelle di fede!</Italian>  <!-- city screen hover happiness panel upper right -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Non combatterò contro i nostri fratelli e le nostre sorelle di fede!</Italian>  <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change [ICON_UNHAPPY]: "¡No lucharemos contra nuestros hermanos y hermanas de fe!"</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2237,7 +2237,7 @@
 		<English>+%d1_Change[ICON_UNHAPPY]: "We desire religious freedom!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY] : "Nous demandons la liberté de culte !"</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: "Wir fordern Religionsfreiheit!"</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Voglio la libertà religiosa!</Italian>  <!-- city screen hover happiness panel upper right -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Voglio la libertà religiosa!</Italian>  <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change [ICON_UNHAPPY]: "¡Queremos la libertad de culto!"</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2245,7 +2245,7 @@
 		<English>"Viva la Resistance!"</English>
 		<French>"Vive la Résistance !"</French>
 		<German>"Es lebe der Widerstand!"</German>
-		<Italian>Viva la resistenza!</Italian>  <!-- city screen hover happiness panel upper right -->
+		<Italian>[ICON_BULLET]Viva la resistenza!</Italian>  <!-- city screen hover happiness panel upper right -->
 		<Spanish>"Vive la Résistance!"</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2253,14 +2253,14 @@
 		<English>+%d1_Change[ICON_UNHAPPY]: "We demand a new State Religion!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY] : "Nous voulons une nouvelle religion d'état !"</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: "Wir verlangen eine neue Staatsreligion!"</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Voglio una nuova religione ufficiale!</Italian>  <!-- city screen hover happiness panel upper right -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Voglio una nuova religione ufficiale!</Italian>  <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change [ICON_UNHAPPY]: "¡Exigimos una nueva religión oficial!"</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ANGER_TOO_MANY_CITIES</Tag>
 		<English>+%d1_Change[ICON_UNHAPPY]: Our inept government's attempts to over-expand are making us unhappy</English>
 		<French>+%d1_Change[ICON_UNHAPPY]: Les tentatives d'extension à outrance de notre gourvernement nous rend mécontent</French>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: La volontà del nostro inetto leader di espandersi troppo mi rende infelice</Italian>  <!-- city screen hover happiness panel upper right -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: La volontà del nostro inetto leader di espandersi troppo mi rende infelice</Italian>  <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change[ICON_UNHAPPY]: ¡Nos molestan los continuos intentos de expansión de nuestros ineptos gobernantes!</Spanish>
 		<Polish>+%d1_Change[ICON_UNHAPPY]: Nieudolne działania naszego rządu na froncie niepotrzebnej ekspansji doprowadza nas do wrzenia</Polish>
 		<Russian>+%d1_Change[ICON_UNHAPPY]: мы устали от этой мегаломании наших правителей и бездарной экспансии</Russian>
@@ -2270,7 +2270,7 @@
 		<English>Total Unhappiness: %d1_Num[ICON_UNHAPPY]</English>
 		<French>Mécontentement total : %d1_Num[ICON_UNHAPPY]</French>
 		<German>Unzufriedenheit gesamt: %d1_Num[ICON_UNHAPPY]</German>
-		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1_Num[COLOR_REVERT] [ICON_UNHAPPY] infelicità totale[NEWLINE]</Italian> <!-- city screen hover happiness panel upper right -->
+		<Italian>[NEWLINE][SPACE]Infelicità [COLOR_HIGHLIGHT_TEXT]totale[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%d1_Num[COLOR_REVERT] [ICON_UNHAPPY][NEWLINE]</Italian> <!-- city screen hover happiness panel upper right -->
 		<Spanish>Infelicidad total: %d1_Num [ICON_UNHAPPY]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2278,7 +2278,7 @@
 		<English>+%d1_Change[ICON_UNHAPPY]: "War... What is it good for? Absolutely nothing... Unh!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY] : "La guerre... ça sert à quoi ? Absolument à rien... Pfff !"</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: "Keiner will sterben, das ist doch klar. Wozu sind Kriege da?"</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Guerra... a cosa serve? Assolutamente a niente!</Italian>  <!-- city screen hover happiness panel upper right -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Guerra... a cosa serve? Assolutamente a niente!</Italian>  <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change [ICON_UNHAPPY]: "¿Guerra...? ¿Y eso para qué sirve? ¡Para nada!"</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2412,7 +2412,7 @@
 		<English>%D1_Change[ICON_UNHEALTHY] from Specialists</English>
 		<French>%D1_Change[ICON_UNHEALTHY] des Spécialistes</French>
 		<German>%D1_Change[ICON_UNHEALTHY] durch Spezialisten</German>
-		<Italian>%D1_Change[ICON_UNHEALTHY] per Specialisti</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] [ICON_UNHEALTHY] dai cittadini specialisti</Italian> <!-- city screen health panel hover -->
 		<Spanish>%D1_Change[ICON_UNHEALTHY] por especialistas</Spanish>
 		<Polish>%D1_Change[ICON_UNHEALTHY] od Specjalistów</Polish>
 		<Russian>%D1_Change[ICON_UNHEALTHY] от Специалистов</Russian>
@@ -3212,7 +3212,7 @@
 		<English>+%d1_Change[ICON_UNHAPPY]: "Down with foreign influence!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY]: "Sous Influence étrangère!"</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: "Weg mit dem fremden Einfluss!"</German>
-		<Italian>+%d1_Change[ICON_UNHAPPY]: "Abbasso l'influenza straniera!"</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Basta con l'influenza straniera!</Italian> <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change[ICON_UNHAPPY]: "¡Abajo la influencia extranjera!"</Spanish>
 		<Russian>+%d1_Change[ICON_UNHAPPY]: ''Äîëîé èíîñòðàííîå âëèÿíèå!''</Russian>
 	</TEXT>
@@ -3238,7 +3238,7 @@
 		<English>+%d1_Change[ICON_UNHAPPY]: "We Hate Nature!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY]: "Nous détestons la Nature!"</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: "Wir hassen die Natur!"</German>
-		<Italian>+%d1_Change[ICON_UNHAPPY]: "Odiamo la natura!"</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Odio la natura</Italian> <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change[ICON_UNHAPPY]: "¡Odiamos la naturaleza!"</Spanish>
 		<Russian>+%d1_Change[ICON_UNHAPPY]: ''Ìû íåíàâèäèì ïðèðîäó!''</Russian>
 	</TEXT>
@@ -3247,7 +3247,7 @@
 		<English>+%d1_Change[ICON_UNHAPPY]: "You're Destroying the Environment!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY]: "Vous détruisez l'Environnement!"</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: "Ihr zerstört die Umwelt!"</German>
-		<Italian>+%d1_Change[ICON_UNHAPPY]: "Stai distruggendo l'ambiente!"</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Il nostro leader sta distruggendo l'ambiente!</Italian> <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change[ICON_UNHAPPY]: "¡Estás destrozando el medio ambiente!"</Spanish>
 		<Russian>+%d1_Change[ICON_UNHAPPY]: ''Âû ðàçðóøàåòå îêðóæàþùóþ ñðåäó!''</Russian>
 	</TEXT>
@@ -3393,7 +3393,7 @@
 		<English>+%d1_Change[ICON_UNHAPPY]: "No Taxation Without Representation!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY]: "Pas de Taxation sans Représentation!"</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: "Keine Besteuerung ohne Vertretung!"</German>
-		<Italian>+%d1_Change[ICON_UNHAPPY]: "No Tassazione senza rappresentazione!"</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: No alla tassazione senza rappresentanza!</Italian> <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change[ICON_UNHAPPY]: "¡No más impuestos sin consultarnos!"</Spanish>
 		<Polish>+%d1_Change[ICON_UNHAPPY]: "Nie ma podatków bez reprezentacji!"</Polish>
 		<Russian>+%d1_Change[ICON_UNHAPPY]: ''Íåò íàëîãîîáëîæåíèÿ áåç ïðåäñòàâèòåëüñòâà!''</Russian>
@@ -3411,7 +3411,7 @@
 		<English>[COLOR_YIELD_FOOD]%s1 can hurry %s2 for %d3[ICON_GOLD].[COLOR_REVERT]</English>
 		<French>[COLOR_YIELD_FOOD]%s1 peut accélérer la production de %s2 pour %d3[ICON_GOLD].[COLOR_REVERT]</French>
 		<German>[COLOR_YIELD_FOOD]%s1 kann das Bauprojekt "%s2" unter Einsatz von %d3[ICON_GOLD] beschleunigen.[COLOR_REVERT]</German>
-		<Italian>[COLOR_YIELD_FOOD]%s1 può accelerare %s2 per %d3[ICON_GOLD].[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_YIELD_FOOD]La città di %s1 può accelerare la produzione di %s2 usando %d3 [ICON_GOLD].[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_YIELD_FOOD]%s1 puede acelerar %s2 por %d3[ICON_GOLD].[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_YIELD_FOOD]W mieście: %s1 można przyspieszyć: %s2 (koszt: %d3[ICON_GOLD]).[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_YIELD_FOOD]%s1 ìîæåò óñêîðèòü %s2 çà %d3[ICON_GOLD].[COLOR_REVERT]</Russian>
@@ -3421,7 +3421,7 @@
 		<English>[COLOR_YIELD_FOOD]%s1 can hurry %s2 for %d3[ICON_ANGRYPOP] with %d4[ICON_PRODUCTION] overflow and +1[ICON_UNHAPPY] for %d5 turns.[COLOR_REVERT]</English>
 		<French>[COLOR_YIELD_FOOD]%s1 peut accélérer la construction de %s2 avec pour conséquences %d3[ICON_ANGRYPOP], %d4[ICON_PRODUCTION] en surplus et +1[ICON_UNHAPPY] pendant %d5 tours.[COLOR_REVERT]</French>
 		<German>[COLOR_YIELD_FOOD]%s1 kann das Bauprojekt "%s2" unter Einsatz von %d3[ICON_ANGRYPOP] beschleunigen (Überschuss: %d4[ICON_PRODUCTION]), wobei für %d5 Runden +1[ICON_UNHAPPY] in der Stadt verursacht wird.[COLOR_REVERT]</German>
-		<Italian>[COLOR_YIELD_FOOD]%s1 può accelerare %s2 per %d3[ICON_ANGRYPOP] con un surplus di %d4[ICON_PRODUCTION] e +1[ICON_UNHAPPY] per %d5 [NUM5:turno:turni].[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_YIELD_FOOD]La città di %s1 può accelerare la produzione di %s2 causando %d3 [ICON_ANGRYPOP] e generando un surplus di %d4 [ICON_PRODUCTION] e +1 [ICON_UNHAPPY] per %d5 [NUM5:turno:turni].[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_YIELD_FOOD]%s1 puede acelerar %s2 por %d3[ICON_ANGRYPOP], con un excedente de %d4[ICON_PRODUCTION] y +1[ICON_UNHAPPY] durante %d5 turnos.[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_YIELD_FOOD]W mieście: %s1 można przyspieszyć: %s2 (koszt: %d3[ICON_ANGRYPOP], nadmiar: %d4[ICON_PRODUCTION], +1[ICON_UNHAPPY] przez %d5 tur).[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_YIELD_FOOD]%s1 ìîæåò óñêîðèòü %s2 çà %d3[ICON_ANGRYPOP] ñ %d4[ICON_PRODUCTION] ïåðåïîëíåíèåì è +1[ICON_UNHAPPY] íà %d5 õîäîâ.[COLOR_REVERT]</Russian>
@@ -3431,7 +3431,7 @@
 		<English>[COLOR_YIELD_FOOD]%s1 can hurry %s2 for %d3[ICON_ANGRYPOP] with %d4[ICON_PRODUCTION] overflow, %d6[ICON_GOLD] added to the treasury, and +1[ICON_UNHAPPY] for %d5 turns.[COLOR_REVERT]</English>
 		<French>[COLOR_YIELD_FOOD]%s1 peut accélérer la construction de %s2 avec pour conséquences %d3[ICON_ANGRYPOP], %d4[ICON_PRODUCTION] en surplus, %d6[ICON_GOLD] ajouté au trésor, et +1[ICON_UNHAPPY] pendant %d5 tours.[COLOR_REVERT]</French>
 		<German>[COLOR_YIELD_FOOD]%s1 kann das Bauprojekt "%s2" unter Einsatz von %d3[ICON_ANGRYPOP] beschleunigen (Überschuss: %d4[ICON_PRODUCTION] + %d6[ICON_GOLD] für die Staatskasse), wobei für %d5 Runden +1[ICON_UNHAPPY] in der Stadt verursacht wird.[COLOR_REVERT]</German>
-		<Italian>[COLOR_YIELD_FOOD]%s1 può accelerare %s2 per %d3[ICON_ANGRYPOP] con un surplus di %d4[ICON_PRODUCTION], un aumento del tesoro di %d6[ICON_GOLD] e +1[ICON_UNHAPPY] per %d5 [NUM5:turno:turni].[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_YIELD_FOOD]La città di %s1 può accelerare la produzione di %s2 causando %d3 [ICON_ANGRYPOP] e generando un surplus di %d4 [ICON_PRODUCTION],  %d6 [ICON_GOLD] e +1 [ICON_UNHAPPY] per %d5 [NUM5:turno:turni].[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_YIELD_FOOD]%s1 puede acelerar %s2 por %d3[ICON_ANGRYPOP] con un excedente de %d4[ICON_PRODUCTION] y %d6[ICON_GOLD], y +1[ICON_UNHAPPY] durante %d5 turnos.[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_YIELD_FOOD]W mieście: %s1 można przyspieszyć: %s2 (koszt: %d3[ICON_ANGRYPOP], nadmiar: %d4[ICON_PRODUCTION], skarbiec: +%d6[ICON_GOLD], +1[ICON_UNHAPPY] przez %d5 tur).[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_YIELD_FOOD]%s1 ìîæåò óñêîðèòü %s2 çà %d3[ICON_ANGRYPOP] ñ %d4[ICON_PRODUCTION] ïåðåïîëíåíèåì, %d6[ICON_GOLD] äîáàâëåííûì â ñîêðîâèùíèöó, è +1[ICON_UNHAPPY] íà %d5 õîäîâ.[COLOR_REVERT]</Russian>
@@ -3441,7 +3441,7 @@
 		<English>[COLOR_YIELD_FOOD]%s1 has grown to size %d2.[COLOR_REVERT]</English>
 		<French>[COLOR_YIELD_FOOD]%s1 a maintenant %d2 en population.[COLOR_REVERT]</French>
 		<German>[COLOR_YIELD_FOOD]Die Bevölkerung von %s1 ist auf %d2 gewachsen![COLOR_REVERT]</German>
-		<Italian>[COLOR_YIELD_FOOD]%s1 è [NUM1:cresciuto:cresciuta] a grandezza %d2.[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_YIELD_FOOD]La città di %s1 ha raggiunto la dimensione %d2.[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_YIELD_FOOD]%s1 ha alcanzado tamaño %d2.[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_YIELD_FOOD]Miasto: %s1 powiększyło się do rozmiaru: %d2.[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_YIELD_FOOD]%s1 âûðîñ äî ðàçìåðà %d2.[COLOR_REVERT]</Russian>
@@ -3451,7 +3451,7 @@
 		<English>[COLOR_POSITIVE_TEXT]%s1 has become happy.[COLOR_REVERT]</English>
 		<French>[COLOR_POSITIVE_TEXT]La population de %s1 est devenue satisfaite.[COLOR_REVERT]</French>
 		<German>[COLOR_POSITIVE_TEXT]Die Bevölkerung von %s1 ist zufrieden![COLOR_REVERT]</German>
-		<Italian>[COLOR_POSITIVE_TEXT]%s1 è [NUM1:diventato:diventata] felice.[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_POSITIVE_TEXT]La popolazione della città di %s1 è diventata felice.[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_POSITIVE_TEXT]La población de %s1 es ahora feliz.[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_TECH_TEXT]W mieście: %s1 zniknęły problemy ze zadowoleniem.[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_POSITIVE_TEXT]%s1 ñòàë ñ÷àñòëèâûì.[COLOR_REVERT]</Russian>
@@ -3461,7 +3461,7 @@
 		<English>[COLOR_POSITIVE_TEXT]%s1 has become healthy.[COLOR_REVERT]</English>
 		<French>[COLOR_POSITIVE_TEXT]Les conditions sanitaires de %s1 sont devenues bonnes.[COLOR_REVERT]</French>
 		<German>[COLOR_POSITIVE_TEXT]Die Bevölkerung von %s1 ist gesund![COLOR_REVERT]</German>
-		<Italian>[COLOR_POSITIVE_TEXT]%s1 è [NUM1:diventato:diventata] salubre.[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_POSITIVE_TEXT]La popolazione della città di %s1 è tornata in salute.[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_POSITIVE_TEXT]%s1 es ahora salubre.[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_TECH_TEXT]W mieście: %s1 zniknęły problemy ze zdrowiem.[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_POSITIVE_TEXT]%s1 ñòàë çäîðîâûì.[COLOR_REVERT]</Russian>
@@ -3471,7 +3471,7 @@
 		<English>[COLOR_POSITIVE_TEXT]%s1 has been pacified.[COLOR_REVERT]</English>
 		<French>[COLOR_POSITIVE_TEXT]La population de %s1 est apaisée.[COLOR_REVERT]</French>
 		<German>[COLOR_POSITIVE_TEXT]Die Unruhen in %s1 sind beendet![COLOR_REVERT]</German>
-		<Italian>[COLOR_POSITIVE_TEXT]%s1 è [NUM1:stato pacificato:stata pacificata].[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_POSITIVE_TEXT]La città di %s1 è stata pacificata.[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_POSITIVE_TEXT]Los disturbios en %s1 han acabado.[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_POSITIVE_TEXT]Miasto: %s1 zostało spacyfikowane.[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_POSITIVE_TEXT]%s1 áûë óìèðîòâîðåí.[COLOR_REVERT]</Russian>
@@ -3481,7 +3481,7 @@
 		<English>[COLOR_YIELD_FOOD]%s1 will grow to size %d2 on the next turn.[COLOR_REVERT]</English>
 		<French>[COLOR_YIELD_FOOD]%s1 atteindra %d2 de population au prochain tour.[COLOR_REVERT]</French>
 		<German>[COLOR_YIELD_FOOD]Die Bevölkerung von %s1 wächst nächste Runde auf %d2 an.[COLOR_REVERT]</German>
-		<Italian>[COLOR_YIELD_FOOD]%s1 crescerà a grandezza %d2 al prossimo turno.[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_YIELD_FOOD]La città di %s1 crescerà alla dimensione %d2 nel prossimo turno.[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_YIELD_FOOD]%s1 alcanzará tamaño %d2 el próximo turno.[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_YIELD_FOOD]Miasto: %s1 rozrośnie się do rozmiaru: %d2 w następnej turze.[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_YIELD_FOOD]%s1 âûðàñòåò äî ðàçìåðà %d2 â ñëåäóþùèé õîä.[COLOR_REVERT]</Russian>
@@ -3491,7 +3491,7 @@
 		<English>[COLOR_POSITIVE_TEXT]%s1 will become happy on the next turn.[COLOR_REVERT]</English>
 		<French>[COLOR_POSITIVE_TEXT]Le peuple de %s1 sera satisfait au prochain tour.[COLOR_REVERT]</French>
 		<German>[COLOR_POSITIVE_TEXT]Die Bevölkerung von %s1 wird nächste Runde zufrieden.[COLOR_REVERT]</German>
-		<Italian>[COLOR_POSITIVE_TEXT]%s1 diventerà felice al prossimo turno.[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_POSITIVE_TEXT]La popolazione della città di %s1 diventerà felice nel prossimo turno.[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_POSITIVE_TEXT]La población de %s1 será feliz a partir del próximo turno.[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_TECH_TEXT]W mieście: %s1 znikną problemy ze zadowoleniem w następnej turze.[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_POSITIVE_TEXT]%s1 ñòàíåò ñ÷àñòëèâûì â ñëåäóþùèé õîä.[COLOR_REVERT]</Russian>
@@ -3501,7 +3501,7 @@
 		<English>[COLOR_POSITIVE_TEXT]%s1 will become healthy on the next turn.[COLOR_REVERT]</English>
 		<French>[COLOR_POSITIVE_TEXT]Les conditions sanitaires de %s1 deviendront bonnes au prochain tour.[COLOR_REVERT]</French>
 		<German>[COLOR_POSITIVE_TEXT]Die Bevölkerung von %s1 wird nächste Runde gesund.[COLOR_REVERT]</German>
-		<Italian>[COLOR_POSITIVE_TEXT]%s1 diventerà salubre al prossimo turno.[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_POSITIVE_TEXT]La popolazione della città di %s1 tornerà in salute nel prossimo turno.[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_POSITIVE_TEXT]%s1 será salubre a partir del próximo turno.[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_TECH_TEXT]W mieście: %s1 znikną problemy ze zdrowiem w następnej turze.[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_POSITIVE_TEXT]%s1 ñòàíåò çäîðîâûì â ñëåäóþùèé õîä.[COLOR_REVERT]</Russian>
@@ -3511,7 +3511,7 @@
 		<English>[COLOR_POSITIVE_TEXT]%s1 will be pacified on the next turn.[COLOR_REVERT]</English>
 		<French>[COLOR_POSITIVE_TEXT]Le peuple de %s1 sera apaisé au prochain tour.[COLOR_REVERT]</French>
 		<German>[COLOR_POSITIVE_TEXT]Die Unruhen in %s1 werden nächste Runde enden.[COLOR_REVERT]</German>
-		<Italian>[COLOR_POSITIVE_TEXT]%s1 sarà [NUM1:pacificato:pacificata] al turno seguente.[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_POSITIVE_TEXT]La città di %s1 sarà pacificata nel prossimo turno.[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_POSITIVE_TEXT]Los disturbios en %s1 acabarán el próximo turno.[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_POSITIVE_TEXT]Miasto: %s1 zostanie spacyfikowane w następnej turze.[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_POSITIVE_TEXT]%s1 óñïîêîèòñÿ â ñëåäóþùèé õîä.[COLOR_REVERT]</Russian>
@@ -3521,7 +3521,7 @@
 		<English>[COLOR_WARNING_TEXT]%s1 will shrink to size %d2 on the next turn.[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]%s1 verra sa population réduite à %d2 au prochain tour.[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]Die Bevölkerung von %s1 schrumpft nächste Runde auf %d2.[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]%s1 si ridurrà a grandezza %d2 al prossimo turno.[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_WARNING_TEXT]La città di %s1 si ridurrà a una dimensione di %d2 nel prossimo turno.[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_WARNING_TEXT]%s1 se reducirá a tamaño %d2 el próximo turno.[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_WARNING_TEXT]Miasto: %s1 zmniejszy się do rozmiaru: %d2 w następnej turze.[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_WARNING_TEXT]%s1 óìåíüøèòñÿ äî ðàçìåðà %d2 â ñëåäóþùèé õîä.[COLOR_REVERT]</Russian>
@@ -3531,7 +3531,7 @@
 		<English>[COLOR_WARNING_TEXT]%s1 will become unhappy on the next turn.[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]La population de %s1 deviendra mécontente au prochain tour.[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]Die Bevölkerung von %s1 wird nächste Runde unzufrieden.[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]%s1 diventerà infelice al prossimo turno.[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_WARNING_TEXT]La popolazione della città di %s1 diventerà infelice nel prossimo turno.[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_WARNING_TEXT]La población de %s1 será infeliz a partir del próximo turno.[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_WARNING_TEXT]W mieście: %s1 wystąpią problemy ze zadowoleniem w następnej turze.[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_WARNING_TEXT]%s1 ñòàíåò íåñ÷àñòíûì â ñëåäóþùèé õîä.[COLOR_REVERT]</Russian>
@@ -3541,7 +3541,7 @@
 		<English>[COLOR_WARNING_TEXT]%s1 will become unhealthy on the next turn.[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]%s1 deviendra insalubre au prochain tour.[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]Die Bevölkerung von %s1 wird nächste Runde krank.[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]%s1 diventerà insalubre al prossimo turno.[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_WARNING_TEXT]La popolazione della città di %s1 diventerà insalubre nel prossimo turno.[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_WARNING_TEXT]%s1 será insalubre a partir del próximo turno.[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_WARNING_TEXT]W mieście: %s1 wystąpią problemy ze zdrowiem w następnej turze.[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_WARNING_TEXT]%s1 ñòàíåò áîëüíûì â ñëåäóþùèé õîä.[COLOR_REVERT]</Russian>
@@ -3551,7 +3551,7 @@
 		<English>[COLOR_WARNING_TEXT]%s1 has shrunk to size %d2.[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]%s1 a une population de %d2 à présent.[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]Die Bevölkerung von %s1 ist auf %d2 geschrumpft![COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]%s1 si è [NUM1:ridotto:ridotta] a grandezza %d2.[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_WARNING_TEXT]La città di %s1 si è rimpicciolita alla dimensione %d2.[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_WARNING_TEXT]%s1 se ha reducido a tamaño %d2.[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_WARNING_TEXT]Miasto: %s1 zmniejszyło się do rozmiaru: %d2.[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_WARNING_TEXT]%s1 óìåíüøèëñÿ äî ðàçìåðà %d2.[COLOR_REVERT]</Russian>
@@ -3561,7 +3561,7 @@
 		<English>[COLOR_WARNING_TEXT]%s1 has become unhappy.[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]La population de %s1 est devenue mécontente.[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]Die Bevölkerung von %s1 ist unzufrieden![COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]%s1 è [NUM1:diventato:diventata] infelice.[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_WARNING_TEXT]La popolazione della città di %s1 è diventata infelice.[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_WARNING_TEXT]La población de %s1 es ahora infeliz.[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_WARNING_TEXT]W mieście: %s1 pojawiły się problemy ze zadowoleniem.[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_WARNING_TEXT]%s1 ñòàë íåñ÷àñòíûì.[COLOR_REVERT]</Russian>
@@ -3571,7 +3571,7 @@
 		<English>[COLOR_WARNING_TEXT]%s1 has become unhealthy.[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]%s1 est devenue insalubre.[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]Die Bevölkerung von %s1 ist krank![COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]La città di %s1 è diventata insalubre.[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_WARNING_TEXT]La popolazione della città di %s1 è diventata insalubre.[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_WARNING_TEXT]%s1 es ahora insalubre.[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_WARNING_TEXT]W mieście: %s1 pojawiły się problemy ze zdrowiem.[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_WARNING_TEXT]%s1 ñòàë áîëüíûì.[COLOR_REVERT]</Russian>
@@ -3581,7 +3581,7 @@
 		<English>[COLOR_YIELD_COMMERCE]%s1 has %d2 gold per turn available for trade.[COLOR_REVERT]</English>
 		<French>[COLOR_YIELD_COMMERCE]%s1 a %d2 pièces d'or par tour disponible pour le commerce.[COLOR_REVERT]</French>
 		<German>[COLOR_YIELD_COMMERCE]%s1 hat %d2 Gold pro Runde zum Handeln.[COLOR_REVERT]</German>
-		<Italian>[COLOR_YIELD_COMMERCE]%s1 ha %d2 oro a turno [NUM2:disponibile:disponibili] per il commercio.[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_YIELD_COMMERCE]%s1 è disponibile a commerciare %d2 oro a turno.[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_YIELD_COMMERCE]%s1 tiene %d2 de oro por turno disponible para comerciar.[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_YIELD_COMMERCE]%s1 posiada: %d2 złota/turę do wykorzystania w handlu.[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_YIELD_COMMERCE]%s1 èìååò %d2 çîëîòà çà õîä, äîñòóïíîãî äëÿ òîðãîâëè.[COLOR_REVERT]</Russian>
@@ -3591,7 +3591,7 @@
 		<English>[COLOR_YIELD_COMMERCE]%s1 has %d2 gold available for trade.[COLOR_REVERT]</English>
 		<French>[COLOR_YIELD_COMMERCE]%s1 a %d2 pièces d'or disponible pour le commerce.[COLOR_REVERT]</French>
 		<German>[COLOR_YIELD_COMMERCE]%s1 hat %d2 Gold zum Handeln.[COLOR_REVERT]</German>
-		<Italian>[COLOR_YIELD_COMMERCE]%s1 ha %d2 oro [NUM2:disponibile:disponibili] per il commercio.[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_YIELD_COMMERCE]%s1 è disponibile a commerciare %d2 oro[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_YIELD_COMMERCE]%s1 tiene %d2 de oro disponible para comerciar.[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_YIELD_COMMERCE]%s1 posiada: %d2 złota do wykorzystania w handlu.[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_YIELD_COMMERCE]%s1 èìååò %d2 çîëîòà, äîñòóïíîãî äëÿ òîðãîâëè.[COLOR_REVERT]</Russian>
@@ -3601,7 +3601,7 @@
 		<English>[COLOR_POSITIVE_TEXT]%s2 is no longer the worst enemy of %s1.[COLOR_REVERT]</English>
 		<French>[COLOR_POSITIVE_TEXT]%s2 n'est plus le Pire Ennemi de %s1.[COLOR_REVERT]</French>
 		<German>[COLOR_POSITIVE_TEXT]%s2 ist nicht mehr der Erzfeind von %s1.[COLOR_REVERT]</German>
-		<Italian>[COLOR_POSITIVE_TEXT]%s2 non è più il peggior nemico di %s1.[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_POSITIVE_TEXT]%s2 non è più il peggior nemico di %s1.[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_POSITIVE_TEXT]%s2 ya no es el peor enemigo de %s1.[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_POSITIVE_TEXT]%s2 nie jest już najgorszym wrogiem dla %s1.[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_POSITIVE_TEXT]%s2 áîëüøå íå çëåéøèé âðàã %s1.[COLOR_REVERT]</Russian>
@@ -3611,7 +3611,7 @@
 		<English>[COLOR_NEGATIVE_TEXT]%s1 refuses to talk.[COLOR_REVERT]</English>
 		<French>[COLOR_NEGATIVE_TEXT]%s1 refuse de vous parler.[COLOR_REVERT]</French>
 		<German>[COLOR_NEGATIVE_TEXT]%s1 ist nicht gesprächsbereit.[COLOR_REVERT]</German>
-		<Italian>[COLOR_NEGATIVE_TEXT]%s1 rifiuta di parlare.[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_NEGATIVE_TEXT]%s1 si rifiuta di parlare.[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_NEGATIVE_TEXT]%s1 se niega a hablar.[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_NEGATIVE_TEXT]%s1 odmawia rozmowy.[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_NEGATIVE_TEXT]%s1 îòêàçûâàåòñÿ ðàçãîâàðèâàòü.[COLOR_REVERT]</Russian>
@@ -3621,7 +3621,7 @@
 		<English>[COLOR_YIELD_FOOD]%s2 is the new worst enemy of %s1 (was %s3).[COLOR_REVERT]</English>
 		<French>[COLOR_YIELD_FOOD]%s2 est le nouveau Pire Ennemi de %s1 (après %s3).[COLOR_REVERT]</French>
 		<German>[COLOR_YIELD_FOOD]%s2 ist der neue Erzfeind von %s1 (statt %s3).[COLOR_REVERT]</German>
-		<Italian>[COLOR_YIELD_FOOD]%s2 è il nuovo peggior nemico di %s1 (era %s3).[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_YIELD_FOOD]%s2 è il nuovo peggior nemico di %s1 (in precedenza era %s3).[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_YIELD_FOOD]%s2 es el nuevo peor enemigo de %s1 (era %s3).[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_YIELD_FOOD]%s2 jest nowym najgorszym wrogiem dla %s1 (był %s3).[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_YIELD_FOOD]%s2 íîâûé çëåéøèé âðàã %s1 (áûë %s3).[COLOR_REVERT]</Russian>
@@ -3631,7 +3631,7 @@
 		<English>[COLOR_YIELD_FOOD]%s2 is the new worst enemy of %s1 (was you).[COLOR_REVERT]</English>
 		<French>[COLOR_YIELD_FOOD]%s2 est le nouveau Pire Ennemi de %s1 (c'était vous).[COLOR_REVERT]</French>
 		<German>[COLOR_YIELD_FOOD]%s2 ist der neue Erzfeind von %s1 (statt Euch).[COLOR_REVERT]</German>
-		<Italian>[COLOR_YIELD_FOOD]%s2 è il nuovo peggior nemico di %s1 (eri tu).[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_YIELD_FOOD]%s2 è il nuovo peggior nemico di %s1 (in precedenza era il tuo leader).[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_YIELD_FOOD]%s2 es el nuevo peor enemigo de %s1 (eras tú).[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_YIELD_FOOD]%s2 jest nowym najgorszym wrogiem dla %s1 (byłeś Ty).[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_YIELD_FOOD]%s2 íîâûé çëåéøèé âðàã %s1 (áûëè âû).[COLOR_REVERT]</Russian>
@@ -3641,7 +3641,7 @@
 		<English>[COLOR_NEGATIVE_TEXT]You are the new worst enemy of %s1 (was %s2).[COLOR_REVERT]</English>
 		<French>[COLOR_NEGATIVE_TEXT]Vous êtes le nouveau Pire Ennemi de %s1 (après %s2).[COLOR_REVERT]</French>
 		<German>[COLOR_NEGATIVE_TEXT]Ihr seid der neue Erzfeind von %s1 (statt %s2).[COLOR_REVERT]</German>
-		<Italian>[COLOR_NEGATIVE_TEXT]Sei il nuovo peggior nemico di %s1 (era %s2).[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_NEGATIVE_TEXT]Il tuo leader è il nuovo peggior nemico di %s1 (in precedenza era %s2).[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_NEGATIVE_TEXT]Eres el nuevo peor enemigo de %s1 (era %s2).[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_NEGATIVE_TEXT]Jesteś nowym najgorszym wrogiem dla %s1 (był %s2).[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_NEGATIVE_TEXT]Âû íîâûé çëåéøèé âðàã %s1 (áûë %s2).[COLOR_REVERT]</Russian>
@@ -3651,7 +3651,7 @@
 		<English>[COLOR_POSITIVE_TEXT]%s1 is willing to negotiate.[COLOR_REVERT]</English>
 		<French>[COLOR_POSITIVE_TEXT]%s1 est disposé à négocier.[COLOR_REVERT]</French>
 		<German>[COLOR_POSITIVE_TEXT]%s1 ist bereit zu verhandeln.[COLOR_REVERT]</German>
-		<Italian>[COLOR_POSITIVE_TEXT]%s1 è [NUM1:disposto:disposta] a negoziare.[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_POSITIVE_TEXT]%s1 vuole negoziare.[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_POSITIVE_TEXT]%s1 está dispuest[NUM1:o:a:os:as] a negociar.[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_POSITIVE_TEXT]%s1 jest skłonny rozmawiać.[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_POSITIVE_TEXT]%s1 ñîãëàñåí âåñòè ïåðåãîâîðû.[COLOR_REVERT]</Russian>
@@ -3661,7 +3661,7 @@
 		<English>[COLOR_YIELD_FOOD]%s2 is the worst enemy of %s1.[COLOR_REVERT]</English>
 		<French>[COLOR_YIELD_FOOD]%s2 est le Pire Ennemi de %s1.[COLOR_REVERT]</French>
 		<German>[COLOR_YIELD_FOOD]%s2 ist der Erzfeind von %s1.[COLOR_REVERT]</German>
-		<Italian>[COLOR_YIELD_FOOD]%s2 è il peggior nemico di %s1.[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_YIELD_FOOD]%s2 è il peggior nemico di %s1.[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_YIELD_FOOD]%s2 es el peor enemigo de %s1.[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_YIELD_FOOD]%s2 jest najgorszym wrogiem dla %s1.[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_YIELD_FOOD]%s2 çëåéøèé âðàã %s1.[COLOR_REVERT]</Russian>
@@ -3671,7 +3671,7 @@
 		<English>[COLOR_POSITIVE_TEXT]You are no longer the worst enemy of %s1.[COLOR_REVERT]</English>
 		<French>[COLOR_POSITIVE_TEXT]Vous n'êtes plus le Pire Ennemi de %s1.[COLOR_REVERT]</French>
 		<German>[COLOR_POSITIVE_TEXT]Ihr seid nicht mehr der Erzfeind von %s1.[COLOR_REVERT]</German>
-		<Italian>[COLOR_POSITIVE_TEXT]Non sei più il peggior nemico di %s1.[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_POSITIVE_TEXT]Il tuo leader non è più il peggior nemico di %s1.[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_POSITIVE_TEXT]Ya no eres el peor enemigo de %s1.[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_POSITIVE_TEXT]Nie jesteś już najgorszym wrogiem dla %s1.[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_POSITIVE_TEXT]Âû áîëüøå íå çëåéøèé âðàã %s1.[COLOR_REVERT]</Russian>
@@ -3681,7 +3681,7 @@
 		<English>[COLOR_NEGATIVE_TEXT]You are the worst enemy of %s1.[COLOR_REVERT]</English>
 		<French>[COLOR_NEGATIVE_TEXT]Vous êtes le Pire Ennemi de %s1.[COLOR_REVERT]</French>
 		<German>[COLOR_NEGATIVE_TEXT]Ihr seid der Erzfeind von %s1.[COLOR_REVERT]</German>
-		<Italian>[COLOR_NEGATIVE_TEXT]Sei il peggior nemico di %s1.[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_NEGATIVE_TEXT]Il tuo leader è il peggior nemico di %s1.[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_NEGATIVE_TEXT]Eres el peor enemigo de %s1.[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_NEGATIVE_TEXT]Jesteś najgorszym wrogiem dla - %s1.[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_NEGATIVE_TEXT]Âû çëåéøèé âðàã %s1.[COLOR_REVERT]</Russian>
@@ -6078,7 +6078,7 @@
 		<English>[COLOR_SELECTED_TEXT]The [COLOR_BUILDING_TEXT]Eden Project[COLOR_SELECTED_TEXT] Improves the Planet[COLOR_REVERT]!</English>
 		<French>[COLOR_SELECTED_TEXT]Le Projet Eden Améliore la Planète[COLOR_REVERT]!</French>
 		<German>[COLOR_SELECTED_TEXT]Das Eden-Projekt verbessert den Planeten[COLOR_REVERT]!</German>
-		<Italian>[COLOR_SELECTED_TEXT]Il Progetto Eden sta migliorando il pianeta[COLOR_REVERT]!</Italian>
+		<Italian>[ICON_BULLET][COLOR_SELECTED_TEXT]Il progetto eden sta migliorando il pianeta[COLOR_REVERT]!</Italian>
 		<Spanish>[COLOR_SELECTED_TEXT]¡El [COLOR_BUILDING_TEXT]Proyecto Edén[COLOR_SELECTED_TEXT] mejora el planeta![COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_SELECTED_TEXT]Projekt Eden ulepszył planetę.[COLOR_REVERT]!</Polish>
 		<Russian>[COLOR_SELECTED_TEXT]Ýòîò [COLOR_BUILDING_TEXT]Ïðîåêò Ýäåì [COLOR_SELECTED_TEXT] óëó÷øàåò ïëàíåòó[COLOR_REVERT]!</Russian>
@@ -7079,7 +7079,7 @@
 		<English>[NEWLINE][ICON_BULLET]+%s1[ICON_HEALTHY] in nearby cities</English>
 		<French>[NEWLINE][ICON_BULLET]+%s1[ICON_HEALTHY] dans les villes voisines</French>
 		<German>[NEWLINE][ICON_BULLET]+%s1[ICON_HEALTHY] in umliegenden Städten</German>
-		<Italian>[NEWLINE][ICON_BULLET]+%s1[ICON_HEALTHY] nelle città vicine</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%s1[COLOR_REVERT] [ICON_HEALTHY] dalle città vicine</Italian> <!-- city screen health panel hover -->
 		<Spanish>[NEWLINE][ICON_BULLET]+%s1 [ICON_HEALTHY] a las ciudades cercanas</Spanish>
 	</TEXT>
 	<TEXT>
@@ -8738,7 +8738,7 @@
 		<English>%D1_Change[ICON_HEALTHY] from Specialists</English>
 		<French>%D1_Change[ICON_HEALTHY] des Spécialistes</French>
 		<German>%D1_Change[ICON_HEALTHY] durch Spezialisten</German>
-		<Italian>%D1_Change[ICON_HEALTHY] per Specialisti</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] [ICON_HEALTHY] dai cittadini specialisti</Italian> <!-- city screen health panel hover -->
 		<Spanish>%D1_Change[ICON_HEALTHY] por especialistas</Spanish>
 		<Polish>%D1_Change[ICON_HEALTHY] od Specjalistów</Polish>
 		<Russian>%D1_Change[ICON_HEALTHY] от специалистов</Russian>
@@ -9154,7 +9154,7 @@
 		<English>+%d1_Change[ICON_HAPPY]: "We love our government!"</English>
 		<French>+%d1_Change[ICON_HAPPY]: "Nous adorons notre gouvernement!"</French>
 		<German>+%d1_Change[ICON_HAPPY]: "Wir lieben unsere Regierung!"</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_HAPPY]: Amo il nostro governo!</Italian> <!-- city screen hover happiness panel upper right -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_HAPPY]: Amo la nostra forma di nostro governo!</Italian> <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change[ICON_HAPPY]: "¡Adoramos a nuestro gobierno!"</Spanish>
 		<Polish>+%d1_Change[ICON_HAPPY]: "Kochamy nasz rząd!"</Polish>
 		<Russian>+%d1_Change[ICON_HAPPY]: ''Ìû ëþáèì íàøå ïðàâèòåëüñòâî!''</Russian>
@@ -9224,7 +9224,7 @@
 		<English>+%d1_Change[ICON_HAPPY]: "Some citizens' jobs please us!"</English>
 		<French>+%d1_Change[ICON_HAPPY]: "Nous sommes ravis par les emplois de certains citoyens!"</French>
 		<German>+%d1_Change[ICON_HAPPY]: "Die Jobs einiger Bürger passen uns nicht!"</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_HAPPY]: Sono lieto per alcuni cittadini specialisti!</Italian> <!-- city screen hover happiness panel upper right -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_HAPPY]: Sono lieto per le professioni di alcuni cittadini specialisti!</Italian> <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change[ICON_HAPPY]: "¡Estamos satisfechos por los oficios de algunos ciudadanos!"</Spanish>
 		<Polish>+%d1_Change[ICON_HAPPY]: "Prace niektórych obywateli są niesamowite!"</Polish>
 		<Russian>+%d1_Change[ICON_HAPPY]: "Работа некоторых граждан радует нас!"</Russian>
@@ -9260,7 +9260,7 @@
 		<English>Total Happiness: %d1_Num[ICON_HAPPY]</English>
 		<French>Bonheur total : %d1_Num[ICON_HAPPY]</French>
 		<German>Zufriedenheit gesamt: %d1_Num[ICON_HAPPY]</German>
-		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1_Num[COLOR_REVERT] [ICON_HAPPY] felicità totale[NEWLINE]</Italian> <!-- city screen hover happiness panel upper right -->
+		<Italian>[NEWLINE][SPACE]Felicità [COLOR_HIGHLIGHT_TEXT]totale[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%d1_Num[COLOR_REVERT] [ICON_HAPPY][NEWLINE]</Italian> <!-- city screen hover happiness panel upper right -->
 		<Spanish>Felicidad total: %d1_Num [ICON_HAPPY]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -9321,7 +9321,7 @@
 		<Tag>TXT_KEY_HEALTHY_TECH_SPECIALIST</Tag>
 		<English>+%d1[ICON_HEALTHY] "Our advanced society has made the efforts of some professions a cleaner affair!"</English>
 		<French>+%d1[ICON_HEALTHY] "Notre société avancée a fait les efforts afin que certaines professions soient plus propres!"</French>
-		<Italian>+%d1[ICON_HEALTHY] "La nostra società avanzata ha reso molte professioni decisamente più pulite!"</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1[COLOR_REVERT] [ICON_HEALTHY]: La nostra società avanzata ha reso alcune professioni più ecologiche!</Italian> <!-- city screen hover happiness panel upper right -->
 		<Russian>+%d1[ICON_HEALTHY] "Наше передовое общество сделало условия труда некоторых профессий более чистым делом!"</Russian>
 	</TEXT>
 	<TEXT>
@@ -13286,7 +13286,7 @@
 		<English>Click to change research...</English>
 		<French>Cliquez pour changer de sujet de recherche...</French>
 		<German>Hier klicken, um das Forschungsprojekt zu ändern ...</German>
-		<Italian>Clicca per cambiare la ricerca...</Italian>
+		<Italian>Clicca per cambiare la ricerca</Italian>
 		<Spanish>Hacer clic para cambiar la investigación...</Spanish>
 	</TEXT>
 	<TEXT>
@@ -13294,7 +13294,7 @@
 		<English>%s1_CityName has been captured by the %s2_CivName!</English>
 		<French>La ville de %s1_CityName est tombée aux mains de %s2_CivName!</French>
 		<German>Das %s2:2_CivName hat die Stadt %s1_CityName eingenommen!</German>
-		<Italian>%s1_CityName è stata conquistata dall'%s2_CivName!</Italian>
+		<Italian>La città di %s1_CityName è stata conquistata dalla %s2_CivName!</Italian> <!-- Message in the Event Log -->
 		<Spanish>¡%s1_CityName ha sido capturada por %s2_CivName!</Spanish>
 		<Polish>%s1_CityName zostało zdobyte przez %s2_CivName!</Polish>
 		<Russian>Ãîðîä %s1_CityName çàõâà÷åí! Àãðåññîð - %s2_CivName.</Russian>
@@ -13304,7 +13304,7 @@
 		<English>%s1_CityName has been founded.</English>
 		<French>Fondation de %s1_CityName.</French>
 		<German>Die Stadt %s1_CityName wurde gegründet.</German>
-		<Italian>%s1_CityName è stata fondata.</Italian>
+		<Italian>La città di %s1_CityName è stata fondata.</Italian> <!-- Message in the Event Log -->
 		<Spanish>Se ha fundado %s1_CityName.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -13312,7 +13312,7 @@
 		<English>%s1_CityName has been razed by the %s2_CivName!</English>
 		<French>La ville de %s1_CityName a été rasée par %s2_CivName !</French>
 		<German>Das %s2:2_CivName hat die Stadt %s1_CityName vernichtet!</German>
-		<Italian>%s1_CityName è stata razziata dall'%s2_CivName!</Italian>
+		<Italian>La città di %s1_CityName è stata razziata dalla %s2_CivName!</Italian> <!-- Message in the Event Log -->
 		<Spanish>¡%s1_CityName ha sido arrasada por %s2_CivName!</Spanish>
 		<Polish>%s1_CityName zostało zrównane z ziemią przez %s2_CivName!</Polish>
 		<Russian>Ãîðîä %s1_CityName ðàçðóøåí! Àãðåññîð - %s2_CivName.</Russian>
@@ -13331,7 +13331,7 @@
 		<English>%s1_CityName is founded.</English>
 		<French>La ville de %s1_CityName est fondée.</French>
 		<German>Die Stadt %s1_CityName wird gegründet.</German>
-		<Italian>%s1_CityName fondata.</Italian>
+		<Italian>La città %s1_CityName è stata fondata.</Italian> <!-- Message in the Event Log -->
 		<Spanish>Se funda %s1_CityName.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -13339,12 +13339,13 @@
 		<English>In a gracious act of generosity, %s2_player has liberated %s1_city, which passed under %s3_civ_adjective control.</English>
 		<French>Dans un élan de générosité, %s2_player a libéré la ville : %s1_city, qui est passée sous contrôle %s3:1_civ_adjective.</French>
 		<German>In einer großzügigen Geste hat %s2_player die Stadt %s1_city befreit, die sich jetzt unter der %s3:2_civ_adjective Herrschaft befindet.</German>
-		<Italian>In un momento di generosità, %s2_player ha liberato %s1_city, che è passata sotto il controllo %s3_civ_adjective.</Italian>
+		<Italian>In un momento di generosità, %s2_player ha liberato la città di %s1_city che è passata sotto la %s3_civ_adjective.</Italian> <!-- Message in the Event Log -->
 		<Spanish>En un gracioso acto de generosidad, %s2_player ha liberado %s1_city, que ha pasado a control %s3:1_civ_adjective.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CITY_MILITIA_EMERGED</Tag>
 		<English>%s1_CivAdj influence in the city (%d2.%d3%% of %d4%% needed) is insufficient to stop organization of local militia!</English>
+		<Italian>L'influenza della %s1_CivAdj nella città (necessario il %d2.%d3%% di %d4%%) non è sufficiente per fermare il proliferare di una milizia locale!</Italian> <!-- Message in the Event Log -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CITY_NATIONALITY</Tag>
@@ -14010,7 +14011,7 @@
 		<English>You have discovered a new landmark!</English>
 		<French>Vous avez découvert un nouveau Lieu référencé!</French>
 		<German>Ihr habt eine neue Landmarke entdeckt!</German>
-		<Italian>Hai scoperto una nuova località!</Italian>
+		<Italian>È stato scoperto un nuovo punto di riferimento sul territorio!</Italian> <!-- Message in the Event Log -->
 		<Spanish>¡Has descubierto un nuevo sitio marcado!</Spanish>
 		<Polish>Odkryłeś nowy punkt!</Polish>
 		<Russian>Âû îáíàðóæèëè íîâûé îðèåíòèð!</Russian>
@@ -14018,14 +14019,17 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE_IMPROVEMENT</Tag>
 		<English>Industrious workers outside of %s1_CityName have discovered a source of [COLOR_HIGHLIGHT_TEXT]%s2_BonusName[COLOR_REVERT]!</English>
+		<Italian>Dei lavoratori vicino alla città di %s1_CityName hanno scoperto una fonte della risorsa [COLOR_HIGHLIGHT_TEXT]%s2_BonusName[COLOR_REVERT].</Italian> <!-- Message in the Event Log -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE_CITY</Tag>
 		<English>Citizens of %s1_CityName have stumbled upon a nearby source of [COLOR_HIGHLIGHT_TEXT]%s2_BonusName[COLOR_REVERT]!</English>
+		<Italian>I cittadini di %s1_CityName si sono imbattuti in una fonte della risorsa [COLOR_HIGHLIGHT_TEXT]%s2_BonusName[COLOR_REVERT].</Italian> <!-- Message in the Event Log -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE_VOLCANO</Tag>
 		<English>Beneath the remnants of the old volcano a source of [COLOR_HIGHLIGHT_TEXT]obsidian[COLOR_REVERT] has been discovered!</English>
+		<Italian>Sotto i resti di un antico vulcano è stata scoperta una fonte della risorsa [COLOR_HIGHLIGHT_TEXT]Ossidiana[COLOR_REVERT].</Italian> <!-- Message in the Event Log -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_DISTANCE_FROM_PALACE</Tag>
@@ -14545,7 +14549,7 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]You will receive %d1_Num [ICON_GOLD][COLOR_REVERT]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Vous allez recevoir %d1_Num [ICON_GOLD][COLOR_REVERT]</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]Ihr erhaltet %d1_Num [ICON_GOLD][COLOR_REVERT]</German>
-		<Italian>[NEWLINE][COLOR_HIGHLIGHT_TEXT]Riceverai dall'eliminazione %d1_Num [ICON_GOLD][COLOR_REVERT]</Italian>
+		<Italian>[NEWLINE]Riceverai dall'eliminazione: [COLOR_HIGHLIGHT_TEXT]%d1_Num[COLOR_REVERT] [ICON_GOLD]</Italian> <!-- hover on icon delete unit when gold from disband is active -->
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]Recibirás %d1_Num[ICON_GOLD][COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Otrzymasz %d1_Num [ICON_GOLD][COLOR_REVERT]</Polish>
 		<Russian>[COLOR_HIGHLIGHT_TEXT]Âû ïîëó÷èòå %d1_Num [ICON_GOLD][COLOR_REVERT]</Russian>
@@ -14596,7 +14600,7 @@
 		<English>%D1_Change[ICON_HEALTHY] from Civilization</English>
 		<French>%D1_Change[ICON_HEALTHY] (civilisation)</French>
 		<German>%D1_Change[ICON_HEALTHY] durch Zivilisation</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT][ ICON_HEALTHY] dalla civiltà selezionata</Italian> <!-- city screen health panel hover -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] [ICON_HEALTHY] dalla civiltà selezionata</Italian> <!-- city screen health panel hover -->
 		<Spanish>%D1_Change [ICON_HEALTHY] por civilización</Spanish>
 	</TEXT>
 	<TEXT>
@@ -14723,7 +14727,7 @@
 		<English>[ICON_BULLET]%D1_Change%F2_HealthOrUn in All Cities</English>
 		<French>[ICON_BULLET]%D1_Change%F2_HealthOrUn dans toutes les villes</French>
 		<German>[ICON_BULLET]%D1_Change%F2_HealthOrUn in allen Städten</German>
-		<Italian>[ICON_BULLET]%D1_Change%F2_HealthOrUn in tutte le città</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change%[COLOR_REVERT] F2_HealthOrUn in tutte le città</Italian> <!-- city screen health panel hover -->
 		<Spanish>[ICON_BULLET]%D1_Change %F2_HealthOrUn en todas las ciudades</Spanish>
 	</TEXT>
 	<TEXT>
@@ -15225,7 +15229,7 @@
 		<English>%D1_Change[ICON_HEALTHY] from %s2_ImpName</English>
 		<French>%D1_Change[ICON_HEALTHY] de %s2_ImpName</French>
 		<German>%D1_Change[ICON_HEALTHY] durch Geländeart %s2_ImpName</German>
-		<Italian>%D1_Change[ICON_HEALTHY] per %s2_ImpName</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] [ICON_HEALTHY] da %s2_ImpName</Italian> <!-- city screen health panel hover -->
 		<Spanish>%D1_Change [ICON_HEALTHY] por %s2_ImpName</Spanish>
 		<Polish>%D1_Change[ICON_HEALTHY] za %s2_ImpName</Polish>
 		<Russian>%D1_Change[ICON_HEALTHY] îò %s2_ImpName</Russian>
@@ -16475,7 +16479,7 @@
 		<English>%d1_Num[ICON_HEALTHY] Total Health</English>
 		<French>%D1_Change[ICON_HEALTHY] (total santé)</French>
 		<German>%d1_Num[ICON_HEALTHY] Gesundheit gesamt</German>
-		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1_Num[COLOR_REVERT] [ICON_HEALTHY] salute [COLOR_HIGHLIGHT_TEXT]totale[COLOR_REVERT]</Italian> <!-- city screen health panel hover -->
+		<Italian>[NEWLINE][SPACE]Salute [COLOR_HIGHLIGHT_TEXT]totale[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%d1_Num[COLOR_REVERT] [ICON_HEALTHY]</Italian> <!-- city screen health panel hover -->
 		<Spanish>Salud total: %d1_Num [ICON_HEALTHY]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -16491,7 +16495,7 @@
 		<English>%d1_Num[ICON_UNHEALTHY] Total Unhealthiness</English>
 		<French>%d1_Num[ICON_UNHEALTHY] (total maladie)</French>
 		<German>%d1_Num[ICON_UNHEALTHY] Krankheit gesamt</German>
-		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1_Num[COLOR_REVERT] [ICON_UNHEALTHY] insalubrità [COLOR_HIGHLIGHT_TEXT]totale[COLOR_REVERT][NEWLINE]</Italian>
+		<Italian>[NEWLINE][SPACE]Insalubrità [COLOR_HIGHLIGHT_TEXT]totale[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%d1_Num[COLOR_REVERT] [ICON_UNHEALTHY][NEWLINE]</Italian>
 		<Spanish>Insalubridad total: %d1_Num [ICON_UNHEALTHY]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -16721,7 +16725,7 @@
 		<English>%D1_Change[ICON_UNHEALTHY] penalty</English>
 		<French>%D1_Change[ICON_UNHEALTHY] : pénalité</French>
 		<German>%D1_Change[ICON_UNHEALTHY]-Malus</German>
-		<Italian>%D1_Change penalità [ICON_UNHEALTHY]</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] [ICON_UNHEALTHY] dalla penalità</Italian> <!-- city screen health panel hover --> 
 		<Spanish>%D1_Change [ICON_UNHEALTHY] de penalización</Spanish>
 	</TEXT>
 	<TEXT>
@@ -16747,7 +16751,7 @@
 		<English>[COLOR_WARNING_TEXT]Can only Hurry Production of a Unit or a Building.[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Ne peut accélérer la production que d'une unité ou d'un bâtiment.[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]Kann nur die Produktion einer Einheit oder eines Gebäudes beschleunigen.[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]È possibile  accelerare solamente la produzione di [COLOR_HIGHLIGHT_TEXT]unità[COLOR_REVERT] o [COLOR_HIGHLIGHT_TEXT]edifici[COLOR_REVERT]</Italian> <!-- city screen hover speed up button -->
+		<Italian>[ICON_BULLET]È possibile  accelerare solamente la produzione di [COLOR_HIGHLIGHT_TEXT]unità[COLOR_REVERT] o [COLOR_HIGHLIGHT_TEXT]edifici[COLOR_REVERT] (causa un aumento dell'[COLOR_HIGHLIGHT_TEXT]inflazione[COLOR_REVERT])</Italian> <!-- city screen hover speed up button -->
 		<Spanish>[COLOR_WARNING_TEXT]Solo se puede acelerar la producción de una unidad o un edificio.[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -18530,7 +18534,7 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]%s1 won't trade %s2[COLOR_REVERT]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]%s1 ne veut plus échanger: %s2[COLOR_REVERT]</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]%s1 hat Ressourcen vom Handel ausgeschlossen: %s2[COLOR_REVERT]</German>
-		<Italian>[COLOR_HIGHLIGHT_TEXT]%s1 non vuole più commerciare %s2[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_HIGHLIGHT_TEXT]%s1 non vuole più commerciare %s2[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]%s1 no intercambiará %s2[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]%s1 nie chce handlować %s2[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_HIGHLIGHT_TEXT]%s1 íå ìîæåò òîðãîâàòü %s2[COLOR_REVERT]</Russian>
@@ -18540,7 +18544,7 @@
 		<English>%s1_Player has founded %s2_City.</English>
 		<French>%s1_Player a fondé la ville de %s2_City.</French>
 		<German>%s1_Player hat die Stadt %s2_City gegründet.</German>
-		<Italian>%s1_Player ha fondato %s2_City.</Italian>
+		<Italian>%s1_Player ha fondato la città di %s2_City.</Italian> <!-- Message in the Event Log -->
 		<Spanish>%s1_Player ha fundado %s2_City.</Spanish>
 		<Polish>%s1_Player założył %s2_City.</Polish>
 		<Russian>%s1_Player îñíîâàë %s2_City.</Russian>
@@ -18550,7 +18554,7 @@
 		<English>%s1_Player has founded %s2_City in a distant land.</English>
 		<French>%s1_Player a fondé la ville de %s2_City sur un territoire lointain.</French>
 		<German>%s1_Player hat in einem fernen Land die Stadt %s2_City gegründet.</German>
-		<Italian>%s1_Player ha fondato %s2_City in una terra lontana.</Italian>
+		<Italian>%s1_Player ha fondato la città di %s2_City in una terra straniera.</Italian> <!-- Message in the Event Log -->
 		<Spanish>%s1_Player ha fundado %s2_City en una tierra lejana.</Spanish>
 		<Polish>%s1_Player założył %s2_City w odległym kraju.</Polish>
 		<Russian>%s1_Player îñíîâàë %s2_City íà îòäàëåííîé çåìëå.</Russian>
@@ -18558,14 +18562,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_MORECIV4LERTS_CITY_TO_EXPAND_RCS</Tag>
 		<English>[COLOR_MAGENTA]The culture of %s1 is about to reach a new threshold.[COLOR_REVERT]</English>
-		<Italian>[COLOR_MAGENTA]La cultura della città di %s1 sta per raggiungere un nuovo livello.[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_MAGENTA]La cultura della città di %s1 sta per raggiungere un nuovo livello.[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MORECIV4LERTS_CITY_TO_EXPAND</Tag>
 		<English>[COLOR_MAGENTA]The borders of %s1 are about to expand.[COLOR_REVERT]</English>
 		<French>[COLOR_MAGENTA]La frontière culturelle de %s1 est sur le point de s'étendre.[COLOR_REVERT]</French>
 		<German>[COLOR_MAGENTA]Die Stadtgrenzen von %s1 werden sich in der nächsten Runde erweitern.[COLOR_REVERT]</German>
-		<Italian>[COLOR_MAGENTA]Il confine culturale di %s1 sta per espandersi.[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_MAGENTA]Il confine culturale della città di %s1 sta per espandersi.[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_MAGENTA]Las fronteras de %s1 están a punto de expandirse.[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_MAGENTA]Granice kulturowe miasta: %s1 są bliskie rozszerzenia.[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_MAGENTA]Ãðàíèöû %s1 ñîáèðàþòñÿ ðàñøèðÿòüñÿ.[COLOR_REVERT]</Russian>
@@ -18575,7 +18579,7 @@
 		<English>[COLOR_TECH_TEXT]Will Sign a Defensive Pact: %s1[COLOR_REVERT]</English>
 		<French>[COLOR_TECH_TEXT]%s1 est d'accord pour signer un Pacte Défensif[COLOR_REVERT]</French>
 		<German>[COLOR_TECH_TEXT]Wird einem "Verteidigungsbündnis" zustimmen: %s1[COLOR_REVERT]</German>
-		<Italian>[COLOR_TECH_TEXT]Firmerà un Patto Difensivo: %s1[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_TECH_TEXT]%s1 vuole firmare un patto difensivo[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_TECH_TEXT]Firmarán un Acuerdo de protección: %s1[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_TECH_TEXT]Chce podpisać pakt obronny: %s1[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_TECH_TEXT]Ïîäïèøåò îáîðîíèòåëüíûé ïàêò: %s1[COLOR_REVERT]</Russian>
@@ -18585,7 +18589,7 @@
 		<English>[COLOR_WARNING_TEXT]Your land area: %d1 (%s2) is close to the Domination Limit: %d3 (%s4)[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Votre territoire: %d1 (%s2) est près de la limite de Domination: %d3 (%s4)[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]Eure Landmasse: %d1 (%s2) überschreitet beinahe die Schwelle für einen Herrschaftssieg: %d3 (%s4)[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]Il tuo territorio: %d1 (%s2) è vicino al limite di dominazione: %d3 (%s4)[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_WARNING_TEXT]L'estensione del tuo territorio: %d1 (%s2) è vicina al limite per la vittoria per dominazione: %d3 (%s4)[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_WARNING_TEXT]Tu territorio: %d1 (%s2) está cerca de alcanzar el límite para la victoria por Dominación: %d3 (%s4)[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_WARNING_TEXT]Twoje terytorium: %d1 (%s2) jest bliskie osiągnięcia progu dominacji: %d3 (%s4)[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_WARNING_TEXT]Âàøà òåððèòîðèÿ: %d1 (%s2) ïðèáëèçèëàñü ê ïðåäåëó äîìèíèðîâàíèÿ: %d3 (%s4)[COLOR_REVERT]</Russian>
@@ -18595,7 +18599,7 @@
 		<English>[COLOR_WARNING_TEXT]Your land area: %d1 (%s2) exceeds the Domination Limit: %d3 (%s4)[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Votre territoire: %d1 (%s2) dépasse la limite de Domination: %d3 (%s4)[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]Eure Landmasse: %d1 (%s2) überschreitet die Schwelle für einen Herrschaftssieg: %d3 (%s4)[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]Il tuo territorio: %d1 (%s2) eccede il limite di dominazione: %d3 (%s4)[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_WARNING_TEXT]L'estensione del tuo territorio: %d1 (%s2) ha superato il limite per la vittoria per dominazione: %d3 (%s4)[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_WARNING_TEXT]Tu territorio: %d1 (%s2) ha superado el límite para la victoria por Dominación: %d3 (%s4)[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_WARNING_TEXT]Twoje terytorium: %d1 (%s2) osiągnęło próg dominacji: %d3 (%s4)[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_WARNING_TEXT]Âàøà òåððèòîðèÿ: %d1 (%s2) ïðåâûñèëà ïðåäåë äîìèíèðîâàíèÿ: %d3 (%s4)[COLOR_REVERT]</Russian>
@@ -18605,7 +18609,7 @@
 		<English>[COLOR_TECH_TEXT]Will Trade Map: %s1[COLOR_REVERT]</English>
 		<French>[COLOR_TECH_TEXT]%s1 est prêt à échanger des cartes.[COLOR_REVERT]</French>
 		<German>[COLOR_TECH_TEXT]Wird Karten handeln: %s1[COLOR_REVERT]</German>
-		<Italian>[COLOR_TECH_TEXT]Disponibile a commerciare 'Mappa': %s1[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_TECH_TEXT]%s1 è disponibile a commerciare la sua mappa[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_TECH_TEXT]Intercambiarán su mapa: %s1[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_TECH_TEXT]Chce handlować mapami: %s1[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_TECH_TEXT]Ìîæåò òîðãîâàòü êàðòîé: %s1[COLOR_REVERT]</Russian>
@@ -18615,7 +18619,7 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]%s1 will trade %s2[COLOR_REVERT]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]%s1 est prêt à échanger: %s2[COLOR_REVERT]</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]%s1 hat Ressourcen zum Handeln: %s2[COLOR_REVERT]</German>
-		<Italian>[COLOR_HIGHLIGHT_TEXT]%s1 è disponibile a commerciare %s2[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_HIGHLIGHT_TEXT]%s1 è disponibile a commerciare la risorsa %s2[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]%s1 intercambiará %s2[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]%s1 chce handlować %s2[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_HIGHLIGHT_TEXT]%s1 ìîæåò òîðãîâàòü %s2[COLOR_REVERT]</Russian>
@@ -18625,7 +18629,7 @@
 		<English>[COLOR_TECH_TEXT]%s1 will trade %s2[COLOR_REVERT]</English>
 		<French>[COLOR_TECH_TEXT]%s1 est prêt à échanger: %s2[COLOR_REVERT]</French>
 		<German>[COLOR_TECH_TEXT]%s1 hat neue Technologie(n) zum Handeln: %s2[COLOR_REVERT]</German>
-		<Italian>[COLOR_TECH_TEXT]%s1 è disponibile a commerciare %s2[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_TECH_TEXT]%s1 è disponibile a commerciare la tecnologia %s2[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_TECH_TEXT]%s1 intercambiará %s2[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_TECH_TEXT]%s1 chce handlować: %s2[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_TECH_TEXT]%s1 ìîæåò òîðãîâàòü %s2[COLOR_REVERT]</Russian>
@@ -18635,7 +18639,7 @@
 		<English>[COLOR_TECH_TEXT]Will Sign Open Borders: %s1[COLOR_REVERT]</English>
 		<French>[COLOR_TECH_TEXT]%s1 est d'accord pour signer un accord de Libre passage[COLOR_REVERT]</French>
 		<German>[COLOR_TECH_TEXT]Wird "Offenen Grenzen" zustimmen: %s1[COLOR_REVERT]</German>
-		<Italian>[COLOR_TECH_TEXT]Firmerà un Trattato di Libero Accesso: %s1[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_TECH_TEXT]%s1 è disponibile a firmare un trattato di confini aperti[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_TECH_TEXT]Firmarán un acuerdo de Apertura de fronteras: %s1[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_TECH_TEXT]Chce podpisać traktat o otwarciu granic: %s1[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_TECH_TEXT]Ïîäïèøåò îòêðûòûå ãðàíèöû: %s1[COLOR_REVERT]</Russian>
@@ -18645,7 +18649,7 @@
 		<English>[COLOR_TECH_TEXT]Will Sign Peace Treaty: %s1[COLOR_REVERT]</English>
 		<French>[COLOR_TECH_TEXT]Est prêt à Signer un Traité de Paix: %s1[COLOR_REVERT]</French>
 		<German>[COLOR_TECH_TEXT]Wird einem "Friedensvertrag" zustimmen: %s1[COLOR_REVERT]</German>
-		<Italian>[COLOR_TECH_TEXT]Firmerà un Trattato di Pace: %s1[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_TECH_TEXT]%s1 è disponibile a firmare un trattato di pace[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_TECH_TEXT]Firmarán un tratado de paz: %s1[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_TECH_TEXT]Chce podpisać traktat pokojowy: %s1[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_TECH_TEXT]Ïîäïèøåò ìèðíûé äîãîâîð: %s1[COLOR_REVERT]</Russian>
@@ -18655,7 +18659,7 @@
 		<English>[COLOR_TECH_TEXT]Will Sign a Permanent Alliance: %s1[COLOR_REVERT]</English>
 		<French>[COLOR_TECH_TEXT]%s1 est d'accord pour signer une Alliance Permanente[COLOR_REVERT]</French>
 		<German>[COLOR_TECH_TEXT]Wird einer "Allianz" zustimmen: %s1[COLOR_REVERT]</German>
-		<Italian>[COLOR_TECH_TEXT]Firmerà un'Alleanza Permanente: %s1[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_TECH_TEXT]%s1 è disponibile a firmare un'alleanza permanente[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_TECH_TEXT]Firmarán una Alianza permanente: %s1[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_TECH_TEXT]Chce podpisać sojusz: %s1[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_TECH_TEXT]Ïîäïèøåò ïîñòîÿííûé ñîþç: %s1[COLOR_REVERT]</Russian>
@@ -18665,7 +18669,7 @@
 		<English>[COLOR_WARNING_TEXT]Your population: %d1 (%s2) is close to the Domination Limit: %d3 (%s4)[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Votre population: %d1 (%s2) est proche de la limite de Domination: %d3 (%s4)[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]Eure Bevölkerung: %d1 (%s2) überschreitet beinahe die Schwelle für einen Herrschaftssieg: %d3 (%s4)[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]La tua popolazione: %d1 (%s2) è vicina al limite di dominazione: %d3 (%s4)[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_WARNING_TEXT]L'ammontare della tua popolazione: %d1 (%s2) è vicino al limite per la vittoria per dominazione: %d3 (%s4)[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_WARNING_TEXT]Su población: %d1 (%s2) está cerca del límite para la victoria por Dominación: %d3 (%s4)[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_WARNING_TEXT]Twoja populacja: %d1 (%s2) jest bliska osiągnięcia progu dominacji: %d3 (%s4)[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_WARNING_TEXT]Âàøå íàñåëåíèå: %d1 (%s2) ïðèáëèçèëîñü ê ïðåäåëó äîìèíèðîâàíèÿ: %d3 (%s4)[COLOR_REVERT]</Russian>
@@ -18675,7 +18679,7 @@
 		<English>[COLOR_WARNING_TEXT]Your population: %d1 (%s2) exceeds the Domination Limit: %d3 (%s4)[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Votre population: %d1 (%s2) dépasse la limite de Domination: %d3 (%s4)[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]Eure Bevölkerung: %d1 (%s2) überschreitet die Schwelle für einen Herrschaftssieg: %d3 (%s4)[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]La tua popolazione: %d1 (%s2) eccede il limite di dominazione: %d3 (%s4)[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_WARNING_TEXT]L'ammontare della tua popolazione: %d1 (%s2) ha superato il limite per la vittoria per dominazione: %d3 (%s4)[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_WARNING_TEXT]Su población: %d1 (%s2) ha superado el límite para la victoria por Dominación: %d3 (%s4)[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_WARNING_TEXT]Twoja populacja: %d1 (%s2) osiągnęła próg dominacji: %d3 (%s4)[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_WARNING_TEXT]Âàøå íàñåëåíèå: %d1 (%s2) ïðåâûñèëî ïðåäåë äîìèíèðîâàíèÿ: %d3 (%s4)[COLOR_REVERT]</Russian>
@@ -18685,7 +18689,7 @@
 		<English>[COLOR_WARNING_TEXT]Your population: %d1, plus growth: %d2 (%s3) will put close to the Domination Limit: %d4 (%s5)[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Avec la croissance prévue: %d2 (%s3), votre population: %d1, s'approchera de la limite de Domination: %d4 (%s5)[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]Eure Bevölkerung: %d1, plus Wachstum: %d2 (%s3) überschreitet beinahe die Schwelle für einen Herrschaftssieg: %d4 (%s5)[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]La tua popolazione: %d1, più crescita: %d2 (%s3) sarà vicina al limite di dominazione: %d4 (%s5)[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_WARNING_TEXT]L'ammontare della tua popolazione: %d1 con la prossima crescita: %d2 (%s3) si avvicinerà al limite per la vittoria per dominazione: %d4 (%s5)[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_WARNING_TEXT]Su población: %d1, con el crecimiento previsto: %d2 (%s3) se acercará al límite para la victoria por Dominación: %d4 (%s5)[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_WARNING_TEXT]Twoja populacja: %d1, wzrastając: %d2 (%s3) będzie bliska osiągnięcia progu dominacji: %d4 (%s5)[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_WARNING_TEXT]Âàøå íàñåëåíèå: %d1, ïëþñ ðîñò: %d2 (%s3) ïðèáëèçèòñÿ ê ïðåäåëó äîìèíèðîâàíèÿ: %d4 (%s5)[COLOR_REVERT]</Russian>
@@ -18695,7 +18699,7 @@
 		<English>[COLOR_WARNING_TEXT]Your population: %d1, plus growth: %d2 (%s3) will exceed the Domination Limit: %d4 (%s5)[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Avec la croissance prévue %d2 (%s3), votre population: %d1, dépassera la limite de Domination: %d4 (%s5)[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]Eure Bevölkerung: %d1, plus Wachstum: %d2 (%s3) überschreitet die Schwelle für einen Herrschaftssieg: %d4 (%s5)[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]La tua popolazione: %d1, più crescita: %d2 (%s3) eccederà il limite di dominazione: %d4 (%s5)[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_WARNING_TEXT]L'ammontare della tua popolazione: %d1 con la prossima crescita: %d2 (%s3) ha superato il limite per la vittoria per dominazione: %d4 (%s5)[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_WARNING_TEXT]Su población: %d1, con el crecimiento previsto: %d2 (%s3) superará el límite para la victoria por Dominación: %d4 (%s5)[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_WARNING_TEXT]Twoja populacja: %d1, wzrastając: %d2 (%s3) osiągnie próg dominacji: %d4 (%s5)[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_WARNING_TEXT]Âàøå íàñåëåíèå: %d1, ïëþñ ðîñò: %d2 (%s3) ïðåâûñèò ïðåäåë äîìèíèðîâàíèÿ: %d4 (%s5)[COLOR_REVERT]</Russian>
@@ -18705,7 +18709,7 @@
 		<English>[COLOR_TECH_TEXT]Will Capitulate: %s1[COLOR_REVERT]</English>
 		<French>[COLOR_TECH_TEXT]Est prêt à Capituler: %s1[COLOR_REVERT]</French>
 		<German>[COLOR_TECH_TEXT]Wird kapitulieren: %s1[COLOR_REVERT]</German>
-		<Italian>[COLOR_TECH_TEXT]Capitolerà: %s1[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_TECH_TEXT]%s1 si arrenderà[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_TECH_TEXT]Capitularán: %s1[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_TECH_TEXT]Chce skapitulować: %s1[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_TECH_TEXT]Êàïèòóëèðóåò: %s1[COLOR_REVERT]</Russian>
@@ -18715,7 +18719,7 @@
 		<English>[COLOR_TECH_TEXT]%s1 won't trade %s2[COLOR_REVERT]</English>
 		<French>[COLOR_TECH_TEXT]%s1 ne veut plus échanger: %s2[COLOR_REVERT]</French>
 		<German>[COLOR_TECH_TEXT]%s1 hat Technologie(n) vom Handel ausgeschlossen: %s2[COLOR_REVERT]</German>
-		<Italian>[COLOR_TECH_TEXT]%s1 non è più disponibile a commerciare%s2[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_TECH_TEXT]%s1 non è più disponibile a commerciare la tecnologia %s2[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_TECH_TEXT]%s1 no intercambiará %s2[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_TECH_TEXT]%s1 nie chce handlować: %s2[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_TECH_TEXT]%s1 íå ìîæåò òîðãîâàòü %s2[COLOR_REVERT]</Russian>
@@ -18725,7 +18729,7 @@
 		<English>[COLOR_TECH_TEXT]Will Become a Vassal: %s1[COLOR_REVERT]</English>
 		<French>[COLOR_TECH_TEXT]Est prêt à devenir Vassal: %s1[COLOR_REVERT]</French>
 		<German>[COLOR_TECH_TEXT]Wird zu einem Vasallen werden: %s1[COLOR_REVERT]</German>
-		<Italian>[COLOR_TECH_TEXT]Diverrà Vassallo: %s1[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_TECH_TEXT]%s1 diventerà una civiltà vassalla[COLOR_REVERT]</Italian> <!-- Message in the Event Log -->
 		<Spanish>[COLOR_TECH_TEXT]Se convertirá(n) en vasallo(s): %s1[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_TECH_TEXT]Chce zostać wasalem: %s1[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_TECH_TEXT]Ñòàíåò âàññàëîì: %s1[COLOR_REVERT]</Russian>
@@ -21955,7 +21959,7 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]Count City's Tiles[COLOR_REVERT][NEWLINE]Counts the tiles the city controls.</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Nb. de Cases[COLOR_REVERT][NEWLINE]Compte le nombre de Cases que contrôle la ville.</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]Nur Stadtgeländefelder[COLOR_REVERT][NEWLINE]Zur Berechnung der Roherträge werden alle Geländefelder, die von der Stadt derzeit kontrolliert werden, herangezogen.</German>
-		<Italian>[COLOR_HIGHLIGHT_TEXT]Caselle della città[COLOR_REVERT][NEWLINE]Considera solo le caselle attualmente controllate dalla città</Italian> <!-- city screen commerce panel -->
+		<Italian>[COLOR_HIGHLIGHT_TEXT]Caselle della città[COLOR_REVERT][NEWLINE]Considera solo le caselle [COLOR_HIGHLIGHT_TEXT]attualmente controllate[COLOR_REVERT] dalla città</Italian> <!-- city screen commerce panel -->
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]Casillas de la ciudad[COLOR_REVERT][NEWLINE]Mostrar las casillas que la ciudad controla.</Spanish>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Policz Pola Miasta[COLOR_REVERT][NEWLINE]Liczy pola kontrolowane przez miasto.</Polish>
 		<Russian>[COLOR_HIGHLIGHT_TEXT]×èñëî ãîðîäñêèõ êëåòîê[COLOR_REVERT][NEWLINE]×èñëî êëåòîê ïîä óïðàâëåíèåì ãîðîäà.</Russian>
@@ -21965,7 +21969,7 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]Count Owned Tiles[COLOR_REVERT][NEWLINE]Counts the tiles in the city radius owned by your civilization.</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Nb. de Cases possédées[COLOR_REVERT][NEWLINE]Compte le nombre de Cases dans le périmètre de la ville, qui sont possédées par votre Civilisation.</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]Nur Geländefelder in Besitz[COLOR_REVERT][NEWLINE]Zur Berechnung der Roherträge werden alle Geländefelder, die sich im Einzugsgebiet der Stadt befinden und zur eigenen Zivilisation gehören, herangezogen.</German>
-		<Italian>[COLOR_HIGHLIGHT_TEXT]Caselle possedute[COLOR_REVERT][NEWLINE]Considera solo le caselle possedute nel raggio della città</Italian> <!-- city screen commerce panel -->
+		<Italian>[COLOR_HIGHLIGHT_TEXT]Caselle possedute[COLOR_REVERT][NEWLINE]Considera solo le caselle [COLOR_HIGHLIGHT_TEXT]attualmente possedute[COLOR_REVERT] nel raggio della città</Italian> <!-- city screen commerce panel -->
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]Casillas propias[COLOR_REVERT][NEWLINE]Mostrar las casillas en el radio de la ciudad controladas por tu civilización.</Spanish>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Policz Własne Pola[COLOR_REVERT][NEWLINE]Liczy pola w zasięgu miasta należące do twojej cywilizacji.</Polish>
 		<Russian>[COLOR_HIGHLIGHT_TEXT]×èñëî âëàäååìûõ êëåòîê[COLOR_REVERT][NEWLINE]×èñëî êëåòîê â ðàäèóñå ãîðîäà, ïðèíàäëåæàùèõ âàøåé öèâèëèçàöèè.</Russian>
@@ -21975,7 +21979,7 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]Count Worked Tiles[COLOR_REVERT][NEWLINE]Counts the tiles the city is currently working.</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Nb. de Cases travaillées[COLOR_REVERT][NEWLINE]Compte le nombre de Cases de la ville actuellement travaillées.</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]Nur bearbeitete Geländefelder[COLOR_REVERT][NEWLINE]Zur Berechnung der Roherträge werden alle Geländefelder, die von der Stadt derzeit bearbeitet werden, herangezogen.</German>
-		<Italian>[COLOR_HIGHLIGHT_TEXT]Caselle lavorate[COLOR_REVERT][NEWLINE]Considera solo le caselle della città attualmente lavorate</Italian> <!-- city screen commerce panel -->
+		<Italian>[COLOR_HIGHLIGHT_TEXT]Caselle lavorate[COLOR_REVERT][NEWLINE]Considera solo le caselle della città [COLOR_HIGHLIGHT_TEXT]attualmente lavorate[COLOR_REVERT]</Italian> <!-- city screen commerce panel -->
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]Casillas trabajadas[COLOR_REVERT][NEWLINE]Mostrar las casillas que la ciudad está trabajando.</Spanish>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Policz Używane Pola[COLOR_REVERT][NEWLINE]Liczy aktualnie używane pola miasta.</Polish>
 		<Russian>[COLOR_HIGHLIGHT_TEXT]×èñëî ðàáî÷èõ êëåòîê[COLOR_REVERT][NEWLINE]×èñëî ðàáîòàþùèõ ñåé÷àñ êëåòîê ãîðîäà.</Russian>
@@ -21985,7 +21989,7 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]View Raw Commerce[COLOR_REVERT][NEWLINE]Displays a breakdown of all [ICON_COMMERCE] sources and modifiers.</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Voir le Commerce[COLOR_REVERT][NEWLINE]Affiche la Liste de toutes les sources de [ICON_COMMERCE] et les modificateurs.</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]Roherträge aus Wirtschaft[COLOR_REVERT][NEWLINE]Aufschlüsselung aller [ICON_COMMERCE]-Erträge mit deren Modifikatoren</German>
-		<Italian>[COLOR_HIGHLIGHT_TEXT]Fonti di Commercio[COLOR_REVERT][NEWLINE]Mostra un riassunto di tutte le fonti di commercio [ICON_COMMERCE] ed i modificatori relativi</Italian> <!-- city screen commerce panel -->
+		<Italian>[COLOR_HIGHLIGHT_TEXT]Fonti di Commercio[COLOR_REVERT][NEWLINE]Mostra un riassunto di tutte le [COLOR_HIGHLIGHT_TEXT]fonti di commercio[COLOR_REVERT] [ICON_COMMERCE] ed i modificatori relativi</Italian> <!-- city screen commerce panel -->
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]Fuentes de comercio[COLOR_REVERT][NEWLINE]Visualizar una lista de todas las fuentes y modificadores relativos al [ICON_COMMERCE].</Spanish>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Pokaż Handel[COLOR_REVERT][NEWLINE]Wyświetla wszystkie źródła i modyfikatory [ICON_COMMERCE].</Polish>
 		<Russian>[COLOR_HIGHLIGHT_TEXT]Ñìîòðåòü ñûðóþ òîðãîâëþ[COLOR_REVERT][NEWLINE]Îòîáðàæàòü îêîí÷àíèå âñåõ [ICON_COMMERCE] ðåñóðñîâ è ìîäèôèêàòîðîâ.</Russian>
@@ -21995,7 +21999,7 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]View Raw Food[COLOR_REVERT][NEWLINE]Displays a breakdown of all [ICON_FOOD] sources.</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Voir la Nourriture[COLOR_REVERT][NEWLINE]Affiche la Liste de toutes les sources de [ICON_FOOD].</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]Roherträge aus Nahrung[COLOR_REVERT][NEWLINE]Aufschlüsselung aller [ICON_FOOD]-Erträge</German>
-		<Italian>[COLOR_HIGHLIGHT_TEXT]Fonti di Cibo[COLOR_REVERT][NEWLINE]Mostra un riassunto di tutte le fonti di cibo [ICON_FOOD] ed i modificatori relativi</Italian> <!-- city screen commerce panel -->
+		<Italian>[COLOR_HIGHLIGHT_TEXT]Fonti di Cibo[COLOR_REVERT][NEWLINE]Mostra un riassunto di tutte le [COLOR_HIGHLIGHT_TEXT]fonti di cibo[COLOR_REVERT] [ICON_FOOD] ed i modificatori relativi</Italian> <!-- city screen commerce panel -->
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]Fuentes de alimentos[COLOR_REVERT][NEWLINE]Visualizar una lista de todas las fuentes de [ICON_FOOD].</Spanish>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Pokaż Żywność[COLOR_REVERT][NEWLINE]Wyświetla wszystkie źródła [ICON_FOOD].</Polish>
 		<Russian>[COLOR_HIGHLIGHT_TEXT]Ñìîòðåòü ñûðóþ ïèùó[COLOR_REVERT][NEWLINE]Îòîáðàæàòü îêîí÷àíèå âñåõ [ICON_FOOD] ðåñóðñîâ.</Russian>
@@ -22005,7 +22009,7 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]View Raw Production[COLOR_REVERT][NEWLINE]Displays a breakdown of all [ICON_PRODUCTION] sources and modifiers.</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Voir la Production[COLOR_REVERT][NEWLINE]Affiche la Liste de toutes les sources de [ICON_PRODUCTION] et les modificateurs.</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]Roherträge aus Produktion[COLOR_REVERT][NEWLINE]Aufschlüsselung aller [ICON_PRODUCTION]-Erträge mit deren Modifikatoren</German>
-		<Italian>[COLOR_HIGHLIGHT_TEXT]Fonti di Produzione[COLOR_REVERT][NEWLINE]Mostra un riassunto di tutte le fonti di produzione [ICON_PRODUCTION] ed i modificatori relativi</Italian> <!-- city screen commerce panel -->
+		<Italian>[COLOR_HIGHLIGHT_TEXT]Fonti di Produzione[COLOR_REVERT][NEWLINE]Mostra un riassunto di tutte le [COLOR_HIGHLIGHT_TEXT]fonti di produzione[COLOR_REVERT] [ICON_PRODUCTION] ed i modificatori relativi</Italian> <!-- city screen commerce panel -->
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]Fuentes de producción[COLOR_REVERT][NEWLINE]Visualizar una lista de todas las fuentes y modificadores relativos a la [ICON_PRODUCTION].</Spanish>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Pokaż Produkcję[COLOR_REVERT][NEWLINE]Wyświetla wszystkie źródła i modyfikatory [ICON_PRODUCTION].</Polish>
 		<Russian>[COLOR_HIGHLIGHT_TEXT]Ñìîòðåòü ñûðîå ïðîèçâîäñòâî[COLOR_REVERT][NEWLINE]Îòîáðàæàòü îêîí÷àíèå âñåõ [ICON_PRODUCTION] ðåñóðñîâ è ìîäèôèêàòîðîâ.</Russian>
@@ -22015,7 +22019,7 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]View Trade Routes[COLOR_REVERT][NEWLINE]Displays the Trade Routes for this city.</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Voir les Routes Commerciales[COLOR_REVERT][NEWLINE]Affiche les Routes Commerciales de cette Ville.</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]Handelsverbindungen[COLOR_REVERT][NEWLINE]Anzeige der Handelsverbindungen dieser Stadt</German>
-		<Italian>[COLOR_HIGHLIGHT_TEXT]Rotte Commerciali[COLOR_REVERT][NEWLINE]Mostra le rotte commerciali di questa città</Italian> <!-- city screen commerce panel -->
+		<Italian>[COLOR_HIGHLIGHT_TEXT]Rotte Commerciali[COLOR_REVERT][NEWLINE]Mostra le [COLOR_HIGHLIGHT_TEXT]rotte commerciali[COLOR_REVERT] di questa città</Italian> <!-- city screen commerce panel -->
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]Rutas comerciales[COLOR_REVERT][NEWLINE]Visualizar las rutas comerciales de esta ciudad.</Spanish>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Pokaż Szlaki Handlowe[COLOR_REVERT][NEWLINE]Pokazuje Szlaki Handlowe dla tego miasta.</Polish>
 		<Russian>[COLOR_HIGHLIGHT_TEXT]Ñìîòðåòü òîðãîâûå ïóòè[COLOR_REVERT][NEWLINE]Îòîáðàæàåò òîðãîâûå ïóòè äëÿ ýòîãî ãîðîäà.</Russian>
@@ -24177,7 +24181,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]%D1_Change Experience to %s2_UnitCombat type units trained in this city.</English>
 		<French>[ICON_BULLET]%D1_Change Experience pour les unités de type: %s2_UnitCombat entraînées dans cette Ville.</French>
 		<German>[ICON_BULLET]%D1_Change Erfahrung für %s2_UnitCombat, die in dieser Stadt ausgebildet werden.</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] punti esperienza a ogni [COLOR_HIGHLIGHT_TEXT]%s2_UnitCombat[COLOR_REVERT] addestrate in questa città</Italian> <!-- city screen hover over specialist citizen -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] [NUM1:punto:punti] esperienza a ogni [COLOR_HIGHLIGHT_TEXT]%s2_UnitCombat[COLOR_REVERT] addestrate in questa città</Italian> <!-- city screen hover over specialist citizen -->
 		<Polish>[ICON_BULLET]%D1_Change Doświadczenia do jednostek: %s2_UnitCombat trenowanych w tym mieście.</Polish>
 		<Russian>[ICON_BULLET]%D1_Change опыта всем типам %s2_UnitCombat обученным в данном городе.</Russian>
 	</TEXT>
@@ -27975,6 +27979,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<French>+%d1[ICON_UNHAPPY] "Les bâtiments et effets influençant notre religion nous rendent fous!"</French>
 		<German>+%d1[ICON_UNHAPPY] "Bestimmte Gebäude oder Effekte in der Umgebung machen uns verrückt!"</German>
 		<Russian>+%d1[ICON_UNHAPPY] "Çäàíèÿ è ýôôåêòû, êîòîðûå âëèÿþò íà ðåãèîí, ïðîáóæäàþò â íàñ Áåðñåðêà!"</Russian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1[COLOR_REVERT] [ICON_UNHAPPY]: Gli edifici e gli effetti che influenzano la regione mi danno fastidio</Italian> <!-- city screen hover happiness panel upper right -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNHAPPY_CITY_BUILDINGS</Tag>
@@ -27982,13 +27987,14 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<French>+%d1[ICON_UNHAPPY] "Les bâtiments et effets de cette ville nous gênent particulièrement!"</French>
 		<German>+%d1[ICON_UNHAPPY] "Einige der städtischen Gebäude oder Effekte nerven uns!"</German>
 		<Russian>+%d1[ICON_UNHAPPY] "Çäàíèÿ è ýôôåêòû â ýòîì ãîðîäå äèêî ðàçäðàæàþò íàñ!"</Russian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1[COLOR_REVERT] [ICON_UNHAPPY]: Gli edifici e gli effetti che influenzano la città mi irritano!</Italian> <!-- city screen hover happiness panel upper right -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNHAPPY_CIVIC</Tag>
 		<English>+%d1_Change[ICON_UNHAPPY]: "We hate our government!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY]: "Nous détestons notre gouvernement!"</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: "Wir hassen unsere Regierung!"</German>
-		<Italian>+%d1_Change[ICON_UNHAPPY]: "Odiamo il nostro governo!"</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Odio la nostra forma di governo!</Italian> <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change[ICON_UNHAPPY]: "¡Odiamos a nuestro gobierno!"</Spanish>
 		<Polish>+%d1_Change[ICON_UNHAPPY]: "Nienawidzimy naszego rządu!"</Polish>
 		<Russian>+%d1_Change[ICON_UNHAPPY]: ''Ìû íåíàâèäèì íàøå ïðàâèòåëüñòâî!''</Russian>
@@ -27998,7 +28004,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>+%d1_Change[ICON_UNHAPPY]: "Corporations are Harming our City!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY]: "Les Corporations nuisent à notre Ville!"</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: "Kapitalgesellschaften schaden unserer Stadt!"</German>
-		<Italian>+%d1_Change[ICON_UNHAPPY]: "Le corporazioni controllano la nostra città!"</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Le corporazioni controllano la nostra città!</Italian> <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change[ICON_UNHAPPY]: "¡Las corporaciones están dañando nuestra ciudad!"</Spanish>
 		<Polish>+%d1_Change[ICON_UNHAPPY]: "Korporacje szkodzą naszemu miastu!"</Polish>
 		<Russian>+%d1_Change[ICON_UNHAPPY]: ''Êîðïîðàöèè âðåäÿò íàøåìó ãîðîäó!''</Russian>
@@ -28009,13 +28015,14 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<French>+%d1[ICON_UNHAPPY] "Les bâtiments et effets qui ont un impact dans toutes nos villes nous ennuyent tous!"</French>
 		<German>+%d1[ICON_UNHAPPY] "Wir ärgern uns über bestimmte Gebäude oder Effekte, die all unsere Städte beeinflussen!"</German>
 		<Russian>+%d1[ICON_UNHAPPY] "Çäàíèÿ è ýôôåêòû, âëèÿþùèå íà âñå íàøè ãîðîäà, âûçûâàþò â íàøèõ äóøàõ ÷óâñòâî ãíåâà!"</Russian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1[COLOR_REVERT] [ICON_UNHAPPY]: Gli edifici e gli effetti che influenzano tutte le città mi irritano!</Italian> <!-- city screen hover happiness panel upper right -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNHAPPY_PROJECT</Tag>
 		<English>+%d1_Change[ICON_UNHAPPY]: "Our Nation's Technological Breakthroughs have harmed Ourselves!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY]: "Nos Avancées Technologiques ont des conséquences néfastes pour nous-mêmes!"</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: "Unsere technologischen Errungenschaften schaden uns!"</German>
-		<Italian>+%d1_Change[ICON_UNHAPPY]: "Le innovazioni tecnologiche della nostra nazione ci hanno danneggiati!"</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Le innovazioni tecnologiche della nostra civiltà ci hanno danneggiato!</Italian> <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change[ICON_UNHAPPY]: "¡Los avances tecnológicos de nuestra nación nos han perjudicado!"</Spanish>
 		<Polish>+%d1_Change[ICON_UNHAPPY]: "Rozwój technologiczny naszego państwa jest dla nasz szkodliwy!"</Polish>
 		<Russian>+%d1_Change[ICON_UNHAPPY]: ''Íàøè Íàöèîíàëüíûå Òåõíîëîãè÷åñêèå Ïðîðûâû íàâðåäèëè Íàì!''</Russian>
@@ -28025,7 +28032,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>+%d1_Change[ICON_UNHAPPY]: "We are angered by some citizens' occupations!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY]: "Nous sommes indignés par les professions de certains citoyens!"</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: "Wir sind durch die Berufe einiger Bürger verärgert!"</German>
-		<Italian>+%d1_Change[ICON_UNHAPPY]: "Noi siamo in collera per le occupazioni di alcuni cittadini!"</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Sono in collera per le professioni di alcuni cittadini specialisti!</Italian> <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change[ICON_UNHAPPY]: "¡Estamos indignados por los oficios de algunos ciudadanos!"</Spanish>
 		<Polish>+%d1_Change[ICON_UNHAPPY]: "Jesteśmy wściekli z powodu warunków mieszkaniowych niektórych obywateli!"</Polish>
 		<Russian>+%d1_Change[ICON_UNHAPPY]: "Ìû ñâèðåïååì îò ðîäà çàíÿòèé íåêîòîðûõ íàøèõ ñîãðàæäàí!"</Russian>
@@ -28034,7 +28041,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNHAPPY_TECH_SPECIALIST</Tag>
 		<English>+%d1[ICON_UNHAPPY] "Our advanced society has made the efforts of some professions completely intolerable!"</English>
 		<French>+%d1[ICON_UNHAPPY] "Notre société avancée a réalisé des efforts envers certaines professions intolérables!"</French>
-		<Italian>+%d1[ICON_UNHAPPY] "La nostra società avanzata ha reso molte professioni decisamente intollerabili!"</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1[COLOR_REVERT] [ICON_UNHAPPY]: La nostra società avanzata ha reso qualche professione completamente intollerabile!</Italian> <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1[ICON_UNHAPPY] "Our advanced society has made the efforts of some professions completely intolerable"</Spanish>
 		<Polish>+%d1[ICON_UNHAPPY] "Nasze nowoczesne społeczeństwo nie toleruje niektórych zawodów!"</Polish>
 		<Russian>+%d1[ICON_UNHAPPY] "Íàøå ðàçâèòîå îáùåñòâî äî ñèõ ïîð äîïóñêàåò ñóùåñòâîâàíèå ñòîëü ïîçîðíûõ ïðîôåññèé!"</Russian>
@@ -28044,7 +28051,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>+%d1_Change[ICON_UNHAPPY]: "Down with foreign influence!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY]: "Notre influence à l'étranger diminue!"</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: "Nieder mit der ausländischen Einflussnahme!"</German>
-		<Italian>+%d1_Change[ICON_UNHAPPY]: "Abbasso l'influenza straniera!"</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Non sopporto di influenzare altre civiltà con il vassallaggio!</Italian> <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change [ICON_UNHAPPY]: "¡Acabemos con la influencia extranjera!"</Spanish>
 		<Polish>+%d1_Change[ICON_UNHAPPY]: "Usunąć wpływy obcych sił z rządu!"</Polish>
 		<Russian>+%d1_Change[ICON_UNHAPPY]: "Âñå ïåðåìåùåíèÿ èãðîêà óñêîðåíû!"</Russian>
@@ -28054,7 +28061,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>+%d1_Change[ICON_UNHAPPY]: "Other Nation's Technological Breakthroughs have harmed the World!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY]: "Les Avancées Technologiques d'autres Nations ont des conséquences néfastes pour le Monde Entier!"</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: "Die technologischen Errungenschaften anderer Nationen fügen der Welt Schaden zu!"</German>
-		<Italian>+%d1_Change[ICON_UNHAPPY]: "Le innovazioni tecnologiche di altre nazioni hanno portato danni in tutto il mondo!"</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]: Le innovazioni tecnologiche straniere hanno causato danni in tutto il mondo!</Italian> <!-- city screen hover happiness panel upper right -->
 		<Spanish>+%d1_Change[ICON_UNHAPPY]: "¡Los avances tecnológicos de otras naciones han perjudicado al mundo!"</Spanish>
 		<Polish>+%d1_Change[ICON_UNHAPPY]: "Rozwój technologiczny innego państwa szkodzi środowisku!"</Polish>
 		<Russian>+%d1_Change[ICON_UNHAPPY]: "Äðóãèå Íàöèîíàëüíûå Òåõíîëîãè÷åñêèå Ïðîðûâû âðåäèëè Ìèðó!"</Russian>
@@ -28063,7 +28070,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNHEALTHY_TECH_SPECIALIST</Tag>
 		<English>+%d1[ICON_UNHEALTHY] "Our advanced society has made the efforts of some professions produce filthy bi-products!"</English>
 		<French>+%d1[ICON_UNHEALTHY] "Notre société avancée a fait des efforts au niveau de certaines professions pour produire des sous-produits grossiers!"</French>
-		<Italian>+%d1[ICON_UNHEALTHY] "La nostra società avanzata ha fatto in modo che molte professioni produca pericolosi prodotti di scarto!"</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1[COLOR_REVERT] [ICON_UNHEALTHY]: Molte professioni nella nostra società avanzata producono pericolosi prodotti di scarto!</Italian> <!-- city screen hover happiness panel upper right -->
 		<Polish>+%d1[ICON_UNHEALTHY] "Nasze nowoczesne społeczeństwo doprowadziło, że niektóre zawody produkują kiepskiej jakości pół-produkty!"</Polish>
 		<Russian>+%d1[ICON_UNHEALTHY] "Íàøà ïðîäâèíóòàÿ öèâèëèçàöèÿ äî ñèõ ïîð äîïóñêàåò ïðîèçâîäñòâî íåêà÷åñòâåííûõ ïðîäóêòîâ ïèòàíèÿ!"</Russian>
 	</TEXT>
