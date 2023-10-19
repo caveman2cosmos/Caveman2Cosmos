@@ -2363,7 +2363,7 @@
 		<German>Leer</German>
 		<Italian>Nessuna</Italian>
 		<Spanish>No</Spanish>
-		<Russian>Нет</Russian>
+		<Russian>None</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_NOT_READY_DESC</Tag>
