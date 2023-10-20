@@ -831,7 +831,7 @@
 		<English>[ICON_BULLET]Adjusts Maximum Population by %D1_amount.</English>
 		<French>[ICON_BULLET]Ajuste le Maximum de Population de %D1_amount.</French>
 		<Polish>[ICON_BULLET]Dostosowuje Maksymalna Populację by %D1_amount.</Polish>
-		<Russian>[ICON_BULLET]Отрегулирует максимальную численность населения до %D1_amount.</Russian>
+		<Russian>[ICON_BULLET]Изменит максимальное население до %D1_amount.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_MAX_START_ERA</Tag>
@@ -841,6 +841,7 @@
 		<German>[ICON_BULLET]Kann nur im Zeitalter %s1_Name und früher errichtet werden</German>
 		<Italian>[ICON_BULLET]Può essere costruito soltanto durante l'era %s1_Name o prima</Italian>
 		<Spanish>[ICON_BULLET]Solo se puede construir en [NUM1:el:la:los:las] %s1_Name e inicios anteriores</Spanish>
+		<Russian>[ICON_BULLET]Можно построить только при старте в эпохе "%s1_Name" или раньше</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_MEDIUM_RANGE_SUPPORT_PERCENT_MODIFIER</Tag>
@@ -848,6 +849,7 @@
 		<French>[ICON_BULLET]+%d1_Amount%% de Puissance en soutien, des unités de moyenne portée participant à la défense de la ville.</French>
 		<Italian>[ICON_BULLET]+%d1_Amount%% di Supporto ad ogni unità da supporto a medio raggio che partecipa alla difesa cittadina.</Italian>
 		<Polish>[ICON_BULLET]+%d1_Amount%% do Siły Wspomagania z jakiejkolwiek jednostki Strzelniczej broniącej miasta.</Polish>
+		<Russian>[ICON_BULLET]+%d1_Amount%% к силе от каждого подразделения поддержки среднего радиуса действия, участвующего в обороне города.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_MILITARY_MOD</Tag>
@@ -856,6 +858,7 @@
 		<German>[ICON_BULLET]%D1_Mod%% Produktion von Militäreinheiten</German>
 		<Italian>[ICON_BULLET]%D1_Mod%% di produzione nelle unità militari</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod%% a la producción de unidades militares</Spanish>
+		<Russian>[ICON_BULLET]%D1_Mod%% производства военных подразделений</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_MORE_WORLD_TRADE</Tag>
@@ -865,11 +868,12 @@
 		<Italian>[ICON_BULLET] +%d1 rotte commerciali in tutto il Mondo</Italian>
 		<Spanish>[ICON_BULLET] +%d1 rutas comerciales en el mundo</Spanish>
 		<Polish>[ICON_BULLET] +%d1 do szlaków handlowych na świecie</Polish>
-		<Russian>[ICON_BULLET] +%d1 Òîðãîâûå ìàðøðóòû â ìèðå</Russian>
+		<Russian>[ICON_BULLET] +%d1 торговые пути в мире</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_NATIONAL_WONDERS_PER_CITY</Tag>
 		<English>[COLOR_WARNING_TEXT]This city's current culture level can only support %d1_Num National Wonders.[COLOR_REVERT]</English>
+		<Russian>[COLOR_WARNING_TEXT]Уровень культуры этого города может поддерживать национальные чудеса только в количестве: %d1_Num.[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_NATIONAL_WONDER_ALLOWED</Tag>
@@ -878,6 +882,7 @@
 		<German>[ICON_BULLET]Nationales Wunder (%d1_Num zulässig)</German>
 		<Italian>[ICON_BULLET]Meraviglia Nazionale (%d1_Num [NUM1:permessa:permesse])</Italian>
 		<Spanish>[ICON_BULLET]Maravilla nacional (%d1_Num [NUM1:permitida:permitidas])</Spanish>
+		<Russian>[ICON_BULLET]Национальное чудо (может быть только %d1_Num)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_NATIONAL_WONDER_LEFT</Tag>
@@ -886,24 +891,28 @@
 		<German>[SPACE](Nationales Wunder: %d1_Num übrig)</German>
 		<Italian>[SPACE](Meraviglia Nazionale: %d1_Num [NUM1:rimasta:rimaste])</Italian>
 		<Spanish>[SPACE](Maravilla nacional: %d1_Num [NUM1:restante:restantes])</Spanish>
+		<Russian>[SPACE](Национальное чудо: %d1_Num осталось)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_NEEDED_TO_BUILD</Tag>
 		<English>[ICON_BULLET]May be needed to Build[SPACE]</English>
 		<Italian>[ICON_BULLET]Potrebbe essere indispensabile per costruire:[NEWLINE][TAB]</Italian>
 		<German>[ICON_BULLET]optional erforderlich zum Bau von:[SPACE]</German>
+		<Russian>[ICON_BULLET]Может потребоваться для строительства[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_NEEDED_TO_BUILD_ANYWHERE</Tag>
 		<English>[ICON_BULLET]Needed to Build anywhere in empire:[SPACE]</English>
 		<Italian>[ICON_BULLET]Necessario per costruire in qualsiasi città:[NEWLINE][ICON_BULLET]</Italian>
 		<German>[ICON_BULLET]ermöglicht im gesamten Reich den Bau von:[SPACE]</German>
+		<Russian>[ICON_BULLET]Необходимо для строительства в любой месте вашей цивилизации:[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_NEEDED_TO_TRAIN</Tag>
 		<English>[ICON_BULLET]May be needed to Train[SPACE]</English>
 		<Italian>[ICON_BULLET]Potrebbe essere indispensabile per addestrare:[NEWLINE][TAB]</Italian>
 		<German>[ICON_BULLET]optional erforderlich für die Ausbildung von:[SPACE]</German>
+		<Russian>[ICON_BULLET]Может потребоваться для обучения[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_NOT_REQUIRED_TO_BUILD</Tag>
@@ -913,7 +922,7 @@
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Impossibile[COLOR_REVERT] la costruzione se già presente in città di[SPACE]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]No puede ser construido en la misma ciudad que[SPACE][COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_WARNING_TEXT]Nie można zbudować w tym samym mieście co[SPACE][COLOR_REVERT]</Polish>
-		<Russian>[COLOR_WARNING_TEXT]Íå ìîæåò áûòü ïîñòðîåí â òîì æå ñàìîì ãîðîäå êàê è[SPACE][COLOR_REVERT]</Russian>
+		<Russian>[COLOR_WARNING_TEXT]Нельзя построить в одном городе с[SPACE][COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_NO_ENTRY</Tag>
@@ -923,7 +932,7 @@
 		<Italian>[ICON_BULLET]I nemici non potranno attaccare la città finché le difese non saranno sotto %d1%</Italian>
 		<Spanish>[ICON_BULLET]Las unidades enemigas no podrán atacar la ciudad hasta que las defensas no caigan al %d1%</Spanish>
 		<Polish>[ICON_BULLET]Jednostki wroga nie będą mogły zaatakować miasta dopóki obrona nie spadnie do poziomu %d1%</Polish>
-		<Russian>[ICON_BULLET]Îòðÿäû âðàãà íå áóäóò â ñîñòîÿíèè âòîðãíóòüñÿ â ãîðîä äî îáîðîíîñïîñîáíîñòè %d1%</Russian>
+		<Russian>[ICON_BULLET]Вражеские подразделения не смогут вторгнуться в город, пока его оборона не опустится до %d1%</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_NO_MAINT_NUM_CITIES</Tag>
@@ -932,7 +941,7 @@
 		<Italian>[ICON_BULLET]Nessun costo di mantenimento dal numero di città</Italian>
 		<Spanish>[ICON_BULLET]Sin coste de mantenimiento por número de ciudades</Spanish>
 		<Polish>[ICON_BULLET]Brak kosztów utrzymania za ilość miast</Polish>
-		<Russian>[ICON_BULLET]Íåò çàòðàò íà îáñëóæèâàíèå îò ÷èñëà ãîðîäîâ</Russian>
+		<Russian>[ICON_BULLET]Нет затрат на обслуживание от числа городов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_NO_MAINT_NUM_CITIES_MOD</Tag>
@@ -941,7 +950,7 @@
 		<Italian>[ICON_BULLET]%D1_Mod%% costi di mantenimento dal numero di città</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod%% al coste de mantenimiento por número de ciudades</Spanish>
 		<Polish>[ICON_BULLET]%D1_Mod%% do kosztów utrzymania za ilość miast</Polish>
-		<Russian>[ICON_BULLET]%D1_Mod%% çàòðàòû íà îáñëóæèâàíèå îò ÷èñëà ãîðîäîâ</Russian>
+		<Russian>[ICON_BULLET]%D1_Mod%% затрат на обслуживание от числа городов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_NO_UNHAPPY</Tag>
@@ -950,6 +959,7 @@
 		<German>[ICON_BULLET]Keine [ICON_UNHAPPY] in dieser Stadt</German>
 		<Italian>[ICON_BULLET]Nessuno [ICON_UNHAPPY] in questa città</Italian>
 		<Spanish>[ICON_BULLET]En esta ciudad no hay [ICON_UNHAPPY]</Spanish>
+		<Russian>[ICON_BULLET]Нет [ICON_UNHAPPY] в этом городе</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_NO_UNHEALTHY_BUILDINGS</Tag>
@@ -958,6 +968,7 @@
 		<German>[ICON_BULLET]Nicht [ICON_UNHEALTHY] durch Gebäude</German>
 		<Italian>[ICON_BULLET]Nessun [ICON_UNHEALTHY] dagli edifici</Italian>
 		<Spanish>[ICON_BULLET]No hay [ICON_UNHEALTHY] por edificios</Spanish>
+		<Russian>[ICON_BULLET]Нет [ICON_UNHEALTHY] из-за зданий</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_NO_UNHEALTHY_POP</Tag>
@@ -966,6 +977,7 @@
 		<German>[ICON_BULLET]Nicht [ICON_UNHEALTHY] durch Bevölkerung</German>
 		<Italian>[ICON_BULLET]Nessun [ICON_UNHEALTHY] tra la popolazione</Italian>
 		<Spanish>[ICON_BULLET]No hay [ICON_UNHEALTHY] por población</Spanish>
+		<Russian>[ICON_BULLET]Нет [ICON_UNHEALTHY] из-за населения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_NUKE_DAMAGE_MOD</Tag>
@@ -974,6 +986,7 @@
 		<German>[ICON_BULLET]%D1_Mod%% Schaden durch [LINK=CONCEPT_NUKES]Atomraketen[\LINK]</German>
 		<Italian>[ICON_BULLET]%D1_Mod%% danno dalle [LINK=CONCEPT_NUKES]bombe atomiche[\LINK]</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod%% al daño por [LINK=CONCEPT_NUKES]armas nucleares[\LINK]</Spanish>
+		<Russian>[ICON_BULLET]%D1_Mod%% урона от [LINK=CONCEPT_NUKES]ядерного оружия[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_NUM_TURNS</Tag>
@@ -982,6 +995,7 @@
 		<German>[COLOR_HIGHLIGHT_TEXT]%d1_Num Runden[COLOR_REVERT]</German>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]%d1_Num [NUM1:turno:turni][COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]%d1_Num [NUM1:turno:turnos][COLOR_REVERT]</Spanish>
+		<Russian>[COLOR_HIGHLIGHT_TEXT]%d1_Num [NUM1:ход:ходов][COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_OCCUPATION_TIME</Tag>
@@ -991,7 +1005,7 @@
 		<Italian>[ICON_BULLET]I cittadini si ribelleranno contro gli invasori nemici %d1% più a lungo</Italian>
 		<Spanish>[ICON_BULLET]Los ciudadanos se rebelarán contra los conquistadores enemigos un %d1% más de tiempo</Spanish>
 		<Polish>[ICON_BULLET]Mieszkańcy będą się buntować wobec wrogich zdobywców %d1% dłużej</Polish>
-		<Russian>[ICON_BULLET]Ãðàæäàíå áóäóò áóíòîâàòü ïðîòèâ âðàæåñêèõ îêêóïàíòîâ %d1% äîëüøå</Russian>
+		<Russian>[ICON_BULLET]Горожане будут бунтовать против вражеских захватчиков на %d1% дольше</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_PER_CITY_WITH</Tag>
@@ -1000,6 +1014,7 @@
 		<German>[SPACE]pro Stadt mit der Religion %F1_RelIcon</German>
 		<Italian>[SPACE]per una città con %F1_RelIcon</Italian>
 		<Spanish>[SPACE]por cada ciudad con %F1_RelIcon</Spanish>
+		<Russian>[SPACE]за город с религией %F1_RelIcon</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_PER_LEVEL</Tag>
@@ -1008,6 +1023,7 @@
 		<German>[ICON_BULLET]+1%F1_HappyOrUn je %d2_Percent%% %F3_CommIcon-Rate</German>
 		<Italian>[ICON_BULLET]+1%F1_HappyOrUn per %d2_Percent%% al ritmo %F3_CommIcon</Italian>
 		<Spanish>[ICON_BULLET]+1 %F1_HappyOrUn por cada %d2_Percent%% de ritmo de %F3_CommIcon</Spanish>
+		<Russian>[ICON_BULLET]+1%F1_HappyOrUn за %d2_Percent%% доли %F3_CommIcon</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_PER_SPECIALIST_ALL_CITIES</Tag>
@@ -1016,12 +1032,13 @@
 		<German>[SPACE]pro Spezialist in allen Städten</German>
 		<Italian>[SPACE]per specialista in tutte le città</Italian>
 		<Spanish>[SPACE]por cada especialista en todas las ciudades</Spanish>
+		<Russian>[SPACE]за специалиста во всех городах</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_POPULATION_CHANGE</Tag>
 		<English>[ICON_BULLET]When the city gets this building, its population adjusts by %d1_amount.</English>
 		<French>[ICON_BULLET]Lorsque la ville obtient ce bâtiment, sa population s'ajuste de %d1_amount.</French>
-		<Russian>[ICON_BULLET]Когда в городе возводится это здание, его население сводится к %d1_amount.</Russian>
+		<Russian>[ICON_BULLET]Когда город получает это здание, его население изменяется на %d1_amount.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_POPULATION_EMPLOYED</Tag>
@@ -1031,20 +1048,20 @@
 		<Italian>[ICON_BULLET]Impiega %d1 cittadini.</Italian>
 		<Spanish>[ICON_BULLET]Emplea %d1 [NUM1:ciudadano:ciudadanos]</Spanish>
 		<Polish>[ICON_BULLET]Zatrudnia %d1 Obywateli.</Polish>
-		<Russian>[ICON_BULLET]Íàíèìàåò %d1 Ãðàæäàí.</Russian>
+		<Russian>[ICON_BULLET]Нанимает горожан в количестве %d1.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_PROPERTY_SPAWN_BARB</Tag>
 		<English>[ICON_BULLET]Can spawn a barbarian %s1_Unit.</English>
 		<French>[ICON_BULLET]Peut faire appaître un %s1_Unit barbare.</French>
 		<German>[ICON_BULLET]kann [NUM1:einen barbarischen:eine barbarische:ein barbarisches:barbarische:barbarische:barbarische] %s1:4_Unit auftauchen lassen</German>
-		<Russian>[ICON_BULLET]Может породить варварский отряд %s1_Unit.</Russian>
+		<Russian>[ICON_BULLET]Может породить варварское подразделение: "%s1_Unit".</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_PROPERTY_SPAWN_FRIENDLY</Tag>
 		<English>[ICON_BULLET]Can spawn a friendly %s1_Unit.</English>
 		<French>[ICON_BULLET]Peut faire apparaître un %s1_Unit amical.</French>
-		<Russian>[ICON_BULLET]Может породить дружественный отряд %s1_Unit.</Russian>
+		<Russian>[ICON_BULLET]Может породить дружественное подразделение: "%s1_Unit".</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_PROTECTS_CULTURE</Tag>
@@ -1054,7 +1071,7 @@
 		<Italian>[ICON_BULLET]Le battaglie vicine non influenzeranno la cultura</Italian>
 		<Spanish>[ICON_BULLET]Las batallas cercanas no influirán en la cultura</Spanish>
 		<Polish>[ICON_BULLET]Pobliskie bitwy nie będą miały wpływu na Kulturę</Polish>
-		<Russian>[ICON_BULLET]Ñîñåäíèå ñðàæåíèÿ íå áóäåò çàòðàãèâàòü êóëüòóðó</Russian>
+		<Russian>[ICON_BULLET]Близлежащие сражения не влияют на культуру</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_PROVIDES_POWER</Tag>
@@ -1063,6 +1080,7 @@
 		<German>[ICON_BULLET]Liefert Energie ([ICON_POWER])</German>
 		<Italian>[ICON_BULLET]Fornisce energia [ICON_POWER]</Italian>
 		<Spanish>[ICON_BULLET]Proporciona energía ([ICON_POWER])</Spanish>
+		<Russian>[ICON_BULLET]Предоставляет электричество ([ICON_POWER])</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_PROVIDES_WATER</Tag>
@@ -1072,7 +1090,7 @@
 		<Italian>[ICON_BULLET]Fornisce acqua fresca[SPACE]</Italian>
 		<Spanish>[ICON_BULLET]Proporciona agua dulce[SPACE]</Spanish>
 		<Polish>[ICON_BULLET]Dostarcza świeżej wody[SPACE]</Polish>
-		<Russian>[ICON_BULLET]Îáåñïå÷èâàåò ïðåñíóþ âîäó[SPACE]</Russian>
+		<Russian>[ICON_BULLET]Предоставляет пресную воду[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_REDUCES_MAINTENANCE</Tag>
@@ -1081,6 +1099,7 @@
 		<German>[ICON_BULLET]reduziert [LINK=CONCEPT_MAINTENANCE]laufende Kosten[\LINK] nahe gelegener Städte</German>
 		<Italian>[ICON_BULLET]Riduce il [LINK=CONCEPT_MAINTENANCE]mantenimento[\LINK] nelle città vicine</Italian>
 		<Spanish>[ICON_BULLET]Reduce el [LINK=CONCEPT_MAINTENANCE]mantenimiento[\LINK] de las ciudades cercanas</Spanish>
+		<Russian>[ICON_BULLET]Уменьшает [LINK=CONCEPT_MAINTENANCE]обслуживание[\LINK] в ближайших городах</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_RELIGION_HAPPINESS</Tag>
@@ -1089,6 +1108,7 @@
 		<German>[ICON_BULLET]%D1_Change%F2_HappyOrUn, wenn die Religion %F3_RelIcon die [ICON_RELIGION] des Staates ist</German>
 		<Italian>[ICON_BULLET]%D1_Change %F2_HappyOrUn se %F3_RelIcon è la [ICON_RELIGION] di stato</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change %F2_HappyOrUn si el %F3_RelIcon es la [ICON_RELIGION] oficial</Spanish>
+		<Russian>[ICON_BULLET]%D1_Change%F2_HappyOrUn если %F3_RelIcon - государственная [ICON_RELIGION]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_REPLACED_BY_BUILDING</Tag>
@@ -1098,7 +1118,7 @@
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Sostituisce[COLOR_REVERT] l'edificio: </Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Reemplaza[COLOR_REVERT][SPACE]</Spanish>
 		<Polish>[COLOR_WARNING_TEXT]Zastępuje:[COLOR_REVERT][SPACE]</Polish>
-		<Russian>[COLOR_WARNING_TEXT]Çàìåíÿåò[COLOR_REVERT][SPACE]</Russian>
+		<Russian>[COLOR_WARNING_TEXT]Заменяет[COLOR_REVERT][SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_REQUIRED_TO_BUILD</Tag>
@@ -1107,6 +1127,7 @@
 		<German>[ICON_BULLET]erforderlich zum Bau von:[SPACE]</German>
 		<Italian>[ICON_BULLET]Necessario per costruire:[NEWLINE][ICON_BULLET]</Italian>
 		<Spanish>[ICON_BULLET]Se requiere para construir[SPACE]</Spanish>
+		<Russian>[ICON_BULLET]Необходимо построить[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_REQUIRED_TO_TRAIN</Tag>
@@ -1115,6 +1136,7 @@
 		<German>[ICON_BULLET]erforderlich für die Ausbildung von:[SPACE]</German>
 		<Italian>[ICON_BULLET]Necessario per addestrare:[NEWLINE][ICON_BULLET]</Italian>
 		<Spanish>[ICON_BULLET]Se requiere para entrenar[SPACE]</Spanish>
+		<Russian>[ICON_BULLET]Необходимо обучить[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_ACTIVE_CIVICS</Tag>
@@ -1124,7 +1146,7 @@
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Richiede[COLOR_REVERT] che la forma di governo di cui sopra sia attiva</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Requiere el principio para estar activo[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_WARNING_TEXT]Wymaga aktywnych Doktryn[COLOR_REVERT]</Polish>
-		<Russian>[COLOR_WARNING_TEXT]Òðåáóåò ïàðàäèãìó[COLOR_REVERT]</Russian>
+		<Russian>[COLOR_WARNING_TEXT]Необходимо принять парадигму[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_ACTIVE_CIVICS_MET</Tag>
@@ -1134,7 +1156,7 @@
 		<Italian>[COLOR_POSITIVE_TEXT]Richiede una certa forma di governo[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_POSITIVE_TEXT]Requiere el principio para estar activo[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_POSITIVE_TEXT]Wymaga doktryny do działania[COLOR_REVERT]</Polish>
-		<Russian>[COLOR_POSITIVE_TEXT]Òðåáóåò ïàðàäèãìó</Russian>
+		<Russian>[COLOR_POSITIVE_TEXT]Необходимо принять парадигму[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_ANY_BUILDING</Tag>
@@ -1144,7 +1166,7 @@
 		<Italian>[COLOR_WARNING_TEXT]Richiede che un giocatore abbia costruito %s1[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Requiere que se haya construido %s1[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_WARNING_TEXT]Wymagane by ktokolwiek zbudował: %s1[COLOR_REVERT]</Polish>
-		<Russian>[COLOR_WARNING_TEXT]Требуется, чтобы кто-нибудь построил %s1[COLOR_REVERT]</Russian>
+		<Russian>[COLOR_WARNING_TEXT]Необходимо, чтобы кто-нибудь построил %s1[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_COAST</Tag>
@@ -1154,7 +1176,7 @@
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Richiede[COLOR_REVERT] una zona di costa nelle vicinanze</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Requiere Costa[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_WARNING_TEXT]Wymaga dostępu do wybrzeża[COLOR_REVERT]</Polish>
-		<Russian>[COLOR_WARNING_TEXT]Требуется доступ к побережью[COLOR_REVERT]</Russian>
+		<Russian>[COLOR_WARNING_TEXT]Необходим доступ к побережью[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_CULTURE</Tag>
@@ -1164,7 +1186,7 @@
 		<Italian>[COLOR_WARNING_TEXT]Richiede un livello culturale %s1 o migliore[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Requiere un nivel cultural %s1 o mejor[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_WARNING_TEXT]Wymaga poziomu kulturowego: %s1 lub wyższego[COLOR_REVERT]</Polish>
-		<Russian>[COLOR_WARNING_TEXT]Требуется уровень культуры %s1 или выше[COLOR_REVERT]</Russian>
+		<Russian>[COLOR_WARNING_TEXT]Необходим уровень культуры %s1 или выше[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_FRESH_WATER</Tag>
@@ -1173,7 +1195,7 @@
 		<Italian>[COLOR_WARNING_TEXT][ICON_BULLET]Richiede[COLOR_REVERT] acqua dolce</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Requiere agua dulce[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_WARNING_TEXT]Wymaga dostępu do świeżej wody[COLOR_REVERT]</Polish>
-		<Russian>[COLOR_WARNING_TEXT]Требуется пресная вода[COLOR_REVERT]</Russian>
+		<Russian>[COLOR_WARNING_TEXT]Необходима пресная вода[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_LIST</Tag>
@@ -1191,7 +1213,7 @@
 		<German>[COLOR_WARNING_TEXT]Erfordert mindestens %d1_Num Städte[COLOR_REVERT]</German>
 		<Italian>[COLOR_WARNING_TEXT]Richiede almeno %d1_Num città[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Requiere al menos %d1_Num [NUM1:ciudad:ciudades][COLOR_REVERT]</Spanish>
-		<Russian>[COLOR_WARNING_TEXT]Требуются города в количестве не меньше %d1_Num[COLOR_REVERT]</Russian>
+		<Russian>[COLOR_WARNING_TEXT]Необходимы города в количестве не менее %d1_Num[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_NUM_TEAMS</Tag>
@@ -1200,7 +1222,7 @@
 		<German>[ICON_BULLET]Erfordert mindestens %d1_Num Teams</German>
 		<Italian>[ICON_BULLET]Richiede almeno %d1_Num [NUM1:squadra:squadre]</Italian>
 		<Spanish>[ICON_BULLET]Requiere al menos %d1_Num [NUM1:equipo:equipos]</Spanish>
-		<Russian>[ICON_BULLET]Требуются команды в количестве не меньше %d1_Num</Russian>
+		<Russian>[ICON_BULLET]Необходимы команды в количестве не менее %d1_Num</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_POPULATION</Tag>
@@ -1210,7 +1232,7 @@
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Richiede una dimensione minima della città di %d1[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Requiere un tamaño de ciudad de al menos %d1[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_WARNING_TEXT]Wymaga co najmniej wielkości miasta: %d1[COLOR_REVERT]</Polish>
-		<Russian>[COLOR_WARNING_TEXT]Требуется город размером не меньше %d1[COLOR_REVERT]</Russian>
+		<Russian>[COLOR_WARNING_TEXT]Необходим город размером не меньше %d1[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_POWER</Tag>
@@ -1220,7 +1242,7 @@
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Richiede[COLOR_REVERT] elettricità</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Requiere energía[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_WARNING_TEXT]Wymaga dostępu do energi[COLOR_REVERT]</Polish>
-		<Russian>[COLOR_WARNING_TEXT]Требуется электричество[COLOR_REVERT]</Russian>
+		<Russian>[COLOR_WARNING_TEXT]Необходимо электричество[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_RIVER</Tag>
@@ -1230,7 +1252,7 @@
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Richiede[COLOR_REVERT] accesso a un fiume</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Requiere acceso a un río[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_WARNING_TEXT]Wymaga dostępu do rzeki[COLOR_REVERT]</Polish>
-		<Russian>[COLOR_WARNING_TEXT]Требуется доступ к реке[COLOR_REVERT]</Russian>
+		<Russian>[COLOR_WARNING_TEXT]Необходим доступ к реке[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_RIVER_OR_COAST</Tag>
@@ -1240,7 +1262,7 @@
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Richiede[COLOR_REVERT] accesso a un fiume o alla costa</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Requiere acceso a un río o a una costa[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_WARNING_TEXT]Wymaga dostępu do rzeki lub wybrzeża[COLOR_REVERT]</Polish>
-		<Russian>[COLOR_WARNING_TEXT]Требуется доступ к реке или побережью[COLOR_REVERT]</Russian>
+		<Russian>[COLOR_WARNING_TEXT]Необходим доступ к реке или побережью[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_UNIT_LEVEL</Tag>
@@ -1249,7 +1271,7 @@
 		<German>[COLOR_WARNING_TEXT]Erfordert eine Einheit mit Erfahrungsstufe %d1_Num[COLOR_REVERT]</German>
 		<Italian>[COLOR_WARNING_TEXT]Richiede un'unità di livello d'esperienza %d1_Num[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Requiere una unidad de nivel %d1_Num de experiencia[COLOR_REVERT]</Spanish>
-		<Russian>[COLOR_WARNING_TEXT]Требуется подразделение %d1_Num уровня[COLOR_REVERT]</Russian>
+		<Russian>[COLOR_WARNING_TEXT]Необходимо подразделение %d1_Num уровня[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_VICTORY</Tag>
