@@ -2317,14 +2317,14 @@
 		<German>[ICON_BULLET]%d1_Amount%% gegen Barbaren</German>
 		<Spanish>[ICON_BULLET]%d1_Amount%% contro barbari non-animali.</Spanish>
 		<Polish>[ICON_BULLET]%d1_Amount%% przeciwko nie-zwierzęcym Barbarzyńcom</Polish>
-		<Italian>[ICON_BULLET]Contro le [COLOR_HIGHLIGHT_TEXT]unità barbare[COLOR_REVERT] non animali: [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Brute -->
+		<Italian>[ICON_BULLET]Modificatore contro le [COLOR_HIGHLIGHT_TEXT]unità barbare[COLOR_REVERT] non animali: [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Brute -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_VSBARBS_MODIFIER</Tag>
 		<English>[ICON_BULLET]%d1_Amount%% VS Non-Animal Barbarians</English>
 		<French>[ICON_BULLET]%d1_Amount%% contre les unités barbares non-animales</French>
 		<German>[ICON_BULLET]%d1_Amount%% gegen Barbaren</German>
-		<Italian>[ICON_BULLET]Modificatore contro le unità barbare non animali [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian>
+		<Italian>[ICON_BULLET]Modificatore contro le [COLOR_HIGHLIGHT_TEXT]unità barbare[COLOR_REVERT] non animali: [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian>
 		<Polish>[ICON_BULLET]przeciwko nie-zwierzęcym Barbarzyńcom: %d1_Amount%%</Polish>
 	</TEXT>
 	<TEXT>
@@ -2422,6 +2422,7 @@
 		<Tag>TXT_KEY_UNIT_ABAOJI</Tag>
 		<English>Abaoji</English>
 		<Russian>Àáàîöçè</Russian>
+		<Italian>A Bao Ji</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ABAOJI_PEDIA</Tag>
@@ -2458,6 +2459,7 @@
 		<Tag>TXT_KEY_UNIT_ABU_KARIBA</Tag>
 		<English>Abu Kariba</English>
 		<Russian>Àáó Êàðèá Àñàä</Russian>
+		<Italian>Abu Karib</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ABU_KARIBA_PEDIA</Tag>
@@ -2800,6 +2802,7 @@
 		<Tag>TXT_KEY_UNIT_ALA_AL_DIN_HUSAYN</Tag>
 		<English>Ala al Din Husayn</English>
 		<Russian>Àëà àä-äèí Õóñàéí</Russian>
+		<Italian>Ala ad Din Husayn</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ALA_AL_DIN_HUSAYN_PEDIA</Tag>
@@ -2832,6 +2835,7 @@
 		<Tag>TXT_KEY_UNIT_ALFRED_A_THORNE</Tag>
 		<English>Alfred A. Thorne</English>
 		<Russian>Àëüôðåä Òîðí</Russian>
+		<Italian>Alfred Thorne</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ALFRED_A_THORNE_PEDIA</Tag>
@@ -2864,6 +2868,7 @@
 		<Tag>TXT_KEY_UNIT_ALTAMIRANO</Tag>
 		<English>Altamirano</English>
 		<Russian>Àëüòàìèðàíî</Russian>
+		<Italian>Manuel Altamirano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ALTAMIRANO_PEDIA</Tag>
@@ -2911,6 +2916,7 @@
 		<Tag>TXT_KEY_UNIT_AL_MAHDI_BILLAH</Tag>
 		<English>Al Mahdi Billah</English>
 		<Russian>Óáàéäàëëàõ àëü-Ìàõäè</Russian>
+		<Italian>Al Mahdi Bi Llah </Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AL_MAHDI_BILLAH_PEDIA</Tag>
@@ -2918,7 +2924,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AL_MANSUR</Tag>
-		<English>Al-Mansur</English>
+		<English>Al Mansur</English>
 		<Russian>Àëü-Ìàíñóð</Russian>
 	</TEXT>
 	<TEXT>
@@ -3013,6 +3019,7 @@
 		</Spanish>
 		<Polish>Amina Sukhera</Polish>
 		<Russian>Àíèìà</Russian>
+		<Italian>Amina di Zaria</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AMINA_PEDIA</Tag>
@@ -3218,6 +3225,7 @@
 		<Tag>TXT_KEY_UNIT_ANTONIO</Tag>
 		<English>Antonio</English>
 		<Russian>Àíòîíèî Õîñå äå Ñóêðå</Russian>
+		<Italian>Antonio Azul </Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ANTONIO_PEDIA</Tag>
@@ -3359,6 +3367,7 @@
 		<English>Archimedes</English>
 		<French>Archimède</French>
 		<Russian>Àðõèìåä</Russian>
+		<Italian>Archimede</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARCHIMEDES_PEDIA</Tag>
@@ -3368,6 +3377,7 @@
 		<Tag>TXT_KEY_UNIT_ARETAS_III</Tag>
 		<English>Aretas III</English>
 		<Russian>Àðåò III</Russian>
+		<Italian>Areta III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARETAS_III_PEDIA</Tag>
@@ -3491,7 +3501,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARTHUR</Tag>
 		<English>Arthur</English>
-		<Italian>Artù</Italian>
+		<Italian>Re Artù</Italian>
 		<Spanish>
 			<Text>Arturo</Text>
 			<Gender>Male</Gender>
@@ -3606,6 +3616,7 @@
 		</Spanish>
 		<Polish>Aszurbanipal</Polish>
 		<Russian>Àøøóðáàíàïàë</Russian>
+		<Italian>Assurbanipal </Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ASHURBANIPAL_PEDIA</Tag>
@@ -3638,6 +3649,7 @@
 		<Tag>TXT_KEY_UNIT_ASKIA</Tag>
 		<English>Askia</English>
 		<Russian>Àñêèÿ Ìîõàììåä I</Russian>
+		<Italian>Askia Mohammad I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ASKIA_PEDIA</Tag>
@@ -3768,6 +3780,7 @@
 		<Tag>TXT_KEY_UNIT_ATATURK</Tag>
 		<English>Ataturk</English>
 		<Russian>Àòàòþðê</Russian>
+		<Italian>Kemal Ataturk</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ATATURK_PEDIA</Tag>
@@ -3874,6 +3887,7 @@
 		<English>Augustine I</English>
 		<French>Augustin I</French>
 		<Russian>Àâãóñòèí I</Russian>
+		<Italian>Agustín I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AUGUSTINE_I_PEDIA</Tag>
@@ -4137,6 +4151,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>Áààë-Ýçåð II</Russian>
+		<Italian>Baal-Azor II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BAAL_ESER_PEDIA</Tag>
@@ -4191,6 +4206,7 @@
 		<Tag>TXT_KEY_UNIT_BADIS</Tag>
 		<English>Badis</English>
 		<Russian>Áàäèñ</Russian>
+		<Italian>Al Muizz ben Badis</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BADIS_PEDIA</Tag>
@@ -4426,6 +4442,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>Áàðáàðîññà</Russian>
+		<Italian>Aricodemo Barbarossa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BARBAROSSA_PEDIA</Tag>
@@ -4571,6 +4588,7 @@
 		<Tag>TXT_KEY_UNIT_BATRADZ</Tag>
 		<English>Batradz</English>
 		<Russian>Áàòðàäç</Russian>
+		<Italian>Batraz</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BATRADZ_PEDIA</Tag>
@@ -4702,6 +4720,7 @@
 		<Tag>TXT_KEY_UNIT_BEAR_KNEE</Tag>
 		<English>Bear Knee</English>
 		<Russian>Ìåäâåäü Íè</Russian>
+		<Italian>Mowok</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BEAR_KNEE_PEDIA</Tag>
@@ -4863,6 +4882,7 @@
 		</Spanish>
 		<Polish>Kagan Bilge</Polish>
 		<Russian>Áèëüãå-õàí Áîãþ</Russian>
+		<Italian>Bilge Khagan</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BILGE_KHAN_PEDIA</Tag>
@@ -5173,6 +5193,7 @@
 		<Tag>TXT_KEY_UNIT_BOUDICA</Tag>
 		<English>Boudica</English>
 		<Russian>Áîóäèêà</Russian>
+		<Italian>Boudicca</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BOUDICA_PEDIA</Tag>
@@ -5253,6 +5274,7 @@
 		<Tag>TXT_KEY_UNIT_BROKEN_ARROW</Tag>
 		<English>Broken Arrow</English>
 		<Russian>Ñëîìàííàÿ ñòðåëà</Russian>
+		<Italian>Ozark</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BROKEN_ARROW_PEDIA</Tag>
@@ -5342,6 +5364,7 @@
 		<Tag>TXT_KEY_UNIT_BUFFALO_HUMP</Tag>
 		<English>Buffalo Hump</English>
 		<Russian>Áóôôàëî Õàìï</Russian>
+		<Italian>Po-cha-na-quar-hip</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BUFFALO_HUMP_PEDIA</Tag>
@@ -5352,6 +5375,7 @@
 		<Tag>TXT_KEY_UNIT_BULAN</Tag>
 		<English>Bulan</English>
 		<Russian>Áóëàí</Russian>
+		<Italian>Bulan Sabriel</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BULAN_PEDIA</Tag>
@@ -5576,6 +5600,7 @@
 		<Tag>TXT_KEY_UNIT_CANACUMACO</Tag>
 		<English>Canacumaco</English>
 		<Russian>Êàíàêóìàêî</Russian>
+		<Italian>Posiguieca</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CANACUMACO_PEDIA</Tag>
@@ -5673,6 +5698,7 @@
 		</Spanish>
 		<Polish>Kanut Wielki</Polish>
 		<Russian>Êíóä Âåëèêèé</Russian>
+		<Italian>Canuto il Grande</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CANUTE_PEDIA</Tag>
@@ -6123,6 +6149,7 @@
 		<Tag>TXT_KEY_UNIT_CHAGATAI_KHAN</Tag>
 		<English>Chagatai Khan</English>
 		<Russian>×àãàòàé</Russian>
+		<Italian>Chagatai</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHAGATAI_KHAN_PEDIA</Tag>
@@ -6402,6 +6429,7 @@
 		<Tag>TXT_KEY_UNIT_CHROCUS</Tag>
 		<English>Chrocus</English>
 		<Russian>Êðîêóñ</Russian>
+		<Italian>Croco</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHROCUS_PEDIA</Tag>
@@ -6723,7 +6751,7 @@
 		<Tag>TXT_KEY_UNIT_CONSTANTINE_XI</Tag>
 		<English>Constantine XI Palaiologos</English>
 		<French>Constantin XI Palaiologos</French>
-		<Italian>Costantino XI Paleologo</Italian>
+		<Italian>Costantino XI</Italian>
 		<Spanish>
 			<Text>Constantino XI Paleólogo</Text>
 			<Gender>Male</Gender>
@@ -6854,6 +6882,7 @@
 		<Tag>TXT_KEY_UNIT_CROESUS</Tag>
 		<English>Croesus</English>
 		<Russian>Êðåç</Russian>
+		<Italian>Creso</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CROESUS_PEDIA</Tag>
@@ -6911,6 +6940,7 @@
 		<Tag>TXT_KEY_UNIT_CROWFOOT</Tag>
 		<English>Crowfoot</English>
 		<Russian>Êðîóôóò</Russian>
+		<Italian>Piede di corvo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CROWFOOT_PEDIA</Tag>
@@ -7045,6 +7075,7 @@
 		<Tag>TXT_KEY_UNIT_CYAXARES</Tag>
 		<English>Cyaxares</English>
 		<Russian>Êèàêñàð</Russian>
+		<Italian>Ciassare</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CYAXARES_PEDIA</Tag>
@@ -7097,6 +7128,7 @@
 		</Spanish>
 		<Polish>Dedal</Polish>
 		<Russian>Äåäàë</Russian>
+		<Italian>Dedalo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DAEDALUS_PEDIA</Tag>
@@ -7195,6 +7227,7 @@
 		<Tag>TXT_KEY_UNIT_DECEBALUS</Tag>
 		<English>Decebalus</English>
 		<Russian>Äåöåáàë</Russian>
+		<Italian>Decebalo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DECEBALUS_PEDIA</Tag>
@@ -7214,6 +7247,7 @@
 		<English>Demetrius</English>
 		<French>Démétrius</French>
 		<Russian>Äåìåòðèé I</Russian>
+		<Italian>Demetrio I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DEMETRIUS_PEDIA</Tag>
@@ -7386,6 +7420,7 @@
 		<Tag>TXT_KEY_UNIT_DIVICO</Tag>
 		<English>Divico</English>
 		<Russian>Äèâèêîí</Russian>
+		<Italian>Divicone</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DIVICO_PEDIA</Tag>
@@ -7439,6 +7474,7 @@
 		<Tag>TXT_KEY_UNIT_DOS_SANTOS</Tag>
 		<English>Dos Santos</English>
 		<Russian>Äîñ Ñàíòîñ</Russian>
+		<Italian>Eduardo dos Santos</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DOS_SANTOS_PEDIA</Tag>
@@ -8827,6 +8863,7 @@
 		<Tag>TXT_KEY_UNIT_FAKHR_EL_DIN_II</Tag>
 		<English>Fakhr el Din II</English>
 		<Russian>Ôàõð àä-Äèí II</Russian>
+		<Italian>Fakhr Al Din</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FAKHR_EL_DIN_II_PEDIA</Tag>
@@ -8893,6 +8930,7 @@
 		<Tag>TXT_KEY_UNIT_FARUK_IMAM</Tag>
 		<English>Faruk Imam</English>
 		<Russian>Ôàðóê Èìàì</Russian>
+		<Italian>Faruk Imam Muhammad</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FARUK_IMAM_PEDIA</Tag>
@@ -8921,6 +8959,7 @@
 		<Tag>TXT_KEY_UNIT_FERDINAND_II</Tag>
 		<English>Ferdinand II</English>
 		<Russian>Ôåðäèíàíä II</Russian>
+		<Italian>Ferdinando II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FERDINAND_II_PEDIA</Tag>
@@ -9238,6 +9277,7 @@
 		<English>Fredrick II</English>
 		<Polish>Fryderyk II</Polish>
 		<Russian>Ôðèäðèõ II Ãîãåíøòàóôåí</Russian>
+		<Italian>Federico II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FREDRICK_II_PEDIA</Tag>
@@ -9723,6 +9763,7 @@
 		<Tag>TXT_KEY_UNIT_GAOZONG</Tag>
 		<English>Gaozong</English>
 		<Russian>Ãàî-öçóí</Russian>
+		<Italian>Gao Zong</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GAOZONG_PEDIA</Tag>
@@ -9844,6 +9885,7 @@
 		<Tag>TXT_KEY_UNIT_GENSERIC</Tag>
 		<English>Genseric</English>
 		<Russian>Ãåéçåðèõ</Russian>
+		<Italian>Genserico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GENSERIC_PEDIA</Tag>
@@ -9946,6 +9988,7 @@
 		<Tag>TXT_KEY_UNIT_GOLIATH</Tag>
 		<English>Goliath</English>
 		<Russian>Ãîëèàô</Russian>
+		<Italian>Golia</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GOLIATH_PEDIA</Tag>
@@ -9981,7 +10024,7 @@
 		<Tag>TXT_KEY_UNIT_GOTH_ALARIC</Tag>
 		<English>Alaric the Goth</English>
 		<French>Alaric le Goth</French>
-		<Italian>Alarico il Goto</Italian>
+		<Italian>Alarico</Italian>
 		<Spanish>
 			<Text>Alarico el Godo</Text>
 			<Gender>Male</Gender>
@@ -10489,6 +10532,7 @@
 		<Tag>TXT_KEY_UNIT_GUSTAVUS_ADOLPHUS</Tag>
 		<English>Gustavus Adolphus</English>
 		<Russian>Ãóñòàâ II Àäîëüô</Russian>
+		<Italian>Gustavo II Adolfo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GUSTAVUS_ADOLPHUS_PEDIA</Tag>
@@ -10514,6 +10558,7 @@
 		<Tag>TXT_KEY_UNIT_GYGES</Tag>
 		<English>Gyges</English>
 		<Russian>Ãèã Ìåðìíàä</Russian>
+		<Italian>Gige</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GYGES_PEDIA</Tag>
@@ -10723,6 +10768,7 @@
 		</Spanish>
 		<Polish>Haik</Polish>
 		<Russian>Õàéê</Russian>
+		<Italian>Haik</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HAYK_PEDIA</Tag>
@@ -10733,6 +10779,7 @@
 		<Tag>TXT_KEY_UNIT_HAYREDDIN</Tag>
 		<English>Hayreddin</English>
 		<Russian>Õàéðåääèí Áàðáàðîññà</Russian>
+		<Italian>Khayr Al Din Barbarossa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HAYREDDIN_PEDIA</Tag>

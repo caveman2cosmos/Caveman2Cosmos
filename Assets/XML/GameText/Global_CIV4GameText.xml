@@ -657,7 +657,7 @@
 		<English>[ICON_BULLET]%s1 %F2 from %s3</English>
 		<French>[ICON_BULLET]%s1 %F2 en raison de %s3</French>
 		<German>[ICON_BULLET]%s1 %F2 durch %s3</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT] %F2 dagli %s3</Italian> <!-- city screen, hover research in upper left> -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%s1[COLOR_REVERT] %F2 dagli %s3</Italian> <!-- city screen, hover research in upper left> -->
 		<Spanish>[ICON_BULLET]%s1 %F2 por %s3</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2503,7 +2503,7 @@
 		<English>Healthy: +%d1_Change[ICON_HEALTHY]</English>
 		<French>Santé : +%d1_Change[ICON_HEALTHY]</French>
 		<German>Gesund: +%d1_Change[ICON_HEALTHY]</German>
-		<Italian>Sani: +%d1_Change[ICON_HEALTHY]</Italian>
+		<Italian>Salute: [COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_HEALTHY]</Italian> <!-- city screen hover on a resourse -->
 		<Spanish>Saludable: +%d1_Change [ICON_HEALTHY]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2511,7 +2511,7 @@
 		<English>[ICON_BULLET]Revealed by [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Apparaît avec : [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT]</French>
 		<German>[ICON_BULLET]Durch die Technologie [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT] verfügbar</German>
-		<Italian>[ICON_BULLET]Rivelata sulla mappa grazie alla tecnologia: [NUM1:del:della:dei:delle] [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT]</Italian>
+		<Italian>[ICON_BULLET]Rivelata sulla mappa grazie alla tecnologia: [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT]</Italian> <!-- city screen hover on a resource -->
 		<Spanish>[ICON_BULLET]Se descubre gracias [NUM1:al:a la:a los:a las] [COLOR_TECH_TEXT]%s1_TechName[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2519,7 +2519,7 @@
 		<English>Unhealthy: +%d1_Change[ICON_UNHEALTHY]</English>
 		<French>Maladie : +%d1_Change[ICON_UNHEALTHY]</French>
 		<German>Krank: +%d1_Change[ICON_UNHEALTHY]</German>
-		<Italian>Malati: +%d1_Change[ICON_UNHEALTHY]</Italian>
+		<Italian>Insalubrità: [COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHEALTHY]</Italian> <!-- city screen hover on a resource -->
 		<Spanish>Insalubre: +%d1_Change [ICON_UNHEALTHY]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2527,7 +2527,7 @@
 		<English>(with %s1_ImpName)</English>
 		<French>(avec %s1_ImpName)</French>
 		<German>(durch die Modernisierung %s1_ImpName)</German>
-		<Italian>con il miglioramento %s1_ImpName</Italian>
+		<Italian> con il miglioramento [COLOR_HIGHLIGHT_TEXT]%s1_ImpName[COLOR_REVERT]</Italian> <!-- city screen hover on a resource -->
 		<Spanish>(con %s1_ImpName)</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2722,7 +2722,7 @@
 			<Gender>Male:Neuter</Gender>
 			<Plural>0:0</Plural>
 		</German>
-		<Italian>[ICON_BULLET]È possibile aggiornare le unità al di fuori dei confini nazionali</Italian>
+		<Italian>[ICON_BULLET]È possibile modernizzare le unità al di fuori dei confini nazionali</Italian>
 		<Spanish>[ICON_BULLET]Se pueden mejorar unidades fuera de las fronteras nacionales</Spanish>
 		<Polish>[ICON_BULLET]Możesz ulepszyć jednostki poza granicami kulturowymi.</Polish>
 		<Russian>[ICON_BULLET]Ìîæåò ìîäåðíèçèðîâàòü îòðÿäû çà ïðåäåëàìè íàöèîíàëüíûõ ãðàíèö</Russian>
@@ -3983,7 +3983,7 @@
 		<English>Upkeep: %d1[ICON_GOLD] per turn</English>
 		<French>Entretien : %d1[ICON_GOLD] par tour</French>
 		<German>Unterhalt: %d1[ICON_GOLD] pro Runde</German>
-		<Italian>Costi di mantenimento forma di governo: %d1[ICON_GOLD] a turno</Italian>
+		<Italian>Costi di mantenimento forme di governo: %d1[ICON_GOLD] a turno</Italian>
 		<Spanish>Mantenimiento: %d1 [ICON_GOLD] por turno</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4737,7 +4737,7 @@
 		<English>%s1_BldgName has been built by the citizens of %s2_CityName</English>
 		<French>[NUM1:Un:Une:Des:Des] [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] [NUM1:a:a:ont:ont] été construi[NUM1:t:te:ts:tes] par les citoyens de %s2_CityName</French>
 		<German>Neuer automatischer Effekt in %s2_CityName: %s1_BldgName.</German>
-		<Italian>Gli abitanti di %s2_CityName hanno costruito l'edificio automatico %s1_BldgName!</Italian>
+		<Italian>L'edificio automatico %s1_BldgName è stato costruito in %s2_CityName!</Italian> <!-- Message Log Screen -->
 		<Spanish>Los ciudadanos de %s2_CityName han construido [NUM1:un:una:unos:unas] %s1_BldgName.</Spanish>
 		<Polish>%s1_BldgName został wybudowany przez mieszkańców miasta %s2_CityName</Polish>
 		<Russian>%s1_BldgName была построена жителями города %s2_CityName</Russian>
@@ -7898,7 +7898,7 @@
 		<English>Civic Upkeep</English>
 		<French>Entretien doctrinal</French>
 		<German>Staatsformunterhalt</German>
-		<Italian>Costi di mantenimento forma di governo</Italian> <!-- financial infoscreen -->
+		<Italian>Costi di mantenimento forme di governo</Italian> <!-- financial infoscreen -->
 		<Spanish>Mantenimiento principios</Spanish>
 	</TEXT>
 	<TEXT>
@@ -8017,7 +8017,7 @@
 		<English>For your discovery you receive %d1 [ICON_GOLD]!</English>
 		<French>Vous recevez %d1 [ICON_GOLD] pour votre découverte!</French>
 		<German>Die Belohnung für die Entdeckung beträgt %d1 [ICON_GOLD]!</German>
-		<Italian>Per la tua scoperta, hai ricevuto %d1 [ICON_GOLD]!</Italian>
+		<Italian>Per la nuova scoperta, ricevi una ricompensa di %d1 [ICON_GOLD]!</Italian> <!-- Message Log Screen -->
 		<Polish>Za to odkrycie otrzymujesz %d1 [ICON_GOLD]!</Polish>
 	</TEXT>
 	<TEXT>
@@ -10223,7 +10223,7 @@
 		<English>[SPACE]In City Vicinity</English>
 		<French>[SPACE]dans le périmètre de la Ville</French>
 		<German>[SPACE]im Stadtbereich</German>
-		<Italian>[SPACE][COLOR_REVERT]nelle [COLOR_HIGHLIGHT_TEXT]vicinanze della città[COLOR_REVERT]]</Italian>
+		<Italian>[SPACE][COLOR_REVERT]nelle [COLOR_HIGHLIGHT_TEXT]vicinanze della città[COLOR_REVERT]</Italian>
 		<Spanish>[SPACE]en el radio de la ciudad</Spanish>
 		<Polish>[SPACE]w zasięgu miasta</Polish>
 		<Russian>[SPACE]Â îêðåñòíîñòÿõ ãîðîäà</Russian>
@@ -13081,7 +13081,7 @@
 		<English>%D1_Change[ICON_UNHEALTHY] from Civics</English>
 		<French>%D1_Change[ICON_UNHEALTHY] (doctrines)</French>
 		<German>%D1_Change[ICON_UNHEALTHY] durch Gesellschaftsformen</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] [ICON_UNHEALTHY] dalla forma di governo</Italian> <!-- city screen health panel hover -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] [ICON_UNHEALTHY] dalle forme di governo</Italian> <!-- city screen health panel hover -->
 		<Spanish>%D1_Change[ICON_UNHEALTHY] por principios</Spanish>
 		<Polish>%D1_Change[ICON_UNHEALTHY] z doktryn</Polish>
 		<Russian>%D1_Change[ICON_UNHEALTHY] îò ïàðàäèãì</Russian>
@@ -13238,7 +13238,7 @@
 		<English>[ICON_BULLET]Can [COLOR_HIGHLIGHT_TEXT]%s1_ImpName[COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Aménagement possible : [COLOR_HIGHLIGHT_TEXT]%s1_ImpName[COLOR_REVERT]</French>
 		<German>[ICON_BULLET]neuer Befehl: [COLOR_HIGHLIGHT_TEXT]%s1_ImpName[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Abilita l'uso[COLOR_REVERT] del miglioramento: [COLOR_HIGHLIGHT_TEXT]%s1_ImpName[COLOR_REVERT]</Italian> <!--tech Scavenging pedia -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Abilita l'uso[COLOR_REVERT] dei miglioramenti: [COLOR_HIGHLIGHT_TEXT]%s1_ImpName[COLOR_REVERT]</Italian> <!--tech Scavenging pedia -->
 		<Spanish>[ICON_BULLET]Se puede [COLOR_HIGHLIGHT_TEXT]%s1:2_ImpName[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -13412,7 +13412,7 @@
 		<English>%d1%[ICON_DEFENSE] from Civics</English>
 		<French>%d1%[ICON_DEFENSE] des Doctrines</French>
 		<German>%d1%[ICON_DEFENSE] durch Gesellschaftsformen</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1%[COLOR_REVERT] [ICON_DEFENSE] dalla forma di governo</Italian> <!-- city screen hover defense perc upper right -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1%[COLOR_REVERT] [ICON_DEFENSE] dalle forme di governo</Italian> <!-- city screen hover defense perc upper right -->
 		<Spanish>%d1%[ICON_DEFENSE] por principios</Spanish>
 		<Polish>%d1%[ICON_DEFENSE] z doktryn</Polish>
 		<Russian>%d1%[ICON_DEFENSE] îò Ïàðàäèãì</Russian>
@@ -14062,7 +14062,7 @@
 		<English>[ICON_BULLET]Enables[SPACE]</English>
 		<French>[ICON_BULLET]Permet[SPACE]:[SPACE]</French>
 		<German>[ICON_BULLET]ermöglicht:[SPACE]</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Permette[COLOR_REVERT] di usare:[SPACE]</Italian> <!--tech Cave Dwelling pedia and hover (civics, promotions)-->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Abilita [COLOR_REVERT]l'uso di[SPACE]</Italian> <!--tech Cave Dwelling pedia and hover (civics, promotions)-->
 		<Spanish>[ICON_BULLET]Permite[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -14608,7 +14608,7 @@
 		<English>%D1_Change[ICON_HEALTHY] from Civics</English>
 		<French>%D1_Change[ICON_HEALTHY] (doctrines)</French>
 		<German>%D1_Change[ICON_HEALTHY] durch Gesellschaftsformen</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] [ICON_HEALTHY] dalla forma di governo</Italian> <!-- city screen health panel hover -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] [ICON_HEALTHY] dalle forme di governo</Italian> <!-- city screen health panel hover -->
 		<Spanish>%D1_Change[ICON_HEALTHY] por principios</Spanish>
 		<Polish>%D1_Change[ICON_HEALTHY] z doktryn</Polish>
 		<Russian>%D1_Change[ICON_HEALTHY] îò ïàðàäèãì</Russian>
@@ -14682,7 +14682,7 @@
 		<English>%s1_GPName has been born in a far away land!</English>
 		<French>Naissance de %s1_GPName dans un pays lointain !</French>
 		<German>Die Große Persönlichkeit %s1_GPName wurde in einem fernen Land geboren!</German>
-		<Italian>%s1_GPName è venuto al mondo in una terra lontana!</Italian>
+		<Italian>Il gran personaggio %s1_GPName è venuto al mondo in una terra lontana!</Italian> <!-- Message Log Screen -->
 		<Spanish>%s1_GPName ha nacido en una tierra muy lejana.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -14727,7 +14727,7 @@
 		<English>[ICON_BULLET]%D1_Change%F2_HealthOrUn in All Cities</English>
 		<French>[ICON_BULLET]%D1_Change%F2_HealthOrUn dans toutes les villes</French>
 		<German>[ICON_BULLET]%D1_Change%F2_HealthOrUn in allen Städten</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change%[COLOR_REVERT] F2_HealthOrUn in tutte le città</Italian> <!-- city screen health panel hover -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] %F2_HealthOrUn in tutte le città</Italian> <!-- technology Cave Dwelling -->
 		<Spanish>[ICON_BULLET]%D1_Change %F2_HealthOrUn en todas las ciudades</Spanish>
 	</TEXT>
 	<TEXT>
@@ -14830,7 +14830,7 @@
 		<English>[ICON_BULLET]%D1%%%F2 from Bonus</English>
 		<French>[ICON_BULLET]%D1%%%F2 des Bonus</French>
 		<German>[ICON_BULLET]%D1%%%F2 von Bonus</German>
-		<Italian>[ICON_BULLET]%D1%%%F2 dai Bonus</Italian>
+		<Italian>[ICON_BULLET]%D1%% %F2 dai Bonus</Italian>
 		<Spanish>[ICON_BULLET]%D1%%%F2 por recursos</Spanish>
 		<Polish>[ICON_BULLET]%D1%%%F2 od bonusów</Polish>
 		<Russian>[ICON_BULLET]%D1%%%F2 Îò áîíóñîâ</Russian>
@@ -14904,7 +14904,7 @@
 		<English>[ICON_BULLET]%D1%%[ICON_GREATPEOPLE] from Civics</English>
 		<French>[ICON_BULLET]%D1%%[ICON_GREATPEOPLE] de la doctrine</French>
 		<German>[ICON_BULLET]%D1%%[ICON_GREATPEOPLE] durch Staatsformen</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1%%[COLOR_REVERT] [ICON_GREATPEOPLE] dalla forma di governo</Italian> <!-- city screen great people bar hover panel hover -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1%%[COLOR_REVERT] [ICON_GREATPEOPLE] dalle forme di governo</Italian> <!-- city screen great people bar hover panel hover -->
 		<Spanish>[ICON_BULLET]%D1%% a [ICON_GREATPEOPLE] por principios</Spanish>
 	</TEXT>
 	<TEXT>
@@ -15083,7 +15083,7 @@
 		<English>[ICON_BULLET]%D1%%%F2 from Resources</English>
 		<French>[ICON_BULLET]%D1%%%F2 (ressources)</French>
 		<German>[ICON_BULLET]%D1%%%F2 durch Ressourcen</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1%%%F2[COLOR_REVERT] dalle risorse possedute</Italian> <!-- city screen research, culture panel hover upper right -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1%% %F2[COLOR_REVERT] dalle risorse possedute</Italian> <!-- city screen research, culture panel hover upper right -->
 		<Spanish>[ICON_BULLET]%D1%% %F2 por recursos</Spanish>
 	</TEXT>
 	<TEXT>
@@ -15091,7 +15091,7 @@
 		<English>[ICON_BULLET]%D1%%%F2 from Buildings</English>
 		<French>[ICON_BULLET]%D1%%%F2 (bâtiments)</French>
 		<German>[ICON_BULLET]%D1%%%F2 durch Gebäude und Effekte</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1%%%F2[COLOR_REVERT] dagli edifici</Italian> <!-- city screen research, culture panel hover upper right -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1%% %F2[COLOR_REVERT] dagli edifici</Italian> <!-- city screen research, culture panel hover upper right -->
 		<Spanish>[ICON_BULLET]%D1%% %F2 por edificios</Spanish>
 		<Russian>[ICON_BULLET]%D1%%%F2 от зданий</Russian>
 	</TEXT>
@@ -15121,7 +15121,7 @@
 		<English>[ICON_BULLET]%D1%%%F2 from Power</English>
 		<French>[ICON_BULLET]%D1%%%F2 (électricité)</French>
 		<German>[ICON_BULLET]%D1%%%F2 durch Energie</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1%%%F2[COLOR_REVERT] dall'energia elettrica</Italian> <!-- city screen research, culture panel hover upper right -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1%% %F2[COLOR_REVERT] dall'energia elettrica</Italian> <!-- city screen research, culture panel hover upper right -->
 		<Spanish>[ICON_BULLET]%D1%% %F2 por energía</Spanish>
 	</TEXT>
 	<TEXT>
@@ -15129,7 +15129,7 @@
 		<English>[ICON_BULLET]%D1%%%F2 from Projects and Wonders</English>
 		<French>[ICON_BULLET]%D1%%%F2 des Projets et Merveilles</French>
 		<German>[ICON_BULLET]%D1%%%F2 von Projekten and Wonders</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1%%%F2[COLOR_REVERT] dai progetti e meraviglie</Italian> <!-- city screen research, culture panel hover upper right -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1%% %F2[COLOR_REVERT] dai progetti e meraviglie</Italian> <!-- city screen research, culture panel hover upper right -->
 		<Spanish>[ICON_BULLET]%D1%%%F2 por proyectos y maravillas</Spanish>
 		<Polish>[ICON_BULLET]%D1%%%F2 z Projektów i Cudów</Polish>
 		<Russian>[ICON_BULLET]%D1%%%F2 Îò ïðîåêòîâ</Russian>
@@ -15282,7 +15282,7 @@
 		<English>[NEWLINE][ICON_BULLET]Leads to[SPACE]</English>
 		<French>[NEWLINE][ICON_BULLET]Mène vers :[SPACE]</French>
 		<German>[NEWLINE][ICON_BULLET]Führt zu:[SPACE]</German>
-		<Italian>[NEWLINE][ICON_BULLET]Conduce a[SPACE]</Italian> <!--any tech hover -->
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Conduce[COLOR_HIGHLIGHT_TEXT] alle tecnologie:[SPACE]</Italian> <!--any tech hover -->
 		<Spanish>[NEWLINE][ICON_BULLET]Lleva a[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -17264,7 +17264,7 @@
 		<English>You have discovered a source of [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] near %s2_CityName!</English>
 		<French>Vous avez découvert une source de [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] près de %s2_CityName !</French>
 		<German>Ihr habt in der Nähe der Stadt %s2_CityName ein Vorkommen des Bonusguts [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] entdeckt!</German>
-		<Italian>Hai scoperto una risorsa di [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] vicino a %s2_CityName!</Italian>
+		<Italian>Hai scoperto una risorsa di tipo [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] vicino a %s2_CityName!</Italian> <!-- Message Log Screen -->
 		<Spanish>Habéis descubierto una fuente de [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] cerca de %s2_CityName.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -18175,7 +18175,7 @@
 		<English>%s Tribe</English>
 		<French>Tribu %s</French>
 		<German>%ser Stamm</German>
-		<Italian>Tribù %s</Italian>
+		<Italian>Tribù a %s</Italian>
 		<Spanish>Tribu %s:2</Spanish>
 		<Polish>Plemię %s</Polish>
 		<Russian>%s Ïëåìÿ</Russian>
@@ -18891,7 +18891,7 @@
 		<English>[ICON_BULLET]Units have a %D1%% chance to avoid Capture.</English>
 		<French>[ICON_BULLET]Les Unités ont %D1%% de chances d'éviter d'être capturées.</French>
 		<German>[ICON_BULLET]Einheiten können der Gefangennahme mit %D1%% Wahrscheinlichkeit entgehen.</German>
-		<Italian>[ICON_BULLET]Probabilità delle unità di [COLOR_HIGHLIGHT_TEXT]evitare la cattura[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%D1%%[COLOR_REVERT]</Italian><!--Aerial CT trait in the pedia, city screen building list Palace building -->
+		<Italian>[ICON_BULLET]Aumenta le probabilità delle unità di [COLOR_HIGHLIGHT_TEXT]evitare la cattura[COLOR_REVERT] del [COLOR_HIGHLIGHT_TEXT]%D1%%[COLOR_REVERT]</Italian><!--Aerial CT trait in the pedia, city screen building list Palace building -->
 		<Polish>[ICON_BULLET]Jednostki mają %D1%% szansy na uniknięcie Przejęcia.</Polish>
 		<Russian>[ICON_BULLET]%D1%% øàíñîâ èçáåæàòü çàõâàòà.</Russian>
 	</TEXT>
@@ -19985,7 +19985,7 @@
 		<English>Sid's Tips</English>
 		<French>Aide du conseiller</French>
 		<German>Beraterhilfe</German>
-		<Italian>Aiuto del consigliere</Italian>
+		<Italian>Suggerimenti </Italian>
 		<Spanish>Ayuda de consejeros</Spanish>
 	</TEXT>
 	<TEXT>
@@ -19993,7 +19993,7 @@
 		<English>Sid provides extra help for the player's research and build choices</English>
 		<French>Le conseiller apparaît pour aider le joueur quand il a achevé une recherche ou construit un bâtiment.</French>
 		<German>Der Berater wird eingeblendet, um dem Spieler zusätzliche Hilfestellung bei der Auswahl eines Forschungs- oder Bauprojekts zu geben</German>
-		<Italian>[BOLD]Quando si deve scegliere una costruzione o una ricerca il consigliere appare per offrire [COLOR_HIGHLIGHT_TEXT]aiuto extra[COLOR_REVERT][\BOLD]</Italian>
+		<Italian>[BOLD]Quando si deve scegliere una costruzione o una ricerca un suggerimento su cosa fare offrirà [COLOR_HIGHLIGHT_TEXT]aiuto extra[COLOR_REVERT][\BOLD]</Italian>
 		<Spanish>Sid proporciona ayuda al jugador en relación a la investigación y las opciones de construcción.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -20001,7 +20001,7 @@
 		<English>Advisor Pop-Ups</English>
 		<French>Info-bulle du conseiller</French>
 		<German>Berater-Popups</German>
-		<Italian>Avvisi dei consiglieri</Italian>
+		<Italian>Suggerimenti pop-up</Italian>
 		<Spanish>Ventanas de consejeros</Spanish>
 	</TEXT>
 	<TEXT>
@@ -20009,7 +20009,7 @@
 		<English>The advisor occasionally interrupts play to suggest a new build choice in a city</English>
 		<French>Le conseiller interrompt parfois le jeu pour suggérer un nouveau projet dans une ville.</French>
 		<German>Der Berater unterbricht gelegentlich das Spiel, um ein neues Bauprojekt in einer Stadt vorzuschlagen</German>
-		<Italian>[BOLD]I consiglieri interromperanno saltuariamente il gioco per suggerirti una [COLOR_HIGHLIGHT_TEXT]scelta di costruzione[COLOR_REVERT] da realizzare in una città[\BOLD]</Italian>
+		<Italian>[BOLD]Un pop-up interromperà saltuariamente il gioco per suggerire una [COLOR_HIGHLIGHT_TEXT]scelta di costruzione[COLOR_REVERT] da realizzare in una città[\BOLD]</Italian>
 		<Spanish>El consejero interrumpe de vez en cuando para sugerir algo nuevo que construir en una ciudad.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -21831,7 +21831,7 @@
 		<English>[ICON_BULLET]%d1_percent%% less [ICON_GOLD] to Upgrade</English>
 		<French>[ICON_BULLET]Coût de l'amélioration réduite de %d1_percent%% [ICON_GOLD]</French>
 		<German>[ICON_BULLET]%d1_percent%% weniger [ICON_GOLD] für Modernisierungen</German>
-		<Italian>[ICON_BULLET]%d1_percent%% [ICON_GOLD] in meno per gli aggiornamenti</Italian>
+		<Italian>[ICON_BULLET]Costo [COLOR_HIGHLIGHT_TEXT]modernizzazione[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT] -%d1_percent%%[COLOR_REVERT] [ICON_GOLD]</Italian> <!-- hero unit Aatsista-Mahkan -->
 		<Spanish>[ICON_BULLET]%d1_percent%% menos de [ICON_GOLD] para modernizar</Spanish>
 	</TEXT>
 	<TEXT>
@@ -21839,7 +21839,7 @@
 		<English>[ICON_BULLET]Free upgrades</English>
 		<French>[ICON_BULLET]Améliorations gratuites</French>
 		<German>[ICON_BULLET]Freie Modernisierungen</German>
-		<Italian>[ICON_BULLET]Miglioramenti gratuiti</Italian>
+		<Italian>[ICON_BULLET]Modernizzazioni gratuite</Italian>
 		<Spanish>[ICON_BULLET]Modernizaciones asequibles</Spanish>
 	</TEXT>
 	<TEXT>
@@ -22648,7 +22648,7 @@
 		<English>%d1 from Population (%d2_pop/%d3_pop_max)[NEWLINE]%d4 from Land (%d5_land/%d6_land_max)[NEWLINE]%d7 from Technology (%d8_tech/%d9_tech_max)[NEWLINE]%d10 from Wonders (%d11_wonder/%d12_wonder_max)[NEWLINE]------------------------[NEWLINE]Total Score = %d13[NEWLINE]Score by winning this turn = %d14</English>
 		<French>%d1 pour population (%d2_pop/%d3_pop_max)[NEWLINE]%d4 pour territoire (%d5_land/%d6_land_max)[NEWLINE]%d7 pour technologies (%d8_tech/%d9_tech_max)[NEWLINE]%d10 pour Merveilles (%d11_wonder/%d12_wonder_max)[NEWLINE]------------------------[NEWLINE]Score total = %d13[NEWLINE]Score si victoire à ce tour = %d14</French>
 		<German>%d1 für Bevölkerung (%d2_pop/%d3_pop_max)[NEWLINE]%d4 für Land (%d5_land/%d6_land_max)[NEWLINE]%d7 für Technologie (%d8_tech/%d9_tech_max)[NEWLINE]%d10 für Wunder (%d11_wonder/%d12_wonder_max)[NEWLINE]------------------------[NEWLINE]Gesamtpunkte = %d13[NEWLINE]Punkte für Sieg in dieser Runde = %d14</German>
-		<Italian>%d1 dalla popolazione (%d2_pop/%d3_pop_max)[NEWLINE]%d4 dal territorio (%d5_land/%d6_land_max)[NEWLINE]%d7 dalla tecnologia (%d8_tech/%d9_tech_max)[NEWLINE]%d10 dalle Meraviglie (%d11_wonder/%d12_wonder_max)[NEWLINE]------------------------[NEWLINE]Punteggio totale = %d13[NEWLINE]Punteggio vincendo durante questo turno = %d14</Italian>
+		<Italian>[NEWLINE][COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] punti dalla popolazione ([COLOR_HIGHLIGHT_TEXT]%d2_pop[COLOR_REVERT] / [COLOR_HIGHLIGHT_TEXT]%d3_pop_max[COLOR_REVERT])[NEWLINE][COLOR_HIGHLIGHT_TEXT]%d4[COLOR_REVERT] punti dal territorio ([COLOR_HIGHLIGHT_TEXT]%d5_land[COLOR_REVERT] / [COLOR_HIGHLIGHT_TEXT]%d6_land_max[COLOR_REVERT])[NEWLINE][COLOR_HIGHLIGHT_TEXT]%d7[COLOR_REVERT] punti dalle tecnologie ([COLOR_HIGHLIGHT_TEXT]%d8_tech[COLOR_REVERT] / [COLOR_HIGHLIGHT_TEXT]%d9_tech_max[COLOR_REVERT])[NEWLINE][COLOR_HIGHLIGHT_TEXT]%d10[COLOR_REVERT] punti dalle meraviglie ([COLOR_HIGHLIGHT_TEXT]%d11_wonder[COLOR_REVERT] / [COLOR_HIGHLIGHT_TEXT]%d12_wonder_max[COLOR_REVERT])[NEWLINE]------------------------[NEWLINE][COLOR_HIGHLIGHT_TEXT]%d13[COLOR_REVERT] punteggio totale[NEWLINE][COLOR_HIGHLIGHT_TEXT]%d14[COLOR_REVERT] punteggio per una vittoria in questo turno</Italian> <!--Scoreboard hover on civ name in lower right -->
 		<Spanish>%d1 por población (%d2_pop/%d3_pop_max)[NEWLINE]%d4 por territorio (%d5_land/%d6_land_max)[NEWLINE]%d7 por tecnología (%d8_tech/%d9_tech_max)[NEWLINE]%d10 por maravillas (%d11_wonder/%d12_wonder_max)[NEWLINE]------------------------[NEWLINE]Puntuación total = %d13[NEWLINE]Puntuación por ganar este turno = %d14</Spanish>
 	</TEXT>
 	<TEXT>
@@ -22853,7 +22853,7 @@
 		<English>Player difficulty: %s1</English>
 		<French>Joueur difficulté : %s1</French>
 		<German>Spieler schwierigkeit: %s1</German>
-		<Italian>Difficoltà giocatore %s1</Italian>
+		<Italian>Difficoltà giocatore [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT]</Italian> <!--Scoreboard hover on civ name in lower right -->
 		<Spanish>Dificultad el jugador: %s1</Spanish>
 	</TEXT>
 	<TEXT>
@@ -24061,7 +24061,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Welcome to your spaceship</English>
 		<French>Bienvenue dans votre vaisseau spatial</French>
 		<German>Willkommen an Bord Eures Raumschiffs</German>
-		<Italian>Benvenuto all'astronave</Italian>
+		<Italian>Dettagli astronave</Italian>  <!-- Victory screen, spaceship detail screen -->
 		<Spanish>Ésta es vuestra nave espacial</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28226,7 +28226,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]Can Join City as[SPACE]</English>
 		<French>[ICON_BULLET]Peut rejoindre une ville en tant que :[SPACE]</French>
 		<German>[ICON_BULLET]Kann sich einer Stadt anschließen als[SPACE]</German>
-		<Italian>[ICON_BULLET]Può unirsi alla città come[SPACE]</Italian>
+		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]unirsi alla città[COLOR_REVERT] come[SPACE]</Italian> <!-- hero unit Aatsista-Mahkan -->
 		<Spanish>[ICON_BULLET]Puede unirse a una ciudad como[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28549,7 +28549,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[COLOR_WARNING_TEXT]Requires %s1_Text[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Requiert : %s1_Text[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]erfordert: %s1_Text[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT][ICON_BULLET]Richiede %s1_Text[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_WARNING_TEXT][ICON_BULLET]Richiede[COLOR_REVERT] %s1_Text</Italian> <!-- hero unit any -->
 		<Spanish>[COLOR_WARNING_TEXT]Requiere %s1_Text[COLOR_REVERT]</Spanish>
 		<Russian>[COLOR_WARNING_TEXT]Требует %s1_Text[COLOR_REVERT]</Russian>
 	</TEXT>
@@ -28616,7 +28616,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]World Unit (%d1_Num Allowed)</English>
 		<French>[ICON_BULLET]Unité mondiale (limite : %d1_NumAllowed)</French>
 		<German>[ICON_BULLET]Welteinheit (%d1_Num zulässig)</German>
-		<Italian>[ICON_BULLET]Unità mondiale (%d1_Num [NUM1:permessa:permesse])</Italian>
+		<Italian>[ICON_BULLET]Unità [COLOR_HIGHLIGHT_TEXT]mondiale[COLOR_REVERT] (numero massimo permesso: [COLOR_HIGHLIGHT_TEXT]%d1_Num[COLOR_REVERT])</Italian> <!-- hero unit Aatsista-Mahkan -->
 		<Spanish>[ICON_BULLET]Unidad mundial (%d1_Num [NUM1:permitida:permitidas])</Spanish>
 	</TEXT>
 	<TEXT>
@@ -29419,7 +29419,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_VICTORY_SCREEN_PERCENTAGE</Tag>
 		<English>Status</English>
 		<French>Statut</French>
-		<Italian>Percentuale</Italian> <!-- victory info screen -->
+		<Italian>Stati</Italian> <!-- victory info screen, pedia screen Status name -->
 		<Spanish>Estado</Spanish>
 		<Russian>Ñòàòóñ</Russian>
 	</TEXT>
@@ -30210,7 +30210,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>You have discovered %s1!</English>
 		<French>Vous avez découvert %s1!</French>
 		<German>Sie haben das Naturwunder %s1 entdeckt!</German>
-		<Italian>hai scoperto %s1!</Italian>
+		<Italian>È stata scoperta la meraviglia naturale %s1!</Italian> <!-- Message Log Screen -->
 		<Spanish>se han descubierto %s1!</Spanish>
 		<Polish>Odkryłeś %s1!</Polish>
 		<Russian>Âû îáíàðóæèëè %s1!</Russian>
