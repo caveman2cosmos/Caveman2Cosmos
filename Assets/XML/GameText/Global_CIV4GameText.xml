@@ -665,6 +665,7 @@
 		<English>Research:</English>
 		<French>Recherche :</French>
 		<Russian>Исследования:</Russian>
+		<Italian>Ricerca:</Italian> <!-- main research choice clicking on actual research -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_INTERFACE_TECH_HELP_RESEARCHING</Tag>
@@ -1213,7 +1214,7 @@
 		<English>[ICON_BULLET]Connects Improved Resources with your Cities</English>
 		<French>[ICON_BULLET]Relie les ressources exploitées à vos villes.</French>
 		<German>[ICON_BULLET]Verbindet modernisierte Ressourcen mit Euren Städten</German>
-		<Italian>[ICON_BULLET]Collega le città ai miglioramenti delle risorse</Italian>
+		<Italian>[ICON_BULLET]Collega le risorse migliorate alle città</Italian> <!-- action button hover for creating path -->
 		<Spanish>[ICON_BULLET]Comunica los recursos mejorados con tus ciudades</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1229,7 +1230,7 @@
 		<English>[COLOR_WARNING_TEXT]Will consume the unit[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]L'unité sera détruite[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]Wird die Einheit verbrauchen[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]L'unità verrà sacrificata nel procedimento[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_WARNING_TEXT][ICON_BULLET]L'unità verrà consumata nel processo[COLOR_REVERT]</Italian> <!-- icon for building an improvement with the first worker unit -->
 		<Spanish>[COLOR_WARNING_TEXT]Consumirá la unidad[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1498,7 +1499,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_NEEDS_CULTURE_BORDER</Tag>
 		<English>[COLOR_WARNING_TEXT]Must be within Cultural Borders owned by of one of our cities.[COLOR_REVERT]</English>
-		<Italian>[COLOR_WARNING_TEXT]Bisogna essere all'interno dei propri confini culturali.[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_WARNING_TEXT][ICON_BULLET]Il miglioramento deve essere costruito all'interno dei confini culturali[COLOR_REVERT]</Italian> <!-- icon for build improvement out of cultural border -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_NEEDS_OUT_RIVAL_CULTURE_BORDER</Tag>
@@ -1521,7 +1522,7 @@
 		<English>[COLOR_YELLOW]Will not receive any [ICON_PRODUCTION][COLOR_REVERT]</English>
 		<French>[COLOR_YELLOW]Ne reçoit aucune [ICON_PRODUCTION][COLOR_REVERT]</French>
 		<German>[COLOR_YELLOW]Erhält keine [ICON_PRODUCTION][COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET][COLOR_YELLOW]Nessuna produzione [ICON_PRODUCTION][COLOR_REVERT]</Italian>
+		<Italian>[ICON_BULLET][COLOR_YELLOW]Nessun guadagno di produzione [ICON_PRODUCTION][COLOR_REVERT]</Italian> <!-- icon action remove a forest -->
 		<Spanish>[COLOR_YELLOW]No recibirás ningún [ICON_PRODUCTION][COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_YELLOW]Nie otrzymasz żadnego [ICON_PRODUCTION][COLOR_REVERT]</Polish>
 		<Russian>[COLOR_YELLOW]Íå áóäåò ïîëó÷àòü íèêàêîé [ICON_PRODUCTION][COLOR_REVERT]</Russian>
@@ -1531,7 +1532,7 @@
 		<English>[COLOR_HIGHLIGHT_TEXT]%d1_Num[COLOR_REVERT] [NUM1:Turn:Turns]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]%d1_Num[COLOR_REVERT] [NUM1:tour:tours]</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]%d1_Num[COLOR_REVERT] [NUM1:Runde:Runden]</German>
-		<Italian>[ICON_BULLET]Tempo di costruzione: [COLOR_HIGHLIGHT_TEXT]%d1_Num[COLOR_REVERT] [NUM1:turno:turni]</Italian>
+		<Italian>[NEWLINE][ICON_BULLET]Tempo di costruzione: [COLOR_HIGHLIGHT_TEXT]%d1_Num[COLOR_REVERT] [NUM1:turno:turni]</Italian> <!-- hover on a plot with a improvement being done -->
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]%d1_Num[COLOR_REVERT] [NUM1:turno:turnos]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1637,7 +1638,7 @@
 		<English>[COLOR_WARNING_TEXT]Will remove the %s1_FeatName[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Supprimera : %s1_FeatName[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]Entfernt die Geländeart %s1_FeatName[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]per l'eliminazione della caratterista %s1_FeatName[COLOR_REVERT]</Italian>
+		<Italian>[COLOR_WARNING_TEXT]per la rimozione della caratterista %s1_FeatName[COLOR_REVERT]</Italian> <!-- action icon hover remove a marsh -->
 		<Spanish>[COLOR_WARNING_TEXT]Quitará [NUM1:el:la:los:las] %s1_FeatName.[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1773,7 +1774,7 @@
 		<English>[COLOR_WARNING_TEXT]Will destroy the %s1_ImpName[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Détruira : %s1_ImpName[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]Wird die Modernisierung %s1_ImpName zerstören[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Il miglioramento %s1_ImpName[COLOR_REVERT] verrà distrutto.</Italian>
+		<Italian>[ICON_BULLET]Il miglioramento [COLOR_WARNING_TEXT]%s1_ImpName[COLOR_REVERT] verrà distrutto</Italian> <!-- icon action hover try to build an improverment where there is already one -->
 		<Spanish>[COLOR_WARNING_TEXT]Destruirá [NUM1:el:la:los:las] %s1_ImpName[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2054,7 +2055,7 @@
 		<English>%d1 [NUM1:Turn:Turns] for Revolution</English>
 		<French>%d1 [NUM1:tour:tours] pour la révolution</French>
 		<German>%d1 [NUM1:Runde:Runden] bis zur Revolution</German>
-		<Italian>%d1 [NUM1:turno:turni] per la rivoluzione</Italian>
+		<Italian>%d1 [NUM1:turno:turni] di anarchia prima del cambiamento</Italian>
 		<Spanish>%d1 [NUM1:turno:turnos] para la revolución</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2062,7 +2063,7 @@
 		<English>[SPACE]and[SPACE]</English>
 		<French>[SPACE]et[SPACE]</French>
 		<German>[SPACE]und[SPACE]</German>
-		<Italian>[SPACE][COLOR_REVERT]e[SPACE][COLOR_WARNING_TEXT]</Italian>
+		<Italian>[SPACE][COLOR_REVERT]e[SPACE][COLOR_HIGHLIGHT_TEXT]</Italian>
 		<Spanish>[SPACE]y[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2070,7 +2071,7 @@
 		<English>[SPACE]and[SPACE]</English>
 		<French>[SPACE]et[SPACE]</French>
 		<German>[SPACE]und[SPACE]</German>
-		<Italian>[SPACE][COLOR_REVERT]e[SPACE][COLOR_WARNING_TEXT]</Italian>
+		<Italian>[SPACE][COLOR_REVERT]e[SPACE][COLOR_HIGHLIGHT_TEXT]</Italian>
 		<Spanish>[SPACE]y[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3063,7 +3064,7 @@
 		<English>[NEWLINE]%d1 [ICON_FOOD]/Turn[NEWLINE]Growing: %d2/%d3 [ICON_FOOD] (%d4 [NUM4:Turn:Turns])</English>
 		<French>[NEWLINE]%d1 [ICON_FOOD]/tour[NEWLINE]Croissance: %d2/%d3 [ICON_FOOD] (%d4 [NUM4:tour:tours])</French>
 		<German>[NEWLINE]%d1 [ICON_FOOD]/Runde[NEWLINE]Wachstum: %d2/%d3 [ICON_FOOD] (%d4 [NUM4:Runde:Runden])</German>
-		<Italian>[NEWLINE][COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] [ICON_FOOD] a turno[NEWLINE]Crescita: [COLOR_HIGHLIGHT_TEXT]%d2[COLOR_REVERT]/[COLOR_HIGHLIGHT_TEXT]%d3[COLOR_REVERT] [ICON_FOOD] ([COLOR_HIGHLIGHT_TEXT]%d4[COLOR_REVERT][NUM4:Turno:turni])</Italian>
+		<Italian>[NEWLINE][COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] [ICON_FOOD] a turno[NEWLINE]Crescita: [COLOR_HIGHLIGHT_TEXT]%d2[COLOR_REVERT] / [COLOR_HIGHLIGHT_TEXT]%d3[COLOR_REVERT] [ICON_FOOD] ([COLOR_HIGHLIGHT_TEXT]%d4[COLOR_REVERT] [NUM4:turno:turni])</Italian>
 		<Spanish>[NEWLINE]%d1 [ICON_FOOD]/turno[NEWLINE]Creciendo: %d2/%d3 [ICON_FOOD] (%d4 [NUM4:turno:turnos])</Spanish>
 		<Polish>[NEWLINE]%d1 [ICON_FOOD]/turę[NEWLINE]Wzrost: %d2/%d3 [ICON_FOOD] (%d4 [NUM4:tura:tur])</Polish>
 		<Russian>[NEWLINE]%d1 [ICON_FOOD]/Õîä[NEWLINE]Ðîñò: %d2/%d3 [ICON_FOOD] (%d4 [NUM4:Õîä:Õîäîâ])</Russian>
@@ -3073,7 +3074,7 @@
 		<English>[NEWLINE]%d1 [ICON_FOOD]/Turn[NEWLINE]Growth: %d2/%d3 [ICON_FOOD] (%d4 [NUM4:Turn:Turns])</English>
 		<French>[NEWLINE]%d1 [ICON_FOOD]/tour[NEWLINE]Croissance : %d2/%d3 [ICON_FOOD] (%d4 [NUM4:tour:tours])</French>
 		<German>[NEWLINE]Wachstum: %d1/%d2 [ICON_FOOD] (%d3 [NUM3:Runde:Runden])</German>
-		<Italian>[NEWLINE][COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] [ICON_FOOD] a turno[NEWLINE]Crescita: [COLOR_HIGHLIGHT_TEXT]%d2[COLOR_REVERT]/[COLOR_HIGHLIGHT_TEXT]%d3[COLOR_REVERT] [ICON_FOOD] ([COLOR_HIGHLIGHT_TEXT]%d4[COLOR_REVERT] [NUM4:turno rimanente:turni rimanenti])</Italian>
+		<Italian>[NEWLINE][COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] [ICON_FOOD] a turno[NEWLINE]Crescita: [COLOR_HIGHLIGHT_TEXT]%d2[COLOR_REVERT] / [COLOR_HIGHLIGHT_TEXT]%d3[COLOR_REVERT] [ICON_FOOD] ([COLOR_HIGHLIGHT_TEXT]%d4[COLOR_REVERT] [NUM4:turno rimanente:turni rimanenti])</Italian>
 		<Spanish>[NEWLINE]%d1 [ICON_FOOD]/turno[NEWLINE]Crecimiento: %d2/%d3 [ICON_FOOD] (%d4 [NUM4:turno:turnos])</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3081,7 +3082,7 @@
 		<English>[NEWLINE]%d1 [ICON_FOOD] + %d2 [ICON_PRODUCTION]/Turn[NEWLINE]%s3: %d4/%d5 [ICON_PRODUCTION] (%d6 [NUM6:Turn:Turns])</English>
 		<French>[NEWLINE]%d1 [ICON_FOOD] + %d2 [ICON_PRODUCTION]/tour[NEWLINE]%s3 : %d4/%d5 [ICON_PRODUCTION] (%d6 [NUM6:tour:tours])</French>
 		<German>[NEWLINE]%d1 [ICON_FOOD] + %d2 [ICON_PRODUCTION]/Runde[NEWLINE]%s3: %d4/%d5 [ICON_PRODUCTION] (%d6 [NUM6:Runde:Runden])</German>
-		<Italian>[NEWLINE][COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] [ICON_FOOD] + [COLOR_HIGHLIGHT_TEXT]%d2[COLOR_REVERT] [ICON_PRODUCTION] a turno[NEWLINE]%s3: [COLOR_HIGHLIGHT_TEXT]%d4[COLOR_REVERT]/[COLOR_HIGHLIGHT_TEXT]%d5[COLOR_REVERT] [ICON_PRODUCTION] ([COLOR_HIGHLIGHT_TEXT]%d6[COLOR_REVERT] [NUM6:turno rimanente:turni rimanenti])</Italian>
+		<Italian>[NEWLINE][COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] [ICON_FOOD] + [COLOR_HIGHLIGHT_TEXT]%d2[COLOR_REVERT] [ICON_PRODUCTION] a turno[NEWLINE]%s3: [COLOR_HIGHLIGHT_TEXT]%d4[COLOR_REVERT] / [COLOR_HIGHLIGHT_TEXT]%d5[COLOR_REVERT] [ICON_PRODUCTION] ([COLOR_HIGHLIGHT_TEXT]%d6[COLOR_REVERT] [NUM6:turno rimanente:turni rimanenti])</Italian>
 		<Spanish>[NEWLINE]%d1 [ICON_FOOD] + %d2 [ICON_PRODUCTION]/turno[NEWLINE]%s3: %d4/%d5 [ICON_PRODUCTION] (%d6 [NUM6:turno:turnos])</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3089,7 +3090,7 @@
 		<English>[NEWLINE]%d1 [ICON_FOOD] + %d2 [ICON_PRODUCTION]/Turn (%d7 [ICON_PRODUCTION]/Turn)[NEWLINE]%s3: %d4/%d5 [ICON_PRODUCTION] (%d6 [NUM6:Turn:Turns])</English>
 		<French>[NEWLINE]%d1 [ICON_FOOD] + %d2 [ICON_PRODUCTION]/tour (%d7 [ICON_PRODUCTION]/tour)[NEWLINE]%s3: %d4/%d5 [ICON_PRODUCTION] (%d6 [NUM6:tour:tours])</French>
 		<German>[NEWLINE]%d1 [ICON_FOOD] + %d2 [ICON_PRODUCTION]/Runde (%d7 [ICON_PRODUCTION]/Runde)[NEWLINE]%s3: %d4/%d5 [ICON_PRODUCTION] (%d6 [NUM6:Runde:Runden])</German>
-		<Italian>[NEWLINE][COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] [ICON_FOOD] + [COLOR_HIGHLIGHT_TEXT]%d2[COLOR_REVERT] [ICON_PRODUCTION] a turno (base [COLOR_HIGHLIGHT_TEXT]%d7[COLOR_REVERT] [ICON_PRODUCTION] a turno)[NEWLINE]%s3: [COLOR_HIGHLIGHT_TEXT]%d4[COLOR_REVERT]/[COLOR_HIGHLIGHT_TEXT]%d5[COLOR_REVERT] [ICON_PRODUCTION] ([COLOR_HIGHLIGHT_TEXT]%d6[COLOR_REVERT] [NUM6:turno rimanente:turni rimanenti])</Italian> <!-- city hover with base production CTRL -->
+		<Italian>[NEWLINE][COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] [ICON_FOOD] + [COLOR_HIGHLIGHT_TEXT]%d2[COLOR_REVERT] [ICON_PRODUCTION] a turno (base [COLOR_HIGHLIGHT_TEXT]%d7[COLOR_REVERT] [ICON_PRODUCTION] a turno)[NEWLINE]%s3: [COLOR_HIGHLIGHT_TEXT]%d4[COLOR_REVERT] / [COLOR_HIGHLIGHT_TEXT]%d5[COLOR_REVERT] [ICON_PRODUCTION] ([COLOR_HIGHLIGHT_TEXT]%d6[COLOR_REVERT] [NUM6:turno rimanente:turni rimanenti])</Italian> <!-- city hover with base production CTRL -->
 		<Spanish>[NEWLINE]%d1 [ICON_FOOD] + %d2 [ICON_PRODUCTION]/turno (%d7 [ICON_PRODUCTION]/turno)[NEWLINE]%s3: %d4/%d5 [ICON_PRODUCTION] (%d6 [NUM6:turno:turnos])</Spanish>
 		<Polish>[NEWLINE]%d1 [ICON_FOOD] + %d2 [ICON_PRODUCTION]/turę (%d7 [ICON_PRODUCTION]/turę)[NEWLINE]%s3: %d4/%d5 [ICON_PRODUCTION] (%d6 [NUM6:tura:tur])</Polish>
 		<Russian>[NEWLINE]%d1 [ICON_FOOD] + %d2 [ICON_PRODUCTION]/Õîä (%d7 [ICON_PRODUCTION]/Õîä)[NEWLINE]%s3: %d4/%d5 [ICON_PRODUCTION] (%d6 [NUM6:Õîä:Õîäîâ])</Russian>
@@ -3099,7 +3100,7 @@
 		<English>[NEWLINE]%d1 [ICON_BAD_FOOD]/Turn[NEWLINE][COLOR_YELLOW]Shrinking: %d2/%d3 [ICON_FOOD] (%d4 [NUM4:Turn:Turns])[COLOR_REVERT]</English>
 		<French>[NEWLINE]%d1 [ICON_BAD_FOOD]/tour[NEWLINE][COLOR_YELLOW]Diminution: %d2/%d3 [ICON_FOOD] (%d4 [NUM4:tour:tours])[COLOR_REVERT]</French>
 		<German>[NEWLINE]%d1 [ICON_BAD_FOOD]/Runde[NEWLINE][COLOR_YELLOW]Schrumpfung: %d2/%d3 [ICON_FOOD] (%d4 [NUM4:Runde:Runden])[COLOR_REVERT]</German>
-		<Italian>[NEWLINE][COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] [ICON_BAD_FOOD] a turno[NEWLINE][COLOR_YELLOW]Crescita: [COLOR_HIGHLIGHT_TEXT]%d2[COLOR_REVERT]/[COLOR_HIGHLIGHT_TEXT]%d3[COLOR_REVERT] [ICON_FOOD] (%d4 [NUM4:turno:turni])[COLOR_REVERT]</Italian>
+		<Italian>[NEWLINE][COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] [ICON_BAD_FOOD] a turno[NEWLINE][COLOR_YELLOW]Crescita: [COLOR_HIGHLIGHT_TEXT]%d2[COLOR_REVERT] / [COLOR_HIGHLIGHT_TEXT]%d3[COLOR_REVERT] [ICON_FOOD] (%d4 [NUM4:turno:turni])[COLOR_REVERT]</Italian>
 		<Spanish>[NEWLINE]%d1 [ICON_BAD_FOOD]/turno[NEWLINE][COLOR_YELLOW]Decreciendo: %d2/%d3 [ICON_FOOD] (%d4 [NUM4:turno:turnos])[COLOR_REVERT]</Spanish>
 		<Polish>[NEWLINE]%d1 [ICON_BAD_FOOD]/turę[NEWLINE][COLOR_YELLOW]Spadek: %d2/%d3 [ICON_FOOD] (%d4 [NUM4:tura:tur])[COLOR_REVERT]</Polish>
 		<Russian>[NEWLINE]%d1 [ICON_BAD_FOOD]/Õîä[NEWLINE][COLOR_YELLOW]Óìåíüøåíèå: %d2/%d3 [ICON_FOOD] (%d4 [NUM4:Õîä:Õîäîâ])[COLOR_REVERT]</Russian>
@@ -3109,7 +3110,7 @@
 		<English>[NEWLINE]Stagnant: %d1/%d2 [ICON_FOOD]</English>
 		<French>[NEWLINE]Pas de croissance: %d1/%d2 [ICON_FOOD]</French>
 		<German>[NEWLINE]Stagnation: %d1/%d2 [ICON_FOOD]</German>
-		<Italian>[NEWLINE]Stagnazione: %d1/%d2 [ICON_FOOD]</Italian>
+		<Italian>[NEWLINE]Stagnazione: %d1 / %d2 [ICON_FOOD]</Italian>
 		<Spanish>[NEWLINE]Estancada: %d1/%d2 [ICON_FOOD]</Spanish>
 		<Polish>[NEWLINE]Stagnacja: %d1/%d2 [ICON_FOOD]</Polish>
 		<Russian>[NEWLINE]Ñòîÿ÷èé: %d1/%d2 [ICON_FOOD]</Russian>
@@ -3133,7 +3134,7 @@
 		<English>[NEWLINE]Growth: %d1/%d2 [ICON_FOOD]</English>
 		<French>[NEWLINE]Croissance : %d1/%d2 [ICON_FOOD]</French>
 		<German>[NEWLINE]Wachstum: %d1/%d2 [ICON_FOOD]</German>
-		<Italian>[NEWLINE]Crescita: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT]/[COLOR_HIGHLIGHT_TEXT]%d2[COLOR_REVERT] [ICON_FOOD]</Italian>
+		<Italian>[NEWLINE]Crescita: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] / [COLOR_HIGHLIGHT_TEXT]%d2[COLOR_REVERT] [ICON_FOOD]</Italian>
 		<Spanish>[NEWLINE]Crecimiento: %d1/%d2 [ICON_FOOD]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3799,7 +3800,7 @@
 		<English>[ICON_BULLET]%D1_Change%F2_Icon from[SPACE]</English>
 		<French>[ICON_BULLET]%D1_Change%F2_Icon :[SPACE]</French>
 		<German>[ICON_BULLET]%D1_Change%F2_Icon durch[SPACE]</German>
-		<Italian>[ICON_BULLET]Oro %D1_Change %F2_Icon grazie ai miglioramenti:[SPACE]</Italian><!--Aerial CT trait in the pedia-->
+		<Italian>[ICON_BULLET]Oro [COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] %F2_Icon grazie a:[SPACE]</Italian><!--Aerial CT trait in the pedia, yeld change electriv railway pedia -->
 		<Spanish>[ICON_BULLET]%D1_Change %F2_Icon por[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4419,7 +4420,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_COMMA</Tag>
 		<English>,</English>
-		<Italian>,[NEWLINE]</Italian> <!--Industrial Farms building-->
+		<Italian>,[NEWLINE]</Italian> <!--Industrial Farms building, unit 57th infranty regiment-->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_AMBUSH</Tag>
@@ -4737,7 +4738,7 @@
 		<English>%s1_BldgName has been built by the citizens of %s2_CityName</English>
 		<French>[NUM1:Un:Une:Des:Des] [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] [NUM1:a:a:ont:ont] été construi[NUM1:t:te:ts:tes] par les citoyens de %s2_CityName</French>
 		<German>Neuer automatischer Effekt in %s2_CityName: %s1_BldgName.</German>
-		<Italian>L'edificio automatico %s1_BldgName è stato costruito in %s2_CityName!</Italian> <!-- Message Log Screen -->
+		<Italian>L'edificio automatico %s1_BldgName è stato costruito nella città di %s2_CityName!</Italian> <!-- Message Log Screen -->
 		<Spanish>Los ciudadanos de %s2_CityName han construido [NUM1:un:una:unos:unas] %s1_BldgName.</Spanish>
 		<Polish>%s1_BldgName został wybudowany przez mieszkańców miasta %s2_CityName</Polish>
 		<Russian>%s1_BldgName была построена жителями города %s2_CityName</Russian>
@@ -5043,7 +5044,7 @@
 		<English>Current</English>
 		<French>Actuel</French>
 		<German>Aktuell</German>
-		<Italian>Attuale</Italian>
+		<Italian>Ora</Italian> <!-- info screen unit and building tab -->
 		<Spanish>Actual</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5126,7 +5127,7 @@
 		<English>Rival Average</English>
 		<French>Moyenne rivaux</French>
 		<German>Weltdurchschn.</German>
-		<Italian>Media dei rivali</Italian>
+		<Italian>Media dei rivali</Italian> <!-- info screen demo table -->
 		<Spanish>Promedio del rival</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5134,7 +5135,7 @@
 		<English>Crop Yield (Food)</English>
 		<French>Récolte (Nour.)</French>
 		<German>Getreideertrag (Nahrung)</German>
-		<Italian>Prod. raccolto (cibo)</Italian>
+		<Italian>Rendimento coltivazioni (cibo)</Italian> <!-- info screen demo table -->
 		<Spanish>Rend.cosechas(Ali)</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5142,7 +5143,7 @@
 		<English> Million Bushels</English>
 		<French> Millions de boisseaux</French>
 		<German> Mio. Scheffel</German>
-		<Italian>Milioni di stai</Italian>
+		<Italian>(milioni di staia)</Italian> <!-- info screen demo table -->
 		<Spanish> Mill. de fanegas</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5150,7 +5151,7 @@
 		<English>GNP (Gold)</English>
 		<French>PNB (Or)</French>
 		<German>BSP (Gold)</German>
-		<Italian>PIL (oro)</Italian>
+		<Italian>Prodotto interno lordo (oro)</Italian> <!-- info screen demo table -->
 		<Spanish>PNB (oro)</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5158,7 +5159,7 @@
 		<English> Million Gold</English>
 		<French> Millions en or</French>
 		<German> Mio. Gold</German>
-		<Italian>Milioni d'oro</Italian>
+		<Italian>(milioni d'oro)</Italian> <!-- info screen demo table -->
 		<Spanish> Mill. de oro</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5166,7 +5167,7 @@
 		<English>Exports</English>
 		<French>Exportations</French>
 		<German>Exporte</German>
-		<Italian>Esportazioni</Italian>
+		<Italian>Esportazioni</Italian> <!-- info screen demo table -->
 		<Spanish>Exportaciones</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5174,7 +5175,7 @@
 		<English>Approval Rate</English>
 		<French>Taux d'approbation</French>
 		<German>Billigungsrate</German>
-		<Italian>Grado di approvazione</Italian>
+		<Italian>Grado di approvazione</Italian> <!-- info screen demo table -->
 		<Spanish>Ritmo aprobación</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5182,7 +5183,7 @@
 		<English>Life Expectancy</English>
 		<French>Espérance de vie</French>
 		<German>Lebenserwartung</German>
-		<Italian>Durata della vita</Italian>
+		<Italian>Aspettativa di vita</Italian> <!-- info screen demo table -->
 		<Spanish>Esperanza de vida</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5190,7 +5191,7 @@
 		<English>Imports</English>
 		<French>Importations</French>
 		<German>Importe</German>
-		<Italian>Importazioni</Italian>
+		<Italian>Importazioni</Italian> <!-- info screen demo table -->
 		<Spanish>Importaciones</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5198,7 +5199,7 @@
 		<English>Mfg. Goods (Prod.)</English>
 		<French>March. (Prod.)</French>
 		<German>Ind. (Prod.)</German>
-		<Italian>Beni (Prod.)</Italian>
+		<Italian>Beni prodotti (produzione)</Italian>  <!-- info screen demo table -->
 		<Spanish>Merc.fabric.(Prod)</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5206,7 +5207,7 @@
 		<English> Million Tons</English>
 		<French> Millions de tonnes</French>
 		<German> Mio. Tonnen</German>
-		<Italian>Milioni di tonnellate</Italian>
+		<Italian>(milioni di tonnellate)</Italian> <!-- info screen demo table -->
 		<Spanish> Mill. de toneladas</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5214,7 +5215,7 @@
 		<English>Land Area</English>
 		<French>Territoire</French>
 		<German>Landgebiet</German>
-		<Italian>Superficie</Italian>
+		<Italian>Superficie territorio</Italian> <!-- info screen demo table -->
 		<Spanish>Área terrestre</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5222,7 +5223,7 @@
 		<English> Square km</English>
 		<French> Km²</French>
 		<German> Quadratkilometer</German>
-		<Italian>Km²</Italian>
+		<Italian>(chilometri quadrati)</Italian> <!-- info screen demo table -->
 		<Spanish> Km cuad.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5230,7 +5231,7 @@
 		<English>Soldiers</English>
 		<French>Soldats</French>
 		<German>Soldaten</German>
-		<Italian>Soldati</Italian>
+		<Italian>Potenza militare</Italian> <!-- info screen demo table -->
 		<Spanish>Soldados</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5238,7 +5239,7 @@
 		<English>Population</English>
 		<French>Population</French>
 		<German>Bevölkerung</German>
-		<Italian>Popolazione</Italian>
+		<Italian>Popolazione totale</Italian> <!-- info screen demo table -->
 		<Spanish>Población</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5246,7 +5247,7 @@
 		<English> Years</English>
 		<French> Personnes</French>
 		<German> Jahre</German>
-		<Italian>Popolazione</Italian>
+		<Italian>Numero d'anni</Italian> <!-- info screen demo table -->
 		<Spanish> Años</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5254,7 +5255,7 @@
 		<English>Rank</English>
 		<French>Rang</French>
 		<German>Rang</German>
-		<Italian>Grado</Italian>
+		<Italian>Posizione</Italian> <!-- info screen demo table -->
 		<Spanish>Rango</Spanish>
 		<Polish>Ranga</Polish>
 		<Russian>Ðàíã</Russian>
@@ -5264,7 +5265,7 @@
 		<English>Strength</English>
 		<French>Puissance</French>
 		<German>Stärke</German>
-		<Italian>Forza</Italian>
+		<Italian>Forza</Italian> <!-- info screen demo table -->
 		<Spanish>Fuerza</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5272,7 +5273,7 @@
 		<English>Demographics</English>
 		<French>Démographie</French>
 		<German>Demografien</German>
-		<Italian>Demografia</Italian>
+		<Italian>Dati demografici</Italian> <!-- info screen table first column -->
 		<Spanish>Estadísticas</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5280,7 +5281,7 @@
 		<English>Value</English>
 		<French>Valeur</French>
 		<German>Wert</German>
-		<Italian>Valore</Italian>
+		<Italian>Valore</Italian> <!-- info screen demo table -->
 		<Spanish>Valor</Spanish>
 	</TEXT>
 	<TEXT>
@@ -6921,7 +6922,7 @@
 		<Tag>TXT_KEY_EXPR_AND</Tag>
 		<English> And </English>
 		<French> et </French>
-		<Italian> [COLOR_REVERT]e [COLOR_WARNING_TEXT]</Italian>
+		<Italian> [COLOR_REVERT]e [COLOR_HIGHLIGHT_TEXT]</Italian>
 		<Russian> И </Russian>
 	</TEXT>
 	<TEXT>
@@ -7000,7 +7001,7 @@
 		<Tag>TXT_KEY_EXPR_OR</Tag>
 		<English> Or </English>
 		<French> ou </French>
-		<Italian> [COLOR_REVERT]o [COLOR_WARNING_TEXT]</Italian>
+		<Italian> [COLOR_REVERT]o [COLOR_HIGHLIGHT_TEXT]</Italian>
 		<German> oder </German>
 		<Russian> или </Russian>
 	</TEXT>
@@ -7490,7 +7491,7 @@
 		<English>Congratulations, the burgeoning %s1Civ_Name now holds One Hundred Million souls! Larger cities allow more citizens and specialists, increasing our productivity!</English>
 		<French>Félicitations, la civilisation de l'%s1Civ_Name est en plein essor et compte désormais cent millions d'âmes ! Les grandes villes peuvent abriter plus de citoyens et de spécialistes, ce qui augmente leur productivité !</French>
 		<German>Herzlichen Glückwunsch! In der expandierenden Zivilisation %s1Civ_Name leben jetzt einhundert Millionen Einwohner! Größere Städte bieten Platz für mehr Bürger und Spezialisten, die wiederum unsere Produktivität erhöhen!</German>
-		<Italian>Congratulazioni, la fiorente città %s1Civ_Name ora contiene cento milioni di abitanti! Le grandi città ospitano più cittadini e specialisti, aumentando la produttività!</Italian>
+		<Italian>[BOLD]Congratulazioni![NEWLINE][NEWLINE]La fiorente città di [COLOR_HIGHLIGHT_TEXT]%s1Civ_Name[COLOR_REVERT] ora conta [COLOR_HIGHLIGHT_TEXT]100 milioni[COLOR_REVERT] di abitanti![NEWLINE][NEWLINE]Le grandi città possono ospitare [COLOR_HIGHLIGHT_TEXT]più cittadini specialisti[COLOR_REVERT], aumentando la produttività![\BOLD]</Italian> <!-- Popup when reaching the feat in the text -->
 		<Spanish>Felicidades, el próspero %s1Civ_Name ya alberga a cien millones de almas. Unas mayores ciudades permiten que haya más habitantes y especialistas, lo que aumenta a su vez la productividad.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -7498,7 +7499,7 @@
 		<English>Congratulations, the burgeoning %s1Civ_Name now holds Ten Million souls! Larger cities allow more citizens and specialists, increasing our productivity!</English>
 		<French>Félicitations, la civilisation de l'%s1Civ_Name est en plein essor et compte désormais dix millions d'âmes ! Les grandes villes peuvent abriter plus de citoyens et de spécialistes, ce qui augmente leur productivité !</French>
 		<German>Herzlichen Glückwunsch! In der expandierenden Zivilisation %s1Civ_Name leben jetzt zehn Millionen Einwohner! Größere Städte bieten Platz für mehr Bürger und Spezialisten, die wiederum unsere Produktivität erhöhen!</German>
-		<Italian>Congratulazioni, la fiorente città %s1Civ_Name ora contiene dieci milioni di abitanti! Le grandi città ospitano più cittadini e specialisti, aumentando la produttività!</Italian>
+		<Italian>[BOLD]Congratulazioni![NEWLINE][NEWLINE]La fiorente città di [COLOR_HIGHLIGHT_TEXT]%s1Civ_Name[COLOR_REVERT] ora conta [COLOR_HIGHLIGHT_TEXT]10 milioni[COLOR_REVERT] di abitanti![NEWLINE][NEWLINE]Le grandi città possono ospitare [COLOR_HIGHLIGHT_TEXT]più cittadini specialisti[COLOR_REVERT], aumentando la produttività![\BOLD]</Italian> <!-- Popup when reaching the feat in the text -->
 		<Spanish>Felicidades, el próspero %s1Civ_Name ya alberga a diez millones de almas. Unas mayores ciudades permiten que haya más habitantes y especialistas, lo que aumenta a su vez la productividad.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -7506,7 +7507,7 @@
 		<English>Congratulations, the burgeoning %s1Civ_Name now holds a BILLION souls! Larger cities allow more citizens and specialists, increasing our productivity!</English>
 		<French>Félicitations, la civilisation de l'%s1Civ_Name est en plein essor et compte UN MILLIARD d'habitants ! Les grandes villes peuvent abriter plus de citoyens et de spécialistes, ce qui augmente leur productivité !</French>
 		<German>Herzlichen Glückwunsch! In der expandierenden Zivilisation %s1Civ_Name leben jetzt eine MILLIARDE Einwohner! Größere Städte bieten Platz für mehr Bürger und Spezialisten, die wiederum unsere Produktivität erhöhen!</German>
-		<Italian>Congratulazioni, la fiorente città %s1Civ_Name ora contiene un miliardo di abitanti! Le grandi città ospitano più cittadini e specialisti, aumentando la produttività!</Italian>
+		<Italian>[BOLD]Congratulazioni![NEWLINE][NEWLINE]La fiorente città di [COLOR_HIGHLIGHT_TEXT]%s1Civ_Name[COLOR_REVERT] ora conta [COLOR_HIGHLIGHT_TEXT]1 miliardo[COLOR_REVERT] di abitanti![NEWLINE][NEWLINE]Le grandi città possono ospitare [COLOR_HIGHLIGHT_TEXT]più cittadini specialisti[COLOR_REVERT], aumentando la produttività![\BOLD]</Italian> <!-- Popup when reaching the feat in the text -->
 		<Spanish>Felicidades, el próspero %s1Civ_Name ya alberga a MIL MILLONES de almas. Unas mayores ciudades permiten que haya más habitantes y especialistas, lo que aumenta a su vez la productividad.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -7514,7 +7515,7 @@
 		<English>Congratulations, the burgeoning %s1Civ_Name now holds a Million souls! Larger cities allow more citizens and specialists, increasing our productivity!</English>
 		<French>Félicitations, la civilisation de l'%s1Civ_Name est en plein essor et compte désormais un million d'âmes ! Les grandes villes peuvent abriter plus de citoyens et de spécialistes, ce qui augmente leur productivité !</French>
 		<German>Herzlichen Glückwunsch! In der expandierenden Zivilisation %s1Civ_Name leben jetzt eine Million Einwohner! Größere Städte bieten Platz für mehr Bürger und Spezialisten, die wiederum unsere Produktivität erhöhen!</German>
-		<Italian>Congratulazioni, la fiorente città %s1Civ_Name ora contiene un milione di abitanti! Le grandi città ospitano più cittadini e specialisti, aumentando la produttività!</Italian>
+		<Italian>[BOLD]Congratulazioni![NEWLINE][NEWLINE]La fiorente città di [COLOR_HIGHLIGHT_TEXT]%s1Civ_Name[COLOR_REVERT] ora conta [COLOR_HIGHLIGHT_TEXT]1 milione[COLOR_REVERT] di abitanti![NEWLINE][NEWLINE]Le grandi città possono ospitare [COLOR_HIGHLIGHT_TEXT]più cittadini specialisti[COLOR_REVERT], aumentando la produttività![\BOLD]</Italian> <!-- Popup when reaching the feat in the text -->
 		<Spanish>Felicidades, el próspero %s1Civ_Name ya alberga a un millón de almas. Unas mayores ciudades permiten que haya más habitantes y especialistas, lo que aumenta a su vez la productividad.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -7522,7 +7523,7 @@
 		<English>Congratulations, the burgeoning %s1Civ_Name now holds Two Hundred Million souls! Larger cities allow more citizens and specialists, increasing our productivity!</English>
 		<French>Félicitations, la civilisation de l'%s1Civ_Name est en plein essor et compte désormais deux cents millions d'âmes ! Les grandes villes peuvent abriter plus de citoyens et de spécialistes, ce qui augmente leur productivité !</French>
 		<German>Herzlichen Glückwunsch! In der expandierenden Zivilisation %s1Civ_Name leben jetzt zweihundert Millionen Einwohner! Größere Städte bieten Platz für mehr Bürger und Spezialisten, die wiederum unsere Produktivität erhöhen!</German>
-		<Italian>Congratulazioni, la fiorente città %s1Civ_Name ora contiene duecento milioni di abitanti! Le grandi città ospitano più cittadini e specialisti, aumentando la produttività!</Italian>
+		<Italian>[BOLD]Congratulazioni![NEWLINE][NEWLINE]La fiorente città di [COLOR_HIGHLIGHT_TEXT]%s1Civ_Name[COLOR_REVERT] ora conta [COLOR_HIGHLIGHT_TEXT]200 milioni[COLOR_REVERT] di abitanti![NEWLINE][NEWLINE]Le grandi città possono ospitare [COLOR_HIGHLIGHT_TEXT]più cittadini specialisti[COLOR_REVERT], aumentando la produttività![\BOLD]</Italian> <!-- Popup when reaching the feat in the text -->
 		<Spanish>Felicidades, el próspero %s1Civ_Name ya alberga a doscientos millones de almas. Unas mayores ciudades permiten que haya más habitantes y especialistas, lo que aumenta a su vez la productividad.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -7530,7 +7531,7 @@
 		<English>Congratulations, the burgeoning %s1Civ_Name now holds Twenty Million souls! Larger cities allow more citizens and specialists, increasing our productivity!</English>
 		<French>Félicitations, la civilisation de l'%s1Civ_Name est en plein essor et compte désormais vingt millions d'âmes ! Les grandes villes peuvent abriter plus de citoyens et de spécialistes, ce qui augmente leur productivité !</French>
 		<German>Herzlichen Glückwunsch! In der expandierenden Zivilisation %s1Civ_Name leben jetzt zwanzig Millionen Einwohner! Größere Städte bieten Platz für mehr Bürger und Spezialisten, die wiederum unsere Produktivität erhöhen!</German>
-		<Italian>Congratulazioni, la fiorente città %s1Civ_Name ora contiene venti milioni di abitanti! Le grandi città ospitano più cittadini e specialisti, aumentando la produttività!</Italian>
+		<Italian>[BOLD]Congratulazioni![NEWLINE][NEWLINE]La fiorente città di [COLOR_HIGHLIGHT_TEXT]%s1Civ_Name[COLOR_REVERT] ora conta [COLOR_HIGHLIGHT_TEXT]20 milioni[COLOR_REVERT] di abitanti![NEWLINE][NEWLINE]Le grandi città possono ospitare [COLOR_HIGHLIGHT_TEXT]più cittadini specialisti[COLOR_REVERT], aumentando la produttività![\BOLD]</Italian> <!-- Popup when reaching the feat in the text -->
 		<Spanish>Felicidades, el próspero %s1Civ_Name ya alberga a veinte millones de almas. Unas mayores ciudades permiten que haya más habitantes y especialistas, lo que aumenta a su vez la productividad.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -7538,7 +7539,7 @@
 		<English>Congratulations, the burgeoning %s1Civ_Name now holds TWO BILLION souls! Larger cities allow more citizens and specialists, increasing our productivity!</English>
 		<French>Félicitations, la civilisation de l'%s1Civ_Name est en plein essor et compte DEUX MILLIARDS d'habitants ! Les grandes villes peuvent abriter plus de citoyens et de spécialistes, ce qui augmente leur productivité !</French>
 		<German>Herzlichen Glückwunsch! In der expandierenden Zivilisation %s1Civ_Name leben jetzt ZWEI MILLIARDEN Einwohner! Größere Städte bieten Platz für mehr Bürger und Spezialisten, die wiederum unsere Produktivität erhöhen!</German>
-		<Italian>Congratulazioni, la fiorente città %s1Civ_Name ora contiene due miliardi di abitanti! Le grandi città ospitano più cittadini e specialisti, aumentando la produttività!</Italian>
+		<Italian>[BOLD]Congratulazioni![NEWLINE][NEWLINE]La fiorente città di [COLOR_HIGHLIGHT_TEXT]%s1Civ_Name[COLOR_REVERT] ora conta [COLOR_HIGHLIGHT_TEXT]2 miliardi[COLOR_REVERT] di abitanti![NEWLINE][NEWLINE]Le grandi città possono ospitare [COLOR_HIGHLIGHT_TEXT]più cittadini specialisti[COLOR_REVERT], aumentando la produttività![\BOLD]</Italian> <!-- Popup when reaching the feat in the text -->
 		<Spanish>Felicidades, el próspero %s1Civ_Name ya alberga a DOS MIL MILLONES de almas. Unas mayores ciudades permiten que haya más habitantes y especialistas, lo que aumenta a su vez la productividad.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -7546,7 +7547,7 @@
 		<English>Congratulations, the burgeoning %s1Civ_Name now holds Two Million souls! Larger cities allow more citizens and specialists, increasing our productivity!</English>
 		<French>Félicitations, la civilisation de l'%s1Civ_Name est en plein essor et compte désormais deux millions d'âmes ! Les grandes villes peuvent abriter plus de citoyens et de spécialistes, ce qui augmente leur productivité !</French>
 		<German>Herzlichen Glückwunsch! In der expandierenden Zivilisation %s1Civ_Name leben jetzt zwei Millionen Einwohner! Größere Städte bieten Platz für mehr Bürger und Spezialisten, die wiederum unsere Produktivität erhöhen!</German>
-		<Italian>Congratulazioni, la fiorente città %s1Civ_Name ora contiene due milioni di abitanti! Le grandi città ospitano più cittadini e specialisti, aumentando la produttività!</Italian>
+		<Italian>[BOLD]Congratulazioni![NEWLINE][NEWLINE]La fiorente città di [COLOR_HIGHLIGHT_TEXT]%s1Civ_Name[COLOR_REVERT] ora conta [COLOR_HIGHLIGHT_TEXT]2 milioni[COLOR_REVERT] di abitanti![NEWLINE][NEWLINE]Le grandi città possono ospitare [COLOR_HIGHLIGHT_TEXT]più cittadini specialisti[COLOR_REVERT], aumentando la produttività![\BOLD]</Italian> <!-- Popup when reaching the feat in the text -->
 		<Spanish>Felicidades, el próspero %s1Civ_Name ya alberga a dos millones de almas. Unas mayores ciudades permiten que haya más habitantes y especialistas, lo que aumenta a su vez la productividad.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -7554,7 +7555,7 @@
 		<English>Congratulations, the burgeoning %s1Civ_Name now holds Five Hundred Million souls! Larger cities allow more citizens and specialists, increasing our productivity!</English>
 		<French>Félicitations, la civilisation de l'%s1Civ_Name est en plein essor et compte désormais cinq cents millions d'âmes ! Les grandes villes peuvent abriter plus de citoyens et de spécialistes, ce qui augmente leur productivité !</French>
 		<German>Herzlichen Glückwunsch! In der expandierenden Zivilisation %s1Civ_Name leben jetzt fünfhundert Millionen Einwohner! Größere Städte bieten Platz für mehr Bürger und Spezialisten, die wiederum unsere Produktivität erhöhen!</German>
-		<Italian>Congratulazioni, la fiorente città %s1Civ_Name ora contiene cinquecento milioni di abitanti! Le grandi città ospitano più cittadini e specialisti, aumentando la produttività!</Italian>
+		<Italian>[BOLD]Congratulazioni![NEWLINE][NEWLINE]La fiorente città di [COLOR_HIGHLIGHT_TEXT]%s1Civ_Name[COLOR_REVERT] ora conta [COLOR_HIGHLIGHT_TEXT]500 milioni[COLOR_REVERT] di abitanti![NEWLINE][NEWLINE]Le grandi città possono ospitare [COLOR_HIGHLIGHT_TEXT]più cittadini specialisti[COLOR_REVERT], aumentando la produttività![\BOLD]</Italian> <!-- Popup when reaching the feat in the text -->
 		<Spanish>Felicidades, el próspero %s1Civ_Name ya alberga a quinientos millones de almas. Unas mayores ciudades permiten que haya más habitantes y especialistas, lo que aumenta a su vez la productividad.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -7562,7 +7563,7 @@
 		<English>Congratulations, the burgeoning %s1Civ_Name now holds Fifty Million souls! Larger cities allow more citizens and specialists, increasing our productivity!</English>
 		<French>Félicitations, la civilisation de l'%s1Civ_Name est en plein essor et compte désormais cinquante millions d'âmes ! Les grandes villes peuvent abriter plus de citoyens et de spécialistes, ce qui augmente leur productivité !</French>
 		<German>Herzlichen Glückwunsch! In der expandierenden Zivilisation %s1Civ_Name leben jetzt fünfzig Millionen Einwohner! Größere Städte bieten Platz für mehr Bürger und Spezialisten, die wiederum unsere Produktivität erhöhen!</German>
-		<Italian>Congratulazioni, la fiorente città %s1Civ_Name ora contiene cinquanta milioni di abitanti! Le grandi città ospitano più cittadini e specialisti, aumentando la produttività!</Italian>
+		<Italian>[BOLD]Congratulazioni![NEWLINE][NEWLINE]La fiorente città di [COLOR_HIGHLIGHT_TEXT]%s1Civ_Name[COLOR_REVERT] ora conta [COLOR_HIGHLIGHT_TEXT]50 milioni[COLOR_REVERT] di abitanti![NEWLINE][NEWLINE]Le grandi città possono ospitare [COLOR_HIGHLIGHT_TEXT]più cittadini specialisti[COLOR_REVERT], aumentando la produttività![\BOLD]</Italian> <!-- Popup when reaching the feat in the text -->
 		<Spanish>Felicidades, el próspero %s1Civ_Name ya alberga a cincuenta millones de almas. Unas mayores ciudades permiten que haya más habitantes y especialistas, lo que aumenta a su vez la productividad.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -7570,7 +7571,7 @@
 		<English>Congratulations, the burgeoning %s1Civ_Name now holds Five Million souls! Larger cities allow more citizens and specialists, increasing our productivity!</English>
 		<French>Félicitations, la civilisation de l'%s1Civ_Name est en plein essor et compte désormais cinq millions d'âmes ! Les grandes villes peuvent abriter plus de citoyens et de spécialistes, ce qui augmente leur productivité !</French>
 		<German>Herzlichen Glückwunsch! In der expandierenden Zivilisation %s1Civ_Name leben jetzt fünf Millionen Einwohner! Größere Städte bieten Platz für mehr Bürger und Spezialisten, die wiederum unsere Produktivität erhöhen!</German>
-		<Italian>Congratulazioni, la fiorente città %s1Civ_Name ora contiene cinque milioni di abitanti! Le grandi città ospitano più cittadini e specialisti, aumentando la produttività!</Italian>
+		<Italian>[BOLD]Congratulazioni![NEWLINE][NEWLINE]La fiorente città di [COLOR_HIGHLIGHT_TEXT]%s1Civ_Name[COLOR_REVERT] ora conta [COLOR_HIGHLIGHT_TEXT]5 milioni[COLOR_REVERT] di abitanti![NEWLINE][NEWLINE]Le grandi città possono ospitare [COLOR_HIGHLIGHT_TEXT]più cittadini specialisti[COLOR_REVERT], aumentando la produttività![\BOLD]</Italian> <!-- Popup when reaching the feat in the text -->
 		<Spanish>Felicidades, el próspero %s1Civ_Name ya alberga a cinco millones de almas. Unas mayores ciudades permiten que haya más habitantes y especialistas, lo que aumenta a su vez la productividad.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -7578,7 +7579,7 @@
 		<English>What's the Big Picture?</English>
 		<French>Alors, comment ça se présente ?</French>
 		<German>Wie ist die Lage?</German>
-		<Italian>Qual è il grande piano?</Italian>
+		<Italian>[COLOR_BLACK]Portami al piano generale![COLOR_REVERT]</Italian> <!-- uncover the resource dear -->
 		<Spanish>¿Cuál es la visión de conjunto?</Spanish>
 	</TEXT>
 	<TEXT>
@@ -7586,7 +7587,7 @@
 		<English>Very well, carry on then...</English>
 		<French>Très bien, continuez...</French>
 		<German>Na schön, weiter geht's ...</German>
-		<Italian>Molto bene, continua pure...</Italian>
+		<Italian>[COLOR_BLACK]Molto bene, adesso continuiamo pure...[COLOR_REVERT]</Italian> <!-- uncover the resource dear -->
 		<Spanish>Muy bien, seguid así...</Spanish>
 	</TEXT>
 	<TEXT>
@@ -7594,7 +7595,7 @@
 		<English>Congratulations! You have gained access to [COLOR_HIGHLIGHT_TEXT]Copper[COLOR_REVERT], an important strategic resource! Cities with access to [COLOR_HIGHLIGHT_TEXT]Copper[COLOR_REVERT] can build strong melee units.</English>
 		<French>Félicitations ! Vous venez de trouver du [COLOR_HIGHLIGHT_TEXT]cuivre[COLOR_REVERT], une ressource stratégique essentielle ! Les villes ayant accès au [COLOR_HIGHLIGHT_TEXT]cuivre[COLOR_REVERT] peuvent construire de puissantes unités de combat rapproché.</French>
 		<German>Herzlichen Glückwunsch! Ihr verfügt nun über die wichtige strategische Ressource [COLOR_HIGHLIGHT_TEXT]Kupfer[COLOR_REVERT]! Städte mit Zugang zu [COLOR_HIGHLIGHT_TEXT]Kupfervorkommen[COLOR_REVERT] können starke Nahkampfeinheiten errichten.</German>
-		<Italian>Congratulazioni, hai ottenuto l'accesso alla risorsa [COLOR_HIGHLIGHT_TEXT]rame[COLOR_REVERT], un'importante risorsa strategica! Le città con accesso al [COLOR_HIGHLIGHT_TEXT]rame[COLOR_REVERT] possono realizzare delle potenti unità da mischia.</Italian>
+		<Italian>[BOLD]Congratulazioni![NEWLINE][NEWLINE]Hai ottenuto l'accesso alla risorsa [COLOR_HIGHLIGHT_TEXT]rame[COLOR_REVERT], un'importante risorsa strategica![NEWLINE][NEWLINE]Questa risorsa permette alle città che ne hanno accesso di realizzare delle potenti unità da corpo a corpo.[\BOLD]</Italian> <!-- popup message after uncovering the resource -->
 		<Spanish>¡Felicidades! Habéis conseguido acceder al [COLOR_HIGHLIGHT_TEXT]Cobre[COLOR_REVERT], un importante recurso estratégico. Las ciudades con acceso a él pueden crear fuertes unidades de cuerpo a cuerpo.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -7602,7 +7603,7 @@
 		<English>Congratulations! You now possess the knowledge required to found [COLOR_HIGHLIGHT_TEXT]%s1_corporation[COLOR_REVERT]. You may use a [COLOR_UNIT_TEXT]%s2_unit[COLOR_REVERT] to build the Headquarters in any city with access to [COLOR_HIGHLIGHT_TEXT]%s3_bonus_list[COLOR_REVERT].</English>
 		<French>Félicitations ! Vous possédez maintenant le savoir nécessaire pour fonder la société commerciale [COLOR_HIGHLIGHT_TEXT]%s1_corporation[COLOR_REVERT]. Vous pouvez utiliser une unité de [COLOR_UNIT_TEXT]%s2_unit[COLOR_REVERT] pour construire son siège social dans n'importe quelle ville ayant accès à la ressource [COLOR_HIGHLIGHT_TEXT]%s3_bonus_list[COLOR_REVERT].</French>
 		<German>Glückwunsch! Sie verfügen jetzt über das Wissen, um die Kapitalgesellschaft [COLOR_HIGHLIGHT_TEXT]%s1_corporation[COLOR_REVERT] zu gründen. Sie können eine Einheit [COLOR_UNIT_TEXT]%s2_unit[COLOR_REVERT] einsetzen, um den Unternehmenssitz in einer Stadt zu errichten, die Zugang zum Bonusgut [COLOR_HIGHLIGHT_TEXT]%s3_bonus_list[COLOR_REVERT] hat.</German>
-		<Italian>Congratulazioni! Ora sei in possesso della conoscenza richiesta per fondare [COLOR_HIGHLIGHT_TEXT]%s1_corporation[COLOR_REVERT]. Puoi usare un'unità [COLOR_UNIT_TEXT]%s2_unit[COLOR_REVERT] per costruire i quartieri generali in qualunque città con accesso a [COLOR_HIGHLIGHT_TEXT]%s3_bonus_list[COLOR_REVERT].</Italian>
+		<Italian>[BOLD]Congratulazioni![NEWLINE][NEWLINE]La tua civiltà è ora in possesso della conoscenza richiesta per fondare la corporazione [COLOR_HIGHLIGHT_TEXT]%s1_corporation[COLOR_REVERT].[NEWLINE][NEWLINE]È possibile usare un'unità [COLOR_HIGHLIGHT_TEXT]%s2_unit[COLOR_REVERT] per costruire il quartier generale in qualunque città che abbia accesso a [COLOR_HIGHLIGHT_TEXT]%s3_bonus_list[COLOR_REVERT].[\BOLD]</Italian> <!-- Popup when reaching the feat in the text -->
 		<Spanish>¡Felicidades! Ya tenéis el conocimiento necesario para fundar la [COLOR_HIGHLIGHT_TEXT]%s1_corporation[COLOR_REVERT]. Podéis usar [NUM2:un:una:unos:unas] [COLOR_UNIT_TEXT]%s2_unit[COLOR_REVERT] para construir la sede en cualquier ciudad con acceso a [COLOR_HIGHLIGHT_TEXT]%s3_bonus_list[COLOR_REVERT].</Spanish>
 	</TEXT>
 	<TEXT>
@@ -7610,7 +7611,7 @@
 		<English>Congratulations! You have gained access to your first food resource ([COLOR_HIGHLIGHT_TEXT]%s1Food_Name[COLOR_REVERT])! This resource will raise the health level in all cities connected to your Capital, encouraging faster growth.</English>
 		<French>Félicitations ! Vous venez de trouver votre première source de nourriture ([COLOR_HIGHLIGHT_TEXT]%s1Food_Name[COLOR_REVERT]) ! Cette ressource améliorera le niveau de santé de toutes les villes reliées à votre capitale et favorisera leur croissance.</French>
 		<German>Herzlichen Glückwunsch! Ihr verfügt nun über Eure erste Nahrungsressource ([COLOR_HIGHLIGHT_TEXT]%s1Food_Name[COLOR_REVERT])! Diese Ressource steigert die Gesundheit in allen Städten, die mit Eurer Hauptstadt verbunden sind, und ermöglicht so ein schnelleres Wachstum.</German>
-		<Italian>Congratulazioni, hai ottenuto l'accesso alla risorsa di cibo ([COLOR_HIGHLIGHT_TEXT]%s1Food_Name[COLOR_REVERT])! Questa risorsa aumenterà la salute in tutte le città collegate alla tua capitale, rendendo i cittadini più facili da gestire.</Italian>
+		<Italian>[BOLD]Congratulazioni![NEWLINE][NEWLINE]Hai ottenuto l'accesso alla risorsa [COLOR_HIGHLIGHT_TEXT]%s1Food_Name[COLOR_REVERT]![NEWLINE][NEWLINE]Questa risorsa aumenterà la [COLOR_HIGHLIGHT_TEXT]salute[COLOR_REVERT] in tutte le città collegate alla tua capitale, aiutando una crescita più rapida.[\BOLD]</Italian> <!-- popup message after uncovering the resource -->
 		<Spanish>¡Felicidades! Habéis conseguido acceder a vuestro primer recurso de Alimentos, [NUM1:el:la:los:las] [COLOR_HIGHLIGHT_TEXT]%s1Food_Name[COLOR_REVERT]. Éste subirá el nivel de salud en todas las ciudades comunicadas con la capital, lo que propiciará un crecimiento más rápido.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -7618,7 +7619,7 @@
 		<English>Congratulations, the burgeoning %s1Civ_Name now holds Half a Million souls! Larger cities allow more citizens and specialists, increasing our productivity!</English>
 		<French>Félicitations, la civilisation de l'%s1Civ_Name est en plein essor et compte désormais un demi million d'âmes ! Les grandes villes peuvent abriter plus de citoyens et de spécialistes, ce qui augmente leur productivité !</French>
 		<German>Herzlichen Glückwunsch! In der expandierenden Zivilisation %s1Civ_Name leben jetzt eine halbe Million Einwohner! Größere Städte bieten Platz für mehr Bürger und Spezialisten, die wiederum unsere Produktivität erhöhen!</German>
-		<Italian>Congratulazioni, la fiorente città %s1Civ_Name ora contiene mezzo milione di abitanti! Le grandi città ospitano più cittadini e specialisti, aumentando la produttività!</Italian>
+		<Italian>[BOLD]Congratulazioni![NEWLINE][NEWLINE]La fiorente città di [COLOR_HIGHLIGHT_TEXT]%s1Civ_Name[COLOR_REVERT] ora conta [COLOR_HIGHLIGHT_TEXT]mezzo milione[COLOR_REVERT] di abitanti![NEWLINE][NEWLINE]Le grandi città possono ospitare [COLOR_HIGHLIGHT_TEXT]più cittadini specialisti[COLOR_REVERT], aumentando la produttività![\BOLD]</Italian> <!-- Popup when reaching the feat in the text -->
 		<Spanish>Felicidades, el próspero %s1Civ_Name ya alberga a medio millón de almas. Unas mayores ciudades permiten que haya más habitantes y especialistas, lo que aumenta a su vez la productividad.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -7626,7 +7627,7 @@
 		<English>Congratulations! You have gained access to [COLOR_HIGHLIGHT_TEXT]Horses[COLOR_REVERT], an important strategic resource! Cities with access to [COLOR_HIGHLIGHT_TEXT]Horses[COLOR_REVERT] can build fast mounted units.</English>
 		<French>Félicitations ! Vous venez de trouver des [COLOR_HIGHLIGHT_TEXT]chevaux[COLOR_REVERT], une ressource stratégique essentielle ! Les villes disposant de [COLOR_HIGHLIGHT_TEXT]chevaux[COLOR_REVERT] peuvent construire de puissantes unités montées.</French>
 		<German>Herzlichen Glückwunsch! Ihr verfügt nun über die wichtige strategische Ressource [COLOR_HIGHLIGHT_TEXT]Pferde[COLOR_REVERT]! Städte mit Zugang zu [COLOR_HIGHLIGHT_TEXT]Pferdevorkommen[COLOR_REVERT] können schnelle berittene Einheiten errichten.</German>
-		<Italian>Congratulazioni, hai ottenuto l'accesso alla risorsa [COLOR_HIGHLIGHT_TEXT]cavalli[COLOR_REVERT], un'importante risorsa strategica! Le città con accesso ai [COLOR_HIGHLIGHT_TEXT]cavalli[COLOR_REVERT] possono realizzare delle veloci unità montate.</Italian>
+		<Italian>[BOLD]Congratulazioni![NEWLINE][NEWLINE]Hai ottenuto l'accesso alla risorsa [COLOR_HIGHLIGHT_TEXT]cavallo[COLOR_REVERT], un'importante risorsa strategica![NEWLINE][NEWLINE]Questa risorsa permette alle città che ne hanno accesso di addestrare delle veloci unità da cavalcatura.[\BOLD]</Italian> <!-- popup message after uncovering the resource -->
 		<Spanish>¡Felicidades! Habéis conseguido acceder a los [COLOR_HIGHLIGHT_TEXT]Caballos[COLOR_REVERT], un importante recurso estratégico. Las ciudades con acceso a ellos pueden crear rápidas unidades montadas.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -7634,7 +7635,7 @@
 		<English>Congratulations! You have gained access to [COLOR_HIGHLIGHT_TEXT]Iron[COLOR_REVERT], an important strategic resource! Cities with access to [COLOR_HIGHLIGHT_TEXT]Iron[COLOR_REVERT] can build strong melee units.</English>
 		<French>Félicitations ! Vous venez de trouver du [COLOR_HIGHLIGHT_TEXT]fer[COLOR_REVERT], une ressource stratégique essentielle ! Les villes ayant accès à du [COLOR_HIGHLIGHT_TEXT]fer[COLOR_REVERT] peuvent construire de puissantes unités de combat rapproché.</French>
 		<German>Herzlichen Glückwunsch! Ihr verfügt nun über die wichtige strategische Ressource [COLOR_HIGHLIGHT_TEXT]Eisen[COLOR_REVERT]! Städte mit Zugang zu [COLOR_HIGHLIGHT_TEXT]Eisenvorkommen[COLOR_REVERT] können starke Nahkampfeinheiten errichten.</German>
-		<Italian>Congratulazioni, hai ottenuto l'accesso alla risorsa [COLOR_HIGHLIGHT_TEXT]ferro[COLOR_REVERT], un'importante risorsa strategica! Le città con accesso al [COLOR_HIGHLIGHT_TEXT]ferro[COLOR_REVERT] possono realizzare delle potenti unità da mischia.</Italian>
+		<Italian>[BOLD]Congratulazioni![NEWLINE][NEWLINE]Hai ottenuto l'accesso alla risorsa [COLOR_HIGHLIGHT_TEXT]ferro[COLOR_REVERT], un'importante risorsa strategica![NEWLINE][NEWLINE]Questa risorsa permette alle città che ne hanno accesso di addestrare potenti unità da corpo a corpo.[\BOLD]</Italian> <!-- popup message after uncovering the resource -->
 		<Spanish>¡Felicidades! Habéis conseguido acceder al [COLOR_HIGHLIGHT_TEXT]Hierro[COLOR_REVERT], un importante recurso estratégico. Las ciudades con acceso a él pueden crear fuertes unidades de cuerpo a cuerpo.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -7642,7 +7643,7 @@
 		<English>Congratulations! You have gained access to your first luxury resource ([COLOR_HIGHLIGHT_TEXT]%s1Luxury_Name[COLOR_REVERT])! This resource will create happiness in all cities connected to your Capital, making your citizens easier to manage.</English>
 		<French>Félicitations ! Vous venez de trouver votre première ressource de luxe ([COLOR_HIGHLIGHT_TEXT]%s1Luxury_Name[COLOR_REVERT]) ! Cette ressource génèrera du bonheur dans toutes les villes reliées à votre capitale et vos citoyens seront ainsi plus faciles à gérer.</French>
 		<German>Herzlichen Glückwunsch! Ihr verfügt nun über Euer erstes Luxusgut ([COLOR_HIGHLIGHT_TEXT]%s1Luxury_Name[COLOR_REVERT])! Diese Ressource erzeugt in allen Städten, die mit Eurer Hauptstadt verbunden sind, Zufriedenheit und erleichtert Euch die "Verwaltung" Eurer Bürger.</German>
-		<Italian>Congratulazioni, hai ottenuto l'accesso alla risorsa di lusso ([COLOR_HIGHLIGHT_TEXT]%s1Luxury_Name[COLOR_REVERT])! Questa risorsa genererà felicità in tutte le città collegate alla tua capitale, rendendo i cittadini più facili da gestire.</Italian>
+		<Italian>[BOLD]Congratulazioni![NEWLINE][NEWLINE]Hai ottenuto l'accesso alla risorsa di lusso [COLOR_HIGHLIGHT_TEXT]]%s1Luxury_Name[COLOR_REVERT], un'importante risorsa strategica![NEWLINE][NEWLINE]Questa risorsa genera [COLOR_HIGHLIGHT_TEXT]felicità[COLOR_REVERT] in tutte le città collegate alla capitale, rendendo i cittadini più facili da gestire.[\BOLD]</Italian> <!-- popup message after uncovering Dear reeurce -->
 		<Spanish>¡Felicidades! Habéis conseguido acceder a vuestro primer recurso de lujo, [NUM1:el:la:los:las] [COLOR_HIGHLIGHT_TEXT]%s1Luxury_Name[COLOR_REVERT]. Éste llevará Felicidad a todas las ciudades comunicadas con la capital, de modo que los ciudadanos serán más manejables.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -7650,7 +7651,7 @@
 		<English>Congratulations, you have completed your first National Wonder ([COLOR_BUILDING_TEXT]%s1Building_Name[COLOR_REVERT]) in %s2City_Name! These powerful buildings are useful for specializing your cities - it is wise to plan ahead, though, as only two National Wonders can be built in each one.</English>
 		<French>Félicitations, vous venez de construire votre première merveille ([COLOR_BUILDING_TEXT]%s1Building_Name[COLOR_REVERT]) à %s2City_Name ! Ces puissants édifices permettent de spécialiser vos villes. Toutefois, il faut bien planifier leur construction, le nombre de merveilles nationales étant limité à 2 par ville.</French>
 		<German>Herzlichen Glückwunsch! Ihr habt Euer erstes Nationales Wunder ([COLOR_BUILDING_TEXT]%s1Building_Name[COLOR_REVERT]) in %s2City_Name fertig gestellt! Diese mächtigen Gebäude eignen sich für die Spezialisierung Eurer Städte - Bauvorhaben dieser Art sollten allerdings im Voraus geplant werden, da in jeder Stadt nur zwei Nationale Wunder errichtet werden können.</German>
-		<Italian>Congratulazioni, hai completato la tua prima Meraviglia Nazionale ([COLOR_BUILDING_TEXT]%s1Building_Name[COLOR_REVERT]) a %s2City_Name! Questi potenti edifici sono particolarmente indicati per specializzare le tue città. Tuttavia, dovrai progettare con attenzione la loro costruzione, poiché ogni città può contenere soltanto due Meraviglie Nazionali.</Italian>
+		<Italian>[BOLD]Congratulazioni![NEWLINE][NEWLINE]Hai completato la tua prima meraviglia nazionale [COLOR_BUILDING_TEXT]%s1Building_Name[COLOR_REVERT] nella città di %s2City_Name![NEWLINE][NEWLINE]Questi potenti edifici sono particolarmente indicati per [COLOR_HIGHLIGHT_TEXT]specializzare[COLOR_REVERT] le tue città (dovrai progettare con attenzione la loro costruzione, poiché ogni città può costruirne soltanto [COLOR_HIGHLIGHT_TEXT]due[COLOR_REVERT].[\BOLD]</Italian> <!-- Popup when reaching the feat in the text -->
 		<Spanish>Felicidades, habéis completado en %s2City_Name vuestra primera maravilla nacional, [COLOR_BUILDING_TEXT]%s1Unit_Name[COLOR_REVERT]. Estos poderosos edificios son útiles para especializar las ciudades. Sin embargo, es aconsejable planearlo antes, ya que solo se pueden construir dos maravillas nacionales en cada ciudad.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -7658,7 +7659,7 @@
 		<English>Congratulations! You have connected your first city (%s1City_Name) with your Capital. Because the cities are connected, they will share resources and increase their commerce.</English>
 		<French>Félicitations ! Vous venez de relier une première ville (%s1City_Name) à votre capitale. Elles partagent désormais les mêmes ressources et leur production de commerce augmente.</French>
 		<German>Herzlichen Glückwunsch! Ihr habt Eure erste Stadt (%s1City_Name) mit Eurer Hauptstadt verbunden. Verbundene Städte nutzen ihre Ressourcenvorräte gemeinsam und steigern somit ihr Wirtschaftseinkommen.</German>
-		<Italian>Congratulazioni, hai collegato la tua città (%s1City_Name) con la capitale. Ora che le città sono collegate, condivideranno le proprie risorse e aumenteranno il commercio.</Italian>
+		<Italian>[BOLD]Congratulazioni![NEWLINE][NEWLINE]Hai collegato la tua città di [COLOR_HIGHLIGHT_TEXT]%s1City_Name[COLOR_REVERT] con la capitale.[NEWLINE][NEWLINE]Quando due città sono collegate condividono le proprie risorse e aumentano il commercio.[\BOLD]</Italian> <!-- Popup when reaching the feat in the text -->
 		<Spanish>¡Felicidades! Habéis comunicado vuestra primera ciudad, %s1City_Name, con la capital. Cuando las ciudades están comunicadas comparten recursos y ven incrementado su comercio.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -7666,7 +7667,7 @@
 		<English>Congratulations, you have trained your first Archery Unit ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) in %s2City_Name! These units get a special first-strike ability that allows them a chance to hit their opponent before regular combat begins.</English>
 		<French>Félicitations, vous venez d'entraîner votre première unité d'archers ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) à %s2City_Name ! Ces unités bénéficient d'une première attaque qui leur laisse une chance de toucher leur adversaire avant le début du combat.</French>
 		<German>Herzlichen Glückwunsch! Ihr habt Eure erste Bogenschützeneinheit ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) in %s2City_Name errichtet! Diese Einheiten besitzen eine spezielle Erstangriffsfähigkeit, die es ihnen erlaubt, den Gegner bereits anzugreifen, bevor der reguläre Kampf beginnt.</German>
-		<Italian>Congratulazioni, hai realizzato la tua prima unità ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) a %s2City_Name! Queste unità possiedono l'abilità speciale attacco improvviso, che fornisce la possibilità di colpire il nemico prima dell'inizio del combattimento.</Italian>
+		<Italian>[BOLD]Congratulazioni![NEWLINE][NEWLINE]Hai addestrato la tua prima unità arciere [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] nella città di [COLOR_HIGHLIGHT_TEXT]%s2City_Name[COLOR_REVERT]![NEWLINE][NEWLINE]Queste unità possiedono l'abilità speciale [COLOR_HIGHLIGHT_TEXT]primo attacco[COLOR_REVERT] che fornisce la possibilità di colpire il nemico prima dell'inizio del combattimento.[\BOLD]</Italian> <!-- Popup when reaching the feat in the text -->
 		<Spanish>Felicidades, habéis entrenado en %s2City_Name a vuestra primera unidad con proyectiles, [NUM1:un:una:unos:unas] [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]. Estas unidades tienen la capacidad especial de ataque de iniciativa, que les permite intentar alcanzar a sus oponentes antes de que empiece el combate normal.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -7674,7 +7675,7 @@
 		<English>Congratulations, you have trained your first Gunpowder Unit ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) in %s2City_Name! All units whose weaponry is based on gunpowder can ignore man-made city fortifications.</English>
 		<French>Félicitations, vous venez d'entraîner votre première unité équipée d'armes à feu ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) à %s2City_Name ! Toutes les unités équipées d'armes à feu peuvent ignorer les fortifications construites par l'homme.</French>
 		<German>Herzlichen Glückwunsch! Ihr habt Eure erste Schießpulver-Einheit ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) in %s2City_Name errichtet! Für alle Einheiten mit Schießpulverbewaffnung sind von Menschenhand errichtete Stadtbefestigungen kein Problem.</German>
-		<Italian>Congratulazioni, hai realizzato la tua prima unità con armi da fuoco ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) a %s2City_Name! Tutte le unità con armi da fuoco possono ignorare le fortificazioni artificiali delle città.</Italian>
+		<Italian>[BOLD]Congratulazioni![NEWLINE][NEWLINE]Hai addestrato la tua prima unità con armi da fuoco [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] nella città di [COLOR_HIGHLIGHT_TEXT]%s2City_Name[COLOR_REVERT]![NEWLINE][NEWLINE]Le unità con armi da fuoco possono [COLOR_HIGHLIGHT_TEXT]ignorare le fortificazioni[COLOR_REVERT] costruite dalle altre civiltà.[\BOLD]</Italian> <!-- Popup when reaching the feat in the text -->
 		<Spanish>Felicidades, habéis entrenado en %s2City_Name a vuestra primera unidad con armas de pólvora, [NUM1:un:una:unos:unas] [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]. Las unidades con armamento de pólvora no se ven afectadas por las fortificaciones hechas por el hombre.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -7682,7 +7683,7 @@
 		<English>Congratulations, you have trained your first Helicopter Unit ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) in %s2City_Name! These units can fly over short distances, allowing them to ignore regular terrain costs.</English>
 		<French>Félicitations, vous venez de construire votre premier hélicoptère ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) à %s2City_Name ! Ces unités peuvent voler sur de courtes distances et ignorent les pénalités de terrain.</French>
 		<German>Herzlichen Glückwunsch! Ihr habt Eure erste Hubschraubereinheit ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) in %s2City_Name errichtet! Diese Einheiten fliegen über Kurzstreckendistanzen, ohne die regulären Geländefeldkosten berücksichtigen zu müssen.</German>
-		<Italian>Congratulazioni, hai realizzato la tua prima unità ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) a %s2City_Name! Queste unità possono percorrere in volo brevi distanze, ignorando i costi di movimento del terreno.</Italian>
+		<Italian>[BOLD]Congratulazioni![NEWLINE][NEWLINE]Hai addestrato la tua prima unità elicottero [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] nella città di [COLOR_HIGHLIGHT_TEXT]%s2City_Name[COLOR_REVERT]![NEWLINE][NEWLINE]Queste unità possono [COLOR_HIGHLIGHT_TEXT]volare per brevi distanze[COLOR_REVERT] ignorando i costi di attraversamento del terreno.[\BOLD]</Italian> <!-- Popup when reaching the feat in the text -->
 		<Spanish>Felicidades, habéis entrenado en %s2City_Name a vuestra primera unidad de helicópteros, [NUM1:un:una:unos:unas] [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]. Estas unidades pueden recorrer pequeñas distancias por el aire, de modo que los costes por terreno habituales no les afectan.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -7690,7 +7691,7 @@
 		<English>Congratulations, you have trained your first Melee Unit ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) in %s2City_Name! These units form the backbone of your earliest armies.</English>
 		<French>Félicitations, vous venez d'entraîner votre première unité de combat rapproché ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) à %s2City_Name ! Ces unités sont les piliers de vos premières armées.</French>
 		<German>Herzlichen Glückwunsch! Ihr habt Eure erste Nahkampfeinheit ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) in %s2City_Name errichtet! Diese Einheiten bilden das Rückgrat Eurer frühen Streitmächte.</German>
-		<Italian>Congratulazioni, hai realizzato la tua prima unità da mischia ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) a %s2City_Name! Queste unità sono la spina dorsale del tuo esercito iniziale.</Italian>
+		<Italian>[BOLD]Congratulazioni![NEWLINE][NEWLINE]Hai addestrato la tua prima unità da corpo a corpo [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] nella città di [COLOR_HIGHLIGHT_TEXT]%s2City_Name[COLOR_REVERT]![NEWLINE][NEWLINE]Queste unità sono la [COLOR_HIGHLIGHT_TEXT]spina dorsale[COLOR_REVERT] del tuo esercito iniziale.[\BOLD]</Italian> <!-- Popup when reaching the feat in the text -->
 		<Spanish>Felicidades, habéis entrenado en %s2City_Name a vuestra primera unidad de cuerpo a cuerpo, [NUM1:un:una:unos:unas] [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]. Estas unidades conforman la columna vertebral de vuestros primeros ejércitos.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -7698,7 +7699,7 @@
 		<English>Congratulations, you have trained your first Mounted Unit ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) in %s2City_Name! These units can move farther per turn than regular units, allowing them to wreak havoc behind enemy lines.</English>
 		<French>Félicitations, vous venez d'entraîner votre première unité montée ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) à %s2City_Name ! Ces unités peuvent se déplacer plus loin que les autres unités en un tour de jeu, ce qui leur permet de semer la panique derrière les lignes ennemies.</French>
 		<German>Herzlichen Glückwunsch! Ihr habt Eure erste berittene Einheit ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) in %s2City_Name ausgebildet! Diese Einheiten können sich weiter fortbewegen als reguläre Einheiten und so auch hinter den feindlichen Linien angreifen.</German>
-		<Italian>Congratulazioni, hai realizzato la tua prima unità montata ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) a %s2City_Name! Queste unità dispongono di più punti movimento rispetto alle unità normali e possono quindi seminare il caos dietro le linee nemiche.</Italian>
+		<Italian>[BOLD]Congratulazioni![NEWLINE][NEWLINE]Hai addestrato la tua prima unità da cavalcatura [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] nella città di [COLOR_HIGHLIGHT_TEXT]%s2City_Name[COLOR_REVERT]![NEWLINE][NEWLINE]Queste unità [COLOR_HIGHLIGHT_TEXT]sono più veloci[COLOR_REVERT] rispetto alle unità normali e possono quindi seminare il caos dietro le linee nemiche.[\BOLD]</Italian> <!-- Popup when reaching the feat in the text -->
 		<Spanish>Felicidades, habéis entrenado en %s2City_Name a vuestra primera unidad montada, [NUM1:un:una:unos:unas] [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]. Las unidades de este tipo pueden moverse más por turno que las normales, lo que les permite sembrar el caos tras las líneas enemigas.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -7706,7 +7707,7 @@
 		<English>Congratulations, you have trained your first Naval Unit ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) in %s2City_Name! Protecting coastal cities is a crucial part your national defense. Naval units can also blockade enemy towns, preventing them from working adjacent water tiles.</English>
 		<French>Félicitations, vous venez d'entraîner votre première unité navale ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) à %s2City_Name ! La protection des cases côtières est un élément essentiel de votre défense nationale. Les unités navales peuvent aussi encercler les villes ennemies pour les empêcher d'exploiter leurs ressources côtières.</French>
 		<German>Herzlichen Glückwunsch! Ihr habt Eure erste Marineeinheit ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) in %s2City_Name errichtet! Die Sicherung Eurer Küstenstädte ist ein wichtiger Faktor für die Verteidigungsfähigkeit Eurer Nation. Außerdem können Marineeinheiten feindliche Städte blockieren, so dass sie keine benachbarten Wasser-Geländefelder bearbeiten können.</German>
-		<Italian>Congratulazioni, hai realizzato la tua prima unità navale ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) a %s2City_Name! Proteggere le città costiere è un punto fondamentale della tua difesa nazionale. Le unità navali possono bloccare i paesi nemici, impedendo la lavorazione delle caselle d'acqua adiacenti.</Italian>
+		<Italian>[BOLD]Congratulazioni![NEWLINE][NEWLINE]Hai addestrato la tua prima unità navale [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] nella città di [COLOR_HIGHLIGHT_TEXT]%s2City_Name[COLOR_REVERT]![NEWLINE][NEWLINE]Queste unità [COLOR_HIGHLIGHT_TEXT]proteggono le città costiere[COLOR_REVERT] e possono creare embarghi verso le città nemiche, impedendogli di lavorare le caselle d'acqua adiacenti.[\BOLD]</Italian> <!-- Popup when reaching the feat in the text -->
 		<Spanish>Felicidades, habéis entrenado en %s2City_Name a vuestra primera unidad naval, [NUM1:un:una:unos:unas] [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]. Proteger las ciudades costeras es una parte crucial de la defensa nacional. Las unidades navales también pueden someter a bloqueo a las ciudades enemigas, impidiéndoles faenar en las casillas de agua adyacentes.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -7714,7 +7715,7 @@
 		<English>Congratulations, you have trained your first Siege Unit ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) in %s2City_Name! These units cause collateral damage to the tiles they attack, damaging multiple units at once.</English>
 		<French>Félicitations, vous venez d'entraîner votre première unité de siège ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) à %s2City_Name ! Ces unités provoquent des dommages collatéraux sur les cases qu'elles attaquent, touchant ainsi plusieurs unités.</French>
 		<German>Herzlichen Glückwunsch! Ihr habt Eure erste Belagerungseinheit ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) in %s2City_Name errichtet! Diese Einheiten verursachen auf den Geländefeldern, auf denen sie angreifen, Kollateralschäden und verwunden mehrere feindliche Einheiten gleichzeitig.</German>
-		<Italian>Congratulazioni, hai realizzato la tua prima unità d'assedio ([COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]) a %s2City_Name! Queste unità infliggono danni collaterali nelle caselle attaccate, danneggiando più nemici con un colpo.</Italian>
+		<Italian>[BOLD]Congratulazioni![NEWLINE][NEWLINE]Hai addestrato la tua prima unità d'assedio [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] nella città di [COLOR_HIGHLIGHT_TEXT]%s2City_Name[COLOR_REVERT]![NEWLINE][NEWLINE]Queste unità [COLOR_HIGHLIGHT_TEXT]infliggono danni collaterali[COLOR_REVERT] alle caselle attaccate, danneggiando più nemici con un colpo solo.[\BOLD]</Italian> <!-- Popup when reaching the feat in the text -->
 		<Spanish>Felicidades, habéis entrenado en %s2City_Name a vuestra primera unidad de asedio, [NUM1:un:una:unos:unas] [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT]. Estas unidades pueden causar daños colaterales en las casillas que ataquen y alcanzar así a varios enemigos a la vez.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -7722,7 +7723,7 @@
 		<English>Congratulations, you have trained your first [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] in %s2City_Name! The nationality of this unit is invisible to your rivals, so you may use it to attack their ships without having to declare war. You may also blockade and plunder rival trade routes without having to be at war.</English>
 		<French>Félicitations ! Vous avez entraîné votre première unité de [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] dans la ville : %s2City_Name ! La nationalité de cette unité est invisible à vos rivaux, ce qui vous permet de l'utiliser pour attaquer leurs navires sans avoir à déclarer la guerre. Vous pouvez aussi bloquer et piller les routes commerciales rivales sans avoir à entrer en guerre.</French>
 		<German>Glückwunsch, Sie haben Ihre erste Einheit [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] in %s2City_Name ausgebildet! Die Nationalität dieser Einheit ist für Ihre Gegner unsichtbar, Sie können mit dieser Einheit also gegnerische Schiffe angreifen, ohne ihnen den Krieg zu erklären. Sie können auch gegnerische Handelswege blockieren und plündern, ohne Krieg zu führen.</German>
-		<Italian>Congratulazioni, hai addestrato la tua prima unità [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] in %s2City_Name! La nazionalità di questa unità non sarà visibile ai nemici, il che significa che potrai usarla per attaccare le loro navi senza bisogno di dichiarare guerra. Allo stesso modo, potrai anche stringere d'assedio e saccheggiare le rotte commerciali nemiche senza necessità di essere in guerra.</Italian>
+		<Italian>[BOLD]Congratulazioni![NEWLINE][NEWLINE]Hai addestrato la tua prima unità [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] nella città di [COLOR_HIGHLIGHT_TEXT]%s2City_Name[COLOR_REVERT]![NEWLINE][NEWLINE]Queste unità hanno la [COLOR_HIGHLIGHT_TEXT]nazionalità nascosta[COLOR_REVERT] il che significa che possono attaccare navi nemiche senza bisogno di dichiarare guerra.[NEWLINE][NEWLINE]Allo stesso modo potranno [COLOR_HIGHLIGHT_TEXT]istituire embarghi[COLOR_REVERT] o [COLOR_HIGHLIGHT_TEXT]saccheggiare le rotte commerciali[COLOR_REVERT] nemiche senza necessità di essere in guerra.[\BOLD]</Italian> <!-- Popup when reaching the feat in the text -->
 		<Spanish>¡Felicidades! Habéis entrenado a [NUM1:vuestro primer:vuestra primera:vuestros primeros:vuestras primeras] [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] en %s2City_Name. Los pabellones de dichas unidades son invisibles para vuestros rivales, por lo que podéis usarlas para atacar a sus barcos sin declarar la guerra. También podéis bloquear y saquear las rutas comerciales rivales sin tener que estar en guerra.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -7730,7 +7731,7 @@
 		<English>Congratulations, you have trained your first [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] in %s2City_Name! This unit is invisible to other players, which allows you to enter into their territory to gather intelligence and to perform Espionage Missions. Be aware, however, that even though it cannot be seen, this unit still has a chance to get caught when operating in rival territory, possibly revealing its identity and causing tension in your international relations.</English>
 		<French>Félicitations ! Vous avez entraîné votre première unité de [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] dans la ville : %s2City_Name ! Cette unité est invisible aux autres joueurs, ce qui vous permet de pénétrer dans leur territoire pour récolter des informations et exécuter des missions d'espionnage. Mais attention, même si elle ne peut être vue, cette unité risque néanmoins de se faire attraper lorsqu'elle opère en territoire ennemi, risquant alors de révéler son identité et de causer des tensions dans vos relations internationales.</French>
 		<German>Glückwunsch, Sie haben Ihre erste Einheit [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] in %s2City_Name ausgebildet! Da diese Einheit für die anderen Spieler unsichtbar ist, können Sie mit ihr in gegnerische Gebiete vordringen, um Geheiminformationen zu sammeln und Spionagemissionen auszuführen. Vergessen Sie jedoch nicht, dass diese Einheiten zwar nicht sichtbar sind, aber dennoch bei Einsätzen in gegnerischen Gebieten gefasst werden können und dann möglicherweise ihre Identität preisgeben, was zu Spannungen in Ihren internationalen Beziehungen führen würde.</German>
-		<Italian>Congratulazioni, hai addestrato la tua prima unità [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] in %s2City_Name! Questa unità non è visibile agli altri giocatori, il che ti permetterà di entrare nel loro territorio per raccogliere informazioni e svolgere missioni di spionaggio. Stai attento, tuttavia, perché anche se non può essere vista, quest'unità può essere catturata quando opera in territorio nemico, con il rischio che riveli la sua identità e causi quindi tensione nelle relazioni diplomatiche.</Italian>
+		<Italian>[BOLD]Congratulazioni![NEWLINE][NEWLINE]Hai addestrato la tua prima unità [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] nella città di [COLOR_HIGHLIGHT_TEXT]%s2City_Name[COLOR_REVERT]![NEWLINE][NEWLINE]Queste unità [COLOR_HIGHLIGHT_TEXT]non sono visibili[COLOR_REVERT] alle altre civiltà, il che permetterà loro di entrare in territorio nemico per raccogliere informazioni e svolgere missioni di spionaggio.[NEWLINE][NEWLINE]Le unità possono comunque [COLOR_HIGHLIGHT_TEXT]essere catturate[COLOR_REVERT] quando operano in territorio nemico, con il rischio che rivelino la loro identità e causino quindi tensione nelle relazioni diplomatiche.[\BOLD]</Italian> <!-- Popup when reaching the feat in the text -->
 		<Spanish>¡Felicidades! Habéis entrenado a [NUM1:vuestro primer:vuestra primera:vuestros primeros:vuestras primeras] [COLOR_UNIT_TEXT]%s1Unit_Name[COLOR_REVERT] en %s2City_Name. Los pabellones de dichas unidades son invisibles para vuestros rivales, cosa que os permite entrar en su territorio para recoger información y realizar misiones de espionaje. Sin embargo, id con cuidado: aunque no se la pueda detectar, esta unidad todavía puede ser apresada mientras opera en territorio rival, con el riesgo de que revele su identidad y la consecuente tensión que crearía en vuestras relaciones internacionales.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -8079,7 +8080,7 @@
 		<English>Move To (%d1_NumTurns)</English>
 		<French>Aller à (%d1_NumTurns)</French>
 		<German>Fortbewegen nach (%d1_NumTurns)</German>
-		<Italian>Muovi a (%d1_NumTurns)</Italian>
+		<Italian>Muovi qui ([COLOR_HIGHLIGHT_TEXT]%d1_NumTurns[COLOR_REVERT] [NUM1:turno:turni])</Italian> <!-- right button on the map to move a unit -->
 		<Spanish>Mover a (%d1_Num [NUM1:turno:turnos)</Spanish>
 	</TEXT>
 	<TEXT>
@@ -8578,7 +8579,7 @@
 		<English>Score</English>
 		<French>Score</French>
 		<German>Punktestand</German>
-		<Italian>Punti</Italian>
+		<Italian>Punteggio</Italian> <!-- info screen graph tab -->
 		<Spanish>Puntuación</Spanish>
 	</TEXT>
 	<TEXT>
@@ -9591,7 +9592,7 @@
 		<English>Entire History</English>
 		<French>Toute l'histoire</French>
 		<German>Ges. Geschichte</German>
-		<Italian>Intera storia</Italian>
+		<Italian>Intera storia</Italian> <!-- Info screen title -->
 		<Spanish>Toda la historia</Spanish>
 	</TEXT>
 	<TEXT>
@@ -9599,7 +9600,7 @@
 		<English>GRAPH</English>
 		<French>GRAPHIQUE</French>
 		<German>DIAGRAMM</German>
-		<Italian>Grafici</Italian>
+		<Italian>Grafici</Italian> <!-- Info screen title -->
 		<Spanish>GRÁFICA</Spanish>
 	</TEXT>
 	<TEXT>
@@ -9607,7 +9608,7 @@
 		<English>Rival Best</English>
 		<French>Meilleur rival</French>
 		<German>Besten herausfordern</German>
-		<Italian>Migliore rivale</Italian>
+		<Italian>Migliore rivale</Italian> <!-- Info screen title -->
 		<Spanish>Mejor rival</Spanish>
 	</TEXT>
 	<TEXT>
@@ -9615,7 +9616,7 @@
 		<English>Rival Worst</English>
 		<French>Pire rival</French>
 		<German>Schlechtesten herausfordern</German>
-		<Italian>Peggiore rivale</Italian>
+		<Italian>Peggiore rivale</Italian> <!-- Info screen title -->
 		<Spanish>Peor rival</Spanish>
 	</TEXT>
 	<TEXT>
@@ -9623,7 +9624,7 @@
 		<English>Info Screen</English>
 		<French>Ecran d'informations</French>
 		<German>Info-Bildschirm</German>
-		<Italian>Statistiche</Italian>
+		<Italian>Statistiche</Italian> <!-- Info screen title -->
 		<Spanish>Pantalla de información</Spanish>
 	</TEXT>
 	<TEXT>
@@ -9631,7 +9632,7 @@
 		<English>Built</English>
 		<French>Constructions</French>
 		<German>Errichtet</German>
-		<Italian>Realizzati</Italian>
+		<Italian>Totale</Italian> <!-- info screen unit and building tab -->
 		<Spanish>Construido</Spanish>
 	</TEXT>
 	<TEXT>
@@ -9639,7 +9640,7 @@
 		<English>Cities Built</English>
 		<French>Villes fondées</French>
 		<German>Gegründete Städte</German>
-		<Italian>Città costruite</Italian>
+		<Italian>Città fondate::</Italian> <!-- info screen unit and building tab -->
 		<Spanish>Ciudades construidas</Spanish>
 	</TEXT>
 	<TEXT>
@@ -9647,7 +9648,7 @@
 		<English>Cities Razed</English>
 		<French>Villes rasées</French>
 		<German>Vernichtete Städte</German>
-		<Italian>Città distrutte</Italian>
+		<Italian>Città rase al suolo:</Italian> <!-- info screen unit and building tab -->
 		<Spanish>Ciudades arrasadas</Spanish>
 	</TEXT>
 	<TEXT>
@@ -9655,7 +9656,7 @@
 		<English>Killed</English>
 		<French>Morts</French>
 		<German>Gefallene</German>
-		<Italian>Uccisi</Italian>
+		<Italian>Uccisi</Italian> <!-- info screen unit and building tab -->
 		<Spanish>Bajas</Spanish>
 	</TEXT>
 	<TEXT>
@@ -9663,7 +9664,7 @@
 		<English>Lost</English>
 		<French>Pertes</French>
 		<German>Verluste</German>
-		<Italian>Persi</Italian>
+		<Italian>Persi</Italian> <!-- info screen unit and building tab -->
 		<Spanish>Pérdidas</Spanish>
 	</TEXT>
 	<TEXT>
@@ -9687,7 +9688,7 @@
 		<English>Time Played</English>
 		<French>Temps de jeu</French>
 		<German>Bisherige Spieldauer</German>
-		<Italian>Tempo di gioco</Italian>
+		<Italian>Tempo di gioco:</Italian> <!-- info screen unit and building tab -->
 		<Spanish>Tiempo jugado</Spanish>
 	</TEXT>
 	<TEXT>
@@ -9972,7 +9973,7 @@
 		<English>Nuke Mode</English>
 		<French>Nucléaire</French>
 		<German>Atomraketenmodus</German>
-		<Italian>Bomba nucleare</Italian>
+		<Italian>Bomba atomica</Italian>
 		<Spanish>Modo Lanzar arma nuclear</Spanish>
 	</TEXT>
 	<TEXT>
@@ -10615,7 +10616,7 @@
 		<English>%s1_leader of %s2_civ_short_name</English>
 		<French>%s1_leader des %s2_civ_short_name</French>
 		<German>%s1_leader von %s2_civ_short_name</German>
-		<Italian>%s1_leader della civiltà %s2:2_civ_short_name</Italian>
+		<Italian>%s1_leader leader della %s2:2_civ_short_name</Italian> <!-- victory info screen -->
 		<Spanish>%s1_leader de %s2_civ_short_name</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11167,7 +11168,7 @@
 		<Tag>TXT_KEY_MAIN_CITY_GREAT_WONDERS</Tag>
 		<English>G. W</English>
 		<French>Merv.</French>
-		<Italian>Grandi meraviglie:</Italian> <!-- city screen on the city name bar in azure upper left -->
+		<Italian>Meraviglie mondiali:</Italian> <!-- city screen on the city name bar in azure upper left -->
 		<Spanish>M. M</Spanish>
 		<Polish>W.C</Polish>
 		<Russian>Ì. ×</Russian>
@@ -13498,7 +13499,7 @@
 		<English>Constructed in %s2: [COLOR_BUILDING_TEXT]%s1[COLOR_REVERT].</English>
 		<French>Vous avez construit [NUM1:un:une:des:des] [COLOR_BUILDING_TEXT]%s1[COLOR_REVERT] à %s2_CityName.</French>
 		<German>[COLOR_BUILDING_TEXT]%s1[COLOR_REVERT] in %s2_CityName fertiggestellt.</German>
-		<Italian>Hai costruito l'edificio [COLOR_BUILDING_TEXT]%s1[COLOR_REVERT] a %s2_CityName.</Italian>
+		<Italian>Nella città di %s2_CityName è stato costruito l'edificio [COLOR_BUILDING_TEXT]%s1[COLOR_REVERT].</Italian> <!-- Message Log Screen -->
 		<Spanish>Habéis construido [NUM1:un:una:unos:unas] [COLOR_BUILDING_TEXT]%s1[COLOR_REVERT] en %s2_CityName.</Spanish>
 		<Polish>Skonstruowałeś [COLOR_BUILDING_TEXT]%s1[COLOR_REVERT] w %s2_CityName.</Polish>
 		<Russian>Çàâåðøåíà ïîñòðîéêà çäàíèÿ [COLOR_BUILDING_TEXT]%s1[COLOR_REVERT] â ãîðîäå %s2_CityName.</Russian>
@@ -14302,6 +14303,7 @@
 		<English>The enemy has been spotted near %s1_CityName!</English>
 		<German>Feinde wurden nahe %s1_CityName gesichtet!</German>
 		<Russian>Враг был замечен рядом с %s1_CityName!</Russian>
+		<Italian>Il nemico è stato avvistato vicino alla città di %s1_CityName!</Italian> <!-- Message Log Screen -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_ENEMY_UNIT_ATTACKER_WITHDRAW_ONSLAUGHT</Tag>
@@ -14666,7 +14668,7 @@
 		<English>%s1_GPName has been born in %s2_CityName!</English>
 		<French>Naissance de %s1_GPName à %s2_CityName !</French>
 		<German>Die Große Persönlichkeit %s1_GPName wurde in %s2_CityName geboren!</German>
-		<Italian>%s1_GPName è nato a %s2_CityName!</Italian>
+		<Italian>Il gran personaggio %s1_GPName è nato nella città di %s2_CityName!</Italian> <!-- Message Log Screen -->
 		<Spanish>%s1_GPName ha nacido en %s2_CityName.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -14873,7 +14875,7 @@
 		<English>[ICON_BULLET]%D1[ICON_EATENFOOD] for Population</English>
 		<French>[ICON_BULLET]%D1[ICON_EATENFOOD] pour la population</French>
 		<German>[ICON_BULLET]%D1[ICON_EATENFOOD] für Bevölkerung</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1[COLOR_REVERT] [ICON_EATENFOOD] dalla popolazione</Italian> <!-- city screen research, food panel hover -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1[COLOR_REVERT] [ICON_EATENFOOD] consumato dalla popolazione</Italian> <!-- city screen food panel hover -->
 		<Spanish>[ICON_BULLET]%D1[ICON_EATENFOOD] por población</Spanish>
 		<Polish>[ICON_BULLET]%D1[ICON_EATENFOOD] z Populacji</Polish>
 		<Russian>[ICON_BULLET]%D1[ICON_EATENFOOD] äëÿ íàñåëåíèÿ</Russian>
@@ -15063,7 +15065,7 @@
 		<Tag>TXT_KEY_MISC_HELP_WASTED_FOOD</Tag>
 		<English>[ICON_BULLET]%D1[ICON_EATENFOOD] Wasted</English>
 		<French>[ICON_BULLET]%D1[ICON_EATENFOOD] Gaspillés</French>
-		<Italian>[ICON_BULLET]%D1[ICON_EATENFOOD] Sprecato</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1[COLOR_REVERT] [ICON_EATENFOOD] cibo sprecato</Italian> <!-- city screen food panel when wasted food -->
 		<Spanish>[ICON_BULLET]%D1[ICON_EATENFOOD] Desperdiciados</Spanish>
 		<Polish>[ICON_BULLET]Zmarnowano %D1[ICON_EATENFOOD]</Polish>
 		<Russian>[ICON_BULLET]%D1[ICON_EATENFOOD] èçðàñõîäîâàíî</Russian>
@@ -15308,7 +15310,7 @@
 		<English>%s1_CityName can't carry over [ICON_PRODUCTION] overflow any more. The lost %d2_NumProduction[ICON_PRODUCTION] is converted into %d3_NumGold[ICON_GOLD]!</English>
 		<French>%s1_CityName ne peut pas gérer l'excédent de [ICON_PRODUCTION]. La perte de %d2_NumProduction[ICON_PRODUCTION] est convertie en %d3_NumGold[ICON_GOLD]!</French>
 		<German>%s1_CityName kann den Überschuss an [ICON_PRODUCTION] nicht mehr übernehmen. Die verlorenen %d2_NumProduction[ICON_PRODUCTION] werden in %d3_NumGold[ICON_GOLD] konvertiert!</German>
-		<Italian>%s1_CityName non può più conservare la [ICON_PRODUCTION] in eccesso. La %d2_NumProduction[ICON_PRODUCTION] persa viene convertita in %d3_NumGold[ICON_GOLD]!</Italian>
+		<Italian>La città di %s1_CityName non può più riportare la produzione [ICON_PRODUCTION] in eccesso al turno successivo. La produzione persa (%d2_NumProduction [ICON_PRODUCTION]) è stata convertita in oro (%d3_NumGold [ICON_GOLD])!</Italian> <!-- Message Log Screen -->
 		<Spanish>%s1_CityName no puede guardar más [ICON_PRODUCTION]. ¡Los %d2_NumProduction[ICON_PRODUCTION] perdidos se han transformado en %d3_NumGold[ICON_GOLD]!</Spanish>
 		<Polish>%s1_CityName nie może przenosić więcej [ICON_PRODUCTION]. Stracone %d2_NumProduction[ICON_PRODUCTION] zostają zmienione na %d3_NumGold[ICON_GOLD]!</Polish>
 		<Russian>%s1_CityName íå'ìîæåò ïðîèçâîäèòü ìîëîòêîâ äëÿ [ICON_PRODUCTION] ñâåðõ íåîáõîäèìîãî. Ïîòåðÿííàÿ %d2_NumÏðîäóêöèÿ[ICON_PRODUCTION] áóäåò ïðåîáðàçîâàíà â %d3_NumGold[ICON_GOLD]!</Russian>
@@ -15940,7 +15942,7 @@
 		<English>[SPACE][COLOR_POSITIVE_TEXT](%D1/Turn %D2 TD/WFL)[COLOR_REVERT]</English>
 		<French>[SPACE][COLOR_POSITIVE_TEXT](%D1/tour %D2 Diff.Tech)[COLOR_REVERT]</French>
 		<German>[SPACE][COLOR_POSITIVE_TEXT](%D1/Runde %D2 TD/WFL)[COLOR_REVERT]</German>
-		<Italian>[SPACE][COLOR_POSITIVE_TEXT](%D1 a turno %D2 TD/WFL)[COLOR_REVERT]</Italian>
+		<Italian>[SPACE][COLOR_POSITIVE_TEXT](%D1 a turno %D2 da diffusione tecnologica)[COLOR_REVERT]</Italian> <!-- main screen near reasearch pad in upper left -->
 		<Spanish>[SPACE][COLOR_POSITIVE_TEXT](%D1/turno %D2 TD/WFL)[COLOR_REVERT]</Spanish>
 		<Russian>[SPACE][COLOR_POSITIVE_TEXT](%D1/ход %D2 TD/WFL)[COLOR_REVERT]</Russian>
 	</TEXT>
@@ -15977,7 +15979,7 @@
 		<English>You have come %d1[ICON_RESEARCH] closer to a breakthrough on [COLOR_TECH_TEXT]%s2_TechName[COLOR_REVERT]</English>
 		<French>Vous obtenez un bonus de %d1[ICON_RESEARCH] pour la découverte de la technologie: [COLOR_TECH_TEXT]%s2_TechName[COLOR_REVERT]</French>
 		<German>Ihr habt %d1 [ICON_RESEARCH] für die Erforschung [NUM2:des:der:des:der:der:der] %s2:2_TechName hinzugewonnen.</German>
-		<Italian>Sei %d1[ICON_RESEARCH] più vicino a una scoperta sulla tecnologia [COLOR_TECH_TEXT]%s2_TechName[COLOR_REVERT]</Italian>
+		<Italian>La ricerca della tecnologia [COLOR_TECH_TEXT]%s2_TechName[COLOR_REVERT] ha ricevuto %d1 [ICON_RESEARCH], una nuova scoperta è più vicina!</Italian> <!-- Message Log screen -->
 		<Spanish>Estáis %d1[ICON_RESEARCH] más cerca del descubrimiento [NUM2:del:de la:de los:de las] [COLOR_TECH_TEXT]%s2_TechName[COLOR_REVERT].</Spanish>
 		<Polish>Zbliżyliśmy się %d1[ICON_RESEARCH] bliżej do przełomu nad [COLOR_TECH_TEXT]%s2_TechName[COLOR_REVERT]</Polish>
 		<Russian>Âû íà %d1[ICON_RESEARCH] óñêîðèëè èçó÷åíèå òåõíîëîãèè [COLOR_TECH_TEXT]%s2_TechName[COLOR_REVERT]</Russian>
@@ -16587,7 +16589,7 @@
 		<English>Trained in %s2: [COLOR_UNIT_TEXT]%s1[COLOR_REVERT].</English>
 		<French>Vous avez entraîné [NUM1:un:une:des:des] [COLOR_UNIT_TEXT]%s1[COLOR_REVERT] à %s2_CityName.</French>
 		<German>[COLOR_UNIT_TEXT]%s1[COLOR_REVERT] in %s2_CityName aufgestellt.</German>
-		<Italian>Hai addestrato [NUM1:un:una:dei:delle] [COLOR_UNIT_TEXT]%s1[COLOR_REVERT] a %s2_CityName.</Italian>
+		<Italian>Nella città di %s2_CityName è stata addestrata l'unità [COLOR_UNIT_TEXT]%s1[COLOR_REVERT].</Italian> <!-- Message Log Screen -->
 		<Spanish>Habéis entrenado a [NUM1:un:una:unos:unas] [COLOR_UNIT_TEXT]%s1[COLOR_REVERT] en %s2_CityName.</Spanish>
 		<Polish>Zwerbowałeś [COLOR_UNIT_TEXT]%s1[COLOR_REVERT] w %s2_CityName.</Polish>
 		<Russian>Çàâåðøåíî ñîçäàíèå þíèòà [COLOR_UNIT_TEXT]%s1[COLOR_REVERT] â ãîðîäå %s2_CityName.</Russian>
@@ -17001,7 +17003,7 @@
 		<English>[SPACE]Work has now begun on: [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT].</English>
 		<French>[SPACE]La production [NUM1:d'un:d'une:de:de] [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT] a commencé.</French>
 		<German>[SPACE]Neues Produktionsziel: [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT].</German>
-		<Italian>[SPACE]Sono iniziati i lavori per: [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT].</Italian>
+		<Italian>[SPACE]Ora sono iniziati i lavori per la realizzazione di [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT].</Italian> <!-- Message Log Screen -->
 		<Spanish>[SPACE]Se ha empezado a trabajar en: [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT].</Spanish>
 		<Polish>[SPACE]Rozpoczęto pracę nad [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT].</Polish>
 		<Russian>[SPACE]Íà÷àòà ðàáîòà ([COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT]).</Russian>
@@ -17272,7 +17274,7 @@
 		<English>You have discovered %s1_TechName!</English>
 		<French>Vous avez découvert : %s1_TechName !</French>
 		<German>Ihr habt die Technologie %s1_TechName entdeckt!</German>
-		<Italian>Hai scoperto la tecnologia %s1_TechName!</Italian>
+		<Italian>La tua civiltà ha scoperto la tecnologia %s1_TechName!</Italian> <!-- Message Log Screen -->
 		<Spanish>Habéis descubierto [NUM1:el:la:los:las] %s1_TechName.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -17853,7 +17855,7 @@
 		<English>Your civilization is now known as the %s1</English>
 		<French>Votre civilization a un nouveau nom: %s1</French>
 		<German>Eure Zivilisation nennt sich jetzt: %s1</German>
-		<Italian>La tua civiltà è ora conosciuta come %s1</Italian>
+		<Italian>La tua civilizzazione è ora conosciuta come %s1</Italian> <!-- Message Log Screen -->
 		<Spanish>Ahora tu civilización es conocida como %s1.</Spanish>
 		<Polish>Twoja cywilizacja jest znana teraz jako %s1</Polish>
 		<Russian>Âàøà öèâèëèçàöèÿ òåïåðü èçâåñòíà êàê %s1</Russian>
@@ -18991,7 +18993,7 @@
 		<German>[COLOR_LIGHT_GREY]In einem fernen Land wurde das Naturwunder %s1 entdeckt!</German>
 		<Polish>[COLOR_LIGHT_GREY]%s1 został odkryty w odległej krainie![COLOR_REVERT]</Polish>
 		<Russian>[COLOR_LIGHT_GREY]%s1 áûë îáíàðóæåí â äàëåêèõ çåìëÿõ![COLOR_REVERT]</Russian>
-		<Italian>[COLOR_LIGHT_GREY]La meraviglia naturale %s1 è stata scoperta in una terra lontana![COLOR_REVERT]</Italian>
+		<Italian>[COLOR_LIGHT_GREY]La meraviglia naturale %s1 è stata scoperta in una terra lontana![COLOR_REVERT]</Italian> <!-- Message Log Screen -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_NO_BUILDING_FREE_EXPERIENCE</Tag>
@@ -19495,7 +19497,7 @@
 		<Tag>TXT_KEY_OUTCOME_HUNTING_BONUS_SPAWNED_MESSAGE</Tag>
 		<English>Our %s1 has tamed and settled a %s2</English>
 		<French>[NUM1:Votre:Votre:Vos:Vos] %s1 [NUM1:a:a:ont:ont] apprivoisé [NUM2:un:une:des:des] %s2 qui [NUM2:s'est établi:s'est établie:se sont établis:se sont établies] près d'une de vos villes.</French>
-		<Italian>La nostra unità %s1 ha addomesticato e allevato [NUM2:un:una] %s2</Italian>
+		<Italian>La nostra unità %s1 ha domato e allevato [NUM2:un:una] %s2</Italian>
 		<Spanish>Nuestr[NUM1:o:a:os:as] %s1 ha adomesticado [NUM2:un:una:unos:unas] %s2, y [NUM2:lo:la:los:las] [NUM1:ha:ha:han:han] criado en esta casilla.</Spanish>
 		<Polish>Nasza jednostka %s1 oswoiła i udomowiła %s2</Polish>
 		<Russian>Íàø %s1 ïðèðó÷èë è îñàäèë %s2</Russian>
@@ -19604,7 +19606,7 @@
 		<English>Our %s1 has subdued a %s2</English>
 		<French>[NUM1:Votre:Votre:Vos:Vos] %s1 [NUM1:a:a:ont:ont] apprivoisé l'animal : [COLOR_UNIT_TEXT]%s2[COLOR_REVERT]</French>
 		<German>[NUM1:Euer:Eure:Euer:Eure:Eure:Eure] %s1:1 [NUM1:hat:haben] [NUM2:einen:eine:ein:einige:einige:einige] %s2:4 eingefangen.</German>
-		<Italian>La nostra unità %s1 ha addomesticato [NUM2:un:una] %s2</Italian>
+		<Italian>La nostra unità %s1 ha domato [NUM2:un:una] %s2</Italian>
 		<Spanish>Nuestr[NUM1:o:a:os:as] %s1 [NUM1:ha:ha:han:han] domado [NUM2:un:una:unos:unas] %s2</Spanish>
 		<Polish>Nasza jednostka %s1 oswoiła %s2</Polish>
 		<Russian>Íàø %s1 ïðèðó÷èë %s2 </Russian>
@@ -19876,7 +19878,7 @@
 		<English>Upgrades To</English>
 		<French>S'améliore en :</French>
 		<German>Verbessert sich zu</German>
-		<Italian>Si modernizza in</Italian>
+		<Italian>Si può modernizzare in:</Italian>
 		<Spanish>Se moderniza a</Spanish>
 	</TEXT>
 	<TEXT>
@@ -19892,7 +19894,7 @@
 		<English>World Wonder</English>
 		<French>Merveille mondiale</French>
 		<German>Weltwunder</German>
-		<Italian>Grande Meraviglia</Italian>
+		<Italian>Meraviglia mondiale</Italian>
 		<Spanish>Maravilla del mundo</Spanish>
 	</TEXT>
 	<TEXT>
@@ -20525,7 +20527,7 @@
 		<English>, Requires: [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</English>
 		<French>, Requiert : [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</French>
 		<German>, erfordert: [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</German>
-		<Italian>, Richiede il terreno: [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</Italian>
+		<Italian>[NEWLINE][ICON_BULLET]Miglioramento richiesto: [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</Italian> <!-- hover on a plot with a resource -->
 		<Spanish>, requiere: [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</Spanish>
 		<Russian>, Требует: [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</Russian>
 	</TEXT>
@@ -20541,7 +20543,7 @@
 		<English>, Requires Route</English>
 		<French>, route nécessaire</French>
 		<German>, erfordert Straße</German>
-		<Italian>, richiede un itinerario</Italian>
+		<Italian>[NEWLINE][ICON_BULLET]Percorso richiesto</Italian> <!-- hover on a plot with a resource -->
 		<Spanish>, requiere ruta</Spanish>
 	</TEXT>
 	<TEXT>
@@ -20549,7 +20551,7 @@
 		<English>, Research: [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</English>
 		<French>, Recherche : [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</French>
 		<German>, Forschung: [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</German>
-		<Italian>, Ricerca: [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</Italian>
+		<Italian>[NEWLINE][ICON_BULLET]Ricerca richiesta: [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</Italian> <!-- hover on a plot with a resource -->
 		<Spanish>, investigar: [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -20598,7 +20600,7 @@
 		<English>Are you sure?</English>
 		<French>Vraiment ?</French>
 		<German>Sind Sie sicher?</German>
-		<Italian>Sei sicuro di volerlo fare?</Italian>
+		<Italian>[BOLD]Sei sicuro di volerlo fare?[\BOLD]</Italian> <!-- main menu return to desktop -->
 		<Spanish>¿Seguro?</Spanish>
 	</TEXT>
 	<TEXT>
@@ -20982,7 +20984,7 @@
 		<English>Your society can now implement the civic [COLOR_HIGHLIGHT_TEXT]%s1_CivicName[COLOR_REVERT]</English>
 		<French>Votre société peut maintenant adopter la doctrine [COLOR_HIGHLIGHT_TEXT]%s1_CivicName[COLOR_REVERT]</French>
 		<German>Eure Gesellschaft kann nun die Staatsform [COLOR_HIGHLIGHT_TEXT]%s1_CivicName[COLOR_REVERT] annehmen</German>
-		<Italian>La tua società adesso può implementare la forma di governo [COLOR_HIGHLIGHT_TEXT]%s1_CivicName[COLOR_REVERT]</Italian>
+		<Italian>[BOLD]La tua civiltà adesso può implementare la forma di governo [COLOR_HIGHLIGHT_TEXT]%s1_CivicName[COLOR_REVERT]</Italian> <!--  popup for changing civics -->
 		<Spanish>Vuestra sociedad ya puede adoptar el principio [NUM1:del:de la:de los:de las] [COLOR_HIGHLIGHT_TEXT]%s1_CivicName[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -20998,7 +21000,7 @@
 		<English>No, the old ways are best.</English>
 		<French>Non, ne changeons rien !</French>
 		<German>Nein, das alte System hat sich bewährt.</German>
-		<Italian>No le vecchie abitudini sono ancora le migliori</Italian>
+		<Italian>No le vecchie abitudini sono ancora le migliori</Italian> <!--  popup for changing civics -->
 		<Spanish>No, son mejores las tradiciones.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -21110,7 +21112,7 @@
 		<English>Let's see the Big Picture...</English>
 		<French>Voyons quelle est la situation...</French>
 		<German>Verschaffen wir uns mal einen Überblick ...</German>
-		<Italian>Vediamo la situazione generale</Italian>
+		<Italian>Vediamo la situazione generale</Italian> <!--  popup for changing civics -->
 		<Spanish>Veámoslo en conjunto...</Spanish>
 	</TEXT>
 	<TEXT>
@@ -21118,7 +21120,7 @@
 		<English>. Would you like to start a revolution?</English>
 		<French>Voulez-vous déclencher une révolution ?</French>
 		<German>. Wollt Ihr eine Revolution einleiten?</German>
-		<Italian>. Vuoi iniziare la rivoluzione?</Italian>
+		<Italian>. [NEWLINE]Vuoi effettuare il cambio di forma di governo?</Italian> <!--  popup for changing civics -->
 		<Spanish>. ¿Os gustaría iniciar una revolución?</Spanish>
 	</TEXT>
 	<TEXT>
@@ -21230,7 +21232,7 @@
 		<English>Yes, let's get this revolution started!</English>
 		<French>Oui, que la révolution commence !</French>
 		<German>Ja, möge die Revolution beginnen!</German>
-		<Italian>Sì, facciamo iniziare la rivoluzione!</Italian>
+		<Italian>Sì, i cambiamenti sono necessari!</Italian> <!--  popup for changing civics -->
 		<Spanish>¡Sí, que empiece la revolución!</Spanish>
 	</TEXT>
 	<TEXT>
@@ -22339,7 +22341,7 @@
 		<English>[NEWLINE][COLOR_WARNING_TEXT]Requires[SPACE]</English>
 		<French>[NEWLINE][COLOR_WARNING_TEXT]Requiert:[SPACE]</French>
 		<German>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]erforderlich:[SPACE]</German>
-		<Italian>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Richiede[COLOR_REVERT] per la realizzazione:[COLOR_HIGHLIGHT_TEXT] </Italian> <!-- tech Waterproof Cement, unit Cartwright, city screen hurry up panel-->
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Richiede[COLOR_REVERT] per la realizzazione: [COLOR_HIGHLIGHT_TEXT]</Italian> <!-- tech Waterproof Cement, unit Cartwright, city screen hurry up panel-->
 		<Spanish>[NEWLINE][COLOR_WARNING_TEXT]Requiere[SPACE]</Spanish>
 		<Polish>[NEWLINE][COLOR_WARNING_TEXT]Wymaga[SPACE]</Polish>
 		<Russian>[NEWLINE][COLOR_WARNING_TEXT]Òðåáóåòñÿ:[SPACE]</Russian>
@@ -22648,7 +22650,7 @@
 		<English>%d1 from Population (%d2_pop/%d3_pop_max)[NEWLINE]%d4 from Land (%d5_land/%d6_land_max)[NEWLINE]%d7 from Technology (%d8_tech/%d9_tech_max)[NEWLINE]%d10 from Wonders (%d11_wonder/%d12_wonder_max)[NEWLINE]------------------------[NEWLINE]Total Score = %d13[NEWLINE]Score by winning this turn = %d14</English>
 		<French>%d1 pour population (%d2_pop/%d3_pop_max)[NEWLINE]%d4 pour territoire (%d5_land/%d6_land_max)[NEWLINE]%d7 pour technologies (%d8_tech/%d9_tech_max)[NEWLINE]%d10 pour Merveilles (%d11_wonder/%d12_wonder_max)[NEWLINE]------------------------[NEWLINE]Score total = %d13[NEWLINE]Score si victoire à ce tour = %d14</French>
 		<German>%d1 für Bevölkerung (%d2_pop/%d3_pop_max)[NEWLINE]%d4 für Land (%d5_land/%d6_land_max)[NEWLINE]%d7 für Technologie (%d8_tech/%d9_tech_max)[NEWLINE]%d10 für Wunder (%d11_wonder/%d12_wonder_max)[NEWLINE]------------------------[NEWLINE]Gesamtpunkte = %d13[NEWLINE]Punkte für Sieg in dieser Runde = %d14</German>
-		<Italian>[NEWLINE][COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] punti dalla popolazione ([COLOR_HIGHLIGHT_TEXT]%d2_pop[COLOR_REVERT] / [COLOR_HIGHLIGHT_TEXT]%d3_pop_max[COLOR_REVERT])[NEWLINE][COLOR_HIGHLIGHT_TEXT]%d4[COLOR_REVERT] punti dal territorio ([COLOR_HIGHLIGHT_TEXT]%d5_land[COLOR_REVERT] / [COLOR_HIGHLIGHT_TEXT]%d6_land_max[COLOR_REVERT])[NEWLINE][COLOR_HIGHLIGHT_TEXT]%d7[COLOR_REVERT] punti dalle tecnologie ([COLOR_HIGHLIGHT_TEXT]%d8_tech[COLOR_REVERT] / [COLOR_HIGHLIGHT_TEXT]%d9_tech_max[COLOR_REVERT])[NEWLINE][COLOR_HIGHLIGHT_TEXT]%d10[COLOR_REVERT] punti dalle meraviglie ([COLOR_HIGHLIGHT_TEXT]%d11_wonder[COLOR_REVERT] / [COLOR_HIGHLIGHT_TEXT]%d12_wonder_max[COLOR_REVERT])[NEWLINE]------------------------[NEWLINE][COLOR_HIGHLIGHT_TEXT]%d13[COLOR_REVERT] punteggio totale[NEWLINE][COLOR_HIGHLIGHT_TEXT]%d14[COLOR_REVERT] punteggio per una vittoria in questo turno</Italian> <!--Scoreboard hover on civ name in lower right -->
+		<Italian>[NEWLINE][COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] punteggio dalla popolazione ([COLOR_HIGHLIGHT_TEXT]%d2_pop[COLOR_REVERT] / [COLOR_HIGHLIGHT_TEXT]%d3_pop_max[COLOR_REVERT])[NEWLINE][COLOR_HIGHLIGHT_TEXT]%d4[COLOR_REVERT] punteggio dal territorio ([COLOR_HIGHLIGHT_TEXT]%d5_land[COLOR_REVERT] / [COLOR_HIGHLIGHT_TEXT]%d6_land_max[COLOR_REVERT])[NEWLINE][COLOR_HIGHLIGHT_TEXT]%d7[COLOR_REVERT] punteggio dalle tecnologie ([COLOR_HIGHLIGHT_TEXT]%d8_tech[COLOR_REVERT] / [COLOR_HIGHLIGHT_TEXT]%d9_tech_max[COLOR_REVERT])[NEWLINE][COLOR_HIGHLIGHT_TEXT]%d10[COLOR_REVERT] punteggio dalle meraviglie ([COLOR_HIGHLIGHT_TEXT]%d11_wonder[COLOR_REVERT] / [COLOR_HIGHLIGHT_TEXT]%d12_wonder_max[COLOR_REVERT])[NEWLINE]------------------------[NEWLINE][COLOR_HIGHLIGHT_TEXT]%d13[COLOR_REVERT] punteggio totale[NEWLINE][COLOR_HIGHLIGHT_TEXT]%d14[COLOR_REVERT] punteggio per una vittoria in questo turno</Italian> <!--Scoreboard hover on civ name in lower right -->
 		<Spanish>%d1 por población (%d2_pop/%d3_pop_max)[NEWLINE]%d4 por territorio (%d5_land/%d6_land_max)[NEWLINE]%d7 por tecnología (%d8_tech/%d9_tech_max)[NEWLINE]%d10 por maravillas (%d11_wonder/%d12_wonder_max)[NEWLINE]------------------------[NEWLINE]Puntuación total = %d13[NEWLINE]Puntuación por ganar este turno = %d14</Spanish>
 	</TEXT>
 	<TEXT>
@@ -22845,7 +22847,7 @@
 		<English>Game difficulty: %s1 </English>
 		<French>Jeu difficulté : %s1</French>
 		<German>Spiel schwierigkeit: %s1</German>
-		<Italian>Difficoltà partita %s1</Italian>
+		<Italian>Difficoltà partita: [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT]</Italian> <!-- victory info screen -->
 		<Spanish>Dificultad partida: %s1</Spanish>
 	</TEXT>
 	<TEXT>
@@ -22853,7 +22855,7 @@
 		<English>Player difficulty: %s1</English>
 		<French>Joueur difficulté : %s1</French>
 		<German>Spieler schwierigkeit: %s1</German>
-		<Italian>Difficoltà giocatore [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT]</Italian> <!--Scoreboard hover on civ name in lower right -->
+		<Italian>Difficoltà giocatore: [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT]</Italian> <!--Scoreboard hover on civ name in lower right -->
 		<Spanish>Dificultad el jugador: %s1</Spanish>
 	</TEXT>
 	<TEXT>
@@ -22861,7 +22863,7 @@
 		<English>%s1 Game Speed</English>
 		<French>Vitesse du jeu : %s1</French>
 		<German>Spielgeschwindigkeit: %s1</German>
-		<Italian>Velocità di gioco %s1</Italian>
+		<Italian>Velocità di gioco: [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT]</Italian> <!-- victory info screen -->
 		<Spanish>Velocidad de juego: %s1</Spanish>
 	</TEXT>
 	<TEXT>
@@ -22869,7 +22871,7 @@
 		<English>%s1 World Size</English>
 		<French>Taille du monde : %s1</French>
 		<German>Weltgröße %s1</German>
-		<Italian>Dimensione mondo %s1</Italian>
+		<Italian>Dimensione del mondo: %s1</Italian> <!-- victory info screen -->
 		<Spanish>Tamaño del mundo: %s1</Spanish>
 	</TEXT>
 	<TEXT>
@@ -22877,7 +22879,7 @@
 		<English>%s1 Sea Level</English>
 		<French>Niveau de la mer : %s1</French>
 		<German>Meeresspiegel: %s1</German>
-		<Italian>Altezza mare %s1</Italian>
+		<Italian>Altezza mare: %s1</Italian> <!-- victory info screen -->
 		<Spanish>Nivel del mar: %s1</Spanish>
 	</TEXT>
 	<TEXT>
@@ -22885,7 +22887,7 @@
 		<English>%s1 Starting Era</English>
 		<French>Ere de départ : %s1</French>
 		<German>Startzeitalter %s1</German>
-		<Italian>Era iniziale %s1</Italian>
+		<Italian>Era iniziale: %s1</Italian> <!-- victory info screen -->
 		<Spanish>Época de inicio: %s1</Spanish>
 	</TEXT>
 	<TEXT>
@@ -22898,7 +22900,7 @@
 		<English>[ICON_BULLET]%d1 trade income from nations with the same civic</English>
 		<French>[ICON_BULLET]%d1 revenus d'échange avec les Nations de même doctrine</French>
 		<German>[ICON_BULLET]%d1 Handelseinkünfte durch Nationen mit derselben Gesellschaftsform</German>
-		<Italian>[ICON_BULLET]%d1 di resa dal commercio da nazioni con la stessa forma di governo</Italian>
+		<Italian>[ICON_BULLET]%d1 di rendimento dal commercio da nazioni con la stessa forma di governo</Italian>
 		<Spanish>[ICON_BULLET]%d1 al rendimiento de rutas comerciales con naciones con el mismo principio</Spanish>
 		<Polish>[ICON_BULLET]%d1 zysku z handlu od narodów z tą samą doktryną</Polish>
 		<Russian>[ICON_BULLET]%d1 Äîõîä îò òîðãîâëè ñî ñòðàíàìè ñ òàêèìè æå ïàðàäèãìàìè</Russian>
@@ -22989,7 +22991,7 @@
 [BOLD][COLOR_HIGHLIGHT_TEXT]		F7[COLOR_REVERT]	&gt; Informazioni religioni[\BOLD]
 [BOLD][COLOR_HIGHLIGHT_TEXT]	Shift +	F7[COLOR_REVERT]	&gt; Informazioni corporazioni[\BOLD]
 [BOLD][COLOR_HIGHLIGHT_TEXT]		F8[COLOR_REVERT]	&gt; Condizioni di vittoria[\BOLD]
-[BOLD][COLOR_HIGHLIGHT_TEXT]		F9[COLOR_REVERT]	&gt; Demografia[\BOLD]
+[BOLD][COLOR_HIGHLIGHT_TEXT]		F9[COLOR_REVERT]	&gt; Dati demografici[\BOLD]
 [BOLD][COLOR_HIGHLIGHT_TEXT]		F10[COLOR_REVERT]	&gt; Capitale[\BOLD]
 [BOLD][COLOR_HIGHLIGHT_TEXT]		F11[COLOR_REVERT]	&gt; Vista globale[\BOLD]
 [BOLD][COLOR_HIGHLIGHT_TEXT]		F12[COLOR_REVERT]	&gt; Civilopedia[\BOLD]
@@ -24181,7 +24183,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]%D1_Change Experience to %s2_UnitCombat type units trained in this city.</English>
 		<French>[ICON_BULLET]%D1_Change Experience pour les unités de type: %s2_UnitCombat entraînées dans cette Ville.</French>
 		<German>[ICON_BULLET]%D1_Change Erfahrung für %s2_UnitCombat, die in dieser Stadt ausgebildet werden.</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] [NUM1:punto:punti] esperienza a ogni [COLOR_HIGHLIGHT_TEXT]%s2_UnitCombat[COLOR_REVERT] addestrate in questa città</Italian> <!-- city screen hover over specialist citizen -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] [NUM1:punto:punti] esperienza a ogni [COLOR_HIGHLIGHT_TEXT]%s2_UnitCombat[COLOR_REVERT] addestrata in questa città</Italian> <!-- city screen hover over specialist citizen -->
 		<Polish>[ICON_BULLET]%D1_Change Doświadczenia do jednostek: %s2_UnitCombat trenowanych w tym mieście.</Polish>
 		<Russian>[ICON_BULLET]%D1_Change опыта всем типам %s2_UnitCombat обученным в данном городе.</Russian>
 	</TEXT>
@@ -24359,7 +24361,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0</Plural>
 		</French>
 		<Russian>Âåëèêèé âðà÷</Russian>
-		<Italian>Gran dottore</Italian>
+		<Italian>Gran medico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_GREAT_ENGINEER</Tag>
@@ -25548,7 +25550,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Druidic Traditions</English>
 		<French>Traditions Druidiques</French>
 		<German>Druidentum</German>
-		<Italian>Tradizione druidica</Italian>
+		<Italian>Druidismo</Italian>
 		<Polish>Tradycje Druidów</Polish>
 		<Russian>Äðóèäèçì</Russian>
 	</TEXT>
@@ -25565,11 +25567,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Gender>Neuter:Neuter:Neuter</Gender>
 			<Plural>0:0:0</Plural>
 		</German>
-		<Italian>
-			<Text>druidico:druidica:druidici:druidiche</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</Italian>
+		<Italian>druidista</Italian>
 		<Spanish>
 			<Text>Druidic</Text>
 			<Gender>Male</Gender>
@@ -26318,7 +26316,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TENGRIISM_PEDIA</Tag>
 		<English>Tengriism is a fairly new term. It is conventionally used to describe a form of Tengri-centered shamanism that prevailed on the Eurasian steppes mostly among early Turkic and Mongol Khanates.[PARAGRAPH:2]Tengrism differs from Siberian shamanism in that the polities practicing it were not small bands of hunter gatherers like the Paleosiberians but a continuous succession of pastoral, semi-sedentarized Khanates and empires from the Xiongnu Empire (founded 209 BC) till the Mongol Empire (13th century).[PARAGRAPH:2]Tengrists view their existence as sustained by the eternal blue sky (Tengri), the fertile mother-earth spirit (Eje) and a ruler regarded as the holy spirit of the sky. Heaven, earth, spirits of nature and ancestors provide for every need and protect all humans. By living an upright, respectful life, a human will keep his world in balance and perfect his personal Wind Horse, or spirit. The Huns of the northern Caucasus reportedly believed in two gods: Tangri Han (or Tengri Khan), considered identical to the Persian Aspandiat and for whom horses were sacrificed, and Kuar (whose victims are struck by lightning).</English>
-		<Italian>ATTENZIONE: il tengriismo non funziona come le altre religioni, ha qualche particolarità. La prima, e più importante, è che l'unico modo per diffonderla è usando gli sciamani (il tengriismo non si diffonde da solo) e l'unico modo per costruire gli sciamani è costruire prima una yurta degli sciamani, che può essere costruita solo se il tengriismo è presente in città, dandoti nessun'altra scelta che iniziare a diffondere il tengriismo dalla sua città santa. A parte la yurta degli sciamani il tengriismo non ha edifici, dato che nel mondo reale questa religione non ne aveva, perciò sono sostituiti dalla forma di trasmissione originale di questa religione... i canti. Il teengriismo era la fede più diffusa tra i Mongoli e i popoli turchi prima che la stragrande maggioranza di essi aderisse alle religioni del mondo civilizzato. Si concentra intorno alla divinità celeste Tengri e incorpora elementi dello sciamanesimo, dell'animismo, del totemismo e del culto degli antenati. "Khukh" e "Tengri" letteralmente significano "blu" e "cielo" in lingua mongola, e i mongoli moderni ancora pregano "Munkh khukh Tengri" ("eterno cielo blu"). Pertanto la Mongolia è chiamato come "terra dell'Eterno Cielo Blu" ("Munkh khukh tengriin oron" in mongolo). Oggi, ci sono ancora un gran numero di fedeli tengriisti che vivono in Asia centrale, come i Khakas e i Tuvani. Nel tengriismo, il senso della vita è visto come vivere in armonia con il mondo circostante. I credenti tengriisti vedono la loro esistenza come sostenuta dal Cielo eterno azzurro, Tengri, la Madre-Terra fertile, lo spirito Eje, e un dominatore che è considerato come lo spirito santo del Cielo. Cielo, Terra, gli spiriti della natura e degli antenati pensano a ogni tipo di esigenza e a proteggere tutti gli esseri umani. Vivendo una vita onesta e rispettosa, un essere umano non mancherà di tenere il suo mondo in equilibrio e massimizzare il suo potere personale a cavallo del vento. Gli sciamani hanno un ruolo importante nel ristabilire l'equilibrio quando viene turbato da disastri o da interferenze degli spiriti. È probabile che il tengriismo fosse la religione degli Unni; viene ancora praticato attivamente in Sakha, Buriazia, Tuva e Mongolia, assieme al buddismo tibetano e al Burkhanismo.</Italian>
+		<Italian>ATTENZIONE: il tengriismo non funziona come le altre religioni, ha qualche particolarità. La prima, e più importante, è che l'unico modo per diffonderla è usando gli sciamani (il tengriismo non si diffonde da solo) e l'unico modo per costruire gli sciamani è costruire prima una yurta degli sciamani, che può essere costruita solo se il tengriismo è presente in città, dandoti nessun'altra scelta che iniziare a diffondere il tengriismo dalla sua città santa. A parte la yurta degli sciamani il tengriismo non ha edifici, dato che nel mondo reale questa religione non ne aveva, perciò sono sostituiti dalla forma di trasmissione originale di questa religione... i canti. Il tengriismo era la fede più diffusa tra i Mongoli e i popoli turchi prima che la stragrande maggioranza di essi aderisse alle religioni del mondo civilizzato. Si concentra intorno alla divinità celeste Tengri e incorpora elementi dello sciamanesimo, dell'animismo, del totemismo e del culto degli antenati. "Khukh" e "Tengri" letteralmente significano "blu" e "cielo" in lingua mongola, e i mongoli moderni ancora pregano "Munkh khukh Tengri" ("eterno cielo blu"). Pertanto la Mongolia è chiamato come "terra dell'Eterno Cielo Blu" ("Munkh khukh tengriin oron" in mongolo). Oggi, ci sono ancora un gran numero di fedeli tengriisti che vivono in Asia centrale, come i Khakas e i Tuvani. Nel tengriismo, il senso della vita è visto come vivere in armonia con il mondo circostante. I credenti tengriisti vedono la loro esistenza come sostenuta dal Cielo eterno azzurro, Tengri, la Madre-Terra fertile, lo spirito Eje, e un dominatore che è considerato come lo spirito santo del Cielo. Cielo, Terra, gli spiriti della natura e degli antenati pensano a ogni tipo di esigenza e a proteggere tutti gli esseri umani. Vivendo una vita onesta e rispettosa, un essere umano non mancherà di tenere il suo mondo in equilibrio e massimizzare il suo potere personale a cavallo del vento. Gli sciamani hanno un ruolo importante nel ristabilire l'equilibrio quando viene turbato da disastri o da interferenze degli spiriti. È probabile che il tengriismo fosse la religione degli Unni; viene ancora praticato attivamente in Sakha, Buriazia, Tuva e Mongolia, assieme al buddismo tibetano e al Burkhanismo.</Italian>
 		<Polish>Tengryzm to pradawna religia mająca związek przede wszystkim z ludami Azji Srodkowej, takimi jak Hunowie czy Mongołowie. Oparta głównie na wierze w Tengri, boga nieba, oraz Eje, Matkę Ziemię, wiara ta miała dość luźne ramy, nie posiadała duchownych ani kapłanów, a jej wyznawcy nie starali się nawracać innych. Tengryzm skupiał się na utrzymaniu harmonii z otaczającym środowiskiem. Wierni uznawali, że zasoby ziemi są święte, zwłaszcza woda, której ilość była skąpa na stepach Srodkowej Azji, na których żyła większość wyznawców. Choć twierdzi się, że w Azji nadal żyją przedstawiciele tej religii, nie próbowano określić ich liczby.</Polish>
 		<Russian>Тенгрианство имеет свой ряд особенностей, отличающих его от всех прочих мировых религий. Первое из них по месту и значению заключается в том, что единственный способ распространения этой религии возможен только через шаманов (т.е. Тенгрианство не распространяется само собой), а единственный способ обучить шаманов - это построить Юрту Шамана, которая может быть построена лишь в том случае, если Тенгрианство уже исповедуется в городе, давая вам больше выбора, помимо распространения из Священного города. За исключением Юрты Шамана, Тенгрианство не имеет никаких храмов и святилищ, характерных для других культов, поскольку их роль в этой религии выполняют ... песни.[PARAGRAPH:1][TAB]Культ Тенгри как культ Неба зародился в Центральной Азии не раньше конца II тыс. до н. э. и не позднее V-III в. до н. э. Его сближают с аналогичными представлениями древних китайцев (Небо-Тянь в конфуцианстве), хунну (чинли) и древних шумеров (Dingir). Культовая практика тенгрианства сближалась с традиционным шаманизмом, хотя и не сливалась с ним. Если связанные с культом Неба народные верования уходят в глубину веков, то монотеистическая имперская стадия сформировалась в эпоху тюркского каганата. Ключевыми принципами тенгрианства как культа являются следующие положения: признание безличного бога как Тенгри, «атеистический монотеизм», культ матери-природы (Умай, Этуген), вера в жизненную силу (Кут - из этого принципа нередко следовала «сакрализация власти») и уважение к умершим предкам (онгон, аруах), которые незримо помогают своим потомкам. Особым почтением тенгрианцы окружали огонь, который нельзя было осквернять. Существовал обычай кормления огня. Зародившись в Центральной Азии, тенгрианство взаимодействовало с религиозными представлениями соседних народов, такими как сибирский шаманизм и тибетский бон. Позже оно сосуществовало с несторианством. Считается, , что тенгрианство было религией гуннов. Оно до сих пор активно практикуется в Якутии, Бурятии, Туве и Монголии, параллельно с тибетским буддизмом и бурханизмом.</Russian>
 	</TEXT>
@@ -26655,7 +26653,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Most Cultured</English>
 		<French>cultivées</French>
 		<German>kultiviertesten</German>
-		<Italian>più colta</Italian>
+		<Italian>più colte</Italian> <!-- Recap screen on civs every 50 turns -->
 		<Spanish>más cultas</Spanish>
 	</TEXT>
 	<TEXT>
@@ -26671,11 +26669,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Erodoto</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Erodoto</Italian> <!-- Recap screen on civs every 50 turns -->
 		<Spanish>
 			<Text>Herodoto</Text>
 			<Gender>Male</Gender>
@@ -26693,11 +26687,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0</Plural>
 		</French>
 		<German>Der ehrwürdige Bede</German>
-		<Italian>
-			<Text>Il venerando Bede</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Beda il Venerabile</Italian> <!-- Recap screen on civs every 50 turns -->
 		<Spanish>
 			<Text>Beda el Venerable</Text>
 			<Gender>Male</Gender>
@@ -26719,11 +26709,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Machiavelli</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Niccolò Machiavelli</Italian> <!-- Recap screen on civs every 50 turns -->
 		<Spanish>
 			<Text>Maquiavelo</Text>
 			<Gender>Male</Gender>
@@ -26744,11 +26730,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Tucidide</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Tucidide</Italian> <!-- Recap screen on civs every 50 turns -->
 		<Spanish>
 			<Text>Tucídides</Text>
 			<Gender>Male</Gender>
@@ -26770,11 +26752,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Plinio</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Plinio il Vecchio</Italian> <!-- Recap screen on civs every 50 turns -->
 		<Spanish>
 			<Text>Plinio</Text>
 			<Gender>Male</Gender>
@@ -26792,11 +26770,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0</Plural>
 		</French>
 		<German>Sankt Augustinus</German>
-		<Italian>
-			<Text>Sant'Agostino</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Sant'Agostino</Italian> <!-- Recap screen on civs every 50 turns -->
 		<Spanish>
 			<Text>San Agustín</Text>
 			<Gender>Male</Gender>
@@ -26818,11 +26792,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Gibbon</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Edward Gibbon</Italian> <!-- Recap screen on civs every 50 turns -->
 		<Spanish>
 			<Text>Gibbon</Text>
 			<Gender>Male</Gender>
@@ -26843,11 +26813,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Toynbee</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Arnold Joseph Toynbee</Italian> <!-- Recap screen on civs every 50 turns -->
 		<Spanish>
 			<Text>Toynbee</Text>
 			<Gender>Male</Gender>
@@ -26868,11 +26834,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Lord McCauley</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Thomas Babington</Italian> <!-- Recap screen on civs every 50 turns -->
 		<Spanish>
 			<Text>Lord McCauley</Text>
 			<Gender>Male</Gender>
@@ -26893,11 +26855,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Tito Livio</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Tito Livio</Italian> <!-- Recap screen on civs every 50 turns -->
 		<Spanish>
 			<Text>Tito Livio</Text>
 			<Gender>Male</Gender>
@@ -26919,11 +26877,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Tacito</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Publio Cornelio Tacito</Italian> <!-- Recap screen on civs every 50 turns -->
 		<Spanish>
 			<Text>Tácito</Text>
 			<Gender>Male</Gender>
@@ -26937,7 +26891,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Most Powerful</English>
 		<French>puissantes</French>
 		<German>mächtigsten</German>
-		<Italian>più potente</Italian>
+		<Italian>più potenti</Italian> <!-- Recap screen on civs every 50 turns -->
 		<Spanish>más poderosas</Spanish>
 	</TEXT>
 	<TEXT>
@@ -26945,7 +26899,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Glorious</English>
 		<French>un chef glorieux</French>
 		<German>Glorreiche</German>
-		<Italian>glorioso:gloriosa</Italian>
+		<Italian>glorioso</Italian> <!-- Recap screen on civs every 50 turns -->
 		<Spanish>Glorios</Spanish>
 	</TEXT>
 	<TEXT>
@@ -26953,7 +26907,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Great</English>
 		<French>un grand chef</French>
 		<German>Großartige</German>
-		<Italian>grande:grande</Italian>
+		<Italian>grande</Italian> <!-- Recap screen on civs every 50 turns -->
 		<Spanish>Grandios</Spanish>
 	</TEXT>
 	<TEXT>
@@ -26961,7 +26915,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Fine</English>
 		<French>un chef raffiné</French>
 		<German>Beachtliche</German>
-		<Italian>eccellente:eccellente</Italian>
+		<Italian>distinto</Italian> <!-- Recap screen on civs every 50 turns -->
 		<Spanish>Adecuad</Spanish>
 	</TEXT>
 	<TEXT>
@@ -26969,7 +26923,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Mediocre</English>
 		<French>un chef médiocre</French>
 		<German>Mittelmäßige</German>
-		<Italian>mediocre:mediocre</Italian>
+		<Italian>mediocre</Italian> <!-- Recap screen on civs every 50 turns -->
 		<Spanish>Deslucid</Spanish>
 	</TEXT>
 	<TEXT>
@@ -26977,7 +26931,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Puny</English>
 		<French>un chef faible</French>
 		<German>Armselige</German>
-		<Italian>debole:debole</Italian>
+		<Italian>debole</Italian> <!-- Recap screen on civs every 50 turns -->
 		<Spanish>Debiluch</Spanish>
 	</TEXT>
 	<TEXT>
@@ -26985,7 +26939,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Pathetic</English>
 		<French>un chef pitoyable</French>
 		<German>Jämmerliche</German>
-		<Italian>patetico:patetica</Italian>
+		<Italian>patetico</Italian> <!-- Recap screen on civs every 50 turns -->
 		<Spanish>Patétic</Spanish>
 	</TEXT>
 	<TEXT>
@@ -26993,7 +26947,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Hopeless</English>
 		<French>un chef affligeant</French>
 		<German>Hoffnungslose</German>
-		<Italian>disperato:disperata</Italian>
+		<Italian>disperato</Italian> <!-- Recap screen on civs every 50 turns -->
 		<Spanish>Deshauciad</Spanish>
 	</TEXT>
 	<TEXT>
@@ -27001,7 +26955,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Forgotten</English>
 		<French>un chef oublié</French>
 		<German>Vergessene</German>
-		<Italian>dimenticato:dimenticata</Italian>
+		<Italian>dimenticato</Italian> <!-- Recap screen on civs every 50 turns -->
 		<Spanish>Olvidad</Spanish>
 	</TEXT>
 	<TEXT>
@@ -27009,7 +26963,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Largest</English>
 		<French>étendues</French>
 		<German>größten</German>
-		<Italian>più ampia</Italian>
+		<Italian>più estese</Italian> <!-- Recap screen on civs every 50 turns -->
 		<Spanish>más extensas</Spanish>
 	</TEXT>
 	<TEXT>
@@ -27017,7 +26971,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Most Advanced</English>
 		<French>avancées</French>
 		<German>fortschrittlichsten</German>
-		<Italian>più avanzata</Italian>
+		<Italian>più avanzate</Italian> <!-- Recap screen on civs every 50 turns -->
 		<Spanish>más avanzadas</Spanish>
 	</TEXT>
 	<TEXT>
@@ -27025,7 +26979,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>%s1 has completed his greatest work,</English>
 		<French>%s1 vient d'achever sa plus grande oeuvre,</French>
 		<German>%s1 hat sein Lebenswerk vollbracht:</German>
-		<Italian>%s1 ha completato la sua più Grande Opera,</Italian>
+		<Italian>Il grande storico %s1 ha completato la sua opera più importante:</Italian> <!-- Recap screen on civs every 50 turns -->
 		<Spanish>%s1 ha completado su mayor obra,</Spanish>
 	</TEXT>
 	<TEXT>
@@ -27033,7 +26987,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>The %s1 Civilizations of the World!</English>
 		<French>les civilisations les plus %s1 du monde !</French>
 		<German>Die %s1 Zivilisationen der Welt!</German>
-		<Italian>La civiltà %s1 del mondo!</Italian>
+		<Italian>"[COLOR_HIGHLIGHT_TEXT]Le civiltà %s1 del mondo![COLOR_REVERT]"</Italian> <!-- Recap screen on civs every 50 turns -->
 		<Spanish>Las civilizaciones %s1 del mundo</Spanish>
 	</TEXT>
 	<TEXT>
@@ -27041,7 +26995,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>%s1_leader the %s2_rank</English>
 		<French>%s1_leader, %s2_rank</French>
 		<German>%s1_leader [NUM1:der:die:x:x] %s2_rank</German>
-		<Italian>%s1_leader [NUM1:il:la] %s2_rank</Italian>
+		<Italian>%s1_leader il %s2_rank</Italian> <!-- Recap screen on civs every 50 turns -->
 		<Spanish>%s1_leader, [NUM1:el:la:los:las] %s2_rank[NUM1:o:a:os:as]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -27049,7 +27003,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>The Greatest Civilizations</English>
 		<French>Les plus grandes Civilisations</French>
 		<German>Die erfolgreichsten Zivilisationen</German>
-		<Italian>Le civiltà più grandi</Italian>
+		<Italian>Le più importanti civiltà</Italian> <!-- Recap screen on civs every 50 turns -->
 		<Spanish>Las mayores civilizaciones</Spanish>
 	</TEXT>
 	<TEXT>
@@ -27057,7 +27011,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>An Unknown Civilization</English>
 		<French>Une civilisation inconnue</French>
 		<German>Unbekannte Zivilisation</German>
-		<Italian>Una civiltà sconosciuta</Italian>
+		<Italian>Civiltà sconosciuta</Italian> <!-- Recap screen on civs every 50 turns -->
 		<Spanish>Una civilización desconocida</Spanish>
 	</TEXT>
 	<TEXT>
@@ -27065,7 +27019,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Wealthiest</English>
 		<French>riches</French>
 		<German>reichsten</German>
-		<Italian>più ricca</Italian>
+		<Italian>più ricche</Italian> <!-- Recap screen on civs every 50 turns -->
 		<Spanish>más ricas</Spanish>
 	</TEXT>
 	<TEXT>
@@ -27077,11 +27031,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>1</Plural>
 		</French>
 		<German>Nationalwunder</German>
-		<Italian>
-			<Text>Meraviglie Nazionali</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Meraviglie nazionali</Italian> <!-- info screen wonders tab -->
 		<Spanish>
 			<Text>Maravillas nacionales</Text>
 			<Gender>Female</Gender>
@@ -27103,11 +27053,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Grandi Meraviglie</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Meraviglie mondiali</Italian> <!-- info screen wonders tab -->
 		<Spanish>
 			<Text>Maravillas del mundo</Text>
 			<Gender>Female</Gender>
@@ -28202,7 +28148,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]Cannot Enter</English>
 		<French>[ICON_BULLET]Ne peut entrer dans :</French>
 		<German>[ICON_BULLET]Keine Fortbewegung auf</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Non può passare[COLOR_REVERT] nelle caselle di tipo</Italian> <!-- unit Canoe -->
+		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Non può passare[COLOR_REVERT] nelle caselle di tipo</Italian> <!-- unit Canoe -->
 		<Spanish>[ICON_BULLET]No puede entrar en</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28218,7 +28164,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]Can Expand[SPACE]</English>
 		<French>[ICON_BULLET]Peut développer[SPACE]</French>
 		<German>[ICON_BULLET]Expansionsmöglichkeit für[SPACE]</German>
-		<Italian>[ICON_BULLET]Può diffondere[SPACE]</Italian>
+		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]diffondere l'influenza[COLOR_REVERT] della corporazione[SPACE]</Italian> <!-- unit any executive -->
 		<Spanish>[ICON_BULLET]Puede expandir[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28242,7 +28188,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]Can [LINK=CONCEPT_NUKES]Nuke[\LINK] Enemy Lands</English>
 		<French>[ICON_BULLET]Peut [LINK=CONCEPT_NUKES]atomiser[\LINK] le territoire ennemi</French>
 		<German>[ICON_BULLET]Kann feindliches Territorium mit [LINK=CONCEPT_NUKES]Atomraketen angreifen[\LINK]</German>
-		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]sganciare[COLOR_REVERT] [LINK=CONCEPT_NUKES]bombe nucleari[\LINK] sui territori nemici</Italian> <!-- unit Hydrogen Bomb --> 
+		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]sganciare[COLOR_REVERT] [LINK=CONCEPT_NUKES]bombe atomiche[\LINK] sui territori nemici</Italian> <!-- unit Hydrogen Bomb --> 
 		<Spanish>[ICON_BULLET]Puede bombardear tierra enemiga con [LINK=CONCEPT_NUKES]armas nucleares[\LINK]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28250,7 +28196,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]Can Spread[SPACE]</English>
 		<French>[ICON_BULLET]Peut propager :[SPACE]</French>
 		<German>[ICON_BULLET]Verbreitet:[SPACE]</German>
-		<Italian>[ICON_BULLET]Può diffondere[SPACE]</Italian>
+		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]diffondere i precetti[COLOR_REVERT] delle religioni:[SPACE]</Italian> <!-- unit any missionary -->
 		<Spanish>[ICON_BULLET]Puede propagar el[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28314,7 +28260,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]Can Discover a Technology</English>
 		<French>[ICON_BULLET]Peut découvrir une technologie</French>
 		<German>[ICON_BULLET]Kann eine Technologie entdecken</German>
-		<Italian>[ICON_BULLET]Permette la scoperta di una tecnologia</Italian>
+		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]scoprire una nuova tecnologia[COLOR_REVERT]</Italian> <!-- unit great artist -->
 		<Spanish>[ICON_BULLET]Puede descubrir una tecnología</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28354,7 +28300,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]Can Start a Golden Age</English>
 		<French>[ICON_BULLET]Peut déclencher un âge d'or</French>
 		<German>[ICON_BULLET]Kann ein Goldenes Zeitalter beginnen</German>
-		<Italian>[ICON_BULLET]Può avviare l'Età dell'Oro</Italian>
+		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]dare avvio a un età dell'oro[COLOR_REVERT]</Italian> <!-- unit great artist -->
 		<Spanish>[ICON_BULLET]Puede iniciar una edad de oro</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28362,7 +28308,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]Can Create a Great Work (%D1_Change[ICON_CULTURE])</English>
 		<French>[ICON_BULLET]Peut créer un chef d'oeuvre (%D1_Change[ICON_CULTURE])</French>
 		<German>[ICON_BULLET]Kann ein Großes Bauwerk errichten (%D1_Change[ICON_CULTURE])</German>
-		<Italian>[ICON_BULLET]Può creare una Grande Opera (%D1_Change[ICON_CULTURE])</Italian>
+		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]creare un'opera d'arte[COLOR_REVERT] ([COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] [ICON_CULTURE])</Italian> <!-- unit great artist-->
 		<Spanish>[ICON_BULLET]Puede crear una gran obra (%D1_Change [ICON_CULTURE])</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28482,7 +28428,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[SPACE]National Unit: %d1_Num Left</English>
 		<French>[SPACE]Unité nationale : reste %d1_Num</French>
 		<German>[SPACE]Nationale Einheit: %d1_Num übrig</German>
-		<Italian>[SPACE]Unità nazionale: %d1_Num [NUM1:rimanente:rimanenti]</Italian>
+		<Italian>[SPACE](unità nazionale: [COLOR_HIGHLIGHT_TEXT]%d1_Num[COLOR_REVERT] [NUM1:rimanente:rimanenti])</Italian> <!-- city screen hover on chaser unit -->
 		<Spanish>[SPACE]Unidad nacional: %d1_Num [NUM1:restante:restantes]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28516,7 +28462,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[ICON_BULLET]Can Only Defend</English>
 		<French>[ICON_BULLET]Ne peut que se défendre</French>
 		<German>[ICON_BULLET]kann nur verteidigen</German>
-		<Italian>[ICON_BULLET]L'unità può solo [COLOR_HIGHLIGHT_TEXT]difendersi[COLOR_REVERT]</Italian> <!-- unit Pack Lllama -->
+		<Italian>[ICON_BULLET]L'unità può [COLOR_WARNING_TEXT]solo difendersi[COLOR_REVERT]</Italian> <!-- unit Pack Lllama -->
 		<Spanish>[ICON_BULLET]Sólo puede defender</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28637,11 +28583,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNIT_ANDEAN_MISSIONARY</Tag>
 		<English>Andean Missionary</English>
 		<French>Missionnaire Andéen</French>
-		<Italian>
-			<Text>Missionario andino</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Missionario andino</Italian>
 		<Polish>Andeański Misjonarz</Polish>
 		<Russian>Àíä. æðåö</Russian>
 	</TEXT>
@@ -28657,6 +28599,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<French>Missionnaire Asatru</French>
 		<Polish>Misjonarz Asatru</Polish>
 		<Russian>Àñàò. æðåö</Russian>
+		<Italian>Missionario asatru</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ASATRU_MISSIONARY_PEDIA</Tag>
@@ -28668,11 +28611,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Baha'i Missionary</English>
 		<French>Missionnaire de Bahaïsme</French>
 		<German>Bahai Missionar</German>
-		<Italian>
-			<Text>Missionario di Bahai:Missionari di Bahai</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Missionario bahaista</Italian>
 		<Spanish>Misionario de Bahaísmo</Spanish>
 		<Polish>Misjonarz Baha'i</Polish>
 		<Russian>Áàõ. ìèññèîíåð</Russian>
@@ -28682,11 +28621,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Canaanite Missionary</English>
 		<French>Missionnaire Canaanéen</French>
 		<German>Canaanite Missionar</German>
-		<Italian>
-			<Text>Missionario cananeo:Missionari cananei</Text>
-			<Gender>Male:Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Missionario cananeo</Italian>
 		<Spanish>Misionario de Canaaniteísmo</Spanish>
 		<Polish>Kananejski Misjonarz</Polish>
 		<Russian>Õàí. æðåö</Russian>
@@ -28701,13 +28636,14 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNIT_CAODAI_MISSIONARY</Tag>
 		<English>Cao Dai Missionary</English>
 		<Russian>Ìèññèîíåð Êàîäàé</Russian>
-	</TEXT>
+		<Italian>Missionario caodaista</Italian>
+	</TEXT>	
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DRUID_MISSIONARY</Tag>
 		<English>Druidic Missionary</English>
 		<French>Missionnaire Druidique</French>
 		<German>Druidischer Missionar</German>
-		<Italian>Missionario druidico</Italian>
+		<Italian>Missionario druidista</Italian>
 		<Polish>Druid</Polish>
 		<Russian>Äð. æðåö</Russian>
 	</TEXT>
@@ -28806,11 +28742,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNIT_JAINISM_MISSIONARY</Tag>
 		<English>Jain Missionary</English>
 		<French>Missionnaire jain</French>
-		<Italian>
-			<Text>Missionario jainista:Missionari jainisti</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Missionario giainista</Italian>
 		<Polish>Misjonarz Dźinizmu</Polish>
 		<Russian>Äæ. ìèññèîíåð</Russian>
 	</TEXT>
@@ -28858,11 +28790,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNIT_MESO_MISSIONARY</Tag>
 		<English>Mesopotamic Missionary</English>
 		<French>Missionnaire de Mésopotamie</French>
-		<Italian>
-			<Text>Missionario mesopotamico:Missionari mesopotamici</Text>
-			<Gender>Male:Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Missionario mesopotamico</Italian>
 		<Polish>Misjonarz Mezopotamizmu</Polish>
 		<Russian>Ìåñîï. æðåö</Russian>
 	</TEXT>
@@ -28876,7 +28804,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNIT_MORMON_MISSIONARY</Tag>
 		<English>Mormon Elders</English>
 		<French>Aînés Mormons</French>
-		<Italian>Saggi mormoni</Italian>
+		<Italian>Missionario mormone</Italian>
 		<Polish>Starszy Mormonów</Polish>
 		<Russian>Морм. миссионер</Russian>
 	</TEXT>
@@ -28893,6 +28821,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNIT_NGAI_MISSIONARY</Tag>
 		<English>Laibon</English>
 		<Russian>Ëàéáîí</Russian>
+		<Italian>Missionario ngaiista</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NGAI_MISSIONARY_PEDIA</Tag>
@@ -28905,16 +28834,13 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Zerca</English>
 		<Polish>Żerca</Polish>
 		<Russian>Çèðêà</Russian>
+		<Italian>Missionario rodnovero</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SCIENTOLOGY_MISSIONARY</Tag>
 		<English>Scientology Missionary</English>
 		<French>Missionnaire de la Scientologie</French>
-		<Italian>
-			<Text>Missionario di Scientology</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Missionario di Scientology</Italian>
 		<Polish>Misjonarz Scjentologów</Polish>
 		<Russian>Ñàåíò. ìèññèîíåð</Russian>
 	</TEXT>
@@ -28937,6 +28863,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNIT_SHINTO_MISSIONARY</Tag>
 		<English>Kannushi</English>
 		<Russian>Êàííóñè</Russian>
+		<Italian>Missionario scintoista</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHINTO_MISSIONARY_PEDIA</Tag>
@@ -28948,11 +28875,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNIT_SIKH_MISSIONARY</Tag>
 		<English>Sikh Missionary</English>
 		<French>Missionnaire Sikh</French>
-		<Italian>
-			<Text>Missionario sikh</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Missionario sikh</Italian>
 		<Polish>Guru Sikhów</Polish>
 		<Russian>Ñèêõ. ìèññèîíåð</Russian>
 	</TEXT>
@@ -28966,11 +28889,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNIT_TENGRI_MISSIONARY</Tag>
 		<English>Tengri Shaman</English>
 		<French>Shaman Tengri</French>
-		<Italian>
-			<Text>Sciamano tengriista</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Missionario tengriista</Italian>
 		<Polish>Szaman Tengryzmu</Polish>
 		<Russian>Òåíã. æðåö</Russian>
 	</TEXT>
@@ -28995,11 +28914,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VOODOO_MISSIONARY</Tag>
 		<English>Houngan</English>
-		<Italian>
-			<Text>Houngan</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Missionario vudù</Italian>
 		<Russian>Âóä. æðåö</Russian>
 	</TEXT>
 	<TEXT>
@@ -29012,11 +28927,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNIT_YORUBA_MISSIONARY</Tag>
 		<English>Yoruba Missionary</English>
 		<French>Missionnaire Yoruba</French>
-		<Italian>
-			<Text>Missionario Yoruba</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Missionario yoruba</Italian>
 		<Polish>Misjonarz Joruba</Polish>
 		<Russian>Éîð. æðåö</Russian>
 	</TEXT>
@@ -29514,7 +29425,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Desconocido</Spanish>
 		<Polish>Nieznane</Polish>
 		<Russian>Íåèçâ.</Russian>
-		<Italian>Sconosciuto</Italian> <!-- victory info screen -->
+		<Italian>Civiltà sconosciuta</Italian> <!-- victory info screen -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SPACE_RACE</Tag>

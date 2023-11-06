@@ -567,6 +567,8 @@
 		<English>[ICON_BULLET]This Animal has %d1_Causes Causes to Ignore border Restrictions.</English>
 		<French>[ICON_BULLET]Cet Animal a %d1_Causes de Raisons d'ignorer les restrictions de frontières.</French>
 		<Russian>[ICON_BULLET]Это животное имеет %d1_Causes шанс на игнорирование ограничения границ.</Russian>
+		<Italian>[ICON_BULLET]L'animale ha [COLOR_HIGHLIGHT_TEXT]%d1_Causes[COLOR_REVERT] [NUM1:ragione:ragioni] di [COLOR_HIGHLIGHT_TEXT]ignorare i confini[COLOR_REVERT]</Italian> <!-- Subcombat type Reckless Animal -->
+ <!-- unit african elephant -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_ANIMAL_IGNORES_BORDERS_LONG</Tag>
@@ -660,7 +662,7 @@
 		<English>Can Not Traverse</English>
 		<French>Ne peut pas Traverser</French>
 		<German>Durchqueren unmöglich</German>
-		<Italian>[ICON_BULLET]Non può [COLOR_HIGHLIGHT_TEXT]attraversare[COLOR_REVERT] le caselle con la caratteristica</Italian> <!-- unit Workboat (Prehistoric) -->
+		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Non può attraversare[COLOR_REVERT] le caselle con la caratteristica</Italian> <!-- unit Workboat (Prehistoric) -->
 		<Spanish>No puede atravesar</Spanish>
 		<Polish>Nie można przebić</Polish>
 		<Russian>Íå ìîæåò ïåðåñå÷ü</Russian>
@@ -1092,7 +1094,7 @@
 		<English>[ICON_BULLET]Can Infiltrate another player's City (%D1_Change [ICON_ESPIONAGE])</English>
 		<French>[ICON_BULLET]Peut infiltrer la ville d'un autre joueur (%D1_Change [ICON_ESPIONAGE])</French>
 		<German>[ICON_BULLET]kann ausländische Städte infiltrieren (%D1_Change [ICON_ESPIONAGE])</German>
-		<Italian>[ICON_BULLET]Può [COLOR_HIGHLIGHT_TEXT]infiltrarsi[COLOR_REVERT] nelle città degli altri giocatori ([COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] [ICON_ESPIONAGE])</Italian> <!-- unit Exile -->
+		<Italian>[ICON_BULLET]Può [COLOR_HIGHLIGHT_TEXT]infiltrarsi[COLOR_REVERT] nelle città delle altre civiltà ([COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] [ICON_ESPIONAGE])</Italian> <!-- unit Exile -->
 		<Spanish>[ICON_BULLET]Se puede infiltrar en la ciudad de otro jugador (%D1_Change [ICON_ESPIONAGE])</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2377,6 +2379,7 @@
 		<English>57th Infantry Regiment</English>
 		<French>57ème Regiment d'Infanterie</French>
 		<Russian>57-é ïåõîòíûé ïîëê</Russian>
+		<Italian>57° reggimento di fanteria</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_57TH_INFANTRY_REGIMENT_PEDIA</Tag>
@@ -2539,7 +2542,7 @@
 		<Tag>TXT_KEY_UNIT_ADZE_WARRIOR</Tag>
 		<English>Adze Warrior</English>
 		<French>Guerrier Adze</French>
-		<Italian>Guerriero Adze</Italian>
+		<Italian>Guerriero baluba</Italian>
 		<Polish>Wojownik Adze</Polish>
 		<Russian>Âîèí ñ òåñëîì</Russian>
 	</TEXT>
@@ -2600,6 +2603,7 @@
 		<French>Perroquet gris d'Afrique</French>
 		<Polish>Żako</Polish>
 		<Russian>Àôð. ïîïóãàé</Russian>
+		<Italian>Pappagallo cinerino</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AFRICANGREY_PEDIA</Tag>
@@ -2617,6 +2621,7 @@
 		</German>
 		<Polish>Pingwin Przylądkowy</Polish>
 		<Russian>Àôð. ïèíãâèí</Russian>
+		<Italian>Pinguino africano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AFRICAN_PENGUIN_PEDIA</Tag>
@@ -2653,11 +2658,7 @@
 		<Tag>TXT_KEY_UNIT_AGRIANIAN_AXEMAN</Tag>
 		<English>Agrianian Axeman</English>
 		<French>Guerrier avec hache Agrianien</French>
-		<Italian>
-			<Text>Guerriero con ascia Agriano</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Guerriero con ascia agriano</Italian>
 		<Russian>Àãðèàí. ñåêèðîíîñåö</Russian>
 	</TEXT>
 	<TEXT>
@@ -2725,11 +2726,7 @@
 		<Tag>TXT_KEY_UNIT_AIRSETTLER</Tag>
 		<English>Aircraft Settler</English>
 		<French>Colon aéroporté</French>
-		<Italian>
-			<Text>Colono aviotrasportato:Coloni aviotrasportati</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Colono aviotrasportato</Italian>
 		<Polish>Osadnik Lotniczy</Polish>
 		<Russian>Âîçä. êîëîíèñò</Russian>
 	</TEXT>
@@ -2738,6 +2735,7 @@
 		<English>[ICON_BULLET]+4 population to the city founded.</English>
 		<French>[ICON_BULLET]+4 population à la ville fondée.</French>
 		<Russian>[ICON_BULLET]+4 населения для вновь основанного города.</Russian>
+		<Italian>[ICON_BULLET]L'unità fornisce [COLOR_HIGHLIGHT_TEXT]+4 di popolazione[COLOR_REVERT] quando fonda una città</Italian> <!-- unit Aircraft Settler -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AIRSHIP</Tag>
@@ -2783,6 +2781,7 @@
 		<English>Akimel Brigade</English>
 		<French>Brigade Akimel</French>
 		<Russian>Àêèìåëü</Russian>
+		<Italian>Brigatista Akimel</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AKIMEL_BRIGADE_PEDIA</Tag>
@@ -2793,6 +2792,7 @@
 		<English>Aksum Merchants</English>
 		<French>Aksum Marchands</French>
 		<Russian>Àêñóìñêèé òîðãîâåö</Russian>
+		<Italian>Mercante di Aksum</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AKSUM_MERCHANTS_PEDIA</Tag>
@@ -2802,7 +2802,7 @@
 		<Tag>TXT_KEY_UNIT_ALA_AL_DIN_HUSAYN</Tag>
 		<English>Ala al Din Husayn</English>
 		<Russian>Àëà àä-äèí Õóñàéí</Russian>
-		<Italian>Ala ad Din Husayn</Italian>
+		<Italian>Ala Ad Din Husayn</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ALA_AL_DIN_HUSAYN_PEDIA</Tag>
@@ -2813,6 +2813,7 @@
 		<English>Albanian Janissary</English>
 		<French>Janissary Albanais</French>
 		<Russian>Àëáàíñêèé ÿíû÷àð</Russian>
+		<Italian>Giannizzero albanese</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ALBANIAN_JANISSARY_PEDIA</Tag>
@@ -2879,6 +2880,7 @@
 		<English>Aluna Shaman</English>
 		<French>Chaman Aluna</French>
 		<Russian>Øàìàí Àëóíû</Russian>
+		<Italian>Sciamano di Aluna</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ALUNA_SHAMAN_PEDIA</Tag>
@@ -2889,6 +2891,7 @@
 		<English>Alvarado Cavalry</English>
 		<French>Cavalerie Alvarado</French>
 		<Russian>Êîííèöà Àëüâàðàäî</Russian>
+		<Italian>Cavalleria Alvarado</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ALVARADO_CAVALRY_PEDIA</Tag>
@@ -2945,6 +2948,7 @@
 		<English>Amazon Rider</English>
 		<French>Cavalière Amazone</French>
 		<Russian>Àìàçîíñêèé âñàäíèê</Russian>
+		<Italian>Cavaliere amazzone</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AMAZON_RIDER_PEDIA</Tag>
@@ -2989,11 +2993,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Navy SEAL:Navy SEAL</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Soldato del Navy SEAL</Italian>
 		<Spanish>
 			<Text>SEAL de la Marina:SEAL de la Marina</Text>
 			<Gender>Male</Gender>
@@ -3097,6 +3097,7 @@
 		<English>Andaman Pygmies</English>
 		<French>Pygmé Andaman</French>
 		<Russian>Àíäàìàíñêèé ïèãìåé</Russian>
+		<Italian>Pigmei andamanesi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ANDAMAN_PYGMIES_PEDIA</Tag>
@@ -3244,11 +3245,7 @@
 		<Tag>TXT_KEY_UNIT_APACHE_CAVALRY</Tag>
 		<English>Apache Cavalry</English>
 		<French>Cavalier Apache</French>
-		<Italian>
-			<Text>Cavalleria apache</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Cavalleria apache</Italian>
 		<Russian>Êîííèöà àïà÷åé</Russian>
 	</TEXT>
 	<TEXT>
@@ -3259,11 +3256,7 @@
 		<Tag>TXT_KEY_UNIT_APOLLONIAN_GUARD</Tag>
 		<English>Apollonian Guard</English>
 		<French>Garde Apollinien</French>
-		<Italian>
-			<Text>Guardia Apolloniana</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Guardia apolloniana</Italian>
 		<Russian>Ãâàðäèÿ Àïîëëîíà</Russian>
 	</TEXT>
 	<TEXT>
@@ -3298,6 +3291,7 @@
 		<English>Arabian Galliot</English>
 		<French>Galiot Arabe</French>
 		<Russian>Àðàáñêèé ãàëèîò</Russian>
+		<Italian>Galeota araba</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARABIAN_GALLIOT_PEDIA</Tag>
@@ -3312,7 +3306,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Arciere arabo su cammello</Italian>
+		<Italian>Arciere arabo su cammello</Italian> <!-- Same as TXT_KEY_UNIT_CAMEL_ARCHER -->
 		<Spanish>
 			<Text>Arquero a camello:Arqueros a camello</Text>
 			<Gender>Male</Gender>
@@ -3592,6 +3586,7 @@
 		<English>Ashina Elite</English>
 		<French>Elite Ashina</French>
 		<Russian>Âîèí Àøèíû</Russian>
+		<Italian>Guerriero d'elite Ashina</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ASHINA_ELITE_PEDIA</Tag>
@@ -3616,7 +3611,7 @@
 		</Spanish>
 		<Polish>Aszurbanipal</Polish>
 		<Russian>Àøøóðáàíàïàë</Russian>
-		<Italian>Assurbanipal </Italian>
+		<Italian>Assurbanipal</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ASHURBANIPAL_PEDIA</Tag>
@@ -3632,7 +3627,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Orso dal collare</Italian>
+		<Italian>Orso della luna</Italian>
 		<Spanish>
 			<Text>Oso tibetano</Text>
 			<Gender>Male</Gender>
@@ -3744,6 +3739,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>Ðåäó</Russian>
+		<Italian>Guerriero assiro</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ASSYRIAN_REDU_PEDIA</Tag>
@@ -3771,6 +3767,7 @@
 		<Tag>TXT_KEY_UNIT_ASVARAN_SARDAR</Tag>
 		<English>Asvaran Sardar</English>
 		<Russian>Àñâàðàí</Russian>
+		<Italian>Sardar di savarani</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ASVARAN_SARDAR_PEDIA</Tag>
@@ -3817,7 +3814,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>Bomba nucleare</Italian>
+		<Italian>Bomba atomica</Italian>
 		<Spanish>
 			<Text>Bomba A</Text>
 			<Gender>Female</Gender>
@@ -4053,11 +4050,7 @@
 		<Tag>TXT_KEY_UNIT_AXEMAN_ROXOLANI</Tag>
 		<English>Roxolani Axeman</English>
 		<French>Guerrier Roxolani avec Hache</French>
-		<Italian>
-			<Text>Guerriero con ascia Rossolano:Guerrieri con ascia Rossolani</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Guerriero con ascia roxolano</Italian>
 		<Russian>Ðîêñîëàí. ñåêèðîíîñåö</Russian>
 	</TEXT>
 	<TEXT>
@@ -4085,6 +4078,7 @@
 		<English>Azawad Cavalry</English>
 		<French>Cavalerie Azawad</French>
 		<Russian>Àçàâàäñêàÿ êîííèöà</Russian>
+		<Italian>Cavalleria d'Azawad</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AZAWAD_CAVALRY_PEDIA</Tag>
@@ -4151,7 +4145,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>Áààë-Ýçåð II</Russian>
-		<Italian>Baal-Azor II</Italian>
+		<Italian>Baal Azor II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BAAL_ESER_PEDIA</Tag>
@@ -4171,11 +4165,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Arciere babilonese:Arcieri babilonesi</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Arciere babilonese</Italian>
 		<Spanish>
 			<Text>Saetero babilonio:Saeteros babilonios</Text>
 			<Gender>Male</Gender>
@@ -4197,6 +4187,7 @@
 		<English>Bactrian Cataphract</English>
 		<French>Cataphracte Bactrien</French>
 		<Russian>Áàêòðèéñêèé êàòàôðàêò</Russian>
+		<Italian>Catafratto battriano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BACTRIAN_CATAPHRACT_PEDIA</Tag>
@@ -4206,7 +4197,7 @@
 		<Tag>TXT_KEY_UNIT_BADIS</Tag>
 		<English>Badis</English>
 		<Russian>Áàäèñ</Russian>
-		<Italian>Al Muizz ben Badis</Italian>
+		<Italian>Al Muizz Ben Badis</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BADIS_PEDIA</Tag>
@@ -4242,6 +4233,7 @@
 		<English>Balamob Slinger</English>
 		<French>Frondeur Balamob</French>
 		<Russian>Áàëàìîá</Russian>
+		<Italian>Fromboliere di Balamob</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BALAMOB_SLINGER_PEDIA</Tag>
@@ -4252,6 +4244,7 @@
 		<English>Balearic Slingers</English>
 		<French>Guerrier avec fronde Balearic</French>
 		<Russian>Áàëåàðñêèé ïðàùíèê</Russian>
+		<Italian>Fromboliere celtiberico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BALEARIC_SLINGERS_PEDIA</Tag>
@@ -4262,6 +4255,7 @@
 		<English>Ballester</English>
 		<French>Ballistère</French>
 		<Russian>Áàëëåñòåð</Russian>
+		<Italian>Arbalestriere</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BALLESTER_PEDIA</Tag>
@@ -4399,11 +4393,7 @@
 		<Tag>TXT_KEY_UNIT_BANDIT_RIDER</Tag>
 		<English>Bandit Rider</English>
 		<French>Bandit à cheval</French>
-		<Italian>
-			<Text>Bandito a cavallo</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Bandito a cavallo</Italian>
 		<Spanish>
 			<Text>Jinete bandido</Text>
 			<Gender>Male</Gender>
@@ -4427,6 +4417,7 @@
 		<Tag>TXT_KEY_UNIT_BANYAN_XEBEC</Tag>
 		<English>Banyan Xebec</English>
 		<Russian>Áàíüÿíñêàÿ øåáåêà</Russian>
+		<Italian>Sciabecco bahreinita</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BANYAN_XEBEC_PEDIA</Tag>
@@ -4500,6 +4491,7 @@
 		</German>
 		<Polish>Płomykówka</Polish>
 		<Russian>Ñèïóõà</Russian>
+		<Italian>Barbagianni comune</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BARNOWL_PEDIA</Tag>
@@ -4539,6 +4531,7 @@
 		</French>
 		<Polish>Puszczyk</Polish>
 		<Russian>Ñû÷</Russian>
+		<Italian>Allocco barrato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BARREDOWL_PEDIA</Tag>
@@ -4561,6 +4554,7 @@
 		<English>Bashkir Shaman</English>
 		<French>Chaman Bashkir</French>
 		<Russian>Áàøêèðñêèé øàìàí</Russian>
+		<Italian>Sciamano baschiro</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BASHKIR_SHAMAN_PEDIA</Tag>
@@ -4670,6 +4664,7 @@
 		<Tag>TXT_KEY_UNIT_BATYRS</Tag>
 		<English>Batyrs</English>
 		<Russian>Áàòûð</Russian>
+		<Italian>Bagatur</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BATYRS_PEDIA</Tag>
@@ -4711,6 +4706,7 @@
 		<Tag>TXT_KEY_UNIT_BEAD_HUCKSTER</Tag>
 		<English>Bead Huckster</English>
 		<Russian>Ïðîäàâåö áóñ</Russian>
+		<Italian>Venditore di perline</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BEAD_HUCKSTER_PEDIA</Tag>
@@ -4749,6 +4745,7 @@
 		<English>Beggar</English>
 		<French>Mendiant</French>
 		<Russian>Íèùèé</Russian>
+		<Italian>Mendicante</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BEGGAR_PEDIA</Tag>
@@ -4832,7 +4829,7 @@
 		<Tag>TXT_KEY_UNIT_BENIN_WAR_BOW</Tag>
 		<English>Benin Warbow</English>
 		<French>Archer du Bénin</French>
-		<Italian>Arciere del Benin</Italian>
+		<Italian>Arciere beninese</Italian>
 		<Polish>Beniński Łucznik</Polish>
 		<Russian>Áåíèíñêèé ëó÷íèê</Russian>
 	</TEXT>
@@ -4948,6 +4945,7 @@
 		<English>Bison Wardens</English>
 		<French>Garde-chasse de Bisons</French>
 		<Russian>Ëîâåö áèçîíîâ</Russian>
+		<Italian>Guardacaccia di bisonti</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BISON_WARDENS_PEDIA</Tag>
@@ -4957,7 +4955,7 @@
 		<Tag>TXT_KEY_UNIT_BLACKWOOD_ARCHER</Tag>
 		<English>Blackwood Archer</English>
 		<French>Archer de Blackwood</French>
-		<Italian>Arciere Blackwood</Italian>
+		<Italian>Arciere tupi</Italian>
 		<Spanish>
 			<Text>Arquero de Blackwood</Text>
 			<Gender>Male</Gender>
@@ -5025,11 +5023,7 @@
 		<Tag>TXT_KEY_UNIT_BLOOD_WARRIOR</Tag>
 		<English>Blood Warrior</English>
 		<French>Guerrier de sang</French>
-		<Italian>
-			<Text>Guerriero sanguinario</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Guerriero del sangue</Italian>
 		<Russian>Ãîëîâîñåê</Russian>
 	</TEXT>
 	<TEXT>
@@ -5041,7 +5035,7 @@
 		<Tag>TXT_KEY_UNIT_BOER_CAVALRY</Tag>
 		<English>Boer Cavalry</English>
 		<French>Cavalerie Boer</French>
-		<Italian>Cavalleria Boera</Italian>
+		<Italian>Cavalleria boera</Italian>
 		<Polish>Burska Kawaleria</Polish>
 		<Russian>Áóðñêàÿ êîííèöà</Russian>
 	</TEXT>
@@ -5057,6 +5051,7 @@
 		<English>Bola Hunter</English>
 		<French>Chasseur Bola</French>
 		<Russian>Ìåòàòåëü áîëà</Russian>
+		<Italian>Cacciatore con bolas</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BOLA_HUNTER_PEDIA</Tag>
@@ -5150,6 +5145,7 @@
 		<French>Fou à pieds bleus</French>
 		<Polish>Głuptak Niebieskonogi</Polish>
 		<Russian>Îëóøà</Russian>
+		<Italian>Sula piediazzurri</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BOOBY_PEDIA</Tag>
@@ -5160,7 +5156,7 @@
 		<Tag>TXT_KEY_UNIT_BOOMERANG_THROWER</Tag>
 		<English>Boomerang Thrower</English>
 		<French>Lanceur de Boomerang</French>
-		<Italian>Lanciatore di Boomerang</Italian>
+		<Italian>Lanciatore di boomerang</Italian>
 		<Polish>Miotacz Bumerangów</Polish>
 		<Russian>Ìåòàòåëü áóìåðàíãà</Russian>
 	</TEXT>
@@ -5184,6 +5180,7 @@
 		<Tag>TXT_KEY_UNIT_BOSNEGERS</Tag>
 		<English>Bosnegers</English>
 		<Russian>Ëåñíîé íåãð</Russian>
+		<Italian>Bosneger</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BOSNEGERS_PEDIA</Tag>
@@ -5203,6 +5200,7 @@
 		<Tag>TXT_KEY_UNIT_BOYARS</Tag>
 		<English>Boyars</English>
 		<Russian>Áîÿðèí</Russian>
+		<Italian>Boiardo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BOYARS_PEDIA</Tag>
@@ -5213,6 +5211,7 @@
 		<English>Brabant Mercenaries</English>
 		<French>Mercenaire Brabant</French>
 		<Russian>Áðàáàíòñêèé íàåìíèê</Russian>
+		<Italian>Mercenario di Brabante</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BRABANT_MERCENARIES_PEDIA</Tag>
@@ -5241,11 +5240,7 @@
 		<Tag>TXT_KEY_UNIT_BRIGADE_PIRON</Tag>
 		<English>Brigade Piron</English>
 		<French>Brigadier Piron</French>
-		<Italian>
-			<Text>Brigata Piron:Brigata Piron</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Brigatista Piron</Italian>
 		<Russian>Áðèãàäà Ïèðîíà</Russian>
 	</TEXT>
 	<TEXT>
@@ -5343,11 +5338,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Missionario Buddista:Missionari Buddisti</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Missionario buddista</Italian>
 		<Spanish>
 			<Text>Misionero budista:Misioneros budistas</Text>
 			<Gender>Male</Gender>
@@ -5364,7 +5355,7 @@
 		<Tag>TXT_KEY_UNIT_BUFFALO_HUMP</Tag>
 		<English>Buffalo Hump</English>
 		<Russian>Áóôôàëî Õàìï</Russian>
-		<Italian>Po-cha-na-quar-hip</Italian>
+		<Italian>Gobba di Bisonte</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BUFFALO_HUMP_PEDIA</Tag>
@@ -5415,6 +5406,7 @@
 		<English>Bush Trackers</English>
 		<French>Pisteur Bush</French>
 		<Russian>Îõîòíèê áóøà</Russian>
+		<Italian>Cercatore di tracce della macchia</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BUSH_TRACKERS_PEDIA</Tag>
@@ -5433,11 +5425,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Catafratta:Catafratte</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Catafratto bizantino</Italian>
 		<Spanish>
 			<Text>Catafracta:Catafractas</Text>
 			<Gender>Male</Gender>
@@ -5459,6 +5447,7 @@
 		<English>Cabanagem Rebel</English>
 		<French>Rebelle Cabanagem</French>
 		<Russian>Êàáàíàæåí</Russian>
+		<Italian>Ribelle del Cabangem</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CABANAGEM_REBEL_PEDIA</Tag>
@@ -5619,11 +5608,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>RCMP</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Polizia reale canadese a cavallo</Italian>
 		<Spanish>
 			<Text>Policía montado canadiense</Text>
 			<Gender>Male</Gender>
@@ -5637,6 +5622,7 @@
 		<English>Canari Bowmans</English>
 		<French>Archer Canari</French>
 		<Russian>Ëó÷íèê êàíàðè</Russian>
+		<Italian>Arciere cañari</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CANARI_BOWMANS_PEDIA</Tag>
@@ -5719,6 +5705,7 @@
 		<English>Capayan Axemans</English>
 		<French>Soldat avec haches Capayan</French>
 		<Russian>Êàïàÿíñêèé ñåêèðîíîñåö</Russian>
+		<Italian>Guerriero con ascia capayano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAPAYAN_AXEMANS_PEDIA</Tag>
@@ -5733,7 +5720,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Scimmia cappuccino</Italian>
+		<Italian>Scimmia cappuccina</Italian>
 		<Spanish>
 			<Text>Mono capuchino</Text>
 			<Gender>Male</Gender>
@@ -5794,6 +5781,7 @@
 		<English>Carantanian Mercenary</English>
 		<French>Mercenaire Carantanien</French>
 		<Russian>Êàðàíòàíñêèé íàåìíèê</Russian>
+		<Italian>Mercenario carantano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CARANTANIAN_MERCENARY_PEDIA</Tag>
@@ -5863,7 +5851,7 @@
 		<Tag>TXT_KEY_UNIT_CARIB_BLOWGUNNER</Tag>
 		<English>Carib Blowgunner</English>
 		<French>Guerrier avec sarbacane Caribéen</French>
-		<Italian>Guerriero Caraibico con cerbottana</Italian>
+		<Italian>Guerriero caraibico con cerbottana</Italian>
 		<Spanish>
 			<Text>Guerrero con cerbatana caribeño</Text>
 			<Gender>Male</Gender>
@@ -5948,11 +5936,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Cavalleria numida:Cavallerie numide</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Cavalleria numide</Italian>
 		<Spanish>
 			<Text>Caballería númida:Caballerías númidas</Text>
 			<Gender>Female</Gender>
@@ -6006,7 +5990,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Casuario</Italian>
+		<Italian>Casuaro</Italian>
 		<Spanish>
 			<Text>Casuario</Text>
 			<Gender>Male</Gender>
@@ -6018,7 +6002,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CATAMARAN</Tag>
 		<English>Catamaran</English>
-		<Italian>Catamarano</Italian>
+		<Italian>Catamarano polinesiano</Italian>
 		<Polish>Katamaran</Polish>
 		<Russian>Êàòàìàðàí</Russian>
 	</TEXT>
@@ -6104,11 +6088,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Guerriero gallo:Guerrieri galli</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Guerriero gallico</Italian>
 		<Spanish>
 			<Text>Guerrero galo:Guerreros galos</Text>
 			<Gender>Male</Gender>
@@ -6175,6 +6155,7 @@
 		<Tag>TXT_KEY_UNIT_CHAPUL</Tag>
 		<English>Chapul</English>
 		<Russian>×àïóë</Russian>
+		<Italian>Cavaliere kipcako</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHAPUL_PEDIA</Tag>
@@ -6294,11 +6275,7 @@
 		<Tag>TXT_KEY_UNIT_CHEROKEE_RIFLEMAN</Tag>
 		<English>Cherokee Rifleman</English>
 		<French>Fusilier Cherokee</French>
-		<Italian>
-			<Text>Fuciliere cherokee</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Fuciliere cherokee</Italian>
 		<Russian>Ñòðåëîê ÷åðîêè</Russian>
 	</TEXT>
 	<TEXT>
@@ -6316,6 +6293,7 @@
 		</Spanish>
 		<Polish>Jeździec Czejenów</Polish>
 		<Russian>Øàéåíñêèé âñàäíèê</Russian>
+		<Italian>Cavaliere cheyenne</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHEYENNE_RIDER_PEDIA</Tag>
@@ -6327,6 +6305,7 @@
 		<English>Chilean Corvette</English>
 		<French>Corvette Chilienne</French>
 		<Russian>×èëèéñêèé êîðâåò</Russian>
+		<Italian>Corvetta cilena</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHILEAN_CORVETTE_PEDIA</Tag>
@@ -6363,11 +6342,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Cho-Ko-Nu:Cho-Ko-Nu</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Balestriere cinese</Italian>
 		<Spanish>
 			<Text>Cho-Ko-Nu:Cho-Ko-Nu</Text>
 			<Gender>Male</Gender>
@@ -6412,7 +6387,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Prete</Italian>
+		<Italian>Missionario cristiano</Italian>
 		<Spanish>
 			<Text>Sacerdote</Text>
 			<Gender>Male</Gender>
@@ -6466,6 +6441,7 @@
 		<Tag>TXT_KEY_UNIT_CHULLPAS</Tag>
 		<English>Chullpas</English>
 		<Russian>×óëüïà</Russian>
+		<Italian>Fuciliere qulla</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHULLPAS_PEDIA</Tag>
@@ -6484,6 +6460,7 @@
 		<Tag>TXT_KEY_UNIT_CHWEZI_ELITES</Tag>
 		<English>Chwezi Elites</English>
 		<Russian>Áà÷âåçè</Russian>
+		<Italian>Guerriero d'elite Bachwezi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHWEZI_ELITES_PEDIA</Tag>
@@ -6494,6 +6471,7 @@
 		<English>Cibola Peasant</English>
 		<French>Paysan Cibola</French>
 		<Russian>Ñèáîëüñêèé êðåñòüÿíèí</Russian>
+		<Italian>Contadino di Cibola</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CIBOLA_PEASANT_PEDIA</Tag>
@@ -6699,6 +6677,7 @@
 		<English>[ICON_BULLET]+1 population to the city founded.</English>
 		<French>[ICON_BULLET]+1 population à la ville fondée.</French>
 		<Russian>[ICON_BULLET]+1 населения для вновь основанного города.</Russian>
+		<Italian>[ICON_BULLET]L'unità fornisce [COLOR_HIGHLIGHT_TEXT]+1 di popolazione[COLOR_REVERT] quando fonda una città</Italian> <!-- unit colonist -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COMANCHE_HORSE_ARCHER</Tag>
@@ -6711,6 +6690,7 @@
 		</Spanish>
 		<Polish>Łucznik Konny Komanczów</Polish>
 		<Russian>Èíäåéñêèé ëó÷íèê</Russian>
+		<Italian>Arciere a cavallo comanche</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COMANCHE_HORSE_ARCHER_PEDIA</Tag>
@@ -6734,7 +6714,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Gentiluomo</Italian>
+		<Italian>Missionario confuciano</Italian>
 		<Spanish>
 			<Text>Gentilhombre</Text>
 			<Gender>Male</Gender>
@@ -6784,6 +6764,7 @@
 		<English>Copena Merchant</English>
 		<French>Marchand Copena</French>
 		<Russian>Êîïåíñêèé òîðãîâåö</Russian>
+		<Italian>Mercante di Copena</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COPENA_MERCHANT_PEDIA</Tag>
@@ -6793,6 +6774,7 @@
 		<Tag>TXT_KEY_UNIT_CORNUTI</Tag>
 		<English>Cornuti</English>
 		<Russian>Êîðíóò</Russian>
+		<Italian>Guerriero cornuto</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CORNUTI_PEDIA</Tag>
@@ -6803,6 +6785,7 @@
 		<English>Courland Jaeger</English>
 		<French>Chasseur du Courland</French>
 		<Russian>Êóðëÿíäñêèé åãåðü</Russian>
+		<Italian>Fanteria della Curlandia</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COURLAND_JAEGER_PEDIA</Tag>
@@ -6819,6 +6802,7 @@
 		</Spanish>
 		<Polish>Biegacz Kojotów</Polish>
 		<Russian>Áåãóùèé êîéîò</Russian>
+		<Italian>Guerriero coyote</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COYOTE_RUNNER_PEDIA</Tag>
@@ -6847,7 +6831,7 @@
 		<Tag>TXT_KEY_UNIT_CREE_TRACKER</Tag>
 		<English>Cree Tracker</English>
 		<French>Pisteur Cree</French>
-		<Italian>Cercatore di tracce Cree</Italian>
+		<Italian>Cercatore di tracce cree</Italian>
 		<Spanish>
 			<Text>Rastreador cree</Text>
 			<Gender>Male</Gender>
@@ -6978,7 +6962,7 @@
 		<English>Crusader</English>
 		<French>Croisé</French>
 		<German>Kreuzfahrer</German>
-		<Italian>Crociato</Italian>
+		<Italian>Cavaliere crociato</Italian>
 		<Spanish>
 			<Text>Cruzado</Text>
 			<Gender>Male</Gender>
@@ -6990,6 +6974,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CRUSADER_HELP</Tag>
 		<English>[ICON_BULLET]Spawned by [COLOR_BUILDING_TEXT][LINK=BUILDING_KINGS_CRUSADE]King's Crusade[\LINK][COLOR_REVERT] every few turns</English>
+		<Italian>[ICON_BULLET]L'unità è [COLOR_HIGHLIGHT_TEXT]prodotta[COLOR_REVERT] dall'edificio [COLOR_BUILDING_TEXT][LINK=BUILDING_KINGS_CRUSADE]Crociata del re[\LINK][COLOR_REVERT] a intervalli regolari</Italian> <!-- unit Crusader -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CRUSADER_PEDIA</Tag>
@@ -7000,11 +6985,7 @@
 		<Tag>TXT_KEY_UNIT_CUACHIC</Tag>
 		<English>Cuachic</English>
 		<French>Guerrier Cuachic</French>
-		<Italian>
-			<Text>Cuachic</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Guerriero cuachic</Italian>
 		<Russian>×óà÷èê</Russian>
 	</TEXT>
 	<TEXT>
@@ -7112,6 +7093,7 @@
 		<English>Czibcza Warrior</English>
 		<French>Guerrier Czibcza</French>
 		<Russian>×èá÷àíñêèé âîèí</Russian>
+		<Italian>Lanciatore di giavellotti muisca</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CZIBCZA_WARRIOR_PEDIA</Tag>
@@ -7139,11 +7121,7 @@
 		<Tag>TXT_KEY_UNIT_DAHOMEY_MINO</Tag>
 		<English>Mino</English>
 		<French>Fusillier Mino</French>
-		<Italian>
-			<Text>Mino</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Fuciliera Mino</Italian>
 		<Russian>Ìèíî</Russian>
 	</TEXT>
 	<TEXT>
@@ -7155,6 +7133,7 @@
 		<Tag>TXT_KEY_UNIT_DAI_CHUI</Tag>
 		<English>Dai Chui</English>
 		<Russian>Äàé-×óé</Russian>
+		<Italian>Cavaliere cantonese</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DAI_CHUI_PEDIA</Tag>
@@ -7185,6 +7164,7 @@
 		<Tag>TXT_KEY_UNIT_DAREN</Tag>
 		<English>Daren</English>
 		<Russian>Äàðåí</Russian>
+		<Italian>Daren xiambei</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DAREN_PEDIA</Tag>
@@ -7195,6 +7175,7 @@
 		<English>Darfur Militia</English>
 		<French>Milice du Darfur</French>
 		<Russian>Äàðôóðñêàÿ ìèëèöèÿ</Russian>
+		<Italian>Miliziano del Darfur</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DARFUR_MILITIA_PEDIA</Tag>
@@ -7258,6 +7239,7 @@
 		<English>Dene Sled Dogs</English>
 		<French>Chien d'attelage Dene</French>
 		<Russian>Ñîáà÷üÿ óïðÿæêà</Russian>
+		<Italian>Cane da slitta dene</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DENE_SLED_DOGS_PEDIA</Tag>
@@ -7331,6 +7313,7 @@
 		<English>De Sucre Dragoons</English>
 		<French>Dragons de Sucre</French>
 		<Russian>Äðàãóí äå Ñóêðå</Russian>
+		<Italian>Dragone di De Sucre</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DE_SUCRE_DRAGOONS_PEDIA</Tag>
@@ -7378,6 +7361,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>Äèããåð</Russian>
+		<Italian>Digger australiano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DIGGER_PEDIA</Tag>
@@ -7407,7 +7391,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Lupo nero</Italian>
+		<Italian>Enocione</Italian>
 		<Spanish>
 			<Text>Lobo gigante</Text>
 			<Gender>Male</Gender>
@@ -7436,6 +7420,7 @@
 		<English>Great Doctor</English>
 		<French>Médecin Illustre</French>
 		<Russian>Âðà÷</Russian>
+		<Italian>Gran medico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DOLPHIN</Tag>
@@ -7484,6 +7469,7 @@
 		<Tag>TXT_KEY_UNIT_DOUJIAN</Tag>
 		<English>Doujian</English>
 		<Russian>Äîäçèí</Russian>
+		<Italian>Doujian di Chibi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DOUJIAN_PEDIA</Tag>
@@ -7698,7 +7684,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Oca</Italian>
+		<Italian>Anatra</Italian>
 		<Spanish>
 			<Text>Pato</Text>
 			<Gender>Male</Gender>
@@ -7728,6 +7714,7 @@
 		<Tag>TXT_KEY_UNIT_DUGUNDIZ</Tag>
 		<English>Dugundiz</English>
 		<Russian>Ãåðìàíñêèé êîïåéùèê</Russian>
+		<Italian>Dugunthiz longobardo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DUGUNDIZ_PEDIA</Tag>
@@ -7948,7 +7935,7 @@
 		<Tag>TXT_KEY_UNIT_EGYPT_MYTH_MISSIONARY</Tag>
 		<English>Scribe</English>
 		<German>Schreiber</German>
-		<Italian>Scriba</Italian>
+		<Italian>Missionario kemetico</Italian>
 		<Spanish>
 			<Text>Escriba</Text>
 			<Gender>Male</Gender>
@@ -7966,11 +7953,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Carro da guerra:Carri da guerra</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Carro da guerra egizio</Italian> <!-- Same as TXT_KEY_UNIT_WAR_WAGON -->
 		<Spanish>
 			<Text>Carro de guerra:Carros de guerra</Text>
 			<Gender>Male</Gender>
@@ -8029,6 +8012,7 @@
 		<English>Elmeti</English>
 		<French>Cavalier Elmeti</French>
 		<Russian>Ýëüìåòè</Russian>
+		<Italian>Cavaliere elmeto</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ELMETI_PEDIA</Tag>
@@ -8110,11 +8094,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Giubba rossa:Giubbe rosse</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Giubba rossa inglese</Italian>
 		<Spanish>
 			<Text>Casaca roja:Casacas rojas</Text>
 			<Gender>Male</Gender>
@@ -8183,6 +8163,7 @@
 		<Tag>TXT_KEY_UNIT_ERNA</Tag>
 		<English>Erna</English>
 		<Russian>Ýðíà</Russian>
+		<Italian>Fuciliere Erna</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ERNA_PEDIA</Tag>
@@ -8216,11 +8197,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Guerriero Oromo:Guerrieri Oromo</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Soldato oromo</Italian>
 		<Spanish>
 			<Text>Guerrero oromo:Guerreros oromos</Text>
 			<Gender>Male</Gender>
@@ -8278,11 +8255,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Funzionario della Mulini Cereali:Funzionari della Mulini Cereali</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Dirigente di Cereali del mulino</Italian>
 		<Spanish>
 			<Text>Ejecutivo de Cereal Mills:Ejecutivos de Cereal Mills</Text>
 			<Gender>Male</Gender>
@@ -8304,11 +8277,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Funzionario della Sid Sushi</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Dirigente di Sid Sushi Company</Italian>
 		<Spanish>
 			<Text>Ejecutivo de Sid's Sushi:Ejecutivos de Sid's Sushi</Text>
 			<Gender>Male</Gender>
@@ -8324,11 +8293,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Funzionario della Etanolo Standard:Funzionari della Etanolo Standard</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Dirigente di Etanolo Energy Spa</Italian>
 		<Spanish>
 			<Text>Ejecutivo de Standard Ethanol:Ejecutivos de Standard Ethanol</Text>
 			<Gender>Male</Gender>
@@ -8346,11 +8311,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Funzionario della Costruzioni Creative:Funzionari della Costruzioni Creative</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Dirigente di Costruzioni Creative</Italian>
 		<Spanish>
 			<Text>Ejecutivo de Creative Constructions:Ejecutivos de Creative Constructions</Text>
 			<Gender>Male</Gender>
@@ -8368,11 +8329,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Funzionario della Estrazioni Minerarie Inc.:Funzionari della Estrazioni Minerarie Inc.</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Dirigente di Mineraria Srl</Italian>
 		<Spanish>
 			<Text>Ejecutivo de Mining Inc.:Ejecutivos de Mining Inc.</Text>
 			<Gender>Male</Gender>
@@ -8390,11 +8347,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Funzionario della Alluminio Co.:Funzionari della Alluminio Co.</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Dirigente di Allumination</Italian>
 		<Spanish>
 			<Text>Ejecutivo de Aluminum Co.:Ejecutivos de Aluminum Co.</Text>
 			<Gender>Male</Gender>
@@ -8412,11 +8365,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Funzionario della Gioiellieri Civilizzati:Funzionari della Gioiellieri Civilizzati</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Dirigente di Gioiellieri uniti</Italian>
 		<Spanish>
 			<Text>Ejecutivo de Civilized Jewelers Inc.:Ejecutivos de Civilized Jewelers Inc.</Text>
 			<Gender>Male</Gender>
@@ -8434,7 +8383,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Funzionario di Adventure Tours</Italian>
+		<Italian>Dirigente di Viaggi Avventura</Italian>
 		<Spanish>
 			<Text>Ejecutivo de Adventure Tours</Text>
 			<Gender>Male</Gender>
@@ -8448,7 +8397,7 @@
 		<English>Bullseye Executive</English>
 		<French>Gérant de Gran'Frais</French>
 		<German>Bullseye-Geschäftsführer</German>
-		<Italian>Funzionario di Bullseye</Italian>
+		<Italian>Dirigente di Green Perfection</Italian>
 		<Spanish>
 			<Text>Ejecutivo de Bullseye</Text>
 			<Gender>Male</Gender>
@@ -8462,7 +8411,7 @@
 		<English>Burgerworld Executive</English>
 		<French>Gérant de MondoBurger</French>
 		<German>Burgerworld-Geschäftsführer</German>
-		<Italian>Funzionario di Burgerworld</Italian>
+		<Italian>Dirigente di Mondo Burger</Italian>
 		<Spanish>
 			<Text>Ejecutivo de Burgerworld</Text>
 			<Gender>Male</Gender>
@@ -8476,7 +8425,7 @@
 		<English>Emperors Clothing Executive</English>
 		<French>Gérant d'Habits Impériaux</French>
 		<German>Emperors-Clothing-Geschäftsführer</German>
-		<Italian>Funzionario di Emperors Clothing</Italian>
+		<Italian>Dirigente di Abiti Imperiali</Italian>
 		<Spanish>
 			<Text>Ejecutivo de Emperors Clothing</Text>
 			<Gender>Male</Gender>
@@ -8490,7 +8439,7 @@
 		<English>East West Traders Executive</English>
 		<French>Gérant de 'East West Traders'</French>
 		<German>East-West-Traders-Geschäftsführer</German>
-		<Italian>Funzionario di East West Traders</Italian>
+		<Italian>Dirigente di Commercio Est-Ovest</Italian>
 		<Spanish>
 			<Text>Ejecutivo de East West Traders</Text>
 			<Gender>Male</Gender>
@@ -8504,7 +8453,7 @@
 		<English>Fashion Executive</English>
 		<French>Gérant de 'Maison de la Mode'</French>
 		<German>Fashion-Geschäftsführer</German>
-		<Italian>Funzionario di Fashion House</Italian>
+		<Italian>Dirigente di Casa della moda</Italian>
 		<Spanish>
 			<Text>Ejecutivo de Fashion House</Text>
 			<Gender>Male</Gender>
@@ -8518,7 +8467,7 @@
 		<English>MallWart Executive</English>
 		<French>Gérant de Carouf'</French>
 		<German>MallWart-Geschäftsführer</German>
-		<Italian>Funzionario di MallWart</Italian>
+		<Italian>Dirigente di BigMall</Italian>
 		<Spanish>
 			<Text>Ejecutivo de MallWart</Text>
 			<Gender>Male</Gender>
@@ -8532,7 +8481,7 @@
 		<English>Mapster Executive</English>
 		<French>Gérant de Mapster</French>
 		<German>Mapster-Geschäftsführer</German>
-		<Italian>Funzionario di Mapster</Italian>
+		<Italian>Dirigente di Mapster</Italian>
 		<Spanish>
 			<Text>Ejecutivo de Mapster</Text>
 			<Gender>Male</Gender>
@@ -8546,7 +8495,7 @@
 		<English>Big McDowells Executive</English>
 		<French>Gérant de Big McDowells</French>
 		<German>Big-McDowells-Geschäftsführer</German>
-		<Italian>Funzionario di Big McDowells</Italian>
+		<Italian>Dirigente di McDowells</Italian>
 		<Spanish>
 			<Text>Ejecutivo de McDowells</Text>
 			<Gender>Male</Gender>
@@ -8560,7 +8509,7 @@
 		<English>MileHigh Executive</English>
 		<French>Gérant de 'MileHigh'</French>
 		<German>MileHigh-Geschäftsführer</German>
-		<Italian>Funzionario di MileHigh</Italian>
+		<Italian>Dirigente di MileHigh Viaggi</Italian>
 		<Spanish>
 			<Text>Ejecutivo de MileHigh Travels International</Text>
 			<Gender>Male</Gender>
@@ -8574,7 +8523,7 @@
 		<English>Mobby Meats Executive</English>
 		<French>Gérant de 'Mobby Meats'</French>
 		<German>Mobby-Meats-Geschäftsführer</German>
-		<Italian>Funzionario di Mobby Meats</Italian>
+		<Italian>Dirigente di Mobby Carni International</Italian>
 		<Spanish>
 			<Text>Ejecutivo de Mobby Meats International</Text>
 			<Gender>Male</Gender>
@@ -8588,7 +8537,7 @@
 		<English>Red Curtains Executive</English>
 		<French>Gérant de Red Curtains</French>
 		<German>Red-Curtains-Geschäftsführer</German>
-		<Italian>Funzionario di Red Curtains</Italian>
+		<Italian>Dirigente di Red Curtains Entertainment</Italian>
 		<Spanish>
 			<Text>Ejecutivo de Red Curtains</Text>
 			<Gender>Male</Gender>
@@ -8602,7 +8551,7 @@
 		<English>Safari Hunters Executive</English>
 		<French>Gérant des Chasseurs Safari</French>
 		<German>Safari-Hunters-Geschäftsführer</German>
-		<Italian>Funzionario di Safari Hunters</Italian>
+		<Italian>Dirigente di Cacciatori di safari</Italian>
 		<Spanish>
 			<Text>Ejecutivo de Safari Hunters</Text>
 			<Gender>Male</Gender>
@@ -8616,7 +8565,7 @@
 		<English>Ultimate Soldiers Executive</English>
 		<French>Gérant de Soldats Ultimes</French>
 		<German>Ultimate Soldiers Geschäftsführer</German>
-		<Italian>Funzionario di Ultimate Soldiers</Italian>
+		<Italian>Dirigente di Ultimate Soldiers</Italian>
 		<Spanish>
 			<Text>Ejecutivo de Ultimate Soldiers</Text>
 			<Gender>Male</Gender>
@@ -8630,7 +8579,7 @@
 		<English>Wonka Confectioneries Executive</English>
 		<French>Gérant de des Confiseries Wonka</French>
 		<German>Wonka Confiserie Geschäftsführer</German>
-		<Italian>Funzionario di Wonka Confectioneries</Italian>
+		<Italian>Dirigente di Wonka Confetture</Italian>
 		<Spanish>
 			<Text>Ejecutivo de Wonka Confectioneries</Text>
 			<Gender>Male</Gender>
@@ -8854,6 +8803,7 @@
 		<English>Fady Shaman</English>
 		<French>Chaman Fady</French>
 		<Russian>Øàìàí Ôàäè</Russian>
+		<Italian>Sciamano dei fady</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FADY_SHAMAN_PEDIA</Tag>
@@ -8896,6 +8846,7 @@
 		<Tag>TXT_KEY_UNIT_FALXMEN</Tag>
 		<English>Falxmen</English>
 		<Russian>Âîèí ñ ñåðïîì</Russian>
+		<Italian>Guerriero con falce</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FALXMEN_PEDIA</Tag>
@@ -9046,6 +8997,7 @@
 		<Tag>TXT_KEY_UNIT_FIGURINE_POTTER</Tag>
 		<English>Figurine Potter</English>
 		<Russian>Ëåïùèê ôèãóðîê</Russian>
+		<Italian>Mercante valvidiano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FIGURINE_POTTER_PEDIA</Tag>
@@ -9068,7 +9020,7 @@
 		<Tag>TXT_KEY_UNIT_FLAIL_ELEPHANT</Tag>
 		<English>Flail Elephant</English>
 		<French>Eléphant avec fléau</French>
-		<Italian>Elefante flagello</Italian>
+		<Italian>Elefante flagello birmano</Italian>
 		<Polish>Słoń Szturmowy</Polish>
 		<Russian>Ôëåéë</Russian>
 	</TEXT>
@@ -9107,7 +9059,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Fenicottero rosa</Italian>
+		<Italian>Fenicottero</Italian>
 		<Spanish>
 			<Text>Flamenco</Text>
 			<Gender>Male</Gender>
@@ -9207,6 +9159,7 @@
 		<English>Forest Guardians</English>
 		<French>Forest Garde de la Villeians</French>
 		<Russian>Õðàíèòåëü ëåñà</Russian>
+		<Italian>Guardiano della foresta batek</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FOREST_GUARDIANS_PEDIA</Tag>
@@ -9217,6 +9170,7 @@
 		<English>Sweyn Forkbeard</English>
 		<Polish>Swen Widłobrody</Polish>
 		<Russian>Ñâýéí Ôîðêáåðä</Russian>
+		<Italian>Sweyn I Barbaforcuta</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FORKBEARD_PEDIA</Tag>
@@ -9227,11 +9181,7 @@
 		<Tag>TXT_KEY_UNIT_FORTY_NINER</Tag>
 		<English>Forty-Niner</English>
 		<French>Ouvrier 'Forty-Niner'</French>
-		<Italian>
-			<Text>Forty-Niner</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Forty-Niner californiano</Italian>
 		<Russian>Çîëîòîèñêàòåëü</Russian>
 	</TEXT>
 	<TEXT>
@@ -9311,11 +9261,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Moschettiere:Moschettieri</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Moschettiere francese</Italian>
 		<Spanish>
 			<Text>Mosquetero:Mosqueteros</Text>
 			<Gender>Male</Gender>
@@ -9366,7 +9312,7 @@
 		<Tag>TXT_KEY_UNIT_FULANI_CAVALRY</Tag>
 		<English>Fulani Cavalry</English>
 		<French>Cavalier Peul</French>
-		<Italian>Cavalleria Fulani</Italian>
+		<Italian>Cavalleria fulana</Italian>
 		<Polish>Kawaleria Fulani</Polish>
 		<Russian>Êîííèöà ôóëàíè</Russian>
 	</TEXT>
@@ -9382,6 +9328,7 @@
 		<English>Funj Cavalry</English>
 		<French>Cavalerie Funj</French>
 		<Russian>Ôóíãñêàÿ êîííèöà</Russian>
+		<Italian>Cavalleria Fung</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FUNJ_CAVALRY_PEDIA</Tag>
@@ -9392,6 +9339,7 @@
 		<English>Furawi Technical</English>
 		<French>Technicien Furawi</French>
 		<Russian>Äæèï ôîð</Russian>
+		<Italian>Tecnica fur</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FURAWI_TECHNICAL_PEDIA</Tag>
@@ -9595,6 +9543,7 @@
 		<Tag>TXT_KEY_UNIT_FYRDMAN</Tag>
 		<English>Fyrdman</English>
 		<Russian>Ôèðä</Russian>
+		<Italian>Miliziano del Fyrd</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FYRDMAN_PEDIA</Tag>
@@ -9604,6 +9553,7 @@
 		<Tag>TXT_KEY_UNIT_GAEROAS</Tag>
 		<English>Gaeroas</English>
 		<Russian>Áðèòòñêèé êîïüåíîñåö</Russian>
+		<Italian>Gaeroas bretone</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GAEROAS_PEDIA</Tag>
@@ -9620,6 +9570,7 @@
 		</German>
 		<Polish>Pingwin Równikowy</Polish>
 		<Russian>Î÷êîâûé ïèíãâèí</Russian>
+		<Italian>Pinguino delle Galapagos</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GALAPAGOS_PENGUIN_PEDIA</Tag>
@@ -9745,6 +9696,7 @@
 		<Tag>TXT_KEY_UNIT_GALLIOT</Tag>
 		<English>Galliot</English>
 		<Russian>Ãàëèîò</Russian>
+		<Italian>Galeota veneziana</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GALLIOT_PEDIA</Tag>
@@ -9773,6 +9725,7 @@
 		<Tag>TXT_KEY_UNIT_GARAMANTES</Tag>
 		<English>Garamantes</English>
 		<Russian>Ãàðàìàíò</Russian>
+		<Italian>Cavaliere garamante</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GARAMANTES_PEDIA</Tag>
@@ -9782,6 +9735,7 @@
 		<Tag>TXT_KEY_UNIT_GASTRAPHETES</Tag>
 		<English>Gastraphetes</English>
 		<Russian>Ñèöèëèéñêèé ãàñòðàôåò÷èê</Russian>
+		<Italian>Arciere con gastraphetes</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GASTRAPHETES_PEDIA</Tag>
@@ -9843,6 +9797,7 @@
 		<English>Gaucho Cavalry</English>
 		<French>Cavalerie Gaucho</French>
 		<Russian>Ãàó÷ñêàÿ êîííèöà</Russian>
+		<Italian>Cavalleria gaucho</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GAUCHO_CAVALRY_PEDIA</Tag>
@@ -9853,6 +9808,7 @@
 		<English>Gazavat Warriors</English>
 		<French>Guerrier Gazavat</French>
 		<Russian>Âîèí ãàçàâàòà</Russian>
+		<Italian>Soldato gazavat</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GAZAVAT_WARRIORS_PEDIA</Tag>
@@ -9876,6 +9832,7 @@
 		<English>Genoan Mercenary</English>
 		<French>Mercenaire Genoan</French>
 		<Russian>Ãåíóýçñêèé íàåìíèê</Russian>
+		<Italian>Balestriere genovese</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GENOAN_MERCENARY_PEDIA</Tag>
@@ -9908,11 +9865,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Panzer:Panzer</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Panzer tedesco</Italian>
 		<Spanish>
 			<Text>Panzer:Panzers</Text>
 			<Gender>Male</Gender>
@@ -9979,6 +9932,7 @@
 		<English>Gobir Lancer</English>
 		<French>Lancier Gobir</French>
 		<Russian>Ãîáèðñêèé óëàí</Russian>
+		<Italian>Cavaliere con lancia del Gobir</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GOBIR_LANCER_PEDIA</Tag>
@@ -9998,6 +9952,7 @@
 		<Tag>TXT_KEY_UNIT_GONE_DAU</Tag>
 		<English>Gone Dau</English>
 		<Russian>Ãîíå-äàó</Russian>
+		<Italian>Barca da lavoro fijiana</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GONE_DAU_PEDIA</Tag>
@@ -10062,6 +10017,7 @@
 		<French>Amiral Illustre</French>
 		<Polish>Wielki Admirał</Polish>
 		<Russian>Âåëèêèé àäìèðàë</Russian>
+		<Italian>Gran ammiraglio</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GREAT_BOMBARD</Tag>
@@ -10091,6 +10047,7 @@
 		<English>Great Detective</English>
 		<French>Détective illustre</French>
 		<Russian>Âåëèêèé ñûùèê</Russian>
+		<Italian>Gran investigatore</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GREAT_ENGINEER</Tag>
@@ -10203,11 +10160,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Falange:Falangi</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Falange greca</Italian>
 		<Spanish>
 			<Text>Falange:Falanges</Text>
 			<Gender>Female</Gender>
@@ -10252,6 +10205,7 @@
 		<Tag>TXT_KEY_UNIT_GRIVPANVAR</Tag>
 		<English>Grivpanvar</English>
 		<Russian>Ïàðôÿíñêèé ðûöàðü</Russian>
+		<Italian>Grivpanvar partico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GRIVPANVAR_PEDIA</Tag>
@@ -10275,6 +10229,7 @@
 		</Spanish>
 		<Polish>Grivpanvar to partyjski Rycerz, silniejszy niż zwykła wersja tej jednostki.</Polish>
 		<Russian>Ãðèçëè</Russian>
+		<Italian>Orso grizzly</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GRIZZLY_PEDIA</Tag>
@@ -10298,7 +10253,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Guanaco</Italian>
+		<Italian>Lama</Italian>
 		<Spanish>
 			<Text>Guanaco</Text>
 			<Gender>Male</Gender>
@@ -10370,6 +10325,7 @@
 		<Tag>TXT_KEY_UNIT_GUAYKURU</Tag>
 		<English>Guaykuru</English>
 		<Russian>Ãóàéêóðó</Russian>
+		<Italian>Cavaliere guaicuro</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GUAYKURU_PEDIA</Tag>
@@ -10379,6 +10335,7 @@
 		<Tag>TXT_KEY_UNIT_GUDARI</Tag>
 		<English>Gudari</English>
 		<Russian>Ãóäàð</Russian>
+		<Italian>Soldato basco</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GUDARI_PEDIA</Tag>
@@ -10520,6 +10477,7 @@
 		<Tag>TXT_KEY_UNIT_GURKHA</Tag>
 		<English>Gurkha</English>
 		<Russian>Ãóðê</Russian>
+		<Italian>Soldato gurkha</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GURKHA_PEDIA</Tag>
@@ -10605,6 +10563,7 @@
 		<English>Haida War Canoe</English>
 		<French>Canoé de Guerre Haida</French>
 		<Russian>Õàéäñêàÿ áàéäàðêà</Russian>
+		<Italian>Canoa da guerra haida</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HAIDA_WAR_CANOE_PEDIA</Tag>
@@ -10618,7 +10577,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
-		<Italian>Ribelle Haitiano</Italian>
+		<Italian>Ribelle haitiano</Italian>
 		<Polish>Haitański Rebeliant</Polish>
 		<Russian>Ãàèòÿíñêîå îïîë÷åíèå</Russian>
 	</TEXT>
@@ -10633,6 +10592,7 @@
 		<Tag>TXT_KEY_UNIT_HAJDUK</Tag>
 		<English>Hajduk</English>
 		<Russian>Ãàéäóê</Russian>
+		<Italian>Hajduk serbo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HAJDUK_PEDIA</Tag>
@@ -10706,6 +10666,7 @@
 		<English>Harappa Watcher</English>
 		<French>Guetteur Harappa</French>
 		<Russian>Õàðàïïñêèé ñòðàæíèê</Russian>
+		<Italian>Guardiano harappa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HARAPPA_WATCHER_PEDIA</Tag>
@@ -10721,6 +10682,7 @@
 		</French>
 		<Polish>Harpia Wielka</Polish>
 		<Russian>Ãàðïèÿ</Russian>
+		<Italian>Aquila arpia</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HARPYEAGLE_PEDIA</Tag>
@@ -10789,11 +10751,7 @@
 		<Tag>TXT_KEY_UNIT_HEADHUNTER</Tag>
 		<English>Headhunter</English>
 		<French>Chasseur de têtes</French>
-		<Italian>
-			<Text>Cacciatore di teste</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Cacciatore di teste</Italian>
 		<Russian>Îõîòíèê çà ãîëîâàìè</Russian>
 	</TEXT>
 	<TEXT>
@@ -10964,6 +10922,7 @@
 		<English>Heavy Tarkhan</English>
 		<French>Guerrier lourd Tarkhan</French>
 		<Russian>Òÿæåëûé òàðõàí</Russian>
+		<Italian>Tarqan pesante timuride</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEAVY_TARKHAN_PEDIA</Tag>
@@ -10973,7 +10932,7 @@
 		<Tag>TXT_KEY_UNIT_HELLENIC_MISSIONARY</Tag>
 		<English>Oracle</English>
 		<German>Orakel</German>
-		<Italian>Oracolo</Italian>
+		<Italian>Missionario ellenico</Italian>
 		<Spanish>
 			<Text>Oráculo</Text>
 			<Gender>Male</Gender>
@@ -10992,6 +10951,7 @@
 		<English>Hemudu Hunters</English>
 		<French>Chasseur Hemudu</French>
 		<Russian>Îõîòíèê õýìóäó</Russian>
+		<Italian>Cacciatore hemudu</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEMUDU_HUNTERS_PEDIA</Tag>
@@ -11061,6 +11021,7 @@
 		<English>Henry the Lion</English>
 		<French>Henry le Lion</French>
 		<Russian>Ãåíðèõ Ëåâ</Russian>
+		<Italian>Enrico il Leone</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HENRY_THE_LION_PEDIA</Tag>
@@ -11074,7 +11035,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>Ribelle Herero</Italian>
+		<Italian>Ribelle herero</Italian>
 		<Polish>Rebeliant Herero</Polish>
 		<Russian>Ãåðåðî</Russian>
 	</TEXT>
@@ -11090,6 +11051,7 @@
 		<English>Hernandarias Regimento</English>
 		<French>Regimento Hernandarias</French>
 		<Russian>Ïîëê Ýðíàíäî</Russian>
+		<Italian>Cavaliere di Hernandarias</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HERNANDARIAS_REGIMENTO_PEDIA</Tag>
@@ -11114,6 +11076,7 @@
 		<Tag>TXT_KEY_UNIT_HEZBOLLAH</Tag>
 		<English>Hezbollah</English>
 		<Russian>Õåçáîëëà</Russian>
+		<Italian>Soldato dell'Hezbollah</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEZBOLLAH_PEDIA</Tag>
@@ -11155,6 +11118,7 @@
 		<French>Guerrier des Highlands</French>
 		<Polish>Góral</Polish>
 		<Russian>Ãîðåö</Russian>
+		<Italian>Soldato delle Highlands</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HIGHLANDER_PEDIA</Tag>
@@ -11191,11 +11155,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Missionario Indù:Missionari Indù</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Missionario indù</Italian>
 		<Spanish>
 			<Text>Misionero hinduista:Misioneros hinduistas</Text>
 			<Gender>Male</Gender>
@@ -11302,11 +11262,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Lanzichenecco:Lanzichenecchi</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Mercenario lanzichenecco</Italian>
 		<Spanish>
 			<Text>Lansquenete:Lansquenetes</Text>
 			<Gender>Male</Gender>
@@ -11326,6 +11282,7 @@
 		<Tag>TXT_KEY_UNIT_HOPLOMACHUS</Tag>
 		<English>Hoplomachus</English>
 		<Russian>Ãîïëîìàõ</Russian>
+		<Italian>Gladiatore hoplomachus</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HOPLOMACHUS_PEDIA</Tag>
@@ -11450,6 +11407,7 @@
 		<Tag>TXT_KEY_UNIT_HOWDAH</Tag>
 		<English>Howdah</English>
 		<Russian>Ïàëàíêèí</Russian>
+		<Italian>Elefante da guerra siamese</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HOWDAH_PEDIA</Tag>
@@ -11481,6 +11439,7 @@
 		<English>Huaca Guardians</English>
 		<French>Garde Huaca</French>
 		<Russian>Ñòðàæíèê óàêà</Russian>
+		<Italian>Guardiani delle huaca</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HUACA_GUARDIANS_PEDIA</Tag>
@@ -11490,12 +11449,13 @@
 		<Tag>TXT_KEY_UNIT_HUAMINCA</Tag>
 		<English>Huaminca</English>
 		<Russian>Õóàìèíêà</Russian>
+		<Italian>Guerriero con lancia inca</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HUAMINCA_PEDIA</Tag>
 		<English>The standing army of the Inca was formed primarily by nobles, but the emperor could raise an army of able-bodied men from the general populace at will. Military discipline was strictly enforced when they troops were on the march and at the range of their various projectile weapons. Once they had loosed their missiles they closed in hand-to-hand fighting. The Inca used a wide variety of weapons: wooden sword-shaped clubs, star-headed maces, slings, spears, a sophisticated halberd, and bolas. They wore cotton armor that breathed well, allowed for free movement, and dissipated the force of blows. Incan spears were sharpened lengths of wood, hardened in fire. Their halberd had a bronze-bladed axe head opposite a hook and crowned by a stabbing point allowing the huaminca a variety of arms and tactics.</English>
 		<French>Unité Culturelle Unique Inca.</French>
-		<Italian>Unità unica Incaica.</Italian>
+		<Italian>Unità unica Inca.</Italian>
 		<Polish>Inkaska jednostka kulturowa.</Polish>
 	</TEXT>
 	<TEXT>
@@ -11535,11 +11495,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Megattera</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Megattera</Italian>
 		<Spanish>
 			<Text>Yubarta</Text>
 			<Gender>Female</Gender>
@@ -11579,6 +11535,7 @@
 		</Spanish>
 		<Polish>Huroński Mantlet</Polish>
 		<Russian>Ãóðîíñêèé ìàíëåò</Russian>
+		<Italian>Pluteo urone</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HURON_MANLET_PEDIA</Tag>
@@ -11588,19 +11545,20 @@
 		<Tag>TXT_KEY_UNIT_HUSKARL</Tag>
 		<English>Huskarl</English>
 		<Russian>Õóñêåðë</Russian>
+		<Italian>Huscarlo goto</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HUSKARL_PEDIA</Tag>
 		<English>Within the Germanic tribes that overran the Western Roman Empire and brought in the Dark Ages, including the Goths, tribal leaders kept a personal retinue of warriors known as huskarls. These men served their chiefs fanatically in return for a large share in any plunder the tribe could grab. Huskarls trained for battle continuously and had few other duties. A chief had to be successful in acquiring plunder, however, or risk being removed or abandoned. As the Dark Ages progressed, huskarls were absorbed into the feudal system as vassals of lords. They remained a lord's or king's personal fighting force but often became responsible for their own support on lands given to them by their chief. This system replaced much of the sharing of plunder.</English>
 		<French>Unité Culturelle Unique Goths.</French>
-		<Italian>Unità unica Gotica.</Italian>
+		<Italian>Unità unica gota.</Italian>
 		<Polish>Gocka jednostka kulturowa.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HUSSAR</Tag>
 		<English>Hussar</English>
 		<French>Hussard</French>
-		<Italian>Ussaro</Italian>
+		<Italian>Cavaliere ussaro</Italian>
 		<Polish>Huzar</Polish>
 		<Russian>Ãóñàð</Russian>
 	</TEXT>
@@ -11666,6 +11624,7 @@
 		<English>Hyksosi Chariot</English>
 		<French>Char équestre Hyksosi</French>
 		<Russian>Ãèêñîññêàÿ êîëåñíèöà</Russian>
+		<Italian>Carro hyksos</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HYKSOSI_CHARIOT_PEDIA</Tag>
@@ -11680,11 +11639,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Hypaspistai</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Ipaspisti macedone</Italian>
 		<Spanish>
 			<Text>Hypaspistai</Text>
 			<Gender>Female</Gender>
@@ -11763,6 +11718,7 @@
 		<English>Illiniwek Warrior</English>
 		<French>Guerrier Illiniwek</French>
 		<Russian>Âîèí èëëèíèâåê</Russian>
+		<Italian>Guerriero dell'Illiniwek</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ILLINIWEK_WARRIOR_PEDIA</Tag>
@@ -11823,7 +11779,7 @@
 		<English>Chasquis</English>
 		<French>Quéchua d'Elite</French>
 		<German>Elite Quechua</German>
-		<Italian>Quechua d'élite</Italian>
+		<Italian>Guerriero d'elite quechua</Italian>
 		<Spanish>
 			<Text>Guerrero quechua de élite</Text>
 			<Gender>Male</Gender>
@@ -11846,6 +11802,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>Ñèëàò</Russian>
+		<Italian>Guerriero di silat</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INFANTRY</Tag>
@@ -11892,6 +11849,7 @@
 		<English>Inniskilling</English>
 		<French>Fantassin-Tueur de Ennis</French>
 		<Russian>Èðëàíäñêàÿ ïåõîòà</Russian>
+		<Italian>Fanteria Inniskilling</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INNISKILLING_PEDIA</Tag>
@@ -11912,7 +11870,7 @@
 		<Tag>TXT_KEY_UNIT_INUIT_HARPOONER</Tag>
 		<English>Inuit Harpooner</English>
 		<French>Harponneur Inuit</French>
-		<Italian>Guerriero Inuit con arpioni</Italian>
+		<Italian>Guerriero inuit con arpione</Italian>
 		<Spanish>
 			<Text>Arponero inuit</Text>
 			<Gender>Male</Gender>
@@ -11989,6 +11947,7 @@
 		</Spanish>
 		<Polish>Araukański Włócznik</Polish>
 		<Russian>Âîèí ñ øåñòîì</Russian>
+		<Italian>Guerriero con mazza di legno ferro</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_IRONWOOD_CLUBMAN_PEDIA</Tag>
@@ -12042,11 +12001,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Missionario Islamico:Missionari Islamici</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Missionario islamico</Italian>
 		<Spanish>
 			<Text>Imán</Text>
 			<Gender>Male</Gender>
@@ -12071,6 +12026,7 @@
 		<Tag>TXT_KEY_UNIT_ISOKELEKEL</Tag>
 		<English>Isokelekel</English>
 		<Russian>Èñîêåëåêåë</Russian>
+		<Italian>Isokelekel micronesiano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ISOKELEKEL_PEDIA</Tag>
@@ -12081,7 +12037,7 @@
 		<English>Maccabee</English>
 		<French>Macchabée</French>
 		<German>Makkab%C3%A4er</German>
-		<Italian>Maccabeo</Italian>
+		<Italian>Guerriero maccabeo</Italian>
 		<Spanish>
 			<Text>Macabeo</Text>
 			<Gender>Male</Gender>
@@ -12100,6 +12056,7 @@
 		</Spanish>
 		<Polish>Ethbaal I</Polish>
 		<Russian>Åôâààëà I</Russian>
+		<Italian>Itobaal I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ITHOBAAL_PEDIA</Tag>
@@ -12140,6 +12097,7 @@
 		</Spanish>
 		<Polish>Iwan IV Groźny</Polish>
 		<Russian>Èâàí Ãðîçíûé</Russian>
+		<Italian>Ivan il terribile</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_IVAN_IV_PEDIA</Tag>
@@ -12152,6 +12110,7 @@
 		<English>Iwia Battalion</English>
 		<French>Battalion Iwia</French>
 		<Russian>Áàòàëüîí Èâèà</Russian>
+		<Italian>Soldato del battaglione Iwia</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_IWIA_BATTALION_PEDIA</Tag>
@@ -12170,6 +12129,7 @@
 		<Tag>TXT_KEY_UNIT_JACOB_KETTLER</Tag>
 		<English>Jacob Kettler</English>
 		<Russian>ßêîá ôîí Êåòòëåð</Russian>
+		<Italian>Giacomo Kettler</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JACOB_KETTLER_PEDIA</Tag>
@@ -12180,6 +12140,7 @@
 		<English>Jade Axeman</English>
 		<French>Guerrier avec hache de jade</French>
 		<Russian>Íåôðèò. ñåêèðîíîñåö</Russian>
+		<Italian>Guerriero con ascia di giada</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JADE_AXEMAN_PEDIA</Tag>
@@ -12190,6 +12151,7 @@
 		<English>Jadid Grenadiers</English>
 		<French>Grenadier Jadide</French>
 		<Russian>Äæàäèäñêèé ãðåíàäåð</Russian>
+		<Italian>Granatiere Jadid</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JADID_GRENADIERS_PEDIA</Tag>
@@ -12204,6 +12166,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>ßäâèãà</Russian>
+		<Italian>Edvige d'Angiò</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JADWIGA_PEDIA</Tag>
@@ -12214,7 +12177,7 @@
 		<Tag>TXT_KEY_UNIT_JAEGER</Tag>
 		<English>Jaeger</English>
 		<French>Chasseur Autrichien</French>
-		<Italian>Cacciatore Austriaco</Italian>
+		<Italian>Cacciatore austriaco</Italian>
 		<Polish>Jegr</Polish>
 		<Russian>ßãåð</Russian>
 	</TEXT>
@@ -12239,6 +12202,7 @@
 		<English>Jaipongan Dancer</English>
 		<French>Danseur Jaipongan</French>
 		<Russian>ßèïîíãàíñêèé òàíöîð</Russian>
+		<Italian>Danzatrice di Jaipongan</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JAIPONGAN_DANCER_PEDIA</Tag>
@@ -12257,6 +12221,7 @@
 		<Tag>TXT_KEY_UNIT_JAMES_I</Tag>
 		<English>James I</English>
 		<Russian>Õàéìå I</Russian>
+		<Italian>Giacomo I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JAMES_I_PEDIA</Tag>
@@ -12280,11 +12245,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Samurai:Samurai</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Samurai giapponese</Italian>
 		<Spanish>
 			<Text>Samurái:Samuráis</Text>
 			<Gender>Male</Gender>
@@ -12305,6 +12266,7 @@
 		<Tag>TXT_KEY_UNIT_JASIR_ARAFAT</Tag>
 		<English>Jasir Arafat</English>
 		<Russian>ßñèð Àðàôàò</Russian>
+		<Italian>Yasser Arafat</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JASIR_ARAFAT_PEDIA</Tag>
@@ -12429,7 +12391,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Rabbino</Italian>
+		<Italian>Missionario ebraico</Italian>
 		<Spanish>
 			<Text>Rabino</Text>
 			<Gender>Male</Gender>
@@ -12446,6 +12408,7 @@
 		<Tag>TXT_KEY_UNIT_JIMMU</Tag>
 		<English>Jimmu</English>
 		<Russian>Äçèììó</Russian>
+		<Italian>Jinmu</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JIMMU_PEDIA</Tag>
@@ -12473,6 +12436,7 @@
 		<Tag>TXT_KEY_UNIT_JOHN_FRUM</Tag>
 		<English>John Frum</English>
 		<Russian>Äæîí Ôðóì</Russian>
+		<Italian>Jon Frum</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JOHN_FRUM_PEDIA</Tag>
@@ -12498,6 +12462,7 @@
 		<English>Jomon Hunting Dogs</English>
 		<French>Chiens de chasse Jomon</French>
 		<Russian>Äçåìîí-ñèáà</Russian>
+		<Italian>Cane da caccia jomon</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JOMON_HUNTING_DOGS_PEDIA</Tag>
@@ -12507,6 +12472,7 @@
 		<Tag>TXT_KEY_UNIT_JOSE_BALLIVIAN</Tag>
 		<English>Jose Ballivian</English>
 		<Russian>Õîñå Áàëüèâèàí</Russian>
+		<Italian>José Ballivian</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JOSE_BALLIVIAN_PEDIA</Tag>
@@ -12516,6 +12482,7 @@
 		<Tag>TXT_KEY_UNIT_JOSE_DE_FRANCIA</Tag>
 		<English>Jose de Francia</English>
 		<Russian>Õîñå äå Ôðàíñèà</Russian>
+		<Italian>José de Francia</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JOSE_DE_FRANCIA_PEDIA</Tag>
@@ -12525,6 +12492,7 @@
 		<Tag>TXT_KEY_UNIT_JOSE_MUJICA</Tag>
 		<English>Jose Mujica</English>
 		<Russian>Õîñå Ìóõèêà</Russian>
+		<Italian>José Mujica</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JOSE_MUJICA_PEDIA</Tag>
@@ -12534,6 +12502,7 @@
 		<Tag>TXT_KEY_UNIT_JOSE_RIZAL</Tag>
 		<English>Jose Rizal</English>
 		<Russian>Õîñå Ðèñàëü</Russian>
+		<Italian>José Rizal</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JOSE_RIZAL_PEDIA</Tag>
@@ -12552,6 +12521,7 @@
 		<Tag>TXT_KEY_UNIT_JUAN_JOSE_FLORES</Tag>
 		<English>Juan Jose Flores</English>
 		<Russian>Õóàí Õîñå Ôëîðåñ</Russian>
+		<Italian>Juan José Flores</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JUAN_JOSE_FLORES_PEDIA</Tag>
@@ -12570,6 +12540,7 @@
 		<Tag>TXT_KEY_UNIT_JUAN_PERON</Tag>
 		<English>Juan Peron</English>
 		<Russian>Õóàí Ïåðîí</Russian>
+		<Italian>Juan Domingo Peron</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JUAN_PERON_PEDIA</Tag>
@@ -12609,6 +12580,7 @@
 		<Tag>TXT_KEY_UNIT_JULIUS_CIVILIS</Tag>
 		<English>Julius Civilis</English>
 		<Russian>Ãàé Þëèé Öèâèëèñ</Russian>
+		<Italian>Gaio Giulio Civile</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_JULIUS_CIVILIS_PEDIA</Tag>
@@ -12651,6 +12623,7 @@
 		<Tag>TXT_KEY_UNIT_KALANG_MATAI</Tag>
 		<English>Kalang Matai</English>
 		<Russian>Êàëàíã ìàòàè</Russian>
+		<Italian>Guerriero kalang matai</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KALANG_MATAI_PEDIA</Tag>
@@ -12660,6 +12633,7 @@
 		<Tag>TXT_KEY_UNIT_KALARIPAYATT</Tag>
 		<English>Kalaripayatt</English>
 		<Russian>Êàëàðèïàÿòò</Russian>
+		<Italian>Guerriero di kalarippayattu</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KALARIPAYATT_PEDIA</Tag>
@@ -12669,6 +12643,7 @@
 		<Tag>TXT_KEY_UNIT_KALLARANI</Tag>
 		<English>Kallarani</English>
 		<Russian>Êàëëàðàíè</Russian>
+		<Italian>Guerriero chola</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KALLARANI_PEDIA</Tag>
@@ -12681,6 +12656,7 @@
 		<Tag>TXT_KEY_UNIT_KALLAWAYA</Tag>
 		<English>Kallawaya</English>
 		<Russian>Êàëàâàéÿ</Russian>
+		<Italian>Guaritrice Kallawaya</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KALLAWAYA_PEDIA</Tag>
@@ -12699,6 +12675,7 @@
 		<Tag>TXT_KEY_UNIT_KAMUY</Tag>
 		<English>Kim-un Kamuy</English>
 		<Russian>Êèì-óí Êàìóé</Russian>
+		<Italian>Kim Un Kamuy</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KAMUY_PEDIA</Tag>
@@ -12710,6 +12687,7 @@
 		<English>Kandake Veterans</English>
 		<French>Vétérans Kandake</French>
 		<Russian>Êàíäàêèéñêèé âåòåðàí</Russian>
+		<Italian>Veterani di Kandake</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KANDAKE_VETERANS_PEDIA</Tag>
@@ -12785,6 +12763,7 @@
 		<Tag>TXT_KEY_UNIT_KARAI_PYHARE</Tag>
 		<English>Karai Pyhare</English>
 		<Russian>Íî÷íîé ÷åëîâåê</Russian>
+		<Italian>Karaí Pyhare guaraní</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KARAI_PYHARE_PEDIA</Tag>
@@ -12794,6 +12773,7 @@
 		<Tag>TXT_KEY_UNIT_KARAWETARI</Tag>
 		<English>Karawetari</English>
 		<Russian>Êàðàâåòàðè</Russian>
+		<Italian>Arciere yanomama</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KARAWETARI_PEDIA</Tag>
@@ -12826,6 +12806,7 @@
 		<Tag>TXT_KEY_UNIT_KAROLINER</Tag>
 		<English>Karoliner</English>
 		<Russian>Êàðîëèíñêàÿ ïåõîòà</Russian>
+		<Italian>Carolino svedese</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KAROLINER_PEDIA</Tag>
@@ -12846,7 +12827,7 @@
 		<Tag>TXT_KEY_UNIT_KATARA</Tag>
 		<English>Katara Warrior</English>
 		<French>Guerrier Katara</French>
-		<Italian>Guerriero Katara</Italian>
+		<Italian>Guerriero ceylonese</Italian>
 		<Polish>Wojownik Katara</Polish>
 		<Russian>Êàòàð</Russian>
 	</TEXT>
@@ -12862,6 +12843,7 @@
 		<English>Katari Insurgents</English>
 		<French>Insurgé Katari</French>
 		<Russian>Èíñóðãåíò Êàòàðè</Russian>
+		<Italian>Ribelle di Katari</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KATARI_INSURGENTS_PEDIA</Tag>
@@ -12872,6 +12854,7 @@
 		<English>Katipunan Cavalry</English>
 		<French>Cavalerie Katipunan</French>
 		<Russian>Êàòèïóíàíñêàÿ êîííèöà</Russian>
+		<Italian>Cavalleria del Katipunan</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KATIPUNAN_CAVALRY_PEDIA</Tag>
@@ -12900,6 +12883,7 @@
 		<Tag>TXT_KEY_UNIT_KETABDAR</Tag>
 		<English>Ketabdar</English>
 		<Russian>Êåòàáäàð</Russian>
+		<Italian>Ketabdar persiano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KETABDAR_PEDIA</Tag>
@@ -12915,6 +12899,7 @@
 		</Spanish>
 		<Polish>Chaemuaset</Polish>
 		<Russian>Õàýìóàñ</Russian>
+		<Italian>Khaemuaset</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KHAEMWASET_PEDIA</Tag>
@@ -12926,6 +12911,7 @@
 		<English>Khagan Cavalry</English>
 		<French>Cavalerie Khagan</French>
 		<Russian>Êàãàíñêàÿ êîííèöà</Russian>
+		<Italian>Cavalleria del Khagan</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KHAGAN_CAVALRY_PEDIA</Tag>
@@ -12941,6 +12927,7 @@
 		</Spanish>
 		<Polish>Chalid ibn al-Walid</Polish>
 		<Russian>Õàëèä èáí àëü-Âàëèä</Russian>
+		<Italian>Khalid Ibn Al Walid</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KHALID_PEDIA</Tag>
@@ -12956,6 +12943,7 @@
 		<Tag>TXT_KEY_UNIT_KHANUNGESE</Tag>
 		<English>Khanungese</English>
 		<Russian>Êõàíóíãåç</Russian>
+		<Italian>Lanciatore di giavellotti semang</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KHANUNGESE_PEDIA</Tag>
@@ -12978,6 +12966,7 @@
 		<Tag>TXT_KEY_UNIT_KHARKHUL</Tag>
 		<English>Kharkhul</English>
 		<Russian>Õàðà-Õóëà</Russian>
+		<Italian>Khara Khula</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KHARKHUL_PEDIA</Tag>
@@ -12988,6 +12977,7 @@
 		<English>Khingila Warriors</English>
 		<French>Guerrier Khingila</French>
 		<Russian>Àâàðñêèé âîèí</Russian>
+		<Italian>Guerriero di Khingila</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KHINGILA_WARRIORS_PEDIA</Tag>
@@ -12998,6 +12988,7 @@
 		<English>Khitan Infantry</English>
 		<French>Infanterie Khitan</French>
 		<Russian>Êèäàíñêàÿ ïåõîòà</Russian>
+		<Italian>Cavalleria kitai</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KHITAN_INFANTRY_PEDIA</Tag>
@@ -13007,6 +12998,7 @@
 		<Tag>TXT_KEY_UNIT_KHMER_PHAKAK</Tag>
 		<English>Phak'ak</English>
 		<Russian>Ôàê'àê</Russian>
+		<Italian>Guerriero khmer</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KHMER_PHAKAK_PEDIA</Tag>
@@ -13018,6 +13010,7 @@
 		<English>Khoisan Runner</English>
 		<French>Coureur Khoisan</French>
 		<Russian>Êîéñàíñêèé áåãóí</Russian>
+		<Italian>Lanciatore di giavellotti khoisan</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KHOISAN_RUNNER_PEDIA</Tag>
@@ -13027,6 +13020,7 @@
 		<Tag>TXT_KEY_UNIT_KHOMEINI</Tag>
 		<English>Khomeini</English>
 		<Russian>Ðóõîëëà Õîìåéíè</Russian>
+		<Italian>Ruhollah Khomeyni</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KHOMEINI_PEDIA</Tag>
@@ -13046,6 +13040,7 @@
 		<Tag>TXT_KEY_UNIT_KHYAN</Tag>
 		<English>Khyan</English>
 		<Russian>Õèàí</Russian>
+		<Italian>Suserenra</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KHYAN_PEDIA</Tag>
@@ -13056,6 +13051,7 @@
 		<English>Kikkuli Chariot</English>
 		<French>Char équestre Kikkuli</French>
 		<Russian>Êèêêóëüñêàÿ êîëåñíèöà</Russian>
+		<Italian>Carro di Kikkuli</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KIKKULI_CHARIOT_PEDIA</Tag>
@@ -13065,7 +13061,7 @@
 		<Tag>TXT_KEY_UNIT_KLAMATH_RIFLEMAN</Tag>
 		<English>Klamath Rifleman</English>
 		<French>Fusilier Klamath</French>
-		<Italian>Fuciliere Klamath</Italian>
+		<Italian>Fuciliere klamath</Italian>
 		<Spanish>
 			<Text>Fusilero klamath</Text>
 			<Gender>Male</Gender>
@@ -13086,6 +13082,7 @@
 		<Tag>TXT_KEY_UNIT_KNARR</Tag>
 		<English>Knarr</English>
 		<Russian>Êíîðð</Russian>
+		<Italian>Knarr vichingo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KNARR_PEDIA</Tag>
@@ -13126,6 +13123,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>Êîà</Russian>
+		<Italian>Koa hawaiano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KOALA</Tag>
@@ -13153,7 +13151,7 @@
 		<English>Warfare among tribal chieftains in Hawaii was common, with fierce battles raging frequently. By the 1780s, warfare was institutionalized, with formal rules and rituals. The chiefs built temples to pray, sacrifice, and perform ceremonies before launching campaigns. Warriors were known as koa, and gave their name to the koa tree, whose hard wood provided for many of their weapons. Hawaiian chieftains were practice of lua, a type of martial arts, and participated in annual festivals to test their abilities. The warrior code was brutal, and punishment was harsh and violent. An enemy captured in battle might have his entrails removed and every bone methodically broken while still alive.[PARAGRAPH:1]Warriors usually wore a loincloth and shaved and oiled their skin to prevent enemies from gripping them in combat. Nobles also wore a cape, as well as helmets made of wicker or gourds for protection. These warriors used a variety of weapons such as the ihe (short spear), pololu (long spear), pahoa (wooden dagger), and other weapons.</English>
 		<French>La guerre entre les chefs tribaux à Hawaii était commun, avec féroces batailles font rage souvent. Par les années 1780, la guerre a été institutionnalisée, avec les règles formelles et les rites. Les chefs ont construit des temples pour prier, le sacrifice, et effectuer des cérémonies avant le lancement de campagnes. Guerriers étaient connus comme koa, et a donné son nom à l'arbre koa, dont les bois durs fournis pour beaucoup de leurs armes. Hawaiian chefs étaient pratique de la lua, un type d'arts martiaux, et participé à des festivals annuels de tester leurs capacités. Le guerrier code a été brutale, et de la répression est sévère et violent. Un ennemi capturé dans la bataille pourrait avoir enlevé ses entrailles et les os brisés méthodiquement tout encore en vie.[PARAGRAPH:1]Guerriers généralement portaient un pagne et rasé huilé leur peau et pour empêcher les ennemis de préhension eux dans le combat. Nobles portait aussi une cape, ainsi que les casques en osier ou gourdes pour la protection. Ces guerriers utilisé une variété d'armes telles que les ihe (lance courte), pololu (longue lance), pahoa (poignard en bois), et d'autres armes.</French>
 		<German>Warfare unter den Stämmen Häuptlinge auf Hawaii war häufig mit heftigen Kämpfe wüteten häufig. Mit dem 1780er, Kriegsführung war institutionalisiert, mit formalen Regeln und Rituale. Die Häupter gebaut Tempel zu beten, opfern, und Zeremonien vor dem Start Kampagnen. Krieger wurden bekannt als koa, und gab ihr den Namen zu koa Baum, dessen hartem Holz, die für viele ihrer Waffen. Hawaiian Häuptlinge wurden Praxis der lua, eine Art von Kampfkunst, und nahm an jährlichen Festivals zu testen ihre Fähigkeiten. Der Krieger Code war brutal, und die Strafe war hart und gewalttätig. Ein Feind gefangen in der Schlacht hätte seine Eingeweide entfernt, und alle Knochen gebrochen, während methodisch noch am Leben.[PARAGRAPH:1]Warriors Regel trug einen Lendenschurz und rasiert und geölt ihre Haut, um zu verhindern, Feinde Greifen von ihnen im Kampf. Nobles trug einen Umhang, sowie Helme aus Rattan oder Kürbisse für den Schutz. Diese Krieger verwendet eine Vielzahl von Waffen wie die ihe (kurz Speer), pololu (lange Speer), pahoa (Holz Dolch), und andere Waffen.</German>
-		<Italian>guerra tra i notabili tribali nelle Hawaii era comune, con una feroce battaglia infuria frequentemente. Per il 1780s, la guerra è stata istituzionalizzata, con regole formali e rituali. Capi costruito templi a pregare, di sacrificio, e di eseguire le cerimonie prima di lanciare campagne. Guerrieri erano conosciuti come koa, e ha dato il nome alla koa albero, il cui legno duro di molte delle loro armi. Hawaiian notabili erano pratica di lua, un tipo di arti marziali, e ha partecipato a festival annuale per verificare la loro capacità. Il codice è stato brutale guerriero, e la punizione fu duro e violento. Un nemico catturato in battaglia potrebbe avere rimosso il suo viscere e metodicamente ogni osso rotto, mentre ancora vivo.[PARAGRAPH:1]Warriors solitamente indossava una loincloth e rasato e oleato loro pelle per evitare che i nemici da loro presa in combattimento. Nobili anche indossato un mantello, come pure i caschi di vimini o gourdes per la protezione. Questi guerrieri utilizzato una varietà di armi, come il ihe (breve lancia), pololu (lunga lancia), pahoa (pugnale di legno), e di altre armi.</Italian>
+		<Italian>La guerra tra i capi tribali nelle Hawaii era comune, con feroci battaglie che infuriavano frequentemente. Per il 1780s, la guerra è stata istituzionalizzata, con regole formali e rituali. Capi costruito templi a pregare, di sacrificio, e di eseguire le cerimonie prima di lanciare campagne. Guerrieri erano conosciuti come koa, e ha dato il nome alla koa albero, il cui legno duro di molte delle loro armi. Hawaiian notabili erano pratica di lua, un tipo di arti marziali, e ha partecipato a festival annuale per verificare la loro capacità. Il codice è stato brutale guerriero, e la punizione fu duro e violento. Un nemico catturato in battaglia potrebbe avere rimosso il suo viscere e metodicamente ogni osso rotto, mentre ancora vivo.[PARAGRAPH:1]Warriors solitamente indossava una loincloth e rasato e oleato loro pelle per evitare che i nemici da loro presa in combattimento. Nobili anche indossato un mantello, come pure i caschi di vimini o gourdes per la protezione. Questi guerrieri utilizzato una varietà di armi, come il ihe (breve lancia), pololu (lunga lancia), pahoa (pugnale di legno), e di altre armi.</Italian>
 		<Spanish>La guerra entre los jefes tribales en Hawai era común, con feroces batallas azotan con frecuencia. Por los 1780s, la guerra fue institucionalizada, con reglas formales y rituales. Los jefes construido templos de oración, sacrificio, y realizar ceremonias antes de la iniciación de campañas. Warriors se conoce como koa, y dio su nombre a la koa árbol, cuya madera dura para siempre muchas de sus armas. Hawaiian eran jefes de lua práctica, un tipo de artes marciales, y ha participado en festivales anuales de poner a prueba sus habilidades. El código guerrero fue brutal, y el castigo era duro y violento. Un enemigo capturado en la batalla podría haber eliminado sus entrañas y metódicamente cada hueso roto mientras siguen vivos.[PARAGRAPH:1]Warriors generalmente llevaba una taparrabos y afeitado y su piel engrasada para evitar que los enemigos de prensión ellos en combate. Nobles también llevaba una capa, así como los cascos hechos de mimbre o calabazas para la protección. Estos guerreros utilizan una variedad de armas, como la ihe (lanza corta), pololu (lanza larga), pahoa (daga de madera), y otras armas.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -13188,6 +13186,7 @@
 		<Tag>TXT_KEY_UNIT_KON_TIKI</Tag>
 		<English>Kon-Tiki</English>
 		<Russian>Êîí-Òèêè</Russian>
+		<Italian>Kon-Tiki caral</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KON_TIKI_PEDIA</Tag>
@@ -13238,11 +13237,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Hwacha:Hwacha</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Hwacha coreano</Italian>
 		<Spanish>
 			<Text>Soldado con hwacha:Soldados con hwacha</Text>
 			<Gender>Male</Gender>
@@ -13262,6 +13257,7 @@
 		<English>Kriss Warrior</English>
 		<French>Guerrier Kriss</French>
 		<Russian>Âîèí ñ êåðèñîì</Russian>
+		<Italian>Guerriero con kriss</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KRISS_WARRIOR_PEDIA</Tag>
@@ -13290,6 +13286,7 @@
 		<Tag>TXT_KEY_UNIT_KUCHUM_KHAN</Tag>
 		<English>Kuchum Khan</English>
 		<Russian>Êó÷óì</Russian>
+		<Italian>Kucum khan</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KUCHUM_KHAN_PEDIA</Tag>
@@ -13299,6 +13296,7 @@
 		<Tag>TXT_KEY_UNIT_KUCUMATZ</Tag>
 		<English>Kucumatz</English>
 		<Russian>Êóêóìàö</Russian>
+		<Italian>Gukumatz</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KUCUMATZ_PEDIA</Tag>
@@ -13322,6 +13320,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>Êóêóëüêàí</Russian>
+		<Italian>Kukulkan</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KUKULCAN_PEDIA</Tag>
@@ -13332,6 +13331,7 @@
 		<Tag>TXT_KEY_UNIT_KUOMINTANG</Tag>
 		<English>Kuomintang</English>
 		<Russian>Ãîìèíäàíîâåö</Russian>
+		<Italian>Soldato del Kuomintang</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KUOMINTANG_PEDIA</Tag>
@@ -13343,6 +13343,7 @@
 		<English>Kushan Rider</English>
 		<French>Cavalier Kushan</French>
 		<Russian>Êóøàíñêèé âñàäíèê</Russian>
+		<Italian>Cavaliere kushan</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KUSHAN_RIDER_PEDIA</Tag>
@@ -13352,7 +13353,7 @@
 		<Tag>TXT_KEY_UNIT_KUSH_ARCHER</Tag>
 		<English>Kushite Archer</English>
 		<French>Archer Kushite</French>
-		<Italian>Arciere Kushite</Italian>
+		<Italian>Arciere di Kush</Italian>
 		<Polish>Łucznik z Kusz</Polish>
 		<Russian>Êóøèò</Russian>
 	</TEXT>
@@ -13368,6 +13369,7 @@
 		<English>Kutama Infantry</English>
 		<French>Infanterie Kutama</French>
 		<Russian>Êóòàìñêàÿ ïåõîòà</Russian>
+		<Italian>Cavalleria Kutama</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KUTAMA_INFANTRY_PEDIA</Tag>
@@ -13391,6 +13393,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>Ëàáàðíà I</Russian>
+		<Italian>Labarna I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LABARNA_PEDIA</Tag>
@@ -13457,6 +13460,7 @@
 		<Tag>TXT_KEY_UNIT_LARS_PORSENA</Tag>
 		<English>Lars Porsena</English>
 		<Russian>Ïîðñåíà</Russian>
+		<Italian>Lars Porsenna</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LARS_PORSENA_PEDIA</Tag>
@@ -13475,6 +13479,7 @@
 		<English>La Plata Mosquetero</English>
 		<French>Mousquetaire de La Plata</French>
 		<Russian>Ëàïëàòñêèé ìóøêåòåð</Russian>
+		<Italian>Moschettiere di La Plata</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LA_PLATA_MOSQUETERO_PEDIA</Tag>
@@ -13484,11 +13489,7 @@
 		<Tag>TXT_KEY_UNIT_LEIDANG</Tag>
 		<English>Leidang</English>
 		<French>Guerrier Leidang</French>
-		<Italian>
-			<Text>Leidang</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Guerriero Leidang</Italian>
 		<Russian>Ëåéäàíã</Russian>
 	</TEXT>
 	<TEXT>
@@ -13500,7 +13501,7 @@
 		<Tag>TXT_KEY_UNIT_LEONIDAS</Tag>
 		<English>Leonidas</English>
 		<French>Léonidas</French>
-		<Italian>Leonida</Italian>
+		<Italian>Leonida I</Italian>
 		<Spanish>
 			<Text>Leónidas</Text>
 			<Gender>Male</Gender>
@@ -13517,11 +13518,13 @@
 		<Tag>TXT_KEY_UNIT_LEOPOLD</Tag>
 		<English>Leopold I</English>
 		<Russian>Ëåîïîëüä I</Russian>
+		<Italian>Leopoldo I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LEOPOLD_II</Tag>
 		<English>Leopold II</English>
 		<Russian>Ëåîïîëüä II</Russian>
+		<Italian>Leopoldo II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LEOPOLD_II_PEDIA</Tag>
@@ -13537,6 +13540,7 @@
 		<Tag>TXT_KEY_UNIT_LEOPOLD_SENGHOR</Tag>
 		<English>Leopold Senghor</English>
 		<Russian>Ëåîïîëüä Ñåíãîð</Russian>
+		<Italian>Leopold Sedar Senghor</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LEOPOLD_SENGHOR_PEDIA</Tag>
@@ -13552,6 +13556,7 @@
 		</Spanish>
 		<Polish>Leon I</Polish>
 		<Russian>Ëåâ I</Russian>
+		<Italian>Leone II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LEO_I_PEDIA</Tag>
@@ -13594,6 +13599,7 @@
 		<Tag>TXT_KEY_UNIT_LIBURNA</Tag>
 		<English>Liburna</English>
 		<Russian>Ëèáóðíà</Russian>
+		<Italian>Liburna illira</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LIBURNA_PEDIA</Tag>
@@ -13603,7 +13609,7 @@
 		<Tag>TXT_KEY_UNIT_LIGHTNING_WARRIOR</Tag>
 		<English>Lightning Warrior</English>
 		<French>Guerrier éclair</French>
-		<Italian>Guerriero lampo</Italian>
+		<Italian>Guerriero zapoteco</Italian>
 		<Spanish>
 			<Text>Guerrero relámpago</Text>
 			<Gender>Male</Gender>
@@ -13699,6 +13705,7 @@
 		<English>Light Hoplite</English>
 		<French>Hoplite léger</French>
 		<Russian>Ëåãêèé ãîïëèò</Russian>
+		<Italian>Oplita leggero</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LIGHT_HOPLITE_PEDIA</Tag>
@@ -13771,6 +13778,7 @@
 		<Tag>TXT_KEY_UNIT_LIUTPRAND</Tag>
 		<English>Liutprand</English>
 		<Russian>Ëèóòïðàíä</Russian>
+		<Italian>Liutprando</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LIUTPRAND_PEDIA</Tag>
@@ -13786,6 +13794,7 @@
 		<Tag>TXT_KEY_UNIT_LLANERO</Tag>
 		<English>Llanero</English>
 		<Russian>ßíåðî</Russian>
+		<Italian>Cavaliere llanero</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LLANERO_PEDIA</Tag>
@@ -13807,7 +13816,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Nube di locuste</Italian>
+		<Italian>Sciame di locuste</Italian>
 		<Spanish>
 			<Text>Nube de langostas</Text>
 			<Gender>Female</Gender>
@@ -13829,7 +13838,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Nube di locuste (Enorme)</Italian>
+		<Italian>Sciame di locuste (enorme)</Italian>
 		<Spanish>
 			<Text>Nube de langostas enorme</Text>
 			<Gender>Female</Gender>
@@ -13851,7 +13860,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Nube di locuste (Grande)</Italian>
+		<Italian>Sciame di locuste (grande)</Italian>
 		<Spanish>
 			<Text>Nube de langostas grande</Text>
 			<Gender>Female</Gender>
@@ -13878,7 +13887,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Nube di locuste (Piccola)</Italian>
+		<Italian>Sciame di locuste (piccolo)</Italian>
 		<Spanish>
 			<Text>Nube de langostas pequeña</Text>
 			<Gender>Female</Gender>
@@ -13940,7 +13949,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Gavia</Italian>
+		<Italian>Strolaga</Italian>
 		<Spanish>
 			<Text>Colimbo</Text>
 			<Gender>Male</Gender>
@@ -13991,6 +14000,7 @@
 		</Spanish>
 		<Polish>Admirał Nelson</Polish>
 		<Russian>Ëîðä Íåëüñîí</Russian>
+		<Italian>Horatio Nelson</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LORD_NELSON_PEDIA</Tag>
@@ -14002,6 +14012,7 @@
 		<English>Lord of Sipan</English>
 		<French>Seigneur de Sipan</French>
 		<Russian>Ïðàâèòåëü Ñèïàíà</Russian>
+		<Italian>Signore di Sipan</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LORD_OF_SIPAN_PEDIA</Tag>
@@ -14031,6 +14042,7 @@
 		<Tag>TXT_KEY_UNIT_LOS_MARINOS</Tag>
 		<English>Los Marinos</English>
 		<Russian>Ïàðàãâàéñêèé ìîðïåõ</Russian>
+		<Italian>Soldato paraguaiano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LOS_MARINOS_PEDIA</Tag>
@@ -14049,6 +14061,7 @@
 		<Tag>TXT_KEY_UNIT_LUGALZAGESI</Tag>
 		<English>Lugal-Zage-Si</English>
 		<Russian>Ëóãàëü Çàãåññè</Russian>
+		<Italian>Lugalzagesi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUGALZAGESI_PEDIA</Tag>
@@ -14065,6 +14078,7 @@
 		</Spanish>
 		<Polish>Luis Alves de Lima e Silva</Polish>
 		<Russian>Ëóèø Àëâèø</Russian>
+		<Italian>Luis Alves de Lima e Silva</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUIS_PEDIA</Tag>
@@ -14076,6 +14090,7 @@
 		<English>Lule Nomads</English>
 		<French>Nomade Lule</French>
 		<Russian>Ëóëüñêèé êî÷åâíèê</Russian>
+		<Italian>Nomade lule</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LULE_NOMADS_PEDIA</Tag>
@@ -14120,7 +14135,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Ara</Italian>
+		<Italian>Pappagallo ara</Italian>
 		<Spanish>
 			<Text>Guacamayo</Text>
 			<Gender>Male</Gender>
@@ -14236,6 +14251,7 @@
 		<English>Madeira Axeman</English>
 		<French>Soldat avec hache de Madeira</French>
 		<Russian>Ìàäåéðñêèé ñåêèðîíîñåö</Russian>
+		<Italian>Guerriero con ascia canario</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MADEIRA_AXEMAN_PEDIA</Tag>
@@ -14245,6 +14261,7 @@
 		<Tag>TXT_KEY_UNIT_MAGOS</Tag>
 		<English>Magos</English>
 		<Russian>Ìàãîñ</Russian>
+		<Italian>Magos sabateo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAGOS_PEDIA</Tag>
@@ -14263,6 +14280,7 @@
 		<Tag>TXT_KEY_UNIT_MAHKAN</Tag>
 		<English>Aatsista-Mahkan</English>
 		<Russian>Ààöèñòà-Ìàõêàí</Russian>
+		<Italian>Aatsista Mahkan</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAHKAN_PEDIA</Tag>
@@ -14274,6 +14292,7 @@
 		<English>Mahogany Woodcutter</English>
 		<French>Bucheron Mahogany</French>
 		<Russian>Ëåñîðóá ìàõàãîíè</Russian>
+		<Italian>Taglialegna di mogano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAHOGANY_WOODCUTTER_PEDIA</Tag>
@@ -14283,7 +14302,7 @@
 		<Tag>TXT_KEY_UNIT_MAHOUT_LANCER</Tag>
 		<English>Mahout Lancer</English>
 		<French>Lancier Mahout</French>
-		<Italian>Lanciere Mahout</Italian>
+		<Italian>Mahout con lancia</Italian>
 		<Polish>Lansjer Mahout</Polish>
 		<Russian>Ïîãîíùèê ñëîíîâ</Russian>
 	</TEXT>
@@ -14298,6 +14317,7 @@
 		<Tag>TXT_KEY_UNIT_MAHSUD_ATTAN</Tag>
 		<English>Mahsud Attan</English>
 		<Russian>Ïóøòóíñêàÿ êîííèöà</Russian>
+		<Italian>Cavaliere mahsud</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAHSUD_ATTAN_PEDIA</Tag>
@@ -14308,6 +14328,7 @@
 		<English>Maize Caravan</English>
 		<French>Caravane Maize</French>
 		<Russian>Ìàèñîâûé êàðàâàí</Russian>
+		<Italian>Carovana di zea mays</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAIZE_CARAVAN_PEDIA</Tag>
@@ -14318,6 +14339,7 @@
 		<English>Malaccan Pirate</English>
 		<French>Pirate Malaccan</French>
 		<Russian>Ìàëëàêàíñêèé ïèðàò</Russian>
+		<Italian>Pirata di Malacca</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MALACCAN_PIRATE_PEDIA</Tag>
@@ -14327,6 +14349,7 @@
 		<Tag>TXT_KEY_UNIT_MALGAQ</Tag>
 		<English>Malgaq</English>
 		<Russian>Ìàëãàê</Russian>
+		<Italian>Titiwangsa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MALGAQ_PEDIA</Tag>
@@ -14336,7 +14359,7 @@
 		<Tag>TXT_KEY_UNIT_MALI_SKIRMISHER</Tag>
 		<English>Kanembu Warrior</English>
 		<French>Guerrier Kanembu</French>
-		<Italian>Guerriero Kanembu</Italian>
+		<Italian>Guerriero kanem-bornu</Italian>
 		<Spanish>
 			<Text>Guerrero kanembu</Text>
 			<Gender>Male</Gender>
@@ -14357,6 +14380,7 @@
 		<Tag>TXT_KEY_UNIT_MAMBISE</Tag>
 		<English>Mambise</English>
 		<Russian>Ìàìáèç</Russian>
+		<Italian>Guerrigliero Mambise</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAMBISE_PEDIA</Tag>
@@ -14369,6 +14393,7 @@
 		<Tag>TXT_KEY_UNIT_MAMELUK</Tag>
 		<English>Mameluk</English>
 		<Russian>Ìàìëþê</Russian>
+		<Italian>Cavaliere di cammelli mammelucco</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAMELUK_PEDIA</Tag>
@@ -14396,7 +14421,7 @@
 		<Tag>TXT_KEY_UNIT_MANCHU_HORSEARCHER</Tag>
 		<English>Manchu Horse Archer</English>
 		<French>Archer monté Manchou</French>
-		<Italian>Arciere a cavallo Manciù</Italian>
+		<Italian>Arciere a cavallo manciù</Italian>
 		<Polish>Mandżurski Konny Łucznik</Polish>
 		<Russian>Ìàíü÷æóðñêèé âñàäíèê</Russian>
 	</TEXT>
@@ -14436,6 +14461,7 @@
 		<English>Mandekalu</English>
 		<French>Cavalier Mandékalou</French>
 		<Russian>Ìàíäåêàëó</Russian>
+		<Italian>Cavaliere Mandekalu</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MANDEKALU_PEDIA</Tag>
@@ -14481,6 +14507,7 @@
 		<English>Maniq Speaker</English>
 		<French>Parleur Maniq</French>
 		<Russian>Ìàíèêñêèé çíàõàðü</Russian>
+		<Italian>Guaritore maniq</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MANIQ_SPEAKER_PEDIA</Tag>
@@ -14511,6 +14538,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>Ìàíñà Ñàêóðà</Russian>
+		<Italian>Sakoura</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MANSA_SAKURA_PEDIA</Tag>
@@ -14540,6 +14568,7 @@
 		<Tag>TXT_KEY_UNIT_MARHATHEGNOZ</Tag>
 		<English>Marhathegnoz</English>
 		<Russian>Ãåòàéð</Russian>
+		<Italian>Cavaliere Marhathegnoz</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MARHATHEGNOZ_PEDIA</Tag>
@@ -14594,11 +14623,7 @@
 		<Tag>TXT_KEY_UNIT_MAROON</Tag>
 		<English>Maroon</English>
 		<French>Marron Jamaïcain</French>
-		<Italian>
-			<Text>Maroon</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Soldato cimarrone</Italian>
 		<Russian>Ìàðóí</Russian>
 	</TEXT>
 	<TEXT>
@@ -14612,6 +14637,7 @@
 		<French>Guerrier Morane</French>
 		<Polish>Maroon</Polish>
 		<Russian>Ìîðàí</Russian>
+		<Italian>Lanciatore di giavellotti Moran</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MASAI_MORAN_PEDIA</Tag>
@@ -14624,6 +14650,7 @@
 		<Tag>TXT_KEY_UNIT_MASINISSA</Tag>
 		<English>Masinissa</English>
 		<Russian>Ìàññèíèññà</Russian>
+		<Italian>Massinissa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MASINISSA_PEDIA</Tag>
@@ -14633,12 +14660,14 @@
 		<Tag>TXT_KEY_UNIT_MASTER_CHASER</Tag>
 		<English>Master Chaser</English>
 		<Russian>Çàãîíùèê</Russian>
+		<Italian>Mastro inseguitore</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MATAAFA_BRIGADE</Tag>
 		<English>Mata'afa Brigade</English>
 		<French>Brigade Mata'afa</French>
 		<Russian>Áðèãàäà Ìàòà'àôà</Russian>
+		<Italian>Brigatista Mata'afa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MATAAFA_BRIGADE_PEDIA</Tag>
@@ -14648,6 +14677,7 @@
 		<Tag>TXT_KEY_UNIT_MATAAFA_IOSEFO</Tag>
 		<English>Mata'afa Iosefo</English>
 		<Russian>Ìàòà'àôà Èîñåôî</Russian>
+		<Italian>Mataafa Josefo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MATAAFA_IOSEFO_PEDIA</Tag>
@@ -14667,6 +14697,7 @@
 		<English>Matnu</English>
 		<French>Archer Matnu</French>
 		<Russian>Ìàòíó</Russian>
+		<Italian>Arciere Matnu</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MATNU_PEDIA</Tag>
@@ -14685,6 +14716,7 @@
 		<Tag>TXT_KEY_UNIT_MATO_TOPE</Tag>
 		<English>Mato tope</English>
 		<Russian>Ìàòîòîïà</Russian>
+		<Italian>Mato Tope</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MATO_TOPE_PEDIA</Tag>
@@ -14727,11 +14759,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Holkan:Holkan</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Holkan maya</Italian>
 		<Spanish>
 			<Text>Holkan:Holkanes</Text>
 			<Gender>Male</Gender>
@@ -14751,6 +14779,7 @@
 		<Tag>TXT_KEY_UNIT_MBARZ_BALSYF</Tag>
 		<English>Mbarz Balsyf</English>
 		<Russian>Éåìåíñêèé ìå÷íèê</Russian>
+		<Italian>Guerriero yemenita</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MBARZ_BALSYF_PEDIA</Tag>
@@ -14812,6 +14841,7 @@
 		<English>Mede Retinues</English>
 		<French>Escorte Mede</French>
 		<Russian>Ìèäèéñêèé êîðòåæ</Russian>
+		<Italian>Guerriero della scorta meda</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MEDE_RETINUES_PEDIA</Tag>
@@ -14878,6 +14908,7 @@
 		<English>Meharists</English>
 		<French>Méhariste</French>
 		<Russian>Ìåõàðèñò</Russian>
+		<Italian>Cavaliere meharista</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MEHARISTS_PEDIA</Tag>
@@ -14888,6 +14919,7 @@
 		<English>Meione Caravan</English>
 		<French>Caravane Meione</French>
 		<Russian>Ìåîíñêèé êàðàâàí</Russian>
+		<Italian>Carovana meione</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MEIONE_CARAVAN_PEDIA</Tag>
@@ -14897,6 +14929,7 @@
 		<Tag>TXT_KEY_UNIT_MENALAMBA</Tag>
 		<English>Menalamba</English>
 		<Russian>Ìåíàëàìáà</Russian>
+		<Italian>Lanciatore di giavellotti Menalamba</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MENALAMBA_PEDIA</Tag>
@@ -14962,7 +14995,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MERLIN</Tag>
 		<English>Merlin</English>
-		<Italian>Merlino</Italian>
+		<Italian>Mago Merlino</Italian>
 		<Spanish>
 			<Text>Merlín</Text>
 			<Gender>Male</Gender>
@@ -14984,6 +15017,7 @@
 			<Plural>1</Plural>
 		</Spanish>
 		<Russian>Ðóðàëåñ</Russian>
+		<Italian>Cavaliere della guardia rurale</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MEXICO_RURALES_PEDIA</Tag>
@@ -15010,6 +15044,7 @@
 		<Tag>TXT_KEY_UNIT_MIDEWIWIN</Tag>
 		<English>Midewiwin</English>
 		<Russian>Ìèäåâèâèí</Russian>
+		<Italian>Guaritore midewiwin</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MIDEWIWIN_PEDIA</Tag>
@@ -15019,6 +15054,7 @@
 		<Tag>TXT_KEY_UNIT_MIG_29</Tag>
 		<English>MiG-29</English>
 		<Russian>ÌèÃ-29</Russian>
+		<Italian>MiG-29 sovietico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MIG_29_PEDIA</Tag>
@@ -15064,7 +15100,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Miliz (Modern)</German>
-		<Italian>Milizia (Era moderna)</Italian>
+		<Italian>Milizia (Era atomica)</Italian>
 		<Polish>Milicja (Współczesna)</Polish>
 		<Russian>Ïðîäâ. îïîë÷åíèå</Russian>
 	</TEXT>
@@ -15094,6 +15130,7 @@
 		<Tag>TXT_KEY_UNIT_MINGBURNU</Tag>
 		<English>Mingburnu</English>
 		<Russian>Äæåëàë àä-Äèí Ìàíêáóðíû</Russian>
+		<Italian>Jalal Al Din Mankubirni</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MINGBURNU_PEDIA</Tag>
@@ -15108,7 +15145,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Balena bianca</Italian>
+		<Italian>Balenottera minore</Italian>
 		<Spanish>
 			<Text>Rorcual</Text>
 			<Gender>Male</Gender>
@@ -15168,6 +15205,7 @@
 		</Spanish>
 		<Polish>Struś Moa</Polish>
 		<Russian>Ìîà</Russian>
+		<Italian>Uccello moa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MOBILE_ARTILLERY</Tag>
@@ -15234,6 +15272,7 @@
 		<English>Mobile Trebuchet</English>
 		<French>Trébuchet Mobile</French>
 		<Russian>Õàçàðñêèé òðåáóøåò</Russian>
+		<Italian>Trabucco mobile cazaro</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MOBILE_TREBUCHET_PEDIA</Tag>
@@ -15268,6 +15307,7 @@
 		<English>Mocovi Tracker</English>
 		<French>Pisteur Mocovi</French>
 		<Russian>Ïðîâîäíèê ìîêîâè</Russian>
+		<Italian>Cercatore di tracce mocovi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MOCOVI_TRACKER_PEDIA</Tag>
@@ -15485,6 +15525,7 @@
 		<Tag>TXT_KEY_UNIT_MOHAMMED_II_TAIRAB</Tag>
 		<English>Mohammed II Tairab</English>
 		<Russian>Ìóõàììàä II Òàéðàá</Russian>
+		<Italian>Mohammed II Terab</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MOHAMMED_II_TAIRAB_PEDIA</Tag>
@@ -15495,6 +15536,7 @@
 		<English>Mohawk Tracker</English>
 		<French>Pisteur Mohawk</French>
 		<Russian>Ìîõîêñêèé ïðîâîäíèê</Russian>
+		<Italian>Cercatore di tracce mohawk</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MOHAWK_TRACKER_PEDIA</Tag>
@@ -15505,6 +15547,7 @@
 		<English>Monaspa Guard</English>
 		<French>Garde Monaspa</French>
 		<Russian>Ìîíàñïà</Russian>
+		<Italian>Guardia monaspa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MONASPA_GUARD_PEDIA</Tag>
@@ -15518,11 +15561,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Keshik:Keshik</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Kheshig mongolo</Italian>
 		<Spanish>
 			<Text>Keshik:Keshik</Text>
 			<Gender>Male</Gender>
@@ -15603,7 +15642,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Alce americano</Italian>
+		<Italian>Alce</Italian>
 		<Spanish>
 			<Text>Alce</Text>
 			<Gender>Male</Gender>
@@ -15668,6 +15707,7 @@
 		<English>Motu Archers</English>
 		<French>Archer Motu</French>
 		<Russian>Ëó÷íèê ìîòó</Russian>
+		<Italian>Arciere Motu</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MOTU_ARCHERS_PEDIA</Tag>
@@ -15699,6 +15739,7 @@
 		<English>Mound Guardian</English>
 		<French>Garde Mound</French>
 		<Russian>Õðàíèòåëü êóðãàíà</Russian>
+		<Italian>Guardiano del tumulo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MOUND_GUARDIAN_PEDIA</Tag>
@@ -15709,6 +15750,7 @@
 		<English>Mounted Grenadiers</English>
 		<French>Grenadier Monté</French>
 		<Russian>Êîííûé ãðåíàäåð</Russian>
+		<Italian>Granatiere a cavallo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MOUNTED_GRENADIERS_PEDIA</Tag>
@@ -15789,6 +15831,7 @@
 		<Tag>TXT_KEY_UNIT_MUHAMMAD_BIN_SAUD</Tag>
 		<English>Muhammad bin Saud</English>
 		<Russian>Ìóõàììàä èáí Ñàóä</Russian>
+		<Italian>Muhammad Ibn Saud</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MUHAMMAD_BIN_SAUD_PEDIA</Tag>
@@ -15798,6 +15841,7 @@
 		<Tag>TXT_KEY_UNIT_MUJAHIDEEN</Tag>
 		<English>Mujahideen</English>
 		<Russian>Ìîäæàõåä</Russian>
+		<Italian>Guerrigliero mujahideen</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MUJAHIDEEN_PEDIA</Tag>
@@ -15809,6 +15853,7 @@
 		<French>L'homme de Mungo</French>
 		<Polish>Człowiek Mungo</Polish>
 		<Russian>Ìóíãî</Russian>
+		<Italian>Uomo di Mungo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MUNGO_MAN_PEDIA</Tag>
@@ -15821,6 +15866,7 @@
 		<English>Murri Warrior</English>
 		<French>Guerrier Murri</French>
 		<Russian>Âîèí ìóððè</Russian>
+		<Italian>Guerriero Murri</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MURRI_WARRIOR_PEDIA</Tag>
@@ -15891,6 +15937,7 @@
 		<Tag>TXT_KEY_UNIT_MWAANTA_GAAND</Tag>
 		<English>Mwaanta Gaand</English>
 		<Russian>Ìóààíòà Ãààíä</Russian>
+		<Italian>Lanciatore di giavellotti lunda</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MWAANTA_GAAND_PEDIA</Tag>
@@ -15901,6 +15948,7 @@
 		<English>Myrrh Caravan</English>
 		<French>Caravane Myrrh</French>
 		<Russian>Ìèððñêèé êàðàâàí</Russian>
+		<Italian>Carovana di mirra himyarita</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MYRH_CARAVAN_PEDIA</Tag>
@@ -15930,6 +15978,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>Òëåíàìàêàê</Russian>
+		<Italian>Missionario nagualista</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAHUAL</Tag>
@@ -15944,6 +15993,7 @@
 		<Tag>TXT_KEY_UNIT_NAKHARAR</Tag>
 		<English>Nakharar</English>
 		<Russian>Íàõàðàð</Russian>
+		<Italian>Cavaliere nakharar</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAKHARAR_PEDIA</Tag>
@@ -16027,6 +16077,7 @@
 		<Tag>TXT_KEY_UNIT_NARAMSIN</Tag>
 		<English>Naram-Sin</English>
 		<Russian>Íàðàì Ñóýí</Russian>
+		<Italian>Naram Sin</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NARAMSIN_PEDIA</Tag>
@@ -16079,11 +16130,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Soldato cane:Soldati cane</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Soldato cane</Italian>
 		<Spanish>
 			<Text>Soldado perro:Soldados perros</Text>
 			<Gender>Male</Gender>
@@ -16104,7 +16151,7 @@
 		<Tag>TXT_KEY_UNIT_NAVAJO_RIFLEMAN</Tag>
 		<English>Navajo Rifleman</English>
 		<French>Fusilier Navajo</French>
-		<Italian>Fuciliere Navajo</Italian>
+		<Italian>Fuciliere navajo</Italian>
 		<Spanish>
 			<Text>Fusilero navajo</Text>
 			<Gender>Male</Gender>
@@ -16132,6 +16179,7 @@
 		<English>Nazca Headhunters</English>
 		<French>Chasseur de tête Nazca</French>
 		<Russian>Âîèí Íàñêè</Russian>
+		<Italian>Cacciatore di teste nazca</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAZCA_HEADHUNTERS_PEDIA</Tag>
@@ -16355,6 +16403,7 @@
 		<English>Neanderthal Tribal Guardian</English>
 		<French>Gardien Tribal de Néanderthal</French>
 		<Russian>Неанд. племенной страж</Russian>
+		<Italian>Guardiano tribale neanderthal</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_WANDERER</Tag>
@@ -16396,7 +16445,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Неанд. наблюдатель</Russian>
-		<Italian>Sorvegliante neanderthal</Italian>
+		<Italian>Guardiano neanderthal</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_WISE_WOMAN</Tag>
@@ -16439,6 +16488,7 @@
 		</Spanish>
 		<Polish>Nabuchodonozor I</Polish>
 		<Russian>Íàâóõîäîíîñîð</Russian>
+		<Italian>Nabucodonosor II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEDBUCHADNEZZAR_PEDIA</Tag>
@@ -16464,11 +16514,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>East Indiaman:East Indiaman</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>East Indiaman</Italian>
 		<Spanish>
 			<Text>Navío de las Indias Orientales:Navíos de las Indias Orientales</Text>
 			<Gender>Male</Gender>
@@ -16495,6 +16541,7 @@
 		</French>
 		<Polish>Piechota Nowej Zelandii</Polish>
 		<Russian>Êîðîëåâñêàÿ ïåõîòà</Russian>
+		<Italian>Fanteria neozelandese</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEW_ZEALAND_INFANTRY_PEDIA</Tag>
@@ -16505,6 +16552,7 @@
 		<Tag>TXT_KEY_UNIT_NGAYAU</Tag>
 		<English>Ngayau</English>
 		<Russian>Íãàÿó</Russian>
+		<Italian>Cacciatore ngayau</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NGAYAU_PEDIA</Tag>
@@ -16514,6 +16562,7 @@
 		<Tag>TXT_KEY_UNIT_NIAM_NIAM</Tag>
 		<English>Niam-Niam</English>
 		<Russian>Íÿì-íÿì</Russian>
+		<Italian>Guerrigliero niam-niam</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NIAM_NIAM_PEDIA</Tag>
@@ -16575,6 +16624,7 @@
 		<English>Nok Merchants</English>
 		<French>Marchand Nok</French>
 		<Russian>Íîêñêèé òîðãîâåö</Russian>
+		<Italian>Mercante nok</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NOK_MERCHANTS_PEDIA</Tag>
@@ -16584,7 +16634,7 @@
 		<Tag>TXT_KEY_UNIT_NOOTKA_CLUBMAN</Tag>
 		<English>Nootka Clubman</English>
 		<French>Guerrier avec gourdin Nootka</French>
-		<Italian>Guerriero Nootka con clava</Italian>
+		<Italian>Guerriero con clava nuu-chah-nulth</Italian>
 		<Spanish>
 			<Text>Guerrero con garrote nutka</Text>
 			<Gender>Male</Gender>
@@ -16615,6 +16665,7 @@
 		<English>Norman Knight</English>
 		<French>Chevalier Norman</French>
 		<Russian>Íîðìàííñêèé ðûöàðü</Russian>
+		<Italian>Cavaliere normanno</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NORMAN_KNIGHT_PEDIA</Tag>
@@ -16663,6 +16714,7 @@
 		<English>Nukuleka Warriors</English>
 		<French>Guerrier Nukuleka</French>
 		<Russian>Íåêóëèêñêèé âîèí</Russian>
+		<Italian>Lanciatore di giavellotti di Nukuleka</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NUKULEKA_WARRIORS_PEDIA</Tag>
@@ -16747,6 +16799,7 @@
 		<English>Odawa Traders</English>
 		<French>Commerçant Odawa</French>
 		<Russian>Òîðãîâåö îäàâà</Russian>
+		<Italian>Mercante odawa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ODAWA_TRADERS_PEDIA</Tag>
@@ -16803,6 +16856,7 @@
 		</Spanish>
 		<Polish>Ugedej</Polish>
 		<Russian>Óãýäýé</Russian>
+		<Italian>Ogedei Khan</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OGODAI_PEDIA</Tag>
@@ -16813,6 +16867,7 @@
 		<Tag>TXT_KEY_UNIT_OHIGGINS</Tag>
 		<English>O'Higgins</English>
 		<Russian>Áåðíàðäî Î?Õèããèíñ</Russian>
+		<Italian>Bernardo O'Higgins</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OHIGGINS_PEDIA</Tag>
@@ -16822,6 +16877,7 @@
 		<Tag>TXT_KEY_UNIT_OILAT_KESHIK</Tag>
 		<English>Oilat Keshik</English>
 		<Russian>Îéðàòñêèé êåøèê</Russian>
+		<Italian>Cavaliere Khesig</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OILAT_KESHIK_PEDIA</Tag>
@@ -16832,6 +16888,7 @@
 		<English>Oil Tanker</English>
 		<French>Tanker d'Huile</French>
 		<Russian>Íåôòÿíîé òàíêåð</Russian>
+		<Italian>Petroliera kuwaitiana</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OIL_TANKER_PEDIA</Tag>
@@ -16865,17 +16922,14 @@
 		<Tag>TXT_KEY_UNIT_OLMEC_EAGLE_WARRIOR</Tag>
 		<English>Olmec Eagle Warrior</English>
 		<French>Guerrier-Aigle Olmec</French>
-		<Italian>
-			<Text>Guerriero aquila olmeco</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Guerriero aquila olmeco</Italian>
 		<Russian>Âîèí-îðåë</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OMUCHTAN</Tag>
 		<English>Omuchtan</English>
 		<Russian>Îìó÷òàí</Russian>
+		<Italian>Cavaliere omuchtan</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OMUCHTAN_PEDIA</Tag>
@@ -16890,7 +16944,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Orango tango</Italian>
+		<Italian>Orango</Italian>
 		<Spanish>
 			<Text>Orangután</Text>
 			<Gender>Male</Gender>
@@ -16903,6 +16957,7 @@
 		<English>Orang Bowman</English>
 		<French>Archer Orang</French>
 		<Russian>Ëó÷íèê îðàíã</Russian>
+		<Italian>Arciere orang asli</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ORANG_BOWMAN_PEDIA</Tag>
@@ -16982,6 +17037,7 @@
 		<English>Order of the Dragon</English>
 		<French>Ordre du Dragon</French>
 		<Russian>Îðäåí Äðàêîíà</Russian>
+		<Italian>Guerriero dell'ordine del dragone</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ORDER_OF_THE_DRAGON_PEDIA</Tag>
@@ -17010,6 +17066,7 @@
 		<English>OroNao Watcher</English>
 		<French>OroNao Guetteur</French>
 		<Russian>Ñòðàæíèê îðîíàî</Russian>
+		<Italian>Guardiano huari</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ORONAO_WATCHER_PEDIA</Tag>
@@ -17019,6 +17076,7 @@
 		<Tag>TXT_KEY_UNIT_OSEI</Tag>
 		<English>Osei Kofi Tutu I</English>
 		<Russian>Îñåé Êîôè Òóòó I</Russian>
+		<Italian>Osei Tutu I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OSEI_PEDIA</Tag>
@@ -17034,6 +17092,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>Îñìàí</Russian>
+		<Italian>Osman I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OSMAN_PEDIA</Tag>
@@ -17080,11 +17139,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Giannizzero:Giannizzeri</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Giannizzero ottomano</Italian>
 		<Spanish>
 			<Text>Jenízaro:Jenízaros</Text>
 			<Gender>Male</Gender>
@@ -17153,7 +17208,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Uccello-zecca</Italian>
+		<Italian>Bufaga</Italian>
 		<Spanish>
 			<Text>Picabuey</Text>
 			<Gender>Male</Gender>
@@ -17203,6 +17258,7 @@
 		<Tag>TXT_KEY_UNIT_PAAKA</Tag>
 		<English>Paaka</English>
 		<Russian>Ïààêà</Russian>
+		<Italian>Pachacamac</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PAAKA_PEDIA</Tag>
@@ -17212,6 +17268,7 @@
 		<Tag>TXT_KEY_UNIT_PACADEO</Tag>
 		<English>Pacadeo</English>
 		<Russian>Ïàêàäåî</Russian>
+		<Italian>Cahuachi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PACADEO_PEDIA</Tag>
@@ -17221,6 +17278,7 @@
 		<Tag>TXT_KEY_UNIT_PACHECO</Tag>
 		<English>Pacheco</English>
 		<Russian>Ïà÷åêî</Russian>
+		<Italian>Cenofana</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PACHECO_PEDIA</Tag>
@@ -17279,6 +17337,7 @@
 		<English>Paiute Cavalry</English>
 		<French>Cavalerie Païute</French>
 		<Russian>Ïàéþòñêàÿ êàâàëåðèÿ</Russian>
+		<Italian>Cavalleria paiute</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PAIUTE_CAVALRY_PEDIA</Tag>
@@ -17288,6 +17347,7 @@
 		<Tag>TXT_KEY_UNIT_PALADIN</Tag>
 		<English>Paladin</English>
 		<Russian>Ïàëàäèí</Russian>
+		<Italian>Paladino bretone</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PALADIN_PEDIA</Tag>
@@ -17326,6 +17386,7 @@
 		<Tag>TXT_KEY_UNIT_PANGCAH_IMPANTERYA</Tag>
 		<English>Pangcah Impanterya</English>
 		<Russian>Àìèññêàÿ ïåõîòà</Russian>
+		<Italian>Fanteria pangcah</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PANGCAH_IMPANTERYA_PEDIA</Tag>
@@ -17344,11 +17405,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Pantera:Pantere</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Pantera</Italian>
 		<Spanish>
 			<Text>Pantera:Panteras</Text>
 			<Gender>Female</Gender>
@@ -17361,7 +17418,7 @@
 		<Tag>TXT_KEY_UNIT_PAPUAN_CANNIBAL</Tag>
 		<English>Papuan Cannibal</English>
 		<French>Cannibal Papou</French>
-		<Italian>Cannibale Papuano</Italian>
+		<Italian>Cannibale papuano</Italian>
 		<Polish>Papuaski Kanibal</Polish>
 		<Russian>Êàííèáàë</Russian>
 	</TEXT>
@@ -17422,6 +17479,7 @@
 		<French>Perroquet</French>
 		<Polish>Papuga</Polish>
 		<Russian>Ïîïóãàé</Russian>
+		<Italian>Pappagallo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PARROT_PEDIA</Tag>
@@ -17436,11 +17494,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Partigiano</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Partigiano</Italian>
 		<Spanish>
 			<Text>Seguidor</Text>
 			<Gender>Male</Gender>
@@ -17459,6 +17513,7 @@
 		<Tag>TXT_KEY_UNIT_PASDARAN</Tag>
 		<English>Pasdaran</English>
 		<Russian>Ïàñäàðàí</Russian>
+		<Italian>Pasdaran iraniano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PASDARAN_PEDIA</Tag>
@@ -17468,6 +17523,7 @@
 		<Tag>TXT_KEY_UNIT_PASTENE</Tag>
 		<English>Pastene</English>
 		<Russian>Ïàñòåíå</Russian>
+		<Italian>Guangala</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PASTENE_PEDIA</Tag>
@@ -17478,6 +17534,7 @@
 		<English>Patagonian Archer</English>
 		<French>Archer Patagonien</French>
 		<Russian>Ïàòàãîíñêèé ëó÷íèê</Russian>
+		<Italian>Arciere della Patagonia</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PATAGONIAN_ARCHER_PEDIA</Tag>
@@ -17487,6 +17544,7 @@
 		<Tag>TXT_KEY_UNIT_PATAMAR</Tag>
 		<English>Patamar</English>
 		<Russian>Ïàòàìàð</Russian>
+		<Italian>Pattmar bangladese</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PATAMAR_PEDIA</Tag>
@@ -17552,6 +17610,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>Ïåäðî Íêàíãà à Ìâèêà</Russian>
+		<Italian>Pedro II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PEDRO_DE_AGUADO</Tag>
@@ -17580,6 +17639,7 @@
 		<Tag>TXT_KEY_UNIT_PEN_HUO_QI</Tag>
 		<English>Pen Huo Qi</English>
 		<Russian>Ïåíüõîöè</Russian>
+		<Italian>Guerriero con lanciafiamme pen huo qi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PEN_HUO_QI_PEDIA</Tag>
@@ -17603,11 +17663,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Immortale:Immortali</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Immortale persiano</Italian>
 		<Spanish>
 			<Text>Inmortal:Inmortales</Text>
 			<Gender>Male</Gender>
@@ -17630,6 +17686,7 @@
 		<French>Périclès</French>
 		<Polish>Perykles</Polish>
 		<Russian>Ïåðèêë</Russian>
+		<Italian>Pericle</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PERICLES_PEDIA</Tag>
@@ -17641,6 +17698,7 @@
 		<English>Persian Poet</English>
 		<French>Poète Perse</French>
 		<Russian>Ïåðñèäñêèé ïîýò</Russian>
+		<Italian>Poeta persiano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PERSIAN_POET_PEDIA</Tag>
@@ -17651,6 +17709,7 @@
 		<English>Peruvian Conquistador</English>
 		<French>Conquistador Péruvien</French>
 		<Russian>Ïåðóàíñêèé êîíêèñòàäîð</Russian>
+		<Italian>Conquistador peruviano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PERUVIAN_CONQUISTADOR_PEDIA</Tag>
@@ -17660,6 +17719,7 @@
 		<Tag>TXT_KEY_UNIT_PESHMERGA</Tag>
 		<English>Peshmerga</English>
 		<Russian>Ïåøìåðãà</Russian>
+		<Italian>Soldato Peshmerga</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PESHMERGA_PEDIA</Tag>
@@ -17669,6 +17729,7 @@
 		<Tag>TXT_KEY_UNIT_PETER_CLAVER</Tag>
 		<English>Peter Claver</English>
 		<Russian>Ïåòð Êëàâåð</Russian>
+		<Italian>Pietro Claver</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PETER_CLAVER_PEDIA</Tag>
@@ -17679,6 +17740,7 @@
 		<English>Petra Guard</English>
 		<French>Garde de Petra</French>
 		<Russian>Ñòðàæíèê Ïåòðû</Russian>
+		<Italian>Guardia di Petra</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PETRA_GUARD_PEDIA</Tag>
@@ -17688,6 +17750,7 @@
 		<Tag>TXT_KEY_UNIT_PETYHORCY</Tag>
 		<English>Petyhorcy</English>
 		<Russian>Ïÿòèãîðåö</Russian>
+		<Italian>Cavaliere Petyhorcy</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PETYHORCY_PEDIA</Tag>
@@ -17731,6 +17794,7 @@
 		<English>Philip the Bold</English>
 		<French>Philippe le Hardi</French>
 		<Russian>Ôèëèïï II Ñìåëûé</Russian>
+		<Italian>Filippo II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PHILIP_THE_BOLD_PEDIA</Tag>
@@ -17744,7 +17808,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>Bireme Fenicia</Italian>
+		<Italian>Bireme fenicia</Italian>
 		<Spanish>Phonecian Bireme</Spanish>
 		<Polish>Fenicka Birema</Polish>
 		<Russian>Ôèíèêèéñêàÿ áèðåìà</Russian>
@@ -17760,6 +17824,7 @@
 		<Tag>TXT_KEY_UNIT_PIBELMAN</Tag>
 		<English>Pibelman</English>
 		<Russian>Ïèáåëìåí</Russian>
+		<Italian>Wudjari</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PIBELMAN_PEDIA</Tag>
@@ -17770,6 +17835,7 @@
 		<English>Pictish Warrior</English>
 		<French>Guerrier Picte</French>
 		<Russian>Ïèêòñêèé ìå÷íèê</Russian>
+		<Italian>Guerriero pitto</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PICTISH_WARRIOR_PEDIA</Tag>
@@ -17795,11 +17861,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Picchiere:Picchieri</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Picchiere</Italian>
 		<Spanish>
 			<Text>Piquero:Piqueros</Text>
 			<Gender>Male</Gender>
@@ -17835,6 +17897,7 @@
 		<English>[ICON_BULLET]+2 population to the city founded.</English>
 		<French>[ICON_BULLET]+2 population à la ville fondée.</French>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Подсказка: [COLOR_REVERT]+2 к населению для вновь основанного города.</Russian>
+		<Italian>[ICON_BULLET]L'unità fornisce [COLOR_HIGHLIGHT_TEXT]+2 di popolazione[COLOR_REVERT] quando fonda una città</Italian> <!-- unit Pioneer -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PIRATE_HELP</Tag>
@@ -17847,6 +17910,7 @@
 		<Tag>TXT_KEY_UNIT_PIYE</Tag>
 		<English>Piye</English>
 		<Russian>Ïè</Russian>
+		<Italian>Pianki</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PIYE_PEDIA</Tag>
@@ -17891,6 +17955,7 @@
 		<English>PLO Fighter</English>
 		<French>Guerrier PLO</French>
 		<Russian>Áîåö ÎÎÏ</Russian>
+		<Italian>Guerrigliero dell'OLP</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PLO_FIGHTER_PEDIA</Tag>
@@ -17900,11 +17965,7 @@
 		<Tag>TXT_KEY_UNIT_PLUMED_ARCHER</Tag>
 		<English>Plumed Archer</English>
 		<French>Archer à Plumes</French>
-		<Italian>
-			<Text>Arciere piumato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Arciere piumato</Italian>
 		<Russian>Ïåðíàòûé ëó÷íèê</Russian>
 	</TEXT>
 	<TEXT>
@@ -18099,6 +18160,7 @@
 			<Plural>1</Plural>
 		</French>
 		<Russian>Ïîìáî</Russian>
+		<Italian>Guerriero pombos</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_POMBOS_PEDIA</Tag>
@@ -18120,11 +18182,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Caracca:Caracche</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Caracca portoghese</Italian>
 		<Spanish>
 			<Text>Carraca:Carracas</Text>
 			<Gender>Female</Gender>
@@ -18169,6 +18227,7 @@
 		<English>Poya Longspears</English>
 		<French>Lancier Poya</French>
 		<Russian>Ïèêèíåð ïîéÿ</Russian>
+		<Italian>Guerriero con lancia poya</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_POYA_LONGSPEARS_PEDIA</Tag>
@@ -18206,6 +18265,7 @@
 		<Tag>TXT_KEY_UNIT_PREMPEH</Tag>
 		<English>Prempeh</English>
 		<Russian>Ïðåìïåõ</Russian>
+		<Italian>Prempeh I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PREMPEH_PEDIA</Tag>
@@ -18236,6 +18296,7 @@
 		<English>Priest King</English>
 		<French>Prêtre-Roi</French>
 		<Russian>Êîðîëü-æðåö</Russian>
+		<Italian>Mohenjo Daro</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PRIEST_KING_PEDIA</Tag>
@@ -18329,6 +18390,7 @@
 		<English>Public Forces</English>
 		<French>Forces Publiques panaméennes</French>
 		<Russian>Ïàíàìñêîå îïîë÷åíèå</Russian>
+		<Italian>Forza pubblica di Panama</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PUBLIC_FORCES_PEDIA</Tag>
@@ -18339,6 +18401,7 @@
 		<English>Pueblo Rebel</English>
 		<French>Rebelle Pueblo</French>
 		<Russian>Ïóýáëñêèé ïîâñòàíåö</Russian>
+		<Italian>Ribelle pueblo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PUEBLO_REBEL_PEDIA</Tag>
@@ -18348,7 +18411,7 @@
 		<Tag>TXT_KEY_UNIT_PYGMY_WARRIOR</Tag>
 		<English>Pygmy Warrior</English>
 		<French>Guerrier Pygmé</French>
-		<Italian>Guerriero Pigmeo</Italian>
+		<Italian>Guerriero pigmeo</Italian>
 		<Polish>Wojownik Pigmejów</Polish>
 		<Russian>Ïèãìåé</Russian>
 	</TEXT>
@@ -18363,6 +18426,7 @@
 		<Tag>TXT_KEY_UNIT_QABOOS</Tag>
 		<English>Qaboos</English>
 		<Russian>Êàáóñ áåí Ñàèä</Russian>
+		<Italian>Qaboos bin Said Al Busaidi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_QABOOS_PEDIA</Tag>
@@ -18372,6 +18436,7 @@
 		<Tag>TXT_KEY_UNIT_QHATUQ</Tag>
 		<English>Qhatuq</English>
 		<Russian>Êàòóê</Russian>
+		<Italian>Scout chavin</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_QHATUQ_PEDIA</Tag>
@@ -18381,11 +18446,7 @@
 		<Tag>TXT_KEY_UNIT_QIANG_PIKEMAN</Tag>
 		<English>Qiang Pikeman</English>
 		<French>Piquier Qiang</French>
-		<Italian>
-			<Text>Picchiere Qiang:Picchieri Qiang</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Picchiere Qiang</Italian>
 		<Russian>Öÿíüñêèé ïèêèíåð</Russian>
 	</TEXT>
 	<TEXT>
@@ -18410,6 +18471,7 @@
 		<Tag>TXT_KEY_UNIT_QUADO</Tag>
 		<English>Quado</English>
 		<Russian>Êâàäî</Russian>
+		<Italian>Moqoit</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_QUADO_PEDIA</Tag>
@@ -18419,6 +18481,7 @@
 		<Tag>TXT_KEY_UNIT_QUAHE</Tag>
 		<English>Quahe</English>
 		<Russian>Êóàõè</Russian>
+		<Italian>Trobriand</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_QUAHE_PEDIA</Tag>
@@ -18433,6 +18496,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>Íãóåí Õþý</Russian>
+		<Italian>Nguyen Hue</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_QUANG_TRUNG_PEDIA</Tag>
@@ -18444,6 +18508,7 @@
 		<English>Quebec Defenders</English>
 		<French>Défenseur Québec</French>
 		<Russian>Çàùèòíèê Êâåáåêà</Russian>
+		<Italian>Difensore del Quebec</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_QUEBEC_DEFENDERS_PEDIA</Tag>
@@ -18502,7 +18567,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Quoll tigrato</Italian>
+		<Italian>Quoll tigre</Italian>
 		<Spanish>
 			<Text>Gato marsupial</Text>
 			<Gender>Male</Gender>
@@ -18588,6 +18653,7 @@
 		<Tag>TXT_KEY_UNIT_RAJPUT</Tag>
 		<English>Rajput</English>
 		<Russian>Ðàäæïóò</Russian>
+		<Italian>Guerriero Rajput</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RAJPUT_PEDIA</Tag>
@@ -18609,7 +18675,7 @@
 		<Tag>TXT_KEY_UNIT_RAPANUIWORKER</Tag>
 		<English>Rapa-Nui Worker</English>
 		<French>Ouvrier de Rapa-Nui</French>
-		<Italian>Lavoratore di Rapa-Nui</Italian>
+		<Italian>Lavoratore di Rapa Nui</Italian>
 		<Polish>Robotnik Rapa-Nui</Polish>
 		<Russian>Ðàïà-Íóè</Russian>
 	</TEXT>
@@ -18653,6 +18719,7 @@
 		<French>Corbeau</French>
 		<Polish>Kruk</Polish>
 		<Russian>Âîðîí</Russian>
+		<Italian>Corvo imperiale</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RAVEN_PEDIA</Tag>
@@ -18666,6 +18733,7 @@
 		<French>Pingouin torda</French>
 		<Polish>Alka Zwyczajna</Polish>
 		<Russian>Ãàãàðêà</Russian>
+		<Italian>Gazza marina</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RAZORBILL_PEDIA</Tag>
@@ -18677,6 +18745,7 @@
 		<English>Razzia Pirates</English>
 		<French>Pirate Razzia</French>
 		<Russian>Àëæèðñêèé ïèðàò</Russian>
+		<Italian>Pirata ghaziya algerino</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RAZZIA_PIRATES_PEDIA</Tag>
@@ -18702,11 +18771,7 @@
 		<Tag>TXT_KEY_UNIT_RA_KNIGHT</Tag>
 		<English>Ra Knight</English>
 		<French>Chevalier de Ra</French>
-		<Italian>
-			<Text>Cavaliere di Ra</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Cavaliere di Ra</Italian>
 		<Russian>Ðûöàðü Ðà</Russian>
 	</TEXT>
 	<TEXT>
@@ -18772,6 +18837,7 @@
 		<Tag>TXT_KEY_UNIT_RED_CHIEF</Tag>
 		<English>Red Chief</English>
 		<Russian>Âîæäü êðàñíîêîæèõ</Russian>
+		<Italian>Capo tribale dell'ocra rossa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RED_CHIEF_PEDIA</Tag>
@@ -18782,6 +18848,7 @@
 		<English>Red Fox Archer</English>
 		<French>Archer Renard roux</French>
 		<Russian>Ëó÷íèê-ëèñ</Russian>
+		<Italian>Arciere della volpe rossa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RED_FOX_ARCHER_PEDIA</Tag>
@@ -18792,6 +18859,7 @@
 		<English>Red Spear</English>
 		<French>Lance rouge</French>
 		<Russian>Êðàñíîå êîïüå</Russian>
+		<Italian>Gran guerriero dell'ocra rossa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RED_SPEAR_PEDIA</Tag>
@@ -18806,7 +18874,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Squalo di barriera corallina</Italian>
+		<Italian>Squalo del reef</Italian>
 		<Spanish>
 			<Text>Tiburón de arrecife</Text>
 			<Gender>Male</Gender>
@@ -18820,6 +18888,7 @@
 		<English>Reindeer Rider</English>
 		<French>Cavalier Reindeer</French>
 		<Russian>Íàåçäíèê íà ñåâ. îëåíå</Russian>
+		<Italian>Cavaliere di alci</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_REINDEER_RIDER_PEDIA</Tag>
@@ -18865,6 +18934,7 @@
 		<English>Republican Guard</English>
 		<French>Garde Républicain</French>
 		<Russian>Ðåñïóáëèêàíñêàÿ ãâàðäèÿ</Russian>
+		<Italian>Soldato della Guardia repubblicana</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_REPUBLICAN_GUARD_PEDIA</Tag>
@@ -18875,6 +18945,7 @@
 		<English>Resin Caravan</English>
 		<French>Caravane Résinee</French>
 		<Russian>Ñìîëÿíîé êàðàâàí</Russian>
+		<Italian>Carovana di resina puntica</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RESIN_CARAVAN_PEDIA</Tag>
@@ -18903,6 +18974,7 @@
 		<English>Rhodesia Native Regiment</English>
 		<French>Régiment de Natifs rhodésiens</French>
 		<Russian>Òóçåìíûé ïîëê</Russian>
+		<Italian>Soldato del reggimento nativi Rhodesia</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RHODESIA_NATIVE_REGIMENT_PEDIA</Tag>
@@ -18956,6 +19028,7 @@
 		<English>Rimyura Warriors</English>
 		<French>Guerrier Rimyura</French>
 		<Russian>Âîèí ðèìóðà</Russian>
+		<Italian>Guerriero yagua</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RIMYURA_WARRIORS_PEDIA</Tag>
@@ -18985,6 +19058,7 @@
 		<English>River Worker</English>
 		<French>Ouvrier des Rivières</French>
 		<Russian>Ðå÷íîé ðàáîòíèê</Russian>
+		<Italian>Lavoratore del grande fiume</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RIVER_WORKER_PEDIA</Tag>
@@ -19073,7 +19147,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Pinguino Rockhopper</Italian>
+		<Italian>Pinguino saltarocce</Italian>
 		<Spanish>
 			<Text>Pingüino de penacho amarillo</Text>
 			<Gender>Male</Gender>
@@ -19106,6 +19180,7 @@
 		<Tag>TXT_KEY_UNIT_ROLLO</Tag>
 		<English>Rollo</English>
 		<Russian>Ðîëëî</Russian>
+		<Italian>Rollone</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ROLLO_PEDIA</Tag>
@@ -19120,11 +19195,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Pretoriano:Pretoriani</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Pretoriano romano</Italian>
 		<Spanish>
 			<Text>Pretoriano:Pretorianos</Text>
 			<Gender>Male</Gender>
@@ -19176,6 +19247,7 @@
 		<English>Royal Special Forces</English>
 		<French>Commando Royal des Forces Spéciales</French>
 		<Russian>Èîðäàíñêèé ñïåöíàç</Russian>
+		<Italian>Soldato delle forze speciali congiunte giordane</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ROYAL_SPECIAL_FORCES_PEDIA</Tag>
@@ -19185,6 +19257,7 @@
 		<Tag>TXT_KEY_UNIT_ROZVI</Tag>
 		<English>Rozvi</English>
 		<Russian>Ðîçâè</Russian>
+		<Italian>Guerriero Rozvi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ROZVI_PEDIA</Tag>
@@ -19211,11 +19284,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Cosacco:Cosacchi</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Cavaliere cosacco</Italian>
 		<Spanish>
 			<Text>Cosaco:Cosacos</Text>
 			<Gender>Male</Gender>
@@ -19237,6 +19306,7 @@
 		<English>Rwenzururu Soldier</English>
 		<French>Soldat Rwenzururu</French>
 		<Russian>Ðóâåíçîðñêèé ñîëäàò</Russian>
+		<Italian>Soldato del Rwenzururu</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RWENZURURU_SOLDIER_PEDIA</Tag>
@@ -19256,6 +19326,7 @@
 		<English>Sabar Drummer</English>
 		<French>Tambour Sabar</French>
 		<Russian>Áàðàáàíùèê ñàáàð</Russian>
+		<Italian>Suonatore di sabar</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SABAR_DRUMMER_PEDIA</Tag>
@@ -19266,6 +19337,7 @@
 		<English>Sable Trapper</English>
 		<French>Trappeur des Sables</French>
 		<Russian>Ëîâåö ñîáîëåé</Russian>
+		<Italian>Cacciatore di zibellini</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SABLE_TRAPPER_PEDIA</Tag>
@@ -19303,6 +19375,7 @@
 		<Tag>TXT_KEY_UNIT_SAID_BIN_SULTAN</Tag>
 		<English>Said bin Sultan</English>
 		<Russian>Ñàèä èáí Ñóëòàí</Russian>
+		<Italian>Said Bin Sultan</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SAID_BIN_SULTAN_PEDIA</Tag>
@@ -19321,11 +19394,7 @@
 		<Tag>TXT_KEY_UNIT_SAKA_CATAPHRACT</Tag>
 		<English>Saka Cataphract</English>
 		<French>Cataphracte Saka</French>
-		<Italian>
-			<Text>Catafratta di Saka</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Catafratta di Saka</Italian>
 		<Russian>Ñàêñêèé êàòàôðàêò</Russian>
 	</TEXT>
 	<TEXT>
@@ -19337,6 +19406,7 @@
 		<Tag>TXT_KEY_UNIT_SALAWAT_YULAYEV</Tag>
 		<English>Salawat Yulayev</English>
 		<Russian>Ñàëàâàò Þëàåâ</Russian>
+		<Italian>Salavat Julaev</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SALAWAT_YULAYEV_PEDIA</Tag>
@@ -19346,6 +19416,7 @@
 		<Tag>TXT_KEY_UNIT_SAMBUK</Tag>
 		<English>Sambuk</English>
 		<Russian>Ñàìáóê</Russian>
+		<Italian>Sanbuco di Zanzibar</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SAMBUK_PEDIA</Tag>
@@ -19355,6 +19426,7 @@
 		<Tag>TXT_KEY_UNIT_SAMOSTRELAC</Tag>
 		<English>Samostrelac</English>
 		<Russian>Ñàìîñòðåëüùèê</Russian>
+		<Italian>Arbalestriere croato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SAMOSTRELAC_PEDIA</Tag>
@@ -19394,6 +19466,7 @@
 		<Tag>TXT_KEY_UNIT_SANCHO</Tag>
 		<English>Sancho III</English>
 		<Russian>Ñàí÷î III</Russian>
+		<Italian>Sancho III Garcés</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SANCHO_PEDIA</Tag>
@@ -19413,6 +19486,7 @@
 		<Tag>TXT_KEY_UNIT_SAN_MARTIN</Tag>
 		<English>Jose de San Martin</English>
 		<Russian>Õîñå Ìàðòèí</Russian>
+		<Italian>José de San Martin</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SAN_MARTIN_PEDIA</Tag>
@@ -19440,6 +19514,7 @@
 		<English>Saud Cavalry</English>
 		<French>Saud Cavalerie</French>
 		<Russian>Ñàóäñêàÿ êîííèöà</Russian>
+		<Italian>Cavalleria saudita</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SAUD_CAVALRY_PEDIA</Tag>
@@ -19464,18 +19539,14 @@
 		<Tag>TXT_KEY_UNIT_SAVARAN</Tag>
 		<English>Savaran Cavalry</English>
 		<French>Chevaliers Savaran</French>
-		<Italian>
-			<Text>Cavalleria Savaran</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Cavalleria savarana</Italian>
 		<Spanish>Caballeros Savaran</Spanish>
 		<Russian>Ñàâàðàí</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SAVARAN_PEDIA</Tag>
 		<English>The Sassanid Savaran were the knights who formed the armour guard of the emperor himself. Unlike knights elsewhere who were born into the role - or were there because they could afford a horse - the Savaran were highly trained, as only the best were selected for this coveted role.</English>
-		<Italian>I Savaran sassanidi erano i cavalieri che formavano la guardia dell'imperatore sassanide. A differenza dei cavalieri europei, che diventavano tali per nascita, i Savaran erano altamente addestrati, poiché solo i migliori potevano essere scelti per questo ruolo.</Italian>
+		<Italian>I cavalieri savarani sasanidi formavano la guardia dell'imperatore sasanide. A differenza dei cavalieri europei, che diventavano tali per nascita, i savarani erano altamente addestrati, poiché solo i migliori potevano essere scelti per questo ruolo.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SAXON_RAIDER</Tag>
@@ -19485,7 +19556,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
-		<Italian>Cavaliere Sassone</Italian>
+		<Italian>Predone sassone</Italian>
 		<Polish>Saksoński Najeźdźca</Polish>
 		<Russian>Ñàêñîíñêèé âñàäíèê</Russian>
 	</TEXT>
@@ -19543,6 +19614,7 @@
 		<Tag>TXT_KEY_UNIT_SCORTAMAREVA</Tag>
 		<English>Scortamareva</English>
 		<Russian>Ñêóòàðèÿ</Russian>
+		<Italian>Guerriero Scortamareva</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SCORTAMAREVA_PEDIA</Tag>
@@ -19564,11 +19636,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Scout:Scout</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Scout</Italian>
 		<Spanish>
 			<Text>Batidor:Batidores</Text>
 			<Gender>Male</Gender>
@@ -19627,11 +19695,7 @@
 		<Tag>TXT_KEY_UNIT_SCYTHIAN_HORSE_ARCHER</Tag>
 		<English>Scythian Horse Archer</English>
 		<French>Archer monté Scythe</French>
-		<Italian>
-			<Text>Arciere a cavallo scita:Arcieri a cavallo sciti</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Arciere a cavallo scita</Italian>
 		<Russian>Ñêèô. êîííûé ëó÷íèê</Russian>
 	</TEXT>
 	<TEXT>
@@ -19644,6 +19708,7 @@
 		<English>Seal Hunter</English>
 		<French>Chasseur de phoques</French>
 		<Russian>Ëîâåö òþëåíåé</Russian>
+		<Italian>Cacciatore di foche fuegino</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SEAL_HUNTER_PEDIA</Tag>
@@ -19673,6 +19738,7 @@
 		<English>Search Bloc</English>
 		<French>Bloc de Recherche</French>
 		<Russian>Êîëóìáèéñêàÿ ïîëèöèÿ</Russian>
+		<Italian>Guardia del bloque de busqueda</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SEARCH_BLOC_PEDIA</Tag>
@@ -19691,7 +19757,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Tartaruga marina</Italian>
+		<Italian>Tartaruga di mare</Italian>
 		<Spanish>
 			<Text>Tortuga marina</Text>
 			<Gender>Female</Gender>
@@ -19706,6 +19772,7 @@
 		<French>Messager sagittaire</French>
 		<Polish>Sekretarz (Ptak)</Polish>
 		<Russian>Ïòèöà-ñåêðåòàðü</Russian>
+		<Italian>Serpentario</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SECRETARYBIRD_PEDIA</Tag>
@@ -19716,6 +19783,7 @@
 		<Tag>TXT_KEY_UNIT_SEKAQUAPTEWA</Tag>
 		<English>Sekaquaptewa</English>
 		<Russian>Ýìîðè Ñåêàêâàïòåâà</Russian>
+		<Italian>Emory Sekaquaptewa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SEKAQUAPTEWA_PEDIA</Tag>
@@ -19787,6 +19855,7 @@
 		<English>Sepoy</English>
 		<Polish>Sipajowie</Polish>
 		<Russian>Ñèïàé</Russian>
+		<Italian>Soldato Sepoy</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SEPOY_PEDIA</Tag>
@@ -19800,6 +19869,7 @@
 		<English>Serengeti Ranger</English>
 		<French>Gardien des forêts Serengeti</French>
 		<Russian>Ñåðåíãåòñêèé ðåéíäæåð</Russian>
+		<Italian>Lavoratore del Serengeti</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SERENGETI_RANGER_PEDIA</Tag>
@@ -19837,11 +19907,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Colono:Coloni</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Colono</Italian>
 		<Spanish>
 			<Text>Colono:Colonos</Text>
 			<Gender>Male</Gender>
@@ -19892,7 +19958,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
-		<Italian>Carro Shang</Italian>
+		<Italian>Carro shang</Italian>
 		<Polish>Rydwan Shang</Polish>
 		<Russian>Êèòàéñêàÿ êîëåñíèöà</Russian>
 	</TEXT>
@@ -19915,7 +19981,7 @@
 		<Tag>TXT_KEY_UNIT_SHAN_WARRIOR</Tag>
 		<English>Shan Warrior</English>
 		<French>Guerrier Shan</French>
-		<Italian>Guerriero Shan</Italian>
+		<Italian>Soldato dello Stato Shan</Italian>
 		<Polish>Wojownik Shan</Polish>
 		<Russian>Øàí</Russian>
 	</TEXT>
@@ -19950,6 +20016,7 @@
 		</Spanish>
 		<Polish>Szapur I</Polish>
 		<Russian>Øàïóð I</Russian>
+		<Italian>Sapore I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHAPUR_PEDIA</Tag>
@@ -19960,7 +20027,7 @@
 		<Tag>TXT_KEY_UNIT_SHARKTOOTH_ARCHER</Tag>
 		<English>Sharktooth Archer</English>
 		<French>Archer dent de requins</French>
-		<Italian>Arciere Sharktooth</Italian>
+		<Italian>Arciere seminole</Italian>
 		<Spanish>
 			<Text>Arquero Dientes de tiburón</Text>
 			<Gender>Male</Gender>
@@ -19995,6 +20062,7 @@
 		<Tag>TXT_KEY_UNIT_SHAYBANI</Tag>
 		<English>Shaybani</English>
 		<Russian>Ìóõàììåä Øåéáàíè</Russian>
+		<Italian>Muhammad Al Shaybani</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHAYBANI_PEDIA</Tag>
@@ -20002,7 +20070,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHA_CO_PAY</Tag>
-		<English>Sha-Co-Pay</English>
+		<English>Sha Co Pay</English>
 		<Russian>Øàêîïàé</Russian>
 	</TEXT>
 	<TEXT>
@@ -20013,12 +20081,14 @@
 		<Tag>TXT_KEY_UNIT_SHEBA</Tag>
 		<English>Sheba</English>
 		<Russian>Øåáà</Russian>
+		<Italian>Regina di Saba</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHEBA_ELITES</Tag>
 		<English>Sheba Elites</English>
 		<French>Elite Sheba</French>
 		<Russian>Âîèí øåáà</Russian>
+		<Italian>Guerriero d'elite di Saba</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHEBA_ELITES_PEDIA</Tag>
@@ -20137,6 +20207,7 @@
 		<Tag>TXT_KEY_UNIT_SHOSHENQ_I</Tag>
 		<English>Shoshenq I</English>
 		<Russian>Øåøîíê I</Russian>
+		<Italian>Sheshonq I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SHOSHENQ_I_PEDIA</Tag>
@@ -20156,7 +20227,7 @@
 		<English>Battle Elephant</English>
 		<French>Eléphant de Bataille</French>
 		<German>Schlacht-Elefant</German>
-		<Italian>Elefante da battaglia</Italian>
+		<Italian>Elefante da guerra siriano</Italian>
 		<Spanish>
 			<Text>Elefante de batalla</Text>
 			<Gender>Male</Gender>
@@ -20192,11 +20263,7 @@
 		<Tag>TXT_KEY_UNIT_SIBERIAN_TRACKER</Tag>
 		<English>Siberian Tracker</English>
 		<French>Traqueur Sibérien</French>
-		<Italian>
-			<Text>Cercatore di tracce Siberiano:Cercatori di tracce Siberiani</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Cercatore di tracce siberiano</Italian>
 		<Russian>Ñëåäîïûò</Russian>
 	</TEXT>
 	<TEXT>
@@ -20229,6 +20296,7 @@
 		<English>Siege Elephant</English>
 		<French>Eléphant de Siège</French>
 		<Russian>Îñàäíûé ñëîí</Russian>
+		<Italian>Elefante da assedio</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SIEGE_ELEPHANT_PEDIA</Tag>
@@ -20286,7 +20354,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Belagerungsturm</German>
-		<Italian>Torre d'assedio</Italian>
+		<Italian>Torre da assedio</Italian>
 		<Spanish>
 			<Text>Torre de asedio</Text>
 			<Gender>Female</Gender>
@@ -20331,6 +20399,7 @@
 		<English>Simeon I</English>
 		<Polish>Symeon I</Polish>
 		<Russian>Ñèìåîí I</Russian>
+		<Italian>Simeone I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SIMEON_PEDIA</Tag>
@@ -20341,7 +20410,7 @@
 		<Tag>TXT_KEY_UNIT_SINBAD</Tag>
 		<English>Sinbad the Sailor</English>
 		<French>Sinbad le Marin</French>
-		<Italian>Sinbad il marinaio</Italian>
+		<Italian>Sindbad il marinaio</Italian>
 		<Spanish>
 			<Text>Simbad el Marino</Text>
 			<Gender>Male</Gender>
@@ -20360,6 +20429,7 @@
 		<English>Sintashta Chariot</English>
 		<French>Char équestre Sintashta</French>
 		<Russian>Ñèíòàøòèíñêàÿ êîëåñíèöà</Russian>
+		<Italian>Carro di Sintashta</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SINTASHTA_CHARIOT_PEDIA</Tag>
@@ -20369,6 +20439,7 @@
 		<Tag>TXT_KEY_UNIT_SIPAHI</Tag>
 		<English>Sipahi</English>
 		<Russian>Ñèïàõè</Russian>
+		<Italian>Cavaliere Spahi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SIPAHI_PEDIA</Tag>
@@ -20378,7 +20449,7 @@
 		<Tag>TXT_KEY_UNIT_SIYU_WARRIOR</Tag>
 		<English>Siyu Warrior</English>
 		<French>Guerrier Siyu</French>
-		<Italian>Guerriero Siyu</Italian>
+		<Italian>Soldato swahili</Italian>
 		<Polish>Wojownik Siyu</Polish>
 		<Russian>Ñèþ</Russian>
 	</TEXT>
@@ -20393,11 +20464,7 @@
 		<Tag>TXT_KEY_UNIT_SI_WARRIOR</Tag>
 		<English>Si Warrior</English>
 		<French>Guerrier Si</French>
-		<Italian>
-			<Text>Guerriero Si</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Guerriero moche</Italian>
 		<Russian>Ñèïàíñêèé âîèí</Russian>
 	</TEXT>
 	<TEXT>
@@ -20409,6 +20476,7 @@
 		<Tag>TXT_KEY_UNIT_SKANDERBEG</Tag>
 		<English>Skanderbeg</English>
 		<Russian>Ñêàíäåðáåã</Russian>
+		<Italian>Giorgio Castriota Scanderbeg</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SKANDERBEG_PEDIA</Tag>
@@ -20437,7 +20505,7 @@
 		<Tag>TXT_KEY_UNIT_SKI_PATROL</Tag>
 		<English>Ski Patrol</English>
 		<French>Chasseur alpin</French>
-		<Italian>Pattuglia con sci</Italian>
+		<Italian>Soldato con sci norvegese</Italian>
 		<Spanish>
 			<Text>Patrulla alpina</Text>
 			<Gender>Female</Gender>
@@ -20464,7 +20532,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Moffetta</Italian>
+		<Italian>Puzzola</Italian>
 		<Spanish>
 			<Text>Mofeta</Text>
 			<Gender>Female</Gender>
@@ -20561,7 +20629,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Orso giocoliere</Italian>
+		<Italian>Orso labiato</Italian>
 		<Spanish>
 			<Text>Oso perezoso</Text>
 			<Gender>Male</Gender>
@@ -20648,7 +20716,7 @@
 		<Tag>TXT_KEY_UNIT_SOMALI_PIRATE</Tag>
 		<English>Somali Pirate</English>
 		<French>Pirate Somalien</French>
-		<Italian>Pirata Somalo</Italian>
+		<Italian>Pirata somalo</Italian>
 		<Polish>Somalijscy Piraci</Polish>
 		<Russian>Ñîìàëèéñêèé ïèðàò</Russian>
 	</TEXT>
@@ -20664,6 +20732,7 @@
 		<English>Soninke Swordsman</English>
 		<French>Spadassin Soninke</French>
 		<Russian>Ñîíèíêñêèé ìå÷íèê</Russian>
+		<Italian>Spadaccino Sarakollé</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SONINKE_SWORDSMAN_PEDIA</Tag>
@@ -20673,6 +20742,7 @@
 		<Tag>TXT_KEY_UNIT_SOTAROAS</Tag>
 		<English>Sotaroas</English>
 		<Russian>Êåëüòñêèé ëó÷íèê</Russian>
+		<Italian>Arciere Sotaroas</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SOTAROAS_PEDIA</Tag>
@@ -20708,11 +20778,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Conquistador:Conquistadores</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Conquistador spagnolo</Italian>
 		<Spanish>
 			<Text>Conquistador:Conquistadores</Text>
 			<Gender>Male</Gender>
@@ -20745,7 +20811,7 @@
 		<Tag>TXT_KEY_UNIT_SPARTACUS_HELP</Tag>
 		<English>[ICON_BULLET]Spartacus Recruit Gladiator (25% Chance) after Combat Victory</English>
 		<French>[ICON_BULLET]Spartacus recrute des Gladiaturs (25% des Chances) après une victoire</French>
-		<Italian>[ICON_BULLET]Spartaco[COLOR_REVERT] recluta gladiatori (25% Chance) dopo ogni vittoria in combattimento</Italian>
+		<Italian>[ICON_BULLET]Spartaco può [COLOR_HIGHLIGHT_TEXT]reclutare un' unità gladiatore[COLOR_REVERT] ([COLOR_HIGHLIGHT_TEXT]25%[COLOR_REVERT] di probabilità) dopo ogni vittoria in combattimento</Italian> <!-- unit Spartacus -->
 		<Spanish>[ICON_BULLET]Recluta Gladiadores después de una victoria (probabilidad del 25%)</Spanish>
 		<Polish>[ICON_BULLET]Spartakus[COLOR_REVERT] werbuje Gladiatora (25% szans) po zwycięstwie w walce.</Polish>
 	</TEXT>
@@ -20759,7 +20825,7 @@
 		<Tag>TXT_KEY_UNIT_SPARTAN_WARRIOR</Tag>
 		<English>Spartan Warrior</English>
 		<French>Guerrier Sparte</French>
-		<Italian>Guerriero Spartano</Italian>
+		<Italian>Guerriero spartano</Italian>
 		<Polish>Spartan</Polish>
 		<Russian>Ñïàðòàíåö</Russian>
 	</TEXT>
@@ -20903,11 +20969,7 @@
 		<Tag>TXT_KEY_UNIT_SPIRIT_WALKER</Tag>
 		<English>Spirit Walker</English>
 		<French>Marcheur des Esprits</French>
-		<Italian>
-			<Text>Spirito camminatore:Spiriti camminatori</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Guerriero dallo spirito errante</Italian>
 		<Russian>Ãîâîðÿùèé ñ äóõàìè</Russian>
 	</TEXT>
 	<TEXT>
@@ -20956,6 +21018,7 @@
 		<English>SSG</English>
 		<French>SSG Pakistanais</French>
 		<Russian>Ïàêèñòàíñêèé ñïåöíàç</Russian>
+		<Italian>Soldato dello special services group</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SSG_PEDIA</Tag>
@@ -20976,6 +21039,7 @@
 		<Tag>TXT_KEY_UNIT_STAMAN</Tag>
 		<English>Staman</English>
 		<Russian>Ñòàìàí</Russian>
+		<Italian>Taman Negara</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STAMAN_PEDIA</Tag>
@@ -21152,6 +21216,7 @@
 		<Tag>TXT_KEY_UNIT_STEPHEN_UROS_IV_DUSAN</Tag>
 		<English>Stephen Uros IV Dusan</English>
 		<Russian>Ñòåôàí Óðîø IV Äóøàí</Russian>
+		<Italian>Stephen Dusan</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STEPHEN_UROS_IV_DUSAN_PEDIA</Tag>
@@ -21162,6 +21227,7 @@
 		<English>Steppe Rider</English>
 		<French>Cavalier des Steppes</French>
 		<Russian>Ñòåïíîé âñàäíèê</Russian>
+		<Italian>Cavaliere della steppa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STEPPE_RIDER_PEDIA</Tag>
@@ -21190,7 +21256,7 @@
 		<Tag>TXT_KEY_UNIT_STONEWALL_BRIGADE</Tag>
 		<English>Stonewall Brigade</English>
 		<French>Brigade 'Stonewall'</French>
-		<Italian>Brigata Stonewall</Italian>
+		<Italian>Brigatista Stonewall</Italian>
 		<Polish>Brygada Stonewall</Polish>
 		<Russian>Áðèãàäà êîíôåäåðàòîâ</Russian>
 	</TEXT>
@@ -21371,6 +21437,7 @@
 		</Spanish>
 		<Polish>Subedej</Polish>
 		<Russian>Ñóáýäýé</Russian>
+		<Italian>Subedei</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBOTEI_PEDIA</Tag>
@@ -21382,6 +21449,7 @@
 		<English>Sugar Clipper</English>
 		<French>Clipper Sucrier</French>
 		<Russian>Ñàõàðíûé êëèïåð</Russian>
+		<Italian>Clipper mercantile di zucchero</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUGAR_CLIPPER_PEDIA</Tag>
@@ -21400,11 +21468,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Avvoltoio:Avvoltoi</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Avvoltoio sumero</Italian> <!-- Same as TXT_KEY_UNIT_VULTURE -->
 		<Spanish>
 			<Text>Buitre:Buitres</Text>
 			<Gender>Male</Gender>
@@ -21452,6 +21516,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>Ñóíäèàòà Êåéòà</Russian>
+		<Italian>Sundjata Keita</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUNDIATA_KEITA_PEDIA</Tag>
@@ -21498,6 +21563,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>Ñóðèîòõàé</Russian>
+		<Italian>Sri Suriyothai</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SURIYOTHAI_PEDIA</Tag>
@@ -21508,6 +21574,7 @@
 		<Tag>TXT_KEY_UNIT_SURKU</Tag>
 		<English>Surku</English>
 		<Russian>Ñóðêó</Russian>
+		<Italian>Arciere con frecce avvelenate</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SURKU_PEDIA</Tag>
@@ -21520,6 +21587,7 @@
 		<Tag>TXT_KEY_UNIT_SVIATOSLAV_I</Tag>
 		<English>Sviatoslav I</English>
 		<Russian>Ñâÿòîñëàâ I Èãîðåâè÷</Russian>
+		<Italian>Svjatoslav I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SVIATOSLAV_I_PEDIA</Tag>
@@ -21540,7 +21608,7 @@
 		<Tag>TXT_KEY_UNIT_SWAZI_TRACKER</Tag>
 		<English>Swazi Tracker</English>
 		<French>Pisteur Swazi</French>
-		<Italian>Cercatore di tracce Swazi</Italian>
+		<Italian>Cercatore di tracce swazi</Italian>
 		<Polish>Zwiadowca Swazi</Polish>
 		<Russian>Ïðîâîäíèê ñâàçè</Russian>
 	</TEXT>
@@ -21623,7 +21691,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Bomba nucleare tattica</Italian>
+		<Italian>Bomba atomica tattica</Italian>
 		<Spanish>
 			<Text>Arma nuclear táctica:Armas nucleares tácticas</Text>
 			<Gender>Female</Gender>
@@ -21670,6 +21738,7 @@
 		<English>Tahitian Riders</English>
 		<French>Cavalier Tahitien</French>
 		<Russian>Òàèòÿíñêèé âñàäíèê</Russian>
+		<Italian>Cocca tahitiana</Italian> <!-- unit is a boat, not a horseman -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAHITIAN_RIDERS_PEDIA</Tag>
@@ -21680,6 +21749,7 @@
 		<English>Tairona Rebels</English>
 		<French>Rebelle Tairona</French>
 		<Russian>Òàéðîíñêèé ïîâñòàíåö</Russian>
+		<Italian>Ribelle Tairona</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAIRONA_REBELS_PEDIA</Tag>
@@ -21724,6 +21794,7 @@
 		<Tag>TXT_KEY_UNIT_TAOIST_MISSIONARY</Tag>
 		<English>Daoshi</English>
 		<Russian>Àëõèìèê</Russian>
+		<Italian>Missionario taoista</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TARIACURI</Tag>
@@ -21738,6 +21809,7 @@
 		<Tag>TXT_KEY_UNIT_TARKAN</Tag>
 		<English>Tarkan</English>
 		<Russian>Òàðêàí</Russian>
+		<Italian>Cavaliere unno</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TARKAN_PEDIA</Tag>
@@ -21750,6 +21822,7 @@
 		<Tag>TXT_KEY_UNIT_TARKKA_AMPUJA</Tag>
 		<English>Tarkka Ampuja</English>
 		<Russian>Ôèíñêèé ñíàéïåð</Russian>
+		<Italian>Tiratore scelto finlandese</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TARKKA_AMPUJA_PEDIA</Tag>
@@ -21760,6 +21833,7 @@
 		<English>Taruma Warrior</English>
 		<French>Guerrier Taruma</French>
 		<Russian>Òàðóìñêèé âîèí</Russian>
+		<Italian>Guerriero di Tarumanagara</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TARUMA_WARRIOR_PEDIA</Tag>
@@ -21769,6 +21843,7 @@
 		<Tag>TXT_KEY_UNIT_TASIUS</Tag>
 		<English>Tasius</English>
 		<Russian>Òàñèé</Russian>
+		<Italian>Tasio</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TASIUS_PEDIA</Tag>
@@ -21813,6 +21888,7 @@
 		<Tag>TXT_KEY_UNIT_TAUTALUS</Tag>
 		<English>Tautalus</English>
 		<Russian>Òàíòàë</Russian>
+		<Italian>Tautalo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAUTALUS_PEDIA</Tag>
@@ -21859,6 +21935,7 @@
 		<English>Tercio Pikeman</English>
 		<French>Piquier Tercio</French>
 		<Russian>Òåðöèÿ êîïåéùèêîâ</Russian>
+		<Italian>Picchiere del tercio aragonese</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TERCIO_PIKEMAN_PEDIA</Tag>
@@ -21868,6 +21945,7 @@
 		<Tag>TXT_KEY_UNIT_TERES</Tag>
 		<English>Teres</English>
 		<Russian>Òåðåñ</Russian>
+		<Italian>Teres I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TERES_PEDIA</Tag>
@@ -21915,6 +21993,7 @@
 		<English>Teshub Priest</English>
 		<French>Prêtre Teshub</French>
 		<Russian>Æðåö Òåøóáà</Russian>
+		<Italian>Sacerdote di Teshub</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TESHUB_PRIEST_PEDIA</Tag>
@@ -21956,6 +22035,7 @@
 		<Tag>TXT_KEY_UNIT_TEWHATEWHA</Tag>
 		<English>Tewhatewha</English>
 		<Russian>Òåóõàòåóõà</Russian>
+		<Italian>Guerriero con tewhatewha</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TEWHATEWHA_PEDIA</Tag>
@@ -21969,6 +22049,7 @@
 		<English>Texas Ranger</English>
 		<French>Garde forestier Texan</French>
 		<Russian>Òåõàññêèé ðåéíäæåð</Russian>
+		<Italian>Guardia dei ranger texani</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TEXAS_RANGER_PEDIA</Tag>
@@ -21978,6 +22059,7 @@
 		<Tag>TXT_KEY_UNIT_THAYENDANEGEA</Tag>
 		<English>Thayendanegea</English>
 		<Russian>Òàéåíäàíåãåà</Russian>
+		<Italian>Joseph Brant</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_THAYENDANEGEA_PEDIA</Tag>
@@ -21988,6 +22070,7 @@
 		<English>Themistocles</English>
 		<Polish>Temistokles</Polish>
 		<Russian>Ôåìèñòîêë</Russian>
+		<Italian>Temistocle</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_THEMISTOCLES_PEDIA</Tag>
@@ -22069,7 +22152,7 @@
 		<Tag>TXT_KEY_UNIT_THORAX_HOPLITE</Tag>
 		<English>Thorax Hoplite</English>
 		<French>Hoplite Thorax</French>
-		<Italian>Oplite</Italian>
+		<Italian>Oplita pesante</Italian>
 		<Russian>Ãîïëèò â òîðàêñå</Russian>
 	</TEXT>
 	<TEXT>
@@ -22082,6 +22165,7 @@
 		<English>Thracian Peltast</English>
 		<French>Peltaste Thrace</French>
 		<Russian>Ôðàêèéñêèé ïåëüòàñò</Russian>
+		<Italian>Peltasta tracio</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_THRACIAN_PELTAST_PEDIA</Tag>
@@ -22118,6 +22202,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>Äîá-äîá</Russian>
+		<Italian>Dob Dob tibetano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TIGERCLAW</Tag>
@@ -22129,6 +22214,7 @@
 		</French>
 		<Polish>Tygrysi Pazur</Polish>
 		<Russian>Êîãîòü òèãðà</Russian>
+		<Italian>Guerriero con bagh nakh</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TIGERCLAW_PEDIA</Tag>
@@ -22142,6 +22228,7 @@
 		<English>Tigurini Scouts</English>
 		<French>Eclaireur Tigurini</French>
 		<Russian>Òèãóðèíñêèé ðàçâåä÷èê</Russian>
+		<Italian>Scout tigurini</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TIGURINI_SCOUTS_PEDIA</Tag>
@@ -22151,6 +22238,7 @@
 		<Tag>TXT_KEY_UNIT_TIMUR</Tag>
 		<English>Timur</English>
 		<Russian>Òàìåðëàí</Russian>
+		<Italian>Tamerlano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TIMUR_PEDIA</Tag>
@@ -22175,6 +22263,7 @@
 		<Tag>TXT_KEY_UNIT_TISH_ATAL</Tag>
 		<English>Tish-atal</English>
 		<Russian>Òèø-àòàë</Russian>
+		<Italian>Tisatal</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TISH_ATAL_PEDIA</Tag>
@@ -22184,11 +22273,7 @@
 		<Tag>TXT_KEY_UNIT_TLATILCO_WAR_PRIEST</Tag>
 		<English>Tlatilco War Priest</English>
 		<French>Prêtre-Guerrier Tlatilco</French>
-		<Italian>
-			<Text>Sacerdote guerriero Tlatilco:Sacerdoti guerrieri Tlatilco</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Sacerdote guerriero tlatilco</Italian>
 		<Russian>Áîåâîé æðåö</Russian>
 	</TEXT>
 	<TEXT>
@@ -22201,6 +22286,7 @@
 		<English>Tlatoani Bowmans</English>
 		<French>Archer Tlatoani</French>
 		<Russian>Ëó÷íèê òëàòîàíè</Russian>
+		<Italian>Arciere del tlatoani</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TLATOANI_BOWMANS_PEDIA</Tag>
@@ -22210,11 +22296,7 @@
 		<Tag>TXT_KEY_UNIT_TLAXCALTEC_WARRIOR</Tag>
 		<English>Tlaxcaltec Warrior</English>
 		<French>Guerrier Tlaxcaltec</French>
-		<Italian>
-			<Text>Guerriero Tlaxcalteco:Guerrieri Tlaxcaltechi</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Guerriero tlaxcalteco</Italian>
 		<Russian>Òëàêñêàëüòåêñêèé âîèí</Russian>
 	</TEXT>
 	<TEXT>
@@ -22226,6 +22308,7 @@
 		<Tag>TXT_KEY_UNIT_TOFANGCHI</Tag>
 		<English>Tofangchi</English>
 		<Russian>Òîôàíã÷è</Russian>
+		<Italian>Moschettiere Tofangchi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TOFANGCHI_PEDIA</Tag>
@@ -22262,6 +22345,7 @@
 		<Tag>TXT_KEY_UNIT_TOMISLAV</Tag>
 		<English>Tomislav</English>
 		<Russian>Òîìèñëàâ I</Russian>
+		<Italian>Tomislao I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TOMISLAV_PEDIA</Tag>
@@ -22271,6 +22355,7 @@
 		<Tag>TXT_KEY_UNIT_TOMOL</Tag>
 		<English>Tomol</English>
 		<Russian>Òîìîë</Russian>
+		<Italian>Tomol chumash</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TOMOL_PEDIA</Tag>
@@ -22312,6 +22397,7 @@
 		</Spanish>
 		<Polish>Tukan</Polish>
 		<Russian>Òóêàí</Russian>
+		<Italian>Tucano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TOUCAN_PEDIA</Tag>
@@ -22369,6 +22455,7 @@
 		<English>Trade Junk</English>
 		<French>Jonque de commerce</French>
 		<Russian>Òîðãîâàÿ äæîíêà</Russian>
+		<Italian>Giunca mercantile</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRADE_JUNK_PEDIA</Tag>
@@ -22436,6 +22523,7 @@
 		<English>Treasure Guard</English>
 		<French>Garde du Trésor</French>
 		<Russian>Õðàíèòåëü ñîêðîâèù</Russian>
+		<Italian>Guardia di Ophir</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TREASURE_GUARD_PEDIA</Tag>
@@ -22451,6 +22539,7 @@
 		<English>Treasure Ship</English>
 		<French>Navire Trésor</French>
 		<Russian>Êîðàáëü-ñîêðîâèùíèöà</Russian>
+		<Italian>Nave del tesoro ming</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TREASURE_SHIP_PEDIA</Tag>
@@ -22626,6 +22715,7 @@
 		</Spanish>
 		<Polish>Trisong Decen</Polish>
 		<Russian>Òèñîíã Äåöýí</Russian>
+		<Italian>Trhisong Detsen</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRISONG_DETSEN_PEDIA</Tag>
@@ -22643,6 +22733,7 @@
 		</Spanish>
 		<Polish>Lew Trocki</Polish>
 		<Russian>Ëåâ Òðîöêèé</Russian>
+		<Italian>Lev Trockij</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TROTSKY_PEDIA</Tag>
@@ -22678,6 +22769,7 @@
 		<English>Tsavo Hunters</English>
 		<French>Chasseur Tsavo</French>
 		<Russian>Öàâñêèé îõîòíèê</Russian>
+		<Italian>Cacciatore dello Tsavo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TSAVO_HUNTERS_PEDIA</Tag>
@@ -22687,7 +22779,7 @@
 		<Tag>TXT_KEY_UNIT_TUAREG_CAMEL</Tag>
 		<English>Tuareg Camel Rider</English>
 		<French>Chamelier Touareg</French>
-		<Italian>Cammelliere Tuareg</Italian>
+		<Italian>Cavaliere di cammelli tuareg</Italian>
 		<Polish>Tuareski Jeździec Wielbłądów</Polish>
 		<Russian>Òóàðåãñêèé âñàäíèê</Russian>
 	</TEXT>
@@ -22703,6 +22795,7 @@
 		<English>Tucano Merchant</English>
 		<French>Marchand Tucano</French>
 		<Russian>Òóêàíñêèé òîðãîâåö</Russian>
+		<Italian>Mercante tucano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TUCANO_MERCHANT_PEDIA</Tag>
@@ -22712,6 +22805,7 @@
 		<Tag>TXT_KEY_UNIT_TUCUME</Tag>
 		<English>Tucume</English>
 		<Russian>Òóêóìå</Russian>
+		<Italian>Guerriero di Tucume</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TUCUME_PEDIA</Tag>
@@ -22735,6 +22829,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>Òóèòàòóè</Russian>
+		<Italian>Tuitatui</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TUITATUI_PEDIA</Tag>
@@ -22772,6 +22867,7 @@
 		<Tag>TXT_KEY_UNIT_TUPAC_KATARI</Tag>
 		<English>Tupac Katari</English>
 		<Russian>Òóïàê Êàòàðè</Russian>
+		<Italian>Tupac Catari</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TUPAC_KATARI_PEDIA</Tag>
@@ -22819,7 +22915,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Tacchino selvatico</Italian>
+		<Italian>Tacchino</Italian>
 		<Spanish>
 			<Text>Pavo salvaje</Text>
 			<Gender>Male</Gender>
@@ -22838,7 +22934,7 @@
 		<Tag>TXT_KEY_UNIT_TURKOMAN</Tag>
 		<English>Turkoman Rider</English>
 		<French>Chevalier Turkoman</French>
-		<Italian>Cavaliere Turcomanno</Italian>
+		<Italian>Cavaliere turkmeno</Italian>
 		<Polish>Jeździec Turkmenów</Polish>
 		<Russian>Òóðêìåíñêèé âñàäíèê</Russian>
 	</TEXT>
@@ -22877,7 +22973,7 @@
 		<Tag>TXT_KEY_UNIT_TURTLE_SHIP</Tag>
 		<English>Turtle Ship</English>
 		<French>Bateau tortue</French>
-		<Italian>Nave tartaruga</Italian>
+		<Italian>Nave testuggine</Italian>
 		<Polish>Statek-Żółw</Polish>
 		<Russian>Êîðàáëü-÷åðåïàõà</Russian>
 	</TEXT>
@@ -22901,6 +22997,7 @@
 		<Tag>TXT_KEY_UNIT_TWAFO</Tag>
 		<English>Twafo</English>
 		<Russian>Òâàôî</Russian>
+		<Italian>Granatiere Twafo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TWAFO_PEDIA</Tag>
@@ -22910,6 +23007,7 @@
 		<Tag>TXT_KEY_UNIT_UACUSECHA</Tag>
 		<English>Uacusecha</English>
 		<Russian>Óàêóñå÷à</Russian>
+		<Italian>Guerriero Uacusecha</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_UACUSECHA_PEDIA</Tag>
@@ -22955,7 +23053,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
-		<Italian>Ulano</Italian>
+		<Italian>Cavaliere Ulano</Italian>
 		<Polish>Ułan</Polish>
 		<Russian>Ïðóññêèé óëàí</Russian>
 	</TEXT>
@@ -22970,7 +23068,7 @@
 		<Tag>TXT_KEY_UNIT_UIGHUR_KNIGHT</Tag>
 		<English>Uighur Knight</English>
 		<French>Chevalier Ouïghour</French>
-		<Italian>Cavaliere Uighuro</Italian>
+		<Italian>Cavaliere uiguro</Italian>
 		<Polish>Ujgurski Rycerz</Polish>
 		<Russian>Óéãóðñêèé ðûöàðü</Russian>
 	</TEXT>
@@ -22985,6 +23083,7 @@
 		<Tag>TXT_KEY_UNIT_UJEN_CHOOHA</Tag>
 		<English>Ujen Chooha</English>
 		<Russian>Öèíñêàÿ ïóøêà</Russian>
+		<Italian>Ujen Chooha da assedio</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_UJEN_CHOOHA_PEDIA</Tag>
@@ -23000,6 +23099,7 @@
 		</Spanish>
 		<Polish>Uług Beg</Polish>
 		<Russian>Óëóãáåê</Russian>
+		<Italian>Ulug Bek</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ULUGH_BEG_PEDIA</Tag>
@@ -23011,6 +23111,7 @@
 		<English>UNITA Forces</English>
 		<French>Forces UNITA</French>
 		<Russian>ÓÍÈÒÀ</Russian>
+		<Italian>Soldato dell'UNITA</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_UNITA_FORCES_PEDIA</Tag>
@@ -23112,7 +23213,7 @@
 		<Tag>TXT_KEY_UNIT_URUMI_SWORDSMAN</Tag>
 		<English>Urumi Swordsman</English>
 		<French>Spadassin Urumi</French>
-		<Italian>Spadaccino Urumi</Italian>
+		<Italian>Spadaccino urumi</Italian>
 		<Polish>Szermierz Urumi</Polish>
 		<Russian>Óðóìè</Russian>
 	</TEXT>
@@ -23156,6 +23257,7 @@
 		<English>Vanau Warrior</English>
 		<French>Vanau Guerrier</French>
 		<Russian>Âàíóàòñêèé âîèí</Russian>
+		<Italian>Guerriero di vanuatu</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VANAU_WARRIOR_PEDIA</Tag>
@@ -23166,6 +23268,7 @@
 		<English>Vandal Pillager</English>
 		<French>Pilleur Vandale</French>
 		<Russian>Âàíäàëüñêèé ìàðîäåð</Russian>
+		<Italian>Razziatore a cavallo vandalo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VANDAL_PILLAGER_PEDIA</Tag>
@@ -23175,6 +23278,7 @@
 		<Tag>TXT_KEY_UNIT_VASCO_DE_BALBOA</Tag>
 		<English>Vasco de Balboa</English>
 		<Russian>Âàñêî Äå Áàëüáîà</Russian>
+		<Italian>Vasco Nunez de Balboa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VASCO_DE_BALBOA_PEDIA</Tag>
@@ -23185,6 +23289,7 @@
 		<English>Vercingetorix</English>
 		<French>Vercingétorix</French>
 		<Russian>Âåðöèíãåòîðèã</Russian>
+		<Italian>Vercingetorige</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VERCINGETORIX_PEDIA</Tag>
@@ -23231,6 +23336,7 @@
 		<English>Vietcong</English>
 		<Polish>Wietkong</Polish>
 		<Russian>Âüåòãîíã</Russian>
+		<Italian>Granatiere vietcong</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VIETCONG_PEDIA</Tag>
@@ -23252,11 +23358,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Berserker</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Berserkr</Italian>
 		<Spanish>
 			<Text>Berserk:Berserker</Text>
 			<Gender>Male</Gender>
@@ -23282,6 +23384,7 @@
 		<Tag>TXT_KEY_UNIT_VIRIATHUS</Tag>
 		<English>Viriathus</English>
 		<Russian>Âèðèàò</Russian>
+		<Italian>Viriato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VIRIATHUS_PEDIA</Tag>
@@ -23291,6 +23394,7 @@
 		<Tag>TXT_KEY_UNIT_VLAD_III_DRACULA</Tag>
 		<English>Vlad III Dracula</English>
 		<Russian>Âëàä III Öåïåø</Russian>
+		<Italian>Vlad III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VLAD_III_DRACULA_PEDIA</Tag>
@@ -23300,6 +23404,7 @@
 		<Tag>TXT_KEY_UNIT_VOZOVA_HRADBA</Tag>
 		<English>Vozova Hradba</English>
 		<Russian>×åøñêèé âàãåíáóðã</Russian>
+		<Italian>Fortezza di carri ceca</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VOZOVA_HRADBA_PEDIA</Tag>
@@ -23387,6 +23492,7 @@
 		<English>Wallaby Hunters</English>
 		<French>Chasseur Wallaby</French>
 		<Russian>Âàëëàáèéñêèé îõîòíèê</Russian>
+		<Italian>Cacciatore di wallaby</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WALLABY_HUNTERS_PEDIA</Tag>
@@ -23437,6 +23543,7 @@
 		<Tag>TXT_KEY_UNIT_WANQARA</Tag>
 		<English>Wanqara</English>
 		<Russian>Âàíêàðà</Russian>
+		<Italian>Cantastorie Wanqara</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WANQARA_PEDIA</Tag>
@@ -23446,6 +23553,7 @@
 		<Tag>TXT_KEY_UNIT_WAPITI</Tag>
 		<English>Wapiti</English>
 		<Russian>Âàïèòè</Russian>
+		<Italian>Scout pilaga</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WAPITI_PEDIA</Tag>
@@ -23456,6 +23564,7 @@
 		<English>Waray Riders</English>
 		<French>Cavalier Waray</French>
 		<Russian>Âàðàéñêèé âñàäíèê</Russian>
+		<Italian>Cavaliere Waray</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARAY_RIDERS_PEDIA</Tag>
@@ -23604,14 +23713,17 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORDIIIS</Tag>
 		<English>Captured Corporal</English>
+		<Italian>Caporale militare prigioniero</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORDIIS</Tag>
 		<English>Captured Captain</English>
+		<Italian>Capitano militare prigioniero</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORDIS</Tag>
 		<English>Captured Chief</English>
+		<Italian>Capo militare prigioniero</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORDIV</Tag>
@@ -23634,6 +23746,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORDIVS</Tag>
 		<English>Captured Colonel</English>
+		<Italian>Colonnello militare prigioniero</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORDV</Tag>
@@ -23656,6 +23769,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORDVS</Tag>
 		<English>Captured Commander</English>
+		<Italian>Comandante militare prigioniero</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARLORD_VASSAL</Tag>
@@ -23675,6 +23789,7 @@
 		<English>Warriors of the Clouds</English>
 		<French>Guerrier des nuages</French>
 		<Russian>Âîèí îáëàêà</Russian>
+		<Italian>Guerriero delle nuvole</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARRIORS_OF_THE_CLOUDS_PEDIA</Tag>
@@ -23774,7 +23889,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Ñòîðîæ</Russian>
-		<Italian>Sorvegliante</Italian>
+		<Italian>Guardiano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WATCHER_PEDIA</Tag>
@@ -23786,6 +23901,7 @@
 		<English>Wayuu Cavalry</English>
 		<French>Cavalerie Wayuu</French>
 		<Russian>Êîííèöà âàéþ</Russian>
+		<Italian>Cavalleria Waryu</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WAYUU_CAVALRY_PEDIA</Tag>
@@ -23814,6 +23930,7 @@
 		<English>Wheeled Tank</English>
 		<French>Tank à Roues</French>
 		<Russian>Êîëåñíûé òàíê</Russian>
+		<Italian>Cacciacarri tunisino</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WHEELED_TANK_PEDIA</Tag>
@@ -23867,7 +23984,7 @@
 		<Tag>TXT_KEY_UNIT_WINGED_CAVALRY</Tag>
 		<English>Winged Cavalry</English>
 		<French>Hussard Polonais</French>
-		<Italian>Cavalleria Ussara</Italian>
+		<Italian>Cavalleria alata ussara</Italian>
 		<Polish>Polska Husaria</Polish>
 		<Russian>Êðûëàòàÿ êàâàëåðèÿ</Russian>
 	</TEXT>
@@ -23891,6 +24008,7 @@
 		<Tag>TXT_KEY_UNIT_WIRUTI</Tag>
 		<English>Wiruti</English>
 		<Russian>Âèðóòè</Russian>
+		<Italian>Lanciatore di giavellotto killke</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WIRUTI_PEDIA</Tag>
@@ -23926,11 +24044,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Lupo:Lupi</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Lupo grigio</Italian>
 		<Spanish>
 			<Text>Lobo:Lobos</Text>
 			<Gender>Male</Gender>
@@ -24123,11 +24237,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Lavoratore:Lavoratori</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Lavoratore</Italian>
 		<Spanish>
 			<Text>Trabajador:Trabajadores</Text>
 			<Gender>Male</Gender>
@@ -24276,6 +24386,7 @@
 		<Tag>TXT_KEY_UNIT_XIFOS</Tag>
 		<English>Xifos</English>
 		<Russian>Êñèôîñ</Russian>
+		<Italian>Guerriero con xiphos</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_XIFOS_PEDIA</Tag>
@@ -24289,6 +24400,7 @@
 		<English>Yaghan Hunters</English>
 		<French>Chasseur Yaghan</French>
 		<Russian>ßãàíñêèé îõîòíèê</Russian>
+		<Italian>Cacciatore yamana</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_YAGHAN_HUNTERS_PEDIA</Tag>
@@ -24303,6 +24415,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>ßìàìîòî</Russian>
+		<Italian>Isoroku Yamamoto</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_YAMAMOTO_PEDIA</Tag>
@@ -24314,6 +24427,7 @@
 		<English>Yaotlalli Warrior</English>
 		<French>Guerrier Yaotlalli</French>
 		<Russian>Âîèí ÿîòëàëëè</Russian>
+		<Italian>Guerriero dello yaotlalli</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_YAOTLALLI_WARRIOR_PEDIA</Tag>
@@ -24341,7 +24455,7 @@
 		<Tag>TXT_KEY_UNIT_YEOMAN</Tag>
 		<English>Yeoman Archer</English>
 		<French>Archer Yeoman</French>
-		<Italian>Arciere Yeoman</Italian>
+		<Italian>Arciere yeoman</Italian>
 		<Polish>Łucznik Yeomanów</Polish>
 		<Russian>Éîìåí</Russian>
 	</TEXT>
@@ -24361,6 +24475,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>Ëè Ñóíñèí</Russian>
+		<Italian>Yi Sun Sin</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_YI_SUN_SIN_PEDIA</Tag>
@@ -24371,6 +24486,7 @@
 		<English>Yolngu Messenger</English>
 		<French>Messager Yolngu</French>
 		<Russian>Ãîíåö éîëóíãó</Russian>
+		<Italian>Mercante yolngu</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_YOLNGU_MESSENGER_PEDIA</Tag>
@@ -24380,7 +24496,7 @@
 		<Tag>TXT_KEY_UNIT_YUMI_ARCHER</Tag>
 		<English>Yumi Archer</English>
 		<French>Archer Yumi</French>
-		<Italian>Arciere Yumi</Italian>
+		<Italian>Arciere yumi</Italian>
 		<Polish>Łucznik Yumi</Polish>
 		<Russian>Þìè</Russian>
 	</TEXT>
@@ -24394,12 +24510,14 @@
 		<Tag>TXT_KEY_UNIT_YUPANQUI</Tag>
 		<English>Yupanqui</English>
 		<Russian>Ëüîêå Þïàíêè</Russian>
+		<Italian>Lloque Yupanqui</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_YUPANQUI_BOWMAN</Tag>
 		<English>Yupanqui Bowman</English>
 		<French>Archer long Yupanqui</French>
 		<Russian>Ëó÷íèê ÷èìó</Russian>
+		<Italian>Arciere di Yupanqui</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_YUPANQUI_BOWMAN_PEDIA</Tag>
@@ -24414,6 +24532,7 @@
 		<English>Yurupari</English>
 		<French>Lancier Yurupari</French>
 		<Russian>Þðóïàðè</Russian>
+		<Italian>Guerriero con lancia di Yurupari</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_YURUPARI_PEDIA</Tag>
@@ -24429,6 +24548,7 @@
 		</Spanish>
 		<Polish>Jusuf ibn Taszfin</Polish>
 		<Russian>Þñóô èáí Òàøôèí</Russian>
+		<Italian>Yusuf Ibn Tashfin</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_YUSUF_PEDIA</Tag>
@@ -24440,6 +24560,7 @@
 		<English>Yu Spearman</English>
 		<French>Lancier Yu</French>
 		<Russian>Þéñêèé êîïüåíîñåö</Russian>
+		<Italian>Guerriero con lancia di Yu il Grande</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_YU_SPEARMAN_PEDIA</Tag>
@@ -24450,6 +24571,7 @@
 		<English>Yu the Great</English>
 		<French>Yu le Grand</French>
 		<Russian>Þé Âåëèêèé</Russian>
+		<Italian>Yu il Grande</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_YU_THE_GREAT_PEDIA</Tag>
@@ -24459,6 +24581,7 @@
 		<Tag>TXT_KEY_UNIT_ZAGON</Tag>
 		<English>Zagon</English>
 		<Russian>Çàãîí</Russian>
+		<Italian>Cavaliere tataro</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZAGON_PEDIA</Tag>
@@ -24468,6 +24591,7 @@
 		<Tag>TXT_KEY_UNIT_ZAPOROZKI_KOZAK</Tag>
 		<English>Zaporozki Kozak</English>
 		<Russian>Çàïîðîæñêèé êàçàê</Russian>
+		<Italian>Cavaliere cosacco di Zaporizzja</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZAPOROZKI_KOZAK_PEDIA</Tag>
@@ -24477,6 +24601,7 @@
 		<Tag>TXT_KEY_UNIT_ZBOJNIK</Tag>
 		<English>Zbojnik</English>
 		<Russian>Çáîéíèê</Russian>
+		<Italian>Fuorilegge slovacco</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZBOJNIK_PEDIA</Tag>
@@ -24486,6 +24611,7 @@
 		<Tag>TXT_KEY_UNIT_ZENU_GOLDSMITHS</Tag>
 		<English>Zenu Goldsmiths</English>
 		<Russian>Þâåëèð çåíó</Russian>
+		<Italian>Mercante d'oro sinù</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZENU_GOLDSMITHS_PEDIA</Tag>
@@ -24510,6 +24636,7 @@
 		<Tag>TXT_KEY_UNIT_ZHUGE_KESHIK</Tag>
 		<English>Zhuge Keshik</English>
 		<Russian>Õóííñêèé êåøèê</Russian>
+		<Italian>Cavaliere Kheshig di Zhuge Liang</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZHUGE_KESHIK_PEDIA</Tag>
@@ -24519,6 +24646,7 @@
 		<Tag>TXT_KEY_UNIT_ZHUGE_NO</Tag>
 		<English>Zhuge No</English>
 		<Russian>×æóãý Íî</Russian>
+		<Italian>Arciere di Zhuge Liang</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZHUGE_NO_PEDIA</Tag>
@@ -24535,6 +24663,7 @@
 		</Spanish>
 		<Polish>Mag</Polish>
 		<Russian>Ìàã</Russian>
+		<Italian>Missionario zoroastriano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZULU_IMPI</Tag>
@@ -24549,11 +24678,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Impi:Impi</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Guerriero dell'impi</Italian>
 		<Spanish>
 			<Text>Impi:Impis</Text>
 			<Gender>Male</Gender>

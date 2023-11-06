@@ -98,7 +98,7 @@
 		<German>[ICON_BULLET]Doppelte %s1_commerce_type im nächsten Jahr</German>
 		<Spanish>[ICON_BULLET]Doblará [NUM1:el:la:los:las] %s1_commerce_type el próximo año</Spanish>
 		<Russian>[ICON_BULLET]Óäâîåíèå %s1_commerce_type â ñëåäóþùåì ãîäó</Russian>
-		<Italian>[ICON_BULLET]Raddoppierà %s1_commerce_type il prossimo anno</Italian>
+		<Italian>[ICON_BULLET]L'edificio farà [COLOR_HIGHLIGHT_TEXT]raddoppiare[COLOR_REVERT] la %s1_commerce_type il [COLOR_HIGHLIGHT_TEXT]prossimo anno[COLOR_REVERT]</Italian> <!-- city screen hover on european culture building -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_DOUBLE_COMMERCE_YEARS</Tag>
@@ -107,7 +107,7 @@
 		<German>[ICON_BULLET]Doppelte %s1_commerce_type für %d2 Jahre</German>
 		<Spanish>[ICON_BULLET]Doblará [NUM1:el:la:los:las] %s1_commerce_type en %d2 años</Spanish>
 		<Russian>[ICON_BULLET]Óäâîåíèå %s1_commerce_type çà %d2 ëåò</Russian>
-		<Italian>[ICON_BULLET]Raddoppierà %s1_commerce_type in %d2 anni</Italian>
+		<Italian>[ICON_BULLET]L'edificio farà [COLOR_HIGHLIGHT_TEXT]raddoppiare[COLOR_REVERT] la %s1_commerce_type in [COLOR_HIGHLIGHT_TEXT]%d2[COLOR_REVERT] anni</Italian> <!-- city screen hover on european culture building -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_DOUBLE_COMMERCE_COMPLETE</Tag>

@@ -3560,7 +3560,7 @@
 		<English>The file %s1 already exists.[NEWLINE]Press OK to proceed, overwriting the file.</English>
 		<French>Le fichier %s1 existe déjà.[NEWLINE]Cliquez sur OK pour continuer et écraser ce fichier.</French>
 		<German>Die Datei %s1 besteht bereits.[NEWLINE]Wählen Sie OK, um fortzufahren und die Datei zu überschreiben.</German>
-		<Italian>File di salvataggio di Civilization IV %s1 già esistente.[NEWLINE]Premi OK per continuare e sovrascrivere il file.</Italian>
+		<Italian>[BOLD]Il file di salvataggio [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT] esiste già.[NEWLINE][NEWLINE]Premi OK per salvare sovrascrivendo il file.[\BOLD]</Italian>
 		<Spanish>Ya existe el archivo %s1.[NEWLINE]Pulsa 'Aceptar' para continuar y sobrescribirlo.</Spanish>
 		<Russian>Файл %s1 уже существует.[NEWLINE]Нажмите OK чтобы перезаписать файл.</Russian>
 	</TEXT>
@@ -4074,13 +4074,14 @@
 		<French>Non</French>
 		<German>Nein</German>
 		<Russian>Нет</Russian>
+		<Italian>[COLOR_BLACK]No[COLOR_REVERT]</Italian> <!-- main menu return to desktop -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_YES</Tag>
 		<English>Yes</English>
 		<French>Oui</French>
 		<German>Ja</German>
-		<Italian>Sì</Italian>
+		<Italian>[COLOR_BLACK]Sì[COLOR_REVERT]</Italian> <!-- main menu return to desktop -->
 		<Spanish>Sí</Spanish>
 		<Russian>Да</Russian>
 	</TEXT>
@@ -4224,7 +4225,7 @@
 		<English>Save Error</English>
 		<French>Erreur lors de la sauvegarde</French>
 		<German>Speicherfehler</German>
-		<Italian>Errore di salvataggio</Italian>
+		<Italian>Salvataggio interrotto</Italian>
 		<Spanish>Error de guardado.</Spanish>
 		<Russian>Ошибка сохранения</Russian>
 	</TEXT>
