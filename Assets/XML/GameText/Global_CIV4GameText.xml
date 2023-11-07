@@ -13247,7 +13247,7 @@
 		<English>[ICON_BULLET]Can Construct [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Construction possible de : [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT]</French>
 		<German>[ICON_BULLET]Ermöglicht Bau von: [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Permette di costruire[COLOR_REVERT] tutti gli edifici di tipo [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT]</Italian> <!--tech Oral tradition, Sedentary LifeStyle pedia -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Permette di costruire[COLOR_REVERT] tutti gli edifici di tipo: [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT]</Italian> <!--tech Oral tradition, Sedentary LifeStyle pedia -->
 		<Spanish>[ICON_BULLET]Se pueden construir [COLOR_BUILDING_TEXT]%s1:2_BldgName[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -28637,7 +28637,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>Cao Dai Missionary</English>
 		<Russian>Ìèññèîíåð Êàîäàé</Russian>
 		<Italian>Missionario caodaista</Italian>
-	</TEXT>	
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DRUID_MISSIONARY</Tag>
 		<English>Druidic Missionary</English>
@@ -29371,8 +29371,8 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>[SPACE](%d1 [NUM1:Vote:Votes])</English>
 		<French>[SPACE](%d1 [NUM1:Vote:Votes])</French>
 		<German>[SPACE](%d1 [NUM1:Stimme:Stimmen])</German>
-		<Italian>[SPACE](%d1 [NUM1:voto:voti])</Italian>  <!-- victory info screen -->
-		<Spanish>[SPACE]([COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] [NUM1:voto:votos])</Spanish>
+		<Italian>[SPACE]([COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] [NUM1:voto:voti])</Italian>  <!-- victory info screen -->
+		<Spanish>[SPACE](%d1 [NUM1:voto:votos])</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_POINTS</Tag>
