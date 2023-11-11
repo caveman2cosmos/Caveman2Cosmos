@@ -1,4 +1,5 @@
 #include "CvGameCoreDLL.h"
+#include "CvPythonCityLoader.h"
 #include "CvPython.h"
 #include "CyCity.h"
 #include "CyGlobalContext.h"
@@ -10,8 +11,6 @@
 #include "Win32.h"
 
 
-void CyCityPythonInterface1(python::class_<CyCity>& x);
-void CyCityPythonInterface2(python::class_<CyCity>& x);
 void CyPlotPythonInterface1(python::class_<CyPlot>& x);
 void CyPlayerPythonInterface1(python::class_<CyPlayer>& x);
 void CyPlayerPythonInterface2(python::class_<CyPlayer>& x);
@@ -139,8 +138,8 @@ DllExport void DLLPublishToPython()
 	// large interfaces which can be split across files if need be
 	//
 	python::class_<CyCity> city("CyCity", python::no_init);			// define city class
-	CyCityPythonInterface1(city);									// publish it's methods
-	CyCityPythonInterface2(city);									// publish it's methods
+	CvPythonCityLoader::CyCityPythonInterface1(city);									// publish it's methods
+	CvPythonCityLoader::CyCityPythonInterface2(city);									// publish it's methods
 
 	python::class_<CyPlayer> player("CyPlayer", python::no_init);	// define player class
 	CyPlayerPythonInterface1(player);								// publish it's methods

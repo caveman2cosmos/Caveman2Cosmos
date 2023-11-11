@@ -259,6 +259,9 @@
     <Filter Include="Source\Base\City\Components">
       <UniqueIdentifier>{70b61629-e789-4bbf-84e4-36fa4fe311bf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Infrastructure\Python\Loaders">
+      <UniqueIdentifier>{c3421d8d-ec2d-44b2-b453-7f7e663debbc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FDataIOStream.cpp">
@@ -591,12 +594,6 @@
     <ClCompile Include="CyBoolExprInterface.cpp">
       <Filter>Source\Infrastructure\DataReading\DataHandling\XML\BoolExpr</Filter>
     </ClCompile>
-    <ClCompile Include="CyCityInterface1.cpp">
-      <Filter>Source\Base\City\PythonInterfaces</Filter>
-    </ClCompile>
-    <ClCompile Include="CyCityInterface2.cpp">
-      <Filter>Source\Base\City\PythonInterfaces</Filter>
-    </ClCompile>
     <ClCompile Include="CyDeal.cpp">
       <Filter>Source\Base\Deal</Filter>
     </ClCompile>
@@ -749,6 +746,9 @@
     </ClCompile>
     <ClCompile Include="CvPopupInfo.cpp">
       <Filter>Source\UI\Popup</Filter>
+    </ClCompile>
+    <ClCompile Include="CvPythonCityLoader.cpp">
+      <Filter>Source\Infrastructure\Python\Loaders</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -1264,6 +1264,9 @@
     </ClInclude>
     <ClInclude Include="CounterSet.h">
       <Filter>Source\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="CvPythonCityLoader.h">
+      <Filter>Source\Infrastructure\Python\Loaders</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
