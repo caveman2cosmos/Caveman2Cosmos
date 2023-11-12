@@ -615,6 +615,7 @@ void CvGame::setInitialItems()
 {
 	OutputDebugString("setInitialItems: Start\n");
 	PROFILE_FUNC();
+	averageHandicaps();
 
 	// Toffer - Some victory conditions make no sense for games without competitors.
 	if (countCivPlayersAlive() < 2)
