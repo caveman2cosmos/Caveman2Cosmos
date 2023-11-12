@@ -26,6 +26,7 @@
 #include "BoolExpr.h"
 //#include "IntExpr.h"
 #include "IDValueMap.h"
+#include <boost/python/list.hpp>
 
 extern bool shouldHaveType;
 
@@ -3035,7 +3036,7 @@ public:
 
 	int getBuildingProductionModifier(BuildingTypes e) const;
 	const IDValueMap<BuildingTypes, int>& getBuildingProductionModifiers() const { return m_aBuildingProductionModifier; }
-	const python::list cyGetBuildingProductionModifiers() const { return m_aBuildingProductionModifier.makeList(); }
+	const boost::python::list cyGetBuildingProductionModifiers() const { return m_aBuildingProductionModifier.makeList(); }
 
 	int getBuildingHappinessChanges(int i) const;
 	int getBuildingHealthChanges(int i) const;

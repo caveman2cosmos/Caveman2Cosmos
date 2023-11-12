@@ -564,18 +564,6 @@
     <ClCompile Include="CyGlobalContext.cpp">
       <Filter>Source\Infrastructure\Python</Filter>
     </ClCompile>
-    <ClCompile Include="CyGlobalContextInterface1.cpp">
-      <Filter>Source\Infrastructure\Python</Filter>
-    </ClCompile>
-    <ClCompile Include="CyGlobalContextInterface2.cpp">
-      <Filter>Source\Infrastructure\Python</Filter>
-    </ClCompile>
-    <ClCompile Include="CyGlobalContextInterface3.cpp">
-      <Filter>Source\Infrastructure\Python</Filter>
-    </ClCompile>
-    <ClCompile Include="CyGlobalContextInterface4.cpp">
-      <Filter>Source\Infrastructure\Python</Filter>
-    </ClCompile>
     <ClCompile Include="CyArea.cpp">
       <Filter>Source\Base\Area</Filter>
     </ClCompile>
@@ -597,9 +585,6 @@
     <ClCompile Include="CyDeal.cpp">
       <Filter>Source\Base\Deal</Filter>
     </ClCompile>
-    <ClCompile Include="CyEnumsInterface.cpp">
-      <Filter>Source\Globals</Filter>
-    </ClCompile>
     <ClCompile Include="CyGameCoreUtilsInterface.cpp">
       <Filter>Source\Base\GameCore</Filter>
     </ClCompile>
@@ -615,15 +600,6 @@
     <ClCompile Include="CvMessageControl.cpp">
       <Filter>Source\UI\MessageControl</Filter>
     </ClCompile>
-    <ClCompile Include="CyPlayerInterface1.cpp">
-      <Filter>Source\Base\Player\PythonInterface</Filter>
-    </ClCompile>
-    <ClCompile Include="CyPlayerInterface2.cpp">
-      <Filter>Source\Base\Player\PythonInterface</Filter>
-    </ClCompile>
-    <ClCompile Include="CyPlayerInterface3.cpp">
-      <Filter>Source\Base\Player\PythonInterface</Filter>
-    </ClCompile>
     <ClCompile Include="CyPlayer.cpp">
       <Filter>Source\Base\Player\PythonInterface</Filter>
     </ClCompile>
@@ -638,9 +614,6 @@
     </ClCompile>
     <ClCompile Include="CyInfoInterface3.cpp">
       <Filter>Source\Base\Infos\PythonInterface</Filter>
-    </ClCompile>
-    <ClCompile Include="CySelectionGroupInterface.cpp">
-      <Filter>Source\Base\SelectionGroup\PythonInterface</Filter>
     </ClCompile>
     <ClCompile Include="CySelectionGroup.cpp">
       <Filter>Source\Base\SelectionGroup\PythonInterface</Filter>
@@ -666,13 +639,7 @@
     <ClCompile Include="CyPlot.cpp">
       <Filter>Source\Base\Plot\PythonInterface</Filter>
     </ClCompile>
-    <ClCompile Include="CyPlotInterface1.cpp">
-      <Filter>Source\Base\Plot\PythonInterface</Filter>
-    </ClCompile>
     <ClCompile Include="CyUnit.cpp">
-      <Filter>Source\Base\Unit\PythonInterface</Filter>
-    </ClCompile>
-    <ClCompile Include="CyUnitInterface1.cpp">
       <Filter>Source\Base\Unit\PythonInterface</Filter>
     </ClCompile>
     <ClCompile Include="CyTeamInterface.cpp">
@@ -748,6 +715,24 @@
       <Filter>Source\UI\Popup</Filter>
     </ClCompile>
     <ClCompile Include="CvPythonCityLoader.cpp">
+      <Filter>Source\Infrastructure\Python\Loaders</Filter>
+    </ClCompile>
+    <ClCompile Include="CvPythonPlotLoader.cpp">
+      <Filter>Source\Infrastructure\Python\Loaders</Filter>
+    </ClCompile>
+    <ClCompile Include="CvPythonPlayerLoader.cpp">
+      <Filter>Source\Infrastructure\Python\Loaders</Filter>
+    </ClCompile>
+    <ClCompile Include="CvPythonMiscLoader.cpp">
+      <Filter>Source\Infrastructure\Python\Loaders</Filter>
+    </ClCompile>
+    <ClCompile Include="CvPythonUnitLoader.cpp">
+      <Filter>Source\Infrastructure\Python\Loaders</Filter>
+    </ClCompile>
+    <ClCompile Include="CvPythonEnumLoader.cpp">
+      <Filter>Source\Infrastructure\Python\Loaders</Filter>
+    </ClCompile>
+    <ClCompile Include="CvPythonGlobalContextLoader.cpp">
       <Filter>Source\Infrastructure\Python\Loaders</Filter>
     </ClCompile>
   </ItemGroup>
@@ -1266,6 +1251,24 @@
       <Filter>Source\Tools</Filter>
     </ClInclude>
     <ClInclude Include="CvPythonCityLoader.h">
+      <Filter>Source\Infrastructure\Python\Loaders</Filter>
+    </ClInclude>
+    <ClInclude Include="CvPythonPlotLoader.h">
+      <Filter>Source\Infrastructure\Python\Loaders</Filter>
+    </ClInclude>
+    <ClInclude Include="CvPythonPlayerLoader.h">
+      <Filter>Source\Infrastructure\Python\Loaders</Filter>
+    </ClInclude>
+    <ClInclude Include="CvPythonMiscLoader.h">
+      <Filter>Source\Infrastructure\Python\Loaders</Filter>
+    </ClInclude>
+    <ClInclude Include="CvPythonUnitLoader.h">
+      <Filter>Source\Infrastructure\Python\Loaders</Filter>
+    </ClInclude>
+    <ClInclude Include="CvPythonEnumLoader.h">
+      <Filter>Source\Infrastructure\Python\Loaders</Filter>
+    </ClInclude>
+    <ClInclude Include="CvPythonGlobalContextLoader.h">
       <Filter>Source\Infrastructure\Python\Loaders</Filter>
     </ClInclude>
   </ItemGroup>

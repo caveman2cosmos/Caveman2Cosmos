@@ -9,17 +9,14 @@
 #include "SCyDebug.h"
 #include "IDValueMap.h"
 #include "Win32.h"
+#include "CvPythonPlotLoader.h"
+#include "CvPythonPlayerLoader.h"
+#include "CvPythonUnitLoader.h"
+#include "CvPythonEnumLoader.h"
+#include "CvPythonGlobalContextLoader.h"
 
 
-void CyPlotPythonInterface1(python::class_<CyPlot>& x);
-void CyPlayerPythonInterface1(python::class_<CyPlayer>& x);
-void CyPlayerPythonInterface2(python::class_<CyPlayer>& x);
-void CyPlayerPythonInterface3(python::class_<CyPlayer>& x);
-void CyUnitPythonInterface1(python::class_<CyUnit>& x);
-void CyGlobalContextPythonInterface1(python::class_<CyGlobalContext>& x);
-void CyGlobalContextPythonInterface2(python::class_<CyGlobalContext>& x);
-void CyGlobalContextPythonInterface3(python::class_<CyGlobalContext>& x);
-void CyGlobalContextPythonInterface4(python::class_<CyGlobalContext>& x);
+
 void CyGamePythonInterface();
 void CyRandomPythonInterface();
 void CyEnumsPythonInterface();
@@ -110,7 +107,7 @@ DllExport void DLLPublishToPython()
 	publishIDValueMapPythonInterface<IDValueMap<UnitCombatTypes, int> >();
 	publishIDValueMapPythonInterface<IDValueMap<UnitTypes, int> >();
 
-	CyEnumsPythonInterface();
+	CvPythonEnumLoader::CyEnumsPythonInterface();
 	CyGamePythonInterface();
 	CyRandomPythonInterface();
 	CyTeamPythonInterface();
@@ -137,26 +134,26 @@ DllExport void DLLPublishToPython()
 	//
 	// large interfaces which can be split across files if need be
 	//
-	python::class_<CyCity> city("CyCity", python::no_init);			// define city class
+	boost::python::class_<CyCity> city("CyCity", boost::python::no_init);			// define city class
 	CvPythonCityLoader::CyCityPythonInterface1(city);									// publish it's methods
 	CvPythonCityLoader::CyCityPythonInterface2(city);									// publish it's methods
 
-	python::class_<CyPlayer> player("CyPlayer", python::no_init);	// define player class
-	CyPlayerPythonInterface1(player);								// publish it's methods
-	CyPlayerPythonInterface2(player);								// publish it's methods
-	CyPlayerPythonInterface3(player);								// publish it's methods
+	boost::python::class_<CyPlayer> player("CyPlayer", boost::python::no_init);	// define player class
+	CvPythonPlayerLoader::CyPlayerPythonInterface1(player);								// publish it's methods
+	CvPythonPlayerLoader::CyPlayerPythonInterface2(player);								// publish it's methods
+	CvPythonPlayerLoader::CyPlayerPythonInterface3(player);								// publish it's methods
 
-	python::class_<CyUnit> unit("CyUnit", python::no_init);			// define unit class
-	CyUnitPythonInterface1(unit);									// publish it's methods
+	boost::python::class_<CyUnit> unit("CyUnit", boost::python::no_init);			// define unit class
+	CvPythonUnitLoader::CyUnitPythonInterface1(unit);									// publish it's methods
 
-	python::class_<CyPlot> plot("CyPlot", python::no_init);			// define plot class
-	CyPlotPythonInterface1(plot);									// publish it's methods
+	boost::python::class_<CyPlot> plot("CyPlot", boost::python::no_init);			// define plot class
+	CvPythonPlotLoader::CyPlotPythonInterface1(plot);									// publish it's methods
 
-	python::class_<CyGlobalContext> gc("CyGlobalContext");			// define globals class
-	CyGlobalContextPythonInterface1(gc);							// publish it's methods
-	CyGlobalContextPythonInterface2(gc);							// publish it's methods
-	CyGlobalContextPythonInterface3(gc);							// publish it's methods
-	CyGlobalContextPythonInterface4(gc);							// publish it's methods
+	boost::python::class_<CyGlobalContext> gc("CyGlobalContext");			// define globals class
+	CvPythonGlobalContextLoader::CyGlobalContextPythonInterface1(gc);							// publish it's methods
+	CvPythonGlobalContextLoader::CyGlobalContextPythonInterface2(gc);							// publish it's methods
+	CvPythonGlobalContextLoader::CyGlobalContextPythonInterface3(gc);							// publish it's methods
+	CvPythonGlobalContextLoader::CyGlobalContextPythonInterface4(gc);							// publish it's methods
 
 	Win32::pythonPublish();
 
