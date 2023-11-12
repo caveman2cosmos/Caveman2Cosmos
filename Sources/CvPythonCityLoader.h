@@ -3,7 +3,7 @@
 #ifndef Cv_Python_City_Loader
 #define Cv_Python_City_Loader
 
-#include "CvGameCoreDLL.h"
+
 #include <boost/python/class.hpp>
 
 class CyCity;

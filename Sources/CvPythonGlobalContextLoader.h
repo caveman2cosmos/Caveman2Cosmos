@@ -4,7 +4,7 @@
 #define Cv_Python_GlobalContext_Loader
 
 #include <boost/python/class.hpp>
-#include "CyGlobalContext.h"
+class CyGlobalContext;
 
 class CvPythonGlobalContextLoader
 {
