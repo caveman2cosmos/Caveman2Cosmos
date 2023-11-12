@@ -1,7 +1,18 @@
 #include "CvPythonGlobalContextLoader.h"
 #include "CvGameCoreDLL.h"
 #include "CyGlobalContext.h"
+#include "CvBonusInfo.h"
+#include "CvBuildingInfo.h"
+#include "CvImprovementInfo.h"
 #include "CvInfos.h"
+#include "CvRandom.h"
+#include "CyGame.h"
+#include "CyGlobalContext.h"
+#include "CyMap.h"
+#include "CyPlayer.h"
+#include "CyTeam.h"
+#include "CvDiplomacyClasses.h"
+#include "CvPlayerOptionInfo.h"
 #include <boost/python/overloads.hpp>
 
 

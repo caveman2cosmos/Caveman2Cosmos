@@ -1,11 +1,15 @@
 #include "CvPythonEnumLoader.h"
 #include "CvGameCoreDLL.h"
-#include <boost/python/enum.hpp>
+#include "CvBuildingFilters.h"
+#include "CvBuildingGrouping.h"
+#include "CvBuildingSort.h"
 #include "CvUnitFilters.h"
 #include "CvUnitGrouping.h"
 #include "CvUnitSort.h"
-#include "CvBuildingGrouping.h"
-#include "CvBuildingSort.h"
+#include <boost/python/enum.hpp>
+#include "CvGameCoreDLLUnDefNew.h"
+#include "CvGameCoreDLLDefNew.h"
+
 
 
 void CvPythonEnumLoader::CyEnumsPythonInterface()

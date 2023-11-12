@@ -3,3 +3,4 @@
 // For more information see https://go.microsoft.com/fwlink/?linkid=865984
 #define foreach_
 #define DllExport __declspec( dllexport )
+#define BOOST_PYTHON_MEMBER_FUNCTION_OVERLOADS(generator_name, fname, min_args, max_args) BOOST_PYTHON_GEN_MEM_FUNCTION_STUB( fname, generator_name, max_args, BOOST_PP_SUB_D(1, max_args, min_args))

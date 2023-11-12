@@ -1,4 +1,12 @@
 #include "CvPythonMiscLoader.h"
+#include "CySelectionGroup.h"
+#include "CvInfos.h"
+#include "CvBonusInfo.h"
+#include "CvImprovementInfo.h"
+#include "CvBuildingInfo.h"
+#include "CyReplayInfo.h"
+#include "CyPlayer.h"
+#include "CyTeam.h"
 #include "CvGameCoreDLL.h"
 #include "CyGame.h"
 #include <boost/python/class.hpp>

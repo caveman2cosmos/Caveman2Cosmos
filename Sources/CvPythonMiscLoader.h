@@ -4,6 +4,7 @@
 #define Cv_Python_Misc_Loader
 
 
+
 class CvPythonMiscLoader
 {
 public:

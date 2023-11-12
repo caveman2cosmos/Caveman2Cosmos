@@ -1,5 +1,6 @@
 #include "CvGameCoreDLL.h"
 #include "CvBuildingInfo.h"
+#include "CvUnitCombatInfo.h"
 #include "CvInfos.h"
 
 //

@@ -17,6 +17,7 @@
 #include "CvGlobals.h"
 #include "CvBonusInfo.h"
 #include "CvInfos.h"
+#include "CvUnitCombatInfo.h"
 #include "CvInfoUtil.h"
 #include "CvPlayerAI.h"
 #include "CvPython.h"

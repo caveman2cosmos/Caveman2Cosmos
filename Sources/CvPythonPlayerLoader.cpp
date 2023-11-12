@@ -1,10 +1,8 @@
 #include "CvPythonPlayerLoader.h"
+#include "CyPlayer.h"
 #include <boost/python/manage_new_object.hpp>
 #include <boost/python/scope.hpp>
 #include "CvGameCoreDLL.h"
-
-class CyPlayer;
-
 
 void CvPythonPlayerLoader::CyPlayerPythonInterface1(boost::python::class_<CyPlayer>& inst)
 {

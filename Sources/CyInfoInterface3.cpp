@@ -1,5 +1,6 @@
 #include "CvGameCoreDLL.h"
 #include "CvInfos.h"
+#include "CvDiplomacyClasses.h"
 
 //
 // Python interface for info classes (formerly structs)

@@ -1,10 +1,12 @@
 #pragma once
 
-#include "CvInfos.h"
-#include <vector>
 
 #ifndef CV_BONUSINFO_H
 #define CV_BONUSINFO_H
+
+#include "CvInfos.h"
+#include <vector>
+
 
 class CvArtInfoBonus;
 

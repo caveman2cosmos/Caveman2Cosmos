@@ -262,6 +262,9 @@
     <Filter Include="Source\Infrastructure\Python\Loaders">
       <UniqueIdentifier>{c3421d8d-ec2d-44b2-b453-7f7e663debbc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\DataDefinitions">
+      <UniqueIdentifier>{3be3e26d-e7a2-4fe2-a227-e848ce210a71}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FDataIOStream.cpp">
@@ -329,9 +332,6 @@
     </ClCompile>
     <ClCompile Include="CvWorkerAI.cpp">
       <Filter>Source\Base\Unit\Capabilities</Filter>
-    </ClCompile>
-    <ClCompile Include="IntExpr.cpp">
-      <Filter>Source\DataTypes</Filter>
     </ClCompile>
     <ClCompile Include="CvBuildingFilters.cpp">
       <Filter>Source\UI\City\BuildMenu</Filter>
@@ -606,9 +606,6 @@
     <ClCompile Include="CyInfoInterface4.cpp">
       <Filter>Source\Base\Infos\PythonInterface</Filter>
     </ClCompile>
-    <ClCompile Include="CyInfoInterface1.cpp">
-      <Filter>Source\Base\Infos\PythonInterface</Filter>
-    </ClCompile>
     <ClCompile Include="CyInfoInterface2.cpp">
       <Filter>Source\Base\Infos\PythonInterface</Filter>
     </ClCompile>
@@ -734,6 +731,21 @@
     </ClCompile>
     <ClCompile Include="CvPythonGlobalContextLoader.cpp">
       <Filter>Source\Infrastructure\Python\Loaders</Filter>
+    </ClCompile>
+    <ClCompile Include="IntExpr.cpp">
+      <Filter>Source\Infrastructure\DataReading\DataHandling\XML\BoolExpr</Filter>
+    </ClCompile>
+    <ClCompile Include="CyInfoInterface1.cpp">
+      <Filter>Source\Base\Infos\PythonInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="CvPlayerOptionInfo.cpp">
+      <Filter>Source\DataDefinitions</Filter>
+    </ClCompile>
+    <ClCompile Include="CvDiplomacyClasses.cpp">
+      <Filter>Source\DataDefinitions</Filter>
+    </ClCompile>
+    <ClCompile Include="CvUnitCombatInfo.cpp">
+      <Filter>Source\DataDefinitions</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -1127,9 +1139,6 @@
     <ClInclude Include="wchar_utils.h">
       <Filter>Source\DataTypes</Filter>
     </ClInclude>
-    <ClInclude Include="IntExpr.h">
-      <Filter>Source\DataTypes</Filter>
-    </ClInclude>
     <ClInclude Include="GroupingParams.h">
       <Filter>Source\Infrastructure\ContractBroker</Filter>
     </ClInclude>
@@ -1270,6 +1279,18 @@
     </ClInclude>
     <ClInclude Include="CvPythonGlobalContextLoader.h">
       <Filter>Source\Infrastructure\Python\Loaders</Filter>
+    </ClInclude>
+    <ClInclude Include="IntExpr.h">
+      <Filter>Source\Infrastructure\DataReading\DataHandling\XML\BoolExpr</Filter>
+    </ClInclude>
+    <ClInclude Include="CvPlayerOptionInfo.h">
+      <Filter>Source\DataDefinitions</Filter>
+    </ClInclude>
+    <ClInclude Include="CvDiplomacyClasses.h">
+      <Filter>Source\DataDefinitions</Filter>
+    </ClInclude>
+    <ClInclude Include="CvUnitCombatInfo.h">
+      <Filter>Source\DataDefinitions</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

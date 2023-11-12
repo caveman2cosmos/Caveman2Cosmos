@@ -26,6 +26,7 @@
 #include "CvGlobals.h"
 #include "CvGameTextMgr.h"
 #include "CvImprovementInfo.h"
+#include "CvUnitCombatInfo.h"
 #include "CvInfos.h"
 #include "CvMap.h"
 #include "CvPlayerAI.h"

@@ -239,6 +239,7 @@ ForEach( .Config in .Configs )
 
         .CompilerOptions    = ' "%1"' // .CPP Input
                             + ' /Fo"%2"' // .OBJ Output
+                            + ' /bigobj'
                             + ' /Yu"CvGameCoreDLL.h"' // PCH Header
                             + ' /Fp"$PCHOutputFile$"' // .PCH File
                             + ' $CLOptions$'

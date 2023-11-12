@@ -223,6 +223,8 @@
     <ClCompile Include="CvAllocator.cpp" />
     <ClCompile Include="CvAllocator.h" />
     <ClCompile Include="CvBonusInfo.cpp" />
+    <ClCompile Include="CvDiplomacyClasses.cpp" />
+    <ClCompile Include="CvPlayerOptionInfo.cpp" />
     <ClCompile Include="CvPlotPaging.cpp" />
     <ClCompile Include="CvPython.cpp" />
     <ClCompile Include="CvPythonCityLoader.cpp" />
@@ -233,11 +235,13 @@
     <ClCompile Include="CvPythonPlotLoader.cpp" />
     <ClCompile Include="CvPythonUnitLoader.cpp" />
     <ClCompile Include="CvSettlerAI.cpp" />
+    <ClCompile Include="CvUnitCombatInfo.cpp" />
     <ClCompile Include="CvValueService.cpp" />
     <ClCompile Include="CvWorkerAI.cpp" />
     <ClCompile Include="CvWorkerService.cpp" />
     <ClCompile Include="CyCityOutputHistoryInterface.cpp" />
     <ClCompile Include="CvImprovementInfo.cpp" />
+    <ClCompile Include="CyInfoInterface1.cpp" />
     <ClCompile Include="logging.cpp" />
     <ClCompile Include="OutputRatios.cpp" />
     <ClCompile Include="PlotInfo.cpp" />
@@ -347,7 +351,6 @@
     <ClCompile Include="CyGlobalContext.cpp" />
     <ClCompile Include="CyHallOfFameInfo.cpp" />
     <ClCompile Include="CyHallOfFameInterface.cpp" />
-    <ClCompile Include="CyInfoInterface1.cpp" />
     <ClCompile Include="CyInfoInterface2.cpp" />
     <ClCompile Include="CyInfoInterface3.cpp" />
     <ClCompile Include="CyInfoInterface4.cpp" />
@@ -370,6 +373,8 @@
     <ClCompile Include="SCvDebug.cpp" />
     <ClCompile Include="SCvInternalGlobals.cpp" />
     <ClCompile Include="SCyDebug.cpp" />
+    <ClInclude Include="CvDiplomacyClasses.h" />
+    <ClInclude Include="CvPlayerOptionInfo.h" />
     <ClInclude Include="CvPythonCityLoader.h" />
     <ClInclude Include="CvPythonEnumLoader.h" />
     <ClInclude Include="CvPythonGlobalContextLoader.h" />
@@ -377,6 +382,7 @@
     <ClInclude Include="CvPythonPlayerLoader.h" />
     <ClInclude Include="CvPythonPlotLoader.h" />
     <ClInclude Include="CvPythonUnitLoader.h" />
+    <ClInclude Include="CvUnitCombatInfo.h" />
     <ClInclude Include="FProfiler.cpp" />
     <ClCompile Include="FAssert.cpp" />
     <ClCompile Include="FDataIOStream.cpp" />
