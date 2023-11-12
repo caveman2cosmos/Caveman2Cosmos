@@ -29,6 +29,7 @@
 #include "CvDLLEngineIFaceBase.h"
 #include "CvDLLInterfaceIFaceBase.h"
 #include "CvDLLUtilityIFaceBase.h"
+#include "CvTraitInfo.h"
 
 // Public Functions...
 

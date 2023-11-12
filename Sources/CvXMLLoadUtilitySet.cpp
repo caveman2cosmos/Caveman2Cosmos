@@ -18,6 +18,7 @@
 #include "CvDiplomacyClasses.h"
 #include "CvPlayerOptionInfo.h"
 #include "CvInfoWater.h"
+#include "CvTraitInfo.h"
 #include "CvInitCore.h"
 #include "CvXMLLoadUtility.h"
 #include "CvXMLLoadUtilityModTools.h"

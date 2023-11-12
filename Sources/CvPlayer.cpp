@@ -36,7 +36,7 @@
 #include "CvDLLFAStarIFaceBase.h"
 #include "CvDLLInterfaceIFaceBase.h"
 #include "CvDLLUtilityIFaceBase.h"
-#include "CyCity.h"
+#include "CvTraitInfo.h"
 
 //	Koshling - save flag indicating this player has no data in the save as they have never been alive
 #define	PLAYER_UI_FLAG_OMITTED 2

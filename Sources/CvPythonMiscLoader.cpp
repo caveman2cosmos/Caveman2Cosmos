@@ -8,7 +8,11 @@
 #include "CyPlayer.h"
 #include "CyTeam.h"
 #include "CvGameCoreDLL.h"
+#include "CvTraitInfo.h"
 #include "CyGame.h"
+#include "CyCity.h"
+#include "CyMap.h"
+#include "CyDeal.h"
 #include <boost/python/class.hpp>
 #include <boost/python/manage_new_object.hpp>
 

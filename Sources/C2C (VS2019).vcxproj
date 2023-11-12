@@ -235,6 +235,7 @@
     <ClCompile Include="CvPythonPlotLoader.cpp" />
     <ClCompile Include="CvPythonUnitLoader.cpp" />
     <ClCompile Include="CvSettlerAI.cpp" />
+    <ClCompile Include="CvTraitInfo.cpp" />
     <ClCompile Include="CvUnitCombatInfo.cpp" />
     <ClCompile Include="CvValueService.cpp" />
     <ClCompile Include="CvWorkerAI.cpp" />
@@ -382,6 +383,7 @@
     <ClInclude Include="CvPythonPlayerLoader.h" />
     <ClInclude Include="CvPythonPlotLoader.h" />
     <ClInclude Include="CvPythonUnitLoader.h" />
+    <ClInclude Include="CvTraitInfo.h" />
     <ClInclude Include="CvUnitCombatInfo.h" />
     <ClInclude Include="FProfiler.cpp" />
     <ClCompile Include="FAssert.cpp" />

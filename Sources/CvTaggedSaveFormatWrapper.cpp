@@ -10,6 +10,7 @@
 #include "CvImprovementInfo.h"
 #include "CvBonusInfo.h"
 #include "CvInfos.h"
+#include "CvTraitInfo.h"
 #include "CvUnitCombatInfo.h"
 #include "CvPopupInfo.h"
 

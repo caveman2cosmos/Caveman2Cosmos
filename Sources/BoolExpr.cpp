@@ -23,6 +23,7 @@
 #include "CvImprovementInfo.h"
 #include "FVariableSystem.h"
 #include "wchar_utils.h"
+#include "CvTraitInfo.h"
 
 static bool getBefore(BoolExprChange change)
 {

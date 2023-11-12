@@ -372,13 +372,14 @@ void CvBonusInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumI(iSum, GC.getNumTerrainInfos(), m_pbFeatureTerrain);
 	CheckSumC(iSum, m_aeMapCategoryTypes);
 	CheckSum(iSum, m_bPeaks);
-
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	const int iNumElements = m_aAfflictionCommunicabilityTypes.size();
 	for (int i = 0; i < iNumElements; ++i)
 	{
 		CheckSum(iSum, m_aAfflictionCommunicabilityTypes[i].ePromotionLine);
 		CheckSum(iSum, m_aAfflictionCommunicabilityTypes[i].iModifier);
 	}
+#endif
 
 	CheckSumC(iSum, m_aiCategories);
 
@@ -461,6 +462,7 @@ bool CvBonusInfo::read(CvXMLLoadUtility* pXML)
 	pXML->SetOptionalVector(&m_aeMapCategoryTypes, L"MapCategoryTypes");
 	pXML->SetOptionalVector(&m_aiCategories, L"Categories");
 
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	if (pXML->TryMoveToXmlFirstChild(L"AfflictionCommunicabilityTypes"))
 	{
 		int i = 0;
@@ -486,6 +488,7 @@ bool CvBonusInfo::read(CvXMLLoadUtility* pXML)
 		pXML->MoveToXmlParent();
 	}
 
+#endif
 	m_PropertyManipulators.read(pXML);
 
 	return true;

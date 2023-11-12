@@ -220,7 +220,7 @@ int DECLARE_FLAGS(ECacheAccess::flags);
 //
 // Feature macros
 //
-#define OUTBREAKS_AND_AFFLICTIONS
+//#define OUTBREAKS_AND_AFFLICTIONS
 // #define BATTLEWORN
 // #define STRENGTH_IN_NUMBERS
 // #define GLOBAL_WARMING
@@ -346,13 +346,13 @@ const std::string getModDir();
 #include "SCvDebug.h"
 #include "SCvInternalGlobals.h"
 
-#include "CyDeal.h"
-#include "CyMap.h"
-#include "CyArea.h"
-#include "CyCity.h"
-#include "CyUnit.h"
-#include "CySelectionGroup.h"
-#include "CyPlot.h"
+//#include "CyDeal.h"
+//#include "CyMap.h"
+//#include "CyArea.h"
+//#include "CyCity.h"
+//#include "CyUnit.h"
+//#include "CySelectionGroup.h"
+//#include "CyPlot.h"
 
 #ifdef FINAL_RELEASE
 // Undefine OutputDebugString in final release builds

@@ -1971,7 +1971,7 @@ const InvisibleImprovementChanges& CvUnitCombatInfo::getVisibleImprovementRangeC
 {
 	return m_aVisibleImprovementRangeChanges[iIndex];
 }
-
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 int CvUnitCombatInfo::getNumDistanceAttackCommunicabilityTypeChanges() const
 {
 	return (int)m_aDistanceAttackCommunicabilityTypeChanges.size();
@@ -1981,6 +1981,7 @@ const AfflictionLineChanges& CvUnitCombatInfo::getDistanceAttackCommunicabilityT
 {
 	return m_aDistanceAttackCommunicabilityTypeChanges[iIndex];
 }
+#endif
 
 bool CvUnitCombatInfo::read(CvXMLLoadUtility* pXML)
 {
@@ -3187,7 +3188,7 @@ bool CvUnitCombatInfo::read(CvXMLLoadUtility* pXML)
 		}
 		pXML->MoveToXmlParent();
 	}
-
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	if(pXML->TryMoveToXmlFirstChild(L"DistanceAttackCommunicabilityTypeChanges"))
 	{
 		int i = 0;
@@ -3211,12 +3212,11 @@ bool CvUnitCombatInfo::read(CvXMLLoadUtility* pXML)
 		}
 		pXML->MoveToXmlParent();
 	}
-
+#endif
 	m_PropertyManipulators.read(pXML);
 
 	return true;
 }
-
 void CvUnitCombatInfo::copyNonDefaults(CvUnitCombatInfo* pClassInfo)
 {
 	PROFILE_EXTRA_FUNC();
@@ -3830,7 +3830,7 @@ void CvUnitCombatInfo::copyNonDefaults(CvUnitCombatInfo* pClassInfo)
 	{
 		CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aVisibleImprovementRangeChanges, pClassInfo->m_aVisibleImprovementRangeChanges);
 	}
-
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	if (getNumDistanceAttackCommunicabilityTypeChanges() == 0)
 	{
 		const int iNum = pClassInfo->getNumDistanceAttackCommunicabilityTypeChanges();
@@ -3841,7 +3841,7 @@ void CvUnitCombatInfo::copyNonDefaults(CvUnitCombatInfo* pClassInfo)
 			GC.copyNonDefaultDelayedResolution((int*)&(m_aDistanceAttackCommunicabilityTypeChanges[i].eAfflictionLine), (int*)&(pClassInfo->m_aDistanceAttackCommunicabilityTypeChanges[i].eAfflictionLine));
 		}
 	}
-
+#endif
 	m_PropertyManipulators.copyNonDefaults(&pClassInfo->m_PropertyManipulators);
 }
 
@@ -4291,13 +4291,14 @@ void CvUnitCombatInfo::getCheckSum(uint32_t& iSum) const
 		CheckSum(iSum, m_aVisibleImprovementRangeChanges[i].eImprovement);
 		CheckSum(iSum, m_aVisibleImprovementRangeChanges[i].iIntensity);
 	}
-
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	iNumElements = m_aDistanceAttackCommunicabilityTypeChanges.size();
 	for (int i = 0; i < iNumElements; ++i)
 	{
 		CheckSum(iSum, m_aDistanceAttackCommunicabilityTypeChanges[i].eAfflictionLine);
 		CheckSum(iSum, m_aDistanceAttackCommunicabilityTypeChanges[i].iChange);
 	}
+#endif
 
 	m_PropertyManipulators.getCheckSum(iSum);
 

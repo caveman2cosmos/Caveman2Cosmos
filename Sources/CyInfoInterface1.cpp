@@ -156,7 +156,7 @@ void CyInfoPythonInterface1()
 
 		.def("isStatus", &CvPromotionInfo::isStatus, "bool ()")
 		.def("isEquipment", &CvPromotionInfo::isEquipment, "bool ()")
-		.def("isAffliction", &CvPromotionInfo::isAffliction, "bool ()")
+		//.def("isAffliction", &CvPromotionInfo::isAffliction, "bool ()")
 
 		.def("getAddsBuildType", &CvPromotionInfo::getAddsBuildType, "int (int i)")
 		.def("getNumAddsBuildTypes", &CvPromotionInfo::getNumAddsBuildTypes, "int ()")

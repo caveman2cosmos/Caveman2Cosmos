@@ -747,6 +747,9 @@
     <ClCompile Include="CvUnitCombatInfo.cpp">
       <Filter>Source\DataDefinitions</Filter>
     </ClCompile>
+    <ClCompile Include="CvTraitInfo.cpp">
+      <Filter>Source\DataDefinitions</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CvDLLButtonPopup.h">
@@ -1290,6 +1293,9 @@
       <Filter>Source\DataDefinitions</Filter>
     </ClInclude>
     <ClInclude Include="CvUnitCombatInfo.h">
+      <Filter>Source\DataDefinitions</Filter>
+    </ClInclude>
+    <ClInclude Include="CvTraitInfo.h">
       <Filter>Source\DataDefinitions</Filter>
     </ClInclude>
   </ItemGroup>
