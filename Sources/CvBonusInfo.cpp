@@ -7,6 +7,8 @@
 #include "CvInfoUtil.h"
 #include "CvXMLLoadUtility.h"
 #include "CheckSum.h"
+#include "CvGlobals.h"
+#include "CvGameAI.h"
 
 CvBonusInfo::CvBonusInfo() :
 	m_iBonusClassType(NO_BONUSCLASS)
@@ -135,29 +137,13 @@ int CvBonusInfo::getPlacementOrder() const
 	return m_iPlacementOrder;
 }
 
-int CvBonusInfo::getConstAppearance() const
+int CvBonusInfo::getRandAppearance() const
 {
-	return m_iConstAppearance;
-}
-
-int CvBonusInfo::getRandAppearance1() const
-{
-	return m_iRandAppearance1;
-}
-
-int CvBonusInfo::getRandAppearance2() const
-{
-	return m_iRandAppearance2;
-}
-
-int CvBonusInfo::getRandAppearance3() const
-{
-	return m_iRandAppearance3;
-}
-
-int CvBonusInfo::getRandAppearance4() const
-{
-	return m_iRandAppearance4;
+	return m_iConstAppearance +
+		GC.getGame().getMapRandNum(m_iRandAppearance1, "random1") +
+		GC.getGame().getMapRandNum(m_iRandAppearance2, "random2") +
+		GC.getGame().getMapRandNum(m_iRandAppearance3, "random3") +
+		GC.getGame().getMapRandNum(m_iRandAppearance4, "random4");
 }
 
 int CvBonusInfo::getPercentPerPlayer() const
@@ -531,11 +517,11 @@ void CvBonusInfo::copyNonDefaults(const CvBonusInfo* pClassInfo)
 	if (getMinLatitude() == iDefault) m_iMinLatitude = pClassInfo->getMinLatitude();
 	if (getMaxLatitude() == 90) m_iMaxLatitude = pClassInfo->getMaxLatitude();
 	if (getPlacementOrder() == -1) m_iPlacementOrder = pClassInfo->getPlacementOrder();
-	if (getConstAppearance() == iDefault) m_iConstAppearance = pClassInfo->getConstAppearance();
-	if (getRandAppearance1() == iDefault) m_iRandAppearance1 = pClassInfo->getRandAppearance1();
-	if (getRandAppearance2() == iDefault) m_iRandAppearance2 = pClassInfo->getRandAppearance2();
-	if (getRandAppearance3() == iDefault) m_iRandAppearance3 = pClassInfo->getRandAppearance3();
-	if (getRandAppearance4() == iDefault) m_iRandAppearance4 = pClassInfo->getRandAppearance4();
+	if (m_iConstAppearance == iDefault) m_iConstAppearance = pClassInfo->m_iConstAppearance;
+	if (m_iRandAppearance1 == iDefault) m_iRandAppearance1 = pClassInfo->m_iRandAppearance1;
+	if (m_iRandAppearance2 == iDefault) m_iRandAppearance2 = pClassInfo->m_iRandAppearance2;
+	if (m_iRandAppearance3 == iDefault) m_iRandAppearance3 = pClassInfo->m_iRandAppearance3;
+	if (m_iRandAppearance4 == iDefault) m_iRandAppearance4 = pClassInfo->m_iRandAppearance4;
 	if (getPercentPerPlayer() == iDefault) m_iPercentPerPlayer = pClassInfo->getPercentPerPlayer();
 	if (getTilesPer() == iDefault) m_iTilesPer = pClassInfo->getTilesPer();
 	if (getMinLandPercent() == iDefault) m_iMinLandPercent = pClassInfo->getMinLandPercent();
