@@ -4905,7 +4905,6 @@ void CvPlayer::handleDiploEvent(DiploEventTypes eDiploEvent, PlayerTypes ePlayer
 {
 	PROFILE_EXTRA_FUNC();
 	//OutputDebugString(CvString::format("UI interaction - diplo event for player %d (with player %d)\n", m_eID, ePlayer).c_str());
-	setTurnHadUIInteraction(true);
 
 	switch (eDiploEvent)
 	{
@@ -12334,6 +12333,29 @@ void CvPlayer::setEndTurn(bool bNewValue)
 	{
 		FAssertMsg(isTurnActive(), "isTurnActive is expected to be true");
 
+		if (isHumanPlayer() && hasIdleCity())
+		{
+			CvCity* city = getIdleCity();
+			if (city)
+			{
+				setForcedCityCycle(true);
+
+				if (!getBugOptionBOOL("CityScreen__FullCityScreenOnEmptyBuildQueue", false))
+				{
+					gDLL->getInterfaceIFace()->addSelectedCity(city, false);
+					GC.getCurrentViewport()->bringIntoView(city->getX(), city->getY());
+				}
+				else gDLL->getInterfaceIFace()->selectCity(city, true);
+			}
+			else
+			{
+				FErrorMsg("idleCity == NULL; fixing");
+				resetIdleCities();
+			}
+			gDLL->getInterfaceIFace()->setEndTurnMessage(false);
+			return;
+		}
+
 		m_bEndTurn = bNewValue;
 
 		if (isEndTurn())
@@ -19597,7 +19619,6 @@ void CvPlayer::read(FDataStreamBase* pStream)
 	}
 	// Toffer - To stop auto end turn on decision-less turns from kicking in immediately when loading a save
 	setTurnHadUIInteraction(true);
-
 }
 
 //
