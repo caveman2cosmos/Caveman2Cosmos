@@ -224,12 +224,14 @@
     <ClCompile Include="CvAllocator.h" />
     <ClCompile Include="CvBonusInfo.cpp" />
     <ClCompile Include="CvDiplomacyClasses.cpp" />
+    <ClCompile Include="CvHallOfFameInfo.cpp" />
     <ClCompile Include="CvPlayerOptionInfo.cpp" />
     <ClCompile Include="CvPlotPaging.cpp" />
     <ClCompile Include="CvPython.cpp" />
     <ClCompile Include="CvPythonCityLoader.cpp" />
     <ClCompile Include="CvPythonEnumLoader.cpp" />
     <ClCompile Include="CvPythonGlobalContextLoader.cpp" />
+    <ClCompile Include="CvPythonInfoLoader.cpp" />
     <ClCompile Include="CvPythonMiscLoader.cpp" />
     <ClCompile Include="CvPythonPlayerLoader.cpp" />
     <ClCompile Include="CvPythonPlotLoader.cpp" />
@@ -379,6 +381,7 @@
     <ClInclude Include="CvPythonCityLoader.h" />
     <ClInclude Include="CvPythonEnumLoader.h" />
     <ClInclude Include="CvPythonGlobalContextLoader.h" />
+    <ClInclude Include="CvPythonInfoLoader.h" />
     <ClInclude Include="CvPythonMiscLoader.h" />
     <ClInclude Include="CvPythonPlayerLoader.h" />
     <ClInclude Include="CvPythonPlotLoader.h" />
