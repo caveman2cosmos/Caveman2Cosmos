@@ -4,7 +4,8 @@
 #define Cv_Python_Unit_Loader
 
 #include <boost/python/class.hpp>
-#include "CyUnit.h"
+
+class CyUnit;
 
 
 class CvPythonUnitLoader

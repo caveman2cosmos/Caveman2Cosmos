@@ -4,8 +4,9 @@
 #ifndef Cv_Python_Player_Loader
 #define Cv_Python_Player_Loader
 
-#include "CyPlayer.h"
 #include <boost/python/class.hpp>
+
+class CyPlayer;
 
 class CvPythonPlayerLoader
 {
