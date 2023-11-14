@@ -48,6 +48,7 @@ public:
 	bool isBonusCoastalOnly() const;
 	bool isNoRiverSide() const;
 	bool isNormalize() const;
+	bool isMapBonus() const;
 
 	const char* getArtDefineTag() const;
 

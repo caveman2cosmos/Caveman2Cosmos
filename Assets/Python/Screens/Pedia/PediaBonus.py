@@ -73,7 +73,7 @@ class PediaBonus:
 		W_STATS = self.W_STATS
 		W_PEDIA_PAGE = self.W_PEDIA_PAGE
 
-		bMapBonus = CvTheBonusInfo.getConstAppearance() > 0
+		bMapBonus = CvTheBonusInfo.isMapBonus()
 		if bMapBonus:
 			bCultureBonus = False
 			# Graphic

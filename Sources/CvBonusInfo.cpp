@@ -146,6 +146,17 @@ int CvBonusInfo::getRandAppearance() const
 		GC.getGame().getMapRandNum(m_iRandAppearance4, "random4");
 }
 
+bool CvBonusInfo::isMapBonus() const
+{
+	return (
+			m_iConstAppearance > 0
+		||	m_iRandAppearance1 > 0
+		||	m_iRandAppearance2 > 0
+		||	m_iRandAppearance3 > 0
+		||	m_iRandAppearance4 > 0
+	);
+}
+
 int CvBonusInfo::getPercentPerPlayer() const
 {
 	return m_iPercentPerPlayer;
