@@ -17910,9 +17910,6 @@ void CvPlayerAI::AI_beginDiplomacy(CvDiploParameters* pDiploParams, PlayerTypes 
 	}
 	else
 	{
-		//OutputDebugString("UI interaction - diplomacy\n");
-		GET_PLAYER(ePlayer).setTurnHadUIInteraction(true);
-
 		gDLL->beginDiplomacy(pDiploParams, (PlayerTypes)ePlayer);
 	}
 }

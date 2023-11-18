@@ -615,6 +615,7 @@ void CvGame::setInitialItems()
 {
 	OutputDebugString("setInitialItems: Start\n");
 	PROFILE_FUNC();
+	averageHandicaps();
 
 	// Toffer - Some victory conditions make no sense for games without competitors.
 	if (countCivPlayersAlive() < 2)
@@ -7118,11 +7119,13 @@ void CvGame::updateMoves()
 					{
 						player.AI_unitUpdate();
 					}
+					/*
 					// A unit ready to move at this point is one the player needs to interact with
 					if (player.hasReadyUnautomatedUnit(true))
 					{
 						player.setTurnHadUIInteraction(true);
 					}
+					*/
 				}
 			}
 			else
