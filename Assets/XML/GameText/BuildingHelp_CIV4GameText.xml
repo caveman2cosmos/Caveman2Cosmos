@@ -765,14 +765,14 @@
 		<English>[ICON_BULLET]Increases local Insidiousness by %s1_amount%% (Helps Criminals avoid discovery)</English>
 		<French>[ICON_BULLET]Donne à toutes les unités criminelles produites dans la ville %s1_amount%% d'Incidiosité.</French>
 		<German>[ICON_BULLET]erhöht die Gesetzlosigkeit der Bevölkerung um %s1_amount%% (hilft Kriminellen ihrer Entdeckung zu entgehen)</German>
-		<Russian>[ICON_BULLET]Увеличивает уровень беззакония в городе на %s1_amount%% (помогает преступникам избежать раскрытия)</Russian>
+		<Russian>[ICON_BULLET]Увеличивает местное коварство на %s1_amount%% (помогает преступникам избежать разоблачения)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_INVESTIGATION</Tag>
 		<English>[ICON_BULLET]Increases local Investigation by %s1_amount%% (Helps Law Enforcement catch Criminals)</English>
 		<French>[ICON_BULLET]Donne à toutes les unités produites dans la ville %s1_amount%% d'Investigation.</French>
 		<German>[ICON_BULLET]verbessert die örtliche Ermittlungsrate um %s1_amount%%  (hilft Gesetzeshütern bei der Festnahme von Kriminellen)</German>
-		<Russian>[ICON_BULLET]Увеличивает эффективность местного розыска на %s1_amount%% (помогает правоохранителям поймать преступников)</Russian>
+		<Russian>[ICON_BULLET]Увеличивает местный розыск на %s1_amount%% (помогает правоохранительным органам ловить преступников)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_IN_CITY</Tag>
@@ -782,7 +782,7 @@
 		<Italian>[SPACE]nella città.</Italian>
 		<Spanish>[SPACE]en la ciudad</Spanish>
 		<Polish>[SPACE]w mieście.</Polish>
-		<Russian>[SPACE]Â ãîðîäå.</Russian>
+		<Russian>[SPACE]В городе.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_LESS_WORLD_TRADE</Tag>
@@ -792,7 +792,7 @@
 		<Italian>[ICON_BULLET] -%d1 rotte commerciali in tutto il mondo</Italian>
 		<Spanish>[ICON_BULLET] -%d1 rutas comerciales en el mundo</Spanish>
 		<Polish>[ICON_BULLET] -%d1 do szlaków handlowych na świecie</Polish>
-		<Russian>[ICON_BULLET] -%d1 Òîðãîâûå ìàðøðóòû â ìèðå</Russian>
+		<Russian>[ICON_BULLET] -%d1 торговые пути в мире</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_LONG_RANGE_SUPPORT_PERCENT_MODIFIER</Tag>
@@ -800,7 +800,7 @@
 		<French>[ICON_BULLET]+%d1_Amount%% de Puissance en soutien, des unités de longue portée participant à la défense de la ville.</French>
 		<Italian>[ICON_BULLET]+%d1_Amount%% di Supporto ad ogni unità da supporto a lungo raggio che partecipa alla difesa cittadina.</Italian>
 		<Polish>[ICON_BULLET]+%d1_Amount%% do Siły Wspomagania z jakiejkolwiek jednostki Strzelniczej broniącej miasta.</Polish>
-		<Russian>[ICON_BULLET]+%d1_Amount%% к модификатору Силы любому дальнобойному отряду при защите города.</Russian>
+		<Russian>[ICON_BULLET]+%d1_Amount%% к силе от каждого подразделения поддержки дальнего действия, участвующего в обороне города.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_MAINTENANCE</Tag>
@@ -809,7 +809,7 @@
 		<Italian>[ICON_BULLET]-%s1 [ICON_GOLD] dei costi mantenimento dell'edificio</Italian>
 		<Spanish>[ICON_BULLET]-%s1[ICON_GOLD] para mantenimiento del edificio</Spanish>
 		<Polish>[ICON_BULLET]-%s1 [ICON_GOLD] do utrzymania budynku</Polish>
-		<Russian>[ICON_BULLET]-%s1 [ICON_GOLD] на обслуживание зданий</Russian>
+		<Russian>[ICON_BULLET]-%s1 [ICON_GOLD] для обслуживания здания</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_MAINT_MOD</Tag>
@@ -818,13 +818,14 @@
 		<German>[ICON_BULLET]%D1_Mod%% [LINK=CONCEPT_MAINTENANCE]Unterhalt[\LINK]</German>
 		<Italian>[ICON_BULLET]%D1_Mod%% di [LINK=CONCEPT_MAINTENANCE]mantenimento[\LINK]</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod%% al [LINK=CONCEPT_MAINTENANCE]mantenimiento[\LINK]</Spanish>
+		<Russian>[ICON_BULLET]%D1_Mod%% [LINK=CONCEPT_MAINTENANCE]Обслуживание[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_MAX_POPULATION_ALLOWED</Tag>
 		<English>[ICON_BULLET]Sets base Maximum Population at %d1_amount if the city doesn't already possess a greater base value.</English>
 		<French>[ICON_BULLET]Défini une valeur de base pour le Maximum de Population à %d1_amount, si la ville n'a pas encore de valeur de base supérieure.</French>
 		<Polish>[ICON_BULLET]Ustawia maksymalną populację na %d1_amount jeśli miasto już nie posiada większej populacji.</Polish>
-		<Russian>[ICON_BULLET]Устанавливает максимальный лимит населения до %d1_amount если город еще не превысил это базовое значение.</Russian>
+		<Russian>[ICON_BULLET]Устанавливает лимит населения на %d1_amount, если город его еще не превысил.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_MAX_POPULATION_CHANGE</Tag>
