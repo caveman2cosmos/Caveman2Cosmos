@@ -7120,11 +7120,13 @@ void CvGame::updateMoves()
 					{
 						player.AI_unitUpdate();
 					}
+					/*
 					// A unit ready to move at this point is one the player needs to interact with
 					if (player.hasReadyUnautomatedUnit(true))
 					{
 						player.setTurnHadUIInteraction(true);
 					}
+					*/
 				}
 			}
 			else
