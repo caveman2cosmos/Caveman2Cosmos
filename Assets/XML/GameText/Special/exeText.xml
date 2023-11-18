@@ -1039,7 +1039,7 @@
 		<English>Event Log</English>
 		<French>Journal des événements</French>
 		<German>Ereignis-Log</German>
-		<Italian>Registro degli eventi</Italian>
+		<Italian>Registro eventi</Italian> <!-- changing font crashes the game -->
 		<Spanish>Historial de sucesos</Spanish>
 		<Russian>Журнал ошибок</Russian>
 	</TEXT>
@@ -1600,7 +1600,7 @@
 		<English>You must enter a Username.</English>
 		<French>Vous devez saisir un nom d'utilisateur.</French>
 		<German>Sie müssen einen Benutzernamen angeben.</German>
-		<Italian>Devi inserire un'username.</Italian>
+		<Italian>Devi inserire un username.</Italian>
 		<Spanish>Hay que introducir un nombre de usuario.</Spanish>
 		<Russian>Вы должны ввести имя пользователя.</Russian>
 	</TEXT>
@@ -1645,7 +1645,7 @@
 		<English>About this Build</English>
 		<French>À propos de cette version</French>
 		<German>Über diese Version</German>
-		<Italian>Informazioni su questa build</Italian>
+		<Italian>Informazioni build</Italian>
 		<Spanish>Acerca de esta build</Spanish>
 		<Russian>О данной сборке</Russian>
 	</TEXT>
@@ -1790,7 +1790,7 @@
 		<English>Closed</English>
 		<French>Fermé</French>
 		<German>Geschlossen</German>
-		<Italian>Chiuso</Italian>
+		<Italian>Slot chiuso</Italian>
 		<Spanish>Cerrado</Spanish>
 		<Russian>Закрыто</Russian>
 	</TEXT>
@@ -1813,7 +1813,7 @@
 		<English>Create a Game!</English>
 		<French>Creer une partie</French>
 		<German>Ein Spiel erstellen!</German>
-		<Italian>Crea una partita!</Italian>
+		<Italian>Crea una partita</Italian>
 		<Spanish>Crear una partida</Spanish>
 		<Russian>Создать игру!</Russian>
 	</TEXT>
@@ -1822,7 +1822,7 @@
 		<English>CREDITS</English>
 		<French>CRÉDITS</French>
 		<German>CREDITS</German>
-		<Italian>RICONOSCIMENTI</Italian>
+		<Italian>Crediti</Italian>
 		<Spanish>CRÉDITOS</Spanish>
 		<Russian>Титры</Russian>
 	</TEXT>
@@ -1846,7 +1846,7 @@
 		<English>[default]</English>
 		<French>[par défaut]</French>
 		<German>[Standard]</German>
-		<Italian>[predefinito]</Italian>
+		<Italian>Predefinito</Italian>
 		<Spanish>[predeterm.]</Spanish>
 		<Russian>[по-умолчанию]</Russian>
 	</TEXT>
@@ -1945,7 +1945,7 @@
 		<English>View Hall of Fame</English>
 		<French>Voir le Panthéon</French>
 		<German>Ruhmeshalle betrachten</German>
-		<Italian>Guarda la Hall of fame</Italian>
+		<Italian>Hall of fame</Italian>
 		<Spanish>Ver Salón de la Fama</Spanish>
 		<Russian>Зал славы</Russian>
 	</TEXT>
@@ -1980,7 +1980,7 @@
 		<Tag>TXT_KEY_MAIN_MENU_HOT_SEAT</Tag>
 		<English>Hot Seat</English>
 		<French>2 joueurs</French>
-		<Italian>2 giocatori in locale</Italian>
+		<Italian>Multi in locale</Italian>
 		<Spanish>De uno en uno</Spanish>
 		<Russian>Горячий стул</Russian>
 	</TEXT>
@@ -1989,7 +1989,7 @@
 		<English>Human</English>
 		<French>Humain</French>
 		<German>Menschlich</German>
-		<Italian>Umano</Italian>
+		<Italian>Giocatore</Italian>
 		<Spanish>Humano</Spanish>
 		<Russian>Человек</Russian>
 	</TEXT>
@@ -2115,7 +2115,7 @@
 		<English>Modified</English>
 		<French>Modifié</French>
 		<German>Modifiziert</German>
-		<Italian>Modificato</Italian>
+		<Italian>Ultima modifica</Italian>
 		<Spanish>Modificada</Spanish>
 		<Russian>Изменен</Russian>
 	</TEXT>
@@ -2298,7 +2298,7 @@
 		<English>Internet Games</English>
 		<French>Parties Internet</French>
 		<German>Internet-Spiele</German>
-		<Italian>Partite via Internet</Italian>
+		<Italian>Multi via internet</Italian>
 		<Spanish>Partidas en Internet</Spanish>
 		<Russian>Игра через Интернет</Russian>
 	</TEXT>
@@ -2307,7 +2307,7 @@
 		<English>LAN Games</English>
 		<French>Parties réseau local</French>
 		<German>LAN-Spiele</German>
-		<Italian>Partite via LAN</Italian>
+		<Italian>Multi via LAN</Italian>
 		<Spanish>Partidas en red local</Spanish>
 		<Russian>Игра по локальной сети</Russian>
 	</TEXT>
@@ -2448,7 +2448,7 @@
 		<English>Open</English>
 		<French>Ouvert</French>
 		<German>Offen</German>
-		<Italian>Aperto</Italian>
+		<Italian>Slot aperto</Italian>
 		<Spanish>Abierto</Spanish>
 		<Russian>Открыть</Russian>
 	</TEXT>
@@ -2511,7 +2511,7 @@
 		<English>There are no updates available at this time.</English>
 		<French>Aucune mise à jour n'est disponible pour l'instant.</French>
 		<German>Es sind zurzeit keine Updates verfügbar.</German>
-		<Italian>In questo momento non ci sono aggiornamenti disponibili.</Italian>
+		<Italian>In questo momento non ci sono aggiornamenti disponibili</Italian>
 		<Spanish>En este momento no hay disponible ninguna actualización.</Spanish>
 		<Russian>Нет обновлений на данный момент.</Russian>
 	</TEXT>
@@ -2527,7 +2527,7 @@
 		<English>Play by E-mail</English>
 		<French>Jouer par email</French>
 		<German>Per E-Mail spielen</German>
-		<Italian>Gioca tramite e-mail</Italian>
+		<Italian>Multi via e-mail</Italian>
 		<Spanish>Juego por e-mail</Spanish>
 		<Russian>Играть по электронной почте</Russian>
 	</TEXT>
@@ -2626,7 +2626,7 @@
 		<English>A choice will be made at random. Selecting this option proves you are tough.</English>
 		<French>Un choix sera fait aléatoirement. Le choix de cette option prouve que vous avez du cran.</French>
 		<German>Es wird eine zufällige Wahl getroffen. Diese Option eignet sich nur für echte Draufgänger!</German>
-		<Italian>Verrà eseguita una scelta casuale. Scegliendo questa opzione, dimostri di essere un duro.</Italian>
+		<Italian>[BOLD]Verrà eseguita una [COLOR_HIGHLIGHT_TEXT]scelta casuale[COLOR_REVERT] (scegliendo questa opzione, dimostri di essere un vero duro)[\BOLD]</Italian>
 		<Spanish>La elección se realizará al azar. Con esta decisión se demuestra tu dureza.</Spanish>
 		<Russian>Выбор будет отдан на волю случая. Такой вариант продемонстрирует вашу силу.</Russian>
 	</TEXT>
@@ -2635,7 +2635,7 @@
 		<English>Refresh List</English>
 		<French>Actualiser liste</French>
 		<German>Liste aktualisieren </German>
-		<Italian>Aggiorna elenco</Italian>
+		<Italian>Aggiorna lista</Italian>
 		<Spanish>Actualizar lista</Spanish>
 		<Russian>Обновить лист</Russian>
 	</TEXT>
@@ -2671,7 +2671,7 @@
 		<English>Save Version:</English>
 		<French>Version de sauvegarde :</French>
 		<German>Spielstandversion:</German>
-		<Italian>Versione del salvataggio:</Italian>
+		<Italian>Versione dei salvataggi:</Italian>
 		<Spanish>Guardar versión:</Spanish>
 		<Russian>Версия сохранения:</Russian>
 	</TEXT>
@@ -2689,7 +2689,7 @@
 		<English>Select a[SPACE]</English>
 		<French>Faites votre choix : [SPACE]</French>
 		<German>WÄhlen[SPACE]</German>
-		<Italian>Seleziona [SPACE]</Italian>
+		<Italian>Seleziona il[SPACE]</Italian>
 		<Spanish>Seleccionar [SPACE]</Spanish>
 		<Russian>Выберите[SPACE]</Russian>
 	</TEXT>
@@ -2698,7 +2698,7 @@
 		<English>Select a Civilization</English>
 		<French>Choisissez une civilisation</French>
 		<German>Zivilisation wÄhlen</German>
-		<Italian>SELEZIONA UNA CIVILTÀ</Italian>
+		<Italian>Seleziona una civiltÀ</Italian>
 		<Spanish>Seleccionar una civilizaciÓn</Spanish>
 		<Russian>Выберите цивилизацию</Russian>
 	</TEXT>
@@ -2707,7 +2707,7 @@
 		<English>Select a Difficulty</English>
 		<French>Choisissez le niveau de difficulté</French>
 		<German>Schwierigkeitsgrad wählen</German>
-		<Italian>Seleziona la difficoltà</Italian>
+		<Italian>Seleziona il livello di difficoltà</Italian>
 		<Spanish>Seleccionar una dificultad</Spanish>
 		<Russian>Выберите сложность</Russian>
 	</TEXT>
@@ -2725,7 +2725,7 @@
 		<English>CLIMATE</English>
 		<French>CLIMAT</French>
 		<German>KLIMA</German>
-		<Italian>CLIMA</Italian>
+		<Italian>Clima</Italian>
 		<Spanish>CLIMA</Spanish>
 		<Russian>КЛИМАТ</Russian>
 	</TEXT>
@@ -2734,7 +2734,7 @@
 		<English>DIFFICULTY</English>
 		<French>DIFFICULTE</French>
 		<German>SCHWIERIGKEIT</German>
-		<Italian>DIFFICOLTÀ</Italian>
+		<Italian>DifficoltÀ</Italian>
 		<Spanish>DIFICULTAD</Spanish>
 		<Russian>СЛОЖНОСТЬ</Russian>
 	</TEXT>
@@ -2743,7 +2743,7 @@
 		<English>How fast should the game be?</English>
 		<French>Quelle vitesse de jeu souhaitez-vous ?</French>
 		<German>Wie schnell soll das Spiel laufen?</German>
-		<Italian>Quanto veloce deve essere il gioco?</Italian>
+		<Italian>Seleziona la velocità di gioco</Italian>
 		<Spanish>¿A qué velocidad ha de ir el juego?</Spanish>
 		<Russian>Какая длительность должна быть у игры?</Russian>
 	</TEXT>
@@ -2761,7 +2761,7 @@
 		<English>SEALEVEL</English>
 		<French>NIVEAU DE LA MER</French>
 		<German>MEERESSPIEGEL</German>
-		<Italian>LIVELLO DEL MARE</Italian>
+		<Italian>Altezza del mare</Italian>
 		<Spanish>NIVEL DEL MAR</Spanish>
 		<Russian>УРОВЕНЬ МОРЯ</Russian>
 	</TEXT>
@@ -2770,7 +2770,7 @@
 		<English>WORLD SIZE</English>
 		<French>TAILLE DU MONDE</French>
 		<German>WELTGRÖSSE</German>
-		<Italian>DIMENSIONI DEL MONDO</Italian>
+		<Italian>Personalizza il mondo</Italian>
 		<Spanish>TAMAÑO DEL MUNDO</Spanish>
 		<Russian>РАЗМЕР МИРА</Russian>
 	</TEXT>
@@ -2779,7 +2779,7 @@
 		<English>WORLD SIZE</English>
 		<French>TAILLE DU MONDE</French>
 		<German>WELTGRÖSSE</German>
-		<Italian>DIMENSIONI DEL MONDO</Italian>
+		<Italian>Dimensioni della mappa</Italian>
 		<Spanish>TAMAÑO DEL MUNDO</Spanish>
 		<Russian>РАЗМЕР МИРА</Russian>
 	</TEXT>
@@ -2905,7 +2905,7 @@
 		<English>Victories</English>
 		<French>Victoires</French>
 		<German>Siege</German>
-		<Italian>Vittorie</Italian>
+		<Italian>Condizioni vittoria</Italian>
 		<Spanish>Victorias</Spanish>
 		<Russian>Победы</Russian>
 	</TEXT>
@@ -3139,7 +3139,7 @@
 		<English>Civ Adjective:</English>
 		<French>Adjectif :</French>
 		<German>Ziv.-Adjektiv:</German>
-		<Italian>Aggettivo civiltà:</Italian>
+		<Italian>Aggettivo:</Italian>
 		<Spanish>Adjetivo:</Spanish>
 		<Russian>Прилагательное цивилизации:</Russian>
 	</TEXT>
@@ -3148,7 +3148,7 @@
 		<English>Civ Description:</English>
 		<French>Desc. civilisation :</French>
 		<German>Ziv.-Beschreibung:</German>
-		<Italian>Descrizione civiltà:</Italian>
+		<Italian>Nome civiltà:</Italian>
 		<Spanish>Civilización:</Spanish>
 		<Russian>Описание цивилизации:</Russian>
 	</TEXT>
@@ -3175,7 +3175,7 @@
 		<English>Short Description:</English>
 		<French>Descript. rapide :</French>
 		<German>Kurzbeschreibung:</German>
-		<Italian>Descrizione breve:</Italian>
+		<Italian>Nome breve:</Italian>
 		<Spanish>Descripción:</Spanish>
 		<Russian>Краткое описание:</Russian>
 	</TEXT>
@@ -3193,7 +3193,7 @@
 		<English>Civ Type:</English>
 		<French>Type de civilisat. :</French>
 		<German>Zivilisation:</German>
-		<Italian>Tipo di civiltà:</Italian>
+		<Italian>Civiltà:</Italian>
 		<Spanish>Tipo de civilización:</Spanish>
 		<Russian>Тип цивилизации:</Russian>
 	</TEXT>
@@ -3211,7 +3211,7 @@
 		<English>Era:</English>
 		<French>Epoque :</French>
 		<German>Zeitalter:</German>
-		<Italian>Era:</Italian>
+		<Italian>Era iniziale:</Italian>
 		<Spanish>Época:</Spanish>
 		<Russian>Эпоха:</Russian>
 	</TEXT>
@@ -3220,7 +3220,7 @@
 		<English>GAME SNAPSHOT</English>
 		<French>CAPTURE D'ECRAN</French>
 		<German>SPIEL-SCHNAPPSCHUSS</German>
-		<Italian>RIASSUNTO PARTITA</Italian>
+		<Italian>Riassunto impostazioni</Italian>
 		<Spanish>FOTO DE LA PARTIDA</Spanish>
 		<Russian>СНИМОК ИГРЫ</Russian>
 	</TEXT>
@@ -3229,7 +3229,7 @@
 		<English>Leader Name:</English>
 		<French>Nom du héros :</French>
 		<German>Staatsoberhauptes:</German>
-		<Italian>Nome leader:</Italian>
+		<Italian>Nome giocatore:</Italian>
 		<Spanish>Nombre del líder:</Spanish>
 		<Russian>Имя предводителя:</Russian>
 	</TEXT>
@@ -3238,7 +3238,7 @@
 		<English>Leader Type:</English>
 		<French>Type de dirigeant :</French>
 		<German>Staatsoberhaupt:</German>
-		<Italian>Tipo di leader:</Italian>
+		<Italian>Personaggio leader:</Italian>
 		<Spanish>Tipo de líder:</Spanish>
 		<Russian>Тип предводителя:</Russian>
 	</TEXT>
@@ -3256,7 +3256,7 @@
 		<English>Sealevel:</English>
 		<French>Niveau de la mer :</French>
 		<German>Meeresspiegel:</German>
-		<Italian>Livello del mare:</Italian>
+		<Italian>Altezza mare:</Italian>
 		<Spanish>Nivel del mar:</Spanish>
 		<Russian>Уровень моря:</Russian>
 	</TEXT>
@@ -3265,7 +3265,7 @@
 		<English>Size:</English>
 		<French>Taille :</French>
 		<German>Größe:</German>
-		<Italian>Dimensioni:</Italian>
+		<Italian>Dimensione:</Italian>
 		<Spanish>Tamaño:</Spanish>
 		<Russian>Размер:</Russian>
 	</TEXT>
@@ -3283,7 +3283,7 @@
 		<English>Your Details:</English>
 		<French>Infos personnelles :</French>
 		<German>Euer Steckbrief:</German>
-		<Italian>Dettagli:</Italian>
+		<Italian>Dettagli</Italian>
 		<Spanish>Detalles:</Spanish>
 		<Russian>Информация о вас:</Russian>
 	</TEXT>
@@ -3292,7 +3292,7 @@
 		<English>RIIIIIIIIING! Time is now %s1_TimeStr.</English>
 		<French>DRIIIIIIIIING ! Il est %s1_TimeStr.</French>
 		<German>RIIIIIIIIING! Es ist jetzt %s1_TimeStr.</German>
-		<Italian>DRIIIIIIIIIN! Sono le %s1_TimeStr.</Italian>
+		<Italian>Avevi qualcosa da fare? Sono le %s1_TimeStr</Italian>
 		<Spanish>¡RIIIIIIIIING! Hora: %s1_TimeStr.</Spanish>
 		<Russian>ВНИМАНИЕ! Настало %s1_TimeStr.</Russian>
 	</TEXT>
@@ -3301,7 +3301,7 @@
 		<English>Alarm will go off at %s1_TimeStr.</English>
 		<French>Le réveil se déclenchera à %s1_TimeStr.</French>
 		<German>Der Alarm wird um %s1_TimeStr ausgelöst.</German>
-		<Italian>L'allarme suonerà tra %s1_TimeStr.</Italian>
+		<Italian>L'avviso si attiverà alle %s1_TimeStr</Italian>
 		<Spanish>La alarma se apagará a la/s %s1_TimeStr.</Spanish>
 		<Russian>Будильник сработает в %s1_TimeStr.</Russian>
 	</TEXT>
@@ -3560,7 +3560,7 @@
 		<English>The file %s1 already exists.[NEWLINE]Press OK to proceed, overwriting the file.</English>
 		<French>Le fichier %s1 existe déjà.[NEWLINE]Cliquez sur OK pour continuer et écraser ce fichier.</French>
 		<German>Die Datei %s1 besteht bereits.[NEWLINE]Wählen Sie OK, um fortzufahren und die Datei zu überschreiben.</German>
-		<Italian>File di salvataggio di Civilization IV %s1 già esistente.[NEWLINE]Premi OK per continuare e sovrascrivere il file.</Italian>
+		<Italian>[BOLD]Il file di salvataggio [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT] esiste già.[NEWLINE][NEWLINE]Premi OK per salvare sovrascrivendo il file.[\BOLD]</Italian>
 		<Spanish>Ya existe el archivo %s1.[NEWLINE]Pulsa 'Aceptar' para continuar y sobrescribirlo.</Spanish>
 		<Russian>Файл %s1 уже существует.[NEWLINE]Нажмите OK чтобы перезаписать файл.</Russian>
 	</TEXT>
@@ -4037,7 +4037,7 @@
 		<English>Cancel</English>
 		<French>Annuler</French>
 		<German>Abbrechen</German>
-		<Italian>Annulla</Italian>
+		<Italian>[BOLD][COLOR_BLACK]Annulla[COLOR_REVERT][\BOLD]</Italian>
 		<Spanish>Cancelar</Spanish>
 		<Russian>Отмена</Russian>
 	</TEXT>
@@ -4074,13 +4074,14 @@
 		<French>Non</French>
 		<German>Nein</German>
 		<Russian>Нет</Russian>
+		<Italian>[COLOR_BLACK]No[COLOR_REVERT]</Italian> <!-- main menu return to desktop -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_YES</Tag>
 		<English>Yes</English>
 		<French>Oui</French>
 		<German>Ja</German>
-		<Italian>Sì</Italian>
+		<Italian>[COLOR_BLACK]Sì[COLOR_REVERT]</Italian> <!-- main menu return to desktop -->
 		<Spanish>Sí</Spanish>
 		<Russian>Да</Russian>
 	</TEXT>
@@ -4089,7 +4090,7 @@
 		<English>Choose a Folder to Play Music From</English>
 		<French>Choisissez le répertoire de lecture de la musique</French>
 		<German>Gewünschten Musikordner wählen</German>
-		<Italian>Scegli la cartella da cui leggere la musica desiderata</Italian>
+		<Italian>Scegli la cartella dove si trova la musica</Italian>
 		<Spanish>Escoge una carpeta desde donde reproducir la música</Spanish>
 		<Russian>Выберите папку с музыкой</Russian>
 	</TEXT>
@@ -4097,7 +4098,7 @@
 		<Tag>TXT_KEY_QUEST_MESSAGE_LOG</Tag>
 		<English>Quests</English>
 		<French>Quêtes</French>
-		<Italian>Missioni</Italian>
+		<Italian>Registro missioni</Italian>
 		<Spanish>Misiones</Spanish>
 		<Russian>Задания</Russian>
 	</TEXT>
@@ -4224,7 +4225,7 @@
 		<English>Save Error</English>
 		<French>Erreur lors de la sauvegarde</French>
 		<German>Speicherfehler</German>
-		<Italian>Errore di salvataggio</Italian>
+		<Italian>Salvataggio interrotto</Italian>
 		<Spanish>Error de guardado.</Spanish>
 		<Russian>Ошибка сохранения</Russian>
 	</TEXT>
@@ -4878,7 +4879,7 @@
 		<English>Buildings</English>
 		<French>Bâtiments</French>
 		<German>Gebäude</German>
-		<Italian>Edifici</Italian>
+		<Italian>Edifici</Italian> <!-- city screen, hover research in upper left, city screen building tab label -->
 		<Spanish>Edificios</Spanish>
 		<Russian>Здания</Russian>
 	</TEXT>
@@ -5030,7 +5031,7 @@
 		<English>Map Size: %s1_size</English>
 		<French>Taille carte : %s1_size</French>
 		<German>Kartengröße: %s1_size</German>
-		<Italian>Dimensioni mappa: %s1_size</Italian>
+		<Italian>Dimensione mappa: %s1_size</Italian>
 		<Spanish>Tamaño: %s1_size</Spanish>
 		<Russian>Размер карты: %s1_size</Russian>
 	</TEXT>
