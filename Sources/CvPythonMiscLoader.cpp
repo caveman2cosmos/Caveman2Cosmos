@@ -1,0 +1,359 @@
+#include "CvPythonMiscLoader.h"
+#include "CySelectionGroup.h"
+#include "CvInfos.h"
+#include "CvBonusInfo.h"
+#include "CvImprovementInfo.h"
+#include "CvBuildingInfo.h"
+#include "CyReplayInfo.h"
+#include "CyPlayer.h"
+#include "CyTeam.h"
+#include "CvGameCoreDLL.h"
+#include "CvTraitInfo.h"
+#include "CyGame.h"
+#include "CyCity.h"
+#include "CyMap.h"
+#include "CyDeal.h"
+#include <boost/python/class.hpp>
+#include <boost/python/manage_new_object.hpp>
+
+
+void CvPythonMiscLoader::CySelectionGroupInterface()
+{
+	OutputDebugString("Python Extension Module - CySelectionGroupInterface\n");
+
+	boost::python::class_<CySelectionGroup>("CySelectionGroup", boost::python::no_init)
+		.def("pushMission", &CySelectionGroup::pushMission, "void (eMission, iData1, iData2, iFlags, bAppend, bManual, eMissionAI, pMissionAIPlot, pMissionAIUnit)")
+		.def("canStartMission", &CySelectionGroup::canStartMission, "bool (int iMission, int iData1, int iData2, CyPlot* pPlot, bool bTestVisible)")
+
+		.def("isHuman", &CySelectionGroup::isHuman, "bool ()")
+		.def("baseMoves", &CySelectionGroup::baseMoves, "int ()")
+		.def("isWaiting", &CySelectionGroup::isWaiting, "bool ()")
+		.def("isFull", &CySelectionGroup::isFull, "bool ()")
+		.def("hasMoved", &CySelectionGroup::hasMoved, "bool ()")
+		.def("canFight", &CySelectionGroup::canFight, "bool ()")
+		.def("isInvisible", &CySelectionGroup::isInvisible, "bool (int eTeam)")
+
+		.def("plot", &CySelectionGroup::plot, boost::python::return_value_policy<boost::python::manage_new_object>(), "CyPlot () - get plot that the group is on")
+		.def("area", &CySelectionGroup::area, boost::python::return_value_policy<boost::python::manage_new_object>(), "CyArea ()*")
+
+		.def("readyToMove", &CySelectionGroup::readyToMove, "bool (bool bAny) - is the group awake and ready to move?")
+
+		.def("getID", &CySelectionGroup::getID, "int () - the ID for the SelectionGroup")
+		.def("getOwner", &CySelectionGroup::getOwner, "int (PlayerTypes) () - ID for owner of the group")
+		.def("getTeam", &CySelectionGroup::getTeam, "int (TeamTypes) () - ID for team owner of the group")
+		.def("getActivityType", &CySelectionGroup::getActivityType, "int /*ActivityTypes*/ () - ActivityTypes the group is engaging in")
+		.def("setActivityType", &CySelectionGroup::setActivityType, "void (int /*ActivityTypes*/ eNewValue) - set the group to this ActivityTypes")
+		.def("getAutomateType", &CySelectionGroup::getAutomateType, "int /*AutomateTypes*/ () - AutomateTypes the group is engaging in")
+		.def("isAutomated", &CySelectionGroup::isAutomated, "bool () - Is the group automated?")
+		.def("setAutomateType", &CySelectionGroup::setAutomateType, "void (int /*AutomateTypes*/ eNewValue) - get the group to perform this AutomateTypes")
+
+		.def("getNumUnits", &CySelectionGroup::getNumUnits, "int ()")			// JS Help!
+		.def("getLengthMissionQueue", &CySelectionGroup::getLengthMissionQueue, "int ()")
+		.def("getHeadUnit", &CySelectionGroup::getHeadUnit, boost::python::return_value_policy<boost::python::manage_new_object>(), "CyUnit* ()")
+		.def("getMissionType", &CySelectionGroup::getMissionType, "int (int iNode)")
+		.def("getMissionData1", &CySelectionGroup::getMissionData1, "int (int iNode)");
+}
+void CvPythonMiscLoader::CyGamePythonInterface()
+{
+	OutputDebugString("Python Extension Module - CyGamePythonInterface\n");
+
+	boost::python::class_<CyGame>("CyGame")
+
+		.def("getCurrentMap", &CyGame::getCurrentMap, "int ()")
+
+		.def("isMultiplayer", &CyGame::isMultiplayer, "CyGame* () - is the instance valid?")
+
+		.def("updateScore", &CyGame::updateScore, "void (bool bForce)")
+
+		.def("selectionListMove", &CyGame::selectionListMove, "void (CyPlot* pPlot, bool bAlt, bool bShift, bool bCtrl)")
+		.def("selectionListGameNetMessage", &CyGame::selectionListGameNetMessage, "void (int eMessage, int iData2, int iData3, int iData4, int iFlags, bool bAlt, bool bShift)")
+		.def("selectedCitiesGameNetMessage", &CyGame::selectedCitiesGameNetMessage, "void (int eMessage, int iData2, int iData3, int iData4, bool bOption, bool bAlt, bool bShift, bool bCtrl)")
+		.def("cityPushOrder", &CyGame::cityPushOrder, "void (CyCity* pCity, OrderTypes eOrder, int iData, bool bAlt, bool bShift, bool bCtrl)")
+
+		.def("getSymbolID", &CyGame::getSymbolID, "int (int iSymbol)")
+
+		.def("getProductionPerPopulation", &CyGame::getProductionPerPopulation, "int (int /*HurryTypes*/ eHurry)")
+
+		.def("getAdjustedPopulationPercent", &CyGame::getAdjustedPopulationPercent, "int (int eVictory)")
+		.def("getAdjustedLandPercent", &CyGame::getAdjustedLandPercent, "int (int eVictory)")
+
+		.def("isTeamVote", &CyGame::isTeamVote, "bool (int eVote)")
+		.def("isChooseElection", &CyGame::isChooseElection, "bool (int eVote)")
+		.def("isTeamVoteEligible", &CyGame::isTeamVoteEligible, "bool (int eTeam, int eVoteSource)")
+		.def("countPossibleVote", &CyGame::countPossibleVote, "int (int eVote, int eVoteSource)")
+		.def("getVoteRequired", &CyGame::getVoteRequired, "int (int eVote, int eVoteSource)")
+		.def("getSecretaryGeneral", &CyGame::getSecretaryGeneral, "int (int eVoteSource)")
+		.def("canHaveSecretaryGeneral", &CyGame::canHaveSecretaryGeneral, "bool (int eVoteSource)")
+		.def("getVoteSourceReligion", &CyGame::getVoteSourceReligion, "int (int /*VoteSourceTypes*/ eVoteSource)")
+
+		.def("countCivPlayersAlive", &CyGame::countCivPlayersAlive, "int ()")
+		.def("countCivPlayersEverAlive", &CyGame::countCivPlayersEverAlive, "int ()")
+		.def("countCivTeamsAlive", &CyGame::countCivTeamsAlive, "int ()")
+		.def("countCivTeamsEverAlive", &CyGame::countCivTeamsEverAlive, "int ()")
+
+		.def("countTotalCivPower", &CyGame::countTotalCivPower, "int ()")
+		.def("countTotalNukeUnits", &CyGame::countTotalNukeUnits, "int ()")
+		.def("countKnownTechNumTeams", &CyGame::countKnownTechNumTeams, "int (int eTech)")
+
+		.def("countReligionLevels", &CyGame::countReligionLevels, "int (int eReligion)")
+		.def("calculateReligionPercent", &CyGame::calculateReligionPercent, "int (int eReligion)")
+		.def("countCorporationLevels", &CyGame::countCorporationLevels, "int (int eCorporation)")
+
+		.def("goldenAgeLength100", &CyGame::goldenAgeLength100, "int ()")
+		.def("victoryDelay", &CyGame::victoryDelay, "int (int /*VictoryTypes*/ eVictory)")
+		.def("getImprovementUpgradeTime", &CyGame::getImprovementUpgradeTime, "int (int /*ImprovementTypes*/ eImprovement)")
+		.def("canTrainNukes", &CyGame::canTrainNukes, "bool ()")
+
+		.def("getHighestEra", &CyGame::getHighestEra, "int /*EratTypes*/ ()")
+		.def("getCurrentEra", &CyGame::getCurrentEra, "int /*EratTypes*/ ()")
+
+		.def("getActiveTeam", &CyGame::getActiveTeam, "int () - returns ID for the group")
+		.def("getActiveCivilizationType", &CyGame::getActiveCivilizationType, "int () - returns CivilizationID" )
+		.def("isNetworkMultiPlayer", &CyGame::isNetworkMultiPlayer, "bool () - NetworkMultiplayer()? ")
+		.def("isGameMultiPlayer", &CyGame::isGameMultiPlayer, "bool () - GameMultiplayer()? ")
+		.def("isTeamGame", &CyGame::isTeamGame, "bool ()")
+		.def("getNumHumanPlayers", &CyGame::getNumHumanPlayers, "int () - # of human players in-game")
+
+		.def("isModem", &CyGame::isModem, "bool () - Using a modem? ")
+		.def("setModem", &CyGame::setModem, "void (bool bModem) - Use a modem! (or don't)")
+
+		.def("getGameTurn", &CyGame::getGameTurn, "int () - current game turn")
+		.def("setGameTurn", &CyGame::setGameTurn, "void (iNewValue) - set current game turn")
+		.def("getTurnYear", &CyGame::getTurnYear, "int (iGameTurn) - turn Time")
+		.def("getGameTurnYear", &CyGame::getGameTurnYear)
+		.def("getElapsedGameTurns", &CyGame::getElapsedGameTurns, "int () - Elapsed turns thus far")
+		.def("getMaxTurns", &CyGame::getMaxTurns)
+		.def("setMaxTurns", &CyGame::setMaxTurns)
+		.def("changeMaxTurns", &CyGame::changeMaxTurns)
+		.def("getMaxCityElimination", &CyGame::getMaxCityElimination)
+		.def("setMaxCityElimination", &CyGame::setMaxCityElimination)
+		.def("getNumAdvancedStartPoints", &CyGame::getNumAdvancedStartPoints)
+		.def("setNumAdvancedStartPoints", &CyGame::setNumAdvancedStartPoints)
+		.def("getStartTurn", &CyGame::getStartTurn, "int () - Returns the starting Turn (0 unless a scenario or advanced era start)")
+		.def("getStartYear", &CyGame::getStartYear, "int () - Returns the starting year (e.g. -4000)")
+		.def("setStartYear", &CyGame::setStartYear, "void () - Sets the starting year (e.g. -4000)")
+		.def("getEstimateEndTurn", &CyGame::getEstimateEndTurn)
+		.def("setEstimateEndTurn", &CyGame::setEstimateEndTurn)
+		.def("getTurnSlice", &CyGame::getTurnSlice)
+		.def("getMinutesPlayed", &CyGame::getMinutesPlayed, "Returns the number of minutes since the game began")
+		.def("getTargetScore", &CyGame::getTargetScore)
+		.def("setTargetScore", &CyGame::setTargetScore)
+
+		.def("getNumGameTurnActive", &CyGame::getNumGameTurnActive)
+		.def("countNumHumanGameTurnActive", &CyGame::countNumHumanGameTurnActive)
+		.def("getNumCities", &CyGame::getNumCities, "int () - total cities in Game")
+		.def("getNumCivCities", &CyGame::getNumCivCities, "int () - total non-barbarian cities in Game")
+		.def("getTotalPopulation", &CyGame::getTotalPopulation, "int () - total game population")
+
+		.def("getTradeRoutes", &CyGame::getTradeRoutes)
+		.def("changeTradeRoutes", &CyGame::changeTradeRoutes)
+		.def("getFreeTradeCount", &CyGame::getFreeTradeCount)
+		.def("isFreeTrade", &CyGame::isFreeTrade)
+		.def("changeFreeTradeCount", &CyGame::changeFreeTradeCount)
+		.def("getNoNukesCount", &CyGame::getNoNukesCount)
+		.def("isNoNukes", &CyGame::isNoNukes)
+		.def("changeNoNukesCount", &CyGame::changeNoNukesCount)
+		.def("getSecretaryGeneralTimer", &CyGame::getSecretaryGeneralTimer)
+		.def("getVoteTimer", &CyGame::getVoteTimer)
+		.def("getNukesExploded", &CyGame::getNukesExploded)
+		.def("changeNukesExploded", &CyGame::changeNukesExploded)
+
+		.def("getMaxPopulation", &CyGame::getMaxPopulation)
+		.def("getMaxLand", &CyGame::getMaxLand)
+		.def("getMaxTech", &CyGame::getMaxTech)
+		.def("getMaxWonders", &CyGame::getMaxWonders)
+		.def("getInitPopulation", &CyGame::getInitPopulation)
+		.def("getInitLand", &CyGame::getInitLand)
+		.def("getInitTech", &CyGame::getInitTech)
+		.def("getInitWonders", &CyGame::getInitWonders)
+
+		.def("getAIAutoPlay", &CyGame::getAIAutoPlay, "int (int iPlayer)")
+		.def("setAIAutoPlay", &CyGame::setAIAutoPlay, "void (int iPlayer, int iValue)")
+		.def("isForcedAIAutoPlay", &CyGame::isForcedAIAutoPlay, "bool (int iPlayer)")
+		.def("getForcedAIAutoPlay", &CyGame::getForcedAIAutoPlay, "int (int iPlayer)")
+		.def("setForcedAIAutoPlay", &CyGame::setForcedAIAutoPlay, "void (int iPlayer, int iValue, bool bForced)")
+
+		.def("isScoreDirty", &CyGame::isScoreDirty, "bool ()")
+		.def("setScoreDirty", &CyGame::setScoreDirty)
+		.def("getCircumnavigatedTeam", &CyGame::getCircumnavigatedTeam, "int ()")
+		.def("setCircumnavigatedTeam", &CyGame::setCircumnavigatedTeam, "void (int iTeamType)")
+		.def("isDiploVote", &CyGame::isDiploVote, "bool (VoteSourceTypes)")
+		.def("changeDiploVote", &CyGame::changeDiploVote, "void (VoteSourceTypes, int)")
+		.def("isDebugMode", &CyGame::isDebugMode, "bool () - is the game in Debug Mode?")
+		.def("toggleDebugMode", &CyGame::toggleDebugMode)
+
+		.def("getPitbossTurnTime", &CyGame::getPitbossTurnTime, "int ()")
+		.def("setPitbossTurnTime", &CyGame::setPitbossTurnTime, "void (int)")
+		.def("isHotSeat", &CyGame::isHotSeat, "bool ()")
+		.def("isPbem", &CyGame::isPbem, "bool ()")
+		.def("isPitboss", &CyGame::isPitboss, "bool ()")
+		.def("isSimultaneousTeamTurns", &CyGame::isSimultaneousTeamTurns, "bool ()")
+
+		.def("isFinalInitialized", &CyGame::isFinalInitialized, "bool () - Returns whether or not the game initialization process has ended (game has started)")
+		.def("onFinalInitialized", &CyGame::onFinalInitialized,
+			"void (bool bNewGame) - dll is poor at homing in on the load save finished game event, so python will notify it about that and new game event as well."
+		)
+		.def("getActivePlayer", &CyGame::getActivePlayer, "returns index of the active player")
+		.def("setActivePlayer", &CyGame::setActivePlayer, "void (int /*PlayerTypes*/ eNewValue, bool bForceHotSeat)")
+		.def("getPausePlayer", &CyGame::getPausePlayer, "int () - will get who paused us")
+		.def("isPaused", &CyGame::isPaused, "bool () - will say if the game is paused")
+		.def("getBestLandUnit", &CyGame::getBestLandUnit, "returns index of the best unit")
+		.def("getBestLandUnitCombat", &CyGame::getBestLandUnitCombat, "int ()")
+		.def("getWinner", &CyGame::getWinner)
+		.def("getVictory", &CyGame::getVictory)
+		.def("setWinner", &CyGame::setWinner)
+		.def("getGameState", &CyGame::getGameState)
+		.def("getHandicapType", &CyGame::getHandicapType, "HandicapType () - difficulty level settings")
+		.def("getCalendar", &CyGame::getCalendar, "CalendarType ()")
+		.def("getStartEra", &CyGame::getStartEra)
+		.def("getGameSpeedType", &CyGame::getGameSpeedType)
+		.def("getRankPlayer", &CyGame::getRankPlayer)
+		.def("getPlayerRank", &CyGame::getPlayerRank)
+		.def("getPlayerScore", &CyGame::getPlayerScore)
+		.def("getRankTeam", &CyGame::getRankTeam)
+		.def("getTeamRank", &CyGame::getTeamRank)
+		.def("getTeamScore", &CyGame::getTeamScore)
+		.def("isOption", &CyGame::isOption, "bool (eIndex) - returns whether Game Option is valid")
+		.def("setOption", &CyGame::setOption, "void (GameOptionIndex, bEnabled) - sets a Game Option")
+		.def("isMPOption", &CyGame::isMPOption, "bool (eIndex) - returns whether MP Option is valid")
+		.def("isForcedControl", &CyGame::isForcedControl, "bool (eIndex) - returns whether Control should be forced")
+		.def("getUnitCreatedCount", &CyGame::getUnitCreatedCount, "int (eIndex) - returns number of this unit type created (?)")
+		.def("getBuildingCreatedCount", &CyGame::getBuildingCreatedCount, "int (BuildingType) - building count")
+		.def("isBuildingMaxedOut", &CyGame::isBuildingMaxedOut, "bool (BuildingType) - max # reached?")
+		.def("isUnitMaxedOut", &CyGame::isUnitMaxedOut, "bool (eIndex, iExtra) - returns whether or not this unit class is maxed out (e.g. spies)")
+
+		.def("getProjectCreatedCount", &CyGame::getProjectCreatedCount, "int (ProjectTypes eIndex)")
+		.def("isProjectMaxedOut", &CyGame::isProjectMaxedOut, "bool (ProjectTypes eIndex)")
+
+		.def("getForceCivicCount", &CyGame::getForceCivicCount, "int (CivicTypes eIndex)")
+		.def("isForceCivic", &CyGame::isForceCivic, "bool (CivicTypes eIndex)")
+		.def("isForceCivicOption", &CyGame::isForceCivicOption, "bool (CivicOptionTypes eCivicOption)")
+
+		.def("getVoteOutcome", &CyGame::getVoteOutcome, "int (VoteTypes eIndex)")
+
+		.def("getReligionGameTurnFounded", &CyGame::getReligionGameTurnFounded)
+		.def("isReligionFounded", &CyGame::isReligionFounded, "bool (ReligionID) - is religion founded?")
+		.def("isReligionSlotTaken", &CyGame::isReligionSlotTaken, "bool (ReligionID) - is religion in that tech slot founded?")
+
+		.def("isGameStart", &CyGame::isGameStart, "bool ()")
+		.def("countNumReligionsFounded", &CyGame::countNumReligionsFounded, "int ()")
+		.def("countNumReligionTechsDiscovered", &CyGame::countNumReligionTechsDiscovered, "int ()")
+		.def("isTechCanFoundReligion", &CyGame::isTechCanFoundReligion, "bool (TechID) - can this tech found a religion?")
+
+		.def("getCorporationGameTurnFounded", &CyGame::getCorporationGameTurnFounded)
+		.def("isCorporationFounded", &CyGame::isCorporationFounded, "bool (CorporationID) - is corporation founded?")
+		.def("isVictoryValid", &CyGame::isVictoryValid)
+		.def("isVotePassed", &CyGame::isVotePassed)
+		.def("isSpecialUnitValid", &CyGame::isSpecialUnitValid)
+		.def("makeSpecialUnitValid", &CyGame::makeSpecialUnitValid)
+
+		.def("isSpecialBuildingValid", &CyGame::isSpecialBuildingValid)
+		.def("makeSpecialBuildingValid", &CyGame::makeSpecialBuildingValid)
+
+		.def("isInAdvancedStart", &CyGame::isInAdvancedStart, "bool")
+
+		.def("getHolyCity", &CyGame::getHolyCity, boost::python::return_value_policy<boost::python::manage_new_object>(), "CyCity getHolyCity()")
+		.def("setHolyCity", &CyGame::setHolyCity, "void (int eIndex, CyCity *pNewValue, bAnnounce) - Sets holy city for religion eIndex to pNewValue")
+		.def("clearHolyCity", &CyGame::clearHolyCity, "void (int eIndex) - clears the holy city for religion eIndex")
+
+		.def("getHeadquarters", &CyGame::getHeadquarters, boost::python::return_value_policy<boost::python::manage_new_object>(), "CyCity getHeadquarters()")
+		.def("setHeadquarters", &CyGame::setHeadquarters, "void (int eIndex, CyCity *pNewValue, bAnnounce) - Sets headquarters for corporation eIndex to pNewValue")
+		.def("clearHeadquarters", &CyGame::clearHeadquarters, "void (int eIndex) - clears the headquarters for corporation eIndex")
+
+		.def("getPlayerVote", &CyGame::getPlayerVote)
+
+		.def("getScriptData", &CyGame::getScriptData, "str () - Returns ScriptData member (used to store custom data)")
+		.def("setScriptData", &CyGame::setScriptData, "void (str) - Sets ScriptData member (used to store custom data)")
+
+		.def("setName", &CyGame::setName)
+		.def("getName", &CyGame::getName)
+		.def("getIndexAfterLastDeal", &CyGame::getIndexAfterLastDeal)
+		.def("getNumDeals", &CyGame::getNumDeals)
+		.def("getDeal", &CyGame::getDeal, boost::python::return_value_policy<boost::python::manage_new_object>())
+		.def("addDeal", &CyGame::addDeal, boost::python::return_value_policy<boost::python::manage_new_object>())
+		.def("getMapRand", &CyGame::getMapRand, boost::python::return_value_policy<boost::python::reference_existing_object>())
+		.def("getMapRandNum", &CyGame::getMapRandNum)
+		.def("getSorenRand", &CyGame::getSorenRand, boost::python::return_value_policy<boost::python::reference_existing_object>())
+		.def("getSorenRandNum", &CyGame::getSorenRandNum)
+		.def("calculateSyncChecksum", &CyGame::calculateSyncChecksum)
+		.def("calculateOptionsChecksum", &CyGame::calculateOptionsChecksum)
+
+		.def("GetWorldBuilderMode", &CyGame::GetWorldBuilderMode)
+		.def("isPitbossHost", &CyGame::isPitbossHost)
+		.def("getCurrentLanguage", &CyGame::getCurrentLanguage)
+		.def("setCurrentLanguage", &CyGame::setCurrentLanguage)
+
+		.def("getReplayMessageTurn", &CyGame::getReplayMessageTurn)
+		.def("getReplayMessageType", &CyGame::getReplayMessageType)
+		.def("getReplayMessagePlotX", &CyGame::getReplayMessagePlotX)
+		.def("getReplayMessagePlotY", &CyGame::getReplayMessagePlotY)
+		.def("getReplayMessagePlayer", &CyGame::getReplayMessagePlayer)
+		.def("getReplayMessageColor", &CyGame::getReplayMessageColor)
+		.def("getReplayMessageText", &CyGame::getReplayMessageText)
+		.def("getNumReplayMessages", &CyGame::getNumReplayMessages)
+		.def("getReplayInfo", &CyGame::getReplayInfo, boost::python::return_value_policy<boost::python::manage_new_object>())
+		.def("hasSkippedSaveChecksum", &CyGame::hasSkippedSaveChecksum)
+		.def("saveReplay", &CyGame::saveReplay)
+
+		.def("addPlayer", &CyGame::addPlayer, "void (int eNewPlayer, int eLeader, int eCiv)")
+		//.def("addPlayer", &CyGame::addPlayer, "void (int eNewPlayer, int eLeader, int eCiv, [bool bSetAlive = true]) - if bSetAlive = false new player isn't set to be alive and won't die if not given units or cities")
+		.def("changeHumanPlayer", &CyGame::changeHumanPlayer, "void ( int /*PlayerTypes*/ eOldHuman, int /*PlayerTypes*/ eNewHuman )" )
+		.def("addReplayMessage", &CyGame::addReplayMessage, "void (int /*ReplayMessageTypes*/ eType, int /*PlayerTypes*/ ePlayer, std::wstring pszText, int iPlotX, int iPlotY, int /*ColorTypes*/ eColor)" )
+		.def("log", &CyGame::log)
+		.def("logw", &CyGame::logw, "void log(wstring str)")
+
+		.def("setPlotExtraYield", &CyGame::setPlotExtraYield, "void (int iX, int iY, int /*YieldTypes*/ eYield, int iExtraYield)")
+
+		.def("isCivEverActive", &CyGame::isCivEverActive, "bool (int /*CivilizationTypes*/ eCivilization)")
+		.def("isLeaderEverActive", &CyGame::isLeaderEverActive, "bool (int /*LeaderHeadTypes*/ eLeader)")
+
+		.def("isEventActive", &CyGame::isEventActive, "bool (int /*EventTriggerTypes*/ eTrigger)")
+		.def("doControl", &CyGame::doControl, "void (int /*ControlTypes*/ iControl)")
+
+		.def("canRegenerateMap", &CyGame::canRegenerateMap, "bool ()")
+		.def("regenerateMap", &CyGame::regenerateMap, "void ()")
+
+		.def("saveGame", &CyGame::saveGame, "void saveGame(string filename)")
+
+		.def("getDLLPath", &CyGame::getDLLPath, "string getDLLPath()")
+		.def("getExePath", &CyGame::getExePath, "string getExePath()")
+
+		.def("getStarshipLaunched", &CyGame::getStarshipLaunched, "bool ()")
+		.def("getDiplomaticVictoryAchieved", &CyGame::getDiplomaticVictoryAchieved, "bool ()")
+		.def("getCutLosersCounter", &CyGame::getCutLosersCounter)
+		.def("getHighToLowCounter", &CyGame::getHighToLowCounter)
+
+		.def("isModderGameOption", &CyGame::isModderGameOption, "bool ()")
+		.def("getModderGameOption", &CyGame::getModderGameOption, "bool ()")
+		.def("setModderGameOption", &CyGame::setModderGameOption, "void (int iNewVal)")
+
+		.def("canEverConstruct", &CyGame::canEverConstruct, "bool (int iBuilding)")
+		.def("canEverTrain", &CyGame::canEverTrain, "bool (int iUnit)")
+		.def("canEverSpread", &CyGame::canEverSpread, "bool (int iCorporation)")
+
+		.def("getC2CVersion", &CyGame::getC2CVersion, "const char* ()")
+
+		.def("assignStartingPlots", &CyGame::assignStartingPlots, "void (bool bScenario, bool bMapScript)")
+
+		.def("exitWorldBuilder", &CyGame::exitWorldBuilder, "void ()")
+	;
+
+
+	boost::python::class_<CyDeal>("CyDeal")
+
+		.def("isNone", &CyDeal::isNone)
+		.def("getID", &CyDeal::getID)
+		.def("getInitialGameTurn", &CyDeal::getInitialGameTurn)
+		.def("getFirstPlayer", &CyDeal::getFirstPlayer)
+		.def("getSecondPlayer", &CyDeal::getSecondPlayer)
+		.def("getLengthFirstTrades", &CyDeal::getLengthFirstTrades)
+		.def("getLengthSecondTrades", &CyDeal::getLengthSecondTrades)
+		.def("getFirstTrade", &CyDeal::getFirstTrade, boost::python::return_value_policy<boost::python::reference_existing_object>())
+		.def("getSecondTrade", &CyDeal::getSecondTrade, boost::python::return_value_policy<boost::python::reference_existing_object>())
+		.def("kill", &CyDeal::kill)
+
+		.def("isCancelable", &CyDeal::isCancelable, "bool isCancelable(int /*PlayerTypes*/ eByPlayer, bool bIgnoreWaitingPeriod)")
+		.def("getCannotCancelReason", &CyDeal::getCannotCancelReason, "string getCannotCancelReason(int /*PlayerTypes*/ eByPlayer)")
+		.def("turnsToCancel", &CyDeal::turnsToCancel, "int turnsToCancel(int /*PlayerTypes*/ eByPlayer)")
+	;
+}

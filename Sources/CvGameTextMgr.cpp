@@ -26,6 +26,7 @@
 #include "CvGlobals.h"
 #include "CvGameTextMgr.h"
 #include "CvImprovementInfo.h"
+#include "CvUnitCombatInfo.h"
 #include "CvInfos.h"
 #include "CvMap.h"
 #include "CvPlayerAI.h"
@@ -38,6 +39,7 @@
 #include "CvDLLInterfaceIFaceBase.h"
 #include "CvDLLSymbolIFaceBase.h"
 #include "CvDLLUtilityIFaceBase.h"
+#include "CvTraitInfo.h"
 
 int shortenID(int iId)
 {
@@ -18513,7 +18515,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_TRAP_COMPLEXITY", iComplexity));
 		}
-
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 		//Afflict on Attack
 		for (int iI = 0; iI < kUnit.getNumAfflictOnAttackTypes(); ++iI)
 		{
@@ -18530,6 +18532,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 				szBuffer.append(gDLL->getText("TXT_KEY_AFFLICT_ON_ATTACK", iProbability, GC.getPromotionLineInfo(eAfflictionLine).getDescription()));
 			}
 		}
+#endif
 
 		if (kUnit.getPoisonProbabilityModifier() > 0)
 		{

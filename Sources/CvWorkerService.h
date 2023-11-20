@@ -1,12 +1,12 @@
 ﻿#pragma once
 
+#ifndef CV_WORKER_SERVICE
+#define CV_WORKER_SERVICE
+
 #include "CvPlot.h"
 #include "CvCity.h"
 
 class CvBuildInfo;
-
-#ifndef CV_WORKER_SERVICE
-#define CV_WORKER_SERVICE
 
 class CvWorkerService
 {

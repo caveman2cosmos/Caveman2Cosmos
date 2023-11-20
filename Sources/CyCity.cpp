@@ -1,4 +1,5 @@
 #include "CvGameCoreDLL.h"
+#include "CityOutputHistory.h"
 #include "CvArea.h"
 #include "CvCity.h"
 #include "CyArea.h"

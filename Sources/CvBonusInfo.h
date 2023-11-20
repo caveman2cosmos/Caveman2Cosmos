@@ -1,10 +1,12 @@
 #pragma once
 
-#include "CvInfos.h"
-#include <vector>
 
 #ifndef CV_BONUSINFO_H
 #define CV_BONUSINFO_H
+
+#include "CvInfos.h"
+#include <vector>
+
 
 class CvArtInfoBonus;
 
@@ -31,11 +33,7 @@ public:
 	int getMinLatitude() const;
 	int getMaxLatitude() const;
 	int getPlacementOrder() const;
-	int getConstAppearance() const;
-	int getRandAppearance1() const;
-	int getRandAppearance2() const;
-	int getRandAppearance3() const;
-	int getRandAppearance4() const;
+	int getRandAppearance() const;
 	int getPercentPerPlayer() const;
 	int getTilesPer() const;
 	int getMinLandPercent() const;
@@ -50,6 +48,7 @@ public:
 	bool isBonusCoastalOnly() const;
 	bool isNoRiverSide() const;
 	bool isNormalize() const;
+	bool isMapBonus() const;
 
 	const char* getArtDefineTag() const;
 
@@ -89,6 +88,11 @@ public:
 	int getNumProvidedByImprovementTypes() const;
 	bool isProvidedByImprovementType(const ImprovementTypes i) const;
 	void setProvidedByImprovementTypes(const ImprovementTypes eType);
+	int m_iConstAppearance;
+	int m_iRandAppearance1;
+	int m_iRandAppearance2;
+	int m_iRandAppearance3;
+	int m_iRandAppearance4;
 
 private:
 	CvPropertyManipulators m_PropertyManipulators;
@@ -106,11 +110,7 @@ private:
 	int m_iMinLatitude;
 	int m_iMaxLatitude;
 	int m_iPlacementOrder;
-	int m_iConstAppearance;
-	int m_iRandAppearance1;
-	int m_iRandAppearance2;
-	int m_iRandAppearance3;
-	int m_iRandAppearance4;
+
 	int m_iPercentPerPlayer;
 	int m_iTilesPer;
 	int m_iMinLandPercent;

@@ -38,7 +38,7 @@ class CvForeignAdvisor:
 		aBonusList2 = []
 		for iBonus in xrange(GC.getNumBonusInfos()):
 			CvBonusInfo = GC.getBonusInfo(iBonus)
-			if CvBonusInfo.getConstAppearance() > 0: # Map resource
+			if CvBonusInfo.isMapBonus(): # Map resource
 				aBonusList0.append(iBonus)
 			elif CvBonusInfo.getBonusClassType() != BONUSCLASS_CULTURE:
 				aBonusList1.append(iBonus)
