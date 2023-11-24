@@ -19588,6 +19588,22 @@ void CvPlayer::read(FDataStreamBase* pStream)
 				}
 			}
 		}
+		{
+			int iMilitary = 0;
+
+			foreach_(const CvUnit* unitX, units())
+			{
+				if (!unitX->isTempUnit() && GC.getUnitInfo(unitX->getUnitType()).isMilitarySupport())
+				{
+					iMilitary++;
+				}
+			}
+			if (iMilitary != m_iNumMilitaryUnits)
+			{
+				FErrorMsg("count of military unit out of sync! Correcting");
+				m_iNumMilitaryUnits = iMilitary;
+			}
+		}
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iOtherAreaMaintenanceModifier);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iHomeAreaMaintenanceModifier);
 		//Example of how to skip element

@@ -14627,21 +14627,23 @@ bool CvCity::processGreatWall(bool bIn, bool bForce, bool bSeeded)
 
 				FAssert(eDummyUnit != NO_UNIT);
 			}
-			CvUnit* pTempUnit = GET_PLAYER(getOwner()).getTempUnit(eDummyUnit, getX(), getY());
-			CvReachablePlotSet	plotSet(pTempUnit->getGroup(), MOVE_OUR_TERRITORY, MAX_INT);
-
-			for (CvReachablePlotSet::const_iterator itr = plotSet.begin(); itr != plotSet.end(); ++itr)
+			if (eDummyUnit != NO_UNIT)
 			{
-				const CvCity* pCity = itr.plot()->getPlotCity();
+				CvUnit* pTempUnit = GET_PLAYER(getOwner()).getTempUnit(eDummyUnit, getX(), getY());
+				CvReachablePlotSet	plotSet(pTempUnit->getGroup(), MOVE_OUR_TERRITORY, MAX_INT);
 
-				if (pCity != NULL && pCity->isInViewport())
+				for (CvReachablePlotSet::const_iterator itr = plotSet.begin(); itr != plotSet.end(); ++itr)
 				{
-					pUseCity = pCity;
-					break;
-				}
-			}
+					const CvCity* pCity = itr.plot()->getPlotCity();
 
-			GET_PLAYER(getOwner()).releaseTempUnit();
+					if (pCity != NULL && pCity->isInViewport())
+					{
+						pUseCity = pCity;
+						break;
+					}
+				}
+				GET_PLAYER(getOwner()).releaseTempUnit();
+			}
 		}
 
 		//	If no suitable city is within the viewport we'll have to move the viewport
