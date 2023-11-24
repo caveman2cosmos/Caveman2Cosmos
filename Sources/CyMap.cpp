@@ -288,9 +288,9 @@ CyPlot* CyMap::plotByIndex(int iIndex)
 //
 CyPlot* CyMap::sPlotByIndex(int iIndex)
 {
-	static CyPlot plot;
-	if (m_pMap)
+	if (m_pMap && m_pMap->plotByIndex(iIndex))
 	{
+		static CyPlot plot;
 		plot.setPlot(m_pMap->plotByIndex(iIndex));
 		return &plot;
 	}
@@ -299,7 +299,11 @@ CyPlot* CyMap::sPlotByIndex(int iIndex)
 
 CyPlot* CyMap::plot(int iX, int iY)
 {
-	return new CyPlot(m_pMap->plot(iX, iY));
+	if (m_pMap->plot(iX, iY))
+	{
+		return new CyPlot(m_pMap->plot(iX, iY));
+	}
+	return NULL;
 }
 
 //
