@@ -31,42 +31,42 @@
 		<English>[ICON_BULLET]%D1_Mod %F2_Icon Spot on %s3_TypeName.</English>
 		<French>[ICON_BULLET]%D1_Mod de Perception %F2_Icon lorsque sur une case de type %s3_TypeName.</French>
 		<German>[ICON_BULLET]%D1_Mod %F2_Icon-Sicht (%s3_TypeName)</German>
-		<Italian>[ICON_BULLET]Su caselle con il miglioramento [COLOR_HIGHLIGHT_TEXT]%s3_TypeName[COLOR_REVERT] individuazione di tipo %F2_Icon [COLOR_HIGHLIGHT_TEXT]%D1_Mod[COLOR_REVERT]</Italian> <!-- unit Ambusher with Hide and Seek option -->
+		<Italian>[ICON_BULLET]Su caselle con il miglioramento [COLOR_HIGHLIGHT_TEXT]%s3_TypeName[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]individuazione[COLOR_REVERT] di tipo %F2_Icon: [COLOR_HIGHLIGHT_TEXT]%D1_Mod[COLOR_REVERT]</Italian> <!-- unit Ambusher with Hide and Seek option -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_PLOT_RANGE_CHANGE</Tag>
 		<English>[ICON_BULLET]%D1_Mod %F2_Icon Spot Range on %s3_TypeName.</English>
 		<French>[ICON_BULLET]%D1_Mod à la portée de Perception %F2_Icon lorsque sur une case de type %s3_TypeName.</French>
 		<German>[ICON_BULLET]%D1_Mod %F2_Icon-Sichtweite (%s3_TypeName)</German>
-		<Italian>[ICON_BULLET]Sulle caselle con [COLOR_HIGHLIGHT_TEXT]%s3_TypeName[COLOR_REVERT] raggio di individuazione di tipo %F2_Icon [COLOR_HIGHLIGHT_TEXT]%D1_Mod[COLOR_REVERT]</Italian> <!-- unit Ambusher with Hide and Seek option -->
+		<Italian>[ICON_BULLET]Sulle caselle con [COLOR_HIGHLIGHT_TEXT]%s3_TypeName[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT] raggio di individuazione [COLOR_REVERT] di tipo %F2_Icon: [COLOR_HIGHLIGHT_TEXT]%D1_Mod[COLOR_REVERT]</Italian> <!-- unit Ambusher with Hide and Seek option -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_RANGE_CHANGE</Tag>
 		<English>[ICON_BULLET]%D1_Mod %F2_Icon Spot Range</English>
 		<French>[ICON_BULLET]%D1_Mod Portée de maintien de la Perception (%F2_Icon)</French>
 		<German>[ICON_BULLET]%D1_Mod %F2_Icon-Sichtweite</German>
-		<Italian>[ICON_BULLET]Raggio di individuazione di tipo %F2_Icon [COLOR_HIGHLIGHT_TEXT]%D1_Mod[COLOR_REVERT]</Italian> <!-- unit Workboat (Prehistoric) with Hide and Seek -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Raggio di individuazione[COLOR_REVERT] di tipo %F2_Icon: [COLOR_HIGHLIGHT_TEXT]%D1_Mod[COLOR_REVERT]</Italian> <!-- unit Workboat (Prehistoric) with Hide and Seek -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOHELP_INVISIBILITY_SPOT_SAME_TILE_CHANGE</Tag>
 		<English>[ICON_BULLET]%D1_Mod %F2_Icon Spot on Same Tile</English>
 		<French>[ICON_BULLET]%D1_Mod Perception (%F2_Icon) lorsque sur la même case.</French>
 		<German>[ICON_BULLET]%D1_Mod %F2_Icon-Sicht in gleichem Gelände</German>
-		<Italian>[ICON_BULLET]Individuazione sulla [COLOR_HIGHLIGHT_TEXT]stessa casella[COLOR_REVERT] [COLOR_HIGHLIGHT_TEXT]%D1_Mod[COLOR_REVERT] %F2_Icon</Italian>  <!-- unit Ambusher with Hide and Seek option -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Individuazione[COLOR_REVERT] sulla [COLOR_HIGHLIGHT_TEXT]stessa casella[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%D1_Mod[COLOR_REVERT] %F2_Icon</Italian>  <!-- unit Ambusher with Hide and Seek option -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOHELP_INVISIBILITY_VEIL_INTENSITY_CHANGE</Tag>
 		<English>[ICON_BULLET]%D1_Mod %F2_Icon Veil</English>
 		<French>[ICON_BULLET]%D1_Mod en type d'invisibilité: %F2_Icon</French>
 		<German>[ICON_BULLET]%D1_Mod %F2_Icon-Unsichtbarkeit</German>
-		<Italian>[ICON_BULLET]Occultamento di tipo %F2_Icon [COLOR_HIGHLIGHT_TEXT]%D1_Mod[COLOR_REVERT]</Italian> <!-- unit Ambusher with Hide and Seek option -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Occultamento[COLOR_REVERT] di tipo %F2_Icon: [COLOR_HIGHLIGHT_TEXT]%D1_Mod[COLOR_REVERT]</Italian> <!-- unit Ambusher with Hide and Seek option -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOHELP_INVISIBILITY_VEIL_PLOT_CHANGE</Tag>
 		<English>[ICON_BULLET]%D1_Mod %F2_Icon Veil on %s3_Type.</English>
 		<French>[ICON_BULLET]%D1_Mod %F2_Icon Invisibilité sur %s3_Type.</French>
 		<German>[ICON_BULLET]%D1_Mod %F2_Icon-Unsichtbarkeit (%s3_Type)</German>
-		<Italian>[ICON_BULLET]Sulle caselle con [COLOR_HIGHLIGHT_TEXT]%s3_Type[COLOR_REVERT] occultamento di tipo %F2_Icon [COLOR_HIGHLIGHT_TEXT]%D1_Mod[COLOR_REVERT]</Italian> <!-- unit Ambusher with Hide and Seek option -->
+		<Italian>[ICON_BULLET]Sulle caselle con [COLOR_HIGHLIGHT_TEXT]%s3_Type[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]occultamento[COLOR_REVERT] di tipo %F2_Icon: [COLOR_HIGHLIGHT_TEXT]%D1_Mod[COLOR_REVERT]</Italian> <!-- unit Ambusher with Hide and Seek option -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_ADDS_BUILD_TYPE</Tag>
@@ -78,7 +78,7 @@
 		<English>[ICON_BULLET]Gives cause for unit to be unable to capture enemy Cities or Units</English>
 		<French>[ICON_BULLET]Rend l'unité incapable de capturer les villes ou unités ennemies</French>
 		<German>[ICON_BULLET]Unfähigkeit zur Einnahme von Städten und Einheiten: +1</German>
-		<Italian>[ICON_BULLET]Aggiunge un motivo per cui l'unità non è in grado di [COLOR_HIGHLIGHT_TEXT]catturare[COLOR_REVERT] città o unità nemiche</Italian>  <!-- Subcombat type Wild -->
+		<Italian>[ICON_BULLET]Aggiunge un [COLOR_HIGHLIGHT_TEXT]motivo[COLOR_REVERT] per cui l'unità non è in grado di [COLOR_HIGHLIGHT_TEXT]catturare[COLOR_REVERT] città o unità nemiche</Italian>  <!-- Subcombat type Wild -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_ADDS_COLD_IMMUNITY</Tag>
@@ -159,7 +159,7 @@
 		<English>[ICON_BULLET]Gives this Animal %D1_Reasons Causes to Ignore Border Restrictions</English>
 		<French>[ICON_BULLET]Donne à cet Animal %D1_Reasons raisons d'ignorer les restrictions de frontière</French>
 		<Russian>[ICON_BULLET]Дает возможность этому животному %D1_Reasons игнорировать наличие границ</Russian>
-		<Italian>[ICON_BULLET]L'animale ha [COLOR_HIGHLIGHT_TEXT]%D1_Reasons[COLOR_REVERT] [NUM1:ragione:ragioni] di ignorare le restrizioni dei confini</Italian> <!-- Subcombat type Reckless Animal -->
+		<Italian>[ICON_BULLET]L'animale ha [COLOR_HIGHLIGHT_TEXT]%D1_Reasons[COLOR_REVERT] [NUM1:ragione:ragioni] di [COLOR_HIGHLIGHT_TEXT]ignorare i confini[COLOR_REVERT]</Italian> <!-- Subcombat type Reckless Animal -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_ARMOR</Tag>
@@ -173,7 +173,7 @@
 		<English>[ICON_BULLET]%D1_Mod Armor vs. [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Mod Armor contre [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Mod Armor gegen [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</German>
-		<Italian>[ICON_BULLET]Armatura contro unità di tipo [LINK=%s2_AgainstType]%s3_AgainstName[\LINK] [COLOR_HIGHLIGHT_TEXT]%D1_Mod[COLOR_REVERT]</Italian> <!-- Subcombat type Armor Type (Exterior) -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Armatura[COLOR_REVERT] contro unità di tipo [LINK=%s2_AgainstType]%s3_AgainstName[\LINK] [COLOR_HIGHLIGHT_TEXT]%D1_Mod[COLOR_REVERT]</Italian> <!-- Subcombat type Armor Type (Exterior) -->
 		<Spanish>[ICON_BULLET]%D1_Mod Armor contra [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</Spanish>
 		<Polish>[ICON_BULLET]%D1_Mod do Pancerza vs: [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</Polish>
 	</TEXT>
@@ -189,7 +189,7 @@
 		<English>[ICON_BULLET]%D1_Change%% modifier to Attack</English>
 		<French>[ICON_BULLET]%D1_Change%% Modif. en Attaque</French>
 		<German>[ICON_BULLET]%D1_Change%% Angriff</German>
-		<Italian>[ICON_BULLET]Modificatore d'attacco [COLOR_HIGHLIGHT_TEXT]%D1_Change%%[COLOR_REVERT]</Italian> <!-- Subcombat type Canines -->
+		<Italian>[ICON_BULLET]Modificatore d'[COLOR_HIGHLIGHT_TEXT]attacco[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%D1_Change%%[COLOR_REVERT]</Italian> <!-- Subcombat type Canines -->
 		<Polish>[ICON_BULLET]%D1_Change%% do Modyfikatora Ataku</Polish>
 		<Russian>[ICON_BULLET]%D1_Change%% к атаке</Russian>
 	</TEXT>
@@ -214,7 +214,7 @@
 		<English>[ICON_BULLET]Adds a reason for the unit to treat Non-Animal Barbarians as friendly units and Barbarian cities as if they are your own.</English>
 		<French>[ICON_BULLET]Ajoute la possibilité de considérer les unités Barbares humaines et les villes barbares comme appartenant au joueur.</French>
 		<Russian>[ICON_BULLET]Делает данный отряд по умолчанию нейтральным к варварам (но не животным), давая возможность мирного соседства с ними на одной клетке и посещения без боя варварских городов.</Russian>
-		<Italian>[ICON_BULLET]Aggiunge un motivo per cui l'unità tratterà i barbari come [COLOR_HIGHLIGHT_TEXT]unità alleate[COLOR_REVERT] e le loro città come se fossero della civiltà di appartenenza</Italian> <!-- Subcombat type Exile) -->
+		<Italian>[ICON_BULLET]Aggiunge un [COLOR_HIGHLIGHT_TEXT]motivo[COLOR_REVERT] per cui l'unità tratterà i barbari come [COLOR_HIGHLIGHT_TEXT]unità alleate[COLOR_REVERT] e le loro città come se fossero della [COLOR_HIGHLIGHT_TEXT]civiltà di appartenenza[COLOR_REVERT]</Italian> <!-- Subcombat type Exile) -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_BARBCOEXIST_REMOVE</Tag>
@@ -362,7 +362,7 @@
 		<German>[ICON_BULLET]%D1_Change% Schaden</German>
 		<Polish>[ICON_BULLET]%D1_Change% Modyfikator Obrażeń</Polish>
 		<Russian>[ICON_BULLET]Урон: %D1_Change%</Russian>
-		<Italian>[ICON_BULLET]Modificatore di danno: [COLOR_HIGHLIGHT_TEXT]%D1_Change%[COLOR_REVERT]</Italian> <!-- Subcombat type Bird (Kingfisher) -->
+		<Italian>[ICON_BULLET]Modificatore di [COLOR_HIGHLIGHT_TEXT]danno[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%D1_Change%[COLOR_REVERT]</Italian> <!-- Subcombat type Bird (Kingfisher) -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_DAMAGE_PER_TURN</Tag>
@@ -378,7 +378,7 @@
 		<French>[ICON_BULLET]Précision de l'Assaut à distance: %D1_Value%%</French>
 		<Polish>[ICON_BULLET]Celność ataku dystansowego: %D1_Value%%</Polish>
 		<Russian>[ICON_BULLET]Точность артобстрела: %D1_Value%%</Russian>
-		<Italian>[ICON_BULLET]Precisione degli attacchi a distanza [COLOR_HIGHLIGHT_TEXT]%D1_Value%%[COLOR_REVERT]</Italian> <!-- Subcombat type Wields (Distance Shortbow) -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Precisione[COLOR_REVERT] degli attacchi a distanza: [COLOR_HIGHLIGHT_TEXT]%D1_Value%%[COLOR_REVERT]</Italian> <!-- Subcombat type Wields (Distance Shortbow) -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_DCM_BOMB_DAMAGE</Tag>
@@ -386,7 +386,7 @@
 		<French>[ICON_BULLET]Dégâts d'assaut à distance: %d1_Value%%</French>
 		<Polish>[ICON_BULLET]Obrażenia ataku dystansowego: %D1_Value%%</Polish>
 		<Russian>[ICON_BULLET]Урон от артобстрела: %D1_Value%%</Russian>
-		<Italian>[ICON_BULLET]Danno degli attacchi a distanza [COLOR_HIGHLIGHT_TEXT]%D1_Value%%[COLOR_REVERT]</Italian> <!-- Subcombat type Wields (Distance Shortbow) -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Danno[COLOR_REVERT] degli attacchi a distanza: [COLOR_HIGHLIGHT_TEXT]%D1_Value%%[COLOR_REVERT]</Italian> <!-- Subcombat type Wields (Distance Shortbow) -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_DCM_BOMB_DAMAGE_LIMIT</Tag>
@@ -394,7 +394,7 @@
 		<French>XP des spécialistes</French>
 		<Polish>[ICON_BULLET]Limit obrażeń ataku dystansowego: %D1_Value%%</Polish>
 		<Russian>[ICON_BULLET]Предел дальней атаки: %D1_Value%%</Russian>
-		<Italian>[ICON_BULLET]Limite di danno per gli attacchi a distanza [COLOR_HIGHLIGHT_TEXT]%D1_Value%%[COLOR_REVERT]</Italian> <!-- Subcombat type Wields (Distance Shortbow) -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Limite di danno[COLOR_REVERT] degli attacchi a distanza: [COLOR_HIGHLIGHT_TEXT]%D1_Value%%[COLOR_REVERT]</Italian> <!-- Subcombat type Wields (Distance Shortbow) -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_DCM_BOMB_DAMAGE_MAX_UNITS</Tag>
@@ -402,7 +402,7 @@
 		<French>XP des spécialistes</French>
 		<Polish>[ICON_BULLET]Maks. ilość celów ataku dystansowego: %D1_Value</Polish>
 		<Russian>[ICON_BULLET]Макс. целей дальней атаки: %D1_Value</Russian>
-		<Italian>[ICON_BULLET]Numero massimo di bersagli per gli attacchi a distanza [COLOR_HIGHLIGHT_TEXT]%D1_Value[COLOR_REVERT]</Italian> <!-- Subcombat type Wields (Distance Shortbow) -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Numero massimo[COLOR_REVERT] di bersagli degli attacchi a distanza: [COLOR_HIGHLIGHT_TEXT]%D1_Value[COLOR_REVERT]</Italian> <!-- Subcombat type Wields (Distance Shortbow) -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_DCM_BOMB_RANGE</Tag>
@@ -410,14 +410,14 @@
 		<French>[ICON_BULLET]Distance d'Assaut: %D1_Value</French>
 		<Polish>[ICON_BULLET]Zasięg ataku dystansowego: %D1_Value</Polish>
 		<Russian>[ICON_BULLET]Расстояние дальней атаки: %D1_Value</Russian>
-		<Italian>[ICON_BULLET]Raggio degli attacchi a distanza: [COLOR_HIGHLIGHT_TEXT]%D1_Value[COLOR_REVERT]</Italian> <!-- Subcombat type Wields (Distance Shortbow) -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Raggio[COLOR_REVERT] degli attacchi a distanza: [COLOR_HIGHLIGHT_TEXT]%D1_Value[COLOR_REVERT]</Italian> <!-- Subcombat type Wields (Distance Shortbow) -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_DEFENSE_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1_Change%% modifier to Defense</English>
 		<French>[ICON_BULLET]%D1_Change%% Modif. en Défense</French>
 		<German>[ICON_BULLET]%D1_Change%% Verteidigung</German>
-		<Italian>[ICON_BULLET]Modificatore della difesa [COLOR_HIGHLIGHT_TEXT]%D1_Change%%[COLOR_REVERT]</Italian> <!-- Subcombat type Canines -->
+		<Italian>[ICON_BULLET]Modificatore di [COLOR_HIGHLIGHT_TEXT]difesa[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%D1_Change%%[COLOR_REVERT]</Italian> <!-- Subcombat type Canines -->
 		<Polish>[ICON_BULLET]%D1_Change%% do Modyfikatora Obrony</Polish>
 		<Russian>[ICON_BULLET]%D1_Change%% к защите</Russian>
 	</TEXT>
@@ -454,7 +454,7 @@
 		<English>[ICON_BULLET]Additional %D1_Change%% Dodge</English>
 		<French>[ICON_BULLET]Esquive supplémentaire: %D1_Change%%</French>
 		<German>[ICON_BULLET]Ausweichen: %D1_Change%%</German>
-		<Italian>[ICON_BULLET]Probabilità di schivata: [COLOR_HIGHLIGHT_TEXT]%D1_Change%%[COLOR_REVERT]</Italian>  <!-- Subcombat type Nature (Fast Reflexes) -->
+		<Italian>[ICON_BULLET]Probabilità di [COLOR_HIGHLIGHT_TEXT]schivata[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%D1_Change%%[COLOR_REVERT]</Italian>  <!-- Subcombat type Nature (Fast Reflexes) -->
 		<Polish>[ICON_BULLET]Dodatkowy Unik: %D1_Change%%</Polish>
 		<Russian>[ICON_BULLET]Äîá. óêëîíåíèå %D1_Change%%</Russian>
 	</TEXT>
@@ -498,7 +498,7 @@
 		<English>[ICON_BULLET]%D1_Change%% Dynamic Defense Value</English>
 		<French>[ICON_BULLET]%D1_Change%% Défense Dynamique</French>
 		<German>[ICON_BULLET]%D1_Change%% auf Dynamische Verteidigung</German>
-		<Italian>[ICON_BULLET]Difesa dinamica di circonda e distruggi [COLOR_HIGHLIGHT_TEXT]%D1_Change%%[COLOR_REVERT]</Italian> <!-- unit Trained Dog with Surround and Destroy -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Difesa dinamica[COLOR_REVERT] di circonda e distruggi: [COLOR_HIGHLIGHT_TEXT]%D1_Change%%[COLOR_REVERT]</Italian> <!-- unit Trained Dog with Surround and Destroy -->
 		<Polish>[ICON_BULLET]%D1_Change%% Wartości Dynamicznej Obrony</Polish>
 		<Russian>[ICON_BULLET]%D1_Change%% к динамической защите</Russian>
 	</TEXT>
@@ -507,7 +507,7 @@
 		<English>[ICON_BULLET]Starts Withdrawal at %D1_Change%% HP</English>
 		<French>[ICON_BULLET]%D1_Change%% PV total pour commencer une retraite</French>
 		<German>[ICON_BULLET]Rückzug bei %D1_Change%% TP</German>
-		<Italian>[ICON_BULLET]Punti vita sotto cui l'unità prova a ritirarsi [COLOR_HIGHLIGHT_TEXT]%D1_Change%%[COLOR_REVERT]</Italian> <!-- unit Trained Dog with Fight or Flight -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Punti vita[COLOR_REVERT] sotto cui l'unità prova a ritirarsi: [COLOR_HIGHLIGHT_TEXT]%D1_Change%%[COLOR_REVERT]</Italian> <!-- unit Trained Dog with Fight or Flight -->
 		<Polish>[ICON_BULLET]%D1_Change%% Wszystkich punktów HP by rozpocząć ucieczkę</Polish>
 	</TEXT>
 	<TEXT>
@@ -515,7 +515,7 @@
 		<English>[ICON_BULLET]%D1_Change%% Enclose Value</English>
 		<French>[ICON_BULLET]%D1_Change%% Encerclement</French>
 		<German>[ICON_BULLET]%D1_Change%% Einkreisen</German>
-		<Italian>[ICON_BULLET]Accerchiamento di circonda e distruggi [COLOR_HIGHLIGHT_TEXT]%D1_Change%%[COLOR_REVERT]</Italian> <!-- unit Trained Dog with Surround and Destroy -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Accerchiamento[COLOR_REVERT] di circonda e distruggi: [COLOR_HIGHLIGHT_TEXT]%D1_Change%%[COLOR_REVERT]</Italian> <!-- unit Trained Dog with Surround and Destroy -->
 		<Polish>[ICON_BULLET]%D1_Change%% Wartości Otoczenia</Polish>
 		<Russian>[ICON_BULLET]%D1_Change%% шанса окружения</Russian>
 	</TEXT>
@@ -563,7 +563,7 @@
 		<Tag>TXT_KEY_PROMOTIONHELP_EXCILE_ADD</Tag>
 		<English>[ICON_BULLET]Adds a reason for the unit to be considered an Exile.</English>
 		<French>[ICON_BULLET]Ajoute la possibilité pour l'unité d'être considérée en exil.</French>
-		<Italian>[ICON_BULLET]Aggiunge un motivo per cui l'unità è considerata un [COLOR_HIGHLIGHT_TEXT]esule[COLOR_REVERT]</Italian>  <!-- Subcombat type Exile) -->
+		<Italian>[ICON_BULLET]Aggiunge un [COLOR_HIGHLIGHT_TEXT]motivo[COLOR_REVERT] per cui l'unità è considerata un [COLOR_HIGHLIGHT_TEXT]esule[COLOR_REVERT]</Italian>  <!-- Subcombat type Exile) -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_EXCILE_REMOVE</Tag>
@@ -620,7 +620,7 @@
 		<English>[ICON_BULLET]Adds one cause for the unit to fly when moving.</English>
 		<French>[ICON_BULLET]Ajoute la compétence de l'unité à se déplacer en volant.</French>
 		<German>[ICON_BULLET]Fliegende Fortbewegung: +1</German>
-		<Italian>[ICON_BULLET]Aggiunge un motivo per cui l'unità è in grado di spostarsi [COLOR_HIGHLIGHT_TEXT]volando[COLOR_REVERT]</Italian>  <!-- Subcombat type Mobility (Aerial) -->
+		<Italian>[ICON_BULLET]Aggiunge un [COLOR_HIGHLIGHT_TEXT]motivo[COLOR_REVERT] per cui l'unità è in grado di [COLOR_HIGHLIGHT_TEXT]spostarsi volando[COLOR_REVERT]</Italian>  <!-- Subcombat type Mobility (Aerial) -->
 		<Polish>[ICON_BULLET]Dodaje jeden powód by unieść się w powietrze dla jednostki poruszającej się.</Polish>
 		<Russian>[ICON_BULLET]Добавляет условие для полета отряда во время движения.</Russian>
 	</TEXT>
@@ -678,7 +678,7 @@
 		<German>[ICON_BULLET]verbessert die Regeneration von Einheiten der Kategorie "%s1_UNITCOMBAT" auf angrenzenden Feldern um %D2_Heals%%[SPACE]</German>
 		<Polish>[ICON_BULLET]Pomaga w leczeniu %s1_UNITCOMBAT jednostek na sąsiednich polach %D2_Heals%%[SPACE]</Polish>
 		<Russian>[ICON_BULLET]Ïîìîãàåò â ëå÷åíèè %s1_UNITCOMBAT îòðÿäîâ íà ñîñåäíèõ êëåòêàõ %D2_Heals%%[SPACE]</Russian>
-		<Italian>[ICON_BULLET]Cura le unità sulle caselle adiacenti con la [COLOR_HIGHLIGHT_TEXT]%s1_UNITCOMBAT %D2_Heals%%[COLOR_REVERT][SPACE]</Italian> <!-- unit Healer -->
+		<Italian>[ICON_BULLET]Aiuta nella cura delle unità sulle [COLOR_HIGHLIGHT_TEXT]caselle adiacenti[COLOR_REVERT] con la [COLOR_HIGHLIGHT_TEXT]%s1_UNITCOMBAT[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%D2_Heals%%[COLOR_REVERT][SPACE]</Italian> <!-- unit Healer -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_HEALS_UNITCOMBAT_SAME</Tag>
@@ -687,7 +687,7 @@
 		<German>[ICON_BULLET]verbessert die Regeneration von Einheiten der Kategorie "%s1_UNITCOMBAT" auf dem gleichen Feld um %D2_Heals%%[SPACE]</German>
 		<Polish>[ICON_BULLET]Pomaga w leczeniu %s1_UNITCOMBAT jednostek na tym samym polu %D2_Amount%%[SPACE]</Polish>
 		<Russian>[ICON_BULLET]Ïîìîãàåò â ëå÷åíèè %s1_UNITCOMBAT îòðÿäîâ íà ýòèõ æå êëåòêàõ %D2_Amount%%[SPACE]</Russian>
-		<Italian>[ICON_BULLET]Cura le unità sulla stessa casella con la [COLOR_HIGHLIGHT_TEXT]%s1_UNITCOMBAT %D2_Amount%%[COLOR_REVERT][SPACE]</Italian> <!-- unit Healer -->
+		<Italian>[ICON_BULLET]Aiuta nella cura delle unità sulla [COLOR_HIGHLIGHT_TEXT]stessa casella[COLOR_REVERT] con la [COLOR_HIGHLIGHT_TEXT]%s1_UNITCOMBAT[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%D2_Amount%%[COLOR_REVERT][SPACE]</Italian> <!-- unit Healer -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_HEAL_SUPPORT</Tag>
@@ -696,7 +696,7 @@
 		<German>[ICON_BULLET]kann %D1_Amount Einheiten pro Runde heilen</German>
 		<Polish>[ICON_BULLET]Jednostka może pomóc w leczeniu: %D1_Amount jednostek na turę.</Polish>
 		<Russian>[ICON_BULLET]ìîæåò ëå÷èòü %D1_Amount îòðÿä(û)/â õîä</Russian>
-		<Italian>[ICON_BULLET]Questa unità può curare [COLOR_HIGHLIGHT_TEXT]%D1_Amount[COLOR_REVERT] unità a turno</Italian> <!-- unit Healer -->
+		<Italian>[ICON_BULLET]Questa unità [COLOR_HIGHLIGHT_TEXT]può curare %D1_Amount[COLOR_REVERT] unità a turno</Italian> <!-- unit Healer -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_HIDDEN_NATIONALITY_ADDS</Tag>
@@ -748,7 +748,7 @@
 		<Tag>TXT_KEY_PROMOTIONHELP_IGNORE_ZONE_OF_CONTROL_ADD</Tag>
 		<English>[ICON_BULLET]Adds one cause for the unit to ignore Zones of Control.</English>
 		<French>[ICON_BULLET]Ajoute la compétence de l'unité d'ignorer les Zones de contrôle.</French>
-		<Italian>[ICON_BULLET]Aggiunge un motivo per cui l'unità è in grado di ignorare le [COLOR_HIGHLIGHT_TEXT]zone di controllo[COLOR_REVERT]</Italian> <!-- Subcombat type Exile -->
+		<Italian>[ICON_BULLET]Aggiunge un [COLOR_HIGHLIGHT_TEXT]motivo[COLOR_REVERT] per cui l'unità è in grado di [COLOR_HIGHLIGHT_TEXT]ignorare le zone di controllo[COLOR_REVERT]</Italian> <!-- Subcombat type Exile -->
 		<Polish>[ICON_BULLET]Dodaje jeden powód by zignorować Strefę Kontroli.</Polish>
 		<Russian>[ICON_BULLET]Добавляет возможность отряду иногда игнорировать зоны контроля.</Russian>
 	</TEXT>
@@ -771,7 +771,7 @@
 		<French>[ICON_BULLET]%s1_Change%% Incidiosité</French>
 		<German>[ICON_BULLET]Hinterlist: %s1_Change%%</German>
 		<Russian>[ICON_BULLET]%s1_Change%% к беззаконию</Russian>
-		<Italian>[ICON_BULLET]Modificatore d'[COLOR_HIGHLIGHT_TEXT]insidiosità %s1_Change%%[COLOR_REVERT]</Italian>  <!-- Subcombat type Criminals -->
+		<Italian>[ICON_BULLET]Modificatore d'[COLOR_HIGHLIGHT_TEXT]insidiosità[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%s1_Change%%[COLOR_REVERT]</Italian>  <!-- Subcombat type Criminals -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_INSTIGATE2_SPY</Tag>
@@ -825,7 +825,7 @@
 		<English>[ICON_BULLET]%s1_Change%% Investigation</English>
 		<German>[ICON_BULLET]%s1_Change%% Ermittlungen</German>
 		<Russian>[ICON_BULLET]%s1_Change%% к Расследованию</Russian>
-		<Italian>[ICON_BULLET]Modificatore di [COLOR_HIGHLIGHT_TEXT]investigazione %s1_Change%%[COLOR_REVERT]</Italian>  <!-- Subcombat type Law Enforcement -->
+		<Italian>[ICON_BULLET]Modificatore di [COLOR_HIGHLIGHT_TEXT]investigazione[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%s1_Change%%[COLOR_REVERT]</Italian>  <!-- Subcombat type Law Enforcement -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_KNOCKBACK</Tag>
@@ -866,7 +866,7 @@
 		<English>[ICON_BULLET]On the %s1_PromotionLine</English>
 		<French>[ICON_BULLET]%s1_PromotionLine</French>
 		<German>[ICON_BULLET]Beförderungsreihe: %s1_PromotionLine</German>
-		<Italian>[ICON_BULLET]%s1_PromotionLine</Italian>
+		<Italian>[ICON_BULLET]Linea di promozione %s1_PromotionLine</Italian>
 		<Polish>[ICON_BULLET]%s1_PromotionLine</Polish>
 		<Russian>[ICON_BULLET]%s1_PromotionLine</Russian>
 	</TEXT>
@@ -901,7 +901,7 @@
 		<Tag>TXT_KEY_PROMOTIONHELP_LUNGE</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Lunge Value</English>
 		<French>[ICON_BULLET]%D1_Change%% en Fente</French>
-		<Italian>[ICON_BULLET]Affondo di circonda e distruggi [COLOR_HIGHLIGHT_TEXT]%D1_Change%%[COLOR_REVERT]</Italian> <!-- unit Trained Dog with Surround and Destroy -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Affondo[COLOR_REVERT] di circonda e distruggi: [COLOR_HIGHLIGHT_TEXT]%D1_Change%%[COLOR_REVERT]</Italian> <!-- unit Trained Dog with Surround and Destroy -->
 		<Polish>[ICON_BULLET]%D1_Change%% Wartości Pchnięcia</Polish>
 	</TEXT>
 	<TEXT>
@@ -987,6 +987,7 @@
 		<English>[ICON_BULLET]Trait - Never Invisible: %D1_Change</English>
 		<French>[ICON_BULLET]Trait - Toujours visible : %D1_Change</French>
 		<German>[ICON_BULLET]Verhinderte Unsichtbarkeit: %D1_Change</German>
+		<Italian>[ICON_BULLET]Caratteristica mai invisibile: [COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT]</Italian> <!-- Subcombat type Law Enforcement -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_NO_SPREAD_CITY_TO_UNIT</Tag>
@@ -1152,7 +1153,7 @@
 		<English>[ICON_BULLET]Additional %D1_Change%% Precision</English>
 		<French>[ICON_BULLET]Précision supplémentaire: %D1_Change%%</French>
 		<German>[ICON_BULLET]Präzision: %D1_Change%%</German>
-		<Italian>[ICON_BULLET]Probabilità di precisione: [COLOR_HIGHLIGHT_TEXT]%D1_Change%%[COLOR_REVERT]</Italian>  <!-- Subcombat type Nature (Fast Reflexes) -->
+		<Italian>[ICON_BULLET]Probabilità di [COLOR_HIGHLIGHT_TEXT]precisione[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%D1_Change%%[COLOR_REVERT]</Italian>  <!-- Subcombat type Nature (Fast Reflexes) -->
 		<Polish>[ICON_BULLET]Dodatkowa Precyzja: %D1_Change%%</Polish>
 		<Russian>[ICON_BULLET]Доб. к прицеливанию %D1_Change%%</Russian>
 	</TEXT>
@@ -1203,7 +1204,7 @@
 		<English>[ICON_BULLET]Pursuit Chance: %D1_Change%%</English>
 		<French>[ICON_BULLET]%D1_Change%% Chances de poursuite</French>
 		<German>[ICON_BULLET]Verfolgungsjagd: %d1_Amount%%</German>
-		<Italian>[ICON_BULLET]Probabilità di [COLOR_HIGHLIGHT_TEXT]inseguimento %D1_Change%%[COLOR_REVERT]</Italian> <!-- unit Hunter with Fight or Flight -->
+		<Italian>[ICON_BULLET]Probabilità di [COLOR_HIGHLIGHT_TEXT]inseguimento[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%D1_Change%%[COLOR_REVERT]</Italian> <!-- unit Hunter with Fight or Flight -->
 		<Spanish>[ICON_BULLET]%D1_Change%% probabilidad de Pursuitón</Spanish>
 		<Polish>[ICON_BULLET]%D1_Change%% Szansy na Pościg</Polish>
 		<Russian>[ICON_BULLET]%D1_Change%% øàíñ ïåðåõâàòà</Russian>
@@ -1213,7 +1214,7 @@
 		<English>[ICON_BULLET]Pursuit vs. [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]: %D1_Mod%%</English>
 		<French>[ICON_BULLET]%D1_Mod%% Poursuite contre [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Mod%% Verfolgung von [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</German>
-		<Italian>[ICON_BULLET]Probabilità di riuscire in un [COLOR_HIGHLIGHT_TEXT]inseguimento[COLOR_REVERT] contro un'unità di tipo [LINK=%s2_AgainstType]%s3_AgainstName[\LINK] [COLOR_HIGHLIGHT_TEXT]%D1_Mod%%[COLOR_REVERT]</Italian>  <!-- unit Ambusher with Fight or Flight -->
+		<Italian>[ICON_BULLET]Probabilità di riuscire in un [COLOR_HIGHLIGHT_TEXT]inseguimento[COLOR_REVERT] contro un'unità di tipo [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]: [COLOR_HIGHLIGHT_TEXT]%D1_Mod%%[COLOR_REVERT]</Italian>  <!-- unit Ambusher with Fight or Flight -->
 		<Spanish>[ICON_BULLET]%D1_Mod%% Pursuit contra [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</Spanish>
 		<Polish>[ICON_BULLET]%D1_Mod%% Pościg za [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</Polish>
 		<Russian>[ICON_BULLET]Погоня за [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]: %D1_Mod%%</Russian>
@@ -1249,7 +1250,7 @@
 		<French>[ICON_BULLET]Assaut à distance cible le défenseur principal</French>
 		<Polish>[ICON_BULLET]Ostrzał z dystansu najprawdopodobnie trafi w głównego obrońcę.</Polish>
 		<Russian>[ICON_BULLET]Атакует прежде всего ведущего защитника при штурме</Russian>
-		<Italian>[ICON_BULLET]Gli attacchi a distanza hanno una buona probabilità di colpire il [COLOR_HIGHLIGHT_TEXT]primo[COLOR_REVERT] difensore</Italian> <!-- Subcombat type Wields (Distance Repeating Crossbow) -->
+		<Italian>[ICON_BULLET]Gli attacchi a distanza hanno una [COLOR_HIGHLIGHT_TEXT]buona probabilità[COLOR_REVERT] di colpire il [COLOR_HIGHLIGHT_TEXT]difensore principale[COLOR_REVERT]</Italian> <!-- Subcombat type Wields (Distance Repeating Crossbow) -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_REFLEXES</Tag>
@@ -1382,14 +1383,14 @@
 		<English>[ICON_BULLET]%D1_Change%% Stealth Combat Modifier</English>
 		<French>[ICON_BULLET]%D1_Change%% Modif. de Combat furtif</French>
 		<German>[ICON_BULLET]%D1_Change%% Tarnmodifikator</German>
-		<Italian>[ICON_BULLET]Modificatore di combattimento [COLOR_HIGHLIGHT_TEXT]stealth %D1_Change%%[COLOR_REVERT]</Italian> <!-- unit Ambusher with  Without Warning option -->
+		<Italian>[ICON_BULLET]Modificatore di [COLOR_HIGHLIGHT_TEXT]combattimento stealth[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%D1_Change%%[COLOR_REVERT]</Italian> <!-- unit Ambusher with  Without Warning option -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_STEALTH_DEFENSE_CHANGE</Tag>
 		<English>[ICON_BULLET]Trait - Stealth Defend: %D1_Change</English>
 		<French>[ICON_BULLET]Trait - Défense furtive: %D1_Change</French>
 		<German>[ICON_BULLET]Verteidigung gegen Tarnangriffe: %D1_Change</German>
-		<Italian>[ICON_BULLET]Difesa dagli attacchi [COLOR_HIGHLIGHT_TEXT]stealth %D1_Change[COLOR_REVERT]</Italian> <!-- unit Ambusher with  Without Warning option -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Difesa[COLOR_REVERT] dagli attacchi [COLOR_HIGHLIGHT_TEXT]stealth[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT]</Italian> <!-- unit Ambusher with  Without Warning option -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_STEALTH_STRIKES</Tag>
@@ -1397,7 +1398,7 @@
 		<French>[ICON_BULLET]%D1_Change Assauts furtifs</French>
 		<German>[ICON_BULLET]%D1_Change [NUM1:Tarnangriff:Tarnangriffe]</German>
 		<Russian>[ICON_BULLET]%D1_Change к скрытным атакам</Russian>
-		<Italian>[ICON_BULLET]Numero di attacchi [COLOR_HIGHLIGHT_TEXT]stealth %D1_Change[COLOR_REVERT]</Italian> <!-- unit Ambusher with  Without Warning option -->
+		<Italian>[ICON_BULLET]Numero di [COLOR_HIGHLIGHT_TEXT]attacchi stealth[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT]</Italian> <!-- unit Ambusher with  Without Warning option -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_STRENGTHEN</Tag>
@@ -1590,7 +1591,7 @@
 		<French>[ICON_BULLET]Modif. de Combat contre des unités plus petites: %D1_Amount%% par rang inférieur</French>
 		<German>[ICON_BULLET]%d1_Amount%% gegen kleinere Einheiten (pro Stufe Größenunterschied)</German>
 		<Polish>[ICON_BULLET]Modyfiakator Walki vs Mniejszych Rozmiarów jednostki: %d1_Amount%% za różnicę w rozmiarze</Polish>
-		<Italian>[ICON_BULLET]Contro unità con una dimensione inferiore [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian> <!-- subcombat type Feline unit with Size matters-->
+		<Italian>[ICON_BULLET]Contro unità con una [COLOR_HIGHLIGHT_TEXT]dimensione inferiore[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian> <!-- subcombat type Feline unit with Size matters-->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_UNIT_COMBAT_MOD_PER_SIZE_MORE</Tag>
@@ -1598,7 +1599,7 @@
 		<French>[ICON_BULLET]Modif. de Combat contre des unités plus grandes: %D1_Amount%% par rang supérieur</French>
 		<German>[ICON_BULLET]%d1_Amount%% gegen größere Einheiten (pro Stufe Größenunterschied)</German>
 		<Polish>[ICON_BULLET]Modyfiakator Walki vs Większych Rozmiarów jednostki: %d1_Amount%% za różnicę w rozmiarze</Polish>
-		<Italian>[ICON_BULLET]Contro unità con una dimensione superiore [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Trained Dog with Size matters-->
+		<Italian>[ICON_BULLET]Contro unità con una [COLOR_HIGHLIGHT_TEXT]dimensione superiore[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Trained Dog with Size matters-->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_UNIT_COMBAT_MOD_PER_VOLUME_LESS</Tag>
@@ -1606,7 +1607,7 @@
 		<French>[ICON_BULLET]Modif. de Combat contre des groupes plus petits: %D1_Amount%% par Nb d'unités en moins</French>
 		<German>[ICON_BULLET]%d1_Amount%% gegen kleinere Gruppen (pro Stufe Größenunterschied)</German>
 		<Polish>[ICON_BULLET]Modyfiakator Walki vs Mniejsze Grupy jednostek: %d1_Amount%% za różnicę w rozmiarze</Polish>
-		<Italian>[ICON_BULLET]Contro unità in un gruppo più piccolo [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Trained Dog with Size matters-->
+		<Italian>[ICON_BULLET]Contro unità in un [COLOR_HIGHLIGHT_TEXT]gruppo più piccolo[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Trained Dog with Size matters-->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_UNIT_COMBAT_MOD_PER_VOLUME_MORE</Tag>
@@ -1614,7 +1615,7 @@
 		<French>[ICON_BULLET]Modif. de Combat contre des groupes plus grands: %D1_Amount%% par Nb d'unités suppl.</French>
 		<German>[ICON_BULLET]%d1_Amount%% gegen größere Gruppen (pro Stufe Größenunterschied)</German>
 		<Polish>[ICON_BULLET]Modyfiakator Walki vs Większych Grupy jednostek: %d1_Amount%% za różnicę w rozmiarze</Polish>
-		<Italian>[ICON_BULLET]Contro unità in un gruppo più grande [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian> <!-- Subcombat type Natural Capacity Herding  with Size matters-->
+		<Italian>[ICON_BULLET]Contro unità in un [COLOR_HIGHLIGHT_TEXT]gruppo più grande[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian> <!-- Subcombat type Natural Capacity Herding  with Size matters-->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_UNIT_COMBAT_OVERCOME_CHANGE_NEGATIVE</Tag>
@@ -1634,7 +1635,7 @@
 		<Tag>TXT_KEY_PROMOTIONHELP_UNNERVE</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Unnerve Value</English>
 		<French>[ICON_BULLET]%D1_Change%% Perturbation</French>
-		<Italian>[ICON_BULLET]Nervosismo di circonda e distruggi [COLOR_HIGHLIGHT_TEXT]%D1_Change%%[COLOR_REVERT]</Italian> <!-- unit Trained Dog with Surround and Destroy -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Nervosismo[COLOR_REVERT] di circonda e distruggi: [COLOR_HIGHLIGHT_TEXT]%D1_Change%%[COLOR_REVERT]</Italian> <!-- unit Trained Dog with Surround and Destroy -->
 		<Polish>[ICON_BULLET]%D1_Change%% Wartości Załamania</Polish>
 	</TEXT>
 	<TEXT>
@@ -1711,7 +1712,7 @@
 		<Spanish>[ICON_BULLET]+%d1_Change%% contro barbari non-animali</Spanish>
 		<Polish>[ICON_BULLET]%D1_Change%% przeciwko nie-zwierzęcym Barbarzyńcom</Polish>
 		<Russian>[ICON_BULLET]+%d1_Change%% против варваров</Russian>
-		<Italian>[ICON_BULLET]Danno contro unità barbare non animali [COLOR_HIGHLIGHT_TEXT]+%d1_Change%%[COLOR_REVERT]</Italian>  <!-- Subcombat type 		<English>Law Enforcement</English> -->
+		<Italian>[ICON_BULLET]Danno contro [COLOR_HIGHLIGHT_TEXT]unità barbare[COLOR_REVERT] non animali: [COLOR_HIGHLIGHT_TEXT]+%d1_Change%%[COLOR_REVERT]</Italian>  <!-- Subcombat type 		<English>Law Enforcement</English> -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_WEAKEN</Tag>
@@ -1748,7 +1749,7 @@
 		<English>[ICON_BULLET]%D1_Mod%% Withdraw when battle is on [LINK=%s2_Type]%s3_TypeName[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Mod%% de repli lors d'un combat sur: [LINK=%s2_Type]%s3_TypeName[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Mod%% Rückzugswahrscheinlichkeit ([LINK=%s2_Type]%s3_TypeName[\LINK])</German>
-		<Italian>[ICON_BULLET]Ritirata sulle caselle con [LINK=%s2_Type]%s3_TypeName[\LINK] [COLOR_HIGHLIGHT_TEXT]%D1_Mod%%[COLOR_REVERT]</Italian> <!-- Subcombat type Nature (Tree Climbing) -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Ritirata[COLOR_REVERT] sulle caselle con [LINK=%s2_Type]%s3_TypeName[\LINK]: [COLOR_HIGHLIGHT_TEXT]%D1_Mod%%[COLOR_REVERT]</Italian> <!-- Subcombat type Nature (Tree Climbing) -->
 		<Spanish>[ICON_BULLET]%D1_Mod%% Withdraw contra when battle is on [LINK=%s2_Type]%s3_TypeName[\LINK]</Spanish>
 		<Polish>[ICON_BULLET]%D1_Mod%% szansy uciekczki jeśli walka odbywa się na [LINK=%s2_Type]%s3_TypeName[\LINK]</Polish>
 		<Russian>[ICON_BULLET]%D1_Mod%% шанса отступить, если бой идет в [LINK=%s2_Type]%s3_TypeName[\LINK]</Russian>

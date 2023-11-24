@@ -14,6 +14,7 @@
 #include "CvImprovementInfo.h"
 #include "CvBonusInfo.h"
 #include "CvInfos.h"
+#include "CvUnitCombatInfo.h"
 #include "CvInitCore.h"
 #include "CvMap.h"
 #include "CvPlot.h"
@@ -17910,9 +17911,6 @@ void CvPlayerAI::AI_beginDiplomacy(CvDiploParameters* pDiploParams, PlayerTypes 
 	}
 	else
 	{
-		//OutputDebugString("UI interaction - diplomacy\n");
-		GET_PLAYER(ePlayer).setTurnHadUIInteraction(true);
-
 		gDLL->beginDiplomacy(pDiploParams, (PlayerTypes)ePlayer);
 	}
 }

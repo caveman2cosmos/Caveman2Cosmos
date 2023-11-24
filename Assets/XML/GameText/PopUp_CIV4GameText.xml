@@ -24,7 +24,7 @@
 		<Italian>Scegli un formato di salvataggio</Italian>
 		<Polish>Wybierz format zapisu</Polish>
 		<Spanish>Elige un formato de guardado</Spanish>
-		<Russian>Выберите формат сохр.</Russian>
+		<Russian>Выберите формат сохранения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_ENTER_LANDS_WAR</Tag>
@@ -79,7 +79,7 @@
 		<Italian>Sono cambiate alcune cose da quando hai salvato il gioco l'ultima volta. Il ricalcolo dei modificatori applicherà i cambi effettuati su edifici, eventi, forme di governo e altro al totale già accumulato da città e giocatori. Il ricalcolo è raccomandato, anche se è ancora una funzionalità beta. Puoi sempre effettuarlo manualmente premendo Ctrl-Shift-T.</Italian>
 		<Polish>Folder Assets lub plik DLL zostały zmienione po tym jak zapisany został plik save. Rekalkulacja modyfikatorów pozwoli wprowadzić zmiany w budynkach, wydarzeniach, doktrynach i innych przechowywanych zmiennych dla miast i graczy. Jest to rekomendowane lecz dalej w wersji beta. Zawsze możesz manualnie to wywołać kombinacją klawiszy: Ctrl-Shift-T.</Polish>
 		<Spanish>Los recursos (Assets) o la DLL han sido modificados desde la creación de este guardado. Recalcular los modificadores aplicará cualquier cambio en los edificios, eventos, principios, etc. a todo lo que los jugadores y sus ciudades posean. Se recomienda hacerlo, aunque esta función aún se encuentra en fase beta y puede haber errores. Puedes hacerlo manualmente pulsando Ctrl-Shift-T.</Spanish>
-		<Russian>Часть контента или DLL изменились с момента создания этого сохранения. Предлагаемый перерасчет модификаторов применит все изменения к зданиям, событиям, парадигмам и т.д. ко всем параметрам вашего сохранения для всех городов и игроков. Это РЕКОМЕНДУЕТСЯ сделать (перерасчет займёт некоторое время), но следует иметь в виду, что это работает в режиме бета-версии. Вы всегда можете запустить его вручную при нажатии Ctrl-Shift-T.</Russian>
+		<Russian>Часть контента или библиотек изменились с момента создания этого сохранения. Предлагаемый перерасчет модификаторов применит все изменения к зданиям, событиям, парадигмам и прочему ко всем параметрам вашего сохранения для всех городов и игроков. Это РЕКОМЕНДУЕТСЯ сделать (перерасчет займёт некоторое время), но следует иметь в виду, что это экспериментальная функциональность. Вы всегда можете запустить его вручную при нажатии Ctrl-Shift-T.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_NEW_GAME_SAVE_FORMAT</Tag>
@@ -97,7 +97,7 @@
 		<Italian>"Compatibilità massima" è una funzione che consente di caricare (nella maggior parte dei casi) i salvataggi anche nelle versioni successive del mod, ma è rende il savefile più grande e un po' più lento nel caricare e nel salvare. È anche una funzionalità beta, per il momento.[NEWLINE]"BTS originale" è il formato di salvataggio di Civ4 utilizzato in precedenza. È più compatto e più veloce a caricare e salvare, ma non supporta il caricamento di salvataggi fra versioni diverse del mod.</Italian>
 		<Polish>Maksymalna Kompatybilność pozwala wczytywać savy z wcześniejszych wersji modu ale jest większy i wolniejszy w zapisze i odczycie.[NEWLINE]"Oryginalny BTS" jest formatem Civ4. Jest mniejszy i szybszy ale nie pozwala na odczytywanie wcześniejszych wersji zapisów modu.</Polish>
 		<Spanish>"Máxima compatibilidad" permite que las partidas guardadas puedan ser cargadas en versiones posteriores del mod (en la mayoría de los casos), pero su tamaño será mayor y la carga/guardado será un poco más lenta. Actualmente se encuentra en fase beta.[NEWLINE]"Original de BTS" es el formato de guardado que utiliza Civilization 4. Su tamaño es menor y es algo más rápido al cargar/guardar, pero su uso en versiones distintas de un mod no está soportado (normalmente).</Spanish>
-		<Russian>«Максимальная совместимость» позволяет загружать сохраненные игры в более поздние версии мода (в большинстве случаев), но с ней несколько дольше и медленнее загружаются старые сохранения. В настоящее время эта функция находится в стадии бета-версии.[NEWLINE]"Оригинальный BTS" - это формат сохранения, который ранее использовался в классической Civ4. Он более компактен и загружается немного быстрее стары сохранения, но обычно не поддерживает загрузку игры между новыми версиями мода.</Russian>
+		<Russian>«Максимальная совместимость» позволяет - немного медленее - загружать сохраненные игры в более поздние версии мода (в большинстве случаев). Сейчас это экспериментальная функциональность.[NEWLINE]"Оригинальная ЭО" - формат сохранения, ранее использовавшийся в классической "Цивилизации 4". Он более компактен и загружается немного быстрее, но обычно не поддерживает загрузку между новыми версиями мода.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_OLD_GAME_SAVE_FORMAT</Tag>
@@ -105,7 +105,7 @@
 		<Italian>Formato di salvataggio di Civ4 originale</Italian>
 		<Polish>Oryginalny BTS</Polish>
 		<Spanish>Original de BTS</Spanish>
-		<Russian>Оригинальный BTS</Russian>
+		<Russian>Оригинальная ЭО</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_SELECT_EVENT</Tag>
@@ -125,7 +125,7 @@
 		<Italian>Sire, i cittadini di %s1_CityName sono in agitazione. Alcuni si rifiutano persino di lavorare! Richiedono la costruzione di [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT]!</Italian>
 		<Polish>Mieszkańcy %s1_CityName są bardzo niespokojni. Część nawet odmawia pójścia do pracy! Domagają się wybudowania [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT]!</Polish>
 		<Spanish>Excelencia, el pueblo de %s1_CityName está descontrolado. ¡Algunos hasta se niegan a trabajar! Exigen la construcción de [NUM2:un:una:unos:unas] [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT].</Spanish>
-		<Russian>Осмелюсь сообщить, что город %s1_CityName становится центром волнений и беспорядков. Некоторые жители даже отказываются работать, пока вы не выполните их требование: [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT] - неужели это такая непомерная плата за спокойный сон?</Russian>
+		<Russian>Осмелюсь сообщить, что город %s1_CityName становится центром волнений и беспорядков. Некоторые жители даже отказываются работать, пока вы не выполните их требование: построить [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT] - неужели это такая непомерная плата за спокойный сон?</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_UNHEALTHY_CITIZENS_DEMAND</Tag>

@@ -6,7 +6,7 @@
 		<French>Fatigue: Force/rnd</French>
 		<Italian>Fatica: Forza/turno</Italian>
 		<Polish>Zmęczenie: Siła/Runda</Polish>
-		<Russian>Óñòàëîñòü: ñèëà/õîä</Russian>
+		<Russian>Усталость: сила/ход</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ADJUST_RAGE_PER_ROUND</Tag>
@@ -14,7 +14,7 @@
 		<French>Rage: Force/rnd</French>
 		<Italian>Rabbia: Forza/turno</Italian>
 		<Polish>Wściekłość: Siła/Runda</Polish>
-		<Russian>ßðîñòü: Ñèëà/õîä</Russian>
+		<Russian>Ярость: Сила/ход</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_AID_PRESENT</Tag>
@@ -22,7 +22,7 @@
 		<French>Aide actuelle:</French>
 		<Italian>Aiuto presente:</Italian>
 		<Polish>Pomoc Wsparcia:</Polish>
-		<Russian>Òåêóùàÿ ïîääåðæêà:</Russian>
+		<Russian>Текущая поддержка:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ARMOR_COMPARE_ATTACKER_ARMOR</Tag>
@@ -30,7 +30,7 @@
 		<French>Armure de l'Attaquant:</French>
 		<Italian>Armatura degli attaccanti:</Italian>
 		<Polish>Pancerz Atakującego:</Polish>
-		<Russian>Áðîíÿ àòàêóþùåãî:</Russian>
+		<Russian>Броня атакующего:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ARMOR_COMPARE_ATTACKER_DODGE</Tag>
@@ -39,7 +39,7 @@
 		<German>Ausweichen (Angreifer):</German>
 		<Italian>Schivata degli attaccanti:</Italian>
 		<Polish>Unik Atakującego:</Polish>
-		<Russian>Óêëîíåíèå àòàêóþùåãî:</Russian>
+		<Russian>Уклонение атакующего:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ARMOR_COMPARE_ATTACKER_HIT_MODIFIER</Tag>
@@ -56,6 +56,7 @@
 		<German>Präzision (Angreifer):</German>
 		<Italian>Precisione degli attaccanti:</Italian>
 		<Polish>Celność Atakującego:</Polish>
+		<Russian>Точность атакующего:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ARMOR_COMPARE_ATTACKER_PUNCTURE</Tag>
@@ -63,6 +64,7 @@
 		<French>Pénétration de l'Attaquant:</French>
 		<Italian>Perforazione degli attaccanti:</Italian>
 		<Polish>Przebicie Atakującego:</Polish>
+		<Russian>Бронебойность атакующего:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ARMOR_COMPARE_DEFENDER_ARMOR</Tag>
@@ -70,7 +72,7 @@
 		<French>Armure du Défenseur:</French>
 		<Italian>Armatura dei difensori:</Italian>
 		<Polish>Pancerz Obrońcy:</Polish>
-		<Russian>Áðîíÿ îáîðîíÿþùåãîñÿ:</Russian>
+		<Russian>Броня обороняющегося:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ARMOR_COMPARE_DEFENDER_DODGE</Tag>
@@ -79,7 +81,7 @@
 		<German>Ausweichen (Verteidiger):</German>
 		<Italian>Schivata dei difensori:</Italian>
 		<Polish>Unik Obrońcy:</Polish>
-		<Russian>Óêëîíåíèå îáîðîíÿþùåãîñÿ:</Russian>
+		<Russian>Уклонение обороняющегося:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ARMOR_COMPARE_DEFENDER_HIT_MODIFIER</Tag>
@@ -220,7 +222,7 @@
 		<French>Chances de base:</French>
 		<Italian>Chance di base:</Italian>
 		<Polish>Bazowa Szansa:</Polish>
-		<Russian>Áàçîâûé øàíñ:</Russian>
+		<Russian>Базовый шанс:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_BREAKDOWN_EFFECTS</Tag>
@@ -254,7 +256,7 @@
 		<English>[ICON_BULLET]Defender Damage Modifier: %D1_Bonus%%</English>
 		<French>[ICON_BULLET]Modif de dégâts (Défenseur) : %D1_Bonus%%</French>
 		<German>[ICON_BULLET]Schadensmodifikator (Verteidiger): %D1_Bonus%%</German>
-		<Russian>[ICON_BULLET]Урон в обороне: %D1_Bonus%%</Russian>
+		<Russian>[ICON_BULLET]Модификатор урона обороняющегося: %D1_Bonus%%</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_DEFENDER_MAY_AFFLICT</Tag>
@@ -444,7 +446,7 @@
 		<German>%s1_CivName: %s4:4_UnitName wurde von %s2_UnitName (%s3_CivName) besiegt</German>
 		<Italian>L'unità %[s2_UnitName] dell'%[s1_CivName] ha sconfitto l'unità %[s4_UnitName] dell'%[s3_CivName]!</Italian>
 		<Spanish>[NUM2:Un:Una:Unos:Unas] %[s2_UnitName] del %[s1_CivName] [NUM2:ha:ha:han:han] derrotado a [NUM3:un:una:unos:unas] %[s3_UnitName] del %[s4_CivName].</Spanish>
-		<Russian>%[s1_CivName]'s %[s2_UnitName] одержал верх над %[s3_CivName] %[s4_UnitName]!</Russian>
+		<Russian>%[s2_UnitName] из цивилизации %[s1_CivName] одержал верх над %[s4_UnitName] из цивилизации %[s3_CivName]!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_MESSAGE_FEATURE</Tag>
@@ -454,7 +456,7 @@
 		<Italian>(Difesa da caratteristiche: %D1%%)</Italian>
 		<Spanish>(Defender característica: %D1%%)</Spanish>
 		<Polish>(Cecha obrony: %D1%%</Polish>
-		<Russian>(Çàùèòà êëåòêè: %D1%%)</Russian>
+		<Russian>(Защита клетки: %D1%%)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_MESSAGE_HILLS</Tag>
@@ -464,7 +466,7 @@
 		<Italian>(Difesa in collina: %D1%%)</Italian>
 		<Spanish>(Defender colinas: %D1%%)</Spanish>
 		<Polish>(Obrona na wzgórzach: %D1%%)</Polish>
-		<Russian>(Çàùèòà - õîëìû: %D1%%)</Russian>
+		<Russian>(Защита - холмы: %D1%%)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_MESSAGE_HIT</Tag>
@@ -483,7 +485,7 @@
 		<Italian>(Difesa da terreno: %d1%%)</Italian>
 		<Spanish>(Defender terreno: %d1%%)</Spanish>
 		<Polish>(Obrona w terenie: %d1%%)</Polish>
-		<Russian>(Îáîðîíà ìåñòíîñòè: %d1%%) </Russian>
+		<Russian>(Оборона местности: %d1%%) </Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_MESSAGE_VS</Tag>

@@ -12,6 +12,7 @@
 #include "CvGlobals.h"
 #include "CvInitCore.h"
 #include "CvInfos.h"
+#include "CvUnitCombatInfo.h"
 #include "CvImprovementInfo.h"
 #include "CvBonusInfo.h"
 #include "CvMap.h"
@@ -486,6 +487,7 @@ void CvGame::onFinalInitialized(const bool bNewGame)
 	PROFILE("CvGame::onFinalInitialized");
 	FAssert(!m_bFinalInitialized);
 	OutputDebugString("onFinalInitialized: Start\n");
+	averageHandicaps();
 
 	// Game has been initialized fully when reaching this point.
 	m_bFinalInitialized = true;
@@ -614,6 +616,7 @@ void CvGame::setInitialItems()
 {
 	OutputDebugString("setInitialItems: Start\n");
 	PROFILE_FUNC();
+	averageHandicaps();
 
 	// Toffer - Some victory conditions make no sense for games without competitors.
 	if (countCivPlayersAlive() < 2)
@@ -844,6 +847,7 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 	uninit();
 
 	m_gameId = create_game_id();
+	m_eHandicap = eHandicap;
 	m_iElapsedGameTurns = 0;
 	m_iStartTurn = 0;
 	m_iStartYear = 0;
@@ -7116,11 +7120,13 @@ void CvGame::updateMoves()
 					{
 						player.AI_unitUpdate();
 					}
+					/*
 					// A unit ready to move at this point is one the player needs to interact with
 					if (player.hasReadyUnautomatedUnit(true))
 					{
 						player.setTurnHadUIInteraction(true);
 					}
+					*/
 				}
 			}
 			else
@@ -8480,8 +8486,6 @@ void CvGame::read(FDataStreamBase* pStream)
 	WRAPPER_READ_CLASS_ARRAY(wrapper,"CvGame", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_paiTechGameTurnDiscovered);
 	WRAPPER_READ_OBJECT_END(wrapper);
 
-	averageHandicaps();
-
 	//establish improvement costs
 	//for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
 	//{
@@ -8870,7 +8874,7 @@ void CvGame::addPlayer(PlayerTypes eNewPlayer, LeaderHeadTypes eLeader, Civiliza
 	GET_PLAYER(eNewPlayer).initInGame(eNewPlayer, bSetAlive);
 }
 
-void CvGame::changeHumanPlayer( PlayerTypes eOldHuman, PlayerTypes eNewHuman )
+void CvGame::changeHumanPlayer(PlayerTypes eOldHuman, PlayerTypes eNewHuman)
 {
 	PROFILE_EXTRA_FUNC();
 	// It's a multiplayer game, eep!
@@ -8896,6 +8900,8 @@ void CvGame::changeHumanPlayer( PlayerTypes eOldHuman, PlayerTypes eNewHuman )
 	}
 
 	GET_PLAYER(eOldHuman).setIsHuman(false);
+
+	averageHandicaps();
 }
 
 bool CvGame::isCompetingCorporation(CorporationTypes eCorporation1, CorporationTypes eCorporation2) const

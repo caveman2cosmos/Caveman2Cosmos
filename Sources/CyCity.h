@@ -7,7 +7,7 @@
 // Python wrapper class for CvCity
 //
 
-#include "CityOutputHistory.h"
+class CityOutputHistory;
 class CvCity;
 //class CvProperties;
 class CyPlot;

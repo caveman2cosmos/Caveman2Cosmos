@@ -9,7 +9,7 @@
 		<Italian>Baia di %s1</Italian>
 		<Spanish>Bahía de %s1</Spanish>
 		<Polish>Zatoki %s1</Polish>
-		<Russian>Áóõòà %s1</Russian>
+		<Russian>Бухта %s1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LANDMARK_BAY_1</Tag>
@@ -19,7 +19,7 @@
 		<Italian>Golfo di %s1</Italian>
 		<Spanish>Golfo de %s1</Spanish>
 		<Polish>Zatoka %s1</Polish>
-		<Russian>Çàëèâ %s1</Russian>
+		<Russian>Залив %s1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LANDMARK_BAY_2</Tag>
@@ -29,7 +29,7 @@
 		<Italian>Mare di %s1</Italian>
 		<Spanish>Mar de %s1</Spanish>
 		<Polish>Morze %s1</Polish>
-		<Russian>Ìîðå %s1</Russian>
+		<Russian>Море %s1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LANDMARK_DESERT_0</Tag>
@@ -39,7 +39,7 @@
 		<Italian>Deserto %s1</Italian>
 		<Spanish>Desierto %s1</Spanish>
 		<Polish>Pustynia %s1</Polish>
-		<Russian>%s1 Ïóñòûíÿ</Russian>
+		<Russian>%s1 Пустыня</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LANDMARK_FOREST_0</Tag>
@@ -49,7 +49,7 @@
 		<Italian>Foresta di %s1</Italian> <!-- Bamboo forest Improvemnts, pedia-->
 		<Spanish>Bosque de %s1</Spanish>
 		<Polish>Las %s1</Polish>
-		<Russian>Ëåñ %s1</Russian>
+		<Russian>Лес %s1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LANDMARK_FOREST_1</Tag>
@@ -59,7 +59,7 @@
 		<Italian>Foresta %s1</Italian>
 		<Spanish>Bosque %s1</Spanish>
 		<Polish>Las %s1</Polish>
-		<Russian>%s1 ëåñ</Russian>
+		<Russian>%s1 лес</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LANDMARK_JUNGLE_0</Tag>
@@ -69,7 +69,7 @@
 		<Italian>Giungla di %s1</Italian>
 		<Spanish>Jungla de %s1</Spanish>
 		<Polish>Dżungla %s1</Polish>
-		<Russian>Äæóíãëè %s1</Russian>
+		<Russian>Джунгли %s1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LANDMARK_JUNGLE_1</Tag>
@@ -79,7 +79,7 @@
 		<Italian>Giungla %s1</Italian>
 		<Spanish>Jungla %s1</Spanish>
 		<Polish>Dżungla %s1</Polish>
-		<Russian>%s1 äæóíãëè</Russian>
+		<Russian>%s1 джунгли</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LANDMARK_JUNGLE_2</Tag>
@@ -89,7 +89,7 @@
 		<Italian>Foresta pluviale di %s1</Italian>
 		<Spanish>Selva de %s1</Spanish>
 		<Polish>Lasy Deszczowe %s1</Polish>
-		<Russian>Òðîïè÷åñêèé ëåñ %s1</Russian>
+		<Russian>Тропический лес %s1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LANDMARK_JUNGLE_3</Tag>
@@ -99,7 +99,7 @@
 		<Italian>Foresta pluviale %s1</Italian>
 		<Spanish>Selva %s1</Spanish>
 		<Polish>Lasy Deszczowe %s1</Polish>
-		<Russian>%s1 òðîïè÷åñêèé ëåñ</Russian>
+		<Russian>%s1 тропический лес</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LANDMARK_LAKE_0</Tag>
@@ -109,7 +109,7 @@
 		<Italian>Lago %s1</Italian>
 		<Spanish>Lago %s1</Spanish>
 		<Polish>Jezioro %s1</Polish>
-		<Russian>%s1 îçåðî</Russian>
+		<Russian>%s1 озеро</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LANDMARK_LAKE_1</Tag>
@@ -119,7 +119,7 @@
 		<Italian>Lago di %s1</Italian>
 		<Spanish>Lago %s1</Spanish>
 		<Polish>Jezioro %s1</Polish>
-		<Russian>Îçåðî %s1</Russian>
+		<Russian>Озеро %s1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LANDMARK_MOUNTAINS_0</Tag>
@@ -129,7 +129,7 @@
 		<Italian>Montagne %s1</Italian>
 		<Spanish>Sierra %s1</Spanish>
 		<Polish>Góry %s1</Polish>
-		<Russian>%s1 ãîðû</Russian>
+		<Russian>%s1 горы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LANDMARK_MOUNTAINS_1</Tag>
@@ -139,7 +139,7 @@
 		<Italian>Catena montuosa %s1</Italian>
 		<Spanish>Cordillera %s1</Spanish>
 		<Polish>Pasmo Górskie %s1</Polish>
-		<Russian>%s1 ãîðíàÿ öåïü</Russian>
+		<Russian>%s1 горная цепь</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LANDMARK_PEAK_0</Tag>
@@ -149,7 +149,7 @@
 		<Italian>Monte %s1</Italian>
 		<Spanish>Monte %s1</Spanish>
 		<Polish>Góra %s1</Polish>
-		<Russian>ãîð. %s1</Russian>
+		<Russian>Гора %s1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LANDMARK_PEAK_1</Tag>
@@ -159,7 +159,7 @@
 		<Italian>Montagna %s1</Italian>
 		<Spanish>Montaña %s1</Spanish>
 		<Polish>Góra %s1</Polish>
-		<Russian>%s1 ãîðà</Russian>
+		<Russian>%s1 гора</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SIGN_EVENT_APPLESEED_1</Tag>
@@ -169,7 +169,7 @@
 		<Italian>alberi di melo</Italian>
 		<Spanish>manzanos</Spanish>
 		<Polish>jabłonie</Polish>
-		<Russian>ÿáëî÷íûå äåðåâüÿ</Russian>
+		<Russian>яблочные деревья</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SIGN_EVENT_BANANA_BLIGHT_1</Tag>
@@ -179,6 +179,7 @@
 		<Italian>fusariosis della banana</Italian>
 		<Spanish>plaga de plátanos</Spanish>
 		<Polish>bananowa zaraza</Polish>
+		<Russian>банановая болезнь</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SIGN_EVENT_BLACK_PEARLS_1</Tag>
@@ -188,7 +189,7 @@
 		<Italian>perle nere</Italian>
 		<Spanish>perlas negras</Spanish>
 		<Polish>czarne perły</Polish>
-		<Russian>÷åðíûé æåì÷óã</Russian>
+		<Russian>чёрный жемчуг</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SIGN_EVENT_CLUNKER_COAL_1</Tag>
@@ -198,7 +199,7 @@
 		<Italian>impurità</Italian>
 		<Spanish>impurezas</Spanish>
 		<Polish>zanieczyszczenia</Polish>
-		<Russian>ïðèìåñè</Russian>
+		<Russian>примеси</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SIGN_EVENT_COTTON_IRRIGATION_1</Tag>
@@ -208,6 +209,7 @@
 		<Italian>irrigazione del cotone</Italian>
 		<Spanish>irrigación del algodón</Spanish>
 		<Polish>irygacja bawełny</Polish>
+		<Russian>орошение хлопчатника</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SIGN_EVENT_FORTY_THIEVES_1</Tag>
@@ -217,7 +219,7 @@
 		<Italian>leggenda locale</Italian>
 		<Spanish>leyenda local</Spanish>
 		<Polish>lokalna legenda</Polish>
-		<Russian>ìåñòíàÿ ëåãåíäà</Russian>
+		<Russian>местная легенда</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SIGN_EVENT_GREAT_BEAST_1</Tag>
@@ -227,7 +229,7 @@
 		<Italian>grande animale</Italian>
 		<Spanish>bestia enorme</Spanish>
 		<Polish>wielka bestia</Polish>
-		<Russian>îãðîìíûé çâåðü</Russian>
+		<Russian>огромный зверь</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SIGN_EVENT_HARDY_CROPS_1</Tag>
@@ -237,6 +239,7 @@
 		<Italian>colture robuste</Italian>
 		<Spanish>cosechas robustas</Spanish>
 		<Polish>wytrzymałe uprawy</Polish>
+		<Russian>выносливые сельскохозяйственные растения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SIGN_EVENT_HORTICULTURE_1</Tag>
@@ -246,7 +249,7 @@
 		<Italian>medicina</Italian>
 		<Spanish>medicina</Spanish>
 		<Polish>medycyna</Polish>
-		<Russian>ëåêàðñòâî</Russian>
+		<Russian>лекарство</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SIGN_EVENT_HORTICULTURE_2</Tag>
@@ -256,7 +259,7 @@
 		<Italian>medicina</Italian>
 		<Spanish>medicina</Spanish>
 		<Polish>medycyna</Polish>
-		<Russian>ëåêàðñòâî</Russian>
+		<Russian>лекарство</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SIGN_EVENT_JADE_1</Tag>
@@ -264,7 +267,7 @@
 		<German>Jade</German>
 		<Italian>giada</Italian>
 		<Polish>nefryt</Polish>
-		<Russian>íåôðèò</Russian>
+		<Russian>нефрит</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SIGN_EVENT_LOCAL_MILLS_1</Tag>
@@ -274,6 +277,7 @@
 		<Italian>mulini locali</Italian>
 		<Spanish>molinos locales</Spanish>
 		<Polish>lokalne młyny</Polish>
+		<Russian>местные мельницы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SIGN_EVENT_OVERFISHING_1</Tag>
@@ -283,6 +287,7 @@
 		<Italian>sovrasfruttamento delle risorse ittiche</Italian>
 		<Spanish>sobre pesca</Spanish>
 		<Polish>przełowienia</Polish>
+		<Russian>перелов рыбы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SIGN_EVENT_PARROTS_1</Tag>
@@ -292,7 +297,7 @@
 		<Italian>pappagalli</Italian>
 		<Spanish>loros</Spanish>
 		<Polish>papugi</Polish>
-		<Russian>ïîïóãàè</Russian>
+		<Russian>попугаи</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SIGN_EVENT_PRAIRIE_DOGS_1</Tag>
@@ -302,7 +307,7 @@
 		<Italian>cani della prateria</Italian>
 		<Spanish>perros de las praderas</Spanish>
 		<Polish>pieski preriowe</Polish>
-		<Russian>ëóãîâûå ñîáà÷êè</Russian>
+		<Russian>луговые собачки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SIGN_EVENT_PRIME_TIMBER_1</Tag>
@@ -312,6 +317,7 @@
 		<Italian>legno pregiato</Italian>
 		<Spanish>madera de calidad</Spanish>
 		<Polish>pierwszorzędne drewno</Polish>
+		<Russian>первосортная древесина</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SIGN_EVENT_RESORT_TOWN_1</Tag>
@@ -321,6 +327,7 @@
 		<Italian>destinazione turistica</Italian>
 		<Spanish>zona turística</Spanish>
 		<Polish>miejscowość wypoczynkowa</Polish>
+		<Russian>курортный город</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SIGN_EVENT_SALTPETER_1</Tag>
@@ -330,7 +337,7 @@
 		<Italian>salnitro</Italian>
 		<Spanish>salitre</Spanish>
 		<Polish>saletra</Polish>
-		<Russian>ñåëèòðà</Russian>
+		<Russian>селитра</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SIGN_EVENT_SALT_MINE_1</Tag>
@@ -340,6 +347,7 @@
 		<Italian>miniera di sale</Italian>
 		<Spanish>mina de sal</Spanish>
 		<Polish>kopalnia soli</Polish>
+		<Russian>соляная шахта</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SIGN_EVENT_SEA_TURTLES</Tag>
@@ -349,6 +357,7 @@
 		<Italian>tartarughe di mare</Italian>
 		<Spanish>tortugas marinas</Spanish>
 		<Polish>żółwie morskie</Polish>
+		<Russian>морские черепахи</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SIGN_EVENT_SOUR_CRUDE_1</Tag>
@@ -358,7 +367,7 @@
 		<Italian>impurità</Italian>
 		<Spanish>impurezas</Spanish>
 		<Polish>zanieczyszczenia</Polish>
-		<Russian>ïðèìåñè</Russian>
+		<Russian>примеси</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SIGN_EVENT_TIN_1</Tag>
@@ -368,7 +377,7 @@
 		<Italian>stagno</Italian>
 		<Spanish>estaño</Spanish>
 		<Polish>Cyna</Polish>
-		<Russian>îëîâî</Russian>
+		<Russian>Олово</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SIGN_EVENT_TRUFFLES_1</Tag>
@@ -378,7 +387,7 @@
 		<Italian>tartufi</Italian>
 		<Spanish>trufas</Spanish>
 		<Polish>trufle</Polish>
-		<Russian>òðþôåëè</Russian>
+		<Russian>трюфели</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SIGN_EVENT_WATERS_OF_LIFE_1</Tag>
@@ -388,6 +397,6 @@
 		<Italian>Acqua della vita</Italian>
 		<Spanish>Aguas de la Vida</Spanish>
 		<Polish>Woda Życia</Polish>
-		<Russian>æèâàÿ âîäà</Russian>
+		<Russian>Живая вода</Russian>
 	</TEXT>
 </Civ4GameText>

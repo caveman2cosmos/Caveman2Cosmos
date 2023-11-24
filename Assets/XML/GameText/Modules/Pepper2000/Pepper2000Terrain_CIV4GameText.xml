@@ -4,170 +4,170 @@
 		<Tag>TXT_KEY_FEATURE_BLUE_DWARF</Tag>
 		<English>Blue Dwarf</English>
 		<French>Naine Bleue</French>
-		<Russian>Ãîëóáîé êàðëèê</Russian>
+		<Russian>Голубой карлик</Russian>
 		<Italian>Nana blu</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_BLUE_DWARF_PEDIA</Tag>
 		<English>A blue dwarf star</English>
 		<French>Une étoile naine bleue</French>
-		<Russian>Êàðëèêîâàÿ ãîëóáàÿ çâåçäà</Russian>
+		<Russian>Маленькая голубая звезда</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_BLUE_SUPERGIANT</Tag>
 		<English>Blue Supergiant</English>
 		<French>Supergéante Bleue</French>
-		<Russian>Ãîëóáîé ñâåðõãèãàíò</Russian>
+		<Russian>Голубой сверхгигант</Russian>
 		<Italian>Supergigante blu</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_BLUE_SUPERGIANT_PEDIA</Tag>
 		<English>A blue supergiant star.</English>
 		<French>Une étoile supergéante bleue.</French>
-		<Russian>Ìàññèâíàÿ ãîëóáàÿ çâåçäà-ñâåðõãèãàíò.</Russian>
+		<Russian>Огромная голубая звезда.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_BROWN_DWARF</Tag>
 		<English>Brown Dwarf</English>
 		<French>Naine Brune</French>
-		<Russian>Êîðè÷íåâûé êàðëèê</Russian>
+		<Russian>Коричневый карлик</Russian>
 		<Italian>Nana bruna</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_BROWN_DWARF_PEDIA</Tag>
 		<English>A brown dwarf</English>
 		<French>Une naine brune</French>
-		<Russian>Êàðëèêîâàÿ ïðîòîçâåçäà</Russian>
+		<Russian>Карликовый субзвёздный объект</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_CARBON_PLANET</Tag>
 		<English>Carbon Planet</English>
 		<French>Planète Carbone</French>
-		<Russian>Óãëåðîäíàÿ ïëàíåòà</Russian>
+		<Russian>Углеродная планета</Russian>
 		<Italian>Pianeta carbonico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_CARBON_PLANET_PEDIA</Tag>
 		<English>A planet with very high carbon content.</English>
 		<French>Une planète à très forte teneur en carbone.</French>
-		<Russian>Ïëàíåòà ñ î÷åíü âûñîêèì ñîäåðæàíèåì óãëåðîäà.</Russian>
+		<Russian>Планета с очень высоким содержанием углерода.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_CHTHONIAN_PLANET</Tag>
 		<English>Chthonian Planet</English>
 		<French>Planète Chthonien</French>
-		<Russian>Õòîíè÷åñêàÿ ïëàíåòà</Russian>
+		<Russian>Хтоническая планета</Russian>
 		<Italian>Pianeta ctonio</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_CHTHONIAN_PLANET_PEDIA</Tag>
 		<English>A chthonian planet</English>
 		<French>Une planète chthonienne</French>
-		<Russian>Êîðîòêîïåðèîäè÷åñêàÿ ïëàíåòà-ãèãàíò. Èç-çà ýêñòðåìàëüíî âûñîêèõ òåìïåðàòóð îíà íåïðåðûâíî òåðÿåò àòìîñôåðó, ïîñòåïåííî ïðåâðàùàÿñü îáû÷íóþ êàìåíèñòóþ ïëàíåòó.</Russian>
+		<Russian>Короткопериодический газовый гигант. Из-за экстремально высоких температур непрерывно теряет атмосферу, постепенно превращаясь в каменистую планету.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_DESERT_PLANET</Tag>
 		<English>Desert Planet</English>
 		<French>Planète Désert</French>
-		<Russian>Ïóñòûííàÿ ïëàíåòà</Russian>
+		<Russian>Планета-пустыня</Russian>
 		<Italian>Pianeta desertico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_DESERT_PLANET_PEDIA</Tag>
 		<English>A rocky planet almost entirely devoid of water.</English>
 		<French>Une planète rocheuse presque entièrement dépourvue d'eau.</French>
-		<Russian>Êàìåíèñòàÿ ïëàíåòà ïî÷òè ïîëíîñòüþ ëèøåííàÿ âîäû.</Russian>
+		<Russian>Каменистая планета почти полностью лишённая воды.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_DWARF_GALAXY</Tag>
 		<English>Dwarf Galaxy</English>
 		<French>Galaxie Naine</French>
-		<Russian>Êàðëèêîâàÿ ãàëàêòèêà</Russian>
+		<Russian>Карликовая галактика</Russian>
 		<Italian>Galassia nana</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_DWARF_GALAXY_PEDIA</Tag>
 		<English>A dwarf galaxy</English>
 		<French>Une galaxie naine</French>
-		<Russian>Êàðëèêîâàÿ ãàëàêòèêà. ×àñòî ÿâëÿåòñÿ ñïóòíèêîì áîëåå êðóïíûõ ãàëàêòèê.</Russian>
+		<Russian>Галактика небольшого размера. Часто является спутником более крупных.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_GALAXY</Tag>
 		<English>Galaxy</English>
 		<French>Galaxie</French>
-		<Russian>Ãàëàêòèêà</Russian>
+		<Russian>Галактика</Russian>
 		<Italian>Galassia</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_GALAXY_PEDIA</Tag>
 		<English>A galaxy outside of the Milky Way.</English>
 		<French>Une galaxie en dehors de la Voie Lactée.</French>
-		<Russian>Ãàëàêòèêà çà ïðåäåëàìè Ìëå÷íîãî ïóòè.</Russian>
+		<Russian>Галактика за пределами Млечного пути.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_HOT_JUPITER</Tag>
 		<English>Hot Jupiter</English>
 		<French>Jupiter Chaude</French>
-		<Russian>Ãîðÿ÷èé Þïèòåð</Russian>
+		<Russian>Горячий юпитер</Russian>
 		<Italian>Pianeta gioviano caldo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_HOT_JUPITER_PEDIA</Tag>
 		<English>A Hot Jupiter.</English>
 		<French>Une Jupiter Chaude.</French>
-		<Russian>Ãàçîâûé ãèãàíò ñ âûñîêèìè òåìïåðàòóðàìè â âåðõíèõ ñëîÿõ àòìîñôåðû.</Russian>
+		<Russian>Газовый гигант с высокими температурами в верхних слоях атмосферы.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_MINI_NEPTUNE</Tag>
 		<English>Mini Neptune</English>
 		<French>Mini Neptune</French>
-		<Russian>Ìèíè-Íåïòóí</Russian>
+		<Russian>Мининептун</Russian>
 		<Italian>Mininettuno</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_MINI_NEPTUNE_PEDIA</Tag>
 		<English>A mini-Neptune.</English>
 		<French>Une mini-Neptune.</French>
-		<Russian>Ìèíè-Íåïòóí.</Russian>
+		<Russian>Планета промежуточного типа между газовыми гигантами и каменистыми.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_OCEAN_PLANET</Tag>
 		<English>Ocean Planet</English>
 		<French>Planète Océan</French>
-		<Russian>Ïëàíåòà-Îêåàí</Russian>
+		<Russian>Планета-океан</Russian>
 		<Italian>Pianeta oceanico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_OCEAN_PLANET_PEDIA</Tag>
 		<English>A rocky planet whose surface is covered entirely by ocean.</English>
 		<French>Une planète rocheuse dont la surface est entièrement recouverte par l'océan.</French>
-		<Russian>Ñêàëèñòàÿ ïëàíåòà, ïîâåðõíîñòü êîòîðîé ïîëíîñòüþ ïîêðûòà îêåàíîì.</Russian>
+		<Russian>Скалистая планета, поверхность которой полностью покрыта океаном.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_OORT_CLOUD</Tag>
 		<English>Oort Cloud</English>
 		<French>Nuage d'Oort</French>
-		<Russian>Îáëàêî Îîðòà</Russian>
+		<Russian>Облако Оорта</Russian>
 		<Italian>Nube di Oort</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_OORT_CLOUD_PEDIA</Tag>
 		<English>The Oort Cloud, which is a collection of very distant satellites from the Sun.</English>
 		<French>Le Nuage d'Oort, qui est une collection de satellites très éloignés du Soleil.</French>
-		<Russian>Îáëàêî Îîðòà, êîòîðîå ïðåäñòàâëÿåò ñîáîé ñêîïëåíèå, ïîÿñ î÷åíü äàëåêèõ ñïóòíèêîâ îò Ñîëíöà.</Russian>
+		<Russian>Скопление очень далеких спутников Солнца.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_PLANETARY_RING</Tag>
 		<English>Planetary Ring</English>
 		<French>Anneau Planétaire</French>
-		<Russian>Ïëàíåòàðíîå êîëüöî</Russian>
+		<Russian>Планетарное кольцо</Russian>
 		<Italian>Anello planetario</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_PLANETARY_RING_PEDIA</Tag>
 		<English>Planetary Rings, such as those of Saturn.</English>
 		<French>Anneau Planétaire, comme ceux de Saturne.</French>
-		<Russian>Êîëüöî ëåäÿíûõ è êàìåííûõ îáëîìêîâ íà îðáèòå ïëàíåòû, êàê ó Ñàòóðíà.</Russian>
+		<Russian>Кольцо ледяных и каменных обломков на орбите планеты, как у Сатурна.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_QUASAR</Tag>

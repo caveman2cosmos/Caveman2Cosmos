@@ -8,7 +8,7 @@
 		<Spanish>Carga</Spanish>
 		<Italian>merce</Italian>
 		<Polish>Ładowność</Polish>
-		<Russian>Òðàíñïîðò</Russian>
+		<Russian>Транспорт</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_WORD_CITY</Tag>
@@ -18,7 +18,7 @@
 		<Italian>in città</Italian><!--Aerial CT trait in the pedia-->
 		<Spanish>Ciudad</Spanish>
 		<Polish>Miasto</Polish>
-		<Russian>Ãîðîä</Russian>
+		<Russian>Город</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_WORD_COST</Tag>
@@ -28,7 +28,7 @@
 		<Italian>costo</Italian>
 		<Spanish>Coste</Spanish>
 		<Polish>Koszt</Polish>
-		<Russian>Öåíà</Russian>
+		<Russian>Цена</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_WORD_CULTURE</Tag>
@@ -37,7 +37,7 @@
 		<Italian>Cultura</Italian>
 		<Spanish>Cultura</Spanish>
 		<Polish>Kultura</Polish>
-		<Russian>Êóëüòóðà</Russian>
+		<Russian>Культура</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_WORD_DEFAULT</Tag>
@@ -56,7 +56,7 @@
 		<Italian>Spionaggio</Italian>
 		<Spanish>Espionaje</Spanish>
 		<Polish>Szpiegostwo</Polish>
-		<Russian>Øïèîíàæ</Russian>
+		<Russian>Шпионаж</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_WORD_EXIT</Tag>
@@ -65,6 +65,7 @@
 		<German>Beenden</German>
 		<Italian>Esci</Italian>
 		<Spanish>Salir</Spanish>
+		<Russian>Выход</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_WORD_FOOD</Tag>
@@ -74,7 +75,7 @@
 		<Italian>Cibo</Italian>
 		<Spanish>Alimento</Spanish>
 		<Polish>Żywność</Polish>
-		<Russian>Ïèùà</Russian>
+		<Russian>Пища</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_WORD_GAME</Tag>
@@ -84,7 +85,7 @@
 		<Italian>Gioco</Italian>
 		<Spanish>Partida</Spanish>
 		<Polish>Gra</Polish>
-		<Russian>Èãðà</Russian>
+		<Russian>Игра</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_WORD_HILL</Tag>
@@ -93,6 +94,7 @@
 		<German>Hügel</German>
 		<Italian>Collina</Italian>
 		<Spanish>Colina</Spanish>
+		<Russian>Холм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_WORD_NAME</Tag>
@@ -101,7 +103,7 @@
 		<Italian>Nome</Italian>
 		<Spanish>Nombre</Spanish>
 		<Polish>Nazwa</Polish>
-		<Russian>Íàçâàíèå</Russian>
+		<Russian>Название</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_WORD_PEAK</Tag>
@@ -110,6 +112,7 @@
 		<German>Gipfel</German>
 		<Italian>Picco</Italian>
 		<Spanish>Pico</Spanish>
+		<Russian>Гора</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_WORD_PLAYER</Tag>
@@ -119,7 +122,7 @@
 		<Italian>giocatore</Italian>
 		<Spanish>Jugador</Spanish>
 		<Polish>Gracz</Polish>
-		<Russian>Èãðîê</Russian>
+		<Russian>Игрок</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_WORD_PLOT</Tag>
@@ -129,13 +132,14 @@
 		<Italian>casella</Italian>
 		<Spanish>Casilla</Spanish>
 		<Polish>Pole</Polish>
-		<Russian>Ó÷àñòîê</Russian>
+		<Russian>Участок</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_WORD_RECOMMENDATIONS</Tag>
 		<English>Recommendations</English>
 		<German>Empfehlungen</German>
 		<Italian>Raccomandazioni</Italian>
+		<Russian>Рекомендации</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_WORD_SPOT</Tag>
@@ -150,7 +154,7 @@
 		<Italian>squadra</Italian>
 		<Spanish>Equipo</Spanish>
 		<Polish>Drużyna</Polish>
-		<Russian>Êîìàíäà</Russian>
+		<Russian>Команда</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_WORD_UNIT</Tag>
@@ -160,7 +164,7 @@
 		<Italian>unità</Italian>
 		<Spanish>Unidad</Spanish>
 		<Polish>Jednostka</Polish>
-		<Russian>Îòðÿä</Russian>
+		<Russian>Отряд</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_WORD_WITH</Tag>
@@ -170,6 +174,6 @@
 		<Italian>Variazione ulteriore con</Italian>
 		<Spanish>Con</Spanish>
 		<Polish>Z</Polish>
-		<Russian>Ñ</Russian>
+		<Russian>С</Russian>
 	</TEXT>
 </Civ4GameText>

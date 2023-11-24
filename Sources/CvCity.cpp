@@ -28,6 +28,7 @@
 #include "CvViewport.h"
 #include "CvDLLInterfaceIFaceBase.h"
 #include "CvDLLUtilityIFaceBase.h"
+#include "CvTraitInfo.h"
 #ifdef THE_GREAT_WALL
 #include "CvDLLEngineIFaceBase.h"
 #endif
@@ -4834,16 +4835,17 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 	{
 		changeAfflictionTypeCount(kBuilding.getPromotionLineType(), iChange);
 	}
-#endif // OUTBREAKS_AND_AFFLICTIONS
+
 
 	for (int iI = 0; iI < kBuilding.getNumBonusAidModifiers(); iI++)
 	{
 		BonusTypes eBonus = kBuilding.getBonusAidModifier(iI).eBonusType;
 		PropertyTypes ePropertyType = kBuilding.getBonusAidModifier(iI).ePropertyType;
+
 		changeExtraBonusAidModifier(eBonus, ePropertyType, kBuilding.getBonusAidModifier(iI).iModifier);
 	}
 
-#ifdef OUTBREAKS_AND_AFFLICTIONS
+
 	for (int iI = 0; iI < GC.getNumPromotionLineInfos(); iI++)
 	{
 		PROFILE("CvCity::processBuilding.PromotionLines");

@@ -8,6 +8,7 @@
 		<German>English</German>
 		<Italian>Inglese</Italian>
 		<Spanish>Inglés</Spanish>
+		<Russian>Английский</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LANGUAGE_1</Tag>
@@ -16,6 +17,7 @@
 		<German>Français</German>
 		<Italian>Francese</Italian>
 		<Spanish>Francés</Spanish>
+		<Russian>Французкий</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LANGUAGE_2</Tag>
@@ -24,6 +26,7 @@
 		<German>Deutsch</German>
 		<Italian>Tedesco</Italian>
 		<Spanish>Alemán</Spanish>
+		<Russian>Немецкий</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LANGUAGE_3</Tag>
@@ -32,6 +35,7 @@
 		<German>Italiano</German>
 		<Italian>Italiano</Italian>
 		<Spanish>Italiano</Spanish>
+		<Russian>Итальянский</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LANGUAGE_4</Tag>
@@ -40,6 +44,7 @@
 		<German>Español</German>
 		<Italian>Spagnolo</Italian>
 		<Spanish>Español</Spanish>
+		<Russian>Испанский</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LANGUAGE_5</Tag>
@@ -49,7 +54,7 @@
 		<Italian>Polacco</Italian>
 		<Spanish>Polaco</Spanish>
 		<Polish>Polski</Polish>
-		<Russian>Ïîëüñêèé</Russian>
+		<Russian>Польский</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LANGUAGE_6</Tag>

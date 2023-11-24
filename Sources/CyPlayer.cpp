@@ -38,11 +38,6 @@ void CyPlayer::changeCiv(int /*CivilizationTypes*/ eNewCiv)
 	m_pPlayer->changeCiv((CivilizationTypes)eNewCiv);
 }
 
-void CyPlayer::setIsHuman(bool bNewValue)
-{
-	m_pPlayer->setIsHuman(bNewValue);
-}
-
 void CyPlayer::setIsRebel(bool bNewValue)
 {
 	m_pPlayer->setIsRebel(bNewValue);

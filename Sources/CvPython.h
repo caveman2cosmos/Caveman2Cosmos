@@ -7,6 +7,7 @@
 
 #include <boost155/type_traits.hpp>
 #include <boost155/utility/enable_if.hpp>
+#include <boost/python/list.hpp>
 
 #include "FAssert.h"
 #include "CvString.h"
@@ -46,7 +47,7 @@ namespace Cy											\
 namespace Cy
 {
 	template <class Item_>
-	const python::list makeList(const std::vector<Item_>& vector)
+	const boost::python::list makeList(const std::vector<Item_>& vector)
 	{
 		PROFILE_EXTRA_FUNC();
 		python::list list = python::list();
@@ -411,7 +412,7 @@ namespace Cy
 			}
 
 			template <typename T>
-			static void fromPython(PyObject* obj, python::converter::rvalue_from_python_stage1_data* data)
+			static void fromPython(PyObject* obj, boost::python::converter::rvalue_from_python_stage1_data* data)
 			{
 				void* const storage = reinterpret_cast<python::converter::rvalue_from_python_storage<int>*>(data)->storage.bytes;
 				new (storage) T(static_cast<T>(PyInt_AS_LONG(obj)));

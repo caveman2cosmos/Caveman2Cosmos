@@ -12,6 +12,7 @@
 #include "CyArea.h"
 #include "CyMap.h"
 #include "CyPlot.h"
+#include "CyUnit.h"
 
 //
 // Python wrapper class for CvMap

@@ -14,6 +14,7 @@
 #include "CvBuildingInfo.h"
 #include "CvGlobals.h"
 #include "CvInfos.h"
+#include "CvUnitCombatInfo.h"
 #include "CvBonusInfo.h"
 #include "CvXMLLoadUtility.h"
 #include "BoolExpr.h"
@@ -22,6 +23,7 @@
 #include "CvImprovementInfo.h"
 #include "FVariableSystem.h"
 #include "wchar_utils.h"
+#include "CvTraitInfo.h"
 
 static bool getBefore(BoolExprChange change)
 {

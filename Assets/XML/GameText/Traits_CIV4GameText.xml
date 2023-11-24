@@ -627,7 +627,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AGGRESSIVE0</Tag>
 		<English>Aggressive 0</English>
-		<Italian>Aggressivo 0</Italian>
+		<Italian>Aggressivo I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AGGRESSIVE_PEDIA</Tag>
@@ -661,7 +661,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AGRICULTURAL0</Tag>
 		<English>Agricultural 0</English>
-		<Italian>Agricolo 0</Italian>
+		<Italian>Agricolo I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AGRICULTURAL_PEDIA</Tag>
@@ -870,7 +870,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANTI_CLERICAL0</Tag>
 		<English>Anti Clerical 0</English>
-		<Italian>Anticlericale 0</Italian>
+		<Italian>Anticlericale I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANTI_CLERICAL_PEDIA</Tag>
@@ -1146,6 +1146,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BARBARIC0</Tag>
 		<English>Barbaric 0</English>
+		<Italian>Barbaro I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BARBARIC_PEDIA</Tag>
@@ -1197,7 +1198,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CHARISMATIC0</Tag>
 		<English>Charismatic 0</English>
-		<Italian>Carismatico 0</Italian>
+		<Italian>Carismatico I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CHARISMATIC_PEDIA</Tag>
@@ -1226,7 +1227,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CREATIVE0</Tag>
 		<English>Creative 0</English>
-		<Italian>Creativo 0</Italian>
+		<Italian>Creativo I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CREATIVE_PEDIA</Tag>
@@ -1267,7 +1268,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CRUEL0</Tag>
 		<English>Cruel 0</English>
-		<Italian>Crudele 0</Italian>
+		<Italian>Crudele I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CRUEL_PEDIA</Tag>
@@ -1314,7 +1315,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DECEIVER0</Tag>
 		<English>Deceiver 0</English>
-		<Italian>Imbroglione 0</Italian>
+		<Italian>Imbroglione I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DECEIVER_PEDIA</Tag>
@@ -1355,7 +1356,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EXCESSIVE0</Tag>
 		<English>Excessive 0</English>
-		<Italian>Eccessivo 0</Italian>
+		<Italian>Eccessivo I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EXCESSIVE_PEDIA</Tag>
@@ -1409,7 +1410,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EXPANSIVE0</Tag>
 		<English>Expansive 0</English>
-		<Italian>Espansionista</Italian>
+		<Italian>Espansionista I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EXPANSIVE_PEDIA</Tag>
@@ -1450,7 +1451,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FANATICAL0</Tag>
 		<English>Fanatical 0</English>
-		<Italian>Fanatico 0</Italian>
+		<Italian>Fanatico I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FANATICAL_PEDIA</Tag>
@@ -1499,7 +1500,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FINANCIAL0</Tag>
 		<English>Financial 0</English>
-		<Italian>Economista 0</Italian>
+		<Italian>Economista I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FINANCIAL_PEDIA</Tag>
@@ -1539,7 +1540,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FOREIGN0</Tag>
 		<English>Foreign 0</English>
-		<Italian>Straniero 0</Italian>
+		<Italian>Straniero I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FOREIGN_PEDIA</Tag>
@@ -1585,7 +1586,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUMANITARIAN0</Tag>
 		<English>Humanitarian 0</English>
-		<Italian>Filantropo 0</Italian>
+		<Italian>Filantropo I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUMANITARIAN_PEDIA</Tag>
@@ -1623,7 +1624,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUNTER_GATHERER0</Tag>
 		<English>Hunter-Gatherer 0</English>
-		<Italian>Cacciatore-raccoglitore 0</Italian>
+		<Italian>Cacciatore-raccoglitore I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUNTER_GATHERER_PEDIA</Tag>
@@ -1677,7 +1678,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IDEALISTIC0</Tag>
 		<English>Idealistic 0</English>
-		<Italian>Idealista 0</Italian>
+		<Italian>Idealista I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IDEALISTIC_PEDIA</Tag>
@@ -1722,7 +1723,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IMPERIALIST0</Tag>
 		<English>Imperialistic 0</English>
-		<Italian>Imperialista 0</Italian>
+		<Italian>Imperialista I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IMPERIALIST_PEDIA</Tag>
@@ -1750,7 +1751,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_INDUSTRIOUS0</Tag>
 		<English>Industrious 0</English>
-		<Italian>Industrioso 0</Italian>
+		<Italian>Industrioso I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_INDUSTRIOUS_PEDIA</Tag>
@@ -1790,7 +1791,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ISOLATIONIST0</Tag>
 		<English>Isolationist 0</English>
-		<Italian>Isolazionista 0</Italian>
+		<Italian>Isolazionista I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ISOLATIONIST_PEDIA</Tag>
@@ -1844,7 +1845,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEGALOMANIAC0</Tag>
 		<English>Megalomaniac 0</English>
-		<Italian>Megalomane 0</Italian>
+		<Italian>Megalomane I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEGALOMANIAC_PEDIA</Tag>
@@ -1889,7 +1890,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NOMAD0</Tag>
 		<English>Nomad 0</English>
-		<Italian>Nomade 0</Italian>
+		<Italian>Nomade I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NOMAD_PEDIA</Tag>
@@ -1925,7 +1926,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ORGANIZED0</Tag>
 		<English>Organized 0</English>
-		<Italian>Organizzato 0</Italian>
+		<Italian>Organizzato I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ORGANIZED_PEDIA</Tag>
@@ -1961,7 +1962,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PHILOSOPHICAL0</Tag>
 		<English>Philosophical 0</English>
-		<Italian>Filosofo 0</Italian>
+		<Italian>Filosofo I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PHILOSOPHICAL_PEDIA</Tag>
@@ -2001,7 +2002,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_POLITICIAN0</Tag>
 		<English>Politician 0</English>
-		<Italian>Politico 0</Italian>
+		<Italian>Politico I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_POLITICIAN_PEDIA</Tag>
@@ -2055,7 +2056,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_POPULIST0</Tag>
 		<English>Populist 0</English>
-		<Italian>Populista 0</Italian>
+		<Italian>Populista I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_POPULIST_PEDIA</Tag>
@@ -2108,7 +2109,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROGRESSIST0</Tag>
 		<English>Progressist 0</English>
-		<Italian>Progressista 0</Italian>
+		<Italian>Progressista I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROGRESSIST_PEDIA</Tag>
@@ -2161,7 +2162,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROTECTIVE0</Tag>
 		<English>Protective 0</English>
-		<Italian>Protettivo 0</Italian>
+		<Italian>Protettivo I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROTECTIVE_PEDIA</Tag>
@@ -2193,7 +2194,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_REVOLUTIONARY0</Tag>
 		<English>Revolutionary 0</English>
-		<Italian>Rivoluzionario 0</Italian>
+		<Italian>Rivoluzionario I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_REVOLUTIONARY_PEDIA</Tag>
@@ -2239,7 +2240,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SCIENTIFIC0</Tag>
 		<English>Scientific 0</English>
-		<Italian>Scientifico 0</Italian>
+		<Italian>Scientifico I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SCIENTIFIC_PEDIA</Tag>
@@ -2272,7 +2273,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SEAFARING0</Tag>
 		<English>Seafaring 0</English>
-		<Italian>Marinaio 0</Italian>
+		<Italian>Marinaio I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SEAFARING_PEDIA</Tag>
@@ -2309,7 +2310,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SPIRITUAL0</Tag>
 		<English>Spiritual 0</English>
-		<Italian>Spirituale 0</Italian>
+		<Italian>Spirituale I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SPIRITUAL_PEDIA</Tag>
@@ -2349,7 +2350,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TEMPERAMENTAL0</Tag>
 		<English>Temperamental 0</English>
-		<Italian>Volubile 0</Italian>
+		<Italian>Volubile I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TEMPERAMENTAL_PEDIA</Tag>

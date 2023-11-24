@@ -24,6 +24,7 @@
 #include "CvDLLEngineIFaceBase.h"
 #include "CvDLLInterfaceIFaceBase.h"
 #include "CvDLLUtilityIFaceBase.h"
+#include "CvUnitCombatInfo.h"
 
 CvDLLWidgetData* CvDLLWidgetData::m_pInst = NULL;
 

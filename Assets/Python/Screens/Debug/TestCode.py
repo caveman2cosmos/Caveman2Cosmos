@@ -2088,7 +2088,7 @@ class TestCode:
 
 		for iBonus in xrange(len(aBonusList)):
 			iBonusTechLoc = self.HF.checkBonusTechRequirementLocation(GC.getBonusInfo(iBonus))[2]
-			if aBonusList[iBonus] != -1 and GC.getBonusInfo(iBonus).getTechCityTrade() != -1 and not GC.getBonusInfo(iBonus).getConstAppearance() > 0:
+			if aBonusList[iBonus] != -1 and GC.getBonusInfo(iBonus).getTechCityTrade() != -1 and not GC.getBonusInfo(iBonus).isMapBonus():
 				if aBonusList[iBonus] > iBonusTechLoc: #As concurrent manufacturers are thing of past, they are allowed to have no tech requirement.
 					self.log(GC.getBonusInfo(iBonus).getType()+" "+str(iBonusTechLoc)+" Earliest bonus producer located at: "+str(aBonusList[iBonus]))
 
@@ -3200,7 +3200,7 @@ class TestCode:
 		for iBonus in xrange(GC.getNumBonusInfos()):
 			CvBonusInfo = GC.getBonusInfo(iBonus)
 			#Check total productivity: from resource, improvement, improvement+resource coupling, and with all tech boosts.
-			if CvBonusInfo.getConstAppearance() > 0: # Only care about map resources
+			if CvBonusInfo.isMapBonus(): # Only care about map resources
 				for iImprovement in xrange(GC.getNumImprovementInfos()):
 					CvImprovementInfo = GC.getImprovementInfo(iImprovement)
 					if CvImprovementInfo.getImprovementUpgrade() != -1 or CvImprovementInfo.getNumAlternativeImprovementUpgradeTypes() > 0 or CvImprovementInfo.getImprovementPillage() != -1: # Only care about improvements, that can upgrade or downgrade.
@@ -3405,7 +3405,7 @@ class TestCode:
 	def checkImprovementResourceTechUnlocks(self):
 		for iBonus in xrange(GC.getNumBonusInfos()):
 			CvBonusInfo = GC.getBonusInfo(iBonus)
-			if CvBonusInfo.getConstAppearance() > 0: # Only care about map resources
+			if CvBonusInfo.isMapBonus(): # Only care about map resources
 				iBonusTechLoc = self.HF.checkBonusTechRequirementLocation(CvBonusInfo)[2] #Tech Enable XGrid
 				iBonusTechID = self.HF.checkBonusTechRequirementLocation(CvBonusInfo)[5] #Tech Enable ID
 				aImprovementTechLoc = []

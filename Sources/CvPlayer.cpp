@@ -36,7 +36,7 @@
 #include "CvDLLFAStarIFaceBase.h"
 #include "CvDLLInterfaceIFaceBase.h"
 #include "CvDLLUtilityIFaceBase.h"
-#include "CyCity.h"
+#include "CvTraitInfo.h"
 
 //	Koshling - save flag indicating this player has no data in the save as they have never been alive
 #define	PLAYER_UI_FLAG_OMITTED 2
@@ -465,10 +465,6 @@ void CvPlayer::init(PlayerTypes eID)
 
 	if (GC.getInitCore().getSlotStatus(getID()) == SS_TAKEN || GC.getInitCore().getSlotStatus(getID()) == SS_COMPUTER)
 	{
-		if (eID == BARBARIAN_PLAYER)
-		{
-			GC.getGame().averageHandicaps();
-		}
 		initMore(eID, getLeaderType());
 
 		updateMaxAnarchyTurns();
@@ -4909,7 +4905,6 @@ void CvPlayer::handleDiploEvent(DiploEventTypes eDiploEvent, PlayerTypes ePlayer
 {
 	PROFILE_EXTRA_FUNC();
 	//OutputDebugString(CvString::format("UI interaction - diplo event for player %d (with player %d)\n", m_eID, ePlayer).c_str());
-	setTurnHadUIInteraction(true);
 
 	switch (eDiploEvent)
 	{
@@ -12338,6 +12333,29 @@ void CvPlayer::setEndTurn(bool bNewValue)
 	{
 		FAssertMsg(isTurnActive(), "isTurnActive is expected to be true");
 
+		if (isHumanPlayer() && hasIdleCity())
+		{
+			CvCity* city = getIdleCity();
+			if (city)
+			{
+				setForcedCityCycle(true);
+
+				if (!getBugOptionBOOL("CityScreen__FullCityScreenOnEmptyBuildQueue", false))
+				{
+					gDLL->getInterfaceIFace()->addSelectedCity(city, false);
+					GC.getCurrentViewport()->bringIntoView(city->getX(), city->getY());
+				}
+				else gDLL->getInterfaceIFace()->selectCity(city, true);
+			}
+			else
+			{
+				FErrorMsg("idleCity == NULL; fixing");
+				resetIdleCities();
+			}
+			gDLL->getInterfaceIFace()->setEndTurnMessage(false);
+			return;
+		}
+
 		m_bEndTurn = bNewValue;
 
 		if (isEndTurn())
@@ -19601,7 +19619,6 @@ void CvPlayer::read(FDataStreamBase* pStream)
 	}
 	// Toffer - To stop auto end turn on decision-less turns from kicking in immediately when loading a save
 	setTurnHadUIInteraction(true);
-
 }
 
 //

@@ -7,13 +7,12 @@
 // Python wrapper class for CvPlayer
 //
 
-class CyUnit;
-class CvPlayer;
-class CvProperties;
-class CyCity;
-class CyArea;
-class CyPlot;
-class CySelectionGroup;
+#include "CyUnit.h"
+#include "CyCity.h"
+#include "CyArea.h"
+#include "CySelectionGroup.h"
+#include "CyPlot.h"
+#include "CvPlayer.h"
 
 class CyPlayer
 {
@@ -25,7 +24,6 @@ public:
 
 	void changeLeader(int /*LeaderHeadTypes*/ eNewLeader);
 	void changeCiv(int /*CivilizationTypes*/ eNewCiv);
-	void setIsHuman(bool bNewValue);
 	void setIsRebel(bool bNewValue);
 	bool isRebel() const;
 

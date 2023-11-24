@@ -10,14 +10,14 @@
 		</French>
 		<Italian>Balestriere urbano</Italian>
 		<Polish>Miejski Kusznik</Polish>
-		<Russian>Áîåö ñ ñàìîñòðåëîì</Russian>
+		<Russian>Постапокалиптический городской арбалетчик</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_APOCALYPSE_URBAN_CROSSBOWMAN_PEDIA</Tag>
 		<English>In the years following the Great War, the United States devolved into a post-apocalyptic environment commonly dubbed "the Wasteland". The War and subsequent nuclear Armageddon has severely depopulated the country, leaving large expanses of property decaying from neglect. In addition, virtually all food and water is irradiated and radiation exposure, combined with a mutagenic bioweapon that was accidentally released into the atmosphere during the War, have caused mutation in nearly all forms of life. With a large portion of the country's infrastructure in ruins, basic necessities are scarce. Barter is the common method of exchange, with bottlecaps providing a more conventional form of currency. Most cities and towns are empty, having been looted and deserted in favor of smaller, makeshift communities scattered around the Wasteland.</English>
 		<Italian>Il [COLOR_UNIT_TEXT]balestriere urbano[COLOR_REVERT] è un'unità post-apocalittica.</Italian>
 		<Polish>Fantastyka postapokaliptyczna - wizja, konwencja traktująca o wydarzeniach bezpośrednio po kataklizmie, apokalipsie. W książkach lub filmach fabuła rozgrywa się zazwyczaj po wojnie jądrowej, pandemii lub katastrofie ekologicznej. Ziemia staje się wówczas areną dla ludzi czerpiących z resztek zniszczonej cywilizacji, starających się przetrwać i przystosować do niesprzyjających warunków.</Polish>
-		<Russian>Â ãîäû ïîñëå Âåëèêîé âîéíû Ñîåäèíåííûå Øòàòû ïðåâðàòèëèñü â ïîñòàïîêàëèïòè÷åñêóþ òåððèòîðèþ, íàçâàííóþ "ïóñòîøüþ". Âîéíû è ïîñëåäîâàâøèé çà íèìè ÿäåðíûé Àðìàãåääîí, ñèëüíî ñîêðàòèëè íàñåëåíèå, îñòàâèâ ãîðîäñêóþ èíôðàñòðóêòóðó ðàçðóøàòüñÿ â çàïóñòåíèè. Êðîìå òîãî, ïðàêòè÷åñêè âñå ïðîäîâîëüñòâèå è âîäà ïîäâåðãëèñü ðàäèàöèîííîìó îáëó÷åíèþ. Â ñî÷åòàíèè ñ ìóòàãåííûì äåéñòâèåì áèîëîãè÷åñêîãî îðóæèÿ, ñëó÷àéíî ïîïàâøåãî â àòìîñôåðó âî âðåìÿ âîéíû, ýòî âûçâàëî ìóòàöèè ïðàêòè÷åñêè âñåõ ôîðì æèçíè. Áîëüøàÿ ÷àñòü ñòðàíû ïðåâðàùåíà â ðóèíû, â äåôèöèòå âñå ñàìîå íåîáõîäèìîå. Ðàñïðîñòðàíåí ñïîñîá îáìåíà ñ ïðîáêàìè âìåñòî îáû÷íûõ äåíåã. Áîëüøèíñòâî ãîðîäîâ áåçëþäíû è ðàçãðàáëåíû. Èõ çàìåíèëè íåáîëüøèå, èìïðîâèçèðîâàííûå îáùèíû, ðàçáðîñàííûå ïî ïóñòîøè.</Russian>
+		<Russian>В годы после Великой войны Соединенные Штаты превратились в постапокалиптическую территорию, названную "пустошью". Войны и последовавший за ними ядерный Армагеддон, сильно сократили население, оставив городскую инфраструктуру разрушаться в запустении. Кроме того, практически все продовольствие и вода подверглись радиационному облучению. В сочетании с мутагенным действием биологического оружия, случайно попавшего в атмосферу во время войны, это вызвало мутации практически всех форм жизни. Большая часть страны превращена в руины, в дефиците все самое необходимое. Распространен способ обмена с пробками вместо обычных денег. Большинство городов безлюдны и разграблены. Их заменили небольшие, импровизированные общины, разбросанные по пустоши.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CROWBAR_GUARD</Tag>
@@ -29,7 +29,7 @@
 		</French>
 		<Italian>Guardia con piede di porco</Italian>
 		<Polish>Strażnik z łomem</Polish>
-		<Russian>Áîåö ñ ãâîçäîäåðîì</Russian>
+		<Russian>Постапокалиптический стражник с гвоздодёром</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HATCHET_MAN</Tag>
@@ -41,7 +41,7 @@
 		</French>
 		<Italian>Guerriero con accetta</Italian>
 		<Polish>Wojownik z siekierą</Polish>
-		<Russian>Áîåö ñ òåñàêîì</Russian>
+		<Russian>Постапокалиптический боец с топориком</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MACHETE_WARRIOR</Tag>
@@ -53,7 +53,7 @@
 		</French>
 		<Italian>Guerriero con machete</Italian>
 		<Polish>Wojownik z maczetą</Polish>
-		<Russian>Áîåö ñ ìà÷åòå</Russian>
+		<Russian>Постапокалиптический боец с мачете</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_POST_APOCALYPTIC_GRENADIER</Tag>
@@ -65,7 +65,7 @@
 		</French>
 		<Italian>Lanciatore di cocktail molotov</Italian>
 		<Polish>Miotacz koktajli Mołotowa</Polish>
-		<Russian>Ïèðîìàí</Russian>
+		<Russian>Постапокалиптический метатель коктейля Молотова</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_URBAN_HORSEMAN</Tag>
@@ -77,7 +77,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Nowoczesna Konnica</Polish>
-		<Russian>Ãîðîäñêîé âñàäíèê</Russian>
+		<Russian>Постапокалиптический городской всадник</Russian>
 		<Italian>Cavaliere urbano</Italian>
 	</TEXT>
 	<TEXT>
@@ -85,6 +85,7 @@
 		<English>Urban horsemen have resorted to using horses instead of mechanized vehicles, because computerized vehicles are vulnerable to cyber attacks and are more easily located by tracking devices and scanning equipment. The horse is a low tech solution to a problem created by advanced technology. These mounted urban soldiers are propelled by their desparation and their hope that any change will be for the better.</English>
 		<Polish>Nowoczesna Konnica to jednostka, którą możesz zwerbowac jeśli z jakiś powodów nie masz dostępu do nowoczesnych pojazdów.</Polish>
 		<Italian>I cavalieri urbani ricorrono all'uso di cavalli invece che ai veicoli meccanizzati, perché i veicoli computerizzati sono vulnerabili agli attacchi informatici e sono più facilmente individuabili dai dispositivi di tracciamento e dalle apparecchiature di scansione. Il cavallo è una soluzione low tech a un problema creato dalla tecnologia avanzata. Questi soldati urbani a cavallo sono spinti dalla loro disperazione e dalla loro speranza che ogni cambiamento sarà per il meglio.</Italian>
+		<Russian>Городские всадники стали использовать лошадей вместо механизированного транспорта, поскольку компьютеризированные машины уязвимы для кибератак и легче обнаруживаются сканерами и устройствами слежения. Лошадь - примитивное решение проблемы, созданной передовыми технологиями. Эти солдаты ведомы отчаянием и надеждой на то, что любые перемены будут к лучшему.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WRENCH_WARRIOR</Tag>
@@ -96,6 +97,6 @@
 		</French>
 		<Italian>Guerriero con chiave inglese</Italian>
 		<Polish>Wojownik z kluczem fr.</Polish>
-		<Russian>Ñëåñàðü</Russian>
+		<Russian>Постапокалиптический боец с гаечным ключом</Russian>
 	</TEXT>
 </Civ4GameText>

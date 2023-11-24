@@ -29,6 +29,7 @@
 #include "CvDLLEngineIFaceBase.h"
 #include "CvDLLInterfaceIFaceBase.h"
 #include "CvDLLUtilityIFaceBase.h"
+#include "CvTraitInfo.h"
 
 // Public Functions...
 
@@ -929,8 +930,7 @@ void CvDLLButtonPopup::OnFocus(CvPopup* pPopup, CvPopupInfo &info)
 // returns false if popup is not launched
 bool CvDLLButtonPopup::launchButtonPopup(CvPopup* pPopup, CvPopupInfo &info)
 {
-	const PlayerTypes eActPlayer = GC.getGame().getActivePlayer();
-	GET_PLAYER(eActPlayer).setTurnHadUIInteraction(true);
+	GET_PLAYER(GC.getGame().getActivePlayer()).setTurnHadUIInteraction(true);
 
 	switch (info.getButtonPopupType())
 	{
