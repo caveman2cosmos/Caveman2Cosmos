@@ -411,6 +411,8 @@ void CvPlayerAI::AI_doTurnPre()
 
 				foreach_(const CvUnit * pLoopUnit, units())
 				{
+					if (pLoopUnit->isTempUnit()) continue;
+
 					const UnitAITypes eAIType = pLoopUnit->AI_getUnitAIType();
 
 					if ((UnitAITypes)iI == eAIType && pLoopUnit->area() == pLoopArea)

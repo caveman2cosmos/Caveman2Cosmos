@@ -209,14 +209,14 @@ class WorldBuilder:
 		if self.m_pCurrentPlot != 0 and isMouseOverGameSurface():
 			if not self.useLargeBrush():
 				return (self.m_iCurrentX, self.m_iCurrentY)
-			else:
-				CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_WORLD_BUILDER)
-				data = self.getMultiplePlotData()
-				for x in range(data[0], data[1]):
-					for y in range(data[2], data[3]):
-						plot = MAP.plot(x, y)
-						if plot.isNone(): continue
-						CyEngine().fillAreaBorderPlotAlt(plot.getX(), plot.getY(), AreaBorderLayers.AREA_BORDER_LAYER_WORLD_BUILDER, "COLOR_GREEN", 1)
+
+			CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_WORLD_BUILDER)
+			data = self.getMultiplePlotData()
+			for x in range(data[0], data[1]):
+				for y in range(data[2], data[3]):
+					plot = MAP.plot(x, y)
+					if not plot: continue
+					CyEngine().fillAreaBorderPlotAlt(plot.getX(), plot.getY(), AreaBorderLayers.AREA_BORDER_LAYER_WORLD_BUILDER, "COLOR_GREEN", 1)
 
 	# Will update the screen (every 250 MS)
 	def updateScreen(self):
@@ -226,14 +226,13 @@ class WorldBuilder:
 	def refreshReveal(self):
 		CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_REVEALED_PLOTS)
 		for pPlot in MAP.plots():
-			if pPlot.isNone(): continue
 			self.showRevealed(pPlot)
 
 	def refreshStartingPlots(self):
 		CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_REVEALED_PLOTS)
 		for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):
 			pPlot = GC.getPlayer(iPlayerX).getStartingPlot()
-			if not pPlot.isNone():
+			if pPlot:
 				sColor = "COLOR_MAGENTA"
 				if iPlayerX == self.iCurrentPlayer:
 					sColor = "COLOR_BLACK"
@@ -398,91 +397,91 @@ class WorldBuilder:
 	def placeRiverNW(self, bUseCurrent):
 		if bUseCurrent:
 			pRiverStepPlot = MAP.plot(self.m_pRiverStartPlot.getX(), self.m_pRiverStartPlot.getY())
-			if not pRiverStepPlot.isNone():
+			if pRiverStepPlot:
 				pRiverStepPlot.setNOfRiver(True, CardinalDirectionTypes.CARDINALDIRECTION_WEST)
 
 		pRiverStepPlot = MAP.plot(self.m_pRiverStartPlot.getX()-1, self.m_pRiverStartPlot.getY())
-		if not pRiverStepPlot.isNone():
+		if pRiverStepPlot:
 			pRiverStepPlot.setWOfRiver(True, CardinalDirectionTypes.CARDINALDIRECTION_NORTH)
 		pRiverStepPlot = MAP.plot(self.m_pRiverStartPlot.getX()-1, self.m_pRiverStartPlot.getY()+1)
-		if not pRiverStepPlot.isNone():
+		if pRiverStepPlot:
 			pRiverStepPlot.setWOfRiver(True, CardinalDirectionTypes.CARDINALDIRECTION_NORTH)
 
 	def placeRiverN(self, bUseCurrent):
 		if bUseCurrent:
 			pRiverStepPlot = MAP.plot(self.m_pRiverStartPlot.getX(), self.m_pRiverStartPlot.getY())
-			if not pRiverStepPlot.isNone():
+			if pRiverStepPlot:
 				pRiverStepPlot.setWOfRiver(True, CardinalDirectionTypes.CARDINALDIRECTION_NORTH)
 
 		pRiverStepPlot = MAP.plot(self.m_pRiverStartPlot.getX(), self.m_pRiverStartPlot.getY()+1)
-		if not pRiverStepPlot.isNone():
+		if pRiverStepPlot:
 			pRiverStepPlot.setWOfRiver(True, CardinalDirectionTypes.CARDINALDIRECTION_NORTH)
 
 	def placeRiverNE(self, bUseCurrent):
 		if bUseCurrent:
 			pRiverStepPlot = MAP.plot(self.m_pRiverStartPlot.getX(), self.m_pRiverStartPlot.getY())
-			if not pRiverStepPlot.isNone():
+			if pRiverStepPlot:
 				pRiverStepPlot.setNOfRiver(True, CardinalDirectionTypes.CARDINALDIRECTION_EAST)
 
 		pRiverStepPlot = MAP.plot(self.m_pRiverStartPlot.getX()+1, self.m_pRiverStartPlot.getY())
-		if not pRiverStepPlot.isNone():
+		if pRiverStepPlot:
 			pRiverStepPlot.setNOfRiver(True, CardinalDirectionTypes.CARDINALDIRECTION_EAST)
 			pRiverStepPlot.setWOfRiver(True, CardinalDirectionTypes.CARDINALDIRECTION_NORTH)
 		pRiverStepPlot = MAP.plot(self.m_pRiverStartPlot.getX()+1, self.m_pRiverStartPlot.getY()+1)
-		if not pRiverStepPlot.isNone():
+		if pRiverStepPlot:
 			pRiverStepPlot.setWOfRiver(True, CardinalDirectionTypes.CARDINALDIRECTION_NORTH)
 
 	def placeRiverW(self, bUseCurrent):
 		if bUseCurrent:
 			pRiverStepPlot = MAP.plot(self.m_pRiverStartPlot.getX(), self.m_pRiverStartPlot.getY())
-			if not pRiverStepPlot.isNone():
+			if pRiverStepPlot:
 				pRiverStepPlot.setNOfRiver(True, CardinalDirectionTypes.CARDINALDIRECTION_WEST)
 
 		pRiverStepPlot = MAP.plot(self.m_pRiverStartPlot.getX()-1, self.m_pRiverStartPlot.getY())
-		if not pRiverStepPlot.isNone():
+		if pRiverStepPlot:
 			pRiverStepPlot.setNOfRiver(True, CardinalDirectionTypes.CARDINALDIRECTION_WEST)
 
 	def placeRiverE(self, bUseCurrent):
 		if bUseCurrent:
 			pRiverStepPlot = MAP.plot(self.m_pRiverStartPlot.getX(), self.m_pRiverStartPlot.getY())
-			if not pRiverStepPlot.isNone():
+			if pRiverStepPlot:
 				pRiverStepPlot.setNOfRiver(True, CardinalDirectionTypes.CARDINALDIRECTION_EAST)
 
 		pRiverStepPlot = MAP.plot(self.m_pRiverStartPlot.getX()+1, self.m_pRiverStartPlot.getY())
-		if not pRiverStepPlot.isNone():
+		if pRiverStepPlot:
 			pRiverStepPlot.setNOfRiver(True, CardinalDirectionTypes.CARDINALDIRECTION_EAST)
 
 	def placeRiverSW(self, bUseCurrent):
 		if bUseCurrent:
 			pRiverStepPlot = MAP.plot(self.m_pRiverStartPlot.getX(), self.m_pRiverStartPlot.getY())
-			if not pRiverStepPlot.isNone():
+			if pRiverStepPlot:
 				pRiverStepPlot.setNOfRiver(True, CardinalDirectionTypes.CARDINALDIRECTION_WEST)
 
 		pRiverStepPlot = MAP.plot(self.m_pRiverStartPlot.getX()-1, self.m_pRiverStartPlot.getY()-1)
-		if not pRiverStepPlot.isNone():
+		if pRiverStepPlot:
 			pRiverStepPlot.setWOfRiver(True, CardinalDirectionTypes.CARDINALDIRECTION_SOUTH)
 
 	def placeRiverS(self, bUseCurrent):
 		if bUseCurrent:
 			pRiverStepPlot = MAP.plot(self.m_pRiverStartPlot.getX(), self.m_pRiverStartPlot.getY())
-			if not pRiverStepPlot.isNone():
+			if pRiverStepPlot:
 				pRiverStepPlot.setWOfRiver(True, CardinalDirectionTypes.CARDINALDIRECTION_SOUTH)
 
 		pRiverStepPlot = MAP.plot(self.m_pRiverStartPlot.getX(), self.m_pRiverStartPlot.getY()-1)
-		if not pRiverStepPlot.isNone():
+		if pRiverStepPlot:
 			pRiverStepPlot.setWOfRiver(True, CardinalDirectionTypes.CARDINALDIRECTION_SOUTH)
 
 	def placeRiverSE(self, bUseCurrent):
 		if bUseCurrent:
 			pRiverStepPlot = MAP.plot(self.m_pRiverStartPlot.getX(), self.m_pRiverStartPlot.getY())
-			if not pRiverStepPlot.isNone():
+			if pRiverStepPlot:
 				pRiverStepPlot.setNOfRiver(True, CardinalDirectionTypes.CARDINALDIRECTION_EAST)
 
 		pRiverStepPlot = MAP.plot(self.m_pRiverStartPlot.getX()+1, self.m_pRiverStartPlot.getY())
-		if not pRiverStepPlot.isNone():
+		if pRiverStepPlot:
 			pRiverStepPlot.setNOfRiver(True, CardinalDirectionTypes.CARDINALDIRECTION_EAST)
 		pRiverStepPlot = MAP.plot(self.m_pRiverStartPlot.getX()+1, self.m_pRiverStartPlot.getY()-1)
-		if not pRiverStepPlot.isNone():
+		if pRiverStepPlot:
 			pRiverStepPlot.setWOfRiver(True, CardinalDirectionTypes.CARDINALDIRECTION_SOUTH)
 
 
@@ -534,7 +533,7 @@ class WorldBuilder:
 		for x in range(Data[0], Data[1]):
 			for y in range(Data[2], Data[3]):
 				self.m_pCurrentPlot = MAP.plot(x, y)
-				if self.m_pCurrentPlot.isNone(): continue
+				if not self.m_pCurrentPlot: continue
 				if self.bSensibility:
 					if self.iPlayerAddMode == "Improvements":
 						if self.m_pCurrentPlot.canHaveImprovement(self.iSelection, -1, True):
@@ -572,7 +571,7 @@ class WorldBuilder:
 		for x in range(Data[0], Data[1]):
 			for y in range(Data[2], Data[3]):
 				self.m_pCurrentPlot = MAP.plot(x,y)
-				if self.m_pCurrentPlot.isNone(): continue
+				if not self.m_pCurrentPlot: continue
 				self.removeObject()
 		self.m_pCurrentPlot = permCurrentPlot
 
@@ -598,7 +597,7 @@ class WorldBuilder:
 		for x in range(Data[0], Data[1]):
 			for y in range(Data[2], Data[3]):
 				pPlot = MAP.plot(x,y)
-				if pPlot.isNone(): continue
+				if not pPlot: continue
 				self.RevealCurrentPlot(bReveal, pPlot)
 		self.refreshReveal()
 
@@ -1111,7 +1110,6 @@ class WorldBuilder:
 
 	def revealAll(self, bReveal):
 		for pPlot in MAP.plots():
-			if pPlot.isNone(): continue
 			self.RevealCurrentPlot(bReveal, pPlot)
 		self.refreshReveal()
 
@@ -1176,7 +1174,7 @@ class WorldBuilder:
 			if self.m_pCurrentPlot.isCity():
 				WBBuildingScreen.WBBuildingScreen(self).interfaceScreen(self.m_pCurrentPlot.getPlotCity())
 		elif self.iPlayerAddMode in self.RevealMode:
-			if not self.m_pCurrentPlot.isNone():
+			if self.m_pCurrentPlot:
 				self.setMultipleReveal(True)
 		elif self.iPlayerAddMode == "PlotData":
 			WBPlotScreen.WBPlotScreen(self).interfaceScreen(self.m_pCurrentPlot)
@@ -1330,7 +1328,7 @@ class WorldBuilder:
 	def rightMouseDown(self):
 
 		if self.iPlayerAddMode in self.RevealMode:
-			if not self.m_pCurrentPlot.isNone():
+			if self.m_pCurrentPlot:
 				self.setMultipleReveal(False)
 		elif self.useLargeBrush():
 			self.removeMultipleObjects()

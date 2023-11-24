@@ -85,17 +85,12 @@ int CyPlayer::startingPlotRange() const
 
 bool CyPlayer::startingPlotWithinRange(const CyPlot* pPlot, int /*PlayerTypes*/ ePlayer, int iRange, int iPass)
 {
-	if (pPlot != NULL && !pPlot->isNone())
+	if (pPlot)
 	{
 		CvPlot *pcvPlot = pPlot->getPlot();
 		return m_pPlayer->startingPlotWithinRange(pcvPlot, (PlayerTypes)ePlayer, iRange, iPass);
 	}
 	return NULL;
-}
-
-CyPlot* CyPlayer::findStartingPlot(bool bRandomize) const
-{
-	return new CyPlot(m_pPlayer->findStartingPlot(bRandomize));
 }
 
 CyCity* CyPlayer::initCity(int x, int y)
@@ -590,7 +585,11 @@ int CyPlayer::specialistYield(int /*SpecialistTypes*/ eSpecialist, int /*YieldTy
 
 CyPlot* CyPlayer::getStartingPlot() const
 {
-	return new CyPlot(m_pPlayer->getStartingPlot());
+	if (m_pPlayer->getStartingPlot())
+	{
+		return new CyPlot(m_pPlayer->getStartingPlot());
+	}
+	return NULL;
 }
 
 void CyPlayer::setStartingPlot(const CyPlot* pPlot, bool bUpdateStartDist)

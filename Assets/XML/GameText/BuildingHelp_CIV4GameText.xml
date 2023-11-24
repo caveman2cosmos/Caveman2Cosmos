@@ -4,7 +4,7 @@
 		<Tag>TXT_KEY_BUILDINGHELP_ADJUST_COMM_RATE</Tag>
 		<English>[ICON_BULLET]Can Adjust %F1_CmrcIcon Rate</English>
 		<French>[ICON_BULLET]Peut modifier le taux de commerce de %F1_CmrcIcon</French>
-		<German>[ICON_BULLET]Kann %F1_CmrcIcon-Rate anpassen</German>
+		<German>[ICON_BULLET]kann %F1_CmrcIcon-Rate anpassen</German>
 		<Italian>[ICON_BULLET]Può regolare il ritmo del %F1_CmrcIcon</Italian>
 		<Spanish>[ICON_BULLET]Puede ajustar el ritmo de %F1_CmrcIcon</Spanish>
 	</TEXT>
@@ -24,7 +24,7 @@
 		<Tag>TXT_KEY_BUILDINGHELP_AIRLIFT</Tag>
 		<English>[ICON_BULLET]Can Airlift %d1_Num Land [NUM1:Unit:Units] per Turn</English>
 		<French>[ICON_BULLET]Peut convoyer %d1_Num [NUM1:unité terrestre:unités terrestres] par voie aérienne par tour</French>
-		<German>[ICON_BULLET]Kann pro Runde %d1_Num [NUM1:Bodeneinheit:Bodeneinheiten] per Lufttransport befördern</German>
+		<German>[ICON_BULLET]kann pro Runde %d1_Num [NUM1:Bodeneinheit:Bodeneinheiten] per Lufttransport befördern</German>
 		<Italian>[ICON_BULLET]Permette il trasporto aereo di %d1_Num unità [NUM1:terrestre:terrestri] a turno</Italian>
 		<Spanish>[ICON_BULLET]Puede aerotransportar %d1_Num [NUM1:unidad terrestre:unidades terrestres] por turno</Spanish>
 	</TEXT>
@@ -838,7 +838,7 @@
 		<!-- %s1_Name = TXT_KET_ERA_ -->
 		<English>[ICON_BULLET]Can only be Built on %s1_Name and Earlier Starts</English>
 		<French>[ICON_BULLET]Construction uniquement possible à l'époque "%s1_Name" et pour les débuts de partie plus précoces</French>
-		<German>[ICON_BULLET]Kann nur im Zeitalter %s1_Name und früher errichtet werden</German>
+		<German>[ICON_BULLET]kann nur im Zeitalter %s1_Name und früher errichtet werden</German>
 		<Italian>[ICON_BULLET]Può essere costruito soltanto durante l'era %s1_Name o prima</Italian>
 		<Spanish>[ICON_BULLET]Solo se puede construir en [NUM1:el:la:los:las] %s1_Name e inicios anteriores</Spanish>
 	</TEXT>

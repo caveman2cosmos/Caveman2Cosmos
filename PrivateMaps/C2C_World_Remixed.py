@@ -3620,10 +3620,11 @@ class StartingPlotFinder:
 		sPlot = StartPlot(x, y, 0.0)
 		for n in xrange(21):
 			plot = plotCity(x, y, n)
-			i = GetIndex(plot.getX(), plot.getY())
-			totalFood += spf.plotfoodList[i]
-			value = spf.plotvalueList[i]
-			cityPlotList.append(value)
+			if plot:
+				i = GetIndex(plot.getX(), plot.getY())
+				totalFood += spf.plotfoodList[i]
+				value = spf.plotvalueList[i]
+				cityPlotList.append(value)
 		usablePlots = int(round(totalFood / float(GC.getFOOD_CONSUMPTION_PER_POPULATION())))
 		cityPlotList.sort(lambda a, b:cmp(b, a))
 		#value is obviously limited to available food
@@ -3664,6 +3665,7 @@ class StartingPlotFinder:
 		bonusCount = 0
 		for n in xrange(3 * bonuses + 1):
 			for CyPlot in plotList:
+				if not CyPlot: continue
 				if bonusCount >= bonuses:
 					return
 				if CyPlot.isWater():

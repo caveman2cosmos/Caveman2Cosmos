@@ -331,10 +331,6 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 	// Init saved data
 	reset(iID, eUnit, eOwner);
 
-	if (eOwner != NO_PLAYER && eUnitAI == UNITAI_SUBDUED_ANIMAL)
-	{
-		GET_PLAYER(eOwner).NoteAnimalSubdued();
-	}
 	// Koshling -  moved this earlier to get unitAI set up so that
 	// constraint checking on the unitAI can work more uniformly
 	AI_init(eUnitAI, iBirthmark);
@@ -351,13 +347,8 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 	//GC.getGame().logOOSSpecial(13, getID(), iX, iY);
 	setXY(iX, iY, false, true, false, false, true);
 
-	if (plot()->getPlotCity() != NULL)
-	{
-		setCityOfOrigin(plot()->getPlotCity());
-	}
-
 	//TB OOS fix - POSSIBLE that this represents a fix but I consider it a longshot since they should really mean the same thing (-1)
-	if (getGroup() == NULL)
+	if (!getGroup())
 	{
 		::MessageBox(
 			NULL, getGroupID() == FFreeList::INVALID_INDEX ?
@@ -369,8 +360,13 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 	}
 	// ! TB
 
-	if (!isTempUnit())
+	if (iBirthmark != UNIT_BIRTHMARK_TEMP_UNIT)
 	{
+		if (plot()->getPlotCity())
+		{
+			setCityOfOrigin(plot()->getPlotCity());
+		}
+
 		if (m_pUnitInfo->getNumBuilds() > 0)
 		{
 			m_worker = new UnitCompWorker();
@@ -397,16 +393,21 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 		calcUpkeep100(); // This updates total upkeep on the player level too
 
 		GC.getGame().incrementUnitCreatedCount(eUnit);
-		GET_PLAYER(getOwner()).changeUnitCount(eUnit, 1);
+		GET_PLAYER(eOwner).changeUnitCount(eUnit, 1);
+
+		if (eUnitAI == UNITAI_SUBDUED_ANIMAL)
+		{
+			GET_PLAYER(eOwner).NoteAnimalSubdued();
+		}
 
 		if (m_pUnitInfo->getNukeRange() != -1)
 		{
-			GET_PLAYER(getOwner()).changeNumNukeUnits(1);
+			GET_PLAYER(eOwner).changeNumNukeUnits(1);
 		}
 
 		if (isMilitaryBranch())
 		{
-			GET_PLAYER(getOwner()).changeNumMilitaryUnits(1);
+			GET_PLAYER(eOwner).changeNumMilitaryUnits(1);
 		}
 
 		doSetUnitCombats();
@@ -429,13 +430,13 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 			// if unit doesn't have a group rank, it doesn't count as a SM unit at all
 			if (groupRank() > 0)
 			{
-				GET_PLAYER(getOwner()).changeUnitCountSM(eUnit, intPow(3, groupRank()-1));
+				GET_PLAYER(eOwner).changeUnitCountSM(eUnit, intPow(3, groupRank()-1));
 			}
 		}
 		else
 		{
-			GET_PLAYER(getOwner()).changeAssets(m_pUnitInfo->getAssetValue());
-			GET_PLAYER(getOwner()).changeUnitPower(m_pUnitInfo->getPowerValue());
+			GET_PLAYER(eOwner).changeAssets(m_pUnitInfo->getAssetValue());
+			GET_PLAYER(eOwner).changeUnitPower(m_pUnitInfo->getPowerValue());
 		}
 		//--------------------------------
 		// Init non-saved data
@@ -453,7 +454,7 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 			GC.getGame().setBestLandUnit(getUnitType());
 		}
 
-		if (getOwner() == GC.getGame().getActivePlayer())
+		if (eOwner == GC.getGame().getActivePlayer())
 		{
 			gDLL->getInterfaceIFace()->setDirty(GameData_DIRTY_BIT, true);
 		}
@@ -469,7 +470,7 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 					{
 						AddDLLMessage(
 							(PlayerTypes) iI, false, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_MISC_SOMEONE_CREATED_UNIT", GET_PLAYER(getOwner()).getNameKey(), getNameKey()),
+							gDLL->getText("TXT_KEY_MISC_SOMEONE_CREATED_UNIT", GET_PLAYER(eOwner).getNameKey(), getNameKey()),
 							"AS2D_WONDER_UNIT_BUILD", MESSAGE_TYPE_MAJOR_EVENT, getButton(),
 							GC.getCOLOR_UNIT_TEXT(), getX(), getY(), true, true
 						);
@@ -486,8 +487,8 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 				}
 			}
 			GC.getGame().addReplayMessage(
-				REPLAY_MESSAGE_MAJOR_EVENT, getOwner(),
-				gDLL->getText("TXT_KEY_MISC_SOMEONE_CREATED_UNIT", GET_PLAYER(getOwner()).getNameKey(), getNameKey()),
+				REPLAY_MESSAGE_MAJOR_EVENT, eOwner,
+				gDLL->getText("TXT_KEY_MISC_SOMEONE_CREATED_UNIT", GET_PLAYER(eOwner).getNameKey(), getNameKey()),
 				getX(), getY(), GC.getCOLOR_UNIT_TEXT()
 			);
 		}
@@ -1641,7 +1642,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 
 		FAssertMsg(!isCombat(), "isCombat did not return false as expected");
 
-		if (getTransportUnit() != NULL)
+		if (getTransportUnit())
 		{
 			setTransportUnit(NULL);
 		}
@@ -1701,11 +1702,11 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 		{
 			CvUnit* pkCapturedUnit = GET_PLAYER(eCapturingPlayer).initUnit(eCaptureUnitType, pPlot->getX(), pPlot->getY(), NO_UNITAI, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
 
-			if (pkCapturedUnit != NULL)
+			if (pkCapturedUnit)
 			{
 				CvEventReporter::getInstance().unitCaptured(eOwner, getUnitType(), pkCapturedUnit);
 
-				if (getCapturingUnit() != NULL && getCapturingUnit()->isHiddenNationality())
+				if (getCapturingUnit() && getCapturingUnit()->isHiddenNationality())
 				{
 					pkCapturedUnit->doHNCapture();
 				}
@@ -1730,7 +1731,6 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 				}
 			}
 		}
-
 		owner.deleteUnit(getID());
 	}
 }

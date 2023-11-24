@@ -364,7 +364,11 @@ void CyUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow)
 
 CyPlot* CyUnit::plot() const
 {
-	return new CyPlot(m_pUnit->plot());
+	if (m_pUnit->plot())
+	{
+		return new CyPlot(m_pUnit->plot());
+	}
+	return NULL;
 }
 
 CyArea* CyUnit::area() const

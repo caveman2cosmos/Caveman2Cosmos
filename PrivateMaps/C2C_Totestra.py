@@ -4934,7 +4934,7 @@ class StartingPlotFinder :
         sPlot = StartPlot(x,y,0)
         for i in range(gc.getNUM_CITY_PLOTS()):
             plot = plotCity(x,y,i)
-            if not plot.isWater() and plot.getArea() != start.getArea():
+            if not plot or not plot.isWater() and plot.getArea() != start.getArea():
                 food,value = 0,0
             else:
                 food,value = self.getPlotPotentialValue(plot.getX(),plot.getY(),sPlot.isCoast())
@@ -5131,6 +5131,7 @@ class StartingPlotFinder :
                     if debugOut: print "****************************************************"
                     return
                 plot = plotCity(x,y,i)
+                if not plot: continue
                 if plot.getX() == x and plot.getY() == y:
                     continue
                 if plot.isWater() and not isCoastalCity:
@@ -5179,6 +5180,7 @@ class StartingPlotFinder :
         plotList = []
         for i in range(gc.getNUM_CITY_PLOTS()):
             plot = plotCity(x,y,i)
+            if not plot: continue
             featureInfo = gc.getFeatureInfo(plot.getFeatureType())
             if plot.getX() == x and plot.getY() == y:
                 #remove bad feature on start but don't count it.

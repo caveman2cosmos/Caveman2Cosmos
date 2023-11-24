@@ -37,8 +37,6 @@ public:
 	int startingPlotRange() const;
 	bool startingPlotWithinRange(const CyPlot* pPlot, int /*PlayerTypes*/ ePlayer, int iRange, int iPass);
 
-	CyPlot* findStartingPlot(bool bRandomize) const;
-
 	CyCity* initCity(int x, int y);
 	void acquireCity(CyCity* pCity, bool bConquest, bool bTrade);
 	void killCities();

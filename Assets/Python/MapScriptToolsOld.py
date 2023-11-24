@@ -422,7 +422,6 @@ def numFeatureNeighbors(x, y, eFeatures, dist=1, bWrap=False):
 # regionCoordList = getRegion( areaData=None, iSurround=0 )
 # areaPlots = getAreaPlots( areaID=None, isValidFn = None )
 # areaCoords = getAreaPlotsXY( areaID=None, isValidFn = None )
-# coastPlots = getContinentCoast( continentPlots, bLakes=False )
 # topAreas = getBigAreas( iTop, bCoord=True, noGoAreaPlots=None, iMinPlots=30 )
 # ----------------------------------------
 # Already implemented area civ4-functions
@@ -507,27 +506,6 @@ def getAreaPlotsXY( areaID=None, isValidFn = None ):
 	areaCoords = [ ( plot.getX(), plot.getY() ) for plot in areaPlots ]
 	return areaCoords
 
-# get list of coastal plots around continent; if bLakes then inside lakes are included
-# continentPlots may be a list of either plots or coordinate pairs (x,y)
-# returns list of plots
-def getContinentCoast( continentPlots, bLakes=False ):
-	coastPlots = []
-	if len( continentPlots ) == 0: return coastPlots
-	if type( continentPlots[0] ) == type( () ):
-		conPlots = continentPlots
-	else:
-		conPlots = [ ( plot.getX(), plot.getY() ) for plot in continentPlots ]
-	for x,y in conPlots:
-		for eDir in range( DirectionTypes.NUM_DIRECTION_TYPES ):
-			p = plotDirection( x, y, DirectionTypes(eDir) )
-			if p.isNone(): continue
-			if p.isWater():
-				if p.isLake() and ( not bLakes ): continue
-				if p.getTerrainType() == etCoast:
-					if p not in coastPlots:
-						coastPlots.append( p )
-	return coastPlots
-
 # get list of biggest land areas with their plots [iNumPlots, iAreaID, plotList]
 # plotList is either a list of plots of coordinate-tuples
 def getBigAreas( iTop, bCoord=True, noGoAreaPlots=None, iMinPlots=30 ):
@@ -592,9 +570,9 @@ def GetIndex(x,y):
 	return ( yy * iNumPlotsX + xx )
 
 # get plot-coordinates from plot
-def coordByPlot( plot ):
-	if plot == None: return -1, -1
-	if plot.isNone(): return -1, -1
+def coordByPlot(plot):
+	if not plot:
+		return -1, -1
 	return plot.getX(), plot.getY()
 
 # get plot-coordinates from index
@@ -604,10 +582,10 @@ def coordByIndex( inx ):
 	return xx, yy
 
 # get plot-index from plot
-def indexByPlot( plot ):
-	if plot == None: return -1
-	if plot.isNone(): return -1
-	return ( plot.getY() * iNumPlotsX + plot.getX() )
+def indexByPlot(plot):
+	if not plot:
+		return -1
+	return plot.getY() * iNumPlotsX + plot.getX()
 
 # make sure x,y are within map-range (Auto-Wrap)
 def normalizeXY( x, y ):
@@ -708,7 +686,7 @@ class MapPrettifier:
 
 					x0, y0 = xyDirection(eDir)
 					p = plotXY(x, y, x0, y0)
-					if p.isNone() or p.getPlotType() != PlotTypes.PLOT_OCEAN:
+					if not p or p.getPlotType() != PlotTypes.PLOT_OCEAN:
 						continue
 
 					plot0 = plotXY(x, y, x0, 0)
@@ -721,9 +699,12 @@ class MapPrettifier:
 
 					pl = plotDirection(x, y, eDir)
 
-					if (pl.isNone() or pl.getArea() == plot.getArea()
-					or riverMaker.hasRiverAtPlot(plot)
-					or riverMaker.hasRiverAtPlot(pl)):
+					if (
+						not pl
+						or pl.getArea() == plot.getArea()
+						or riverMaker.hasRiverAtPlot(plot)
+						or riverMaker.hasRiverAtPlot(pl)
+					):
 						continue
 
 					# now we have a landbridge without rivers separating two lakes
@@ -993,7 +974,6 @@ mapPrettifier = MapPrettifier()
 ###############################################################################################################
 # bModHasMarsh = initialize( iGrassChance=5, iTundraChance=10, tMarshHotRange=(0,18), tMarshColdRange=(45,63) )
 # convertTerrain( tAreaRange=None, areaID=None )
-# iArid = getAridity()
 # normalizeMarshes()
 # --- private ---
 # convertTerrainPlot( plot )
@@ -1059,47 +1039,21 @@ class MarshMaker:
 
 	# add marsh-terrain to given region or whole map
 	# tAreaRange is a 3-tuple (x,y,iRange) describing the area around x,y up to iRange distance
-	def convertTerrain( self, tAreaRange=None, areaID=None ):
+	def convertTerrain(self):
 		print "[MST] ===== MarshMaker:convertTerrain()"
 
-		if tAreaRange == None:
-			minX = 0
-			maxX = MAP.getGridWidth() - 1
-			minY = 0
-			maxY = MAP.getGridHeight() - 1
-		else:
-			minX = tAreaRange[0] - tAreaRange[2]
-			maxX = tAreaRange[0] + tAreaRange[2]
-			minY = tAreaRange[1] - tAreaRange[2]
-			maxY = tAreaRange[1] + tAreaRange[2]
+		maxX = MAP.getGridWidth()
+		maxY = MAP.getGridHeight()
 
 		self.cntTundra = 0
 		self.cntGrass  = 0
-		for x in range( minX, maxX+1 ) :
-			for y in range( minY, maxY+1 ):
-				plot = plotXY( x, y, 0, 0 )
-				if not plot.isNone():
-					if (areaID == None) or (areaID == plot.getArea()):
-						self.convertTerrainPlot( plot )
+		for x in range(0, maxX) :
+			for y in range(0, maxY):
+				plot = plotXY(x, y, 0, 0)
+				if plot:
+					self.convertTerrainPlot(plot)
 		print "[MST] %i plots converted to Marsh: %i from Grass, %i from Tundra" % (self.cntGrass+self.cntTundra,self.cntGrass,self.cntTundra)
 
-	# return aridity -3 .. 3
-	def getAridity( self ):
-		print "[MST] ===== MarshMaker:getAridity()"
-		arid = 0
-		if sClimateType == "CLIMATE_ARID":
-			arid += 2
-		elif sClimateType == "CLIMATE_COLD":
-			arid += 1
-		elif sClimateType == "CLIMATE_ROCKY":
-			arid += 1
-		elif sClimateType == "CLIMATE_TROPICAL":
-			arid += -2
-		if sSeaType == "SEALEVEL_LOW":
-			arid += 1
-		elif sSeaType == "SEALEVEL_HIGH":
-			arid += -1
-		return arid
 
 	# make sure marshes are only on flatlands
 	def normalizeMarshes( self ):
@@ -1161,14 +1115,13 @@ class MarshMaker:
 		pList = []
 		for eCard in range( CardinalDirectionTypes.NUM_CARDINALDIRECTION_TYPES ):
 			p = plotCardinalDirection( x, y, CardinalDirectionTypes(eCard) )
-			if not p.isNone():
-				if p.isFlatlands():
-					eTerrain = p.getTerrainType()
-					if (eTerrain==etGrass) or (eTerrain==etTundra):
+			if p and p.isFlatlands():
+				eTerrain = p.getTerrainType()
+				if eTerrain == etGrass or eTerrain == etTundra:
+					pList.append( p )
+					# plots with freshwater get two chances
+					if plot.isFreshWater():
 						pList.append( p )
-						# plots with freshwater get two chances
-						if plot.isFreshWater():
-							pList.append( p )
 
 		if pList:
 			shufflePyList(pList, GAME.getMapRand())
@@ -1509,41 +1462,43 @@ class MapRegions:
 		for dx in range( minX, maxX + 1 ):
 			for dy in range( minY, maxY + 1 ):
 				temp = template[dy-minY][dx-minX]
-				if temp==0: continue																# ignore
+				if temp == 0 or temp < 1:
+					continue # ignore
+
 				plot = plotXY( dx, dy, 0, 0 )
-				if plot.isNone(): continue														# no plot -> ignore
-				if temp>0:
-					if plot.isLake(): continue													# lake stays
-					elif temp==5:
-						if plot.isFlatlands():
-							if choose( chPeakHill, True, False ):
-								plot.setPlotType( PlotTypes.PLOT_PEAK, True, True )	# Flat -> Peak
-							else:
-								plot.setPlotType( PlotTypes.PLOT_HILLS, True, True )	# Flat -> Hills
-						elif plot.isWater():
-							if choose( chPeakHill/2, True, False ):
-								plot.setPlotType( PlotTypes.PLOT_PEAK, True, True )	# Flat -> Peak
-							else:
-								plot.setPlotType( PlotTypes.PLOT_HILLS, True, True )	# Flat -> Hills
-					elif plot.isWater():
-						plot.setPlotType( PlotTypes.PLOT_LAND, True, True )			# Ocean -> Land
-					elif plot.isPeak():															# Peak -> Land
-						iChange = chFlatHill
-						if temp==4:																	# 10%: Peak -> Land
-							iChange = 100 - iChange
-						if choose( iChange, True, False):									# 90%: Peak -> Land
-							plot.setPlotType( PlotTypes.PLOT_LAND, True, True )
+				if not plot or plot.isLake():
+					continue # lake stays
+
+				if temp==5:
+					if plot.isFlatlands():
+						if choose( chPeakHill, True, False ):
+							plot.setPlotType( PlotTypes.PLOT_PEAK, True, True )	# Flat -> Peak
 						else:
-							plot.setPlotType( PlotTypes.PLOT_HILLS, True, True )
-					elif plot.isHills():
-						iChange = chFlatHill
-						if temp==4:																	# 10%: Hills -> Land
-							iChange = 100 - iChange
-						if choose( iChange, True, False):									# 90%: Hills -> Land
-							plot.setPlotType( PlotTypes.PLOT_LAND, True, True )
-					if temp==1:
-						if choose( chLake, True, False ):
-							plot.setPlotType( PlotTypes.PLOT_OCEAN, True, True )		# make lake
+							plot.setPlotType( PlotTypes.PLOT_HILLS, True, True )	# Flat -> Hills
+					elif plot.isWater():
+						if choose( chPeakHill/2, True, False ):
+							plot.setPlotType( PlotTypes.PLOT_PEAK, True, True )	# Flat -> Peak
+						else:
+							plot.setPlotType( PlotTypes.PLOT_HILLS, True, True )	# Flat -> Hills
+				elif plot.isWater():
+					plot.setPlotType( PlotTypes.PLOT_LAND, True, True )			# Ocean -> Land
+				elif plot.isPeak():															# Peak -> Land
+					iChange = chFlatHill
+					if temp==4:																	# 10%: Peak -> Land
+						iChange = 100 - iChange
+					if choose( iChange, True, False):									# 90%: Peak -> Land
+						plot.setPlotType( PlotTypes.PLOT_LAND, True, True )
+					else:
+						plot.setPlotType( PlotTypes.PLOT_HILLS, True, True )
+				elif plot.isHills():
+					iChange = chFlatHill
+					if temp==4:																	# 10%: Hills -> Land
+						iChange = 100 - iChange
+					if choose( iChange, True, False):									# 90%: Hills -> Land
+						plot.setPlotType( PlotTypes.PLOT_LAND, True, True )
+				if temp==1:
+					if choose( chLake, True, False ):
+						plot.setPlotType( PlotTypes.PLOT_OCEAN, True, True )		# make lake
 
 		# handle bog lake
 		if bBogLake:
@@ -1556,12 +1511,11 @@ class MapRegions:
 		sprint += "[MST] pass 2 - change terrain \n"
 		for dx in range( minX, maxX + 1 ):
 			for dy in range( minY, maxY + 1 ):
-				temp = template[dy-minY][dx-minX]
-				if temp==0: continue											# ignore
-				plot = plotXY( dx, dy, 0, 0 )
-				if plot.isNone(): continue										# no plot -> ignore
-				if plot.isWater(): continue										# ignore lakes
-				if plot.isPeak(): continue										# ignore peaks
+				if template[dy-minY][dx-minX] == 0:
+					continue
+				plot = plotXY(dx, dy, 0, 0)
+				if not plot or plot.isWater() or plot.isPeak():
+					continue # ignore lakes and peaks
 
 				if plot.isHills() and plot.getTerrainType()==etMarsh:			# no marsh on hills
 					plot.setTerrainType(etGrass, True, True)
@@ -1572,7 +1526,7 @@ class MapRegions:
 			for dy in range( minY-1, maxY + 2 ):
 				if ( (dy==minY-1) or (dy==maxY+1) or (dx==minX-1) or (dx==maxX+1) ):
 					plot = plotXY( dx, dy, 0, 0 )
-					if not plot.isNone():
+					if plot:
 						if plot.getTerrainType() == etSnow:							# no snow bog neighbor
 							plot.setTerrainType(etTundra, True, True)
 						elif plot.getTerrainType() == etDesert:						# no desert bog neighbor
@@ -1752,7 +1706,7 @@ class MapRegions:
 							for dy in range(-rad, rad+1):
 								if abs(dy) > (rad/3): continue
 								pl = plotXY( x0, y0, dx, dy )
-								if pl.isNone(): continue
+								if not pl: continue
 								dist = rad + iif(dy in [-1,0,1],3,0) + iif(dy in [-2,-1,0,1,2],2,0) + iif(dy in [-3,-2,-1,0,1,2,3],1,0)
 								if plotDistance( x0, y0, x0+dx, y0+dy ) == dist:
 									plotList.append( pl )
@@ -1881,7 +1835,7 @@ class MapRegions:
 				temp = template[dy-minY][dx-minX]
 				if temp==0: continue																# ignore
 				plot = plotXY( dx, dy, 0, 0 )
-				if plot.isNone(): continue														# no plot -> ignore
+				if not plot: continue														# no plot -> ignore
 				if temp==4:																			# hilly
 					if plot.isWater():
 						if choose( chWaterFlat, True, False ):
@@ -1946,15 +1900,13 @@ class MapRegions:
 					if iCount == 8:
 						eOpen = chooseNumber( DirectionTypes.NUM_DIRECTION_TYPES )
 						pl = plotDirection( dx, dy, DirectionTypes(eOpen) )
-						if not pl.isNone():
-							if choose(chAccess2, True, False):
-								pl.setPlotType( PlotTypes.PLOT_HILLS, True, True )
+						if pl and choose(chAccess2, True, False):
+							pl.setPlotType( PlotTypes.PLOT_HILLS, True, True )
 					elif iCount == 7:
 						eOpen = chooseNumber( DirectionTypes.NUM_DIRECTION_TYPES )
 						pl = plotDirection( dx, dy, DirectionTypes(eOpen) )
-						if not pl.isNone():
-							if choose(chAccess2/2, True, False):
-								pl.setPlotType( PlotTypes.PLOT_HILLS, True, True )
+						if pl and choose(chAccess2/2, True, False):
+							pl.setPlotType( PlotTypes.PLOT_HILLS, True, True )
 
 		# pass 3 - change terrain
 		sprint += "[MST] pass 3 - change terrain \n"
@@ -1962,7 +1914,7 @@ class MapRegions:
 			for dy in range( minY, maxY + 1 ):
 				temp = template[dy-minY][dx-minX]
 				plot = plotXY( dx, dy, 0, 0 )
-				if plot.isNone(): continue														# no plot -> ignore
+				if not plot: continue # no plot -> ignore
 				if temp == 1:
 					if plot.isFlatlands():
 						plot.setTerrainType( etGrass, True, True )
@@ -2003,7 +1955,7 @@ class MapRegions:
 				elif iCnt > 2:
 					break
 				plot = plotXY( dx, dy, 0, 0 )
-				if plot.isNone(): continue														# no plot -> ignore
+				if not plot: continue # no plot -> ignore
 				if not riverMaker.hasCoastAtSECorner( plot ):
 					if choose( chRiver, True, False ):
 						rList = []
@@ -2488,36 +2440,36 @@ mapRegions = MapRegions()
 #########################################################################################################
 ########## CLASS FeaturePlacer - put mod-dependent features on the map
 #########################################################################################################
-# placeKelp( chKelp=20, bAll=False, bLakes=False )
+# placeKelp()
 #########################################################################################################
 class FeaturePlacer:
 
 	# put kelp on coast of continents; if not bAll: only near 2nd biggest continent
-	def placeKelp( self, chKelp=20, bAll=False, bLakes=False ):
+	def placeKelp(self):
 		print "[MST] ===== FeaturePlacer:placeKelp()"
 		cnt = 0
-		if bAll:
-			# all continents
-			for inx in range( MAP.numPlots() ):
-				pl = MAP.plotByIndex( inx )
-				if pl.isWater():
-					if pl.isLake() and ( not bLakes ): continue			# lakes allowed?
-					ter = pl.getTerrainType()
-					if ter == etCoast:
-						if pl.getFeatureType() == -1:
-							if choose( chKelp, True, False ):
-								pl.setFeatureType( efKelp, -1 )
-								cnt += 1
-		else:
-			# only 2nd largest continent
-			minContinent = 10
-			areaList = getBigAreas( 2, False, None, minContinent )			# [ num, id, plotlist ]
-			if len( areaList ) > 0:
-				continentPlots = areaList[ len(areaList)-1 ][ 2 ]
-				coastPlots = getContinentCoast( continentPlots, bLakes )
+
+		# only 2nd largest continent
+		areaList = getBigAreas(2, False, None, 10)			# [ num, id, plotlist ]
+		if areaList:
+			continentPlots = areaList[len(areaList)-1][2]
+
+			if continentPlots:
+				coastPlots = []
+				if type(continentPlots[0]) == type( () ):
+					conPlots = continentPlots
+				else:
+					conPlots = [(plot.getX(), plot.getY()) for plot in continentPlots]
+
+				for x,y in conPlots:
+					for eDir in range(DirectionTypes.NUM_DIRECTION_TYPES):
+						pl = plotDirection(x, y, DirectionTypes(eDir))
+						if pl and pl.isWater() and pl.getTerrainType() == etCoast and pl not in coastPlots:
+							coastPlots.append(pl)
+
 				for pl in coastPlots:
 					if pl.getFeatureType() == -1:
-						if choose( chKelp, True, False ):
+						if choose(20, True, False):
 							pl.setFeatureType( efKelp, -1 )
 							cnt += 1
 		if cnt>0: print "[MST] %i Kelp placed" % ( cnt )
@@ -2648,22 +2600,23 @@ class BonusBalancer:
 	def isBonusValid(self, eBonus, pPlot, bIgnoreUniqueRange, bIgnoreOneArea, bIgnoreAdjacent):
 		iX, iY = pPlot.getX(), pPlot.getY()
 
-		if (not bIgnoreOneArea) and GC.getBonusInfo(eBonus).isOneArea():
+		if not bIgnoreOneArea and GC.getBonusInfo(eBonus).isOneArea():
 			if MAP.getNumBonuses(eBonus) > 0:
 				if MAP.getArea(pPlot.getArea()).getNumBonuses(eBonus) == 0:
 					return False
+
 		if not bIgnoreAdjacent:
 			for iI in range(DirectionTypes.NUM_DIRECTION_TYPES):
-				pLoopPlot = plotDirection(iX, iY, DirectionTypes(iI))
-				if not pLoopPlot.isNone():
-					if (pLoopPlot.getBonusType(-1) != -1) and (pLoopPlot.getBonusType(-1) != eBonus):
-						return False
+				plotX = plotDirection(iX, iY, DirectionTypes(iI))
+				if plotX and plotX.getBonusType(-1) != -1 and plotX.getBonusType(-1) != eBonus:
+					return False
+
 		if not bIgnoreUniqueRange:
 			uniqueRange = GC.getBonusInfo(eBonus).getUniqueRange()
 			for iDX in range(-uniqueRange, uniqueRange+1):
 				for iDY in range(-uniqueRange, uniqueRange+1):
-					pLoopPlot = plotXY(iX, iY, iDX, iDY)
-					if not pLoopPlot.isNone() and pLoopPlot.getBonusType(-1) == eBonus:
+					plotX = plotXY(iX, iY, iDX, iDY)
+					if plotX and plotX.getBonusType(-1) == eBonus:
 						return False
 		return True
 
@@ -2690,7 +2643,7 @@ class BonusBalancer:
 				for dx in range( -dist, dist+1 ):
 					for dy in range( -dist, dist+1 ):
 						pl = plotXY( x, y, dx, dy )
-						if pl.isNone(): continue
+						if not pl: continue
 						if pl.isHills():
 							neiBonus = pl.getBonusType( -1 )
 							if neiBonus < 0:
@@ -2974,12 +2927,11 @@ class BonusBalancer:
 	def transformJungleNeighbor( self, plot ):
 		x = plot.getX()
 		y = plot.getY()
-		sprint = ""
 
 		pList = []
-		for eCard in range( CardinalDirectionTypes.NUM_CARDINALDIRECTION_TYPES ):
-			p = plotCardinalDirection( x, y, CardinalDirectionTypes(eCard) )
-			if not p.isNone():
+		for eCard in range(CardinalDirectionTypes.NUM_CARDINALDIRECTION_TYPES):
+			p = plotCardinalDirection(x, y, CardinalDirectionTypes(eCard))
+			if p:
 				if p.getFeatureType()==efJungle: return
 				if p.getFeatureType()==efForest:
 					if p.getTerrainType()==etGrass or p.getTerrainType()==etMarsh:
@@ -2988,19 +2940,17 @@ class BonusBalancer:
 		if pList:
 			shufflePyList(pList, GAME.getMapRand())
 			self.transformForest2Jungle(pList[0])
-			sprint += "[MST] More Jungle created @ %i,%i \n" % (pList[0].getX(),pList[0].getY())
-		return sprint
+
 
 	# add one more plot of same terrain to keep from getting lonely and strange
 	def transformTerrainNeighbor( self, plot, eFrom, eTo, sTxt ):
 		x = plot.getX()
 		y = plot.getY()
-		sprint = ""
 
 		pList = []
 		for eCard in range( CardinalDirectionTypes.NUM_CARDINALDIRECTION_TYPES ):
 			p = plotCardinalDirection( x, y, CardinalDirectionTypes(eCard) )
-			if not p.isNone():
+			if p:
 				if p.getTerrainType() == eTo: continue
 				if p.getTerrainType() == eFrom:
 					if p.getFeatureType() < 0:				# no features only
@@ -3009,8 +2959,7 @@ class BonusBalancer:
 		if pList:
 			shufflePyList(pList, GAME.getMapRand())
 			pList[0].setTerrainType( eTo, True, True )
-			sprint += "[MST] More %s created @ %i,%i \n" % (	sTxt, pList[0].getX(), pList[0].getY() )
-		return sprint
+
 
 	# make sure each player has at least one each of the resourcesToBalance in the vicinity
 	def balanceStrategicBoni( self ):
@@ -3109,7 +3058,7 @@ class BonusBalancer:
 				if plotDistance( x, y, x+dx, y+dy ) <= ran:
 					pLoopPlot = plotXY(x, y, dx, dy) # use built-in plotXY()
 					# no extra boni outside map
-					if not pLoopPlot.isNone():
+					if pLoopPlot:
 						dArea = pLoopPlot.getArea()
 						if (areaID == dArea) or (areaID < 0):
 							# no extra boni on peaks
@@ -3223,8 +3172,8 @@ class RiverMaker:
 		if ecNext == ecNorth:
 			if not (ecNext in rivDirs): return
 			pRiverPlot = pStartPlot
-			if pRiverPlot.isNone(): return
-			if pRiverPlot.isWOfRiver(): return
+			if not pRiverPlot or pRiverPlot.isWOfRiver():
+				return
 
 			pStartPlot.setRiverID( iThisRiverID )
 			pRiverPlot.setWOfRiver( True, ecFlow )
@@ -3236,8 +3185,8 @@ class RiverMaker:
 		elif ecNext == ecEast:
 			if not (ecNext in rivDirs): return
 			pRiverPlot = plotCardinalDirection( pStartPlot.getX(), pStartPlot.getY(), ecEast )
-			if pRiverPlot.isNone(): return
-			if pRiverPlot.isNOfRiver(): return
+			if not pRiverPlot or pRiverPlot.isNOfRiver():
+				return
 
 			pStartPlot.setRiverID( iThisRiverID )
 			pRiverPlot.setNOfRiver( True, ecFlow )
@@ -3248,8 +3197,8 @@ class RiverMaker:
 		elif ecNext == ecSouth:
 			if not (ecNext in rivDirs): return
 			pRiverPlot = plotCardinalDirection( pStartPlot.getX(), pStartPlot.getY(), ecSouth )
-			if pRiverPlot.isNone(): return
-			if pRiverPlot.isWOfRiver(): return
+			if not pRiverPlot or pRiverPlot.isWOfRiver():
+				return
 
 			pStartPlot.setRiverID( iThisRiverID )
 			pRiverPlot.setWOfRiver( True, ecFlow )
@@ -3260,8 +3209,8 @@ class RiverMaker:
 		elif ecNext == ecWest:
 			if not (ecNext in rivDirs): return
 			pRiverPlot = pStartPlot
-			if pRiverPlot.isNone(): return
-			if pRiverPlot.isNOfRiver(): return
+			if not pRiverPlot or pRiverPlot.isNOfRiver():
+				return
 
 			pStartPlot.setRiverID( iThisRiverID )
 			pRiverPlot.setNOfRiver( True, ecFlow )
@@ -3277,7 +3226,7 @@ class RiverMaker:
 			if ecBest == None:
 				return
 		# already done?
-		if pRiverPlot.isNone():
+		if not pRiverPlot:
 			return																	# all is well; river flows off the map
 		if not bNoDir:
 			if bDownFlow and self.hasCoastAtSECorner( pRiverPlot ):
@@ -3414,20 +3363,20 @@ class RiverMaker:
 			for dx in range( -1, 2 ):
 				for dy in range( -1, 2 ):
 					pl = plotXY( x, y, dx, dy)
-					if not pl.isNone():
-						rid = pl.getRiverID()
-						if rid > -1:
-							if (dx,dy) in [ (-1,0),(-1,1),(0,1) ]:					# W,NW,N
+					if not pl: continue
+					rid = pl.getRiverID()
+					if rid > -1:
+						if (dx,dy) in [ (-1,0),(-1,1),(0,1) ]:					# W,NW,N
+							if rid not in rivList:
+								rivList.append( rid )
+						elif (dx,dy) in [ (1,1),(1,0) ]:							# NE,E
+							if pl.isNOfRiver():
 								if rid not in rivList:
 									rivList.append( rid )
-							elif (dx,dy) in [ (1,1),(1,0) ]:							# NE,E
-								if pl.isNOfRiver():
-									if rid not in rivList:
-										rivList.append( rid )
-							elif (dx,dy) in [ (-1,-1),(0,-1) ]:						# S,SW
-								if pl.isWOfRiver():
-									if rid not in rivList:
-										rivList.append( rid )
+						elif (dx,dy) in [ (-1,-1),(0,-1) ]:						# S,SW
+							if pl.isWOfRiver():
+								if rid not in rivList:
+									rivList.append( rid )
 		if len( rivList ) >= nRivers: return										# enough rivers found
 		# check each plot for possible river directions
 		cdirList = []
@@ -3441,23 +3390,20 @@ class RiverMaker:
 			if ecDir != None:
 				cdirList.append( (ecDir, pl) )
 			p = plotCardinalDirection( x, y, ecWest )								# West
-			if not p.isNone():
-				if not p.isWater():														# water-plot is checked elsewhere
-					ecDir = self.getBestFlowDir( p, False )						# upFlow, longRiver
-					if ecDir != None:
-						cdirList.append( (ecDir, p) )
+			if p and not p.isWater(): # water-plot is checked elsewhere
+				ecDir = self.getBestFlowDir( p, False )						# upFlow, longRiver
+				if ecDir != None:
+					cdirList.append( (ecDir, p) )
 			p = plotCardinalDirection( x, y, ecNorth )							# North
-			if not p.isNone():
-				if not p.isWater():														# water-plot is checked elsewhere
-					ecDir = self.getBestFlowDir( p, False )						# upFlow, longRiver
-					if ecDir != None:
-						cdirList.append( (ecDir, p) )
+			if p and not p.isWater(): # water-plot is checked elsewhere
+				ecDir = self.getBestFlowDir( p, False )						# upFlow, longRiver
+				if ecDir != None:
+					cdirList.append( (ecDir, p) )
 			p = plotDirection( x, y, DirectionTypes.DIRECTION_NORTHWEST )	# NorthWest
-			if not p.isNone():
-				if not p.isWater():														# water-plot has no rivers
-					ecDir = self.getBestFlowDir( p, False )						# upFlow, longRiver
-					if ecDir != None:
-						cdirList.append( (ecDir, p) )
+			if p and not p.isWater(): # water-plot has no rivers
+				ecDir = self.getBestFlowDir( p, False )						# upFlow, longRiver
+				if ecDir != None:
+					cdirList.append( (ecDir, p) )
 		# make new rivers
 		sprint = ""
 		newRivers = nRivers - len( rivList )
@@ -3467,17 +3413,16 @@ class RiverMaker:
 			# check if direction ends in river
 			x, y = pl.getX(), pl.getY()
 			p = plotCardinalDirection( x, y, CardinalDirectionTypes(eCard) )
-			if not p.isNone():
-				if not self.hasRiverAtSECorner( p ):
-					# can build new river
-					newRivers -= 1
-					if choose( chRiver, True, False ):
-						rList = []
-						self.buildRiver( pl, False, eCard, riverList=rList )	# build upriver
-						sprint += "[MST] " + "x,y %i,%i - %s \n" % (pl.getX(),pl.getY(),cardinalName(eCard))
-						sprint += self.outRiverList( rList, "[MST]" )
-					if area.getNumTiles() == 1:
-						break # only one river for mini-lakes
+			if p and not self.hasRiverAtSECorner( p ):
+				# can build new river
+				newRivers -= 1
+				if choose( chRiver, True, False ):
+					rList = []
+					self.buildRiver( pl, False, eCard, riverList=rList )	# build upriver
+					sprint += "[MST] " + "x,y %i,%i - %s \n" % (pl.getX(),pl.getY(),cardinalName(eCard))
+					sprint += self.outRiverList( rList, "[MST]" )
+				if area.getNumTiles() == 1:
+					break # only one river for mini-lakes
 
 		if sprint: print sprint
 
@@ -3500,11 +3445,11 @@ class RiverMaker:
 	def isEdgeDirection( self, plot, ecDir ):
 		x, y = plot.getX(), plot.getY()
 		pl = plotCardinalDirection( x, y, CardinalDirectionTypes( ecDir ) )
-		if pl.isNone(): return True
+		if not pl: return True
 		if (ecDir == ecSouth) or (ecDir == ecEast):
 			dx, dy = pl.getX(), pl.getY()
 			p = plotCardinalDirection( dx, dy, CardinalDirectionTypes( ecDir ) )
-			if p.isNone(): return True
+			if not p: return True
 		return False
 
 	# check if plot has rivers at on of its corners
@@ -3512,13 +3457,13 @@ class RiverMaker:
 		if self.hasRiverAtSECorner( plot ): return True
 		x, y = plot.getX(), plot.getY()
 		pWPlot = plotDirection( x, y, DirectionTypes.DIRECTION_WEST )
-		if not pWPlot.isNone():
+		if pWPlot:
 			if self.hasRiverAtSECorner( pWPlot ): return True
 		pNPlot = plotDirection( x, y, DirectionTypes.DIRECTION_NORTH )
-		if not pNPlot.isNone():
+		if pNPlot:
 			if self.hasRiverAtSECorner( pNPlot ): return True
 		pNWPlot = plotDirection( x, y, DirectionTypes.DIRECTION_NORTHWEST )
-		if not pNWPlot.isNone():
+		if pNWPlot:
 			if self.hasRiverAtSECorner( pNWPlot ): return True
 		return False
 
@@ -3528,11 +3473,11 @@ class RiverMaker:
 		if plot.isNOfRiver(): return True
 		if plot.isWOfRiver(): return True
 		pEastPlot = plotDirection( plot.getX(), plot.getY(), DirectionTypes.DIRECTION_EAST )
-		if not pEastPlot.isNone():
-			if pEastPlot.isNOfRiver(): return True
+		if pEastPlot and pEastPlot.isNOfRiver():
+			return True
 		pSouthPlot = plotDirection( plot.getX(), plot.getY(), DirectionTypes.DIRECTION_SOUTH )
-		if not pSouthPlot.isNone():
-			if pSouthPlot.isWOfRiver(): return True
+		if pSouthPlot and pSouthPlot.isWOfRiver():
+			return True
 		return False
 
 	# check for water at SE-corner
@@ -3544,14 +3489,14 @@ class RiverMaker:
 	def hasPlotTypeAtSECorner(self, plot, plotType):
 		if plot.getPlotType() == plotType: return True
 		pAdjacentPlot = plotDirection( plot.getX(), plot.getY(), DirectionTypes.DIRECTION_EAST )
-		if not pAdjacentPlot.isNone():
-			if pAdjacentPlot.getPlotType() == plotType: return True
+		if pAdjacentPlot and pAdjacentPlot.getPlotType() == plotType:
+			return True
 		pAdjacentPlot = plotDirection( plot.getX(), plot.getY(), DirectionTypes.DIRECTION_SOUTHEAST )
-		if not pAdjacentPlot.isNone():
-			if pAdjacentPlot.getPlotType() == plotType: return True
+		if pAdjacentPlot and pAdjacentPlot.getPlotType() == plotType:
+			return True
 		pAdjacentPlot = plotDirection( plot.getX(), plot.getY(), DirectionTypes.DIRECTION_SOUTH )
-		if not pAdjacentPlot.isNone():
-			if pAdjacentPlot.getPlotType() == plotType: return True
+		if pAdjacentPlot and pAdjacentPlot.getPlotType() == plotType:
+			return True
 		return False
 
 	# get best flow-direction from SE_of_Plot
@@ -3576,7 +3521,7 @@ class RiverMaker:
 					downCDir = eCard
 					continue
 			pl = plotCardinalDirection( x, y, CardinalDirectionTypes(eCard) )
-			if not pl.isNone():
+			if pl:
 				iVal = self.getSEPlotHeight( pl )
 				if iVal > iBestUpValue:
 					if (iBestUpValue == iMin) or choose( chRandom, True, False ):
@@ -3601,21 +3546,21 @@ class RiverMaker:
 	###############
 
 	# calc SE_of_Plot-height for river
-	def getSEPlotHeight( self, plot ):
-		fVal = self.getPlotHeight( plot )
+	def getSEPlotHeight(self, plot):
+		fVal = self.getPlotHeight(plot)
 		fDiv = 1.0
 		x,y = plot.getX(), plot.getY()
-		p1 = plotXY( x, y, 1, 0 )
-		if not p1.isNone():
-			fVal += self.getPlotHeight( p1 )
+		pl = plotXY(x, y, 1, 0)
+		if pl:
+			fVal += self.getPlotHeight(pl)
 			fDiv += 1.0
-		p2 = plotXY( x, y, 0, -1 )
-		if not p2.isNone():
-			fVal += self.getPlotHeight( p2 )
+		pl = plotXY(x, y, 0, -1)
+		if pl:
+			fVal += self.getPlotHeight(pl)
 			fDiv += 1.0
-		p3 = plotXY( x, y, 1, -1 )
-		if not p3.isNone():
-			fVal += self.getPlotHeight( p3 )
+		pl = plotXY(x, y, 1, -1)
+		if pl:
+			fVal += self.getPlotHeight(pl)
 			fDiv += 1.0
 		return fVal / fDiv
 
@@ -3654,31 +3599,25 @@ class RiverMaker:
 		# West
 		if not plot.isWater():
 			pl = plotXY( x, y, 0, -1 )				# South
-			if not pl.isNone():
-				if not pl.isWater():
-					riverDirs.append( ecWest )
+			if pl and not pl.isWater():
+				riverDirs.append(ecWest)
 		# North
 		if not plot.isWater():
 			pl = plotXY( x, y, 1, 0 )				# East
-			if not pl.isNone():
-				if not pl.isWater():
-					riverDirs.append( ecNorth )
+			if pl and not pl.isWater():
+				riverDirs.append(ecNorth)
 		# East
 		p1 = plotXY( x, y, 1, 0 )					# East
-		if not p1.isNone():
-			if not p1.isWater():
-				p2 = plotXY( x, y, 1, -1 )			# SE
-				if not p2.isNone():
-					if not p2.isWater():
-						riverDirs.append( ecEast )
+		if p1 and not p1.isWater():
+			p2 = plotXY( x, y, 1, -1 )			# SE
+			if p2 and not p2.isWater():
+				riverDirs.append(ecEast)
 		# South
 		p1 = plotXY( x, y, 1, -1 )					# SE
-		if not p1.isNone():
-			if not p1.isWater():
-				p2 = plotXY( x, y, 0, -1 )			# South
-				if not p2.isNone():
-					if not p2.isWater():
-						riverDirs.append( ecSouth )
+		if p1 and not p1.isWater():
+			p2 = plotXY( x, y, 0, -1 )			# South
+			if p2 and not p2.isWater():
+				riverDirs.append( ecSouth )
 		# UpFlow may not end in River or Water
 		if not bDownFlow:
 			inx = len( riverDirs ) - 1
@@ -3686,9 +3625,8 @@ class RiverMaker:
 				# check if water or river is at the end
 				eCard = riverDirs[inx]
 				pl = plotCardinalDirection( x, y, eCard )
-				if not pl.isNone():
-					if self.hasRiverAtSECorner( pl ) or self.hasCoastAtSECorner( pl ):
-						del riverDirs[inx]
+				if pl and (self.hasRiverAtSECorner(pl) or self.hasCoastAtSECorner(pl)):
+					del riverDirs[inx]
 				inx -= 1
 		return riverDirs
 
@@ -3705,7 +3643,7 @@ class RiverMaker:
 					pDist = plotDistance( x, y, x+dx, y+dy )
 					if pDist == dis:
 						plot = plotXY( x, y, dx, dy )
-						if plot.isNone(): continue
+						if not plot: continue
 						if bDownFlow:
 							# no start at SE coast
 							if self.hasCoastAtSECorner( plot ): continue
@@ -3733,25 +3671,21 @@ class RiverMaker:
 							rDirs = [ ecEast, ecSouth ]
 						else:
 							p = plotCardinalDirection( fx, fy, ecEast )
-							if not p.isNone():
-								if p.isNOfRiver():
-									rDirs = [ ecNorth, ecSouth ]
+							if p and p.isNOfRiver():
+								rDirs = [ ecNorth, ecSouth ]
 							p = plotCardinalDirection( fx, fy, ecSouth )
-							if not p.isNone():
-								if p.isWOfRiver():
-									rDirs = [ ecNorth, ecEast ]
+							if p and p.isWOfRiver():
+								rDirs = [ ecNorth, ecEast ]
 					if pl.isWOfRiver():
 						if pl.isNOfRiver():
 							rDirs = [ ecEast, ecSouth ]
 						else:
 							p = plotCardinalDirection( fx, fy, ecEast )
-							if not p.isNone():
-								if p.isNOfRiver():
-									rDirs = [ ecWest, ecSouth ]
+							if p and p.isNOfRiver():
+								rDirs = [ ecWest, ecSouth ]
 							p = plotCardinalDirection( fx, fy, ecSouth )
-							if not p.isNone():
-								if p.isWOfRiver():
-									rDirs = [ ecEast, ecWest ]
+							if p and p.isWOfRiver():
+								rDirs = [ ecEast, ecWest ]
 					rivDirs = list( set(rivDirs) & set(rDirs) )		# no doubles in resulting list
 				rivDirs = list( set(rivDirs) & set(eCardList) )		# no doubles in resulting list
 				for eCard in rivDirs:
@@ -3760,8 +3694,8 @@ class RiverMaker:
 				for eCard in eCardList:
 					rivStart.append( [ bogDir, pl, eCard ] )
 					if len(eCardList) == 1:
-						p = plotXY( fx, fy, -1, 1 )
-						if (not p.isNone()) and (not p.isWater()):
+						p = plotXY(fx, fy, -1, 1)
+						if p and not p.isWater():
 							rivStart.append( [ bogDir, p, eCard ] )
 		if bDownFlow:
 			# no start if a river is already there
@@ -4174,7 +4108,6 @@ If the mod allows marsh-terrain, it can be made here.
 .....................................................
 bModHasMarsh = initialize( iGrassChance=5, iTundraChance=10, tMarshHotRange=(0,18), tMarshColdRange=(45,63) )
 convertTerrain( tAreaRange=None, areaID=None )
-iArid = getAridity()
 normalizeMarshes()
 
 
@@ -4198,7 +4131,7 @@ instance: featurePlacer
 ..................................................
 Put some common mod-dependent features on the map.
 ..................................................
-placeKelp( chKelp=20, bAll=False, bLakes=False )
+placeKelp(chKelp=20)
 
 class BonusBalancer:
 instance: bonusBalancer
@@ -4477,7 +4410,6 @@ def addRivers():
 	mst.marshMaker.initialize( 4, 20, (0,25), (50,75) )
 	mst.marshMaker.convertTerrain()
 	# Solidify marsh between 2 [Arid,LowSea] and 8 [Tropical,HighSea] percent.
-	marshPer = 5 - mst.marshMaker.getAridity()
 	mst.mapPrettifier.percentifyTerrain( (mst.etMarsh,marshPer), (mst.etTundra,1), (mst.etGrass,2) )
 
 	# Build between 0..3 mountain-ranges.

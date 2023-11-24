@@ -1101,7 +1101,7 @@
 		<Tag>TXT_KEY_UNITHELP_EVADE_INTERCEPTION_SPY</Tag>
 		<English>[ICON_BULLET]Can Evade Enemy Detection (%d1_Amount%% Chance)</English>
 		<French>[ICON_BULLET]Peut échapper à la Détection par l'Ennemi(%d1_Amount%% de Chances)</French>
-		<German>[ICON_BULLET]Kann feindlicher Entdeckung entgehen (%d1_Amount%% Chance)</German>
+		<German>[ICON_BULLET]kann feindlicher Entdeckung entgehen (%d1_Amount%% Chance)</German>
 		<Italian>[ICON_BULLET]Riesce a sfuggire alla intercettazione nemica (Prob. %d1_Amount%%)</Italian>
 		<Spanish>[ICON_BULLET]Puede evitar la detección enemiga (probabilidad del %d1_Amount%%)</Spanish>
 		<Polish>[ICON_BULLET]Może uniknąć wykrycia (Szansa: %d1_Amount%%)</Polish>
@@ -1310,7 +1310,7 @@
 		<Tag>TXT_KEY_UNITHELP_HURRY_FOOD</Tag>
 		<English>[ICON_BULLET]Can Hurry Food (Adds Base: %d1)</English>
 		<French>[ICON_BULLET]Peut Créer un Surplus de Nourriture (Ajoute de Base: %d1)</French>
-		<German>[ICON_BULLET]Kann Nahrungsproduktion beschleunigen (Adds Base: %d1)</German>
+		<German>[ICON_BULLET]kann Nahrungsproduktion beschleunigen (Adds Base: %d1)</German>
 		<Italian>[ICON_BULLET]L'unità può portare un [COLOR_HIGHLIGHT_TEXT]surplus di cibo[COLOR_REVERT] a una città (aggiunta base: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT])</Italian> <!-- unit Food Merchant -->
 		<Spanish>[ICON_BULLET]Puede Enviar alimentos (Adds Base: %d1)</Spanish>
 		<Polish>[ICON_BULLET]Może przyśpieszyć prod. żywności (Adds Base: %d1)</Polish>
@@ -1353,7 +1353,7 @@
 		<Tag>TXT_KEY_UNITHELP_INTERCEPT_AIRCRAFT_SPY</Tag>
 		<English>[ICON_BULLET]Can Intercept Enemy Spies (%d1_Amount%% Chance)</English>
 		<French>[ICON_BULLET]Peut Intercepter les Espions Ennemis (%d1_Amount%% de Chances)</French>
-		<German>[ICON_BULLET]Kann feindliche Spione abfangen (%d1_Amount%% Chance)</German>
+		<German>[ICON_BULLET]kann feindliche Spione abfangen (%d1_Amount%% Chance)</German>
 		<Italian>[ICON_BULLET]Riesce ad intercettare spie nemiche (Prob. %d1_Amount%%)</Italian>
 		<Spanish>[ICON_BULLET]Puede detectar espías enemigos (probabilidad del %d1_Amount%%)</Spanish>
 		<Polish>[ICON_BULLET]Może przechwycić wrogich szpiegów (Szansa: %d1_Amount%%)</Polish>
@@ -1373,7 +1373,7 @@
 		<Tag>TXT_KEY_UNITHELP_IS_INQUISITOR</Tag>
 		<English>[ICON_BULLET]May conduct Inquisition Mission</English>
 		<French>[ICON_BULLET]Peut réaliser des Missions d'Inquisition</French>
-		<German>[ICON_BULLET]Kann Inquisitionen durchführen</German>
+		<German>[ICON_BULLET]kann Inquisitionen durchführen</German>
 		<Italian>[ICON_BULLET]L'unità può eseguire una [COLOR_HIGHLIGHT_TEXT]missione di inquisizione[COLOR_REVERT]</Italian> <!-- unit Inquisitor -->
 		<Spanish>[ICON_BULLET]Puede convocar un Tribunal de la Fé</Spanish>
 		<Polish>[ICON_BULLET]Przeprowadza misje inkwizycji</Polish>
@@ -1497,7 +1497,7 @@
 		<Tag>TXT_KEY_UNITHELP_MAX_START_ERA</Tag>
 		<English>[NEWLINE][ICON_BULLET]Can only be Built on %s1_Name and Earlier Starts</English>
 		<French>[NEWLINE][ICON_BULLET]Peut uniquement être constuit par %s1_Name et dans les premières Eres</French>
-		<German>[NEWLINE][ICON_BULLET]Kann nur gebaut werden bei %s1_Name und früheren Spielestarts</German>
+		<German>[NEWLINE][ICON_BULLET]kann nur gebaut werden bei %s1_Name und früheren Spielestarts</German>
 		<Italian>[NEWLINE][ICON_BULLET]Può essere costruito/a solo nella %s1_Name o precedenti</Italian>
 		<Spanish>[NEWLINE][ICON_BULLET]Solo se puede construir en [NUM1:el:la:los:las] %s1_Name y Épocas anteriores</Spanish>
 		<Polish>[NEWLINE][ICON_BULLET]Możesz jedynie budować w %s1_Name i wcześniejszych erach</Polish>

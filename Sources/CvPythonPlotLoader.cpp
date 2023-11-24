@@ -7,7 +7,6 @@ void CvPythonPlotLoader::CyPlotPythonInterface1(boost::python::class_<CyPlot>& i
 	OutputDebugString("Python Extension Module - CyPlotPythonInterface1\n");
 
 	inst
-		.def("isNone", &CyPlot::isNone, "bool ()")
 		.def("erase", &CyPlot::erase, "void ()")
 		.def("getPoint", &CyPlot::getPoint, "NiPoint3 ()")
 		.def("getTeam", &CyPlot::getTeam, "int ()")

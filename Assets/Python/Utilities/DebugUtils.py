@@ -101,7 +101,7 @@ class DebugUtils:
 	def applyUnitPicker(self, iPlayer, userData, popupReturn):
 		iX, iY = userData
 
-		if GC.getMap().plot(iX, iY).isNone():
+		if not GC.getMap().plot(iX, iY):
 			return 0
 
 		# UNIT DEBUG MENU
@@ -151,9 +151,8 @@ def initEffectViewer(px, py):
 
 def applyEffectViewer(iPlayer, userData, popupReturn):
 	px, py = userData
-	CyPlot = GC.getMap().plot(px, py)
-	if not CyPlot.isNone():
-		CyEngine().triggerEffect(popupReturn.getSelectedPullDownValue(0), CyPlot.getPoint())
+	if GC.getMap().plot(px, py):
+		CyEngine().triggerEffect(popupReturn.getSelectedPullDownValue(0), GC.getMap().plot(px, py).getPoint())
 
 
 # Event 1001

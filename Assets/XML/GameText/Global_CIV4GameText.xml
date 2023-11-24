@@ -1213,7 +1213,7 @@
 		<Tag>TXT_KEY_ACTION_CONNECTS_RESOURCES</Tag>
 		<English>[ICON_BULLET]Connects Improved Resources with your Cities</English>
 		<French>[ICON_BULLET]Relie les ressources exploitées à vos villes.</French>
-		<German>[ICON_BULLET]Verbindet modernisierte Ressourcen mit Euren Städten</German>
+		<German>[ICON_BULLET]verbindet modernisierte Ressourcen mit Euren Städten</German>
 		<Italian>[ICON_BULLET]Collega le risorse migliorate alle città</Italian> <!-- action button hover for creating path -->
 		<Spanish>[ICON_BULLET]Comunica los recursos mejorados con tus ciudades</Spanish>
 	</TEXT>
@@ -1229,7 +1229,7 @@
 		<Tag>TXT_KEY_ACTION_CONSUME_UNIT</Tag>
 		<English>[COLOR_WARNING_TEXT]Will consume the unit[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]L'unité sera détruite[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Wird die Einheit verbrauchen[COLOR_REVERT]</German>
+		<German>[ICON_BULLET][COLOR_WARNING_TEXT]Einheit wird verbraucht[COLOR_REVERT]</German>
 		<Italian>[COLOR_WARNING_TEXT][ICON_BULLET]L'unità verrà consumata nel processo[COLOR_REVERT]</Italian> <!-- icon for building an improvement with the first worker unit -->
 		<Spanish>[COLOR_WARNING_TEXT]Consumirá la unidad[COLOR_REVERT]</Spanish>
 	</TEXT>
@@ -1499,13 +1499,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_NEEDS_CULTURE_BORDER</Tag>
 		<English>[COLOR_WARNING_TEXT]Must be within Cultural Borders owned by of one of our cities.[COLOR_REVERT]</English>
+		<German>[ICON_BULLET][COLOR_WARNING_TEXT]kann nur innerhalb der Kulturgrenzen der eigenen Städte ausgeführt werden[COLOR_REVERT]</German>
 		<Italian>[COLOR_WARNING_TEXT][ICON_BULLET]Il miglioramento deve essere costruito all'interno dei confini culturali[COLOR_REVERT]</Italian> <!-- icon for build improvement out of cultural border -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_NEEDS_OUT_RIVAL_CULTURE_BORDER</Tag>
 		<English>[COLOR_WARNING_TEXT]Must be outside rival Cultural Borders.[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Doit être en dehors des frontières culturelles adverses.[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Muss sich außerhalb der Kulturgrenzen des Gegners befinden.[COLOR_REVERT]</German>
+		<German>[COLOR_WARNING_TEXT]kann nur außerhalb der Kulturgrenzen des Gegners ausgeführt werden[COLOR_REVERT]</German>
 		<Italian>[COLOR_WARNING_TEXT]Bisogna essere all'esterno dei confini culturali avversari.[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Ha de estar fuera de las fronteras de la cultura rival.[COLOR_REVERT]</Spanish>
 	</TEXT>
@@ -1580,7 +1581,7 @@
 		<Tag>TXT_KEY_ACTION_PLUNDER_IN_BORDERS</Tag>
 		<English>[COLOR_WARNING_TEXT]Must be outside Cultural Borders.[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Doit être en dehors des frontières culturelles.[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Muss sich außerhalb der Kulturgrenzen befinden.[COLOR_REVERT]</German>
+		<German>[COLOR_WARNING_TEXT]kann nur außerhalb der eigenen Kulturgrenzen ausgeführt werden[COLOR_REVERT]</German>
 		<Italian>[COLOR_WARNING_TEXT]Bisogna essere all'esterno dei confini culturali.[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Ha de estar dentro de las fronteras de nuestra cultura.[COLOR_REVERT]</Spanish>
 	</TEXT>
@@ -2718,11 +2719,7 @@
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</French>
-		<German>
-			<Text>[ICON_BULLET]Kann Einheiten außerhalb von Staatsgrenzen modernisieren</Text>
-			<Gender>Male:Neuter</Gender>
-			<Plural>0:0</Plural>
-		</German>
+		<German>[ICON_BULLET]kann Einheiten außerhalb von Staatsgrenzen modernisieren</German>
 		<Italian>[ICON_BULLET]È possibile modernizzare le unità al di fuori dei confini nazionali</Italian>
 		<Spanish>[ICON_BULLET]Se pueden mejorar unidades fuera de las fronteras nacionales</Spanish>
 		<Polish>[ICON_BULLET]Możesz ulepszyć jednostki poza granicami kulturowymi.</Polish>
@@ -9440,7 +9437,7 @@
 		<Tag>TXT_KEY_IMPROVEMENTHELP_BUILD_ONLY_WATER</Tag>
 		<English>[ICON_BULLET]Built only in Water</English>
 		<French>[ICON_BULLET]Construction uniquement dans l'eau</French>
-		<German>[ICON_BULLET]Kann nur im Wasser errichtet werden</German>
+		<German>[ICON_BULLET]kann nur im Wasser errichtet werden</German>
 		<Italian>[ICON_BULLET]Si può costruire solo in acqua</Italian>
 		<Spanish>[ICON_BULLET]Solo se construye en el agua</Spanish>
 	</TEXT>
@@ -9492,7 +9489,7 @@
 		<Tag>TXT_KEY_IMPROVEMENTHELP_NO_BUILD_FRESH_WATER</Tag>
 		<English>[ICON_BULLET]Cannot be built near Fresh Water</English>
 		<French>[ICON_BULLET]Construction impossible près de l'eau douce</French>
-		<German>[ICON_BULLET]Kann nicht in der Nähe von Süßwassergebieten errichtet werden</German>
+		<German>[ICON_BULLET]kann nicht in der Nähe von Süßwassergebieten errichtet werden</German>
 		<Italian>[ICON_BULLET]Non può essere costruito vicino all'acqua dolce</Italian>
 		<Spanish>[ICON_BULLET]No se puede construir cerca de agua dulce</Spanish>
 	</TEXT>
@@ -9500,7 +9497,7 @@
 		<Tag>TXT_KEY_IMPROVEMENTHELP_ONLY_BUILD_FLATLANDS</Tag>
 		<English>[ICON_BULLET]Can only be built on Flatlands</English>
 		<French>[ICON_BULLET]Construction uniquement sur les plaines</French>
-		<German>[ICON_BULLET]Kann nur im Flachland errichtet werden</German>
+		<German>[ICON_BULLET]kann nur im Flachland errichtet werden</German>
 		<Italian>[ICON_BULLET]Si può costruire solo in pianura</Italian>
 		<Spanish>[ICON_BULLET]Solo se puede construir en llanos</Spanish>
 	</TEXT>
@@ -10248,7 +10245,7 @@
 		<Tag>TXT_KEY_IS_DCM_BOMBARD</Tag>
 		<English>[ICON_BULLET]Can perform Ranged Attacks</English>
 		<French>[ICON_BULLET]Peut effectuer des Attaques à distance</French>
-		<German>[ICON_BULLET]Kann Fernangriffe durchführen</German>
+		<German>[ICON_BULLET]kann Fernangriffe durchführen</German>
 		<Italian>[ICON_BULLET]L'unità può effettuare il [COLOR_HIGHLIGHT_TEXT]bombardamento ad area[COLOR_REVERT]</Italian> <!-- Unit Assassin -->
 		<Spanish>[ICON_BULLET]Puede realizar Cañoneo de alcance</Spanish>
 		<Polish>[ICON_BULLET]Może: Atak dystansowy</Polish>
@@ -12521,7 +12518,7 @@
 		<Tag>TXT_KEY_MISC_ADJUST_COMMERCE_RATE</Tag>
 		<English>[ICON_BULLET]Can Adjust %F1_CmrcIcon Rate</English>
 		<French>[ICON_BULLET]Peut modifier la production de : %F1_CmrcIcon</French>
-		<German>[ICON_BULLET]Kann die %F1_CmrcIcon-Rate anpassen</German>
+		<German>[ICON_BULLET]kann die %F1_CmrcIcon-Rate anpassen</German>
 		<Italian>[ICON_BULLET]Permette l'impostazione del [COLOR_HIGHLIGHT_TEXT]tasso di cultura[COLOR_REVERT] %F1_CmrcIcon</Italian> <!-- tech Drama-->
 		<Spanish>[ICON_BULLET]Puede ajustar el ritmo del %F1_CmrcIcon</Spanish>
 	</TEXT>
@@ -13230,7 +13227,7 @@
 		<Tag>TXT_KEY_MISC_CAN_BUILD</Tag>
 		<English>[ICON_BULLET]Can Build[SPACE]</English>
 		<French>[ICON_BULLET]Construction possible de :[SPACE]</French>
-		<German>[ICON_BULLET]Kann Folgendes errichten:[SPACE]</German>
+		<German>[ICON_BULLET]kann Folgendes errichten:[SPACE]</German>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Abilita[COLOR_REVERT] l'uso della [COLOR_HIGHLIGHT_TEXT]conversione[COLOR_REVERT] in[SPACE]</Italian> <!-- tech Alphabet -->
 		<Spanish>[ICON_BULLET]Se puede construir[SPACE]</Spanish>
 	</TEXT>
@@ -15275,7 +15272,7 @@
 		<Tag>TXT_KEY_MISC_IRRIGATION_ANYWHERE</Tag>
 		<English>[ICON_BULLET]Can Build [LINK=IMPROVEMENT_FARM]Farms[\LINK] without Irrigation</English>
 		<French>[ICON_BULLET]Construction de [LINK=IMPROVEMENT_FARM]fermes[\LINK] possible sans irrigation</French>
-		<German>[ICON_BULLET]Kann [LINK=IMPROVEMENT_FARM]Bauernhöfe[\LINK] ohne Bewässerung errichten</German>
+		<German>[ICON_BULLET]kann [LINK=IMPROVEMENT_FARM]Bauernhöfe[\LINK] ohne Bewässerung errichten</German>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Permette[COLOR_REVERT] di costruire[COLOR_REVERT] il miglioramento [LINK=IMPROVEMENT_FARM]Fattoria[\LINK] senza irrigazione</Italian> <!-- tech Biology -->
 		<Spanish>[ICON_BULLET]Se pueden construir [LINK=IMPROVEMENT_FARM]granjas[\LINK] sin riego</Spanish>
 	</TEXT>
@@ -16944,7 +16941,7 @@
 		<Tag>TXT_KEY_MISC_WATER_WORK</Tag>
 		<English>[ICON_BULLET]Can Work Water Tiles</English>
 		<French>[ICON_BULLET]Peut travailler les cases d'eau</French>
-		<German>[ICON_BULLET]Kann Wasser-Geländefelder bewirtschaften</German>
+		<German>[ICON_BULLET]kann Wasser-Geländefelder bewirtschaften</German>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Permette di lavorare[COLOR_REVERT] le caselle d'acqua</Italian> <!-- tech Trap Fishing -->
 		<Spanish>[ICON_BULLET]Se puede trabajar en casillas de agua</Spanish>
 	</TEXT>
@@ -21640,7 +21637,7 @@
 		<Tag>TXT_KEY_PROMOTIONHELP_ALWAYS_HEAL</Tag>
 		<English>[ICON_BULLET]Can Heal while Moving</English>
 		<French>[ICON_BULLET]Peut se soigner en mouvement</French>
-		<German>[ICON_BULLET]Kann während der Fortbewegung heilen</German>
+		<German>[ICON_BULLET]kann während der Fortbewegung heilen</German>
 		<Italian>[ICON_BULLET]Permette la cura in movimento</Italian>
 		<Spanish>[ICON_BULLET]Se cura a la vez que se mueve</Spanish>
 	</TEXT>
@@ -21664,7 +21661,7 @@
 		<Tag>TXT_KEY_PROMOTIONHELP_BLITZ</Tag>
 		<English>[ICON_BULLET]Can Attack Multiple Times per Turn</English>
 		<French>[ICON_BULLET]Peut attaquer plusieurs fois par tour</French>
-		<German>[ICON_BULLET]Kann mehrmals pro Runde angreifen</German>
+		<German>[ICON_BULLET]kann mehrmals pro Runde angreifen</German>
 		<Italian>[ICON_BULLET]Permette di attaccare più volte durante lo stesso turno</Italian>
 		<Spanish>[ICON_BULLET]Puede atacar varias veces por turno</Spanish>
 	</TEXT>
@@ -21728,7 +21725,7 @@
 		<Tag>TXT_KEY_PROMOTIONHELP_ENEMY_ROADS</Tag>
 		<English>[ICON_BULLET]Can Use Enemy Roads</English>
 		<French>[ICON_BULLET]Peut se déplacer sur les routes ennemies</French>
-		<German>[ICON_BULLET]Kann feindliche Straßen nutzen</German>
+		<German>[ICON_BULLET]kann feindliche Straßen nutzen</German>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Permette di usare[COLOR_REVERT] le strade nemiche</Italian>
 		<Spanish>[ICON_BULLET]Puede usar las carreteras enemigas</Spanish>
 	</TEXT>
@@ -25007,7 +25004,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_TECHHELP_CAN_CREATE</Tag>
 		<English>[ICON_BULLET]Can Create[SPACE]</English>
 		<French>[ICON_BULLET]Peut créer :[SPACE]</French>
-		<German>[ICON_BULLET]Kann Folgendes erschaffen:[SPACE]</German>
+		<German>[ICON_BULLET]kann Folgendes erschaffen:[SPACE]</German>
 		<Italian>[ICON_BULLET]Può creare[SPACE]</Italian>
 		<Spanish>[ICON_BULLET]Se puede crear[SPACE]</Spanish>
 	</TEXT>
@@ -25059,7 +25056,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_TECHHELP_ENABLES_DESERT_FARMING</Tag>
 		<English>[ICON_BULLET]Can Farm Desert Tiles</English>
 		<French>[ICON_BULLET]Peut cultiver sur les cases de Désert</French>
-		<German>[ICON_BULLET]Kann Wüstenfelder bewirtschaften</German>
+		<German>[ICON_BULLET]kann Wüstenfelder bewirtschaften</German>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Permette la costruzione[COLOR_REVERT] di [COLOR_HIGHLIGHT_TEXT]fattorie[COLOR_REVERT] nelle caselle di [COLOR_HIGHLIGHT_TEXT]deserto[COLOR_REVERT]</Italian> <!-- tech Refrigeration -->
 		<Spanish>[ICON_BULLET]Puede cultivar casillas de desierto</Spanish>
 		<Polish>[ICON_BULLET]Umożliwia budowę farm na pustyni</Polish>
@@ -27228,7 +27225,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_TRADE_EMBASSY</Tag>
 		<English>Embassies allow more advanced form of diplomacy.[NEWLINE][ICON_BULLET]Can Sign [COLOR_HIGHLIGHT_TEXT]Open Borders [COLOR_REVERT]Agreements.[NEWLINE][ICON_BULLET]Can Sign [COLOR_HIGHLIGHT_TEXT]Defensive Pacts.[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_GREEN_3]Improves[COLOR_REVERT] Diplomatic Relations Between Countries.[NEWLINE][ICON_BULLET]Allows For the [COLOR_GREEN_3]Trade of Workers[COLOR_REVERT] Between Countries.[NEWLINE][ICON_BULLET]Allows For the [COLOR_GREEN_3]Trade of Certain Military Units[COLOR_REVERT] Between Countries.[NEWLINE][ICON_BULLET]Allows players to see inside the other nation's capital city.[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]If Recalled, Players Will Sour Diplomatic Relations Between Countries.[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Enemy Spy Missions are More Likely to Succeed, Due to the Increased Familiarity Between Your Countries.[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Allows the other player to see into your capital city![COLOR_REVERT]</English>
 		<French>Les Ambassades permettent une forme plus avancée de diplomatie.[NEWLINE][ICON_BULLET]Peut signer des Traités de [COLOR_HIGHLIGHT_TEXT]Libre Passage[COLOR_REVERT].[NEWLINE][ICON_BULLET]Peut signer des [COLOR_HIGHLIGHT_TEXT]Pactes Défensifs.[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_GREEN_3]Améliore[COLOR_REVERT] les Relations diplomatique entre les Etats.[NEWLINE][ICON_BULLET]Permet l'échange d' [COLOR_GREEN_3]Ouvriers[COLOR_REVERT] entre Etats.[NEWLINE][ICON_BULLET]Permet l'échange d' [COLOR_GREEN_3]Unités militaires[COLOR_REVERT] entre Etats.[NEWLINE][ICON_BULLET]Permet aux joueurs de voir la Capitale de l'autre Nation.[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Si L'Ambassadeur est rappelé, créé de la tension diplomatique entre les Etats.[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Les Missions d'espionnage ont plus de chance de succès, en raison de la proximité entre les Etats.[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Votre Capitale est du coup visible par l'autre Nation![COLOR_REVERT]</French>
-		<German>Botschaften ermöglichen fortgeschrittenere diplomatische Beziehungen.[NEWLINE][ICON_BULLET]Kann [COLOR_HIGHLIGHT_TEXT]Offene-Grenzen-Abkommen [COLOR_REVERT]unterzeichnen.[NEWLINE][ICON_BULLET]Kann [COLOR_HIGHLIGHT_TEXT]Verteidigungsbündnisse[COLOR_REVERT]unterzeichnen.[NEWLINE][ICON_BULLET][COLOR_GREEN_3]Verbessert[COLOR_REVERT] diplomatische Beziehungen zwischen den Nationen.[NEWLINE][ICON_BULLET]Ermöglicht den [COLOR_GREEN_3]Handel mit Bautrupps[COLOR_REVERT] zwischen den Nationen.[NEWLINE][ICON_BULLET]Ermöglicht den [COLOR_GREEN_3]Handel mit bestimmten Militäreinheiten[COLOR_REVERT] zwischen den Nationen.[NEWLINE][ICON_BULLET]Ermöglicht es den Spielern die Hauptstadt einer anderen Nation zu begutachten.[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Wenn der Botschafter abberufen wird, verschlechtert sich das diplomatische Verhältnis zwischen den Nationen.[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Feindliche Spionagemissionen sind öfter erfolgreich durch die weitreichenden Kenntnisse über das Gegenüber.[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Ermöglicht es anderen Spielern deine Hauptstadt zu betrachten![COLOR_REVERT]</German>
+		<German>Botschaften ermöglichen fortgeschrittenere diplomatische Beziehungen.[NEWLINE][ICON_BULLET]kann [COLOR_HIGHLIGHT_TEXT]Offene-Grenzen-Abkommen [COLOR_REVERT]unterzeichnen.[NEWLINE][ICON_BULLET]kann [COLOR_HIGHLIGHT_TEXT]Verteidigungsbündnisse[COLOR_REVERT]unterzeichnen.[NEWLINE][ICON_BULLET][COLOR_GREEN_3]Verbessert[COLOR_REVERT] diplomatische Beziehungen zwischen den Nationen.[NEWLINE][ICON_BULLET]Ermöglicht den [COLOR_GREEN_3]Handel mit Bautrupps[COLOR_REVERT] zwischen den Nationen.[NEWLINE][ICON_BULLET]Ermöglicht den [COLOR_GREEN_3]Handel mit bestimmten Militäreinheiten[COLOR_REVERT] zwischen den Nationen.[NEWLINE][ICON_BULLET]Ermöglicht es den Spielern die Hauptstadt einer anderen Nation zu begutachten.[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Wenn der Botschafter abberufen wird, verschlechtert sich das diplomatische Verhältnis zwischen den Nationen.[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Feindliche Spionagemissionen sind öfter erfolgreich durch die weitreichenden Kenntnisse über das Gegenüber.[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Ermöglicht es anderen Spielern deine Hauptstadt zu betrachten![COLOR_REVERT]</German>
 		<Italian>Le ambasciate permettono una diplomazia più avanzata.[NEWLINE][ICON_BULLET]Puoi siglare accordi di [COLOR_HIGHLIGHT_TEXT]Confini aperti [COLOR_REVERT].[NEWLINE][ICON_BULLET]Puoi siglare[COLOR_HIGHLIGHT_TEXT]Patti difensivi.[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_GREEN_3]Migliorano[COLOR_REVERT] le relazioni tra le nazioni.[NEWLINE][ICON_BULLET]Permette [COLOR_GREEN_3]il commercio[COLOR_REVERT] attraverso le nazioni.[NEWLINE][ICON_BULLET] Permette [COLOR_GREEN_3]il commercio di alcune unità militari[COLOR_REVERT] attraverso le nazioni.[NEWLINE][ICON_BULLET]Permette ai giocatori di vedere all'interno della capitale delle altre nazioni.[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Se chiuse, i giocatori interromperanno le loro relazioni diplomatiche con le altre nazioni.[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Le missioni di spionaggio nemiche avranno successo più facilmente, a causa della familiarità maggiore tra le nazioni.[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Permette all'altro giocatore di vedere all'interno della tua capitale![COLOR_REVERT]</Italian>
 		<Spanish>Las embajadas permiten una diplomacia más avanzada.[NEWLINE][ICON_BULLET]Puede firmar acuerdos de [COLOR_HIGHLIGHT_TEXT]Apertura de fronteras[COLOR_REVERT].[NEWLINE][ICON_BULLET]Puede firmar [COLOR_HIGHLIGHT_TEXT]Acuerdos de protección.[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_GREEN_3]Mejora[COLOR_REVERT] las relaciones diplomáticas entre naciones.[NEWLINE][ICON_BULLET]Autorizan el [COLOR_GREEN_3]intercambio de trabajadores[COLOR_REVERT] entre naciones.[NEWLINE][ICON_BULLET]Autorizan el [COLOR_GREEN_3]intercambio de ciertas unidades militares[COLOR_REVERT] entre naciones.[NEWLINE][ICON_BULLET]Permite a los jugadores observar la capital de la otra nación.[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Si se retiran, se cortarán las relaciones diplomáticas entre naciones.[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Las misiones de espionaje enemigas tendrán mayor probabilidad de éxito, debido al incremento de la confianza entre las naciones.[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]¡También permite al otro jugador observar tu capital![COLOR_REVERT]</Spanish>
 		<Polish>Ambasady są bardziej zaawansowaną formą dyplomacji.[NEWLINE]Umożliwiają:[NEWLINE][ICON_BULLET]Podpisanie umowy o [COLOR_HIGHLIGHT_TEXT]Otwarciu Granic[COLOR_REVERT] między narodami.[NEWLINE][ICON_BULLET]Zawarcie [COLOR_HIGHLIGHT_TEXT]Paktu obronnego.[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_GREEN_3]Poprawę[COLOR_REVERT] relacji dyplomatycznych między narodami.[NEWLINE][ICON_BULLET][COLOR_GREEN_3]Handlowanie robotnikami[COLOR_REVERT].[NEWLINE][ICON_BULLET][COLOR_GREEN_3]Handlowanie jednostkami militarnymi[COLOR_REVERT].[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Jeśli zostanie anulowany pogorszy stosunki dyplomatyczne między państwami.[COLOR_REVERT][NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Wrodzy szpiedzy mają większe prawdopodobieństwo na sukces przez większą zażyłość między krajami.[COLOR_REVERT]</Polish>
@@ -27248,7 +27245,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_TRADE_FREE_TRADE_ZONE</Tag>
 		<English>Free Trade Agreement:[NEWLINE][ICON_BULLET]Increases Trade Revenue[NEWLINE][ICON_BULLET]Lowers the cost of espionage in member nations[NEWLINE][ICON_BULLET]Increases the Spread of Corporations between member nations[NEWLINE][ICON_BULLET]May anger rivals</English>
 		<French>Accord de libre échange:[NEWLINE][ICON_BULLET]Augmente les revenus des échanges[NEWLINE][ICON_BULLET]Réduit le coût de l'espionnage entre les nations[NEWLINE][ICON_BULLET]Augmente la propagation des Corporations entre les nations[NEWLINE][ICON_BULLET]Peut détériorer les relations avec les rivaux</French>
-		<German>Freihandelsabkommen:[NEWLINE][ICON_BULLET]Erhöht die Handelseinkünfte[NEWLINE][ICON_BULLET]Verringert die Kosten für Spionage in den Mitgliedsstaaten[NEWLINE][ICON_BULLET]Verbessert die Ausbreitung von Kapitalgesellschaften innerhalb der Mitgliedsstaaten[NEWLINE][ICON_BULLET]Kann Rivalen verärgern</German>
+		<German>Freihandelsabkommen:[NEWLINE][ICON_BULLET]Erhöht die Handelseinkünfte[NEWLINE][ICON_BULLET]Verringert die Kosten für Spionage in den Mitgliedsstaaten[NEWLINE][ICON_BULLET]Verbessert die Ausbreitung von Kapitalgesellschaften innerhalb der Mitgliedsstaaten[NEWLINE][ICON_BULLET]kann Rivalen verärgern</German>
 		<Italian>Accordo di libero commercio:[NEWLINE][ICON_BULLET]Incrementa il rendimento delle missioni commerciali.[NEWLINE][ICON_BULLET]Abbassa il costo dello spionaggio nelle nazioni con cui si ha quest'accordo.[NEWLINE][ICON_BULLET]Aumenta la diffusione delle corporazioni tra le nazioni membre dell'accordo.[NEWLINE][ICON_BULLET]Può irritare i rivali.</Italian>
 		<Spanish>Acuerdo de Libre Comercio:[NEWLINE][ICON_BULLET]Aumenta los ingresos por comercio[NEWLINE][ICON_BULLET]Disminuye el coste del espionaje entre las naciones firmantes[NEWLINE][ICON_BULLET]Aumenta la expansión de las corporaciones entre las naciones firmantes[NEWLINE][ICON_BULLET]Podría irritar a los rivales</Spanish>
 		<Polish>Umowa o Wolnym Handlu:[NEWLINE][ICON_BULLET]Zwiększa dochód z Handlu[NEWLINE][ICON_BULLET]Zmniejsza koszt szpiegostwa w państwie partnerskim[NEWLINE][ICON_BULLET]Przyśpiesza rozprzestrzenianie się korporacji między handlującymi narodami[NEWLINE][ICON_BULLET]Może zezłościć inne narody</Polish>
@@ -28139,7 +28136,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNITHELP_CAN</Tag>
 		<English>[ICON_BULLET]Can[SPACE]</English>
 		<French>[ICON_BULLET]Peut[SPACE]</French>
-		<German>[ICON_BULLET]Kann[SPACE]</German>
+		<German>[ICON_BULLET]kann[SPACE]</German>
 		<Italian>[ICON_BULLET]Può effettuare le [COLOR_HIGHLIGHT_TEXT]azioni[COLOR_REVERT]:</Italian> <!-- unit Workboat (Prehistoric) -->
 		<Spanish>[ICON_BULLET]Puede[SPACE]</Spanish>
 	</TEXT>
@@ -28171,7 +28168,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNITHELP_CAN_JOIN</Tag>
 		<English>[ICON_BULLET]Can Join City as[SPACE]</English>
 		<French>[ICON_BULLET]Peut rejoindre une ville en tant que :[SPACE]</French>
-		<German>[ICON_BULLET]Kann sich einer Stadt anschließen als[SPACE]</German>
+		<German>[ICON_BULLET]kann sich einer Stadt anschließen als[SPACE]</German>
 		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]unirsi alla città[COLOR_REVERT] come[SPACE]</Italian> <!-- hero unit Aatsista-Mahkan -->
 		<Spanish>[ICON_BULLET]Puede unirse a una ciudad como[SPACE]</Spanish>
 	</TEXT>
@@ -28179,7 +28176,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNITHELP_CAN_MOVE_IMPASSABLE</Tag>
 		<English>[ICON_BULLET]Can Move through Impassable Terrain</English>
 		<French>[ICON_BULLET]Peut se déplacer sur des terrains infranchissables.</French>
-		<German>[ICON_BULLET]Kann sich durch unpassierbares Gelände bewegen</German>
+		<German>[ICON_BULLET]kann sich durch unpassierbares Gelände bewegen</German>
 		<Italian>[ICON_BULLET]L'unità può attraversare il [COLOR_HIGHLIGHT_TEXT]terreno invalicabile[COLOR_REVERT]</Italian> <!-- unit Workboat (modern) -->
 		<Spanish>[ICON_BULLET]Puede moverse por terreno infranqueable</Spanish>
 	</TEXT>
@@ -28187,7 +28184,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNITHELP_CAN_NUKE</Tag>
 		<English>[ICON_BULLET]Can [LINK=CONCEPT_NUKES]Nuke[\LINK] Enemy Lands</English>
 		<French>[ICON_BULLET]Peut [LINK=CONCEPT_NUKES]atomiser[\LINK] le territoire ennemi</French>
-		<German>[ICON_BULLET]Kann feindliches Territorium mit [LINK=CONCEPT_NUKES]Atomraketen angreifen[\LINK]</German>
+		<German>[ICON_BULLET]kann feindliches Territorium mit [LINK=CONCEPT_NUKES]Atomraketen angreifen[\LINK]</German>
 		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]sganciare[COLOR_REVERT] [LINK=CONCEPT_NUKES]bombe atomiche[\LINK] sui territori nemici</Italian> <!-- unit Hydrogen Bomb --> 
 		<Spanish>[ICON_BULLET]Puede bombardear tierra enemiga con [LINK=CONCEPT_NUKES]armas nucleares[\LINK]</Spanish>
 	</TEXT>
@@ -28259,7 +28256,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNITHELP_DISCOVER_TECH</Tag>
 		<English>[ICON_BULLET]Can Discover a Technology</English>
 		<French>[ICON_BULLET]Peut découvrir une technologie</French>
-		<German>[ICON_BULLET]Kann eine Technologie entdecken</German>
+		<German>[ICON_BULLET]kann eine Technologie entdecken</German>
 		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]scoprire una nuova tecnologia[COLOR_REVERT]</Italian> <!-- unit great artist -->
 		<Spanish>[ICON_BULLET]Puede descubrir una tecnología</Spanish>
 	</TEXT>
@@ -28267,7 +28264,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNITHELP_EXPLORE_RIVAL</Tag>
 		<English>[ICON_BULLET]Can Explore Rival Territory</English>
 		<French>[ICON_BULLET]Peut explorer le territoire ennemi</French>
-		<German>[ICON_BULLET]Kann gegnerisches Territorium erkunden</German>
+		<German>[ICON_BULLET]kann gegnerisches Territorium erkunden</German>
 		<Italian>[ICON_BULLET]Può [COLOR_HIGHLIGHT_TEXT]esplorare[COLOR_REVERT] il territorio rivale</Italian> <!-- unit Storyteller -->
 		<Spanish>[ICON_BULLET]Puede explorar el territorio enemigo</Spanish>
 	</TEXT>
@@ -28299,7 +28296,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNITHELP_GOLDEN_AGE</Tag>
 		<English>[ICON_BULLET]Can Start a Golden Age</English>
 		<French>[ICON_BULLET]Peut déclencher un âge d'or</French>
-		<German>[ICON_BULLET]Kann ein Goldenes Zeitalter beginnen</German>
+		<German>[ICON_BULLET]kann ein Goldenes Zeitalter beginnen</German>
 		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]dare avvio a un età dell'oro[COLOR_REVERT]</Italian> <!-- unit great artist -->
 		<Spanish>[ICON_BULLET]Puede iniciar una edad de oro</Spanish>
 	</TEXT>
@@ -28307,7 +28304,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNITHELP_GREAT_WORK</Tag>
 		<English>[ICON_BULLET]Can Create a Great Work (%D1_Change[ICON_CULTURE])</English>
 		<French>[ICON_BULLET]Peut créer un chef d'oeuvre (%D1_Change[ICON_CULTURE])</French>
-		<German>[ICON_BULLET]Kann ein Großes Bauwerk errichten (%D1_Change[ICON_CULTURE])</German>
+		<German>[ICON_BULLET]kann ein Großes Bauwerk errichten (%D1_Change[ICON_CULTURE])</German>
 		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]creare un'opera d'arte[COLOR_REVERT] ([COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT] [ICON_CULTURE])</Italian> <!-- unit great artist-->
 		<Spanish>[ICON_BULLET]Puede crear una gran obra (%D1_Change [ICON_CULTURE])</Spanish>
 	</TEXT>
@@ -28347,7 +28344,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNITHELP_HURRY_PRODUCTION</Tag>
 		<English>[ICON_BULLET]Can Hurry Production</English>
 		<French>[ICON_BULLET]Peut accélérer la production</French>
-		<German>[ICON_BULLET]Kann die Produktion beschleunigen</German>
+		<German>[ICON_BULLET]kann die Produktion beschleunigen</German>
 		<Italian>[ICON_BULLET]Può [COLOR_HIGHLIGHT_TEXT]accelerare la produzione[COLOR_REVERT] cittadina</Italian> <!-- unit Space Work Crew -->
 		<Spanish>[ICON_BULLET]Puede acelerar la producción</Spanish>
 	</TEXT>
@@ -28363,7 +28360,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNITHELP_IMPROVE_PLOTS</Tag>
 		<English>[ICON_BULLET]Can Improve Tiles</English>
 		<French>[ICON_BULLET]Peut aménager les cases</French>
-		<German>[ICON_BULLET]Kann Geländefelder modernisieren</German>
+		<German>[ICON_BULLET]kann Geländefelder modernisieren</German>
 		<Italian>[ICON_BULLET]L'unità può costruire i [COLOR_HIGHLIGHT_TEXT]miglioramenti[COLOR_REVERT] sulle caselle</Italian> <!-- unit Entranced Workers -->
 		<Spanish>[ICON_BULLET]Puede mejorar casillas</Spanish>
 	</TEXT>
@@ -28395,7 +28392,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNITHELP_LEADER</Tag>
 		<English>[ICON_BULLET]Can Provide %d1_Num Experience to Units in the Same Tile</English>
 		<French>[ICON_BULLET]Peut octroyer %d1_Num expérience aux unités dans la même case</French>
-		<German>[ICON_BULLET]Kann %d1_Num Erfahrungspunkte auf Einheiten auf demselben Geländefeld übertragen</German>
+		<German>[ICON_BULLET]kann %d1_Num Erfahrungspunkte auf Einheiten auf demselben Geländefeld übertragen</German>
 		<Italian>[ICON_BULLET]L'unità può fornire [COLOR_HIGHLIGHT_TEXT]%d1_Num punti di esperienza[COLOR_REVERT] alle unità nella stessa casella</Italian> <!-- unit Noble -->
 		<Spanish>[ICON_BULLET]Puede dar un total de %d1_Num de experiencia a las unidades en la misma casilla</Spanish>
 	</TEXT>
@@ -28403,7 +28400,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNITHELP_LEADER_EXPERIENCE</Tag>
 		<English>[ICON_BULLET]Can Provide up to %d1 XP to Each Unit in the Same Tile</English>
 		<French>[ICON_BULLET]Permet à chaque unité dans la même case d'obtenir jusqu'à %d1 EXP</French>
-		<German>[ICON_BULLET]Kann bis zu %d1 EP auf jede Einheit auf demselben Geländefeld übertragen</German>
+		<German>[ICON_BULLET]kann bis zu %d1 EP auf jede Einheit auf demselben Geländefeld übertragen</German>
 		<Italian>[ICON_BULLET]Può dare %d1 di esperienza alle unità presenti nella stessa casella</Italian>
 		<Spanish>[ICON_BULLET]Puede dar hasta %d1 PX a cada unidad que esté en la misma casilla.</Spanish>
 	</TEXT>
@@ -28469,7 +28466,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNITHELP_PARADROP_RANGE</Tag>
 		<English>[ICON_BULLET]Can perform paradrops (Range=%d1_range)</English>
 		<French>[ICON_BULLET]Peut sauter en parachute (Portée=%d1_range)</French>
-		<German>[ICON_BULLET]Kann Fallschirmsprünge absolvieren (Reichweite=%d1_range)</German>
+		<German>[ICON_BULLET]kann Fallschirmsprünge absolvieren (Reichweite=%d1_range)</German>
 		<Italian>[ICON_BULLET]L'unità può lanciarsi col [COLOR_HIGHLIGHT_TEXT]paracadute[COLOR_REVERT] (raggio d'azione [COLOR_HIGHLIGHT_TEXT]%d1_range[COLOR_REVERT])</Italian> <!-- unit Secret Agent -->
 		<Spanish>[ICON_BULLET]Puede realizar desembarcos aéreos (alcance = %d1_range)</Spanish>
 	</TEXT>
