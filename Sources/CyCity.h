@@ -150,7 +150,6 @@ public:
 	bool isConnectedToCapital(int /*PlayerTypes*/ ePlayer) const;
 	CyArea* area() const;
 	CyArea* waterArea() const;
-	CyPlot* getRallyPlot() const;
 
 	int getGameTurnFounded() const;
 	int getGameTurnAcquired() const;

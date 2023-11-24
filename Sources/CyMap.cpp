@@ -435,7 +435,11 @@ CyPlot* CyMap::getLastPathPlotByIndex(int index) const
 	CvPath::const_iterator it = CvSelectionGroup::getPathGenerator()->getLastPath().begin();
 	for (int i = 0; i < index; i++)
 		++it;
-	return new CyPlot(it.plot());
+	if (it.plot())
+	{
+		return new CyPlot(it.plot());
+	}
+	return NULL;
 }
 
 

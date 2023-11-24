@@ -35,6 +35,7 @@ class NaturalWonders:
 				for x in xrange(pPlot.getX() - iRadius, pPlot.getX() + iRadius + 1):
 					for y in xrange(pPlot.getY() - iRadius, pPlot.getY() + iRadius + 1):
 						pAdjacentPlot = MAP.plot(x, y)
+						if not pAdjacentPlot: continue
 
 						if pAdjacentPlot.getFeatureType() > -1 and GC.getFeatureInfo(pAdjacentPlot.getFeatureType()).getType().find("FEATURE_PLATY_") > -1:
 							bUnsuitable = True

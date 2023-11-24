@@ -21,8 +21,6 @@ void CvPythonPlayerLoader::CyPlayerPythonInterface1(boost::python::class_<CyPlay
 		.def("startingPlotRange", &CyPlayer::startingPlotRange, "int ()")
 		.def("startingPlotWithinRange", &CyPlayer::startingPlotWithinRange, "bool (CyPlot *pPlot, int /*PlayerTypes*/ ePlayer, int iRange, int iPass)")
 
-		.def("findStartingPlot", &CyPlayer::findStartingPlot, boost::python::return_value_policy<boost::python::manage_new_object>(), "findStartingPlot(bool bRandomize) - Finds a starting plot for player")
-
 		.def("initCity", &CyPlayer::initCity, boost::python::return_value_policy<boost::python::manage_new_object>(), "initCity(plotX, plotY) - spawns a city at x,y")
 		.def("acquireCity", &CyPlayer::acquireCity, "void (CyCity* pCity, bool bConquest, bool bTrade)")
 		.def("killCities", &CyPlayer::killCities, "void ()")

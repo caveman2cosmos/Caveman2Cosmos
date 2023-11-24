@@ -4024,7 +4024,7 @@ class StartingPlotFinder:
 		sPlot = StartPlot(x, y, 0)
 		for i in range(21): #gc.getNUM_CITY_PLOTS()
 			plot = plotCity(x, y, i)
-			if not plot.isWater() and plot.getArea() != start.getArea():
+			if not plot or not plot.isWater() and plot.getArea() != start.getArea():
 				food, value = 0, 0
 			else:
 				if cached:
@@ -4187,6 +4187,7 @@ class StartingPlotFinder:
 		shufflePyList(plotList, PRand.mapRand)
 		for n in range(len(yields) * bonuses + 1):
 			for plot in plotList:
+				if not plot: continue
 				#NEW CODE - LM
 				if bonusCount >= bonuses:
 					return
@@ -4248,6 +4249,7 @@ class StartingPlotFinder:
 		plotList = []
 		for i in range(21): #gc.getNUM_CITY_PLOTS()
 			plot = plotCity(x, y, i)
+			if not plot: continue
 			featureInfo = gc.getFeatureInfo(plot.getFeatureType())
 			if plot.getX() == x and plot.getY() == y:
 				#remove bad feature on start but don't count it.
