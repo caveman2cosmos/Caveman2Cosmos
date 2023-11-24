@@ -136,7 +136,7 @@
 		<Tag>TXT_KEY_IMPROVEMENTHELP_UNIQUE_RANGE</Tag>
 		<English>[ICON_BULLET]Cannot build another within a distance of %d1_Num</English>
 		<French>[ICON_BULLET]Impossible de construire un autre aménagement à une distance de moins de %d1_Num</French>
-		<German>[ICON_BULLET]Kann nicht bauen ein anderer in einem Abstand von %d1_Num</German>
+		<German>[ICON_BULLET]kann nicht bauen ein anderer in einem Abstand von %d1_Num</German>
 		<Italian>[ICON_BULLET]Non è possibile costruirne un altro entro una distanza di %d1_Num</Italian>
 		<Spanish>[ICON_BULLET]No se puede construir otro en un radio de %d1_Num casillas</Spanish>
 		<Polish>[ICON_BULLET]Nie można postawić następnego ulepszenia terenu w zasięgu %d1_Num pól</Polish>
