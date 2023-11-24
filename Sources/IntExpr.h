@@ -11,9 +11,10 @@
 #ifndef INTEXPR_H
 #define INTEXPR_H
 
+#include "BoolExpr.h"
+
 class CvGameObject;
 class CvXMLLoadUtility;
-class BoolExpr;
 
 enum IntExprTypes
 {

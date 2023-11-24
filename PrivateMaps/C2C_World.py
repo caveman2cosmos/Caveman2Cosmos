@@ -3000,15 +3000,7 @@ class BonusPlacer:
 			bonus = BonusArea()
 			bonus.indeXML = iBonus
 			# Calculate desired amount
-			fBaseCount = (
-				(
-					CvBonusInfo.getConstAppearance() +
-					randint(0, CvBonusInfo.getRandAppearance1()) +
-					randint(0, CvBonusInfo.getRandAppearance2()) +
-					randint(0, CvBonusInfo.getRandAppearance3()) +
-					randint(0, CvBonusInfo.getRandAppearance4())
-				) / 100.0
-			)
+			fBaseCount = CvBonusInfo.getRandAppearance() / 100.0
 			iTilesPer = CvBonusInfo.getTilesPer()
 			fDensityCount = 0
 			if iTilesPer > 0:

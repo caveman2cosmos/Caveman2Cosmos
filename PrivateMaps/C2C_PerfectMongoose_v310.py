@@ -3738,14 +3738,9 @@ class BonusPlacer:
 		bonusInfo = gc.getBonusInfo(eBonus)
 		if bonusInfo.getPlacementOrder() < 0:
 			return 0
-		rand1 = PRand.randint(0, bonusInfo.getRandAppearance1())
-		rand2 = PRand.randint(0, bonusInfo.getRandAppearance2())
-		rand3 = PRand.randint(0, bonusInfo.getRandAppearance3())
-		rand4 = PRand.randint(0, bonusInfo.getRandAppearance4())
-		baseCount = bonusInfo.getConstAppearance() + rand1 + rand2 + rand3 + rand4
 		bIgnoreLatitude = False
 		bIgnoreArea = True
-		landTiles		= 0
+		landTiles = 0
 		numPossible = 0
 		if bonusInfo.getTilesPer() > 0:
 			for i in range(em.length):
@@ -3754,7 +3749,7 @@ class BonusPlacer:
 					numPossible += 1
 			landTiles += numPossible/bonusInfo.getTilesPer()
 		players = game.countCivPlayersAlive() * bonusInfo.getPercentPerPlayer() / 100
-		bonusCount = baseCount * (landTiles + players) / 100
+		bonusCount = bonusInfo.getRandAppearance() * (landTiles + players) / 100
 		bonusCount = max(1, int(bonusCount * mc.BonusBonus))
 		return bonusCount
 

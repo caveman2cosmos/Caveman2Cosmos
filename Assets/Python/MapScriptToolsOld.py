@@ -3127,23 +3127,17 @@ class BonusBalancer:
 		if bonusInfo.getPlacementOrder() < 0:
 			return 0
 
-		rand1 = chooseNumber( bonusInfo.getRandAppearance1() )
-		rand2 = chooseNumber( bonusInfo.getRandAppearance2() )
-		rand3 = chooseNumber( bonusInfo.getRandAppearance3() )
-		rand4 = chooseNumber( bonusInfo.getRandAppearance4() )
-		iBaseCount = bonusInfo.getConstAppearance() + rand1 + rand2 + rand3 + rand4
-
 		bIgnoreLatitude = False
 		iLandTiles = 0
 		iNumPossible = 0
 		if bonusInfo.getTilesPer() > 0:
 			for i in range( iNumPlotsX*iNumPlotsY ):
 				plot = MAP.plotByIndex(i)
-				if plot.canHaveBonus( iBonus, bIgnoreLatitude ):
+				if plot.canHaveBonus(iBonus, bIgnoreLatitude):
 					iNumPossible += 1
 			iLandTiles += iNumPossible / bonusInfo.getTilesPer()
-		iPlayers = int(GAME.countCivPlayersAlive() * bonusInfo.getPercentPerPlayer() / 100)
-		iBonusCount = int( iBaseCount * (iLandTiles + iPlayers) / 100 )
+		iPlayers = GAME.countCivPlayersAlive() * bonusInfo.getPercentPerPlayer() / 100
+		iBonusCount = bonusInfo.getRandAppearance() * (iLandTiles + iPlayers) / 100
 		return max( 1, iBonusCount )
 
 ##########################################################################

@@ -7,13 +7,12 @@
 // Python wrapper class for CvPlayer
 //
 
-class CyUnit;
-class CvPlayer;
-class CvProperties;
-class CyCity;
-class CyArea;
-class CyPlot;
-class CySelectionGroup;
+#include "CyUnit.h"
+#include "CyCity.h"
+#include "CyArea.h"
+#include "CySelectionGroup.h"
+#include "CyPlot.h"
+#include "CvPlayer.h"
 
 class CyPlayer
 {

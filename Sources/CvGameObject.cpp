@@ -22,6 +22,7 @@
 #include "CvPlot.h"
 #include "CvProperties.h"
 #include "CvPropertyManipulators.h"
+#include "CvTraitInfo.h"
 #include "CvTeamAI.h"
 #include "CvUnit.h"
 #include "CyCity.h"

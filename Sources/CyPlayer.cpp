@@ -123,10 +123,21 @@ CyUnit* CyPlayer::initUnit(int /*UnitTypes*/ iIndex, int iX, int iY, UnitAITypes
 	if (iIndex == -1)
 	{
 		FErrorMsg("Initiating NO_UNIT Type!");
-		return NULL;
 	}
-	CvUnit* unit = m_pPlayer->initUnit((UnitTypes) iIndex, iX, iY, eUnitAI, eFacingDirection, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
-	return unit ? new CyUnit(unit) : NULL;
+	else if (!GC.getMap().plot(iX, iY))
+	{
+		FErrorMsg("Initiating unit on invalid coordinates!");
+	}
+	else
+	{
+		CvUnit* unit = m_pPlayer->initUnit((UnitTypes) iIndex, iX, iY, eUnitAI, eFacingDirection, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
+
+		if (unit)
+		{
+			return new CyUnit(unit);
+		}
+	}
+	return NULL;
 }
 
 void CyPlayer::killUnits()
