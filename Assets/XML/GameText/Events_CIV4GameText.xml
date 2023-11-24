@@ -2660,6 +2660,7 @@
 		<Tag>TXT_KEY_EVENTTRIGGER_VOLCANO_ACTIVE</Tag>
 		<English>Reports speak of increased volcanic activity.</English>
 		<French>Des rumeurs courent concernant une augmentation de l'activité volcanique.</French>
+		<German>Es gibt Berichte über erhöhte vulkanische Aktivität.</German>
 		<Italian>Notizie parlano di attività vulcaniche in aumento.</Italian>
 		<Polish>Nadchodzą wieści o zwiększonej aktywności wulkanicznej.</Polish>
 		<Russian>Поступают новости об усилении вулканической активности.</Russian>
@@ -7262,7 +7263,7 @@
 		<Tag>TXT_KEY_EVENT_INDUSTRIAL_ACTION_2_HELP</Tag>
 		<English>[ICON_BULLET]Cannot be running Economic Civic [COLOR_NEGATIVE_TEXT]State Property[COLOR_REVERT] -- the Government [COLOR_POSITIVE_TEXT]is[COLOR_REVERT] the factory management under that Civic.</English>
 		<French>[ICON_BULLET]Ne peut être choisi avec la doctrine actuelle [COLOR_NEGATIVE_TEXT]Propriété de l'Etat[COLOR_REVERT] -- le gouvernement est l'employeur de tous les ouvriers sous cette doctrine.</French>
-		<German>[ICON_BULLET]Kann die ökonomische Gesellschaftsform [COLOR_NEGATIVE_TEXT]Staatseigentum[COLOR_REVERT]nicht verwenden -- die Regierung [COLOR_POSITIVE_TEXT]ist[COLOR_REVERT] die Fabrikleitung in dieser Gesellschaftsform.</German>
+		<German>[ICON_BULLET]kann die ökonomische Gesellschaftsform [COLOR_NEGATIVE_TEXT]Staatseigentum[COLOR_REVERT]nicht verwenden -- die Regierung [COLOR_POSITIVE_TEXT]ist[COLOR_REVERT] die Fabrikleitung in dieser Gesellschaftsform.</German>
 		<Italian>[ICON_BULLET]Non può essere attiva la forma di governo [COLOR_NEGATIVE_TEXT]Proprietà statale[COLOR_REVERT] -- il governo [COLOR_POSITIVE_TEXT]è[COLOR_REVERT] il gestore delle fabbriche in questo caso.</Italian>
 		<Spanish>[ICON_BULLET]No puede estar activo el principio económico [COLOR_NEGATIVE_TEXT]Propiedad estatal[COLOR_REVERT]; el gobierno [COLOR_POSITIVE_TEXT]es[COLOR_REVERT] el director de la fábrica en este caso.</Spanish>
 		<Polish>[ICON_BULLET]Nie możesz przyjąć doktryny [COLOR_NEGATIVE_TEXT]Nacjonalizacja[COLOR_REVERT] –- rząd [COLOR_POSITIVE_TEXT]jest[COLOR_REVERT] zarządem tej fabryki pod tą doktryną.</Polish>

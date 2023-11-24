@@ -480,7 +480,7 @@
 		<Tag>TXT_KEY_PROMOTIONHELP_DROP_SIGHT_UNSEEN</Tag>
 		<English>[ICON_BULLET]Can Paradrop on FoW Tiles</English>
 		<French>[ICON_BULLET]Peut être Parachuté dans le "Brouillard de Guerre"</French>
-		<German>[ICON_BULLET]Kann Fallschirmsprünge auch auf Feldern innerhalb des Nebels des Krieges durchführen</German>
+		<German>[ICON_BULLET]kann Fallschirmsprünge auch auf Feldern innerhalb des Nebels des Krieges durchführen</German>
 		<Spanish>[ICON_BULLET]Puede realizar misiones de paracaidismo en casillas con 'niebla de guerra'</Spanish>
 		<Polish>[ICON_BULLET]Zrzut możliwy na nieodkryte pola</Polish>
 	</TEXT>
@@ -738,7 +738,7 @@
 		<Tag>TXT_KEY_PROMOTIONHELP_IGNORE_TERRAIN_DAMAGE</Tag>
 		<English>[ICON_BULLET]Can Safely Traverse %s1 without recieving damage</English>
 		<French>[ICON_BULLET]Peut traverser %s1 sans recevoir de dommages</French>
-		<German>[ICON_BULLET]Kann %s1 sicher passieren, ohne Schaden zu nehmen</German>
+		<German>[ICON_BULLET]kann %s1 sicher passieren, ohne Schaden zu nehmen</German>
 		<Italian>[ICON_BULLET]Può attraversare %s1 senza ricevere danni</Italian>
 		<Spanish>[ICON_BULLET]Puede atravesar %s1 sin recibir daño</Spanish>
 		<Polish>[ICON_BULLET]Pozwala na bezpieczną podróż %s1 bez otrzymywania obrażeń</Polish>
