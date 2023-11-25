@@ -199,7 +199,7 @@ class LocationGrouping(Grouping):
 
 	def calcGroupKeys(self, unit, player, team):
 		plot = unit.plot()
-		if not plot or plot.isNone():
+		if not plot:
 			return None
 		if plot.isNPC():
 			return (self.BARBARIAN_TERRITORY,)

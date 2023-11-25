@@ -15,6 +15,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvGlobals.h"
 #include "CvXMLLoadUtility.h"
+#include "CvInfos.h"
 
 static const int kBufSize = 2048;
 

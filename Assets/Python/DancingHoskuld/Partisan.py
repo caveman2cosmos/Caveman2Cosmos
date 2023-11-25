@@ -116,7 +116,7 @@ def onCityAcquired(argsList):
 		for iYLoop in range(iY - 3, iY + 4, 1):
 
 			CyPlot = CyMap().plot(iXLoop, iYLoop)
-			if CyPlot.isNone() or CyPlot.isCity() or CyPlot.isWater() or CyPlot.isImpassable():
+			if not CyPlot or CyPlot.isCity() or CyPlot.isWater() or CyPlot.isImpassable():
 				continue
 
 			if not CyPlot.isVisibleEnemyUnit(iOwnerOld):

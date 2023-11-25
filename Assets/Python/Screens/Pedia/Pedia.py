@@ -542,7 +542,7 @@ class Pedia:
 			bFuncByCat = True
 			if not szSubCat:
 				CvBonusInfo = GC.getBonusInfo(iObjectType)
-				if CvBonusInfo.getConstAppearance() > 0:
+				if CvBonusInfo.isMapBonus():
 					## Map resource
 					szSubCat = self.mapSubCat.get(iCategory)[0]
 				elif CvBonusInfo.getBonusClassType() != GC.getInfoTypeForString("BONUSCLASS_CULTURE") and CvBonusInfo.getBonusClassType() != GC.getInfoTypeForString("BONUSCLASS_GENMODS") and CvBonusInfo.getBonusClassType() != GC.getInfoTypeForString("BONUSCLASS_WONDER"):
@@ -1100,7 +1100,7 @@ class Pedia:
 		for iBonus in xrange(GC.getNumBonusInfos()):
 			CvBonusInfo = GC.getBonusInfo(iBonus)
 			szName = CvBonusInfo.getDescription()
-			if CvBonusInfo.getConstAppearance() > 0:	# A map resource
+			if CvBonusInfo.isMapBonus(): # A map resource
 				if not iType:
 					aList.append((szName, iBonus))
 			elif BONUSCLASS_WONDER > -1 and CvBonusInfo.getBonusClassType() == BONUSCLASS_WONDER:

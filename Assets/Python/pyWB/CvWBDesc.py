@@ -557,7 +557,7 @@ class CvPlayerDesc:
 			if not player.isNPC():
 
 				pPlot = player.getStartingPlot()
-				if not pPlot.isNone():
+				if pPlot:
 					f.write("\tStartingX=%d, StartingY=%d\n" %(pPlot.getX(), pPlot.getY()))
 
 				f.write("\tStartingGold=%d\n" % player.getGold())

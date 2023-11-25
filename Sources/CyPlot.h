@@ -21,7 +21,6 @@ public:
 
 	CvPlot* getPlot() const { return m_pPlot; }	// Call from C++
 	void setPlot(CvPlot* p) { m_pPlot = p; }	// Call from C++
-	bool isNone() const { return m_pPlot == NULL; }
 
 	void erase();
 	DllExport NiPoint3 getPoint() const;

@@ -258,8 +258,8 @@ class WBUnitScreen:
 			else:
 				lData1 = [self.iPlotX]
 				iData2 = self.iPlotY
-				pTargetPlot = CyMap().plot(lData1[0], iData2)
-				if pTargetPlot.isNone():
+				pTargetPlot = GC.getMap().plot(lData1[0], iData2)
+				if not pTargetPlot:
 					lData1 = [self.iPlotX]
 					iData2 = self.iPlotY
 			bCanDoMission = False
@@ -787,7 +787,7 @@ class WBUnitScreen:
 		else:
 			iData1 = self.iPlotX
 			iData2 = self.iPlotY
-		pTargetPlot = CyMap().plot(self.iPlotX, self.iPlotY)
+		pTargetPlot = GC.getMap().plot(self.iPlotX, self.iPlotY)
 		self.currentUnit.getGroup().pushMission(MissionTypes(iMissionType), iData1, iData2, 0, False, True, MissionAITypes.NO_MISSIONAI, pTargetPlot, self.currentUnit)
 		self.interfaceScreen([self.currentUnit])
 

@@ -922,6 +922,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_YIELD_CHANGE_DESCRIP</Tag>
 		<English>Yield changes:</English>
+		<German>[ICON_BULLET]veränderter Ertrag:</German>
 		<Russian>Измен. дохода:</Russian>
 		<Italian>[ICON_BULLET]Cambio nel rendimento:</Italian>
 	</TEXT>

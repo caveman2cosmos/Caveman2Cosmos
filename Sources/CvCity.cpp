@@ -28,6 +28,7 @@
 #include "CvViewport.h"
 #include "CvDLLInterfaceIFaceBase.h"
 #include "CvDLLUtilityIFaceBase.h"
+#include "CvTraitInfo.h"
 #ifdef THE_GREAT_WALL
 #include "CvDLLEngineIFaceBase.h"
 #endif
@@ -4834,16 +4835,17 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 	{
 		changeAfflictionTypeCount(kBuilding.getPromotionLineType(), iChange);
 	}
-#endif // OUTBREAKS_AND_AFFLICTIONS
+
 
 	for (int iI = 0; iI < kBuilding.getNumBonusAidModifiers(); iI++)
 	{
 		BonusTypes eBonus = kBuilding.getBonusAidModifier(iI).eBonusType;
 		PropertyTypes ePropertyType = kBuilding.getBonusAidModifier(iI).ePropertyType;
+
 		changeExtraBonusAidModifier(eBonus, ePropertyType, kBuilding.getBonusAidModifier(iI).iModifier);
 	}
 
-#ifdef OUTBREAKS_AND_AFFLICTIONS
+
 	for (int iI = 0; iI < GC.getNumPromotionLineInfos(); iI++)
 	{
 		PROFILE("CvCity::processBuilding.PromotionLines");
@@ -14625,21 +14627,23 @@ bool CvCity::processGreatWall(bool bIn, bool bForce, bool bSeeded)
 
 				FAssert(eDummyUnit != NO_UNIT);
 			}
-			CvUnit* pTempUnit = GET_PLAYER(getOwner()).getTempUnit(eDummyUnit, getX(), getY());
-			CvReachablePlotSet	plotSet(pTempUnit->getGroup(), MOVE_OUR_TERRITORY, MAX_INT);
-
-			for (CvReachablePlotSet::const_iterator itr = plotSet.begin(); itr != plotSet.end(); ++itr)
+			if (eDummyUnit != NO_UNIT)
 			{
-				const CvCity* pCity = itr.plot()->getPlotCity();
+				CvUnit* pTempUnit = GET_PLAYER(getOwner()).getTempUnit(eDummyUnit, getX(), getY());
+				CvReachablePlotSet	plotSet(pTempUnit->getGroup(), MOVE_OUR_TERRITORY, MAX_INT);
 
-				if (pCity != NULL && pCity->isInViewport())
+				for (CvReachablePlotSet::const_iterator itr = plotSet.begin(); itr != plotSet.end(); ++itr)
 				{
-					pUseCity = pCity;
-					break;
-				}
-			}
+					const CvCity* pCity = itr.plot()->getPlotCity();
 
-			GET_PLAYER(getOwner()).releaseTempUnit();
+					if (pCity != NULL && pCity->isInViewport())
+					{
+						pUseCity = pCity;
+						break;
+					}
+				}
+				GET_PLAYER(getOwner()).releaseTempUnit();
+			}
 		}
 
 		//	If no suitable city is within the viewport we'll have to move the viewport

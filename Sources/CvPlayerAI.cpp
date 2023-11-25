@@ -14,6 +14,7 @@
 #include "CvImprovementInfo.h"
 #include "CvBonusInfo.h"
 #include "CvInfos.h"
+#include "CvUnitCombatInfo.h"
 #include "CvInitCore.h"
 #include "CvMap.h"
 #include "CvPlot.h"
@@ -410,6 +411,8 @@ void CvPlayerAI::AI_doTurnPre()
 
 				foreach_(const CvUnit * pLoopUnit, units())
 				{
+					if (pLoopUnit->isTempUnit()) continue;
+
 					const UnitAITypes eAIType = pLoopUnit->AI_getUnitAIType();
 
 					if ((UnitAITypes)iI == eAIType && pLoopUnit->area() == pLoopArea)

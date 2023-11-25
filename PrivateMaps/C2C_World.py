@@ -3000,15 +3000,7 @@ class BonusPlacer:
 			bonus = BonusArea()
 			bonus.indeXML = iBonus
 			# Calculate desired amount
-			fBaseCount = (
-				(
-					CvBonusInfo.getConstAppearance() +
-					randint(0, CvBonusInfo.getRandAppearance1()) +
-					randint(0, CvBonusInfo.getRandAppearance2()) +
-					randint(0, CvBonusInfo.getRandAppearance3()) +
-					randint(0, CvBonusInfo.getRandAppearance4())
-				) / 100.0
-			)
+			fBaseCount = CvBonusInfo.getRandAppearance() / 100.0
 			iTilesPer = CvBonusInfo.getTilesPer()
 			fDensityCount = 0
 			if iTilesPer > 0:
@@ -3624,10 +3616,11 @@ class StartingPlotFinder:
 		sPlot = StartPlot(x, y, 0.0)
 		for n in xrange(21):
 			plot = plotCity(x, y, n)
-			i = GetIndex(plot.getX(), plot.getY())
-			totalFood += spf.plotfoodList[i]
-			value = spf.plotvalueList[i]
-			cityPlotList.append(value)
+			if plot:
+				i = GetIndex(plot.getX(), plot.getY())
+				totalFood += spf.plotfoodList[i]
+				value = spf.plotvalueList[i]
+				cityPlotList.append(value)
 		usablePlots = int(round(totalFood / float(GC.getFOOD_CONSUMPTION_PER_POPULATION())))
 		cityPlotList.sort(lambda a, b:cmp(b, a))
 		#value is obviously limited to available food
@@ -3670,6 +3663,7 @@ class StartingPlotFinder:
 		bonusCount = 0
 		for n in xrange(3 * bonuses + 1):
 			for CyPlot in plotList:
+				if not CyPlot: continue
 				if bonusCount >= bonuses:
 					return
 				if CyPlot.isWater():

@@ -1083,6 +1083,7 @@ Nachteile:
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL</Tag>
 		<English>Agricultural CT</English>
 		<French>Agricole</French>
+		<German>Landwirtschaftlich CT</German>
 		<Russian>Çåìëåäåëåö</Russian>
 		<Italian>Agricolo</Italian>
 	</TEXT>
@@ -1090,6 +1091,7 @@ Nachteile:
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL1</Tag>
 		<English>Agricultural I</English>
 		<French>Agricole I</French>
+		<German>Landwirtschaftlich I</German>
 		<Russian>Çåìëåäåëåö I</Russian>
 		<Italian>Agricolo I</Italian>
 	</TEXT>
@@ -1145,6 +1147,7 @@ Penalties:
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL2</Tag>
 		<English>Agricultural II</English>
 		<French>Agricole II</French>
+		<German>Landwirtschaftlich II</German>
 		<Russian>Çåìëåäåëåö II</Russian>
 		<Italian>Agricolo II</Italian>
 	</TEXT>
@@ -1198,6 +1201,7 @@ Penalties:
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL3</Tag>
 		<English>Agricultural III</English>
 		<French>Agricole III</French>
+		<German>Landwirtschaftlich III</German>
 		<Russian>Çåìëåäåëåö III</Russian>
 		<Italian>Agricolo III</Italian>
 	</TEXT>
@@ -7470,6 +7474,7 @@ Penalties:
 		<Tag>TXT_KEY_TRAIT_GLUTTONOUS</Tag>
 		<English>Gluttonous CT</English>
 		<French>Glouton</French>
+		<German>Unersättlich CT</German>
 		<Russian>×ðåâîóãîäíèê</Russian>
 		<Italian>Insaziabile</Italian>
 	</TEXT>
@@ -7477,6 +7482,7 @@ Penalties:
 		<Tag>TXT_KEY_TRAIT_GLUTTONOUS1</Tag>
 		<English>Gluttonous I</English>
 		<French>Glouton I</French>
+		<German>Unersättlich I</German>
 		<Russian>×ðåâîóãîäíèê I</Russian>
 		<Italian>Insaziabile I</Italian>
 	</TEXT>
@@ -7532,6 +7538,7 @@ Benefits:
 		<Tag>TXT_KEY_TRAIT_GLUTTONOUS2</Tag>
 		<English>Gluttonous II</English>
 		<French>Glouton II</French>
+		<German>Unersättlich II</German>
 		<Russian>×ðåâîóãîäíèê II</Russian>
 		<Italian>Insaziabile II</Italian>
 	</TEXT>
@@ -7587,6 +7594,7 @@ Benefits:
 		<Tag>TXT_KEY_TRAIT_GLUTTONOUS3</Tag>
 		<English>Gluttonous III</English>
 		<French>Glouton III</French>
+		<German>Unersättlich III</German>
 		<Russian>×ðåâîóãîäíèê III</Russian>
 		<Italian>Insaziabile III</Italian>
 	</TEXT>
