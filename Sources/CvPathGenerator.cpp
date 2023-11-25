@@ -1844,6 +1844,11 @@ const CvPath& CvPathGenerator::getLastPath() const
 bool CvPathGenerator::generatePathForHypotheticalUnit(const CvPlot* pFrom, const CvPlot* pTo, PlayerTypes ePlayer, UnitTypes eUnit, int iFlags, int iMaxTurns)
 {
 	PROFILE_FUNC();
+	if (eUnit == NO_UNIT)
+	{
+		FErrorMsg("Cannot generate path for NO_UNIT");
+		return false;
+	}
 
 	CvUnit*	pTempUnit = GET_PLAYER(ePlayer).getTempUnit(eUnit, pFrom->getX(), pFrom->getY());
 
@@ -1894,6 +1899,7 @@ void CvPathGenerator::SelfTest()
 	int	iPathsRemaining = NUM_PATHS;
 	//	Pick an arbitrary unit with more than 1 movement point
 	const UnitTypes eLandUnit = GC.getUNIT_WORKER();
+	FAssert(eLandUnit != NO_UNIT);
 
 	while( iPathsRemaining > 0 )
 	{

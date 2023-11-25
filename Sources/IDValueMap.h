@@ -213,7 +213,7 @@ struct IDValueMap
 	const python::list makeList() const
 	{
 		PROFILE_EXTRA_FUNC();
-		python::list l = python::list();
+		boost::python::list l = python::list();
 		foreach_(const value_type& pair, m_map)
 			l.append(std::make_pair((int)pair.first, pair.second));
 		return l;

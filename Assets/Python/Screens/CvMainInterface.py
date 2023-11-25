@@ -334,7 +334,7 @@ class CvMainInterface:
 				CvBonusInfo = GC.getBonusInfo(iBonus)
 				szName = CvBonusInfo.getDescription()
 				szChar = u"%c " %CvBonusInfo.getChar()
-				if CvBonusInfo.getConstAppearance() > 0: ## Map resource
+				if CvBonusInfo.isMapBonus(): ## Map resource
 					aBonusList1.append((szName, iBonus, szChar))
 				elif CvBonusInfo.getBonusClassType() != BONUSCLASS_CULTURE:
 					aBonusList2.append((szName, iBonus, szChar))

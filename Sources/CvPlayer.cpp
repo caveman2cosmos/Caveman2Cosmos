@@ -36,7 +36,7 @@
 #include "CvDLLFAStarIFaceBase.h"
 #include "CvDLLInterfaceIFaceBase.h"
 #include "CvDLLUtilityIFaceBase.h"
-#include "CyCity.h"
+#include "CvTraitInfo.h"
 
 //	Koshling - save flag indicating this player has no data in the save as they have never been alive
 #define	PLAYER_UI_FLAG_OMITTED 2
@@ -19586,6 +19586,22 @@ void CvPlayer::read(FDataStreamBase* pStream)
 				{
 					m_unitCountSM.insert(std::make_pair(iType, iCountU));
 				}
+			}
+		}
+		{
+			int iMilitary = 0;
+
+			foreach_(const CvUnit* unitX, units())
+			{
+				if (!unitX->isTempUnit() && GC.getUnitInfo(unitX->getUnitType()).isMilitarySupport())
+				{
+					iMilitary++;
+				}
+			}
+			if (iMilitary != m_iNumMilitaryUnits)
+			{
+				FErrorMsg("count of military unit out of sync! Correcting");
+				m_iNumMilitaryUnits = iMilitary;
 			}
 		}
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iOtherAreaMaintenanceModifier);

@@ -1,19 +1,12 @@
-#include "CvGameCoreDLL.h"
-#include "CyArea.h"
-#include "CyCity.h"
-#include "CyPlot.h"
-#include "CyUnit.h"
+#include "CvPythonPlotLoader.h"
+#include <boost/python/manage_new_object.hpp>
 
-//
-// published python interface for CyPlot
-//
 
-void CyPlotPythonInterface1(python::class_<CyPlot>& x)
+void CvPythonPlotLoader::CyPlotPythonInterface1(boost::python::class_<CyPlot>& inst)
 {
 	OutputDebugString("Python Extension Module - CyPlotPythonInterface1\n");
 
-	x
-		.def("isNone", &CyPlot::isNone, "bool ()")
+	inst
 		.def("erase", &CyPlot::erase, "void ()")
 		.def("getPoint", &CyPlot::getPoint, "NiPoint3 ()")
 		.def("getTeam", &CyPlot::getTeam, "int ()")
@@ -32,7 +25,7 @@ void CyPlotPythonInterface1(python::class_<CyPlot>& x)
 		.def("isRiverSide", &CyPlot::isRiverSide, "bool ()")
 		.def("isRiver", &CyPlot::isRiver, "bool ()")
 
-		.def("getNearestLandPlot", &CyPlot::getNearestLandPlot, python::return_value_policy<python::manage_new_object>(), "CyPlot* ()")
+		.def("getNearestLandPlot", &CyPlot::getNearestLandPlot, boost::python::return_value_policy<boost::python::manage_new_object>(), "CyPlot* ()")
 		.def("canHaveBonus", &CyPlot::canHaveBonus, "bool (int /*BonusTypes*/ eBonus, bool bIgnoreLatitude)")
 		.def("canHaveImprovement", &CyPlot::canHaveImprovement, "bool (int (ImprovementTypes) eImprovement, int (TeamTypes) eTeam, bool bPotential)")
 		.def("canBuild", &CyPlot::canBuild, "bool (int (BuildTypes) eBuild, int (PlayerTypes) ePlayer, bool bTestVisible)")
@@ -74,8 +67,8 @@ void CyPlotPythonInterface1(python::class_<CyPlot>& x)
 		.def("getY", &CyPlot::getY, "int ()")
 		.def("getLatitude", &CyPlot::getLatitude, "int ()")
 		.def("getLongitude", &CyPlot::getLongitude, "int ()")
-		.def("area", &CyPlot::area, python::return_value_policy<python::manage_new_object>(), "CyArea* ()")
-		.def("waterArea", &CyPlot::waterArea, python::return_value_policy<python::manage_new_object>(), "CyArea* ()")
+		.def("area", &CyPlot::area, boost::python::return_value_policy<boost::python::manage_new_object>(), "CyArea* ()")
+		.def("waterArea", &CyPlot::waterArea, boost::python::return_value_policy<boost::python::manage_new_object>(), "CyArea* ()")
 		.def("getArea", &CyPlot::getArea, "int ()")
 		.def("getFeatureVariety", &CyPlot::getFeatureVariety, "int ()")
 
@@ -113,8 +106,8 @@ void CyPlotPythonInterface1(python::class_<CyPlot>& x)
 		.def("getRouteType", &CyPlot::getRouteType, "int ()")
 		.def("setRouteType", &CyPlot::setRouteType, "void (int (RouteTypes) eNewValue)")
 
-		.def("getPlotCity", &CyPlot::getPlotCity, python::return_value_policy<python::manage_new_object>(), "CyCity* ()")
-		.def("getWorkingCity", &CyPlot::getWorkingCity, python::return_value_policy<python::manage_new_object>(), "CyCity* ()")
+		.def("getPlotCity", &CyPlot::getPlotCity, boost::python::return_value_policy<boost::python::manage_new_object>(), "CyCity* ()")
+		.def("getWorkingCity", &CyPlot::getWorkingCity, boost::python::return_value_policy<boost::python::manage_new_object>(), "CyCity* ()")
 		.def("getRiverID", &CyPlot::getRiverID, "int ()")
 		.def("setRiverID", &CyPlot::setRiverID, "void (int)")
 		.def("getYield", &CyPlot::getYield, "int (YieldTypes eIndex)")
@@ -147,7 +140,7 @@ void CyPlotPythonInterface1(python::class_<CyPlot>& x)
 
 		.def("units", &CyPlot::units)
 		.def("getNumUnits", &CyPlot::getNumUnits, "int ()")
-		.def("getUnit", &CyPlot::getUnit, python::return_value_policy<python::manage_new_object>(), "CyUnit* (int iIndex)")
+		.def("getUnit", &CyPlot::getUnit, boost::python::return_value_policy<boost::python::manage_new_object>(), "CyUnit* (int iIndex)")
 
 		.def("getScriptData", &CyPlot::getScriptData, "str () - Get stored custom data")
 		.def("setScriptData", &CyPlot::setScriptData, "void (str) - Set stored custom data")
@@ -155,9 +148,9 @@ void CyPlotPythonInterface1(python::class_<CyPlot>& x)
 		.def("getRevoltProtection", &CyPlot::getRevoltProtection, "int ()")
 
 		.def("isInViewport", &CyPlot::isInViewport, "bool ()")
-		.def("cloneToViewport", &CyPlot::cloneToViewport, python::return_value_policy<python::manage_new_object>(), "CyPlot* ()")
+		.def("cloneToViewport", &CyPlot::cloneToViewport, boost::python::return_value_policy<boost::python::manage_new_object>(), "CyPlot* ()")
 
 		.def("adjacent", &CyPlot::adjacent)
 		.def("rect", &CyPlot::rect)
-	;
+		;
 }

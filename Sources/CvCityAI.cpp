@@ -10,6 +10,7 @@
 #include "CvImprovementInfo.h"
 #include "CvBonusInfo.h"
 #include "CvInfos.h"
+#include "CvUnitCombatInfo.h"
 #include "CvCityAI.h"
 #include <string>
 #include "CvContractBroker.h"

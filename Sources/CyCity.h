@@ -7,7 +7,7 @@
 // Python wrapper class for CvCity
 //
 
-#include "CityOutputHistory.h"
+class CityOutputHistory;
 class CvCity;
 //class CvProperties;
 class CyPlot;
@@ -150,7 +150,6 @@ public:
 	bool isConnectedToCapital(int /*PlayerTypes*/ ePlayer) const;
 	CyArea* area() const;
 	CyArea* waterArea() const;
-	CyPlot* getRallyPlot() const;
 
 	int getGameTurnFounded() const;
 	int getGameTurnAcquired() const;

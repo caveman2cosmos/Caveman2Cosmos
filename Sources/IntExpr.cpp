@@ -17,6 +17,7 @@
 #include "CvDLLPythonIFaceBase.h"
 #include "CheckSum.h"
 #include "IntExpr.h"
+#include "CvInfos.h"
 
 IntExpr::~IntExpr()
 {

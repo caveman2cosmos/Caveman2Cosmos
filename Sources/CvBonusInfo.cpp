@@ -7,6 +7,8 @@
 #include "CvInfoUtil.h"
 #include "CvXMLLoadUtility.h"
 #include "CheckSum.h"
+#include "CvGlobals.h"
+#include "CvGameAI.h"
 
 CvBonusInfo::CvBonusInfo() :
 	m_iBonusClassType(NO_BONUSCLASS)
@@ -135,29 +137,24 @@ int CvBonusInfo::getPlacementOrder() const
 	return m_iPlacementOrder;
 }
 
-int CvBonusInfo::getConstAppearance() const
+int CvBonusInfo::getRandAppearance() const
 {
-	return m_iConstAppearance;
+	return m_iConstAppearance +
+		GC.getGame().getMapRandNum(m_iRandAppearance1, "random1") +
+		GC.getGame().getMapRandNum(m_iRandAppearance2, "random2") +
+		GC.getGame().getMapRandNum(m_iRandAppearance3, "random3") +
+		GC.getGame().getMapRandNum(m_iRandAppearance4, "random4");
 }
 
-int CvBonusInfo::getRandAppearance1() const
+bool CvBonusInfo::isMapBonus() const
 {
-	return m_iRandAppearance1;
-}
-
-int CvBonusInfo::getRandAppearance2() const
-{
-	return m_iRandAppearance2;
-}
-
-int CvBonusInfo::getRandAppearance3() const
-{
-	return m_iRandAppearance3;
-}
-
-int CvBonusInfo::getRandAppearance4() const
-{
-	return m_iRandAppearance4;
+	return (
+			m_iConstAppearance > 0
+		||	m_iRandAppearance1 > 0
+		||	m_iRandAppearance2 > 0
+		||	m_iRandAppearance3 > 0
+		||	m_iRandAppearance4 > 0
+	);
 }
 
 int CvBonusInfo::getPercentPerPlayer() const
@@ -372,13 +369,14 @@ void CvBonusInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumI(iSum, GC.getNumTerrainInfos(), m_pbFeatureTerrain);
 	CheckSumC(iSum, m_aeMapCategoryTypes);
 	CheckSum(iSum, m_bPeaks);
-
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	const int iNumElements = m_aAfflictionCommunicabilityTypes.size();
 	for (int i = 0; i < iNumElements; ++i)
 	{
 		CheckSum(iSum, m_aAfflictionCommunicabilityTypes[i].ePromotionLine);
 		CheckSum(iSum, m_aAfflictionCommunicabilityTypes[i].iModifier);
 	}
+#endif
 
 	CheckSumC(iSum, m_aiCategories);
 
@@ -461,6 +459,7 @@ bool CvBonusInfo::read(CvXMLLoadUtility* pXML)
 	pXML->SetOptionalVector(&m_aeMapCategoryTypes, L"MapCategoryTypes");
 	pXML->SetOptionalVector(&m_aiCategories, L"Categories");
 
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	if (pXML->TryMoveToXmlFirstChild(L"AfflictionCommunicabilityTypes"))
 	{
 		int i = 0;
@@ -486,6 +485,7 @@ bool CvBonusInfo::read(CvXMLLoadUtility* pXML)
 		pXML->MoveToXmlParent();
 	}
 
+#endif
 	m_PropertyManipulators.read(pXML);
 
 	return true;
@@ -528,11 +528,11 @@ void CvBonusInfo::copyNonDefaults(const CvBonusInfo* pClassInfo)
 	if (getMinLatitude() == iDefault) m_iMinLatitude = pClassInfo->getMinLatitude();
 	if (getMaxLatitude() == 90) m_iMaxLatitude = pClassInfo->getMaxLatitude();
 	if (getPlacementOrder() == -1) m_iPlacementOrder = pClassInfo->getPlacementOrder();
-	if (getConstAppearance() == iDefault) m_iConstAppearance = pClassInfo->getConstAppearance();
-	if (getRandAppearance1() == iDefault) m_iRandAppearance1 = pClassInfo->getRandAppearance1();
-	if (getRandAppearance2() == iDefault) m_iRandAppearance2 = pClassInfo->getRandAppearance2();
-	if (getRandAppearance3() == iDefault) m_iRandAppearance3 = pClassInfo->getRandAppearance3();
-	if (getRandAppearance4() == iDefault) m_iRandAppearance4 = pClassInfo->getRandAppearance4();
+	if (m_iConstAppearance == iDefault) m_iConstAppearance = pClassInfo->m_iConstAppearance;
+	if (m_iRandAppearance1 == iDefault) m_iRandAppearance1 = pClassInfo->m_iRandAppearance1;
+	if (m_iRandAppearance2 == iDefault) m_iRandAppearance2 = pClassInfo->m_iRandAppearance2;
+	if (m_iRandAppearance3 == iDefault) m_iRandAppearance3 = pClassInfo->m_iRandAppearance3;
+	if (m_iRandAppearance4 == iDefault) m_iRandAppearance4 = pClassInfo->m_iRandAppearance4;
 	if (getPercentPerPlayer() == iDefault) m_iPercentPerPlayer = pClassInfo->getPercentPerPlayer();
 	if (getTilesPer() == iDefault) m_iTilesPer = pClassInfo->getTilesPer();
 	if (getMinLandPercent() == iDefault) m_iMinLandPercent = pClassInfo->getMinLandPercent();

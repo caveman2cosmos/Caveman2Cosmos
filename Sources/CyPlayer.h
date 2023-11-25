@@ -7,13 +7,12 @@
 // Python wrapper class for CvPlayer
 //
 
-class CyUnit;
-class CvPlayer;
-class CvProperties;
-class CyCity;
-class CyArea;
-class CyPlot;
-class CySelectionGroup;
+#include "CyUnit.h"
+#include "CyCity.h"
+#include "CyArea.h"
+#include "CySelectionGroup.h"
+#include "CyPlot.h"
+#include "CvPlayer.h"
 
 class CyPlayer
 {
@@ -37,8 +36,6 @@ public:
 
 	int startingPlotRange() const;
 	bool startingPlotWithinRange(const CyPlot* pPlot, int /*PlayerTypes*/ ePlayer, int iRange, int iPass);
-
-	CyPlot* findStartingPlot(bool bRandomize) const;
 
 	CyCity* initCity(int x, int y);
 	void acquireCity(CyCity* pCity, bool bConquest, bool bTrade);

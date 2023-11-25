@@ -3,6 +3,8 @@
 #ifndef CvDLLPythonIFaceBase_h__
 #define CvDLLPythonIFaceBase_h__
 
+#include <boost/python/object.hpp>
+
 //
 // abstract interface for Python functions used by DLL
 // Creator - Mustafa Thamer
@@ -20,7 +22,7 @@ public:
 	virtual const char* getMapScriptModule() = 0;
 
 	template <typename T>
-	static PyObject* makePythonObject(T*);
+	static PyObject* makePythonObject(T* pObj);
 
 	virtual PyObject* MakeFunctionArgs(void** args, int argc) = 0;
 
@@ -51,7 +53,7 @@ std::vector<int> arr = CvPython::call(PYGameModule, "getOrderArray", arg1, arg2,
 template <typename T>
 PyObject* CvDLLPythonIFaceBase::makePythonObject(T* pObj)
 {
-	if (!pObj)
+	if (pObj == NULL)
 		return Py_None;
 
 	python::object bpo(pObj);
