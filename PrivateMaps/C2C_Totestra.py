@@ -5484,7 +5484,6 @@ class StartingArea :
                 sPlot.setImprovementType(-1)
                 playerID = self.playerList[n]
                 player = gc.getPlayer(playerID)
-                sPlot.setStartingPlot(True)
                 player.setStartingPlot(sPlot,True)
                 n += 1
 
