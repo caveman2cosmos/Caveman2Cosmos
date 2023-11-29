@@ -877,9 +877,12 @@ class Pedia:
 		if CvPromotionLineInfo != None:
 			if CvPromotionLineInfo.isBuildUp():
 				bBuildUp = True
+		'''
 		if CvPromotionInfo.isAffliction():
 			return 4
 		elif CvPromotionInfo.isEquipment():
+		'''
+		if CvPromotionInfo.isEquipment():
 			return 3
 		elif CvPromotionInfo.isStatus():
 			return 2
