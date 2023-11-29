@@ -3168,7 +3168,6 @@ def assignStartingPlots():
 		del finalPlots[whichStartIndex]
 		startPlot = cymap.plot(startX,startY)
 		#assign the player to it
-		startPlot.setStartingPlot(True) #I believe this helps the post-processor improve map fairness
 		pPlayer = GC.getPlayer(playerIndex)
 		pPlayer.setStartingPlot(startPlot,True)
 		playerName = pPlayer.getName()

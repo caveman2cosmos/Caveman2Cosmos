@@ -1980,7 +1980,7 @@ def okLandPlots(xCoord, yCoord, ok=10):
 		for x in range( -2, 3 ):
 			for y in range( -2, 3 ):
 				plot = plotXY( xCoord, yCoord, x, y )
-				if not plot.isNone():
+				if plot:
 					if plot.isHills() or plot.isFlatlands():
 						land1 += 1
 		if land1 > ok:
@@ -1988,7 +1988,7 @@ def okLandPlots(xCoord, yCoord, ok=10):
 			for x in range( -1, 2 ):
 				for y in range( -1, 2 ):
 					plot = plotXY( xCoord, yCoord, x, y )
-					if not plot.isNone():
+					if plot:
 						if plot.isHills() or plot.isFlatlands():
 							land2 += 1
 			if land2 > 3:
