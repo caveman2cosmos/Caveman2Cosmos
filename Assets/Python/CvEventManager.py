@@ -2233,7 +2233,8 @@ class CvEventManager:
 					X = CyUnit.getX(); Y = CyUnit.getY()
 				else:
 					CyPlot = CyPlayer.getStartingPlot()
-					X = CyPlot.getX(); Y = CyPlot.getY()
+					if CyPlot:
+						X = CyPlot.getX(); Y = CyPlot.getY()
 
 			if -1 not in (X, Y):
 				if GC.getCivilizationInfo(CyPlayer.getCivilizationType()).getType() == "CIVILIZATION_NEANDERTHAL":
