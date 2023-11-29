@@ -552,11 +552,13 @@
 		<German>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1%% Produktion Großer Generäle</German>
 		<Italian>[ICON_BULLET]%D1_Mod%% comparsa di un Grande Generale</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod%% a la aparición de Gran general</Spanish>
+		<Russian>[ICON_BULLET]%D1_Mod%% шанс появления великого полководца</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_GIVEN_FREE_AREA</Tag>
 		<English>[ICON_BULLET]Building Given for Free in same continent By[SPACE]</English>
 		<German>[ICON_BULLET]kostenloses Gebäude auf dem gleichen Kontinent[SPACE]</German>
+		<Russian>[ICON_BULLET]На том же континенте постройка дается бесплатно благодаря[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_GLOBAL</Tag>
@@ -566,14 +568,14 @@
 		<Italian>[SPACE]in tutte le città</Italian> <!--tech Cave Dwelling pedia -->
 		<Spanish>[SPACE]en todas las ciudades</Spanish>
 		<Polish>[SPACE]we wszystkich miastach</Polish>
-		<Russian>[SPACE]Âî âñåõ ãîðîäàõ</Russian>
+		<Russian>[SPACE]во всех городах</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_GLOBAL_BUILDINGCOST_MOD</Tag>
 		<English>[NEWLINE][ICON_BULLET]National %d1%% cost modifier:[SPACE]</English>
 		<German>[NEWLINE][ICON_BULLET]global %d1%% Kosten für:[SPACE]</German>
 		<Italian>[NEWLINE][ICON_BULLET]Modificatore costo nazionale %d1%% per:[SPACE]</Italian>
-		<Russian>[NEWLINE][ICON_BULLET]Национал. %d1%% модиф. цены:[SPACE]</Russian>
+		<Russian>[NEWLINE][ICON_BULLET]Изменение цены %d1%% в стране:[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_GLOBAL_MAINT</Tag>
@@ -582,7 +584,7 @@
 		<Italian>[ICON_BULLET]Nessun costo di mantenimento, in nessuna città</Italian>
 		<Spanish>[ICON_BULLET]Sin coste de mantenimiento en ninguna ciudad</Spanish>
 		<Polish>[ICON_BULLET]Brak kosztów utrzymania we wszystkich miastach</Polish>
-		<Russian>[ICON_BULLET]Íåò çàòðàò íà îáñëóæèâàíèå âî âñåõ ãîðîäàõ</Russian>
+		<Russian>[ICON_BULLET]Бесплатное техобслуживание во всех городах</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_GLOBAL_MAINT_MOD</Tag>
@@ -591,7 +593,7 @@
 		<Italian>[ICON_BULLET]%D1_MOD%% costi di mantenimento in tutte le città</Italian>
 		<Spanish>[ICON_BULLET]%D1_MOD%% al coste de mantenimiento en todas las ciudades</Spanish>
 		<Polish>[ICON_BULLET]%D1_MOD%% do kosztów utrzymania we wszystkich miastach</Polish>
-		<Russian>[ICON_BULLET]%D1_MOD%% Çàòðàòû íà îáñëóæèâàíèå âî âñåõ ãîðîäàõ</Russian>
+		<Russian>[ICON_BULLET]%D1_MOD%% цены техобслуживания во всех городах</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_GLOBAL_POP</Tag>
@@ -600,6 +602,7 @@
 		<German>[ICON_BULLET]%D1_Change Bevölkerung in allen Städten</German>
 		<Italian>[ICON_BULLET]%D1_Change di popolazione in tutte le città</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change de población en todas las ciudades</Spanish>
+		<Russian>[ICON_BULLET]%D1_Change население во всех городах</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_GOLDENAGE_MOD</Tag>
@@ -608,6 +611,7 @@
 		<German>[ICON_BULLET]%D1_Mod%% Dauer des Goldenen Zeitalters</German>
 		<Italian>[ICON_BULLET]%D1_Mod%% di lunghezza dell'Età dell'Oro</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod%% a la duración de la edad de oro</Spanish>
+		<Russian>[ICON_BULLET]%D1_Mod%% продолжительности золотого века</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_GOLDEN_AGE</Tag>
@@ -616,6 +620,7 @@
 		<German>[ICON_BULLET]Beginnt ein Goldenes Zeitalter</German>
 		<Italian>[ICON_BULLET]Avvia l'Età dell'Oro</Italian>
 		<Spanish>[ICON_BULLET]Inicia una edad de oro</Spanish>
+		<Russian>[ICON_BULLET]Начинает золотой век</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_GROUPING_SINGLE</Tag>
@@ -625,7 +630,7 @@
 		<Italian>Nessuno</Italian>
 		<Spanish>Ninguno</Spanish>
 		<Polish>Brak</Polish>
-		<Russian>Íåò</Russian>
+		<Russian>Нет</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_GROUPING_WONDER_TYPE</Tag>
@@ -635,21 +640,21 @@
 		<Italian>Meraviglie</Italian>
 		<Spanish>Maravillas</Spanish>
 		<Polish>Cuda</Polish>
-		<Russian>×óäåñà</Russian>
+		<Russian>Чудеса</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_GROUP_WONDER_ALLOWED</Tag>
 		<English>[ICON_BULLET]Group Wonder of %s1_Special (%d2_Num Allowed)</English>
 		<French>[ICON_BULLET]Groupe de Merveilles de %s1_Special (%d2_Num autorisé)</French>
 		<German>[ICON_BULLET]Gruppenwunder "%s1_Special" (%[d2_Num]x möglich)</German>
-		<Russian>[ICON_BULLET]Групповые Чудеса %s1_Special (доступно: %d2_Num)</Russian>
+		<Russian>[ICON_BULLET]Групповое чудо %s1_Special (может быть только %d2_Num)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_GROUP_WONDER_LEFT</Tag>
 		<English>[SPACE](Group Wonder of %s1_Special: %d2_Num Left)</English>
 		<French>[SPACE](Groupe de Merveilles de %s1_Special: %d2_Num restant(s))</French>
 		<German>[SPACE](Gruppenwunder "%s1_Special": %d2_Num übrig)</German>
-		<Russian>[SPACE](Групповые Чудеса: %s1_Special (осталось: %d2_Num)</Russian>
+		<Russian>[SPACE](Групповое чудо %s1_Special: %d2_Num осталось)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_HAPPINESS_CHANGE</Tag>
@@ -659,7 +664,7 @@
 		<Italian>[ICON_BULLET]%D1_Change%F2_HappOrUn per ogni risorsa di tipo[SPACE]</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change%F2_HappOrUn por cada[SPACE]</Spanish>
 		<Polish>[ICON_BULLET]%D1_Change%F2_HappOrUn od wszystkich[SPACE]</Polish>
-		<Russian>[ICON_BULLET]%D1_Change%F2_HappOrUn:[SPACE]</Russian>
+		<Russian>[ICON_BULLET]%D1_Change%F2_HappOrUn от всех[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_HAPPINESS_TRAIT</Tag>
@@ -668,6 +673,7 @@
 		<German>[ICON_BULLET]%D1_change[ICON_HAPPY] für Staatsoberhäupter mit dem Charakterzug: %s2:2_trait</German>
 		<Italian>[ICON_BULLET]Felicità [COLOR_HIGHLIGHT_TEXT]%D1_change[COLOR_REVERT] [ICON_HAPPY] con un leader [COLOR_HIGHLIGHT_TEXT]%s2_trait[COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET]%D1_change [ICON_HAPPY] con líder %s2:1_trait</Spanish>
+		<Russian>[ICON_BULLET]%D1_change[ICON_HAPPY] для предподителей с чертой %s2_trait</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_HAPPY_CHANGE_ALL_CITIES</Tag>
@@ -676,6 +682,7 @@
 		<German>[ICON_BULLET]%D1_Change%F2_HappyOrUn in allen Städten</German>
 		<Italian>[ICON_BULLET]%D1_Change%F2_HappyOrUn in tutte le città</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change %F2_HappyOrUn en todas las ciudades</Spanish>
+		<Russian>[ICON_BULLET]%D1_Change%F2_HappyOrUn во всех городах</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_HAPPY_CHANGE_CONT</Tag>
@@ -684,6 +691,7 @@
 		<German>[ICON_BULLET]%D1_Change%F2_HappyOrUn in allen Städten dieses Kontinents</German>
 		<Italian>[ICON_BULLET]%D1_Change %F2_HappyOrUn in tutte le città di questo continente</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change %F2_HappyOrUn en todas las ciudades de este continente</Spanish>
+		<Russian>[ICON_BULLET]%D1_Change%F2_HappyOrUn во всех городах на этом континенте</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_HEALTH_CHANGE_ALL_CITIES</Tag>
@@ -692,6 +700,7 @@
 		<German>[ICON_BULLET]%D1_Change%F2_HealthOrUn in allen Städten</German>
 		<Italian>[ICON_BULLET]%D1_Change%F2_HealthOrUn in tutte le città</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change %F2_HealthOrUn en todas las ciudades</Spanish>
+		<Russian>[ICON_BULLET]%D1_Change%F2_HealthOrUn во всех городах</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_HEALTH_CHANGE_CONT</Tag>
@@ -700,6 +709,7 @@
 		<German>[ICON_BULLET]%D1_Change%F2_HealthOrUn in allen Städten dieses Kontinents</German>
 		<Italian>[ICON_BULLET]%D1_Change %F2_HealthOrUn in tutte le città di questo continente</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change %F2_HealthOrUn en todas las ciudades de este continente</Spanish>
+		<Russian>[ICON_BULLET]%D1_Change%F2_HealthOrUn во всех городах на этом континенте</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_HEALTH_HAPPINESS_CHANGE</Tag>
@@ -708,6 +718,7 @@
 		<German>[ICON_BULLET]%D1_Change%F2_HappyOrHealth durch[SPACE]</German>
 		<Italian>[ICON_BULLET]%D1_Change %F2_HappyOrHealth per la risorsa di tipo[SPACE]</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change %F2_HappyOrHealth por[SPACE]</Spanish>
+		<Russian>[ICON_BULLET]%D1_Change%F2_HappyOrHealth из[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_HEAL_MOD</Tag>
@@ -716,6 +727,7 @@
 		<German>[ICON_BULLET]heilt zusätzlich %d1_Mod%% Schaden pro Runde bei Einheiten</German>
 		<Italian>[ICON_BULLET]Cura le unità del %d1_Mod%% di danno extra a turno.</Italian>
 		<Spanish>[ICON_BULLET]Cura a las unidades un %d1_Mod%% de daño extra por turno</Spanish>
+		<Russian>[ICON_BULLET]Дополнительное исцеление подразделений на %d1_Mod%% урона за ход</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_HEAL_UNITCOMBAT_MOD</Tag>
@@ -724,7 +736,7 @@
 		<Italian>[ICON_BULLET]%s1_UNITCOMBAT %D2_Mod%% a turno</Italian>
 		<German>[ICON_BULLET]%s1_UNITCOMBAT %D2_Mod%% pro Runde</German>
 		<Polish>[ICON_BULLET]Wspomaga leczenie %s1_UNITCOMBAT Units %D2_Mod%% Obrażeń na turę.</Polish>
-		<Russian>[ICON_BULLET]%s1_UNITCOMBAT %D2_Mod%%/Ход</Russian>
+		<Russian>[ICON_BULLET]%s1_UNITCOMBAT %D2_Mod%%/ход</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_HURRY_ANGER_MOD</Tag>
@@ -733,6 +745,7 @@
 		<German>[ICON_BULLET]%D1_percent%% Unmutsdauer durch Bevölkerungseinbußen</German>
 		<Italian>[ICON_BULLET]%D1_percent%% di durata del malcontento per aver sacrificato la popolazione</Italian>
 		<Spanish>[ICON_BULLET]%D1_percent%% a la duración del hastío por sacrificar población</Spanish>
+		<Russian>[ICON_BULLET]%D1_percent%% продолжительность недовольства от жертвоприношения населения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_HURRY_MOD</Tag>
@@ -741,6 +754,7 @@
 		<German>[ICON_BULLET]%D1_Mod%% Kosten für beschleunigte Produktion</German>
 		<Italian>[ICON_BULLET]%D1_Mod%% costo per accelerare la produzione</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod%% al coste de acelerar la producción</Spanish>
+		<Russian>[ICON_BULLET]%D1_Mod%% цена ускорения производства</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_IMPROVEMENT_FREE_SPECIALISTS</Tag>
@@ -749,6 +763,7 @@
 		<German>[ICON_BULLET]%D1_Change [NUM1:freier Spezialist:freie Spezialisten] pro[SPACE]</German>
 		<Italian>[ICON_BULLET]%D1_Change [NUM1:specialista:specialisti] gratis per[SPACE]</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change [NUM1:especialista gratis:especialistas gratis] por[SPACE]</Spanish>
+		<Russian>[ICON_BULLET]%D1_Change [NUM1:специалиста:специалистов] бесплатно на[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_INCREASES_LINE_OF_SIGHT</Tag>
@@ -758,14 +773,14 @@
 		<Italian>[ICON_BULLET]Aumenta il [COLOR_GREEN]campo visivo[COLOR_REVERT] della città.</Italian>
 		<Spanish>[ICON_BULLET]Aumenta la línea de visión de la ciudad</Spanish>
 		<Polish>[ICON_BULLET]Zwiększa pole widzenia miasta</Polish>
-		<Russian>[ICON_BULLET]Óâåëè÷èâàåò ãîðîäñêîé óãîë îáçîðà</Russian>
+		<Russian>[ICON_BULLET]Увеличивает дальность обзора города</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_INSIDIOUSNESS</Tag>
 		<English>[ICON_BULLET]Increases local Insidiousness by %s1_amount%% (Helps Criminals avoid discovery)</English>
 		<French>[ICON_BULLET]Donne à toutes les unités criminelles produites dans la ville %s1_amount%% d'Incidiosité.</French>
 		<German>[ICON_BULLET]erhöht die Gesetzlosigkeit der Bevölkerung um %s1_amount%% (hilft Kriminellen ihrer Entdeckung zu entgehen)</German>
-		<Russian>[ICON_BULLET]Увеличивает местное коварство на %s1_amount%% (помогает преступникам избежать разоблачения)</Russian>
+		<Russian>[ICON_BULLET]Увеличивает здешнюю изворотливость на %s1_amount%% (помогает преступникам избежать разоблачения)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_INVESTIGATION</Tag>
@@ -782,7 +797,7 @@
 		<Italian>[SPACE]nella città.</Italian>
 		<Spanish>[SPACE]en la ciudad</Spanish>
 		<Polish>[SPACE]w mieście.</Polish>
-		<Russian>[SPACE]В городе.</Russian>
+		<Russian>[SPACE]в городе.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_LESS_WORLD_TRADE</Tag>
@@ -809,7 +824,7 @@
 		<Italian>[ICON_BULLET]-%s1 [ICON_GOLD] dei costi mantenimento dell'edificio</Italian>
 		<Spanish>[ICON_BULLET]-%s1[ICON_GOLD] para mantenimiento del edificio</Spanish>
 		<Polish>[ICON_BULLET]-%s1 [ICON_GOLD] do utrzymania budynku</Polish>
-		<Russian>[ICON_BULLET]-%s1 [ICON_GOLD] для обслуживания здания</Russian>
+		<Russian>[ICON_BULLET]-%s1 [ICON_GOLD] за техобслуживание здания</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_MAINT_MOD</Tag>
@@ -818,7 +833,7 @@
 		<German>[ICON_BULLET]%D1_Mod%% [LINK=CONCEPT_MAINTENANCE]Unterhalt[\LINK]</German>
 		<Italian>[ICON_BULLET]%D1_Mod%% di [LINK=CONCEPT_MAINTENANCE]mantenimento[\LINK]</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod%% al [LINK=CONCEPT_MAINTENANCE]mantenimiento[\LINK]</Spanish>
-		<Russian>[ICON_BULLET]%D1_Mod%% [LINK=CONCEPT_MAINTENANCE]Обслуживание[\LINK]</Russian>
+		<Russian>[ICON_BULLET]%D1_Mod%% [LINK=CONCEPT_MAINTENANCE]Техобслуживание[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_MAX_POPULATION_ALLOWED</Tag>

@@ -9708,12 +9708,13 @@
 		<German>Bisherige Spieldauer</German>
 		<Italian>Tempo di gioco:</Italian> <!-- info screen unit and building tab -->
 		<Spanish>Tiempo jugado</Spanish>
+		<Russian>Времени наиграно</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INSIDIOUSNESS</Tag>
 		<English>[ICON_BULLET]Insidiousness (Ability to Evade Investigation): %s1_Amount%%</English>
 		<French>[ICON_BULLET]Insidiosité (Habileté à échapper à l'investigation): %s1_Amount%%</French>
-		<Russian>[ICON_BULLET]Беззаконие (Навык уклонения от сыщиков): %s1_Amount%%</Russian>
+		<Russian>[ICON_BULLET]Изворотливость (способность избегать розыска): %s1_Amount%%</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_AIRBOMB</Tag>
@@ -9722,6 +9723,7 @@
 		<German>Luftbombardierungsmodus</German>
 		<Italian>Bombardamento aereo</Italian>
 		<Spanish>Modo Bombardeo aéreo</Spanish>
+		<Russian>Режим бомбардировки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_AIRBOMB1</Tag>
@@ -9731,7 +9733,7 @@
 		<Italian>Bombarda difese</Italian>
 		<Spanish>Bombardear defensas</Spanish>
 		<Polish>Bombardowanie umocnień</Polish>
-		<Russian>Óêðåïëåíèÿ</Russian>
+		<Russian>Укрепления</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_AIRBOMB1_HELP</Tag>
@@ -9741,7 +9743,7 @@
 		<Italian>[NEWLINE]Consente di colpire caselle con miglioramenti o danneggiare difese cittadine.</Italian>
 		<Spanish>"Bombardear defensas" te permite bombardear las mejoras de las casillas, o reducir el porcentaje de defensa de una ciudad.</Spanish>
 		<Polish>Bombardowanie umocnień pozwala bombardować pola z udoskonaleniami lub osłabiać obronę miasta.</Polish>
-		<Russian>Ïðè áîìáàðäèðîâêå óêðåïëåíèé åñòü øàíñ ðàçðóøèòü ãîðîäñêèå îáúåêòû èëè óìåíüøèòü ïðîöåíòíûé ïîêàçàòåëü çàùèòû ãîðîäà.</Russian>
+		<Russian>Атаковать улучшения участка или защиту города.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_AIRBOMB2</Tag>
@@ -9751,7 +9753,7 @@
 		<Italian>Bombarda edifici</Italian>
 		<Spanish>Bombardear edificios</Spanish>
 		<Polish>Bombardowanie budynków</Polish>
-		<Russian>Çäàíèÿ</Russian>
+		<Russian>Здания</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_AIRBOMB2_HELP</Tag>
