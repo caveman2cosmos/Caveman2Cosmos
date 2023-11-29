@@ -487,7 +487,6 @@ void CvGame::onFinalInitialized(const bool bNewGame)
 	PROFILE("CvGame::onFinalInitialized");
 	FAssert(!m_bFinalInitialized);
 	OutputDebugString("onFinalInitialized: Start\n");
-	averageHandicaps();
 
 	// Game has been initialized fully when reaching this point.
 	m_bFinalInitialized = true;
@@ -499,6 +498,10 @@ void CvGame::onFinalInitialized(const bool bNewGame)
 
 		gDLL->getInterfaceIFace()->clearSelectionList();
 		gDLL->getInterfaceIFace()->clearSelectedCities();
+
+		// Loading multiplayer games can change human status of players.
+		//	so as good a place as any to refresh game handicap here.
+		averageHandicaps();
 	}
 
 	for (int iI = 0; iI < MAX_TEAMS; iI++)
@@ -1221,7 +1224,12 @@ void CvGame::assignStartingPlots(const bool bScenario, const bool bMapScript)
 	PROFILE_FUNC();
 	gDLL->callUpdater(); // allow window updates during launch
 
-	if (!bScenario && !bMapScript)
+	if (bScenario)
+	{
+		// Earliest place identified where human players have been defined with handicaps for scenarios.
+		averageHandicaps();
+	}
+	else if (!bMapScript)
 	{
 		// Python override - Some mapscripts overide
 		bool bAssignStartingPlots = false;
@@ -1232,6 +1240,7 @@ void CvGame::assignStartingPlots(const bool bScenario, const bool bMapScript)
 			return;
 		}
 	}
+
 	std::vector<CvPlayerAI*> alivePlayers;
 	{
 		bool bAllDone = true;
