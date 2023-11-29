@@ -1396,7 +1396,7 @@ def isSinglePlotIsland(pPlot):
 	while iX < iPlotX + 2:
 		iY = iPlotY - 1
 		while iY < iPlotY + 2:
-			if (iX != iPlotX or iY != iPlotY) and not MAP.plot(iX, iY).isWater():
+			if (iX != iPlotX or iY != iPlotY) and MAP.plot(iX, iY) and not MAP.plot(iX, iY).isWater():
 				return False
 			iY += 1
 		iX += 1
