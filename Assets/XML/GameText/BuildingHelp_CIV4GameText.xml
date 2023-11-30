@@ -371,6 +371,7 @@
 		<German>[ICON_BULLET]%D1_Mod%% Verteidigung gegen Spionage</German>
 		<Italian>[ICON_BULLET]%D1_Mod%% in difesa contro lo spionaggio</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod%% a la defensa contra el espionaje</Spanish>
+		<Russian>[ICON_BULLET]%D1_Mod%% защиты от шпионажа</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_EXPANDS_WORKABLE_RADIUS</Tag>
@@ -380,7 +381,7 @@
 		<Italian>[ICON_BULLET]Espande il raggio lavorabile della città a %d1</Italian>
 		<Spanish>[ICON_BULLET]Aumenta el radio de acción de la ciudad a %d1</Spanish>
 		<Polish>[ICON_BULLET]Rozszerza zasięg miasta o %d1</Polish>
-		<Russian>[ICON_BULLET]Ðàñøèðÿåò Îñóùåñòâèìûé Ðàäèóñ Ãîðîäà ê %d1</Russian>
+		<Russian>[ICON_BULLET]Расширяет рабочий радиус города до %d1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_FLANK_SUPPORT_PERCENT_MODIFIER</Tag>
@@ -388,7 +389,7 @@
 		<French>[ICON_BULLET]+%d1_Amount%% de Puissance en soutien, pour les unités de contournement participant à la défense de la ville.</French>
 		<Italian>[ICON_BULLET]+%d1_Amount%% di Supporto ad ogni unità dei fianchi che partecipa alla difesa cittadina.</Italian>
 		<Polish>[ICON_BULLET]+%d1_Amount%% do Siły Wspomagania z jakiejkolwiek jednostki Skrzydłowej broniącej miasta.</Polish>
-		<Russian>[ICON_BULLET]+%d1_Amount%% к фланговой поддержке любому отряду, участвующему в обороне города.</Russian>
+		<Russian>[ICON_BULLET]+%d1_Amount%% к силе от каждого подразделения фланговой поддержки, участвующего в обороне города.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_FOREIGN_TRADE_ROUTE_MOD</Tag>
@@ -397,6 +398,7 @@
 		<German>[ICON_BULLET]%D1_Mod%% Gewinn auf interkontinentalen Außenhandelswegen</German>
 		<Italian>[ICON_BULLET]%D1_Mod%% al rendimento delle rotte commerciali straniere</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod%% al rendimiento de las rutas comerciales internacionales</Spanish>
+		<Russian>[ICON_BULLET]%D1_Mod%% доходности иностранного торгового пути</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_FREE_IN_AREA</Tag>
@@ -405,19 +407,20 @@
 		<Italian>Fornisce un [COLOR_BUILDING_TEXT][LINK=%s1_BuildingType]%s2_BuildingName[\LINK][COLOR_REVERT] gratuito in tutte le città sullo stesso continente.</Italian>
 		<Spanish>[ICON_BULLET]Proporciona [NUM1:un:una:unos:unas] [COLOR_BUILDING_TEXT][LINK=%s1_BuildingType]%s2_BuildingName[\LINK][COLOR_REVERT] gratis en todas las ciudades del mismo continente</Spanish>
 		<Polish>[ICON_BULLET]Dostarcza darmowy [COLOR_BUILDING_TEXT][LINK=%s1_BuildingType]%s2_BuildingName[\LINK][COLOR_REVERT] w każdym mieście na tym samym kontynencie.</Polish>
-		<Russian>Дает бесплатно [COLOR_BUILDING_TEXT][LINK=%s1_BuildingType]%s2_BuildingName[\LINK][COLOR_REVERT] в каждом городе на одном материке.</Russian>
+		<Russian>Бесплатно дает [COLOR_BUILDING_TEXT][LINK=%s1_BuildingType]%s2_BuildingName[\LINK][COLOR_REVERT] каждому городу на этом материке.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_FREE_PROMO_CONDITION</Tag>
 		<English>[NEWLINE][ICON_BULLET]Free [COLOR_CYAN][LINK=%s1]%s2[\LINK][COLOR_REVERT] promotion for[SPACE]</English>
 		<Italian>[NEWLINE][ICON_BULLET]Promozione gratuita [COLOR_CYAN][LINK=%s1]%s2[\LINK][COLOR_REVERT] per ogni nuova[NEWLINE][ICON_BULLET]</Italian>
 		<German>[NEWLINE][ICON_BULLET]freie Beförderung [COLOR_HIGHLIGHT_TEXT][LINK=%s1]%s2[\LINK][COLOR_REVERT]</German>
-		<Russian>[ICON_BULLET]Äàåò îòðÿäó %s1_Promotion åñëè âûïîëíåíû âñå íóæíûå òðåáîâàíèÿ.</Russian>
+		<Russian>[NEWLINE][ICON_BULLET]Бесплатная квалификация "[COLOR_CYAN][LINK=%s1]%s2[\LINK][COLOR_REVERT]" для[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_FREE_PROMO_CONDITION_ADDON</Tag>
 		<English>[SPACE]new units that are[SPACE]</English>
 		<Italian>[SPACE]</Italian>
+		<Russian>[SPACE]новые подразделения, которые[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_FREE_SPECIALISTS</Tag>
@@ -426,6 +429,7 @@
 		<German>[ICON_BULLET]%D1_Change freie Spezialisten</German>
 		<Italian>[ICON_BULLET]%D1_Change specialisti gratuiti</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change especialistas gratis</Spanish>
+		<Russian>[ICON_BULLET]%D1_Change [NUM1:специалиста:специалистов] бесплатно</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_FREE_SPECIALISTS_ALL_CITIES</Tag>
@@ -434,6 +438,7 @@
 		<German>[ICON_BULLET]%D1_Change freie Spezialisten in allen Städten</German>
 		<Italian>[ICON_BULLET]%D1_Change specialisti gratuiti in tutte le città</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change especialistas gratis en todas las ciudades</Spanish>
+		<Russian>[ICON_BULLET]%D1_Change [NUM1:специалиста:специалистов] бесплатно во всех городах</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_FREE_SPECIALISTS_CONT</Tag>
@@ -442,6 +447,7 @@
 		<German>[ICON_BULLET]%D1_Change freie(n) Spezialisten in allen Städten dieses Kontinents</German>
 		<Italian>[ICON_BULLET]%D1_Change specialisti gratuiti in tutte le città di questo continente.</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change especialistas gratis en todas las ciudades de este continente</Spanish>
+		<Russian>[ICON_BULLET]%D1_Change [NUM1:специалиста:специалистов] бесплатно во всех городах на этом континете</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_FREE_SPECIAL_TECH</Tag>
@@ -451,7 +457,7 @@
 		<Italian>[ICON_BULLET][COLOR_BUILDING_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT] gratis</Italian>
 		<Spanish>[ICON_BULLET][COLOR_BUILDING_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT] gratis</Spanish>
 		<Polish>[ICON_BULLET]Darmowy [COLOR_BUILDING_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</Polish>
-		<Russian>[ICON_BULLET]Áåñïëàòíî [COLOR_BUILDING_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</Russian>
+		<Russian>[ICON_BULLET]Техология [COLOR_BUILDING_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT] бесплатно</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_FREE_START_ERA</Tag>
@@ -460,6 +466,7 @@
 		<German>[ICON_BULLET]frei verfügbar im Zeitalter %s1_EraName und später</German>
 		<Italian>[ICON_BULLET]Disponibile gratuitamente se si inizia in %s1_EraName o più tardi</Italian>
 		<Spanish>[ICON_BULLET]Disponible gratis a partir [NUM1:del:de la:de los:de las] %s1_EraName e inicios posteriores</Spanish>
+		<Russian>[ICON_BULLET]Доступно беслплатно при старте в эпохе "%s1_EraName" или позднее</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_FREE_TECH</Tag>
@@ -468,6 +475,7 @@
 		<German>[ICON_BULLET]1 freie Technologie</German>
 		<Italian>[ICON_BULLET]1 tecnologia gratuita</Italian>
 		<Spanish>[ICON_BULLET]1 tecnología gratis</Spanish>
+		<Russian>[ICON_BULLET]1 бесплатная технология</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_FREE_TECHS</Tag>
@@ -476,12 +484,13 @@
 		<German>[ICON_BULLET]%d1_Num freie Technologien</German>
 		<Italian>[ICON_BULLET]%d1_Num tecnologie gratuite</Italian>
 		<Spanish>[ICON_BULLET]%d1_Num tecnologías gratis</Spanish>
+		<Russian>[ICON_BULLET]Бесплатные технологии: %d1_Num</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_FREE_TRAIT</Tag>
 		<English>[ICON_BULLET]As long as this building is active, its owning player gains the %s1_Trait Trait.</English>
 		<French>[ICON_BULLET]Tant que ce bâtiment est actif, le joueur le possédant gagne le trait %s1_Trait.</French>
-		<Russian>[ICON_BULLET]Пока это здание активно, его владелец сохраняет черту %s1_Trait.</Russian>
+		<Russian>[ICON_BULLET]Пока это здание активно, владеющий им игрок сохраняет черту %s1_Trait.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_FREE_XP</Tag>
@@ -491,7 +500,7 @@
 		<Italian>[ICON_BULLET]Punti esperienza %D2_Change a tutte le nuove unità di tipo: %s1:2_UnitName</Italian><!--Aerial CT trait in the pedia-->
 		<Spanish>[ICON_BULLET]Cada %s1_UnitName [NUM1:nuevo:nueva:nuevos:nuevas] [NUM1:recibe:recibe:reciben:reciben] %D2_Change [NUM1:punto de experiencia:puntos de experiencia]</Spanish>
 		<Polish>[ICON_BULLET]New %s1_UnitName otrzymuje %D2_Change punkty XP</Polish>
-		<Russian>[ICON_BULLET]%D2_Change îïûòà (íîâûå %s1_UnitName)</Russian>
+		<Russian>[ICON_BULLET]Новые подразделения типа "%s1_UnitName" получат очки опыта в количестве: %D2_Change</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_FREE_XP_ALL_CITIES</Tag>
@@ -500,6 +509,7 @@
 		<German>[ICON_BULLET]Neue Einheiten erhalten %D1_Change Erfahrungspunkte in allen Städten</German>
 		<Italian>[ICON_BULLET]Le nuove unità %D1_Change ricevono punti esperienza in tutte le città</Italian>
 		<Spanish>[ICON_BULLET]Las nuevas unidades reciben %D1_Change [NUM1:punto de experiencia:puntos de experiencia] en todas las ciudades</Spanish>
+		<Russian>[ICON_BULLET]Новые подразделения в любом городе получат очки опыта в количестве: %D1_Change</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_FREE_XP_UNITS</Tag>
@@ -508,6 +518,7 @@
 		<German>[ICON_BULLET]Neue Einheiten erhalten %D1_Change Erfahrungspunkte</German>
 		<Italian>[ICON_BULLET]Le nuove unità ricevono %D1_Change [NUM1:punto esperienza:punti esperienza]</Italian>
 		<Spanish>[ICON_BULLET]Las nuevas unidades reciben %D1_Change [NUM1:punto de experiencia:puntos de experiencia]</Spanish>
+		<Russian>[ICON_BULLET]Новые подразделения получат очки опыта в количестве: %D1_Change</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_FROM_ALL_REL_BUILDINGS</Tag>
@@ -516,6 +527,7 @@
 		<German>[SPACE]von allen %F1_RelIcon-Gebäuden</German>
 		<Italian>[SPACE]da tutti gli edifici %F1_RelIcon</Italian>
 		<Spanish>[SPACE]de todos los edificios del %F1_RelIcon</Spanish>
+		<Russian>[SPACE]от всех зданий религии: %F1_RelIcon</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_FROM_SPECIALIST</Tag>
@@ -525,7 +537,7 @@
 		<Italian>[SPACE]da tutti i [COLOR_UNIT_TEXT][LINK=%s1_SpclstType]%s2:2_SpclstName[\LINK][COLOR_REVERT] locali</Italian>
 		<Spanish>[SPACE]por Local [COLOR_UNIT_TEXT][LINK=%s1_SpclstType]%s2_SpclstName[\LINK][COLOR_REVERT]</Spanish>
 		<Polish>[SPACE]z Lokalnych [COLOR_UNIT_TEXT][LINK=%s1_SpclstType]%s2_SpclstName[\LINK][COLOR_REVERT]</Polish>
-		<Russian>[SPACE]îò ìåñòíîãî [COLOR_UNIT_TEXT][LINK=%s1_SpclstType]%s2_SpclstName[\LINK][COLOR_REVERT]</Russian>
+		<Russian>[SPACE]от местного [COLOR_UNIT_TEXT][LINK=%s1_SpclstType]%s2_SpclstName[\LINK][COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_FRONT_SUPPORT_PERCENT_MODIFIER</Tag>
@@ -533,7 +545,7 @@
 		<French>[ICON_BULLET]+%d1_Amount%% de Puissance en soutien, des unités de Combat rapproché participant à la défense de la ville.</French>
 		<Italian>[ICON_BULLET]+%d1_Amount%% di Supporto ad ogni unità del fronte che partecipa alla difesa cittadina.</Italian>
 		<Polish>[ICON_BULLET]+%d1_Amount%% do Siły Wspomagania z jakiejkolwiek jednostki broniącej miasta.</Polish>
-		<Russian>[ICON_BULLET]+%d1_Amount%% íàäáàâêè ê Ñèëå ëþáîìó èç ïåðâûõ çàùèòíèêîâ ïðè îáîðîíå ãîðîäà.</Russian>
+		<Russian>[ICON_BULLET]+%d1_Amount%% к силе от каждого подразделения передовой поддержки, участвующего в обороне города.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_FULL_HEAL_UNITS</Tag>
@@ -543,7 +555,7 @@
 		<Italian>[ICON_BULLET]Ogni turno, %d1 unità verrà completamente guarita.</Italian>
 		<Spanish>[ICON_BULLET]Cada turno se curará completamente a %d1 [NUM1:unidad:unidades]</Spanish>
 		<Polish>[ICON_BULLET]W każdej turze, %d1 jednostka\ki zostaną uleczone w pełni.</Polish>
-		<Russian>[ICON_BULLET]Êàæäûé õîä, %d1 îòðÿä(û) áóäåò èçëå÷åí äî ïîëíîãî çäîðîâüÿ.</Russian>
+		<Russian>[ICON_BULLET]Каждый ход, %d1 подразделение(я) восстановят здоровье полностью.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_GENERAL_RATE_MOD</Tag>
@@ -575,7 +587,7 @@
 		<English>[NEWLINE][ICON_BULLET]National %d1%% cost modifier:[SPACE]</English>
 		<German>[NEWLINE][ICON_BULLET]global %d1%% Kosten für:[SPACE]</German>
 		<Italian>[NEWLINE][ICON_BULLET]Modificatore costo nazionale %d1%% per:[SPACE]</Italian>
-		<Russian>[NEWLINE][ICON_BULLET]Изменение цены %d1%% в стране:[SPACE]</Russian>
+		<Russian>[NEWLINE][ICON_BULLET]Общегосударственное изменение цены на %d1%%:[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_GLOBAL_MAINT</Tag>
@@ -584,7 +596,7 @@
 		<Italian>[ICON_BULLET]Nessun costo di mantenimento, in nessuna città</Italian>
 		<Spanish>[ICON_BULLET]Sin coste de mantenimiento en ninguna ciudad</Spanish>
 		<Polish>[ICON_BULLET]Brak kosztów utrzymania we wszystkich miastach</Polish>
-		<Russian>[ICON_BULLET]Бесплатное техобслуживание во всех городах</Russian>
+		<Russian>[ICON_BULLET]Бесплатное содержание во всех городах</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_GLOBAL_MAINT_MOD</Tag>
@@ -593,7 +605,7 @@
 		<Italian>[ICON_BULLET]%D1_MOD%% costi di mantenimento in tutte le città</Italian>
 		<Spanish>[ICON_BULLET]%D1_MOD%% al coste de mantenimiento en todas las ciudades</Spanish>
 		<Polish>[ICON_BULLET]%D1_MOD%% do kosztów utrzymania we wszystkich miastach</Polish>
-		<Russian>[ICON_BULLET]%D1_MOD%% цены техобслуживания во всех городах</Russian>
+		<Russian>[ICON_BULLET]%D1_MOD%% цены содержания во всех городах</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_GLOBAL_POP</Tag>
@@ -602,7 +614,7 @@
 		<German>[ICON_BULLET]%D1_Change Bevölkerung in allen Städten</German>
 		<Italian>[ICON_BULLET]%D1_Change di popolazione in tutte le città</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change de población en todas las ciudades</Spanish>
-		<Russian>[ICON_BULLET]%D1_Change население во всех городах</Russian>
+		<Russian>[ICON_BULLET]%D1_Change населения во всех городах</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_GOLDENAGE_MOD</Tag>
@@ -780,7 +792,7 @@
 		<English>[ICON_BULLET]Increases local Insidiousness by %s1_amount%% (Helps Criminals avoid discovery)</English>
 		<French>[ICON_BULLET]Donne à toutes les unités criminelles produites dans la ville %s1_amount%% d'Incidiosité.</French>
 		<German>[ICON_BULLET]erhöht die Gesetzlosigkeit der Bevölkerung um %s1_amount%% (hilft Kriminellen ihrer Entdeckung zu entgehen)</German>
-		<Russian>[ICON_BULLET]Увеличивает здешнюю изворотливость на %s1_amount%% (помогает преступникам избежать разоблачения)</Russian>
+		<Russian>[ICON_BULLET]Увеличивает местную изворотливость на %s1_amount%% (помогает преступникам избежать разоблачения)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_INVESTIGATION</Tag>
@@ -824,7 +836,7 @@
 		<Italian>[ICON_BULLET]-%s1 [ICON_GOLD] dei costi mantenimento dell'edificio</Italian>
 		<Spanish>[ICON_BULLET]-%s1[ICON_GOLD] para mantenimiento del edificio</Spanish>
 		<Polish>[ICON_BULLET]-%s1 [ICON_GOLD] do utrzymania budynku</Polish>
-		<Russian>[ICON_BULLET]-%s1 [ICON_GOLD] за техобслуживание здания</Russian>
+		<Russian>[ICON_BULLET]-%s1 [ICON_GOLD] за содержание здания</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_MAINT_MOD</Tag>
@@ -833,7 +845,7 @@
 		<German>[ICON_BULLET]%D1_Mod%% [LINK=CONCEPT_MAINTENANCE]Unterhalt[\LINK]</German>
 		<Italian>[ICON_BULLET]%D1_Mod%% di [LINK=CONCEPT_MAINTENANCE]mantenimento[\LINK]</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod%% al [LINK=CONCEPT_MAINTENANCE]mantenimiento[\LINK]</Spanish>
-		<Russian>[ICON_BULLET]%D1_Mod%% [LINK=CONCEPT_MAINTENANCE]Техобслуживание[\LINK]</Russian>
+		<Russian>[ICON_BULLET]%D1_Mod%% [LINK=CONCEPT_MAINTENANCE]Содержание[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_MAX_POPULATION_ALLOWED</Tag>
@@ -1486,7 +1498,7 @@
 		<German>[ICON_BULLET]%D1_Mod%% Erträge durch Handelswege</German>
 		<Italian>[ICON_BULLET]%D1_Mod%% al rendimento della rotta commerciale</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod%% al rendimiento de la ruta comercial</Spanish>
-		<Russian>[ICON_BULLET]%D1_Mod%% доходность торгового пути</Russian>
+		<Russian>[ICON_BULLET]%D1_Mod%% доходности торгового пути</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_TURN_CITIZENS_INTO_NO_BULLET</Tag>
