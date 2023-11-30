@@ -3892,6 +3892,7 @@ public:
 	int getDamagePrereq() const;
 	int getBarbarianUnitProb() const;
 	int getMinBarbarians() const;
+	int getMaxBarbarians() const { return m_iMaxBarbarians; }
 	int getGoodyUnit() const;
 	int getBarbarianUnit() const;
 	int getEraType() const;
@@ -3906,6 +3907,7 @@ public:
 
 	const char* getSound() const;
 
+	void getDataMembers(CvInfoUtil& util);
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(const CvGoodyInfo* pClassInfo);
 	void getCheckSum(uint32_t& iSum) const;
@@ -3925,6 +3927,7 @@ protected:
 	int m_iDamagePrereq;
 	int m_iBarbarianUnitProb;
 	int m_iMinBarbarians;
+	int m_iMaxBarbarians;
 	int m_iGoodyUnit;
 	int m_iBarbarianUnit;
 	int m_iEraType;
