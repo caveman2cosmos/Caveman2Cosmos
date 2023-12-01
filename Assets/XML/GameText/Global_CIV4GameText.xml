@@ -8598,6 +8598,7 @@
 		<German>Punktestand</German>
 		<Italian>Punteggio</Italian> <!-- info screen graph tab -->
 		<Spanish>Puntuación</Spanish>
+		<Russian>Счет</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAME_WON</Tag>
@@ -22333,6 +22334,7 @@
 		<German>Punkte</German>
 		<Italian>Punti</Italian>
 		<Spanish>Puntuación</Spanish>
+		<Russian>Счет</Russian>
 	</TEXT>
 		<TEXT>
 		<Tag>TXT_KEY_REPLAY_SCREEN_SPEED</Tag>
@@ -29232,7 +29234,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Wynik</Polish>
-		<Russian>Î÷êè</Russian>
+		<Russian>Счет</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_BUILDING</Tag>

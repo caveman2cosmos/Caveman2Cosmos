@@ -499,7 +499,7 @@
 		<German>Uhr</German>
 		<Italian>Zona orologio</Italian>
 		<Spanish>Reloj</Spanish>
-		<Russian>×àñû</Russian>
+		<Russian>Часы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPTTAB_SCORES</Tag>
@@ -508,7 +508,7 @@
 		<German>Punkteanzeige</German>
 		<Italian>Pannello punteggio</Italian>
 		<Spanish>Puntuación</Spanish>
-		<Russian>Òàáëèöà ðåçóëüòàòîâ</Russian>
+		<Russian>Таблица результатов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPTTAB_SYSTEM</Tag>
