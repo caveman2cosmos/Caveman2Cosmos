@@ -395,12 +395,8 @@
 		<iDefineIntVal>20</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>CONSCRIPT_MIN_CITY_POPULATION</DefineName>
-		<iDefineIntVal>8</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>CONSCRIPT_POPULATION_PER_COST</DefineName>
-		<iDefineIntVal>60</iDefineIntVal>
+		<DefineName>CONSCRIPT_POPULATION</DefineName>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>CONSCRIPT_MIN_CULTURE_PERCENT</DefineName>
