@@ -1982,7 +1982,7 @@ void CvDLLWidgetData::parseConscriptHelp(CvWidgetDataStruct &widgetDataStruct, C
 	PROFILE_EXTRA_FUNC();
 	CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
 
-	if (pHeadSelectedCity != NULL)
+	if (pHeadSelectedCity)
 	{
 		if (pHeadSelectedCity->getConscriptUnit() != NO_UNIT)
 		{
@@ -1990,14 +1990,12 @@ void CvDLLWidgetData::parseConscriptHelp(CvWidgetDataStruct &widgetDataStruct, C
 			szTemp.Format(SETCOLR L"%s" ENDCOLR, TEXT_COLOR("COLOR_UNIT_TEXT"), GC.getUnitInfo(pHeadSelectedCity->getConscriptUnit()).getDescription());
 			szBuffer.assign(szTemp);
 
-// BUG - Starting Experience - start
 			if (getBugOptionBOOL("MiscHover__ConscriptUnit", true, "BUG_CONSCRIPT_UNIT_HOVER"))
 			{
 				GAMETEXT.setBasicUnitHelpWithCity(szBuffer, pHeadSelectedCity->getConscriptUnit(), false, pHeadSelectedCity, true);
 			}
-// BUG - Starting Experience - end
 
-			int iConscriptPopulation = pHeadSelectedCity->getConscriptPopulation();
+			const int iConscriptPopulation = pHeadSelectedCity->getConscriptPopulation();
 
 			if (iConscriptPopulation > 0)
 			{
@@ -2013,12 +2011,10 @@ void CvDLLWidgetData::parseConscriptHelp(CvWidgetDataStruct &widgetDataStruct, C
 				szBuffer.append(gDLL->getText("TXT_KEY_MISC_ANGER_TURNS", GC.getCONSCRIPT_POP_ANGER(), (iConscriptAngerLength + pHeadSelectedCity->getConscriptAngerTimer())));
 			}
 
-			const int iMinCityPopulation = pHeadSelectedCity->conscriptMinCityPopulation();
-
-			if (pHeadSelectedCity->getPopulation() < iMinCityPopulation)
+			if (pHeadSelectedCity->getPopulation() <= iConscriptPopulation)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_MISC_MIN_CITY_POP", iMinCityPopulation));
+				szBuffer.append(gDLL->getText("TXT_KEY_MISC_MIN_CITY_POP", iConscriptPopulation + 1));
 			}
 
 			const int iMinCulturePercent = GC.getCONSCRIPT_MIN_CULTURE_PERCENT();

@@ -286,7 +286,7 @@ protected:
 	bool m_bRequestedUnit;
 	bool m_bRequestedBuilding;
 
-	void AI_doDraft(bool bForce = false);
+	void AI_doDraft();
 	void AI_doHurry(bool bForce = false);
 	void AI_doEmphasize();
 	int AI_getHappyFromHurry(HurryTypes eHurry) const;

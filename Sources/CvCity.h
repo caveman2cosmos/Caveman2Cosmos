@@ -276,7 +276,6 @@ public:
 	UnitTypes getConscriptUnit() const;
 	CvUnit* initConscriptedUnit();
 	int getConscriptPopulation() const;
-	int conscriptMinCityPopulation() const;
 	int flatConscriptAngerLength() const;
 	bool canConscript(bool bOnCapture = false) const;
 	void conscript(bool bOnCapture = false);

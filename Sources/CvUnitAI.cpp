@@ -179,7 +179,10 @@ bool CvUnitAI::AI_update()
 {
 	PROFILE_FUNC();
 
-	logBBAI("AI_Update for unit %d of owner %d\n", m_iID, m_eOwner);
+	if (gUnitLogLevel > 0)
+	{
+		logBBAI("AI_Update for unit %d of owner %d\n", m_iID, m_eOwner);
+	}
 
 #ifdef _DEBUG
 	getGroup()->validateLocations(true);
