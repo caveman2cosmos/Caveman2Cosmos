@@ -252,6 +252,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_DAMAGE_ATTACKER_MIDDLE</Tag>
 		<English>, %s1_UnitCombat</English>
+		<Russian>, %s1_UnitCombat</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_DAMAGE_ATTACKER_START</Tag>
@@ -259,7 +260,7 @@
 		<French>[ICON_BULLET]Peut endommager les unités de type %s1_UnitCombat</French>
 		<Italian>[ICON_BULLET]Può danneggiare %s1_UnitCombat</Italian>
 		<Polish>[ICON_BULLET]Może zranić %s1_UnitCombat</Polish>
-		<Russian>[ICON_BULLET]Может нанести урон %s1_UnitCombat</Russian>
+		<Russian>[ICON_BULLET]Может нанести урон подразделениям типа "%s1_UnitCombat"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_DECREASES_LINE_OF_SIGHT</Tag>
@@ -269,7 +270,7 @@
 		<Italian>[ICON_BULLET]Diminuisce il campo visivo della città.</Italian>
 		<Spanish>[ICON_BULLET]Disminuye la línea de visión de la ciudad</Spanish>
 		<Polish>[ICON_BULLET]Zmniejsza zasięg miasta</Polish>
-		<Russian>[ICON_BULLET]Уменьшает угол обзора города</Russian>
+		<Russian>[ICON_BULLET]Уменьшает дальность обзора города</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_DEFENSE_MOD</Tag>
@@ -279,7 +280,7 @@
 		<Italian>[ICON_BULLET]Aumento del [COLOR_GREEN]%d1_Mod%% della difesa[COLOR_REVERT] della città (eccetto contro unità con esplosivi)</Italian>
 		<Spanish>[ICON_BULLET]%d1_Mod%% a la defensa (excepto contra unidades con explosivos)</Spanish>
 		<Polish>[ICON_BULLET]%d1_Mod%% do obrony (nie działa przeciwko jednostkom z eksplodującymi pociskami)</Polish>
-		<Russian>[ICON_BULLET]%d1_Mod%% ê îáîðîíå</Russian>
+		<Russian>[ICON_BULLET]%d1_Mod%% защиты (но не против взрывчатых веществ)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_DEFENSE_MOD_ALL_CITIES</Tag>
@@ -288,6 +289,7 @@
 		<German>[ICON_BULLET]%d1_Mod%% Verteidigung in allen Städten</German>
 		<Italian>[ICON_BULLET]%d1_Mod%% alla difesa in tutte le città</Italian>
 		<Spanish>[ICON_BULLET]%d1_Mod%% a la defensa en todas las ciudades</Spanish>
+		<Russian>[ICON_BULLET]%d1_Mod%% защиты во всех городах</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_DEFENSE_RECOVERY_SPEED_MODIFIER_NEGATIVE</Tag>
@@ -313,7 +315,7 @@
 		<Italian>[ICON_BULLET]Attiva le %s1 Elezioni globali</Italian>
 		<Spanish>[ICON_BULLET]Activa el sufragio mundial (%s1).</Spanish>
 		<Polish>[ICON_BULLET]Umożliwia %s1 wybory światowe</Polish>
-		<Russian>[ICON_BULLET]Ïðèâîäèò ê âûáîðàì â %s1</Russian>
+		<Russian>[ICON_BULLET]Запускает %s1 глобальных выборов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_DISEASE_TYPE</Tag>
@@ -321,6 +323,7 @@
 		<French>[ICON_BULLET]Cette maladie est équivalente à l'affection: %s1_Affliction des unités.</French>
 		<Italian>[ICON_BULLET]Questa malattia equivale per l'unità all'afflizione %s1_Affliction.</Italian>
 		<Polish>[ICON_BULLET]Choroba która działa tak samo jak dolegliwość jednostki: %s1_Affliction</Polish>
+		<Russian>[ICON_BULLET]Эта болезнь эквивалентна недугу "%s1_Affliction" у подразделения.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_DISTANCE_MAINT</Tag>
@@ -329,7 +332,7 @@
 		<Italian>[ICON_BULLET]Nessun costo di mantenimento derivante dalla distanza dal palazzo</Italian>
 		<Spanish>[ICON_BULLET]Sin coste de mantenimiento por distancia con la capital</Spanish>
 		<Polish>[ICON_BULLET]Brak kosztów utrzymania za odległość od pałacu</Polish>
-		<Russian>[ICON_BULLET]Íåò çàòðàòû íà îáñëóæèâàíèå îò ðàññòîÿíèÿ äî äâîðöà</Russian>
+		<Russian>[ICON_BULLET]Расстояние до дворца не влияет на цену содержания</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_DISTANCE_MAINT_MOD</Tag>
@@ -338,7 +341,7 @@
 		<Italian>[ICON_BULLET]%D1_Mod%% costi di mantenimento derivanti dalla distanza dal palazzo</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod%% al coste de mantenimiento por distancia con la capital</Spanish>
 		<Polish>[ICON_BULLET]%D1_Mod%% do kosztów utrzymania za odległość od pałacu</Polish>
-		<Russian>[ICON_BULLET]%D1_Mod%% çàòðàòû íà îáñëóæèâàíèå îò ðàññòîÿíèÿ äî äâîðöà</Russian>
+		<Russian>[ICON_BULLET]%D1_Mod%% цены содержания из-за расстояния до дворца</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_ELECTION_ELIGIBILITY</Tag>
@@ -347,6 +350,7 @@
 		<German>[ICON_BULLET]Garantiert Berechtigung für diplomatische Wahlen</German>
 		<Italian>[ICON_BULLET]Garantisce l'idoneità per i voti diplomatici</Italian>
 		<Spanish>[ICON_BULLET]Garantiza la validez de los votos diplomáticos</Spanish>
+		<Russian>[ICON_BULLET]Гарантирует право на дипломатический голос</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_ENABLES_CIVICS</Tag>
@@ -356,13 +360,14 @@
 		<German>[ICON_BULLET]Ermöglicht alle %s1_Name staatsformen</German>
 		<Italian>[ICON_BULLET]Permette tutte [COLOR_HIGHLIGHT_TEXT]%s1_Name[COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET]Permite todos los principios de [COLOR_HIGHLIGHT_TEXT]%s1_Name[COLOR_REVERT]</Spanish>
+		<Russian>[ICON_BULLET]Окрывает все парадигмы [COLOR_HIGHLIGHT_TEXT]%s1_Name[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_ENEMY_WAR_WEAR</Tag>
 		<English>[ICON_BULLET]Enemies suffer %D1_percent%% War [ICON_UNHAPPY]</English>
 		<French>[ICON_BULLET]Les Ennemis souffrent de %D1_percent%% [ICON_UNHAPPY] lié à la guerre</French>
 		<German>[ICON_BULLET]%D1_percent%% Kriegsmüdigkeit [ICON_UNHAPPY] für alle Gegner</German>
-		<Russian>[ICON_BULLET]%D1_percent%% [ICON_UNHAPPY] всем враждебным цивилизациям из-за войны</Russian>
+		<Russian>[ICON_BULLET]Враги получают %D1_percent%% [ICON_UNHAPPY] из-за войны</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_ESPIONAGE_DEFENSE_MOD</Tag>
