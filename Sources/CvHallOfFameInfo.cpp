@@ -1,3 +1,4 @@
+#include "CvGameCoreDLL.h"
 #include "CvHallOfFameInfo.h"
 #include "FProfiler.h"
 #include "CvReplayInfo.h"

@@ -1,5 +1,5 @@
-#include "CvPythonEnumLoader.h"
 #include "CvGameCoreDLL.h"
+#include "CvPythonEnumLoader.h"
 #include "CvBuildingFilters.h"
 #include "CvBuildingGrouping.h"
 #include "CvBuildingSort.h"

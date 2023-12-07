@@ -15,6 +15,7 @@
 #include "CvXMLLoadUtility.h"
 #include "CheckSum.h"
 #include "CvPropertySource.h"
+#include "CvPropertySolver.h"
 #include "IntExpr.h"
 
 CvPropertySource::CvPropertySource()
