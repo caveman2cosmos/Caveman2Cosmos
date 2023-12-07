@@ -1,4 +1,5 @@
-﻿#include "CvPlayerOptionInfo.h"
+﻿#include "CvGameCoreDLL.h"
+#include "CvPlayerOptionInfo.h"
 
 CvPlayerOptionInfo::CvPlayerOptionInfo() :
 m_bDefault(false)

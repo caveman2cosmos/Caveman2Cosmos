@@ -750,9 +750,6 @@
     <ClCompile Include="CvTraitInfo.cpp">
       <Filter>Source\DataDefinitions</Filter>
     </ClCompile>
-    <ClCompile Include="CvPythonInfoLoader.cpp">
-      <Filter>Source\Infrastructure\Python\Loaders</Filter>
-    </ClCompile>
     <ClCompile Include="CvHallOfFameInfo.cpp">
       <Filter>Source\Base\Infos</Filter>
     </ClCompile>
@@ -1303,9 +1300,6 @@
     </ClInclude>
     <ClInclude Include="CvTraitInfo.h">
       <Filter>Source\DataDefinitions</Filter>
-    </ClInclude>
-    <ClInclude Include="CvPythonInfoLoader.h">
-      <Filter>Source\Infrastructure\Python\Loaders</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

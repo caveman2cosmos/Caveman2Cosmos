@@ -1,3 +1,4 @@
+#include "CvGameCoreDLL.h"
 #include "CvPythonGlobalContextLoader.h"
 #include "CvGameCoreDLL.h"
 #include "CyGlobalContext.h"
@@ -13,6 +14,7 @@
 #include "CyTeam.h"
 #include "CvDiplomacyClasses.h"
 #include "CvPlayerOptionInfo.h"
+#include "CvTraitInfo.h"
 #include <boost/python/overloads.hpp>
 
 

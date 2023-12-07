@@ -7,10 +7,10 @@
 //
 //------------------------------------------------------------------------------------------------
 
+#include "CvGameCoreDLL.h"
 
 #include "FProfiler.h"
 
-#include "CvGameCoreDLL.h"
 #include "CvBonusInfo.h"
 #include "CvBuildingInfo.h"
 #include "CvCity.h"
@@ -22,7 +22,9 @@
 #include "CvPlot.h"
 #include "CvProperties.h"
 #include "CvPropertyManipulators.h"
+#include "CvInfos.h"
 #include "CvTraitInfo.h"
+#include "CvImprovementInfo.h"
 #include "CvTeamAI.h"
 #include "CvUnit.h"
 #include "CyCity.h"
