@@ -1,4 +1,4 @@
-
+#include "CvGameCoreDLL.h"
 #include "FProfiler.h"
 
 #include "CvBonusInfo.h"

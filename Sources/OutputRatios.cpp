@@ -1,3 +1,4 @@
+#include "CvGameCoreDLL.h"
 #include "OutputRatios.h"
 
 #include <algorithm>

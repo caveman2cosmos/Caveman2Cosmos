@@ -15,6 +15,7 @@
 #include "CvBonusInfo.h"
 #include "CvInfos.h"
 #include "CvUnitCombatInfo.h"
+#include "CvTraitInfo.h"
 #include "CvInitCore.h"
 #include "CvMap.h"
 #include "CvPlot.h"

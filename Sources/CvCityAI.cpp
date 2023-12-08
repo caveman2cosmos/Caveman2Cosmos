@@ -1,9 +1,8 @@
 // cityAI.cpp
 
+#include "CvGameCoreDLL.h"
 
 #include "FProfiler.h"
-
-#include "CvGameCoreDLL.h"
 #include "CvArea.h"
 #include "CvBonusInfo.h"
 #include "CvBuildingInfo.h"
@@ -11,6 +10,7 @@
 #include "CvBonusInfo.h"
 #include "CvInfos.h"
 #include "CvUnitCombatInfo.h"
+#include "CvTraitInfo.h"
 #include "CvCityAI.h"
 #include <string>
 #include "CvContractBroker.h"

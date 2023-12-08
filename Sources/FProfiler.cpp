@@ -1,3 +1,4 @@
+#include "CvGameCoreDLL.h"
 #include "FProfiler.h"
 
 #include "CvDLLUtilityIFaceBase.h"

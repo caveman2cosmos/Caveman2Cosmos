@@ -1,5 +1,6 @@
+#include "CvGameCoreDLL.h"
 #include "CvUnitCombatInfo.h"
-
+#include "CvGameAI.h"
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //

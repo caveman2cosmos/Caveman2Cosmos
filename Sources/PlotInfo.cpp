@@ -1,3 +1,4 @@
+#include "CvGameCoreDLL.h"
 #include "PlotInfo.h"
 
 #include <sstream>
