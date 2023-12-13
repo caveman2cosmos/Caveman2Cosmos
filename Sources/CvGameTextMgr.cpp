@@ -26,6 +26,7 @@
 #include "CvGlobals.h"
 #include "CvGameTextMgr.h"
 #include "CvImprovementInfo.h"
+#include "CvHeritageInfo.h"
 #include "CvUnitCombatInfo.h"
 #include "CvInfos.h"
 #include "CvMap.h"
@@ -19078,6 +19079,20 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			}
 		}
 
+		bFirst = true;
+		for (int iI = 0; iI < kUnit.getNumHeritage(); iI++)
+		{
+			const HeritageTypes eTypeX = (HeritageTypes)kUnit.getHeritage(iI);
+
+			if (NO_HERITAGE != eTypeX)
+			{
+				szTempBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_UNITHELP_CAN_CONSTRUCT").c_str());
+				CvWString szBuildingLink = CvWString::format(L"<link=%s>%s</link>", CvWString(GC.getHeritageInfo(eTypeX).getType()).GetCString(), GC.getHeritageInfo(eTypeX).getDescription());
+				setListHelp(szBuffer, szTempBuffer, szBuildingLink.GetCString(), L", ", bFirst);
+				bFirst = false;
+			}
+		}
+
 		//No bad goodies
 		if (kUnit.isNoBadGoodies())
 		{
@@ -23306,7 +23321,11 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 		if (GC.getGame().getActivePlayer() != NO_PLAYER
 		&& getBugOptionBOOL("CityScreen__BuildingDoubleCommerce", true, "BUG_BUILDING_DOUBLE_COMMERCE"))
 		{
-			int iYear = pCity->getBuildingData(eBuilding).iTimeBuilt;
+			int iYear = MIN_INT;
+			if (pCity->hasBuilding(eBuilding))
+			{
+				iYear = pCity->getBuildingData(eBuilding).iTimeBuilt;
+			}
 
 			if (iYear != MIN_INT)
 			{
@@ -23524,6 +23543,94 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_MAP_CATEGORY_PREREQUISITE", GC.getMapCategoryInfo(eMapCategory).getTextKeyWide()));
 		}
+	}
+}
+
+void CvGameTextMgr::setHeritageHelp(CvWStringBuffer &szBuffer, const HeritageTypes eType, CvCity* pCity, const bool bCivilopediaText, const bool bStrategyText, const bool bTechChooserText)
+{
+	PROFILE_FUNC();
+
+	if (NO_HERITAGE == eType)
+	{
+		return;
+	}
+	const PlayerTypes ePlayer = pCity ? pCity->getOwner() : GC.getGame().getActivePlayer();
+	const CvPlayer* player = ePlayer != NO_PLAYER ? &GET_PLAYER(ePlayer) : NULL;
+
+	const CvHeritageInfo& heritage = GC.getHeritageInfo(eType);
+
+	if (!CvWString(heritage.getHelp()).empty())
+	{
+		szBuffer.append(NEWLINE);
+		szBuffer.append(heritage.getHelp());
+	}
+
+	foreach_(const TechCommerceArray& pair, heritage.getTechCommerceChanges100())
+	{
+		bool bFirst = true;
+		for (int iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
+		{
+			if (pair.second[iI] != 0)
+			{
+				if (bFirst)
+				{
+					szBuffer.append(
+						CvWString::format(
+							L"\n%c%s <link=%s>%s</link>: ",
+							gDLL->getSymbolID(BULLET_CHAR), gDLL->getText("TXT_WORD_WITH").GetCString(),
+							CvWString(GC.getTechInfo(pair.first).getType()).GetCString(),
+							GC.getTechInfo(pair.first).getDescription()
+						)
+					);
+					bFirst = false;
+				}
+				else szBuffer.append(L", ");
+
+				CvWString szValue;
+				makeValueString(szValue, pair.second[iI], true);
+				szBuffer.append(CvWString::format(L"%s%c", szValue.GetCString(), GC.getCommerceInfo((CommerceTypes) iI).getChar()));
+			}
+		}
+	}
+
+	{
+		bool bFirst = true;
+		int iCount = 0;
+		for (int iI = 0; iI < GC.getNumUnitInfos(); ++iI)
+		{
+			if (GC.getUnitInfo((UnitTypes)iI).getHasHeritage(eType))
+			{
+				iCount++;
+				if (!bCivilopediaText && (iCount > 5))
+				{
+					szBuffer.append(L", ...");
+					break;
+				}
+				CvWString szFirstBuffer;
+				CvWString szTempBuffer;
+
+				szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_UNITHELP_REQUIRED_TO_BUILD").c_str());
+
+				szTempBuffer.Format( SETCOLR L"<link=%s>%s</link>" ENDCOLR , TEXT_COLOR("COLOR_UNIT_TEXT"), CvWString(GC.getUnitInfo((UnitTypes)iI).getType()).GetCString(), GC.getUnitInfo((UnitTypes)iI).getDescription());
+
+				setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", bFirst);
+				bFirst = false;
+			}
+		}
+	}
+
+	if (heritage.getPropertyManipulators())
+		heritage.getPropertyManipulators()->buildDisplayString(szBuffer);
+
+	if (bStrategyText && !CvWString(heritage.getStrategy()).empty()
+	&& (!player || player->isOption(PLAYEROPTION_ADVISOR_HELP)))
+	{
+		szBuffer.append(SEPARATOR);
+		szBuffer.append(NEWLINE);
+		szBuffer.append(gDLL->getText("TXT_KEY_SIDS_TIPS"));
+		szBuffer.append(L'\"');
+		szBuffer.append(heritage.getStrategy());
+		szBuffer.append(L'\"');
 	}
 }
 
@@ -31471,12 +31578,13 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 	}
 	//STEP 6 : Free City Commerce (player tallied from civics/traits a change value to all cities commerce output)
 	{
-		const int iFreeCityCommerce = owner.getFreeCityCommerce(eCommerceType);
-		if (0 != iFreeCityCommerce)
+		const int iExtraCommerce100 = owner.getExtraCommerce100(eCommerceType);
+		if (0 != iExtraCommerce100)
 		{
+			makeValueString(szValue, iExtraCommerce100, true);
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_FREE_CITY_COMMERCE", iFreeCityCommerce, info.getChar()));
-			iCommerce100 += 100 * iFreeCityCommerce;
+			szBuffer.append(gDLL->getText("TXT_BULLET_S1_F2_FROM_S3", szValue.GetCString(), info.getChar(), L"TXT_KEY_NATIONAL_SOURCES"));
+			iCommerce100 += iExtraCommerce100;
 		}
 	}
 	//STEP 7 : Minted Commerce

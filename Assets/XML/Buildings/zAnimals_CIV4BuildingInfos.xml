@@ -52,7 +52,7 @@
 			</PrereqOrBuildings>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_DART_FROG</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_DESERT_TORTOISE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANIMAL_TAMER_COMPLEX</Type>

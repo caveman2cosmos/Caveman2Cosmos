@@ -6965,6 +6965,7 @@ int CvActionInfo::getMissionData() const
 		case ACTIONSUBTYPE_CORPORATION:
 		case ACTIONSUBTYPE_SPECIALIST:
 		case ACTIONSUBTYPE_BUILDING:
+		case ACTIONSUBTYPE_HERITAGE:
 			return m_iOriginalIndex;
 	}
 	return -1;
@@ -7028,6 +7029,9 @@ int CvActionInfo::getMissionType() const
 
 		case ACTIONSUBTYPE_BUILDING:
 			return GC.getBuildingInfo((BuildingTypes)m_iOriginalIndex).getMissionType();
+
+		case ACTIONSUBTYPE_HERITAGE:
+			return GC.getHeritageInfo((HeritageTypes)m_iOriginalIndex).getMissionType();
 
 		case ACTIONSUBTYPE_MISSION:
 			return m_iOriginalIndex;
@@ -7139,6 +7143,9 @@ const CvHotkeyInfo* CvActionInfo::getHotkeyInfo() const
 
 		case ACTIONSUBTYPE_BUILDING:
 			return &GC.getBuildingInfo((BuildingTypes)getOriginalIndex());
+
+		case ACTIONSUBTYPE_HERITAGE:
+			return &GC.getHeritageInfo((HeritageTypes)getOriginalIndex());
 
 		case ACTIONSUBTYPE_CONTROL:
 			return &GC.getControlInfo((ControlTypes)getOriginalIndex());

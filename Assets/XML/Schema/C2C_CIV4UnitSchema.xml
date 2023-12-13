@@ -1391,6 +1391,9 @@
 	<ElementType name="Buildings" content="eltOnly">
 		<element type="BuildingType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
+	<ElementType name="Heritage" content="eltOnly">
+		<element type="Type" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
 	<!-- RevDCM canTrain -->
 	<ElementType name="MaxStartEra" content="textOnly"/>
 	<ElementType name="bStateReligion" content="textOnly" dt:type="boolean"/>
@@ -1892,6 +1895,7 @@
 		<element type="CorporationSpreads" minOccurs="0"/>
 		<element type="GreatPeoples" minOccurs="0"/>
 		<element type="Buildings" minOccurs="0"/>
+		<element type="Heritage" minOccurs="0"/>
 		<!-- RevDCM canTrain -->
 		<element type="MaxStartEra" minOccurs="0"/>
 		<element type="ObsoleteTech" minOccurs="0"/>

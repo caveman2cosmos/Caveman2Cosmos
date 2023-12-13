@@ -95,11 +95,15 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 				case 1:
 				{
 					Cy::call(PYCivModule, "gameExitSave");
+					gDLL->getInterfaceIFace()->clearSelectionList();
+					gDLL->getInterfaceIFace()->clearSelectedCities();
 					gDLL->getInterfaceIFace()->exitingToMainMenu();
 					break;
 				}
 				case 2:
 				{
+					gDLL->getInterfaceIFace()->clearSelectionList();
+					gDLL->getInterfaceIFace()->clearSelectedCities();
 					GC.getGame().doControl(CONTROL_RETIRE);
 					break;
 				}

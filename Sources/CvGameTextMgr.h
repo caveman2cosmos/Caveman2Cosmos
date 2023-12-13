@@ -86,6 +86,7 @@ public:
 		CvWStringBuffer &szBuffer, const BuildingTypes eBuilding, const bool bActual, CvCity* pCity = NULL,
 		const bool bCivilopediaText = false, const bool bStrategyText = false, const bool bTechChooserText = false
 	);
+	void setHeritageHelp(CvWStringBuffer &szBuffer, const HeritageTypes eType, CvCity* pCity = NULL, const bool bCivilopediaText = false, const bool bStrategyText = false, const bool bTechChooserText = false);
 	void setBuildingActualEffects(CvWStringBuffer &szBuffer, const CvWString& szStart, BuildingTypes eBuilding, const CvCity* pCity, bool bNewLine = true);
 
 	void setProjectHelp(CvWStringBuffer &szBuffer, ProjectTypes eProject, bool bCivilopediaText = false, CvCity* pCity = NULL);

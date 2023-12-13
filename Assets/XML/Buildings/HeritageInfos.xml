@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+	This class is very similar to buildings,
+	but has no map art and is applied to player objects rather than city objects.
+-->
+<C2C_HeritageInfos xmlns="x-schema:../Schema/C2C_CIV4BuildingsSchema.xml">
+	<HeritageInfos>
+		<HeritageInfo>
+			<Type>HERITAGE_FOLKLORE_DART_FROG</Type>
+			<Description>TXT_KEY_HERITAGE_FOLKLORE_DART_FROG</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
+			<TechCommerceChanges>
+				<TechCommerceChange>
+					<TechType>TECH_LANGUAGE</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>20</iCommercePercent>
+						<iCommercePercent>10</iCommercePercent>
+					</CommercePercents>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<TechType>TECH_SEDENTARY_LIFESTYLE</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>-5</iCommercePercent>
+						<iCommercePercent>10</iCommercePercent>
+					</CommercePercents>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<TechType>TECH_CLASSICAL_LIFESTYLE</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>-5</iCommercePercent>
+						<iCommercePercent>10</iCommercePercent>
+					</CommercePercents>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<TechType>TECH_MEDIEVAL_LIFESTYLE</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>-5</iCommercePercent>
+						<iCommercePercent>10</iCommercePercent>
+					</CommercePercents>
+				</TechCommerceChange>
+				<TechCommerceChange>
+					<TechType>TECH_RENAISSANCE_LIFESTYLE</TechType>
+					<CommercePercents>
+						<iCommercePercent>0</iCommercePercent>
+						<iCommercePercent>-5</iCommercePercent>
+						<iCommercePercent>10</iCommercePercent>
+					</CommercePercents>
+				</TechCommerceChange>
+			</TechCommerceChanges>
+			<Button>Art/Interface/Buttons/Units/DartFrog.dds</Button>
+		</HeritageInfo>
+	</HeritageInfos>
+</C2C_HeritageInfos>

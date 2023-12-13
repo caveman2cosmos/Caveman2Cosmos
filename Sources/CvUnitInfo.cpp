@@ -1420,6 +1420,23 @@ int CvUnitInfo::getNumBuildings() const
 	return m_pbBuildings.size();
 }
 
+int CvUnitInfo::getHeritage(int i) const
+{
+	FASSERT_BOUNDS(0, GC.getNumHeritageInfos(), i);
+	return m_addHeritage[i];
+}
+
+bool CvUnitInfo::getHasHeritage(int i) const
+{
+	FASSERT_BOUNDS(0, GC.getNumHeritageInfos(), i);
+	return algo::any_of_equal(m_addHeritage, i);
+}
+
+int CvUnitInfo::getNumHeritage() const
+{
+	return m_addHeritage.size();
+}
+
 //
 //bool CvUnitInfo::getTerrainImpassable(int i) const
 //{
@@ -3710,7 +3727,10 @@ void CvUnitInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumI(iSum, GC.getNumTerrainInfos(), m_piTerrainPassableTech);
 	CheckSumI(iSum, GC.getNumFeatureInfos(), m_piFeaturePassableTech);
 	CheckSumI(iSum, GC.getNumSpecialistInfos(), m_pbGreatPeoples);
+
 	CheckSumC(iSum, m_pbBuildings);
+	CheckSumC(iSum, m_addHeritage);
+
 	CheckSumI(iSum, GC.getNumTerrainInfos(), m_pbTerrainNative);
 	CheckSumI(iSum, GC.getNumFeatureInfos(), m_pbFeatureNative);
 	//CheckSumI(iSum, GC.getNumTerrainInfos(), m_pbTerrainImpassable);
@@ -4154,6 +4174,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->SetVariableListTagPair(&m_pbGreatPeoples, L"GreatPeoples", GC.getNumSpecialistInfos());
 
 	pXML->SetOptionalVector(&m_pbBuildings, L"Buildings");
+	pXML->SetOptionalVector(&m_addHeritage, L"Heritage");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"MaxStartEra");
 	m_iMaxStartEra = pXML->GetInfoClass(szTextVal);
@@ -5098,6 +5119,7 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo)
 	}
 
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_pbBuildings, pClassInfo->m_pbBuildings);
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_addHeritage, pClassInfo->m_addHeritage);
 
 	for ( int i = 0; i < GC.getNumReligionInfos(); i++)
 	{

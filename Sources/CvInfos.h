@@ -2217,6 +2217,10 @@ public:
 	bool getHasBuilding(int i) const;
 	int getNumBuildings() const;
 
+	int getHeritage(int i) const;
+	bool getHasHeritage(int i) const;
+	int getNumHeritage() const;
+
 	bool getTerrainNative(int i) const;
 	bool getFeatureNative(int i) const;
 	bool getFreePromotions(int i) const;
@@ -2431,6 +2435,7 @@ private:
 	bool* m_pbNotUnitAIType;
 	bool* m_pbGreatPeoples;
 	std::vector<int> m_pbBuildings;
+	std::vector<int> m_addHeritage;
 	bool* m_pbTerrainNative;
 	bool* m_pbFeatureNative;
 	//bool* m_pbTerrainImpassable;

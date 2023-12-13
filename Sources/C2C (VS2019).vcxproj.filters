@@ -426,6 +426,9 @@
     <ClCompile Include="CvImprovementInfo.cpp">
       <Filter>Source\Base\Infos</Filter>
     </ClCompile>
+    <ClCompile Include="CvHeritageInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
     <ClCompile Include="CvInfos.cpp">
       <Filter>Source\Base\Infos</Filter>
     </ClCompile>
@@ -1083,6 +1086,9 @@
       <Filter>Source\Base\Infos</Filter>
     </ClInclude>
     <ClInclude Include="CvImprovementInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="CvHeritageInfo.h">
       <Filter>Source\Base\Infos</Filter>
     </ClInclude>
     <ClInclude Include="CvInfoClassTraits.h">

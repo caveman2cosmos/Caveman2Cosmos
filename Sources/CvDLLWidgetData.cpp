@@ -2403,10 +2403,10 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 			}
 			else if (GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_CONSTRUCT)
 			{
-				BuildingTypes eBuilding = ((BuildingTypes)(GC.getActionInfo(widgetDataStruct.m_iData1).getMissionData()));
-
-				if (pMissionCity != NULL)
+				if (pMissionCity)
 				{
+					BuildingTypes eBuilding = (BuildingTypes)GC.getActionInfo(widgetDataStruct.m_iData1).getMissionData();
+
 					if (pMissionCity->canConstruct(eBuilding, false, false, true))
 					{
 						szBuffer.append(NEWLINE);
@@ -2416,6 +2416,14 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					{
 						GAMETEXT.buildBuildingRequiresString(szBuffer, (BuildingTypes)GC.getActionInfo(widgetDataStruct.m_iData1).getMissionData(), false, false, pMissionCity);
 					}
+				}
+			}
+			else if (GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_HERITAGE)
+			{
+				if (pMissionCity && GET_PLAYER(pMissionCity->getOwner()).canAddHeritage((HeritageTypes)GC.getActionInfo(widgetDataStruct.m_iData1).getMissionData()))
+				{
+					szBuffer.append(NEWLINE);
+					GAMETEXT.setHeritageHelp(szBuffer, (HeritageTypes)GC.getActionInfo(widgetDataStruct.m_iData1).getMissionData(), pMissionCity, false, true);
 				}
 			}
 			else if (GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_DISCOVER)

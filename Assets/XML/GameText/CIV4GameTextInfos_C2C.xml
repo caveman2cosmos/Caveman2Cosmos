@@ -350,15 +350,6 @@
 		<Italian>Rendimento totale: %d1 %F2</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_FREE_CITY_COMMERCE</Tag>
-		<English>[ICON_BULLET]%D1%F2 Free Commerce</English>
-		<French>[ICON_BULLET]%D1%F2 en raison du libre échange</French>
-		<German>[ICON_BULLET]%D1%F2 freie Wirtschaft</German>
-		<Italian>[ICON_BULLET]%D1%F2 a causa del libero commercio</Italian>
-		<Spanish>[ICON_BULLET]%D1 %F2 comercio libre</Spanish>
-		<Russian>[ICON_BULLET]%D1%F2 от чистых доходов</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_TOTAL_YIELD_MOD</Tag>
 		<English>Sum: %d1%% = %s2%F3</English>
 		<Italian>Somma %: %d1%% = %s2%F3</Italian> <!-- city scrren, hover gold in upper left> -->
@@ -886,6 +877,10 @@
 		<German>[ICON_BULLET]%D1_Change%% gegen %s2_Type</German>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Danno[COLOR_REVERT] contro le unità di tipo [COLOR_HIGHLIGHT_TEXT]%s2:2_Type[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%D1_Change%%[COLOR_REVERT]</Italian> <!-- unit Autogyro -->
 		<Spanish>[ICON_BULLET]%D1_Change%% contra %s2:2_Type</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_NATIONAL_SOURCES</Tag>
+		<English>Traits/Civics/Heritage.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_WITHDRAWL_PROBABILITY</Tag>

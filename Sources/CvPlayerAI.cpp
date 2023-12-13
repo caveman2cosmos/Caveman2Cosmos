@@ -26752,7 +26752,6 @@ int CvPlayerAI::AI_militaryUnitTradeVal(const CvUnit* pUnit) const
 	if (eAIType == UNITAI_SUBDUED_ANIMAL)
 	{
 		int iBestValue = 0;
-		int iI;
 		CvCity* pEvaluationCity = getCapitalCity();
 
 		if (pEvaluationCity == NULL || (pUnit->getDomainType() == DOMAIN_SEA && !pEvaluationCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize())))
@@ -26765,7 +26764,7 @@ int CvPlayerAI::AI_militaryUnitTradeVal(const CvUnit* pUnit) const
 			const CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
 
 			//	Subdued animals are rated primarily on what they can construct
-			for (iI = 0; iI < kUnit.getNumBuildings(); iI++)
+			for (int iI = 0; iI < kUnit.getNumBuildings(); iI++)
 			{
 				const BuildingTypes eBuilding = (BuildingTypes)kUnit.getBuildings(iI);
 
@@ -26784,6 +26783,21 @@ int CvPlayerAI::AI_militaryUnitTradeVal(const CvUnit* pUnit) const
 							}
 						}
 					}
+				}
+			}
+			{
+				// This section needs more work, the entire function might need work come to think of it.
+				int iValue = 0;
+				for (int iI = 0; iI < kUnit.getNumHeritage(); iI++)
+				{
+					if (canAddHeritage((HeritageTypes)kUnit.getHeritage(iI)))
+					{
+						iValue += 25;
+					}
+				}
+				if (iValue > iBestValue)
+				{
+					iBestValue = iValue;
 				}
 			}
 

@@ -14190,7 +14190,7 @@ bool CvUnitAI::AI_moveToOurTerritory(int maxMoves)
 bool CvUnitAI::checkSwitchToConstruct()
 {
 	// Don't bail on a city for which we are the only defender
-	if (m_pUnitInfo->getNumBuildings() < 1 || plot()->getPlotCity() != NULL && plot()->getNumDefenders(getOwner()) == 1)
+	if (m_pUnitInfo->getNumBuildings() < 1 && m_pUnitInfo->getNumHeritage() < 1 || !plot()->getPlotCity() && plot()->getNumDefenders(getOwner()) == 1)
 	{
 		return false;
 	}

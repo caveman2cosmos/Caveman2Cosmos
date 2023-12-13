@@ -1047,18 +1047,6 @@
 		<Russian>Ìèô î êóñêóñå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_DART_FROG</Tag>
-		<English>Folklore - Dart Frog</English>
-		<French>Mythe de la Grenouille venimeuse</French>
-		<German>
-			<Text>Mythos des Baumsteigerfroschs:Mythos des Baumsteigerfroschs:Mythos des Baumsteigerfroschs:Mythos des Baumsteigerfroschs</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito della rana velenosa</Italian>
-		<Russian>Ìèô î æàáå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_DEER</Tag>
 		<English>Folklore - Deer</English>
 		<French>Mythe du Cerf</French>

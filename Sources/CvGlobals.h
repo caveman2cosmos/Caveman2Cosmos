@@ -125,6 +125,7 @@ class CvIdeaClassInfo;
 class CvIdeaInfo;
 class CvInvisibleInfo;
 class CvCategoryInfo;
+class CvHeritageInfo;
 //class CvTraitOptionEditsInfo;
 class CvModLoadControlInfo;
 class CvMapInfo;
@@ -475,6 +476,9 @@ public:
 
 	int getNumCategoryInfos() const;
 	CvCategoryInfo& getCategoryInfo(CategoryTypes e) const;
+
+	int getNumHeritageInfos() const;
+	CvHeritageInfo& getHeritageInfo(HeritageTypes e) const;
 
 	int getNumVoteSourceInfos() const;
 	CvVoteSourceInfo& getVoteSourceInfo(VoteSourceTypes e) const;
@@ -985,6 +989,7 @@ protected:
 	std::vector<CvInfoBase*> m_paDenialInfo;
 	std::vector<CvInvisibleInfo*> m_paInvisibleInfo;
 	std::vector<CvCategoryInfo*> m_paCategoryInfo;
+	std::vector<CvHeritageInfo*> m_heritageInfo;
 	std::vector<CvVoteSourceInfo*> m_paVoteSourceInfo;
 	std::vector<CvUnitCombatInfo*> m_paUnitCombatInfo;
 	std::vector<CvPromotionLineInfo*> m_paPromotionLineInfo;
