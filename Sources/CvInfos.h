@@ -2104,6 +2104,11 @@ public:
 	void setQualifiedPromotionTypes();
 	void setCanAnimalIgnores();
 
+	const std::vector<BonusTypes>& getPrereqOrBonuses() const;
+	const std::vector<BonusTypes>& getPrereqOrVicinityBonuses() const;
+	const std::vector<TechTypes>& getPrereqAndTechs() const;
+	const std::vector<HeritageTypes>& getPrereqAndHeritage() const { return m_prereqAndHeritage; }
+
 	virtual const wchar_t* getExtraHoverText() const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
@@ -2153,11 +2158,6 @@ public:
 	float getUnitPadTime() const;
 
 	bool canAcquireExperience() const;
-
-	const std::vector<BonusTypes>& getPrereqOrBonuses() const;
-	const std::vector<BonusTypes>& getPrereqOrVicinityBonuses() const;
-
-	const std::vector<TechTypes>& getPrereqAndTechs() const;
 
 	// Arrays
 	int getFlavorValue(int i) const;
@@ -2345,6 +2345,7 @@ private:
 	int m_iPrereqAndBonus;
 
 	std::vector<BuildTypes> m_workerBuilds;
+	std::vector<HeritageTypes> m_prereqAndHeritage;
 	std::vector<int> m_aiPrereqAndBuildings;
 	std::vector<int> m_aiPrereqOrBuildings;
 	std::vector<int> m_aiTargetUnit;
@@ -2640,11 +2641,11 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvSpawnInfo* pClassInfo);
 
-	const std::vector<BonusTypes>&   getBonuses() const        { return m_bonusTypes; }
-	const std::vector<TerrainTypes>& getTerrain() const        { return m_terrainTypes; }
-	const std::vector<FeatureTypes>& getFeatures() const       { return m_featureTypes; }
+	const std::vector<BonusTypes>& getBonuses() const { return m_bonusTypes; }
+	const std::vector<UnitTypes>& getSpawnGroups() const { return m_spawnGroup; }
+	const std::vector<TerrainTypes>& getTerrain() const { return m_terrainTypes; }
+	const std::vector<FeatureTypes>& getFeatures() const { return m_featureTypes; }
 	const std::vector<TerrainTypes>& getFeatureTerrain() const { return m_featureTerrainTypes; }
-	const std::vector<UnitTypes>&    getSpawnGroups() const    { return m_spawnGroup; }
 
 	PlayerTypes getPlayer() const;
 	int getTurnRate() const;

@@ -548,18 +548,6 @@
 		<Polish>Sieci na ryby były konstruowane przez bogatych by dostarczać im ciągle świeżych i egzotycznych gatunków ryb na ich wykwintne uczty.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_AARDVARK</Tag>
-		<English>Folklore - Aardvark</English>
-		<French>Mythe de l'Oryctérope du Cap</French>
-		<German>
-			<Text>Mythos des Erdferkels:Mythos des Erdferkels:Mythos des Erdferkels:Mythos des Erdferkels</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito dell'oritteropo</Italian>
-		<Russian>Ìèô î òðóáêîçóáå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_AFRICAN_ELEPHANT</Tag>
 		<English>Folklore - African Elephant</English>
 		<French>Mythe de l'Eléphant d'Afrique</French>

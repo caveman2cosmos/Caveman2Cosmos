@@ -3709,6 +3709,7 @@ void CvUnitInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumI(iSum, GC.getNumCivicInfos(), m_pbPrereqOrCivics);
 
 	CheckSumC(iSum, m_workerBuilds);
+	CheckSumC(iSum, m_prereqAndHeritage);
 	CheckSumC(iSum, m_aiPrereqAndBuildings);
 	CheckSumC(iSum, m_aiPrereqOrBuildings);
 
@@ -4213,6 +4214,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	m_iPrereqCorporation = pXML->GetInfoClass(szTextVal);
 
 	pXML->SetOptionalVector(&m_workerBuilds, L"Builds");
+	pXML->SetOptionalVector(&m_prereqAndHeritage, L"PrereqAndHeritage");
 	pXML->SetOptionalVector(&m_aiPrereqAndBuildings, L"PrereqAndBuildings");
 	pXML->SetOptionalVector(&m_aiPrereqOrBuildings, L"PrereqOrBuildings");
 
@@ -5337,6 +5339,7 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo)
 	if ( m_iPrereqCorporation == iTextDefault ) m_iPrereqCorporation = pClassInfo->getPrereqCorporation();
 
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_workerBuilds, pClassInfo->m_workerBuilds);
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_prereqAndHeritage, pClassInfo->m_prereqAndHeritage);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiPrereqAndBuildings, pClassInfo->m_aiPrereqAndBuildings);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiPrereqOrBuildings, pClassInfo->m_aiPrereqOrBuildings);
 

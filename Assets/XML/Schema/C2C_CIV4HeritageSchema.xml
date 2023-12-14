@@ -27,6 +27,11 @@
 
 	<ElementType name="bNeedLanguage" content="textOnly" dt:type="boolean"/>
 
+	<ElementType name="PrereqTech" content="textOnly"/>
+	<ElementType name="PrereqOrHeritage" content="eltOnly">
+		<element type="Type" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+
 	<ElementType name="EraCommerceChange" content="eltOnly">
 		<element type="EraType"/>
 		<element type="CentiCommerce"/>
@@ -53,6 +58,10 @@
 		<element type="Help" minOccurs="0"/>
 
 		<element type="bNeedLanguage" minOccurs="0"/>
+		
+		<element type="PrereqTech" minOccurs="0"/>
+		<element type="PrereqOrHeritage" minOccurs="0"/>
+
 		<element type="EraCommerceChanges" minOccurs="0"/>
 
 		<element type="bGraphicalOnly" minOccurs="0"/>

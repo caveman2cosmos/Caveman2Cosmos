@@ -175,13 +175,15 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_AARDVARK</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ANTEATER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_NINE_BANDED_ARMADILLO</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BEAVER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_GLYPTODON</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_GROUND_SLOTH</BuildingType>
 			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_AARDVARK</Type>
+			</PrereqOrHeritage>
 			<iCost>70</iCost>
 			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<UnitCombatProdModifiers>

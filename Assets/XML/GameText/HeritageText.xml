@@ -2,6 +2,14 @@
 
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_AARDVARK</Tag>
+		<English>Folklore - Aardvark</English>
+		<French>Mythe de l'Oryctérope du Cap</French>
+		<German>Mythos des Erdferkels</German>
+		<Italian>Mito dell'oritteropo</Italian>
+		<Russian>Ìèô î òðóáêîçóáå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_DART_FROG</Tag>
 		<English>Folklore - Dart Frog</English>
 		<French>Mythe de la Grenouille venimeuse</French>

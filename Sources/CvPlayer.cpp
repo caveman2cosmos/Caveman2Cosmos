@@ -6504,6 +6504,14 @@ bool CvPlayer::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool
 
 	if (!bTestVisible)
 	{
+		foreach_(const HeritageTypes eTypeX, kUnit.getPrereqAndHeritage())
+		{
+			if (!hasHeritage(eTypeX))
+			{
+				return false;
+			}
+		}
+
 		if (!bPropertySpawn)
 		{
 			if (GC.getGame().isUnitMaxedOut(eUnit, GET_TEAM(getTeam()).getUnitMaking(eUnit) - bContinue)
