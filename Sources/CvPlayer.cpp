@@ -6632,6 +6632,26 @@ bool CvPlayer::canConstructInternal(BuildingTypes eBuilding, bool bContinue, boo
 				return false;
 			}
 		}
+
+		if (!bTestVisible)
+		{
+			bool bValid = false;
+			bool bRequires = false;
+			foreach_(const HeritageTypes eTypeX, kBuilding.getPrereqOrHeritage())
+			{
+				bRequires = true;
+
+				if (hasHeritage(eTypeX))
+				{
+					bValid = true;
+					break;
+				}
+			}
+			if (bRequires && !bValid)
+			{
+				return false;
+			}
+		}
 	}
 
 	if (currentTeam.isObsoleteBuilding(eBuilding))
@@ -19573,8 +19593,8 @@ void CvPlayer::read(FDataStreamBase* pStream)
 				m_iNumMilitaryUnits = iMilitary;
 			}
 		}
-		WRAPPER_READ(wrapper, "CvPlayer", &m_iOtherAreaMaintenanceModifier);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iHomeAreaMaintenanceModifier);
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iOtherAreaMaintenanceModifier);
 
 		{
 			m_myHeritage.clear();
@@ -20403,8 +20423,8 @@ void CvPlayer::write(FDataStreamBase* pStream)
 				WRAPPER_WRITE_CLASS_ENUM_DECORATED(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_HERITAGE, eType, "iType");
 			}
 		}
-		WRAPPER_WRITE(wrapper, "CvPlayer", m_bHasLanguage);
 		WRAPPER_WRITE_ARRAY(wrapper, "CvPlayer", NUM_COMMERCE_TYPES, m_extraCommerce);
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_bHasLanguage);
 	}
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
@@ -30832,6 +30852,8 @@ void CvPlayer::setHeritage(const HeritageTypes eType, const bool bNewValue)
 		processHeritage(eType, -1);
 	}
 	else FErrorMsg("Vector element to remove was missing!");
+
+	clearCanConstructCache(NO_BUILDING, true);
 }
 
 void CvPlayer::processHeritage(const HeritageTypes eType, const int iChange)

@@ -1762,9 +1762,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
-			<!--PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_DART_FROG</BuildingType>
-			</PrereqOrBuildings-->
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_DART_FROG</Type>
+			</PrereqOrHeritage>
 			<iCost>250</iCost>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>

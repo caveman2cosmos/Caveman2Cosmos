@@ -22335,13 +22335,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REQUIRES</Tag>
-		<English>[NEWLINE][COLOR_WARNING_TEXT]Requires[SPACE]</English>
-		<French>[NEWLINE][COLOR_WARNING_TEXT]Requiert:[SPACE]</French>
-		<German>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]erforderlich:[SPACE]</German>
+		<English>[NEWLINE][COLOR_WARNING_TEXT]Requires[SPACE][COLOR_REVERT]</English>
+		<French>[NEWLINE][COLOR_WARNING_TEXT]Requiert:[SPACE][COLOR_REVERT]</French>
+		<German>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]erforderlich:[SPACE][COLOR_REVERT]</German>
 		<Italian>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]Richiede[COLOR_REVERT] per la realizzazione: [COLOR_HIGHLIGHT_TEXT]</Italian> <!-- tech Waterproof Cement, unit Cartwright, city screen hurry up panel-->
-		<Spanish>[NEWLINE][COLOR_WARNING_TEXT]Requiere[SPACE]</Spanish>
-		<Polish>[NEWLINE][COLOR_WARNING_TEXT]Wymaga[SPACE]</Polish>
-		<Russian>[NEWLINE][COLOR_WARNING_TEXT]Òðåáóåòñÿ:[SPACE]</Russian>
+		<Spanish>[NEWLINE][COLOR_WARNING_TEXT]Requiere[SPACE][COLOR_REVERT]</Spanish>
+		<Polish>[NEWLINE][COLOR_WARNING_TEXT]Wymaga[SPACE][COLOR_REVERT]</Polish>
+		<Russian>[NEWLINE][COLOR_WARNING_TEXT]Òðåáóåòñÿ:[SPACE][COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REQUIRES_BONUS_RAWVICINITY</Tag>

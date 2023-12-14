@@ -463,6 +463,8 @@ public:
 	const std::vector<BonusTypes>& getPrereqOrVicinityBonuses() const { return m_piPrereqOrVicinityBonuses; }
 	const std::vector<BonusTypes>& getPrereqOrRawVicinityBonuses() const { return m_aePrereqOrRawVicinityBonuses; }
 
+	const std::vector<HeritageTypes>& getPrereqOrHeritage() const { return m_prereqOrHeritage; }
+
 	int getTechHappiness(TechTypes eTech) const;
 	const IDValueMap<TechTypes, int>& getTechHappinessChanges() const { return m_aTechHappinessChanges; }
 
@@ -757,6 +759,7 @@ private:
 	std::vector<int> m_aiPrereqInCityBuildings;
 	std::vector<int> m_vPrereqNotInCityBuildings;
 	std::vector<BonusTypes> m_aePrereqOrBonuses;
+	std::vector<HeritageTypes> m_prereqOrHeritage;
 	std::vector<int> m_vPrereqOrBuilding;
 	std::vector<int> m_vReplacementBuilding;
 	std::vector<int> m_vReplacedBuilding;

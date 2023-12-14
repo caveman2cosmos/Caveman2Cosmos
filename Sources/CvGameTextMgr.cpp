@@ -23651,7 +23651,7 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 
 	const PlayerTypes ePlayer = pCity ? pCity->getOwner() : GC.getGame().getActivePlayer();
 
-	const bool bCanConstruct = NULL != pCity && pCity->canConstruct(eBuilding);
+	const bool bCanConstruct = pCity && pCity->canConstruct(eBuilding);
 
 	//	Future - do the green/red text thing with all of this - for now just civics do it
 	//	so can skip the rest of teh code for constructable buildings
@@ -23800,6 +23800,13 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 		{
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_STATE_RELIGION_PREREQ", GC.getReligionInfo((ReligionTypes)(kBuilding.getPrereqStateReligion())).getChar()));
+		}
+
+		bFirst = true;
+		foreach_(const HeritageTypes eTypeX, kBuilding.getPrereqOrHeritage())
+		{
+			setListHelp(szBuffer, gDLL->getText("TXT_KEY_REQUIRES"), GC.getHeritageInfo(eTypeX).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
+			bFirst = false;
 		}
 	}
 
