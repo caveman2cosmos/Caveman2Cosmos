@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Schema xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">
 
+	<ElementType name="Type" content="textOnly"/>
+	<ElementType name="EraType" content="textOnly"/>
+
 	<ElementType name="iCommerce" content="textOnly" dt:type="int"/>
 	<ElementType name="CentiCommerce" content="eltOnly">
 		<element type="iCommerce" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="EraType" content="textOnly"/>
-
-	<ElementType name="Type" content="textOnly"/>
 
 	<ElementType name="bForceOverwrite" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bForceDelete" content="textOnly" dt:type="boolean"/>
@@ -37,7 +37,7 @@
 
 	<ElementType name="bGraphicalOnly" content="textOnly" dt:type="boolean"/>
 	<ElementType name="Button" content="textOnly"/>
-	</ElementType>
+
 	<ElementType name="HeritageInfo" content="eltOnly">
 		<element type="Type"/>
 
