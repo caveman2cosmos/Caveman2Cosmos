@@ -1763,33 +1763,24 @@ enum MissionAITypes
 	MISSIONAI_BUILD,
 	MISSIONAI_ASSAULT,
 	MISSIONAI_CARRIER,
-	MISSIONAI_PICKUP
-
-/************************************************************************************************/
-/* Afforess                                     12/7/09                                         */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	, MISSIONAI_INQUISITION
-	, MISSIONAI_CLAIM_TERRITORY
-	, MISSIONAI_HURRY_FOOD
-/************************************************************************************************/
-/* Afforess	                         END                                                        */
-/************************************************************************************************/
-	, MISSIONAI_CONTRACT
-	, MISSIONAI_CONTRACT_UNIT
-	, MISSIONAI_DELIBERATE_KILL
-	, MISSIONAI_REGROUP
-	, MISSIONAI_HEAL_SUPPORT
-	, MISSIONAI_PROPERTY_CONTROL_RESPONSE
-	, MISSIONAI_PROPERTY_CONTROL_MAINTAIN
-	, MISSIONAI_INVESTIGATOR_RESPONSE
-	, MISSIONAI_INVESTIGATOR_MAINTAIN
-	, MISSIONAI_INFILTRATOR_MAINTAIN
-	, MISSIONAI_SEE_INVISIBLE_MAINTAIN
-	, MISSIONAI_SEE_INVISIBLE_SEA_MAINTAIN
-	, MISSIONAI_WAIT_FOR_ESCORT
-	, MISSIONAI_WAIT_FOR_SEE_INVISIBLE
+	MISSIONAI_PICKUP,
+	MISSIONAI_INQUISITION,
+	MISSIONAI_CLAIM_TERRITORY,
+	MISSIONAI_HURRY_FOOD,
+	MISSIONAI_CONTRACT,
+	MISSIONAI_CONTRACT_UNIT,
+	MISSIONAI_DELIBERATE_KILL,
+	MISSIONAI_REGROUP,
+	MISSIONAI_HEAL_SUPPORT,
+	MISSIONAI_PROPERTY_CONTROL_RESPONSE,
+	MISSIONAI_PROPERTY_CONTROL_MAINTAIN,
+	MISSIONAI_INVESTIGATOR_RESPONSE,
+	MISSIONAI_INVESTIGATOR_MAINTAIN,
+	MISSIONAI_INFILTRATOR_MAINTAIN,
+	MISSIONAI_SEE_INVISIBLE_MAINTAIN,
+	MISSIONAI_SEE_INVISIBLE_SEA_MAINTAIN,
+	MISSIONAI_WAIT_FOR_ESCORT,
+	MISSIONAI_WAIT_FOR_SEE_INVISIBLE
 };
 
 // any additions need to be reflected in GlobalTypes.xml
