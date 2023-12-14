@@ -17,19 +17,23 @@ public:
 	CvHeritageInfo();
 	virtual ~CvHeritageInfo();
 
-	void setMissionType(const int iNewType) { m_iMissionType = iNewType; }
-	int getMissionType() const { return m_iMissionType; }
-	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
-	const IDValueMap<TechTypes, CommerceArray>& getTechCommerceChanges100() const { return m_techCommerceChanges; }
-
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(const CvHeritageInfo* pClassInfo);
 	void getCheckSum(uint32_t& iSum) const;
 	void doPostLoadCaching(uint32_t eThis);
 
+	inline void setMissionType(const int iNewType) { m_iMissionType = iNewType; }
+	inline int getMissionType() const { return m_iMissionType; }
+	inline bool needLanguage() const { return m_bNeedLanguage; }
+
+	inline const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
+	inline const IDValueMap<EraTypes, CommerceArray>& getEraCommerceChanges100() const { return m_eraCommerceChanges; }
+
 private:
 	int m_iMissionType;
+	bool m_bNeedLanguage;
+
 	CvPropertyManipulators m_PropertyManipulators;
-	IDValueMap<TechTypes, CommerceArray> m_techCommerceChanges;
+	IDValueMap<EraTypes, CommerceArray> m_eraCommerceChanges;
 };
 #endif

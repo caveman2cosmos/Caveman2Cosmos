@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Schema xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">
+
+	<ElementType name="iCommerce" content="textOnly" dt:type="int"/>
+	<ElementType name="CentiCommerce" content="eltOnly">
+		<element type="iCommerce" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="EraType" content="textOnly"/>
+
+	<ElementType name="Type" content="textOnly"/>
+
+	<ElementType name="bForceOverwrite" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bForceDelete" content="textOnly" dt:type="boolean"/>
+	<ElementType name="iForceInsertLocation" content="textOnly" dt:type="int"/>
+	<ElementType name="DependencyType" content="textOnly"/>
+	<ElementType name="AndDependencyTypes" content="eltOnly">
+		<element type="DependencyType" minOccurs="1"/>
+	</ElementType>
+	<ElementType name="OrDependencyTypes" content="eltOnly">
+		<element type="DependencyType" minOccurs="1"/>
+
+	<ElementType name="Description" content="textOnly"/>
+	<ElementType name="Civilopedia" content="textOnly"/>
+	<ElementType name="Strategy" content="textOnly"/>
+	<ElementType name="Help" content="textOnly"/>
+
+	<ElementType name="bNeedLanguage" content="textOnly" dt:type="boolean"/>
+
+	<ElementType name="EraCommerceChange" content="eltOnly">
+		<element type="EraType"/>
+		<element type="CentiCommerce"/>
+	</ElementType>
+	<ElementType name="EraCommerceChanges" content="eltOnly">
+		<element type="EraCommerceChange" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+
+	<ElementType name="bGraphicalOnly" content="textOnly" dt:type="boolean"/>
+	<ElementType name="Button" content="textOnly"/>
+	</ElementType>
+	<ElementType name="HeritageInfo" content="eltOnly">
+		<element type="Type"/>
+
+		<element type="bForceOverwrite" minOccurs="0"/>
+		<element type="bForceDelete" minOccurs="0"/>
+		<element type="iForceInsertLocation" minOccurs="0"/>
+		<element type="AndDependencyTypes" minOccurs="0"/>
+		<element type="OrDependencyTypes" minOccurs="0"/>
+
+		<element type="Description" minOccurs="0"/>
+		<element type="Civilopedia" minOccurs="0"/>
+		<element type="Strategy" minOccurs="0"/>
+		<element type="Help" minOccurs="0"/>
+
+		<element type="bNeedLanguage" minOccurs="0"/>
+		<element type="EraCommerceChanges" minOccurs="0"/>
+
+		<element type="bGraphicalOnly" minOccurs="0"/>
+		<element type="Button" minOccurs="0"/>
+	</ElementType>
+	<ElementType name="HeritageInfos" content="eltOnly">
+		<element type="HeritageInfo" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="C2C_HeritageInfos" content="eltOnly">
+		<element type="HeritageInfos" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+</Schema>

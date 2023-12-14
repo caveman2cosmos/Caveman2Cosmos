@@ -16981,6 +16981,12 @@ void CvGameTextMgr::setTechHelp(CvWStringBuffer &szBuffer, TechTypes eTech, bool
 		szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_ENABLES_DESERT_FARMING"));
 	}
 
+	if (kTech.isLanguage())
+	{
+		szBuffer.append(NEWLINE);
+		szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_LANGUAGE"));
+	}
+
 	if (kTech.isGlobal())
 	{
 		szBuffer.append(NEWLINE);
@@ -23565,7 +23571,7 @@ void CvGameTextMgr::setHeritageHelp(CvWStringBuffer &szBuffer, const HeritageTyp
 		szBuffer.append(heritage.getHelp());
 	}
 
-	foreach_(const TechCommerceArray& pair, heritage.getTechCommerceChanges100())
+	foreach_(const EraCommerceArray& pair, heritage.getEraCommerceChanges100())
 	{
 		bool bFirst = true;
 		for (int iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
@@ -23578,8 +23584,8 @@ void CvGameTextMgr::setHeritageHelp(CvWStringBuffer &szBuffer, const HeritageTyp
 						CvWString::format(
 							L"\n%c%s <link=%s>%s</link>: ",
 							gDLL->getSymbolID(BULLET_CHAR), gDLL->getText("TXT_WORD_WITH").GetCString(),
-							CvWString(GC.getTechInfo(pair.first).getType()).GetCString(),
-							GC.getTechInfo(pair.first).getDescription()
+							CvWString(GC.getEraInfo(pair.first).getType()).GetCString(),
+							GC.getEraInfo(pair.first).getDescription()
 						)
 					);
 					bFirst = false;

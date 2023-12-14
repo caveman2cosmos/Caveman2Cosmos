@@ -1074,26 +1074,6 @@
 	<ElementType name="Civ4SpecialBuildingInfos" content="eltOnly">
 		<element type="SpecialBuildingInfos" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="HeritageInfo" content="eltOnly">
-		<element type="Type"/>
-		<!-- XMLCOPY				02/20/2008			MRGENIE -->
-		<element type="bForceOverwrite" minOccurs="0"/>
-		<element type="bForceDelete" minOccurs="0"/>
-		<element type="iForceInsertLocation" minOccurs="0"/>
-		<element type="AndDependencyTypes" minOccurs="0"/>
-		<element type="OrDependencyTypes" minOccurs="0"/>
-		<!-- XMLCOPY				END					MRGENIE -->
-		<element type="Description" minOccurs="0"/>
-		<element type="Civilopedia" minOccurs="0"/>
-		<element type="TechCommerceChanges" minOccurs="0"/>
-		<element type="Button" minOccurs="0"/>
-	</ElementType>
-	<ElementType name="HeritageInfos" content="eltOnly">
-		<element type="HeritageInfo" maxOccurs="*"/>
-	</ElementType>
-	<ElementType name="C2C_HeritageInfos" content="eltOnly">
-		<element type="HeritageInfos" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
 		<ElementType name="Civ4Buildings" content="eltOnly">
 		<element type="BuildingInfos" minOccurs="0" maxOccurs="*"/>
 	</ElementType>

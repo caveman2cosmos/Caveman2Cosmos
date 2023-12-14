@@ -70,7 +70,7 @@ public:
 	bool hasHeritage(const HeritageTypes eType) const;
 	bool canAddHeritage(const HeritageTypes eType) const;
 	void setHeritage(const HeritageTypes eType, const bool bNewValue);
-	int getHeritageCommerceTechChange(const CommerceTypes eType, const TechTypes eTech) const;
+	int getHeritageCommerceEraChange(const CommerceTypes eType, const EraTypes eEra) const;
 
 protected:
 	CvGameObjectPlayer m_GameObject;
@@ -1460,6 +1460,7 @@ public:
 	void doTaxes();
 
 	bool m_bChoosingReligion;
+	bool m_bHasLanguage;
 
 	int getBuildingCount(BuildingTypes eBuilding, bool bUpgrades) const;
 

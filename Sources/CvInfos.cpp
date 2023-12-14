@@ -947,6 +947,7 @@ m_bIrrigation(false),
 m_bIgnoreIrrigation(false),
 m_bWaterWork(false),
 m_bRiverTrade(false),
+m_bLanguage(false),
 // Dale - AB: Bombing START
 m_bDCMAirBombTech1(0),
 m_bDCMAirBombTech2(0),
@@ -1460,6 +1461,7 @@ bool CvTechInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bIgnoreIrrigation, L"bIgnoreIrrigation");
 	pXML->GetOptionalChildXmlValByName(&m_bWaterWork, L"bWaterWork");
 	pXML->GetOptionalChildXmlValByName(&m_bRiverTrade, L"bRiverTrade");
+	pXML->GetOptionalChildXmlValByName(&m_bLanguage, L"bLanguage");
 	pXML->GetOptionalChildXmlValByName(&m_iGridX, L"iGridX");
 	pXML->GetOptionalChildXmlValByName(&m_iGridY, L"iGridY");
 	pXML->GetOptionalChildXmlValByName(&m_bDCMAirBombTech1, L"bDCMAirBombTech1");
@@ -1616,6 +1618,7 @@ void CvTechInfo::copyNonDefaults(const CvTechInfo* pClassInfo)
 	if (isIgnoreIrrigation() == bDefault) m_bIgnoreIrrigation = pClassInfo->isIgnoreIrrigation();
 	if (isWaterWork() == bDefault) m_bWaterWork = pClassInfo->isWaterWork();
 	if (isRiverTrade() == bDefault) m_bRiverTrade = pClassInfo->isRiverTrade();
+	if (m_bLanguage == bDefault) m_bLanguage = pClassInfo->isLanguage();
 
 	if (getGridX() == iDefault) m_iGridX = pClassInfo->getGridX();
 	if (getGridY() == iDefault) m_iGridY = pClassInfo->getGridY();
@@ -1789,6 +1792,7 @@ void CvTechInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_bIgnoreIrrigation);
 	CheckSum(iSum, m_bWaterWork);
 	CheckSum(iSum, m_bRiverTrade);
+	CheckSum(iSum, m_bLanguage);
 
 	CheckSum(iSum, m_piDomainExtraMoves, NUM_DOMAIN_TYPES);
 	CheckSum(iSum, m_piFlavorValue, GC.getNumFlavorTypes());

@@ -203,6 +203,8 @@ m_cachedBonusCount(NULL)
 	m_aiModderOptions = new int[NUM_MODDEROPTION_TYPES];
 	m_paiPlayerWideAfflictionCount = NULL;
 
+	m_bHasLanguage = false;
+
 	//TB Traits begin
 	m_paiImprovementUpgradeRateModifierSpecific = NULL;
 	m_paiBuildWorkerSpeedModifierSpecific = NULL;
@@ -1033,16 +1035,15 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 		m_aiFreeCityYield[iI] = 0;
 		m_aiSpecialistExtraYield[iI] = 0;
 		m_aiLessYieldThreshold[iI] = 0;
-	//Team Project (7)
 		m_aiGoldenAgeYield[iI] = 0;
 		//TB Traits end
 	}
 
 	for (iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 	{
+		m_aiCommercePercent[iI] = 0;
 		m_aiFreeCityCommerce[iI] = 0;
 		m_extraCommerce[iI] = 0;
-		m_aiCommercePercent[iI] = 0;
 		m_aiCommerceRate[iI] = 0;
 		m_abCommerceDirty[iI] = false;
 		m_aiCommerceRateModifier[iI] = 0;
@@ -1052,7 +1053,6 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 		m_aiStateReligionBuildingCommerce[iI] = 0;
 		m_aiSpecialistExtraCommerce[iI] = 0;
 		m_aiCommerceFlexibleCount[iI] = 0;
-	//Team Project (7)
 		m_aiGoldenAgeCommerce[iI] = 0;
 	}
 
@@ -12477,31 +12477,32 @@ EraTypes CvPlayer::getCurrentEra() const
 }
 
 
-
 void CvPlayer::setCurrentEra(EraTypes eNewValue)
 {
 	PROFILE_EXTRA_FUNC();
-	CvPlot* pLoopPlot;
-	int iI;
 
 	if (getCurrentEra() != eNewValue)
 	{
 		EraTypes eOldEra = m_eCurrentEra;
 		m_eCurrentEra = eNewValue;
 
+		// Toffer - Heritage may change commerce output with era.
+		for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
+		{
+			changeExtraCommerce100((CommerceTypes)iI, getHeritageCommerceEraChange((CommerceTypes)iI, eNewValue));
+		}
+
 		if (GC.getGame().getActiveTeam() != NO_TEAM)
 		{
-			for (iI = 0; iI < GC.getMap().numPlots(); iI++)
+			for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 			{
-				pLoopPlot = GC.getMap().plotByIndex(iI);
-				pLoopPlot->updateGraphicEra();
+				CvPlot* plotX = GC.getMap().plotByIndex(iI);
+				plotX->updateGraphicEra();
 
-				if (pLoopPlot->getRevealedImprovementType(GC.getGame().getActiveTeam(), true) != NO_IMPROVEMENT)
+				if (plotX->getRevealedImprovementType(GC.getGame().getActiveTeam(), true) != NO_IMPROVEMENT
+				&& (plotX->getOwner() == getID() || !plotX->isOwned() && getID() == GC.getGame().getActivePlayer()))
 				{
-					if ((pLoopPlot->getOwner() == getID()) || (!(pLoopPlot->isOwned()) && (getID() == GC.getGame().getActivePlayer())))
-					{
-						pLoopPlot->setLayoutDirty(true);
-					}
+					plotX->setLayoutDirty(true);
 				}
 			}
 		}
@@ -12509,20 +12510,15 @@ void CvPlayer::setCurrentEra(EraTypes eNewValue)
 		// dirty all of this player's cities...
 		foreach_ (CvCity* city, cities())
 		{
-			if (city->getOwner() == getID())
+			//TB Era Advance Free Specialist Type
+			for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 			{
-				//TB Era Advance Free Specialist Type
-	//Team Project (6)
-				for (iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
+				if (getEraAdvanceFreeSpecialistCount((SpecialistTypes)iI) > 0)
 				{
-					if (getEraAdvanceFreeSpecialistCount((SpecialistTypes)iI) > 0)
-					{
-						city->changeFreeSpecialistCount((SpecialistTypes)iI, getEraAdvanceFreeSpecialistCount((SpecialistTypes)iI), true);
-					}
+					city->changeFreeSpecialistCount((SpecialistTypes)iI, getEraAdvanceFreeSpecialistCount((SpecialistTypes)iI), true);
 				}
-
-				city->setLayoutDirty(true);
 			}
+			city->setLayoutDirty(true);
 		}
 
 		//update unit eras
@@ -12542,17 +12538,18 @@ void CvPlayer::setCurrentEra(EraTypes eNewValue)
 			gDLL->getInterfaceIFace()->setDirty(Soundtrack_DIRTY_BIT, true);
 		}
 
-		if (isHumanPlayer() && (getCurrentEra() != GC.getGame().getStartEra()) && !GC.getGame().isNetworkMultiPlayer())
+		if (isHumanPlayer()
+		&& getCurrentEra() != GC.getGame().getStartEra()
+		&& !GC.getGame().isNetworkMultiPlayer()
+		&& GC.getGame().isFinalInitialized()
+		&& !gDLL->GetWorldBuilderMode())
 		{
-			if (GC.getGame().isFinalInitialized() && !(gDLL->GetWorldBuilderMode()))
+			CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_PYTHON_SCREEN);
+			if (pInfo)
 			{
-				CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_PYTHON_SCREEN);
-				if (pInfo)
-				{
-					pInfo->setData1(eNewValue);
-					pInfo->setText(L"showEraMovie");
-					addPopup(pInfo);
-				}
+				pInfo->setData1(eNewValue);
+				pInfo->setText(L"showEraMovie");
+				addPopup(pInfo);
 			}
 		}
 	}
@@ -19601,6 +19598,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 			}
 		}
 		WRAPPER_READ_ARRAY(wrapper, "CvPlayer", NUM_COMMERCE_TYPES, m_extraCommerce);
+		WRAPPER_READ(wrapper, "CvPlayer", &m_bHasLanguage);
 		//Example of how to skip element
 		//WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iPopulationgrowthratepercentage, SAVE_VALUE_ANY);
 	}
@@ -20405,6 +20403,7 @@ void CvPlayer::write(FDataStreamBase* pStream)
 				WRAPPER_WRITE_CLASS_ENUM_DECORATED(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_HERITAGE, eType, "iType");
 			}
 		}
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_bHasLanguage);
 		WRAPPER_WRITE_ARRAY(wrapper, "CvPlayer", NUM_COMMERCE_TYPES, m_extraCommerce);
 	}
 	WRAPPER_WRITE_OBJECT_END(wrapper);
@@ -27923,15 +27922,17 @@ void CvPlayer::clearModifierTotals()
 	m_iFreeSpecialistperNationalWonderCount = 0;
 	m_iFreeSpecialistperTeamProjectCount = 0;
 	m_iExtraGoodyCount = 0;
-	//Team Project (5)
+
 	m_iAllReligionsActiveCount = 0;
-	//Team Project (3)
+
 	m_iExtraNationalCaptureProbabilityModifier = 0;
 	m_iExtraNationalCaptureResistanceModifier = 0;
-	//Team Project (6)
+
 	m_iExtraStateReligionSpreadModifier = 0;
 	m_iExtraNonStateReligionSpreadModifier = 0;
 	m_iNationalGreatPeopleRate = 0;
+
+	m_bHasLanguage = false;
 
 	m_iBaseMergeSelection = FFreeList::INVALID_INDEX;
 	m_iFirstMergeSelection = FFreeList::INVALID_INDEX;
@@ -28098,7 +28099,6 @@ void CvPlayer::clearModifierTotals()
 		m_aiFreeCityYield[iI] = 0;
 		m_aiSpecialistExtraYield[iI] = 0;
 		m_aiLessYieldThreshold[iI] = 0;
-		//Team Project (7)
 		m_aiGoldenAgeYield[iI] = 0;
 		//TB Traits end
 	}
@@ -28106,6 +28106,7 @@ void CvPlayer::clearModifierTotals()
 	for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 	{
 		m_aiFreeCityCommerce[iI] = 0;
+		m_extraCommerce[iI] = 0;
 		m_aiCommerceRate[iI] = 0;
 		m_abCommerceDirty[iI] = false;
 		m_aiCommerceRateModifier[iI] = 0;
@@ -28115,7 +28116,6 @@ void CvPlayer::clearModifierTotals()
 		m_aiStateReligionBuildingCommerce[iI] = 0;
 		m_aiSpecialistExtraCommerce[iI] = 0;
 		m_aiCommerceFlexibleCount[iI] = 0;
-		//Team Project (7)
 		m_aiGoldenAgeCommerce[iI] = 0;
 	}
 
@@ -30774,6 +30774,11 @@ void CvPlayer::processTech(const TechTypes eTech, const int iChange)
 	changeTechScore(getScoreValueOfTech(eTech) * iChange);
 	changeTechInflation(tech.getInflationModifier() * iChange);
 
+	if (tech.isLanguage())
+	{
+		m_bHasLanguage = true;
+	}
+
 	for (int i = 0; i < NUM_COMMERCE_TYPES; i++)
 	{
 		changeCommerceRateModifier(static_cast<CommerceTypes>(i), tech.getCommerceModifier(i) * iChange);
@@ -30795,6 +30800,13 @@ bool CvPlayer::canAddHeritage(const HeritageTypes eType) const
 	{
 		return false;
 	}
+	const CvHeritageInfo& heritage = GC.getHeritageInfo(eType);
+
+	if (heritage.needLanguage() && !m_bHasLanguage)
+	{
+		return false;
+	}
+
 	return true;
 }
 
@@ -30827,10 +30839,11 @@ void CvPlayer::processHeritage(const HeritageTypes eType, const int iChange)
 	PROFILE_EXTRA_FUNC();
 
 	const CvHeritageInfo& heritage = GC.getHeritageInfo(eType);
+	const EraTypes eEra = getCurrentEra();
 
-	foreach_(const TechCommerceArray& pair, heritage.getTechCommerceChanges100())
+	foreach_(const EraCommerceArray& pair, heritage.getEraCommerceChanges100())
 	{
-		if (GET_TEAM(getTeam()).isHasTech(pair.first))
+		if (eEra >= pair.first)
 		{
 			for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 			{
@@ -30840,15 +30853,15 @@ void CvPlayer::processHeritage(const HeritageTypes eType, const int iChange)
 	}
 }
 
-int CvPlayer::getHeritageCommerceTechChange(const CommerceTypes eType, const TechTypes eTech) const
+int CvPlayer::getHeritageCommerceEraChange(const CommerceTypes eType, const EraTypes eEra) const
 {
 	PROFILE_EXTRA_FUNC();
 	int iCommerce100 = 0;
 	foreach_(const HeritageTypes eTypeX, getHeritage())
 	{
-		foreach_(const TechCommerceArray& pair, GC.getHeritageInfo(eTypeX).getTechCommerceChanges100())
+		foreach_(const EraCommerceArray& pair, GC.getHeritageInfo(eTypeX).getEraCommerceChanges100())
 		{
-			if (eTech == pair.first)
+			if (eEra == pair.first)
 			{
 				iCommerce100 += pair.second[eType];
 			}

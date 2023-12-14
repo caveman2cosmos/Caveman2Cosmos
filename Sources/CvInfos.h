@@ -368,6 +368,7 @@ public:
 	bool isIgnoreIrrigation() const;
 	bool isWaterWork() const;
 	bool isRiverTrade() const;
+	inline bool isLanguage() const { return m_bLanguage;}
 
 	bool isCanPassPeaks() const;
 	bool isMoveFastPeaks() const;
@@ -483,6 +484,7 @@ protected:
 	bool m_bIgnoreIrrigation;
 	bool m_bWaterWork;
 	bool m_bRiverTrade;
+	bool m_bLanguage;
 	bool m_bDCMAirBombTech1;
 	bool m_bDCMAirBombTech2;
 	bool m_bGlobal;
