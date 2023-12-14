@@ -2156,68 +2156,6 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FOLKLORE_BAIRDS_TAPIR</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FOLKLORE_BAIRDS_TAPIR</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
-			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_FOLKLORE_BAIRDS_TAPIR</FreeBuilding>
-			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_BAIRDS_TAPIR</ArtDefineTag>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<TechType>TECH_LANGUAGE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-80</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_SEDENTARY_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_CLASSICAL_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_MEDIEVAL_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_RENAISSANCE_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-			</TechCommerceChanges>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_BALL_PYTHON</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -3087,14 +3025,14 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FOLKLORE_BABIRUSA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WILD_BOAR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_LOWLAND_TAPIR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SWINE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_MOUNTAIN_TAPIR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WARTHOG</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_BAIRDS_TAPIR</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_TAPIR_BAIRDS</Type>
+				<Type>HERITAGE_FOLKLORE_TAPIR_LOWLAND</Type>
 				<Type>HERITAGE_FOLKLORE_TAPIR_MALAYAN</Type>
+				<Type>HERITAGE_FOLKLORE_TAPIR_MOUNTAIN</Type>
 			</PrereqOrHeritage>
 			<iCost>250</iCost>
 			<FreeBuilding>BUILDING_FOLKLORE_T_BOAR</FreeBuilding>
@@ -3247,68 +3185,6 @@
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_FOLKLORE_BLUE_FOOTED_BOOBY</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_BLUE_FOOTED_BOOBY</ArtDefineTag>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<TechType>TECH_LANGUAGE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-80</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_SEDENTARY_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_CLASSICAL_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_MEDIEVAL_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_RENAISSANCE_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-			</TechCommerceChanges>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_FOLKLORE_LOWLAND_TAPIR</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FOLKLORE_LOWLAND_TAPIR</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
-			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_FOLKLORE_LOWLAND_TAPIR</FreeBuilding>
-			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_LOWLAND_TAPIR</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -5394,12 +5270,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_MAMMOTH</BuildingType>
-			</PrereqOrBuildings>
 			<PrereqOrHeritage>
 				<Type>HERITAGE_FOLKLORE_AFRICAN_ELEPHANT</Type>
 				<Type>HERITAGE_FOLKLORE_ASIAN_ELEPHANT</Type>
+				<Type>HERITAGE_FOLKLORE_MAMMOTH</Type>
 				<Type>HERITAGE_FOLKLORE_TAPIR_MALAYAN</Type>
 			</PrereqOrHeritage>
 			<iCost>250</iCost>
@@ -9724,68 +9598,6 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FOLKLORE_MOUNTAIN_TAPIR</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FOLKLORE_MOUNTAIN_TAPIR</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
-			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_FOLKLORE_MOUNTAIN_TAPIR</FreeBuilding>
-			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_MOUNTAIN_TAPIR</ArtDefineTag>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<TechType>TECH_LANGUAGE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-80</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_SEDENTARY_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_CLASSICAL_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_MEDIEVAL_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_RENAISSANCE_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-			</TechCommerceChanges>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_MUSKOX</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -11041,68 +10853,6 @@
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_FOLKLORE_GROUND_SLOTH</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_GROUND_SLOTH</ArtDefineTag>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<TechType>TECH_LANGUAGE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-80</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_SEDENTARY_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_CLASSICAL_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_MEDIEVAL_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_RENAISSANCE_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-			</TechCommerceChanges>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_FOLKLORE_MAMMOTH</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FOLKLORE_MAMMOTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
-			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_FOLKLORE_MAMMOTH</FreeBuilding>
-			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_MAMMOTH</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -14935,102 +14685,6 @@
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_FOLKLORE_T_TAPIR</Type>
-			<SpecialBuildingType>SPECIALBUILDING_FOLKLORE_TAXONOMY</SpecialBuildingType>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FOLKLORE_T_TAPIR</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_LOWLAND_TAPIR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_MOUNTAIN_TAPIR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_BAIRDS_TAPIR</BuildingType>
-			</PrereqOrBuildings>
-			<PrereqOrHeritage>
-				<Type>HERITAGE_FOLKLORE_TAPIR_MALAYAN</Type>
-			</PrereqOrHeritage>
-			<iCost>250</iCost>
-			<FreeBuilding>BUILDING_FOLKLORE_T_TAPIR</FreeBuilding>
-			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_T_TAPIR</ArtDefineTag>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<TechType>TECH_LANGUAGE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-80</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_CLASSICAL_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_MEDIEVAL_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_RENAISSANCE_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_INDUSTRIAL_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-						</CommercePercents>
-				</TechCommerceChange>
-			</TechCommerceChanges>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_EDUCATION</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_BIOLOGY</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_DESERT_TARANTULA</Type>

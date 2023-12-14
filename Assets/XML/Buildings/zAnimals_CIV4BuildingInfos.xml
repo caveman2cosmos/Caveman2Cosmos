@@ -2250,18 +2250,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_REMAINS_MAMMOTH</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_REMAINS_MAMMOTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_FOLKLORE_MAMMOTH</BuildingType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
+			<PrereqRawVicinityBonuses>
+				<VicinityBonus>BONUS_MAMMOTH</VicinityBonus>
+			</PrereqRawVicinityBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>

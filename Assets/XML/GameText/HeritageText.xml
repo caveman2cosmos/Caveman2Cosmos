@@ -34,6 +34,33 @@
 		<Russian>Ìèô î æàáå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_MAMMOTH</Tag>
+		<English>Folklore - Mammoth</English>
+		<French>Mythe du Mammouth</French>
+		<German>Mythos des Mammuts</German>
+		<Italian>Mito del mammut</Italian>
+		<Polish>Mit Mamutów</Polish>
+		<Russian>Ìèô î ìàìîíòå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TAPIR_BAIRDS</Tag>
+		<English>Folklore - Baird's Tapir</English>
+		<French>Mythe du Tapir de Baird</French>
+		<German>Mythos des Baird-Tapirs</German>
+		<Italian>Mito del tapiro di Baird</Italian>
+		<Polish>Mit - Tapir Panamski</Polish>
+		<Russian>Ìèô î òàïèðå Áýðäà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TAPIR_LOWLAND</Tag>
+		<English>Folklore - Lowland Tapir</English>
+		<French>Mythe du Tapir du Brésil</French>
+		<German>Mythos des Flachlandtapirs</German>
+		<Italian>Mito del tapiro di pianura</Italian>
+		<Polish>Mit - Tapir</Polish>
+		<Russian>Ìèô î áðàç. òàïèðå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TAPIR_MALAYAN</Tag>
 		<English>Folklore - Malayan Tapir</English>
 		<French>Mythe du Tapir Malais</French>
@@ -43,7 +70,20 @@
 		<Russian>Ìèô î ìàë. òàïèðå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TAPIR_MOUNTAIN</Tag>
+		<English>Folklore - Mountain Tapir</English>
+		<French>Mythe du Tapir des Montagnes</French>
+		<German>Mythos des Bergtapirs</German>
+		<Italian>Mito del tapiro delle Ande</Italian>
+		<Polish>Mit - Tapir Górski</Polish>
+		<Russian>Ìèô î ãîðíîì òàïèðå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXONOMY_AMPHIBIANS</Tag>
 		<English>Taxonomy - Amphibians</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXONOMY_TAPIR</Tag>
+		<English>Taxonomy - Tapir</English>
 	</TEXT>
 </Civ4GameText>

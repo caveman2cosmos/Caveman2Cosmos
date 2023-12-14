@@ -102,16 +102,6 @@
 			<Button>Art/Interface/Buttons/Units/Badger.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_BAIRDS_TAPIR</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF>Art/empty.nif</NIF>
-			<KFM/>
-			<Button>Art/Interface/Buttons/Units/Tapir.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_FOLKLORE_BALL_PYTHON</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
@@ -240,16 +230,6 @@
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/booby.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_LOWLAND_TAPIR</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF>Art/empty.nif</NIF>
-			<KFM/>
-			<Button>Art/Interface/Buttons/Units/btapir.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_FOLKLORE_BROWN_BEAR</Type>
@@ -1102,16 +1082,6 @@
 			<Button>Art/Interface/Buttons/Units/Moose.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_MOUNTAIN_TAPIR</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF>Art/empty.nif</NIF>
-			<KFM/>
-			<Button>Art/Interface/Buttons/Units/mttapir.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_FOLKLORE_MUSKOX</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
@@ -1270,16 +1240,6 @@
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Groundsloth.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_MAMMOTH</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF>Art/empty.nif</NIF>
-			<KFM/>
-			<Button>Art/Interface/Buttons/Buildings/PaleolithicMammothMyth.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_REMAINS_MAMMOTH</Type>
@@ -1790,16 +1750,6 @@
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Tdevil.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_T_TAPIR</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF>Art/empty.nif</NIF>
-			<KFM/>
-			<Button>Art/Interface/Buttons/Units/tapir.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_FOLKLORE_DESERT_TARANTULA</Type>

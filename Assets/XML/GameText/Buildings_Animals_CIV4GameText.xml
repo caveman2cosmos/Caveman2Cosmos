@@ -638,19 +638,6 @@
 		<Russian>Ìèô î áàðñóêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_BAIRDS_TAPIR</Tag>
-		<English>Folklore - Baird's Tapir</English>
-		<French>Mythe du Tapir de Baird</French>
-		<German>
-			<Text>Mythos des Baird-Tapirs:Mythos des Baird-Tapirs:Mythos des Baird-Tapirs:Mythos des Baird-Tapirs</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del tapiro di Baird</Italian>
-		<Polish>Mit - Tapir Panamski</Polish>
-		<Russian>Ìèô î òàïèðå Áýðäà</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BALL_PYTHON</Tag>
 		<English>Folklore - Ball Python</English>
 		<French>Mythe du Python royal</French>
@@ -778,19 +765,6 @@
 		</German>
 		<Italian>Mito del bongo</Italian>
 		<Russian>Ìèô î áîíãî</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_LOWLAND_TAPIR</Tag>
-		<English>Folklore - Lowland Tapir</English>
-		<French>Mythe du Tapir du Brésil</French>
-		<German>
-			<Text>Mythos des Flachlandtapirs:Mythos des Flachlandtapirs:Mythos des Flachlandtapirs:Mythos des Flachlandtapirs</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del tapiro di pianura</Italian>
-		<Polish>Mit - Tapir</Polish>
-		<Russian>Ìèô î áðàç. òàïèðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_CAPE_BUFFALO</Tag>
@@ -1907,19 +1881,6 @@
 		<Russian>Ìèô î ëîñå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_MOUNTAIN_TAPIR</Tag>
-		<English>Folklore - Mountain Tapir</English>
-		<French>Mythe du Tapir des Montagnes</French>
-		<German>
-			<Text>Mythos des Bergtapirs:Mythos des Bergtapirs:Mythos des Bergtapirs:Mythos des Bergtapirs</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del tapiro delle Ande</Italian>
-		<Polish>Mit - Tapir Górski</Polish>
-		<Russian>Ìèô î ãîðíîì òàïèðå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_MUSKOX</Tag>
 		<English>Folklore - Muskox</English>
 		<French>Mythe du Bœuf musqué</French>
@@ -2139,19 +2100,6 @@
 		</German>
 		<Italian>Mito del bradipo gigante</Italian>
 		<Russian>Ìèô î ãèã. ëåíèâöå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_MAMMOTH</Tag>
-		<English>Folklore - Mammoth</English>
-		<French>Mythe du Mammouth</French>
-		<German>
-			<Text>Mythos des Mammuts:Mythos des Mammuts:Mythos des Mammuts:Mythos des Mammuts</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del mammut</Italian>
-		<Polish>Mit Mamutów</Polish>
-		<Russian>Ìèô î ìàìîíòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_PALEOLITHIC_MARSUPIAL</Tag>
@@ -2710,19 +2658,6 @@
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_SWINE</Tag>
 		<English>Folklore - Swine</English>
 		<Italian>Mito del maiale</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_TAPIR</Tag>
-		<English>Folklore (T) - Tapir</English>
-		<French>Mythe du Tapir (T)</French>
-		<German>
-			<Text>Mythos der Tapire:Mythos der Tapire:Mythos der Tapire:Mythos der Tapire</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del tapiro</Italian>
-		<Polish>Mit (T) - Tapir</Polish>
-		<Russian>Ìèô î òàïèðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_DESERT_TARANTULA</Tag>

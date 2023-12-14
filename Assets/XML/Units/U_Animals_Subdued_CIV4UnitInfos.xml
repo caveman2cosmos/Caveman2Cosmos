@@ -2481,13 +2481,15 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_BOAR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_LOWLAND_TAPIR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_TAPIR</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_TAXONOMY_TAPIR</Type>
+				<Type>HERITAGE_FOLKLORE_TAPIR_LOWLAND</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -12541,13 +12543,13 @@
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_BOAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_ELEPHANT</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_TAPIR</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<Heritage>
+				<Type>HERITAGE_TAXONOMY_TAPIR</Type>
 				<Type>HERITAGE_FOLKLORE_TAPIR_MALAYAN</Type>
 			</Heritage>
 			<iCost>-1</iCost>
@@ -12606,13 +12608,15 @@
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_MAMMOTH</BuildingType>
 				<BuildingType>BUILDING_REMAINS_MAMMOTH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_ELEPHANT</BuildingType>
 				<BuildingType>BUILDING_CAMP_MAMMOTH</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_MAMMOTH</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -14020,13 +14024,15 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_BOAR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_MOUNTAIN_TAPIR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_TAPIR</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_TAXONOMY_TAPIR</Type>
+				<Type>HERITAGE_FOLKLORE_TAPIR_MOUNTAIN</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -21047,14 +21053,16 @@
 			<Buildings>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_BAIRDS_TAPIR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_BOAR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_TAPIR</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_TAXONOMY_TAPIR</Type>
+				<Type>HERITAGE_FOLKLORE_TAPIR_BAIRDS</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
