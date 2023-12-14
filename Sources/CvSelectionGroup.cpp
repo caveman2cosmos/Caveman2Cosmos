@@ -931,7 +931,7 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 			}
 			case MISSION_HERITAGE:
 			{
-				if (pLoopUnit->canAddHeritage(pPlot, (HeritageTypes)iData1))
+				if (pLoopUnit->canAddHeritage(pPlot, (HeritageTypes)iData1, bTestVisible))
 				{
 					return true;
 				}

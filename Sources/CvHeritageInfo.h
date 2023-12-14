@@ -24,14 +24,22 @@ public:
 
 	inline void setMissionType(const int iNewType) { m_iMissionType = iNewType; }
 	inline int getMissionType() const { return m_iMissionType; }
+
 	inline bool needLanguage() const { return m_bNeedLanguage; }
+	inline int getPrereqTech() const { return m_iPrereqTech; }
+
+	inline const std::vector<HeritageTypes>& getPrereqOrHeritage() const { return m_prereqOrHeritage; }
 
 	inline const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 	inline const IDValueMap<EraTypes, CommerceArray>& getEraCommerceChanges100() const { return m_eraCommerceChanges; }
 
 private:
-	int m_iMissionType;
 	bool m_bNeedLanguage;
+
+	int m_iMissionType;
+	int m_iPrereqTech;
+
+	std::vector<HeritageTypes> m_prereqOrHeritage;
 
 	CvPropertyManipulators m_PropertyManipulators;
 	IDValueMap<EraTypes, CommerceArray> m_eraCommerceChanges;

@@ -2420,11 +2420,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 			}
 			else if (GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_HERITAGE)
 			{
-				if (pMissionCity && GET_PLAYER(pMissionCity->getOwner()).canAddHeritage((HeritageTypes)GC.getActionInfo(widgetDataStruct.m_iData1).getMissionData()))
-				{
-					szBuffer.append(NEWLINE);
-					GAMETEXT.setHeritageHelp(szBuffer, (HeritageTypes)GC.getActionInfo(widgetDataStruct.m_iData1).getMissionData(), pMissionCity, false, true);
-				}
+				GAMETEXT.setHeritageHelp(szBuffer, (HeritageTypes)GC.getActionInfo(widgetDataStruct.m_iData1).getMissionData(), pMissionCity, false, true);
 			}
 			else if (GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_DISCOVER)
 			{

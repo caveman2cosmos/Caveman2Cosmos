@@ -30812,7 +30812,7 @@ bool CvPlayer::hasHeritage(const HeritageTypes eType) const
 	return algo::any_of_equal(m_myHeritage, eType);
 }
 
-bool CvPlayer::canAddHeritage(const HeritageTypes eType) const
+bool CvPlayer::canAddHeritage(const HeritageTypes eType, const bool bTestVisible) const
 {
 	PROFILE_EXTRA_FUNC();
 
@@ -30825,6 +30825,31 @@ bool CvPlayer::canAddHeritage(const HeritageTypes eType) const
 	if (heritage.needLanguage() && !m_bHasLanguage)
 	{
 		return false;
+	}
+
+	if (!GET_TEAM(getTeam()).isHasTech((TechTypes)heritage.getPrereqTech()))
+	{
+		return false;
+	}
+
+	if (!bTestVisible)
+	{
+		bool bValid = false;
+		bool bRequires = false;
+		foreach_(const HeritageTypes eTypeX, heritage.getPrereqOrHeritage())
+		{
+			bRequires = true;
+
+			if (hasHeritage(eTypeX))
+			{
+				bValid = true;
+				break;
+			}
+		}
+		if (bRequires && !bValid)
+		{
+			return false;
+		}
 	}
 
 	return true;

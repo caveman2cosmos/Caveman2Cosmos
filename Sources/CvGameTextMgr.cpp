@@ -17252,7 +17252,23 @@ void CvGameTextMgr::setTechHelp(CvWStringBuffer &szBuffer, TechTypes eTech, bool
 
 		bFirst = true;
 
-		for (int iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
+		for (int iI = GC.getNumHeritageInfos() - 1; iI > -1; --iI)
+		{
+			if (GC.getHeritageInfo((HeritageTypes)iI).getPrereqTech() == eTech)
+			{
+				szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_TECHHELP_CAN_CONSTRUCT").c_str());
+				szTempBuffer.Format(
+					SETCOLR L"<link=%s>%s</link>" ENDCOLR , TEXT_COLOR("COLOR_BUILDING_TEXT"),
+					CvWString(GC.getHeritageInfo((HeritageTypes)iI).getType()).GetCString(),
+					GC.getHeritageInfo((HeritageTypes)iI).getDescription()
+				);
+				setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", bFirst);
+				bFirst = false;
+			}
+		}
+		bFirst = true;
+
+		for (int iI = GC.getNumBuildingInfos() - 1; iI > -1; --iI)
 		{
 			const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
 			if (!bPlayerContext || !playerAct->isProductionMaxedBuilding(eLoopBuilding))
@@ -23563,12 +23579,29 @@ void CvGameTextMgr::setHeritageHelp(CvWStringBuffer &szBuffer, const HeritageTyp
 	const PlayerTypes ePlayer = pCity ? pCity->getOwner() : GC.getGame().getActivePlayer();
 	const CvPlayer* player = ePlayer != NO_PLAYER ? &GET_PLAYER(ePlayer) : NULL;
 
+	const bool bCanAddHeritage = player && player->canAddHeritage(eType);
+
 	const CvHeritageInfo& heritage = GC.getHeritageInfo(eType);
 
 	if (!CvWString(heritage.getHelp()).empty())
 	{
 		szBuffer.append(NEWLINE);
 		szBuffer.append(heritage.getHelp());
+	}
+
+	if (bCivilopediaText || !bCanAddHeritage)
+	{
+		if (!bTechChooserText && heritage.getPrereqTech() != NO_TECH)
+		{
+			szBuffer.append(NEWLINE);
+			szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_REQUIRES_STRING", GC.getTechInfo((TechTypes)heritage.getPrereqTech()).getTextKeyWide()));
+		}
+		bool bFirst = true;
+		foreach_(const HeritageTypes eTypeX, heritage.getPrereqOrHeritage())
+		{
+			setListHelp(szBuffer, gDLL->getText("TXT_KEY_REQUIRES"), GC.getHeritageInfo(eTypeX).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
+			bFirst = false;
+		}
 	}
 
 	foreach_(const EraCommerceArray& pair, heritage.getEraCommerceChanges100())

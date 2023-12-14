@@ -10348,7 +10348,7 @@ bool CvUnit::construct(BuildingTypes eBuilding)
 	return true;
 }
 
-bool CvUnit::canAddHeritage(const CvPlot* pPlot, const HeritageTypes eType) const
+bool CvUnit::canAddHeritage(const CvPlot* pPlot, const HeritageTypes eType, const bool bTestVisible) const
 {
 	if (eType == NO_HERITAGE || !m_pUnitInfo->getHasHeritage(eType))
 	{
@@ -10360,7 +10360,7 @@ bool CvUnit::canAddHeritage(const CvPlot* pPlot, const HeritageTypes eType) cons
 		return false;
 	}
 
-	if (!GET_PLAYER(getOwner()).canAddHeritage(eType))
+	if (!GET_PLAYER(getOwner()).canAddHeritage(eType, bTestVisible))
 	{
 		return false;
 	}

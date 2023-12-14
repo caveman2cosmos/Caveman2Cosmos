@@ -68,7 +68,7 @@ public:
 	void processTech(const TechTypes eTech, const int iChange);
 
 	bool hasHeritage(const HeritageTypes eType) const;
-	bool canAddHeritage(const HeritageTypes eType) const;
+	bool canAddHeritage(const HeritageTypes eType, const bool bTestVisible = false) const;
 	void setHeritage(const HeritageTypes eType, const bool bNewValue);
 	int getHeritageCommerceEraChange(const CommerceTypes eType, const EraTypes eEra) const;
 

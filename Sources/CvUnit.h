@@ -767,7 +767,7 @@ public:
 
 	bool canConstruct(const CvPlot* pPlot, BuildingTypes eBuilding, bool bTestVisible = false) const;
 	bool construct(BuildingTypes eBuilding);
-	bool canAddHeritage(const CvPlot* pPlot, const HeritageTypes eType) const;
+	bool canAddHeritage(const CvPlot* pPlot, const HeritageTypes eType, const bool bTestVisible = false) const;
 	bool addHeritage(const HeritageTypes eType);
 
 	TechTypes getDiscoveryTech() const;

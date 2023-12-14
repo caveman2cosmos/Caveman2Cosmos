@@ -623,11 +623,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_HERITAGE</Tag>
-		<English>Establish Heritage</English>
+		<English>Add Heritage</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_HERITAGE_HELP</Tag>
-		<English>Establish a national heritage. It consumes the unit.</English>
+		<English>[ICON_BULLET]Consumes the unit.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_HURRY_FOOD</Tag>

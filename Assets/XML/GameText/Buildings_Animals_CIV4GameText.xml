@@ -572,19 +572,6 @@
 		<Russian>Ìèô îá àôð. ñëîíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_AMPHIBIANS</Tag>
-		<English>Folklore (T) - Amphibians</English>
-		<French>Mythe - Amphibiens (T)</French>
-		<German>
-			<Text>Mythos der Amphibien:Mythos der Amphibien:Mythos der Amphibien:Mythos der Amphibien</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito degli anfibi</Italian>
-		<Polish>Mit (T) Płazów</Polish>
-		<Russian>Ìèô îá àìôèáèè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Tag>
 		<English>Folklore pseudobuildings represent myths, legends, stories, fables and commoner knowledge about animals and landscape.</English>
 		<German>Die Folklore-Pseudogebäude repräsentieren Mythen, Legenden, Geschichten, Fabeln und allgemeines Wissen über Tiere und Landschaften.</German>
