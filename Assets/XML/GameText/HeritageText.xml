@@ -10,12 +10,37 @@
 		<Russian>Ìèô î òðóáêîçóáå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_AFRICAN_ELEPHANT</Tag>
+		<English>Folklore - African Elephant</English>
+		<French>Mythe de l'Eléphant d'Afrique</French>
+		<German>Mythos des Afrikanischen Elefanten</German>
+		<Italian>Mito dell'elefante africano</Italian>
+		<Russian>Ìèô îá àôð. ñëîíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_ASIAN_ELEPHANT</Tag>
+		<English>Folklore - Asian Elephant</English>
+		<French>Mythe de l'Eléphant d'Asie</French>
+		<German>Mythos des Asiatischen Elefanten</German>
+		<Italian>Mito dell'elefante asiatico</Italian>
+		<Russian>Ìèô îá àçèàò. ñëîíå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_DART_FROG</Tag>
 		<English>Folklore - Dart Frog</English>
 		<French>Mythe de la Grenouille venimeuse</French>
 		<German>Mythos des Baumsteigerfroschs</German>
 		<Italian>Mito della rana velenosa</Italian>
 		<Russian>Ìèô î æàáå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TAPIR_MALAYAN</Tag>
+		<English>Folklore - Malayan Tapir</English>
+		<French>Mythe du Tapir Malais</French>
+		<German>Mythos des Schabrackentapirs</German>
+		<Italian>Mito del tapiro malese</Italian>
+		<Polish>Mit - Tapir Malajski</Polish>
+		<Russian>Ìèô î ìàë. òàïèðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXONOMY_AMPHIBIANS</Tag>

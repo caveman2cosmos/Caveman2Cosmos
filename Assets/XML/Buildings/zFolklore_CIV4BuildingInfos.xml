@@ -1501,68 +1501,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FOLKLORE_AFRICAN_ELEPHANT</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FOLKLORE_AFRICAN_ELEPHANT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
-			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_FOLKLORE_AFRICAN_ELEPHANT</FreeBuilding>
-			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_AFRICAN_ELEPHANT</ArtDefineTag>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<TechType>TECH_LANGUAGE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-80</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_SEDENTARY_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_CLASSICAL_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_MEDIEVAL_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_RENAISSANCE_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-			</TechCommerceChanges>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_AFRICAN_GREY_PARROT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1982,68 +1920,6 @@
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_FOLKLORE_MOON_BEAR</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_MOON_BEAR</ArtDefineTag>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<TechType>TECH_LANGUAGE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-80</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_SEDENTARY_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_CLASSICAL_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_MEDIEVAL_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_RENAISSANCE_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-			</TechCommerceChanges>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_FOLKLORE_ASIAN_ELEPHANT</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FOLKLORE_ASIAN_ELEPHANT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
-			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_FOLKLORE_ASIAN_ELEPHANT</FreeBuilding>
-			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_ASIAN_ELEPHANT</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -3213,11 +3089,13 @@
 				<BuildingType>BUILDING_FOLKLORE_WILD_BOAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_LOWLAND_TAPIR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SWINE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_MALAYAN_TAPIR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MOUNTAIN_TAPIR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WARTHOG</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BAIRDS_TAPIR</BuildingType>
 			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_TAPIR_MALAYAN</Type>
+			</PrereqOrHeritage>
 			<iCost>250</iCost>
 			<FreeBuilding>BUILDING_FOLKLORE_T_BOAR</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_T_BOAR</ArtDefineTag>
@@ -5517,11 +5395,13 @@
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_AFRICAN_ELEPHANT</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_ASIAN_ELEPHANT</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_MALAYAN_TAPIR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MAMMOTH</BuildingType>
 			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_AFRICAN_ELEPHANT</Type>
+				<Type>HERITAGE_FOLKLORE_ASIAN_ELEPHANT</Type>
+				<Type>HERITAGE_FOLKLORE_TAPIR_MALAYAN</Type>
+			</PrereqOrHeritage>
 			<iCost>250</iCost>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -9225,68 +9105,6 @@
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_FOLKLORE_MACKEREL</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_MACKEREL</ArtDefineTag>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<TechType>TECH_LANGUAGE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-80</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_SEDENTARY_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_CLASSICAL_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_MEDIEVAL_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_RENAISSANCE_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-			</TechCommerceChanges>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_FOLKLORE_MALAYAN_TAPIR</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FOLKLORE_MALAYAN_TAPIR</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
-			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_FOLKLORE_MALAYAN_TAPIR</FreeBuilding>
-			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_MALAYAN_TAPIR</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -15132,10 +14950,12 @@
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FOLKLORE_LOWLAND_TAPIR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_MALAYAN_TAPIR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MOUNTAIN_TAPIR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BAIRDS_TAPIR</BuildingType>
 			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_TAPIR_MALAYAN</Type>
+			</PrereqOrHeritage>
 			<iCost>250</iCost>
 			<FreeBuilding>BUILDING_FOLKLORE_T_TAPIR</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_T_TAPIR</ArtDefineTag>

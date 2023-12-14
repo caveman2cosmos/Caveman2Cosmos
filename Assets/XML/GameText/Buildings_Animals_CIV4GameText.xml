@@ -548,18 +548,6 @@
 		<Polish>Sieci na ryby były konstruowane przez bogatych by dostarczać im ciągle świeżych i egzotycznych gatunków ryb na ich wykwintne uczty.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_AFRICAN_ELEPHANT</Tag>
-		<English>Folklore - African Elephant</English>
-		<French>Mythe de l'Eléphant d'Afrique</French>
-		<German>
-			<Text>Mythos des Afrikanischen Elefanten:Mythos des Afrikanischen Elefanten:Mythos des Afrikanischen Elefanten:Mythos des Afrikanischen Elefanten</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito dell'elefante africano</Italian>
-		<Russian>Ìèô îá àôð. ñëîíå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Tag>
 		<English>Folklore pseudobuildings represent myths, legends, stories, fables and commoner knowledge about animals and landscape.</English>
 		<German>Die Folklore-Pseudogebäude repräsentieren Mythen, Legenden, Geschichten, Fabeln und allgemeines Wissen über Tiere und Landschaften.</German>
@@ -613,18 +601,6 @@
 		</German>
 		<Italian>Mito dell'armadillo a nove fasce</Italian>
 		<Russian>Ìèô î áðîíåíîñöå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_ASIAN_ELEPHANT</Tag>
-		<English>Folklore - Asian Elephant</English>
-		<French>Mythe de l'Eléphant d'Asie</French>
-		<German>
-			<Text>Mythos des Asiatischen Elefanten:Mythos des Asiatischen Elefanten:Mythos des Asiatischen Elefanten:Mythos des Asiatischen Elefanten</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito dell'elefante asiatico</Italian>
-		<Russian>Ìèô îá àçèàò. ñëîíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_AUROCHS</Tag>
@@ -1817,19 +1793,6 @@
 		</German>
 		<Italian>Mito dello sgombro</Italian>
 		<Russian>Ìèô î ìàêðåëå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_MALAYAN_TAPIR</Tag>
-		<English>Folklore - Malayan Tapir</English>
-		<French>Mythe du Tapir Malais</French>
-		<German>
-			<Text>Mythos des Schabrackentapirs:Mythos des Schabrackentapirs:Mythos des Schabrackentapirs:Mythos des Schabrackentapirs</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del tapiro malese</Italian>
-		<Polish>Mit - Tapir Malajski</Polish>
-		<Russian>Ìèô î ìàë. òàïèðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_MANDRILL</Tag>

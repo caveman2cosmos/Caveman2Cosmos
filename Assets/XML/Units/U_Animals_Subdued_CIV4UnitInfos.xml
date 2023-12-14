@@ -5935,11 +5935,13 @@
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_ELEPHANT</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_AFRICAN_ELEPHANT</BuildingType>
 				<BuildingType>BUILDING_CAMP_ELEPHANT</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_AFRICAN_ELEPHANT</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -6108,7 +6110,6 @@
 				<BuildingType>BUILDING_CAMP_ELEPHANT</BuildingType>
 				<BuildingType>BUILDING_HERD_ELEPHANT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_ASIAN_ELEPHANT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_ELEPHANT</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
@@ -6116,6 +6117,9 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_ASIAN_ELEPHANT</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -12537,13 +12541,15 @@
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_BOAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_ELEPHANT</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_MALAYAN_TAPIR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_TAPIR</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_TAPIR_MALAYAN</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
