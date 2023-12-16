@@ -591,7 +591,7 @@
 			</EraCommerceChanges>
 			<Button>Art/Interface/Buttons/Units/mttapir.dds</Button>
 		</HeritageInfo>
-		<BuildingInfo>
+		<HeritageInfo>
 			<Type>HERITAGE_FOLKLORE_WARTHOG</Type>
 			<Description>TXT_KEY_HERITAGE_FOLKLORE_WARTHOG</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
@@ -639,7 +639,7 @@
 				</EraCommerceChange>
 			</EraCommerceChanges>
 			<Button>Art/Interface/Buttons/Units/warthog.dds</Button>
-		</BuildingInfo>
+		</HeritageInfo>
 		<!-- Taxonomy -->
 		<HeritageInfo>
 			<Type>HERITAGE_TAXONOMY_AMPHIBIANS</Type>
