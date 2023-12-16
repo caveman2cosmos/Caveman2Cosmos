@@ -1545,6 +1545,7 @@ void cvInternalGlobals::registerGOMs()
 {
 	//	Sadly C++ doesn't have any reflection capability so need to do this explicitly
 	REGISTER_GOM(NO_GOM);
+	REGISTER_GOM(GOM_HERITAGE);
 	REGISTER_GOM(GOM_BUILDING);
 	REGISTER_GOM(GOM_PROMOTION);
 	REGISTER_GOM(GOM_TRAIT);

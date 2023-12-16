@@ -25,6 +25,7 @@
 #include "CvInfos.h"
 #include "CvTraitInfo.h"
 #include "CvImprovementInfo.h"
+#include "CvHeritageInfo.h"
 #include "CvTeamAI.h"
 #include "CvUnit.h"
 #include "CyCity.h"
@@ -867,35 +868,45 @@ bool CvGameObjectUnit::isTag(TagTypes eTag) const
 
 bool CvGameObjectPlot::isTag(TagTypes eTag) const
 {
-	const CvCity* pCity = m_pPlot->getPlotCity();
 	switch (eTag)
 	{
 		case TAG_FRESH_WATER:
+		{
 			return m_pPlot->isFreshWater();
-
+		}
 		case TAG_WATER:
+		{
 			return m_pPlot->isRiver() || m_pPlot->isWater();
-
+		}
 		case TAG_PEAK:
+		{
 			return m_pPlot->isPeak();
-
+		}
 		case TAG_HILL:
+		{
 			return m_pPlot->isHills();
-
+		}
 		case TAG_FLATLAND:
+		{
 			return m_pPlot->isFlatlands();
-
+		}
 		case TAG_OWNED:
+		{
 			return m_pPlot->isOwned();
-
+		}
 		case TAG_CITY:
+		{
 			return m_pPlot->isCity();
-
+		}
 		case TAG_ANARCHY:
+		{
+			const CvCity* pCity = m_pPlot->getPlotCity();
 			return pCity ? pCity->isDisorder() : false;
-
+		}
 		case TAG_COASTAL:
+		{
 			return m_pPlot->isCoastalLand();
+		}
 	}
 	return false;
 }
@@ -909,7 +920,7 @@ int CvGameObjectCity::getAttribute(AttributeTypes eAttribute) const
 {
 	switch (eAttribute)
 	{
-		case ATTRIBUTE_POPULATION:
+		case ATTRIBUTE_POPULATION: 
 			return m_pCity->getPopulation();
 
 		case ATTRIBUTE_HEALTH:
@@ -924,33 +935,34 @@ int CvGameObjectCity::getAttribute(AttributeTypes eAttribute) const
 int CvGameObjectGame::getAttribute(AttributeTypes eAttribute) const
 {
 	PROFILE_EXTRA_FUNC();
-	int iCount = 0;
 
 	switch (eAttribute)
 	{
-	case ATTRIBUTE_PLAYERS:
-
-		for (int iPlayer = 0; iPlayer < MAX_PLAYERS; ++iPlayer)
+		case ATTRIBUTE_PLAYERS:
 		{
-			const CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iPlayer);
-			if (kLoopPlayer.isAlive())
+			int iCount = 0;
+			for (int iPlayer = 0; iPlayer < MAX_PLAYERS; ++iPlayer)
 			{
-				++iCount;
+				if (GET_PLAYER((PlayerTypes)iPlayer).isAlive())
+				{
+					++iCount;
+				}
 			}
+			return iCount;
 		}
-		return iCount;
-
-	case ATTRIBUTE_TEAMS:
-		for (int iI = 0; iI < MAX_TEAMS; iI++)
+		case ATTRIBUTE_TEAMS:
 		{
-			if (GET_TEAM((TeamTypes)iI).isAlive())
+			int iCount = 0;
+			for (int iI = 0; iI < MAX_TEAMS; iI++)
 			{
-				++iCount;
+				if (GET_TEAM((TeamTypes)iI).isAlive())
+				{
+					++iCount;
+				}
 			}
+			return iCount;
 		}
-		return iCount;
 	}
-
 	return 0;
 }
 
@@ -964,16 +976,18 @@ bool CvGameObjectGame::hasGOM(GOMTypes eType, int iID) const
 	PROFILE_EXTRA_FUNC();
 	switch (eType)
 	{
+		case GOM_HERITAGE:
+		{
+			// Defer to players, combine with OR
+			bool bHasGOM = false;
+			foreach(GAMEOBJECT_PLAYER, bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
+			return bHasGOM;
+		}
 		case GOM_BUILDING:
 		{
 			// If there is any building of that type created, return true
 			return GC.getGame().getBuildingCreatedCount((BuildingTypes)iID) > 0;
 		}
-
-		case GOM_PROMOTION:
-			// This is not stored in a readily accessible way for the entire game, so return false
-			return false;
-
 		case GOM_TRAIT:
 		{
 			// Defer to players, combine with OR
@@ -981,48 +995,24 @@ bool CvGameObjectGame::hasGOM(GOMTypes eType, int iID) const
 			foreach(GAMEOBJECT_PLAYER, bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
 			return bHasGOM;
 		}
-
-		case GOM_FEATURE:
-			// This is not stored in a readily accessible way for the entire game, so return false
-			return false;
-
 		case GOM_OPTION:
 		{
-			const GameOptionTypes eOption = (GameOptionTypes) iID;
-			return GC.getGame().isOption(eOption);
+			return GC.getGame().isOption((GameOptionTypes)iID);
 		}
-
-		case GOM_TERRAIN:
-			// This is not stored in a readily accessible way for the entire game, so return false
-			return false;
-
 		case GOM_GAMESPEED:
 		{
-			const GameSpeedTypes eSpeed = (GameSpeedTypes) iID;
-			return GC.getGame().getGameSpeedType() == eSpeed;
+			return GC.getGame().getGameSpeedType() == iID;
 		}
-
-		case GOM_ROUTE:
-			// This is not stored in a readily accessible way for the entire game, so return false
-			return false;
-
-		case GOM_BONUS:
-			// This is not stored in a readily accessible way for the entire game, so return false
-			return false;
-
 		case GOM_UNITTYPE:
 		{
 			// If there is any unit of that type created, return true
-			return GC.getGame().getUnitCreatedCount((UnitTypes) iID) > 0;
+			return GC.getGame().getUnitCreatedCount((UnitTypes)iID) > 0;
 		}
-
 		case GOM_TECH:
 		{
 			// If any team has researched that tech, return true
-			const TechTypes eTech = (TechTypes) iID;
-			return GC.getGame().countKnownTechNumTeams(eTech) > 0;
+			return GC.getGame().countKnownTechNumTeams((TechTypes)iID) > 0;
 		}
-
 		case GOM_CIVIC:
 		{
 			// Defer to players, combine with OR
@@ -1030,31 +1020,30 @@ bool CvGameObjectGame::hasGOM(GOMTypes eType, int iID) const
 			foreach(GAMEOBJECT_PLAYER, bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
 			return bHasGOM;
 		}
-
 		case GOM_RELIGION:
 		{
 			// True if the religion has been founded
-			return GC.getGame().isReligionFounded((ReligionTypes) iID);
+			return GC.getGame().isReligionFounded((ReligionTypes)iID);
 		}
-
 		case GOM_CORPORATION:
 		{
 			// True if the corporation has been founded
-			return GC.getGame().isCorporationFounded((CorporationTypes) iID);
+			return GC.getGame().isCorporationFounded((CorporationTypes)iID);
 		}
-
-		case GOM_IMPROVEMENT:
-			// This is not stored in a readily accessible way for the entire game, so return false
-			return false;
-
-		case GOM_UNITCOMBAT:
-			// This only makes sense on units and maybe sometimes on plots and cities
-			return false;
-
 		case GOM_HANDICAP:
 		{
-			const HandicapTypes eHandicap = (HandicapTypes) iID;
-			return GC.getGame().getHandicapType() == eHandicap;
+			return GC.getGame().getHandicapType() == iID;
+		}
+		// This is not stored in a readily accessible way for the entire game, so return false
+		case GOM_PROMOTION:
+		case GOM_FEATURE:
+		case GOM_TERRAIN:
+		case GOM_ROUTE:
+		case GOM_BONUS:
+		case GOM_IMPROVEMENT:
+		case GOM_UNITCOMBAT:
+		{
+			return false;
 		}
 	}
 	return false;
@@ -1065,16 +1054,18 @@ bool CvGameObjectTeam::hasGOM(GOMTypes eType, int iID) const
 	PROFILE_EXTRA_FUNC();
 	switch (eType)
 	{
+		case GOM_HERITAGE:
+		{
+			// Defer to players, combine with OR
+			bool bHasGOM = false;
+			foreach(GAMEOBJECT_PLAYER, bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
+			return bHasGOM;
+		}
 		case GOM_BUILDING:
 		{
 			// If there is any building of that type in the team, return true
 			return m_pTeam->getBuildingCount((BuildingTypes)iID) > 0;
 		}
-
-		case GOM_PROMOTION:
-			// This is not stored in a readily accessible way for the entire team, so return false
-			return false;
-
 		case GOM_TRAIT:
 		{
 			// Defer to players, combine with OR
@@ -1082,31 +1073,14 @@ bool CvGameObjectTeam::hasGOM(GOMTypes eType, int iID) const
 			foreach(GAMEOBJECT_PLAYER, bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
 			return bHasGOM;
 		}
-
-		case GOM_FEATURE:
-			// This is not stored in a readily accessible way for the entire team, so return false
-			return false;
-
 		case GOM_OPTION:
 		{
-			const GameOptionTypes eOption = (GameOptionTypes) iID;
-			return GC.getGame().isOption(eOption);
+			return GC.getGame().isOption((GameOptionTypes)iID);
 		}
-
-		case GOM_TERRAIN:
-			// This is not stored in a readily accessible way for the entire team, so return false
-			return false;
-
 		case GOM_GAMESPEED:
 		{
-			const GameSpeedTypes eSpeed = (GameSpeedTypes) iID;
-			return GC.getGame().getGameSpeedType() == eSpeed;
+			return GC.getGame().getGameSpeedType() == iID;
 		}
-
-		case GOM_ROUTE:
-			// This is not stored in a readily accessible way for the entire team, so return false
-			return false;
-
 		case GOM_BONUS:
 		{
 			// Defer to players, combine with OR
@@ -1114,20 +1088,16 @@ bool CvGameObjectTeam::hasGOM(GOMTypes eType, int iID) const
 			foreach(GAMEOBJECT_PLAYER, bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
 			return bHasGOM;
 		}
-
 		case GOM_UNITTYPE:
 		{
 			// If there is any unit of that type in the team, return true
-			return m_pTeam->getUnitCount((UnitTypes) iID) > 0;
+			return m_pTeam->getUnitCount((UnitTypes)iID) > 0;
 		}
-
 		case GOM_TECH:
 		{
 			// If the team has researched that tech, return true
-			const TechTypes eTech = (TechTypes) iID;
-			return m_pTeam->isHasTech(eTech);
+			return m_pTeam->isHasTech((TechTypes)iID);
 		}
-
 		case GOM_CIVIC:
 		{
 			// Defer to players, combine with OR
@@ -1135,7 +1105,6 @@ bool CvGameObjectTeam::hasGOM(GOMTypes eType, int iID) const
 			foreach(GAMEOBJECT_PLAYER, bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
 			return bHasGOM;
 		}
-
 		case GOM_RELIGION:
 		{
 			// Defer to players, combine with OR
@@ -1143,7 +1112,6 @@ bool CvGameObjectTeam::hasGOM(GOMTypes eType, int iID) const
 			foreach(GAMEOBJECT_PLAYER, bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
 			return bHasGOM;
 		}
-
 		case GOM_CORPORATION:
 		{
 			// Defer to players, combine with OR
@@ -1151,19 +1119,19 @@ bool CvGameObjectTeam::hasGOM(GOMTypes eType, int iID) const
 			foreach(GAMEOBJECT_PLAYER, bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
 			return bHasGOM;
 		}
-
-		case GOM_IMPROVEMENT:
-			// This is not stored in a readily accessible way for the entire team, so return false
-			return false;
-
-		case GOM_UNITCOMBAT:
-			// This only makes sense on units and maybe sometimes on plots and cities
-			return false;
-
 		case GOM_HANDICAP:
 		{
-			const HandicapTypes eHandicap = (HandicapTypes) iID;
-			return m_pTeam->getHandicapType() == eHandicap;
+			return m_pTeam->getHandicapType() == iID;
+		}
+		// This is not stored in a readily accessible way for the entire team, so return false
+		case GOM_PROMOTION:
+		case GOM_FEATURE:
+		case GOM_TERRAIN:
+		case GOM_ROUTE:
+		case GOM_IMPROVEMENT:
+		case GOM_UNITCOMBAT:
+		{
+			return false;
 		}
 	}
 	return false;
@@ -1173,98 +1141,70 @@ bool CvGameObjectPlayer::hasGOM(GOMTypes eType, int iID) const
 {
 	switch (eType)
 	{
+		case GOM_HERITAGE:
+		{
+			return m_pPlayer->hasHeritage((HeritageTypes)iID);
+		}
 		case GOM_BUILDING:
 		{
 			// If there is any building of that type of the player, return true
 			return m_pPlayer->getBuildingCount((BuildingTypes)iID) > 0;
 		}
-
-		case GOM_PROMOTION:
-			// This is not stored in a readily accessible way for the player, so return false
-			return false;
-
 		case GOM_TRAIT:
 		{
-			// Return true if this player has the trait
-			const TraitTypes eTrait = (TraitTypes) iID;
-			return m_pPlayer->hasTrait(eTrait);
+			return m_pPlayer->hasTrait((TraitTypes)iID);
 		}
-
-		case GOM_FEATURE:
-			// This is not stored in a readily accessible way for the player, so return false
-			return false;
-
 		case GOM_OPTION:
 		{
-			const GameOptionTypes eOption = (GameOptionTypes) iID;
-			return GC.getGame().isOption(eOption);
+			return GC.getGame().isOption((GameOptionTypes)iID);
 		}
-
-		case GOM_TERRAIN:
-			// This is not stored in a readily accessible way for the player, so return false
-			return false;
-
 		case GOM_GAMESPEED:
 		{
-			const GameSpeedTypes eSpeed = (GameSpeedTypes) iID;
-			return GC.getGame().getGameSpeedType() == eSpeed;
+			return GC.getGame().getGameSpeedType() == iID;
 		}
-
-		case GOM_ROUTE:
-			// This is not stored in a readily accessible way for the player, so return false
-			return false;
-
 		case GOM_BONUS:
 		{
 			// Use getNumAvailableBonuses which takes the bonuses in the capitals plot group, alternative would be hasBonus which loops through all cities
-			const BonusTypes eBonus = (BonusTypes) iID;
-			return m_pPlayer->getNumAvailableBonuses(eBonus) > 0;
+			return m_pPlayer->getNumAvailableBonuses((BonusTypes)iID) > 0;
 		}
-
 		case GOM_UNITTYPE:
 		{
 			// If there is any unit of that type of the player, return true
-			return m_pPlayer->getUnitCount((UnitTypes) iID) > 0;
+			return m_pPlayer->getUnitCount((UnitTypes)iID) > 0;
 		}
-
 		case GOM_TECH:
 		{
 			// If the team has researched that tech, return true
-			const TechTypes eTech = (TechTypes) iID;
-			return GET_TEAM(m_pPlayer->getTeam()).isHasTech(eTech);
+			return GET_TEAM(m_pPlayer->getTeam()).isHasTech((TechTypes)iID);
 		}
-
 		case GOM_CIVIC:
 		{
 			// Return true if this player has the civic active
-			const CivicTypes eCivic = (CivicTypes) iID;
-			return m_pPlayer->isCivic(eCivic);
+			return m_pPlayer->isCivic((CivicTypes)iID);
 		}
-
 		case GOM_RELIGION:
 		{
 			// True if the religion is state religion
 			return m_pPlayer->getStateReligion() == (ReligionTypes)iID;
 		}
-
 		case GOM_CORPORATION:
 		{
 			// True if the corporation is active
 			return m_pPlayer->isActiveCorporation((CorporationTypes)iID);
 		}
-
-		case GOM_IMPROVEMENT:
-			// This is not stored in a readily accessible way for the player, so return false
-			return false;
-
-		case GOM_UNITCOMBAT:
-			// This only makes sense on units and maybe sometimes on plots and cities
-			return false;
-
 		case GOM_HANDICAP:
 		{
-			const HandicapTypes eHandicap = (HandicapTypes) iID;
-			return m_pPlayer->getHandicapType() == eHandicap;
+			return m_pPlayer->getHandicapType() == iID;
+		}
+		// This is not stored in a readily accessible way for the player, so return false
+		case GOM_PROMOTION:
+		case GOM_FEATURE:
+		case GOM_TERRAIN:
+		case GOM_ROUTE:
+		case GOM_IMPROVEMENT:
+		case GOM_UNITCOMBAT:
+		{
+			return false;
 		}
 	}
 	return false;
@@ -1275,26 +1215,26 @@ bool CvGameObjectCity::hasGOM(GOMTypes eType, int iID) const
 	PROFILE_EXTRA_FUNC();
 	switch (eType)
 	{
+		case GOM_HERITAGE:
+		{
+			// Return true if the owner has the heritage
+			return GET_PLAYER(m_pCity->getOwner()).hasHeritage((HeritageTypes)iID);
+		}
 		case GOM_BUILDING:
 		{
 			// return true if the building is present and active
-			return m_pCity->isActiveBuilding((BuildingTypes) iID);
+			return m_pCity->isActiveBuilding((BuildingTypes)iID);
 		}
-
 		case GOM_PROMOTION:
 		{
 			// return true if that is a free promotion from the city
-			const PromotionTypes ePromotion = (PromotionTypes) iID;
-			return m_pCity->isFreePromotion(ePromotion);
+			return m_pCity->isFreePromotion((PromotionTypes)iID);
 		}
-
 		case GOM_TRAIT:
 		{
 			// Return true if the owner has the trait
-			const TraitTypes eTrait = (TraitTypes) iID;
-			return GET_PLAYER(m_pCity->getOwner()).hasTrait(eTrait);
+			return GET_PLAYER(m_pCity->getOwner()).hasTrait((TraitTypes)iID);
 		}
-
 		case GOM_FEATURE:
 		{
 			// Defer to city plots, combine with OR
@@ -1302,13 +1242,10 @@ bool CvGameObjectCity::hasGOM(GOMTypes eType, int iID) const
 			foreachRelated(GAMEOBJECT_PLOT, RELATION_WORKING, bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
 			return bHasGOM;
 		}
-
 		case GOM_OPTION:
 		{
-			const GameOptionTypes eOption = (GameOptionTypes) iID;
-			return GC.getGame().isOption(eOption);
+			return GC.getGame().isOption((GameOptionTypes)iID);
 		}
-
 		case GOM_TERRAIN:
 		{
 			// Defer to city plots, combine with OR
@@ -1316,13 +1253,10 @@ bool CvGameObjectCity::hasGOM(GOMTypes eType, int iID) const
 			foreachRelated(GAMEOBJECT_PLOT, RELATION_WORKING, bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
 			return bHasGOM;
 		}
-
 		case GOM_GAMESPEED:
 		{
-			const GameSpeedTypes eSpeed = (GameSpeedTypes) iID;
-			return GC.getGame().getGameSpeedType() == eSpeed;
+			return GC.getGame().getGameSpeedType() == iID;
 		}
-
 		case GOM_ROUTE:
 		{
 			// Defer to city plots, combine with OR
@@ -1330,46 +1264,36 @@ bool CvGameObjectCity::hasGOM(GOMTypes eType, int iID) const
 			foreachRelated(GAMEOBJECT_PLOT, RELATION_WORKING, bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
 			return bHasGOM;
 		}
-
 		case GOM_BONUS:
 		{
 			// Vicinity not required, only connection
-			const BonusTypes eBonus = (BonusTypes) iID;
-			return m_pCity->hasBonus(eBonus);
+			return m_pCity->hasBonus((BonusTypes)iID);
 		}
-
 		case GOM_UNITTYPE:
 		{
 			// If there is any unit of that type in the city, return true, defer to the plot for that
 			return m_pCity->plot()->getGameObject()->hasGOM(eType, iID);
 		}
-
 		case GOM_TECH:
 		{
 			// If the team has researched that tech, return true
-			const TechTypes eTech = (TechTypes) iID;
-			return GET_TEAM(m_pCity->getTeam()).isHasTech(eTech);
+			return GET_TEAM(m_pCity->getTeam()).isHasTech((TechTypes)iID);
 		}
-
 		case GOM_CIVIC:
 		{
 			// Return true if the owning player has the civic active
-			const CivicTypes eCivic = (CivicTypes) iID;
-			return GET_PLAYER(m_pCity->getOwner()).isCivic(eCivic);
+			return GET_PLAYER(m_pCity->getOwner()).isCivic((CivicTypes)iID);
 		}
-
 		case GOM_RELIGION:
 		{
 			// True if the religion is in the city
 			return m_pCity->isHasReligion((ReligionTypes)iID);
 		}
-
 		case GOM_CORPORATION:
 		{
 			// True if the corporation is in the city
 			return m_pCity->isHasCorporation((CorporationTypes)iID);
 		}
-
 		case GOM_IMPROVEMENT:
 		{
 			// Defer to city plots, combine with OR
@@ -1377,17 +1301,14 @@ bool CvGameObjectCity::hasGOM(GOMTypes eType, int iID) const
 			foreachRelated(GAMEOBJECT_PLOT, RELATION_WORKING, bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
 			return bHasGOM;
 		}
-
 		case GOM_UNITCOMBAT:
 		{
 			// If there is any unit of that type in the city, return true, defer to the plot for that
 			return m_pCity->plot()->getGameObject()->hasGOM(eType, iID);
 		}
-
 		case GOM_HANDICAP:
 		{
-			const HandicapTypes eHandicap = (HandicapTypes) iID;
-			return m_pCity->getHandicapType() == eHandicap;
+			return m_pCity->getHandicapType() == iID;
 		}
 	}
 	return false;
@@ -1397,6 +1318,11 @@ bool CvGameObjectUnit::hasGOM(GOMTypes eType, int iID) const
 {
 	switch (eType)
 	{
+		case GOM_HERITAGE:
+		{
+			// Return true if the owner has the heritage
+			return GET_PLAYER(m_pUnit->getOwner()).hasHeritage((HeritageTypes)iID);
+		}
 		case GOM_BUILDING:
 		{
 			// return true if the building is present in the city the unit is in and active
@@ -1407,112 +1333,82 @@ bool CvGameObjectUnit::hasGOM(GOMTypes eType, int iID) const
 			}
 			return false;
 		}
-
 		case GOM_PROMOTION:
 		{
 			// return true if the unit has that promotion
-			const PromotionTypes ePromotion = (PromotionTypes) iID;
-			return m_pUnit->isHasPromotion(ePromotion);
+			return m_pUnit->isHasPromotion((PromotionTypes)iID);
 		}
-
 		case GOM_TRAIT:
 		{
 			// Return true if the owner has the trait
-			const TraitTypes eTrait = (TraitTypes) iID;
-			return GET_PLAYER(m_pUnit->getOwner()).hasTrait(eTrait);
+			return GET_PLAYER(m_pUnit->getOwner()).hasTrait((TraitTypes)iID);
 		}
-
 		case GOM_FEATURE:
 		{
 			// Check plot on which the unit is
-			const FeatureTypes eFeature = (FeatureTypes) iID;
-			return m_pUnit->plot()->getFeatureType() == eFeature;
+			return m_pUnit->plot()->getFeatureType() == iID;
 		}
-
 		case GOM_OPTION:
 		{
-			const GameOptionTypes eOption = (GameOptionTypes) iID;
-			return GC.getGame().isOption(eOption);
+			return GC.getGame().isOption((GameOptionTypes)iID);
 		}
-
 		case GOM_TERRAIN:
 		{
 			// Check plot on which the unit is
-			const TerrainTypes eTerrain = (TerrainTypes) iID;
-			return m_pUnit->plot()->getTerrainType() == eTerrain;
+			return m_pUnit->plot()->getTerrainType() == iID;
 		}
-
 		case GOM_GAMESPEED:
 		{
-			const GameSpeedTypes eSpeed = (GameSpeedTypes) iID;
-			return GC.getGame().getGameSpeedType() == eSpeed;
+			return GC.getGame().getGameSpeedType() == iID;
 		}
-
 		case GOM_ROUTE:
 		{
 			// Check plot on which the unit is
-			const RouteTypes eRoute = (RouteTypes) iID;
-			return m_pUnit->plot()->getRouteType() == eRoute;
+			return m_pUnit->plot()->getRouteType() == iID;
 		}
-
 		case GOM_BONUS:
 		{
 			// Check plot on which the unit is
-			const BonusTypes eBonus = (BonusTypes) iID;
-			return m_pUnit->plot()->getBonusType() == eBonus;
+			return m_pUnit->plot()->getBonusType() == iID;
 		}
-
 		case GOM_UNITTYPE:
 		{
 			// Check the type of the unit
-			const UnitTypes eType = (UnitTypes) iID;
-			return m_pUnit->getUnitType() == eType;
+			return m_pUnit->getUnitType() == iID;
 		}
-
 		case GOM_TECH:
 		{
 			// If the team has researched that tech, return true
-			const TechTypes eTech = (TechTypes) iID;
-			return GET_TEAM(m_pUnit->getTeam()).isHasTech(eTech);
+			return GET_TEAM(m_pUnit->getTeam()).isHasTech((TechTypes)iID);
 		}
-
 		case GOM_CIVIC:
 		{
 			// Return true if the owning player has the civic active
-			const CivicTypes eCivic = (CivicTypes) iID;
-			return GET_PLAYER(m_pUnit->getOwner()).isCivic(eCivic);
+			return GET_PLAYER(m_pUnit->getOwner()).isCivic((CivicTypes)iID);
 		}
-
 		case GOM_RELIGION:
 		{
 			// True if the religion is state religion
 			return GET_PLAYER(m_pUnit->getOwner()).getStateReligion() == (ReligionTypes)iID;
 		}
-
 		case GOM_CORPORATION:
 		{
 			// True if the corporation is active
 			return GET_PLAYER(m_pUnit->getOwner()).isActiveCorporation((CorporationTypes)iID);
 		}
-
 		case GOM_IMPROVEMENT:
 		{
 			// Check plot on which the unit is
-			const ImprovementTypes eImprovement = (ImprovementTypes) iID;
-			return m_pUnit->plot()->getImprovementType() == eImprovement;
+			return m_pUnit->plot()->getImprovementType() == iID;
 		}
-
 		case GOM_UNITCOMBAT:
 		{
 			// Check the combat types of the unit
-			const UnitCombatTypes eType = (UnitCombatTypes) iID;
-			return m_pUnit->isHasUnitCombat(eType);
+			return m_pUnit->isHasUnitCombat((UnitCombatTypes)iID);
 		}
-
 		case GOM_HANDICAP:
 		{
-			const HandicapTypes eHandicap = (HandicapTypes) iID;
-			return m_pUnit->getHandicapType() == eHandicap;
+			return m_pUnit->getHandicapType() == iID;
 		}
 	}
 	return false;
@@ -1523,13 +1419,18 @@ bool CvGameObjectPlot::hasGOM(GOMTypes eType, int iID) const
 	PROFILE_EXTRA_FUNC();
 	switch (eType)
 	{
+		case GOM_HERITAGE:
+		{
+			// Return true if the owner has the heritage
+			const PlayerTypes ePlayer = m_pPlot->getOwner();
+			return ePlayer != NO_PLAYER && GET_PLAYER(ePlayer).hasHeritage((HeritageTypes)iID);
+		}
 		case GOM_BUILDING:
 		{
 			// return true if the building is present in the city on this plot and active
 			const CvCity* pCity = m_pPlot->getPlotCity();
 			return pCity && pCity->isActiveBuilding((BuildingTypes)iID);
 		}
-
 		case GOM_PROMOTION:
 		{
 			// Defer to units on the plot, combine with OR
@@ -1537,54 +1438,36 @@ bool CvGameObjectPlot::hasGOM(GOMTypes eType, int iID) const
 			foreach(GAMEOBJECT_UNIT, bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
 			return bHasGOM;
 		}
-
 		case GOM_TRAIT:
 		{
 			// Return true if the owner has the trait
 			const PlayerTypes ePlayer = m_pPlot->getOwner();
 			return ePlayer != NO_PLAYER && GET_PLAYER(ePlayer).hasTrait((TraitTypes)iID);
 		}
-
 		case GOM_FEATURE:
 		{
-			// Check feature type
-			const FeatureTypes eFeature = (FeatureTypes) iID;
-			return m_pPlot->getFeatureType() == eFeature;
+			return m_pPlot->getFeatureType() == iID;
 		}
-
 		case GOM_OPTION:
 		{
-			const GameOptionTypes eOption = (GameOptionTypes) iID;
-			return GC.getGame().isOption(eOption);
+			return GC.getGame().isOption((GameOptionTypes)iID);
 		}
-
 		case GOM_TERRAIN:
 		{
-			// Check terrain type
-			const TerrainTypes eTerrain = (TerrainTypes) iID;
-			return m_pPlot->getTerrainType() == eTerrain;
+			return m_pPlot->getTerrainType() == iID;
 		}
-
 		case GOM_GAMESPEED:
 		{
-			const GameSpeedTypes eSpeed = (GameSpeedTypes) iID;
-			return GC.getGame().getGameSpeedType() == eSpeed;
+			return GC.getGame().getGameSpeedType() == iID;
 		}
-
 		case GOM_ROUTE:
 		{
-			// Check route type
-			const RouteTypes eRoute = (RouteTypes) iID;
-			return m_pPlot->getRouteType() == eRoute;
+			return m_pPlot->getRouteType() == iID;
 		}
-
 		case GOM_BONUS:
 		{
-			// Check bonus type
-			const BonusTypes eBonus = (BonusTypes) iID;
-			return m_pPlot->getBonusType() == eBonus;
+			return m_pPlot->getBonusType() == iID;
 		}
-
 		case GOM_UNITTYPE:
 		{
 			// Defer to units on the plot, combine with OR
@@ -1592,72 +1475,34 @@ bool CvGameObjectPlot::hasGOM(GOMTypes eType, int iID) const
 			foreach(GAMEOBJECT_UNIT, bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
 			return bHasGOM;
 		}
-
 		case GOM_TECH:
 		{
 			// If the team has researched that tech, return true
 			const TeamTypes eTeam = m_pPlot->getTeam();
-			if (eTeam != NO_TEAM)
-			{
-				const TechTypes eTech = (TechTypes) iID;
-				return GET_TEAM(eTeam).isHasTech(eTech);
-			}
-			else
-			{
-				return false;
-			}
+			return eTeam != NO_TEAM && GET_TEAM(eTeam).isHasTech((TechTypes)iID);
 		}
-
 		case GOM_CIVIC:
 		{
 			// Return true if the owning player has the civic active
 			const PlayerTypes ePlayer = m_pPlot->getOwner();
-			if (ePlayer != NO_PLAYER)
-			{
-				const CivicTypes eCivic = (CivicTypes) iID;
-				return GET_PLAYER(ePlayer).isCivic(eCivic);
-			}
-			else
-			{
-				return false;
-			}
+			return ePlayer != NO_PLAYER && GET_PLAYER(ePlayer).isCivic((CivicTypes)iID);
 		}
-
 		case GOM_RELIGION:
 		{
 			// return true if the religion is present in the city on this plot
 			const CvCity* pCity = m_pPlot->getPlotCity();
-			if (pCity)
-			{
-				return pCity->isHasReligion((ReligionTypes)iID);
-			}
-			else
-			{
-				return false;
-			}
+			return pCity && pCity->isHasReligion((ReligionTypes)iID);
 		}
-
 		case GOM_CORPORATION:
 		{
 			// return true if the corporation is present in the city on this plot
 			const CvCity* pCity = m_pPlot->getPlotCity();
-			if (pCity)
-			{
-				return pCity->isHasCorporation((CorporationTypes)iID);
-			}
-			else
-			{
-				return false;
-			}
+			return pCity && pCity->isHasCorporation((CorporationTypes)iID);
 		}
-
 		case GOM_IMPROVEMENT:
 		{
-			// Check improvement type
-			const ImprovementTypes eImprovement = (ImprovementTypes) iID;
-			return m_pPlot->getImprovementType() == eImprovement;
+			return m_pPlot->getImprovementType() == iID;
 		}
-
 		case GOM_UNITCOMBAT:
 		{
 			// Defer to units on the plot, combine with OR
@@ -1665,20 +1510,11 @@ bool CvGameObjectPlot::hasGOM(GOMTypes eType, int iID) const
 			foreach(GAMEOBJECT_UNIT, bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
 			return bHasGOM;
 		}
-
 		case GOM_HANDICAP:
 		{
 			// Return true if the owning player has the handicap
 			const PlayerTypes ePlayer = m_pPlot->getOwner();
-			if (ePlayer != NO_PLAYER)
-			{
-				const HandicapTypes eHandicap = (HandicapTypes) iID;
-				return GET_PLAYER(ePlayer).getHandicapType() == eHandicap;
-			}
-			else
-			{
-				return false;
-			}
+			return ePlayer != NO_PLAYER && GET_PLAYER(ePlayer).getHandicapType() == iID;
 		}
 	}
 	return false;
@@ -1759,27 +1595,27 @@ void CvGameObjectPlot::disposePythonWrapper(void *pArgument)
 
 int CvGameObject::adaptValueToGame(int iID, int iValue) const
 {
-	iValue = (iValue * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getPercent(iID)) / 100;
-	return (iValue * GC.getWorldInfo(GC.getMap().getWorldSize()).getPercent(iID)) / 100;
+	iValue = iValue * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getPercent(iID) / 100;
+	return iValue * GC.getWorldInfo(GC.getMap().getWorldSize()).getPercent(iID) / 100;
 }
 
 int CvGameObjectPlayer::adaptValueToGame(int iID, int iValue) const
 {
-	iValue = (iValue * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getPercent(iID)) / 100;
-	iValue = (iValue * GC.getWorldInfo(GC.getMap().getWorldSize()).getPercent(iID)) / 100;
-	return (iValue * GC.getHandicapInfo(m_pPlayer->getHandicapType()).getPercent(iID)) / 100;
+	iValue = iValue * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getPercent(iID) / 100;
+	iValue = iValue * GC.getWorldInfo(GC.getMap().getWorldSize()).getPercent(iID) / 100;
+	return iValue * GC.getHandicapInfo(m_pPlayer->getHandicapType()).getPercent(iID) / 100;
 }
 
 int CvGameObjectCity::adaptValueToGame(int iID, int iValue) const
 {
-	iValue = (iValue * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getPercent(iID)) / 100;
-	iValue = (iValue * GC.getWorldInfo(GC.getMap().getWorldSize()).getPercent(iID)) / 100;
-	return (iValue * GC.getHandicapInfo(GET_PLAYER(m_pCity->getOwner()).getHandicapType()).getPercent(iID)) / 100;
+	iValue = iValue * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getPercent(iID) / 100;
+	iValue = iValue * GC.getWorldInfo(GC.getMap().getWorldSize()).getPercent(iID) / 100;
+	return iValue * GC.getHandicapInfo(GET_PLAYER(m_pCity->getOwner()).getHandicapType()).getPercent(iID) / 100;
 }
 
 int CvGameObjectUnit::adaptValueToGame(int iID, int iValue) const
 {
-	iValue = (iValue * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getPercent(iID)) / 100;
-	iValue = (iValue * GC.getWorldInfo(GC.getMap().getWorldSize()).getPercent(iID)) / 100;
-	return (iValue * GC.getHandicapInfo(GET_PLAYER(m_pUnit->getOwner()).getHandicapType()).getPercent(iID)) / 100;
+	iValue = iValue * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getPercent(iID) / 100;
+	iValue = iValue * GC.getWorldInfo(GC.getMap().getWorldSize()).getPercent(iID) / 100;
+	return iValue * GC.getHandicapInfo(GET_PLAYER(m_pUnit->getOwner()).getHandicapType()).getPercent(iID) / 100;
 }

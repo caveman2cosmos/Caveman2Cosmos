@@ -3255,6 +3255,7 @@ enum GameObjectTypes
 enum GOMTypes
 {
 	NO_GOM = -1,
+	GOM_HERITAGE,
 	GOM_BUILDING,
 	GOM_PROMOTION,
 	GOM_TRAIT,
