@@ -10,20 +10,18 @@
 		<Russian>Ìèô î òðóáêîçóáå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_HERITAGE_FOLKLORE_AFRICAN_ELEPHANT</Tag>
-		<English>Folklore - African Elephant</English>
-		<French>Mythe de l'Eléphant d'Afrique</French>
-		<German>Mythos des Afrikanischen Elefanten</German>
-		<Italian>Mito dell'elefante africano</Italian>
-		<Russian>Ìèô îá àôð. ñëîíå</Russian>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_BABIRUSA</Tag>
+		<English>Folklore - Babirusa</English>
+		<French>Mythe du babiroussas</French>
+		<German>Mythos des Molukken-Hirschebers</German>
+		<Italian>Mito del babirussa</Italian>
+		<Russian>Ìèô î áàáèðóñå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_HERITAGE_FOLKLORE_ASIAN_ELEPHANT</Tag>
-		<English>Folklore - Asian Elephant</English>
-		<French>Mythe de l'Eléphant d'Asie</French>
-		<German>Mythos des Asiatischen Elefanten</German>
-		<Italian>Mito dell'elefante asiatico</Italian>
-		<Russian>Ìèô îá àçèàò. ñëîíå</Russian>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_BOAR_WILD</Tag>
+		<English>Folklore - Wild Boar</English>
+		<German>Mythos des Wildschweins</German>
+		<Italian>Mito del cinghiale selvatico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_DART_FROG</Tag>
@@ -34,6 +32,22 @@
 		<Russian>Ìèô î æàáå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_ELEPHANT_AFRICAN</Tag>
+		<English>Folklore - African Elephant</English>
+		<French>Mythe de l'Eléphant d'Afrique</French>
+		<German>Mythos des Afrikanischen Elefanten</German>
+		<Italian>Mito dell'elefante africano</Italian>
+		<Russian>Ìèô îá àôð. ñëîíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_ELEPHANT_ASIAN</Tag>
+		<English>Folklore - Asian Elephant</English>
+		<French>Mythe de l'Eléphant d'Asie</French>
+		<German>Mythos des Asiatischen Elefanten</German>
+		<Italian>Mito dell'elefante asiatico</Italian>
+		<Russian>Ìèô îá àçèàò. ñëîíå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_MAMMOTH</Tag>
 		<English>Folklore - Mammoth</English>
 		<French>Mythe du Mammouth</French>
@@ -41,6 +55,11 @@
 		<Italian>Mito del mammut</Italian>
 		<Polish>Mit Mamutów</Polish>
 		<Russian>Ìèô î ìàìîíòå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_SWINE</Tag>
+		<English>Folklore - Swine</English>
+		<Italian>Mito del maiale</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TAPIR_BAIRDS</Tag>
@@ -79,8 +98,21 @@
 		<Russian>Ìèô î ãîðíîì òàïèðå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WARTHOG</Tag>
+		<English>Folklore - Warthog</English>
+		<French>Mythe du Phacochère</French>
+		<German>Mythos des Warzenschweins</German>
+		<Italian>Mito del facocero</Italian>
+		<Polish>Mit - Guziec</Polish>
+		<Russian>Ìèô î áîðîäàâî÷íèêå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXONOMY_AMPHIBIANS</Tag>
 		<English>Taxonomy - Amphibians</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXONOMY_BOAR</Tag>
+		<English>Taxonomy - Boar</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXONOMY_TAPIR</Tag>

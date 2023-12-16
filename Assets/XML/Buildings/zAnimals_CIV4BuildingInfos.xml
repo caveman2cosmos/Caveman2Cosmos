@@ -1224,45 +1224,44 @@
 			<Civilopedia>TXT_KEY_BUILDING_ENCLOSURE_EXOTIC_HERBIVORE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_TAXONOMY_BOAR</Type>
+			</PrereqOrHeritage>
 			<ConstructCondition>
-			<And>
-				<Or>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_CARNIVAL</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_ZOO</ID>
-					</Has>
-				</Or>
-				<Or>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_T_ELEPHANT</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_T_FLIGHTLESS_BIRDS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_T_ELEPHANT</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_T_ANTELOPE</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_T_BOAR</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_T_RHINOCEROSES</ID>
-					</Has>
-				</Or>
-			</And>
+				<And>
+					<Or>
+						<Has>
+							<GOMType>GOM_BUILDING</GOMType>
+							<ID>BUILDING_CARNIVAL</ID>
+						</Has>
+						<Has>
+							<GOMType>GOM_BUILDING</GOMType>
+							<ID>BUILDING_ZOO</ID>
+						</Has>
+					</Or>
+					<Or>
+						<Has>
+							<GOMType>GOM_BUILDING</GOMType>
+							<ID>BUILDING_FOLKLORE_T_ELEPHANT</ID>
+						</Has>
+						<Has>
+							<GOMType>GOM_BUILDING</GOMType>
+							<ID>BUILDING_FOLKLORE_T_FLIGHTLESS_BIRDS</ID>
+						</Has>
+						<Has>
+							<GOMType>GOM_BUILDING</GOMType>
+							<ID>BUILDING_FOLKLORE_T_ELEPHANT</ID>
+						</Has>
+						<Has>
+							<GOMType>GOM_BUILDING</GOMType>
+							<ID>BUILDING_FOLKLORE_T_ANTELOPE</ID>
+						</Has>
+						<Has>
+							<GOMType>GOM_BUILDING</GOMType>
+							<ID>BUILDING_FOLKLORE_T_RHINOCEROSES</ID>
+						</Has>
+					</Or>
+				</And>
 			</ConstructCondition>
 			<iCost>306</iCost>
 			<iHappiness>1</iHappiness>

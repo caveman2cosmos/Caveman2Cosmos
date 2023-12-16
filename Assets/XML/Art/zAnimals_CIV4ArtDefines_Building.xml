@@ -82,16 +82,6 @@
 			<Button>Art/Interface/Buttons/Units/Cow.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_BABIRUSA</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF>Art/empty.nif</NIF>
-			<KFM/>
-			<Button>Art/Interface/Buttons/Units/Babirusa.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_FOLKLORE_BADGER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
@@ -1732,16 +1722,6 @@
 			<Button>Art/Interface/Buttons/Units/Sunbear.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_SWINE</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF>Art/empty.nif</NIF>
-			<KFM/>
-			<Button>Art/Interface/Buttons/Units/pig.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_FOLKLORE_TASMANIAN_DEVIL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
@@ -1882,16 +1862,6 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_walrus.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_WARTHOG</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF>Art/empty.nif</NIF>
-			<KFM/>
-			<Button>Art/Interface/Buttons/Units/warthog.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_FOLKLORE_WHALE_SHARK</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
@@ -1920,16 +1890,6 @@
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Wildebeest.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_WILD_BOAR</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF>Art/empty.nif</NIF>
-			<KFM/>
-			<Button>Art/Interface/Buttons/Units/button_boar.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_FOLKLORE_T_WOLF</Type>

@@ -613,18 +613,6 @@
 		<Italian>Mito dell'uro</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_BABIRUSA</Tag>
-		<English>Folklore - Babirusa</English>
-		<French>Mythe du babiroussas</French>
-		<German>
-			<Text>Mythos des Molukken-Hirschebers:Mythos des Molukken-Hirschebers:Mythos des Molukken-Hirschebers:Mythos des Molukken-Hirschebers</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del babirussa</Italian>
-		<Russian>Ìèô î áàáèðóñå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BADGER</Tag>
 		<English>Folklore - Badger</English>
 		<French>Mythe du Blaireau</French>
@@ -740,19 +728,6 @@
 		<Italian>Mito del rinoceronte nero</Italian>
 		<Polish>Mit - Nosorożec Czarny</Polish>
 		<Russian>Ìèô î ÷åðí. íîñîðîãå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_BOAR</Tag>
-		<English>Folklore (T) - Boar</English>
-		<French>Mythe du Sanglier</French>
-		<German>
-			<Text>Mythos der Wildschweine:Mythos der Wildschweine:Mythos der Wildschweine:Mythos der Wildschweine</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del cinghiale</Italian>
-		<Polish>Mit Dzika</Polish>
-		<Russian>Ìèô î êàáàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BONGO</Tag>
@@ -2655,11 +2630,6 @@
 		<Russian>Ìèô î êàìíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_SWINE</Tag>
-		<English>Folklore - Swine</English>
-		<Italian>Mito del maiale</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_DESERT_TARANTULA</Tag>
 		<English>Folklore - Desert Tarantula</English>
 		<French>Mythe de la Tarentule du désert</French>
@@ -2862,19 +2832,6 @@
 		<Russian>Ìèô î ìîðæå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_WARTHOG</Tag>
-		<English>Folklore - Warthog</English>
-		<French>Mythe du Phacochère</French>
-		<German>
-			<Text>Mythos des Warzenschweins:Mythos des Warzenschweins:Mythos des Warzenschweins:Mythos des Warzenschweins</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del facocero</Italian>
-		<Polish>Mit - Guziec</Polish>
-		<Russian>Ìèô î áîðîäàâî÷íèêå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_WEASEL</Tag>
 		<English>Folklore (T) - Weasel</English>
 		<French>Mythe de la belette (T)</French>
@@ -2912,16 +2869,6 @@
 		<Italian>Mito del rinoceronte bianco</Italian>
 		<Polish>Mit - Nosorożec Biały</Polish>
 		<Russian>Ìèô î áåë. íîñîðîãå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_WILD_BOAR</Tag>
-		<English>Folklore - Wild Boar</English>
-		<German>
-			<Text>Mythos des Wildschweins:Mythos des Wildschweins:Mythos des Wildschweins:Mythos des Wildschweins</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del cinghiale selvatico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_WILDEBEEST</Tag>

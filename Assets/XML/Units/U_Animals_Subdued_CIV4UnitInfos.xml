@@ -587,12 +587,14 @@
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_HERD_PIG</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_BOAR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_BABIRUSA</BuildingType>
 				<BuildingType>BUILDING_CAMP_BOAR</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_BABIRUSA</Type>
+				<Type>HERITAGE_TAXONOMY_BOAR</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<UnitMeshGroups>
@@ -2069,8 +2071,6 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_CAMP_BOAR</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_BOAR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_WILD_BOAR</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
@@ -2078,6 +2078,10 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_BOAR_WILD</Type>
+				<Type>HERITAGE_TAXONOMY_BOAR</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -2480,15 +2484,15 @@
 			<Buildings>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_BOAR</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<Heritage>
-				<Type>HERITAGE_TAXONOMY_TAPIR</Type>
 				<Type>HERITAGE_FOLKLORE_TAPIR_LOWLAND</Type>
+				<Type>HERITAGE_TAXONOMY_BOAR</Type>
+				<Type>HERITAGE_TAXONOMY_TAPIR</Type>
 			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
@@ -5942,7 +5946,7 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
 			<Heritage>
-				<Type>HERITAGE_FOLKLORE_AFRICAN_ELEPHANT</Type>
+				<Type>HERITAGE_FOLKLORE_ELEPHANT_AFRICAN</Type>
 			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
@@ -6120,7 +6124,7 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<Heritage>
-				<Type>HERITAGE_FOLKLORE_ASIAN_ELEPHANT</Type>
+				<Type>HERITAGE_FOLKLORE_ELEPHANT_ASIAN</Type>
 			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
@@ -9649,12 +9653,14 @@
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_HERD_PIG</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_BOAR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SWINE</BuildingType>
 				<BuildingType>BUILDING_CAMP_BOAR</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_SWINE</Type>
+				<Type>HERITAGE_TAXONOMY_BOAR</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -12541,7 +12547,6 @@
 			<Buildings>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_BOAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_ELEPHANT</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
@@ -12549,8 +12554,9 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<Heritage>
-				<Type>HERITAGE_TAXONOMY_TAPIR</Type>
 				<Type>HERITAGE_FOLKLORE_TAPIR_MALAYAN</Type>
+				<Type>HERITAGE_TAXONOMY_BOAR</Type>
+				<Type>HERITAGE_TAXONOMY_TAPIR</Type>
 			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
@@ -14023,15 +14029,15 @@
 			<Buildings>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_BOAR</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<Heritage>
-				<Type>HERITAGE_TAXONOMY_TAPIR</Type>
 				<Type>HERITAGE_FOLKLORE_TAPIR_MOUNTAIN</Type>
+				<Type>HERITAGE_TAXONOMY_BOAR</Type>
+				<Type>HERITAGE_TAXONOMY_TAPIR</Type>
 			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
@@ -17158,12 +17164,14 @@
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_HERD_PIG</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_BOAR</BuildingType>
 				<BuildingType>BUILDING_CAMP_BOAR</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_WARTHOG</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_WARTHOG</Type>
+				<Type>HERITAGE_TAXONOMY_BOAR</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -21053,15 +21061,15 @@
 			<Buildings>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_BOAR</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<Heritage>
-				<Type>HERITAGE_TAXONOMY_TAPIR</Type>
 				<Type>HERITAGE_FOLKLORE_TAPIR_BAIRDS</Type>
+				<Type>HERITAGE_TAXONOMY_BOAR</Type>
+				<Type>HERITAGE_TAXONOMY_TAPIR</Type>
 			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
