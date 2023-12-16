@@ -817,7 +817,6 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CAMP_MAMMOTH</BuildingType>
 				<BuildingType>BUILDING_HERD_MAMMOTH</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_MAMMOTH</BuildingType>
 				<BuildingType>BUILDING_BREEDING_PROGRAM_MAMMOTH</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
