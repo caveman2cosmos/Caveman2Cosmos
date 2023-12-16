@@ -175,7 +175,6 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_ANTEATER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_NINE_BANDED_ARMADILLO</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BEAVER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_GLYPTODON</BuildingType>
@@ -183,6 +182,7 @@
 			</PrereqOrBuildings>
 			<PrereqOrHeritage>
 				<Type>HERITAGE_FOLKLORE_AARDVARK</Type>
+				<Type>HERITAGE_FOLKLORE_ANTEATER</Type>
 			</PrereqOrHeritage>
 			<iCost>70</iCost>
 			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
@@ -1226,20 +1226,13 @@
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<PrereqOrHeritage>
 				<Type>HERITAGE_TAXONOMY_BOAR</Type>
+				<Type>HERITAGE_TAXONOMY_ELEPHANT</Type>
 			</PrereqOrHeritage>
 			<ConstructCondition>
 				<Or>
 					<Has>
 						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_T_ELEPHANT</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
 						<ID>BUILDING_FOLKLORE_T_FLIGHTLESS_BIRDS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_T_ELEPHANT</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BUILDING</GOMType>

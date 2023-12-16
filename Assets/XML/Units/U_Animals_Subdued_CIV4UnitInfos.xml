@@ -101,8 +101,10 @@
 				<BuildingType>BUILDING_FOLKLORE_E_EARTH</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_ANTEATER</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_ANTEATER</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -5940,13 +5942,13 @@
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_ELEPHANT</BuildingType>
 				<BuildingType>BUILDING_CAMP_ELEPHANT</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
 			<Heritage>
 				<Type>HERITAGE_FOLKLORE_ELEPHANT_AFRICAN</Type>
+				<Type>HERITAGE_TAXONOMY_ELEPHANT</Type>
 			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
@@ -6116,7 +6118,6 @@
 				<BuildingType>BUILDING_CAMP_ELEPHANT</BuildingType>
 				<BuildingType>BUILDING_HERD_ELEPHANT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_ELEPHANT</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
@@ -6125,6 +6126,7 @@
 			</Buildings>
 			<Heritage>
 				<Type>HERITAGE_FOLKLORE_ELEPHANT_ASIAN</Type>
+				<Type>HERITAGE_TAXONOMY_ELEPHANT</Type>
 			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
@@ -12547,7 +12549,6 @@
 			<Buildings>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_ELEPHANT</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -12556,6 +12557,7 @@
 			<Heritage>
 				<Type>HERITAGE_FOLKLORE_TAPIR_MALAYAN</Type>
 				<Type>HERITAGE_TAXONOMY_BOAR</Type>
+				<Type>HERITAGE_TAXONOMY_ELEPHANT</Type>
 				<Type>HERITAGE_TAXONOMY_TAPIR</Type>
 			</Heritage>
 			<iCost>-1</iCost>
@@ -12615,13 +12617,13 @@
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_REMAINS_MAMMOTH</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_ELEPHANT</BuildingType>
 				<BuildingType>BUILDING_CAMP_MAMMOTH</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
 			<Heritage>
 				<Type>HERITAGE_FOLKLORE_MAMMOTH</Type>
+				<Type>HERITAGE_TAXONOMY_ELEPHANT</Type>
 			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
@@ -14336,7 +14338,6 @@
 				<BuildingType>BUILDING_FOLKLORE_T_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_NARWHAL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_E_UNICORN</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_LEVIATHAN</BuildingType>
 				<BuildingType>BUILDING_CAMP_NARWHAL</BuildingType>
 				<BuildingType>BUILDING_AQUARIUM</BuildingType>
@@ -14344,6 +14345,9 @@
 				<BuildingType>BUILDING_CENTER_FOR_WHALE_STUDIES</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_UNICORN</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
@@ -17829,11 +17833,13 @@
 				<BuildingType>BUILDING_FOLKLORE_T_RHINOCEROSES</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_GIANT_RHINOCEROS</BuildingType>
 				<BuildingType>BUILDING_REMAINS_GIANT_RHINOCEROS</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_E_UNICORN</BuildingType>
 				<BuildingType>BUILDING_CAMP_RHINO</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_UNICORN</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -17889,7 +17895,6 @@
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BLACK_RHINOCEROS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_RHINOCEROSES</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_E_UNICORN</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
@@ -17897,6 +17902,9 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_UNICORN</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -17952,7 +17960,6 @@
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_INDIAN_RHINOCEROS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_RHINOCEROSES</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_E_UNICORN</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
@@ -17960,6 +17967,9 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_UNICORN</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -18015,7 +18025,6 @@
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_JAVA_RHINOCEROS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_RHINOCEROSES</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_E_UNICORN</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
@@ -18023,6 +18032,9 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_UNICORN</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -18077,7 +18089,6 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_RHINOCEROSES</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_E_UNICORN</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WHITE_RHINOCEROS</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
@@ -18086,6 +18097,9 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_UNICORN</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -24335,9 +24349,11 @@
 				<BuildingType>BUILDING_FOLKLORE_T_TALES_OF_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_NARWHAL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_E_UNICORN</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_LEVIATHAN</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_UNICORN</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>

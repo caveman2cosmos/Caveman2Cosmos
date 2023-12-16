@@ -553,19 +553,6 @@
 		<German>Die Folklore-Pseudogebäude repräsentieren Mythen, Legenden, Geschichten, Fabeln und allgemeines Wissen über Tiere und Landschaften.</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_ANTEATER</Tag>
-		<English>Folklore - Anteater</English>
-		<French>Mythe du Fourmilier</French>
-		<German>
-			<Text>Mythos des Ameisenbären:Mythos des Ameisenbären:Mythos des Ameisenbären:Mythos des Ameisenbären</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del formichiere</Italian>
-		<Polish>Mit - Mrówkojad</Polish>
-		<Russian>Ìèô î ìóðàâüåäå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_ANTELOPE</Tag>
 		<English>Folklore (T) - Antelope</English>
 		<French>Mythe de l'Antilope (T)</French>
@@ -1104,19 +1091,6 @@
 		<Italian>I sei elementi che compongono tutto - Terra, Aria, Acqua, Pietra, Metallo, Fuoco - e che sono diventati oggetto di fiabe e leggende.</Italian>
 		<Polish>Sześć żywiołów tworzy wszystko. Składają si na nie Ziemia, Powietrze (Niebo), Woda (Morze), Kamień, Metal i Ogień. Chemia rozwiewa tą błdną teori i usuwa wszelkie zyski z tych mitów.</Polish>
 		<Russian>Øåñòü ýëåìåíòîâ ñîñòàâëÿþò âñå. Ê íèì îòíîñÿòñÿ çåìëÿ, âîçäóõ(íåáî), âîäà(ìîðå), êàìåíü, ìåòàëë è îãîíü. Îíè òåðÿþò âñå ïðåèìóùåñòâî ñ èçó÷åíèåì Õèìèè.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_ELEPHANT</Tag>
-		<English>Folklore (T) - Elephant</English>
-		<French>Mythe de l'Eléphant (T)</French>
-		<German>
-			<Text>Mythos der Elefanten:Mythos der Elefanten:Mythos der Elefanten:Mythos der Elefanten</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito dell'elefante</Italian>
-		<Polish>Mit (T) Słonia</Polish>
-		<Russian>Ìèô î ñëîíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_EMPEROR_PENGUIN</Tag>
@@ -2746,19 +2720,6 @@
 		</German>
 		<Italian>Mito del tacchino selvaggio</Italian>
 		<Russian>Ìèô îá èíäåéêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_E_UNICORN</Tag>
-		<English>Folklore (E) - Unicorn</English>
-		<French>Mythe de la Licorne (E)</French>
-		<German>
-			<Text>Mythos der Einhörner:Mythos der Einhörner:Mythos der Einhörner:Mythos der Einhörner</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito dell'unicorno</Italian>
-		<Polish>Mit Jednorożca</Polish>
-		<Russian>Ìèô îá åäèíîðîãå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_VIPER</Tag>

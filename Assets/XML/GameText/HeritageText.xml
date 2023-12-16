@@ -10,6 +10,15 @@
 		<Russian>Ìèô î òðóáêîçóáå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_ANTEATER</Tag>
+		<English>Folklore - Anteater</English>
+		<French>Mythe du Fourmilier</French>
+		<German>Mythos des Ameisenbären</German>
+		<Italian>Mito del formichiere</Italian>
+		<Polish>Mit - Mrówkojad</Polish>
+		<Russian>Ìèô î ìóðàâüåäå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_BABIRUSA</Tag>
 		<English>Folklore - Babirusa</English>
 		<French>Mythe du babiroussas</French>
@@ -98,6 +107,15 @@
 		<Russian>Ìèô î ãîðíîì òàïèðå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_UNICORN</Tag>
+		<English>Folklore - Unicorn</English>
+		<French>Mythe de la Licorne</French>
+		<German>Mythos der Einhörner</German>
+		<Italian>Mito dell'unicorno</Italian>
+		<Polish>Mit Jednorożca</Polish>
+		<Russian>Ìèô îá åäèíîðîãå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WARTHOG</Tag>
 		<English>Folklore - Warthog</English>
 		<French>Mythe du Phacochère</French>
@@ -113,6 +131,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXONOMY_BOAR</Tag>
 		<English>Taxonomy - Boar</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXONOMY_ELEPHANT</Tag>
+		<English>Taxonomy - Elephant</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXONOMY_TAPIR</Tag>
