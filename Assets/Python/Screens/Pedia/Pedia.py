@@ -1622,7 +1622,7 @@ class Pedia:
 				elif "RELIGION" in szSplit:
 					self.tooltip.handle(screen, CyGameTextMgr().parseReligionInfo(ID, False))
 				elif "HERITAGE" in szSplit:
-					self.tooltip.handle(screen, CyGameTextMgr().getHeritageHelp(ID, None, False, False, True))
+					self.tooltip.handle(screen, CyGameTextMgr().getHeritageHelp(ID, None, True, False, False))
 				elif "COMBAT" in szSplit:
 					self.tooltip.handle(screen, CyGameTextMgr().getUnitCombatHelp(ID, False))
 				elif "CONCEPT" in szSplit:

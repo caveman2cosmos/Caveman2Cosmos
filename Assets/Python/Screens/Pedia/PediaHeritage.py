@@ -145,7 +145,7 @@ class Page:
 			H_ROW_2 += H_BOT_ROW
 
 		# Special
-		szSpecial = szfont3 + CyGameTextMgr().getHeritageHelp(iTheHeritage, None, False, False, True)[1:]
+		szSpecial = szfont3 + CyGameTextMgr().getHeritageHelp(iTheHeritage, None, True, False, False)
 		if szSpecial:
 			screen.addPanel(aName(), "", "", True, False, X_COL_1, Y_TOP_ROW_2, W_COL_3, H_ROW_2, ePnlBlue50)
 			screen.addMultilineText(aName(), szSpecial, X_COL_1 + 4, Y_TOP_ROW_2 + 8, W_COL_3 - 8, H_ROW_2 - 16, eWidGen, 0, 0, 1<<0)

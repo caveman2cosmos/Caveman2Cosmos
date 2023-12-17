@@ -15249,7 +15249,7 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 	&& kCivic.getTechPrereq() != NO_TECH)
 	{
 		szHelpText.append(NEWLINE);
-		szHelpText.append(gDLL->getText("TXT_KEY_CIVICHELP_REQUIRES", CvWString(GC.getTechInfo(kCivic.getTechPrereq()).getType()).c_str(), GC.getTechInfo(kCivic.getTechPrereq()).getTextKeyWide()));
+		szHelpText.append(gDLL->getText("TXT_KEY_REQUIRES_LINK", CvWString(GC.getTechInfo(kCivic.getTechPrereq()).getType()).c_str(), GC.getTechInfo(kCivic.getTechPrereq()).getTextKeyWide()));
 	}
 
 	// Special Building Not Required...
@@ -23594,22 +23594,30 @@ void CvGameTextMgr::setHeritageHelp(CvWStringBuffer &szBuffer, const HeritageTyp
 
 	if (!CvWString(heritage.getHelp()).empty())
 	{
-		szBuffer.append(NEWLINE);
 		szBuffer.append(heritage.getHelp());
+		szBuffer.append(NEWLINE);
 	}
 
 	if (bCivilopediaText || !bCanAddHeritage)
 	{
+		const TechTypes eTech = static_cast<TechTypes>(heritage.getPrereqTech());
 		if (!bTechChooserText && heritage.getPrereqTech() != NO_TECH)
 		{
+			szBuffer.append(gDLL->getText("TXT_KEY_REQUIRES_LINK", CvWString(GC.getTechInfo(eTech).getType()).GetCString(), GC.getTechInfo(eTech).getDescription()));
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_REQUIRES_STRING", GC.getTechInfo((TechTypes)heritage.getPrereqTech()).getTextKeyWide()));
 		}
 		bool bFirst = true;
 		foreach_(const HeritageTypes eTypeX, heritage.getPrereqOrHeritage())
 		{
-			setListHelp(szBuffer, gDLL->getText("TXT_KEY_REQUIRES"), GC.getHeritageInfo(eTypeX).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
+			CvWString szTempBuffer;
+			szTempBuffer.Format(L"<link=%s>%s</link>", CvWString(GC.getHeritageInfo(eTypeX).getType()).GetCString(), GC.getHeritageInfo(eTypeX).getDescription());
+
+			setListHelp(szBuffer, gDLL->getText("TXT_KEY_REQUIRES_2"), szTempBuffer, gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
 			bFirst = false;
+		}
+		if (!bFirst)
+		{
+			szBuffer.append(NEWLINE);
 		}
 	}
 
@@ -23624,7 +23632,7 @@ void CvGameTextMgr::setHeritageHelp(CvWStringBuffer &szBuffer, const HeritageTyp
 				{
 					szBuffer.append(
 						CvWString::format(
-							L"\n%c%s <link=%s>%s</link>: ",
+							L"%c%s <link=%s>%s</link>: ",
 							gDLL->getSymbolID(BULLET_CHAR), gDLL->getText("TXT_WORD_WITH").GetCString(),
 							CvWString(GC.getEraInfo(pair.first).getType()).GetCString(),
 							GC.getEraInfo(pair.first).getDescription()
@@ -23638,6 +23646,10 @@ void CvGameTextMgr::setHeritageHelp(CvWStringBuffer &szBuffer, const HeritageTyp
 				makeValueString(szValue, pair.second[iI], true);
 				szBuffer.append(CvWString::format(L"%s%c", szValue.GetCString(), GC.getCommerceInfo((CommerceTypes) iI).getChar()));
 			}
+		}
+		if (!bFirst)
+		{
+			szBuffer.append(NEWLINE);
 		}
 	}
 
@@ -23654,14 +23666,10 @@ void CvGameTextMgr::setHeritageHelp(CvWStringBuffer &szBuffer, const HeritageTyp
 					szBuffer.append(L", ...");
 					break;
 				}
-				CvWString szFirstBuffer;
 				CvWString szTempBuffer;
-
-				szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_UNITHELP_REQUIRED_TO_BUILD").c_str());
-
 				szTempBuffer.Format( SETCOLR L"<link=%s>%s</link>" ENDCOLR , TEXT_COLOR("COLOR_UNIT_TEXT"), CvWString(GC.getUnitInfo((UnitTypes)iI).getType()).GetCString(), GC.getUnitInfo((UnitTypes)iI).getDescription());
 
-				setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", bFirst);
+				setListHelp(szBuffer, gDLL->getText("TXT_KEY_UNITHELP_REQUIRED_TO_BUILD"), szTempBuffer, L", ", bFirst);
 				bFirst = false;
 			}
 		}
@@ -23737,7 +23745,7 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 			if (NO_TECH != eTech && (!pCity || !GET_TEAM(pCity->getTeam()).isHasTech(eTech)))
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_REQUIRES_TECH", CvWString(GC.getTechInfo(eTech).getType()).GetCString(), GC.getTechInfo(eTech).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_REQUIRES_LINK", CvWString(GC.getTechInfo(eTech).getType()).GetCString(), GC.getTechInfo(eTech).getTextKeyWide()));
 			}
 		}
 
@@ -23781,7 +23789,7 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 			if (kBuilding.isPrereqInCityBuilding(iI) && (!pCity || !GET_TEAM(pCity->getTeam()).isObsoleteBuilding((BuildingTypes)iI) && !pCity->isActiveBuilding((BuildingTypes)iI)))
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_REQUIRES_STRING", CvWString(GC.getBuildingInfo((BuildingTypes)iI).getType()).GetCString(), GC.getBuildingInfo((BuildingTypes)iI).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_REQUIRES_LINK", CvWString(GC.getBuildingInfo((BuildingTypes)iI).getType()).GetCString(), GC.getBuildingInfo((BuildingTypes)iI).getTextKeyWide()));
 			}
 		}
 
@@ -23847,7 +23855,13 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 		bFirst = true;
 		foreach_(const HeritageTypes eTypeX, kBuilding.getPrereqOrHeritage())
 		{
-			setListHelp(szBuffer, gDLL->getText("TXT_KEY_REQUIRES"), GC.getHeritageInfo(eTypeX).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
+			if (bFirst)
+			{
+				szBuffer.append(NEWLINE);
+			}
+			szTempBuffer.Format(L"<link=%s>%s</link>", CvWString(GC.getHeritageInfo(eTypeX).getType()).GetCString(), GC.getHeritageInfo(eTypeX).getDescription());
+
+			setListHelp(szBuffer, gDLL->getText("TXT_KEY_REQUIRES_2"), szTempBuffer, gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
 			bFirst = false;
 		}
 	}
@@ -24185,7 +24199,7 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 			&& (ePlayer == NO_PLAYER || !GET_TEAM(GET_PLAYER(ePlayer).getTeam()).isHasTech((TechTypes)kBuilding.getPrereqAndTech())))
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_REQUIRES_STRING", CvWString(GC.getTechInfo((TechTypes)(kBuilding.getPrereqAndTech())).getType()).GetCString(), GC.getTechInfo((TechTypes)(kBuilding.getPrereqAndTech())).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_REQUIRES_LINK", CvWString(GC.getTechInfo((TechTypes)(kBuilding.getPrereqAndTech())).getType()).GetCString(), GC.getTechInfo((TechTypes)(kBuilding.getPrereqAndTech())).getTextKeyWide()));
 			}
 
 			bFirst = true;
@@ -33598,7 +33612,7 @@ void CvGameTextMgr::setEventHelp(CvWStringBuffer& szBuffer, EventTypes eEvent, i
 	if (NO_TECH != kEvent.getPrereqTech() && !GET_TEAM(kActivePlayer.getTeam()).isHasTech(kEvent.getPrereqTech()))
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_REQUIRES_STRING", CvWString(GC.getTechInfo(kEvent.getPrereqTech()).getType()).GetCString(), GC.getTechInfo(kEvent.getPrereqTech()).getTextKeyWide()));
+		szBuffer.append(gDLL->getText("TXT_KEY_REQUIRES_LINK", CvWString(GC.getTechInfo(kEvent.getPrereqTech()).getType()).GetCString(), GC.getTechInfo(kEvent.getPrereqTech()).getTextKeyWide()));
 	}
 
 	bool done = false;

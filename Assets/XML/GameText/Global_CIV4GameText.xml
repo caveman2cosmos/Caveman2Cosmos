@@ -22344,6 +22344,24 @@
 		<Russian>[NEWLINE][COLOR_WARNING_TEXT]Òðåáóåòñÿ:[SPACE][COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_REQUIRES_LINK</Tag>
+		<English>[ICON_BULLET][COLOR_WARNING_TEXT]Requires [COLOR_REVERT][LINK=%s1]%s2[\LINK]</English>
+		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Requiert [COLOR_REVERT][LINK=%s1]%s2[\LINK]</French>
+		<German>[ICON_BULLET][COLOR_WARNING_TEXT]erforderlich: [COLOR_REVERT][LINK=%s1]%s2[\LINK]</German>
+		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Требует [COLOR_REVERT][LINK=%s1]%s2[\LINK]</Russian>
+		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Richiede la tecnologia [COLOR_REVERT][LINK=%s1]%s2[\LINK]</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_REQUIRES_2</Tag>
+		<English>[ICON_BULLET][COLOR_WARNING_TEXT]Requires [COLOR_REVERT]</English>
+		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Requiert: [COLOR_REVERT]</French>
+		<German>[ICON_BULLET][COLOR_WARNING_TEXT]erforderlich: [COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Richiede[COLOR_REVERT] per la realizzazione: [COLOR_HIGHLIGHT_TEXT]</Italian> <!-- tech Waterproof Cement, unit Cartwright, city screen hurry up panel-->
+		<Spanish>[ICON_BULLET][COLOR_WARNING_TEXT]Requiere [COLOR_REVERT]</Spanish>
+		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]Wymaga [COLOR_REVERT]</Polish>
+		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Òðåáóåòñÿ: [COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_REQUIRES_BONUS_RAWVICINITY</Tag>
 		<English>[COLOR_WARNING_TEXT]Requires [LINK=%s2]%s1_Text[\LINK] in City Vicinity, or manufactured locally (No need for improvement)[COLOR_REVERT]</English>
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Richiede[COLOR_REVERT] le seguenti risorse (in città o nelle vicinanze o prodotta in loco anche senza miglioramenti):[NEWLINE][TAB][LINK=%s2]%s1_Text[\LINK][COLOR_REVERT]</Italian>
