@@ -902,6 +902,10 @@ bool CvDLLWidgetData::executeAction(CvWidgetDataStruct &widgetDataStruct)
 			doPediaReligionJump(widgetDataStruct);
 			break;
 
+		case WIDGET_PEDIA_JUMP_TO_HERITAGE:
+			doPediaHeritageJump(widgetDataStruct);
+			break;
+
 		case WIDGET_PEDIA_JUMP_TO_CORPORATION:
 			doPediaCorporationJump(widgetDataStruct);
 			break;
@@ -989,6 +993,9 @@ bool CvDLLWidgetData::executeAltAction(CvWidgetDataStruct &widgetDataStruct)
 		case WIDGET_PEDIA_JUMP_TO_RELIGION:
 			doPediaReligionJump(widgetData);
 			break;
+		case WIDGET_PEDIA_JUMP_TO_HERITAGE:
+			doPediaHeritageJump(widgetData);
+			break;
 		case WIDGET_HELP_FOUND_CORPORATION:
 			widgetData.m_iData1 = widgetData.m_iData2;
 			//	Intentional fallthrough...
@@ -1062,6 +1069,7 @@ bool CvDLLWidgetData::isLink(const CvWidgetDataStruct &widgetDataStruct) const
 		case WIDGET_PEDIA_JUMP_TO_SPECIALIST:
 		case WIDGET_PEDIA_JUMP_TO_PROJECT:
 		case WIDGET_PEDIA_JUMP_TO_RELIGION:
+		case WIDGET_PEDIA_JUMP_TO_HERITAGE:
 		case WIDGET_PEDIA_JUMP_TO_CORPORATION:
 		case WIDGET_PEDIA_JUMP_TO_TERRAIN:
 		case WIDGET_PEDIA_JUMP_TO_FEATURE:
@@ -1590,6 +1598,11 @@ void CvDLLWidgetData::doPediaProjectJump(CvWidgetDataStruct &widgetDataStruct)
 void CvDLLWidgetData::doPediaReligionJump(CvWidgetDataStruct &widgetDataStruct)
 {
 	Cy::call(PYScreensModule, "pediaJumpToReligion", Cy::Args(widgetDataStruct.m_iData1));
+}
+
+void CvDLLWidgetData::doPediaHeritageJump(CvWidgetDataStruct &widgetDataStruct)
+{
+	Cy::call(PYScreensModule, "pediaJumpToHeritage", Cy::Args(widgetDataStruct.m_iData1));
 }
 
 void CvDLLWidgetData::doPediaCorporationJump(CvWidgetDataStruct &widgetDataStruct)

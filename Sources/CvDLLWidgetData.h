@@ -70,6 +70,7 @@ public:
 	void doPediaSpecialistJump(CvWidgetDataStruct &widgetDataStruct);
 	void doPediaProjectJump(CvWidgetDataStruct &widgetDataStruct);
 	void doPediaReligionJump(CvWidgetDataStruct &widgetDataStruct);
+	void doPediaHeritageJump(CvWidgetDataStruct &widgetDataStruct);
 	void doPediaCorporationJump(CvWidgetDataStruct &widgetDataStruct);
 	void doPediaTerrainJump(CvWidgetDataStruct &widgetDataStruct);
 	void doPediaFeatureJump(CvWidgetDataStruct &widgetDataStruct);

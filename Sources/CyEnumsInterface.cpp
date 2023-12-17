@@ -429,6 +429,7 @@ void CyEnumsPythonInterface()
 		.value("WIDGET_BUILD_LIST_LIST", WIDGET_BUILD_LIST_LIST)
 		.value("WIDGET_HELP_TRAIT", WIDGET_HELP_TRAIT)
 		.value("WIDGET_PEDIA_JUMP_TO_TRAIT", WIDGET_PEDIA_JUMP_TO_TRAIT)
+		.value("WIDGET_PEDIA_JUMP_TO_HERITAGE", WIDGET_PEDIA_JUMP_TO_HERITAGE)
 		.value("WIDGET_CITY_GOTO", WIDGET_CITY_GOTO)
 
 		.value("NUM_WIDGET_TYPES", NUM_WIDGET_TYPES)
@@ -1290,6 +1291,8 @@ void CyEnumsPythonInterface()
 	python::enum_<SpecialistTypes>("SpecialistTypes").value("NO_SPECIALIST", NO_SPECIALIST);
 
 	python::enum_<ReligionTypes>("ReligionTypes").value("NO_RELIGION", NO_RELIGION);
+
+	python::enum_<HeritageTypes>("HeritageTypes").value("NO_HERITAGE", NO_HERITAGE);
 
 	python::enum_<CorporationTypes>("CorporationTypes").value("NO_CORPORATION", NO_CORPORATION);
 
