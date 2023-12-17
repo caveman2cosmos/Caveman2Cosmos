@@ -627,7 +627,7 @@ void CvGameObjectPlayer::foreachManipulator(ManipCallbackFn func) const
 {
 	PROFILE_EXTRA_FUNC();
 	// Civics
-	for (int i=0; i<GC.getNumCivicOptionInfos(); i++)
+	for (int i = 0; i < GC.getNumCivicOptionInfos(); i++)
 	{
 		func(GC.getCivicInfo(m_pPlayer->getCivics((CivicOptionTypes)i)).getPropertyManipulators());
 	}
@@ -639,7 +639,7 @@ void CvGameObjectPlayer::foreachManipulator(ManipCallbackFn func) const
 	}
 
 	// Leader traits
-	for (int i=0; i<GC.getNumTraitInfos(); i++)
+	for (int i = 0; i < GC.getNumTraitInfos(); i++)
 	{
 		//TB Traits begin
 		if (m_pPlayer->hasTrait((TraitTypes)i))
@@ -647,6 +647,12 @@ void CvGameObjectPlayer::foreachManipulator(ManipCallbackFn func) const
 		{
 			func(GC.getTraitInfo((TraitTypes)i).getPropertyManipulators());
 		}
+	}
+
+	// Heritage
+	foreach_(const HeritageTypes eTypeX, m_pPlayer->getHeritage())
+	{
+		func(GC.getHeritageInfo(eTypeX).getPropertyManipulators());
 	}
 
 	// Handicap

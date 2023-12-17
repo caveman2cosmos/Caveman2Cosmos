@@ -71,6 +71,7 @@ public:
 	bool canAddHeritage(const HeritageTypes eType, const bool bTestVisible = false) const;
 	void setHeritage(const HeritageTypes eType, const bool bNewValue);
 	int getHeritageCommerceEraChange(const CommerceTypes eType, const EraTypes eEra) const;
+	std::vector<HeritageTypes> getHeritage() const { return m_myHeritage; }
 
 protected:
 	CvGameObjectPlayer m_GameObject;
@@ -83,7 +84,6 @@ protected:
 
 	void processHeritage(const HeritageTypes eType, const int iChange);
 	std::vector<HeritageTypes> m_myHeritage;
-	std::vector<HeritageTypes> getHeritage() const { return m_myHeritage; }
 
 public:
 
