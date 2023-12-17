@@ -339,7 +339,7 @@ class PediaBuilding:
 			screen.attachLabel(panelName, "", szBracketR)
 
 		# Religion Req
-		szChild = PF + "REL"
+		szChild = PF + "RELIGION"
 		iType = CvTheBuildingInfo.getPrereqReligion()
 		if iType != -1:
 			if bPlus:

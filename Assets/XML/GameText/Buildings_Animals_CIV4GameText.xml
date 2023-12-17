@@ -548,59 +548,9 @@
 		<Polish>Sieci na ryby były konstruowane przez bogatych by dostarczać im ciągle świeżych i egzotycznych gatunków ryb na ich wykwintne uczty.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_AARDVARK</Tag>
-		<English>Folklore - Aardvark</English>
-		<French>Mythe de l'Oryctérope du Cap</French>
-		<German>
-			<Text>Mythos des Erdferkels:Mythos des Erdferkels:Mythos des Erdferkels:Mythos des Erdferkels</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito dell'oritteropo</Italian>
-		<Russian>Ìèô î òðóáêîçóáå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_AFRICAN_ELEPHANT</Tag>
-		<English>Folklore - African Elephant</English>
-		<French>Mythe de l'Eléphant d'Afrique</French>
-		<German>
-			<Text>Mythos des Afrikanischen Elefanten:Mythos des Afrikanischen Elefanten:Mythos des Afrikanischen Elefanten:Mythos des Afrikanischen Elefanten</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito dell'elefante africano</Italian>
-		<Russian>Ìèô îá àôð. ñëîíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_AMPHIBIANS</Tag>
-		<English>Folklore (T) - Amphibians</English>
-		<French>Mythe - Amphibiens (T)</French>
-		<German>
-			<Text>Mythos der Amphibien:Mythos der Amphibien:Mythos der Amphibien:Mythos der Amphibien</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito degli anfibi</Italian>
-		<Polish>Mit (T) Płazów</Polish>
-		<Russian>Ìèô îá àìôèáèè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Tag>
 		<English>Folklore pseudobuildings represent myths, legends, stories, fables and commoner knowledge about animals and landscape.</English>
 		<German>Die Folklore-Pseudogebäude repräsentieren Mythen, Legenden, Geschichten, Fabeln und allgemeines Wissen über Tiere und Landschaften.</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_ANTEATER</Tag>
-		<English>Folklore - Anteater</English>
-		<French>Mythe du Fourmilier</French>
-		<German>
-			<Text>Mythos des Ameisenbären:Mythos des Ameisenbären:Mythos des Ameisenbären:Mythos des Ameisenbären</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del formichiere</Italian>
-		<Polish>Mit - Mrówkojad</Polish>
-		<Russian>Ìèô î ìóðàâüåäå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_ANTELOPE</Tag>
@@ -640,18 +590,6 @@
 		<Russian>Ìèô î áðîíåíîñöå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_ASIAN_ELEPHANT</Tag>
-		<English>Folklore - Asian Elephant</English>
-		<French>Mythe de l'Eléphant d'Asie</French>
-		<German>
-			<Text>Mythos des Asiatischen Elefanten:Mythos des Asiatischen Elefanten:Mythos des Asiatischen Elefanten:Mythos des Asiatischen Elefanten</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito dell'elefante asiatico</Italian>
-		<Russian>Ìèô îá àçèàò. ñëîíå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_AUROCHS</Tag>
 		<English>Folklore - Aurochs</English>
 		<German>
@@ -660,18 +598,6 @@
 			<Plural>0</Plural>
 		</German>
 		<Italian>Mito dell'uro</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_BABIRUSA</Tag>
-		<English>Folklore - Babirusa</English>
-		<French>Mythe du babiroussas</French>
-		<German>
-			<Text>Mythos des Molukken-Hirschebers:Mythos des Molukken-Hirschebers:Mythos des Molukken-Hirschebers:Mythos des Molukken-Hirschebers</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del babirussa</Italian>
-		<Russian>Ìèô î áàáèðóñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BADGER</Tag>
@@ -685,19 +611,6 @@
 		<Italian>Mito del tasso</Italian>
 		<Polish>Mit - Borsuk</Polish>
 		<Russian>Ìèô î áàðñóêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_BAIRDS_TAPIR</Tag>
-		<English>Folklore - Baird's Tapir</English>
-		<French>Mythe du Tapir de Baird</French>
-		<German>
-			<Text>Mythos des Baird-Tapirs:Mythos des Baird-Tapirs:Mythos des Baird-Tapirs:Mythos des Baird-Tapirs</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del tapiro di Baird</Italian>
-		<Polish>Mit - Tapir Panamski</Polish>
-		<Russian>Ìèô î òàïèðå Áýðäà</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BALL_PYTHON</Tag>
@@ -804,19 +717,6 @@
 		<Russian>Ìèô î ÷åðí. íîñîðîãå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_BOAR</Tag>
-		<English>Folklore (T) - Boar</English>
-		<French>Mythe du Sanglier</French>
-		<German>
-			<Text>Mythos der Wildschweine:Mythos der Wildschweine:Mythos der Wildschweine:Mythos der Wildschweine</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del cinghiale</Italian>
-		<Polish>Mit Dzika</Polish>
-		<Russian>Ìèô î êàáàíå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BONGO</Tag>
 		<English>Folklore - Bongo</English>
 		<French>Mythe du Bongo</French>
@@ -827,19 +727,6 @@
 		</German>
 		<Italian>Mito del bongo</Italian>
 		<Russian>Ìèô î áîíãî</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_LOWLAND_TAPIR</Tag>
-		<English>Folklore - Lowland Tapir</English>
-		<French>Mythe du Tapir du Brésil</French>
-		<German>
-			<Text>Mythos des Flachlandtapirs:Mythos des Flachlandtapirs:Mythos des Flachlandtapirs:Mythos des Flachlandtapirs</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del tapiro di pianura</Italian>
-		<Polish>Mit - Tapir</Polish>
-		<Russian>Ìèô î áðàç. òàïèðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_CAPE_BUFFALO</Tag>
@@ -1047,18 +934,6 @@
 		<Russian>Ìèô î êóñêóñå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_DART_FROG</Tag>
-		<English>Folklore - Dart Frog</English>
-		<French>Mythe de la Grenouille venimeuse</French>
-		<German>
-			<Text>Mythos des Baumsteigerfroschs:Mythos des Baumsteigerfroschs:Mythos des Baumsteigerfroschs:Mythos des Baumsteigerfroschs</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito della rana velenosa</Italian>
-		<Russian>Ìèô î æàáå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_DEER</Tag>
 		<English>Folklore - Deer</English>
 		<French>Mythe du Cerf</French>
@@ -1216,19 +1091,6 @@
 		<Italian>I sei elementi che compongono tutto - Terra, Aria, Acqua, Pietra, Metallo, Fuoco - e che sono diventati oggetto di fiabe e leggende.</Italian>
 		<Polish>Sześć żywiołów tworzy wszystko. Składają si na nie Ziemia, Powietrze (Niebo), Woda (Morze), Kamień, Metal i Ogień. Chemia rozwiewa tą błdną teori i usuwa wszelkie zyski z tych mitów.</Polish>
 		<Russian>Øåñòü ýëåìåíòîâ ñîñòàâëÿþò âñå. Ê íèì îòíîñÿòñÿ çåìëÿ, âîçäóõ(íåáî), âîäà(ìîðå), êàìåíü, ìåòàëë è îãîíü. Îíè òåðÿþò âñå ïðåèìóùåñòâî ñ èçó÷åíèåì Õèìèè.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_ELEPHANT</Tag>
-		<English>Folklore (T) - Elephant</English>
-		<French>Mythe de l'Eléphant (T)</French>
-		<German>
-			<Text>Mythos der Elefanten:Mythos der Elefanten:Mythos der Elefanten:Mythos der Elefanten</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito dell'elefante</Italian>
-		<Polish>Mit (T) Słonia</Polish>
-		<Russian>Ìèô î ñëîíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_EMPEROR_PENGUIN</Tag>
@@ -1856,19 +1718,6 @@
 		<Russian>Ìèô î ìàêðåëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_MALAYAN_TAPIR</Tag>
-		<English>Folklore - Malayan Tapir</English>
-		<French>Mythe du Tapir Malais</French>
-		<German>
-			<Text>Mythos des Schabrackentapirs:Mythos des Schabrackentapirs:Mythos des Schabrackentapirs:Mythos des Schabrackentapirs</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del tapiro malese</Italian>
-		<Polish>Mit - Tapir Malajski</Polish>
-		<Russian>Ìèô î ìàë. òàïèðå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_MANDRILL</Tag>
 		<English>Folklore - Mandrill</English>
 		<French>Mythe du Mandrill</French>
@@ -1979,19 +1828,6 @@
 		</German>
 		<Italian>Mito dell'alce</Italian>
 		<Russian>Ìèô î ëîñå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_MOUNTAIN_TAPIR</Tag>
-		<English>Folklore - Mountain Tapir</English>
-		<French>Mythe du Tapir des Montagnes</French>
-		<German>
-			<Text>Mythos des Bergtapirs:Mythos des Bergtapirs:Mythos des Bergtapirs:Mythos des Bergtapirs</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del tapiro delle Ande</Italian>
-		<Polish>Mit - Tapir Górski</Polish>
-		<Russian>Ìèô î ãîðíîì òàïèðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_MUSKOX</Tag>
@@ -2213,19 +2049,6 @@
 		</German>
 		<Italian>Mito del bradipo gigante</Italian>
 		<Russian>Ìèô î ãèã. ëåíèâöå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_MAMMOTH</Tag>
-		<English>Folklore - Mammoth</English>
-		<French>Mythe du Mammouth</French>
-		<German>
-			<Text>Mythos des Mammuts:Mythos des Mammuts:Mythos des Mammuts:Mythos des Mammuts</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del mammut</Italian>
-		<Polish>Mit Mamutów</Polish>
-		<Russian>Ìèô î ìàìîíòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_PALEOLITHIC_MARSUPIAL</Tag>
@@ -2781,24 +2604,6 @@
 		<Russian>Ìèô î êàìíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_SWINE</Tag>
-		<English>Folklore - Swine</English>
-		<Italian>Mito del maiale</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_TAPIR</Tag>
-		<English>Folklore (T) - Tapir</English>
-		<French>Mythe du Tapir (T)</French>
-		<German>
-			<Text>Mythos der Tapire:Mythos der Tapire:Mythos der Tapire:Mythos der Tapire</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del tapiro</Italian>
-		<Polish>Mit (T) - Tapir</Polish>
-		<Russian>Ìèô î òàïèðå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_DESERT_TARANTULA</Tag>
 		<English>Folklore - Desert Tarantula</English>
 		<French>Mythe de la Tarentule du désert</French>
@@ -2917,19 +2722,6 @@
 		<Russian>Ìèô îá èíäåéêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_E_UNICORN</Tag>
-		<English>Folklore (E) - Unicorn</English>
-		<French>Mythe de la Licorne (E)</French>
-		<German>
-			<Text>Mythos der Einhörner:Mythos der Einhörner:Mythos der Einhörner:Mythos der Einhörner</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito dell'unicorno</Italian>
-		<Polish>Mit Jednorożca</Polish>
-		<Russian>Ìèô îá åäèíîðîãå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_VIPER</Tag>
 		<English>Folklore - Viper</English>
 		<French>Mythe de la Vipère</French>
@@ -3001,19 +2793,6 @@
 		<Russian>Ìèô î ìîðæå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_WARTHOG</Tag>
-		<English>Folklore - Warthog</English>
-		<French>Mythe du Phacochère</French>
-		<German>
-			<Text>Mythos des Warzenschweins:Mythos des Warzenschweins:Mythos des Warzenschweins:Mythos des Warzenschweins</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del facocero</Italian>
-		<Polish>Mit - Guziec</Polish>
-		<Russian>Ìèô î áîðîäàâî÷íèêå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_WEASEL</Tag>
 		<English>Folklore (T) - Weasel</English>
 		<French>Mythe de la belette (T)</French>
@@ -3051,16 +2830,6 @@
 		<Italian>Mito del rinoceronte bianco</Italian>
 		<Polish>Mit - Nosorożec Biały</Polish>
 		<Russian>Ìèô î áåë. íîñîðîãå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_WILD_BOAR</Tag>
-		<English>Folklore - Wild Boar</English>
-		<German>
-			<Text>Mythos des Wildschweins:Mythos des Wildschweins:Mythos des Wildschweins:Mythos des Wildschweins</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del cinghiale selvatico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_WILDEBEEST</Tag>

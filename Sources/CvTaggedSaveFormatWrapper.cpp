@@ -13,6 +13,7 @@
 #include "CvTraitInfo.h"
 #include "CvUnitCombatInfo.h"
 #include "CvPopupInfo.h"
+#include "CvHeritageInfo.h"
 
 #ifdef _DEBUG
 //#define	DETAILED_TRACE	1
@@ -1078,6 +1079,17 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 				m_stream->WriteString(info.getType());
 		}
 		break;
+	case REMAPPED_CLASS_TYPE_HERITAGE:
+		entry.numClasses = GC.getNumHeritageInfos();
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)& entry);
+		for (int i = 0; i < entry.numClasses; i++)
+		{
+			const CvHeritageInfo& info = GC.getHeritageInfo((HeritageTypes)i);
+
+			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
+				m_stream->WriteString(info.getType());
+		}
+		break;
 	case REMAPPED_CLASS_TYPE_MISSIONS:
 		entry.numClasses = GC.getNumMissionInfos();
 		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
@@ -1192,6 +1204,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTables()
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_COMMERCES);
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_DOMAINS);
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_CATEGORIES);
+	WriteClassMappingTable(REMAPPED_CLASS_TYPE_HERITAGE);
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_MAPS);
 }
 
@@ -1321,6 +1334,9 @@ CvTaggedSaveFormatWrapper::getNumClassEnumValues(RemappedClassType classType) co
 			break;
 		case REMAPPED_CLASS_TYPE_CATEGORIES:
 			result = GC.getNumCategoryInfos();
+			break;
+		case REMAPPED_CLASS_TYPE_HERITAGE:
+			result = GC.getNumHeritageInfos();
 			break;
 		case REMAPPED_CLASS_TYPE_MISSIONS:
 			result = GC.getNumMissionInfos();

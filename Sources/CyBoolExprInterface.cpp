@@ -5,6 +5,7 @@ void CyBoolExprPythonInterface()
 {
 	python::enum_<GOMTypes>("GOMTypes")
 		.value("NO_GOM", NO_GOM)
+		.value("GOM_HERITAGE", GOM_HERITAGE)
 		.value("GOM_BUILDING", GOM_BUILDING)
 		.value("GOM_BONUS", GOM_BONUS)
 		.value("GOM_TECH", GOM_TECH)

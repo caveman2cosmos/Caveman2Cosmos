@@ -11740,7 +11740,7 @@ int CvCity::getBaseCommerceRateExtra(CommerceTypes eIndex) const
 	iBaseExtraRate += getBuildingCommerce100(eIndex);
 
 	//STEP 6 : Free City Commerce (player tallied from civics/traits a change value to all cities commerce output)
-	iBaseExtraRate += 100 * GET_PLAYER(getOwner()).getFreeCityCommerce(eIndex);
+	iBaseExtraRate += GET_PLAYER(getOwner()).getExtraCommerce100(eIndex);
 
 	//STEP 7 : Minted Commerce
 	if (eIndex == COMMERCE_GOLD)

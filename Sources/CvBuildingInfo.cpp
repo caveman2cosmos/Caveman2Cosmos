@@ -1947,6 +1947,7 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumC(iSum, m_freeBonuses);
 	CheckSumC(iSum, m_aePrereqOrRawVicinityBonuses);
 	CheckSumC(iSum, m_aePrereqOrBonuses);
+	CheckSumC(iSum, m_prereqOrHeritage);
 	CheckSumC(iSum, m_aiCategories);
 	CheckSumC(iSum, m_aiPrereqInCityBuildings);
 	CheckSumC(iSum, m_vPrereqNotInCityBuildings);
@@ -2066,8 +2067,8 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"Bonus");
 	m_iPrereqAndBonus = pXML->GetInfoClass(szTextVal);
 
-	//Alberts2 PrereqBonuses
 	pXML->SetOptionalVector(&m_aePrereqOrBonuses, L"PrereqBonuses");
+	pXML->SetOptionalVector(&m_prereqOrHeritage, L"PrereqOrHeritage");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"PowerBonus");
 	m_iPowerBonus = pXML->GetInfoClass(szTextVal);
@@ -4201,10 +4202,14 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	}
 	//TB Combat Mods (Buildings) end
 
-	//Alberts2 PrereqBonuses
 	if (!pClassInfo->m_aePrereqOrBonuses.empty())
 	{
 		CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aePrereqOrBonuses, pClassInfo->m_aePrereqOrBonuses);
+	}
+
+	if (!pClassInfo->m_prereqOrHeritage.empty())
+	{
+		CvXMLLoadUtility::CopyNonDefaultsFromVector(m_prereqOrHeritage, pClassInfo->m_prereqOrHeritage);
 	}
 
 	if (getMaxGlobalInstances() == -1) m_iMaxGlobalInstances = pClassInfo->getMaxGlobalInstances();

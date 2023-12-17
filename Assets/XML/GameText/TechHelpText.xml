@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_DART_FROG</Tag>
+		<English>Folklore - Dart Frog</English>
+		<French>Mythe de la Grenouille venimeuse</French>
+		<German>Mythos des Baumsteigerfroschs</German>
+		<Italian>Mito della rana velenosa</Italian>
+		<Russian>Ìèô î æàáå</Russian>
+	</TEXT>
+</Civ4GameText>

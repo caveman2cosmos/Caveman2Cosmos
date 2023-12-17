@@ -297,6 +297,12 @@ const CvReligionInfo* CyGlobalContext::getReligionInfo(int i) const
 }
 
 
+const CvHeritageInfo* CyGlobalContext::getHeritageInfo(int i) const
+{
+	return (i >= 0 && i < GC.getNumHeritageInfos()) ? &GC.getHeritageInfo((HeritageTypes)i) : NULL;
+}
+
+
 const CvCorporationInfo* CyGlobalContext::getCorporationInfo(int i) const
 {
 	return (i>=0 && i<GC.getNumCorporationInfos()) ? &GC.getCorporationInfo((CorporationTypes) i) : NULL;

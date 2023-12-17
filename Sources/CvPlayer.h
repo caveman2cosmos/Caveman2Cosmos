@@ -67,6 +67,12 @@ public:
 
 	void processTech(const TechTypes eTech, const int iChange);
 
+	bool hasHeritage(const HeritageTypes eType) const;
+	bool canAddHeritage(const HeritageTypes eType, const bool bTestVisible = false) const;
+	void setHeritage(const HeritageTypes eType, const bool bNewValue);
+	int getHeritageCommerceEraChange(const CommerceTypes eType, const EraTypes eEra) const;
+	std::vector<HeritageTypes> getHeritage() const { return m_myHeritage; }
+
 protected:
 	CvGameObjectPlayer m_GameObject;
 	void baseInit(PlayerTypes eID);
@@ -75,6 +81,9 @@ protected:
 	std::vector<int> m_idleCities;
 	std::vector<CvUnit*> m_commanders;
 	std::vector<CvPlot*> m_commandFieldPlots;
+
+	void processHeritage(const HeritageTypes eType, const int iChange);
+	std::vector<HeritageTypes> m_myHeritage;
 
 public:
 
@@ -884,8 +893,8 @@ public:
 	int getTradeYieldModifier(YieldTypes eIndex) const;
 	void changeTradeYieldModifier(YieldTypes eIndex, int iChange);
 
-	int getFreeCityCommerce(CommerceTypes eIndex) const;
-	void changeFreeCityCommerce(CommerceTypes eIndex, int iChange);
+	int getExtraCommerce100(const CommerceTypes eIndex) const;
+	void changeExtraCommerce100(const CommerceTypes eIndex, const int iChange);
 
 	int getCommercePercent(CommerceTypes eIndex) const;
 	void setCommercePercent(CommerceTypes eIndex, int iNewValue);
@@ -1451,6 +1460,7 @@ public:
 	void doTaxes();
 
 	bool m_bChoosingReligion;
+	bool m_bHasLanguage;
 
 	int getBuildingCount(BuildingTypes eBuilding, bool bUpgrades) const;
 
@@ -1919,7 +1929,8 @@ protected:
 	int* m_aiCapitalYieldRateModifier;
 	int* m_aiExtraYieldThreshold;
 	int* m_aiTradeYieldModifier;
-	int* m_aiFreeCityCommerce;
+	int* m_aiFreeCityCommerce; // @SAVEBREAK remove as it is unused.
+	int* m_extraCommerce;
 	int* m_aiCommercePercent;
 	int* m_aiCommerceRate;
 	bool* m_abCommerceDirty;
