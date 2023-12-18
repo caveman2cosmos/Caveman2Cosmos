@@ -1856,21 +1856,22 @@ class CvEventManager:
 						continue
 					if MAP.generatePathForHypotheticalUnit(CyPlotZ, CyPlot, iPlayer, iUnit, PathingFlags.MOVE_SAFE_TERRITORY, 1000):
 						pCheckPlot = MAP.getLastPathPlotByIndex(1)
-						iCheckX = pCheckPlot.getX()
-						x = CyPlotZ.getX()
-						y = CyPlotZ.getY()
-						if iCheckX == x + 1 or x == iGridWidth - 1 and not iCheckX or x == iX - 1:
-							if (x < iMaxWestX and x < iX and iMaxWestX <= iX) or (x - iGridWidth < iMaxWestX and iMaxWestX <= iX and x > iX) or (x < iMaxWestX and x > iX and iMaxWestX > iX):
-								if x < iMaxWestX or (x > iX and iMaxWestX <= iX) or (x == iMaxWestX and abs(y - iY) <= abs(iMaxWestY - iY)):
-									iMaxWestX = x
-									iMaxWestY = y
-									pMaxWest = CyPlotZ
-						if iCheckX == x - 1 or (iCheckX == iGridWidth - 1 and not x) or x == iX + 1:
-							if (x > iMaxEastX and x > iX and iMaxEastX >= iX) or (x + iGridWidth > iMaxEastX and iMaxEastX >= iX and x < iX) or (x > iMaxEastX and x < iX and iMaxEastX < iX):
-								if x > iMaxEastX or (x < iX and iMaxEastX >= iX) or (x == iMaxEastX and abs(y - iY) <= abs(iMaxEastY - iY)):
-									iMaxEastX = x
-									iMaxEastY = y
-									pMaxEast = CyPlotZ
+						if pCheckPlot:
+							iCheckX = pCheckPlot.getX()
+							x = CyPlotZ.getX()
+							y = CyPlotZ.getY()
+							if iCheckX == x + 1 or x == iGridWidth - 1 and not iCheckX or x == iX - 1:
+								if (x < iMaxWestX and x < iX and iMaxWestX <= iX) or (x - iGridWidth < iMaxWestX and iMaxWestX <= iX and x > iX) or (x < iMaxWestX and x > iX and iMaxWestX > iX):
+									if x < iMaxWestX or (x > iX and iMaxWestX <= iX) or (x == iMaxWestX and abs(y - iY) <= abs(iMaxWestY - iY)):
+										iMaxWestX = x
+										iMaxWestY = y
+										pMaxWest = CyPlotZ
+							if iCheckX == x - 1 or (iCheckX == iGridWidth - 1 and not x) or x == iX + 1:
+								if (x > iMaxEastX and x > iX and iMaxEastX >= iX) or (x + iGridWidth > iMaxEastX and iMaxEastX >= iX and x < iX) or (x > iMaxEastX and x < iX and iMaxEastX < iX):
+									if x > iMaxEastX or (x < iX and iMaxEastX >= iX) or (x == iMaxEastX and abs(y - iY) <= abs(iMaxEastY - iY)):
+										iMaxEastX = x
+										iMaxEastY = y
+										pMaxEast = CyPlotZ
 				if MAP.generatePathForHypotheticalUnit(CyPlot, pMaxWest, iPlayer, iUnit, PathingFlags.MOVE_SAFE_TERRITORY, 1000):
 					for i in xrange(MAP.getLastPathStepNum()):
 						CyPlotZ = MAP.getLastPathPlotByIndex(i)
@@ -2233,7 +2234,8 @@ class CvEventManager:
 					X = CyUnit.getX(); Y = CyUnit.getY()
 				else:
 					CyPlot = CyPlayer.getStartingPlot()
-					X = CyPlot.getX(); Y = CyPlot.getY()
+					if CyPlot:
+						X = CyPlot.getX(); Y = CyPlot.getY()
 
 			if -1 not in (X, Y):
 				if GC.getCivilizationInfo(CyPlayer.getCivilizationType()).getType() == "CIVILIZATION_NEANDERTHAL":

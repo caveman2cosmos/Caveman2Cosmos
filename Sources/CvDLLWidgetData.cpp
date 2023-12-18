@@ -902,6 +902,10 @@ bool CvDLLWidgetData::executeAction(CvWidgetDataStruct &widgetDataStruct)
 			doPediaReligionJump(widgetDataStruct);
 			break;
 
+		case WIDGET_PEDIA_JUMP_TO_HERITAGE:
+			doPediaHeritageJump(widgetDataStruct);
+			break;
+
 		case WIDGET_PEDIA_JUMP_TO_CORPORATION:
 			doPediaCorporationJump(widgetDataStruct);
 			break;
@@ -989,6 +993,9 @@ bool CvDLLWidgetData::executeAltAction(CvWidgetDataStruct &widgetDataStruct)
 		case WIDGET_PEDIA_JUMP_TO_RELIGION:
 			doPediaReligionJump(widgetData);
 			break;
+		case WIDGET_PEDIA_JUMP_TO_HERITAGE:
+			doPediaHeritageJump(widgetData);
+			break;
 		case WIDGET_HELP_FOUND_CORPORATION:
 			widgetData.m_iData1 = widgetData.m_iData2;
 			//	Intentional fallthrough...
@@ -1062,6 +1069,7 @@ bool CvDLLWidgetData::isLink(const CvWidgetDataStruct &widgetDataStruct) const
 		case WIDGET_PEDIA_JUMP_TO_SPECIALIST:
 		case WIDGET_PEDIA_JUMP_TO_PROJECT:
 		case WIDGET_PEDIA_JUMP_TO_RELIGION:
+		case WIDGET_PEDIA_JUMP_TO_HERITAGE:
 		case WIDGET_PEDIA_JUMP_TO_CORPORATION:
 		case WIDGET_PEDIA_JUMP_TO_TERRAIN:
 		case WIDGET_PEDIA_JUMP_TO_FEATURE:
@@ -1592,6 +1600,11 @@ void CvDLLWidgetData::doPediaReligionJump(CvWidgetDataStruct &widgetDataStruct)
 	Cy::call(PYScreensModule, "pediaJumpToReligion", Cy::Args(widgetDataStruct.m_iData1));
 }
 
+void CvDLLWidgetData::doPediaHeritageJump(CvWidgetDataStruct &widgetDataStruct)
+{
+	Cy::call(PYScreensModule, "pediaJumpToHeritage", Cy::Args(widgetDataStruct.m_iData1));
+}
+
 void CvDLLWidgetData::doPediaCorporationJump(CvWidgetDataStruct &widgetDataStruct)
 {
 	Cy::call(PYScreensModule, "pediaJumpToCorporation", Cy::Args(widgetDataStruct.m_iData1));
@@ -1982,7 +1995,7 @@ void CvDLLWidgetData::parseConscriptHelp(CvWidgetDataStruct &widgetDataStruct, C
 	PROFILE_EXTRA_FUNC();
 	CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
 
-	if (pHeadSelectedCity != NULL)
+	if (pHeadSelectedCity)
 	{
 		if (pHeadSelectedCity->getConscriptUnit() != NO_UNIT)
 		{
@@ -1990,14 +2003,12 @@ void CvDLLWidgetData::parseConscriptHelp(CvWidgetDataStruct &widgetDataStruct, C
 			szTemp.Format(SETCOLR L"%s" ENDCOLR, TEXT_COLOR("COLOR_UNIT_TEXT"), GC.getUnitInfo(pHeadSelectedCity->getConscriptUnit()).getDescription());
 			szBuffer.assign(szTemp);
 
-// BUG - Starting Experience - start
 			if (getBugOptionBOOL("MiscHover__ConscriptUnit", true, "BUG_CONSCRIPT_UNIT_HOVER"))
 			{
 				GAMETEXT.setBasicUnitHelpWithCity(szBuffer, pHeadSelectedCity->getConscriptUnit(), false, pHeadSelectedCity, true);
 			}
-// BUG - Starting Experience - end
 
-			int iConscriptPopulation = pHeadSelectedCity->getConscriptPopulation();
+			const int iConscriptPopulation = pHeadSelectedCity->getConscriptPopulation();
 
 			if (iConscriptPopulation > 0)
 			{
@@ -2013,12 +2024,10 @@ void CvDLLWidgetData::parseConscriptHelp(CvWidgetDataStruct &widgetDataStruct, C
 				szBuffer.append(gDLL->getText("TXT_KEY_MISC_ANGER_TURNS", GC.getCONSCRIPT_POP_ANGER(), (iConscriptAngerLength + pHeadSelectedCity->getConscriptAngerTimer())));
 			}
 
-			const int iMinCityPopulation = pHeadSelectedCity->conscriptMinCityPopulation();
-
-			if (pHeadSelectedCity->getPopulation() < iMinCityPopulation)
+			if (pHeadSelectedCity->getPopulation() <= iConscriptPopulation)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_MISC_MIN_CITY_POP", iMinCityPopulation));
+				szBuffer.append(gDLL->getText("TXT_KEY_MISC_MIN_CITY_POP", iConscriptPopulation + 1));
 			}
 
 			const int iMinCulturePercent = GC.getCONSCRIPT_MIN_CULTURE_PERCENT();
@@ -2407,10 +2416,10 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 			}
 			else if (GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_CONSTRUCT)
 			{
-				BuildingTypes eBuilding = ((BuildingTypes)(GC.getActionInfo(widgetDataStruct.m_iData1).getMissionData()));
-
-				if (pMissionCity != NULL)
+				if (pMissionCity)
 				{
+					BuildingTypes eBuilding = (BuildingTypes)GC.getActionInfo(widgetDataStruct.m_iData1).getMissionData();
+
 					if (pMissionCity->canConstruct(eBuilding, false, false, true))
 					{
 						szBuffer.append(NEWLINE);
@@ -2421,6 +2430,11 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 						GAMETEXT.buildBuildingRequiresString(szBuffer, (BuildingTypes)GC.getActionInfo(widgetDataStruct.m_iData1).getMissionData(), false, false, pMissionCity);
 					}
 				}
+			}
+			else if (GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_HERITAGE)
+			{
+				szBuffer.append(NEWLINE);
+				GAMETEXT.setHeritageHelp(szBuffer, (HeritageTypes)GC.getActionInfo(widgetDataStruct.m_iData1).getMissionData(), pMissionCity, false, true);
 			}
 			else if (GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_DISCOVER)
 			{
@@ -2768,7 +2782,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 								if (GC.getTechInfo((TechTypes)iI).isIrrigation())
 								{
 									szBuffer.append(NEWLINE);
-									szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_REQUIRES_STRING", CvWString(GC.getTechInfo((TechTypes)iI).getType()).GetCString(), GC.getTechInfo((TechTypes)iI).getTextKeyWide()));
+									szBuffer.append(gDLL->getText("TXT_KEY_REQUIRES_LINK", CvWString(GC.getTechInfo((TechTypes)iI).getType()).GetCString(), GC.getTechInfo((TechTypes)iI).getTextKeyWide()));
 									break;
 								}
 							}
@@ -2777,7 +2791,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					if (!team.isHasTech(GC.getBuildInfo(eBuild).getTechPrereq()))
 					{
 						szBuffer.append(NEWLINE);
-						szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_REQUIRES_STRING", CvWString(GC.getTechInfo(GC.getBuildInfo(eBuild).getTechPrereq()).getType()).c_str(), GC.getTechInfo(GC.getBuildInfo(eBuild).getTechPrereq()).getTextKeyWide()));
+						szBuffer.append(gDLL->getText("TXT_KEY_REQUIRES_LINK", CvWString(GC.getTechInfo(GC.getBuildInfo(eBuild).getTechPrereq()).getType()).c_str(), GC.getTechInfo(GC.getBuildInfo(eBuild).getTechPrereq()).getTextKeyWide()));
 					}
 
 					if (GC.getBuildInfo(eBuild).getObsoleteTech() != NO_TECH && team.isHasTech(GC.getBuildInfo(eBuild).getObsoleteTech()))
@@ -2791,7 +2805,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 						if (!(pMissionPlot->isAdjacentPlotGroupConnectedBonus(pHeadSelectedUnit->getOwner(), prereqBonus)))
 						{
 							szBuffer.append(NEWLINE);
-							szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_REQUIRES_STRING", CvWString(GC.getBonusInfo(prereqBonus).getType()).GetCString(), GC.getBonusInfo(prereqBonus).getTextKeyWide()));
+							szBuffer.append(gDLL->getText("TXT_KEY_REQUIRES_LINK", CvWString(GC.getBonusInfo(prereqBonus).getType()).GetCString(), GC.getBonusInfo(prereqBonus).getTextKeyWide()));
 						}
 					}
 
@@ -2802,7 +2816,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 							if (!(pMissionPlot->isAdjacentPlotGroupConnectedBonus(pHeadSelectedUnit->getOwner(), ((BonusTypes)(GC.getRouteInfo(eRoute).getPrereqBonus())))))
 							{
 								szBuffer.append(NEWLINE);
-								szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_REQUIRES_STRING",
+								szBuffer.append(gDLL->getText("TXT_KEY_REQUIRES_LINK",
 									CvWString(GC.getBonusInfo((BonusTypes) GC.getRouteInfo(eRoute).getPrereqBonus()).getType()).GetCString(),
 									GC.getBonusInfo((BonusTypes) GC.getRouteInfo(eRoute).getPrereqBonus()).getTextKeyWide()));
 							}
@@ -2866,7 +2880,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 										}
 										else
 										{
-											szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_REQUIRES_STRING",
+											szBuffer.append(gDLL->getText("TXT_KEY_REQUIRES_LINK",
 												CvWString(GC.getTechInfo(featureTechRequired).getType()).GetCString(),
 												GC.getTechInfo(featureTechRequired).getTextKeyWide()));
 										}
@@ -2903,7 +2917,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 									}
 									else
 									{
-										szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_REQUIRES_STRING",
+										szBuffer.append(gDLL->getText("TXT_KEY_REQUIRES_LINK",
 											CvWString(GC.getTechInfo(terrainTechRequired).getType()).GetCString(),
 											GC.getTechInfo(terrainTechRequired).getTextKeyWide()));
 									}

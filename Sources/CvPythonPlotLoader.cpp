@@ -1,3 +1,4 @@
+#include "CvGameCoreDLL.h"
 #include "CvPythonPlotLoader.h"
 #include <boost/python/manage_new_object.hpp>
 

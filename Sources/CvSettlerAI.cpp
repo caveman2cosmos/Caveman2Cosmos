@@ -1,3 +1,4 @@
+#include "CvGameCoreDLL.h"
 #include "CvSettlerAI.h"
 #include "CvPlayerAI.h"
 

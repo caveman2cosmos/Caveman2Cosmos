@@ -4237,25 +4237,7 @@ UnitTypes CvCity::getConscriptUnit() const
 
 int CvCity::getConscriptPopulation() const
 {
-	const UnitTypes eConscriptUnit = getConscriptUnit();
-
-	if (eConscriptUnit == NO_UNIT)
-	{
-		return 0;
-	}
-
-	if (GC.getCONSCRIPT_POPULATION_PER_COST() == 0)
-	{
-		return 0;
-	}
-
-	return std::max(1, (GC.getUnitInfo(eConscriptUnit).getProductionCost() / GC.getCONSCRIPT_POPULATION_PER_COST()));
-}
-
-
-int CvCity::conscriptMinCityPopulation() const
-{
-	return GC.getCONSCRIPT_MIN_CITY_POPULATION() + getConscriptPopulation();
+	return std::max(0, GC.getCONSCRIPT_POPULATION());
 }
 
 
@@ -4265,17 +4247,17 @@ int CvCity::flatConscriptAngerLength() const
 }
 
 
-//Team Project (6)
 bool CvCity::canConscript(bool bOnCapture) const
 {
-	//Team Project (6)
-	if (isDisorder() && !bOnCapture)
+	if (!bOnCapture)
 	{
-		return false;
+		if (isDisorder() || isDrafted())
+		{
+			return false;
+		}
 	}
 
-	//Team Project (6)
-	if (isDrafted() && !bOnCapture)
+	if (getPopulation() <= getConscriptPopulation())
 	{
 		return false;
 	}
@@ -4285,18 +4267,7 @@ bool CvCity::canConscript(bool bOnCapture) const
 		return false;
 	}
 
-	if (getPopulation() <= getConscriptPopulation())
-	{
-		return false;
-	}
-
-	if (getPopulation() < conscriptMinCityPopulation())
-	{
-		return false;
-	}
-
-	//Team Project (6)
-	if (plot()->calculateTeamCulturePercent(getTeam()) < GC.getCONSCRIPT_MIN_CULTURE_PERCENT() && !bOnCapture)
+	if (!bOnCapture && plot()->calculateTeamCulturePercent(getTeam()) < GC.getCONSCRIPT_MIN_CULTURE_PERCENT())
 	{
 		return false;
 	}
@@ -6222,14 +6193,12 @@ int CvCity::hurryPopulation(HurryTypes eHurry) const
 
 int CvCity::getHurryPopulation(HurryTypes eHurry, int iHurryCost) const
 {
-	int prodPerPop = GC.getGame().getProductionPerPopulation(eHurry);
-	if (prodPerPop == 0)
+	const int prodPerPop = GC.getGame().getProductionPerPopulation(eHurry);
+	if (prodPerPop < 1)
 	{
 		return 0;
 	}
-	const int iPopulation = (iHurryCost - 1) / prodPerPop;
-
-	return std::max(1, (iPopulation + 1));
+	return std::max(1, 1 + (iHurryCost - 1) / prodPerPop);
 }
 
 int CvCity::hurryProduction(HurryTypes eHurry) const
@@ -11771,7 +11740,7 @@ int CvCity::getBaseCommerceRateExtra(CommerceTypes eIndex) const
 	iBaseExtraRate += getBuildingCommerce100(eIndex);
 
 	//STEP 6 : Free City Commerce (player tallied from civics/traits a change value to all cities commerce output)
-	iBaseExtraRate += 100 * GET_PLAYER(getOwner()).getFreeCityCommerce(eIndex);
+	iBaseExtraRate += GET_PLAYER(getOwner()).getExtraCommerce100(eIndex);
 
 	//STEP 7 : Minted Commerce
 	if (eIndex == COMMERCE_GOLD)

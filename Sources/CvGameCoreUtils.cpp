@@ -4070,6 +4070,7 @@ void getMissionTypeString(CvWString& szString, MissionTypes eMissionType)
 	case MISSION_SPREAD_CORPORATION: szString = L"MISSION_SPREAD_CORPORATION"; break;
 	case MISSION_JOIN: szString = L"MISSION_JOIN"; break;
 	case MISSION_CONSTRUCT: szString = L"MISSION_CONSTRUCT"; break;
+	case MISSION_HERITAGE: szString = L"MISSION_HERITAGE"; break;
 	case MISSION_DISCOVER: szString = L"MISSION_DISCOVER"; break;
 	case MISSION_HURRY: szString = L"MISSION_HURRY"; break;
 	case MISSION_TRADE: szString = L"MISSION_TRADE"; break;

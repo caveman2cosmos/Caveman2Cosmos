@@ -1039,8 +1039,10 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_AARDVARK</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqAndHeritage>
+				<Type>HERITAGE_FOLKLORE_AARDVARK</Type>
+			</PrereqAndHeritage>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -2980,8 +2982,10 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_BAIRDS_TAPIR</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqAndHeritage>
+				<Type>HERITAGE_FOLKLORE_TAPIR_BAIRDS</Type>
+			</PrereqAndHeritage>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -3064,8 +3068,10 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_LOWLAND_TAPIR</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqAndHeritage>
+				<Type>HERITAGE_FOLKLORE_TAPIR_LOWLAND</Type>
+			</PrereqAndHeritage>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -3148,8 +3154,10 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_MALAYAN_TAPIR</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqAndHeritage>
+				<Type>HERITAGE_FOLKLORE_TAPIR_MALAYAN</Type>
+			</PrereqAndHeritage>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -3232,8 +3240,10 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_MOUNTAIN_TAPIR</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqAndHeritage>
+				<Type>HERITAGE_FOLKLORE_TAPIR_MOUNTAIN</Type>
+			</PrereqAndHeritage>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>

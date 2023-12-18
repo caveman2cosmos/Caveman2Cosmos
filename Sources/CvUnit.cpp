@@ -12,6 +12,9 @@
 #include "CvGlobals.h"
 #include "CvImprovementInfo.h"
 #include "CvInfos.h"
+#include "CvUnitCombatInfo.h"
+#include "CvTraitInfo.h"
+#include "CvOutcomeList.h"
 #include "CvMap.h"
 #include "CvPlayerAI.h"
 #include "CvPlot.h"
@@ -10301,7 +10304,7 @@ bool CvUnit::canConstruct(const CvPlot* pPlot, BuildingTypes eBuilding, bool bTe
 
 	CvCity* pCity = pPlot->getPlotCity();
 
-	if (pCity == NULL || getTeam() != pCity->getTeam())
+	if (!pCity || getTeam() != pCity->getTeam())
 	{
 		return false;
 	}
@@ -10339,8 +10342,47 @@ bool CvUnit::construct(BuildingTypes eBuilding)
 	{
 		NotifyEntity(MISSION_CONSTRUCT);
 	}
-	GET_PLAYER(getOwner()).NoteUnitConstructed(eBuilding);
 
+	getGroup()->AI_setMissionAI(MISSIONAI_DELIBERATE_KILL, NULL, NULL);
+	kill(true, NO_PLAYER, true);
+	return true;
+}
+
+bool CvUnit::canAddHeritage(const CvPlot* pPlot, const HeritageTypes eType, const bool bTestVisible) const
+{
+	if (eType == NO_HERITAGE || !m_pUnitInfo->getHasHeritage(eType))
+	{
+		return false;
+	}
+
+	if (isDelayedDeath() || isCommander() || !canPerformActionSM())
+	{
+		return false;
+	}
+
+	if (!GET_PLAYER(getOwner()).canAddHeritage(eType, bTestVisible))
+	{
+		return false;
+	}
+
+	CvCity* pCity = pPlot->getPlotCity();
+
+	if (!pCity || getTeam() != pCity->getTeam())
+	{
+		return false;
+	}
+
+	return true;
+}
+
+bool CvUnit::addHeritage(const HeritageTypes eType)
+{
+	GET_PLAYER(getOwner()).setHeritage(eType, true);
+
+	if (plot()->isActiveVisible(false))
+	{
+		NotifyEntity(MISSION_HERITAGE);
+	}
 	getGroup()->AI_setMissionAI(MISSIONAI_DELIBERATE_KILL, NULL, NULL);
 	kill(true, NO_PLAYER, true);
 	return true;
@@ -12392,6 +12434,7 @@ BuildTypes CvUnit::getBuildType() const
 		case MISSION_SPREAD_CORPORATION:
 		case MISSION_JOIN:
 		case MISSION_CONSTRUCT:
+		case MISSION_HERITAGE:
 		case MISSION_DISCOVER:
 		case MISSION_HURRY:
 		case MISSION_TRADE:
@@ -19990,35 +20033,35 @@ bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bFree, bool bKeepC
 			return false;
 		}
 	}
+
+	// Toffer - Promotionline is factored in for the (dis)qualified caches.
+	for (int iI = 0; iI < promo.getNumDisqualifiedUnitCombatTypes(); iI++)
 	{
-		// Toffer - Promotionline is factored in for the (dis)qualified caches.
-		for (int iI = 0; iI < promo.getNumDisqualifiedUnitCombatTypes(); iI++)
+		if (isHasUnitCombat((UnitCombatTypes)promo.getDisqualifiedUnitCombatType(iI)))
 		{
-			if (isHasUnitCombat((UnitCombatTypes)promo.getDisqualifiedUnitCombatType(iI)))
+			return false;
+		}
+	}
+	// TB SubCombat Mod Begin
+	// The two solid ways to identify a Size Matters promotion that would not normally have a CC prereq.
+	// Note: Apparently having no CC prereq is a clear way to isolate promotions to only being assigned directly by event or other special injection.
+	// Thus it was necessary to pass the Size Matters promos despite having no particular CC prereq.
+	if (!promo.isForOffset() && !promo.isZeroesXP())
+	{
+		bool bValid = bFree;
+
+		for (int iI = promo.getNumQualifiedUnitCombatTypes() - 1; iI > -1; iI--)
+		{
+			bValid = false;
+			if (isHasUnitCombat((UnitCombatTypes)promo.getQualifiedUnitCombatType(iI)))
 			{
-				return false;
+				bValid = true;
+				break;
 			}
 		}
-		// TB SubCombat Mod Begin
-		// The two solid ways to identify a Size Matters promotion that would not normally have a CC prereq.
-		// Note: Apparently having no CC prereq is a clear way to isolate promotions to only being assigned directly by event or other special injection.
-		// Thus it was necessary to pass the Size Matters promos despite having no particular CC prereq.
-		if (!promo.isForOffset() && !promo.isZeroesXP())
+		if (!bValid)
 		{
-			bool bValid = false;
-
-			for (int iI = promo.getNumQualifiedUnitCombatTypes() - 1; iI > -1; iI--)
-			{
-				if (isHasUnitCombat((UnitCombatTypes)promo.getQualifiedUnitCombatType(iI)))
-				{
-					bValid = true;
-					break;
-				}
-			}
-			if (!bValid)
-			{
-				return false;
-			}
+			return false;
 		}
 	}
 

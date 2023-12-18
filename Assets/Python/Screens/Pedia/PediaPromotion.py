@@ -77,7 +77,7 @@ class PediaPromotion:
 			szLogic = szAnd
 		iType = CvThePromotionInfo.getStateReligionPrereq()
 		if iType > -1:
-			aList1.append((GC.getReligionInfo(iType).getButton(), "REL" + str(iType), szLogic))
+			aList1.append((GC.getReligionInfo(iType).getButton(), "RELIGION" + str(iType), szLogic))
 			szLogic = szAnd
 		iType = CvThePromotionInfo.getPrereqPromotion()
 		if iType > -1:

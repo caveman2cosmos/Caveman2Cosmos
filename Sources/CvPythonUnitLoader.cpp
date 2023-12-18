@@ -1,5 +1,5 @@
-#include "CvPythonUnitLoader.h"
 #include "CvGameCoreDLL.h"
+#include "CvPythonUnitLoader.h"
 #include <boost/python/manage_new_object.hpp>
 
 

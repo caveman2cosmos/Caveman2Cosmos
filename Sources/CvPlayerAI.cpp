@@ -15,6 +15,7 @@
 #include "CvBonusInfo.h"
 #include "CvInfos.h"
 #include "CvUnitCombatInfo.h"
+#include "CvTraitInfo.h"
 #include "CvInitCore.h"
 #include "CvMap.h"
 #include "CvPlot.h"
@@ -26751,7 +26752,6 @@ int CvPlayerAI::AI_militaryUnitTradeVal(const CvUnit* pUnit) const
 	if (eAIType == UNITAI_SUBDUED_ANIMAL)
 	{
 		int iBestValue = 0;
-		int iI;
 		CvCity* pEvaluationCity = getCapitalCity();
 
 		if (pEvaluationCity == NULL || (pUnit->getDomainType() == DOMAIN_SEA && !pEvaluationCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize())))
@@ -26764,7 +26764,7 @@ int CvPlayerAI::AI_militaryUnitTradeVal(const CvUnit* pUnit) const
 			const CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
 
 			//	Subdued animals are rated primarily on what they can construct
-			for (iI = 0; iI < kUnit.getNumBuildings(); iI++)
+			for (int iI = 0; iI < kUnit.getNumBuildings(); iI++)
 			{
 				const BuildingTypes eBuilding = (BuildingTypes)kUnit.getBuildings(iI);
 
@@ -26783,6 +26783,21 @@ int CvPlayerAI::AI_militaryUnitTradeVal(const CvUnit* pUnit) const
 							}
 						}
 					}
+				}
+			}
+			{
+				// This section needs more work, the entire function might need work come to think of it.
+				int iValue = 0;
+				for (int iI = 0; iI < kUnit.getNumHeritage(); iI++)
+				{
+					if (canAddHeritage((HeritageTypes)kUnit.getHeritage(iI)))
+					{
+						iValue += 25;
+					}
+				}
+				if (iValue > iBestValue)
+				{
+					iBestValue = iValue;
 				}
 			}
 
@@ -36840,4 +36855,85 @@ void CvPlayerAI::AI_noteWarStatusChange(TeamTypes eTeam, bool bAtWar)
 {
 	//	Cancel any existing cached beeline tech target if war status changes
 	m_eBestResearchTarget = NO_TECH;
+}
+
+
+// Evaluate a building we are considering building here in terms of its effect on properties
+int CvPlayerAI::heritagePropertiesValue(const CvHeritageInfo& heritage) const
+{
+	PROFILE_EXTRA_FUNC();
+
+	const CvCityAI* pCapital = static_cast<CvCityAI*>(getCapitalCity());
+	if (!pCapital)
+	{
+		return 0;
+	}
+	// Evaluate building properties
+	std::map<int, int> effectivePropertyChanges;
+
+	foreach_(const CvPropertySource * pSource, heritage.getPropertyManipulators()->getSources())
+	{
+		if (pSource->getType() == PROPERTYSOURCE_CONSTANT)
+		{
+			// Convert to an effective absolute amount by looking at the steady state value given current
+			const PropertyTypes eProperty = pSource->getProperty();
+			// Only count half the unit source as we want to encourage building sources over unit ones
+			const int iCurrentSourceSize = (
+				  pCapital->getTotalBuildingSourcedProperty(eProperty)
+				+ pCapital->getTotalUnitSourcedProperty(eProperty) / 2
+				+ pCapital->getPropertyNonBuildingSource(eProperty)
+			);
+			const int iNewSourceSize = iCurrentSourceSize + static_cast<const CvPropertySourceConstant*>(pSource)->getAmountPerTurn(getGameObject());
+			const int iDecayPercent = pCapital->getPropertyDecay(eProperty);
+
+			// Steady state occurs at a level where the decay removes as much per turn as the sources add
+			//	Decay can be 0 if the current level is below the threshold at which decay cuts in, so for the
+			//	purposes of calculation just treat this as very slow decay
+			const int iCurrentSteadyStateLevel = (100 * iCurrentSourceSize) / std::max(1, iDecayPercent);
+			const int iNewSteadyStateLevel = (100 * iNewSourceSize) / std::max(1, iDecayPercent);
+
+			std::map<int, int>::iterator itr = effectivePropertyChanges.find(eProperty);
+			if (itr == effectivePropertyChanges.end())
+			{
+				effectivePropertyChanges[eProperty] = (iNewSteadyStateLevel - iCurrentSteadyStateLevel);
+			}
+			else
+			{
+				itr->second += (iNewSteadyStateLevel - iCurrentSteadyStateLevel);
+			}
+		}
+	}
+
+	int iValue = 0;
+	for (std::map<int, int>::const_iterator itr = effectivePropertyChanges.begin(); itr != effectivePropertyChanges.end(); ++itr)
+	{
+		iValue += pCapital->getPropertySourceValue((PropertyTypes)itr->first, itr->second);
+	}
+	return iValue;
+}
+
+int CvPlayerAI::AI_heritageValue(const HeritageTypes eType) const
+{
+	PROFILE_FUNC();
+
+	const CvHeritageInfo& heritage = GC.getHeritageInfo(eType);
+
+	int iValue = 0;
+	{
+		const EraTypes eEra = getCurrentEra();
+
+		foreach_(const EraCommerceArray& pair, heritage.getEraCommerceChanges100())
+		{
+			if (eEra >= pair.first)
+			{
+				for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
+				{
+					iValue += pair.second[(CommerceTypes)iI];
+				}
+			}
+		}
+	}
+	iValue += heritagePropertiesValue(heritage);
+
+	return std::max(0, iValue);
 }

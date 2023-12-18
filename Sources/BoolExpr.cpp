@@ -21,6 +21,7 @@
 #include "IntExpr.h"
 #include "CheckSum.h"
 #include "CvImprovementInfo.h"
+#include "CvHeritageInfo.h"
 #include "FVariableSystem.h"
 #include "wchar_utils.h"
 #include "CvTraitInfo.h"
@@ -29,14 +30,14 @@ static bool getBefore(BoolExprChange change)
 {
 	switch (change)
 	{
-	case BOOLEXPR_CHANGE_REMAINS_TRUE:
-	case BOOLEXPR_CHANGE_BECOMES_FALSE:
-		return true;
+		case BOOLEXPR_CHANGE_REMAINS_TRUE:
+		case BOOLEXPR_CHANGE_BECOMES_FALSE:
+			return true;
 
-	default:
-	case BOOLEXPR_CHANGE_REMAINS_FALSE:
-	case BOOLEXPR_CHANGE_BECOMES_TRUE:
-		return false;
+		default:
+		case BOOLEXPR_CHANGE_REMAINS_FALSE:
+		case BOOLEXPR_CHANGE_BECOMES_TRUE:
+			return false;
 	}
 }
 
@@ -61,10 +62,7 @@ static BoolExprChange getChange(bool before, bool after)
 	{
 		return after ? BOOLEXPR_CHANGE_REMAINS_TRUE : BOOLEXPR_CHANGE_BECOMES_FALSE;
 	}
-	else
-	{
-		return after ? BOOLEXPR_CHANGE_REMAINS_FALSE : BOOLEXPR_CHANGE_BECOMES_TRUE;
-	}
+	return after ? BOOLEXPR_CHANGE_REMAINS_FALSE : BOOLEXPR_CHANGE_BECOMES_TRUE;
 }
 
 
@@ -100,13 +98,10 @@ const BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 			pXML->MoveToXmlParent();
 			return new BoolExprNot(pExpr);
 		}
-		else
-		{
-			// constant, no need to generate a real Not
-			BoolExprConstant* pExpr = new BoolExprConstant();
-			pExpr->readConstant(pXML);
-			return pExpr;
-		}
+		// constant, no need to generate a real Not
+		BoolExprConstant* pExpr = new BoolExprConstant();
+		pExpr->readConstant(pXML);
+		return pExpr;
 	}
 
 	//swprintf(szLog, 1000, L"BoolExp '%s' ?= 'And' is %i", pXML->GetXmlTagName(),
@@ -127,30 +122,24 @@ const BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 				pXML->MoveToXmlParent();
 				return pExpr;
 			}
-			else
-			{
-				// constant
-				BoolExprConstant* pExpr = new BoolExprConstant();
-				pExpr->readConstant(pXML);
-				return pExpr;
-			}
+			// constant
+			BoolExprConstant* pExpr = new BoolExprConstant();
+			pExpr->readConstant(pXML);
+			return pExpr;
 		}
-		else
+
+		if (pXML->TryMoveToXmlFirstChild())
 		{
-			if (pXML->TryMoveToXmlFirstChild())
+			// read the first node
+			const BoolExpr* pExpr = read(pXML);
+
+			// read nodes until there are no more siblings
+			while (pXML->TryMoveToXmlNextSibling())
 			{
-				// read the first node
-				const BoolExpr* pExpr = read(pXML);
-
-				// read nodes until there are no more siblings
-				while (pXML->TryMoveToXmlNextSibling())
-				{
-					pExpr = new BoolExprAnd(pExpr, read(pXML));
-				}
-
-				pXML->MoveToXmlParent();
-				return pExpr;
+				pExpr = new BoolExprAnd(pExpr, read(pXML));
 			}
+			pXML->MoveToXmlParent();
+			return pExpr;
 		}
 	}
 
@@ -167,30 +156,24 @@ const BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 				pXML->MoveToXmlParent();
 				return pExpr;
 			}
-			else
-			{
-				// constant
-				BoolExprConstant* pExpr = new BoolExprConstant();
-				pExpr->readConstant(pXML);
-				return pExpr;
-			}
+			// constant
+			BoolExprConstant* pExpr = new BoolExprConstant();
+			pExpr->readConstant(pXML);
+			return pExpr;
 		}
-		else
+
+		if (pXML->TryMoveToXmlFirstChild())
 		{
-			if (pXML->TryMoveToXmlFirstChild())
+			// read the first node
+			const BoolExpr* pExpr = read(pXML);
+
+			// read nodes until there are no more siblings
+			while (pXML->TryMoveToXmlNextSibling())
 			{
-				// read the first node
-				const BoolExpr* pExpr = read(pXML);
-
-				// read nodes until there are no more siblings
-				while (pXML->TryMoveToXmlNextSibling())
-				{
-					pExpr = new BoolExprOr(pExpr, read(pXML));
-				}
-
-				pXML->MoveToXmlParent();
-				return pExpr;
+				pExpr = new BoolExprOr(pExpr, read(pXML));
 			}
+			pXML->MoveToXmlParent();
+			return pExpr;
 		}
 	}
 
@@ -202,22 +185,19 @@ const BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 			// BEqual nodes must have two boolean expressions, make it a constant false node
 			return new BoolExprConstant(false);
 		}
-		else
+
+		if (pXML->TryMoveToXmlFirstChild())
 		{
-			if (pXML->TryMoveToXmlFirstChild())
+			// read the first node
+			const BoolExpr* pExpr = read(pXML);
+
+			// read the second node
+			if (pXML->TryMoveToXmlNextSibling())
 			{
-				// read the first node
-				const BoolExpr* pExpr = read(pXML);
-
-				// read the second node
-				if (pXML->TryMoveToXmlNextSibling())
-				{
-					pExpr = new BoolExprBEqual(pExpr, read(pXML));
-				}
-
-				pXML->MoveToXmlParent();
-				return pExpr;
+				pExpr = new BoolExprBEqual(pExpr, read(pXML));
 			}
+			pXML->MoveToXmlParent();
+			return pExpr;
 		}
 	}
 
@@ -229,23 +209,20 @@ const BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 			// Comparison nodes must have two boolean expressions, make it a constant false node
 			return new BoolExprConstant(false);
 		}
-		else
+
+		if (pXML->TryMoveToXmlFirstChild())
 		{
-			if (pXML->TryMoveToXmlFirstChild())
+			// read the first node
+			std::auto_ptr<const IntExpr> pExpr(IntExpr::read(pXML));
+			const BoolExpr* pBExpr = NULL;
+
+			// read the second node
+			if (pXML->TryMoveToXmlNextSibling())
 			{
-				// read the first node
-				std::auto_ptr<const IntExpr> pExpr(IntExpr::read(pXML));
-				const BoolExpr* pBExpr = NULL;
-
-				// read the second node
-				if (pXML->TryMoveToXmlNextSibling())
-				{
-					pBExpr = new BoolExprGreater(pExpr.release(), IntExpr::read(pXML));
-				}
-
-				pXML->MoveToXmlParent();
-				return pBExpr;
+				pBExpr = new BoolExprGreater(pExpr.release(), IntExpr::read(pXML));
 			}
+			pXML->MoveToXmlParent();
+			return pBExpr;
 		}
 	}
 
@@ -257,23 +234,19 @@ const BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 			// Comparison nodes must have two boolean expressions, make it a constant false node
 			return new BoolExprConstant(false);
 		}
-		else
+		if (pXML->TryMoveToXmlFirstChild())
 		{
-			if (pXML->TryMoveToXmlFirstChild())
+			// read the first node
+			std::auto_ptr<const IntExpr> pExpr(IntExpr::read(pXML));
+			const BoolExpr* pBExpr = NULL;
+
+			// read the second node
+			if (pXML->TryMoveToXmlNextSibling())
 			{
-				// read the first node
-				std::auto_ptr<const IntExpr> pExpr(IntExpr::read(pXML));
-				const BoolExpr* pBExpr = NULL;
-
-				// read the second node
-				if (pXML->TryMoveToXmlNextSibling())
-				{
-					pBExpr = new BoolExprGreaterEqual(pExpr.release(), IntExpr::read(pXML));
-				}
-
-				pXML->MoveToXmlParent();
-				return pBExpr;
+				pBExpr = new BoolExprGreaterEqual(pExpr.release(), IntExpr::read(pXML));
 			}
+			pXML->MoveToXmlParent();
+			return pBExpr;
 		}
 	}
 
@@ -285,23 +258,21 @@ const BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 			// Comparison nodes must have two boolean expressions, make it a constant false node
 			return new BoolExprConstant(false);
 		}
-		else
+
+		if (pXML->TryMoveToXmlFirstChild())
 		{
-			if (pXML->TryMoveToXmlFirstChild())
+			// read the first node
+			std::auto_ptr<const IntExpr> pExpr(IntExpr::read(pXML));
+			const BoolExpr* pBExpr = NULL;
+
+			// read the second node
+			if (pXML->TryMoveToXmlNextSibling())
 			{
-				// read the first node
-				std::auto_ptr<const IntExpr> pExpr(IntExpr::read(pXML));
-				const BoolExpr* pBExpr = NULL;
-
-				// read the second node
-				if (pXML->TryMoveToXmlNextSibling())
-				{
-					pBExpr = new BoolExprEqual(pExpr.release(), IntExpr::read(pXML));
-				}
-
-				pXML->MoveToXmlParent();
-				return pBExpr;
+				pBExpr = new BoolExprEqual(pExpr.release(), IntExpr::read(pXML));
 			}
+
+			pXML->MoveToXmlParent();
+			return pBExpr;
 		}
 	}
 
@@ -313,29 +284,26 @@ const BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 			// if/then/else nodes must have three boolean expressions, make it a constant false node
 			return new BoolExprConstant(false);
 		}
-		else
+
+		if (pXML->TryMoveToXmlFirstChild())
 		{
-			if (pXML->TryMoveToXmlFirstChild())
+			// read the if node
+			const BoolExpr* pIfExpr = read(pXML);
+			const BoolExpr* pThenExpr = NULL;
+			const BoolExpr* pElseExpr = NULL;
+
+			// read the then node
+			if (pXML->TryMoveToXmlNextSibling())
 			{
-				// read the if node
-				const BoolExpr* pIfExpr = read(pXML);
-				const BoolExpr* pThenExpr = NULL;
-				const BoolExpr* pElseExpr = NULL;
-
-				// read the then node
-				if (pXML->TryMoveToXmlNextSibling())
-				{
-					pThenExpr = read(pXML);
-				}
-				// read the else node
-				if (pXML->TryMoveToXmlNextSibling())
-				{
-					pElseExpr = read(pXML);
-				}
-
-				pXML->MoveToXmlParent();
-				return new BoolExprIf(pIfExpr, pThenExpr, pElseExpr);
+				pThenExpr = read(pXML);
 			}
+			// read the else node
+			if (pXML->TryMoveToXmlNextSibling())
+			{
+				pElseExpr = read(pXML);
+			}
+			pXML->MoveToXmlParent();
+			return new BoolExprIf(pIfExpr, pThenExpr, pElseExpr);
 		}
 	}
 
@@ -356,19 +324,14 @@ const BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 			const BoolExpr* pExpr = NULL;
 			do
 			{
-				//if (!GETXML->IsLastLocatedNodeCommentNode(pXML->GetXML()))
-				//{
-				//if (GETXML->GetLastLocatedNodeTagName(pXML->GetXML(), szInnerTag))
-				//{
-				if ( !(equal(pXML->GetXmlTagName(), L"RelationType")   ||
-					   equal(pXML->GetXmlTagName(), L"iDistance")      ||
-					   equal(pXML->GetXmlTagName(), L"GameObjectType")   ) )
+				if (
+					!equal(pXML->GetXmlTagName(), L"RelationType")
+				&&	!equal(pXML->GetXmlTagName(), L"iDistance")
+				&&	!equal(pXML->GetXmlTagName(), L"GameObjectType") )
 				{
 					pExpr = BoolExpr::read(pXML);
 					break;
 				}
-				//}
-				//}
 			}
 			while (pXML->TryMoveToXmlNextSibling());
 
@@ -420,14 +383,10 @@ const BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 		pXML->MoveToXmlParent();
 		return pExpr;
 	}
-
-	else
-	{
-		// constant
-		BoolExprConstant* pExpr = new BoolExprConstant();
-		pExpr->readConstant(pXML);
-		return pExpr;
-	}
+	// constant
+	BoolExprConstant* pExpr = new BoolExprConstant();
+	pExpr->readConstant(pXML);
+	return pExpr;
 }
 
 bool BoolExprConstant::evaluate(const CvGameObject* pObject) const
@@ -528,6 +487,17 @@ void BoolExprHas::buildDisplayString(CvWStringBuffer &szBuffer) const
 {
 	switch (m_eGOM)
 	{
+		case GOM_HERITAGE:
+		{
+			szBuffer.append(
+				CvWString::format(
+					L"<link=%s>%s</link>",
+					CvWString(GC.getHeritageInfo((HeritageTypes)m_iID).getType()).GetCString(),
+					GC.getHeritageInfo((HeritageTypes)m_iID).getDescription()
+				)
+			);
+			break;
+		}
 		case GOM_BUILDING:
 			szBuffer.append(CvWString::format(L"<link=%s>%s</link>", CvWString(GC.getBuildingInfo((BuildingTypes)m_iID).getType()).GetCString(), GC.getBuildingInfo((BuildingTypes)m_iID).getDescription()));
 			break;
@@ -671,18 +641,18 @@ BoolExprChange BoolExprNot::evaluateChange(const CvGameObject* pObject, const st
 	const BoolExprChange result = m_pExpr->evaluateChange(pObject, overrides);
 	switch (result)
 	{
-	default:
-	case BOOLEXPR_CHANGE_REMAINS_TRUE:
-		return BOOLEXPR_CHANGE_REMAINS_FALSE;
+		default:
+		case BOOLEXPR_CHANGE_REMAINS_TRUE:
+			return BOOLEXPR_CHANGE_REMAINS_FALSE;
 
-	case BOOLEXPR_CHANGE_REMAINS_FALSE:
-		return BOOLEXPR_CHANGE_REMAINS_TRUE;
+		case BOOLEXPR_CHANGE_REMAINS_FALSE:
+			return BOOLEXPR_CHANGE_REMAINS_TRUE;
 
-	case BOOLEXPR_CHANGE_BECOMES_TRUE:
-		return BOOLEXPR_CHANGE_BECOMES_FALSE;
+		case BOOLEXPR_CHANGE_BECOMES_TRUE:
+			return BOOLEXPR_CHANGE_BECOMES_FALSE;
 
-	case BOOLEXPR_CHANGE_BECOMES_FALSE:
-		return BOOLEXPR_CHANGE_BECOMES_TRUE;
+		case BOOLEXPR_CHANGE_BECOMES_FALSE:
+			return BOOLEXPR_CHANGE_BECOMES_TRUE;
 	}
 }
 

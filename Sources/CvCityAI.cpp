@@ -1,9 +1,8 @@
 // cityAI.cpp
 
+#include "CvGameCoreDLL.h"
 
 #include "FProfiler.h"
-
-#include "CvGameCoreDLL.h"
 #include "CvArea.h"
 #include "CvBonusInfo.h"
 #include "CvBuildingInfo.h"
@@ -11,6 +10,7 @@
 #include "CvBonusInfo.h"
 #include "CvInfos.h"
 #include "CvUnitCombatInfo.h"
+#include "CvTraitInfo.h"
 #include "CvCityAI.h"
 #include <string>
 #include "CvContractBroker.h"
@@ -7988,26 +7988,25 @@ void CvCityAI::AI_updateBestBuild()
 }
 
 // Better drafting strategy by Blake - thank you!
-void CvCityAI::AI_doDraft(bool bForce)
+void CvCityAI::AI_doDraft()
 {
 	PROFILE_FUNC();
-
 	FAssert(!isHuman());
-	if (isNPC() || !canConscript())
+
+	if (!canConscript())
 	{
 		return;
 	}
 
 	if (GC.getGame().AI_combatValue(getConscriptUnit()) > 33)
 	{
-		if (bForce)
-		{
-			conscript();
-			return;
-		}
 		const bool bLandWar = area()->getAreaAIType(getTeam()) == AREAAI_OFFENSIVE || area()->getAreaAIType(getTeam()) == AREAAI_DEFENSIVE || area()->getAreaAIType(getTeam()) == AREAAI_MASSING;
 		const bool bDanger = !AI_isDefended() && AI_isDanger();
 
+		if (!bDanger && !bLandWar)
+		{
+			return;
+		}
 		// Don't go broke from drafting
 		if (!bDanger && GET_PLAYER(getOwner()).AI_isFinancialTrouble())
 		{
@@ -8020,17 +8019,16 @@ void CvCityAI::AI_doDraft(bool bForce)
 			return;
 		}
 		// Large cities want a little spare happiness
-		const int iHappyDiff = GC.getCONSCRIPT_POP_ANGER() - iConscriptPop + getPopulation() / 10;
+		const int iHappyDiff = GC.getCONSCRIPT_POP_ANGER() + (getPopulation() - iConscriptPop) / 6;
 
-		if (bLandWar && (0 == angryPopulation(iHappyDiff)))
+		if (bLandWar && 0 == angryPopulation(iHappyDiff))
 		{
 			bool bWait = true;
 
 			if (GET_PLAYER(getOwner()).AI_isDoStrategy(AI_STRATEGY_TURTLE))
 			{
 				// Full out defensive
-				if (bDanger || getPopulation() >= std::max(5, getHighestPopulation() - 1)
-					|| AI_countWorkedPoorTiles() + std::max(0, visiblePopulation() - AI_countGoodSpecialists(true)) >= 1)
+				if (bDanger || AI_countWorkedPoorTiles() + std::max(0, visiblePopulation() - AI_countGoodSpecialists(true)) >= 1)
 				{
 					bWait = false;
 				}
@@ -8042,16 +8040,6 @@ void CvCityAI::AI_doDraft(bool bForce)
 				const int iOurDefense = GET_TEAM(getTeam()).AI_getOurPlotStrength(plot(), 0, true, false, true);
 
 				if (iOurDefense == 0 || 3 * GET_PLAYER(getOwner()).AI_getEnemyPlotStrength(plot(), 2, false, false) > 2 * iOurDefense)
-				{
-					bWait = false;
-				}
-			}
-
-			if (bWait)
-			{
-				// Non-critical, only burn population if population is not worth much
-				if (getConscriptAngerTimer() == 0 && getPopulation() >= std::max(5, getHighestPopulation() - 1)
-					&& AI_countWorkedPoorTiles() + std::max(0, visiblePopulation() - AI_countGoodSpecialists(true)) >= iConscriptPop)
 				{
 					bWait = false;
 				}
@@ -8079,7 +8067,7 @@ void CvCityAI::AI_doHurry(bool bForce)
 
 	FAssert(!isHuman() /*|| isProductionAutomated()*/); // Toffer - Disabled governors ability to rush.
 
-	if (isNPC() || getProductionProgress() == 0 && !bForce)
+	if (isNPC() || getProductionTurnsLeft() < 2 || getProductionProgress() == 0 && !bForce)
 	{
 		return;
 	}
@@ -8186,229 +8174,89 @@ void CvCityAI::AI_doHurry(bool bForce)
 		// Whipping
 		int iMinTurns = MAX_INT;
 		bool bEssential = false;
-		bool bGrowth = false;
 
 		if (eProductionBuilding != NO_BUILDING)
 		{
-			const CvBuildingInfo& building = GC.getBuildingInfo(eProductionBuilding);
-
-			if (
-				bDanger
-				&&
-				(
-					building.getDefenseModifier() > 0
-					||
-					building.getBombardDefenseModifier() > 0
-					||
-					building.getFreeExperience() > 0
-					)
-				)
+			if (bDanger)
 			{
-				iMinTurns = std::min(iMinTurns, 3);
-				bEssential = true;
-			}
-			else if (isWorldWonder(eProductionBuilding))
-			{
-				iMinTurns = std::min(iMinTurns, 10);
-				bEssential = true;
-			}
-
-			if (building.getYieldModifier(YIELD_PRODUCTION) > 0 && getBaseYieldRate(YIELD_PRODUCTION) >= 6)
-			{
-				iMinTurns = std::min(iMinTurns, 10);
-				bGrowth = true;
-			}
-
-			if (
-				(
-					building.getCommerceChange(COMMERCE_CULTURE) > 0
-					||
-					building.getCommercePerPopChange(COMMERCE_CULTURE) > 0
-					)
-				&& (getCommerceRateTimes100(COMMERCE_CULTURE) == 0 || plot()->calculateCulturePercent(getOwner()) < 40))
-			{
-				iMinTurns = std::min(iMinTurns, 10);
-				if (getCommerceRateTimes100(COMMERCE_CULTURE) == 0)
+				if (GC.getBuildingInfo(eProductionBuilding).getDefenseModifier() > 0)
 				{
 					bEssential = true;
-					iMinTurns = std::min(iMinTurns, 5);
-					if (AI_countNumBonuses(NO_BONUS, false, true, 2, true, true) > 0)
-					{
-						bGrowth = true;
-					}
 				}
 			}
-
-			if (iMinTurns > 10
-				&& (
-					building.getHappiness() > 0 && angryPopulation() > 0
-					||
-					building.getHealth() > 0 && healthRate() < 0
-					)
-				) iMinTurns = 10;
-
-
-			if (building.getMaintenanceModifier() < 0 && getMaintenance() >= 10)
+			else
 			{
-				iMinTurns = std::min(iMinTurns, 10);
-				bEssential = true;
-			}
-
-			if (iMinTurns > 10 && GC.getDEFAULT_SPECIALIST() != NO_SPECIALIST
-				&& getSpecialistCount((SpecialistTypes)GC.getDEFAULT_SPECIALIST()) > 0)
-			{
-				for (int iJ = 0; iJ < GC.getNumSpecialistInfos(); iJ++)
+				if (isWorldWonder(eProductionBuilding))
 				{
-					if (building.getSpecialistCount(iJ) > 0)
+					iMinTurns = 2;
+					bEssential = true;
+				}
+				else
+				{
+					const int iAdditionalProduction = getAdditionalYieldByBuilding(YIELD_PRODUCTION, eProductionBuilding, true);
+
+					if (iAdditionalProduction > 0 && 3 * iAdditionalProduction > 2 * getBaseYieldRate(YIELD_PRODUCTION))
 					{
-						iMinTurns = 10;
-						break;
+						iMinTurns = 3;
 					}
 				}
 			}
 
-			if (iMinTurns > 10
-				&& building.getCommerceModifier(COMMERCE_GOLD) > 0
-				&& player.AI_isFinancialTrouble()
-				&& getBaseCommerceRate(COMMERCE_GOLD) >= 16)
-			{
-				iMinTurns = 10;
-			}
-			else if (iMinTurns > 10
-				&& building.getCommerceModifier(COMMERCE_RESEARCH) > 0
-				&& !player.AI_avoidScience()
-				&& getBaseCommerceRate(COMMERCE_RESEARCH) >= 16)
-			{
-				iMinTurns = 10;
-			}
-
-			if (building.getFoodKept() > 0)
-			{
-				iMinTurns = std::min(iMinTurns, 5);
-				bEssential = true;
-				bGrowth = true;
-			}
 		}
-
-		if (bDanger && eProductionUnit != NO_UNIT && GC.getUnitInfo(eProductionUnit).getDomainType() == DOMAIN_LAND
-			&& GC.getUnitInfo(eProductionUnit).getCombat() > 0)
+		else if (eProductionUnit != NO_UNIT)
 		{
-			iMinTurns = std::min(iMinTurns, 3);
-			bEssential = true;
-		}
-
-		if (eProductionUnitAI != NO_UNITAI)
-		{
-			if (eProductionUnitAI == UNITAI_CITY_DEFENSE
-				&& plot()->plotCheck(PUF_isUnitAIType, UNITAI_SETTLE, -1, NULL, getOwner()) != NULL
+			if (bDanger)
+			{
+				if (
+					GC.getUnitInfo(eProductionUnit).getDomainType() == DOMAIN_LAND
+				&&	GC.getUnitInfo(eProductionUnit).getCombat() > 0)
+				{
+					bEssential = true;
+				}
+			}
+			else if (eProductionUnitAI != NO_UNITAI)
+			{
+				if (eProductionUnitAI == UNITAI_CITY_DEFENSE
+				&& plot()->plotCheck(PUF_isUnitAIType, UNITAI_SETTLE, -1, NULL, getOwner())
 				&& !AI_isDefended(-2 * player.strengthOfBestUnitAI(DOMAIN_LAND, UNITAI_CITY_DEFENSE))) // XXX check for other team's units?
-			{
-				iMinTurns = std::min(iMinTurns, 5);
-			}
-			else if (eProductionUnitAI == UNITAI_SETTLE
+				{
+					iMinTurns = 3;
+				}
+				else if (eProductionUnitAI == UNITAI_SETTLE
 				&& !player.AI_isFinancialTrouble()
 				&& area()->getNumAIUnits(getOwner(), UNITAI_SETTLE) == 0
 				&& area()->getBestFoundValue(getOwner()) > 0)
-			{
-				iMinTurns = std::min(iMinTurns, 5);
-				bEssential = true;
-				bGrowth = true;
-			}
-			else if (eProductionUnitAI == UNITAI_SETTLER_SEA && pWaterArea != NULL
-				&& pWaterArea->getNumAIUnits(getOwner(), UNITAI_SETTLER_SEA) == 0
-				&& area()->getNumAIUnits(getOwner(), UNITAI_SETTLE) > 0)
-			{
-				iMinTurns = std::min(iMinTurns, 5);
-			}
-			else if (eProductionUnitAI == UNITAI_WORKER
-				&& player.AI_neededWorkers(area()) > 2 * area()->getNumAIUnits(getOwner(), UNITAI_WORKER)
-				|| eProductionUnitAI == UNITAI_WORKER_SEA && AI_neededSeaWorkers() > 0)
-			{
-				iMinTurns = std::min(iMinTurns, 5);
-				bEssential = true;
-				bGrowth = true;
+				{
+					iMinTurns = 1;
+					bEssential = true;
+				}
 			}
 		}
-		// adjust for game speed
-		if (NO_UNIT != getProductionUnit() || NO_BUILDING != getProductionBuilding() || NO_PROJECT != getProductionProject())
+
+		if (!bDanger || !bEssential)
 		{
+			if (iMinTurns == MAX_INT)
+			{
+				return;
+			}
+			// adjust for game speed
 			iMinTurns *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
 			iMinTurns /= 100;
 		}
 
-		// This ought to make the AI much more reluctant to slave for frivolousness.
-		const int iThreshAdjust = (int)player.getCurrentEra();
-		int iThreshold = (getPopulation() - iHurryPopulation + iThreshAdjust) * iThreshAdjust;
-
-		if (AI_countGoodTiles(healthRate(0) == 0, false, bEssential ? 100 : 80) <= iThreshold)
+		if (bForce || AI_countGoodTiles(healthRate(0) == 0, false, bEssential ? 100 : 50) <= getPopulation() - iHurryPopulation + player.getCurrentEra())
 		{
-			if (bGrowth)
+			if (bForce || bDanger && bEssential || getProductionTurnsLeft() > iMinTurns)
 			{
 				if (gCityLogLevel >= 2)
 				{
-					logBBAI("      City %S hurry pop at %d for growth with bad tiles with pop %d", getName().GetCString(), iHurryPopulation, getPopulation());
+					logBBAI(
+						"      City %S hurry pop at %d with bad tiles and no reason to wait with pop %d",
+						getName().GetCString(), iHurryPopulation, getPopulation()
+					);
 				}
 				hurry((HurryTypes)iI);
 				return;
-			}
-			if (getProductionTurnsLeft() > iMinTurns)
-			{
-				// Toffer - Disabled governors ability to rush. 'isHuman() not needed here for now'
-				bool bWait = /*isHuman() ||*/ 3 * iHurryPopulation > 2 * getProductionTurnsLeft(); // Toffer - ToDo - scale by gamespeed.
-
-				if (!bWait && iHurryAngerLength > 0)
-				{
-					// Is the whip just too small or the population just too reduced to bother?
-					if (!bEssential && (iHurryPopulation < 1 + GC.getDefineINT("HURRY_POP_ANGER") || getPopulation() - iHurryPopulation <= std::max(3, getHighestPopulation() / 2)))
-					{
-						bWait = true;
-					}
-					// Sometimes it's worth whipping even with existing anger
-					else if (getHurryAngerTimer() > 1)
-					{
-						if (!bEssential
-							// Ideally we'll whip something more expensive
-							|| GC.getDefineINT("HURRY_POP_ANGER") == iHurryPopulation && angryPopulation() > 0)
-						{
-							bWait = true;
-						}
-					}
-
-					//if the city is just lame then don't whip the poor thing
-					//(it'll still get whipped when unhappy/unhealthy)
-					if (!bWait && !bEssential)
-					{
-						bWait = true;
-						int iFoodSurplus = 0;
-
-						foreach_(const CvPlot * pLoopPlot, plots(true))
-						{
-							if (pLoopPlot->getWorkingCity() == this)
-							{
-								iFoodSurplus += std::max(0, pLoopPlot->getYield(YIELD_FOOD) - GC.getFOOD_CONSUMPTION_PER_POPULATION());
-
-								if (iFoodSurplus >= 3)
-								{
-									bWait = false;
-									break;
-								}
-							}
-						}
-					}
-				}
-
-				if (!bWait)
-				{
-					if (gCityLogLevel >= 2)
-					{
-						logBBAI(
-							"      City %S hurry pop at %d with bad tiles and no reason to wait with pop %d",
-							getName().GetCString(), iHurryPopulation, getPopulation()
-						);
-					}
-					hurry((HurryTypes)iI);
-					return;
-				}
 			}
 		}
 	}
@@ -10443,12 +10291,11 @@ int CvCityAI::AI_cityValue() const
 
 bool CvCityAI::AI_doPanic()
 {
-	if (area()->getAreaAIType(getTeam()) == AREAAI_OFFENSIVE
-		|| area()->getAreaAIType(getTeam()) == AREAAI_DEFENSIVE
-		|| area()->getAreaAIType(getTeam()) == AREAAI_MASSING)
+	if (
+		area()->getAreaAIType(getTeam()) == AREAAI_OFFENSIVE
+	||	area()->getAreaAIType(getTeam()) == AREAAI_DEFENSIVE
+	||	area()->getAreaAIType(getTeam()) == AREAAI_MASSING)
 	{
-		//TBRUSHFIX
-		//AI_getEnemyPlotStrength was not keeping units that could not attack the city out of account.
 		const int iRatio =
 		(
 			100 * GET_PLAYER(getOwner()).AI_getEnemyPlotStrength(plot(), 2, false, false)
@@ -10456,28 +10303,25 @@ bool CvCityAI::AI_doPanic()
 			std::max(1, GET_PLAYER(getOwner()).AI_getOurPlotStrength(plot(), 0, true, false))
 		);
 
-		//TBRUSHFIX
-		//Playtesting has shown this needs to be a bit less sensitive.
-		if (iRatio > 200/*100*/)
+		if (iRatio > 200)
 		{
-			UnitTypes eProductionUnit = getProductionUnit();
-
-			if (eProductionUnit != NO_UNIT)
+			if (getProductionUnit() != NO_UNIT)
 			{
-				if (getProductionProgress() > 0 && GC.getUnitInfo(eProductionUnit).getCombat() > 0)
+				if (getProductionProgress() > 0 && GC.getUnitInfo(getProductionUnit()).getCombat() > 0)
 				{
 					AI_doHurry(true);
 					return true;
 				}
 				return false;
 			}
-			if (GC.getGame().getSorenRandNum(2, "AI choose panic unit") == 0
-				&& AI_chooseUnitImmediate("panic defense", UNITAI_CITY_COUNTER)
-				|| AI_chooseUnitImmediate("panic defense", UNITAI_CITY_DEFENSE)
-				|| AI_chooseUnitImmediate("panic defense", UNITAI_ATTACK))
-			{
-				AI_doHurry(iRatio > 250/*140*/);
-			}
+			if (
+				GC.getGame().getSorenRandNum(2, "AI choose panic unit") == 0
+			&&	(
+						AI_chooseUnitImmediate("panic defense", UNITAI_CITY_COUNTER)
+					||	AI_chooseUnitImmediate("panic defense", UNITAI_CITY_DEFENSE)
+					||	AI_chooseUnitImmediate("panic defense", UNITAI_ATTACK)
+				)
+			) AI_doHurry(iRatio > 250);
 		}
 	}
 	return false;
@@ -10708,7 +10552,7 @@ int CvCityAI::AI_calculateWaterWorldPercent() const
 int CvCityAI::AI_getPlotMagicValue(const CvPlot* pPlot, bool bHealthy, bool bWorkerOptimization) const
 {
 	PROFILE_EXTRA_FUNC();
-	FAssert(pPlot != NULL);
+	FAssert(pPlot);
 
 	int yields100[NUM_YIELD_TYPES];
 
@@ -14234,8 +14078,7 @@ int CvCityAI::buildingPropertiesValue(const CvBuildingInfo& kBuilding) const
 		//	TODO - expand this as buildings add other types
 		if (pSource->getType() == PROPERTYSOURCE_CONSTANT)
 		{
-			//	Convert to an effective absolute amount by looking at the steady state value
-			//	given current
+			// Convert to an effective absolute amount by looking at the steady state value given current
 			const PropertyTypes eProperty = pSource->getProperty();
 			//	Only count half the unit source as we want to encourage building sources over unit ones
 			int iCurrentSourceSize = getTotalBuildingSourcedProperty(eProperty) + getTotalUnitSourcedProperty(eProperty) / 2 + getPropertyNonBuildingSource(eProperty);

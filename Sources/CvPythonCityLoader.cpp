@@ -1,6 +1,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvPythonCityLoader.h"
 #include "CyCity.h"
+#include "CityOutputHistory.h"
 #include <boost/python/manage_new_object.hpp>
 
 

@@ -128,15 +128,6 @@
 		<Italian>[ICON_BULLET]Alcune funzioni sono attive solo se %F1_RelIcon è la tua religione di stato [ICON_RELIGION]</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_STRING</Tag>
-		<English>[COLOR_WARNING_TEXT]Requires [LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]Requiert : [LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT]</French>
-		<German>[ICON_BULLET][COLOR_WARNING_TEXT]erforderlich: [LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Richiede inoltre: [LINK=%s1_NameType]%s2_Name[\LINK]</Italian>
-		<Spanish>[COLOR_WARNING_TEXT]Requiere [LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT]</Spanish>
-		<Russian>[COLOR_WARNING_TEXT]Требует [LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_STATE_RELIGION_PREREQ</Tag>
 		<English>[ICON_BULLET]This building requires %F1_RelIcon to be your State [ICON_RELIGION].</English>
 		<French>[ICON_BULLET]Ce bâtiment nécessite %F1_RelIcon comme [ICON_RELIGION] d'Etat.</French>
@@ -178,15 +169,6 @@
 		<Italian>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp a causa dell'edificio [COLOR_BUILDING_TEXT][LINK=%s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change %F2_HappOrUnhapp por [COLOR_BUILDING_TEXT][LINK=%s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</Spanish>
 		<Russian>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp от [COLOR_BUILDING_TEXT][LINK=%s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_REQUIRES</Tag>
-		<English>[COLOR_RED]Requires [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</English>
-		<French>[COLOR_RED]Req. [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</French>
-		<German>[COLOR_RED]Erfordert die Technologie [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</German>
-		<Italian>[COLOR_RED][ICON_BULLET]Richiede la tecnologia [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_RED]Requiere [NUM1:el:la:los:las] [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</Spanish>
-		<Russian>[COLOR_RED]Требует [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CORPORATION_FOUNDED_FIRST</Tag>
@@ -348,15 +330,6 @@
 		<Tag>TXT_KEY_MISC_HELP_FINAL_YIELD</Tag>
 		<English>Total: %d1 %F2</English>
 		<Italian>Rendimento totale: %d1 %F2</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_FREE_CITY_COMMERCE</Tag>
-		<English>[ICON_BULLET]%D1%F2 Free Commerce</English>
-		<French>[ICON_BULLET]%D1%F2 en raison du libre échange</French>
-		<German>[ICON_BULLET]%D1%F2 freie Wirtschaft</German>
-		<Italian>[ICON_BULLET]%D1%F2 a causa del libero commercio</Italian>
-		<Spanish>[ICON_BULLET]%D1 %F2 comercio libre</Spanish>
-		<Russian>[ICON_BULLET]%D1%F2 от чистых доходов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_TOTAL_YIELD_MOD</Tag>
@@ -711,14 +684,6 @@
 		<Italian>[COLOR_WARNING_TEXT]Devi avere uno religione di stato [ICON_RELIGION] e deve trovarsi nella città[COLOR_REVERT]</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_REQUIRES_TECH</Tag>
-		<English>[COLOR_WARNING_TEXT]Requires [COLOR_TECH_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT][COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]Requiert [COLOR_TECH_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT][COLOR_REVERT]</French>
-		<German>[ICON_BULLET][COLOR_WARNING_TEXT]erforderlich: [COLOR_TECH_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT][COLOR_REVERT]</German>
-		<Russian>[COLOR_WARNING_TEXT]Требует [COLOR_TECH_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT][COLOR_REVERT]</Russian>
-		<Italian>[COLOR_WARNING_TEXT]Richiede la tecnologia [COLOR_TECH_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT][COLOR_REVERT]</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_REQUIRES_TECH_ANYONE</Tag>
 		<English>[COLOR_WARNING_TEXT]Requires [COLOR_TECH_TEXT][LINK=%s1_techType]%s2_tech[\LINK][COLOR_REVERT] (any player)[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Nécessite [COLOR_TECH_TEXT][LINK=%s1_techType]%s2_tech[\LINK][COLOR_REVERT] (n'importe quel joueur)[COLOR_REVERT]</French>
@@ -886,6 +851,10 @@
 		<German>[ICON_BULLET]%D1_Change%% gegen %s2_Type</German>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Danno[COLOR_REVERT] contro le unità di tipo [COLOR_HIGHLIGHT_TEXT]%s2:2_Type[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%D1_Change%%[COLOR_REVERT]</Italian> <!-- unit Autogyro -->
 		<Spanish>[ICON_BULLET]%D1_Change%% contra %s2:2_Type</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_NATIONAL_SOURCES</Tag>
+		<English>Traits/Civics/Heritage.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_WITHDRAWL_PROBABILITY</Tag>

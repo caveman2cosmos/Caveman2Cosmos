@@ -1,5 +1,5 @@
 // gameAI.cpp
-
+#include "CvGameCoreDLL.h"
 
 #include "FProfiler.h"
 

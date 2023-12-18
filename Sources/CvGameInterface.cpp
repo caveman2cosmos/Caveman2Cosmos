@@ -25,6 +25,7 @@
 #include "CvDLLFAStarIFaceBase.h"
 #include "CvDLLInterfaceIFaceBase.h"
 #include "CvDLLUtilityIFaceBase.h"
+#include "CvGameAI.h"
 
 void CvGame::updateColoredPlots()
 {

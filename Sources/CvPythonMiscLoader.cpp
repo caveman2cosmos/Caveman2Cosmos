@@ -1,3 +1,4 @@
+#include "CvGameCoreDLL.h"
 #include "CvPythonMiscLoader.h"
 #include "CySelectionGroup.h"
 #include "CvInfos.h"
@@ -13,6 +14,7 @@
 #include "CyCity.h"
 #include "CyMap.h"
 #include "CyDeal.h"
+#include "CvRandom.h"
 #include <boost/python/class.hpp>
 #include <boost/python/manage_new_object.hpp>
 

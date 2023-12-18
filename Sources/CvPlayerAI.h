@@ -168,6 +168,7 @@ public:
 	int AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost, bool bAsync);
 	int AI_techBuildingValue( TechTypes eTech, int iPathLength, bool &bEnablesWonder);
 	int AI_techUnitValue( TechTypes eTech, int iPathLength, bool &bEnablesUnitWonder);
+	int AI_heritageValue(const HeritageTypes eType) const;
 
 	int  AI_TechValueCached(TechTypes eTech, bool bAsync, bool considerFollowOns = false);
 	int AI_averageCurrentTechValue(TechTypes eRelativeTo, bool bAsync);
@@ -619,6 +620,9 @@ protected:
 
 	void AI_doCounter();
 	void AI_doMilitary();
+
+	int heritagePropertiesValue(const CvHeritageInfo& heritage) const;
+
 public:
 	void AI_doCivics();
 protected:

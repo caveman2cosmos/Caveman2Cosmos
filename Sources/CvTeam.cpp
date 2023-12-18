@@ -5314,7 +5314,7 @@ void CvTeam::setHasTech(TechTypes eTech, bool bNewValue, PlayerTypes ePlayer, bo
 			foreach_(CvCity* cityX, player.cities())
 			{
 				// Toffer - Buildings may change commerce output with tech.
-				//	Not part of processTech to avoid it applying twice during recalc, would apply in processBuilding first then in ProcessTech again after.
+				//	Not part of processTech to avoid it applying twice during recalc, would apply in processBuilding first then in processTech again after.
 				for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
 				{
 					cityX->changeBuildingCommerceTechChange((CommerceTypes)iJ, iChange * cityX->getBuildingCommerceTechChange((CommerceTypes)iJ, eTech));

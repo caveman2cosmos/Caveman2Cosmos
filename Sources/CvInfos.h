@@ -368,6 +368,7 @@ public:
 	bool isIgnoreIrrigation() const;
 	bool isWaterWork() const;
 	bool isRiverTrade() const;
+	inline bool isLanguage() const { return m_bLanguage;}
 
 	bool isCanPassPeaks() const;
 	bool isMoveFastPeaks() const;
@@ -483,6 +484,7 @@ protected:
 	bool m_bIgnoreIrrigation;
 	bool m_bWaterWork;
 	bool m_bRiverTrade;
+	bool m_bLanguage;
 	bool m_bDCMAirBombTech1;
 	bool m_bDCMAirBombTech2;
 	bool m_bGlobal;
@@ -2102,6 +2104,11 @@ public:
 	void setQualifiedPromotionTypes();
 	void setCanAnimalIgnores();
 
+	const std::vector<BonusTypes>& getPrereqOrBonuses() const;
+	const std::vector<BonusTypes>& getPrereqOrVicinityBonuses() const;
+	const std::vector<TechTypes>& getPrereqAndTechs() const;
+	const std::vector<HeritageTypes>& getPrereqAndHeritage() const { return m_prereqAndHeritage; }
+
 	virtual const wchar_t* getExtraHoverText() const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
@@ -2151,11 +2158,6 @@ public:
 	float getUnitPadTime() const;
 
 	bool canAcquireExperience() const;
-
-	const std::vector<BonusTypes>& getPrereqOrBonuses() const;
-	const std::vector<BonusTypes>& getPrereqOrVicinityBonuses() const;
-
-	const std::vector<TechTypes>& getPrereqAndTechs() const;
 
 	// Arrays
 	int getFlavorValue(int i) const;
@@ -2216,6 +2218,10 @@ public:
 	int getBuildings(int i) const;
 	bool getHasBuilding(int i) const;
 	int getNumBuildings() const;
+
+	int getHeritage(int i) const;
+	bool getHasHeritage(int i) const;
+	int getNumHeritage() const;
 
 	bool getTerrainNative(int i) const;
 	bool getFeatureNative(int i) const;
@@ -2339,6 +2345,7 @@ private:
 	int m_iPrereqAndBonus;
 
 	std::vector<BuildTypes> m_workerBuilds;
+	std::vector<HeritageTypes> m_prereqAndHeritage;
 	std::vector<int> m_aiPrereqAndBuildings;
 	std::vector<int> m_aiPrereqOrBuildings;
 	std::vector<int> m_aiTargetUnit;
@@ -2431,6 +2438,7 @@ private:
 	bool* m_pbNotUnitAIType;
 	bool* m_pbGreatPeoples;
 	std::vector<int> m_pbBuildings;
+	std::vector<int> m_addHeritage;
 	bool* m_pbTerrainNative;
 	bool* m_pbFeatureNative;
 	//bool* m_pbTerrainImpassable;
@@ -2633,11 +2641,11 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvSpawnInfo* pClassInfo);
 
-	const std::vector<BonusTypes>&   getBonuses() const        { return m_bonusTypes; }
-	const std::vector<TerrainTypes>& getTerrain() const        { return m_terrainTypes; }
-	const std::vector<FeatureTypes>& getFeatures() const       { return m_featureTypes; }
+	const std::vector<BonusTypes>& getBonuses() const { return m_bonusTypes; }
+	const std::vector<UnitTypes>& getSpawnGroups() const { return m_spawnGroup; }
+	const std::vector<TerrainTypes>& getTerrain() const { return m_terrainTypes; }
+	const std::vector<FeatureTypes>& getFeatures() const { return m_featureTypes; }
 	const std::vector<TerrainTypes>& getFeatureTerrain() const { return m_featureTerrainTypes; }
-	const std::vector<UnitTypes>&    getSpawnGroups() const    { return m_spawnGroup; }
 
 	PlayerTypes getPlayer() const;
 	int getTurnRate() const;

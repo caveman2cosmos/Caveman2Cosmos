@@ -293,7 +293,7 @@ class PediaUnit:
 			aList0 = []
 			nOr = 0
 		# Religion Req
-		szChild = PF + "REL"
+		szChild = PF + "RELIGION"
 		iType = CvTheUnitInfo.getPrereqReligion()
 		if iType != -1:
 			aReqList.append([szChild + str(iType) + "|" + str(n), GC.getReligionInfo(iType).getButton()])

@@ -90,6 +90,13 @@ std::wstring CyGameTextMgr::getBuildingHelp(int iBuilding, bool bActual, CyCity*
 	return szBuffer.getCString();
 }
 
+std::wstring CyGameTextMgr::getHeritageHelp(int iType, CyCity* pCity, bool bCivilopediaText, bool bStrategyText, bool bTechChooserText)
+{
+	CvWStringBuffer szBuffer;
+	GAMETEXT.setHeritageHelp(szBuffer, (HeritageTypes)iType, pCity ? pCity->getCity() : NULL, bCivilopediaText, bStrategyText, bTechChooserText);
+	return szBuffer.getCString();
+}
+
 std::wstring CyGameTextMgr::getProjectHelp(int iProject, bool bCivilopediaText, CyCity* pCity)
 {
 	CvWStringBuffer szBuffer;

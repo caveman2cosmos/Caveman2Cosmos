@@ -1,3 +1,4 @@
+#include "CvGameCoreDLL.h"
 #include "CvUnitComponents.h"
 #include "CvInfos.h"
 //------------------------------------------------------------------------------------------------------

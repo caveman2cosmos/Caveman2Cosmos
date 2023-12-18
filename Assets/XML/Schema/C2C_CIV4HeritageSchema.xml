@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Schema xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">
+
+	<ElementType name="Type" content="textOnly"/>
+	<ElementType name="EraType" content="textOnly"/>
+
+	<ElementType name="iCommerce" content="textOnly" dt:type="int"/>
+	<ElementType name="CentiCommerce" content="eltOnly">
+		<element type="iCommerce" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+
+	<ElementType name="bForceOverwrite" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bForceDelete" content="textOnly" dt:type="boolean"/>
+	<ElementType name="iForceInsertLocation" content="textOnly" dt:type="int"/>
+	<ElementType name="DependencyType" content="textOnly"/>
+	<ElementType name="AndDependencyTypes" content="eltOnly">
+		<element type="DependencyType" minOccurs="1"/>
+	</ElementType>
+	<ElementType name="OrDependencyTypes" content="eltOnly">
+		<element type="DependencyType" minOccurs="1"/>
+	</ElementType>
+
+	<ElementType name="Description" content="textOnly"/>
+	<ElementType name="Civilopedia" content="textOnly"/>
+	<ElementType name="Strategy" content="textOnly"/>
+	<ElementType name="Help" content="textOnly"/>
+
+	<ElementType name="bNeedLanguage" content="textOnly" dt:type="boolean"/>
+
+	<ElementType name="PrereqTech" content="textOnly"/>
+	<ElementType name="PrereqOrHeritage" content="eltOnly">
+		<element type="Type" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+
+	<ElementType name="EraCommerceChange" content="eltOnly">
+		<element type="EraType"/>
+		<element type="CentiCommerce"/>
+	</ElementType>
+	<ElementType name="EraCommerceChanges" content="eltOnly">
+		<element type="EraCommerceChange" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+
+	<!-- Replacements added by AIAndy -->
+	<ElementType name="ReplacementCondition"/>
+	<ElementType name="ReplacementID"/>
+	<!-- Expressions added by AIAndy -->
+	<ElementType name="Constant" content="textOnly"/>
+	<ElementType name="Is" content="textOnly"/>
+	<ElementType name="Python" content="textOnly"/>
+	<ElementType name="BoolExpr"/>
+	<ElementType name="Not"/>
+	<ElementType name="And"/>
+	<ElementType name="Or"/>
+	<ElementType name="BEqual"/>
+	<ElementType name="If"/>
+	<ElementType name="IntegrateOr"/>
+	<ElementType name="GOMType" content="textOnly"/>
+	<ElementType name="ID" content="textOnly"/>
+	<ElementType name="Has" content="eltOnly">
+		<element type="GOMType" minOccurs="1" maxOccurs="*"/>
+		<element type="ID" minOccurs="1" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Greater"/>
+	<ElementType name="GreaterEqual"/>
+	<ElementType name="Equal"/>
+	<ElementType name="Random"/>
+	<ElementType name="Adapt"/>
+	<ElementType name="Plus"/>
+	<ElementType name="Minus"/>
+	<ElementType name="Mult"/>
+	<ElementType name="Div"/>
+	<ElementType name="IntegrateSum"/>
+	<ElementType name="IntegrateAvg"/>
+	<ElementType name="IntegrateCount"/>
+	<!-- PropertyManipulators added by AIAndy -->
+	<ElementType name="PropertySourceType" content="textOnly"/>
+	<ElementType name="PropertyInteractionType" content="textOnly"/>
+	<ElementType name="PropertyPropagatorType" content="textOnly"/>
+	<ElementType name="PropertyType" content="textOnly"/>
+	<ElementType name="SourcePropertyType" content="textOnly"/>
+	<ElementType name="TargetPropertyType" content="textOnly"/>
+	<ElementType name="GameObjectType" content="textOnly"/>
+	<ElementType name="TargetObjectType" content="textOnly"/>
+	<ElementType name="RelationType" content="textOnly"/>
+	<ElementType name="TargetRelationType" content="textOnly"/>
+	<ElementType name="TargetCondition" content="textOnly"/>
+	<ElementType name="AttributeType" content="textOnly"/>
+	<ElementType name="iAmountPerTurn"/>
+	<ElementType name="iGrowthPercent" content="textOnly" dt:type="int"/>
+	<ElementType name="iInhibitionPercent" content="textOnly" dt:type="int"/>
+	<ElementType name="iDistance" content="textOnly" dt:type="int"/>
+	<ElementType name="iTargetDistance" content="textOnly" dt:type="int"/>
+	<ElementType name="iPercent" content="textOnly" dt:type="int"/>
+	<ElementType name="iLimit" content="textOnly" dt:type="int"/>
+	<ElementType name="iNoDecayAmount" content="textOnly" dt:type="int"/>
+	<ElementType name="iNoConvertAmount" content="textOnly" dt:type="int"/>
+	<ElementType name="Active"/>
+	<ElementType name="PropertySource" content="eltOnly" order="many">
+		<element type="PropertySourceType" minOccurs="1" maxOccurs="*"/>
+		<element type="PropertyType" minOccurs="1" maxOccurs="*"/>
+		<element type="GameObjectType" minOccurs="0" maxOccurs="*"/>
+		<element type="RelationType" minOccurs="0" maxOccurs="*"/>
+		<element type="iDistance" minOccurs="0" maxOccurs="*"/>
+		<element type="AttributeType" minOccurs="0" maxOccurs="*"/>
+		<element type="iAmountPerTurn" minOccurs="0" maxOccurs="*"/>
+		<element type="iPercent" minOccurs="0" maxOccurs="*"/>
+		<element type="iLimit" minOccurs="0" maxOccurs="*"/>
+		<element type="iNoDecayAmount" minOccurs="0" maxOccurs="*"/>
+		<element type="Active" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="PropertyInteraction" content="eltOnly" order="many">
+		<element type="PropertyInteractionType" minOccurs="1" maxOccurs="*"/>
+		<element type="SourcePropertyType" minOccurs="1" maxOccurs="*"/>
+		<element type="TargetPropertyType" minOccurs="1" maxOccurs="*"/>
+		<element type="GameObjectType" minOccurs="0" maxOccurs="*"/>
+		<element type="RelationType" minOccurs="0" maxOccurs="*"/>
+		<element type="iDistance" minOccurs="0" maxOccurs="*"/>
+		<element type="iAmountPerTurn" minOccurs="0" maxOccurs="*"/>
+		<element type="iGrowthPercent" minOccurs="0" maxOccurs="*"/>
+		<element type="iInhibitionPercent" minOccurs="0" maxOccurs="*"/>
+		<element type="iPercent" minOccurs="0" maxOccurs="*"/>
+		<element type="iNoConvertAmount" minOccurs="0" maxOccurs="*"/>
+		<element type="Active" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="PropertyPropagator" content="eltOnly" order="many">
+		<element type="PropertyPropagatorType" minOccurs="1" maxOccurs="*"/>
+		<element type="PropertyType" minOccurs="1" maxOccurs="*"/>
+		<element type="TargetObjectType" minOccurs="0" maxOccurs="*"/>
+		<element type="GameObjectType" minOccurs="0" maxOccurs="*"/>
+		<element type="RelationType" minOccurs="0" maxOccurs="*"/>
+		<element type="iAmountPerTurn" minOccurs="0" maxOccurs="*"/>
+		<element type="TargetRelationType" minOccurs="0" maxOccurs="*"/>
+		<element type="TargetCondition" minOccurs="0" maxOccurs="*"/>
+		<element type="iDistance" minOccurs="0" maxOccurs="*"/>
+		<element type="iTargetDistance" minOccurs="0" maxOccurs="*"/>
+		<element type="iPercent" minOccurs="0" maxOccurs="*"/>
+		<element type="Active" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="PropertyManipulators" content="eltOnly" order="many">
+		<element type="PropertySource" minOccurs="0" maxOccurs="*"/>
+		<element type="PropertyInteraction" minOccurs="0" maxOccurs="*"/>
+		<element type="PropertyPropagator" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+
+	<ElementType name="bGraphicalOnly" content="textOnly" dt:type="boolean"/>
+	<ElementType name="Button" content="textOnly"/>
+
+	<ElementType name="HeritageInfo" content="eltOnly">
+		<element type="Type"/>
+
+		<element type="bForceOverwrite" minOccurs="0"/>
+		<element type="bForceDelete" minOccurs="0"/>
+		<element type="iForceInsertLocation" minOccurs="0"/>
+		<element type="AndDependencyTypes" minOccurs="0"/>
+		<element type="OrDependencyTypes" minOccurs="0"/>
+
+		<element type="Description" minOccurs="0"/>
+		<element type="Civilopedia" minOccurs="0"/>
+		<element type="Strategy" minOccurs="0"/>
+		<element type="Help" minOccurs="0"/>
+
+		<element type="bNeedLanguage" minOccurs="0"/>
+		
+		<element type="PrereqTech" minOccurs="0"/>
+		<element type="PrereqOrHeritage" minOccurs="0"/>
+
+		<element type="EraCommerceChanges" minOccurs="0"/>
+		<element type="PropertyManipulators" minOccurs="0"/>
+
+		<element type="bGraphicalOnly" minOccurs="0"/>
+		<element type="Button" minOccurs="0"/>
+	</ElementType>
+	<ElementType name="HeritageInfos" content="eltOnly">
+		<element type="HeritageInfo" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="C2C_HeritageInfos" content="eltOnly">
+		<element type="HeritageInfos" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+</Schema>

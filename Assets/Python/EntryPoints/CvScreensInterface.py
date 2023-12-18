@@ -261,6 +261,9 @@ def pediaJumpToCivic(argsList):
 def pediaJumpToReligion(argsList):
 	screenMap[PEDIA].pediaJump(9, "Religion", argsList[0])
 
+def pediaJumpToHeritage(argsList):
+	screenMap[PEDIA].pediaJump(9, "Heritage", argsList[0])
+
 def pediaJumpToProject(argsList):
 	screenMap[PEDIA].pediaJump(10, "Project", argsList[0])
 
