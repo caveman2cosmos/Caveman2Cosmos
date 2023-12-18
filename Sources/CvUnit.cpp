@@ -20033,35 +20033,35 @@ bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bFree, bool bKeepC
 			return false;
 		}
 	}
+
+	// Toffer - Promotionline is factored in for the (dis)qualified caches.
+	for (int iI = 0; iI < promo.getNumDisqualifiedUnitCombatTypes(); iI++)
 	{
-		// Toffer - Promotionline is factored in for the (dis)qualified caches.
-		for (int iI = 0; iI < promo.getNumDisqualifiedUnitCombatTypes(); iI++)
+		if (isHasUnitCombat((UnitCombatTypes)promo.getDisqualifiedUnitCombatType(iI)))
 		{
-			if (isHasUnitCombat((UnitCombatTypes)promo.getDisqualifiedUnitCombatType(iI)))
+			return false;
+		}
+	}
+	// TB SubCombat Mod Begin
+	// The two solid ways to identify a Size Matters promotion that would not normally have a CC prereq.
+	// Note: Apparently having no CC prereq is a clear way to isolate promotions to only being assigned directly by event or other special injection.
+	// Thus it was necessary to pass the Size Matters promos despite having no particular CC prereq.
+	if (!promo.isForOffset() && !promo.isZeroesXP())
+	{
+		bool bValid = bFree;
+
+		for (int iI = promo.getNumQualifiedUnitCombatTypes() - 1; iI > -1; iI--)
+		{
+			bValid = false;
+			if (isHasUnitCombat((UnitCombatTypes)promo.getQualifiedUnitCombatType(iI)))
 			{
-				return false;
+				bValid = true;
+				break;
 			}
 		}
-		// TB SubCombat Mod Begin
-		// The two solid ways to identify a Size Matters promotion that would not normally have a CC prereq.
-		// Note: Apparently having no CC prereq is a clear way to isolate promotions to only being assigned directly by event or other special injection.
-		// Thus it was necessary to pass the Size Matters promos despite having no particular CC prereq.
-		if (!promo.isForOffset() && !promo.isZeroesXP())
+		if (!bValid)
 		{
-			bool bValid = false;
-
-			for (int iI = promo.getNumQualifiedUnitCombatTypes() - 1; iI > -1; iI--)
-			{
-				if (isHasUnitCombat((UnitCombatTypes)promo.getQualifiedUnitCombatType(iI)))
-				{
-					bValid = true;
-					break;
-				}
-			}
-			if (!bValid)
-			{
-				return false;
-			}
+			return false;
 		}
 	}
 
