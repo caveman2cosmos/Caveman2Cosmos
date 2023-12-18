@@ -253,6 +253,9 @@ class WBUnitScreen:
 			elif sType == "MISSION_CONSTRUCT":
 				for j in xrange(UnitInfo.getNumBuildings()):
 					lData1.append(UnitInfo.getBuildings(j))
+			elif sType == "MISSION_HERITAGE":
+				for j in xrange(UnitInfo.getNumHeritage()):
+					lData1.append(UnitInfo.getHeritage(j))
 			elif sType == "MISSION_GOLDEN_AGE":
 				lData1 = [-1]
 			else:
