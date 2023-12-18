@@ -536,6 +536,19 @@
 		<Russian>Религии</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_HERITAGE</Tag>
+		<English>Heritage</English>
+		<French>Héritage</French>
+		<Spanish>
+			<Text>Patrimonio</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Dziedziczenie</Polish>
+		<Russian>Íàñëåäèå</Russian>
+		<Italian>Patrimonio culturale</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_RELIGIOUS_BUILDINGS</Tag>
 		<English>Religious</English>
 		<French>Religieux</French>

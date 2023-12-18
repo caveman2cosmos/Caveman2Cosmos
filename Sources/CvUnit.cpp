@@ -10304,7 +10304,7 @@ bool CvUnit::canConstruct(const CvPlot* pPlot, BuildingTypes eBuilding, bool bTe
 
 	CvCity* pCity = pPlot->getPlotCity();
 
-	if (pCity == NULL || getTeam() != pCity->getTeam())
+	if (!pCity || getTeam() != pCity->getTeam())
 	{
 		return false;
 	}
@@ -10342,8 +10342,47 @@ bool CvUnit::construct(BuildingTypes eBuilding)
 	{
 		NotifyEntity(MISSION_CONSTRUCT);
 	}
-	GET_PLAYER(getOwner()).NoteUnitConstructed(eBuilding);
 
+	getGroup()->AI_setMissionAI(MISSIONAI_DELIBERATE_KILL, NULL, NULL);
+	kill(true, NO_PLAYER, true);
+	return true;
+}
+
+bool CvUnit::canAddHeritage(const CvPlot* pPlot, const HeritageTypes eType, const bool bTestVisible) const
+{
+	if (eType == NO_HERITAGE || !m_pUnitInfo->getHasHeritage(eType))
+	{
+		return false;
+	}
+
+	if (isDelayedDeath() || isCommander() || !canPerformActionSM())
+	{
+		return false;
+	}
+
+	if (!GET_PLAYER(getOwner()).canAddHeritage(eType, bTestVisible))
+	{
+		return false;
+	}
+
+	CvCity* pCity = pPlot->getPlotCity();
+
+	if (!pCity || getTeam() != pCity->getTeam())
+	{
+		return false;
+	}
+
+	return true;
+}
+
+bool CvUnit::addHeritage(const HeritageTypes eType)
+{
+	GET_PLAYER(getOwner()).setHeritage(eType, true);
+
+	if (plot()->isActiveVisible(false))
+	{
+		NotifyEntity(MISSION_HERITAGE);
+	}
 	getGroup()->AI_setMissionAI(MISSIONAI_DELIBERATE_KILL, NULL, NULL);
 	kill(true, NO_PLAYER, true);
 	return true;
@@ -12395,6 +12434,7 @@ BuildTypes CvUnit::getBuildType() const
 		case MISSION_SPREAD_CORPORATION:
 		case MISSION_JOIN:
 		case MISSION_CONSTRUCT:
+		case MISSION_HERITAGE:
 		case MISSION_DISCOVER:
 		case MISSION_HURRY:
 		case MISSION_TRADE:

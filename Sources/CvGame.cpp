@@ -496,9 +496,6 @@ void CvGame::onFinalInitialized(const bool bNewGame)
 		// Close will free any resources and display any warnings if we've just finished loading/saving
 		CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper(); wrapper.close();
 
-		gDLL->getInterfaceIFace()->clearSelectionList();
-		gDLL->getInterfaceIFace()->clearSelectedCities();
-
 		// Loading multiplayer games can change human status of players.
 		//	so as good a place as any to refresh game handicap here.
 		averageHandicaps();
@@ -842,6 +839,12 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 	//	but reset won't be called again unless one aborts loading the scenario when it asks what options you want for it.
 	const bool bStartingGameSession = !bConstructorCall && (GC.getInitCore().getType() != GAME_NONE || m_bWorldBuilder);
 	m_bWorldBuilder = false;
+
+	if (bStartingGameSession && isFinalInitialized())
+	{
+		gDLL->getInterfaceIFace()->clearSelectionList();
+		gDLL->getInterfaceIFace()->clearSelectedCities();
+	}
 
 	GC.getInitCore().getDLLName();
 

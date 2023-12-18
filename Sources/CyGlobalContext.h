@@ -72,6 +72,7 @@ public:
 	const CvProcessInfo* getProcessInfo(int i) const;
 	const CvSpecialistInfo* getSpecialistInfo(int i) const;
 	const CvReligionInfo* getReligionInfo(int i) const;
+	const CvHeritageInfo* getHeritageInfo(int i) const;
 	const CvCorporationInfo* getCorporationInfo(int i) const;
 	const CvControlInfo* getControlInfo(int i) const;
 	const CvTechInfo* getTechInfo(int i) const;
@@ -142,6 +143,7 @@ public:
 	int getNumPromotionInfos() const { return GC.getNumPromotionInfos(); }
 	int getNumTechInfos() const { return GC.getNumTechInfos(); }
 	int getNumReligionInfos() const { return GC.getNumReligionInfos(); }
+	int getNumHeritageInfos() const { return GC.getNumHeritageInfos(); }
 	int getNumCorporationInfos() const { return GC.getNumCorporationInfos(); }
 	int getNumSpecialistInfos() const { return GC.getNumSpecialistInfos(); }
 	int getNumCivicInfos() const { return GC.getNumCivicInfos(); }

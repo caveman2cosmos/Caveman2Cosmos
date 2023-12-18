@@ -78,6 +78,7 @@ DllExport void DLLPublishToPython()
 	registerAllowPyIntAsType<EraTypes>();
 	registerAllowPyIntAsType<ForceControlTypes>();
 	registerAllowPyIntAsType<BonusTypes>();
+	registerAllowPyIntAsType<HeritageTypes>();
 	registerAllowPyIntAsType<HurryTypes>();
 	registerAllowPyIntAsType<MapTypes>();
 	registerAllowPyIntAsType<MapCategoryTypes>();
@@ -96,6 +97,7 @@ DllExport void DLLPublishToPython()
 	registerAllowPyIntAsType<FlavorTypes>();
 
 	publishPythonVectorInterface<std::vector<BonusTypes>, CovertToInteger>();
+	publishPythonVectorInterface<std::vector<HeritageTypes>, CovertToInteger>();
 	publishPythonVectorInterface<std::vector<ImprovementTypes>, CovertToInteger>();
 	publishPythonVectorInterface<std::vector<MapCategoryTypes>, CovertToInteger>();
 	publishPythonVectorInterface<std::vector<TechTypes>, CovertToInteger>();

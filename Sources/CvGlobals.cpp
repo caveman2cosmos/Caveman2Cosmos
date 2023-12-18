@@ -1319,6 +1319,17 @@ CvCategoryInfo& cvInternalGlobals::getCategoryInfo(CategoryTypes e) const
 	return *(m_paCategoryInfo[e]);
 }
 
+int cvInternalGlobals::getNumHeritageInfos() const
+{
+	return (int)m_heritageInfo.size();
+}
+
+CvHeritageInfo& cvInternalGlobals::getHeritageInfo(HeritageTypes e) const
+{
+	FASSERT_BOUNDS(0, GC.getNumHeritageInfos(), e);
+	return *(m_heritageInfo[e]);
+}
+
 
 int cvInternalGlobals::getNumVoteSourceInfos() const
 {
@@ -1534,6 +1545,7 @@ void cvInternalGlobals::registerGOMs()
 {
 	//	Sadly C++ doesn't have any reflection capability so need to do this explicitly
 	REGISTER_GOM(NO_GOM);
+	REGISTER_GOM(GOM_HERITAGE);
 	REGISTER_GOM(GOM_BUILDING);
 	REGISTER_GOM(GOM_PROMOTION);
 	REGISTER_GOM(GOM_TRAIT);
@@ -1715,14 +1727,6 @@ void cvInternalGlobals::registerMissions()
 	REGISTER_MISSION(MISSION_AIRBOMB5);
 	REGISTER_MISSION(MISSION_RBOMBARD);
 	REGISTER_MISSION(MISSION_FENGAGE);
-	// BUG - Sentry Actions - start
-#ifdef _MOD_SENTRY
-	REGISTER_MISSION(MISSION_MOVE_TO_SENTRY);
-	REGISTER_MISSION(MISSION_SENTRY_WHILE_HEAL);
-	REGISTER_MISSION(MISSION_SENTRY_NAVAL_UNITS);
-	REGISTER_MISSION(MISSION_SENTRY_LAND_UNITS);
-#endif
-	// BUG - Sentry Actions - end
 
 	REGISTER_MISSION(MISSION_INQUISITION);
 	REGISTER_MISSION(MISSION_CLAIM_TERRITORY);
@@ -1767,6 +1771,14 @@ void cvInternalGlobals::registerMissions()
 	REGISTER_MISSION(MISSION_BUILD_DOMESTICATED_HERD);
 	REGISTER_MISSION(MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_GATHERER);
 	REGISTER_MISSION(MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_TRACKER);
+	REGISTER_MISSION(MISSION_HERITAGE);
+
+#ifdef _MOD_SENTRY
+	REGISTER_MISSION(MISSION_MOVE_TO_SENTRY);
+	REGISTER_MISSION(MISSION_SENTRY_WHILE_HEAL);
+	REGISTER_MISSION(MISSION_SENTRY_NAVAL_UNITS);
+	REGISTER_MISSION(MISSION_SENTRY_LAND_UNITS);
+#endif
 }
 
 #define	REGISTER_NPC(x)	setInfoTypeFromString(#x,x)

@@ -89,4 +89,196 @@
 		<German>[ICON_BULLET]%d1%% laufende Kosten für militärische Einheiten</German>
 		<Russian>[ICON_BULLET]%d1%% стоимость военного подразделения</Russian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECHHELP_ALLOWS_IMPROVEMENT_UPGRADE</Tag>
+		<English>[ICON_BULLET]Allows %s1 to upgrade to %s2.</English>
+		<French>[ICON_BULLET]Permet à %s1 d'être amélioré en %s2.</French>
+		<German>[ICON_BULLET]neue Modernisierung: %s1 -&gt; %s2</German>
+		<Italian>[ICON_BULLET]Permette al miglioramento [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT] di evolvere in [COLOR_HIGHLIGHT_TEXT]%s2[COLOR_REVERT]</Italian> <!-- tech Naturopaty -->
+		<Spanish>[ICON_BULLET]Permite [NUM1:al:a la:a los:a las] %s1 mejorar a %s2</Spanish>
+		<Polish>[ICON_BULLET]Umożliwia ulepszenie %s1 do %s2.</Polish>
+		<Russian>[ICON_BULLET]Ïîçâîëÿåò %s1 ìîäåðíèçèðîâàòü äî %s2.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECHHELP_CAN_CONSTRUCT</Tag>
+		<English>[ICON_BULLET]Can Construct[SPACE]</English>
+		<French>[ICON_BULLET]Peut construire :[SPACE]</French>
+		<German>[ICON_BULLET]Ermöglicht Bau von:[SPACE]</German>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Permette la costruzione[COLOR_REVERT] di edifici del tipo:[SPACE]</Italian> <!--tech Cave Dwelling hover -->
+		<Spanish>[ICON_BULLET]Puede erigir[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECHHELP_CAN_CREATE</Tag>
+		<English>[ICON_BULLET]Can Create[SPACE]</English>
+		<French>[ICON_BULLET]Peut créer :[SPACE]</French>
+		<German>[ICON_BULLET]kann Folgendes erschaffen:[SPACE]</German>
+		<Italian>[ICON_BULLET]Può creare[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]Se puede crear[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECHHELP_CAN_TRAIN</Tag>
+		<English>[ICON_BULLET]Can Train[SPACE]</English>
+		<French>[ICON_BULLET]Peut entraîner :[SPACE]</French>
+		<German>[ICON_BULLET]Ausbildung von:[SPACE]</German>
+		<Italian>[ICON_BULLET]Permette l'addestramento di unità del tipo:[SPACE]</Italian> <!--tech Nomadism hover -->
+		<Spanish>[ICON_BULLET]Puede preparar[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECHHELP_CHOOSER_TITLE</Tag>
+		<English>Technology Advisor</English>
+		<French>Conseiller scientifique</French>
+		<German>Technologieberater</German>
+		<Italian>Consigliere tecnologia</Italian>
+		<Spanish>Consejero de tecnología</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECHHELP_CORPORATION_MAINTENANCE</Tag>
+		<English>[ICON_BULLET]%d1%% Corporation Maintenance</English>
+		<French>[ICON_BULLET]%d1%% de coût d'entretien des Corporations</French>
+		<German>[ICON_BULLET]%d1%% laufende Kosten für Kapitalgesellschaften</German>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Costi di mantenimento[COLOR_REVERT] delle corporazioni [COLOR_HIGHLIGHT_TEXT]%d1%%[COLOR_REVERT]</Italian> <!--tech Stock Brokering-->
+		<Spanish>[ICON_BULLET]%d1%% al mantenimiento de corporaciones</Spanish>
+		<Polish>[ICON_BULLET]%d1%% Utrzymanie Korporacji</Polish>
+		<Russian>[ICON_BULLET]%d1%% Îáñëóæèâàíèå êîðïîðàöèè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECHHELP_DISTANCE_MAINT</Tag>
+		<English>[ICON_BULLET]No Maintenance Costs from Distance to Palace</English>
+		<French>[ICON_BULLET]Pas de coût d'entretien lié à la distance du Palais</French>
+		<Italian>[ICON_BULLET]Nessun costo di mantenimento derivante dalla distanza dal palazzo</Italian>
+		<Spanish>[ICON_BULLET]Sin coste de mantenimiento por distancia con la capital</Spanish>
+		<Polish>[ICON_BULLET]Brak kosztów utrzymania za odległość od pałacu</Polish>
+		<Russian>[ICON_BULLET]Íåò çàòðàò íà îáñëóæèâàíèå îò ðàññòîÿíèÿ äî äâîðöà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECHHELP_DISTANCE_MAINT_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Maintenance Costs from Distance to Palace</English>
+		<French>[ICON_BULLET]%D1_Mod%% de coûts d'entretien lié à la distance du Palais</French>
+		<Italian>[ICON_BULLET]%D1_Mod%% costi di mantenimento derivanti dalla distanza dal palazzo</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% al coste de mantenimiento por distancia con la capital</Spanish>
+		<Polish>[ICON_BULLET]%D1_Mod%% do kosztów utrzymania za odległość od pałacu</Polish>
+		<Russian>[ICON_BULLET]%D1_Mod%% çàòðàòû íà îáñëóæèâàíèå îò ðàññòîÿíèÿ äî äâîðöà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECHHELP_ENABLES_DESERT_FARMING</Tag>
+		<English>[ICON_BULLET]Can Farm Desert Tiles</English>
+		<French>[ICON_BULLET]Peut cultiver sur les cases de Désert</French>
+		<German>[ICON_BULLET]kann Wüstenfelder bewirtschaften</German>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Permette la costruzione[COLOR_REVERT] di [COLOR_HIGHLIGHT_TEXT]fattorie[COLOR_REVERT] nelle caselle di [COLOR_HIGHLIGHT_TEXT]deserto[COLOR_REVERT]</Italian> <!-- tech Refrigeration -->
+		<Spanish>[ICON_BULLET]Puede cultivar casillas de desierto</Spanish>
+		<Polish>[ICON_BULLET]Umożliwia budowę farm na pustyni</Polish>
+		<Russian>[ICON_BULLET]ìîæåò îáðàáîòàòü ïóñòûíþ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECHHELP_LANGUAGE</Tag>
+		<English>[ICON_BULLET]Enables folklore heritage.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECHHELP_ERA_ADVANCE</Tag>
+		<English>[ICON_BULLET]Advances to the [COLOR_HIGHLIGHT_TEXT]%s1_era[COLOR_REVERT] Era</English>
+		<French>[ICON_BULLET]Avance à l'époque : [COLOR_HIGHLIGHT_TEXT]%s1_era[COLOR_REVERT]</French>
+		<German>[ICON_BULLET]Fortschritt zum Zeitalter [COLOR_HIGHLIGHT_TEXT]%s1_era[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Avanza all'era [COLOR_HIGHLIGHT_TEXT]%s1_era[COLOR_REVERT]</Italian>
+		<Spanish>[ICON_BULLET]Avanza a la era [NUM1:del:de la:de los:de las] [COLOR_HIGHLIGHT_TEXT]%s1_era[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECHHELP_FIRST_FREE_PROPHET</Tag>
+		<English>[ICON_BULLET]First to Discover Receives a [COLOR_TECH_TEXT]Free Great Prophet[COLOR_REVERT]</English>
+		<French>[ICON_BULLET]Le Premier à découvrir reçoit un [COLOR_TECH_TEXT]Prophète Illustre[COLOR_REVERT] Gratuit</French>
+		<Polish>[ICON_BULLET]Nagroda za pierwsze odkrycie: [COLOR_TECH_TEXT]Darnowy Wielki Prorok[COLOR_REVERT]</Polish>
+		<Russian>[ICON_BULLET]Первооткрыватель получит бесплатного [COLOR_TECH_TEXT]Великого пророка[COLOR_REVERT]</Russian>
+		<Italian>[ICON_BULLET]La [COLOR_HIGHLIGHT_TEXT]prima civiltà[COLOR_REVERT] che scopre questa tecnologia riceverà un [COLOR_HIGHLIGHT_TEXT]gran profeta gratuito[COLOR_REVERT]</Italian> <!-- any religion tech with prophets mod -->
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECHHELP_FIRST_FREE_TECH</Tag>
+		<English>[ICON_BULLET]First to Discover Receives a [COLOR_TECH_TEXT]Free Technology[COLOR_REVERT]</English>
+		<French>[ICON_BULLET]Faire une découverte avant les autres octroie une [COLOR_TECH_TEXT]technologie[COLOR_REVERT] gratuite</French>
+		<German>[ICON_BULLET]Der erste Entdecker erhält eine [COLOR_TECH_TEXT]freie Technologie[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]La [COLOR_HIGHLIGHT_TEXT]prima civiltà[COLOR_REVERT] che ricerca questa tecnologia riceverà [COLOR_HIGHLIGHT_TEXT]una tecnologia gratuita[COLOR_REVERT]</Italian> <!--tech Sedentary Lifestyle-->
+		<Spanish>[ICON_BULLET]Quien haga primero su descubrimiento recibirá [COLOR_TECH_TEXT]una tecnología gratis[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECHHELP_FIRST_FREE_TECHS</Tag>
+		<English>[ICON_BULLET]First to Discover Receives [COLOR_TECH_TEXT]%d1_Num Free Technologies[COLOR_REVERT]</English>
+		<French>[ICON_BULLET]Faire cette découverte avant les autres octroie [COLOR_TECH_TEXT]%d1_Num technologies[COLOR_REVERT] gratuites</French>
+		<German>[ICON_BULLET]Der erste Entdecker erhält [COLOR_TECH_TEXT]%d1_Num freie Technologien[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]La [COLOR_HIGHLIGHT_TEXT]prima civiltà[COLOR_REVERT] che ricerca questa tecnologia riceverà [COLOR_TECH_TEXT]%d1_Num tecnologie gratuite[COLOR_REVERT]</Italian>
+		<Spanish>[ICON_BULLET]Quien haga primero su descubrimiento recibirá [COLOR_TECH_TEXT]%d1_Num tecnologías gratis[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECHHELP_GLOBAL</Tag>
+		<English>[ICON_BULLET]Can only be researched once in a game.</English>
+		<French>[ICON_BULLET]Ne peut être recherché qu'une seule fois dans une partie.</French>
+		<Russian>[ICON_BULLET]Можно исследовать лишь однажды за всю игру.</Russian>
+		<Italian>[ICON_BULLET]Solo la [COLOR_HIGHLIGHT_TEXT]prima civiltà[COLOR_REVERT] che completerà la ricerca acquisirà questa tecnologia</Italian> <!-- Any religion tech in the game -->
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECHHELP_GREAT_PERSON_DISCOVER</Tag>
+		<English>[ICON_BULLET]Can be researched by a [COLOR_UNIT_TEXT]%s1_great_person[COLOR_REVERT]</English>
+		<French>[ICON_BULLET]Peut être recherchée par un [COLOR_UNIT_TEXT]%s1_great_person[COLOR_REVERT].</French>
+		<German>[ICON_BULLET]kann von der Persönlichkeit [COLOR_UNIT_TEXT]%s1_great_person[COLOR_REVERT] erforscht werden</German>
+		<Italian>[ICON_BULLET]Questa tecnologia può [COLOR_HIGHLIGHT_TEXT]essere ricercata[COLOR_REVERT] da un [COLOR_HIGHLIGHT_TEXT]%s1_great_person[COLOR_REVERT]</Italian> <!-- tech Scavenging -->
+		<Spanish>[ICON_BULLET]Esta tecnología puede investigarla un [COLOR_UNIT_TEXT]%s1_great_person[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECHHELP_MAINT_MOD</Tag>
+		<English>[ICON_BULLET]%D1_MOD%% Maintenance Costs in All Cities</English>
+		<French>[ICON_BULLET]%D1_MOD%% de coût d'entretien dans toutes les Villes</French>
+		<Italian>[ICON_BULLET]%D1_MOD%% costi di mantenimento in tutte le città</Italian>
+		<Spanish>[ICON_BULLET]%D1_MOD%% al coste de mantenimiento en todas las ciudades</Spanish>
+		<Polish>[ICON_BULLET]%D1_MOD%% do kosztów utrzymania we wszystkich miastach</Polish>
+		<Russian>[ICON_BULLET]%D1_MOD%% çàòðàòû íà îáñëóæèâàíèå âî âñåõ ãîðîäàõ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECHHELP_NUM_CITIES_MAINT</Tag>
+		<English>[ICON_BULLET]No Maintenance Costs from Number of Cities</English>
+		<French>[ICON_BULLET]Pas de coût d'entretien lié au nombre de Villes</French>
+		<Italian>[ICON_BULLET]Nessun costo di mantenimento dal numero di città</Italian>
+		<Spanish>[ICON_BULLET]Sin coste de mantenimiento por número de ciudades</Spanish>
+		<Polish>[ICON_BULLET]Brak kosztów utrzymania za ilość miast</Polish>
+		<Russian>[ICON_BULLET]Íåò çàòðàò íà îáñëóæèâàíèå îò ÷èñëà ãîðîäîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECHHELP_NUM_CITIES_MAINT_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Maintenance Costs from Number of Cities</English>
+		<French>[ICON_BULLET]%D1_Mod%% de coûts d'entretien lié au nombre de Villes</French>
+		<Italian>[ICON_BULLET]%D1_Mod%% costi di mantenimento dal numero di città</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% al coste de mantenimiento por número de ciudades</Spanish>
+		<Polish>[ICON_BULLET]%D1_Mod%% do kosztów utrzymania za ilość miast</Polish>
+		<Russian>[ICON_BULLET]%D1_Mod%% çàòðàòû íà îáñëóæèâàíèå îò ÷èñëà ãîðîäîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECHHELP_NUM_TURNS</Tag>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1_Num Turns[COLOR_REVERT]</English>
+		<French>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1_Num tours[COLOR_REVERT]</French>
+		<German>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1_Num Runden[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1_Num [NUM1:turno:turni][COLOR_REVERT]</Italian>
+		<Spanish>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%d1_Num [NUM1:turno:turnos][COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECHHELP_OBSOLETES_NO_LINK</Tag>
+		<English>[COLOR_WARNING_TEXT]Obsoletes %s1_Name[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Rend '%s1_Name' obsolète[COLOR_REVERT]</French>
+		<German>[ICON_BULLET][COLOR_WARNING_TEXT]veraltet: %s1_Name[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Rende [COLOR_WARNING_TEXT]obsoleti[COLOR_REVERT] gli edifici: [COLOR_HIGHLIGHT_TEXT]%s1_Name[COLOR_REVERT]</Italian> <!--tech Modern Physics-->
+		<Spanish>[COLOR_WARNING_TEXT]Deja [NUM1:obsoleto:obsoleta:obsoletos:obsoletas] %s1:2_Name[COLOR_REVERT]</Spanish>
+		<Polish>[COLOR_WARNING_TEXT]Przestarzały %s1_Name[COLOR_REVERT]</Polish>
+		<Russian>[COLOR_WARNING_TEXT]Óñòàðåâàåò: %s1_Name[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECHHELP_SPECIALIST_TECH_HAPPINESS_TYPE</Tag>
+		<English>[ICON_BULLET]%s1_Specialist gain %D2_Change%F3_HappOrUnhapp.</English>
+		<French>[ICON_BULLET]%s1_Specialist gagné %D2_Change%F3_HappOrUnhapp.</French>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Ogni specialista[COLOR_REVERT] di tipo [COLOR_HIGHLIGHT_TEXT]%s1_Specialist[COLOR_REVERT] fa ottenere [COLOR_HIGHLIGHT_TEXT]%D2_Change%F3_HappOrUnhapp[COLOR_REVERT]</Italian> <!--tech Humanism-->
+		<Polish>[ICON_BULLET]%s1_Specialist daje: %D2_Change%F3_HappOrUnhapp.</Polish>
+		<Russian>[ICON_BULLET]%s1_Specialist дает %D2_Change%F3_HappOrUnhapp.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECHHELP_SPECIALIST_TECH_HEALTH_TYPE</Tag>
+		<English>[ICON_BULLET]%s1_Specialist gain %D2_Change%F3_HealthOrUnhealth.</English>
+		<French>[ICON_BULLET]%s1_Specialist gagné %D2_Change%F3_HealthOrUnhealth.</French>
+		<Italian>[ICON_BULLET]Ogni specialista di tipo %s1_Specialist fa ottenere %D2_Change%F3_HealthOrUnhealth</Italian>
+		<Polish>[ICON_BULLET]%s1_Specialist daje: %D2_Change%F3_HealthOrUnhealth.</Polish>
+		<Russian>[ICON_BULLET]%s1_Specialist дает %D2_Change%F3_HealthOrUnhealth.</Russian>
+	</TEXT>
 </Civ4GameText>

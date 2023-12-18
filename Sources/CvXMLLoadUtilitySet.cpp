@@ -19,6 +19,7 @@
 #include "CvPlayerOptionInfo.h"
 #include "CvInfoWater.h"
 #include "CvTraitInfo.h"
+#include "CvHeritageInfo.h"
 #include "CvInitCore.h"
 #include "CvXMLLoadUtility.h"
 #include "CvXMLLoadUtilityModTools.h"
@@ -747,6 +748,7 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 		GC.setInfoTypeFromString(aReligionInfos.at(i)->getType(), i);
 	}
 
+	LoadGlobalClassInfo(GC.m_heritageInfo, "HeritageInfos", "Buildings", L"/C2C_HeritageInfos/HeritageInfos/HeritageInfo", false);
 	LoadGlobalClassInfo(GC.m_paBonusInfo, "CIV4BonusInfos", "Terrain", L"/Civ4BonusInfos/BonusInfos/BonusInfo", false, &GC.m_BonusInfoReplacements);
 	LoadGlobalClassInfo(GC.m_paSpecialUnitInfo, "CIV4SpecialUnitInfos", "Units", L"/Civ4SpecialUnitInfos/SpecialUnitInfos/SpecialUnitInfo", false);
 	shouldHaveType = true;
@@ -1273,6 +1275,21 @@ void CvXMLLoadUtility::SetGlobalActionInfo()
 		building.setMissionType(GetInfoClass("MISSION_CONSTRUCT"));
 		building.setActionInfoIndex(iActionInfoIndex++);
 		building.setHotKeyDescription(building.getTextKeyWide(), GC.getMissionInfo((MissionTypes)building.getMissionType()).getTextKeyWide(), CreateHotKeyFromDescription(building.getHotKey(), building.isShiftDown(), building.isAltDown(), building.isCtrlDown()));
+
+		GC.m_paActionInfo.push_back(pActionInfo);
+	}
+	// Toffer - No point in internally sorting these unit actions.
+	for (int i = GC.getNumHeritageInfos() - 1; i > -1; i--)
+	{
+		CvActionInfo* pActionInfo = new CvActionInfo;
+		pActionInfo->setOriginalIndex(i);
+		pActionInfo->setSubType(ACTIONSUBTYPE_HERITAGE);
+
+		CvHeritageInfo& heritage = GC.getHeritageInfo(static_cast<HeritageTypes>(i));
+
+		heritage.setMissionType(GetInfoClass("MISSION_HERITAGE"));
+		heritage.setActionInfoIndex(iActionInfoIndex++);
+		heritage.setHotKeyDescription(heritage.getTextKeyWide(), GC.getMissionInfo((MissionTypes)heritage.getMissionType()).getTextKeyWide(), CreateHotKeyFromDescription(heritage.getHotKey(), heritage.isShiftDown(), heritage.isAltDown(), heritage.isCtrlDown()));
 
 		GC.m_paActionInfo.push_back(pActionInfo);
 	}

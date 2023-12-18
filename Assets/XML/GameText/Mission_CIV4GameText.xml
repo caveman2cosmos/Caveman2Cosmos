@@ -622,6 +622,14 @@
 		<Russian>Отряд остается неактивным, пока полностью не восстановит силы.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MISSION_HERITAGE</Tag>
+		<English>Add Heritage</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_HERITAGE_HELP</Tag>
+		<English>[ICON_BULLET]Consumes the unit.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MISSION_HURRY_FOOD</Tag>
 		<English>Hurry Food</English>
 		<French>Surplus de Nourriture</French>

@@ -18,6 +18,7 @@
 #include "CvGameTextMgr.h"
 #include "CvGlobals.h"
 #include "CvImprovementInfo.h"
+#include "CvHeritageInfo.h"
 #include "CvInfos.h"
 #include "CvInitCore.h"
 #include "CvMap.h"
@@ -147,6 +148,7 @@ m_cachedBonusCount(NULL)
 	m_aiExtraYieldThreshold = new int[NUM_YIELD_TYPES];
 	m_aiTradeYieldModifier = new int[NUM_YIELD_TYPES];
 	m_aiFreeCityCommerce = new int[NUM_COMMERCE_TYPES];
+	m_extraCommerce = new int[NUM_COMMERCE_TYPES];
 	m_aiCommercePercent = new int[NUM_COMMERCE_TYPES];
 	m_aiCommerceRate = new int[NUM_COMMERCE_TYPES];
 	m_abCommerceDirty = new bool[NUM_COMMERCE_TYPES];
@@ -200,6 +202,8 @@ m_cachedBonusCount(NULL)
 	m_aiLandmarkYield = new int[NUM_YIELD_TYPES];
 	m_aiModderOptions = new int[NUM_MODDEROPTION_TYPES];
 	m_paiPlayerWideAfflictionCount = NULL;
+
+	m_bHasLanguage = false;
 
 	//TB Traits begin
 	m_paiImprovementUpgradeRateModifierSpecific = NULL;
@@ -283,6 +287,7 @@ CvPlayer::~CvPlayer()
 	SAFE_DELETE_ARRAY(m_aiExtraYieldThreshold);
 	SAFE_DELETE_ARRAY(m_aiTradeYieldModifier);
 	SAFE_DELETE_ARRAY(m_aiFreeCityCommerce);
+	SAFE_DELETE_ARRAY(m_extraCommerce);
 	SAFE_DELETE_ARRAY(m_aiCommercePercent);
 	SAFE_DELETE_ARRAY(m_aiCommerceRate);
 	SAFE_DELETE_ARRAY(m_abCommerceDirty);
@@ -690,6 +695,7 @@ void CvPlayer::uninit()
 	m_unitCombatFreeXP.clear();
 	m_researchQueue.clear();
 	m_cityNames.clear();
+	m_myHeritage.clear();
 
 	m_contractBroker.reset();
 
@@ -1029,15 +1035,15 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 		m_aiFreeCityYield[iI] = 0;
 		m_aiSpecialistExtraYield[iI] = 0;
 		m_aiLessYieldThreshold[iI] = 0;
-	//Team Project (7)
 		m_aiGoldenAgeYield[iI] = 0;
 		//TB Traits end
 	}
 
 	for (iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 	{
-		m_aiFreeCityCommerce[iI] = 0;
 		m_aiCommercePercent[iI] = 0;
+		m_aiFreeCityCommerce[iI] = 0;
+		m_extraCommerce[iI] = 0;
 		m_aiCommerceRate[iI] = 0;
 		m_abCommerceDirty[iI] = false;
 		m_aiCommerceRateModifier[iI] = 0;
@@ -1047,7 +1053,6 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 		m_aiStateReligionBuildingCommerce[iI] = 0;
 		m_aiSpecialistExtraCommerce[iI] = 0;
 		m_aiCommerceFlexibleCount[iI] = 0;
-	//Team Project (7)
 		m_aiGoldenAgeCommerce[iI] = 0;
 	}
 
@@ -1431,7 +1436,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iNumAnarchyTurns = 0;
 	m_iNumCivicSwitches = 0;
 	m_iNumCivicsSwitched = 0;
-	m_unitConstructionCounts.clear();
+	m_unitConstructionCounts.clear(); // Toffer - Remove @SAVEBREAK as it is only used for logging purposes, not particularly interesting logging.
 
 	m_iMinTaxIncome = 0;
 	m_iMaxTaxIncome = 0;
@@ -1444,6 +1449,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_commanders.clear();
 	m_commandFieldPlots.clear();
 	m_idleCities.clear();
+	m_myHeritage.clear();
 }
 
 
@@ -3997,12 +4003,6 @@ void CvPlayer::dumpStats() const
 	{
 		logBBAI("		%S (%s): %d", GC.getUnitInfo((UnitTypes)(itr->first >> 16)).getDescription(), GC.getUnitAIInfo((UnitAITypes)(itr->first & 0xFFFF)).getType(), itr->second);
 	}
-
-	logBBAI("	Buildings constructed by units:");
-	for(std::map<BuildingTypes,int>::const_iterator itr = m_unitConstructionCounts.begin(); itr != m_unitConstructionCounts.end(); ++itr)
-	{
-		logBBAI("		%S: %d", GC.getBuildingInfo(itr->first).getDescription(), itr->second);
-	}
 }
 
 void CvPlayer::NoteAnimalSubdued()
@@ -4010,19 +4010,6 @@ void CvPlayer::NoteAnimalSubdued()
 	m_iNumAnimalsSubdued++;
 }
 
-void CvPlayer::NoteUnitConstructed(BuildingTypes eBuilding)
-{
-	std::map<BuildingTypes,int>::iterator itr = m_unitConstructionCounts.find(eBuilding);
-
-	if ( itr == m_unitConstructionCounts.end() )
-	{
-		m_unitConstructionCounts.insert( std::make_pair(eBuilding, 1) );
-	}
-	else
-	{
-		(itr->second)++;
-	}
-}
 
 void CvPlayer::NoteCivicsSwitched(int iNumChanges)
 {
@@ -6517,6 +6504,14 @@ bool CvPlayer::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool
 
 	if (!bTestVisible)
 	{
+		foreach_(const HeritageTypes eTypeX, kUnit.getPrereqAndHeritage())
+		{
+			if (!hasHeritage(eTypeX))
+			{
+				return false;
+			}
+		}
+
 		if (!bPropertySpawn)
 		{
 			if (GC.getGame().isUnitMaxedOut(eUnit, GET_TEAM(getTeam()).getUnitMaking(eUnit) - bContinue)
@@ -6641,6 +6636,26 @@ bool CvPlayer::canConstructInternal(BuildingTypes eBuilding, bool bContinue, boo
 		{
 			const TechTypes eRequiredTech = GC.getSpecialBuildingInfo(eSpecialBuilding).getTechPrereq();
 			if (eIgnoreTechReq != eRequiredTech && !currentTeam.isHasTech(eRequiredTech))
+			{
+				return false;
+			}
+		}
+
+		if (!bTestVisible)
+		{
+			bool bValid = false;
+			bool bRequires = false;
+			foreach_(const HeritageTypes eTypeX, kBuilding.getPrereqOrHeritage())
+			{
+				bRequires = true;
+
+				if (hasHeritage(eTypeX))
+				{
+					bValid = true;
+					break;
+				}
+			}
+			if (bRequires && !bValid)
 			{
 				return false;
 			}
@@ -12490,31 +12505,32 @@ EraTypes CvPlayer::getCurrentEra() const
 }
 
 
-
 void CvPlayer::setCurrentEra(EraTypes eNewValue)
 {
 	PROFILE_EXTRA_FUNC();
-	CvPlot* pLoopPlot;
-	int iI;
 
 	if (getCurrentEra() != eNewValue)
 	{
 		EraTypes eOldEra = m_eCurrentEra;
 		m_eCurrentEra = eNewValue;
 
+		// Toffer - Heritage may change commerce output with era.
+		for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
+		{
+			changeExtraCommerce100((CommerceTypes)iI, getHeritageCommerceEraChange((CommerceTypes)iI, eNewValue));
+		}
+
 		if (GC.getGame().getActiveTeam() != NO_TEAM)
 		{
-			for (iI = 0; iI < GC.getMap().numPlots(); iI++)
+			for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 			{
-				pLoopPlot = GC.getMap().plotByIndex(iI);
-				pLoopPlot->updateGraphicEra();
+				CvPlot* plotX = GC.getMap().plotByIndex(iI);
+				plotX->updateGraphicEra();
 
-				if (pLoopPlot->getRevealedImprovementType(GC.getGame().getActiveTeam(), true) != NO_IMPROVEMENT)
+				if (plotX->getRevealedImprovementType(GC.getGame().getActiveTeam(), true) != NO_IMPROVEMENT
+				&& (plotX->getOwner() == getID() || !plotX->isOwned() && getID() == GC.getGame().getActivePlayer()))
 				{
-					if ((pLoopPlot->getOwner() == getID()) || (!(pLoopPlot->isOwned()) && (getID() == GC.getGame().getActivePlayer())))
-					{
-						pLoopPlot->setLayoutDirty(true);
-					}
+					plotX->setLayoutDirty(true);
 				}
 			}
 		}
@@ -12522,20 +12538,15 @@ void CvPlayer::setCurrentEra(EraTypes eNewValue)
 		// dirty all of this player's cities...
 		foreach_ (CvCity* city, cities())
 		{
-			if (city->getOwner() == getID())
+			//TB Era Advance Free Specialist Type
+			for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 			{
-				//TB Era Advance Free Specialist Type
-	//Team Project (6)
-				for (iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
+				if (getEraAdvanceFreeSpecialistCount((SpecialistTypes)iI) > 0)
 				{
-					if (getEraAdvanceFreeSpecialistCount((SpecialistTypes)iI) > 0)
-					{
-						city->changeFreeSpecialistCount((SpecialistTypes)iI, getEraAdvanceFreeSpecialistCount((SpecialistTypes)iI), true);
-					}
+					city->changeFreeSpecialistCount((SpecialistTypes)iI, getEraAdvanceFreeSpecialistCount((SpecialistTypes)iI), true);
 				}
-
-				city->setLayoutDirty(true);
 			}
+			city->setLayoutDirty(true);
 		}
 
 		//update unit eras
@@ -12555,17 +12566,18 @@ void CvPlayer::setCurrentEra(EraTypes eNewValue)
 			gDLL->getInterfaceIFace()->setDirty(Soundtrack_DIRTY_BIT, true);
 		}
 
-		if (isHumanPlayer() && (getCurrentEra() != GC.getGame().getStartEra()) && !GC.getGame().isNetworkMultiPlayer())
+		if (isHumanPlayer()
+		&& getCurrentEra() != GC.getGame().getStartEra()
+		&& !GC.getGame().isNetworkMultiPlayer()
+		&& GC.getGame().isFinalInitialized()
+		&& !gDLL->GetWorldBuilderMode())
 		{
-			if (GC.getGame().isFinalInitialized() && !(gDLL->GetWorldBuilderMode()))
+			CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_PYTHON_SCREEN);
+			if (pInfo)
 			{
-				CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_PYTHON_SCREEN);
-				if (pInfo)
-				{
-					pInfo->setData1(eNewValue);
-					pInfo->setText(L"showEraMovie");
-					addPopup(pInfo);
-				}
+				pInfo->setData1(eNewValue);
+				pInfo->setText(L"showEraMovie");
+				addPopup(pInfo);
 			}
 		}
 	}
@@ -13010,21 +13022,21 @@ void CvPlayer::changeTradeYieldModifier(YieldTypes eIndex, int iChange)
 }
 
 
-int CvPlayer::getFreeCityCommerce(CommerceTypes eIndex) const
+int CvPlayer::getExtraCommerce100(const CommerceTypes eIndex) const
 {
 	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex);
 
-	return m_aiFreeCityCommerce[eIndex];
+	return m_extraCommerce[eIndex];
 }
 
 
-void CvPlayer::changeFreeCityCommerce(CommerceTypes eIndex, int iChange)
+void CvPlayer::changeExtraCommerce100(const CommerceTypes eIndex, const int iChange)
 {
 	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex);
 
 	if (iChange != 0)
 	{
-		m_aiFreeCityCommerce[eIndex] += iChange;
+		m_extraCommerce[eIndex] += iChange;
 		setCommerceDirty(eIndex);
 	}
 }
@@ -18318,8 +18330,6 @@ void CvPlayer::setPbemNewTurn(bool bNew)
 void CvPlayer::read(FDataStreamBase* pStream)
 {
 	PROFILE_EXTRA_FUNC();
-	int iI;
-
 
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
@@ -18570,6 +18580,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 			WRAPPER_READ(wrapper, "CvPlayer", &iConstructionCount);
 			eBuilding = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BUILDINGS, eBuilding, true);
 
+			// Toffer - Remove @SAVEBREAK as it is only used for logging purposes, not particularly interesting logging.
 			if (eBuilding > -1)
 			{
 				m_unitConstructionCounts.insert(std::make_pair((BuildingTypes)eBuilding, iConstructionCount));
@@ -19120,7 +19131,6 @@ void CvPlayer::read(FDataStreamBase* pStream)
 			}
 		}
 
-		if (uiFlag > 0)
 		{
 			m_triggersFired.clear();
 			uint iSize;
@@ -19140,19 +19150,6 @@ void CvPlayer::read(FDataStreamBase* pStream)
 				else if ( iTrigger != -1 )
 				{
 					m_triggersFired.push_back((EventTriggerTypes)iTrigger);
-				}
-			}
-		}
-		else
-		{
-			const int iNumEventTriggers = std::min(176, GC.getNumEventTriggerInfos()); // yuck, hardcoded number of eventTriggers in the epic game in initial release
-			for (iI=0; iI < iNumEventTriggers; iI++)
-			{
-				bool bTriggered;
-				WRAPPER_READ(wrapper, "CvPlayer", &bTriggered);
-				if (bTriggered)
-				{
-					m_triggersFired.push_back((EventTriggerTypes)iI);
 				}
 			}
 		}
@@ -19604,8 +19601,32 @@ void CvPlayer::read(FDataStreamBase* pStream)
 				m_iNumMilitaryUnits = iMilitary;
 			}
 		}
-		WRAPPER_READ(wrapper, "CvPlayer", &m_iOtherAreaMaintenanceModifier);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iHomeAreaMaintenanceModifier);
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iOtherAreaMaintenanceModifier);
+
+		{
+			m_myHeritage.clear();
+			uint iSize = 0;
+			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "numHeritage");
+			for (uint i = 0; i < iSize; i++)
+			{
+				int iType = -2;
+
+				WRAPPER_READ_CLASS_ENUM_ALLOW_MISSING(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_HERITAGE, &iType);
+
+				if (iType == -2 && wrapper.isUsingTaggedFormat())
+				{
+					// Consume the value for older formats since the information cannot be believed anyway
+					WRAPPER_READ(wrapper, "CvPlayer", &iType);
+				}
+				else if (iType > -1)
+				{
+					m_myHeritage.push_back((HeritageTypes)iType);
+				}
+			}
+		}
+		WRAPPER_READ_ARRAY(wrapper, "CvPlayer", NUM_COMMERCE_TYPES, m_extraCommerce);
+		WRAPPER_READ(wrapper, "CvPlayer", &m_bHasLanguage);
 		//Example of how to skip element
 		//WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iPopulationgrowthratepercentage, SAVE_VALUE_ANY);
 	}
@@ -19873,6 +19894,7 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNumCivicSwitches);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNumCivicsSwitched);
 
+		// Toffer - Remove @SAVEBREAK as it is only used for logging purposes, not particularly interesting logging.
 		const int iNumBuildingTypes = m_unitConstructionCounts.size();
 		WRAPPER_WRITE(wrapper, "CvPlayer", iNumBuildingTypes);
 		for(std::map<BuildingTypes,int>::const_iterator itr = m_unitConstructionCounts.begin(); itr != m_unitConstructionCounts.end(); ++itr)
@@ -20401,6 +20423,16 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		}
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iHomeAreaMaintenanceModifier);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iOtherAreaMaintenanceModifier);
+		{
+			uint iSize = m_myHeritage.size();
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", iSize, "numHeritage");
+			foreach_(const HeritageTypes eType, m_myHeritage)
+			{
+				WRAPPER_WRITE_CLASS_ENUM_DECORATED(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_HERITAGE, eType, "iType");
+			}
+		}
+		WRAPPER_WRITE_ARRAY(wrapper, "CvPlayer", NUM_COMMERCE_TYPES, m_extraCommerce);
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_bHasLanguage);
 	}
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
@@ -27918,15 +27950,17 @@ void CvPlayer::clearModifierTotals()
 	m_iFreeSpecialistperNationalWonderCount = 0;
 	m_iFreeSpecialistperTeamProjectCount = 0;
 	m_iExtraGoodyCount = 0;
-	//Team Project (5)
+
 	m_iAllReligionsActiveCount = 0;
-	//Team Project (3)
+
 	m_iExtraNationalCaptureProbabilityModifier = 0;
 	m_iExtraNationalCaptureResistanceModifier = 0;
-	//Team Project (6)
+
 	m_iExtraStateReligionSpreadModifier = 0;
 	m_iExtraNonStateReligionSpreadModifier = 0;
 	m_iNationalGreatPeopleRate = 0;
+
+	m_bHasLanguage = false;
 
 	m_iBaseMergeSelection = FFreeList::INVALID_INDEX;
 	m_iFirstMergeSelection = FFreeList::INVALID_INDEX;
@@ -28093,7 +28127,6 @@ void CvPlayer::clearModifierTotals()
 		m_aiFreeCityYield[iI] = 0;
 		m_aiSpecialistExtraYield[iI] = 0;
 		m_aiLessYieldThreshold[iI] = 0;
-		//Team Project (7)
 		m_aiGoldenAgeYield[iI] = 0;
 		//TB Traits end
 	}
@@ -28101,6 +28134,7 @@ void CvPlayer::clearModifierTotals()
 	for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 	{
 		m_aiFreeCityCommerce[iI] = 0;
+		m_extraCommerce[iI] = 0;
 		m_aiCommerceRate[iI] = 0;
 		m_abCommerceDirty[iI] = false;
 		m_aiCommerceRateModifier[iI] = 0;
@@ -28110,7 +28144,6 @@ void CvPlayer::clearModifierTotals()
 		m_aiStateReligionBuildingCommerce[iI] = 0;
 		m_aiSpecialistExtraCommerce[iI] = 0;
 		m_aiCommerceFlexibleCount[iI] = 0;
-		//Team Project (7)
 		m_aiGoldenAgeCommerce[iI] = 0;
 	}
 
@@ -28167,8 +28200,8 @@ void CvPlayer::processTrait(TraitTypes eTrait, int iChange)
 
 	for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 	{
-		changeFreeCityCommerce(((CommerceTypes)iI), iChange*GC.getTraitInfo(eTrait).getCommerceChange(iI));
-		changeCommerceRateModifier(((CommerceTypes)iI), iChange*GC.getTraitInfo(eTrait).getCommerceModifier(iI));
+		changeExtraCommerce100((CommerceTypes)iI, 100*iChange*GC.getTraitInfo(eTrait).getCommerceChange(iI));
+		changeCommerceRateModifier((CommerceTypes)iI, iChange*GC.getTraitInfo(eTrait).getCommerceModifier(iI));
 	}
 
 	for (int iI = 0; iI < GC.getTraitInfo(eTrait).getNumCivicOptionNoUpkeepTypes(); iI++)
@@ -28498,6 +28531,9 @@ void CvPlayer::recalculateModifiers()
 			}
 		}
 	}
+	//Remove trait promos during recalc - it will add them back when processing in the traits.
+	algo::for_each(units(), CvUnit::fn::doSetFreePromotions(false, NO_TRAIT));
+
 	for (int iI = 0; iI < GC.getNumTraitInfos(); iI++)
 	{
 		if (hasTrait((TraitTypes)iI))
@@ -28505,14 +28541,15 @@ void CvPlayer::recalculateModifiers()
 			processTrait((TraitTypes)iI, 1);
 		}
 	}
-
-	//Remove trait promos during recalc - it will add them back when processing in the traits.
-	algo::for_each(units(), CvUnit::fn::doSetFreePromotions(false, NO_TRAIT));
+	foreach_(const HeritageTypes eTypeX, getHeritage())
+	{
+		processHeritage(eTypeX, 1);
+	}
 
 	// Put back city-sourced modifiers
 	algo::for_each(cities(), CvCity::fn::recalculateModifiers());
 
-	//	Put back civic-sourced modifiers
+	// Put back civic-sourced modifiers
 	for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
 	{
 		const CivicTypes eCivic = getCivics((CivicOptionTypes)iI);
@@ -30765,9 +30802,125 @@ void CvPlayer::processTech(const TechTypes eTech, const int iChange)
 	changeTechScore(getScoreValueOfTech(eTech) * iChange);
 	changeTechInflation(tech.getInflationModifier() * iChange);
 
+	if (tech.isLanguage())
+	{
+		m_bHasLanguage = true;
+	}
+
 	for (int i = 0; i < NUM_COMMERCE_TYPES; i++)
 	{
 		changeCommerceRateModifier(static_cast<CommerceTypes>(i), tech.getCommerceModifier(i) * iChange);
 	}
 	algo::for_each(cities(), CvCity::fn::processTech(eTech, iChange));
+}
+
+
+bool CvPlayer::hasHeritage(const HeritageTypes eType) const
+{
+	return algo::any_of_equal(m_myHeritage, eType);
+}
+
+bool CvPlayer::canAddHeritage(const HeritageTypes eType, const bool bTestVisible) const
+{
+	PROFILE_EXTRA_FUNC();
+
+	if (hasHeritage(eType))
+	{
+		return false;
+	}
+	const CvHeritageInfo& heritage = GC.getHeritageInfo(eType);
+
+	if (heritage.needLanguage() && !m_bHasLanguage)
+	{
+		return false;
+	}
+
+	if (!GET_TEAM(getTeam()).isHasTech((TechTypes)heritage.getPrereqTech()))
+	{
+		return false;
+	}
+
+	if (!bTestVisible)
+	{
+		bool bValid = false;
+		bool bRequires = false;
+		foreach_(const HeritageTypes eTypeX, heritage.getPrereqOrHeritage())
+		{
+			bRequires = true;
+
+			if (hasHeritage(eTypeX))
+			{
+				bValid = true;
+				break;
+			}
+		}
+		if (bRequires && !bValid)
+		{
+			return false;
+		}
+	}
+
+	return true;
+}
+
+void CvPlayer::setHeritage(const HeritageTypes eType, const bool bNewValue)
+{
+	PROFILE_EXTRA_FUNC();
+	FASSERT_BOUNDS(0, GC.getNumHeritageInfos(), eType);
+
+	std::vector<HeritageTypes>::iterator itr = find(m_myHeritage.begin(), m_myHeritage.end(), eType);
+
+	if (bNewValue)
+	{
+		if (itr == m_myHeritage.end())
+		{
+			m_myHeritage.push_back(eType);
+			processHeritage(eType, 1);
+		}
+		else FErrorMsg("Tried to add a duplicate vector element!");
+	}
+	else if (itr != m_myHeritage.end())
+	{
+		m_myHeritage.erase(itr);
+		processHeritage(eType, -1);
+	}
+	else FErrorMsg("Vector element to remove was missing!");
+
+	clearCanConstructCache(NO_BUILDING, true);
+}
+
+void CvPlayer::processHeritage(const HeritageTypes eType, const int iChange)
+{
+	PROFILE_EXTRA_FUNC();
+
+	const CvHeritageInfo& heritage = GC.getHeritageInfo(eType);
+	const EraTypes eEra = getCurrentEra();
+
+	foreach_(const EraCommerceArray& pair, heritage.getEraCommerceChanges100())
+	{
+		if (eEra >= pair.first)
+		{
+			for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
+			{
+				changeExtraCommerce100((CommerceTypes)iI, iChange * pair.second[(CommerceTypes)iI]);
+			}
+		}
+	}
+}
+
+int CvPlayer::getHeritageCommerceEraChange(const CommerceTypes eType, const EraTypes eEra) const
+{
+	PROFILE_EXTRA_FUNC();
+	int iCommerce100 = 0;
+	foreach_(const HeritageTypes eTypeX, getHeritage())
+	{
+		foreach_(const EraCommerceArray& pair, GC.getHeritageInfo(eTypeX).getEraCommerceChanges100())
+		{
+			if (eEra == pair.first)
+			{
+				iCommerce100 += pair.second[eType];
+			}
+		}
+	}
+	return iCommerce100;
 }

@@ -14078,8 +14078,7 @@ int CvCityAI::buildingPropertiesValue(const CvBuildingInfo& kBuilding) const
 		//	TODO - expand this as buildings add other types
 		if (pSource->getType() == PROPERTYSOURCE_CONSTANT)
 		{
-			//	Convert to an effective absolute amount by looking at the steady state value
-			//	given current
+			// Convert to an effective absolute amount by looking at the steady state value given current
 			const PropertyTypes eProperty = pSource->getProperty();
 			//	Only count half the unit source as we want to encourage building sources over unit ones
 			int iCurrentSourceSize = getTotalBuildingSourcedProperty(eProperty) + getTotalUnitSourcedProperty(eProperty) / 2 + getPropertyNonBuildingSource(eProperty);

@@ -1,8 +1,5 @@
 <?xml version="1.0"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Jon Shafer (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- Mission Infos -->
+
 <Civ4MissionInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
 	<!--Changes must be reflected in CvEnums.h-->
 	<MissionInfos>
@@ -891,74 +888,6 @@
 			<bSound>1</bSound>
 			<Button>,Art/Interface/Buttons/Actions/Airstrike.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,4,6</Button>
 		</MissionInfo>
-		<!-- Sentry Actions -->
-		<MissionInfo>
-			<Type>MISSION_MOVE_TO_SENTRY</Type>
-			<Description>TXT_KEY_MISSION_MOVE_TO_SENTRY</Description>
-			<Help>TXT_KEY_MISSION_MOVE_TO_SENTRY_HELP</Help>
-			<Waypoint>EFFECT_FOOTSTEP_ON</Waypoint>
-			<iTime>4</iTime>
-			<bTarget>1</bTarget>
-			<bBuild>0</bBuild>
-			<bSound>0</bSound>
-		</MissionInfo>
-		<MissionInfo>
-			<Type>MISSION_SENTRY_WHILE_HEAL</Type>
-			<Description>TXT_KEY_MISSION_SENTRY_WHILE_HEAL</Description>
-			<Help>TXT_KEY_MISSION_SENTRY_WHILE_HEAL_HELP</Help>
-			<Waypoint>NONE</Waypoint>
-			<EntityEventType>ENTITY_EVENT_HEAL</EntityEventType>
-			<iTime>0</iTime>
-			<bTarget>0</bTarget>
-			<bBuild>0</bBuild>
-			<bSound>1</bSound>
-			<HotKey>KB_H</HotKey>
-			<bAltDown>0</bAltDown>
-			<bShiftDown>1</bShiftDown>
-			<bCtrlDown>0</bCtrlDown>
-			<iHotKeyPriority>0</iHotKeyPriority>
-			<iOrderPriority>11</iOrderPriority>
-			<bVisible>1</bVisible>
-			<Button>,Art/Interface/Buttons/Actions/Heal.dds,Art/Interface/Buttons/sentry_actions.dds,1,1</Button>
-		</MissionInfo>
-		<MissionInfo>
-			<Type>MISSION_SENTRY_NAVAL_UNITS</Type>
-			<Description>TXT_KEY_MISSION_SENTRY_NAVAL_UNITS</Description>
-			<Help>TXT_KEY_MISSION_SENTRY_NAVAL_UNITS_HELP</Help>
-			<Waypoint>NONE</Waypoint>
-			<EntityEventType>ENTITY_EVENT_SENTRY</EntityEventType>
-			<iTime>0</iTime>
-			<bTarget>0</bTarget>
-			<bBuild>0</bBuild>
-			<bSound>1</bSound>
-			<HotKey>KB_N</HotKey>
-			<bAltDown>0</bAltDown>
-			<bShiftDown>1</bShiftDown>
-			<bCtrlDown>0</bCtrlDown>
-			<iHotKeyPriority>0</iHotKeyPriority>
-			<iOrderPriority>12</iOrderPriority>
-			<bVisible>1</bVisible>
-			<Button>,Art/Interface/Buttons/Actions/Sentry.dds,Art/Interface/Buttons/sentry_actions.dds,2,1</Button>
-		</MissionInfo>
-		<MissionInfo>
-			<Type>MISSION_SENTRY_LAND_UNITS</Type>
-			<Description>TXT_KEY_MISSION_SENTRY_LAND_UNITS</Description>
-			<Help>TXT_KEY_MISSION_SENTRY_LAND_UNITS_HELP</Help>
-			<Waypoint>NONE</Waypoint>
-			<EntityEventType>ENTITY_EVENT_SENTRY</EntityEventType>
-			<iTime>0</iTime>
-			<bTarget>0</bTarget>
-			<bBuild>0</bBuild>
-			<bSound>1</bSound>
-			<HotKey>KB_L</HotKey>
-			<bAltDown>0</bAltDown>
-			<bShiftDown>1</bShiftDown>
-			<bCtrlDown>0</bCtrlDown>
-			<iHotKeyPriority>0</iHotKeyPriority>
-			<iOrderPriority>12</iOrderPriority>
-			<bVisible>1</bVisible>
-			<Button>,Art/Interface/Buttons/Actions/Sentry.dds,Art/Interface/Buttons/sentry_actions.dds,3,1</Button>
-		</MissionInfo>
 		<MissionInfo>
 			<Type>MISSION_INQUISITION</Type>
 			<Description>TXT_KEY_MISSION_INQUISITION</Description>
@@ -1551,6 +1480,85 @@
 			<bSound>0</bSound>
 			<bVisible>1</bVisible>
 			<Button>Art/Interface/Buttons/Units/sparth/tracker.dds</Button>
+		</MissionInfo>
+		<MissionInfo>
+			<Type>MISSION_HERITAGE</Type>
+			<Description>TXT_KEY_MISSION_HERITAGE</Description>
+			<Help>TXT_KEY_MISSION_HERITAGE_HELP</Help>
+			<Waypoint>NONE</Waypoint>
+			<EntityEventType>ENTITY_EVENT_GREAT_EVENT</EntityEventType>
+			<iTime>18</iTime>
+			<bTarget>0</bTarget>
+			<bBuild>0</bBuild>
+			<bSound>0</bSound>
+		</MissionInfo>
+		<!-- Sentry Actions -->
+		<MissionInfo>
+			<Type>MISSION_MOVE_TO_SENTRY</Type>
+			<Description>TXT_KEY_MISSION_MOVE_TO_SENTRY</Description>
+			<Help>TXT_KEY_MISSION_MOVE_TO_SENTRY_HELP</Help>
+			<Waypoint>EFFECT_FOOTSTEP_ON</Waypoint>
+			<iTime>4</iTime>
+			<bTarget>1</bTarget>
+			<bBuild>0</bBuild>
+			<bSound>0</bSound>
+		</MissionInfo>
+		<MissionInfo>
+			<Type>MISSION_SENTRY_WHILE_HEAL</Type>
+			<Description>TXT_KEY_MISSION_SENTRY_WHILE_HEAL</Description>
+			<Help>TXT_KEY_MISSION_SENTRY_WHILE_HEAL_HELP</Help>
+			<Waypoint>NONE</Waypoint>
+			<EntityEventType>ENTITY_EVENT_HEAL</EntityEventType>
+			<iTime>0</iTime>
+			<bTarget>0</bTarget>
+			<bBuild>0</bBuild>
+			<bSound>1</bSound>
+			<HotKey>KB_H</HotKey>
+			<bAltDown>0</bAltDown>
+			<bShiftDown>1</bShiftDown>
+			<bCtrlDown>0</bCtrlDown>
+			<iHotKeyPriority>0</iHotKeyPriority>
+			<iOrderPriority>11</iOrderPriority>
+			<bVisible>1</bVisible>
+			<Button>,Art/Interface/Buttons/Actions/Heal.dds,Art/Interface/Buttons/sentry_actions.dds,1,1</Button>
+		</MissionInfo>
+		<MissionInfo>
+			<Type>MISSION_SENTRY_NAVAL_UNITS</Type>
+			<Description>TXT_KEY_MISSION_SENTRY_NAVAL_UNITS</Description>
+			<Help>TXT_KEY_MISSION_SENTRY_NAVAL_UNITS_HELP</Help>
+			<Waypoint>NONE</Waypoint>
+			<EntityEventType>ENTITY_EVENT_SENTRY</EntityEventType>
+			<iTime>0</iTime>
+			<bTarget>0</bTarget>
+			<bBuild>0</bBuild>
+			<bSound>1</bSound>
+			<HotKey>KB_N</HotKey>
+			<bAltDown>0</bAltDown>
+			<bShiftDown>1</bShiftDown>
+			<bCtrlDown>0</bCtrlDown>
+			<iHotKeyPriority>0</iHotKeyPriority>
+			<iOrderPriority>12</iOrderPriority>
+			<bVisible>1</bVisible>
+			<Button>,Art/Interface/Buttons/Actions/Sentry.dds,Art/Interface/Buttons/sentry_actions.dds,2,1</Button>
+		</MissionInfo>
+		<MissionInfo>
+			<Type>MISSION_SENTRY_LAND_UNITS</Type>
+			<Description>TXT_KEY_MISSION_SENTRY_LAND_UNITS</Description>
+			<Help>TXT_KEY_MISSION_SENTRY_LAND_UNITS_HELP</Help>
+			<Waypoint>NONE</Waypoint>
+			<EntityEventType>ENTITY_EVENT_SENTRY</EntityEventType>
+			<iTime>0</iTime>
+			<bTarget>0</bTarget>
+			<bBuild>0</bBuild>
+			<bSound>1</bSound>
+			<HotKey>KB_L</HotKey>
+			<bAltDown>0</bAltDown>
+			<bShiftDown>1</bShiftDown>
+			<bCtrlDown>0</bCtrlDown>
+			<iHotKeyPriority>0</iHotKeyPriority>
+			<iOrderPriority>12</iOrderPriority>
+			<bVisible>1</bVisible>
+			<Button>,Art/Interface/Buttons/Actions/Sentry.dds,Art/Interface/Buttons/sentry_actions.dds,3,1</Button>
 		</MissionInfo>
 		<MissionInfo>
 			<Type>MISSION_JOIN_CITY_AS_SETTLED_SLAVE</Type>
