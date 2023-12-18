@@ -1302,6 +1302,7 @@
 	<ElementType name="bPlotPrereqsKeepAfter" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bRemoveAfterSet" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bQuick" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bStarsign" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bInquisitor" content="textOnly" dt:type="boolean"/>
 	<!-- ls612: No Non-Owned Entry -->
 	<ElementType name="bOnlyFriendlyEntry" content="textOnly" dt:type="boolean"/>
@@ -2372,6 +2373,7 @@
 		<element type="bPlotPrereqsKeepAfter" minOccurs="0"/>
 		<element type="bRemoveAfterSet" minOccurs="0"/>
 		<element type="bQuick" minOccurs="0"/>
+		<element type="bStarsign" minOccurs="0"/>
 		<element type="bCanMovePeaks" minOccurs="0"/>
 		<element type="bCanLeadThroughPeaks" minOccurs="0"/>
 		<element type="bForceUpgrade" minOccurs="0"/>

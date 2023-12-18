@@ -1023,7 +1023,7 @@ BonusTypes cvInternalGlobals::getMapBonus(const int i) const
 	return m_mapBonuses[i];
 }
 
-int cvInternalGlobals::getStatusPromotion(int i) const
+PromotionTypes cvInternalGlobals::getStatusPromotion(int i) const
 {
 	return m_aiStatusPromotions[i];
 }
@@ -3089,13 +3089,22 @@ void cvInternalGlobals::doPostLoadCaching()
 			}
 		}
 	}
-	//TB: Set Statuses
-	m_aiStatusPromotions.clear();
-	for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
+
 	{
-		if (GC.getPromotionInfo((PromotionTypes)iI).isStatus())
+		//TB: Set Statuses and starsigns
+		m_aiStatusPromotions.clear();
+		for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 		{
-			m_aiStatusPromotions.push_back(iI);
+			const PromotionTypes ePromoX = static_cast<PromotionTypes>(iI);
+
+			if (GC.getPromotionInfo(ePromoX).isStatus())
+			{
+				m_aiStatusPromotions.push_back(ePromoX);
+			}
+			else if (GC.getPromotionInfo(ePromoX).isStarsign())
+			{
+				m_starsigns.push_back(ePromoX);
+			}
 		}
 	}
 

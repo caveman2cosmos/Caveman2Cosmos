@@ -312,6 +312,24 @@ bool CvXMLLoadUtility::SetPostGlobalsGlobalDefines()
 		idx = GetInfoClass(szVal);
 		GC.getDefinesVarSystem()->SetValue("NUKE_FEATURE", idx);
 
+
+		SetGlobalDefine("STARSIGN_TECH_START", szVal);
+		idx = GetInfoClass(szVal);
+		GC.getDefinesVarSystem()->SetValue("STARSIGN_TECH_START", idx);
+
+		SetGlobalDefine("STARSIGN_TECH_BOOST", szVal);
+		idx = GetInfoClass(szVal);
+		GC.getDefinesVarSystem()->SetValue("STARSIGN_TECH_BOOST", idx);
+
+		SetGlobalDefine("STARSIGN_TECH_NERF", szVal);
+		idx = GetInfoClass(szVal);
+		GC.getDefinesVarSystem()->SetValue("STARSIGN_TECH_NERF", idx);
+
+		SetGlobalDefine("STARSIGN_TECH_END", szVal);
+		idx = GetInfoClass(szVal);
+		GC.getDefinesVarSystem()->SetValue("STARSIGN_TECH_END", idx);
+
+
 		SetGlobalDefine("CAPITAL_BUILDING", szVal);
 		idx = GetInfoClass(szVal);
 		GC.getDefinesVarSystem()->SetValue("CAPITAL_BUILDING", idx);

@@ -1980,18 +1980,6 @@ class CvEventManager:
 	def onUnitCreated(self, argsList): # Enabled in PythonCallbackDefines.xml (USE_ON_UNIT_CREATED_CALLBACK = True)
 		CyUnit, = argsList
 
-		# Star Signs
-		if not CyUnit.isHasUnitCombat(self.UNITCOMBAT_CIVILIAN) and not GAME.getSorenRandNum(49, "Seventh son of seventh son"):
-
-			CyTeam = GC.getTeam(CyUnit.getTeam())
-			bLand = CyUnit.getDomainType() == self.mapDomain['DOMAIN_LAND']
-			if not CyTeam.isHasTech(self.TECH_SATELLITES) and CyTeam.isHasTech(self.TECH_STARGAZING) \
-			and (not bLand or not CyTeam.isHasTech(self.TECH_REALISM)) \
-			and (CyTeam.isHasTech(self.TECH_ASTROLOGY) or GAME.getSorenRandNum(2, "1/2 probability before Astrology")) \
-			and (not CyTeam.isHasTech(self.TECH_ASTRONOMY) or GAME.getSorenRandNum(4, "3/4 probability after Astronomy")):
-				import StarSigns
-				StarSigns.give(GC, TRNSLTR, GAME, CyUnit, CyUnit.getOwner(), bLand)
-
 		# Subdued/Tamed animal graphical attachment
 		if self.UNIT_STORY_TELLER != -1:
 			KEY = GC.getUnitInfo(CyUnit.getUnitType()).getType()

@@ -2119,6 +2119,7 @@ private:
 	bool	bGraphicsSetup;
 	int m_iXOrigin;
 	int m_iYOrigin;
+	void doStarsign();
 
 	//TB Combat Mods begin
 public:

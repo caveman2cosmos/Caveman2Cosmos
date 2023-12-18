@@ -29393,27 +29393,23 @@ bool CvUnitAI::AI_activateStatus(bool bStack, PromotionTypes eStatus, CvUnit* pU
 	{
 		return false;
 	}
-	int iStatus = (int)eStatus;
 	//function to turn on or off status on whole group or just unit
-	if (bStack)
+	if (!bStack)
 	{
-		if (getGroup()->canDoCommand(COMMAND_STATUS, iStatus, 0, false, false, true))
-		{
-			getGroup()->doCommand(COMMAND_STATUS, iStatus, 0);
-			return true;
-		}
-	}
-	else
-	{
-		if (pUnit == NULL)
+		if (!pUnit)
 		{
 			return false;
 		}
-		if (pUnit->canDoCommand(COMMAND_STATUS, iStatus, 0))
+		if (pUnit->canDoCommand(COMMAND_STATUS, eStatus, 0))
 		{
-			pUnit->doCommand(COMMAND_STATUS, iStatus, 0);
+			pUnit->doCommand(COMMAND_STATUS, eStatus, 0);
 			return true;
 		}
+	}
+	else if (getGroup()->canDoCommand(COMMAND_STATUS, eStatus, 0, false, false, true))
+	{
+		getGroup()->doCommand(COMMAND_STATUS, eStatus, 0);
+		return true;
 	}
 	return false;
 }
@@ -29423,12 +29419,12 @@ bool CvUnitAI::AI_selectStatus(bool bStack, CvUnit* pUnit)
 	PROFILE_EXTRA_FUNC();
 	if (bStack)
 	{
-		if (getGroup() == NULL)
+		if (!getGroup())
 		{
 			return false;
 		}
 	}
-	else if (pUnit == NULL)
+	else if (!pUnit)
 	{
 		return false;
 	}
@@ -29446,17 +29442,16 @@ bool CvUnitAI::AI_selectStatus(bool bStack, CvUnit* pUnit)
 	for (int iI = 0; iI < iNumStatusPromotions; iI++)
 	{
 		int iValue = 0;
-		const int iStatus = GC.getStatusPromotion(iI);
-		const PromotionTypes eStatus = (PromotionTypes)iStatus;
+		const PromotionTypes eStatus = GC.getStatusPromotion(iI);
 		const CvPromotionInfo& kPromotion = GC.getPromotionInfo(eStatus);
 		PromotionTypes eRemoveStatus = NO_PROMOTION;
 
 		for (int iJ = 0; iJ < iNumStatusPromotions; iJ++)
 		{
-			if (kPromotion.getPromotionLine() == GC.getPromotionInfo((PromotionTypes)GC.getStatusPromotion(iJ)).getPromotionLine()
-			&& GC.getPromotionInfo((PromotionTypes)GC.getStatusPromotion(iJ)).getLinePriority() == 1)
+			if (kPromotion.getPromotionLine() == GC.getPromotionInfo(GC.getStatusPromotion(iJ)).getPromotionLine()
+			&& GC.getPromotionInfo(GC.getStatusPromotion(iJ)).getLinePriority() == 1)
 			{
-				eRemoveStatus = (PromotionTypes)GC.getStatusPromotion(iJ);
+				eRemoveStatus = GC.getStatusPromotion(iJ);
 				break;
 			}
 		}
@@ -29464,7 +29459,7 @@ bool CvUnitAI::AI_selectStatus(bool bStack, CvUnit* pUnit)
 		{
 			if (bStack)
 			{
-				if (getGroup()->canDoCommand(COMMAND_STATUS, iStatus, 0, false, false, true) || isHasPromotion(eStatus))
+				if (getGroup()->canDoCommand(COMMAND_STATUS, eStatus, 0, false, false, true) || isHasPromotion(eStatus))
 				{
 					//Keep things as thin as possible here - program in as new statuses are introduced
 					//Stay the Hand
@@ -29655,7 +29650,7 @@ bool CvUnitAI::AI_selectStatus(bool bStack, CvUnit* pUnit)
 			}
 			else
 			{
-				if (pUnit->canDoCommand(COMMAND_STATUS, iStatus, 0) || pUnit->isHasPromotion(eStatus))
+				if (pUnit->canDoCommand(COMMAND_STATUS, eStatus, 0) || pUnit->isHasPromotion(eStatus))
 				{
 					//conditions to add to ivalue and subtract from iValue
 

@@ -1056,6 +1056,7 @@ public:
 	void setDisqualifiedUnitCombatTypes();
 
 	bool hasNegativeEffects() const;
+	inline bool isStarsign() const { return m_bStarsign; }
 
 protected:
 	bool m_bCanMovePeaks;
@@ -1076,6 +1077,7 @@ public:
 	void copyNonDefaults(const CvPromotionInfo* pClassInfo);
 
 private:
+	bool m_bStarsign;
 	CvPropertyManipulators m_PropertyManipulators;
 
 //----------------------PROTECTED MEMBER VARIABLES----------------------------
