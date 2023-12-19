@@ -1421,6 +1421,9 @@
 	<ElementType name="PrereqAndHeritage" content="eltOnly">
 		<element type="Type" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
+	<ElementType name="PrereqOrHeritage" content="eltOnly">
+		<element type="Type" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
 	<ElementType name="PrereqAndBuildings" content="eltOnly">
 		<element type="BuildingType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
@@ -1908,6 +1911,7 @@
 		<element type="PrereqGameOption" minOccurs="0"/>
 		<element type="NotGameOption" minOccurs="0"/>
 		<element type="PrereqOrCivics" minOccurs="0"/>
+		<element type="PrereqOrHeritage" minOccurs="0"/>
 		<element type="PrereqAndHeritage" minOccurs="0"/>
 		<element type="PrereqAndBuildings" minOccurs="0"/>
 		<element type="SupersedingUnits" minOccurs="0"/>

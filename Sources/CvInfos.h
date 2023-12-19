@@ -2110,6 +2110,7 @@ public:
 	const std::vector<BonusTypes>& getPrereqOrVicinityBonuses() const;
 	const std::vector<TechTypes>& getPrereqAndTechs() const;
 	const std::vector<HeritageTypes>& getPrereqAndHeritage() const { return m_prereqAndHeritage; }
+	const std::vector<HeritageTypes>& getPrereqOrHeritage() const { return m_prereqOrHeritage; }
 
 	virtual const wchar_t* getExtraHoverText() const;
 
@@ -2348,6 +2349,7 @@ private:
 
 	std::vector<BuildTypes> m_workerBuilds;
 	std::vector<HeritageTypes> m_prereqAndHeritage;
+	std::vector<HeritageTypes> m_prereqOrHeritage;
 	std::vector<int> m_aiPrereqAndBuildings;
 	std::vector<int> m_aiPrereqOrBuildings;
 	std::vector<int> m_aiTargetUnit;
