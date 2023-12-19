@@ -566,18 +566,6 @@
 		<Russian>Ìèô îá àíòèëîïå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_ARCTIC_FOX</Tag>
-		<English>Folklore - Arctic Fox</English>
-		<French>Mythe du Renard arctique</French>
-		<German>
-			<Text>Mythos des Polarfuchses:Mythos des Polarfuchses:Mythos des Polarfuchses:Mythos des Polarfuchses</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito della volpe artica</Italian>
-		<Russian>Ìèô î ïåñöå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_NINE_BANDED_ARMADILLO</Tag>
 		<English>Folklore - Nine-banded Armadillo</English>
 		<French>Mythe du Tatou</French>
@@ -1115,18 +1103,6 @@
 		</German>
 		<Italian>Mito del lupo etiope</Italian>
 		<Russian>Ìèô îá ýô. øàêàëå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_FENNEC_FOX</Tag>
-		<English>Folklore - Fennec Fox</English>
-		<French>Mythe du Fennec</French>
-		<German>
-			<Text>Mythos des Fenneks:Mythos des Fenneks:Mythos des Fenneks:Mythos des Fenneks</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito della volpe del deserto</Italian>
-		<Russian>Ìèô î ëèñèöå-ôåíåê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_E_FIRE</Tag>
@@ -2281,18 +2257,6 @@
 		</German>
 		<Italian>Mito della manta</Italian>
 		<Russian>Ìèô î ìàíòå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_RED_FOX</Tag>
-		<English>Folklore - Red Fox</English>
-		<French>Mythe du Renard Roux</French>
-		<German>
-			<Text>Mythos des Rotfuchses:Mythos des Rotfuchses:Mythos des Rotfuchses:Mythos des Rotfuchses</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito della volpe rossa</Italian>
-		<Russian>Ìèô î ëèñèöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_REEF_SHARK</Tag>
