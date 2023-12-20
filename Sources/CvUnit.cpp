@@ -20033,35 +20033,35 @@ bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bFree, bool bKeepC
 			return false;
 		}
 	}
+
+	// Toffer - Promotionline is factored in for the (dis)qualified caches.
+	for (int iI = 0; iI < promo.getNumDisqualifiedUnitCombatTypes(); iI++)
 	{
-		// Toffer - Promotionline is factored in for the (dis)qualified caches.
-		for (int iI = 0; iI < promo.getNumDisqualifiedUnitCombatTypes(); iI++)
+		if (isHasUnitCombat((UnitCombatTypes)promo.getDisqualifiedUnitCombatType(iI)))
 		{
-			if (isHasUnitCombat((UnitCombatTypes)promo.getDisqualifiedUnitCombatType(iI)))
+			return false;
+		}
+	}
+	// TB SubCombat Mod Begin
+	// The two solid ways to identify a Size Matters promotion that would not normally have a CC prereq.
+	// Note: Apparently having no CC prereq is a clear way to isolate promotions to only being assigned directly by event or other special injection.
+	// Thus it was necessary to pass the Size Matters promos despite having no particular CC prereq.
+	if (!promo.isForOffset() && !promo.isZeroesXP())
+	{
+		bool bValid = bFree;
+
+		for (int iI = promo.getNumQualifiedUnitCombatTypes() - 1; iI > -1; iI--)
+		{
+			bValid = false;
+			if (isHasUnitCombat((UnitCombatTypes)promo.getQualifiedUnitCombatType(iI)))
 			{
-				return false;
+				bValid = true;
+				break;
 			}
 		}
-		// TB SubCombat Mod Begin
-		// The two solid ways to identify a Size Matters promotion that would not normally have a CC prereq.
-		// Note: Apparently having no CC prereq is a clear way to isolate promotions to only being assigned directly by event or other special injection.
-		// Thus it was necessary to pass the Size Matters promos despite having no particular CC prereq.
-		if (!promo.isForOffset() && !promo.isZeroesXP())
+		if (!bValid)
 		{
-			bool bValid = false;
-
-			for (int iI = promo.getNumQualifiedUnitCombatTypes() - 1; iI > -1; iI--)
-			{
-				if (isHasUnitCombat((UnitCombatTypes)promo.getQualifiedUnitCombatType(iI)))
-				{
-					bValid = true;
-					break;
-				}
-			}
-			if (!bValid)
-			{
-				return false;
-			}
+			return false;
 		}
 	}
 
@@ -33936,6 +33936,7 @@ void CvUnit::doSetFreePromotions(bool bAdding, TraitTypes eTrait)
 	{
 		checkFreetoCombatClass();
 	}
+	doStarsign();
 }
 
 int CvUnit::getRetrainsAvailable() const
@@ -34504,20 +34505,9 @@ bool CvUnit::canMerge(bool bAutocheck) const
 			{
 				iValidUnitCount++;
 			}
-			if (bAutocheck)
+			if (bAutocheck && iValidUnitCount == 3)
 			{
-				if (iValidUnitCount == 3)
-				{
-					//if (pLoopUnit->canSplit())
-					//{
-					//	GET_PLAYER(getOwner()).setSplittingUnit(pLoopUnit->getID());
-					//}
-					//else
-					//{
-					//	GET_PLAYER(getOwner()).setSplittingUnit(NO_UNIT);
-					//}
-					return true;
-				}
+				return true;
 			}
 		}
 	}
@@ -38471,4 +38461,69 @@ void CvUnit::forceInvalidCoordinates()
 {
 	m_iX = INVALID_PLOT_COORD;
 	m_iY = INVALID_PLOT_COORD;
+}
+
+void CvUnit::doStarsign()
+{
+	// Do not give starsigns to units created from a unit split/merge action.
+	if (GET_PLAYER(getOwner()).getSplittingUnit() != FFreeList::INVALID_INDEX
+	|| GET_PLAYER(getOwner()).getBaseMergeSelectionUnit() != FFreeList::INVALID_INDEX
+	|| GC.getGame().getSorenRandNum(49, "Seventh son of seventh son") > 0)
+	{
+		return;
+	}
+	const CvTeam& team = GET_TEAM(getTeam());
+	if (team.isHasTech((TechTypes)GC.getDefineINT("STARSIGN_TECH_END"))
+	|| !team.isHasTech((TechTypes)GC.getDefineINT("STARSIGN_TECH_START")))
+	{
+		return;
+	}
+	if (team.isHasTech((TechTypes)GC.getDefineINT("STARSIGN_TECH_NERF")))
+	{
+		if (GC.getGame().getSorenRandNum(4, "3/4 probability after Astronomy") == 0)
+		{
+			return;
+		}
+	}
+	else if (!team.isHasTech((TechTypes)GC.getDefineINT("STARSIGN_TECH_BOOST")))
+	{
+		if (GC.getGame().getSorenRandNum(2, "1/2 probability before Astrology") > 0)
+		{
+			return;
+		}
+	}
+	std::vector<PromotionTypes> starsigns;
+	int iCount = 0;
+	for (int iI = GC.getNumStarsigns() - 1; iI > -1; iI--)
+	{
+		const PromotionTypes ePromo = GC.getStarsign(iI);
+		if (canKeepPromotion(ePromo, true))
+		{
+			starsigns.push_back(ePromo);
+			iCount++;
+		}
+	}
+	if (iCount == 0)
+	{
+		return;
+	}
+	const PromotionTypes ePromo = starsigns[GC.getGame().getSorenRandNum(iCount, "random pick")];
+
+	setHasPromotion(ePromo, true, true);
+
+	if (isHuman())
+	{
+		CvWString szBuffer;
+
+		if (plot()->getPlotCity())
+			szBuffer = gDLL->getText("TXT_KEY_MSG_STARSIGN_BUILD", plot()->getPlotCity()->getNameKey());
+		else
+			szBuffer = gDLL->getText("TXT_KEY_MSG_STARSIGN_CREATE");
+
+		AddDLLMessage(
+			getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK",
+			MESSAGE_TYPE_INFO, GC.getPromotionInfo(ePromo).getButton(),
+			GC.getCOLOR_WHITE(), getX(), getY(), true, true
+		);
+	}
 }

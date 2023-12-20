@@ -2097,7 +2097,8 @@ m_bStatus(false),
 m_bPrereqNormInvisible(false),
 m_bPlotPrereqsKeepAfter(false),
 m_bRemoveAfterSet(false),
-m_bQuick(false)
+m_bQuick(false),
+m_bStarsign(false)
 //TB Combat Mods End
 {
 	CvInfoUtil(this).initDataMembers();
@@ -4984,6 +4985,7 @@ bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bPlotPrereqsKeepAfter, L"bPlotPrereqsKeepAfter");
 	pXML->GetOptionalChildXmlValByName(&m_bRemoveAfterSet, L"bRemoveAfterSet");
 	pXML->GetOptionalChildXmlValByName(&m_bQuick, L"bQuick");
+	pXML->GetOptionalChildXmlValByName(&m_bStarsign, L"bStarsign");
 	//pXML->SetVariableListTagPair(&m_piAIWeightbyUnitCombatTypes, L"AIWeightbyUnitCombatTypes", GC.getNumUnitCombatInfos());
 	pXML->SetOptionalVector(&m_aiSubCombatChangeTypes, L"SubCombatChangeTypes");
 	pXML->SetOptionalVector(&m_aiRemovesUnitCombatTypes, L"RemovesUnitCombatTypes");
@@ -5762,6 +5764,7 @@ void CvPromotionInfo::copyNonDefaults(const CvPromotionInfo* pClassInfo)
 	if (isPlotPrereqsKeepAfter() == bDefault) m_bPlotPrereqsKeepAfter = pClassInfo->isPlotPrereqsKeepAfter();
 	if (isRemoveAfterSet() == bDefault) m_bRemoveAfterSet = pClassInfo->isRemoveAfterSet();
 	if (isQuick() == bDefault) m_bQuick = pClassInfo->isQuick();
+	if (m_bStarsign == false) m_bStarsign = pClassInfo->isStarsign();
 	// bool vectors without delayed resolution
 	if (getNumSubCombatChangeTypes() == 0)
 	{
@@ -6442,6 +6445,7 @@ void CvPromotionInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_bPlotPrereqsKeepAfter);
 	CheckSum(iSum, m_bRemoveAfterSet);
 	CheckSum(iSum, m_bQuick);
+	CheckSum(iSum, m_bStarsign);
 	CheckSum(iSum, m_bZeroesXP);
 	CheckSum(iSum, m_bForOffset);
 	CheckSum(iSum, m_bCargoPrereq);
@@ -26450,7 +26454,6 @@ void CvPromotionLineInfo::doPostLoadCaching(uint32_t iThis)
 			m_aiBuildings.push_back(i);
 		}
 	}
-
 }
 
 TechTypes CvPromotionLineInfo::getObsoleteTech() const

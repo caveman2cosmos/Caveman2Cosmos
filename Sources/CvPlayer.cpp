@@ -6511,6 +6511,23 @@ bool CvPlayer::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool
 				return false;
 			}
 		}
+		{
+			bool bValid = true;
+			foreach_(const HeritageTypes eTypeX, kUnit.getPrereqOrHeritage())
+			{
+				bValid = false;
+
+				if (hasHeritage(eTypeX))
+				{
+					bValid = true;
+					break;
+				}
+			}
+			if (!bValid)
+			{
+				return false;
+			}
+		}
 
 		if (!bPropertySpawn)
 		{
