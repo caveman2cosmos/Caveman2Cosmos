@@ -13,6 +13,7 @@
 #include "CvUnitList.h"
 #include "CityOutputHistory.h"
 #include "CvGameObject.h"
+#include "CvCityDefenseHandler.hpp"
 
 class CvArea;
 class CvArtInfoBuilding;
@@ -1843,6 +1844,8 @@ protected:
 
 	int	m_deferringBonusProcessingCount;
 	int* m_paiStartDeferredSectionNumBonuses;
+
+	CvCityDefenseHandler* m_pCityDefenseHandler;
 
 	CvProperties m_Properties;
 	CvBuildingList m_BuildingList;

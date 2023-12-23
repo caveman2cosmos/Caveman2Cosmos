@@ -154,6 +154,7 @@ CvCity::CvCity()
 	m_deferringBonusProcessingCount = 0;
 	m_paiStartDeferredSectionNumBonuses = NULL;
 	m_bMarkedForDestruction = false;
+	m_pCityDefenseHandler = new CvCityDefenseHandler(this);
 
 	reset(0, NO_PLAYER, 0, 0, true);
 }
@@ -214,6 +215,8 @@ CvCity::~CvCity()
 
 	SAFE_DELETE_ARRAY(m_bHasBuildings);
 	SAFE_DELETE_ARRAY(m_pabReligiouslyDisabledBuilding);
+	
+	SAFE_DELETE(m_pCityDefenseHandler);
 }
 
 
