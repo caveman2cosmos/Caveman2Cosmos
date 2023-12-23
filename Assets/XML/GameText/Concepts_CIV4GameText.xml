@@ -1183,7 +1183,7 @@
 		<German>Produktionsbeschleunigung</German>
 		<Italian>Produzione accelerata</Italian>
 		<Spanish>Acelerar la producción</Spanish>
-		<Russian>Óñêîðåíèå ïðîèçâîäñòâà</Russian>
+		<Russian>Ускорение производства</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_HURRY_PRODUCTION_PEDIA</Tag>
@@ -3128,7 +3128,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 		<German>Sieg</German>
 		<Italian>Vittoria</Italian>
 		<Spanish>Victoria</Spanish>
-		<Russian>Ïîáåäà</Russian>
+		<Russian>Победа</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_VICTORY_PEDIA</Tag>
@@ -3189,7 +3189,7 @@ Remember: If you're having trouble with which civic to choose, just think of his
 		<German>Kriegsmüdigkeit</German>
 		<Italian>Stanchezza della guerra</Italian>
 		<Spanish>Hastío bélico</Spanish>
-		<Russian>Óñòàëîñòü îò âîéíû</Russian>
+		<Russian>Усталость от войны</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_WAR_WEARINESS_PEDIA</Tag>

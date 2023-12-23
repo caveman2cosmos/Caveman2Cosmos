@@ -127,7 +127,7 @@
 		<French>Augmente de 1 la population. L'unité est détruite.</French>
 		<Italian>[NEWLINE]Incrementa la popolazione cittadina di uno. L'unità viene consumata.</Italian>
 		<Polish>Zwiększa populację miasta o 1. Jednostka zostaje usunięta z gry.</Polish>
-		<Russian>Население города увеличивается на одного жителя. Подразделение исчезнет.</Russian>
+		<Russian>Население города увеличится на одного жителя. Подразделение исчезнет.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_CITY_HAD_ARTISTS</Tag>
@@ -181,7 +181,7 @@
 		<French>La Ville a %d1 Scientifiques. Vous en tuez %d1 et %d1 sont faits prisonniers. (Prisonnier - Scientifique)</French>
 		<Italian>La città aveva %d1 scienziati: ne hai uccisi %d1 e catturati %d1.</Italian>
 		<Polish>Miasto miało %d1 Naukowców. Zabiłeś %d1 a %d1 zostało pojmanych. (Jeniec - Naukowiec)</Polish>
-		<Russian>В городе было %d1 учёных. Вы убили %d1, а захватили %d1. (Пленник - учёный)</Russian>
+		<Russian>В городе было %d1 ученых. Вы убили %d1, а захватили %d1. (Пленник - ученый)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_CITY_HAD_SPIES</Tag>
@@ -485,7 +485,7 @@
 		<English>Military units captured in battle.</English>
 		<French>Unités Militaires capturées au combat.</French>
 		<Italian>Unità militari catturate in battaglia.</Italian>
-		<Russian>Военные единицы, пленённые в бою.</Russian>
+		<Russian>Военные единицы, плененные в бою.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAPTIVE_NEANDERTHAL</Tag>
@@ -506,7 +506,7 @@
 		<English>[ICON_BULLET]May be set free (join your city population as food) or upgraded to workers.</English>
 		<French>[ICON_BULLET]Peut être libéré (rejoint votre ville sous forme de réserve de nourriture) ou amélioré en ouvriers.</French>
 		<Italian>Può essere liberato (che equivale ad aggiungere cibo alla città) o essere convertito in lavoratore.</Italian>
-		<Russian>[ICON_BULLET]Может быть освобождён (увеличит количество еды в городе) или улучшен до рабочего.</Russian>
+		<Russian>[ICON_BULLET]Может быть освобожден (увеличит количество еды в городе) или улучшен до рабочего.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FREED_SLAVE_PEDIA</Tag>

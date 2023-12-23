@@ -39,7 +39,7 @@
 		<Tag>TXT_KEY_BUILDING_POWER_NUCLEAR_PEDIA</Tag>
 		<English>With the discovery of clean and safe nuclear power and the development of large reactor complexes, energy becomes available in such a big amount, that energy-intensive facilities are no longer an issue.</English>
 		<Polish>Energetyka jądrowa - zespół zagadnień związanych z uzyskiwaniem na skalę przemysłową energii z rozszczepienia ciężkich jąder pierwiastków (głównie uranu 235).</Polish>
-		<Russian>С открытием чистой и безопасной ядерной энергии и созданием крупных реакторных комплексов, энергия становится доступной в таких больших количествах, что энергоёмкие объекты перестают быть проблемой.</Russian>
+		<Russian>С открытием чистой и безопасной ядерной энергии и созданием крупных реакторных комплексов, энергия становится доступной в таких больших количествах, что энергоемкие объекты перестают быть проблемой.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HIGH_ENERGY_LAB</Tag>
@@ -74,7 +74,7 @@
 		<English>Housing (Mid Class Skypad Apartments)</English>
 		<French>Habitations (Appartements à ciel ouvert)</French>
 		<Polish>Domostwa (Sredniej Klasy Apartamenty Podniebne)</Polish>
-		<Russian>Жильё (небесные квартиры для среднего класса)</Russian>
+		<Russian>Жилье (небесные квартиры для среднего класса)</Russian>
 		<Italian>Appartamenti Skypad (abitazioni)</Italian>
 	</TEXT>
 	<TEXT>
@@ -109,7 +109,7 @@
 		<Tag>TXT_KEY_BUILDING_PUSHBUTTON_AUTOMAT_PEDIA</Tag>
 		<English>Insert money, push a button and out pops a meal. Where does it come from? Nobody knows! Aren't modern conveniences grand! Most people wouldn't even consider moving into a house if it didn't have it's very own Pushbutton Automat nearby.</English>
 		<Polish>Automat sprzedający (automat vendingowy, ang. vending machine) - urządzenie służące do sprzedaży samoobsługowej. Można wyróżnić automaty sprzedające towary i usługi. Do pierwszych należą różnego rodzaju maszyny do sprzedaży batonów, kanapek, zabawek, napojów, prezerwatyw, papierosów itp. Natomiast w drugiej grupie znajdują się np. parkometry, automaty piorące, automaty biletowe, automaty telefoniczne czy fotograficzne.</Polish>
-		<Russian>Вставьте деньги, нажмите кнопку и выскочит еда. Откуда она взялась? Никто не знает! Разве современные удобства не восхитительны?! Большинство людей и не подумали бы о переезде в дом, если бы в нём не было торгового автомата.</Russian>
+		<Russian>Вставьте деньги, нажмите кнопку и выскочит еда. Откуда она взялась? Никто не знает! Разве современные удобства не восхитительны?! Большинство людей и не подумали бы о переезде в дом, если бы в нем не было торгового автомата.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SMALL_REACTOR_FACTORY</Tag>
@@ -123,7 +123,7 @@
 		<Tag>TXT_KEY_BUILDING_SMALL_REACTOR_FACTORY_PEDIA</Tag>
 		<English>Nuclear Reactors were only used in buildings to produce enough energy for a whole city for a long time. Now it is possible to make them small enough to be installed in Aircrafts, Cars and Tanks.</English>
 		<Polish>Fabryka przydomowych elektrowni atomowych.</Polish>
-		<Russian>В течении долгого времени ядерные реакторы занимали большие помещения для того, чтобы производить достаточно энергии для целого города. Теперь их можно сделать достаточно миниатюрными для установки в самолёты, автомобили и танки.</Russian>
+		<Russian>В течении долгого времени ядерные реакторы занимали большие помещения для того, чтобы производить достаточно энергии для целого города. Теперь их можно сделать достаточно миниатюрными для установки в самолеты, автомобили и танки.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VENTURE_INDUSTRIES</Tag>
@@ -135,7 +135,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VENTURE_INDUSTRIES_PEDIA</Tag>
 		<English>Venture Industries is the privately owned company of the Venture family. Once world renowned for its innovations in technology and science, it has fallen from grace since Jonas' passing. The Venture Compound is home base and headquarters of the team. It was seemingly built as a large research and manufacturing campus by Jonas himself with his many scientific inventions' profits, large government contracts and business acumen. It evolved to become an enormous set of buildings, with a large fountain and a giant stone statue of Jonas holding a young Rusty on his shoulder up front, the two shadowing a beautifully-designed white compound. The compound would seem at one time to have had a large workforce, but is now practically empty. It is large enough that Dr. Orpheus and his daughter Triana can actually rent out a portion as their own home. Currently, it is being run rather into the ground by Thaddeus Venture, who fulfills mainly government contracts rather than make any major new discoveries. Venture Industries at one point had its corporate business headquarters in New York City. At some point, the building was sold and became '1 Impossible Plaza', headquarters of Impossible Industries. A private compound belonging to Venture Industries, which was gained after the original Team Venture foiled a scheme by Scaramantula's Fraternity of Torment, also exists on Spider Skull Island, and is being run (rather successfully) by Jonas Venture, Jr.</English>
-		<Russian>Частная компания семьи Вентура, всемирно известная своими инновациями в области технологий и науки, основанная Джонасом Вентура. В комплексе находится семейная резиденция и штаб-квартира компании. Был построен Джонасом как крупный научно-производственный институт при помощи доходов от множества его научных изобретений, крупных государственных контрактов и благодаря его деловой хватке. В своё время в комплексе были значительные производственные мощности, но сейчас он практически пустует. Он настолько огромен, что доктор Орфеус и его дочь Триана фактически могут сдавать в аренду часть собственного дома. В настоящее время, используется Тадеусом Вентура, скорее как предприятие, которое выполняет государственные контракты, а не занимается серьёзными изобретениями. Сын известного учёного мечтает о том, чтобы разбогатеть на изобретениях своего отца, хотя и сам является талантливым и достаточно богатым изобретателем.</Russian>
+		<Russian>Частная компания семьи Вентура, всемирно известная своими инновациями в области технологий и науки, основанная Джонасом Вентура. В комплексе находится семейная резиденция и штаб-квартира компании. Был построен Джонасом как крупный научно-производственный институт при помощи доходов от множества его научных изобретений, крупных государственных контрактов и благодаря его деловой хватке. В свое время в комплексе были значительные производственные мощности, но сейчас он практически пустует. Он настолько огромен, что доктор Орфеус и его дочь Триана фактически могут сдавать в аренду часть собственного дома. В настоящее время, используется Тадеусом Вентура, скорее как предприятие, которое выполняет государственные контракты, а не занимается серьезными изобретениями. Сын известного ученого мечтает о том, чтобы разбогатеть на изобретениях своего отца, хотя и сам является талантливым и достаточно богатым изобретателем.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VIDEOPHONE_NETWORK</Tag>
@@ -149,6 +149,6 @@
 		<Tag>TXT_KEY_BUILDING_VIDEOPHONE_NETWORK_PEDIA</Tag>
 		<English>A videophone is a telephone with a video display, capable of simultaneous video and audio for communication between people in real-time. Videophone service provided the first form of videotelephony, later to be followed by videoconferencing, webcams, and finally high-definition telepresence. At the dawn of its commercial deployment from the 1950s through the 1990s, videotelephony also included 'image phones' which would exchange still images between units every few seconds over conventional POTS-type telephone lines, essentially the same as slow scan TV systems. The development of advanced technology video codecs and high bandwidth Internet telecommunication services allowed videophones to provide high quality colour service between users almost anyplace in the world that the Internet is available, often at low or nominal costs.</English>
 		<Polish>Wideofon (nazwa pełna: wideotelefon) - aparat telefoniczny wyposażony w mały monitor ekranowy. W czasie prowadzenia rozmowy, rozmówcy widzą się nawzajem na monitorach znajdujących się przy aparatach telefonicznych. Urządzenie pozwala na wymianę informacji audio-wizualnych.</Polish>
-		<Russian>Видеофон - телефонный аппарат с экраном, способный одновременно передавать видео и звук для общения между людьми в режиме реального времени. Видеофонная связь стала первой формой видеотелефонии, за которой последовали видеоконференции, веб-камеры и, наконец, телеприсутствие высокой четкости. На заре своего коммерческого внедрения с 1950 по 1990-е года видеотелефония также включала в себя  "картинофоны", передававшие неподвижные изображения каждые несколько секунд по обычным телефонным линиям типа POTS - по сути - аналогично системам телевидения с замедленной развёрткой. Развитие продвинутых технологий видеокодеков и телекоммуникационных услуг высокоскоростного Интернета позволило видеофонам предоставлять высококачественные услуги цветной связи между пользователями практически в любой точке мира, где есть Интернет, часто по низким или номинальным ценам.</Russian>
+		<Russian>Видеофон - телефонный аппарат с экраном, способный одновременно передавать видео и звук для общения между людьми в режиме реального времени. Видеофонная связь стала первой формой видеотелефонии, за которой последовали видеоконференции, веб-камеры и, наконец, телеприсутствие высокой четкости. На заре своего коммерческого внедрения с 1950 по 1990-е года видеотелефония также включала в себя  "картинофоны", передававшие неподвижные изображения каждые несколько секунд по обычным телефонным линиям типа POTS - по сути - аналогично системам телевидения с замедленной разверткой. Развитие продвинутых технологий видеокодеков и телекоммуникационных услуг высокоскоростного Интернета позволило видеофонам предоставлять высококачественные услуги цветной связи между пользователями практически в любой точке мира, где есть Интернет, часто по низким или номинальным ценам.</Russian>
 	</TEXT>
 </Civ4GameText>

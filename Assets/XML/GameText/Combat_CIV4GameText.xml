@@ -731,6 +731,7 @@
 		<French>Tolérance:</French>
 		<Italian>Tolleranza:</Italian>
 		<Polish>Tolerancja:</Polish>
+		<Russian>Терпимость:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_TOTAL_ATTACKER_SUPPORT</Tag>
@@ -738,6 +739,7 @@
 		<French>Total Force de Soutien de l'Attaquant:</French>
 		<Italian>Forza di supporto totale degli attaccanti:</Italian>
 		<Polish>Cała Siła Wsparcia Atakującego:</Polish>
+		<Russian>Суммарное увеличение силы атакующего от поддержки:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_TOTAL_DEFENDER_SUPPORT</Tag>
@@ -745,6 +747,7 @@
 		<French>Total Force de Soutien du Défenseur:</French>
 		<Italian>Forza di supporto totale dei difensori:</Italian>
 		<Polish>Cała Siła Wsparcia Obrońcy:</Polish>
+		<Russian>Суммарное увеличение силы защищающегося от поддержки:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_VSBARBS</Tag>
