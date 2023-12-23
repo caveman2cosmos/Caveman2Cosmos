@@ -756,6 +756,9 @@
     <ClCompile Include="CvHallOfFameInfo.cpp">
       <Filter>Source\Base\Infos</Filter>
     </ClCompile>
+    <ClCompile Include="CvCityDefenseHandler.cpp">
+      <Filter>Source\Base\City\Components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CvDLLButtonPopup.h">
@@ -1306,6 +1309,9 @@
     </ClInclude>
     <ClInclude Include="CvTraitInfo.h">
       <Filter>Source\DataDefinitions</Filter>
+    </ClInclude>
+    <ClInclude Include="CvCityDefenseHandler.hpp">
+      <Filter>Source\Base\City\Components</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

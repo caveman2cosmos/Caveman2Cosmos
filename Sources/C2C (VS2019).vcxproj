@@ -223,6 +223,7 @@
     <ClCompile Include="CvAllocator.cpp" />
     <ClCompile Include="CvAllocator.h" />
     <ClCompile Include="CvBonusInfo.cpp" />
+    <ClCompile Include="CvCityDefenseHandler.cpp" />
     <ClCompile Include="CvDiplomacyClasses.cpp" />
     <ClCompile Include="CvHallOfFameInfo.cpp" />
     <ClCompile Include="CvPlayerOptionInfo.cpp" />
@@ -376,6 +377,7 @@
     <ClCompile Include="SCvDebug.cpp" />
     <ClCompile Include="SCvInternalGlobals.cpp" />
     <ClCompile Include="SCyDebug.cpp" />
+    <ClInclude Include="CvCityDefenseHandler.hpp" />
     <ClInclude Include="CvDiplomacyClasses.h" />
     <ClInclude Include="CvPlayerOptionInfo.h" />
     <ClInclude Include="CvPythonCityLoader.h" />
