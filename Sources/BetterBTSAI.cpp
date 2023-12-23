@@ -12,16 +12,34 @@ int gCityLogLevel = 0;
 int gUnitLogLevel = 0;
 
 // AI decision making logging
-void logBBAI(char* format, ... )
+void logBBAI(char* format, ...)
 {
 	static char buf[2048];
-	_vsnprintf( buf, 2048-4, format, (char*)(&format+1) );
+	_vsnprintf(buf, 2048 - 4, format, (char*)(&format + 1));
 	gDLL->logMsg("BBAI.log", buf);
 
 	// Echo to debugger
 	strcat(buf, "\n");
 	OutputDebugString(buf);
 }
+
+void logAIJson(CvWString type, CvWString identifier, CvWString squirrel, CvWString message)
+{
+	const std::wstring data = "{ type: \"" + type + "\" name: \"" + identifier + "\" function: \" " + squirrel + "\" message: \"" + message + "\" }";
+	logging::logMsgW("FLB.log", data.c_str());
+}
+
+void logCB(CvString message) {
+
+	const std::string data = message;
+	logging::logMsg("CB.log", data.c_str());
+}
+
+void logToFile(CvString message, char* filename) {
+	const std::string data = message;
+	logging::logMsg(filename, data.c_str());
+}
+
 void logContractBroker(int level, char* format, ...)
 {
 	if (level <= gPlayerLogLevel)
@@ -37,19 +55,16 @@ void logContractBroker(int level, char* format, ...)
 
 }
 
-void logAIJson(CvWString type,CvWString identifier, CvWString squirrel, CvWString message)
+void logCityDefense(int level, char* format, ...)
 {
-	const std::wstring data = "{ type: \"" + type + "\" name: \""+identifier+ "\" function: \" " + squirrel + "\" message: \"" + message + "\" }";
-	logging::logMsgW("FLB.log", data.c_str());
-}
+	if (level <= gPlayerLogLevel)
+	{
+		static char buf[2048];
+		_vsnprintf(buf, 2048 - 4, format, (char*)(&format + 1));
+		gDLL->logMsg("CityDefense.log", buf);
 
-void logCB(CvString message) {
-
-	const std::string data = message;
-	logging::logMsg("CB.log", data.c_str());
-}
-
-void logToFile(CvString message, char* filename) {
-	const std::string data = message;
-	logging::logMsg(filename, data.c_str());
+		// Echo to debugger
+		strcat(buf, "\n");
+		OutputDebugString(buf);
+	}
 }
