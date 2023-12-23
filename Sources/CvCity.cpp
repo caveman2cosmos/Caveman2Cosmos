@@ -1311,6 +1311,8 @@ void CvCity::doTurn()
 
 	AI_doTurn();
 
+	m_pCityDefenseHandler->evaluateDefences();
+
 	bool bAllowNoProduction = !doCheckProduction();
 
 	changeFood(foodDifference(), true);
