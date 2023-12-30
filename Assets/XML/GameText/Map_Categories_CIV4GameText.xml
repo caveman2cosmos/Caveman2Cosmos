@@ -6,7 +6,7 @@
 		<German>Wasserfeld</German>
 		<French>Case aquatique</French>
 		<Italian>Casella acquatica</Italian>
-		<Russian>Морской участок</Russian>
+		<Russian>Море</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAPCATEGORY_CISLUNAR</Tag>
@@ -14,7 +14,7 @@
 		<French>Case Cislunaire</French>
 		<Italian>Casella cislunare</Italian>
 		<German>Weltraumfeld</German>
-		<Russian>Лунная орбита</Russian>
+		<Russian>Орбита Луны</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAPCATEGORY_DISTANT</Tag>
@@ -29,7 +29,7 @@
 		<German>Erdfeld</German>
 		<French>Case terrienne</French>
 		<Italian>Casella terrestre</Italian>
-		<Russian>Земля</Russian>
+		<Russian>Планета Земля</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAPCATEGORY_GALACTIC</Tag>
@@ -44,14 +44,14 @@
 		<English>Hyperspace Plot</English>
 		<French>Case d'Hyperspace</French>
 		<Italian>Casella d'iperspazio</Italian>
-		<Russian>Гиперкосмос</Russian>
+		<Russian>Гиперпространство</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAPCATEGORY_INTERSTELLAR</Tag>
 		<English>Interstellar Plot</English>
 		<French>Case Interstellaire</French>
 		<Italian>Casella interstellare</Italian>
-		<Russian>Межзвездное простр-во</Russian>
+		<Russian>Межзвездное пространство</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAPCATEGORY_JOVIAN</Tag>
@@ -67,7 +67,7 @@
 		<German>Mondfeld</German>
 		<Italian>Casella lunare</Italian>
 		<French>Case lunaire</French>
-		<Russian>Луна</Russian>
+		<Russian>Поверхность Луны</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAPCATEGORY_MARTIAN</Tag>
@@ -75,7 +75,7 @@
 		<German>Marsfeld</German>
 		<Italian>Casella marziana</Italian>
 		<French>Case martienne</French>
-		<Russian>Марс</Russian>
+		<Russian>Поверхность Марса</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAPCATEGORY_MILKY_WAY</Tag>
@@ -106,14 +106,14 @@
 		<German>unterirdisches Feld</German>
 		<French>Case souterraine</French>
 		<Italian>Casella sotterranea</Italian>
-		<Russian>Земные недра</Russian>
+		<Russian>Недра Земли</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAPCATEGORY_TITANIC</Tag>
 		<English>Titanic Plot</English>
 		<French>Case de Titan</French>
 		<Italian>Casella di Titano</Italian>
-		<Russian>Титан</Russian>
+		<Russian>Поверхность Титана</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAPCATEGORY_UNIVERSAL</Tag>
@@ -128,6 +128,6 @@
 		<German>Venusfeld</German>
 		<Italian>Casella venusiana</Italian>
 		<French>Case vénusienne</French>
-		<Russian>Венера</Russian>
+		<Russian>Поверхность Венеры</Russian>
 	</TEXT>
 </Civ4GameText>

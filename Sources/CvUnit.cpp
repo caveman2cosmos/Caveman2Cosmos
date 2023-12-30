@@ -12,6 +12,9 @@
 #include "CvGlobals.h"
 #include "CvImprovementInfo.h"
 #include "CvInfos.h"
+#include "CvUnitCombatInfo.h"
+#include "CvTraitInfo.h"
+#include "CvOutcomeList.h"
 #include "CvMap.h"
 #include "CvPlayerAI.h"
 #include "CvPlot.h"
@@ -331,10 +334,6 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 	// Init saved data
 	reset(iID, eUnit, eOwner);
 
-	if (eOwner != NO_PLAYER && eUnitAI == UNITAI_SUBDUED_ANIMAL)
-	{
-		GET_PLAYER(eOwner).NoteAnimalSubdued();
-	}
 	// Koshling -  moved this earlier to get unitAI set up so that
 	// constraint checking on the unitAI can work more uniformly
 	AI_init(eUnitAI, iBirthmark);
@@ -351,13 +350,8 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 	//GC.getGame().logOOSSpecial(13, getID(), iX, iY);
 	setXY(iX, iY, false, true, false, false, true);
 
-	if (plot()->getPlotCity() != NULL)
-	{
-		setCityOfOrigin(plot()->getPlotCity());
-	}
-
 	//TB OOS fix - POSSIBLE that this represents a fix but I consider it a longshot since they should really mean the same thing (-1)
-	if (getGroup() == NULL)
+	if (!getGroup())
 	{
 		::MessageBox(
 			NULL, getGroupID() == FFreeList::INVALID_INDEX ?
@@ -369,8 +363,13 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 	}
 	// ! TB
 
-	if (!isTempUnit())
+	if (iBirthmark != UNIT_BIRTHMARK_TEMP_UNIT)
 	{
+		if (plot()->getPlotCity())
+		{
+			setCityOfOrigin(plot()->getPlotCity());
+		}
+
 		if (m_pUnitInfo->getNumBuilds() > 0)
 		{
 			m_worker = new UnitCompWorker();
@@ -397,16 +396,21 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 		calcUpkeep100(); // This updates total upkeep on the player level too
 
 		GC.getGame().incrementUnitCreatedCount(eUnit);
-		GET_PLAYER(getOwner()).changeUnitCount(eUnit, 1);
+		GET_PLAYER(eOwner).changeUnitCount(eUnit, 1);
+
+		if (eUnitAI == UNITAI_SUBDUED_ANIMAL)
+		{
+			GET_PLAYER(eOwner).NoteAnimalSubdued();
+		}
 
 		if (m_pUnitInfo->getNukeRange() != -1)
 		{
-			GET_PLAYER(getOwner()).changeNumNukeUnits(1);
+			GET_PLAYER(eOwner).changeNumNukeUnits(1);
 		}
 
 		if (isMilitaryBranch())
 		{
-			GET_PLAYER(getOwner()).changeNumMilitaryUnits(1);
+			GET_PLAYER(eOwner).changeNumMilitaryUnits(1);
 		}
 
 		doSetUnitCombats();
@@ -429,13 +433,13 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 			// if unit doesn't have a group rank, it doesn't count as a SM unit at all
 			if (groupRank() > 0)
 			{
-				GET_PLAYER(getOwner()).changeUnitCountSM(eUnit, intPow(3, groupRank()-1));
+				GET_PLAYER(eOwner).changeUnitCountSM(eUnit, intPow(3, groupRank()-1));
 			}
 		}
 		else
 		{
-			GET_PLAYER(getOwner()).changeAssets(m_pUnitInfo->getAssetValue());
-			GET_PLAYER(getOwner()).changeUnitPower(m_pUnitInfo->getPowerValue());
+			GET_PLAYER(eOwner).changeAssets(m_pUnitInfo->getAssetValue());
+			GET_PLAYER(eOwner).changeUnitPower(m_pUnitInfo->getPowerValue());
 		}
 		//--------------------------------
 		// Init non-saved data
@@ -453,7 +457,7 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 			GC.getGame().setBestLandUnit(getUnitType());
 		}
 
-		if (getOwner() == GC.getGame().getActivePlayer())
+		if (eOwner == GC.getGame().getActivePlayer())
 		{
 			gDLL->getInterfaceIFace()->setDirty(GameData_DIRTY_BIT, true);
 		}
@@ -469,7 +473,7 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 					{
 						AddDLLMessage(
 							(PlayerTypes) iI, false, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_MISC_SOMEONE_CREATED_UNIT", GET_PLAYER(getOwner()).getNameKey(), getNameKey()),
+							gDLL->getText("TXT_KEY_MISC_SOMEONE_CREATED_UNIT", GET_PLAYER(eOwner).getNameKey(), getNameKey()),
 							"AS2D_WONDER_UNIT_BUILD", MESSAGE_TYPE_MAJOR_EVENT, getButton(),
 							GC.getCOLOR_UNIT_TEXT(), getX(), getY(), true, true
 						);
@@ -486,8 +490,8 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 				}
 			}
 			GC.getGame().addReplayMessage(
-				REPLAY_MESSAGE_MAJOR_EVENT, getOwner(),
-				gDLL->getText("TXT_KEY_MISC_SOMEONE_CREATED_UNIT", GET_PLAYER(getOwner()).getNameKey(), getNameKey()),
+				REPLAY_MESSAGE_MAJOR_EVENT, eOwner,
+				gDLL->getText("TXT_KEY_MISC_SOMEONE_CREATED_UNIT", GET_PLAYER(eOwner).getNameKey(), getNameKey()),
 				getX(), getY(), GC.getCOLOR_UNIT_TEXT()
 			);
 		}
@@ -1641,7 +1645,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 
 		FAssertMsg(!isCombat(), "isCombat did not return false as expected");
 
-		if (getTransportUnit() != NULL)
+		if (getTransportUnit())
 		{
 			setTransportUnit(NULL);
 		}
@@ -1701,11 +1705,11 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 		{
 			CvUnit* pkCapturedUnit = GET_PLAYER(eCapturingPlayer).initUnit(eCaptureUnitType, pPlot->getX(), pPlot->getY(), NO_UNITAI, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
 
-			if (pkCapturedUnit != NULL)
+			if (pkCapturedUnit)
 			{
 				CvEventReporter::getInstance().unitCaptured(eOwner, getUnitType(), pkCapturedUnit);
 
-				if (getCapturingUnit() != NULL && getCapturingUnit()->isHiddenNationality())
+				if (getCapturingUnit() && getCapturingUnit()->isHiddenNationality())
 				{
 					pkCapturedUnit->doHNCapture();
 				}
@@ -10300,7 +10304,7 @@ bool CvUnit::canConstruct(const CvPlot* pPlot, BuildingTypes eBuilding, bool bTe
 
 	CvCity* pCity = pPlot->getPlotCity();
 
-	if (pCity == NULL || getTeam() != pCity->getTeam())
+	if (!pCity || getTeam() != pCity->getTeam())
 	{
 		return false;
 	}
@@ -10338,8 +10342,47 @@ bool CvUnit::construct(BuildingTypes eBuilding)
 	{
 		NotifyEntity(MISSION_CONSTRUCT);
 	}
-	GET_PLAYER(getOwner()).NoteUnitConstructed(eBuilding);
 
+	getGroup()->AI_setMissionAI(MISSIONAI_DELIBERATE_KILL, NULL, NULL);
+	kill(true, NO_PLAYER, true);
+	return true;
+}
+
+bool CvUnit::canAddHeritage(const CvPlot* pPlot, const HeritageTypes eType, const bool bTestVisible) const
+{
+	if (eType == NO_HERITAGE || !m_pUnitInfo->getHasHeritage(eType))
+	{
+		return false;
+	}
+
+	if (isDelayedDeath() || isCommander() || !canPerformActionSM())
+	{
+		return false;
+	}
+
+	if (!GET_PLAYER(getOwner()).canAddHeritage(eType, bTestVisible))
+	{
+		return false;
+	}
+
+	CvCity* pCity = pPlot->getPlotCity();
+
+	if (!pCity || getTeam() != pCity->getTeam())
+	{
+		return false;
+	}
+
+	return true;
+}
+
+bool CvUnit::addHeritage(const HeritageTypes eType)
+{
+	GET_PLAYER(getOwner()).setHeritage(eType, true);
+
+	if (plot()->isActiveVisible(false))
+	{
+		NotifyEntity(MISSION_HERITAGE);
+	}
 	getGroup()->AI_setMissionAI(MISSIONAI_DELIBERATE_KILL, NULL, NULL);
 	kill(true, NO_PLAYER, true);
 	return true;
@@ -12391,6 +12434,7 @@ BuildTypes CvUnit::getBuildType() const
 		case MISSION_SPREAD_CORPORATION:
 		case MISSION_JOIN:
 		case MISSION_CONSTRUCT:
+		case MISSION_HERITAGE:
 		case MISSION_DISCOVER:
 		case MISSION_HURRY:
 		case MISSION_TRADE:
@@ -19989,35 +20033,35 @@ bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bFree, bool bKeepC
 			return false;
 		}
 	}
+
+	// Toffer - Promotionline is factored in for the (dis)qualified caches.
+	for (int iI = 0; iI < promo.getNumDisqualifiedUnitCombatTypes(); iI++)
 	{
-		// Toffer - Promotionline is factored in for the (dis)qualified caches.
-		for (int iI = 0; iI < promo.getNumDisqualifiedUnitCombatTypes(); iI++)
+		if (isHasUnitCombat((UnitCombatTypes)promo.getDisqualifiedUnitCombatType(iI)))
 		{
-			if (isHasUnitCombat((UnitCombatTypes)promo.getDisqualifiedUnitCombatType(iI)))
+			return false;
+		}
+	}
+	// TB SubCombat Mod Begin
+	// The two solid ways to identify a Size Matters promotion that would not normally have a CC prereq.
+	// Note: Apparently having no CC prereq is a clear way to isolate promotions to only being assigned directly by event or other special injection.
+	// Thus it was necessary to pass the Size Matters promos despite having no particular CC prereq.
+	if (!promo.isForOffset() && !promo.isZeroesXP())
+	{
+		bool bValid = bFree;
+
+		for (int iI = promo.getNumQualifiedUnitCombatTypes() - 1; iI > -1; iI--)
+		{
+			bValid = false;
+			if (isHasUnitCombat((UnitCombatTypes)promo.getQualifiedUnitCombatType(iI)))
 			{
-				return false;
+				bValid = true;
+				break;
 			}
 		}
-		// TB SubCombat Mod Begin
-		// The two solid ways to identify a Size Matters promotion that would not normally have a CC prereq.
-		// Note: Apparently having no CC prereq is a clear way to isolate promotions to only being assigned directly by event or other special injection.
-		// Thus it was necessary to pass the Size Matters promos despite having no particular CC prereq.
-		if (!promo.isForOffset() && !promo.isZeroesXP())
+		if (!bValid)
 		{
-			bool bValid = false;
-
-			for (int iI = promo.getNumQualifiedUnitCombatTypes() - 1; iI > -1; iI--)
-			{
-				if (isHasUnitCombat((UnitCombatTypes)promo.getQualifiedUnitCombatType(iI)))
-				{
-					bValid = true;
-					break;
-				}
-			}
-			if (!bValid)
-			{
-				return false;
-			}
+			return false;
 		}
 	}
 
@@ -33892,6 +33936,7 @@ void CvUnit::doSetFreePromotions(bool bAdding, TraitTypes eTrait)
 	{
 		checkFreetoCombatClass();
 	}
+	doStarsign();
 }
 
 int CvUnit::getRetrainsAvailable() const
@@ -34460,20 +34505,9 @@ bool CvUnit::canMerge(bool bAutocheck) const
 			{
 				iValidUnitCount++;
 			}
-			if (bAutocheck)
+			if (bAutocheck && iValidUnitCount == 3)
 			{
-				if (iValidUnitCount == 3)
-				{
-					//if (pLoopUnit->canSplit())
-					//{
-					//	GET_PLAYER(getOwner()).setSplittingUnit(pLoopUnit->getID());
-					//}
-					//else
-					//{
-					//	GET_PLAYER(getOwner()).setSplittingUnit(NO_UNIT);
-					//}
-					return true;
-				}
+				return true;
 			}
 		}
 	}
@@ -38427,4 +38461,69 @@ void CvUnit::forceInvalidCoordinates()
 {
 	m_iX = INVALID_PLOT_COORD;
 	m_iY = INVALID_PLOT_COORD;
+}
+
+void CvUnit::doStarsign()
+{
+	// Do not give starsigns to units created from a unit split/merge action.
+	if (GET_PLAYER(getOwner()).getSplittingUnit() != FFreeList::INVALID_INDEX
+	|| GET_PLAYER(getOwner()).getBaseMergeSelectionUnit() != FFreeList::INVALID_INDEX
+	|| GC.getGame().getSorenRandNum(49, "Seventh son of seventh son") > 0)
+	{
+		return;
+	}
+	const CvTeam& team = GET_TEAM(getTeam());
+	if (team.isHasTech((TechTypes)GC.getDefineINT("STARSIGN_TECH_END"))
+	|| !team.isHasTech((TechTypes)GC.getDefineINT("STARSIGN_TECH_START")))
+	{
+		return;
+	}
+	if (team.isHasTech((TechTypes)GC.getDefineINT("STARSIGN_TECH_NERF")))
+	{
+		if (GC.getGame().getSorenRandNum(4, "3/4 probability after Astronomy") == 0)
+		{
+			return;
+		}
+	}
+	else if (!team.isHasTech((TechTypes)GC.getDefineINT("STARSIGN_TECH_BOOST")))
+	{
+		if (GC.getGame().getSorenRandNum(2, "1/2 probability before Astrology") > 0)
+		{
+			return;
+		}
+	}
+	std::vector<PromotionTypes> starsigns;
+	int iCount = 0;
+	for (int iI = GC.getNumStarsigns() - 1; iI > -1; iI--)
+	{
+		const PromotionTypes ePromo = GC.getStarsign(iI);
+		if (canKeepPromotion(ePromo, true))
+		{
+			starsigns.push_back(ePromo);
+			iCount++;
+		}
+	}
+	if (iCount == 0)
+	{
+		return;
+	}
+	const PromotionTypes ePromo = starsigns[GC.getGame().getSorenRandNum(iCount, "random pick")];
+
+	setHasPromotion(ePromo, true, true);
+
+	if (isHuman())
+	{
+		CvWString szBuffer;
+
+		if (plot()->getPlotCity())
+			szBuffer = gDLL->getText("TXT_KEY_MSG_STARSIGN_BUILD", plot()->getPlotCity()->getNameKey());
+		else
+			szBuffer = gDLL->getText("TXT_KEY_MSG_STARSIGN_CREATE");
+
+		AddDLLMessage(
+			getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK",
+			MESSAGE_TYPE_INFO, GC.getPromotionInfo(ePromo).getButton(),
+			GC.getCOLOR_WHITE(), getX(), getY(), true, true
+		);
+	}
 }

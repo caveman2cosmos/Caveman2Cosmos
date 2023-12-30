@@ -22,7 +22,7 @@
 		<Tag>TXT_KEY_IMPROVEMENTHELP_CHANGE_REMOVE</Tag>
 		<English>[ICON_BULLET]When added to a plot, this improvement immediately removes itself from the plot. (Useful for placing features and bonuses with upgrades, builds and razing.)</English>
 		<French>[ICON_BULLET]Lorsque construit sur une case, cet aménagement est enlevé (utile pour placer des fonctionnalités avec améliorations, constructions et destructions.)</French>
-		<Italian>[ICON_BULLET]Quando viene aggiunto a una casella, questo miglioramento rimuove immediatamente la risorsa dalla casella. (Utile per posizionare caratteristiche e bonus migiorati dopo aver distrutto i precedenti).</Italian>
+		<Italian>[ICON_BULLET]Quando viene aggiunto a una casella, questo miglioramento rimuove immediatamente la risorsa dalla casella. (Utile per posizionare caratteristiche e bonus migliorati dopo aver distrutto i precedenti).</Italian>
 		<Polish>[ICON_BULLET]Kiedy zostanie dodane do pola, to ulepszenie automatycznie usunie się z pola (użyteczne to umieszczania surowców i cech terenu z ulepszeniami).</Polish>
 		<Russian>[ICON_BULLET]После окончания строительства это улучшение немедленно удаляется с участка. (Полезно для размещения улучшений и построек, а также при их сносе.)</Russian>
 	</TEXT>
@@ -136,7 +136,7 @@
 		<Tag>TXT_KEY_IMPROVEMENTHELP_UNIQUE_RANGE</Tag>
 		<English>[ICON_BULLET]Cannot build another within a distance of %d1_Num</English>
 		<French>[ICON_BULLET]Impossible de construire un autre aménagement à une distance de moins de %d1_Num</French>
-		<German>[ICON_BULLET]Kann nicht bauen ein anderer in einem Abstand von %d1_Num</German>
+		<German>[ICON_BULLET]kann nicht bauen ein anderer in einem Abstand von %d1_Num</German>
 		<Italian>[ICON_BULLET]Non è possibile costruirne un altro entro una distanza di %d1_Num</Italian>
 		<Spanish>[ICON_BULLET]No se puede construir otro en un radio de %d1_Num casillas</Spanish>
 		<Polish>[ICON_BULLET]Nie można postawić następnego ulepszenia terenu w zasięgu %d1_Num pól</Polish>
@@ -172,7 +172,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENTHELP_UPGRADE_NEED_WORK</Tag>
 		<English>[SPACE]([COLOR_WARNING_TEXT]Need Work[COLOR_REVERT])</English>
-		<Italian>[SPACE]([COLOR_WARNING_TEXT]Necessita di lavoro per il milgioramento[COLOR_REVERT])</Italian>
+		<Italian>[SPACE]([COLOR_WARNING_TEXT]Necessita di lavoro per il miglioramento[COLOR_REVERT])</Italian>
 		<Russian>[SPACE]([COLOR_WARNING_TEXT]Клетка должна обрабатываться[COLOR_REVERT])</Russian>
 	</TEXT>
 	<TEXT>
@@ -248,7 +248,7 @@
 		<Tag>TXT_KEY_IMPROVEMENT_ABATIS_THORN_HEDGE</Tag>
 		<English>Abatis (Thorn Hedge)</English>
 		<French>Abattis (Haies épineuses)</French>
-		<Italian>Abbattuta di spine</Italian>
+		<Italian>Abbattuta</Italian>
 		<Spanish>Abatis con cerco espinoso</Spanish>
 		<Polish>Zasieki (Kolczasty żywopłot)</Polish>
 		<Russian>Êîëþ÷àÿ èçãîðîäü</Russian>
@@ -258,7 +258,7 @@
 		<English>Aquatic Anti-Air Defense</English>
 		<French>Poste aquatique de Défense Anti-Aérienne</French>
 		<German>Wasser-Luftschutz</German>
-		<Italian>Stazione marina di difesa anti-aerea</Italian>
+		<Italian>Stazione marina di difesa antiaerea</Italian>
 		<Spanish>
 			<Text>Estación acuática de defensa antiaérea</Text>
 			<Gender>Female</Gender>
@@ -272,7 +272,7 @@
 		<English>[ICON_BULLET]+50%% Air Defense</English>
 		<French>[ICON_BULLET]+50%% Défense Aérienne</French>
 		<German>[ICON_BULLET]+50%% Luftverteidigung</German>
-		<Italian>[ICON_BULLET]+50%% di difesa anti-aerea</Italian>
+		<Italian>[ICON_BULLET]+50%% di difesa antiaerea</Italian>
 		<Spanish>[ICON_BULLET]+50%% a la defensa aérea</Spanish>
 		<Polish>[ICON_BULLET]+50%% obrony przeciw powietrznej</Polish>
 		<Russian>[ICON_BULLET]+50%% Çàùèòû îò àâèàöèè</Russian>
@@ -518,7 +518,7 @@
 		<English>Colony Manufactory</English>
 		<French>Colonie Manufacture</French>
 		<German>Kolonie Manufaktur</German>
-		<Italian>Colonia manufatturiera</Italian>
+		<Italian>Colonia manifatturiera</Italian>
 		<Spanish>
 			<Text>Fábrica colonial</Text>
 			<Gender>Female</Gender>
@@ -858,7 +858,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>Campo di raccolta frutti</Italian>
+		<Italian>Campo di raccolta di frutti</Italian>
 		<Spanish>
 			<Text>Campo de cultivo de frutas</Text>
 			<Gender>Male</Gender>
@@ -1288,7 +1288,7 @@
 		<English>Lighthouse (Coral)</English>
 		<French>Phare (Corail)</French>
 		<German>Ein Leuchtturm</German>
-		<Italian>Faro sui coralli</Italian>
+		<Italian>Faro sulla barriera corallina</Italian>
 		<Spanish>
 			<Text>Un Faro</Text>
 			<Gender>Male</Gender>
@@ -1372,7 +1372,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Italian>Riserva naturale marina</Italian>
+		<Italian>Riserva marina</Italian>
 		<Polish>Rezerwat Morski</Polish>
 		<Russian>Ìîðñêîé çàïîâåäíèê</Russian>
 	</TEXT>
@@ -1507,7 +1507,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>Raccoglitore di funghi</Italian>
+		<Italian>Campo di raccolta di funghi</Italian>
 		<Spanish>
 			<Text>Recolector de setas</Text>
 			<Gender>Male</Gender>
@@ -1659,7 +1659,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Italian>Raccogliotre di torba</Italian>
+		<Italian>Campo di raccolta di torba</Italian>
 		<Polish>Chata Zbieracza Torfu</Polish>
 		<Russian>Ñáîð òîðôà</Russian>
 	</TEXT>
@@ -1817,7 +1817,7 @@
 		<Tag>TXT_KEY_IMPROVEMENT_SALT_GATHERER</Tag>
 		<English>Salt Gatherer</English>
 		<French>Récolteur de Sel</French>
-		<Italian>Raccoglitore di sale</Italian>
+		<Italian>Campo di raccolta di sale</Italian>
 		<Polish>Zbieracz Soli</Polish>
 		<Russian>Ñîëÿíîé êàðüåð</Russian>
 	</TEXT>
@@ -1856,7 +1856,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>Cercatore di carcasse</Italian>
+		<Italian>Campo dei cercatori di carcasse</Italian>
 		<Spanish>
 			<Text>Campamento de recolección</Text>
 			<Gender>Male</Gender>
@@ -1896,7 +1896,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>Campo seminato</Italian>
+		<Italian>Campo di raccolta semi</Italian>
 		<Spanish>
 			<Text>Campo sembrado</Text>
 			<Gender>Male</Gender>
@@ -1983,7 +1983,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>Torre di osservazione in acciaio</Italian>
+		<Italian>Torre d'osservazione in acciaio</Italian>
 		<Spanish>
 			<Text>Torre de vigilancia de acero</Text>
 			<Gender>Female</Gender>
@@ -2041,7 +2041,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>Torre di osservazione in pietra</Italian>
+		<Italian>Torre d'osservazione in pietra</Italian>
 		<Spanish>
 			<Text>Puesto de avanzada de piedra</Text>
 			<Gender>Female</Gender>
@@ -2429,7 +2429,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>Torre di osservazione in legno</Italian>
+		<Italian>Torre d'osservazione in legno</Italian>
 		<Spanish>
 			<Text>Puesto de avanzada de madera</Text>
 			<Gender>Female</Gender>

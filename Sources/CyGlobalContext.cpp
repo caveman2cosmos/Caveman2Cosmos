@@ -12,6 +12,9 @@
 #include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvInfos.h"
+#include "CvDiplomacyClasses.h"
+#include "CvUnitCombatInfo.h"
+#include "CvPlayerOptionInfo.h"
 #include "CvMap.h"
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
@@ -291,6 +294,12 @@ const CvSpecialBuildingInfo* CyGlobalContext::getSpecialBuildingInfo(int i) cons
 const CvReligionInfo* CyGlobalContext::getReligionInfo(int i) const
 {
 	return (i>=0 && i<GC.getNumReligionInfos()) ? &GC.getReligionInfo((ReligionTypes) i) : NULL;
+}
+
+
+const CvHeritageInfo* CyGlobalContext::getHeritageInfo(int i) const
+{
+	return (i >= 0 && i < GC.getNumHeritageInfos()) ? &GC.getHeritageInfo((HeritageTypes)i) : NULL;
 }
 
 

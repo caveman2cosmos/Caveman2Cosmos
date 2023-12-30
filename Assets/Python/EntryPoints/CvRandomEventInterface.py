@@ -245,9 +245,8 @@ def canTriggerMarathon(argsList):
 	if GC.getTeam(player.getTeam()).AI_getAtWarCounter(otherPlayer.getTeam()) == 1:
 		for loopUnit in otherPlayer.units():
 			plot = loopUnit.plot()
-			if not plot.isNone():
-				if plot.getOwner() == data.ePlayer:
-					return True
+			if plot and plot.getOwner() == data.ePlayer:
+				return True
 
 	return False
 
@@ -359,7 +358,7 @@ def doSpicy2(argsList):
 	# need this because plantations are notmally not allowed unless there are already spices
 	data = argsList[1]
 	plot = GC.getMap().plot(data.iPlotX, data.iPlotY)
-	if not plot.isNone():
+	if plot:
 		plot.setImprovementType(GC.getInfoTypeForString("IMPROVEMENT_PLANTATION"))
 	return 1
 
@@ -656,7 +655,7 @@ def canTriggerMonsoonCity(argsList):
   for iDX in xrange(-3, 4):
     for iDY in xrange(-3, 4):
       pLoopPlot = plotXY(city.getX(), city.getY(), iDX, iDY)
-      if not pLoopPlot.isNone() and pLoopPlot.getFeatureType() == iJungleType:
+      if pLoopPlot and pLoopPlot.getFeatureType() == iJungleType:
         return True
 
   return False
@@ -941,15 +940,14 @@ def canTriggerAntelope(argsList):
   return True
 
 def doAntelope2(argsList):
-# Need this because camps are not normally allowed unless there is already deer.
-  data = argsList[1]
+	# Need this because camps are not normally allowed unless there is already deer.
+	data = argsList[1]
 
-  plot = GC.getMap().plot(data.iPlotX, data.iPlotY)
+	plot = GC.getMap().plot(data.iPlotX, data.iPlotY)
 
-  if not plot.isNone():
-    plot.setImprovementType(GC.getInfoTypeForString("IMPROVEMENT_HUNTING_CAMP"))
+	if plot: plot.setImprovementType(GC.getInfoTypeForString("IMPROVEMENT_HUNTING_CAMP"))
 
-  return 1
+	return 1
 
 def getHelpAntelope2(argsList):
 	iCamp = GC.getInfoTypeForString("IMPROVEMENT_HUNTING_CAMP")
@@ -1013,19 +1011,17 @@ def canTriggerWiningMonks(argsList):
 
 
 def doWiningMonks2(argsList):
-# Need this because wineries are not normally allowed unless there is already wine.
-  data = argsList[1]
+	# Need this because wineries are not normally allowed unless there is already wine.
+	data = argsList[1]
 
-  plot = GC.getMap().plot(data.iPlotX, data.iPlotY)
+	plot = GC.getMap().plot(data.iPlotX, data.iPlotY)
 
-  if not plot.isNone():
-    plot.setImprovementType(GC.getInfoTypeForString("IMPROVEMENT_WINERY"))
+	if plot: plot.setImprovementType(GC.getInfoTypeForString("IMPROVEMENT_WINERY"))
 
-  return 1
+	return 1
 
 def getHelpWiningMonks2(argsList):
-	iImp = GC.getInfoTypeForString("IMPROVEMENT_WINERY")
-	return TRNSLTR.getText("TXT_KEY_EVENT_IMPROVEMENT_GROWTH", (GC.getImprovementInfo(iImp).getTextKey(), ))
+	return TRNSLTR.getText("TXT_KEY_EVENT_IMPROVEMENT_GROWTH", (GC.getImprovementInfo(GC.getInfoTypeForString("IMPROVEMENT_WINERY")).getTextKey(), ))
 
 
 ######## INDEPENDENTFILMS ###########
@@ -1411,13 +1407,13 @@ def getHelpAncientTexts2(argsList):
 def doImpactCrater2(argsList):
 	data = argsList[1]
 	plot = GC.getMap().plot(data.iPlotX, data.iPlotY)
-	if not plot.isNone():
-		plot.setImprovementType(GC.getInfoTypeForString("IMPROVEMENT_SHAFT_MINE"))
+
+	if plot: plot.setImprovementType(GC.getInfoTypeForString("IMPROVEMENT_SHAFT_MINE"))
+
 	return 1
 
 def getHelpImpactCrater2(argsList):
-	iMine = GC.getInfoTypeForString("IMPROVEMENT_SHAFT_MINE")
-	return TRNSLTR.getText("TXT_KEY_EVENT_IMPROVEMENT_GROWTH", (GC.getImprovementInfo(iMine).getTextKey(), ))
+	return TRNSLTR.getText("TXT_KEY_EVENT_IMPROVEMENT_GROWTH", (GC.getImprovementInfo(GC.getInfoTypeForString("IMPROVEMENT_SHAFT_MINE")).getTextKey(), ))
 
 ######## THE_HUNS ###########
 
@@ -5051,7 +5047,7 @@ def canApplyEarthquake1(argsList):
 	for iDX in xrange(-1, 2):
 		for iDY in xrange(-1, 2):
 			plotX = plotXY(data.iPlotX, data.iPlotY, iDX, iDY)
-			if not plotX.isNone() and plotX.getImprovementType() != -1:
+			if plotX and plotX.getImprovementType() != -1:
 				return True
 	return False
 
@@ -5062,11 +5058,9 @@ def applyEarthquake1(argsList):
 	for iDX in xrange(-1, 2):
 		for iDY in xrange(-1, 2):
 			plotX = plotXY(data.iPlotX, data.iPlotY, iDX, iDY)
-			if not plotX.isNone():
-				iImprovement = plotX.getImprovementType()
-				if iImprovement > -1:
-					plots.append((plotX, iImprovement))
-					iPlots += 1
+			if plotX and plotX.getImprovementType() > 1:
+				plots.append((plotX, plotX.getImprovementType()))
+				iPlots += 1
 
 	if not plots: raise "Event - Error in canApplyVolcano1"
 
@@ -5688,7 +5682,7 @@ def TriggerSuperVirus1(argsList):
 def getHelpSuperVirus1(argsList):
 	data = argsList[1]
 
-	szCityName = TRNSLTR.getText(GC.getPlayer(data.ePlayer).getCity(data.iCityId).getNameKey(),())
+	szCityName = TRNSLTR.getText(str(GC.getPlayer(data.ePlayer).getCity(data.iCityId).getNameKey()), ())
 
 	return TRNSLTR.getText("TXT_KEY_EVENT_DOOMED_OPTION",()) + "\n" + TRNSLTR.getText("TXT_KEY_EVENT_CITY_UNREST", (3, szCityName))
 
@@ -5982,102 +5976,92 @@ def getHelpNewWorld(argsList):
 
 ##### VOLCANO C2C #####
 def canDoNewVolcano(argsList):
-  # Checks the plot to see if a new volcano can be formed
-  data = argsList[0]
-  pPlot = GC.getMap().plot(data.iPlotX, data.iPlotY)
-  if pPlot.isNone():
-    return False
+	# Checks the plot to see if a new volcano can be formed
+	data = argsList[0]
+	pPlot = GC.getMap().plot(data.iPlotX, data.iPlotY)
+	if not pPlot: return False
 
-  # List of features that block new volcanoes
-  listFeatures = [GC.getInfoTypeForString('FEATURE_PLATY_AUYANTEPUI'),
-                  GC.getInfoTypeForString('FEATURE_PLATY_GREAT_BARRIER'),
-                  GC.getInfoTypeForString('FEATURE_GREAT_BARRIER_REEF_BEACON'),
-                  GC.getInfoTypeForString('FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE'),
-                  GC.getInfoTypeForString('FEATURE_PLATY_EVEREST'),
-                  GC.getInfoTypeForString('FEATURE_PLATY_FUJI'),
-                  GC.getInfoTypeForString('FEATURE_PLATY_AURORA'),
-                  GC.getInfoTypeForString('FEATURE_PLATY_BAIKAL'),
-                  GC.getInfoTypeForString('FEATURE_PLATY_BARRINGER_CRATER'),
-                  GC.getInfoTypeForString('FEATURE_PLATY_BASALT_ORGAN'),
-                  GC.getInfoTypeForString('FEATURE_PLATY_DEVILS_TABLE'),
-                  GC.getInfoTypeForString('FEATURE_PLATY_SOPKA'),
-                  GC.getInfoTypeForString('FEATURE_PLATY_KRAKATOA'),
-                  GC.getInfoTypeForString('FEATURE_PLATY_NGORONGORO_CRATER'),
-                  GC.getInfoTypeForString('FEATURE_PLATY_NUKUORO'),
-                  GC.getInfoTypeForString('FEATURE_PLATY_PAMUKKALE'),
-                  GC.getInfoTypeForString('FEATURE_PLATY_PRAVCICKA_BRANA'),
-                  GC.getInfoTypeForString('FEATURE_PLATY_SHARK_BAY'),
-                  GC.getInfoTypeForString('FEATURE_PLATY_SINAI'),
-                  GC.getInfoTypeForString('FEATURE_PLATY_SUGARLOAF'),
-                  GC.getInfoTypeForString('FEATURE_PLATY_ULURU'),
-                  GC.getInfoTypeForString('FEATURE_PLATY_VICTORIA_FALLS'),
-                  GC.getInfoTypeForString('FEATURE_PLATY_KILIMANJARO'),
-                  GC.getInfoTypeForString('FEATURE_PLATY_DEAD_SEA'),
-                  GC.getInfoTypeForString('FEATURE_VOLCANO_ACTIVE'),
-                  GC.getInfoTypeForString('FEATURE_VOLCANO_DORMANT')]
+	# List of features that block new volcanoes
+	listFeatures = [
+		GC.getInfoTypeForString('FEATURE_PLATY_AUYANTEPUI'),
+		GC.getInfoTypeForString('FEATURE_PLATY_GREAT_BARRIER'),
+		GC.getInfoTypeForString('FEATURE_GREAT_BARRIER_REEF_BEACON'),
+		GC.getInfoTypeForString('FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE'),
+		GC.getInfoTypeForString('FEATURE_PLATY_EVEREST'),
+		GC.getInfoTypeForString('FEATURE_PLATY_FUJI'),
+		GC.getInfoTypeForString('FEATURE_PLATY_AURORA'),
+		GC.getInfoTypeForString('FEATURE_PLATY_BAIKAL'),
+		GC.getInfoTypeForString('FEATURE_PLATY_BARRINGER_CRATER'),
+		GC.getInfoTypeForString('FEATURE_PLATY_BASALT_ORGAN'),
+		GC.getInfoTypeForString('FEATURE_PLATY_DEVILS_TABLE'),
+		GC.getInfoTypeForString('FEATURE_PLATY_SOPKA'),
+		GC.getInfoTypeForString('FEATURE_PLATY_KRAKATOA'),
+		GC.getInfoTypeForString('FEATURE_PLATY_NGORONGORO_CRATER'),
+		GC.getInfoTypeForString('FEATURE_PLATY_NUKUORO'),
+		GC.getInfoTypeForString('FEATURE_PLATY_PAMUKKALE'),
+		GC.getInfoTypeForString('FEATURE_PLATY_PRAVCICKA_BRANA'),
+		GC.getInfoTypeForString('FEATURE_PLATY_SHARK_BAY'),
+		GC.getInfoTypeForString('FEATURE_PLATY_SINAI'),
+		GC.getInfoTypeForString('FEATURE_PLATY_SUGARLOAF'),
+		GC.getInfoTypeForString('FEATURE_PLATY_ULURU'),
+		GC.getInfoTypeForString('FEATURE_PLATY_VICTORIA_FALLS'),
+		GC.getInfoTypeForString('FEATURE_PLATY_KILIMANJARO'),
+		GC.getInfoTypeForString('FEATURE_PLATY_DEAD_SEA'),
+		GC.getInfoTypeForString('FEATURE_VOLCANO_ACTIVE'),
+		GC.getInfoTypeForString('FEATURE_VOLCANO_DORMANT')
+	]
 
-  # List of resources that count as volcanic, and thus do not block volcanoes.
-  listVolcanicResources = [GC.getInfoTypeForString('BONUS_OBSIDIAN'),
-                           GC.getInfoTypeForString('BONUS_SULPHUR')]
+	# List of resources that count as volcanic, and thus do not block volcanoes.
+	listVolcanicResources = [
+		-1,
+		GC.getInfoTypeForString('BONUS_OBSIDIAN'),
+		GC.getInfoTypeForString('BONUS_SULPHUR')
+	]
+	return not pPlot.isCity() and pPlot.getFeatureType() not in listFeatures and pPlot.getBonusType(-1) in listVolcanicResources
 
-  if pPlot.isCity():
-    return False
-  if pPlot.getFeatureType() in listFeatures:
-    return False
-  if pPlot.getBonusType(-1) == -1:
-    return True
-  if pPlot.getBonusType(-1) in listVolcanicResources:
-    return True
-
-  return False
 
 def canDoOldVolcano(argsList):
-  data = argsList[0]
-  pPlot = GC.getMap().plot(data.iPlotX, data.iPlotY)
+	data = argsList[0]
+	pPlot = GC.getMap().plot(data.iPlotX, data.iPlotY)
+	if not pPlot: return False
 
-  if pPlot.isNone():
-    return False
+	# List of features that are volcanoes
+	listVolcanoes = [
+		GC.getInfoTypeForString('FEATURE_PLATY_FUJI'),
+		GC.getInfoTypeForString('FEATURE_PLATY_SOPKA'),
+		GC.getInfoTypeForString('FEATURE_PLATY_KRAKATOA'),
+		GC.getInfoTypeForString('FEATURE_PLATY_KILIMANJARO'),
+		GC.getInfoTypeForString('FEATURE_VOLCANO_ACTIVE'),
+		GC.getInfoTypeForString('FEATURE_VOLCANO_DORMANT')
+	]
+	return not pPlot.isCity() and pPlot.getFeatureType() in listVolcanoes
 
-  # List of features that are volcanoes
-  listVolcanoes = [GC.getInfoTypeForString('FEATURE_PLATY_FUJI'),
-                  GC.getInfoTypeForString('FEATURE_PLATY_SOPKA'),
-                  GC.getInfoTypeForString('FEATURE_PLATY_KRAKATOA'),
-                  GC.getInfoTypeForString('FEATURE_PLATY_KILIMANJARO'),
-                  GC.getInfoTypeForString('FEATURE_VOLCANO_ACTIVE'),
-                  GC.getInfoTypeForString('FEATURE_VOLCANO_DORMANT')]
-
-  if pPlot.isCity():
-    return False
-  elif pPlot.getFeatureType() in listVolcanoes:
-    return True
-
-  return False
 
 def doVolcanoAdjustFertility(argsList):
-  pPlot = argsList[0]
-  extraFood = argsList[1]
-  team = argsList[2]
-  ## For each neighbouring plot
-  ##   If extraFood is -1, 0 or 1 this is the amount of food to add to the plot
+	pPlot = argsList[0]
+	extraFood = argsList[1]
+	team = argsList[2]
+	## For each neighbouring plot
+	##   If extraFood is -1, 0 or 1 this is the amount of food to add to the plot
 
-  if pPlot.isNone() or pPlot.isCity():
-    return
+	if not pPlot or pPlot.isCity():
+		return
 
-  if extraFood == 0:
-    return
-  elif extraFood < -1:
-    extraFood = -1
-  elif extraFood > 1:
-    extraFood = 1
+	if extraFood == 0:
+		return
+	elif extraFood < -1:
+		extraFood = -1
+	elif extraFood > 1:
+		extraFood = 1
 
-  iX = pPlot.getX()
-  iY = pPlot.getY()
+	iX = pPlot.getX()
+	iY = pPlot.getY()
 
-  for i in xrange(8):
-    tPlot = plotDirection(iX, iY, DirectionTypes(i))
-    if not tPlot.isNone():
-      if not tPlot.isCity():
-        GAME.setPlotExtraYield(tPlot.getX(), tPlot.getY(), YieldTypes.YIELD_FOOD, extraFood)
+	for i in xrange(8):
+		tPlot = plotDirection(iX, iY, DirectionTypes(i))
+		if tPlot and not tPlot.isCity():
+			GAME.setPlotExtraYield(tPlot.getX(), tPlot.getY(), YieldTypes.YIELD_FOOD, extraFood)
+
 
 def doVolcanoNeighbouringPlots(pPlot):
 	# Directional eruption that picks an adjacent valid plot to erupt towards.
@@ -6085,7 +6069,7 @@ def doVolcanoNeighbouringPlots(pPlot):
 	# Affected plots have units damaged, improvements destroyed, and oceans changed to coast.
 	# To do - start forest fire
 
-	if pPlot.isNone():
+	if not pPlot:
 		return
 
 	terrainCoast = GC.getInfoTypeForString("TERRAIN_COAST")
@@ -6135,11 +6119,11 @@ def doVolcanoNeighbouringPlots(pPlot):
 
 	# Sets up lists for plots that are adjacent to the volcano
 	for i in xrange(8):
-		plot = plotDirection(iX, iY, DirectionTypes(i))
-		if not plot.isNone():
-			listVolcanoPlots.append(plot)
-			listVolcanoPlotsX.append(plot.getX())
-			listVolcanoPlotsY.append(plot.getY())
+		plotX = plotDirection(iX, iY, DirectionTypes(i))
+		if plotX:
+			listVolcanoPlots.append(plotX)
+			listVolcanoPlotsX.append(plotX.getX())
+			listVolcanoPlotsY.append(plotX.getY())
 
 	# Select a target plot
 	targetplot = listVolcanoPlots[GAME.getSorenRandNum(len(listVolcanoPlots), "Volcano direction")]
@@ -6151,31 +6135,35 @@ def doVolcanoNeighbouringPlots(pPlot):
 	listAdjacentPlots.append(plotDirection(targetplot.getX(), targetplot.getY(), DirectionTypes.DIRECTION_WEST))
 
 	# If plot is in the ring around the volcano, add to the list of affected plots
-	for plot in listAdjacentPlots:
-		if not plot.isNone():
-			if plot.getX() in listVolcanoPlotsX and plot.getY() in listVolcanoPlotsY:
-				if plot.getX() != iX and plot.getY() != iY:
-					listAffectedPlots.append(plot)
+	for plotX in listAdjacentPlots:
+		if (
+			plotX
+			and plotX.getX() in listVolcanoPlotsX
+			and plotX.getY() in listVolcanoPlotsY
+			and plotX.getX() != iX
+			and plotX.getY() != iY
+		):
+			listAffectedPlots.append(plotX)
 
 	#Loops through the list of affected plots applying eruption effects
 	for i in xrange(len(listAffectedPlots)):
 		if len(listAffectedPlots) > 0:
-			plot = listAffectedPlots[GAME.getSorenRandNum(len(listAffectedPlots), "Volcano event improvement destroyed")]
-			iPlayer = plot.getOwner()
-			iImprovement = plot.getImprovementType()
+			plotX = listAffectedPlots[GAME.getSorenRandNum(len(listAffectedPlots), "Volcano event improvement destroyed")]
+			iPlayer = plotX.getOwner()
+			iImprovement = plotX.getImprovementType()
 
 			# Destroys improvements if the plot is not a city, and if the improvement is not immune
-			if iImprovement != -1 and not plot.isCity() and not iImprovement in immuneImprovements:
+			if iImprovement != -1 and not plotX.isCity() and not iImprovement in immuneImprovements:
 				if iPlayer > -1:
 					szBuffer = TRNSLTR.getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED_NOOWNER", (GC.getImprovementInfo(iImprovement).getTextKey(), ))
 					CyInterface().addMessage(iPlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, GC.getImprovementInfo(iImprovement).getButton(), GC.getCOLOR_RED(), plot.getX(), plot.getY(), True, True)
 				if iImprovement in listRuins:
-					plot.setImprovementType(iRuins)
+					plotX.setImprovementType(iRuins)
 				else:
-					plot.setImprovementType(-1)
+					plotX.setImprovementType(-1)
 
 			# Damages units
-			for pPlotUnit in plot.units():
+			for pPlotUnit in plotX.units():
 				if pPlotUnit.getDamage() < 50:
 					pPlotUnit.setDamage(50, False)
 				elif pPlotUnit.getDamage() < 75:
@@ -6186,20 +6174,20 @@ def doVolcanoNeighbouringPlots(pPlot):
 					pPlotUnit.setDamage(99, False)
 
 			# If affected plot is Ocean or Sea, change it to Coast
-			if plot.isWater():
-				if plot.getTerrainType() == terrainOcean or plot.getTerrainType() == terrainSea:
-					plot.setTerrainType(terrainCoast, True, True)
-				if plot.getTerrainType() == terrainPolarOcean or plot.getTerrainType() == terrainPolarSea:
-					plot.setTerrainType(terrainPolarCoast, True, True)
-				if plot.getTerrainType() == terrainTropicalOcean or plot.getTerrainType() == terrainTropicalSea:
-					plot.setTerrainType(terrainTropicalCoast, True, True)
+			if plotX.isWater():
+				if plotX.getTerrainType() == terrainOcean or plotX.getTerrainType() == terrainSea:
+					plotX.setTerrainType(terrainCoast, True, True)
+				if plotX.getTerrainType() == terrainPolarOcean or plotX.getTerrainType() == terrainPolarSea:
+					plotX.setTerrainType(terrainPolarCoast, True, True)
+				if plotX.getTerrainType() == terrainTropicalOcean or plotX.getTerrainType() == terrainTropicalSea:
+					plotX.setTerrainType(terrainTropicalCoast, True, True)
 
 			# Remove processed plots from list
-			listAffectedPlots.remove(plot)
+			listAffectedPlots.remove(plotX)
 
 
 def doVolcanoPlot(pPlot):
-	if pPlot.isNone():
+	if not pPlot:
 		return
 
 	# List of features that are volcanoes
@@ -6262,7 +6250,7 @@ def doVolcanoReport(argsList):
 def doVolcanoNewEruption(argsList):
 	data = argsList[0]
 	pPlot = GC.getMap().plot(data.iPlotX, data.iPlotY)
-	if pPlot.isNone():
+	if not pPlot:
 		return
 	player = GC.getPlayer(data.ePlayer)
 
@@ -6274,29 +6262,29 @@ def doVolcanoNewEruption(argsList):
 def doVolcanoExistingEruption(argsList):
 	data = argsList[0]
 	pPlot = GC.getMap().plot(data.iPlotX, data.iPlotY)
-	if pPlot.isNone():
+	if not pPlot:
 		return
 
 	doVolcanoNeighbouringPlots(pPlot)
 	doVolcanoReport((pPlot, BugUtil.getPlainText("TXT_KEY_EVENTTRIGGER_VOLCANO_ACTIVE")))
 
 def doVolcanoDormantEruption(argsList):
-  data = argsList[0]
-  pPlot = GC.getMap().plot(data.iPlotX, data.iPlotY)
-  if pPlot.isNone():
-    return
-  player = GC.getPlayer(data.ePlayer)
-  team = player.getTeam()
+	data = argsList[0]
+	pPlot = GC.getMap().plot(data.iPlotX, data.iPlotY)
+	if not pPlot:
+		return
+	player = GC.getPlayer(data.ePlayer)
+	team = player.getTeam()
 
-  doVolcanoPlot(pPlot)
-  doVolcanoNeighbouringPlots(pPlot)
-  doVolcanoAdjustFertility((pPlot, 1, team))
-  doVolcanoReport((pPlot, BugUtil.getPlainText("TXT_KEY_EVENT_TRIGGER_VOLCANO_DORMANT_ERUPTION")))
+	doVolcanoPlot(pPlot)
+	doVolcanoNeighbouringPlots(pPlot)
+	doVolcanoAdjustFertility((pPlot, 1, team))
+	doVolcanoReport((pPlot, BugUtil.getPlainText("TXT_KEY_EVENT_TRIGGER_VOLCANO_DORMANT_ERUPTION")))
 
 def doVolcanoExtinction(argsList):
   data = argsList[0]
   pPlot = GC.getMap().plot(data.iPlotX, data.iPlotY)
-  if pPlot.isNone():
+  if not pPlot:
     return
 
   pPlot.setPlotType(PlotTypes.PLOT_HILLS, True, True)
@@ -6482,10 +6470,11 @@ def doGlobalWarming(argsList):
 
 	PLOT_LAND = PlotTypes.PLOT_LAND
 
-	iNumPlots = GC.getMap().numPlots()
+	MAP = GC.getMap()
+	iNumPlots = MAP.numPlots()
 	countIce = 1
 	iGW = 0
-	for plot in GC.getMap().plots():
+	for plot in MAP.plots():
 		iFeature = plot.getFeatureType()
 		if iFeature == FEATURE_ICE:
 			iGW -= 5
@@ -6564,7 +6553,7 @@ def doGlobalWarming(argsList):
 	maxRand = GAME.getEstimateEndTurn() * iNumPlots
 	iIce = 2*iNumPlots / countIce
 
-	for plot in GC.getMap().plots():
+	for plot in MAP.plots():
 		randGW = GAME.getSorenRandNum(maxRand, "Global Warming index of plot affected")
 		if iGW <= randGW:
 			continue
@@ -6635,10 +6624,10 @@ def doGlobalWarming(argsList):
 				iDY = plot.getY()
 				for iDX in xrange(-1, 2):
 					for iDY in xrange(-1, 2):
-						if plot.isNone() or iDX == 0 and iDY == 0:
+						if iDX == 0 and iDY == 0:
 							continue
-						plotX = CyMap().plot(iDX, iDY)
-						if plotX.getPlotType() == PLOT_LAND:
+						plotX = MAP.plot(iDX, iDY)
+						if plotX and plotX.getPlotType() == PLOT_LAND:
 							if plotX.isCity():
 								bCoastShift = False
 								continue

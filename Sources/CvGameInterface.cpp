@@ -25,6 +25,7 @@
 #include "CvDLLFAStarIFaceBase.h"
 #include "CvDLLInterfaceIFaceBase.h"
 #include "CvDLLUtilityIFaceBase.h"
+#include "CvGameAI.h"
 
 void CvGame::updateColoredPlots()
 {
@@ -42,6 +43,7 @@ void CvGame::updateColoredPlots()
 	{
 		gDLL->getEngineIFace()->clearColoredPlots(PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS);
 	}
+	CvPlayerAI& player = GET_PLAYER(getActivePlayer());
 
 	if (isDebugMode())
 	{
@@ -91,7 +93,7 @@ void CvGame::updateColoredPlots()
 		{
 			const CvPlot* plotX = GC.getMap().plotByIndex(i);
 
-			if (plotX && GET_PLAYER(getActivePlayer()).getAdvancedStartCityCost(true, plotX) > 0)
+			if (plotX && player.getAdvancedStartCityCost(true, plotX) > 0)
 			{
 				bool bStartingPlot = false;
 				for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
@@ -111,7 +113,7 @@ void CvGame::updateColoredPlots()
 						PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS
 					);
 				}
-				else if (GET_PLAYER(getActivePlayer()).AI_isPlotCitySite(plotX))
+				else if (player.AI_isPlotCitySite(plotX))
 				{
 					gDLL->getEngineIFace()->addColoredPlot(
 						plotX->getViewportX(), plotX->getViewportY(), cHighlightText,
@@ -133,6 +135,7 @@ void CvGame::updateColoredPlots()
 
 	if (pHeadSelectedCity)
 	{
+		player.setTurnHadUIInteraction(true);
 		if (gDLL->getInterfaceIFace()->isCityScreenUp())
 		{
 			for (int i = 0; i < NUM_CITY_PLOTS; i++)
@@ -444,6 +447,7 @@ void CvGame::updateColoredPlots()
 	}
 	else if (pHeadSelectedUnit)
 	{
+		player.setTurnHadUIInteraction(true);
 		const PlayerTypes eOwner = pHeadSelectedUnit->getOwner();
 		const CvPlot* pPlot = pHeadSelectedUnit->plot();
 
@@ -464,7 +468,7 @@ void CvGame::updateColoredPlots()
 			NiColorA cField(GC.getColorInfo(GC.getCOLOR_RED()).getColor());
 			cField.a = 0.75f;
 
-			foreach_(const CvPlot* plotX, GET_PLAYER(eOwner).getCommandFieldPlots())
+			foreach_(const CvPlot* plotX, player.getCommandFieldPlots())
 			{
 				gDLL->getEngineIFace()->fillAreaBorderPlot(plotX->getX(), plotX->getY(), cField, AREA_BORDER_LAYER_COMMAND_FIELD);
 			}
@@ -550,7 +554,7 @@ void CvGame::updateColoredPlots()
 			}
 		}
 
-		if (!GET_PLAYER(getActivePlayer()).isOption(PLAYEROPTION_NO_UNIT_RECOMMENDATIONS))
+		if (!player.isOption(PLAYEROPTION_NO_UNIT_RECOMMENDATIONS))
 		{
 			if (pPlot->getOwner() == eOwner
 			&& (pHeadSelectedUnit->AI_getUnitAIType() == UNITAI_WORKER || pHeadSelectedUnit->AI_getUnitAIType() == UNITAI_WORKER_SEA))
@@ -586,7 +590,7 @@ void CvGame::updateColoredPlots()
 			{
 				if (plotX->area() == pHeadSelectedUnit->area() || plotX->isAdjacentToArea(pHeadSelectedUnit->area()))
 				{
-					if (pHeadSelectedUnit->canFound(plotX) && GET_PLAYER(eOwner).AI_isPlotCitySite(plotX))
+					if (pHeadSelectedUnit->canFound(plotX) && player.AI_isPlotCitySite(plotX))
 					{
 						gDLL->getEngineIFace()->addColoredPlot(
 							plotX->getX(), plotX->getY(), cHighlightText,
@@ -628,7 +632,7 @@ void CvGame::updateColoredPlots()
 
 							if (plotX->isWater() && plotX->area() == unitX->area())
 							{
-								NiColorA color(GC.getColorInfo((ColorTypes)GC.getPlayerColorInfo(GET_PLAYER(getActivePlayer()).getPlayerColor()).getColorTypePrimary()).getColor());
+								NiColorA color(GC.getColorInfo((ColorTypes)GC.getPlayerColorInfo(player.getPlayerColor()).getColorTypePrimary()).getColor());
 								color.a = 0.5f;
 								gDLL->getEngineIFace()->fillAreaBorderPlot(plotX->getX(), plotX->getY(), color, AREA_BORDER_LAYER_BLOCKADING);
 							}
@@ -744,11 +748,9 @@ void CvGame::updateTestEndTurn()
 		}
 		else if (!player.hasAutoUnit())
 		{
-			const bool bDecisionlessTurn = !player.getTurnHadUIInteraction();
-
 			if (isHotSeat() || isPbem()
-			|| bDecisionlessTurn && !getBugOptionBOOL("MainInterface__AutoEndDecisionlessTurns", false)
-			|| !bDecisionlessTurn && player.isOption(PLAYEROPTION_WAIT_END_TURN))
+			|| player.getTurnHadUIInteraction() && player.isOption(PLAYEROPTION_WAIT_END_TURN)
+			|| !player.getTurnHadUIInteraction() && !getBugOptionBOOL("MainInterface__AutoEndDecisionlessTurns", false))
 			{
 				gDLL->getInterfaceIFace()->setEndTurnMessage(true);
 				return;
@@ -892,7 +894,7 @@ void CvGame::cycleCities(bool bForward, bool bAdd) const
 
 void CvGame::cycleSelectionGroups(bool bClear, bool bForward, bool bWorkers, bool bSetCamera, bool bAllowViewportSwitch) const
 {
-	if (GET_PLAYER(getActivePlayer()).hasIdleCity())
+	if (GET_PLAYER(getActivePlayer()).hasIdleCity() && GET_PLAYER(getActivePlayer()).isForcedCityCycle())
 	{
 		return;
 	}
@@ -1513,10 +1515,10 @@ bool CvGame::canDoControl(ControlTypes eControl) const
 		}
 		case CONTROL_FORCEENDTURN:
 		{
-			if (!gDLL->getInterfaceIFace()->isFocused()
-			&&  !gDLL->getInterfaceIFace()->isInAdvancedStart()
-			&&  !gDLL->getInterfaceIFace()->isDiploOrPopupWaiting()
-			&& !GET_PLAYER(getActivePlayer()).hasIdleCity())
+			if (
+				!gDLL->getInterfaceIFace()->isFocused()
+			&&	!gDLL->getInterfaceIFace()->isInAdvancedStart()
+			&&	!gDLL->getInterfaceIFace()->isDiploOrPopupWaiting())
 			{
 				return true;
 			}
@@ -1612,7 +1614,31 @@ bool CvGame::canDoControl(ControlTypes eControl) const
 		case CONTROL_ENDTURN:
 		case CONTROL_ENDTURN_ALT:
 		{
-			if (gDLL->getInterfaceIFace()->isEndTurnMessage() && !gDLL->getInterfaceIFace()->isFocused() && !gDLL->getInterfaceIFace()->isInAdvancedStart())
+			CvPlayerAI& playerAct = GET_PLAYER(getActivePlayer());
+			if (playerAct.hasIdleCity())
+			{
+				CvCity* city = playerAct.getIdleCity();
+				if (city)
+				{
+					playerAct.setForcedCityCycle(true);
+
+					if (!getBugOptionBOOL("CityScreen__FullCityScreenOnEmptyBuildQueue", false))
+					{
+						gDLL->getInterfaceIFace()->addSelectedCity(city, false);
+						GC.getCurrentViewport()->bringIntoView(city->getX(), city->getY());
+					}
+					else gDLL->getInterfaceIFace()->selectCity(city, true);
+				}
+				else
+				{
+					FErrorMsg("idleCity == NULL; fixing");
+					playerAct.resetIdleCities();
+				}
+			}
+			else if (
+				gDLL->getInterfaceIFace()->isEndTurnMessage()
+			&& !gDLL->getInterfaceIFace()->isFocused()
+			&& !gDLL->getInterfaceIFace()->isInAdvancedStart())
 			{
 				return true;
 			}

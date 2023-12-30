@@ -4094,14 +4094,9 @@ class BonusPlacer:
 		bonusInfo = gc.getBonusInfo(eBonus)
 		if bonusInfo.getPlacementOrder() < 0:
 			return 0
-		rand1 = PRand.randint(0, bonusInfo.getRandAppearance1())
-		rand2 = PRand.randint(0, bonusInfo.getRandAppearance2())
-		rand3 = PRand.randint(0, bonusInfo.getRandAppearance3())
-		rand4 = PRand.randint(0, bonusInfo.getRandAppearance4())
-		baseCount = bonusInfo.getConstAppearance() + rand1 + rand2 + rand3 + rand4
 		bIgnoreLatitude = False
 		bIgnoreArea = True
-		landTiles		= 0
+		landTiles = 0
 		numPossible = 0
 		if bonusInfo.getTilesPer() > 0:
 			for i in range(mc.width*mc.height):
@@ -4110,7 +4105,7 @@ class BonusPlacer:
 					numPossible += 1
 			landTiles += numPossible/bonusInfo.getTilesPer()
 		players = game.countCivPlayersAlive() * bonusInfo.getPercentPerPlayer() / 100
-		bonusCount = baseCount * (landTiles + players) / 100
+		bonusCount = bonusInfo.getRandAppearance() * (landTiles + players) / 100
 		bonusCount = max(1, int(bonusCount * mc.BonusBonus))
 		return bonusCount
 
@@ -4386,7 +4381,7 @@ class StartingPlotFinder:
 		sPlot = StartPlot(x, y, 0)
 		for i in range(21): #gc.getNUM_CITY_PLOTS()
 			plot = plotCity(x, y, i)
-			if not plot.isWater() and plot.getArea() != start.getArea():
+			if not plot or not plot.isWater() and plot.getArea() != start.getArea():
 				food, value = 0, 0
 			else:
 				if cached:
@@ -4554,6 +4549,7 @@ class StartingPlotFinder:
 		plotList = ShuffleList(plotList)
 		for n in range(len(yields) * bonuses + 1):
 			for plot in plotList:
+				if not plot: continue
 				#NEW CODE - LM
 				if bonusCount >= bonuses:
 					return
@@ -4616,6 +4612,7 @@ class StartingPlotFinder:
 		plotList = []
 		for i in range(21): #gc.getNUM_CITY_PLOTS()
 			plot = plotCity(x, y, i)
+			if not plot: continue
 			featureInfo = gc.getFeatureInfo(plot.getFeatureType())
 			if plot.getX() == x and plot.getY() == y:
 				#remove bad feature on start but don't count it.
@@ -4928,7 +4925,6 @@ class StartingArea :
 								sPlot.setImprovementType(-1)
 								playerID = self.playerList[n]
 								player = gc.getPlayer(playerID)
-								sPlot.setStartingPlot(True)
 								player.setStartingPlot(sPlot,True)
 								n += 1
 

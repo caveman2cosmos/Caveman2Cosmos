@@ -27,6 +27,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Áðîíåíîñåö</Russian>
+		<Italian>Armadillo a nove fasce</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARMADILLO_PEDIA</Tag>
@@ -43,6 +44,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Áàáèðóñ</Russian>
+		<Italian>Babirussa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BABIRUSA_PEDIA</Tag>
@@ -81,11 +83,7 @@
 		<Tag>TXT_KEY_UNIT_BIG_GAME_HUNTER</Tag>
 		<English>Big Game Hunter</English>
 		<French>Grand Chasseur</French>
-		<Italian>
-			<Text>Esperto di caccia grossa</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Cacciatore di grossi animali</Italian>
 		<Polish>Myśliwy Grubej Zwierzyny</Polish>
 		<Russian>Åãåðü</Russian>
 	</TEXT>
@@ -127,6 +125,7 @@
 		</German>
 		<Polish>Nosorożec Czarny</Polish>
 		<Russian>×åðíûé íîñîðîã</Russian>
+		<Italian>Rinoceronte nero</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BLACK_RHINO_PEDIA</Tag>
@@ -178,6 +177,7 @@
 		</German>
 		<Polish>Tapir Brazylijski</Polish>
 		<Russian>Áðàçèëüñêèé òàïèð</Russian>
+		<Italian>Tapiro di pianura</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BROWN_BEAR</Tag>
@@ -192,11 +192,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Orso:Orsi</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Orso bruno</Italian>
 		<Spanish>
 			<Text>Oso:Osos</Text>
 			<Gender>Male</Gender>
@@ -239,7 +235,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Bufalo d'acqua</Italian>
+		<Italian>Bufalo africano</Italian>
 		<Spanish>
 			<Text>Búfalo de agua</Text>
 			<Gender>Male</Gender>
@@ -263,6 +259,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>×åðíûé êàéìàí</Russian>
+		<Italian>Caimano nero</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAIMAN_BLACK_PEDIA</Tag>
@@ -318,6 +315,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Êóñêóñ</Russian>
+		<Italian>Cusco maculato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CUSCUS_PEDIA</Tag>
@@ -338,7 +336,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Rana freccia</Italian>
+		<Italian>Rana velenosa</Italian>
 		<Spanish>
 			<Text>Rana punta de flecha</Text>
 			<Gender>Female</Gender>
@@ -360,6 +358,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Ïóñòûííûé òàðàíòóë</Russian>
+		<Italian>Tarantola del deserto</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DHOLE</Tag>
@@ -371,6 +370,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Êðàñíûé âîëê</Russian>
+		<Italian>Cuon rutilano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DHOLE_PEDIA</Tag>
@@ -412,7 +412,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Onagro</Italian>
+		<Italian>Asino</Italian>
 		<Spanish>
 			<Text>Onagro</Text>
 			<Gender>Male</Gender>
@@ -453,6 +453,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Áåëîãîëîâûé îðëàí</Russian>
+		<Italian>Aquila testabianca</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EAGLE_BALD_PEDIA</Tag>
@@ -476,6 +477,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Ýëàñìîòåðèé</Russian>
+		<Italian>Elasmotherium</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ELASMOTHERIUM_PEDIA</Tag>
@@ -498,6 +500,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Àôð. ñëîí</Russian>
+		<Italian>Elefante africano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ELEPHANT_ASIAN</Tag>
@@ -514,6 +517,7 @@
 		</German>
 		<Polish>Słoń</Polish>
 		<Russian>Ñëîí</Russian>
+		<Italian>Elefante asiatico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ELEPHANT_PEDIA</Tag>
@@ -539,6 +543,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Ýôèîïñêèé øàêàë</Russian>
+		<Italian>Lupo etiope</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EWOLF_PEDIA</Tag>
@@ -556,6 +561,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Ëèñè÷êà-ôåíåê</Russian>
+		<Italian>Volpe del deserto</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FENNECFOX_PEDIA</Tag>
@@ -567,11 +573,7 @@
 		<Tag>TXT_KEY_UNIT_GAME_HUNTER</Tag>
 		<English>Game Hunter</English>
 		<French>Maître chasseur</French>
-		<Italian>
-			<Text>Esperto cacciatore</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Cacciatore di selvaggina</Italian>
 		<Polish>Myśliwy</Polish>
 		<Russian>Îõîòíèê</Russian>
 	</TEXT>
@@ -590,6 +592,7 @@
 		</German>
 		<Polish>Aligator Amerykański</Polish>
 		<Russian>Àëëèãàòîð</Russian>
+		<Italian>Alligatore americano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GATOR_ASIAN</Tag>
@@ -606,6 +609,7 @@
 		</German>
 		<Polish>Aligator Chiński</Polish>
 		<Russian>Êèòàéñêèé àëëèãàòîð</Russian>
+		<Italian>Alligatore cinese</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GATOR_ASIAN_PEDIA</Tag>
@@ -632,7 +636,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Gazzella</Italian>
+		<Italian>Gazzella di Thomson</Italian>
 		<Spanish>
 			<Text>Gacela</Text>
 			<Gender>Female</Gender>
@@ -711,6 +715,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>Ãåðåíóê</Russian>
+		<Italian>Antilope giraffa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GERENUK_PEDIA</Tag>
@@ -793,7 +798,7 @@
 		<Tag>TXT_KEY_UNIT_GIRAFFE_PEDIA</Tag>
 		<English>The giraffe (Giraffa camelopardalis) is an African even-toed ungulate mammal, the tallest of all extant land-living animal species, and the largest ruminant. Its scientific name, which is similar to its archaic English name of camelopard, refers to its irregular patches of color on a light background, which bear a token resemblance to a leopard's spots, and its face, which is similar to that of a camel. The average mass for an adult male giraffe is 1,200 kilograms (2,600 lb) while the average mass for an adult female is 830 kilograms (1,800 lb). It is approximately 4.3 metres (14 ft) to 5.2 metres (17 ft) tall, although the tallest male recorded stood almost 6 metres (20 ft).[PARAGRAPH:2]The giraffe is related to other even-toed ungulates, such as deer and cattle, but is placed in a separate family, the Giraffidae, consisting of only the giraffe and its closest relative, the okapi, and their extinct relatives. Its range extends from Chad in Central Africa to South Africa. Giraffes usually inhabit savannas, grasslands, or open woodlands. However, when food is scarce they will venture into areas with denser vegetation. They prefer areas with plenty of acacia growth. They will drink large quantities of water when available, which enables them to live for extended periods in arid areas.</English>
 		<German>[COLOR_UNIT_TEXT]Giraffen[COLOR_REVERT] (Giraffa) sind Paarhufer und die höchsten Landlebewesen. Sie werden auch Steppengiraffen genannt, un sie von den Okapis (Waldgiraffen) zu unterscheiden. Bis 2016 wurde vermutet, dass es nur eine einzige Art (Giraffa camelopardalis) gäbe. Untersuchungen zufolge existieren jedoch mindestens vier Arten mit sieben eigenständigen Populationen. Ihr Lebensraum sind afrikanische Savannen.[NEWLINE]Obwohl der Hals der Giraffe sehr lang ist, besteht er wie bei allen Säugern nur aus sieben Halswirbeln, die jedoch stark verlängert sind. Giraffenbullen können 6 Meter groß werden, Kühe 4,5 Meter. Widerlegt wurde die Theorie, dass der lange Hals sich durch das Strecken nach hohen Bäumen gebildet hat. Viemehr scheint die Größe im Kampf mit Rivalen eine Rolle zu spielen. Das Fell der Giraffe ist hell mit dunkelbraunen Flecken, die der Tarnung und der Temperaturregulierung dienen. Aufgrund der stärkeren Durchblutung braucht sie auch bei großer Hitze keinen Schatten. Der für Menschen unangenehme Geruch des Fells resultiert aus einem Gemisch verschiedener Stoffe, die das Pilz- und Bakterienwachstum hemmen und Zecken fernhalten. Giraffen verzehren am liebsten Akazien, deren Zweige sie mit ihrer bis zu 50 cm langen Zunge greifen und ins Maul holen. Durch Zurückziehen des Kopfes streifen sie die Blätter ab. Da eine Giraffe täglich ca. 30 kg Nahrung braucht, ist sie bis zu 20 Stunden mit Fressen beschäftigt. Auch den Flüssigkeitsbedarf deckt sie weitgehend über die Nahrung. Trinken ist für die Giraffe sehr anstrengend, denn es erfordert viel Kraft, Kopf und Hals bis auf den Boden zu bewegen.[NEWLINE]Bereits zwischen 10000 und 6000 v.Chr. wurden Giraffen auf Felsbildern in der heutigen Sahara dargestellt. Im Alten Ägypten galten sie als Orakel, die vor Unwettern und Raubtieren warnten. In Europa waren sie bis in die Neuzeit relativ unbekannt. In Afrika jedoch wurden sie vermutlich häufig gejagt, vor allem wegen der langen Sehnen, die für Bögen oder Musikinstrumente verwendet wurden. Die Bestände sind deshalb zurückgegangen und die Giraffen gelten in der Roten Liste als "gefährdet" (Stand 2017).</German>
-		<Italian>La giraffa (Giraffa camelopardalis) è un mammifero africano ungulato a uno zoccolo, il più alto di tutti gli animali viventi sulla terra, e il ruminante più grande. Il suo nome scientifio, simile al suo nome inglese arcaico camelopard, si riferisce alle sue macchie irregolari di colore su un fondo chiaro, che hanno una somiglianza con i pallini del leopaardo, e la sua faccia, che è simile a quella del cammello. La massa media di una giraffa adulta maschio è 1,200 kg, mentre per una femmina è di 830 kg. È alta da 4,3 a 5,2 metri, anche se il maschio più alto registrato è stato di 6 metri.[PARAGRAPH:2]La giraffa è imparentata con altri ungulati, come il cervo, ma appartiene a una famiglia separata, le Giraffidae, comprendente solo le giraffe e l'okapi, il suo parente più vicino, oltre ai loro antenati estinti. La sua zona di vita va dal Ciad, in Africa centrale, al Sud Africa. Le giraffe abitano solitamente nella savana, nelle pianure o in piccoli boschi; in ogni caso, in scarsità di cibo esse si avventurano in aree con vegetazione più densa. Preferiscono le aree con molte acacie. Bevono grandi quantità d'acqua ogni volta che possono, il che permette loro di vivere a lungo in zone aride.</Italian>
+		<Italian>La giraffa (Giraffa camelopardalis) è un mammifero africano ungulato a uno zoccolo, il più alto di tutti gli animali viventi sulla terra, e il ruminante più grande. Il suo nome scientifico, simile al suo nome inglese arcaico camelopard, si riferisce alle sue macchie irregolari di colore su un fondo chiaro, che hanno una somiglianza con i pallini del leopardo, e la sua faccia, che è simile a quella del cammello. La massa media di una giraffa adulta maschio è 1,200 kg, mentre per una femmina è di 830 kg. È alta da 4,3 a 5,2 metri, anche se il maschio più alto registrato è stato di 6 metri.[PARAGRAPH:2]La giraffa è imparentata con altri ungulati, come il cervo, ma appartiene a una famiglia separata, le Giraffidae, comprendente solo le giraffe e l'okapi, il suo parente più vicino, oltre ai loro antenati estinti. La sua zona di vita va dal Ciad, in Africa centrale, al Sud Africa. Le giraffe abitano solitamente nella savana, nelle pianure o in piccoli boschi; in ogni caso, in scarsità di cibo esse si avventurano in aree con vegetazione più densa. Preferiscono le aree con molte acacie. Bevono grandi quantità d'acqua ogni volta che possono, il che permette loro di vivere a lungo in zone aride.</Italian>
 		<Polish>Żyrafa (Giraffa camelopardalis) - afrykański ssak parzystokopytny z rodziny żyrafowatych, najwyższe zwierzę lądowe i największy z przeżuwaczy żyjących w czasach nowożytnych. Jego epitet gatunkowy odnosi się do przypominającego wielbłąda wyglądu i łat na futrze, właściwych lampartowi (leopardowi, Panthera pardus). Gatunek ten wyróżnia się bardzo długą szyją, osiąga 5-6 m wysokości i masę (średnio) 1600 kg w przypadku samców i 830 kg w przypadku samic. Jego najbliższym żyjącym krewnym jest okapi (rodzina Giraffidae liczy na początku XXI w. tylko te dwa gatunki). Bazując na wzorze ubarwienia wyróżnia się 9 podgatunków.</Polish>
 	</TEXT>
 	<TEXT>
@@ -805,6 +810,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Ãëèïòîäîí</Russian>
+		<Italian>Gliptodonte</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GLYPTO_PEDIA</Tag>
@@ -827,6 +833,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Ãèãàíòñêèé ëåíèâåö</Russian>
+		<Italian>Bradipo gigante</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GROUNDSLOTH_PEDIA</Tag>
@@ -898,11 +905,7 @@
 		<English>Hunter</English>
 		<French>Chasseur</French>
 		<German>Jäger</German>
-		<Italian>
-			<Text>Cacciatore</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Cacciatore</Italian>
 		<Spanish>Cazador</Spanish>
 		<Polish>Łowca</Polish>
 		<Russian>Çâåðîáîé</Russian>
@@ -928,7 +931,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Iena</Italian>
+		<Italian>Iena striata</Italian>
 		<Spanish>
 			<Text>Hiena</Text>
 			<Gender>Female</Gender>
@@ -950,7 +953,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Stambecco</Italian>
+		<Italian>Stambecco del Semien</Italian>
 		<Spanish>
 			<Text>Íbice</Text>
 			<Gender>Male</Gender>
@@ -987,7 +990,7 @@
 		<English>The Indian rhinoceros (Rhinoceros unicornis) is also called greater one-horned rhinoceros and Asian one-horned rhinoceros and belongs to the Rhinocerotidae family. Listed as a vulnerable species, the large mammal is primarily found in parts of north-eastern India and in protected areas in the Terai of Nepal, where populations are confined to the riverine grasslands in the foothills of the Himalayas. Typically weighing between 1,600 to 3,500 kg (3,500 to 7,700 lb), it is the fourth or fifth largest land animal.[PARAGRAPH:2]The Indian rhinoceros once ranged throughout the entire stretch of the Indo-Gangetic Plain but excessive hunting reduced their natural habitat drastically. Today, about 3,000 rhinos live in the wild, 2,000 of which are found in India's Assam alone.</English>
 		<French>Le Rhinocéros indien (Rhinoceros unicornis) est un rhinocéros unicorne présent en Asie. Cest la plus grande et la moins rare des trois espèces que compte le continent. Ce mammifère vit plus particulièrement au nord de lInde et au Népal.</French>
 		<German>Das [COLOR_UNIT_TEXT]Panzernashorn[COLOR_REVERT] (Rhinoceros unicornis) ist ein einhörniges Nashorn, das auf dem indischen Subkontinent lebt, deshalb wird es auch Indisches (Panzer-)Nashorn genannt. Es handelt sich um die größte der drei in Asien beheimateten Arten.[NEWLINE]Das Panzernasorn ist von kräftiger Statur mit recht kurzen und breiten Gliedmaßen und einem durchschnittlich 66 cm langen Schwanz. Seine grau-braune Haut ist bis zu 4 cm dick. Mit seinen zahlreichen Hautfalten wirkt es schwer gepanzert, daher der deutsche Name. Wahrscheinlich dient die Faltenbildung der Wärmeregulierung. Auf der Nase sitzt ein einzelnes Horn. Der Sehsinn ist wie bei allen Nashörnern eher schlecht entwickelt, dafür sind Hör- und Geruchssinn hervorragend ausgebildet. Wie alle asiatischen Nashörner besitzt auch das Panzernashorn eine sehr bewegliche Oberlippe. Damit zupft es die Nahrung, die aus Gräsern, Blättern, Rinde und Früchten besteht, ab. Anders als die meisten anderen Nashörner ist es ein guter Schwimmer und vertilgt auch Wasserpflanzen. Besonders die Weibchen suhlen sich während der Tragzeit häufig in Schlammlöchern. In der Brunftzeit kommt es unter den Bullen oft zu Rivalitätskämpfen. Ansonsten sind die Tiere eher friedlich und dulden auch andere Arten wie Elefanten und diverse Rinder in der Nähe. Vögel dürfen auf dem Rücken des Nashorns sitzen und Parasiten aus der Haut picken.[NEWLINE]Bis zum 17. Jahrhundert umfasste der Lebensraum der Panzernashörner das heutige Indien und Pakistan. Durch die Trockenlegung von Sümpfen zur Gewinnung von Ackerland verlagerte sich das Gebiet nach Osten. Später hielt der Jagdtourismus Einzug. Da die Tiere für Verwüstungen der Teeplantagen verantwortlich gemacht wurden, gab es sogar Abschussprämien. Dies alles führte dazu, dass Anfang des 20. Jahrhunderts nur noch 200 Exemplare der Art existierten. Wilderei ist bis heute problematisch, weil das Horn in der Traditionellen Chinesischen Medizin begehrt ist. Dennoch haben sich die Bestände erholt und vor allem Zoos tragen weltweit durch Zucht dazu bei. Auch in der Kunst spielt das Panzernashorn eine Rolle. Albrecht Dürer fertigte z.B. einen Holzschnitt und eine Zeichnung des Tieres an. Beide Darstellungen wurden mehrfach kopiert und dienten u.a. als Vorlage für Figuren aus Meißener Porzellan.</German>
-		<Italian>Il rinoceronte indiano (Rhinoceros unicornis) è chiamato anche grande rinoceronte unicorno e rinoceronte unicorno asiatico, ed appartiene alla famiglia Rhinocerotidae. Incluso tra le specie in pericolo di estinzione, questo grande mammifero viene trovato spesso nell'India nordorientale e in alcune aree protette del Nepal, dove i branchi sono confinati nelle pianure ai piedi dell'Himalaya. Di norma pesa tra 1,600 e 3,500 kg, è il quarto animale terrestre più grande.[PARAGRAPH:2]Il rinoceronte indiano era una volta diffuso in tutta la pianura dell'Indo-Gange, ma la caccia eccessica ha ridotto il suo habitat naturale. Al giorno d'oggi, circa 3000 rinoceronti vivono allo stato selvatico, 2000 dei quali nello stato indiano dell'Assam.</Italian>
+		<Italian>Il rinoceronte indiano (Rhinoceros unicornis) è chiamato anche grande rinoceronte unicorno e rinoceronte unicorno asiatico, ed appartiene alla famiglia Rhinocerotidae. Incluso tra le specie in pericolo di estinzione, questo grande mammifero viene trovato spesso nell'India nordorientale e in alcune aree protette del Nepal, dove i branchi sono confinati nelle pianure ai piedi dell'Himalaya. Di norma pesa tra 1,600 e 3,500 kg, è il quarto animale terrestre più grande.[PARAGRAPH:2]Il rinoceronte indiano era una volta diffuso in tutta la pianura dell'Indo-Gange, ma la caccia eccessiva ha ridotto il suo habitat naturale. Al giorno d'oggi, circa 3000 rinoceronti vivono allo stato selvatico, 2000 dei quali nello stato indiano dell'Assam.</Italian>
 		<Polish>Nosorożec indyjski, nosorożec pancerny (Rhinoceros unicornis) - gatunek nosorożca o długości ciała dochodzącej do 4 m i wysokości w kłębie ok. 1,7 m. Waga ok. 2000 kg. Maksymalnie do 3000 kg. Na pysku ma tylko jeden róg. U osobników w niewoli zwykle starty i z tego powodu niewielki. U dorosłych samców w naturalnym środowisku może dorastać do 57,2 cm. Gruba skóra zwierzęcia tworzy charakterystyczne fałdy przypominające tarcze pancerza. Zamieszkuje podmokłe leśne obszary Nepalu i północno-wschodnich Indii.</Polish>
 	</TEXT>
 	<TEXT>
@@ -1012,7 +1015,7 @@
 		<English>The Javan rhinoceros (Sunda rhinoceros to be more precise) or lesser one-horned rhinoceros (Rhinoceros sondaicus) is a member of the family Rhinocerotidae and one of five extant rhinoceroses. It belongs to the same genus as the Indian rhinoceros, and has similar mosaicked skin which resembles armor, but at 3.1–3.2 m (10–10.5 feet) in length and 1.4–1.7 m (4.6–5.8 ft) in height, it is smaller. (In fact, it is closer in size to the black rhinoceros of the genus Diceros.) Its horn is usually less than 25 cm (10 inches), smaller than those of the other rhino species.[PARAGRAPH:2]Once the most widespread of Asian rhinoceroses, the Javan rhinoceros ranged from the islands of Java and Sumatra, throughout Southeast Asia, and into India and China. The species is critically endangered, with only one known population in the wild, and no individuals in captivity. It is possibly the rarest large mammal on earth, with a population of as few as 40 in Ujung Kulon National Park on Java in Indonesia. A second population in Cat Tien National Park in Vietnam was confirmed as extinct in 2011. The decline of the Javan rhinoceros is attributed to poaching, primarily for their horns, which are highly valued in traditional Chinese medicine, fetching as much as $30,000 per kilogram on the black market. Loss of habitat, especially as the result of wars, such as the Vietnam War, in Southeast Asia, has also contributed to the species's decline and hindered recovery. The remaining range is within one nationally protected area, but the rhinos are still at risk from poachers, disease and loss of genetic diversity leading to inbreeding depression.[PARAGRAPH:2]The Javan rhino can live approximately 30–45 years in the wild. It historically inhabited lowland rain forest, wet grasslands and large floodplains. The Javan rhino is mostly solitary, except for courtship and child-rearing, though groups may occasionally congregate near wallows and salt licks. Aside from humans, adults have no predators in their range. The Javan rhino usually avoids humans, but will attack when it feels threatened. Scientists and conservationists rarely study the animals directly due to their extreme rarity and the danger of interfering with such an endangered species. Researchers rely on camera traps and fecal samples to gauge health and behavior. Consequently, the Javan rhino is the least studied of all rhino species. Two adult rhinos with their calves were filmed in a motion-triggered video released on February 28, 2011 by WWF and Indonesia's National Park Authority, which proved that it is still breeding in the wild.</English>
 		<French>Le rhinocéros de Java (Rhinoceros sondaicus), encore appelé rhinocéros de la Sonde, est un rhinocéros unicorne vivant en Asie et faisant partie de la famille des Rhinocérotidés qui compte cinq espèces différentes. Il est apparenté au rhinocéros indien, leur peau à tous deux étant composée de larges plis et faisant penser à une armure, mais mesurant entre 3,1 m et 3,2 m de longueur et de 1,4 m à 1,7 m de hauteur, il est plus petit que ce dernier.</French>
 		<German>Das [COLOR_UNIT_TEXT]Java-Nashorn[COLOR_REVERT] (Rhinoceros sondaicus) ist die seltenste Nashornart und somit eines der seltensten Großsäugetiere. Es lebt in Asien und ist nahe mit dem Panzernashorn verwandt. Ursprünglich war die Art in Südostasien weit verbreitet, heute leben nur noch zwischen 60 und 70 Tiere im Ujung-Kulon-Nationalpark in Java.[NEWLINE]Mit einer Kopf-Rumpf-Länge von 3 bis 3,4 Metern ist das Java-Nashorn etwas kleiner als das Panzernashorn. Die Haut ist grau bis graubraun und bildet charakteristische Falten, die zwischen Nacken und Schultern eine Art Sattel formen. Auf der Nase befindet sich ein meist konisch geformtes Horn. Die oft weit nach oben gezogene Oberlippe dient zum Abzupfen von Pflanzennahrung. Bevorzugt werden Brennnesselgewächse, Hülsenfrüchtler und Feigen. Häufig wird zum Herausziehen von Pflanzen auch das Horn eingesetzt. Schlammbäder sind für die Tiere sehr wichtig und dienen zur Thermoregulierung und zur Entfernung von Parasiten. Java-Nashörner sind Einzelgänger und finden nur zur Paarungszeit zusammen. Sie pflegen enge Beziehungen zu Bantengs und Wasserbüffeln und nutzen die gleichen Pfade wie diese.[NEWLINE]In Europa war das Java-Nashorn lange Zeit unbekannt. Die erste zufällige Begegnung war vermutlich 1630 die eines niederländischen Arztes, dessen Gesellschaftsparty von einem der Tiere gestört wurde. Heute ist die Art stark gefährdet, z.T. durch die Verwendung ihrer Hörner in der Traditionellen Chinesischen Medizin. Die Ausdehnung menschlicher Siedlungen und die damit verbundene Landwirtschaft sind weitere Gründe. Tierschutzorganisationen wie der WWF begannen in den 1990er Jahren mit der Platzierung von Kamerafallen, um einerseits die Tiere zu studieren und andererseits Wilderei einzudämmen.</German>
-		<Italian>Il rinoceronte di Giava (Sunda rhinoceros) o piccolo rinoceronte unicorno (Rhinoceros sondaicus) è un membro della famiglia Rhinocerotidae, ed è una delle 5 specie estinte di rinoceronti. Appartiene allo stesso genere del rinoceronte indiano, ed ha una pelle simile che assomiglia ad un'armatura; tuttavia è più piccolo, essendo lungo 3.1–3 m e alto 1.4–1 m (infatti, è più simile al rinoceronte nero per quanto rigurda la sua dimensione). Il suo corno è solitamente meno di 25 cm, più piccolo rispetto agli altri rinoceronti.[PARAGRAPH:2]Una volta la specie di rinoceronte più diffusa, il rinoceronte di Giava viveva sulle isole di Giava e Sumatra, nel Sud-est asiatico, e anche in Cina e India. La specie è a grave rischio di estinzione, con un solo branco allo stato brado, e nessun esemplare in cattività. È probabilmente il mammifero più raro sulla faccia della Terra, con una popolazione inferiore ai 40 esemplari nello Ujung Kulon National Park di Giava, in Indonesia. Un secondo branco nel Cat Tien National Park in Vietnam fu dichiarata estinta nel 2011. Il declino del rinoceronte di Giava è dovuto al bracconaggio, principalmente per i loro corni, altamente valutati nella medicina tradizionale cinese, con un valore di 30000 $ al chilo sul mercato nero. La perdita del loro habitat a causa delle guerre, come la guerra del Vietnam, ha contribuito al declino di questa specie. La popolazione rimanente è confinata in un'area nazionale protetta, ma i rinoceronti sono ancora in pericolo a causa dei bracconieri, delle malattie e della perdita di diversità genetica, che portano a una limitazione della crescita.[PARAGRAPH:2]Il rinoceronte di Giava può vivere fino a 3045 anni allo stato brado; storicamente, abitava in foreste pluviali, pianure umide e grandi zone alluvionali. Il rinoceronte di Giava è principalmente solitario, eccetto per il corteggiamento e l'allevamento dei cuccioli, anche se si possono formare alcuni gruppi vicino alle fonti di cibo e di sale. A parte gli umani, il rinoceronte di Giava non ha predatori naturali; questo rinoceronte evita gli umani, ma se viene minacciato attacca. Gli scienziati studiano raramente quest'animale direttamente, a causa della sua rarità e del pericolo di interferire con questa specie in pericolo: i ricercatori si affidano a telecamere nascoste e a campioni di escrementi per studiare la salute e il comportamento; di conseguenza, il rinoceronte di Giava è la specie meno studiata. Due rinoceronti adulti furono filmati in un video pubblicato il 28 febbraio 2011 da WWF e Indonesia's National Park Authority, che conferma che il rinoceronte vive ancora allo stato brado.</Italian>
+		<Italian>Il rinoceronte di Giava (Sunda rhinoceros) o piccolo rinoceronte unicorno (Rhinoceros sondaicus) è un membro della famiglia Rhinocerotidae, ed è una delle 5 specie estinte di rinoceronti. Appartiene allo stesso genere del rinoceronte indiano, ed ha una pelle simile che assomiglia ad un'armatura; tuttavia è più piccolo, essendo lungo 3.1–3 m e alto 1.4–1 m (infatti, è più simile al rinoceronte nero per quanto riguarda la sua dimensione). Il suo corno è solitamente meno di 25 cm, più piccolo rispetto agli altri rinoceronti.[PARAGRAPH:2]Una volta la specie di rinoceronte più diffusa, il rinoceronte di Giava viveva sulle isole di Giava e Sumatra, nel Sud-est asiatico, e anche in Cina e India. La specie è a grave rischio di estinzione, con un solo branco allo stato brado, e nessun esemplare in cattività. È probabilmente il mammifero più raro sulla faccia della Terra, con una popolazione inferiore ai 40 esemplari nello Ujung Kulon National Park di Giava, in Indonesia. Un secondo branco nel Cat Tien National Park in Vietnam fu dichiarata estinta nel 2011. Il declino del rinoceronte di Giava è dovuto al bracconaggio, principalmente per i loro corni, altamente valutati nella medicina tradizionale cinese, con un valore di 30000 $ al chilo sul mercato nero. La perdita del loro habitat a causa delle guerre, come la guerra del Vietnam, ha contribuito al declino di questa specie. La popolazione rimanente è confinata in un'area nazionale protetta, ma i rinoceronti sono ancora in pericolo a causa dei bracconieri, delle malattie e della perdita di diversità genetica, che portano a una limitazione della crescita.[PARAGRAPH:2]Il rinoceronte di Giava può vivere fino a 3045 anni allo stato brado; storicamente, abitava in foreste pluviali, pianure umide e grandi zone alluvionali. Il rinoceronte di Giava è principalmente solitario, eccetto per il corteggiamento e l'allevamento dei cuccioli, anche se si possono formare alcuni gruppi vicino alle fonti di cibo e di sale. A parte gli umani, il rinoceronte di Giava non ha predatori naturali; questo rinoceronte evita gli umani, ma se viene minacciato attacca. Gli scienziati studiano raramente quest'animale direttamente, a causa della sua rarità e del pericolo di interferire con questa specie in pericolo: i ricercatori si affidano a telecamere nascoste e a campioni di escrementi per studiare la salute e il comportamento; di conseguenza, il rinoceronte di Giava è la specie meno studiata. Due rinoceronti adulti furono filmati in un video pubblicato il 28 febbraio 2011 da WWF e Indonesia's National Park Authority, che conferma che il rinoceronte vive ancora allo stato brado.</Italian>
 		<Polish>Nosorożec jawajski (Rhinoceros sondaicus) - gatunek ssaka z rodziny nosorożcowatych, jeden z pięciu żyjących do dziś gatunków nosorożców. Należy do tego samego rodzaju, co nosorożec indyjski. Łączy je podobna, przypominająca mozaikę skóra stwarzająca wrażenie opancerzenia. Nosorożec jawajski, mierząc 3,1-3,2 m długości i 1,4-1,7 m wysokości, jest mniejszy od swego krewniaka, wielkością bardziej zbliża się do nosorożca czarnego. Jego rogi, mniejsze niż u innych nosorożców, osiągają zwykle poniżej 25 cm.</Polish>
 	</TEXT>
 	<TEXT>
@@ -1029,6 +1032,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Òðîï. òàðàíòóë</Russian>
+		<Italian>Tarantola della giungla</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KOMODO_DRAGON_PEDIA</Tag>
@@ -1045,6 +1049,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Ëåìóð</Russian>
+		<Italian>Lemure catta</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LEMUR_PEDIA</Tag>
@@ -1065,11 +1070,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Leone:Leoni</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Leone</Italian>
 		<Spanish>
 			<Text>León:Leones</Text>
 			<Gender>Male</Gender>
@@ -1089,6 +1090,7 @@
 		</German>
 		<Polish>Jaszczurka</Polish>
 		<Russian>ßùåðèöà</Russian>
+		<Italian>Lucertola</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LIZARD_PEDIA</Tag>
@@ -1114,6 +1116,7 @@
 		</German>
 		<Polish>Tapir Malajski</Polish>
 		<Russian>Ìàëàéñêèé òàïèð</Russian>
+		<Italian>Tapiro malese</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MANEDWOLF</Tag>
@@ -1125,6 +1128,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Ãðèâèñòûé âîëê</Russian>
+		<Italian>Lupo dalla criniera</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MANEDWOLF_PEDIA</Tag>
@@ -1152,6 +1156,7 @@
 		</German>
 		<Polish>Tapir Górski</Polish>
 		<Russian>Ãîðíûé òàïèð</Russian>
+		<Italian>Tapiro delle Ande</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NILECROC</Tag>
@@ -1225,6 +1230,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Ïèíãâèí</Russian>
+		<Italian>Pinguino imperatore</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PIGEON</Tag>
@@ -1297,6 +1303,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Russian>Óòêîíîñ</Russian>
+		<Italian>Ornitorinco</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PLATYPUS_PEDIA</Tag>
@@ -1314,6 +1321,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Ïîññóì</Russian>
+		<Italian>Tricosuro volpino</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_POSSUM_PEDIA</Tag>
@@ -1334,7 +1342,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Vipera soffiatrice</Italian>
+		<Italian>Vipera soffiante</Italian>
 		<Spanish>
 			<Text>Víbora bufadora</Text>
 			<Gender>Female</Gender>
@@ -1358,6 +1366,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Карликовый бегемот</Russian>
+		<Italian>Ippopotamo pigmeo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PYGMYHIPPO_PEDIA</Tag>
@@ -1369,11 +1378,7 @@
 		<Tag>TXT_KEY_UNIT_RANGER</Tag>
 		<English>Ranger</English>
 		<French>Rôdeur</French>
-		<Italian>
-			<Text>Ranger</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Ranger</Italian>
 		<Polish>Strażnik Lasu</Polish>
 		<Russian>Ðåéíäæåð</Russian>
 	</TEXT>
@@ -1449,7 +1454,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Coccodrillo (Grande)</Italian>
+		<Italian>Coccodrillo di fiume (grande)</Italian>
 		<Spanish>
 			<Text>Gran cocodrilo</Text>
 			<Gender>Male</Gender>
@@ -1471,7 +1476,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Coccodrillo (Piccolo)</Italian>
+		<Italian>Coccodrillo di fiume (piccolo)</Italian>
 		<Spanish>
 			<Text>Cocodrilo pequeño</Text>
 			<Gender>Male</Gender>
@@ -1495,6 +1500,7 @@
 		</German>
 		<Polish>Tygrys Szablozębny</Polish>
 		<Russian>Ñàáëåçóáûé òèãð</Russian>
+		<Italian>Tigre dai denti a sciabola</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SAIGA</Tag>
@@ -1516,6 +1522,7 @@
 		</Spanish>
 		<Polish>Suhak</Polish>
 		<Russian>Ñàéãàê</Russian>
+		<Italian>Antilope delle steppe</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SAIGA_PEDIA</Tag>
@@ -1582,6 +1589,7 @@
 		</German>
 		<Polish>Bielik Olbrzymi</Polish>
 		<Russian>Îðëàí</Russian>
+		<Italian>Aquila di mare di Steller</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SEAEAGLE_PEDIA</Tag>
@@ -1598,7 +1606,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Leone marino</Italian>
+		<Italian>Leone di mare</Italian>
 		<Spanish>
 			<Text>Lobo marino</Text>
 			<Gender>Male</Gender>
@@ -1625,7 +1633,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Lontra</Italian>
+		<Italian>Lontra marina</Italian>
 		<Spanish>
 			<Text>Nutria marina</Text>
 			<Gender>Female</Gender>
@@ -1665,11 +1673,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_AARDVARK</Tag>
 		<English>Subdued Aardvark</English>
 		<French>Oryctérope (App.)</French>
-		<Italian>
-			<Text>Oritteropo addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Oritteropo domato</Italian>
 		<Polish>Poskromiony Mrównik</Polish>
 		<Russian>Òðóáêîçóá (ðó÷í.)</Russian>
 	</TEXT>
@@ -1683,6 +1687,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Àôð. ñëîí (ðó÷í.)</Russian>
+		<Italian>Elefante africano domato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_AFRICANGREY</Tag>
@@ -1690,6 +1695,7 @@
 		<French>Perroquet gris d'Afrique (App.)</French>
 		<Polish>Poskromiona Papuga Żako</Polish>
 		<Russian>Àôð. ïîïóãàé (ðó÷í.)</Russian>
+		<Italian>Pappagallo cinerino domato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_AFRICAN_PENGUIN</Tag>
@@ -1702,10 +1708,12 @@
 		</German>
 		<Polish>Poskromiony Pingwin Przylądkowy</Polish>
 		<Russian>Àôð. ïèíãâèí (ðó÷í.)</Russian>
+		<Italian>Pinguino africano domato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Tag>
 		<English>Can build Folklore, animal related buildings, fight for entertainment and spread their tales.</English>
+		<Italian>[ICON_BULLET]L'animale può [COLOR_HIGHLIGHT_TEXT]costruire edifici[COLOR_REVERT] relazionati al [COLOR_HIGHLIGHT_TEXT]folklore[COLOR_REVERT] o agli [COLOR_HIGHLIGHT_TEXT]animali[COLOR_REVERT], può [COLOR_HIGHLIGHT_TEXT]combattere per intrattenimento[COLOR_REVERT] e [COLOR_HIGHLIGHT_TEXT]diffondere il proprio mito[COLOR_REVERT]</Italian> <!-- unit moose -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ANTEATER</Tag>
@@ -1716,11 +1724,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Formichiere addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Formichiere domato</Italian>
 		<Polish>Poskromiony Mrówkojad</Polish>
 		<Russian>Ìóðàâüåä (ðó÷í.)</Russian>
 	</TEXT>
@@ -1734,6 +1738,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Ïåñåö (ðó÷í.)</Russian>
+		<Italian>Volpe artica domata</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ARMADILLO</Tag>
@@ -1745,16 +1750,13 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Áðîíåíîñåö (ðó÷í.)</Russian>
+		<Italian>Armadillo a nove fasce domato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ASIANBEAR</Tag>
 		<English>Subdued Moon Bear</English>
 		<French>Ours Lune (App.)</French>
-		<Italian>
-			<Text>Orso luna addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Orso della luna domato</Italian>
 		<Polish>Poskromiony Niedźwiedź Himalajski</Polish>
 		<Russian>Áåëîãðóäûé ìåäâåäü (ðó÷í.)</Russian>
 	</TEXT>
@@ -1768,6 +1770,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Áàáèðóñ (ðó÷í.)</Russian>
+		<Italian>Babirussa domato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BADGER</Tag>
@@ -1778,11 +1781,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Tasso addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Tasso domato</Italian>
 		<Polish>Poskromiony Borsuk</Polish>
 		<Russian>Áàðñóê (ðó÷í.)</Russian>
 	</TEXT>
@@ -1795,11 +1794,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Pitone reale addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Pitone reale domato</Italian>
 		<Polish>Poskromiony Pyton Królewski</Polish>
 		<Russian>Êîðîëåâñêèé ïèòîí (ðó÷í.)</Russian>
 	</TEXT>
@@ -1812,11 +1807,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Macaco addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Bertuccia domata</Italian>
 		<Polish>Poskromiony Magot</Polish>
 		<Russian>Ìàãîò (ðó÷í.)</Russian>
 	</TEXT>
@@ -1835,6 +1826,7 @@
 		</German>
 		<Polish>Poskromiona Płomykówka Zwyczajna</Polish>
 		<Russian>Ñèïóõà (ðó÷í.)</Russian>
+		<Italian>Barbagianni comune domato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BARREDOWL</Tag>
@@ -1846,6 +1838,7 @@
 		</French>
 		<Polish>Poskromiony Puszczyk</Polish>
 		<Russian>Ñû÷ (ðó÷í.)</Russian>
+		<Italian>Allocco barrato domato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BEAVER</Tag>
@@ -1856,11 +1849,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Castoro addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Castoro domato</Italian>
 		<Polish>Poskromiony Bóbr</Polish>
 		<Russian>Áîáåð (ðó÷í.)</Russian>
 	</TEXT>
@@ -1873,11 +1862,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Beluga addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Beluga domato</Italian>
 		<Polish>Poskromiona Bieługa</Polish>
 		<Russian>Áåëóõà (ðó÷í.)</Russian>
 	</TEXT>
@@ -1890,11 +1875,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Tigre del Bengala addomesticata</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Tigre del Bengala domata</Italian>
 		<Polish>Poskromiony Tygrys Bengalski</Polish>
 		<Russian>Áåíãàëüñêèé òèãð (ðó÷í.)</Russian>
 	</TEXT>
@@ -1907,11 +1888,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Bisonte addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Bisonte domato</Italian>
 		<Polish>Poskromiony Bizon</Polish>
 		<Russian>Áèçîí (ðó÷í.)</Russian>
 	</TEXT>
@@ -1919,11 +1896,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_BLACKBEAR</Tag>
 		<English>Subdued Black Bear</English>
 		<French>Ours noir (App.)</French>
-		<Italian>
-			<Text>Orso nero addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Orso nero domato</Italian>
 		<Polish>Poskromiony Baribal</Polish>
 		<Russian>×åðíûé ìåäâåäü (ðó÷í.)</Russian>
 	</TEXT>
@@ -1938,6 +1911,7 @@
 		</German>
 		<Polish>Poskromiony Nosorożec Czarny</Polish>
 		<Russian>×åðíûé íîñîðîã (ðó÷í.)</Russian>
+		<Italian>Rinoceronte nero domato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BOAR</Tag>
@@ -1948,11 +1922,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Cinghiale addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Cinghiale domato</Italian>
 		<Polish>Poskromiony Dzik</Polish>
 		<Russian>Êàáàí (ðó÷í.)</Russian>
 	</TEXT>
@@ -1965,11 +1935,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Bongo addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Bongo domato</Italian>
 		<Polish>Poskromiona Bongo</Polish>
 		<Russian>Áîíãî (ðó÷í.)</Russian>
 	</TEXT>
@@ -1979,6 +1945,7 @@
 		<French>Fou à pieds bleus (App.)</French>
 		<Polish>Poskromiony Głuptak Niebieskonogi</Polish>
 		<Russian>Îëóøà (ðó÷í.)</Russian>
+		<Italian>Sula piediazzurri domata</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BRAZILIAN_TAPIR</Tag>
@@ -1995,16 +1962,13 @@
 		</German>
 		<Polish>Poskromiony Tapir Brazylijski</Polish>
 		<Russian>Áðàçèëüñêèé òàïèð (ðó÷í.)</Russian>
+		<Italian>Tapiro di pianura domato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BROWN_BEAR</Tag>
 		<English>Subdued Brown Bear</English>
 		<French>Ours brun (App.)</French>
-		<Italian>
-			<Text>Orso addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Orso bruno domato</Italian>
 		<Polish>Poskromiony Niedźwiedź Brunatny</Polish>
 		<Russian>Áóðûé ìåäâåäü (ðó÷í.)</Russian>
 	</TEXT>
@@ -2017,11 +1981,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Bufalo d'acqua addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Bufalo africano domato</Italian>
 		<Polish>Poskromiony Bawół</Polish>
 		<Russian>Àçèàòñêèé áóéâîë (ðó÷í.)</Russian>
 	</TEXT>
@@ -2040,6 +2000,7 @@
 		</German>
 		<Polish>Subdued Kajman</Polish>
 		<Russian>Êàéìàí (ðó÷í.)</Russian>
+		<Italian>Caimano nero domato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CAMEL</Tag>
@@ -2050,11 +2011,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Cammello addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Cammello domato</Italian>
 		<Spanish>Subdued Camello</Spanish>
 		<Polish>Poskromiony Wielbłąd</Polish>
 		<Russian>Âåðáëþä (ðó÷í.)</Russian>
@@ -2068,11 +2025,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Scimmia cappuccino addomesticata</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Scimmia cappuccina domata</Italian>
 		<Polish>Poskromiony Kapucynka</Polish>
 		<Russian>Êàïóöèí (ðó÷í.)</Russian>
 	</TEXT>
@@ -2085,11 +2038,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Capibara addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Capibara domato</Italian>
 		<Polish>Poskromiona Kapibara</Polish>
 		<Russian>Âîäîñâèíêà (ðó÷í.)</Russian>
 	</TEXT>
@@ -2097,11 +2046,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_CARIBOU</Tag>
 		<English>Subdued Caribou</English>
 		<French>Caribou (App.)</French>
-		<Italian>
-			<Text>Caribù addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Caribù domato</Italian>
 		<Polish>Poskromione Karibu</Polish>
 		<Russian>Êàðèáó (ðó÷í.)</Russian>
 	</TEXT>
@@ -2109,11 +2054,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_CASSOWARY</Tag>
 		<English>Subdued Cassowary</English>
 		<French>Casoar (App.)</French>
-		<Italian>
-			<Text>Casuario addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Casuaro domato</Italian>
 		<Polish>Poskromiony Kazuar</Polish>
 		<Russian>Êàçóàð (ðó÷í.)</Russian>
 	</TEXT>
@@ -2121,11 +2062,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_CAVE_BEAR</Tag>
 		<English>Subdued Cave Bear</English>
 		<French>Ours des cavernes (App.)</French>
-		<Italian>
-			<Text>Orso delle caverne addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Orso delle caverne domato</Italian>
 		<Polish>Poskromiony Niedźwiedź Jaskiniowy</Polish>
 		<Russian>Ïåùåðíûé ìåäâåäü (ðó÷í.)</Russian>
 	</TEXT>
@@ -2133,11 +2070,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_CAVE_LION</Tag>
 		<English>Subdued Cave Lion</English>
 		<French>Lion des cavernes (App.)</French>
-		<Italian>
-			<Text>Leone delle caverne addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Leone delle caverne domato</Italian>
 		<Polish>Poskromiony Lew Jaskiniowy</Polish>
 		<Russian>Ïåùåðíûé ëåâ (ðó÷í.)</Russian>
 	</TEXT>
@@ -2150,11 +2083,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Ghepardo addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Ghepardo domato</Italian>
 		<Polish>Poskromiony Gepard</Polish>
 		<Russian>Ãåïàðä (ðó÷í.)</Russian>
 	</TEXT>
@@ -2167,11 +2096,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Scimpanzè addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Scimpanzé domato</Italian>
 		<Polish>Poskromiony Szaympans</Polish>
 		<Russian>Øèìïàíçå (ðó÷í.)</Russian>
 	</TEXT>
@@ -2184,11 +2109,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Cobra addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Cobra domato</Italian>
 		<Polish>Poskromiona Kobra</Polish>
 		<Russian>Êîáðà (ðó÷í.)</Russian>
 	</TEXT>
@@ -2205,11 +2126,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Merluzzo addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Merluzzo domato</Italian>
 		<Polish>Poskromiony Dorsz</Polish>
 		<Russian>Òðåñêà (ðó÷í.)</Russian>
 	</TEXT>
@@ -2217,11 +2134,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_COW</Tag>
 		<English>Subdued Aurochs</English>
 		<French>Taureau (App.)</French>
-		<Italian>
-			<Text>Uro addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Uro domato</Italian>
 		<Polish>Poskromiony Tur</Polish>
 		<Russian>Çóáð (ðó÷í.)</Russian>
 	</TEXT>
@@ -2234,11 +2147,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Granchio addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Granchio domato</Italian>
 		<Polish>Poskromiony Krab</Polish>
 		<Russian>Êðàá (ðó÷í.)</Russian>
 	</TEXT>
@@ -2255,11 +2164,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Cornacchia addomesticata</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Corvo domato</Italian>
 		<Polish>Poskromiony Kruk</Polish>
 		<Russian>Âîðîíà (ðó÷í.)</Russian>
 	</TEXT>
@@ -2273,6 +2178,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Êóñêóñ (ðó÷í.)</Russian>
+		<Italian>Cusco maculato domato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DARTFROG</Tag>
@@ -2287,11 +2193,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Rana freccia addomesticata</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Rana velenosa domata</Italian>
 		<Russian>Æàáà (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
@@ -2308,6 +2210,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Ïóñòûííûé òàðàíòóë (ðó÷í.)</Russian>
+		<Italian>Tarantola del deserto domata</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DESERT_TORTOISE</Tag>
@@ -2322,11 +2225,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Tartaruga del deserto addomesticata</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Tartaruga del deserto domata</Italian>
 		<Polish>Poskromiony Żółw Pustynny</Polish>
 		<Russian>Ïóñòûííàÿ ÷åðåïàõà (ðó÷í.)</Russian>
 	</TEXT>
@@ -2340,6 +2239,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Êðàñíûé âîëê (ðó÷í.)</Russian>
+		<Italian>Cuon rutilano domato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DINGO</Tag>
@@ -2351,16 +2251,13 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Äèíãî (ðó÷í.)</Russian>
+		<Italian>Dingo domato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DIREWOLF</Tag>
 		<English>Subdued Dire Wolf</English>
 		<French>Loup primitif (App.)</French>
-		<Italian>
-			<Text>Lupo nero addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Enocione domato</Italian>
 		<Polish>Poskromiony Wilk Straszny</Polish>
 		<Russian>Ëþòîâîëê (ðó÷í.)</Russian>
 	</TEXT>
@@ -2373,11 +2270,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Delfino addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Delfino domato</Italian>
 		<Polish>Poskromiony Delfin</Polish>
 		<Russian>Äåëüôèí (ðó÷í.)</Russian>
 	</TEXT>
@@ -2391,6 +2284,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Îñåë (ðó÷í.)</Russian>
+		<Italian>Asino domato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DUCK</Tag>
@@ -2401,11 +2295,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Oca addomesticata</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Anatra domata</Italian>
 		<Polish>Poskromiona Kaczka</Polish>
 		<Russian>Óòêà (ðó÷í.)</Russian>
 	</TEXT>
@@ -2418,11 +2308,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Dugongo addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Dugongo domato</Italian>
 		<Polish>Poskromiony Dugong</Polish>
 		<Russian>Äþãîíü (ðó÷í.)</Russian>
 	</TEXT>
@@ -2430,11 +2316,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_EAGLE</Tag>
 		<English>Subdued Eagle</English>
 		<French>Aigle (App.)</French>
-		<Italian>
-			<Text>Aquila addomesticata</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Aquila domata</Italian>
 		<Polish>Poskromiony Orzeł</Polish>
 		<Russian>Îðåë (ðó÷í.)</Russian>
 	</TEXT>
@@ -2448,6 +2330,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Áåëîãîëîâûé îðëàí (ðó÷í.)</Russian>
+		<Italian>Aquila testabianca domata</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ELASMOTHERIUM</Tag>
@@ -2460,6 +2343,7 @@
 		</German>
 		<Polish>Poskromiony Elasmoterium</Polish>
 		<Russian>Ýëàñìîòåðèé (ðó÷í.)</Russian>
+		<Italian>Elasmotherium domato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ELEPHANT</Tag>
@@ -2467,6 +2351,7 @@
 		<French>Éléphant d'Asie (App.)</French>
 		<Polish>Poskromiony Słoń Indyjski</Polish>
 		<Russian>Ñëîí (ðó÷í.)</Russian>
+		<Italian>Elefante asiatico domato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_EMU</Tag>
@@ -2477,11 +2362,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Emù addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Emù domato</Italian>
 		<Polish>Poskromione Emu</Polish>
 		<Russian>Ýìó (ðó÷í.)</Russian>
 	</TEXT>
@@ -2495,6 +2376,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Ýôèîïñêèé øàêàë (ðó÷í.)</Russian>
+		<Italian>Lupo etiope domato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_FENNECFOX</Tag>
@@ -2506,16 +2388,13 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Ëèñèöà-ôåíåê (ðó÷í.)</Russian>
+		<Italian>Volpe del deserto domata</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_FLAMINGO</Tag>
 		<English>Subdued Flamingo</English>
 		<French>Flamant rose (App.)</French>
-		<Italian>
-			<Text>Fenicottero addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Fenicottero domato</Italian>
 		<Polish>Poskromiony Flaming</Polish>
 		<Russian>Ôëàìèíãî (ðó÷í.)</Russian>
 	</TEXT>
@@ -2523,8 +2402,14 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_GALAPAGOS_PENGUIN</Tag>
 		<English>Subdued Galapagos Penguin</English>
 		<French>Pingouin des Galapagos (App.)</French>
+		<German>
+			<Text>Gefangener Galápagos-Pinguin:Gefangenen Galápagos-Pinguins:Gefangenen Galápagos-Pinguin:Gefangenen Galápagos-Pinguin:Gefangene Galápagos-Pinguine:Gefangenen Galápagos-Pinguine:Gefangenen Galápagos-Pinguinen:Gefangenen Galápagos-Pinguine</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Polish>Poskromiony Pingwin Równikowy</Polish>
 		<Russian>Î÷êîâûé ïèíãâèí (ðó÷í.)</Russian>
+		<Italian>Pinguino delle Galapagos domato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GALAPAGOS_TORTOISE</Tag>
@@ -2539,11 +2424,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Tartaruga delle Galapagos addomesticata</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Tartaruga delle Galapagos domata</Italian>
 		<Polish>Poskromiony Żółw Słoniowy</Polish>
 		<Russian>Ãàëàïàãîñ. ÷åðåïàõà (ðó÷í.)</Russian>
 	</TEXT>
@@ -2562,6 +2443,7 @@
 		</German>
 		<Polish>Subdued Aligator Amerykański</Polish>
 		<Russian>Àëëèãàòîð (ðó÷í.)</Russian>
+		<Italian>Alligatore americano domato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GATOR_ASIAN</Tag>
@@ -2578,6 +2460,7 @@
 		</German>
 		<Polish>Subdued Aligator Chiński</Polish>
 		<Russian>Êèòàéñêèé àëëèãàòîð (ðó÷í.)</Russian>
+		<Italian>Alligatore cinese domato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GAZELLE</Tag>
@@ -2592,11 +2475,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Gazzella addomesticata</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Gazzella di Thomson domata</Italian>
 		<Polish>Poskromiona Gazela</Polish>
 		<Russian>Ãàçåëü (ðó÷í.)</Russian>
 	</TEXT>
@@ -2609,11 +2488,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Babbuino Gelada addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Babbuino Gelada domato</Italian>
 		<Polish>Poskromiona Dżelada</Polish>
 		<Russian>Ãåëàäà (ðó÷í.)</Russian>
 	</TEXT>
@@ -2630,11 +2505,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Orice addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Antilope domata</Italian>
 		<Polish>Poskromiony Oryks</Polish>
 		<Russian>Ñåðíîáûê (ðó÷í.)</Russian>
 	</TEXT>
@@ -2651,11 +2522,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Gerenuk addomesticata</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Antilope giraffa domata</Italian>
 		<Polish>Poskromiony Gerenuk</Polish>
 		<Russian>Ãåðåíóê (ðó÷í.)</Russian>
 	</TEXT>
@@ -2663,11 +2530,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_GHARIAL</Tag>
 		<English>Subdued Gharial</English>
 		<French>Gavial (App.)</French>
-		<Italian>
-			<Text>Gaviale addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Gaviale domato</Italian>
 		<Polish>Poskromiony Garial</Polish>
 		<Russian>Ãàâèàë (ðó÷í.)</Russian>
 	</TEXT>
@@ -2680,11 +2543,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Calamaro gigante addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Calamaro gigante domato</Italian>
 		<Polish>Poskromiona Wielka Kałamarnica</Polish>
 		<Russian>Ãèãàíòñêèé êàëüìàð (ðó÷í.)</Russian>
 	</TEXT>
@@ -2701,11 +2560,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Giraffa addomesticata</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Giraffa domata</Italian>
 		<Polish>Poskromiony Żyrafa</Polish>
 		<Russian>Æèðàô (ðó÷í.)</Russian>
 	</TEXT>
@@ -2719,6 +2574,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Ãëèïòîäîí (ðó÷í.)</Russian>
+		<Italian>Gliptodonte domato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GORILLA</Tag>
@@ -2729,11 +2585,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Gorilla addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Gorilla domato</Italian>
 		<Polish>Poskromiony Goryl</Polish>
 		<Russian>Ãîðèëëà (ðó÷í.)</Russian>
 	</TEXT>
@@ -2746,11 +2598,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Grande squalo bianco addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Grande squalo bianco domato</Italian>
 		<Polish>Poskromiony Żarłacz Biały</Polish>
 		<Russian>Áåëàÿ àêóëà (ðó÷í.)</Russian>
 	</TEXT>
@@ -2758,11 +2606,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_GRIZZLY</Tag>
 		<English>Subdued Grizzly</English>
 		<French>Grizzly (App.)</French>
-		<Italian>
-			<Text>Grizzly addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Orso grizzly domato</Italian>
 		<Polish>Poskromiony Grizzly</Polish>
 		<Russian>Ãðèçëè (ðó÷í.)</Russian>
 	</TEXT>
@@ -2776,6 +2620,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Ãèãàíòñêèé ëåíèâåö (ðó÷í.)</Russian>
+		<Italian>Bradipo gigante domato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GULL</Tag>
@@ -2790,11 +2635,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Gabbiano addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Gabbiano domato</Italian>
 		<Polish>Poskromiona Mewa</Polish>
 		<Russian>×àéêà (ðó÷í.)</Russian>
 	</TEXT>
@@ -2802,11 +2643,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_HAAST_EAGLE</Tag>
 		<English>Subdued Haast's Eagle</English>
 		<French>Aigle de Haast (App.)</French>
-		<Italian>
-			<Text>Aquila di Haast addomesticata</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Aquila di Haast domata</Italian>
 		<Polish>Poskromiony Orzeł Haasta</Polish>
 		<Russian>Îðåë Õààñòà (ðó÷í.)</Russian>
 	</TEXT>
@@ -2819,11 +2656,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Squalo martello addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Squalo martello domato</Italian>
 		<Polish>Poskromiony Rekin-Młot</Polish>
 		<Russian>Àêóëà-ìîëîò (ðó÷í.)</Russian>
 	</TEXT>
@@ -2837,16 +2670,13 @@
 		</French>
 		<Polish>Poskromiona Harpia Wielka</Polish>
 		<Russian>Ãàðïèÿ (ðó÷í.)</Russian>
+		<Italian>Aquila arpia domata</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_HAWK</Tag>
 		<English>Subdued Hawk</English>
 		<French>Faucon (App.)</French>
-		<Italian>
-			<Text>Falco addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Falco domato</Italian>
 		<Polish>Poskromiony Jastrząb</Polish>
 		<Russian>ßñòðåá (ðó÷í.)</Russian>
 	</TEXT>
@@ -2854,11 +2684,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_HIPPO</Tag>
 		<English>Subdued Hippopotamus</English>
 		<French>Hippopotame (App.)</French>
-		<Italian>
-			<Text>Ippopotamo addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Ippopotamo domato</Italian>
 		<Polish>Poskromiony Hippopotam</Polish>
 		<Russian>Áåãåìîò (ðó÷í.)</Russian>
 	</TEXT>
@@ -2866,11 +2692,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_HORNEDOWL</Tag>
 		<English>Subdued Great Horned Owl</English>
 		<French>Grand hibou à cornes (App.)</French>
-		<Italian>
-			<Text>Gufo della Virginia addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Gufo della Virginia domato</Italian>
 		<Polish>Poskromiony Puchacz</Polish>
 		<Russian>Ôèëèí (ðó÷í.)</Russian>
 	</TEXT>
@@ -2883,11 +2705,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Cavallo addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Cavallo domato</Italian>
 		<Polish>Poskromiony Koń</Polish>
 		<Russian>Ëîøàäü (ðó÷í.)</Russian>
 	</TEXT>
@@ -2900,11 +2718,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Megattera addomesticata</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Megattera domata</Italian>
 		<Spanish>
 			<Text>Subdued Humpback Whale</Text>
 			<Gender>Male</Gender>
@@ -2926,11 +2740,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Iena addomesticata</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Iena striata domata</Italian>
 		<Polish>Poskromiony Hiena</Polish>
 		<Russian>Ãèåíà (ðó÷í.)</Russian>
 	</TEXT>
@@ -2938,11 +2748,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_IBEX</Tag>
 		<English>Subdued Walia Ibex</English>
 		<French>Bouquetin (App.)</French>
-		<Italian>
-			<Text>Stambecco addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Stambecco del Semien domato</Italian>
 		<Polish>Poskromiony Koziorożec</Polish>
 		<Russian>Êîçåðîã (ðó÷í.)</Russian>
 	</TEXT>
@@ -2955,11 +2761,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Iguana addomesticata</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Iguana domata</Italian>
 		<Polish>Poskromiona Iguana</Polish>
 		<Russian>Èãóàíà (ðó÷í.)</Russian>
 	</TEXT>
@@ -2972,11 +2774,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Impala addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Impala domato</Italian>
 		<Polish>Poskromiona Impala</Polish>
 		<Russian>Èìïàëà (ðó÷í.)</Russian>
 	</TEXT>
@@ -2993,7 +2791,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Rinoceronte indiano ammaestrato</Italian>
+		<Italian>Rinoceronte indiano domato</Italian>
 		<Polish>Poskromiony Nosorożec Indyjski</Polish>
 		<Russian>Èíäèéñêèé íîñîðîã (ðó÷í.)</Russian>
 	</TEXT>
@@ -3006,11 +2804,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Giaguaro addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Giaguaro domato</Italian>
 		<Polish>Poskromiony Jaguar</Polish>
 		<Russian>ßãóàð (ðó÷í.)</Russian>
 	</TEXT>
@@ -3027,7 +2821,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Rinoceronte di Giava ammaestrato</Italian>
+		<Italian>Rinoceronte di Giava domato</Italian>
 		<Polish>Poskromiony Nosorożec Jawajski</Polish>
 		<Russian>ßâàíñêèé íîñîðîã (ðó÷í.)</Russian>
 	</TEXT>
@@ -3045,6 +2839,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Òðîï. òàðàíòóë (ðó÷í.)</Russian>
+		<Italian>Tarantola della giungla domata</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_KANGAROO_GREY</Tag>
@@ -3055,11 +2850,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Canguro grigio addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Canguro grigio domato</Italian>
 		<Polish>Poskromiony Kangur Szary</Polish>
 		<Russian>Ñåðûé êåíãóðó (ðó÷í.)</Russian>
 	</TEXT>
@@ -3072,11 +2863,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Canguro rosso addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Canguro rosso domato</Italian>
 		<Polish>Poskromiony Kangur Czerwony</Polish>
 		<Russian>Ðûæèé êåíãóðó (ðó÷í.)</Russian>
 	</TEXT>
@@ -3089,11 +2876,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Koala addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Koala domato</Italian>
 		<Polish>Poskromiony Koala</Polish>
 		<Russian>Êîàëà (ðó÷í.)</Russian>
 	</TEXT>
@@ -3106,11 +2889,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Drago di Komodo addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Drago di Komodo domato</Italian>
 		<Polish>Poskromiony Waran z Komodo</Polish>
 		<Russian>Êîìîäñêèé âàðàí (ðó÷í.)</Russian>
 	</TEXT>
@@ -3123,11 +2902,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Kookaburra addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Kookaburra domato</Italian>
 		<Polish>Poskromiony Zimorodek</Polish>
 		<Russian>Êóêàáàðà (ðó÷í.)</Russian>
 	</TEXT>
@@ -3140,11 +2915,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Lemure addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Lemure catta domato</Italian>
 		<Polish>Poskromiony Lemur</Polish>
 		<Russian>Ëåìóð (ðó÷í.)</Russian>
 	</TEXT>
@@ -3157,11 +2928,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Leone addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Leone domato</Italian>
 		<Polish>Poskromiony Lew</Polish>
 		<Russian>Ëåâ (ðó÷í.)</Russian>
 	</TEXT>
@@ -3176,6 +2943,7 @@
 		</German>
 		<Polish>Poskromiona Jaszczurka</Polish>
 		<Russian>ßùåðèöà (ðó÷í.)</Russian>
+		<Italian>Lucertola domata</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_LLAMA</Tag>
@@ -3186,11 +2954,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Lama addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Lama domato</Italian>
 		<Polish>Poskromiona Lama</Polish>
 		<Russian>Ëàìà (ðó÷í.)</Russian>
 	</TEXT>
@@ -3203,11 +2967,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Gavia addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Strolaga domata</Italian>
 		<Polish>Poskromiony Nur</Polish>
 		<Russian>Ãàãàðà (ðó÷í.)</Russian>
 	</TEXT>
@@ -3215,11 +2975,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_LYNX</Tag>
 		<English>Subdued Lynx</English>
 		<French>Lynx (App.)</French>
-		<Italian>
-			<Text>Lince addomesticata</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Lince domata</Italian>
 		<Polish>Poskromiony Ryś</Polish>
 		<Russian>Ðûñü (ðó÷í.)</Russian>
 	</TEXT>
@@ -3227,11 +2983,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_MACAW</Tag>
 		<English>Subdued Macaw</English>
 		<French>Ara (App.)</French>
-		<Italian>
-			<Text>Ara addomesticata</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Pappagallo ara domato</Italian>
 		<Polish>Poskromiona Ara</Polish>
 		<Russian>Àðà (ðó÷í.)</Russian>
 	</TEXT>
@@ -3244,11 +2996,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Sgombro addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Sgombro domato</Italian>
 		<Polish>Poskromiona Makrela</Polish>
 		<Russian>Ìàêðåëü (ðó÷í.)</Russian>
 	</TEXT>
@@ -3263,6 +3011,7 @@
 		</German>
 		<Polish>Poskromiony Tapir Malajski</Polish>
 		<Russian>Ìàëàéñêèé òàïèð (ðó÷í.)</Russian>
+		<Italian>Tapiro malese domato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MAMMOTH</Tag>
@@ -3277,11 +3026,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Mammut addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Mammut domato</Italian>
 		<Polish>Poskromiony Mamut</Polish>
 		<Russian>Ìàìîíò (ðó÷í.)</Russian>
 	</TEXT>
@@ -3294,11 +3039,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Mandrillo addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Mandrillo domato</Italian>
 		<Polish>Poskromiony Mandryl</Polish>
 		<Russian>Ìàíäðèë (ðó÷í.)</Russian>
 	</TEXT>
@@ -3312,6 +3053,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Ãðèâèñòûé âîëê (ðó÷í.)</Russian>
+		<Italian>Lupo dalla criniera domato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MARLIN</Tag>
@@ -3322,11 +3064,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Pesce vela addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Marlin domato</Italian>
 		<Polish>Poskromiony Marlin</Polish>
 		<Russian>Ìàðëèí (ðó÷í.)</Russian>
 	</TEXT>
@@ -3339,11 +3077,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Balenottera addomesticata</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Balenottera minore domata</Italian>
 		<Polish>Poskromiony Płetwal</Polish>
 		<Russian>Ïîëîñàòèê (ðó÷í.)</Russian>
 	</TEXT>
@@ -3351,11 +3085,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_MOA</Tag>
 		<English>Subdued Moa</English>
 		<French>Moa (App.)</French>
-		<Italian>
-			<Text>Moa addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Uccello moa domato</Italian>
 		<Polish>Poskromione Moa</Polish>
 		<Russian>Ìîà (ðó÷í.)</Russian>
 	</TEXT>
@@ -3363,11 +3093,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_MONITOR</Tag>
 		<English>Subdued Nile Monitor</English>
 		<French>Varan du Nil (App.)</French>
-		<Italian>
-			<Text>Varano del Nilo addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Varano del Nilo domato</Italian>
 		<Polish>Poskromiony Krokodyl Nilowy</Polish>
 		<Russian>Íèëüñêèé âàðàí (ðó÷í.)</Russian>
 	</TEXT>
@@ -3375,11 +3101,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_MOOSE</Tag>
 		<English>Subdued Moose</English>
 		<French>Elan (App.)</French>
-		<Italian>
-			<Text>Alce addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Alce domato</Italian>
 		<Polish>Poskromiony Łoś</Polish>
 		<Russian>Ëîñü (ðó÷í.)</Russian>
 	</TEXT>
@@ -3387,11 +3109,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_MOUFLON</Tag>
 		<English>Subdued Mouflon</English>
 		<French>Mouflon (App.)</French>
-		<Italian>
-			<Text>Muflone addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Muflone domato</Italian>
 		<Polish>Poskromiony Muflon</Polish>
 		<Russian>Ìóôëîí (ðó÷í.)</Russian>
 	</TEXT>
@@ -3410,16 +3128,13 @@
 		</German>
 		<Polish>Poskromoiony Tapir Górski</Polish>
 		<Russian>Ãîðíûé òàïèð (ðó÷í.)</Russian>
+		<Italian>Tapiro delle Ande domato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MUSKOX</Tag>
 		<English>Subdued Musk Ox</English>
 		<French>Boeuf musqué (App.)</French>
-		<Italian>
-			<Text>Bue muschiato addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Bue muschiato domato</Italian>
 		<Polish>Poskromiony Wół Piżmowy</Polish>
 		<Russian>Îâöåáûê (ðó÷í.)</Russian>
 	</TEXT>
@@ -3432,11 +3147,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Narvalo addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Narvalo domato</Italian>
 		<Polish>Poskromiony Narwal</Polish>
 		<Russian>Íàðâàë (ðó÷í.)</Russian>
 	</TEXT>
@@ -3449,11 +3160,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Coccodrillo del Nilo addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Coccodrillo del Nilo domato</Italian>
 		<Polish>Poskromiony Krokodyl Nilowy</Polish>
 		<Russian>Íèëüñêèé êðîêîäèë (ðó÷í.)</Russian>
 	</TEXT>
@@ -3467,6 +3174,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Ñóì÷àòûé ìóðàâüåä (ðó÷í.)</Russian>
+		<Italian>Numbat domato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_OKAPI</Tag>
@@ -3477,11 +3185,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Okapi addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Okapi domato</Italian>
 		<Polish>Poskromione Okapi</Polish>
 		<Russian>Îêàïè (ðó÷í.)</Russian>
 	</TEXT>
@@ -3495,6 +3199,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Îïîññóì (ðó÷í.)</Russian>
+		<Italian>Opossum domato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ORANGUTAN</Tag>
@@ -3505,11 +3210,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Orangotango addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Orango domato</Italian>
 		<Polish>Poskromiony Orangutan</Polish>
 		<Russian>Îðàíãóòàíã (ðó÷í.)</Russian>
 	</TEXT>
@@ -3522,11 +3223,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Orca addomesticata</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Orca domata</Italian>
 		<Polish>Poskromiona Orka</Polish>
 		<Russian>Êàñàòêà (ðó÷í.)</Russian>
 	</TEXT>
@@ -3543,11 +3240,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Struzzo addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Struzzo domato</Italian>
 		<Polish>Poskromiony Struś</Polish>
 		<Russian>Ñòðàóñ (ðó÷í.)</Russian>
 	</TEXT>
@@ -3560,11 +3253,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Bufaga addomesticata</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Bufaga domata</Italian>
 		<Polish>Poskromiony Bąkojad</Polish>
 		<Russian>Ñêâîðåö (ðó÷í.)</Russian>
 	</TEXT>
@@ -3572,11 +3261,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_PANDA_BEAR</Tag>
 		<English>Subdued Giant Panda</English>
 		<French>Panda Géant (App.)</French>
-		<Italian>
-			<Text>Panda gigante addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Panda gigante domato</Italian>
 		<Polish>Poskromiona Panda Wielka</Polish>
 		<Russian>Ãèãàíòñêàÿ ïàíäà (ðó÷í.)</Russian>
 	</TEXT>
@@ -3593,11 +3278,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Pantera addomesticata</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Pantera domata</Italian>
 		<Polish>Poskromiona Pantera</Polish>
 		<Russian>Ïàíòåðà (ðó÷í.)</Russian>
 	</TEXT>
@@ -3607,6 +3288,7 @@
 		<French>Perroquet (App.)</French>
 		<Polish>Poskromiona Papuga</Polish>
 		<Russian>Ïîïóãàé (ðó÷í.)</Russian>
+		<Italian>Pappagallo domato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PEACOCK</Tag>
@@ -3617,11 +3299,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Pavone addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Pavone domato</Italian>
 		<Polish>Poskromiony Paw</Polish>
 		<Russian>Ïàâëèí (ðó÷í.)</Russian>
 	</TEXT>
@@ -3639,16 +3317,13 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Ïèíãâèí (ðó÷í.)</Russian>
+		<Italian>Pinguino imperatore domato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PHEASANT</Tag>
 		<English>Subdued Pheasant</English>
 		<French>Faisan (App.)</French>
-		<Italian>
-			<Text>Fagiano addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Fagiano domato</Italian>
 		<Polish>Poskromiony Bażant</Polish>
 		<Russian>Ôàçàí (ðó÷í.)</Russian>
 	</TEXT>
@@ -3656,11 +3331,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_PIGEON</Tag>
 		<English>Subdued Pigeon</English>
 		<French>Pigeon (App.)</French>
-		<Italian>
-			<Text>Piccione addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Piccione domato</Italian>
 		<Polish>Poskromiony Gołąb</Polish>
 		<Russian>Ãîëóáü (ðó÷í.)</Russian>
 	</TEXT>
@@ -3668,11 +3339,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_PIG_NEW</Tag>
 		<English>Subdued Swine</English>
 		<French>Cochon (App.)</French>
-		<Italian>
-			<Text>Maiale addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Maiale domato</Italian>
 		<Polish>Poskromiona Zwinia</Polish>
 		<Russian>Ñâèíüÿ (ðó÷í.)</Russian>
 	</TEXT>
@@ -3685,22 +3352,14 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Ornitorinco addomesticato:Ornitorinchi addomesticati</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Ornitorinco domato</Italian>
 		<Russian>Óòêîíîñ (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_POLARBEAR</Tag>
 		<English>Subdued Polar Bear</English>
 		<French>Ours polaire (App.)</French>
-		<Italian>
-			<Text>Orso polare addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Orso polare domato</Italian>
 		<Polish>Poskromiony Niedźwiedź Polarny</Polish>
 		<Russian>Áåëûé ìåäâåäü (ðó÷í.)</Russian>
 	</TEXT>
@@ -3714,6 +3373,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Ïîññóì (ðó÷í.)</Russian>
+		<Italian>Tricosuro volpino domato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PROCOPTODON</Tag>
@@ -3724,11 +3384,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Procoptodonte addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Procoptodonte domato</Italian>
 		<Polish>Poskromiony Prokoptodon</Polish>
 		<Russian>Ïðîêîïòîäîí (ðó÷í.)</Russian>
 	</TEXT>
@@ -3745,11 +3401,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Vipera soffiatrice addomesticata</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Vipera soffiante domata</Italian>
 		<Polish>Poskromiona Żmija Sykliwa</Polish>
 		<Russian>Øóìÿùàÿ ãàäþêà (ðó÷í.)</Russian>
 	</TEXT>
@@ -3763,6 +3415,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Карликовый бегемот (ручн.)</Russian>
+		<Italian>Ippopotamo pigmeo domato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_QUOLL</Tag>
@@ -3773,11 +3426,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Quoll addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Quoll tigre domato</Italian>
 		<Spanish>SubduedQuoll</Spanish>
 		<Polish>Poskromiony Quoll</Polish>
 		<Russian>Ñóì÷àòàÿ êóíèöà (ðó÷í.)</Russian>
@@ -3786,11 +3435,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_RACCOON</Tag>
 		<English>Subdued Raccoon</English>
 		<French>Raton laveur (App.)</French>
-		<Italian>
-			<Text>Procione addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Procione domato</Italian>
 		<Polish>Poskromiony Szop Pracz</Polish>
 		<Russian>Åíîò (ðó÷í.)</Russian>
 	</TEXT>
@@ -3803,11 +3448,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Ratele addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Tasso del miele domato</Italian>
 		<Polish>Poskromiony Miodożer</Polish>
 		<Russian>Ìåäîåä (ðó÷í.)</Russian>
 	</TEXT>
@@ -3817,6 +3458,7 @@
 		<French>Corbeau (App.)</French>
 		<Polish>Poskromiona Wrona</Polish>
 		<Russian>Âîðîí (ðó÷í.)</Russian>
+		<Italian>Corvo imperiale domato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_RAY_EAGLE</Tag>
@@ -3827,11 +3469,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Aquila di mare addomesticata</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Aquila di mare domata</Italian>
 		<Polish>Poskromiony Płaszczka</Polish>
 		<Russian>Îðëÿêîâûé ñêàò (ðó÷í.)</Russian>
 	</TEXT>
@@ -3848,11 +3486,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Manta addomesticata</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Manta domata</Italian>
 		<Polish>Poskromiona Manta</Polish>
 		<Russian>Ìàíòà (ðó÷í.)</Russian>
 	</TEXT>
@@ -3862,6 +3496,7 @@
 		<French>Pingouin torda (App.)</French>
 		<Polish>Poskromiona Alka</Polish>
 		<Russian>Ãàãàðêà (ðó÷í.)</Russian>
+		<Italian>Gazza marina domata</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_REDFOX</Tag>
@@ -3872,11 +3507,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Volpe rossa addomesticata</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Volpe rossa domata</Italian>
 		<Polish>Poskromiony Lis Rudy</Polish>
 		<Russian>Ëèñèöà (ðó÷í.)</Russian>
 	</TEXT>
@@ -3884,11 +3515,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_REDPANDA</Tag>
 		<English>Subdued Red Panda</English>
 		<French>Panda roux (App.)</French>
-		<Italian>
-			<Text>Panda rosso addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Panda rosso domato</Italian>
 		<Polish>Poskromiona Panda Czerwona</Polish>
 		<Russian>Êðàñíàÿ ïàíäà (ðó÷í.)</Russian>
 	</TEXT>
@@ -3901,11 +3528,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Squalo di barriera addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Squalo del reef domato</Italian>
 		<Polish>Poskromiony Żarłacz Karaibski</Polish>
 		<Russian>Ðèôîâàÿ àêóëà (ðó÷í.)</Russian>
 	</TEXT>
@@ -3913,11 +3536,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_RHEA</Tag>
 		<English>Subdued Rhea</English>
 		<French>Nandou (App.)</French>
-		<Italian>
-			<Text>Nandù addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Nandù domato</Italian>
 		<Polish>Poskromione Nandu</Polish>
 		<Russian>Íàíäó (ðó÷í.)</Russian>
 	</TEXT>
@@ -3930,11 +3549,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Coccodrillo (grande) addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Coccodrillo di fiume (grande) domato</Italian>
 		<Polish>Poskromiony Krokodyl (duży)</Polish>
 		<Russian>Êðóïíûé êðîêîäèë (ðó÷í.)</Russian>
 	</TEXT>
@@ -3947,11 +3562,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Coccodrillo (piccolo) addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Coccodrillo di fiume (piccolo) domato</Italian>
 		<Polish>Poskromiony Krokodyl (mały)</Polish>
 		<Russian>Ìåëêèé êðîêîäèë (ðó÷í.)</Russian>
 	</TEXT>
@@ -3964,11 +3575,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Pinguino Rockhopper addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Pinguino saltarocce domato</Italian>
 		<Polish>Poskromiony Pingwin</Polish>
 		<Russian>Ñêàëèñòûé ïèíãâèí (ðó÷í.)</Russian>
 	</TEXT>
@@ -3983,16 +3590,13 @@
 		</German>
 		<Polish>Oswojony Tygrys Szablozębny</Polish>
 		<Russian>Ñàáëåçóáûé òèãð (ðó÷í.)</Russian>
+		<Italian>Tigre dai denti a sciabola domata</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SAIGA</Tag>
 		<English>Subdued Saiga Antelope</English>
 		<French>Saiga (App.)</French>
-		<Italian>
-			<Text>Saiga addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Antilope delle steppe domata</Italian>
 		<Polish>Poskromiona Saiga</Polish>
 		<Russian>Ñàéãàê (ðó÷í.)</Russian>
 	</TEXT>
@@ -4005,11 +3609,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Coccodrillo marino (grande) addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Coccodrillo marino (grande) domato</Italian>
 		<Polish>Poskromiony Krokodyl Różańcowy (duży)</Polish>
 		<Russian>Áîë. ìîð. êðîêîäèë (ðó÷í.)</Russian>
 	</TEXT>
@@ -4022,11 +3622,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Coccodrillo marino (piccolo) addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Coccodrillo marino (piccolo) domato</Italian>
 		<Polish>Poskromiony Krokodyl Różańcowy (mały)</Polish>
 		<Russian>Ìàë. ìîð. êðîêîäèë (ðó÷í.)</Russian>
 	</TEXT>
@@ -4036,6 +3632,7 @@
 		<French>Pigargue empereur (App.)</French>
 		<Polish>Poskromiony Bielik Olbrzymi</Polish>
 		<Russian>Îðëàí (ðó÷í.)</Russian>
+		<Italian>Aquila di mare di Steller domata</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SEALION_LAND</Tag>
@@ -4046,11 +3643,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Leone marino addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Leone di mare domato (terra)</Italian>
 		<Polish>Poskromiony Lew Morski</Polish>
 		<Russian>Âîäíûé ñèâó÷ (ðó÷í.)</Russian>
 	</TEXT>
@@ -4063,11 +3656,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Leone marino addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Leone di mare domato (mare)</Italian>
 		<Polish>Poskromiony Lew Morski</Polish>
 		<Russian>Íàçåì. ñèâó÷ (ðó÷í.)</Russian>
 	</TEXT>
@@ -4079,11 +3668,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>
-			<Text>Lontra marina addomesticata</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Lontra marina domata</Italian>
 		<Polish>Poskromiony Wydra Morska</Polish>
 		<Russian>Êàëàí (ðó÷í.)</Russian>
 	</TEXT>
@@ -4100,11 +3685,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Tartaruga marina addomesticata</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Tartaruga di mare domata</Italian>
 		<Polish>Poskromiony Żółw Morski</Polish>
 		<Russian>Ìîðñêàÿ ÷åðåïàõà (ðó÷í.)</Russian>
 	</TEXT>
@@ -4114,6 +3695,7 @@
 		<French>Messager sagittaire (App.)</French>
 		<Polish>Poskromiony Sekretarz</Polish>
 		<Russian>Ïòèöà-ñåêðåòàðü (ðó÷í.)</Russian>
+		<Italian>Serpentario domato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SIBERIANTIGER</Tag>
@@ -4124,11 +3706,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Tigre siberiana addomesticata</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Tigre siberiana domata</Italian>
 		<Polish>Poskromiony Tygrys Syberyjski</Polish>
 		<Russian>Ñèáèðñêèé òèãð (ðó÷í.)</Russian>
 	</TEXT>
@@ -4140,11 +3718,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>
-			<Text>Moffetta addomesticata</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Puzzola domata</Italian>
 		<Polish>Poskromiony Skunks</Polish>
 		<Russian>Ñêóíñ (ðó÷í.)</Russian>
 	</TEXT>
@@ -4152,11 +3726,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_SLOTHBEAR</Tag>
 		<English>Subdued Sloth Bear</English>
 		<French>Ours lippu (App.)</French>
-		<Italian>
-			<Text>Orso pigro addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Orso labiato domato</Italian>
 		<Polish>Poskromiony Wargacz</Polish>
 		<Russian>Ãóáà÷ (ðó÷í.)</Russian>
 	</TEXT>
@@ -4164,11 +3734,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_SNOWLEOPARD</Tag>
 		<English>Subdued Snow Leopard</English>
 		<French>Léopard des neiges (App.)</French>
-		<Italian>
-			<Text>Leopardo delle nevi addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Leopardo delle nevi domato</Italian>
 		<Polish>Poskromiony</Polish>
 		<Russian>Ñíåæíûé áàðñ (ðó÷í.)</Russian>
 	</TEXT>
@@ -4176,11 +3742,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_SPECTACLEDBEAR</Tag>
 		<English>Subdued Spectacled Bear</English>
 		<French>Ours à lunettes (App.)</French>
-		<Italian>
-			<Text>Orso giocoliere addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Orso dagli occhiali domato</Italian>
 		<Polish>Poskromiony Niedźwiedź Andyjski</Polish>
 		<Russian>Î÷êîâûé ìåäâåäü (ðó÷í.)</Russian>
 	</TEXT>
@@ -4188,11 +3750,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_STAG_DEER</Tag>
 		<English>Subdued Deer</English>
 		<French>Cerf (App.)</French>
-		<Italian>
-			<Text>Cervo addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Cervo domato</Italian>
 		<Polish>Poskromiony Jeleń</Polish>
 		<Russian>Îëåíü (ðó÷í.)</Russian>
 	</TEXT>
@@ -4200,11 +3758,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_SUNBEAR</Tag>
 		<English>Subdued Sun Bear</English>
 		<French>Ours malais (App.)</French>
-		<Italian>
-			<Text>Orso sole addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Orso malese domato</Italian>
 		<Polish>Poskromiony Niedźwiedź Malajski</Polish>
 		<Russian>Ìàëàéñêèé ìåäâåäü (ðó÷í.)</Russian>
 	</TEXT>
@@ -4217,11 +3771,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Tapiro addomesticato (Baird's)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Tapiro di Baird domato</Italian>
 		<Polish>Poskromiony Tapir Panamski</Polish>
 		<Russian>Òàïèð (ðó÷í.)</Russian>
 	</TEXT>
@@ -4234,11 +3784,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Diavolo della Tasmania addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Diavolo della Tasmania domato</Italian>
 		<Polish>Poskromiony Diabeł Tasmański</Polish>
 		<Russian>Òàñìàíñêèé äüÿâîë (ðó÷í.)</Russian>
 	</TEXT>
@@ -4250,11 +3796,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>
-			<Text>Sterna artica addomesticata</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Sterna artica domata</Italian>
 		<Polish>Poskromiona Rybitwa</Polish>
 		<Russian>Ïîëÿðíàÿ êðà÷êà (ðó÷í.)</Russian>
 	</TEXT>
@@ -4268,16 +3810,13 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Ñóì÷àòûé âîëê (ðó÷í.)</Russian>
+		<Italian>Tilacino domato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_TOUCAN</Tag>
 		<English>Subdued Toucan</English>
 		<French>Toucan (App.)</French>
-		<Italian>
-			<Text>Tucano addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Tucano domato</Italian>
 		<Polish>Poskromiony Tukan</Polish>
 		<Russian>Òóêàí (ðó÷í.)</Russian>
 	</TEXT>
@@ -4291,6 +3830,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Ëåíèâåö (ðó÷í.)</Russian>
+		<Italian>Bradipo tridattile domato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_TUNA</Tag>
@@ -4301,11 +3841,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Tonno addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Tonno domato</Italian>
 		<Polish>Poskromiony Tuńczyk</Polish>
 		<Russian>Òóíåö (ðó÷í.)</Russian>
 	</TEXT>
@@ -4317,11 +3853,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>
-			<Text>Tacchino addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Tacchino domato</Italian>
 		<Polish>Poskromiony Indyk</Polish>
 		<Russian>Èíäåéêà (ðó÷í.)</Russian>
 	</TEXT>
@@ -4338,11 +3870,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Vipera addomesticata</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Vipera domata</Italian>
 		<Polish>Poskromiona Żmija</Polish>
 		<Russian>Ãàäþêà (ðó÷í.)</Russian>
 	</TEXT>
@@ -4354,6 +3882,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
+		<Italian>Vipera di Russell domata</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_VULTURE</Tag>
@@ -4364,11 +3893,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Avvoltoio addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Avvoltoio domato</Italian>
 		<Polish>Poskromiony Sęp</Polish>
 		<Russian>Ãðèô (ðó÷í.)</Russian>
 	</TEXT>
@@ -4381,11 +3906,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Wallaby addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Wallaby delle rocce domato</Italian>
 		<Polish>Poskromiona Walabia</Polish>
 		<Russian>Êåíãóðó (ðó÷í.)</Russian>
 	</TEXT>
@@ -4398,11 +3919,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Wallaroo addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Wallaroo domato</Italian>
 		<Polish>Poskromiony Kangur Górski</Polish>
 		<Russian>Ãîðíûé êåíãóðó (ðó÷í.)</Russian>
 	</TEXT>
@@ -4415,11 +3932,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Tricheco addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Tricheco domato</Italian>
 		<Polish>Poskromiony Mors</Polish>
 		<Russian>Ìîðæ (ðó÷í.)</Russian>
 	</TEXT>
@@ -4432,11 +3945,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Facocero addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Facocero domato</Italian>
 		<Polish>Poskromiony Guziec</Polish>
 		<Russian>Áîðîäàâî÷íèê (ðó÷í.)</Russian>
 	</TEXT>
@@ -4449,11 +3958,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Squalo balena addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Squalo balena domato</Italian>
 		<Polish>Poskromiony Rekin Wielorybi</Polish>
 		<Russian>Êèòîâàÿ àêóëà (ðó÷í.)</Russian>
 	</TEXT>
@@ -4470,7 +3975,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>Rinoceronte bianco ammaestrato</Italian>
+		<Italian>Rinoceronte bianco domato</Italian>
 		<Polish>Poskromiony Nosorożec Biały</Polish>
 		<Russian>Áåëûé íîñîðîã (ðó÷í.)</Russian>
 	</TEXT>
@@ -4483,11 +3988,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Gnu addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Gnu domato</Italian>
 		<Polish>Poskromione Gnu</Polish>
 		<Russian>Ãíó (ðó÷í.)</Russian>
 	</TEXT>
@@ -4495,11 +3996,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_WOLF</Tag>
 		<English>Subdued Wolf</English>
 		<French>Loup (App.)</French>
-		<Italian>
-			<Text>Lupo addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Lupo grigio domato</Italian>
 		<Polish>Poskromiony Wilk</Polish>
 		<Russian>Âîëê (ðó÷í.)</Russian>
 	</TEXT>
@@ -4507,11 +4004,7 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_WOLVERINE</Tag>
 		<English>Subdued Wolverine</English>
 		<French>Carcajou (App.)</French>
-		<Italian>
-			<Text>Ghiottone addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Ghiottone domato</Italian>
 		<Polish>Poskromiony Rosomak</Polish>
 		<Russian>Ðîñîìàõà (ðó÷í.)</Russian>
 	</TEXT>
@@ -4525,6 +4018,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Âîìáàò (ðó÷í.)</Russian>
+		<Italian>Vombato domato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ZEBRA</Tag>
@@ -4539,11 +4033,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Zebra addomesticata:Zebre addomesticate</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Zebra domata</Italian>
 		<Spanish>Cebra</Spanish>
 		<Polish>Poskromiona Zebra</Polish>
 		<Russian>Çåáðà (ðó÷í.)</Russian>
@@ -4556,11 +4046,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<Italian>
-			<Text>Storie di beluga</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Epica del beluga</Italian>
 		<Polish>Opowieści o Biełudze</Polish>
 		<Russian>Áåëóõà (ñêàç)</Russian>
 	</TEXT>
@@ -4572,11 +4058,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<Italian>
-			<Text>Storie di merluzzi</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Epica del merluzzo</Italian>
 		<Polish>Opowieści o Dorszu</Polish>
 		<Russian>Òðåñêà (ñêàç)</Russian>
 	</TEXT>
@@ -4588,11 +4070,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<Italian>
-			<Text>Storie di granchi</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Epica del granchio</Italian>
 		<Polish>Opowieści o Krabie</Polish>
 		<Russian>Êðàá (ñêàç)</Russian>
 	</TEXT>
@@ -4604,11 +4082,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<Italian>
-			<Text>Storie di delfini</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Epica del delfino</Italian>
 		<Polish>Opowieści o Delfinie</Polish>
 		<Russian>Äåëüôèí (ñêàç)</Russian>
 	</TEXT>
@@ -4620,11 +4094,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<Italian>
-			<Text>Storie di dugonghi</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Epica del dugongo</Italian>
 		<Polish>Opowieści o Dugongu</Polish>
 		<Russian>Äþãîíü (ñêàç)</Russian>
 	</TEXT>
@@ -4636,11 +4106,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
-		<Italian>
-			<Text>Storie di calamari giganti</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Epica del calamaro gigante</Italian>
 		<Polish>Opowieści o Wielkiej Kałamarnicy</Polish>
 		<Russian>Ãèãàíñêèé êàëüìàð (ñêàç)</Russian>
 	</TEXT>
@@ -4652,11 +4118,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<Italian>
-			<Text>Storie di grandi squali bianchi</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Epica del grande squalo bianco</Italian>
 		<Polish>Opowieści o Żarłaczu Białym</Polish>
 		<Russian>Áåëàÿ àêóëà (ñêàç)</Russian>
 	</TEXT>
@@ -4668,11 +4130,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<Italian>
-			<Text>Storie di squali martelli</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Epica dello squalo martello</Italian>
 		<Polish>Opowieści o Rekini-Młocie</Polish>
 		<Russian>Àêóëà-ìîëîò (ñêàç)</Russian>
 	</TEXT>
@@ -4689,11 +4147,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Storie di megattere</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Epica della megattera</Italian>
 		<Spanish>
 			<Text>Tales of Humpback Whale</Text>
 			<Gender>Male</Gender>
@@ -4710,11 +4164,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<Italian>
-			<Text>Storie di sgombri</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Epica dello sgombro</Italian>
 		<Polish>Opowieści o Makreli</Polish>
 		<Russian>Ìàêðåëü (ñêàç)</Russian>
 	</TEXT>
@@ -4726,11 +4176,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<Italian>
-			<Text>Storie di pesci vela</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Epica del marlin</Italian>
 		<Polish>Opowieści o Marlinie</Polish>
 		<Russian>Ìàðëèí (ñêàç)</Russian>
 	</TEXT>
@@ -4742,11 +4188,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<Italian>
-			<Text>Storie di balenottere</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Epica della balenottera minore</Italian>
 		<Polish>Opowieści o Płetwalu</Polish>
 		<Russian>Ïîëîñàòèê (ñêàç)</Russian>
 	</TEXT>
@@ -4758,11 +4200,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<Italian>
-			<Text>Storie di narvali</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Epica del narvalo</Italian>
 		<Polish>Opowieści o Narwalu</Polish>
 		<Russian>Íàðâàë (ñêàç)</Russian>
 	</TEXT>
@@ -4774,11 +4212,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<Italian>
-			<Text>Storie di orche</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Epica dell'orca</Italian>
 		<Polish>Opowieści o Orce</Polish>
 		<Russian>Êàñàòêà (ñêàç)</Russian>
 	</TEXT>
@@ -4790,11 +4224,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<Italian>
-			<Text>Storie di aquile di mare</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Epica dell'aquila di mare</Italian>
 		<Polish>Opowieści o Płaszczce</Polish>
 		<Russian>Îðëÿêîâûé ñêàò (ñêàç)</Russian>
 	</TEXT>
@@ -4806,11 +4236,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<Italian>
-			<Text>Storie di mante</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Epica della manta</Italian>
 		<Polish>Opowieści o Mancie</Polish>
 		<Russian>Ìàíòà (ñêàç)</Russian>
 	</TEXT>
@@ -4822,11 +4248,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<Italian>
-			<Text>Storie di squali di barriera</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Epica dello squalo del reef</Italian>
 		<Polish>Opowieści o Żarłaczu Karaibskim</Polish>
 		<Russian>Ðèôîâàÿ àêóëà (ñêàç)</Russian>
 	</TEXT>
@@ -4838,11 +4260,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
-		<Italian>
-			<Text>Storie di coccodrilli marini (grandi)</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Epica del coccodrillo marino (grande)</Italian>
 		<Polish>Opowieści o Krokodylu Różańcowym (dużym)</Polish>
 		<Russian>Áîë. ìîð. êðîêîäèë (ñêàç)</Russian>
 	</TEXT>
@@ -4854,11 +4272,7 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
-		<Italian>
-			<Text>Storie di coccodrilli marini (piccoli)</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Epica del coccodrillo marino (piccolo)</Italian>
 		<Polish>Opowieści o Krokodylu Różańcowym (małym)</Polish>
 		<Russian>Ìàë. ìîð. êðîêîäèë (ñêàç)</Russian>
 	</TEXT>
@@ -4866,11 +4280,7 @@
 		<Tag>TXT_KEY_UNIT_TALESOF_SEALION_SEA</Tag>
 		<English>Tales of Sea Lion</English>
 		<French>Histoires de Lions de mer</French>
-		<Italian>
-			<Text>Storie di leoni marini</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Epica del leone di mare (mare)</Italian>
 		<Polish>Opowieści o Lwie Morskim</Polish>
 		<Russian>Ìîðñêîé ëåâ (ñêàç)</Russian>
 	</TEXT>
@@ -4882,11 +4292,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<Italian>
-			<Text>Storie di tartarughe marine</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Epica della tartaruga di mare</Italian>
 		<Polish>Opowieści o Morskim Żółwiu</Polish>
 		<Russian>Ìîðñêàÿ ÷åðåïàõà (ñêàç)</Russian>
 	</TEXT>
@@ -4898,11 +4304,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<Italian>
-			<Text>Storie di tonni</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Epica del tonno</Italian>
 		<Polish>Opowieści o Tuńczyku</Polish>
 		<Russian>Òóíåö (ñêàç)</Russian>
 	</TEXT>
@@ -4914,11 +4316,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<Italian>
-			<Text>Storie di squali balena</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</Italian>
+		<Italian>Epica dello squalo balena</Italian>
 		<Polish>Opowieści o Rekinie Wielorybim</Polish>
 		<Russian>Êèòîâàÿ àêóëà (ñêàç)</Russian>
 	</TEXT>
@@ -4932,6 +4330,7 @@
 		</French>
 		<Polish>Oswojony Mrówkojad</Polish>
 		<Russian>Òðóáêîçóá (äîì.)</Russian>
+		<Italian>Oritteropo addomesticato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_AMPHIBIAN</Tag>
@@ -4939,10 +4338,12 @@
 		<French>Colonie d'Amphibiens</French>
 		<Polish>Kolonia Płazów</Polish>
 		<Russian>Êîëîíèÿ àìôèáèé</Russian>
+		<Italian>Anfibio addomesticato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Tag>
 		<English>Can build animal related buildings.</English>
+		<Italian>[ICON_BULLET]L'animale può [COLOR_HIGHLIGHT_TEXT]costruire edifici[COLOR_REVERT] relazionati agli [COLOR_HIGHLIGHT_TEXT]animali[COLOR_REVERT]</Italian> <!-- unit tamed mammoth -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Tag>
@@ -4954,6 +4355,7 @@
 		<French>Ours Lune (dompté)</French>
 		<Polish>Ujarzmiony Niedźwiedź Himalajski</Polish>
 		<Russian>Áåëîãðóäûé ìåäâåäü (äîì.)</Russian>
+		<Italian>Orso della luna addomesticato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_BAIRDS_TAPIR</Tag>
@@ -4968,11 +4370,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Tapiro di Baird addomesticato:Tapiri di Baird addomesticati</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Tapiro di Baird addomesticato</Italian>
 		<Polish>Oswojony Baird's Tapir</Polish>
 		<Russian>Òàïèð (äîì.)</Russian>
 	</TEXT>
@@ -4991,6 +4389,7 @@
 		</German>
 		<Polish>Oswojony Bizon</Polish>
 		<Russian>Áèçîí (äîì.)</Russian>
+		<Italian>Bisonte addomesticato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_BLACKBEAR</Tag>
@@ -4998,11 +4397,13 @@
 		<French>Ours Noir (dompté)</French>
 		<Polish>Ujarzmiony Niedźwiedź Czarny</Polish>
 		<Russian>×åðíûé ìåäâåäü (äîì.)</Russian>
+		<Italian>Orso nero addomesticato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_BLACK_RHINO</Tag>
 		<English>Tamed Black Rhinoceros</English>
 		<French>Rhinocéros noir dompté</French>
+		<Italian>Rinoceronte nero addomesticato</Italian>
 		<German>
 			<Text>Gezähmtes Spitzmaulnashorn:Gezähmten Spitzmaulnashorns:Gezähmten Spitzmaulnashorn:Gezähmte Spitzmaulnashorn:Gezähmte Spitzmaulnashörner:Gezähmten Spitzmaulnashörner:Gezähmten Spitzmaulnashörnern:Gezähmten Spitzmaulnashörner</Text>
 			<Gender>Neuter</Gender>
@@ -5026,6 +4427,7 @@
 		</German>
 		<Polish>Oswojony Dzik</Polish>
 		<Russian>Êàáàí (äîì.)</Russian>
+		<Italian>Cinghiale addomesticato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_BRAZILIAN_TAPIR</Tag>
@@ -5042,6 +4444,7 @@
 		</German>
 		<Polish>Oswojony Tapir Brazylijski</Polish>
 		<Russian>Áðàçèëüñêèé òàïèð (äîì.)</Russian>
+		<Italian>Tapiro di pianura addomesticato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_BROWN_BEAR</Tag>
@@ -5049,6 +4452,7 @@
 		<French>Ours brun (dompté)</French>
 		<Polish>Ujarzmiony Niedźwiedź Brunatny</Polish>
 		<Russian>Áóðûé ìåäâåäü (äîì.)</Russian>
+		<Italian>Orso bruno addomesticato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_BUFFALO</Tag>
@@ -5065,6 +4469,7 @@
 		</German>
 		<Polish>Oswojony Żubr</Polish>
 		<Russian>Áóéâîë</Russian>
+		<Italian>Bufalo africano addomesticato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_CAMEL</Tag>
@@ -5081,6 +4486,7 @@
 		</German>
 		<Polish>Oswojony Wielbłąd</Polish>
 		<Russian>Âåðáëþä (äîì.)</Russian>
+		<Italian>Cammello addomesticato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_CATTLE</Tag>
@@ -5092,6 +4498,7 @@
 		</French>
 		<Polish>Oswojony Tur</Polish>
 		<Russian>Êîðîâà</Russian>
+		<Italian>Bue addomesticato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_CAVE_BEAR</Tag>
@@ -5099,6 +4506,7 @@
 		<French>Ours des cavernes (dompté)</French>
 		<Polish>Ujarzmiony Niedźwiedź Jaskiniowy</Polish>
 		<Russian>Ïåùåðíûé ìåäâåäü (äîì.)</Russian>
+		<Italian>Orso delle caverne addomesticato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_DONKEY</Tag>
@@ -5115,12 +4523,14 @@
 		</German>
 		<Polish>Oswojony Osioł</Polish>
 		<Russian>Îñåë (äîì.)</Russian>
+		<Italian>Asino addomesticato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_DONKEY_PAIR</Tag>
 		<English>Tamed Donkey (Breeding Pair)</English>
 		<French>Couple reproducteur - Ânes</French>
 		<Russian>Çàâîä÷èê îñëîâ</Russian>
+		<Italian>Asino addomesticato (coppia da monta)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_ELEPHANT</Tag>
@@ -5132,6 +4542,7 @@
 		</French>
 		<Polish>Oswojony Słoń</Polish>
 		<Russian>Ñëîí (äîì.)</Russian>
+		<Italian>Elefante addomesticato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_GIRAFFE</Tag>
@@ -5143,6 +4554,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Æèðàô (äîì.)</Russian>
+		<Italian>Giraffa addomesticata</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_GRIZZLY</Tag>
@@ -5150,6 +4562,7 @@
 		<French>Grizzly (dompté)</French>
 		<Polish>Ujarzmiony Grizzly</Polish>
 		<Russian>Ãðèçëè (äîì.)</Russian>
+		<Italian>Orso grizzly addomesticato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_HIPPO</Tag>
@@ -5157,6 +4570,7 @@
 		<French>Hippopotame (dompté)</French>
 		<Polish>Oswojony Hipopotam</Polish>
 		<Russian>Áåãåìîò (äîì.)</Russian>
+		<Italian>Ippopotamo addomesticato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_HORSE</Tag>
@@ -5168,12 +4582,14 @@
 		</French>
 		<Polish>Oswojony Koń</Polish>
 		<Russian>Ëîøàäü (äîì.)</Russian>
+		<Italian>Cavallo addomesticato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_HORSE_PAIR</Tag>
 		<English>Tamed Horse (Breeding Pair)</English>
 		<French>Couple reproducteur - Chevaux</French>
 		<Russian>Çàâîä÷èê ëîøàäåé</Russian>
+		<Italian>Cavallo addomesticato (coppia da monta)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_INDIAN_RHINO</Tag>
@@ -5186,6 +4602,7 @@
 		<French>Rhinocéros Indien dompté</French>
 		<Polish>Oswojony Nosorożec Indyjski</Polish>
 		<Russian>Èíäèéñêèé íîñîðîã (äîì.)</Russian>
+		<Italian>Rinoceronte indiano addomesticato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_JAVA_RHINO</Tag>
@@ -5198,6 +4615,7 @@
 		</German>
 		<Polish>Oswojony Nosorożec Jawajski</Polish>
 		<Russian>ßâàíñêèé íîñîðîã (äîì.)</Russian>
+		<Italian>Rinoceronte di Giava addomesticato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_LION</Tag>
@@ -5212,11 +4630,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Leone ammaestrato:Leoni ammaestrati</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Leone addomesticato</Italian>
 		<Spanish>
 			<Text>Tamed Lion:Tamed Lion</Text>
 			<Gender>Male</Gender>
@@ -5235,6 +4649,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>ßùåðèöà (äîì.)</Russian>
+		<Italian>Lucertola addomesticata</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_LLAMA</Tag>
@@ -5251,6 +4666,7 @@
 		</German>
 		<Polish>Oswojona Llama</Polish>
 		<Russian>Ëàìà (äîì.)</Russian>
+		<Italian>Lama addomesticato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_MALAYAN_TAPIR</Tag>
@@ -5263,6 +4679,7 @@
 		</German>
 		<Polish>Oswojony Malayan Tapir</Polish>
 		<Russian>Ìàëàéñêèé òàïèð (äîì.)</Russian>
+		<Italian>Tapiro malese addomesticato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_MAMMOTH</Tag>
@@ -5279,6 +4696,7 @@
 		</German>
 		<Polish>Oswojony Mamut</Polish>
 		<Russian>Ìàìîíò (äîì.)</Russian>
+		<Italian>Mammut addomesticato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_MOUNTAIN_TAPIR</Tag>
@@ -5295,6 +4713,7 @@
 		</German>
 		<Polish>Oswojony Mountain Tapir</Polish>
 		<Russian>Ãîðíûé òàïèð (äîì.)</Russian>
+		<Italian>Tapiro delle Ande addomesticato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_MUSKOX</Tag>
@@ -5306,6 +4725,7 @@
 		</French>
 		<Polish>Oswojony Wół Piżmowy</Polish>
 		<Russian>Îâöåáûê (äîì.)</Russian>
+		<Italian>Bue muschiato addomesticato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_PANDA_BEAR</Tag>
@@ -5313,6 +4733,7 @@
 		<French>Panda Géant (dompté)</French>
 		<Polish>Ujarzmiony Panda Olbrzymia</Polish>
 		<Russian>Ãèãàíòñêàÿ ïàíäà (äîì.)</Russian>
+		<Italian>Panda gigante addomesticato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_PANTHER</Tag>
@@ -5327,11 +4748,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Pantera ammaestrata:Pantere ammaestrate</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Pantera addomesticata</Italian>
 		<Spanish>
 			<Text>Tamed Panther:Tamed Panther</Text>
 			<Gender>Female</Gender>
@@ -5346,6 +4763,7 @@
 		<French>Ours polaire (dompté)</French>
 		<Polish>Ujarzmiony Niedźwiedź Polarny</Polish>
 		<Russian>Áåëûé ìåäâåäü (äîì.)</Russian>
+		<Italian>Orso polare addomesticato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_REDPANDA</Tag>
@@ -5353,6 +4771,7 @@
 		<French>Panda roux (dompté)</French>
 		<Polish>Ujarzmiony Czerwona Panda</Polish>
 		<Russian>Êðàñíàÿ ïàíäà (äîì.)</Russian>
+		<Italian>Panda rosso addomesticato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_SLOTHBEAR</Tag>
@@ -5360,12 +4779,14 @@
 		<French>Ours lippu (dompté)</French>
 		<Polish>Ujarzmiony Wargacz</Polish>
 		<Russian>Ãóáà÷ (äîì.)</Russian>
+		<Italian>Orso labiato addomesticato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_SNAKE</Tag>
 		<English>Tamed Snake</English>
 		<French>Serpent (dompté)</French>
 		<Russian>Çìåÿ (äîì.)</Russian>
+		<Italian>Serpente addomesticato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_SNAKE_PEDIA</Tag>
@@ -5378,6 +4799,7 @@
 		<French>Ours à lunettes (dompté)</French>
 		<Polish>Ujarzmiony Niedźwiedź Andyjski</Polish>
 		<Russian>Î÷êîâûé ìåäâåäü (äîì.)</Russian>
+		<Italian>Orso dagli occhiali addomesticato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_SUNBEAR</Tag>
@@ -5385,6 +4807,7 @@
 		<French>Ours malais (dompté)</French>
 		<Polish>Ujarzmiony Niedźwiedź Malajski</Polish>
 		<Russian>Ìàëàéñêèé ìåäâåäü (äîì.)</Russian>
+		<Italian>Orso malese addomesticato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_WHITE_RHINO</Tag>
@@ -5397,6 +4820,7 @@
 		</German>
 		<Polish>Oswojony Nosorożec Biały</Polish>
 		<Russian>Áåëûé íîñîðîã (äîì.)</Russian>
+		<Italian>Rinoceronte bianco addomesticato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_WOLF</Tag>
@@ -5411,11 +4835,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Lupo ammaestrato:Lupi ammaestrati</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Lupo grigio addomesticato</Italian>
 		<Spanish>
 			<Text>Tamed Wolf:Tamed Wolf</Text>
 			<Gender>Male</Gender>
@@ -5429,6 +4849,7 @@
 		<English>Tamed Wolf (Breeding Pair)</English>
 		<French>Couple reproducteur - Loup</French>
 		<Russian>Çàâîä÷èê âîëêîâ</Russian>
+		<Italian>Lupo grigio (coppia da monta)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAPIR</Tag>
@@ -5443,11 +4864,7 @@
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Tapiro di Baird:Tapiri di Baird</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Tapiro di Baird</Italian>
 		<Spanish>
 			<Text>Tapir de Baird</Text>
 			<Gender>Male</Gender>
@@ -5477,6 +4894,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Ñóì÷àòûé âîëê</Russian>
+		<Italian>Tilacino</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_THYLACINE_PEDIA</Tag>
@@ -5487,11 +4905,7 @@
 		<Tag>TXT_KEY_UNIT_TRACKER</Tag>
 		<English>Tracker</English>
 		<French>Pisteur</French>
-		<Italian>
-			<Text>Cercatore di tracce</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Cercatore di tracce</Italian>
 		<Polish>Tropiciel</Polish>
 		<Russian>Çâåðîëîâ</Russian>
 	</TEXT>
@@ -5505,6 +4919,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Ëåíèâåö</Russian>
+		<Italian>Bradipo tridattile</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TREESLOTH_PEDIA</Tag>
@@ -5531,11 +4946,7 @@
 			<Gender>Female</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Vipera:Vipere</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Vipera</Italian>
 		<Spanish>
 			<Text>Víbora</Text>
 			<Gender>Female</Gender>
@@ -5554,6 +4965,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Öåïî÷íàÿ ãàäþêà</Russian>
+		<Italian>Vipera di Russell</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VIPER_CHAIN_PEDIA</Tag>
@@ -5586,6 +4998,7 @@
 		</Spanish>
 		<Polish>Walabia</Polish>
 		<Russian>Êåíãóðó</Russian>
+		<Italian>Wallaby delle rocce</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WALLABY_PEDIA</Tag>
@@ -5633,11 +5046,7 @@
 			<Gender>Neuter</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
-		<Italian>
-			<Text>Tricheco:Trichechi</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
+		<Italian>Tricheco</Italian>
 		<Spanish>
 			<Text>Morsa</Text>
 			<Gender>Female</Gender>
@@ -5688,6 +5097,7 @@
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Russian>Âîìáàò</Russian>
+		<Italian>Vombato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WOMBAT_PEDIA</Tag>
@@ -5714,9 +5124,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_DUCK</Tag>
 		<English>Tamed Duck</English>
+		<Italian>Anatra addomesticata</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAMED_TURKEY</Tag>
 		<English>Tamed Turkey</English>
+		<Italian>Tacchino addomesticato</Italian>
 	</TEXT>
 </Civ4GameText>

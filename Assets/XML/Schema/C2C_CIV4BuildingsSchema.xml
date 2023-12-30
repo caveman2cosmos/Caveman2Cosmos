@@ -951,6 +951,7 @@
 		<element type="DomainFreeExperiences" minOccurs="0"/>
 		<element type="DomainProductionModifiers" minOccurs="0"/>
 		<element type="BuildingHappinessChanges" minOccurs="0"/>
+		<element type="PrereqOrHeritage" minOccurs="0"/>
 		<element type="PrereqAmountBuildings" minOccurs="0"/>
 		<element type="PrereqInCityBuildings" minOccurs="0"/>
 		<element type="PrereqNotInCityBuildings" minOccurs="0"/>
@@ -1074,7 +1075,7 @@
 	<ElementType name="Civ4SpecialBuildingInfos" content="eltOnly">
 		<element type="SpecialBuildingInfos" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="Civ4Buildings" content="eltOnly">
+		<ElementType name="Civ4Buildings" content="eltOnly">
 		<element type="BuildingInfos" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<!-- Technology Affected Buildings: BEGIN -->
@@ -1171,6 +1172,9 @@
 	</ElementType>
 	<ElementType name="PrereqOrFeature" content="eltOnly">
 		<element type="PrereqFeature" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="PrereqOrHeritage" content="eltOnly">
+		<element type="Type" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="PrereqInCityBuildings" content="eltOnly">
 		<element type="BuildingType" minOccurs="0" maxOccurs="*"/>

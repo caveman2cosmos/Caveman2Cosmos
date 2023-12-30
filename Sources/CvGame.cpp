@@ -12,6 +12,7 @@
 #include "CvGlobals.h"
 #include "CvInitCore.h"
 #include "CvInfos.h"
+#include "CvUnitCombatInfo.h"
 #include "CvImprovementInfo.h"
 #include "CvBonusInfo.h"
 #include "CvMap.h"
@@ -495,8 +496,9 @@ void CvGame::onFinalInitialized(const bool bNewGame)
 		// Close will free any resources and display any warnings if we've just finished loading/saving
 		CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper(); wrapper.close();
 
-		gDLL->getInterfaceIFace()->clearSelectionList();
-		gDLL->getInterfaceIFace()->clearSelectedCities();
+		// Loading multiplayer games can change human status of players.
+		//	so as good a place as any to refresh game handicap here.
+		averageHandicaps();
 	}
 
 	for (int iI = 0; iI < MAX_TEAMS; iI++)
@@ -614,6 +616,7 @@ void CvGame::setInitialItems()
 {
 	OutputDebugString("setInitialItems: Start\n");
 	PROFILE_FUNC();
+	averageHandicaps();
 
 	// Toffer - Some victory conditions make no sense for games without competitors.
 	if (countCivPlayersAlive() < 2)
@@ -837,6 +840,12 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 	const bool bStartingGameSession = !bConstructorCall && (GC.getInitCore().getType() != GAME_NONE || m_bWorldBuilder);
 	m_bWorldBuilder = false;
 
+	if (bStartingGameSession && isFinalInitialized())
+	{
+		gDLL->getInterfaceIFace()->clearSelectionList();
+		gDLL->getInterfaceIFace()->clearSelectedCities();
+	}
+
 	GC.getInitCore().getDLLName();
 
 	//--------------------------------
@@ -844,6 +853,7 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 	uninit();
 
 	m_gameId = create_game_id();
+	m_eHandicap = eHandicap;
 	m_iElapsedGameTurns = 0;
 	m_iStartTurn = 0;
 	m_iStartYear = 0;
@@ -1217,7 +1227,12 @@ void CvGame::assignStartingPlots(const bool bScenario, const bool bMapScript)
 	PROFILE_FUNC();
 	gDLL->callUpdater(); // allow window updates during launch
 
-	if (!bScenario && !bMapScript)
+	if (bScenario)
+	{
+		// Earliest place identified where human players have been defined with handicaps for scenarios.
+		averageHandicaps();
+	}
+	else if (!bMapScript)
 	{
 		// Python override - Some mapscripts overide
 		bool bAssignStartingPlots = false;
@@ -1228,6 +1243,7 @@ void CvGame::assignStartingPlots(const bool bScenario, const bool bMapScript)
 			return;
 		}
 	}
+
 	std::vector<CvPlayerAI*> alivePlayers;
 	{
 		bool bAllDone = true;
@@ -2222,7 +2238,7 @@ void CvGame::update()
 	&& !gDLL->getInterfaceIFace()->getHeadSelectedCity()
 	&& !gDLL->GetWorldBuilderMode())
 	{
-		if (playerAct.hasIdleCity())
+		if (playerAct.hasIdleCity() && playerAct.isForcedCityCycle())
 		{
 			CvCity* city = playerAct.getIdleCity();
 			if (city)
@@ -7116,11 +7132,13 @@ void CvGame::updateMoves()
 					{
 						player.AI_unitUpdate();
 					}
+					/*
 					// A unit ready to move at this point is one the player needs to interact with
 					if (player.hasReadyUnautomatedUnit(true))
 					{
 						player.setTurnHadUIInteraction(true);
 					}
+					*/
 				}
 			}
 			else
@@ -7183,24 +7201,20 @@ void CvGame::updateTurnTimer()
 	PROFILE_FUNC();
 
 	// Are we using a turn timer?
-	if (isMPOption(MPOPTION_TURN_TIMER))
+	if (isMPOption(MPOPTION_TURN_TIMER)
+	&& (getElapsedGameTurns() > 0 || !isOption(GAMEOPTION_CORE_CUSTOM_START))
+	// Has the turn expired?
+	&& getTurnSlice() > getCutoffSlice())
 	{
-		if (getElapsedGameTurns() > 0 || !isOption(GAMEOPTION_CORE_CUSTOM_START))
+		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
-			// Has the turn expired?
-			if (getTurnSlice() > getCutoffSlice())
+			if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isTurnActive())
 			{
-				for (int iI = 0; iI < MAX_PLAYERS; iI++)
-				{
-					if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isTurnActive())
-					{
-						GET_PLAYER((PlayerTypes)iI).setEndTurn(true);
+				GET_PLAYER((PlayerTypes)iI).setEndTurn(true);
 
-						if (!isMPOption(MPOPTION_SIMULTANEOUS_TURNS) && !isSimultaneousTeamTurns())
-						{
-							break;
-						}
-					}
+				if (!isMPOption(MPOPTION_SIMULTANEOUS_TURNS) && !isSimultaneousTeamTurns())
+				{
+					break;
 				}
 			}
 		}
@@ -8484,8 +8498,6 @@ void CvGame::read(FDataStreamBase* pStream)
 	WRAPPER_READ_CLASS_ARRAY(wrapper,"CvGame", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_paiTechGameTurnDiscovered);
 	WRAPPER_READ_OBJECT_END(wrapper);
 
-	averageHandicaps();
-
 	//establish improvement costs
 	//for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
 	//{
@@ -8874,7 +8886,7 @@ void CvGame::addPlayer(PlayerTypes eNewPlayer, LeaderHeadTypes eLeader, Civiliza
 	GET_PLAYER(eNewPlayer).initInGame(eNewPlayer, bSetAlive);
 }
 
-void CvGame::changeHumanPlayer( PlayerTypes eOldHuman, PlayerTypes eNewHuman )
+void CvGame::changeHumanPlayer(PlayerTypes eOldHuman, PlayerTypes eNewHuman)
 {
 	PROFILE_EXTRA_FUNC();
 	// It's a multiplayer game, eep!
@@ -8900,6 +8912,8 @@ void CvGame::changeHumanPlayer( PlayerTypes eOldHuman, PlayerTypes eNewHuman )
 	}
 
 	GET_PLAYER(eOldHuman).setIsHuman(false);
+
+	averageHandicaps();
 }
 
 bool CvGame::isCompetingCorporation(CorporationTypes eCorporation1, CorporationTypes eCorporation2) const
@@ -10015,8 +10029,8 @@ void CvGame::doFlexibleDifficulty()
 			int multiplier = 3;
 			double default_difficult = ((double)biasMaxCap+(double)biasMinCap)*(1.0/3.0);
 			double diff = (std::max(biasMaxCap, biasMinCap)-std::min(biasMaxCap, biasMinCap) != 0 ? std::max(biasMaxCap, biasMinCap)-std::min(biasMaxCap, biasMinCap) : 1.0);
-			int stddevHandi = (stddev * (basicMaxCap/diff*100))/100;
-			int handicapBias = stddevHandi*((multiplier*playerX.getHandicapType())-(multiplier*default_difficult));
+			int stddevHandi = static_cast<int>((stddev * (basicMaxCap/diff*100))/100);
+			int handicapBias = static_cast<int>(stddevHandi*((multiplier*playerX.getHandicapType())-(multiplier*default_difficult)));
 
 			double normalized = 1.80*((double)(iCurrentScore-iLowestScore)/(double)(iBestScore-iLowestScore))-0.90;
 			double atanh2 = 2.0 * (std::log(1.0+normalized) - std::log(1.0-normalized))/2.0;

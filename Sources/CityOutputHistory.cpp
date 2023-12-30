@@ -2,11 +2,11 @@
  Essentially an extension on CvCity, i.e. not a generic class.
  Not far from being a generic though.
  */
-
-#include "FProfiler.h"
+#include "CvGameCoreDLL.h"
 
 #include "CityOutputHistory.h"
-#include "CvGameCoreDLL.h"
+#include "FProfiler.h"
+
 #include "CvGameAI.h"
 
 CityOutputHistory::CityOutputHistory()

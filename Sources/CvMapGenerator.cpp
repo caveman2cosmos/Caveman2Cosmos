@@ -1005,14 +1005,7 @@ int CvMapGenerator::calculateNumBonusesToAdd(BonusTypes eBonusType)
 	PROFILE_EXTRA_FUNC();
 	const CvBonusInfo& pBonusInfo = GC.getBonusInfo(eBonusType);
 
-	int iBaseCount =
-	(
-		pBonusInfo.getConstAppearance() +
-		GC.getGame().getMapRandNum(pBonusInfo.getRandAppearance1(), "calculateNumBonusesToAdd-1") +
-		GC.getGame().getMapRandNum(pBonusInfo.getRandAppearance2(), "calculateNumBonusesToAdd-2") +
-		GC.getGame().getMapRandNum(pBonusInfo.getRandAppearance3(), "calculateNumBonusesToAdd-3") +
-		GC.getGame().getMapRandNum(pBonusInfo.getRandAppearance4(), "calculateNumBonusesToAdd-4")
-	);
+	int iBaseCount = pBonusInfo.getRandAppearance();
 
 	iBaseCount += GC.getGame().countCivPlayersAlive() * pBonusInfo.getPercentPerPlayer(); // Toffer: Should imo be removed.
 

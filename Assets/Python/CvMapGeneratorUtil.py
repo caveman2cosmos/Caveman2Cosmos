@@ -1396,7 +1396,7 @@ def isSinglePlotIsland(pPlot):
 	while iX < iPlotX + 2:
 		iY = iPlotY - 1
 		while iY < iPlotY + 2:
-			if (iX != iPlotX or iY != iPlotY) and not MAP.plot(iX, iY).isWater():
+			if (iX != iPlotX or iY != iPlotY) and MAP.plot(iX, iY) and not MAP.plot(iX, iY).isWater():
 				return False
 			iY += 1
 		iX += 1
@@ -1648,7 +1648,7 @@ def placeC2CBonuses():
 				for j in range(x - 1, x + 2):
 					for k in range(y - 1, y + 2):
 						plotX = MAP.plot(j, k)
-						if not plotX.isNone() and plotX.getTerrainType() in aCoastTerrains:
+						if plotX and plotX.getTerrainType() in aCoastTerrains:
 							plot.setTerrainType(terrainSea, False, False)
 							iTerrain = terrainSea
 							break

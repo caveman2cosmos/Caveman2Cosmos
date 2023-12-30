@@ -581,6 +581,7 @@ enum WidgetTypes
 	WIDGET_BUILD_LIST_LIST,
 	WIDGET_HELP_TRAIT,
 	WIDGET_PEDIA_JUMP_TO_TRAIT,
+	WIDGET_PEDIA_JUMP_TO_HERITAGE,
 	//ls612: Viewport Goto Helper Widget
 	WIDGET_CITY_GOTO,
 
@@ -1539,6 +1540,11 @@ enum CategoryTypes
 	NO_CATEGORY = -1,
 };
 
+enum HeritageTypes
+{
+	NO_HERITAGE = -1,
+};
+
 enum VoteSourceTypes
 {
 	NO_VOTESOURCE = -1,
@@ -1676,18 +1682,6 @@ enum MissionTypes
 	MISSION_AIRBOMB5,
 	MISSION_RBOMBARD,
 	MISSION_FENGAGE,
-	//TSHEEP Assassin Mission
-	//MISSION_ASSASSIN,
-	//TSHEEP End
-
-// BUG - Sentry Actions - start
-#ifdef _MOD_SENTRY
-	MISSION_MOVE_TO_SENTRY,
-	MISSION_SENTRY_WHILE_HEAL,
-	MISSION_SENTRY_NAVAL_UNITS,
-	MISSION_SENTRY_LAND_UNITS,
-#endif
-// BUG - Sentry Actions - end
 
 	MISSION_INQUISITION,
 	MISSION_CLAIM_TERRITORY,
@@ -1695,11 +1689,8 @@ enum MissionTypes
 	MISSION_ESPIONAGE_SLEEP,
 	MISSION_GREAT_COMMANDER,
 	MISSION_SHADOW,
-
-	//ls612: City Goto in Viewports
 	MISSION_GOTO,
 
-	//TB Combat Mod and Mission fix begin
 	MISSION_BUTCHER,
 	MISSION_DIPLOMAT_ASSIMULATE_IND_PEOPLE,
 	MISSION_DIPLOMAT_PRAISE_IND_PEOPLE,
@@ -1736,7 +1727,15 @@ enum MissionTypes
 	MISSION_BUILD_DOMESTICATED_HERD,
 	MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_GATHERER,
 	MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_TRACKER,
-	//TB Combat Mod and Mission fix end
+
+	MISSION_HERITAGE,
+
+#ifdef _MOD_SENTRY
+	MISSION_MOVE_TO_SENTRY,
+	MISSION_SENTRY_WHILE_HEAL,
+	MISSION_SENTRY_NAVAL_UNITS,
+	MISSION_SENTRY_LAND_UNITS,
+#endif
 };
 
 enum MissionAITypes
@@ -1765,33 +1764,24 @@ enum MissionAITypes
 	MISSIONAI_BUILD,
 	MISSIONAI_ASSAULT,
 	MISSIONAI_CARRIER,
-	MISSIONAI_PICKUP
-
-/************************************************************************************************/
-/* Afforess                                     12/7/09                                         */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	, MISSIONAI_INQUISITION
-	, MISSIONAI_CLAIM_TERRITORY
-	, MISSIONAI_HURRY_FOOD
-/************************************************************************************************/
-/* Afforess	                         END                                                        */
-/************************************************************************************************/
-	, MISSIONAI_CONTRACT
-	, MISSIONAI_CONTRACT_UNIT
-	, MISSIONAI_DELIBERATE_KILL
-	, MISSIONAI_REGROUP
-	, MISSIONAI_HEAL_SUPPORT
-	, MISSIONAI_PROPERTY_CONTROL_RESPONSE
-	, MISSIONAI_PROPERTY_CONTROL_MAINTAIN
-	, MISSIONAI_INVESTIGATOR_RESPONSE
-	, MISSIONAI_INVESTIGATOR_MAINTAIN
-	, MISSIONAI_INFILTRATOR_MAINTAIN
-	, MISSIONAI_SEE_INVISIBLE_MAINTAIN
-	, MISSIONAI_SEE_INVISIBLE_SEA_MAINTAIN
-	, MISSIONAI_WAIT_FOR_ESCORT
-	, MISSIONAI_WAIT_FOR_SEE_INVISIBLE
+	MISSIONAI_PICKUP,
+	MISSIONAI_INQUISITION,
+	MISSIONAI_CLAIM_TERRITORY,
+	MISSIONAI_HURRY_FOOD,
+	MISSIONAI_CONTRACT,
+	MISSIONAI_CONTRACT_UNIT,
+	MISSIONAI_DELIBERATE_KILL,
+	MISSIONAI_REGROUP,
+	MISSIONAI_HEAL_SUPPORT,
+	MISSIONAI_PROPERTY_CONTROL_RESPONSE,
+	MISSIONAI_PROPERTY_CONTROL_MAINTAIN,
+	MISSIONAI_INVESTIGATOR_RESPONSE,
+	MISSIONAI_INVESTIGATOR_MAINTAIN,
+	MISSIONAI_INFILTRATOR_MAINTAIN,
+	MISSIONAI_SEE_INVISIBLE_MAINTAIN,
+	MISSIONAI_SEE_INVISIBLE_SEA_MAINTAIN,
+	MISSIONAI_WAIT_FOR_ESCORT,
+	MISSIONAI_WAIT_FOR_SEE_INVISIBLE
 };
 
 // any additions need to be reflected in GlobalTypes.xml
@@ -2861,6 +2851,7 @@ enum ActionSubTypes
 	ACTIONSUBTYPE_CONTROL,
 	ACTIONSUBTYPE_AUTOMATE,
 	ACTIONSUBTYPE_MISSION,
+	ACTIONSUBTYPE_HERITAGE,
 
 	NUM_ACTIONSUBTYPES
 };
@@ -3265,6 +3256,7 @@ enum GameObjectTypes
 enum GOMTypes
 {
 	NO_GOM = -1,
+	GOM_HERITAGE,
 	GOM_BUILDING,
 	GOM_PROMOTION,
 	GOM_TRAIT,

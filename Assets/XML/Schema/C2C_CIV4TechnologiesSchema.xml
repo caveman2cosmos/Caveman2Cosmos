@@ -114,6 +114,7 @@
 		<element type="bFlexible" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="bRiverTrade" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bLanguage" content="textOnly" dt:type="boolean"/>
 	<ElementType name="TerrainType" content="textOnly"/>
 	<ElementType name="bTerrainTrade" content="textOnly" dt:type="boolean"/>
 	<ElementType name="TerrainTrade" content="eltOnly">
@@ -220,6 +221,7 @@
 		<element type="CommerceFlexible" minOccurs="0"/>
 		<element type="TerrainTrades" minOccurs="0"/>
 		<element type="bRiverTrade" minOccurs="0"/>
+		<element type="bLanguage" minOccurs="0"/>
 		<element type="Flavors" minOccurs="0"/>
 		<element type="OrPreReqs" minOccurs="0"/>
 		<element type="AndPreReqs" minOccurs="0"/>

@@ -57,6 +57,7 @@
 			<option id="HideUnconstructableBuildings" key="HideUnconstructableBuildings" type="boolean" default="True" get="isHideUnconstructableBuildings" set="setHideUnconstructableBuildings"/>
 			<option id="HideUntrainableUnits" key="HideUntrainableUnits" type="boolean" default="True" get="isHideUntrainableUnits" set="setHideUntrainableUnits"/>
 			<option id="FullCityScreenOnEmptyBuildQueue" key="FullCityScreenOnEmptyBuildQueue" type="boolean" default="False" get="isFullCityScreenOnEmptyBuildQueue" set="setFullCityScreenOnEmptyBuildQueue"/>
+			<option id="DelayCityCycleToEndOfTurn" key="DelayCityCycleToEndOfTurn" type="boolean" default="true" get="isDelayCityCycleToEndOfTurn" set="setDelayCityCycleToEndOfTurn"/>
 		</section>
 	</options>
 </mod>

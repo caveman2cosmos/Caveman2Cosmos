@@ -5,14 +5,14 @@
 		<English>Military Standard (Bears)</English>
 		<French>Standards Militaires (Ours)</French>
 		<Polish>Sztandar Wojskowy (Niedźwiedź)</Polish>
-		<Russian>Òîòåì «Ìåäâåäü»</Russian>
+		<Russian>Военный штандарт (Медведь)</Russian>
 		<Italian>Stendardo militare dell'orso</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_BEAR_HELP</Tag>
 		<English>[ICON_BULLET]Build Bear buildings and units faster in this city.</English>
 		<French>Construit les bâtiments et unités Ours plus vite dans cette ville.</French>
-		<Russian>Óñîðÿåò òðåíèðîâêó ìåäâåäåé è ïîñòðîéêó â ãîðîäå çäàíèé äëÿ íèõ.</Russian>
+		<Russian>[ICON_BULLET]Медвежьи здания и подразделения в этом городе создаются быстрее.</Russian>
 		<Italian>[ICON_BULLET]Costruisci edifici e unità relazionati agli orsi più velocemente in questa città.</Italian>
 	</TEXT>
 	<TEXT>
@@ -20,7 +20,7 @@
 		<English>Military Standard (Bison)</English>
 		<French>Standards Militaires (Bisons)</French>
 		<Polish>Sztandar Wojskowy (Bizon)</Polish>
-		<Russian>Òîòåì «Áèçîí»</Russian>
+		<Russian>Военный штандарт (Бизон)</Russian>
 		<Italian>Stendardo militare del bisonte</Italian>
 	</TEXT>
 	<TEXT>
@@ -29,6 +29,7 @@
 		<French>Construit les bâtiments et unités bisons plus vite dans cette Ville.</French>
 		<Polish>Konstuuj budynki i werbuj jednostki bizonów szybciej w tym mieście.</Polish>
 		<Italian>[ICON_BULLET]Costruisci edifici e unità relazionati ai bisonti più velocemente in questa città.</Italian>
+		<Russian>[ICON_BULLET]Бизоньи здания и подразделения в этом городе создаются быстрее.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_BIG_CATS</Tag>
@@ -36,7 +37,7 @@
 		<French>Standards Militaires (Félins)</French>
 		<Italian>Stendardo militare del gran felino</Italian>
 		<Polish>Sztandar Wojskowy (Wielkie Koty)</Polish>
-		<Russian>Òîòåì «Êîøêà»</Russian>
+		<Russian>Военный штандарт (Большая кошка)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_BIG_CATS_HELP</Tag>
@@ -44,14 +45,14 @@
 		<French>Construit les bâtiments et unités félines plus vite dans cette Ville.</French>
 		<Italian>[ICON_BULLET]Costruisci edifici e unità relazionati ai felini più velocemente in questa città.</Italian>
 		<Polish>Buduj budynki i jednostki Wielkich Kotów szybciej w Twoim mieście.</Polish>
-		<Russian>[ICON_BULLET][COLOR_YELLOW]Подсказка: [COLOR_REVERT]стройте кошачьи питомники в городе, чтобы дрессировать ручных и сторожевых кошек.</Russian>
+		<Russian>[ICON_BULLET]Кошачьи здания и подразделения в этом городе создаются быстрее.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_DEER</Tag>
 		<English>Military Standard (Deer)</English>
 		<French>Standards Militaires (Cervidés)</French>
 		<Polish>Sztandar Wojskowy (Deer)</Polish>
-		<Russian>Òîòåì «Îëåíü»</Russian>
+		<Russian>Военный штандарт (Олень)</Russian>
 		<Italian>Stendardo militare del cervo</Italian>
 	</TEXT>
 	<TEXT>
@@ -59,13 +60,14 @@
 		<English>[ICON_BULLET]Build Deer buildings and units faster in this city.</English>
 		<French>[ICON_BULLET]Construit les bâtiments et unités cervidés plus vite dans cette Ville.</French>
 		<Italian>[ICON_BULLET]Costruisci edifici e unità relazionati ai cervi più velocemente in questa città.</Italian>
+		<Russian>[ICON_BULLET]Оленьи здания и подразделения в этом городе создаются быстрее.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_GIRAFFE</Tag>
 		<English>Military Standard (Giraffe)</English>
 		<French>Standards Militaires (Girafe)</French>
 		<Polish>Sztandar Wojskowy (Żyrafa)</Polish>
-		<Russian>Òîòåì «Æèðàô»</Russian>
+		<Russian>Военный штандарт (Жираф)</Russian>
 		<Italian>Stendardo militare della giraffa</Italian>
 	</TEXT>
 	<TEXT>
@@ -73,13 +75,14 @@
 		<English>[ICON_BULLET]Build Giraffe buildings and units faster in this city.</English>
 		<French>Construit les bâtiments et unités Girafes plus vite dans cette ville.</French>
 		<Italian>[ICON_BULLET]Costruisci edifici e unità relazionati alle giraffe più velocemente in questa città.</Italian>
+		<Russian>[ICON_BULLET]Жирафьи здания и подразделения в этом городе создаются быстрее.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_RHINOCEROS</Tag>
 		<English>Military Standard (Rhinoceros)</English>
 		<French>Standards Militaires (Rhinocéros)</French>
 		<Polish>Sztandar Wojskowy (Nosorożec)</Polish>
-		<Russian>Òîòåì «Íîñîðîã»</Russian>
+		<Russian>Военный штандарт (Носорог)</Russian>
 		<Italian>Stendardo militare del rinoceronte</Italian>
 	</TEXT>
 	<TEXT>
@@ -87,13 +90,14 @@
 		<English>[ICON_BULLET]Build Rhinoceros buildings and units faster in this city.</English>
 		<French>Construit les bâtiments et unités Rhinos plus vite dans cette Ville.</French>
 		<Italian>[ICON_BULLET]Costruisci edifici e unità relazionati ai rinoceronti più velocemente in questa città.</Italian>
+		<Russian>[ICON_BULLET]Носорожьи здания и подразделения в этом городе создаются быстрее.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_ZEBRA</Tag>
 		<English>Military Standard (Zebra)</English>
 		<French>Standards Militaires (Zèbres)</French>
 		<Polish>Sztandar Wojskowy (Zebra)</Polish>
-		<Russian>Òîòåì «Çåáðà»</Russian>
+		<Russian>Военный штандарт (Зебра)</Russian>
 		<Italian>Stendardo militare della zebra</Italian>
 	</TEXT>
 	<TEXT>
@@ -101,6 +105,7 @@
 		<English>[ICON_BULLET]Build Zebra buildings and units faster in this city.</English>
 		<French>Construit les bâtiments et unités Zèbres plus vite dans cette ville.</French>
 		<Italian>[ICON_BULLET]Costruisci edifici e unità relazionati alle zebre più velocemente in questa città.</Italian>
+		<Russian>[ICON_BULLET]Зебровые здания и подразделения в этом городе создаются быстрее.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_BEAR</Tag>
@@ -112,14 +117,14 @@
 		</French>
 		<Italian>Addestratore orsi</Italian>
 		<Polish>Treser Niedźwiedzi</Polish>
-		<Russian>Ïðèðó÷åíèå ìåäâåäåé</Russian>
+		<Russian>Дрессировка медведей</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EFFECT_HERITAGE_BEARS</Tag>
 		<English>Effect - Heritage - Bears</English>
 		<French>Effet - Patrimoine (Ours)</French>
 		<Polish>Efekt - Dziedzictwo - Niedźwiedź</Polish>
-		<Russian>Ïèòîìíèê ìåäâåäåé</Russian>
+		<Russian>Эффект - Культурное наследие - Медведи</Russian>
 		<Italian>Effetto dell'eredità culturale degli orsi</Italian>
 	</TEXT>
 	<TEXT>
@@ -127,25 +132,27 @@
 		<English>Heritage - Bears</English>
 		<French>Patrimoine (Ours)</French>
 		<Polish>Dziedzictwo - Niedźwiedź</Polish>
-		<Russian>Ðàçâåäåíèå ìåäâåäåé</Russian>
+		<Russian>Культурное наследие - Медведи</Russian>
 		<Italian>Eredità culturale degli orsi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERITAGE_BEARS_PEDIA</Tag>
 		<English>Instead of only being able to train Bear units in the city you built the wonder in this building allows them to be built in any of your cities. It can only be built in the ciy with the Bear Trainer World Wonder.</English>
 		<Italian>Invece di poter addestrare le unità orso solo nella città in cui hai costruito la meraviglia, questo edificio permette di costruirle in qualsiasi tua città. Può essere costruito solo in una città con la meraviglia mondiale addestramento orsi.</Italian>
+		<Russian>Можно возвести исключительно в городе с мировым чудом "Дрессировка медведей". Позволяет создавать медвежьи подразделения в любом вашем поселении, а не только в том, где стоит вышеупомянутое чудо.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_BEAR_PEDIA</Tag>
 		<English>There is no evidence bears were ever trained for warfare. The [COLOR_BUILDING_TEXT]Bear Trainer[COLOR_REVERT] building is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<Italian>Non ci sono prove che gli orsi furono mai usati in guerra. L'[COLOR_BUILDING_TEXT]addestramento orsi[COLOR_REVERT] è un edificio parte delle [COLOR_HIGHLIGHT_TEXT]tecnologie alternative[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
+		<Russian>Не существует доказательств того, что медведей когда-либо использовали для ведения войны. [COLOR_BUILDING_TEXT]Дрессировка медведей[COLOR_REVERT] - часть [COLOR_HIGHLIGHT_TEXT]технологий альтернативной временной линии[COLOR_REVERT]. Технологий, которые могли бы быть.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_BIG_CAT</Tag>
 		<English>Animal Trainer (Big Cat)</English>
 		<French>Entraineur de Félins</French>
 		<Polish>Treser Wielkich Kotów</Polish>
-		<Russian>Ïðèðó÷åíèå êîøåê</Russian>
+		<Russian>Дрессировка больших кошек</Russian>
 		<Italian>Addestratore grossi felini</Italian>
 	</TEXT>
 	<TEXT>
@@ -153,7 +160,7 @@
 		<English>Effect - Heritage - Big Cats</English>
 		<French>Effet (Entraineur de Félins)</French>
 		<Polish>Efekt - Treser Wielkich Kotów</Polish>
-		<Russian>Ïèòîìíèê êîøåê</Russian>
+		<Russian>Эффект - Культурное наследие - Большие кошки</Russian>
 		<Italian>Effetto dell'eredità culturale dei grossi felini</Italian>
 	</TEXT>
 	<TEXT>
@@ -172,14 +179,14 @@
 		</French>
 		<Italian>Addestratore bisonti</Italian>
 		<Polish>Treser Bizonów</Polish>
-		<Russian>Ïðèðó÷åíèå áèçîíîâ</Russian>
+		<Russian>Дрессировка бизонов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EFFECT_HERITAGE_BISON</Tag>
 		<English>Effect - Heritage - Bison</English>
 		<French>Effet - Patrimoine (Bisons)</French>
 		<Polish>Efekt - Dziedzictwo - Bizon</Polish>
-		<Russian>Ïèòîìíèê áèçîíîâ</Russian>
+		<Russian>Эффект - Культурное наследие - Бизоны</Russian>
 		<Italian>Effetto dell'eredità culturale dei bisonti</Italian>
 	</TEXT>
 	<TEXT>
@@ -187,19 +194,21 @@
 		<English>Heritage - Bison</English>
 		<French>Patrimoine (Bisons)</French>
 		<Polish>Dziedzictwo - Bizon</Polish>
-		<Russian>Ðàçâåäåíèå áèçîíîâ</Russian>
+		<Russian>Культурное наследие - Бизоны</Russian>
 		<Italian>Eredità culturale dei bisonti</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERITAGE_BISON_PEDIA</Tag>
 		<English>Instead of only being able to train Bison units in the city you built the wonder in this building allows them to be built in any of your cities. It can only be built in the city with the Bison Trainer World Wonder.</English>
 		<Italian>Invece di poter addestrare le unità bisonte solo nella città in cui hai costruito la meraviglia, questo edificio permette di costruirle in qualsiasi tua città. Può essere costruito solo in una città con la meraviglia mondiale addestramento bisonti.</Italian>
+		<Russian>Можно возвести исключительно в городе с мировым чудом "Дрессировка бизонов". Позволяет создавать бизоньи подразделения в любом вашем поселении, а не только в том, где стоит вышеупомянутое чудо.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_BISON_PEDIA</Tag>
 		<English>There is no evidence bison were ever trained for warfare. The [COLOR_BUILDING_TEXT]Bison Trainer[COLOR_REVERT] building is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<Italian>Non ci sono prove che i bisonti siano mai stati usati in guerra. L'[COLOR_BUILDING_TEXT]addestramento bisonti[COLOR_REVERT] fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologie alternative[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
 		<Polish>Nie ma dowodów na istnienie tej jednostki, jest ona częścią tzw. [COLOR_HIGHLIGHT_TEXT]technologii alternatywnej ścieżki historycznej[COLOR_REVERT].</Polish>
+		<Russian>Не существует доказательств того, что бизонов когда-либо использовали для ведения войны. [COLOR_BUILDING_TEXT]Дрессировка бизонов[COLOR_REVERT] - часть [COLOR_HIGHLIGHT_TEXT]технологий альтернативной временной линии[COLOR_REVERT]. Технологий, которые могли бы быть.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_DEER</Tag>
@@ -211,14 +220,14 @@
 		</French>
 		<Italian>Addestratore cervi</Italian>
 		<Polish>Treser Jeleni</Polish>
-		<Russian>Ïðèðó÷åíèå îëåíåé</Russian>
+		<Russian>Дрессировка оленей</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EFFECT_HERITAGE_DEER</Tag>
 		<English>Effect - Heritage - Deer</English>
 		<French>Effet - Patrimoine (Cervidés)</French>
 		<Polish>Efekt - Dziedzictwo Tresera Jeleni</Polish>
-		<Russian>Ïèòîìíèê îëåíåé</Russian>
+		<Russian>Эффект - Культурное наследие - Олени</Russian>
 		<Italian>Effetto dell'eredità culturale dei cervi</Italian>
 	</TEXT>
 	<TEXT>
@@ -226,13 +235,14 @@
 		<English>[ICON_BULLET]This free building is used to enable the building of the special deer units in all your cities.</English>
 		<French>Ce bâtiment permet l'entraînement d'unités cervidés dans toutes vos villes.</French>
 		<Italian>[ICON_BULLET]Questo edificio gratuito viene utilizzato per consentire la costruzione delle unità speciali cervo in tutte le tue città.</Italian>
+		<Russian>[ICON_BULLET]Бесплатное здание для найма особых оленьих подразделений во всех ваших городах.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERITAGE_DEER</Tag>
 		<English>Heritage - Deer</English>
 		<French>Patrimoine (Cervidés)</French>
 		<Polish>Dziedzictwo - Jeleń</Polish>
-		<Russian>Ðàçâåäåíèå îëåíåé</Russian>
+		<Russian>Культурное наследие - Олени</Russian>
 		<Italian>Eredità culturale dei cervi</Italian>
 	</TEXT>
 	<TEXT>
@@ -240,12 +250,14 @@
 		<English>The Heritage building upgrades the Training Wonder to allow the special units to be built in all your cities.</English>
 		<French>Le bâtiment du patrimoine améliore la merveille de la formation pour permettre la construction d'unités spéciales dans toutes vos villes.</French>
 		<Italian>Invece di poter addestrare le unità cervo solo nella città in cui hai costruito la meraviglia, questo edificio permette di costruirle in qualsiasi tua città. Può essere costruito solo in una città con la meraviglia mondiale addestramento cervi.</Italian>
+		<Russian>Оленье "Культурное наследие" улучшает их дрессировку, позволяя нанимать особые оленьи подразделения сразу во всех ваших городах.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_DEER_PEDIA</Tag>
 		<English>There is no evidence deer were ever trained for warfare. The [COLOR_BUILDING_TEXT]Deer Trainer[COLOR_REVERT] building is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.[PARAGRAPH:2]Strongest base early withdrawal - even battle hardened deer can be skittish creatures that can be tough to KEEP in the battle for long but makes them GREAT at wearing down opponents. They'd be perhaps the best at this get in/get out type of strategy so long as they can do some damage during their short fights.</English>
 		<French>Il n'y a aucune preuve que les cerfs aient été formés pour la guerre. Le bâtiment [COLOR_BUILDING_TEXT] Dresseur de cerfs [COLOR_REVERT] fait partie des [COLOR_HIGHLIGHT_TEXT] technologies de chronologie alternatives [COLOR_REVERT]. Technologies qui auraient pu l'être.[PARAGRAPH:2]Retrait précoce de la base la plus forte - même les cerfs endurcis au combat peuvent être des créatures agiles qui peuvent être difficiles à GARDER dans la bataille pendant longtemps, mais les rendent EXCEPTIONNELS pour épuiser leurs adversaires. Ils seraient peut-être les meilleurs dans ce type de stratégie d'entrée / sortie tant qu'ils peuvent faire des dégâts pendant leurs combats courts.</French>
 		<Italian>Non ci sono prove che i cervi siano mai stati usati in guerra. L'[COLOR_BUILDING_TEXT]addestramento cervi[COLOR_REVERT] fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologie alternative[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
+		<Russian>Не существует доказательств того, что оленей когда-либо использовали для ведения войны. [COLOR_BUILDING_TEXT]Дрессировка оленей[COLOR_REVERT] - часть [COLOR_HIGHLIGHT_TEXT]технологий альтернативной временной линии[COLOR_REVERT]. Технологий, которые могли бы быть.[PARAGRAPH:2]Самое главное - ранний отход. Даже привыкшие к сражениям олени могут оставаться пугливыми и трудноконтролируемыми в длительном бою. Зато они отлично справляются с изматыванием противника. Возможно, они станут лучшими по тактике "Ударил-убежал", если успеют нанести урон в непродолжительном бою.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_GIRAFFE</Tag>
@@ -257,38 +269,41 @@
 		</French>
 		<Italian>Addestratore giraffe</Italian>
 		<Polish>Treser Żyraf</Polish>
-		<Russian>Ïðèðó÷åíèå æèðàôîâ</Russian>
+		<Russian>Дрессировка жирафов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EFFECT_HERITAGE_GIRAFFES</Tag>
 		<English>Effect - Heritage - Giraffes</English>
 		<French>Effet - Patrimoine (Girafes)</French>
 		<Polish>Efekt - Dziedzictwo - Żyrafa</Polish>
-		<Russian>Ïèòîìíèê æèðàôîâ</Russian>
+		<Russian>Эффект - Культурное наследие - Жирафы</Russian>
 		<Italian>Effetto dell'eredità culturale delle giraffe</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EFFECT_HERITAGE_GIRAFFES_HELP</Tag>
 		<English>[ICON_BULLET]This free building is used to enable the building of the special Giraffe units in all your cities.</English>
 		<Italian>[ICON_BULLET]Questo edificio gratuito viene utilizzato per consentire la costruzione delle unità speciali giraffa in tutte le tue città.</Italian>
+		<Russian>[ICON_BULLET]Бесплатное здание для найма особых жирафьих подразделений во всех ваших городах.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERITAGE_GIRAFFE</Tag>
 		<English>Heritage - Giraffe</English>
 		<French>Patrimoine (Girafes)</French>
 		<Polish>Dziedzictwo - Żyrafa</Polish>
-		<Russian>Ðàçâåäåíèå æèðàôîâ</Russian>
+		<Russian>Культурное наследие - Жирафы</Russian>
 		<Italian>Eredità culturale delle giraffe</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERITAGE_GIRAFFE_PEDIA</Tag>
 		<English>Giraffe units are good for combat in Savanna tiles and their increased Sight Range. Very good light mounted units with a generally strong skill at getting in and out quickly and doing some damage while there. Giraffes are not pushovers in a fight - those horns can straight knock a person out. There is no evidence giraffes were ever trained for warfare. The [COLOR_BUILDING_TEXT]Giraffe Trainer[COLOR_REVERT] building is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<Italian>Le unità giraffa sono ottime per il combattimento nelle caselle della savana e hanno un raggio visivo maggiore. Ottime unità montate leggere con un'abilità generalmente buona nell'entrare e uscire rapidamente dalla battaglia e fare qualche danno nel frattempo. Le giraffe non sono dei pushover in un combattimento: quelle corna possono mettere fuori gioco una persona. Non ci sono prove che le giraffe siano mai state addestrate per la guerra. L'edificio [COLOR_BUILDING_TEXT]addestramento giraffe[COLOR_REVERT] fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologie alternative[COLOR_REVERT]. Tecnologie che avrebbero potuto essere.</Italian>
+		<Russian>Жирафьи подразделения хороши для сражений в саванне и обладают увеличенным радиусом видимости. Это отличная легкая кавалерия, сильная в приеме "Ударил-убежал". В схвате жирафы не слабаки - их рога могут легко сбить человека с ног. Не существует доказательств того, что жирафов когда-либо использовали для ведения войны. [COLOR_BUILDING_TEXT]Дрессировка жирафов[COLOR_REVERT] - часть [COLOR_HIGHLIGHT_TEXT]технологий альтернативной временной линии[COLOR_REVERT]. Технологий, которые могли бы быть.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_GIRAFFE_PEDIA</Tag>
 		<English>There is no evidence giraffe were ever trained for warfare. The [COLOR_BUILDING_TEXT]Giraffe Trainer[COLOR_REVERT] building is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<Italian>Non ci sono prove che le giraffe siano mai state usate in guerra. L'[COLOR_BUILDING_TEXT]addestramento giraffe[COLOR_REVERT] fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologie alternative[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
+		<Russian>Не существует доказательств того, что жирафов когда-либо использовали для ведения войны. [COLOR_BUILDING_TEXT]Дрессировка жирафов[COLOR_REVERT] - часть [COLOR_HIGHLIGHT_TEXT]технологий альтернативной временной линии[COLOR_REVERT]. Технологий, которые могли бы быть.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERD_MAMMOTH</Tag>
@@ -300,25 +315,27 @@
 		</French>
 		<Italian>Branco di mammut</Italian>
 		<Polish>Stado - Mamuty</Polish>
-		<Russian>Òàáóí ìàìîíòîâ</Russian>
+		<Russian>Стадо мамонтов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERD_MAMMOTH_PEDIA</Tag>
 		<English>Only subdued mammoth can build the mammoth herd. It provides a mammoth resource. There can only be one per civ.</English>
 		<Italian>Solo i mammut addomesticati possono costruire un branco di mammut. Fornisce una risorsa di mammut e solo una risorsa di questo tipo può essere costruita per civiltà.</Italian>
 		<Polish>Mamut włochaty należał do ulubionej zwierzyny łownej człowieka w późnym plejstocenie, co znalazło swe odzwierciedlenie w zachowanych do dzisiaj licznych wyobrażeniach i malowidłach, pozostawionych głównie na ścianach jaskiń (np. w Rouffignac we Francji). Mamuty były źródłem pożywienia, ale dostarczały także materiałów do wyrobu okryć (skóry), sprzętów domowych, narzędzi i ozdób (kości, ciosy). Kości wykorzystywane były sporadycznie również do budowy paleolitycznych domostw, czego ślady odnaleziono w miejscowości Meziriczi na Ukrainie.</Polish>
+		<Russian>Только используя прирученного мамонта можно создать их стадо. Оно предоставляет соответсвующий ресурс и может быть лишь одно на всю цивилизацию.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_MAMMOTH</Tag>
 		<English>Animal Trainer (Mammoth)</English>
 		<Italian>Addestratore mammut</Italian>
+		<Russian>Дрессировка мамонтов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EFFECT_HERITAGE_MAMMOTHS</Tag>
 		<English>Effect - Heritage - Mammoths</English>
 		<French>Effet - Patrimoine (Mammouth)</French>
 		<Polish>Efekt - Dziedzictwo - Mamut</Polish>
-		<Russian>Ïèòîìíèê ìàìîíòîâ</Russian>
+		<Russian>Эффект - Культурное наследие - Мамонты</Russian>
 		<Italian>Effetto dell'eredità culturale dei mammut</Italian>
 	</TEXT>
 	<TEXT>
@@ -326,18 +343,20 @@
 		<English>Heritage - Mammoth</English>
 		<French>Patrimoine (Mammouth)</French>
 		<Polish>Dziedzictwo - Mamut</Polish>
-		<Russian>Ðàçâåäåíèå ìàìîíòîâ</Russian>
+		<Russian>Культурное наследие - Мамонты</Russian>
 		<Italian>Eredità culturale dei mammut</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERITAGE_MAMMOTH_PEDIA</Tag>
 		<English>Instead of only being able to train Mammoth units in the city you built the wonder in this building allows them to be built in any of your cities. It can only be built in the ciy with the Mammothr Trainer World Wonder.</English>
 		<Italian>Invece di poter addestrare le unità mammut solo nella città in cui hai costruito la meraviglia, questo edificio permette di costruirle in qualsiasi tua città. Può essere costruito solo in una città con la meraviglia mondiale addestramento mammut.</Italian>
+		<Russian>Можно возвести исключительно в городе с мировым чудом "Дрессировка мамонтов". Позволяет создавать мамонтовые подразделения в любом вашем поселении, а не только в том, где стоит вышеупомянутое чудо.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_MAMMOTH_PEDIA</Tag>
 		<English>The woolly mammoth was the last species of the genus. Most populations of the woolly mammoth in North America and Eurasia, as well all the Columbian mammoths in North America, died out around the time of the last glacial retreat, as part of a mass extinction of megafauna in northern Eurasia and the Americas.</English>
-		<Italian>Il mammut peloso fu l'ultima specie del suo genere. La maggior parte dei mammut pelosi del Nordamerica e dell'Eurasia morirono surante l'ultima era glaciale, facendo parte di un'estinzione di massa della megafauna nell'emisfero settentrionale.</Italian>
+		<Italian>Il mammut peloso fu l'ultima specie del suo genere. La maggior parte dei mammut pelosi del Nordamerica e dell'Eurasia morirono durante l'ultima era glaciale, facendo parte di un'estinzione di massa della megafauna nell'emisfero settentrionale.</Italian>
+		<Russian>Последним представителем рода Mammuthus был шерстистый мамонт. Большинство их популяций в Северной Америке и Евразии, а также все мамонты Колумба, в рамках массового вымирания мегафауны, исчезли приблизительно во время голоценового отступления ледников.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAPINGUARI_COMPOUND</Tag>
@@ -348,38 +367,41 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Leże Mapinguari</Polish>
-		<Russian>Îáùèíà ìàïèíãóàðè</Russian>
+		<Russian>Комплекс мапингуари</Russian>
 		<Italian>Addestratore mapinguari (da unità)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAPINGUARI_COMPOUND_PEDIA</Tag>
 		<English>Mapinguari Compound is a place where subdued Ground Sloths and their handlers are trained as combat units.</English>
 		<Italian>L'addestramento mapinguari è un luogo in cui i bradipi di terra sottomessi e i loro addestratori vengono addestrati come unità combattenti.</Italian>
+		<Russian>Комплекс мапингуари - место, где прирученные гигантские ленивцы и их дрессировщики обучаются как боевые единицы.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAPINGUARI_CHANGING_OF_THE_GUARD_CEREMONY</Tag>
 		<English>Mapinguari Changing of the Guard Ceremony</English>
 		<Polish>Strażnik Mapinguari</Polish>
-		<Russian>Êàðàóë ìàïèíãóàðè</Russian>
+		<Russian>Церемония смены караула мапингуари</Russian>
 		<Italian>Cerimonia del cambio della guardia mapinguari (costruzione automatica)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAPINGUARI_CHANGING_OF_THE_GUARD_CEREMONY_PEDIA</Tag>
 		<English>A fictional military ceremony.</English>
 		<Italian>Una cerimonia militare immaginaria.</Italian>
+		<Russian>Вымышленная военная церемония.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_POLICE_CAT_TRAINER</Tag>
 		<English>Police Cat Trainer</English>
 		<French>Entraineur de Félins Limiers</French>
 		<Polish>Treser Kotów Policyjnych</Polish>
-		<Russian>Ïîëèãîí äëÿ êîøåê</Russian>
+		<Russian>Тренер полицейских кошек</Russian>
 		<Italian>Addestratore gatti poliziotto</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_POLICE_CAT_TRAINER_PEDIA</Tag>
 		<English>A F9 unit - cat version of police dog</English>
 		<Italian>Versione con gatti del cane poliziotto</Italian>
+		<Russian>Подразделение Ф9 - кошачья версия полицейской собаки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_RHINOCEROS</Tag>
@@ -391,38 +413,41 @@
 		</French>
 		<Italian>Addestratore rinoceronti</Italian>
 		<Polish>Treser Nosorożców</Polish>
-		<Russian>Ïðèðó÷åíèå íîñîðîãîâ</Russian>
+		<Russian>Дрессировка носорогов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EFFECT_HERITAGE_RHINOS</Tag>
 		<English>Effect - Heritage - Rhinos</English>
 		<French>Effet - Patrimoine (Rhinocéros)</French>
 		<Polish>Efekt - Dziedzictwo - Nosorożec</Polish>
-		<Russian>Ïèòîìíèê íîñîðîãîâ</Russian>
+		<Russian>Эффект - Культурное наследие - Носороги</Russian>
 		<Italian>Effetto dell'eredità culturale dei rinoceronti</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EFFECT_HERITAGE_RHINOS_HELP</Tag>
 		<English>[ICON_BULLET]This free building is used to enable the building of the special Rhinoceros units in all your cities.</English>
-		<Italian>[ICON_BULLET]Questo edificio gratuito viene utilizzato per consentire la costruzione delle unità speciali rinocertonte in tutte le tue città.</Italian>
+		<Italian>[ICON_BULLET]Questo edificio gratuito viene utilizzato per consentire la costruzione delle unità speciali rinoceronte in tutte le tue città.</Italian>
+		<Russian>[ICON_BULLET]Бесплатное здание для найма особых носорожьих подразделений во всех ваших городах.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERITAGE_RHINOCEROS</Tag>
 		<English>Heritage - Rhinoceros</English>
 		<French>Patrimoine (Rhinocéros)</French>
 		<Polish>Dziedzictwo - Nosorożec</Polish>
-		<Russian>Ðàçâåäåíèå íîñîðîãîâ</Russian>
+		<Russian>Культурное наследие - Носороги</Russian>
 		<Italian>Eredità culturale dei rinoceronti</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERITAGE_RHINOCEROS_PEDIA</Tag>
 		<English>Rhinoceros units have the Stampede ability and at the moment they're the only unit with it and the only unit that can develop it. If made a little stronger to make them a bit more viable (and to let them represent better the kind of amazing destructive capacity these animals have in RL) they'll be given an amazingly powerful niche use throughout the early era, particularly as a powerful counter against the strategy of splitting up units to delay attack forces from taking a position.[PARAGRAPH:2]Rhinos also cause some collateral so if one can survive the first fight and the units in the stack they're attacking can still within range of being given further collateral damage, a rhino can uniquely inflict collateral to a stack more than once when it attacks.[PARAGRAPH:2]There is no evidence Rhinoceros were ever trained for warfare. The [COLOR_BUILDING_TEXT]Giraffe Trainer[COLOR_REVERT] building is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<Italian>Le unità rinoceronte hanno l'abilità Stampede e al momento sono l'unica unità che può svilupparla. Se resi un po' più forti per renderli un po' più utilizzabili (e per permettere loro di rappresentare meglio il tipo di incredibile capacità distruttiva che questi animali hanno nella vita reale) riceveranno un uso di nicchia incredibilmente potente per tutta la prima era, in particolare un potente contrasto alla strategia di dividere le unità per ritardare la presa di posizione delle forze d'attacco.[PARAGRAPH:2]I rinoceronti causano anche dei danni collaterali, quindi se un'unità sopravvive al primo combattimento e le unità nel gruppo che sta attaccando si trovano nel raggio riceveranno ulteriori danni collaterali, un rinoceronte può infliggere danni collaterali a una pila più di una volta quando attacca.[PARAGRAPH:2]Non ci sono prove che i rinoceronti siano mai stati addestrati per la guerra. L'edificio [COLOR_BUILDING_TEXT]Addestratore di rinoceronti[COLOR_REVERT] fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologie alternative[COLOR_REVERT]. Tecnologie che avrebbero potuto essere</Italian>
+		<Russian>Носорожьи подразделения, на данный момент, единственные, кто владеет и может развивать способность к паническому бегству. Если увеличить их живучесть (для лучшей демонстрации удивительного разрушительного потенциал носорогов), то они обретут мощное нишевое применение в ранней эпохе, особенно как сильное противодействие стратегии разделения отрядов для задержки атакующих сил от захвата позиции.[PARAGRAPH:2]Носороги также наносят некоторый побочный ущерб, поэтому если один из них выживает в первом бою, а атакуемые им подразделения все еще находятся в пределах досягаемости для получения дальнейшего побочного ущерба, носорог может уникальным образом нанести побочный ущерб стеку более одного раза, когда он атакует.[PARAGRAPH:2]Не существует доказательств того, что носорогов когда-либо использовали для ведения войны. [COLOR_BUILDING_TEXT]Дрессировка носорогов[COLOR_REVERT] - часть [COLOR_HIGHLIGHT_TEXT]технологий альтернативной временной линии[COLOR_REVERT]. Технологий, которые могли бы быть.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_RHINOCEROS_PEDIA</Tag>
 		<English>There is no evidence rhinoceros were ever trained for mounted warfare. The [COLOR_BUILDING_TEXT]Rhinoceros Trainer[COLOR_REVERT] building is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
-		<Italian>Non ci sono prove che i rinoceronti siano mai stati addestrati per la guerra. L'[COLOR_BUILDING_TEXT]Allevatore di rinoceronti[COLOR_REVERT] fa parte delle [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
+		<Italian>Non ci sono prove che i rinoceronti siano mai stati addestrati per la guerra. L'[COLOR_BUILDING_TEXT]Allevatore di rinoceronti[COLOR_REVERT] fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologie delle timeline alternative[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
+		<Russian>Не существует доказательств того, что носорогов когда-либо использовали как боевых ездовых животных. [COLOR_BUILDING_TEXT]Дрессировка носорогов[COLOR_REVERT] - часть [COLOR_HIGHLIGHT_TEXT]технологий альтернативной временной линии[COLOR_REVERT]. Технологий, которые могли бы быть.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERD_ZEBRA</Tag>
@@ -434,7 +459,7 @@
 		</French>
 		<Italian>Branco di zebre</Italian>
 		<Polish>Stado - Zebra</Polish>
-		<Russian>Ñòàäî çåáð</Russian>
+		<Russian>Стадо зебр</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_ZEBRA</Tag>
@@ -446,14 +471,14 @@
 		</French>
 		<Italian>Addestratore zebre</Italian>
 		<Polish>Treser Zebr</Polish>
-		<Russian>Ïðèðó÷åíèå çåáð</Russian>
+		<Russian>Дрессировка зебр</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EFFECT_HERITAGE_ZEBRAS</Tag>
 		<English>Effect - Heritage - Zebras</English>
 		<French>Effet - Patrimoine (Zèbres)</French>
 		<Polish>Efekt - Dziedzictwo - Zebra</Polish>
-		<Russian>Ïèòîìíèê çåáð</Russian>
+		<Russian>Эффект - Культурное наследие - Зебры</Russian>
 		<Italian>Effetto dell'eredità culturale delle zebre</Italian>
 	</TEXT>
 	<TEXT>
@@ -461,24 +486,27 @@
 		<English>[ICON_BULLET]Allows the training of Zebra units.</English>
 		<French>Permet l'entraînement d'unités avec des zèbres.</French>
 		<Italian>[ICON_BULLET]Consente l'addestramento delle unità zebra.</Italian>
+		<Russian>[ICON_BULLET]Разрешает найм зебровых подразделений.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERITAGE_ZEBRA</Tag>
 		<English>Heritage - Zebra</English>
 		<French>Patrimoine (Zèbres)</French>
 		<Polish>Dziedzictwo - Zebra</Polish>
-		<Russian>Ðàçâåäåíèå çåáð</Russian>
+		<Russian>Культурное наследие - Зебры</Russian>
 		<Italian>Eredità culturale delle zebre</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERITAGE_ZEBRA_PEDIA</Tag>
 		<English>Instead of only being able to train Zebra units in the city you built the wonder in this building allows them to be built in any of your cities. It can only be built in the ciy with the Zebra Trainer World Wonder.</English>
 		<Italian>Invece di poter addestrare le unità zebra solo nella città in cui hai costruito la meraviglia, questo edificio permette di costruirle in qualsiasi tua città. Può essere costruito solo in una città con la meraviglia mondiale addestramento zebre.</Italian>
+		<Russian>Можно возвести исключительно в городе с мировым чудом "Дрессировка зебр". Позволяет создавать зебровые подразделения в любом вашем поселении, а не только в том, где стоит вышеупомянутое чудо.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_ZEBRA_PEDIA</Tag>
 		<English>There is no evidence Zebra were ever trained for warfare. The [COLOR_BUILDING_TEXT]Zebra Trainer[COLOR_REVERT] building is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<Italian>Non ci sono prove che le zebre siano mai state usate in guerra. L'[COLOR_BUILDING_TEXT]Allevatore di zebre[COLOR_REVERT] è un edificio parte delle [COLOR_HIGHLIGHT_TEXT]Tecnologie alternative[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
+		<Russian>Не существует доказательств того, что зебр когда-либо использовали для ведения войны. [COLOR_BUILDING_TEXT]Дрессировка зебр[COLOR_REVERT] - часть [COLOR_HIGHLIGHT_TEXT]технологий альтернативной временной линии[COLOR_REVERT]. Технологий, которые могли бы быть.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BALLISTA_MAMMOTH</Tag>
@@ -490,12 +518,13 @@
 		</French>
 		<Italian>Mammut con ballista</Italian>
 		<Polish>Mamut-Ballista</Polish>
-		<Russian>Ìàìîíò ñ áàëëèñòîé</Russian>
+		<Russian>Баллиста на мамонте</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BALLISTA_MAMMOTH_PEDIA</Tag>
 		<English>Great mammoths walk in northern tundras, some tribes hunt them for meat, skins and bones. But some hunt them them for beast of war. Capturing one alive and bending is no easy task, but if succeeded. Tribe have a warbeast that can crush down buildings and break a gates of strongholds. Mammoth can be used break down enemy troops.</English>
-		<Italian>I grandi mammut camminano nelle tundre settentrionali, alcune tribù li cacciano per carne, pelli e ossa. Ma alcuni li cacciano per usarli come bestie da guerra. Catturarne uno vivo e piegarlo non è un compito facile, ma se ci riesce la tribù ha una bestia da guerra che può abbattere edifici e rompere i cancelli delle roccaforti. Il mammoth può essere usato per abbattere le truppe nemiche.</Italian>
+		<Italian>I grandi mammut camminano nelle tundre settentrionali, alcune tribù li cacciano per carne, pelli e ossa. Ma alcuni li cacciano per usarli come bestie da guerra. Catturarne uno vivo e piegarlo non è un compito facile, ma se ci riesce la tribù ha una bestia da guerra che può abbattere edifici e rompere i cancelli delle roccaforti. Il mammut può essere usato per abbattere le truppe nemiche.</Italian>
+		<Russian>По северным тундрам ходят огромные мамонты. Некоторые племена охотятся на них ради мяса, шкур и костей. Но другие ловят их, чтобы использовать в бою. Поймать и приручить живого мамонта - нелегкая задача. Но в случае успеха, племя обретает боевого зверя, способного сокрушать здания, ломать ворота крепостей и уничтожать вражеских солдат.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BEARKNIGHT</Tag>
@@ -507,12 +536,13 @@
 		</French>
 		<Italian>Cavaliere di orsi</Italian>
 		<Polish>Rycerz (Niedźwiedź)</Polish>
-		<Russian>Ðûöàðü íà ìåäâåäå</Russian>
+		<Russian>Рыцарь на медведе</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BEARKNIGHT_PEDIA</Tag>
 		<English>There is no evidence this unit was ever used. It is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
-		<Italian>Non c'è alcuna prova che quest'unità sia mai stata usata in battaglia. Fa parte delle [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
+		<Italian>Non c'è alcuna prova che quest'unità sia mai stata usata in battaglia. Fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologie delle timeline alternative[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
+		<Russian>Не существует доказательств того, что такие подразделения когда-либо существовали. Они - порождение [COLOR_HIGHLIGHT_TEXT]технологий альтернативной временной линии[COLOR_REVERT]. Технологий, которые могли бы быть.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BEARRIDER</Tag>
@@ -524,12 +554,13 @@
 		</French>
 		<Italian>Cavalcatore di orsi</Italian>
 		<Polish>Jeździec (Niedźwiedź)</Polish>
-		<Russian>Íàåçäíèê íà ìåäâåäå</Russian>
+		<Russian>Всадник на медведе</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BEARRIDER_PEDIA</Tag>
 		<English>There is no evidence this unit was ever used. It is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
-		<Italian>Non c'è alcuna prova che quest'unità sia mai stata usata in battaglia. Fa parte delle [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
+		<Italian>Non c'è alcuna prova che quest'unità sia mai stata usata in battaglia. Fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologie delle timeline alternative[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
+		<Russian>Не существует доказательств того, что такие подразделения когда-либо существовали. Они - порождение [COLOR_HIGHLIGHT_TEXT]технологий альтернативной временной линии[COLOR_REVERT]. Технологий, которые могли бы быть.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BISON_RIDER</Tag>
@@ -541,13 +572,14 @@
 		</French>
 		<Italian>Cavaliere di bisonti</Italian>
 		<Polish>Jeździec (Bizon)</Polish>
-		<Russian>Íàåçäíèê íà áèçîíå</Russian>
+		<Russian>Всадник на бизоне</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BISON_RIDER_PEDIA</Tag>
 		<English>There is no evidence this unit was ever used. It is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
-		<Italian>Non c'è alcuna prova che quest'unità sia mai stata usata in battaglia. Fa parte delle [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
+		<Italian>Non c'è alcuna prova che quest'unità sia mai stata usata in battaglia. Fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologie delle timeline alternative[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
 		<Polish>Nie ma dowodów na istnienie tej jednostki, jest ona częścią tzw. [COLOR_HIGHLIGHT_TEXT]technologii alternatywnej ścieżki historycznej[COLOR_REVERT].</Polish>
+		<Russian>Не существует доказательств того, что такие подразделения когда-либо существовали. Они - порождение [COLOR_HIGHLIGHT_TEXT]технологий альтернативной временной линии[COLOR_REVERT]. Технологий, которые могли бы быть.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BOMBARD_MAMMOTH</Tag>
@@ -559,7 +591,7 @@
 		</French>
 		<Italian>Mammut da bombardamento</Italian>
 		<Polish>Mamut-Bombard</Polish>
-		<Russian>Ìàìîíò ñ ïóøêîé</Russian>
+		<Russian>Бомбарда на мамонте</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DEERRIDER</Tag>
@@ -571,13 +603,14 @@
 		</French>
 		<Italian>Cavaliere di cervi</Italian>
 		<Polish>Jeździec (Jeleń)</Polish>
-		<Russian>Íàåçäíèê íà îëåíå</Russian>
+		<Russian>Всадник на олене</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DEERRIDER_PEDIA</Tag>
 		<English>Equivalent in style to the Horse Rider units. Strongest base early withdrawal - even battle hardened deer can be skittish creatures that can be tough to KEEP in the battle for long but makes them GREAT at wearing down opponents. They'd be perhaps the best at this get in/get out type of strategy so long as they can do some damage during their short fights.[PARAGRAPH:2]There is no evidence this unit was ever used. It is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<French>Équivalent en style aux unités Chevaucheurs (à cheval). Retrait précoce de la base la plus forte - même les cerfs endurcis au combat peuvent être des créatures agiles qui peuvent être difficiles à GARDER dans la bataille pendant longtemps, mais les rendent EXCEPTIONNELS pour épuiser leurs adversaires. Ils seraient peut-être les meilleurs dans ce type de stratégie d'entrée / sortie tant qu'ils peuvent faire des dégâts pendant leurs combats courts.[PARAGRAPH:2]Il n'y a aucune preuve que cette unité ait jamais été utilisée. Il fait partie des [COLOR_HIGHLIGHT_TEXT] technologies de chronologie alternatives [COLOR_REVERT]. Technologies qui auraient pu l'être.</French>
-		<Italian>Equivalente nello stile alle unità cavaliere di cavalli. Ritiro anticipato di base più forte: anche i cervi temprati dalla battaglia possono essere creature ombrose che possono essere difficili da MANTENERE a lungo nella battaglia, ma questo li rende GRANDI nel logorare gli avversari. Sarebbero forse i migliori in questo tipo di strategia di entrata/uscita, purché riescano a fare qualche danno durante i loro brevi combattimenti.[PARAGRAPH:2]Non ci sono prove che questa unità sia mai stata usata. Fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologiealternative[COLOR_REVERT]. Tecnologie che avrebbero potuto essere.</Italian>
+		<Italian>Equivalente nello stile alle unità cavaliere di cavalli. Ritiro anticipato di base più forte: anche i cervi temprati dalla battaglia possono essere creature ombrose che possono essere difficili da MANTENERE a lungo nella battaglia, ma questo li rende GRANDI nel logorare gli avversari. Sarebbero forse i migliori in questo tipo di strategia di entrata/uscita, purché riescano a fare qualche danno durante i loro brevi combattimenti.[PARAGRAPH:2]Non ci sono prove che questa unità sia mai stata usata. Fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologie alternative[COLOR_REVERT]. Tecnologie che avrebbero potuto essere.</Italian>
+		<Russian>Эквивалентны по стилю всадникам на лошадях. Самое главное - ранний отход. Даже привыкшие к сражениям олени могут оставаться пугливыми и трудноконтролируемыми в длительном бою. Зато они отлично справляются с изматыванием противника. Возможно, они станут лучшими по тактике "Ударил-убежал", если успеют нанести урон в непродолжительном бою.[PARAGRAPH:2]Не существует доказательств того, что такие подразделения когда-либо существовали. Они - порождение [COLOR_HIGHLIGHT_TEXT]технологий альтернативной временной линии[COLOR_REVERT]. Технологий, которые могли бы быть.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DEER_ARCHER</Tag>
@@ -589,33 +622,35 @@
 		</French>
 		<Italian>Arciere su cervo</Italian>
 		<Polish>Jeleni Łucznik</Polish>
-		<Russian>Ëó÷íèê íà îëåíå</Russian>
+		<Russian>Лучник на олене</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DEER_ARCHER_PEDIA</Tag>
 		<English>Equivalent in style to the Horse Archer units. Strongest base early withdrawal - even battle hardened deer can be skittish creatures that can be tough to KEEP in the battle for long but makes them GREAT at wearing down opponents. They'd be perhaps the best at this get in/get out type of strategy so long as they can do some damage during their short fights.[PARAGRAPH:2]There is no evidence this unit was ever used. It is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<French>Équivalent en style aux unités Archers sur cheval. Retrait précoce de la base la plus forte - même les cerfs endurcis au combat peuvent être des créatures agiles qui peuvent être difficiles à GARDER dans la bataille pendant longtemps, mais les rendent EXCEPTIONNELS pour épuiser leurs adversaires. Ils seraient peut-être les meilleurs dans ce type de stratégie d'entrée / sortie tant qu'ils peuvent faire des dégâts pendant leurs combats courts.[PARAGRAPH:2]Il n'y a aucune preuve que cette unité ait jamais été utilisée. Il fait partie des [COLOR_HIGHLIGHT_TEXT]Technologies de chronologie alternatives[COLOR_REVERT]. Technologies qui auraient pu exister.</French>
-		<Italian>Equivalente nello stile alle unità arciere a cavallo. Ritiro anticipato di base più forte: anche i cervi temprati dalla battaglia possono essere creature ombrose che possono essere difficili da MANTENERE a lungo nella battaglia, ma questo li rende GRANDI nel logorare gli avversari. Sarebbero forse i migliori in questo tipo di strategia di entrata/uscita, purché riescano a fare qualche danno durante i loro brevi combattimenti.[PARAGRAPH:2]Non ci sono prove che questa unità sia mai stata usata. Fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologiealternative[COLOR_REVERT]. Tecnologie che avrebbero potuto essere.</Italian>
+		<Italian>Equivalente nello stile alle unità arciere a cavallo. Ritiro anticipato di base più forte: anche i cervi temprati dalla battaglia possono essere creature ombrose che possono essere difficili da MANTENERE a lungo nella battaglia, ma questo li rende GRANDI nel logorare gli avversari. Sarebbero forse i migliori in questo tipo di strategia di entrata/uscita, purché riescano a fare qualche danno durante i loro brevi combattimenti.[PARAGRAPH:2]Non ci sono prove che questa unità sia mai stata usata. Fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologie alternative[COLOR_REVERT]. Tecnologie che avrebbero potuto essere.</Italian>
+		<Russian>Эквивалентны по стилю конным лучникам. Самое главное - ранний отход. Даже привыкшие к сражениям олени могут оставаться пугливыми и трудноконтролируемыми в длительном бою. Зато они отлично справляются с изматыванием противника. Возможно, они станут лучшими по тактике "Ударил-убежал", если успеют нанести урон в непродолжительном бою.[PARAGRAPH:2]Не существует доказательств того, что такие подразделения когда-либо существовали. Они - порождение [COLOR_HIGHLIGHT_TEXT]технологий альтернативной временной линии[COLOR_REVERT]. Технологий, которые могли бы быть.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DEER_LIGHT</Tag>
 		<English>Light Deer Cavalry</English>
 		<French>Cavalier léger cervidé</French>
 		<Polish>Lekka Kawaleria (Jeleń)</Polish>
-		<Russian>Êàâàëåðèñò íà îëåíå</Russian>
+		<Russian>Легкая оленья кавалерия</Russian>
 		<Italian>Cavalleria leggera di cervi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DEER_LIGHT_PEDIA</Tag>
 		<English>Equivalent style to the Light Horse Cavalry units. Strongest base early withdrawal - even battle hardened deer can be skittish creatures that can be tough to KEEP in the battle for long but makes them GREAT at wearing down opponents. They'd be perhaps the best at this get in/get out type of strategy so long as they can do some damage during their short fights.[PARAGRAPH:2]There is no evidence this unit was ever used. It is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<French>Style équivalent aux unités de cavaliers légers à cheval. Retrait précoce de la base la plus forte - même les cerfs endurcis au combat peuvent être des créatures agiles qui peuvent être difficiles à GARDER dans la bataille pendant longtemps, mais les rendent EXCEPTIONNELS pour épuiser leurs adversaires. Ils seraient peut-être les meilleurs dans ce type de stratégie d'entrée / sortie tant qu'ils peuvent faire des dégâts pendant leurs combats courts.[PARAGRAPH:2]Il n'y a aucune preuve que cette unité ait jamais été utilisée. Il fait partie des [COLOR_HIGHLIGHT_TEXT]Technologies de chronologie alternatives[COLOR_REVERT]. Technologies qui auraient pu exister.</French>
-		<Italian>Equivalente nello stile alle unità di cavalleria leggera a cavallo. Ritiro anticipato di base più forte: anche i cervi temprati dalla battaglia possono essere creature ombrose che possono essere difficili da MANTENERE a lungo nella battaglia, ma questo li rende GRANDI nel logorare gli avversari. Sarebbero forse i migliori in questo tipo di strategia di entrata/uscita, purché riescano a fare qualche danno durante i loro brevi combattimenti.[PARAGRAPH:2]Non ci sono prove che questa unità sia mai stata usata. Fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologiealternative[COLOR_REVERT]. Tecnologie che avrebbero potuto essere.</Italian>
+		<Italian>Equivalente nello stile alle unità di cavalleria leggera a cavallo. Ritiro anticipato di base più forte: anche i cervi temprati dalla battaglia possono essere creature ombrose che possono essere difficili da MANTENERE a lungo nella battaglia, ma questo li rende GRANDI nel logorare gli avversari. Sarebbero forse i migliori in questo tipo di strategia di entrata/uscita, purché riescano a fare qualche danno durante i loro brevi combattimenti.[PARAGRAPH:2]Non ci sono prove che questa unità sia mai stata usata. Fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologie alternative[COLOR_REVERT]. Tecnologie che avrebbero potuto essere.</Italian>
+		<Russian>Эквивалентны по стилю легкой коннице. Самое главное - ранний отход. Даже привыкшие к сражениям олени могут оставаться пугливыми и трудноконтролируемыми в длительном бою. Зато они отлично справляются с изматыванием противника. Возможно, они станут лучшими по тактике "Ударил-убежал", если успеют нанести урон в непродолжительном бою.[PARAGRAPH:2]Не существует доказательств того, что такие подразделения когда-либо существовали. Они - порождение [COLOR_HIGHLIGHT_TEXT]технологий альтернативной временной линии[COLOR_REVERT]. Технологий, которые могли бы быть.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FELINE_SUPERIOR</Tag>
 		<English>Felis Superior</English>
 		<French>Félin Cybernétique</French>
-		<Russian>Ñóïåðêîøêà</Russian>
+		<Russian>Суперкошка</Russian>
 		<Italian>Felino cibernetico</Italian>
 	</TEXT>
 	<TEXT>
@@ -628,47 +663,48 @@
 		</French>
 		<Italian>Arciere su giraffa</Italian>
 		<Polish>Żyrafi Łucznik</Polish>
-		<Russian>Ëó÷íèê íà æèðàôå</Russian>
+		<Russian>Лучник на жирафе</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GIRAFFE_ARCHER_PEDIA</Tag>
 		<English>There is no evidence this unit was ever used. It is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<Italian>Non c'è alcuna prova che quest'unità sia mai stata usata in battaglia. Fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologie alternative[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
+		<Russian>Не существует доказательств того, что такие подразделения когда-либо существовали. Они - порождение [COLOR_HIGHLIGHT_TEXT]технологий альтернативной временной линии[COLOR_REVERT]. Технологий, которые могли бы быть.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GIRAFFE_CARABINIER</Tag>
 		<English>Giraffe Carabinier</English>
-		<Russian>Êàðàáèíåð íà æèðàôå</Russian>
+		<Russian>Карабинер на жирафе</Russian>
 		<Italian>Carabiniere su giraffa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GIRAFFE_CAVALRY</Tag>
 		<English>Giraffe Cavalry</English>
-		<Russian>Êàâàëåðèÿ íà æèðàôàõ</Russian>
+		<Russian>Жирафья кавалерия</Russian>
 		<Italian>Cavalleria su giraffa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GIRAFFE_CROSSBOW</Tag>
 		<English>Giraffe Crossbow</English>
-		<Russian>Àðáàëåò÷èê íà æèðàôå</Russian>
+		<Russian>Арбалетчик на жирафе</Russian>
 		<Italian>Balestriere su giraffa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GIRAFFE_CUIRASSIER</Tag>
 		<English>Giraffe Cuirassier</English>
-		<Russian>Êèðàñèð íà æèðàôå</Russian>
+		<Russian>Кирасир на жирафе</Russian>
 		<Italian>Corazziere su giraffa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GIRAFFE_DRAGOON</Tag>
 		<English>Giraffe Dragoon</English>
-		<Russian>Äðàãóí íà æèðàôå</Russian>
+		<Russian>Драгун на жирафе</Russian>
 		<Italian>Dragone su giraffa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GIRAFFE_TRENCH_CAVALRY</Tag>
 		<English>Giraffe Trench Cavalry</English>
-		<Russian>Îêîïíûé æèðàô</Russian>
+		<Russian>Жирафья окопная кавалерия</Russian>
 		<Italian>Cavalleria di trincea su giraffa</Italian>
 	</TEXT>
 	<TEXT>
@@ -676,7 +712,7 @@
 		<English>Guard Cat</English>
 		<French>Félin de surveillance</French>
 		<Polish>Kot Stróżujący</Polish>
-		<Russian>Ñòîðîæåâàÿ êîøêà</Russian>
+		<Russian>Сторожевая кошка</Russian>
 		<Italian>Gatto da guardia</Italian>
 	</TEXT>
 	<TEXT>
@@ -689,12 +725,13 @@
 		</French>
 		<Italian>Arciere su lama</Italian>
 		<Polish>Llami Łucznik</Polish>
-		<Russian>Ëó÷íèê íà ëàìå</Russian>
+		<Russian>Лучник на ламе</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LLAMA_ARCHER_PEDIA</Tag>
 		<English>[COLOR_UNIT_TEXT]Llama Archer[COLOR_REVERT] is weaker version of [COLOR_UNIT_TEXT]Horse Archer[COLOR_REVERT]. This unit can move through mountain tiles.</English>
 		<Italian>L'[COLOR_UNIT_TEXT]arciere su lama[COLOR_REVERT] è una versione più debole dell'[COLOR_UNIT_TEXT]arciere a cavallo[COLOR_REVERT]. Questa unità può muoversi attraverso le caselle di montagna</Italian>
+		<Russian>[COLOR_UNIT_TEXT]Лучник на ламе[COLOR_REVERT] - более слабый вариант [COLOR_UNIT_TEXT]конного лучника[COLOR_REVERT]. Может проходить через горы.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LLAMA_RIDER</Tag>
@@ -706,12 +743,13 @@
 		</French>
 		<Italian>Cavaliere di lama</Italian>
 		<Polish>Jeździec (Llama)</Polish>
-		<Russian>Íàåçäíèê íà ëàìå</Russian>
+		<Russian>Всадник на ламе</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LLAMA_RIDER_PEDIA</Tag>
 		<English>The Llama Rider is a rider on a llama, which is a furry animal native to South America. The Inca used these animals in their empire before the Spanish conquered them.</English>
 		<Italian>Il cavaliere di lama è un uomo che cavalca un lama, un animale peloso nativo del Sudamerica. Gli Inca usavano questi animali nel loro impero prima della conquista da parte degli Spagnoli.</Italian>
+		<Russian>Человек едущий на ламе, пушистом животном из Южной Америки. Этих зверей использовали в империи инков до завоевания испанцами.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAPINGUARI</Tag>
@@ -722,7 +760,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Mapinguari (Włócznik)</Polish>
-		<Russian>Ìàïèíãóàðè-êîïåéùèê</Russian>
+		<Russian>Мапингуари с копьем</Russian>
 		<Italian>Mapinguari con lancia</Italian>
 	</TEXT>
 	<TEXT>
@@ -734,13 +772,13 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Mapinguari (Włócznik - Obsydian)</Polish>
-		<Russian>Ìàïèíãóàðè ñ îáñ. êîïüåì</Russian>
+		<Russian>Мапингуари с обсидиановым копьем</Russian>
 		<Italian>Mapinguari con lancia d'ossidiana</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAPINGUARI_PEDIA</Tag>
 		<English>The Mapinguari is a South American legend although some suggest it may still exist. Here we are giving the name to a unit consisting of a Giant Sloth and two spearman handlers as suggested by Boonkie on the C2C forum.</English>
-		<Russian>Ëåãåíäû èíäåéöåâ ðàññêàçûâàþò î ñóùåñòâå Ìàïèíãóàðè, êîòîðîå ïî îïèñàíèþ ñîâïàäàåò ñ îãðîìíûì ëåíèâöåì. Çàèíòðèãîâàííûå ýòèìè ëåãåíäàìè êðèïòîçîîëîãè ïûòàëèñü íàéòè âûæèâøèå îñîáè â áàññåéíå Àìàçîíêè, îäíàêî èì ýòî íå óäàëîñü.</Russian>
+		<Russian>Мапингуари - существо из легенд Южной Америки, по мнению некоторых, все еще существующее. Отряд из гигантского ленивца (один из вероятных прообразов) и двух дрессировщиков с копьями назван в его честь.</Russian>
 		<Italian>Il Mapinguari è una leggenda sudamericana anche se alcuni suggeriscono che possa ancora esistere. Qui stiamo dando il nome a un'unità composta da un bradipo gigante e due addestratori lancieri come suggerito da Boonkie sul forum C2C.</Italian>
 	</TEXT>
 	<TEXT>
@@ -752,7 +790,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Mapinguari (Pikimen)</Polish>
-		<Russian>Ìàïèíãóàðè-ïèêèíåð</Russian>
+		<Russian>Мапингуари-пикинер</Russian>
 		<Italian>Mapinguari picchiere</Italian>
 	</TEXT>
 	<TEXT>
@@ -764,7 +802,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Mapinguari (Włócznik - Kamień)</Polish>
-		<Russian>Ìàïèíãóàðè ñ êð. êîïüåì</Russian>
+		<Russian>Мапингуари с каменным копьем</Russian>
 		<Italian>Mapinguari con lancia di pietra</Italian>
 	</TEXT>
 	<TEXT>
@@ -776,21 +814,21 @@
 			<Plural>0</Plural>
 		</French>
 		<Polish>Mapinguari (Włócznik - Drewno)</Polish>
-		<Russian>Ìàïèíãóàðè ñ äåð. êîïüåì</Russian>
+		<Russian>Мапингуари с деревянным копьем</Russian>
 		<Italian>Mapinguari con lancia di legno</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_MAMMOTH_RIDER</Tag>
 		<English>Neanderthal Mammoth Rider</English>
-		<Russian>Íåàíä. ìàìîíò</Russian>
-		<Italian>Cavaliere di mammut neanderthal</Italian>
+		<Russian>Неандертальский всадник на мамонте</Russian>
+		<Italian>Cavaliere di mammut Neanderthal</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_POLICE_CAT</Tag>
 		<English>Police Cat</English>
 		<French>Félin Limier</French>
 		<Polish>Kot Policyjny</Polish>
-		<Russian>Ïîëèö. êîøêà</Russian>
+		<Russian>Полицейская кошка</Russian>
 		<Italian>Gatto poliziotto</Italian>
 	</TEXT>
 	<TEXT>
@@ -803,19 +841,20 @@
 		</French>
 		<Italian>Cavaliere di rinoceronti</Italian>
 		<Polish>Jeździec (Nosorożec)</Polish>
-		<Russian>Íàåçäíèê íà íîñîðîãå</Russian>
+		<Russian>Всадник на носороге</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_RHINO_SWORDSMAN_PEDIA</Tag>
 		<English>There is no evidence this unit was ever used. It is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<Italian>Non c'è alcuna prova che quest'unità sia mai stata usata in battaglia. Fa parte delle [COLOR_HIGHLIGHT_TEXT]tecnologie alternative[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
+		<Russian>Не существует доказательств того, что такие подразделения когда-либо существовали. Они - порождение [COLOR_HIGHLIGHT_TEXT]технологий альтернативной временной линии[COLOR_REVERT]. Технологий, которые могли бы быть.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRAINEDCAT</Tag>
 		<English>Trained Cat</English>
 		<French>Félin dressé</French>
 		<Polish>Tresowany Kot</Polish>
-		<Russian>Äîìàøíÿÿ êîøêà</Russian>
+		<Russian>Боевая кошка</Russian>
 		<Italian>Gatto addestrato</Italian>
 	</TEXT>
 	<TEXT>
@@ -834,17 +873,18 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Jeździec (Mamut)</Polish>
-		<Russian>Íàåçäíèê íà ìàìîíòå</Russian>
+		<Russian>Всадник на мамонте</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRAINED_MAMMOTH_PEDIA</Tag>
 		<English>You raised your own mammoth pup, broke it to the saddle and trained it for war. You might ride your massive mount on raids but your primary duty is to hunt down marauding raiders in your own clan's lands. Few will stand and face a 10' war-mammoth. Fewer will face that mammoth with a warrior on its back.</English>
 		<Italian>Hai allevato il tuo cucciolo di mammut, gli hai messo una sella e l'hai addestrato alla guerra. Potresti cavalcare la tua enorme cavalcatura durante le incursioni, ma il tuo compito principale è dare la caccia ai predoni nelle terre del tuo clan. Pochi resisteranno e affronteranno un mammut da guerra di 10 piedi. Meno ancora affronteranno quel mammut con un guerriero sulla schiena.</Italian>
+		<Russian>Вы вырастили собственного детеныша мамонта, приучили к седлу и выдрессировали для войны. Вы можете участвовать в набегах на таком огромном скакуне, но главная задача - выслеживание налетчиков на землях своей цивилизации. Немногие выстоят против трехметрового боевого мамонта. А еще меньше тех, кто одолеет воина, сидящего на его спине.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_URBAN_GIRAFFEMAN</Tag>
 		<English>Post-apocalyptic Giraffe Urban Rider</English>
-		<Russian>Ðåéäåð íà æèðàôå</Russian>
+		<Russian>Постапокалиптический городской всадник на жирафе</Russian>
 		<Italian>Cavaliere urbano di giraffe</Italian>
 	</TEXT>
 	<TEXT>
@@ -852,7 +892,7 @@
 		<English>War Cat</English>
 		<French>Félin de combat</French>
 		<Polish>Kot Bojowy</Polish>
-		<Russian>Áîåâàÿ êîøêà</Russian>
+		<Russian>Боевая кошка</Russian>
 		<Italian>Gatto da guerra</Italian>
 	</TEXT>
 	<TEXT>
@@ -876,7 +916,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Mamut Bojowy</Polish>
-		<Russian>Áîåâîé ìàìîíò</Russian>
+		<Russian>Боевой мамонт</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WAR_RHINO</Tag>
@@ -888,12 +928,13 @@
 		</French>
 		<Italian>Rinoceronte asiatico da guerra</Italian>
 		<Polish>Azjatyckie Nosorożce Bojowe</Polish>
-		<Russian>Áîåâîé íîñîðîã</Russian>
+		<Russian>Азиатский боевой носорог</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WAR_RHINO_PEDIA</Tag>
 		<English>There is some evidence that [COLOR_UNIT_TEXT]Asiatic War Rhinoceros[COLOR_REVERT] were used. It is just not [COLOR_HIGHLIGHT_TEXT]good[COLOR_REVERT] evidence. They were used as shock "troops", charging into the enemy army doing some damage but mostly causing panic. Thus making the enemy easier to defeat.</English>
 		<Italian>Ci sono alcune prove che il [COLOR_UNIT_TEXT]rinoceronte asiatico da guerra[COLOR_REVERT] venne utilizzato in battaglia. Semplicemente, queste prove non sono [COLOR_HIGHLIGHT_TEXT]certe[COLOR_REVERT]. Erano usate come truppe d'assalto, caricando contro i nemici, causando alcuni danni ma soprattutto panico, rendendo così i nemici più facili da sconfiggere.</Italian>
+		<Russian>Существуют доказательства того, что [COLOR_UNIT_TEXT]азиатских боевых носорогом[COLOR_REVERT] использовали в бою. Просто это недостаточно [COLOR_HIGHLIGHT_TEXT]хорошие[COLOR_REVERT] доказательства. Носороги были "штурмовиками" - врывались в армию противника и наносили некоторый урон, но по большей части вызывали панику. Благодаря чему врага было легче победить.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZEBRA_ARCHER</Tag>
@@ -905,7 +946,7 @@
 		</French>
 		<Italian>Arciere su zebra</Italian>
 		<Polish>Zebryjski Łucznik</Polish>
-		<Russian>Ëó÷íèê íà çåáðå</Russian>
+		<Russian>Лучник на зебре</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZEBRA_CAVALRY</Tag>
@@ -917,7 +958,7 @@
 		</French>
 		<Italian>Cavalleria su zebra</Italian>
 		<Polish>Kawaleria (Zebra)</Polish>
-		<Russian>Êàâàëåðèñò íà çåáðå</Russian>
+		<Russian>Зебровая кавалерия</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZEBRA_CHARIOT</Tag>
@@ -929,7 +970,7 @@
 		</French>
 		<Italian>Cocchio con zebre</Italian>
 		<Polish>Rydwan (Zebra)</Polish>
-		<Russian>Êîëåñíèöà ñ çåáðàìè</Russian>
+		<Russian>Колесница с зеброй</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZEBRA_CUIRASSIER</Tag>
@@ -941,7 +982,7 @@
 		</French>
 		<Italian>Corazziere su zebra</Italian>
 		<Polish>Kirasjer (Zebra)</Polish>
-		<Russian>Êèðàñèð íà çåáðå</Russian>
+		<Russian>Кирасир на зебре</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZEBRA_KNIGHT</Tag>
@@ -953,6 +994,6 @@
 		</French>
 		<Italian>Cavaliere di zebre</Italian>
 		<Polish>Rycerz (Zebra)</Polish>
-		<Russian>Ðûöàðü íà çåáðå</Russian>
+		<Russian>Рыцарь на зебре</Russian>
 	</TEXT>
 </Civ4GameText>

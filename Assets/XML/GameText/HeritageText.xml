@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_AARDVARK</Tag>
+		<English>Folklore - Aardvark</English>
+		<French>Mythe de l'Oryctérope du Cap</French>
+		<German>Mythos des Erdferkels</German>
+		<Italian>Mito dell'oritteropo</Italian>
+		<Russian>Ìèô î òðóáêîçóáå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_ANTEATER</Tag>
+		<English>Folklore - Anteater</English>
+		<French>Mythe du Fourmilier</French>
+		<German>Mythos des Ameisenbären</German>
+		<Italian>Mito del formichiere</Italian>
+		<Polish>Mit - Mrówkojad</Polish>
+		<Russian>Ìèô î ìóðàâüåäå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_BABIRUSA</Tag>
+		<English>Folklore - Babirusa</English>
+		<French>Mythe du babiroussas</French>
+		<German>Mythos des Molukken-Hirschebers</German>
+		<Italian>Mito del babirussa</Italian>
+		<Russian>Ìèô î áàáèðóñå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_BOAR_WILD</Tag>
+		<English>Folklore - Wild Boar</English>
+		<German>Mythos des Wildschweins</German>
+		<Italian>Mito del cinghiale selvatico</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_DART_FROG</Tag>
+		<English>Folklore - Dart Frog</English>
+		<French>Mythe de la Grenouille venimeuse</French>
+		<German>Mythos des Baumsteigerfroschs</German>
+		<Italian>Mito della rana velenosa</Italian>
+		<Russian>Ìèô î æàáå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_ELEPHANT_AFRICAN</Tag>
+		<English>Folklore - African Elephant</English>
+		<French>Mythe de l'Eléphant d'Afrique</French>
+		<German>Mythos des Afrikanischen Elefanten</German>
+		<Italian>Mito dell'elefante africano</Italian>
+		<Russian>Ìèô îá àôð. ñëîíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_ELEPHANT_ASIAN</Tag>
+		<English>Folklore - Asian Elephant</English>
+		<French>Mythe de l'Eléphant d'Asie</French>
+		<German>Mythos des Asiatischen Elefanten</German>
+		<Italian>Mito dell'elefante asiatico</Italian>
+		<Russian>Ìèô îá àçèàò. ñëîíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_FOX_ARCTIC</Tag>
+		<English>Folklore - Arctic Fox</English>
+		<French>Mythe du Renard arctique</French>
+		<German>Mythos des Polarfuchses</German>
+		<Italian>Mito della volpe artica</Italian>
+		<Russian>Ìèô î ïåñöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_FOX_FENNEC</Tag>
+		<English>Folklore - Fennec Fox</English>
+		<French>Mythe du Fennec</French>
+		<German>Mythos des Fenneks</German>
+		<Italian>Mito della volpe del deserto</Italian>
+		<Russian>Ìèô î ëèñèöå-ôåíåê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_FOX_RED</Tag>
+		<English>Folklore - Red Fox</English>
+		<French>Mythe du Renard Roux</French>
+		<German>Mythos des Rotfuchses</German>
+		<Italian>Mito della volpe rossa</Italian>
+		<Russian>Ìèô î ëèñèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_MAMMOTH</Tag>
+		<English>Folklore - Mammoth</English>
+		<French>Mythe du Mammouth</French>
+		<German>Mythos des Mammuts</German>
+		<Italian>Mito del mammut</Italian>
+		<Polish>Mit Mamutów</Polish>
+		<Russian>Ìèô î ìàìîíòå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PARROT_AFRICAN_GREY</Tag>
+		<English>Folklore - African Grey Parrot</English>
+		<French>Mythe du Perroquet jaco</French>
+		<Italian>Mito del pappagallo cenerino</Italian>
+		<Polish>Mit - Żako</Polish>
+		<Russian>Ìèô îá àôð. ïîïóãàå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PENGUIN_AFRICAN</Tag>
+		<English>Folklore - African Penguin</English>
+		<French>Mythe du Manchot du Cap</French>
+		<Italian>Mito del pinguino africano</Italian>
+		<Polish>Mit - Pingwin Przylądkowy</Polish>
+		<Russian>Ìèô îá àôð. ïèíãâèíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_SWINE</Tag>
+		<English>Folklore - Swine</English>
+		<Italian>Mito del maiale</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TAPIR_BAIRDS</Tag>
+		<English>Folklore - Baird's Tapir</English>
+		<French>Mythe du Tapir de Baird</French>
+		<German>Mythos des Baird-Tapirs</German>
+		<Italian>Mito del tapiro di Baird</Italian>
+		<Polish>Mit - Tapir Panamski</Polish>
+		<Russian>Ìèô î òàïèðå Áýðäà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TAPIR_LOWLAND</Tag>
+		<English>Folklore - Lowland Tapir</English>
+		<French>Mythe du Tapir du Brésil</French>
+		<German>Mythos des Flachlandtapirs</German>
+		<Italian>Mito del tapiro di pianura</Italian>
+		<Polish>Mit - Tapir</Polish>
+		<Russian>Ìèô î áðàç. òàïèðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TAPIR_MALAYAN</Tag>
+		<English>Folklore - Malayan Tapir</English>
+		<French>Mythe du Tapir Malais</French>
+		<German>Mythos des Schabrackentapirs</German>
+		<Italian>Mito del tapiro malese</Italian>
+		<Polish>Mit - Tapir Malajski</Polish>
+		<Russian>Ìèô î ìàë. òàïèðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TAPIR_MOUNTAIN</Tag>
+		<English>Folklore - Mountain Tapir</English>
+		<French>Mythe du Tapir des Montagnes</French>
+		<German>Mythos des Bergtapirs</German>
+		<Italian>Mito del tapiro delle Ande</Italian>
+		<Polish>Mit - Tapir Górski</Polish>
+		<Russian>Ìèô î ãîðíîì òàïèðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_UNICORN</Tag>
+		<English>Folklore - Unicorn</English>
+		<French>Mythe de la Licorne</French>
+		<German>Mythos der Einhörner</German>
+		<Italian>Mito dell'unicorno</Italian>
+		<Polish>Mit Jednorożca</Polish>
+		<Russian>Ìèô îá åäèíîðîãå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WARTHOG</Tag>
+		<English>Folklore - Warthog</English>
+		<French>Mythe du Phacochère</French>
+		<German>Mythos des Warzenschweins</German>
+		<Italian>Mito del facocero</Italian>
+		<Polish>Mit - Guziec</Polish>
+		<Russian>Ìèô î áîðîäàâî÷íèêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXONOMY_AMPHIBIANS</Tag>
+		<English>Taxonomy - Amphibians</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXONOMY_BOAR</Tag>
+		<English>Taxonomy - Boar</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXONOMY_ELEPHANT</Tag>
+		<English>Taxonomy - Elephant</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXONOMY_TAPIR</Tag>
+		<English>Taxonomy - Tapir</English>
+	</TEXT>
+</Civ4GameText>

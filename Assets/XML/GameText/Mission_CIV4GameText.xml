@@ -160,7 +160,7 @@
 		<Tag>TXT_KEY_MISSION_ASSASSINATE</Tag>
 		<English>Assassinate enemy Units on the same tile!</English>
 		<French>Assassiner une unité ennemie de la même case!</French>
-		<Italian>[NEWLINE]Assassina uniità nemiche (sulla stessa casella)</Italian>
+		<Italian>[NEWLINE]Assassina unità nemiche (sulla stessa casella)</Italian>
 		<Russian>Убейте вражеские юниты на этой клетке!</Russian>
 	</TEXT>
 	<TEXT>
@@ -216,7 +216,7 @@
 		<Tag>TXT_KEY_MISSION_BUILDUP</Tag>
 		<English>Build Up</English>
 		<French>Retranchement</French>
-		<Italian>Allenamento</Italian>
+		<Italian>Allenamenti</Italian>
 		<German>Training</German>
 		<Polish>Koncentracja</Polish>
 		<Russian>Концентрация</Russian>
@@ -622,6 +622,14 @@
 		<Russian>Отряд остается неактивным, пока полностью не восстановит силы.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MISSION_HERITAGE</Tag>
+		<English>Add Heritage</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_HERITAGE_HELP</Tag>
+		<English>[ICON_BULLET]Consumes the unit.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MISSION_HURRY_FOOD</Tag>
 		<English>Hurry Food</English>
 		<French>Surplus de Nourriture</French>
@@ -754,7 +762,7 @@
 		<Tag>TXT_KEY_MISSION_LAWYER_REMOVE_CORPORATIONS_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Litigate[COLOR_REVERT][NEWLINE]Take legal action and drive all corporations from the city.</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]mettre en litige[COLOR_REVERT][NEWLINE]Prendre des mesures juridiques et conduire toutes les entreprises de la ville au procès.</French>
-		<Italian>[NEWLINE]Tramote azioni legali rimuovi tutte le corporazioni dalla città.</Italian>
+		<Italian>[NEWLINE]Tramite azioni legali rimuovi tutte le corporazioni dalla città.</Italian>
 		<Spanish>[ICON_BULLET]Puede tomar acciones legales</Spanish>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Zaskarż[COLOR_REVERT][NEWLINE]Legalnym sposobem wypędź wszystkie korporacje ze swojego miasta.</Polish>
 		<Russian>[COLOR_HIGHLIGHT_TEXT]Судебный процесс[COLOR_REVERT][NEWLINE]Предъявите судебный иск от имени государства и изгоните все корпорации из города.</Russian>
@@ -1237,7 +1245,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_TRANSNEPTUNIAN</Tag>
 		<English>Transfer unit to Kuiper Belt</English>
-		<Italian>Trasferimento unità alla mappa della fiascia di Kuiper</Italian>
+		<Italian>Trasferimento unità alla mappa della fascia di Kuiper</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_UNIVERSE</Tag>

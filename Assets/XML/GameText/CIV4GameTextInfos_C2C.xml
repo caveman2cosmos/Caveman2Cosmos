@@ -53,7 +53,7 @@
 		<English>[ICON_BULLET]%D1_Change Free [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT]</English>
 		<French>[ICON_BULLET]%D1_Change Donne un [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT] gratuit</French>
 		<German>[ICON_BULLET]%D1_Change freien Spezialisten [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Fornisce gratuitamente lo specialista: %D1_Change [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT]</Italian>
+		<Italian>[ICON_BULLET]Fornisce [COLOR_HIGHLIGHT_TEXT]%D1_Change [NUM2:specialista:specialisti][COLOR_REVERT] di tipo [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT]</Italian> <!-- tech Derivates -->
 		<Spanish>[ICON_BULLET]%D1_Change [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT] gratis</Spanish>
 		<Russian>[ICON_BULLET]%D1_Change бесплатного [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT]</Russian>
 	</TEXT>
@@ -107,7 +107,7 @@
 		<English>[ICON_BULLET]Provides %d1_Num [COLOR_HIGHLIGHT_TEXT][LINK=%s2_BonusType]%s3_BonusName[\LINK][COLOR_REVERT] (%F4_BonusIcon)</English>
 		<French>[ICON_BULLET]Fournit %d1_Num [COLOR_HIGHLIGHT_TEXT][LINK=%s2_BonusType]%s3_BonusName[\LINK][COLOR_REVERT] (%F4_BonusIcon)</French>
 		<German>[ICON_BULLET]stellt das Bonusgut [COLOR_HIGHLIGHT_TEXT][LINK=%s2_BonusType]%s3_BonusName[\LINK][COLOR_REVERT] (%F4_BonusIcon) zur Verfügung (%d1_Num Einheit)</German>
-		<Italian>[ICON_BULLET]Fornisce %d1_Num risorse/a di tipo [COLOR_HIGHLIGHT_TEXT][LINK=%s2_BonusType]%s3_BonusName[\LINK][COLOR_REVERT] %F4_BonusIcon</Italian>
+		<Italian>[ICON_BULLET]Fornisce [COLOR_HIGHLIGHT_TEXT]%d1_Num[COLOR_REVERT] [NUM1:risorsa:risorse] di tipo [COLOR_HIGHLIGHT_TEXT][LINK=%s2_BonusType]%s3_BonusName[\LINK][COLOR_REVERT] %F4_BonusIcon</Italian>
 		<Spanish>[ICON_BULLET]Da %d1_Num de [COLOR_HIGHLIGHT_TEXT][LINK=%s2_BonusType]%s3_BonusName[\LINK][COLOR_REVERT] (%F4_BonusIcon)</Spanish>
 		<Russian>[ICON_BULLET]Дает %d1_Num [COLOR_HIGHLIGHT_TEXT][LINK=%s2_BonusType]%s3_BonusName[\LINK][COLOR_REVERT] (%F4_BonusIcon)</Russian>
 	</TEXT>
@@ -126,15 +126,6 @@
 		<French>[ICON_BULLET]Certaines fonctionnalités ne sont disponibles que si %F1_RelIcon est votre [ICON_RELIGION] d'Etat.</French>
 		<Russian>[ICON_BULLET]Некоторые функции работают только если %F1_RelIcon является вашей государственной [ICON_RELIGION].</Russian>
 		<Italian>[ICON_BULLET]Alcune funzioni sono attive solo se %F1_RelIcon è la tua religione di stato [ICON_RELIGION]</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_STRING</Tag>
-		<English>[COLOR_WARNING_TEXT]Requires [LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]Requiert : [LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT]</French>
-		<German>[ICON_BULLET][COLOR_WARNING_TEXT]erforderlich: [LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Richiede inoltre: [LINK=%s1_NameType]%s2_Name[\LINK]</Italian>
-		<Spanish>[COLOR_WARNING_TEXT]Requiere [LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT]</Spanish>
-		<Russian>[COLOR_WARNING_TEXT]Требует [LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_STATE_RELIGION_PREREQ</Tag>
@@ -178,15 +169,6 @@
 		<Italian>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp a causa dell'edificio [COLOR_BUILDING_TEXT][LINK=%s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change %F2_HappOrUnhapp por [COLOR_BUILDING_TEXT][LINK=%s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</Spanish>
 		<Russian>[ICON_BULLET]%D1_Change%F2_HappOrUnhapp от [COLOR_BUILDING_TEXT][LINK=%s3_BuildingType]%s4_Building[\LINK][COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIVICHELP_REQUIRES</Tag>
-		<English>[COLOR_RED]Requires [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</English>
-		<French>[COLOR_RED]Req. [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</French>
-		<German>[COLOR_RED]Erfordert die Technologie [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</German>
-		<Italian>[COLOR_RED][ICON_BULLET]Richiede la tecnologia [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_RED]Requiere [NUM1:el:la:los:las] [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</Spanish>
-		<Russian>[COLOR_RED]Требует [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CORPORATION_FOUNDED_FIRST</Tag>
@@ -266,7 +248,7 @@
 		<Tag>TXT_KEY_GOODY_SCOUT</Tag>
 		<English>A scout type unit joins your civilization.</English>
 		<German>Im Dorf konntet Ihr ein paar Späher rekrutieren.</German>
-		<Italian>Un'unità di tipo espoloratore si unisce alla tua civiltà</Italian>
+		<Italian>Un'unità di tipo esploratore si unisce alla tua civiltà</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_TECH</Tag>
@@ -298,11 +280,12 @@
 		<Tag>TXT_KEY_GOODY_HUNTER</Tag>
 		<English>A hunter type unit joins your civilization.</English>
 		<German>Im Dorf konntet Ihr ein paar Jäger rekrutieren.</German>
+		<Italian>Un'unità di tipo cacciatore si unisce alla tua civiltà.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_CATEGORY_PREREQUISITE</Tag>
 		<English>[ICON_BULLET]May only exist on a %s1_MapCat.</English>
-		<Italian>[ICON_BULLET][COLOR_REVERT]Può esistere solo su una %s1_MapCat</Italian>
+		<Italian>[ICON_BULLET][COLOR_REVERT]Può esistere su una %s1_MapCat</Italian>
 		<German>[ICON_BULLET]kann nur auf einem %s1_MapCat existieren</German>
 		<French>[ICON_BULLET]Ne peut exister que sur une %s1_MapCat.</French>
 		<Russian>[ICON_BULLET]Расположение: только %s1_MapCat.</Russian>
@@ -327,7 +310,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CHANCE_OF_REVOLT</Tag>
 		<English>Revolt %%/Turn: %s1_Chance [NEWLINE](%s2_CityStrength base: x%s3_SpeedAdjustment gamespeed, x%s4_Garrison units)</English>
-		<Italian>Possibilità di rivolta ogni turno: %s1_Chance [NEWLINE](%s2_CityStrength base: x%s3_SpeedAdjustment gamespeed, x%s4_Garrison units)</Italian>
+		<Italian>Probabilità di rivolta ogni turno: %s1_Chance [NEWLINE](%s2_CityStrength base: x%s3_SpeedAdjustment gamespeed, x%s4_Garrison units)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CRIMINAL_CAUGHT</Tag>
@@ -347,15 +330,6 @@
 		<Tag>TXT_KEY_MISC_HELP_FINAL_YIELD</Tag>
 		<English>Total: %d1 %F2</English>
 		<Italian>Rendimento totale: %d1 %F2</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_FREE_CITY_COMMERCE</Tag>
-		<English>[ICON_BULLET]%D1%F2 Free Commerce</English>
-		<French>[ICON_BULLET]%D1%F2 en raison du libre échange</French>
-		<German>[ICON_BULLET]%D1%F2 freie Wirtschaft</German>
-		<Italian>[ICON_BULLET]%D1%F2 a causa del libero commercio</Italian>
-		<Spanish>[ICON_BULLET]%D1 %F2 comercio libre</Spanish>
-		<Russian>[ICON_BULLET]%D1%F2 от чистых доходов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_TOTAL_YIELD_MOD</Tag>
@@ -386,7 +360,7 @@
 		<English>You have pillaged %d1_Num [ICON_GOLD] from the capture of %s2_CityName!!!</English>
 		<French>Vous avez pillé %d1_Num [ICON_GOLD] en capturant %s2_CityName !</French>
 		<German>Ihr habt durch die Eroberung von %s2_CityName %d1_Num [ICON_GOLD] erbeutet!!!</German>
-		<Italian>Hai saccheggiato %d1_Num [ICON_GOLD] dalla conquista della citta di %s2_CityName!!!</Italian>
+		<Italian>Hai saccheggiato %d1_Num [ICON_GOLD] dalla conquista della città di %s2_CityName!!!</Italian>
 		<Spanish>Habéis saqueado %d1_Num [ICON_GOLD] con la captura de %s2_CityName.</Spanish>
 		<Russian>Вы получили %d1_Num [ICON_GOLD] после захвата %s2_CityName!!!</Russian>
 	</TEXT>
@@ -565,7 +539,7 @@
 		<English>[ICON_BULLET]%D1_DmgChange%% City Bombard Damage</English>
 		<French>[ICON_BULLET]Dégâts bombardement %D1_DmgChange%%</French>
 		<German>[ICON_BULLET]%D1_DmgChange%% Stadtbombardierungsschaden</German>
-		<Italian>[ICON_BULLET]%D1_DmgChange%% di possibilità di danno da bombardamento sulla città</Italian>
+		<Italian>[ICON_BULLET]%D1_DmgChange%% di probabilità di danno da bombardamento sulla città</Italian>
 		<Spanish>[ICON_BULLET]%D1_DmgChange%% al daño al cañonear ciudades</Spanish>
 		<Russian>[ICON_BULLET]%D1_DmgChange%% ê óùåðáó îò áîìáàðäèðîâêè ãîðîäîâ</Russian>
 	</TEXT>
@@ -574,7 +548,7 @@
 		<English>[ICON_BULLET]%D1_DmgChange%% Collateral Damage</English>
 		<French>[ICON_BULLET]Dommages collatéraux %D1_DmgChange%%</French>
 		<German>[ICON_BULLET]%D1_DmgChange%% Kollateralschaden</German>
-		<Italian>[ICON_BULLET]%D1_DmgChange%% di possibilità di danno collaterale</Italian>
+		<Italian>[ICON_BULLET]%D1_DmgChange%% di probabilità di danno collaterale</Italian>
 		<Spanish>[ICON_BULLET]%D1_DmgChange%% a los daños colaterales</Spanish>
 		<Russian>[ICON_BULLET]%D1_DmgChange%% ê ñîïóòñòâóþùåìó óùåðáó</Russian>
 	</TEXT>
@@ -592,7 +566,7 @@
 		<English>[ICON_BULLET]%d1_Num Extra First Strike</English>
 		<French>[ICON_BULLET]%d1_Num première attaque supplémentaire</French>
 		<German>[ICON_BULLET]%d1_Num [NUM1:Extra-Erstschlag:Extra-Erstschläge]</German>
-		<Italian>[ICON_BULLET]%d1 primo colpo agginto</Italian>
+		<Italian>[ICON_BULLET]%d1 primo colpo aggiunto</Italian>
 		<Spanish>[ICON_BULLET]%d1_Num [NUM1:ataque de iniciativa adicional:ataques de iniciativa adicionales]</Spanish>
 		<Russian>[ICON_BULLET]%d1_Num äîï. Ïåðâûé óäàð</Russian>
 	</TEXT>
@@ -610,7 +584,7 @@
 		<English>[ICON_BULLET]%D1_Change First Strike Chances</English>
 		<French>[ICON_BULLET]%D1_Change chances de première attaque</French>
 		<German>[ICON_BULLET]%D1_Change Erstschlagschancen</German>
-		<Italian>[ICON_BULLET]%D1_Change di possibilità di primo colpo</Italian>
+		<Italian>[ICON_BULLET]%D1_Change di probabilità di primo colpo</Italian>
 		<Spanish>[ICON_BULLET]Probabilidad de %D1_Change [NUM1:ataque de iniciativa:ataques de iniciativa]</Spanish>
 		<Russian>[ICON_BULLET]Âåðîÿòíîñòü Ïåðâîãî óäàðà: %D1_Change</Russian>
 	</TEXT>
@@ -619,7 +593,7 @@
 		<English>[ICON_BULLET]%d1_Num Extra First Strike Chance</English>
 		<French>[ICON_BULLET]%d1_Num chance supplémentaire de première attaque</French>
 		<German>[ICON_BULLET]%d1_Num Zusatzchance für Erstschlag</German>
-		<Italian>[ICON_BULLET]%d1_Num di possibilità di primo colpo aggiuntivo</Italian>
+		<Italian>[ICON_BULLET]Probabilità di [COLOR_HIGHLIGHT_TEXT]primo colpo aggiuntivo[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]+%d1_Num%[COLOR_REVERT]</Italian> <!-- Subcombat type Exile) -->
 		<Spanish>[ICON_BULLET]Probabilidad de %d1_Num [NUM1:ataque de iniciativa adicional:ataques de iniciativa adicionales]</Spanish>
 		<Russian>[ICON_BULLET]Âåðîÿòíîñòü äîïîëíèòåëüíîãî Ïåðâîãî óäàðà (%d1_Num)</Russian>
 	</TEXT>
@@ -691,7 +665,7 @@
 		<English>[ICON_BULLET]%D1_Change%% Withdrawal Chance</English>
 		<French>[ICON_BULLET]Chances de repli de %D1_Change%%</French>
 		<German>[ICON_BULLET]%D1_Change%% Rückzugsmöglichkeit</German>
-		<Italian>[ICON_BULLET]%D1_Change%% di probabilità di ritirata</Italian>
+		<Italian>[ICON_BULLET]Probabilità di [COLOR_HIGHLIGHT_TEXT]ritirata[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%D1_Change%%[COLOR_REVERT]</Italian> <!-- Combat Subtype Amphibian (Frog) -->
 		<Spanish>[ICON_BULLET]%D1_Change%% a la probabilidad de retirarse</Spanish>
 		<Russian>[ICON_BULLET]Âåðîÿòíîñòü óäà÷íîãî îòñòóïëåíèÿ: %D1_Change%%</Russian>
 	</TEXT>
@@ -708,14 +682,6 @@
 		<French>[COLOR_WARNING_TEXT]Vous devez avoir une [ICON_RELIGION] d'Etat, et celle-ci doit être présente dans la Ville[COLOR_REVERT]</French>
 		<Russian>[COLOR_WARNING_TEXT]У вас должна быть [ICON_RELIGION] государственной религией и иметь последователей в этом городе[COLOR_REVERT]</Russian>
 		<Italian>[COLOR_WARNING_TEXT]Devi avere uno religione di stato [ICON_RELIGION] e deve trovarsi nella città[COLOR_REVERT]</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REQUIRES_TECH</Tag>
-		<English>[COLOR_WARNING_TEXT]Requires [COLOR_TECH_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT][COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]Requiert [COLOR_TECH_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT][COLOR_REVERT]</French>
-		<German>[ICON_BULLET][COLOR_WARNING_TEXT]erforderlich: [COLOR_TECH_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT][COLOR_REVERT]</German>
-		<Russian>[COLOR_WARNING_TEXT]Требует [COLOR_TECH_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT][COLOR_REVERT]</Russian>
-		<Italian>[COLOR_WARNING_TEXT]Richiede la tecnologia [COLOR_TECH_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT][COLOR_REVERT]</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REQUIRES_TECH_ANYONE</Tag>
@@ -746,7 +712,7 @@
 		<English>[ICON_BULLET]First to Discover receives a [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Faire cette découverte avant les autres octroie 1 [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</French>
 		<German>[ICON_BULLET]Der erste Entdecker erhält eine Einheit: [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Il primo che scopre questa tecnologia riceverà un'unità di tipo [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</Italian>
+		<Italian>[ICON_BULLET]La [COLOR_HIGHLIGHT_TEXT]prima civiltà[COLOR_REVERT] che scopre questa tecnologia [COLOR_HIGHLIGHT_TEXT]riceverà un'unità[COLOR_REVERT] di tipo [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</Italian> <!--tech Gathering in the Pedia -->
 		<Spanish>[ICON_BULLET]Quien haga primero su descubrimiento recibirá [NUM1:un:una:unos:unas] [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</Spanish>
 		<Polish>[ICON_BULLET]Nagroda za pierwsze odkrycie: [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</Polish>
 		<Russian>[ICON_BULLET]Ïåðâîîòêðûâàòåëþ äîñòàåòñÿ [COLOR_UNIT_TEXT][LINK=%s1_UnitType]%s2_UnitName[\LINK][COLOR_REVERT]</Russian>
@@ -756,7 +722,7 @@
 		<English>[COLOR_WARNING_TEXT]Obsoletes [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Rend la technologie "[LINK=%s1_TechType]%s2_TechName[\LINK]" obsolète[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]Veraltet: [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Rende [COLOR_WARNING_TEXT]obsoleto[COLOR_REVERT]: [LINK=%s1_TechType]%s2_TechName[\LINK]</Italian>
+		<Italian>[ICON_BULLET]Rende [COLOR_WARNING_TEXT]obsoleto[COLOR_REVERT]: [LINK=%s1_TechType]%s2_TechName[\LINK]</Italian> <!--tech Bark Working, Mountaineering -->
 		<Spanish>[COLOR_WARNING_TEXT]Deja [NUM1:obsoleto:obsoleta:obsoletos:obsoletas] [LINK=%s1_TechType]%s2:2_TechName[\LINK][COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_WARNING_TEXT]Przestarzały: [LINK=%s1_TechType]%s2:2_TechName[\LINK][COLOR_REVERT]</Polish>
 		<Russian>[COLOR_WARNING_TEXT]Óñòàðåâàåò: [LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</Russian>
@@ -766,7 +732,7 @@
 		<English>[LINK=%s1_terrainType]%s2_terrain[\LINK] (until %s3_technology)</English>
 		<French>[LINK=%s1_terrainType]%s2_terrain[\LINK] (jusqu'à %s3_technology)</French>
 		<German>[LINK=%s1_terrainType]%s2_terrain[\LINK] (bis zur Technologie %s3_technology)</German>
-		<Italian>[LINK=%s1_terrainType]%s2_terrain[\LINK] fino alla tecnologia %s3_technology</Italian>
+		<Italian>[LINK=%s1_terrainType]%s2_terrain[\LINK] fino alla tecnologia [COLOR_HIGHLIGHT_TEXT]%s3_technology[COLOR_REVERT]</Italian> <!-- unit Cog Merchant -->
 		<Spanish>[LINK=%s1_terrainType]%s2_terrain[\LINK] (hasta %s3_technology)</Spanish>
 		<Russian>[LINK=%s1_terrainType]%s2_terrain[\LINK] (до %s3_technology)</Russian>
 	</TEXT>
@@ -793,7 +759,7 @@
 		<English>[ICON_BULLET]%D1_Change%% Attack vs. [LINK=%s2_ClassType]%s3_Class[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Change%% en attaque contre [LINK=%s2_ClassType]%s3_Class[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Change%% Angriff gegen Einheit [LINK=%s2_ClassType]%s3_Class[\LINK]</German>
-		<Italian>[ICON_BULLET]%D1_Change%% di percentiale di attacco contro [LINK=%s2_ClassType]%s3:2_Class[\LINK]</Italian>
+		<Italian>[ICON_BULLET]Modificatore di [COLOR_HIGHLIGHT_TEXT]attacco[COLOR_REVERT] contro le unità di tipo [LINK=%s2_ClassType]%s3:2_Class[\LINK]: [COLOR_HIGHLIGHT_TEXT]%D1_Change%%[COLOR_REVERT]</Italian> <!-- uniti Bisont Rider -->
 		<Spanish>[ICON_BULLET]%D1_Change%% al ataque contra [LINK=%s2_ClassType]%s3:2_Class[\LINK]</Spanish>
 		<Russian>[ICON_BULLET]%D1_Change%% в бою с [LINK=%s2_ClassType]%s3_Class[\LINK]</Russian>
 	</TEXT>
@@ -802,7 +768,7 @@
 		<English>[ICON_BULLET]Can Bombard City Defenses (-%d1_Mod%%/Turn)</English>
 		<French>[ICON_BULLET]Peut bombarder les défenses d'une ville (-%d1_Mod%%/tour)</French>
 		<German>[ICON_BULLET]kann Stadtbefestigungen bombardieren (-%d1_Mod%%/Runde)</German>
-		<Italian>[ICON_BULLET]Può bombardare le difese cittadine (-%d1_Mod%% a turno</Italian>
+		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]bombardare[COLOR_REVERT] le difese cittadine e ridurle di [COLOR_HIGHLIGHT_TEXT]-%d1_Mod%%[COLOR_REVERT] a turno</Italian> <!-- unit Arsonist -->
 		<Spanish>[ICON_BULLET]Puede cañonear las defensas de las ciudades (-%d1_Mod%% a turno</Spanish>
 		<Russian>[ICON_BULLET]Ìîæåò áîìáèòü ãîðîäñêèå óêðåïëåíèÿ (-%d1_Mod%%/õîä)</Russian>
 	</TEXT>
@@ -811,7 +777,7 @@
 		<English>[ICON_BULLET]Can Destroy Tile Improvements and Bomb City Defenses (-%d1_Mod%%/Turn)</English>
 		<French>[ICON_BULLET]Peut détruire les aménagements et bombarder les défenses des villes (-%d1_Mod%%/tour)</French>
 		<German>[ICON_BULLET]kann Landschaftsverbesserungen zerstören und Stadtbefestigungen bombardieren (-%d1_Mod%%/Runde)</German>
-		<Italian>[ICON_BULLET]Può distruggere i miglioramenti delle caselle e bombardare le difese cittadine (-%d1_Mod%% a turno)</Italian>
+		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]distruggere i miglioramenti[COLOR_REVERT] delle caselle e [COLOR_HIGHLIGHT_TEXT]bombardare[COLOR_REVERT] le difese cittadine ([COLOR_HIGHLIGHT_TEXT]-%d1_Mod%%[COLOR_REVERT] a turno)</Italian> <!-- unit Ornithopter -->
 		<Spanish>[ICON_BULLET]Puede destruir las mejoras de las casillas y bombardear las defensas de las ciudades (-%d1_Mod%% a turno</Spanish>
 		<Russian>[ICON_BULLET]Ìîæåò óíè÷òîæàòü îáúåêòû è áîìáèòü ãîðîäñêèå óêðåïëåíèÿ (-%d1_Mod%%/õîä)</Russian>
 	</TEXT>
@@ -820,7 +786,7 @@
 		<English>Builds %d1_Change%% Faster with [LINK=%s2_BonusType]%s3_Bonus[\LINK]</English>
 		<French>Construit : %d1_Change%% plus vite avec : [LINK=%s2_BonusType]%s3_Bonus[\LINK]</French>
 		<German>Baut %d1_Change%% schneller mit [LINK=%s2_BonusType]%s3_Bonus[\LINK]</German>
-		<Italian>L'unità si addestra il %d1_Change%% più rapidamente con la risorsa [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Italian>
+		<Italian>Se si è in possesso della risorsa [LINK=%s2_BonusType]%s3_Bonus[\LINK] l'unità si [COLOR_HIGHLIGHT_TEXT]addestra più rapidamente[COLOR_REVERT] del [COLOR_HIGHLIGHT_TEXT]%d1_Change%%[COLOR_REVERT]</Italian> <!-- unit Canoe -->
 		<Spanish>Construye un %d1_Change%% más rápido con [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Spanish>
 		<Russian>Строит %d1_Change%% быстрее, если есть [LINK=%s2_BonusType]%s3_Bonus[\LINK]</Russian>
 	</TEXT>
@@ -829,7 +795,7 @@
 		<English>[ICON_BULLET]Immune to collateral damage from [LINK=%s1_unitsType]%s2_units[\LINK]</English>
 		<French>Immunité contre les dégâts collatéraux des [LINK=%s1_unitsType]%s2_units[\LINK]</French>
 		<German>[ICON_BULLET]Immun gegen Kollateralschaden durch die Einheit [LINK=%s1_unitsType]%s2_units[\LINK]</German>
-		<Italian>[ICON_BULLET]Immune al danno collaterale dalle unità di tipo [LINK=%s1_unitsType]%s2_units[\LINK]</Italian>
+		<Italian>[ICON_BULLET]Immune ai [COLOR_HIGHLIGHT_TEXT]danni collaterali[COLOR_REVERT] dalle unità di tipo [LINK=%s1_unitsType]%s2_units[\LINK]</Italian> <!-- unit Log Ram -->
 		<Spanish>[ICON_BULLET]Inmune a daños colaterales de [LINK=%s1_unitsType]%s2:2_units[\LINK]</Spanish>
 		<Russian>[ICON_BULLET]Невосприимчив к побочному ущербу от [LINK=%s1_unitsType]%s2_units[\LINK]</Russian>
 	</TEXT>
@@ -838,7 +804,7 @@
 		<English>[ICON_BULLET]%D1_Change%% Defense vs. [LINK=%s2_ClassType]%s3_Class[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Change%% en défense contre [LINK=%s2_ClassType]%s3_Class[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Change%% Verteidigung gegen [LINK=%s2_ClassType]%s3_Class[\LINK]</German>
-		<Italian>[ICON_BULLET]%D1_Change%% quando difende contro le unità di tipo [LINK=%s2_ClassType]%s3:2_Class[\LINK]</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Difesa[COLOR_REVERT] contro le unità di tipo [LINK=%s2_ClassType]%s3:2_Class[\LINK]: [COLOR_HIGHLIGHT_TEXT]%D1_Change%%[COLOR_REVERT]</Italian> <!-- unit Dragon Ship Pirate -->
 		<Spanish>[ICON_BULLET]%D1_Change%% al defender contra [LINK=%s2_ClassType]%s3:2_Class[\LINK]</Spanish>
 		<Russian>[ICON_BULLET]%D1_Change%% к защите против [LINK=%s2_ClassType]%s3_Class[\LINK]</Russian>
 	</TEXT>
@@ -856,7 +822,7 @@
 		<English>[ICON_BULLET]Can Evade Interception (%d1_Amount%% Chance)</English>
 		<French>[ICON_BULLET]Peut échapper à une interception (%d1_Amount%% de chance)</French>
 		<German>[ICON_BULLET]Rückzugsmöglichkeit bei Abfangversuch (Erfolgsaussicht: %d1_Amount%%)</German>
-		<Italian>[ICON_BULLET]Può evitare l'intercettazione (%d1_Amount%% di probabilità)</Italian>
+		<Italian>[ICON_BULLET]L'unità può evitare l'[COLOR_HIGHLIGHT_TEXT]intercettazione[COLOR_REVERT] ([COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT] di probabilità)</Italian> <!-- unit Recon Plane -->
 		<Spanish>[ICON_BULLET]Puede eludir la interceptación (probabilidad del %d1_Amount%%)</Spanish>
 		<Russian>[ICON_BULLET]Ìîæåò óêëîíÿòüñÿ îò ïåðåõâàòà (âåðîÿòíîñòü %d1_Amount%%)</Russian>
 	</TEXT>
@@ -865,7 +831,7 @@
 		<English>[ICON_BULLET]Can Intercept Aircraft (%d1_Amount%% Chance)</English>
 		<French>[ICON_BULLET]Peut intercepter des avions (%d1_Amount%% de chance)</French>
 		<German>[ICON_BULLET]kann Lufteinheiten abfangen (Erfolgsaussicht: %d1_Amount%%)</German>
-		<Italian>[ICON_BULLET]Può intercettare i velivoli (%d1_Amount%% di probabilità)</Italian>
+		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]intercettare[COLOR_REVERT] i velivoli nemici ([COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT] di probabilità)</Italian> <!-- unit Ornithopter -->
 		<Spanish>[ICON_BULLET]Puede interceptar aeronaves (probabilidad del %d1_Amount%%)</Spanish>
 		<Russian>[ICON_BULLET]Ìîæåò ïåðåõâàòèòü ýñêàäðèëüþ (øàíñ %d1_Amount%%)</Russian>
 	</TEXT>
@@ -874,7 +840,7 @@
 		<English>[ICON_BULLET]%D1_Change%% vs. [LINK=%s2_AgainstType]%s3_Type[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Change%% contre : [LINK=%s2_AgainstType]%s3_Type[\LINK]</French>
 		<German>[ICON_BULLET]%D1_Change%% gegen [LINK=%s2_AgainstType]%s3_Type[\LINK]</German>
-		<Italian>[ICON_BULLET]%D1_Change%% di danno contro le [LINK=%s2_AgainstType]%s3:2_Type[\LINK]</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Danno[COLOR_REVERT] contro le unità di tipo [LINK=%s2_AgainstType]%s3:2_Type[\LINK]: [COLOR_HIGHLIGHT_TEXT]%D1_Change%%[COLOR_REVERT]</Italian> <!-- Subcombat type Wields (H2H Martial Arts) -->
 		<Spanish>[ICON_BULLET]%D1_Change%% contra [LINK=%s2_AgainstType]%s3:2_Type[\LINK]</Spanish>
 		<Russian>[ICON_BULLET]%D1_Change%% против [LINK=%s2_AgainstType]%s3_Type[\LINK]</Russian>
 	</TEXT>
@@ -883,15 +849,19 @@
 		<English>[ICON_BULLET]%D1_Change%% vs. %s2_Type</English>
 		<French>[ICON_BULLET]%D1_Change%% contre : %s2_Type</French>
 		<German>[ICON_BULLET]%D1_Change%% gegen %s2_Type</German>
-		<Italian>[ICON_BULLET]Danno contro le unità di tpo %s2:2_Type %D1_Change%%</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Danno[COLOR_REVERT] contro le unità di tipo [COLOR_HIGHLIGHT_TEXT]%s2:2_Type[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%D1_Change%%[COLOR_REVERT]</Italian> <!-- unit Autogyro -->
 		<Spanish>[ICON_BULLET]%D1_Change%% contra %s2:2_Type</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_NATIONAL_SOURCES</Tag>
+		<English>Traits/Civics/Heritage.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_WITHDRAWL_PROBABILITY</Tag>
 		<English>[ICON_BULLET]Can Withdraw from Combat (%d1_Amount%% Chance)</English>
 		<French>[ICON_BULLET]Peut rompre le combat (%d1_Amount%% de chance)</French>
 		<German>[ICON_BULLET]Rückzugsmöglichkeit aus Gefechten (Erfolgsaussicht: %d1_Amount%%)</German>
-		<Italian>[ICON_BULLET]Può ritirarsi dal combattimento (%d1_Amount%% di probabilità)</Italian>
+		<Italian>[ICON_BULLET]Probabilità di [COLOR_HIGHLIGHT_TEXT]ritirata[COLOR_REVERT] dal combattimento: [COLOR_HIGHLIGHT_TEXT]%d1_Amount%%[COLOR_REVERT]</Italian> <!-- unit Ambusher -->
 		<Spanish>[ICON_BULLET]Puede retirarse del combate (probabilidad del %d1_Amount%%)</Spanish>
 		<Russian>[ICON_BULLET]Ìîæåò ïîêèäàòü ïîëå áîÿ (âåðîÿòíîñòü %d1_Amount%%)</Russian>
 	</TEXT>
@@ -916,11 +886,12 @@
 		<English>[ICON_BULLET]Upgrade time: %d1 [NUM1:Turn:Turns]</English>
 		<German>[ICON_BULLET]Zeit bis zum Upgrade: %d1 [NUM1:Runde:Runden]</German>
 		<Russian>[ICON_BULLET]Время улучшения: %d1 [NUM1:ход:ходов]</Russian>
-		<Italian>[ICON_BULLET]Tempo di promozione: %d1 turno/i</Italian>
+		<Italian>[ICON_BULLET]Tempo di modernizzazione: %d1 [NUM1:turno:turni]</Italian> <!-- Whaling Boats improvement in pedia -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_YIELD_CHANGE_DESCRIP</Tag>
 		<English>Yield changes:</English>
+		<German>[ICON_BULLET]veränderter Ertrag:</German>
 		<Russian>Измен. дохода:</Russian>
 		<Italian>[ICON_BULLET]Cambio nel rendimento:</Italian>
 	</TEXT>

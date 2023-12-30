@@ -19,6 +19,7 @@
 #include "CvPlayerAI.h"
 #include "CvPopupInfo.h"
 #include "CvSelectionGroup.h"
+#include "CvUnitCombatInfo.h"
 #include "CvSelectionGroupAI.h"
 #include "CvTeamAI.h"
 #include "CvUnit.h"
@@ -922,7 +923,15 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 			}
 			case MISSION_CONSTRUCT:
 			{
-				if (pLoopUnit->canConstruct(pPlot, ((BuildingTypes)iData1), bTestVisible))
+				if (pLoopUnit->canConstruct(pPlot, (BuildingTypes)iData1, bTestVisible))
+				{
+					return true;
+				}
+				break;
+			}
+			case MISSION_HERITAGE:
+			{
+				if (pLoopUnit->canAddHeritage(pPlot, (HeritageTypes)iData1, bTestVisible))
 				{
 					return true;
 				}
@@ -1640,6 +1649,14 @@ bool CvSelectionGroup::startMission()
 						case MISSION_CONSTRUCT:
 						{
 							if (pLoopUnit->construct((BuildingTypes)headMissionQueueNode()->m_data.iData1))
+							{
+								bAction = true;
+							}
+							break;
+						}
+						case MISSION_HERITAGE:
+						{
+							if (pLoopUnit->addHeritage((HeritageTypes)headMissionQueueNode()->m_data.iData1))
 							{
 								bAction = true;
 							}

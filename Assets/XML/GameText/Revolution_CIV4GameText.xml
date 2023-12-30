@@ -5,7 +5,7 @@
 		<English>Air force Options:</English>
 		<French>Options de l'armée de l'air:</French>
 		<German>Luftwaffen-Optionen:</German>
-		<Italian>Opzioni dell'aeronautica militare:</Italian>
+		<Italian>Opzioni aeronautica:</Italian>
 		<Spanish>Opciones de fuerza aérea:</Spanish>
 		<Polish>Opcje Lotnictwa:</Polish>
 		<Russian>Îïöèè âîçä. áîÿ:</Russian>
@@ -15,7 +15,7 @@
 		<English>BarbCiv Options:</English>
 		<French>Options BarbCiv:</French>
 		<German>BarbCiv-Optionen:</German>
-		<Italian>Opzioni delle civiltà barbare:</Italian>
+		<Italian>Opzioni civiltà barbare:</Italian>
 		<Spanish>Opciones de BarbCiv:</Spanish>
 		<Polish>Opcje BarbCiv:</Polish>
 		<Russian>Îïöèè âàðâàðñêèõ öèâ.:</Russian>
@@ -25,7 +25,7 @@
 		<English>BarbCiv Strength Settings:</English>
 		<French>Réglages force BarbCiv:</French>
 		<German>BarbCiv-Stärke-Einstellungen:</German>
-		<Italian>Impostazioni forza delle civiltà barbare:</Italian>
+		<Italian>Forza civiltà barbare:</Italian>
 		<Spanish>Configuración de fuerza de BarbCiv:</Spanish>
 		<Polish>Ustawienia Siły BarbCiv:</Polish>
 		<Russian>Ïàðàìåòðû ìîùè âàðâàðîâ</Russian>
@@ -45,7 +45,7 @@
 		<English>Influence Options:</English>
 		<French>Options Influence:</French>
 		<German>Einfluss-Optionen:</German>
-		<Italian>Opzioni d'influenza:</Italian>
+		<Italian>Opzioni influenza culturale:</Italian>
 		<Spanish>Opciones de influencia:</Spanish>
 		<Polish>Opcje Wpływu:</Polish>
 		<Russian>Îïöèè êóëüò. âëèÿíèÿ:</Russian>
@@ -65,7 +65,7 @@
 		<English>New World Options:</English>
 		<French>Options Nouveau Monde:</French>
 		<German>Neue-Welt-Optionen:</German>
-		<Italian>Opzioni nuovo mondo:</Italian>
+		<Italian>Opzioni mod New World:</Italian>
 		<Spanish>Opciones de Nuevo Mundo:</Spanish>
 		<Polish>Opcje Nowego świata:</Polish>
 		<Russian>Опции New World:</Russian>
@@ -85,7 +85,7 @@
 		<English>Reset Defaults:</English>
 		<French>Réinitialiser par défaut:</French>
 		<German>Standard wiederherstellen:</German>
-		<Italian>Ripristina impostazioni predefinite:</Italian>
+		<Italian>Ripristina opzioni predefinite:</Italian>
 		<Spanish>Restablecer valores predeterminados:</Spanish>
 		<Polish>Resetuj do Domyślnych:</Polish>
 		<Russian>Ñáðîñ íàñòðîåê ïî óìîë÷àíèþ:</Russian>
@@ -119,7 +119,7 @@
 		<English>Revolt Instability</English>
 		<French>Instabilité due à la révolution</French>
 		<German>Revolutionsinstabilität</German>
-		<Italian>Instabilità per rivolte</Italian>
+		<Italian>Instabilità generale</Italian> <!-- info screen graph tab -->
 		<Spanish>Inestabilidad</Spanish>
 		<Polish>Zagrożenie rewoltą</Polish>
 		<Russian>Ðåâîëþöèîííàÿ ñèòóàöèÿ</Russian>
@@ -236,7 +236,7 @@
 		<English>Note that assimilating these rebels will cause a serious strain on your relations with %s, who may go so far as to declare war on you. Consider your decision carefully.</English>
 		<French>Notez qu'assimiler ces rebelles aura pour conséquence de durcir les relations avec %s, qui peut tout autant disparaître comme elle peut entraîner la guerre. Evaluez donc soigneusement toutes les options avant de prendre votre décision.</French>
 		<German>Beachten Sie, dass die Einverleibung dieser Rebellen zu einer ernsthaften Belastung unserer Beziehung zu %s führt, die Ihnen womöglich sogar den Krieg erklären werden. Bedenken Sie Ihre Entscheidung sorgfältig.</German>
-		<Italian>Nota che che assimilare questi ribelli provocherà una grande tensione nei rapporti con %s, fino a portarlo sul punto di dichiararti guerra. Rifletti bene sulla tua decisione.</Italian>
+		<Italian>Nota che assimilare questi ribelli provocherà una grande tensione nei rapporti con %s, fino a portarlo sul punto di dichiararti guerra. Rifletti bene sulla tua decisione.</Italian>
 		<Spanish>Ten en cuenta que asimilar a estos rebeldes causará serias tensiones en tus relaciones con %s, que podría incluso considerar el declararte la guerra. Estudia cuidadosamente tu decisión.</Spanish>
 		<Polish>Należy także pamiętać, że dołączenie tych rebeliantów do twojego imperium spowoduje pogorszenie się relacji z %s, który może posunąć się nawet do wypowiedzenia wojny. Dobrze zastanów się więc nad tą decyzją.</Polish>
 		<Russian>Ó÷òèòå, ÷òî àññèìèëÿöèÿ ýòèõ ñåïàðàòèñòîâ ñåðüåçíî óõóäøèò âàøè îòíîøåíèÿ ñ %s, ýòî ìîæåò äàæå ïðèâåñòè ê âîéíå. Ïðèíèìàéòå ðåøåíèå îñòðîæíî.</Russian>
@@ -304,7 +304,7 @@
 		<English>There is no need to bribe %s, the local situation is favorable for now.</English>
 		<French>Il n'y a aucun besoin de corrompre %s, la situation locale vous est favorable pour l'instant.</French>
 		<German>Es ist nicht notwendig %s zu bestechen, die örtlichen Verhältnisse sind derzeit günstig.</German>
-		<Italian>Non serve corrompere %s, la situazione locale è favorevole, per ora.</Italian>
+		<Italian>[H2]La situazione della città è [COLOR_HIGHLIGHT_TEXT]favorevole[COLOR_REVERT] al momento quindi non serve cercare di [COLOR_HIGHLIGHT_TEXT]corrompere %s[COLOR_REVERT][\H2]</Italian> <!-- city screen, press on the revolt bar -->
 		<Spanish>No es necesario sobornar %s, la situación local es favorable por ahora.</Spanish>
 		<Polish>Nie ma potrzeby przekupywania miasta %s, gdyż sytuacja w nim jest dobra.</Polish>
 		<Russian>Íåò íåîáõîäèìîñòè çàäàáðèâàòü æèòåëåé %s, ò.ê. ñèòóàöèÿ â ãîðîäå ÿâëÿåòñÿ ñòàáèëüíîé.</Russian>
@@ -634,7 +634,7 @@
 		<English>Demonstrators are rioting in the streets, demanding that you face an election against</English>
 		<French>Les Manifsetants s'ameutent dans les rues, exigeant que vous vous soumettiez à une élection contre</French>
 		<German>Demonstranten randalieren in den Straßen und verlangen, dass Sie sich einer Wahl stellen gegen</German>
-		<Italian>I dimostranti sono in rivolta nelle strade: richiedono una nuova consultazione elettorale, dove affonterai</Italian>
+		<Italian>I dimostranti sono in rivolta nelle strade: richiedono una nuova consultazione elettorale, dove affronterai</Italian>
 		<Spanish>Los manifestantes están causando disturbios en las calles, exigiendo que afrontes unas elecciones contra</Spanish>
 		<Polish>Demonstranci strajkują na ulicach, żądając abyś zmierzył się w wyborach z</Polish>
 		<Russian>Íà óëèöû âûøëè ïðîòåñòóþùèå, êîòîðûå òðåáóþò, ÷òîáû âû âñòðåòèëèñü íà âûáîðàõ ñ</Russian>
@@ -1064,7 +1064,7 @@
 		<English>requesting that you end your polluting ways and adopt</English>
 		<French>demandent que vous finissiez vos activités polluantes et adoptiez</French>
 		<German>fordern, dass Sie die Umweltverschmutzung einstellen und annehmen</German>
-		<Italian>chiedendo di porre fine ai comportamenti inquninanti, e di adottare</Italian>
+		<Italian>chiedendo di porre fine ai comportamenti inquinanti, e di adottare</Italian>
 		<Spanish>solicitando que acabes con tus contaminantes costumbres y adoptes</Spanish>
 		<Polish>domagają się zmiany polityki ekologicznej i przyjęcie</Polish>
 		<Russian>òðåáóþò, ÷òîáû âû ïðåêðàòèëè çàãðÿçíÿòü îêðóæàþùóþ ñðåäó è ïðèíÿëè</Russian>
@@ -1682,7 +1682,7 @@
 		<English>[NEWLINE][SPACE]BarbarianCiv will stop at %d1 Civs</English>
 		<French>[NEWLINE][SPACE]BarbarianCiv se limitera à %d1 Civs</French>
 		<German>[NEWLINE][SPACE]BarbarianCiv wird beendet bei %d1 Zivilisationen</German>
-		<Italian>[NEWLINE][SPACE]La mod "Civiltà barbare" terminerà con %d1 civiltà</Italian>
+		<Italian>[NEWLINE]La mod [COLOR_HIGHLIGHT_TEXT]civiltà barbare[COLOR_REVERT] si [COLOR_HIGHLIGHT_TEXT]disattiverà con %d1 civiltà[COLOR_REVERT]</Italian>
 		<Spanish>[NEWLINE][SPACE]BarbarianCiv se detendrá al llegar a %d1 civilizaciones</Spanish>
 		<Polish>[NEWLINE][SPACE]Mod BarbarianCiv zatrzyma się przy %d1 Cywilizacjach</Polish>
 		<Russian>[NEWLINE][SPACE]BarbarianCiv áóäåò îñòàíîâëåí íà %d1 öèâèëèçàöèÿõ</Russian>
@@ -1692,7 +1692,7 @@
 		<English>[NEWLINE]Default num players: %d1</English>
 		<French>[NEWLINE]Nombre de Joueurs par défaut: %d1</French>
 		<German>[NEWLINE]Voreingestellte Anzahl der Spieler: %d1</German>
-		<Italian>[NEWLINE]Numero predefinito di giocatori: %d1</Italian>
+		<Italian>[NEWLINE]Numero predefinito di giocatori: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT][\H2]</Italian>
 		<Spanish>[NEWLINE]Numero de jugadores por defecto: %d1</Spanish>
 		<Polish>[NEWLINE]Domyślna ilość graczy: %d1</Polish>
 		<Russian>[NEWLINE]Êîëè÷åñòâî èãðîêîâ ïî óìîë÷àíèþ: %d1</Russian>
@@ -1702,7 +1702,7 @@
 		<English>[NEWLINE]CTRL-SHIFT-X = AI Autoplay</English>
 		<French>[NEWLINE]CTRL-SHIFT-X = Jeu automatique par l'IA pour x Tours</French>
 		<German>[NEWLINE]STRG-UMSCHALT-X = KI Autoplay</German>
-		<Italian>[NEWLINE]CTRL-SHIFT-X = Gioco automatico IA</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]CTRL-SHIFT-X[COLOR_REVERT] = Gioco automatico IA</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 		<Spanish>[NEWLINE]CTRL-SHIFT-X = Juego automático de la IA</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1711,7 +1711,7 @@
 		<French>[NEWLINE]ALT-B = Log des Stats de combat!</French>
 		<Spanish>[NEWLINE]ALT-B = Registrar estadísticas de batalla</Spanish>
 		<Polish>[NEWLINE]ALT-B = loguj statystyki bitwy!</Polish>
-		<Italian>[NEWLINE]ALT-B = Registro statistiche di battaglia</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ALT-B[COLOR_REVERT] = Registra statistiche di battaglia</Italian>  <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_ALT_CTRL_N_ARROW_SHORTCUT</Tag>
@@ -1719,7 +1719,7 @@
 		<French>[NEWLINE]ALT-CTRL-N ARROW = Test Nom Unités!</French>
 		<Spanish>[NEWLINE]ALT-CTRL-FLECHA ARR = Probar nombrado de unidad</Spanish>
 		<Polish>[NEWLINE]ALT-CTRL-N ARROW = Testuj Nazewnictwo jednostek!</Polish>
-		<Italian>[NEWLINE]ALT-CTRL-N ARROW = Test di denominazione delle unità</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ALT-CTRL-N ARROW[COLOR_REVERT] = Test di denominazione delle unità</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_ALT_E_SHORTCUT</Tag>
@@ -1727,7 +1727,7 @@
 		<French>[NEWLINE]ALT-E = Créer une Entrée log!</French>
 		<Spanish>[NEWLINE]ALT-E = Crear entrada del registro</Spanish>
 		<Polish>[NEWLINE]ALT-E = Stwórz wpis do logu!</Polish>
-		<Italian>[NEWLINE]ALT-E = Crea voce del registro</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ALT-E[COLOR_REVERT] = Crea voce sul registro automatico</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_ALT_F_SHORTCUT</Tag>
@@ -1735,7 +1735,7 @@
 		<French>[NEWLINE]ALT-F = Vue Satellite!</French>
 		<Spanish>[NEWLINE]ALT-F = Vista global</Spanish>
 		<Polish>[NEWLINE]ALT-F = Widok satelitarny!</Polish>
-		<Italian>[NEWLINE]ALT-F = Visione satellitare</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ALT-F[COLOR_REVERT] = Visione satellitare</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_ALT_I_SHORTCUT</Tag>
@@ -1743,7 +1743,7 @@
 		<French>[NEWLINE]ALT-I = Masquer Interface!</French>
 		<Spanish>[NEWLINE]ALT-I = Ocultar interfaz</Spanish>
 		<Polish>[NEWLINE]ALT-I = Brak Interfejsu!</Polish>
-		<Italian>[NEWLINE]ALT-I = Nesuna interfaccia utente</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ALT-I[COLOR_REVERT] = Nessuna interfaccia utente</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_ALT_L_SHORTCUT</Tag>
@@ -1751,7 +1751,7 @@
 		<French>[NEWLINE]ALT-L = Démarrer/Arrêter les logs! (si Autolog activé.)</French>
 		<Spanish>[NEWLINE]ALT-L = Activar/desactivar registro (con Autolog activo)</Spanish>
 		<Polish>[NEWLINE]ALT-L = Strat/Stop logowanie (Autologowanie musi być włączone.)</Polish>
-		<Italian>[NEWLINE]ALT-L = Avvia o arresta il log automatico! (autolog deve essere attivo)</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ALT-L[COLOR_REVERT] = Avvia o arresta il registro automatico</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_ALT_M_SHORTCUT</Tag>
@@ -1759,7 +1759,7 @@
 		<French>[NEWLINE]ALT-M, ALT-CTRL-R = Créer un Rappel!</French>
 		<Spanish>[NEWLINE]ALT-M, ALT-CTRL-R = Crear notificación</Spanish>
 		<Polish>[NEWLINE]ALT-M, ALT-CTRL-R = Stwórz przypomnienie!</Polish>
-		<Italian>[NEWLINE]ALT-M, ALT-CTRL-R = Crea promemoria</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ALT-M[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]ALT-CTRL-R[COLOR_REVERT] = Crea promemoria</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_ALT_O_SHORTCUT</Tag>
@@ -1767,7 +1767,7 @@
 		<French>[NEWLINE]ALT-O = Changer la perspective!</French>
 		<Spanish>[NEWLINE]ALT-O = Cambiar perspectiva</Spanish>
 		<Polish>[NEWLINE]ALT-O = Zmień perspektywę!</Polish>
-		<Italian>[NEWLINE]ALT-O = Cambia prospettiva della mappa</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ALT-O[COLOR_REVERT] = Cambia prospettiva della mappa</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_ALT_S_SHORTCUT</Tag>
@@ -1775,7 +1775,7 @@
 		<French>[NEWLINE]ALT-S = Ajouter Panneau!</French>
 		<Spanish>[NEWLINE]ALT-S = Añadir marcador</Spanish>
 		<Polish>[NEWLINE]ALT-S = Dodaj znak!</Polish>
-		<Italian>[NEWLINE]ALT-S = Aggiungi segnale sulla mappa</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ALT-S[COLOR_REVERT] = Aggiungi segnale sulla mappa</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_ALT_X_SHORTCUT</Tag>
@@ -1783,14 +1783,14 @@
 		<French>[NEWLINE]ALT-X = Editer 'dotmap'!</French>
 		<Spanish>[NEWLINE]ALT-X = Editar mapa de puntos</Spanish>
 		<Polish>[NEWLINE]ALT-X = Edytuj kropki mapy!</Polish>
-		<Italian>[NEWLINE]ALT-X = Modifica dotmap</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ALT-X[COLOR_REVERT] = Modifica dotmap</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_BUG_OPTIONS_SHORTCUT</Tag>
 		<English>[NEWLINE]CTRL-ALT-O = Game Options</English>
 		<French>[NEWLINE]CTRL-ALT-O = Options du Jeu</French>
 		<German>[NEWLINE]CTRL-ALT-O = Spieloptionen</German>
-		<Italian>[NEWLINE]CTRL-ALT-O = Opzioni di gioco</Italian>
+		<Italian>[NEWLINE][H2][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]CTRL-ALT-O[COLOR_REVERT] = Opzioni di gioco</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 		<Spanish>[NEWLINE]CTRL-ALT-O = Opciones de juego</Spanish>
 		<Polish>[NEWLINE]CTRL-ALT-O = Opcje Gry</Polish>
 	</TEXT>
@@ -1800,7 +1800,7 @@
 		<French>[NEWLINE]CTRL-A = Abandonner Ville ou Démolir des Bâtiments!</French>
 		<Spanish>[NEWLINE]CTRL-A = Abandonar ciudad o demoler edificios</Spanish>
 		<Polish>[NEWLINE]CTRL-A = Opuść miasto lub zniszcz budynek!</Polish>
-		<Italian>[NEWLINE]CTRL-A = Abbandona città o demolisci edifici</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]CTRL-A[COLOR_REVERT] = Abbandona città o demolisci edifici</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_CTRL_I_SHORTCUT</Tag>
@@ -1808,7 +1808,7 @@
 		<French>[NEWLINE]CTRL-I = Minimiser l'Interface!</French>
 		<Spanish>[NEWLINE]CTRL-I = Minimizar interfaz</Spanish>
 		<Polish>[NEWLINE]CTRL-I = Minimalizuj interfejs!</Polish>
-		<Italian>[NEWLINE]CTRL-I = Minimizza l'interfacccia utente</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]CTRL-I[COLOR_REVERT] = Minimizza l'interfaccia utente</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_CTRL_L_ARROW_SHORTCUT</Tag>
@@ -1816,7 +1816,7 @@
 		<French>[NEWLINE]CTRL-FLECHE G = Angle 45 D!</French>
 		<Spanish>[NEWLINE]CTRL-FLECHA IZQ = Ángulo 45º a la derecha</Spanish>
 		<Polish>[NEWLINE]CTRL-Strzałka w lewo = obróć o 45 stopni w lewo!</Polish>
-		<Italian>[NEWLINE]CTRL-L ARROW = Ruota mappa di 45° in senso orario</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]CTRL-L ARROW[COLOR_REVERT] = Ruota mappa di 45° in senso orario</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_CTRL_R_ARROW_SHORTCUT</Tag>
@@ -1824,7 +1824,7 @@
 		<French>[NEWLINE]CTRL-FLECHE D = Angle 45 G!</French>
 		<Spanish>[NEWLINE]CTRL-FLECHA DER = Ángulo 45º a la izquierda</Spanish>
 		<Polish>[NEWLINE]CTRL-Strzałka w prawo = obróć o 45 stopni w prawo!</Polish>
-		<Italian>[NEWLINE]CTRL-R ARROW = Ruota mappa di 45° in senso antiorario</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]CTRL-R ARROW[COLOR_REVERT] = Ruota mappa di 45° in senso antiorario</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_CTRL_SHIFT_L_SHORTCUT</Tag>
@@ -1832,7 +1832,7 @@
 		<French>[NEWLINE]CTRL-SHIFT-L = Nouveau leader!</French>
 		<Spanish>[NEWLINE]CTRL-SHIFT-L = Nuevo líder</Spanish>
 		<Polish>[NEWLINE]CTRL-SHIFT-L = Nowy Przywódca!</Polish>
-		<Italian>[NEWLINE]CTRL-SHIFT-L = Nuovo leader</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]CTRL-SHIFT-L[COLOR_REVERT] = Nuovo leader</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_CTRL_SHIFT_M_SHORTCUT</Tag>
@@ -1840,7 +1840,7 @@
 		<French>[NEWLINE]CTRL-SHIFT-M = Ce Tour joué par l'IA!</French>
 		<Spanish>[NEWLINE]CTRL-SHIFT-M = Turno jugado por la IA</Spanish>
 		<Polish>[NEWLINE]CTRL-SHIFT-M = Tura rozgrywana przez AI!</Polish>
-		<Italian>[NEWLINE]CTRL-SHIFT-M = Turno giocato dall'IA</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]CTRL-SHIFT-M[COLOR_REVERT] = Fai giocare il turno all'IA</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_CTRL_SHIFT_P_SHORTCUT</Tag>
@@ -1848,7 +1848,7 @@
 		<French>[NEWLINE]CTRL-SHIFT-P = Nouvelle Civ!</French>
 		<Spanish>[NEWLINE]CTRL-SHIFT-P = Nueva civilización</Spanish>
 		<Polish>[NEWLINE]CTRL-SHIFT-P = Nowa Cywilizacja!</Polish>
-		<Italian>[NEWLINE]CTRL-SHIFT-P = Nuova civiltà!</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]CTRL-SHIFT-P[COLOR_REVERT] = Nuova civiltà</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_CTRL_X_SHORTCUT</Tag>
@@ -1856,7 +1856,7 @@
 		<French>[NEWLINE]CTRL-X = Aff./Masquer 'dotmap'!</French>
 		<Spanish>[NEWLINE]CTRL-X = Mostrar/ocultar mapa de puntos</Spanish>
 		<Polish>[NEWLINE]CTRL-X = Pokaż/Ukryj kropki mapy!</Polish>
-		<Italian>[NEWLINE]CTRL-X = Mostrao nascondi dotmap</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]CTRL-X [COLOR_REVERT]= Mostra o nascondi dotmap</Italian>  <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_EMERGENCY_DRAFT</Tag>
@@ -1872,7 +1872,7 @@
 		<English>[NEWLINE]In Game Shortcuts:</English>
 		<French>[NEWLINE]Raccourcis Clavier dans le Jeu:</French>
 		<German>[NEWLINE]Tastaturkürzel im Spiel:</German>
-		<Italian>[NEWLINE]Scorciatoie di gioco:</Italian>
+		<Italian>[NEWLINE]Scorciatoie di gioco:[NEWLINE]</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 		<Spanish>[NEWLINE]Atajos de teclado:</Spanish>
 		<Polish>[NEWLINE]Skróty w Grze:</Polish>
 	</TEXT>
@@ -1881,7 +1881,7 @@
 		<English>Ctrl+Shift+Q = This popup</English>
 		<French>Ctrl+Shift+Q = Cette Fenêtre</French>
 		<German>Strg-Umschalt+Q = Dieses Fenster</German>
-		<Italian>Ctrl+Shift+Q = Apri questo popup</Italian>
+		<Italian>[NEWLINE]Per aprire questo popup: Ctrl+Shift+Q[NEWLINE]</Italian>  <!-- Bug mod recap screen Ctrl+Shift+Q -->
 		<Spanish>Ctrl+Shift+Q = Este cuadro</Spanish>
 		<Polish>Ctrl+Shift+Q = To Okienko</Polish>
 	</TEXT>
@@ -1890,7 +1890,7 @@
 		<English>[NEWLINE]Inquisitions Enabled</English>
 		<French>[NEWLINE]Inquisition activée</French>
 		<German>[NEWLINE]Inquisitionen Aktiviert</German>
-		<Italian>[NEWLINE]Opzione "inquisizioni" attivata</Italian>
+		<Italian>[NEWLINE]Opzione inquisizione attivata</Italian>
 		<Spanish>[NEWLINE]Inquisición activada</Spanish>
 		<Polish>[NEWLINE]Włączona Inkwizycja</Polish>
 	</TEXT>
@@ -1909,7 +1909,7 @@
 		<French>[NEWLINE]SHIFT-F5 = Sauvegarde Rapide!</French>
 		<Spanish>[NEWLINE]SHIFT-F5 = Guardado rápido</Spanish>
 		<Polish>[NEWLINE]SHIFT-F5 = Szybki Zapis!</Polish>
-		<Italian>[NEWLINE]SHIFT-F5 = Salvataggio rapido</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]SHIFT-F5[COLOR_REVERT] = Salvataggio rapido</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_INITIALIZING_SHIFT_F8_SHORTCUT</Tag>
@@ -1917,14 +1917,14 @@
 		<French>[NEWLINE]SHIFT-F8 = Chargement Rapide!</French>
 		<Spanish>[NEWLINE]SHIFT-F8 = Carga rápida</Spanish>
 		<Polish>[NEWLINE]SHIFT-F8 = Szybkie Wczytywanie!</Polish>
-		<Italian>[NEWLINE]SHIFT-F8 = Caricamento rapido!</Italian>
+		<Italian>[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]SHIFT-F8[COLOR_REVERT] = Caricamento rapido</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REV_MOD_MAX_CIVS_IN_DLL</Tag>
 		<English>[NEWLINE][NEWLINE]Max civs in DLL: %d1</English>
 		<French>[NEWLINE][NEWLINE]Max Nb de civs pour la DLL: %d1</French>
 		<German>[NEWLINE][NEWLINE]Maximale Anzahl Zivilisationen in DLL: %d1</German>
-		<Italian>[NEWLINE][NEWLINE]Numero massimo civiltà (DLL): %d1</Italian>
+		<Italian>[NEWLINE][NEWLINE][COLOR_HIGHLIGHT_TEXT]Numero massimo[COLOR_REVERT] civiltà (dal file DLL): %d1</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 		<Spanish>[NEWLINE][NEWLINE]Máximo de civilizaciones de la DLL: %d1</Spanish>
 		<Polish>[NEWLINE][NEWLINE]Maks ilość cywilizacji w DLL: %d1</Polish>
 		<Russian>[NEWLINE][NEWLINE]Ìàêñèìàëüíîå êîëè÷åñòâî öèâèëèçàöèé â DLL: %d1</Russian>
@@ -1934,7 +1934,7 @@
 		<English>[NEWLINE][SPACE]Revolution will stop at %d1 Civs</English>
 		<French>[NEWLINE][SPACE]Revolution se limitera à %d1 Civs</French>
 		<German>[NEWLINE][SPACE]Revolution wird beendet bei %d1 Zivilisationen</German>
-		<Italian>[NEWLINE][SPACE]L'opzione "rivoluzioni" si interromperà con %d1 civiltà</Italian>
+		<Italian>[NEWLINE]L'opzione [COLOR_HIGHLIGHT_TEXT]rivoluzioni[COLOR_REVERT] si [COLOR_HIGHLIGHT_TEXT]interromperà con %d1 civiltà[COLOR_REVERT]</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 		<Spanish>[NEWLINE][SPACE]Revolution se detendrá al llegar a %d1 civilizaciones</Spanish>
 		<Polish>[NEWLINE][SPACE]Rewolucje zatrzymają się przy %d1 Cywilizacjach</Polish>
 		<Russian>[NEWLINE][SPACE]Revolution ìîä áóäåò îñòàíîâëåí íà %d1 öèâèëèçàöèÿõ.</Russian>
@@ -1944,7 +1944,7 @@
 		<English>[NEWLINE]Turns in game: %d1</English>
 		<French>[NEWLINE]Tours de Jeu: %d1</French>
 		<German>[NEWLINE]Runden im Spiel: %d1</German>
-		<Italian>[NEWLINE]Turni della partita: %d1</Italian>
+		<Italian>[NEWLINE]Turni della partita: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT]</Italian> <!-- Bug mod recap screen Ctrl+Shift+Q -->
 		<Spanish>[NEWLINE]Turnos de la partida: %d1</Spanish>
 		<Polish>[NEWLINE]Tur w grze: %d1</Polish>
 		<Russian>[NEWLINE]Õîäîâ â èãðå: %d1</Russian>
@@ -2014,7 +2014,7 @@
 		<English>While they have not yet begun preparations for war, if you deny their request they may soon become more fervent in their desire for change. Honoring their request is by far the quickest and easiest path to keeping them in your empire for the foreseeable future, but may lead to some discontent in other cities.[NEWLINE][NEWLINE]Alternatively, a large donation to the religious leaders would cause them to settle down.</English>
 		<French>Tandis qu'ils n'ont pas encore commencé de préparatifs pour la guerre, si vous ignorez leurs revendications, leur désir de changement pourrait devenir de plus en plus ardent. Honorer leurs demandes est de loin la voie la plus rapide et la plus facile pour les maintenir dans votre empire, mais peut entraîner également le mécontentement dans d'autres villes.[NEWLINE][NEWLINE]alternativement, une grande donation aux chefs religieux les ferait se calmer.</French>
 		<German>Obwohl sie noch keine Kriegsvorbereitungen begonnen haben, werden sie, wenn ihr Wunsch verweigert wird, noch eifriger in ihrem Wunsch nach Veränderung werden. Ihren Antrag zu beachten ist der bei weitem schnellste und einfachste Weg sie in absehbarer Zukunft in Ihrem Imperium zu halten, aber kann andererseits zu etwas Unzufriedenheit in anderen Städten führen.[NEWLINE][NEWLINE]Als Alternative kann eine großzügige Spende an die religiösen Führer sie beruhigen.</German>
-		<Italian>Per ora non hanno cominciato i preparativi per la guerra, ma se non accetti la loro richiesta, diventeranno presto più desiderosi di cambiamento. Accettare la loro richiesta èla scelta più rapida e più semplice per mantenerli nel tuo impero, per il prossimo futuro, ma può indurre un certo malcontento in altre città.[NEWLINE][NEWLINE]In alternativa, una notevole donazione ai capi religiosi li indurrebbe alla calma.</Italian>
+		<Italian>Per ora non hanno cominciato i preparativi per la guerra, ma se non accetti la loro richiesta, diventeranno presto più desiderosi di cambiamento. Accettare la loro richiesta è la scelta più rapida e più semplice per mantenerli nel tuo impero, per il prossimo futuro, ma può indurre un certo malcontento in altre città.[NEWLINE][NEWLINE]In alternativa, una notevole donazione ai capi religiosi li indurrebbe alla calma.</Italian>
 		<Spanish>Aunque aún no han comenzado sus preparativos para la guerra, si deniegas su petición puede que pronto se alcen más fervientes en su deseo de cambiar. Aceptar sus solicitudes es, de lejos, la opción más rápida y fácil para mantenerlos en tu imperio en el futuro próximo, pero puede llevar a cierto descontento en otras ciudades.[NEWLINE][NEWLINE]Alternativamente, una gran donación a los líderes religiosos puede motivarles a sentar la cabeza.</Spanish>
 		<Polish>Jeżeli odrzucisz teraz ich żądania, w czasie gdy nie rozpoczęli jeszcze przygotowań do zbrojnych działań, to mogą wkrótce stać się bardziej gorliwi w ich pragnieniu do zmian. Spełnienie ich żądań jest najszybszą i najłatwiejszą drogą do pokojowego utrzymania ich w imperium w niedalekiej przyszłości, ale może spowodować niezadowolenie w pozostałych miastach.[NEWLINE][NEWLINE]Jednakże, wysoki datek dla przywódców religijnych zmniejszy ich pragnienie do zmian.</Polish>
 		<Russian>Õîòÿ îíè è íå íà÷àëè ïîäãîòîâêó ê âîéíå, âûïîëíåíèå èõ òðåáîâàíèé î ðåôîðìàõ ïîçâîëèò ñîõðàíèòü ìÿòåæíûå ïðîâèíöèè â ïðåäåëàõ ñòðàíû. Îäíàêî, ýòî ìîæåò íåãàòèâíî ïîâëèÿòü íà áîëåå êîíñðåâàòèâíóþ ÷àñòü íàñåëåíèÿ.[NEWLINE][NEWLINE]Â ëþáîì ñëó÷àå, âîçìîæíî ïðîùå áóäåò ïðîñòî çàïëàòèòü ðåëèãèîçíûì ëèäåðàì ïîâñòàíöåâ.</Russian>
@@ -2184,7 +2184,7 @@
 		<English>+%d1_Change[ICON_UNHAPPY]: "You refused to grant our request!"</English>
 		<French>+%d1_Change[ICON_UNHAPPY]: " Vous avez refusé de répondre favorablement à notre demande! "</French>
 		<German>+%d1_Change[ICON_UNHAPPY]: " Sie haben unsere Forderung abgelehnt! "</German>
-		<Italian>+%d1_Change[ICON_UNHAPPY]: " Hai rifiutato di accogliere la nostra richiesta! "</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY] Il leader ha rifiutato di accogliere la nostra richiesta!</Italian> <!-- city screen health panel -->
 		<Spanish>+%d1_Change[ICON_UNHAPPY]: "¡Rechazaste atender nuestras demandas!"</Spanish>
 		<Russian>+%d1_Change[ICON_UNHAPPY]: "Âû îòêàçàëèñü èñïîëíèòü íàøó ïðîñüáó!"</Russian>
 	</TEXT>
@@ -2193,7 +2193,7 @@
 		<English>Revolt Status</English>
 		<French>Statut de révolte</French>
 		<German>Aufruhr-Status</German>
-		<Italian>Stato della rivolta</Italian>
+		<Italian>Stabilità città</Italian> <!-- city screen revolt bar -->
 		<Spanish>Estabilidad</Spanish>
 		<Polish>Status rewolucji</Polish>
 		<Russian>Íàïðÿæåííîñòü</Russian>
@@ -2203,7 +2203,7 @@
 		<English>- click to offer bribe to city[NEWLINE]==========================</English>
 		<French>- Cliquer pour soudoyer et corrompre les dirigeants de la ville[NEWLINE]==========================</French>
 		<German>- Klicken, um der Stadt Bestechungsgeld anzubieten.[NEWLINE]==========================</German>
-		<Italian>- clicca per corrompere la città[NEWLINE]==========================</Italian>
+		<Italian>[SPACE]Clicca sulla barra per corrompere la città[NEWLINE]==========================</Italian> <!-- city screen revolution panel -->
 		<Spanish>- clic para ofrecer soborno a la ciudad[NEWLINE]==========================</Spanish>
 		<Polish>- kliknij, aby zaoferować łapówkę temu miastu[NEWLINE]==========================</Polish>
 		<Russian>- êëèêíèòå ÷òîáû çàäîáðèòü æèòåëåé[NEWLINE]==========================</Russian>
@@ -2213,7 +2213,7 @@
 		<English>+%d1_Change[ICON_HAPPY]: "Our rebellion has been successful"</English>
 		<French>+%d1_Change[ICON_HAPPY]: "Notre rébellion a été couronnée de succès"</French>
 		<German>+%d1_Change[ICON_HAPPY]: "Unser Aufstand war erfolgreich"</German>
-		<Italian>+%d1_Change[ICON_HAPPY]: "La nostra ribellione ha avuto successo"</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_HAPPY]: La nostra ribellione ha avuto successo</Italian> <!-- city screen health panel -->
 		<Spanish>+%d1_Change[ICON_HAPPY]: "¡Nuestra rebelión ha sido un éxito!"</Spanish>
 		<Russian>+%d1_Change[ICON_HAPPY]: "Íàøå âîññòàíèå äîñòèãëî óñïåõà"</Russian>
 	</TEXT>
@@ -2250,7 +2250,7 @@
 		<English>A revolution is brewing!</English>
 		<French>Une révolution est en marche!</French>
 		<German>Eine Revolution braut sich zusammen!</German>
-		<Italian>Una rivolta sta per scoppiare!</Italian>
+		<Italian>Una rivoluzione sta per iniziare!</Italian>
 		<Spanish>¡Se está gestando una revolución!</Spanish>
 		<Polish>Rewolucja wisi na włosku!</Polish>
 		<Russian>Êèïèò ðåâîëþöèÿ!</Russian>
@@ -2360,7 +2360,7 @@
 		<English>Anarchy</English>
 		<French>Anarchie</French>
 		<German>Unruhen</German>
-		<Italian>Anarchia</Italian>
+		<Italian>Anarchia</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Anarquía</Spanish>
 		<Polish>Anarchia</Polish>
 		<Russian>Àíàðõèÿ</Russian>
@@ -2390,7 +2390,7 @@
 		<English>Empire stability:</English>
 		<French>Stabilité de l'Empire:</French>
 		<German>Imperiumweite Stabilität:</German>
-		<Italian>Stabilità nazionale:</Italian>
+		<Italian>Stabilità nazionale:</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Estabilidad nacional:</Spanish>
 		<Polish>Stabilność imperium:</Polish>
 		<Russian>Óð. ñòàáèëüíîñòè ñòðàíû:</Russian>
@@ -2400,7 +2400,7 @@
 		<English>Colony</English>
 		<French>Colonie</French>
 		<German>Kolonie</German>
-		<Italian>Colonia</Italian>
+		<Italian>Colonia</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Colonia</Spanish>
 		<Polish>Kolonia</Polish>
 		<Russian>Êîëîíèÿ</Russian>
@@ -2410,7 +2410,7 @@
 		<English>Cult. rate</English>
 		<French>Culte. taux</French>
 		<German>Kulturrate</German>
-		<Italian>Tasso culturale</Italian>
+		<Italian>Livello culturale</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Nivel cultural</Spanish>
 		<Polish>Poziom kultury</Polish>
 		<Russian>Óð. êóëüòóðû</Russian>
@@ -2420,7 +2420,7 @@
 		<English>Cult. spending</English>
 		<French>Dépense Cult.</French>
 		<German>Kulturausgaben</German>
-		<Italian>Spesa per la cultura</Italian>
+		<Italian>Spesa per la cultura</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Gastos culturales</Spanish>
 		<Polish>Rozprzestrzenione kultury</Polish>
 		<Russian>Çàòðàòû íà êóëüòóðó</Russian>
@@ -2439,7 +2439,7 @@
 		<English>Dangerously Unstable:</English>
 		<French>Dangereusement instable:</French>
 		<German>Gefährlich instabil:</German>
-		<Italian>Pericolosamente instabile</Italian>
+		<Italian>Pericolosamente instabile</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Peligrosamente inestable:</Spanish>
 		<Polish>Bardzo niestabilne:</Polish>
 		<Russian>Î÷åíü íèçêèé</Russian>
@@ -2449,7 +2449,7 @@
 		<English>(Note: Specific numbers will not add up to total in many circumstances)</English>
 		<French>(Note: Les nombres spécifiques ne s'ajouteront pas au total dans beaucoup de circonstances)</French>
 		<German>(Anmerkung: Einzelne Zahlen lassen sich in vielen Fällen nicht zum Ganzen addieren)</German>
-		<Italian>(Nota: In molti casi, i numeri specifici non si sommano al totale)</Italian>
+		<Italian>(Nota: In molti casi, la somma dei numeri specifici non fa il totale)</Italian>
 		<Spanish>(Nota: En diversas circunstancias, los números específicos no se sumarán al total)</Spanish>
 		<Polish>(Uwaga: Konkretne liczby nie będą dodawane do całkowitej sumy w wielu sytuacjach)</Polish>
 		<Russian>(Ïðèìå÷àíèå: Îïðåäåëåííûå ÷èñëà íå áóäóò ñîñòàâëÿòü â öåëîì îáùåå êîëè÷åñòâî ïðè ìíîãèõ îáñòîÿòåëüñòâàõ)</Russian>
@@ -2459,7 +2459,7 @@
 		<English>Detail View</English>
 		<French>Vue de détail</French>
 		<German>Detailansicht</German>
-		<Italian>Vista dettagliata</Italian>
+		<Italian>Dettagli</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Ver detalles</Spanish>
 		<Polish>Widok Szczegółowy</Polish>
 		<Russian>Äåòàëüíûé îáçîð</Russian>
@@ -2469,7 +2469,7 @@
 		<English>Disorder</English>
 		<French>Désordre</French>
 		<German>Unruhe</German>
-		<Italian>Disordine</Italian>
+		<Italian>Disordini</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Desorden</Spanish>
 		<Polish>Nieporządek</Polish>
 		<Russian>Áåñïîðÿäêè</Russian>
@@ -2479,7 +2479,7 @@
 		<English>Distant Location</English>
 		<French>Endroit éloigné</French>
 		<German>Entfernte Lage</German>
-		<Italian>Posizione distante</Italian>
+		<Italian>Distante dalla capitale</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Ubicación distante</Spanish>
 		<Polish>Duża odległość</Polish>
 		<Russian>Îòäàëåííûé ðåãèîí</Russian>
@@ -2489,7 +2489,7 @@
 		<English>Financial trouble</English>
 		<French>Ennui financier</French>
 		<German>Finanzprobleme</German>
-		<Italian>Difficoltà finanziaria</Italian>
+		<Italian>Difficoltà finanziaria</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Problemas financieros</Spanish>
 		<Polish>Problemy finansowe</Polish>
 		<Russian>Ôèíàíñîâàÿ ïðîáëåìà</Russian>
@@ -2499,7 +2499,7 @@
 		<English>Financial stability</English>
 		<French>Stabilité financière</French>
 		<German>Finanzielle Stabilitat</German>
-		<Italian>Stabilità finanziaria</Italian>
+		<Italian>Stabilità finanziaria</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Estabilidad financiera</Spanish>
 		<Polish>Stabilność finansowa</Polish>
 		<Russian>Ôèíàíñîâàÿ ñòàáèëüíîñòü</Russian>
@@ -2509,7 +2509,7 @@
 		<English>(Flat)</English>
 		<French>(Constant)</French>
 		<German>(gleichbleibend)</German>
-		<Italian>(base)</Italian>
+		<Italian>(valore base)</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>(sin cambios)</Spanish>
 		<Polish>(Brak zmian)</Polish>
 		<Russian>(Áåç èçìåíåíèé)</Russian>
@@ -2519,7 +2519,7 @@
 		<English>Garrison</English>
 		<French>Garnison</French>
 		<German>Garnison</German>
-		<Italian>Guarnigione</Italian>
+		<Italian>Presenza di unità a difesa</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Guarnición</Spanish>
 		<Polish>Garnizon</Polish>
 		<Russian>Ãàðíèçîí</Russian>
@@ -2529,7 +2529,7 @@
 		<English>Golden Age</English>
 		<French>Âge d'or</French>
 		<German>Goldenes Zeitalter</German>
-		<Italian>Età dell'oro</Italian>
+		<Italian>Età dell'oro</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Edad de Oro</Spanish>
 		<Polish>Złoty wiek</Polish>
 		<Russian>Çîëîòîé Âåê</Russian>
@@ -2539,7 +2539,7 @@
 		<English>Happiness</English>
 		<French>Bonheur</French>
 		<German>Zufriedenheit</German>
-		<Italian>Felicità</Italian>
+		<Italian>Felicità alta</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Felicidad</Spanish>
 		<Polish>Zadowolenie</Polish>
 		<Russian>Ñ÷àñòüå</Russian>
@@ -2549,7 +2549,7 @@
 		<English>Holy city owned by heathens</English>
 		<French>Ville Sainte possédée par des infidèles</French>
 		<German>Heilige Stadt im Besitz von Heiden</German>
-		<Italian>Città santa posseduta da infedeli</Italian>
+		<Italian>Città santa posseduta da infedeli</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Ciudad Santa poseida por infieles</Spanish>
 		<Polish>Swięte miasto w rękach pogan</Polish>
 		<Russian>Ñâ. ãîðîä â ðóêàõ ÿçû÷íèêîâ</Russian>
@@ -2559,7 +2559,7 @@
 		<English>Holy city</English>
 		<French>Ville Sainte</French>
 		<German>Heilige Stadt</German>
-		<Italian>Città santa</Italian>
+		<Italian>Presenza della città santa</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Ciudad Santa</Spanish>
 		<Polish>Swięte miasto</Polish>
 		<Russian>Ñâ. ãîðîä</Russian>
@@ -2569,7 +2569,7 @@
 		<English>Huge Empire</English>
 		<French>Empire énorme</French>
 		<German>Sehr großes Imperium</German>
-		<Italian>Impero enorme</Italian>
+		<Italian>Civiltà enorme</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Imperio enorme</Spanish>
 		<Polish>Ogromne imperium</Polish>
 		<Russian>Îãðîìíàÿ Èìïåðèÿ</Russian>
@@ -2579,7 +2579,7 @@
 		<English>(Improving)</English>
 		<French>(Amélioration)</French>
 		<German>(verbessernd)</German>
-		<Italian>(miglioramento in corso)</Italian>
+		<Italian>(in miglioramento)</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>(mejorando)</Spanish>
 		<Polish>(Poprawa)</Polish>
 		<Russian>(Óëó÷øàåòñÿ)</Russian>
@@ -2589,7 +2589,7 @@
 		<English>Revolution Watch &lt;Ctrl+Shift+G&gt;</English>
 		<French>Surveillance de révolution &lt;Ctrl+Shift+G&gt;</French>
 		<German>Revolutions-Überwachung &lt;Ctrl+Shift+G&gt;</German>
-		<Italian>Rapporto sul rischio di rivoluzione &lt;Ctrl+Shift+G&gt;</Italian>
+		<Italian>Informazioni rivoluzione &lt;Ctrl+Shift+G&gt;</Italian>
 		<Spanish>Consejero de Revolución &lt;Ctrl+Shift+W&gt;</Spanish>
 		<Polish>Doradca ds. Rewolucji (Ctrl+Shift+G)</Polish>
 		<Russian>Ñîâåòíèê ïî âíóòðåííåé áåçîïàñíîñòè &lt;Ctrl+Shift+G&gt;</Russian>
@@ -2599,7 +2599,7 @@
 		<English>Large Empire</English>
 		<French>Grand Empire</French>
 		<German>Großes Imperium</German>
-		<Italian>Impero grande</Italian>
+		<Italian>Civiltà grande</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Gran imperio</Spanish>
 		<Polish>Duże imperium</Polish>
 		<Russian>Áîëüøàÿ Èìïåðèÿ</Russian>
@@ -2609,7 +2609,7 @@
 		<English>Med. Empire</English>
 		<French>Empire Moyen</French>
 		<German>Mittleres Imperium</German>
-		<Italian>Impero medio</Italian>
+		<Italian>Civiltà media</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Imperio mediano</Spanish>
 		<Polish>Srednie imperium</Polish>
 		<Russian>Ñðåäíÿÿ Èìïåðèÿ</Russian>
@@ -2619,7 +2619,7 @@
 		<English>Oversize military</English>
 		<French>Armée surdimensionnés</French>
 		<German>Übergroßes Militär</German>
-		<Italian>Esercito sovradimensionato</Italian>
+		<Italian>Esercito sovradimensionato</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Ejército sobredimensionado</Spanish>
 		<Polish>Przewaga militarna</Polish>
 		<Russian>×ðåçìåðíûå âîéñêà</Russian>
@@ -2639,7 +2639,7 @@
 		<English>Bad:</English>
 		<French>Mauvais:</French>
 		<German>Schlecht:</German>
-		<Italian>Fattori negativi:</Italian>
+		<Italian>Fattori negativi:</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Desfavorable:</Spanish>
 		<Polish>Nagatywne:</Polish>
 		<Russian>Îòðèöàò.:</Russian>
@@ -2648,7 +2648,7 @@
 		<Tag>TXT_KEY_REV_WATCH_NEUTRAL</Tag>
 		<English>Neutral</English>
 		<French>Neutre</French>
-		<Italian>Neutro</Italian>
+		<Italian>Media</Italian> <!-- city screen hover revolution bar -->
 		<Polish>Neutralne</Polish>
 		<Russian>Ñðåäíèé</Russian>
 	</TEXT>
@@ -2657,7 +2657,7 @@
 		<English>Non-state Religion</English>
 		<French>Religion non-officielle</French>
 		<German>Nicht-staatliche Religion</German>
-		<Italian>Religione 'non di stato'</Italian>
+		<Italian>Religione non di stato</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Religión no oficial</Spanish>
 		<Polish>Religia niepaństwowa</Polish>
 		<Russian>Íå ãîñ. ðåëèãèÿ</Russian>
@@ -2667,7 +2667,7 @@
 		<English>Not connected to capital</English>
 		<French>Non relié à la Capitale</French>
 		<German>Nicht an Hauptstadt angeschlossen</German>
-		<Italian>Non collegata alla capitale</Italian>
+		<Italian>Non collegata alla capitale</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>No conectada a la capital</Spanish>
 		<Polish>Nie połączone ze stolicą</Polish>
 		<Russian>Íå ñîåä. ñî ñòîëèöåé</Russian>
@@ -2677,7 +2677,7 @@
 		<English>No cities</English>
 		<French>Aucune villes</French>
 		<German>Keine Städte</German>
-		<Italian>Nessuna città</Italian>
+		<Italian>Nessuna città</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Sin ciudades</Spanish>
 		<Polish>Brak miast</Polish>
 		<Russian>Íåò ãîðîäîâ</Russian>
@@ -2687,7 +2687,7 @@
 		<English>Good:</English>
 		<French>Bon:</French>
 		<German>Gut:</German>
-		<Italian>Fattori positivi:</Italian>
+		<Italian>[NEWLINE]Fattori positivi:</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Favorable:</Spanish>
 		<Polish>Pozytywne:</Polish>
 		<Russian>Ïîëîæèò.:</Russian>
@@ -2695,7 +2695,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_REV_WATCH_RELIGION</Tag>
 		<English>Religion</English>
-		<Italian>Religione</Italian>
+		<Italian>Religione</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Religión</Spanish>
 		<Polish>Religia</Polish>
 		<Russian>Ðåëèãèÿ</Russian>
@@ -2705,7 +2705,7 @@
 		<English>Safe</English>
 		<French>Sûr</French>
 		<German>Sicher</German>
-		<Italian>Sicuro</Italian>
+		<Italian>Sicura</Italian> <!-- city screen revolt bar -->
 		<Spanish>Segura</Spanish>
 		<Polish>Bezpieczne</Polish>
 		<Russian>Ñïîêîéíî</Russian>
@@ -2715,7 +2715,7 @@
 		<English>Small City</English>
 		<French>Petite Ville</French>
 		<German>Kleine Stadt</German>
-		<Italian>Piccola città</Italian>
+		<Italian>Città troppo piccola</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Ciudad pequeña</Spanish>
 		<Polish>Małe miasto</Polish>
 		<Russian>Íåáîëüøîé ãîðîä</Russian>
@@ -2725,7 +2725,7 @@
 		<English>Small Empire</English>
 		<French>Petit Empire</French>
 		<German>Kleines Imperium</German>
-		<Italian>Impero piccolo</Italian>
+		<Italian>Civiltà troppo piccola</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Imperio pequeño</Spanish>
 		<Polish>Małe imperium</Polish>
 		<Russian>Íåáîëüøàÿ Èìïåðèÿ</Russian>
@@ -2735,7 +2735,7 @@
 		<English>Rebellious Spirit</English>
 		<French>Esprit rebelle</French>
 		<German>Rebellischer Geist</German>
-		<Italian>Spirito ribelle</Italian>
+		<Italian>Spirito rivoluzionario</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Espíritu revolucionario</Spanish>
 		<Polish>Duch rebelii</Polish>
 		<Russian>Ìÿòåæíûé äóõ</Russian>
@@ -2754,7 +2754,7 @@
 		<English>Starvation</English>
 		<French>Famine</French>
 		<German>Hunger</German>
-		<Italian>Carestia</Italian>
+		<Italian>Carestia</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Hambruna</Spanish>
 		<Polish>Głód</Polish>
 		<Russian>Ãîëîä</Russian>
@@ -2764,7 +2764,7 @@
 		<English>State Religion</English>
 		<French>Religion d'état</French>
 		<German>Staatsreligion</German>
-		<Italian>Religione di stato</Italian>
+		<Italian>Religione di stato</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Religión oficial</Spanish>
 		<Polish>Religia państwowa</Polish>
 		<Russian>Ãîñ. ðåëèãèÿ</Russian>
@@ -2774,7 +2774,7 @@
 		<English>Revolution Watch</English>
 		<French>Suivi de révolution</French>
 		<German>Revolutionsüberwachung</German>
-		<Italian>Rapporto sul rischio di rivoluzione</Italian>
+		<Italian>Informazioni rivoluzione</Italian>
 		<Spanish>Consejero de Revolución</Spanish>
 		<Polish>Szczegóły Rewolucji</Polish>
 		<Russian>Ñîâåòíèê ïî âíóòðåííåé áåçîïàñíîñòè</Russian>
@@ -2793,7 +2793,7 @@
 		<English>Unhealthy</English>
 		<French>Insalubre</French>
 		<German>Ungesund</German>
-		<Italian>Insalubre</Italian>
+		<Italian>Insalubrità</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>Insalubridad</Spanish>
 		<Polish>Choroby</Polish>
 		<Russian>Â ãîðîäå ãðÿçíî</Russian>
@@ -2833,7 +2833,7 @@
 		<English>(Worsening)</English>
 		<French>(Détérioration)</French>
 		<German>(verschlechternd)</German>
-		<Italian>(in peggioramento)</Italian>
+		<Italian>(in peggioramento)</Italian> <!-- city screen hover revolution bar -->
 		<Spanish>(empeorando)</Spanish>
 		<Polish>(Spadek)</Polish>
 		<Russian>(Óõóäøàåòñÿ)</Russian>

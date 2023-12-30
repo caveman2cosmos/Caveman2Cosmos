@@ -4,14 +4,14 @@
 		<Tag>TXT_KEY_TRAIT_AERIAL</Tag>
 		<English>Aerial CT</English>
 		<French>Aérien</French>
-		<Russian>Àâèàòîð</Russian>
+		<Russian>Авиатор</Russian>
 		<Italian>Aereo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AERIAL1</Tag>
 		<English>Aerial I</English>
 		<French>Aérien I</French>
-		<Russian>Àâèàòîð I</Russian>
+		<Russian>Авиатор I</Russian>
 		<Italian>Aereo I</Italian>
 	</TEXT>
 	<TEXT>
@@ -70,7 +70,7 @@ Penalties:
 		<Tag>TXT_KEY_TRAIT_AERIAL2</Tag>
 		<English>Aerial II</English>
 		<French>Aérien II</French>
-		<Russian>Àâèàòîð II</Russian>
+		<Russian>Авиатор II</Russian>
 		<Italian>Aereo II</Italian>
 	</TEXT>
 	<TEXT>
@@ -146,7 +146,7 @@ Penalties:
 		<Tag>TXT_KEY_TRAIT_AERIAL3</Tag>
 		<English>Aerial III</English>
 		<French>Aérien III</French>
-		<Russian>Àâèàòîð III</Russian>
+		<Russian>Авиатор III</Russian>
 		<Italian>Aereo III</Italian>
 	</TEXT>
 	<TEXT>
@@ -1083,6 +1083,7 @@ Nachteile:
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL</Tag>
 		<English>Agricultural CT</English>
 		<French>Agricole</French>
+		<German>Landwirtschaftlich CT</German>
 		<Russian>Çåìëåäåëåö</Russian>
 		<Italian>Agricolo</Italian>
 	</TEXT>
@@ -1090,6 +1091,7 @@ Nachteile:
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL1</Tag>
 		<English>Agricultural I</English>
 		<French>Agricole I</French>
+		<German>Landwirtschaftlich I</German>
 		<Russian>Çåìëåäåëåö I</Russian>
 		<Italian>Agricolo I</Italian>
 	</TEXT>
@@ -1145,6 +1147,7 @@ Penalties:
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL2</Tag>
 		<English>Agricultural II</English>
 		<French>Agricole II</French>
+		<German>Landwirtschaftlich II</German>
 		<Russian>Çåìëåäåëåö II</Russian>
 		<Italian>Agricolo II</Italian>
 	</TEXT>
@@ -1198,6 +1201,7 @@ Penalties:
 		<Tag>TXT_KEY_TRAIT_COMPLEX_AGRICULTURAL3</Tag>
 		<English>Agricultural III</English>
 		<French>Agricole III</French>
+		<German>Landwirtschaftlich III</German>
 		<Russian>Çåìëåäåëåö III</Russian>
 		<Italian>Agricolo III</Italian>
 	</TEXT>
@@ -1308,14 +1312,14 @@ Penalties:
 		<English>Anti-Clerical CT</English>
 		<French>Anti-Clérical</French>
 		<Russian>Àíòèêëåðèêàë</Russian>
-		<Italian>Antilclericale</Italian>
+		<Italian>Anticlericale</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ANTI_CLERICAL1</Tag>
 		<English>Anti-Clerical I</English>
 		<French>Anti-Clérical I</French>
 		<Russian>Àíòèêëåðèêàë I</Russian>
-		<Italian>Antilclericale I</Italian>
+		<Italian>Anticlericale I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ANTI_CLERICAL1_PEDIA</Tag>
@@ -1351,7 +1355,7 @@ Benefits:
 		<English>Anti-Clerical II</English>
 		<French>Anti-Clérical II</French>
 		<Russian>Àíòèêëåðèêàë II</Russian>
-		<Italian>Antilclericale II</Italian>
+		<Italian>Anticlericale II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ANTI_CLERICAL2_PEDIA</Tag>
@@ -1387,7 +1391,7 @@ Benefits:
 		<English>Anti-Clerical III</English>
 		<French>Anti-Clérical III</French>
 		<Russian>Àíòèêëåðèêàë III</Russian>
-		<Italian>Antilclericale III</Italian>
+		<Italian>Anticlericale III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_ANTI_CLERICAL3_PEDIA</Tag>
@@ -7470,6 +7474,7 @@ Penalties:
 		<Tag>TXT_KEY_TRAIT_GLUTTONOUS</Tag>
 		<English>Gluttonous CT</English>
 		<French>Glouton</French>
+		<German>Unersättlich CT</German>
 		<Russian>×ðåâîóãîäíèê</Russian>
 		<Italian>Insaziabile</Italian>
 	</TEXT>
@@ -7477,6 +7482,7 @@ Penalties:
 		<Tag>TXT_KEY_TRAIT_GLUTTONOUS1</Tag>
 		<English>Gluttonous I</English>
 		<French>Glouton I</French>
+		<German>Unersättlich I</German>
 		<Russian>×ðåâîóãîäíèê I</Russian>
 		<Italian>Insaziabile I</Italian>
 	</TEXT>
@@ -7532,6 +7538,7 @@ Benefits:
 		<Tag>TXT_KEY_TRAIT_GLUTTONOUS2</Tag>
 		<English>Gluttonous II</English>
 		<French>Glouton II</French>
+		<German>Unersättlich II</German>
 		<Russian>×ðåâîóãîäíèê II</Russian>
 		<Italian>Insaziabile II</Italian>
 	</TEXT>
@@ -7587,6 +7594,7 @@ Benefits:
 		<Tag>TXT_KEY_TRAIT_GLUTTONOUS3</Tag>
 		<English>Gluttonous III</English>
 		<French>Glouton III</French>
+		<German>Unersättlich III</German>
 		<Russian>×ðåâîóãîäíèê III</Russian>
 		<Italian>Insaziabile III</Italian>
 	</TEXT>
@@ -9578,6 +9586,7 @@ Benefits:
 		<Tag>TXT_KEY_TRAIT_MEDICAL</Tag>
 		<English>Medical CT</English>
 		<French>Médical</French>
+		<German>Medizinisch CT</German>
 		<Russian>Ìåäèê</Russian>
 		<Italian>Medico</Italian>
 	</TEXT>
@@ -9585,6 +9594,7 @@ Benefits:
 		<Tag>TXT_KEY_TRAIT_MEDICAL1</Tag>
 		<English>Medical I</English>
 		<French>Médical I</French>
+		<German>Medizinisch I</German>
 		<Russian>Ìåäèê I</Russian>
 		<Italian>Medico I</Italian>
 	</TEXT>
@@ -9641,6 +9651,7 @@ Penalties:
 		<Tag>TXT_KEY_TRAIT_MEDICAL2</Tag>
 		<English>Medical II</English>
 		<French>Médical II</French>
+		<German>Medizinisch II</German>
 		<Russian>Ìåäèê II</Russian>
 		<Italian>Medico II</Italian>
 	</TEXT>
@@ -9699,6 +9710,7 @@ Penalties:
 		<Tag>TXT_KEY_TRAIT_MEDICAL3</Tag>
 		<English>Medical III</English>
 		<French>Médical III</French>
+		<German>Medizinisch III</German>
 		<Russian>Ìåäèê III</Russian>
 		<Italian>Medico III</Italian>
 	</TEXT>
@@ -14172,6 +14184,7 @@ Benefits:
 		<Tag>TXT_KEY_TRAIT_UNSANITARY</Tag>
 		<English>Unsanitary CT</English>
 		<French>Malsain</French>
+		<German>Ungesund CT</German>
 		<Russian>Íåðÿõà</Russian>
 		<Italian>Malsano</Italian>
 	</TEXT>
@@ -14179,6 +14192,7 @@ Benefits:
 		<Tag>TXT_KEY_TRAIT_UNSANITARY1</Tag>
 		<English>Unsanitary I</English>
 		<French>Malsain I</French>
+		<German>Ungesund I</German>
 		<Russian>Íåðÿõà I</Russian>
 		<Italian>Malsano I</Italian>
 	</TEXT>
@@ -14213,6 +14227,7 @@ Benefits:
 		<Tag>TXT_KEY_TRAIT_UNSANITARY2</Tag>
 		<English>Unsanitary II</English>
 		<French>Malsain II</French>
+		<German>Ungesund II</German>
 		<Russian>Íåðÿõà II</Russian>
 		<Italian>Malsano II</Italian>
 	</TEXT>
@@ -14248,6 +14263,7 @@ Benefits:
 		<Tag>TXT_KEY_TRAIT_UNSANITARY3</Tag>
 		<English>Unsanitary III</English>
 		<French>Malsain III</French>
+		<German>Ungesund III</German>
 		<Russian>Íåðÿõà III</Russian>
 		<Italian>Malsano III</Italian>
 	</TEXT>

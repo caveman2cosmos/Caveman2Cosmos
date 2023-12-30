@@ -213,7 +213,7 @@ struct IDValueMap
 	const python::list makeList() const
 	{
 		PROFILE_EXTRA_FUNC();
-		python::list l = python::list();
+		boost::python::list l = python::list();
 		foreach_(const value_type& pair, m_map)
 			l.append(std::make_pair((int)pair.first, pair.second));
 		return l;
@@ -270,6 +270,7 @@ typedef std::pair<UnitCombatTypes, int> UnitCombatModifier2;
 
 typedef std::pair<BuildingTypes, CommerceArray> BuildingCommerce;
 typedef std::pair<TechTypes, CommerceArray> TechCommerceArray;
+typedef std::pair<EraTypes, CommerceArray> EraCommerceArray;
 typedef std::pair<TechTypes, YieldArray> TechArray;
 typedef std::pair<TerrainTypes, YieldArray> TerrainArray;
 typedef std::pair<PlotTypes, YieldArray> PlotArray;

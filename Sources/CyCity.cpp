@@ -1,4 +1,5 @@
 #include "CvGameCoreDLL.h"
+#include "CityOutputHistory.h"
 #include "CvArea.h"
 #include "CvCity.h"
 #include "CyArea.h"
@@ -98,7 +99,11 @@ void CyCity::changeRevolutionCounter(int iChange)
 
 CyPlot* CyCity::getCityIndexPlot(int iIndex) const
 {
-	return new CyPlot(m_pCity->getCityIndexPlot(iIndex));
+	if (m_pCity->getCityIndexPlot(iIndex))
+	{
+		return new CyPlot(m_pCity->getCityIndexPlot(iIndex));
+	}
+	return NULL;
 }
 
 bool CyCity::canWork(const CyPlot* pPlot) const
@@ -536,7 +541,11 @@ int CyCity::getY() const
 
 CyPlot* CyCity::plot() const
 {
-	return new CyPlot(m_pCity->plot());
+	if (m_pCity->plot())
+	{
+		return new CyPlot(m_pCity->plot());
+	}
+	return NULL;
 }
 
 bool CyCity::isConnectedTo(const CyCity& kCity) const
@@ -558,11 +567,6 @@ CyArea* CyCity::waterArea() const
 {
 	CvArea* waterArea = m_pCity->waterArea();
 	return waterArea ? new CyArea(waterArea) : NULL;
-}
-
-CyPlot* CyCity::getRallyPlot() const
-{
-	return new CyPlot(m_pCity->getRallyPlot());
 }
 
 int CyCity::getGameTurnFounded() const

@@ -4640,16 +4640,9 @@ class BonusPlacer :
     def CalculateNumBonusesToAdd(self,eBonus):
         #This is like the function in CvMapGenerator except it uses
         #self.PlotCanHaveBonus instead of CvPlot::canHaveBonus
-        gc = CyGlobalContext()
-        gameMap = CyMap()
-        game = CyGame()
-        bonusInfo = gc.getBonusInfo(eBonus)
-        rand1 = PRand.randint(0,bonusInfo.getRandAppearance1())
-        rand2 = PRand.randint(0,bonusInfo.getRandAppearance2())
-        rand3 = PRand.randint(0,bonusInfo.getRandAppearance3())
-        rand4 = PRand.randint(0,bonusInfo.getRandAppearance4())
-        baseCount = bonusInfo.getConstAppearance() + rand1 + rand2 + rand3 + rand4
-
+        GC = CyGlobalContext()
+        gameMap = GC.getMap()
+        bonusInfo = GC.getBonusInfo(eBonus)
         bIgnoreLatitude = False
         bIgnoreArea = True
         landTiles = 0
@@ -4657,16 +4650,13 @@ class BonusPlacer :
         if bonusInfo.getTilesPer() > 0:
             for i in range(mc.width*mc.height):
                 plot = gameMap.plotByIndex(i)
-                if self.PlotCanHaveBonus(plot,eBonus,bIgnoreLatitude,bIgnoreArea):
+                if self.PlotCanHaveBonus(plot, eBonus, bIgnoreLatitude, bIgnoreArea):
                     numPossible += 1
             landTiles += numPossible/bonusInfo.getTilesPer()
-        players = game.countCivPlayersAlive() * bonusInfo.getPercentPerPlayer()/100
-        bonusCount = baseCount * (landTiles + players)/100
+        players = GC.getGame().countCivPlayersAlive() * bonusInfo.getPercentPerPlayer()/100
+        bonusCount = bonusInfo.getRandAppearance() * (landTiles + players)/100
         bonusCount = max(1,int(bonusCount * mc.BonusBonus))
-##        print "Calculating bonus amount for %(bt)s" % {"bt":bonusInfo.getType()}
-##        print "baseCount=%(bc)d, numPossible=%(np)d, landTiles=%(lt)d, players=%(p)d" % \
-##        {"bc":baseCount,"np":numPossible,"lt":landTiles,"p":players}
-##        print ""
+
         return bonusCount
 
     def GetUniqueBonusTypeCountInArea(self,area):
@@ -4944,7 +4934,7 @@ class StartingPlotFinder :
         sPlot = StartPlot(x,y,0)
         for i in range(gc.getNUM_CITY_PLOTS()):
             plot = plotCity(x,y,i)
-            if not plot.isWater() and plot.getArea() != start.getArea():
+            if not plot or not plot.isWater() and plot.getArea() != start.getArea():
                 food,value = 0,0
             else:
                 food,value = self.getPlotPotentialValue(plot.getX(),plot.getY(),sPlot.isCoast())
@@ -5141,6 +5131,7 @@ class StartingPlotFinder :
                     if debugOut: print "****************************************************"
                     return
                 plot = plotCity(x,y,i)
+                if not plot: continue
                 if plot.getX() == x and plot.getY() == y:
                     continue
                 if plot.isWater() and not isCoastalCity:
@@ -5189,6 +5180,7 @@ class StartingPlotFinder :
         plotList = []
         for i in range(gc.getNUM_CITY_PLOTS()):
             plot = plotCity(x,y,i)
+            if not plot: continue
             featureInfo = gc.getFeatureInfo(plot.getFeatureType())
             if plot.getX() == x and plot.getY() == y:
                 #remove bad feature on start but don't count it.
@@ -5492,7 +5484,6 @@ class StartingArea :
                 sPlot.setImprovementType(-1)
                 playerID = self.playerList[n]
                 player = gc.getPlayer(playerID)
-                sPlot.setStartingPlot(True)
                 player.setStartingPlot(sPlot,True)
                 n += 1
 

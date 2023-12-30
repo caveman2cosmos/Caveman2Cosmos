@@ -1,5 +1,8 @@
 #include "CvGameCoreDLL.h"
 #include "CvInfos.h"
+#include "CvTraitInfo.h"
+#include "CvHeritageInfo.h"
+#include "CvDiplomacyClasses.h"
 
 //
 // Python interface for info classes (formerly structs)
@@ -136,6 +139,8 @@ void CyInfoPythonInterface3()
 		.def("getFlavorValue", &CvReligionInfo::getFlavorValue, "int (int i)")
 	;
 
+	python::class_<CvHeritageInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvHeritageInfo", python::no_init)
+	;
 
 	python::class_<CvCorporationInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvCorporationInfo", python::no_init)
 

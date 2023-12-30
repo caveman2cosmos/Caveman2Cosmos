@@ -334,7 +334,7 @@ class CvMainInterface:
 				CvBonusInfo = GC.getBonusInfo(iBonus)
 				szName = CvBonusInfo.getDescription()
 				szChar = u"%c " %CvBonusInfo.getChar()
-				if CvBonusInfo.getConstAppearance() > 0: ## Map resource
+				if CvBonusInfo.isMapBonus(): ## Map resource
 					aBonusList1.append((szName, iBonus, szChar))
 				elif CvBonusInfo.getBonusClassType() != BONUSCLASS_CULTURE:
 					aBonusList2.append((szName, iBonus, szChar))
@@ -1035,6 +1035,9 @@ class CvMainInterface:
 		screen.setStyle("EndTurnButton", "Button_HUDEndTurn_Style")
 		screen.setEndTurnState("EndTurnButton", "Disable")
 
+		screen.addDDSGFCAt("EndTurnButtonDecal", "EndTurnButton", self.artPathRawYieldsProduction, 0, 0, 32, 32, eWidGen, 0, 0, True)
+		screen.setHitTest("EndTurnButtonDecal", HitTestTypes.HITTEST_NOHIT)
+
 		# *************** #
 		# CITIZEN BUTTONS #
 		# *************** #
@@ -1280,6 +1283,8 @@ class CvMainInterface:
 			screen.hide("TimeText")
 			screen.hide("EraIndicator0")
 
+		screen.hide("EndTurnButtonDecal")
+
 		# Update the "End Turn" button.
 		if CyIF.shouldDisplayEndTurnButton() and IFT == InterfaceVisibility.INTERFACE_SHOW:
 			eState = CyIF.getEndTurnState()
@@ -1293,6 +1298,10 @@ class CvMainInterface:
 			elif eState == EndTurnButtonStates.END_TURN_GO:
 				screen.setEndTurnState("EndTurnButton", "Red")
 				screen.showEndTurn("EndTurnButton")
+
+			if self.CyPlayer.hasIdleCity():
+				screen.show("EndTurnButtonDecal")
+
 		else:
 			screen.hideEndTurn("EndTurnButton")
 
@@ -1486,6 +1495,7 @@ class CvMainInterface:
 
 			CyUnit = CyIF.getHeadSelectedUnit()
 			if CyUnit:
+				self.CyPlayer.setForcedCityCycle(False);
 				print "Unit Selected"
 				iUnitID = CyUnit.getID()
 				if not AtUnitPre or iUnitID != AtUnitPre.iUnitID:

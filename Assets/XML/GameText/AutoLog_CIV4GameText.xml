@@ -95,7 +95,7 @@
 		<English>%s1 lost</English>
 		<French>%s1 perdue</French>
 		<German>%s1 wurde verloren</German>
-		<Italian>LA città %s1 è andata persa</Italian>
+		<Italian>La città %s1 è andata persa</Italian>
 		<Spanish>%s1 se ha perdido</Spanish>
 		<Polish>Stracono miasto: %s1</Polish>
 		<Russian>Потерян %s1</Russian>
@@ -105,7 +105,7 @@
 		<English>%s1 begins: %s2 (%d3 turns)</English>
 		<French>%s1 commence la production de: %s2 (%d3 turns)</French>
 		<German>%s1 beginnt mit der Errichtung von: %s2 (Dauer: %d3 [NUM3:Runde:Runden])</German>
-		<Italian>La città di %s1 ha iniziato a costruire l'edificio %s2 (necessari %d3 turno/i)</Italian>
+		<Italian>La città di %s1 ha iniziato a costruire l'edificio %s2 e necessita di %d3 [NUM1:turno:turni]</Italian>
 		<Spanish>%s1 comienza la producción: %s2 (%d3 turnos)</Spanish>
 		<Polish>Miasto: %s1 rozpoczyna budowę: %s2 (%d3 tur)</Polish>
 		<Russian>Строится %s1: %s2 (%d3 ходов)</Russian>
@@ -115,7 +115,7 @@
 		<English>%s1 begins: %s2 (%d3 turns)</English>
 		<French>%s1 commence la production de: %s2 (%d3 tours)</French>
 		<German>%s1 beginnt mit der Aufstellung von: %s2 (Dauer: %d3 [NUM3:Runde:Runden])</German>
-		<Italian>La città di %s1 ha iniziato ad addestrare l'unità %s2 (necessari %d3 turno/i)</Italian>
+		<Italian>La città di %s1 ha iniziato ad addestrare l'unità %s2 e necessita di %d3 [NUM1:turno:turni]</Italian>
 		<Spanish>%s1 comienza la producción de: %s2 (%d3 turnos)</Spanish>
 		<Polish>Miasto: %s1 rozpoczyna budowę: %s2 (%d3 tur)</Polish>
 		<Russian>Строится %s1: %s2 (%d3 ходов)</Russian>
@@ -245,7 +245,7 @@
 		<English>%s1 has spread: %s2 (%s3)</English>
 		<French>%s1 s'est propagé à: %s2 (%s3)</French>
 		<German>%s1 wurde verbreitet in: %s2 (%s3)</German>
-		<Italian>La corporazione %s1 ha aperto una filiale nella cittÀ di %s2 (%s3)</Italian>
+		<Italian>La corporazione %s1 ha aperto una filiale nella città di %s2 (%s3)</Italian>
 		<Spanish>%s1 se ha expandido a: %s2 (%s3)</Spanish>
 		<Polish>%s1 rozprzestrzenia się w mieście: %s2 (%s3)</Polish>
 		<Russian>%s1 открыла филиал: %s2 (%s3)</Russian>
@@ -275,7 +275,7 @@
 		<English>Diplomacy: %s1 (%s2) offers to give the city %s3 to %s4 (%s5)</English>
 		<French>Diplomatie: %s1 (%s2) offre la ville %s3 pour %s4 (%s5)</French>
 		<German>Diplomatie: %s1 (%s2) bietet %s4 (%s5) die Stadt %s3 an</German>
-		<Italian>Diplomazia: %s1 (%s2) ha offerto la città du %s3 a %s4 (%s5)</Italian>
+		<Italian>Diplomazia: %s1 (%s2) ha offerto la città di %s3 a %s4 (%s5)</Italian>
 		<Spanish>Diplomacia: %s1 (%s2) ofrece renunciar a la ciudad %s3 a %s4 (%s5)</Spanish>
 		<Polish>Dyplomacja: %s1 (%s2) oferuje: przekazanie miasta: %s3 dla: %s4 (%s5)</Polish>
 	</TEXT>
@@ -536,7 +536,7 @@
 		<English>Golden Age ends</English>
 		<French>L'Age d'Or se termine</French>
 		<German>Ende eines Goldenen Zeitalters</German>
-		<Italian>L'Età dell'oro è terminata</Italian>
+		<Italian>L'età dell'oro è terminata</Italian>
 		<Spanish>La Edad de Oro termina</Spanish>
 		<Polish>Kończy się Złoty Wiek</Polish>
 		<Russian>Золотой Век окончился</Russian>
@@ -836,7 +836,7 @@
 		<English>Research begun: %s1 (%d2 Turns)</English>
 		<French>Recherche commencée: %s1 (%d2 Tours)</French>
 		<German>Forschung begonnen: %s1 (Dauer: %d2 [NUM2:Runde:Runden])</German>
-		<Italian>Ricerca della tecnologia %s1 iniziata (necessari %d2 turno/i)</Italian>
+		<Italian>Ricerca della tecnologia %s1 iniziata (necessari %d2 [NUM1:turno:turni])</Italian>
 		<Spanish>Investigación comenzada: %s1 (%d2 turnos)</Spanish>
 		<Polish>Badanie rozpoczęte: %s1 (%d2 Tur)</Polish>
 		<Russian>Начато исследование: %s1 (%d2 Turns)</Russian>
@@ -956,7 +956,7 @@
 		<English>%s1 becomes a Vassal State of %s2</English>
 		<French>%s1 est devenu un état vassal de %s2</French>
 		<German>%s1 wurde zu einem Vasallen von %s2</German>
-		<Italian>%s1 è divnetato un vassallo di %s2</Italian>
+		<Italian>%s1 è diventato un vassallo di %s2</Italian>
 		<Spanish>%s1 se convirtió en vasallo de %s2</Spanish>
 		<Polish>%s1 staje się Wasalem: %s2</Polish>
 		<Russian>%s1 становится вассальным государством %s2</Russian>
@@ -1378,7 +1378,7 @@
 		<English>The whip was applied in %s1</English>
 		<French>Le Travail Forcé a été utilisé à %s1</French>
 		<German>Zwangsarbeit wurde in %s1 eingesetzt</German>
-		<Italian>I lavori forzati causno una produzione accelerata di %s1</Italian>
+		<Italian>I lavori forzati causano una produzione accelerata di %s1</Italian>
 		<Spanish>Sacrificio de población ejecutado en %s1</Spanish>
 		<Polish>Zastosowano przyspieszenie w mieście: %s1</Polish>
 		<Russian>Принуждение к труду жителей %s1</Russian>

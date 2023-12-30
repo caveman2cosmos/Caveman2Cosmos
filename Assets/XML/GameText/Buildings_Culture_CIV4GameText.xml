@@ -65,7 +65,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>Cultura Neandertal (attiva)</Italian>
+		<Italian>Cultura Neanderthal (attiva)</Italian>
 		<Russian>Неандертальская (АкК)</Russian>
 	</TEXT>
 	<TEXT>
@@ -175,7 +175,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>Cultura Neandertal (adottata)</Italian>
+		<Italian>Cultura Neanderthal (adottata)</Italian>
 		<Russian>Неандертальская (ПрК)</Russian>
 	</TEXT>
 	<TEXT>
@@ -285,7 +285,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>Cultura Neandertal (locale)</Italian>
+		<Italian>Cultura Neanderthal (locale)</Italian>
 		<Russian>Неандертальская (МК)</Russian>
 	</TEXT>
 	<TEXT>
@@ -400,7 +400,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>Cultura Neandertal (nativa)</Italian>
+		<Italian>Cultura Neanderthal (nativa)</Italian>
 		<Russian>Неандертальская (РК)</Russian>
 	</TEXT>
 	<TEXT>
@@ -581,7 +581,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_ALEMANNIC</Tag>
 		<English>Culture (Alemannic)</English>
 		<French>Culture (Allémanique)</French>
-		<Italian>Cultura allemanna</Italian>
+		<Italian>Cultura alemanna</Italian>
 		<Russian>Àëåìàííñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
@@ -837,7 +837,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_AUSTRIAN_PEDIA</Tag>
 		<English>The territory of Austria originally known as the Celtic kingdom of Noricum, was a long time ally of Rome. It was occupied rather than conquered by the Romans during the reign of Augustus and made the province Noricum in 16 BC. Later it was conquered by Huns, Rugii, Lombards, Ostrogoths, Bavarii, Avars (until c. 800), and Franks (in that order). Finally, after 48 years of Hungarian rule (907 to 955), the core territory of Austria was awarded to Leopold of Babenberg in 976. Being part of the Holy Roman Empire the Babenbergs ruled and expanded Austria from the 10th century to the 13th century.</English>
-		<Italian>Il territorio dell'Austria, conosciuto originariamente come Regno Celtico del Norico, fu a lungo un alleato di Roma. Venne occupato dai Romani durante il principato di Augusto nel 16 a.C.; in seguito venne conquistato dagli Unni, dai Rugii, dai Longobardi, dagli Ostrogoti, dai Bavari, dagli Avarie dai Franchi (in questo ordine). Dopo 48 anni di dominio ungherese (dal 907 al 955), il nucleo dell'Austria fu affidato a Leopoldo di Babenberg nel 976; i membri della famigli di Babenberg governarono ed espansero l'Austria dal 10° al 13° secolo.</Italian>
+		<Italian>Il territorio dell'Austria, conosciuto originariamente come Regno Celtico del Norico, fu a lungo un alleato di Roma. Venne occupato dai Romani durante il principato di Augusto nel 16 a.C.; in seguito venne conquistato dagli Unni, dai Rugii, dai Longobardi, dagli Ostrogoti, dai Bavari, dagli Avarie dai Franchi (in questo ordine). Dopo 48 anni di dominio ungherese (dal 907 al 955), il nucleo dell'Austria fu affidato a Leopoldo di Babenberg nel 976; i membri della famiglia di Babenberg governarono ed espansero l'Austria dal 10° al 13° secolo.</Italian>
 		<Polish>Dziś Austria i jej kultura w dużej mierze kojarzy się z muzyką, i to muzyką poważną. To tu urodził się i tworzył Wolfgang Amadeusz Mozart, syn innego znanego kompozytora, również związanego z Austrią - Leopolda Mozarta. Tu urodzili się bracia Józef i Michael Haydn oraz Johann Strauss ojciec, syn i wnuk, Josef Strauss i Eduard Strauss. Poza nimi także Franz Schubert, Anton Bruckner, Gustav Mahler oraz Arnold Schonberg, Anton Webern, Alban Berg i inni. W samym Wiedniu żyło i tworzyło również wielu kompozytorów nie tylko związanych z cesarskim dworem. Należy tu wymienić choćby takie nazwiska jak Ludwig van Beethoven, Antonio Salieri, Christoph Willibald Gluck czy twórców operetki Ferenca Lehara i Imre Kalmana. Także wielu znanych dyrygentów również pochodzi z tego kraju. Są to przede wszystkim Herbert von Karajan, Karl Bohm, czy Erich i Carlos Kleiber.</Polish>
 	</TEXT>
 	<TEXT>
@@ -1077,7 +1077,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_BENIN_PEDIA</Tag>
 		<English>The Benin Empire (1440-1897) was a pre-colonial African nation in what is now modern Nigeria.</English>
-		<Italian>L'impero del Benin (1440-1897) era una nazione dell'Africa pre-coloniale situata nell'attuale Nigeria.</Italian>
+		<Italian>L'impero del Benin (1440-1897) era una nazione dell'Africa precoloniale situata nell'attuale Nigeria.</Italian>
 		<Polish>Na tereny współczesnego Beninu od XIII napływały ludu z plemienia Adżów. Plemię zamieszkiwało we wczesnym średniowieczu pogranicze dzisiejszego Beninu i Togo. Zgodnie z tradycją Adżowie przybyli do południowego Beninu w XII-XIII w. i - wymieszawszy się z lokalną ludnością - stworzyli nowy ludFonów, zwanych też Dahomejami. W XV wieku w Beninie pojawili się Portugalczycy a od XVII wieku Niemcy, Anglicy i Francuzi którzy wybudowali na wybrzeżu swoje forty i faktorie. Plemiona Adżów utrzymywały kontakty handlowe z Europejczykami a także pomimo początkowego sprzeciwu, rozpoczęły sprzedaż im niewolników.</Polish>
 	</TEXT>
 	<TEXT>
@@ -1349,7 +1349,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_CATALONIAN</Tag>
 		<English>Culture (Catalonian)</English>
-		<Italian>Cultura cataluna</Italian>
+		<Italian>Cultura catalana</Italian>
 		<Russian>Êàòàëîíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
@@ -2392,7 +2392,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_HUN_PEDIA</Tag>
 		<English>The Huns were a group of nomadic people who, appearing from east of the Volga River, migrated into Europe c. AD 370 and established the vast Hunnic Empire there.</English>
-		<Italian>Gli Unni erano un popolo nomade che, proveniendo dalle steppe ad est del fiume Volga, migrarono in Europa intorno al 370 d.C. fondando un vasto impero.</Italian>
+		<Italian>Gli Unni erano un popolo nomade che, provenendo dalle steppe ad est del fiume Volga, migrarono in Europa intorno al 370 d.C. fondando un vasto impero.</Italian>
 		<Polish>Hunowie po raz pierwszy \wzmiankowani są przez Ptolemeusza (zm. ok. 168), który umieszcza ich pośród ludów europejskiej Sarmacji. Analiza jego tekstu pozwala na przyjęcie, że ówcześni Hunowie żyli pomiędzy Donem aManyczem na północy, górnym biegiem Kubania na południu i Morzem Azowskim na zachodzie. Na wschodzie ich terytorium mogło się rozciągać aż do Morza Kaspijskiego i regionu ujścia Wołgi. Wydaje się, że w ciągu następnych dwóch stuleci nie zmienili oni miejsca pobytu, ponieważ Ammianus Marcellinus nadal umieszcza ich "za maeockimi bagnami", czyli w pobliżu Morza Azowskiego. W sumie nawet sceptyczny wobec utożsamiania "Hunów" Ptolemeusza z Hunami późniejszymi Denis Sinor przyznaje, że "nie można polemizować ze stwierdzeniem, iż przed wejściem w kontakt ze światem rzymskim Hunowie żyli na wschód od Morza Azowskiego, na stepach południowej Rosji, lub być może nawet dalej na wschodzie".</Polish>
 	</TEXT>
 	<TEXT>
@@ -2481,7 +2481,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_INCAN_PEDIA</Tag>
 		<English>The Inca people began as a tribe of the Killke culture in the Cuzco area around the 12th century AD. Under the leadership of Manco Capac, they formed the small city-state of Cuzco.</English>
-		<Italian>Gli Inca ebbero origine da una tribù appartenente alla cultura di Killke, stanziate nell'aea di Cuzco intorno al 12° secolo d.C.; sotto la guida di Manco Capac fondarono la piccola città-stato di Cuzco.</Italian>
+		<Italian>Gli Inca ebbero origine da una tribù appartenente alla cultura di Killke, stanziate nell'area di Cuzco intorno al 12° secolo d.C.; sotto la guida di Manco Capac fondarono la piccola città-stato di Cuzco.</Italian>
 		<Polish>Inkowie nie znali pisma, nie tworzyli więc literatury we współczesnym rozumieniu. Przedinkaskie próby zapisu przy pomocy pisma hieroglificznego przez Inków zostały zaniechane. Posługiwali się jednak kipu, czyli różnobarwnymi sznurkami, za pomocą których się porozumiewali. Do dzisiaj nie wyjaśniono sposobu, w jaki to robili. Podczas konkwisty większość kipu zniszczono. Do naszych czasów zachowało się ok. 600 egzemplarzy kipu. Prócz tego znany jest jeden utwór sceniczny inkaski (Ollantay), ale najprawdopodobniej powstał po podboju.</Polish>
 	</TEXT>
 	<TEXT>
@@ -2811,7 +2811,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_KHMER_PEDIA</Tag>
 		<English>The Khmer Empire was one of the most powerful empires in Southeast Asia. The empire, which grew out of the former kingdom of Chenla, at times ruled over and/or vassalized parts of modern-day Laos, Thailand, Vietnam, Myanmar, and Malaysia.</English>
-		<Italian>L'impero Khmer è stato uno dei più potenti imperi dell'Asia sudorientale. L'impero nacque dal regno di Chenla e riuscì a governare e/o rendere vassali parti degli attuali Laos, Thailandia, Vietnam, Birmania e Malesia.</Italian>
+		<Italian>L'impero Khmer è stato uno dei più potenti imperi dell'Asia sudorientale. L'impero nacque dal regno di Chenla e riuscì a governare e/o rendere vassalli parti degli attuali Laos, Thailandia, Vietnam, Birmania e Malesia.</Italian>
 		<Polish>Khmerowie, Khmerzy - naród mieszkający w Kambodży (12,1 mln), Wietnamie (ok. 1 mln.),Tajlandii (ok. 1,1 mln.), USA,Kanadzie, Australii, Nowej Zelandii. Posługują się językiemkhmerskim z grupy mon-khmerrodziny austroazjatyckiej. Od XV wieku wyznają buddyzm theravada. Główne zajęcia: uprawa zbóż na glebach sztucznie nawadnianych, hodowla, rybołówstwo. U Khmerów kobiety zajmują wysoką pozycję społeczną, dużą rolę odgrywają również klasztory</Polish>
 	</TEXT>
 	<TEXT>
@@ -3023,7 +3023,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_LITHUANIAN</Tag>
 		<English>Culture (Lithuanian)</English>
-		<Italian>Cultura lithuana</Italian>
+		<Italian>Cultura lituana</Italian>
 		<Russian>Ëèòîâñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
@@ -3616,7 +3616,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>Cultura neandertal</Italian>
+		<Italian>Cultura Neanderthal</Italian>
 		<Polish>Kultura (Neandertalska)</Polish>
 		<Russian>Íåàíäåðò. êóëüòóðà</Russian>
 	</TEXT>
@@ -3629,7 +3629,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_NEANDERTHAL_HELP</Tag>
 		<English>[COLOR_WARNING_TEXT]WARNING:[COLOR_REVERT] This world wonder gives you Neanderthal units, but you can't build criminal units in Prehistoric era</English>
-		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Attenzione:[COLOR_REVERT] Questa meraviglia mondiale conferisce  le unità Neandertal, ma non sarà possibile addestrare [COLOR_WARNING_TEXT]Unità criminali[COLOR_REVERT] durante l'Era preistorica</Italian>
+		<German>[COLOR_WARNING_TEXT]ACHTUNG![COLOR_REVERT] Dieses Weltwunder ermöglicht die Ausbildung von Neandertaler-Einheiten, verhindert aber gleichzeitig die Ausbildung von Straftätern in der gesamten Vorgeschichte.</German>
+		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Attenzione:[COLOR_REVERT] Questa meraviglia mondiale conferisce  le unità Neanderthal, ma non sarà possibile addestrare [COLOR_WARNING_TEXT]Unità criminali[COLOR_REVERT] durante l'Era preistorica</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_NEPALESE</Tag>
@@ -4172,7 +4173,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_QUEBECKER</Tag>
 		<English>Culture (Quebecker)</English>
-		<Italian>Cultura del quebec</Italian>
+		<Italian>Cultura del Quebec</Italian>
 		<Russian>Êâåáåêñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
@@ -5139,7 +5140,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_TOLTEC_PEDIA</Tag>
 		<English>The Toltec culture is an archaeological Mesoamerican culture that dominated a state centered in Tula, Hidalgo in the early post-classic period of Mesoamerican chronology.</English>
-		<Italian>La cultura Tolteca era una cultura Mesoamericana che dominò uno stato con capitale Tula, nello stato di Hidalgo, all'inizio del periodo post-classico della crnologia mesoamericana.</Italian>
+		<Italian>La cultura Tolteca era una cultura Mesoamericana che dominò uno stato con capitale Tula, nello stato di Hidalgo, all'inizio del periodo post-classico della cronologia mesoamericana.</Italian>
 		<Polish>Toltekowie - nazwa nadawana przez naukowców mało znanej prekolumbijskiej kulturze ze środkowego Meksyku, wiązanej zwykle z miastem Tula z X w., albo - zwłaszcza w ostatnich dekadach - mitycznym po części przodkom Azteków i Majów z całego szeregu rozwiniętych cywilizacyjnie społeczności ich poprzedników. Niezależnie od powyższych teorii, pod koniec XX w. niektóre środowiska z kręgów New Age, za przykładem pisarza Carlosa Castanedy, Toltekami zaczęły też nazywać osoby, które osiągnęły "wysoki poziom świadomości".</Polish>
 	</TEXT>
 	<TEXT>
@@ -5637,7 +5638,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_ZAPOTEC_PEDIA</Tag>
 		<English>From southern Mesoamerica, the Zapotec had a sedentary but advanced culture and were often at war with the Aztecs.</English>
-		<Italian>Dalla Mesoamerica meridionale, gli Zapotec avevano una cultura sedentaria avanzata, ed erano spesso in guerra con gli Aztechi.</Italian>
+		<Italian>Dalla Mesoamerica meridionale, gli Zapotechi avevano una cultura sedentaria avanzata, ed erano spesso in guerra con gli Aztechi.</Italian>
 		<Polish>Zapotekowie - grupa rdzennych mieszkańców Meksyku, zamieszkujących środkowo-wschodnią część obecnego stanu Oaxaca. Obecnie ich populacja liczy ok. 400 tys., większość posługuje się językiem hiszpańskim, w użyciu jest też silnie rozdrobniony dialektalnie język zapotecki z rodziny oto-mangueskiej. W czasach prekolumbijskich stworzyli jedną z trzech wielkich kultur mezoamerykańskich. Najważniejszym ośrodkiem tej kultury było miasto Monte Alban. Pozostałe to: Lambityeco, Dainzu, Mitla, Yagul, San Jose Mogote i Zaachila.</Polish>
 	</TEXT>
 	<TEXT>

@@ -101,7 +101,7 @@
 		<English>%s1_civ_adjective anti-monarchists are protesting, saying that the religious institutions don't have enough power compared to the King.</English>
 		<French>Des anti-monarchistes %s1:3_civ_adjective manifestent car ils trouvent que les institutions religieuses ne sont pas assez puissantes comparées au roi.</French>
 		<German>Im %[s1_civ_adjective]en Reich protestieren gläubige Menschen gegen die Ohnmacht religiöser Institutionen im Vergleich zur Allmacht des Königshauses.</German>
-		<Italian>Gli anti-monarchici %s1:3_civ_adjective stanno protestando: sostengono che le istituzioni religiose non detengono abbastanza poteri rispetto al re.</Italian>
+		<Italian>Gli antimonarchici %s1:3_civ_adjective stanno protestando: sostengono che le istituzioni religiose non detengono abbastanza poteri rispetto al re.</Italian>
 		<Polish>Przeciwnicy monarchii w %s1_civ_adjective protestują. Narzekają, że instytucje kościelne nie mają identycznej władzy jak Król.</Polish>
 		<Russian>В державе %s1_civ_adjective начались антимонархические выступления под предлогом, что королевские прерогативы ущемляют авторитет религиозных учреждений.</Russian>
 		<Spanish>Anti-monárquicos %s1:3_civ_adjective están protestando, diciendo que las instituciones religiosas apenas tiene poder frente al Rey.</Spanish>
@@ -1772,7 +1772,7 @@
 		<English>%s1_civ_adjective naval units have been equipped with new anti-aircraft guns.</English>
 		<French>Des Unités navales %s1:4_civ_adjective ont été équipées de nouveaux canons anti-aériens.</French>
 		<German>%s1_civ_adjective Marineeinheiten wurden mit neuartigen Flugabwehrwaffen ausgerüstet.</German>
-		<Italian>Le unità navali %s1:4_civ_adjective sono state equipaggiate con nuove armi anti-aeree.</Italian>
+		<Italian>Le unità navali %s1:4_civ_adjective sono state equipaggiate con nuove armi antiaeree.</Italian>
 		<Polish>Okręty %s1_civ_adjective zostały wyposażone w nowy typ broni przeciw lotniczej.</Polish>
 		<Russian>Боевые корабли у %s1_civ_adjective были оснащены новейшими зенитными установками.</Russian>
 		<Spanish>Las unidades navales %s1:4_civ_adjective han sido equipadas con nuevas armas antiaéreas.</Spanish>
@@ -2231,7 +2231,7 @@
 		<Tag>TXT_KEY_EVENTTRIGGER_SETBACK_1</Tag>
 		<English>%s1_civ_adjective researchers are rumored to have suffered a major setback, slowing their progress.</English>
 		<French>Des chercheurs %s1:3_civ_adjective auraient subi un revers majeur qui ralentit leurs recherches.</French>
-		<German>Die %s1:2_civ_adjective Forscher sollen einen herben Rückschlag erlitten haben, der ihre Fortschritte verlangsamt.</German>
+		<German>Die %[s1_civ_adjective]en Forscher sollen einen herben Rückschlag erlitten haben, der ihre Fortschritte verlangsamt.</German>
 		<Italian>Pare che i ricercatori %s1:3_civ_adjective abbiano subito una battuta d'arresto, che ha rallentato il loro progresso.</Italian>
 		<Spanish>Se rumorea que los investigadores %s1:1_civ_adjective han sufrido un gran revés que ha frenado sus avances.</Spanish>
 	</TEXT>
@@ -2239,7 +2239,7 @@
 		<Tag>TXT_KEY_EVENTTRIGGER_SETBACK_2</Tag>
 		<English>%s1_civ_adjective discoveries have turned out to be false! This dead end result has slowed their current research project.</English>
 		<French>Les découvertes %s1:4_civ_adjective se sont avérées erronées ! Ce travail en pure perte a ralenti leur projet de recherches actuel.</French>
-		<German>Die %s1:2_civ_adjective Entdeckungen haben sich als falsch erwiesen. Dies bedeutet einen herben Rückschlag für ihr aktuelles Forschungsprojekt.</German>
+		<German>Die %[s1_civ_adjective]en Entdeckungen haben sich als falsch erwiesen. Dies bedeutet einen herben Rückschlag für ihr aktuelles Forschungsprojekt.</German>
 		<Italian>Le scoperte %s1:4_civ_adjective si sono rivelate sbagliate! Questo fallimento ha rallentato il progresso del loro attuale progetto di ricerca.</Italian>
 		<Spanish>¡Los descubrimientos %s1:3_civ_adjective han resultado ser falsos! Este callejón sin salida ha entorpecido mucho su proyecto de investigación.</Spanish>
 	</TEXT>
@@ -2660,6 +2660,7 @@
 		<Tag>TXT_KEY_EVENTTRIGGER_VOLCANO_ACTIVE</Tag>
 		<English>Reports speak of increased volcanic activity.</English>
 		<French>Des rumeurs courent concernant une augmentation de l'activité volcanique.</French>
+		<German>Es gibt Berichte über erhöhte vulkanische Aktivität.</German>
 		<Italian>Notizie parlano di attività vulcaniche in aumento.</Italian>
 		<Polish>Nadchodzą wieści o zwiększonej aktywności wulkanicznej.</Polish>
 		<Russian>Поступают новости об усилении вулканической активности.</Russian>
@@ -3061,7 +3062,7 @@
 		<English>Anti-monarchists are claiming that the King has too much power and that religious leaders need to have some, too.</English>
 		<French>Des anti-monarchistes prétendent que le roi a trop de pouvoir, et que les autorités religieuses devraient en avoir plus.</French>
 		<German>Gläubige Menschen protestieren gegen die Ohnmacht religiöser Institutionen im Vergleich zur Allmacht Eures Königshauses.</German>
-		<Italian>Gli anti-monarchici protestano contro i troppi poteri del Re e sostengono che i leader religiosi debbano vedere rafforzati i propri.</Italian>
+		<Italian>Gli antimonarchici protestano contro i troppi poteri del Re e sostengono che i leader religiosi debbano vedere rafforzati i propri.</Italian>
 		<Polish>Anty-rojaliści twierdzą, że król posiada za dużo władzy i przywódcy religijni pragną trochę władzy dla siebie.</Polish>
 		<Russian>Антимонархисты утверждают, что у короля слишком много власти и что духовные лидеры тоже должны иметь такую власть.</Russian>
 		<Spanish>Antimonárquicos reclaman qué el rey tiene demasiado poder y qué los lideres religiosos deberian tener algo también.</Spanish>
@@ -7262,7 +7263,7 @@
 		<Tag>TXT_KEY_EVENT_INDUSTRIAL_ACTION_2_HELP</Tag>
 		<English>[ICON_BULLET]Cannot be running Economic Civic [COLOR_NEGATIVE_TEXT]State Property[COLOR_REVERT] -- the Government [COLOR_POSITIVE_TEXT]is[COLOR_REVERT] the factory management under that Civic.</English>
 		<French>[ICON_BULLET]Ne peut être choisi avec la doctrine actuelle [COLOR_NEGATIVE_TEXT]Propriété de l'Etat[COLOR_REVERT] -- le gouvernement est l'employeur de tous les ouvriers sous cette doctrine.</French>
-		<German>[ICON_BULLET]Kann die ökonomische Gesellschaftsform [COLOR_NEGATIVE_TEXT]Staatseigentum[COLOR_REVERT]nicht verwenden -- die Regierung [COLOR_POSITIVE_TEXT]ist[COLOR_REVERT] die Fabrikleitung in dieser Gesellschaftsform.</German>
+		<German>[ICON_BULLET]kann die ökonomische Gesellschaftsform [COLOR_NEGATIVE_TEXT]Staatseigentum[COLOR_REVERT]nicht verwenden -- die Regierung [COLOR_POSITIVE_TEXT]ist[COLOR_REVERT] die Fabrikleitung in dieser Gesellschaftsform.</German>
 		<Italian>[ICON_BULLET]Non può essere attiva la forma di governo [COLOR_NEGATIVE_TEXT]Proprietà statale[COLOR_REVERT] -- il governo [COLOR_POSITIVE_TEXT]è[COLOR_REVERT] il gestore delle fabbriche in questo caso.</Italian>
 		<Spanish>[ICON_BULLET]No puede estar activo el principio económico [COLOR_NEGATIVE_TEXT]Propiedad estatal[COLOR_REVERT]; el gobierno [COLOR_POSITIVE_TEXT]es[COLOR_REVERT] el director de la fábrica en este caso.</Spanish>
 		<Polish>[ICON_BULLET]Nie możesz przyjąć doktryny [COLOR_NEGATIVE_TEXT]Nacjonalizacja[COLOR_REVERT] –- rząd [COLOR_POSITIVE_TEXT]jest[COLOR_REVERT] zarządem tej fabryki pod tą doktryną.</Polish>
@@ -8117,7 +8118,7 @@
 		<English>No, we're going to have to take our own medicine sooner or later. Even though it will be unpopular, we must implement an austerity program to cut spending and lower inflation.</English>
 		<French>Non, nous allons devoir être notre propre médecin tôt ou tard. Bien que ce soit soit impopulaire, nous devons mettre en application un programme d'austérité pour endiguer la dépense et l'inflation.</French>
 		<German>Nein, wir müssen die bittere Medizin früher oder später schlucken. Auch wenn es unpopulär ist, wir müssen ein hartes Sparprogramm durchziehen, um die Ausgaben zu reduzieren und die Inflation zu senken.</German>
-		<Italian>No, prima o poi dovremo prendere la nostra medicina. Anche se sarà impopolare, dobbiamo effettuare un programma di austerità per tagliare lev spese e abbassare l'inflazione.</Italian>
+		<Italian>No, prima o poi dovremo prendere la nostra medicina. Anche se sarà impopolare, dobbiamo effettuare un programma di austerità per tagliare le spese e abbassare l'inflazione.</Italian>
 		<Spanish>No, más tarde o más temprano tendremos que tomar nuestra propia medicina. Aunque será una medida impopular, debemos poner en marcha un programa de austeridad para recortar el gasto y reducir la inflación.</Spanish>
 		<Polish>Nie, prędzej czy później wróci to do nas z nawiązką. Mimo, że ludziom się to nie spodoba, musimy wprowadzić program oszczędnego gospodarowania aby obniżyć wydatki i znieść inflację.</Polish>
 		<Russian>Нет, рано или поздно нам придется принимать наши лекарства. Даже если это будет непопулярно, мы должны реализовать программу жесткой экономии, чтобы сократить расходы и снизить инфляцию.</Russian>
@@ -8247,7 +8248,7 @@
 		<English>Our naval units have been equipped with new anti-aircraft guns.</English>
 		<French>Nos unités navales ont été équipées de nouveaux canons anti-aériens.</French>
 		<German>Unsere Marineeinheiten wurden mit neuartigen Flugabwehrwaffen ausgerüstet.</German>
-		<Italian>Le nostre unità navali sono state equipaggiate con armi anti-aeree.</Italian>
+		<Italian>Le nostre unità navali sono state equipaggiate con armi antiaeree.</Italian>
 		<Spanish>Nuestras unidades navales han sido equipadas con nuevas armas antiaéreas.</Spanish>
 		<Polish>Nasze okręty zostały wyposażone w nowe działa przeciwlotnicze.</Polish>
 		<Russian>Наши боевые корабли были оснащены новыми зенитными орудиями.</Russian>
@@ -10669,7 +10670,7 @@
 		<English>Veteran military officers in one of our elite units are advocating peace with the %s1_civ_adjective and socialism at home. This faction is gaining support, and it may be impossible to stop them from seizing power unless action is taken soon.</English>
 		<French>Les officiers militaires vétérans d'une de nos unités d'élite préconisent de faire la paix avec les %s1:3_civ_adjective et d'adopter le socialisme comme doctrine. Cette faction reçoit l'appui de nombreuses personnes, et des mesures doivent être prises, car il sera bientôt impossible de les empêcher de prendre le pouvoir.</French>
 		<German>Militärische Offiziersveteranen in einer unserer Eliteeinheiten befürworten den Frieden mit dem %s1_civ_adjective Volk sowie den Sozialismus. Diese Partei gewinnt schnell an Rückhalt. Wenn wir nicht schnell eingreifen, könnte es unmöglich sein, sie von der Übernahme der Macht abzuhalten.</German>
-		<Italian>Gli ufficiali militari veterani di una delle nostre unità d'élite stanno chiedendo la pace con i %s1:3_civ_adjective ed il socialismo nel paese. Questa fazione sta guadagnando il supporto popolare e può essere impossible da arrestarla dal prendere il potere a meno che un'azione venga intrapresa presto.</Italian>
+		<Italian>Gli ufficiali militari veterani di una delle nostre unità d'élite stanno chiedendo la pace con i %s1:3_civ_adjective ed il socialismo nel paese. Questa fazione sta guadagnando il supporto popolare e può essere impossibile da arrestarla dal prendere il potere a meno che un'azione venga intrapresa presto.</Italian>
 		<Spanish>Algunos oficiales militares veteranos de una de nuestras unidades de élite están abogando por la paz con los %s1:3_civ_adjective y por adoptar el socialismo. Esta corriente está ganando adeptos, y podría ser imposible impedir que se hagan con el poder a menos que se tome alguna medida pronto.</Spanish>
 		<Polish>Wysocy oficerowie jednego z naszych elitarnych oddziałów żądają zawarcia pokoju z cywilizacją %s1_civ_adjective oraz wprowadzenia socjalizmu w naszym kraju! Frakcja ta zyskuje coraz większe poparcie, jeżeli nie podejmiemy żadnych działań wkrótce może być za późno przed powstrzymaniem ich od przejęcia władzy.</Polish>
 	</TEXT>
@@ -10799,7 +10800,7 @@
 		<English>An archaeological expedition to city ruins near %s2_city has uncovered lost treasures, texts and artifacts.</English>
 		<French>Une expédition archéologique dans des ruines près de %s2_city a mis à jour des trsors perdus, d'anciens textes et des artefacts précieux.</French>
 		<German>Eine archäologische Expedition hat in Stadtruinen in der Nähe von %s2_city verschollene Schätze, Schriftstücke und Artefakte gefunden.</German>
-		<Italian>Una spedizione archeologica vicino alla città di %s2_city ha svelato tesori perduti, testi e artifatti.</Italian>
+		<Italian>Una spedizione archeologica vicino alla città di %s2_city ha svelato tesori perduti, testi e artefatti.</Italian>
 		<Spanish>Una expedición arqueológica a las ruinas cercanas a %s2_city ha desvelado tesoros, textos y artefactos perdidos.</Spanish>
 		<Polish>Ekspedycja archeologiczna przeszukała ruiny niedaleko miasta %s2_city i odnalazła zaginione skarby, teksty i artefakty.</Polish>
 		<Russian>Археологическая экспедиция в окрестностях города %s2_city обнаружила потерянные сокровища, древние рукописи и артефакты.</Russian>
@@ -11341,7 +11342,7 @@
 		<English>A master engineer has crafted a new type of anti-personnel ammunition that can be used in cannons. Instead of solid shot, a mass of loosely packed metal slugs is loaded into a canvas bag. When assembled, the balls resemble a cluster of grapes and when fired the balls spread out from the muzzle at high velocity.</English>
 		<French>Un maître en armement a conçu un nouveau type de munitions anti-personnel qui peuvent être utilisées dans nos canons. A la place d'un boulet solide, celui-ci crache une masse de petits éclats de métal placé dans un filet. Lorsque ces munitions sont tirées, elles atteignent leur cible à grande vitesse et provoque des dégâts dévastateurs.</French>
 		<German>Ein Meister ingenieur hat eine Form von Munition entwickelt, die in Kanonen gegen Soldaten verwendet werden kann. Statt einer soliden Kugel wird eine Menge locker zusammengepackter Metallklumpen in ein Segeltuch gepackt. Diese Verteilen sich nach dem Abfeuern in großer Geschwindigkeit in viele kleine Kügelchen.</German>
-		<Italian>Un mastro ingegnere ha creato un nuovo tipo di munizioni anti-uomo che possono essere usate nei cannoni. Al posto di colpi solidi, una massa di piccoli proiettili di metallo viene assemblata in una custodia. Le palle assomigliano a un gruppo di acini e, quando vengono sparate, escono dalla bocca del cannone ad alta velocità.</Italian>
+		<Italian>Un mastro ingegnere ha creato un nuovo tipo di munizioni antiuomo che possono essere usate nei cannoni. Al posto di colpi solidi, una massa di piccoli proiettili di metallo viene assemblata in una custodia. Le palle assomigliano a un gruppo di acini e, quando vengono sparate, escono dalla bocca del cannone ad alta velocità.</Italian>
 		<Spanish>Un maestro ingeniero ha elaborado un nuevo tipo de munición antipersona que se puede utilizar en cañones. En lugar de una bola sólida, se carga un montón de balas de metal muy apretadas en una bolsa de lona. Una vez montadas, las balas se parecen a un racimo de uvas, y cuando se disparan, se esparcen desde la boca del cañón a gran velocidad.</Spanish>
 		<Polish>Inżynier stworzył nowy rodzaj amunicji przeciwpiechotnej, która może być używana w armatach. Zamiast zwykłej kuli, do środka pocisku dodał wiele luźnych odpadków metalowych, które rozpraszają się po wybuchu.</Polish>
 		<Russian>Главный инженер разработал новый тип противопехотных боеприпасов, которые можно заряжать в пушки. Вместо цельного снаряда ствол заряжается холщовым мешком, наполненным картечью. Собранные шарики напоминают гроздь винограда, а при выстреле шарики разлетаются из жерла на высокой скорости.</Russian>
@@ -12853,6 +12854,7 @@
 		<Tag>TXT_KEY_EVENT_TRIGGER_VOLCANO_SLEEP</Tag>
 		<English>This volcano has not erupted in living memory, only old tales speak of it spewing lava.</English>
 		<French>Ce volcan n'a plus été vu en éruption de mémoire vivante, seuls les anciens parlent de quelques jets de lave.</French>
+		<German>Dieser Vulkan ist schon seit Ewigkeiten nicht mehr ausgebrochen. Nur aus alten Überlieferungen ist noch bekannt, dass er einst Asche und Lava spuckte.</German>
 		<Polish>Ten wulkan od dawien dawna nie wybuchał. Jedynie stare legendy wspominają o tym, że kiedyś buchał płomieniami i lawą.</Polish>
 		<Russian>Этот вулкан ни разу не извергался на памяти современников, и лишь в старых преданиях говорят об его прошлых извержениях.</Russian>
 	</TEXT>
@@ -13047,7 +13049,7 @@
 		<English>Build new camouflaged main base area, move all research projects there and then open up the old base as tourist attraction. Make some fake radioactive alien items and let the public "see" that we have nothing to hide.</English>
 		<French>Construisez une nouvelle base secrète dans une autre zone et déplacez tous les projets à-bas. Ensuite, ouvrez l'ancienne base comme atraction touristique. Fabriquez quelques objets radioactifs 'aliens' et montrez ainsi au public que nous n'avons rien à cacher.</French>
 		<German>Erbaut eine neue getarnte Hauptbasis, bringt alle Forschungsprojekte dorthin und eröffnet die alte Basis als Touristenattraktion. Baut ein paar gefälschte radioaktive Alien-Geräte lasst die Öffentlichkeit "sehen", dass wir nichts zu verbergen haben.</German>
-		<Italian>Costruisci una nuova base nascosta, quindi sposta tutti i progetti di ricerca lì e apri la vecchia base come attrazione turistica. Costruisci alcuni artifatti alieni radioattivi e fai in modo che il pubblico "veda" che non abbiamo niente da nascondere.</Italian>
+		<Italian>Costruisci una nuova base nascosta, quindi sposta tutti i progetti di ricerca lì e apri la vecchia base come attrazione turistica. Costruisci alcuni artefatti alieni radioattivi e fai in modo che il pubblico "veda" che non abbiamo niente da nascondere.</Italian>
 		<Spanish>Construid una nueva base principal camuflada, trasladad allí todos los proyectos de investigación y, posteriormente, abrid al público la antigua base como atracción turística. Colocad algunos "artefactos radiactivos alienígenas" de pega y dejad que el público "vea" que no tenemos nada que ocultar.</Spanish>
 		<Polish>Zbudować nową ukrytą bazę i przenieść tam wszystkie projekty badawcze, a następnie udostępnić starą bazę jako atrakcję turystyczną. Stworzyć w niej kilka fałszywych radioaktywnych artefaktów obcych i pokazać ludziom, że nie mamy niczego do ukrycia.</Polish>
 		<Russian>Постройте новую замаскированную основную базу, перенесите туда все исследовательские проекты, а затем откройте старую базу как туристическую достопримечательность. Изотовьте несколько поддельных радиоактивных инопланетных артефактов и дайте общественности их «увидеть», якобы нам нечего скрывать.</Russian>
@@ -13218,6 +13220,7 @@
 		<Tag>TXT_KEY_EVENT_VOLCANO_SLEEP</Tag>
 		<English>This volcano has quieted down.</English>
 		<French>L'activité de ce volcan semble se calmer.</French>
+		<German>Dieser Vulkan ist in eine längere Ruhephase eingetreten.</German>
 		<Polish>Wulkan ucichł.</Polish>
 		<Russian>Этот вулкан успокоился.</Russian>
 	</TEXT>
@@ -13225,6 +13228,7 @@
 		<Tag>TXT_KEY_EVENT_VOLCANO_SLEEP_HELP</Tag>
 		<English>The active volcano becomes dormant.</English>
 		<French>Le Volcan semble être en sommeil.</French>
+		<German>Aus dem aktiven wird ein schlafender Vulkan.</German>		
 		<Polish>Aktywny wulkan przechodzi w stan uśpienia.</Polish>
 		<Russian>Активный вулкан становится бездействующим.</Russian>
 	</TEXT>

@@ -1,9 +1,9 @@
 // unitAI.cpp
 
+#include "CvGameCoreDLL.h"
 
 #include "FProfiler.h"
 
-#include "CvGameCoreDLL.h"
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
 #include "CvBonusInfo.h"
@@ -13,6 +13,8 @@
 #include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvImprovementInfo.h"
+#include "CvHeritageInfo.h"
+#include "CvUnitCombatInfo.h"
 #include "CvInfos.h"
 #include "CvMap.h"
 #include "CvPathGenerator.h"
@@ -105,6 +107,7 @@ CvUnitAI& CvUnitAI::operator=(const CvUnitAI& other)
 	m_contractsLastEstablishedTurn = other.m_contractsLastEstablishedTurn;
 	m_contractualState = other.m_contractualState;
 	m_eIntendedConstructBuilding = other.m_eIntendedConstructBuilding;
+	m_eIntendedHeritage = other.m_eIntendedHeritage;
 	m_iPredictedHitPoints = other.m_iPredictedHitPoints;
 	m_bHasAttacked = other.m_bHasAttacked;
 	m_bWaitingOnUnitAIAny = other.m_bWaitingOnUnitAIAny;
@@ -154,6 +157,7 @@ void CvUnitAI::AI_reset(UnitAITypes eUnitAI, bool bConstructorCall)
 	m_contractualState = CONTRACTUAL_STATE_NONE;
 
 	m_eIntendedConstructBuilding = NO_BUILDING;
+	m_eIntendedHeritage = NO_HERITAGE;
 
 	m_iPredictedHitPoints = -1;
 	m_bHasAttacked = false;
@@ -179,7 +183,10 @@ bool CvUnitAI::AI_update()
 {
 	PROFILE_FUNC();
 
-	logBBAI("AI_Update for unit %d of owner %d\n", m_iID, m_eOwner);
+	if (gUnitLogLevel > 0)
+	{
+		logBBAI("AI_Update for unit %d of owner %d\n", m_iID, m_eOwner);
+	}
 
 #ifdef _DEBUG
 	getGroup()->validateLocations(true);
@@ -714,7 +721,8 @@ void CvUnitAI::AI_killed()
 			logBBAI("	Mission plot was (%d,%d)", pMissionPlot->getX(), pMissionPlot->getY());
 		}
 	}
-
+	logContractBroker(1, "%S's %S (%d) died, removing contract", GET_PLAYER(getOwner()).getCivilizationDescription(0), getName(0).GetCString(), m_iID);
+	contractFulfilled();
 	//	Increment the general danger count for this plot's vicinity
 	if (getGroup()->AI_getMissionAIType() != MISSIONAI_DELIBERATE_KILL)
 	{
@@ -1133,25 +1141,25 @@ int CvUnitAI::AI_attackOddsAtPlotInternal(const CvPlot* pPlot, CvUnit* pDefender
 		return 1;
 	}
 
-//#if 0
-//	const int iStrengthFactor = (iOurFirepower + iTheirFirepower + 1) / 2;
-//
-//	//TB Combat Mods Begin
-//	const int iUnmodifiedDefenderArmor = pDefender->armorTotal() - punctureTotal();
-//	const int iUnmodifiedAttackerArmor = armorTotal() - pDefender->punctureTotal();
-//
-//	const int iModifiedDefenderArmorZero = iUnmodifiedDefenderArmor < 0 ? 0 : iUnmodifiedDefenderArmor;
-//	const int iModifiedAttackerArmorZero = iUnmodifiedAttackerArmor < 0 ? 0 : iUnmodifiedAttackerArmor;
-//
-//	const int iModifiedDefenderArmor = (iModifiedDefenderArmorZero < 95 ? iModifiedDefenderArmorZero : 95);
-//	const int iModifiedAttackerArmor = (iModifiedAttackerArmorZero < 95 ? iModifiedAttackerArmorZero : 95);
-//
-//	const int iDefenderArmor = (100 - iModifiedDefenderArmor);
-//	const int iAttackerArmor = (100 - iModifiedAttackerArmor);
-//
-//	iDamageToUs = std::max(1, ((((GC.getCOMBAT_DAMAGE() * (iTheirFirepower + iStrengthFactor)) / (iOurFirepower + iStrengthFactor)) * iAttackerArmor) / 100));
-//	iDamageToThem = std::max(1, ((((GC.getCOMBAT_DAMAGE() * (iOurFirepower + iStrengthFactor)) / (iTheirFirepower + iStrengthFactor)) * iDefenderArmor) / 100));
-//#endif
+	//#if 0
+	//	const int iStrengthFactor = (iOurFirepower + iTheirFirepower + 1) / 2;
+	//
+	//	//TB Combat Mods Begin
+	//	const int iUnmodifiedDefenderArmor = pDefender->armorTotal() - punctureTotal();
+	//	const int iUnmodifiedAttackerArmor = armorTotal() - pDefender->punctureTotal();
+	//
+	//	const int iModifiedDefenderArmorZero = iUnmodifiedDefenderArmor < 0 ? 0 : iUnmodifiedDefenderArmor;
+	//	const int iModifiedAttackerArmorZero = iUnmodifiedAttackerArmor < 0 ? 0 : iUnmodifiedAttackerArmor;
+	//
+	//	const int iModifiedDefenderArmor = (iModifiedDefenderArmorZero < 95 ? iModifiedDefenderArmorZero : 95);
+	//	const int iModifiedAttackerArmor = (iModifiedAttackerArmorZero < 95 ? iModifiedAttackerArmorZero : 95);
+	//
+	//	const int iDefenderArmor = (100 - iModifiedDefenderArmor);
+	//	const int iAttackerArmor = (100 - iModifiedAttackerArmor);
+	//
+	//	iDamageToUs = std::max(1, ((((GC.getCOMBAT_DAMAGE() * (iTheirFirepower + iStrengthFactor)) / (iOurFirepower + iStrengthFactor)) * iAttackerArmor) / 100));
+	//	iDamageToThem = std::max(1, ((((GC.getCOMBAT_DAMAGE() * (iOurFirepower + iStrengthFactor)) / (iTheirFirepower + iStrengthFactor)) * iDefenderArmor) / 100));
+	//#endif
 
 	if (getDomainType() != DOMAIN_AIR)
 	{
@@ -1202,22 +1210,22 @@ int CvUnitAI::AI_attackOddsAtPlotInternal(const CvPlot* pPlot, CvUnit* pDefender
 	int iNeededRoundsUs = (std::max(0, pDefender->getHP() - iHitLimitThem) + iDamageToThem - 1) / iDamageToThem;
 	int iNeededRoundsThem = (std::max(0, getHP()) + iDamageToUs - 1) / iDamageToUs;
 
-//#if 0
-//	if (getDomainType() != DOMAIN_AIR)
-//	{
-//		// From Mongoose SDK
-//		if (!pDefender->immuneToFirstStrikes())
-//		{
-//			iNeededRoundsUs -= ((iBaseOdds * firstStrikes()) + ((iBaseOdds * chanceFirstStrikes()) / 2)) / 100;
-//		}
-//		if (!immuneToFirstStrikes())
-//		{
-//			iNeededRoundsThem -= (((100 - iBaseOdds) * pDefender->firstStrikes()) + (((100 - iBaseOdds) * pDefender->chanceFirstStrikes()) / 2)) / 100;
-//		}
-//		iNeededRoundsUs = std::max(1, iNeededRoundsUs);
-//		iNeededRoundsThem = std::max(1, iNeededRoundsThem);
-//	}
-//#endif
+	//#if 0
+	//	if (getDomainType() != DOMAIN_AIR)
+	//	{
+	//		// From Mongoose SDK
+	//		if (!pDefender->immuneToFirstStrikes())
+	//		{
+	//			iNeededRoundsUs -= ((iBaseOdds * firstStrikes()) + ((iBaseOdds * chanceFirstStrikes()) / 2)) / 100;
+	//		}
+	//		if (!immuneToFirstStrikes())
+	//		{
+	//			iNeededRoundsThem -= (((100 - iBaseOdds) * pDefender->firstStrikes()) + (((100 - iBaseOdds) * pDefender->chanceFirstStrikes()) / 2)) / 100;
+	//		}
+	//		iNeededRoundsUs = std::max(1, iNeededRoundsUs);
+	//		iNeededRoundsThem = std::max(1, iNeededRoundsThem);
+	//	}
+	//#endif
 
 	const int iRoundsDiff = iNeededRoundsUs - iNeededRoundsThem;
 
@@ -2136,7 +2144,7 @@ void CvUnitAI::AI_workerMove()
 	}
 
 	// TODO: move out of workermove and into new unitai called UNITAI_MISSIONUNIT ?
-	if (AI_construct(MAX_INT, MAX_INT, 0, true))
+	if (AI_heritage() || AI_construct(MAX_INT, MAX_INT, 0, true))
 	{
 		OutputDebugString(CvString::format("%S (%d) chooses to head off to construct\n", getDescription().c_str(), m_iID).c_str());
 		return;
@@ -3150,9 +3158,7 @@ void CvUnitAI::AI_attackCityMove()
 
 			if (gUnitLogLevel > 2)
 			{
-				CvWString szString;
-				getUnitAIString(szString, AI_getUnitAIType());
-				logBBAI("	%S's %S at (%d,%d) requests initial city-capture-capable attacker for attack stack at priority %d", GET_PLAYER(getOwner()).getCivilizationDescription(0), getName(0).GetCString(), getX(), getY(), HIGH_PRIORITY_ESCORT_PRIORITY + 1);
+				logContractBroker(1, "	%S's %S at (%d,%d) requests initial city-capture-capable attacker for attack stack at priority %d", GET_PLAYER(getOwner()).getCivilizationDescription(0), getName(0).GetCString(), getX(), getY(), HIGH_PRIORITY_ESCORT_PRIORITY + 1);
 			}
 		}
 	}
@@ -5506,7 +5512,7 @@ void CvUnitAI::AI_prophetMove()
 		return;
 	}
 
-	if (AI_construct(3))
+	if (AI_heritage() || AI_construct())
 	{
 		return;
 	}
@@ -5584,7 +5590,7 @@ void CvUnitAI::AI_artistMove()
 		return;
 	}
 
-	if (AI_construct())
+	if (AI_heritage() || AI_construct())
 	{
 		return;
 	}
@@ -5672,24 +5678,19 @@ void CvUnitAI::AI_scientistMove()
 		return;
 	}
 
-	if (AI_construct(MAX_INT, 1))
+	if (AI_heritage() || AI_construct(MAX_INT, 1))
 	{
 		return;
 	}
-	if (GET_PLAYER(getOwner()).getCurrentEra() < 3)
+
+	if (AI_join(2))
 	{
-		if (AI_join(2))
-		{
-			return;
-		}
+		return;
 	}
 
-	if (GET_PLAYER(getOwner()).getCurrentEra() <= (GC.getNumEraInfos() / 2))
+	if (AI_construct())
 	{
-		if (AI_construct())
-		{
-			return;
-		}
+		return;
 	}
 
 	int iGoldenAgeValue = (GET_PLAYER(getOwner()).AI_calculateGoldenAgeValue() / (GET_PLAYER(getOwner()).unitsRequiredForGoldenAge()));
@@ -6011,7 +6012,7 @@ void CvUnitAI::AI_generalMove()
 		}
 	}
 
-	if (AI_join(2))
+	if (AI_heritage() || AI_join(2))
 	{
 		return;
 	}
@@ -6120,16 +6121,12 @@ void CvUnitAI::AI_greatHunterMove()
 		return;
 	}
 
-	if (AI_join(2))
+	if (AI_heritage() || AI_construct(2))
 	{
 		return;
 	}
 
-	if (AI_construct(2))
-	{
-		return;
-	}
-	if (AI_join(4))
+	if (AI_join(2))
 	{
 		return;
 	}
@@ -6204,17 +6201,7 @@ void CvUnitAI::AI_greatAdmiralMove()
 		}
 	}
 
-	if (AI_construct(1))
-	{
-		return;
-	}
-
-	if (AI_construct(2))
-	{
-		return;
-	}
-
-	if (AI_construct())
+	if (AI_heritage() || AI_construct())
 	{
 		return;
 	}
@@ -6251,7 +6238,7 @@ void CvUnitAI::AI_merchantMove()
 		return;
 	}
 
-	if (AI_construct())
+	if (AI_heritage() || AI_construct())
 	{
 		return;
 	}
@@ -6355,9 +6342,9 @@ void CvUnitAI::AI_subduedAnimalMove()
 		// Try to move to a nearby hunter unit if one is available to group with it
 		if (AI_groupMergeRange(UNITAI_HUNTER, 1, false, true, true)
 		// Try to move to a nearby hunter escort unit if one is available to group with it
-		||  AI_groupMergeRange(UNITAI_HUNTER_ESCORT, 1, false, true, true)
+		|| AI_groupMergeRange(UNITAI_HUNTER_ESCORT, 1, false, true, true)
 		// Try to move to a nearby explorer unit if one is available to group with it
-		||  AI_groupMergeRange(UNITAI_EXPLORE, 1, false, true, true))
+		|| AI_groupMergeRange(UNITAI_EXPLORE, 1, false, true, true))
 		{
 			return;
 		}
@@ -6403,7 +6390,7 @@ void CvUnitAI::AI_subduedAnimalMove()
 		return;
 	}
 
-	if (AI_construct(MAX_INT, MAX_INT, 0, false, true))
+	if (AI_heritage() || AI_construct(MAX_INT, MAX_INT, 0, false, true))
 	{
 		OutputDebugString(CvString::format("%S (%d) chooses to head off to construct\n", getDescription().c_str(), m_iID).c_str());
 		return;
@@ -6468,7 +6455,7 @@ void CvUnitAI::AI_engineerMove()
 		return;
 	}
 
-	if (AI_construct())
+	if (AI_heritage() || AI_construct())
 	{
 		OutputDebugString(CvString::format("%S (%d) chooses to head off to construct\n", getDescription().c_str(), m_iID).c_str());
 		return;
@@ -10496,7 +10483,7 @@ void CvUnitAI::AI_propertyControlMove()
 		return;
 	}
 
-	if (AI_construct())
+	if (AI_heritage() || AI_construct())
 	{
 		return;
 	}
@@ -11843,17 +11830,17 @@ bool CvUnitAI::AI_guardCity(bool bLeave, bool bSearch, int iMaxPath)
 				{
 					iExtra -= iPlotDanger2;
 				}
-//#if 0
-//				//	If THIS unit is not a city type, then count non-city types generally when evaluating defense
-//				//	or else any number of them will still keep them all locked up thinking more defense is needed
-//				if (!AI_isCityAIType())
-//				{
-//					int iPlotAllStrength = plot()->plotStrength(UNITVALUE_FLAGS_DEFENSIVE, PUF_canDefend, -1, -1, getOwner(), NO_TEAM, NULL, -1, -1, 2);
-//					int iPlotCityAIStrength = plot()->plotStrength(UNITVALUE_FLAGS_DEFENSIVE, PUF_canDefend, -1, -1, getOwner(), NO_TEAM, PUF_isCityAIType, -1, -1, 2);
-//
-//					iExtra += (iPlotAllStrength - iPlotCityAIStrength);
-//				}
-//#endif
+				//#if 0
+				//				//	If THIS unit is not a city type, then count non-city types generally when evaluating defense
+				//				//	or else any number of them will still keep them all locked up thinking more defense is needed
+				//				if (!AI_isCityAIType())
+				//				{
+				//					int iPlotAllStrength = plot()->plotStrength(UNITVALUE_FLAGS_DEFENSIVE, PUF_canDefend, -1, -1, getOwner(), NO_TEAM, NULL, -1, -1, 2);
+				//					int iPlotCityAIStrength = plot()->plotStrength(UNITVALUE_FLAGS_DEFENSIVE, PUF_canDefend, -1, -1, getOwner(), NO_TEAM, PUF_isCityAIType, -1, -1, 2);
+				//
+				//					iExtra += (iPlotAllStrength - iPlotCityAIStrength);
+				//				}
+				//#endif
 				bool bDefend = false;
 
 				//	Never remove the last unit
@@ -14186,36 +14173,31 @@ bool CvUnitAI::AI_moveToOurTerritory(int maxMoves)
 //	this rouine determines whether a switch to doing so is appropriate, and if so performs it.
 bool CvUnitAI::checkSwitchToConstruct()
 {
-	// Don't bail on a city for which we are the only defender
-	if (m_pUnitInfo->getNumBuildings() < 1 || plot()->getPlotCity() != NULL && plot()->getNumDefenders(getOwner()) == 1)
+	if (m_pUnitInfo->getNumBuildings() < 1 && m_pUnitInfo->getNumHeritage() < 1
+	// Don't bail on a poorly defended city.
+	|| !plot()->getPlotCity() && plot()->getNumDefenders(getOwner()) < 2)
 	{
 		return false;
 	}
-	CvPlot* pBestConstructPlot;
-	CvPlot* pBestPlot;
-	CvUnitAI* eBestTargetingUnit;
-	BuildingTypes eBestBuilding;
+	const CvPlayerAI& player = GET_PLAYER(getOwner());
 
-	// What are the relative values of the possible constructed buildings vs our military value.
-	const int iMilitaryValue = GET_PLAYER(getOwner()).AI_unitValue(m_eUnitType, AI_getUnitAIType(), area());
-
-	if (getBestConstructValue(MAX_INT, MAX_INT, 0, 0, true, pBestConstructPlot, pBestPlot, eBestTargetingUnit, eBestBuilding) > iMilitaryValue)
-	{
-		// If we are grouped must ungroup before enacting this
-		if (getGroup()->getNumUnits() > 1)
-		{
-			joinGroup(NULL);
-		}
-		return enactConstruct(pBestConstructPlot, pBestPlot, eBestTargetingUnit, eBestBuilding);
-	}
-	// If this is a bit out-dated as a military unit consider joining a city as a specialist
-	UnitTypes eBestUnit = GET_PLAYER(getOwner()).bestBuildableUnitForAIType(getDomainType(), AI_getUnitAIType());
+	// If this is a bit out-dated as a military unit consider constructive retirement.
 	CvCity* pCapitalCity = GET_PLAYER(getOwner()).getCapitalCity();
 
-	if (eBestUnit != NO_UNIT && pCapitalCity != NULL
-	&& GET_PLAYER(getOwner()).AI_unitValue(eBestUnit, AI_getUnitAIType(), pCapitalCity->area()) > iMilitaryValue * 3/2)
+	if (pCapitalCity)
 	{
-		return AI_join();
+		const UnitTypes eBestUnit = GET_PLAYER(getOwner()).bestBuildableUnitForAIType(getDomainType(), AI_getUnitAIType());
+		if (eBestUnit != NO_UNIT)
+		{
+			const int iMilitaryValue = GET_PLAYER(getOwner()).AI_unitValue(m_eUnitType, AI_getUnitAIType(), area());
+			if (GET_PLAYER(getOwner()).AI_unitValue(eBestUnit, AI_getUnitAIType(), pCapitalCity->area()) > iMilitaryValue * 3 / 2)
+			{
+				if (AI_heritage() || AI_construct() || AI_join())
+				{
+					return true;
+				}
+			}
+		}
 	}
 	return false;
 }
@@ -14280,8 +14262,7 @@ namespace {
 		CityConstructMap constructions;
 		foreach_(const CvSelectionGroup * pLoopSelectionGroup, player.groups())
 		{
-			if (pLoopSelectionGroup != ignoreGroup
-				&& pLoopSelectionGroup->AI_getMissionAIType() == MISSIONAI_CONSTRUCT)
+			if (pLoopSelectionGroup != ignoreGroup && pLoopSelectionGroup->AI_getMissionAIType() == MISSIONAI_CONSTRUCT)
 			{
 				CvUnitAI* targetingUnit = (CvUnitAI*)pLoopSelectionGroup->getHeadUnit();
 
@@ -14322,23 +14303,6 @@ int CvUnitAI::getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, 
 	eBestBuilding = NO_BUILDING;
 
 	int iBestValue = 0;
-	//	If we already have a chosen construction targeted then start with a presumption
-	//	we'll stick to it unless something significantly better is found
-	if (m_eIntendedConstructBuilding != NO_BUILDING && getGroup()->AI_getMissionAIType() == MISSIONAI_CONSTRUCT)
-	{
-		CvCity* city = getGroup()->AI_getMissionAIPlot()->getPlotCity();
-
-		if (city != nullptr
-			&& canConstruct(city->plot(), m_eIntendedConstructBuilding)
-			&& generatePath(city->plot(), MOVE_NO_ENEMY_TERRITORY, true)
-			)
-		{
-			iBestValue = (city->AI_buildingValue(m_eIntendedConstructBuilding) * 110) / 100;
-			pBestPlot = getPathEndTurnPlot();
-			pBestConstructPlot = city->plot();
-			eBestBuilding = m_eIntendedConstructBuilding;
-		}
-	}
 
 	typedef stdext::hash_map<BuildingTypes, int> PossibleBuildingsMap;
 	PossibleBuildingsMap possibleBuildings;
@@ -14396,7 +14360,7 @@ int CvUnitAI::getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, 
 			// AI_cityConstructionTargeted(pLoopCity, buildingType, getGroup());
 
 			const bool betterThanCurrentUnit =
-				targetingUnit == nullptr ||
+				!targetingUnit ||
 				(
 					targetingUnit->plot()->getOwner() != getOwner()
 					&& plot()->getOwner() == getOwner()
@@ -14488,6 +14452,201 @@ bool CvUnitAI::AI_construct(int iMaxCount, int iMaxSingleBuildingCount, int iThr
 			logBBAI("	%S at (%d,%d) going to construct %S at (%d,%d)", getName(0).GetCString(), getX(), getY(), GC.getBuildingInfo(eBestBuilding).getDescription(), pBestConstructPlot->getX(), pBestConstructPlot->getY());
 		}
 		return enactConstruct(pBestConstructPlot, pBestPlot, eBestTargetingUnit, eBestBuilding);
+	}
+	return false;
+}
+
+
+namespace {
+	// Helper class for recording what heritages are already planned by units
+	struct CityHeritage
+	{
+		CityHeritage(CvPlot* plot, HeritageTypes eType) : plot(plot), eType(eType) {}
+
+		CvPlot* plot;
+		HeritageTypes eType;
+
+		operator size_t() const
+		{
+			return Cv::hash_combine(reinterpret_cast<size_t>(plot), static_cast<size_t>(eType));
+		}
+
+		bool operator==(const CityHeritage& other) const
+		{
+			return plot == other.plot && eType == other.eType;
+		}
+	};
+	typedef stdext::hash_map<CityHeritage, CvUnitAI*> CityHeritageMap;
+
+	// Get a map of buildings that units are planning on constructing (so we can ignore them when giving new construct orders)
+	CityHeritageMap getHeritageMissionMap(const CvPlayer& player, const CvSelectionGroup* ignoreGroup)
+	{
+		CityHeritageMap heritageMap;
+		foreach_(const CvSelectionGroup * groupX, player.groups())
+		{
+			if (groupX != ignoreGroup && groupX->AI_getMissionAIType() == MISSIONAI_CONSTRUCT)
+			{
+				CvUnitAI* targetingUnit = (CvUnitAI*)groupX->getHeadUnit();
+
+				// Have to handle the case of a group with no units.  This can occur after a force group
+				//	split due to things like revocation of open borders that forces units to be unceremoniously
+				//	moved to another plot (and ungroups them in doing so since it is possible that only a subset
+				//	of a group has to move)
+				if (targetingUnit)
+				{
+					heritageMap[CityHeritage(groupX->AI_getMissionAIPlot(), targetingUnit->getIntendedHeritage())] = targetingUnit;
+				}
+			}
+		}
+		return heritageMap;
+	}
+}
+
+int CvUnitAI::getBestHeritageValue(CvPlot*& pBestConstructPlot, CvPlot*& pBestPlot, CvUnitAI*& pTargetingUnit, HeritageTypes& eBest)
+{
+	PROFILE_FUNC();
+
+	// Set outputs to default values
+	pBestConstructPlot = nullptr;
+	pBestPlot = nullptr;
+	pTargetingUnit = nullptr;
+	eBest = NO_HERITAGE;
+
+	typedef stdext::hash_map<HeritageTypes, int> PossibleHeritageMap;
+	PossibleHeritageMap possibleHeritage;
+
+	const CvPlayerAI& player = GET_PLAYER(getOwner());
+	// Determine the list of building types we could make, based on what already exists
+	for (int iI = 0; iI < m_pUnitInfo->getNumHeritage(); iI++)
+	{
+		const HeritageTypes eTypeX = static_cast<HeritageTypes>(m_pUnitInfo->getHeritage(iI));
+		if (player.canAddHeritage(eTypeX))
+		{
+			possibleHeritage[eTypeX] = 0;
+		}
+	}
+
+	if (possibleHeritage.size() == 0)
+	{
+		return 0;
+	}
+	int iBestValue = 0;
+
+	const CityHeritageMap heritageMap = getHeritageMissionMap(player, getGroup());
+	const CvReachablePlotSet plotSet(getGroup(), MOVE_NO_ENEMY_TERRITORY, MAX_INT);
+
+	int iBestWeightedValue = 0;
+
+	foreach_(CvCity * cityX, player.cities())
+	{
+		if (plotSet.find(cityX->plot()) == plotSet.end())
+			continue;
+
+		for (PossibleHeritageMap::iterator itr = possibleHeritage.begin(); itr != possibleHeritage.end(); ++itr)
+		{
+			const HeritageTypes eTypeX = itr->first;
+
+			// Check some other unit hasn't already got this city targeted to construct this building
+			CityHeritageMap::const_iterator foundUnit = heritageMap.find(CityHeritage(cityX->plot(), eTypeX));
+			CvUnitAI* targetingUnit = foundUnit == heritageMap.end() ? NULL : foundUnit->second;
+
+			const bool bBetterThanCurrentUnit = (
+					!targetingUnit
+				||	!targetingUnit->generatePath(cityX->plot(), MOVE_NO_ENEMY_TERRITORY, true)
+				||	targetingUnit->plot()->getOwner() != getOwner()
+				&&	plot()->getOwner() == getOwner()
+			);
+
+			// If we're a better choice due to being already inside our own territory
+			// TODO:	How about we just use straight line distance instead?
+			//			Although it would probably be rare for targetingUnit to not be null so this check we be
+			//			done infrequently.
+			if (bBetterThanCurrentUnit && canAddHeritage(cityX->plot(), eTypeX))
+			{
+				PROFILE("CvUnitAI::getBestConstructValue.Pathing");
+
+				int iPathTurns;
+				if (generatePath(cityX->plot(), MOVE_NO_ENEMY_TERRITORY, true, &iPathTurns))
+				{
+					//	When evaluating whether a hero unit should instead go and produce a building
+					//	we want to avoid expensive calculations for every city, when in practise the kinds
+					//	of things heroes can build have global effects and thus basically the same value
+					//	everywhere that they have any value (note that this is a heuristic assumption that is true CURRENTLY,
+					//	but may need to be revisited)
+					//	Koshling - also extended this to subdued animals for performance reasons - generally for all cities
+					//	and animal buiding CAN be built in this will be a good approximation
+					int iValue = 0;
+					if (itr->second > 0)
+					{
+						iValue = itr->second;
+					}
+					else
+					{
+						iValue = player.AI_heritageValue(eTypeX);
+
+						itr->second = iValue;
+					}
+
+					// Weight by ease of reaching and population slightly in the case of same-everywhere asserted builds
+					const int iWeightedValue = iValue * 10 / (4 + iPathTurns);
+
+					if (iWeightedValue > iBestWeightedValue)
+					{
+						iBestValue = iValue;
+						iBestWeightedValue = iWeightedValue;
+						pBestPlot = getPathEndTurnPlot();
+						pBestConstructPlot = cityX->plot();
+						eBest = eTypeX;
+						pTargetingUnit = targetingUnit;
+					}
+				}
+			}
+		}
+	}
+	return iBestValue;
+}
+
+// Returns true if a mission was pushed...
+bool CvUnitAI::AI_heritage()
+{
+	PROFILE_FUNC();
+
+	if (m_pUnitInfo->getNumHeritage() < 1)
+	{
+		return false;
+	}
+	CvPlot* pBestPlot;
+	CvPlot* pBestConstructPlot;
+	CvUnitAI* pTargetingUnit;
+	HeritageTypes eBest;
+
+	if (getBestHeritageValue(pBestConstructPlot, pBestPlot, pTargetingUnit, eBest) > 0)
+	{
+		if (!pBestPlot || !pBestConstructPlot || eBest == NO_HERITAGE)
+		{
+			return false;
+		}
+
+		if (gUnitLogLevel >= 2)
+		{
+			logBBAI("	%S at (%d,%d) going to establish %S at (%d,%d)", getName(0).GetCString(), getX(), getY(), GC.getHeritageInfo(eBest).getDescription(), pBestConstructPlot->getX(), pBestConstructPlot->getY());
+		}
+
+		if (atPlot(pBestConstructPlot))
+		{
+			getGroup()->pushMission(MISSION_HERITAGE, eBest);
+			return true;
+		}
+		FAssert(!atPlot(pBestPlot));
+
+		//	Take over responsibility from any overridden targeting unit
+		if (pTargetingUnit)
+		{
+			pTargetingUnit->m_eIntendedHeritage = NO_HERITAGE;
+		}
+		m_eIntendedHeritage = eBest;
+
+		return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_NO_ENEMY_TERRITORY | MOVE_WITH_CAUTION | MOVE_AVOID_ENEMY_UNITS, false, false, MISSIONAI_CONSTRUCT, pBestConstructPlot);
 	}
 	return false;
 }
@@ -15012,7 +15171,7 @@ namespace {
 					bind(scoreInquisitionTarget, unit, _1),
 					// final validation is that we can actually path to the city
 					bind(canSafePathToCity, unit, _1)
-					)
+				)
 			);
 		return bestCityScore.found ? bestCityScore.result.item : nullptr;
 	}
@@ -17574,79 +17733,79 @@ bool CvUnitAI::AI_bombardCity()
 
 	return false;
 
-//#if 0
-//	CvCity* pBombardCity;
-//
-//	if (canBombard(plot()))
-//	{
-//		pBombardCity = bombardTarget(plot());
-//		FAssertMsg(pBombardCity != NULL, "BombardCity is not assigned a valid value");
-//
-//		// do not bombard cities with no defenders
-//		int iDefenderStrength = pBombardCity->plot()->AI_sumStrength(NO_PLAYER, getOwner(), DOMAIN_LAND, /*bDefensiveBonuses*/ true, /*bTestAtWar*/ true, false);
-//		if (iDefenderStrength == 0)
-//		{
-//			return false;
-//		}
-//
-//		// do not bombard cities if we have overwelming odds
-//		int iAttackOdds = getGroup()->AI_attackOdds(pBombardCity->plot(), /*bPotentialEnemy*/ true);
-//		if ((iAttackOdds > 95))
-//		{
-//			return false;
-//		}
-//
-//		// If we have reasonable odds, check for attacking without waiting for bombards
-//		if ((iAttackOdds >= getBBAI_SKIP_BOMBARD_BEST_ATTACK_ODDS())
-//		{
-//			int iBase = GC.getBBAI_SKIP_BOMBARD_BASE_STACK_RATIO();
-//				int iComparison = getGroup()->AI_compareStacks(pBombardCity->plot(), /*bPotentialEnemy*/ true, /*bCheckCanAttack*/ true, /*bCheckCanMove*/ true);
-//
-//				// Big troop advantage plus pretty good starting odds, don't wait to allow reinforcements
-//				if (iComparison > (iBase - 4 * iAttackOdds))
-//				{
-//					if (gUnitLogLevel > 2) logBBAI("	  Stack skipping bombard of %S with compare %d and starting odds %d", pBombardCity->getName().GetCString(), iComparison, iAttackOdds);
-//						return false;
-//				}
-//
-//			int iMin = GC.getBBAI_SKIP_BOMBARD_MIN_STACK_RATIO();
-//			bool bHasWaited = algo::any_of(getGroup()->units(), CvUnit::fn::getFortifyTurns() > 0)
-//
-//				// Bombard at least one turn to allow bombers/ships to get some shots in too
-//				if (bHasWaited && (pBombardCity->getDefenseDamage() > 0))
-//				{
-//					int iBombardTurns = getGroup()->getBombardTurns(pBombardCity);
-//					if (iComparison > std::max(iMin, iBase - 3 * iAttackOdds - 3 * iBombardTurns))
-//					{
-//						if (gUnitLogLevel > 2) logBBAI("	  Stack skipping bombard of %S with compare %d, starting odds %d, and bombard turns %d", pBombardCity->getName().GetCString(), iComparison, iAttackOdds, iBombardTurns);
-//						return false;
-//					}
-//				}
-//		}
-//
-//		//getGroup()->pushMission(MISSION_PILLAGE);
-//		getGroup()->pushMission(MISSION_BOMBARD);
-//		return true;
-//		/************************************************************************************************/
-//		/* REVOLUTIONDCM							05/24/08								Glider1	 */
-//		/*																							  */
-//		/*																							  */
-//		/************************************************************************************************/
-//				// RevolutionDCM - ranged bombard AI wraps standard bombard
-//		if (!AI_RbombardCity(pBombardCity))
-//		{
-//			// vanilla behaviour
-//			getGroup()->pushMission(MISSION_BOMBARD);
-//			return true;
-//		}
-//		// RevolutionDCM - end
-///************************************************************************************************/
-///* REVOLUTIONDCM							END									 Glider1	 */
-///************************************************************************************************/
-//	}
-//
-//	return false;
-//#endif
+	//#if 0
+	//	CvCity* pBombardCity;
+	//
+	//	if (canBombard(plot()))
+	//	{
+	//		pBombardCity = bombardTarget(plot());
+	//		FAssertMsg(pBombardCity != NULL, "BombardCity is not assigned a valid value");
+	//
+	//		// do not bombard cities with no defenders
+	//		int iDefenderStrength = pBombardCity->plot()->AI_sumStrength(NO_PLAYER, getOwner(), DOMAIN_LAND, /*bDefensiveBonuses*/ true, /*bTestAtWar*/ true, false);
+	//		if (iDefenderStrength == 0)
+	//		{
+	//			return false;
+	//		}
+	//
+	//		// do not bombard cities if we have overwelming odds
+	//		int iAttackOdds = getGroup()->AI_attackOdds(pBombardCity->plot(), /*bPotentialEnemy*/ true);
+	//		if ((iAttackOdds > 95))
+	//		{
+	//			return false;
+	//		}
+	//
+	//		// If we have reasonable odds, check for attacking without waiting for bombards
+	//		if ((iAttackOdds >= getBBAI_SKIP_BOMBARD_BEST_ATTACK_ODDS())
+	//		{
+	//			int iBase = GC.getBBAI_SKIP_BOMBARD_BASE_STACK_RATIO();
+	//				int iComparison = getGroup()->AI_compareStacks(pBombardCity->plot(), /*bPotentialEnemy*/ true, /*bCheckCanAttack*/ true, /*bCheckCanMove*/ true);
+	//
+	//				// Big troop advantage plus pretty good starting odds, don't wait to allow reinforcements
+	//				if (iComparison > (iBase - 4 * iAttackOdds))
+	//				{
+	//					if (gUnitLogLevel > 2) logBBAI("	  Stack skipping bombard of %S with compare %d and starting odds %d", pBombardCity->getName().GetCString(), iComparison, iAttackOdds);
+	//						return false;
+	//				}
+	//
+	//			int iMin = GC.getBBAI_SKIP_BOMBARD_MIN_STACK_RATIO();
+	//			bool bHasWaited = algo::any_of(getGroup()->units(), CvUnit::fn::getFortifyTurns() > 0)
+	//
+	//				// Bombard at least one turn to allow bombers/ships to get some shots in too
+	//				if (bHasWaited && (pBombardCity->getDefenseDamage() > 0))
+	//				{
+	//					int iBombardTurns = getGroup()->getBombardTurns(pBombardCity);
+	//					if (iComparison > std::max(iMin, iBase - 3 * iAttackOdds - 3 * iBombardTurns))
+	//					{
+	//						if (gUnitLogLevel > 2) logBBAI("	  Stack skipping bombard of %S with compare %d, starting odds %d, and bombard turns %d", pBombardCity->getName().GetCString(), iComparison, iAttackOdds, iBombardTurns);
+	//						return false;
+	//					}
+	//				}
+	//		}
+	//
+	//		//getGroup()->pushMission(MISSION_PILLAGE);
+	//		getGroup()->pushMission(MISSION_BOMBARD);
+	//		return true;
+	//		/************************************************************************************************/
+	//		/* REVOLUTIONDCM							05/24/08								Glider1	 */
+	//		/*																							  */
+	//		/*																							  */
+	//		/************************************************************************************************/
+	//				// RevolutionDCM - ranged bombard AI wraps standard bombard
+	//		if (!AI_RbombardCity(pBombardCity))
+	//		{
+	//			// vanilla behaviour
+	//			getGroup()->pushMission(MISSION_BOMBARD);
+	//			return true;
+	//		}
+	//		// RevolutionDCM - end
+	///************************************************************************************************/
+	///* REVOLUTIONDCM							END									 Glider1	 */
+	///************************************************************************************************/
+	//	}
+	//
+	//	return false;
+	//#endif
 }
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD					   END												  */
@@ -18173,10 +18332,10 @@ bool CvUnitAI::AI_pirateBlockade()
 			foreach_(CvUnit * unitX, plotX->units())
 			{
 				if (isEnemy(unitX->getTeam(), unitX->plot(), unitX)
-				&&  unitX->getDomainType() == DOMAIN_SEA
+				&& unitX->getDomainType() == DOMAIN_SEA
 				&& !unitX->isInvisible(getTeam(), false)
-				&&  unitX->canAttack()
-				&&  unitX->currEffectiveStr(NULL, NULL, NULL) > currEffectiveStr(plotX, unitX, NULL))
+				&& unitX->canAttack()
+				&& unitX->currEffectiveStr(NULL, NULL, NULL) > currEffectiveStr(plotX, unitX, NULL))
 				{
 					//Fuyu: No (rail)roads on water, always movement cost 1. Rounding up of course
 					iBestHostileMoves = std::max(iBestHostileMoves, (unitX->getMoves() + GC.getMOVE_DENOMINATOR() - 1) / GC.getMOVE_DENOMINATOR());
@@ -21576,7 +21735,7 @@ bool CvUnitAI::processContracts(int iMinPriority)
 		m_contractualState = CONTRACTUAL_STATE_AWAITING_WORK;
 		if (gUnitLogLevel >= 3)
 		{
-			logBBAI("	Unit %S (%d) for player %d (%S) at (%d,%d) advertising for work\n",
+			logContractBroker(1, "	Unit %S (%d) for player %d (%S) at (%d,%d) advertising for work",
 					getUnitInfo().getDescription(),
 					getID(),
 					getOwner(),
@@ -21594,7 +21753,7 @@ bool CvUnitAI::processContracts(int iMinPriority)
 		// Work found
 		if (gUnitLogLevel >= 3)
 		{
-			logBBAI("	Unit %S (%d) for player %d (%S) at (%d,%d) found work at (%d,%d) [to join %d]\n",
+			logContractBroker(1, "	Unit %S (%d) for player %d (%S) at (%d,%d) found work at (%d,%d) [to join %d]\n",
 					getUnitInfo().getDescription(),
 					getID(),
 					getOwner(),
@@ -21659,7 +21818,7 @@ bool CvUnitAI::processContracts(int iMinPriority)
 			{
 				if (gUnitLogLevel >= 3)
 				{
-					logBBAI("	...already at target plot - merging into requesting unit's group.");
+					logContractBroker(1, "	...already at target plot - merging into requesting unit's group.");
 				}
 				getGroup()->setTransportUnit(NULL);
 				pJoinUnit->getGroup()->setTransportUnit(NULL);
@@ -21672,7 +21831,7 @@ bool CvUnitAI::processContracts(int iMinPriority)
 			{
 				if (gUnitLogLevel >= 3)
 				{
-					logBBAI("	...already at target plot.");
+					logContractBroker(1, "	...already at target plot.");
 				}
 				contractFulfilled();
 				getGroup()->pushMission(MISSION_SKIP);
@@ -21684,7 +21843,7 @@ bool CvUnitAI::processContracts(int iMinPriority)
 			{
 				if (gUnitLogLevel >= 3)
 				{
-					logBBAI("	...unexpectedly unable to enact the work!");
+					logContractBroker(1, "	...unexpectedly unable to enact the work!");
 				}
 				//	Handle as if we found no work this turn since we cannot safely path to it
 				m_contractualState = CONTRACTUAL_STATE_NO_WORK_FOUND;
@@ -21992,10 +22151,10 @@ bool CvUnitAI::AI_connectBonus(bool bTestTrade)
 		&& plotX->getNonObsoleteBonusType(eTeam) != NO_BONUS
 		&& !plotX->isConnectedToCapital()
 		&& (
-				!bTestTrade
-			||	plotX->getImprovementType() != NO_IMPROVEMENT
-			&&	GC.getImprovementInfo(plotX->getImprovementType()).isImprovementBonusTrade(plotX->getNonObsoleteBonusType(eTeam))
-		)
+			!bTestTrade
+			|| plotX->getImprovementType() != NO_IMPROVEMENT
+			&& GC.getImprovementInfo(plotX->getImprovementType()).isImprovementBonusTrade(plotX->getNonObsoleteBonusType(eTeam))
+			)
 		&& AI_connectPlot(plotX))
 		{
 			return true;
@@ -22363,7 +22522,7 @@ bool CvUnitAI::AI_retreatToCity(bool bPrimary, bool bAirlift, int iMaxPath)
 							iLoopDanger < iCurrentDanger
 							&& //Fuyu: try to avoid doomed cities
 							iLoopDanger < 2 * (cityX->plot()->getNumDefenders(getOwner()))
-						)
+							)
 					);
 				}
 				if (bCheck)
@@ -26911,7 +27070,7 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 		{
 			if (gUnitLogLevel >= 3 && m_contractualState == CONTRACTUAL_STATE_FOUND_WORK)
 			{
-				logBBAI("	Hunter for player %d (%S) at (%d,%d) found contractual work",
+				logContractBroker(1, "	Hunter for player %d (%S) at (%d,%d) found contractual work",
 					getOwner(),
 					GET_PLAYER(getOwner()).getCivilizationDescription(0),
 					getX(),
@@ -26921,7 +27080,7 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 		}
 		if (gUnitLogLevel >= 3)
 		{
-			logBBAI("	Hunter for player %d (%S) at (%d,%d) found no urgent contractual work",
+			logContractBroker(1, "	Hunter for player %d (%S) at (%d,%d) found no urgent contractual work",
 				getOwner(),
 				GET_PLAYER(getOwner()).getCivilizationDescription(0),
 				getX(),
@@ -29234,27 +29393,23 @@ bool CvUnitAI::AI_activateStatus(bool bStack, PromotionTypes eStatus, CvUnit* pU
 	{
 		return false;
 	}
-	int iStatus = (int)eStatus;
 	//function to turn on or off status on whole group or just unit
-	if (bStack)
+	if (!bStack)
 	{
-		if (getGroup()->canDoCommand(COMMAND_STATUS, iStatus, 0, false, false, true))
-		{
-			getGroup()->doCommand(COMMAND_STATUS, iStatus, 0);
-			return true;
-		}
-	}
-	else
-	{
-		if (pUnit == NULL)
+		if (!pUnit)
 		{
 			return false;
 		}
-		if (pUnit->canDoCommand(COMMAND_STATUS, iStatus, 0))
+		if (pUnit->canDoCommand(COMMAND_STATUS, eStatus, 0))
 		{
-			pUnit->doCommand(COMMAND_STATUS, iStatus, 0);
+			pUnit->doCommand(COMMAND_STATUS, eStatus, 0);
 			return true;
 		}
+	}
+	else if (getGroup()->canDoCommand(COMMAND_STATUS, eStatus, 0, false, false, true))
+	{
+		getGroup()->doCommand(COMMAND_STATUS, eStatus, 0);
+		return true;
 	}
 	return false;
 }
@@ -29264,12 +29419,12 @@ bool CvUnitAI::AI_selectStatus(bool bStack, CvUnit* pUnit)
 	PROFILE_EXTRA_FUNC();
 	if (bStack)
 	{
-		if (getGroup() == NULL)
+		if (!getGroup())
 		{
 			return false;
 		}
 	}
-	else if (pUnit == NULL)
+	else if (!pUnit)
 	{
 		return false;
 	}
@@ -29287,17 +29442,16 @@ bool CvUnitAI::AI_selectStatus(bool bStack, CvUnit* pUnit)
 	for (int iI = 0; iI < iNumStatusPromotions; iI++)
 	{
 		int iValue = 0;
-		const int iStatus = GC.getStatusPromotion(iI);
-		const PromotionTypes eStatus = (PromotionTypes)iStatus;
+		const PromotionTypes eStatus = GC.getStatusPromotion(iI);
 		const CvPromotionInfo& kPromotion = GC.getPromotionInfo(eStatus);
 		PromotionTypes eRemoveStatus = NO_PROMOTION;
 
 		for (int iJ = 0; iJ < iNumStatusPromotions; iJ++)
 		{
-			if (kPromotion.getPromotionLine() == GC.getPromotionInfo((PromotionTypes)GC.getStatusPromotion(iJ)).getPromotionLine()
-			&& GC.getPromotionInfo((PromotionTypes)GC.getStatusPromotion(iJ)).getLinePriority() == 1)
+			if (kPromotion.getPromotionLine() == GC.getPromotionInfo(GC.getStatusPromotion(iJ)).getPromotionLine()
+			&& GC.getPromotionInfo(GC.getStatusPromotion(iJ)).getLinePriority() == 1)
 			{
-				eRemoveStatus = (PromotionTypes)GC.getStatusPromotion(iJ);
+				eRemoveStatus = GC.getStatusPromotion(iJ);
 				break;
 			}
 		}
@@ -29305,7 +29459,7 @@ bool CvUnitAI::AI_selectStatus(bool bStack, CvUnit* pUnit)
 		{
 			if (bStack)
 			{
-				if (getGroup()->canDoCommand(COMMAND_STATUS, iStatus, 0, false, false, true) || isHasPromotion(eStatus))
+				if (getGroup()->canDoCommand(COMMAND_STATUS, eStatus, 0, false, false, true) || isHasPromotion(eStatus))
 				{
 					//Keep things as thin as possible here - program in as new statuses are introduced
 					//Stay the Hand
@@ -29496,7 +29650,7 @@ bool CvUnitAI::AI_selectStatus(bool bStack, CvUnit* pUnit)
 			}
 			else
 			{
-				if (pUnit->canDoCommand(COMMAND_STATUS, iStatus, 0) || pUnit->isHasPromotion(eStatus))
+				if (pUnit->canDoCommand(COMMAND_STATUS, eStatus, 0) || pUnit->isHasPromotion(eStatus))
 				{
 					//conditions to add to ivalue and subtract from iValue
 

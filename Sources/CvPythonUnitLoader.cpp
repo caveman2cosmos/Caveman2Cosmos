@@ -1,19 +1,13 @@
 #include "CvGameCoreDLL.h"
-#include "CyArea.h"
-#include "CyCity.h"
-#include "CyPlot.h"
-#include "CySelectionGroup.h"
-#include "CyUnit.h"
+#include "CvPythonUnitLoader.h"
+#include <boost/python/manage_new_object.hpp>
 
-//
-// published python interface for CyUnit
-//
 
-void CyUnitPythonInterface1(python::class_<CyUnit>& x)
+void CvPythonUnitLoader::CyUnitPythonInterface1(boost::python::class_<CyUnit>& inst)
 {
 	OutputDebugString("Python Extension Module - CyUnitPythonInterface1\n");
 
-	x
+	inst
 		.def("convert", &CyUnit::convert, "void (CyUnit* pUnit, bool bKillOriginal)")
 		.def("kill", &CyUnit::kill, "void (bool bDelay, int /*PlayerTypes*/ ePlayer)")
 		.def("NotifyEntity", &CyUnit::NotifyEntity, "void (int EntityEventType)")
@@ -95,15 +89,15 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 		.def("getID", &CyUnit::getID, "int ()")
 
 		.def("getGroupID", &CyUnit::getGroupID, "int ()")
-		.def("getGroup", &CyUnit::getGroup, python::return_value_policy<python::manage_new_object>(), "CySelectionGroup* ()")
+		.def("getGroup", &CyUnit::getGroup, boost::python::return_value_policy<boost::python::manage_new_object>(), "CySelectionGroup* ()")
 
 		.def("getHotKeyNumber", &CyUnit::getHotKeyNumber, "int () - returns the HotKey number for this unit")
 
 		.def("getX", &CyUnit::getX, "int ()")
 		.def("getY", &CyUnit::getY, "int ()")
 		.def("setXY", &CyUnit::setXY, "int (int iX, int iY)")
-		.def("plot", &CyUnit::plot, python::return_value_policy<python::manage_new_object>(), "CyPlot* ()")
-		.def("area", &CyUnit::area, python::return_value_policy<python::manage_new_object>(), "CyArea* ()")
+		.def("plot", &CyUnit::plot, boost::python::return_value_policy<boost::python::manage_new_object>(), "CyPlot* ()")
+		.def("area", &CyUnit::area, boost::python::return_value_policy<boost::python::manage_new_object>(), "CyArea* ()")
 
 		.def("getDamage", &CyUnit::getDamage, "int ()")
 		.def("setDamage", &CyUnit::setDamage, "void (int iNewValue, int /*PlayerTypes*/ ePlayer)")
@@ -148,7 +142,7 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 		.def("getLeaderUnitType", &CyUnit::getLeaderUnitType, "int ()")
 		.def("setLeaderUnitType", &CyUnit::setLeaderUnitType, "void (int iNewValue)")
 
-		.def("getTransportUnit", &CyUnit::getTransportUnit, python::return_value_policy<python::manage_new_object>(), "CyUnit* ()")
+		.def("getTransportUnit", &CyUnit::getTransportUnit, boost::python::return_value_policy<boost::python::manage_new_object>(), "CyUnit* ()")
 		.def("isCargo", &CyUnit::isCargo, "bool ()")
 		.def("setTransportUnit", &CyUnit::setTransportUnit, "void (CyUnit* pTransportUnit)")
 

@@ -8425,38 +8425,16 @@
 			<TechTypes>
 				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			</TechTypes>
-			<ConstructCondition>
-				<And>
-					<Or>
-						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_DANCE_HUT</ID>
-						</Has>
-						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_DANCE_HALL</ID>
-						</Has>
-						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_NIGHT_CLUB</ID>
-						</Has>
-					</Or>
-					<Or>
-						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_ARCTIC_FOX</ID>
-						</Has>
-						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_FENNEC_FOX</ID>
-						</Has>
-						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_RED_FOX</ID>
-						</Has>
-					</Or>
-				</And>
-			</ConstructCondition>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_FOX_ARCTIC</Type>
+				<Type>HERITAGE_FOLKLORE_FOX_FENNEC</Type>
+				<Type>HERITAGE_FOLKLORE_FOX_RED</Type>
+			</PrereqOrHeritage>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_DANCE_HUT</BuildingType>
+				<BuildingType>BUILDING_DANCE_HALL</BuildingType>
+				<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
+			</PrereqOrBuildings>
 			<iCost>60</iCost>
 			<ObsoleteTech>TECH_MIND_UPLOADING</ObsoleteTech>
 			<iAsset>1</iAsset>

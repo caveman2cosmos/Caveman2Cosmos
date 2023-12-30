@@ -113,7 +113,7 @@
 		<English>Cete of %s1</English>
 		<French>cete de %s1</French>
 		<German>Verband %s1:5 (Sippe)</German>
-		<Italian>cete di %s1</Italian>
+		<Italian>gruppo di %s1</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_CLUSTER</Tag>
@@ -190,14 +190,14 @@
 		<English>Congregation of %s1</English>
 		<French>congrégation de %s1</French>
 		<German>Verband %s1:5 (Ansammlung)</German>
-		<Italian>congregazione di di %s1</Italian>
+		<Italian>congregazione di %s1</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_CONSPIRACY</Tag>
 		<English>Conspiracy of %s1</English>
 		<French>conspiration de %s1</French>
 		<German>Verband %s1:5 (Gruppe)</German>
-		<Italian>conspirazione di %s1</Italian>
+		<Italian>cospirazione di %s1</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_COUPLE</Tag>
@@ -239,7 +239,7 @@
 		<English>Family of %s1</English>
 		<French>famille de %s1</French>
 		<German>Verband %s1:5 (Familie)</German>
-		<Italian>familia di %s1</Italian>
+		<Italian>famiglia di %s1</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_FLAMBOYANCE</Tag>
@@ -370,6 +370,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Verband %s1:5 (Horde)</German>
+		<Italian>grande orda di %s1</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_HORDE_LARGE</Tag>
@@ -801,7 +802,7 @@
 		<Tag>TXT_KEY_GROUPTITLE_TOM</Tag>
 		<English>Tom %s1</English>
 		<German>Einzelexemplar %s1</German>
-		<Italian>tom %s1</Italian>
+		<Italian>esemplare di %s1</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_TRAIN</Tag>

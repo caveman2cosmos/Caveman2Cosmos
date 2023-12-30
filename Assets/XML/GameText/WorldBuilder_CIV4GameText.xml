@@ -3,25 +3,26 @@
 	<TEXT>
 		<Tag>TXT_KEY_REVEAL_PLOT</Tag>
 		<English>Reveal Plot</English>
-		<Russian>Ïîêàçàòü ó÷àñòîê</Russian>
+		<Russian>Показать участок</Russian>
 		<Italian>Rivela casella</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVEAL_STEALTH</Tag>
 		<English>Reveal Stealth</English>
-		<Russian>Ïîêàçàòü ñêðûòîå</Russian>
+		<Russian>Показать скрытое</Russian>
 		<Italian>Rivela stealth</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REVEAL_SUBMARINE</Tag>
 		<English>Reveal Submarine</English>
-		<Russian>Ïîêàçàòü ñóáìàðèíû</Russian>
+		<Russian>Показать субмарины</Russian>
 		<Italian>Rivela sottomarino</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_ACTIVITY</Tag>
 		<English>Activity</English>
 		<Italian>Attività</Italian>
+		<Russian>Активность</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_ADD_NEW_PLAYER</Tag>
@@ -30,36 +31,36 @@
 		<Italian>Aggiungi nuovo giocatore</Italian>
 		<Spanish>Añadir nuevo jugador</Spanish>
 		<Polish>Dodaj Nowego Gracza</Polish>
-		<Russian>Äîáàâèòü íîâîãî èãðîêà</Russian>
+		<Russian>Добавить нового игрока</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_ADD_UNITS</Tag>
 		<English>Add Units</English>
-		<Russian>Äîáàâèòü þíèòîâ ïî êàòåãîðèÿì</Russian>
+		<Russian>Добавить подразделение</Russian>
 		<Italian>Aggiungi unità</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_ALL_PLAYERS</Tag>
 		<English>All players</English>
-		<Russian>Âñå èãðîêè</Russian>
+		<Russian>Все игроки</Russian>
 		<Italian>Tutti i giocatori</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_ALL_PLOTS</Tag>
 		<English>All plots</English>
-		<Russian>Âñå ó÷àñòêè</Russian>
+		<Russian>Все участки</Russian>
 		<Italian>Tutte le caselle</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_ALL_TECHS</Tag>
 		<English>All techs</English>
-		<Russian>Âñå òåõíîëîãèè</Russian>
+		<Russian>Все технологии</Russian>
 		<Italian>Tutte le tecnologie</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_ANARCHY</Tag>
 		<English>Anarchy: %d1</English>
-		<Russian>Àíàðõèÿ: %d1</Russian>
+		<Russian>Анархия: %d1</Russian>
 		<Italian>Lunghezza dell'anarchia: %d1</Italian>
 	</TEXT>
 	<TEXT>
@@ -77,13 +78,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_WB_ATTITUDE</Tag>
 		<English>Attitude</English>
-		<Russian>Îòíîøåíèå</Russian>
+		<Russian>Отношение</Russian>
 		<Italian>Attitudine</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_BASE_RATE</Tag>
 		<English>Base Rate: %d1</English>
-		<Russian>Осн. коэффициент: %d1</Russian>
+		<Russian>Основной коэффициент: %d1</Russian>
 		<Italian>Tasso base: %d1</Italian>
 	</TEXT>
 	<TEXT>
@@ -95,13 +96,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_WB_BRIDGE_BUILDING</Tag>
 		<English>Bridge Building</English>
-		<Russian>Ñòðîèòåëüñòâî ìîñòîâ</Russian>
+		<Russian>Строительство мостов</Russian>
 		<Italian>Costruzione di ponti</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_CIRCUMNAVIGATED_GLOBE</Tag>
 		<English>Circumnavigated globe: team </English>
 		<Italian>Globo circumnavigato: squadra </Italian>
+		<Russian>Совершили кругосветное путешествие: команда </Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_CITY_DATA2</Tag>
@@ -112,7 +114,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_WB_COASTAL_TRADE</Tag>
 		<English>Coastal [ICON_TRADE]: %d1</English>
-		<Russian>Ïðèáðåæíàÿ [ICON_TRADE]: %d1</Russian>
+		<Russian>Прибрежная [ICON_TRADE]: %d1</Russian>
 		<Italian>Commercio costiero [ICON_TRADE]: %d1</Italian>
 	</TEXT>
 	<TEXT>
@@ -124,80 +126,81 @@
 	<TEXT>
 		<Tag>TXT_KEY_WB_COPY_ALL</Tag>
 		<English>Apply to All %s1</English>
-		<Russian>Ïðèìåíèòü äëÿ âñåõ ãîðîäîâ</Russian>
+		<Russian>Применить для всех %s1</Russian>
 		<Italian>Applica a tutti %s1</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_COUNTER_ESPIONAGE</Tag>
 		<English>Counter Espionage</English>
 		<German>Spionageabwehr</German>
-		<Russian>Ñ÷åò÷èê øïèîíàæà</Russian>
+		<Russian>Счетчик шпионажа</Russian>
 		<Italian>Controspionaggio</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_CVASSAL</Tag>
 		<English>Capitulated</English>
-		<Russian>Êàïèòóëèðîâàâøèé</Russian>
+		<Russian>Капитулировавший</Russian>
 		<Italian>Capitolato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_DAMAGE</Tag>
 		<English>Damage</English>
-		<Russian>Ïîâðåæäåíèå: %d1%%</Russian>
+		<Russian>Урон</Russian>
 		<Italian>Danno</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_DEFENSE</Tag>
 		<English>Defense: %d1[ICON_DEFENSE]</English>
-		<Russian>Çàùèòà: %d1[ICON_DEFENSE]</Russian>
+		<Russian>Защита: %d1[ICON_DEFENSE]</Russian>
 		<Italian>Difesa: %d1[ICON_DEFENSE]</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_DEFY_RESOLUTION</Tag>
 		<English>Defy Resolution [ICON_UNHAPPY]: %d1</English>
-		<Russian>Èãíîðèðîâàíèå ðåçîëþöèé [ICON_UNHAPPY]: %d1</Russian>
+		<Russian>Игнорирование резолюций [ICON_UNHAPPY]: %d1</Russian>
 		<Italian>Contesta la risoluzione [ICON_UNHAPPY]: %d1</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_DIRECTION</Tag>
 		<English>Direction</English>
-		<Russian>Íàïðàâëåíèå</Russian>
+		<Russian>Направление</Russian>
 		<Italian>Direzione</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_DONE</Tag>
 		<English>Done</English>
-		<Russian>Ãîòîâî</Russian>
+		<Russian>Готово</Russian>
 		<Italian>Completato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_DUPLICATE_CITY</Tag>
 		<English>Duplicate City</English>
-		<Russian>Êëîíèðîâàòü ãîðîä</Russian>
+		<Russian>Скопировать город</Russian>
 		<Italian>Duplica città</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_ENEMY_WAR_WEARINESS</Tag>
 		<English>Enemy War Weariness: %d1</English>
-		<Russian>Óñòàëîñòü îò âîéíû âðàãà: %d1</Russian>
+		<Russian>Вражеская усталость от войны: %d1</Russian>
 		<Italian>Stanchezza di guerra nemica: %d1</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_ERASE_ALL_PLOTS</Tag>
 		<English>Erase all plots</English>
-		<Russian>Очищение всех клеток</Russian>
+		<Russian>Очистить все клетки</Russian>
 		<Italian>Cancella tutte le caselle</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_ESTIMATED_END_TURN</Tag>
 		<English>[COLOR_LIGHT_GREY]Estimated End Turn: %s[COLOR_REVERT]</English>
-		<Russian>[COLOR_LIGHT_GREY]Расчет конца хода: %s[COLOR_REVERT]</Russian>
+		<Russian>[COLOR_LIGHT_GREY]Ожидаемый конец хода: %s[COLOR_REVERT]</Russian>
 		<Italian>[COLOR_LIGHT_GREY]Fine turno stimata: %s[COLOR_REVERT]</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_EVER</Tag>
 		<English>Ever</English>
 		<Italian>Sempre</Italian>
+		<Russian>Всегда</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_EXTRA_WATER_SIGHT</Tag>
@@ -206,20 +209,20 @@
 		<Italian>Raggio di visibilità sull'acqua aumentato</Italian>
 		<Spanish>Visibilidad adicional sobre el agua</Spanish>
 		<Polish>Dodatkowe Oznaczenia na Wodzie</Polish>
-		<Russian>Äîïîëíèòåëüíûé âèä âîäû </Russian>
+		<Russian>Увеличенный радиус видимости на воде</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_FEATURE_VARIETY</Tag>
 		<English>Variety: %d1</English>
 		<French>Variété: %d1</French>
 		<Polish>Dodatek: %d1</Polish>
-		<Russian>Âèä: %d1</Russian>
+		<Russian>Разновидность: %d1</Russian>
 		<Italian>Varietà: %d1</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_FORTIFY</Tag>
 		<English>Fortifying</English>
-		<Russian>Óêðåïëåíèå</Russian>
+		<Russian>Укрепление</Russian>
 		<Italian>In fortificazione</Italian>
 	</TEXT>
 	<TEXT>
@@ -229,12 +232,12 @@
 		<Italian>Specialisti gratuiti</Italian>
 		<Spanish>Especialistas gratis</Spanish>
 		<Polish>Darmowi Specjaliści</Polish>
-		<Russian>Áåñïëàòíûå ñïåöèàëèñòû</Russian>
+		<Russian>Бесплатные специалисты</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_GAME_TURN</Tag>
 		<English>Game Turn: </English>
-		<Russian>Õîäîâ èãðû: </Russian>
+		<Russian>Игровой ход: </Russian>
 		<Italian>Turno di gioco: </Italian>
 	</TEXT>
 	<TEXT>
@@ -246,7 +249,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_WB_GOLDEN_AGE_UNITS</Tag>
 		<English>[ICON_GREATPEOPLE] Required: %d1</English>
-		<Russian>[ICON_GREATPEOPLE] Òðåáóåòñÿ: %d1</Russian>
+		<Russian>[ICON_GREATPEOPLE] Требуется: %d1</Russian>
 		<Italian>[ICON_GREATPEOPLE] Richiesti: %d1</Italian>
 	</TEXT>
 	<TEXT>
@@ -256,12 +259,13 @@
 		<Italian>Commercio d'oro</Italian>
 		<Spanish>Comercio con oro</Spanish>
 		<Polish>Handel Złotem</Polish>
-		<Russian>Òîðãîâëÿ çîëîòîì</Russian>
+		<Russian>Торговля золотом</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_GRANT_AVAILABLE</Tag>
 		<English>Grant Available</English>
 		<Italian>Concessione disponibile</Italian>
+		<Russian>Предоставление грантов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_GROUP</Tag>
@@ -275,13 +279,13 @@
 		<French>Eligibilité garantie</French>
 		<Spanish>Elegibilidad garantizada</Spanish>
 		<Polish>Gwarantowane Uprawnienia</Polish>
-		<Russian>Ãàðàíòèðóåìàÿ ïðååìñòâåííîñòü</Russian>
-		<Italian>Eliggibilità garantita</Italian>
+		<Russian>Гарантируемое соответсвие</Russian>
+		<Italian>Eleggibilità garantita</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_HIDDEN</Tag>
 		<English>(Hidden)</English>
-		<Russian>(Ñêðûòûé)</Russian>
+		<Russian>(Скрыто)</Russian>
 		<Italian>(nascosto)</Italian>
 	</TEXT>
 	<TEXT>
@@ -293,7 +297,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_WB_HURRY_ANGER</Tag>
 		<English>Hurry [ICON_UNHAPPY]: %d1</English>
-		<Russian>Óñêîðåíèå [ICON_UNHAPPY]: %d1</Russian>
+		<Russian>Ускорение [ICON_UNHAPPY]: %d1</Russian>
 		<Italian>Velocizza [ICON_UNHAPPY]: %d1</Italian>
 	</TEXT>
 	<TEXT>
@@ -303,7 +307,7 @@
 		<Italian>Ignora l'irrigazione</Italian>
 		<Spanish>Ignora el riego</Spanish>
 		<Polish>Ignoruj Irygacje</Polish>
-		<Russian>Èãíîðèðîâàòü èððèãàöèþ</Russian>
+		<Russian>Игнорировать ирригацию</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_IMMOBILE_TIMER</Tag>
@@ -312,7 +316,7 @@
 		<Italian>Turni di inattività</Italian>
 		<Spanish>Turnos de inactividad</Spanish>
 		<Polish>Czas Demobilizacji</Polish>
-		<Russian>Íåïîäâèæíûé òàéìåð: %d1</Russian>
+		<Russian>Неподвижный таймер</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_KILL</Tag>
@@ -320,13 +324,13 @@
 		<French>Tué</French>
 		<Spanish>Matar</Spanish>
 		<Polish>Zabij</Polish>
-		<Russian>Óáèòü</Russian>
+		<Russian>Убить</Russian>
 		<Italian>Uccidere</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_LANDMARKS</Tag>
 		<English>Landmarks</English>
-		<Russian>Ландшафты</Russian>
+		<Russian>Достопримечательности</Russian>
 		<Italian>Punti di riferimento</Italian>
 	</TEXT>
 	<TEXT>
@@ -334,7 +338,7 @@
 		<English>Latitude: %d1</English>
 		<Spanish>Latitud: %d1</Spanish>
 		<Polish>Szerokość: %d1</Polish>
-		<Russian>Øèðîòà: %d1</Russian>
+		<Russian>Широта: %d1</Russian>
 		<Italian>Latitudine: %d1</Italian>
 	</TEXT>
 	<TEXT>
@@ -344,7 +348,7 @@
 		<Italian>Ha attaccato</Italian>
 		<Spanish>Ha atacado</Spanish>
 		<Polish>Wykonaj Atak</Polish>
-		<Russian>Ñäåëàííàÿ àòàêà</Russian>
+		<Russian>Атаковать</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_MADE_INTERCEPT</Tag>
@@ -353,7 +357,7 @@
 		<Italian>Ha intercettato</Italian>
 		<Spanish>Ha interceptado</Spanish>
 		<Polish>Wykonaj Przechwytywanie</Polish>
-		<Russian>Ñäåëàííûé ïåðåõâàò</Russian>
+		<Russian>Перехватить</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_MAP_CENTERING</Tag>
@@ -362,7 +366,7 @@
 		<Italian>Centrando la mappa</Italian>
 		<Spanish>Centrado del mapa</Spanish>
 		<Polish>Centrowanie Mapy</Polish>
-		<Russian>Öåíòðèðîâàíèå êàðòû</Russian>
+		<Russian>Центрировать карту</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_MAP_TRADING</Tag>
@@ -371,18 +375,18 @@
 		<Italian>Commercio di mappe</Italian>
 		<Spanish>Comercio con mapas</Spanish>
 		<Polish>Handel Mapami</Polish>
-		<Russian>Òîðãîâëÿ êàðòàìè</Russian>
+		<Russian>Обмен картами</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_MAX_CITY_ELIMINATION</Tag>
 		<English>Max City Elimination: </English>
-		<Russian>Макс. уничт. города:</Russian>
+		<Russian>Максимум уничтоженых городов: </Russian>
 		<Italian>Eliminazione massima di città: </Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_MAX_TURNS</Tag>
 		<English>Max Turns: </English>
-		<Russian>Ìàêñ. õîäîâ: </Russian>
+		<Russian>Максимум ходов: </Russian>
 		<Italian>Massimo numero di turni: </Italian>
 	</TEXT>
 	<TEXT>
@@ -398,7 +402,7 @@
 		<Italian>Unisci squadra</Italian>
 		<Spanish>Fusionar equipo</Spanish>
 		<Polish>Połącz Drożynę</Polish>
-		<Russian>Îáúåäåíèòü êîìàíäó</Russian>
+		<Russian>Объеденить команду</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_MODIFIER</Tag>
@@ -410,6 +414,7 @@
 		<Tag>TXT_KEY_WB_MODIFY</Tag>
 		<English>Modify %s1</English>
 		<Italian>Modifica: %s1</Italian>
+		<Russian>Модифицировать %s1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_MOVES</Tag>
@@ -418,12 +423,12 @@
 		<Italian>Movimenti rimanenti</Italian>
 		<Spanish>Movimientos restantes</Spanish>
 		<Polish>Ilość Ruchów</Polish>
-		<Russian>Îñòàëîñü õîäîâ:</Russian>
+		<Russian>Осталось движения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_MOVE_CITY</Tag>
 		<English>Move City</English>
-		<Russian>Перемещение города</Russian>
+		<Russian>Переместить город</Russian>
 		<Italian>Muovi città</Italian>
 	</TEXT>
 	<TEXT>
@@ -435,13 +440,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_WB_NUKES_EXPLODED</Tag>
 		<English>Nukes Exploded: </English>
-		<Russian>Запущено МБР: </Russian>
+		<Russian>Взорвано ядерного оружия: </Russian>
 		<Italian>Bombe atomiche esplose: </Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_NUKE_INTERCEPTION</Tag>
 		<English>Nuke Interception: %d1</English>
-		<Russian>Ïåðåõâàò ÿäåðí. çàðÿäîâ: %d1</Russian>
+		<Russian>Перехват ядерных зарядов: %d1</Russian>
 		<Italian>Bombe atomiche intercettate: %d1</Italian>
 	</TEXT>
 	<TEXT>
@@ -453,7 +458,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_WB_PLOT_DATA</Tag>
 		<English>Plot Data</English>
-		<Russian>Редактор участков</Russian>
+		<Russian>Редактор участка</Russian>
 		<Italian>Dati della casella</Italian>
 	</TEXT>
 	<TEXT>
@@ -469,7 +474,7 @@
 		<Italian>Progresso: %d1</Italian>
 		<Spanish>Progreso: %d1</Spanish>
 		<Polish>Stan: %d1</Polish>
-		<Russian>Ïðîãðåññ: %d1</Russian>
+		<Russian>Прогресс: %d1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_PROMOTION_READY</Tag>
@@ -478,59 +483,62 @@
 		<Italian>Pronto per la promozione</Italian>
 		<Spanish>Preparado para ascender</Spanish>
 		<Polish>Promocja</Polish>
-		<Russian>Ãîòîâîå ïðîäâèæåíèå</Russian>
+		<Russian>Готово к повышению</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_PUSH_MISSION</Tag>
 		<English>Push Mission</English>
-		<Russian>Старт миссии</Russian>
+		<Russian>Начать миссию</Russian>
 		<Italian>Spingi missione</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_PYTHON</Tag>
 		<English>Triggers Python Effects:</English>
 		<Italian>Attiva gli effetti Python:</Italian>
+		<Russian>Триггеры Python Effects:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_RAZE_CITY</Tag>
 		<English>Raze City</English>
-		<Russian>Ðàçðóøèòü ãîðîä</Russian>
+		<Russian>Разрушить город</Russian>
 		<Italian>Radi al suolo città</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_REPEATABLE</Tag>
 		<English>Can use Civilizations and Leaders already in the Game</English>
 		<Italian>Si possono usare civiltà e leader già presenti nel gioco</Italian>
+		<Russian>Можно использовать уже существующие в игре цивилизации и предводителей</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_SCRIPT_DATA</Tag>
 		<English>Script Data</English>
 		<Spanish>Datos de script</Spanish>
 		<Polish>Dane Skryptu</Polish>
-		<Russian>Îðèãèíàëüíûå äàííûå</Russian>
+		<Russian>Данные скриптов</Russian>
 		<Italian>Dati degli script</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_SENSIBILITY</Tag>
 		<English>Use sensible placement rules.</English>
 		<Italian>Usa regole di posizionamento sensate.</Italian>
+		<Russian>Использовать разумные правила размещения.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_SHOW_HIDDEN</Tag>
 		<English>Show Hidden Options</English>
-		<Russian>Ïîêàç ñêðûòûõ íàñòðîåê</Russian>
+		<Russian>Показать скрытые настройки</Russian>
 		<Italian>Mostra opzioni nascoste</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_SINGLE_PLOT</Tag>
 		<English>Single Plot</English>
-		<Russian>Одиноч. участок</Russian>
+		<Russian>Одиночный участок</Russian>
 		<Italian>Casella singola</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_STARTING_PLOT</Tag>
 		<English>Starting Plot</English>
-		<Russian>Ìåñòî ñòàðòà</Russian>
+		<Russian>Стартовый участок</Russian>
 		<Italian>Casella iniziale</Italian>
 	</TEXT>
 	<TEXT>
@@ -539,7 +547,7 @@
 		<French>Année de départ</French>
 		<Spanish>Año de inicio</Spanish>
 		<Polish>Rok Startowy</Polish>
-		<Russian>Íà÷àëüíûé ãîä</Russian>
+		<Russian>Год начала</Russian>
 		<Italian>Anno di inizio</Italian>
 	</TEXT>
 	<TEXT>
@@ -549,18 +557,18 @@
 		<Italian>Religione di stato</Italian>
 		<Spanish>Religión oficial</Spanish>
 		<Polish>Religia Państwowa</Polish>
-		<Russian>Ãîñóäàðñòâåííàÿ ðåëèãèÿ:</Russian>
+		<Russian>Государственная религия</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_STATE_RELIGION_BUILDING</Tag>
 		<English>[ICON_RELIGION] Building [ICON_PRODUCTION]: %d1%%</English>
-		<Russian>[ICON_RELIGION] Çäàíèå [ICON_PRODUCTION]: %d1%%</Russian>
+		<Russian>[ICON_RELIGION] Здание [ICON_PRODUCTION]: %d1%%</Russian>
 		<Italian>[ICON_RELIGION] Edificio [ICON_PRODUCTION]: %d1%%</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_STATE_RELIGION_UNIT</Tag>
 		<English>[ICON_RELIGION] Unit [ICON_PRODUCTION]: %d1%%</English>
-		<Russian>[ICON_RELIGION] Þíèò [ICON_PRODUCTION]: %d1%%</Russian>
+		<Russian>[ICON_RELIGION] Подразделение [ICON_PRODUCTION]: %d1%%</Russian>
 		<Italian>[ICON_RELIGION] unità [ICON_PRODUCTION]: %d1%%</Italian>
 	</TEXT>
 	<TEXT>
@@ -572,8 +580,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_WB_TARGET_SCORE</Tag>
 		<English>Target Score: </English>
-		<Russian>Рейтинг цели: </Russian>
-		<Italian>Pungeggio obiettivo</Italian>
+		<Russian>Целевые очки: </Russian>
+		<Italian>Punteggio obiettivo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_TEAM_DATA</Tag>
@@ -582,7 +590,7 @@
 		<Italian>Dati squadra</Italian>
 		<Spanish>Datos de equipo</Spanish>
 		<Polish>Dane Drużyny</Polish>
-		<Russian>Äàííûå êîìàíäû</Russian>
+		<Russian>Данные команды</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_TECH_TRADING</Tag>
@@ -591,18 +599,18 @@
 		<Italian>Commercio di tecnologie</Italian>
 		<Spanish>Comercio con tecnología</Spanish>
 		<Polish>Handel Technologiami</Polish>
-		<Russian>Òîðãîâëÿ òåõíîëîãèÿìè</Russian>
+		<Russian>Обмен технологиями</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_TEMP_HAPPY</Tag>
 		<English>Temporary [ICON_HAPPY]: %d1</English>
-		<Russian>Âðåìåííîå [ICON_HAPPY]: %d1</Russian>
+		<Russian>Временное [ICON_HAPPY]: %d1</Russian>
 		<Italian>Temporaneamente [ICON_HAPPY]: %d1</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_TRIGGER_EVENT</Tag>
 		<English>Trigger %s1</English>
-		<Russian>Ïåðåêëþ÷èòü %s1</Russian>
+		<Russian>Запустить %s1</Russian>
 		<Italian>Attiva %s1</Italian>
 	</TEXT>
 	<TEXT>
@@ -611,7 +619,7 @@
 		<French>Unités AI</French>
 		<Spanish>IA de unidad</Spanish>
 		<Polish>SI Jednostki</Polish>
-		<Russian>ÈÈ îòðÿäà</Russian>
+		<Russian>ИИ подразделения</Russian>
 		<Italian>Unità IA</Italian>
 	</TEXT>
 	<TEXT>
@@ -621,7 +629,7 @@
 		<Italian>Dati unità</Italian>
 		<Spanish>Datos de unidad</Spanish>
 		<Polish>Dane Jednostki</Polish>
-		<Russian>Äàííûå þíèòà</Russian>
+		<Russian>Данные подразделения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_UPGRADE_PROGRESS</Tag>
@@ -630,7 +638,7 @@
 		<Italian>Turni per l'upgrade: %d1</Italian>
 		<Spanish>Turnos para ampliar: %d1</Spanish>
 		<Polish>Tur do Ulepszenia: %d1</Polish>
-		<Russian>Õîäû ìîäåðíèçàöèè: %d1</Russian>
+		<Russian>Ходов улучшения: %d1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_VASSAL_TRADING</Tag>
@@ -639,12 +647,12 @@
 		<Italian>Abilita gli stati vassalli</Italian>
 		<Spanish>Estados vasallos</Spanish>
 		<Polish>Handel Wasalami</Polish>
-		<Russian>Òîðãîâëÿ âàññàëà</Russian>
+		<Russian>Обмен вассалами</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_WAIT</Tag>
 		<English>Waiting</English>
-		<Russian>Îæèäàíèå</Russian>
+		<Russian>Ожидание</Russian>
 		<Italian>In attesa</Italian>
 	</TEXT>
 	<TEXT>
@@ -654,12 +662,12 @@
 		<Italian>Lavora le caselle d'acqua</Italian>
 		<Spanish>Trabaja casillas de agua</Spanish>
 		<Polish>Robotnicy na Wodzie</Polish>
-		<Russian>Âîäîïðîâîä</Russian>
+		<Russian>Водная работа</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_XLEVEL</Tag>
 		<English>Level</English>
-		<Russian>Óðîâåíü</Russian>
+		<Russian>Уровень</Russian>
 		<Italian>Livello</Italian>
 	</TEXT>
 </Civ4GameText>

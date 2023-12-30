@@ -17,6 +17,7 @@
 #include "CvGlobals.h"
 #include "CvBonusInfo.h"
 #include "CvInfos.h"
+#include "CvUnitCombatInfo.h"
 #include "CvInfoUtil.h"
 #include "CvPlayerAI.h"
 #include "CvPython.h"
@@ -316,7 +317,8 @@ m_bCanAnimalIgnoresBorders(false),
 m_bCanAnimalIgnoresImprovements(false),
 m_bCanAnimalIgnoresCities(false),
 m_bNoNonTypeProdMods(false),
-m_bGatherHerd(false)
+m_bGatherHerd(false),
+m_bCanMergeSplit(true)
 {
 	CvInfoUtil(this).initDataMembers();
 
@@ -1418,6 +1420,23 @@ int CvUnitInfo::getNumBuildings() const
 	return m_pbBuildings.size();
 }
 
+int CvUnitInfo::getHeritage(int i) const
+{
+	FASSERT_BOUNDS(0, GC.getNumHeritageInfos(), i);
+	return m_addHeritage[i];
+}
+
+bool CvUnitInfo::getHasHeritage(int i) const
+{
+	FASSERT_BOUNDS(0, GC.getNumHeritageInfos(), i);
+	return algo::any_of_equal(m_addHeritage, i);
+}
+
+int CvUnitInfo::getNumHeritage() const
+{
+	return m_addHeritage.size();
+}
+
 //
 //bool CvUnitInfo::getTerrainImpassable(int i) const
 //{
@@ -2469,7 +2488,6 @@ bool CvUnitInfo::isGatherHerd() const
 	return m_bGatherHerd;
 }
 
-
 //boolean vectors without delayed resolution
 UnitCombatTypes CvUnitInfo::getSubCombatType(int i) const
 {
@@ -2568,6 +2586,7 @@ bool CvUnitInfo::isTrapImmunityUnitCombatType(int i) const
 	return algo::any_of_equal(m_aiTrapImmunityUnitCombatTypes, i);
 }
 //struct vectors
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 int CvUnitInfo::getNumAfflictionFortitudeModifiers() const
 {
 	return (int)m_aAfflictionFortitudeModifiers.size();
@@ -2589,11 +2608,12 @@ const AfflictOnAttack& CvUnitInfo::getAfflictOnAttackType(int iAfflictionLine) c
 	FASSERT_BOUNDS(0, getNumAfflictOnAttackTypes(), iAfflictionLine);
 	return m_aAfflictOnAttackTypes[iAfflictionLine];
 }
-
+#endif
 int CvUnitInfo::getNumHealUnitCombatTypes() const
 {
 	return (int)m_aHealUnitCombatTypes.size();
 }
+
 
 const HealUnitCombat& CvUnitInfo::getHealUnitCombatType(int iUnitCombat) const
 {
@@ -2700,7 +2720,7 @@ const InvisibleImprovementChanges& CvUnitInfo::getVisibleImprovementRangeChange(
 {
 	return m_aVisibleImprovementRangeChanges[iIndex];
 }
-
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 int CvUnitInfo::getNumDistanceAttackCommunicabilityTypeChanges() const
 {
 	return (int)m_aDistanceAttackCommunicabilityTypeChanges.size();
@@ -2710,6 +2730,7 @@ const AfflictionLineChanges& CvUnitInfo::getDistanceAttackCommunicabilityTypeCha
 {
 	return m_aDistanceAttackCommunicabilityTypeChanges[iIndex];
 }
+#endif
 
 // bool vector utilizing delayed resolution
 int CvUnitInfo::getNumEnabledCivilizationTypes() const
@@ -3688,6 +3709,8 @@ void CvUnitInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumI(iSum, GC.getNumCivicInfos(), m_pbPrereqOrCivics);
 
 	CheckSumC(iSum, m_workerBuilds);
+	CheckSumC(iSum, m_prereqOrHeritage);
+	CheckSumC(iSum, m_prereqAndHeritage);
 	CheckSumC(iSum, m_aiPrereqAndBuildings);
 	CheckSumC(iSum, m_aiPrereqOrBuildings);
 
@@ -3706,7 +3729,10 @@ void CvUnitInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumI(iSum, GC.getNumTerrainInfos(), m_piTerrainPassableTech);
 	CheckSumI(iSum, GC.getNumFeatureInfos(), m_piFeaturePassableTech);
 	CheckSumI(iSum, GC.getNumSpecialistInfos(), m_pbGreatPeoples);
+
 	CheckSumC(iSum, m_pbBuildings);
+	CheckSumC(iSum, m_addHeritage);
+
 	CheckSumI(iSum, GC.getNumTerrainInfos(), m_pbTerrainNative);
 	CheckSumI(iSum, GC.getNumFeatureInfos(), m_pbFeatureNative);
 	//CheckSumI(iSum, GC.getNumTerrainInfos(), m_pbTerrainImpassable);
@@ -3848,6 +3874,7 @@ void CvUnitInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_bTriggerBeforeAttack);
 	CheckSum(iSum, m_bNoNonTypeProdMods);
 	CheckSum(iSum, m_bGatherHerd);
+	CheckSum(iSum, m_bCanMergeSplit);
 	//boolean vectors without delayed resolution
 	CheckSumC(iSum, m_aiSubCombatTypes);
 	CheckSumC(iSum, m_aiCureAfflictionTypes);
@@ -3859,7 +3886,7 @@ void CvUnitInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumC(iSum, m_aiTrapImmunityUnitCombatTypes);
 	// int vectors utilizing struct with delayed resolution
 	int iNumElements;
-
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	iNumElements = m_aAfflictionFortitudeModifiers.size();
 	for (int i = 0; i < iNumElements; ++i)
 	{
@@ -3877,6 +3904,7 @@ void CvUnitInfo::getCheckSum(uint32_t& iSum) const
 		CheckSum(iSum, m_aAfflictOnAttackTypes[i].iImmediate);
 	}
 
+#endif
 	iNumElements = m_aHealUnitCombatTypes.size();
 	for (int i = 0; i < iNumElements; ++i)
 	{
@@ -3963,6 +3991,7 @@ void CvUnitInfo::getCheckSum(uint32_t& iSum) const
 		CheckSum(iSum, m_aVisibleImprovementRangeChanges[i].iIntensity);
 	}
 
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	iNumElements = m_aDistanceAttackCommunicabilityTypeChanges.size();
 	for (int i = 0; i < iNumElements; ++i)
 	{
@@ -3970,6 +3999,7 @@ void CvUnitInfo::getCheckSum(uint32_t& iSum) const
 		CheckSum(iSum, m_aDistanceAttackCommunicabilityTypeChanges[i].iChange);
 	}
 
+#endif
 	iNumElements = m_aEnabledCivilizationTypes.size();
 	for (int i = 0; i < iNumElements; ++i)
 	{
@@ -4146,6 +4176,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->SetVariableListTagPair(&m_pbGreatPeoples, L"GreatPeoples", GC.getNumSpecialistInfos());
 
 	pXML->SetOptionalVector(&m_pbBuildings, L"Buildings");
+	pXML->SetOptionalVector(&m_addHeritage, L"Heritage");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"MaxStartEra");
 	m_iMaxStartEra = pXML->GetInfoClass(szTextVal);
@@ -4184,6 +4215,8 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	m_iPrereqCorporation = pXML->GetInfoClass(szTextVal);
 
 	pXML->SetOptionalVector(&m_workerBuilds, L"Builds");
+	pXML->SetOptionalVector(&m_prereqOrHeritage, L"PrereqOrHeritage");
+	pXML->SetOptionalVector(&m_prereqAndHeritage, L"PrereqAndHeritage");
 	pXML->SetOptionalVector(&m_aiPrereqAndBuildings, L"PrereqAndBuildings");
 	pXML->SetOptionalVector(&m_aiPrereqOrBuildings, L"PrereqOrBuildings");
 
@@ -4529,7 +4562,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->SetOptionalVector(&m_aeMapCategoryTypes, L"MapCategoryTypes");
 	pXML->SetOptionalVector(&m_aiTrapSetWithPromotionTypes, L"TrapSetWithPromotionTypes");
 	pXML->SetOptionalVector(&m_aiTrapImmunityUnitCombatTypes, L"TrapImmunityUnitCombatTypes");
-
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	if(pXML->TryMoveToXmlFirstChild(L"AfflictionFortitudeModifiers"))
 	{
 		int i = 0;
@@ -4551,12 +4584,11 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 		}
 		pXML->MoveToXmlParent();
 	}
-
 	if(pXML->TryMoveToXmlFirstChild(L"AfflictOnAttackTypes"))
 	{
 		int i = 0;
 		const int iNum = pXML->GetXmlChildrenNumber(L"AfflictOnAttackType" );
-		m_aAfflictOnAttackTypes.resize(iNum);
+		//m_aAfflictOnAttackTypes.resize(iNum);
 		if(pXML->TryMoveToXmlFirstChild())
 		{
 			if (pXML->TryMoveToXmlFirstOfSiblings(L"AfflictOnAttackType"))
@@ -4576,7 +4608,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 		}
 		pXML->MoveToXmlParent();
 	}
-
+#endif
 	if(pXML->TryMoveToXmlFirstChild(L"HealUnitCombatTypes"))
 	{
 		int i = 0;
@@ -4838,7 +4870,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 		}
 		pXML->MoveToXmlParent();
 	}
-
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	if(pXML->TryMoveToXmlFirstChild(L"DistanceAttackCommunicabilityTypeChanges"))
 	{
 		int i = 0;
@@ -4860,7 +4892,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 		}
 		pXML->MoveToXmlParent();
 	}
-
+#endif
 	if(pXML->TryMoveToXmlFirstChild(L"EnabledCivilizationTypes"))
 	{
 		int i = 0;
@@ -5091,6 +5123,7 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo)
 	}
 
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_pbBuildings, pClassInfo->m_pbBuildings);
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_addHeritage, pClassInfo->m_addHeritage);
 
 	for ( int i = 0; i < GC.getNumReligionInfos(); i++)
 	{
@@ -5308,6 +5341,8 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo)
 	if ( m_iPrereqCorporation == iTextDefault ) m_iPrereqCorporation = pClassInfo->getPrereqCorporation();
 
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_workerBuilds, pClassInfo->m_workerBuilds);
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_prereqOrHeritage, pClassInfo->m_prereqOrHeritage);
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_prereqAndHeritage, pClassInfo->m_prereqAndHeritage);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiPrereqAndBuildings, pClassInfo->m_aiPrereqAndBuildings);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiPrereqOrBuildings, pClassInfo->m_aiPrereqOrBuildings);
 
@@ -5517,8 +5552,10 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo)
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aeMapCategoryTypes, pClassInfo->getMapCategories());
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiTrapSetWithPromotionTypes, pClassInfo->m_aiTrapSetWithPromotionTypes);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiTrapImmunityUnitCombatTypes, pClassInfo->m_aiTrapImmunityUnitCombatTypes);
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aAfflictionFortitudeModifiers, pClassInfo->m_aAfflictionFortitudeModifiers);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aAfflictOnAttackTypes, pClassInfo->m_aAfflictOnAttackTypes);
+#endif
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aHealUnitCombatTypes, pClassInfo->m_aHealUnitCombatTypes);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aGroupSpawnUnitCombatTypes, pClassInfo->m_aGroupSpawnUnitCombatTypes);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aInvisibleTerrainChanges, pClassInfo->m_aInvisibleTerrainChanges);
@@ -5530,7 +5567,9 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo)
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aVisibleTerrainRangeChanges, pClassInfo->m_aVisibleTerrainRangeChanges);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aVisibleFeatureRangeChanges, pClassInfo->m_aVisibleFeatureRangeChanges);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aVisibleImprovementRangeChanges, pClassInfo->m_aVisibleImprovementRangeChanges);
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aDistanceAttackCommunicabilityTypeChanges, pClassInfo->m_aDistanceAttackCommunicabilityTypeChanges);
+#endif
 
 	if (getNumEnabledCivilizationTypes() == 0)
 	{
@@ -6017,9 +6056,17 @@ void CvUnitInfo::doPostLoadCaching(uint32_t iThis)
 	m_aiHealAsTypes.clear();
 	for (int iI = 0; iI < iNumUnitCombatInfos; iI++)
 	{
-		if ((getUnitCombatType() == iI || isSubCombatType((UnitCombatTypes)iI)) && GC.getUnitCombatInfo((UnitCombatTypes)iI).isHealsAs())
+		if (getUnitCombatType() == iI || isSubCombatType((UnitCombatTypes)iI))
 		{
-			m_aiHealAsTypes.push_back((UnitCombatTypes)iI);
+			if (GC.getUnitCombatInfo((UnitCombatTypes)iI).isHealsAs())
+			{
+				m_aiHealAsTypes.push_back((UnitCombatTypes)iI);
+			}
+
+			if (m_bCanMergeSplit && GC.getUnitCombatInfo((UnitCombatTypes)iI).isCannotMergeSplit())
+			{
+				m_bCanMergeSplit = false;
+			}
 		}
 	}
 	// ! Size Matters

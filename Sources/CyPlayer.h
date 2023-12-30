@@ -7,13 +7,12 @@
 // Python wrapper class for CvPlayer
 //
 
-class CyUnit;
-class CvPlayer;
-class CvProperties;
-class CyCity;
-class CyArea;
-class CyPlot;
-class CySelectionGroup;
+#include "CyUnit.h"
+#include "CyCity.h"
+#include "CyArea.h"
+#include "CySelectionGroup.h"
+#include "CyPlot.h"
+#include "CvPlayer.h"
 
 class CyPlayer
 {
@@ -25,7 +24,6 @@ public:
 
 	void changeLeader(int /*LeaderHeadTypes*/ eNewLeader);
 	void changeCiv(int /*CivilizationTypes*/ eNewCiv);
-	void setIsHuman(bool bNewValue);
 	void setIsRebel(bool bNewValue);
 	bool isRebel() const;
 
@@ -38,8 +36,6 @@ public:
 
 	int startingPlotRange() const;
 	bool startingPlotWithinRange(const CyPlot* pPlot, int /*PlayerTypes*/ ePlayer, int iRange, int iPass);
-
-	CyPlot* findStartingPlot(bool bRandomize) const;
 
 	CyCity* initCity(int x, int y);
 	void acquireCity(CyCity* pCity, bool bConquest, bool bTrade);
@@ -220,6 +216,10 @@ public:
 	int getRevIdxDistanceModifier() const;
 
 	bool canFoundReligion() const;
+
+	bool hasIdleCity() const;
+
+	void setForcedCityCycle(const bool bNewValue);
 
 	int getNumMilitaryUnits() const;
 

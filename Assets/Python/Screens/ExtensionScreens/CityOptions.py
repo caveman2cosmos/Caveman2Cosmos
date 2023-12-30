@@ -88,6 +88,19 @@ class CityOptions:
 		szTxt = aFontList[4] + TRNSLTR.getText("TXT_OPTION_CITY_FULL_CITY_SCREEN_BUILD_PROMPT", ())
 		screen.setTextAt("FullCityScreenBuildPrompt", scrlPnl, szTxt, 1<<0, iSizeCB + 4, y, 0, eFontGame, eWidGen, 1, 2)
 
+		y += ySpace
+		self.yDelayCityCycleToEndOfTurn = y
+		if mainInterface.CityOpt.isDelayCityCycleToEndOfTurn():
+			img = szCheckbox1
+			self.bDelayCityCycleToEndOfTurn = True
+		else:
+			img = szCheckbox0
+			self.bDelayCityCycleToEndOfTurn = False
+
+		screen.setImageButtonAt("DelayCityCycleToEndOfTurn0", scrlPnl, img, 0, y, iSizeCB, iSizeCB, eWidGen, 1, 2)
+		szTxt = aFontList[4] + TRNSLTR.getText("TXT_OPTION_CITY_DELAY_CITY_CYCLE_To_END_OF_TURN", ())
+		screen.setTextAt("DelayCityCycleToEndOfTurn", scrlPnl, szTxt, 1<<0, iSizeCB + 4, y, 0, eFontGame, eWidGen, 1, 2)
+
 		# Exit button at the end.
 		iBtnDx = 32 + xRes / 60
 		screen.setButtonGFC("ExitCO", aFontList[2] + "OK", "", x0 + iMidX - iBtnDx/2, y0 + dy - ySpace - 4, iBtnDx, ySpace, eWidGen, 1, 2, eBtnStd)
@@ -115,6 +128,10 @@ class CityOptions:
 
 			elif NAME == "FullCityScreenBuildPrompt":
 				mainInterface.updateTooltip(screen, self.TRNSLTR.getText("TXT_OPTION_CITY_FULL_CITY_SCREEN_BUILD_PROMPT_HELP", ()))
+
+			elif NAME == "DelayCityCycleToEndOfTurn":
+				mainInterface.updateTooltip(screen, self.TRNSLTR.getText("TXT_OPTION_CITY_DELAY_CITY_CYCLE_To_END_OF_TURN_HELP", ()))
+
 
 		elif not iCode: # click
 			if NAME == "ExitCO":
@@ -152,6 +169,15 @@ class CityOptions:
 					img = self.artPathCheckbox1
 				else: img = self.artPathCheckbox0
 				screen.setImageButtonAt("FullCityScreenBuildPrompt0", "ScrollCO", img, 0, self.yFullCityScreenBuildPrompt, self.iSizeCB, self.iSizeCB, WidgetTypes.WIDGET_GENERAL, 1, 2)
+
+			elif NAME == "DelayCityCycleToEndOfTurn":
+				bNewState = not self.bDelayCityCycleToEndOfTurn
+				self.bDelayCityCycleToEndOfTurn = bNewState
+				mainInterface.CityOpt.setDelayCityCycleToEndOfTurn(bNewState)
+				if bNewState:
+					img = self.artPathCheckbox1
+				else: img = self.artPathCheckbox0
+				screen.setImageButtonAt("DelayCityCycleToEndOfTurn0", "ScrollCO", img, 0, self.yDelayCityCycleToEndOfTurn, self.iSizeCB, self.iSizeCB, WidgetTypes.WIDGET_GENERAL, 1, 2)
 
 		return 1 # Dominant screen, consumes all input.
 

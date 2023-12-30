@@ -4,11 +4,23 @@
 		<Tag>TXT_OPTION_CITY_FULL_CITY_SCREEN_BUILD_PROMPT</Tag>
 		<English>Full city screen on build prompt</English>
 		<Italian>Schermata città per la scelta edificio</Italian>
+		<Russian>Полный экран города при запросе строительства</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_FULL_CITY_SCREEN_BUILD_PROMPT_HELP</Tag>
 		<English>Enter full city screen, rather than just select city, when the player is prompted on what to build next.</English>
 		<Italian>Entra nella schermata della città, invece di selezionare semplicemente la città, quando ti viene chiesto cosa costruire dopo.</Italian>
+		<Russian>Открывать полный экран города, а не только меню выбора, когда игроку предлагается указать, что строить дальше.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_OPTION_CITY_DELAY_CITY_CYCLE_To_END_OF_TURN</Tag>
+		<English>Delay city cycle to end of turn</English>
+		<Russian>Задержать цикл города до конца хода</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_OPTION_CITY_DELAY_CITY_CYCLE_To_END_OF_TURN_HELP</Tag>
+		<English>City cycle process will initiate when you try to end the turn</English>
+		<Russian>Цикл города начнется, когда вы завершите ход</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_HIDE_UNCONSTRUCTABLE_BUILDINGS</Tag>
@@ -17,12 +29,13 @@
 		<German>Nicht bebaubare Gebäude ausblenden</German>
 		<Italian>Nascondi edifici non costruibili</Italian>
 		<Spanish>Ocultar edificios no construibles</Spanish>
-		<Russian>Скрыть не подлежащие возведению здания</Russian>
+		<Russian>Скрыть заблокированные здания</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_HIDE_UNCONSTRUCTABLE_BUILDINGS_HELP</Tag>
 		<English>Hides all buildings that cannot be constructed. This is the default value used when loading a save or starting a new game. Toggling this option won't change the current filter selection for any of your cities.</English>
 		<Italian>Nasconde tutti gli edifici che non possono essere costruiti. Questa è l'impostazione predefinita utilizzata dopo il caricamento di un salvataggio o all'inizio di una nuova partita. L'attivazione di questa opzione non cambierà la selezione del filtro corrente per nessuna delle tue città.</Italian>
+		<Russian>Скрывает все здания, которые нельзя построить. Это значение по умолчанию, используемое после загрузки сохранения или начала новой игры. Переключение данной опции не изменит текущие настройки фильтров ни в одном другом вашем городе.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_HIDE_UNTRAINABLE_UNITS</Tag>
@@ -31,21 +44,24 @@
 		<German>Verstecke nicht trainierbare Einheiten</German>
 		<Italian>Nascondi unità non addestrabili</Italian>
 		<Spanish>Ocultar unidades no entrenables</Spanish>
-		<Russian>Скрыть необучаемые отряды</Russian>
+		<Russian>Скрыть заблокированные подразделения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_HIDE_UNTRAINABLE_UNITS_HELP</Tag>
 		<English>Hides all units that cannot be trained. This is the default value used when loading a save or starting a new game. Toggling this option won't change the current filter selection for any of your cities.</English>
 		<Italian>Nasconde tutte le unità che non possono essere addestrate. Questa è l'impostazione predefinita utilizzata dopo il caricamento di un salvataggio o all'inizio di una nuova partita. L'attivazione di questa opzione non cambierà la selezione del filtro corrente per nessuna delle tue città.</Italian>
+		<Russian>Скрывает все подразделения, которые нельзя обучить. Это значение по умолчанию, используемое после загрузки сохранения или начала новой игры. Переключение данной опции не изменит текущие настройки фильтров ни в одном другом вашем городе.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_ICON_SIZE</Tag>
 		<English>Icon size: %d1 pixels</English>
 		<Italian>Grandezza delle icone: %d1 pixel</Italian>
+		<Russian>Размер иконки: %d1 пикселей</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_ICON_SIZE_HELP</Tag>
 		<English>The size of the main city selection icons, and unit/building icons within the construction tabs.</English>
-		<Italian>Camcia la dimensione delle principali icone nelle schermate delle città e delle icone di unità e edifici nelle schermate di produzione.</Italian>
+		<Italian>Cambia la dimensione delle principali icone nelle schermate delle città e delle icone di unità e edifici nelle schermate di produzione.</Italian>
+		<Russian>Размер основных иконок выбора города и иконок подразделений/зданий на вкладках строительства.</Russian>
 	</TEXT>
 </Civ4GameText>
