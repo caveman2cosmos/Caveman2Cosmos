@@ -456,7 +456,6 @@ def rightMouseDown(argsList):
 
 def mouseOverPlot(argsList):
 
-	print argsList[0]
 	if argsList[0] == STRATEGY_OVERLAY_SCREEN:
 		overlayScreen.onMouseOverPlot()
 
