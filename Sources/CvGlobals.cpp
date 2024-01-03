@@ -2757,15 +2757,15 @@ void cvInternalGlobals::cacheInfoTypes()
 
 void cvInternalGlobals::switchMap(MapTypes eMap)
 {
-	//FASSERT_BOUNDS(0, NUM_MAPS, eMap);
+	FASSERT_BOUNDS(0, NUM_MAPS, eMap);
 
-	//if (eMap != CURRENT_MAP)
-	//{
-	//	getMap().beforeSwitch();
-	//	getGame().setCurrentMap(eMap);
-	//	*CyGlobalContext::getInstance().getCyMap() = getMap();
-	//	getMap().afterSwitch();
-	//}
+	if (eMap != CURRENT_MAP)
+	{
+		getMap().beforeSwitch();
+		getGame().setCurrentMap(eMap);
+		*CyGlobalContext::getInstance().getCyMap() = getMap();
+		getMap().afterSwitch();
+	}
 }
 
 CvViewport* cvInternalGlobals::getCurrentViewport() const

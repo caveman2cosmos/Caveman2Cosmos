@@ -7,6 +7,9 @@
 #include "CvCity.h"
 
 class CvBuildInfo;
+class CvPlayer;
+class CvUnit;
+class CvUnitAI;
 
 class CvWorkerService
 {

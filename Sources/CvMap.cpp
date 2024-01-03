@@ -7,8 +7,6 @@
 //-----------------------------------------------------------------------------
 
 
-#include "FProfiler.h"
-
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
@@ -25,16 +23,30 @@
 #include "CvPlotGroup.h"
 #include "CvPython.h"
 #include "CvSelectionGroup.h"
-#include "CvUnit.h"
+#include "CvUnitAI.h"
 #include "CvViewport.h"
 #include "CvDLLEngineIFaceBase.h"
 #include "CvDLLEntityIFaceBase.h"
 #include "CvDLLFAStarIFaceBase.h"
 #include "CvDLLInterfaceIFaceBase.h"
 #include "CvDLLUtilityIFaceBase.h"
+#include "copy_iterator.h"
+#include "FProfiler.h"
 #include "FAStarNode.h"
-#include <direct.h> // for getcwd()
-#include <stdlib.h> // for MAX_PATH
+
+
+struct TravelingUnit
+{
+	TravelingUnit(const CvUnit& travelingUnit, int numTravelTurns)
+		: numTurnsUntilArrival(numTravelTurns)
+	{
+		unit = static_cast<const CvUnitAI&>(travelingUnit);
+	}
+
+	CvUnitAI unit;
+	int numTurnsUntilArrival;
+};
+
 
 bool CvMap::m_bSwitchInProgress = false;
 
@@ -394,23 +406,25 @@ void CvMap::moveUnitToMap(CvUnit& unit, int numTravelTurns)
 void CvMap::updateIncomingUnits()
 {
 	PROFILE_EXTRA_FUNC();
-	foreach_(TravelingUnit* travelingUnit, m_IncomingUnits)
+	for (std::vector<TravelingUnit*>::iterator it = m_IncomingUnits.begin(); it != m_IncomingUnits.end();)
 	{
-		if (travelingUnit->numTurnsUntilArrival-- <= 0)
+		if ((*it)->numTurnsUntilArrival-- <= 0)
 		{
 			GC.switchMap(m_eType);
 
-			const CvUnitAI& unit = travelingUnit->unit;
+			const CvUnitAI& unit = (*it)->unit;
 			CvPlayer& owner = GET_PLAYER(unit.getOwner());
 			const CvPlot* plot = owner.findStartingPlot();
 			CvUnit* newUnit = owner.initUnit(unit.getUnitType(), plot->getX(), plot->getY(), unit.AI_getUnitAIType(), NO_DIRECTION, 0);
 			if (newUnit != NULL)
 			{
 				static_cast<CvUnitAI&>(*newUnit) = unit;
-				m_IncomingUnits.erase(&travelingUnit);
-				delete travelingUnit;
+				it = m_IncomingUnits.erase(it);
+				delete *it;
+				continue;
 			}
 		}
+		++it;
 	}
 }
 
@@ -419,11 +433,11 @@ void CvMap::doTurn()
 {
 	PROFILE("CvMap::doTurn()");
 
+	updateIncomingUnits();
+
 	if (plotsInitialized())
 	{
 		GC.switchMap(m_eType);
-
-		updateIncomingUnits();
 
 		for (int iI = 0; iI < numPlots(); iI++)
 		{
@@ -1369,10 +1383,7 @@ void CvMap::afterSwitch()
 	{
 		if (!GC.getMapInfo(getType()).getInitialWBMap().empty())
 		{
-			char mapPath[1024];
-			getcwd(mapPath, 1024);
-			strcat(mapPath, static_cast<const char*>(GC.getMapInfo(getType()).getInitialWBMap()));
-			Cy::call("CvWBInterface", "readAndApplyDesc", Cy::Args() << mapPath);
+			Cy::call("CvWBInterface", "readAndApplyDesc", Cy::Args() << GC.getMapInfo(getType()).getInitialWBMap().c_str());
 		}
 		else
 		{
