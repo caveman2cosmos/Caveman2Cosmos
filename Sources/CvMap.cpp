@@ -1346,19 +1346,23 @@ void CvMap::beforeSwitch()
 	{
 		if (GET_PLAYER((PlayerTypes)i).isAlive())
 		{
-			foreach_(CvUnit* pLoopUnit, GET_PLAYER((PlayerTypes)i).units()
-			| filtered(!bind(&CvUnit::isUsingDummyEntities, _1)))
+			foreach_(CvUnit* pLoopUnit, GET_PLAYER((PlayerTypes)i).units())
 			{
-				gDLL->getEntityIFace()->RemoveUnitFromBattle(pLoopUnit);
+				if (!pLoopUnit->isUsingDummyEntities())
+				{
+					gDLL->getEntityIFace()->RemoveUnitFromBattle(pLoopUnit);
 
-				pLoopUnit->removeEntity();
-				pLoopUnit->destroyEntity();
+					pLoopUnit->removeEntity();
+					pLoopUnit->destroyEntity();
+				}
 			}
-			foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)i).cities()
-			| filtered(bind(CvCity::getEntity, _1) != nullptr))
+			foreach_(CvCity* pLoopCity, GET_PLAYER((PlayerTypes)i).cities())
 			{
-				pLoopCity->removeEntity();
-				pLoopCity->destroyEntity();
+				if (pLoopCity->getEntity() != NULL)
+				{
+					pLoopCity->removeEntity();
+					pLoopCity->destroyEntity();
+				}
 			}
 		}
 	}
@@ -1443,11 +1447,13 @@ void CvMap::afterSwitch()
 				//gDLL->getEntityIFace()->createCityEntity(pLoopCity);
 				pLoopCity->setupGraphical();
 			}
-			foreach_(CvUnit* pLoopUnit, GET_PLAYER((PlayerTypes)i).units()
-			| filtered(!bind(CvUnit::isUsingDummyEntities, _1)))
+			foreach_(CvUnit* pLoopUnit, GET_PLAYER((PlayerTypes)i).units())
 			{
-				gDLL->getEntityIFace()->createUnitEntity(pLoopUnit);
-				pLoopUnit->setupGraphical();
+				if (!pLoopUnit->isUsingDummyEntities())
+				{
+					gDLL->getEntityIFace()->createUnitEntity(pLoopUnit);
+					pLoopUnit->setupGraphical();
+				}
 			}
 		}
 	}
