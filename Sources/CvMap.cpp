@@ -30,9 +30,8 @@
 #include "CvDLLFAStarIFaceBase.h"
 #include "CvDLLInterfaceIFaceBase.h"
 #include "CvDLLUtilityIFaceBase.h"
-#include "copy_iterator.h"
-#include "FProfiler.h"
 #include "FAStarNode.h"
+#include "FProfiler.h"
 
 
 struct TravelingUnit
