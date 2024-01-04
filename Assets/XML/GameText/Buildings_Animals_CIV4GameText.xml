@@ -107,7 +107,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</German>
-		<Italian>Requisito per il folklore (costruzione automatica)</Italian>
+		<Italian>Folklore (costruzione automatica)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_REQUIREMENT_PEDIA</Tag>
@@ -229,7 +229,7 @@
 		<Tag>TXT_KEY_BUILDING_DANCE_BIRD</Tag>
 		<English>Unit Reward - Dance (Bird)</English>
 		<French>Danse des Oiseaux</French>
-		<Italian>Danza degli uccelli (da unità)</Italian>
+		<Italian>Danza degli uccelli (unità consumata)</Italian>
 		<Russian>Òàíåö ïòèöû</Russian>
 	</TEXT>
 	<TEXT>
@@ -256,7 +256,7 @@
 		<Tag>TXT_KEY_BUILDING_CARNIVAL_BOXING_KANGAROO</Tag>
 		<English>Unit Reward - Carnival (Boxing Kangaroo)</English>
 		<French>Kangourou Boxeur</French>
-		<Italian>Fiera del canguro combattente (da unità)</Italian>
+		<Italian>Fiera del canguro combattente (unità consumata)</Italian>
 		<Polish>Mit Kangura</Polish>
 		<Russian>Áîêñèðóþùèé êåíãóðó</Russian>
 	</TEXT>
@@ -275,7 +275,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERD_BUFFALO_PEDIA</Tag>
 		<English>Only domesticated buffalos can build the Herd - Buffalo; provides a resource of buffalos.</English>
-		<Italian>Solo i bufali addomesticati possono costruire una Mandria di bufali; fornisce una risorsa di bufali.</Italian>
+		<Italian>Solo i bufali domati possono costruire una Mandria di bufali; fornisce una risorsa di bufali.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_BUFFALO</Tag>
@@ -300,7 +300,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERD_CAMEL_PEDIA</Tag>
 		<English>Only domesticated camels can build the Herd - Camels; provides a resource of camels.</English>
-		<Italian>Solo i cammelli addomesticati possono costruire una mandria di cammelli; fornisce una risorsa di cammelli.</Italian>
+		<Italian>Solo i cammelli domati possono costruire una mandria di cammelli; fornisce una risorsa di cammelli.</Italian>
 		<Polish>Wielbłąd (Camelus) rodzaj dużych ssaków z rodziny wielbłądowatych. Fizjologicznie przystosowane do życia w warunkach suchego i gorącego klimatu, są w wielu krajach wykorzystywane jako zwierzęta użytkowe.</Polish>
 	</TEXT>
 	<TEXT>
@@ -317,7 +317,7 @@
 		<English>The Carnival is a decent provider of culture and happiness for the city in which it is built. If you bring captured wolves, lions, or tigers to the city and add them to the Carnival, it can generate more culture and happiness than most wonders. The Subdue Animal promotion, available only to recon units after Animal Husbandry is researched, will allow you to capture these beasts if you beat them in combat.</English>
 		<French>Le Carnaval est un fournisseur décent de culture et de bonheur pour la ville dans laquelle il est construit. Si vous amené des loups, panthères, lions et tigres dans la ville et que vous les ajoutez au Carnaval, il générera plus de culture et de bonheur que bien des merveilles. La promotion Assujettir Animal, accessible seulement aux unités de reconnaissances après que la technologie Elevage est découverte, vous permettra de capturer ces bêtes si vous les battez en combat.</French>
 		<German>Der Jahrmarkt ist ein guter Versorger für Kultur und Zufriedenheit für die Stadt, in der er gebaut wird. Wenn man gefangene Wölfe, Panther, Löwen oder Tiger in die Stadt und zum Jahrmarkt bringt, kann dieser mehr Kultur und Zufriedenheit produzieren als die meisten Wunder. Die Beförderung "Tierbändigung", welche nur für Aufklärungseinheiten und erst ab der Technologie "Viehhaltung" verfügbar ist, erlaubt, diese Tiere einzufangen, wenn man sie im Kampf besiegt.</German>
-		<Italian>Una fiera fornisce una buona dose di cultura e felicità nella città in cui è costruita. Portando i lupi, i leoni o le tigri che hai addomesticato nelle città in cui hai costruito la fiera, puoi potenziarla in modo che generi più cultura e felicità di gran parte delle meraviglie. La linea di promozioni "Cacciatore" ti permetterà di catturare più facilmente le bestie in combattimento.</Italian>
+		<Italian>Una fiera fornisce una buona dose di cultura e felicità nella città in cui è costruita. Portando i lupi, i leoni o le tigri che hai domato nelle città in cui hai costruito la fiera, puoi potenziarla in modo che generi più cultura e felicità di gran parte delle meraviglie. La linea di promozioni "Cacciatore" ti permetterà di catturare più facilmente le bestie in combattimento.</Italian>
 		<Polish>Karnawał, zapusty okres zimowych balów, maskarad, pochodów i zabaw. Rozpoczyna się najczęściej w dniu Trzech Króli, a kończy we wtorek przed Zrodą Popielcową, która oznacza początek wielkiego postu i oczekiwania na Wielkanoc.</Polish>
 		<Russian>Êàðíàâàë ÿâëÿåòñÿ äîñòîéíûì èñòî÷íèêîì êóëüòóðû è ñ÷àñòüÿ äëÿ ãîðîäà, â êîòîðîì îí ïîñòðîåí. Åñëè âû ïðèâåçåòå â ãîðîä çàõâà÷åííûõ âîëêîâ, ëüâîâ èëè òèãðîâ è äîáàâèòå èõ â êàðíàâàë, ýòî ìîæåò ïðèíåñòè áîëüøå êóëüòóðû è ñ÷àñòüÿ, ÷åì áîëüøèíñòâî ÷óäåñ. Äåéñòâèå «Ïðèðó÷èòü æèâîòíîå», äîñòóïíîå òîëüêî ðàçâåäûâàòåëüíûì ïîäðàçäåëåíèÿì ïîñëå èññëåäîâàíèÿ æèâîòíîâîäñòâà, ïîçâîëèò âàì ïîéìàòü ýòèõ çâåðåé, åñëè âû ïîáåäèòå èõ â áîþ.</Russian>
 	</TEXT>
@@ -337,7 +337,7 @@
 		<Tag>TXT_KEY_BUILDING_CENTER_FOR_CEPHALOPOD_STUDIES</Tag>
 		<English>Unit Reward - Center for Cephalopod Studies</English>
 		<French>Centre d'étude des Céphalopodes</French>
-		<Italian>Centro per gli studi sui cefalopodi (da unità)</Italian>
+		<Italian>Centro per gli studi sui cefalopodi (unità consumata)</Italian>
 		<Polish>Centrum Badań Głowonogów</Polish>
 		<Russian>Öåíòð èçó÷. êàëüìàðîâ</Russian>
 	</TEXT>
@@ -351,7 +351,7 @@
 		<Tag>TXT_KEY_BUILDING_CENTER_FOR_WHALE_STUDIES</Tag>
 		<English>Unit Reward - Center for Whale Studies</English>
 		<French>Centre d'étude des Baleines</French>
-		<Italian>Centro per gli studi sulle balene (da unità)</Italian>
+		<Italian>Centro per gli studi sulle balene (unità consumata)</Italian>
 		<Polish>Centrum Badań Wielorybów</Polish>
 		<Russian>Öåíòð èçó÷. êèòîâ</Russian>
 	</TEXT>
@@ -365,7 +365,7 @@
 		<Tag>TXT_KEY_BUILDING_COASTAL_FISH_FARM</Tag>
 		<English>Unit Reward - Coastal Fish Farm</English>
 		<French>Ferme à Poissons du Littoral</French>
-		<Italian>Allevamento costiero di pesci (da unità)</Italian>
+		<Italian>Allevamento costiero di pesci (unità consumata)</Italian>
 		<Polish>Farma Ryb Przybrzeżnych</Polish>
 		<Russian>Ðûáíàÿ ôåðìà</Russian>
 	</TEXT>
@@ -384,14 +384,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERD_COW_PEDIA</Tag>
 		<English>Only domesticated cattle can build the Herd - Bovines; provides a resource of cattle.</English>
-		<Italian>Solo i bovini addomesticati possono costruire una Mandria di bovini; fornisce una risorsa di bovini.</Italian>
+		<Italian>Solo i bovini domati possono costruire una Mandria di bovini; fornisce una risorsa di bovini.</Italian>
 		<Polish>Bydło domowe (Bos taurus) gatunek zwierząt z rodziny wołowatych, rzędu parzystokopytnych. Gatunek ten pochodzi od tura wielkiego i tura krótkorogiego.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CRAB_NETS</Tag>
 		<English>Unit Reward - Crab Nets</English>
 		<French>Pièges à Crabes</French>
-		<Italian>Trappole per granchi (da unità)</Italian>
+		<Italian>Trappole per granchi (unità consumata)</Italian>
 		<Polish>Sieci na kraby</Polish>
 		<Russian>Ñåòè íà êðàáîâ</Russian>
 	</TEXT>
@@ -405,7 +405,7 @@
 		<English>Unit Reward - Carnival (Dancing Bear)</English>
 		<French>Carnaval - Ours Dansant</French>
 		<German>Jahrmarkt - Tanzbär</German>
-		<Italian>Fiera dell'orso ballerino (da unità)</Italian>
+		<Italian>Fiera dell'orso ballerino (unità consumata)</Italian>
 		<Spanish>Carnival - Oso Pisador</Spanish>
 		<Polish>Karnawał - Tańczący Niedźwiedź</Polish>
 		<Russian>Òàíöóþùèé ìåäâåäü</Russian>
@@ -515,7 +515,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ENCLOSURE_EXOTIC_HERBIVORE_PEDIA</Tag>
 		<English>A cage used for wild subdued animals.</English>
-		<Italian>Una gabbia in cui vengono rinchiusi gli erbivori esotici addomesticati.</Italian>
+		<Italian>Una gabbia in cui vengono rinchiusi gli erbivori esotici domati.</Italian>
 		<Polish>Klatka używana do przetrzymywania dzikich, poskromionych zwierząt.</Polish>
 		<Russian>Êëåòêà äëÿ óêðîùåííûõ äèêèõ æèâîòíûõ.</Russian>
 	</TEXT>
@@ -523,7 +523,7 @@
 		<Tag>TXT_KEY_BUILDING_FEATHER_WORKER</Tag>
 		<English>Unit Reward - Feather Worker</English>
 		<French>Atelier de Plumes</French>
-		<Italian>Lavoratore di piume (da unità)</Italian>
+		<Italian>Lavoratore di piume (unità consumata)</Italian>
 		<Polish>Pierzarz</Polish>
 		<Russian>Ìàñòåð ïåðüåâ</Russian>
 	</TEXT>
@@ -537,7 +537,7 @@
 		<Tag>TXT_KEY_BUILDING_FISH_PENS</Tag>
 		<English>Unit Reward - Fish Pens</English>
 		<French>Enclos à Poissons</French>
-		<Italian>Vasca per pesci (da unità)</Italian>
+		<Italian>Vasca per pesci (unità consumata)</Italian>
 		<Polish>Zagroda Rybna</Polish>
 		<Russian>Çàòîí äëÿ ðûáû</Russian>
 	</TEXT>
@@ -1189,7 +1189,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>Mito dell'alligatore asiatico</Italian>
+		<Italian>Mito dell'alligatore cinese</Italian>
 		<Polish>Mit - Aligator Chiński</Polish>
 		<Russian>Ìèô î êèò. àëëèãàòîð</Russian>
 	</TEXT>
@@ -1590,7 +1590,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>Mito del lemure</Italian>
+		<Italian>Mito del lemure catta</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_LEVIATHAN</Tag>
@@ -1640,7 +1640,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>Mito del guanaco</Italian>
+		<Italian>Mito del lama</Italian>
 		<Polish>Mit Lam</Polish>
 		<Russian>Ìèô î ëàìå</Russian>
 	</TEXT>
@@ -2072,7 +2072,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>Mito del pinguino</Italian>
+		<Italian>Mito del pinguino imperatore</Italian>
 		<Russian>Ìèô î ïèíãâèíå</Russian>
 	</TEXT>
 	<TEXT>
@@ -2181,7 +2181,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>Mito del quoll</Italian>
+		<Italian>Mito del quoll tigre</Italian>
 		<Russian>Ìèô î ñóì÷.êóíèöå</Russian>
 	</TEXT>
 	<TEXT>
@@ -2366,7 +2366,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>Mito della saiga</Italian>
+		<Italian>Mito dell'antilope delle steppe</Italian>
 		<Russian>Ìèô î ñàéãàêå</Russian>
 	</TEXT>
 	<TEXT>
@@ -2526,7 +2526,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>Mito dei serpenti</Italian>
+		<Italian>Mito del serpente</Italian>
 		<Russian>Ìèô î çìåå</Russian>
 	</TEXT>
 	<TEXT>
@@ -2657,7 +2657,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>Mito del bradipo tridattilo</Italian>
+		<Italian>Mito del bradipo tridattile</Italian>
 		<Russian>Ìèô î ëåíèâöå</Russian>
 	</TEXT>
 	<TEXT>
@@ -2682,7 +2682,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>Mito del tacchino selvaggio</Italian>
+		<Italian>Mito del tacchino</Italian>
 		<Russian>Ìèô îá èíäåéêå</Russian>
 	</TEXT>
 	<TEXT>
@@ -2860,7 +2860,7 @@
 		<Tag>TXT_KEY_BUILDING_DANCE_FOX</Tag>
 		<English>Unit Reward - Dance (Fox)</English>
 		<French>Danse du Renard</French>
-		<Italian>Danza della volpe (da unità)</Italian>
+		<Italian>Danza della volpe (unità consumata)</Italian>
 		<Russian>Òàíåö ëèñû</Russian>
 	</TEXT>
 	<TEXT>
@@ -2873,7 +2873,7 @@
 		<Tag>TXT_KEY_BUILDING_FUR_FARM</Tag>
 		<English>Unit Reward - Fur Farm</English>
 		<French>Ferme de Fourrures</French>
-		<Italian>Allevamento di animali da pelliccia (da unità)</Italian>
+		<Italian>Allevamento di animali da pelliccia (unità consumata)</Italian>
 		<Polish>Ferma Futer</Polish>
 		<Russian>Ìåõîâàÿ ôåðìà</Russian>
 	</TEXT>
@@ -2913,7 +2913,7 @@
 		<Tag>TXT_KEY_BUILDING_GOVERNORS_MENAGERIE</Tag>
 		<English>Unit Reward - Governor's Menagerie</English>
 		<French>Ménagerie du Gouverneur</French>
-		<Italian>Zoo del governatore (da unità)</Italian>
+		<Italian>Zoo del governatore (unità consumata)</Italian>
 		<Polish>Menażeria Gubernatora</Polish>
 		<Russian>Ãîðîäñêîé çâåðèíåö</Russian>
 	</TEXT>
@@ -2928,7 +2928,7 @@
 		<Tag>TXT_KEY_BUILDING_GOVERNORS_PETS</Tag>
 		<English>Unit Reward - Governor's Pets</English>
 		<French>Animaux du Gouverneurs</French>
-		<Italian>Animali del governatore (da unità)</Italian>
+		<Italian>Animali del governatore (unità consumata)</Italian>
 		<Polish>Maskotka Gubernatora</Polish>
 		<Russian>Ãîðîäñêîé ïèòîìíèê</Russian>
 	</TEXT>
@@ -2956,7 +2956,7 @@
 		<Tag>TXT_KEY_BUILDING_HAWKING_HUT</Tag>
 		<English>Unit Reward - Hawking Hut</English>
 		<French>Cabane du Fauconnier</French>
-		<Italian>Capanna del falconiere (da unità)</Italian>
+		<Italian>Capanna del falconiere (unità consumata)</Italian>
 		<Polish>Chata Sokolnika</Polish>
 		<Russian>Ñîêîëèíàÿ îõîòà</Russian>
 	</TEXT>
@@ -3003,7 +3003,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARINE_INSTITUTE</Tag>
 		<English>Unit Reward - Marine Institute</English>
-		<Italian>Istituto marino (da unità)</Italian>
+		<Italian>Istituto marino (unità consumata)</Italian>
 		<Polish>Instytut Morski</Polish>
 		<Russian>Ìîðñêîé èíñòèòóò</Russian>
 	</TEXT>
@@ -3023,7 +3023,7 @@
 		<Tag>TXT_KEY_BUILDING_MASTER_HUNTER</Tag>
 		<English>Master Hunter</English>
 		<French>Cabane du Maître chasseur</French>
-		<Italian>Mastro cacciatore (da unità)</Italian>
+		<Italian>Mastro cacciatore (unità consumata)</Italian>
 		<Polish>Wybitny Łowca</Polish>
 		<Russian>Õèæèíà îõîòíèêà</Russian>
 	</TEXT>
@@ -3041,7 +3041,7 @@
 		<Tag>TXT_KEY_BUILDING_MASTER_SEA_HUNTER</Tag>
 		<English>Master Sea Hunter</English>
 		<French>Maître Chasseur des mers</French>
-		<Italian>Mastro pescatore (da unità)</Italian>
+		<Italian>Mastro pescatore (unità consumata)</Italian>
 		<Polish>Wybitny Morski Łowca</Polish>
 		<Russian>Øêîëà ðûáàëêè</Russian>
 	</TEXT>
@@ -3273,7 +3273,7 @@
 		<Tag>TXT_KEY_BUILDING_SNAKE_CHARMER</Tag>
 		<English>Unit Reward - Snake Charmer</English>
 		<French>Charmeur de Serpents</French>
-		<Italian>Incantatore di serpenti (da unità)</Italian>
+		<Italian>Incantatore di serpenti (unità consumata)</Italian>
 		<Polish>Zaklinacz Węży</Polish>
 		<Russian>Çàêëèíàòåëü çìåé</Russian>
 	</TEXT>
@@ -3287,7 +3287,7 @@
 		<Tag>TXT_KEY_BUILDING_SNAKE_PIT</Tag>
 		<English>Unit Reward - Snake Pit</English>
 		<French>Fosse à Serpents</French>
-		<Italian>Fossa dei serpenti (da unità)</Italian>
+		<Italian>Fossa dei serpenti (unità consumata)</Italian>
 		<Polish>Dół z wężami</Polish>
 		<Russian>ßìà ñî çìåÿìè</Russian>
 	</TEXT>
@@ -3313,7 +3313,7 @@
 		<Tag>TXT_KEY_BUILDING_SHELL_WORKERS_HUT</Tag>
 		<English>Unit Reward - Shell Worker's Hut</English>
 		<French>Cabane du sculpteur de carapaces</French>
-		<Italian>Intagliatore di conchiglie (da unità)</Italian>
+		<Italian>Intagliatore di conchiglie (unità consumata)</Italian>
 		<Polish>Chata Rzeźbiarza Muszli</Polish>
 		<Russian>Ëîâåö óñòðèö</Russian>
 	</TEXT>
@@ -3359,7 +3359,7 @@
 		<Tag>TXT_KEY_BUILDING_CARNIVAL_TRAINED_SEAL</Tag>
 		<English>Unit Reward - Carnival (Trained Seal)</English>
 		<French>Phoques dressés</French>
-		<Italian>Fiera delle foche ammaestrate (da unità)</Italian>
+		<Italian>Fiera delle foche ammaestrate (unità consumata)</Italian>
 		<Polish>Tresowana Foka</Polish>
 		<Russian>Äðåññ. òþëåíåé</Russian>
 	</TEXT>
@@ -3389,7 +3389,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WILD_ANIMAL_CAGE_PEDIA</Tag>
 		<English>A cage used for wild subdued animals.</English>
-		<Italian>Una gabbia in cui vengono rinchiusi gli animali selvaggi addomesticati.</Italian>
+		<Italian>Una gabbia in cui vengono rinchiusi gli animali selvaggi domati.</Italian>
 		<Polish>Klatka używana do przetrzymywania dzikich, poskromionych zwierząt.</Polish>
 	</TEXT>
 	<TEXT>
@@ -3404,7 +3404,7 @@
 		<Tag>TXT_KEY_BUILDING_WONDERS_OF_THE_DEEP</Tag>
 		<English>Wonders of the Deep</English>
 		<French>Merveilles des profondeurs</French>
-		<Italian>Meraviglie degli abissi (da unità)</Italian>
+		<Italian>Meraviglie degli abissi (unità consumata)</Italian>
 		<Polish>Cuda Głębin</Polish>
 		<Russian>×óäåñà ãëóáèí</Russian>
 	</TEXT>

@@ -203,7 +203,7 @@
 		<Tag>TXT_KEY_UNIT_DOUBLE_BIPLANE</Tag>
 		<English>Double Biplane</English>
 		<French>Biplane Double</French>
-		<Italian>Biplano doppio</Italian>
+		<Italian>Doppio biplano</Italian>
 		<Polish>Podwójny Dwupłatowiec</Polish>
 		<Russian>Áèïëàí</Russian>
 	</TEXT>
@@ -263,7 +263,7 @@
 		<Tag>TXT_KEY_UNIT_TZAR_TANK</Tag>
 		<English>Tzar Tank</English>
 		<French>Tank 'Tzar'</French>
-		<Italian>Carro armato Tzar</Italian>
+		<Italian>Carro armato Zar</Italian>
 		<Polish>Czołg-Car</Polish>
 		<Russian>Öàðü-òàíê</Russian>
 	</TEXT>
@@ -278,7 +278,7 @@
 		<Tag>TXT_KEY_UNIT_VERY_HEAVY_ARMOR</Tag>
 		<English>Very Heavy Tank</English>
 		<French>Tank Lourd Blindé</French>
-		<Italian>Carro armato pesante</Italian>
+		<Italian>Carro armato superpesante</Italian>
 		<Polish>Superciężki Czołg</Polish>
 		<Russian>Ñâåðõòÿæåëûé òàíê</Russian>
 	</TEXT>

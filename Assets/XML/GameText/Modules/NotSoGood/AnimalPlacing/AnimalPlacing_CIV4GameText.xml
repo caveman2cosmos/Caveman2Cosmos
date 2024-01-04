@@ -378,7 +378,7 @@
 		<English>Place [LINK=BONUS_SEA_LION_AND_SEAL]Sea Lion and Seal Bonus[\LINK]</English>
 		<Polish>Umiesc Kolonie Lwów Morskich</Polish>
 		<Russian>Разводить тюленей и морских львов</Russian>
-		<Italian>[LINK=BONUS_SEA_LION_AND_SEAL]Leone marino e foca[\LINK] (risorsa collocata)</Italian>
+		<Italian>[LINK=BONUS_SEA_LION_AND_SEAL]Leone di mare e foca[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_SHEEP</Tag>

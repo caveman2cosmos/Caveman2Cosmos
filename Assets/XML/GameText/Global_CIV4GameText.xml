@@ -8876,7 +8876,7 @@
 		<English>Movie Quality</English>
 		<French>Qualité de Film</French>
 		<German>Filmqualität</German>
-		<Italian>[ICON_BULLET]Qualità dei filmati</Italian>
+		<Italian>Qualità dei filmati</Italian>
 		<Spanish>Calidad de Película</Spanish>
 	</TEXT>
 	<TEXT>
@@ -19073,7 +19073,7 @@
 		<English>Opening Menu</English>
 		<French>Menu de lancement</French>
 		<German>Anfangsmenü</German>
-		<Italian>[ICON_BULLET]Schermo del titolo</Italian>
+		<Italian>Schermo del titolo</Italian>
 		<Spanish>Menú inicial</Spanish>
 	</TEXT>
 	<TEXT>
@@ -19105,7 +19105,7 @@
 		<English>Anti-Aliasing MultiSamples</English>
 		<French>Multi-échantillons anti-aliasing</French>
 		<German>Antialiasing MultiSample</German>
-		<Italian>[ICON_BULLET]Anti-aliasing multisamples</Italian>
+		<Italian>Anti-aliasing multisamples</Italian>
 		<Spanish>Anti-Aliasing MultiSamples</Spanish>
 	</TEXT>
 	<TEXT>
@@ -19121,7 +19121,7 @@
 		<English>Select your connection speed</English>
 		<French>Choisissez votre vitesse de connexion</French>
 		<German>Wählen Sie eine Verbindungsgeschwindigkeit</German>
-		<Italian>[ICON_BULLET]Tipo di connessione</Italian>
+		<Italian>Tipo di connessione</Italian>
 		<Spanish>Selecciona tu velocidad de conexión</Spanish>
 	</TEXT>
 	<TEXT>
@@ -19153,7 +19153,7 @@
 		<English>Voice Capture Device</English>
 		<French>Périphérique vocal</French>
 		<German>Sprachaufnahmegerät</German>
-		<Italian>[ICON_BULLET]Microfono</Italian>
+		<Italian>Microfono</Italian>
 		<Spanish>Dispositivo de captura de la voz</Spanish>
 	</TEXT>
 	<TEXT>
@@ -19225,7 +19225,7 @@
 		<English>Alarm Hours:</English>
 		<French>Heures :</French>
 		<German>Stunden:</German>
-		<Italian>[ICON_BULLET]Imposta avviso tra (h):</Italian>
+		<Italian>Imposta avviso tra (h):</Italian>
 		<Spanish>Horas:</Spanish>
 	</TEXT>
 	<TEXT>
@@ -19265,7 +19265,7 @@
 		<English>Alarm Mins:</English>
 		<French>Min. :</French>
 		<German>Minuten:</German>
-		<Italian>[ICON_BULLET]Imposta avviso tra (min):</Italian>
+		<Italian>Imposta avviso tra (min):</Italian>
 		<Spanish>Minutos</Spanish>
 	</TEXT>
 	<TEXT>
@@ -19325,7 +19325,7 @@
 		<English>Voice Playback Device</English>
 		<French>Périphérique restitution vocale</French>
 		<German>Sprachwiedergabegerät</German>
-		<Italian>[ICON_BULLET]Riproduzione vocale</Italian>
+		<Italian>Riproduzione vocale</Italian>
 		<Spanish>Dispositivo de reproducción de la voz</Spanish>
 	</TEXT>
 	<TEXT>
@@ -19349,7 +19349,7 @@
 		<English>Globe Quality</English>
 		<French>Qualité du globe</French>
 		<German>Weltqualität</German>
-		<Italian>[ICON_BULLET]Qualità del pianeta</Italian>
+		<Italian>Qualità del pianeta</Italian>
 		<Spanish>Calidad del globo</Spanish>
 	</TEXT>
 	<TEXT>
@@ -19357,7 +19357,7 @@
 		<English>Graphics Level</English>
 		<French>Niveau des graphismes</French>
 		<German>Grafikstufe</German>
-		<Italian>[ICON_BULLET]Qualità grafica</Italian>
+		<Italian>Qualità grafica</Italian>
 		<Spanish>Nivel gráfico</Spanish>
 	</TEXT>
 	<TEXT>
@@ -19365,7 +19365,7 @@
 		<English>Language</English>
 		<French>Langue</French>
 		<German>Sprache</German>
-		<Italian>[ICON_BULLET]Lingua</Italian>
+		<Italian>Lingua</Italian>
 		<Spanish>Idioma</Spanish>
 	</TEXT>
 	<TEXT>
@@ -19381,7 +19381,7 @@
 		<English>Profiles</English>
 		<French>Profils</French>
 		<German>Profile</German>
-		<Italian>[ICON_BULLET]Profili</Italian>
+		<Italian>Profili</Italian>
 		<Spanish>Perfiles</Spanish>
 	</TEXT>
 	<TEXT>
@@ -19389,7 +19389,7 @@
 		<English>Profile Name</English>
 		<French>Nom du profil</French>
 		<German>Profilname</German>
-		<Italian>[ICON_BULLET]Nome profilo</Italian>
+		<Italian>Nome profilo</Italian>
 		<Spanish>Nombre del perfil</Spanish>
 	</TEXT>
 	<TEXT>
@@ -19397,7 +19397,7 @@
 		<English>Render Quality Level</English>
 		<French>Niveau de qualité du rendu</French>
 		<German>Renderqualitätsstufe</German>
-		<Italian>[ICON_BULLET]Qualità del render</Italian>
+		<Italian>Qualità del render</Italian>
 		<Spanish>Nivel de calidad del renderizado</Spanish>
 	</TEXT>
 	<TEXT>
@@ -19405,7 +19405,7 @@
 		<English>Screen Resolution</English>
 		<French>Résolution</French>
 		<German>Auflösung</German>
-		<Italian>[ICON_BULLET]Risoluzione video</Italian>
+		<Italian>Risoluzione video</Italian>
 		<Spanish>Resolución de pantalla</Spanish>
 	</TEXT>
 	<TEXT>
@@ -19429,7 +19429,7 @@
 		<English>Audio Speakers</English>
 		<French>Enceintes</French>
 		<German>Lautsprecher</German>
-		<Italian>[ICON_BULLET]Altoparlanti</Italian>
+		<Italian>Altoparlanti</Italian>
 		<Spanish>Altavoces</Spanish>
 	</TEXT>
 	<TEXT>
@@ -21672,7 +21672,7 @@
 		<English>[ICON_BULLET]No Combat Penalty for Attacking from Sea</English>
 		<French>[ICON_BULLET]Aucune pénalité de combat en attaquant depuis la mer</French>
 		<German>[ICON_BULLET]Keine Kampfstrafe für Seeangriffe</German>
-		<Italian>[ICON_BULLET]Nessuna penalità di combattimento quando si attacca dal mare</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Nessuna penalità[COLOR_REVERT] di combattimento se si [COLOR_HIGHLIGHT_TEXT]attacca dal mare[COLOR_REVERT]</Italian> <!-- promotion Amphibious -->
 		<Spanish>[ICON_BULLET]No sufre penalización al combate por atacar desde el mar</Spanish>
 	</TEXT>
 	<TEXT>
@@ -21680,7 +21680,7 @@
 		<English>[ICON_BULLET]%D1_Bonus%% %s2_TerrFeat Attack</English>
 		<French>[ICON_BULLET]%D1_Bonus%% %s2_TerrFeat Attaque</French>
 		<German>[ICON_BULLET]%D1_Bonus%% %s2_TerrFeat-Angriff</German>
-		<Italian>[ICON_BULLET]%D1_Bonus%% di attacco in %s2_TerrFeat</Italian>
+		<Italian>[ICON_BULLET]Attacco su caselle con la caratteristica [COLOR_HIGHLIGHT_TEXT]%s2_TerrFeat[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%D1_Bonus%%[COLOR_REVERT]</Italian> <!-- promotion Terrain Analysis I -->
 		<Spanish>[ICON_BULLET]%D1_Bonus%% a ataque a %s2:2_TerrFeat</Spanish>
 	</TEXT>
 	<TEXT>
@@ -21720,7 +21720,7 @@
 		<English>[ICON_BULLET]Suffers %d1_percent%% less Collateral Damage</English>
 		<French>[ICON_BULLET]Dommages collatéraux réduits de %d1_percent%%</French>
 		<German>[ICON_BULLET]%d1_percent%% weniger Kollateralschäden</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Danni collaterali[COLOR_REVERT] subiti [COLOR_HIGHLIGHT_TEXT]-%d1_percent%%[COLOR_REVERT]</Italian> <!-- unit Noble -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Danni collaterali[COLOR_REVERT] subiti: [COLOR_HIGHLIGHT_TEXT]-%d1_percent%%[COLOR_REVERT]</Italian> <!-- unit Noble -->
 		<Spanish>[ICON_BULLET]Sufre un %d1_percent%% menos de daños colaterales</Spanish>
 	</TEXT>
 	<TEXT>
@@ -21840,7 +21840,7 @@
 		<English>[ICON_BULLET]No Combat Penalty for Crossing River</English>
 		<French>[ICON_BULLET]Aucune pénalité de combat en franchissant une rivière</French>
 		<German>[ICON_BULLET]Keine Kampfstrafe für Flussüberquerung</German>
-		<Italian>[ICON_BULLET]Nessuna penalità nel guado di un fiume</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Nessuna penalità[COLOR_REVERT] di combattimento per [COLOR_HIGHLIGHT_TEXT]attraversamento di un fiume[COLOR_REVERT]</Italian> <!-- promotion Amphibious -->
 		<Spanish>[ICON_BULLET]No sufre penalización al combate por cruzar un río</Spanish>
 	</TEXT>
 	<TEXT>
@@ -21848,7 +21848,7 @@
 		<English>[ICON_BULLET]%D1_Bonus%% Strength</English>
 		<French>[ICON_BULLET]Puissance %D1_Bonus%%</French>
 		<German>[ICON_BULLET]%D1_Bonus%% Stärke</German>
-		<Italian>[ICON_BULLET]%D1_Bonus%% di forza</Italian>
+		<Italian>[ICON_BULLET]Forza unità: [COLOR_HIGHLIGHT_TEXT]%D1_Bonus%%[COLOR_REVERT]</Italian> <!-- promotion Wootz Steel -->
 		<Spanish>[ICON_BULLET]%D1_Bonus%% a la fuerza</Spanish>
 	</TEXT>
 	<TEXT>

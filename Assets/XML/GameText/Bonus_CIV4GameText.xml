@@ -35,7 +35,7 @@
 		<English>Happy: +%d1_Change[ICON_HAPPY]</English>
 		<French>Moral: +%d1_Change[ICON_HAPPY]</French>
 		<German>Zufriedenheit: +%d1_Change[ICON_HAPPY]</German>
-		<Italian>Morale: +%d1_Change[ICON_HAPPY]</Italian>
+		<Italian>Felicità: [COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_HAPPY]</Italian> <!-- city screen hover on a resource -->
 		<Spanish>Feliz: +%d1_Change[ICON_HAPPY]</Spanish>
 		<Polish>Szczęśliwy: +%d1_Change[ICON_HAPPY]</Polish>
 		<Russian>Íàñòðîåíèå: +%d1_Change[ICON_HAPPY]</Russian>
@@ -63,7 +63,7 @@
 		<English>Unhappy: +%d1_Change[ICON_UNHAPPY]</English>
 		<French>Moral: +%d1_Change[ICON_UNHAPPY]</French>
 		<German>[ICON_BULLET]Unzufriedenheit: +%d1_Change[ICON_UNHAPPY]</German>
-		<Italian>Morale: +%d1_Change[ICON_UNHAPPY]</Italian>
+		<Italian>Infelicità: [COLOR_HIGHLIGHT_TEXT]+%d1_Change[COLOR_REVERT] [ICON_UNHAPPY]</Italian>  <!-- city screen hover on a resource -->
 		<Spanish>Infeliz: +%d1_Change[ICON_UNHAPPY]</Spanish>
 		<Polish>Niezadowoleni: +%d1_Change[ICON_UNHAPPY]</Polish>
 		<Russian>Íåäîâîëüñòâî: +%d1_Change[ICON_UNHAPPY]</Russian>
@@ -222,7 +222,7 @@
 		<English>Alcohol</English>
 		<French>Alcool</French>
 		<German>Alkohol</German>
-		<Italian>Alcool</Italian>
+		<Italian>Alcol</Italian>
 		<Polish>Alkohol</Polish>
 		<Russian>Àëêîãîëü</Russian>
 	</TEXT>
@@ -304,7 +304,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>Lingotto di alluminio</Italian>
+		<Italian>Lingotto d'alluminio</Italian>
 		<Polish>Wlewki aluminiowe</Polish>
 		<Russian>Àëþìèíèåâûå ñëèòêè</Russian>
 	</TEXT>
@@ -523,7 +523,7 @@
 		<Tag>TXT_KEY_BONUS_ARVERNIAN</Tag>
 		<English>Arvernian</English>
 		<French>Arvernien</French>
-		<Italian>Cittadino averniano</Italian>
+		<Italian>Cittadino averno</Italian>
 		<Russian>Àâåðíû</Russian>
 	</TEXT>
 	<TEXT>
@@ -885,7 +885,7 @@
 		<English>Beninese</English>
 		<French>Béninoise</French>
 		<Russian>Áåíèíöû</Russian>
-		<Italian>Cittadino beniniano</Italian>
+		<Italian>Cittadino beninese</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BERBER</Tag>
@@ -1522,7 +1522,7 @@
 		<Tag>TXT_KEY_BONUS_CELTIBERIAN</Tag>
 		<English>Celtiberian</English>
 		<French>Celtibérienne</French>
-		<Italian>Cittadino celtibero</Italian>
+		<Italian>Cittadino celtiberico</Italian>
 		<Russian>Êåëüòèáåðû</Russian>
 	</TEXT>
 	<TEXT>
@@ -2859,7 +2859,7 @@
 		<Tag>TXT_KEY_BONUS_FATIMID</Tag>
 		<English>Fatimid</English>
 		<French>Fatimide</French>
-		<Italian>Cittadino fatimida</Italian>
+		<Italian>Cittadino fatimide</Italian>
 		<Russian>Ôàòèìèäû</Russian>
 	</TEXT>
 	<TEXT>
@@ -3490,7 +3490,7 @@
 		<Tag>TXT_KEY_BONUS_GOTH</Tag>
 		<English>Goth</English>
 		<French>Gothique</French>
-		<Italian>Cittadino gotico</Italian>
+		<Italian>Cittadino goto</Italian>
 		<Polish>Gocka</Polish>
 		<Russian>Ãîòû</Russian>
 	</TEXT>
@@ -3601,14 +3601,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_GUANCHES</Tag>
 		<English>Guanches</English>
-		<Italian>Cittadino guancia</Italian>
+		<Italian>Cittadino guanci</Italian>
 		<Russian>Ãóàí÷è</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_GUARANI</Tag>
 		<English>Guaraní</English>
 		<Russian>Ãóàðàíè</Russian>
-		<Italian>Cittadino guaranese</Italian>
+		<Italian>Cittadino guaraní</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_GUATEMALAN</Tag>
@@ -3858,7 +3858,7 @@
 		<Tag>TXT_KEY_BONUS_HIDE</Tag>
 		<English>Hide</English>
 		<French>Peaux</French>
-		<Italian>Pelle trattata</Italian>
+		<Italian>Pelle animale</Italian>
 		<Polish>Skórki traktowane</Polish>
 		<Russian>Øêóðû</Russian>
 	</TEXT>
@@ -4288,7 +4288,7 @@
 		<Tag>TXT_KEY_BONUS_HURRIANS</Tag>
 		<English>Hurrians</English>
 		<French>Hurrienne</French>
-		<Italian>Cittadino hurrita</Italian>
+		<Italian>Cittadino urrita</Italian>
 		<Russian>Õóððèòû</Russian>
 	</TEXT>
 	<TEXT>
@@ -4993,7 +4993,7 @@
 		<Tag>TXT_KEY_BONUS_LEAD_WARES</Tag>
 		<English>Lead Wares</English>
 		<French>Objets en plomb</French>
-		<Italian>Prodotto di piombo</Italian>
+		<Italian>Lingotto di piombo</Italian>
 		<Polish>Przedmioty z ołowiu</Polish>
 		<Russian>Ñâèíöîâûå èçäåëèÿ</Russian>
 	</TEXT>
@@ -5847,7 +5847,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MITANNI</Tag>
 		<English>Mitanni</English>
-		<Italian>Cittadino mitanno</Italian>
+		<Italian>Cittadino mitannico</Italian>
 		<Russian>Ìèòàííè</Russian>
 	</TEXT>
 	<TEXT>
@@ -6455,7 +6455,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_OPHIR</Tag>
 		<English>Ophir</English>
-		<Italian>Cittadino di ophir</Italian>
+		<Italian>Cittadino di Ophir</Italian>
 		<Russian>Îôèðöû</Russian>
 	</TEXT>
 	<TEXT>
@@ -6764,7 +6764,7 @@
 		<Tag>TXT_KEY_BONUS_PELTS</Tag>
 		<English>Pelts</English>
 		<French>Peaux</French>
-		<Italian>Pelle animale</Italian>
+		<Italian>Pelliccia</Italian>
 		<Polish>Skóry</Polish>
 		<Russian>Ïóøíèíà</Russian>
 	</TEXT>
@@ -6893,7 +6893,7 @@
 		<English>Petroleum Products</English>
 		<French>Produits pétroliers</French>
 		<German>Ölprodukte</German>
-		<Italian>Derivato del petrolio</Italian>
+		<Italian>Prodotto del petrolio</Italian>
 		<Spanish>Derivados del petróleo</Spanish>
 		<Polish>Produkty naftowe</Polish>
 		<Russian>Íåôòåïðîäóêòû</Russian>
@@ -7639,7 +7639,7 @@
 		<Tag>TXT_KEY_BONUS_RED_OCHER</Tag>
 		<English>Red Ocher</English>
 		<Russian>Êðàñíîêîæèå</Russian>
-		<Italian>Cittadino red orcher</Italian>
+		<Italian>Cittadino dell'ocra rossa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_REEDS</Tag>
@@ -7876,7 +7876,7 @@
 		<Tag>TXT_KEY_BONUS_SABBATEAN</Tag>
 		<English>Sabbatean</English>
 		<French>Sabbatéen</French>
-		<Italian>Cittadino sabbatiano</Italian>
+		<Italian>Cittadino sabateo</Italian>
 		<Russian>Ñàááàòèàíöû</Russian>
 	</TEXT>
 	<TEXT>
@@ -8206,7 +8206,7 @@
 		<Tag>TXT_KEY_BONUS_SHELLFISH</Tag>
 		<English>Shellfish</English>
 		<French>Fruits de mer</French>
-		<Italian>Frutti di mare</Italian>
+		<Italian>Crostaceo</Italian>
 		<Polish>Skorupiaki</Polish>
 		<Russian>Óñòðèöû</Russian>
 	</TEXT>
@@ -8370,7 +8370,7 @@
 		<Tag>TXT_KEY_BONUS_SINTASHTA</Tag>
 		<English>Sintashta</English>
 		<Russian>Ñèíòàøòèíöû</Russian>
-		<Italian>Cittadino di sintashta</Italian>
+		<Italian>Cittadino di Sintashta</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SIOUX</Tag>
@@ -9587,7 +9587,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_VALDIVIAN</Tag>
 		<English>Valdivian</English>
-		<Italian>Cittadino di valvidia</Italian>
+		<Italian>Cittadino valvidiano</Italian>
 		<Russian>Âàëüäèâöû</Russian>
 	</TEXT>
 	<TEXT>
@@ -10045,7 +10045,7 @@
 		<Tag>TXT_KEY_BONUS_YAGHAN</Tag>
 		<English>Yaghan</English>
 		<Russian>ßãàíû</Russian>
-		<Italian>Cittadino yamano</Italian>
+		<Italian>Cittadino yamana</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_YAGUA</Tag>

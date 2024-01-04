@@ -235,7 +235,7 @@
 		<English>[ICON_BULLET]%D1_Mod%% Foreign Trade Route Yield in All Cities</English>
 		<French>[ICON_BULLET]%D1_Mod%% Les Routes commerciales étrangères sont réparties dans toutes les Villes</French>
 		<German>[ICON_BULLET]%D1_Mod%% Ertrag aus ausländischen Handelsrouten in allen Städten</German>
-		<Italian>[ICON_BULLET]%D1_Mod%% resa delle rotte cittadine estere in tutte le città.</Italian>
+		<Italian>[ICON_BULLET]%D1_Mod%% rendimento delle rotte cittadine estere in tutte le città</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod%% al rendimiento de rutas comerciales internacionales en todas las ciudades</Spanish>
 		<Polish>[ICON_BULLET]%D1_Mod%% obca trasa handlowa we wszystkich miastach</Polish>
 		<Russian>[ICON_BULLET]%D1_Mod%% Èíîñòðàíûé äîõîä ñ òîðãîâûõ ïóòåé âî âñåõ ãîðîäàõ</Russian>
@@ -487,7 +487,7 @@
 		<English>[ICON_BULLET]%d1 local stability bonus per turn in each city</English>
 		<French>[ICON_BULLET]%d1 de bonus par tour : Stabilité locale pour la ville</French>
 		<German>[ICON_BULLET]Stabilitätsbonus von %d1 pro Runde in jeder Stadt</German>
-		<Italian>[ICON_BULLET]Aumento [COLOR_GREEN]stabilità locale[COLOR_REVERT]: [COLOR_GREEN]%d1 a turno[COLOR_REVERT] in tutte le città</Italian>
+		<Italian>[ICON_BULLET]Aumento [COLOR_HIGHLIGHT_TEXT]stabilità locale[COLOR_REVERT] in città: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] a turno</Italian> <!-- unit alpha female building list hover with Revolution active -->
 		<Spanish>[ICON_BULLET]Bonificación a la estabilidad local de %d1/turno en la ciudad</Spanish>
 		<Polish>[ICON_BULLET]%d1 do lokalnego bonusu stabilności na turę w każdym mieście</Polish>
 		<Russian>[ICON_BULLET]%D1 ìåñòíîé ñòàáèëüíîñòè â õîä, â êàæäîì èç ãîðîäîâ</Russian>
@@ -497,7 +497,7 @@
 		<English>[ICON_BULLET]%d1 local instability penalty per turn</English>
 		<French>[ICON_BULLET]%d1 de pénalité par tour : Instabilité locale pour la ville</French>
 		<German>[ICON_BULLET]Instabilitätsmalus von %d1 pro Runde in jeder Stadt</German>
-		<Italian>[ICON_BULLET]Penalità instabilità locale: %d1 a turno in tutte le città</Italian>
+		<Italian>[ICON_BULLET]Penalità instabilità locale: %d1 a turno in città</Italian>
 		<Spanish>[ICON_BULLET]Penalización a la estabilidad local de %d1/turno en la ciudad</Spanish>
 		<Polish>[ICON_BULLET]%d1 do lokalnej kary niestabilności na turę w każdym mieście</Polish>
 		<Russian>[ICON_BULLET]%D1 ìåñòíîé íåñòàáèëüíîñòè â õîä, â êàæäîì èç ãîðîäîâ</Russian>
@@ -677,7 +677,7 @@
 		<English>[ICON_BULLET]Allows construction of[SPACE]</English>
 		<French>[ICON_BULLET]Permet la construction de[SPACE]</French>
 		<German>[ICON_BULLET]Spezialgebäude/-effekte:[SPACE]</German>
-		<Italian>[ICON_BULLET]Permette la costruzione di[SPACE]</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Permette la costruzione[COLOR_REVERT] degli edifici[SPACE]</Italian>
 		<Spanish>[ICON_BULLET]Permite la construcción de[SPACE]</Spanish>
 		<Polish>[ICON_BULLET]Pozwala zbudować:[SPACE]</Polish>
 		<Russian>[ICON_BULLET]Ïîçâîëÿåò ñòðîèòåëüñòâî[SPACE]</Russian>
@@ -1946,7 +1946,7 @@
 		<English>Conscription</English>
 		<French>Conscription</French>
 		<German>Wehrpflicht</German>
-		<Italian>Coscrizione</Italian>
+		<Italian>Leva obbligatoria</Italian> <!--infoscreen city list-->
 		<Spanish>
 			<Text>Servicio militar obligatorio</Text>
 			<Gender>Male</Gender>

@@ -93,7 +93,7 @@
 		<English>This building is automatically built by your citizens when its requirements are met</English>
 		<French>Ce bâtiment est construit automatiquement par vos citoyens, lorsque les éléments requis sont disponibles</French>
 		<German>[ICON_BULLET]erscheint und verschwindet automatisch, wenn die Bedingungen dafür erfüllt sind.</German>
-		<Italian>Questo edificio viene costruito automaticamente dai tuoi cittadini quando i prerequisiti sono soddisfatti</Italian>
+		<Italian>[ICON_BULLET]Viene [COLOR_HIGHLIGHT_TEXT]costruito automaticamente[COLOR_REVERT] dai tuoi cittadini quando i prerequisiti sono soddisfatti</Italian> <!-- city screen hover automated building -->
 		<Spanish>Este edificio será automáticamente construido por tus ciudadanos cuando se cumplan todos sus requisitos</Spanish>
 		<Polish>Ten budynek zostanie wzniesiony przez mieszkańców miasta gdy wymagania zostaną spełnione</Polish>
 		<Russian>Ýòî çäàíèå ñòðîèòñÿ àâòîìàòè÷åñêè âàøèìè ãðàæäàíàìè ïðè âûïîëíåíèè âñåõ íåîáõîäèìûõ óñëîâèé</Russian>
@@ -160,7 +160,7 @@
 		<English>[ICON_BULLET]Makes this City the Capital</English>
 		<French>[ICON_BULLET]Fait de cette ville la capitale</French>
 		<German>[ICON_BULLET]macht diese Stadt zur Hauptstadt</German>
-		<Italian>[ICON_BULLET]Rende capitale questa città</Italian>
+		<Italian>[ICON_BULLET]Rende [COLOR_HIGHLIGHT_TEXT]capitale[COLOR_REVERT] questa città</Italian> <!-- city screen building list Palace hover -->
 		<Spanish>[ICON_BULLET]Convierte esta ciudad en la capital</Spanish>
 	</TEXT>
 	<TEXT>
@@ -196,7 +196,7 @@
 		<English>[ICON_BULLET]%D1_Change%F2_HappyOrHealth with[SPACE]</English>
 		<French>[ICON_BULLET]%D1_Change%F2_HappyOrHealth avec [SPACE]</French>
 		<German>[ICON_BULLET]%D1_Change%F2_HappyOrHealth mit[SPACE]</German>
-		<Italian>[ICON_BULLET]Salute [COLOR_GREEN]%D1_Change%F2_HappyOrHealth[COLOR_REVERT] con [COLOR_GREEN]le forme di governo[COLOR_REVERT][SPACE]</Italian>
+		<Italian>[ICON_BULLET]Variazione salute [COLOR_HIGHLIGHT_TEXT]%D1_Change %F2_HappyOrHealth[COLOR_REVERT] con [COLOR_HIGHLIGHT_TEXT]le forme di governo[COLOR_REVERT]:[SPACE]</Italian> <!-- city screen building list palace hover -->
 		<Spanish>[ICON_BULLET]%D1_Change %F2_HappyOrHealth con[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -221,7 +221,7 @@
 		<Tag>TXT_KEY_BUILDINGHELP_DAMAGE_ALL_ATTACKER</Tag>
 		<English>[ICON_BULLET]May damage any unit as it attacks the city. %d1_Chance%% Chance to deal %d2_Damage%% Damage. (Chance modified by attacker's Dodge. Damage modified by attacker's Armor.)</English>
 		<French>[ICON_BULLET]Peut endommager toutes les unités lorsqu'elles attaquent la ville. %d1_Chance%% de Chances d'infliger %d2_Damage%% de Dégâts. (Pourcentage modifié par l'Esquive et les dégâts par l'Armure de l'Attaquant.)</French>
-		<Italian>[ICON_BULLET]Può danneggiare qualsiasi unità che attacca la città. %d1_Chance%% di chance di infliggere %d2_Damage%% di danni. (Chance modificate dalla Schivata degli attaccanti, Danno modificato dall'Armatura degli attaccanti.)</Italian>
+		<Italian>[ICON_BULLET]Può danneggiare le unità che attaccano la città con una probabilità del [COLOR_HIGHLIGHT_TEXT]%d1_Chance%%[COLOR_REVERT] (dipendente dalla schivata degli attaccanti) di infliggere il [COLOR_HIGHLIGHT_TEXT]%d2_Damage%%[COLOR_REVERT] di danno (dipendente dall'armatura degli attaccanti)</Italian> <!-- city screen hover defense perc upper right -->
 		<Polish>[ICON_BULLET]Może zadać obrażenia każdej jednostce przy ataku na miasto. %d2_Chance%% Szans do zadania: %d3_Damage%% Obrażeń. (Szansa modyfikowana przez Unik atakującego. Obrażenia nie są modyfikowane przez pancerz atakującego.)</Polish>
 		<Russian>[ICON_BULLET]Может нанести урон любому отряду, когда он атакует город. %d1_Chance%% шанса нанести %d2_Damage%% урона. (Шанс зависит от уровня уклонения атакующего. Конечный урон НЕ зависит от защиты атакующего.)</Russian>
 	</TEXT>
@@ -229,7 +229,7 @@
 		<Tag>TXT_KEY_BUILDINGHELP_DAMAGE_ALL_ATTACKER_ARMOR_EXEMPT</Tag>
 		<English>[ICON_BULLET]May damage any unit as it attacks the city. %d1_Chance%% Chance to deal %d2_Damage%% Damage. (Chance modified by attacker's Dodge. Damage NOT modified by attacker's Armor.)</English>
 		<French>[ICON_BULLET]Peut endommager toutes les unités lorsqu'elles attaquent la ville. %d1_Chance%% de Chances d'infliger %d2_Damage%% de Dégâts. (Pourcentage modifié par l'Esquive, mais pas par l'Armure de l'Attaquant.)</French>
-		<Italian>[ICON_BULLET]Può danneggiare qualsiasi unità che attacca la città. %d1_Chance%% di chance di infliggere %d2_Damage%% di danni. (Chance modificate dalla Schivata degli attaccanti, Danno NON modificato dall'Armatura degli attaccanti.)</Italian>
+		<Italian>[ICON_BULLET]Può danneggiare le unità che attaccano la città con una probabilità del [COLOR_HIGHLIGHT_TEXT]%d1_Chance%%[COLOR_REVERT] (dipendente dalla schivata degli attaccanti) di infliggere il [COLOR_HIGHLIGHT_TEXT]%d2_Damage%%[COLOR_REVERT] di danno (NON dipendente dall'armatura degli attaccanti)</Italian> <!-- city screen hover defense perc upper right -->
 		<Polish>[ICON_BULLET]Może zadać obrażenia każdej jednostce przy ataku na miasto. %d2_Chance%% Szans do zadania: %d3_Damage%% Obrażeń. (Szansa modyfikowana przez Unik atakującego. Obrażenia nie są modyfikowane przez pancerz atakującego.)</Polish>
 		<Russian>[ICON_BULLET]Может нанести урон любому отряду, когда он атакует город. %d1_Chance%% шанса нанести %d2_Damage%% урона. (Шанс зависит от уровня уклонения атакующего. Конечный урон НЕ зависит от защиты атакующего.)</Russian>
 	</TEXT>
@@ -417,7 +417,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_FREE_PROMO_CONDITION</Tag>
 		<English>[NEWLINE][ICON_BULLET]Free [COLOR_CYAN][LINK=%s1]%s2[\LINK][COLOR_REVERT] promotion for[SPACE]</English>
-		<Italian>[NEWLINE][ICON_BULLET]Promozione gratuita [COLOR_CYAN][LINK=%s1]%s2[\LINK][COLOR_REVERT] per ogni nuova[NEWLINE][ICON_BULLET]</Italian>
+		<Italian>[NEWLINE][ICON_BULLET]Promozione gratuita [COLOR_CYAN][LINK=%s1]%s2[\LINK][COLOR_REVERT] per ogni nuova[SPACE]</Italian> <!-- city screen hover automated building -->
 		<German>[NEWLINE][ICON_BULLET]freie Beförderung [COLOR_HIGHLIGHT_TEXT][LINK=%s1]%s2[\LINK][COLOR_REVERT]</German>
 		<Russian>[NEWLINE][ICON_BULLET]Бесплатная квалификация "[COLOR_CYAN][LINK=%s1]%s2[\LINK][COLOR_REVERT]" для[SPACE]</Russian>
 	</TEXT>
@@ -567,7 +567,7 @@
 		<English>[ICON_BULLET]%D1_Mod%% Great General Emergence</English>
 		<French>[ICON_BULLET]Emergence d'un Général illustre %D1_Mod%%</French>
 		<German>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1%% Produktion Großer Generäle</German>
-		<Italian>[ICON_BULLET]%D1_Mod%% comparsa di un Grande Generale</Italian>
+		<Italian>[ICON_BULLET]%D1_Mod%% comparsa di un gran generale</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod%% a la aparición de Gran general</Spanish>
 		<Russian>[ICON_BULLET]%D1_Mod%% шанс появления великого полководца</Russian>
 	</TEXT>
@@ -591,7 +591,7 @@
 		<Tag>TXT_KEY_BUILDINGHELP_GLOBAL_BUILDINGCOST_MOD</Tag>
 		<English>[NEWLINE][ICON_BULLET]National %d1%% cost modifier:[SPACE]</English>
 		<German>[NEWLINE][ICON_BULLET]global %d1%% Kosten für:[SPACE]</German>
-		<Italian>[NEWLINE][ICON_BULLET]Modificatore costo nazionale %d1%% per:[SPACE]</Italian>
+		<Italian>[NEWLINE][ICON_BULLET]Modificatore costo nazionale [COLOR_HIGHLIGHT_TEXT]%d1%%[COLOR_REVERT] per gli edifici:[SPACE]</Italian> <!-- city screen hover on building unique culture -->
 		<Russian>[NEWLINE][ICON_BULLET]Общегосударственное изменение цены на %d1%%:[SPACE]</Russian>
 	</TEXT>
 	<TEXT>
@@ -644,7 +644,7 @@
 		<English>None</English>
 		<French>Aucun</French>
 		<German>Keine</German>
-		<Italian>Nessuno</Italian>
+		<Italian>Nessuna</Italian> <!-- building list infoscreen -->
 		<Spanish>Ninguno</Spanish>
 		<Polish>Brak</Polish>
 		<Russian>Нет</Russian>
@@ -654,7 +654,7 @@
 		<English>Wonders</English>
 		<French>Merveilles</French>
 		<German>Wunder</German>
-		<Italian>Meraviglie</Italian>
+		<Italian>Meravig</Italian> <!-- building list infoscreen -->
 		<Spanish>Maravillas</Spanish>
 		<Polish>Cuda</Polish>
 		<Russian>Чудеса</Russian>
@@ -838,7 +838,7 @@
 		<Tag>TXT_KEY_BUILDINGHELP_MAINTENANCE</Tag>
 		<English>[ICON_BULLET]-%s1 [ICON_GOLD] for building maintenance</English>
 		<French>[ICON_BULLET]-%s1 [ICON_GOLD] Entretien de Bâtiments</French>
-		<Italian>[ICON_BULLET]-%s1 [ICON_GOLD] dei costi mantenimento dell'edificio</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Costi di mantenimento[COLOR_REVERT] degli edifici: [COLOR_HIGHLIGHT_TEXT]-%s1[COLOR_REVERT] [ICON_GOLD]</Italian> <!-- city screen hover on building Path -->
 		<Spanish>[ICON_BULLET]-%s1[ICON_GOLD] para mantenimiento del edificio</Spanish>
 		<Polish>[ICON_BULLET]-%s1 [ICON_GOLD] do utrzymania budynku</Polish>
 		<Russian>[ICON_BULLET]-%s1 [ICON_GOLD] за содержание здания</Russian>
@@ -848,7 +848,7 @@
 		<English>[ICON_BULLET]%D1_Mod%% [LINK=CONCEPT_MAINTENANCE]Maintenance[\LINK]</English>
 		<French>[ICON_BULLET][LINK=CONCEPT_MAINTENANCE]Entretien[\LINK] %D1_Mod%%</French>
 		<German>[ICON_BULLET]%D1_Mod%% [LINK=CONCEPT_MAINTENANCE]Unterhalt[\LINK]</German>
-		<Italian>[ICON_BULLET]%D1_Mod%% di [LINK=CONCEPT_MAINTENANCE]mantenimento[\LINK]</Italian>
+		<Italian>[ICON_BULLET][LINK=CONCEPT_MAINTENANCE]Costi di mantenimento[\LINK]: [COLOR_HIGHLIGHT_TEXT]%D1_Mod%%[COLOR_REVERT]</Italian> <!-- city screen buiding list Palace buildig hover -->
 		<Spanish>[ICON_BULLET]%D1_Mod%% al [LINK=CONCEPT_MAINTENANCE]mantenimiento[\LINK]</Spanish>
 		<Russian>[ICON_BULLET]%D1_Mod%% [LINK=CONCEPT_MAINTENANCE]Содержание[\LINK]</Russian>
 	</TEXT>
@@ -922,14 +922,14 @@
 		<English>[SPACE](National Wonder: %d1_Num Left)</English>
 		<French>[SPACE](Merveille nationale : reste %d1_Num)</French>
 		<German>[SPACE](Nationales Wunder: %d1_Num übrig)</German>
-		<Italian>[SPACE](Meraviglia Nazionale: %d1_Num [NUM1:rimasta:rimaste])</Italian>
+		<Italian>[ICON_BULLET]Meraviglia nazionale: [COLOR_HIGHLIGHT_TEXT]%d1_Num[COLOR_REVERT] [NUM1:rimasta:rimaste]</Italian> <!-- city screen building list Palace hover -->
 		<Spanish>[SPACE](Maravilla nacional: %d1_Num [NUM1:restante:restantes])</Spanish>
 		<Russian>[SPACE](Национальное чудо: %d1_Num осталось)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_NEEDED_TO_BUILD</Tag>
 		<English>[ICON_BULLET]May be needed to Build[SPACE]</English>
-		<Italian>[ICON_BULLET]Potrebbe essere indispensabile per costruire:[NEWLINE][TAB]</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Necessario[COLOR_REVERT] per costruire (se non ancora in possesso): </Italian> <!-- hover on building rock gatherer -->
 		<German>[ICON_BULLET]optional erforderlich zum Bau von:[SPACE]</German>
 		<Russian>[ICON_BULLET]Может потребоваться для строительства[SPACE]</Russian>
 	</TEXT>
@@ -1035,7 +1035,7 @@
 		<English>[ICON_BULLET]Citizens Will Rebel against enemy captors %d1% longer</English>
 		<French>[ICON_BULLET]Les Citoyens se rebellent contre l'envahisseur %d1% plus longtemps</French>
 		<German>[ICON_BULLET]Bürger werden gegen feindliche Besatzer %d1% länger revoltieren</German>
-		<Italian>[ICON_BULLET]I cittadini si ribelleranno contro gli invasori nemici %d1% più a lungo</Italian>
+		<Italian>[ICON_BULLET]I cittadini si ribelleranno contro eventuali invasori più a lungo del [COLOR_HIGHLIGHT_TEXT]%d1%[COLOR_REVERT]</Italian> <!-- city screen building list Palace hover -->
 		<Spanish>[ICON_BULLET]Los ciudadanos se rebelarán contra los conquistadores enemigos un %d1% más de tiempo</Spanish>
 		<Polish>[ICON_BULLET]Mieszkańcy będą się buntować wobec wrogich zdobywców %d1% dłużej</Polish>
 		<Russian>[ICON_BULLET]Горожане будут бунтовать против вражеских захватчиков на %d1% дольше</Russian>
@@ -1130,7 +1130,7 @@
 		<English>[ICON_BULLET]Reduces [LINK=CONCEPT_MAINTENANCE]Maintenance[\LINK] in Nearby Cities</English>
 		<French>[ICON_BULLET]Réduit le coût [LINK=CONCEPT_MAINTENANCE]d'entretien[\LINK] des villes voisines</French>
 		<German>[ICON_BULLET]reduziert [LINK=CONCEPT_MAINTENANCE]laufende Kosten[\LINK] nahe gelegener Städte</German>
-		<Italian>[ICON_BULLET]Riduce il [LINK=CONCEPT_MAINTENANCE]mantenimento[\LINK] nelle città vicine</Italian>
+		<Italian>[ICON_BULLET]Riduce i [LINK=CONCEPT_MAINTENANCE][COLOR_HIGHLIGHT_TEXT]costi di mantenimento[COLOR_REVERT][\LINK] nelle città vicine</Italian> <!-- city screen building list Palace hover -->
 		<Spanish>[ICON_BULLET]Reduce el [LINK=CONCEPT_MAINTENANCE]mantenimiento[\LINK] de las ciudades cercanas</Spanish>
 		<Russian>[ICON_BULLET]Уменьшает [LINK=CONCEPT_MAINTENANCE]обслуживание[\LINK] в ближайших городах</Russian>
 	</TEXT>
@@ -1158,7 +1158,7 @@
 		<English>[ICON_BULLET]Required to Build[SPACE]</English>
 		<French>[ICON_BULLET]Requis pour construire :[SPACE]</French>
 		<German>[ICON_BULLET]erforderlich zum Bau von:[SPACE]</German>
-		<Italian>[ICON_BULLET]Necessario per costruire:[NEWLINE][ICON_BULLET]</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Necessario[COLOR_REVERT] per costruire:[SPACE]</Italian> <!-- city screen hover on a local culture building -->
 		<Spanish>[ICON_BULLET]Se requiere para construir[SPACE]</Spanish>
 		<Russian>[ICON_BULLET]Необходимо построить[SPACE]</Russian>
 	</TEXT>
@@ -1167,7 +1167,7 @@
 		<English>[ICON_BULLET]Required to Train[SPACE]</English>
 		<French>[ICON_BULLET]Requis pour entraîner :[SPACE]</French>
 		<German>[ICON_BULLET]erforderlich für die Ausbildung von:[SPACE]</German>
-		<Italian>[ICON_BULLET]Necessario per addestrare:[NEWLINE][ICON_BULLET]</Italian>
+		<Italian>[ICON_BULLET]Necessario per addestrare:[SPACE]</Italian> <!-- city screen building list Palace building -->
 		<Spanish>[ICON_BULLET]Se requiere para entrenar[SPACE]</Spanish>
 		<Russian>[ICON_BULLET]Необходимо обучить[SPACE]</Russian>
 	</TEXT>
@@ -1186,7 +1186,7 @@
 		<English>[COLOR_POSITIVE_TEXT]Requires Civics to be Active[COLOR_REVERT]</English>
 		<French>[COLOR_POSITIVE_TEXT]Requiert une doctrine spécifique[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_POSITIVE_TEXT]erfordert eine bestimmte Gesellschaftsform[COLOR_REVERT]</German>
-		<Italian>[COLOR_POSITIVE_TEXT]Richiede una certa forma di governo[COLOR_REVERT]</Italian>
+		<Italian>[ICON_BULLET]Richiede che le forma di governo di cui sopra sia [COLOR_POSITIVE_TEXT]attiva[COLOR_REVERT]</Italian> <!-- building alpha female building list hover -->
 		<Spanish>[COLOR_POSITIVE_TEXT]Requiere el principio para estar activo[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_POSITIVE_TEXT]Wymaga doktryny do działania[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_POSITIVE_TEXT]Необходимо принять парадигму[COLOR_REVERT]</Russian>
@@ -1235,7 +1235,7 @@
 		<English>[COLOR_WARNING_TEXT]Requires[SPACE][COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Requiert :[SPACE][COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]Benötigt[SPACE][COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Richiede[SPACE][COLOR_REVERT]</Italian>
+		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Richiede[SPACE]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Requiere[SPACE][COLOR_REVERT]</Spanish>
 		<Russian>[COLOR_WARNING_TEXT]Требования[SPACE][COLOR_REVERT]</Russian>
 	</TEXT>
@@ -1427,7 +1427,7 @@
 		<English>[ICON_BULLET]Stores %d1_Mod%% of [ICON_FOOD] after Growth</English>
 		<French>[ICON_BULLET]Stocke %d1_Mod%% de [ICON_FOOD] après la croissance</French>
 		<German>[ICON_BULLET]speichert %d1_Mod%% [ICON_FOOD] nach einem Stadtwachstum</German>
-		<Italian>[ICON_BULLET]Immagazzina %d1_Mod%% di [ICON_FOOD] dopo la crescita</Italian>
+		<Italian>[ICON_BULLET]Conserva il [COLOR_HIGHLIGHT_TEXT]%d1_Mod%%[COLOR_REVERT] del cibo [ICON_FOOD] consumato per la crescita</Italian> <!-- hover on the building Storage Pit -->
 		<Spanish>[ICON_BULLET]Almacena el %d1_Mod%% de los [ICON_FOOD] tras el crecimiento</Spanish>
 		<Russian>[ICON_BULLET]Оставляет %d1_Mod%% [ICON_FOOD] после прироста</Russian>
 	</TEXT>
@@ -1483,7 +1483,7 @@
 		<English>[ICON_BULLET]%D1_Change Trade Routes</English>
 		<French>[ICON_BULLET]%D1_Change Routes commerciales</French>
 		<German>[ICON_BULLET]%D1_Change Handelswege</German>
-		<Italian>[ICON_BULLET]Numero di rotte commerciali: %D1_Change</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Numero di rotte[COLOR_REVERT] commerciali: [COLOR_HIGHLIGHT_TEXT]%D1_Change[COLOR_REVERT]</Italian> <!-- building krakatoa building list hover -->
 		<Spanish>[ICON_BULLET]%D1_Change rutas comerciales</Spanish>
 		<Russian>[ICON_BULLET]%D1_Change торговые пути</Russian>
 	</TEXT>
@@ -1501,7 +1501,7 @@
 		<English>[ICON_BULLET]%D1_Mod%% Trade Route Yield</English>
 		<French>[ICON_BULLET]Production de la route commerciale %D1_Mod%%</French>
 		<German>[ICON_BULLET]%D1_Mod%% Erträge durch Handelswege</German>
-		<Italian>[ICON_BULLET]%D1_Mod%% al rendimento della rotta commerciale</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Rendimento[COLOR_REVERT] delle rotte commerciali: [COLOR_HIGHLIGHT_TEXT]%D1_Mod%%[COLOR_REVERT]</Italian> <!-- city screen hover on building Path -->
 		<Spanish>[ICON_BULLET]%D1_Mod%% al rendimiento de la ruta comercial</Spanish>
 		<Russian>[ICON_BULLET]%D1_Mod%% доходности торгового пути</Russian>
 	</TEXT>
@@ -1520,7 +1520,7 @@
 		<English>Can turn 1 Citizen into [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT]</English>
 		<French>Peut transformer un citoyen en [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT]</French>
 		<German>Kann 1 Bürger in einen Spezialisten des Typs [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT] verwandeln</German>
-		<Italian>può convertire un cittadino in uno specialista di tipo [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT]</Italian> <!--tech Cultural identity pedia -->
+		<Italian>l'edificio può [COLOR_HIGHLIGHT_TEXT]convertire un cittadino[COLOR_REVERT] in uno specialista di tipo [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT]</Italian> <!--tech Cultural identity pedia -->
 		<Spanish>Puede convertir a un ciudadano en [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT]</Spanish>
 		<Polish>Możesz zamienić jednego obywatela do [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT]</Polish>
 		<Russian>Может превратить 1 горожанина в [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT]</Russian>
@@ -1640,7 +1640,7 @@
 		<English>[ICON_BULLET]World Wonder (%d1_Num Allowed)</English>
 		<French>[ICON_BULLET]Merveille mondiale (limite : %d1_Num)</French>
 		<German>[ICON_BULLET]Weltwunder (%d1_Num zulässig)</German>
-		<Italian>[ICON_BULLET]Grande Meraviglia (%d1_Num [NUM1:permessa:permesse])</Italian>
+		<Italian>[ICON_BULLET]Meraviglia mondiale (%d1_Num [NUM1:permessa:permesse])</Italian>
 		<Spanish>[ICON_BULLET]Maravilla del mundo (%d1_Num [NUM1:permitida:permitidas])</Spanish>
 		<Russian>[ICON_BULLET]Мировое чудо (может быть только %d1_Num)</Russian>
 	</TEXT>
@@ -1649,7 +1649,7 @@
 		<English>[SPACE](World Wonder: %d1_Num Left)</English>
 		<French>[SPACE](Merveille mondiale : reste %d1_Num)</French>
 		<German>[SPACE](Weltwunder: %d1_Num übrig)</German>
-		<Italian>[SPACE](Grande Meraviglia: %d1_Num [NUM1:rimasta:rimaste])</Italian>
+		<Italian>[SPACE](Meraviglia mondiale: %d1_Num [NUM1:rimasta:rimaste])</Italian>
 		<Spanish>[SPACE](Maravilla del mundo: %d1_Num [NUM1:restante:restantes])</Spanish>
 		<Russian>[SPACE](Мировое чудо: %d1_Num осталось)</Russian>
 	</TEXT>

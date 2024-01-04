@@ -29,7 +29,7 @@
 		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_IMMIGRANT</Tag>
 		<English>Upgrade to Immigrant.</English>
 		<French>Convertir en Immigrant</French>
-		<Italian>Converti prigioniero in un immigrante.</Italian>
+		<Italian>Converti prigioniero in un emigrante.</Italian>
 		<Polish>Ulepsz do Immigranta.</Polish>
 		<Russian>Улучшить до иммигранта.</Russian>
 	</TEXT>
@@ -316,7 +316,7 @@
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_IMMIGRANT</Tag>
 		<English>Upgrade a Captive to an Immigrant.</English>
 		<French>Convertir le prisonnier en Immigrant.</French>
-		<Italian>Converti il prigioniero in un immigrante.</Italian>
+		<Italian>Converti il prigioniero in un emigrante.</Italian>
 		<Polish>Ulepsz Jeńca do Immigranta.</Polish>
 		<Russian>Улучшить пленника до иммигранта.</Russian>
 	</TEXT>
@@ -324,7 +324,7 @@
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_IMMIGRANT_MESSAGE</Tag>
 		<English>Your Captive has been upgraded to an Immigrant.</English>
 		<French>Votre Prisonnier a été converti en Immigrant.</French>
-		<Italian>Il prigioniero è diventato un immigrante.</Italian>
+		<Italian>Il prigioniero è diventato un emigrante.</Italian>
 		<Polish>Twój jeniec został ulepszony do Immigranta.</Polish>
 		<Russian>Ваш пленник был повышен до Иммигранта.</Russian>
 	</TEXT>
@@ -449,7 +449,7 @@
 		<Tag>TXT_KEY_UNIT_CAPTIVE_CIVILIAN_HELP</Tag>
 		<English>[ICON_BULLET] May join your cities (of less than size 7) or be sacrificed for culture or production. If you are running Slavery can be sold into slavery.</English>
 		<French>[ICON_BULLET] Peut rejoindre vos villes (de moins de 7 de population) ou être sacrifiés pour de la culture ou de la production. Si vous acceptez l'esclavage, peux être vendus en tant qu'esclave.</French>
-		<Italian>[ICON_BULLET] Può unirsi alle tue città con popolazione inferiore a 7 o essere sacrificato per cultura o produzione. Se hai attiva la visone del mondo schiavitù, può essere venduto come schiavo.</Italian>
+		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]unirsi alle città[COLOR_REVERT] con popolazione inferiore a [COLOR_HIGHLIGHT_TEXT]7[COLOR_REVERT], essere [COLOR_HIGHLIGHT_TEXT]sacrificata[COLOR_REVERT] per [COLOR_HIGHLIGHT_TEXT]cultura[COLOR_REVERT] o [COLOR_HIGHLIGHT_TEXT]produzione[COLOR_REVERT] o essere [COLOR_HIGHLIGHT_TEXT]venduta come schiavo[COLOR_REVERT] (se la [COLOR_HIGHLIGHT_TEXT]visione del mondo schiavitù[COLOR_REVERT] è attiva)</Italian> <!-- unit Captive - Civilian -->
 		<Russian>[ICON_BULLET] Можно поселить в ваших городах (только где менее 7 жителей) или принести в жертву для очков культуры или производства. А также продать в рабство, если задействовано соответствующее мировоззрение.</Russian>
 	</TEXT>
 	<TEXT>
@@ -463,7 +463,7 @@
 		<Tag>TXT_KEY_UNIT_CAPTIVE_IMMIGRANT</Tag>
 		<English>Captive - Immigrant</English>
 		<French>Prisonnier - Immigrant</French>
-		<Italian>Prigioniero immigrante</Italian>
+		<Italian>Prigioniero emigrante</Italian>
 		<Russian>Пленник - иммигрант</Russian>
 	</TEXT>
 	<TEXT>
@@ -477,7 +477,7 @@
 		<Tag>TXT_KEY_UNIT_CAPTIVE_MILITARY_HELP</Tag>
 		<English>[ICON_BULLET]Upgrade to Military or Worker unit. Force build [COLOR_UNIT_TEXT]Building[COLOR_REVERT]. Sacrifice or join city.</English>
 		<French>[ICON_BULLET]Peut être converti en unité militaire ou ouvrière. Peut construire de manière forcée un [COLOR_UNIT_TEXT]aménagement[COLOR_REVERT] ou [COLOR_UNIT_TEXT]Bâtiment[COLOR_REVERT]. Peut être Sacrifié ou rejoindre une ville.</French>
-		<Italian>[ICON_BULLET]Può essere convertito in un unità lavoratore o in un'unità militare. Può essere costretto a realizzare [COLOR_UNIT_TEXT]edifici[COLOR_REVERT]. Può essere sacrificato o essere aggiunto alla città.</Italian>
+		<Italian>[ICON_BULLET]L'unità può essere [COLOR_HIGHLIGHT_TEXT]convertita[COLOR_REVERT] in un [COLOR_HIGHLIGHT_TEXT]unità lavoratore[COLOR_REVERT] o in un'[COLOR_HIGHLIGHT_TEXT]unità militare[COLOR_REVERT],  può [COLOR_HIGHLIGHT_TEXT]costruire edifici[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]essere sacrificata[COLOR_REVERT] o [COLOR_REVERT]unirsi alla città[COLOR_HIGHLIGHT_TEXT]</Italian> <!-- unit Captive - military -->
 		<Russian>[ICON_BULLET]Можно улучшить в военное или рабочее подразделение, заставить ускорить строительство [COLOR_UNIT_TEXT]зданий[COLOR_REVERT], принести в жертву или поселить в городе.</Russian>
 	</TEXT>
 	<TEXT>
@@ -505,8 +505,8 @@
 		<Tag>TXT_KEY_UNIT_FREED_SLAVE_HELP</Tag>
 		<English>[ICON_BULLET]May be set free (join your city population as food) or upgraded to workers.</English>
 		<French>[ICON_BULLET]Peut être libéré (rejoint votre ville sous forme de réserve de nourriture) ou amélioré en ouvriers.</French>
-		<Italian>Può essere liberato (che equivale ad aggiungere cibo alla città) o essere convertito in lavoratore.</Italian>
 		<Russian>[ICON_BULLET]Может быть освобожден (увеличит количество еды в городе) или улучшен до рабочего.</Russian>
+		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]essere liberata[COLOR_REVERT] (si unirà alla popolazione della città sotto forma di [COLOR_HIGHLIGHT_TEXT]cibo[COLOR_REVERT]) o essere [COLOR_HIGHLIGHT_TEXT]convertita in un'unità lavoratore[COLOR_REVERT]</Italian> <!-- unit Freed Slave -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FREED_SLAVE_PEDIA</Tag>

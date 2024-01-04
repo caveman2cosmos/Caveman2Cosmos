@@ -29,7 +29,7 @@
 		<English>Fresh Water</English>
 		<French>Eau douce</French>
 		<German>Süßwasser</German>
-		<Italian>Acqua dolce</Italian>
+		<Italian>Acqua dolce</Italian> <!-- hover on a plot with a river -->
 		<Spanish>Agua dulce</Spanish>
 		<Russian>Пресная вода</Russian>
 	</TEXT>
@@ -38,7 +38,7 @@
 		<English>[NEWLINE]Movement Cost: %d1[ICON_MOVES]</English>
 		<German>[NEWLINE]Fortbewegungskosten: %d1[ICON_MOVES]</German>
 		<French>[NEWLINE]Coût de dépl.: %d1[ICON_MOVES]</French>
-		<Italian>[NEWLINE]Costo d'attraversamento: %d1 [ICON_MOVES]</Italian>
+		<Italian>[NEWLINE]Costo d'[COLOR_HIGHLIGHT_TEXT]attraversamento[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] [ICON_MOVES]</Italian> <!-- hover on plot -->
 		<Russian>[NEWLINE]Цена движения: %d1[ICON_MOVES]</Russian>
 	</TEXT>
 	<TEXT>
@@ -47,7 +47,7 @@
 		<French>[NEWLINE]Dépl. sur route : %s1(%s2)</French>
 		<German>[NEWLINE]Weg-Fortbewegung: %s1(%s2)</German>
 		<Russian>[NEWLINE]Очков движения: %s1(%s2)</Russian>
-		<Italian>[NEWLINE]Modificatore percorso: %s1(%s2)</Italian>
+		<Italian>[NEWLINE]Modificatore percorso: [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT] ([COLOR_HIGHLIGHT_TEXT]%s2[COLOR_REVERT])</Italian> <!-- hover on plot when there is a path -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TERRAINHELP_BUILD_MODIFIER</Tag>

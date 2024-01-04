@@ -30,14 +30,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_EXTRA</Tag>
 		<English>[ICON_BULLET]Extra unit upkeep: %s1 [ICON_GOLD]</English>
-		<Italian>[ICON_BULLET]Costi extra di manutenzione unità: %s1 [ICON_GOLD]</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Costi extra di mantenimento[COLOR_REVERT] per l'unità: [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT] [ICON_GOLD]</Italian> <!-- Subcombat type Sea Animals (Tales) -->
 		<German>[ICON_BULLET]Zusätzliche laufende Kosten: %s1 [ICON_GOLD]</German>
 		<Russian>[ICON_BULLET]Содержание дополнительных подразделений: %s1 [ICON_GOLD]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_CIVILIAN</Tag>
 		<English>[ICON_BULLET]Free civilian unit upkeep: %d1 [ICON_GOLD]</English>
-		<Italian>[ICON_BULLET]Costi di manutenzione gratuiti dell'unità civile: %d1 [ICON_GOLD]</Italian>
+		<Italian>[ICON_BULLET]Costi di mantenimento gratuiti dell'unità civile: %d1 [ICON_GOLD]</Italian>
 		<German>[ICON_BULLET]Kostenübernahme für zivile Einheiten: %d1 [ICON_GOLD]</German>
 		<Russian>[ICON_BULLET]Поддержка бесплатных гражданских подразделений: %d1 [ICON_GOLD]</Russian>
 	</TEXT>
@@ -72,7 +72,7 @@
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_MODIFIER_BASE</Tag>
 		<English>[ICON_BULLET]Base unit upkeep change: %d1%%</English>
 		<German>[ICON_BULLET]laufende Kosten (Grundwert): %d1%% </German>
-		<Italian>[ICON_BULLET]Modifica ai costi di mantenimento base dell'unità: %d1%%</Italian>
+		<Italian>[ICON_BULLET]Costi di mantenimento base dell'unità: %d1%%</Italian>
 		<Russian>[ICON_BULLET]Изменение содержания базового подразделения: %d1%%</Russian>
 	</TEXT>
 	<TEXT>

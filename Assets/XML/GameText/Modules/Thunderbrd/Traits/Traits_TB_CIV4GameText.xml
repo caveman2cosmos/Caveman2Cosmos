@@ -2788,6 +2788,7 @@ Benefits:
 		<English>Foreigner III</English>
 		<French>Étranger III</French>
 		<Russian>Êîñìîïîëèò III</Russian>
+		<Italian>Straniero III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_FOREIGN3_PEDIA</Tag>
@@ -3245,14 +3246,14 @@ Benefits:
 		<English>Imperialist CT</English>
 		<French>Impérialiste</French>
 		<Russian>Èìïåðèàëèñò</Russian>
-		<Italian>Idealista</Italian>
+		<Italian>Imperialista</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_IMPERIALIST1</Tag>
 		<English>Imperialist I</English>
 		<French>Impérialiste I</French>
 		<Russian>Èìïåðèàëèñò I</Russian>
-		<Italian>Idealista I</Italian>
+		<Italian>Imperialista I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_IMPERIALIST1_PEDIA</Tag>
@@ -3287,7 +3288,7 @@ Penalties:
 		<English>Imperialist II</English>
 		<French>Impérialiste II</French>
 		<Russian>Èìïåðèàëèñò II</Russian>
-		<Italian>Idealista II</Italian>
+		<Italian>Imperialista II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_IMPERIALIST2_PEDIA</Tag>
@@ -3321,7 +3322,7 @@ Penalties:
 		<English>Imperialist III</English>
 		<French>Impérialiste III</French>
 		<Russian>Èìïåðèàëèñò III</Russian>
-		<Italian>Idealista III</Italian>
+		<Italian>Imperialista III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_COMPLEX_IMPERIALIST3_PEDIA</Tag>
@@ -12239,14 +12240,14 @@ Penalties:
 		<English>Progressive CT</English>
 		<French>Progressiste</French>
 		<Russian>Ïîçèòèâèñò</Russian>
-		<Italian>Progressista</Italian>
+		<Italian>Riformista</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROGRESSIVE1</Tag>
 		<English>Progressive I</English>
 		<French>Progressiste I</French>
 		<Russian>Ïîçèòèâèñò I</Russian>
-		<Italian>Progressista I</Italian>
+		<Italian>Riformista I</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROGRESSIVE1_PEDIA</Tag>
@@ -12294,7 +12295,7 @@ Penalties:
 		<English>Progressive II</English>
 		<French>Progressiste II</French>
 		<Russian>Ïîçèòèâèñò II</Russian>
-		<Italian>Progressista II</Italian>
+		<Italian>Riformista II</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROGRESSIVE2_PEDIA</Tag>
@@ -12344,7 +12345,7 @@ Penalties:
 		<English>Progressive III</English>
 		<French>Progressiste III</French>
 		<Russian>Ïîçèòèâèñò III</Russian>
-		<Italian>Progressista III</Italian>
+		<Italian>Riformista III</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROGRESSIVE3_PEDIA</Tag>

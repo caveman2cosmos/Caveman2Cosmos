@@ -48,7 +48,7 @@
 		<English>Reveal</English>
 		<French>Révélé par :</French>
 		<German>enthüllt</German>
-		<Italian>Rivelato dalla tecnologia</Italian>
+		<Italian>Rivelata dalla tecnologia</Italian>
 		<Spanish>Revela</Spanish>
 		<Russian>Открыть</Russian>
 	</TEXT>
@@ -59,8 +59,8 @@
 		<German>enthüllt/verfügbar</German>
 		<Spanish>Revelado y activado</Spanish>
 		<Polish>Odkryte i Włączone</Polish>
+		<Italian>Rivelata o resa disponibile</Italian>
 		<Russian>Открыть/Включить</Russian>
-		<Italian>Rivela o rende disponibile</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_BONUS_LOCALLY</Tag>
@@ -84,8 +84,8 @@
 		<French>Obsolète</French>
 		<German>veraltet</German>
 		<Polish>Przestarzałe</Polish>
+		<Italian>Obsoleta</Italian>
 		<Russian>Устаревший</Russian>
-		<Italian>Inattivo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_BONUS_TRADE</Tag>
@@ -101,8 +101,8 @@
 		<English>Build:</English>
 		<French>Est construit par :</French>
 		<German>gebaut durch</German>
+		<Italian>Costruito da:</Italian>
 		<Russian>Построить:</Russian>
-		<Italian>Costruito:</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_BUILD_TIME</Tag>
@@ -607,7 +607,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>Spezialisten</German>
-		<Italian>Specialisti</Italian>
+		<Italian>Cittadini specialisti</Italian>
 		<Spanish>
 			<Text>Especialistas</Text>
 			<Gender>Male</Gender>
@@ -731,7 +731,7 @@
 		<Tag>TXT_KEY_PEDIA_CATEGORY_WORKER_BUILDS</Tag>
 		<English>Worker Builds</English>
 		<French>Constructions des Ouvriers</French>
-		<Italian>Compiti dei lavoratori</Italian>
+		<Italian>Azioni dei lavoratori</Italian>
 		<German>Arbeitsaufträge</German>
 		<Russian>Постройки рабочих</Russian>
 	</TEXT>
@@ -741,7 +741,7 @@
 		<French>Construit :</French>
 		<German>Ergebnis</German>
 		<Russian>Построить:</Russian>
-		<Italian>Costruzione di:</Italian>
+		<Italian>Costruisce:</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CONSUMES_WORKER</Tag>
@@ -885,7 +885,7 @@
 		<Spanish>Reemplazado por</Spanish>
 		<Polish>Zastąpione przez</Polish>
 		<Russian>Заменен на</Russian>
-		<Italian>Decade alla scoperte della tecnologia</Italian>
+		<Italian>Decade con la costruzione di:</Italian> <!-- pedia any building, city screen decaded automatic building hover -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_REPLACEMENT_FOR</Tag>
@@ -893,7 +893,7 @@
 		<French>Remplacement de :</French>
 		<German>ersetzt</German>
 		<Russian>Замена для:</Russian>
-		<Italian>Sostituisce:</Italian>
+		<Italian>Sostituisce l'edificio:</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_REQUIRES</Tag>
@@ -1004,7 +1004,7 @@
 		<English>[ICON_BULLET]Can be captured</English>
 		<French>[ICON_BULLET]Peut être capturé</French>
 		<German>[ICON_BULLET]kann gefangen werden</German>
-		<Italian>[ICON_BULLET]L'unità può essere catturata</Italian>
+		<Italian>[ICON_BULLET]Quest'unità può essere [COLOR_HIGHLIGHT_TEXT]catturata[COLOR_REVERT]</Italian> <!-- unit Storyteller -->
 		<Spanish>[ICON_BULLET]Se puede capturar</Spanish>
 		<Polish>[ICON_BULLET]Może zostać przejęty</Polish>
 		<Russian>[ICON_BULLET]Можно захватить</Russian>
@@ -1014,7 +1014,7 @@
 		<English>[ICON_BULLET]Can be drafted when requirements are met</English>
 		<French>[ICON_BULLET]Peut être recrutés lorsque les conditions sont réunies</French>
 		<German>[ICON_BULLET]Einheit kann rekrutiert werden, wenn die Bedingungen erfüllt sind</German>
-		<Italian>[ICON_BULLET]L'unità può essere reclutata quando i requisiti sono soddisfatti</Italian>
+		<Italian>[ICON_BULLET]L'unità può [COLOR_HIGHLIGHT_TEXT]essere reclutata[COLOR_REVERT] con la [COLOR_HIGHLIGHT_TEXT]leva obbligatoria[COLOR_REVERT] quando i requisiti sono soddisfatti</Italian> <!-- unit Stones Thrower -->
 		<Spanish>[ICON_BULLET]Se puede reclutar cuando se cumplan las condiciones</Spanish>
 		<Polish>[ICON_BULLET]Może zostać zwerbowany gdy są spełnione wymagania</Polish>
 		<Russian>[ICON_BULLET]Можно подготовить при выполнении условий</Russian>
@@ -1024,7 +1024,7 @@
 		<English>[ICON_BULLET]Ignores Building Defense</English>
 		<French>[ICON_BULLET]Ignore les Protections des Bâtiments</French>
 		<German>[ICON_BULLET]Ignoriert Verteidigung durch Gebäude</German>
-		<Italian>[ICON_BULLET]Ignora le difese degli edifici</Italian>
+		<Italian>[ICON_BULLET]L'unità [COLOR_HIGHLIGHT_TEXT]ignora le difese[COLOR_REVERT] degli edifici</Italian> <!-- unit Sloop of war -->
 		<Spanish>[ICON_BULLET]Ignora la defensa por edificios</Spanish>
 		<Polish>[ICON_BULLET]Ignoruje Obronę Budynku</Polish>
 		<Russian>[ICON_BULLET]Игнорирует защиту зданий</Russian>
@@ -1045,7 +1045,7 @@
 		<Spanish>Construcción de maravillas: probabilidad del [BOLD]%d1%%[\BOLD][NEWLINE]</Spanish>
 		<Polish>Ukończenie Cudu: [BOLD]%d1%%[\BOLD] Szans[NEWLINE]</Polish>
 		<Russian>Строительство чуда: [BOLD]%d1%%[\BOLD] шанс[NEWLINE]</Russian>
-		<Italian>Costruzione della meraviglie: [BOLD]%d1%%[\BOLD] di possibilità[NEWLINE]</Italian><!--Leaders in the pedia-->
+		<Italian>Costruzione delle meraviglie: [BOLD]%d1%%[\BOLD] di probabilità[NEWLINE]</Italian><!--Leaders in the pedia-->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_WORKRATE</Tag>
@@ -1055,7 +1055,7 @@
 		<Spanish>Velocidad de trabajo: %d1</Spanish>
 		<Polish>Ocena pracy: %d1</Polish>
 		<Russian>Скорость работы: %d1</Russian>
-		<Italian>Tasso di lavoro: %d1</Italian>
+		<Italian>Velocità di lavoro: %d1</Italian> <!-- unit Worker -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_PEDIA_NON_COMBAT</Tag>

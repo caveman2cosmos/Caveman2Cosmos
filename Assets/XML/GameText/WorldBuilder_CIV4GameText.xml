@@ -91,7 +91,7 @@
 		<Tag>TXT_KEY_WB_BASE_YIELD</Tag>
 		<English>Base %s1: %d2</English>
 		<Russian>Базовый %s1: %d2</Russian>
-		<Italian>Resa base %s1: %d2</Italian>
+		<Italian>Rendimento base %s1: %d2</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_BRIDGE_BUILDING</Tag>
@@ -635,7 +635,7 @@
 		<Tag>TXT_KEY_WB_UPGRADE_PROGRESS</Tag>
 		<English>Upgrade Turns: %d1</English>
 		<French>Tours pour amélioration: %d1</French>
-		<Italian>Turni per l'upgrade: %d1</Italian>
+		<Italian>Turni per la modernizzazione: %d1</Italian>
 		<Spanish>Turnos para ampliar: %d1</Spanish>
 		<Polish>Tur do Ulepszenia: %d1</Polish>
 		<Russian>Ходов улучшения: %d1</Russian>

@@ -320,7 +320,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HERD_MAMMOTH_PEDIA</Tag>
 		<English>Only subdued mammoth can build the mammoth herd. It provides a mammoth resource. There can only be one per civ.</English>
-		<Italian>Solo i mammut addomesticati possono costruire un branco di mammut. Fornisce una risorsa di mammut e solo una risorsa di questo tipo può essere costruita per civiltà.</Italian>
+		<Italian>Solo i mammut domati possono costruire un branco di mammut. Fornisce una risorsa di mammut e solo una risorsa di questo tipo può essere costruita per civiltà.</Italian>
 		<Polish>Mamut włochaty należał do ulubionej zwierzyny łownej człowieka w późnym plejstocenie, co znalazło swe odzwierciedlenie w zachowanych do dzisiaj licznych wyobrażeniach i malowidłach, pozostawionych głównie na ścianach jaskiń (np. w Rouffignac we Francji). Mamuty były źródłem pożywienia, ale dostarczały także materiałów do wyrobu okryć (skóry), sprzętów domowych, narzędzi i ozdób (kości, ciosy). Kości wykorzystywane były sporadycznie również do budowy paleolitycznych domostw, czego ślady odnaleziono w miejscowości Meziriczi na Ukrainie.</Polish>
 		<Russian>Только используя прирученного мамонта можно создать их стадо. Оно предоставляет соответсвующий ресурс и может быть лишь одно на всю цивилизацию.</Russian>
 	</TEXT>
@@ -368,7 +368,7 @@
 		</French>
 		<Polish>Leże Mapinguari</Polish>
 		<Russian>Комплекс мапингуари</Russian>
-		<Italian>Addestratore mapinguari (da unità)</Italian>
+		<Italian>Addestratore mapinguari (unità consumata)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAPINGUARI_COMPOUND_PEDIA</Tag>
@@ -516,7 +516,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>Mammut con ballista</Italian>
+		<Italian>Balista su mammut</Italian>
 		<Polish>Mamut-Ballista</Polish>
 		<Russian>Баллиста на мамонте</Russian>
 	</TEXT>
@@ -534,7 +534,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>Cavaliere di orsi</Italian>
+		<Italian>Cavaliere su orso</Italian>
 		<Polish>Rycerz (Niedźwiedź)</Polish>
 		<Russian>Рыцарь на медведе</Russian>
 	</TEXT>
@@ -552,7 +552,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>Cavalcatore di orsi</Italian>
+		<Italian>Cavaliere di orsi</Italian>
 		<Polish>Jeździec (Niedźwiedź)</Polish>
 		<Russian>Всадник на медведе</Russian>
 	</TEXT>
@@ -589,7 +589,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>Mammut da bombardamento</Italian>
+		<Italian>Mammut con bombarda</Italian>
 		<Polish>Mamut-Bombard</Polish>
 		<Russian>Бомбарда на мамонте</Russian>
 	</TEXT>
@@ -926,7 +926,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>Rinoceronte asiatico da guerra</Italian>
+		<Italian>Rinoceronte da guerra</Italian>
 		<Polish>Azjatyckie Nosorożce Bojowe</Polish>
 		<Russian>Азиатский боевой носорог</Russian>
 	</TEXT>
@@ -968,7 +968,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>Cocchio con zebre</Italian>
+		<Italian>Carro con zebra</Italian>
 		<Polish>Rydwan (Zebra)</Polish>
 		<Russian>Колесница с зеброй</Russian>
 	</TEXT>
@@ -992,7 +992,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>Cavaliere di zebre</Italian>
+		<Italian>Cavaliere su zebra</Italian>
 		<Polish>Rycerz (Zebra)</Polish>
 		<Russian>Рыцарь на зебре</Russian>
 	</TEXT>

@@ -3,23 +3,25 @@
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_FULL_CITY_SCREEN_BUILD_PROMPT</Tag>
 		<English>Full city screen on build prompt</English>
-		<Italian>Schermata città per la scelta edificio</Italian>
+		<Italian>Accedi schermo città dalla scelta di costruzione</Italian> <!-- city screen, ciy option upper right -->
 		<Russian>Полный экран города при запросе строительства</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_FULL_CITY_SCREEN_BUILD_PROMPT_HELP</Tag>
 		<English>Enter full city screen, rather than just select city, when the player is prompted on what to build next.</English>
-		<Italian>Entra nella schermata della città, invece di selezionare semplicemente la città, quando ti viene chiesto cosa costruire dopo.</Italian>
+		<Italian>Entra nello [COLOR_HIGHLIGHT_TEXT]schermo della città[COLOR_REVERT] quando viene chiesto cosa costruire, invece di selezionare semplicemente la città</Italian>
 		<Russian>Открывать полный экран города, а не только меню выбора, когда игроку предлагается указать, что строить дальше.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_DELAY_CITY_CYCLE_To_END_OF_TURN</Tag>
 		<English>Delay city cycle to end of turn</English>
+		<Italian>Ciclo città alla fine del turno</Italian> <!-- city screen, ciy option upper right -->
 		<Russian>Задержать цикл города до конца хода</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_DELAY_CITY_CYCLE_To_END_OF_TURN_HELP</Tag>
 		<English>City cycle process will initiate when you try to end the turn</English>
+		<Italian>I processi del ciclo città verrano iniziati quando si prova  a [COLOR_HIGHLIGHT_TEXT]terminare il turno[COLOR_REVERT]</Italian>
 		<Russian>Цикл города начнется, когда вы завершите ход</Russian>
 	</TEXT>
 	<TEXT>
@@ -27,14 +29,14 @@
 		<English>Hide non-constructible buildings</English>
 		<French>Masquer les bâtiments non constructibles</French>
 		<German>Nicht bebaubare Gebäude ausblenden</German>
-		<Italian>Nascondi edifici non costruibili</Italian>
+		<Italian>Nascondi edifici non costruibili</Italian> <!-- city screen, ciy option upper right -->
 		<Spanish>Ocultar edificios no construibles</Spanish>
 		<Russian>Скрыть заблокированные здания</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_HIDE_UNCONSTRUCTABLE_BUILDINGS_HELP</Tag>
 		<English>Hides all buildings that cannot be constructed. This is the default value used when loading a save or starting a new game. Toggling this option won't change the current filter selection for any of your cities.</English>
-		<Italian>Nasconde tutti gli edifici che non possono essere costruiti. Questa è l'impostazione predefinita utilizzata dopo il caricamento di un salvataggio o all'inizio di una nuova partita. L'attivazione di questa opzione non cambierà la selezione del filtro corrente per nessuna delle tue città.</Italian>
+		<Italian>Nasconde tutti gli [COLOR_HIGHLIGHT_TEXT]edifici che non possono essere costruiti[COLOR_REVERT] (questa è l'impostazione predefinita utilizzata dopo il caricamento di un salvataggio o all'inizio di una nuova partita ,l'attivazione di questa opzione non cambierà la selezione del filtro corrente per nessuna delle tue città)</Italian>
 		<Russian>Скрывает все здания, которые нельзя построить. Это значение по умолчанию, используемое после загрузки сохранения или начала новой игры. Переключение данной опции не изменит текущие настройки фильтров ни в одном другом вашем городе.</Russian>
 	</TEXT>
 	<TEXT>
@@ -42,26 +44,26 @@
 		<English>Hide untrainable units</English>
 		<French>Masquer les unités non entraînables</French>
 		<German>Verstecke nicht trainierbare Einheiten</German>
-		<Italian>Nascondi unità non addestrabili</Italian>
+		<Italian>Nascondi unità non addestrabili</Italian> <!-- city screen, ciy option upper right -->
 		<Spanish>Ocultar unidades no entrenables</Spanish>
 		<Russian>Скрыть заблокированные подразделения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_HIDE_UNTRAINABLE_UNITS_HELP</Tag>
 		<English>Hides all units that cannot be trained. This is the default value used when loading a save or starting a new game. Toggling this option won't change the current filter selection for any of your cities.</English>
-		<Italian>Nasconde tutte le unità che non possono essere addestrate. Questa è l'impostazione predefinita utilizzata dopo il caricamento di un salvataggio o all'inizio di una nuova partita. L'attivazione di questa opzione non cambierà la selezione del filtro corrente per nessuna delle tue città.</Italian>
 		<Russian>Скрывает все подразделения, которые нельзя обучить. Это значение по умолчанию, используемое после загрузки сохранения или начала новой игры. Переключение данной опции не изменит текущие настройки фильтров ни в одном другом вашем городе.</Russian>
+		<Italian>Nasconde tutte le [COLOR_HIGHLIGHT_TEXT]unità che non possono essere addestrate[COLOR_REVERT] (questa è l'impostazione predefinita utilizzata dopo il caricamento di un salvataggio o all'inizio di una nuova partita, l'attivazione di questa opzione non cambierà la selezione del filtro corrente per nessuna delle tue città)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_ICON_SIZE</Tag>
 		<English>Icon size: %d1 pixels</English>
-		<Italian>Grandezza delle icone: %d1 pixel</Italian>
+		<Italian>Grandezza delle icone: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] pixel</Italian> <!-- city screen, ciy option upper right -->
 		<Russian>Размер иконки: %d1 пикселей</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_ICON_SIZE_HELP</Tag>
 		<English>The size of the main city selection icons, and unit/building icons within the construction tabs.</English>
-		<Italian>Cambia la dimensione delle principali icone nelle schermate delle città e delle icone di unità e edifici nelle schermate di produzione.</Italian>
 		<Russian>Размер основных иконок выбора города и иконок подразделений/зданий на вкладках строительства.</Russian>
+		<Italian>Cambia la [COLOR_HIGHLIGHT_TEXT]dimensione delle principali icone[COLOR_REVERT] nello schermo della città e nelle unità e edifici nello schermo di produzione</Italian>
 	</TEXT>
 </Civ4GameText>
