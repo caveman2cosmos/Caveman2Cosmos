@@ -731,6 +731,7 @@
 		<French>Tolérance:</French>
 		<Italian>Tolleranza:</Italian>
 		<Polish>Tolerancja:</Polish>
+		<Russian>Терпимость:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_TOTAL_ATTACKER_SUPPORT</Tag>
@@ -738,6 +739,7 @@
 		<French>Total Force de Soutien de l'Attaquant:</French>
 		<Italian>Forza di supporto totale degli attaccanti:</Italian>
 		<Polish>Cała Siła Wsparcia Atakującego:</Polish>
+		<Russian>Суммарное увеличение силы атакующего от поддержки:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_TOTAL_DEFENDER_SUPPORT</Tag>
@@ -745,6 +747,7 @@
 		<French>Total Force de Soutien du Défenseur:</French>
 		<Italian>Forza di supporto totale dei difensori:</Italian>
 		<Polish>Cała Siła Wsparcia Obrońcy:</Polish>
+		<Russian>Суммарное увеличение силы защищающегося от поддержки:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_VSBARBS</Tag>
@@ -811,7 +814,7 @@
 		<English>Defender Withdrawal:</English>
 		<French>Repli du Défenseur:</French>
 		<German>Rückzug (Verteidiger):</German>
-		<Italian>Ritirata dei difensori:</Italian>
+		<Italian>Ritirata del difensore:</Italian>
 		<Polish>Ucieczka Obrońcy: %s1</Polish>
 	</TEXT>
 	<TEXT>
@@ -1756,7 +1759,7 @@
 		</Spanish>
 		<Polish>Statek Kosmiczny (Napęd AntyMaterii)</Polish>
 		<Russian>Ôîòîííûé çâåçäîëåò</Russian>
-		<Italian>Nave spaziale ad antimateria</Italian>
+		<Italian>Astronave ad antimateria</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_ARCHER</Tag>
@@ -2574,7 +2577,7 @@
 			<Plural>1</Plural>
 		</French>
 		<German>Angriffsroboter</German>
-		<Italian>Unità mech d'assalto</Italian>
+		<Italian>Unità mech da combattimento</Italian>
 		<Spanish>
 			<Text>Robot de combate:Robots de combate</Text>
 			<Gender>Female</Gender>
@@ -4414,7 +4417,7 @@
 		<English>Bombers</English>
 		<French>Bombardiers</French>
 		<German>Bomber</German>
-		<Italian>Unità aerea bombardiere</Italian>
+		<Italian>Unità aerea bombardiere moderno</Italian>
 		<Spanish>
 			<Text>Bombardero:Bombarderos</Text>
 			<Gender>Male</Gender>
@@ -4884,7 +4887,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_AVERNI</Tag>
 		<English>Culture (Averni)</English>
 		<Russian>Êóëüòóðà(Àâåðíñêàÿ)</Russian>
-		<Italian>Cultura averniana</Italian>
+		<Italian>Cultura averna</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_AZANDE</Tag>
@@ -5067,7 +5070,7 @@
 		</Spanish>
 		<Polish>Kultura (Beninu)</Polish>
 		<Russian>Êóëüòóðà(Áåíèí)</Russian>
-		<Italian>Cultura beniniana</Italian>
+		<Italian>Cultura beninese</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_BERBER</Tag>
@@ -5287,7 +5290,7 @@
 		<English>Culture (Celtiberian)</English>
 		<French>(Culture) Celtibérienne</French>
 		<Russian>Êóëüòóðà(Êåëüòèáåðû)</Russian>
-		<Italian>Cultura celtibera</Italian>
+		<Italian>Cultura celtiberica</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_CELTIC</Tag>
@@ -5755,7 +5758,7 @@
 		<English>Culture (Fatimid)</English>
 		<French>(Culture) Fatimide</French>
 		<Russian>Êóëüòóðà(Ôàòèìèäñêàÿ)</Russian>
-		<Italian>Cultura fatimida</Italian>
+		<Italian>Cultura fatimide</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_FRANKS</Tag>
@@ -5922,13 +5925,13 @@
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_GUANCHES</Tag>
 		<English>Culture (Guanches)</English>
 		<Russian>Êóëüòóðà(Ãóàí÷è)</Russian>
-		<Italian>Cultura guancia</Italian>
+		<Italian>Cultura guanci</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_GUARANI</Tag>
 		<English>Culture (Guarani)</English>
 		<Russian>Êóëüòóðà(Ãóàðàíè)</Russian>
-		<Italian>Cultura guaranese</Italian>
+		<Italian>Cultura guaraní</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_GUATEMALA</Tag>
@@ -6150,7 +6153,7 @@
 		<English>Culture (Hurrians)</English>
 		<French>(Culture) Hurrons</French>
 		<Russian>Êóëüòóðà(Õóððèòû)</Russian>
-		<Italian>Cultura hurrita</Italian>
+		<Italian>Cultura urrita</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_HYKSOSI</Tag>
@@ -6840,7 +6843,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MITTANNI</Tag>
 		<English>Culture (Mittanni)</English>
 		<Russian>Êóëüòóðà(Ìèòòàííè)</Russian>
-		<Italian>Cultura mitanna</Italian>
+		<Italian>Cultura mitannica</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_MOCHE</Tag>
@@ -7132,7 +7135,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_OPHIR</Tag>
 		<English>Culture (Ophir)</English>
 		<Russian>Êóëüòóðà(Îôèð)</Russian>
-		<Italian>Cultura di ophir</Italian>
+		<Italian>Cultura di Ophir</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ORANG_ASLI</Tag>
@@ -7465,7 +7468,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_RED_OCHER</Tag>
 		<English>Culture (Red Ocher)</English>
 		<Russian>Êóëüòóðà(Êðàñíàÿ îõðà)</Russian>
-		<Italian>Cultura red ocher</Italian>
+		<Italian>Cultura dell'ocra rossa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_ROMAN</Tag>
@@ -7506,7 +7509,7 @@
 		<English>Culture (Sabbatean)</English>
 		<French>(Culture) Sabbatéen</French>
 		<Russian>Êóëüòóðà(Ñàááàòèàíöû)</Russian>
-		<Italian>Cultura sabbatiana</Italian>
+		<Italian>Cultura sabatea</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SAFAVIDS</Tag>
@@ -7726,7 +7729,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SINTASHTA</Tag>
 		<English>Culture (Sintashta)</English>
 		<Russian>Êóëüòóðà(Ñèíòàøòà)</Russian>
-		<Italian>Cultura di sintashta</Italian>
+		<Italian>Cultura di Sintashta</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_SIOUX</Tag>
@@ -8240,7 +8243,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_VALDIVIA</Tag>
 		<English>Culture (Valdivia)</English>
 		<Russian>Êóëüòóðà(Âàëüäèâèÿ)</Russian>
-		<Italian>Cultura di valvidia</Italian>
+		<Italian>Cultura valvidiana</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CULTURE_VANATU</Tag>
@@ -8567,7 +8570,7 @@
 		<English>Early Bombers</English>
 		<French>Bombardiers basiques</French>
 		<German>Frühe Bomber</German>
-		<Italian>Unità area bombardiere antico</Italian>
+		<Italian>Unità aerea bombardiere</Italian>
 		<Spanish>
 			<Text>Bombardero antiguo:Bombarderos antiguos</Text>
 			<Gender>Male</Gender>
@@ -10997,7 +11000,7 @@
 		</Spanish>
 		<Polish>Religia (Druidic)</Polish>
 		<Russian>Ðåëèãèÿ(Äðóèäèçì)</Russian>
-		<Italian>Religione druidica</Italian>
+		<Italian>Druidismo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_RELIGION_HELLENISM</Tag>
@@ -12229,7 +12232,7 @@
 		</Spanish>
 		<Polish>Stakek Kosmiczny z Źaglem Słonecznym</Polish>
 		<Russian>Ñîëíå÷íûé êîñìîëåò</Russian>
-		<Italian>Nave spaziale a vela solare</Italian>
+		<Italian>Astronave a vela solare</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_SPACE_WORKER</Tag>
@@ -12254,7 +12257,7 @@
 		</Spanish>
 		<Polish>Gatunek (Sztuczna Inteligencja)</Polish>
 		<Russian>Èñêóññòâåííûé ðàçóì</Russian>
-		<Italian>Specie intelligenza artificiale</Italian>
+		<Italian>Intelligenza artificiale</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_SPECIES_ALIEN</Tag>
@@ -12546,7 +12549,7 @@
 		<English>Traders</English>
 		<French>Commerciaux</French>
 		<German>Händler</German>
-		<Italian>Unità commerciale</Italian>
+		<Italian>Unità mercante</Italian>
 		<Spanish>
 			<Text>Unidad comerciante:Unidades comerciantes</Text>
 			<Gender>Female</Gender>

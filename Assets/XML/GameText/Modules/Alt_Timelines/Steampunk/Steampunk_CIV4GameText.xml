@@ -191,7 +191,7 @@
 		<French>Destroyer Nuage</French>
 		<Polish>Podniebny Niszczyciel</Polish>
 		<Russian>Ïàðÿùèé ðàçðóøèòåëü</Russian>
-		<Italian>Cloud Destroyer</Italian>
+		<Italian>Cloud destroyer</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CLOUD_DESTROYER_PEDIA</Tag>
@@ -246,7 +246,7 @@
 		<Tag>TXT_KEY_UNIT_WAR_WHEEL</Tag>
 		<English>War Wheel</English>
 		<French>Roue de Guerre</French>
-		<Italian>Ruota da guerra</Italian>
+		<Italian>Monoruota da guerra</Italian>
 		<Polish>Monocykl</Polish>
 		<Russian>Áîåâîå êîëåñî</Russian>
 	</TEXT>

@@ -1734,7 +1734,7 @@
 		<English>Explore Transneptunian Space</English>
 		<French>Explorez l'espace transneptunien</French>
 		<Russian>Èññëåä. òðàíñíåï. êîñìîñ</Russian>
-		<Italian>Esplora spazio oltre Nettuno</Italian>
+		<Italian>Esplora spazio transnettuniano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_TRANSNEPTUNIAN_HELP</Tag>
@@ -2168,14 +2168,14 @@
 		<English>Do Research Mission</English>
 		<French>Faire une Mission de Recherche</French>
 		<Russian>Íà÷àòü ìèññèþ</Russian>
-		<Italian>Effettua missione di ricerca (esplora lo spazio oltre Nettuno)</Italian>
+		<Italian>Effettua missione di ricerca (esplora lo spazio transnettuniano)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_EXPLORE_TRANSNEPTUNIAN_MESSAGE</Tag>
 		<English>Mission Successful!</English>
 		<French>Mission Réussie !</French>
 		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
-		<Italian>Esplorazione dello spazio oltre Nettuno completata!</Italian>
+		<Italian>Esplorazione dello spazio transnettuniano completata!</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_LAUNCH_SATELLITE</Tag>
@@ -2238,7 +2238,7 @@
 		<English>Aspatial Route</English>
 		<French>Route Aspatiale</French>
 		<Russian>Âíåïðîñòð. ìàðøðóò</Russian>
-		<Italian>Strada asspaziale</Italian>
+		<Italian>Strada aspaziale</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ROUTE_COMPACT_WORMHOLE</Tag>
@@ -2462,7 +2462,7 @@
 		<English>Construction Ship</English>
 		<French>Vaisseau de construction</French>
 		<Russian>Ñòðîèòåëüíûé ìîäóëü</Russian>
-		<Italian>Astronave costruttice</Italian>
+		<Italian>Astronave costruttrice</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CONSTRUCTION_SHIP_PEDIA</Tag>
@@ -2718,7 +2718,7 @@
 		<English>Mission Reward (Interstellar Life)</English>
 		<French>Retour de Mission (Interstellar Life)</French>
 		<Russian>Ýôôåêò (Ìåæçâåçäí.)</Russian>
-		<Italian>Vita fuori dal sistema solare (ricompensa missione)</Italian>
+		<Italian>Forma di vita interstellare (ricompensa missione)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INTERSTELLAR_LIFE_REWARD_PEDIA</Tag>
@@ -3194,7 +3194,7 @@
 		<English>Mission Reward (Solar System Life)</English>
 		<French>Retour de Mission (Solar System Life)</French>
 		<Russian>Ýôôåêò (Ñîëí. ñèñòåìà)</Russian>
-		<Italian>Vita extraterrestre (ricompensa missione)</Italian>
+		<Italian>Forma di vita del sistema solare (ricompensa missione)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SOLAR_SYSTEM_LIFE_REWARD_PEDIA</Tag>
@@ -3317,7 +3317,7 @@
 		<English>Mission Reward (Transneptunian)</English>
 		<French>Retour de Mission (Transneptunian)</French>
 		<Russian>Ýôôåêò (Òðàíñíåïòóí.)</Russian>
-		<Italian>Spazio oltre Nettuno (ricompensa missione)</Italian>
+		<Italian>Spazio transnettuniano (ricompensa missione)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRANSNEPTUNIAN_REWARD_PEDIA</Tag>

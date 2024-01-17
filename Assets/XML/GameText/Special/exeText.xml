@@ -231,7 +231,7 @@
 		<German>Der angegebene Benutzername ist ungültig.</German>
 		<Italian>L'username inserito non è valido.</Italian>
 		<Spanish>El nombre de usuario introducido no es válido.</Spanish>
-		<Russian>Введённое имя пользователя недействительно.</Russian>
+		<Russian>Введенное имя пользователя недействительно.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BAD_LOGIN_TITLE</Tag>
@@ -573,7 +573,7 @@
 		<German>Der Verbindungsversuch ist wegen eines unbekannten Netzwerkfehlers gescheitert.</German>
 		<Italian>Il nostro tentativo di connessione è fallito a causa di un errore di rete non specificato.</Italian>
 		<Spanish>El intento de conexión ha fallado debido a un error de red no especificado.</Spanish>
-		<Russian>Не удалось подключиться из-за неопределённой ошибки сети.</Russian>
+		<Russian>Не удалось подключиться из-за неопределенной ошибки сети.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONNECT_NETWORK_ERROR_TITLE</Tag>
@@ -645,7 +645,7 @@
 		<German>Der Verbindungsversuch ist wegen eines unbekannten Fehlers gescheitert.</German>
 		<Italian>Il tentativo di connessione è fallito a causa di un errore non specificato.</Italian>
 		<Spanish>El intento de conexión ha fallado debido a un error no especificado.</Spanish>
-		<Russian>Подключение не удалось из-за неопределённой ошибки.</Russian>
+		<Russian>Подключение не удалось из-за неопределенной ошибки.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONNECT_UNSPECIFIED_ERROR_TITLE</Tag>
@@ -663,7 +663,7 @@
 		<German>Verbindungsversuch zum Host ...</German>
 		<Italian>Connessione con l'host...</Italian>
 		<Spanish>Contactando con el anfitrión...</Spanish>
-		<Russian>Идёт подключение к хосту...</Russian>
+		<Russian>Идет подключение к хосту...</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONNECT_UPDATE_HOST_CONNECTED</Tag>
@@ -681,7 +681,7 @@
 		<German>Verbindungsaufbau mit etabliertem Peer "%s1_Name"</German>
 		<Italian>Contattando il peer "%s1_Name"</Italian>
 		<Spanish>Contactando con el interlocutor establecido "%s1_Name"</Spanish>
-		<Russian>Идёт подключение к узлу "%s1_Name"</Russian>
+		<Russian>Идет подключение к узлу "%s1_Name"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONNECT_UPDATE_PEER_ATTEMPT</Tag>
@@ -690,7 +690,7 @@
 		<German>Verbindungsaufbau mit Gegenstelle ...</German>
 		<Italian>Connessione al peer...</Italian>
 		<Spanish>Contactando con un interlocutor...</Spanish>
-		<Russian>Идёт подключение к узлу...</Russian>
+		<Russian>Идет подключение к узлу...</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONNECT_UPDATE_PEER_CONNECTED</Tag>
@@ -1077,7 +1077,7 @@
 		<German>Account anlegen</German>
 		<Italian>Crea account</Italian>
 		<Spanish>Crear cuenta</Spanish>
-		<Russian>Создать учётную запись</Russian>
+		<Russian>Создать учетную запись</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPY_CREATE_ACCOUNT_HELP</Tag>
@@ -1086,7 +1086,7 @@
 		<German>Geben Sie zum Anlegen eines neuen GameSpy-Accounts Ihre E-Mail-Adresse, den gew&#252;nschten Benutzernamen und ein Kennwort ein.</German>
 		<Italian>Inserisci il tuo indirizzo e-mail, l'username desiderato e la password per creare un nuovo account di GameSpy.</Italian>
 		<Spanish>Introduce tu direcci&#243;n de e-mail, el nombre de usuario que desees y la contrase&#241;a para crear una nueva cuenta de GameSpy.</Spanish>
-		<Russian>Введите свой адрес электронной почты, желаемое имя пользователя и пароль для создания новой учётной записи GameSpy.</Russian>
+		<Russian>Введите свой адрес электронной почты, желаемое имя пользователя и пароль для создания новой учетной записи GameSpy.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPY_CREATE_ACCOUNT_TITLE</Tag>
@@ -1095,7 +1095,7 @@
 		<German>NEUEN ACCOUNT ANLEGEN</German>
 		<Italian>CREA NUOVO ACCOUNT</Italian>
 		<Spanish>CREAR NUEVA CUENTA</Spanish>
-		<Russian>СОЗДАТЬ НОВУЮ УЧЁТНУЮ ЗАПИСЬ</Russian>
+		<Russian>СОЗДАТЬ НОВУЮ УЧЕТНУЮ ЗАПИСЬ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPY_EMAIL_ADDRESS</Tag>
@@ -1140,7 +1140,7 @@
 		<German>Login mit bestehendem Account</German>
 		<Italian>Login con un account già esistente</Italian>
 		<Spanish>Identificarse con una cuenta existente</Spanish>
-		<Russian>Авторизироваться с существующей учётной записью</Russian>
+		<Russian>Авторизироваться с существующей учетной записью</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPY_LOGIN_TITLEBAR</Tag>
@@ -1158,7 +1158,7 @@
 		<German>Neuen Account anlegen</German>
 		<Italian>Crea nuovo account</Italian>
 		<Spanish>Crear nueva cuenta</Spanish>
-		<Russian>Создать новую учётную запись</Russian>
+		<Russian>Создать новую учетную запись</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAME_LIST_UNKNOWN_PING</Tag>
@@ -1374,7 +1374,7 @@
 		To disable this message: Go to C:\Users\"your username"\Documents\My Games\Beyond the Sword, open CivilizationIV.ini, and change "enablevoice = 1" to "enablevoice = 0"</English>
 		<Italian>Hai selezionato un dispositivo di acquisizione vocale inutilizzabile. Acquisizione vocale disattivata. Questo messaggio di solito appare quando il gioco è stato appena installato o quando il file INI è stato danneggiato o cancellato. Per disabilitare questo messaggio: vai a C:\Users\"your username"\Documents\My Games\Beyond the Sword, apri CivilizationIV.ini e cambia "enablevoice = 1" in "enablevoice = 0"</Italian>
 		<Russian>Неверное звукозаписывающее устройство. Запись звука невозможна.
-		Данное сообщение появляется после установки игры, либо когда файл конфигурации повреждён или удалён.
+		Данное сообщение появляется после установки игры, либо когда файл конфигурации поврежден или удален.
 		Чтобы его отключить перейдите по C:\Users\"ваше имя пользователя"\Documents\My Games\Beyond the Sword, откройте с помощью блокнота "CivilizationIV.ini", и замените строчку "enablevoice = 1" на "enablevoice = 0"</Russian>
 	</TEXT>
 	<TEXT>
@@ -1400,7 +1400,7 @@
 		<German>Ungültiger Login-Name</German>
 		<Italian>Nome di login non valido</Italian>
 		<Spanish>Nombre de inicio de sesión no válido</Spanish>
-		<Russian>Недопустимое имя учётной записи</Russian>
+		<Russian>Недопустимое имя учетной записи</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INVALID_PLAYBACK_DESC</Tag>
@@ -1522,7 +1522,7 @@
 		<German>Der von Ihnen gewählte Spielstand ist schreibgeschützt, um sicherzustellen, dass die Daten in Ihrem Mod-Verzeichnis nicht verändert wurden.</German>
 		<Italian>Il file di salvataggio selezionato è protetto, in modo da assicurarsi che gli assets nella cartella della mod non vengano modificati.</Italian>
 		<Spanish>El archivo guardado que has seleccionado está protegido para asegurar que no se modifiquen los parámetros de la carpeta mod.</Spanish>
-		<Russian>Выбранный файл сохранения защищён для предотвращений изменения игровых ресурсов в папке модов.</Russian>
+		<Russian>Выбранный файл сохранения защищен для предотвращений изменения игровых ресурсов в папке модов.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LOAD_ERROR</Tag>
@@ -1674,7 +1674,7 @@
 		<German>ERWEITERT</German>
 		<Italian>IMPOSTAZIONI AVANZATE</Italian>
 		<Spanish>AVANZADO</Spanish>
-		<Russian>РАСШИРЕННЫЕ НАСТРОЙКИ</Russian>
+		<Russian>Дополнительно</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_AI</Tag>
@@ -1692,7 +1692,7 @@
 		<German>Es läuft bereits ein Patch-Update.</German>
 		<Italian>Aggiornamento già in esecuzione.</Italian>
 		<Spanish>El parche de actualización ya se está aplicando.</Spanish>
-		<Russian>Уже идёт обновление.</Russian>
+		<Russian>Уже идет обновление.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_ALREADY_PATCHING_TITLE</Tag>
@@ -1824,7 +1824,7 @@
 		<German>CREDITS</German>
 		<Italian>Crediti</Italian>
 		<Spanish>CRÉDITOS</Spanish>
-		<Russian>ТИТРЫ</Russian>
+		<Russian>Титры</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_CUSTOM_GAME</Tag>
@@ -1947,7 +1947,7 @@
 		<German>Ruhmeshalle betrachten</German>
 		<Italian>Hall of fame</Italian>
 		<Spanish>Ver Salón de la Fama</Spanish>
-		<Russian>Посмотреть Зал славы</Russian>
+		<Russian>Зал славы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_HOST_DISCONNECT_DESC</Tag>
@@ -2117,7 +2117,7 @@
 		<German>Modifiziert</German>
 		<Italian>Ultima modifica</Italian>
 		<Spanish>Modificada</Spanish>
-		<Russian>Изменён</Russian>
+		<Russian>Изменен</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_LOADSAVE_NEW_FOLDER</Tag>
@@ -2255,7 +2255,7 @@
 		<German>Dieses Szenario erfordert das "%s1_ModName"-Mod.[NEWLINE]Das Spiel muss zum Laden dieses Mods neu gestartet werden.</German>
 		<Italian>Questo scenario necessita della mod "%s1_ModName".[NEWLINE]Per caricare questo mod il gioco deve essere riavviato.</Italian>
 		<Spanish>Este escenario requiere el mod "%s1_ModName".[NEWLINE]El juego debe reiniciarse para cargar este mod.</Spanish>
-		<Russian>Данному сценарию требуется модификация "%s1_ModName".[NEWLINE]Для её включения необходим перезапуск игры.</Russian>
+		<Russian>Данному сценарию требуется модификация "%s1_ModName".[NEWLINE]Для ее включения необходим перезапуск игры.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_MPINIT_FAILED_DESC</Tag>
@@ -2363,7 +2363,7 @@
 		<German>Leer</German>
 		<Italian>Nessuna</Italian>
 		<Spanish>No</Spanish>
-		<Russian>Нет</Russian>
+		<Russian>None</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_NOT_READY_DESC</Tag>
@@ -2504,7 +2504,7 @@
 		<German>Patch läuft!</German>
 		<Italian>Patch in corso!</Italian>
 		<Spanish>Parche aplicándose</Spanish>
-		<Russian>Идёт обновление!</Russian>
+		<Russian>Идет обновление!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_PATCH_OK_DESC</Tag>
@@ -3321,7 +3321,7 @@
 		<German>***** NICHT SYNCHRON! MEIN RANDOM SEED = %d1_Num: MY OPTIONS SEED = %d2_Options *****[NEWLINE]</German>
 		<Italian>***** FUORI SINCRONIA! MY SYNC SEED = %d1_Num: MY OPTIONS SEED = %d2_Options *****[NEWLINE]</Italian>
 		<Spanish>***** OUT OF SYNC! MY RANDOM SEED = %d1_Num: MY OPTIONS SEED = %d2_Options *****[NEWLINE]</Spanish>
-		<Russian>***** РАССИНХРОНИЗАЦИЯ! МОЁ ЗЕРНО СИНХРОНИЗАЦИИ = %d1_Sync : ЗЕРНО МОИХ ОПЦИЙ = %d2_Options *****[NEWLINE]</Russian>
+		<Russian>***** РАССИНХРОНИЗАЦИЯ! МОЕ ЗЕРНО СИНХРОНИЗАЦИИ = %d1_Sync : ЗЕРНО МОИХ ОПЦИЙ = %d2_Options *****[NEWLINE]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PM_AFTERNOON</Tag>
@@ -3598,7 +3598,7 @@
 		<German>Wir konnten keine Verbindung zum Server herstellen, der den Patch anbietet.</German>
 		<Italian>Non siamo riusciti a connetterci al server host dell'aggiornamento.</Italian>
 		<Spanish>No se ha podido conectar con el servidor que aloja el parche.</Spanish>
-		<Russian>Не удалось подключиться к серверу, где размещён патч.</Russian>
+		<Russian>Не удалось подключиться к серверу, где размещен патч.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCHCOMPLETE_ENCRYPTION_DESC</Tag>
@@ -3697,7 +3697,7 @@
 		<German>Unsere Patchanfrage wurde vom Server abgelehnt.</German>
 		<Italian>La richiesta d'aggiornamento è stata respinta dal server.</Italian>
 		<Spanish>La solicitud del parche ha sido rechazada por el servidor.</Spanish>
-		<Russian>Ваш запрос на патч отклонён сервером.</Russian>
+		<Russian>Ваш запрос на патч отклонен сервером.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCHCOMPLETE_RESPONSE_DESC</Tag>
@@ -3706,7 +3706,7 @@
 		<German>Der Server, der den Patch anbietet, hat uns eine merkwürdige Antwort geschickt.</German>
 		<Italian>Il server host dell'aggiornamento ha inviato una risposta inattesa.</Italian>
 		<Spanish>El servidor que aloja el parche ha enviado una respuesta extraña.</Spanish>
-		<Russian>Сервер, где размещён патч, отправил странный ответ.</Russian>
+		<Russian>Сервер, где размещен патч, отправил странный ответ.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCHCOMPLETE_SERVER_DESC</Tag>
@@ -3715,7 +3715,7 @@
 		<German>Der Server, der den Patch anbietet, hat einen internen Fehler.</German>
 		<Italian>Si è verificato un errore interno sul server host dell'aggiornamento.</Italian>
 		<Spanish>Se ha producido un error interno en el servidor que aloja el parche.</Spanish>
-		<Russian>На сервере, где размещён патч, произошла ошибка.</Russian>
+		<Russian>На сервере, где размещен патч, произошла ошибка.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PATCHCOMPLETE_SOCKET_DESC</Tag>
@@ -4126,8 +4126,8 @@
 		This message usually appears when game is freshly installed, or when INI file was corrupted or deleted.
 		To disable this message: Go to C:\Users\"your username"\Documents\My Games\Beyond the Sword, open CivilizationIV.ini, and change "HideMinSpecWarning = 0" to "HideMinSpecWarning = 1"</English>
 		<Italian>Il tuo computer è al di sotto delle specifiche consigliate. Le impostazioni grafiche sono state modificate per far fronte a ciò, tuttavia, potresti riscontrare problemi di prestazioni. Questo messaggio di solito appare quando il gioco è stato appena installato o quando il file INI è stato danneggiato o cancellato. Per disabilitare questo messaggio: vai a C:\Users\"nome utente"\Documents\My Games\Beyond the Sword, apri CivilizationIV.ini e modifica "HideMinSpecWarning = 0" in "HideMinSpecWarning = 1"</Italian>
-		<Russian>Характеристики вашего компьютера ниже рекомендуемых. Настройки графики были изменены с учётом этого, однако могут возникнуть проблемы с производительностью.
-		Данное сообщение появляется после устнановки игры, или когда файл конфигурации повреждён или удалён.
+		<Russian>Характеристики вашего компьютера ниже рекомендуемых. Настройки графики были изменены с учетом этого, однако могут возникнуть проблемы с производительностью.
+		Данное сообщение появляется после устнановки игры, или когда файл конфигурации поврежден или удален.
 		Чтобы отключить это сообщение, перейдите в папку "C:\Users\"ваше имя пользователя"\Documents\My Games\Beyond the Sword", откройте Блокнотом "CivilizationIV.ini", и замените "HideMinSpecWarning = 0" на "HideMinSpecWarning = 1"</Russian>
 	</TEXT>
 	<TEXT>
@@ -5204,7 +5204,7 @@
 		<German>Geben Sie das für diese Zivilisation erforderliche Kennwort ein.</German>
 		<Italian>La password inserita non era corretta. Per favore riprova.</Italian>
 		<Spanish>Introduce la contraseña necesaria para esta civilización.</Spanish>
-		<Russian>Вы ввели неправильный пароль. Попробуйте ещё раз.</Russian>
+		<Russian>Вы ввели неправильный пароль. Попробуйте еще раз.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_MAIN_MENU_CIV_PASSWORD_TITLE</Tag>

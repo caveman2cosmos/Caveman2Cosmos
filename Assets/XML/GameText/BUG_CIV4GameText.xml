@@ -499,7 +499,7 @@
 		<German>Uhr</German>
 		<Italian>Zona orologio</Italian>
 		<Spanish>Reloj</Spanish>
-		<Russian>×àñû</Russian>
+		<Russian>Часы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPTTAB_SCORES</Tag>
@@ -508,7 +508,7 @@
 		<German>Punkteanzeige</German>
 		<Italian>Pannello punteggio</Italian>
 		<Spanish>Puntuación</Spanish>
-		<Russian>Òàáëèöà ðåçóëüòàòîâ</Russian>
+		<Russian>Таблица результатов</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPTTAB_SYSTEM</Tag>
@@ -1768,7 +1768,7 @@
 		<German>Wunder vollendet</German>
 		<Italian>Progetti completati</Italian>
 		<Spanish>Proyectos completados</Spanish>
-		<Russian>Ïðåêò çàêîí÷åí</Russian>
+		<Russian>Проекты завершены</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGPROMOTIONS_HOVER</Tag>
@@ -1785,7 +1785,7 @@
 		<German>Beförderungen</German>
 		<Italian>Promozioni</Italian>
 		<Spanish>Ascensos</Spanish>
-		<Russian>Ïîâûøåíèÿ â çâàíèè</Russian>
+		<Russian>Квалификации</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGRELIGIONDEMAND_HOVER</Tag>
@@ -4710,7 +4710,7 @@
 		<German>Laufende Kosten</German>
 		<Italian>Mostra costi di mantenimento</Italian>
 		<Spanish>Mantenimiento</Spanish>
-		<Russian>Ñîäåðæàíèå</Russian>
+		<Russian>Содержание</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MISCHOVER__CONSCRIPTLIMIT_HOVER</Tag>

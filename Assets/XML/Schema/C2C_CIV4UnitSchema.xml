@@ -1302,6 +1302,7 @@
 	<ElementType name="bPlotPrereqsKeepAfter" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bRemoveAfterSet" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bQuick" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bStarsign" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bInquisitor" content="textOnly" dt:type="boolean"/>
 	<!-- ls612: No Non-Owned Entry -->
 	<ElementType name="bOnlyFriendlyEntry" content="textOnly" dt:type="boolean"/>
@@ -1418,6 +1419,9 @@
 	<ElementType name="PrereqReligion" content="textOnly"/>
 	<ElementType name="PrereqCorporation" content="textOnly"/>
 	<ElementType name="PrereqAndHeritage" content="eltOnly">
+		<element type="Type" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="PrereqOrHeritage" content="eltOnly">
 		<element type="Type" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="PrereqAndBuildings" content="eltOnly">
@@ -1907,6 +1911,7 @@
 		<element type="PrereqGameOption" minOccurs="0"/>
 		<element type="NotGameOption" minOccurs="0"/>
 		<element type="PrereqOrCivics" minOccurs="0"/>
+		<element type="PrereqOrHeritage" minOccurs="0"/>
 		<element type="PrereqAndHeritage" minOccurs="0"/>
 		<element type="PrereqAndBuildings" minOccurs="0"/>
 		<element type="SupersedingUnits" minOccurs="0"/>
@@ -2372,6 +2377,7 @@
 		<element type="bPlotPrereqsKeepAfter" minOccurs="0"/>
 		<element type="bRemoveAfterSet" minOccurs="0"/>
 		<element type="bQuick" minOccurs="0"/>
+		<element type="bStarsign" minOccurs="0"/>
 		<element type="bCanMovePeaks" minOccurs="0"/>
 		<element type="bCanLeadThroughPeaks" minOccurs="0"/>
 		<element type="bForceUpgrade" minOccurs="0"/>

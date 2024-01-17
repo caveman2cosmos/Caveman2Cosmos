@@ -579,7 +579,7 @@
 		<English>Engineers in the %s1_civ_adjective Empire have drawn up plans to increase the yield of their cotton crop.</English>
 		<French>Des agronomes de l'Empire %s1_civ_adjective ont mis au point une méthode permettant d'accroître la production de coton dans leurs champs.</French>
 		<German>Ingenieure im %s1_civ_adjective Imperium haben Pläne erstellt um der Ertrag an Baumwolle zu erhöhen.</German>
-		<Italian>Gli ingegneri dell'Impero %s1_civ_adjective hanno sviluppato piani per incrementare la resa delle loro piantagioni di cotone.</Italian>
+		<Italian>Gli ingegneri dell'Impero %s1_civ_adjective hanno sviluppato piani per incrementare il rendimento delle loro piantagioni di cotone.</Italian>
 		<Polish>Inżynierowie z Imperium %s1_civ_adjective znaleźli sposób na zwiększenie zbiorów uprawy bawełny.</Polish>
 		<Russian>Агрономы в державе %s1_civ_adjective разработали эффективный план по увеличению урожайности хлопка.</Russian>
 		<Spanish>Los ingenieros del imperio %s1_civ_adjective han elaborado un plan para aumentar el rendimiento de los cultivos de algodón.</Spanish>
@@ -1306,7 +1306,7 @@
 		<English>Inspired by religious music and sculpture in %s2_city, a new Great Artist has emerged in the %s1_civ_adjective Empire.</English>
 		<French>Inspiré par la musique et les sculptures religieuses de %s2_city, un nouvel artiste illustre a émergé dans l'empire %s1:1_civ_adjective.</French>
 		<German>Von den religiösen Klängen und Skulpturen in der Stadt %s2_city inspiriert, wurde im %s1:2_civ_adjective Reich ein neuer Großer Künstler ausgebildet.</German>
-		<Italian>Nell'Impero %s1_civ_adjective è emerso un nuovo Grande Artista, ispirato dalla musica e dalle sculture religiose di %s2_city.</Italian>
+		<Italian>Nell'Impero %s1_civ_adjective è emerso un nuovo gran artista, ispirato dalla musica e dalle sculture religiose di %s2_city.</Italian>
 		<Spanish>Inspirado por la música y las esculturas religiosas de %s2_city, ha aparecido un gran artista en el imperio %s1:1_civ_adjective.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2240,7 +2240,7 @@
 		<English>%s1_civ_adjective discoveries have turned out to be false! This dead end result has slowed their current research project.</English>
 		<French>Les découvertes %s1:4_civ_adjective se sont avérées erronées ! Ce travail en pure perte a ralenti leur projet de recherches actuel.</French>
 		<German>Die %[s1_civ_adjective]en Entdeckungen haben sich als falsch erwiesen. Dies bedeutet einen herben Rückschlag für ihr aktuelles Forschungsprojekt.</German>
-		<Italian>Le scoperte %s1:4_civ_adjective si sono rivelate sbagliate! Questo fallimento ha rallentato il progresso del loro attuale progetto di ricerca.</Italian>
+		<Italian>Le scoperte della %s1:4_civ_adjective si sono rivelate infruttuose! Questo fallimento ha rallentato il progresso dell'attuale progetto di ricerca.</Italian>
 		<Spanish>¡Los descubrimientos %s1:3_civ_adjective han resultado ser falsos! Este callejón sin salida ha entorpecido mucho su proyecto de investigación.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3540,7 +3540,7 @@
 		<English>Receive a Great Prophet.</English>
 		<French>Obtenir un prophète illustre.</French>
 		<German>Ihr erhaltet einen Großen Propheten.</German>
-		<Italian>Ricevi un Grande Profeta.</Italian>
+		<Italian>Ricevi un gran profeta.</Italian>
 		<Spanish>Recibir a un gran profeta.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3622,7 +3622,7 @@
 		<English>Good job, knowledge is power!</English>
 		<French>Bien joué ! Le savoir, c'est le pouvoir !</French>
 		<German>Gute Arbeit! Wissen ist Macht!</German>
-		<Italian>Bel lavoro, la conoscenza è potere!</Italian>
+		<Italian>[BOLD]Bel lavoro, la conoscenza è potere![\BOLD]</Italian>  <!-- event researcher gains research on current researched tecnology -->
 		<Spanish>¡Buen trabajo, el conocimiento es poder!</Spanish>
 	</TEXT>
 	<TEXT>
@@ -8144,7 +8144,7 @@
 		<English>Fund upgrades to our army's vehicle fleet to make use of the new formula.</English>
 		<French>Financer la modernisation de notre flotte de véhicules militaires afin de profiter de cette nouvelle formule.</French>
 		<German>Finanziert die Modernisierung unserer militärischen Fahrzeugflotte, damit wir die Neuentwicklung nutzen können.</German>
-		<Italian>Finanzia l'aggiornamento della flotta di mezzi del nostro esercito affinché usino la nuova formula.</Italian>
+		<Italian>Finanzia la modernizzazioneo della flotta di mezzi del nostro esercito affinché usino la nuova formula.</Italian>
 		<Spanish>Que se financie la modernización de nuestra flotilla de vehículos militares para que pueda aprovechar la nueva fórmula.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -9370,7 +9370,7 @@
 		<English>Progress sometimes comes more slowly than we would wish.</English>
 		<French>Le progrès est parfois plus lent que nous le voudrions.</French>
 		<German>Manchmal geht der Fortschritt nun mal langsamer voran, als uns lieb wäre.</German>
-		<Italian>Alle volte il progresso arriva più lentamente di quanto vorremmo.</Italian>
+		<Italian>[BOLD]Alle volte il progresso arriva più lentamente di quanto vorremmo.[\BOLD]</Italian>
 		<Spanish>El progreso a veces viene con más lentitud de la que querríamos.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -10038,7 +10038,7 @@
 		<English>[ICON_BULLET]%D1_num[ICON_RESEARCH] towards [COLOR_HIGHLIGHT_TEXT]%s2[COLOR_REVERT]</English>
 		<French>[ICON_BULLET]%D1_num[ICON_RESEARCH] pour la découverte de: [COLOR_HIGHLIGHT_TEXT]%s2[COLOR_REVERT]</French>
 		<German>[ICON_BULLET]%d1_num[ICON_RESEARCH] für die Erforschung [NUM2:des:der:des:der:der:der] [COLOR_TECH_TEXT]%s2:2[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]%D1_num[ICON_RESEARCH] verso [COLOR_HIGHLIGHT_TEXT]%s2[COLOR_REVERT]</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]%D1_num[COLOR_REVERT] [ICON_RESEARCH] per la ricerca della tecnologia [COLOR_HIGHLIGHT_TEXT]%s2[COLOR_REVERT]</Italian> <!-- event researcher gains research on current researched tecnology -->
 		<Spanish>[ICON_BULLET]%D1_num [ICON_RESEARCH] hacia [NUM2:el:la:los:las] [COLOR_HIGHLIGHT_TEXT]%s2[COLOR_REVERT]</Spanish>
 		<Polish>[ICON_BULLET]%D1_num[ICON_RESEARCH] do [COLOR_HIGHLIGHT_TEXT]%s2[COLOR_REVERT]</Polish>
 		<Russian>[ICON_BULLET]%D1_num[ICON_RESEARCH] для [COLOR_HIGHLIGHT_TEXT]%s2[COLOR_REVERT]</Russian>
@@ -10630,7 +10630,7 @@
 		<English>Our researchers have made a technological breakthrough, rapidly advancing their progress.</English>
 		<French>Nos chercheurs ont fait une avancée technologique qui a accéléré leurs recherches.</French>
 		<German>Unsere Forscher haben einen technologischen Durchbruch erzielt und machen rasante Fortschritte.</German>
-		<Italian>Pare che i nostri ricercatori abbiano fatto un'importante scoperta tecnologica, velocizzando il loro progresso.</Italian>
+		<Italian>[NEWLINE][BOLD]I nostri ricercatori hanno compiuto un'importante scoperta tecnologica, velocizzando il loro progresso.[\BOLD]</Italian>  <!-- event researcher gains research on current researched tecnology -->
 		<Spanish>Nuestros investigadores han realizado un adelanto tecnológico que les permitirá avanzar rápidamente.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -12446,7 +12446,7 @@
 		<English>Our researchers have experienced a setback in their efforts.</English>
 		<French>Nos chercheurs ont subi un revers dans leurs recherches.</French>
 		<German>Unsere Forscher haben einen Rückschlag erlitten.</German>
-		<Italian>I nostri ricercatori hanno subito una battuta d'arresto.</Italian>
+		<Italian>[BOLD]I nostri ricercatori hanno subito una battuta d'arresto.[\BOLD]</Italian>
 		<Spanish>Nuestros científicos han sufrido un revés en sus investigaciones.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -12820,7 +12820,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_VOLCANO_DORMANT</Tag>
 		<English>The earth has spewed forth lava and ash from a previously dormant volcano!</English>
-		<Italian>La terra ha emesso lava e cenere da un vulcano precedentemente inattivo!</Italian>
+		<Italian>La terra ha emesso lava e cenere da un vulcano finora inattivo!</Italian> <!-- Message Logs -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_VOLCANO_EXTINCT</Tag>
@@ -12857,6 +12857,7 @@
 		<German>Dieser Vulkan ist schon seit Ewigkeiten nicht mehr ausgebrochen. Nur aus alten Überlieferungen ist noch bekannt, dass er einst Asche und Lava spuckte.</German>
 		<Polish>Ten wulkan od dawien dawna nie wybuchał. Jedynie stare legendy wspominają o tym, że kiedyś buchał płomieniami i lawą.</Polish>
 		<Russian>Этот вулкан ни разу не извергался на памяти современников, и лишь в старых преданиях говорят об его прошлых извержениях.</Russian>
+		<Italian>[BOLD]Questo vulcano non erutta da molto tempo, solo i vecchi racconti parlano dei suoi getti di lava.[\BOLD]</Italian> <!-- popup when event happens -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_V_GER</Tag>
@@ -13192,6 +13193,7 @@
 		<German>Die Rekultivierung des Gebiets sollte jetzt unsere vorrangige Aufgabe sein.</German>
 		<Polish>Wulkaniczna erupcja niszczy okolicę.</Polish>
 		<Russian>Извержение вулкана разрушило большую часть его окрестностей!</Russian>
+		<Italian>[BOLD]Un'eruzione vulcanica ha distrutto gran parte della zona![\BOLD]</Italian> <!-- popup when event happens -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_VOLCANO_ERUPTION_HELP</Tag>
@@ -13200,6 +13202,7 @@
 		<German>Verlust von Landschaftsausbauten und Verlust oder Beschädigung von Einheiten in der Nähe der Eruption, +1 [ICON_FOOD] auf umliegenden Feldern (nur einmalig pro Feld möglich)</German>
 		<Polish>Okoliczne ulepszenia terenu są stracone, jednostki będące w pobliżu mogły zostać zabite bądź uszkodzone. Urodzajny pył wulkaniczny osiada na okolicznych terenach dodając +1 do produkcji [ICON_FOOD] (pod warunkiem, że już wcześniej ten bonus nie został dodany)</Polish>
 		<Russian>Ближайшие улучшения потеряны, отряды, оказавшиеся недалеко от эпицентра извержения, могут быть перемещены, ранены или убиты. Окружающие клетки получают +1 [ICON_FOOD], если более раннее извержение еще не сделало этого.</Russian>
+		<Italian>[BOLD]I miglioramenti circostanti vanno persi, le unità coinvolte nell'eruzione possono essere spostate, danneggiate o uccise.[NEWLINE]Le caselle circostanti guadagnano [COLOR_HIGHLIGHT_TEXT]1[COLOR_REVERT] [ICON_FOOD] se non lo hanno già fatto per un'eruzione precedente.[\BOLD]</Italian> <!-- event volcano hover on the bulletpointed text -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_VOLCANO_EXTINCTION</Tag>
@@ -13223,6 +13226,7 @@
 		<German>Dieser Vulkan ist in eine längere Ruhephase eingetreten.</German>
 		<Polish>Wulkan ucichł.</Polish>
 		<Russian>Этот вулкан успокоился.</Russian>
+		<Italian>[BOLD]L'attività vulcanica sembra essersi fermata.[\BOLD]</Italian> <!-- popup when event happens -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_VOLCANO_SLEEP_HELP</Tag>
@@ -13231,6 +13235,7 @@
 		<German>Aus dem aktiven wird ein schlafender Vulkan.</German>		
 		<Polish>Aktywny wulkan przechodzi w stan uśpienia.</Polish>
 		<Russian>Активный вулкан становится бездействующим.</Russian>
+		<Italian>[BOLD]Il vulcano adesso sembra essere dormiente.[\BOLD]</Italian> <!-- popup when event happens -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_VOLCANO_TRIGGER_ACTIVE</Tag>
@@ -13239,6 +13244,7 @@
 		<German>Ein aktiver, berüchtigter Vulkan ist erneut ausgebrochen, wodurch es zu immensen Schäden im umliegenden Gebiet kam.</German>
 		<Polish>Wulkan znany z tego, że regularnie wybuchał, eksplodował ponownie niszcząc wszystkie budynki na swoich stokach.</Polish>
 		<Russian>Вулкан, извергавшийся регулярно в прошлом, снова пробудился. Сооружения на его склонах были уничтожены.</Russian>
+		<Italian>[BOLD]Un vulcano molto attivo nella storia recente sta eruttando di nuovo. Le strutture sulle sue pendici sono state distrutte.[\BOLD]</Italian> <!-- popup when event happens -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_V_GER_1</Tag>

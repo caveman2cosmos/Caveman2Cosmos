@@ -20245,6 +20245,16 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szBuffer, UnitTypes eUnit, bool
 				bFirst = false;
 			}
 		}
+		bFirst = true;
+
+		foreach_(const HeritageTypes eTypeX, unitInfo.getPrereqOrHeritage())
+		{
+			if (!pCity || !GET_PLAYER(ePlayer).hasHeritage(eTypeX))
+			{
+				setListHelp(szBuffer, gDLL->getText("TXT_KEY_REQUIRES"), GC.getHeritageInfo(eTypeX).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
+				bFirst = false;
+			}
+		}
 
 		if (!pCity || !pCity->canTrain(eUnit))
 		{

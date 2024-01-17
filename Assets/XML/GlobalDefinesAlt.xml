@@ -525,4 +525,20 @@
 		<DefineName>UPSCALED_HAMMER_COST_MODIFIER</DefineName>
 		<iDefineIntVal>40</iDefineIntVal>
 	</Define>
+	<Define>
+		<DefineName>STARSIGN_TECH_START</DefineName>
+		<DefineTextVal>TECH_STARGAZING</DefineTextVal>
+	</Define>
+	<Define>
+		<DefineName>STARSIGN_TECH_BOOST</DefineName>
+		<DefineTextVal>TECH_ASTROLOGY</DefineTextVal>
+	</Define>
+	<Define>
+		<DefineName>STARSIGN_TECH_NERF</DefineName>
+		<DefineTextVal>TECH_ASTRONOMY</DefineTextVal>
+	</Define>
+	<Define>
+		<DefineName>STARSIGN_TECH_END</DefineName>
+		<DefineTextVal>TECH_SATELLITES</DefineTextVal>
+	</Define>
 </Civ4Defines>

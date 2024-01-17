@@ -1005,7 +1005,7 @@
 		<English>composite bowman</English>
 		<French>archer composite</French>
 		<Russian>композитный лучник</Russian>
-		<Italian>arciere composito</Italian>
+		<Italian>arciere con arco composito</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_CRIMINALHOSTILES</Tag>
@@ -1091,7 +1091,7 @@
 		<English>longbowman</English>
 		<French>archer long</French>
 		<Russian>йомен</Russian>
-		<Italian>arciere cecchino</Italian>
+		<Italian>arciere con arco lungo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_LOTSOFGOLD</Tag>
@@ -1213,7 +1213,7 @@
 		<Spanish>un Lancero de piedra</Spanish>
 		<Polish>kamienny włócznik</Polish>
 		<Russian>древний копейщик</Russian>
-		<Italian>guerriero con lancia in pietra</Italian>
+		<Italian>guerriero con lancia di pietra</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AUTOLOG_VILLAGE_RESULT_STONETHROWER</Tag>
@@ -1368,7 +1368,7 @@
 		<English>Whip anger has decreased in %s1</English>
 		<French>Mécontentement dû au travail forcé réduit à %s1</French>
 		<German>Unzufriedenheit über Zwangsarbeit in %s1 hat sich verringert</German>
-		<Italian>L'infelicità causata dai lavori forzati è diminuita a %s1</Italian>
+		<Italian>L'infelicità causata dai sacrifici è diminuita a %s1</Italian>
 		<Spanish>El malestar por sacrificio decreció en %s1</Spanish>
 		<Polish>Niezadowolenie z przyspieszenia zmalało w mieście %s1</Polish>
 		<Russian>Уменьшилось недовольство от принудительного труда в %s1</Russian>
@@ -1378,7 +1378,7 @@
 		<English>The whip was applied in %s1</English>
 		<French>Le Travail Forcé a été utilisé à %s1</French>
 		<German>Zwangsarbeit wurde in %s1 eingesetzt</German>
-		<Italian>I lavori forzati causano una produzione accelerata di %s1</Italian>
+		<Italian>Il sacrificio causa una produzione accelerata di %s1</Italian>
 		<Spanish>Sacrificio de población ejecutado en %s1</Spanish>
 		<Polish>Zastosowano przyspieszenie w mieście: %s1</Polish>
 		<Russian>Принуждение к труду жителей %s1</Russian>

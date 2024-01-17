@@ -387,8 +387,11 @@ public:
 	int getNumMapBonuses() const;
 	BonusTypes getMapBonus(const int i) const;
 
-	int getStatusPromotion(int i) const;
+	PromotionTypes getStatusPromotion(int i) const;
 	int getNumStatusPromotions() const;
+
+	inline PromotionTypes getStarsign(int i) const { return m_starsigns[i]; }
+	inline int getNumStarsigns() const { return (int)m_starsigns.size(); }
 
 	int getNumFeatureInfos() const;
 	CvFeatureInfo& getFeatureInfo(FeatureTypes eFeatureNum) const;
@@ -1109,7 +1112,8 @@ protected:
 	CvString m_szDllProfileText;
 
 	std::vector<BonusTypes> m_mapBonuses;
-	std::vector<int> m_aiStatusPromotions;
+	std::vector<PromotionTypes> m_aiStatusPromotions;
+	std::vector<PromotionTypes> m_starsigns;
 
 // BBAI Options
 public:

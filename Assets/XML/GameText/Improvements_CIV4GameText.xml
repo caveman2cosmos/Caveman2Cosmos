@@ -48,7 +48,7 @@
 		<English>[ICON_BULLET]A unit must guard it to upgrade</English>
 		<French>[ICON_BULLET]Une unité doit la garder pour qu'elle évolue</French>
 		<German>[ICON_BULLET]Eine Unit muss stärken, um ein Upgrade</German>
-		<Italian>[ICON_BULLET]Una unità deve fortificarsi per l'aggiornamento.</Italian>
+		<Italian>[ICON_BULLET]Una unità deve fortificarsi per il miglioramento.</Italian>
 		<Spanish>[ICON_BULLET]Se debe fortificar una unidad aquí para mejorar</Spanish>
 		<Polish>[ICON_BULLET]Jednostka musi być trybie obronnym, aby została ulepszona.</Polish>
 		<Russian>[ICON_BULLET]Îòðÿä äîëæåí áûòü óêðåïëåí, äëÿ òîãî ÷òîáû åãî óëó÷øèòü</Russian>
@@ -670,7 +670,7 @@
 		<English>Extraction Facility</English>
 		<French>Usine flottante d'Extraction</French>
 		<German>Extraktionsanlage</German>
-		<Italian>Impianto d'estrazione</Italian>
+		<Italian>Piattaforma d'estrazione</Italian>
 		<Spanish>
 			<Text>Plataforma de extracción</Text>
 			<Gender>Female</Gender>
@@ -966,7 +966,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>Isola inesplorata</Italian>
+		<Italian>Isola tribale</Italian>
 		<Spanish>
 			<Text>Isla inexplorada</Text>
 			<Gender>Female</Gender>

@@ -2137,7 +2137,7 @@
 		<Italian>Forza</Italian> <!--infoscreen building list-->
 		<Spanish>Fuerza</Spanish>
 		<Polish>Siła</Polish>
-		<Russian>Ñèëà</Russian>
+		<Russian>Сила</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_SORT_WITHDRAWAL</Tag>
@@ -2147,7 +2147,7 @@
 		<Italian>Ritirata</Italian> <!--infoscreen building list-->
 		<Spanish>Retirada</Spanish>
 		<Polish>Odwrót</Polish>
-		<Russian>Ìîáèë.</Russian>
+		<Russian>Отступление</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_STAMPEDE</Tag>
@@ -2155,6 +2155,7 @@
 		<French>[ICON_BULLET]Suicidaire: Continue d'attaque jusqu'à ce que tous les défenseurs de la case soient morts.</French>
 		<Italian>[ICON_BULLET]Caratteristica [COLOR_HIGHLIGHT_TEXT]calpestamento[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]continuerà ad attaccare[COLOR_REVERT] fino alla morte di tutti i difensori della casella attaccata o la propria</Italian> <!--unit War Rhyno -->
 		<Polish>[ICON_BULLET]Popłoch: Kontynuuje atak dopóki wszyscy obrońcy na atakowanym polu nie będą martwi.</Polish>
+		<Russian>[ICON_BULLET]Паническое бегство: не прекратит атаковать, пока все обороняющиеся не будут убиты.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_STAMPEDE_LONG</Tag>
@@ -2162,6 +2163,7 @@
 		<French>[ICON_BULLET]Suicidaire: Continue d'attaquer jusqu'à la victoire ou la mort.</French>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Calpestamento[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]continua ad attaccare[COLOR_REVERT] fino alla vittoria o alla morte</Italian>
 		<Polish>[ICON_BULLET]Pęd: Kontynuuje atak do wygranej lub śmierci.</Polish>
+		<Russian>[ICON_BULLET]Паническое бегство: продолжает атаку до победы или смерти.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_STAMPEDE_SHORT</Tag>
@@ -2169,6 +2171,7 @@
 		<French>[ICON_BULLET]Suicidaire: Combat à mort</French>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Calpestamento[COLOR_REVERT]: combatte alla morte</Italian>
 		<Polish>[ICON_BULLET]Pęd: Walczy do śmierci</Polish>
+		<Russian>[ICON_BULLET]Паническое бегство: сражается до конца</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_TARGETS_UNIT_FIRST</Tag>

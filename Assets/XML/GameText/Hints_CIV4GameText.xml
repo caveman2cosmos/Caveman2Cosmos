@@ -266,7 +266,7 @@
 		<English>*BUG Hint*: Clicking on the Scroll button within the Domestic Advisor will allow you to customize it to your playing style.</English>
 		<French>*Conseils du BUG*: Cliquer sur le parchemin dans l'écran du conseiller domestique vous permet de le personnaliser comme vous le désirez.</French>
 		<German>[BUG] Tipp... Mit einem Klick auf die gelbe Schriftrolle im "Inlandsberater" lässt sich dieser an den eigenen Spielstil anpassen.</German>
-		<Italian>*Suggerimento del BUG Team*: Cliccare sul pulsante con la pergamena nella schermata del Consigliere Interno ti permetterà di personalizzarlo in base al tuo stile di gioco.</Italian>
+		<Italian>*Suggerimento del BUG Team*: Cliccare sul pulsante con la pergamena nella schermata della lista città ti permetterà di personalizzarlo in base al tuo stile di gioco.</Italian>
 		<Spanish>*Consejo de BUG*: Pinchando en el botón de Scroll dentro del Consejero de Interior te permite personalizarlo para adaptarlo a tu estilo de juego.</Spanish>
 		<Polish>*Podpowiedź do BUG'a*: Klikanie na pasku przewijania na ekranie Doradcy ds Wewnętrznych pozwoli ci dostosowywać go w zależności od stylu gry.</Polish>
 		<Russian>*BUG Hint*: нажав на кнопку «Прокрутка» на экране Главного советника, вы сможете настроить его под свой стиль игры.</Russian>
@@ -519,7 +519,7 @@
 		<Tag>TXT_KEY_C2C_HINT_33</Tag>
 		<English>C2C: When sending in spies, actually take the time to look at that Civs city list in the Espionage Screen. They may have a city that is insanely cheaper to spy on than any of the others.</English>
 		<French>C2C: Avant d'envoyer vos espions, prenez le temps d'examiner quelle ville est la plus vulnérable.</French>
-		<Italian>C2C: Quando mandi in missione le spie, prenditi del tempo per guardare la lista delle città di quella civiltà nella Schermata dello spionaggio. Potrebbero avere una città molto più economica da spiare rispetto ad altre.</Italian>
+		<Italian>C2C: Quando mandi in missione le spie, prenditi del tempo per guardare la lista delle città di quella civiltà nello schermo informazioni spionaggio. Potrebbero avere una città molto più economica da spiare rispetto ad altre.</Italian>
 		<Spanish>C2C: Cuando envíes espías, tómate tu tiempo para examinar la lista de ciudades de la civilización a espiar en el Consejero de Espionaje. Podrían tener una ciudad en la que espiar sea ilógicamente más barato.</Spanish>
 		<Polish>C2C: Gdy wysyłasz jednostki szpiegów, zajrzyj w ekran szpiegostwa by określić sytuację. Może istnieje miasto przeciwnika, w którym koszt operacji szpiegowskich jest szalenie niski.</Polish>
 		<Russian>C2C: засылая шпионов к конкурентам, уделите время для изучения списка городов этой цивилизации на экране шпионажа. В нем может быть город, за которым шпионить безумно дешевле, чем за любым другим.</Russian>
@@ -564,7 +564,7 @@
 		<Tag>TXT_KEY_C2C_HINT_38</Tag>
 		<English>C2C: If you're getting too many subdued animals, send small clusters of redundant predatory ones out on near city patrols.</English>
 		<French>C2C: si vous avez trop d'animaux apprivoisés, envoyez des petits groupes de prédateurs patrouiller près de vos villes.</French>
-		<Italian>C2C: se ottieni troppi animali addomesticati, mandane alcuni a pattugliare vicino alle tue città.</Italian>
+		<Italian>C2C: se ottieni troppi animali domati, mandane alcuni a pattugliare vicino alle tue città.</Italian>
 		<Spanish>C2C: Si estás acumulando demasiados animales domados, envía pequeños grupos de depredadores repetidos a patrullar cerca de la ciudad.</Spanish>
 		<Polish>C2C: Jeśli masz za dużo oswojonych zwierząt, wyślij małe grupki zbędnych drapieżników na patrol wokół Twoich miast.</Polish>
 		<Russian>C2C: Åñëè âû çàïîëó÷èëè äîñòàòî÷íî ìíîãî ïðèðó÷åííûõ æèâîòíûõ, âû ìîæåòå îòïðàâèòü ÷àñòü õèùíèêîâ ïàòðóëèðîâàòü è îõðàíÿòü âàøè ãðàíèöû.</Russian>
@@ -762,7 +762,7 @@
 		<English>Check the foreign advisor often - knowing what your friends (and foes) can offer in trade is valuable information.</English>
 		<French>Consultez souvent votre conseiller diplomatique. Il est essentiel de savoir ce que vos amis (et vos ennemis) peuvent vous proposer.</French>
 		<German>Werfen Sie regelmäßig einen Blick auf den Auslandsberater. Schließlich müssen Sie wissen, womit Ihre Freunde (und Feinde) handeln.</German>
-		<Italian>Consulta spesso il consigliere degli esteri per sapere chi tra gli amici (o i nemici) è in grado di fornire informazioni in cambio di qualcosa.</Italian>
+		<Italian>Consulta spesso lo schemo della politca estera per sapere chi tra gli amici (o i nemici) è in grado di fornire informazioni in cambio di qualcosa.</Italian>
 		<Spanish>Consultad con frecuencia al consejero de Asuntos Exteriores. Saber lo que vuestros amigos (y enemigos) pueden ofreceros en intercambio es una información valiosa.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1013,7 +1013,7 @@
 		<English>Wonders of the World not only provide unique benefits, they also inspire your populace. More great people will appear in cities that build ancient wonders or multiple great wonders.</English>
 		<French>Les merveilles vous apportent non seulement des avantages uniques, mais inspirent également votre population. Plus de personnages illustres feront leur apparition dans les villes hébergeant des merveilles anciennes ou multiples.</French>
 		<German>Weltwunder haben einzigartige Vorteile und inspirieren Ihre Untertanen. Aus diesem Grund bringen Städte, in denen Sie Weltwunder oder Nationale Wunder errichten, mehr Große Persönlichkeiten hervor.</German>
-		<Italian>Le Meraviglie del mondo non solo forniscono dei benefici molto utili, ma sono anche una fonte di ispirazione per la tua popolazione. Nelle città in cui si trovano delle Grandi Meraviglie è più facile che appaiano dei Grandi Personaggi.</Italian>
+		<Italian>Le Meraviglie del mondo non solo forniscono dei benefici molto utili, ma sono anche una fonte di ispirazione per la tua popolazione. Nelle città in cui si trovano delle meraviglie mondiali è più facile che appaiano dei gran personaggi.</Italian>
 		<Spanish>Las maravillas del mundo no solo proporcionan beneficios únicos, sino que también son una inspiración para el pueblo. En las ciudades que construyan maravillas de la antigüedad o varias grandes maravillas aparecerán más grandes personajes.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1125,7 +1125,7 @@
 		<English>If you're looking to reduce your city maintenance, consider turning your cities on distant continents into Colonies. To form a colony, go to the Domestic Advisor screen and select the "Colony" button.</English>
 		<French>Si vous cherchez à réduire le coût d'entretien de vos villes, pensez à transformer en colonies vos villes situées sur des continents lointains. Pour former une colonie, ouvrez l'écran du conseiller aux affaires intérieures et cliquez sur le bouton "Colonie".</French>
 		<German>Wenn Sie Ihre Unterhaltskosten für Städte senken wollen, können Sie beispielsweise Ihre eigenen Städte auf entfernten Kontinenten in Kolonien umwandeln. Öffnen Sie dazu den Inlandsberater und klicken Sie auf den Kolonie-Button.</German>
-		<Italian>Se stai cercando di ridurre i costi di manutenzione della tua città, considera di trasformare quelle lontane in Colonie. Per formare una Colonia, vai nella schermata del consigliere interno e seleziona la voce "Colonia".</Italian>
+		<Italian>Se stai cercando di ridurre i costi di mantenimento della tua città, considera di trasformare quelle lontane in Colonie. Per formare una Colonia, vai allo schermo della lista delle città e seleziona la voce "Colonia".</Italian>
 		<Spanish>Si quieres reducir los costes de mantenimiento de tus ciudades, considera la posibilidad de convertir en colonias las que estén situadas en continentes lejanos. Para formar una colonia, ve a la pantalla del Consejero de Interior y selecciona el botón "Colonia".</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1315,7 +1315,7 @@
 		<English>Use your mouse wheel to zoom</English>
 		<French>Utilisez la molette de la souris pour zoomer.</French>
 		<German>Drehen Sie das Mausrad, um zu zoomen.</German>
-		<Italian>Usa la rotellina del mouse per zoomare...</Italian>
+		<Italian>[BOLD]Usa la rotellina del mouse per zoomare...</Italian>
 		<Spanish>Usad la rueda del ratón para hacer zoom.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1862,7 +1862,7 @@
 		<Tag>TXT_KEY_REVDCM_HINT_1</Tag>
 		<English>*Revolutions Mod Hint*: The Revolution Watch Advisor screen is totally customizable in the same way as the Domestic Advisor Screen.</English>
 		<French>*Conseil Mod Revolution*: l'Ecran de Conseiller de Révolution est entièrement configurable de la même manière que l'écran du Conseiller Domestique (CDA).</French>
-		<Italian>*Suggerimento del MOD 'Revolutions'*: La schermata del Consigliere Rivoluzionario è completamente personalizzabile come lo schermata del Consigliere Interno.</Italian>
+		<Italian>*Suggerimento del MOD 'Revolutions'*: La schermo delle informazioni rivolta è completamente personalizzabile come lo schermata del Consigliere Interno.</Italian>
 		<Spanish>*Consejo de Revolution*: La vista del Consejero de Revolución es totalmente personalizable, de la misma forma que la vista del Consejero de Interior.</Spanish>
 		<Polish>*Podpowiedź do moda Rewolucje*: Ekran Doradcy ds. Rewolucji jest całkowicie modyfikowalny, podobnie jak ekran Doradcy ds. Wewnętrznych.</Polish>
 		<Russian>*Revolutions Mod Hint*: Ýêðàí Ñîâåòíèêà ïî ðåâîëþöèÿì ïîëíîñòüþ íàñòðàèâàåìûé, òàêæå êàê è ýêðàí Ãëàâíîãî ñîâåòíèêà.</Russian>
@@ -1963,7 +1963,7 @@
 		<Tag>TXT_KEY_REVDCM_HINT_2</Tag>
 		<English>*Revolutions Mod Hint*: Customise the Revolution Watch Advisor to suit your playing style and imagination! Put the culture level column next to the Revolution trend column, it doesn't matter!</English>
 		<French>*Conseil Mod Revolution*: Personnalisez l'Ecran de Conseiller de Révolution pour l'adapter à votre style de Jeu! Placez le niveau de Culture tout de suite à côté de la tendance de Revolution, peu importe!</French>
-		<Italian>*Suggerimento del MOD 'Revolutions'*: Personalizza la schermata del Consigliere Rivoluzionario per adattarla al tuo stile di gioco ed immaginazione! Inserisci la colonna del livello culturale vicino a quella della tendenza alla rivolta. non ti preoccupare!</Italian>
+		<Italian>*Suggerimento del MOD 'Revolutions'*: Personalizza la schermo informazioni rivolta per adattarla al tuo stile di gioco ed immaginazione! Inserisci la colonna del livello culturale vicino a quella della tendenza alla rivolta. non ti preoccupare!</Italian>
 		<Spanish>*Consejo de Revolution*: ¡Personaliza la pantalla del Consejero de Revolución para ajustarlo a tu estilo de juego! ¡Puedes colocar la columna de "Nivel cultural" junto a la columna de "Estabilidad", no pasa nada!</Spanish>
 		<Polish>*Podpowiedź do moda Rewolucje*: Modyfikuj ekran Doradcy ds. Rewolucji według swojego upodobania i stylu gry! Przenieś kolumnę poziomu kultury obok kolumny trendu rewolucji - to nie ma znaczenia!</Polish>
 	</TEXT>
@@ -2052,7 +2052,7 @@
 		<Tag>TXT_KEY_REVDCM_HINT_3</Tag>
 		<English>*Revolutions Mod Hint*: The Revolution Watch Advisor can also display important buildings constructed in a city that are relevant to Revolutions, especially cultural buildings like wonders, and theatres!</English>
 		<French>*Conseil Mod Revolution*: l'Ecran de Conseiller de Révolution peut également afficher les bâtiments construits, ayant une influence pour la stabilité de l'Empire, particulièrement les bâtiments culturels (Merveilles, théatres...)</French>
-		<Italian>*Suggerimento del MOD 'Revolutions'*: La schermata del Consigliere Rivoluzionario può mostrare edifici cittadini rilevanti per 'Revolutions', tipo edifici culturali come Meraviglie e Teatri!</Italian>
+		<Italian>*Suggerimento del MOD 'Revolutions'*: La schermo delle informazioni rivolta può mostrare edifici cittadini rilevanti per 'Revolutions', tipo edifici culturali come Meraviglie e Teatri!</Italian>
 		<Spanish>*Consejo de Revolution*: El Consejero de Revolución también puede mostrar edificios relevantes para la estabilidad construidos en una ciudad, especialmente edificios culturales como Maravillas y teatros.</Spanish>
 		<Polish>*Podpowiedź do moda Rewolucje*: Ekran Doradcy ds. Rewolucji może również pokazać ważne budynki wybudowane w mieście powiązane z Rewolucją, szczególnie budynki kulturowe - takie jak: Cuda i Teatry!</Polish>
 	</TEXT>
@@ -2142,7 +2142,7 @@
 		<Tag>TXT_KEY_REVDCM_HINT_4</Tag>
 		<English>*Revolutions Mod Hint*: City bribing can be initiated from the city screen or the Revolutions Watch Advisor screen.</English>
 		<French>*Conseil Mod Revolution*: La corruption de la ville peut être ordonnée depuis l'écran de ville ou l'écran de conseiller de révolution.</French>
-		<Italian>*Suggerimento del MOD 'Revolutions'*: Puoi tentare una 'donazione' per una città dalla schermata cittadina o da quella del Consigliere Rivoluzionario.</Italian>
+		<Italian>*Suggerimento del MOD 'Revolutions'*: Puoi tentare una 'donazione' per una città dalla schermo della città o da quella delle informazioni rivolta</Italian>
 		<Spanish>*Consejo de Revolution*: Se puede sobornar a los ciudadanos tanto desde la vista de ciudad como desde la vista del Consejero de Revolución.</Spanish>
 		<Polish>*Podpowiedź do moda Rewolucje*: Przekupstwo miasta, można zainicjować z ekranu miasta lub ekranu Doradcy ds. Rewolucji.</Polish>
 	</TEXT>
@@ -2842,7 +2842,7 @@
 		<Tag>TXT_KEY_ROM_HINT_23</Tag>
 		<English>Caveman2Cosmos: Religious Shrines are no longer marked as great wonders. You can build them in their Holy City even if it has the max amount of Great Wonders already.</English>
 		<French>Caveman2Cosmos: Les Lieux Saints ne sont plus considérés comme des Merveilles et ne comptent donc pas dans la limite de Merveilles par villes.</French>
-		<Italian>Caveman2Cosmos: Gli altari religiosi non sono più Grandi Meraviglie. Ora puoi costruirli nella relativa città santa anche se ha già costruito il massimo numero disponibile di Meraviglie.</Italian>
+		<Italian>Caveman2Cosmos: Gli altari religiosi non sono più meraviglie mondiali. Ora puoi costruirli nella relativa città santa anche se ha già costruito il massimo numero disponibile di Meraviglie.</Italian>
 		<Spanish>Caveman2Cosmos: Los Altares religiosos han dejado de ser considerados Grandes maravillas. Puedes construirlos en su Ciudad Santa aunque ya tengas el máximo número de Grandes maravillas construidas en ella.</Spanish>
 		<Polish>Caveman2Cosmos: Sanktuaria religijne nie są dłużej traktowane jako wielkie cuda. Możesz budować je w Świętym Mieście nawet jeśli posiada ono już maksymalną ilość Wielkich Cudów</Polish>
 		<Russian>Caveman2Cosmos: религиозные святыни больше не считаются Великими Чудесами. Вы можете построить их в их Священном городе, даже если в нем уже есть максимальное количество Великих чудес.</Russian>
