@@ -20,8 +20,6 @@ namespace logging
 
 	void logMsg(const char* file, const char* msg, ...);
 	void logMsgW(const char* file, const wchar_t* msg, ...);
-
-	void deleteLogs();
 }
 
 #ifdef _DEBUG
