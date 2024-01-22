@@ -28,6 +28,9 @@
 			<option id="BattlefieldPromotions" key="BattlefieldPromotions" type="boolean" default="False" get="isBattlefieldPromotions" set="setBattlefieldPromotions">
 				<change module="ANewDawnSettings" function="changedBattlefieldPromotions"/>
 			</option>
+			<option id="Starsigns" key="Starsigns" type="boolean" default="False" get="isStarsigns" set="setStarsigns">
+				<change module="ANewDawnSettings" function="changedStarsigns"/>
+			</option>
 			<option id="BetterAirInterception" key="BetterAirInterception" type="boolean" default="True" get="isBetterAirInterception" set="setBetterAirInterception">
 				<change module="ANewDawnSettings" function="changedBetterAirInterception"/>
 			</option>

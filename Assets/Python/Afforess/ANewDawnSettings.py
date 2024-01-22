@@ -58,6 +58,8 @@ class ANewDawnSettings:
 				ANewDawnOpt.setRealisiticDiplomacy(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_BATTLEFIELD_PROMOTIONS):
 				ANewDawnOpt.setBattlefieldPromotions(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_STARSIGNS):
+				ANewDawnOpt.setStarsigns(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_IMPROVED_XP):
 				ANewDawnOpt.setImprovedXP(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_RELIGION_DECAY):
@@ -188,6 +190,10 @@ def changedShowRevCivics(option, value):
 def changedBattlefieldPromotions(option, value):
 	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_BATTLEFIELD_PROMOTIONS, value)
 	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_BATTLEFIELD_PROMOTIONS), int(value), 0)
+
+def changedStarsigns(option, value):
+	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_STARSIGNS, value)
+	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_STARSIGNS), int(value), 0)
 
 def changedHideReplacedBuildings(option, value):
 	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_HIDE_REPLACED_BUILDINGS, value)
