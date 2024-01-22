@@ -6643,6 +6643,14 @@
 		<Russian>Êâàëèôèêàöèè âìåñòî ÕÐ</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__STARSIGNS_HOVER</Tag>
+		<English>Units may be created with a starsign promotion. Tech level affects how probable it is for a unit to start off with a starsign promotion and if it is possible at all.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__STARSIGNS_TEXT</Tag>
+		<English>Starsigns</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__BETTERAIRINTERCEPTION_HOVER</Tag>
 		<English>Changes Air Interception to be Multiplicitive, making it more useful to have more than one air defender for each city.</English>
 		<French>Modifie l'Interception aérienne et la rend Multiplicative, rendant le fait d'avoir plus d'une unité de défense aérienne dans chaque Ville plus utile.</French>

@@ -33936,7 +33936,10 @@ void CvUnit::doSetFreePromotions(bool bAdding, TraitTypes eTrait)
 	{
 		checkFreetoCombatClass();
 	}
-	doStarsign();
+	if (GC.getGame().getModderGameOption(MODDERGAMEOPTION_STARSIGNS))
+	{
+		doStarsign();
+	}
 }
 
 int CvUnit::getRetrainsAvailable() const

@@ -175,6 +175,9 @@ class RevolutionInit:
 		if ANewDawnOpt.isBattlefieldPromotions():
 			temp += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_ROMSETTINGS__BATTLEFIELDPROMOTIONS_TEXT",())
 
+		if ANewDawnOpt.isStarsigns():
+			temp += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_ROMSETTINGS__STARSIGNS_TEXT",())
+
 		if ANewDawnOpt.isReligionDecay():
 			temp += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_ROMSETTINGS__RELIGIONDECAY_TEXT",())
 
