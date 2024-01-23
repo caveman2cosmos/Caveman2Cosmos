@@ -33,6 +33,14 @@
 		<Italian>Mito del cinghiale selvatico</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CUSCUS_SPOTTED</Tag>
+		<English>Folklore - Spotted Cuscus</English>
+		<French>Mythe du Couscous</French>
+		<German>Mythos des Tüpfelkuskus</German>
+		<Italian>Mito del cusco maculato</Italian>
+		<Russian>Ìèô î êóñêóñå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_DART_FROG</Tag>
 		<English>Folklore - Dart Frog</English>
 		<French>Mythe de la Grenouille venimeuse</French>
@@ -79,6 +87,14 @@
 		<German>Mythos des Rotfuchses</German>
 		<Italian>Mito della volpe rossa</Italian>
 		<Russian>Ìèô î ëèñèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_KOALA</Tag>
+		<English>Folklore - Koala</English>
+		<French>Mythe du Koala</French>
+		<German>Mythos des Koalas</German>
+		<Italian>Mito del koala</Italian>
+		<Russian>Ìèô î êîàëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_MAMMOTH</Tag>

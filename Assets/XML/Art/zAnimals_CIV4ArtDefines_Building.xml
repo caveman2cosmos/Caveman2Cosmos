@@ -352,16 +352,6 @@
 			<Button>Art/Interface/Buttons/Units/Crow.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_SPOTTED_CUSCUS</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF>Art/empty.nif</NIF>
-			<KFM/>
-			<Button>Art/Interface/Buttons/Units/Cuscus.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_FOLKLORE_DESERT_TORTOISE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
@@ -840,16 +830,6 @@
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/kangaroo.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_KOALA</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF>Art/empty.nif</NIF>
-			<KFM/>
-			<Button>Art/Interface/Buttons/Units/Koala.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_FOLKLORE_KOMODO_DRAGON</Type>

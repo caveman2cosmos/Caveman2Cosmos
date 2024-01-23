@@ -910,18 +910,6 @@
 		<Russian>Ìèô î âîðîíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_SPOTTED_CUSCUS</Tag>
-		<English>Folklore - Spotted Cuscus</English>
-		<French>Mythe du Couscous</French>
-		<German>
-			<Text>Mythos des Tüpfelkuskus:Mythos des Tüpfelkuskus:Mythos des Tüpfelkuskus:Mythos des Tüpfelkuskus</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del cusco maculato</Italian>
-		<Russian>Ìèô î êóñêóñå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_DEER</Tag>
 		<English>Folklore - Deer</English>
 		<French>Mythe du Cerf</French>
@@ -1524,18 +1512,6 @@
 		</German>
 		<Italian>Mito del canguro rosso</Italian>
 		<Russian>Ìèô î êðàñí.êåíãóðó</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_KOALA</Tag>
-		<English>Folklore - Koala</English>
-		<French>Mythe du Koala</French>
-		<German>
-			<Text>Mythos des Koalas:Mythos des Koalas:Mythos des Koalas:Mythos des Koalas</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del koala</Italian>
-		<Russian>Ìèô î êîàëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_KOMODO_DRAGON</Tag>
