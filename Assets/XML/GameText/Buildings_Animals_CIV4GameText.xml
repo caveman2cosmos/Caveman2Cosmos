@@ -1069,18 +1069,6 @@
 		<Russian>Øåñòü ýëåìåíòîâ ñîñòàâëÿþò âñå. Ê íèì îòíîñÿòñÿ çåìëÿ, âîçäóõ(íåáî), âîäà(ìîðå), êàìåíü, ìåòàëë è îãîíü. Îíè òåðÿþò âñå ïðåèìóùåñòâî ñ èçó÷åíèåì Õèìèè.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_EMPEROR_PENGUIN</Tag>
-		<English>Folklore - Emperor Penguin</English>
-		<French>Mythe du Manchot Empereur</French>
-		<German>
-			<Text>Mythos des Kaiserpinguins:Mythos des Kaiserpinguins:Mythos des Kaiserpinguins:Mythos des Kaiserpinguins</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del pinguino imperatore</Italian>
-		<Russian>Ìèô îá èìï. ïèíãâèíå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ETHIOPIAN_WOLF</Tag>
 		<English>Folklore - Ethiopian Wolf</English>
 		<French>Mythe du loup d'Éthiopie</French>
@@ -2040,18 +2028,6 @@
 		<Russian>Ìèô î ïàâëèíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_PENGUIN</Tag>
-		<English>Folklore (T) - Penguin</English>
-		<French>Mythe du Pingouin (T)</French>
-		<German>
-			<Text>Mythos der Pinguine:Mythos der Pinguine:Mythos der Pinguine:Mythos der Pinguine</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del pinguino imperatore</Italian>
-		<Russian>Ìèô î ïèíãâèíå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_PHEASANT</Tag>
 		<English>Folklore - Pheasant</English>
 		<French>Mythe du Faisan</French>
@@ -2294,18 +2270,6 @@
 			<Plural>0</Plural>
 		</German>
 		<Italian>Mito del coccodrillo di fiume (grande)</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_ROCKHOPPER_PENGUIN</Tag>
-		<English>Folklore - Rockhopper Penguin</English>
-		<French>Mythe du Gorfou sauteur</French>
-		<German>
-			<Text>Mythos des Felsenpinguins:Mythos des Felsenpinguins:Mythos des Felsenpinguins:Mythos des Felsenpinguins</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del pinguino saltarocce</Italian>
-		<Russian>Ìèô î ñêàë. ïèíãâèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_RODENT</Tag>

@@ -225,7 +225,6 @@
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BIRD</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_PENGUIN</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_BIRDS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_SEA_BIRDS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_FLIGHTLESS_BIRDS</BuildingType>
@@ -238,6 +237,7 @@
 			</Buildings>
 			<Heritage>
 				<Type>HERITAGE_FOLKLORE_PENGUIN_AFRICAN</Type>
+				<Type>HERITAGE_TAXONOMY_PENGUIN</Type>
 			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
@@ -6900,8 +6900,6 @@
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BIRD</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_GALAPAGOS_PENGUIN</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_PENGUIN</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_BIRDS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_SEA_BIRDS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_FLIGHTLESS_BIRDS</BuildingType>
@@ -6912,6 +6910,10 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_PENGUIN_GALAPAGOS</Type>
+				<Type>HERITAGE_TAXONOMY_PENGUIN</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -15725,8 +15727,6 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEA</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_EMPEROR_PENGUIN</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_PENGUIN</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BIRD</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_BIRDS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_FLIGHTLESS_BIRDS</BuildingType>
@@ -15735,6 +15735,10 @@
 				<BuildingType>BUILDING_MARINE_INSTITUTE</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_PENGUIN_EMPEROR</Type>
+				<Type>HERITAGE_TAXONOMY_PENGUIN</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -18520,8 +18524,6 @@
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BIRD</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_ROCKHOPPER_PENGUIN</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_PENGUIN</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_BIRDS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_FLIGHTLESS_BIRDS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEA</BuildingType>
@@ -18531,6 +18533,10 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_PENGUIN_ROCKHOPPER</Type>
+				<Type>HERITAGE_TAXONOMY_PENGUIN</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
