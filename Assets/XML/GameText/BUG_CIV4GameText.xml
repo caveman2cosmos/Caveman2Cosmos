@@ -6768,24 +6768,6 @@
 		<Russian>Ãèáêèé óðîâ. ñëîæíîñòè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__EVENTIMAGES_HOVER</Tag>
-		<English>Random Events will display an image with them.</English>
-		<French>Les Evénements aléatoires sont affichés avec une image.</French>
-		<German>Bei Zufallsereignissen wird zusätzlich ein Bild angezeigt.</German>
-		<Italian>[BOLD]Un'[COLOR_HIGHLIGHT_TEXT]immagine[COLOR_REVERT] verrà mostrata durante gli eventi casuali[\BOLD]</Italian>
-		<Spanish>Los eventos aleatorios se mostrarán con una imagen.</Spanish>
-		<Russian>Ñëó÷àéíûå ñîáûòèÿ áóäóò ñîïðîâîæäàòüñÿ èçîáðàæåíèåì äëÿ íèõ.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__EVENTIMAGES_TEXT</Tag>
-		<English>Event Images</English>
-		<French>Images d'Evénements</French>
-		<German>Ereignisbilder</German>
-		<Italian>Immagini degli eventi</Italian>
-		<Spanish>Imágenes de eventos</Spanish>
-		<Russian>Èëëþñòð. ñîáûòèÿ</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__FLEXIBLEDIFFICULTYAI_HOVER</Tag>
 		<English>All AI players will also use Flexible Difficulty, and human players will be alerted when AI difficulty changes.</English>
 		<Russian>Âñå èãðîêè ÈÈ áóäóò èñïîëüçîâàòü ãèáêóþ ñëîæíîñòü, à ÷åëîâå÷åñêèå èãðîêè áóäóò îïîâåùåíû, êîãäà èçìåíèòñÿ óðîâåíü ñëîæíîñòè äëÿ ÈÈ.</Russian>
@@ -7335,24 +7317,6 @@
 		<German>Detaillierte RevIndex-Werte zeigen</German>
 		<Italian>Mostra valori rivoluzione dettagliati</Italian>
 		<Spanish>Mostrar valores detallados del RevIndex</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__STRATEGICEVENTS_HOVER</Tag>
-		<English>Strategic Events are random events that force players to make decisions that are strategically important, and could alter the course of the game. They can be more negative than standard events, but also more positive.</English>
-		<French>Les Événements stratégiques sont des événements aléatoires qui obligent les joueurs à prendre des décisions importantes au niveau stratégique, et qui peuvent changer le cours du Jeu. Ces événements ont beaucoup plus d'incidence, en bien ou en mal.</French>
-		<German>Strategische Ereignisse sind Zufallsereignisse, die den Spieler dazu zwingen, strategisch wichtige Entscheidungen zu treffen, die den Verlauf des Spiels maßgeblich beeinflussen können. Sie können negativere, aber auch positivere Auswirkungen als Standardereignisse haben.</German>
-		<Italian>[BOLD]Gli eventi strategici sono eventi casuali che [COLOR_HIGHLIGHT_TEXT]costringono i giocatori a decisioni strategicamente importanti[COLOR_REVERT] che potrebbero alterare il corso della partita (possono essere più negativi degli eventi standard, ma anche più positivi)[\BOLD]</Italian>
-		<Spanish>Los eventos estratégicos son eventos aleatorios que fuerzan al jugador a tomar decisiones estratégicamente importantes que podrían alterar el curso de la partida. Pueden ser más perjudiciales que los eventos normales, pero también más beneficiosos.</Spanish>
-		<Russian>Ñòðàòåãè÷åñêèå ñîáûòèÿ ÿâëÿþòñÿ ñëó÷àéíûìè ñîáûòèÿìè, êîòîðûå çàñòàâëÿþò èãðîêîâ ïðèíèìàòü ðåøåíèÿ, ÿâëÿþùèåñÿ ñòðàòåãè÷åñêè âàæíûìè, è ñïîñîáíûìè èçìåíèòü õîä èãðû. Îíè ìîãóò áûòü êàê áîëåå íåãàòèâíûìè, ÷åì ñòàíäàðòíûå ñîáûòèÿ, òàê è áîëåå ïîçèòèâíûìè.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__STRATEGICEVENTS_TEXT</Tag>
-		<English>Strategic Events</English>
-		<French>Événements Stratégiques</French>
-		<German>Strategische Ereignisse</German>
-		<Italian>Eventi strategici</Italian>
-		<Spanish>Eventos estratégicos</Spanish>
-		<Russian>Ñòðàòåãè÷. ñîáûòèÿ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__TELEPATHICRELIGION_HOVER</Tag>

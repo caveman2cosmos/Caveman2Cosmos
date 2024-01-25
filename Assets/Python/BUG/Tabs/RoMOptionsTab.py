@@ -22,6 +22,10 @@ class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 		GAME = CyGlobalContext().getGame()
 		bCanAdjustSettings = not GAME.isNetworkMultiPlayer() or GAME.getActivePlayer() == 0
 
+		#Reset Settings
+		self.addCheckbox(screen, left, "RoMSettings__RoMReset")
+		self.addSpacer(screen, left, "")
+
 		#Flexible Difficulty
 		self.addLabel(screen, left, "RoMSettings__FlexibleDifficulty")
 
@@ -37,16 +41,16 @@ class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 
 		self.addTextDropdown(screen, left, left, "RoMSettings__PlayerColor", False, "LAYOUT_LEFT") # This might be OOS safe, but I'm not sure... Toffer.
 
-		#Reset Settings
-		self.addSpacer(screen, left, "")
-		self.addCheckbox(screen, left, "RoMSettings__RoMReset")
-
 		#City Management
 		self.addLabel(screen, center, "RoMSettings__CityManagement")
 
+		self.addCheckbox(screen, center, "RoMSettings__HideReplacedBuildings")
+
 		screen.setEnabled(self.addIntDropdown(screen, center, center, "RoMSettings__MaxBombardDefense", False, "LAYOUT_LEFT"), bCanAdjustSettings)
 
-		self.addCheckbox(screen, center, "RoMSettings__HideReplacedBuildings")
+		screen.setEnabled(self.addCheckbox(screen, center, "RoMSettings__ReligionDecay"), bCanAdjustSettings)
+		screen.setEnabled(self.addCheckbox(screen, center, "RoMSettings__MultipleReligionSpread"), bCanAdjustSettings)
+		screen.setEnabled(self.addCheckbox(screen, center, "RoMSettings__TelepathicReligion"), bCanAdjustSettings)
 
 		#Empire Management
 		self.addLabel(screen, center, "RoMSettings__EmpireManagement")
@@ -60,10 +64,6 @@ class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 
 		if GAME.isOption(GameOptionTypes.GAMEOPTION_MAP_PERSONALIZED):
 			self.addCheckbox(screen, center, "RoMSettings__UseLandmarkNames")
-
-		self.addCheckbox(screen, center, "RoMSettings__EventImages")
-
-		screen.setEnabled(self.addCheckbox(screen, center, "RoMSettings__StrategicEvents"), bCanAdjustSettings)
 
 		self.addCheckbox(screen, center, "RoMSettings__IgnoreDisabledBuildingAlerts")
 
@@ -86,9 +86,6 @@ class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__MercyRule"), bCanAdjustSettings)
 
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__RealisiticDiplomacy"), bCanAdjustSettings)
-		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__ReligionDecay"), bCanAdjustSettings)
-		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__MultipleReligionSpread"), bCanAdjustSettings)
-		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__TelepathicReligion"), bCanAdjustSettings)
 
 		screen.setEnabled(self.addIntDropdown(screen, right, right, "RoMSettings__MaxRebaseRange"), bCanAdjustSettings)
 		screen.setEnabled(self.addIntDropdown(screen, right, right, "RoMSettings__MaxUnitsPerTile"), bCanAdjustSettings)

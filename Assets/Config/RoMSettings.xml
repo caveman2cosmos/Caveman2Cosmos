@@ -154,12 +154,6 @@ values="Current Color|Black|Blue|Brown|Cyan|Dark Blue|Dark Cyan|Dark Green|Dark 
 			<option id="WarPrizes" key="WarPrizes" type="boolean" default="True" get="isWarPrizes" set="setWarPrizes">
 				<change module="ANewDawnSettings" function="changedWarPrizes"/>
 			</option>
-			<option id="EventImages" key="EventImages" type="boolean" default="True" get="isEventImages" set="setEventImages">
-				<change module="ANewDawnSettings" function="changedEventImages"/>
-			</option>
-			<option id="StrategicEvents" key="StrategicEvents" type="boolean" default="True" get="isStrategicEvents" set="setStrategicEvents">
-				<change module="ANewDawnSettings" function="changedStrategicEvents"/>
-			</option>
 			<option id="ReligionDecay" key="ReligionDecay" type="boolean" default="True" get="isReligionDecay" set="setReligionDecay">
 				<change module="ANewDawnSettings" function="changedReligionDecay"/>
 			</option>

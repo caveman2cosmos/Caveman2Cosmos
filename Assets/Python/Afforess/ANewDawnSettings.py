@@ -68,8 +68,6 @@ class ANewDawnSettings:
 				ANewDawnOpt.setMultipleReligionSpread(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_TERRAIN_DAMAGE):
 				ANewDawnOpt.setTerrainDamage(data3)
-			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_STRATEGIC_EVENTS):
-				ANewDawnOpt.setStrategicEvents(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_NO_AUTO_CORPORATION_FOUNDING):
 				ANewDawnOpt.setNoAutoCorporationFounding(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_AI_USE_FLEXIBLE_DIFFICULTY):
@@ -231,9 +229,6 @@ def changedHideUnavailableBuilds(option, value):
 	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_HIDE_UNAVAILBLE_BUILDS, value)
 	CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderOptionTypes.MODDEROPTION_HIDE_UNAVAILBLE_BUILDS), int(value), 0)
 
-def changedEventImages(option, value):
-	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_EVENT_IMAGES, value)
-	CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderOptionTypes.MODDEROPTION_EVENT_IMAGES), int(value), 0)
 
 def changedIgnoreDisabledBuildingAlerts(option, value):
 	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_IGNORE_DISABLED_ALERTS, value)
@@ -250,10 +245,6 @@ def changedMultipleReligionSpread(option, value):
 def changedTerrainDamage(option, value):
 	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_TERRAIN_DAMAGE, value)
 	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_TERRAIN_DAMAGE), int(value), 0)
-
-def changedStrategicEvents(option, value):
-	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_STRATEGIC_EVENTS, value)
-	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_STRATEGIC_EVENTS), int(value), 0)
 
 def changedAllowTerraforming(option, value):
 	CyMessageControl().sendModNetMessage(CANBUILD_EVENT_ID, GC.getGame().getActivePlayer(), GC.getInfoTypeForString("BUILD_TERRAFORM_GRASS"), not value, 0)
@@ -311,12 +302,10 @@ def setXMLOptionsfromIniFile():
 	changedImprovedXP(ANewDawnOpt, ANewDawnOpt.isImprovedXP())
 	changedUseLandmarkNames(ANewDawnOpt, ANewDawnOpt.isUseLandmarkNames())
 	changedHideUnavailableBuilds(ANewDawnOpt, ANewDawnOpt.isHideUnavailableBuilds())
-	changedEventImages(ANewDawnOpt, ANewDawnOpt.isEventImages())
 	changedIgnoreDisabledBuildingAlerts(ANewDawnOpt, ANewDawnOpt.isIgnoreDisabledBuildingAlerts())
 	changedReligionDecay(ANewDawnOpt, ANewDawnOpt.isReligionDecay())
 	changedMultipleReligionSpread(ANewDawnOpt, ANewDawnOpt.isMultipleReligionSpread())
 	changedTerrainDamage(ANewDawnOpt, ANewDawnOpt.isTerrainDamage())
-	changedStrategicEvents(ANewDawnOpt, ANewDawnOpt.isStrategicEvents())
 	changedAllowTerraforming(ANewDawnOpt, ANewDawnOpt.isAllowTerraforming())
 	changedReforestation(ANewDawnOpt, ANewDawnOpt.isReforestation())
 	changedSeaTunnels(ANewDawnOpt, ANewDawnOpt.isSeaTunnels())
