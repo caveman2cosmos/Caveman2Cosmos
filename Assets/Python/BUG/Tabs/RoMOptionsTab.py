@@ -26,9 +26,11 @@ class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 		self.addCheckbox(screen, left, "RoMSettings__RoMReset")
 		self.addSpacer(screen, left, "")
 
-		#Flexible Difficulty
-		self.addLabel(screen, left, "RoMSettings__FlexibleDifficulty")
+		self.addTextDropdown(screen, left, left, "RoMSettings__PlayerColor", False, "LAYOUT_LEFT") # This might be OOS safe, but I'm not sure... Toffer.
+		screen.setEnabled(self.addTextDropdown(screen, left, left, "RoMSettings__CurrentDifficulty", False, "LAYOUT_LEFT"), bCanAdjustSettings)
+		self.addSpacer(screen, left, "")
 
+		#Flexible Difficulty
 		screen.setEnabled(self.addCheckbox(screen, left, "RoMSettings__EnableFlexibleDifficulty"), bCanAdjustSettings)
 		screen.setEnabled(self.addTextDropdown(screen, left, left, "RoMSettings__FlexibleDifficultyMinimumDiff", False, "LAYOUT_LEFT"), bCanAdjustSettings)
 		screen.setEnabled(self.addTextDropdown(screen, left, left, "RoMSettings__FlexibleDifficultyMaximumDiff", False, "LAYOUT_LEFT"), bCanAdjustSettings)
@@ -37,9 +39,6 @@ class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 		screen.setEnabled(self.addTextDropdown(screen, left, left, "RoMSettings__FlexibleDifficultyAIMinimumDiff", False, "LAYOUT_LEFT"), bCanAdjustSettings)
 		screen.setEnabled(self.addTextDropdown(screen, left, left, "RoMSettings__FlexibleDifficultyAIMaximumDiff", False, "LAYOUT_LEFT"), bCanAdjustSettings)
 		screen.setEnabled(self.addIntDropdown(screen, left, left, "RoMSettings__FlexibleDifficultyAITurnIncrements", False, "LAYOUT_LEFT"), bCanAdjustSettings)
-		screen.setEnabled(self.addTextDropdown(screen, left, left, "RoMSettings__CurrentDifficulty", False, "LAYOUT_LEFT"), bCanAdjustSettings)
-
-		self.addTextDropdown(screen, left, left, "RoMSettings__PlayerColor", False, "LAYOUT_LEFT") # This might be OOS safe, but I'm not sure... Toffer.
 
 		#City Management
 		self.addLabel(screen, center, "RoMSettings__CityManagement")
@@ -72,11 +71,12 @@ class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 
 		self.addCheckbox(screen, center, "RoMSettings__NoFriendlyPillaging")
 
+		screen.setEnabled(self.addCheckbox(screen, center, "RoMSettings__DepletionMod"), bCanAdjustSettings)
+
 		#Game Settings
 		self.addLabel(screen, right, "RoMSettings__GameSettings")
 
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__DefenderWithdraw"), bCanAdjustSettings)
-		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__DepletionMod"), bCanAdjustSettings)
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__BetterAirInterception"), bCanAdjustSettings)
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__BattlefieldPromotions"), bCanAdjustSettings)
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__Starsigns"), bCanAdjustSettings)
