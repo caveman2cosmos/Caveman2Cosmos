@@ -73,6 +73,8 @@ class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 
 		screen.setEnabled(self.addCheckbox(screen, center, "RoMSettings__DepletionMod"), bCanAdjustSettings)
 
+		screen.setEnabled(self.addCheckbox(screen, center, "RoMSettings__GreaterGreatFarmer"), bCanAdjustSettings)
+
 		#Game Settings
 		self.addLabel(screen, right, "RoMSettings__GameSettings")
 

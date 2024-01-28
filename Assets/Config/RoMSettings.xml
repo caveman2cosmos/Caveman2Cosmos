@@ -25,6 +25,9 @@
 			<option id="DepletionMod" key="DepletionMod" type="boolean" default="False" get="isDepletionMod" set="setDepletionMod">
 				<change module="ANewDawnSettings" function="changedDepletionMod"/>
 			</option>
+			<option id="GreaterGreatFarmer" key="GreaterGreatFarmer" type="boolean" default="False" get="isGreaterGreatFarmer" set="setGreaterGreatFarmer">
+				<change module="ANewDawnSettings" function="changedGreaterGreatFarmer"/>
+			</option>
 			<option id="BattlefieldPromotions" key="BattlefieldPromotions" type="boolean" default="False" get="isBattlefieldPromotions" set="setBattlefieldPromotions">
 				<change module="ANewDawnSettings" function="changedBattlefieldPromotions"/>
 			</option>

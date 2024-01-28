@@ -48,6 +48,8 @@ class ANewDawnSettings:
 				ANewDawnOpt.setCanNotClaimOcean(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_RESOURCE_DEPLETION):
 				ANewDawnOpt.setDepletionMod(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_GREATER_GREAT_FARMER):
+				ANewDawnOpt.setGreaterGreatFarmer(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_BETTER_INTERCETION):
 				ANewDawnOpt.setBetterAirInterception(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_AIRLIFT_RANGE):
@@ -164,6 +166,10 @@ def changedFlexibleDifficultyMaxRank(option, value):
 def changedDepletionMod(option, value):
 	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_RESOURCE_DEPLETION, value)
 	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_RESOURCE_DEPLETION), int(value), 0)
+
+def changedGreaterGreatFarmer(option, value):
+	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_GREATER_GREAT_FARMER, value)
+	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_GREATER_GREAT_FARMER), int(value), 0)
 
 def changedBetterAirInterception(option, value):
 	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_BETTER_INTERCETION, value)
@@ -292,6 +298,7 @@ def setXMLOptionsfromIniFile():
 	changedFlexibleDifficultyMinRank(ANewDawnOpt, ANewDawnOpt.getFlexibleDifficultyMinRank())
 	changedFlexibleDifficultyMaxRank(ANewDawnOpt, ANewDawnOpt.getFlexibleDifficultyMaxRank())
 	changedDepletionMod(ANewDawnOpt, ANewDawnOpt.isDepletionMod())
+	changedGreaterGreatFarmer(ANewDawnOpt, ANewDawnOpt.isGreaterGreatFarmer())
 	changedBetterAirInterception(ANewDawnOpt, ANewDawnOpt.isBetterAirInterception())
 	changedMaxRebaseRange(ANewDawnOpt, ANewDawnOpt.getMaxRebaseRange())
 	changedMercyRule(ANewDawnOpt, ANewDawnOpt.isMercyRule())

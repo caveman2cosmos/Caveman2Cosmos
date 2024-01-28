@@ -459,43 +459,58 @@ class MapConstants:
 		# fMaxStartLat limits the starting location to a maximum latitude.
 		self.fMaxStartLat = 90 * self.fPolarLat - self.fPolarLat**3 / 0.0569
 		# Sea Level
-		seaLevel = GC.getSeaLevelInfo(MAP.getSeaLevel()).getSeaLevelChange()
+		seaLevel = MAP.getSeaLevel()
 		if self.bEarthlike:
 			if not seaLevel:
-				self.fLandPercent = .3
-			elif seaLevel > 0:
-				self.fLandPercent = .25
+				self.fLandPercent = .38 # Very Low
+			elif seaLevel == 1:
+				self.fLandPercent = .34 # Low
+			elif seaLevel == 2:
+				self.fLandPercent = .30 # Normal
 			else:
-				self.fLandPercent = .35
+				self.fLandPercent = .26 # High
+
 		elif self.bArchipelago:
 			if not seaLevel:
-				self.fLandPercent = .25
-			elif seaLevel > 0:
-				self.fLandPercent = .2
+				self.fLandPercent = .35 # Very Low
+			elif seaLevel == 1:
+				self.fLandPercent = .30 # Low
+			elif seaLevel == 2:
+				self.fLandPercent = .25 # Normal
 			else:
-				self.fLandPercent = .3
+				self.fLandPercent = .20 # High
+
 		elif self.bWaterworld:
 			if not seaLevel:
-				self.fLandPercent = .15
-			elif seaLevel > 0:
-				self.fLandPercent = .1
+				self.fLandPercent = .22 # Very Low
+			elif seaLevel == 1:
+				self.fLandPercent = .20 # Low
+			elif seaLevel == 2:
+				self.fLandPercent = .18 # Normal
 			else:
-				self.fLandPercent = .2
+				self.fLandPercent = .16 # High
+
 		elif self.bDryland:
 			if not seaLevel:
-				self.fLandPercent = .85
-			elif seaLevel > 0:
-				self.fLandPercent = .7
+				self.fLandPercent = 1.0 # Very Low
+			elif seaLevel == 1:
+				self.fLandPercent = .90 # Low
+			elif seaLevel == 2:
+				self.fLandPercent = .80 # Normal
 			else:
-				self.fLandPercent = 1.0
+				self.fLandPercent = .70 # High
+
 		elif self.bPangea:
 			if not seaLevel:
-				self.fLandPercent = .45
-			elif seaLevel > 0:
-				self.fLandPercent = .35
+				self.fLandPercent = .60 # Very Low
+			elif seaLevel == 1:
+				self.fLandPercent = .50 # Low
+			elif seaLevel == 2:
+				self.fLandPercent = .40 # Normal
 			else:
-				self.fLandPercent = .55
-		print "Land percent = %f" % self.fLandPercent
+				self.fLandPercent = .30 # High
+
+		print "SEALEVEL %d | Land percent = %f" % (seaLevel, self.fLandPercent)
 
 mc = None
 

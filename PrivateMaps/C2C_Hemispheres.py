@@ -149,7 +149,9 @@ class BnSMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
 		global ySplitRoll
 		global yPortionRoll
 
-		print("getSeaLevelChange", self.GC.getSeaLevelInfo(self.map.getSeaLevel()).getSeaLevelChange())
+		iSeaLevelChange = self.GC.getSeaLevelInfo(self.map.getSeaLevel()).getSeaLevelChange()
+
+		print("getSeaLevelChange", iSeaLevelChange)
 
 		if (self.map.getCustomMapOption(0) == 3):
 			# Generate varied
@@ -167,9 +169,9 @@ class BnSMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
 			iSecondaryWater = 74
 			iTertiaryWater = 74
 
-		iPrimaryWater += self.GC.getSeaLevelInfo(self.map.getSeaLevel()).getSeaLevelChange()
-		iSecondaryWater += self.GC.getSeaLevelInfo(self.map.getSeaLevel()).getSeaLevelChange()
-		iTertiaryWater += self.GC.getSeaLevelInfo(self.map.getSeaLevel()).getSeaLevelChange()
+		iPrimaryWater += iSeaLevelChange
+		iSecondaryWater += iSeaLevelChange
+		iTertiaryWater += iSeaLevelChange
 
 		splitYBigger = 0.5
 		splitYSmaller = 0.5

@@ -6912,6 +6912,14 @@
 		<Russian>Ïðèðîñò ñëîæíîñòè</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__GREATERGREATFARMER_HOVER</Tag>
+		<English>Allows great farmer to place any known resource anywhere, e.g. place papaya on ice terrain.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__GREATERGREATFARMER_TEXT</Tag>
+		<English>Greater Great Farmer</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__HIDEREPLACEDBUILDINGS_HOVER</Tag>
 		<English>Hides any buildings from the city construct queue if their upgraded form can be built immediately. (e.g The harbor will be hidden if the Port is available).</English>
 		<French>Masque tous les bâtiments de la liste de production si la version améliorée de ces bâtiments est déjà disponible (example: sera masqué si le Port est disponible).</French>
