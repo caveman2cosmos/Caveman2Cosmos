@@ -33,6 +33,14 @@
 		<Italian>Mito del cinghiale selvatico</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CUSCUS_SPOTTED</Tag>
+		<English>Folklore - Spotted Cuscus</English>
+		<French>Mythe du Couscous</French>
+		<German>Mythos des Tüpfelkuskus</German>
+		<Italian>Mito del cusco maculato</Italian>
+		<Russian>Ìèô î êóñêóñå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_DART_FROG</Tag>
 		<English>Folklore - Dart Frog</English>
 		<French>Mythe de la Grenouille venimeuse</French>
@@ -81,6 +89,14 @@
 		<Russian>Ìèô î ëèñèöå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_KOALA</Tag>
+		<English>Folklore - Koala</English>
+		<French>Mythe du Koala</French>
+		<German>Mythos des Koalas</German>
+		<Italian>Mito del koala</Italian>
+		<Russian>Ìèô î êîàëå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_MAMMOTH</Tag>
 		<English>Folklore - Mammoth</English>
 		<French>Mythe du Mammouth</French>
@@ -104,6 +120,31 @@
 		<Italian>Mito del pinguino africano</Italian>
 		<Polish>Mit - Pingwin Przylądkowy</Polish>
 		<Russian>Ìèô îá àôð. ïèíãâèíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PENGUIN_EMPEROR</Tag>
+		<English>Folklore - Emperor Penguin</English>
+		<French>Mythe du Manchot Empereur</French>
+		<German>Mythos des Kaiserpinguins</German>
+		<Italian>Mito del pinguino imperatore</Italian>
+		<Russian>Ìèô îá èìï. ïèíãâèíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PENGUIN_GALAPAGOS</Tag>
+		<English>Folklore - Galapagos Penguin</English>
+		<French>Mythe du Pingouin des Galapagos</French>
+		<German>Mythos des Galápagos-Pinguins</German>
+		<Italian>Mito del pinguino delle Galapagos</Italian>
+		<Polish>Mit - Pingwin Równikowy</Polish>
+		<Russian>Ìèô îá î÷ê. ïèíãâèíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PENGUIN_ROCKHOPPER</Tag>
+		<English>Folklore - Rockhopper Penguin</English>
+		<French>Mythe du Gorfou sauteur</French>
+		<German>Mythos des Felsenpinguins</German>
+		<Italian>Mito del pinguino saltarocce</Italian>
+		<Russian>Ìèô î ñêàë. ïèíãâèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_SWINE</Tag>
@@ -175,6 +216,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXONOMY_ELEPHANT</Tag>
 		<English>Taxonomy - Elephant</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXONOMY_PENGUIN</Tag>
+		<English>Taxonomy - Penguin</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXONOMY_TAPIR</Tag>

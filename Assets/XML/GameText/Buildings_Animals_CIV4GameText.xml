@@ -910,18 +910,6 @@
 		<Russian>Ìèô î âîðîíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_SPOTTED_CUSCUS</Tag>
-		<English>Folklore - Spotted Cuscus</English>
-		<French>Mythe du Couscous</French>
-		<German>
-			<Text>Mythos des Tüpfelkuskus:Mythos des Tüpfelkuskus:Mythos des Tüpfelkuskus:Mythos des Tüpfelkuskus</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del cusco maculato</Italian>
-		<Russian>Ìèô î êóñêóñå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_DEER</Tag>
 		<English>Folklore - Deer</English>
 		<French>Mythe du Cerf</French>
@@ -1079,18 +1067,6 @@
 		<Italian>I sei elementi che compongono tutto - Terra, Aria, Acqua, Pietra, Metallo, Fuoco - e che sono diventati oggetto di fiabe e leggende.</Italian>
 		<Polish>Sześć żywiołów tworzy wszystko. Składają si na nie Ziemia, Powietrze (Niebo), Woda (Morze), Kamień, Metal i Ogień. Chemia rozwiewa tą błdną teori i usuwa wszelkie zyski z tych mitów.</Polish>
 		<Russian>Øåñòü ýëåìåíòîâ ñîñòàâëÿþò âñå. Ê íèì îòíîñÿòñÿ çåìëÿ, âîçäóõ(íåáî), âîäà(ìîðå), êàìåíü, ìåòàëë è îãîíü. Îíè òåðÿþò âñå ïðåèìóùåñòâî ñ èçó÷åíèåì Õèìèè.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_EMPEROR_PENGUIN</Tag>
-		<English>Folklore - Emperor Penguin</English>
-		<French>Mythe du Manchot Empereur</French>
-		<German>
-			<Text>Mythos des Kaiserpinguins:Mythos des Kaiserpinguins:Mythos des Kaiserpinguins:Mythos des Kaiserpinguins</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del pinguino imperatore</Italian>
-		<Russian>Ìèô îá èìï. ïèíãâèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_ETHIOPIAN_WOLF</Tag>
@@ -1524,18 +1500,6 @@
 		</German>
 		<Italian>Mito del canguro rosso</Italian>
 		<Russian>Ìèô î êðàñí.êåíãóðó</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_KOALA</Tag>
-		<English>Folklore - Koala</English>
-		<French>Mythe du Koala</French>
-		<German>
-			<Text>Mythos des Koalas:Mythos des Koalas:Mythos des Koalas:Mythos des Koalas</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del koala</Italian>
-		<Russian>Ìèô î êîàëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_KOMODO_DRAGON</Tag>
@@ -2064,18 +2028,6 @@
 		<Russian>Ìèô î ïàâëèíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_PENGUIN</Tag>
-		<English>Folklore (T) - Penguin</English>
-		<French>Mythe du Pingouin (T)</French>
-		<German>
-			<Text>Mythos der Pinguine:Mythos der Pinguine:Mythos der Pinguine:Mythos der Pinguine</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del pinguino imperatore</Italian>
-		<Russian>Ìèô î ïèíãâèíå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_PHEASANT</Tag>
 		<English>Folklore - Pheasant</English>
 		<French>Mythe du Faisan</French>
@@ -2318,18 +2270,6 @@
 			<Plural>0</Plural>
 		</German>
 		<Italian>Mito del coccodrillo di fiume (grande)</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_ROCKHOPPER_PENGUIN</Tag>
-		<English>Folklore - Rockhopper Penguin</English>
-		<French>Mythe du Gorfou sauteur</French>
-		<German>
-			<Text>Mythos des Felsenpinguins:Mythos des Felsenpinguins:Mythos des Felsenpinguins:Mythos des Felsenpinguins</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del pinguino saltarocce</Italian>
-		<Russian>Ìèô î ñêàë. ïèíãâèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_RODENT</Tag>

@@ -22738,6 +22738,10 @@
 		<Spanish>Medio</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_SEALEVEL_VERY_LOW</Tag>
+		<English>Very Low</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_SEASON_FALL</Tag>
 		<English>Fall</English>
 		<French>

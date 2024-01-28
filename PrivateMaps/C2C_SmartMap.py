@@ -293,17 +293,22 @@ def generatePlotTypes():
 	climateArid = GC.getInfoTypeForString("CLIMATE_ARID")
 	climateRocky = GC.getInfoTypeForString("CLIMATE_ROCKY")
 
-	# Sea Level adjustment (from user input), transformed into width of sea separating continents
-	sea = GC.getSeaLevelInfo(cymap.getSeaLevel()).getSeaLevelChange()
-	seaWidth = 4 #default width for ocean separation of continents
-	if (sea > 0):
-		seaWidth = 7 #high sea level means extra separation
-	if (sea < 0):
-		seaWidth = 0 #low sea level means continents are permitted to merge
+
 	overrideSeparation = getSelectedMapValue("Override Separation:")
 	if overrideSeparation >= 0:
 		seaWidth = overrideSeparation
-	print "	seawidth",seaWidth
+	else:
+		# Sea Level adjustment (from user input), transformed into width of sea separating continents
+		sea = cymap.getSeaLevel()
+		if sea == 0:
+			seaWidth = 0 # Very low sea level means continents are permitted to merge
+		elif sea == 1:
+			seaWidth = 2 # Low sea level means continents are seperated by coast
+		elif sea == 2:
+			seaWidth = 4 # Default width for ocean separation of continents
+		else:
+			seaWidth = 7 # High sea level means extra separation
+	print ("	seawidth", seaWidth)
 
 	#Number of continents
 	singleTiles = False

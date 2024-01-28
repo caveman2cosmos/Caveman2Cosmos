@@ -1119,11 +1119,6 @@ int CyGame::getHighToLowCounter() const
 	return m_pGame.getHighToLowCounter();
 }
 
-bool CyGame::isModderGameOption(ModderGameOptionTypes eIndex) const
-{
-	return m_pGame.isModderGameOption(eIndex);
-}
-
 int CyGame::getModderGameOption(ModderGameOptionTypes eIndex) const
 {
 	return m_pGame.getModderGameOption(eIndex);

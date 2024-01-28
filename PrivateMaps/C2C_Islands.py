@@ -270,10 +270,8 @@ class IslandsMultilayeredFractal(MGU.MultilayeredFractal):
 		iPlayers = self.GC.getGame().countCivPlayersEverAlive()
 		userInputTinyIslands = self.map.getCustomMapOption(1)
 
-		# Sea Level adjustment (from user input), limited to value of 5%.
+		# Sea Level adjustment (from user input).
 		sea = self.GC.getSeaLevelInfo(self.map.getSeaLevel()).getSeaLevelChange()
-		sea = min(sea, 5)
-		sea = max(sea, -5)
 
 		# Add the Tiny Islands first (if appropriate).
 		if userInputTinyIslands == 0: pass # No tinies.

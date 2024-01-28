@@ -1370,10 +1370,10 @@
 				<Type>HERITAGE_FOLKLORE_FOX_ARCTIC</Type>
 				<Type>HERITAGE_FOLKLORE_FOX_FENNEC</Type>
 				<Type>HERITAGE_FOLKLORE_FOX_RED</Type>
+				<Type>HERITAGE_FOLKLORE_KOALA</Type>
 			</PrereqOrHeritage>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FOLKLORE_BEAVER</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_KOALA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_PLATYPUS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA_OTTER</BuildingType>
 			</PrereqOrBuildings>
@@ -2070,10 +2070,12 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_KOALA</Type>
+			</PrereqOrHeritage>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FOLKLORE_T_OWLS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BADGER</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_KOALA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_RACCOON</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_RATEL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SKUNK</BuildingType>

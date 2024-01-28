@@ -87,7 +87,6 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 				}
 			}
 		}
-		logging::deleteLogs();
 		}
 		break;
 	case DLL_THREAD_ATTACH:

@@ -9890,8 +9890,8 @@ void CvGame::doFlexibleDifficulty()
 	const bool bFlexDiffForAI = isModderGameOption(MODDERGAMEOPTION_AI_USE_FLEXIBLE_DIFFICULTY);
 	const bool bIncreasingDifficulty = isOption(GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY);
 	bool bHumanHandicapChanged = false;
-	const int iMaxAIHandicap = getModderGameOption(MODDEROPTION_FLEXIBLE_DIFFICULTY_AI_MAX_DIFFICULTY);
-	const int iMinAIHandicap = getModderGameOption(MODDEROPTION_FLEXIBLE_DIFFICULTY_AI_MIN_DIFFICULTY);
+	const int iMaxAIHandicap = getModderGameOption(MODDERGAMEOPTION_FLEXIBLE_DIFFICULTY_AI_MAX_DIFFICULTY);
+	const int iMinAIHandicap = getModderGameOption(MODDERGAMEOPTION_FLEXIBLE_DIFFICULTY_AI_MIN_DIFFICULTY);
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
 		const PlayerTypes ePlayer = static_cast<PlayerTypes>(iI);
@@ -9905,15 +9905,8 @@ void CvGame::doFlexibleDifficulty()
 
 			if (bFlexDiffForAI && !bHuman)
 			{
-				iTurns = getModderGameOption(MODDEROPTION_FLEXIBLE_DIFFICULTY_AI_TURN_INCREMENTS);
+				iTurns = getModderGameOption(MODDERGAMEOPTION_FLEXIBLE_DIFFICULTY_AI_TURN_INCREMENTS);
 			}
-
-			//if (iTurns <= 0 || bFlexDiffForAI && !bHuman)
-			//{
-			//	iTurns = getModderGameOption(MODDEROPTION_FLEXIBLE_DIFFICULTY_AI_TURN_INCREMENTS);
-			//	iTurns *= GC.getGameSpeedInfo(getGameSpeedType()).getSpeedPercent();
-			//	iTurns /= 100;
-			//}
 
 			logging::logMsg("C2C.log", "[Flexible Difficulty] (%d / %d) turns until next flexible difficulty check for Player: %S\n", iTimer, iTurns, playerX.getName());
 

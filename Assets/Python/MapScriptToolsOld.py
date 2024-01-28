@@ -148,7 +148,7 @@ def getModInfo(mapVersion=None, defLatitude=None, sMapInfo=None):
 	if not bInitialized:
 		bInitialized = True
 	else:
-		global sClimateType, sSeaType, bTeams, mapGetLatitude
+		global sClimateType, bTeams, mapGetLatitude
 		#######################
 		### retrieve parameters
 		#######################
@@ -162,7 +162,6 @@ def getModInfo(mapVersion=None, defLatitude=None, sMapInfo=None):
 		### user selected map constants
 		###############################
 		sClimateType = GC.getClimateInfo(MAP.getClimate()).getType()
-		sSeaType = GC.getSeaLevelInfo(MAP.getSeaLevel()).getType()
 
 		bTeams = teamStart.getTeams() # check if there are teams
 

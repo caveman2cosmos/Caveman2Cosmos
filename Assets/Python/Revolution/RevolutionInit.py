@@ -166,6 +166,9 @@ class RevolutionInit:
 		if ANewDawnOpt.isDepletionMod():
 			temp += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_ROMSETTINGS__DEPLETIONMOD_TEXT",())
 
+		if ANewDawnOpt.isGreaterGreatFarmer():
+			temp += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_ROMSETTINGS__GREATERGREATFARMER_TEXT",())
+
 		if ANewDawnOpt.isRealisiticDiplomacy():
 			temp += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_ROMSETTINGS__REALISITICDIPLOMACY_TEXT",())
 

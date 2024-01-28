@@ -291,7 +291,6 @@ public:
 	int getCutLosersCounter() const;
 	int getHighToLowCounter() const;
 
-	bool isModderGameOption(ModderGameOptionTypes eIndex) const;
 	int getModderGameOption(ModderGameOptionTypes eIndex) const;
 	void setModderGameOption(ModderGameOptionTypes eIndex, int iNewValue);
 
