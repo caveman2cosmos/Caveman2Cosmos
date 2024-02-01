@@ -25433,14 +25433,6 @@ bool CvUnit::canApplyEvent(EventTypes eEvent) const
 			return false;
 		}
 	}
-
-	if (kEvent.getUnitImmobileTurns() > 0)
-	{
-		if (!canAttack())
-		{
-			return false;
-		}
-	}
 	return true;
 }
 
