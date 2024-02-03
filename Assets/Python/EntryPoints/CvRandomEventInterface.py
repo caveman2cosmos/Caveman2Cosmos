@@ -6156,7 +6156,7 @@ def doVolcanoNeighbouringPlots(pPlot):
 			if iImprovement != -1 and not plotX.isCity() and not iImprovement in immuneImprovements:
 				if iPlayer > -1:
 					szBuffer = TRNSLTR.getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED_NOOWNER", (GC.getImprovementInfo(iImprovement).getTextKey(), ))
-					CyInterface().addMessage(iPlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, GC.getImprovementInfo(iImprovement).getButton(), GC.getCOLOR_RED(), plot.getX(), plot.getY(), True, True)
+					CyInterface().addMessage(iPlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, GC.getImprovementInfo(iImprovement).getButton(), GC.getCOLOR_RED(), plotX.getX(), plotX.getY(), True, True)
 				if iImprovement in listRuins:
 					plotX.setImprovementType(iRuins)
 				else:

@@ -627,19 +627,6 @@
 		<Russian>Ìèô î ìàãîòå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_BEAVER</Tag>
-		<English>Folklore - Beaver</English>
-		<French>Mythe du Castor</French>
-		<German>
-			<Text>Mythos des Bibers:Mythos des Bibers:Mythos des Bibers:Mythos des Bibers</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del castoro</Italian>
-		<Polish>Mit - Bóbr</Polish>
-		<Russian>Ìèô î áîáðå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BELUGA</Tag>
 		<English>Folklore - Beluga</English>
 		<French>Mythe de la Baleine Beluga</French>
@@ -786,18 +773,6 @@
 		</German>
 		<Italian>Mito della scimmia cappuccina</Italian>
 		<Russian>Ìèô î êàïóöèå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_CAPYBARA</Tag>
-		<English>Folklore - Capybara</English>
-		<French>Mythe du Cabiaï</French>
-		<German>
-			<Text>Mythos des Wasserschweins:Mythos des Wasserschweins:Mythos des Wasserschweins:Mythos des Wasserschweins</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del capibara</Italian>
-		<Russian>Ìèô î âîäîñâèíêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_CARIBOU</Tag>
@@ -2270,19 +2245,6 @@
 			<Plural>0</Plural>
 		</German>
 		<Italian>Mito del coccodrillo di fiume (grande)</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_RODENT</Tag>
-		<English>Folklore (T) - Rodent</English>
-		<French>Mythe des Rongeurs (T)</French>
-		<German>
-			<Text>Mythos der Nager:Mythos der Nager:Mythos der Nager:Mythos der Nager</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del roditore</Italian>
-		<Polish>Mit (T) - Gryzonie</Polish>
-		<Russian>Ìèô î ãðûçóíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_SABRETOOTH</Tag>

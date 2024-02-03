@@ -7522,9 +7522,11 @@ bool CvPlayer::canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestVisibl
 			return false;
 		}
 
-		if (!bTestVisible || getCurrentEra() < GC.getTechInfo(kBuild.getTechPrereq()).getEra())
+		const TechTypes eTechPrereq = kBuild.getTechPrereq();
+
+		if (!bTestVisible || eTechPrereq != NO_TECH && getCurrentEra() < GC.getTechInfo(eTechPrereq).getEra())
 		{
-			if (kBuild.getTechPrereq() != NO_TECH && !GET_TEAM(getTeam()).isHasTech(kBuild.getTechPrereq()))
+			if (eTechPrereq != NO_TECH && !GET_TEAM(getTeam()).isHasTech(eTechPrereq))
 			{
 				return false;
 			}
@@ -12125,7 +12127,7 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 			}
 			FAssertMsg(isAlive(), "isAlive is expected to be true");
 
-			setEndTurn(false);
+			changeEndTurn(false);
 			GC.getGame().resetTurnTimer();
 			{
 				PROFILE("CvPlayer::setTurnActive.SetActive.CalcDanger");
@@ -12342,15 +12344,15 @@ bool CvPlayer::isAutoMoves() const
 }
 
 
-void CvPlayer::setAutoMoves(bool bNewValue)
+void CvPlayer::setAutoMoves(bool bAutoMoves)
 {
 	PROFILE_FUNC();
 
-	if (isAutoMoves() != bNewValue)
+	if (m_bAutoMoves != bAutoMoves)
 	{
-		m_bAutoMoves = bNewValue;
+		m_bAutoMoves = bAutoMoves;
 
-		if (!isAutoMoves() && (isEndTurn() || !isHumanPlayer() && !hasReadyUnit(true)))
+		if (!bAutoMoves && (isEndTurn() || !isHumanPlayer() && !hasReadyUnit(true)))
 		{
 			setTurnActive(false);
 		}
@@ -12358,40 +12360,48 @@ void CvPlayer::setAutoMoves(bool bNewValue)
 }
 
 
-void CvPlayer::setEndTurn(bool bNewValue)
+/*DllExport*/ void CvPlayer::setEndTurn(bool bNewValue)
+{
+	if (bNewValue)
+		OutputDebugString(CvString::format("Exe is ending player (%d) turn:\n", getID()).c_str());
+	else OutputDebugString(CvString::format("Exe is starting player (%d) turn:\n", getID()).c_str());
+
+	changeEndTurn(bNewValue);
+}
+
+void CvPlayer::changeEndTurn(const bool bNewValue, const bool bForce)
 {
 	PROFILE_EXTRA_FUNC();
-	if (isEndTurn() != bNewValue)
+
+	if (m_bEndTurn != bNewValue)
 	{
 		FAssertMsg(isTurnActive(), "isTurnActive is expected to be true");
 
-		if (isHumanPlayer() && hasIdleCity())
+		if (bNewValue)
 		{
-			CvCity* city = getIdleCity();
-			if (city)
+			if (!bForce && isHumanPlayer() && hasIdleCity())
 			{
-				setForcedCityCycle(true);
-
-				if (!getBugOptionBOOL("CityScreen__FullCityScreenOnEmptyBuildQueue", false))
+				CvCity* city = getIdleCity();
+				if (city)
 				{
-					gDLL->getInterfaceIFace()->addSelectedCity(city, false);
-					GC.getCurrentViewport()->bringIntoView(city->getX(), city->getY());
+					setForcedCityCycle(true);
+
+					if (!getBugOptionBOOL("CityScreen__FullCityScreenOnEmptyBuildQueue", false))
+					{
+						gDLL->getInterfaceIFace()->addSelectedCity(city, false);
+						GC.getCurrentViewport()->bringIntoView(city->getX(), city->getY());
+					}
+					else gDLL->getInterfaceIFace()->selectCity(city, true);
 				}
-				else gDLL->getInterfaceIFace()->selectCity(city, true);
+				else
+				{
+					FErrorMsg("idleCity == NULL; fixing");
+					resetIdleCities();
+				}
+				gDLL->getInterfaceIFace()->setEndTurnMessage(false);
+				return;
 			}
-			else
-			{
-				FErrorMsg("idleCity == NULL; fixing");
-				resetIdleCities();
-			}
-			gDLL->getInterfaceIFace()->setEndTurnMessage(false);
-			return;
-		}
 
-		m_bEndTurn = bNewValue;
-
-		if (isEndTurn())
-		{
 			foreach_(CvSelectionGroup* group, groups() | filtered(CvSelectionGroup::fn::getAutomateType() == AUTOMATE_SHADOW))
 			{
 				group->setForceUpdate(true);
@@ -12400,8 +12410,11 @@ void CvPlayer::setEndTurn(bool bNewValue)
 			setAutoMoves(true);
 		}
 		else m_bForcedCityCycle = false;
+
+		m_bEndTurn = bNewValue;
 	}
 }
+
 
 bool CvPlayer::isForcedCityCycle() const
 {
