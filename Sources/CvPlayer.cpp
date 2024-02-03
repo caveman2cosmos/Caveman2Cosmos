@@ -12127,7 +12127,7 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 			}
 			FAssertMsg(isAlive(), "isAlive is expected to be true");
 
-			setEndTurn(false);
+			changeEndTurn(false);
 			GC.getGame().resetTurnTimer();
 			{
 				PROFILE("CvPlayer::setTurnActive.SetActive.CalcDanger");
@@ -12360,40 +12360,48 @@ void CvPlayer::setAutoMoves(bool bAutoMoves)
 }
 
 
-void CvPlayer::setEndTurn(bool bNewValue)
+/*DllExport*/ void CvPlayer::setEndTurn(bool bNewValue)
+{
+	if (bNewValue)
+		OutputDebugString(CvString::format("Exe is ending player (%d) turn:\n", getID()).c_str());
+	else OutputDebugString(CvString::format("Exe is starting player (%d) turn:\n", getID()).c_str());
+
+	changeEndTurn(bNewValue);
+}
+
+void CvPlayer::changeEndTurn(const bool bNewValue, const bool bForce)
 {
 	PROFILE_EXTRA_FUNC();
-	if (isEndTurn() != bNewValue)
+
+	if (m_bEndTurn != bNewValue)
 	{
 		FAssertMsg(isTurnActive(), "isTurnActive is expected to be true");
 
-		if (isHumanPlayer() && hasIdleCity())
+		if (bNewValue)
 		{
-			CvCity* city = getIdleCity();
-			if (city)
+			if (!bForce && isHumanPlayer() && hasIdleCity())
 			{
-				setForcedCityCycle(true);
-
-				if (!getBugOptionBOOL("CityScreen__FullCityScreenOnEmptyBuildQueue", false))
+				CvCity* city = getIdleCity();
+				if (city)
 				{
-					gDLL->getInterfaceIFace()->addSelectedCity(city, false);
-					GC.getCurrentViewport()->bringIntoView(city->getX(), city->getY());
+					setForcedCityCycle(true);
+
+					if (!getBugOptionBOOL("CityScreen__FullCityScreenOnEmptyBuildQueue", false))
+					{
+						gDLL->getInterfaceIFace()->addSelectedCity(city, false);
+						GC.getCurrentViewport()->bringIntoView(city->getX(), city->getY());
+					}
+					else gDLL->getInterfaceIFace()->selectCity(city, true);
 				}
-				else gDLL->getInterfaceIFace()->selectCity(city, true);
+				else
+				{
+					FErrorMsg("idleCity == NULL; fixing");
+					resetIdleCities();
+				}
+				gDLL->getInterfaceIFace()->setEndTurnMessage(false);
+				return;
 			}
-			else
-			{
-				FErrorMsg("idleCity == NULL; fixing");
-				resetIdleCities();
-			}
-			gDLL->getInterfaceIFace()->setEndTurnMessage(false);
-			return;
-		}
 
-		m_bEndTurn = bNewValue;
-
-		if (isEndTurn())
-		{
 			foreach_(CvSelectionGroup* group, groups() | filtered(CvSelectionGroup::fn::getAutomateType() == AUTOMATE_SHADOW))
 			{
 				group->setForceUpdate(true);
@@ -12402,8 +12410,11 @@ void CvPlayer::setEndTurn(bool bNewValue)
 			setAutoMoves(true);
 		}
 		else m_bForcedCityCycle = false;
+
+		m_bEndTurn = bNewValue;
 	}
 }
+
 
 bool CvPlayer::isForcedCityCycle() const
 {

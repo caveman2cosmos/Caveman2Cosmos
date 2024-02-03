@@ -7210,7 +7210,7 @@ void CvGame::updateTurnTimer()
 		{
 			if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).isTurnActive())
 			{
-				GET_PLAYER((PlayerTypes)iI).setEndTurn(true);
+				GET_PLAYER((PlayerTypes)iI).changeEndTurn(true, true);
 
 				if (!isMPOption(MPOPTION_SIMULTANEOUS_TURNS) && !isSimultaneousTeamTurns())
 				{

@@ -207,7 +207,7 @@ void CvNetTurnComplete::Execute()
 	if (m_ePlayer != NO_PLAYER)
 	{
 		GC.getGame().logNetMsgData("Executing CvNetTurnComplete message with payload [%d]\n", m_ePlayer);
-		GET_PLAYER(m_ePlayer).setEndTurn(true);
+		GET_PLAYER(m_ePlayer).changeEndTurn(true);
 		GC.getGame().logNetMsgData("Executed CvNetTurnComplete message with payload [%d]\n", m_ePlayer);
 	}
 	else
