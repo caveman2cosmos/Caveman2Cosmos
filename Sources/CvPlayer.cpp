@@ -7522,9 +7522,11 @@ bool CvPlayer::canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestVisibl
 			return false;
 		}
 
-		if (!bTestVisible || getCurrentEra() < GC.getTechInfo(kBuild.getTechPrereq()).getEra())
+		const TechTypes eTechPrereq = kBuild.getTechPrereq();
+
+		if (!bTestVisible || eTechPrereq != NO_TECH && getCurrentEra() < GC.getTechInfo(eTechPrereq).getEra())
 		{
-			if (kBuild.getTechPrereq() != NO_TECH && !GET_TEAM(getTeam()).isHasTech(kBuild.getTechPrereq()))
+			if (eTechPrereq != NO_TECH && !GET_TEAM(getTeam()).isHasTech(eTechPrereq))
 			{
 				return false;
 			}
@@ -12342,15 +12344,15 @@ bool CvPlayer::isAutoMoves() const
 }
 
 
-void CvPlayer::setAutoMoves(bool bNewValue)
+void CvPlayer::setAutoMoves(bool bAutoMoves)
 {
 	PROFILE_FUNC();
 
-	if (isAutoMoves() != bNewValue)
+	if (m_bAutoMoves != bAutoMoves)
 	{
-		m_bAutoMoves = bNewValue;
+		m_bAutoMoves = bAutoMoves;
 
-		if (!isAutoMoves() && (isEndTurn() || !isHumanPlayer() && !hasReadyUnit(true)))
+		if (!bAutoMoves && (isEndTurn() || !isHumanPlayer() && !hasReadyUnit(true)))
 		{
 			setTurnActive(false);
 		}
