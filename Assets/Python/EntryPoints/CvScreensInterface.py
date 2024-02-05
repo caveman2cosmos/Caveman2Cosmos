@@ -65,6 +65,10 @@ def showCivicsScreen():
 	if CyGame().getActivePlayer() != -1:
 		screenMap[CIVICS_SCREEN].interfaceScreen()
 
+def showHeritageScreen():
+	if CyGame().getActivePlayer() != -1:
+		screenMap[HERITAGE_SCREEN].interfaceScreen()
+
 def showReligionScreen():
 	if CyGame().getActivePlayer() != -1:
 		screenMap[RELIGION_SCREEN].interfaceScreen()
@@ -677,6 +681,7 @@ def lateInit():
 	import CvEraMovieScreen
 	import CvVictoryScreen
 	import CvCivicsScreen
+	import HeritageScreen
 	import CvInfoScreen
 	import CvDawnOfMan
 	import CvTopCivs
@@ -695,6 +700,7 @@ def lateInit():
 	screenMap[ERA_MOVIE_SCREEN]		= CvEraMovieScreen.CvEraMovieScreen()
 	screenMap[VICTORY_SCREEN]		= CvVictoryScreen.CvVictoryScreen(VICTORY_SCREEN)
 	screenMap[CIVICS_SCREEN]		= CvCivicsScreen.CvCivicsScreen(CIVICS_SCREEN)
+	screenMap[HERITAGE_SCREEN]		= HeritageScreen.HeritageScreen(HERITAGE_SCREEN)
 	screenMap[INFO_SCREEN]			= CvInfoScreen.CvInfoScreen(INFO_SCREEN)
 	screenMap[DAWN_OF_MAN]			= CvDawnOfMan.CvDawnOfMan()
 	screenMap[TOP_CIVS]				= CvTopCivs.CvTopCivs(TOP_CIVS)

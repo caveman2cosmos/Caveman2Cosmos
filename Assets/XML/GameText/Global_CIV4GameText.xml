@@ -6745,14 +6745,6 @@
 		<Spanish>%D1%%: Por nuestra religión oficial</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ESPIONAGE_SCREEN</Tag>
-		<English>Espionage Screen</English>
-		<French>Ecran d'espionnage</French>
-		<German>Spionagebildschirm</German>
-		<Italian>Informazioni spionaggio</Italian>
-		<Spanish>Pantalla de espionaje</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_SCREEN_COST</Tag>
 		<English>Cost</English>
 		<French>Coût</French>

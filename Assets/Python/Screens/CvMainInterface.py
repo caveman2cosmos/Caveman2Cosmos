@@ -824,6 +824,12 @@ class CvMainInterface:
 		x = xRes - iSize*2
 		y = 22
 		dx = 24
+		# Heritage
+		btn = "AdvBtn10"
+		screen.setImageButton(btn, "", x, y, iSize, iSize, eWidGen, 0, 0)
+		screen.setStyle(btn, "Button_HUDBtnHeritage_Style")
+		screen.hide(btn)
+		x -= dx
 		# Partisan:
 		if self.GO_REVOLUTION:
 			btn = "AdvBtn9"
@@ -877,12 +883,6 @@ class CvMainInterface:
 		btn = "AdvBtn0"
 		screen.setImageButton(btn, "", x, y, iSize, iSize, eWidGen, 0, 0)
 		screen.setStyle(btn, "Button_HUDAdvisorDomestic_Style")
-		screen.hide(btn)
-		x -= dx
-		# Heritage
-		btn = "AdvBtn10"
-		screen.setImageButton(btn, "", x, y, iSize, iSize, eWidGen, 0, 0)
-		screen.setStyle(btn, "Button_HUDBtnHeritage_Style")
 		screen.hide(btn)
 		# Treasury
 		btn = "AdvBtn1"
@@ -5993,6 +5993,8 @@ class CvMainInterface:
 					UP.showEspionageAdvisor()
 				elif ID == 9:
 					UP.showRevolutionWatchAdvisor(self)
+				elif ID == 10:
+					UP.showHeritageScreen()
 
 			elif NAME == "PediaButton":
 				UP.pediaShow()
