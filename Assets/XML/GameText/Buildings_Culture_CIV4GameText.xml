@@ -41,7 +41,7 @@
 		<English>Active Culture</English>
 		<French>Culture active</French>
 		<German>aktive Kultur</German>
-		<Italian>[ICON_BULLET]Questa è una cultura attiva</Italian>
+		<Italian>[ICON_BULLET]Questa è una [COLOR_HIGHLIGHT_TEXT]cultura attiva[COLOR_REVERT]</Italian> <!-- city screen building local culture hover -->
 		<Russian>Àêòèâíàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
@@ -65,7 +65,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>Cultura Neanderthal (attiva)</Italian>
+		<Italian>Cultura neanderthal (attiva)</Italian>
 		<Russian>Неандертальская (АкК)</Russian>
 	</TEXT>
 	<TEXT>
@@ -175,7 +175,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>Cultura Neanderthal (adottata)</Italian>
+		<Italian>Cultura neanderthal (adottata)</Italian>
 		<Russian>Неандертальская (ПрК)</Russian>
 	</TEXT>
 	<TEXT>
@@ -261,7 +261,7 @@
 		<English>Local Culture</English>
 		<French>Culture Locale</French>
 		<German>lokale Kultur</German>
-		<Italian>[ICON_BULLET]Questa è una cultura locale</Italian>
+		<Italian>[ICON_BULLET]Questa è una [COLOR_HIGHLIGHT_TEXT]cultura locale[COLOR_REVERT]</Italian> <!-- city screen hover on a unique culture building -->
 		<Russian>Ìåñòíàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
@@ -285,7 +285,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>Cultura Neanderthal (locale)</Italian>
+		<Italian>Cultura neanderthal (locale)</Italian>
 		<Russian>Неандертальская (МК)</Russian>
 	</TEXT>
 	<TEXT>
@@ -375,7 +375,7 @@
 			<Plural>0</Plural>
 		</French>
 		<German>Urkultur</German>
-		<Italian>Cultura d'origine</Italian>
+		<Italian>[ICON_BULLET]Cultura d'[COLOR_HIGHLIGHT_TEXT]origine[COLOR_REVERT]</Italian> <!-- ity screen local culture building hover -->
 		<Polish>Tubylcza Kultura</Polish>
 		<Russian>Ðîäíàÿ êóëüòóðà</Russian>
 	</TEXT>
@@ -400,7 +400,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>Cultura Neanderthal (nativa)</Italian>
+		<Italian>Cultura neanderthal (nativa)</Italian>
 		<Russian>Неандертальская (РК)</Russian>
 	</TEXT>
 	<TEXT>
@@ -755,7 +755,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_AVERNIAN</Tag>
 		<English>Culture (Avernian)</English>
-		<Italian>Cultura averniana</Italian>
+		<Italian>Cultura averna</Italian>
 		<Russian>Àâåðíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
@@ -1070,7 +1070,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<Italian>Cultura beniniano</Italian>
+		<Italian>Cultura beninese</Italian>
 		<Polish>Kultura (Beninu)</Polish>
 		<Russian>Áåíèíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
@@ -1359,7 +1359,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_CELTIBERIAN</Tag>
 		<English>Culture (Celtiberian)</English>
-		<Italian>Cultura celtibera</Italian>
+		<Italian>Cultura celtiberica</Italian>
 		<Russian>Êåëüòèáåðèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
@@ -1882,7 +1882,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_FATIMID</Tag>
 		<English>Culture (Fatimid)</English>
-		<Italian>Cultura fatimida</Italian>
+		<Italian>Cultura fatimide</Italian>
 		<Russian>Ôàòèìèäñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
@@ -2125,7 +2125,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_GUANCHES</Tag>
 		<English>Culture (Guanches)</English>
-		<Italian>Cultura guancia</Italian>
+		<Italian>Cultura guanci</Italian>
 		<Russian>Ãóàí÷ñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
@@ -2135,7 +2135,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_GUARANI</Tag>
 		<English>Culture (Guarani)</English>
-		<Italian>Cultura guaranese</Italian>
+		<Italian>Cultura guaraní</Italian>
 		<Russian>Ãóàðàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
@@ -2416,7 +2416,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_HURRIANS</Tag>
 		<English>Culture (Hurrians)</English>
-		<Italian>Cultura hurrita</Italian>
+		<Italian>Cultura urrita</Italian>
 		<Russian>Õóððèòñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
@@ -2666,7 +2666,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_JAVANESE</Tag>
 		<English>Culture (Javanese)</English>
-		<Italian>Cultura javanese</Italian>
+		<Italian>Cultura giavanese</Italian>
 		<Russian>ßâàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
@@ -3401,7 +3401,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_MITTANNI</Tag>
 		<English>Culture (Mittanni)</English>
-		<Italian>Cultura mitanna</Italian>
+		<Italian>Cultura mitannica</Italian>
 		<Russian>Ìèòàííèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
@@ -3616,7 +3616,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>Cultura Neanderthal</Italian>
+		<Italian>Cultura neanderthal</Italian>
 		<Polish>Kultura (Neandertalska)</Polish>
 		<Russian>Íåàíäåðò. êóëüòóðà</Russian>
 	</TEXT>
@@ -3803,7 +3803,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_OPHIR</Tag>
 		<English>Culture (Ophir)</English>
-		<Italian>Cultura di ophir</Italian>
+		<Italian>Cultura di Ophir</Italian>
 		<Russian>Îôèðñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
@@ -4238,7 +4238,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_RED_OCHER</Tag>
 		<English>Culture (Red Ocher)</English>
-		<Italian>Cultura red ocher</Italian>
+		<Italian>Cultura dell'ocra rossa</Italian>
 		<Russian>Êóëüòóðà êðàñíîêîæèõ</Russian>
 	</TEXT>
 	<TEXT>
@@ -4319,7 +4319,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_SABBATEAN</Tag>
 		<English>Culture (Sabbatean)</English>
-		<Italian>Cultura sabbatiana</Italian>
+		<Italian>Cultura sabatea</Italian>
 		<Russian>Ñàááàòèàíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
@@ -4603,7 +4603,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_SINTASHTA</Tag>
 		<English>Culture (Sintashta)</English>
-		<Italian>Cultura di sintashta</Italian>
+		<Italian>Cultura di Sintashta</Italian>
 		<Russian>Ñèíòàøòèíñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>
@@ -5343,7 +5343,7 @@
 		<Tag>TXT_KEY_BUILDING_CULTURE_VALDIVIAN</Tag>
 		<English>Culture (Valdivian)</English>
 		<French>Culture (Valdive)</French>
-		<Italian>Cultura di valvidia</Italian>
+		<Italian>Cultura valvidiana</Italian>
 		<Russian>Âàëüâèäèéñêàÿ êóëüòóðà</Russian>
 	</TEXT>
 	<TEXT>

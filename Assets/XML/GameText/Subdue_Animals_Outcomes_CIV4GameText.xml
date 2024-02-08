@@ -178,7 +178,7 @@
 		<French>Tenter d'installer l'animal apprivoisé et domestiqué dans une ressource de troupeau et de construire un pâturage.</French>
 		<Polish>Spróbuj zmienić oswojone zwierzę w stado (surowiec na mapie) i zbuduj pastwisko.</Polish>
 		<Russian>Ïîïûòüñÿ ïîäñåëèòü ïðèðó÷åííîå æèâîòíîå â ñòàäî ðåñóðñà è ïîñòðîèòü ïàñòáèùå.</Russian>
-		<Italian>Prova a insediare l'animale addomesticato in una mandria e costruire un pascolo.</Italian>
+		<Italian>Prova a convertire l'animale domato in una mandria e costruire un pascolo.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_BUILD_DOMESTICATED_PASTURE_MESSAGE</Tag>

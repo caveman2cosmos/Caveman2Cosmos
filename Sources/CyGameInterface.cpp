@@ -280,7 +280,6 @@ void CyGamePythonInterface()
 		.def("getCutLosersCounter", &CyGame::getCutLosersCounter)
 		.def("getHighToLowCounter", &CyGame::getHighToLowCounter)
 
-		.def("isModderGameOption", &CyGame::isModderGameOption, "bool ()")
 		.def("getModderGameOption", &CyGame::getModderGameOption, "bool ()")
 		.def("setModderGameOption", &CyGame::setModderGameOption, "void (int iNewVal)")
 

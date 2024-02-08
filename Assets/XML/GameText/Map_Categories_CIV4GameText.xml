@@ -20,7 +20,7 @@
 		<Tag>TXT_KEY_MAPCATEGORY_DISTANT</Tag>
 		<English>Distant Plot</English>
 		<French>Case Distante</French>
-		<Italian>Casella distante</Italian>
+		<Italian>Casella di spazio distante</Italian>
 		<Russian>Дальний сектор</Russian>
 	</TEXT>
 	<TEXT>
@@ -51,7 +51,7 @@
 		<English>Interstellar Plot</English>
 		<French>Case Interstellaire</French>
 		<Italian>Casella interstellare</Italian>
-		<Russian>Межзвёздное пространство</Russian>
+		<Russian>Межзвездное пространство</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAPCATEGORY_JOVIAN</Tag>

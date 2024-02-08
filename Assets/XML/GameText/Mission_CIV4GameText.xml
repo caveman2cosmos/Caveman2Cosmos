@@ -824,7 +824,7 @@
 		<English>Plant Nuclear Device</English>
 		<French>Placer une arme nucléaire</French>
 		<German>Nuklearen Sprengkörper einschleusen</German>
-		<Italian>Bomba nucleare</Italian>
+		<Italian>Lancia bomba atomica</Italian>
 		<Spanish>Colocar una bomba nuclear</Spanish>
 		<Polish>Podłóż Ładunek Nuklearny</Polish>
 		<Russian>Ядерный удар</Russian>
@@ -834,7 +834,7 @@
 		<English>Drops a nuclear device onto the selected space.</English>
 		<French>Larguer une arme nucléaire sur la case sélectionnée.</French>
 		<German>Werfen Sie im Zielgebiet eine Atombombe ab.</German>
-		<Italian>[NEWLINE]Lancia una bomba nucleare nella casella selezionata.</Italian>
+		<Italian>[NEWLINE]Lancia una bomba atomica nella casella selezionata.</Italian>
 		<Spanish>Deja caer una bomba nuclear en la casilla seleccionada.</Spanish>
 	</TEXT>
 	<TEXT>

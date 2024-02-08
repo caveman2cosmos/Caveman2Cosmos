@@ -228,7 +228,7 @@
 		<Tag>TXT_KEY_TRAITHELP_FREE_SPEC_NW</Tag>
 		<English>[ICON_BULLET]Gets a Free Specialist for each National Wonder where built.</English>
 		<French>[ICON_BULLET]Reçoit un Spécialiste gratuit pour chaque Merveille Nationale construite.</French>
-		<Italian>[ICON_BULLET]Ottieni uno specialista gratuito per ogni Meraviglia Nazionale nella città in cui è costruito.</Italian>
+		<Italian>[ICON_BULLET]Ottieni un cittadino specialista gratuito per ogni Meraviglia Nazionale nella città in cui è costruito.</Italian>
 		<Polish>[ICON_BULLET]Otrzymujesz darmowego Specjaliste na każdy Cud Narodowy który wybudujesz.</Polish>
 		<Russian>[ICON_BULLET]Получает бесплатного специалиста за каждое Национальное Чудо, где оно построено.</Russian>
 	</TEXT>
@@ -236,7 +236,7 @@
 		<Tag>TXT_KEY_TRAITHELP_FREE_SPEC_TP</Tag>
 		<English>[ICON_BULLET]Gets a Free Specialist for each Team Project where built.</English>
 		<French>[ICON_BULLET]Reçoit un Spécialiste gratuit pour chaque Projet d'Equipe construit.</French>
-		<Italian>[ICON_BULLET]Ottieni uno specialista gratuito per ogni Progetto di squadra nella città in cui è costruito.</Italian>
+		<Italian>[ICON_BULLET]Ottieni un cittadino specialista gratuito per ogni Progetto di squadra nella città in cui è costruito.</Italian>
 		<Polish>[ICON_BULLET]Otrzymujesz darmowego Specjaliste na każdy Projekt który wybudujesz.</Polish>
 		<Russian>[ICON_BULLET]Получает бесплатного специалиста за каждый завершенный командный проект.</Russian>
 	</TEXT>
@@ -244,7 +244,7 @@
 		<Tag>TXT_KEY_TRAITHELP_FREE_SPEC_WW</Tag>
 		<English>[ICON_BULLET]Gets a Free Specialist for each World Wonder where built.</English>
 		<French>[ICON_BULLET]Reçoit un Spécialiste gratuit pour chaque Merveille Mondiale construite.</French>
-		<Italian>[ICON_BULLET]Ottieni uno specialista gratuito per ogni Grande Meraviglia nella città in cui è costruito.</Italian>
+		<Italian>[ICON_BULLET]Ottieni un cittadino specialista gratuito per ogni meraviglia mondiale nella città in cui è costruito.</Italian>
 		<Polish>[ICON_BULLET]Otrzymujesz darmowego Specjaliste na każdy Wielki Cud który wybudujesz.</Polish>
 		<Russian>[ICON_BULLET]Получает бесплатного специалиста за каждое Чудо Света, где оно построено.</Russian>
 	</TEXT>
@@ -591,7 +591,7 @@
 		<English>[ICON_BULLET]%D1%% World Wonder Production</English>
 		<French>[ICON_BULLET]Construction de merveilles mondiales %D1%%</French>
 		<German>[ICON_BULLET]%D1%% Weltwunderproduktion</German>
-		<Italian>[ICON_BULLET]%D1%% produzione di Grandi Meraviglie</Italian>
+		<Italian>[ICON_BULLET]%D1%% produzione di meraviglie mondiali</Italian>
 		<Spanish>[ICON_BULLET]%D1%% a la producción de maravillas del mundo</Spanish>
 		<Polish>[ICON_BULLET]%D1%% do Budowy Wielkich Cudów</Polish>
 		<Russian>[ICON_BULLET]%D1%% к строительству Великих Чудес</Russian>
@@ -2114,7 +2114,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROGRESSIST_PEDIA</Tag>
 		<English>Progressivism is a political attitude favoring or advocating changes or reform. Progressivism is often viewed in opposition to conservative or reactionary ideologies. The Progressive Movement began in cities with settlement workers and reformers who were interested in helping those facing harsh conditions at home and at work. The reformers spoke out about the need for laws regulating tenement housing and child labor. They also called for better working conditions for women.</English>
-		<Italian>Il progressivismo è un atteggiamento politico che favorisce o richiede cambiamenti e riforme. Il progressivismo è spesso in contrapposizione con le ideologie conservative o reazionarie. Il movimento progressista iniziò nelle città con insediamenti di lavoratori e di riformatori che erano interessati nell'aiutare coloro che affrontavano condizioni difficili a casa e al lavoro. I riformatori parlavano del bisogno di leggi che regolavano le abitazioni e il lavoro minorile; chiedevano anche condizioni di lavoro migliori per le donne.</Italian>
+		<Italian>Il progressismo è un atteggiamento politico che favorisce o richiede cambiamenti e riforme. Il progressismo è spesso in contrapposizione con le ideologie conservative o reazionarie. Il movimento progressista iniziò nelle città con insediamenti di lavoratori e di riformatori che erano interessati nell'aiutare coloro che affrontavano condizioni difficili a casa e al lavoro. I riformatori parlavano del bisogno di leggi che regolavano le abitazioni e il lavoro minorile; chiedevano anche condizioni di lavoro migliori per le donne.</Italian>
 		<Russian>Прогрессивизм - это политическая позиция, поддерживающая или сочувствующая изменениям или реформам. Прогрессивизм часто рассматривается в противовес консервативным или реакционным идеологиям. Прогрессивное движение началось в городах с мощным социалистическими и либерал-реформистскими настроениями, жители которых были заинтересованы в помощи тем, кто сталкивается с суровыми условиями дома и на работе. Реформаторы высказались о необходимости принятия законов, регулирующих арендуемое жилье и детский труд. Они также призвали к улучшению условий труда для женщин.</Russian>
 	</TEXT>
 	<TEXT>

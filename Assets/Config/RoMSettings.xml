@@ -25,8 +25,14 @@
 			<option id="DepletionMod" key="DepletionMod" type="boolean" default="False" get="isDepletionMod" set="setDepletionMod">
 				<change module="ANewDawnSettings" function="changedDepletionMod"/>
 			</option>
+			<option id="GreaterGreatFarmer" key="GreaterGreatFarmer" type="boolean" default="False" get="isGreaterGreatFarmer" set="setGreaterGreatFarmer">
+				<change module="ANewDawnSettings" function="changedGreaterGreatFarmer"/>
+			</option>
 			<option id="BattlefieldPromotions" key="BattlefieldPromotions" type="boolean" default="False" get="isBattlefieldPromotions" set="setBattlefieldPromotions">
 				<change module="ANewDawnSettings" function="changedBattlefieldPromotions"/>
+			</option>
+			<option id="Starsigns" key="Starsigns" type="boolean" default="False" get="isStarsigns" set="setStarsigns">
+				<change module="ANewDawnSettings" function="changedStarsigns"/>
 			</option>
 			<option id="BetterAirInterception" key="BetterAirInterception" type="boolean" default="True" get="isBetterAirInterception" set="setBetterAirInterception">
 				<change module="ANewDawnSettings" function="changedBetterAirInterception"/>
@@ -150,12 +156,6 @@ values="Current Color|Black|Blue|Brown|Cyan|Dark Blue|Dark Cyan|Dark Green|Dark 
 			</option>
 			<option id="WarPrizes" key="WarPrizes" type="boolean" default="True" get="isWarPrizes" set="setWarPrizes">
 				<change module="ANewDawnSettings" function="changedWarPrizes"/>
-			</option>
-			<option id="EventImages" key="EventImages" type="boolean" default="True" get="isEventImages" set="setEventImages">
-				<change module="ANewDawnSettings" function="changedEventImages"/>
-			</option>
-			<option id="StrategicEvents" key="StrategicEvents" type="boolean" default="True" get="isStrategicEvents" set="setStrategicEvents">
-				<change module="ANewDawnSettings" function="changedStrategicEvents"/>
 			</option>
 			<option id="ReligionDecay" key="ReligionDecay" type="boolean" default="True" get="isReligionDecay" set="setReligionDecay">
 				<change module="ANewDawnSettings" function="changedReligionDecay"/>

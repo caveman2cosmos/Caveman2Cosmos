@@ -17,7 +17,7 @@
 		<English>In the years following the Great War, the United States devolved into a post-apocalyptic environment commonly dubbed "the Wasteland". The War and subsequent nuclear Armageddon has severely depopulated the country, leaving large expanses of property decaying from neglect. In addition, virtually all food and water is irradiated and radiation exposure, combined with a mutagenic bioweapon that was accidentally released into the atmosphere during the War, have caused mutation in nearly all forms of life. With a large portion of the country's infrastructure in ruins, basic necessities are scarce. Barter is the common method of exchange, with bottlecaps providing a more conventional form of currency. Most cities and towns are empty, having been looted and deserted in favor of smaller, makeshift communities scattered around the Wasteland.</English>
 		<Italian>Il [COLOR_UNIT_TEXT]balestriere urbano[COLOR_REVERT] è un'unità post-apocalittica.</Italian>
 		<Polish>Fantastyka postapokaliptyczna - wizja, konwencja traktująca o wydarzeniach bezpośrednio po kataklizmie, apokalipsie. W książkach lub filmach fabuła rozgrywa się zazwyczaj po wojnie jądrowej, pandemii lub katastrofie ekologicznej. Ziemia staje się wówczas areną dla ludzi czerpiących z resztek zniszczonej cywilizacji, starających się przetrwać i przystosować do niesprzyjających warunków.</Polish>
-		<Russian>В годы после Великой войны Соединенные Штаты превратились в постапокалиптическую территорию, названную "пустошью". Войны и последовавший за ними ядерный Армагеддон, сильно сократили население, оставив городскую инфраструктуру разрушаться в запустении. Кроме того, практически все продовольствие и вода подверглись радиационному облучению. В сочетании с мутагенным действием биологического оружия, случайно попавшего в атмосферу во время войны, это вызвало мутации практически всех форм жизни. Большая часть страны превращена в руины, в дефиците все самое необходимое. Распространен способ обмена с пробками вместо обычных денег. Большинство городов безлюдны и разграблены. Их заменили небольшие, импровизированные общины, разбросанные по пустоши.</Russian>
+		<Russian>В годы после Великой войны Соединенные Штаты превратились в постапокалиптическую территорию, обычно называемую "Пустошь". Война и последовавший за ней ядерный Армагеддон серьезной уменьшили население, и поэтому огромные территории приходят в упадок от запустения. Кроме того, практически вся еда и вода подверглась радиационному облучению. В сочетании с мутагенным действием биологического оружия, случайно попавшего в атмосферу во время Войны, это вызвало мутации практически всех форм жизни. Большая часть инфраструктуры страны превращена в руины, в дефиците все самое необходимое. Распространен способ обмена с пробками вместо обычных денег. Большинство городов безлюдны и разграблены. Их заменили небольшие, импровизированные общины, разбросанные по Пустоши.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CROWBAR_GUARD</Tag>
@@ -29,7 +29,7 @@
 		</French>
 		<Italian>Guardia con piede di porco</Italian>
 		<Polish>Strażnik z łomem</Polish>
-		<Russian>Постапокалиптический стражник с гвоздодёром</Russian>
+		<Russian>Постапокалиптический стражник с гвоздодером</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HATCHET_MAN</Tag>

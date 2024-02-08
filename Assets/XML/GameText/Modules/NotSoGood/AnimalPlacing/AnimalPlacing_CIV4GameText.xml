@@ -137,7 +137,7 @@
 		<Tag>TXT_KEY_BUILD_BONUS_FLAX</Tag>
 		<English>Place [LINK=BONUS_FLAX]Flax Bonus[\LINK]</English>
 		<Polish>Zasiej Len</Polish>
-		<Russian>Посадить лён</Russian>
+		<Russian>Посадить лен</Russian>
 		<Italian>[LINK=BONUS_FLAX]Lino[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
 	<TEXT>
@@ -378,7 +378,7 @@
 		<English>Place [LINK=BONUS_SEA_LION_AND_SEAL]Sea Lion and Seal Bonus[\LINK]</English>
 		<Polish>Umiesc Kolonie Lwów Morskich</Polish>
 		<Russian>Разводить тюленей и морских львов</Russian>
-		<Italian>[LINK=BONUS_SEA_LION_AND_SEAL]Leone marino e foca[\LINK] (risorsa collocata)</Italian>
+		<Italian>[LINK=BONUS_SEA_LION_AND_SEAL]Leone di mare e foca[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_BONUS_SHEEP</Tag>
@@ -391,7 +391,7 @@
 		<Tag>TXT_KEY_BUILD_BONUS_SILK</Tag>
 		<English>Place [LINK=BONUS_SILK]Silk Bonus[\LINK]</English>
 		<Polish>Stwórz Kolonie Jedwabników</Polish>
-		<Russian>Производить шёлк</Russian>
+		<Russian>Производить шелк</Russian>
 		<Italian>[LINK=BONUS_SILK]Seta[\LINK] (risorsa collocata)</Italian>
 	</TEXT>
 	<TEXT>
@@ -587,7 +587,7 @@
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_FLAX</Tag>
 		<English>Bonus - Flax</English>
 		<Polish>Bonus - Len</Polish>
-		<Russian>Лён</Russian>
+		<Russian>Лен</Russian>
 		<Italian>Lino</Italian>
 	</TEXT>
 	<TEXT>
@@ -841,7 +841,7 @@
 		<Tag>TXT_KEY_IMPROVEMENT_BONUS_SILK</Tag>
 		<English>Bonus - Silk</English>
 		<Polish>Bonus - Jedwab</Polish>
-		<Russian>Шёлк</Russian>
+		<Russian>Шелк</Russian>
 		<Italian>Seta</Italian>
 	</TEXT>
 	<TEXT>

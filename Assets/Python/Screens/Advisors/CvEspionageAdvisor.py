@@ -133,7 +133,7 @@ class TheScreen:
 		screen.addDDSGFC("EA_BG", CyArtFileMgr().getInterfaceArtInfo("SCREEN_BG_OPAQUE").getPath(), 0, 0, iResX, iResY, iWidGen, 0, 0)
 		screen.addPanel("EA_TopPanel", "", "", True, False, 0, 0, iResX, H_EDGE_PANEL, PanelStyles.PANEL_STYLE_TOPBAR)
 		screen.addPanel("EA_BotPanel", "", "", True, False, 0, iResY - H_EDGE_PANEL, iResX, H_EDGE_PANEL, PanelStyles.PANEL_STYLE_BOTTOMBAR)
-		screen.setLabel("EA_Header", "", uFontEdge + TRNSLTR.getText("TXT_KEY_ESPIONAGE_SCREEN",()), 1<<2, iResX / 2, 0, 0, iFontTitle, iWidGen, 0, 0)
+		screen.setLabel("EA_Header", "", uFontEdge + TRNSLTR.getText("TXT_KEY_HUD_BUTTON_ADVISOR_INTELLIGENCE",()), 1<<2, iResX / 2, 2, 0, iFontTitle, iWidGen, 0, 0)
 		screen.setText("EA_Btn_Exit", "", uFontEdge + TRNSLTR.getText("TXT_WORD_EXIT",()), 1<<1, iResX - 16, 0, 0, iFontTitle, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1)
 
 		iCol = GC.getCOLOR_YELLOW()
@@ -209,7 +209,7 @@ class TheScreen:
 
 		# Left Panel
 		PanelLeft = self.getNextWidgetName()
-		screen.addScrollPanel(PanelLeft, "", x, y, dx, dy, PanelStyles.PANEL_STYLE_EMPTY)
+		screen.addScrollPanel(PanelLeft, "", x, y, dx, dy-24, PanelStyles.PANEL_STYLE_EMPTY)
 
 		SIZE = self.SIZE
 		iSize = SIZE / 2 - 8
@@ -633,7 +633,7 @@ class TheScreen:
 		# add background panel
 		screen.addPanel(self.getNextWidgetName(), "", "", True, True, x, y, dx, dy, iPanelBlue50)
 		ScrollPanel = self.getNextWidgetName()
-		screen.addScrollPanel(ScrollPanel, "", x, y, dx, dy, iPanelStd)
+		screen.addScrollPanel(ScrollPanel, "", x-8, y-2, dx+15, dy-22, iPanelStd)
 		# add left column leader panel
 		LeftPanel = self.getNextWidgetName()
 		screen.attachPanelAt(ScrollPanel, LeftPanel, "", "", True, False, iPanelIn, 0, H_CELL, X_TABLE, H_LEFT_LEADER, iWidGen, 0, 0)

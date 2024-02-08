@@ -580,7 +580,7 @@ class MapConstants:
 		self.MeteorCompensationFactor = 1.1
 
 		# Factor to modify mc.landPercent by if a Low or High Sea Level is chosen
-		self.SeaLevelFactor = 1.5
+		self.SeaLevelFactor = .5
 
 		##############################################################################
 		## Fuyu Settings
@@ -1496,10 +1496,12 @@ class ElevationMap(FloatMap):
 			land *= mc.MeteorCompensationFactor
 		gc = CyGlobalContext()
 		sea = gc.getSeaLevelInfo(gc.getMap().getSeaLevel()).getSeaLevelChange()
-		if sea < 0:
-			land *= mc.SeaLevelFactor
-		elif sea > 0:
-			land /= mc.SeaLevelFactor
+		if sea > 0:
+			land /= (1 + mc.SeaLevelFactor)
+		elif sea == -7:
+			land *= (1 + mc.SeaLevelFactor)
+		else:
+			land *= (1 + 2*mc.SeaLevelFactor)
 		self.seaLevelThreshold = self.FindThresholdFromPercent(land, True, False)
 
 
@@ -2438,10 +2440,12 @@ def GenerateMountainMap(width, height, wrapX, wrapY, initFreq):
 		land *= mc.MeteorCompensationFactor
 	gc = CyGlobalContext()
 	sea = gc.getSeaLevelInfo(gc.getMap().getSeaLevel()).getSeaLevelChange()
-	if sea < 0:
-		land *= mc.SeaLevelFactor
-	elif sea > 0:
-		land /= mc.SeaLevelFactor
+	if sea > 0:
+		land /= (1 + mc.SeaLevelFactor)
+	elif sea == -7:
+		land *= (1 + mc.SeaLevelFactor)
+	else:
+		land *= (1 + 2*mc.SeaLevelFactor)
 	stdDevThreshold = stdDevMap.FindThresholdFromPercent(land, True, False)
 	for y in range(mountainMap.height):
 		for x in range(mountainMap.width):

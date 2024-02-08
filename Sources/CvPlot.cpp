@@ -711,7 +711,7 @@ bool CvPlot::doBonusDiscovery()
 	const int iNumBonuses = GC.getNumMapBonuses();
 	// Toffer - Can't check all bonuses for all valid plots every turn
 	//	bWorked is more likely to be true for plots in late game, which is when optimization is most dire.
-	int iMaxAttempts = bWorked ? 20 : 50;
+	int iMaxAttempts = bWorked ? 15 : 45;
 	int iAttempts = 0;
 	int iIndex = game.getSorenRandNum(iNumBonuses, "Random start index");
 	int iCount = 0;
@@ -729,6 +729,13 @@ bool CvPlot::doBonusDiscovery()
 		else if (bWorked)
 		{
 			iOdds = 40000; // small chance always there when worked by city.
+		}
+		else
+		{
+			// Toffer: we won't go through all map bonuses if it is an unworked tile, limiting it makes sense.
+			//	Some improvements don't have any discovery chances... this should be cached on game launch
+			//		so we don't have to loop even the limited set for those improvements.
+			iAttempts++;
 		}
 
 		if (iOdds > 0 && team.isHasTech((TechTypes)GC.getBonusInfo(eBonus).getTechReveal()) && canHaveBonus(eBonus))
@@ -774,7 +781,7 @@ bool CvPlot::doBonusDiscovery()
 				}
 				return true;
 			}
-			if (bImpBonus)
+			if (!bWorked && bImpBonus)
 			{
 				return false;
 			}

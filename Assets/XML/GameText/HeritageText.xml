@@ -27,10 +27,35 @@
 		<Russian>Ìèô î áàáèðóñå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_BEAVER</Tag>
+		<English>Folklore - Beaver</English>
+		<French>Mythe du Castor</French>
+		<German>Mythos des Bibers</German>
+		<Italian>Mito del castoro</Italian>
+		<Polish>Mit - Bóbr</Polish>
+		<Russian>Ìèô î áîáðå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_BOAR_WILD</Tag>
 		<English>Folklore - Wild Boar</English>
 		<German>Mythos des Wildschweins</German>
 		<Italian>Mito del cinghiale selvatico</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CAPYBARA</Tag>
+		<English>Folklore - Capybara</English>
+		<French>Mythe du Cabiaï</French>
+		<German>Mythos des Wasserschweins</German>
+		<Italian>Mito del capibara</Italian>
+		<Russian>Ìèô î âîäîñâèíêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CUSCUS_SPOTTED</Tag>
+		<English>Folklore - Spotted Cuscus</English>
+		<French>Mythe du Couscous</French>
+		<German>Mythos des Tüpfelkuskus</German>
+		<Italian>Mito del cusco maculato</Italian>
+		<Russian>Ìèô î êóñêóñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_DART_FROG</Tag>
@@ -81,6 +106,14 @@
 		<Russian>Ìèô î ëèñèöå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_KOALA</Tag>
+		<English>Folklore - Koala</English>
+		<French>Mythe du Koala</French>
+		<German>Mythos des Koalas</German>
+		<Italian>Mito del koala</Italian>
+		<Russian>Ìèô î êîàëå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_MAMMOTH</Tag>
 		<English>Folklore - Mammoth</English>
 		<French>Mythe du Mammouth</French>
@@ -104,6 +137,31 @@
 		<Italian>Mito del pinguino africano</Italian>
 		<Polish>Mit - Pingwin Przylądkowy</Polish>
 		<Russian>Ìèô îá àôð. ïèíãâèíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PENGUIN_EMPEROR</Tag>
+		<English>Folklore - Emperor Penguin</English>
+		<French>Mythe du Manchot Empereur</French>
+		<German>Mythos des Kaiserpinguins</German>
+		<Italian>Mito del pinguino imperatore</Italian>
+		<Russian>Ìèô îá èìï. ïèíãâèíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PENGUIN_GALAPAGOS</Tag>
+		<English>Folklore - Galapagos Penguin</English>
+		<French>Mythe du Pingouin des Galapagos</French>
+		<German>Mythos des Galápagos-Pinguins</German>
+		<Italian>Mito del pinguino delle Galapagos</Italian>
+		<Polish>Mit - Pingwin Równikowy</Polish>
+		<Russian>Ìèô îá î÷ê. ïèíãâèíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PENGUIN_ROCKHOPPER</Tag>
+		<English>Folklore - Rockhopper Penguin</English>
+		<French>Mythe du Gorfou sauteur</French>
+		<German>Mythos des Felsenpinguins</German>
+		<Italian>Mito del pinguino saltarocce</Italian>
+		<Russian>Ìèô î ñêàë. ïèíãâèíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_SWINE</Tag>
@@ -165,19 +223,51 @@
 		<Russian>Ìèô î áîðîäàâî÷íèêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_HERITAGE_TAXONOMY_AMPHIBIANS</Tag>
-		<English>Taxonomy - Amphibians</English>
+		<Tag>TXT_KEY_HERITAGE_TAXON_AMPHIBIA</Tag>
+		<English>Taxon Amphibia</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_HERITAGE_TAXONOMY_BOAR</Tag>
-		<English>Taxonomy - Boar</English>
+		<Tag>TXT_KEY_HERITAGE_TAXON_AMPHIBIA_PEDIA</Tag>
+		<English>The Amphibia class is a taxonomic rank commonly known as Amphibians. Amphibians are ectothermic, anamniotic, four-limbed vertebrate animals. In its broad sense, it is paraphyletic group encompassing all tetrapods excluding the amniotes (tetrapods with an amniotic membrane, such as modern reptiles, birds, and mammals). All extant (living) amphibians belong to the monophyletic subclass Lissamphibia, with three living orders: Anura (frogs), Urodela (salamanders), and Gymnophiona (caecilians). Evolved to be mostly semiaquatic, amphibians have adapted to inhabit a wide variety of habitats, with most species living in freshwater, wetland or terrestrial ecosystems (such as riparian woodland, fossorial and even arboreal habitats). Their life cycle typically starts out as aquatic larvae with gills known as tadpoles, but some species have developed behavioural adaptations to bypass this.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_HERITAGE_TAXONOMY_ELEPHANT</Tag>
-		<English>Taxonomy - Elephant</English>
+		<Tag>TXT_KEY_HERITAGE_TAXON_ELEPHANTIDAE</Tag>
+		<English>Taxon Elephantidae</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_HERITAGE_TAXONOMY_TAPIR</Tag>
-		<English>Taxonomy - Tapir</English>
+		<Tag>TXT_KEY_HERITAGE_TAXON_ELEPHANTIDAE_PEDIA</Tag>
+		<English>Elephantidae is a family of large, herbivorous proboscidean mammals collectively called elephants and mammoths. These are large terrestrial mammals with a snout modified into a trunk and teeth modified into tusks. Most genera and species in the family are extinct. Only two genera, Loxodonta (African elephants) and Elephas (Asian elephants), are living.[NEWLINE][NEWLINE]The family was first described by John Edward Gray in 1821, and later assigned to taxonomic ranks within the order Proboscidea. Elephantidae has been revised by various authors to include or exclude other extinct proboscidean genera.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_RODENTIA</Tag>
+		<English>Taxon Rodentia</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_RODENTIA_PEDIA</Tag>
+		<English>Rodentia is an order of mammals commonly called rodents (from Latin rodere, 'to gnaw'). With over 2000 living species placed in about 30 families, rodents are by far the largest order of mammals, at least in terms of number of taxa (well over 40% of mammalian species belong to the order Rodentia!). Rodents range in size from pygmy mice weighing 5 gms to capybaras, the largest of which weigh over 70 kg. They are found around the world except in Antarctica, New Zealand, and on some oceanic islands. Ecologically, they are incredibly diverse. Some species spend their entire lives above the ground in the canopy of rainforests; others seldom emerge from beneath the ground. Some species are highly aquatic, while others are equally specialized for life in deserts. Many are to some degree omnivorous; others are highly specialized, eating, for example, only a few species of invertebrates or fungi.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_SPHENISCIDAE</Tag>
+		<English>Taxon Spheniscidae</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_SPHENISCIDAE_PEDIA</Tag>
+		<English>Spheniscidae is a family of sphenisciformes birds which are commonly called penguins. These aquatic flightless birds live almost exclusively in the Southern Hemisphere: only one species, the Galápagos penguin, is found north of the Equator. Highly adapted for life in the ocean water, penguins have countershaded dark and white plumage and flippers for swimming. Most penguins feed on krill, fish, squid and other forms of sea life which they catch with their bills and swallow whole while swimming. A penguin has a spiny tongue and powerful jaws to grip slippery prey.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_SUIDAE</Tag>
+		<English>Taxon Suidae</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_SUIDAE_PEDIA</Tag>
+		<English>Suidae is a family of artiodactyl mammals which are commonly called pigs, hogs or swine. In addition to numerous fossil species, 18 extant species are currently recognized (or 19 counting domestic pigs and wild boars separately), classified into between four and eight genera. Within this family, the genus Sus includes the domestic pig, Sus scrofa domesticus or Sus domesticus, and many species of wild pig from Europe to the Pacific. Other genera include babirusas and warthogs. All suids, or swine, are native to the Old World, ranging from Asia to Europe and Africa.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_TAPIRIDAE</Tag>
+		<English>Taxon Tapiridae</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_TAPIRIDAE_PEDIA</Tag>
+		<English>Tapiridae is a family of perissodactyla mammals which are commonly called Tapirs. They are similar in shape to a pig, with a short, prehensile nose trunk. Tapirs inhabit jungle and forest regions of South and Central America and Southeast Asia. They are one of three extant branches of Perissodactyla (odd-toed ungulates), alongside equines and rhinoceroses. Only a single genus, Tapirus, is currently extant. Tapirs migrated into South America during the Pleistocene epoch from North America after the formation of the Isthmus of Panama as part of the Great American Interchange. Tapirs were formerly present across North America, but became extinct in the region at the end of the Late Pleistocene, around 12,000 years ago.</English>
 	</TEXT>
 </Civ4GameText>

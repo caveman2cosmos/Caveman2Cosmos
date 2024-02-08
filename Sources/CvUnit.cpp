@@ -25432,14 +25432,6 @@ bool CvUnit::canApplyEvent(EventTypes eEvent) const
 			return false;
 		}
 	}
-
-	if (kEvent.getUnitImmobileTurns() > 0)
-	{
-		if (!canAttack())
-		{
-			return false;
-		}
-	}
 	return true;
 }
 
@@ -33935,7 +33927,10 @@ void CvUnit::doSetFreePromotions(bool bAdding, TraitTypes eTrait)
 	{
 		checkFreetoCombatClass();
 	}
-	doStarsign();
+	if (GC.getGame().getModderGameOption(MODDERGAMEOPTION_STARSIGNS))
+	{
+		doStarsign();
+	}
 }
 
 int CvUnit::getRetrainsAvailable() const

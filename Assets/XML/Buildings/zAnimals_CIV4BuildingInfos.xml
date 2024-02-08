@@ -12,7 +12,7 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<PrereqOrHeritage>
-				<Type>HERITAGE_TAXONOMY_AMPHIBIANS</Type>
+				<Type>HERITAGE_TAXON_AMPHIBIA</Type>
 			</PrereqOrHeritage>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
@@ -179,13 +179,13 @@
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FOLKLORE_NINE_BANDED_ARMADILLO</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_BEAVER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_GLYPTODON</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_GROUND_SLOTH</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqOrHeritage>
 				<Type>HERITAGE_FOLKLORE_AARDVARK</Type>
 				<Type>HERITAGE_FOLKLORE_ANTEATER</Type>
+				<Type>HERITAGE_FOLKLORE_BEAVER</Type>
 			</PrereqOrHeritage>
 			<iCost>70</iCost>
 			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
@@ -1228,8 +1228,8 @@
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<PrereqOrHeritage>
-				<Type>HERITAGE_TAXONOMY_BOAR</Type>
-				<Type>HERITAGE_TAXONOMY_ELEPHANT</Type>
+				<Type>HERITAGE_TAXON_SUIDAE</Type>
+				<Type>HERITAGE_TAXON_ELEPHANTIDAE</Type>
 			</PrereqOrHeritage>
 			<ConstructCondition>
 				<Or>
@@ -1367,13 +1367,13 @@
 			<iMaxLatitude>60</iMaxLatitude>
 			<PrereqTech>TECH_FREE_ARTISTRY</PrereqTech>
 			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_BEAVER</Type>
 				<Type>HERITAGE_FOLKLORE_FOX_ARCTIC</Type>
 				<Type>HERITAGE_FOLKLORE_FOX_FENNEC</Type>
 				<Type>HERITAGE_FOLKLORE_FOX_RED</Type>
+				<Type>HERITAGE_FOLKLORE_KOALA</Type>
 			</PrereqOrHeritage>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_BEAVER</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_KOALA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_PLATYPUS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA_OTTER</BuildingType>
 			</PrereqOrBuildings>
@@ -2070,10 +2070,12 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_KOALA</Type>
+			</PrereqOrHeritage>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FOLKLORE_T_OWLS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BADGER</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_KOALA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_RACCOON</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_RATEL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SKUNK</BuildingType>
@@ -2515,9 +2517,9 @@
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_T_RODENT</BuildingType>
-			</PrereqInCityBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_TAXON_RODENTIA</Type>
+			</PrereqOrHeritage>
 			<iCost>306</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

@@ -225,7 +225,6 @@
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BIRD</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_PENGUIN</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_BIRDS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_SEA_BIRDS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_FLIGHTLESS_BIRDS</BuildingType>
@@ -238,6 +237,7 @@
 			</Buildings>
 			<Heritage>
 				<Type>HERITAGE_FOLKLORE_PENGUIN_AFRICAN</Type>
+				<Type>HERITAGE_TAXON_SPHENISCIDAE</Type>
 			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
@@ -601,7 +601,7 @@
 			</Buildings>
 			<Heritage>
 				<Type>HERITAGE_FOLKLORE_BABIRUSA</Type>
-				<Type>HERITAGE_TAXONOMY_BOAR</Type>
+				<Type>HERITAGE_TAXON_SUIDAE</Type>
 			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
@@ -1369,13 +1369,15 @@
 				<BuildingType>BUILDING_ENCLOSURE_RODENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_WORKERS</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_RODENT</BuildingType>
 				<BuildingType>BUILDING_TRAP_BEAVER</BuildingType>
 				<BuildingType>BUILDING_FUR_FARM</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_BEAVER</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_BEAVER</Type>
+				<Type>HERITAGE_TAXON_RODENTIA</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -2088,7 +2090,7 @@
 			</Buildings>
 			<Heritage>
 				<Type>HERITAGE_FOLKLORE_BOAR_WILD</Type>
-				<Type>HERITAGE_TAXONOMY_BOAR</Type>
+				<Type>HERITAGE_TAXON_SUIDAE</Type>
 			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
@@ -2499,8 +2501,8 @@
 			</Buildings>
 			<Heritage>
 				<Type>HERITAGE_FOLKLORE_TAPIR_LOWLAND</Type>
-				<Type>HERITAGE_TAXONOMY_BOAR</Type>
-				<Type>HERITAGE_TAXONOMY_TAPIR</Type>
+				<Type>HERITAGE_TAXON_SUIDAE</Type>
+				<Type>HERITAGE_TAXON_TAPIRIDAE</Type>
 			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
@@ -3142,12 +3144,14 @@
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_RODENT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_CAPYBARA</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_RODENT</BuildingType>
 				<BuildingType>BUILDING_TRAP_BEAVER</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_CAPYBARA</Type>
+				<Type>HERITAGE_TAXON_RODENTIA</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -4824,11 +4828,13 @@
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_MARSUPIAL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SPOTTED_CUSCUS</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_CUSCUS_SPOTTED</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -4891,7 +4897,7 @@
 			</Buildings>
 			<Heritage>
 				<Type>HERITAGE_FOLKLORE_DART_FROG</Type>
-				<Type>HERITAGE_TAXONOMY_AMPHIBIANS</Type>
+				<Type>HERITAGE_TAXON_AMPHIBIA</Type>
 			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
@@ -5954,7 +5960,7 @@
 			</Buildings>
 			<Heritage>
 				<Type>HERITAGE_FOLKLORE_ELEPHANT_AFRICAN</Type>
-				<Type>HERITAGE_TAXONOMY_ELEPHANT</Type>
+				<Type>HERITAGE_TAXON_ELEPHANTIDAE</Type>
 			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
@@ -6132,7 +6138,7 @@
 			</Buildings>
 			<Heritage>
 				<Type>HERITAGE_FOLKLORE_ELEPHANT_ASIAN</Type>
-				<Type>HERITAGE_TAXONOMY_ELEPHANT</Type>
+				<Type>HERITAGE_TAXON_ELEPHANTIDAE</Type>
 			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
@@ -6898,8 +6904,6 @@
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BIRD</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_GALAPAGOS_PENGUIN</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_PENGUIN</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_BIRDS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_SEA_BIRDS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_FLIGHTLESS_BIRDS</BuildingType>
@@ -6910,6 +6914,10 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_PENGUIN_GALAPAGOS</Type>
+				<Type>HERITAGE_TAXON_SPHENISCIDAE</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -9669,7 +9677,7 @@
 			</Buildings>
 			<Heritage>
 				<Type>HERITAGE_FOLKLORE_SWINE</Type>
-				<Type>HERITAGE_TAXONOMY_BOAR</Type>
+				<Type>HERITAGE_TAXON_SUIDAE</Type>
 			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
@@ -11604,8 +11612,10 @@
 				<BuildingType>BUILDING_ENCLOSURE_NOCTURNAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_KOALA</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_KOALA</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -12564,9 +12574,9 @@
 			</Buildings>
 			<Heritage>
 				<Type>HERITAGE_FOLKLORE_TAPIR_MALAYAN</Type>
-				<Type>HERITAGE_TAXONOMY_BOAR</Type>
-				<Type>HERITAGE_TAXONOMY_ELEPHANT</Type>
-				<Type>HERITAGE_TAXONOMY_TAPIR</Type>
+				<Type>HERITAGE_TAXON_SUIDAE</Type>
+				<Type>HERITAGE_TAXON_ELEPHANTIDAE</Type>
+				<Type>HERITAGE_TAXON_TAPIRIDAE</Type>
 			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
@@ -12631,7 +12641,7 @@
 			</Buildings>
 			<Heritage>
 				<Type>HERITAGE_FOLKLORE_MAMMOTH</Type>
-				<Type>HERITAGE_TAXONOMY_ELEPHANT</Type>
+				<Type>HERITAGE_TAXON_ELEPHANTIDAE</Type>
 			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
@@ -14046,8 +14056,8 @@
 			</Buildings>
 			<Heritage>
 				<Type>HERITAGE_FOLKLORE_TAPIR_MOUNTAIN</Type>
-				<Type>HERITAGE_TAXONOMY_BOAR</Type>
-				<Type>HERITAGE_TAXONOMY_TAPIR</Type>
+				<Type>HERITAGE_TAXON_SUIDAE</Type>
+				<Type>HERITAGE_TAXON_TAPIRIDAE</Type>
 			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
@@ -15721,8 +15731,6 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEA</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_EMPEROR_PENGUIN</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_PENGUIN</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BIRD</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_BIRDS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_FLIGHTLESS_BIRDS</BuildingType>
@@ -15731,6 +15739,10 @@
 				<BuildingType>BUILDING_MARINE_INSTITUTE</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_PENGUIN_EMPEROR</Type>
+				<Type>HERITAGE_TAXON_SPHENISCIDAE</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -17184,7 +17196,7 @@
 			</Buildings>
 			<Heritage>
 				<Type>HERITAGE_FOLKLORE_WARTHOG</Type>
-				<Type>HERITAGE_TAXONOMY_BOAR</Type>
+				<Type>HERITAGE_TAXON_SUIDAE</Type>
 			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
@@ -18516,8 +18528,6 @@
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BIRD</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_ROCKHOPPER_PENGUIN</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_PENGUIN</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_BIRDS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_FLIGHTLESS_BIRDS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEA</BuildingType>
@@ -18527,6 +18537,10 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_PENGUIN_ROCKHOPPER</Type>
+				<Type>HERITAGE_TAXON_SPHENISCIDAE</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -21092,8 +21106,8 @@
 			</Buildings>
 			<Heritage>
 				<Type>HERITAGE_FOLKLORE_TAPIR_BAIRDS</Type>
-				<Type>HERITAGE_TAXONOMY_BOAR</Type>
-				<Type>HERITAGE_TAXONOMY_TAPIR</Type>
+				<Type>HERITAGE_TAXON_SUIDAE</Type>
+				<Type>HERITAGE_TAXON_TAPIRIDAE</Type>
 			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>

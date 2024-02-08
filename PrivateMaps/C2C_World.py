@@ -60,7 +60,7 @@ class MapConstants:
 
 		#This variable adjusts the amount of bonuses on the map. Values above 1.0 will add bonus bonuses.
 		#People often want lots of bonuses, and for those people, this variable is definately a bonus.
-		self.fBonusMult = 0.8
+		self.fBonusMult = 1.0
 
 		# fRiverThreshold is used to decide if enough water has accumulated to form a river.
 		# A lower value creates more rivers over the entire map. It controls lenght, complexity and density of rivers.
@@ -350,15 +350,19 @@ class MapConstants:
 		if not selectionID:
 			self.fBonusMult = 0.0
 		elif selectionID == 1:
-			self.fBonusMult *= 0.50
+			self.fBonusMult *= 0.2
 		elif selectionID == 2:
-			self.fBonusMult *= 0.75
+			self.fBonusMult *= 0.4
+		elif selectionID == 3:
+			self.fBonusMult *= 0.6
 		elif selectionID == 4:
-			self.fBonusMult *= 1.25
-		elif selectionID == 5:
-			self.fBonusMult *= 1.50
+			self.fBonusMult *= 0.8
 		elif selectionID == 6:
-			self.fBonusMult *= 1.75
+			self.fBonusMult *= 1.2
+		elif selectionID == 7:
+			self.fBonusMult *= 1.4
+		elif selectionID == 8:
+			self.fBonusMult *= 1.6
 		# Pangea Breaker
 		selectionID = MAP.getCustomMapOption(7)
 		if selectionID or self.bDryland or self.bPangea:
@@ -455,43 +459,58 @@ class MapConstants:
 		# fMaxStartLat limits the starting location to a maximum latitude.
 		self.fMaxStartLat = 90 * self.fPolarLat - self.fPolarLat**3 / 0.0569
 		# Sea Level
-		seaLevel = GC.getSeaLevelInfo(MAP.getSeaLevel()).getSeaLevelChange()
+		seaLevel = MAP.getSeaLevel()
 		if self.bEarthlike:
 			if not seaLevel:
-				self.fLandPercent = .3
-			elif seaLevel > 0:
-				self.fLandPercent = .25
+				self.fLandPercent = .38 # Very Low
+			elif seaLevel == 1:
+				self.fLandPercent = .34 # Low
+			elif seaLevel == 2:
+				self.fLandPercent = .30 # Normal
 			else:
-				self.fLandPercent = .35
+				self.fLandPercent = .26 # High
+
 		elif self.bArchipelago:
 			if not seaLevel:
-				self.fLandPercent = .25
-			elif seaLevel > 0:
-				self.fLandPercent = .2
+				self.fLandPercent = .35 # Very Low
+			elif seaLevel == 1:
+				self.fLandPercent = .30 # Low
+			elif seaLevel == 2:
+				self.fLandPercent = .25 # Normal
 			else:
-				self.fLandPercent = .3
+				self.fLandPercent = .20 # High
+
 		elif self.bWaterworld:
 			if not seaLevel:
-				self.fLandPercent = .15
-			elif seaLevel > 0:
-				self.fLandPercent = .1
+				self.fLandPercent = .22 # Very Low
+			elif seaLevel == 1:
+				self.fLandPercent = .20 # Low
+			elif seaLevel == 2:
+				self.fLandPercent = .18 # Normal
 			else:
-				self.fLandPercent = .2
+				self.fLandPercent = .16 # High
+
 		elif self.bDryland:
 			if not seaLevel:
-				self.fLandPercent = .85
-			elif seaLevel > 0:
-				self.fLandPercent = .7
+				self.fLandPercent = 1.0 # Very Low
+			elif seaLevel == 1:
+				self.fLandPercent = .90 # Low
+			elif seaLevel == 2:
+				self.fLandPercent = .80 # Normal
 			else:
-				self.fLandPercent = 1.0
+				self.fLandPercent = .70 # High
+
 		elif self.bPangea:
 			if not seaLevel:
-				self.fLandPercent = .45
-			elif seaLevel > 0:
-				self.fLandPercent = .35
+				self.fLandPercent = .60 # Very Low
+			elif seaLevel == 1:
+				self.fLandPercent = .50 # Low
+			elif seaLevel == 2:
+				self.fLandPercent = .40 # Normal
 			else:
-				self.fLandPercent = .55
-		print "Land percent = %f" % self.fLandPercent
+				self.fLandPercent = .30 # High
+
+		print "SEALEVEL %d | Land percent = %f" % (seaLevel, self.fLandPercent)
 
 mc = None
 
@@ -3888,7 +3907,7 @@ class MapOptions:
 			["World Wrap:",		0, False, 3],
 			["Start:",			1, False, 2],
 			["Rivers:",			4,	True, 9],
-			["Resources:",		3,	True, 7],
+			["Resources:",		3,	True, 9],
 			["Pangea Breaker:",	0, False, 2]
 		] # When adding/removing options: Update the return of getNumCustomMapOptions().
 
@@ -4066,17 +4085,21 @@ def getCustomMapOptionDescAt(argsList):
 		if selectionID == 0:
 			return "None"
 		if selectionID == 1:
-			return "50%"
+			return "20%"
 		if selectionID == 2:
-			return "75%"
+			return "40%"
 		if selectionID == 3:
-			return "100%"
+			return "60%"
 		if selectionID == 4:
-			return "125%"
+			return "80%"
 		if selectionID == 5:
-			return "150%"
+			return "100%"
 		if selectionID == 6:
-			return "175%"
+			return "120%"
+		if selectionID == 7:
+			return "140%"
+		if selectionID == 8:
+			return "160%"
 	# Pangea Breaker
 	if optionID == 7:
 		if selectionID == 0: # On
@@ -4167,17 +4190,21 @@ def beforeInit():
 	if optionList[6][1] == 0:
 		print "	%s		None" % optionList[6][0]
 	elif optionList[6][1] == 1:
-		print "	%s		50 percent" % optionList[6][0]
+		print "	%s		20 percent" % optionList[6][0]
 	elif optionList[6][1] == 2:
-		print "	%s		75 percent" % optionList[6][0]
+		print "	%s		40 percent" % optionList[6][0]
 	elif optionList[6][1] == 3:
-		print "	%s		100 percent" % optionList[6][0]
+		print "	%s		60 percent" % optionList[6][0]
 	elif optionList[6][1] == 4:
-		print "	%s		125 percent" % optionList[6][0]
+		print "	%s		80 percent" % optionList[6][0]
 	elif optionList[6][1] == 5:
-		print "	%s		150 percent" % optionList[6][0]
+		print "	%s		100 percent" % optionList[6][0]
 	elif optionList[6][1] == 6:
-		print "	%s		175 percent" % optionList[6][0]
+		print "	%s		120 percent" % optionList[6][0]
+	elif optionList[6][1] == 7:
+		print "	%s		140 percent" % optionList[6][0]
+	elif optionList[6][1] == 8:
+		print "	%s		160 percent" % optionList[6][0]
 	# Pangea Breaker
 	if optionList[2][1] == 0 or optionList[2][1] == 1:
 		print "	%s	Off (Dryland|Pangea)" % optionList[7][0]

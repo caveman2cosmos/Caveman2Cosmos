@@ -78,6 +78,7 @@
 		<German>%F1: %s2 (%D3/Runde)</German>
 		<Italian>%F1: %s2 %D3 a turno</Italian>
 		<Spanish>%F1: %s2 (%D3/turno)</Spanish>
+		<Russian>%F1: %s2 (%D3/ход)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_COMMERCE_RATE_FLOAT</Tag>
@@ -107,6 +108,7 @@
 		<German>%F1: (%D2/Runde)</German>
 		<Italian>%F1: %D2 a turno</Italian>
 		<Spanish>%F1: (%D2/turno)</Spanish>
+		<Russian>%F1: (%D2/ход)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_GROWING</Tag>
@@ -115,6 +117,7 @@
 		<German>Wachstum (%d1 [NUM1:Runde:Runden])</German>
 		<Italian>Crescita della città in [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] [NUM1:turno:turni]</Italian>  <!-- city screen food bar UI -->
 		<Spanish>Creciendo (%d1 [NUM1:turno:turnos])</Spanish>
+		<Russian>Рост (%d1 [NUM1:ход:ходов])</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_GROWTH</Tag>
@@ -124,7 +127,7 @@
 		<Italian>La città è cresciuta!</Italian>  <!-- city screen food bar UI -->
 		<Spanish>¡Crecerá!</Spanish>
 		<Polish>Wzrost!</Polish>
-		<Russian>Рост!</Russian>
+		<Russian>Прирост!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_HAPPY</Tag>
@@ -133,6 +136,7 @@
 		<German>%d1[ICON_HAPPY] &gt; %d2[ICON_UNHAPPY]</German>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] [ICON_HAPPY] - [COLOR_HIGHLIGHT_TEXT]%d2[COLOR_REVERT] [ICON_UNHAPPY] = [ICON_STRENGTH]</Italian> <!-- city screen right of the production bar -->
 		<Spanish>%d1 [ICON_HAPPY] &gt; %d2 [ICON_UNHAPPY]</Spanish>
+		<Russian>%d1[ICON_HAPPY] &gt; %d2[ICON_UNHAPPY]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_HAPPY_NO_UNHAPPY</Tag>
@@ -141,6 +145,7 @@
 		<German>%d1[ICON_HAPPY]</German>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] [ICON_HAPPY]</Italian> <!-- city screen left of the food bar -->
 		<Spanish>%d1 [ICON_HAPPY]</Spanish>
+		<Russian>%d1[ICON_HAPPY]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_HEALTH_BAD</Tag>
@@ -154,6 +159,7 @@
 		<German>%d1[ICON_HEALTHY] &gt; %d2[ICON_UNHEALTHY]</German>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] [ICON_HEALTHY] - [COLOR_HIGHLIGHT_TEXT]%d2[COLOR_REVERT] [ICON_UNHEALTHY] = [ICON_STRENGTH]</Italian> <!-- city screen right of the food bar -->
 		<Spanish>%d1 [ICON_HEALTHY] &gt; %d2 [ICON_UNHEALTHY]</Spanish>
+		<Russian>%d1[ICON_HEALTHY] &gt; %d2[ICON_UNHEALTHY]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_HEALTH_GOOD_NO_BAD</Tag>
@@ -162,6 +168,7 @@
 		<German>%d1[ICON_HEALTHY])</German>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] [ICON_HEALTHY]</Italian> <!-- city screen right of the food bar -->
 		<Spanish>%d1 [ICON_HEALTHY]</Spanish>
+		<Russian>%d1[ICON_HEALTHY]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_MAINTENANCE</Tag>
@@ -170,6 +177,7 @@
 		<German>Unterhalt:</German>
 		<Italian>Costi di mantenimento:</Italian> <!-- hoover city -->
 		<Spanish>Mantenimiento:</Spanish>
+		<Russian>Содержание:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_PRODUCTION</Tag>
@@ -178,11 +186,13 @@
 		<German>%s1 (%d2 [NUM2:Runde:Runden])</German>
 		<Italian>Produzione in corso: [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT] ([COLOR_HIGHLIGHT_TEXT]%d2[COLOR_REVERT])</Italian> <!-- city screen, production bar -->
 		<Spanish>%s1 (%d2 [NUM2:turno:turnos])</Spanish>
+		<Russian>%s1 (%d2 [NUM2:ход:ходов])</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_PRODUCTION_BUY</Tag>
 		<English>%s1 (%d2) -%d3[ICON_GOLD]</English>
 		<Italian>PROVA3</Italian>
+		<Russian>%s1 (%d2) -%d3[ICON_GOLD]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_PRODUCTION_WHIP</Tag>
@@ -202,7 +212,7 @@
 		<Italian>[COLOR_YELLOW]La città rimpicciolirà in %d1 [NUM1:turno:turni][COLOR_REVERT]</Italian> <!-- city screen, food bar -->
 		<Spanish>[COLOR_YELLOW]Reducción (%d1 [NUM1:turno:turnos])[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_YELLOW]Zmniejsza się (%d1 [NUM1:tura:tur])[COLOR_REVERT]</Polish>
-		<Russian>[COLOR_YELLOW]Ñîêðàùåíèå (%d1 [NUM1:Õîä:Õîäîâ])[COLOR_REVERT]</Russian>
+		<Russian>[COLOR_YELLOW]Сокращение (%d1 [NUM1:ход:ходов])[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_STAGNANT</Tag>
@@ -211,6 +221,7 @@
 		<German>Stagnation</German>
 		<Italian>La città è in [COLOR_WARNING_TEXT]stagnazione[COLOR_REVERT]</Italian> <!-- city screen, food bar -->
 		<Spanish>Estancada</Spanish>
+		<Russian>Застой</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_STARVING</Tag>
@@ -219,6 +230,7 @@
 		<German>[COLOR_WARNING_TEXT]HUNGERSNOT![COLOR_REVERT]</German>
 		<Italian>[COLOR_WARNING_TEXT]Carestia in corso![COLOR_REVERT]</Italian> <!-- city screen, food bar -->
 		<Spanish>[COLOR_WARNING_TEXT]¡HAMBRUNA![COLOR_REVERT]</Spanish>
+		<Russian>[COLOR_WARNING_TEXT]ГОЛОД![COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_TURNS</Tag>
@@ -227,6 +239,7 @@
 		<German>(%d1 [NUM1:Runde:Runden])</German>
 		<Italian>([COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT])</Italian> <!-- hover on city name, city screen Great person panel hover -->
 		<Spanish>(%d1 [NUM1:turno:turnos])</Spanish>
+		<Russian>(%d1 [NUM1:ходы:ходов])</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_UNHAPPY</Tag>
@@ -258,7 +271,7 @@
 		<Italian>%s1: [COLOR_HIGHLIGHT_TEXT]Nessun gran personaggio[COLOR_REVERT]</Italian> <!-- city screen great people bar -->
 		<Spanish>%s1: ninguno</Spanish>
 		<Polish>%s1: Brak</Polish>
-		<Russian>%s1: Íåò</Russian>
+		<Russian>%s1: Нет</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_GREAT_PERSON_TURNS</Tag>
@@ -272,6 +285,7 @@
 		<German>Luftkampfstärke:</German>
 		<Italian>Forza aerea:</Italian>
 		<Spanish>Fuerza de combate aéreo:</Spanish>
+		<Russian>Сила в воздушном бою:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_PANE_EXPERIENCE</Tag>
@@ -280,6 +294,7 @@
 		<German>Erfahrung</German>
 		<Italian>Esperienza</Italian>
 		<Spanish>Experiencia:</Spanish>
+		<Russian>Опыт</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_PANE_LEVEL</Tag>
@@ -288,6 +303,7 @@
 		<German>Stufe:</German>
 		<Italian>Livello:</Italian>
 		<Spanish>Nivel:</Spanish>
+		<Russian>Уровень:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_PANE_MOVEMENT</Tag>
@@ -296,6 +312,7 @@
 		<German>Fortbewegung:</German>
 		<Italian>Movimento:</Italian>
 		<Spanish>Movimiento:</Spanish>
+		<Russian>Перемещение:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_PANE_STRENGTH</Tag>
@@ -304,6 +321,7 @@
 		<German>Stärke:</German>
 		<Italian>Forza:</Italian>
 		<Spanish>Fuerza:</Spanish>
+		<Russian>Сила:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_PANE_UNIT_NAME</Tag>
@@ -1852,6 +1870,7 @@
 		<German>Wachstum</German>
 		<Italian>Crescita</Italian>
 		<Spanish>Crecimiento</Spanish>
+		<Russian>Прирост</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ADVISOR_MILITARY</Tag>
@@ -6126,6 +6145,7 @@
 		<German>Wachstum vermeiden</German>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Evita la crescita[COLOR_REVERT]</Italian> <!-- city screen automation panel -->
 		<Spanish>Evitar crecimiento</Spanish>
+		<Russian>Избегать прироста</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EMPHASIZE_AVOID_UNHEALTHY_CITIZENS</Tag>
@@ -6723,14 +6743,6 @@
 		<German>%D1%%: für unsere Staatsreligion</German>
 		<Italian>%D1%%: per la religione ufficiale</Italian>
 		<Spanish>%D1%%: Por nuestra religión oficial</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ESPIONAGE_SCREEN</Tag>
-		<English>Espionage Screen</English>
-		<French>Ecran d'espionnage</French>
-		<German>Spionagebildschirm</German>
-		<Italian>Informazioni spionaggio</Italian>
-		<Spanish>Pantalla de espionaje</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_SCREEN_COST</Tag>
@@ -8578,6 +8590,7 @@
 		<German>Punktestand</German>
 		<Italian>Punteggio</Italian> <!-- info screen graph tab -->
 		<Spanish>Puntuación</Spanish>
+		<Russian>Счет</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAME_WON</Tag>
@@ -8855,7 +8868,7 @@
 		<English>Movie Quality</English>
 		<French>Qualité de Film</French>
 		<German>Filmqualität</German>
-		<Italian>[ICON_BULLET]Qualità dei filmati</Italian>
+		<Italian>Qualità dei filmati</Italian>
 		<Spanish>Calidad de Película</Spanish>
 	</TEXT>
 	<TEXT>
@@ -8879,12 +8892,13 @@
 		<Italian>Fattore di smoothing %d1_Num</Italian>
 		<Spanish>Factor de suavizado %d1_Num</Spanish>
 		<Polish>Współczynnik Wygładzania %d1_Num</Polish>
-		<Russian>Ôàêòîð ñãëàæèâàíèÿ %d1_Num</Russian>
+		<Russian>Коэффициент плавности %d1_Num</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROWTH</Tag>
 		<English>Growth</English>
 		<French>Croissance</French>
+		<Russian>Прирост</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HALL_OF_FAME_SCREEN_TITLE</Tag>
@@ -9687,12 +9701,13 @@
 		<German>Bisherige Spieldauer</German>
 		<Italian>Tempo di gioco:</Italian> <!-- info screen unit and building tab -->
 		<Spanish>Tiempo jugado</Spanish>
+		<Russian>Времени наиграно</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INSIDIOUSNESS</Tag>
 		<English>[ICON_BULLET]Insidiousness (Ability to Evade Investigation): %s1_Amount%%</English>
 		<French>[ICON_BULLET]Insidiosité (Habileté à échapper à l'investigation): %s1_Amount%%</French>
-		<Russian>[ICON_BULLET]Беззаконие (Навык уклонения от сыщиков): %s1_Amount%%</Russian>
+		<Russian>[ICON_BULLET]Изворотливость (способность избегать розыска): %s1_Amount%%</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_AIRBOMB</Tag>
@@ -9701,6 +9716,7 @@
 		<German>Luftbombardierungsmodus</German>
 		<Italian>Bombardamento aereo</Italian>
 		<Spanish>Modo Bombardeo aéreo</Spanish>
+		<Russian>Режим бомбардировки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_AIRBOMB1</Tag>
@@ -9710,7 +9726,7 @@
 		<Italian>Bombarda difese</Italian>
 		<Spanish>Bombardear defensas</Spanish>
 		<Polish>Bombardowanie umocnień</Polish>
-		<Russian>Óêðåïëåíèÿ</Russian>
+		<Russian>Укрепления</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_AIRBOMB1_HELP</Tag>
@@ -9720,7 +9736,7 @@
 		<Italian>[NEWLINE]Consente di colpire caselle con miglioramenti o danneggiare difese cittadine.</Italian>
 		<Spanish>"Bombardear defensas" te permite bombardear las mejoras de las casillas, o reducir el porcentaje de defensa de una ciudad.</Spanish>
 		<Polish>Bombardowanie umocnień pozwala bombardować pola z udoskonaleniami lub osłabiać obronę miasta.</Polish>
-		<Russian>Ïðè áîìáàðäèðîâêå óêðåïëåíèé åñòü øàíñ ðàçðóøèòü ãîðîäñêèå îáúåêòû èëè óìåíüøèòü ïðîöåíòíûé ïîêàçàòåëü çàùèòû ãîðîäà.</Russian>
+		<Russian>Атаковать улучшения участка или защиту города.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_AIRBOMB2</Tag>
@@ -9730,7 +9746,7 @@
 		<Italian>Bombarda edifici</Italian>
 		<Spanish>Bombardear edificios</Spanish>
 		<Polish>Bombardowanie budynków</Polish>
-		<Russian>Çäàíèÿ</Russian>
+		<Russian>Здания</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACEMODE_AIRBOMB2_HELP</Tag>
@@ -14339,6 +14355,7 @@
 		<French>[NUM1:Votre:Votre:Vos:Vos] %s1_UnitName [NUM1:a:a:ont:ont] réussi à éviter d'être piétiné par l'unité %s2_EnUName ennemie, qui se précipitait sur vos forces !</French>
 		<Italian>La tua unità %s1_UnitName è riuscita a scampare alla furia dell'unità nemica %s2_EnUName mentre procede verso le tue forze!</Italian>
 		<Polish>Wroga jednostka: %s1_EnUName uciekła przed przewagą naszej jednostki: %s2_UnitName!</Polish>
+		<Russian>Ваше подразделение %s1_UnitName избежало растаптывания в пыль вражеским %s2_EnUName, когда оно неслось через ваши войска!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_EXPERIENCE</Tag>
@@ -15683,7 +15700,7 @@
 		<German>Bürgerautomatisierung</German>
 		<Italian>Disattiva l'[COLOR_HIGHLIGHT_TEXT]automazione[COLOR_REVERT] dei cittadini specialisti</Italian> <!-- city screen automation panel -->
 		<Spanish>Desactivar la automatización de los ciudadanos</Spanish>
-		<Russian>Откл. автоматиз. горожан</Russian>
+		<Russian>Отключить автоматизацию горожан</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_OFF_PROD_AUTO</Tag>
@@ -15692,7 +15709,7 @@
 		<German>Produktionsautomatisierung</German>
 		<Italian>Disattiva la [COLOR_HIGHLIGHT_TEXT]produzione automatica[COLOR_REVERT]</Italian>  <!-- city screen automation panel -->
 		<Spanish>Desactivar la automatización de la producción</Spanish>
-		<Russian>Откл. автоматизацию производства</Russian>
+		<Russian>Отключить автоматизацию производства</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_ON_CITIZEN_AUTO</Tag>
@@ -19048,7 +19065,7 @@
 		<English>Opening Menu</English>
 		<French>Menu de lancement</French>
 		<German>Anfangsmenü</German>
-		<Italian>[ICON_BULLET]Schermo del titolo</Italian>
+		<Italian>Schermo del titolo</Italian>
 		<Spanish>Menú inicial</Spanish>
 	</TEXT>
 	<TEXT>
@@ -19080,7 +19097,7 @@
 		<English>Anti-Aliasing MultiSamples</English>
 		<French>Multi-échantillons anti-aliasing</French>
 		<German>Antialiasing MultiSample</German>
-		<Italian>[ICON_BULLET]Anti-aliasing multisamples</Italian>
+		<Italian>Anti-aliasing multisamples</Italian>
 		<Spanish>Anti-Aliasing MultiSamples</Spanish>
 	</TEXT>
 	<TEXT>
@@ -19096,7 +19113,7 @@
 		<English>Select your connection speed</English>
 		<French>Choisissez votre vitesse de connexion</French>
 		<German>Wählen Sie eine Verbindungsgeschwindigkeit</German>
-		<Italian>[ICON_BULLET]Tipo di connessione</Italian>
+		<Italian>Tipo di connessione</Italian>
 		<Spanish>Selecciona tu velocidad de conexión</Spanish>
 	</TEXT>
 	<TEXT>
@@ -19128,7 +19145,7 @@
 		<English>Voice Capture Device</English>
 		<French>Périphérique vocal</French>
 		<German>Sprachaufnahmegerät</German>
-		<Italian>[ICON_BULLET]Microfono</Italian>
+		<Italian>Microfono</Italian>
 		<Spanish>Dispositivo de captura de la voz</Spanish>
 	</TEXT>
 	<TEXT>
@@ -19200,7 +19217,7 @@
 		<English>Alarm Hours:</English>
 		<French>Heures :</French>
 		<German>Stunden:</German>
-		<Italian>[ICON_BULLET]Imposta avviso tra (h):</Italian>
+		<Italian>Imposta avviso tra (h):</Italian>
 		<Spanish>Horas:</Spanish>
 	</TEXT>
 	<TEXT>
@@ -19240,7 +19257,7 @@
 		<English>Alarm Mins:</English>
 		<French>Min. :</French>
 		<German>Minuten:</German>
-		<Italian>[ICON_BULLET]Imposta avviso tra (min):</Italian>
+		<Italian>Imposta avviso tra (min):</Italian>
 		<Spanish>Minutos</Spanish>
 	</TEXT>
 	<TEXT>
@@ -19300,7 +19317,7 @@
 		<English>Voice Playback Device</English>
 		<French>Périphérique restitution vocale</French>
 		<German>Sprachwiedergabegerät</German>
-		<Italian>[ICON_BULLET]Riproduzione vocale</Italian>
+		<Italian>Riproduzione vocale</Italian>
 		<Spanish>Dispositivo de reproducción de la voz</Spanish>
 	</TEXT>
 	<TEXT>
@@ -19324,7 +19341,7 @@
 		<English>Globe Quality</English>
 		<French>Qualité du globe</French>
 		<German>Weltqualität</German>
-		<Italian>[ICON_BULLET]Qualità del pianeta</Italian>
+		<Italian>Qualità del pianeta</Italian>
 		<Spanish>Calidad del globo</Spanish>
 	</TEXT>
 	<TEXT>
@@ -19332,7 +19349,7 @@
 		<English>Graphics Level</English>
 		<French>Niveau des graphismes</French>
 		<German>Grafikstufe</German>
-		<Italian>[ICON_BULLET]Qualità grafica</Italian>
+		<Italian>Qualità grafica</Italian>
 		<Spanish>Nivel gráfico</Spanish>
 	</TEXT>
 	<TEXT>
@@ -19340,7 +19357,7 @@
 		<English>Language</English>
 		<French>Langue</French>
 		<German>Sprache</German>
-		<Italian>[ICON_BULLET]Lingua</Italian>
+		<Italian>Lingua</Italian>
 		<Spanish>Idioma</Spanish>
 	</TEXT>
 	<TEXT>
@@ -19356,7 +19373,7 @@
 		<English>Profiles</English>
 		<French>Profils</French>
 		<German>Profile</German>
-		<Italian>[ICON_BULLET]Profili</Italian>
+		<Italian>Profili</Italian>
 		<Spanish>Perfiles</Spanish>
 	</TEXT>
 	<TEXT>
@@ -19364,7 +19381,7 @@
 		<English>Profile Name</English>
 		<French>Nom du profil</French>
 		<German>Profilname</German>
-		<Italian>[ICON_BULLET]Nome profilo</Italian>
+		<Italian>Nome profilo</Italian>
 		<Spanish>Nombre del perfil</Spanish>
 	</TEXT>
 	<TEXT>
@@ -19372,7 +19389,7 @@
 		<English>Render Quality Level</English>
 		<French>Niveau de qualité du rendu</French>
 		<German>Renderqualitätsstufe</German>
-		<Italian>[ICON_BULLET]Qualità del render</Italian>
+		<Italian>Qualità del render</Italian>
 		<Spanish>Nivel de calidad del renderizado</Spanish>
 	</TEXT>
 	<TEXT>
@@ -19380,7 +19397,7 @@
 		<English>Screen Resolution</English>
 		<French>Résolution</French>
 		<German>Auflösung</German>
-		<Italian>[ICON_BULLET]Risoluzione video</Italian>
+		<Italian>Risoluzione video</Italian>
 		<Spanish>Resolución de pantalla</Spanish>
 	</TEXT>
 	<TEXT>
@@ -19404,7 +19421,7 @@
 		<English>Audio Speakers</English>
 		<French>Enceintes</French>
 		<German>Lautsprecher</German>
-		<Italian>[ICON_BULLET]Altoparlanti</Italian>
+		<Italian>Altoparlanti</Italian>
 		<Spanish>Altavoces</Spanish>
 	</TEXT>
 	<TEXT>
@@ -21584,6 +21601,7 @@
 		<German>[ICON_BULLET]Erfordert Siegvariante %s1_Name</German>
 		<Italian>[ICON_BULLET]Richiede la vittoria %s1_Name</Italian>
 		<Spanish>[ICON_BULLET]Requiere una victoria %s1_Name</Spanish>
+		<Russian>[[ICON_BULLET]Должен быть включен тип победы "%s1_Name"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECTHELP_TEAM_NUM_ALLOWED</Tag>
@@ -21646,7 +21664,7 @@
 		<English>[ICON_BULLET]No Combat Penalty for Attacking from Sea</English>
 		<French>[ICON_BULLET]Aucune pénalité de combat en attaquant depuis la mer</French>
 		<German>[ICON_BULLET]Keine Kampfstrafe für Seeangriffe</German>
-		<Italian>[ICON_BULLET]Nessuna penalità di combattimento quando si attacca dal mare</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Nessuna penalità[COLOR_REVERT] di combattimento se si [COLOR_HIGHLIGHT_TEXT]attacca dal mare[COLOR_REVERT]</Italian> <!-- promotion Amphibious -->
 		<Spanish>[ICON_BULLET]No sufre penalización al combate por atacar desde el mar</Spanish>
 	</TEXT>
 	<TEXT>
@@ -21654,7 +21672,7 @@
 		<English>[ICON_BULLET]%D1_Bonus%% %s2_TerrFeat Attack</English>
 		<French>[ICON_BULLET]%D1_Bonus%% %s2_TerrFeat Attaque</French>
 		<German>[ICON_BULLET]%D1_Bonus%% %s2_TerrFeat-Angriff</German>
-		<Italian>[ICON_BULLET]%D1_Bonus%% di attacco in %s2_TerrFeat</Italian>
+		<Italian>[ICON_BULLET]Attacco su caselle con la caratteristica [COLOR_HIGHLIGHT_TEXT]%s2_TerrFeat[COLOR_REVERT]: [COLOR_HIGHLIGHT_TEXT]%D1_Bonus%%[COLOR_REVERT]</Italian> <!-- promotion Terrain Analysis I -->
 		<Spanish>[ICON_BULLET]%D1_Bonus%% a ataque a %s2:2_TerrFeat</Spanish>
 	</TEXT>
 	<TEXT>
@@ -21694,7 +21712,7 @@
 		<English>[ICON_BULLET]Suffers %d1_percent%% less Collateral Damage</English>
 		<French>[ICON_BULLET]Dommages collatéraux réduits de %d1_percent%%</French>
 		<German>[ICON_BULLET]%d1_percent%% weniger Kollateralschäden</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Danni collaterali[COLOR_REVERT] subiti [COLOR_HIGHLIGHT_TEXT]-%d1_percent%%[COLOR_REVERT]</Italian> <!-- unit Noble -->
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Danni collaterali[COLOR_REVERT] subiti: [COLOR_HIGHLIGHT_TEXT]-%d1_percent%%[COLOR_REVERT]</Italian> <!-- unit Noble -->
 		<Spanish>[ICON_BULLET]Sufre un %d1_percent%% menos de daños colaterales</Spanish>
 	</TEXT>
 	<TEXT>
@@ -21814,7 +21832,7 @@
 		<English>[ICON_BULLET]No Combat Penalty for Crossing River</English>
 		<French>[ICON_BULLET]Aucune pénalité de combat en franchissant une rivière</French>
 		<German>[ICON_BULLET]Keine Kampfstrafe für Flussüberquerung</German>
-		<Italian>[ICON_BULLET]Nessuna penalità nel guado di un fiume</Italian>
+		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Nessuna penalità[COLOR_REVERT] di combattimento per [COLOR_HIGHLIGHT_TEXT]attraversamento di un fiume[COLOR_REVERT]</Italian> <!-- promotion Amphibious -->
 		<Spanish>[ICON_BULLET]No sufre penalización al combate por cruzar un río</Spanish>
 	</TEXT>
 	<TEXT>
@@ -21822,7 +21840,7 @@
 		<English>[ICON_BULLET]%D1_Bonus%% Strength</English>
 		<French>[ICON_BULLET]Puissance %D1_Bonus%%</French>
 		<German>[ICON_BULLET]%D1_Bonus%% Stärke</German>
-		<Italian>[ICON_BULLET]%D1_Bonus%% di forza</Italian>
+		<Italian>[ICON_BULLET]Forza unità: [COLOR_HIGHLIGHT_TEXT]%D1_Bonus%%[COLOR_REVERT]</Italian> <!-- promotion Wootz Steel -->
 		<Spanish>[ICON_BULLET]%D1_Bonus%% a la fuerza</Spanish>
 	</TEXT>
 	<TEXT>
@@ -22308,6 +22326,7 @@
 		<German>Punkte</German>
 		<Italian>Punti</Italian>
 		<Spanish>Puntuación</Spanish>
+		<Russian>Счет</Russian>
 	</TEXT>
 		<TEXT>
 		<Tag>TXT_KEY_REPLAY_SCREEN_SPEED</Tag>
@@ -22709,6 +22728,10 @@
 		<German>Mittel</German>
 		<Italian>Media</Italian>
 		<Spanish>Medio</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SEALEVEL_VERY_LOW</Tag>
+		<English>Very Low</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SEASON_FALL</Tag>
@@ -25237,7 +25260,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CAO_DAI_PEDIA</Tag>
 		<English>[PARAGRAPH:0]Cao Dai (or "High Tower", a Taoist epithet for the supreme god) is a syncretist Vietnamese religious movement with a strongly nationalist political character. Cao Dai draws upon ethical precepts from Confucianism, occult practices from Taoism, theories of karma and rebirth from Buddhism, and a hierarchical organization (including a pope) from Roman Catholicism. Its pantheon of saints includes such diverse figures as the Buddha, Confucius, Jesus Christ, Muhammad, Pericles, Julius Caesar, Joan of Arc, Victor Hugo, and Sun Yat-sen. In Cao Dai, God is represented as an eye in a triangle, a symbol that appears on the facades of the sect's temples. The religion's organization is patterned after that of Roman Catholicism, with a pope, cardinals, and archbishops. Worship involves elaborate rituals and festivals.[PARAGRAPH:2]In 1919 Ngo Van Chieu (q.v.), an administrator for the French in Indochina, received a communication from the supreme deity during a table-moving séance. Chieu became the prophet of the new religion, which was formally established in 1926. A Cao Dai army was established in 1943 during the Japanese occupation of Indochina. After the war the Cao Dai was an effective force in national politics; it first supported, then opposed, Premier Ngo Dinh Diem. In 1955–56 Diem disbanded the Cao Dai army and forced the sect's pope, Pham Cong Tac, into exile. After the communist takeover in 1975, Cao Dai was reportedly repressed by the government. Centres of worship were established in Vietnamese refugee communities abroad, however, and by the early 1990s Cao Dai was reported to have some two million adherents in Vietnam, Cambodia, France, and the United States. Headquarters of the religion are at Tay Ninh (q.v.), near Ho Chi Minh City (formerly Saigon).[PARAGRAPH:2]- Encyclopaedia Britannica</English>
-		<Russian>[PARAGRAPH:0]Каодай (вьетн. «Большой глаз») - синкретическая монотеистическая религия, основанная Нго Ван Тьеу в 1926 году в городе Тэйнинь одноимённой провинции на юге Вьетнама. Полное название религии - «Великий путь третьей эпохи спасения». Доктрина и культовая практика каодаизма содержат элементы распространённых во Вьетнаме буддизма, даосизма, конфуцианства, культа предков и католичества, а также откровений, полученных в ходе спиритических сеансов. Целью верующих считается избавление человека от цепи перерождений и соединение души с божеством Каодай. Практикуются медитации, общение с духами и другие мистические практики, от духовенства требуется целибат.[PARAGRAPH:2]Организация Каодай играла значительную роль в региональной политике на юге Вьетнама в середине XX века, обладая, несмотря на декларируемый пацифизм учения, собственными вооружёнными силами и контролируя значительные территории. Во второй половине XX века каодаизм подвергался репрессиям по политическим причинам со стороны южновьетнамского диктатора Нго Динь Зьема, а затем - властей Социалистической Республики Вьетнам по подозрению в связях с французскими спецслужбами.</Russian>
+		<Russian>[PARAGRAPH:0]Каодай (вьетн. «Большой глаз») - синкретическая монотеистическая религия, основанная Нго Ван Тьеу в 1926 году в городе Тэйнинь одноименной провинции на юге Вьетнама. Полное название религии - «Великий путь третьей эпохи спасения». Доктрина и культовая практика каодаизма содержат элементы распространенных во Вьетнаме буддизма, даосизма, конфуцианства, культа предков и католичества, а также откровений, полученных в ходе спиритических сеансов. Целью верующих считается избавление человека от цепи перерождений и соединение души с божеством Каодай. Практикуются медитации, общение с духами и другие мистические практики, от духовенства требуется целибат.[PARAGRAPH:2]Организация Каодай играла значительную роль в региональной политике на юге Вьетнама в середине XX века, обладая, несмотря на декларируемый пацифизм учения, собственными вооруженными силами и контролируя значительные территории. Во второй половине XX века каодаизм подвергался репрессиям по политическим причинам со стороны южновьетнамского диктатора Нго Динь Зьема, а затем - властей Социалистической Республики Вьетнам по подозрению в связях с французскими спецслужбами.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CAO_DAI_QUOTE</Tag>
@@ -25593,7 +25616,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<French>"Allah, le Seul et Unique; Allah, l'éternel, absolu; Il n'a pas connu la naissance, Il n'a pas été engendré; Et il n'y a rien qui Lui ressemble;." - Coran 112:1-4</French>
 		<Spanish>"Alá, el único e inigualable; Alá el eterno y absoluto; no ha engendrado ni ha sido engendrado; y no existe nadie semejante a Él." - Cor'án 112:1-4</Spanish>
 		<Polish>"Bóg jest jeden i jedyny, a jego wszechmoc i panowanie niepodzielne." - Koran</Polish>
-		<Russian>«Он - Аллах - Единый, Аллах - Самодостаточный; Он не родил и не был рождён, и нет никого равного Ему». - Коран 112:1-4</Russian>
+		<Russian>«Он - Аллах - Единый, Аллах - Самодостаточный; Он не родил и не был рожден, и нет никого равного Ему». - Коран 112:1-4</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_JAINISM</Tag>
@@ -29037,7 +29060,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Wynik</Polish>
-		<Russian>Î÷êè</Russian>
+		<Russian>Счет</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_BUILDING</Tag>
