@@ -711,12 +711,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_MAP_MORE_RESOURCES_HELP</Tag>
-		<English>Maps that use default resource spawn settings will spawn more resources.[NEWLINE]Has no effect on these mapscripts:[NEWLINE][SPACE][SPACE] * PerfectWorld, PerfectMongoose and World[NEWLINE]Only affects SmartMap when "Bonus Placement = Standard"[NEWLINE]NOTE: This option will largely reduce the efficiency of Realistic Culture Spread on slowing border growth, particularly on smaller mapsizes.</English>
+		<English>Maps that use default resource spawn settings will spawn more resources.[NEWLINE]Has no effect on these mapscripts:[NEWLINE][SPACE][SPACE] * PerfectWorld, PerfectMongoose and World</English>
 		<French>Une carte avec les paramètres par défaut comprendra des ressources supplémentaires</French>
 		<German>Auf Karten mit Standardeinstellungen für Ressourcen werden mehr Ressourcen verteilt.</German>
 		<Polish>Mapy używające standardowych ustawień wygenerują więcej zasobów.</Polish>
 		<Russian>Êàðòû, êîòîðûå èñïîëüçóþò íàñòðîéêè ïî óìîë÷àíèþ, ãåíåðèðóþò áîëüøå ðåñóðñîâ.</Russian>
-		<Italian>Le mappe che utilizzano le impostazioni predefinite di spawn delle risorse ne genereranno di più (non ha effetto su questi mapscript: * PerfectWorld, PerfectMongoose e World, ha effetto solo su SmartMap quando Bonus Placement = Standard)</Italian>
+		<Italian>Le mappe che utilizzano le impostazioni predefinite di spawn delle risorse ne genereranno di più (non ha effetto su questi mapscript: * PerfectWorld, PerfectMongoose e World)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_MAP_MORE_RIVERS</Tag>
@@ -729,12 +729,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_MAP_MORE_RIVERS_HELP</Tag>
-		<English>Maps that use default river settings will spawn more rivers.[NEWLINE]Has no effect on these mapscripts:[NEWLINE][SPACE][SPACE] * PerfectWorld, PerfectMongoose and World[NEWLINE]Only affects SmartMap if terrain options is:[NEWLINE][SPACE][SPACE] * Standard, Great Plains or Oasis</English>
+		<English>Maps that use default river settings will spawn more rivers.[NEWLINE]Has no effect on these mapscripts:[NEWLINE][SPACE][SPACE] * PerfectWorld, PerfectMongoose and World[NEWLINE]NOTE: This option will largely reduce the efficiency of Realistic Culture Spread on slowing border growth, particularly on smaller mapsizes.</English>
 		<French>Une carte avec les paramètres par défaut, fera apparaître des fleuves et rivières supplémentaires</French>
 		<German>Auf Karten mit Standardeinstellungen für Flüsse werden mehr Flüsse verteilt.</German>
 		<Polish>Mapy używające standardowych ustawień wygenerują więcej rzek.</Polish>
 		<Russian>Êàðòû, êîòîðûå èñïîëüçóþò íàñòðîéêè ïî óìîë÷àíèþ, ãåíåðèðóþò áîëüøå ðåê.</Russian>
-		<Italian>Le mappe che utilizzano le impostazioni predefinite per la generazione dei fiumi ne genereranno di più (non ha effetto su questi mapscript: * PerfectWorld, PerfectMongoose e World, ha effetto solo su SmartMap se le opzioni del terreno sono: [SPACE][SPACE] * Standard, grandi pianure o oasi)</Italian>
+		<Italian>Le mappe che utilizzano le impostazioni predefinite per la generazione dei fiumi ne genereranno di più (non ha effetto su questi mapscript: * PerfectWorld, PerfectMongoose e World)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UNIT_MORE_XP_TO_LEVEL</Tag>
