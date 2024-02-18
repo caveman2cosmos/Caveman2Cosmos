@@ -87,6 +87,9 @@ class MapConstants:
 		# It is relative to fLandHeight. A value of zero means that lakes can appear as low as the maximum ocean height.
 		self.fRelMinLakeAlt = 0.1
 
+		# How circular lakes are. 0 generates only circular lakes, 1 will make them run toward low elevation only
+		self.fLakeEccentricity = 0.25
+
 		#The percent chance that a floodplain may appear on a valid riverside.
 		self.fFloodplainChance = 0.5
 
@@ -2261,6 +2264,7 @@ class LakeMap:
 					return 0
 		# Create the lake.
 		relAltMap = em.relAltMap3x3
+		lakeCenter = [x, y]
 		thisLake = []
 		lakeNeighbors = []
 		checkedPlots = []
@@ -2309,7 +2313,11 @@ class LakeMap:
 					if bValid:
 						lakeNeighbors.append(LakePlot(x, y, i, relAltMap[i], iMergeSize))
 			if len(lakeNeighbors) > 1:
-				lakeNeighbors.sort(lambda a, b:cmp(a.fHeight, b.fHeight))
+				# Should weigh by current center-of-lake instead of start, but this'll work for now
+				# Plot distance (1 - > 5ish) recriprocated (1 - > 0.2ish), then flipped by 1 (0 -> 0.8ish) & 4x downscaled (0 -> 0.2ish) matches height (0.01 to 0.2ish)
+				lakeNeighbors.sort(lambda a, b:cmp(
+					(mc.fLakeEccentricity * a.fHeight + (1 - mc.fLakeEccentricity) * (1 - 1 / max(1, plotDistance(a.x, a.y, lakeCenter[0], lakeCenter[1]))) / 4),
+					(mc.fLakeEccentricity * b.fHeight + (1 - mc.fLakeEccentricity) * (1 - 1 / max(1, plotDistance(b.x, b.y, lakeCenter[0], lakeCenter[1]))) / 4)))
 			while True:
 				if len(lakeNeighbors) == 0:
 					return 1
