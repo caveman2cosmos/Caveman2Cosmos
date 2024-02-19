@@ -2,7 +2,6 @@
 from CvPythonExtensions import *
 import CvScreensInterface as UP
 import HandleInputUtil
-import CivicData
 
 # globals
 GC = CyGlobalContext()
@@ -53,12 +52,15 @@ class HeritageScreen:
 		if xRes > 1700:
 			self.iSize = 64
 			self.aFontList = aFontList = [uFontEdge, "<font=4b>", "<font=4>", "<font=3b>", "<font=3>", "<font=2b>", "<font=2>"]
+			self.iOff = 8
 		elif xRes > 1400:
 			self.iSize = 56
 			self.aFontList = aFontList = [uFontEdge, "<font=3b>", "<font=3>", "<font=2b>", "<font=2>", "<font=1b>", "<font=1>"]
+			self.iOff = 6
 		else:
 			self.iSize = 48
 			self.aFontList = aFontList = [uFontEdge, "<font=2b>", "<font=2>", "<font=1b>", "<font=1>", "<font=0b>", "<font=0>"]
+			self.iOff = 4
 
 		Y_BOT_TEXT = yRes - H_EDGE + 8
 
@@ -67,6 +69,7 @@ class HeritageScreen:
 		self.Y_MID_STAT_BAR = y = Y_STAT_BAR + (H_STAT_BAR - H_EDGE)/2 - 6
 
 		# Caching
+		self.iTab = 0
 		self.bDebug = GAME.isDebugMode()
 		self.iPlayer = iPlayer = GAME.getActivePlayer()
 		self.iPlayerAct = iPlayer
@@ -84,34 +87,34 @@ class HeritageScreen:
 		screen.showWindowBackground(False)
 		screen.setDimensions(0, 0, xRes, yRes)
 
-		screen.addDDSGFC("Civic_BG", AFM.getInterfaceArtInfo("SCREEN_BG_OPAQUE").getPath(), 0, 0, xRes, yRes, eWidGen, 1, 1)
+		screen.addDDSGFC("Heritage_BG", AFM.getInterfaceArtInfo("SCREEN_BG_OPAQUE").getPath(), 0, 0, xRes, yRes, eWidGen, 1, 1)
 		screen.addPanel("TopPanel", "", "", True, False, 0, 0, xRes, H_EDGE, PanelStyles.PANEL_STYLE_TOPBAR)
 		screen.addPanel("BottomPanel", "", "", True, False, 0, yRes - H_EDGE, xRes, H_EDGE, PanelStyles.PANEL_STYLE_BOTTOMBAR)
 
 
 		screen.setLabel("Header", "", uFontEdge + TRNSLTR.getText("TXT_KEY_HUD_BUTTON_ADVISOR_HERITAGE",()), 1<<2, xRes / 2, 2, 0, eFontTitle, eWidGen, 0, 0)
 		szTxt = uFontEdge + TRNSLTR.getText("TXT_WORD_EXIT", ())
-		screen.setText("CivicExit", "", szTxt, 1<<1, xRes - 8, 0, 0, eFontTitle, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1)
+		screen.setText("HeritageExit", "", szTxt, 1<<1, xRes - 8, 0, 0, eFontTitle, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1)
 
 		# Tabs
 		szCol = "<color=255,255,0>"
 		szTxt = uFontEdge + "Heritage"
 		dX = xMid
 		x = dX / 2
-		screen.setText("Civic_Tab0", "", szTxt, 1<<2, x, Y_BOT_TEXT, 0, eFontTitle, eWidGen, 0, 0)
-		screen.setText("Civic_Tab|Col0", "", szCol + szTxt, 1<<2, x, Y_BOT_TEXT, 0, eFontTitle, eWidGen, 0, 0)
-		screen.hide("Civic_Tab|Col0")
+		screen.setText("Heritage_Tab0", "", szTxt, 1<<2, x, Y_BOT_TEXT, 0, eFontTitle, eWidGen, 0, 0)
+		screen.setText("Heritage_Tab|Col0", "", szCol + szTxt, 1<<2, x, Y_BOT_TEXT, 0, eFontTitle, eWidGen, 0, 0)
+		screen.hide("Heritage_Tab|Col0")
 
 		szTxt = uFontEdge + "Traits"
 		x += dX
-		screen.setText("Civic_Tab1", "", szTxt, 1<<2, x, Y_BOT_TEXT, 0, eFontTitle, eWidGen, 0, 0)
-		screen.setText("Civic_Tab|Col1", "", szCol + szTxt, 1<<2, x, Y_BOT_TEXT, 0, eFontTitle, eWidGen, 0, 0)
-		screen.hide("Civic_Tab|Col1")
+		screen.setText("Heritage_Tab1", "", szTxt, 1<<2, x, Y_BOT_TEXT, 0, eFontTitle, eWidGen, 0, 0)
+		screen.setText("Heritage_Tab|Col1", "", szCol + szTxt, 1<<2, x, Y_BOT_TEXT, 0, eFontTitle, eWidGen, 0, 0)
+		screen.hide("Heritage_Tab|Col1")
 
 		# Debug
 		import DebugUtils
 		if DebugUtils.isAnyDebugMode():
-			DD = "Civic_DebugDD"
+			DD = "Heritage_DebugDD"
 			screen.addDropDownBoxGFC(DD, H_EDGE, 0, 300, eWidGen, 1, 1, FontTypes.GAME_FONT)
 			for iPlayerX in xrange(GC.getMAX_PLAYERS()):
 				CyPlayerX = GC.getPlayer(iPlayerX)
@@ -125,9 +128,11 @@ class HeritageScreen:
 
 	# Draw the contents...
 	def drawContents(self, screen):
-		return
+		self.deleteAllWidgets(screen)
+		if not self.iTab:
+			self.drawHeritage(screen)
 
-	def drawCivics0(self, screen):
+	def drawHeritage(self, screen):
 		xRes = self.xRes
 		yRes = self.yRes
 		xMid = self.xMid
@@ -136,35 +141,61 @@ class HeritageScreen:
 		CyPlayer = self.CyPlayer
 		bDebug = self.bDebug
 		CANCEL = self.CANCEL
-		HILITE = self.HILITE
 
 		uFontEdge, uFont4b, uFont4, uFont3b, uFont3, uFont2b, uFont2 = self.aFontList
 
-		iSize = self.iSize
 
 		eWidGen = WidgetTypes.WIDGET_GENERAL
 		eFontGame = FontTypes.GAME_FONT
+		ePnlMain = PanelStyles.PANEL_STYLE_MAIN
 		ePnlOut = PanelStyles.PANEL_STYLE_OUT
+		iPanelBlue50 = PanelStyles.PANEL_STYLE_BLUE50
 
+		player = self.CyPlayer
 		# Background
-		h = self.Y_STAT_BAR - H_EDGE
-		screen.addPanel(self.getNextWidget(), "", "", True, False, 4, H_EDGE, xRes - 8, h, PanelStyles.PANEL_STYLE_MAIN)
+		h0 = yRes - 2*H_EDGE
+		w0 = (xRes - 52)/4
+		w1 = 2*w0+12
+		x0 = 8
+		x1 = 20 + w0
+		x2 = 32 + w0*2
+		screen.addPanel(self.getNextWidget(), "", "", True, False, x0, H_EDGE, w0, h0, iPanelBlue50)
+		screen.addPanel(self.getNextWidget(), "", "", True, False, x1, H_EDGE, w0, h0, iPanelBlue50)
+		screen.addPanel(self.getNextWidget(), "", "", True, False, x2, H_EDGE, w1, h0, iPanelBlue50)
 		# Main Area
-		wScroll = xRes - 14
-		self.ScPnl = ScPnl = self.getNextWidget()
-		screen.addScrollPanel(ScPnl, "", 6, H_EDGE + 2, wScroll, h - 32, PanelStyles.PANEL_STYLE_EMPTY)
-		screen.setStyle(ScPnl, "ScrollPanel_Alt_Style")
+		self.ScPnl0 = ScPnl0 = self.getNextWidget()
+		screen.addScrollPanel(ScPnl0, "", x0-8, H_EDGE+8, w0+12, h0-42, PanelStyles.PANEL_STYLE_EMPTY)
+		screen.setStyle(ScPnl0, "ScrollPanel_Alt_Style")
+		self.ScPnl1 = ScPnl1 = self.getNextWidget()
+		screen.addScrollPanel(ScPnl1, "", x1-8, H_EDGE+8, w0+12, h0-42, PanelStyles.PANEL_STYLE_EMPTY)
+		screen.setStyle(ScPnl1, "ScrollPanel_Alt_Style")
+		# Fill screen
+		iSize = self.iSize * 2/3
+		dy = iSize + 8
+		y0 = y1 = 0
+		iOff = self.iOff
+		for iType in xrange(GC.getNumHeritageInfos()):
+			heritageX = GC.getHeritageInfo(iType)
+
+			if player.hasHeritage(iType):
+				screen.setImageButtonAt("WID|HERITAGE|IMG%d" % iType, ScPnl1, heritageX.getButton(), 8, y1, iSize, iSize, eWidGen, 1, 2)
+				screen.setTextAt("WID|HERITAGE|TEXT%d" % iType, ScPnl1, uFont3b + heritageX.getDescription(), 1<<0, 2+dy, iOff + y1, 0, eFontGame, eWidGen, 1, 2)
+				y1 += dy
+			else:
+				screen.addDDSGFCAt("", ScPnl0, heritageX.getButton(), 8, y0, iSize, iSize, eWidGen, 1, 1, False)
+				screen.setImageButtonAt("WID|HERITAGE|IMG%d" % iType, ScPnl0, CANCEL, 8, y0, iSize, iSize, eWidGen, 1, 2)
+				screen.setTextAt("WID|HERITAGE|TEXT%d" % iType, ScPnl0, uFont3 + heritageX.getDescription(), 1<<0, 2+dy, iOff + y0, 0, eFontGame, eWidGen, 1, 2)
+				y0 += dy
 
 
 
 	# Utility
 	def getNextWidget(self):
-		szName = "Civic_Widget" + str(self.nWidgetCount)
+		szName = "Heritage_Widget" + str(self.nWidgetCount)
 		self.nWidgetCount += 1
 		return szName
 
-	def deleteAllWidgets(self):
-		screen = self.getScreen()
+	def deleteAllWidgets(self, screen):
 		# Generic widgets
 		iNumWidgets = self.nWidgetCount
 		self.nWidgetCount = 0
@@ -211,44 +242,23 @@ class HeritageScreen:
 
 			if BASE == "WID":
 
-				if TYPE == "CIVIC":
-					if CASE[0] != "TEXT":
-						self.tooltip.handle(screen, GTM.parseCivicInfo(ID, False, True, False), uFont=self.aFontList[4])
-
-
-			elif NAME == "CivicDisplay":
-				self.tooltip.handle(screen, "Toggle Display Type")
-
-		elif iCode == NotifyCode.NOTIFY_CURSOR_MOVE_OFF:
-
-			if BASE == "WID":
-				pass
+				if TYPE == "HERITAGE":
+					self.tooltip.handle(screen, GTM.getHeritageHelp(ID, None, True, False, False), uFont=self.aFontList[4])
 
 		elif iCode == NotifyCode.NOTIFY_CLICKED:
 
-			if BASE == "Civic_Tab":
+			if BASE == "Heritage_Tab":
 				if CASE[0] != "Col":
 					self.drawContents(screen)
 
-			elif NAME == "CivicRevolution":
-				screen.hideScreen()
+			elif BASE == "WID":
 
-			elif szFlag == "MOUSE_RBUTTONUP":
+				if TYPE == "HERITAGE":
+					UP.pediaJumpToHeritage([ID])
 
-				if BASE == "WID":
-
-					if TYPE == "CIVIC":
-						UP.pediaJumpToCivic([ID])
-			else:
-
-				if BASE == "WID":
-					pass
-
-				elif NAME == "CivicDisplay":
-					self.drawContents(screen)
 
 		elif iCode == NotifyCode.NOTIFY_LISTBOX_ITEM_SELECTED:
-			if NAME == "Civic_DebugDD":
+			if NAME == "Heritage_DebugDD":
 				iIndex = screen.getSelectedPullDownID(NAME)
 				self.iPlayer = iPlayer = screen.getPullDownData(NAME, iIndex)
 				self.setActivePlayer(iPlayer)
@@ -261,5 +271,5 @@ class HeritageScreen:
 		screen.setDying(True)
 		del self.InputData, self.nWidgetCount, self.CyPlayer, self.iPlayer, self.iPlayerAct, \
 			self.xRes, self.yRes, self.xMid, self.iSize, self.aFontList, \
-			self.H_EDGE, self.Y_STAT_BAR, self.Y_MID_STAT_BAR, \
-			self.bDebug, self.HILITE, self.CANCEL, self.ScPnl
+			self.H_EDGE, self.Y_STAT_BAR, self.Y_MID_STAT_BAR, self.iOff, \
+			self.bDebug, self.HILITE, self.CANCEL, self.ScPnl, self.iTab
