@@ -340,6 +340,11 @@ bool CyPlayer::hasBonus(int /*BonusTypes*/ eBonus) const
 	return m_pPlayer->hasBonus((BonusTypes)eBonus);
 }
 
+bool CyPlayer::hasHeritage(int iType) const
+{
+	return m_pPlayer->hasHeritage((HeritageTypes)iType);
+}
+
 bool CyPlayer::isTurnActive() const
 {
 	return m_pPlayer->isTurnActive();
