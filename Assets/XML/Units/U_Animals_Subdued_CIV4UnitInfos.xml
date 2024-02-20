@@ -295,7 +295,6 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_CANINES</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_WOLF</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_WOLF</BuildingType>
 				<BuildingType>BUILDING_TRAP_FOX</BuildingType>
 				<BuildingType>BUILDING_FUR_FARM</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -304,6 +303,7 @@
 			</Buildings>
 			<Heritage>
 				<Type>HERITAGE_FOLKLORE_FOX_ARCTIC</Type>
+				<Type>HERITAGE_TAXON_CANIDAE</Type>
 			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
@@ -5016,8 +5016,6 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_CANINES</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_WOLF</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_WOLF</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_USSURI_DHOLE</BuildingType>
 				<BuildingType>BUILDING_DOG_BREEDER</BuildingType>
 				<BuildingType>BUILDING_HERDING_DOG_TRAINER</BuildingType>
 				<BuildingType>BUILDING_HUNTING_DOG_TRAINER</BuildingType>
@@ -5028,6 +5026,10 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_USSURI_DHOLE</Type>
+				<Type>HERITAGE_TAXON_CANIDAE</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -5084,13 +5086,15 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_CANINES</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_WOLF</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_WOLF</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_DINGO</BuildingType>
 				<BuildingType>BUILDING_DOG_BREEDER</BuildingType>
 				<BuildingType>BUILDING_DOG_KENNELS</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_DINGO</Type>
+				<Type>HERITAGE_TAXON_CANIDAE</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -5155,12 +5159,14 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_CANINES</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_WOLF</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_DIRE_WOLF</BuildingType>
 				<BuildingType>BUILDING_REMAINS_DIRE_WOLF</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_WOLF_DIRE</Type>
+				<Type>HERITAGE_TAXON_CANIDAE</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -6492,11 +6498,13 @@
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_CANINES</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_WOLF</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_ETHIOPIAN_WOLF</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_WOLF_ETHIOPIAN</Type>
+				<Type>HERITAGE_TAXON_CANIDAE</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -12819,11 +12827,13 @@
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_CANINES</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_WOLF</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_MANED_WOLF</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_WOLF_MANED</Type>
+				<Type>HERITAGE_TAXON_CANIDAE</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -16949,7 +16959,6 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_CANINES</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_WOLF</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_WOLF</BuildingType>
 				<BuildingType>BUILDING_TRAP_FOX</BuildingType>
 				<BuildingType>BUILDING_FUR_FARM</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -16958,6 +16967,7 @@
 			</Buildings>
 			<Heritage>
 				<Type>HERITAGE_FOLKLORE_FOX_RED</Type>
+				<Type>HERITAGE_TAXON_CANIDAE</Type>
 			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
@@ -17365,8 +17375,6 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_CANINES</BuildingType>
 				<BuildingType>BUILDING_DOG_BREEDER</BuildingType>
 				<BuildingType>BUILDING_DOG_KENNELS</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_WOLF</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_WOLF</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GUARD_DOG_TRAINER</BuildingType>
@@ -17379,6 +17387,10 @@
 				<BuildingType>BUILDING_ENCLOSURE_WOLF</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_WOLF</Type>
+				<Type>HERITAGE_TAXON_CANIDAE</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>

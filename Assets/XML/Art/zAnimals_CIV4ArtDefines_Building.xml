@@ -342,26 +342,6 @@
 			<Button>Art/Interface/Buttons/Units/Tortoise.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_USSURI_DHOLE</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF>Art/empty.nif</NIF>
-			<KFM/>
-			<Button>Art/Interface/Buttons/Units/Dhole.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_DINGO</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF>Art/empty.nif</NIF>
-			<KFM/>
-			<Button>Art/Interface/Buttons/Units/Dingo.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_FOLKLORE_DUCK</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
@@ -420,16 +400,6 @@
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Emu.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_ETHIOPIAN_WOLF</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF>Art/empty.nif</NIF>
-			<KFM/>
-			<Button>Art/Interface/Buttons/Buildings/totem_ethowolf.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_FOLKLORE_T_FISH</Type>
@@ -580,16 +550,6 @@
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Greatwhite.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_WOLF</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF>Art/empty.nif</NIF>
-			<KFM/>
-			<Button>Art/Interface/Buttons/Buildings/totem_wolf.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_FOLKLORE_GRIZZLY</Type>
@@ -892,16 +852,6 @@
 			<Button>Art/Interface/Buttons/Units/Mandrill.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_MANED_WOLF</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF>Art/empty.nif</NIF>
-			<KFM/>
-			<Button>Art/Interface/Buttons/Units/Manedwolf.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_FOLKLORE_MARLIN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
@@ -1080,16 +1030,6 @@
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Oxpecker.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_DIRE_WOLF</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF>Art/empty.nif</NIF>
-			<KFM/>
-			<Button>Art/Interface/Buttons/Buildings/PaleolithicDogMyth.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_REMAINS_DIRE_WOLF</Type>
@@ -1740,16 +1680,6 @@
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Wildebeest.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_T_WOLF</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF>Art/empty.nif</NIF>
-			<KFM/>
-			<Button>Art/Interface/Buttons/Buildings/totem_wolf.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_FOLKLORE_WOLVERINE</Type>
