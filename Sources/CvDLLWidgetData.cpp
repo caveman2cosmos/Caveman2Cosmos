@@ -2248,29 +2248,28 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 			}
 			else if (GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_FOUND)
 			{
-				if (!(GET_PLAYER(pHeadSelectedUnit->getOwner()).canFound(pMissionPlot->getX(), pMissionPlot->getY())))
+				if (!GET_PLAYER(pHeadSelectedUnit->getOwner()).canFound(pMissionPlot->getX(), pMissionPlot->getY()))
 				{
-					const int iRange = GC.getMIN_CITY_RANGE();
-
-					if (algo::any_of(pMissionPlot->rect(iRange, iRange), bind(CvPlot::isCity, _1, false, NO_TEAM)))
 					{
-						szBuffer.append(NEWLINE);
-						szBuffer.append(gDLL->getText("TXT_KEY_ACTION_CANNOT_FOUND", GC.getMIN_CITY_RANGE()));
-					}
+						const int iRange = GC.getGame().getModderGameOption(MODDERGAMEOPTION_MIN_CITY_DISTANCE);
 
-					if (GET_PLAYER(pHeadSelectedUnit->getOwner()).getCityLimit() > 0 &&
-						GET_PLAYER(pHeadSelectedUnit->getOwner()).getCityOverLimitUnhappy() == 0 &&
-						GET_PLAYER(pHeadSelectedUnit->getOwner()).getNumCities() >= GET_PLAYER(pHeadSelectedUnit->getOwner()).getCityLimit())
+						if (algo::any_of(pMissionPlot->rect(iRange, iRange), bind(CvPlot::isCity, _1, false, NO_TEAM)))
+						{
+							szBuffer.append(NEWLINE);
+							szBuffer.append(gDLL->getText("TXT_KEY_ACTION_CANNOT_FOUND", iRange));
+						}
+					}
+					if (GET_PLAYER(pHeadSelectedUnit->getOwner()).getCityLimit() > 0
+					&&	GET_PLAYER(pHeadSelectedUnit->getOwner()).getCityOverLimitUnhappy() == 0
+					&&	GET_PLAYER(pHeadSelectedUnit->getOwner()).getNumCities() >= GET_PLAYER(pHeadSelectedUnit->getOwner()).getCityLimit())
 					{
 						CvWString szCivics;
 						for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
 						{
-							if (GET_PLAYER(pHeadSelectedUnit->getOwner()).getCivics((CivicOptionTypes)iI) != NO_CIVIC)
+							if (GET_PLAYER(pHeadSelectedUnit->getOwner()).getCivics((CivicOptionTypes)iI) != NO_CIVIC
+							&& GC.getCivicInfo((CivicTypes)GET_PLAYER(pHeadSelectedUnit->getOwner()).getCivics((CivicOptionTypes)iI)).getCityLimit(pHeadSelectedUnit->getOwner()) > 0)
 							{
-								if (GC.getCivicInfo((CivicTypes)GET_PLAYER(pHeadSelectedUnit->getOwner()).getCivics((CivicOptionTypes)iI)).getCityLimit(pHeadSelectedUnit->getOwner()) > 0)
-								{
-									szCivics.append(GC.getCivicInfo((CivicTypes)GET_PLAYER(pHeadSelectedUnit->getOwner()).getCivics((CivicOptionTypes)iI)).getDescription());
-								}
+								szCivics.append(GC.getCivicInfo((CivicTypes)GET_PLAYER(pHeadSelectedUnit->getOwner()).getCivics((CivicOptionTypes)iI)).getDescription());
 							}
 						}
 						szBuffer.append(NEWLINE);

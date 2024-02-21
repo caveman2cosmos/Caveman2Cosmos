@@ -309,10 +309,6 @@
 		<iDefineIntVal>3</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>MIN_CITY_RANGE</DefineName>
-		<iDefineIntVal>2</iDefineIntVal>
-	</Define>
-	<Define>
 		<!-- Starting/minimum culture on city tile -->
 		<DefineName>FREE_CITY_CULTURE</DefineName>
 		<iDefineIntVal>2</iDefineIntVal>

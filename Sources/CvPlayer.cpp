@@ -6299,7 +6299,7 @@ bool CvPlayer::canFound(int iX, int iY, bool bTestVisible) const
 
 	if (!bTestVisible)
 	{
-		const int iRange = GC.getMIN_CITY_RANGE();
+		const int iRange = GC.getGame().getModderGameOption(MODDERGAMEOPTION_MIN_CITY_DISTANCE);
 
 		if (algo::any_of(pPlot->rect(iRange, iRange), CvPlot::fn::isCity(false, NO_TEAM) && CvPlot::fn::area() == pPlot->area()))
 		{

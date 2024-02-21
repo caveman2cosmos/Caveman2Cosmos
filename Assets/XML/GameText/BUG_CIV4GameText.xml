@@ -7015,6 +7015,14 @@
 		<Russian>Ìàêñ. çàù. îò îáñòðåëîâ</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__MINCITYDISTANCE_HOVER</Tag>
+		<English>The Minimum city distance between cities, cities cannot be founded within this distance of another city.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__MINCITYDISTANCE_TEXT</Tag>
+		<English>Minimum city distance</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__MAXREBASERANGE_HOVER</Tag>
 		<English>The maximum range aircraft can be rebased in one turn. After supersonic flight, aircraft get unlimited rebase range. 0 indicates unlimited range.</English>
 		<French>La portée maximum qu'un avion peut atteindre lorsqu'il change de base en un tour (Réaffectation). Après le Vol supersonique, les avions ont une portée illimitée. 0 signifie portée illimitée.</French>

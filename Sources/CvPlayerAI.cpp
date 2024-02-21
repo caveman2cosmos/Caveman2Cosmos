@@ -3027,12 +3027,13 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 				iValue /= (3 + iUniqueBonusCount);
 			}
 		}
-		int iDeadLockCount = AI_countDeadlockedBonuses(pPlot);
-		if (bAdvancedStart && iDeadLockCount > 0)
+		const int iDeadLockCount = AI_countDeadlockedBonuses(pPlot);
+		if (iDeadLockCount > 0)
 		{
-			iDeadLockCount += 2;
+			if (bAdvancedStart)
+				 iValue /= 3 + iDeadLockCount;
+			else iValue /= 1 + iDeadLockCount;
 		}
-		iValue /= 1 + iDeadLockCount;
 	}
 	iValue /= 3 + std::max(0, iBadTile - NUM_CITY_PLOTS / 4);
 
@@ -23368,64 +23369,55 @@ void CvPlayerAI::AI_nowHasTech(TechTypes eTech)
 }
 
 
-int CvPlayerAI::AI_countDeadlockedBonuses(const CvPlot* pPlot) const
+int CvPlayerAI::AI_countDeadlockedBonuses(const CvPlot* plot0) const
 {
 	PROFILE_EXTRA_FUNC();
-	CvPlot* pLoopPlot;
-	CvPlot* pLoopPlot2;
-	int iDX, iDY;
-	int iI;
 
-	int iMinRange = GC.getMIN_CITY_RANGE();
-	int iRange = iMinRange * 2;
+	const int iMinRange = GC.getGame().getModderGameOption(MODDERGAMEOPTION_MIN_CITY_DISTANCE);
+	const int iRange = iMinRange * 2;
 	int iCount = 0;
 
-	for (iDX = -(iRange); iDX <= iRange; iDX++)
+	for (int iDX = -iRange; iDX <= iRange; iDX++)
 	{
-		for (iDY = -(iRange); iDY <= iRange; iDY++)
+		for (int iDY = -iRange; iDY <= iRange; iDY++)
 		{
 			if (plotDistance(iDX, iDY, 0, 0) > CITY_PLOTS_RADIUS)
 			{
-				pLoopPlot = plotXY(pPlot->getX(), pPlot->getY(), iDX, iDY);
+				const CvPlot* plotX = plotXY(plot0->getX(), plot0->getY(), iDX, iDY);
 
-				if (pLoopPlot != NULL)
+				if (plotX
+				&&  plotX->getBonusType(getTeam()) != NO_BONUS
+				&& !plotX->isCityRadius()
+				&& (plotX->area() == plot0->area() || plotX->isWater()))
 				{
-					if (pLoopPlot->getBonusType(getTeam()) != NO_BONUS)
+					bool bCanFound = false;
+					bool bNeverFound = true;
+					// Potentially blockable resource, look for a city site within a city radius
+					for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
 					{
-						if (!pLoopPlot->isCityRadius() && ((pLoopPlot->area() == pPlot->area()) || pLoopPlot->isWater()))
+						const CvPlot* plotY = plotCity(plotX->getX(), plotX->getY(), iI);
+						if (plotY)
 						{
-							bool bCanFound = false;
-							bool bNeverFound = true;
-							//potentially blockable resource
-							//look for a city site within a city radius
-							for (iI = 0; iI < NUM_CITY_PLOTS; iI++)
+							//canFound usually returns very quickly
+							if (canFound(plotY->getX(), plotY->getY(), false))
 							{
-								pLoopPlot2 = plotCity(pLoopPlot->getX(), pLoopPlot->getY(), iI);
-								if (pLoopPlot2 != NULL)
+								bNeverFound = false;
+								if (stepDistance(plot0->getX(), plot0->getY(), plotY->getX(), plotY->getY()) > iMinRange)
 								{
-									//canFound usually returns very quickly
-									if (canFound(pLoopPlot2->getX(), pLoopPlot2->getY(), false))
-									{
-										bNeverFound = false;
-										if (stepDistance(pPlot->getX(), pPlot->getY(), pLoopPlot2->getX(), pLoopPlot2->getY()) > iMinRange)
-										{
-											bCanFound = true;
-											break;
-										}
-									}
+									bCanFound = true;
+									break;
 								}
 							}
-							if (!bNeverFound && !bCanFound)
-							{
-								iCount++;
-							}
 						}
+					}
+					if (!bNeverFound && !bCanFound)
+					{
+						iCount++;
 					}
 				}
 			}
 		}
 	}
-
 	return iCount;
 }
 

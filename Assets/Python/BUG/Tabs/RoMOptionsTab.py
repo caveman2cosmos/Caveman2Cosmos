@@ -46,6 +46,7 @@ class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 		self.addCheckbox(screen, center, "RoMSettings__HideReplacedBuildings")
 
 		screen.setEnabled(self.addIntDropdown(screen, center, center, "RoMSettings__MaxBombardDefense", False, "LAYOUT_LEFT"), bCanAdjustSettings)
+		screen.setEnabled(self.addIntDropdown(screen, center, center, "RoMSettings__MinCityDistance", False, "LAYOUT_LEFT"), bCanAdjustSettings)
 
 		screen.setEnabled(self.addCheckbox(screen, center, "RoMSettings__ReligionDecay"), bCanAdjustSettings)
 		screen.setEnabled(self.addCheckbox(screen, center, "RoMSettings__MultipleReligionSpread"), bCanAdjustSettings)
