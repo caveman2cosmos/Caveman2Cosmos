@@ -910,30 +910,6 @@
 		<Russian>Ìèô î ãîôåðå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_USSURI_DHOLE</Tag>
-		<English>Folklore - Ussuri Dhole</English>
-		<French>Mythe du Cuon d'Asie</French>
-		<German>
-			<Text>Mythos des Rothundes:Mythos des Rothundes:Mythos des Rothundes:Mythos des Rothundes</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del cuon rutilano</Italian>
-		<Russian>Ìèô î êðàñíîì âîëêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_DINGO</Tag>
-		<English>Folklore - Dingo</English>
-		<French>Mythe du Dingo</French>
-		<German>
-			<Text>Mythos des Dingos:Mythos des Dingos:Mythos des Dingos:Mythos des Dingos</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del dingo</Italian>
-		<Russian>Ìèô î äèíãî</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_DOLPHIN</Tag>
 		<English>Folklore - Dolphin</English>
 		<French>Mythe du Dauphin</French>
@@ -1042,18 +1018,6 @@
 		<Italian>I sei elementi che compongono tutto - Terra, Aria, Acqua, Pietra, Metallo, Fuoco - e che sono diventati oggetto di fiabe e leggende.</Italian>
 		<Polish>Sześć żywiołów tworzy wszystko. Składają si na nie Ziemia, Powietrze (Niebo), Woda (Morze), Kamień, Metal i Ogień. Chemia rozwiewa tą błdną teori i usuwa wszelkie zyski z tych mitów.</Polish>
 		<Russian>Øåñòü ýëåìåíòîâ ñîñòàâëÿþò âñå. Ê íèì îòíîñÿòñÿ çåìëÿ, âîçäóõ(íåáî), âîäà(ìîðå), êàìåíü, ìåòàëë è îãîíü. Îíè òåðÿþò âñå ïðåèìóùåñòâî ñ èçó÷åíèåì Õèìèè.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_ETHIOPIAN_WOLF</Tag>
-		<English>Folklore - Ethiopian Wolf</English>
-		<French>Mythe du loup d'Éthiopie</French>
-		<German>
-			<Text>Mythos des Äthiopischen Wolfs:Mythos des Äthiopischen Wolfs:Mythos des Äthiopischen Wolfs:Mythos des Äthiopischen Wolfs</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del lupo etiope</Italian>
-		<Russian>Ìèô îá ýô. øàêàëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_E_FIRE</Tag>
@@ -1266,18 +1230,6 @@
 		<Italian>Mito del grande squalo bianco</Italian>
 		<Polish>Mit Żarłacza Białego</Polish>
 		<Russian>Ìèô î áåëîé àêóëå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_WOLF</Tag>
-		<English>Folklore - Wolf</English>
-		<French>Mythe du Loup gris</French>
-		<German>
-			<Text>Mythos des Wolfes:Mythos des Wolfes:Mythos des Wolfes:Mythos des Wolfes</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del lupo grigio</Italian>
-		<Russian>Ìèô î âîëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_SEAGULL</Tag>
@@ -1645,18 +1597,6 @@
 		<Russian>Ìèô î ìàíäðèëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_MANED_WOLF</Tag>
-		<English>Folklore - Maned Wolf</English>
-		<French>Mythe du Loup à crinière</French>
-		<German>
-			<Text>Mythos des Mähnenwolfs:Mythos des Mähnenwolfs:Mythos des Mähnenwolfs:Mythos des Mähnenwolfs</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del lupo dalla criniera</Italian>
-		<Russian>Ìèô î ãðèâ. âîëêå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_MARLIN</Tag>
 		<English>Folklore - Marlin</English>
 		<French>Mythe du Marlin</French>
@@ -1940,18 +1880,6 @@
 		<Italian>Mito del felino del paleolitico</Italian>
 		<Polish>Mit Lew Jaskiniowy</Polish>
 		<Russian>Ìèô î äðåâíåé êîøêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_DIRE_WOLF</Tag>
-		<English>Folklore - Dire Wolf</English>
-		<French>Mythe du Loup sinistre</French>
-		<German>
-			<Text>Mythos des Canis dirus:Mythos des Canis dirus:Mythos des Canis dirus:Mythos des Canis dirus</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito dell'enocione</Italian>
-		<Russian>Ìèô î ëþòîâîëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_GROUND_SLOTH</Tag>
@@ -2708,19 +2636,6 @@
 		</German>
 		<Italian>Mito dello gnu</Italian>
 		<Russian>Ìèô î ãíó</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_WOLF</Tag>
-		<English>Folklore (T) - Wolf</English>
-		<French>Mythe des Loups (T)</French>
-		<German>
-			<Text>Mythos der Wölfe:Mythos der Wölfe:Mythos der Wölfe:Mythos der Wölfe</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del lupo</Italian>
-		<Polish>Mit (T) - Wilk</Polish>
-		<Russian>Ìèô î âîëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_WOLVERINE</Tag>

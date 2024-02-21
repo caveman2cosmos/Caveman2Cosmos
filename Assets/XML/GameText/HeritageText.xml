@@ -66,6 +66,14 @@
 		<Russian>Ìèô î æàáå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_DINGO</Tag>
+		<English>Folklore - Dingo</English>
+		<French>Mythe du Dingo</French>
+		<German>Mythos des Dingos</German>
+		<Italian>Mito del dingo</Italian>
+		<Russian>Ìèô î äèíãî</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_ELEPHANT_AFRICAN</Tag>
 		<English>Folklore - African Elephant</English>
 		<French>Mythe de l'Eléphant d'Afrique</French>
@@ -214,6 +222,14 @@
 		<Russian>Ìèô îá åäèíîðîãå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_USSURI_DHOLE</Tag>
+		<English>Folklore - Ussuri Dhole</English>
+		<French>Mythe du Cuon d'Asie</French>
+		<German>Mythos des Rothundes</German>
+		<Italian>Mito del cuon rutilano</Italian>
+		<Russian>Ìèô î êðàñíîì âîëêå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WARTHOG</Tag>
 		<English>Folklore - Warthog</English>
 		<French>Mythe du Phacochère</French>
@@ -221,6 +237,38 @@
 		<Italian>Mito del facocero</Italian>
 		<Polish>Mit - Guziec</Polish>
 		<Russian>Ìèô î áîðîäàâî÷íèêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WOLF</Tag>
+		<English>Folklore - Wolf</English>
+		<French>Mythe du Loup gris</French>
+		<German>Mythos des Wolfes</German>
+		<Italian>Mito del lupo grigio</Italian>
+		<Russian>Ìèô î âîëêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WOLF_DIRE</Tag>
+		<English>Folklore - Dire Wolf</English>
+		<French>Mythe du Loup sinistre</French>
+		<German>Mythos des Canis dirus</German>
+		<Italian>Mito dell'enocione</Italian>
+		<Russian>Ìèô î ëþòîâîëêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WOLF_ETHIOPIAN</Tag>
+		<English>Folklore - Ethiopian Wolf</English>
+		<French>Mythe du loup d'Éthiopie</French>
+		<German>Mythos des Äthiopischen Wolfs</German>
+		<Italian>Mito del lupo etiope</Italian>
+		<Russian>Ìèô îá ýô. øàêàëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WOLF_MANED</Tag>
+		<English>Folklore - Maned Wolf</English>
+		<French>Mythe du Loup à crinière</French>
+		<German>Mythos des Mähnenwolfs</German>
+		<Italian>Mito del lupo dalla criniera</Italian>
+		<Russian>Ìèô î ãðèâ. âîëêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_AMPHIBIA</Tag>
@@ -236,7 +284,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_ELEPHANTIDAE_PEDIA</Tag>
-		<English>Elephantidae is a family of large, herbivorous proboscidean mammals collectively called elephants and mammoths. These are large terrestrial mammals with a snout modified into a trunk and teeth modified into tusks. Most genera and species in the family are extinct. Only two genera, Loxodonta (African elephants) and Elephas (Asian elephants), are living.[NEWLINE][NEWLINE]The family was first described by John Edward Gray in 1821, and later assigned to taxonomic ranks within the order Proboscidea. Elephantidae has been revised by various authors to include or exclude other extinct proboscidean genera.</English>
+		<English>Elephantidae is a family of large, herbivorous proboscidean mammalia collectively called elephants and mammoths. These are large terrestrial mammals with a snout modified into a trunk and teeth modified into tusks. Most genera and species in the family are extinct. Only two genera, Loxodonta (African elephants) and Elephas (Asian elephants), are living.[NEWLINE][NEWLINE]The family was first described by John Edward Gray in 1821, and later assigned to taxonomic ranks within the order Proboscidea. Elephantidae has been revised by various authors to include or exclude other extinct proboscidean genera.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_RODENTIA</Tag>
@@ -244,7 +292,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_RODENTIA_PEDIA</Tag>
-		<English>Rodentia is an order of mammals commonly called rodents (from Latin rodere, 'to gnaw'). With over 2000 living species placed in about 30 families, rodents are by far the largest order of mammals, at least in terms of number of taxa (well over 40% of mammalian species belong to the order Rodentia!). Rodents range in size from pygmy mice weighing 5 gms to capybaras, the largest of which weigh over 70 kg. They are found around the world except in Antarctica, New Zealand, and on some oceanic islands. Ecologically, they are incredibly diverse. Some species spend their entire lives above the ground in the canopy of rainforests; others seldom emerge from beneath the ground. Some species are highly aquatic, while others are equally specialized for life in deserts. Many are to some degree omnivorous; others are highly specialized, eating, for example, only a few species of invertebrates or fungi.</English>
+		<English>Rodentia is an order of mammalia commonly called rodents (from Latin rodere, 'to gnaw'). With over 2000 living species placed in about 30 families, rodents are by far the largest order of mammals, at least in terms of number of taxa (well over 40% of mammalian species belong to the order Rodentia!). Rodents range in size from pygmy mice weighing 5 gms to capybaras, the largest of which weigh over 70 kg. They are found around the world except in Antarctica, New Zealand, and on some oceanic islands. Ecologically, they are incredibly diverse. Some species spend their entire lives above the ground in the canopy of rainforests; others seldom emerge from beneath the ground. Some species are highly aquatic, while others are equally specialized for life in deserts. Many are to some degree omnivorous; others are highly specialized, eating, for example, only a few species of invertebrates or fungi.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_SPHENISCIDAE</Tag>
@@ -260,7 +308,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_SUIDAE_PEDIA</Tag>
-		<English>Suidae is a family of artiodactyl mammals which are commonly called pigs, hogs or swine. In addition to numerous fossil species, 18 extant species are currently recognized (or 19 counting domestic pigs and wild boars separately), classified into between four and eight genera. Within this family, the genus Sus includes the domestic pig, Sus scrofa domesticus or Sus domesticus, and many species of wild pig from Europe to the Pacific. Other genera include babirusas and warthogs. All suids, or swine, are native to the Old World, ranging from Asia to Europe and Africa.</English>
+		<English>Suidae is a family of artiodactyl mammalia which are commonly called pigs, hogs or swine. In addition to numerous fossil species, 18 extant species are currently recognized (or 19 counting domestic pigs and wild boars separately), classified into between four and eight genera. Within this family, the genus Sus includes the domestic pig, Sus scrofa domesticus or Sus domesticus, and many species of wild pig from Europe to the Pacific. Other genera include babirusas and warthogs. All suids, or swine, are native to the Old World, ranging from Asia to Europe and Africa.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_TAPIRIDAE</Tag>
@@ -268,6 +316,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_TAPIRIDAE_PEDIA</Tag>
-		<English>Tapiridae is a family of perissodactyla mammals which are commonly called Tapirs. They are similar in shape to a pig, with a short, prehensile nose trunk. Tapirs inhabit jungle and forest regions of South and Central America and Southeast Asia. They are one of three extant branches of Perissodactyla (odd-toed ungulates), alongside equines and rhinoceroses. Only a single genus, Tapirus, is currently extant. Tapirs migrated into South America during the Pleistocene epoch from North America after the formation of the Isthmus of Panama as part of the Great American Interchange. Tapirs were formerly present across North America, but became extinct in the region at the end of the Late Pleistocene, around 12,000 years ago.</English>
+		<English>Tapiridae is a family of perissodactyla mammalia which are commonly called Tapirs. They are similar in shape to a pig, with a short, prehensile nose trunk. Tapirs inhabit jungle and forest regions of South and Central America and Southeast Asia. They are one of three extant branches of Perissodactyla (odd-toed ungulates), alongside equines and rhinoceroses. Only a single genus, Tapirus, is currently extant. Tapirs migrated into South America during the Pleistocene epoch from North America after the formation of the Isthmus of Panama as part of the Great American Interchange. Tapirs were formerly present across North America, but became extinct in the region at the end of the Late Pleistocene, around 12,000 years ago.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_CANIDAE</Tag>
+		<English>Taxon Canidae</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_CANIDAE_PEDIA</Tag>
+		<English>Canidae is a family of carnivora mammalia which are commonly called dogs or canids. Canids are found on all continents except Antarctica, having arrived independently or accompanied by human beings over extended periods of time. Canids vary in size from the 2-metre-long gray wolf to the 24-centimetre-long fennec fox. The body forms of canids are similar, typically having long muzzles, upright ears, teeth adapted for cracking bones and slicing flesh, long legs, and bushy tails. They are mostly social animals, living together in family units or small groups and behaving co-operatively. Typically, only the dominant pair in a group breeds and a litter of young are reared annually in an underground den. Canids communicate by scent signals and vocalizations. One canid, the domestic dog, originated from a symbiotic relationship with Upper Paleolithic humans and today remains one of the most widely kept domestic animals.</English>
 	</TEXT>
 </Civ4GameText>

@@ -120,21 +120,19 @@
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
 			<Bonus>BONUS_DOG</Bonus>
 			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_DINGO</Type>
 				<Type>HERITAGE_FOLKLORE_FOX_ARCTIC</Type>
 				<Type>HERITAGE_FOLKLORE_FOX_FENNEC</Type>
 				<Type>HERITAGE_FOLKLORE_FOX_RED</Type>
+				<Type>HERITAGE_FOLKLORE_USSURI_DHOLE</Type>
+				<Type>HERITAGE_FOLKLORE_WOLF</Type>
+				<Type>HERITAGE_FOLKLORE_WOLF_DIRE</Type>
+				<Type>HERITAGE_FOLKLORE_WOLF_ETHIOPIAN</Type>
+				<Type>HERITAGE_FOLKLORE_WOLF_MANED</Type>
 			</PrereqOrHeritage>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_USSURI_DHOLE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_DINGO</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_DIRE_WOLF</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_ETHIOPIAN_WOLF</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_MANED_WOLF</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_WOLF</BuildingType>
-			</PrereqOrBuildings>
 			<iCost>92</iCost>
 			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<UnitProductionModifiers>
@@ -2106,12 +2104,15 @@
 			<Description>TXT_KEY_BUILDING_REMAINS_DIRE_WOLF</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_FOLKLORE_DIRE_WOLF</BuildingType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
+			<PrereqOrFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_CAVES</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+			</PrereqOrFeature>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_WOLF_DIRE</Type>
+			</PrereqOrHeritage>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
@@ -2216,6 +2217,9 @@
 			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_MAMMOTH</VicinityBonus>
 			</PrereqRawVicinityBonuses>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_MAMMOTH</Type>
+			</PrereqOrHeritage>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
@@ -3090,9 +3094,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_WILD_ANIMAL_CAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_T_WOLF</BuildingType>
-			</PrereqInCityBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_TAXON_CANIDAE</Type>
+			</PrereqOrHeritage>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
