@@ -51,11 +51,6 @@
 	</Define>
 	<!-- \Dexy - Surround and Destroy -->
 	<Define>
-		<!-- Afforess: This sets the maximum bombard resistance a city can have. Set to 100 for normal games, less, for a lower minimum -->
-		<DefineName>MAX_BOMBARD_DEFENSE</DefineName>
-		<iDefineIntVal>70</iDefineIntVal>
-	</Define>
-	<Define>
 		<!-- Afforess: Units can not Claim Water Tiles -->
 		<DefineName>CANNOT_CLAIM_OCEAN</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
