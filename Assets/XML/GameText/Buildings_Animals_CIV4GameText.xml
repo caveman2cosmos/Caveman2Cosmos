@@ -640,19 +640,6 @@
 		<Russian>Ìèô î áåëóãå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_BENGAL_TIGER</Tag>
-		<English>Folklore - Bengal Tiger</English>
-		<French>Mythe du Tigre du Bengale</French>
-		<German>
-			<Text>Mythos des Bengalischen Tigers:Mythos des Bengalischen Tigers:Mythos des Bengalischen Tigers:Mythos des Bengalischen Tigers</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito della tigre del Bengala</Italian>
-		<Polish>Mit - Tygrys Bengalski</Polish>
-		<Russian>Ìèô î áåíãàë. òèãðå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_BIRDS</Tag>
 		<English>Folklore (T) - Birds</English>
 		<French>Mythe des Oiseaux (T)</French>
@@ -785,30 +772,6 @@
 		</German>
 		<Italian>Mito del caribù</Italian>
 		<Russian>Ìèô î êàðèáó</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_CAVE_LION</Tag>
-		<English>Folklore - Cave Lion</English>
-		<French>Mythe du Lion des cavernes</French>
-		<German>
-			<Text>Mythos des Höhlenlöwen:Mythos des Höhlenlöwen:Mythos des Höhlenlöwen:Mythos des Höhlenlöwen</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del leone delle caverne</Italian>
-		<Russian>Ìèô î ïåù. ëüâå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_CHEETAH</Tag>
-		<English>Folklore - Cheetah</English>
-		<French>Mythe du Cheetah</French>
-		<German>
-			<Text>Mythos des Gepards:Mythos des Gepards:Mythos des Gepards:Mythos des Gepards</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del ghepardo</Italian>
-		<Russian>Ìèô î ãåïàðäå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_CHIMPANZEE</Tag>
@@ -1319,18 +1282,6 @@
 		<Russian>Ìèô î ãîðáàòîì êèòå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_STRIPED_HYENA</Tag>
-		<English>Folklore - Striped Hyena</English>
-		<French>Mythe de la Hyène rayée</French>
-		<German>
-			<Text>Mythos der Hyäne:Mythos der Hyäne:Mythos der Hyäne:Mythos der Hyäne</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito della iena striata</Italian>
-		<Russian>Ìèô î ãèåíå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_WALIA_IBEX</Tag>
 		<English>Folklore - Walia Ibex</English>
 		<French>Mythe du Bouquetin</French>
@@ -1378,18 +1329,6 @@
 		<Italian>Mito del rinoceronte indiano</Italian>
 		<Polish>Mit - Nosorożec Indyjski</Polish>
 		<Russian>Ìèô î èíä. íîñîðîãå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_JAGUAR</Tag>
-		<English>Folklore - Jaguar</English>
-		<French>Mythe du Jaguar</French>
-		<German>
-			<Text>Mythos des Jaguars:Mythos des Jaguars:Mythos des Jaguars:Mythos des Jaguars</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del giaguaro</Italian>
-		<Russian>Ìèô îá ÿãóàðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_JAVA_RHINOCEROS</Tag>
@@ -1497,19 +1436,6 @@
 		<Russian>Ìèô î Ëåâèàôàíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_LION</Tag>
-		<English>Folklore - Lion</English>
-		<French>Mythe du Lion</French>
-		<German>
-			<Text>Mythos des Löwen:Mythos des Löwen:Mythos des Löwen:Mythos des Löwen</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del leone</Italian>
-		<Polish>Mit Lwa</Polish>
-		<Russian>Ìèô î ëüâå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_LIZARD</Tag>
 		<English>Folklore - Lizard</English>
 		<French>Mythe du lézard</French>
@@ -1559,18 +1485,6 @@
 		</German>
 		<Italian>Mito della strolaga</Italian>
 		<Russian>Ìèô î ãàãàðå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_LYNX</Tag>
-		<English>Folklore - Lynx</English>
-		<French>Mythe du Lynx</French>
-		<German>
-			<Text>Mythos des Luchses:Mythos des Luchses:Mythos des Luchses:Mythos des Luchses</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito della lince</Italian>
-		<Russian>Ìèô î ðûñè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_MACKEREL</Tag>
@@ -1907,18 +1821,6 @@
 		<Russian>Ìèô î äðåâ. ñóì÷àòîì</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_PANTHER</Tag>
-		<English>Folklore - Panther</English>
-		<French>Mythe de la Panthère</French>
-		<German>
-			<Text>Mythos des Panthers:Mythos des Panthers:Mythos des Panthers:Mythos des Panthers</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito della pantera</Italian>
-		<Russian>Ìèô î ïàíòåðå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_PEACOCK</Tag>
 		<English>Folklore - Peacock</English>
 		<French>Mythe du Paon</French>
@@ -2222,19 +2124,6 @@
 		<Italian>Mito del coccodrillo marino (grande)</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_SCAVENGER</Tag>
-		<English>Folklore (T) - Scavenger</English>
-		<French>Mythe du Mendiant (T)</French>
-		<German>
-			<Text>Mythos der Aasfresser:Mythos der Aasfresser:Mythos der Aasfresser:Mythos der Aasfresser</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del saprofago</Italian>
-		<Polish>Mit (T) Padlinożerców</Polish>
-		<Russian>Ìèô î ñòåðâÿòíèêå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_E_SEA</Tag>
 		<English>Folklore (E) - Sea</English>
 		<French>Mythe de la Mer (E)</French>
@@ -2311,18 +2200,6 @@
 		<Russian>Ìèô îá àêóëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_SIBERIAN_TIGER</Tag>
-		<English>Folklore - Siberian Tiger</English>
-		<French>Mythe du Tigre de Sibérie</French>
-		<German>
-			<Text>Mythos des Sibirischen Tigers:Mythos des Sibirischen Tigers:Mythos des Sibirischen Tigers:Mythos des Sibirischen Tigers</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito della tigre siberiana</Italian>
-		<Russian>Ìèô î ñèá. òèãðå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_SKUNK</Tag>
 		<English>Folklore - Skunk</English>
 		<French>Mythe de la Moufette</French>
@@ -2358,31 +2235,6 @@
 		</German>
 		<Italian>Mito del serpente</Italian>
 		<Russian>Ìèô î çìåå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_SNOW_LEOPARD</Tag>
-		<English>Folklore - Snow Leopard</English>
-		<French>Mythe du Léopard des neiges</French>
-		<German>
-			<Text>Mythos des Schneeleoparden:Mythos des Schneeleoparden:Mythos des Schneeleoparden:Mythos des Schneeleoparden</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del leopardo delle nevi</Italian>
-		<Russian>Ìèô î ñíåæíîì áàðñå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_SPOTTED_CAT</Tag>
-		<English>Folklore (T) - Spotted Cat</English>
-		<French>Mythe du Chat moucheté (T)</French>
-		<German>
-			<Text>Mythos der gefleckten Katzen:Mythos der gefleckten Katzen:Mythos der gefleckten Katzen:Mythos der gefleckten Katzen</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del gatto rugginoso</Italian>
-		<Polish>Mit Plamistego Kota</Polish>
-		<Russian>Ìèô î ëåîïàðäå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_E_STONE</Tag>
@@ -2452,19 +2304,6 @@
 		</German>
 		<Italian>Mito del tilacino</Italian>
 		<Russian>Ìèô î ñóì÷. âîëêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_TIGER</Tag>
-		<English>Folklore (T) - Tiger</English>
-		<French>Mythe du Tigre (T)</French>
-		<German>
-			<Text>Mythos der Tiger:Mythos der Tiger:Mythos der Tiger:Mythos der Tiger</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito della tigre</Italian>
-		<Polish>Mit (T) Tygrysa</Polish>
-		<Russian>Ìèô î òèãðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_TOUCAN</Tag>
