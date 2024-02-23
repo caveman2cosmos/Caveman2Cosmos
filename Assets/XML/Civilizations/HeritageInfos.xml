@@ -2378,7 +2378,7 @@
 		<HeritageInfo>
 			<Type>HERITAGE_TAXON_FELINAE</Type>
 			<Description>TXT_KEY_HERITAGE_TAXON_FELINAE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_HERITAGE_TAXON_FELINAE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_TAXONOMY</PrereqTech>
 			<PrereqOrHeritage>
 				<Type>HERITAGE_FOLKLORE_CHEETAH</Type>
