@@ -2537,19 +2537,11 @@
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_DOG_KENNELS</BuildingType>
 			</PrereqAndBuildings>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_T_WOLF</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_WOLF</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_DIRE_WOLF</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_USSURI_DHOLE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_DINGO</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_ETHIOPIAN_WOLF</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_MANED_WOLF</BuildingType>
-			</PrereqOrBuildings>
 			<PrereqOrHeritage>
-				<Type>HERITAGE_FOLKLORE_FOX_ARCTIC</Type>
-				<Type>HERITAGE_FOLKLORE_FOX_FENNEC</Type>
-				<Type>HERITAGE_FOLKLORE_FOX_RED</Type>
+				<Type>HERITAGE_FOLKLORE_WOLF</Type>
+				<Type>HERITAGE_FOLKLORE_WOLF_DIRE</Type>
+				<Type>HERITAGE_FOLKLORE_WOLF_ETHIOPIAN</Type>
+				<Type>HERITAGE_TAXON_CANIDAE</Type>
 			</PrereqOrHeritage>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>133</iCost>
@@ -3749,19 +3741,11 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_DOG_KENNELS</BuildingType>
 			</PrereqAndBuildings>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_T_WOLF</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_WOLF</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_DIRE_WOLF</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_USSURI_DHOLE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_DINGO</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_ETHIOPIAN_WOLF</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_MANED_WOLF</BuildingType>
-			</PrereqOrBuildings>
 			<PrereqOrHeritage>
-				<Type>HERITAGE_FOLKLORE_FOX_ARCTIC</Type>
-				<Type>HERITAGE_FOLKLORE_FOX_FENNEC</Type>
-				<Type>HERITAGE_FOLKLORE_FOX_RED</Type>
+				<Type>HERITAGE_FOLKLORE_WOLF</Type>
+				<Type>HERITAGE_FOLKLORE_WOLF_DIRE</Type>
+				<Type>HERITAGE_FOLKLORE_WOLF_ETHIOPIAN</Type>
+				<Type>HERITAGE_TAXON_CANIDAE</Type>
 			</PrereqOrHeritage>
 			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
 			<UnitUpgrades>

@@ -95,6 +95,8 @@ public:
 	int getNumTradeableBonuses(int /*BonusTypes*/ eBonus) const;
 	bool hasBonus(int /*BonusTypes*/ eBonus) const;
 
+	bool hasHeritage(int iType) const;
+
 	bool isTurnActive() const;
 
 	void receiveGoody(const CyPlot* pPlot, int /*GoodyTypes*/ eGoody, const CyUnit* pUnit);

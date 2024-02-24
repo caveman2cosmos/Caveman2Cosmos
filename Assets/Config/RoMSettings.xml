@@ -87,6 +87,9 @@
 
 				<change module="ANewDawnSettings" function="changedMaxBombardDefense"/>
 			</list>
+			<list id="MinCityDistance" key="MinCityDistance" type="int" default="3" values="6, 5, 4, 3, 2" get="getMaxBombardDefense" set="setMaxBombardDefense">
+				<change module="ANewDawnSettings" function="changedMinCityDistance"/>
+			</list>
 			<list id="FlexibleDifficultyMinimumDiff" key="FlexibleDifficultyMinimumDiff" type="int" default="0" listType="string"
 				values="No Minimum|Settler|Chieftan|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare"
 				get="getFlexibleDifficultyMinimumDiff" set="setFlexibleDifficultyMinimumDiff">

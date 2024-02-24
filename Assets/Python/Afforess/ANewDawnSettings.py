@@ -44,6 +44,8 @@ class ANewDawnSettings:
 				ANewDawnOpt.setMaxUnitsPerTile(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_MAX_BOMBARD_DEFENSE):
 				ANewDawnOpt.setMaxBombardDefense(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_MIN_CITY_DISTANCE):
+				ANewDawnOpt.setMaxBombardDefense(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_CANNOT_CLAIM_OCEAN):
 				ANewDawnOpt.setCanNotClaimOcean(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_RESOURCE_DEPLETION):
@@ -115,6 +117,10 @@ def changedFlexibleDifficultyAITurnIncrements(option, value):
 def changedMaxBombardDefense(option, value):
 	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_MAX_BOMBARD_DEFENSE, value)
 	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_MAX_BOMBARD_DEFENSE), int(value), 0)
+
+def changedMinCityDistance(option, value):
+	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_MIN_CITY_DISTANCE, value)
+	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_MIN_CITY_DISTANCE), int(value), 0)
 
 def changedCanNotClaimOcean(option, value):
 	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_CANNOT_CLAIM_OCEAN, value)

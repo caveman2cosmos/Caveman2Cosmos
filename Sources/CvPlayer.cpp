@@ -6299,7 +6299,7 @@ bool CvPlayer::canFound(int iX, int iY, bool bTestVisible) const
 
 	if (!bTestVisible)
 	{
-		const int iRange = GC.getMIN_CITY_RANGE();
+		const int iRange = GC.getGame().getModderGameOption(MODDERGAMEOPTION_MIN_CITY_DISTANCE);
 
 		if (algo::any_of(pPlot->rect(iRange, iRange), CvPlot::fn::isCity(false, NO_TEAM) && CvPlot::fn::area() == pPlot->area()))
 		{
@@ -27625,12 +27625,29 @@ void CvPlayer::doAdvancedEconomy()
 
 	if (getHurriedCount() > 0)
 	{
-		int iTurnIncrement1000 = GC.getHURRY_INFLATION_DECAY_RATE() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
-		iTurnIncrement1000 = getModifiedIntValue(iTurnIncrement1000, getHurryInflationModifier());
-
+		const int iTurnIncrement1000 = (
+			getModifiedIntValue(
+				(
+						GC.getHURRY_INFLATION_DECAY_RATE()
+					*	GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent()
+				),
+				getHurryInflationModifier()
+			)
+		);
 		if (GC.getGame().getElapsedGameTurns() % std::max(1, iTurnIncrement1000 / 1000) == 0)
 		{
-			changeHurriedCount(-1);
+			changeHurriedCount(
+				-std::min(
+					getHurriedCount(),
+					(
+						iTurnIncrement1000 < 1000
+						?
+						1000 / std::max(1, iTurnIncrement1000)
+						:
+						1
+					)
+				)
+			);
 		}
 	}
 }
