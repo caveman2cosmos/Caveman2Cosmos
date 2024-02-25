@@ -306,38 +306,14 @@
 			<Civilopedia>TXT_KEY_BUILDING_WILD_ANIMAL_CAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
-			<ConstructCondition>
-				<And>
-					<Or>
-						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_GOVERNORS_MENAGERIE</ID>
-						</Has>
-						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_CARNIVAL</ID>
-						</Has>
-						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_ZOO</ID>
-						</Has>
-					</Or>
-					<Or>
-						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_LION</ID>
-						</Has>
-						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_T_TIGER</ID>
-						</Has>
-						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_T_SPOTTED_CAT</ID>
-						</Has>
-					</Or>
-				</And>
-			</ConstructCondition>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_CARNIVAL</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
+			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_TAXON_PANTHERINAE</Type>
+			</PrereqOrHeritage>
 			<iCost>306</iCost>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -713,12 +689,15 @@
 			<Description>TXT_KEY_BUILDING_REMAINS_CAVE_LION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_FOLKLORE_CAVE_LION</BuildingType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
+			<PrereqOrFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_CAVES</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+			</PrereqOrFeature>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_LION_CAVE</Type>
+			</PrereqOrHeritage>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
@@ -758,7 +737,7 @@
 			<iAsset>1</iAsset>
 			<iConquestProb>90</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_CAVE_LION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_REMAINS_CAVE_LION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CENTER_FOR_CEPHALOPOD_STUDIES</Type>
@@ -2106,7 +2085,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqOrFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_CAVES</FeatureType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
