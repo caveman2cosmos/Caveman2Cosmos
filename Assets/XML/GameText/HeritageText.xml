@@ -183,6 +183,14 @@
 		<Russian>Ìèô î ðûñè</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_MACAW</Tag>
+		<English>Tale - Macaw</English>
+		<French>Mythe de l'Ara</French>
+		<Italian>Mito del pappagallo ara</Italian>
+		<Polish>Mit - Papuga Ara</Polish>
+		<Russian>Ìèô î ïîïóãàå àðà</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_MAMMOTH</Tag>
 		<English>Tale - Mammoth</English>
 		<French>Mythe du Mammouth</French>
@@ -233,6 +241,14 @@
 		<Russian>Ìèô î ñêàë. ïèíãâèíå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PLATYPUS</Tag>
+		<English>Tale - Platypus</English>
+		<French>Mythe de l'Ornithorynque</French>
+		<German>Mythos des Schnabeltiers</German>
+		<Italian>Mito dell'ornitorinco</Italian>
+		<Russian>Ìèô îá óòêîíîñå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_SWINE</Tag>
 		<English>Tale - Swine</English>
 		<Italian>Mito del maiale</Italian>
@@ -272,6 +288,20 @@
 		<Italian>Mito del tapiro delle Ande</Italian>
 		<Polish>Mit - Tapir Górski</Polish>
 		<Russian>Ìèô î ãîðíîì òàïèðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TARANTULA_DESERT</Tag>
+		<English>Tale - Desert Tarantula</English>
+		<French>Mythe de la Tarentule du désert</French>
+		<German>Mythos der Wüstenvogelspinne</German>
+		<Italian>Mito della tarantola del deserto</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TARANTULA_JUNGLE</Tag>
+		<English>Tale - Jungle Tarantula</English>
+		<French>Mythe de la Tarentule de la jungle</French>
+		<German>Mythos der Dschungelvogelspinne</German>
+		<Italian>Mito della tarantola della giungla</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TIGER_BENGAL</Tag>
@@ -357,6 +387,14 @@
 		<English>The Amphibia class is a taxonomic rank commonly known as Amphibians. Amphibians are ectothermic, anamniotic, four-limbed vertebrate animals. In its broad sense, it is paraphyletic group encompassing all tetrapods excluding the amniotes (tetrapods with an amniotic membrane, such as modern reptiles, birds, and mammals). All extant (living) amphibians belong to the monophyletic subclass Lissamphibia, with three living orders: Anura (frogs), Urodela (salamanders), and Gymnophiona (caecilians). Evolved to be mostly semiaquatic, amphibians have adapted to inhabit a wide variety of habitats, with most species living in freshwater, wetland or terrestrial ecosystems (such as riparian woodland, fossorial and even arboreal habitats). Their life cycle typically starts out as aquatic larvae with gills known as tadpoles, but some species have developed behavioural adaptations to bypass this.</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_ARACHNIDA</Tag>
+		<English>Taxon Arachnida</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_ARACHNIDA_PEDIA</Tag>
+		<English>Arachnida is a class of joint-legged arthropods, in the subphylum Chelicerata. Arachnida includes, among others, spiders, scorpions, ticks, mites, pseudoscorpions, harvestmen, camel spiders, whip spiders and vinegaroons. Adult arachnids have eight legs attached to the cephalothorax, although the frontmost pair of legs in some species has converted to a sensory function, while in other species, different appendages can grow large enough to take on the appearance of extra pairs of legs. The term is derived from the Greek word for 'spider', from the myth of the hubristic human weaver Arachne, who was turned into a spider. Almost all extant arachnids are terrestrial, living mainly on land. However, some inhabit freshwater environments and, with the exception of the pelagic zone, marine environments as well. They comprise over 110,000 named species, of which 51,000 are species of spiders.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_CANIDAE</Tag>
 		<English>Taxon Canidae</English>
 	</TEXT>
@@ -387,6 +425,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_HYAENIDAE_PEDIA</Tag>
 		<English>Hyaenidae is a family of feliform carnivoran mammals commonly called hyenas. With just four extant species, it is the fourth-smallest family in the order Carnivora and one of the smallest in the class Mammalia. Despite their low diversity, hyenas are unique and vital components of most African ecosystems. Although phylogenetically closer to felines and viverrids, hyenas are behaviourally and morphologically similar to canids in several elements due to convergent evolution: both hyenas and canines are non-arboreal, cursorial hunters that catch prey with their teeth rather than claws. Both eat food quickly and may store it, and their calloused feet with large, blunt, nonretractable claws are adapted for running and making sharp turns. However, hyenas' grooming, scent marking, defecation habits, mating and parental behavior are consistent with the behavior of other feliforms.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_MONOTREMATA</Tag>
+		<English>Taxon Monotremata</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_MONOTREMATA_PEDIA</Tag>
+		<English>Monotremata is a taxonomic order of mammals. Monotremes are the only known group of living mammals that lay eggs, rather than bearing live young. The extant monotreme species are the platypus and the four species of echidnas. Monotremes are typified by structural differences in their brains, jaws, digestive tract, reproductive tract, and other body parts, compared to the more common mammalian types. Although they are different from almost all mammals in that they lay eggs, like all mammals, the female monotremes nurse their young with milk. Monotremes have been considered by some authors to be members of Australosphenida, a clade that contains extinct mammals from the Jurassic and Cretaceous of Madagascar, South America, and Australia, but this categorization is disputed and their taxonomy is under debate. All extant species of monotremes are indigenous to Australia and New Guinea, although they were also present in the Late Cretaceous and Paleocene of southern South America, indicating that they were also present in Antarctica, though remains have not been found there.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_PANTHERINAE</Tag>
