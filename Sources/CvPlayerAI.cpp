@@ -10372,7 +10372,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 	case UNITAI_HUNTER:
 	case UNITAI_HUNTER_ESCORT:
 	{
-		if (!bisNegativePropertyUnit)
+		if (!bisNegativePropertyUnit && kUnitInfo.getCombat() > 0 && kUnitInfo.getMoves() > 0)
 		{
 			bValid = true;
 		}
