@@ -190,8 +190,7 @@ void CvPythonPlayerLoader::CyPlayerPythonInterface2(boost::python::class_<CyPlay
 
 		.def("addReminder", &CyPlayer::addReminder, "void (int iGameTurn, string szMessage)")
 		.def("setFoundedFirstCity", &CyPlayer::setFoundedFirstCity, "void (bool bNewValue)")
-		.def("setAlive", &CyPlayer::setAlive, "void (bool bNewValue)")
-		.def("setNewPlayerAlive", &CyPlayer::setNewPlayerAlive, "void (bool bNewValue) - like setAlive, but without firing turn logic")
+		.def("setAlive", &CyPlayer::setAlive, "void (bool bNewValue, bool bActivateTurn)")
 		.def("getStabilityIndex", &CyPlayer::getStabilityIndex, "int ( )")
 		.def("changeStabilityIndex", &CyPlayer::changeStabilityIndex, "void ( int iChange )")
 		.def("getStabilityIndexAverage", &CyPlayer::getStabilityIndexAverage, "int ( )")

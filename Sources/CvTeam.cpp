@@ -2784,195 +2784,121 @@ bool CvTeam::isMinorCiv() const
 	return bValid;
 }
 
-void CvTeam::setIsMinorCiv(bool bNewValue, bool bDoBarbCivCheck)
+void CvTeam::setIsMinorCiv(bool bNewValue)
 {
 	PROFILE_EXTRA_FUNC();
+
+	const TeamTypes eTeam = getID();
 	if (bNewValue != isMinorCiv())
 	{
 		if (isAlive())
 		{
 			if (bNewValue)
 			{
-				logging::logMsg("C2C.log", "Switching team %d to minor\n", getID());
+				logging::logMsg("C2C.log", "Switching team %d to minor\n", eTeam);
 			}
 			else
 			{
-				logging::logMsg("C2C.log", "Switching minor team %d to full\n", getID());
+				logging::logMsg("C2C.log", "Switching minor team %d to full\n", eTeam);
 			}
 		}
 		else if (bNewValue)
 		{
-			logging::logMsg("C2C.log", "Setting non-alive team %d to minor\n", getID());
+			logging::logMsg("C2C.log", "Setting non-alive team %d to minor\n", eTeam);
 		}
 		else
 		{
-			logging::logMsg("C2C.log", "Setting non-alive minor team %d to full\n", getID());
+			logging::logMsg("C2C.log", "Setting non-alive minor team %d to full\n", eTeam);
 		}
-		bool abHasMet[MAX_PC_TEAMS];
 
-		// Have to check hasMet status first because of vassal states ... dow on master causes hasMet for vassal
-		for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
+		// Convert all team members
+		for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 		{
-			abHasMet[iI] = isHasMet((TeamTypes)iI);
-		}
-		TeamTypes eBarbCivVictim = NO_TEAM;
-
-		if (bDoBarbCivCheck && !bNewValue && isAlive())
-		{
-			int iMaxVal = 0;
-			for (int iJ = 0; iJ < MAX_PC_TEAMS; iJ++)
+			if (GET_PLAYER((PlayerTypes)iI).getTeam() == eTeam)
 			{
-				if (iJ != getID())
-				{
-					int iValue = GET_TEAM(getID()).AI_getBarbarianCivWarVal((TeamTypes)iJ, 12);
-					if (iValue > iMaxVal)
-					{
-						logging::logMsg("C2C.log", "    BarbCiv team %d is considering declaring war against victim Team %d\n", getID(), iJ);
-						CvCity* pCapital = GET_PLAYER(getLeaderID()).getCapitalCity();
-
-						if (pCapital == NULL || pCapital->plot()->isHasPathToPlayerCity(getID(), GET_TEAM((TeamTypes)iJ).getLeaderID()))
-						{
-							iMaxVal = iValue;
-							eBarbCivVictim = (TeamTypes)iJ;
-						}
-					}
-				}
+				GC.getInitCore().setMinorNationCiv((PlayerTypes)iI, bNewValue);
 			}
-			logging::logMsg("C2C.log", "    BarbCiv team %d will declare war against victim Team %d\n", getID(), eBarbCivVictim);
+		}
+
+		if (!isAlive())
+		{
+			return;
 		}
 
 		if (bNewValue)
 		{
-			// Convert all team members
-			for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
-			{
-				if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
-				{
-					GC.getInitCore().setMinorNationCiv((PlayerTypes)iI, bNewValue);
-				}
-			}
-			// Declare war on all outside teams
-			declareWarAsMinor();
+			declareWarAsMinor(); // Declare war on all outside teams
 		}
 		else
 		{
-			// Keep war againt those this team has met
+			// Have to check hasMet status first because of vassal states ... dow on master causes hasMet for vassal
+			bool abHasMet[MAX_PC_TEAMS];
+
 			for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 			{
-				if (iI != getID() && GET_TEAM((TeamTypes)iI).isAlive() && !GET_TEAM((TeamTypes)iI).isMinorCiv())
-				{
-					if (abHasMet[iI])
-					{
-						if (!GC.getGame().isOption(GAMEOPTION_UNSUPPORTED_START_AS_MINORS))
-						{
-							// Does other player want to keep war with us?
-							bool bPeace = true;
-							bool bPlanWar = false;
-
-							const CvPlayer& kPlayer = GET_PLAYER(GET_TEAM((TeamTypes)iI).getLeaderID());
-							int iCount = 0;
-							foreach_(const CvUnit * pLoopUnit, kPlayer.units())
-							{
-								if (pLoopUnit->plot()->getTeam() == getID())
-								{
-									iCount++;
-								}
-							}
-
-							if (GET_TEAM((TeamTypes)iI).isHuman())
-							{
-								if (iCount > 2)
-								{
-									bPeace = false;
-								}
-							}
-							else if (!isAtWar((TeamTypes)iI))
-							{
-								FErrorMsg("!isAtWar((TeamTypes)iI); Shouldn't happen here");
-								bPeace = false;
-							}
-							else if (GET_TEAM((TeamTypes)iI).AI_minorKeepWarVal(getID()) > 0
-							&& GET_TEAM((TeamTypes)iI).AI_endWarVal(getID()) < GET_TEAM(getID()).AI_endWarVal((TeamTypes)iI) / 2)
-							{
-								if (iCount > 2 || GET_TEAM((TeamTypes)iI).AI_getWarSuccess(getID()) > GC.getWAR_SUCCESS_CITY_CAPTURING())
-								{
-									bPeace = false;
-								}
-								else bPlanWar = true;
-							}
-
-							if (bPeace)
-							{
-								makePeace((TeamTypes)iI, false);
-
-								setHasMet((TeamTypes)iI, false);
-								GET_TEAM((TeamTypes)iI).setHasMet(getID(), false);
-
-								if (bPlanWar)
-								{
-									GET_TEAM((TeamTypes)iI).AI_setWarPlan(getID(), WARPLAN_LIMITED);
-									logging::logMsg("C2C.log", "    Team %d decides to plan war against ex-minor\n", iI);
-								}
-							}
-							else logging::logMsg("C2C.log", "    Team %d decides to keep war against ex-minor\n", iI);
-						}
-						else if (isAlive() && !isAtWar((TeamTypes)iI))
-						{
-							declareWar((TeamTypes)iI, true, NO_WARPLAN);
-						}
-					}
-					else if (isAtWar((TeamTypes)iI) && !GET_TEAM((TeamTypes)iI).isMinorCiv())
-					{
-						makePeace((TeamTypes)iI, false);
-						setHasMet((TeamTypes)iI, false);
-						GET_TEAM((TeamTypes)iI).setHasMet(getID(), false);
-					}
-
-					if (isAtWar((TeamTypes)iI))
-					{
-						AI_setWarPlan((TeamTypes)iI, WARPLAN_LIMITED, true);
-						GET_TEAM((TeamTypes)iI).AI_setWarPlan(getID(), WARPLAN_LIMITED, true);
-					}
-				}
+				abHasMet[iI] = isHasMet((TeamTypes)iI);
 			}
 
-			if (eBarbCivVictim != NO_TEAM)
+			TeamTypes eBarbCivVictim = NO_TEAM;
 			{
-				if (isAtWar(eBarbCivVictim))
+				int iMaxVal = 0;
+				for (int iJ = 0; iJ < MAX_PC_TEAMS; iJ++)
 				{
-					AI_setWarPlan(eBarbCivVictim, WARPLAN_TOTAL, true);
-				}
-				else if (!hasWarPlan(true))
-				{
-					int iCount = 0;
-					foreach_(const CvUnit * pLoopUnit, GET_PLAYER(getLeaderID()).units())
+					const TeamTypes eTeamX = static_cast<TeamTypes>(iJ);
+					if (eTeamX != eTeam && abHasMet[iJ] && GET_TEAM(eTeamX).isAlive() && !GET_TEAM(eTeamX).isMinorCiv())
 					{
-						if (pLoopUnit->plot()->getTeam() == eBarbCivVictim)
+						const int iValue = GET_TEAM(eTeam).AI_getBarbarianCivWarVal(eTeamX, 16);
+						if (iValue > iMaxVal)
 						{
-							iCount++;
+							logging::logMsg("C2C.log", "    BarbCiv team %d is considering declaring war against victim Team %d\n", eTeam, iJ);
+							iMaxVal = iValue;
+							eBarbCivVictim = eTeamX;
 						}
 					}
-
-					if (iCount > 2 || GET_TEAM((TeamTypes)eBarbCivVictim).AI_getWarSuccess(getID()) > GC.getWAR_SUCCESS_CITY_CAPTURING())
+				}
+				logging::logMsg("C2C.log", "    BarbCiv team %d will declare war against victim Team %d\n", eTeam, eBarbCivVictim);
+			}
+			// Keep war againt some of those this team has met
+			for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
+			{
+				const TeamTypes eTeamX = static_cast<TeamTypes>(iI);
+				if (eTeamX != eTeam && GET_TEAM(eTeamX).isAlive() && !GET_TEAM(eTeamX).isMinorCiv())
+				{
+					if (!isAtWar(eTeamX))
 					{
-						logging::logMsg("C2C.log", "  Barb civ %d decides to keep war on victim Team %d\n", getID(), eBarbCivVictim);
-						declareWar((TeamTypes)eBarbCivVictim, true, WARPLAN_TOTAL);
+						FErrorMsg("!isAtWar(eTeamX); Shouldn't happen here");
+						continue;
+					}
+					if (abHasMet[iI])
+					{
+						if (eBarbCivVictim == eTeamX)
+						{
+							AI_setWarPlan(eBarbCivVictim, WARPLAN_TOTAL, true);
+							logging::logMsg("C2C.log", "    Team %d is the victim of ex-minor\n", iI);
+							continue;
+						}
+
+						if (GET_TEAM(eTeam).AI_minorPeaceOut(eTeamX))
+						{
+							makePeace(eTeamX, false);
+
+							// Toffer: Guess this is done to trigger the first meeting diplomacy pop-up.
+							setHasMet(eTeamX, false);
+							GET_TEAM(eTeamX).setHasMet(eTeam, false);
+						}
+						else
+						{
+							AI_setWarPlan(eTeamX, WARPLAN_LIMITED, true);
+							GET_TEAM(eTeamX).AI_setWarPlan(eTeam, WARPLAN_LIMITED, true);
+							logging::logMsg("C2C.log", "    ex-minor decides to keep limited war against Team %d\n", iI);
+						}
 					}
 					else
 					{
-						logging::logMsg("C2C.log", "  Barb civ %d begins preparing for war on victim Team %d\n", getID(), eBarbCivVictim);
-						// Prepare for war with victim
-						AI_setWarPlan(eBarbCivVictim, WARPLAN_TOTAL);
+						makePeace(eTeamX, false);
+						setHasMet(eTeamX, false);
+						GET_TEAM(eTeamX).setHasMet(eTeam, false);
 					}
-				}
-			}
-
-			// Convert all team members
-			for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
-			{
-				if (GET_PLAYER((PlayerTypes)iI).getTeam() == getID())
-				{
-					GC.getInitCore().setMinorNationCiv((PlayerTypes)iI, bNewValue);
 				}
 			}
 		}

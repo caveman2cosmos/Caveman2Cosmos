@@ -11734,19 +11734,19 @@ bool CvPlayer::isEverAlive() const
 }
 
 
-void CvPlayer::setAlive(bool bNewValue)
+void CvPlayer::setAlive(bool bNewValue, bool bActivateTurn)
 {
 	PROFILE_EXTRA_FUNC();
-	if (isAlive() != bNewValue)
+	if (m_bAlive != bNewValue)
 	{
 		m_bAlive = bNewValue;
 
-		GET_TEAM(getTeam()).changeAliveCount((isAlive()) ? 1 : -1);
+		GET_TEAM(getTeam()).changeAliveCount(bNewValue ? 1 : -1);
 
 		// Report event to Python
 		CvEventReporter::getInstance().setPlayerAlive(getID(), bNewValue);
 
-		if (isAlive())
+		if (bNewValue)
 		{
 			if (!isEverAlive())
 			{
@@ -11762,9 +11762,14 @@ void CvPlayer::setAlive(bool bNewValue)
 
 			updatePlotGroups();
 
-			if (GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS) || (GC.getGame().getNumGameTurnActive() == 0) || (GC.getGame().isSimultaneousTeamTurns() && GET_TEAM(getTeam()).isTurnActive()))
+			if (bActivateTurn)
 			{
-				setTurnActive(true);
+				if (GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS)
+				|| (GC.getGame().getNumGameTurnActive() == 0)
+				|| (GC.getGame().isSimultaneousTeamTurns() && GET_TEAM(getTeam()).isTurnActive()))
+				{
+					setTurnActive(true);
+				}
 			}
 
 			gDLL->openSlot(getID());
@@ -11786,6 +11791,11 @@ void CvPlayer::setAlive(bool bNewValue)
 			if (!GC.getGame().isOption(GAMEOPTION_UNSUPPORTED_REVOLUTION))
 			{
 				clearCityCulture();
+			}
+
+			if (isMinorCiv() && !GET_TEAM(getTeam()).isAlive())
+			{
+				GET_TEAM(getTeam()).setIsMinorCiv(false);
 			}
 
 			setTurnActive(false);
@@ -11813,96 +11823,6 @@ void CvPlayer::setAlive(bool bNewValue)
 
 				GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getID(), szBuffer, -1, -1, (ColorTypes)GC.getInfoTypeForString("COLOR_WARNING_TEXT"));
 			}
-		}
-
-		GC.getGame().setScoreDirty(true);
-	}
-}
-
-
-// It appears that setAlive causes the new player's turn to fire out of turn (if it's not someone else's turn).
-// This function is a copy of setAlive with that feature turned off.
-void CvPlayer::setNewPlayerAlive(bool bNewValue)
-{
-	PROFILE_EXTRA_FUNC();
-	if (isAlive() != bNewValue)
-	{
-		m_bAlive = bNewValue;
-
-		GET_TEAM(getTeam()).changeAliveCount((isAlive()) ? 1 : -1);
-
-		// Report event to Python
-		CvEventReporter::getInstance().setPlayerAlive(getID(), bNewValue);
-
-		if (isAlive())
-		{
-			if (!isEverAlive())
-			{
-				m_bEverAlive = true;
-
-				GET_TEAM(getTeam()).changeEverAliveCount(1);
-			}
-
-			if (getNumCities() == 0)
-			{
-				setFoundedFirstCity(false);
-			}
-
-			updatePlotGroups();
-
-			gDLL->openSlot(getID());
-
-
-			for( int iI = 0; iI < MAX_PLAYERS; iI++ )
-			{
-				GET_PLAYER((PlayerTypes)iI).AI_invalidateAttitudeCache(getID());
-				AI_invalidateAttitudeCache((PlayerTypes)iI);
-			}
-
-			// Declare war on all outside teams
-			if ( isMinorCiv() )
-			{
-				GET_TEAM(getTeam()).declareWarAsMinor();
-			}
-		}
-		else
-		{
-			clearResearchQueue();
-			killUnits();
-			killCities();
-			killAllDeals();
-
-			setTurnActive(false);
-
-			gDLL->endMPDiplomacy();
-			gDLL->endDiplomacy();
-
-			if (!isHumanPlayer())
-			{
-				gDLL->closeSlot(getID());
-			}
-
-			if (GC.getGame().getElapsedGameTurns() > 0)
-			{
-				if (!isNPC())
-				{
-					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CIV_DESTROYED", getCivilizationAdjectiveKey());
-
-					for (int iI = 0; iI < MAX_PLAYERS; iI++)
-					{
-						if (GET_PLAYER((PlayerTypes)iI).isAlive())
-						{
-
-							AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CIVDESTROYED", MESSAGE_TYPE_MAJOR_EVENT, NULL, (ColorTypes)GC.getInfoTypeForString("COLOR_WARNING_TEXT"));
-						}
-					}
-
-					GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getID(), szBuffer, -1, -1, (ColorTypes)GC.getInfoTypeForString("COLOR_WARNING_TEXT"));
-				}
-			}
-
-			//	Free the now-stale plot groups
-			m_plotGroups[CURRENT_MAP]->removeAll();
 		}
 
 		GC.getGame().setScoreDirty(true);

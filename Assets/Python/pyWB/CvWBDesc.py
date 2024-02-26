@@ -1987,7 +1987,7 @@ Randomize Resources=0\nEndMap\n"
 				team.setEspionagePointsEver(iSum)
 
 			if pWBTeam.isMinorNationCiv:
-				team.setIsMinorCiv(True, False)
+				team.setIsMinorCiv(True)
 			else:
 				for item in pWBTeam.bWarWithTeamList:
 					team.declareWar(item, False, WarPlanTypes.NO_WARPLAN)
