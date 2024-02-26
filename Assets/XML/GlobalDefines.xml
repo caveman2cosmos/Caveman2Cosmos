@@ -7,11 +7,13 @@
 		A value of 100 means each pop provides 2 gold in free upkeep.
 		a value of -100 means each pop provides 0.5 gold in free upkeep.
 		Civics and traits modifies this factor further.
-		Currently they are set to very low values (-200 and -100) as most units still only cost 1 gold in upkeep.
+		Currently they are set to very low values (-200 and -100) as most units still only cost 1 gold in
+upkeep.
 		The plan is to have increasing unit upkeep values as unit technology develops,
 		and when that plan is fulfilled these values will likely be set higher too.
  -->
-<Civ4Defines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Schema\Caveman2Cosmos.xsd">
+<Civ4Defines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="Schema\Caveman2Cosmos.xsd">
 	<Define>
 		<DefineName>CIV4_VERSION</DefineName>
 		<iDefineIntVal>319</iDefineIntVal>
@@ -78,7 +80,8 @@
 	<!-- GRAPHICS PAGING OPTIONS END -->
 	<!--
  Default uses the normal tag for the language set in Civ4's option dialog.
-		All tags used in the text files are possible with English used as fallback when the chosen language is not available for some text.
+		All tags used in the text files are possible with English used as fallback when the chosen language
+	is not available for some text.
 	-->
 	<Define>
 		<DefineName>LANGUAGE</DefineName>
@@ -109,7 +112,8 @@
 		<DefineTextVal>FEATURE_FALLOUT</DefineTextVal>
 	</Define>
 	<Define>
-		<DefineName>CAPITAL_BUILDING</DefineName> <!-- Currently unused, consider replacing buildingtag bCaptial with this global define; we only have one capital building anyhow.-->
+		<DefineName>CAPITAL_BUILDING</DefineName> <!-- Currently unused, consider replacing
+		buildingtag bCaptial with this global define; we only have one capital building anyhow.-->
 		<DefineTextVal>BUILDING_PALACE</DefineTextVal>
 	</Define>
 	<Define>
@@ -779,7 +783,8 @@
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- Occupation timers scale to this; 0% revolt multiplier at this culture value. Don't use 0. -->
+		<!-- Occupation timers scale to this; 0% revolt multiplier at this culture value. Don't use
+		0. -->
 		<DefineName>OCCUPATION_CULTURE_PERCENT_THRESHOLD</DefineName>
 		<iDefineIntVal>75</iDefineIntVal>
 	</Define>
@@ -792,13 +797,15 @@
 		<iDefineIntVal>2</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- % of city revolt/turn chance added to revolt timer. E.g. if a city with 4% revolt chance/turn
+		<!-- % of city revolt/turn chance added to revolt timer. E.g. if a city with 4% revolt
+		chance/turn
 			 successfully revolts, 25 here means it adds 1 turn to revolt timer -->
 		<DefineName>REVOLT_OCCUPATION_TURNS_PERCENT</DefineName>
 		<iDefineIntVal>25</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- 50 halves effect of culture ratio on liklihood of culture revolt, 100 is baseline, 200 doubles. -->
+		<!-- 50 halves effect of culture ratio on liklihood of culture revolt, 100 is baseline, 200
+		doubles. -->
 		<DefineName>REVOLT_TOTAL_CULTURE_MODIFIER</DefineName>
 		<iDefineIntVal>200</iDefineIntVal>
 	</Define>
@@ -955,7 +962,8 @@
 		<!-- Toffer - Perhaps make this a handicap tag,
 			AI has strong combat mod against barbs on high difficulty,
 			so why not allow NPC to be more on par with tech leader on high difficulty.
-			This can never give barbs techs that no other player has, it just determines how fast they catch up.
+			This can never give barbs techs that no other player has, it just determines how fast they catch
+		up.
 		-->
 		<DefineName>BARBARIAN_FREE_TECH_PERCENT</DefineName>
 		<iDefineIntVal>4</iDefineIntVal>
@@ -1079,7 +1087,8 @@
 		<DefineName>GAME_CITY_SIZE_LINMAP_AT_50</DefineName>
 		<fDefineFloatVal>240</fDefineFloatVal>
 	</Define>
-	<!-- Unit health bar positioning, formerly controlled by UNIT_INFO_Z_OFFSET, is now controlled by the UNIT_HEALTH_BILLBOARD_* faders in CIV4DetailManager.xml -->
+	<!-- Unit health bar positioning, formerly controlled by UNIT_INFO_Z_OFFSET, is now controlled
+	by the UNIT_HEALTH_BILLBOARD_* faders in CIV4DetailManager.xml -->
 	<Define>
 		<DefineName>DIPLO_VOTE_SECRETARY_GENERAL_INTERVAL</DefineName>
 		<iDefineIntVal>4</iDefineIntVal>
@@ -1169,10 +1178,14 @@
 		<fDefineFloatVal>0.1</fDefineFloatVal>
 	</Define>
 	<!--
- Controlling the camera's maximum distance is a bit tricky since differently-sized maps need the camera to move back different amounts
-		There is a lower-bound on the maximum distance, specified below. Thus, the camera will never get any closer than 7000 units.
-		To actually tweak the apparent-size of the globe when fully-back, you need to go into CIV4DetailManager.XML and adjust the
-		CAMERA_MAX_DISTANCE_FADER value. Because this variable is in the DetailManager XML, your changes will go into effect without restarting the game.
+ Controlling the camera's maximum distance is a bit tricky since differently-sized maps need the
+	camera to move back different amounts
+		There is a lower-bound on the maximum distance, specified below. Thus, the camera will never get
+	any closer than 7000 units.
+		To actually tweak the apparent-size of the globe when fully-back, you need to go into
+	CIV4DetailManager.XML and adjust the
+		CAMERA_MAX_DISTANCE_FADER value. Because this variable is in the DetailManager XML, your changes
+	will go into effect without restarting the game.
 	-->
 	<Define>
 		<DefineName>CAMERA_SMALLEST_MAX_DISTANCE</DefineName>
@@ -1248,127 +1261,152 @@
 	</Define>
 	<Define>
 		<DefineName>AIR_IDLE_HEIGHT</DefineName>
-		<!--Height of an idling air unit-->
+		<!--Height
+		of an idling air unit-->
 		<fDefineFloatVal>100.0</fDefineFloatVal>
 	</Define>
 	<Define>
 		<DefineName>AIR_PATROL_RADIUS</DefineName>
-		<!--Relative radius of an air unit while patrolling-->
+		<!--Relative
+		radius of an air unit while patrolling-->
 		<fDefineFloatVal>1.5</fDefineFloatVal>
 	</Define>
 	<Define>
 		<DefineName>AIR_PATROL_SPEED</DefineName>
-		<!--Speed of air unit while patrolling-->
+		<!--Speed
+		of air unit while patrolling-->
 		<fDefineFloatVal>30.0</fDefineFloatVal>
 	</Define>
 	<Define>
 		<DefineName>AIR_PATROL_HEIGHT</DefineName>
-		<!--Height of a patrolling air unit-->
+		<!--Height
+		of a patrolling air unit-->
 		<fDefineFloatVal>200.0</fDefineFloatVal>
 	</Define>
 	<Define>
 		<DefineName>AIR_BOMB_HEIGHT</DefineName>
-		<!--Height of a bombing air unit-->
+		<!--Height
+		of a bombing air unit-->
 		<fDefineFloatVal>200.0</fDefineFloatVal>
 	</Define>
 	<Define>
 		<DefineName>AIR_EXECUTE_DISTANCE</DefineName>
-		<!--Distance an attacker/recon travels during an air mission (start to target)-->
+		<!--Distance
+		an attacker/recon travels during an air mission (start to target)-->
 		<fDefineFloatVal>650.0</fDefineFloatVal>
 	</Define>
 	<Define>
 		<DefineName>AIR_EXECUTE_FINISH</DefineName>
-		<!--Distance an attacker/recon travels during an air mission (after target)-->
+		<!--Distance
+		an attacker/recon travels during an air mission (after target)-->
 		<fDefineFloatVal>400.0</fDefineFloatVal>
 	</Define>
 	<Define>
 		<DefineName>AIR_DEFEND_DISTANCE</DefineName>
-		<!--Distance a defender travels during an air mission (start to target)-->
+		<!--Distance
+		a defender travels during an air mission (start to target)-->
 		<fDefineFloatVal>450.0</fDefineFloatVal>
 	</Define>
 	<Define>
 		<DefineName>AIR_DEFEND_FINISH</DefineName>
-		<!--Distance a defender travels during an air mission (after target)-->
+		<!--Distance
+		a defender travels during an air mission (after target)-->
 		<fDefineFloatVal>300.0</fDefineFloatVal>
 	</Define>
 	<Define>
 		<DefineName>UNIT_ANIM_PAGE_MAX</DefineName>
-		<!--Maximum number of animations loaded in memory for any unit-->
+		<!--Maximum
+		number of animations loaded in memory for any unit-->
 		<iDefineIntVal>5</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>DEFAULT_ANIM_PAGE_MAX</DefineName>
-		<!--Default number of animations loaded for an entity-->
+		<!--Default
+		number of animations loaded for an entity-->
 		<iDefineIntVal>2</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>FLAG_OFFSET_X</DefineName>
-		<!--The relative offset X offset of a flag within a square (-1..1)-->
+		<!--The
+		relative offset X offset of a flag within a square (-1..1)-->
 		<fDefineFloatVal>-0.667</fDefineFloatVal>
 	</Define>
 	<Define>
 		<DefineName>FLAG_OFFSET_Y</DefineName>
-		<!--The relative offset Y offset of a flag within a square (-1..1)-->
+		<!--The
+		relative offset Y offset of a flag within a square (-1..1)-->
 		<fDefineFloatVal>0.0</fDefineFloatVal>
 	</Define>
 	<Define>
 		<DefineName>FLAG_OFFSET2_X</DefineName>
-		<!--The relative offset X offset of the second flag within a square (-1..1)-->
+		<!--The
+		relative offset X offset of the second flag within a square (-1..1)-->
 		<fDefineFloatVal>-0.8</fDefineFloatVal>
 	</Define>
 	<Define>
 		<DefineName>FLAG_OFFSET2_Y</DefineName>
-		<!--The relative offset Y offset of the second flag within a square (-1..1)-->
+		<!--The
+		relative offset Y offset of the second flag within a square (-1..1)-->
 		<fDefineFloatVal>-0.03</fDefineFloatVal>
 	</Define>
 	<Define>
 		<DefineName>UNIT_TRAIL_RESOLUTION</DefineName>
-		<!--The resolution of the wake/trail left by units-->
+		<!--The
+		resolution of the wake/trail left by units-->
 		<fDefineFloatVal>5.0</fDefineFloatVal>
 	</Define>
 	<Define>
 		<DefineName>SCORE_POPULATION_FACTOR</DefineName>
-		<!--Score you get if you have the 'maximum' population possible on the current map-->
+		<!--Score
+		you get if you have the 'maximum' population possible on the current map-->
 		<iDefineIntVal>5000</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>SCORE_LAND_FACTOR</DefineName>
-		<!--Score you get if you have all the land on the current map-->
+		<!--Score
+		you get if you have all the land on the current map-->
 		<iDefineIntVal>2000</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>SCORE_WONDER_FACTOR</DefineName>
-		<!--Score you get if you have all the wonders-->
+		<!--Score
+		you get if you have all the wonders-->
 		<iDefineIntVal>1000</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>SCORE_TECH_FACTOR</DefineName>
-		<!--Score you get if you have all the techs-->
+		<!--Score
+		you get if you have all the techs-->
 		<iDefineIntVal>2000</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>SCORE_FREE_PERCENT</DefineName>
-		<!--Percentage of the maximum score you get for free-->
+		<!--Percentage
+		of the maximum score you get for free-->
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>SCORE_VICTORY_PERCENT</DefineName>
-		<!--Percentage of your score that gets added if you win the game-->
+		<!--Percentage
+		of your score that gets added if you win the game-->
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>SCORE_HANDICAP_PERCENT_OFFSET</DefineName>
-		<!--Offset to the score handicap modifier-->
+		<!--Offset
+		to the score handicap modifier-->
 		<iDefineIntVal>-60</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>SCORE_HANDICAP_PERCENT_PER</DefineName>
-		<!--The amount of the score modifier per handicap level-->
+		<!--The
+		amount of the score modifier per handicap level-->
 		<iDefineIntVal>20</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>MINIMAP_RENDER_SIZE</DefineName>
-		<!--Minimap size in pixels-->
+		<!--Minimap
+		size in pixels-->
 		<iDefineIntVal>1024</iDefineIntVal>
 	</Define>
 	<Define>
@@ -1687,10 +1725,12 @@
 	</Define>
 	<!-- AI Gold Slider Safety Percent
 	This is the BASE income to expense ratio that the AI feels comfortable with.
-	e.g. a value of 10 would mean that the AI feels confortable if their net income is only 10% of gross income.
+	e.g. a value of 10 would mean that the AI feels confortable if their net income is only 10% of
+	gross income.
 	It noteworthily affects how much tolerance the AI has where it feels ready to grow.
 	Increase to make the AI more sensitive to gold concerns and reduce for more reckless behavior.
-	This may be rather interesting to convert to an AI personality matter or at least give a personality based modifier eventually
+	This may be rather interesting to convert to an AI personality matter or at least give a
+	personality based modifier eventually
 	Original Value: 50 -->
 	<Define>
 		<DefineName>SAFE_PROFIT_MARGIN_BASE_PERCENT</DefineName>
@@ -1701,7 +1741,8 @@
 		<iDefineIntVal>200</iDefineIntVal>
 	</Define>
 	<!-- A way to directly enhance the value of bombarding units in city attack stacks (+%) -->
-	<!-- The structure should still keep them in a ratio according to the rest of the stack... this can simply help them to NOT be ignored EVER -->
+	<!-- The structure should still keep them in a ratio according to the rest of the stack... this
+	can simply help them to NOT be ignored EVER -->
 	<Define>
 		<DefineName>C2C_ROUGH_BOMBARD_VALUE_MODIFIER</DefineName>
 		<iDefineIntVal>2</iDefineIntVal>
@@ -1732,10 +1773,11 @@
 		<iDefineIntVal>25</iDefineIntVal>
 	</Define>
 	<!-- A way to directly change scaling of national culture requirement to achieve next level -->
-	<!-- 100 is default, 50 would be requirement for next level growing 2x slower, meaning more traits gained in same time frame. -->
+	<!-- 100 is default, 50 would be requirement for next level growing 2x slower, meaning more
+	traits gained in same time frame. -->
 	<Define>
 		<DefineName>NEXT_TRAIT_CULTURE_REQ_PERCENT</DefineName>
-		<iDefineIntVal>100</iDefineIntVal>
+		<iDefineIntVal>25</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>CITY_OUTPUT_HISTORY_SIZE</DefineName>

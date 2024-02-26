@@ -3,7 +3,9 @@
 #ifndef CvDLLEngineIFaceBase_h
 #define CvDLLEngineIFaceBase_h
 
+#include "CvGameCoreDLL.h"
 #include "NiPoint.h"
+
 
 class CvPlot;
 class CvCity;
@@ -50,15 +52,15 @@ public:
 
 	// landscape
 	virtual int InitGraphics() = 0;
-	virtual void GetLandscapeDimensions(float &fWidth, float &fHeight) = 0;
-	virtual void GetLandscapeGameDimensions(float &fWidth, float &fHeight) = 0;
+	virtual void GetLandscapeDimensions(float& fWidth, float& fHeight) = 0;
+	virtual void GetLandscapeGameDimensions(float& fWidth, float& fHeight) = 0;
 	virtual uint GetGameCellSizeX() = 0;
 	virtual uint GetGameCellSizeY() = 0;
 	virtual float GetPointZSpacing() = 0;
 	virtual float GetPointXYSpacing() = 0;
 	virtual float GetPointXSpacing() = 0;
 	virtual float GetPointYSpacing() = 0;
-	virtual float GetHeightmapZ(const NiPoint3 &pt3, bool bClampAboveWater = true) = 0;
+	virtual float GetHeightmapZ(const NiPoint3& pt3, bool bClampAboveWater = true) = 0;
 	virtual void LightenVisibility(uint) = 0;
 	virtual void DarkenVisibility(uint) = 0;
 	virtual void BlackenVisibility(uint) = 0;
@@ -71,12 +73,12 @@ public:
 	virtual bool GetGridMode() = 0;
 	virtual void SetGridMode(bool bVal) = 0;
 
-	virtual void addColoredPlot(int plotX, int plotY, const NiColorA &color, PlotStyles plotStyle, PlotLandscapeLayers layer) = 0;
+	virtual void addColoredPlot(int plotX, int plotY, const NiColorA& color, PlotStyles plotStyle, PlotLandscapeLayers layer) = 0;
 	virtual void clearColoredPlots(PlotLandscapeLayers layer) = 0;
-	virtual void fillAreaBorderPlot(int plotX, int plotY, const NiColorA &color, AreaBorderLayers layer) = 0;
+	virtual void fillAreaBorderPlot(int plotX, int plotY, const NiColorA& color, AreaBorderLayers layer) = 0;
 	virtual void clearAreaBorderPlots(AreaBorderLayers layer) = 0;
 	virtual void updateFoundingBorder() = 0;
-	virtual void addLandmark(CvPlot *plot, const wchar_t* caption) = 0;
+	virtual void addLandmark(CvPlot* plot, const wchar_t* caption) = 0;
 
 	virtual void TriggerEffect(int iEffect, NiPoint3 pt3Point, float rotation = 0.0f) = 0;
 	virtual void printProfileText() = 0;
@@ -92,8 +94,8 @@ public:
 	virtual void setFogOfWarFromStack() = 0;
 	virtual void MarkBridgesDirty() = 0;
 	virtual void AddLaunch(PlayerTypes playerType) = 0;
-	virtual void AddGreatWall(CvCity *city) = 0;
-	virtual void RemoveGreatWall(CvCity *city) = 0;
+	virtual void AddGreatWall(CvCity* city) = 0;
+	virtual void RemoveGreatWall(CvCity* city) = 0;
 	virtual void MarkPlotTextureAsDirty(int plotX, int plotY) = 0;
 };
 

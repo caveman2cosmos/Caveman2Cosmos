@@ -3,6 +3,7 @@
 #ifndef CvDLLEventReporterIFaceBase_h
 #define CvDLLEventReporterIFaceBase_h
 
+#include "CvGameCoreDLL.h"
 //
 // abstract class containing event reporting functions that the DLL needs
 // Creator- Mustafa Thamer
@@ -16,7 +17,7 @@ class CvSelectionGroup;
 class CvDLLEventReporterIFaceBase
 {
 public:
-	virtual void genericEvent(const char* szEventName, void* pythonArgs=NULL) = 0;
+	virtual void genericEvent(const char* szEventName, void* pythonArgs = NULL) = 0;
 
 	virtual void mouseEvent(int evt, const POINT& ptCursor) = 0;
 	virtual void kbdEvent(int evt, int key) = 0;
@@ -35,19 +36,19 @@ public:
 	virtual void improvementDestroyed(int iImprovementType, int iPlayer, int iX, int iY) = 0;
 	virtual void routeBuilt(int RouteType, int iX, int iY) = 0;
 
-	virtual void plotRevealed(CvPlot *pPlot, TeamTypes eTeam) = 0;
-	virtual void plotFeatureRemoved(CvPlot *pPlot, FeatureTypes eFeature, CvCity* pCity) = 0;
-	virtual void plotPicked(CvPlot *pPlot) = 0;
-	virtual void nukeExplosion(CvPlot *pPlot, CvUnit* pNukeUnit) = 0;
-	virtual void gotoPlotSet(CvPlot *pPlot, PlayerTypes ePlayer) = 0;
+	virtual void plotRevealed(CvPlot* pPlot, TeamTypes eTeam) = 0;
+	virtual void plotFeatureRemoved(CvPlot* pPlot, FeatureTypes eFeature, CvCity* pCity) = 0;
+	virtual void plotPicked(CvPlot* pPlot) = 0;
+	virtual void nukeExplosion(CvPlot* pPlot, CvUnit* pNukeUnit) = 0;
+	virtual void gotoPlotSet(CvPlot* pPlot, PlayerTypes ePlayer) = 0;
 
-	virtual void cityBuilt(CvCity *pCity) = 0;
-	virtual void cityRazed(CvCity *pCity, PlayerTypes ePlayer) = 0;
+	virtual void cityBuilt(CvCity* pCity) = 0;
+	virtual void cityRazed(CvCity* pCity, PlayerTypes ePlayer) = 0;
 	virtual void cityAcquired(PlayerTypes eOldOwner, PlayerTypes ePlayer, CvCity* pCity, bool bConquest, bool bTrade, bool bAutoRaze) = 0;
 	virtual void cityAcquiredAndKept(PlayerTypes eOldOwner, PlayerTypes ePlayer, CvCity* pCity, bool bConquest, bool bTrade) = 0;
-	virtual void cityLost(CvCity *pCity) = 0;
-	virtual void cultureExpansion( CvCity *pCity, PlayerTypes ePlayer) = 0;
-	virtual void cityDoTurn(CvCity *pCity, PlayerTypes ePlayer) = 0;
+	virtual void cityLost(CvCity* pCity) = 0;
+	virtual void cultureExpansion(CvCity* pCity, PlayerTypes ePlayer) = 0;
+	virtual void cityDoTurn(CvCity* pCity, PlayerTypes ePlayer) = 0;
 	virtual void cityBuildingUnit(CvCity* pCity, UnitTypes eUnitType) = 0;
 	virtual void cityBuildingBuilding(CvCity* pCity, BuildingTypes eBuildingType) = 0;
 	virtual void cityRename(CvCity* pCity) = 0;
@@ -55,22 +56,22 @@ public:
 
 	virtual void selectionGroupPushMission(CvSelectionGroup* pSelectionGroup, MissionTypes eMission) = 0;
 
-	virtual void unitCreated(CvUnit *pUnit) = 0;
-	virtual void unitBuilt(CvCity *pCity, CvUnit *pUnit) = 0;
-	virtual void unitKilled(CvUnit *pUnit, PlayerTypes eAttacker) = 0;
-	virtual void unitPromoted(CvUnit *pUnit, PromotionTypes ePromotion) = 0;
+	virtual void unitCreated(CvUnit* pUnit) = 0;
+	virtual void unitBuilt(CvCity* pCity, CvUnit* pUnit) = 0;
+	virtual void unitKilled(CvUnit* pUnit, PlayerTypes eAttacker) = 0;
+	virtual void unitPromoted(CvUnit* pUnit, PromotionTypes ePromotion) = 0;
 	virtual void unitRename(CvUnit* pUnit) = 0;
 	virtual void unitPillage(CvUnit* pUnit, ImprovementTypes eImprovement, RouteTypes eRoute, PlayerTypes ePlayer) = 0;
 	virtual void unitSpreadReligionAttempt(CvUnit* pUnit, ReligionTypes eReligion, bool bSuccess) = 0;
 	virtual void unitGifted(CvUnit* pUnit, PlayerTypes eGiftingPlayer, CvPlot* pPlotLocation) = 0;
 	virtual void unitBuildImprovement(CvUnit* pUnit, BuildTypes eBuild, bool bFinished) = 0;
 
-	virtual void goodyReceived(PlayerTypes ePlayer, CvPlot *pGoodyPlot, CvUnit *pGoodyUnit, GoodyTypes eGoodyType) = 0;
+	virtual void goodyReceived(PlayerTypes ePlayer, CvPlot* pGoodyPlot, CvUnit* pGoodyUnit, GoodyTypes eGoodyType) = 0;
 
-	virtual void greatPersonBorn(CvUnit *pUnit, PlayerTypes ePlayer, CvCity *pCity) = 0;
+	virtual void greatPersonBorn(CvUnit* pUnit, PlayerTypes ePlayer, CvCity* pCity) = 0;
 
-	virtual void buildingBuilt(CvCity *pCity, BuildingTypes eBuilding) = 0;
-	virtual void projectBuilt(CvCity *pCity, ProjectTypes eProject) = 0;
+	virtual void buildingBuilt(CvCity* pCity, BuildingTypes eBuilding) = 0;
+	virtual void projectBuilt(CvCity* pCity, ProjectTypes eProject) = 0;
 
 	virtual void techAcquired(TechTypes eType, TeamTypes eTeam, PlayerTypes ePlayer, bool bAnnounce) = 0;
 	virtual void techSelected(TechTypes eTech, PlayerTypes ePlayer) = 0;
@@ -91,7 +92,7 @@ public:
 	virtual void playerChangeStateReligion(PlayerTypes ePlayerID, ReligionTypes eNewReligion, ReligionTypes eOldReligion) = 0;
 	virtual void playerGoldTrade(PlayerTypes eFromPlayer, PlayerTypes eToPlayer, int iAmount) = 0;
 
-	virtual void chat(char *szString) = 0;
+	virtual void chat(char* szString) = 0;
 
 	virtual void victory(TeamTypes eNewWinner, VictoryTypes eNewVictory) = 0;
 
