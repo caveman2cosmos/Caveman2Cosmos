@@ -10350,462 +10350,447 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 		return 0;
 	}
 
-	const int numUnitCombatInfos = GC.getNumUnitCombatInfos();
 	int iGeneralPropertyValue = AI_unitPropertyValue(eUnit);
 	bool bisNegativePropertyUnit = (iGeneralPropertyValue < 0);
 	bool bisPositivePropertyUnit = (iGeneralPropertyValue > 0);
 	bool bUndefinedValid = false, bValid = false;
-	int iI;
 
 	switch (eUnitAI)
 	{
-	case UNITAI_UNKNOWN:
-	{
-		bUndefinedValid = true;
-		break;
-	}
-	case UNITAI_SUBDUED_ANIMAL:
-	{
-		bValid = true;
-		break;
-	}
-	case UNITAI_HUNTER:
-	case UNITAI_HUNTER_ESCORT:
-	{
-		if (!bisNegativePropertyUnit)
+		case UNITAI_UNKNOWN:
+		{
+			bUndefinedValid = true;
+			break;
+		}
+		case UNITAI_SUBDUED_ANIMAL:
 		{
 			bValid = true;
+			break;
 		}
-		break;
-	}
-	case UNITAI_BARB_CRIMINAL: break;
-	case UNITAI_ANIMAL:
-	{
-		if (isAnimal())
+		case UNITAI_HUNTER:
+		case UNITAI_HUNTER_ESCORT:
 		{
-			bValid = true;
-		}
-		break;
-	}
-	case UNITAI_SETTLE:
-	{
-		if (kUnitInfo.isFound())
-		{
-			bValid = true;
-		}
-		break;
-	}
-	case UNITAI_WORKER:
-	{
-		if (kUnitInfo.getNumBuilds() > 0)
-		{
-			bValid = true;
-		}
-		break;
-	}
-	case UNITAI_ESCORT:
-	{
-		bUndefinedValid = true;
-		if (!bisNegativePropertyUnit && kUnitInfo.getCombat() > 0 && kUnitInfo.getMoves() > 0)//Note: add a hero filter - a lot of them are being trained for this.
-		{
-			bValid = true;
-		}
-		break;
-	}
-	case UNITAI_ATTACK:
-	{
-		if (kUnitInfo.getCombat() > 0 && !kUnitInfo.isOnlyDefensive())
-		{
-			bValid = true;
-		}
-		break;
-	}
-	case UNITAI_ATTACK_CITY:
-	{
-		if (kUnitInfo.getCombat() > 0 && !kUnitInfo.isOnlyDefensive() && !kUnitInfo.isNoCapture())
-		{
-			bValid = true;
-		}
-		break;
-	}
-	case UNITAI_COLLATERAL:
-	{
-		if (kUnitInfo.getCombat() > 0 && !kUnitInfo.isOnlyDefensive()
-		&& (kUnitInfo.getCollateralDamage() > 0 || kUnitInfo.getBreakdownChance() > 0))
-		{
-			bValid = true;
-		}
-		break;
-	}
-	case UNITAI_PILLAGE:
-	{
-		if (kUnitInfo.getCombat() > 0 && !kUnitInfo.isOnlyDefensive())
-		{
-			bValid = true;
-		}
-		break;
-	}
-	case UNITAI_RESERVE:
-	{
-		if (!bisNegativePropertyUnit && kUnitInfo.getCombat() > 0 && !kUnitInfo.isOnlyDefensive())
-		{
-			bValid = true;
-		}
-		break;
-	}
-	case UNITAI_PILLAGE_COUNTER:
-	{
-		if (kUnitInfo.getCombat() > 0 && !kUnitInfo.isOnlyDefensive())
-		{
-			bValid = true;
-		}
-		break;
-	}
-	case UNITAI_COUNTER:
-	{
-		if (!bisNegativePropertyUnit && kUnitInfo.getCombat() > 0 && !kUnitInfo.isOnlyDefensive())
-		{
-			if (kUnitInfo.getInterceptionProbability() > 0 || kUnitInfo.getNumTargetUnits() > 0)
+			bUndefinedValid = true;
+			if (!bisNegativePropertyUnit && kUnitInfo.getCombat() > 0 && kUnitInfo.getMoves() > 0)
 			{
 				bValid = true;
-				break;
 			}
-			foreach_(const STD_PAIR(UnitTypes, int)& modifier, kUnitInfo.getUnitAttackModifiers())
+			break;
+		}
+		case UNITAI_BARB_CRIMINAL: break;
+		case UNITAI_ANIMAL:
+		{
+			if (isAnimal())
 			{
-				if (modifier.second > 0)
+				bValid = true;
+			}
+			break;
+		}
+		case UNITAI_SETTLE:
+		{
+			if (kUnitInfo.isFound())
+			{
+				bValid = true;
+			}
+			break;
+		}
+		case UNITAI_WORKER:
+		{
+			if (kUnitInfo.getNumBuilds() > 0)
+			{
+				bValid = true;
+			}
+			break;
+		}
+		case UNITAI_ESCORT:
+		{
+			bUndefinedValid = true;
+			if (!bisNegativePropertyUnit && kUnitInfo.getCombat() > 0 && kUnitInfo.getMoves() > 0)//Note: add a hero filter - a lot of them are being trained for this.
+			{
+				bValid = true;
+			}
+			break;
+		}
+		case UNITAI_ATTACK:
+		{
+			if (kUnitInfo.getCombat() > 0 && !kUnitInfo.isOnlyDefensive())
+			{
+				bValid = true;
+			}
+			break;
+		}
+		case UNITAI_ATTACK_CITY:
+		{
+			if (kUnitInfo.getCombat() > 0 && !kUnitInfo.isOnlyDefensive() && !kUnitInfo.isNoCapture())
+			{
+				bValid = true;
+			}
+			break;
+		}
+		case UNITAI_COLLATERAL:
+		{
+			if (kUnitInfo.getCombat() > 0 && !kUnitInfo.isOnlyDefensive()
+			&& (kUnitInfo.getCollateralDamage() > 0 || kUnitInfo.getBreakdownChance() > 0))
+			{
+				bValid = true;
+			}
+			break;
+		}
+		case UNITAI_PILLAGE:
+		{
+			if (kUnitInfo.getCombat() > 0 && !kUnitInfo.isOnlyDefensive())
+			{
+				bValid = true;
+			}
+			break;
+		}
+		case UNITAI_RESERVE:
+		{
+			if (!bisNegativePropertyUnit && kUnitInfo.getCombat() > 0 && !kUnitInfo.isOnlyDefensive())
+			{
+				bValid = true;
+			}
+			break;
+		}
+		case UNITAI_PILLAGE_COUNTER:
+		{
+			if (kUnitInfo.getCombat() > 0 && !kUnitInfo.isOnlyDefensive())
+			{
+				bValid = true;
+			}
+			break;
+		}
+		case UNITAI_COUNTER:
+		{
+			if (!bisNegativePropertyUnit && kUnitInfo.getCombat() > 0 && !kUnitInfo.isOnlyDefensive())
+			{
+				if (kUnitInfo.getInterceptionProbability() > 0 || kUnitInfo.getNumTargetUnits() > 0)
 				{
 					bValid = true;
 					break;
 				}
+				foreach_(const STD_PAIR(UnitTypes, int)& modifier, kUnitInfo.getUnitAttackModifiers())
+				{
+					if (modifier.second > 0)
+					{
+						bValid = true;
+						break;
+					}
+				}
+				for (int iI = 0; !bValid && iI < GC.getNumUnitCombatInfos(); iI++)
+				{
+					if (kUnitInfo.getUnitCombatModifier(iI) > 0)
+					{
+						bValid = true;
+						break;
+					}
+
+					if (kUnitInfo.getTargetUnitCombat(iI))
+					{
+						bValid = true;
+						break;
+					}
+				}
+				for (int iI = 0; !bValid && iI < GC.getNumUnitInfos(); iI++)
+				{
+					if (GC.getUnitInfo((UnitTypes)iI).isDefendAgainstUnit(eUnit))
+					{
+						bValid = true;
+						break;
+					}
+
+					const int iUnitCombat = kUnitInfo.getUnitCombatType();
+					if (NO_UNITCOMBAT != iUnitCombat && GC.getUnitInfo((UnitTypes)iI).getDefenderUnitCombat(iUnitCombat))
+					{
+						bValid = true;
+						break;
+					}
+				}
 			}
-			for (iI = 0; !bValid && iI < numUnitCombatInfos; iI++)
+			break;
+		}
+		case UNITAI_HEALER:
+		case UNITAI_HEALER_SEA:
+		{
+			if (!bisNegativePropertyUnit && (AI_unitHealerValue(eUnit) > 0))
 			{
-				if (kUnitInfo.getUnitCombatModifier(iI) > 0)
+				bValid = true;
+			}
+			break;
+		}
+		case UNITAI_PROPERTY_CONTROL:
+		case UNITAI_PROPERTY_CONTROL_SEA:
+		{
+			if (bisPositivePropertyUnit)
+			{
+				bValid = true;
+			}
+			break;
+		}
+		case UNITAI_INVESTIGATOR:
+		{
+			if (kUnitInfo.getInvestigation() > 0 && !bisNegativePropertyUnit)
+			{
+				bValid = true;
+			}
+			break;
+		}
+		case UNITAI_INFILTRATOR:
+		{
+			if (kUnitInfo.isBlendIntoCity())
+			{
+				bValid = true;
+			}
+			break;
+		}
+		case UNITAI_SEE_INVISIBLE:
+		case UNITAI_SEE_INVISIBLE_SEA:
+		{
+			if (!bisNegativePropertyUnit && (kUnitInfo.getNumSeeInvisibleTypes() > 0 || kUnitInfo.getNumVisibilityIntensityTypes() > 0))
+			{
+				bValid = true;
+			}
+			break;
+		}
+		case UNITAI_CITY_DEFENSE:
+		{
+			if (!bisNegativePropertyUnit && kUnitInfo.getCombat() > 0 && !kUnitInfo.isNoDefensiveBonus())
+			{
+				bValid = true;
+			}
+			break;
+		}
+		case UNITAI_CITY_COUNTER:
+		{
+			if (kUnitInfo.getCombat() > 0 && !bisNegativePropertyUnit && !kUnitInfo.isNoDefensiveBonus())
+			{
+				if (kUnitInfo.getInterceptionProbability() > 0)
 				{
 					bValid = true;
 					break;
 				}
 
-				if (kUnitInfo.getTargetUnitCombat(iI))
+				foreach_(const STD_PAIR(UnitTypes, int)& modifier, kUnitInfo.getUnitDefenseModifiers())
 				{
-					bValid = true;
-					break;
+					if (modifier.second > 0)
+					{
+						bValid = true;
+						break;
+					}
+				}
+				for (int iI = 0; !bValid && iI < GC.getNumUnitCombatInfos(); iI++)
+				{
+					if (kUnitInfo.getUnitCombatModifier(iI) > 0)
+					{
+						bValid = true;
+						break;
+					}
 				}
 			}
-			for (iI = 0; !bValid && iI < GC.getNumUnitInfos(); iI++)
+			break;
+		}
+		case UNITAI_CITY_SPECIAL:
+		{
+			if (!bisNegativePropertyUnit)
 			{
-				if (GC.getUnitInfo((UnitTypes)iI).isDefendAgainstUnit(eUnit))
+				bValid = true;
+			}
+			break;
+		}
+		case UNITAI_PARADROP:
+		{
+			if (kUnitInfo.getDropRange() > 0)
+			{
+				bValid = true;
+			}
+			break;
+		}
+		case UNITAI_EXPLORE:
+		{
+			bUndefinedValid = true;
+			if (kUnitInfo.getCombat() > 0 && !(kUnitInfo.isNoRevealMap()))
+			{
+				bValid = true;
+			}
+			break;
+		}
+		case UNITAI_MISSIONARY:
+		{
+			if (pArea)
+			{
+				for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
 				{
-					bValid = true;
-					break;
-				}
+					if (kUnitInfo.getReligionSpreads((ReligionTypes)iI) > 0)
+					{
+						const int iNeededMissionaries = AI_neededMissionaries(pArea, (ReligionTypes)iI);
 
-				const int iUnitCombat = kUnitInfo.getUnitCombatType();
-				if (NO_UNITCOMBAT != iUnitCombat && GC.getUnitInfo((UnitTypes)iI).getDefenderUnitCombat(iUnitCombat))
+						if (iNeededMissionaries > 0 && iNeededMissionaries > countReligionSpreadUnits(pArea, (ReligionTypes)iI))
+						{
+							bValid = true;
+							break;
+						}
+					}
+				}
+				for (int iI = 0; !bValid && iI < GC.getNumCorporationInfos(); iI++)
 				{
-					bValid = true;
-					break;
+					if (kUnitInfo.getCorporationSpreads((CorporationTypes)iI) > 0)
+					{
+						const int iNeededMissionaries = AI_neededExecutives(pArea, (CorporationTypes)iI);
+
+						if (iNeededMissionaries > 0 && iNeededMissionaries > countCorporationSpreadUnits(pArea, (CorporationTypes)iI))
+						{
+							bValid = true;
+							break;
+						}
+					}
 				}
 			}
+			break;
 		}
-		break;
-	}
-	case UNITAI_HEALER:
-	case UNITAI_HEALER_SEA:
-	{
-		if (!bisNegativePropertyUnit && (AI_unitHealerValue(eUnit) > 0))
+		case UNITAI_ICBM:
 		{
-			bValid = true;
+			if (kUnitInfo.getNukeRange() != -1)
+			{
+				bValid = true;
+			}
+			break;
 		}
-		break;
-	}
-	case UNITAI_PROPERTY_CONTROL:
-	case UNITAI_PROPERTY_CONTROL_SEA:
-	{
-		if (bisPositivePropertyUnit)
+		case UNITAI_WORKER_SEA:
 		{
-			bValid = true;
+			if (kUnitInfo.getNumBuilds() > 0)
+			{
+				bValid = true;
+			}
+			break;
 		}
-		break;
-	}
-	case UNITAI_INVESTIGATOR:
-	{
-		if (kUnitInfo.getInvestigation() > 0 && !bisNegativePropertyUnit)
+		case UNITAI_ATTACK_SEA:
 		{
-			bValid = true;
+			if (kUnitInfo.getCombat() > 0)
+			{
+				bValid = true;
+			}
+			break;
 		}
-		break;
-	}
-	case UNITAI_INFILTRATOR:
-	{
-		if (kUnitInfo.isBlendIntoCity())
+		case UNITAI_RESERVE_SEA:
 		{
-			bValid = true;
+			if (kUnitInfo.getCombat() > 0)
+			{
+				bValid = true;
+			}
+			break;
 		}
-		break;
-	}
-	case UNITAI_SEE_INVISIBLE:
-	case UNITAI_SEE_INVISIBLE_SEA:
-	{
-		if (!bisNegativePropertyUnit && (kUnitInfo.getNumSeeInvisibleTypes() > 0 || kUnitInfo.getNumVisibilityIntensityTypes() > 0))
+		case UNITAI_ESCORT_SEA:
 		{
-			bValid = true;
+			if (kUnitInfo.getCombat() > 0)
+			{
+				bValid = true;
+			}
+			break;
 		}
-		break;
-	}
-	case UNITAI_CITY_DEFENSE:
-	{
-		if (!bisNegativePropertyUnit && kUnitInfo.getCombat() > 0 && !kUnitInfo.isNoDefensiveBonus())
+		case UNITAI_EXPLORE_SEA:
 		{
-			bValid = true;
+			if (kUnitInfo.getCombat() > 0 && !(kUnitInfo.isNoRevealMap()))
+			{
+				bValid = true;
+			}
+			break;
 		}
-		break;
-	}
-	case UNITAI_CITY_COUNTER:
-	{
-		if (kUnitInfo.getCombat() > 0 && !bisNegativePropertyUnit && !kUnitInfo.isNoDefensiveBonus())
+		case UNITAI_ASSAULT_SEA:
+		case UNITAI_SETTLER_SEA:
+		{
+			if (kUnitInfo.getCargoSpace() > 0 && kUnitInfo.getSpecialCargo() == NO_SPECIALUNIT)
+			{
+				bValid = true;
+			}
+			break;
+		}
+		case UNITAI_MISSIONARY_SEA:
+		case UNITAI_SPY_SEA:
+		case UNITAI_CARRIER_SEA:
+		case UNITAI_MISSILE_CARRIER_SEA:
+		{
+			if (kUnitInfo.getCargoSpace() > 0 && kUnitInfo.getSpecialCargo() != NO_SPECIALUNIT)
+			{
+				for (int i = 0; i < NUM_UNITAI_TYPES; ++i)
+				{
+					if (GC.getSpecialUnitInfo((SpecialUnitTypes)kUnitInfo.getSpecialCargo()).isCarrierUnitAIType(eUnitAI))
+					{
+						bValid = true;
+						break;
+					}
+				}
+			}
+			break;
+		}
+		case UNITAI_PIRATE_SEA:
+		{
+			if (kUnitInfo.isAlwaysHostile() && kUnitInfo.isHiddenNationality())
+			{
+				bValid = true;
+			}
+			break;
+		}
+		case UNITAI_ATTACK_AIR:
+		{
+			if (kUnitInfo.getAirCombat() > 0 && !kUnitInfo.isSuicide())
+			{
+				bValid = true;
+			}
+			break;
+		}
+		case UNITAI_DEFENSE_AIR:
 		{
 			if (kUnitInfo.getInterceptionProbability() > 0)
 			{
 				bValid = true;
-				break;
 			}
-
-			foreach_(const STD_PAIR(UnitTypes, int)& modifier, kUnitInfo.getUnitDefenseModifiers())
+			break;
+		}
+		case UNITAI_CARRIER_AIR:
+		{
+			if (kUnitInfo.getAirCombat() > 0 && kUnitInfo.getInterceptionProbability() > 0)
 			{
-				if (modifier.second > 0)
-				{
-					bValid = true;
-					break;
-				}
+				bValid = true;
 			}
-			for (iI = 0; !bValid && iI < numUnitCombatInfos; iI++)
+			break;
+		}
+		case UNITAI_MISSILE_AIR:
+		{
+			if (kUnitInfo.getAirCombat() > 0 && kUnitInfo.isSuicide())
 			{
-				if (kUnitInfo.getUnitCombatModifier(iI) > 0)
-				{
-					bValid = true;
-					break;
-				}
+				bValid = true;
 			}
+			break;
 		}
-		break;
-	}
-	case UNITAI_CITY_SPECIAL:
-	{
-		if (!bisNegativePropertyUnit)
+		case UNITAI_ATTACK_CITY_LEMMING:
+		case UNITAI_PROPHET:
+		case UNITAI_ARTIST:
+		case UNITAI_SCIENTIST:
+		case UNITAI_GENERAL:
+		case UNITAI_GREAT_HUNTER:
+		case UNITAI_GREAT_ADMIRAL:
+		case UNITAI_MERCHANT:
+		case UNITAI_ENGINEER:
+		case UNITAI_SPY:
 		{
-			bValid = true;
+			break;
 		}
-		break;
-	}
-	case UNITAI_PARADROP:
-	{
-		if (kUnitInfo.getDropRange() > 0)
-		{
-			bValid = true;
-		}
-		break;
-	}
-	case UNITAI_EXPLORE:
-	{
-		bUndefinedValid = true;
-		if (kUnitInfo.getCombat() > 0 && !(kUnitInfo.isNoRevealMap()))
-		{
-			bValid = true;
-		}
-		break;
-	}
-	case UNITAI_MISSIONARY:
-	{
-		if (pArea != NULL)
-		{
-			for (iI = 0; iI < GC.getNumReligionInfos(); iI++)
-			{
-				if (kUnitInfo.getReligionSpreads((ReligionTypes)iI) > 0)
-				{
-					const int iNeededMissionaries = AI_neededMissionaries(pArea, (ReligionTypes)iI);
-
-					if (iNeededMissionaries > 0 && iNeededMissionaries > countReligionSpreadUnits(pArea, (ReligionTypes)iI))
-					{
-						bValid = true;
-						break;
-					}
-				}
-			}
-			for (iI = 0; !bValid && iI < GC.getNumCorporationInfos(); iI++)
-			{
-				if (kUnitInfo.getCorporationSpreads((CorporationTypes)iI) > 0)
-				{
-					const int iNeededMissionaries = AI_neededExecutives(pArea, (CorporationTypes)iI);
-
-					if (iNeededMissionaries > 0 && iNeededMissionaries > countCorporationSpreadUnits(pArea, (CorporationTypes)iI))
-					{
-						bValid = true;
-						break;
-					}
-				}
-			}
-		}
-		break;
-	}
-	case UNITAI_PROPHET:
-	case UNITAI_ARTIST:
-	case UNITAI_SCIENTIST:
-	case UNITAI_GENERAL:
-	case UNITAI_GREAT_HUNTER:
-	case UNITAI_GREAT_ADMIRAL:
-	case UNITAI_MERCHANT:
-	case UNITAI_ENGINEER:
-	case UNITAI_SPY:
-	{
-		break;
-	}
-	case UNITAI_ICBM:
-	{
-		if (kUnitInfo.getNukeRange() != -1)
-		{
-			bValid = true;
-		}
-		break;
-	}
-	case UNITAI_WORKER_SEA:
-	{
-		if (kUnitInfo.getNumBuilds() > 0)
-		{
-			bValid = true;
-		}
-		break;
-	}
-	case UNITAI_ATTACK_SEA:
-	{
-		if (kUnitInfo.getCombat() > 0)
-		{
-			bValid = true;
-		}
-		break;
-	}
-	case UNITAI_RESERVE_SEA:
-	{
-		if (kUnitInfo.getCombat() > 0)
-		{
-			bValid = true;
-		}
-		break;
-	}
-	case UNITAI_ESCORT_SEA:
-	{
-		if (kUnitInfo.getCombat() > 0)
-		{
-			bValid = true;
-		}
-		break;
-	}
-	case UNITAI_EXPLORE_SEA:
-	{
-		if (kUnitInfo.getCombat() > 0 && !(kUnitInfo.isNoRevealMap()))
-		{
-			bValid = true;
-		}
-		break;
-	}
-	case UNITAI_ASSAULT_SEA:
-	case UNITAI_SETTLER_SEA:
-	{
-		if (kUnitInfo.getCargoSpace() > 0 && kUnitInfo.getSpecialCargo() == NO_SPECIALUNIT)
-		{
-			bValid = true;
-		}
-		break;
-	}
-	case UNITAI_MISSIONARY_SEA:
-	case UNITAI_SPY_SEA:
-	case UNITAI_CARRIER_SEA:
-	case UNITAI_MISSILE_CARRIER_SEA:
-	{
-		if (kUnitInfo.getCargoSpace() > 0 && kUnitInfo.getSpecialCargo() != NO_SPECIALUNIT)
-		{
-			for (int i = 0; i < NUM_UNITAI_TYPES; ++i)
-			{
-				if (GC.getSpecialUnitInfo((SpecialUnitTypes)kUnitInfo.getSpecialCargo()).isCarrierUnitAIType(eUnitAI))
-				{
-					bValid = true;
-					break;
-				}
-			}
-		}
-		break;
-	}
-	case UNITAI_PIRATE_SEA:
-	{
-		if (kUnitInfo.isAlwaysHostile() && kUnitInfo.isHiddenNationality())
-		{
-			bValid = true;
-		}
-		break;
-	}
-	case UNITAI_ATTACK_AIR:
-	{
-		if (kUnitInfo.getAirCombat() > 0 && !kUnitInfo.isSuicide())
-		{
-			bValid = true;
-		}
-		break;
-	}
-	case UNITAI_DEFENSE_AIR:
-	{
-		if (kUnitInfo.getInterceptionProbability() > 0)
-		{
-			bValid = true;
-		}
-		break;
-	}
-	case UNITAI_CARRIER_AIR:
-	{
-		if (kUnitInfo.getAirCombat() > 0 && kUnitInfo.getInterceptionProbability() > 0)
-		{
-			bValid = true;
-		}
-		break;
-	}
-	case UNITAI_MISSILE_AIR:
-	{
-		if (kUnitInfo.getAirCombat() > 0 && kUnitInfo.isSuicide())
-		{
-			bValid = true;
-		}
-		break;
-	}
-	case UNITAI_ATTACK_CITY_LEMMING:
-	{
-		bValid = false;
-		break;
-	}
-	default:
-	{
-		FErrorMsg("error");
-		break;
-	}
+		default: FErrorMsg("error");
 	}
 
-	if (bValid && !bUndefinedValid && !kUnitInfo.getUnitAIType(eUnitAI))
-	{
-		bValid = false;
-	}
-
-	if (!bValid)
+	if (!bValid || !bUndefinedValid && !kUnitInfo.getUnitAIType(eUnitAI))
 	{
 		return 0;
 	}
 
 	PropertyTypes ePropertyRequested = (criteria == NULL ? NO_PROPERTY : criteria->m_eProperty);
 	UnitCombatTypes eHealCombatClassRequested = (criteria == NULL ? NO_UNITCOMBAT : criteria->m_eHealUnitCombat);
-	InvisibleTypes eVisibilityRequested = (criteria == NULL ? NO_INVISIBLE : criteria->m_eVisibility);
 
-	int iCombatValue = GC.getGame().AI_combatValue(eUnit);
-	int iHealerValue = AI_unitHealerValue(eUnit, eHealCombatClassRequested);
-	int iPropertyValue = AI_unitPropertyValue(eUnit, ePropertyRequested);
+	const int iCombatValue = GC.getGame().AI_combatValue(eUnit);
+	const int iHealerValue = AI_unitHealerValue(eUnit, eHealCombatClassRequested);
+	const int iPropertyValue = AI_unitPropertyValue(eUnit, ePropertyRequested);
 
-	int iValue, iTempValue, iAdjustor;
+	int iValue;
 
 	if (ePropertyRequested != NO_PROPERTY && iPropertyValue <= 0)
 	{
@@ -10817,293 +10802,61 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 	}
 	else
 	{
-		iValue = 1;
-
-		iValue += kUnitInfo.getAIWeight();
-
-		int iFastMoverMultiplier = 1;
-		bool bHasBombardValue = false;
-		bool bNoBombardValue = true;
-		int iDefenseModifier = kUnitInfo.getDefenseCombatModifier();
+		iValue = 1 + kUnitInfo.getAIWeight();
 
 		switch (eUnitAI)
 		{
-		case UNITAI_ANIMAL:
-		case UNITAI_SUBDUED_ANIMAL:
-		case UNITAI_BARB_CRIMINAL:
-			break;
-
-		case UNITAI_SETTLE:
-			iValue += (kUnitInfo.getMoves() * 100);
-			break;
-
-		case UNITAI_WORKER:
-			iValue += kUnitInfo.getNumBuilds();
-			iValue += kUnitInfo.getMoves() * iValue / 2;
-			//	Scale by how fast a worker works - the extra '4' is a fudge factor
-			//	to make worker values (somewhat) comparable to military unit values
-			//	now that we have workers that can upgrade to military and we need to
-			//	compare (at least very roughly)
-			iValue = iValue * kUnitInfo.getWorkRate() / 400;
-			break;
-
-		case UNITAI_ATTACK:
-			//	For now the AI cannot cope with bad prroperty values on anything but hunter or pillage units
-			if (iPropertyValue < 0)
+			case UNITAI_ANIMAL:
+			case UNITAI_SUBDUED_ANIMAL:
+			case UNITAI_BARB_CRIMINAL:
 			{
-				iValue = 0;
 				break;
 			}
-
-			iFastMoverMultiplier = AI_isDoStrategy(AI_STRATEGY_FASTMOVERS) ? 3 : 1;
-
-			iValue += iCombatValue;
-			iValue += ((iCombatValue * (kUnitInfo.getMoves() - 1) * iFastMoverMultiplier) / 3);
-			iValue += ((iCombatValue * kUnitInfo.getWithdrawalProbability()) / 100);
-
-			if (kUnitInfo.getCombatLimit() < 100)
+			case UNITAI_SETTLE:
 			{
-				iValue -= (iCombatValue * (125 - kUnitInfo.getCombatLimit())) / 100;
-			}
-			//TB Combat Mods Begin
-			if (GC.getGame().isModderGameOption(MODDERGAMEOPTION_DEFENDER_WITHDRAW))
-			{
-				iValue += ((iCombatValue * kUnitInfo.getPursuit()) / 100);
-			}
-			if (kUnitInfo.getOverrun() > 0)
-			{
-				iValue += ((iCombatValue * kUnitInfo.getOverrun()) / 100);
-			}
-			if (kUnitInfo.getUnyielding() > 0)
-			{
-				iValue += ((iCombatValue * kUnitInfo.getUnyielding()) / 100);
-			}
-			if (kUnitInfo.getKnockback() > 0)
-			{
-				iValue += ((iCombatValue * kUnitInfo.getKnockback()) / 100);
-			}
-#ifdef BATTLEWORN
-			if (kUnitInfo.getStrAdjperRnd() != 0)
-			{
-				iValue += ((iCombatValue * kUnitInfo.getStrAdjperRnd()) / 100);
-			}
-			if (kUnitInfo.getStrAdjperAtt() != 0)
-			{
-				iValue += ((iCombatValue * kUnitInfo.getStrAdjperAtt()) / 100);
-			}
-			if (kUnitInfo.getWithdrawAdjperAtt() != 0)
-			{
-				iValue += ((iCombatValue * kUnitInfo.getWithdrawAdjperAtt()) / 100);
-			}
-#endif // BATTLEWORN
-			//TB Combat Mods End
-					//	Also useful if attack stacks can make use of defensive terrain, though
-					//	its not a huge factor since we can assume some defensive units will be
-					//	along for the ride
-			if (kUnitInfo.isNoDefensiveBonus())
-			{
-				iValue *= 4;
-				iValue /= 5;
-			}
-
-			//	Combat modifiers matter for attack units
-			for (iI = 0; iI < numUnitCombatInfos; iI++)
-			{
-				iValue += ((iCombatValue * kUnitInfo.getUnitCombatModifier(iI) * AI_getUnitCombatWeight((UnitCombatTypes)iI)) / 10000);
-			}
-
-			break;
-
-		case UNITAI_ATTACK_CITY:
-			//	For now the AI cannot cope with bad prroperty values on anything but hunter or pillage units
-			if (iPropertyValue < 0)
-			{
-				iValue = 0;
+				iValue += (kUnitInfo.getMoves() * 100);
 				break;
 			}
-			/************************************************************************************************/
-			/* BETTER_BTS_AI_MOD					  02/24/10								jdog5000	  */
-			/*																							  */
-			/* War strategy AI																			  */
-			/*															   Rewritten by Fuyu			  */
-			/************************************************************************************************/
-					// Effect army composition to have more collateral/bombard units
-			iFastMoverMultiplier = AI_isDoStrategy(AI_STRATEGY_FASTMOVERS) ? 4 : 1;
-
-			iTempValue = ((iCombatValue * iCombatValue) / 75) + (iCombatValue / 2);
-			iValue += iTempValue;
-			if (kUnitInfo.isNoDefensiveBonus())
+			case UNITAI_WORKER:
 			{
-				//iValue -= iTempValue / 2;
-				iValue -= iTempValue / 4; // K-Mod. (I'd say knights, tanks, etc. are very good for city attack...)
+				iValue += kUnitInfo.getNumBuilds();
+				iValue += kUnitInfo.getMoves() * iValue / 2;
+				//	Scale by how fast a worker works - the extra '4' is a fudge factor
+				//	to make worker values (somewhat) comparable to military unit values
+				//	now that we have workers that can upgrade to military and we need to
+				//	compare (at least very roughly)
+				iValue = iValue * kUnitInfo.getWorkRate() / 400;
+				break;
 			}
-			// K-Mod (how is drop range a disadvantage?)
-			//if (kUnitInfo.getDropRange() > 0)
-			//{
-			//	iValue -= iTempValue / 2;
-			//}
-			if (kUnitInfo.isFirstStrikeImmune())
+			case UNITAI_ATTACK:
 			{
-				iValue += (iTempValue * 8) / 100;
-			}
-
-			bHasBombardValue = false;
-			bNoBombardValue = true;
-			if (kUnitInfo.getBreakdownChance() > 0 || kUnitInfo.getBombardRate() > 0 || (kUnitInfo.getCollateralDamageMaxUnits() > 0 && kUnitInfo.getCollateralDamage() > 0))
-			{
-				// Army composition needs to scale with army size, bombard unit potency
-
-				//modified AI_calculateTotalBombard(DOMAIN_LAND) code
-				int iII;
-				int iTotalBombard = 0;
-				int iThisBombard = kUnitInfo.getBombardRate();
-				int iSiegeUnits = 0;
-				int iSiegeImmune = 0;
-				int iTotalSiegeMaxUnits = 0;
-				bNoBombardValue = false;
-				bHasBombardValue = true;
-
-				for (iII = 0; iII < GC.getNumUnitInfos(); iII++)
+				//	For now the AI cannot cope with bad prroperty values on anything but hunter or pillage units
+				if (iPropertyValue < 0)
 				{
-					UnitTypes eLoopUnit = (UnitTypes)iII;
-					if (GC.getUnitInfo(eLoopUnit).getDomainType() == DOMAIN_LAND)
-					{
-						int iUnitCount = getUnitCount(eLoopUnit);
-						int iBombardRate = GC.getUnitInfo(eLoopUnit).getBombardRate();
-						int iBreakdown = (GC.getUnitInfo(eLoopUnit).getBreakdownChance() * GC.getUnitInfo(eLoopUnit).getBreakdownDamage()) / 10;
-
-						if (iBombardRate > 0)
-						{
-							iTotalBombard += ((iBombardRate * iUnitCount * ((GC.getUnitInfo(eLoopUnit).isIgnoreBuildingDefense()) ? 3 : 2)) / 2);
-						}
-						if (iBreakdown > 0)
-						{
-							iThisBombard += iBreakdown;
-							iTotalBombard += ((iBreakdown * iUnitCount * ((GC.getUnitInfo(eLoopUnit).isIgnoreNoEntryLevel()) ? 4 : 2)) / 2);
-						}
-
-						int iBombRate = GC.getUnitInfo(eLoopUnit).getBombRate();
-						if (iBombRate > 0)
-						{
-							iThisBombard += iBombRate;
-							iTotalBombard += iBombRate * iUnitCount;
-						}
-
-						int iCollateralDamageMaxUnits = GC.getUnitInfo(eLoopUnit).getCollateralDamageMaxUnits();
-						if (iCollateralDamageMaxUnits > 0 && GC.getUnitInfo(eLoopUnit).getCollateralDamage() > 0)
-						{
-							iTotalSiegeMaxUnits += iCollateralDamageMaxUnits * iUnitCount;
-							iSiegeUnits += iUnitCount;
-						}
-						else if (GC.getUnitInfo(eLoopUnit).getUnitCombatCollateralImmune((UnitCombatTypes)kUnitInfo.getUnitCombatType()))
-						{
-							iSiegeImmune += iUnitCount;
-						}
-					}
+					iValue = 0;
+					break;
 				}
 
-				if (iThisBombard == 0)
+
+				iValue += iCombatValue;
 				{
-					bNoBombardValue = true;
+					const int iFastMoverMultiplier = AI_isDoStrategy(AI_STRATEGY_FASTMOVERS) ? 3 : 1;
+					iValue += ((iCombatValue * (kUnitInfo.getMoves() - 1) * iFastMoverMultiplier) / 3);
 				}
-				else if ((100 * iTotalBombard) / (std::max(1, (iThisBombard * AI_totalUnitAIs(UNITAI_ATTACK_CITY)))) >= GC.getDefineINT("BBAI_BOMBARD_ATTACK_CITY_MAX_STACK_FRACTION"))
-				{
-					//too many bombard units already
-					bNoBombardValue = true;
-				}
-
-				int iNumOffensiveUnits = AI_totalUnitAIs(UNITAI_ATTACK_CITY) + AI_totalUnitAIs(UNITAI_ATTACK) + AI_totalUnitAIs(UNITAI_COUNTER) / 2;
-				int iNumDefensiveUnits = AI_totalUnitAIs(UNITAI_CITY_DEFENSE) + AI_totalUnitAIs(UNITAI_RESERVE) + AI_totalUnitAIs(UNITAI_CITY_COUNTER) / 2 + AI_totalUnitAIs(UNITAI_COLLATERAL) / 2;
-				iSiegeUnits += (iSiegeImmune * iNumOffensiveUnits) / std::max(1, iNumOffensiveUnits + iNumDefensiveUnits);
-
-				int iMAX_HIT_POINTS = GC.getMAX_HIT_POINTS();
-
-				int iCollateralDamageMaxUnitsWeight = (100 * (iNumOffensiveUnits - iSiegeUnits)) / std::max(1, iTotalSiegeMaxUnits);
-				iCollateralDamageMaxUnitsWeight = std::min(100, iCollateralDamageMaxUnitsWeight);
-				//to decrease value further for units with low damage limits:
-				int iCollateralDamageLimitWeight = 100 * iMAX_HIT_POINTS - std::max(0, ((iMAX_HIT_POINTS - kUnitInfo.getCollateralDamageLimit()) * (100 - iCollateralDamageMaxUnitsWeight)));
-				iCollateralDamageLimitWeight /= iMAX_HIT_POINTS;
-
-				int iCollateralValue = iCombatValue * kUnitInfo.getCollateralDamage() * GC.getDefineINT("COLLATERAL_COMBAT_DAMAGE");
-				iCollateralValue /= 100;
-				iCollateralValue *= std::max(100, (kUnitInfo.getCollateralDamageMaxUnits() * iCollateralDamageMaxUnitsWeight));
-				iCollateralValue /= 100;
-				iCollateralValue *= iCollateralDamageLimitWeight;
-				iCollateralValue /= 100;
-				iCollateralValue /= iMAX_HIT_POINTS;
-				iValue += iCollateralValue;
-
-				if (!bNoBombardValue && !AI_isDoStrategy(AI_STRATEGY_AIR_BLITZ))
-				{
-					/* original code
-					int iBombardValue = kUnitInfo.getBombardRate() * 4;
-					*/
-					int iBombardValue = /*kUnitInfo.getBombardRate()*/ iThisBombard * ((kUnitInfo.isIgnoreBuildingDefense() || kUnitInfo.isIgnoreNoEntryLevel()) ? 3 : 2);
-					//int iTotalBombardValue = 4 * iTotalBombard;
-					//int iNumBombardUnits = 2 * iTotalBombard / iBombardValue;
-					int iAIDesiredBombardFraction = std::max(5, GC.getDefineINT("BBAI_BOMBARD_ATTACK_STACK_FRACTION")); /*default: 15*/
-					int iActualBombardFraction = (100 * 2 * iTotalBombard) / (iBombardValue * std::max(1, iNumOffensiveUnits));
-					iActualBombardFraction = std::min(100, iActualBombardFraction);
-
-					// K - Mod note : This goal has no dependency on civ size, map size, era, strategy, or anything else that matters
-					// a flat goal of 200... This needs to be fixed. For now, I'll just replace it with something rough.
-					// But this is a future "todo".
-					// int iGoalTotalBombard = 200;
-					int iGoalTotalBombard = (getNumCities() + 3) * (getCurrentEra() + 2) * (AI_isDoStrategy(AI_STRATEGY_CRUSH) ? 10 : 5);
-					int iTempBombardValue = 0;
-					if (iTotalBombard < iGoalTotalBombard) //still less than 200 bombard points
-					{
-						iTempBombardValue = iBombardValue * (iGoalTotalBombard + 7 * (iGoalTotalBombard - iTotalBombard));
-						iTempBombardValue /= iGoalTotalBombard;
-						//iTempBombardValue is at most (8 * iBombardValue)
-					}
-					else
-					{
-						iTempBombardValue *= iGoalTotalBombard;
-						iTempBombardValue /= std::min(2 * iGoalTotalBombard, 2 * iTotalBombard - iGoalTotalBombard);
-					}
-
-					if (iActualBombardFraction < iAIDesiredBombardFraction)
-					{
-						iBombardValue *= (iAIDesiredBombardFraction + 5 * (iAIDesiredBombardFraction - iActualBombardFraction));
-						iBombardValue /= iAIDesiredBombardFraction;
-						//new iBombardValue is at most (6 * old iBombardValue)
-					}
-					else
-					{
-						iBombardValue *= iAIDesiredBombardFraction;
-						iBombardValue /= std::max(1, iActualBombardFraction);
-					}
-
-					if (iTempBombardValue > iBombardValue)
-					{
-						iBombardValue = iTempBombardValue;
-					}
-					iBombardValue *= (100 + GC.getDefineINT("C2C_ROUGH_BOMBARD_VALUE_MODIFIER"));
-					iBombardValue /= 100;
-
-					iValue += iBombardValue;
-				}
-			}
-			//TB Adjust: If the unit doesn't have any bombard value, it can still be beneficial to have collateral damage (Rhinos for example)
-			if (!bHasBombardValue)
-			{
-				iValue += ((iCombatValue * kUnitInfo.getCollateralDamage()) / 200);
-			}
-			//TB Adjust: If the unit has bombard value(bHasBombardValue) AND the stack still wants bombard units(!bNoBombardValue) (or the unit doesn't have any bombard value anyhow) then basic modifiers apply.
-			//This is intended to keep bombarding siege units from evaluating stronger than normal invading units like swordsman for the basic NON-Bombard stack fill needs.
-			//Such siege units often can't seal the deal and actually invade the city despite being very necessary for the stack.
-			//Before this change we're getting an overbuild of siege units like rams even after the bombard needs are met for the stack.
-			if ((bHasBombardValue && !bNoBombardValue) || !bHasBombardValue)
-			{
-				iValue += ((iCombatValue * kUnitInfo.getCityAttackModifier()) / 50);
-				iValue += ((iCombatValue * (kUnitInfo.getMoves() - 1) * iFastMoverMultiplier) / 4); // K-Mod put in -1 !
 				iValue += ((iCombatValue * kUnitInfo.getWithdrawalProbability()) / 100);
-				//TB Combat Mods Begin
 
+				if (kUnitInfo.getCombatLimit() < 100)
+				{
+					iValue -= (iCombatValue * (125 - kUnitInfo.getCombatLimit())) / 100;
+				}
+				//TB Combat Mods Begin
+				if (GC.getGame().isModderGameOption(MODDERGAMEOPTION_DEFENDER_WITHDRAW))
+				{
+					iValue += ((iCombatValue * kUnitInfo.getPursuit()) / 100);
+				}
 				if (kUnitInfo.getOverrun() > 0)
 				{
-					iValue += ((iCombatValue * kUnitInfo.getOverrun()) / 80);
+					iValue += ((iCombatValue * kUnitInfo.getOverrun()) / 100);
 				}
 				if (kUnitInfo.getUnyielding() > 0)
 				{
@@ -11111,7 +10864,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 				}
 				if (kUnitInfo.getKnockback() > 0)
 				{
-					iValue += ((iCombatValue * kUnitInfo.getKnockback()) / 80);
+					iValue += ((iCombatValue * kUnitInfo.getKnockback()) / 100);
 				}
 #ifdef BATTLEWORN
 				if (kUnitInfo.getStrAdjperRnd() != 0)
@@ -11127,598 +10880,826 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 					iValue += ((iCombatValue * kUnitInfo.getWithdrawAdjperAtt()) / 100);
 				}
 #endif // BATTLEWORN
-			}
-			/************************************************************************************************/
-			/* BETTER_BTS_AI_MOD					   END												  */
-			/************************************************************************************************/
-			break;
-
-		case UNITAI_COLLATERAL:
-			iValue += iCombatValue;
-			iValue += ((iCombatValue * kUnitInfo.getCollateralDamage()) / 50);
-			iValue += ((iCombatValue * kUnitInfo.getMoves()) / 4);
-			iValue += ((iCombatValue * kUnitInfo.getWithdrawalProbability()) / 25);
-			//TB Combat Mods Begin
-			iValue += ((iCombatValue * kUnitInfo.getWithdrawalProbability() * kUnitInfo.getEarlyWithdraw()) / 25);
-			iValue += ((iCombatValue * kUnitInfo.getOverrun()) / 75);
-			iValue += ((iCombatValue * kUnitInfo.getKnockback()) / 100);
-			iValue += ((iCombatValue * kUnitInfo.getCityAttackModifier()) / 100);// was -= ???
-			//TB Combat Mods End
-			break;
-
-		case UNITAI_PILLAGE:
-			iValue -= AI_unitPropertyValue(eUnit) / 30;	//	Bad properties are good for pillagers
-			iValue += iCombatValue;
-			iValue += (iCombatValue * kUnitInfo.getMoves());
-			iValue += ((iCombatValue * kUnitInfo.getRepel()) / 100);
-			break;
-
-		case UNITAI_RESERVE:
-			//	For now the AI cannot cope with bad property values on anything but hunter or pillage units
-			if (iPropertyValue < 0)
-			{
-				iValue = 0;
-				break;
-			}
-			iValue += iCombatValue;
-			iValue += ((iCombatValue * kUnitInfo.getCollateralDamage()) / 200);
-			for (iI = 0; iI < numUnitCombatInfos; iI++)
-			{
-				//			int iCombatModifier = kUnitInfo.getUnitCombatModifier(iI);
-				//			iCombatModifier = (iCombatModifier < 40) ? iCombatModifier : (40 + (iCombatModifier - 40) / 2);
-				//			iValue += ((iCombatValue * iCombatModifier) / 100);
-				iValue += ((iCombatValue * kUnitInfo.getUnitCombatModifier(iI) * AI_getUnitCombatWeight((UnitCombatTypes)iI)) / 12000);
-			}
-			iValue += ((iCombatValue * kUnitInfo.getMoves()) / 2);
-			break;
-
-		case UNITAI_PILLAGE_COUNTER:
-			//	For now the AI cannot cope with bad property values on anything but hunter or pillage units
-			if (iPropertyValue < 0)
-			{
-				iValue = 0;
-				break;
-			}
-			//TB Combat Mods Begin
-			iValue += iCombatValue;
-			iValue += ((iCombatValue * kUnitInfo.getUnyielding()) / 100);
-			iValue += ((iCombatValue * kUnitInfo.getPursuit()) / 100);
-			iValue += ((iCombatValue * kUnitInfo.getMoves()) / 2);
-			break;
-			//TB Combat Mods End
-
-		case UNITAI_COUNTER:
-			//	For now the AI cannot cope with bad prroperty values on anything but hunter or pillage units
-			if (iPropertyValue < 0)
-			{
-				iValue = 0;
-				break;
-			}
-			iValue += (iCombatValue / 2);
-			foreach_(const STD_PAIR(UnitTypes, int)& modifier, kUnitInfo.getUnitAttackModifiers())
-			{
-				iValue += ((iCombatValue * modifier.second * AI_getUnitWeight(modifier.first)) / 7500);
-				iValue += ((iCombatValue * (kUnitInfo.isTargetUnit(modifier.first) ? 50 : 0)) / 100);
-			}
-			for (iI = 0; iI < numUnitCombatInfos; iI++)
-			{
-				//			int iCombatModifier = kUnitInfo.getUnitCombatModifier(iI);
-				//			iCombatModifier = (iCombatModifier < 40) ? iCombatModifier : (40 + (iCombatModifier - 40) / 2);
-				//			iValue += ((iCombatValue * iCombatModifier) / 100);
-				iValue += ((iCombatValue * kUnitInfo.getUnitCombatModifier(iI) * AI_getUnitCombatWeight((UnitCombatTypes)iI)) / 10000);
-				iValue += ((iCombatValue * (kUnitInfo.getTargetUnitCombat(iI) ? 50 : 0)) / 100);
-			}
-			for (iI = 0; iI < GC.getNumUnitInfos(); iI++)
-			{
-				if (GC.getUnitInfo((UnitTypes)iI).isDefendAgainstUnit(eUnit))
+				//TB Combat Mods End
+				//	Also useful if attack stacks can make use of defensive terrain, though
+				//	its not a huge factor since we can assume some defensive units will be
+				//	along for the ride
+				if (kUnitInfo.isNoDefensiveBonus())
 				{
-					iValue += (50 * iCombatValue) / 100;
+					iValue *= 4;
+					iValue /= 5;
 				}
 
-				const int iUnitCombat = kUnitInfo.getUnitCombatType();
-				if (NO_UNITCOMBAT != iUnitCombat && GC.getUnitInfo((UnitTypes)iI).getDefenderUnitCombat(iUnitCombat))
+				//	Combat modifiers matter for attack units
+				for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 				{
-					iValue += (50 * iCombatValue) / 100;
+					iValue += ((iCombatValue * kUnitInfo.getUnitCombatModifier(iI) * AI_getUnitCombatWeight((UnitCombatTypes)iI)) / 10000);
 				}
-			}
 
-			iValue += ((iCombatValue * kUnitInfo.getMoves()) / 2);
-			iValue += ((iCombatValue * kUnitInfo.getWithdrawalProbability()) / 100);
-			//TB Combat Mods Begin
-			iValue += ((iCombatValue * kUnitInfo.getPursuit()) / 150);
-			iValue += ((iCombatValue * kUnitInfo.getOverrun()) / 50);
-			iValue += ((iCombatValue * kUnitInfo.getUnyielding()) / 50);
-			//TB Combat Mods End
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD					  03/20/10								jdog5000	  */
-	/*																							  */
-	/* War strategy AI																			  */
-	/************************************************************************************************/
-			//iValue += (kUnitInfo.getInterceptionProbability() * 2);
-			if (kUnitInfo.getInterceptionProbability() > 0)
-			{
-				iTempValue = kUnitInfo.getInterceptionProbability();
-
-				iTempValue *= (25 + std::min(175, GET_TEAM(getTeam()).AI_getRivalAirPower()));
-				iTempValue /= 100;
-
-				iValue += iTempValue;
-			}
-			/************************************************************************************************/
-			/* BETTER_BTS_AI_MOD					   END												  */
-			/************************************************************************************************/
-			break;
-
-		case UNITAI_CITY_DEFENSE:
-			//	For now the AI cannot cope with bad property values on anything but hunter or pillage units
-			if (iPropertyValue < 0)
-			{
-				iValue = 0;
 				break;
 			}
-			iValue += ((iCombatValue * 2) / 3);
-			iValue += ((iCombatValue * kUnitInfo.getCityDefenseModifier()) / 25);
-			//	The '30' scaling is empirical based on what seems reasonable for crime fighting units
-			// this is causing the AI to select prop control for defense.
-			/*iValue += AI_unitPropertyValue(eUnit)/(ePropertyRequested != NO_PROPERTY ? 30 : 60);*/
-			//	Combat modifiers matter for defensive units
-
-
-			for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+			case UNITAI_ATTACK_CITY:
 			{
-				iTempValue = ((iCombatValue * kUnitInfo.getUnitCombatModifier(iI) * AI_getUnitCombatWeight((UnitCombatTypes)iI)) / 12000);
-				iValue += iTempValue;
-			}
-
-			//  ls612: consider that a unit with OnlyDefensive is less useful
-
-			if (kUnitInfo.isOnlyDefensive())
-			{
-				iValue *= 4;
-				iValue /= 5;
-			}
-
-			//TB Combat Mods Begin
-			iValue += ((iCombatValue * kUnitInfo.getPursuit()) / 100);
-			iValue += ((iCombatValue * kUnitInfo.getRepel()) / 85);
-			iValue += ((iCombatValue * kUnitInfo.getFortRepel()) / 100);
-			iValue += ((iCombatValue * kUnitInfo.getUnyielding()) / 100);
-#ifdef BATTLEWORN
-			if (kUnitInfo.getStrAdjperRnd() != 0)
-			{
-				iValue += ((iCombatValue * kUnitInfo.getStrAdjperRnd()) / 100);
-			}
-			if (kUnitInfo.getStrAdjperDef() != 0)
-			{
-				iValue += ((iCombatValue * kUnitInfo.getStrAdjperDef()) / 100);
-			}
-#endif // BATTLEWORN
-			//TB Combat Mods End
-			break;
-		case UNITAI_CITY_COUNTER:
-			//	For now the AI cannot cope with bad property values on anything but hunter or pillage units
-			if (iPropertyValue < 0)
-			{
-				iValue = 0;
-				break;
-			}
-			iValue += ((iCombatValue * 2) / 3);
-			iValue += ((iCombatValue * kUnitInfo.getCityDefenseModifier()) / 75);
-			//	The '30' scaling is empirical based on what seems reasonable for crime fighting units
-			// this is causing the AI to select prop control for defense.
-			/*iValue += AI_unitPropertyValue(eUnit)/(ePropertyRequested != NO_PROPERTY ? 30 : 60);*/
-			//	Combat modifiers matter for defensive units
-
-
-			for (iI = 0; iI < numUnitCombatInfos; iI++)
-			{
-				iTempValue = ((iCombatValue * kUnitInfo.getUnitCombatModifier(iI) * AI_getUnitCombatWeight((UnitCombatTypes)iI)) / 6000);
-				iValue += iTempValue;
-			}
-			//  ls612: consider that a unit with OnlyDefensive is less useful
-
-			if (kUnitInfo.isOnlyDefensive())
-			{
-				iValue *= 4;
-				iValue /= 5;
-			}
-
-			//TB Combat Mods Begin
-			iValue += ((iCombatValue * kUnitInfo.getPursuit()) / 100);
-			iValue += ((iCombatValue * kUnitInfo.getRepel()) / 85);
-			iValue += ((iCombatValue * kUnitInfo.getFortRepel()) / 100);
-			iValue += ((iCombatValue * kUnitInfo.getUnyielding()) / 100);
-#ifdef BATTLEWORN
-			if (kUnitInfo.getStrAdjperRnd() != 0)
-			{
-				iValue += ((iCombatValue * kUnitInfo.getStrAdjperRnd()) / 100);
-			}
-			if (kUnitInfo.getStrAdjperDef() != 0)
-			{
-				iValue += ((iCombatValue * kUnitInfo.getStrAdjperDef()) / 100);
-			}
-#endif // BATTLEWORN
-			//TB Combat Mods End
-			break;
-
-		case UNITAI_HEALER:
-		case UNITAI_HEALER_SEA:
-			iValue += iHealerValue;
-			//	Drop through
-		case UNITAI_PROPERTY_CONTROL:
-		case UNITAI_PROPERTY_CONTROL_SEA:
-		case UNITAI_CITY_SPECIAL:
-			//	For now the AI cannot cope with bad property values on anything but hunter or pillage units
-			if (iPropertyValue < 0)
-			{
-				iValue = 0;
-				break;
-			}
-			//	The '30' scaling is empirical based on what seems reasonable for crime fighting units
-			iValue += iPropertyValue;
-			iValue += iCombatValue;
-			break;
-		case UNITAI_PARADROP:
-			//	For now the AI cannot cope with bad property values on anything but hunter or pillage units
-			if (iPropertyValue < 0)
-			{
-				iValue = 0;
-				break;
-			}
-			iValue += (iCombatValue / 2);
-			iValue += ((iCombatValue * kUnitInfo.getCityDefenseModifier()) / 100);
-			iValue /= (kUnitInfo.isOnlyDefensive() ? 2 : 1);
-			foreach_(const STD_PAIR(UnitTypes, int)& modifier, kUnitInfo.getUnitAttackModifiers())
-			{
-				iValue += ((iCombatValue * modifier.second * AI_getUnitWeight(modifier.first)) / 10000);
-				iValue += ((iCombatValue * (kUnitInfo.isDefendAgainstUnit(modifier.first) ? 50 : 0)) / 100);
-			}
-			for (iI = 0; iI < numUnitCombatInfos; iI++)
-			{
-				iValue += ((iCombatValue * kUnitInfo.getUnitCombatModifier(iI) * AI_getUnitCombatWeight((UnitCombatTypes)iI)) / 10000);
-				iValue += ((iCombatValue * (kUnitInfo.getDefenderUnitCombat(iI) ? 50 : 0)) / 100);
-			}
-
-			if (kUnitInfo.getInterceptionProbability() > 0)
-			{
-				int iTempValue = kUnitInfo.getInterceptionProbability();
-
-				iTempValue *= (25 + std::min(125, GET_TEAM(getTeam()).AI_getRivalAirPower()));
-				iTempValue /= 50;
-
-				iValue += iTempValue;
-			}
-			break;
-
-		case UNITAI_EXPLORE:
-		{
-			iValue += kUnitInfo.getMoves() * kUnitInfo.getMoves() * (100 + iCombatValue) / 4;
-			if (kUnitInfo.isNoBadGoodies())
-			{
-				iValue *= 2;
-			}
-			//need to add vision and terrain factors here.
-			break;
-		}
-		case UNITAI_HUNTER:
-		{
-			iValue += iCombatValue * 2 / (kUnitInfo.isOnlyDefensive() ? 2 : 1);
-			//TB Combat Mods Begin
-			iValue += iCombatValue * kUnitInfo.getPursuit() / 100;
-			iValue += iCombatValue * kUnitInfo.getUnyielding() / 200;
-#ifdef BATTLEWORN
-			iValue += iCombatValue * kUnitInfo.getWithdrawAdjperAtt() / 100;
-#endif
-			//TB Combat Mods End
-			iValue *= 100 + kUnitInfo.getMoves() * 25;
-			iValue *= 100 + kUnitInfo.getAnimalCombatModifier() * 2;
-			iValue /= 10000;
-			break;
-		}
-		case UNITAI_HUNTER_ESCORT:
-		{
-			iValue += iCombatValue;
-			iValue *= 100 + kUnitInfo.getMoves() * 25;
-			iValue /= 100;
-			break;
-		}
-		case UNITAI_MISSIONARY:
-			iValue += (kUnitInfo.getMoves() * 100);
-			if (getStateReligion() != NO_RELIGION)
-			{
-				if (kUnitInfo.getReligionSpreads(getStateReligion()) > 0)
+				//	For now the AI cannot cope with bad prroperty values on anything but hunter or pillage units
+				if (iPropertyValue < 0)
 				{
-					iValue += (5 * kUnitInfo.getReligionSpreads(getStateReligion())) / 2;
-				}
-			}
-			for (iI = 0; iI < GC.getNumReligionInfos(); iI++)
-			{
-				if (kUnitInfo.getReligionSpreads((ReligionTypes)iI) && hasHolyCity((ReligionTypes)iI))
-				{
-					iValue += 80;
+					iValue = 0;
 					break;
 				}
-			}
 
-			if (AI_isDoVictoryStrategy(AI_VICTORY_CULTURE2))
-			{
-				int iTempValue = 0;
-				for (iI = 0; iI < GC.getNumReligionInfos(); iI++)
+				int iTempValue = ((iCombatValue * iCombatValue) / 75) + (iCombatValue / 2);
+				iValue += iTempValue;
+				if (kUnitInfo.isNoDefensiveBonus())
 				{
-					if (kUnitInfo.getReligionSpreads((ReligionTypes)iI))
+					iValue -= iTempValue / 4;
+				}
+
+				if (kUnitInfo.isFirstStrikeImmune())
+				{
+					iValue += (iTempValue * 8) / 100;
+				}
+
+				bool bHasBombardValue = false;
+				bool bNoBombardValue = true;
+				if (kUnitInfo.getBreakdownChance() > 0 || kUnitInfo.getBombardRate() > 0 || (kUnitInfo.getCollateralDamageMaxUnits() > 0 && kUnitInfo.getCollateralDamage() > 0))
+				{
+					// Army composition needs to scale with army size, bombard unit potency
+
+					//modified AI_calculateTotalBombard(DOMAIN_LAND) code
+					int iTotalBombard = 0;
+					int iThisBombard = kUnitInfo.getBombardRate();
+					int iSiegeUnits = 0;
+					int iSiegeImmune = 0;
+					int iTotalSiegeMaxUnits = 0;
+					bNoBombardValue = false;
+					bHasBombardValue = true;
+
+					for (int iJ = 0; iJ < GC.getNumUnitInfos(); iJ++)
 					{
-						iTempValue += (50 * getNumCities()) / (1 + getHasReligionCount((ReligionTypes)iI));
+						UnitTypes eLoopUnit = (UnitTypes)iJ;
+						if (GC.getUnitInfo(eLoopUnit).getDomainType() == DOMAIN_LAND)
+						{
+							int iUnitCount = getUnitCount(eLoopUnit);
+							int iBombardRate = GC.getUnitInfo(eLoopUnit).getBombardRate();
+							int iBreakdown = (GC.getUnitInfo(eLoopUnit).getBreakdownChance() * GC.getUnitInfo(eLoopUnit).getBreakdownDamage()) / 10;
+
+							if (iBombardRate > 0)
+							{
+								iTotalBombard += ((iBombardRate * iUnitCount * ((GC.getUnitInfo(eLoopUnit).isIgnoreBuildingDefense()) ? 3 : 2)) / 2);
+							}
+							if (iBreakdown > 0)
+							{
+								iThisBombard += iBreakdown;
+								iTotalBombard += ((iBreakdown * iUnitCount * ((GC.getUnitInfo(eLoopUnit).isIgnoreNoEntryLevel()) ? 4 : 2)) / 2);
+							}
+
+							int iBombRate = GC.getUnitInfo(eLoopUnit).getBombRate();
+							if (iBombRate > 0)
+							{
+								iThisBombard += iBombRate;
+								iTotalBombard += iBombRate * iUnitCount;
+							}
+
+							int iCollateralDamageMaxUnits = GC.getUnitInfo(eLoopUnit).getCollateralDamageMaxUnits();
+							if (iCollateralDamageMaxUnits > 0 && GC.getUnitInfo(eLoopUnit).getCollateralDamage() > 0)
+							{
+								iTotalSiegeMaxUnits += iCollateralDamageMaxUnits * iUnitCount;
+								iSiegeUnits += iUnitCount;
+							}
+							else if (GC.getUnitInfo(eLoopUnit).getUnitCombatCollateralImmune((UnitCombatTypes)kUnitInfo.getUnitCombatType()))
+							{
+								iSiegeImmune += iUnitCount;
+							}
+						}
+					}
+
+					if (iThisBombard == 0)
+					{
+						bNoBombardValue = true;
+					}
+					else if ((100 * iTotalBombard) / (std::max(1, (iThisBombard * AI_totalUnitAIs(UNITAI_ATTACK_CITY)))) >= GC.getDefineINT("BBAI_BOMBARD_ATTACK_CITY_MAX_STACK_FRACTION"))
+					{
+						//too many bombard units already
+						bNoBombardValue = true;
+					}
+
+					int iNumOffensiveUnits = AI_totalUnitAIs(UNITAI_ATTACK_CITY) + AI_totalUnitAIs(UNITAI_ATTACK) + AI_totalUnitAIs(UNITAI_COUNTER) / 2;
+					int iNumDefensiveUnits = AI_totalUnitAIs(UNITAI_CITY_DEFENSE) + AI_totalUnitAIs(UNITAI_RESERVE) + AI_totalUnitAIs(UNITAI_CITY_COUNTER) / 2 + AI_totalUnitAIs(UNITAI_COLLATERAL) / 2;
+					iSiegeUnits += (iSiegeImmune * iNumOffensiveUnits) / std::max(1, iNumOffensiveUnits + iNumDefensiveUnits);
+
+					int iMAX_HIT_POINTS = GC.getMAX_HIT_POINTS();
+
+					int iCollateralDamageMaxUnitsWeight = (100 * (iNumOffensiveUnits - iSiegeUnits)) / std::max(1, iTotalSiegeMaxUnits);
+					iCollateralDamageMaxUnitsWeight = std::min(100, iCollateralDamageMaxUnitsWeight);
+					//to decrease value further for units with low damage limits:
+					int iCollateralDamageLimitWeight = 100 * iMAX_HIT_POINTS - std::max(0, ((iMAX_HIT_POINTS - kUnitInfo.getCollateralDamageLimit()) * (100 - iCollateralDamageMaxUnitsWeight)));
+					iCollateralDamageLimitWeight /= iMAX_HIT_POINTS;
+
+					int iCollateralValue = iCombatValue * kUnitInfo.getCollateralDamage() * GC.getDefineINT("COLLATERAL_COMBAT_DAMAGE");
+					iCollateralValue /= 100;
+					iCollateralValue *= std::max(100, (kUnitInfo.getCollateralDamageMaxUnits() * iCollateralDamageMaxUnitsWeight));
+					iCollateralValue /= 100;
+					iCollateralValue *= iCollateralDamageLimitWeight;
+					iCollateralValue /= 100;
+					iCollateralValue /= iMAX_HIT_POINTS;
+					iValue += iCollateralValue;
+
+					if (!bNoBombardValue && !AI_isDoStrategy(AI_STRATEGY_AIR_BLITZ))
+					{
+						/* original code
+						int iBombardValue = kUnitInfo.getBombardRate() * 4;
+						*/
+						int iBombardValue = /*kUnitInfo.getBombardRate()*/ iThisBombard * ((kUnitInfo.isIgnoreBuildingDefense() || kUnitInfo.isIgnoreNoEntryLevel()) ? 3 : 2);
+						//int iTotalBombardValue = 4 * iTotalBombard;
+						//int iNumBombardUnits = 2 * iTotalBombard / iBombardValue;
+						int iAIDesiredBombardFraction = std::max(5, GC.getDefineINT("BBAI_BOMBARD_ATTACK_STACK_FRACTION")); /*default: 15*/
+						int iActualBombardFraction = (100 * 2 * iTotalBombard) / (iBombardValue * std::max(1, iNumOffensiveUnits));
+						iActualBombardFraction = std::min(100, iActualBombardFraction);
+
+						// K - Mod note : This goal has no dependency on civ size, map size, era, strategy, or anything else that matters
+						// a flat goal of 200... This needs to be fixed. For now, I'll just replace it with something rough.
+						// But this is a future "todo".
+						// int iGoalTotalBombard = 200;
+						int iGoalTotalBombard = (getNumCities() + 3) * (getCurrentEra() + 2) * (AI_isDoStrategy(AI_STRATEGY_CRUSH) ? 10 : 5);
+						int iTempBombardValue = 0;
+						if (iTotalBombard < iGoalTotalBombard) //still less than 200 bombard points
+						{
+							iTempBombardValue = iBombardValue * (iGoalTotalBombard + 7 * (iGoalTotalBombard - iTotalBombard));
+							iTempBombardValue /= iGoalTotalBombard;
+							//iTempBombardValue is at most (8 * iBombardValue)
+						}
+						else
+						{
+							iTempBombardValue *= iGoalTotalBombard;
+							iTempBombardValue /= std::min(2 * iGoalTotalBombard, 2 * iTotalBombard - iGoalTotalBombard);
+						}
+
+						if (iActualBombardFraction < iAIDesiredBombardFraction)
+						{
+							iBombardValue *= (iAIDesiredBombardFraction + 5 * (iAIDesiredBombardFraction - iActualBombardFraction));
+							iBombardValue /= iAIDesiredBombardFraction;
+							//new iBombardValue is at most (6 * old iBombardValue)
+						}
+						else
+						{
+							iBombardValue *= iAIDesiredBombardFraction;
+							iBombardValue /= std::max(1, iActualBombardFraction);
+						}
+
+						if (iTempBombardValue > iBombardValue)
+						{
+							iBombardValue = iTempBombardValue;
+						}
+						iBombardValue *= (100 + GC.getDefineINT("C2C_ROUGH_BOMBARD_VALUE_MODIFIER"));
+						iBombardValue /= 100;
+
+						iValue += iBombardValue;
 					}
 				}
-				iValue += iTempValue;
-			}
-			for (iI = 0; iI < GC.getNumCorporationInfos(); ++iI)
-			{
-				if (hasHeadquarters((CorporationTypes)iI))
+				//TB Adjust: If the unit doesn't have any bombard value, it can still be beneficial to have collateral damage (Rhinos for example)
+				if (!bHasBombardValue)
 				{
-					if (kUnitInfo.getCorporationSpreads(iI) > 0)
+					iValue += ((iCombatValue * kUnitInfo.getCollateralDamage()) / 200);
+				}
+				//TB Adjust: If the unit has bombard value(bHasBombardValue) AND the stack still wants bombard units(!bNoBombardValue) (or the unit doesn't have any bombard value anyhow) then basic modifiers apply.
+				//This is intended to keep bombarding siege units from evaluating stronger than normal invading units like swordsman for the basic NON-Bombard stack fill needs.
+				//Such siege units often can't seal the deal and actually invade the city despite being very necessary for the stack.
+				//Before this change we're getting an overbuild of siege units like rams even after the bombard needs are met for the stack.
+				if ((bHasBombardValue && !bNoBombardValue) || !bHasBombardValue)
+				{
+					// Effect army composition to have more collateral/bombard units
+					iValue += ((iCombatValue * kUnitInfo.getCityAttackModifier()) / 50);
 					{
-						iValue += (5 * kUnitInfo.getCorporationSpreads(iI)) / 2;
+						const int iFastMoverMultiplier = AI_isDoStrategy(AI_STRATEGY_FASTMOVERS) ? 4 : 1;
+						iValue += ((iCombatValue * (kUnitInfo.getMoves() - 1) * iFastMoverMultiplier) / 4); // K-Mod put in -1 !
+					}
+					iValue += ((iCombatValue * kUnitInfo.getWithdrawalProbability()) / 100);
+					//TB Combat Mods Begin
 
-						if (pArea != NULL)
+					if (kUnitInfo.getOverrun() > 0)
+					{
+						iValue += ((iCombatValue * kUnitInfo.getOverrun()) / 80);
+					}
+					if (kUnitInfo.getUnyielding() > 0)
+					{
+						iValue += ((iCombatValue * kUnitInfo.getUnyielding()) / 100);
+					}
+					if (kUnitInfo.getKnockback() > 0)
+					{
+						iValue += ((iCombatValue * kUnitInfo.getKnockback()) / 80);
+					}
+#ifdef BATTLEWORN
+					if (kUnitInfo.getStrAdjperRnd() != 0)
+					{
+						iValue += ((iCombatValue * kUnitInfo.getStrAdjperRnd()) / 100);
+					}
+					if (kUnitInfo.getStrAdjperAtt() != 0)
+					{
+						iValue += ((iCombatValue * kUnitInfo.getStrAdjperAtt()) / 100);
+					}
+					if (kUnitInfo.getWithdrawAdjperAtt() != 0)
+					{
+						iValue += ((iCombatValue * kUnitInfo.getWithdrawAdjperAtt()) / 100);
+					}
+#endif // BATTLEWORN
+				}
+				break;
+			}
+			case UNITAI_COLLATERAL:
+			{
+				iValue += iCombatValue;
+				iValue += ((iCombatValue * kUnitInfo.getCollateralDamage()) / 50);
+				iValue += ((iCombatValue * kUnitInfo.getMoves()) / 4);
+				iValue += ((iCombatValue * kUnitInfo.getWithdrawalProbability()) / 25);
+				//TB Combat Mods Begin
+				iValue += ((iCombatValue * kUnitInfo.getWithdrawalProbability() * kUnitInfo.getEarlyWithdraw()) / 25);
+				iValue += ((iCombatValue * kUnitInfo.getOverrun()) / 75);
+				iValue += ((iCombatValue * kUnitInfo.getKnockback()) / 100);
+				iValue += ((iCombatValue * kUnitInfo.getCityAttackModifier()) / 100);// was -= ???
+				//TB Combat Mods End
+				break;
+			}
+			case UNITAI_PILLAGE:
+			{
+				iValue -= AI_unitPropertyValue(eUnit) / 30;	//	Bad properties are good for pillagers
+				iValue += iCombatValue;
+				iValue += (iCombatValue * kUnitInfo.getMoves());
+				iValue += ((iCombatValue * kUnitInfo.getRepel()) / 100);
+				break;
+			}
+			case UNITAI_RESERVE:
+			{
+				//	For now the AI cannot cope with bad property values on anything but hunter or pillage units
+				if (iPropertyValue < 0)
+				{
+					iValue = 0;
+					break;
+				}
+				iValue += iCombatValue;
+				iValue += ((iCombatValue * kUnitInfo.getCollateralDamage()) / 200);
+				for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+				{
+					//			int iCombatModifier = kUnitInfo.getUnitCombatModifier(iI);
+					//			iCombatModifier = (iCombatModifier < 40) ? iCombatModifier : (40 + (iCombatModifier - 40) / 2);
+					//			iValue += ((iCombatValue * iCombatModifier) / 100);
+					iValue += ((iCombatValue * kUnitInfo.getUnitCombatModifier(iI) * AI_getUnitCombatWeight((UnitCombatTypes)iI)) / 12000);
+				}
+				iValue += ((iCombatValue * kUnitInfo.getMoves()) / 2);
+				break;
+			}
+			case UNITAI_PILLAGE_COUNTER:
+			{
+				//	For now the AI cannot cope with bad property values on anything but hunter or pillage units
+				if (iPropertyValue < 0)
+				{
+					iValue = 0;
+					break;
+				}
+				//TB Combat Mods Begin
+				iValue += iCombatValue;
+				iValue += ((iCombatValue * kUnitInfo.getUnyielding()) / 100);
+				iValue += ((iCombatValue * kUnitInfo.getPursuit()) / 100);
+				iValue += ((iCombatValue * kUnitInfo.getMoves()) / 2);
+				break;
+				//TB Combat Mods End
+			}
+			case UNITAI_COUNTER:
+			{
+				//	For now the AI cannot cope with bad prroperty values on anything but hunter or pillage units
+				if (iPropertyValue < 0)
+				{
+					iValue = 0;
+					break;
+				}
+				iValue += (iCombatValue / 2);
+				foreach_(const STD_PAIR(UnitTypes, int)& modifier, kUnitInfo.getUnitAttackModifiers())
+				{
+					iValue += ((iCombatValue * modifier.second * AI_getUnitWeight(modifier.first)) / 7500);
+					iValue += ((iCombatValue * (kUnitInfo.isTargetUnit(modifier.first) ? 50 : 0)) / 100);
+				}
+				for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+				{
+					//			int iCombatModifier = kUnitInfo.getUnitCombatModifier(iI);
+					//			iCombatModifier = (iCombatModifier < 40) ? iCombatModifier : (40 + (iCombatModifier - 40) / 2);
+					//			iValue += ((iCombatValue * iCombatModifier) / 100);
+					iValue += ((iCombatValue * kUnitInfo.getUnitCombatModifier(iI) * AI_getUnitCombatWeight((UnitCombatTypes)iI)) / 10000);
+					iValue += ((iCombatValue * (kUnitInfo.getTargetUnitCombat(iI) ? 50 : 0)) / 100);
+				}
+				for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
+				{
+					if (GC.getUnitInfo((UnitTypes)iI).isDefendAgainstUnit(eUnit))
+					{
+						iValue += (50 * iCombatValue) / 100;
+					}
+
+					const int iUnitCombat = kUnitInfo.getUnitCombatType();
+					if (NO_UNITCOMBAT != iUnitCombat && GC.getUnitInfo((UnitTypes)iI).getDefenderUnitCombat(iUnitCombat))
+					{
+						iValue += (50 * iCombatValue) / 100;
+					}
+				}
+
+				iValue += ((iCombatValue * kUnitInfo.getMoves()) / 2);
+				iValue += ((iCombatValue * kUnitInfo.getWithdrawalProbability()) / 100);
+				//TB Combat Mods Begin
+				iValue += ((iCombatValue * kUnitInfo.getPursuit()) / 150);
+				iValue += ((iCombatValue * kUnitInfo.getOverrun()) / 50);
+				iValue += ((iCombatValue * kUnitInfo.getUnyielding()) / 50);
+				//TB Combat Mods End
+
+				if (kUnitInfo.getInterceptionProbability() > 0)
+				{
+					int iTempValue = kUnitInfo.getInterceptionProbability();
+
+					iTempValue *= 25 + std::min(175, GET_TEAM(getTeam()).AI_getRivalAirPower());
+					iTempValue /= 100;
+
+					iValue += iTempValue;
+				}
+				break;
+			}
+			case UNITAI_CITY_DEFENSE:
+			{
+				//	For now the AI cannot cope with bad property values on anything but hunter or pillage units
+				if (iPropertyValue < 0)
+				{
+					iValue = 0;
+					break;
+				}
+				iValue += ((iCombatValue * 2) / 3);
+				iValue += ((iCombatValue * kUnitInfo.getCityDefenseModifier()) / 25);
+				//	The '30' scaling is empirical based on what seems reasonable for crime fighting units
+				// this is causing the AI to select prop control for defense.
+				/*iValue += AI_unitPropertyValue(eUnit)/(ePropertyRequested != NO_PROPERTY ? 30 : 60);*/
+				//	Combat modifiers matter for defensive units
+
+
+				for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+				{
+					iValue += iCombatValue * kUnitInfo.getUnitCombatModifier(iI) * AI_getUnitCombatWeight((UnitCombatTypes)iI) / 12000;
+				}
+
+				//  ls612: consider that a unit with OnlyDefensive is less useful
+
+				if (kUnitInfo.isOnlyDefensive())
+				{
+					iValue *= 4;
+					iValue /= 5;
+				}
+
+				//TB Combat Mods Begin
+				iValue += ((iCombatValue * kUnitInfo.getPursuit()) / 100);
+				iValue += ((iCombatValue * kUnitInfo.getRepel()) / 85);
+				iValue += ((iCombatValue * kUnitInfo.getFortRepel()) / 100);
+				iValue += ((iCombatValue * kUnitInfo.getUnyielding()) / 100);
+#ifdef BATTLEWORN
+				if (kUnitInfo.getStrAdjperRnd() != 0)
+				{
+					iValue += ((iCombatValue * kUnitInfo.getStrAdjperRnd()) / 100);
+				}
+				if (kUnitInfo.getStrAdjperDef() != 0)
+				{
+					iValue += ((iCombatValue * kUnitInfo.getStrAdjperDef()) / 100);
+				}
+#endif // BATTLEWORN
+				//TB Combat Mods End
+				break;
+			}
+			case UNITAI_CITY_COUNTER:
+			{
+				//	For now the AI cannot cope with bad property values on anything but hunter or pillage units
+				if (iPropertyValue < 0)
+				{
+					iValue = 0;
+					break;
+				}
+				iValue += ((iCombatValue * 2) / 3);
+				iValue += ((iCombatValue * kUnitInfo.getCityDefenseModifier()) / 75);
+				//	The '30' scaling is empirical based on what seems reasonable for crime fighting units
+				// this is causing the AI to select prop control for defense.
+				/*iValue += AI_unitPropertyValue(eUnit)/(ePropertyRequested != NO_PROPERTY ? 30 : 60);*/
+				//	Combat modifiers matter for defensive units
+
+				for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+				{
+					iValue += iCombatValue * kUnitInfo.getUnitCombatModifier(iI) * AI_getUnitCombatWeight((UnitCombatTypes)iI) / 6000;
+				}
+				//  ls612: consider that a unit with OnlyDefensive is less useful
+
+				if (kUnitInfo.isOnlyDefensive())
+				{
+					iValue *= 4;
+					iValue /= 5;
+				}
+
+				iValue += ((iCombatValue * kUnitInfo.getPursuit()) / 100);
+				iValue += ((iCombatValue * kUnitInfo.getRepel()) / 85);
+				iValue += ((iCombatValue * kUnitInfo.getFortRepel()) / 100);
+				iValue += ((iCombatValue * kUnitInfo.getUnyielding()) / 100);
+#ifdef BATTLEWORN
+				if (kUnitInfo.getStrAdjperRnd() != 0)
+				{
+					iValue += ((iCombatValue * kUnitInfo.getStrAdjperRnd()) / 100);
+				}
+				if (kUnitInfo.getStrAdjperDef() != 0)
+				{
+					iValue += ((iCombatValue * kUnitInfo.getStrAdjperDef()) / 100);
+				}
+#endif // BATTLEWORN
+				break;
+			}
+			case UNITAI_HEALER:
+			case UNITAI_HEALER_SEA:
+			{
+				iValue += iHealerValue;
+				// Drop through
+			}
+			case UNITAI_PROPERTY_CONTROL:
+			case UNITAI_PROPERTY_CONTROL_SEA:
+			case UNITAI_CITY_SPECIAL:
+			{
+				//	For now the AI cannot cope with bad property values on anything but hunter or pillage units
+				if (iPropertyValue < 0)
+				{
+					iValue = 0;
+					break;
+				}
+				//	The '30' scaling is empirical based on what seems reasonable for crime fighting units
+				iValue += iPropertyValue;
+				iValue += iCombatValue;
+				break;
+			}
+			case UNITAI_PARADROP:
+			{
+				//	For now the AI cannot cope with bad property values on anything but hunter or pillage units
+				if (iPropertyValue < 0)
+				{
+					iValue = 0;
+					break;
+				}
+				iValue += (iCombatValue / 2);
+				iValue += ((iCombatValue * kUnitInfo.getCityDefenseModifier()) / 100);
+				iValue /= (kUnitInfo.isOnlyDefensive() ? 2 : 1);
+				foreach_(const STD_PAIR(UnitTypes, int)& modifier, kUnitInfo.getUnitAttackModifiers())
+				{
+					iValue += ((iCombatValue * modifier.second * AI_getUnitWeight(modifier.first)) / 10000);
+					iValue += ((iCombatValue * (kUnitInfo.isDefendAgainstUnit(modifier.first) ? 50 : 0)) / 100);
+				}
+				for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+				{
+					iValue += ((iCombatValue * kUnitInfo.getUnitCombatModifier(iI) * AI_getUnitCombatWeight((UnitCombatTypes)iI)) / 10000);
+					iValue += ((iCombatValue * (kUnitInfo.getDefenderUnitCombat(iI) ? 50 : 0)) / 100);
+				}
+
+				if (kUnitInfo.getInterceptionProbability() > 0)
+				{
+					int iTempValue = kUnitInfo.getInterceptionProbability();
+
+					iTempValue *= 25 + std::min(125, GET_TEAM(getTeam()).AI_getRivalAirPower());
+					iTempValue /= 50;
+
+					iValue += iTempValue;
+				}
+				break;
+			}
+			case UNITAI_EXPLORE:
+			{
+				iValue += kUnitInfo.getMoves() * kUnitInfo.getMoves() * (100 + iCombatValue) / 4;
+				if (kUnitInfo.isNoBadGoodies())
+				{
+					iValue *= 2;
+				}
+				//need to add vision and terrain factors here.
+				break;
+			}
+			case UNITAI_HUNTER:
+			{
+				iValue += iCombatValue * 2 / (kUnitInfo.isOnlyDefensive() ? 2 : 1);
+				//TB Combat Mods Begin
+				iValue += iCombatValue * kUnitInfo.getPursuit() / 100;
+				iValue += iCombatValue * kUnitInfo.getUnyielding() / 200;
+#ifdef BATTLEWORN
+				iValue += iCombatValue * kUnitInfo.getWithdrawAdjperAtt() / 100;
+#endif
+				//TB Combat Mods End
+				iValue *= 100 + kUnitInfo.getMoves() * 25;
+				iValue *= 100 + kUnitInfo.getAnimalCombatModifier() * 2;
+				iValue /= 10000;
+				break;
+			}
+			case UNITAI_HUNTER_ESCORT:
+			{
+				iValue += iCombatValue;
+				iValue *= 100 + kUnitInfo.getMoves() * 25;
+				iValue /= 100;
+				break;
+			}
+			case UNITAI_MISSIONARY:
+			{
+				iValue += (kUnitInfo.getMoves() * 100);
+				if (getStateReligion() != NO_RELIGION)
+				{
+					if (kUnitInfo.getReligionSpreads(getStateReligion()) > 0)
+					{
+						iValue += (5 * kUnitInfo.getReligionSpreads(getStateReligion())) / 2;
+					}
+				}
+				for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
+				{
+					if (kUnitInfo.getReligionSpreads((ReligionTypes)iI) && hasHolyCity((ReligionTypes)iI))
+					{
+						iValue += 80;
+						break;
+					}
+				}
+
+				if (AI_isDoVictoryStrategy(AI_VICTORY_CULTURE2))
+				{
+					int iTempValue = 0;
+					for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
+					{
+						if (kUnitInfo.getReligionSpreads((ReligionTypes)iI))
+						{
+							iTempValue += (50 * getNumCities()) / (1 + getHasReligionCount((ReligionTypes)iI));
+						}
+					}
+					iValue += iTempValue;
+				}
+				for (int iI = 0; iI < GC.getNumCorporationInfos(); ++iI)
+				{
+					if (hasHeadquarters((CorporationTypes)iI) && kUnitInfo.getCorporationSpreads(iI) > 0)
+					{
+						iValue += kUnitInfo.getCorporationSpreads(iI) * 5/2;
+
+						if (pArea)
 						{
 							iValue += 300 / std::max(1, pArea->countHasCorporation((CorporationTypes)iI, getID()));
 						}
 					}
 				}
+				break;
 			}
-			break;
-
-		case UNITAI_ICBM:
-			if (kUnitInfo.getNukeRange() != -1)
+			case UNITAI_ICBM:
 			{
-				iTempValue = 40 + (kUnitInfo.getNukeRange() * 40);
-				if (kUnitInfo.getAirRange() == 0)
+				if (kUnitInfo.getNukeRange() != -1)
 				{
-					iValue += iTempValue;
-				}
-				else
-				{
-					iValue += (iTempValue * std::min(10, kUnitInfo.getAirRange())) / 10;
-				}
-				iValue += (iTempValue * (60 + kUnitInfo.getEvasionProbability())) / 100;
-			}
-			break;
-
-		case UNITAI_WORKER_SEA:
-			iValue += 50 * kUnitInfo.getNumBuilds();
-			iValue += kUnitInfo.getMoves() * 100;
-			break;
-
-		case UNITAI_ATTACK_SEA:
-			iValue += iCombatValue;
-			iValue += iCombatValue * kUnitInfo.getMoves() / 2;
-			iValue += kUnitInfo.getBombardRate() * 4;
-			break;
-
-		case UNITAI_RESERVE_SEA:
-			iValue += iCombatValue;
-			iValue += iCombatValue * kUnitInfo.getMoves();
-			break;
-
-		case UNITAI_ESCORT_SEA:
-		{
-			iValue += iCombatValue;
-			iValue += iCombatValue * kUnitInfo.getMoves();
-			iValue += kUnitInfo.getInterceptionProbability() * 3;
-			if (kUnitInfo.getNumSeeInvisibleTypes() > 0)
-			{
-				iValue += 200;
-			}
-			// Boats which can't be seen don't play defense, don't make good escorts
-			if (kUnitInfo.getInvisibleType() != NO_INVISIBLE)
-			{
-				iValue /= 2;
-			}
-			break;
-		}
-		case UNITAI_EXPLORE_SEA:
-		{
-			int iExploreValue = 100;
-			if (pArea != NULL)
-			{
-				if (pArea->isWater())
-				{
-					if (pArea->getUnitsPerPlayer(BARBARIAN_PLAYER) > 0)
+					int iTempValue = 40 + (kUnitInfo.getNukeRange() * 40);
+					if (kUnitInfo.getAirRange() == 0)
 					{
-						iExploreValue += (2 * iCombatValue);
+						iValue += iTempValue;
 					}
+					else
+					{
+						iValue += (iTempValue * std::min(10, kUnitInfo.getAirRange())) / 10;
+					}
+					iValue += (iTempValue * (60 + kUnitInfo.getEvasionProbability())) / 100;
 				}
+				break;
 			}
-			iValue += (kUnitInfo.getMoves() * iExploreValue);
-			if (kUnitInfo.isAlwaysHostile())
+			case UNITAI_WORKER_SEA:
 			{
-				iValue /= 2;
+				iValue += 50 * kUnitInfo.getNumBuilds();
+				iValue += kUnitInfo.getMoves() * 100;
+				break;
 			}
-			iValue /= (1 + AI_unitImpassableCount(eUnit));
-		}
-		break;
-
-		case UNITAI_ASSAULT_SEA:
-		case UNITAI_SETTLER_SEA:
-		case UNITAI_MISSIONARY_SEA:
-		case UNITAI_SPY_SEA:
-		{
-			iValue += (iCombatValue / 2);
-			iValue += (kUnitInfo.getMoves() * 200);
-			iValue += (kUnitInfo.getCargoSpace() * 300);
-			// Never build galley transports when ocean faring ones exist (issue mainly for Carracks)
-			iValue /= (1 + AI_unitImpassableCount(eUnit));
-			break;
-		}
-		case UNITAI_CARRIER_SEA:
-			iValue += iCombatValue;
-			iValue += (kUnitInfo.getMoves() * 50);
-			iValue += (kUnitInfo.getCargoSpace() * 400);
-			break;
-
-		case UNITAI_MISSILE_CARRIER_SEA:
-			iValue += iCombatValue * kUnitInfo.getMoves();
-			iValue += (25 + iCombatValue) * (3 + (kUnitInfo.getCargoSpace()));
-			break;
-
-		case UNITAI_PIRATE_SEA:
-			iValue += iCombatValue;
-			iValue += (iCombatValue * kUnitInfo.getMoves());
-			break;
-
-		case UNITAI_ATTACK_AIR:
-			iValue += iCombatValue;
-			iValue += (kUnitInfo.getCollateralDamage() * iCombatValue) / 100;
-			iValue += 4 * kUnitInfo.getBombRate();
-			iValue += (iCombatValue * (100 + 2 * kUnitInfo.getCollateralDamage()) * kUnitInfo.getAirRange()) / 100;
-			break;
-
-		case UNITAI_DEFENSE_AIR:
-			iValue += iCombatValue;
-			iValue += (kUnitInfo.getInterceptionProbability() * 3);
-			iValue += (kUnitInfo.getAirRange() * iCombatValue);
-			break;
-
-		case UNITAI_CARRIER_AIR:
-			iValue += (iCombatValue);
-			iValue += (kUnitInfo.getInterceptionProbability() * 2);
-			iValue += (kUnitInfo.getAirRange() * iCombatValue);
-			break;
-
-		case UNITAI_MISSILE_AIR:
-			iValue += iCombatValue;
-			iValue += 4 * kUnitInfo.getBombRate();
-			iValue += kUnitInfo.getAirRange() * iCombatValue;
-			break;
-
-		case UNITAI_INVESTIGATOR:
-			iValue += iCombatValue;
-			iValue *= kUnitInfo.getInvestigation();
-			break;
-
-		case UNITAI_INFILTRATOR:
-			iValue += iCombatValue;
-			iValue *= kUnitInfo.getInsidiousness();
-			if (GC.getGame().isOption(GAMEOPTION_COMBAT_HIDE_SEEK))
+			case UNITAI_ATTACK_SEA:
 			{
-				for (iI = 0; iI < GC.getNumInvisibleInfos(); iI++)
+				iValue += iCombatValue;
+				iValue += iCombatValue * kUnitInfo.getMoves() / 2;
+				iValue += kUnitInfo.getBombardRate() * 4;
+				break;
+			}
+			case UNITAI_RESERVE_SEA:
+			{
+				iValue += iCombatValue;
+				iValue += iCombatValue * kUnitInfo.getMoves();
+				break;
+			}
+			case UNITAI_ESCORT_SEA:
+			{
+				iValue += iCombatValue;
+				iValue += iCombatValue * kUnitInfo.getMoves();
+				iValue += kUnitInfo.getInterceptionProbability() * 3;
+				if (kUnitInfo.getNumSeeInvisibleTypes() > 0)
 				{
-					iValue += kUnitInfo.getInvisibilityIntensityType(iI) * 10;
+					iValue += 200;
 				}
-			}
-			else
-			{
+				// Boats which can't be seen don't play defense, don't make good escorts
 				if (kUnitInfo.getInvisibleType() != NO_INVISIBLE)
 				{
-					iValue *= 10;
+					iValue /= 2;
+				}
+				break;
+			}
+			case UNITAI_EXPLORE_SEA:
+			{
+				int iExploreValue = 100;
+				if (pArea)
+				{
+					if (pArea->isWater())
+					{
+						if (pArea->getUnitsPerPlayer(BARBARIAN_PLAYER) > 0)
+						{
+							iExploreValue += (2 * iCombatValue);
+						}
+					}
+				}
+				iValue += (kUnitInfo.getMoves() * iExploreValue);
+				if (kUnitInfo.isAlwaysHostile())
+				{
+					iValue /= 2;
+				}
+				iValue /= (1 + AI_unitImpassableCount(eUnit));
+				break;
+			}
+			case UNITAI_ASSAULT_SEA:
+			case UNITAI_SETTLER_SEA:
+			case UNITAI_MISSIONARY_SEA:
+			case UNITAI_SPY_SEA:
+			{
+				iValue += (iCombatValue / 2);
+				iValue += (kUnitInfo.getMoves() * 200);
+				iValue += (kUnitInfo.getCargoSpace() * 300);
+				// Never build galley transports when ocean faring ones exist (issue mainly for Carracks)
+				iValue /= (1 + AI_unitImpassableCount(eUnit));
+				break;
+			}
+			case UNITAI_CARRIER_SEA:
+			{
+				iValue += iCombatValue;
+				iValue += (kUnitInfo.getMoves() * 50);
+				iValue += (kUnitInfo.getCargoSpace() * 400);
+				break;
+			}
+			case UNITAI_MISSILE_CARRIER_SEA:
+			{
+				iValue += iCombatValue * kUnitInfo.getMoves();
+				iValue += (25 + iCombatValue) * (3 + (kUnitInfo.getCargoSpace()));
+				break;
+			}
+			case UNITAI_PIRATE_SEA:
+			{
+				iValue += iCombatValue;
+				iValue += (iCombatValue * kUnitInfo.getMoves());
+				break;
+			}
+			case UNITAI_ATTACK_AIR:
+			{
+				iValue += iCombatValue;
+				iValue += (kUnitInfo.getCollateralDamage() * iCombatValue) / 100;
+				iValue += 4 * kUnitInfo.getBombRate();
+				iValue += (iCombatValue * (100 + 2 * kUnitInfo.getCollateralDamage()) * kUnitInfo.getAirRange()) / 100;
+				break;
+			}
+			case UNITAI_DEFENSE_AIR:
+			{
+				iValue += iCombatValue;
+				iValue += (kUnitInfo.getInterceptionProbability() * 3);
+				iValue += (kUnitInfo.getAirRange() * iCombatValue);
+				break;
+			}
+			case UNITAI_CARRIER_AIR:
+			{
+				iValue += (iCombatValue);
+				iValue += (kUnitInfo.getInterceptionProbability() * 2);
+				iValue += (kUnitInfo.getAirRange() * iCombatValue);
+				break;
+			}
+			case UNITAI_MISSILE_AIR:
+			{
+				iValue += iCombatValue;
+				iValue += 4 * kUnitInfo.getBombRate();
+				iValue += kUnitInfo.getAirRange() * iCombatValue;
+				break;
+			}
+			case UNITAI_INVESTIGATOR:
+			{
+				iValue += iCombatValue;
+				iValue *= kUnitInfo.getInvestigation();
+				break;
+			}
+			case UNITAI_INFILTRATOR:
+			{
+				iValue += iCombatValue;
+				iValue *= kUnitInfo.getInsidiousness();
+				if (GC.getGame().isOption(GAMEOPTION_COMBAT_HIDE_SEEK))
+				{
+					for (int iI = 0; iI < GC.getNumInvisibleInfos(); iI++)
+					{
+						iValue += kUnitInfo.getInvisibilityIntensityType(iI) * 10;
+					}
 				}
 				else
 				{
-					iValue = 0;
-				}
-			}
-			//crime levels and many other things COULD factor in here but most all of those things rank up as these details do so this should be sufficient
-			break;
-
-		case UNITAI_SEE_INVISIBLE:
-		case UNITAI_SEE_INVISIBLE_SEA:
-			iValue += iCombatValue;
-			iValue += kUnitInfo.getMoves() * 3;
-			if (GC.getGame().isOption(GAMEOPTION_COMBAT_HIDE_SEEK))
-			{
-				iValue *= kUnitInfo.getVisibilityIntensityType(eVisibilityRequested);
-			}
-			else
-			{
-				for (iI = 0; iI < kUnitInfo.getNumSeeInvisibleTypes(); ++iI)
-				{
-					if (kUnitInfo.getSeeInvisibleType(iI) == (int)eVisibilityRequested)
+					if (kUnitInfo.getInvisibleType() != NO_INVISIBLE)
 					{
-						iValue *= 100;
+						iValue *= 10;
 					}
 					else
 					{
 						iValue = 0;
 					}
 				}
+				//crime levels and many other things COULD factor in here but most all of those things rank up as these details do so this should be sufficient
+				break;
 			}
-			break;
+			case UNITAI_SEE_INVISIBLE:
+			case UNITAI_SEE_INVISIBLE_SEA:
+			{
+				const InvisibleTypes eVisibilityRequested = criteria ? criteria->m_eVisibility : NO_INVISIBLE;
+				iValue += iCombatValue;
+				iValue += kUnitInfo.getMoves() * 3;
+				if (GC.getGame().isOption(GAMEOPTION_COMBAT_HIDE_SEEK))
+				{
+					iValue *= kUnitInfo.getVisibilityIntensityType(eVisibilityRequested);
+				}
+				else
+				{
+					for (int iI = 0; iI < kUnitInfo.getNumSeeInvisibleTypes(); ++iI)
+					{
+						if (kUnitInfo.getSeeInvisibleType(iI) == (int)eVisibilityRequested)
+						{
+							iValue *= 100;
+						}
+						else
+						{
+							iValue = 0;
+						}
+					}
+				}
+				break;
+			}
+			case UNITAI_ESCORT:
+			{
+				iValue += iCombatValue;
+				//for every 10 pts of combat value, make each move pt count for 1 more than a base 1 each.
+				iValue += kUnitInfo.getMoves() * (1 + iCombatValue / 10);
+				//Combat weaknesses are very bad
+				for (int iI = 0; iI < GC.getNumTerrainInfos(); iI++)
+				{
+					int iTerrainModifier = kUnitInfo.getTerrainDefenseModifier(iI);
+					if (iTerrainModifier < 0)
+					{
+						iValue *= iTerrainModifier + 100;
+						iValue /= 100;
+					}
+					else if (iTerrainModifier > 0)
+					{
+						//Strengths are good but not to be too swaying or hunter types and others with grave weaknesses will be selected.
+						iValue++;
+					}
+				}
+				for (int iI = 0; iI < GC.getNumFeatureInfos(); iI++)
+				{
+					int iFeatureModifier = kUnitInfo.getFeatureDefenseModifier(iI);
+					if (iFeatureModifier < 0)
+					{
+						iValue *= iFeatureModifier + 100;
+						iValue /= 100;
+					}
+					else if (iFeatureModifier > 0)
+					{
+						//Strengths are good but not to be too swaying or hunter types and others with grave weaknesses will be selected.
+						iValue++;
+					}
+				}
+				for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+				{
+					int iCombatModifier = kUnitInfo.getUnitCombatModifier(iI);
+					if (iCombatModifier < 0)
+					{
+						iValue *= (iCombatModifier + 100);
+						iValue /= 100;
+					}
+					else if (iCombatModifier > 0)
+					{
+						//Strengths are good but not to be too swaying or hunter types and others with grave weaknesses will be selected.
+						iValue++;
+					}
+				}
+				//General defense, if the unit has it, is very good. Very bad if penalized.
+				iValue *= 100 + kUnitInfo.getDefenseCombatModifier();
+				iValue /= 100;
 
-		case UNITAI_ESCORT:
-			iValue += iCombatValue;
-			iAdjustor = iCombatValue / 10;
-			iAdjustor++;
-			//for every 10 pts of combat value, make each move pt count for 1 more than a base 1 each.
-			iValue += (kUnitInfo.getMoves() * iAdjustor);
-			//Combat weaknesses are very bad
-			for (iI = 0; iI < GC.getNumTerrainInfos(); iI++)
-			{
-				int iTerrainModifier = kUnitInfo.getTerrainDefenseModifier(iI);
-				if (iTerrainModifier < 0)
+				if (kUnitInfo.isNoDefensiveBonus())
 				{
-					iValue *= iTerrainModifier + 100;
-					iValue /= 100;
+					iValue /= 4;
 				}
-				else if (iTerrainModifier > 0)
+				if (kUnitInfo.isOnlyDefensive())
 				{
-					//Strengths are good but not to be too swaying or hunter types and others with grave weaknesses will be selected.
-					iValue++;
+					iValue *= 3;
+					iValue /= 2;
+					//better because it enables the unit to move through opponent territory with a RoP
 				}
+				break;
 			}
-			for (iI = 0; iI < GC.getNumFeatureInfos(); iI++)
-			{
-				int iFeatureModifier = kUnitInfo.getFeatureDefenseModifier(iI);
-				if (iFeatureModifier < 0)
-				{
-					iValue *= iFeatureModifier + 100;
-					iValue /= 100;
-				}
-				else if (iFeatureModifier > 0)
-				{
-					//Strengths are good but not to be too swaying or hunter types and others with grave weaknesses will be selected.
-					iValue++;
-				}
-			}
-			for (iI = 0; iI < numUnitCombatInfos; iI++)
-			{
-				int iCombatModifier = kUnitInfo.getUnitCombatModifier(iI);
-				if (iCombatModifier < 0)
-				{
-					iValue *= (iCombatModifier + 100);
-					iValue /= 100;
-				}
-				else if (iCombatModifier > 0)
-				{
-					//Strengths are good but not to be too swaying or hunter types and others with grave weaknesses will be selected.
-					iValue++;
-				}
-			}
-			//General defense, if the unit has it, is very good. Very bad if penalized.
-			iValue *= (iDefenseModifier + 100);
-			iValue /= 100;
-
-			if (kUnitInfo.isNoDefensiveBonus())
-			{
-				iValue /= 4;
-			}
-			if (kUnitInfo.isOnlyDefensive())
-			{
-				iValue *= 3;
-				iValue /= 2;
-				//better because it enables the unit to move through opponent territory with a RoP
-			}
-			break;
-
-		default:
-			FErrorMsg("error");
-			break;
+			default: FErrorMsg("error");
 		}
 	}
 
 	if (iCombatValue > 0 && pArea != NULL && (eUnitAI == UNITAI_ATTACK || eUnitAI == UNITAI_ATTACK_CITY))
 	{
-		AreaAITypes eAreaAI = pArea->getAreaAIType(getTeam());
+		const AreaAITypes eAreaAI = pArea->getAreaAIType(getTeam());
 		if (eAreaAI == AREAAI_ASSAULT || eAreaAI == AREAAI_ASSAULT_MASSING)
 		{
 			for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
@@ -25573,7 +25554,7 @@ int CvPlayerAI::AI_getPlotAirbaseValue(const CvPlot* pPlot) const
 		// Super Forts begin *canal* *choke*
 	if (iOtherCityCount == 1)
 	{
-		if (iMinOtherCityPlot != NULL)
+		if (iMinOtherCityPlot)
 		{
 			CvCity* pNearestCity = GC.getMap().findCity(iMinOtherCityPlot->getX(), iMinOtherCityPlot->getY(), NO_PLAYER, getTeam(), false);
 			if (NULL != pNearestCity)
@@ -25585,14 +25566,7 @@ int CvPlayerAI::AI_getPlotAirbaseValue(const CvPlot* pPlot) const
 			}
 		}
 	}
-
-	int iDefenseModifier = pPlot->defenseModifier(getTeam(), false);
-	int iValue = iOtherCityCount * 50;
-	iValue += iDefenseModifier;
-	/*	Original Code
-		iValue *= 100 + (2 * (iDefenseModifier + (pPlot->isHills() ? 25 : 0)));
-		iValue /= 100;
-	*/
+	const int iValue = iOtherCityCount * 50 + pPlot->defenseModifier(getTeam(), false);
 	// Super Forts end
 
 	return std::max(0, iValue);

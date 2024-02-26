@@ -2201,7 +2201,6 @@
 				<BuildingType>BUILDING_FOLKLORE_GREAT_HORNED_OWL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_KOOKABURRA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_LOON</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_MACAW</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_OXPECKER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_PARROT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_PEACOCK</BuildingType>
@@ -2217,6 +2216,7 @@
 				<BuildingType>BUILDING_FOLKLORE_VULTURE</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_MACAW</Type>
 				<Type>HERITAGE_FOLKLORE_PARROT_AFRICAN_GREY</Type>
 			</PrereqOrHeritage>
 			<iCost>250</iCost>
@@ -2726,98 +2726,6 @@
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_FOLKLORE_T_BUG</Type>
-			<SpecialBuildingType>SPECIALBUILDING_FOLKLORE_TAXONOMY</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_FOLKLORE_T_BUG</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_T_BUG</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<FreeBuilding>BUILDING_FOLKLORE_T_BUG</FreeBuilding>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_JUNGLE_TARANTULA</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_DESERT_TARANTULA</BuildingType>
-			</PrereqOrBuildings>
-			<iCost>250</iCost>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<TechType>TECH_LANGUAGE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-80</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_CLASSICAL_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_MEDIEVAL_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_RENAISSANCE_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_INDUSTRIAL_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-						</CommercePercents>
-				</TechCommerceChange>
-			</TechCommerceChanges>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_EDUCATION</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_BIOLOGY</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_T_BULL</Type>
@@ -7183,68 +7091,6 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FOLKLORE_MACAW</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FOLKLORE_MACAW</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
-			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_FOLKLORE_MACAW</FreeBuilding>
-			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_MACAW</ArtDefineTag>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<TechType>TECH_LANGUAGE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-80</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_SEDENTARY_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_CLASSICAL_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_MEDIEVAL_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_RENAISSANCE_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-			</TechCommerceChanges>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_MACKEREL</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -7657,97 +7503,6 @@
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_FOLKLORE_T_MONOTREMES</Type>
-			<SpecialBuildingType>SPECIALBUILDING_FOLKLORE_TAXONOMY</SpecialBuildingType>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FOLKLORE_T_MONOTREMES</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_PLATYPUS</BuildingType>
-			</PrereqOrBuildings>
-			<iCost>250</iCost>
-			<FreeBuilding>BUILDING_FOLKLORE_T_MONOTREMES</FreeBuilding>
-			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_T_MONOTREMES</ArtDefineTag>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<TechType>TECH_LANGUAGE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-80</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_CLASSICAL_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_MEDIEVAL_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_RENAISSANCE_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_INDUSTRIAL_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-						</CommercePercents>
-				</TechCommerceChange>
-			</TechCommerceChanges>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_EDUCATION</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_BIOLOGY</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_MOOSE</Type>
@@ -9377,68 +9132,6 @@
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_FOLKLORE_PIGEON</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_PIGEON</ArtDefineTag>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<TechType>TECH_LANGUAGE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-80</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_SEDENTARY_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_CLASSICAL_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_MEDIEVAL_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_RENAISSANCE_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-			</TechCommerceChanges>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_FOLKLORE_PLATYPUS</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FOLKLORE_PLATYPUS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
-			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_FOLKLORE_PLATYPUS</FreeBuilding>
-			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_PLATYPUS</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -12040,130 +11733,6 @@
 			</PrereqInCityBuildings>
 			<FreeBuilding>BUILDING_FOLKLORE_TASMANIAN_DEVIL</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_TASMANIAN_DEVIL</ArtDefineTag>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<TechType>TECH_LANGUAGE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-80</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_SEDENTARY_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_CLASSICAL_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_MEDIEVAL_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_RENAISSANCE_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-			</TechCommerceChanges>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_FOLKLORE_DESERT_TARANTULA</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FOLKLORE_DESERT_TARANTULA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
-			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_FOLKLORE_DESERT_TARANTULA</FreeBuilding>
-			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_DESERT_TARANTULA</ArtDefineTag>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<TechType>TECH_LANGUAGE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-80</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_SEDENTARY_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_CLASSICAL_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_MEDIEVAL_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_RENAISSANCE_LIFESTYLE</TechType>
-					<CommercePercents>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>-5</iCommercePercent>
-						<iCommercePercent>10</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-			</TechCommerceChanges>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_FOLKLORE_JUNGLE_TARANTULA</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FOLKLORE_JUNGLE_TARANTULA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
-			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_FOLKLORE_JUNGLE_TARANTULA</FreeBuilding>
-			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_JUNGLE_TARANTULA</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
