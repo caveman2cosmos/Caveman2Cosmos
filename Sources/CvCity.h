@@ -13,6 +13,7 @@
 #include "CvUnitList.h"
 #include "CityOutputHistory.h"
 #include "CvGameObject.h"
+#include "IDefenseHandler.hpp"
 
 class CvArea;
 class CvArtInfoBuilding;
@@ -73,27 +74,27 @@ protected:
 
 public:
 	int getRevolutionIndex() const;
-	void setRevolutionIndex( int iNewValue );
-	void changeRevolutionIndex( int iChange );
+	void setRevolutionIndex(int iNewValue);
+	void changeRevolutionIndex(int iChange);
 
 	int getLocalRevIndex() const;
-	void setLocalRevIndex( int iNewValue );
-	void changeLocalRevIndex( int iChange );
+	void setLocalRevIndex(int iNewValue);
+	void changeLocalRevIndex(int iChange);
 
 	int getRevIndexAverage() const;
-	void setRevIndexAverage( int iNewValue );
-	void updateRevIndexAverage( );
+	void setRevIndexAverage(int iNewValue);
+	void updateRevIndexAverage();
 
 	int getRevIndexDistanceMod() const { return m_iRevIndexDistanceMod; }
 	void changeRevIndexDistanceMod(const int iChange);
 
 	int getRevolutionCounter() const;
-	void setRevolutionCounter( int iNewValue );
-	void changeRevolutionCounter( int iChange );
+	void setRevolutionCounter(int iNewValue);
+	void changeRevolutionCounter(int iChange);
 
 	int getReinforcementCounter() const;
-	void setReinforcementCounter( int iNewValue );
-	void changeReinforcementCounter( int iChange );
+	void setReinforcementCounter(int iNewValue);
+	void changeReinforcementCounter(int iChange);
 
 	bool isRecentlyAcquired() const;
 
@@ -161,7 +162,7 @@ public:
 	city_plot_iterator endPlots() const { return city_plot_iterator(); }
 
 	typedef bst::iterator_range<city_plot_iterator> city_plot_range;
- 	city_plot_range plots(int numPlots, bool skipCityHomePlot = false) const { return city_plot_range(beginPlots(numPlots, skipCityHomePlot), endPlots()); }
+	city_plot_range plots(int numPlots, bool skipCityHomePlot = false) const { return city_plot_range(beginPlots(numPlots, skipCityHomePlot), endPlots()); }
 	city_plot_range plots(bool skipCityHomePlot = false) const { return city_plot_range(beginPlots(getNumCityPlots(), skipCityHomePlot), endPlots()); }
 
 	int getCityPlotIndex(const CvPlot* pPlot) const;
@@ -353,8 +354,8 @@ public:
 	int getPopulationPlusProgress100(const int iExtra) const;
 	int getFoodConsumedPerPopulation100(const int iExtra = 0) const;
 	int getFoodConsumedByPopulation(const int iExtra = 0) const;
-	int foodConsumption(const bool bNoAngry=false, const int iExtra=0, const bool bIncludeWastage=true) const;
-	int foodDifference(const bool bBottom=true, const bool bIncludeWastage=true, const bool bIgnoreFoodBuildOrRev=false) const;
+	int foodConsumption(const bool bNoAngry = false, const int iExtra = 0, const bool bIncludeWastage = true) const;
+	int foodDifference(const bool bBottom = true, const bool bIncludeWastage = true, const bool bIgnoreFoodBuildOrRev = false) const;
 	float foodWastage(int surplass = -1) const;
 	int growthThreshold(const int iPopChange = 0) const;
 
@@ -602,19 +603,19 @@ public:
 	int getFeatureGoodHealth() const;
 	int getFeatureBadHealth() const;
 	void updateFeatureHealth();
-// BUG - Feature Health - start
+	// BUG - Feature Health - start
 	void calculateFeatureHealthPercent(int& iGood, int& iBad) const;
 	void calculateFeatureHealthPercentChange(int& iGood, int& iBad, CvPlot* pIgnorePlot = NULL) const;
 	int getAdditionalHealthByFeature(FeatureTypes eFeature, int iChange) const;
 	int getAdditionalHealthByFeature(FeatureTypes eFeature, int iChange, int& iGood, int& iBad) const;
 	int getAdditionalHealth(int iGoodPercent, int iBadPercent, int& iGood, int& iBad) const;
-// BUG - Feature Health - end
+	// BUG - Feature Health - end
 
-// BUG - Actual Effects - start
+	// BUG - Actual Effects - start
 	int getAdditionalAngryPopuplation(int iGood, int iBad) const;
 	int getAdditionalSpoiledFood(int iGood, int iBad, int iHealthAdjust = 0) const;
 	int getAdditionalStarvation(int iSpoiledFood, int iFoodAdjust = 0) const;
-// BUG - Actual Effects - end
+	// BUG - Actual Effects - end
 
 	int getBuildingGoodHealth() const;
 	int getBuildingBadHealth() const;
@@ -1347,7 +1348,7 @@ public:
 
 	int getNonHolyReligionCount() const;
 
-	void calculateExtraTradeRouteProfit(int iExtra, int* &aiTradeYields) const;
+	void calculateExtraTradeRouteProfit(int iExtra, int*& aiTradeYields) const;
 
 	int getMinimumDefenseLevel() const;
 	void setMinimumDefenseLevel(int iNewValue);
@@ -1436,7 +1437,7 @@ public:
 			averageScore = 0;
 			minScore = LLONG_MAX;
 			maxScore = LLONG_MIN;
-			foreach_(const ScoredBuilding& itr, scores)
+			foreach_(const ScoredBuilding & itr, scores)
 			{
 				averageScore = averageScore + itr.score / scores.size();
 				minScore = std::min(minScore, itr.score);
@@ -1476,7 +1477,7 @@ public:
 	virtual int AI_getTargetSize() const = 0;
 	virtual int AI_getGoodTileCount() const = 0;
 	virtual int AI_getImprovementValue(const CvPlot* pPlot, ImprovementTypes eImprovement, int iFoodPriority, int iProductionPriority, int iCommercePriority, int iFoodChange) const = 0;
-	virtual void AI_getYieldMultipliers(int &iFoodMultiplier, int &iProductionMultiplier, int &iCommerceMultiplier, int &iDesiredFoodChange) const = 0;
+	virtual void AI_getYieldMultipliers(int& iFoodMultiplier, int& iProductionMultiplier, int& iCommerceMultiplier, int& iDesiredFoodChange) const = 0;
 
 	virtual int AI_totalBestBuildValue(const CvArea* pArea) const = 0;
 	virtual int AI_countBestBuilds(const CvArea* pArea) const = 0;
@@ -1875,14 +1876,14 @@ protected:
 	bool* m_abCachedBestSeeInvisibleUnitSea;
 	mutable int	m_iPopulationRank;
 	mutable bool m_bPopulationRankValid;
-	int*	m_aiBaseYieldRank;
-	bool*	m_abBaseYieldRankValid;
-	int*	m_aiYieldRank;
-	bool*	m_abYieldRankValid;
-	int*	m_aiCommerceRank;
-	bool*	m_abCommerceRankValid;
+	int* m_aiBaseYieldRank;
+	bool* m_abBaseYieldRankValid;
+	int* m_aiYieldRank;
+	bool* m_abYieldRankValid;
+	int* m_aiCommerceRank;
+	bool* m_abCommerceRankValid;
 
-	mutable std::map<const CvPlot*,int> m_aCultureDistances;
+	mutable std::map<const CvPlot*, int> m_aCultureDistances;
 
 	void doCulture();
 	void doPlotCulture(PlayerTypes ePlayer, int iCultureRate);
@@ -2039,23 +2040,24 @@ public:
 	const CityOutputHistory* getCityOutputHistory() const;
 
 private:
-	mutable stdext::hash_map<UnitTypes,bool> m_canTrainCacheUnits;
-	mutable stdext::hash_map<UnitTypes,UnitTypes> m_eCachedAllUpgradesResults;
-	mutable stdext::hash_map<UnitTypes,UnitTypes> m_eCachedAllUpgradesResultsRoot;
+	mutable stdext::hash_map<UnitTypes, bool> m_canTrainCacheUnits;
+	mutable stdext::hash_map<UnitTypes, UnitTypes> m_eCachedAllUpgradesResults;
+	mutable stdext::hash_map<UnitTypes, UnitTypes> m_eCachedAllUpgradesResultsRoot;
 	mutable bool m_canTrainCachePopulated;
 	mutable bool m_canTrainCacheDirty;
 	bool m_bPlotWorkingMasked;
 	mutable int m_totalCommerceRateModifier[NUM_COMMERCE_TYPES];
 
-	mutable std::map<int,int> m_buildingSourcedPropertyCache;
-	mutable std::map<int,int> m_unitSourcedPropertyCache;
+	mutable std::map<int, int> m_buildingSourcedPropertyCache;
+	mutable std::map<int, int> m_unitSourcedPropertyCache;
 
 	bool m_bIsGreatWallSeed;
 	bool m_bVisibilitySetup;
 	mutable bool m_bMaintenanceDirty;
 
-	mutable std::map<int,bool>*	m_bCanConstruct;
+	mutable std::map<int, bool>* m_bCanConstruct;
 
+	IDefenseHandler* m_defenseHandler;
 
 	//	Koshling - add cache of trainability of units which will be
 	//	populated prior to calculating the city's build choices and
