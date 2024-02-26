@@ -14,10 +14,10 @@
       ],
       "defines": ["_DEBUG", "UNICODE", "_UNICODE"],
       "windowsSdkVersion": "10.0.22621.0",
-      "compilerPath": "cl.exe",
+      "compilerPath": "${workspaceFolder}\\Build\\deps\\Microsoft Visual C++ Toolkit 2003\\bin\\cl.exe",
       "cStandard": "c99",
       "cppStandard": "c++03",
-      "intelliSenseMode": "windows-msvc-x64"
+      "intelliSenseMode": "windows-msvc-x86"
     }
   ],
   "version": 4
