@@ -3,7 +3,7 @@ function FindGitExe {
         return $gitPath
     }
   
-    $gitPath = Get-Command git.exe -ErrorAction SilentlyContinue| Select-Object -ExpandProperty Definition
+    $gitPath = Get-Command git.exe -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Definition
     if (![String]::IsNullOrEmpty($gitPath)) {
         return $gitPath
     }
@@ -15,7 +15,7 @@ function FindGitExe {
         return $gitexe
     }
     
-    if( [IntPtr]::size -eq 4 ) {
+    if ( [IntPtr]::size -eq 4 ) {
         return $null
     }
     
@@ -34,11 +34,11 @@ if (!$gitexe) {
     "Press any key to continue with installation of git..."
     [void][System.Console]::ReadKey($true)
 
-    if([Environment]::Is64BitOperatingSystem) {
-        & "..\Utils\wget.exe" -O "git_installer.exe" "https://github.com/git-for-windows/git/releases/download/v2.37.0.windows.1/Git-2.37.0-64-bit.exe" --quiet --show-progress
+    if ([Environment]::Is64BitOperatingSystem) {
+        & "..\Utils\wget.exe" -O "git_installer.exe" "https://github.com/git-for-windows/git/releases/download/v2.44.0.windows.1/Git-2.44.0-64-bit.exe" --quiet --show-progress
     }
     else {
-        & ".\Utils\wget.exe" -O "git_installer.exe" "https://github.com/git-for-windows/git/releases/download/v2.37.0.windows.1/Git-2.37.0-32-bit.exe" --quiet --show-progress
+        & ".\Utils\wget.exe" -O "git_installer.exe" "https://github.com/git-for-windows/git/releases/download/v2.44.0.windows.1/Git-2.44.0-32-bit.exe" --quiet --show-progress
     }
     
     "Waiting for installer to finish..."
