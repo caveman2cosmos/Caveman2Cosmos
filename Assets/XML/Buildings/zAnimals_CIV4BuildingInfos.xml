@@ -1353,9 +1353,9 @@
 				<Type>HERITAGE_FOLKLORE_FOX_FENNEC</Type>
 				<Type>HERITAGE_FOLKLORE_FOX_RED</Type>
 				<Type>HERITAGE_FOLKLORE_KOALA</Type>
+				<Type>HERITAGE_FOLKLORE_PLATYPUS</Type>
 			</PrereqOrHeritage>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_PLATYPUS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA_OTTER</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>850</iCost>

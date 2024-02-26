@@ -703,19 +703,6 @@
 		<Russian>Ìèô î áóéâîëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_BUG</Tag>
-		<English>Folklore (T) - Bug</English>
-		<French>Mythe des insectes (T)</French>
-		<German>
-			<Text>Mythos der Insekten:Mythos der Insekten:Mythos der Insekten:Mythos der Insekten</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito dell'insetto</Italian>
-		<Polish>Mit (T) - Ptaki morskie</Polish>
-		<Russian>Ìèô î æóêå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_BULL</Tag>
 		<English>Folklore (T) - Bull</English>
 		<French>Mythe du Taureau</French>
@@ -1575,18 +1562,6 @@
 		<Russian>Ìèô î ïîëîñàòèêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_MONOTREMES</Tag>
-		<English>Folklore (T) - Monotremes</English>
-		<French>Mythe de l'Échidné (T)</French>
-		<German>
-			<Text>Mythos der Kloakentiere:Mythos der Kloakentiere:Mythos der Kloakentiere:Mythos der Kloakentiere</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito dei monotremi</Italian>
-		<Russian>Ìèô î åõèäíå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_MOOSE</Tag>
 		<English>Folklore - Moose</English>
 		<French>Mythe de l'Elan</French>
@@ -1868,18 +1843,6 @@
 		</German>
 		<Italian>Mito del piccione</Italian>
 		<Russian>Ìèô î ãîëóáå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_PLATYPUS</Tag>
-		<English>Folklore - Platypus</English>
-		<French>Mythe de l'Ornithorynque</French>
-		<German>
-			<Text>Mythos des Schnabeltiers:Mythos des Schnabeltiers:Mythos des Schnabeltiers:Mythos des Schnabeltiers</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito dell'ornitorinco</Italian>
-		<Russian>Ìèô îá óòêîíîñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BRUSHTAIL_POSSUM</Tag>
@@ -2248,28 +2211,6 @@
 		<Italian>Mito della pietra</Italian>
 		<Polish>Mit (E) - Kamień</Polish>
 		<Russian>Ìèô î êàìíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_DESERT_TARANTULA</Tag>
-		<English>Folklore - Desert Tarantula</English>
-		<French>Mythe de la Tarentule du désert</French>
-		<German>
-			<Text>Mythos der Wüstenvogelspinne:Mythos der Wüstenvogelspinne:Mythos der Wüstenvogelspinne:Mythos der Wüstenvogelspinne</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito della tarantola del deserto</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_JUNGLE_TARANTULA</Tag>
-		<English>Folklore - Jungle Tarantula</English>
-		<French>Mythe de la Tarentule de la jungle</French>
-		<German>
-			<Text>Mythos der Dschungelvogelspinne:Mythos der Dschungelvogelspinne:Mythos der Dschungelvogelspinne:Mythos der Dschungelvogelspinne</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito della tarantola della giungla</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_TASMANIAN_DEVIL</Tag>

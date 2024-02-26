@@ -9,6 +9,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvArtFileMgr.h"
 #include "CvBuildingInfo.h"
+#include "CvHeritageInfo.h"
 #include "CvGameAI.h"
 #include "CvGameTextMgr.h"
 #include "CvGlobals.h"
