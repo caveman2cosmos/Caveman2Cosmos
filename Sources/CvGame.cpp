@@ -354,7 +354,7 @@ void CvGame::init(HandicapTypes eHandicap)
 				ePlayer, (LeaderHeadTypes)GC.getDefineINT("ANIMAL_LEADER"),
 				(CivilizationTypes)GC.getDefineINT("BEAST_CIVILIZATION"), false
 			);
-			GET_PLAYER(ePlayer).setNewPlayerAlive(true);
+			GET_PLAYER(ePlayer).setAlive(true, false);
 			GET_TEAM(BEAST_TEAM).init(BEAST_TEAM);
 			GC.getInitCore().setTeam(ePlayer, BEAST_TEAM);
 			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
@@ -365,7 +365,7 @@ void CvGame::init(HandicapTypes eHandicap)
 				ePlayer, (LeaderHeadTypes)GC.getDefineINT("ANIMAL_LEADER"),
 				(CivilizationTypes)GC.getDefineINT("PREDATOR_CIVILIZATION"), false
 			);
-			GET_PLAYER(ePlayer).setNewPlayerAlive(true);
+			GET_PLAYER(ePlayer).setAlive(true, false);
 			GET_TEAM(PREDATOR_TEAM).init(PREDATOR_TEAM);
 			GC.getInitCore().setTeam(ePlayer, PREDATOR_TEAM);
 			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
@@ -376,7 +376,7 @@ void CvGame::init(HandicapTypes eHandicap)
 				ePlayer, (LeaderHeadTypes)GC.getDefineINT("ANIMAL_LEADER"),
 				(CivilizationTypes)GC.getDefineINT("PREY_CIVILIZATION"), false
 			);
-			GET_PLAYER(ePlayer).setNewPlayerAlive(true);
+			GET_PLAYER(ePlayer).setAlive(true, false);
 			GET_TEAM(PREY_TEAM).init(PREY_TEAM);
 			GC.getInitCore().setTeam(ePlayer, PREY_TEAM);
 			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
@@ -387,7 +387,7 @@ void CvGame::init(HandicapTypes eHandicap)
 				ePlayer, (LeaderHeadTypes)GC.getDefineINT("INSECT_LEADER"),
 				(CivilizationTypes)GC.getDefineINT("INSECT_CIVILIZATION"), false
 			);
-			GET_PLAYER(ePlayer).setNewPlayerAlive(true);
+			GET_PLAYER(ePlayer).setAlive(true, false);
 			GET_TEAM(INSECT_TEAM).init(INSECT_TEAM);
 			GC.getInitCore().setTeam(ePlayer, INSECT_TEAM);
 			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
@@ -399,7 +399,7 @@ void CvGame::init(HandicapTypes eHandicap)
 				ePlayer, (LeaderHeadTypes)GC.getDefineINT("NPC4_LEADER"),
 				(CivilizationTypes)GC.getDefineINT("NPC4_CIVILIZATION"), false
 			);
-			GET_PLAYER(ePlayer).setNewPlayerAlive(true);
+			GET_PLAYER(ePlayer).setAlive(true, false);
 			GET_TEAM(NPC4_TEAM).init(NPC4_TEAM);
 			GC.getInitCore().setTeam(ePlayer, NPC4_TEAM);
 			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
@@ -410,7 +410,7 @@ void CvGame::init(HandicapTypes eHandicap)
 				ePlayer, (LeaderHeadTypes)GC.getDefineINT("NPC3_LEADER"),
 				(CivilizationTypes)GC.getDefineINT("NPC3_CIVILIZATION"), false
 			);
-			GET_PLAYER(ePlayer).setNewPlayerAlive(true);
+			GET_PLAYER(ePlayer).setAlive(true, false);
 			GET_TEAM(NPC3_TEAM).init(NPC3_TEAM);
 			GC.getInitCore().setTeam(ePlayer, NPC3_TEAM);
 			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
@@ -421,7 +421,7 @@ void CvGame::init(HandicapTypes eHandicap)
 				ePlayer, (LeaderHeadTypes)GC.getDefineINT("NPC2_LEADER"),
 				(CivilizationTypes)GC.getDefineINT("NPC2_CIVILIZATION"), false
 			);
-			GET_PLAYER(ePlayer).setNewPlayerAlive(true);
+			GET_PLAYER(ePlayer).setAlive(true, false);
 			GET_TEAM(NPC2_TEAM).init(NPC2_TEAM);
 			GC.getInitCore().setTeam(ePlayer, NPC2_TEAM);
 			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
@@ -432,7 +432,7 @@ void CvGame::init(HandicapTypes eHandicap)
 				ePlayer, (LeaderHeadTypes)GC.getDefineINT("NPC1_LEADER"),
 				(CivilizationTypes)GC.getDefineINT("NPC1_CIVILIZATION"), false
 			);
-			GET_PLAYER(ePlayer).setNewPlayerAlive(true);
+			GET_PLAYER(ePlayer).setAlive(true, false);
 			GET_TEAM(NPC1_TEAM).init(NPC1_TEAM);
 			GC.getInitCore().setTeam(ePlayer, NPC1_TEAM);
 			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
@@ -443,7 +443,7 @@ void CvGame::init(HandicapTypes eHandicap)
 				ePlayer, (LeaderHeadTypes)GC.getDefineINT("NPC0_LEADER"),
 				(CivilizationTypes)GC.getDefineINT("NPC0_CIVILIZATION"), false
 			);
-			GET_PLAYER(ePlayer).setNewPlayerAlive(true);
+			GET_PLAYER(ePlayer).setAlive(true, false);
 			GET_TEAM(NPC0_TEAM).init(NPC0_TEAM);
 			GC.getInitCore().setTeam(ePlayer, NPC0_TEAM);
 			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
@@ -455,7 +455,7 @@ void CvGame::init(HandicapTypes eHandicap)
 				ePlayer, (LeaderHeadTypes)GC.getDefineINT("NEANDERTHAL_LEADER"),
 				(CivilizationTypes)GC.getDefineINT("NEANDERTHAL_CIVILIZATION"), false
 			);
-			GET_PLAYER(ePlayer).setNewPlayerAlive(true);
+			GET_PLAYER(ePlayer).setAlive(true, false);
 			GET_TEAM(NEANDERTHAL_TEAM).init(NEANDERTHAL_TEAM);
 			GC.getInitCore().setTeam(ePlayer, NEANDERTHAL_TEAM);
 			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));
@@ -467,7 +467,7 @@ void CvGame::init(HandicapTypes eHandicap)
 				ePlayer, (LeaderHeadTypes)GC.getDefineINT("BARBARIAN_LEADER"),
 				(CivilizationTypes)GC.getDefineINT("BARBARIAN_CIVILIZATION"), false
 			);
-			GET_PLAYER(ePlayer).setNewPlayerAlive(true);
+			GET_PLAYER(ePlayer).setAlive(true, false);
 			GET_TEAM(BARBARIAN_TEAM).init(BARBARIAN_TEAM);
 			GC.getInitCore().setTeam(ePlayer, BARBARIAN_TEAM);
 			GC.getInitCore().setHandicap(ePlayer, (HandicapTypes)GC.getDefineINT("BARBARIAN_HANDICAP"));

@@ -5164,11 +5164,11 @@ class Revolution:
 							RevData.revObjectSetVal( pRevPlayer, 'CapitalName', cityString )
 
 							# Set new player alive before giving cities so that they draw properly
+							pRevPlayer.setAlive(True, False)
 							if pPlayer.isMinorCiv():
-								pRevTeam.setIsMinorCiv( True, False )
+								pRevTeam.setIsMinorCiv(True)
 							elif pRevPlayer.isMinorCiv():
-								pRevTeam.setIsMinorCiv( False, False )
-							pRevPlayer.setNewPlayerAlive(True)
+								pRevTeam.setIsMinorCiv(False)
 
 					iNumPlayerCities = pPlayer.getNumCities()
 
@@ -5969,21 +5969,18 @@ class Revolution:
 		bJoinRev = True
 		if not pRevPlayer.isAlive() and not bIsBarbRev:
 			# Fires naming logic for new civ, so messages get the right name
-			# Must call setNewPlayerAlive to avoid having DLL set this player alive with setPlayerAlive which calls its turn and the turns of all players with higher numbers
-			# Instead, this way makes it alive so it takes its next turn in turn
 			# Add replay message
 			mess = TRNSLTR.getText("TXT_KEY_REV_MESS_VIOLENT",()) + ' ' + pPlayer.getCivilizationDescription(0) + '!'
 			mess += "  " + TRNSLTR.getText("TXT_KEY_REV_BIG_THE",()) + ' ' + pRevPlayer.getCivilizationDescription(0) + ' ' + TRNSLTR.getText("TXT_KEY_REV_MESS_RISEN",())
 			GAME.addReplayMessage( ReplayMessageTypes.REPLAY_MESSAGE_MAJOR_EVENT, pRevPlayer.getID(), mess, cityList[0].getX(), cityList[0].getY(), GC.getInfoTypeForString("COLOR_WARNING_TEXT"))
 
+			pRevPlayer.setAlive(True, False)
 			pRevPlayer.setIsRebel(True)
 			if pPlayer.isMinorCiv():
 				print "[REV] Revolt: Setting new rebel player as minor civ since motherland is a minor civ"
-				pRevTeam.setIsMinorCiv(True, False)
-			else:
-				if pRevPlayer.isMinorCiv():
-					pRevTeam.setIsMinorCiv(False, False)
-			pRevPlayer.setNewPlayerAlive(True)
+				pRevTeam.setIsMinorCiv(True)
+			elif pRevPlayer.isMinorCiv():
+				pRevTeam.setIsMinorCiv(False)
 
 			bJoinRev = False
 

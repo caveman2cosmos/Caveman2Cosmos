@@ -64,7 +64,7 @@ public:
 	bool isHominid() const;
 	bool isMinorCiv() const;
 
-	void setIsMinorCiv(bool bNewValue, bool bDoBarbCivCheck);
+	void setIsMinorCiv(bool bNewValue);
 
 	int /*PlayerTypes*/ getLeaderID() const;
 	int /*HandicapTypes*/ getHandicapType() const;

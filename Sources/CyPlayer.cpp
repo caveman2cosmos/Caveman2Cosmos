@@ -1037,14 +1037,9 @@ void CyPlayer::setFoundedFirstCity(bool bNewValue)
 	m_pPlayer->setFoundedFirstCity(bNewValue);
 }
 
-void CyPlayer::setAlive(bool bNewValue)
+void CyPlayer::setAlive(bool bNewValue, bool bActivateTurn)
 {
-	m_pPlayer->setAlive(bNewValue);
-}
-
-void CyPlayer::setNewPlayerAlive(bool bNewValue)
-{
-	m_pPlayer->setNewPlayerAlive(bNewValue);
+	m_pPlayer->setAlive(bNewValue, bActivateTurn);
 }
 
 bool CyPlayer::isStrike() const

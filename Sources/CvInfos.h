@@ -3599,6 +3599,7 @@ public:
 	int getAnimalCombatModifier() const;
 	int getBarbarianCombatModifier() const;
 	int getAIAnimalCombatModifier() const;
+	inline int getSubdueAnimalBonusAI() const { return m_iSubdueAnimalBonusAI; }
 	int getAIBarbarianCombatModifier() const;
 
 	int getStartingDefenseUnits() const;
@@ -3668,6 +3669,7 @@ private:
 	int m_iAnimalCombatModifier;
 	int m_iBarbarianCombatModifier;
 	int m_iAIAnimalCombatModifier;
+	int m_iSubdueAnimalBonusAI;
 	int m_iAIBarbarianCombatModifier;
 
 	int m_iStartingDefenseUnits;

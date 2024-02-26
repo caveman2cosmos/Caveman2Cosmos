@@ -259,7 +259,7 @@ def onSetPlayerAlive(argsList):
 
 	if pPlayer.isMinorCiv():
 		print '[REV] %s were minor civ'%(pPlayer.getCivilizationDescription(0))
-		pTeam.setIsMinorCiv(False, False)
+		pTeam.setIsMinorCiv(False)
 
 	if LOG_DEBUG and pPlayer.isRebel():
 		print "[REV] %s (%d) is no longer a rebel by death"%(pPlayer.getCivilizationDescription(0), iPlayerID)

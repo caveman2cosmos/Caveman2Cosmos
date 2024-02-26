@@ -191,7 +191,7 @@ bool CyTeam::isMinorCiv() const
 	return m_pTeam->isMinorCiv();
 }
 
-void CyTeam::setIsMinorCiv(bool bNewValue, bool bDoBarbCivCheck)
+void CyTeam::setIsMinorCiv(bool bNewValue)
 {
 	PROFILE_EXTRA_FUNC();
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
@@ -201,7 +201,7 @@ void CyTeam::setIsMinorCiv(bool bNewValue, bool bDoBarbCivCheck)
 			FErrorMsg("GET_PLAYER((PlayerTypes)iI) of m_pTeam should have a civilizationType");
 		}
 	}
-	m_pTeam->setIsMinorCiv(bNewValue, bDoBarbCivCheck);
+	m_pTeam->setIsMinorCiv(bNewValue);
 }
 
 int /*PlayerTypes*/ CyTeam::getLeaderID() const

@@ -272,8 +272,7 @@ public:
 	bool isFoundedFirstCity() const;
 
 	void setFoundedFirstCity(bool bNewValue);
-	void setAlive(bool bNewValue);
-	void setNewPlayerAlive(bool bNewValue);
+	void setAlive(bool bNewValue, bool bActivateTurn);
 
 	bool isStrike() const;
 

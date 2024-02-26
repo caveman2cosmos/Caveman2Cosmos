@@ -617,6 +617,7 @@
 	<ElementType name="iAnimalBonus" content="textOnly" dt:type="int"/>
 	<ElementType name="iBarbarianBonus" content="textOnly" dt:type="int"/>
 	<ElementType name="iAIAnimalBonus" content="textOnly" dt:type="int"/>
+	<ElementType name="iSubdueAnimalBonusAI" content="textOnly" dt:type="int"/>
 	<ElementType name="iAIBarbarianBonus" content="textOnly" dt:type="int"/>
 	<ElementType name="iStartingDefenseUnits" content="textOnly" dt:type="int"/>
 	<ElementType name="iStartingWorkerUnits" content="textOnly" dt:type="int"/>
@@ -682,6 +683,7 @@
 		<element type="iAnimalBonus" minOccurs="0"/>
 		<element type="iBarbarianBonus" minOccurs="0"/>
 		<element type="iAIAnimalBonus" minOccurs="0"/>
+		<element type="iSubdueAnimalBonusAI" minOccurs="0"/>
 		<element type="iAIBarbarianBonus" minOccurs="0"/>
 		<element type="iStartingDefenseUnits" minOccurs="0"/>
 		<element type="iStartingWorkerUnits" minOccurs="0"/>

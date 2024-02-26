@@ -217,7 +217,7 @@ class BarbarianCiv:
 
 		CyTeam = GC.getTeam(CyPlayer.getTeam())
 
-		CyPlayer.setNewPlayerAlive(True)
+		CyPlayer.setAlive(True, False)
 
 		civName = CyPlayer.getCivilizationDescription(0)
 		print "[BarbCiv] %s has emerged in %s" %(civName, szCityName)
@@ -274,7 +274,7 @@ class BarbarianCiv:
 				if iKnownRatio >= iTechFrac:
 					CyTeam.setHasTech(iTech, True, iPlayer, False, False)
 
-		CyTeam.setIsMinorCiv(True, False)
+		CyTeam.setIsMinorCiv(True)
 
 		# Units
 		iNumBarbDefenders = GC.getHandicapInfo(GAME.getHandicapType()).getBarbarianInitialDefenders()
@@ -730,7 +730,7 @@ class BarbarianCiv:
 			# Gold
 			CyPlayer.changeGold(2 * iFactorGS * (iEra + 1))
 			CyPlayer.changeGoldenAgeTurns(GAME.goldenAgeLength100()/100)
-		CyTeam.setIsMinorCiv(False, False)
+		CyTeam.setIsMinorCiv(False)
 
 		civName = CyPlayer.getCivilizationShortDescription(0)
 		print "[INFO] Minor civ %s becomes a major civ.%s" %(civName, "\n\tBarbarianCiv.checkMinorCivs")
