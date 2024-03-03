@@ -9941,21 +9941,18 @@ int CvPlayerAI::AI_stopTradingTradeVal(TeamTypes eTradeTeam, PlayerTypes ePlayer
 	FAssertMsg(GET_TEAM(eTradeTeam).isAlive(), "GET_TEAM(eWarTeam).isAlive is expected to be true");
 	FAssertMsg(!atWar(eTradeTeam, GET_PLAYER(ePlayer).getTeam()), "eTeam should be at peace with eWarTeam");
 
-	int iValue = 50 + GC.getGame().getGameTurn() / 2;
-	iValue += GET_TEAM(eTradeTeam).getNumCities() * 5;
-
-	int iModifier = 0;
+	int iValue = 50 + GET_TEAM(eTradeTeam).getNumCities() * 5 + GC.getGame().getGameTurn() / 2;
 
 	switch (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).AI_getAttitude(eTradeTeam))
 	{
 		case ATTITUDE_FURIOUS: break;
 		case ATTITUDE_ANNOYED:
 		{
-			iValue *= 125; iValue /= 100; break;
+			iValue *= 5; iValue /= 4; break;
 		}
 		case ATTITUDE_CAUTIOUS:
 		{
-			iValue *= 150; iValue /= 100; break;
+			iValue *= 3; iValue /= 2; break;
 		}
 		case ATTITUDE_PLEASED:
 		{
@@ -9969,9 +9966,6 @@ int CvPlayerAI::AI_stopTradingTradeVal(TeamTypes eTradeTeam, PlayerTypes ePlayer
 		}
 		default: FErrorMsg("error");
 	}
-
-	iValue *= std::max(0, (iModifier + 100));
-	iValue /= 100;
 
 	if (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).isOpenBorders(eTradeTeam))
 	{
@@ -10551,10 +10545,50 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 		case UNITAI_SEE_INVISIBLE:
 		case UNITAI_SEE_INVISIBLE_SEA:
 		{
-			if (!bisNegativePropertyUnit && (kUnitInfo.getNumSeeInvisibleTypes() > 0 || kUnitInfo.getNumVisibilityIntensityTypes() > 0))
+			if (bisNegativePropertyUnit)
 			{
-				bValid = true;
+				break; // Not a valid unit for this role
 			}
+			const InvisibleTypes eVisibilityRequested = criteria ? criteria->m_eVisibility : NO_INVISIBLE;
+			if (eVisibilityRequested != NO_INVISIBLE)
+			{
+				if (!GC.getGame().isOption(GAMEOPTION_COMBAT_HIDE_SEEK))
+				{
+					bool bFound = false;
+					for (int iI = 0; iI < kUnitInfo.getNumSeeInvisibleTypes(); ++iI)
+					{
+						if (kUnitInfo.getSeeInvisibleType(iI) == eVisibilityRequested)
+						{
+							bFound = true;
+							break;
+						}
+					}
+					if (!bFound)
+					{
+						break; // Not a valid unit for this role
+					}
+				}
+				else if (kUnitInfo.getVisibilityIntensityType(criteria->m_eVisibility) <= 0)
+				{
+					break; // Not a valid unit for this role
+				}
+			}
+			else
+			{
+				if (GC.getGame().isOption(GAMEOPTION_COMBAT_HIDE_SEEK))
+				{
+					if (kUnitInfo.getNumVisibilityIntensityTypes() == 0)
+					{
+						break;  // Not a valid unit for this role
+					}
+				}
+				else if (kUnitInfo.getNumSeeInvisibleTypes() == 0)
+				{
+					break; // Not a valid unit for this role
+				}
+			}
+
+			bValid = true;
 			break;
 		}
 		case UNITAI_CITY_DEFENSE:
@@ -11602,22 +11636,37 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 				const InvisibleTypes eVisibilityRequested = criteria ? criteria->m_eVisibility : NO_INVISIBLE;
 				iValue += iCombatValue;
 				iValue += kUnitInfo.getMoves() * 3;
-				if (GC.getGame().isOption(GAMEOPTION_COMBAT_HIDE_SEEK))
+				if (eVisibilityRequested != NO_INVISIBLE)
 				{
-					iValue *= kUnitInfo.getVisibilityIntensityType(eVisibilityRequested);
+					if (GC.getGame().isOption(GAMEOPTION_COMBAT_HIDE_SEEK))
+					{
+						iValue *= kUnitInfo.getVisibilityIntensityType(eVisibilityRequested);
+					}
+					else
+					{
+						for (int iI = 0; iI < kUnitInfo.getNumSeeInvisibleTypes(); ++iI)
+						{
+							if (kUnitInfo.getSeeInvisibleType(iI) == (int)eVisibilityRequested)
+							{
+								iValue *= 100;
+								break;
+							}
+						}
+					}
 				}
 				else
 				{
-					for (int iI = 0; iI < kUnitInfo.getNumSeeInvisibleTypes(); ++iI)
+					if (GC.getGame().isOption(GAMEOPTION_COMBAT_HIDE_SEEK))
 					{
-						if (kUnitInfo.getSeeInvisibleType(iI) == (int)eVisibilityRequested)
+						const InvisibilityArray& array = kUnitInfo.getVisibilityIntensityTypes();
+						for (InvisibilityArray::const_iterator it = array.begin(); it != array.end(); ++it)
 						{
-							iValue *= 100;
+							iValue = getModifiedIntValue(iValue, 10 * (*it).second);
 						}
-						else
-						{
-							iValue = 0;
-						}
+					}
+					else
+					{
+						iValue += 50 * kUnitInfo.getNumSeeInvisibleTypes();
 					}
 				}
 				break;
@@ -11630,49 +11679,45 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 				//Combat weaknesses are very bad
 				for (int iI = 0; iI < GC.getNumTerrainInfos(); iI++)
 				{
-					int iTerrainModifier = kUnitInfo.getTerrainDefenseModifier(iI);
+					const int iTerrainModifier = kUnitInfo.getTerrainDefenseModifier(iI);
 					if (iTerrainModifier < 0)
 					{
-						iValue *= iTerrainModifier + 100;
-						iValue /= 100;
+						iValue = getModifiedIntValue(iValue, iTerrainModifier);
 					}
 					else if (iTerrainModifier > 0)
 					{
 						//Strengths are good but not to be too swaying or hunter types and others with grave weaknesses will be selected.
-						iValue++;
+						iValue += iTerrainModifier / 5;
 					}
 				}
 				for (int iI = 0; iI < GC.getNumFeatureInfos(); iI++)
 				{
-					int iFeatureModifier = kUnitInfo.getFeatureDefenseModifier(iI);
+					const int iFeatureModifier = kUnitInfo.getFeatureDefenseModifier(iI);
 					if (iFeatureModifier < 0)
 					{
-						iValue *= iFeatureModifier + 100;
-						iValue /= 100;
+						iValue = getModifiedIntValue(iValue, iFeatureModifier);
 					}
 					else if (iFeatureModifier > 0)
 					{
 						//Strengths are good but not to be too swaying or hunter types and others with grave weaknesses will be selected.
-						iValue++;
+						iValue += iFeatureModifier / 5;
 					}
 				}
 				for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 				{
-					int iCombatModifier = kUnitInfo.getUnitCombatModifier(iI);
+					const int iCombatModifier = kUnitInfo.getUnitCombatModifier(iI);
 					if (iCombatModifier < 0)
 					{
-						iValue *= (iCombatModifier + 100);
-						iValue /= 100;
+						iValue = getModifiedIntValue(iValue, iCombatModifier);
 					}
 					else if (iCombatModifier > 0)
 					{
 						//Strengths are good but not to be too swaying or hunter types and others with grave weaknesses will be selected.
-						iValue++;
+						iValue += iCombatModifier / 5;
 					}
 				}
 				//General defense, if the unit has it, is very good. Very bad if penalized.
-				iValue *= 100 + kUnitInfo.getDefenseCombatModifier();
-				iValue /= 100;
+				iValue = getModifiedIntValue(iValue, kUnitInfo.getDefenseCombatModifier());
 
 				if (kUnitInfo.isNoDefensiveBonus())
 				{
@@ -11810,14 +11855,22 @@ int CvPlayerAI::AI_neededHunters(const CvArea* pArea) const
 	{
 		return 0; // Hunter AI currently only operates on land
 	}
-	const int iLandOfInterest = (
-		GC.getGame().isOption(GAMEOPTION_ANIMAL_STAY_OUT)
-		?
-		pArea->getNumUnownedTiles()
-		:
-		pArea->getNumTiles()
-	);
-	return std::min(iLandOfInterest / 50, 3 + pArea->getNumUnownedTiles() / 50 + getNumCities() / 2);
+	int iNeeded = 1;
+
+	if (GC.getGame().isOption(GAMEOPTION_ANIMAL_STAY_OUT))
+	{
+		if (pArea->getNumUnownedTiles() == 0)
+		{
+			return 0;
+		}
+	}
+	else
+	{
+		iNeeded += getNumCities() / 2;
+	}
+	iNeeded += pArea->getNumUnownedTiles() / 16;
+
+	return iNeeded;
 }
 
 
