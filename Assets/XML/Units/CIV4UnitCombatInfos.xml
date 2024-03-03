@@ -5738,6 +5738,11 @@
 					<FeatureType>FEATURE_FOREST</FeatureType>
 					<iIntensity>-1</iIntensity>
 				</VisibleFeatureRangeChange>
+				<VisibleFeatureRangeChange>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<FeatureType>FEATURE_JUNGLE</FeatureType>
+					<iIntensity>-1</iIntensity>
+				</VisibleFeatureRangeChange>
 			</VisibleFeatureRangeChanges>
 			<VisibleImprovementRangeChanges>
 				<VisibleImprovementRangeChange>
