@@ -9941,35 +9941,33 @@ int CvPlayerAI::AI_stopTradingTradeVal(TeamTypes eTradeTeam, PlayerTypes ePlayer
 	FAssertMsg(GET_TEAM(eTradeTeam).isAlive(), "GET_TEAM(eWarTeam).isAlive is expected to be true");
 	FAssertMsg(!atWar(eTradeTeam, GET_PLAYER(ePlayer).getTeam()), "eTeam should be at peace with eWarTeam");
 
-	int iValue = (50 + (GC.getGame().getGameTurn() / 2));
-	iValue += (GET_TEAM(eTradeTeam).getNumCities() * 5);
+	int iValue = 50 + GC.getGame().getGameTurn() / 2;
+	iValue += GET_TEAM(eTradeTeam).getNumCities() * 5;
 
 	int iModifier = 0;
 
 	switch (GET_TEAM(GET_PLAYER(ePlayer).getTeam()).AI_getAttitude(eTradeTeam))
 	{
-	case ATTITUDE_FURIOUS:
-		break;
-
-	case ATTITUDE_ANNOYED:
-		iModifier += 25;
-		break;
-
-	case ATTITUDE_CAUTIOUS:
-		iModifier += 50;
-		break;
-
-	case ATTITUDE_PLEASED:
-		iModifier += 100;
-		break;
-
-	case ATTITUDE_FRIENDLY:
-		iModifier += 200;
-		break;
-
-	default:
-		FErrorMsg("error");
-		break;
+		case ATTITUDE_FURIOUS: break;
+		case ATTITUDE_ANNOYED:
+		{
+			iValue *= 125; iValue /= 100; break;
+		}
+		case ATTITUDE_CAUTIOUS:
+		{
+			iValue *= 150; iValue /= 100; break;
+		}
+		case ATTITUDE_PLEASED:
+		{
+			iValue *= 2; break;
+			break;
+		}
+		case ATTITUDE_FRIENDLY:
+		{
+			iValue *= 3; break;
+			break;
+		}
+		default: FErrorMsg("error");
 	}
 
 	iValue *= std::max(0, (iModifier + 100));
@@ -10368,12 +10366,19 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			break;
 		}
 		case UNITAI_HUNTER:
+		{
+			if (kUnitInfo.isOnlyDefensive())
+			{
+				break; // Hard disqualification for hunters.
+			}
+			// Fall through to next case.
+		}
 		case UNITAI_HUNTER_ESCORT:
 		{
-			bUndefinedValid = true;
 			if (!bisNegativePropertyUnit && kUnitInfo.getCombat() > 0 && kUnitInfo.getMoves() > 0)
 			{
 				bValid = true;
+				bUndefinedValid = true;
 			}
 			break;
 		}
@@ -10404,10 +10409,10 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 		}
 		case UNITAI_ESCORT:
 		{
-			bUndefinedValid = true;
 			if (!bisNegativePropertyUnit && kUnitInfo.getCombat() > 0 && kUnitInfo.getMoves() > 0)//Note: add a hero filter - a lot of them are being trained for this.
 			{
 				bValid = true;
+				bUndefinedValid = true;
 			}
 			break;
 		}
@@ -10607,10 +10612,10 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 		}
 		case UNITAI_EXPLORE:
 		{
-			bUndefinedValid = true;
-			if (kUnitInfo.getCombat() > 0 && !(kUnitInfo.isNoRevealMap()))
+			if (!bisPositivePropertyUnit && kUnitInfo.getCombat() > 0 && !kUnitInfo.isNoRevealMap())
 			{
 				bValid = true;
+				bUndefinedValid = true;
 			}
 			break;
 		}
@@ -11050,8 +11055,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 						{
 							iBombardValue = iTempBombardValue;
 						}
-						iBombardValue *= (100 + GC.getDefineINT("C2C_ROUGH_BOMBARD_VALUE_MODIFIER"));
-						iBombardValue /= 100;
+						iBombardValue = getModifiedIntValue(iBombardValue, GC.getDefineINT("C2C_ROUGH_BOMBARD_VALUE_MODIFIER"));
 
 						iValue += iBombardValue;
 					}
@@ -11374,24 +11378,13 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			}
 			case UNITAI_HUNTER:
 			{
-				iValue += iCombatValue * 2 / (kUnitInfo.isOnlyDefensive() ? 2 : 1);
-				//TB Combat Mods Begin
-				iValue += iCombatValue * kUnitInfo.getPursuit() / 100;
-				iValue += iCombatValue * kUnitInfo.getUnyielding() / 200;
-#ifdef BATTLEWORN
-				iValue += iCombatValue * kUnitInfo.getWithdrawAdjperAtt() / 100;
-#endif
-				//TB Combat Mods End
-				iValue *= 100 + kUnitInfo.getMoves() * 25;
-				iValue *= 100 + kUnitInfo.getAnimalCombatModifier() * 2;
-				iValue /= 10000;
+				iValue += iCombatValue * kUnitInfo.getMoves();
+				iValue = getModifiedIntValue(iValue, kUnitInfo.getPursuit() + kUnitInfo.getAnimalCombatModifier());
 				break;
 			}
 			case UNITAI_HUNTER_ESCORT:
 			{
-				iValue += iCombatValue;
-				iValue *= 100 + kUnitInfo.getMoves() * 25;
-				iValue /= 100;
+				iValue += iCombatValue * kUnitInfo.getMoves();
 				break;
 			}
 			case UNITAI_MISSIONARY:

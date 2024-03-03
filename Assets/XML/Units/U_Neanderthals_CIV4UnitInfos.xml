@@ -3078,7 +3078,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_NEANDERTHAL_HUNTER</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -3183,7 +3183,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_NEANDERTHAL_TRACKER</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -3282,7 +3282,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_NEANDERTHAL_CHASER</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>

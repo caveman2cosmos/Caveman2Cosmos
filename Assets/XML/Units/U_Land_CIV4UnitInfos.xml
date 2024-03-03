@@ -1142,7 +1142,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_CHASER</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
@@ -1219,7 +1219,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TRACKER</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
@@ -1313,7 +1313,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_HUNTER</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
@@ -1413,7 +1413,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_RANGER</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
@@ -1510,7 +1510,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_WARDEN</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
@@ -1606,7 +1606,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_GAME_HUNTER</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
@@ -1702,7 +1702,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_BIG_GAME_HUNTER</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
@@ -44713,7 +44713,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_MASTER_CHASER</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -44796,7 +44796,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_MASTER_TRACKER</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
@@ -44892,7 +44892,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_MASTER_HUNTER</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
@@ -44992,7 +44992,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_MASTER_RANGER</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
@@ -45099,7 +45099,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_MASTER_WARDEN</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
@@ -45209,7 +45209,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_MASTER_GAME_HUNTER</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
@@ -45319,7 +45319,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_MASTER_BIG_GAME_HUNTER</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>

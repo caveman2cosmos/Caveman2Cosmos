@@ -11,9 +11,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_COMBAT</Category>
 			</Categories>
-			<DefaultStatusTypes>
-				<DefaultStatusType>PROMOTION_STAY_THE_HAND_STATUS</DefaultStatusType>
-			</DefaultStatusTypes>
 			<iTauntChange>50</iTauntChange>
 			<iDodgeModifierChange>10</iDodgeModifierChange>
 			<iPrecisionModifierChange>10</iPrecisionModifierChange>
