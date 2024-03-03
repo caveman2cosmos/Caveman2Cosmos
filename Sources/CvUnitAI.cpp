@@ -5240,19 +5240,11 @@ void CvUnitAI::AI_exploreMove()
 		return;
 	}
 
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD					  12/03/08								jdog5000	  */
-	/*																							  */
-	/* Unit AI																					  */
-	/************************************************************************************************/
 	if (!isHuman() && plot()->isCoastalLand() && GET_PLAYER(getOwner()).AI_unitTargetMissionAIs(this, MISSIONAI_PICKUP) > 0)
 	{
 		getGroup()->pushMission(MISSION_SKIP);
 		return;
 	}
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD					   END												  */
-	/************************************************************************************************/
 
 	if (AI_travelToUpgradeCity())
 	{
@@ -5269,11 +5261,6 @@ void CvUnitAI::AI_exploreMove()
 		return;
 	}
 
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD					  09/18/09								jdog5000	  */
-	/*																							  */
-	/* Unit AI																					  */
-	/************************************************************************************************/
 	if (getGroup()->isStranded())
 	{
 		if (AI_load(UNITAI_ASSAULT_SEA, MISSIONAI_LOAD_ASSAULT, NO_UNITAI, -1, -1, -1, -1, MOVE_NO_ENEMY_TERRITORY, 1))
@@ -5281,9 +5268,6 @@ void CvUnitAI::AI_exploreMove()
 			return;
 		}
 	}
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD					   END												  */
-	/************************************************************************************************/
 
 	if (AI_safety())
 	{
@@ -5418,7 +5402,11 @@ void CvUnitAI::AI_hunterEscortMove()
 	}
 	else if (!isHuman())
 	{
-		if (AI_groupMergeRange(UNITAI_SUBDUED_ANIMAL, 0, false, true, true))
+		if (AI_groupMergeRange(UNITAI_SUBDUED_ANIMAL, 1, false, true, true))
+		{
+			return;
+		}
+		if (AI_groupMergeRange(UNITAI_HUNTER, 1, false, true, true))
 		{
 			return;
 		}
@@ -5457,11 +5445,21 @@ void CvUnitAI::AI_hunterEscortMove()
 		return;
 	}
 
-	if (m_contractualState == CONTRACTUAL_STATE_NO_WORK_FOUND
-	&& GET_PLAYER(getOwner()).AI_neededExplorers(area()) > GET_PLAYER(getOwner()).AI_totalAreaUnitAIs(area(), UNITAI_EXPLORE))
+	if (m_contractualState == CONTRACTUAL_STATE_NO_WORK_FOUND)
 	{
-		AI_setUnitAIType(UNITAI_EXPLORE);
-		return;
+		if (m_pUnitInfo->getDefaultUnitAIType() == UNITAI_EXPLORE)
+		{
+			if (GET_PLAYER(getOwner()).AI_neededExplorers(area()) > GET_PLAYER(getOwner()).AI_totalAreaUnitAIs(area(), UNITAI_EXPLORE))
+			{
+				AI_setUnitAIType(UNITAI_EXPLORE);
+				return;
+			}
+		}
+		else if (m_pUnitInfo->getDefaultUnitAIType() != AI_getUnitAIType())
+		{
+			AI_setUnitAIType(m_pUnitInfo->getDefaultUnitAIType());
+			return;
+		}
 	}
 
 	if (AI_retreatToCity())
@@ -5794,7 +5792,7 @@ void CvUnitAI::AI_generalMove()
 		//	for now (if we try to and happen to be last in the unit processing sequence out eventual request
 		//	can wind up not being processed by any units so always forces a city build request - when built that unit may also
 		//	not join us for exactly the same reason)
-		bool bLookForWork = ((GC.getGame().getGameTurn() % 2 == 0) && getLevel() < 10);
+		const bool bLookForWork = ((GC.getGame().getGameTurn() % 2 == 0) && getLevel() < 10);
 
 		//	If we're reasonably trained up then break off for any request, otherwise
 		//	keep trying to train up unless there are high priority requests
@@ -6349,7 +6347,6 @@ void CvUnitAI::AI_subduedAnimalMove()
 			return;
 		}
 
-		//	If there is an adjacent enemy seek safety before we heal
 		if (exposedToDanger(plot(), 80))
 		{
 			OutputDebugString("	...plot is dangerous - seeking safety\n");
@@ -6360,23 +6357,17 @@ void CvUnitAI::AI_subduedAnimalMove()
 			}
 		}
 
-		//	Failing that are there other animals nearby - safety in numbers
-		if (AI_groupMergeRange(UNITAI_SUBDUED_ANIMAL, 1, false, true, true))
+		if (!getGroup()->canDefend())
 		{
-			return;
+			GET_PLAYER(getOwner()).getContractBroker().advertiseWork
+			(
+				HIGHEST_PRIORITY_ESCORT_PRIORITY,
+				NO_UNITCAPABILITIES,
+				getX(), getY(),
+				this, UNITAI_HUNTER_ESCORT
+			);
 		}
-
-		if (getDamage() > 0)
-		{
-			OutputDebugString(CvString::format("%S (%d) damaged (%d) at (%d,%d)...\n", getDescription().c_str(), m_iID, getDamage(), m_iX, m_iY).c_str());
-			if (AI_heal())
-			{
-				OutputDebugString("	...healing\n");
-				return;
-			}
-		}
-
-		if (AI_safety())
+		else if (AI_reachHome())
 		{
 			return;
 		}
@@ -6410,22 +6401,17 @@ void CvUnitAI::AI_subduedAnimalMove()
 		return;
 	}
 
+	if (AI_retreatToCity())
+	{
+		return;
+	}
+
 	if (AI_scrapSubdued())
 	{
 		OutputDebugString(CvString::format("%S (%d) chooses to disband\n", getDescription().c_str(), m_iID).c_str());
 		return;
 	}
 
-	if (AI_retreatToCity())
-	{
-		return;
-	}
-
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD					  09/18/09								jdog5000	  */
-	/*																							  */
-	/* Unit AI																					  */
-	/************************************************************************************************/
 	if (getGroup()->isStranded())
 	{
 		if (AI_load(UNITAI_ASSAULT_SEA, MISSIONAI_LOAD_ASSAULT, NO_UNITAI, -1, -1, -1, -1, MOVE_NO_ENEMY_TERRITORY, 1))
@@ -6433,9 +6419,6 @@ void CvUnitAI::AI_subduedAnimalMove()
 			return;
 		}
 	}
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD					   END												  */
-	/************************************************************************************************/
 
 	if (AI_safety())
 	{
@@ -26916,7 +26899,7 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 		}
 		if (getGroup()->countNumUnitAIType(UNITAI_WORKER) > 0)
 		{
-			getGroup()->AI_separateAI(UNITAI_SUBDUED_ANIMAL);
+			getGroup()->AI_separateAI(UNITAI_WORKER);
 		}
 	}
 	else if (!isHuman())
@@ -26934,8 +26917,7 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 	}
 
 
-	const UnitCombatTypes eIgnoreUnitCombat = GC.getUNITCOMBAT_SUBDUED();
-	if (getGroup()->getWorstDamagePercent(eIgnoreUnitCombat) > 0)
+	if (getGroup()->getWorstDamagePercent() > 0)
 	{
 		OutputDebugString(CvString::format("%S (%d) damaged at (%d,%d)...\n", getDescription().c_str(), m_iID, m_iX, m_iY).c_str());
 		//	If there is an adjacent enemy seek safety before we heal
@@ -26969,13 +26951,14 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 	&& getGroup()->countNumUnitAIType(UNITAI_WORKER) + getGroup()->countNumUnitAIType(UNITAI_SUBDUED_ANIMAL) > 3
 	&& plot()->getOwner() != getOwner())
 	{
-		if (AI_retreatToCity())
+		if (AI_reachHome())
 		{
 			return;
 		}
 	}
+	const bool bLookForWork = (GC.getGame().getGameTurn() % 2 == 0);
 
-	if (!bWithCommander && !isHuman() && getGroup()->getNumUnits() == 1)
+	if (bLookForWork && !bWithCommander && !isHuman() && getGroup()->getNumUnits() == 1)
 	{
 		// If anyone is actively asking for a hunter that takes priority
 		if (processContracts(HIGHEST_PRIORITY_ESCORT_PRIORITY))
@@ -26998,8 +26981,6 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 				getX(),
 				getY());
 		}
-		// No one wanted us as escort, so we will advertise for an escort instead later.
-		contractFulfilled();
 	}
 
 	//Apparently minimum odds is a maximum odds threshold rather than minimum
@@ -27020,31 +27001,25 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 
 	{
 		// Get the proper accompaniment
-		const bool bContractEscort =
-			(
-				!isHuman() && !isCargo() && AI_getUnitAIType() == UNITAI_HUNTER
-				&& GET_PLAYER(getOwner()).getBestUnitType(UNITAI_HUNTER_ESCORT) != NO_UNIT
-				&& getGroup()->countNumUnitAIType(UNITAI_HUNTER_ESCORT) < 1
-			);
+		const bool bContractEscort = (
+			!bLookForWork && !isHuman() && !isCargo()
+			&& AI_getUnitAIType() == UNITAI_HUNTER
+			&& GET_PLAYER(getOwner()).getBestUnitType(UNITAI_HUNTER_ESCORT) != NO_UNIT
+			&& getGroup()->countNumUnitAIType(UNITAI_HUNTER_ESCORT) < 1
+		);
 		if (bContractEscort)
 		{
-			if (m_contractsLastEstablishedTurn != GC.getGame().getGameTurn())
+			GET_PLAYER(getOwner()).getContractBroker().advertiseWork
+			(
+				HIGHEST_PRIORITY_ESCORT_PRIORITY,
+				NO_UNITCAPABILITIES,
+				getX(), getY(),
+				this, UNITAI_HUNTER_ESCORT
+			);
+
+			if (gUnitLogLevel > 2)
 			{
-				const int priority = HIGHEST_PRIORITY_ESCORT_PRIORITY;
-
-				GET_PLAYER(getOwner()).getContractBroker().advertiseWork
-				(
-					priority, NO_UNITCAPABILITIES,
-					getX(), getY(),
-					this, UNITAI_HUNTER_ESCORT
-				);
-				m_contractsLastEstablishedTurn = GC.getGame().getGameTurn();
-				m_contractualState = CONTRACTUAL_STATE_AWAITING_ANSWER;
-
-				if (gUnitLogLevel > 2)
-				{
-					logBBAI("	%S's hunter (%d) at (%d,%d) [stack size %d] requests escort at priority %d", GET_PLAYER(getOwner()).getCivilizationDescription(0), getID(), getX(), getY(), getGroup()->getNumUnits(), priority);
-				}
+				logBBAI("	%S's hunter (%d) at (%d,%d) [stack size %d] requests escort at priority %d", GET_PLAYER(getOwner()).getCivilizationDescription(0), getID(), getX(), getY(), getGroup()->getNumUnits(), HIGHEST_PRIORITY_ESCORT_PRIORITY);
 			}
 			// Limited operations gravitating close to borders while waiting.
 			if (exposedToDanger(plot(), 90))
@@ -27056,14 +27031,14 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 						return;
 					}
 				}
-				else if (AI_moveToBorders())
+				else if (AI_safety())
 				{
 					return;
 				}
 			}
 			else if (plot()->getOwner() == getOwner())
 			{
-				if (AI_huntRange(3, iMinimumOdds, false))
+				if (AI_huntRange(4, iMinimumOdds, false))
 				{
 					return;
 				}
@@ -27071,21 +27046,24 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 				{
 					return;
 				}
-				if (AI_refreshExploreRange(3, true))
-				{
-					return;
-				}
 			}
 			else
 			{
-				if (AI_huntRange(2, iMinimumOdds, false))
+				if (AI_huntRange(3, iMinimumOdds, false))
 				{
 					return;
 				}
-				if (AI_reachHome())
+				if (GC.getGame().getSorenRandNum(10, "AI Air Attack Move") < 4)
 				{
-					return;
+					if (AI_reachHome())
+					{
+						return;
+					}
 				}
+			}
+			if (AI_explore())
+			{
+				return;
 			}
 			getGroup()->pushMission(MISSION_SKIP);
 			return;
@@ -27105,7 +27083,7 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 	//	If we have animal hangers-on escort them back to our territory
 	if (!isHuman() && (getGroup()->countNumUnitAIType(UNITAI_SUBDUED_ANIMAL) > 0 || getGroup()->countNumUnitAIType(UNITAI_WORKER) > 0) && plot()->getOwner() != getOwner())
 	{
-		if (AI_retreatToCity())
+		if (AI_reachHome())
 		{
 			return;
 		}
