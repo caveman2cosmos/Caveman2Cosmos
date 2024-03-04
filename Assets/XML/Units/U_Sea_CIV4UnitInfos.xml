@@ -3884,7 +3884,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_KAYAK</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_RECON</SubCombatType>
@@ -7028,7 +7027,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_DRAGON_SHIP_PIRATE</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<iInstanceCostModifier>15</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_PIRATE</SubCombatType>
@@ -7237,7 +7236,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_BARBARY_CORSAIR</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<iInstanceCostModifier>15</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_PIRATE</SubCombatType>
@@ -7384,7 +7383,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_PRIVATEER</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<iInstanceCostModifier>15</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_PIRATE</SubCombatType>
@@ -7826,7 +7825,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_ASSAULT_SHIP</Type>
-			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<iInstanceCostModifier>15</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_DIESEL_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_PIRATE</SubCombatType>
