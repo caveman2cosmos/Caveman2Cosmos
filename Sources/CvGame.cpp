@@ -10162,7 +10162,7 @@ void CvGame::averageHandicaps()
 	int iHumanCount = 0;
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isHumanPlayer() && GET_PLAYER((PlayerTypes)iI).isAlive())
+		if (GET_PLAYER((PlayerTypes)iI).isHumanPlayer(true) && GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
 			iAggregate += GET_PLAYER((PlayerTypes)iI).getHandicapType();
 			iHumanCount++;

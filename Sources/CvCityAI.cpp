@@ -1537,6 +1537,22 @@ void CvCityAI::AI_chooseProduction()
 		return;
 	}
 
+	//TB Note: min 1 hunter goes under the priority level of settling initiation because this is exploitable with ambushers (or just plain bad luck for the hunters which is not unlikely).  Destroy all hunters and you cripple growth.
+	//Koshling - made having at least 1 hunter a much higher priority
+	int iNeededHunters = player.AI_neededHunters(pArea);
+	int iHunterDeficitPercent = (iNeededHunters == 0) ? 0 : (iNeededHunters - player.AI_totalAreaUnitAIs(pArea, UNITAI_HUNTER)) * 100 / iNeededHunters;
+
+	if (!bInhibitUnits && iHunterDeficitPercent > 80)
+	{
+		if (isCapital() && AI_chooseExperienceBuilding(UNITAI_HUNTER, 4))
+		{
+			return;
+		}
+		if (AI_chooseUnit("no hunters at all", UNITAI_HUNTER))
+		{
+			return;
+		}
+	}
 	bool bChooseWorker = false;
 	if (!bInhibitUnits && !(bDefenseWar && iWarSuccessRatio < -50) && !bDanger)
 	{
@@ -1815,14 +1831,8 @@ void CvCityAI::AI_chooseProduction()
 
 	m_iTempBuildPriority--;
 
-	//TB Note: min 1 hunter goes under the priority level of settling initiation because this is exploitable with ambushers (or just plain bad luck for the hunters which is not unlikely).  Destroy all hunters and you cripple growth.
-	//Koshling - made having at least 1 hunter a much higher priority
-	int iNeededExplorers = player.AI_neededExplorers(pArea);
-	int iNeededHunters = player.AI_neededHunters(pArea);
-	int iExplorerDeficitPercent = (iNeededExplorers == 0) ? 0 : (iNeededExplorers - player.AI_totalAreaUnitAIs(pArea, UNITAI_EXPLORE)) * 100 / iNeededExplorers;
-	int iHunterDeficitPercent = (iNeededHunters == 0) ? 0 : (iNeededHunters - player.AI_totalAreaUnitAIs(pArea, UNITAI_HUNTER)) * 100 / iNeededHunters;
 
-	if (!bInhibitUnits && iHunterDeficitPercent > 80)
+	if (!bInhibitUnits && iHunterDeficitPercent > 50)
 	{
 		if (isCapital() && AI_chooseExperienceBuilding(UNITAI_HUNTER, 4))
 		{
@@ -1852,7 +1862,7 @@ void CvCityAI::AI_chooseProduction()
 	m_iTempBuildPriority--;
 
 	//Koshling - increase priority of hunetrs up to half what we would ideally want
-	if (iNeededHunters > 0 && iHunterDeficitPercent > 30)
+	if (iNeededHunters > 0 && iHunterDeficitPercent > 20)
 	{
 		if (isCapital() && AI_chooseExperienceBuilding(UNITAI_HUNTER, 4))
 		{
@@ -2391,10 +2401,11 @@ void CvCityAI::AI_chooseProduction()
 
 		if ((bMassing || !bLandWar) && !bDanger && !bFinancialTrouble)
 		{
+			const int iNeededExplorers = player.AI_neededExplorers(pArea);
+			const int iExplorerDeficitPercent = (iNeededExplorers == 0) ? 0 : (iNeededExplorers - player.AI_totalAreaUnitAIs(pArea, UNITAI_EXPLORE)) * 100 / iNeededExplorers;
 			if (iExplorerDeficitPercent >= iHunterDeficitPercent && iExplorerDeficitPercent > 0)
 			{
-				//	If we are just pumping out explorer units and having them die fast
-				//	go for EXP giving buildings first
+				// If we are just pumping out explorer units and having them die fast go for EXP giving buildings first
 				if (isCapital() && AI_chooseExperienceBuilding(UNITAI_EXPLORE, 6))
 				{
 					return;
@@ -14837,7 +14848,7 @@ bool CvCityAI::AI_meetsUnitSelectionCriteria(UnitTypes eUnit, const CvUnitSelect
 {
 	PROFILE_EXTRA_FUNC();
 	//Add more here as needs demand - Some cleanup could be nice too.  Consolidate some of the other checks and possible redundancies into this location?
-	if (eUnit != NO_UNIT && criteria != NULL)
+	if (eUnit != NO_UNIT && criteria)
 	{
 		//No Negative Properties
 		if (criteria->m_bNoNegativeProperties && AI_isNegativePropertyUnit(eUnit))
