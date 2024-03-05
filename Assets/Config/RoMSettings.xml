@@ -87,7 +87,7 @@
 
 				<change module="ANewDawnSettings" function="changedMaxBombardDefense"/>
 			</list>
-			<list id="MinCityDistance" key="MinCityDistance" type="int" default="3" values="6, 5, 4, 3, 2" get="getMaxBombardDefense" set="setMaxBombardDefense">
+			<list id="MinCityDistance" key="MinCityDistance" type="int" default="3" values="6, 5, 4, 3, 2" get="getMinCityDistance" set="setMinCityDistance">
 				<change module="ANewDawnSettings" function="changedMinCityDistance"/>
 			</list>
 			<list id="FlexibleDifficultyMinimumDiff" key="FlexibleDifficultyMinimumDiff" type="int" default="0" listType="string"
