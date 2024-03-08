@@ -9848,17 +9848,7 @@ bool CvUnit::stealPlans()
 
 bool CvUnit::canFound(const CvPlot* pPlot, bool bTestVisible) const
 {
-	if (!isFound())
-	{
-		return false;
-	}
-
-	if (!(GET_PLAYER(getOwner()).canFound(pPlot->getX(), pPlot->getY(), bTestVisible)))
-	{
-		return false;
-	}
-
-	return true;
+	return isFound() && GET_PLAYER(getOwner()).canFound(pPlot->getX(), pPlot->getY(), bTestVisible);
 }
 
 
@@ -9866,12 +9856,7 @@ bool CvUnit::found()
 {
 	CvPlot* pPlot = plot();
 
-	if (pPlot == NULL)
-	{
-		return false;
-	}
-
-	if (!canFound(pPlot))
+	if (!pPlot || !canFound(pPlot))
 	{
 		return false;
 	}
@@ -9879,7 +9864,6 @@ bool CvUnit::found()
 	if (GC.getGame().getActivePlayer() == getOwner())
 	{
 		GC.getCurrentViewport()->bringIntoView(getX(), getY());
-		//gDLL->getInterfaceIFace()->lookAt(plot()->getPoint(), CAMERALOOKAT_NORMAL);
 	}
 
 	GET_PLAYER(getOwner()).found(getX(), getY(), this);
@@ -9889,16 +9873,10 @@ bool CvUnit::found()
 		NotifyEntity(MISSION_FOUND);
 	}
 
-	//	For the AI we need to run the turn for the new city to get production set
+	// For the AI we need to run the turn for the new city to get production set
 	if (!GET_PLAYER(getOwner()).isHumanPlayer())
 	{
-		CvCity* pCity = pPlot->getPlotCity();
-
-		FAssert(pCity != NULL);
-		if (pCity != NULL)//TB Debug note: unknown as to why, after the found statement above, this does not work in some cases to find the new city.
-		{
-			pCity->doTurn();
-		}
+		pPlot->getPlotCity()->doTurn();
 	}
 
 	kill(true, NO_PLAYER, true);

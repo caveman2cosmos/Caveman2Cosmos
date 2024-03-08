@@ -802,8 +802,7 @@ public:
 
 	DllExport bool isAlive() const;
 	bool isEverAlive() const;
-	void setAlive(bool bNewValue);
-	void setNewPlayerAlive(bool bNewValue);
+	void setAlive(bool bNewValue, bool bActivateTurn = true);
 	void verifyAlive();
 
 	DllExport bool isTurnActive() const;

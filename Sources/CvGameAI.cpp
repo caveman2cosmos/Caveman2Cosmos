@@ -83,27 +83,28 @@ void CvGameAI::AI_updateAssignWork()
 int CvGameAI::AI_combatValue(const UnitTypes eUnit) const
 {
 	int iValue = 100;
+	const CvUnitInfo& unit = GC.getUnitInfo(eUnit);
 
-	if (GC.getUnitInfo(eUnit).getDomainType() == DOMAIN_AIR)
+	if (unit.getDomainType() == DOMAIN_AIR)
 	{
-		iValue *= GC.getUnitInfo(eUnit).getAirCombat();
+		iValue *= unit.getAirCombat();
 	}
 	else
 	{
-		iValue *= GC.getUnitInfo(eUnit).getCombat();
+		iValue *= unit.getCombat();
 		//TB Combat Mods Begin
 		// Inactive
-		//iValue += (((100 + GC.getUnitInfo(eUnit).getArmor())/100)/5);
-		//iValue += (((100 + GC.getUnitInfo(eUnit).getPuncture())/100)/5);
+		//iValue += (((100 + unit.getArmor())/100)/5);
+		//iValue += (((100 + unit.getPuncture())/100)/5);
 		// Inactive END
 
 		// TOOD: rethink these calculations
-		//iValue += (((100 * GC.getUnitInfo(eUnit).getPrecisionModifier())/100)/5);
-		//iValue += (((100 * GC.getUnitInfo(eUnit).getDodgeModifier())/100)/5);
-		//iValue += (((100 * GC.getUnitInfo(eUnit).getDamageModifier())/100)/5);
+		//iValue += (((100 * unit.getPrecisionModifier())/100)/5);
+		//iValue += (((100 * unit.getDodgeModifier())/100)/5);
+		//iValue += (((100 * unit.getDamageModifier())/100)/5);
 		//TB Combat Mods End
 
-		iValue *= ((GC.getUnitInfo(eUnit).getFirstStrikes() * 2 + GC.getUnitInfo(eUnit).getChanceFirstStrikes()) * (GC.getCOMBAT_DAMAGE() / 5)) + 100;
+		iValue *= 100 + (2 * unit.getFirstStrikes() + unit.getChanceFirstStrikes()) * GC.getCOMBAT_DAMAGE() / 5;
 		iValue /= 100;
 	}
 

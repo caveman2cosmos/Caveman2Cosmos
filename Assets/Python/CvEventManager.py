@@ -562,7 +562,7 @@ class CvEventManager:
 			for iTeam in xrange(GC.getMAX_PC_TEAMS()):
 				CyTeam = GC.getTeam(iTeam)
 				if CyTeam.isAlive() and not CyTeam.isOpenBordersTrading():
-					CyTeam.setIsMinorCiv(True, False)
+					CyTeam.setIsMinorCiv(True)
 
 		CvGameSpeedInfo = GC.getGameSpeedInfo(GAME.getGameSpeedType())
 		self.iTrainPrcntGS = CvGameSpeedInfo.getHammerCostPercent()
@@ -2197,7 +2197,7 @@ class CvEventManager:
 
 			if CyTeam.isMinorCiv() and CyTeam.isOpenBordersTrading():
 
-				CyTeam.setIsMinorCiv(False, False)
+				CyTeam.setIsMinorCiv(False)
 				GC.getMap().verifyUnitValidPlot()
 				# Message
 				if iPlayer == GAME.getActivePlayer():

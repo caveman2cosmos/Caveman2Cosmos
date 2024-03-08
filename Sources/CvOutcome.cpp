@@ -346,7 +346,12 @@ int CvOutcome::getChance(const CvUnit &kUnit) const
 		iChance += getChancePerPop() * pCity->getPopulation();
 	}
 
-	for (int i=0; i<kInfo.getNumExtraChancePromotions(); i++)
+	if (kInfo.isCapture() && !kUnit.isHuman())
+	{
+		iChance += GC.getHandicapInfo(GC.getGame().getHandicapType()).getSubdueAnimalBonusAI();
+	}
+
+	for (int i = 0; i < kInfo.getNumExtraChancePromotions(); i++)
 	{
 		if (kUnit.isHasPromotion(kInfo.getExtraChancePromotion(i)))
 		{
