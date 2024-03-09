@@ -4188,14 +4188,14 @@
     <TEXT>
         <Tag>TXT_KEY_EVENT_WILDFIRE_1</Tag>
         <English>Wildfire caught our city.</English>
-        <French>Nous avons eu un incendie mineur.</French>
-        <Italian>Si è verificato un piccolo incendio!</Italian>
+        <French></French>
+        <Italian></Italian>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_WILDFIRE_2</Tag>
         <English>We managed to save the forest.</English>
-        <French>Nous avons eu un incendie mineur.</French>
-        <Italian>Si è verificato un piccolo incendio!</Italian>
+        <French></French>
+        <Italian></Italian>
     </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CITYFIRE_MINOR_1</Tag>
@@ -5546,10 +5546,10 @@
     <TEXT>
         <Tag>TXT_KEY_EVENT_WILDFIRE_1_HELP</Tag>
         <English>Wildfire consumed some of our buildings.</English>
-        <French>Un bâtiment a été détruit.</French>
-        <Italian>Un edificio è andato distrutto.</Italian>
-        <Polish>Budynek został zniszczony.</Polish>
-        <Russian>Здание разрушено.</Russian>
+        <French></French>
+        <Italian></Italian>
+        <Polish></Polish>
+        <Russian></Russian>
     </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FIRE_MINOR_1_HELP</Tag>
