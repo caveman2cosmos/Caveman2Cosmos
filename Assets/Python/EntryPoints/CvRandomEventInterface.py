@@ -6343,6 +6343,24 @@ def getHelpVolcanoExtinction(argsList):
 
 ### Fire events for C2C
 
+def doWildFire(argsList):
+	data = argsList[1]
+	CyPlayer = GC.getPlayer(data.ePlayer)
+	CyCity = CyPlayer.getCity(data.iCityId)
+
+	for i in range(GC.getNumBuildingInfos()):
+		if isLimitedWonder(i) or not CyCity.hasBuilding(i) or CyCity.isFreeBuilding(i):
+			continue
+		info = GC.getBuildingInfo(i)
+		if info.getProductionCost() < 1 or info.isNukeImmune() or info.isAutoBuild():
+			continue
+	        iBurnBuilding = i
+
+	if iBurnBuilding != -1:
+		szBuffer = TRNSLTR.getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", (GC.getBuildingInfo(iBurnBuilding).getTextKey(), ))
+		CyInterface().addMessage(data.ePlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, GC.getBuildingInfo(iBurnBuilding).getButton(), GC.getCOLOR_RED(), CyCity.getX(), CyCity.getY(), True, True)
+		CyCity.changeHasBuilding(iBurnBuilding, False)
+
 def doMinorFire(argsList):
 	data = argsList[1]
 	CyPlayer = GC.getPlayer(data.ePlayer)
@@ -6462,6 +6480,8 @@ def doCatastrophicFire(argsList):
 			CyInterface().addMessage(data.ePlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, GC.getBuildingInfo(iBurnBuilding).getButton(), GC.getCOLOR_RED(), CyCity.getX(), CyCity.getY(), True, True)
 			CyCity.setNumRealBuilding(iBurnBuilding, 0)
 
+def getHelpWildFire(argsList):
+  return TRNSLTR.getText("TXT_KEY_EVENT_WILDFIRE_1_HELP",())
 
 def getHelpMinorFire(argsList):
   return TRNSLTR.getText("TXT_KEY_EVENT_FIRE_MINOR_1_HELP",())

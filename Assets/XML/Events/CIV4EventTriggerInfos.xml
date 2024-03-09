@@ -36,6 +36,32 @@
 			<bRecurring>1</bRecurring>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
+			<Type>EVENTTRIGGER_MASSIVE_FOREST_WILDFIRE</Type>
+			<WorldNewsTexts>
+				<Text>TXT_KEY_EVENTTRIGGER_FOREST_FIRE</Text>
+			</WorldNewsTexts>
+			<TriggerTexts>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_FOREST_MASSIVE_WILDFIRE</Text>
+					<Era>NONE</Era>
+				</TriggerText>
+			</TriggerTexts>
+			<EventArt>Art/Event_Images/ForestFireEvent.dds</EventArt>
+			<iPercentGamesActive>100</iPercentGamesActive>
+			<iWeight>2</iWeight>
+			<iNumPlotsRequired>1</iNumPlotsRequired>
+			<FeaturesRequired>
+				<FeatureType>FEATURE_FOREST</FeatureType>
+			</FeaturesRequired>
+			<Events>
+				<Event>EVENT_FOREST_MASSIVE_WILDFIRE_1</Event>
+				<Event>EVENT_FOREST_MASSIVE_WILDFIRE_2</Event>
+				<Event>EVENT_FOREST_MASSIVE_WILDFIRE_3</Event>
+			</Events>
+			<bOwnPlot>1</bOwnPlot>
+			<bRecurring>1</bRecurring>
+		</EventTriggerInfo>
+		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_FOREST_NEW_2</Type>
 			<TriggerTexts>
 				<TriggerText>
