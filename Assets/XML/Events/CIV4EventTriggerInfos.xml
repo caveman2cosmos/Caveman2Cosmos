@@ -38,7 +38,7 @@
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_MASSIVE_FOREST_WILDFIRE</Type>
 			<WorldNewsTexts>
-				<Text>TXT_KEY_EVENTTRIGGER_FOREST_FIRE</Text>
+				<Text>TXT_KEY_EVENTTRIGGER_MASSIVE_FOREST_WILDFIRE</Text>
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
