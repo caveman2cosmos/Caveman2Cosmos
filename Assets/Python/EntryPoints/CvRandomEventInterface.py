@@ -6344,7 +6344,7 @@ def doWildFire(argsList):
 		validHousesList.append(i)
 
 	if validHousesList:
-		iBuilding = validHousesList[GAME.getSorenRandNum(len(validHousesList), "Wildfire"]
+		iBuilding = validHousesList[GAME.getSorenRandNum(len(validHousesList), "Wildfire")]
 		szBuffer = TRNSLTR.getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", (GC.getBuildingInfo(iBuilding).getTextKey(), ))
 		CyInterface().addMessage(data.ePlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, GC.getBuildingInfo(iBuilding).getButton(), GC.getCOLOR_RED(), CyCity.getX(), CyCity.getY(), True, True)
 		CyCity.changeHasBuilding(iBuilding, False)
