@@ -6348,19 +6348,20 @@ def doWildFire(argsList):
 	CyPlayer = GC.getPlayer(data.ePlayer)
 	CyCity = CyPlayer.getCity(data.iCityId)
 
-    iBurnBuilding = -1
+    validHousesList = []
 	for i in range(GC.getNumBuildingInfos()):
 		if isLimitedWonder(i) or not CyCity.hasBuilding(i) or CyCity.isFreeBuilding(i):
 			continue
 		info = GC.getBuildingInfo(i)
 		if info.getProductionCost() < 1 or info.isNukeImmune() or info.isAutoBuild():
 			continue
-	        iBurnBuilding = i
+	        validHousesList.append(i)
 
-	if iBurnBuilding != -1:
+	if validHousesList:
+	    iBuilding = validHousesList[GAME.getSorenRandNum(len(validHousesList), "Wildfire"]
 		szBuffer = TRNSLTR.getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", (GC.getBuildingInfo(iBurnBuilding).getTextKey(), ))
 		CyInterface().addMessage(data.ePlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, GC.getBuildingInfo(iBurnBuilding).getButton(), GC.getCOLOR_RED(), CyCity.getX(), CyCity.getY(), True, True)
-		CyCity.changeHasBuilding(iBurnBuilding, False)
+		CyCity.changeHasBuilding(iBuilding, False)
 
 def doMinorFire(argsList):
 	data = argsList[1]
