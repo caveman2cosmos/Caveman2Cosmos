@@ -6348,6 +6348,7 @@ def doWildFire(argsList):
 	CyPlayer = GC.getPlayer(data.ePlayer)
 	CyCity = CyPlayer.getCity(data.iCityId)
 
+    iBurnBuilding = -1
 	for i in range(GC.getNumBuildingInfos()):
 		if isLimitedWonder(i) or not CyCity.hasBuilding(i) or CyCity.isFreeBuilding(i):
 			continue

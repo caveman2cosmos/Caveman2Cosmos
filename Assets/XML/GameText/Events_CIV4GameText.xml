@@ -864,10 +864,6 @@
     <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_MASSIVE_FOREST_WILDFIRE</Tag>
         <English>Due to recent droughts a massive wildfire has started near the %s1_civ_adjective city of %s2_city.</English>
-        <French></French>
-        <German></German>
-        <Italian></Italian>
-        <Spanish></Spanish>
     </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_FOREST_FIRE</Tag>
@@ -4188,14 +4184,10 @@
     <TEXT>
         <Tag>TXT_KEY_EVENT_WILDFIRE_1</Tag>
         <English>Wildfire caught our city.</English>
-        <French></French>
-        <Italian></Italian>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_WILDFIRE_2</Tag>
         <English>We managed to save the forest.</English>
-        <French></French>
-        <Italian></Italian>
     </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CITYFIRE_MINOR_1</Tag>
@@ -5546,10 +5538,6 @@
     <TEXT>
         <Tag>TXT_KEY_EVENT_WILDFIRE_1_HELP</Tag>
         <English>Wildfire consumed some of our buildings.</English>
-        <French></French>
-        <Italian></Italian>
-        <Polish></Polish>
-        <Russian></Russian>
     </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FIRE_MINOR_1_HELP</Tag>
@@ -5631,18 +5619,10 @@
     <TEXT>
         <Tag>TXT_KEY_EVENT_FOREST_MASSIVE_WILDFIRE_1</Tag>
         <English>Do everything we can to stop the wildfire and save the forest.</English>
-        <French></French>
-        <German></German>
-        <Italian></Italian>
-        <Spanish></Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_FOREST_MASSIVE_WILDFIRE_2</Tag>
         <English>Protect what is most important and let's hope the fire burns itself out.</English>
-        <French></French>
-        <German></German>
-        <Italian></Italian>
-        <Spanish></Spanish>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_FOREST_MASSIVE_WILDFIRE_3</Tag>
@@ -11190,10 +11170,6 @@
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_FOREST_MASSIVE_WILDFIRE</Tag>
         <English>Long term drought has enabled for massive wildfires to start near our city of %s2_city.</English>
-        <French></French>
-        <German></German>
-        <Italian></Italian>
-        <Spanish></Spanish>
     </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_FOREST_FIRE_1</Tag>
