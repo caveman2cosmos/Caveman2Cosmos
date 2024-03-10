@@ -861,6 +861,10 @@
 		<Russian>Сообщают, что из-за мощных ураганов сильно пострадали рыбаки в державе %s1_civ_adjective.</Russian>
 		<Spanish>Un fuerte temporal ha interrumpido la actividad pesquera en el imperio %s1_civ_adjective.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_MASSIVE_FOREST_WILDFIRE</Tag>
+        <English>Due to recent droughts a massive wildfire has started near the %s1_civ_adjective city of %s2_city.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_FOREST_FIRE</Tag>
 		<English>Fire has raged through a forest near the %s1_civ_adjective city of %s2_city.</English>
@@ -4224,6 +4228,14 @@
 		<French>Nous avons eu un grand incendie !</French>
 		<Italian>Si è verificato un grosso incendio!</Italian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_WILDFIRE_1</Tag>
+        <English>Wildfire caught our city.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_WILDFIRE_2</Tag>
+        <English>We managed to save the forest.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CITYFIRE_MINOR_1</Tag>
 		<English>We had minor fire.</English>
@@ -5593,6 +5605,10 @@
 		<Polish>Wiele budynków uległo zniszczeniu.</Polish>
 		<Russian>Несколько зданий разрушены.</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_WILDFIRE_1_HELP</Tag>
+        <English>Wildfire consumed some of our buildings.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FIRE_MINOR_1_HELP</Tag>
 		<English>A building is destroyed.</English>
@@ -5671,6 +5687,22 @@
 		<Italian>[ICON_BULLET]Riserve di cibo a %s2_city: %d1%%[ICON_FOOD]</Italian>
 		<Spanish>[ICON_BULLET]Alimentos almacenados en %s2_city: %d1%% [ICON_FOOD]</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_FOREST_MASSIVE_WILDFIRE_1</Tag>
+        <English>Do everything we can to stop the wildfire and save the forest.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_FOREST_MASSIVE_WILDFIRE_2</Tag>
+        <English>Protect what is most important and let's hope the fire burns itself out.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_FOREST_MASSIVE_WILDFIRE_3</Tag>
+        <English>We are too pressed to spare any aid.</English>
+        <French>Nous n'avons pas assez d'argent pour offrir notre aide.</French>
+        <German>Wir können zurzeit keine Hilfe leisten.</German>
+        <Italian>Siamo troppo sotto pressione per inviare aiuti.</Italian>
+        <Spanish>Estamos demasiado apurados como para prestarles ayuda.</Spanish>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FOREST_FIRE_1</Tag>
 		<English>Organize a replanting effort.</English>
@@ -11221,6 +11253,10 @@
 		<Italian>Un fabbro ha inventato un percussore per le nostre granate, rendendo inutile l'uso delle micce.</Italian>
 		<Spanish>Un maestro herrero ha diseñado un percutor para nuestras granadas, lo que termina con la necesidad de emplear mechas.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_FOREST_MASSIVE_WILDFIRE</Tag>
+        <English>Long term drought has enabled for massive wildfires to start near our city of %s2_city.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_FOREST_FIRE_1</Tag>
 		<English>A forest fire sparked by lightning has raged across the land near %s2_city.</English>

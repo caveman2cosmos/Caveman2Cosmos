@@ -48,6 +48,74 @@
 			<iFeatureChange>1</iFeatureChange>
 		</EventInfo>
 		<EventInfo>
+			<Type>EVENT_FOREST_MASSIVE_WILDFIRE_1</Type>
+			<Description>TXT_KEY_EVENT_FOREST_MASSIVE_WILDFIRE_1</Description>
+			<iGold>-150</iGold>
+			<FeatureType>FEATURE_FOREST</FeatureType>
+			<iFeatureChange>-1</iFeatureChange>
+			<AdditionalEvents>
+				<EventChance>
+					<Event>EVENT_FOREST_WILDFIRE_SAVED</Event>
+					<iEventChance>55</iEventChance>
+				</EventChance>
+				<EventChance>
+					<Event>EVENT_WILDFIRE_CATCHES_CITY</Event>
+					<iEventChance>5</iEventChance>
+				</EventChance>
+			</AdditionalEvents>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>3</iAIValue>
+		</EventInfo>
+		<EventInfo>
+			<Type>EVENT_FOREST_MASSIVE_WILDFIRE_2</Type>
+			<Description>TXT_KEY_EVENT_FOREST_MASSIVE_WILDFIRE_2</Description>
+			<iGold>-50</iGold>
+			<FeatureType>FEATURE_FOREST</FeatureType>
+			<iFeatureChange>-1</iFeatureChange>
+			<iUnitImmobileTurns>1</iUnitImmobileTurns>
+			<AdditionalEvents>
+				<EventChance>
+					<Event>EVENT_WILDFIRE_CATCHES_CITY</Event>
+					<iEventChance>30</iEventChance>
+				</EventChance>
+			</AdditionalEvents>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>2</iAIValue>
+		</EventInfo>
+		<EventInfo>
+			<Type>EVENT_FOREST_MASSIVE_WILDFIRE_3</Type>
+			<Description>TXT_KEY_EVENT_FOREST_MASSIVE_WILDFIRE_3</Description>
+			<bPickCity>1</bPickCity>
+			<iHurryAnger>1</iHurryAnger>
+			<FeatureType>FEATURE_FOREST</FeatureType>
+			<iFeatureChange>-1</iFeatureChange>
+			<iImprovementChange>-1</iImprovementChange>
+			<iRouteChange>-1</iRouteChange>
+			<iUnitImmobileTurns>1</iUnitImmobileTurns>
+			<AdditionalEvents>
+				<EventChance>
+					<Event>EVENT_WILDFIRE_CATCHES_CITY</Event>
+					<iEventChance>50</iEventChance>
+				</EventChance>
+			</AdditionalEvents>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+		</EventInfo>
+		<EventInfo>
+			<Type>EVENT_FOREST_WILDFIRE_SAVED</Type>
+			<Description>TXT_KEY_EVENT_WILDFIRE_2</Description>
+			<FeatureType>FEATURE_FOREST</FeatureType>
+			<iFeatureChange>1</iFeatureChange>
+		</EventInfo>
+		<EventInfo>
+			<Type>EVENT_WILDFIRE_CATCHES_CITY</Type>
+			<Description>TXT_KEY_EVENT_WILDFIRE_1</Description>
+			<bPickCity>1</bPickCity>
+			<PythonCallback>doWildFire</PythonCallback>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<PythonHelp>getHelpWildFire</PythonHelp>
+		</EventInfo>
+		<EventInfo>
 			<Type>EVENT_FOREST_NEW_2</Type>
 			<Description>TXT_KEY_EVENT_GENERIC_CHOICE_GOOD_NEWS</Description>
 			<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
