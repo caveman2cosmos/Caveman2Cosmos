@@ -27,6 +27,15 @@
 		<Russian>Ìèô î áàáèðóñå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_BADGER</Tag>
+		<English>Tale, Badger</English>
+		<French>Mythe du Blaireau</French>
+		<German>Mythos des Dachses</German>
+		<Italian>Mito del tasso</Italian>
+		<Polish>Mit - Borsuk</Polish>
+		<Russian>Ìèô î áàðñóêå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_BEAVER</Tag>
 		<English>Tale, Beaver</English>
 		<French>Mythe du Castor</French>
@@ -138,6 +147,15 @@
 		<Russian>Ìèô î êàðë. áåãåìîòå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_HORSE</Tag>
+		<English>Tale, Horse</English>
+		<French>Mythe du Cheval</French>
+		<German>Mythos des Pferdes</German>
+		<Italian>Mito del cavallo</Italian>
+		<Polish>Mit Koni</Polish>
+		<Russian>Ìèô î ëîøàäè</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_HYENA_STRIPED</Tag>
 		<English>Tale, Striped Hyena</English>
 		<French>Mythe de la Hyène rayée</French>
@@ -216,6 +234,14 @@
 		<Russian>Ìèô î ìàìîíòå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_OTTER_SEA</Tag>
+		<English>Tale, Sea Otter</English>
+		<French>Mythe de la Loutre de mer</French>
+		<German>Mythos des Seeotters</German>
+		<Italian>Mito della lontra marina</Italian>
+		<Russian>Ìèô î êàëàíå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PARROT_AFRICAN_GREY</Tag>
 		<English>Tale, African Grey Parrot</English>
 		<French>Mythe du Perroquet jaco</French>
@@ -263,6 +289,38 @@
 		<German>Mythos des Schnabeltiers</German>
 		<Italian>Mito dell'ornitorinco</Italian>
 		<Russian>Ìèô îá óòêîíîñå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_RACCOON</Tag>
+		<English>Tale, Raccoon</English>
+		<French>Mythe du Raton-Laveur</French>
+		<German>Mythos des Waschbären</German>
+		<Italian>Mito del procione</Italian>
+		<Russian>Ìèô î åíîòå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_RATEL</Tag>
+		<English>Tale, Ratel</English>
+		<French>Mythe du Ratel</French>
+		<German>Mythos des Honigdachses</German>
+		<Italian>Mito del tasso del miele</Italian>
+		<Russian>Ìèô î ìåäîåäå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_RED_PANDA</Tag>
+		<English>Tale, Red Panda</English>
+		<French>Mythe du Panda roux</French>
+		<Italian>Mito del panda rosso</Italian>
+		<Polish>Mit - Panda Czerwona</Polish>
+		<Russian>Ìèô î êðàñíîé ïàíäå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_SKUNK</Tag>
+		<English>Tale, Skunk</English>
+		<French>Mythe de la Moufette</French>
+		<German>Mythos des Stinktiers</German>
+		<Italian>Mito della puzzola</Italian>
+		<Russian>Ìèô î ñêóíñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_SWINE</Tag>
@@ -395,6 +453,14 @@
 		<Russian>Ìèô î ãðèâ. âîëêå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WOLVERINE</Tag>
+		<English>Tale, Wolverine</English>
+		<French>Mythe du Carcajou</French>
+		<German>Mythos des Vielfraßes</German>
+		<Italian>Mito del ghiottone</Italian>
+		<Russian>Ìèô î ðîñîìàõå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_AMPHIBIA</Tag>
 		<English>Taxon Amphibia</English>
 	</TEXT>
@@ -457,6 +523,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_MONOTREMATA_PEDIA</Tag>
 		<English>Monotremata is a taxonomic order of mammals. Monotremes are the only known group of living mammals that lay eggs, rather than bearing live young. The extant monotreme species are the platypus and the four species of echidnas. Monotremes are typified by structural differences in their brains, jaws, digestive tract, reproductive tract, and other body parts, compared to the more common mammalian types. Although they are different from almost all mammals in that they lay eggs, like all mammals, the female monotremes nurse their young with milk. Monotremes have been considered by some authors to be members of Australosphenida, a clade that contains extinct mammals from the Jurassic and Cretaceous of Madagascar, South America, and Australia, but this categorization is disputed and their taxonomy is under debate. All extant species of monotremes are indigenous to Australia and New Guinea, although they were also present in the Late Cretaceous and Paleocene of southern South America, indicating that they were also present in Antarctica, though remains have not been found there.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_MUSTELOIDEA</Tag>
+		<English>Taxon Musteloidea</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_MUSTELOIDEA_PEDIA</Tag>
+		<English>Musteloidea is a superfamily of carnivoran mammals united by shared characteristics of the skull and teeth. Musteloids are the sister group of pinnipeds, the group which includes seals. Mustelidae contains 8 subfamilies and roughly 60 species including weasels, martens, otters, badgers and the wolverine. It is the largest family within the order Carnivora and is part of Musteloidea, a superfamily of weasels that also contains the red panda, raccoons and skunks. Interestingly, this superfamily is most closely related to seals rather than to bears or dogs.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_PANTHERINAE</Tag>

@@ -588,19 +588,6 @@
 		<Italian>Mito dell'uro</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_BADGER</Tag>
-		<English>Folklore - Badger</English>
-		<French>Mythe du Blaireau</French>
-		<German>
-			<Text>Mythos des Dachses:Mythos des Dachses:Mythos des Dachses:Mythos des Dachses</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del tasso</Italian>
-		<Polish>Mit - Borsuk</Polish>
-		<Russian>Ìèô î áàðñóêå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BALL_PYTHON</Tag>
 		<English>Folklore - Ball Python</English>
 		<French>Mythe du Python royal</French>
@@ -1217,19 +1204,6 @@
 		</German>
 		<Italian>Mito del gufo della Virginia</Italian>
 		<Russian>Ìèô î ôèëèíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_HORSE</Tag>
-		<English>Folklore - Horse</English>
-		<French>Mythe du Cheval</French>
-		<German>
-			<Text>Mythos des Pferdes:Mythos des Pferdes:Mythos des Pferdes:Mythos des Pferdes</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del cavallo</Italian>
-		<Polish>Mit Koni</Polish>
-		<Russian>Ìèô î ëîøàäè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_HUMPBACK_WHALE</Tag>
@@ -1869,18 +1843,6 @@
 		<Russian>Ìèô î ñóì÷.êóíèöå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_RACCOON</Tag>
-		<English>Folklore - Raccoon</English>
-		<French>Mythe du Raton-Laveur</French>
-		<German>
-			<Text>Mythos des Waschbären:Mythos des Waschbären:Mythos des Waschbären:Mythos des Waschbären</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del procione</Italian>
-		<Russian>Ìèô î åíîòå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_RAPTORS</Tag>
 		<English>Folklore (T) - Raptors</English>
 		<French>Mythe des Rapaces (T)</French>
@@ -1892,18 +1854,6 @@
 		<Italian>Mito dei rapaci</Italian>
 		<Polish>Mit (T) - Ptaki drapieżne</Polish>
 		<Russian>Ìèô î õèùí. ïòèöå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_RATEL</Tag>
-		<English>Folklore - Ratel</English>
-		<French>Mythe du Ratel</French>
-		<German>
-			<Text>Mythos des Honigdachses:Mythos des Honigdachses:Mythos des Honigdachses:Mythos des Honigdachses</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del tasso del miele</Italian>
-		<Russian>Ìèô î ìåäîåäå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_RAY</Tag>
@@ -2102,18 +2052,6 @@
 		<Russian>Ìèô î ìîðñêîé ïòèöå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_SEA_OTTER</Tag>
-		<English>Folklore - Sea Otter</English>
-		<French>Mythe de la Loutre de mer</French>
-		<German>
-			<Text>Mythos des Seeotters:Mythos des Seeotters:Mythos des Seeotters:Mythos des Seeotters</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito della lontra marina</Italian>
-		<Russian>Ìèô î êàëàíå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_SHARKS</Tag>
 		<English>Folklore (T) - Sharks</English>
 		<French>Histoires de Requins (T)</French>
@@ -2125,18 +2063,6 @@
 		<Italian>Mito degli squali (T)</Italian>
 		<Polish>Mit (T) Opowieśći o rekinach</Polish>
 		<Russian>Ìèô îá àêóëå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_SKUNK</Tag>
-		<English>Folklore - Skunk</English>
-		<French>Mythe de la Moufette</French>
-		<German>
-			<Text>Mythos des Stinktiers:Mythos des Stinktiers:Mythos des Stinktiers:Mythos des Stinktiers</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito della puzzola</Italian>
-		<Russian>Ìèô î ñêóíñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_E_SKY</Tag>
@@ -2331,19 +2257,6 @@
 		<Russian>Ìèô î ìîðæå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_WEASEL</Tag>
-		<English>Folklore (T) - Weasel</English>
-		<French>Mythe de la belette (T)</French>
-		<German>
-			<Text>Mythos der Wiesel:Mythos der Wiesel:Mythos der Wiesel:Mythos der Wiesel</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito della donnola</Italian>
-		<Polish>Mit (T) Łasicy</Polish>
-		<Russian>Ìèô î õîðüêå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_WHALE_SHARK</Tag>
 		<English>Folklore - Whale Shark</English>
 		<French>Mythe - Requin-baleine</French>
@@ -2380,18 +2293,6 @@
 		</German>
 		<Italian>Mito dello gnu</Italian>
 		<Russian>Ìèô î ãíó</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_WOLVERINE</Tag>
-		<English>Folklore - Wolverine</English>
-		<French>Mythe du Carcajou</French>
-		<German>
-			<Text>Mythos des Vielfraßes:Mythos des Vielfraßes:Mythos des Vielfraßes:Mythos des Vielfraßes</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del ghiottone</Italian>
-		<Russian>Ìèô î ðîñîìàõå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_WOMBAT</Tag>

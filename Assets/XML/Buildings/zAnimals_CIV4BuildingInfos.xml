@@ -206,29 +206,21 @@
 			<Civilopedia>TXT_KEY_BUILDING_WILD_ANIMAL_CAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_CARNIVAL</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
+			</PrereqOrBuildings>
 			<ConstructCondition>
-				<And>
-					<Or>
-						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_CARNIVAL</ID>
-						</Has>
-						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_ZOO</ID>
-						</Has>
-					</Or>
-					<Or>
-						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_T_CROCODILE</ID>
-						</Has>
-						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_T_WEASEL</ID>
-						</Has>
-					</Or>
-				</And>
+				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_FOLKLORE_T_CROCODILE</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_HERITAGE</GOMType>
+						<ID>HERITAGE_TAXON_MUSTELOIDEA</ID>
+					</Has>
+				</Or>
 			</ConstructCondition>
 			<iCost>306</iCost>
 			<iHappiness>1</iHappiness>
@@ -1353,11 +1345,9 @@
 				<Type>HERITAGE_FOLKLORE_FOX_FENNEC</Type>
 				<Type>HERITAGE_FOLKLORE_FOX_RED</Type>
 				<Type>HERITAGE_FOLKLORE_KOALA</Type>
+				<Type>HERITAGE_FOLKLORE_OTTER_SEA</Type>
 				<Type>HERITAGE_FOLKLORE_PLATYPUS</Type>
 			</PrereqOrHeritage>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_SEA_OTTER</BuildingType>
-			</PrereqOrBuildings>
 			<iCost>850</iCost>
 			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
 			<CommerceChanges>
@@ -2051,17 +2041,20 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqOrHeritage>
-				<Type>HERITAGE_FOLKLORE_KOALA</Type>
-			</PrereqOrHeritage>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_T_OWLS</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_BADGER</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_RACCOON</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_RATEL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SKUNK</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_BARN_OWL</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_BARRED_OWL</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_GREAT_HORNED_OWL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_TASMANIAN_DEVIL</BuildingType>
 			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_BADGER</Type>
+				<Type>HERITAGE_FOLKLORE_KOALA</Type>
+				<Type>HERITAGE_FOLKLORE_RACCOON</Type>
+				<Type>HERITAGE_FOLKLORE_RATEL</Type>
+				<Type>HERITAGE_FOLKLORE_RED_PANDA</Type>
+				<Type>HERITAGE_FOLKLORE_SKUNK</Type>
+			</PrereqOrHeritage>
 			<iCost>1600</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
