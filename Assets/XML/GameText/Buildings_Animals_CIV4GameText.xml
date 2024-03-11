@@ -1117,18 +1117,6 @@
 		<Russian>Ìèô î êîçåðîãå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_IGUANA</Tag>
-		<English>Folklore - Iguana</English>
-		<French>Mythe de l'Iguane</French>
-		<German>
-			<Text>Mythos des Leguans:Mythos des Leguans:Mythos des Leguans:Mythos des Leguans</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito dell'iguana</Italian>
-		<Russian>Ìèô î èãóàíå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_IMPALA</Tag>
 		<English>Folklore - Impala</English>
 		<French>Mythe de l'Impala</French>
@@ -1191,18 +1179,6 @@
 		<Russian>Ìèô î êðàñí.êåíãóðó</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_KOMODO_DRAGON</Tag>
-		<English>Folklore - Komodo Dragon</English>
-		<French>Mythe du Dragon de Komodo</French>
-		<German>
-			<Text>Mythos des Komodowarans:Mythos des Komodowarans:Mythos des Komodowarans:Mythos des Komodowarans</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del drago di Komodo</Italian>
-		<Russian>Ìèô î êîì. âàðàíå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_KOOKABURRA</Tag>
 		<English>Folklore - Kookaburra</English>
 		<French>Mythe du Kookaboura</French>
@@ -1257,19 +1233,6 @@
 		<Italian>Mito del leviatano</Italian>
 		<Polish>Mit Lewiatana</Polish>
 		<Russian>Ìèô î Ëåâèàôàíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_LIZARD</Tag>
-		<English>Folklore - Lizard</English>
-		<French>Mythe du lézard</French>
-		<German>
-			<Text>Mythos der Echse:Mythos der Echse:Mythos der Echse:Mythos der Echse</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito della lucertola</Italian>
-		<Polish>Mit - Jaszczurka</Polish>
-		<Russian>Ìèô î ÿùåðèöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_GUANACO</Tag>
@@ -1444,18 +1407,6 @@
 		</German>
 		<Italian>Mito delle scimmie del nuovo mondo</Italian>
 		<Russian>Ìèô îá îáåçüÿíàõ Íîâîãî Ñâåòà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_NILE_MONITOR</Tag>
-		<English>Folklore - Nile Monitor</English>
-		<French>Mythe du Varan du Nil</French>
-		<German>
-			<Text>Mythos des Nilwarans:Mythos des Nilwarans:Mythos des Nilwarans:Mythos des Nilwarans</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del varano del Nilo</Italian>
-		<Russian>Ìèô î íèë. âàðàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_NUMBAT</Tag>
@@ -1765,19 +1716,6 @@
 		<Italian>Mito dello squalo del reef</Italian>
 		<Polish>Mit Rekina Rafowego</Polish>
 		<Russian>Ìèô î ðèô. àêóëå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_REPTILE</Tag>
-		<English>Folklore (T) - Reptile</English>
-		<French>Mythe - Reptiles (T)</French>
-		<German>
-			<Text>Mythos der Reptilien:Mythos der Reptilien:Mythos der Reptilien:Mythos der Reptilien</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del rettile</Italian>
-		<Polish>Mit (T) Gadów</Polish>
-		<Russian>Ìèô î ðåïòèëèè</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_RHINOCEROSES</Tag>

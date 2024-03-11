@@ -236,6 +236,14 @@
 		<Russian>Ìèô î ãèåíå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_IGUANA</Tag>
+		<English>Tale, Iguana</English>
+		<French>Mythe de l'Iguane</French>
+		<German>Mythos des Leguans</German>
+		<Italian>Mito dell'iguana</Italian>
+		<Russian>Ìèô î èãóàíå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_JAGUAR</Tag>
 		<English>Tale, Jaguar</English>
 		<French>Mythe du Jaguar</French>
@@ -254,6 +262,14 @@
 		<German>Mythos des Koalas</German>
 		<Italian>Mito del koala</Italian>
 		<Russian>Ìèô î êîàëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_KOMODO_DRAGON</Tag>
+		<English>Tale, Komodo Dragon</English>
+		<French>Mythe du Dragon de Komodo</French>
+		<German>Mythos des Komodowarans</German>
+		<Italian>Mito del drago di Komodo</Italian>
+		<Russian>Ìèô î êîì. âàðàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_LEOPARD_SNOW</Tag>
@@ -281,6 +297,15 @@
 		<Russian>Ìèô î ïåù. ëüâå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_LIZARD</Tag>
+		<English>Tale, Lizard</English>
+		<French>Mythe du lézard</French>
+		<German>Mythos der Echse</German>
+		<Italian>Mito della lucertola</Italian>
+		<Polish>Mit - Jaszczurka</Polish>
+		<Russian>Ìèô î ÿùåðèöå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_LYNX</Tag>
 		<English>Tale, Lynx</English>
 		<French>Mythe du Lynx</French>
@@ -304,6 +329,14 @@
 		<Italian>Mito del mammut</Italian>
 		<Polish>Mit Mamutów</Polish>
 		<Russian>Ìèô î ìàìîíòå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_MONITOR_NILE</Tag>
+		<English>Tale, Nile Monitor</English>
+		<French>Mythe du Varan du Nil</French>
+		<German>Mythos des Nilwarans</German>
+		<Italian>Mito del varano del Nilo</Italian>
+		<Russian>Ìèô î íèë. âàðàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_OTTER_SEA</Tag>
@@ -671,6 +704,14 @@
 		<English>Pantherinae is a subfamily of the Felidae, a family of feliform carnivoran mammals. Pantherinae species are characterised by an imperfectly ossified hyoid bone with elastic tendons that enable their larynx to be mobile. They have a flat rhinarium that only barely reaches the dorsal side of the nose. The area between the nostrils is narrow, and not extended sidewards as in the Felinae. The Panthera species have a single, rounded, vocal fold with a thick mucosal lining, a large vocalis muscle, and a large cricothyroid muscle with long and narrow membranes. A vocal fold that is longer than 19 mm enables all but the snow leopard among them to roar, as it has shorter vocal folds of 9 mm that provide a lower resistance to airflow. The Felinae and Pantherinae probably diverged about 11.5 million years ago.</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_REPTILIA</Tag>
+		<English>Taxon Reptilia</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_REPTILIA_PEDIA</Tag>
+		<English>Reptilia (aka. reptiles) is a taxonomic class of tetrapods with an ectothermic ('cold-blooded') metabolism and amniotic development. Living reptiles comprise four orders: Testudines (turtles), Crocodilia (crocodilians), Squamata (lizards and snakes), and Rhynchocephalia (the tuatara). As of May 2023, about 12,000 living species of reptiles are listed in the Reptile Database. The study of the traditional reptile orders, customarily in combination with the study of modern amphibians, is called herpetology.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_RODENTIA</Tag>
 		<English>Taxon Rodentia</English>
 	</TEXT>
@@ -693,6 +734,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_SPHENISCIDAE_PEDIA</Tag>
 		<English>Spheniscidae is a family of sphenisciformes birds which are commonly called penguins. These aquatic flightless birds live almost exclusively in the Southern Hemisphere: only one species, the Galápagos penguin, is found north of the Equator. Highly adapted for life in the ocean water, penguins have countershaded dark and white plumage and flippers for swimming. Most penguins feed on krill, fish, squid and other forms of sea life which they catch with their bills and swallow whole while swimming. A penguin has a spiny tongue and powerful jaws to grip slippery prey.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_SQUAMATA</Tag>
+		<English>Taxon Squamata</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_SQUAMATA_PEDIA</Tag>
+		<English>Squamata (Latin squamatus, 'scaly, having scales') is the largest taxonomic order of the class reptilia, comprising lizards and snakes. With over 11,500 species, it is also the second-largest order of extant vertebrates, after the perciform fish. Members of the order are distinguished by their skins, which bear horny scales or shields, and must periodically engage in molting. They also possess movable quadrate bones, making possible movement of the upper jaw relative to the neurocranium. This is particularly visible in snakes, which are able to open their mouths very wide to accommodate comparatively large prey.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_SUIDAE</Tag>

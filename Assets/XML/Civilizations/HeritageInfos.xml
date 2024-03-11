@@ -1425,6 +1425,55 @@
 			<Button>Art/Interface/Buttons/Units/Hyena.dds</Button>
 		</HeritageInfo>
 		<HeritageInfo>
+			<Type>HERITAGE_FOLKLORE_IGUANA</Type>
+			<Description>TXT_KEY_HERITAGE_FOLKLORE_IGUANA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
+			<bNeedLanguage>1</bNeedLanguage>
+			<EraCommerceChanges>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_PREHISTORIC</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>20</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_ANCIENT</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_CLASSICAL</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_MEDIEVAL</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_RENAISSANCE</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+			</EraCommerceChanges>
+			<Button>Art/Interface/Buttons/Buildings/totem_reptile.dds</Button>
+		</HeritageInfo>
+		<HeritageInfo>
 			<Type>HERITAGE_FOLKLORE_JAGUAR</Type>
 			<Description>TXT_KEY_HERITAGE_FOLKLORE_JAGUAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
@@ -1570,6 +1619,55 @@
 				</EraCommerceChange>
 			</EraCommerceChanges>
 			<Button>Art/Interface/Buttons/Units/Koala.dds</Button>
+		</HeritageInfo>
+		<HeritageInfo>
+			<Type>HERITAGE_FOLKLORE_KOMODO_DRAGON</Type>
+			<Description>TXT_KEY_HERITAGE_FOLKLORE_KOMODO_DRAGON</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
+			<bNeedLanguage>1</bNeedLanguage>
+			<EraCommerceChanges>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_PREHISTORIC</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>20</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_ANCIENT</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_CLASSICAL</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_MEDIEVAL</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_RENAISSANCE</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+			</EraCommerceChanges>
+			<Button>Art/Interface/Buttons/Buildings/totem_monitorlizard.dds</Button>
 		</HeritageInfo>
 		<HeritageInfo>
 			<Type>HERITAGE_FOLKLORE_LEOPARD_SNOW</Type>
@@ -1719,6 +1817,55 @@
 			<Button>Art/Interface/Buttons/Units/cavelion.dds</Button>
 		</HeritageInfo>
 		<HeritageInfo>
+			<Type>HERITAGE_FOLKLORE_LIZARD</Type>
+			<Description>TXT_KEY_HERITAGE_FOLKLORE_LIZARD</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
+			<bNeedLanguage>1</bNeedLanguage>
+			<EraCommerceChanges>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_PREHISTORIC</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>20</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_ANCIENT</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_CLASSICAL</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_MEDIEVAL</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_RENAISSANCE</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+			</EraCommerceChanges>
+			<Button>Art/Interface/Buttons/Units/Lizard.dds</Button>
+		</HeritageInfo>
+		<HeritageInfo>
 			<Type>HERITAGE_FOLKLORE_LYNX</Type>
 			<Description>TXT_KEY_HERITAGE_FOLKLORE_LYNX</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
@@ -1864,6 +2011,55 @@
 				</EraCommerceChange>
 			</EraCommerceChanges>
 			<Button>Art/Interface/Buttons/Buildings/PaleolithicMammothMyth.dds</Button>
+		</HeritageInfo>
+		<HeritageInfo>
+			<Type>HERITAGE_FOLKLORE_MONITOR_NILE</Type>
+			<Description>TXT_KEY_HERITAGE_FOLKLORE_MONITOR_NILE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
+			<bNeedLanguage>1</bNeedLanguage>
+			<EraCommerceChanges>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_PREHISTORIC</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>20</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_ANCIENT</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_CLASSICAL</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_MEDIEVAL</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_RENAISSANCE</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+			</EraCommerceChanges>
+			<Button>Art/Interface/Buttons/Buildings/totem_monitorlizard.dds</Button>
 		</HeritageInfo>
 		<HeritageInfo>
 			<Type>HERITAGE_FOLKLORE_OTTER_SEA</Type>
@@ -4426,6 +4622,85 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_tiger.dds</Button>
 		</HeritageInfo>
 		<HeritageInfo>
+			<Type>HERITAGE_TAXON_REPTILIA</Type>
+			<Description>TXT_KEY_HERITAGE_TAXON_REPTILIA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
+			<PrereqTech>TECH_TAXONOMY</PrereqTech>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_TAXON_CROCODILIA</Type>
+				<Type>HERITAGE_TAXON_SERPENTES</Type>
+				<Type>HERITAGE_TAXON_SQUAMATA</Type>
+				<Type>HERITAGE_TAXON_TESTUDINES</Type>
+			</PrereqOrHeritage>
+			<EraCommerceChanges>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_ANCIENT</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>20</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_CLASSICAL</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_MEDIEVAL</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_RENAISSANCE</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_INDUSTRIAL</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+			</EraCommerceChanges>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_EDUCATION</ID>
+						</Has>
+					</Active>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_BIOLOGY</ID>
+						</Has>
+					</Active>
+				</PropertySource>
+			</PropertyManipulators>
+			<Button>Art/Interface/Buttons/buildings/totem_komododragon.dds</Button>
+		</HeritageInfo>
+		<HeritageInfo>
 			<Type>HERITAGE_TAXON_RODENTIA</Type>
 			<Description>TXT_KEY_HERITAGE_TAXON_RODENTIA</Description>
 			<Civilopedia>TXT_KEY_HERITAGE_TAXON_RODENTIA_PEDIA</Civilopedia>
@@ -4660,6 +4935,86 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<Button>Art/Interface/Buttons/Units/Penguin_b.dds</Button>
+		</HeritageInfo>
+		<HeritageInfo>
+			<Type>HERITAGE_TAXON_SQUAMATA</Type>
+			<Description>TXT_KEY_HERITAGE_TAXON_SQUAMATA</Description>
+			<Civilopedia>TXT_KEY_HERITAGE_TAXON_SQUAMATA_PEDIA</Civilopedia>
+			<PrereqTech>TECH_TAXONOMY</PrereqTech>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_IGUANA</Type>
+				<Type>HERITAGE_FOLKLORE_KOMODO_DRAGON</Type>
+				<Type>HERITAGE_FOLKLORE_LIZARD</Type>
+				<Type>HERITAGE_FOLKLORE_MONITOR_NILE</Type>
+				<Type>HERITAGE_TAXON_SERPENTES</Type>
+			</PrereqOrHeritage>
+			<EraCommerceChanges>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_ANCIENT</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>20</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_CLASSICAL</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_MEDIEVAL</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_RENAISSANCE</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_INDUSTRIAL</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+			</EraCommerceChanges>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_EDUCATION</ID>
+						</Has>
+					</Active>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_BIOLOGY</ID>
+						</Has>
+					</Active>
+				</PropertySource>
+			</PropertyManipulators>
+			<Button>Art/Interface/Buttons/Buildings/totem_reptile.dds</Button>
 		</HeritageInfo>
 		<HeritageInfo>
 			<Type>HERITAGE_TAXON_SUIDAE</Type>

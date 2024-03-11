@@ -2453,9 +2453,9 @@
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_T_REPTILE</BuildingType>
-			</PrereqInCityBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_TAXON_REPTILIA</Type>
+			</PrereqOrHeritage>
 			<iCost>306</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

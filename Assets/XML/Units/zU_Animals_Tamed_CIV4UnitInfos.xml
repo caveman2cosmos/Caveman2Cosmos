@@ -3339,14 +3339,14 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_TAXON_REPTILIA</Type>
+				<Type>HERITAGE_TAXON_SQUAMATA</Type>
+			</Heritage>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_REPTILE</BuildingType>
 			</PrereqAndBuildings>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_KOMODO_DRAGON</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_NILE_MONITOR</BuildingType>
-			</PrereqOrBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>133</iCost>
 			<iMoves>1</iMoves>
@@ -3431,6 +3431,11 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_TAXON_REPTILIA</Type>
+				<Type>HERITAGE_TAXON_SERPENTES</Type>
+				<Type>HERITAGE_TAXON_SQUAMATA</Type>
+			</Heritage>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_SNAKE_CHARMER</BuildingType>
