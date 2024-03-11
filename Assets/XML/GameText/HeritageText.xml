@@ -3,7 +3,7 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_AARDVARK</Tag>
-		<English>Tale - Aardvark</English>
+		<English>Tale, Aardvark</English>
 		<French>Mythe de l'Oryctérope du Cap</French>
 		<German>Mythos des Erdferkels</German>
 		<Italian>Mito dell'oritteropo</Italian>
@@ -11,7 +11,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_ANTEATER</Tag>
-		<English>Tale - Anteater</English>
+		<English>Tale, Anteater</English>
 		<French>Mythe du Fourmilier</French>
 		<German>Mythos des Ameisenbären</German>
 		<Italian>Mito del formichiere</Italian>
@@ -20,7 +20,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_BABIRUSA</Tag>
-		<English>Tale - Babirusa</English>
+		<English>Tale, Babirusa</English>
 		<French>Mythe du babiroussas</French>
 		<German>Mythos des Molukken-Hirschebers</German>
 		<Italian>Mito del babirussa</Italian>
@@ -28,7 +28,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_BEAVER</Tag>
-		<English>Tale - Beaver</English>
+		<English>Tale, Beaver</English>
 		<French>Mythe du Castor</French>
 		<German>Mythos des Bibers</German>
 		<Italian>Mito del castoro</Italian>
@@ -37,13 +37,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_BOAR_WILD</Tag>
-		<English>Tale - Wild Boar</English>
+		<English>Tale, Wild Boar</English>
 		<German>Mythos des Wildschweins</German>
 		<Italian>Mito del cinghiale selvatico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CAPYBARA</Tag>
-		<English>Tale - Capybara</English>
+		<English>Tale, Capybara</English>
 		<French>Mythe du Cabiaï</French>
 		<German>Mythos des Wasserschweins</German>
 		<Italian>Mito del capibara</Italian>
@@ -51,7 +51,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CHEETAH</Tag>
-		<English>Tale - Cheetah</English>
+		<English>Tale, Cheetah</English>
 		<French>Mythe du Cheetah</French>
 		<German>Mythos des Gepards</German>
 		<Italian>Mito del ghepardo</Italian>
@@ -59,7 +59,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CUSCUS_SPOTTED</Tag>
-		<English>Tale - Spotted Cuscus</English>
+		<English>Tale, Spotted Cuscus</English>
 		<French>Mythe du Couscous</French>
 		<German>Mythos des Tüpfelkuskus</German>
 		<Italian>Mito del cusco maculato</Italian>
@@ -67,7 +67,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_DART_FROG</Tag>
-		<English>Tale - Dart Frog</English>
+		<English>Tale, Dart Frog</English>
 		<French>Mythe de la Grenouille venimeuse</French>
 		<German>Mythos des Baumsteigerfroschs</German>
 		<Italian>Mito della rana velenosa</Italian>
@@ -75,7 +75,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_DINGO</Tag>
-		<English>Tale - Dingo</English>
+		<English>Tale, Dingo</English>
 		<French>Mythe du Dingo</French>
 		<German>Mythos des Dingos</German>
 		<Italian>Mito del dingo</Italian>
@@ -83,7 +83,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_ELEPHANT_AFRICAN</Tag>
-		<English>Tale - African Elephant</English>
+		<English>Tale, African Elephant</English>
 		<French>Mythe de l'Eléphant d'Afrique</French>
 		<German>Mythos des Afrikanischen Elefanten</German>
 		<Italian>Mito dell'elefante africano</Italian>
@@ -91,7 +91,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_ELEPHANT_ASIAN</Tag>
-		<English>Tale - Asian Elephant</English>
+		<English>Tale, Asian Elephant</English>
 		<French>Mythe de l'Eléphant d'Asie</French>
 		<German>Mythos des Asiatischen Elefanten</German>
 		<Italian>Mito dell'elefante asiatico</Italian>
@@ -99,7 +99,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_FOX_ARCTIC</Tag>
-		<English>Tale - Arctic Fox</English>
+		<English>Tale, Arctic Fox</English>
 		<French>Mythe du Renard arctique</French>
 		<German>Mythos des Polarfuchses</German>
 		<Italian>Mito della volpe artica</Italian>
@@ -107,7 +107,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_FOX_FENNEC</Tag>
-		<English>Tale - Fennec Fox</English>
+		<English>Tale, Fennec Fox</English>
 		<French>Mythe du Fennec</French>
 		<German>Mythos des Fenneks</German>
 		<Italian>Mito della volpe del deserto</Italian>
@@ -115,15 +115,31 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_FOX_RED</Tag>
-		<English>Tale - Red Fox</English>
+		<English>Tale, Red Fox</English>
 		<French>Mythe du Renard Roux</French>
 		<German>Mythos des Rotfuchses</German>
 		<Italian>Mito della volpe rossa</Italian>
 		<Russian>Ìèô î ëèñèöå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_HIPPOPOTAMUS</Tag>
+		<English>Tale, Hippopotamus</English>
+		<French>Mythe de l'Hippopotame</French>
+		<German>Mythos des Flusspferds</German>
+		<Italian>Mito dell'ippopotamo</Italian>
+		<Russian>Ìèô î áåãåìîòå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_HIPPOPOTAMUS_PYGMY</Tag>
+		<English>Tale, Pygmy Hippo</English>
+		<French>Mythe de l'Hippopotame nain</French>
+		<German>Mythos des Zwergflusspferdes</German>
+		<Italian>Mito dell'ippopotamo pigmeo</Italian>
+		<Russian>Ìèô î êàðë. áåãåìîòå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_HYENA_STRIPED</Tag>
-		<English>Tale - Striped Hyena</English>
+		<English>Tale, Striped Hyena</English>
 		<French>Mythe de la Hyène rayée</French>
 		<German>Mythos der Hyäne</German>
 		<Italian>Mito della iena striata</Italian>
@@ -131,7 +147,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_JAGUAR</Tag>
-		<English>Tale - Jaguar</English>
+		<English>Tale, Jaguar</English>
 		<French>Mythe du Jaguar</French>
 		<German>Mythos des Jaguars</German>
 		<Italian>Mito del giaguaro</Italian>
@@ -139,11 +155,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_JAGUAR_BLACK</Tag>
-		<English>Tale - Black Jaguar</English>
+		<English>Tale, Black Jaguar</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_KOALA</Tag>
-		<English>Tale - Koala</English>
+		<English>Tale, Koala</English>
 		<French>Mythe du Koala</French>
 		<German>Mythos des Koalas</German>
 		<Italian>Mito del koala</Italian>
@@ -151,7 +167,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_LEOPARD_SNOW</Tag>
-		<English>Tale - Snow Leopard</English>
+		<English>Tale, Snow Leopard</English>
 		<French>Mythe du Léopard des neiges</French>
 		<German>Mythos des Schneeleoparden</German>
 		<Italian>Mito del leopardo delle nevi</Italian>
@@ -159,7 +175,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_LION</Tag>
-		<English>Tale - Lion</English>
+		<English>Tale, Lion</English>
 		<French>Mythe du Lion</French>
 		<German>Mythos des Löwen</German>
 		<Italian>Mito del leone</Italian>
@@ -168,7 +184,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_LION_CAVE</Tag>
-		<English>Tale - Cave Lion</English>
+		<English>Tale, Cave Lion</English>
 		<French>Mythe du Lion des cavernes</French>
 		<German>Mythos des Höhlenlöwen</German>
 		<Italian>Mito del leone delle caverne</Italian>
@@ -176,7 +192,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_LYNX</Tag>
-		<English>Tale - Lynx</English>
+		<English>Tale, Lynx</English>
 		<French>Mythe du Lynx</French>
 		<German>Mythos des Luchses</German>
 		<Italian>Mito della lince</Italian>
@@ -184,7 +200,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_MACAW</Tag>
-		<English>Tale - Macaw</English>
+		<English>Tale, Macaw</English>
 		<French>Mythe de l'Ara</French>
 		<Italian>Mito del pappagallo ara</Italian>
 		<Polish>Mit - Papuga Ara</Polish>
@@ -192,7 +208,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_MAMMOTH</Tag>
-		<English>Tale - Mammoth</English>
+		<English>Tale, Mammoth</English>
 		<French>Mythe du Mammouth</French>
 		<German>Mythos des Mammuts</German>
 		<Italian>Mito del mammut</Italian>
@@ -201,7 +217,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PARROT_AFRICAN_GREY</Tag>
-		<English>Tale - African Grey Parrot</English>
+		<English>Tale, African Grey Parrot</English>
 		<French>Mythe du Perroquet jaco</French>
 		<Italian>Mito del pappagallo cenerino</Italian>
 		<Polish>Mit - Żako</Polish>
@@ -209,7 +225,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PENGUIN_AFRICAN</Tag>
-		<English>Tale - African Penguin</English>
+		<English>Tale, African Penguin</English>
 		<French>Mythe du Manchot du Cap</French>
 		<Italian>Mito del pinguino africano</Italian>
 		<Polish>Mit - Pingwin Przylądkowy</Polish>
@@ -217,7 +233,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PENGUIN_EMPEROR</Tag>
-		<English>Tale - Emperor Penguin</English>
+		<English>Tale, Emperor Penguin</English>
 		<French>Mythe du Manchot Empereur</French>
 		<German>Mythos des Kaiserpinguins</German>
 		<Italian>Mito del pinguino imperatore</Italian>
@@ -225,7 +241,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PENGUIN_GALAPAGOS</Tag>
-		<English>Tale - Galapagos Penguin</English>
+		<English>Tale, Galapagos Penguin</English>
 		<French>Mythe du Pingouin des Galapagos</French>
 		<German>Mythos des Galápagos-Pinguins</German>
 		<Italian>Mito del pinguino delle Galapagos</Italian>
@@ -234,7 +250,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PENGUIN_ROCKHOPPER</Tag>
-		<English>Tale - Rockhopper Penguin</English>
+		<English>Tale, Rockhopper Penguin</English>
 		<French>Mythe du Gorfou sauteur</French>
 		<German>Mythos des Felsenpinguins</German>
 		<Italian>Mito del pinguino saltarocce</Italian>
@@ -242,7 +258,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PLATYPUS</Tag>
-		<English>Tale - Platypus</English>
+		<English>Tale, Platypus</English>
 		<French>Mythe de l'Ornithorynque</French>
 		<German>Mythos des Schnabeltiers</German>
 		<Italian>Mito dell'ornitorinco</Italian>
@@ -250,12 +266,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_SWINE</Tag>
-		<English>Tale - Swine</English>
+		<English>Tale, Swine</English>
 		<Italian>Mito del maiale</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TAPIR_BAIRDS</Tag>
-		<English>Tale - Baird's Tapir</English>
+		<English>Tale, Baird's Tapir</English>
 		<French>Mythe du Tapir de Baird</French>
 		<German>Mythos des Baird-Tapirs</German>
 		<Italian>Mito del tapiro di Baird</Italian>
@@ -264,7 +280,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TAPIR_LOWLAND</Tag>
-		<English>Tale - Lowland Tapir</English>
+		<English>Tale, Lowland Tapir</English>
 		<French>Mythe du Tapir du Brésil</French>
 		<German>Mythos des Flachlandtapirs</German>
 		<Italian>Mito del tapiro di pianura</Italian>
@@ -273,7 +289,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TAPIR_MALAYAN</Tag>
-		<English>Tale - Malayan Tapir</English>
+		<English>Tale, Malayan Tapir</English>
 		<French>Mythe du Tapir Malais</French>
 		<German>Mythos des Schabrackentapirs</German>
 		<Italian>Mito del tapiro malese</Italian>
@@ -282,7 +298,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TAPIR_MOUNTAIN</Tag>
-		<English>Tale - Mountain Tapir</English>
+		<English>Tale, Mountain Tapir</English>
 		<French>Mythe du Tapir des Montagnes</French>
 		<German>Mythos des Bergtapirs</German>
 		<Italian>Mito del tapiro delle Ande</Italian>
@@ -291,21 +307,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TARANTULA_DESERT</Tag>
-		<English>Tale - Desert Tarantula</English>
+		<English>Tale, Desert Tarantula</English>
 		<French>Mythe de la Tarentule du désert</French>
 		<German>Mythos der Wüstenvogelspinne</German>
 		<Italian>Mito della tarantola del deserto</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TARANTULA_JUNGLE</Tag>
-		<English>Tale - Jungle Tarantula</English>
+		<English>Tale, Jungle Tarantula</English>
 		<French>Mythe de la Tarentule de la jungle</French>
 		<German>Mythos der Dschungelvogelspinne</German>
 		<Italian>Mito della tarantola della giungla</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TIGER_BENGAL</Tag>
-		<English>Tale - Bengal Tiger</English>
+		<English>Tale, Bengal Tiger</English>
 		<French>Mythe du Tigre du Bengale</French>
 		<German>Mythos des Bengalischen Tigers</German>
 		<Italian>Mito della tigre del Bengala</Italian>
@@ -314,7 +330,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TIGER_SIBERIAN</Tag>
-		<English>Tale - Siberian Tiger</English>
+		<English>Tale, Siberian Tiger</English>
 		<French>Mythe du Tigre de Sibérie</French>
 		<German>Mythos des Sibirischen Tigers</German>
 		<Italian>Mito della tigre siberiana</Italian>
@@ -322,7 +338,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_UNICORN</Tag>
-		<English>Tale - Unicorn</English>
+		<English>Tale, Unicorn</English>
 		<French>Mythe de la Licorne</French>
 		<German>Mythos der Einhörner</German>
 		<Italian>Mito dell'unicorno</Italian>
@@ -331,7 +347,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_USSURI_DHOLE</Tag>
-		<English>Tale - Ussuri Dhole</English>
+		<English>Tale, Ussuri Dhole</English>
 		<French>Mythe du Cuon d'Asie</French>
 		<German>Mythos des Rothundes</German>
 		<Italian>Mito del cuon rutilano</Italian>
@@ -339,7 +355,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WARTHOG</Tag>
-		<English>Tale - Warthog</English>
+		<English>Tale, Warthog</English>
 		<French>Mythe du Phacochère</French>
 		<German>Mythos des Warzenschweins</German>
 		<Italian>Mito del facocero</Italian>
@@ -348,7 +364,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WOLF</Tag>
-		<English>Tale - Wolf</English>
+		<English>Tale, Wolf</English>
 		<French>Mythe du Loup gris</French>
 		<German>Mythos des Wolfes</German>
 		<Italian>Mito del lupo grigio</Italian>
@@ -356,7 +372,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WOLF_DIRE</Tag>
-		<English>Tale - Dire Wolf</English>
+		<English>Tale, Dire Wolf</English>
 		<French>Mythe du Loup sinistre</French>
 		<German>Mythos des Canis dirus</German>
 		<Italian>Mito dell'enocione</Italian>
@@ -364,7 +380,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WOLF_ETHIOPIAN</Tag>
-		<English>Tale - Ethiopian Wolf</English>
+		<English>Tale, Ethiopian Wolf</English>
 		<French>Mythe du loup d'Éthiopie</French>
 		<German>Mythos des Äthiopischen Wolfs</German>
 		<Italian>Mito del lupo etiope</Italian>
@@ -372,7 +388,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WOLF_MANED</Tag>
-		<English>Tale - Maned Wolf</English>
+		<English>Tale, Maned Wolf</English>
 		<French>Mythe du Loup à crinière</French>
 		<German>Mythos des Mähnenwolfs</German>
 		<Italian>Mito del lupo dalla criniera</Italian>
@@ -417,6 +433,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_FELINAE_PEDIA</Tag>
 		<English>Felinae is a subfamily of the Felidae, a family of feliform carnivoran mammals. The members of the Felinae have retractile claws that are protected by at least one cutaneous lobe. Their larynx is kept close to the base of the skull by an ossified hyoid. They can purr owing to the vocal folds being shorter than 6 mm. The cheetah Acinonyx does not have cutaneous sheaths for guarding claws. The Felinae and Pantherinae probably diverged about 11.5 million years ago.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_HIPPOPOTAMIDAE</Tag>
+		<English>Taxon Hippopotamidae</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_HIPPOPOTAMIDAE_PEDIA</Tag>
+		<English>Hippopotamidae is a family of stout, naked-skinned, and semiaquatic artiodactyl mammals, possessing three-chambered stomachs and walking on four toes on each foot. While they resemble pigs physiologically, their closest living relatives are the cetaceans. There are two living species of hippopotamid in two genera; the pygmy hippo (Choeropsis liberiensis) of the forests of west Africa, and the common hippo (Hippopotamus amphibius). </English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_HYAENIDAE</Tag>

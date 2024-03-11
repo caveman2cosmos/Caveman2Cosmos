@@ -1207,30 +1207,6 @@
 		<Russian>Ìèô îá àêóëå-ìîëîò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_HIPPOPOTAMUS</Tag>
-		<English>Folklore - Hippopotamus</English>
-		<French>Mythe de l'Hippopotame</French>
-		<German>
-			<Text>Mythos des Flusspferds:Mythos des Flusspferds:Mythos des Flusspferds:Mythos des Flusspferds</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito dell'ippopotamo</Italian>
-		<Russian>Ìèô î áåãåìîòå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_HIPPOS</Tag>
-		<English>Folklore (T) - Hippos</English>
-		<French>Mythe de l'Hippopotame (T)</French>
-		<German>
-			<Text>Mythos der Flusspferde:Mythos der Flusspferde:Mythos der Flusspferde:Mythos der Flusspferde</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito dell'ippopotamo gorgops</Italian>
-		<Russian>Ìèô î áåãåìîòå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_GREAT_HORNED_OWL</Tag>
 		<English>Folklore - Great Horned Owl</English>
 		<French>Mythe du Hibou grand duc</French>
@@ -1879,18 +1855,6 @@
 		</German>
 		<Italian>Mito della vipera soffiante</Italian>
 		<Russian>Ìèô î øóì. ãàäþêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_PYGMY_HIPPO</Tag>
-		<English>Folklore - Pygmy Hippo</English>
-		<French>Mythe de l'Hippopotame nain</French>
-		<German>
-			<Text>Mythos des Zwergflusspferdes:Mythos des Zwergflusspferdes:Mythos des Zwergflusspferdes:Mythos des Zwergflusspferdes</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito dell'ippopotamo pigmeo</Italian>
-		<Russian>Ìèô î êàðë. áåãåìîòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_QUOLL</Tag>
