@@ -84,6 +84,11 @@
 			<bOwnPlot>1</bOwnPlot>
 			<bRecurring>1</bRecurring>
 		</EventTriggerInfo>
+		<!-- @SAVEBREAK - Delete -->
+		<EventTriggerInfo>
+			<Type>EVENTTRIGGER_FOREST_NEW_2</Type>
+		</EventTriggerInfo>
+		<!-- !SAVEBREAK -->
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_CITY_RUINS_ANCIENT</Type>
 			<WorldNewsTexts>
@@ -174,6 +179,11 @@
 			</ObsoleteTechs>
 			<bRecurring>1</bRecurring>
 		</EventTriggerInfo>
+		<!-- @SAVEBREAK - Delete -->
+		<EventTriggerInfo>
+			<Type>EVENTTRIGGER_MOTHER_LODE</Type>
+		</EventTriggerInfo>
+		<!-- !SAVEBREAK -->
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_MOTHER_LODE_GOLD</Type>
 			<WorldNewsTexts>
