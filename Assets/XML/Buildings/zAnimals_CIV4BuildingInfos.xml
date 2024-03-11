@@ -210,18 +210,10 @@
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqOrBuildings>
-			<ConstructCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_T_CROCODILE</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_HERITAGE</GOMType>
-						<ID>HERITAGE_TAXON_MUSTELOIDEA</ID>
-					</Has>
-				</Or>
-			</ConstructCondition>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_TAXON_CROCODILIA</Type>
+				<Type>HERITAGE_TAXON_MUSTELOIDEA</Type>
+			</PrereqOrHeritage>
 			<iCost>306</iCost>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>

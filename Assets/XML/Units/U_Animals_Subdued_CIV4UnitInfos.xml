@@ -2738,14 +2738,16 @@
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_CROCODILE</BuildingType>
+				<BuildingType>HERITAGE_TAXON_CROCODILIA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_REPTILE</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_REPTILE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_BLACK_CAIMAN</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BAD_BOYS</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_CAIMAN_BLACK</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -7052,13 +7054,15 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_REPTILE</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_REPTILE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_CROCODILE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_AMERICAN_ALLIGATOR</BuildingType>
+				<BuildingType>HERITAGE_TAXON_CROCODILIA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_DRAGON</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BAD_BOYS</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_ALLIGATOR_AMERICAN</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -7227,14 +7231,16 @@
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_REPTILE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_CHINESE_ALLIGATOR</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_REPTILE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_CROCODILE</BuildingType>
+				<BuildingType>HERITAGE_TAXON_CROCODILIA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_DRAGON</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BAD_BOYS</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_ALLIGATOR_CHINESE</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -7876,12 +7882,14 @@
 				<BuildingType>BUILDING_FOLKLORE_T_REPTILE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_DRAGON</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_REPTILE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_CROCODILE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_GHARIAL</BuildingType>
+				<BuildingType>HERITAGE_TAXON_CROCODILIA</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BAD_BOYS</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_GHARIAL</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -14459,13 +14467,15 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_REPTILE</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_REPTILE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_CROCODILE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_NILE_CROCODILE</BuildingType>
+				<BuildingType>HERITAGE_TAXON_CROCODILIA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_DRAGON</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BAD_BOYS</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_CROCODILE_NILE</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -18225,12 +18235,14 @@
 				<BuildingType>BUILDING_FOLKLORE_E_DRAGON</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_REPTILE</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_REPTILE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_CROCODILE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_CROCODILE_LARGE</BuildingType>
+				<BuildingType>HERITAGE_TAXON_CROCODILIA</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BAD_BOYS</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_CROCODILE_MUGGER</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -18400,12 +18412,14 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_REPTILE</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_REPTILE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_CROCODILE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_CROCODILE_SMALL</BuildingType>
+				<BuildingType>HERITAGE_TAXON_CROCODILIA</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BAD_BOYS</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_CROCODILE_MUGGER</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -19054,8 +19068,7 @@
 				<BuildingType>BUILDING_NAVAL_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_MASTER_SEA_HUNTER</BuildingType>
 				<BuildingType>BUILDING_WONDERS_OF_THE_DEEP</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_CROCODILE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SALTWATER_CROCODILE_LARGE</BuildingType>
+				<BuildingType>HERITAGE_TAXON_CROCODILIA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_REPTILE</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_REPTILE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_DRAGON</BuildingType>
@@ -19063,6 +19076,9 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_CROCODILE_SALTWATER</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
@@ -19296,14 +19312,16 @@
 				<BuildingType>BUILDING_NAVAL_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_MASTER_SEA_HUNTER</BuildingType>
 				<BuildingType>BUILDING_WONDERS_OF_THE_DEEP</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_CROCODILE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SALTWATER_CROCODILE_SMALL</BuildingType>
+				<BuildingType>HERITAGE_TAXON_CROCODILIA</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BAD_BOYS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_REPTILE</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_REPTILE</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_CROCODILE_SALTWATER</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
@@ -24863,10 +24881,12 @@
 			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_FOLKLORE_T_CROCODILE</BuildingType>
+				<BuildingType>HERITAGE_TAXON_CROCODILIA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEA</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SALTWATER_CROCODILE_LARGE</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_CROCODILE_SALTWATER</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
@@ -24970,10 +24990,12 @@
 			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_FOLKLORE_T_CROCODILE</BuildingType>
+				<BuildingType>HERITAGE_TAXON_CROCODILIA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEA</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SALTWATER_CROCODILE_SMALL</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_CROCODILE_SALTWATER</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>

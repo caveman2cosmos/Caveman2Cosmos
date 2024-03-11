@@ -10,6 +10,24 @@
 		<Russian>Ìèô î òðóáêîçóáå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_ALLIGATOR_AMERICAN</Tag>
+		<English>Tale, American Alligator</English>
+		<French>Mythe de l'Alligator d'Amérique</French>
+		<German>Mythos des Mississippi-Alligators</German>
+		<Italian>Mito dell'alligatore americano</Italian>
+		<Polish>Mit - Aligator Amerykański</Polish>
+		<Russian>Ìèô îá àëëèãàòîðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_ALLIGATOR_CHINESE</Tag>
+		<English>Tale, Chinese Alligator</English>
+		<French>Mythe de l'Alligator de Chine</French>
+		<German>Mythos des China-Alligators</German>
+		<Italian>Mito dell'alligatore cinese</Italian>
+		<Polish>Mit - Aligator Chiński</Polish>
+		<Russian>Ìèô î êèò. àëëèãàòîð</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_ANTEATER</Tag>
 		<English>Tale, Anteater</English>
 		<French>Mythe du Fourmilier</French>
@@ -51,6 +69,15 @@
 		<Italian>Mito del cinghiale selvatico</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CAIMAN_BLACK</Tag>
+		<English>Tale, Black Caiman</English>
+		<French>Mythe du Caïman</French>
+		<German>Mythos des Mohrenkaimans</German>
+		<Italian>Mito del caimano nero</Italian>
+		<Polish>Mit - Kajman</Polish>
+		<Russian>Ìèô î êàéìàíå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CAPYBARA</Tag>
 		<English>Tale, Capybara</English>
 		<French>Mythe du Cabiaï</French>
@@ -65,6 +92,26 @@
 		<German>Mythos des Gepards</German>
 		<Italian>Mito del ghepardo</Italian>
 		<Russian>Ìèô î ãåïàðäå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CROCODILE_MUGGER</Tag>
+		<English>Tale, Mugger Crocodile</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CROCODILE_NILE</Tag>
+		<English>Tale, Nile Crocodile</English>
+		<French>Mythe du Crocodile du Nil</French>
+		<German>Mythos des Nilkrokodils</German>
+		<Italian>Mito del coccodrillo del Nilo</Italian>
+		<Polish>Mit - Krokodyl Nilowy</Polish>
+		<Russian>Ìèô î íèë. êðîêîäèëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CROCODILE_SALTWATER</Tag>
+		<English>Tale, Saltwater Crocodile</English>
+		<French>Mythe du Crocodile de mer</French>
+		<German>Mythos des Salzwasserkrokodils</German>
+		<Italian>Mito del coccodrillo marino</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CUSCUS_SPOTTED</Tag>
@@ -129,6 +176,15 @@
 		<German>Mythos des Rotfuchses</German>
 		<Italian>Mito della volpe rossa</Italian>
 		<Russian>Ìèô î ëèñèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_GHARIAL</Tag>
+		<English>Tale, Gharial</English>
+		<French>Mythe du Gavial du Gange</French>
+		<German>Mythos des Gavials</German>
+		<Italian>Mito del gaviale</Italian>
+		<Polish>Mit - Gawial</Polish>
+		<Russian>Ìèô î ãàâèàëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_HIPPOPOTAMUS</Tag>
@@ -483,6 +539,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_CANIDAE_PEDIA</Tag>
 		<English>Canidae is a family of carnivoran mammals which are commonly called dogs or canids. Canids are found on all continents except Antarctica, having arrived independently or accompanied by human beings over extended periods of time. Canids vary in size from the 2-metre-long gray wolf to the 24-centimetre-long fennec fox. The body forms of canids are similar, typically having long muzzles, upright ears, teeth adapted for cracking bones and slicing flesh, long legs, and bushy tails. They are mostly social animals, living together in family units or small groups and behaving co-operatively. Typically, only the dominant pair in a group breeds and a litter of young are reared annually in an underground den. Canids communicate by scent signals and vocalizations. One canid, the domestic dog, originated from a symbiotic relationship with Upper Paleolithic humans and today remains one of the most widely kept domestic animals.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_CROCODILIA</Tag>
+		<English>Taxon Crocodilia</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_CROCODILIA_PEDIA</Tag>
+		<English>Crocodilia is an order of mostly large, predatory, semiaquatic reptiles known as crocodilians. They first appeared 94 million years ago in the Late Cretaceous period and are the closest living relatives of birds, as the two groups are the only known survivors of the Archosauria. The order Crocodilia includes the true crocodiles (family Crocodylidae), the alligators and caimans (family Alligatoridae), and the gharial and false gharial (family Gavialidae). Although the term crocodiles (or crocs) is sometimes used to refer to all of these, crocodilians is a less ambiguous vernacular term for members of this group.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_ELEPHANTIDAE</Tag>

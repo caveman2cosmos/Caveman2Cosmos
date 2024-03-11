@@ -698,19 +698,6 @@
 		<Russian>Ìèô î áûêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_BLACK_CAIMAN</Tag>
-		<English>Folklore - Black Caiman</English>
-		<French>Mythe du Caïman</French>
-		<German>
-			<Text>Mythos des Mohrenkaimans:Mythos des Mohrenkaimans:Mythos des Mohrenkaimans:Mythos des Mohrenkaimans</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del caimano nero</Italian>
-		<Polish>Mit - Kajman</Polish>
-		<Russian>Ìèô î êàéìàíå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_CAMEL</Tag>
 		<English>Folklore - Camel</English>
 		<French>Mythe du Chameau</French>
@@ -795,19 +782,6 @@
 		<Italian>Mito del granchio</Italian>
 		<Polish>Mit Krabów</Polish>
 		<Russian>Ìèô î êðàáå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_CROCODILE</Tag>
-		<English>Folklore (T) - Crocodile</English>
-		<French>Mythe du Crocodile (T)</French>
-		<German>
-			<Text>Mythos der Krokodile:Mythos der Krokodile:Mythos der Krokodile:Mythos der Krokodile</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del coccodrillo</Italian>
-		<Polish>Mit - Krokodyl</Polish>
-		<Russian>Ìèô î êðîêîäèëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_CROW</Tag>
@@ -1020,32 +994,6 @@
 		<Russian>Ìèô î ñëîíîâîé ÷åðåïàõå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_AMERICAN_ALLIGATOR</Tag>
-		<English>Folklore - American Alligator</English>
-		<French>Mythe de l'Alligator d'Amérique</French>
-		<German>
-			<Text>Mythos des Mississippi-Alligators:Mythos des Mississippi-Alligators:Mythos des Mississippi-Alligators:Mythos des Mississippi-Alligators</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito dell'alligatore americano</Italian>
-		<Polish>Mit - Aligator Amerykański</Polish>
-		<Russian>Ìèô îá àëëèãàòîðå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_CHINESE_ALLIGATOR</Tag>
-		<English>Folklore - Chinese Alligator</English>
-		<French>Mythe de l'Alligator de Chine</French>
-		<German>
-			<Text>Mythos des China-Alligators:Mythos des China-Alligators:Mythos des China-Alligators:Mythos des China-Alligators</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito dell'alligatore cinese</Italian>
-		<Polish>Mit - Aligator Chiński</Polish>
-		<Russian>Ìèô î êèò. àëëèãàòîð</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_THOMSONS_GAZELLE</Tag>
 		<English>Folklore - Thomson's Gazelle</English>
 		<French>Mythe de la Gazelle de Thomson</French>
@@ -1092,19 +1040,6 @@
 		</German>
 		<Italian>Mito dell'antilope giraffa</Italian>
 		<Russian>Ìèô î ãåðåíóêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_GHARIAL</Tag>
-		<English>Folklore - Gharial</English>
-		<French>Mythe du Gavial du Gange</French>
-		<German>
-			<Text>Mythos des Gavials:Mythos des Gavials:Mythos des Gavials:Mythos des Gavials</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del gaviale</Italian>
-		<Polish>Mit - Gawial</Polish>
-		<Russian>Ìèô î ãàâèàëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_GIRAFFE</Tag>
@@ -1560,19 +1495,6 @@
 		<Russian>Ìèô îá îáåçüÿíàõ Íîâîãî Ñâåòà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_NILE_CROCODILE</Tag>
-		<English>Folklore - Nile Crocodile</English>
-		<French>Mythe du Crocodile du Nil</French>
-		<German>
-			<Text>Mythos des Nilkrokodils:Mythos des Nilkrokodils:Mythos des Nilkrokodils:Mythos des Nilkrokodils</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del coccodrillo del Nilo</Italian>
-		<Polish>Mit - Krokodyl Nilowy</Polish>
-		<Russian>Ìèô î íèë. êðîêîäèëå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_NILE_MONITOR</Tag>
 		<English>Folklore - Nile Monitor</English>
 		<French>Mythe du Varan du Nil</French>
@@ -1932,28 +1854,6 @@
 		<Russian>Ìèô î íîñîðîãå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_CROCODILE_SMALL</Tag>
-		<English>Folklore - Crocodile (Small)</English>
-		<French>Mythe du Crocodile de rivière (petit)</French>
-		<German>
-			<Text>Mythos des kleinen Krokodils:Mythos des kleinen Krokodils:Mythos des kleinen Krokodils:Mythos des kleinen Krokodils</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del coccodrillo di fiume (piccolo)</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_CROCODILE_LARGE</Tag>
-		<English>Folklore - Crocodile (Large)</English>
-		<French>Mythe du Crocodile de rivière (grand)</French>
-		<German>
-			<Text>Mythos des großen Krokodils:Mythos des großen Krokodils:Mythos des großen Krokodils:Mythos des großen Krokodils</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del coccodrillo di fiume (grande)</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_SABRETOOTH</Tag>
 		<English>Folklore - Sabretooth</English>
 		<French>Mythe du Tigre à dents de sabre</French>
@@ -1977,28 +1877,6 @@
 		</German>
 		<Italian>Mito dell'antilope delle steppe</Italian>
 		<Russian>Ìèô î ñàéãàêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_SALTWATER_CROCODILE_SMALL</Tag>
-		<English>Folklore - Saltwater Crocodile (Small)</English>
-		<French>Mythe du Crocodile de mer (petit)</French>
-		<German>
-			<Text>Mythos des kleinen Salzwasserkrokodils:Mythos des kleinen Salzwasserkrokodils:Mythos des kleinen Salzwasserkrokodils:Mythos des kleinen Salzwasserkrokodils</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del coccodrillo marino (piccolo)</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_SALTWATER_CROCODILE_LARGE</Tag>
-		<English>Folklore - Saltwater Crocodile (Large)</English>
-		<French>Mythe du Crocodile de mer (grand)</French>
-		<German>
-			<Text>Mythos des großen Salzwasserkrokodils:Mythos des großen Salzwasserkrokodils:Mythos des großen Salzwasserkrokodils:Mythos des großen Salzwasserkrokodils</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del coccodrillo marino (grande)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_E_SEA</Tag>
