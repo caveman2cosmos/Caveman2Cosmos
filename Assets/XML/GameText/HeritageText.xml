@@ -476,6 +476,31 @@
 		<Russian>Ìèô î ñèá. òèãðå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TORTOISE_DESERT</Tag>
+		<English>Tale, Desert Tortoise</English>
+		<French>Mythe de la Tortue du désert</French>
+		<German>Mythos der Gopherschildkröte</German>
+		<Italian>Mito della tartaruga del deserto</Italian>
+		<Russian>Ìèô î ãîôåðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TORTOISE_GALAPAGOS</Tag>
+		<English>Tale, Galapagos Tortoise</English>
+		<French>Mythe de la Tortue des Galapagos</French>
+		<German>Mythos der Riesenschildkröte</German>
+		<Italian>Mito della tartaruga delle Galapagos</Italian>
+		<Russian>Ìèô î ñëîíîâîé ÷åðåïàõå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TURTLE_SEA</Tag>
+		<English>Tale, Sea Turtle</English>
+		<French>Mythe de la Tortue de mer</French>
+		<German>Mythos der Meeresschildkröte</German>
+		<Italian>Mito della tartaruga di mare</Italian>
+		<Polish>Mit Żółwia Morskiego</Polish>
+		<Russian>Ìèô î ìîð. ÷åðåïàõå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_UNICORN</Tag>
 		<English>Tale, Unicorn</English>
 		<French>Mythe de la Licorne</French>
@@ -684,5 +709,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_TAPIRIDAE_PEDIA</Tag>
 		<English>Tapiridae is a family of perissodactyla mammals which are commonly called Tapirs. They are similar in shape to a pig, with a short, prehensile nose trunk. Tapirs inhabit jungle and forest regions of South and Central America and Southeast Asia. They are one of three extant branches of Perissodactyla (odd-toed ungulates), alongside equines and rhinoceroses. Only a single genus, Tapirus, is currently extant. Tapirs migrated into South America during the Pleistocene epoch from North America after the formation of the Isthmus of Panama as part of the Great American Interchange. Tapirs were formerly present across North America, but became extinct in the region at the end of the Late Pleistocene, around 12,000 years ago.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_TESTUDINES</Tag>
+		<English>Taxon Testudines</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_TESTUDINES_PEDIA</Tag>
+		<English>Testudines is a taxonomical order of reptiles commonly called turtles that are characterized by a special shell developed mainly from their ribs. Modern turtles are divided into two major groups, the Pleurodira (side necked turtles) and Cryptodira (hidden necked turtles), which differ in the way the head retracts. There are 360 living and recently extinct species of turtles, including land-dwelling tortoises and freshwater terrapins. They are found on most continents, some islands and, in the case of sea turtles, much of the ocean. They breathe air and do not lay eggs underwater, although many species live in or around water.</English>
 	</TEXT>
 </Civ4GameText>

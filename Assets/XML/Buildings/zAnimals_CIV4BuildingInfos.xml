@@ -52,7 +52,7 @@
 			</PrereqOrBuildings>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_DESERT_TORTOISE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ENCLOSURE_AMPHIBIAN_POND</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANIMAL_TAMER_COMPLEX</Type>
@@ -2841,11 +2841,11 @@
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
 			<PrereqTech>TECH_BONE_WORKING</PrereqTech>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_DESERT_TORTOISE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_GALAPAGOS_TORTOISE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SEA_TURTLE</BuildingType>
-			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_TORTOISE_DESERT</Type>
+				<Type>HERITAGE_FOLKLORE_TORTOISE_GALAPAGOS</Type>
+				<Type>HERITAGE_FOLKLORE_TURTLE_SEA</Type>
+			</PrereqOrHeritage>
 			<iCost>90</iCost>
 			<ObsoleteTech>TECH_PLASTICS</ObsoleteTech>
 			<CommerceChanges>

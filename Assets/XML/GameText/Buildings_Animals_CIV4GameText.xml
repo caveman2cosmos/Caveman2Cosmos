@@ -784,18 +784,6 @@
 		<Russian>Ìèô îá îëåíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_DESERT_TORTOISE</Tag>
-		<English>Folklore - Desert Tortoise</English>
-		<French>Mythe de la Tortue du désert</French>
-		<German>
-			<Text>Mythos der Gopherschildkröte:Mythos der Gopherschildkröte:Mythos der Gopherschildkröte:Mythos der Gopherschildkröte</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito della tartaruga del deserto</Italian>
-		<Russian>Ìèô î ãîôåðå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_DOLPHIN</Tag>
 		<English>Folklore - Dolphin</English>
 		<French>Mythe du Dauphin</French>
@@ -955,18 +943,6 @@
 		<Italian>Mito degli uccelli che non volano</Italian>
 		<Polish>Mit (T) - Ptaki-Nieloty</Polish>
 		<Russian>Ìèô î íåëåò. ïòèöå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_GALAPAGOS_TORTOISE</Tag>
-		<English>Folklore - Galapagos Tortoise</English>
-		<French>Mythe de la Tortue des Galapagos</French>
-		<German>
-			<Text>Mythos der Riesenschildkröte:Mythos der Riesenschildkröte:Mythos der Riesenschildkröte:Mythos der Riesenschildkröte</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito della tartaruga delle Galapagos</Italian>
-		<Russian>Ìèô î ñëîíîâîé ÷åðåïàõå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_THOMSONS_GAZELLE</Tag>
@@ -1865,19 +1841,6 @@
 		</German>
 		<Italian>Mito del leone di mare</Italian>
 		<Russian>Ìèô î ìîðñêîì ëüâå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_SEA_TURTLE</Tag>
-		<English>Folklore - Sea Turtle</English>
-		<French>Mythe de la Tortue de mer</French>
-		<German>
-			<Text>Mythos der Meeresschildkröte:Mythos der Meeresschildkröte:Mythos der Meeresschildkröte:Mythos der Meeresschildkröte</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito della tartaruga di mare</Italian>
-		<Polish>Mit Żółwia Morskiego</Polish>
-		<Russian>Ìèô î ìîð. ÷åðåïàõå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_SEA_BIRDS</Tag>
