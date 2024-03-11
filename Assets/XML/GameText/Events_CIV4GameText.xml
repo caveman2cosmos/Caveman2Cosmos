@@ -861,6 +861,14 @@
 		<Russian>Сообщают, что из-за мощных ураганов сильно пострадали рыбаки в державе %s1_civ_adjective.</Russian>
 		<Spanish>Un fuerte temporal ha interrumpido la actividad pesquera en el imperio %s1_civ_adjective.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_MASSIVE_FOREST_WILDFIRE</Tag>
+        <English>Due to recent droughts a massive wildfire has started near the %s1_civ_adjective city of %s2_city.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_FOREST_NEW_1</Tag>
+        <English>Forest has started growing again near the %s1_civ_adjective city of %s2_city.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_FOREST_FIRE</Tag>
 		<English>Fire has raged through a forest near the %s1_civ_adjective city of %s2_city.</English>
@@ -1723,13 +1731,17 @@
 		<Spanish>Los aluviones del monzón, más fuerte de lo habitual en %s2_city, han llevado el desastre al pueblo %s1_civ_adjective que habita ahí.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_MOTHER_LODE</Tag>
+		<Tag>TXT_KEY_EVENTTRIGGER_MOTHER_LODE_GOLD</Tag>
 		<English>Gold miners near the %s1_civ_adjective city of %s2_city have struck the mother lode.</English>
 		<French>Des mineurs près de la ville %s1:2_civ_adjective de %s2_city ont trouvé une importante veine d'or.</French>
 		<German>Die Goldgräber sind nahe der %s1:2_civ_adjective Stadt %s2_city auf die Hauptader gestoßen.</German>
 		<Italian>I minatori d'oro della città %s1:2_civ_adjective di %s2_city hanno scoperto il filone principale.</Italian>
 		<Spanish>Los mineros de la ciudad %s1:2_civ_adjective de %s2_city han dado con el filón principal de oro.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_MOTHER_LODE_SILVER</Tag>
+        <English>Silver miners near the %s1_civ_adjective city of %s2_city have struck the mother lode.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_MOTOR_OIL</Tag>
 		<English>%s1_civ_adjective chemists have developed an advanced refinement process for motor oil.</English>
@@ -4224,6 +4236,14 @@
 		<French>Nous avons eu un grand incendie !</French>
 		<Italian>Si è verificato un grosso incendio!</Italian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_WILDFIRE_1</Tag>
+        <English>Wildfire caught our city.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_WILDFIRE_2</Tag>
+        <English>We managed to save the forest.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CITYFIRE_MINOR_1</Tag>
 		<English>We had minor fire.</English>
@@ -5593,6 +5613,10 @@
 		<Polish>Wiele budynków uległo zniszczeniu.</Polish>
 		<Russian>Несколько зданий разрушены.</Russian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_WILDFIRE_1_HELP</Tag>
+        <English>Wildfire consumed some of our buildings.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FIRE_MINOR_1_HELP</Tag>
 		<English>A building is destroyed.</English>
@@ -5671,6 +5695,22 @@
 		<Italian>[ICON_BULLET]Riserve di cibo a %s2_city: %d1%%[ICON_FOOD]</Italian>
 		<Spanish>[ICON_BULLET]Alimentos almacenados en %s2_city: %d1%% [ICON_FOOD]</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_FOREST_MASSIVE_WILDFIRE_1</Tag>
+        <English>Do everything we can to stop the wildfire and save the forest.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_FOREST_MASSIVE_WILDFIRE_2</Tag>
+        <English>Protect what is most important and let's hope the fire burns itself out.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_FOREST_MASSIVE_WILDFIRE_3</Tag>
+        <English>We are too pressed to spare any aid.</English>
+        <French>Nous n'avons pas assez d'argent pour offrir notre aide.</French>
+        <German>Wir können zurzeit keine Hilfe leisten.</German>
+        <Italian>Siamo troppo sotto pressione per inviare aiuti.</Italian>
+        <Spanish>Estamos demasiado apurados como para prestarles ayuda.</Spanish>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FOREST_FIRE_1</Tag>
 		<English>Organize a replanting effort.</English>
@@ -5696,7 +5736,7 @@
 		<Spanish>Estamos demasiado apurados como para prestarles ayuda.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENT_FOREST_NEW_2</Tag>
+		<Tag>TXT_KEY_EVENT_FOREST_NEW_1</Tag>
 		<English>Life is returning to this once burnt forest.</English>
 		<French>La vie revient dans cette forêt autrefois brûlée.</French>
 		<Italian>La vita ritorna nella foresta un tempo andata a fuoco.</Italian>
@@ -6419,6 +6459,10 @@
 		<Italian>Invia le congratulazioni agli abitanti.</Italian>
 		<Spanish>Que se felicite a los ciudadanos.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_HAPPY_HUNTING_2</Tag>
+        <English>Organise a great hunt, we must use this time of plenty to stock up on food.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_HAPPY_TO_PLAYER</Tag>
 		<English>[ICON_BULLET]%D1[ICON_UNHAPPY] in all cities. %s3_playerName gets %D2[ICON_HAPPY]</English>
@@ -8131,6 +8175,14 @@
 		<Italian>Incassa il premio del nostro successo!</Italian>
 		<Spanish>¡Que se guarde este triunfo en nuestro tesoro!</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_MOTHER_LODE_2</Tag>
+        <English>Try to dig as deep as you can.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_MOTHER_LODE</Tag>
+        <English>We found even more than before, mine it all out.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_MOTOR_OIL_1</Tag>
 		<English>Authorize the selling of the improved motor oil on the open market.</English>
@@ -11221,6 +11273,10 @@
 		<Italian>Un fabbro ha inventato un percussore per le nostre granate, rendendo inutile l'uso delle micce.</Italian>
 		<Spanish>Un maestro herrero ha diseñado un percutor para nuestras granadas, lo que termina con la necesidad de emplear mechas.</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_FOREST_MASSIVE_WILDFIRE</Tag>
+        <English>Long term drought has enabled for massive wildfires to start near our city of %s2_city.</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_FOREST_FIRE_1</Tag>
 		<English>A forest fire sparked by lightning has raged across the land near %s2_city.</English>
@@ -12073,13 +12129,17 @@
 		<Russian>Казначейство сообщает, что период профицита нашего бюджета подошел к концу, и что резервы в твердой валюте упали до опасно низкого уровня. Мы можем напечатать больше валюты и снова снизить процентные ставки, но инфляция почти наверняка пойдет еще выше.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENT_TRIGGER_MOTHER_LODE_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_MOTHER_LODE_GOLD_1</Tag>
 		<English>Our gold miners near %s2_city have struck the mother lode! We are rich, rich, rich!</English>
 		<French>Nos mineurs près de %s2_city ont trouvé une importante veine d'or ! Nous sommes riches, riches, riches !</French>
 		<German>Unsere Goldgräber sind in der Nähe von %s2_city auf die Hauptader gestoßen! Wir sind reich, reich, reich!</German>
 		<Italian>I nostri minatori vicino a %s2_city hanno scoperto il filone principale! Siamo ricchi, ricchi, ricchi!</Italian>
 		<Spanish>¡Los mineros han dado con el filón principal de oro cerca de %s2_city! ¡Somos ricos, ricos, ricos!</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_MOTHER_LODE_SILVER_1</Tag>
+        <English>Our silver miners near %s2_city have struck the mother lode! We are rich, rich, rich!</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_MOTOR_OIL_1</Tag>
 		<English>Our chemists have developed an improved motor oil that lasts longer and lubricates engines better.</English>

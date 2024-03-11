@@ -9334,8 +9334,6 @@
 			<Buildings>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_HIPPOPOTAMUS</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_HIPPOS</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_CAMP_HIPPO</BuildingType>
@@ -9343,6 +9341,10 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_HIPPOPOTAMUS</Type>
+				<Type>HERITAGE_TAXON_HIPPOPOTAMIDAE</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -9924,11 +9926,13 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_CAMP_HIPPO</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_PYGMY_HIPPO</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_HIPPOS</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_HIPPOPOTAMUS_PYGMY</Type>
+				<Type>HERITAGE_TAXON_HIPPOPOTAMIDAE</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>

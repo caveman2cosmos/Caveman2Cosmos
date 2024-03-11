@@ -2440,9 +2440,11 @@
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_HIPPOS</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqAndHeritage>
+				<Type>HERITAGE_TAXON_HIPPOPOTAMIDAE</Type>
+			</PrereqAndHeritage>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>140</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>

@@ -36,21 +36,50 @@
 			<bRecurring>1</bRecurring>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
-			<Type>EVENTTRIGGER_FOREST_NEW_2</Type>
+			<Type>EVENTTRIGGER_MASSIVE_FOREST_WILDFIRE</Type>
+			<WorldNewsTexts>
+				<Text>TXT_KEY_EVENTTRIGGER_MASSIVE_FOREST_WILDFIRE</Text>
+			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_FOREST_NEW_2</Text>
+					<Text>TXT_KEY_EVENT_TRIGGER_FOREST_MASSIVE_WILDFIRE</Text>
+					<Era>NONE</Era>
+				</TriggerText>
+			</TriggerTexts>
+			<EventArt>Art/Event_Images/ForestFireEvent.dds</EventArt>
+			<iPercentGamesActive>100</iPercentGamesActive>
+			<iWeight>2</iWeight>
+			<iNumPlotsRequired>1</iNumPlotsRequired>
+			<FeaturesRequired>
+				<FeatureType>FEATURE_FOREST</FeatureType>
+			</FeaturesRequired>
+			<Events>
+				<Event>EVENT_FOREST_MASSIVE_WILDFIRE_1</Event>
+				<Event>EVENT_FOREST_MASSIVE_WILDFIRE_2</Event>
+				<Event>EVENT_FOREST_MASSIVE_WILDFIRE_3</Event>
+			</Events>
+			<bOwnPlot>1</bOwnPlot>
+			<bRecurring>1</bRecurring>
+		</EventTriggerInfo>
+		<EventTriggerInfo>
+			<Type>EVENTTRIGGER_FOREST_NEW_1</Type>
+			<WorldNewsTexts>
+				<Text>TXT_KEY_EVENTTRIGGER_FOREST_NEW_1</Text>
+			</WorldNewsTexts>
+			<TriggerTexts>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_FOREST_NEW_1</Text>
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>1</iWeight>
+			<iWeight>5</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<FeaturesRequired>
 				<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 			</FeaturesRequired>
 			<Events>
-				<Event>EVENT_FOREST_NEW_2</Event>
+				<Event>EVENT_FOREST_NEW_1</Event>
 			</Events>
 			<bOwnPlot>1</bOwnPlot>
 			<bRecurring>1</bRecurring>
@@ -88,9 +117,10 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/CityRuinsEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>500</iWeight>
+			<iWeight>4</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
+			<bRecurring>1</bRecurring>
 			<ImprovementsRequired>
 				<ImprovementType>IMPROVEMENT_CITY_RUINS</ImprovementType>
 			</ImprovementsRequired>
@@ -124,7 +154,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/HappyHuntingEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>200</iWeight>
+			<iWeight>50</iWeight>
 			<iAngry>-1</iAngry>
 			<iUnhealthy>-1</iUnhealthy>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
@@ -134,6 +164,7 @@
 			</FeaturesRequired>
 			<Events>
 				<Event>EVENT_HAPPY_HUNTING_1</Event>
+				<Event>EVENT_HAPPY_HUNTING_2</Event>
 			</Events>
 			<OrPreReqs>
 				<PrereqTech>TECH_PERSISTENCE_HUNTING</PrereqTech>
@@ -144,19 +175,19 @@
 			<bRecurring>1</bRecurring>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
-			<Type>EVENTTRIGGER_MOTHER_LODE</Type>
+			<Type>EVENTTRIGGER_MOTHER_LODE_GOLD</Type>
 			<WorldNewsTexts>
-				<Text>TXT_KEY_EVENTTRIGGER_MOTHER_LODE</Text>
+				<Text>TXT_KEY_EVENTTRIGGER_MOTHER_LODE_GOLD</Text>
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_MOTHER_LODE_1</Text>
+					<Text>TXT_KEY_EVENT_TRIGGER_MOTHER_LODE_GOLD_1</Text>
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/MotherlodeEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>200</iWeight>
+			<iWeight>3</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<ImprovementsRequired>
@@ -178,11 +209,56 @@
 				<RouteType>ROUTE_JUMPLANE</RouteType>
 			</RoutesRequired>
 			<Events>
-				<Event>EVENT_MOTHER_LODE_1</Event>
+				<Event>EVENT_MOTHER_LODE_GOLD_1</Event>
+				<Event>EVENT_MOTHER_LODE_GOLD_2</Event>
 			</Events>
 			<OrPreReqs>
 				<PrereqTech>TECH_HYDRAULIC_MINING</PrereqTech>
 			</OrPreReqs>
+			<bRecurring>1</bRecurring>
+		</EventTriggerInfo>
+		<EventTriggerInfo>
+			<Type>EVENTTRIGGER_MOTHER_LODE_SILVER</Type>
+			<WorldNewsTexts>
+				<Text>TXT_KEY_EVENTTRIGGER_MOTHER_LODE_SILVER</Text>
+			</WorldNewsTexts>
+			<TriggerTexts>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_MOTHER_LODE_SILVER_1</Text>
+					<Era>NONE</Era>
+				</TriggerText>
+			</TriggerTexts>
+			<EventArt>Art/Event_Images/SilverOreEvent.dds</EventArt>
+			<iPercentGamesActive>100</iPercentGamesActive>
+			<iWeight>3</iWeight>
+			<iNumPlotsRequired>1</iNumPlotsRequired>
+			<bOwnPlot>1</bOwnPlot>
+			<ImprovementsRequired>
+				<ImprovementType>IMPROVEMENT_MINE</ImprovementType>
+				<ImprovementType>IMPROVEMENT_SHAFT_MINE</ImprovementType>
+				<ImprovementType>IMPROVEMENT_MODERN_MINE</ImprovementType>
+			</ImprovementsRequired>
+			<BonusesRequired>
+				<BonusType>BONUS_SILVER_ORE</BonusType>
+			</BonusesRequired>
+			<RoutesRequired>
+				<RouteType>ROUTE_PATH</RouteType>
+				<RouteType>ROUTE_ROAD</RouteType>
+				<RouteType>ROUTE_PAVED_ROAD</RouteType>
+				<RouteType>ROUTE_HIGHWAY</RouteType>
+				<RouteType>ROUTE_RAILROAD</RouteType>
+				<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
+				<RouteType>ROUTE_MAGLEV</RouteType>
+				<RouteType>ROUTE_JUMPLANE</RouteType>
+			</RoutesRequired>
+			<Events>
+				<Event>EVENT_MOTHER_LODE_SILVER_1</Event>
+				<Event>EVENT_MOTHER_LODE_SILVER_2</Event>
+			</Events>
+			<OrPreReqs>
+				<PrereqTech>TECH_HYDRAULIC_MINING</PrereqTech>
+			</OrPreReqs>
+			<bRecurring>1</bRecurring>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_WASHED_OUT</Type>
