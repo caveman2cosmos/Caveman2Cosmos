@@ -588,19 +588,6 @@
 		<Italian>Mito dell'uro</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_BALL_PYTHON</Tag>
-		<English>Folklore - Ball Python</English>
-		<French>Mythe du Python royal</French>
-		<German>
-			<Text>Mythos des Königspythons:Mythos des Königspythons:Mythos des Königspythons:Mythos des Königspythons</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del pitone reale</Italian>
-		<Polish>Mit - Pyton Królewski</Polish>
-		<Russian>Ìèô î êîð. ïèòîíå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BARBARY_MACAQUE</Tag>
 		<English>Folklore - Barbary Macaque</English>
 		<French>Mythe du Macaque berbère</French>
@@ -745,18 +732,6 @@
 		</German>
 		<Italian>Mito dello scimpanzé</Italian>
 		<Russian>Ìèô î øèìïàíçå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_COBRA</Tag>
-		<English>Folklore - Cobra</English>
-		<French>Mythe du Cobra</French>
-		<German>
-			<Text>Mythos der Kobra:Mythos der Kobra:Mythos der Kobra:Mythos der Kobra</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del cobra</Italian>
-		<Russian>Ìèô î êîáðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_COD</Tag>
@@ -1741,18 +1716,6 @@
 		<Russian>Ìèô î ïðîêîïòîäîíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_PUFF_ADDER</Tag>
-		<English>Folklore - Puff Adder</English>
-		<French>Mythe de la Vipère heurtante</French>
-		<German>
-			<Text>Mythos der Puffotter:Mythos der Puffotter:Mythos der Puffotter:Mythos der Puffotter</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito della vipera soffiante</Italian>
-		<Russian>Ìèô î øóì. ãàäþêå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_QUOLL</Tag>
 		<English>Folklore - Quoll</English>
 		<French>Mythe du Chat marsupial</French>
@@ -1956,18 +1919,6 @@
 		<Russian>Ìèô î íåáå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_SNAKES</Tag>
-		<English>Folklore (T) - Snakes</English>
-		<French>Mythe des Serpents (T)</French>
-		<German>
-			<Text>Mythos der Schlangen:Mythos der Schlangen:Mythos der Schlangen:Mythos der Schlangen</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del serpente</Italian>
-		<Russian>Ìèô î çìåå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_E_STONE</Tag>
 		<English>Folklore (E) - Stone</English>
 		<French>Mythe de la Pierre (E)</French>
@@ -2062,30 +2013,6 @@
 		</German>
 		<Italian>Mito del tacchino</Italian>
 		<Russian>Ìèô îá èíäåéêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_VIPER</Tag>
-		<English>Folklore - Viper</English>
-		<French>Mythe de la Vipère</French>
-		<German>
-			<Text>Mythos der Viper:Mythos der Viper:Mythos der Viper:Mythos der Viper</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito della vipera</Italian>
-		<Russian>Ìèô î ãàäþêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_CHAIN_VIPER</Tag>
-		<English>Folklore - Chain Viper</English>
-		<French>Mythe de la Vipère de Russell</French>
-		<German>
-			<Text>Mythos der Kettenviper:Mythos der Kettenviper:Mythos der Kettenviper:Mythos der Kettenviper</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito della vipera di Russell</Italian>
-		<Russian>Ìèô î ãàäþêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_VULTURE</Tag>

@@ -53,6 +53,55 @@
 			<Button>Art/Interface/Buttons/Units/Aardvark.dds</Button>
 		</HeritageInfo>
 		<HeritageInfo>
+			<Type>HERITAGE_FOLKLORE_ADDER_PUFF</Type>
+			<Description>TXT_KEY_HERITAGE_FOLKLORE_ADDER_PUFF</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
+			<bNeedLanguage>1</bNeedLanguage>
+			<EraCommerceChanges>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_PREHISTORIC</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>20</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_ANCIENT</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_CLASSICAL</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_MEDIEVAL</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_RENAISSANCE</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+			</EraCommerceChanges>
+			<Button>Art/Interface/Buttons/Units/puffadder.dds</Button>
+		</HeritageInfo>
+		<HeritageInfo>
 			<Type>HERITAGE_FOLKLORE_ALLIGATOR_AMERICAN</Type>
 			<Description>TXT_KEY_HERITAGE_FOLKLORE_ALLIGATOR_AMERICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
@@ -543,6 +592,55 @@
 			<Button>Art/Interface/Buttons/Units/Cheetah.dds</Button>
 		</HeritageInfo>
 		<HeritageInfo>
+			<Type>HERITAGE_FOLKLORE_COBRA</Type>
+			<Description>TXT_KEY_HERITAGE_FOLKLORE_COBRA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
+			<bNeedLanguage>1</bNeedLanguage>
+			<EraCommerceChanges>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_PREHISTORIC</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>20</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_ANCIENT</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_CLASSICAL</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_MEDIEVAL</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_RENAISSANCE</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+			</EraCommerceChanges>
+			<Button>Art/Interface/Buttons/Units/Cobra.dds</Button>
+		</HeritageInfo>
+		<HeritageInfo>
 			<Type>HERITAGE_FOLKLORE_CROCODILE_MUGGER</Type>
 			<Description>TXT_KEY_HERITAGE_FOLKLORE_CROCODILE_MUGGER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
@@ -640,7 +738,7 @@
 			</EraCommerceChanges>
 			<Button>Art/Interface/Buttons/Units/NileCroc.dds</Button>
 		</HeritageInfo>
-		<BuildingInfo>
+		<HeritageInfo>
 			<Type>HERITAGE_FOLKLORE_CROCODILE_SALTWATER</Type>
 			<Description>TXT_KEY_HERITAGE_FOLKLORE_CROCODILE_SALTWATER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
@@ -688,7 +786,7 @@
 				</EraCommerceChange>
 			</EraCommerceChanges>
 			<Button>Art/Interface/Buttons/Units/Saltcroc.dds</Button>
-		</BuildingInfo>
+		</HeritageInfo>
 		<HeritageInfo>
 			<Type>HERITAGE_FOLKLORE_CUSCUS_SPOTTED</Type>
 			<Description>TXT_KEY_HERITAGE_FOLKLORE_CUSCUS_SPOTTED</Description>
@@ -2111,6 +2209,55 @@
 			<Button>Art/Interface/Buttons/Units/Platypus.dds</Button>
 		</HeritageInfo>
 		<HeritageInfo>
+			<Type>HERITAGE_FOLKLORE_PYTHON_BALL</Type>
+			<Description>TXT_KEY_HERITAGE_FOLKLORE_PYTHON_BALL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
+			<bNeedLanguage>1</bNeedLanguage>
+			<EraCommerceChanges>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_PREHISTORIC</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>20</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_ANCIENT</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_CLASSICAL</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_MEDIEVAL</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_RENAISSANCE</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+			</EraCommerceChanges>
+			<Button>Art/Interface/Buttons/Units/Ballpython.dds</Button>
+		</HeritageInfo>
+		<HeritageInfo>
 			<Type>HERITAGE_FOLKLORE_RACCOON</Type>
 			<Description>TXT_KEY_HERITAGE_FOLKLORE_RACCOON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
@@ -2795,6 +2942,104 @@
 				</EraCommerceChange>
 			</EraCommerceChanges>
 			<Button>Art/Interface/Buttons/Units/Dhole.dds</Button>
+		</HeritageInfo>
+		<HeritageInfo>
+			<Type>HERITAGE_FOLKLORE_VIPER_CHAIN</Type>
+			<Description>TXT_KEY_HERITAGE_FOLKLORE_VIPER_CHAIN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
+			<bNeedLanguage>1</bNeedLanguage>
+			<EraCommerceChanges>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_PREHISTORIC</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>20</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_ANCIENT</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_CLASSICAL</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_MEDIEVAL</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_RENAISSANCE</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+			</EraCommerceChanges>
+			<Button>Art/Interface/Buttons/Units/Viper.dds</Button>
+		</HeritageInfo>
+		<HeritageInfo>
+			<Type>HERITAGE_FOLKLORE_VIPER_PIT</Type>
+			<Description>TXT_KEY_HERITAGE_FOLKLORE_VIPER_PIT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
+			<bNeedLanguage>1</bNeedLanguage>
+			<EraCommerceChanges>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_PREHISTORIC</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>20</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_ANCIENT</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_CLASSICAL</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_MEDIEVAL</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_RENAISSANCE</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+			</EraCommerceChanges>
+			<Button>Art/Interface/Buttons/Units/Viper.dds</Button>
 		</HeritageInfo>
 		<HeritageInfo>
 			<Type>HERITAGE_FOLKLORE_WARTHOG</Type>
@@ -4109,6 +4354,86 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<Button>Art/Interface/Buttons/buildings/totem_chipmonk.dds</Button>
+		</HeritageInfo>
+		<HeritageInfo>
+			<Type>HERITAGE_TAXON_SERPENTES</Type>
+			<Description>TXT_KEY_HERITAGE_TAXON_SERPENTES</Description>
+			<Civilopedia>TXT_KEY_HERITAGE_TAXON_SERPENTES_PEDIA</Civilopedia>
+			<PrereqTech>TECH_TAXONOMY</PrereqTech>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_ADDER_PUFF</Type>
+				<Type>HERITAGE_FOLKLORE_COBRA</Type>
+				<Type>HERITAGE_FOLKLORE_PYTHON_BALL</Type>
+				<Type>HERITAGE_FOLKLORE_VIPER_CHAIN</Type>
+				<Type>HERITAGE_FOLKLORE_VIPER_PIT</Type>
+			</PrereqOrHeritage>
+			<EraCommerceChanges>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_ANCIENT</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>20</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_CLASSICAL</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_MEDIEVAL</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_RENAISSANCE</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+				<EraCommerceChange>
+					<EraType>C2C_ERA_INDUSTRIAL</EraType>
+					<CentiCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-5</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CentiCommerce>
+				</EraCommerceChange>
+			</EraCommerceChanges>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_EDUCATION</ID>
+						</Has>
+					</Active>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_BIOLOGY</ID>
+						</Has>
+					</Active>
+				</PropertySource>
+			</PropertyManipulators>
+			<Button>Art/Interface/Buttons/Buildings/totem_snake.dds</Button>
 		</HeritageInfo>
 		<HeritageInfo>
 			<Type>HERITAGE_TAXON_SPHENISCIDAE</Type>

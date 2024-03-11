@@ -950,9 +950,11 @@
 				<BuildingType>BUILDING_SNAKE_CHARMER</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_BALL_PYTHON</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_SNAKES</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_PYTHON_BALL</Type>
+				<Type>HERITAGE_TAXON_SERPENTES</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -4259,10 +4261,8 @@
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_COBRA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_EARTH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_REPTILE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_SNAKES</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_REPTILE</BuildingType>
@@ -4271,6 +4271,10 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_COBRA</Type>
+				<Type>HERITAGE_TAXON_SERPENTES</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -16391,9 +16395,11 @@
 				<BuildingType>BUILDING_SNAKE_PIT</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_PUFF_ADDER</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_SNAKES</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_ADDER_PUFF</Type>
+				<Type>HERITAGE_TAXON_SERPENTES</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -22087,9 +22093,11 @@
 				<BuildingType>BUILDING_SNAKE_PIT</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_VIPER</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_SNAKES</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_VIPER_PIT</Type>
+				<Type>HERITAGE_TAXON_SERPENTES</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -22151,9 +22159,11 @@
 				<BuildingType>BUILDING_SNAKE_PIT</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_CHAIN_VIPER</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_SNAKES</BuildingType>
 			</Buildings>
+			<Heritage>
+				<Type>HERITAGE_FOLKLORE_VIPER_CHAIN</Type>
+				<Type>HERITAGE_TAXON_SERPENTES</Type>
+			</Heritage>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>

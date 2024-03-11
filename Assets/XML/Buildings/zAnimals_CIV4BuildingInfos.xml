@@ -2718,13 +2718,13 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_BALL_PYTHON</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_COBRA</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_PUFF_ADDER</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_VIPER</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_CHAIN_VIPER</BuildingType>
-			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_ADDER_PUFF</Type>
+				<Type>HERITAGE_FOLKLORE_COBRA</Type>
+				<Type>HERITAGE_FOLKLORE_PYTHON_BALL</Type>
+				<Type>HERITAGE_FOLKLORE_VIPER_CHAIN</Type>
+				<Type>HERITAGE_FOLKLORE_VIPER_PIT</Type>
+			</PrereqOrHeritage>
 			<iCost>100</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2759,12 +2759,12 @@
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
 			<PrereqTech>TECH_POISON_CRAFTING</PrereqTech>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_COBRA</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_PUFF_ADDER</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_VIPER</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_CHAIN_VIPER</BuildingType>
-			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_ADDER_PUFF</Type>
+				<Type>HERITAGE_FOLKLORE_COBRA</Type>
+				<Type>HERITAGE_FOLKLORE_VIPER_CHAIN</Type>
+				<Type>HERITAGE_FOLKLORE_VIPER_PIT</Type>
+			</PrereqOrHeritage>
 			<iCost>80</iCost>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>

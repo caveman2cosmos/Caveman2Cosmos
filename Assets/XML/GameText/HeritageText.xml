@@ -10,6 +10,14 @@
 		<Russian>Ìèô î òðóáêîçóáå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_ADDER_PUFF</Tag>
+		<English>Tale, Puff Adder</English>
+		<French>Mythe de la Vipère heurtante</French>
+		<German>Mythos der Puffotter</German>
+		<Italian>Mito della vipera soffiante</Italian>
+		<Russian>Ìèô î øóì. ãàäþêå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_ALLIGATOR_AMERICAN</Tag>
 		<English>Tale, American Alligator</English>
 		<French>Mythe de l'Alligator d'Amérique</French>
@@ -92,6 +100,14 @@
 		<German>Mythos des Gepards</German>
 		<Italian>Mito del ghepardo</Italian>
 		<Russian>Ìèô î ãåïàðäå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_COBRA</Tag>
+		<English>Tale, Cobra</English>
+		<French>Mythe du Cobra</French>
+		<German>Mythos der Kobra</German>
+		<Italian>Mito del cobra</Italian>
+		<Russian>Ìèô î êîáðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CROCODILE_MUGGER</Tag>
@@ -347,6 +363,15 @@
 		<Russian>Ìèô îá óòêîíîñå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PYTHON_BALL</Tag>
+		<English>Tale, Ball Python</English>
+		<French>Mythe du Python royal</French>
+		<German>Mythos des Königspythons</German>
+		<Italian>Mito del pitone reale</Italian>
+		<Polish>Mit - Pyton Królewski</Polish>
+		<Russian>Ìèô î êîð. ïèòîíå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_RACCOON</Tag>
 		<English>Tale, Raccoon</English>
 		<French>Mythe du Raton-Laveur</French>
@@ -466,6 +491,22 @@
 		<German>Mythos des Rothundes</German>
 		<Italian>Mito del cuon rutilano</Italian>
 		<Russian>Ìèô î êðàñíîì âîëêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_VIPER_CHAIN</Tag>
+		<English>Tale, Chain Viper</English>
+		<French>Mythe de la Vipère de Russell</French>
+		<German>Mythos der Kettenviper</German>
+		<Italian>Mito della vipera di Russell</Italian>
+		<Russian>Ìèô î ãàäþêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_VIPER_PIT</Tag>
+		<English>Tale, Pit Viper</English>
+		<French>Mythe de la Vipère</French>
+		<German>Mythos der Viper</German>
+		<Italian>Mito della vipera</Italian>
+		<Russian>Ìèô î ãàäþêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WARTHOG</Tag>
@@ -611,6 +652,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_RODENTIA_PEDIA</Tag>
 		<English>Rodentia is an order of mammals commonly called rodents (from Latin rodere, 'to gnaw'). With over 2000 living species placed in about 30 families, rodents are by far the largest order of mammals, at least in terms of number of taxa (well over 40% of mammalian species belong to the order Rodentia!). Rodents range in size from pygmy mice weighing 5 gms to capybaras, the largest of which weigh over 70 kg. They are found around the world except in Antarctica, New Zealand, and on some oceanic islands. Ecologically, they are incredibly diverse. Some species spend their entire lives above the ground in the canopy of rainforests; others seldom emerge from beneath the ground. Some species are highly aquatic, while others are equally specialized for life in deserts. Many are to some degree omnivorous; others are highly specialized, eating, for example, only a few species of invertebrates or fungi.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_SERPENTES</Tag>
+		<English>Taxon Serpentes</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_SERPENTES_PEDIA</Tag>
+		<English>Serpentes is a suborder of the squamata order that is commonly known as snakes and are elongated, limbless, carnivorous reptiles.  Like all other squamates, snakes are ectothermic, amniote vertebrates covered in overlapping scales. Many species of snakes have skulls with several more joints than their lizard ancestors, enabling them to swallow prey much larger than their heads.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_SPHENISCIDAE</Tag>
