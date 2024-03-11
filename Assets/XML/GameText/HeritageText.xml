@@ -10,6 +10,32 @@
 		<Russian>Ìèô î òðóáêîçóáå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_ADDER_PUFF</Tag>
+		<English>Tale, Puff Adder</English>
+		<French>Mythe de la Vipère heurtante</French>
+		<German>Mythos der Puffotter</German>
+		<Italian>Mito della vipera soffiante</Italian>
+		<Russian>Ìèô î øóì. ãàäþêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_ALLIGATOR_AMERICAN</Tag>
+		<English>Tale, American Alligator</English>
+		<French>Mythe de l'Alligator d'Amérique</French>
+		<German>Mythos des Mississippi-Alligators</German>
+		<Italian>Mito dell'alligatore americano</Italian>
+		<Polish>Mit - Aligator Amerykański</Polish>
+		<Russian>Ìèô îá àëëèãàòîðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_ALLIGATOR_CHINESE</Tag>
+		<English>Tale, Chinese Alligator</English>
+		<French>Mythe de l'Alligator de Chine</French>
+		<German>Mythos des China-Alligators</German>
+		<Italian>Mito dell'alligatore cinese</Italian>
+		<Polish>Mit - Aligator Chiński</Polish>
+		<Russian>Ìèô î êèò. àëëèãàòîð</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_ANTEATER</Tag>
 		<English>Tale, Anteater</English>
 		<French>Mythe du Fourmilier</French>
@@ -27,6 +53,15 @@
 		<Russian>Ìèô î áàáèðóñå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_BADGER</Tag>
+		<English>Tale, Badger</English>
+		<French>Mythe du Blaireau</French>
+		<German>Mythos des Dachses</German>
+		<Italian>Mito del tasso</Italian>
+		<Polish>Mit - Borsuk</Polish>
+		<Russian>Ìèô î áàðñóêå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_BEAVER</Tag>
 		<English>Tale, Beaver</English>
 		<French>Mythe du Castor</French>
@@ -40,6 +75,15 @@
 		<English>Tale, Wild Boar</English>
 		<German>Mythos des Wildschweins</German>
 		<Italian>Mito del cinghiale selvatico</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CAIMAN_BLACK</Tag>
+		<English>Tale, Black Caiman</English>
+		<French>Mythe du Caïman</French>
+		<German>Mythos des Mohrenkaimans</German>
+		<Italian>Mito del caimano nero</Italian>
+		<Polish>Mit - Kajman</Polish>
+		<Russian>Ìèô î êàéìàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CAPYBARA</Tag>
@@ -56,6 +100,34 @@
 		<German>Mythos des Gepards</German>
 		<Italian>Mito del ghepardo</Italian>
 		<Russian>Ìèô î ãåïàðäå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_COBRA</Tag>
+		<English>Tale, Cobra</English>
+		<French>Mythe du Cobra</French>
+		<German>Mythos der Kobra</German>
+		<Italian>Mito del cobra</Italian>
+		<Russian>Ìèô î êîáðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CROCODILE_MUGGER</Tag>
+		<English>Tale, Mugger Crocodile</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CROCODILE_NILE</Tag>
+		<English>Tale, Nile Crocodile</English>
+		<French>Mythe du Crocodile du Nil</French>
+		<German>Mythos des Nilkrokodils</German>
+		<Italian>Mito del coccodrillo del Nilo</Italian>
+		<Polish>Mit - Krokodyl Nilowy</Polish>
+		<Russian>Ìèô î íèë. êðîêîäèëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CROCODILE_SALTWATER</Tag>
+		<English>Tale, Saltwater Crocodile</English>
+		<French>Mythe du Crocodile de mer</French>
+		<German>Mythos des Salzwasserkrokodils</German>
+		<Italian>Mito del coccodrillo marino</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CUSCUS_SPOTTED</Tag>
@@ -122,6 +194,15 @@
 		<Russian>Ìèô î ëèñèöå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_GHARIAL</Tag>
+		<English>Tale, Gharial</English>
+		<French>Mythe du Gavial du Gange</French>
+		<German>Mythos des Gavials</German>
+		<Italian>Mito del gaviale</Italian>
+		<Polish>Mit - Gawial</Polish>
+		<Russian>Ìèô î ãàâèàëå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_HIPPOPOTAMUS</Tag>
 		<English>Tale, Hippopotamus</English>
 		<French>Mythe de l'Hippopotame</French>
@@ -138,12 +219,29 @@
 		<Russian>Ìèô î êàðë. áåãåìîòå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_HORSE</Tag>
+		<English>Tale, Horse</English>
+		<French>Mythe du Cheval</French>
+		<German>Mythos des Pferdes</German>
+		<Italian>Mito del cavallo</Italian>
+		<Polish>Mit Koni</Polish>
+		<Russian>Ìèô î ëîøàäè</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_HYENA_STRIPED</Tag>
 		<English>Tale, Striped Hyena</English>
 		<French>Mythe de la Hyène rayée</French>
 		<German>Mythos der Hyäne</German>
 		<Italian>Mito della iena striata</Italian>
 		<Russian>Ìèô î ãèåíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_IGUANA</Tag>
+		<English>Tale, Iguana</English>
+		<French>Mythe de l'Iguane</French>
+		<German>Mythos des Leguans</German>
+		<Italian>Mito dell'iguana</Italian>
+		<Russian>Ìèô î èãóàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_JAGUAR</Tag>
@@ -164,6 +262,14 @@
 		<German>Mythos des Koalas</German>
 		<Italian>Mito del koala</Italian>
 		<Russian>Ìèô î êîàëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_KOMODO_DRAGON</Tag>
+		<English>Tale, Komodo Dragon</English>
+		<French>Mythe du Dragon de Komodo</French>
+		<German>Mythos des Komodowarans</German>
+		<Italian>Mito del drago di Komodo</Italian>
+		<Russian>Ìèô î êîì. âàðàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_LEOPARD_SNOW</Tag>
@@ -191,6 +297,15 @@
 		<Russian>Ìèô î ïåù. ëüâå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_LIZARD</Tag>
+		<English>Tale, Lizard</English>
+		<French>Mythe du lézard</French>
+		<German>Mythos der Echse</German>
+		<Italian>Mito della lucertola</Italian>
+		<Polish>Mit - Jaszczurka</Polish>
+		<Russian>Ìèô î ÿùåðèöå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_LYNX</Tag>
 		<English>Tale, Lynx</English>
 		<French>Mythe du Lynx</French>
@@ -214,6 +329,22 @@
 		<Italian>Mito del mammut</Italian>
 		<Polish>Mit Mamutów</Polish>
 		<Russian>Ìèô î ìàìîíòå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_MONITOR_NILE</Tag>
+		<English>Tale, Nile Monitor</English>
+		<French>Mythe du Varan du Nil</French>
+		<German>Mythos des Nilwarans</German>
+		<Italian>Mito del varano del Nilo</Italian>
+		<Russian>Ìèô î íèë. âàðàíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_OTTER_SEA</Tag>
+		<English>Tale, Sea Otter</English>
+		<French>Mythe de la Loutre de mer</French>
+		<German>Mythos des Seeotters</German>
+		<Italian>Mito della lontra marina</Italian>
+		<Russian>Ìèô î êàëàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PARROT_AFRICAN_GREY</Tag>
@@ -263,6 +394,47 @@
 		<German>Mythos des Schnabeltiers</German>
 		<Italian>Mito dell'ornitorinco</Italian>
 		<Russian>Ìèô îá óòêîíîñå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PYTHON_BALL</Tag>
+		<English>Tale, Ball Python</English>
+		<French>Mythe du Python royal</French>
+		<German>Mythos des Königspythons</German>
+		<Italian>Mito del pitone reale</Italian>
+		<Polish>Mit - Pyton Królewski</Polish>
+		<Russian>Ìèô î êîð. ïèòîíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_RACCOON</Tag>
+		<English>Tale, Raccoon</English>
+		<French>Mythe du Raton-Laveur</French>
+		<German>Mythos des Waschbären</German>
+		<Italian>Mito del procione</Italian>
+		<Russian>Ìèô î åíîòå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_RATEL</Tag>
+		<English>Tale, Ratel</English>
+		<French>Mythe du Ratel</French>
+		<German>Mythos des Honigdachses</German>
+		<Italian>Mito del tasso del miele</Italian>
+		<Russian>Ìèô î ìåäîåäå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_RED_PANDA</Tag>
+		<English>Tale, Red Panda</English>
+		<French>Mythe du Panda roux</French>
+		<Italian>Mito del panda rosso</Italian>
+		<Polish>Mit - Panda Czerwona</Polish>
+		<Russian>Ìèô î êðàñíîé ïàíäå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_SKUNK</Tag>
+		<English>Tale, Skunk</English>
+		<French>Mythe de la Moufette</French>
+		<German>Mythos des Stinktiers</German>
+		<Italian>Mito della puzzola</Italian>
+		<Russian>Ìèô î ñêóíñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_SWINE</Tag>
@@ -337,6 +509,31 @@
 		<Russian>Ìèô î ñèá. òèãðå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TORTOISE_DESERT</Tag>
+		<English>Tale, Desert Tortoise</English>
+		<French>Mythe de la Tortue du désert</French>
+		<German>Mythos der Gopherschildkröte</German>
+		<Italian>Mito della tartaruga del deserto</Italian>
+		<Russian>Ìèô î ãîôåðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TORTOISE_GALAPAGOS</Tag>
+		<English>Tale, Galapagos Tortoise</English>
+		<French>Mythe de la Tortue des Galapagos</French>
+		<German>Mythos der Riesenschildkröte</German>
+		<Italian>Mito della tartaruga delle Galapagos</Italian>
+		<Russian>Ìèô î ñëîíîâîé ÷åðåïàõå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TURTLE_SEA</Tag>
+		<English>Tale, Sea Turtle</English>
+		<French>Mythe de la Tortue de mer</French>
+		<German>Mythos der Meeresschildkröte</German>
+		<Italian>Mito della tartaruga di mare</Italian>
+		<Polish>Mit Żółwia Morskiego</Polish>
+		<Russian>Ìèô î ìîð. ÷åðåïàõå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_UNICORN</Tag>
 		<English>Tale, Unicorn</English>
 		<French>Mythe de la Licorne</French>
@@ -352,6 +549,22 @@
 		<German>Mythos des Rothundes</German>
 		<Italian>Mito del cuon rutilano</Italian>
 		<Russian>Ìèô î êðàñíîì âîëêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_VIPER_CHAIN</Tag>
+		<English>Tale, Chain Viper</English>
+		<French>Mythe de la Vipère de Russell</French>
+		<German>Mythos der Kettenviper</German>
+		<Italian>Mito della vipera di Russell</Italian>
+		<Russian>Ìèô î ãàäþêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_VIPER_PIT</Tag>
+		<English>Tale, Pit Viper</English>
+		<French>Mythe de la Vipère</French>
+		<German>Mythos der Viper</German>
+		<Italian>Mito della vipera</Italian>
+		<Russian>Ìèô î ãàäþêå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WARTHOG</Tag>
@@ -395,6 +608,14 @@
 		<Russian>Ìèô î ãðèâ. âîëêå</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WOLVERINE</Tag>
+		<English>Tale, Wolverine</English>
+		<French>Mythe du Carcajou</French>
+		<German>Mythos des Vielfraßes</German>
+		<Italian>Mito del ghiottone</Italian>
+		<Russian>Ìèô î ðîñîìàõå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_AMPHIBIA</Tag>
 		<English>Taxon Amphibia</English>
 	</TEXT>
@@ -417,6 +638,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_CANIDAE_PEDIA</Tag>
 		<English>Canidae is a family of carnivoran mammals which are commonly called dogs or canids. Canids are found on all continents except Antarctica, having arrived independently or accompanied by human beings over extended periods of time. Canids vary in size from the 2-metre-long gray wolf to the 24-centimetre-long fennec fox. The body forms of canids are similar, typically having long muzzles, upright ears, teeth adapted for cracking bones and slicing flesh, long legs, and bushy tails. They are mostly social animals, living together in family units or small groups and behaving co-operatively. Typically, only the dominant pair in a group breeds and a litter of young are reared annually in an underground den. Canids communicate by scent signals and vocalizations. One canid, the domestic dog, originated from a symbiotic relationship with Upper Paleolithic humans and today remains one of the most widely kept domestic animals.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_CROCODILIA</Tag>
+		<English>Taxon Crocodilia</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_CROCODILIA_PEDIA</Tag>
+		<English>Crocodilia is an order of mostly large, predatory, semiaquatic reptiles known as crocodilians. They first appeared 94 million years ago in the Late Cretaceous period and are the closest living relatives of birds, as the two groups are the only known survivors of the Archosauria. The order Crocodilia includes the true crocodiles (family Crocodylidae), the alligators and caimans (family Alligatoridae), and the gharial and false gharial (family Gavialidae). Although the term crocodiles (or crocs) is sometimes used to refer to all of these, crocodilians is a less ambiguous vernacular term for members of this group.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_ELEPHANTIDAE</Tag>
@@ -459,12 +688,28 @@
 		<English>Monotremata is a taxonomic order of mammals. Monotremes are the only known group of living mammals that lay eggs, rather than bearing live young. The extant monotreme species are the platypus and the four species of echidnas. Monotremes are typified by structural differences in their brains, jaws, digestive tract, reproductive tract, and other body parts, compared to the more common mammalian types. Although they are different from almost all mammals in that they lay eggs, like all mammals, the female monotremes nurse their young with milk. Monotremes have been considered by some authors to be members of Australosphenida, a clade that contains extinct mammals from the Jurassic and Cretaceous of Madagascar, South America, and Australia, but this categorization is disputed and their taxonomy is under debate. All extant species of monotremes are indigenous to Australia and New Guinea, although they were also present in the Late Cretaceous and Paleocene of southern South America, indicating that they were also present in Antarctica, though remains have not been found there.</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_MUSTELOIDEA</Tag>
+		<English>Taxon Musteloidea</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_MUSTELOIDEA_PEDIA</Tag>
+		<English>Musteloidea is a superfamily of carnivoran mammals united by shared characteristics of the skull and teeth. Musteloids are the sister group of pinnipeds, the group which includes seals. Mustelidae contains 8 subfamilies and roughly 60 species including weasels, martens, otters, badgers and the wolverine. It is the largest family within the order Carnivora and is part of Musteloidea, a superfamily of weasels that also contains the red panda, raccoons and skunks. Interestingly, this superfamily is most closely related to seals rather than to bears or dogs.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_PANTHERINAE</Tag>
 		<English>Taxon Pantherinae</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_PANTHERINAE_PEDIA</Tag>
 		<English>Pantherinae is a subfamily of the Felidae, a family of feliform carnivoran mammals. Pantherinae species are characterised by an imperfectly ossified hyoid bone with elastic tendons that enable their larynx to be mobile. They have a flat rhinarium that only barely reaches the dorsal side of the nose. The area between the nostrils is narrow, and not extended sidewards as in the Felinae. The Panthera species have a single, rounded, vocal fold with a thick mucosal lining, a large vocalis muscle, and a large cricothyroid muscle with long and narrow membranes. A vocal fold that is longer than 19 mm enables all but the snow leopard among them to roar, as it has shorter vocal folds of 9 mm that provide a lower resistance to airflow. The Felinae and Pantherinae probably diverged about 11.5 million years ago.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_REPTILIA</Tag>
+		<English>Taxon Reptilia</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_REPTILIA_PEDIA</Tag>
+		<English>Reptilia (aka. reptiles) is a taxonomic class of tetrapods with an ectothermic ('cold-blooded') metabolism and amniotic development. Living reptiles comprise four orders: Testudines (turtles), Crocodilia (crocodilians), Squamata (lizards and snakes), and Rhynchocephalia (the tuatara). As of May 2023, about 12,000 living species of reptiles are listed in the Reptile Database. The study of the traditional reptile orders, customarily in combination with the study of modern amphibians, is called herpetology.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_RODENTIA</Tag>
@@ -475,12 +720,28 @@
 		<English>Rodentia is an order of mammals commonly called rodents (from Latin rodere, 'to gnaw'). With over 2000 living species placed in about 30 families, rodents are by far the largest order of mammals, at least in terms of number of taxa (well over 40% of mammalian species belong to the order Rodentia!). Rodents range in size from pygmy mice weighing 5 gms to capybaras, the largest of which weigh over 70 kg. They are found around the world except in Antarctica, New Zealand, and on some oceanic islands. Ecologically, they are incredibly diverse. Some species spend their entire lives above the ground in the canopy of rainforests; others seldom emerge from beneath the ground. Some species are highly aquatic, while others are equally specialized for life in deserts. Many are to some degree omnivorous; others are highly specialized, eating, for example, only a few species of invertebrates or fungi.</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_SERPENTES</Tag>
+		<English>Taxon Serpentes</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_SERPENTES_PEDIA</Tag>
+		<English>Serpentes is a suborder of the squamata order that is commonly known as snakes and are elongated, limbless, carnivorous reptiles.  Like all other squamates, snakes are ectothermic, amniote vertebrates covered in overlapping scales. Many species of snakes have skulls with several more joints than their lizard ancestors, enabling them to swallow prey much larger than their heads.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_SPHENISCIDAE</Tag>
 		<English>Taxon Spheniscidae</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_SPHENISCIDAE_PEDIA</Tag>
 		<English>Spheniscidae is a family of sphenisciformes birds which are commonly called penguins. These aquatic flightless birds live almost exclusively in the Southern Hemisphere: only one species, the Galápagos penguin, is found north of the Equator. Highly adapted for life in the ocean water, penguins have countershaded dark and white plumage and flippers for swimming. Most penguins feed on krill, fish, squid and other forms of sea life which they catch with their bills and swallow whole while swimming. A penguin has a spiny tongue and powerful jaws to grip slippery prey.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_SQUAMATA</Tag>
+		<English>Taxon Squamata</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_SQUAMATA_PEDIA</Tag>
+		<English>Squamata (Latin squamatus, 'scaly, having scales') is the largest taxonomic order of the class reptilia, comprising lizards and snakes. With over 11,500 species, it is also the second-largest order of extant vertebrates, after the perciform fish. Members of the order are distinguished by their skins, which bear horny scales or shields, and must periodically engage in molting. They also possess movable quadrate bones, making possible movement of the upper jaw relative to the neurocranium. This is particularly visible in snakes, which are able to open their mouths very wide to accommodate comparatively large prey.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_SUIDAE</Tag>
@@ -497,5 +758,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_HERITAGE_TAXON_TAPIRIDAE_PEDIA</Tag>
 		<English>Tapiridae is a family of perissodactyla mammals which are commonly called Tapirs. They are similar in shape to a pig, with a short, prehensile nose trunk. Tapirs inhabit jungle and forest regions of South and Central America and Southeast Asia. They are one of three extant branches of Perissodactyla (odd-toed ungulates), alongside equines and rhinoceroses. Only a single genus, Tapirus, is currently extant. Tapirs migrated into South America during the Pleistocene epoch from North America after the formation of the Isthmus of Panama as part of the Great American Interchange. Tapirs were formerly present across North America, but became extinct in the region at the end of the Late Pleistocene, around 12,000 years ago.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_TESTUDINES</Tag>
+		<English>Taxon Testudines</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_TESTUDINES_PEDIA</Tag>
+		<English>Testudines is a taxonomical order of reptiles commonly called turtles that are characterized by a special shell developed mainly from their ribs. Modern turtles are divided into two major groups, the Pleurodira (side necked turtles) and Cryptodira (hidden necked turtles), which differ in the way the head retracts. There are 360 living and recently extinct species of turtles, including land-dwelling tortoises and freshwater terrapins. They are found on most continents, some islands and, in the case of sea turtles, much of the ocean. They breathe air and do not lay eggs underwater, although many species live in or around water.</English>
 	</TEXT>
 </Civ4GameText>

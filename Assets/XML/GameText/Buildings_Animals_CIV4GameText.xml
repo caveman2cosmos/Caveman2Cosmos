@@ -588,32 +588,6 @@
 		<Italian>Mito dell'uro</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_BADGER</Tag>
-		<English>Folklore - Badger</English>
-		<French>Mythe du Blaireau</French>
-		<German>
-			<Text>Mythos des Dachses:Mythos des Dachses:Mythos des Dachses:Mythos des Dachses</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del tasso</Italian>
-		<Polish>Mit - Borsuk</Polish>
-		<Russian>Ìèô î áàðñóêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_BALL_PYTHON</Tag>
-		<English>Folklore - Ball Python</English>
-		<French>Mythe du Python royal</French>
-		<German>
-			<Text>Mythos des Königspythons:Mythos des Königspythons:Mythos des Königspythons:Mythos des Königspythons</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del pitone reale</Italian>
-		<Polish>Mit - Pyton Królewski</Polish>
-		<Russian>Ìèô î êîð. ïèòîíå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_BARBARY_MACAQUE</Tag>
 		<English>Folklore - Barbary Macaque</English>
 		<French>Mythe du Macaque berbère</French>
@@ -711,19 +685,6 @@
 		<Russian>Ìèô î áûêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_BLACK_CAIMAN</Tag>
-		<English>Folklore - Black Caiman</English>
-		<French>Mythe du Caïman</French>
-		<German>
-			<Text>Mythos des Mohrenkaimans:Mythos des Mohrenkaimans:Mythos des Mohrenkaimans:Mythos des Mohrenkaimans</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del caimano nero</Italian>
-		<Polish>Mit - Kajman</Polish>
-		<Russian>Ìèô î êàéìàíå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_CAMEL</Tag>
 		<English>Folklore - Camel</English>
 		<French>Mythe du Chameau</French>
@@ -773,18 +734,6 @@
 		<Russian>Ìèô î øèìïàíçå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_COBRA</Tag>
-		<English>Folklore - Cobra</English>
-		<French>Mythe du Cobra</French>
-		<German>
-			<Text>Mythos der Kobra:Mythos der Kobra:Mythos der Kobra:Mythos der Kobra</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del cobra</Italian>
-		<Russian>Ìèô î êîáðå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_COD</Tag>
 		<English>Folklore - Cod</English>
 		<French>Mythe de la Morue</French>
@@ -810,19 +759,6 @@
 		<Russian>Ìèô î êðàáå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_CROCODILE</Tag>
-		<English>Folklore (T) - Crocodile</English>
-		<French>Mythe du Crocodile (T)</French>
-		<German>
-			<Text>Mythos der Krokodile:Mythos der Krokodile:Mythos der Krokodile:Mythos der Krokodile</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del coccodrillo</Italian>
-		<Polish>Mit - Krokodyl</Polish>
-		<Russian>Ìèô î êðîêîäèëå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_CROW</Tag>
 		<English>Folklore - Crow</English>
 		<French>Mythe du Corbeau</French>
@@ -846,18 +782,6 @@
 		<Italian>Mito del cervo</Italian>
 		<Polish>Mit Jelenia</Polish>
 		<Russian>Ìèô îá îëåíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_DESERT_TORTOISE</Tag>
-		<English>Folklore - Desert Tortoise</English>
-		<French>Mythe de la Tortue du désert</French>
-		<German>
-			<Text>Mythos der Gopherschildkröte:Mythos der Gopherschildkröte:Mythos der Gopherschildkröte:Mythos der Gopherschildkröte</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito della tartaruga del deserto</Italian>
-		<Russian>Ìèô î ãîôåðå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_DOLPHIN</Tag>
@@ -1021,44 +945,6 @@
 		<Russian>Ìèô î íåëåò. ïòèöå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_GALAPAGOS_TORTOISE</Tag>
-		<English>Folklore - Galapagos Tortoise</English>
-		<French>Mythe de la Tortue des Galapagos</French>
-		<German>
-			<Text>Mythos der Riesenschildkröte:Mythos der Riesenschildkröte:Mythos der Riesenschildkröte:Mythos der Riesenschildkröte</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito della tartaruga delle Galapagos</Italian>
-		<Russian>Ìèô î ñëîíîâîé ÷åðåïàõå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_AMERICAN_ALLIGATOR</Tag>
-		<English>Folklore - American Alligator</English>
-		<French>Mythe de l'Alligator d'Amérique</French>
-		<German>
-			<Text>Mythos des Mississippi-Alligators:Mythos des Mississippi-Alligators:Mythos des Mississippi-Alligators:Mythos des Mississippi-Alligators</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito dell'alligatore americano</Italian>
-		<Polish>Mit - Aligator Amerykański</Polish>
-		<Russian>Ìèô îá àëëèãàòîðå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_CHINESE_ALLIGATOR</Tag>
-		<English>Folklore - Chinese Alligator</English>
-		<French>Mythe de l'Alligator de Chine</French>
-		<German>
-			<Text>Mythos des China-Alligators:Mythos des China-Alligators:Mythos des China-Alligators:Mythos des China-Alligators</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito dell'alligatore cinese</Italian>
-		<Polish>Mit - Aligator Chiński</Polish>
-		<Russian>Ìèô î êèò. àëëèãàòîð</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_THOMSONS_GAZELLE</Tag>
 		<English>Folklore - Thomson's Gazelle</English>
 		<French>Mythe de la Gazelle de Thomson</French>
@@ -1105,19 +991,6 @@
 		</German>
 		<Italian>Mito dell'antilope giraffa</Italian>
 		<Russian>Ìèô î ãåðåíóêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_GHARIAL</Tag>
-		<English>Folklore - Gharial</English>
-		<French>Mythe du Gavial du Gange</French>
-		<German>
-			<Text>Mythos des Gavials:Mythos des Gavials:Mythos des Gavials:Mythos des Gavials</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del gaviale</Italian>
-		<Polish>Mit - Gawial</Polish>
-		<Russian>Ìèô î ãàâèàëå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_GIRAFFE</Tag>
@@ -1219,19 +1092,6 @@
 		<Russian>Ìèô î ôèëèíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_HORSE</Tag>
-		<English>Folklore - Horse</English>
-		<French>Mythe du Cheval</French>
-		<German>
-			<Text>Mythos des Pferdes:Mythos des Pferdes:Mythos des Pferdes:Mythos des Pferdes</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del cavallo</Italian>
-		<Polish>Mit Koni</Polish>
-		<Russian>Ìèô î ëîøàäè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_HUMPBACK_WHALE</Tag>
 		<English>Folklore - Humpback Whale</English>
 		<French>Mythe de la Baleine à Bosses</French>
@@ -1255,18 +1115,6 @@
 		</German>
 		<Italian>Mito dello stambecco del Semien</Italian>
 		<Russian>Ìèô î êîçåðîãå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_IGUANA</Tag>
-		<English>Folklore - Iguana</English>
-		<French>Mythe de l'Iguane</French>
-		<German>
-			<Text>Mythos des Leguans:Mythos des Leguans:Mythos des Leguans:Mythos des Leguans</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito dell'iguana</Italian>
-		<Russian>Ìèô î èãóàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_IMPALA</Tag>
@@ -1331,18 +1179,6 @@
 		<Russian>Ìèô î êðàñí.êåíãóðó</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_KOMODO_DRAGON</Tag>
-		<English>Folklore - Komodo Dragon</English>
-		<French>Mythe du Dragon de Komodo</French>
-		<German>
-			<Text>Mythos des Komodowarans:Mythos des Komodowarans:Mythos des Komodowarans:Mythos des Komodowarans</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del drago di Komodo</Italian>
-		<Russian>Ìèô î êîì. âàðàíå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_KOOKABURRA</Tag>
 		<English>Folklore - Kookaburra</English>
 		<French>Mythe du Kookaboura</French>
@@ -1397,19 +1233,6 @@
 		<Italian>Mito del leviatano</Italian>
 		<Polish>Mit Lewiatana</Polish>
 		<Russian>Ìèô î Ëåâèàôàíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_LIZARD</Tag>
-		<English>Folklore - Lizard</English>
-		<French>Mythe du lézard</French>
-		<German>
-			<Text>Mythos der Echse:Mythos der Echse:Mythos der Echse:Mythos der Echse</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito della lucertola</Italian>
-		<Polish>Mit - Jaszczurka</Polish>
-		<Russian>Ìèô î ÿùåðèöå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_GUANACO</Tag>
@@ -1584,31 +1407,6 @@
 		</German>
 		<Italian>Mito delle scimmie del nuovo mondo</Italian>
 		<Russian>Ìèô îá îáåçüÿíàõ Íîâîãî Ñâåòà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_NILE_CROCODILE</Tag>
-		<English>Folklore - Nile Crocodile</English>
-		<French>Mythe du Crocodile du Nil</French>
-		<German>
-			<Text>Mythos des Nilkrokodils:Mythos des Nilkrokodils:Mythos des Nilkrokodils:Mythos des Nilkrokodils</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del coccodrillo del Nilo</Italian>
-		<Polish>Mit - Krokodyl Nilowy</Polish>
-		<Russian>Ìèô î íèë. êðîêîäèëå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_NILE_MONITOR</Tag>
-		<English>Folklore - Nile Monitor</English>
-		<French>Mythe du Varan du Nil</French>
-		<German>
-			<Text>Mythos des Nilwarans:Mythos des Nilwarans:Mythos des Nilwarans:Mythos des Nilwarans</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del varano del Nilo</Italian>
-		<Russian>Ìèô î íèë. âàðàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_NUMBAT</Tag>
@@ -1845,18 +1643,6 @@
 		<Russian>Ìèô î ïðîêîïòîäîíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_PUFF_ADDER</Tag>
-		<English>Folklore - Puff Adder</English>
-		<French>Mythe de la Vipère heurtante</French>
-		<German>
-			<Text>Mythos der Puffotter:Mythos der Puffotter:Mythos der Puffotter:Mythos der Puffotter</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito della vipera soffiante</Italian>
-		<Russian>Ìèô î øóì. ãàäþêå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_QUOLL</Tag>
 		<English>Folklore - Quoll</English>
 		<French>Mythe du Chat marsupial</French>
@@ -1867,18 +1653,6 @@
 		</German>
 		<Italian>Mito del quoll tigre</Italian>
 		<Russian>Ìèô î ñóì÷.êóíèöå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_RACCOON</Tag>
-		<English>Folklore - Raccoon</English>
-		<French>Mythe du Raton-Laveur</French>
-		<German>
-			<Text>Mythos des Waschbären:Mythos des Waschbären:Mythos des Waschbären:Mythos des Waschbären</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del procione</Italian>
-		<Russian>Ìèô î åíîòå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_RAPTORS</Tag>
@@ -1892,18 +1666,6 @@
 		<Italian>Mito dei rapaci</Italian>
 		<Polish>Mit (T) - Ptaki drapieżne</Polish>
 		<Russian>Ìèô î õèùí. ïòèöå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_RATEL</Tag>
-		<English>Folklore - Ratel</English>
-		<French>Mythe du Ratel</French>
-		<German>
-			<Text>Mythos des Honigdachses:Mythos des Honigdachses:Mythos des Honigdachses:Mythos des Honigdachses</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del tasso del miele</Italian>
-		<Russian>Ìèô î ìåäîåäå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_RAY</Tag>
@@ -1956,19 +1718,6 @@
 		<Russian>Ìèô î ðèô. àêóëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_REPTILE</Tag>
-		<English>Folklore (T) - Reptile</English>
-		<French>Mythe - Reptiles (T)</French>
-		<German>
-			<Text>Mythos der Reptilien:Mythos der Reptilien:Mythos der Reptilien:Mythos der Reptilien</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del rettile</Italian>
-		<Polish>Mit (T) Gadów</Polish>
-		<Russian>Ìèô î ðåïòèëèè</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_RHINOCEROSES</Tag>
 		<English>Folklore (T) - Rhinoceroses</English>
 		<French>Mythe du Rhinocéros (T)</French>
@@ -1980,28 +1729,6 @@
 		<Italian>Mito dei rinoceronti</Italian>
 		<Polish>Mit (T) - Rhinoceroses</Polish>
 		<Russian>Ìèô î íîñîðîãå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_CROCODILE_SMALL</Tag>
-		<English>Folklore - Crocodile (Small)</English>
-		<French>Mythe du Crocodile de rivière (petit)</French>
-		<German>
-			<Text>Mythos des kleinen Krokodils:Mythos des kleinen Krokodils:Mythos des kleinen Krokodils:Mythos des kleinen Krokodils</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del coccodrillo di fiume (piccolo)</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_CROCODILE_LARGE</Tag>
-		<English>Folklore - Crocodile (Large)</English>
-		<French>Mythe du Crocodile de rivière (grand)</French>
-		<German>
-			<Text>Mythos des großen Krokodils:Mythos des großen Krokodils:Mythos des großen Krokodils:Mythos des großen Krokodils</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del coccodrillo di fiume (grande)</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_SABRETOOTH</Tag>
@@ -2029,28 +1756,6 @@
 		<Russian>Ìèô î ñàéãàêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_SALTWATER_CROCODILE_SMALL</Tag>
-		<English>Folklore - Saltwater Crocodile (Small)</English>
-		<French>Mythe du Crocodile de mer (petit)</French>
-		<German>
-			<Text>Mythos des kleinen Salzwasserkrokodils:Mythos des kleinen Salzwasserkrokodils:Mythos des kleinen Salzwasserkrokodils:Mythos des kleinen Salzwasserkrokodils</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del coccodrillo marino (piccolo)</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_SALTWATER_CROCODILE_LARGE</Tag>
-		<English>Folklore - Saltwater Crocodile (Large)</English>
-		<French>Mythe du Crocodile de mer (grand)</French>
-		<German>
-			<Text>Mythos des großen Salzwasserkrokodils:Mythos des großen Salzwasserkrokodils:Mythos des großen Salzwasserkrokodils:Mythos des großen Salzwasserkrokodils</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del coccodrillo marino (grande)</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_E_SEA</Tag>
 		<English>Folklore (E) - Sea</English>
 		<French>Mythe de la Mer (E)</French>
@@ -2076,19 +1781,6 @@
 		<Russian>Ìèô î ìîðñêîì ëüâå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_SEA_TURTLE</Tag>
-		<English>Folklore - Sea Turtle</English>
-		<French>Mythe de la Tortue de mer</French>
-		<German>
-			<Text>Mythos der Meeresschildkröte:Mythos der Meeresschildkröte:Mythos der Meeresschildkröte:Mythos der Meeresschildkröte</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito della tartaruga di mare</Italian>
-		<Polish>Mit Żółwia Morskiego</Polish>
-		<Russian>Ìèô î ìîð. ÷åðåïàõå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_SEA_BIRDS</Tag>
 		<English>Folklore (T) - Sea Birds</English>
 		<French>Mythe des Oiseaux marins (T)</French>
@@ -2100,18 +1792,6 @@
 		<Italian>Mito degli uccelli marini</Italian>
 		<Polish>Mit (T) - Ptaki morskie</Polish>
 		<Russian>Ìèô î ìîðñêîé ïòèöå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_SEA_OTTER</Tag>
-		<English>Folklore - Sea Otter</English>
-		<French>Mythe de la Loutre de mer</French>
-		<German>
-			<Text>Mythos des Seeotters:Mythos des Seeotters:Mythos des Seeotters:Mythos des Seeotters</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito della lontra marina</Italian>
-		<Russian>Ìèô î êàëàíå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_SHARKS</Tag>
@@ -2127,18 +1807,6 @@
 		<Russian>Ìèô îá àêóëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_SKUNK</Tag>
-		<English>Folklore - Skunk</English>
-		<French>Mythe de la Moufette</French>
-		<German>
-			<Text>Mythos des Stinktiers:Mythos des Stinktiers:Mythos des Stinktiers:Mythos des Stinktiers</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito della puzzola</Italian>
-		<Russian>Ìèô î ñêóíñå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_E_SKY</Tag>
 		<English>Folklore (E) - Sky</English>
 		<French>Mythe du Ciel (E)</French>
@@ -2150,18 +1818,6 @@
 		<Italian>Mito del cielo</Italian>
 		<Polish>Mit Nieba</Polish>
 		<Russian>Ìèô î íåáå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_SNAKES</Tag>
-		<English>Folklore (T) - Snakes</English>
-		<French>Mythe des Serpents (T)</French>
-		<German>
-			<Text>Mythos der Schlangen:Mythos der Schlangen:Mythos der Schlangen:Mythos der Schlangen</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del serpente</Italian>
-		<Russian>Ìèô î çìåå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_E_STONE</Tag>
@@ -2260,30 +1916,6 @@
 		<Russian>Ìèô îá èíäåéêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_VIPER</Tag>
-		<English>Folklore - Viper</English>
-		<French>Mythe de la Vipère</French>
-		<German>
-			<Text>Mythos der Viper:Mythos der Viper:Mythos der Viper:Mythos der Viper</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito della vipera</Italian>
-		<Russian>Ìèô î ãàäþêå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_CHAIN_VIPER</Tag>
-		<English>Folklore - Chain Viper</English>
-		<French>Mythe de la Vipère de Russell</French>
-		<German>
-			<Text>Mythos der Kettenviper:Mythos der Kettenviper:Mythos der Kettenviper:Mythos der Kettenviper</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito della vipera di Russell</Italian>
-		<Russian>Ìèô î ãàäþêå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_VULTURE</Tag>
 		<English>Folklore - Vulture</English>
 		<French>Mythe du Vautour</French>
@@ -2331,19 +1963,6 @@
 		<Russian>Ìèô î ìîðæå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_WEASEL</Tag>
-		<English>Folklore (T) - Weasel</English>
-		<French>Mythe de la belette (T)</French>
-		<German>
-			<Text>Mythos der Wiesel:Mythos der Wiesel:Mythos der Wiesel:Mythos der Wiesel</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito della donnola</Italian>
-		<Polish>Mit (T) Łasicy</Polish>
-		<Russian>Ìèô î õîðüêå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_WHALE_SHARK</Tag>
 		<English>Folklore - Whale Shark</English>
 		<French>Mythe - Requin-baleine</French>
@@ -2380,18 +1999,6 @@
 		</German>
 		<Italian>Mito dello gnu</Italian>
 		<Russian>Ìèô î ãíó</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_WOLVERINE</Tag>
-		<English>Folklore - Wolverine</English>
-		<French>Mythe du Carcajou</French>
-		<German>
-			<Text>Mythos des Vielfraßes:Mythos des Vielfraßes:Mythos des Vielfraßes:Mythos des Vielfraßes</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>Mito del ghiottone</Italian>
-		<Russian>Ìèô î ðîñîìàõå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_WOMBAT</Tag>
