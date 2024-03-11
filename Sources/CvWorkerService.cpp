@@ -122,7 +122,7 @@ bool CvWorkerService::ImproveBonus(CvUnitAI* unit, int allowedMovementTurns)
 	}
 	if (overallBestBuild == NO_BUILD) return false;
 
-	MissionTypes eBestMission = MISSION_ROUTE_TO;
+	MissionTypes eBestMission = MISSION_MOVE_TO;
 
 	if (finalNumberOfMoveTurns >= stepDistance(unit->getX(), unit->getY(), bestPlot->getX(), bestPlot->getY())) {
 		eBestMission = MISSION_ROUTE_TO;
