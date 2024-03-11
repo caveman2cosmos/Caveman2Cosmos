@@ -116,7 +116,7 @@
 			<PythonHelp>getHelpWildFire</PythonHelp>
 		</EventInfo>
 		<EventInfo>
-			<Type>EVENT_FOREST_NEW_2</Type>
+			<Type>EVENT_FOREST_NEW_1</Type>
 			<Description>TXT_KEY_EVENT_GENERIC_CHOICE_GOOD_NEWS</Description>
 			<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
 			<iFeatureChange>-1</iFeatureChange>
@@ -129,7 +129,7 @@
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_FOREST_NEW_END</Type>
-			<FeatureType>FEATURE_FOREST</FeatureType>
+			<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 			<iFeatureChange>1</iFeatureChange>
 		</EventInfo>
 		<EventInfo>
@@ -211,6 +211,7 @@
 					<iFlavor>1</iFlavor>
 				</TechFlavor>
 			</TechFlavors>
+			<iGold>-300</iGold>
 			<iTechPercent>15</iTechPercent>
 			<iTechCostPercent>5</iTechCostPercent>
 			<iTechMinTurnsLeft>4</iTechMinTurnsLeft>
@@ -268,15 +269,67 @@
 			<Type>EVENT_HAPPY_HUNTING_1</Type>
 			<Description>TXT_KEY_EVENT_HAPPY_HUNTING_1</Description>
 			<bPickCity>1</bPickCity>
-			<iFood>8</iFood>
+			<iFood>30</iFood>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
 		<EventInfo>
-			<Type>EVENT_MOTHER_LODE_1</Type>
+			<Type>EVENT_HAPPY_HUNTING_2</Type>
+			<Description>TXT_KEY_EVENT_HAPPY_HUNTING_2</Description>
+			<bPickCity>1</bPickCity>
+			<iHappyTurns>1</iHappyTurns>
+			<iFood>60</iFood>
+			<iGold>-20</iGold>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1000</iAIValue>
+		</EventInfo>
+		<EventInfo>
+			<Type>EVENT_MOTHER_LODE_GOLD_1</Type>
 			<Description>TXT_KEY_EVENT_MOTHER_LODE_1</Description>
-			<iGold>100</iGold>
-			<iRandomGold>100</iRandomGold>
+			<iGold>300</iGold>
+			<iRandomGold>500</iRandomGold>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1000</iAIValue>
+		</EventInfo>
+		<EventInfo>
+			<Type>EVENT_MOTHER_LODE_GOLD_2</Type>
+			<Description>TXT_KEY_EVENT_MOTHER_LODE_2</Description>
+			<iGold>-200</iGold>
+			<AdditionalEvents>
+				<EventChance>
+					<Event>EVENT_MOTHER_LODE_3</Event>
+					<iEventChance>50</iEventChance>
+				</EventChance>
+			</AdditionalEvents>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1000</iAIValue>
+		</EventInfo>
+		<EventInfo>
+			<Type>EVENT_MOTHER_LODE_SILVER_1</Type>
+			<Description>TXT_KEY_EVENT_MOTHER_LODE_1</Description>
+			<iGold>200</iGold>
+			<iRandomGold>400</iRandomGold>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1000</iAIValue>
+		</EventInfo>
+		<EventInfo>
+			<Type>EVENT_MOTHER_LODE_SILVER_2</Type>
+			<Description>TXT_KEY_EVENT_MOTHER_LODE_2</Description>
+			<iGold>-200</iGold>
+			<AdditionalEvents>
+				<EventChance>
+					<Event>EVENT_MOTHER_LODE_3</Event>
+					<iEventChance>50</iEventChance>
+				</EventChance>
+			</AdditionalEvents>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1000</iAIValue>
+		</EventInfo>
+		<EventInfo>
+			<Type>EVENT_MOTHER_LODE_3</Type>
+			<Description>TXT_KEY_EVENT_MOTHER_LODE</Description>
+			<iGold>500</iGold>
+			<iRandomGold>2000</iRandomGold>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
