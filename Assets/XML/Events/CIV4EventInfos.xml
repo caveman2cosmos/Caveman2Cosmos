@@ -343,7 +343,7 @@
 		<EventInfo>
 			<Type>EVENT_WASHED_OUT_2</Type>
 			<Description>TXT_KEY_EVENT_WASHED_OUT_2</Description>
-			<iGold>-20</iGold>
+			<iGold>-30</iGold>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -380,7 +380,7 @@
 		<EventInfo>
 			<Type>EVENT_INSPIRED_MISSION_2</Type>
 			<Description>TXT_KEY_EVENT_INSPIRED_MISSION_2</Description>
-			<iGold>-10</iGold>
+			<iGold>-150</iGold>
 			<iConvertOwnCities>4</iConvertOwnCities>
 			<iConvertOtherCities>1</iConvertOtherCities>
 			<iMaxNumReligions>3</iMaxNumReligions>
@@ -390,7 +390,7 @@
 		<EventInfo>
 			<Type>EVENT_INSPIRED_MISSION_3</Type>
 			<Description>TXT_KEY_EVENT_INSPIRED_MISSION_3</Description>
-			<iGold>-25</iGold>
+			<iGold>-300</iGold>
 			<iConvertOwnCities>4</iConvertOwnCities>
 			<iConvertOtherCities>4</iConvertOtherCities>
 			<iMaxNumReligions>3</iMaxNumReligions>
@@ -410,7 +410,7 @@
 			<Type>EVENT_CARELESS_APPRENTICE_1</Type>
 			<Description>TXT_KEY_EVENT_CARELESS_APPRENTICE_1</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-50</iGold>
+			<iGold>-500</iGold>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -418,7 +418,7 @@
 			<Type>EVENT_CARELESS_APPRENTICE_2</Type>
 			<Description>TXT_KEY_EVENT_CARELESS_APPRENTICE_2</Description>
 			<bPickCity>1</bPickCity>
-			<iGold>-10</iGold>
+			<iGold>-200</iGold>
 			<Building>BUILDING_FORGE</Building>
 			<iBuildingChange>-1</iBuildingChange>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -430,7 +430,7 @@
 			<bPickCity>1</bPickCity>
 			<Building>BUILDING_FORGE</Building>
 			<iBuildingChange>-1</iBuildingChange>
-			<iHurryAnger>1</iHurryAnger>
+			<iHurryAnger>2</iHurryAnger>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -464,7 +464,7 @@
 			<OtherPlayerPopup>TXT_KEY_EVENT_FAMINE_OTHER_3</OtherPlayerPopup>
 			<bPickCity>1</bPickCity>
 			<bPickOtherPlayerCity>1</bPickOtherPlayerCity>
-			<iGold>-10</iGold>
+			<iGold>-1000</iGold>
 			<bGoldToPlayer>1</bGoldToPlayer>
 			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
 			<iFoodPercent>-100</iFoodPercent>
@@ -473,52 +473,52 @@
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
-		<EventInfo>
-			<Type>EVENT_SLAVE_REVOLT_1</Type>
-			<Description>TXT_KEY_EVENT_SLAVE_REVOLT_1</Description>
-			<bPickCity>1</bPickCity>
-			<iHurryAnger>1</iHurryAnger>
-			<iRevoltTurns>1</iRevoltTurns>
-			<iPopulationChange>-2</iPopulationChange>
-			<ClearEvents>
-				<EventChance>
-					<Event>EVENT_SLAVE_REVOLT_3</Event>
-					<iEventChance>100</iEventChance>
-				</EventChance>
-			</ClearEvents>
-			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
-		</EventInfo>
-		<EventInfo>
-			<Type>EVENT_SLAVE_REVOLT_2</Type>
-			<Description>TXT_KEY_EVENT_SLAVE_REVOLT_2</Description>
-			<bPickCity>1</bPickCity>
-			<iGold>-10</iGold>
-			<iRevoltTurns>1</iRevoltTurns>
-			<iPopulationChange>-1</iPopulationChange>
-			<ClearEvents>
-				<EventChance>
-					<Event>EVENT_SLAVE_REVOLT_3</Event>
-					<iEventChance>100</iEventChance>
-				</EventChance>
-			</ClearEvents>
-			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
-		</EventInfo>
-		<EventInfo>
-			<Type>EVENT_SLAVE_REVOLT_3</Type>
-			<Description>TXT_KEY_EVENT_SLAVE_REVOLT_3</Description>
-			<bPickCity>1</bPickCity>
-			<iRevoltTurns>1</iRevoltTurns>
-			<ClearEvents>
-				<EventChance>
-					<Event>EVENT_SLAVE_REVOLT_3</Event>
-					<iEventChance>40</iEventChance>
-				</EventChance>
-			</ClearEvents>
-			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
-		</EventInfo>
+<!--		<EventInfo>-->
+<!--			<Type>EVENT_SLAVE_REVOLT_1</Type>-->
+<!--			<Description>TXT_KEY_EVENT_SLAVE_REVOLT_1</Description>-->
+<!--			<bPickCity>1</bPickCity>-->
+<!--			<iHurryAnger>1</iHurryAnger>-->
+<!--			<iRevoltTurns>1</iRevoltTurns>-->
+<!--			<iPopulationChange>-2</iPopulationChange>-->
+<!--			<ClearEvents>-->
+<!--				<EventChance>-->
+<!--					<Event>EVENT_SLAVE_REVOLT_3</Event>-->
+<!--					<iEventChance>100</iEventChance>-->
+<!--				</EventChance>-->
+<!--			</ClearEvents>-->
+<!--			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>-->
+<!--			<iAIValue>1000</iAIValue>-->
+<!--		</EventInfo>-->
+<!--		<EventInfo>-->
+<!--			<Type>EVENT_SLAVE_REVOLT_2</Type>-->
+<!--			<Description>TXT_KEY_EVENT_SLAVE_REVOLT_2</Description>-->
+<!--			<bPickCity>1</bPickCity>-->
+<!--			<iGold>-10</iGold>-->
+<!--			<iRevoltTurns>1</iRevoltTurns>-->
+<!--			<iPopulationChange>-1</iPopulationChange>-->
+<!--			<ClearEvents>-->
+<!--				<EventChance>-->
+<!--					<Event>EVENT_SLAVE_REVOLT_3</Event>-->
+<!--					<iEventChance>100</iEventChance>-->
+<!--				</EventChance>-->
+<!--			</ClearEvents>-->
+<!--			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>-->
+<!--			<iAIValue>1000</iAIValue>-->
+<!--		</EventInfo>-->
+<!--		<EventInfo>-->
+<!--			<Type>EVENT_SLAVE_REVOLT_3</Type>-->
+<!--			<Description>TXT_KEY_EVENT_SLAVE_REVOLT_3</Description>-->
+<!--			<bPickCity>1</bPickCity>-->
+<!--			<iRevoltTurns>1</iRevoltTurns>-->
+<!--			<ClearEvents>-->
+<!--				<EventChance>-->
+<!--					<Event>EVENT_SLAVE_REVOLT_3</Event>-->
+<!--					<iEventChance>40</iEventChance>-->
+<!--				</EventChance>-->
+<!--			</ClearEvents>-->
+<!--			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>-->
+<!--			<iAIValue>1000</iAIValue>-->
+<!--		</EventInfo>-->
 		<EventInfo>
 			<Type>EVENT_BLESSED_SEA_1</Type>
 			<Description>TXT_KEY_EVENT_BLESSED_SEA_1</Description>

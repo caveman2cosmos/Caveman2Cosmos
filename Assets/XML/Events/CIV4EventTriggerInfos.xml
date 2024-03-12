@@ -283,7 +283,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/WashedOutEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>100</iWeight>
+			<iWeight>10</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<RoutesRequired>
@@ -328,19 +328,25 @@
 			<ObsoleteTechs>
 				<ObsoleteTech>TECH_GUNPOWDER</ObsoleteTech>
 			</ObsoleteTechs>
-			<bGlobal>1</bGlobal>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_MAN_NAMED_JED</Type>
+			<WorldNewsTexts>
+				<Text>TXT_KEY_EVENT_TRIGGER_MAN_NAMED_JED</Text>
+			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_MAN_NAMED_JED_1</Text>
 					<Era>NONE</Era>
 				</TriggerText>
+				<TriggerText>
+					<Text>TXT_KEY_EVENT_TRIGGER_MAN_NAMED_JED_2</Text>
+					<Era>NONE</Era>
+				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/JedEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>5000</iWeight>
+			<iWeight>200</iWeight>
 			<bProbabilityUnitMultiply>1</bProbabilityUnitMultiply>
 			<UnitsRequired>
 				<UnitType>UNIT_SCOUT</UnitType>
@@ -357,7 +363,6 @@
 				<Event>EVENT_MAN_NAMED_JED_1</Event>
 				<Event>EVENT_MAN_NAMED_JED_2</Event>
 			</Events>
-			<bGlobal>1</bGlobal>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_INSPIRED_MISSION</Type>
@@ -372,7 +377,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/InspiredMissionEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>100</iWeight>
+			<iWeight>5</iWeight>
 			<bOwnPlot>1</bOwnPlot>
 			<iNumReligions>2</iNumReligions>
 			<bPickReligion>1</bPickReligion>
@@ -403,7 +408,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/HymnsAndSculpturesEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>200</iWeight>
+			<iWeight>2</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
 				<Building>BUILDING_JEWISH_SYNAGOGUE</Building>
@@ -434,7 +439,6 @@
 			<Events>
 				<Event>EVENT_HYMNS_AND_SCULPTURES_1</Event>
 			</Events>
-			<bGlobal>1</bGlobal>
 			<bPickCity>1</bPickCity>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
@@ -458,7 +462,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/CarelessApprenticeEvent.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>200</iWeight>
+			<iWeight>3</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
 				<Building>BUILDING_FORGE</Building>
@@ -475,9 +479,13 @@
 				<ObsoleteTech>TECH_ECOLOGY</ObsoleteTech>
 			</ObsoleteTechs>
 			<bPickCity>1</bPickCity>
+			<bRecurring>1</bRecurring>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_FAMINE</Type>
+			<WorldNewsTexts>
+				<Text>TXT_KEY_EVENT_TRIGGER_FAMINE</Text>
+			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_FAMINE_1</Text>
@@ -493,9 +501,9 @@
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/FamineEvent.dds</EventArt>
-			<bSinglePlayer>1</bSinglePlayer>
+<!--			<bSinglePlayer>1</bSinglePlayer>-->
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>50</iWeight>
+			<iWeight>6</iWeight>
 			<bOwnPlot>1</bOwnPlot>
 			<Events>
 				<Event>EVENT_FAMINE_1</Event>
